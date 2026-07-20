@@ -62,7 +62,7 @@ We concede up front that each facet of this architecture has an established neig
 is a POMDP belief state. Abstention and escalation are the reject option and selective prediction. Deciding when to stop investigating is value-of-information stopping. Residual
 obligations are risk registers; placement statuses are ticket state machines; lineage is provenance; correct-result-through-defective-process is process reliabilism; perturbation
 probes are metamorphic testing. None of these facets is claimed as new. What is claimed is threefold: (i) the **union** — no one of those frameworks supplies the others, and no
-observed practice assembles all of them by default; (ii) the **lifecycle** — the explicit connection of disclosure, evidence, representation, routing, validation, closure, and
+practice in our (internal, non-auditable) observational record assembled all of them by default; (ii) the **lifecycle** — the explicit connection of disclosure, evidence, representation, routing, validation, closure, and
 revision to the placement status of a single concrete occurrence and its successors; and (iii) the **joint episode-verdict object** — a reified handling episode on which result
 correctness, evidential support, truth-connection, rule adequacy, executor fidelity, route safety, closure truthfulness, and robustness are simultaneously definable and separately
 adjudicable.
@@ -72,7 +72,7 @@ adjudicable.
 The strongest objection is the redundancy critique: *a composite of POMDP belief states, the reject option, multi-label classification, value-of-information stopping, a risk
 register, and a ticket state machine would act identically; the residual is a glossary.* Our answer, developed in Section 12 and maintained throughout, is: the critique is correct
 about each facet taken separately, and it is correct that the type-individuation mathematics is inherited. It fails at exactly one point. The six-framework composite it invokes is
-a union that no member framework names and no observed practice assembles by default, and even the composite has no object on which a joint verdict about result and pathway can be
+a union that no member framework names and that no practice in our (internal, non-auditable) observational record assembled by default, and even the composite has no object on which a joint verdict about result and pathway can be
 recorded — the composite agent can be right for the wrong reasons and possess no record on which that fact is expressible. The one longitudinal engineering case in our record
 (Section 11.4) shows a maximally disciplined, lean-vocabulary operation *discovering and building*, at the cost of roughly fifty governed stops, exactly the machinery the composite
 is supposed to already have. That is corroboration, not validation — it is one case, from an internal record that is not independently auditable — but it is a reason to think the union is not free.
