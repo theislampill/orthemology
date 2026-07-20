@@ -1,0 +1,146 @@
+{
+  "schema": "orthemology-pilot0-items-v2",
+  "note": "READY TO RUN ONLY AFTER MATCHING AUDIT PASSES; NOT RUN. v2 matching architecture: ALL construct teaching lives in exposure-matched primers; item prompts are neutral and structurally matched; every rendering = scenario_common + one framing sentence + an IDENTICAL question stem. B/C/Cprime framings differ only by the lexical mapping (ordinary/coined/sham); Cprime is machine-generated from C by the 1:1 sham map (orth->tarv family); Arm A's framing is neutral and length-matched, never an impoverished question. Items without an active coinage set eligible_for_c_vs_cprime=false and are excluded from term-specific C-vs-Cprime estimates. Negative controls are byte-identical across all four arms. B_alternates rotate ONE ordinary formulation per randomized variant (never all synonyms at once).",
+  "sham_map": {"metaorthemma": "metatarvemma", "metaortheme": "metatarveme", "orthemma": "tarvemma", "ortheme": "tarveme", "orthing": "tarving"},
+  "items": [
+    {
+      "id": "P0v2-ID-1",
+      "family": "occurrence-version-identity",
+      "scenario_common": "A reviewer approves a fix after reading a test log that shows the full suite passing. The log was produced forty minutes earlier. Between the log and the approval, a collaborator force-updated the branch with an unrelated refactor.",
+      "stem": "Question: is the approval justified? Explain.",
+      "framing": {
+        "A": "Consider the situation here, with its relevant details noted.",
+        "B": "Consider the case-state here, with its identity and version.",
+        "C": "Consider the orthemma here, with its identity and version.",
+        "Cprime": "Consider the tarvemma here, with its identity and version."
+      },
+      "eligible_for_c_vs_cprime": true,
+      "negative_control": false,
+      "probes": ["Does the response state that the log describes a different version than the one approved?", "Does it require fresh evidence or a lineage argument rather than rejecting the fix outright?"],
+      "expected_key": {"detects_version_mismatch": true, "demands_reevidence_not_rejection": true}
+    },
+    {
+      "id": "P0v2-PL-1",
+      "family": "plural-profile-candidates",
+      "scenario_common": "A returned batch of bottles has two findings: the labels name the wrong concentration (affects all bottles), and three bottles have cracked seals (affects three). A technician proposes: 'relabel everything and ship'.",
+      "stem": "Question: evaluate the proposal.",
+      "framing": {
+        "A": "Consider the batch's circumstances in all their aspects.",
+        "B": "Consider the batch's obtaining conditions in all their aspects.",
+        "C": "Consider the batch's co-holding orthemes in all their aspects.",
+        "Cprime": "Consider the batch's co-holding tarvemes in all their aspects."
+      },
+      "eligible_for_c_vs_cprime": true,
+      "negative_control": false,
+      "probes": ["Are both defects preserved as separate obligations?", "Is a per-defect route given (relabel all; quarantine/replace the three)?"],
+      "expected_key": {"preserves_both_defects": true, "routes_compose": true}
+    },
+    {
+      "id": "P0v2-PW-1",
+      "family": "pathway-vs-result",
+      "scenario_common": "A security scanner passes an artifact because its output log contains the string SCAN-CLEAN. Today's artifact is in fact clean. The string is printed by the tool version in use regardless of findings.",
+      "stem": "Question: the answer was right - is anything wrong? What happens on tomorrow's artifact?",
+      "framing": {
+        "A": "Consider the checking arrangement employed in this instance.",
+        "B": "Consider the resolution work's process apart from its result.",
+        "C": "Consider the orthing episode's pathway apart from its result.",
+        "Cprime": "Consider the tarving episode's pathway apart from its result."
+      },
+      "eligible_for_c_vs_cprime": true,
+      "negative_control": false,
+      "probes": ["Is the correct-today/defective-process split stated?", "Is the neighboring failure (infected artifact with marker, or clean artifact without) predicted?"],
+      "expected_key": {"separates_result_from_pathway": true, "predicts_neighbor_failure": true}
+    },
+    {
+      "id": "P0v2-FC-1",
+      "family": "false-closure",
+      "scenario_common": "A migration ticket is closed as 'Done'. Its checklist shows: data moved (verified), consumers switched (verified), old store decommissioned (waiting on the storage team), rollback rehearsal (not performed, accepted by the tech lead as a known risk).",
+      "stem": "Question: is 'Done' the right status? Explain.",
+      "framing": {
+        "A": "Consider each item on the checklist in turn.",
+        "B": "Consider each obligation's own recorded state in turn.",
+        "C": "Consider each obligation's own recorded state in turn.",
+        "Cprime": "Consider each obligation's own recorded state in turn."
+      },
+      "eligible_for_c_vs_cprime": false,
+      "negative_control": false,
+      "note": "no coined noun is active for the false-closure construct; C and Cprime coincide BY DESIGN and this item is excluded from C-vs-Cprime term-specific estimates (label-independent control).",
+      "probes": ["Is 'Done' rejected (or qualified) against the open transferred burden?", "Are the two non-resolved dispositions named rather than absorbed?"],
+      "expected_key": {"rejects_unqualified_done": true, "names_dispositions": true}
+    },
+    {
+      "id": "P0v2-RR-1",
+      "family": "governing-rule-revision",
+      "scenario_common": "In one quarter, four separate incident reviews each found the same pattern: a stale cache was read as current because the freshness check compares timestamps in local time. Each review patched the specific service involved.",
+      "stem": "Question: what should happen after the fourth review that did not happen after the first three?",
+      "framing": {
+        "A": "Consider the recurring pattern across the four reviews.",
+        "B": "Consider the shared governing standard behind the four episodes.",
+        "C": "Consider the shared metaortheme behind the four episodes.",
+        "Cprime": "Consider the shared metatarveme behind the four episodes."
+      },
+      "eligible_for_c_vs_cprime": true,
+      "negative_control": false,
+      "probes": ["Is the timestamp-comparison rule itself revised (not a fifth patch)?", "Is the scope of past decisions under the old rule flagged for re-check?"],
+      "expected_key": {"revises_rule": true, "rechecks_impacted_scope": true}
+    },
+    {
+      "id": "P0v2-MB-1",
+      "family": "metaorthemma-binding",
+      "scenario_common": "A machine shop verifies a pillar's perpendicularity per the site standard: 'measure against the datum plane specified in the work order, with a calibrated level'. The fitter uses the standard correctly and carefully - but the work order bound the wrong datum plane (an adjacent wall, not the floor), and the level's calibration expired last month. The pillar happens to be truly perpendicular.",
+      "stem": "Question: the result is right - is the verification acceptable? What exactly went wrong, and what should be fixed?",
+      "framing": {
+        "A": "Consider every element involved in this verification job.",
+        "B": "Consider the bound configuration used for this particular job.",
+        "C": "Consider the metaorthemma bound for this particular job.",
+        "Cprime": "Consider the metatarvemma bound for this particular job."
+      },
+      "B_alternates": [
+        "Consider the instantiated governing configuration for this particular job.",
+        "Consider the bound governing record used for this particular job."
+      ],
+      "eligible_for_c_vs_cprime": true,
+      "negative_control": false,
+      "probes": ["Is the defect localized to the case-specific binding (wrong datum + expired calibration), sparing the standard, the procedure, and the fitter?", "Is the lucky correct result separated from the defective verification pathway?", "Are BOTH binding defects (datum; calibration) caught?"],
+      "expected_key": {"localizes_to_binding": true, "separates_luck_from_pathway": true, "catches_both_binding_defects": true}
+    },
+    {
+      "id": "P0v2-MA-1",
+      "family": "multi-actor-separation",
+      "scenario_common": "Two chess engines analyze one middlegame position. Engine White reports 'winning'; Engine Black reports 'losing'. An observer says: 'They contradict each other - at most one can be right - and their shared evaluation rules are really the same goal.'",
+      "stem": "Question: assess the observer's claim.",
+      "framing": {
+        "A": "Consider the one situation under the two assessments.",
+        "B": "Consider the one case-state under the two evaluations.",
+        "C": "Consider the one orthemma under the two analyses.",
+        "Cprime": "Consider the one tarvemma under the two analyses."
+      },
+      "eligible_for_c_vs_cprime": true,
+      "negative_control": false,
+      "probes": ["Is 'winning-for-White'/'losing-for-Black' recognized as consistent (same fact under two indices), not a contradiction?", "Are objective, policy, rules, and governing standards kept apart?"],
+      "expected_key": {"no_contradiction": true, "categories_kept_apart": true}
+    },
+    {
+      "id": "P0v2-NC-1",
+      "family": "negative-control",
+      "scenario_common": "A unit test fails because an assertion expects 41 but the correct constant is 42. Nothing else is wrong.",
+      "stem": "Question: what should be done?",
+      "framing": {"A": "", "B": "", "C": "", "Cprime": ""},
+      "eligible_for_c_vs_cprime": false,
+      "negative_control": true,
+      "probes": ["Is the answer a one-step fix without invented structure?", "Guard: added overhead tokens versus Arm A baseline."],
+      "expected_key": {"simple_fix": true, "overhead_guard": "near-zero"}
+    },
+    {
+      "id": "P0v2-NC-2",
+      "family": "negative-control",
+      "scenario_common": "A meeting invite has the wrong room number; the organizer notices before sending.",
+      "stem": "Question: what should be done?",
+      "framing": {"A": "", "B": "", "C": "", "Cprime": ""},
+      "eligible_for_c_vs_cprime": false,
+      "negative_control": true,
+      "probes": ["Is the answer a one-step fix without invented structure?", "Guard: added overhead tokens versus Arm A baseline."],
+      "expected_key": {"simple_fix": true, "overhead_guard": "near-zero"}
+    }
+  ]
+}

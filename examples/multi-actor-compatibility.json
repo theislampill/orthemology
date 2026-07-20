@@ -4,44 +4,86 @@
   "parts": [
     {
       "schema": "analysis.schema.json",
-      "instance": {"analysis_id": "chess-eval-white", "version": "1.0", "task": "win as White", "repertoire_ref": "terminal-state-types-white"}
+      "instance": {
+        "analysis_id": "chess-eval-white",
+        "version": "1.0",
+        "task": "win as White",
+        "repertoire_ref": "terminal-state-types-white"
+      }
     },
     {
       "schema": "analysis.schema.json",
-      "instance": {"analysis_id": "chess-eval-black", "version": "1.0", "task": "win as Black", "repertoire_ref": "terminal-state-types-black"}
+      "instance": {
+        "analysis_id": "chess-eval-black",
+        "version": "1.0",
+        "task": "win as Black",
+        "repertoire_ref": "terminal-state-types-black"
+      }
     },
     {
       "schema": "orthemma.schema.json",
-      "instance": {"identity_key": "game-2214-position", "version": "after-move-31", "kind": "game-position"}
+      "instance": {
+        "identity_key": "game-2214-position",
+        "version": "after-move-31",
+        "kind": "game-position"
+      }
     },
     {
       "schema": "orthing-episode.schema.json",
       "instance": {
         "episode_id": "ep-white-analyze-31",
-        "occurrence": {"identity_key": "game-2214-position", "version": "after-move-31", "kind": "game-position"},
+        "occurrence": {
+          "identity_key": "game-2214-position",
+          "version": "after-move-31",
+          "kind": "game-position"
+        },
         "observation": "full board state (perfect information)",
         "actor": "engine-alpha",
-        "analysis": {"analysis_id": "chess-eval-white", "version": "1.0", "task": "win as White"},
+        "analysis": {
+          "analysis_id": "chess-eval-white",
+          "version": "1.0",
+          "task": "win as White"
+        },
         "time": "2026-07-13T10:00:00Z",
         "meta_tokens": [],
-        "placement": {"evaluation": "white-advantage"},
+        "placement": {
+          "evaluation": "white-advantage"
+        },
         "action": null,
-        "successors": []
+        "successors": [],
+        "evidence": [],
+        "warrant": null,
+        "policy": "declared per-example policy (see example prose)",
+        "verdict_record_ref": null
       }
     },
     {
       "schema": "orthing-episode.schema.json",
       "instance": {
         "episode_id": "ep-black-analyze-31",
-        "occurrence": {"identity_key": "game-2214-position", "version": "after-move-31", "kind": "game-position"},
+        "occurrence": {
+          "identity_key": "game-2214-position",
+          "version": "after-move-31",
+          "kind": "game-position"
+        },
         "observation": "full board state (perfect information)",
         "actor": "engine-beta",
-        "analysis": {"analysis_id": "chess-eval-black", "version": "1.0", "task": "win as Black"},
+        "analysis": {
+          "analysis_id": "chess-eval-black",
+          "version": "1.0",
+          "task": "win as Black"
+        },
         "time": "2026-07-13T10:00:00Z",
         "meta_tokens": [],
-        "placement": {"evaluation": "black-disadvantage"},
+        "placement": {
+          "evaluation": "black-disadvantage"
+        },
         "action": null,
-        "successors": []
+        "successors": [],
+        "evidence": [],
+        "warrant": null,
+        "policy": "declared per-example policy (see example prose)",
+        "verdict_record_ref": null
       }
     }
   ],

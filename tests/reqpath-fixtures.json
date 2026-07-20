@@ -1,0 +1,33 @@
+{
+  "schema": "orthemology-reqpath-fixtures-v1",
+  "note": "Deterministic fixtures for the shipped RequiredBy rule table (docs/governance-requirements.yaml). Each fixture supplies an episode shape and the expected derived ReqPath; scripts/derive_reqpath.py --check recomputes with a trace.",
+  "fixtures": [
+    {
+      "id": "RP-1-minimal",
+      "shape": {"has_meta_tokens": false, "selects_route": false, "makes_closure_claim": false, "robustness_obligation": false, "risk_class": "low"},
+      "expected_reqpath": ["EVIDENCE_SUPPORT", "PROCEDURE_RELIABLE", "EVIDENCE_CURRENT", "GOV_CONFIG_ADEQUATE", "GOV_POLICY_ADEQUATE", "EXECUTION_FAITHFUL", "EX_ANTE_JUSTIFIED"]
+    },
+    {
+      "id": "RP-2-token-bearing",
+      "shape": {"has_meta_tokens": true, "selects_route": false, "makes_closure_claim": false, "robustness_obligation": false, "risk_class": "low"},
+      "expected_reqpath": ["EVIDENCE_SUPPORT", "PROCEDURE_RELIABLE", "EVIDENCE_CURRENT", "GOV_CONFIG_ADEQUATE", "GOV_POLICY_ADEQUATE", "GOV_TOKEN_ADEQUATE", "EXECUTION_FAITHFUL", "EX_ANTE_JUSTIFIED"]
+    },
+    {
+      "id": "RP-3-routing-closure",
+      "shape": {"has_meta_tokens": true, "selects_route": true, "makes_closure_claim": true, "robustness_obligation": false, "risk_class": "medium"},
+      "expected_reqpath": ["EVIDENCE_SUPPORT", "PROCEDURE_RELIABLE", "EVIDENCE_CURRENT", "GOV_CONFIG_ADEQUATE", "GOV_POLICY_ADEQUATE", "GOV_TOKEN_ADEQUATE", "EXECUTION_FAITHFUL", "EX_ANTE_JUSTIFIED", "ROUTE_ADMISSIBLE", "CLOSURE_TRUTHFUL"]
+    },
+    {
+      "id": "RP-4-full-obligations",
+      "shape": {"has_meta_tokens": true, "selects_route": true, "makes_closure_claim": true, "robustness_obligation": true, "risk_class": "high"},
+      "expected_reqpath": ["EVIDENCE_SUPPORT", "PROCEDURE_RELIABLE", "EVIDENCE_CURRENT", "GOV_CONFIG_ADEQUATE", "GOV_POLICY_ADEQUATE", "GOV_TOKEN_ADEQUATE", "EXECUTION_FAITHFUL", "EX_ANTE_JUSTIFIED", "ROUTE_ADMISSIBLE", "CLOSURE_TRUTHFUL", "ROBUST_NEIGHBORHOOD"]
+    },
+    {
+      "id": "RP-5-omission-attack",
+      "note": "CE-R6: an otherwise valid record omitting a derivable requirement must be caught — the checker asserts the derived set is NOT a subset-tolerant match",
+      "shape": {"has_meta_tokens": true, "selects_route": false, "makes_closure_claim": false, "robustness_obligation": false, "risk_class": "low"},
+      "declared_reqpath_missing_token_verdict": ["EVIDENCE_SUPPORT", "PROCEDURE_RELIABLE", "EVIDENCE_CURRENT", "GOV_CONFIG_ADEQUATE", "GOV_POLICY_ADEQUATE", "EXECUTION_FAITHFUL", "EX_ANTE_JUSTIFIED"],
+      "expected_mismatch": true
+    }
+  ]
+}

@@ -4,33 +4,92 @@
   "title": "Handoff record (hand_in / hand_out packet)",
   "description": "Handoffs are the loci of transport error: a verdict crossing an edge without its scope and version is how stale evidence propagates. Edge orientation: earlier → later; label carries semantics.",
   "type": "object",
-  "required": ["packet_id", "packet_version", "sender_episode", "receiver_episode", "subject", "edge_label"],
+  "required": [
+    "packet_id",
+    "packet_version",
+    "sender_episode",
+    "receiver_episode",
+    "subject",
+    "edge_label"
+  ],
   "properties": {
-    "packet_id": {"type": "string"},
-    "packet_version": {"type": "string"},
-    "sender_episode": {"type": "string"},
-    "receiver_episode": {"type": "string"},
-    "edge_label": {"enum": ["handoff", "supersession", "retry-of"]},
+    "packet_id": {
+      "type": "string"
+    },
+    "packet_version": {
+      "type": "string"
+    },
+    "sender_episode": {
+      "type": "string"
+    },
+    "receiver_episode": {
+      "type": "string"
+    },
+    "edge_label": {
+      "enum": [
+        "handoff",
+        "supersession",
+        "retry-of"
+      ]
+    },
     "subject": {
       "type": "object",
-      "required": ["identity_key", "version"],
-      "properties": {"identity_key": {"type": "string"}, "version": {"type": "string"}}
+      "required": [
+        "identity_key",
+        "version"
+      ],
+      "properties": {
+        "identity_key": {
+          "type": "string"
+        },
+        "version": {
+          "type": "string"
+        }
+      },
+      "additionalProperties": false
     },
     "state_claims": {
       "type": "array",
       "items": {
         "type": "object",
-        "required": ["claim_id", "scope", "valid_for_version"],
+        "required": [
+          "claim_id",
+          "scope",
+          "valid_for_version"
+        ],
         "properties": {
-          "claim_id": {"type": "string"},
-          "scope": {"type": "string"},
-          "valid_for_version": {"type": "string", "description": "the (κ,v) the claim was established for — transport requires this to match or a lineage argument"},
-          "analysis_id": {"type": "string"},
-          "analysis_version": {"type": "string"}
-        }
+          "claim_id": {
+            "type": "string"
+          },
+          "scope": {
+            "type": "string"
+          },
+          "valid_for_version": {
+            "type": "string",
+            "description": "the (κ,v) the claim was established for — transport requires this to match or a lineage argument"
+          },
+          "analysis_id": {
+            "type": "string"
+          },
+          "analysis_version": {
+            "type": "string"
+          }
+        },
+        "additionalProperties": false
       }
     },
-    "evidence_refs": {"type": "array", "items": {"type": "string"}},
-    "authority_claims": {"type": "array", "items": {"type": "string"}}
-  }
+    "evidence_refs": {
+      "type": "array",
+      "items": {
+        "type": "string"
+      }
+    },
+    "authority_claims": {
+      "type": "array",
+      "items": {
+        "type": "string"
+      }
+    }
+  },
+  "additionalProperties": false
 }

@@ -1,0 +1,292 @@
+{
+  "schema": "orthemology-negative-fixtures-v1",
+  "note": "Malformed records that MUST be rejected. expect_layer: 'schema' = the hardened JSON Schema itself rejects it; 'semantic' = it is schema-valid by design and must be rejected by validate_cross_record_semantics. From the R3 read-only audit's adversarial baseline (all seven classes were ACCEPTED by the R2 schemas).",
+  "fixtures": [
+    {
+      "id": "N1-empty-binding",
+      "why": "metaorthemma with empty binding and no governed component/scope — violates M1 (a token exists only where material binding exists)",
+      "expect_layer": "schema",
+      "schema": "metaorthemma.schema.json",
+      "instance": {
+        "token_id": "t1",
+        "of_type": {
+          "mu_id": "m",
+          "mu_version": "1"
+        },
+        "analysis": {
+          "analysis_id": "a",
+          "version": "1"
+        },
+        "anchor": {
+          "identity_key": "k",
+          "version": "1"
+        },
+        "binding": {},
+        "binder": {
+          "actor": "x",
+          "binding_warrant": "w",
+          "binding_time": "t"
+        },
+        "validity": {}
+      }
+    },
+    {
+      "id": "N2-skeletal-episode",
+      "why": "episode with only identity/actor/analysis/time/placement — not auditable",
+      "expect_layer": "schema",
+      "schema": "orthing-episode.schema.json",
+      "instance": {
+        "episode_id": "e1",
+        "occurrence": {
+          "identity_key": "k",
+          "version": "1",
+          "kind": "case"
+        },
+        "actor": "a",
+        "analysis": {
+          "analysis_id": "a",
+          "version": "1"
+        },
+        "time": "t",
+        "placement": {}
+      }
+    },
+    {
+      "id": "N3-fail-but-adequate",
+      "why": "required EVIDENCE_SUPPORT fails while pathway_state claims adequate — pathway aggregation must recompute",
+      "expect_layer": "semantic",
+      "schema": "verdict-record.schema.json",
+      "instance": {
+        "episode_id": "e1",
+        "required_path": [
+          "EVIDENCE_SUPPORT"
+        ],
+        "statuses": {
+          "EVIDENCE_SUPPORT": "fail"
+        },
+        "pathway_state": "adequate"
+      }
+    },
+    {
+      "id": "N4-factivity-violation",
+      "why": "TOKEN_TRUTH_LINKED pass on a RESULT_CORRECT fail claim — factivity encoded in the schema's claim_verdicts allOf",
+      "expect_layer": "schema",
+      "schema": "verdict-record.schema.json",
+      "instance": {
+        "episode_id": "e1",
+        "required_path": [],
+        "statuses": {},
+        "pathway_state": "adequate",
+        "claim_verdicts": [
+          {
+            "claim_id": "q1",
+            "result_correct": "fail",
+            "token_truth_linked": "pass"
+          }
+        ]
+      }
+    },
+    {
+      "id": "N5-cross-anchor-mismatch",
+      "why": "schema-complete episode whose meta-token is anchored to a DIFFERENT occurrence and analysis — must fail cross-record semantics",
+      "expect_layer": "semantic",
+      "schema": "orthing-episode.schema.json",
+      "instance": {
+        "episode_id": "e1",
+        "occurrence": {
+          "identity_key": "CASE-A",
+          "version": "1",
+          "kind": "case"
+        },
+        "observation": "x",
+        "evidence": [],
+        "actor": "a",
+        "warrant": null,
+        "analysis": {
+          "analysis_id": "AN-1",
+          "version": "1"
+        },
+        "time": "t",
+        "policy": "p",
+        "placement": {
+          "axis": "v"
+        },
+        "verdict_record_ref": null,
+        "meta_tokens": [
+          {
+            "token_id": "t1",
+            "of_type": {
+              "mu_id": "m",
+              "mu_version": "1"
+            },
+            "analysis": {
+              "analysis_id": "AN-OTHER",
+              "version": "9"
+            },
+            "anchor": {
+              "identity_key": "CASE-B",
+              "version": "3"
+            },
+            "governed_component": "E",
+            "binding": {
+              "x": 1
+            },
+            "scope": {
+              "claims": []
+            },
+            "binder": {
+              "actor": "x",
+              "binding_warrant": "w",
+              "binding_time": "t"
+            },
+            "validity": {}
+          }
+        ]
+      }
+    },
+    {
+      "id": "N6-duplicate-evidence-ids",
+      "why": "schema-complete episode with two evidence items sharing one evidence_id — must fail uniqueness semantics",
+      "expect_layer": "semantic",
+      "schema": "orthing-episode.schema.json",
+      "instance": {
+        "episode_id": "e1",
+        "occurrence": {
+          "identity_key": "k",
+          "version": "1",
+          "kind": "case"
+        },
+        "observation": "x",
+        "evidence": [
+          {
+            "evidence_id": "E1",
+            "channel": "c",
+            "property_class": "p",
+            "scope": "s",
+            "provenance": "pr",
+            "validity": "v"
+          },
+          {
+            "evidence_id": "E1",
+            "channel": "c2",
+            "property_class": "p2",
+            "scope": "s2",
+            "provenance": "pr2",
+            "validity": "v2"
+          }
+        ],
+        "actor": "a",
+        "warrant": null,
+        "analysis": {
+          "analysis_id": "a",
+          "version": "1"
+        },
+        "time": "t",
+        "policy": "p",
+        "placement": {
+          "axis": "v"
+        },
+        "verdict_record_ref": null
+      }
+    },
+    {
+      "id": "N7-undeclared-fields",
+      "why": "undeclared extra top-level fields — additionalProperties:false",
+      "expect_layer": "schema",
+      "schema": "verdict-record.schema.json",
+      "instance": {
+        "episode_id": "e1",
+        "required_path": [],
+        "statuses": {},
+        "pathway_state": "adequate",
+        "totally_undeclared_field": {
+          "anything": true
+        },
+        "another_one": 42
+      }
+    },
+    {
+      "id": "N8-na-without-reason",
+      "why": "a required verdict marked not-applicable with no recorded reason — 'not tested' is never 'not applicable'",
+      "expect_layer": "semantic",
+      "schema": "verdict-record.schema.json",
+      "instance": {
+        "episode_id": "e1",
+        "required_path": [
+          "EVIDENCE_SUPPORT",
+          "GOV_TOKEN_ADEQUATE"
+        ],
+        "statuses": {
+          "EVIDENCE_SUPPORT": "pass",
+          "GOV_TOKEN_ADEQUATE": "not-applicable"
+        },
+        "pathway_state": "adequate"
+      }
+    },
+    {
+      "id": "N9-token-verdict-without-token",
+      "why": "per-token V3c statuses reference token ids that exist nowhere — dangling reference",
+      "expect_layer": "semantic",
+      "schema": "verdict-record.schema.json",
+      "instance": {
+        "episode_id": "e1",
+        "required_path": [],
+        "statuses": {},
+        "pathway_state": "adequate",
+        "per_token_v3c": [
+          {
+            "token_id": "GHOST-TOKEN",
+            "status": "fail",
+            "failing_conjunct": "Current"
+          }
+        ]
+      }
+    },
+    {
+      "id": "N10-nonregistry-verdict",
+      "why": "a status keyed by a verdict id not in the registry",
+      "expect_layer": "schema",
+      "schema": "verdict-record.schema.json",
+      "instance": {
+        "episode_id": "e1",
+        "required_path": [],
+        "statuses": {
+          "SOUND_REASON": "pass"
+        },
+        "pathway_state": "adequate"
+      }
+    },
+    {
+      "id": "N11-false-closure-over-unresolved",
+      "why": "closure claim asserted while a residual is unresolved (the pre-reread state of examples/whole-state-reread.json) - Definition 13 machine floor",
+      "expect_layer": "semantic",
+      "schema": "claim-ledger.schema.json",
+      "instance": {
+        "episode_id": "ep-migration-close-9",
+        "claims": [],
+        "residuals": [
+          {
+            "burden_id": "B1-migrate-store",
+            "description": "move data",
+            "disposition": "validated-resolved",
+            "owner": null,
+            "trigger": null,
+            "risk_record": null
+          },
+          {
+            "burden_id": "B2-rollback-rehearsal",
+            "description": "acceptance basis voided by B1",
+            "disposition": "unresolved",
+            "owner": null,
+            "trigger": null,
+            "risk_record": null
+          }
+        ],
+        "closure_claim": {
+          "level": "done",
+          "asserted_by": "executor"
+        }
+      }
+    }
+  ]
+}

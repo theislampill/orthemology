@@ -6,28 +6,64 @@
       "schema": "orthing-episode.schema.json",
       "instance": {
         "episode_id": "ep-classify-1",
-        "occurrence": {"identity_key": "sample-77", "version": "received", "kind": "lab-sample"},
+        "occurrence": {
+          "identity_key": "sample-77",
+          "version": "received",
+          "kind": "lab-sample"
+        },
         "actor": "auto-classifier",
-        "analysis": {"analysis_id": "sample-intake", "version": "2.0", "task": "classify and route incoming samples"},
+        "analysis": {
+          "analysis_id": "sample-intake",
+          "version": "2.0",
+          "task": "classify and route incoming samples"
+        },
         "time": "2026-07-14T09:00:00Z",
         "meta_tokens": [],
-        "placement": {"substance": "flour (INCORRECT)"},
+        "placement": {
+          "substance": "flour (INCORRECT)"
+        },
         "action": "forward",
-        "successors": []
+        "successors": [],
+        "observation": "as recorded in the episode narrative (see example prose)",
+        "evidence": [],
+        "warrant": null,
+        "policy": "declared per-example policy (see example prose)",
+        "verdict_record_ref": null
       }
     },
     {
       "schema": "orthing-episode.schema.json",
       "instance": {
         "episode_id": "ep-validate-2",
-        "occurrence": {"identity_key": "sample-77", "version": "received", "kind": "lab-sample"},
+        "occurrence": {
+          "identity_key": "sample-77",
+          "version": "received",
+          "kind": "lab-sample"
+        },
         "actor": "bench-validator",
-        "analysis": {"analysis_id": "sample-intake", "version": "2.0", "task": "classify and route incoming samples"},
+        "analysis": {
+          "analysis_id": "sample-intake",
+          "version": "2.0",
+          "task": "classify and route incoming samples"
+        },
         "time": "2026-07-14T10:00:00Z",
         "meta_tokens": [],
-        "placement": {"substance": "cornstarch"},
+        "placement": {
+          "substance": "cornstarch"
+        },
         "action": "correct-and-route",
-        "successors": [{"identity_key": "sample-77", "version": "routed", "action_label": "route"}]
+        "successors": [
+          {
+            "identity_key": "sample-77",
+            "version": "routed",
+            "action_label": "route"
+          }
+        ],
+        "observation": "as recorded in the episode narrative (see example prose)",
+        "evidence": [],
+        "warrant": null,
+        "policy": "declared per-example policy (see example prose)",
+        "verdict_record_ref": null
       }
     },
     {
@@ -38,8 +74,19 @@
         "sender_episode": "ep-classify-1",
         "receiver_episode": "ep-validate-2",
         "edge_label": "handoff",
-        "subject": {"identity_key": "sample-77", "version": "received"},
-        "state_claims": [{"claim_id": "claim-substance", "scope": "substance axis", "valid_for_version": "received", "analysis_id": "sample-intake", "analysis_version": "2.0"}]
+        "subject": {
+          "identity_key": "sample-77",
+          "version": "received"
+        },
+        "state_claims": [
+          {
+            "claim_id": "claim-substance",
+            "scope": "substance axis",
+            "valid_for_version": "received",
+            "analysis_id": "sample-intake",
+            "analysis_version": "2.0"
+          }
+        ]
       }
     },
     {
@@ -50,27 +97,76 @@
         "sender_episode": "ep-classify-1",
         "receiver_episode": "ep-validate-2",
         "edge_label": "supersession",
-        "subject": {"identity_key": "sample-77", "version": "received"},
-        "state_claims": [{"claim_id": "claim-substance", "scope": "substance axis", "valid_for_version": "received", "analysis_id": "sample-intake", "analysis_version": "2.0"}]
+        "subject": {
+          "identity_key": "sample-77",
+          "version": "received"
+        },
+        "state_claims": [
+          {
+            "claim_id": "claim-substance",
+            "scope": "substance axis",
+            "valid_for_version": "received",
+            "analysis_id": "sample-intake",
+            "analysis_version": "2.0"
+          }
+        ]
       }
     },
     {
       "schema": "orthing-episode.schema.json",
       "instance": {
         "episode_id": "ep-composite-intake-77",
-        "occurrence": {"identity_key": "sample-77", "version": "received", "kind": "lab-sample"},
+        "occurrence": {
+          "identity_key": "sample-77",
+          "version": "received",
+          "kind": "lab-sample"
+        },
         "actor": "intake-pipeline (declared composite actor)",
-        "analysis": {"analysis_id": "sample-intake", "version": "2.0", "task": "classify and route incoming samples"},
+        "analysis": {
+          "analysis_id": "sample-intake",
+          "version": "2.0",
+          "task": "classify and route incoming samples"
+        },
         "time": "2026-07-14T09:00:00Z/2026-07-14T10:30:00Z",
         "meta_tokens": [],
-        "placement": {"substance": "cornstarch"},
+        "placement": {
+          "substance": "cornstarch"
+        },
         "action": "route",
-        "successors": [{"identity_key": "sample-77", "version": "routed", "action_label": "route"}]
+        "successors": [
+          {
+            "identity_key": "sample-77",
+            "version": "routed",
+            "action_label": "route"
+          }
+        ],
+        "observation": "as recorded in the episode narrative (see example prose)",
+        "evidence": [],
+        "warrant": null,
+        "policy": "declared per-example policy (see example prose)",
+        "verdict_record_ref": null
       }
     }
   ],
   "composition_record": {
-    "graph": {"nodes": ["ep-classify-1", "ep-validate-2"], "edges": [["ep-classify-1", "ep-validate-2", "handoff"], ["ep-classify-1", "ep-validate-2", "supersession"]]},
+    "graph": {
+      "nodes": [
+        "ep-classify-1",
+        "ep-validate-2"
+      ],
+      "edges": [
+        [
+          "ep-classify-1",
+          "ep-validate-2",
+          "handoff"
+        ],
+        [
+          "ep-classify-1",
+          "ep-validate-2",
+          "supersession"
+        ]
+      ]
+    },
     "conditions": {
       "one_case_one_analysis": true,
       "declared_boundary": "intake-pipeline named as composite actor by lab governance",

@@ -1,5 +1,7 @@
 # Closure burden ledger (R2, 2026-07-20)
 
+> **SUPERSEDED IN PART — R3 correction notice (2026-07-20).** Preserved verbatim as history. The R3 read-only audit re-dispositions several rows: #13 (companion type/token language under repair), #14/#23 (source verification is R3 work, not owner-only, until a documented accessibility failure), #15 (one Qurʾānic locus wrong: 20:11 → 20:11–12), #17 (v1 arms not matched as claimed), #19 (schemas accept malformed records; positive-only), #21 ("reproducible build" claim withdrawn — live timestamps, raw-Markdown leakage). The current ledger is `r3/R3-CLOSURE-BURDEN-LEDGER.md` (created at R3 closeout).
+
 Every burden of the non-empirical orthemology lane, with exactly one honest disposition. Dispositions use the project's own residual taxonomy: **validated-resolved** (closed on in-scope, current, sufficient — here: deterministic — evidence), **deferred** (open with a declared trigger), **owner-assigned** (waiting on a decision/resource only the owner can supply), **risk-accepted** (left open under a recorded, accepted limitation). Nothing is transferred; nothing is unresolved-without-a-plan.
 
 | # | Burden | Disposition | Evidence / trigger |

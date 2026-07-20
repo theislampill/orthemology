@@ -1,0 +1,39 @@
+# R3 formal audit
+
+**Date:** 2026-07-20 · **Scope:** the formal repairs mandated by the R3 program §5 and the amendment's fifteen adversarial questions. **Not reopened:** analysis-relative truth (D1), result-free pathway adequacy (O2), the registries (D3/D4), O3, C′ (0008). **Lane verdict vocabulary:** per §16 of the R3 mandate, the formal lane's strongest permissible claim is *"R3 internally consistent specification under the declared definitions, fixtures, negative tests, and acknowledged open parameters"* — never mathematical completeness or empirical truth.
+
+## 1. Π_A generalized (FORM-1 repaired)
+
+Definition 10 (manuscript §5.2) now leads with the general form `Π_A ⊆ 𝒫(O_A)` — admissible complete profiles under the constraints declared by `A` — and presents factorized axes as one permitted representation family with: applicability conditions per axis; **exactly one** value per applicable alternatives axis; an explicit `not-applicable` declared null for objectively inapplicable axes; possibly-empty co-holding sets where absence is declared admissible; declared partition-or-overlap status with reconciliation constraints for overlaps; and admissibility of the empty complete profile decided by `A`'s constraints, not by fiat. Five states are separated and assigned to their proper objects: objective absence and objective inapplicability (profiles), epistemic openness (`p̂`), evidence absence (`H`), candidate plurality (`Ĉ`). Retained unchanged: `O*(m; A) ∈ Π_A`; `Ĉ_{A,α,t}(m) ⊆ Π_A`; `p̂_{A,α,t}(m) ∈ Π_A^∂`; candidate-set ≠ one vague partial profile. The core's gloss block mirrors the general form.
+
+## 2. RequiredBy made auditable (FORM-2 repaired, honestly)
+
+Adopted: the **preferred option within an honest boundary**. `docs/governance-requirements.yaml` is a machine-readable rule table over a typed episode-shape contract; `scripts/derive_reqpath.py` derives `ReqPath(e)` with a per-verdict trace (required/not-required + governing rule + rationale); `tests/reqpath-fixtures.json` pins four shape-derivations and one **omission attack** (a declared path missing a derivable requirement is detected, never tolerated) — all checked in CI. The honest boundary, stated in the core, the YAML, and here: the shipped table is *one* complete deterministic governance instance; `RequiredBy` in general remains a governance-supplied parameterized interface — an **acknowledged open parameter**, not a closed universal calculus. The single-table form makes rule conflict structurally impossible within an instance (one rule per verdict); conflicting *regimes* are a configuration defect caught at load (CE-R5).
+
+## 3. Formal attacks re-run
+
+Eight new counterexamples constructed and dispositioned in [`R3-COUNTEREXAMPLE-LEDGER.md`](R3-COUNTEREXAMPLE-LEDGER.md) (CE-R1…CE-R8): all either representable under the R3 definitions or excluded by a now-explicit constraint. The R2 ledger's 16 patterns remain representable (spot-rechecked; no R3 change touches their machinery — the registries and fixtures F1–F7 are unchanged).
+
+## 4. The amendment's fifteen adversarial questions, answered
+
+1. **Can a concrete reasoning episode be sound?** Yes — CR-1 is exactly that; concreteness carries no negative verdict (Decision 0009 §2). If it could not, "concrete" would be covertly pejorative; the typing forbids that.
+2. **Can a sound faculty produce a false output?** Yes: faculty condition (healthy/impaired) is a dispositional bearer distinct from token success; a properly functioning, reliable faculty yields the CR-3 rare miss. Faculty soundness is non-factive per output; only token truth-linkage is factive.
+3. **Is `PathwayAdequate` sufficient for sound reasoning?** No. It is non-factive by O2; strict soundness requires additionally `TOKEN_TRUTH_LINKED_q` (factive). CR-3 witnesses the gap.
+4. **What does "ideal reason" denote?** A normative specification / regulative model (and, in Turner's usage, an interpretive heuristic) — never an independently existing abstract entity (Decision 0009 §4; anti-reification §6).
+5. **What does `ʿaql ṣarīḥ` name?** Left deliberately open among faculty / condition / body of immediate truths / valid reasoning / family resemblance — the secondary sources do not warrant false precision; recorded in `CONCRETE-AND-SOUND-REASON.md` §4 and the verification queue.
+6. **Are orthemes externally existing universals?** No. `Inst_A(m, o)` remains objectively true because its truth-maker is the occurrence's worldly facts under the declared analysis — objectivity of the instantiation *fact*, not subsistence of the *type* (Decision 0009 §6).
+7. **Is an actor's represented standard a metaortheme, a representation of one, or a metaorthemma?** A representation (`RepresentedMetaType(α, t, μ_rep)`); identity conditions: it is *of* the type it tracks (adequacy-evaluable against the fitting standard), and it becomes token-relevant only when materially case-bound, at which point the bound record is a metaorthemma with its own `MetaInst` relation.
+8. **Can one metaorthemma instantiate several metaortheme types?** Permitted only with each `MetaInst(μ̄, μᵢ)` relation declared in the binding record; undeclared multi-instantiation is a well-formedness failure (note in `CONCRETE-AND-SOUND-REASON.md` §6; enforceable at the schema layer's `of_type` — currently single-typed, so plural typing requires explicit schema extension, which is the declared extension point).
+9. **Can fiṭrah be assessed without circularly assuming the evaluator's fiṭrah sound?** Non-circularity comes from evaluator symmetry + corroboration: the evaluator's assessment is itself a reified episode scored under the same verdicts (CR-7); no self-certification exists.
+10. **How does tawātur avoid becoming popularity?** By the independence/origin-continuity/competence/scope/corroboration/anti-collusion conditions in the metaortheme; the count alone never satisfies the standard (Decision 0009 §7; CR-6).
+11. **Convergence vs copying?** Decided by the origin map in the metaorthemma's binding: shared upstream dependency ⇒ dependent sources ⇒ `ScopeCorrect` fails (CR-6's failing conjunct), regardless of numerical spread.
+12. **Mental vs external possibility without pan-perceptualism?** The framework separates conceivability-claims (placements about representations) from external-possibility claims (constraints of `A` over worldly facts); the bridge is itself a governed standard (CR-5's failing policy), not a perception; no claim that every modal question is directly perceptual is made anywhere.
+13. **Does strict soundness aggregate claim-wise or episode-wise?** Claim-wise, by definition (`_q` index). Episode-level talk must state its quantifier; partial cases are exactly the mixed episodes of Q14.
+14. **Can one episode contain sound and unsound placements?** Yes — representable now: per-claim `claim_verdicts` with distinct `result_correct`/`token_truth_linked` per claim; strict soundness evaluated per claim.
+15. **Which statuses are objective / actor-indexed / analysis-relative?** Objective given `A`: `O*`, `Inst_A`, result correctness, truth linkage, pathway adequacy (given governance data). Actor-indexed: representations, placements, candidate sets, ex-ante justification. Analysis-relative: everything, by D1 — with the anti-relativism guard (declared `A` fixes the facts; actors can be wrong).
+
+No answer above rests on "a validator passed"; validators pin the *representability* claims (CR/RP fixtures), and the semantic answers stand on the definitions.
+
+## 5. Open parameters (carried forward honestly)
+
+Evidence-class exhaustiveness (hypothesis); no closed-form `RequiredBy` calculus beyond the shipped instance; fusion-rule non-uniqueness; `Δ_A` idealizations; the schema layer's single-typed `of_type` as the declared extension point for plural `MetaInst`. These remain **risk-accepted, documented** — the lane verdict is the §16 formula, nothing stronger.

@@ -1,5 +1,7 @@
 # Project closure report — R2 (non-empirical orthemology lane)
 
+> **SUPERSEDED IN PART — R3 correction notice (2026-07-20).** This report is preserved verbatim as the historical R2 record. An independent read-only audit (`r3/R2-INDEPENDENT-READONLY-AUDIT.md`) subsequently withheld final sign-off: the unrestricted lane verdicts "CLOSED" below, the "reproducible" PDF claim, and the classification of classical-source verification as owner-assigned are **superseded** by the R3 corrective program (`r3/R3-CORRECTION-LEDGER.md`). Nothing below has been edited; read it as R2's self-assessment at merge time, not as the current project state.
+
 **Date:** 2026-07-20 · **Executor:** Claude Fable 5 under the owner's standing autonomy mandate · **Baseline:** R1 public state (commit `5fdd526383488d3e85b0535e1b190283e0058da7`) · **Branch:** `closure/r2-autonomous-tieoff` (merge commit recorded in the repository history and CHANGELOG).
 
 ## What was closed in R2

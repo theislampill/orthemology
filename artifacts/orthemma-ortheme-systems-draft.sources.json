@@ -1,9 +1,18 @@
 {
   "pdf": "orthemma-ortheme-systems-draft.pdf",
-  "commit": "68ce774e5aa0ff5e6a4caea1ac0d896dbfb6b16e",
-  "generated": "2026-07-20",
+  "pdf_sha256": "d55e0c0cf96965a93ca58b68eaa5d39cf1893fe15a2d25bae74bf9036b2d6f1d",
+  "page_count": 30,
   "sources": {
-    "manuscript/orthemma-ortheme-systems-revised-draft.md": "4de2176c2cfdaa8c9a2d9699a286242b6f03fc2b90fa28d634254c73a0f1f3b6"
+    "manuscript/orthemma-ortheme-systems-revised-draft.md": "4f87b5444259311fdad6a458ef8ab8cbd0a40c149e0e5d19fdd025c5b7cdad6f"
   },
-  "pipeline": "fpdf2 + matplotlib-bundled DejaVu (embedding-permissive licenses)"
+  "source_commit": "d3b34efa6cf07225adc755a15d60785bcf1df4cb",
+  "artifact_commit": "the git commit that introduces/updates this artifact (two-stage provenance; see `git log -- artifacts/`)",
+  "source_date_epoch": 1784551021,
+  "build_command": "python scripts/build_pdfs.py",
+  "tools": {
+    "typst": "0.15.0",
+    "markdown-it-py": "4.0.0",
+    "python": "3.11.9"
+  },
+  "generation_status": "complete; strict conversion (no skipped content); double-build verified"
 }

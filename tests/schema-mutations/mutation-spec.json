@@ -1,0 +1,10 @@
+{
+  "schema": "orthemology-mutation-spec-v1",
+  "note": "Deterministic mutation operators applied by validate_negative_fixtures.py to every positive example part. Every generated mutant MUST be rejected by the hardened schemas. No randomness (mutants are enumerated exhaustively per operator), keeping CI deterministic.",
+  "operators": [
+    {"id": "drop-required", "description": "remove each top-level required field, one at a time"},
+    {"id": "bad-enum", "description": "set each top-level enum-constrained field to the value 'NOT-A-LEGAL-VALUE'"},
+    {"id": "extra-field", "description": "add one undeclared top-level field '__mutant__': true"}
+  ],
+  "expectation": "0 surviving mutants (a surviving mutant = a mutant the schema still accepts)"
+}
