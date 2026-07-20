@@ -125,6 +125,46 @@ def collect_issues(parts):
     for o in orthemmas:
         orthemma_versions.setdefault(o.get("identity_key"), set()).add(o.get("version"))
 
+    # ---- token identity rule (R4 independent review, D3): token_id is GLOBALLY
+    # unique across the bundle. A standalone record may redeclare an embedded
+    # token (same id) only when of_type and anchor agree — that is one token
+    # recorded twice, not two tokens. Every token has one owning episode; a
+    # standalone token names it via owning_episode or declares an explicit
+    # external scope (D4/D6).
+    owner_of = {}
+    embedded_by_id = {}
+    for ep in episodes:
+        for tok in ep.get("meta_tokens", []):
+            tid = tok["token_id"]
+            if tid in owner_of:
+                issues.append("token %s: embedded in more than one episode (%s and %s) — "
+                              "token_id must be globally unique across the bundle"
+                              % (tid, owner_of[tid], ep.get("episode_id")))
+            owner_of[tid] = ep.get("episode_id")
+            embedded_by_id[tid] = tok
+    known_episode_ids = (set(episode_by_id) | set(ledger_by_episode)
+                         | {v.get("episode_id") for v in verdicts})
+    for t in standalone_token_recs:
+        tid = t["token_id"]
+        if tid in embedded_by_id:
+            emb = embedded_by_id[tid]
+            if (emb.get("of_type"), emb.get("anchor")) != (t.get("of_type"), t.get("anchor")):
+                issues.append("token %s: standalone record conflicts with the embedded "
+                              "declaration (of_type/anchor differ) — same id must mean "
+                              "the same token" % tid)
+            continue
+        own = t.get("owning_episode")
+        ext = (t.get("scope") or {}).get("external_scope")
+        if own:
+            owner_of[tid] = own
+            if own not in known_episode_ids:
+                issues.append("token %s: owning_episode %s names no episode, ledger, or "
+                              "verdict record in the bundle" % (tid, own))
+        elif not ext:
+            issues.append("token %s: standalone record names no owning_episode and "
+                          "declares no external scope — its claim scope is uncheckable"
+                          % tid)
+
     # ------------------------------------------------- 1. id uniqueness (bundle)
     for label, seq in (
             ("episode", [e.get("episode_id") for e in episodes]),
@@ -331,12 +371,21 @@ def collect_issues(parts):
                     issues.append("%s: claim %s depends on token %s but no record of that token "
                                   "scopes it (declared scope: %s)"
                                   % (eid, c["claim_id"], t, sorted(scope_of[t])))
-        for tok in all_token_recs:
-            miss = [q for q in ((tok.get("scope") or {}).get("claims") or [])
-                    if q not in claim_ids]
-            if miss:
-                issues.append("%s: token %s scopes claim(s) %s absent from the ledger"
-                              % (eid, tok["token_id"], miss))
+    # R4 independent review (D4): a token's claim scope is checked ONLY against
+    # its OWNING episode's ledger(s). The pre-repair loop compared every token
+    # against every ledger, so any two legitimate episodes with claim-scoped
+    # tokens produced reciprocal false positives
+    # (examples/shared-upstream-corroboration-failure.json is the regression).
+    for tid, scoped in sorted(scope_of.items()):
+        own = owner_of.get(tid)
+        if own is None or own not in ledger_by_episode:
+            continue  # unattributable standalone tokens are flagged above (D3/D6)
+        own_claims = {c["claim_id"] for led in ledger_by_episode[own]
+                      for c in led.get("claims", [])}
+        miss = sorted(q for q in scoped if q not in own_claims)
+        if miss:
+            issues.append("%s: token %s scopes claim(s) %s absent from its owning "
+                          "episode's ledger(s)" % (own, tid, miss))
 
     # --------------------------------------------------------- 8. verdict records
     for vr in verdicts:

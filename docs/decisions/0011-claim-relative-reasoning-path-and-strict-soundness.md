@@ -45,3 +45,10 @@ The Taymiyyan architecture (sound/corrupted fiṭrah, tawātur, mutual corrobora
 ## Consequences
 
 Core, manuscript, both companions, `CONCRETE-AND-SOUND-REASON.md`, the verdict schema, cross-record semantics, and the R4 formal audit all carry the corrected forms. R3's documents retain their bodies and are superseded by dated notice.
+
+---
+
+## Amendment (2026-07-20, R4 independent review) — explicit supersession and delivered artifacts
+
+1. **Explicit partial supersession of Decision 0009.** The header's "0007–0010 all stand" was imprecise: this decision **supersedes Decision 0009's strict-soundness formula** (`PathwayAdequate(e) ∧ TOKEN_TRUTH_LINKED_q(e)`) while every other clause of 0009 stands. A dated supersession notice now sits at the superseded formula in 0009, and the relationship is machine-checked (`docs/decision-status.yaml`, `scripts/validate_decision_dependencies.py`) so two current decisions can no longer define one normative symbol incompatibly without failing CI.
+2. **The claimed artifacts now exist.** At candidate head `25d035a…` this decision cited fixture CR-9, `examples/shared-upstream-corroboration-failure.json`, `scripts/validate_claim_reasoning_paths.py`, and the six claim-relative cases, but none was in the tree — a false-closure defect (independent audit §4; correction ledger row C6 wrongly marked DONE). The independent review implemented them: fixtures CR-9…CR-15 plus the CR-OMIT-1 omission attack in `tests/claim-reasoning-fixtures.json`, the validator, and the machine-readable derivation table `docs/claim-reason-requirements.yaml` giving `ReqReason_q(e)` a governance derivation (`RequiredReasonBy` instance with per-verdict trace) rather than a merely supplied projection. `validate_reason_fixtures.py` no longer computes strict soundness from the superseded whole-episode formula.

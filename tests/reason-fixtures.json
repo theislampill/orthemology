@@ -1,238 +1,278 @@
 {
-  "schema": "orthemology-reason-fixtures-v1",
-  "note": "CR-1..CR-8 conceptual fixtures (Decision 0009 / R3 amendment). Deterministic consistency artifacts: they exercise the concrete/sound-reason typing over the existing verdict registry. Statuses use semantic IDs; strictly_sound is DERIVED, never a registry verdict. No empirical claim.",
-  "fixtures": [
+ "schema": "orthemology-reason-fixtures-v1",
+ "note": "CR-1..CR-8 conceptual fixtures (Decision 0009 / R3 amendment). Deterministic consistency artifacts: they exercise the concrete/sound-reason typing over the existing verdict registry. Statuses use semantic IDs; strictly_sound is DERIVED, never a registry verdict. No empirical claim. R4 independent review: each fixture declares an explicit claim_shape; strict soundness is computed claim-relatively (Decision 0011) over the ReqReason_q derivation from docs/claim-reason-requirements.yaml. The superseded whole-episode formula (Decision 0009) is no longer enforced.",
+ "fixtures": [
+  {
+   "id": "CR-1",
+   "title": "concrete and sound reasoning",
+   "setup": "true premises / sound direct knowledge; adequate governing standards; correctly bound metaorthemmata; faithful execution; correct truth-linked placement",
+   "statuses": {
+    "GOV_CONFIG_ADEQUATE": "pass",
+    "GOV_POLICY_ADEQUATE": "pass",
+    "GOV_TOKEN_ADEQUATE": "pass",
+    "EXECUTION_FAITHFUL": "pass",
+    "EVIDENCE_SUPPORT": "pass",
+    "PROCEDURE_RELIABLE": "pass",
+    "EVIDENCE_CURRENT": "pass",
+    "EX_ANTE_JUSTIFIED": "pass",
+    "ROUTE_ADMISSIBLE": "pass",
+    "CLOSURE_TRUTHFUL": "pass",
+    "ROBUST_NEIGHBORHOOD": "pass"
+   },
+   "claim": {
+    "RESULT_CORRECT": "pass",
+    "TOKEN_TRUTH_LINKED": "pass"
+   },
+   "expected": {
+    "pathway_state": "adequate",
+    "strictly_sound": true
+   },
+   "claim_shape": {
+    "claim_type": "placement",
+    "depends_on_tokens": true,
+    "robustness_obligation": true
+   }
+  },
+  {
+   "id": "CR-2",
+   "title": "concrete and unsound reasoning (defective inherited framework)",
+   "setup": "historically accepted but defective premise framework (defective governing configuration); faithful execution; wrong result; no material case-specific binding is at issue (zero-burden rule: GOV_TOKEN_ADEQUATE not in the required path)",
+   "statuses": {
+    "GOV_CONFIG_ADEQUATE": "fail",
+    "GOV_POLICY_ADEQUATE": "pass",
+    "EXECUTION_FAITHFUL": "pass",
+    "EVIDENCE_SUPPORT": "pass",
+    "PROCEDURE_RELIABLE": "pass",
+    "EVIDENCE_CURRENT": "pass",
+    "EX_ANTE_JUSTIFIED": "pass",
+    "ROUTE_ADMISSIBLE": "pass",
+    "CLOSURE_TRUTHFUL": "pass",
+    "ROBUST_NEIGHBORHOOD": "pass"
+   },
+   "claim": {
+    "RESULT_CORRECT": "fail",
+    "TOKEN_TRUTH_LINKED": "fail"
+   },
+   "expected": {
+    "pathway_state": "defective",
+    "strictly_sound": false
+   },
+   "no_meta_token": true,
+   "claim_shape": {
+    "claim_type": "placement",
+    "depends_on_tokens": false,
+    "robustness_obligation": true
+   }
+  },
+  {
+   "id": "CR-3",
+   "title": "adequate pathway, rare miss",
+   "setup": "sufficiently reliable reasoning procedure; proper binding; faithful execution; rare incorrect result; ex-ante justified",
+   "statuses": {
+    "GOV_CONFIG_ADEQUATE": "pass",
+    "GOV_POLICY_ADEQUATE": "pass",
+    "GOV_TOKEN_ADEQUATE": "pass",
+    "EXECUTION_FAITHFUL": "pass",
+    "EVIDENCE_SUPPORT": "pass",
+    "PROCEDURE_RELIABLE": "pass",
+    "EVIDENCE_CURRENT": "pass",
+    "EX_ANTE_JUSTIFIED": "pass",
+    "ROUTE_ADMISSIBLE": "pass",
+    "CLOSURE_TRUTHFUL": "pass",
+    "ROBUST_NEIGHBORHOOD": "pass"
+   },
+   "claim": {
+    "RESULT_CORRECT": "fail",
+    "TOKEN_TRUTH_LINKED": "fail"
+   },
+   "expected": {
+    "pathway_state": "adequate",
+    "strictly_sound": false
+   },
+   "claim_shape": {
+    "claim_type": "placement",
+    "depends_on_tokens": true,
+    "robustness_obligation": true
+   }
+  },
+  {
+   "id": "CR-4",
+   "title": "correct result through corrupt concrete rationality",
+   "setup": "defective culturally inherited governing standard; result correct by compensating error; truth linkage fails; no material case-specific binding is at issue (zero-burden rule: GOV_TOKEN_ADEQUATE not in the required path)",
+   "statuses": {
+    "GOV_CONFIG_ADEQUATE": "fail",
+    "GOV_POLICY_ADEQUATE": "pass",
+    "EXECUTION_FAITHFUL": "pass",
+    "EVIDENCE_SUPPORT": "fail",
+    "PROCEDURE_RELIABLE": "fail",
+    "EVIDENCE_CURRENT": "pass",
+    "EX_ANTE_JUSTIFIED": "fail",
+    "ROUTE_ADMISSIBLE": "pass",
+    "CLOSURE_TRUTHFUL": "pass",
+    "ROBUST_NEIGHBORHOOD": "fail"
+   },
+   "claim": {
+    "RESULT_CORRECT": "pass",
+    "TOKEN_TRUTH_LINKED": "fail"
+   },
+   "expected": {
+    "pathway_state": "defective",
+    "strictly_sound": false
+   },
+   "no_meta_token": true,
+   "claim_shape": {
+    "claim_type": "placement",
+    "depends_on_tokens": false,
+    "robustness_obligation": true
+   }
+  },
+  {
+   "id": "CR-5",
+   "title": "mental/external category error with faithful execution",
+   "setup": "actor treats mental conceivability as sufficient for external possibility; argument proceeds validly from the faulty bridge; premise/bridge standard (policy level) fails; no material case-specific binding is at issue (zero-burden rule: GOV_TOKEN_ADEQUATE not in the required path)",
+   "statuses": {
+    "GOV_CONFIG_ADEQUATE": "pass",
+    "GOV_POLICY_ADEQUATE": "fail",
+    "EXECUTION_FAITHFUL": "pass",
+    "EVIDENCE_SUPPORT": "undetermined",
+    "PROCEDURE_RELIABLE": "pass",
+    "EVIDENCE_CURRENT": "pass",
+    "EX_ANTE_JUSTIFIED": "pass",
+    "ROUTE_ADMISSIBLE": "pass",
+    "CLOSURE_TRUTHFUL": "pass",
+    "ROBUST_NEIGHBORHOOD": "pass"
+   },
+   "claim": {
+    "RESULT_CORRECT": "undetermined",
+    "TOKEN_TRUTH_LINKED": "undetermined"
+   },
+   "expected": {
+    "pathway_state": "defective",
+    "strictly_sound": false
+   },
+   "no_meta_token": true,
+   "claim_shape": {
+    "claim_type": "placement",
+    "depends_on_tokens": false,
+    "robustness_obligation": true
+   }
+  },
+  {
+   "id": "CR-6",
+   "title": "false tawatur: dependent sources bound as independent",
+   "setup": "tawatur-like metaortheme adequate; metaorthemma binds a source set sharing one upstream dependency as independent (binding failure, failing conjunct ScopeCorrect); execution faithful; epistemic-status placement overconfident",
+   "statuses": {
+    "GOV_CONFIG_ADEQUATE": "pass",
+    "GOV_POLICY_ADEQUATE": "pass",
+    "GOV_TOKEN_ADEQUATE": "fail",
+    "EXECUTION_FAITHFUL": "pass",
+    "EVIDENCE_SUPPORT": "fail",
+    "PROCEDURE_RELIABLE": "pass",
+    "EVIDENCE_CURRENT": "pass",
+    "EX_ANTE_JUSTIFIED": "fail",
+    "ROUTE_ADMISSIBLE": "pass",
+    "CLOSURE_TRUTHFUL": "pass",
+    "ROBUST_NEIGHBORHOOD": "undetermined"
+   },
+   "claim": {
+    "RESULT_CORRECT": "fail",
+    "TOKEN_TRUTH_LINKED": "fail"
+   },
+   "per_token": [
     {
-      "id": "CR-1",
-      "title": "concrete and sound reasoning",
-      "setup": "true premises / sound direct knowledge; adequate governing standards; correctly bound metaorthemmata; faithful execution; correct truth-linked placement",
-      "statuses": {
-        "GOV_CONFIG_ADEQUATE": "pass",
-        "GOV_POLICY_ADEQUATE": "pass",
-        "GOV_TOKEN_ADEQUATE": "pass",
-        "EXECUTION_FAITHFUL": "pass",
-        "EVIDENCE_SUPPORT": "pass",
-        "PROCEDURE_RELIABLE": "pass",
-        "EVIDENCE_CURRENT": "pass",
-        "EX_ANTE_JUSTIFIED": "pass",
-        "ROUTE_ADMISSIBLE": "pass",
-        "CLOSURE_TRUTHFUL": "pass",
-        "ROBUST_NEIGHBORHOOD": "pass"
-      },
-      "claim": {
-        "RESULT_CORRECT": "pass",
-        "TOKEN_TRUTH_LINKED": "pass"
-      },
-      "expected": {
-        "pathway_state": "adequate",
-        "strictly_sound": true
-      }
-    },
-    {
-      "id": "CR-2",
-      "title": "concrete and unsound reasoning (defective inherited framework)",
-      "setup": "historically accepted but defective premise framework (defective governing configuration); faithful execution; wrong result; no material case-specific binding is at issue (zero-burden rule: GOV_TOKEN_ADEQUATE not in the required path)",
-      "statuses": {
-        "GOV_CONFIG_ADEQUATE": "fail",
-        "GOV_POLICY_ADEQUATE": "pass",
-        "EXECUTION_FAITHFUL": "pass",
-        "EVIDENCE_SUPPORT": "pass",
-        "PROCEDURE_RELIABLE": "pass",
-        "EVIDENCE_CURRENT": "pass",
-        "EX_ANTE_JUSTIFIED": "pass",
-        "ROUTE_ADMISSIBLE": "pass",
-        "CLOSURE_TRUTHFUL": "pass",
-        "ROBUST_NEIGHBORHOOD": "pass"
-      },
-      "claim": {
-        "RESULT_CORRECT": "fail",
-        "TOKEN_TRUTH_LINKED": "fail"
-      },
-      "expected": {
-        "pathway_state": "defective",
-        "strictly_sound": false
-      },
-      "no_meta_token": true
-    },
-    {
-      "id": "CR-3",
-      "title": "adequate pathway, rare miss",
-      "setup": "sufficiently reliable reasoning procedure; proper binding; faithful execution; rare incorrect result; ex-ante justified",
-      "statuses": {
-        "GOV_CONFIG_ADEQUATE": "pass",
-        "GOV_POLICY_ADEQUATE": "pass",
-        "GOV_TOKEN_ADEQUATE": "pass",
-        "EXECUTION_FAITHFUL": "pass",
-        "EVIDENCE_SUPPORT": "pass",
-        "PROCEDURE_RELIABLE": "pass",
-        "EVIDENCE_CURRENT": "pass",
-        "EX_ANTE_JUSTIFIED": "pass",
-        "ROUTE_ADMISSIBLE": "pass",
-        "CLOSURE_TRUTHFUL": "pass",
-        "ROBUST_NEIGHBORHOOD": "pass"
-      },
-      "claim": {
-        "RESULT_CORRECT": "fail",
-        "TOKEN_TRUTH_LINKED": "fail"
-      },
-      "expected": {
-        "pathway_state": "adequate",
-        "strictly_sound": false
-      }
-    },
-    {
-      "id": "CR-4",
-      "title": "correct result through corrupt concrete rationality",
-      "setup": "defective culturally inherited governing standard; result correct by compensating error; truth linkage fails; no material case-specific binding is at issue (zero-burden rule: GOV_TOKEN_ADEQUATE not in the required path)",
-      "statuses": {
-        "GOV_CONFIG_ADEQUATE": "fail",
-        "GOV_POLICY_ADEQUATE": "pass",
-        "EXECUTION_FAITHFUL": "pass",
-        "EVIDENCE_SUPPORT": "fail",
-        "PROCEDURE_RELIABLE": "fail",
-        "EVIDENCE_CURRENT": "pass",
-        "EX_ANTE_JUSTIFIED": "fail",
-        "ROUTE_ADMISSIBLE": "pass",
-        "CLOSURE_TRUTHFUL": "pass",
-        "ROBUST_NEIGHBORHOOD": "fail"
-      },
-      "claim": {
-        "RESULT_CORRECT": "pass",
-        "TOKEN_TRUTH_LINKED": "fail"
-      },
-      "expected": {
-        "pathway_state": "defective",
-        "strictly_sound": false
-      },
-      "no_meta_token": true
-    },
-    {
-      "id": "CR-5",
-      "title": "mental/external category error with faithful execution",
-      "setup": "actor treats mental conceivability as sufficient for external possibility; argument proceeds validly from the faulty bridge; premise/bridge standard (policy level) fails; no material case-specific binding is at issue (zero-burden rule: GOV_TOKEN_ADEQUATE not in the required path)",
-      "statuses": {
-        "GOV_CONFIG_ADEQUATE": "pass",
-        "GOV_POLICY_ADEQUATE": "fail",
-        "EXECUTION_FAITHFUL": "pass",
-        "EVIDENCE_SUPPORT": "undetermined",
-        "PROCEDURE_RELIABLE": "pass",
-        "EVIDENCE_CURRENT": "pass",
-        "EX_ANTE_JUSTIFIED": "pass",
-        "ROUTE_ADMISSIBLE": "pass",
-        "CLOSURE_TRUTHFUL": "pass",
-        "ROBUST_NEIGHBORHOOD": "pass"
-      },
-      "claim": {
-        "RESULT_CORRECT": "undetermined",
-        "TOKEN_TRUTH_LINKED": "undetermined"
-      },
-      "expected": {
-        "pathway_state": "defective",
-        "strictly_sound": false
-      },
-      "no_meta_token": true
-    },
-    {
-      "id": "CR-6",
-      "title": "false tawatur: dependent sources bound as independent",
-      "setup": "tawatur-like metaortheme adequate; metaorthemma binds a source set sharing one upstream dependency as independent (binding failure, failing conjunct ScopeCorrect); execution faithful; epistemic-status placement overconfident",
-      "statuses": {
-        "GOV_CONFIG_ADEQUATE": "pass",
-        "GOV_POLICY_ADEQUATE": "pass",
-        "GOV_TOKEN_ADEQUATE": "fail",
-        "EXECUTION_FAITHFUL": "pass",
-        "EVIDENCE_SUPPORT": "fail",
-        "PROCEDURE_RELIABLE": "pass",
-        "EVIDENCE_CURRENT": "pass",
-        "EX_ANTE_JUSTIFIED": "fail",
-        "ROUTE_ADMISSIBLE": "pass",
-        "CLOSURE_TRUTHFUL": "pass",
-        "ROBUST_NEIGHBORHOOD": "undetermined"
-      },
-      "claim": {
-        "RESULT_CORRECT": "fail",
-        "TOKEN_TRUTH_LINKED": "fail"
-      },
-      "per_token": [
-        {
-          "token_id": "muhat-tawatur-1",
-          "status": "fail",
-          "failing_conjunct": "ScopeCorrect"
-        }
-      ],
-      "expected": {
-        "pathway_state": "defective",
-        "strictly_sound": false
-      }
-    },
-    {
-      "id": "CR-7",
-      "title": "evaluator symmetry: the auditor's audit is itself audited",
-      "setup": "reviewer diagnoses another actor's reasoning as corrupted; the reviewer's own source selection and binding are reified as a second episode and scored under the same verdict vector; no privileged evaluator exemption",
-      "statuses": {
-        "GOV_CONFIG_ADEQUATE": "pass",
-        "GOV_POLICY_ADEQUATE": "pass",
-        "GOV_TOKEN_ADEQUATE": "pass",
-        "EXECUTION_FAITHFUL": "pass",
-        "EVIDENCE_SUPPORT": "pass",
-        "PROCEDURE_RELIABLE": "pass",
-        "EVIDENCE_CURRENT": "pass",
-        "EX_ANTE_JUSTIFIED": "pass",
-        "ROUTE_ADMISSIBLE": "pass",
-        "CLOSURE_TRUTHFUL": "pass",
-        "ROBUST_NEIGHBORHOOD": "pass"
-      },
-      "claim": {
-        "RESULT_CORRECT": "pass",
-        "TOKEN_TRUTH_LINKED": "pass"
-      },
-      "audit_of_audit": {
-        "note": "the auditor's own episode record; same registry, same aggregation",
-        "statuses": {
-          "GOV_CONFIG_ADEQUATE": "pass",
-          "GOV_POLICY_ADEQUATE": "pass",
-          "GOV_TOKEN_ADEQUATE": "fail",
-          "EXECUTION_FAITHFUL": "pass",
-          "EVIDENCE_SUPPORT": "pass",
-          "PROCEDURE_RELIABLE": "pass",
-          "EVIDENCE_CURRENT": "pass",
-          "EX_ANTE_JUSTIFIED": "pass",
-          "ROUTE_ADMISSIBLE": "pass",
-          "CLOSURE_TRUTHFUL": "pass",
-          "ROBUST_NEIGHBORHOOD": "pass"
-        },
-        "expected_pathway_state": "defective"
-      },
-      "expected": {
-        "pathway_state": "adequate",
-        "strictly_sound": true
-      }
-    },
-    {
-      "id": "CR-8",
-      "title": "negative control: zero-burden rule",
-      "setup": "fixed rule with no material case-specific binding; no metaorthemma exists; GOV_TOKEN_ADEQUATE not in the required path (M1 zero-burden rule); type and execution suffice",
-      "statuses": {
-        "GOV_CONFIG_ADEQUATE": "pass",
-        "GOV_POLICY_ADEQUATE": "pass",
-        "EXECUTION_FAITHFUL": "pass",
-        "EVIDENCE_SUPPORT": "pass",
-        "PROCEDURE_RELIABLE": "pass",
-        "EVIDENCE_CURRENT": "pass",
-        "EX_ANTE_JUSTIFIED": "pass",
-        "ROUTE_ADMISSIBLE": "pass",
-        "CLOSURE_TRUTHFUL": "pass",
-        "ROBUST_NEIGHBORHOOD": "pass"
-      },
-      "claim": {
-        "RESULT_CORRECT": "pass",
-        "TOKEN_TRUTH_LINKED": "pass"
-      },
-      "no_meta_token": true,
-      "expected": {
-        "pathway_state": "adequate",
-        "strictly_sound": true
-      }
+     "token_id": "muhat-tawatur-1",
+     "status": "fail",
+     "failing_conjunct": "ScopeCorrect"
     }
-  ]
+   ],
+   "expected": {
+    "pathway_state": "defective",
+    "strictly_sound": false
+   },
+   "claim_shape": {
+    "claim_type": "placement",
+    "depends_on_tokens": true,
+    "robustness_obligation": true
+   }
+  },
+  {
+   "id": "CR-7",
+   "title": "evaluator symmetry: the auditor's audit is itself audited",
+   "setup": "reviewer diagnoses another actor's reasoning as corrupted; the reviewer's own source selection and binding are reified as a second episode and scored under the same verdict vector; no privileged evaluator exemption",
+   "statuses": {
+    "GOV_CONFIG_ADEQUATE": "pass",
+    "GOV_POLICY_ADEQUATE": "pass",
+    "GOV_TOKEN_ADEQUATE": "pass",
+    "EXECUTION_FAITHFUL": "pass",
+    "EVIDENCE_SUPPORT": "pass",
+    "PROCEDURE_RELIABLE": "pass",
+    "EVIDENCE_CURRENT": "pass",
+    "EX_ANTE_JUSTIFIED": "pass",
+    "ROUTE_ADMISSIBLE": "pass",
+    "CLOSURE_TRUTHFUL": "pass",
+    "ROBUST_NEIGHBORHOOD": "pass"
+   },
+   "claim": {
+    "RESULT_CORRECT": "pass",
+    "TOKEN_TRUTH_LINKED": "pass"
+   },
+   "audit_of_audit": {
+    "note": "the auditor's own episode record; same registry, same aggregation",
+    "statuses": {
+     "GOV_CONFIG_ADEQUATE": "pass",
+     "GOV_POLICY_ADEQUATE": "pass",
+     "GOV_TOKEN_ADEQUATE": "fail",
+     "EXECUTION_FAITHFUL": "pass",
+     "EVIDENCE_SUPPORT": "pass",
+     "PROCEDURE_RELIABLE": "pass",
+     "EVIDENCE_CURRENT": "pass",
+     "EX_ANTE_JUSTIFIED": "pass",
+     "ROUTE_ADMISSIBLE": "pass",
+     "CLOSURE_TRUTHFUL": "pass",
+     "ROBUST_NEIGHBORHOOD": "pass"
+    },
+    "expected_pathway_state": "defective"
+   },
+   "expected": {
+    "pathway_state": "adequate",
+    "strictly_sound": true
+   },
+   "claim_shape": {
+    "claim_type": "placement",
+    "depends_on_tokens": true,
+    "robustness_obligation": true
+   }
+  },
+  {
+   "id": "CR-8",
+   "title": "negative control: zero-burden rule",
+   "setup": "fixed rule with no material case-specific binding; no metaorthemma exists; GOV_TOKEN_ADEQUATE not in the required path (M1 zero-burden rule); type and execution suffice",
+   "statuses": {
+    "GOV_CONFIG_ADEQUATE": "pass",
+    "GOV_POLICY_ADEQUATE": "pass",
+    "EXECUTION_FAITHFUL": "pass",
+    "EVIDENCE_SUPPORT": "pass",
+    "PROCEDURE_RELIABLE": "pass",
+    "EVIDENCE_CURRENT": "pass",
+    "EX_ANTE_JUSTIFIED": "pass",
+    "ROUTE_ADMISSIBLE": "pass",
+    "CLOSURE_TRUTHFUL": "pass",
+    "ROBUST_NEIGHBORHOOD": "pass"
+   },
+   "claim": {
+    "RESULT_CORRECT": "pass",
+    "TOKEN_TRUTH_LINKED": "pass"
+   },
+   "no_meta_token": true,
+   "expected": {
+    "pathway_state": "adequate",
+    "strictly_sound": true
+   },
+   "claim_shape": {
+    "claim_type": "placement",
+    "depends_on_tokens": false,
+    "robustness_obligation": true
+   }
+  }
+ ]
 }

@@ -114,6 +114,7 @@ def derive():
     fixtures = {}
     for rel, key in (("tests/verdict-fixtures.json", "verdict"),
                      ("tests/reason-fixtures.json", "reason"),
+                     ("tests/claim-reasoning-fixtures.json", "claim_reasoning"),
                      ("tests/reqpath-fixtures.json", "reqpath"),
                      ("tests/latent-state-fixtures.json", "latent_state")):
         p = os.path.join(ROOT, rel)

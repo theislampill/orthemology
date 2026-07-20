@@ -65,9 +65,9 @@ authored:
     pdfs: reproducibly built and visually inspected draft artifacts
     legal_publication: open on license, identity, peer review, and external submission
 derived:
-  source_tree_digest: 010b08e4acff6005175a252fd98acebcd1a58c46a65f94f590dc2b926a45b796
+  source_tree_digest: 9a35fb9e386b0c567e3966cc8ba7034dd0de4221f5b7b62f9993cc2bd1150bc9
   source_tree_digest_policy: docs/project-state-inputs.yaml
-  tracked_files: 231
+  tracked_files: 238
   decision_ids:
   - '0001'
   - '0002'
@@ -97,15 +97,17 @@ derived:
   - reliability-spec.schema.json
   - verdict-record.schema.json
   schema_count: 10
-  example_json_count: 8
+  example_json_count: 9
   example_markdown_count: 2
   validator_scripts:
   - audit_terminology_matching.py
   - derive_reqpath.py
+  - validate_claim_reasoning_paths.py
   - validate_claim_sources.py
   - validate_cross_document_consistency.py
   - validate_cross_record_semantics.py
   - validate_current_state.py
+  - validate_decision_dependencies.py
   - validate_latent_state_fixtures.py
   - validate_negative_fixtures.py
   - validate_notation.py
@@ -118,10 +120,11 @@ derived:
   - validate_state_convergence.py
   - validate_type_token_semantics.py
   - validate_verdict_semantics.py
-  validator_count: 18
+  validator_count: 20
   fixture_counts:
     verdict: 7
     reason: 8
+    claim_reasoning: 8
     reqpath: 5
     latent_state: 7
     negative: 11

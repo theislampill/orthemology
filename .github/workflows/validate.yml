@@ -32,6 +32,10 @@ jobs:
         run: python scripts/validate_type_token_semantics.py
       - name: Concrete/sound-reason fixtures
         run: python scripts/validate_reason_fixtures.py
+      - name: Claim-relative reasoning paths CR-9..CR-15 + omission attack (Decision 0011)
+        run: python scripts/validate_claim_reasoning_paths.py
+      - name: Decision status / supersession registry (0009 -> 0011 machine-checked)
+        run: python scripts/validate_decision_dependencies.py
       - name: Latent-state boundary fixtures LS-1..LS-7 (R4, Decision 0015)
         run: python scripts/validate_latent_state_fixtures.py
       - name: JSON schemas + machine-readable examples
