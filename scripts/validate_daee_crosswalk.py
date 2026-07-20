@@ -83,8 +83,13 @@ def main():
                 "actual interior", "metaortheme", "metaorthemma", "diagnostic ir",
                 "orthing episode", "restoration"):
         check("typed distinctions include %r" % tok, tok in td)
-    check("crosswalk states Psi-I is not ground truth / not soul access",
-          "NOT O*(m;A)" in yaml.safe_dump(cw) or "not ground truth" in yaml.safe_dump(cw).lower())
+    psi = [r for r in rows if r["daee"].startswith("Psi-I")]
+    check("a Psi-I row exists", bool(psi))
+    if psi:
+        nc = " ".join(psi[0].get("non_claims", [])).lower()
+        check("the Psi-I row itself disclaims ground truth AND soul access",
+              "not ground truth" in nc and ("soul access" in nc or "not o*(m;a)" in nc),
+              "Psi-I non_claims=%r" % nc[:80])
 
     deform = [r for r in rows if r["daee"].lower().startswith("deformation types")]
     check("a deformation row exists", bool(deform))
