@@ -10,25 +10,43 @@ jobs:
       - uses: actions/setup-python@v5
         with:
           python-version: "3.11"
-      - name: Install validator dependencies (no live web checks anywhere in CI)
-        run: pip install --quiet pyyaml jsonschema fpdf2
+      - name: Install pinned dependencies (no live web checks anywhere in CI)
+        run: pip install --quiet pyyaml jsonschema "typst==0.15.0" markdown-it-py pypdf
       - name: Repository hygiene + honesty checks
         run: python scripts/validate_repo.py
       - name: Verdict semantics (registry-driven fixtures)
         run: python scripts/validate_verdict_semantics.py --fixtures tests/verdict-fixtures.json
       - name: Notation registry
         run: python scripts/validate_notation.py
-      - name: JSON schemas + machine-readable examples
+      - name: Type/token semantic roles (Decision 0009) + orthability senses (Decision 0010)
+        run: python scripts/validate_type_token_semantics.py
+      - name: Concrete/sound-reason fixtures CR-1..CR-8
+        run: python scripts/validate_reason_fixtures.py
+      - name: JSON schemas (hardened) + machine-readable examples
         run: python scripts/validate_schemas.py
+      - name: Cross-record semantics (episode/token/verdict coherence)
+        run: python scripts/validate_cross_record_semantics.py
+      - name: Negative fixtures + deterministic mutation testing
+        run: python scripts/validate_negative_fixtures.py
+      - name: ReqPath governance derivation (incl. omission attack)
+        run: python scripts/derive_reqpath.py
+      - name: Registry-generated surfaces are current (no drift)
+        run: python scripts/generate_from_registry.py --check
+      - name: Quran locus registry consistency (offline; records verified in the R3 pass)
+        run: python scripts/validate_quran_loci.py
       - name: Citation/source-ledger completeness (field presence only; no web requests)
         run: python scripts/validate_claim_sources.py
       - name: Cross-document consistency
         run: python scripts/validate_cross_document_consistency.py
-      - name: Terminology pilot packet freeze hash
-        run: python scripts/freeze_pilot0.py --check
+      - name: Terminology packet freeze hashes (v1 immutable + v2)
+        run: |
+          python scripts/freeze_pilot0.py --check
+          python scripts/freeze_pilot0.py --packet pilot0-v2 --check
+      - name: Terminology matching audit (pilot0-v2)
+        run: python scripts/audit_terminology_matching.py
       - name: Release manifest matches tree
         run: |
           python scripts/make_manifest.py
           git diff --exit-code docs/provenance/RELEASE-MANIFEST.sha256
-      - name: PDF build reproducibility (source-consistency check)
+      - name: PDF clean rebuild, byte-equality with committed artifacts, text-structure QA
         run: python scripts/build_pdfs.py --check

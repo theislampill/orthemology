@@ -1,10 +1,19 @@
 {
   "pdf": "orthemic-core-reference-draft.pdf",
-  "commit": "68ce774e5aa0ff5e6a4caea1ac0d896dbfb6b16e",
-  "generated": "2026-07-20",
+  "pdf_sha256": "dadcf777fa3bbd6ae29edcfc6125fc39159e20791040e438d8aa50bc18bbf874",
+  "page_count": 20,
   "sources": {
-    "theory/orthemic-core-formalization.md": "6fb59f6c123b5e2b8d8eff34150de51835ab0ac25cd728fe36973f35d91fff90",
+    "theory/orthemic-core-formalization.md": "4c4e4927373a55856f7eef4717e3819428b17c4260523f16a0fcfddff95d2c29",
     "theory/orthemic-multi-actor-conflict-note.md": "2f9cc0b2d8a0de36b1de51a34a2d90148daec4da8e098b74aee94e76a7dbda1b"
   },
-  "pipeline": "fpdf2 + matplotlib-bundled DejaVu (embedding-permissive licenses)"
+  "source_commit": "8fb55acf946998c443a2e82a50fb94d2bdc59e97",
+  "artifact_commit": "the git commit that introduces/updates this artifact (two-stage provenance; see `git log -- artifacts/`)",
+  "source_date_epoch": 1784549943,
+  "build_command": "python scripts/build_pdfs.py",
+  "tools": {
+    "typst": "0.15.0",
+    "markdown-it-py": "4.0.0",
+    "python": "3.11.9"
+  },
+  "generation_status": "complete; strict conversion (no skipped content); double-build verified"
 }

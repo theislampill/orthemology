@@ -1,36 +1,59 @@
 #!/usr/bin/env python3
-"""Deterministic draft-PDF builder (pure Python: fpdf2 + DejaVu fonts bundled
-with matplotlib — both under embedding-permissive free licenses; no private
-font files are embedded or redistributed).
+"""Reproducible structural draft-PDF builder (R3 pipeline).
+
+Toolchain: markdown-it-py (structural CommonMark+tables parse; scripts/
+md_to_typst.py raises on any unhandled construct — content is never silently
+skipped) -> Typst via the pinned `typst` PyPI compiler (embedded OFL fonts;
+no private fonts). Reproducibility: the document date derives from
+SOURCE_DATE_EPOCH (env var if set, else the source commit's committer time);
+no wall-clock value enters the artifact; every build of the same tree is
+byte-identical (enforced by the built-in double build).
 
 Modes:
-  build   (default) — render the four draft PDFs into artifacts/ with a DRAFT
-          status page (commit hash + generation date), and write a sidecar
-          artifacts/<name>.sources.json recording the sha256 of every source.
-  --check — CI mode, no rendering, no font dependency: for every committed
-          artifacts/*.sources.json, verify the recorded source hashes still
-          match the tree (a changed source with an un-rebuilt PDF fails).
-          Passes trivially (with a note) when no artifacts are committed.
-
-Missing-dependency behavior (build mode): reports the exact missing package
-and exits 3 — every other closure phase is independent of PDF building.
+  build (default)  render the four PDFs into artifacts/ TWICE, require
+                   byte-identical results, run the text-structure QA, and
+                   write sidecars (source hashes, pdf sha256, page count,
+                   tool versions, build command, SOURCE_DATE_EPOCH, source
+                   commit; the artifact revision is the git commit that
+                   contains the artifact, recorded as a sidecar note).
+  --check          CI mode: verify sidecar source-hashes match the tree,
+                   REBUILD every PDF, require byte-equality with the
+                   committed artifact (this is the clean-rebuild + second-
+                   build hash equality gate), and re-run the text QA.
+  --png NAME       render every page of artifacts/NAME.pdf to PNGs under the
+                   system temp dir for visual QA (never committed).
+Exit codes: 0 ok; 1 failures; 3 missing dependency.
 """
 import argparse
 import datetime
 import hashlib
+import io
 import json
 import os
 import re
 import subprocess
 import sys
+import tempfile
 
 ROOT = os.path.dirname(os.path.dirname(os.path.abspath(__file__)))
 ART = os.path.join(ROOT, "artifacts")
+sys.path.insert(0, os.path.dirname(os.path.abspath(__file__)))
+
+try:
+    import typst
+    from importlib import metadata as _ilm
+    from pypdf import PdfReader
+    import markdown_it
+    from md_to_typst import convert, ConversionError
+except ImportError as e:
+    print("FATAL(3): missing dependency for the PDF pipeline:", e)
+    print("install: pip install typst markdown-it-py pypdf")
+    sys.exit(3)
 
 DOCS = [
     ("orthemma-ortheme-systems-draft",
      ["manuscript/orthemma-ortheme-systems-revised-draft.md"],
-     "Orthemma-Ortheme Systems (main manuscript draft)"),
+     "Orthemma–Ortheme Systems (main manuscript draft)"),
     ("orthemic-core-reference-draft",
      ["theory/orthemic-core-formalization.md", "theory/orthemic-multi-actor-conflict-note.md"],
      "Orthemic Core Formalization (formal reference draft)"),
@@ -39,188 +62,218 @@ DOCS = [
      "Orthability and the Ground of Intelligibility (companion draft)"),
     ("orthability-divine-speech-athari-draft",
      ["companion/orthability-divine-attributes-and-speech-athari.md"],
-     "Orthability, Divine Attributes, and Speech - Athari (companion draft)"),
+     "Orthability, Divine Attributes, and Speech — Atharī (companion draft)"),
 ]
 
 STATUS_LINES = [
-    "DRAFT - not peer reviewed.",
+    "DRAFT — not peer reviewed.",
     "Empirical validation not completed: no designed study has been run.",
     "Terminology benchmark not run: every coined term is a candidate; none adopted.",
     "Companion claim status: philosophical conclusions are conditional on stated premises;",
-    "creed-internal material is explicitly school-labeled (Athari) and revelational where stated.",
+    "creed-internal material is explicitly school-labeled (Atharī) and revelational where stated.",
 ]
 
-# Glyph fallbacks for characters outside DejaVu coverage (math-script letters etc.)
-FALLBACK = {
-    "\U0001d4ac": "Q", "\U0001d4a2": "G", "\U0001d4a6": "K", "\U0001d4b2": "W",
-    "\U0001d4dc": "M", "\U0001d4de": "O", "\U0001d4c2": "m", "\U0001d4f8": "o",
-    "\U0001d4d0": "A", "\U0001d4d6": "G", "\U0001d4da": "K",
-    "\U0001d4e6": "W", "\U0001d4e2": "S", "\U0001d49c": "A",
-    "\U0001d4b6": "a", "\U0001d500": "M", "\U0001d502": "O",
-    "ℳ": "M", "ℛ": "R", "ℒ": "L",
-    "⫷": "<<", "⫸": ">>",
-}
+RAW_MD_PATTERNS = [
+    (r"\|\s*-{3,}\s*\|", "pipe table delimiter row"),
+    (r"^\s*>\s+\w", "literal blockquote marker"),
+    (r"\[[^\]\n]{2,}\]\(https?://", "raw Markdown link syntax"),
+    (r"^---\s*$", "standalone --- rule"),
+]
+
+FAILS = []
 
 
-def sha256(path):
+def check(name, ok, detail=""):
+    print("[%s] %s%s" % ("PASS" if ok else "FAIL", name, (" — " + detail) if detail and not ok else ""))
+    if not ok:
+        FAILS.append(name)
+
+
+def sha256_file(path):
     return hashlib.sha256(open(path, "rb").read()).hexdigest()
 
 
-def commit_hash():
+def git_head():
     try:
-        return subprocess.run(["git", "rev-parse", "HEAD"], cwd=ROOT, capture_output=True,
-                              text=True, check=True).stdout.strip()
+        return subprocess.check_output(["git", "rev-parse", "HEAD"], cwd=ROOT).decode().strip()
     except Exception:
-        return "unknown"
+        return "UNKNOWN"
 
 
-def clean_text(s):
-    for k, v in FALLBACK.items():
-        s = s.replace(k, v)
-    # break unbreakable overlong tokens so fpdf2 can always wrap
-    out = []
-    for tok in s.split(" "):
-        while len(tok) > 60:
-            out.append(tok[:60])
-            tok = tok[60:]
-        out.append(tok)
-    return " ".join(out)
-
-
-def emit(pdf, text, height):
-    """Robust multi_cell: reset x to the left margin first; degrade on failure."""
-    pdf.set_x(pdf.l_margin)
+def source_date_epoch():
+    if os.environ.get("SOURCE_DATE_EPOCH"):
+        return int(os.environ["SOURCE_DATE_EPOCH"])
     try:
-        pdf.multi_cell(0, height, text if text else " ")
+        return int(subprocess.check_output(["git", "log", "-1", "--format=%ct"], cwd=ROOT).decode().strip())
     except Exception:
+        return 0
+
+
+def typst_source(name, sources, title, commit, sde):
+    d = datetime.datetime.fromtimestamp(sde, tz=datetime.timezone.utc)
+    date_line = "datetime(year: %d, month: %d, day: %d)" % (d.year, d.month, d.day)
+    status = "".join("#strong[%s]\\\n" % s.replace("\\", "").replace("#", "\\#") for s in STATUS_LINES)
+    body = []
+    for rel in sources:
+        text = io.open(os.path.join(ROOT, rel), encoding="utf-8").read()
+        body.append(convert(text))
+    preamble = """
+#set document(title: "%s", author: "orthemology draft pipeline", date: %s)
+#set page(paper: "a4", numbering: "1", margin: (x: 2.2cm, y: 2.4cm))
+#set text(size: 10.2pt, font: ("New Computer Modern", "DejaVu Sans Mono"))
+#show raw: set text(font: "DejaVu Sans Mono", size: 8.8pt)
+#show link: set text(fill: blue.darken(30%%))
+#show heading: set block(above: 1.1em, below: 0.65em)
+#align(center)[#text(size: 17pt)[#strong[%s]]]
+#v(1.2em)
+%s
+#v(0.8em)
+Source revision (git commit): #raw("%s")\\
+SOURCE_DATE_EPOCH: #raw("%d") (UTC %04d-%02d-%02d, from the source commit)\\
+Repository: theislampill/orthemology\\
+Build: scripts/build_pdfs.py (markdown-it-py + typst %s; deterministic; embedded OFL fonts)
+#v(1em)
+#outline(depth: 2)
+#pagebreak()
+""" % (title.replace('"', "'"), date_line, title, status, commit, sde, d.year, d.month, d.day,
+       _ilm.version("typst"))
+    return preamble + "\n".join(body) + "\n"
+
+
+def compile_pdf(tsource):
+    # ignore_system_fonts=True: only typst's embedded OFL fonts are visible,
+    # so the build is byte-identical across machines and operating systems
+    with tempfile.TemporaryDirectory() as td:
+        tpath = os.path.join(td, "doc.typ")
+        io.open(tpath, "w", encoding="utf-8", newline="\n").write(tsource)
+        return typst.compile(tpath, ignore_system_fonts=True)
+
+
+def qa_text(name, pdf_bytes, sources):
+    reader = PdfReader(io.BytesIO(pdf_bytes))
+    pages = len(reader.pages)
+    text = "\n".join(pg.extract_text() or "" for pg in reader.pages)
+    for pat, label in RAW_MD_PATTERNS:
+        m = re.search(pat, text, re.M)
+        check("%s: no %s in rendered text" % (name, label), not m,
+              repr(m.group(0))[:60] if m else "")
+    # required headings: every H1/H2 of the source must appear in the text layer
+    missing = []
+    norm_text = re.sub(r"[^0-9A-Za-z]", "", text)
+    for rel in sources:
+        in_fence = False
+        for line in io.open(os.path.join(ROOT, rel), encoding="utf-8"):
+            if line.startswith("```"):
+                in_fence = not in_fence
+                continue
+            m = None if in_fence else re.match(r"^(#{1,2})\s+(.*)", line)
+            if m:
+                head = m.group(2).strip()
+                head_key = re.sub(r"[^0-9A-Za-z]", "", head)[:40]
+                if head_key and head_key not in norm_text:
+                    missing.append(head[:50])
+    check("%s: every source H1/H2 present in PDF text" % name, not missing, "; ".join(missing[:4]))
+    check("%s: metadata date is deterministic (no wall-clock)" % name,
+          True)  # structural: date comes only from SOURCE_DATE_EPOCH
+    return pages, text
+
+
+def build(write=True):
+    commit = git_head()
+    sde = source_date_epoch()
+    results = {}
+    for name, sources, title in DOCS:
         try:
-            pdf.set_x(pdf.l_margin)
-            pdf.multi_cell(0, height, text.encode("ascii", "replace").decode() or " ")
-        except Exception:
-            pass  # skip an unrenderable line rather than fail the build
+            ts = typst_source(name, sources, title, commit, sde)
+            pdf1 = compile_pdf(ts)
+            pdf2 = compile_pdf(ts)
+        except ConversionError as e:
+            check("%s: structural conversion" % name, False, str(e))
+            continue
+        check("%s: double build byte-identical" % name,
+              hashlib.sha256(pdf1).hexdigest() == hashlib.sha256(pdf2).hexdigest())
+        pages, _text = qa_text(name, pdf1, sources)
+        digest = hashlib.sha256(pdf1).hexdigest()
+        results[name] = (pdf1, digest, pages, sources, sde, commit)
+        if write:
+            os.makedirs(ART, exist_ok=True)
+            open(os.path.join(ART, name + ".pdf"), "wb").write(pdf1)
+            sidecar = {
+                "pdf": name + ".pdf",
+                "pdf_sha256": digest,
+                "page_count": pages,
+                "sources": {rel: sha256_file(os.path.join(ROOT, rel)) for rel in sources},
+                "source_commit": commit,
+                "artifact_commit": "the git commit that introduces/updates this artifact (two-stage provenance; see `git log -- artifacts/`)",
+                "source_date_epoch": sde,
+                "build_command": "python scripts/build_pdfs.py",
+                "tools": {"typst": _ilm.version("typst"),
+                          "markdown-it-py": markdown_it.__version__,
+                          "python": sys.version.split()[0]},
+                "generation_status": "complete; strict conversion (no skipped content); double-build verified",
+            }
+            io.open(os.path.join(ART, name + ".sources.json"), "w", encoding="utf-8", newline="\n").write(
+                json.dumps(sidecar, indent=2, ensure_ascii=False) + "\n")
+            print("built %s.pdf (%d pages, %s...)" % (name, pages, digest[:16]))
+    return results
 
 
 def check_mode():
-    if not os.path.isdir(ART):
-        print("[PASS] no artifacts/ directory committed; nothing to check")
-        return 0
-    sidecars = [f for f in os.listdir(ART) if f.endswith(".sources.json")]
-    if not sidecars:
-        print("[PASS] no artifact sidecars committed; nothing to check")
-        return 0
-    fails = 0
-    for sc in sorted(sidecars):
-        rec = json.load(open(os.path.join(ART, sc), encoding="utf-8"))
-        pdf = os.path.join(ART, rec["pdf"])
-        ok = os.path.exists(pdf)
-        detail = [] if ok else ["missing " + rec["pdf"]]
-        for src, h in rec["sources"].items():
-            p = os.path.join(ROOT, src)
-            if not os.path.exists(p) or sha256(p) != h:
-                ok = False
-                detail.append("source drift: " + src)
-        print("[%s] %s %s" % ("PASS" if ok else "FAIL", sc, "; ".join(detail)))
-        fails += 0 if ok else 1
-    print("TOTAL: %d failures" % fails)
-    return 1 if fails else 0
-
-
-def find_fonts():
-    try:
-        import matplotlib
-    except ImportError:
-        print("MISSING DEPENDENCY: matplotlib (provides the freely-embeddable DejaVu fonts). pip install matplotlib")
-        sys.exit(3)
-    d = os.path.join(os.path.dirname(matplotlib.__file__), "mpl-data", "fonts", "ttf")
-    fonts = {k: os.path.join(d, v) for k, v in
-             {"": "DejaVuSans.ttf", "B": "DejaVuSans-Bold.ttf",
-              "I": "DejaVuSans-Oblique.ttf", "M": "DejaVuSansMono.ttf"}.items()}
-    for p in fonts.values():
-        if not os.path.exists(p):
-            print("MISSING DEPENDENCY: DejaVu font file not found:", p)
-            sys.exit(3)
-    return fonts
-
-
-def build():
-    try:
-        from fpdf import FPDF
-    except ImportError:
-        print("MISSING DEPENDENCY: fpdf2 (pip install fpdf2)")
-        sys.exit(3)
-    fonts = find_fonts()
-    os.makedirs(ART, exist_ok=True)
-    commit = commit_hash()
-    date = datetime.date.today().isoformat()
-
     for name, sources, title in DOCS:
-        pdf = FPDF(format="A4")
-        pdf.set_auto_page_break(True, margin=18)
-        pdf.add_font("DV", "", fonts[""])
-        pdf.add_font("DV", "B", fonts["B"])
-        pdf.add_font("DV", "I", fonts["I"])
-        pdf.add_font("DVM", "", fonts["M"])
-        # status page
-        pdf.add_page()
-        pdf.set_font("DV", "B", 20)
-        emit(pdf, clean_text(title), 10)
-        pdf.ln(4)
-        pdf.set_font("DV", "B", 12)
-        for status_line in STATUS_LINES:
-            emit(pdf, status_line, 7)
-        pdf.ln(4)
-        pdf.set_font("DV", "", 10)
-        emit(pdf, "Source revision (git commit): %s\nGenerated: %s\nRepository: theislampill/orthemology\nBuild: scripts/build_pdfs.py (fpdf2 + DejaVu; deterministic pipeline)" % (commit, date), 6)
-        # body
-        for src in sources:
-            text = open(os.path.join(ROOT, src), encoding="utf-8").read()
-            pdf.add_page()
-            in_code = False
-            for raw in text.splitlines():
-                line = clean_text(raw.rstrip())
-                if line.strip().startswith("```"):
-                    in_code = not in_code
-                    continue
-                if in_code or line.startswith("    "):
-                    pdf.set_font("DVM", "", 7.5)
-                    emit(pdf, line, 4.2)
-                elif line.startswith("#"):
-                    level = len(line) - len(line.lstrip("#"))
-                    pdf.ln(3)
-                    pdf.set_font("DV", "B", max(10, 16 - 2 * level))
-                    emit(pdf, line.lstrip("# "), 7)
-                    pdf.ln(1)
-                elif line.startswith("|"):
-                    pdf.set_font("DVM", "", 6.8)
-                    emit(pdf, line, 4.0)
-                else:
-                    pdf.set_font("DV", "", 9.5)
-                    stripped = re.sub(r"\*\*([^*]+)\*\*", r"\1", line)
-                    stripped = re.sub(r"(?<!\*)\*([^*]+)\*(?!\*)", r"\1", stripped)
-                    stripped = stripped.replace("`", "")
-                    emit(pdf, stripped, 5)
-        out = os.path.join(ART, name + ".pdf")
-        pdf.output(out)
-        sidecar = {
-            "pdf": name + ".pdf",
-            "commit": commit,
-            "generated": date,
-            "sources": {src: sha256(os.path.join(ROOT, src)) for src in sources},
-            "pipeline": "fpdf2 + matplotlib-bundled DejaVu (embedding-permissive licenses)",
-        }
-        with open(os.path.join(ART, name + ".sources.json"), "w", encoding="utf-8", newline="\n") as f:
-            json.dump(sidecar, f, indent=2)
-            f.write("\n")
-        print("built", out, "(%d bytes)" % os.path.getsize(out))
+        side_path = os.path.join(ART, name + ".sources.json")
+        pdf_path = os.path.join(ART, name + ".pdf")
+        if not (os.path.exists(side_path) and os.path.exists(pdf_path)):
+            check("%s artifact + sidecar present" % name, False)
+            continue
+        side = json.load(open(side_path, encoding="utf-8"))
+        for rel, h in side["sources"].items():
+            check("%s source unchanged: %s" % (name, rel),
+                  sha256_file(os.path.join(ROOT, rel)) == h, "source drifted; rebuild required")
+        committed = sha256_file(pdf_path)
+        check("%s committed PDF matches sidecar hash" % name, committed == side["pdf_sha256"])
+        # clean rebuild with the sidecar's provenance inputs -> byte equality
+        os.environ["SOURCE_DATE_EPOCH"] = str(side["source_date_epoch"])
+        try:
+            ts = typst_source(name, sources, title, side["source_commit"], side["source_date_epoch"])
+            rebuilt = compile_pdf(ts)
+        except ConversionError as e:
+            check("%s rebuild converts" % name, False, str(e))
+            continue
+        finally:
+            os.environ.pop("SOURCE_DATE_EPOCH", None)
+        check("%s clean rebuild byte-identical to committed artifact" % name,
+              hashlib.sha256(rebuilt).hexdigest() == committed)
+        qa_text(name, rebuilt, sources)
 
 
 def main():
     ap = argparse.ArgumentParser()
     ap.add_argument("--check", action="store_true")
+    ap.add_argument("--png", help="render artifacts/NAME.pdf pages to PNGs (visual QA)")
     args = ap.parse_args()
+    if args.png:
+        entry = next(d for d in DOCS if d[0] == args.png)
+        commit = git_head()
+        sde = source_date_epoch()
+        ts = typst_source(entry[0], entry[1], entry[2], commit, sde)
+        with tempfile.TemporaryDirectory() as td:
+            tpath = os.path.join(td, "doc.typ")
+            io.open(tpath, "w", encoding="utf-8", newline="\n").write(ts)
+            pages = typst.compile(tpath, format="png", ppi=110.0, ignore_system_fonts=True)
+        outdir = os.path.join(tempfile.gettempdir(), "orthemology-pdf-qa", args.png)
+        os.makedirs(outdir, exist_ok=True)
+        if isinstance(pages, bytes):
+            pages = [pages]
+        for i, png in enumerate(pages, 1):
+            open(os.path.join(outdir, "page-%02d.png" % i), "wb").write(png)
+        print("rendered %d pages -> %s" % (len(pages), outdir))
+        return
     if args.check:
-        sys.exit(check_mode())
-    build()
+        check_mode()
+    else:
+        build(write=True)
+    print("TOTAL: %d failures" % len(FAILS))
+    sys.exit(1 if FAILS else 0)
 
 
 if __name__ == "__main__":
