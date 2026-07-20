@@ -1,0 +1,34 @@
+# Governance requirement rules (R3): the machine-readable instance of
+# RequiredBy(...) that this repository ships.
+#
+# HONEST STATUS: RequiredBy is, in general, a GOVERNANCE-SUPPLIED PARAMETERIZED
+# INTERFACE — the theory does not claim a closed universal calculus deriving
+# requirements for every conceivable governance regime. What is closed here is
+# this table: a complete, typed, deterministic derivation for the episode-shape
+# predicates it declares, with a machine-checkable trace (scripts/derive_reqpath.py).
+# A governance regime supplying different rules replaces this file, not the code.
+schema: orthemology-governance-requirements-v1
+input_shape:
+  # typed input contract: every predicate is boolean unless noted
+  has_meta_tokens: "MetaTok(e) != empty"
+  selects_route: "episode selects or authorizes a route"
+  makes_closure_claim: "episode makes a closure/completion claim or dispositions residuals"
+  robustness_obligation: "A(e) or risk class predeclares a robustness obligation"
+  risk_class: "declared risk class (string; informational unless a rule names it)"
+rules:
+  # verdict -> requirement condition over the input shape; "always" = baseline core
+  EVIDENCE_SUPPORT: {when: always, rationale: "evidence-grounding is a baseline pathway obligation"}
+  PROCEDURE_RELIABLE: {when: always, rationale: "configured-procedure reliability is a baseline obligation (O2)"}
+  EVIDENCE_CURRENT: {when: always, rationale: "currency of evidence is a baseline obligation"}
+  GOV_CONFIG_ADEQUATE: {when: always, rationale: "a governing configuration always exists at type level"}
+  GOV_POLICY_ADEQUATE: {when: always, rationale: "a conduct policy always exists"}
+  GOV_TOKEN_ADEQUATE: {when: has_meta_tokens, rationale: "M1 zero-burden rule: no metaorthemma, no token verdict"}
+  EXECUTION_FAITHFUL: {when: always, rationale: "execution fidelity is a baseline obligation"}
+  EX_ANTE_JUSTIFIED: {when: always, rationale: "ex-ante justification is a baseline obligation"}
+  ROUTE_ADMISSIBLE: {when: selects_route, rationale: "route admissibility binds only route-selecting episodes"}
+  CLOSURE_TRUTHFUL: {when: makes_closure_claim, rationale: "closure truthfulness binds only closure-claiming episodes"}
+  ROBUST_NEIGHBORHOOD: {when: robustness_obligation, rationale: "robustness binds only under a predeclared obligation"}
+notes:
+  - "Result-side verdicts (RESULT_CORRECT, TOKEN_TRUTH_LINKED) are never pathway requirements (O2); ROUTE_QUALITY (V4b) is outside CorePath by Decision 0004."
+  - "Every verdict excluded by a rule carries a recorded not-applicable reason on the episode record; 'not tested' is never 'not applicable'."
+  - "Conflicting rules are a governance-configuration defect (counterexample CE-R5): the derivation is the conjunction-free single-table form precisely so that no two rules can disagree about one verdict."

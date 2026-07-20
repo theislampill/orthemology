@@ -166,11 +166,19 @@ with components (each glossed in ordinary language):
 | `Succ ⊆ M` | successor set | the occurrences the action created/affected, as LABELED lineage edges (which action produced which successor) — zero, one, or many; the earlier forced single `m′ = succ(m,a)` is corrected |
 
 `Π_A` — with `Π_T` its licensed shorthand under the standing convention —
-is the **profile space** of manuscript Definition 10: a complete profile
-is an assignment over the factorized axes selecting at most one
-*alternatives*-marked value per axis and any set of *co-holding* values,
-consistent with the declared cross-axis constraints; `Π_A^∂` is the
-partial-profile space (axes may be left undetermined), with
+is the **profile space** of manuscript Definition 10, R3 general form:
+`Π_A ⊆ 𝒫(O_A)`, the set of admissible complete profiles under the
+constraints declared by `A`. Factorized axes are one *permitted
+representation family*, not a universal ontology: where declared, a
+complete profile selects exactly one admissible value per **applicable**
+alternatives-marked axis, records an explicit `not-applicable` value on
+an objectively inapplicable axis (a fact about the case, never
+uncertainty), and contains any declared-admissible — possibly empty —
+subset per co-holding axis, consistent with the declared cross-axis
+constraints. Objective absence, objective inapplicability, epistemic
+openness, evidence absence, and candidate plurality are five distinct
+states; only the first two live in profiles. `Π_A^∂` is the
+partial-profile space (resolutions may be left undetermined), with
 `Π_A ⊆ Π_A^∂` (gloss: every complete way the case could be placed, and
 every honest partial state of knowledge about it). This and the labeled
 successor edges close the arrow the manuscript lacks from action back
@@ -562,6 +570,22 @@ episode record. (`ReqPath(e)` is the sole pathway requirement function;
 the earlier separately recorded applicability set `App(·)` is retired by
 Decision 0005 — nothing it expressed is lost, since exclusions now live
 in the per-verdict `not-applicable` statuses and reasons.)
+
+**Machine-readable derivation and honest status (R3).** The repository
+ships `RequiredBy` as a machine-readable governance rule table
+(`docs/governance-requirements.yaml`) over a typed episode-shape input
+contract (`has_meta_tokens`, `selects_route`, `makes_closure_claim`,
+`robustness_obligation`, `risk_class`), and `scripts/derive_reqpath.py`
+derives `ReqPath(e)` from it with a per-verdict derivation trace
+(required / not-required, governing rule, rationale); fixtures in
+`tests/reqpath-fixtures.json` pin the derivation, including an
+omission-attack case in which a declared path missing a derivable
+requirement is detected rather than tolerated. Honest scope: the shipped
+table is *one* complete, deterministic governance instance. `RequiredBy`
+in general remains a **governance-supplied parameterized interface** —
+the theory does not claim a closed universal calculus over every
+conceivable governance regime, and this part of the formalism is
+accordingly an open parameter, not "closed."
 
 **Verdict status is not Boolean.**
 
