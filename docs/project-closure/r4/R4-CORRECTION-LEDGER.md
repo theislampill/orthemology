@@ -21,13 +21,19 @@
 
 | C15 | **SELF-2** (found immediately after the first closeout): the first revision of `R4-SCHEMA-AND-MUTATION-REPORT.md`, decision 0012's scope note, ledger row C9, the draft PR body, and the session closeout all stated that the recursive mutation engine and `tests/invalid/` were **not built**. They **were** built; the work landed during the final commit window and the claim was written from a stale check | All five surfaces corrected; a dated correction notice added at the top of the report; the true figures recorded (18 families, 1,247 mutants, 1,113 schema-killed, 125 semantic-killed, 9 declared-equivalent, 0 unjustified survivors) | **DONE** |
 
+| C16 | **SELF-3** (found immediately after SELF-2): my corrected report attributed probe classes **P7** (verdict record missing required statuses) and **P8** (`not-applicable` without reason outside `required_path`) to the **schema** layer | **Both are caught at the semantic layer.** My probe instances predated the R4 contract and lacked newly-required fields (`index`; non-empty `required_path`), so the schema rejected them for *incidental* reasons that masked which layer catches the defect under test. Re-derived empirically with completed instances: P7 → semantic ("required verdict carries no status at all" + pathway recomputation); P8 → semantic ("not-applicable without a recorded reason"). Both range over **dynamic verdict-id keys**, which JSON Schema cannot quantify over — the layer split is principled, not accidental. The headline result is unaffected: **0 of 11 classes accepted by both layers.** | **DONE** |
+
 ## Findings raised by R4 against its own inputs and its own reporting
 
-Four corrections in this pass were to the *controlling instructions and to this run's own claims*, not to the repository:
+Five corrections in this pass were to the *controlling instructions and to this run's own claims*, not to the repository:
 
 - **C2 / SELF-1** — my R2 and R3 closeouts mis-reported the pilot-0 v1 freeze hash.
 - **C13** — the controlling amendment's conflated author name.
 - **C14** — one audit sub-case overstated (partial refutation).
 - **C15 / SELF-2** — **this run reported completed work as not completed.** The error direction is the unusual one — understating rather than overstating — but it is the same defect: a completion claim written from a stale observation instead of checked against the artifact at the moment of claiming. It was caught only because the owner surfaced the agent-completion record.
 
+- **C16 / SELF-3** — my *correction to* SELF-2 mis-attributed two rejection layers, because I re-derived them from stale probe instances instead of instances valid under the new contract.
+
 A correction ledger that only ever corrects other people's work is not doing its job; a project whose subject is false closure has to apply the standard to its own reporting in both directions.
+
+**Pattern worth recording for the independent reviewer.** Three of these five (SELF-1, SELF-2, SELF-3) are the *same* defect at three scales: a claim asserted from a stale observation rather than re-derived from the artifact at the moment of claiming. SELF-1 mis-stated a hash that a check could have compared; SELF-2 declared work unbuilt that a re-check would have found; SELF-3 attributed layers from probe instances that the new contract had already invalidated. Each was caught by an external signal (the generated state file; the owner surfacing an agent record; a subagent's independent re-derivation) rather than by self-review. **The reviewer should assume this run's unaided self-assessment carries that failure mode and weight external verification accordingly.**
