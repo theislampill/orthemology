@@ -1,6 +1,8 @@
 # STATUS
 
-**Draft / research-stage (revision R2, 2026-07-20).** This repository is a versioned working state, published honestly with its open decisions on record.
+**Draft / research-stage (revision R3 corrective pass open, 2026-07-20).** This repository is a versioned working state, published honestly with its open decisions on record.
+
+> **R3 correction notice (2026-07-20).** An independent read-only audit of the R2 state ([docs/project-closure/r3/R2-INDEPENDENT-READONLY-AUDIT.md](docs/project-closure/r3/R2-INDEPENDENT-READONLY-AUDIT.md)) withheld final sign-off. R2 is preserved as a frozen baseline; the R2 closure documents' unrestricted "CLOSED", "publication-clean", and "reproducible" claims are **superseded** while the R3 corrective pass is active (corrections tracked in [docs/project-closure/r3/R3-CORRECTION-LEDGER.md](docs/project-closure/r3/R3-CORRECTION-LEDGER.md)). In particular: the PDF pipeline is **not** byte-reproducible in its R2 form; the schema layer accepts malformed records the theory forbids; the pilot-0 v1 arms are not matched as the protocol claims; the school-neutral companion contains a type/token mislabeling under repair; one Qurʾānic locus (20:11 → 20:11–12) is under correction; and ordinary source verification is **not** an owner-only burden.
 
 - **Not peer reviewed.**
 - **No completed empirical validation** — every designed study (false-closure benchmark; fixture-suite product test; terminology benchmark) is READY TO RUN, NOT RUN; nothing here reports an experimental result; deterministic validators check consistency only. This is not a completed paper program in the empirical sense.

@@ -1,5 +1,7 @@
 # Publication readiness (R2)
 
+> **SUPERSEDED IN PART — R3 correction notice (2026-07-20).** Preserved verbatim as history. The "Reproducibility" row below is wrong as an unrestricted claim (the R2 PDF pipeline embeds live timestamps and is not byte-reproducible), the "Internal consistency" row proves only positive-fixture coverage (the schemas accept malformed records), and the scorecard's "satisfied" entries are re-scored by the R3 program — see `r3/`.
+
 **What this repository is ready to be:** a public, versioned, honestly-labeled research-stage draft state — which is what it is. **What it is NOT ready to be, and does not claim to be:** a peer-reviewed publication, an empirically validated result, a released/citable artifact with bibliographic identity, or a neutral theological conclusion.
 
 | Readiness axis | State |
