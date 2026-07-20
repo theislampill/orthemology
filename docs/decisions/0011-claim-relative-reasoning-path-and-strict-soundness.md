@@ -1,6 +1,6 @@
 # Decision 0011 — Claim-relative reasoning paths, strict soundness, objectivity indexing, and circularity language
 
-**Date:** 2026-07-20 · **Authority:** R4 owner authorization (consolidated prompt v2) · **Status:** adopted in a **candidate revision requiring independent review** · **Reopens nothing:** D1, M1, O2, D3 (0004), D4 (0005), O3 (0006), 0007–0010 all stand.
+**Date:** 2026-07-20 · **Authority:** R4 owner authorization (consolidated prompt v2) · **Status:** adopted in a **candidate revision requiring independent review** *(historical wording; review discharged 2026-07-20 by the fresh-session review and protected merge — docs/project-closure/r4-fresh-fable-review/FABLE-REVIEW-SIGNOFF.md, Decision 0016)* · **Reopens nothing:** D1, M1, O2, D3 (0004), D4 (0005), O3 (0006), 0007–0010 all stand.
 
 ## Problem
 

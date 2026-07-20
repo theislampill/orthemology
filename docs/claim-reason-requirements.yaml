@@ -22,7 +22,9 @@ claim_shape:
   depends_on_tokens: "boolean: the claim declares metaorthemma token dependencies"
   robustness_obligation: "boolean: A(e) or the claim's risk class predeclares a robustness obligation for this claim"
   risk_class: "declared risk class (string; informational unless a rule names it)"
-  currency_exempt: "boolean, default false: the claim is about a fixed record (authenticity/provenance) whose truth does not depend on evidence currency"
+  currency_exempt: "boolean, default false: the claim is about a fixed record (authenticity/provenance) whose truth does not depend on evidence currency. R5 hardening (audit M4): when true, the record MUST carry a nonempty currency_exempt_reason and a currency_exempt_scope of fixed-record or provenance (schema + cross-record enforced; fixture I47)"
+  currency_exempt_reason: "string, required iff currency_exempt is true: why this claim's truth does not decay with evidence currency"
+  currency_exempt_scope: "enum fixed-record | provenance, required iff currency_exempt is true: the scope the exemption is limited to"
 rules:
   # verdict -> requirement condition over the claim shape.
   #   always            = required for every claim
@@ -40,6 +42,8 @@ rules:
   CLOSURE_TRUTHFUL: {when: claim_type=closure, rationale: "closure truthfulness is claim-relevant only when the claim IS a closure claim (Decision 0011: an unrelated false closure cannot unsound a placement claim)"}
   ROBUST_NEIGHBORHOOD: {when: robustness_obligation, rationale: "robustness binds a claim only under a predeclared obligation for that claim"}
 constraints:
+  - "R5 (audit M4): a claim of an AUDIT-READY record must declare claim_type explicitly — the placement default is not available at audit-ready strength (fixture I46)"
+  - "R5 (audit M4): a claim cannot declare robustness_obligation false while the episode's governed required path owes ROBUST_NEIGHBORHOOD — silent disabling of an imposed obligation is ill-formed (fixture I48)"
   - "ReqReason_q(e) is intersected with ReqPath(e): a verdict the episode does not owe at all cannot be owed claim-wise"
   - "the projection is derived from the claim's declared shape before outcome inspection; the derivation trace records an inclusion or exclusion reason for every CorePath verdict"
   - "result-side verdicts (RESULT_CORRECT, TOKEN_TRUTH_LINKED) are never reasoning-path requirements (O2), claim-wise exactly as episode-wise"

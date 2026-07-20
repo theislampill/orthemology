@@ -67,6 +67,8 @@ DOCS = [
 
 STATUS_LINES = [
     "DRAFT — not peer reviewed.",
+    "Review state (R5): fresh-session repository review completed;",
+    "not external human peer review; not empirically validated.",
     "Empirical validation not completed: no designed study has been run.",
     "Terminology benchmark not run: every coined term is a candidate; none adopted.",
     "Companion claim status: philosophical conclusions are conditional on stated premises;",

@@ -28,6 +28,7 @@ Checks:
   9. El-Tobgui's three records are distinct;
  10. every research residual referenced by a row exists in docs/current-state.yaml.
 """
+import re
 import io
 import os
 import sys
@@ -149,6 +150,53 @@ def main():
               % (hit[0] if hit else ""))
     check("Atharī paper points at the source-status registry",
           "source-status.yaml" in athari or "source-status registry" in athari.lower())
+
+    # R5 (Decision 0013 amendment; audit B2/M2): the agreement guard is now
+    # BIDIRECTIONAL. Direction 2a — current prose may not claim a STRONGER
+    # status than the registry: any companion line that names a work token and
+    # the literal PRIMARY_TEXT_EXACT fails when the matching registry row holds
+    # a weaker status. Direction 2b — any companion line naming a row id
+    # (ATH-N, CIR-N…) together with a status-vocabulary token must name that
+    # row's registered status exactly. Decision-record history is preserved, so
+    # decisions are not text-scanned; instead 0013 must carry the dated R5
+    # amendment superseding its stale exact-status consequence.
+    vocab_tokens = sorted(reg.get("status_vocabulary", {}).keys())
+    rows_by_id = {r["id"]: r for r in rows}
+
+    for i, ln in enumerate(athari.splitlines(), 1):
+        f = fold(ln)
+        statuses_here = [s for s in vocab_tokens if s in ln]
+        if not statuses_here:
+            continue
+        # 2a: work-token co-mention claiming exact against a weaker row
+        if "PRIMARY_TEXT_EXACT" in statuses_here:
+            for t in WORK_TOKENS:
+                if t not in f:
+                    continue
+                owning = [r for r in rows if t in fold(r.get("source", ""))]
+                weaker = [r for r in owning if r["status"] != "PRIMARY_TEXT_EXACT"]
+                check("companion line %d does not claim PRIMARY_TEXT_EXACT for %r "
+                      "against a weaker registry row" % (i, t), not weaker,
+                      "registry holds %s" % ([r["id"] + "=" + r["status"] for r in weaker]))
+        # 2b: a status named NEAR a row id (±100 chars — one parenthetical/clause)
+        # must be that row's registered status; a bare row-id pointer with no
+        # nearby status asserts nothing and is fine
+        for m in re.finditer(r"\b((?:ATH|CIR|ELT|LAT|EXT)-\d+W?)\b", ln):
+            row = rows_by_id.get(m.group(1))
+            if row is None:
+                continue
+            window = ln[max(0, m.start() - 100):m.end() + 100]
+            near = [s for s in vocab_tokens if s in window]
+            if near:
+                check("companion line %d: status named beside row %s is its "
+                      "registered status (%s)" % (i, m.group(1), row["status"]),
+                      near == [row["status"]] or set(near) == {row["status"]},
+                      "nearby statuses: %s" % near)
+
+    d13 = read("docs/decisions/0013-source-attribution-and-status-normalization.md")
+    check("Decision 0013 carries the dated R5 amendment superseding the stale "
+          "ATH-3 exact-status consequence",
+          "Amendment (2026-07-20, R5)" in d13 and "does **not** hold" in d13)
 
     joined = " ".join(str(r) for r in rows)
     check("Doko & Turner 2023 present as the verified application", "Doko" in joined and "2023" in joined)

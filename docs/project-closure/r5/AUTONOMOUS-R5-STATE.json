@@ -1,0 +1,33 @@
+{
+  "record": "R5 final public-state / evidence-boundary tie-off \u2014 durable execution state",
+  "session_surfaced_model": "claude-fable-5",
+  "session_substitution_observed": false,
+  "historical_attributed_observations_preserved": true,
+  "topology": {
+    "starting_main": "21d8a8dd18acc058aaf18dd403a91ae38ae3adfb",
+    "archive_sha256": "6081e0fff77be3983585fb3f8e2508d44a77448bf89a61795552125faa68cb46",
+    "archive_matches_live_main": true,
+    "branch": "closure/r5-final-public-state-evidence-boundary",
+    "branch_base": "21d8a8dd18acc058aaf18dd403a91ae38ae3adfb"
+  },
+  "last_completed_action": "Phases B-G complete: review-state contract, evidence boundary, ATH-3 reconciliation, claim-shape hardening, changelog+PDF rebuild, six adversarial passes (one gap repaired); 28/28 suite green at 547a30c",
+  "files_changed": [
+    "see git log 21d8a8dd..HEAD on closure/r5-final-public-state-evidence-boundary"
+  ],
+  "tests_run": [
+    {
+      "tree": "fresh clone @ 21d8a8dd (clean)",
+      "suite": "validate.yml, 26 steps",
+      "result": "0 failing"
+    },
+    {
+      "tree": "R5 branch @ 547a30c",
+      "suite": "validate.yml, 28 steps",
+      "result": "0 failing"
+    }
+  ],
+  "unresolved_findings": [
+    "push, PR, CI, fresh clone, protected merge, merged-main verification, follow-up verification-record PR pending"
+  ],
+  "next_action": "Push branch, open PR, CI, fresh clone, merge, verify merged main, finalize FINAL-MERGED-VERIFICATION in follow-up protected PR"
+}

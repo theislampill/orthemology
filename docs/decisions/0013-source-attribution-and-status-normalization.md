@@ -1,6 +1,6 @@
 # Decision 0013 — Source attribution and source-status normalization
 
-**Date:** 2026-07-20 · **Authority:** R4 owner authorization · **Status:** adopted in a **candidate revision requiring independent review** · **Reopens nothing;** the owner's adopted Atharī thesis is unchanged — only evidence status and attribution precision are corrected.
+**Date:** 2026-07-20 · **Authority:** R4 owner authorization · **Status:** adopted in a **candidate revision requiring independent review** *(historical wording; review discharged 2026-07-20 by the fresh-session review and protected merge — docs/project-closure/r4-fresh-fable-review/FABLE-REVIEW-SIGNOFF.md, Decision 0016)* · **Reopens nothing;** the owner's adopted Atharī thesis is unchanged — only evidence status and attribution precision are corrected.
 
 ## Problem
 
@@ -65,3 +65,13 @@ Stated in the registry header and enforced by the validator's own docstring: the
 ### 3. CIR-1 carried two claims under one status
 
 `CIR-1` was `SECONDARY_VERIFIED` while its own notes recorded that publisher metadata was verified (Crossref, Cambridge Core) but the chapter wording was read only through the supplied compilation and the publisher's text was not opened (403). Those are two claims with two evidence accesses, so they are now two rows: **`CIR-1`** covers bibliographic existence/authorship/DOI/pages at `SECONDARY_VERIFIED` (with an explicit `status_scope` field saying so), and **`CIR-1W`** covers the exact in-chapter application/wording at `COMPILATION_MEDIATED`, with a recorded promotion trigger (direct publisher full-text access) and an explicit statement that no corpus claim rests on it alone.
+
+---
+
+## Amendment (2026-07-20, R5) — the stale ATH-3 exact-status consequence is superseded
+
+The body above stands except one sentence of the Consequences: "`PRIMARY_TEXT_EXACT` is reserved for loci whose wording was directly checked (the Qurʾānic loci, Muslim 2708, the *Majmūʿ* vol-12 formula)."
+
+The *Majmūʿ al-Fatāwā* vol-12 words/voice formula does **not** hold `PRIMARY_TEXT_EXACT`. The R4 fresh-session review downgraded row `ATH-3` to `COMPILATION_MEDIATED` (the registry contradicted the companion's own **[via compilation]** label on the same locus, and no printed edition or authoritative full-text rendering was opened; the weaker claim was taken — see the R4 amendment above and `docs/project-closure/r4-fresh-fable-review/POST-SUBSTITUTION-HUNK-REVIEW.md` §C4). This sentence survived that downgrade and thereby restated the superseded status; the independent post-merge audit (finding B2) caught the contradiction.
+
+Current statement: `PRIMARY_TEXT_EXACT` is reserved for loci whose wording was directly checked — presently the Qurʾānic loci (`references/quran-loci.yaml`, row `ATH-1`) and Muslim 2708 (row `ATH-2`). Row `ATH-3` stands at `COMPILATION_MEDIATED` with its recorded promotion trigger (direct edition or authoritative full-text access). The R5 session likewise did not open such a text and made no upgrade. The adopted Atharī doctrinal position is unchanged; this is an evidence-access correction only. `scripts/validate_source_status.py` now checks the registry-to-prose agreement **bidirectionally** (a row claiming exact against compilation-labeled prose, AND prose or a decision claiming exact against a weaker registry row), with the registry controlling for its declared families.

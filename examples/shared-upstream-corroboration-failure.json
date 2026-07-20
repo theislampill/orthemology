@@ -1,424 +1,426 @@
 {
- "example": "shared-upstream-corroboration-failure",
- "note": "CR-9 companion bundle (Decision 0011): two auditors independently score a flagged placement, agree, and are themselves scored under the same registry — evaluator symmetry holds and independence-aware corroboration is recorded. Both consumed ONE upstream institutional digest that silently dropped the disconfirming records, so their agreement reproduces the shared distortion: each reasoning path is claim-relatively adequate, yet neither claim is truth-linked and neither is strictly sound. Corroboration plus symmetry mitigate self-certification; they do not prove non-circularity or eliminate shared-source dependence. This bundle is also the D4 regression: two episodes with claim-scoped tokens and separate ledgers, which the pre-repair cross-ledger scope loop wrongly flagged.",
- "parts": [
-  {
-   "schema": "orthing-episode.schema.json",
-   "instance": {
-    "episode_id": "ep-audit-alpha-1",
-    "record_mode": "audit-ready",
-    "occurrence": {
-     "identity_key": "actor-x-placement-441",
-     "version": "case-2026-07",
-     "kind": "audit-target"
-    },
-    "observation": "flagged placement contradicts the institutional digest's account of the underlying records",
-    "evidence": [
-     {
-      "evidence_id": "ev-alpha-digest",
-      "channel": "record-review",
-      "property_class": "provenance",
-      "scope": "underlying records @ case-2026-07",
-      "provenance": "institutional-digest-9 export (sole source)",
-      "validity": "digest edition 9"
-     }
-    ],
-    "actor": "auditor-alpha",
-    "warrant": "audit-charter-7",
-    "analysis": {
-     "analysis_id": "reasoning-audit",
-     "version": "1.4",
-     "task": "assess whether the flagged placement was erroneously reached"
-    },
-    "time": "2026-07-15T10:00:00Z",
-    "policy": "score the target episode under the shared verdict registry; no evaluator exemption",
-    "placement": {
-     "assessment": "target-placement-erroneous"
-    },
-    "evidence_status": {
-     "q-alpha-verdict": "provisional"
-    },
-    "meta_tokens": [
-     {
-      "token_id": "tok-alpha-digest-trust",
-      "of_type": {
-       "mu_id": "digest-trust-policy",
-       "mu_version": "9"
-      },
-      "analysis": {
-       "analysis_id": "reasoning-audit",
-       "version": "1.4"
-      },
-      "anchor": {
-       "identity_key": "actor-x-placement-441",
-       "version": "case-2026-07"
-      },
-      "governed_component": "W",
-      "binding": {
-       "digest_id": "institutional-digest-9",
-       "trust_level": "authoritative"
-      },
-      "scope": {
-       "claims": [
-        "q-alpha-verdict"
-       ]
-      },
-      "binder": {
-       "actor": "audit-office-registrar",
-       "binding_warrant": "digest-adoption-memo-9",
-       "binding_time": "2026-07-01T09:00:00Z"
-      },
-      "validity": {
-       "effective_from": "2026-07-01T09:00:00Z",
-       "expiry": null,
-       "superseded_by": null
-      },
-      "no_separate_executor_reason": "the auditing actor executes under the same audit warrant; the binder role (registrar) remains independently recorded"
-     }
-    ],
-    "verdict_record_ref": "ep-audit-alpha-1",
-    "claim_ledger_ref": "ep-audit-alpha-1",
-    "external_refs": [
-     {
-      "kind": "analysis",
-      "ref": "reasoning-audit@1.4",
-      "registry": "audit-office analysis register",
-      "resolution_status": "resolved-external"
-     },
-     {
-      "kind": "occurrence",
-      "ref": "actor-x-placement-441@case-2026-07",
-      "registry": "audit-office case registry",
-      "resolution_status": "resolved-external"
-     },
-     {
-      "kind": "metaortheme",
-      "ref": "digest-trust-policy@9",
-      "registry": "audit-office digest governance register",
-      "resolution_status": "resolved-external"
-     }
-    ]
-   }
-  },
-  {
-   "schema": "orthing-episode.schema.json",
-   "instance": {
-    "episode_id": "ep-audit-beta-1",
-    "record_mode": "audit-ready",
-    "occurrence": {
-     "identity_key": "actor-x-placement-441",
-     "version": "case-2026-07",
-     "kind": "audit-target"
-    },
-    "observation": "independent re-review reaches the same conclusion as auditor-alpha",
-    "evidence": [
-     {
-      "evidence_id": "ev-beta-digest",
-      "channel": "record-review",
-      "property_class": "provenance",
-      "scope": "underlying records @ case-2026-07",
-      "provenance": "institutional-digest-9 export (sole source)",
-      "validity": "digest edition 9"
-     }
-    ],
-    "actor": "auditor-beta",
-    "warrant": "audit-charter-7",
-    "analysis": {
-     "analysis_id": "reasoning-audit",
-     "version": "1.4",
-     "task": "assess whether the flagged placement was erroneously reached"
-    },
-    "time": "2026-07-15T14:00:00Z",
-    "policy": "score the target episode under the shared verdict registry; no evaluator exemption",
-    "placement": {
-     "assessment": "target-placement-erroneous"
-    },
-    "evidence_status": {
-     "q-beta-verdict": "provisional"
-    },
-    "meta_tokens": [
-     {
-      "token_id": "tok-beta-digest-trust",
-      "of_type": {
-       "mu_id": "digest-trust-policy",
-       "mu_version": "9"
-      },
-      "analysis": {
-       "analysis_id": "reasoning-audit",
-       "version": "1.4"
-      },
-      "anchor": {
-       "identity_key": "actor-x-placement-441",
-       "version": "case-2026-07"
-      },
-      "governed_component": "W",
-      "binding": {
-       "digest_id": "institutional-digest-9",
-       "trust_level": "authoritative"
-      },
-      "scope": {
-       "claims": [
-        "q-beta-verdict"
-       ]
-      },
-      "binder": {
-       "actor": "audit-office-registrar",
-       "binding_warrant": "digest-adoption-memo-9",
-       "binding_time": "2026-07-01T09:00:00Z"
-      },
-      "validity": {
-       "effective_from": "2026-07-01T09:00:00Z",
-       "expiry": null,
-       "superseded_by": null
-      },
-      "no_separate_executor_reason": "the auditing actor executes under the same audit warrant; the binder role (registrar) remains independently recorded"
-     }
-    ],
-    "verdict_record_ref": "ep-audit-beta-1",
-    "claim_ledger_ref": "ep-audit-beta-1",
-    "external_refs": [
-     {
-      "kind": "analysis",
-      "ref": "reasoning-audit@1.4",
-      "registry": "audit-office analysis register",
-      "resolution_status": "resolved-external"
-     },
-     {
-      "kind": "occurrence",
-      "ref": "actor-x-placement-441@case-2026-07",
-      "registry": "audit-office case registry",
-      "resolution_status": "resolved-external"
-     },
-     {
-      "kind": "metaortheme",
-      "ref": "digest-trust-policy@9",
-      "registry": "audit-office digest governance register",
-      "resolution_status": "resolved-external"
-     }
-    ]
-   }
-  },
-  {
-   "schema": "claim-ledger.schema.json",
-   "instance": {
-    "episode_id": "ep-audit-alpha-1",
-    "claims": [
-     {
-      "claim_id": "q-alpha-verdict",
-      "proposition": "actor-x's flagged placement was erroneously reached",
-      "target": {
-       "identity_key": "actor-x-placement-441",
-       "version": "case-2026-07"
-      },
-      "property_class": "behavioral",
-      "success_surface": "the target placement as actually produced",
-      "evidence_ids": [
-       "ev-alpha-digest"
-      ],
-      "depends_on_tokens": [
-       "tok-alpha-digest-trust"
-      ],
-      "verification_status": "validated",
-      "non_claims": [
-       "no claim about actor-x's motives"
-      ],
-      "analysis": {
-       "analysis_id": "reasoning-audit",
-       "version": "1.4"
+  "example": "shared-upstream-corroboration-failure",
+  "note": "CR-9 companion bundle (Decision 0011): two auditors independently score a flagged placement, agree, and are themselves scored under the same registry — evaluator symmetry holds and independence-aware corroboration is recorded. Both consumed ONE upstream institutional digest that silently dropped the disconfirming records, so their agreement reproduces the shared distortion: each reasoning path is claim-relatively adequate, yet neither claim is truth-linked and neither is strictly sound. Corroboration plus symmetry mitigate self-certification; they do not prove non-circularity or eliminate shared-source dependence. This bundle is also the D4 regression: two episodes with claim-scoped tokens and separate ledgers, which the pre-repair cross-ledger scope loop wrongly flagged.",
+  "parts": [
+    {
+      "schema": "orthing-episode.schema.json",
+      "instance": {
+        "episode_id": "ep-audit-alpha-1",
+        "record_mode": "audit-ready",
+        "occurrence": {
+          "identity_key": "actor-x-placement-441",
+          "version": "case-2026-07",
+          "kind": "audit-target"
+        },
+        "observation": "flagged placement contradicts the institutional digest's account of the underlying records",
+        "evidence": [
+          {
+            "evidence_id": "ev-alpha-digest",
+            "channel": "record-review",
+            "property_class": "provenance",
+            "scope": "underlying records @ case-2026-07",
+            "provenance": "institutional-digest-9 export (sole source)",
+            "validity": "digest edition 9"
+          }
+        ],
+        "actor": "auditor-alpha",
+        "warrant": "audit-charter-7",
+        "analysis": {
+          "analysis_id": "reasoning-audit",
+          "version": "1.4",
+          "task": "assess whether the flagged placement was erroneously reached"
+        },
+        "time": "2026-07-15T10:00:00Z",
+        "policy": "score the target episode under the shared verdict registry; no evaluator exemption",
+        "placement": {
+          "assessment": "target-placement-erroneous"
+        },
+        "evidence_status": {
+          "q-alpha-verdict": "provisional"
+        },
+        "meta_tokens": [
+          {
+            "token_id": "tok-alpha-digest-trust",
+            "of_type": {
+              "mu_id": "digest-trust-policy",
+              "mu_version": "9"
+            },
+            "analysis": {
+              "analysis_id": "reasoning-audit",
+              "version": "1.4"
+            },
+            "anchor": {
+              "identity_key": "actor-x-placement-441",
+              "version": "case-2026-07"
+            },
+            "governed_component": "W",
+            "binding": {
+              "digest_id": "institutional-digest-9",
+              "trust_level": "authoritative"
+            },
+            "scope": {
+              "claims": [
+                "q-alpha-verdict"
+              ]
+            },
+            "binder": {
+              "actor": "audit-office-registrar",
+              "binding_warrant": "digest-adoption-memo-9",
+              "binding_time": "2026-07-01T09:00:00Z"
+            },
+            "validity": {
+              "effective_from": "2026-07-01T09:00:00Z",
+              "expiry": null,
+              "superseded_by": null
+            },
+            "no_separate_executor_reason": "the auditing actor executes under the same audit warrant; the binder role (registrar) remains independently recorded"
+          }
+        ],
+        "verdict_record_ref": "ep-audit-alpha-1",
+        "claim_ledger_ref": "ep-audit-alpha-1",
+        "external_refs": [
+          {
+            "kind": "analysis",
+            "ref": "reasoning-audit@1.4",
+            "registry": "audit-office analysis register",
+            "resolution_status": "resolved-external"
+          },
+          {
+            "kind": "occurrence",
+            "ref": "actor-x-placement-441@case-2026-07",
+            "registry": "audit-office case registry",
+            "resolution_status": "resolved-external"
+          },
+          {
+            "kind": "metaortheme",
+            "ref": "digest-trust-policy@9",
+            "registry": "audit-office digest governance register",
+            "resolution_status": "resolved-external"
+          }
+        ]
       }
-     }
-    ],
-    "residuals": [
-     {
-      "burden_id": "b-alpha-corroborate",
-      "description": "corroborate the assessment against an independent evaluator",
-      "disposition": "validated-resolved",
-      "evidence_refs": [
-       "ev-alpha-digest"
-      ],
-      "verdict_refs": [
-       "ep-audit-beta-1"
-      ]
-     }
-    ]
-   }
-  },
-  {
-   "schema": "claim-ledger.schema.json",
-   "instance": {
-    "episode_id": "ep-audit-beta-1",
-    "claims": [
-     {
-      "claim_id": "q-beta-verdict",
-      "proposition": "actor-x's flagged placement was erroneously reached",
-      "target": {
-       "identity_key": "actor-x-placement-441",
-       "version": "case-2026-07"
-      },
-      "property_class": "behavioral",
-      "success_surface": "the target placement as actually produced",
-      "evidence_ids": [
-       "ev-beta-digest"
-      ],
-      "depends_on_tokens": [
-       "tok-beta-digest-trust"
-      ],
-      "verification_status": "validated",
-      "non_claims": [
-       "no claim about actor-x's motives"
-      ],
-      "analysis": {
-       "analysis_id": "reasoning-audit",
-       "version": "1.4"
+    },
+    {
+      "schema": "orthing-episode.schema.json",
+      "instance": {
+        "episode_id": "ep-audit-beta-1",
+        "record_mode": "audit-ready",
+        "occurrence": {
+          "identity_key": "actor-x-placement-441",
+          "version": "case-2026-07",
+          "kind": "audit-target"
+        },
+        "observation": "independent re-review reaches the same conclusion as auditor-alpha",
+        "evidence": [
+          {
+            "evidence_id": "ev-beta-digest",
+            "channel": "record-review",
+            "property_class": "provenance",
+            "scope": "underlying records @ case-2026-07",
+            "provenance": "institutional-digest-9 export (sole source)",
+            "validity": "digest edition 9"
+          }
+        ],
+        "actor": "auditor-beta",
+        "warrant": "audit-charter-7",
+        "analysis": {
+          "analysis_id": "reasoning-audit",
+          "version": "1.4",
+          "task": "assess whether the flagged placement was erroneously reached"
+        },
+        "time": "2026-07-15T14:00:00Z",
+        "policy": "score the target episode under the shared verdict registry; no evaluator exemption",
+        "placement": {
+          "assessment": "target-placement-erroneous"
+        },
+        "evidence_status": {
+          "q-beta-verdict": "provisional"
+        },
+        "meta_tokens": [
+          {
+            "token_id": "tok-beta-digest-trust",
+            "of_type": {
+              "mu_id": "digest-trust-policy",
+              "mu_version": "9"
+            },
+            "analysis": {
+              "analysis_id": "reasoning-audit",
+              "version": "1.4"
+            },
+            "anchor": {
+              "identity_key": "actor-x-placement-441",
+              "version": "case-2026-07"
+            },
+            "governed_component": "W",
+            "binding": {
+              "digest_id": "institutional-digest-9",
+              "trust_level": "authoritative"
+            },
+            "scope": {
+              "claims": [
+                "q-beta-verdict"
+              ]
+            },
+            "binder": {
+              "actor": "audit-office-registrar",
+              "binding_warrant": "digest-adoption-memo-9",
+              "binding_time": "2026-07-01T09:00:00Z"
+            },
+            "validity": {
+              "effective_from": "2026-07-01T09:00:00Z",
+              "expiry": null,
+              "superseded_by": null
+            },
+            "no_separate_executor_reason": "the auditing actor executes under the same audit warrant; the binder role (registrar) remains independently recorded"
+          }
+        ],
+        "verdict_record_ref": "ep-audit-beta-1",
+        "claim_ledger_ref": "ep-audit-beta-1",
+        "external_refs": [
+          {
+            "kind": "analysis",
+            "ref": "reasoning-audit@1.4",
+            "registry": "audit-office analysis register",
+            "resolution_status": "resolved-external"
+          },
+          {
+            "kind": "occurrence",
+            "ref": "actor-x-placement-441@case-2026-07",
+            "registry": "audit-office case registry",
+            "resolution_status": "resolved-external"
+          },
+          {
+            "kind": "metaortheme",
+            "ref": "digest-trust-policy@9",
+            "registry": "audit-office digest governance register",
+            "resolution_status": "resolved-external"
+          }
+        ]
       }
-     }
-    ],
-    "residuals": [
-     {
-      "burden_id": "b-beta-corroborate",
-      "description": "corroborate the assessment against an independent evaluator",
-      "disposition": "validated-resolved",
-      "evidence_refs": [
-       "ev-beta-digest"
-      ],
-      "verdict_refs": [
-       "ep-audit-alpha-1"
-      ]
-     }
-    ]
-   }
-  },
-  {
-   "schema": "verdict-record.schema.json",
-   "instance": {
-    "episode_id": "ep-audit-alpha-1",
-    "required_path": [
-     "EVIDENCE_SUPPORT",
-     "PROCEDURE_RELIABLE",
-     "EVIDENCE_CURRENT",
-     "GOV_CONFIG_ADEQUATE",
-     "GOV_POLICY_ADEQUATE",
-     "GOV_TOKEN_ADEQUATE",
-     "EXECUTION_FAITHFUL",
-     "EX_ANTE_JUSTIFIED"
-    ],
-    "statuses": {
-     "RESULT_CORRECT": "fail",
-     "EVIDENCE_SUPPORT": "pass",
-     "PROCEDURE_RELIABLE": "pass",
-     "EVIDENCE_CURRENT": "pass",
-     "GOV_CONFIG_ADEQUATE": "pass",
-     "GOV_POLICY_ADEQUATE": "pass",
-     "GOV_TOKEN_ADEQUATE": "pass",
-     "EXECUTION_FAITHFUL": "pass",
-     "EX_ANTE_JUSTIFIED": "pass",
-     "TOKEN_TRUTH_LINKED": "fail"
     },
-    "claim_verdicts": [
-     {
-      "claim_id": "q-alpha-verdict",
-      "result_correct": "fail",
-      "token_truth_linked": "fail"
-     }
-    ],
-    "per_token_v3c": [
-     {
-      "token_id": "tok-alpha-digest-trust",
-      "status": "pass",
-      "failing_conjunct": null
-     }
-    ],
-    "pathway_state": "adequate",
-    "index": {
-     "analysis_id": "reasoning-audit",
-     "analysis_version": "1.4",
-     "actor": "audit-office-reviewer",
-     "decision_time": "2026-07-16T09:00:00Z",
-     "information_state": "the digest-9 export and both auditors' working notes, as available at 2026-07-16T09:00:00Z; the dropped disconfirming records surfaced only in the later registry reconciliation"
+    {
+      "schema": "claim-ledger.schema.json",
+      "instance": {
+        "episode_id": "ep-audit-alpha-1",
+        "claims": [
+          {
+            "claim_id": "q-alpha-verdict",
+            "proposition": "actor-x's flagged placement was erroneously reached",
+            "target": {
+              "identity_key": "actor-x-placement-441",
+              "version": "case-2026-07"
+            },
+            "property_class": "behavioral",
+            "success_surface": "the target placement as actually produced",
+            "evidence_ids": [
+              "ev-alpha-digest"
+            ],
+            "depends_on_tokens": [
+              "tok-alpha-digest-trust"
+            ],
+            "verification_status": "validated",
+            "non_claims": [
+              "no claim about actor-x's motives"
+            ],
+            "analysis": {
+              "analysis_id": "reasoning-audit",
+              "version": "1.4"
+            },
+            "claim_type": "placement"
+          }
+        ],
+        "residuals": [
+          {
+            "burden_id": "b-alpha-corroborate",
+            "description": "corroborate the assessment against an independent evaluator",
+            "disposition": "validated-resolved",
+            "evidence_refs": [
+              "ev-alpha-digest"
+            ],
+            "verdict_refs": [
+              "ep-audit-beta-1"
+            ]
+          }
+        ]
+      }
     },
-    "claim_reasoning_paths": [
-     {
-      "claim_id": "q-alpha-verdict",
-      "req_reason": [
-       "EVIDENCE_SUPPORT",
-       "PROCEDURE_RELIABLE",
-       "EVIDENCE_CURRENT",
-       "GOV_CONFIG_ADEQUATE",
-       "GOV_POLICY_ADEQUATE",
-       "GOV_TOKEN_ADEQUATE",
-       "EXECUTION_FAITHFUL",
-       "EX_ANTE_JUSTIFIED"
-      ],
-      "reasoning_path_adequate": "adequate"
-     }
-    ]
-   }
-  },
-  {
-   "schema": "verdict-record.schema.json",
-   "instance": {
-    "episode_id": "ep-audit-beta-1",
-    "required_path": [
-     "EVIDENCE_SUPPORT",
-     "PROCEDURE_RELIABLE",
-     "EVIDENCE_CURRENT",
-     "GOV_CONFIG_ADEQUATE",
-     "GOV_POLICY_ADEQUATE",
-     "GOV_TOKEN_ADEQUATE",
-     "EXECUTION_FAITHFUL",
-     "EX_ANTE_JUSTIFIED"
-    ],
-    "statuses": {
-     "RESULT_CORRECT": "fail",
-     "EVIDENCE_SUPPORT": "pass",
-     "PROCEDURE_RELIABLE": "pass",
-     "EVIDENCE_CURRENT": "pass",
-     "GOV_CONFIG_ADEQUATE": "pass",
-     "GOV_POLICY_ADEQUATE": "pass",
-     "GOV_TOKEN_ADEQUATE": "pass",
-     "EXECUTION_FAITHFUL": "pass",
-     "EX_ANTE_JUSTIFIED": "pass",
-     "TOKEN_TRUTH_LINKED": "fail"
+    {
+      "schema": "claim-ledger.schema.json",
+      "instance": {
+        "episode_id": "ep-audit-beta-1",
+        "claims": [
+          {
+            "claim_id": "q-beta-verdict",
+            "proposition": "actor-x's flagged placement was erroneously reached",
+            "target": {
+              "identity_key": "actor-x-placement-441",
+              "version": "case-2026-07"
+            },
+            "property_class": "behavioral",
+            "success_surface": "the target placement as actually produced",
+            "evidence_ids": [
+              "ev-beta-digest"
+            ],
+            "depends_on_tokens": [
+              "tok-beta-digest-trust"
+            ],
+            "verification_status": "validated",
+            "non_claims": [
+              "no claim about actor-x's motives"
+            ],
+            "analysis": {
+              "analysis_id": "reasoning-audit",
+              "version": "1.4"
+            },
+            "claim_type": "placement"
+          }
+        ],
+        "residuals": [
+          {
+            "burden_id": "b-beta-corroborate",
+            "description": "corroborate the assessment against an independent evaluator",
+            "disposition": "validated-resolved",
+            "evidence_refs": [
+              "ev-beta-digest"
+            ],
+            "verdict_refs": [
+              "ep-audit-alpha-1"
+            ]
+          }
+        ]
+      }
     },
-    "claim_verdicts": [
-     {
-      "claim_id": "q-beta-verdict",
-      "result_correct": "fail",
-      "token_truth_linked": "fail"
-     }
-    ],
-    "per_token_v3c": [
-     {
-      "token_id": "tok-beta-digest-trust",
-      "status": "pass",
-      "failing_conjunct": null
-     }
-    ],
-    "pathway_state": "adequate",
-    "index": {
-     "analysis_id": "reasoning-audit",
-     "analysis_version": "1.4",
-     "actor": "audit-office-reviewer",
-     "decision_time": "2026-07-16T09:05:00Z",
-     "information_state": "the digest-9 export and both auditors' working notes, as available at 2026-07-16T09:05:00Z; the dropped disconfirming records surfaced only in the later registry reconciliation"
+    {
+      "schema": "verdict-record.schema.json",
+      "instance": {
+        "episode_id": "ep-audit-alpha-1",
+        "required_path": [
+          "EVIDENCE_SUPPORT",
+          "PROCEDURE_RELIABLE",
+          "EVIDENCE_CURRENT",
+          "GOV_CONFIG_ADEQUATE",
+          "GOV_POLICY_ADEQUATE",
+          "GOV_TOKEN_ADEQUATE",
+          "EXECUTION_FAITHFUL",
+          "EX_ANTE_JUSTIFIED"
+        ],
+        "statuses": {
+          "RESULT_CORRECT": "fail",
+          "EVIDENCE_SUPPORT": "pass",
+          "PROCEDURE_RELIABLE": "pass",
+          "EVIDENCE_CURRENT": "pass",
+          "GOV_CONFIG_ADEQUATE": "pass",
+          "GOV_POLICY_ADEQUATE": "pass",
+          "GOV_TOKEN_ADEQUATE": "pass",
+          "EXECUTION_FAITHFUL": "pass",
+          "EX_ANTE_JUSTIFIED": "pass",
+          "TOKEN_TRUTH_LINKED": "fail"
+        },
+        "claim_verdicts": [
+          {
+            "claim_id": "q-alpha-verdict",
+            "result_correct": "fail",
+            "token_truth_linked": "fail"
+          }
+        ],
+        "per_token_v3c": [
+          {
+            "token_id": "tok-alpha-digest-trust",
+            "status": "pass",
+            "failing_conjunct": null
+          }
+        ],
+        "pathway_state": "adequate",
+        "index": {
+          "analysis_id": "reasoning-audit",
+          "analysis_version": "1.4",
+          "actor": "audit-office-reviewer",
+          "decision_time": "2026-07-16T09:00:00Z",
+          "information_state": "the digest-9 export and both auditors' working notes, as available at 2026-07-16T09:00:00Z; the dropped disconfirming records surfaced only in the later registry reconciliation"
+        },
+        "claim_reasoning_paths": [
+          {
+            "claim_id": "q-alpha-verdict",
+            "req_reason": [
+              "EVIDENCE_SUPPORT",
+              "PROCEDURE_RELIABLE",
+              "EVIDENCE_CURRENT",
+              "GOV_CONFIG_ADEQUATE",
+              "GOV_POLICY_ADEQUATE",
+              "GOV_TOKEN_ADEQUATE",
+              "EXECUTION_FAITHFUL",
+              "EX_ANTE_JUSTIFIED"
+            ],
+            "reasoning_path_adequate": "adequate"
+          }
+        ]
+      }
     },
-    "claim_reasoning_paths": [
-     {
-      "claim_id": "q-beta-verdict",
-      "req_reason": [
-       "EVIDENCE_SUPPORT",
-       "PROCEDURE_RELIABLE",
-       "EVIDENCE_CURRENT",
-       "GOV_CONFIG_ADEQUATE",
-       "GOV_POLICY_ADEQUATE",
-       "GOV_TOKEN_ADEQUATE",
-       "EXECUTION_FAITHFUL",
-       "EX_ANTE_JUSTIFIED"
-      ],
-      "reasoning_path_adequate": "adequate"
-     }
-    ]
-   }
-  }
- ]
+    {
+      "schema": "verdict-record.schema.json",
+      "instance": {
+        "episode_id": "ep-audit-beta-1",
+        "required_path": [
+          "EVIDENCE_SUPPORT",
+          "PROCEDURE_RELIABLE",
+          "EVIDENCE_CURRENT",
+          "GOV_CONFIG_ADEQUATE",
+          "GOV_POLICY_ADEQUATE",
+          "GOV_TOKEN_ADEQUATE",
+          "EXECUTION_FAITHFUL",
+          "EX_ANTE_JUSTIFIED"
+        ],
+        "statuses": {
+          "RESULT_CORRECT": "fail",
+          "EVIDENCE_SUPPORT": "pass",
+          "PROCEDURE_RELIABLE": "pass",
+          "EVIDENCE_CURRENT": "pass",
+          "GOV_CONFIG_ADEQUATE": "pass",
+          "GOV_POLICY_ADEQUATE": "pass",
+          "GOV_TOKEN_ADEQUATE": "pass",
+          "EXECUTION_FAITHFUL": "pass",
+          "EX_ANTE_JUSTIFIED": "pass",
+          "TOKEN_TRUTH_LINKED": "fail"
+        },
+        "claim_verdicts": [
+          {
+            "claim_id": "q-beta-verdict",
+            "result_correct": "fail",
+            "token_truth_linked": "fail"
+          }
+        ],
+        "per_token_v3c": [
+          {
+            "token_id": "tok-beta-digest-trust",
+            "status": "pass",
+            "failing_conjunct": null
+          }
+        ],
+        "pathway_state": "adequate",
+        "index": {
+          "analysis_id": "reasoning-audit",
+          "analysis_version": "1.4",
+          "actor": "audit-office-reviewer",
+          "decision_time": "2026-07-16T09:05:00Z",
+          "information_state": "the digest-9 export and both auditors' working notes, as available at 2026-07-16T09:05:00Z; the dropped disconfirming records surfaced only in the later registry reconciliation"
+        },
+        "claim_reasoning_paths": [
+          {
+            "claim_id": "q-beta-verdict",
+            "req_reason": [
+              "EVIDENCE_SUPPORT",
+              "PROCEDURE_RELIABLE",
+              "EVIDENCE_CURRENT",
+              "GOV_CONFIG_ADEQUATE",
+              "GOV_POLICY_ADEQUATE",
+              "GOV_TOKEN_ADEQUATE",
+              "EXECUTION_FAITHFUL",
+              "EX_ANTE_JUSTIFIED"
+            ],
+            "reasoning_path_adequate": "adequate"
+          }
+        ]
+      }
+    }
+  ]
 }

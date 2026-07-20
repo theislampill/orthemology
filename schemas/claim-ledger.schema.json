@@ -1,509 +1,522 @@
 {
- "$schema": "https://json-schema.org/draft/2020-12/schema",
- "$id": "orthemology/claim-ledger.schema.json",
- "title": "Claim ledger Q_e and residual-disposition map delta_e",
- "description": "Claims are assertions; residuals are obligations; never merged. Six mutually exclusive dispositions with the owner-assigned/transferred precedence rule (Definition 12). R4: each disposition carries its own completeness contract — a disposition without the fields that make it auditable is a label, not a disposition, and is rejected here by if/then.",
- "type": "object",
- "required": [
-  "episode_id",
-  "claims",
-  "residuals"
- ],
- "properties": {
-  "episode_id": {
-   "type": "string",
-   "minLength": 1
-  },
-  "claims": {
-   "type": "array",
-   "minItems": 1,
-   "uniqueItems": true,
-   "items": {
-    "type": "object",
-    "required": [
-     "claim_id",
-     "proposition",
-     "target",
-     "analysis",
-     "property_class",
-     "success_surface",
-     "verification_status"
-    ],
-    "anyOf": [
-     {
-      "required": [
-       "evidence_ids"
-      ],
-      "properties": {
-       "evidence_ids": {
-        "type": "array",
-        "minItems": 1
-       }
-      }
-     },
-     {
-      "required": [
-       "evidence_inapplicable_reason"
-      ]
-     }
-    ],
-    "properties": {
-     "claim_id": {
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "$id": "orthemology/claim-ledger.schema.json",
+  "title": "Claim ledger Q_e and residual-disposition map delta_e",
+  "description": "Claims are assertions; residuals are obligations; never merged. Six mutually exclusive dispositions with the owner-assigned/transferred precedence rule (Definition 12). R4: each disposition carries its own completeness contract — a disposition without the fields that make it auditable is a label, not a disposition, and is rejected here by if/then.",
+  "type": "object",
+  "required": [
+    "episode_id",
+    "claims",
+    "residuals"
+  ],
+  "properties": {
+    "episode_id": {
       "type": "string",
       "minLength": 1
-     },
-     "proposition": {
-      "type": "string",
-      "minLength": 1
-     },
-     "target": {
-      "type": "object",
-      "required": [
-       "identity_key",
-       "version"
-      ],
-      "properties": {
-       "identity_key": {
-        "type": "string",
-        "minLength": 1
-       },
-       "version": {
-        "type": "string",
-        "minLength": 1
-       }
-      },
-      "additionalProperties": false
-     },
-     "analysis": {
-      "type": "object",
-      "description": "the analysis relative to which this claim is asserted (Decision 0001: claims are analysis-relative; an unindexed claim is not auditable)",
-      "required": [
-       "analysis_id",
-       "version"
-      ],
-      "properties": {
-       "analysis_id": {
-        "type": "string",
-        "minLength": 1
-       },
-       "version": {
-        "type": "string",
-        "minLength": 1
-       }
-      },
-      "additionalProperties": false
-     },
-     "property_class": {
-      "type": "string",
-      "minLength": 1,
-      "description": "core class (structural|behavioral|provenance) or a declared domain-specific subclass 'core/subclass'"
-     },
-     "success_surface": {
-      "type": "string",
-      "minLength": 1,
-      "description": "declared locus where success must be observable"
-     },
-     "evidence_ids": {
+    },
+    "claims": {
       "type": "array",
       "minItems": 1,
       "uniqueItems": true,
       "items": {
-       "type": "string",
-       "minLength": 1
-      }
-     },
-     "evidence_inapplicable_reason": {
-      "type": "string",
-      "minLength": 1,
-      "description": "explicit reason no evidence item bears on this claim"
-     },
-     "warrant": {
-      "type": [
-       "string",
-       "null"
-      ],
-      "minLength": 1
-     },
-     "depends_on_claims": {
-      "type": "array",
-      "minItems": 0,
-      "uniqueItems": true,
-      "items": {
-       "type": "string",
-       "minLength": 1
-      }
-     },
-     "depends_on_tokens": {
-      "type": "array",
-      "minItems": 0,
-      "uniqueItems": true,
-      "items": {
-       "type": "string",
-       "minLength": 1
-      },
-      "description": "metaorthemma token ids this claim's standing depends on"
-     },
-     "verification_status": {
-      "enum": [
-       "validated",
-       "provisional",
-       "stale",
-       "absent"
-      ]
-     },
-     "non_claims": {
-      "type": "array",
-      "minItems": 0,
-      "uniqueItems": true,
-      "items": {
-       "type": "string",
-       "minLength": 1
-      },
-      "description": "explicit non-claims recorded to block later inflation"
-     },
-     "claim_type": {
-      "enum": [
-       "placement",
-       "routing",
-       "closure"
-      ],
-      "description": "what the claim itself asserts (Decision 0011); default placement. Drives the ReqReason_q derivation: route/closure verdicts are claim-relevant only for routing/closure claims"
-     },
-     "robustness_obligation": {
-      "type": "boolean",
-      "description": "true when A(e) or the claim's risk class predeclares a robustness obligation FOR THIS CLAIM; defaults to whether ROBUST_NEIGHBORHOOD is on the episode's required path"
-     },
-     "currency_exempt": {
-      "type": "boolean",
-      "description": "true when the claim concerns a fixed record (authenticity/provenance) whose truth does not depend on evidence currency; exempts EVIDENCE_CURRENT from the claim's ReqReason_q derivation (default false)"
-     }
-    },
-    "additionalProperties": false
-   }
-  },
-  "residuals": {
-   "type": "array",
-   "uniqueItems": true,
-   "items": {
-    "type": "object",
-    "required": [
-     "burden_id",
-     "description",
-     "disposition"
-    ],
-    "allOf": [
-     {
-      "if": {
-       "properties": {
-        "disposition": {
-         "const": "unresolved"
-        }
-       },
-       "required": [
-        "disposition"
-       ]
-      },
-      "then": {
-       "required": [
-        "responsible_queue",
-        "next_review_condition"
-       ],
-       "description": "an unresolved burden with no queue and no review condition is an abandoned burden wearing an honest label"
-      }
-     },
-     {
-      "if": {
-       "properties": {
-        "disposition": {
-         "const": "deferred"
-        }
-       },
-       "required": [
-        "disposition"
-       ]
-      },
-      "then": {
-       "anyOf": [
-        {
-         "required": [
-          "trigger"
-         ]
+        "type": "object",
+        "required": [
+          "claim_id",
+          "proposition",
+          "target",
+          "analysis",
+          "property_class",
+          "success_surface",
+          "verification_status"
+        ],
+        "anyOf": [
+          {
+            "required": [
+              "evidence_ids"
+            ],
+            "properties": {
+              "evidence_ids": {
+                "type": "array",
+                "minItems": 1
+              }
+            }
+          },
+          {
+            "required": [
+              "evidence_inapplicable_reason"
+            ]
+          }
+        ],
+        "properties": {
+          "claim_id": {
+            "type": "string",
+            "minLength": 1
+          },
+          "proposition": {
+            "type": "string",
+            "minLength": 1
+          },
+          "target": {
+            "type": "object",
+            "required": [
+              "identity_key",
+              "version"
+            ],
+            "properties": {
+              "identity_key": {
+                "type": "string",
+                "minLength": 1
+              },
+              "version": {
+                "type": "string",
+                "minLength": 1
+              }
+            },
+            "additionalProperties": false
+          },
+          "analysis": {
+            "type": "object",
+            "description": "the analysis relative to which this claim is asserted (Decision 0001: claims are analysis-relative; an unindexed claim is not auditable)",
+            "required": [
+              "analysis_id",
+              "version"
+            ],
+            "properties": {
+              "analysis_id": {
+                "type": "string",
+                "minLength": 1
+              },
+              "version": {
+                "type": "string",
+                "minLength": 1
+              }
+            },
+            "additionalProperties": false
+          },
+          "property_class": {
+            "type": "string",
+            "minLength": 1,
+            "description": "core class (structural|behavioral|provenance) or a declared domain-specific subclass 'core/subclass'"
+          },
+          "success_surface": {
+            "type": "string",
+            "minLength": 1,
+            "description": "declared locus where success must be observable"
+          },
+          "evidence_ids": {
+            "type": "array",
+            "minItems": 1,
+            "uniqueItems": true,
+            "items": {
+              "type": "string",
+              "minLength": 1
+            }
+          },
+          "evidence_inapplicable_reason": {
+            "type": "string",
+            "minLength": 1,
+            "description": "explicit reason no evidence item bears on this claim"
+          },
+          "warrant": {
+            "type": [
+              "string",
+              "null"
+            ],
+            "minLength": 1
+          },
+          "depends_on_claims": {
+            "type": "array",
+            "minItems": 0,
+            "uniqueItems": true,
+            "items": {
+              "type": "string",
+              "minLength": 1
+            }
+          },
+          "depends_on_tokens": {
+            "type": "array",
+            "minItems": 0,
+            "uniqueItems": true,
+            "items": {
+              "type": "string",
+              "minLength": 1
+            },
+            "description": "metaorthemma token ids this claim's standing depends on"
+          },
+          "verification_status": {
+            "enum": [
+              "validated",
+              "provisional",
+              "stale",
+              "absent"
+            ]
+          },
+          "non_claims": {
+            "type": "array",
+            "minItems": 0,
+            "uniqueItems": true,
+            "items": {
+              "type": "string",
+              "minLength": 1
+            },
+            "description": "explicit non-claims recorded to block later inflation"
+          },
+          "claim_type": {
+            "enum": [
+              "placement",
+              "routing",
+              "closure"
+            ],
+            "description": "what the claim itself asserts (Decision 0011); default placement. Drives the ReqReason_q derivation: route/closure verdicts are claim-relevant only for routing/closure claims"
+          },
+          "robustness_obligation": {
+            "type": "boolean",
+            "description": "true when A(e) or the claim's risk class predeclares a robustness obligation FOR THIS CLAIM; defaults to whether ROBUST_NEIGHBORHOOD is on the episode's required path"
+          },
+          "currency_exempt": {
+            "type": "boolean",
+            "description": "true when the claim concerns a fixed record (authenticity/provenance) whose truth does not depend on evidence currency; exempts EVIDENCE_CURRENT from the claim's ReqReason_q derivation (default false)"
+          },
+          "currency_exempt_reason": {
+            "type": "string",
+            "minLength": 1,
+            "description": "R5 (audit M4): required when currency_exempt is true — why the claim's truth does not depend on evidence currency"
+          },
+          "currency_exempt_scope": {
+            "type": "string",
+            "enum": [
+              "fixed-record",
+              "provenance"
+            ],
+            "description": "R5 (audit M4): required when currency_exempt is true — the fixed-record/provenance scope the exemption is limited to"
+          }
         },
-        {
-         "required": [
-          "review_date"
-         ]
-        }
-       ],
-       "description": "deferral requires a declared trigger or a review date"
+        "additionalProperties": false
       }
-     },
-     {
-      "if": {
-       "properties": {
-        "disposition": {
-         "const": "transferred"
-        }
-       },
-       "required": [
-        "disposition"
-       ]
-      },
-      "then": {
-       "required": [
-        "receiver",
-        "transfer_record"
-       ],
-       "description": "transfer requires a named receiver and a transfer record"
-      }
-     },
-     {
-      "if": {
-       "properties": {
-        "disposition": {
-         "const": "owner-assigned"
-        }
-       },
-       "required": [
-        "disposition"
-       ]
-      },
-      "then": {
-       "required": [
-        "owner",
-        "acceptance_state"
-       ],
-       "description": "assignment requires a named owner and the owner's acceptance state"
-      }
-     },
-     {
-      "if": {
-       "properties": {
-        "disposition": {
-         "const": "risk-accepted"
-        }
-       },
-       "required": [
-        "disposition"
-       ]
-      },
-      "then": {
-       "required": [
-        "risk_owner",
-        "rationale",
-        "scope",
-        "review_trigger"
-       ],
-       "description": "risk acceptance requires an owner of the risk, a rationale, a bounded scope and a review trigger"
-      }
-     },
-     {
-      "if": {
-       "properties": {
-        "disposition": {
-         "const": "validated-resolved"
-        }
-       },
-       "required": [
-        "disposition"
-       ]
-      },
-      "then": {
-       "anyOf": [
-        {
-         "required": [
-          "evidence_refs"
-         ],
-         "properties": {
+    },
+    "residuals": {
+      "type": "array",
+      "uniqueItems": true,
+      "items": {
+        "type": "object",
+        "required": [
+          "burden_id",
+          "description",
+          "disposition"
+        ],
+        "allOf": [
+          {
+            "if": {
+              "properties": {
+                "disposition": {
+                  "const": "unresolved"
+                }
+              },
+              "required": [
+                "disposition"
+              ]
+            },
+            "then": {
+              "required": [
+                "responsible_queue",
+                "next_review_condition"
+              ],
+              "description": "an unresolved burden with no queue and no review condition is an abandoned burden wearing an honest label"
+            }
+          },
+          {
+            "if": {
+              "properties": {
+                "disposition": {
+                  "const": "deferred"
+                }
+              },
+              "required": [
+                "disposition"
+              ]
+            },
+            "then": {
+              "anyOf": [
+                {
+                  "required": [
+                    "trigger"
+                  ]
+                },
+                {
+                  "required": [
+                    "review_date"
+                  ]
+                }
+              ],
+              "description": "deferral requires a declared trigger or a review date"
+            }
+          },
+          {
+            "if": {
+              "properties": {
+                "disposition": {
+                  "const": "transferred"
+                }
+              },
+              "required": [
+                "disposition"
+              ]
+            },
+            "then": {
+              "required": [
+                "receiver",
+                "transfer_record"
+              ],
+              "description": "transfer requires a named receiver and a transfer record"
+            }
+          },
+          {
+            "if": {
+              "properties": {
+                "disposition": {
+                  "const": "owner-assigned"
+                }
+              },
+              "required": [
+                "disposition"
+              ]
+            },
+            "then": {
+              "required": [
+                "owner",
+                "acceptance_state"
+              ],
+              "description": "assignment requires a named owner and the owner's acceptance state"
+            }
+          },
+          {
+            "if": {
+              "properties": {
+                "disposition": {
+                  "const": "risk-accepted"
+                }
+              },
+              "required": [
+                "disposition"
+              ]
+            },
+            "then": {
+              "required": [
+                "risk_owner",
+                "rationale",
+                "scope",
+                "review_trigger"
+              ],
+              "description": "risk acceptance requires an owner of the risk, a rationale, a bounded scope and a review trigger"
+            }
+          },
+          {
+            "if": {
+              "properties": {
+                "disposition": {
+                  "const": "validated-resolved"
+                }
+              },
+              "required": [
+                "disposition"
+              ]
+            },
+            "then": {
+              "anyOf": [
+                {
+                  "required": [
+                    "evidence_refs"
+                  ],
+                  "properties": {
+                    "evidence_refs": {
+                      "type": "array",
+                      "minItems": 1
+                    }
+                  }
+                },
+                {
+                  "required": [
+                    "verdict_refs"
+                  ],
+                  "properties": {
+                    "verdict_refs": {
+                      "type": "array",
+                      "minItems": 1
+                    }
+                  }
+                }
+              ],
+              "description": "resolution requires evidence or verdict references; 'done' is not a disposition"
+            }
+          }
+        ],
+        "properties": {
+          "burden_id": {
+            "type": "string",
+            "minLength": 1
+          },
+          "description": {
+            "type": "string",
+            "minLength": 1
+          },
+          "disposition": {
+            "enum": [
+              "unresolved",
+              "deferred",
+              "transferred",
+              "owner-assigned",
+              "risk-accepted",
+              "validated-resolved"
+            ]
+          },
+          "owner": {
+            "type": [
+              "string",
+              "null"
+            ],
+            "minLength": 1,
+            "description": "traceable ownership for transferred/owner-assigned"
+          },
+          "acceptance_state": {
+            "enum": [
+              "accepted",
+              "declined",
+              "pending"
+            ],
+            "description": "whether the named owner has accepted the assignment"
+          },
+          "trigger": {
+            "type": [
+              "string",
+              "null"
+            ],
+            "minLength": 1,
+            "description": "declared later trigger for deferred"
+          },
+          "review_date": {
+            "type": [
+              "string",
+              "null"
+            ],
+            "minLength": 1,
+            "description": "declared review date for deferred"
+          },
+          "responsible_queue": {
+            "type": [
+              "string",
+              "null"
+            ],
+            "minLength": 1,
+            "description": "where an unresolved burden actually sits"
+          },
+          "next_review_condition": {
+            "type": [
+              "string",
+              "null"
+            ],
+            "minLength": 1,
+            "description": "the condition under which an unresolved burden is looked at again"
+          },
+          "receiver": {
+            "type": [
+              "string",
+              "null"
+            ],
+            "minLength": 1,
+            "description": "the party a transferred burden was transferred TO"
+          },
+          "transfer_record": {
+            "type": [
+              "string",
+              "null"
+            ],
+            "minLength": 1,
+            "description": "the record evidencing the transfer"
+          },
+          "risk_owner": {
+            "type": [
+              "string",
+              "null"
+            ],
+            "minLength": 1,
+            "description": "who owns the accepted risk"
+          },
+          "rationale": {
+            "type": [
+              "string",
+              "null"
+            ],
+            "minLength": 1,
+            "description": "why the risk is acceptable"
+          },
+          "scope": {
+            "type": [
+              "string",
+              "null"
+            ],
+            "minLength": 1,
+            "description": "the bounded scope over which the risk is accepted"
+          },
+          "review_trigger": {
+            "type": [
+              "string",
+              "null"
+            ],
+            "minLength": 1,
+            "description": "what forces the acceptance to be revisited"
+          },
+          "risk_record": {
+            "type": [
+              "string",
+              "null"
+            ],
+            "minLength": 1,
+            "description": "recorded accepted risk for risk-accepted"
+          },
           "evidence_refs": {
-           "type": "array",
-           "minItems": 1
-          }
-         }
-        },
-        {
-         "required": [
-          "verdict_refs"
-         ],
-         "properties": {
+            "type": "array",
+            "minItems": 0,
+            "uniqueItems": true,
+            "items": {
+              "type": "string",
+              "minLength": 1
+            }
+          },
           "verdict_refs": {
-           "type": "array",
-           "minItems": 1
+            "type": "array",
+            "minItems": 0,
+            "uniqueItems": true,
+            "items": {
+              "type": "string",
+              "minLength": 1
+            }
           }
-         }
+        },
+        "additionalProperties": false
+      }
+    },
+    "closure_claim": {
+      "type": [
+        "object",
+        "null"
+      ],
+      "description": "well-formed only when every burden's disposition admits it (Definition 13)",
+      "required": [
+        "level",
+        "asserted_by"
+      ],
+      "properties": {
+        "level": {
+          "type": "string",
+          "minLength": 1
+        },
+        "asserted_by": {
+          "type": "string",
+          "minLength": 1
         }
-       ],
-       "description": "resolution requires evidence or verdict references; 'done' is not a disposition"
-      }
-     }
-    ],
-    "properties": {
-     "burden_id": {
-      "type": "string",
-      "minLength": 1
-     },
-     "description": {
-      "type": "string",
-      "minLength": 1
-     },
-     "disposition": {
-      "enum": [
-       "unresolved",
-       "deferred",
-       "transferred",
-       "owner-assigned",
-       "risk-accepted",
-       "validated-resolved"
-      ]
-     },
-     "owner": {
-      "type": [
-       "string",
-       "null"
-      ],
-      "minLength": 1,
-      "description": "traceable ownership for transferred/owner-assigned"
-     },
-     "acceptance_state": {
-      "enum": [
-       "accepted",
-       "declined",
-       "pending"
-      ],
-      "description": "whether the named owner has accepted the assignment"
-     },
-     "trigger": {
-      "type": [
-       "string",
-       "null"
-      ],
-      "minLength": 1,
-      "description": "declared later trigger for deferred"
-     },
-     "review_date": {
-      "type": [
-       "string",
-       "null"
-      ],
-      "minLength": 1,
-      "description": "declared review date for deferred"
-     },
-     "responsible_queue": {
-      "type": [
-       "string",
-       "null"
-      ],
-      "minLength": 1,
-      "description": "where an unresolved burden actually sits"
-     },
-     "next_review_condition": {
-      "type": [
-       "string",
-       "null"
-      ],
-      "minLength": 1,
-      "description": "the condition under which an unresolved burden is looked at again"
-     },
-     "receiver": {
-      "type": [
-       "string",
-       "null"
-      ],
-      "minLength": 1,
-      "description": "the party a transferred burden was transferred TO"
-     },
-     "transfer_record": {
-      "type": [
-       "string",
-       "null"
-      ],
-      "minLength": 1,
-      "description": "the record evidencing the transfer"
-     },
-     "risk_owner": {
-      "type": [
-       "string",
-       "null"
-      ],
-      "minLength": 1,
-      "description": "who owns the accepted risk"
-     },
-     "rationale": {
-      "type": [
-       "string",
-       "null"
-      ],
-      "minLength": 1,
-      "description": "why the risk is acceptable"
-     },
-     "scope": {
-      "type": [
-       "string",
-       "null"
-      ],
-      "minLength": 1,
-      "description": "the bounded scope over which the risk is accepted"
-     },
-     "review_trigger": {
-      "type": [
-       "string",
-       "null"
-      ],
-      "minLength": 1,
-      "description": "what forces the acceptance to be revisited"
-     },
-     "risk_record": {
-      "type": [
-       "string",
-       "null"
-      ],
-      "minLength": 1,
-      "description": "recorded accepted risk for risk-accepted"
-     },
-     "evidence_refs": {
-      "type": "array",
-      "minItems": 0,
-      "uniqueItems": true,
-      "items": {
-       "type": "string",
-       "minLength": 1
-      }
-     },
-     "verdict_refs": {
-      "type": "array",
-      "minItems": 0,
-      "uniqueItems": true,
-      "items": {
-       "type": "string",
-       "minLength": 1
-      }
-     }
-    },
-    "additionalProperties": false
-   }
-  },
-  "closure_claim": {
-   "type": [
-    "object",
-    "null"
-   ],
-   "description": "well-formed only when every burden's disposition admits it (Definition 13)",
-   "required": [
-    "level",
-    "asserted_by"
-   ],
-   "properties": {
-    "level": {
-     "type": "string",
-     "minLength": 1
-    },
-    "asserted_by": {
-     "type": "string",
-     "minLength": 1
+      },
+      "additionalProperties": false
     }
-   },
-   "additionalProperties": false
-  }
- },
- "additionalProperties": false
+  },
+  "additionalProperties": false
 }

@@ -1,5 +1,14 @@
 # R4 unavoidable owner-only actions
 
+> **HISTORICAL SNAPSHOT — SUPERSEDED (dated notice, 2026-07-20, R5 / Decision 0016; body below preserved verbatim).**
+> Item 7 was **discharged**: the owner commissioned the fresh-session review
+> (`docs/project-closure/r4-fresh-fable-review/FABLE-REVIEW-SIGNOFF.md`), and PR #3
+> was merged through protected CI under that owner instruction. Item 7 is **not a
+> current owner burden**. The current owner-only burden set is the six-item list in
+> `docs/current-state.yaml` (`authored.owner_only_burdens`) and `OPEN-DECISIONS.md`;
+> this file's "must equal current state" sentence described the R4 candidate moment
+> and no longer binds. Classification: `docs/project-closure/HISTORICAL-STATUS-INDEX.yaml`.
+
 **CANDIDATE PASS — REQUIRES INDEPENDENT REVIEW.** This list must equal `authored.owner_only_burdens` in [`../../current-state.yaml`](../../current-state.yaml) and is machine-checked (`scripts/validate_current_state.py`). Ordinary research, sourcing, schema, editorial, build, and CI work never appears here.
 
 1. **Choose a legal license.**

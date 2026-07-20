@@ -1,0 +1,24 @@
+{
+  "record": "R5 final merged-state record (Decision 0016)",
+  "provisional": true,
+  "note": "Finalized from live remote facts in a follow-up protected PR after the R5 merge; claims nothing while provisional=true.",
+  "r4_merge_verified": {
+    "pr": 3,
+    "final_pr_head": "e8dae7d2f842ee7b64c8d43930c31277e1dfe7c3",
+    "merge_commit": "21d8a8dd18acc058aaf18dd403a91ae38ae3adfb",
+    "merged_at": "2026-07-20T17:17:15Z",
+    "main_actions_run": 29763093416,
+    "main_actions_conclusion": "success",
+    "r5_fresh_clone_reverification": "26/26 steps, 0 failures, clean tree"
+  },
+  "r5_merge": {
+    "branch": "closure/r5-final-public-state-evidence-boundary",
+    "pr": null,
+    "final_pr_head": null,
+    "merge_commit": null,
+    "actions_run": null,
+    "actions_conclusion": null,
+    "post_merge_fresh_clone": null,
+    "no_force_no_rewrite": null
+  }
+}

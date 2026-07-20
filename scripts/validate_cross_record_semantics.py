@@ -722,6 +722,34 @@ def collect_issues(parts):
                                   "padded %s) — ReqReason_q is derived, never chosen after "
                                   "the outcome" % (vid, cid, omitted, padded))
 
+            # R5 bounded claim-shape hardening (audit M4; the RequiredReasonBy
+            # interface itself is unchanged and remains a bounded governed
+            # instance). Three declaration escape hatches are closed:
+            if lc is not None:
+                # (a) audit-ready claims must declare claim_type explicitly —
+                # the "placement" default is not available at audit-ready strength
+                if (ep or {}).get("record_mode") == "audit-ready" and "claim_type" not in lc:
+                    issues.append("%s: claim %s of an audit-ready record declares no "
+                                  "explicit claim_type — the placement default is not "
+                                  "available at audit-ready strength (R5)" % (vid, cid))
+                # (b) currency exemption needs a recorded rationale and a
+                # fixed-record/provenance scope
+                if bool(lc.get("currency_exempt", False)):
+                    if not str(lc.get("currency_exempt_reason", "")).strip():
+                        issues.append("%s: claim %s sets currency_exempt without a "
+                                      "recorded currency_exempt_reason (R5)" % (vid, cid))
+                    if lc.get("currency_exempt_scope") not in ("fixed-record", "provenance"):
+                        issues.append("%s: claim %s sets currency_exempt without a "
+                                      "fixed-record/provenance currency_exempt_scope (R5)"
+                                      % (vid, cid))
+                # (c) a claim cannot silently disable a robustness obligation the
+                # episode's analysis/governance/risk class imposes
+                if "ROBUST_NEIGHBORHOOD" in req and lc.get("robustness_obligation") is False:
+                    issues.append("%s: claim %s declares robustness_obligation false while "
+                                  "the episode owes ROBUST_NEIGHBORHOOD — a claim cannot "
+                                  "silently disable an imposed robustness obligation (R5)"
+                                  % (vid, cid))
+
         # RelSpec: pre-outcome declaration
         result_times = [t for t in (idx.get("decision_time"),
                                     _time_of(ep) if ep is not None else None) if t]
