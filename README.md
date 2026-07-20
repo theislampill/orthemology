@@ -41,7 +41,7 @@ The final assertion ("this pillar is orthogonal") is a **placement claim** judge
 - **No empirical experiment has validated the framework.** Every designed study is READY TO RUN, NOT RUN; deterministic fixtures and validators check consistency only. The internal records that motivated the design are private and not independently auditable; no public claim rests on them.
 - **The coined vocabulary (orthemma/ortheme/metaortheme/metaorthemma/orthing) is candidate terminology**, gated on a designed-but-unrun comparative benchmark; every document can be read with ordinary-language substitutes.
 - **The companion theological/metaphysical papers are complete drafts, deliberately separated** from the main manuscript: philosophical conclusions are conditional on labeled premises, creed-internal material is explicitly Atharī-school-labeled, and no engineering evidence supports any metaphysical claim (absolute firewall).
-- **Related-work claims are cited with per-claim verification statuses** ([`docs/sourcing/SOURCING-LEDGER.md`](docs/sourcing/SOURCING-LEDGER.md)); statuses are honest about what was and was not re-fetched.
+- **Related-work claims are cited with per-claim verification statuses** — current state starts at [`docs/sourcing/CURRENT-SOURCING-LEDGER.md`](docs/sourcing/CURRENT-SOURCING-LEDGER.md) (Decision 0019; R2 ledgers are banners-marked historical baselines); statuses are honest about what was and was not re-fetched.
 
 ## Citing
 

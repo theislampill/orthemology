@@ -93,3 +93,23 @@ The Ashʿarī and Māturīdī schools affirm — against the Muʿtazilah, and to
 | No engineering result supports any row of this table | Firewall (absolute) |
 
 Reason, at its strongest here, removes alleged impossibilities and exhibits presuppositions. It does not recite. What the Qurʾān is — Allah's Word, uncreated, "and if anyone of the polytheists seeks your protection, grant it, that he may hear the Word of Allah" (9:6) — is known from revelation, held as creed, and articulated by this school in the distinctions this paper has tried to keep exact. (*Closing; school-internal.*)
+
+---
+
+## References
+
+Sources actually cited in this paper. Bibliographic records live in [`references/orthemology.bib`](../references/orthemology.bib). **Per-claim evidence-access statuses are NOT restated here** — they live in [`references/source-status.yaml`](../references/source-status.yaml) rows `ATH-1`…`ATH-7` and the sourcing surfaces (start at [`docs/sourcing/CURRENT-SOURCING-LEDGER.md`](../docs/sourcing/CURRENT-SOURCING-LEDGER.md)); a work's presence in this list asserts bibliographic identity only, never a wording-access claim. Classical works are cited with the school-internal loci given inline; several page loci are edition-dependent (research residual RR-1).
+
+- <!-- ref:quran --> *al-Qurʾān al-Karīm* (loci per [`references/quran-loci.yaml`](../references/quran-loci.yaml), primary-verified).
+- <!-- ref:muslim-sahih --> Muslim ibn al-Ḥajjāj. *Ṣaḥīḥ Muslim* (ḥadīth 2708).
+- <!-- ref:bukhari-khalq --> al-Bukhārī, Muḥammad ibn Ismāʿīl. *Khalq Afʿāl al-ʿIbād*.
+- <!-- ref:ibntaymiyya-majmu --> Ibn Taymiyyah, Aḥmad. *Majmūʿ al-Fatāwā* (vol. 12; the words/voice formula is carried at registry row `ATH-3`'s recorded strength).
+- <!-- ref:ibnuthaymin-lumah --> Ibn ʿUthaymīn, Muḥammad ibn Ṣāliḥ. *Sharḥ Lumʿat al-Iʿtiqād*.
+- <!-- ref:ajurri-sharia --> al-Ājurrī, Muḥammad ibn al-Ḥusayn. *ash-Sharīʿah*.
+- <!-- ref:hanbal-mihna --> Ḥanbal ibn Isḥāq. *Dhikr Miḥnat al-Imām Aḥmad ibn Ḥanbal*.
+- <!-- ref:darimi-radd --> ad-Dārimī, ʿUthmān ibn Saʿīd. *ar-Radd ʿalā al-Jahmiyyah*.
+- <!-- ref:lajnah-daimah --> Permanent Committee for Scholarly Research and Iftāʾ. *Fatāwā al-Lajnah ad-Dāʾimah* (vol. 3).
+- <!-- ref:ibnabihatim-adab --> Ibn Abī Ḥātim ar-Rāzī. *Ādāb ash-Shāfiʿī wa-Manāqibuh*.
+- <!-- ref:hoover2004perpetual --> Hoover, Jon (2004). "Perpetual Creativity in the Perfection of God: Ibn Taymiyya's Hadith Commentary on God's Creation of this World." *Journal of Islamic Studies* 15(3).
+- <!-- ref:cooperson2000biography --> Cooperson, Michael (2000). *Classical Arabic Biography: The Heirs of the Prophets in the Age of al-Maʾmūn*. Cambridge University Press.
+- <!-- ref:melchert2006ahmad --> Melchert, Christopher (2006). *Ahmad ibn Hanbal*. Oneworld.

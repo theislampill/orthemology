@@ -76,9 +76,9 @@ authored:
     pdfs: reproducibly built and visually inspected draft artifacts
     legal_publication: open on license, identity, peer review, and external submission
 derived:
-  source_tree_digest: 9991ba1f2e871b6e97373e690ac7651bfb98083e07bd5df958045c8f81a94dad
+  source_tree_digest: a63c66fba7428ecd463b10145a555691e0698877c66f83b31dcc7003609b37c8
   source_tree_digest_policy: docs/project-state-inputs.yaml
-  tracked_files: 351
+  tracked_files: 356
   decision_ids:
   - '0001'
   - '0002'
@@ -98,7 +98,8 @@ derived:
   - '0016'
   - '0017'
   - 0018
-  decision_count: 18
+  - 0019
+  decision_count: 19
   schemas:
   - analysis.schema.json
   - claim-ledger.schema.json
@@ -118,6 +119,7 @@ derived:
   - derive_reqpath.py
   - validate_claim_reasoning_paths.py
   - validate_claim_sources.py
+  - validate_companion_references.py
   - validate_cross_document_consistency.py
   - validate_cross_record_semantics.py
   - validate_current_state.py
@@ -134,10 +136,11 @@ derived:
   - validate_review_state.py
   - validate_schemas.py
   - validate_source_status.py
+  - validate_sourcing_state.py
   - validate_state_convergence.py
   - validate_type_token_semantics.py
   - validate_verdict_semantics.py
-  validator_count: 23
+  validator_count: 25
   fixture_counts:
     verdict: 7
     reason: 8

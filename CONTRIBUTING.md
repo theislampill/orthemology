@@ -8,7 +8,7 @@ Five kinds of claim stay separate everywhere: conceptual framework, formal defin
 
 ## Citation requirements
 
-Every load-bearing related-work or scholarly claim needs a row in `docs/sourcing/SOURCING-LEDGER.md` (or the companion ledger) with a source, stable identifier, and honest verification status (`WEB-VERIFIED` / `RECORD-CONFIRMED` / `VIA-COMPILATION` / `UNVERIFIED`). Do not manufacture citations for fields the text merely names; weaken the claim instead. CI checks ledger completeness (field presence), never live URLs.
+Every load-bearing related-work or scholarly claim needs a row in the current sourcing surface for its claim area (start at `docs/sourcing/CURRENT-SOURCING-LEDGER.md`, Decision 0019) with a source, stable identifier, and honest verification status (`WEB-VERIFIED` / `RECORD-CONFIRMED` / `VIA-COMPILATION` / `UNVERIFIED`). Do not manufacture citations for fields the text merely names; weaken the claim instead. CI checks ledger completeness (field presence), never live URLs.
 
 ## No empirical overclaiming
 

@@ -954,7 +954,7 @@ All public materials of this project — the formal core, this manuscript, the m
 - Wald, A. (1947). *Sequential Analysis.* John Wiley & Sons.
 - Wetzel, L. (2018). Types and Tokens. In E. N. Zalta (Ed.), *The Stanford Encyclopedia of Philosophy.* https://plato.stanford.edu/entries/types-tokens/
 
-Machine-readable database with per-claim verification status: `references/orthemology.bib` and `docs/sourcing/SOURCING-LEDGER.md`.
+Machine-readable database with per-claim verification status: `references/orthemology.bib`; current sourcing state starts at `docs/sourcing/CURRENT-SOURCING-LEDGER.md` (Decision 0019).
 
 ---
 
