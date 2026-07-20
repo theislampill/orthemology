@@ -13,7 +13,7 @@ packets:
   purpose: false-closure / selective-prediction benchmark (manuscript 13.1) — machinery incremental value against a matched baseline
   readiness_state: READY_TO_RUN
   registration_state: PREREGISTRATION_READY
-  freeze_hash: 6d663e5bf6bdeba3ee66adc14a40d912490d67865d9f422e9ed0d5a86679f7e7
+  freeze_hash: 59c5427b2551a1446e10e5aadb24ed2fcb749e7d072335ff14fe1dfec939737b
   required_remaining_gates: [owner execution authorization and spend, external preregistration (owner/external act)]
   run_exists: false
   licensed: nothing — no result, no adoption, no empirical claim

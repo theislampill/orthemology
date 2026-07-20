@@ -1,0 +1,3 @@
+# R6 Review A — readiness / false-closure attacks
+
+Surfaced model: `claude-fable-5`. Five live attacks, each required to fail a validator, and each did: (A1) a required FCSP-1 file removed — DEFEATED (file-contract check); (A2) an unqualified "preregistered" claim added to STATUS — DEFEATED (registration-language guard); (A3) TERM-P0-V2 promoted to READY_TO_RUN with the matching review still pending — DEFEATED (gate rule); (A4) a `"synthetic_smoke": false` run record planted under experiments/ — DEFEATED (no-run guard); (A5) a packet source file tampered post-freeze — DEFEATED (freeze recompute). Tree restored clean after each. No blocking findings.
