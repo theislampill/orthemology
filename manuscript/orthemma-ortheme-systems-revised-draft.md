@@ -17,9 +17,9 @@ value-of-information stopping, risk registers, ticket state machines, provenance
 single facet but the union, the placement lifecycle that connects the facets, and one further object — the reified handling *episode* carrying a joint verdict vector that separates
 result correctness from pathway adequacy and robustness on a single auditable record. The formal core is extended by six additions: versioned identity with labeled lineage;
 analysis/actor/time indexing; typed, scoped, expiring evidence channels; factorized candidate structure with route composition; per-burden closure status; and episode reification.
-The verdict remains conditional: nothing here is experimentally validated. The design was motivated by an internal casebook and one internal longitudinal engineering record,
-neither of which is independently auditable or published; they function as design motivation, not validation. The coined vocabulary must beat matched established terminology on a
-preregistered benchmark before any term is adopted.
+The verdict remains conditional: nothing here is experimentally validated. The design was motivated by private internal engineering records that are not independently
+auditable or published; they function as non-evidential design provenance, and no public claim rests on them. No public observational dataset accompanies the paper. The coined
+vocabulary must beat matched established terminology on a preregistered benchmark before any term is adopted.
 
 **Keywords:** classification lifecycle; type–token distinction; analysis-relative ground truth; auditable episodes; process reliabilism; selective prediction; provenance; pathway adequacy; metamorphic testing; governance.
 
@@ -61,21 +61,23 @@ result, and revises its orthemes and governing rules when recurring error shows 
 We concede up front that each facet of this architecture has an established neighbor. Plural profiles are multi-label and hierarchical classification. The maintained candidate set
 is a POMDP belief state. Abstention and escalation are the reject option and selective prediction. Deciding when to stop investigating is value-of-information stopping. Residual
 obligations are risk registers; placement statuses are ticket state machines; lineage is provenance; correct-result-through-defective-process is process reliabilism; perturbation
-probes are metamorphic testing. None of these facets is claimed as new. What is claimed is threefold: (i) the **union** — no one of those frameworks supplies the others, and no
-practice in our (internal, non-auditable) observational record assembled all of them by default; (ii) the **lifecycle** — the explicit connection of disclosure, evidence, representation, routing, validation, closure, and
+probes are metamorphic testing. None of these facets is claimed as new. What is proposed is threefold: (i) the **union** — no one of those frameworks, in its standard individual form, supplies the others;
+(ii) the **lifecycle** — the explicit connection of disclosure, evidence, representation, routing, validation, closure, and
 revision to the placement status of a single concrete occurrence and its successors; and (iii) the **joint episode-verdict object** — a reified handling episode on which result
 correctness, evidential support, truth-connection, rule adequacy, executor fidelity, route safety, closure truthfulness, and robustness are simultaneously definable and separately
-adjudicable.
+adjudicable. All three are an integration proposal with an accompanying utility hypothesis (Section 13), not an established result.
 
 ### 1.4 The redundancy critique, answered inline
 
 The strongest objection is the redundancy critique: *a composite of POMDP belief states, the reject option, multi-label classification, value-of-information stopping, a risk
 register, and a ticket state machine would act identically; the residual is a glossary.* Our answer, developed in Section 12 and maintained throughout, is: the critique is correct
-about each facet taken separately, and it is correct that the type-individuation mathematics is inherited. It fails at exactly one point. The six-framework composite it invokes is
-a union that no member framework names and that no practice in our (internal, non-auditable) observational record assembled by default, and even the composite has no object on which a joint verdict about result and pathway can be
-recorded — the composite agent can be right for the wrong reasons and possess no record on which that fact is expressible. The one longitudinal engineering case in our record
-(Section 11.4) shows a maximally disciplined, lean-vocabulary operation *discovering and building*, at the cost of roughly fifty governed stops, exactly the machinery the composite
-is supposed to already have. That is corroboration, not validation — it is one case, from an internal record that is not independently auditable — but it is a reason to think the union is not free.
+about each facet taken separately, and it is correct that the type-individuation mathematics is inherited. What remains is narrower than impossibility, and still substantive. The
+six-framework composite the critique invokes is a union that no member framework names: in their standard individual forms, the neighbors do not by themselves supply one shared,
+occurrence-centered episode/verdict record on which result correctness and pathway adequacy are jointly statable. A custom composite certainly *could* be extended with such a
+record — this paper's proposal just **is** that extension, stated once and generically: a common lifecycle, a shared machine-checkable record contract, and the hypothesis that
+standardizing the integration improves auditability and practice. That hypothesis is adjudicated by the unrun benchmark of Section 13, not by this paper's argument, and no
+observational claim about how costly the union is to assemble in practice is made here — the synthetic worked example of Section 11.4 illustrates the claimed integration burden
+without being evidence for it.
 
 ### 1.5 Contributions and claim levels
 
@@ -172,8 +174,8 @@ successor `m′ = succ(m, a)` is corrected.)
 **Transport principle.** Placement validity is bound to `(κ, v)`. A placement or validation established for `(κ, v)` does **not** transport across a successor edge to `(κ, v′)` —
 or to a different `κ` behind the same observation — without a lineage argument and, where the edge could have changed the placed property, fresh evidence. This makes "right
 finding, wrong copy" a well-formed, detectable error rather than an invisible one: the finding was valid, and it is attached to an occurrence that no longer exists in the relevant
-version. Observed instances in the casebook include a reused inode treated as the same file, verdicts silently carried across a tree substitution, ordinal position mistaken for
-identity, and a stale checkout evaluated as the current one.
+version. Illustrative failure modes of this class — of the kind that motivated the design, stated here generically — include a reused storage slot treated as the same file,
+verdicts silently carried across a tree substitution, ordinal position mistaken for identity, and a stale checkout evaluated as the current one.
 
 ### 2.6 Analysis, actor, and time indices (formal addition 2)
 
@@ -240,7 +242,7 @@ case supplies no semantics and no legitimate ends. It may be reinstated if forma
 ## 3. Aliasing and Identity Uncertainty
 
 The type–token framing exposes three related but distinct uncertainty patterns. The prior manuscript distinguished the first two; this revision adds the third as its own column,
-because casebook evidence shows it is neither of the others.
+because it is a distinct pattern in kind — conflatable with, but reducible to, neither of the others.
 
 | | Inter-orthemma aliasing | Intra-orthemma uncertainty | Identity uncertainty |
 |---|---|---|---|
@@ -310,7 +312,7 @@ Each family carries an **exclusivity marking**: elements are flagged as *alterna
 components* (several may obtain together — this one occurrence has an identity defect *and* a quantity defect). Collapsing co-holding components into alternatives forces a false
 choice; the reverse collapse hides a disjunction. Optional weights over alternatives are permitted but never required; a family is consequentially open when it contains more than
 one element whose members would license non-equivalent routes. An open family must carry its **evidence-to-resolve clause**: which channel, in scope, would discriminate the
-alternatives. (A list of possibilities with no path to adjudication was judged a defect in the observational record, and the definition adopts that norm.)
+alternatives. (A list of possibilities with no path to adjudication is treated as a definitional defect here — the norm this definition adopts.)
 
 ### 5.2 The profile space and partial profiles
 
@@ -469,7 +471,7 @@ legitimate exactly when every required burden is validated-resolved, or explicit
 supports the declared level of completion. Safe closure is reopenable by record; false closure accrues silent exposure.
 
 *Remark (demotion).* The prior draft's "orthemic debt" register is demoted to a speculative instrument: it remains unvalidated against ordinary defect counts, hazard registers, and
-technical-debt metrics, and nothing in the observational record supports it. It is no longer part of the core proposal.
+technical-debt metrics, and no public evidence supports it. It is no longer part of the core proposal.
 
 ### 7.4 The claim ledger and required success surfaces
 
@@ -479,8 +481,8 @@ explicit non-claims (what is *not* being asserted, recorded to block later infla
 
 The **required success surface** is the declared locus where the claim's success must be observable: a repair claim's success surface is the live behaviour of the current version,
 not the repository diff; a migration claim's surface is the serving system, not the migration log. A claim verified anywhere other than its declared surface is at best provisional.
-(The observational record's "repo-green, surface-broken" case is the canonical instance: every check the repository could express passed, and the user-visible surface was broken —
-the claim had been verified off-surface.)
+(The canonical synthetic instance: every check a repository can express passes while the user-visible surface is broken —
+the claim was verified off-surface.)
 
 ### 7.5 Generalized ANDON: stop on risk, not on surprise (retained)
 
@@ -511,8 +513,8 @@ is governed by:
   selector where the two editions disagree. Only those episodes' evidence status is downgraded from validated to provisional pending re-check. Blanket reopening of everything that
   ever ran under the old edition is rejected as unscoped;
 - **a second-order variant** — when a *pattern across occurrences* (not any single case) shows the state space itself was under-specified, revision enters an enumeration mode: the
-  alternatives are listed exhaustively against the record rather than patched one neighbor at a time. The observational record contains one such tranche, where serial
-  one-neighbor-per-review revision was escalated to enumeration after repeated single-case patches failed to converge.
+  alternatives are listed exhaustively against the record rather than patched one neighbor at a time. The synthetic worked example of Section 11.4 illustrates such a tranche:
+  serial one-neighbor-per-review revision escalating to enumeration after repeated single-case patches fail to converge.
 
 ---
 
@@ -745,25 +747,25 @@ become route-sufficient — altering urgency and routing — while the cause axi
 symptoms do not establish shared etiology (an evidence-grade configuration), and orthemic accuracy is not clinical or ethical goodness: a system can place correctly and route
 unjustly. The example is retained in this abstract form only; no clinical detail is load-bearing anywhere in the paper.
 
-### 11.4 Case study: the launch pipeline
+### 11.4 Worked example: a launch pipeline (synthetic composite)
 
-> **Case study — single-project longitudinal record; corroborating, not validating.**
+> **Synthetic composite — illustrative only; not evidence.**
 >
-> One software launch pipeline (internally, "Branch 11") was tracked longitudinally across roughly fifty governed stops in a single, maximally disciplined, lean-vocabulary
-> engineering operation. The record is transcript-verified, single-owner, and single-project; it is reported here as one occurrence chain exhibiting the paper's distinctions, and
-> it carries no cross-domain weight.
+> This worked example is a synthetic composite assembled from the generic failure classes the paper's public schemas and fixtures already represent (identity, lineage-transport,
+> warrant-binding, validator-scope, closure, and revision defects). It is patterned after the kind of engineering history that motivated the design, but it reports no auditable
+> record, carries no observational weight, and is cited nowhere in this paper as support for any claim.
 >
-> **Identity.** A storage slot was reused and the new occupant treated as the same file (identity key confused with location); elsewhere an ordinal position was mistaken for an
-> identity key. Both are `C^id` failures — identity uncertainty misfiled as confidence about the wrong object. **Admission.** A case was admitted for handling on the basis of a
-> stale checkout: evidence valid for `(κ, v)` was applied to `(κ, v′)` — a lineage-transport violation, not a wrong judgment. **Authority-binding.** An authorization was present
-> but not bound to the parameters actually used: the warrant's scope did not cover the executed action — a warrant-gate failure that no evidence channel could have expressed,
-> because authorization is not evidence. **Settlement.** A validator returned green while its scope did not intersect the claim being settled (hash-valid read as semantically
-> valid): a mis-scoped pass, detected only because scopes were by then explicit. **Closure.** A terminal state was declared while residuals remained owner-gated: the completion
-> claim collapsed owner-assigned burdens into "resolved" — the false-closure type error, caught by the per-burden ledger. **Revision.** After repeated single-neighbor patches
-> failed to converge, revision escalated to the enumeration mode of Section 7.6 — the second-order variant observed once, in this record.
+> **Identity.** A storage slot is reused and the new occupant treated as the same file (identity key confused with location); elsewhere an ordinal position is mistaken for an
+> identity key. Both are `C^id` failures — identity uncertainty misfiled as confidence about the wrong object. **Admission.** A case is admitted for handling on the basis of a
+> stale checkout: evidence valid for `(κ, v)` is applied to `(κ, v′)` — a lineage-transport violation, not a wrong judgment. **Authority-binding.** An authorization is present
+> but not bound to the parameters actually used: the warrant's scope does not cover the executed action — a warrant-gate failure that no evidence channel could have expressed,
+> because authorization is not evidence. **Settlement.** A validator returns green while its scope does not intersect the claim being settled (hash-valid read as semantically
+> valid): a mis-scoped pass, detectable only where scopes are explicit. **Closure.** A terminal state is declared while residuals remain owner-gated: the completion
+> claim collapses owner-assigned burdens into "resolved" — the false-closure type error, caught by the per-burden ledger. **Revision.** After repeated single-neighbor patches
+> fail to converge, revision escalates to the enumeration mode of Section 7.6.
 >
-> The operation *built* this machinery in response to these failures; it did not have it in advance. That is the sense in which the record corroborates the claim that the
-> six-framework union is not assembled by default — and the full extent of what one case can show.
+> An operation without the union in advance would have to build each piece in response to each failure as this composite depicts. Whether that integration burden is real and
+> common in actual practice is an empirical question reserved for Section 13 — this example illustrates the claim and cannot support it.
 
 ### 11.5 The stale steer (recovered directive without current force)
 
@@ -789,14 +791,15 @@ Established constructs largely theorise the type side, and each facet of the pre
 | Rule adequacy vs outcome testing | assurance practice: tests of controls vs substantive procedures (ISA 330) |
 | Type individuation and safe merger | sufficient statistics (Fisher 1922); causal states (Crutchfield & Young 1989; Shalizi & Crutchfield 2001); bisimulation and MDP state abstraction (Larsen & Skou 1991; Givan, Dean & Greig 2003); automata minimisation (Hopcroft 1971) |
 
-The type-individuation mathematics is inherited outright. The claimed residual is exactly three things. (1) **The union:** no listed framework supplies the others, and the
-observational record shows a disciplined practice assembling the union piecewise at real cost rather than possessing it by default. (2) **The lifecycle:** the explicit,
+The type-individuation mathematics is inherited outright. The proposed residual is exactly three things. (1) **The union:** no listed framework, in its standard individual
+form, supplies the others or names their union. (2) **The lifecycle:** the explicit,
 single-object connection of disclosure, evidence typing, representation, routing, validation, per-burden closure, and governed revision to the placement status of a concrete
 occurrence and its successors. (3) **The joint verdict layer:** process reliabilism names truth-connection for beliefs but has no operational record; provenance systems have
-operational records but no verdict layer; assurance and metamorphic testing each hold one verdict without the joint object. The orthing episode is the one object on which result
-correctness, evidential support, truth-connection, currentness, rule adequacy, policy adequacy, executor fidelity, ex-ante justification, route safety, closure truthfulness, and
-robustness are simultaneously definable — and that integration, not any component, is what remains after the concessions. Whether the integration pays for itself is Section 13's
-question, not this section's claim.
+operational records but no verdict layer; assurance and metamorphic testing each hold one verdict without the joint object. The orthing episode is one standardized object on which
+result correctness, evidential support, truth-connection, currentness, rule adequacy, policy adequacy, executor fidelity, ex-ante justification, route safety, closure
+truthfulness, and robustness are simultaneously definable. A bespoke composite could of course be extended with an equivalent record; the contribution claimed here is to state
+that integration once, generically, with a machine-checkable contract — an integration proposal and a standardization hypothesis, not an impossibility result. Whether the
+integration pays for itself is Section 13's question, not this section's claim.
 
 
 ### 12.1 Sequential latent-variable inference (bounded related work)
@@ -822,8 +825,9 @@ on no theological question.
 
 ## 13. Empirical Program
 
-Three evaluations, kept strictly separate. **Nothing in this paper is experimentally validated.** The current evidence is analytic (the formal coherence of Sections 2–10) plus
-observational (a 33-case cross-project casebook and the single longitudinal case of Section 11.4). The programs below are designed; none has run.
+Three evaluations, kept strictly separate. **Nothing in this paper is experimentally validated.** The current public evidence is exactly this: machine-checked internal agreement
+over the declared definitions, schemas, examples, and adversarial fixtures — which proves no mathematical consistency or completeness and no utility — and **no public
+observational dataset**. The programs below are designed; none has run.
 
 ### 13.1 Headline: the preregistered false-closure / selective-prediction benchmark
 
@@ -858,10 +862,10 @@ the vocabulary. The converse holds too: a vocabulary win would not validate the 
 
 ### 13.4 Evidence status, stated plainly
 
-Analytic: the definitions and separations of Sections 2–10 cohere and the six additions close gaps the prior text named only in words. Observational: the failure patterns the
-machinery addresses are real and recurrent — the casebook's cross-project cases for stale evidence and lineage, validator scope, closure trichotomy, plural profiles, and
-failure-origin confusion; the single longitudinal case for the assembled union. Experimental: none. No stronger claim is made anywhere in this paper, and any sentence read as
-making one should be corrected against this section.
+Machine-checked conformance: the definitions and separations of Sections 2–10 agree under the repository's declared schemas, examples, and adversarial fixtures — internal
+conformance over the declared cases, not a proof of consistency, completeness, or utility. Public observational: **none** — the private records that motivated the design are not
+independently auditable and carry no evidential weight in this paper (Section 17); the existence, recurrence, and base rates of the motivating failure patterns are publicly
+unestablished. Experimental: none. No stronger claim is made anywhere in this paper, and any sentence read as making one should be corrected against this section.
 
 ---
 
@@ -879,7 +883,7 @@ Two facts are recorded without tension. First: **every distinction in this paper
 the distinction it consults, handling episode and pathway verdict. The reader who strikes every coinage loses no content. Second: **paraphrasability does not settle the question**
 — an earlier claim that expressive redundancy of the words was "established analytically" conflated paraphrasability with redundancy and is retracted. "Gettier case" is the
 standing existence proof that a fully paraphrasable coined term can earn permanent keep through compression and coordination. Whether these terms do is exactly what the benchmark
-measures, and no argument in this paper substitutes for it. The distinctions have observational support; the vocabulary has no matched comparative evidence in either direction.
+measures, and no argument in this paper substitutes for it. The distinctions are machine-checked for internal conformance and empirically untested; the vocabulary has no matched comparative evidence in either direction.
 
 ---
 
@@ -899,15 +903,14 @@ untested (fixture E5); and no study yet demonstrates incremental utility of anyt
 
 | Tier | Content | Status |
 |---|---|---|
-| **Analytic** | Formal coherence of the six additions; the split metaortheme normal form; verdict separability; the DAG/composition conditions; the derived multi-actor extensions | Consistency shown by construction (deterministic fixtures); establishes no empirical claim |
-| **Observational, cross-project** | Stale-evidence/lineage failures; validator-scope failures; closure trichotomy; plural profiles; failure-origin confusion (≥2 domains each, with negative controls) | Real and recurrent; base rates unknown |
-| **Observational, single-longitudinal** | The assembled-union claim; enumeration-mode revision; authority-binding | **One case (Branch 11).** Single-project, single-owner, transcript-verified record. Corroborating, not validating; carries no cross-domain weight |
+| **Conceptual/definitional** | The proposed distinctions and typed relationships of Sections 2–10; the split metaortheme normal form; verdict separability; the DAG/composition conditions; the derived multi-actor extensions | Machine-checked internal agreement over the declared definitions, schemas, examples, and adversarial fixtures (deterministic); **not** a proof of mathematical consistency or completeness; establishes no empirical claim |
+| **Public observational** | — | **None currently supplied.** The private records that motivated the design are non-evidential design provenance (Section 17) |
 | **Experimental** | Machinery benefit (13.1); episode-reification delta (13.2); vocabulary utility (13.3) | **None.** All three designed, none run |
 
-Three honesty notes close the paper. *Branch 11 is one case:* fifty governed stops inside one tightly-coupled project are one case, not fifty domains, and every sentence that leans
-on it says so. *Base rates are unknown:* the casebook establishes existence and recurrence of the failure patterns, not their frequency in any population of projects; nothing here
-estimates how often the machinery would matter. *The record is single-owner:* the longitudinal record was produced and curated within one operation by one owner, and independent
-replication of even the observational tier does not yet exist.
+Three honesty notes close the paper. *No public observational dataset exists:* the design-history materials are private and not independently auditable, and they carry no
+evidential weight here — the existence, recurrence, and base rates of the motivating failure patterns are all publicly unestablished. *Deterministic fixtures are not proofs:*
+they demonstrate conformance over the declared cases only. *Nothing has been independently replicated:* no external party has yet examined any tier beyond this public repository
+itself.
 
 ---
 
@@ -915,11 +918,11 @@ replication of even the observational tier does not yet exist.
 
 This paper proposed the orthemma–ortheme system as an integration discipline for the token side of classification and handling work. Its center of gravity is one relation — a concrete occurrence instantiating repeatable operational state-types relative to a declared, versioned analysis — and one further object built on that relation: the orthing episode, an auditable record on which result correctness and pathway adequacy are separately adjudicable. Around these, six formal additions close gaps the prior text could only gesture at: versioned identity with labeled lineage makes "right finding, wrong copy" a statable error; analysis/actor/time indexing makes ground truth explicit and disagreement diagnosable; typed, scoped, expiring evidence makes the green-but-mis-scoped validator visible; factorized candidates with route composition make partial action well-formed; per-burden closure makes false closure a checkable record defect; and episode reification with the registry-normalized verdict vector makes the stopped clock, the justified rare miss, the defective binding, and the stale directive all first-class, machine-checkable cases (fixtures F1–F7).
 
-What the paper deliberately does not claim is as much a result as what it claims. Every facet has a conceded neighbor; the type-individuation mathematics is inherited; the internal records that motivated the design are not independently auditable and validate nothing; the coined vocabulary is fully paraphrasable and strictly benchmark-gated; and the three designed studies — the false-closure benchmark, the episode-reification fixture suite, and the terminology comparison — have not been run. The framework's standing is therefore: analytically coherent (deterministically checked), operationally motivated, empirically unvalidated. The next honest step is not more theory but the execution of Section 13 as preregistered — and the framework has been built so that a negative result would be recordable, on its own terms, as exactly what it is.
+What the paper deliberately does not claim is as much a result as what it claims. Every facet has a conceded neighbor; the type-individuation mathematics is inherited; a bespoke composite could represent the architecture, so the contribution is the standardized integration, not an impossibility claim; the private records that motivated the design are not independently auditable, carry no evidential weight, and validate nothing; the coined vocabulary is fully paraphrasable and strictly benchmark-gated; and the three designed studies — the false-closure benchmark, the episode-reification fixture suite, and the terminology comparison — have not been run. The framework's standing is therefore: internally conformance-checked (deterministic fixtures — not a consistency proof), design-motivated, empirically unvalidated. The next honest step is not more theory but the execution of Section 13 as preregistered — and the framework has been built so that a negative result would be recordable, on its own terms, as exactly what it is.
 
 ## 17. Data and Materials Availability
 
-All public materials of this project — the formal core, this manuscript, the multi-actor note, machine-readable schemas (hardened, with negative and mutation test suites) and worked examples, deterministic fixtures and validators (including the governance-derivation, cross-record-semantics, Qurʾān-locus, type/token, and terminology-matching validators added in R3), the verdict and notation registries with their generated surfaces, decision records, the R3 sourcing ledgers, and the designed (unrun) terminology-evaluation packets — are available in the public repository (`theislampill/orthemology` on GitHub), with a SHA-256 release manifest under `docs/provenance/` and byte-reproducible draft PDFs under `artifacts/`. **Not available:** the internal casebook and the internal longitudinal engineering record referenced as design motivation (Sections 1.4, 11.4, 13.4). They contain private working material, are not rights-cleared for publication, and are therefore not independently auditable; no quantitative claim in this paper rests on them, and they are cited only as motivation. No human-subject data exists; no experiment has been conducted.
+All public materials of this project — the formal core, this manuscript, the multi-actor note, machine-readable schemas (hardened, with negative and mutation test suites) and worked examples, deterministic fixtures and validators (including the governance-derivation, cross-record-semantics, Qurʾān-locus, type/token, and terminology-matching validators added in R3), the verdict and notation registries with their generated surfaces, decision records, the R3 sourcing ledgers, and the designed (unrun) terminology-evaluation packets — are available in the public repository (`theislampill/orthemology` on GitHub), with a SHA-256 release manifest under `docs/provenance/` and byte-reproducible draft PDFs under `artifacts/`. **Not available:** the private internal design-history records (a cross-project defect collection and a single-project longitudinal engineering record) that motivated the framework. They contain private working material, are not rights-cleared for publication, and are therefore not independently auditable; they are non-evidential design provenance — **no claim in this paper rests on them** (Sections 11.4, 13.4, 15.2). **No public observational dataset accompanies this paper.** No human-subject data exists; no experiment has been conducted.
 
 ## References
 

@@ -865,8 +865,10 @@ criteria; single-object metaortheme presentation (C1) remains permitted as
 user-facing shorthand. **Experimental gates:** episode reification's
 practical delta over "audit the validator when suspicious" — fixture E5;
 vocabulary utility of every coined term — the Arm A/B/C benchmark
-(designed, NOT run). **Evidence tier:** formal coherence established
-analytically; operational usefulness of the distinctions has observational
-support; nothing here is experimentally validated. **Provenance:**
+(designed, NOT run). **Evidence tier:** machine-checked internal
+agreement over the declared definitions, schemas, examples, and adversarial
+fixtures — not a proof of mathematical consistency or completeness;
+no public observational dataset exists; operational usefulness is untested;
+nothing here is experimentally validated. **Provenance:**
 `docs/provenance/document-history.md`; this file is the canonical
 integrated body.

@@ -119,7 +119,8 @@ def main():
             t = read("docs/decisions/" + fns[0])
             if "requiring independent review" in t:
                 check("decision %s pairs its historical candidate wording with a "
-                      "review-discharged notice" % did, "review discharged" in t)
+                      "review-discharged notice" % did,
+                      "review discharged" in t or "review-discharged" in t)
 
     # 6. historical index coverage + classifications
     idx = yaml.safe_load(read("docs/project-closure/HISTORICAL-STATUS-INDEX.yaml"))
