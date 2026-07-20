@@ -1,0 +1,32 @@
+{
+  "record": "R7 noetic-application / experiment-validity tie-off \u2014 durable execution state",
+  "session_surfaced_model": "claude-opus-4-8",
+  "session_substitution_observed": true,
+  "historical_attributed_observations_preserved": true,
+  "topology": {
+    "starting_main": "43fee0f519e2f6984fb143c1e621c83382e71ec7",
+    "archive_sha256": "0f4c5dcf43abba0e263fdd460f559f14d1006211717200a5aaaba1ea61c9e95b",
+    "branch": "closure/r7-noetic-application-experiment-validity",
+    "daee_pinned_commit": "c86b3c6673147b8802fe222373a165a37d4d24a8"
+  },
+  "last_completed_action": "All phases complete under Opus 4.8. Branch pushed; DRAFT PR #8 opened; branch CI success (run at 145a43c); fresh-clone 38/38 green + clean tree + R1-R6 history/frozen packets unchanged. NOT merged; main untouched at 43fee0f5.",
+  "tests_run": [
+    {
+      "tree": "fresh clone @ 43fee0f5 (lock venv)",
+      "suite": "validate.yml, 34 steps",
+      "result": "0 failing"
+    }
+  ],
+  "unresolved_findings": [],
+  "next_action": "AWAIT genuine-Fable session or owner: re-verify from clean clone, then ready+merge PR #8 through protection. This Opus session does NOT merge.",
+  "substitution_record": "docs/project-closure/r7/MODEL-SUBSTITUTION-INTERRUPTION-R7.md",
+  "owner_constraints_under_substitute": [
+    "branch/PR only; no merge; no push to main; no ready-for-merge state change",
+    "commit trailers: Co-Authored-By: Claude Opus 4.8",
+    "sequential; no subagents",
+    "deliver R7 as a DRAFT PR for genuine-Fable / owner review and merge"
+  ],
+  "draft_pr": 8,
+  "candidate_head": "145a43c8d85b7b398202e481993f18c2fcf078c1",
+  "merged": false
+}

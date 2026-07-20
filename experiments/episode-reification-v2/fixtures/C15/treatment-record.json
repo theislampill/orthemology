@@ -1,0 +1,75 @@
+{
+  "schema": "orthemology-er2-treatment-record-v1",
+  "case": "C15",
+  "note": "structured rendering of the identical fact atoms; links relate records, they do not conclude",
+  "sections": {
+    "identity": [
+      {
+        "fact_id": "F01",
+        "text": "Case subject: firmware image FW-848, version v1, under release check."
+      },
+      {
+        "fact_id": "F02",
+        "text": "The case was opened on 2026-05-14."
+      }
+    ],
+    "procedure": [
+      {
+        "fact_id": "F03",
+        "text": "The job card lists acceptance standard edition AS-2019 for this case."
+      },
+      {
+        "fact_id": "F04",
+        "text": "The governing contract row for this case class lists acceptance standard edition AS-2024."
+      }
+    ],
+    "execution": [
+      {
+        "fact_id": "F05",
+        "text": "The inspector applied the edition listed on the job card exactly; the step log matches it."
+      },
+      {
+        "fact_id": "F06",
+        "text": "Under the applied edition the case PASSES; the margin sheet notes 0.2 units to the limit of the contract-listed edition."
+      }
+    ],
+    "obligations": [
+      {
+        "fact_id": "F07",
+        "text": "The draft completion statement records acceptance with no note about editions."
+      }
+    ]
+  },
+  "links": [
+    {
+      "from": "F02",
+      "relation": "same-case",
+      "to": "F01"
+    },
+    {
+      "from": "F03",
+      "relation": "same-case",
+      "to": "F01"
+    },
+    {
+      "from": "F04",
+      "relation": "same-case",
+      "to": "F01"
+    },
+    {
+      "from": "F05",
+      "relation": "same-case",
+      "to": "F01"
+    },
+    {
+      "from": "F06",
+      "relation": "same-case",
+      "to": "F01"
+    },
+    {
+      "from": "F07",
+      "relation": "same-case",
+      "to": "F01"
+    }
+  ]
+}

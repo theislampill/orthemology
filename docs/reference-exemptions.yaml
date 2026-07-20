@@ -13,10 +13,22 @@ external_paths:
     them. The import-mapping document states its own boundary (no content or theology was
     merged from that repository).
   owner_repository: daee-epistemics
+  note_r7: >-
+    R7 (Decision 0021) added the typed daee crosswalk under applications/daee-epistemics/,
+    which cites more foreign daee paths (pinned commit c86b3c66...). These are that
+    repository's paths under its atomics/skill/references/ tree; the internal-reference
+    regex extracts the references/... tail, which cannot and should not resolve locally.
   paths:
   - references/diagnostics/diagnostic-ir.md
   - references/diagnostics/recursive-state-transitions.md
   - references/rubrics/diagnostic-render-contract.md
+  - references/diagnostics/inference-boundary.md
+  - references/diagnostics/noetic-reading-checklist.md
+  - references/diagnostics/pattern-profiling.md
+  - references/diagnostics/proof-method-audit.md
+  - references/diagnostics/routing-precedence.md
+  - references/diagnostics/seven-deformations.md
+  - references/rubrics/output-release.md
 retired_paths:
   note: >-
     Paths that DID exist and were deliberately retired. Historical decision bodies are

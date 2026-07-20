@@ -13,6 +13,7 @@ Checks, deterministically and offline:
   5. the effective installed versions of the locked packages are importable and
      recorded to stdout (the build report surface).
 """
+import glob
 import io
 import os
 import re
@@ -69,9 +70,11 @@ def main():
                     used.add(m.group(1) or m.group(2))
     third_party = sorted(m for m in used
                          if m not in STDLIB_HINT and m in IMPORT_TO_DIST)
+    local_modules = {os.path.splitext(os.path.basename(f))[0]
+                     for f in glob.glob(os.path.join(ROOT, "**", "*.py"), recursive=True)}
     unmapped = sorted(m for m in used
                       if m not in STDLIB_HINT and m not in IMPORT_TO_DIST
-                      and not os.path.exists(os.path.join(ROOT, "scripts", m + ".py")))
+                      and m not in local_modules)
     check("no unmapped third-party import (extend IMPORT_TO_DIST when adding deps)",
           not unmapped, str(unmapped[:5]))
     missing = [IMPORT_TO_DIST[m] for m in third_party if IMPORT_TO_DIST[m] not in pins]

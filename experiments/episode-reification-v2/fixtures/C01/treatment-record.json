@@ -1,0 +1,79 @@
+{
+  "schema": "orthemology-er2-treatment-record-v1",
+  "case": "C01",
+  "note": "structured rendering of the identical fact atoms; links relate records, they do not conclude",
+  "sections": {
+    "identity": [
+      {
+        "fact_id": "F01",
+        "text": "Case subject: valve assembly VA-954, version v1, under acceptance check."
+      },
+      {
+        "fact_id": "F02",
+        "text": "The case was opened on 2026-05-12."
+      }
+    ],
+    "evidence": [
+      {
+        "fact_id": "F03",
+        "text": "Measurement M-1 was taken on 2026-05-13; its scope line covers the checked property; its stated validity is 30 days."
+      }
+    ],
+    "procedure": [
+      {
+        "fact_id": "F04",
+        "text": "The measuring procedure's reference data was updated on 2026-05-01; its stated refresh interval is 90 days."
+      }
+    ],
+    "execution": [
+      {
+        "fact_id": "F05",
+        "text": "The operator followed work instruction WI-4; the step log matches WI-4's steps."
+      }
+    ],
+    "result": [
+      {
+        "fact_id": "F06",
+        "text": "The check result was PASS."
+      }
+    ],
+    "obligations": [
+      {
+        "fact_id": "F07",
+        "text": "The obligations table has no open rows."
+      }
+    ]
+  },
+  "links": [
+    {
+      "from": "F02",
+      "relation": "same-case",
+      "to": "F01"
+    },
+    {
+      "from": "F03",
+      "relation": "same-case",
+      "to": "F01"
+    },
+    {
+      "from": "F04",
+      "relation": "same-case",
+      "to": "F01"
+    },
+    {
+      "from": "F05",
+      "relation": "same-case",
+      "to": "F01"
+    },
+    {
+      "from": "F06",
+      "relation": "same-case",
+      "to": "F01"
+    },
+    {
+      "from": "F07",
+      "relation": "same-case",
+      "to": "F01"
+    }
+  ]
+}

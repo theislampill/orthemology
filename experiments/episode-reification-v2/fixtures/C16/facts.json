@@ -1,0 +1,33 @@
+{
+  "case": "C16",
+  "facts": [
+    {
+      "id": "F01",
+      "text": "Case subject: sample tray ST-559, version v1, under screening check."
+    },
+    {
+      "id": "F02",
+      "text": "The case was opened on 2026-05-16."
+    },
+    {
+      "id": "F03",
+      "text": "The job card lists acceptance standard edition AS-2019 for this case."
+    },
+    {
+      "id": "F04",
+      "text": "The governing contract row for this case class lists acceptance standard edition AS-2024."
+    },
+    {
+      "id": "F05",
+      "text": "The inspector applied the edition listed on the job card exactly; the step log matches it."
+    },
+    {
+      "id": "F06",
+      "text": "Under the applied edition the case PASSES; the margin sheet notes 0.2 units to the limit of the contract-listed edition."
+    },
+    {
+      "id": "F07",
+      "text": "The draft completion statement records acceptance with no note about editions."
+    }
+  ]
+}

@@ -1,0 +1,246 @@
+{
+  "schema": "orthemology-er2-keys-v1",
+  "note": "HIDDEN scoring truth — never loaded by the prompt-assembly path",
+  "keys": [
+    {
+      "case": "C01",
+      "archetype": "A1",
+      "closure_legitimate": true,
+      "defect_category": "none",
+      "remedy_category": "none",
+      "supporting": [
+        "F03",
+        "F04",
+        "F07"
+      ]
+    },
+    {
+      "case": "C02",
+      "archetype": "A1",
+      "closure_legitimate": true,
+      "defect_category": "none",
+      "remedy_category": "none",
+      "supporting": [
+        "F03",
+        "F04",
+        "F07"
+      ]
+    },
+    {
+      "case": "C03",
+      "archetype": "A1",
+      "closure_legitimate": true,
+      "defect_category": "none",
+      "remedy_category": "none",
+      "supporting": [
+        "F03",
+        "F04",
+        "F07"
+      ]
+    },
+    {
+      "case": "C04",
+      "archetype": "A1",
+      "closure_legitimate": true,
+      "defect_category": "none",
+      "remedy_category": "none",
+      "supporting": [
+        "F03",
+        "F04",
+        "F07"
+      ]
+    },
+    {
+      "case": "C05",
+      "archetype": "A2",
+      "closure_legitimate": false,
+      "defect_category": "procedure-reference-out-of-date",
+      "remedy_category": "update-procedure-reference",
+      "supporting": [
+        "F03"
+      ]
+    },
+    {
+      "case": "C06",
+      "archetype": "A2",
+      "closure_legitimate": false,
+      "defect_category": "procedure-reference-out-of-date",
+      "remedy_category": "update-procedure-reference",
+      "supporting": [
+        "F03"
+      ]
+    },
+    {
+      "case": "C07",
+      "archetype": "A2",
+      "closure_legitimate": false,
+      "defect_category": "procedure-reference-out-of-date",
+      "remedy_category": "update-procedure-reference",
+      "supporting": [
+        "F03"
+      ]
+    },
+    {
+      "case": "C08",
+      "archetype": "A2",
+      "closure_legitimate": false,
+      "defect_category": "procedure-reference-out-of-date",
+      "remedy_category": "update-procedure-reference",
+      "supporting": [
+        "F03"
+      ]
+    },
+    {
+      "case": "C09",
+      "archetype": "A3",
+      "closure_legitimate": false,
+      "defect_category": "resolution-limit-miss",
+      "remedy_category": "add-discriminating-evidence",
+      "supporting": [
+        "F03",
+        "F06"
+      ]
+    },
+    {
+      "case": "C10",
+      "archetype": "A3",
+      "closure_legitimate": false,
+      "defect_category": "resolution-limit-miss",
+      "remedy_category": "add-discriminating-evidence",
+      "supporting": [
+        "F03",
+        "F06"
+      ]
+    },
+    {
+      "case": "C11",
+      "archetype": "A3",
+      "closure_legitimate": false,
+      "defect_category": "resolution-limit-miss",
+      "remedy_category": "add-discriminating-evidence",
+      "supporting": [
+        "F03",
+        "F06"
+      ]
+    },
+    {
+      "case": "C12",
+      "archetype": "A3",
+      "closure_legitimate": false,
+      "defect_category": "resolution-limit-miss",
+      "remedy_category": "add-discriminating-evidence",
+      "supporting": [
+        "F03",
+        "F06"
+      ]
+    },
+    {
+      "case": "C13",
+      "archetype": "A4",
+      "closure_legitimate": false,
+      "defect_category": "wrong-edition-bound",
+      "remedy_category": "rebind-correct-edition-and-rederive",
+      "supporting": [
+        "F03",
+        "F04"
+      ]
+    },
+    {
+      "case": "C14",
+      "archetype": "A4",
+      "closure_legitimate": false,
+      "defect_category": "wrong-edition-bound",
+      "remedy_category": "rebind-correct-edition-and-rederive",
+      "supporting": [
+        "F03",
+        "F04"
+      ]
+    },
+    {
+      "case": "C15",
+      "archetype": "A4",
+      "closure_legitimate": false,
+      "defect_category": "wrong-edition-bound",
+      "remedy_category": "rebind-correct-edition-and-rederive",
+      "supporting": [
+        "F03",
+        "F04"
+      ]
+    },
+    {
+      "case": "C16",
+      "archetype": "A4",
+      "closure_legitimate": false,
+      "defect_category": "wrong-edition-bound",
+      "remedy_category": "rebind-correct-edition-and-rederive",
+      "supporting": [
+        "F03",
+        "F04"
+      ]
+    },
+    {
+      "case": "C17",
+      "archetype": "A5",
+      "closure_legitimate": false,
+      "defect_category": "check-tracks-marker-not-property",
+      "remedy_category": "replace-check-with-property-tracking",
+      "supporting": [
+        "F03",
+        "F06",
+        "F07"
+      ],
+      "e5": {
+        "neighbor_a_expected_pass": false,
+        "neighbor_b_expected_pass": true
+      }
+    },
+    {
+      "case": "C18",
+      "archetype": "A5",
+      "closure_legitimate": false,
+      "defect_category": "check-tracks-marker-not-property",
+      "remedy_category": "replace-check-with-property-tracking",
+      "supporting": [
+        "F03",
+        "F06",
+        "F07"
+      ],
+      "e5": {
+        "neighbor_a_expected_pass": false,
+        "neighbor_b_expected_pass": true
+      }
+    },
+    {
+      "case": "C19",
+      "archetype": "A5",
+      "closure_legitimate": false,
+      "defect_category": "check-tracks-marker-not-property",
+      "remedy_category": "replace-check-with-property-tracking",
+      "supporting": [
+        "F03",
+        "F06",
+        "F07"
+      ],
+      "e5": {
+        "neighbor_a_expected_pass": false,
+        "neighbor_b_expected_pass": true
+      }
+    },
+    {
+      "case": "C20",
+      "archetype": "A5",
+      "closure_legitimate": false,
+      "defect_category": "check-tracks-marker-not-property",
+      "remedy_category": "replace-check-with-property-tracking",
+      "supporting": [
+        "F03",
+        "F06",
+        "F07"
+      ],
+      "e5": {
+        "neighbor_a_expected_pass": false,
+        "neighbor_b_expected_pass": true
+      }
+    }
+  ]
+}
