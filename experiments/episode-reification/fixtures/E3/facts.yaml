@@ -1,0 +1,10 @@
+schema: orthemology-er-facts-v1
+case: E3
+title: justified rare miss
+fact_keys:
+- identity
+- evidence
+- procedure
+- execution
+- result
+- closure

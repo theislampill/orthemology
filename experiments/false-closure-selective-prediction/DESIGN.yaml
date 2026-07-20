@@ -1,0 +1,24 @@
+schema: orthemology-experiment-design-v1
+packet_id: FCSP-1
+unit_of_randomization: item-within-repeat (item order shuffled per repeat; each item runs in both arms)
+repeats: 5
+random_seeds: [20260721, 20260722, 20260723, 20260724, 20260725]
+item_generator_seed: 20260720
+executor_version_template:
+  note: to be instantiated at run authorization; recorded in the run manifest, never chosen after results
+  fields: [model_id, model_version_or_hash, provider, context_limit, tool_access]
+sampling_parameters:
+  temperature: 0.0
+  top_p: 1.0
+  max_output_tokens: 2048
+masking:
+  executor_sees: scenario text + arm instruction only
+  executor_never_sees: [ground truth, family label, scoring keys, other arm's output]
+  scoring: programmatic against frozen keys; no arm-aware human judgment
+scoring_rubric: programmatic; keys embedded per item in items/ITEMS.json; parser in analysis/analyze_fcsp.py
+adjudication:
+  parse_failure: one automatic re-prompt with the format reminder; if still unparseable, the item-repeat is recorded failed-run (never silently dropped)
+run_failure_policy: failed item-repeats are reported per arm; an arm with >5% failed item-repeats triggers the inconclusive gate in DECISION-RULES.yaml
+exclusion_criteria: none post-hoc; every item-repeat is reported; deviations only via DEVIATION-LEDGER.md
+analysis_script: analysis/analyze_fcsp.py (frozen; mock-traversable without producing a scientific result)
+deviation_recording: DEVIATION-LEDGER.md, dated entries, before-analysis timestamping

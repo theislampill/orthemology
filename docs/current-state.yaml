@@ -76,9 +76,9 @@ authored:
     pdfs: reproducibly built and visually inspected draft artifacts
     legal_publication: open on license, identity, peer review, and external submission
 derived:
-  source_tree_digest: 606812ccd75c4ab7c3cd876192f27927ef2c8d48add3d3a2393ea9ae03b60a1c
+  source_tree_digest: e6367b7e0e4e5ad9b92bdc394a55e1bb3eb256fe89ddcee09961ac7954da61ea
   source_tree_digest_policy: docs/project-state-inputs.yaml
-  tracked_files: 300
+  tracked_files: 348
   decision_ids:
   - '0001'
   - '0002'
@@ -97,7 +97,8 @@ derived:
   - '0015'
   - '0016'
   - '0017'
-  decision_count: 17
+  - 0018
+  decision_count: 18
   schemas:
   - analysis.schema.json
   - claim-ledger.schema.json

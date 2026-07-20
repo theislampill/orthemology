@@ -1,0 +1,10 @@
+schema: orthemology-er-facts-v1
+case: E2
+title: stopped-clock
+fact_keys:
+- identity
+- evidence
+- procedure
+- execution
+- result
+- closure

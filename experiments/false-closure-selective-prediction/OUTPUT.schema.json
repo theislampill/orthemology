@@ -1,0 +1,46 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "$id": "fcsp-output.schema.json",
+  "title": "FCSP-1 per-item-repeat parsed output record",
+  "type": "object",
+  "additionalProperties": false,
+  "required": ["item_id", "arm", "repeat", "seed", "parsed_ok", "record", "synthetic_smoke"],
+  "properties": {
+    "item_id": {"type": "string", "minLength": 1},
+    "arm": {"enum": ["baseline", "treatment"]},
+    "repeat": {"type": "integer", "minimum": 1},
+    "seed": {"type": "integer"},
+    "parsed_ok": {"type": "boolean"},
+    "synthetic_smoke": {
+      "type": "boolean",
+      "description": "true = deterministic mock traversal output (tests/); false = actual empirical run output. No false-valued record may exist in this repository before an authorized run (Decision 0018 no-run guard)."
+    },
+    "record": {
+      "type": "object",
+      "additionalProperties": false,
+      "required": ["placement", "confidence", "closure_claimed"],
+      "properties": {
+        "placement": {"enum": ["no-defect", "defect-confirmed", "underdetermined", "abstain-escalate"]},
+        "confidence": {"type": "number", "minimum": 0, "maximum": 1},
+        "closure_claimed": {"type": "boolean"},
+        "live_alternatives": {"type": "array", "items": {"type": "string"}},
+        "evidence_scopes_checked": {"type": "boolean"},
+        "identity_version_checked": {"type": "boolean"},
+        "route_selected": {"type": "string"},
+        "residual_burdens": {
+          "type": "array",
+          "items": {
+            "type": "object",
+            "additionalProperties": false,
+            "required": ["burden", "disposition"],
+            "properties": {
+              "burden": {"type": "string"},
+              "disposition": {"enum": ["resolved", "open", "deferred", "transferred", "owner-assigned", "risk-accepted"]}
+            }
+          }
+        },
+        "record_tokens": {"type": "integer", "minimum": 0}
+      }
+    }
+  }
+}

@@ -1,0 +1,31 @@
+{
+  "schema": "orthemology-er-episode-v1",
+  "case": "E3",
+  "title": "justified rare miss",
+  "occurrence": {
+    "identity_key": "plot-88",
+    "version": "v2"
+  },
+  "evidence": [
+    {
+      "id": "E-12",
+      "covers": "boundary, plot-88 v2",
+      "taken": "2026-05-05",
+      "value": "conforms"
+    }
+  ],
+  "procedure": {
+    "name": "boundary method",
+    "resolution_cm": 5,
+    "reliability_note": "declared reference-class reliability met"
+  },
+  "execution": {
+    "instruction": "boundary method",
+    "faithful": true
+  },
+  "result": {
+    "placement": "CONFORMS",
+    "later_finer_audit": "3 cm encroachment found"
+  },
+  "burden_ledger": []
+}

@@ -1,0 +1,29 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "$id": "er-output.schema.json",
+  "title": "ER-1 per-case answer record",
+  "type": "object",
+  "additionalProperties": false,
+  "required": ["case_id", "arm", "repeat", "synthetic_smoke", "answers"],
+  "properties": {
+    "case_id": {"enum": ["E1", "E2", "E3", "E4", "E5"]},
+    "arm": {"enum": ["baseline", "treatment"]},
+    "repeat": {"type": "integer", "minimum": 1},
+    "synthetic_smoke": {"type": "boolean",
+      "description": "true = deterministic mock traversal; no false-valued record may exist before an authorized run"},
+    "answer_tokens": {"type": "integer", "minimum": 0},
+    "seconds": {"type": "number", "minimum": 0},
+    "answers": {
+      "type": "object",
+      "additionalProperties": false,
+      "required": ["defect_identified", "remedy", "endorse_completion"],
+      "properties": {
+        "defect_identified": {"type": ["string", "null"]},
+        "grounding_element": {"type": ["string", "null"]},
+        "remedy": {"type": ["string", "null"]},
+        "endorse_completion": {"type": "boolean"},
+        "neighbors_used": {"type": "boolean"}
+      }
+    }
+  }
+}

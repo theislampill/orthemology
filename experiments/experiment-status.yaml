@@ -1,0 +1,63 @@
+# Canonical machine-readable experiment-packet state (Decision 0018).
+# One row per packet; scripts/validate_experiment_readiness.py enforces:
+# closed vocabularies, freeze-hash agreement, transition prerequisites,
+# the no-run guard, and agreement with each packet's own STATUS.yaml.
+# A Git freeze is NOT an external preregistration; nothing below may say
+# "preregistered" without naming a real registry record.
+schema: orthemology-experiment-status-v1
+readiness_vocabulary: [DRAFT, SPEC_COMPLETE, DETERMINISTICALLY_VALIDATED, READY_FOR_HUMAN_MATCHING_REVIEW, READY_TO_RUN, RUN_IN_PROGRESS, RUN_COMPLETE_UNADJUDICATED, ADJUDICATED]
+registration_vocabulary: [NOT_REGISTERED, PREREGISTRATION_READY, LOCALLY_PROTOCOL_FROZEN, EXTERNALLY_PREREGISTERED]
+packets:
+- packet_id: FCSP-1
+  path: experiments/false-closure-selective-prediction/
+  purpose: false-closure / selective-prediction benchmark (manuscript 13.1) — machinery incremental value against a matched baseline
+  readiness_state: READY_TO_RUN
+  registration_state: PREREGISTRATION_READY
+  freeze_hash: 6d663e5bf6bdeba3ee66adc14a40d912490d67865d9f422e9ed0d5a86679f7e7
+  required_remaining_gates: [owner execution authorization and spend, external preregistration (owner/external act)]
+  run_exists: false
+  licensed: nothing — no result, no adoption, no empirical claim
+- packet_id: ER-1
+  path: experiments/episode-reification/
+  purpose: episode-reification incremental-value test (manuscript 13.2) — explicit episode/verdict record vs matched ordinary audit record
+  readiness_state: READY_TO_RUN
+  registration_state: PREREGISTRATION_READY
+  freeze_hash: fd3194406f42afa8602c0a704b088154c498100c1aff4b81d1d1c9da80a9fc78
+  required_remaining_gates: [owner execution authorization and spend, external preregistration (owner/external act)]
+  run_exists: false
+  licensed: nothing — no result, no adoption, no empirical claim
+- packet_id: TERM-P0-V1
+  path: terminology/pilot0/
+  purpose: terminology Pilot 0 v1 (historical, superseded instrument version)
+  readiness_state: ADJUDICATED
+  readiness_note: historical superseded packet version, frozen byte-for-byte; ADJUDICATED here means its lifecycle is closed as history, not that any run occurred
+  registration_state: NOT_REGISTERED
+  freeze_hash_file: terminology/pilot0/FREEZE-HASH.txt
+  required_remaining_gates: [none — immutable history]
+  run_exists: false
+  licensed: nothing
+- packet_id: TERM-P0-V2
+  path: terminology/pilot0-v2/
+  purpose: terminology Pilot 0 v2 — current feasibility/instrumentation pilot candidate (Arm A/B/C/C-prime; feasibility-only outcomes per Decision 0018 Phase E reconciliation)
+  readiness_state: READY_FOR_HUMAN_MATCHING_REVIEW
+  registration_state: NOT_REGISTERED
+  freeze_hash_file: terminology/pilot0-v2/FREEZE-HASH.txt
+  required_remaining_gates: [owner-gated blind human matching review (recorded pass promotes to READY_TO_RUN), owner execution authorization, external preregistration (owner/external act)]
+  run_exists: false
+  licensed: nothing — Pilot 0 is feasibility-only; no adoption or retirement decision is available from it
+- packet_id: TERM-P1-TEMPLATE
+  path: terminology/pilot1/
+  purpose: Pilot 1 template (efficacy pilot design, instantiated only after Pilot 0 feasibility outcomes)
+  readiness_state: DRAFT
+  registration_state: NOT_REGISTERED
+  required_remaining_gates: [instantiation after Pilot 0, then the full readiness ladder]
+  run_exists: false
+  licensed: nothing
+- packet_id: TERM-CONFIRMATORY-TEMPLATE
+  path: terminology/confirmatory-v1-template/
+  purpose: confirmatory-study template (the only stage that can adopt or retire a term)
+  readiness_state: DRAFT
+  registration_state: NOT_REGISTERED
+  required_remaining_gates: [instantiation after Pilot 1, external preregistration before any run, adequate power]
+  run_exists: false
+  licensed: nothing

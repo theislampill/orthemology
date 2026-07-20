@@ -1,0 +1,35 @@
+{
+  "schema": "orthemology-er-episode-v1",
+  "case": "E4",
+  "title": "defective binding, faithful execution",
+  "occurrence": {
+    "identity_key": "weld-51",
+    "version": "v1"
+  },
+  "evidence": [
+    {
+      "id": "R-4",
+      "covers": "porosity, weld-51 v1",
+      "value": "3 pores/dm"
+    }
+  ],
+  "governing_binding": {
+    "bound_edition": "AS-2019",
+    "contract_edition": "AS-2024",
+    "binding_defect": true
+  },
+  "execution": {
+    "instruction": "AS-2019 as bound",
+    "faithful": true
+  },
+  "result": {
+    "placement": "PASS",
+    "note": "passes under both editions; margin thin under AS-2024"
+  },
+  "burden_ledger": [
+    {
+      "burden": "edition rebinding + re-derivation",
+      "disposition": "open"
+    }
+  ]
+}

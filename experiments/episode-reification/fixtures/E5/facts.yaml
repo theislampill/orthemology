@@ -1,0 +1,11 @@
+schema: orthemology-er-facts-v1
+case: E5
+title: metamorphic marker probe
+fact_keys:
+- identity
+- evidence
+- procedure
+- execution
+- result
+- neighbors
+- closure

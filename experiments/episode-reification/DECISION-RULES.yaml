@@ -1,0 +1,23 @@
+schema: orthemology-experiment-decision-rules-v1
+packet_id: ER-1
+outcome_vocabulary:
+  - supports incremental value
+  - does not yet support incremental value
+  - evidence of harm or failure
+  - inconclusive
+parameters:
+  repeats: 5
+  random_seeds: [20260731, 20260732, 20260733, 20260734, 20260735]
+  minimum_important_effect_defect_discovery: 0.15   # absolute rate improvement, pooled E2-E5
+  minimum_important_effect_false_closure_prevention: 0.15
+  harm_margin_e1_false_positive: 0.10               # invented defects on the E1 control
+  harm_margin_cost_ratio: 2.5                       # mean answer tokens T/B counted as harm
+  alpha: 0.05
+  power_floor: 0.80
+  max_failed_run_rate: 0.05
+rules:
+  supports_incremental_value: both primary contrasts (defect discovery; false-closure prevention, pooled over E2-E5) favor treatment at or beyond their minimum important effects with Holm-adjusted p < alpha, and no harm rule fires
+  evidence_of_harm_or_failure: E1 false-positive rate in treatment exceeds harm_margin_e1_false_positive, or the cost ratio exceeds harm_margin_cost_ratio while primaries show no minimum important effect, or any primary significantly favors baseline
+  does_not_yet_support_incremental_value: adequately powered (power_floor at the minimum important effects) and neither the supports nor harm rule fires; an adequately powered null IS this outcome
+  inconclusive: only via a predeclared gate — failed-run rate above max_failed_run_rate, achieved power below power_floor, or an outcome-affecting recorded deviation; the gate must be named in the report
+adoption_note: a favorable outcome licenses only the episode-reification incremental-value claim for the tested configuration; it transfers nothing to FCSP-1 or the terminology benchmark

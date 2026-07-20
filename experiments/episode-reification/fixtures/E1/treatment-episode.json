@@ -1,0 +1,31 @@
+{
+  "schema": "orthemology-er-episode-v1",
+  "case": "E1",
+  "title": "nominal control",
+  "occurrence": {
+    "identity_key": "artifact-114",
+    "version": "v3"
+  },
+  "evidence": [
+    {
+      "id": "M-77",
+      "covers": "surface finish, artifact-114 v3",
+      "taken": "2026-03-02",
+      "valid_days": 30,
+      "value": 0.82
+    }
+  ],
+  "procedure": {
+    "name": "finish gauge",
+    "calibrated": "2026-02-20",
+    "reference": "current block"
+  },
+  "execution": {
+    "instruction": "WI-9",
+    "faithful": true
+  },
+  "result": {
+    "placement": "PASS"
+  },
+  "burden_ledger": []
+}
