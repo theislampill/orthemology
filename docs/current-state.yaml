@@ -53,8 +53,8 @@ authored:
     pdfs: reproducibly built and visually inspected draft artifacts
     legal_publication: open on license, identity, peer review, and external submission
 derived:
-  source_commit_at_generation: 306a763f6b9e8eb0569d6c4000236328431b8d24
-  tracked_files: 181
+  source_commit_at_generation: 262ac45bc6ec5b720e6abbb4f0d4b41153f45f25
+  tracked_files: 198
   decision_ids:
   - '0001'
   - '0002'
@@ -67,10 +67,11 @@ derived:
   - 0009
   - '0010'
   - '0011'
+  - '0012'
   - '0013'
   - '0014'
   - '0015'
-  decision_count: 14
+  decision_count: 15
   schemas:
   - analysis.schema.json
   - claim-ledger.schema.json
@@ -97,12 +98,13 @@ derived:
   - validate_notation.py
   - validate_quran_loci.py
   - validate_reason_fixtures.py
+  - validate_recursive_mutations.py
   - validate_repo.py
   - validate_schemas.py
   - validate_source_status.py
   - validate_type_token_semantics.py
   - validate_verdict_semantics.py
-  validator_count: 16
+  validator_count: 17
   fixture_counts:
     verdict: 7
     reason: 8
@@ -111,21 +113,21 @@ derived:
     negative: 11
   pdfs:
     orthability-divine-speech-athari-draft.pdf:
-      sha256: 41139d7bfeb19f39e3c4204b3d3c8d4c507631f2ef8c4df32bd3ba43bc5f3938
+      sha256: 6c0ede917b3d7bf6be4b4f4ffbf2a94f9f48f821e90d3c09dc21eb6a43e24383
       pages: 7
-      source_commit: d3b34efa6cf07225adc755a15d60785bcf1df4cb
+      source_commit: 262ac45bc6ec5b720e6abbb4f0d4b41153f45f25
     orthability-ground-of-intelligibility-draft.pdf:
-      sha256: ecb0eb6b97af476409d82608c71c1f819a4b9f43293a5d94abd6034720061b8d
+      sha256: 036d480d36b93d97ab402de2e200aa14ff125379c56d3b6f0d7db259c4b5d896
       pages: 10
-      source_commit: d3b34efa6cf07225adc755a15d60785bcf1df4cb
+      source_commit: 262ac45bc6ec5b720e6abbb4f0d4b41153f45f25
     orthemic-core-reference-draft.pdf:
-      sha256: 06fff799cd60efd819c579ac7749c22d4f63b6da6b718983fa77baad7f2c4c45
+      sha256: ccc2e2fab8b5630c9d4b21c210d39c1121f18db323012a08d767657721ee1964
       pages: 20
-      source_commit: d3b34efa6cf07225adc755a15d60785bcf1df4cb
+      source_commit: 262ac45bc6ec5b720e6abbb4f0d4b41153f45f25
     orthemma-ortheme-systems-draft.pdf:
-      sha256: d55e0c0cf96965a93ca58b68eaa5d39cf1893fe15a2d25bae74bf9036b2d6f1d
+      sha256: 577020771bdebd5234617c3872b0d7bdc7f60d5189a434a464a4d7cd16cbbf06
       pages: 30
-      source_commit: d3b34efa6cf07225adc755a15d60785bcf1df4cb
+      source_commit: 262ac45bc6ec5b720e6abbb4f0d4b41153f45f25
   terminology_freeze_hashes:
     pilot0_v1: 988a6522498df73ad1c7b0f73961a054ff20862d50fff6d644d0274877412772
     pilot0_v2: a1edbd2c5e2f2df598b4a6d01a52229c455b3b68d043f10046053d0a3622a2a2

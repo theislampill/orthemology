@@ -28,7 +28,8 @@
         "evidence": [],
         "warrant": null,
         "policy": "declared per-example policy (see example prose)",
-        "verdict_record_ref": null
+        "verdict_record_ref": null,
+        "record_mode": "minimal"
       }
     },
     {
@@ -63,7 +64,8 @@
         "evidence": [],
         "warrant": null,
         "policy": "declared per-example policy (see example prose)",
-        "verdict_record_ref": null
+        "verdict_record_ref": null,
+        "record_mode": "minimal"
       }
     },
     {
@@ -144,7 +146,8 @@
         "evidence": [],
         "warrant": null,
         "policy": "declared per-example policy (see example prose)",
-        "verdict_record_ref": null
+        "verdict_record_ref": null,
+        "record_mode": "minimal"
       }
     }
   ],

@@ -153,8 +153,13 @@ def main():
 
     # strict soundness defined as derived in the companion note
     note = open(os.path.join(ROOT, "companion", "CONCRETE-AND-SOUND-REASON.md"), encoding="utf-8").read()
-    check("StrictlySoundReasoning defined as PathwayAdequate AND TOKEN_TRUTH_LINKED",
-          "StrictlySoundReasoning_q(e) := PathwayAdequate(e) ∧ TOKEN_TRUTH_LINKED_q(e)" in note)
+    # R4 (Decision 0011): the conjunct is the CLAIM-RELATIVE reasoning path,
+    # not the whole-episode PathwayAdequate. The old form must be gone.
+    check("StrictlySoundReasoning defined claim-relatively (ReasoningPathAdequate_q AND TOKEN_TRUTH_LINKED_q)",
+          "ReasoningPathAdequate_q(e) ∧ TOKEN_TRUTH_LINKED_q(e)" in note)
+    check("the withdrawn whole-episode definition is absent from current prose",
+          "StrictlySoundReasoning_q(e) := PathwayAdequate(e)" not in note)
+    check("the claim-relevant projection ReqReason_q is defined", "ReqReason_q(e)" in note)
     check("companion note states it is not a registry verdict",
           "not a new primitive verdict" in note or "NOT a registry verdict" in note
           or "No primitive `SOUND_REASON` verdict" in note)

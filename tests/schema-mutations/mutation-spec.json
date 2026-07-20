@@ -1,10 +1,30 @@
 {
-  "schema": "orthemology-mutation-spec-v1",
-  "note": "Deterministic mutation operators applied by validate_negative_fixtures.py to every positive example part. Every generated mutant MUST be rejected by the hardened schemas. No randomness (mutants are enumerated exhaustively per operator), keeping CI deterministic.",
+  "schema": "orthemology-mutation-spec-v2",
+  "note": "Deterministic mutation operators. The three v1 operators are TOP-LEVEL only and are still applied by validate_negative_fixtures.py; R4 finding B7 was that top-level-only mutation made '208 mutants, 0 survivors' sound far stronger than it was. The eighteen v2 families are applied by scripts/validate_recursive_mutations.py, which walks every positive example part RECURSIVELY, resolving the effective schema at each node (through $ref, allOf and the applicable if/then and anyOf/oneOf branch) so it knows which fields are required, which arrays are sets, and which values are references. No randomness anywhere: mutants are enumerated in sorted path order, so the corpus and the report are byte-stable.",
+  "kill_criterion": "A mutant is KILLED if the hardened JSON Schema rejects the mutated part, or if validate_cross_record_semantics.collect_issues flags the mutated bundle. Every unmutated example bundle is issue-free, so any issue a mutant raises is attributable to the mutation.",
   "operators": [
-    {"id": "drop-required", "description": "remove each top-level required field, one at a time"},
-    {"id": "bad-enum", "description": "set each top-level enum-constrained field to the value 'NOT-A-LEGAL-VALUE'"},
-    {"id": "extra-field", "description": "add one undeclared top-level field '__mutant__': true"}
+    {"id": "drop-required", "layer": "v1-top-level", "description": "remove each top-level required field, one at a time"},
+    {"id": "bad-enum", "layer": "v1-top-level", "description": "set each top-level enum-constrained field to the value 'NOT-A-LEGAL-VALUE'"},
+    {"id": "extra-field", "layer": "v1-top-level", "description": "add one undeclared top-level field '__mutant__': true"},
+    {"id": "delete-nested-required", "family": 1, "description": "delete each required field at EVERY depth, not only the top level"},
+    {"id": "empty-required-string", "family": 2, "description": "blank each required string; '' is not a declaration"},
+    {"id": "empty-required-array-or-map", "family": 3, "description": "empty each required array or map the contract requires to be nonempty"},
+    {"id": "duplicate-unique-member", "family": 4, "description": "duplicate a member of an array-as-set, and collide two ids that must differ"},
+    {"id": "unknown-reference-id", "family": 5, "description": "repoint each currently-resolvable reference (claim, token, evidence, episode) at nothing"},
+    {"id": "analysis-version-mismatch", "family": 6, "description": "desynchronise an analysis version between records that must share it"},
+    {"id": "occurrence-version-mismatch", "family": 7, "description": "desynchronise an occurrence version between records that must share it"},
+    {"id": "delete-disposition-conditional-field", "family": 8, "description": "delete the field a residual's own disposition makes mandatory"},
+    {"id": "claim-dependency-cycle", "family": 9, "description": "make a claim depend on itself, directly or through another claim"},
+    {"id": "remove-required-verdict-status", "family": 10, "description": "delete the status of a verdict the required path demands"},
+    {"id": "contradict-pathway-summary", "family": 11, "description": "state an episode- or claim-level pathway summary the statuses do not support"},
+    {"id": "na-without-reason", "family": 12, "description": "strip the reason from a not-applicable status, anywhere in the record"},
+    {"id": "plural-metaorthemma-type", "family": 13, "description": "give one token several of_type entries (the unimplemented many-to-many MetaInst)"},
+    {"id": "empty-metaorthemma-binding", "family": 14, "description": "empty the binding map: a token with no material binding"},
+    {"id": "postdate-reliability-declaration", "family": 15, "description": "declare a RelSpec at or after the result it is used to assess"},
+    {"id": "violate-perturbation-invariant", "family": 16, "description": "vary a field the PerturbSpec declares invariant"},
+    {"id": "collapse-candidate-set-into-partial-profile", "family": 17, "description": "collapse a candidate SET of complete profiles into one partial profile (finding B1)"},
+    {"id": "collapse-claim-path-into-episode-path", "family": 18, "description": "overwrite a claim's reasoning adequacy with the episode-level pathway state (finding B2)"}
   ],
-  "expectation": "0 surviving mutants (a surviving mutant = a mutant the schema still accepts)"
+  "expectation": "Every generated mutant is killed at a declared layer, OR is listed below as a justified equivalent with a reason why the mutation does not change what the record claims. An undeclared survivor fails the run.",
+  "justified_equivalents": []
 }

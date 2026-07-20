@@ -2,6 +2,15 @@
 
 **Date:** 2026-07-20 (R3) · **Reviewed:** public `theislampill/daee-epistemics` (read-only). **Non-identity boundary, stated first:** the two projects are not merged and are not the same system; daee-epistemics's theological commitments are **not evidence** for orthemology (and vice versa); no term is imported merely because both projects have a nearby concept; no large prose body is copied. What is imported is *generic control discipline*, translated into ordinary language and re-derived inside orthemology's own formalism.
 
+## R4 recheck (2026-07-20)
+
+The current public `theislampill/daee-epistemics` repository was re-inspected. All five controls described below still hold as stated: canonical atomized source (`atomics/skill/`) generating an uncommitted runtime with freshness checks; evaluator/practitioner symmetry; the inference-boundary legend; whole-state reread after a burden lands; and the bounded release/closure contract. **Two further engineering applications are adopted in R4** (and only these):
+
+1. **`docs/current-state.yaml` as one canonical project-state source**, with generated/validated public surfaces — the direct analogue of that repository's atomized-source→generated-surface discipline (Decision 0014).
+2. **Transition-triggered whole-state reread extended to source-status changes** — R3 implemented only the closure-floor slice; R4 requires the whole-state pass after any burden disposition, source-status transition, analysis-version change, or canonical-artifact change, not only at final closure.
+
+**Still rejected, unchanged:** the domain-specific deformation ontology; theological claims as operational evidence; field-pressure notation adopted for aesthetics; routing modules irrelevant to orthemology; any claim of repository isomorphism or merger. The non-identity boundary below is unchanged.
+
 ## Imports adopted
 
 | # | daee-epistemics discipline (source location) | Orthemology implementation |

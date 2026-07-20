@@ -8,7 +8,32 @@
         "analysis_id": "chess-eval-white",
         "version": "1.0",
         "task": "win as White",
-        "repertoire_ref": "terminal-state-types-white"
+        "repertoire_ref": "terminal-state-types-white",
+        "boundary": "the chess game as played; each engine acts only by evaluating and proposing moves",
+        "evidence_repertoire": [
+          "board-state-observation"
+        ],
+        "action_repertoire": [
+          "evaluate-position"
+        ],
+        "loss": {
+          "disposition": "not_applicable",
+          "reason": "the compatibility illustration ranges over win-sets only; no loss functional is exercised by it"
+        },
+        "hard_constraints": [
+          "legal-move constraint (FIDE rules)"
+        ],
+        "horizon": "to terminal position",
+        "tolerance": {
+          "disposition": "not_applicable",
+          "reason": "placement is over discrete win/loss/draw profiles; no numeric tolerance applies"
+        },
+        "representation_family": "full-information board encoding",
+        "merger_family": {
+          "disposition": "not_applicable",
+          "reason": "a single perfect-information observation channel supplies the placement; nothing is merged"
+        },
+        "governance_boundary": "the engine operator; no external governance authority is declared for this illustration"
       }
     },
     {
@@ -17,7 +42,32 @@
         "analysis_id": "chess-eval-black",
         "version": "1.0",
         "task": "win as Black",
-        "repertoire_ref": "terminal-state-types-black"
+        "repertoire_ref": "terminal-state-types-black",
+        "boundary": "the chess game as played; each engine acts only by evaluating and proposing moves",
+        "evidence_repertoire": [
+          "board-state-observation"
+        ],
+        "action_repertoire": [
+          "evaluate-position"
+        ],
+        "loss": {
+          "disposition": "not_applicable",
+          "reason": "the compatibility illustration ranges over win-sets only; no loss functional is exercised by it"
+        },
+        "hard_constraints": [
+          "legal-move constraint (FIDE rules)"
+        ],
+        "horizon": "to terminal position",
+        "tolerance": {
+          "disposition": "not_applicable",
+          "reason": "placement is over discrete win/loss/draw profiles; no numeric tolerance applies"
+        },
+        "representation_family": "full-information board encoding",
+        "merger_family": {
+          "disposition": "not_applicable",
+          "reason": "a single perfect-information observation channel supplies the placement; nothing is merged"
+        },
+        "governance_boundary": "the engine operator; no external governance authority is declared for this illustration"
       }
     },
     {
@@ -54,7 +104,8 @@
         "evidence": [],
         "warrant": null,
         "policy": "declared per-example policy (see example prose)",
-        "verdict_record_ref": null
+        "verdict_record_ref": null,
+        "record_mode": "minimal"
       }
     },
     {
@@ -83,7 +134,8 @@
         "evidence": [],
         "warrant": null,
         "policy": "declared per-example policy (see example prose)",
-        "verdict_record_ref": null
+        "verdict_record_ref": null,
+        "record_mode": "minimal"
       }
     }
   ],

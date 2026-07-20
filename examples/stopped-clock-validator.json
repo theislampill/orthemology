@@ -41,7 +41,8 @@
         },
         "action": null,
         "successors": [],
-        "verdict_record_ref": null
+        "verdict_record_ref": null,
+        "record_mode": "minimal"
       }
     },
     {
@@ -88,15 +89,71 @@
           }
         ],
         "rel_spec": {
-          "claim-clean": "reference class: all artifacts gated by scanner 4.2; criterion: sensitivity; declared before outcome"
+          "claim-clean": {
+            "procedure_id": "scan-log-marker-check",
+            "procedure_version": "scanner 4.2 under gate policy release-compliance 1.0",
+            "reference_class": "all artifacts gated by scanner 4.2 under analysis release-compliance 1.0",
+            "risk_stratum": "release gate: a false clean permits a noncompliant artifact to ship",
+            "metric": "sensitivity: the fraction of noncompliant artifacts the gate rejects",
+            "threshold": 0.99,
+            "evaluation_protocol": "paired metamorphic probes over compliant and noncompliant artifacts, adjudicated against the scanner's own findings",
+            "evidence_basis": "none measured: the marker-string check was never evaluated against noncompliant artifacts, which is why PROCEDURE_RELIABLE fails here",
+            "declared_at": "2026-06-01T00:00:00Z",
+            "validity": {
+              "effective_from": "2026-06-01T00:00:00Z",
+              "expiry": null
+            }
+          }
         },
         "perturb_spec": {
-          "varied": "marker presence; artifact compliance",
-          "invariant": "policy, configuration, analysis",
-          "generator": "paired metamorphic probes",
-          "tolerance": "0 failures on 2 probes"
+          "claim-clean": {
+            "neighborhood_family": "artifacts differing from build-771 in compliance status and marker presence, with policy, configuration and analysis held fixed",
+            "enumeration": [
+              "probe-A: noncompliant artifact whose log still contains SCAN-CLEAN",
+              "probe-B: compliant artifact whose log omits SCAN-CLEAN"
+            ],
+            "invariants": [
+              "policy",
+              "configuration",
+              "analysis"
+            ],
+            "varied_fields": [
+              "marker_presence",
+              "artifact_compliance"
+            ],
+            "metaorthemma_rebinding_rule": "MetaTok(e) is empty (zero-burden): no case-bound token is rebound across the neighborhood",
+            "failure_criterion": "any probe whose gate outcome disagrees with the artifact's true compliance status",
+            "version": "1.0",
+            "validity": {
+              "effective_from": "2026-06-01T00:00:00Z",
+              "expiry": null
+            }
+          }
         },
-        "pathway_state": "defective"
+        "pathway_state": "defective",
+        "index": {
+          "analysis_id": "release-compliance",
+          "analysis_version": "1.0",
+          "actor": "release-audit-reviewer",
+          "decision_time": "2026-07-10T13:00:00Z",
+          "information_state": "the scan log ev-log for build-771 and the gate policy text, as available at 2026-07-10T13:00:00Z"
+        },
+        "claim_reasoning_paths": [
+          {
+            "claim_id": "claim-clean",
+            "req_reason": [
+              "EVIDENCE_SUPPORT",
+              "PROCEDURE_RELIABLE",
+              "EVIDENCE_CURRENT",
+              "GOV_CONFIG_ADEQUATE",
+              "GOV_POLICY_ADEQUATE",
+              "EXECUTION_FAITHFUL",
+              "EX_ANTE_JUSTIFIED",
+              "ROBUST_NEIGHBORHOOD"
+            ],
+            "reasoning_path_adequate": "defective"
+          }
+        ]
       }
     }
   ]
