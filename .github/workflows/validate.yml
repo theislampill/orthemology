@@ -11,7 +11,7 @@ jobs:
         with:
           python-version: "3.11"
       - name: Install pinned dependencies (no live web checks anywhere in CI)
-        run: pip install --quiet pyyaml jsonschema "typst==0.15.0" markdown-it-py pypdf
+        run: pip install --quiet pyyaml jsonschema "typst==0.15.0" "markdown-it-py==4.0.0" "pypdf>=6,<7"
       - name: Repository hygiene + honesty checks
         run: python scripts/validate_repo.py
       - name: Verdict semantics (registry-driven fixtures)
