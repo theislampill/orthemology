@@ -1,340 +1,409 @@
 {
-  "example": "pillar-episode",
-  "note": "Nominal verification with a correctly bound metaorthemma (F1-shaped). Deterministic illustration; no empirical claim.",
-  "parts": [
-    {
-      "schema": "analysis.schema.json",
-      "instance": {
-        "analysis_id": "site-perpendicularity-check",
-        "version": "2.1",
-        "task": "verify pillar perpendicularity before load transfer",
-        "repertoire_ref": "structural-states-v2",
-        "domain_ref": "site-42-structures",
-        "tolerance": 0.002,
-        "axes": [
-          {
-            "name": "perpendicularity",
-            "exclusivity": "alternatives",
-            "values": [
-              "within-tolerance",
-              "out-of-tolerance"
-            ]
-          },
-          {
-            "name": "surface-condition",
-            "exclusivity": "co-holding",
-            "values": [
-              "cracked",
-              "stained",
-              "clean"
-            ]
-          }
-        ],
-        "boundary": "the pillar as poured and the site datum network; downstream load-transfer decisions are outside the boundary",
-        "evidence_repertoire": [
-          "four-face level readings",
-          "instrument calibration certificate"
-        ],
-        "action_repertoire": [
-          "release-for-load-transfer",
-          "hold-for-rework"
-        ],
-        "loss": "releasing an out-of-tolerance pillar dominates; holding a within-tolerance pillar costs schedule only",
-        "hard_constraints": [
-          "no release without a current instrument calibration",
-          "measurement at all four faces"
-        ],
-        "horizon": "until the next structural mutation of the pillar",
-        "representation_family": "two-axis factorized profile over perpendicularity and surface-condition",
-        "merger_family": "no merger: a single instrument channel supplies the placement for this analysis",
-        "governance_boundary": "site quality governance for site-42 under SOP-17"
-      }
+ "example": "pillar-episode",
+ "note": "Nominal verification with a correctly bound metaorthemma (F1-shaped). Deterministic illustration; no empirical claim.",
+ "parts": [
+  {
+   "schema": "analysis.schema.json",
+   "instance": {
+    "analysis_id": "site-perpendicularity-check",
+    "version": "2.1",
+    "task": "verify pillar perpendicularity before load transfer",
+    "repertoire_ref": "structural-states-v2",
+    "domain_ref": "site-42-structures",
+    "tolerance": 0.002,
+    "axes": [
+     {
+      "name": "perpendicularity",
+      "exclusivity": "alternatives",
+      "values": [
+       "within-tolerance",
+       "out-of-tolerance"
+      ]
+     },
+     {
+      "name": "surface-condition",
+      "exclusivity": "co-holding",
+      "values": [
+       "cracked",
+       "stained",
+       "clean"
+      ]
+     }
+    ],
+    "boundary": "the pillar as poured and the site datum network; downstream load-transfer decisions are outside the boundary",
+    "evidence_repertoire": [
+     "four-face level readings",
+     "instrument calibration certificate"
+    ],
+    "action_repertoire": [
+     "release-for-load-transfer",
+     "hold-for-rework"
+    ],
+    "loss": "releasing an out-of-tolerance pillar dominates; holding a within-tolerance pillar costs schedule only",
+    "hard_constraints": [
+     "no release without a current instrument calibration",
+     "measurement at all four faces"
+    ],
+    "horizon": "until the next structural mutation of the pillar",
+    "representation_family": "two-axis factorized profile over perpendicularity and surface-condition",
+    "merger_family": "no merger: a single instrument channel supplies the placement for this analysis",
+    "governance_boundary": "site quality governance for site-42 under SOP-17"
+   }
+  },
+  {
+   "schema": "metaortheme.schema.json",
+   "instance": {
+    "mu_id": "perpendicularity-standard",
+    "version": "3.0",
+    "governed_component": "V",
+    "states": {
+     "members": [
+      "within-tolerance",
+      "out-of-tolerance"
+     ],
+     "partition": true
     },
-    {
-      "schema": "orthemma.schema.json",
-      "instance": {
-        "identity_key": "pillar-B7",
-        "version": "as-poured-2026-07-01",
-        "kind": "structure"
-      }
+    "exclusivity": "exclusive",
+    "selector": {
+     "kind": "instrument-reading",
+     "description": "four-face digital level reading compared against the declared 0.002 tolerance",
+     "inputs": [
+      "level-114 readings"
+     ],
+     "procedure_ref": "site-QA-SOP-12"
     },
-    {
-      "schema": "metaorthemma.schema.json",
-      "instance": {
-        "token_id": "tok-B7-perp-1",
-        "of_type": {
-          "mu_id": "perpendicularity-standard",
-          "mu_version": "3.0"
-        },
-        "analysis": {
-          "analysis_id": "site-perpendicularity-check",
-          "version": "2.1"
-        },
-        "anchor": {
-          "identity_key": "pillar-B7",
-          "version": "as-poured-2026-07-01"
-        },
-        "governed_component": "E",
-        "binding": {
-          "datum_plane": "floor-slab-datum-D2",
-          "instrument": "level-114",
-          "tolerance_value": 0.002
-        },
-        "scope": {
-          "claims": [
-            "claim-perp"
-          ],
-          "description": "perpendicularity claim only"
-        },
-        "instrument": {
-          "id": "level-114",
-          "calibration_provenance": "cal-lab cert 2026-06-20",
-          "calibration_expiry": "2026-12-20"
-        },
-        "binder": {
-          "actor": "site-engineer-2",
-          "binding_warrant": "work-order-5512",
-          "binding_time": "2026-07-02T08:00:00Z"
-        },
-        "validity": {
-          "effective_from": "2026-07-02",
-          "expiry": null,
-          "superseded_by": null
-        },
-        "no_separate_executor_reason": "this token designates no executor separate from its binder: the episode actor executes under the same warrant, and the binder ROLE remains independently recorded"
-      }
-    },
-    {
-      "schema": "orthing-episode.schema.json",
-      "instance": {
-        "episode_id": "ep-B7-verify-1",
-        "occurrence": {
-          "identity_key": "pillar-B7",
-          "version": "as-poured-2026-07-01",
-          "kind": "structure"
-        },
-        "observation": "level readings at four faces",
-        "evidence": [
-          {
-            "evidence_id": "ev-1",
-            "channel": "instrument-reading",
-            "property_class": "behavioral",
-            "scope": "claim-perp @ as-poured-2026-07-01",
-            "provenance": "level-114 run 2026-07-02",
-            "validity": "until next structural mutation"
-          }
-        ],
-        "actor": "fitter-9",
-        "warrant": "work-order-5512",
-        "analysis": {
-          "analysis_id": "site-perpendicularity-check",
-          "version": "2.1",
-          "task": "verify pillar perpendicularity before load transfer"
-        },
-        "time": "2026-07-02T08:30:00Z/2026-07-02T09:00:00Z",
-        "governing_configuration": {
-          "mu_refs": [
-            {
-              "mu_id": "perpendicularity-standard",
-              "mu_version": "3.0"
-            }
-          ],
-          "precedence": []
-        },
-        "meta_tokens": [
-          {
-            "token_id": "tok-B7-perp-1",
-            "of_type": {
-              "mu_id": "perpendicularity-standard",
-              "mu_version": "3.0"
-            },
-            "analysis": {
-              "analysis_id": "site-perpendicularity-check",
-              "version": "2.1"
-            },
-            "anchor": {
-              "identity_key": "pillar-B7",
-              "version": "as-poured-2026-07-01"
-            },
-            "binding": {
-              "datum_plane": "floor-slab-datum-D2"
-            },
-            "binder": {
-              "actor": "site-engineer-2",
-              "binding_warrant": "work-order-5512",
-              "binding_time": "2026-07-02T08:00:00Z"
-            },
-            "validity": {
-              "superseded_by": null,
-              "effective_from": "2026-07-02"
-            },
-            "governed_component": "E",
-            "scope": {
-              "claims": [
-                "claim-perp"
-              ],
-              "description": "scope as stated in the example prose"
-            },
-            "no_separate_executor_reason": "this token designates no executor separate from its binder: the episode actor executes under the same warrant, and the binder ROLE remains independently recorded"
-          }
-        ],
-        "policy": "four-face measurement per SOP-17",
-        "candidates": {
-          "profile": [
-            {
-              "perpendicularity": "within-tolerance"
-            },
-            {
-              "perpendicularity": "out-of-tolerance"
-            }
-          ]
-        },
-        "placement": {
-          "perpendicularity": "within-tolerance",
-          "surface-condition": [
-            "clean"
-          ]
-        },
-        "route": "release-for-load-transfer",
-        "evidence_status": {
-          "claim-perp": "validated"
-        },
-        "claim_ledger_ref": "inline-below",
-        "action": "release",
-        "successors": [
-          {
-            "identity_key": "pillar-B7",
-            "version": "released-2026-07-02",
-            "action_label": "release"
-          }
-        ],
-        "verdict_record_ref": "inline-below",
-        "record_mode": "audit-ready"
-      }
-    },
-    {
-      "schema": "claim-ledger.schema.json",
-      "instance": {
-        "episode_id": "ep-B7-verify-1",
-        "claims": [
-          {
-            "claim_id": "claim-perp",
-            "proposition": "pillar B7 is perpendicular within 0.002",
-            "target": {
-              "identity_key": "pillar-B7",
-              "version": "as-poured-2026-07-01"
-            },
-            "property_class": "behavioral",
-            "success_surface": "the physical pillar as measured",
-            "evidence_ids": [
-              "ev-1"
-            ],
-            "depends_on_tokens": [
-              "tok-B7-perp-1"
-            ],
-            "verification_status": "validated",
-            "non_claims": [
-              "no claim about surface finish"
-            ],
-            "analysis": {
-              "analysis_id": "site-perpendicularity-check",
-              "version": "2.1"
-            }
-          }
-        ],
-        "residuals": [
-          {
-            "burden_id": "b-1",
-            "description": "verify perpendicularity",
-            "disposition": "validated-resolved",
-            "evidence_refs": [
-              "ev-1"
-            ],
-            "verdict_refs": [
-              "ep-B7-verify-1"
-            ]
-          }
-        ],
-        "closure_claim": {
-          "level": "verification complete",
-          "asserted_by": "fitter-9"
-        }
-      }
-    },
-    {
-      "schema": "verdict-record.schema.json",
-      "instance": {
-        "episode_id": "ep-B7-verify-1",
-        "required_path": [
-          "EVIDENCE_SUPPORT",
-          "PROCEDURE_RELIABLE",
-          "EVIDENCE_CURRENT",
-          "GOV_CONFIG_ADEQUATE",
-          "GOV_POLICY_ADEQUATE",
-          "GOV_TOKEN_ADEQUATE",
-          "EXECUTION_FAITHFUL",
-          "EX_ANTE_JUSTIFIED",
-          "ROUTE_ADMISSIBLE",
-          "CLOSURE_TRUTHFUL"
-        ],
-        "statuses": {
-          "RESULT_CORRECT": "pass",
-          "EVIDENCE_SUPPORT": "pass",
-          "PROCEDURE_RELIABLE": "pass",
-          "EVIDENCE_CURRENT": "pass",
-          "GOV_CONFIG_ADEQUATE": "pass",
-          "GOV_POLICY_ADEQUATE": "pass",
-          "GOV_TOKEN_ADEQUATE": "pass",
-          "EXECUTION_FAITHFUL": "pass",
-          "EX_ANTE_JUSTIFIED": "pass",
-          "ROUTE_ADMISSIBLE": "pass",
-          "CLOSURE_TRUTHFUL": "pass",
-          "TOKEN_TRUTH_LINKED": "pass",
-          "ROBUST_NEIGHBORHOOD": "not-applicable",
-          "ROUTE_QUALITY": "pass"
-        },
-        "na_reasons": {
-          "ROBUST_NEIGHBORHOOD": "no predeclared robustness obligation for this risk class"
-        },
-        "claim_verdicts": [
-          {
-            "claim_id": "claim-perp",
-            "result_correct": "pass",
-            "token_truth_linked": "pass"
-          }
-        ],
-        "per_token_v3c": [
-          {
-            "token_id": "tok-B7-perp-1",
-            "status": "pass",
-            "failing_conjunct": null
-          }
-        ],
-        "pathway_state": "adequate",
-        "index": {
-          "analysis_id": "site-perpendicularity-check",
-          "analysis_version": "2.1",
-          "actor": "site-qa-reviewer",
-          "decision_time": "2026-07-02T09:15:00Z",
-          "information_state": "the four-face level readings ev-1 and the cal-lab certificate for level-114, as available at 2026-07-02T09:15:00Z"
-        },
-        "claim_reasoning_paths": [
-          {
-            "claim_id": "claim-perp",
-            "req_reason": [
-              "EVIDENCE_SUPPORT",
-              "PROCEDURE_RELIABLE",
-              "EVIDENCE_CURRENT",
-              "GOV_CONFIG_ADEQUATE",
-              "GOV_POLICY_ADEQUATE",
-              "GOV_TOKEN_ADEQUATE",
-              "EXECUTION_FAITHFUL",
-              "EX_ANTE_JUSTIFIED"
-            ],
-            "reasoning_path_adequate": "adequate"
-          }
-        ]
-      }
+    "meta_policy": "within-tolerance: accept and record; out-of-tolerance: reject, tag, and escalate to the site engineer",
+    "provenance": {
+     "authority": "site engineering standards board",
+     "warrant": "standards-adoption minute 2026-03",
+     "scope": "poured concrete pillars on this site"
     }
-  ]
+   }
+  },
+  {
+   "schema": "metaortheme.schema.json",
+   "instance": {
+    "mu_id": "calibration-policy",
+    "version": "1.0",
+    "governed_component": "E",
+    "states": {
+     "members": [
+      "instrument-calibrated",
+      "instrument-uncalibrated"
+     ],
+     "partition": true
+    },
+    "exclusivity": "exclusive",
+    "selector": {
+     "kind": "record-lookup",
+     "description": "check the calibration-lab certificate registry for the measuring instrument",
+     "inputs": [
+      "cal-lab certificate registry"
+     ],
+     "procedure_ref": "site-QA-SOP-3"
+    },
+    "meta_policy": "instrument-calibrated: measurements admissible; instrument-uncalibrated: measurements inadmissible until recalibration",
+    "provenance": {
+     "authority": "site engineering standards board",
+     "warrant": "standards-adoption minute 2026-03",
+     "scope": "measuring instruments on this site"
+    }
+   }
+  },
+  {
+   "schema": "orthemma.schema.json",
+   "instance": {
+    "identity_key": "pillar-B7",
+    "version": "as-poured-2026-07-01",
+    "kind": "structure"
+   }
+  },
+  {
+   "schema": "metaorthemma.schema.json",
+   "instance": {
+    "token_id": "tok-B7-perp-1",
+    "of_type": {
+     "mu_id": "perpendicularity-standard",
+     "mu_version": "3.0"
+    },
+    "analysis": {
+     "analysis_id": "site-perpendicularity-check",
+     "version": "2.1"
+    },
+    "anchor": {
+     "identity_key": "pillar-B7",
+     "version": "as-poured-2026-07-01"
+    },
+    "governed_component": "E",
+    "binding": {
+     "datum_plane": "floor-slab-datum-D2",
+     "instrument": "level-114",
+     "tolerance_value": 0.002
+    },
+    "scope": {
+     "claims": [
+      "claim-perp"
+     ],
+     "description": "perpendicularity claim only"
+    },
+    "instrument": {
+     "id": "level-114",
+     "calibration_provenance": "cal-lab cert 2026-06-20",
+     "calibration_expiry": "2026-12-20"
+    },
+    "binder": {
+     "actor": "site-engineer-2",
+     "binding_warrant": "work-order-5512",
+     "binding_time": "2026-07-02T08:00:00Z"
+    },
+    "validity": {
+     "effective_from": "2026-07-02",
+     "expiry": null,
+     "superseded_by": null
+    },
+    "no_separate_executor_reason": "this token designates no executor separate from its binder: the episode actor executes under the same warrant, and the binder ROLE remains independently recorded"
+   }
+  },
+  {
+   "schema": "orthing-episode.schema.json",
+   "instance": {
+    "episode_id": "ep-B7-verify-1",
+    "occurrence": {
+     "identity_key": "pillar-B7",
+     "version": "as-poured-2026-07-01",
+     "kind": "structure"
+    },
+    "observation": "level readings at four faces",
+    "evidence": [
+     {
+      "evidence_id": "ev-1",
+      "channel": "instrument-reading",
+      "property_class": "behavioral",
+      "scope": "claim-perp @ as-poured-2026-07-01",
+      "provenance": "level-114 run 2026-07-02",
+      "validity": "until next structural mutation"
+     }
+    ],
+    "actor": "fitter-9",
+    "warrant": "work-order-5512",
+    "analysis": {
+     "analysis_id": "site-perpendicularity-check",
+     "version": "2.1",
+     "task": "verify pillar perpendicularity before load transfer"
+    },
+    "time": "2026-07-02T08:30:00Z/2026-07-02T09:00:00Z",
+    "governing_configuration": {
+     "mu_refs": [
+      {
+       "mu_id": "perpendicularity-standard",
+       "mu_version": "3.0"
+      },
+      {
+       "mu_id": "calibration-policy",
+       "mu_version": "1.0"
+      }
+     ],
+     "precedence": [
+      [
+       "calibration-policy",
+       "perpendicularity-standard"
+      ]
+     ]
+    },
+    "meta_tokens": [
+     {
+      "token_id": "tok-B7-perp-1",
+      "of_type": {
+       "mu_id": "perpendicularity-standard",
+       "mu_version": "3.0"
+      },
+      "analysis": {
+       "analysis_id": "site-perpendicularity-check",
+       "version": "2.1"
+      },
+      "anchor": {
+       "identity_key": "pillar-B7",
+       "version": "as-poured-2026-07-01"
+      },
+      "binding": {
+       "datum_plane": "floor-slab-datum-D2"
+      },
+      "binder": {
+       "actor": "site-engineer-2",
+       "binding_warrant": "work-order-5512",
+       "binding_time": "2026-07-02T08:00:00Z"
+      },
+      "validity": {
+       "superseded_by": null,
+       "effective_from": "2026-07-02"
+      },
+      "governed_component": "E",
+      "scope": {
+       "claims": [
+        "claim-perp"
+       ],
+       "description": "scope as stated in the example prose"
+      },
+      "no_separate_executor_reason": "this token designates no executor separate from its binder: the episode actor executes under the same warrant, and the binder ROLE remains independently recorded"
+     }
+    ],
+    "policy": "four-face measurement per SOP-17",
+    "candidates": {
+     "profile": [
+      {
+       "perpendicularity": "within-tolerance"
+      },
+      {
+       "perpendicularity": "out-of-tolerance"
+      }
+     ]
+    },
+    "placement": {
+     "perpendicularity": "within-tolerance",
+     "surface-condition": [
+      "clean"
+     ]
+    },
+    "route": "release-for-load-transfer",
+    "evidence_status": {
+     "claim-perp": "validated"
+    },
+    "claim_ledger_ref": "inline-below",
+    "action": "release",
+    "successors": [
+     {
+      "identity_key": "pillar-B7",
+      "version": "released-2026-07-02",
+      "action_label": "release"
+     }
+    ],
+    "verdict_record_ref": "inline-below",
+    "record_mode": "audit-ready"
+   }
+  },
+  {
+   "schema": "claim-ledger.schema.json",
+   "instance": {
+    "episode_id": "ep-B7-verify-1",
+    "claims": [
+     {
+      "claim_id": "claim-perp",
+      "proposition": "pillar B7 is perpendicular within 0.002",
+      "target": {
+       "identity_key": "pillar-B7",
+       "version": "as-poured-2026-07-01"
+      },
+      "property_class": "behavioral",
+      "success_surface": "the physical pillar as measured",
+      "evidence_ids": [
+       "ev-1"
+      ],
+      "depends_on_tokens": [
+       "tok-B7-perp-1"
+      ],
+      "verification_status": "validated",
+      "non_claims": [
+       "no claim about surface finish"
+      ],
+      "analysis": {
+       "analysis_id": "site-perpendicularity-check",
+       "version": "2.1"
+      }
+     }
+    ],
+    "residuals": [
+     {
+      "burden_id": "b-1",
+      "description": "verify perpendicularity",
+      "disposition": "validated-resolved",
+      "evidence_refs": [
+       "ev-1"
+      ],
+      "verdict_refs": [
+       "ep-B7-verify-1"
+      ]
+     }
+    ],
+    "closure_claim": {
+     "level": "verification complete",
+     "asserted_by": "fitter-9"
+    }
+   }
+  },
+  {
+   "schema": "verdict-record.schema.json",
+   "instance": {
+    "episode_id": "ep-B7-verify-1",
+    "required_path": [
+     "EVIDENCE_SUPPORT",
+     "PROCEDURE_RELIABLE",
+     "EVIDENCE_CURRENT",
+     "GOV_CONFIG_ADEQUATE",
+     "GOV_POLICY_ADEQUATE",
+     "GOV_TOKEN_ADEQUATE",
+     "EXECUTION_FAITHFUL",
+     "EX_ANTE_JUSTIFIED",
+     "ROUTE_ADMISSIBLE",
+     "CLOSURE_TRUTHFUL"
+    ],
+    "statuses": {
+     "RESULT_CORRECT": "pass",
+     "EVIDENCE_SUPPORT": "pass",
+     "PROCEDURE_RELIABLE": "pass",
+     "EVIDENCE_CURRENT": "pass",
+     "GOV_CONFIG_ADEQUATE": "pass",
+     "GOV_POLICY_ADEQUATE": "pass",
+     "GOV_TOKEN_ADEQUATE": "pass",
+     "EXECUTION_FAITHFUL": "pass",
+     "EX_ANTE_JUSTIFIED": "pass",
+     "ROUTE_ADMISSIBLE": "pass",
+     "CLOSURE_TRUTHFUL": "pass",
+     "TOKEN_TRUTH_LINKED": "pass",
+     "ROBUST_NEIGHBORHOOD": "not-applicable",
+     "ROUTE_QUALITY": "pass"
+    },
+    "na_reasons": {
+     "ROBUST_NEIGHBORHOOD": "no predeclared robustness obligation for this risk class"
+    },
+    "claim_verdicts": [
+     {
+      "claim_id": "claim-perp",
+      "result_correct": "pass",
+      "token_truth_linked": "pass"
+     }
+    ],
+    "per_token_v3c": [
+     {
+      "token_id": "tok-B7-perp-1",
+      "status": "pass",
+      "failing_conjunct": null
+     }
+    ],
+    "pathway_state": "adequate",
+    "index": {
+     "analysis_id": "site-perpendicularity-check",
+     "analysis_version": "2.1",
+     "actor": "site-qa-reviewer",
+     "decision_time": "2026-07-02T09:15:00Z",
+     "information_state": "the four-face level readings ev-1 and the cal-lab certificate for level-114, as available at 2026-07-02T09:15:00Z"
+    },
+    "claim_reasoning_paths": [
+     {
+      "claim_id": "claim-perp",
+      "req_reason": [
+       "EVIDENCE_SUPPORT",
+       "PROCEDURE_RELIABLE",
+       "EVIDENCE_CURRENT",
+       "GOV_CONFIG_ADEQUATE",
+       "GOV_POLICY_ADEQUATE",
+       "GOV_TOKEN_ADEQUATE",
+       "EXECUTION_FAITHFUL",
+       "EX_ANTE_JUSTIFIED"
+      ],
+      "reasoning_path_adequate": "adequate"
+     }
+    ]
+   }
+  }
+ ]
 }

@@ -97,9 +97,18 @@
        ]
       }
      }
+    },
+    {
+     "properties": {
+      "scope": {
+       "required": [
+        "external_scope"
+       ]
+      }
+     }
     }
    ],
-   "description": "scope must carry the dependent claims or an explicit typed reason why no claim depends on this token"
+   "description": "scope must carry the dependent claims, an explicit typed reason why no claim depends on this token, or a declared external scope model (D6: the dependent claims live outside this bundle)"
   }
  ],
  "properties": {

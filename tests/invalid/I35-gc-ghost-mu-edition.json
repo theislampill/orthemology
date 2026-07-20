@@ -1,0 +1,78 @@
+{
+  "id": "I35-gc-ghost-mu-edition",
+  "why": "a governing configuration naming a metaortheme edition the bundle does not declare, while the bundle declares another edition of the same mu_id: unresolved mu_refs must be diagnosed (D5)",
+  "expect_layer": "semantic",
+  "parts": [
+    {
+      "schema": "metaortheme.schema.json",
+      "instance": {
+        "mu_id": "mu-x",
+        "version": "1.0",
+        "governed_component": "V",
+        "states": {
+          "members": [
+            "s1",
+            "s2"
+          ],
+          "partition": true
+        },
+        "exclusivity": "exclusive",
+        "selector": {
+          "kind": "inspection",
+          "description": "declared selector"
+        },
+        "meta_policy": "s1: accept; s2: reject",
+        "provenance": {
+          "authority": "board",
+          "warrant": "minute-1",
+          "scope": "occ-x cases"
+        }
+      }
+    },
+    {
+      "schema": "orthing-episode.schema.json",
+      "instance": {
+        "episode_id": "ep-gc",
+        "record_mode": "minimal",
+        "occurrence": {
+          "identity_key": "occ-x",
+          "version": "v1",
+          "kind": "case"
+        },
+        "observation": "observed state of occ-x",
+        "evidence": [
+          {
+            "evidence_id": "ev-ep-gc",
+            "channel": "inspection",
+            "property_class": "behavioral",
+            "scope": "occ-x @ v1",
+            "provenance": "inspector",
+            "validity": "this case"
+          }
+        ],
+        "actor": "actor-ep-gc",
+        "warrant": "warrant-1",
+        "analysis": {
+          "analysis_id": "an-x",
+          "version": "1.0",
+          "task": "classify occ-x"
+        },
+        "time": "2026-07-10T10:00:00Z",
+        "policy": "declared policy",
+        "placement": {
+          "kind": "class-a"
+        },
+        "verdict_record_ref": null,
+        "governing_configuration": {
+          "mu_refs": [
+            {
+              "mu_id": "mu-x",
+              "mu_version": "2.0"
+            }
+          ],
+          "precedence": []
+        }
+      }
+    }
+  ]
+}

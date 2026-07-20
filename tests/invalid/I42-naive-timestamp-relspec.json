@@ -1,0 +1,131 @@
+{
+  "id": "I42-naive-timestamp-relspec",
+  "why": "a timezone-naive RelSpec declaration time where pre-outcome ordering matters: naive timestamps must be rejected wherever ordering matters (D7)",
+  "expect_layer": "semantic",
+  "parts": [
+    {
+      "schema": "orthing-episode.schema.json",
+      "instance": {
+        "episode_id": "ep-naive-ts",
+        "record_mode": "minimal",
+        "occurrence": {
+          "identity_key": "occ-x",
+          "version": "v1",
+          "kind": "case"
+        },
+        "observation": "observed state of occ-x",
+        "evidence": [
+          {
+            "evidence_id": "ev-ep-naive-ts",
+            "channel": "inspection",
+            "property_class": "behavioral",
+            "scope": "occ-x @ v1",
+            "provenance": "inspector",
+            "validity": "this case"
+          }
+        ],
+        "actor": "actor-ep-naive-ts",
+        "warrant": "warrant-1",
+        "analysis": {
+          "analysis_id": "an-x",
+          "version": "1.0",
+          "task": "classify occ-x"
+        },
+        "time": "2026-07-10T10:00:00Z",
+        "policy": "declared policy",
+        "placement": {
+          "kind": "class-a"
+        },
+        "verdict_record_ref": null,
+        "meta_tokens": [
+          {
+            "token_id": "tok-nt",
+            "of_type": {
+              "mu_id": "mu-x",
+              "mu_version": "1.0"
+            },
+            "analysis": {
+              "analysis_id": "an-x",
+              "version": "1.0"
+            },
+            "anchor": {
+              "identity_key": "occ-x",
+              "version": "v1"
+            },
+            "governed_component": "V",
+            "binding": {
+              "threshold": 1
+            },
+            "scope": {
+              "no_claim_dependency_reason": "illustrative token; no claim depends on it"
+            },
+            "binder": {
+              "actor": "binder-1",
+              "binding_warrant": "bw-1",
+              "binding_time": "2026-07-01T00:00:00Z"
+            },
+            "validity": {
+              "effective_from": "2026-07-01T00:00:00Z",
+              "expiry": null,
+              "superseded_by": null
+            },
+            "no_separate_executor_reason": "episode actor executes under the same warrant"
+          }
+        ]
+      }
+    },
+    {
+      "schema": "verdict-record.schema.json",
+      "instance": {
+        "episode_id": "ep-naive-ts",
+        "required_path": [
+          "EVIDENCE_SUPPORT",
+          "PROCEDURE_RELIABLE",
+          "EVIDENCE_CURRENT",
+          "GOV_CONFIG_ADEQUATE",
+          "GOV_POLICY_ADEQUATE",
+          "GOV_TOKEN_ADEQUATE",
+          "EXECUTION_FAITHFUL",
+          "EX_ANTE_JUSTIFIED"
+        ],
+        "statuses": {
+          "EVIDENCE_SUPPORT": "pass",
+          "PROCEDURE_RELIABLE": "pass",
+          "EVIDENCE_CURRENT": "pass",
+          "GOV_CONFIG_ADEQUATE": "pass",
+          "GOV_POLICY_ADEQUATE": "pass",
+          "GOV_TOKEN_ADEQUATE": "pass",
+          "EXECUTION_FAITHFUL": "pass",
+          "EX_ANTE_JUSTIFIED": "pass",
+          "RESULT_CORRECT": "pass",
+          "TOKEN_TRUTH_LINKED": "pass"
+        },
+        "pathway_state": "adequate",
+        "index": {
+          "analysis_id": "an-x",
+          "analysis_version": "1.0",
+          "actor": "reviewer-1",
+          "decision_time": "2026-07-10T12:00:00Z",
+          "information_state": "the recorded evidence as available at 2026-07-10T12:00:00Z"
+        },
+        "rel_spec": {
+          "c-any": {
+            "procedure_id": "scan-log-marker-check",
+            "procedure_version": "scanner 4.2 under gate policy release-compliance 1.0",
+            "reference_class": "all artifacts gated by scanner 4.2 under analysis release-compliance 1.0",
+            "risk_stratum": "release gate: a false clean permits a noncompliant artifact to ship",
+            "metric": "sensitivity: the fraction of noncompliant artifacts the gate rejects",
+            "threshold": 0.99,
+            "evaluation_protocol": "paired metamorphic probes over compliant and noncompliant artifacts, adjudicated against the scanner's own findings",
+            "evidence_basis": "none measured: the marker-string check was never evaluated against noncompliant artifacts, which is why PROCEDURE_RELIABLE fails here",
+            "declared_at": "2026-07-10T08:00:00",
+            "validity": {
+              "effective_from": "2026-06-01T00:00:00Z",
+              "expiry": null
+            }
+          }
+        }
+      }
+    }
+  ]
+}

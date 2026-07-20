@@ -79,16 +79,25 @@ def main():
     check("negative suite covers both layers", n_schema >= 4 and n_semantic >= 3,
           "schema=%d semantic=%d" % (n_schema, n_semantic))
 
-    # Part 2: the R4 invalid-fixture corpus, one file per malformed class
+    # Part 2: the R4 invalid-fixture corpus, one file per malformed class.
+    # A fixture is either single-record ({schema, instance}) or, for defects
+    # that only exist BETWEEN records (inheritance cycles, cross-episode token
+    # collisions, scope leakage), a multi-record bundle ({parts: [...]}) — the
+    # R4 independent-review extension.
     idir = os.path.join(ROOT, "tests", "invalid")
     i_schema = i_semantic = 0
     for fn in sorted(os.listdir(idir)):
         if not fn.endswith(".json"):
             continue
         f = json.load(open(os.path.join(idir, fn), encoding="utf-8"))
-        for key in ("id", "why", "expect_layer", "schema", "instance"):
+        keys = ("id", "why", "expect_layer") + (("parts",) if "parts" in f
+                                                else ("schema", "instance"))
+        for key in keys:
             check("invalid fixture %s declares %s" % (fn, key), key in f)
-        accepted = schema_accepts(schemas, registry, f["schema"], f["instance"])
+        parts = f["parts"] if "parts" in f else [{"schema": f["schema"],
+                                                  "instance": f["instance"]}]
+        accepted = all(schema_accepts(schemas, registry, p["schema"], p["instance"])
+                       for p in parts)
         if f["expect_layer"] == "schema":
             i_schema += 1
             check("invalid %s rejected by schema" % f["id"], not accepted,
@@ -98,7 +107,7 @@ def main():
             check("invalid %s is schema-valid by design" % f["id"], accepted,
                   "a semantic fixture must pass the schema layer, or it proves nothing about "
                   "the semantic layer")
-            issues = collect_issues([{"schema": f["schema"], "instance": f["instance"]}])
+            issues = collect_issues(parts)
             check("invalid %s flagged by cross-record semantics" % f["id"], bool(issues))
     check("invalid corpus covers the audited classes at both layers",
           i_schema >= 15 and i_semantic >= 6,

@@ -1,0 +1,173 @@
+{
+  "id": "I44-req-reason-omission",
+  "why": "a verdict record whose recorded claim projection omits the failing GOV_TOKEN_ADEQUATE although the ledger claim declares token dependencies: ReqReason_q must match the governance derivation, so the omission cannot manufacture claim-level adequacy (D8, audit section 5)",
+  "expect_layer": "semantic",
+  "parts": [
+    {
+      "schema": "orthing-episode.schema.json",
+      "instance": {
+        "episode_id": "ep-omit",
+        "record_mode": "minimal",
+        "occurrence": {
+          "identity_key": "occ-x",
+          "version": "v1",
+          "kind": "case"
+        },
+        "observation": "observed state of occ-x",
+        "evidence": [
+          {
+            "evidence_id": "ev-ep-omit",
+            "channel": "inspection",
+            "property_class": "behavioral",
+            "scope": "occ-x @ v1",
+            "provenance": "inspector",
+            "validity": "this case"
+          }
+        ],
+        "actor": "actor-ep-omit",
+        "warrant": "warrant-1",
+        "analysis": {
+          "analysis_id": "an-x",
+          "version": "1.0",
+          "task": "classify occ-x"
+        },
+        "time": "2026-07-10T10:00:00Z",
+        "policy": "declared policy",
+        "placement": {
+          "kind": "class-a"
+        },
+        "verdict_record_ref": null,
+        "meta_tokens": [
+          {
+            "token_id": "tok-omit",
+            "of_type": {
+              "mu_id": "mu-x",
+              "mu_version": "1.0"
+            },
+            "analysis": {
+              "analysis_id": "an-x",
+              "version": "1.0"
+            },
+            "anchor": {
+              "identity_key": "occ-x",
+              "version": "v1"
+            },
+            "governed_component": "V",
+            "binding": {
+              "threshold": 1
+            },
+            "scope": {
+              "claims": [
+                "c-omit"
+              ]
+            },
+            "binder": {
+              "actor": "binder-1",
+              "binding_warrant": "bw-1",
+              "binding_time": "2026-07-01T00:00:00Z"
+            },
+            "validity": {
+              "effective_from": "2026-07-01T00:00:00Z",
+              "expiry": null,
+              "superseded_by": null
+            },
+            "no_separate_executor_reason": "episode actor executes under the same warrant"
+          }
+        ]
+      }
+    },
+    {
+      "schema": "claim-ledger.schema.json",
+      "instance": {
+        "episode_id": "ep-omit",
+        "claims": [
+          {
+            "claim_id": "c-omit",
+            "proposition": "occ-x is class-a",
+            "target": {
+              "identity_key": "occ-x",
+              "version": "v1"
+            },
+            "property_class": "behavioral",
+            "success_surface": "occ-x as measured",
+            "evidence_ids": [
+              "ev-ep-omit"
+            ],
+            "verification_status": "validated",
+            "analysis": {
+              "analysis_id": "an-x",
+              "version": "1.0"
+            },
+            "depends_on_tokens": [
+              "tok-omit"
+            ]
+          }
+        ],
+        "residuals": [
+          {
+            "burden_id": "b-ep-omit",
+            "description": "verify the placement",
+            "disposition": "validated-resolved",
+            "evidence_refs": [
+              "ev-ep-omit"
+            ],
+            "verdict_refs": [
+              "ep-omit"
+            ]
+          }
+        ]
+      }
+    },
+    {
+      "schema": "verdict-record.schema.json",
+      "instance": {
+        "episode_id": "ep-omit",
+        "required_path": [
+          "EVIDENCE_SUPPORT",
+          "PROCEDURE_RELIABLE",
+          "EVIDENCE_CURRENT",
+          "GOV_CONFIG_ADEQUATE",
+          "GOV_POLICY_ADEQUATE",
+          "GOV_TOKEN_ADEQUATE",
+          "EXECUTION_FAITHFUL",
+          "EX_ANTE_JUSTIFIED"
+        ],
+        "statuses": {
+          "EVIDENCE_SUPPORT": "pass",
+          "PROCEDURE_RELIABLE": "pass",
+          "EVIDENCE_CURRENT": "pass",
+          "GOV_CONFIG_ADEQUATE": "pass",
+          "GOV_POLICY_ADEQUATE": "pass",
+          "GOV_TOKEN_ADEQUATE": "fail",
+          "EXECUTION_FAITHFUL": "pass",
+          "EX_ANTE_JUSTIFIED": "pass",
+          "RESULT_CORRECT": "pass",
+          "TOKEN_TRUTH_LINKED": "fail"
+        },
+        "pathway_state": "defective",
+        "index": {
+          "analysis_id": "an-x",
+          "analysis_version": "1.0",
+          "actor": "reviewer-1",
+          "decision_time": "2026-07-10T12:00:00Z",
+          "information_state": "the recorded evidence as available at 2026-07-10T12:00:00Z"
+        },
+        "claim_reasoning_paths": [
+          {
+            "claim_id": "c-omit",
+            "req_reason": [
+              "EVIDENCE_SUPPORT",
+              "PROCEDURE_RELIABLE",
+              "EVIDENCE_CURRENT",
+              "GOV_CONFIG_ADEQUATE",
+              "GOV_POLICY_ADEQUATE",
+              "EXECUTION_FAITHFUL",
+              "EX_ANTE_JUSTIFIED"
+            ],
+            "reasoning_path_adequate": "adequate"
+          }
+        ]
+      }
+    }
+  ]
+}

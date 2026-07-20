@@ -1,0 +1,83 @@
+{
+  "id": "I38-token-outside-governing-config",
+  "why": "an embedded token whose of_type is not among the episode's declared governing configuration mu_refs: embedded tokens must agree with the governing configuration (D5)",
+  "expect_layer": "semantic",
+  "schema": "orthing-episode.schema.json",
+  "instance": {
+    "episode_id": "ep-tok-outside",
+    "record_mode": "minimal",
+    "occurrence": {
+      "identity_key": "occ-x",
+      "version": "v1",
+      "kind": "case"
+    },
+    "observation": "observed state of occ-x",
+    "evidence": [
+      {
+        "evidence_id": "ev-ep-tok-outside",
+        "channel": "inspection",
+        "property_class": "behavioral",
+        "scope": "occ-x @ v1",
+        "provenance": "inspector",
+        "validity": "this case"
+      }
+    ],
+    "actor": "actor-ep-tok-outside",
+    "warrant": "warrant-1",
+    "analysis": {
+      "analysis_id": "an-x",
+      "version": "1.0",
+      "task": "classify occ-x"
+    },
+    "time": "2026-07-10T10:00:00Z",
+    "policy": "declared policy",
+    "placement": {
+      "kind": "class-a"
+    },
+    "verdict_record_ref": null,
+    "meta_tokens": [
+      {
+        "token_id": "tok-outside",
+        "of_type": {
+          "mu_id": "mu-undeclared",
+          "mu_version": "1.0"
+        },
+        "analysis": {
+          "analysis_id": "an-x",
+          "version": "1.0"
+        },
+        "anchor": {
+          "identity_key": "occ-x",
+          "version": "v1"
+        },
+        "governed_component": "V",
+        "binding": {
+          "threshold": 1
+        },
+        "scope": {
+          "no_claim_dependency_reason": "illustrative token; no claim depends on it"
+        },
+        "binder": {
+          "actor": "binder-1",
+          "binding_warrant": "bw-1",
+          "binding_time": "2026-07-01T00:00:00Z"
+        },
+        "validity": {
+          "effective_from": "2026-07-01T00:00:00Z",
+          "expiry": null,
+          "superseded_by": null
+        },
+        "no_separate_executor_reason": "episode actor executes under the same warrant"
+      }
+    ],
+    "governing_configuration": {
+      "mu_refs": [
+        {
+          "mu_id": "mu-x",
+          "mu_version": "1.0"
+        }
+      ],
+      "precedence": []
+    }
+  }
+}

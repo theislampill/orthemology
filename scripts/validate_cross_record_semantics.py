@@ -42,12 +42,81 @@ R4 additions (the reference-model semantic contract the schemas cannot carry):
   - RelSpec declared_at must precede any recorded result time (pre-outcome
     declaration);
   - PerturbSpec invariants must not appear in varied_fields.
+
+R4 INDEPENDENT-REVIEW additions (audit probes 6.1-6.8):
+  - D1: analysis inheritance is non-self, acyclic, single-parent; the
+    materialized effective analysis must declare every constitutive component;
+  - D3: token_id is globally unique across the bundle; a standalone record may
+    redeclare an embedded token only coherently (same of_type and anchor);
+  - D4: a standalone token names its owning_episode or declares an external
+    scope; token claim-scope is checked ONLY against the owning episode's
+    ledger(s);
+  - D5: governing-configuration mu_refs and token of_type resolve against
+    declared metaortheme editions; embedded tokens sit inside the declared
+    configuration; precedence is irreflexive and acyclic over declared types;
+  - D6: an audit-ready record's analysis/occurrence/metaortheme references
+    resolve bundle-locally or are declared in external_refs with a registry;
+    an 'unresolved' external reference is incompatible with audit-readiness;
+  - D7: orderings (RelSpec pre-outcome; token validity intervals) are computed
+    on timezone-aware UTC instants; naive timestamps are rejected wherever
+    ordering matters;
+  - D8: claim-wise truth-link factivity, and req_reason must EQUAL the
+    governance derivation from the ledger claim's declared shape
+    (docs/claim-reason-requirements.yaml) — omission attacks are flagged.
+
+SCOPE (D9): everything this validator establishes is BUNDLE-LOCAL consistency —
+one example file's parts, or one bundle handed to collect_issues. No store-level
+claim (global lineage, cross-bundle handoff cycles, cross-bundle token identity,
+registry-wide source consistency) is made or implied by a pass.
 """
+import datetime
 import json
 import os
 import sys
 
 ROOT = os.path.dirname(os.path.dirname(os.path.abspath(__file__)))
+
+# Machine-readable RequiredReasonBy rule table (Decision 0011; D8): used to
+# recompute each claim's ReqReason_q projection from its declared shape so an
+# omitted or padded projection is detected, never trusted.
+try:
+    import yaml
+    with open(os.path.join(ROOT, "docs", "claim-reason-requirements.yaml"),
+              encoding="utf-8") as _f:
+        REASON_RULES = yaml.safe_load(_f)["rules"]
+except Exception:
+    REASON_RULES = None
+
+
+def reason_required(verdict, claim_shape):
+    """Does the claim-reason rule table make `verdict` claim-relevant?"""
+    rule = (REASON_RULES or {}).get(verdict)
+    if rule is None:
+        return False
+    cond = rule["when"]
+    if cond == "always":
+        return True
+    if cond.startswith("claim_type="):
+        return claim_shape.get("claim_type") == cond.split("=", 1)[1]
+    if cond.startswith("not_"):
+        return not bool(claim_shape.get(cond[4:], False))
+    return bool(claim_shape.get(cond, False))
+
+
+def _parse_ts(val):
+    """Timezone-aware ISO-8601 parse normalized to UTC (D7). Returns
+    (datetime | None, problem | None). Naive timestamps are a problem wherever
+    ordering matters: lexicographic string comparison is wrong across mixed
+    UTC offsets, so ordering is only ever computed on aware UTC instants."""
+    if not isinstance(val, str) or not val:
+        return None, "missing or not a string"
+    try:
+        dt = datetime.datetime.fromisoformat(val.replace("Z", "+00:00"))
+    except ValueError:
+        return None, "not parseable as ISO-8601"
+    if dt.tzinfo is None:
+        return None, "timezone-naive"
+    return dt.astimezone(datetime.timezone.utc), None
 FAILS = []
 
 
@@ -101,6 +170,9 @@ def collect_issues(parts):
     ledgers = inst_of("claim-ledger.schema.json")
     analyses = inst_of("analysis.schema.json")
     orthemmas = inst_of("orthemma.schema.json")
+    metaorthemes = inst_of("metaortheme.schema.json")
+    mu_editions = {(m.get("mu_id"), m.get("version")) for m in metaorthemes}
+    mu_declared_ids = {m for m, _ in mu_editions}
     standalone_token_recs = inst_of("metaorthemma.schema.json")
     standalone_tokens = {t["token_id"] for t in standalone_token_recs}
     standalone_handoffs = inst_of("handoff.schema.json")
@@ -192,6 +264,52 @@ def collect_issues(parts):
             issues.append("analysis %s: inherits_from %s@%s does not resolve in the bundle"
                           % (a.get("analysis_id"), par.get("analysis_id"), par.get("version")))
 
+    # D1 (R4 independent review): inheritance is single-parent (structurally, by
+    # schema), non-self, acyclic, and the MATERIALIZED effective analysis must
+    # satisfy the full declaration contract — every constitutive component
+    # declared somewhere on the chain, child override winning.
+    CONSTITUTIVE = ["task", "boundary", "repertoire_ref", "evidence_repertoire",
+                    "action_repertoire", "loss", "hard_constraints", "horizon",
+                    "tolerance", "representation_family", "merger_family",
+                    "governance_boundary"]
+    an_by_edition = {(a.get("analysis_id"), a.get("version")): a for a in analyses}
+    for a in analyses:
+        start = (a.get("analysis_id"), a.get("version"))
+        node, seen, chain, cycle, unresolved = a, set(), [], False, False
+        effective = {}
+        while True:
+            key = (node.get("analysis_id"), node.get("version"))
+            if key in seen:
+                cycle = True
+                issues.append("analysis %s@%s: inheritance cycle %s — the graph must be "
+                              "acyclic and self-inheritance is forbidden"
+                              % (start[0], start[1], " -> ".join(chain + ["%s@%s" % key])))
+                break
+            seen.add(key)
+            chain.append("%s@%s" % key)
+            for comp in CONSTITUTIVE:
+                if comp not in effective and comp in node:
+                    effective[comp] = node[comp]
+            par = node.get("inherits_from")
+            if not par:
+                break
+            pkey = (par.get("analysis_id"), par.get("version"))
+            if pkey == key:
+                cycle = True
+                issues.append("analysis %s@%s: inherits from ITSELF" % key)
+                break
+            if pkey not in an_by_edition:
+                unresolved = True  # already reported by the resolution check above
+                break
+            node = an_by_edition[pkey]
+        if a.get("inherits_from") and not cycle and not unresolved:
+            missing = [c for c in CONSTITUTIVE if c not in effective]
+            if missing:
+                issues.append("analysis %s@%s: materialized effective analysis is INCOMPLETE — "
+                              "no record on the chain %s declares %s (a value or a typed "
+                              "disposition is required for every constitutive component)"
+                              % (start[0], start[1], " -> ".join(chain), missing))
+
     # ---------------------------------------------------------------- 3. episodes
     for ep in episodes:
         eid = ep.get("episode_id", "?")
@@ -218,6 +336,88 @@ def collect_issues(parts):
                 issues.append("%s: meta-token %s lacks an independent binder role"
                               % (eid, tok.get("token_id")))
 
+        # ---- governing configuration (D5): resolvable mu_refs, tokens typed
+        # inside the configuration, precedence an irreflexive acyclic relation
+        # over declared nodes (transitive closure is DERIVED, never stored).
+        gc = ep.get("governing_configuration") or {}
+        gc_refs = [(r.get("mu_id"), r.get("mu_version")) for r in gc.get("mu_refs", [])]
+        for mid, mv in gc_refs:
+            if mid in mu_declared_ids and (mid, mv) not in mu_editions:
+                issues.append("%s: governing configuration names metaortheme %s@%s but the "
+                              "bundle declares different edition(s) of %s"
+                              % (eid, mid, mv, mid))
+        if gc:
+            for tok in ep.get("meta_tokens", []):
+                oft = tok.get("of_type") or {}
+                key = (oft.get("mu_id"), oft.get("mu_version"))
+                if key not in gc_refs:
+                    issues.append("%s: token %s is typed %s@%s, OUTSIDE the episode's declared "
+                                  "governing configuration" % (eid, tok.get("token_id"),
+                                                               key[0], key[1]))
+            config_ids = {m for m, _ in gc_refs}
+            adj = {}
+            for pair in gc.get("precedence", []):
+                a, b = pair[0], pair[1]
+                if a == b:
+                    issues.append("%s: precedence self-edge [%s, %s] — the relation is "
+                                  "irreflexive" % (eid, a, b))
+                    continue
+                for nd in (a, b):
+                    if nd not in config_ids:
+                        issues.append("%s: precedence edge [%s, %s] names %s, which is not a "
+                                      "declared governing type" % (eid, a, b, nd))
+                adj.setdefault(a, []).append(b)
+            state = {}
+            def _cyc(n, trail):
+                state[n] = 1
+                for nxt in adj.get(n, []):
+                    if state.get(nxt) == 1:
+                        issues.append("%s: precedence cycle through %s"
+                                      % (eid, " -> ".join(trail + [nxt])))
+                        return True
+                    if state.get(nxt) != 2 and _cyc(nxt, trail + [nxt]):
+                        return True
+                state[n] = 2
+                return False
+            for n in sorted(adj):
+                if state.get(n) is None and _cyc(n, [n]):
+                    break
+
+        # ---- audit-ready external-reference completeness (D6): references must
+        # resolve bundle-locally, or be DECLARED in external_refs with a registry
+        # and a resolution status; an unresolved reference is incompatible with
+        # audit-readiness. Silent external references are the defect.
+        if ep.get("record_mode") == "audit-ready":
+            ext = {}
+            for x in ep.get("external_refs", []) or []:
+                key = (x.get("kind"), x.get("ref"))
+                if key in ext:
+                    issues.append("%s: duplicate external_refs entry %s" % (eid, key))
+                ext[key] = x
+                if x.get("resolution_status") == "unresolved":
+                    issues.append("%s: external reference %s %r is UNRESOLVED — an audit-ready "
+                                  "record cannot rest on unresolved references; downgrade the "
+                                  "record mode or resolve the reference" % (eid, x.get("kind"),
+                                                                            x.get("ref")))
+
+            def need(kind, ref, resolves):
+                if resolves:
+                    return
+                if (kind, ref) not in ext:
+                    issues.append("%s: audit-ready record cites %s %r that resolves nowhere in "
+                                  "the bundle and is not declared in external_refs (SILENT "
+                                  "external reference)" % (eid, kind, ref))
+
+            need("analysis", "%s@%s" % (ean.get("analysis_id"), ean.get("version")),
+                 ean.get("version") in analysis_by_id.get(ean.get("analysis_id"), set()))
+            kv0 = orthemma_versions.get(eoc.get("identity_key"))
+            need("occurrence", "%s@%s" % (eoc.get("identity_key"), eoc.get("version")),
+                 kv0 is not None and eoc.get("version") in kv0)
+            for tok in ep.get("meta_tokens", []):
+                oft = tok.get("of_type") or {}
+                need("metaortheme", "%s@%s" % (oft.get("mu_id"), oft.get("mu_version")),
+                     (oft.get("mu_id"), oft.get("mu_version")) in mu_editions)
+
         ev_ids = [e["evidence_id"] for e in ep.get("evidence", [])]
         if len(ev_ids) != len(set(ev_ids)):
             issues.append("%s: duplicate evidence ids %s"
@@ -242,6 +442,28 @@ def collect_issues(parts):
                           "future extension)" % tid)
         if not tok.get("binder", {}).get("binding_warrant"):
             issues.append("token %s: binder records no binding warrant" % tid)
+        # D5: a token's type reference must match a declared metaortheme edition
+        # whenever the bundle declares that mu_id at all
+        if isinstance(oft, dict):
+            key = (oft.get("mu_id"), oft.get("mu_version"))
+            if key[0] in mu_declared_ids and key not in mu_editions:
+                issues.append("token %s: of_type %s@%s does not match any declared edition "
+                              "of %s in the bundle" % (tid, key[0], key[1], key[0]))
+        # D7: token validity interval is ordered on timezone-aware UTC instants
+        val = tok.get("validity") or {}
+        eff_raw, exp_raw = val.get("effective_from"), val.get("expiry")
+        if eff_raw is not None and exp_raw is not None:
+            eff_dt, p1 = _parse_ts(eff_raw)
+            exp_dt, p2 = _parse_ts(exp_raw)
+            if p1:
+                issues.append("token %s: validity.effective_from %r is %s — interval ordering "
+                              "requires an aware instant" % (tid, eff_raw, p1))
+            elif p2:
+                issues.append("token %s: validity.expiry %r is %s — interval ordering requires "
+                              "an aware instant" % (tid, exp_raw, p2))
+            elif eff_dt > exp_dt:
+                issues.append("token %s: validity is INVERTED — effective_from %s is after "
+                              "expiry %s (UTC-normalized)" % (tid, eff_raw, exp_raw))
         if not tok.get("binding"):
             issues.append("token %s: empty binding — a metaorthemma exists only where material "
                           "binding exists (M1 zero-burden rule)" % tid)
@@ -457,7 +679,16 @@ def collect_issues(parts):
             if dups(ids):
                 issues.append("%s: %s carries duplicate claim id(s) %s" % (vid, label, dups(ids)))
 
+        # claim-wise factivity (D8): a truth-linked claim is a correct claim
+        for c in vr.get("claim_verdicts", []):
+            if c.get("token_truth_linked") == "pass" and c.get("result_correct") != "pass":
+                issues.append("%s: claim %s has token_truth_linked=pass with result_correct=%r — "
+                              "the truth link is factive claim-wise (V2b^tok_q entails V1_q)"
+                              % (vid, c.get("claim_id"), c.get("result_correct")))
+
         # claim-relative reasoning paths (B2): recomputed over their OWN projection
+        led_claim_by_id = {c["claim_id"]: c for led in ledger_by_episode.get(vid, [])
+                           for c in led.get("claims", [])}
         for crp in vr.get("claim_reasoning_paths", []):
             cid, rr = crp["claim_id"], crp["req_reason"]
             outside = [v for v in rr if v not in req]
@@ -469,6 +700,25 @@ def collect_issues(parts):
                 issues.append("%s: claim %s reasoning_path_adequate %r does not recompute over its "
                               "own req_reason (computed %r)"
                               % (vid, cid, crp["reasoning_path_adequate"], recomputed))
+            # D8 / audit §5: the projection itself must equal the governance
+            # DERIVATION from the ledger claim's declared shape — an omitted (or
+            # padded) recorded projection is flagged, never trusted.
+            lc = led_claim_by_id.get(cid)
+            if lc is not None and REASON_RULES:
+                shape = {"claim_type": lc.get("claim_type", "placement"),
+                         "depends_on_tokens": bool(lc.get("depends_on_tokens")),
+                         "currency_exempt": bool(lc.get("currency_exempt", False)),
+                         "robustness_obligation": bool(
+                             lc.get("robustness_obligation",
+                                    "ROBUST_NEIGHBORHOOD" in req))}
+                derived = [v for v in req if reason_required(v, shape)]
+                if sorted(rr) != sorted(derived):
+                    omitted = sorted(set(derived) - set(rr))
+                    padded = sorted(set(rr) - set(derived))
+                    issues.append("%s: claim %s req_reason does not match the governance "
+                                  "derivation from the claim's declared shape (omitted %s, "
+                                  "padded %s) — ReqReason_q is derived, never chosen after "
+                                  "the outcome" % (vid, cid, omitted, padded))
 
         # RelSpec: pre-outcome declaration
         result_times = [t for t in (idx.get("decision_time"),
@@ -479,11 +729,26 @@ def collect_issues(parts):
                               % (vid, cid))
                 continue
             dat = rs.get("declared_at")
+            if dat is None:
+                continue
+            # D7: ordering on timezone-aware UTC instants — lexicographic string
+            # comparison inverts orderings across mixed UTC offsets.
+            ddat, prob = _parse_ts(dat)
+            if prob:
+                issues.append("%s: RelSpec for claim %s declared_at %r is %s — pre-outcome "
+                              "ordering requires a timezone-aware instant" % (vid, cid, dat, prob))
+                continue
             for rt in result_times:
-                if dat is not None and dat >= rt:
+                drt, rprob = _parse_ts(rt)
+                if rprob:
+                    issues.append("%s: recorded result time %r is %s — pre-outcome ordering "
+                                  "requires a timezone-aware instant" % (vid, rt, rprob))
+                    continue
+                if ddat >= drt:
                     issues.append("%s: RelSpec for claim %s declared at %s, not before the recorded "
-                                  "result time %s — a reliability figure declared at or after the "
-                                  "outcome is not a pre-outcome declaration" % (vid, cid, dat, rt))
+                                  "result time %s (UTC-normalized) — a reliability figure declared "
+                                  "at or after the outcome is not a pre-outcome declaration"
+                                  % (vid, cid, dat, rt))
                     break
 
         # PerturbSpec: invariants and varied fields are disjoint

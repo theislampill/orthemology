@@ -76,6 +76,8 @@ def derive_req_reason(claim_shape, rules, core, req_path):
             needed = True
         elif cond.startswith("claim_type="):
             needed = claim_shape.get("claim_type") == cond.split("=", 1)[1]
+        elif cond.startswith("not_"):
+            needed = not bool(claim_shape.get(cond[4:], False))
         else:
             needed = bool(claim_shape.get(cond, False))
         if needed and v not in req_path:

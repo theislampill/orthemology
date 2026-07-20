@@ -63,7 +63,8 @@
        "analysis_id": "deploy-governance",
        "version": "3.2"
       },
-      "evidence_inapplicable_reason": "this example records the governance token and the ledger only; no evidence item is registered in the bundle, so no evidence id can honestly be cited"
+      "evidence_inapplicable_reason": "this example records the governance token and the ledger only; no evidence item is registered in the bundle, so no evidence id can honestly be cited",
+      "currency_exempt": true
      },
      {
       "claim_id": "claim-in-force",

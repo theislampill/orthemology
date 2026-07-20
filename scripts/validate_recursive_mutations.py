@@ -79,6 +79,26 @@ FAMILIES = [
      "collapse a candidate SET of complete profiles into one partial profile (B1)"),
     ("18", "collapse-claim-path-into-episode-path",
      "overwrite a claim's reasoning adequacy with the episode-level pathway state (B2)"),
+    ("19", "inheritance-self-or-ghost",
+     "make an analysis inherit from itself, or from a parent that resolves nowhere (D1)"),
+    ("20", "cross-episode-token-collision",
+     "rename an embedded token to another episode's token id (global identity, D3)"),
+    ("21", "token-scope-cross-ledger-leak",
+     "point a token's claim scope at a claim owned by ANOTHER episode's ledger (D4)"),
+    ("22", "ghost-metaortheme-reference",
+     "repoint a governing-configuration mu_ref or a token of_type at an undeclared edition (D5)"),
+    ("23", "precedence-self-or-cycle",
+     "add a precedence self-edge, or close a 2-cycle over declared governing types (D5)"),
+    ("24", "mixed-offset-time-reversal",
+     "postdate a RelSpec past the outcome using a UTC offset that string-compares earlier, "
+     "or make it timezone-naive (D7)"),
+    ("25", "invert-token-validity",
+     "set a token's expiry before its effective_from (D7)"),
+    ("26", "silent-external-reference",
+     "strip or unresolve an audit-ready record's external_refs, or desynchronise its "
+     "analysis from the bundle (D6)"),
+    ("27", "omit-claim-reasoning-verdict",
+     "drop one entry from a claim's recorded req_reason projection (omission attack, D8)"),
 ]
 
 MUTANT_MARK = "MUTANT-NO-SUCH-ID"
@@ -502,6 +522,145 @@ def generate(engine, ctx, bundle):
             target = get(m, tp) if tp else m
             target["binding"] = {}
             engine.emit("14", bundle, idx, tp + ("binding",), m)
+
+        # ---- 19: inheritance self-edge / ghost parent (D1)
+        if sname == "analysis.schema.json":
+            m = copy.deepcopy(inst)
+            m["inherits_from"] = {"analysis_id": inst["analysis_id"],
+                                  "version": inst["version"]}
+            engine.emit("19", bundle, idx, ("inherits_from",), m, note="self")
+            m = copy.deepcopy(inst)
+            m["inherits_from"] = {"analysis_id": MUTANT_MARK, "version": "1"}
+            engine.emit("19", bundle, idx, ("inherits_from",), m, note="ghost-parent")
+
+        # ---- 20: cross-episode token collision (D3)
+        if sname == "orthing-episode.schema.json" and inst.get("meta_tokens"):
+            own = {t["token_id"] for t in inst["meta_tokens"]}
+            for other in sorted(token_ids - own):
+                m = copy.deepcopy(inst)
+                m["meta_tokens"][0]["token_id"] = other
+                engine.emit("20", bundle, idx, ("meta_tokens", 0, "token_id"), m,
+                            note="->" + other)
+                break
+
+        # ---- 21: token scope leakage across ledgers (D4)
+        if sname == "orthing-episode.schema.json" and len(ledger_claims) >= 2:
+            foreign = sorted(set().union(*(c for e2, c in ledger_claims.items()
+                                           if e2 != inst.get("episode_id"))) or set())
+            for ti in range(len(inst.get("meta_tokens", []))):
+                if foreign:
+                    m = copy.deepcopy(inst)
+                    m["meta_tokens"][ti].setdefault("scope", {})["claims"] = [foreign[0]]
+                    m["meta_tokens"][ti]["scope"].pop("no_claim_dependency_reason", None)
+                    engine.emit("21", bundle, idx, ("meta_tokens", ti, "scope", "claims"), m,
+                                note="->" + foreign[0])
+
+        # ---- 22: ghost metaortheme reference (D5)
+        mu_ids_declared = {p2["instance"].get("mu_id") for p2 in parts
+                           if p2["schema"] == "metaortheme.schema.json"}
+        if sname == "orthing-episode.schema.json":
+            gc = inst.get("governing_configuration") or {}
+            for ri, r in enumerate(gc.get("mu_refs", [])):
+                if r.get("mu_id") in mu_ids_declared:
+                    m = copy.deepcopy(inst)
+                    m["governing_configuration"]["mu_refs"][ri]["mu_version"] = "MUTANT-VERSION"
+                    engine.emit("22", bundle, idx,
+                                ("governing_configuration", "mu_refs", ri, "mu_version"), m)
+            for ti, t in enumerate(inst.get("meta_tokens", [])):
+                if (t.get("of_type") or {}).get("mu_id") in mu_ids_declared:
+                    m = copy.deepcopy(inst)
+                    m["meta_tokens"][ti]["of_type"]["mu_version"] = "MUTANT-VERSION"
+                    engine.emit("22", bundle, idx,
+                                ("meta_tokens", ti, "of_type", "mu_version"), m)
+
+        # ---- 23: precedence self-edge / 2-cycle (D5)
+        if sname == "orthing-episode.schema.json":
+            gc = inst.get("governing_configuration") or {}
+            ids = [r["mu_id"] for r in gc.get("mu_refs", [])]
+            if ids:
+                m = copy.deepcopy(inst)
+                m["governing_configuration"]["precedence"] = \
+                    list(gc.get("precedence", [])) + [[ids[0], ids[0]]]
+                engine.emit("23", bundle, idx, ("governing_configuration", "precedence"), m,
+                            note="self-edge")
+            if len(ids) >= 2:
+                m = copy.deepcopy(inst)
+                m["governing_configuration"]["precedence"] = [[ids[0], ids[1]],
+                                                              [ids[1], ids[0]]]
+                engine.emit("23", bundle, idx, ("governing_configuration", "precedence"), m,
+                            note="2-cycle")
+
+        # ---- 24: mixed-offset time reversal / naive timestamp (D7)
+        if sname == "verdict-record.schema.json" and inst.get("rel_spec"):
+            import datetime as _dt
+            raw = inst.get("index", {}).get("decision_time")
+            try:
+                base = _dt.datetime.fromisoformat(raw.replace("Z", "+00:00"))
+            except (AttributeError, ValueError):
+                base = None
+            for k in sorted(inst["rel_spec"]):
+                if base is not None:
+                    post = (base + _dt.timedelta(hours=3)).astimezone(
+                        _dt.timezone(_dt.timedelta(hours=-5)))
+                    val = post.isoformat()
+                    if val < raw:  # string-compares BEFORE while being AFTER in UTC
+                        m = copy.deepcopy(inst)
+                        m["rel_spec"][k]["declared_at"] = val
+                        engine.emit("24", bundle, idx, ("rel_spec", k, "declared_at"), m,
+                                    note="mixed-offset-postdated")
+                m = copy.deepcopy(inst)
+                m["rel_spec"][k]["declared_at"] = "2026-01-01T00:00:00"
+                engine.emit("24", bundle, idx, ("rel_spec", k, "declared_at"), m,
+                            note="naive")
+
+        # ---- 25: inverted token validity (D7)
+        for tp25 in ([()] if sname == "metaorthemma.schema.json" else []) + \
+                    ([("meta_tokens", ti) for ti in range(len(inst.get("meta_tokens", [])))]
+                     if sname == "orthing-episode.schema.json" else []):
+            tok = get(inst, tp25) if tp25 else inst
+            eff = (tok.get("validity") or {}).get("effective_from")
+            if isinstance(eff, str) and eff:
+                m = copy.deepcopy(inst)
+                target = get(m, tp25) if tp25 else m
+                target["validity"]["expiry"] = "2000-01-01T00:00:00Z"
+                engine.emit("25", bundle, idx, tp25 + ("validity", "expiry"), m,
+                            note="expiry-before-effective")
+
+        # ---- 26: silent external reference (D6)
+        if sname == "orthing-episode.schema.json" and inst.get("record_mode") == "audit-ready":
+            for ri in range(len(inst.get("external_refs", []))):
+                m = copy.deepcopy(inst)
+                del m["external_refs"][ri]
+                engine.emit("26", bundle, idx, ("external_refs", ri), m, note="stripped")
+                m = copy.deepcopy(inst)
+                m["external_refs"][ri]["resolution_status"] = "unresolved"
+                engine.emit("26", bundle, idx,
+                            ("external_refs", ri, "resolution_status"), m, note="unresolved")
+            ean = inst.get("analysis", {})
+            if ean.get("version") in {p2["instance"].get("version") for p2 in parts
+                                      if p2["schema"] == "analysis.schema.json"
+                                      and p2["instance"].get("analysis_id") == ean.get("analysis_id")}:
+                m = copy.deepcopy(inst)
+                m["analysis"]["version"] = "MUTANT-VERSION"
+                engine.emit("26", bundle, idx, ("analysis", "version"), m,
+                            note="analysis-desynchronised")
+
+        # ---- 27: omitted claim-reasoning verdict (D8 omission attack). Generated
+        # only where the claim's ledger record is in the bundle: the derivation is
+        # recomputed from the LEDGER claim's declared shape, so with no ledger the
+        # omission is unverifiable and the mutant proves nothing (same guard
+        # philosophy as family 5).
+        if sname == "verdict-record.schema.json":
+            claims_here27 = ledger_claims.get(inst.get("episode_id"), set())
+            for ci, crp in enumerate(inst.get("claim_reasoning_paths", [])):
+                if crp.get("claim_id") not in claims_here27:
+                    continue
+                for vi in range(len(crp.get("req_reason", []))):
+                    m = copy.deepcopy(inst)
+                    del m["claim_reasoning_paths"][ci]["req_reason"][vi]
+                    engine.emit("27", bundle, idx,
+                                ("claim_reasoning_paths", ci, "req_reason", vi), m,
+                                note="-" + crp["req_reason"][vi])
 
         # ---- 17: collapse a candidate SET into one partial profile
         if sname == "orthing-episode.schema.json":

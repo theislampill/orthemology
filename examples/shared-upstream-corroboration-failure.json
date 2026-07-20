@@ -77,7 +77,27 @@
      }
     ],
     "verdict_record_ref": "ep-audit-alpha-1",
-    "claim_ledger_ref": "ep-audit-alpha-1"
+    "claim_ledger_ref": "ep-audit-alpha-1",
+    "external_refs": [
+     {
+      "kind": "analysis",
+      "ref": "reasoning-audit@1.4",
+      "registry": "audit-office analysis register",
+      "resolution_status": "resolved-external"
+     },
+     {
+      "kind": "occurrence",
+      "ref": "actor-x-placement-441@case-2026-07",
+      "registry": "audit-office case registry",
+      "resolution_status": "resolved-external"
+     },
+     {
+      "kind": "metaortheme",
+      "ref": "digest-trust-policy@9",
+      "registry": "audit-office digest governance register",
+      "resolution_status": "resolved-external"
+     }
+    ]
    }
   },
   {
@@ -155,7 +175,27 @@
      }
     ],
     "verdict_record_ref": "ep-audit-beta-1",
-    "claim_ledger_ref": "ep-audit-beta-1"
+    "claim_ledger_ref": "ep-audit-beta-1",
+    "external_refs": [
+     {
+      "kind": "analysis",
+      "ref": "reasoning-audit@1.4",
+      "registry": "audit-office analysis register",
+      "resolution_status": "resolved-external"
+     },
+     {
+      "kind": "occurrence",
+      "ref": "actor-x-placement-441@case-2026-07",
+      "registry": "audit-office case registry",
+      "resolution_status": "resolved-external"
+     },
+     {
+      "kind": "metaortheme",
+      "ref": "digest-trust-policy@9",
+      "registry": "audit-office digest governance register",
+      "resolution_status": "resolved-external"
+     }
+    ]
    }
   },
   {

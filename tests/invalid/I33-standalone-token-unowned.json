@@ -1,0 +1,39 @@
+{
+  "id": "I33-standalone-token-unowned",
+  "why": "a standalone metaorthemma record with neither owning_episode nor a declared external scope: its claim scope is uncheckable (D4/D6)",
+  "expect_layer": "semantic",
+  "schema": "metaorthemma.schema.json",
+  "instance": {
+    "token_id": "tok-orphan",
+    "of_type": {
+      "mu_id": "mu-x",
+      "mu_version": "1.0"
+    },
+    "analysis": {
+      "analysis_id": "an-x",
+      "version": "1.0"
+    },
+    "anchor": {
+      "identity_key": "occ-x",
+      "version": "v1"
+    },
+    "governed_component": "V",
+    "binding": {
+      "threshold": 1
+    },
+    "scope": {
+      "no_claim_dependency_reason": "illustrative token; no claim depends on it"
+    },
+    "binder": {
+      "actor": "binder-1",
+      "binding_warrant": "bw-1",
+      "binding_time": "2026-07-01T00:00:00Z"
+    },
+    "validity": {
+      "effective_from": "2026-07-01T00:00:00Z",
+      "expiry": null,
+      "superseded_by": null
+    },
+    "no_separate_executor_reason": "episode actor executes under the same warrant"
+  }
+}
