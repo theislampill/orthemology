@@ -1,0 +1,43 @@
+# Notation firewall (Decision 0021 §5). daee and Orthemology reuse glyphs for
+# DIFFERENT objects; the crosswalk uses namespaced daee forms and NEVER merges
+# the registries. scripts/validate_daee_crosswalk.py enforces this with tamper
+# tests. daee's own repository notation is not modified by this project.
+schema: orthemology-daee-notation-firewall-v1
+daee_pinned_commit: c86b3c6673147b8802fe222373a165a37d4d24a8
+rule: >-
+  every daee symbol that collides with an Orthemology registry symbol MUST appear in the
+  crosswalk only in its namespaced D.* form; the raw daee glyph may never be introduced into
+  docs/notation-registry.yaml, and no crosswalk row may equate a daee glyph with its
+  Orthemology namesake as "the same symbol".
+collisions:
+- daee_symbol: "mu"
+  daee_namespaced: D.mu_mem
+  daee_meaning: meta-noetic memetic vector
+  orthemology_symbol: "mu"
+  orthemology_meaning: metaortheme type
+  resolution: namespace (D.mu_mem); crosswalk row mapping_type application-extension
+- daee_symbol: "kappa"
+  daee_namespaced: D.kappa_dep
+  daee_meaning: collapse radius / downstream dependency set
+  orthemology_symbol: "kappa"
+  orthemology_meaning: occurrence identity key
+  resolution: namespace (D.kappa_dep); NEVER merge — these are unrelated objects
+- daee_symbol: "Omega"
+  daee_namespaced: D.Omega_ont
+  daee_meaning: ontological grammar register
+  orthemology_symbol: "Omega"
+  orthemology_meaning: observation map
+  resolution: namespace (D.Omega_ont)
+- daee_symbol: "m"
+  daee_namespaced: D.m_mode
+  daee_meaning: deformation / memetic mode (in the cited daee formalism)
+  orthemology_symbol: "m"
+  orthemology_meaning: orthemma token
+  resolution: namespace (D.m_mode)
+- daee_symbol: "N"
+  daee_namespaced: D.N_frame
+  daee_meaning: selected / held noetic frame
+  orthemology_symbol: null
+  orthemology_meaning: no single direct equivalent
+  resolution: namespace (D.N_frame); must NOT be silently treated as one Orthemology object
+registry_merge_forbidden: docs/notation-registry.yaml is Orthemology-only and is never extended with daee glyphs

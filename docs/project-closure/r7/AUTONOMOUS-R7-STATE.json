@@ -9,7 +9,7 @@
     "branch": "closure/r7-noetic-application-experiment-validity",
     "daee_pinned_commit": "c86b3c6673147b8802fe222373a165a37d4d24a8"
   },
-  "last_completed_action": "Substitution to Opus 4.8 acknowledged mid-pass; interruption record written; FCSP-2 built+smoke-green; ER-2 generator+harness written (analysis pending)",
+  "last_completed_action": "Phases B-J complete under Opus 4.8: 0020/0021/0022; FCSP-2/ER-2 built+methods-gated; R6 packets historical byte-frozen; DAEE typed crosswalk+firewall+fixtures+boundary; docs reconciled (R6 merged label kept; R7 = candidate); 38/38 suite green",
   "tests_run": [
     {
       "tree": "fresh clone @ 43fee0f5 (lock venv)",
@@ -20,7 +20,7 @@
   "unresolved_findings": [
     "FCSP 1-10 + ER 1-10 + DAEE mapping-depth finding \u2014 all reproduced; repairs pending Phases B-K"
   ],
-  "next_action": "Finish ER-2 (analysis/schemas/smoke), DAEE crosswalk+firewall+fixtures, methods gate, doc reconciliation, adversarial reviews; push branch + open DRAFT PR; DO NOT MERGE",
+  "next_action": "Phase K adversarial reviews; commit; push branch + open DRAFT PR; DO NOT MERGE / DO NOT PUSH MAIN",
   "substitution_record": "docs/project-closure/r7/MODEL-SUBSTITUTION-INTERRUPTION-R7.md",
   "owner_constraints_under_substitute": [
     "branch/PR only; no merge; no push to main; no ready-for-merge state change",

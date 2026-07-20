@@ -1,0 +1,89 @@
+# Adversarial noetic-application fixtures (Decision 0021 §7). Each asserts a
+# required Orthemology distinction the daee application must preserve, and each
+# asserts NO soul access / NO motive verdict. Deterministic; no empirical claim.
+# scripts/validate_noetic_application.py checks structure + the invariants.
+schema: orthemology-noetic-application-fixtures-v1
+no_soul_access_invariant: >-
+  every fixture's forbidden_placements includes any assertion of the person's motive,
+  culpability, or interior soul-state; the correct action never rests on such an assertion.
+fixtures:
+- id: N1
+  title: same discourse, several live noetic profiles
+  observation: a brief objection whose wording is consistent with sincere confusion, an inherited premise, or a malformed criterion
+  candidate_profiles: [sincere-confusion, inherited-premise, malformed-criterion]
+  inferred_profile: underdetermined
+  correct_action: hold / clarify (maintain the candidate set; gather a discriminating observation)
+  forbidden_placements: [assert hawa, assert any single deformation as settled, assert motive or soul-state]
+  distinction_tested: occurrence/observation vs candidate vs inferred; underdetermination
+- id: N2
+  title: different discourse, same governing criterion failure
+  observation: two differently-worded objections that both import the same illicit criterion
+  candidate_profiles: [same-imported-criterion]
+  inferred_profile: shared-criterion-defect
+  correct_action: place at the shared metaortheme-criterion level, not as two different noetic state-types
+  forbidden_placements: [invent two distinct deformations from surface variation, assert soul-state]
+  distinction_tested: surface variation does not force distinct state-types when one criterion governs
+- id: N3
+  title: sound metaortheme, defective metaorthemma
+  observation: the general source-order standard is adequate; this case binds the wrong source status / scope
+  candidate_profiles: [correct-standard-wrong-binding]
+  inferred_profile: metaorthemma-binding-defect
+  correct_action: repair the case binding; the governing standard stays sound
+  forbidden_placements: [condemn the general standard, assert the interlocutor's motive]
+  distinction_tested: metaortheme (sound) vs metaorthemma (defective)
+- id: N4
+  title: adequate binding, practitioner deviation
+  observation: the selected governing token is sound; the practitioner ignores it
+  candidate_profiles: [token-sound-execution-unfaithful]
+  inferred_profile: execution-fidelity-defect
+  correct_action: correct the executor; keep token adequacy separate from executor fidelity
+  forbidden_placements: [blame the token, assert soul-state of the interlocutor]
+  distinction_tested: token adequacy vs executor fidelity
+- id: N5
+  title: practitioner self-deformation
+  observation: the evaluator's own inherited premise / interest / identity pressure contaminates the read
+  candidate_profiles: [evaluator-contaminated-read]
+  inferred_profile: evaluator-self-defect (audited by the same architecture)
+  correct_action: apply evaluator symmetry — audit the evaluator by the same standards
+  forbidden_placements: [treat the evaluator's read as privileged/self-certified, claim non-circularity is proven, assert the interlocutor's motive or soul-state]
+  distinction_tested: evaluator symmetry blocks self-certification without proving non-circularity
+- id: N6
+  title: false corroboration
+  observation: several apparent sources that share one upstream origin
+  candidate_profiles: [dependent-sources-one-origin]
+  inferred_profile: corroboration-defect (count without independence)
+  correct_action: distinguish source convergence from repeated dependence on one upstream source
+  forbidden_placements: [treat count as tawatur-like independence, assert soul-state]
+  distinction_tested: source independence/origin structure vs count
+- id: N7
+  title: correct diagnosis, wrong restorative route
+  observation: the placement is sound; the intervention register/sequence is defective
+  candidate_profiles: [sound-placement-defective-route]
+  inferred_profile: route-quality-defect
+  correct_action: keep diagnosis correctness separate from route quality; repair the route
+  forbidden_placements: [treat a correct diagnosis as a correct response, assert motive]
+  distinction_tested: correct diagnosis vs correct restorative route
+- id: N8
+  title: false closure after one burden
+  observation: one objection is answered while a load-bearing noetic dependency remains live
+  candidate_profiles: [residual-dependency-live]
+  inferred_profile: false-closure-if-closed
+  correct_action: whole-state reread blocks closure until the live dependency is discharged
+  forbidden_placements: [declare closure over a live dependency, assert the person is restored, assert motive or soul-state]
+  distinction_tested: whole-state reread / per-burden closure
+- id: N9
+  title: language coupling without guaranteed uptake
+  observation: the agent field closes and a fitting response is released
+  candidate_profiles: [runtime-closed-response-released]
+  inferred_profile: runtime-closure-only
+  correct_action: claim runtime closure ONLY; make no claim of acceptance or restoration
+  forbidden_placements: [claim the person accepted or was restored, identify runtime closure with restoration, assert motive or soul-state]
+  distinction_tested: runtime closure (Psi-N) vs actual uptake/restoration
+- id: N10
+  title: negative control (no deep deformation)
+  observation: a straightforward proposition-level misunderstanding with a plain factual gap
+  candidate_profiles: [plain-misunderstanding]
+  inferred_profile: no-deformation
+  correct_action: resolve at the proposition level; add NO deep noetic diagnosis
+  forbidden_placements: [invent a deformation the evidence does not support, assert motive or soul-state]
+  distinction_tested: extra noetic machinery must not manufacture a deformation

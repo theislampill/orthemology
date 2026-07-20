@@ -28,6 +28,8 @@ decisions:
   "0018": {status: adopted, title: experiment packet readiness and registration status}
   "0019": {status: adopted, title: current sourcing ledger and historical overlays}
   "0020": {status: adopted, title: experiment inferential readiness and packet versioning}
+  "0021": {status: adopted, title: daee-epistemics as noetic orthing application}
+  "0022": {status: adopted, title: experiment methods and ready-to-run gate}
 normative_symbols:
   StrictlySoundReasoning_q:
     current:

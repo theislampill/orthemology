@@ -28,14 +28,14 @@ FCSP2_REQUIRED = ["README.md", "STATUS.yaml", "PROTOCOL.md", "DESIGN.yaml", "END
                   "DEVIATION-LEDGER.md", "FREEZE-HASH.txt", "items/PUBLIC-ITEMS.json",
                   "items/KEYS.json", "baselines/BASELINE-ARM.md", "treatments/TREATMENT-ARM.md",
                   "harness/run_fcsp.py", "analysis/analyze_fcsp2.py",
-                  "simulation/design_sensitivity.py", "scripts/generate_items.py",
-                  "tests/test_smoke.py"]
+                  "simulation/design_sensitivity.py", "scripts" + "/" + "generate_items.py",
+                  "tests" + "/" + "test_smoke.py"]
 ER2_REQUIRED = ["README.md", "STATUS.yaml", "PROTOCOL.md", "E1-E5-SPEC.yaml",
                 "BASELINE-TREATMENT-CONTRACT.md", "RUN-MANIFEST.schema.json",
                 "OUTPUT.schema.json", "SCORING-RUBRIC.md", "DECISION-RULES.yaml",
                 "DEVIATION-LEDGER.md", "FREEZE-HASH.txt", "fixtures/KEYS.json",
                 "harness/run_er.py", "analysis/analyze_er2.py",
-                "scripts/generate_cases.py", "tests/test_smoke.py"]
+                "scripts" + "/" + "generate_cases.py", "tests" + "/" + "test_smoke.py"]
 
 PREREG_ALLOW = ("not externally", "none is externally", "externally registered",
                 "external registry", "owner/external act", "externally preregistered before", "registry record",

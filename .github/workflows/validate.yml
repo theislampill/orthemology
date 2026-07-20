@@ -70,10 +70,20 @@ jobs:
         run: python scripts/validate_sourcing_state.py
       - name: Companion references resolve (R6)
         run: python scripts/validate_companion_references.py
-      - name: FCSP-1 packet smoke tests (deterministic; no result)
-        run: python experiments/false-closure-selective-prediction/tests/test_smoke.py
-      - name: ER-1 packet smoke tests (deterministic; no result)
-        run: python experiments/episode-reification/tests/test_smoke.py
+      - name: daee crosswalk + notation firewall (R7, Decision 0021)
+        run: python scripts/validate_daee_crosswalk.py
+      - name: Noetic-application fixtures + example (R7, Decision 0021)
+        run: python scripts/validate_noetic_application.py
+      - name: Experiment methods / READY_TO_RUN gate (R7, Decision 0022)
+        run: python scripts/validate_experiment_methods.py
+      - name: FCSP-2 packet smoke tests (deterministic; no result)
+        run: python experiments/false-closure-selective-prediction-v2/tests/test_smoke.py
+      - name: ER-2 packet smoke tests (deterministic; no result)
+        run: python experiments/episode-reification-v2/tests/test_smoke.py
+      - name: Historical R6 packet smoke tests (still deterministic; no result)
+        run: |
+          python experiments/false-closure-selective-prediction/tests/test_smoke.py
+          python experiments/episode-reification/tests/test_smoke.py
       - name: Terminology packet freeze hashes (v1 immutable + v2)
         run: |
           python scripts/freeze_pilot0.py --check
