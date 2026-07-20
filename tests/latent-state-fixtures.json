@@ -1,0 +1,351 @@
+{
+  "schema": "orthemology-latent-state-fixtures-v1",
+  "note": "LS-1..LS-7 conceptual fixtures (Decision 0015). Deterministic consistency artifacts: they exercise the six-way typed distinction (orthemma / analysis / optional latent state / observation / latent candidate set or belief / inferred partial profile / concrete internal representation) and the anti-conflation rules. The latent layer is OPTIONAL and NON-PRIMITIVE. No empirical claim; nothing here validates or is validated by any cited literature.",
+  "conflation_keys": [
+    "observation_is_occurrence",
+    "posterior_is_ground_truth",
+    "latent_label_is_ortheme_by_declaration",
+    "cluster_is_worldly_state_without_declared_bridge",
+    "global_orthogonality_required_for_adequacy",
+    "nonorthogonality_proves_state_identity",
+    "endpoint_match_proves_mechanism_match",
+    "state_label_transported_across_versions",
+    "every_cue_remapping_is_a_metaorthemma",
+    "one_neuron_is_type_token_identity_of_ortheme"
+  ],
+  "conflation_note": "Every fixture must declare ALL ten keys and every one of them must be false. The validator fails closed on any true value: these are the identities Decision 0015 forbids, not configurable options.",
+  "fixtures": [
+    {
+      "id": "LS-1",
+      "title": "aliased observation with consequentially distinct states",
+      "setup": "Four sensorily identical regions share one observation under a declared non-injective observation map. The task requires different action in two of them, so merging the corresponding latent states would alter a warranted prediction and a route beyond the declared tolerance. No sequence or context evidence has arrived yet at time t.",
+      "typed_objects": {
+        "orthemma": "m_t: this time-indexed encounter with one of the four identical regions",
+        "observation": "x_t = Omega_A(m_t): the currently visible ambiguous region; Omega_A is non-injective here",
+        "latent_candidates": "C^latent_t = {z_A, z_B, z_C, z_D} subset of Z_A, model-internal labels only",
+        "belief_or_posterior": "b_t(z): mass spread across all four candidates, below the bound threshold",
+        "internal_representation": "y_t: the current activity/embedding vector, geometry not yet separated",
+        "inferred_partial_profile": "p-hat_t(m) in Pi_A^partial: region-identity component left unfilled"
+      },
+      "latent_layer": {
+        "declared": true,
+        "primitive": false
+      },
+      "metaorthemma": {
+        "bound": true,
+        "m1_material_binding": true,
+        "reason": "non-default history window, bound inference threshold, instrument provenance, independent validity interval"
+      },
+      "verdicts": {
+        "EVIDENCE_SUPPORT": "pass",
+        "EXECUTION_FAITHFUL": "pass",
+        "GOV_TOKEN_ADEQUATE": "pass",
+        "CLOSURE_TRUTHFUL": "pass"
+      },
+      "expected": {
+        "distinction_consequential": true,
+        "merge_within_tolerance": false,
+        "candidates_remain_plural": true,
+        "distinction_dependent_claim_withheld": true,
+        "new_orthemic_distinction_licensed": true
+      },
+      "conflation_assertions": {
+        "observation_is_occurrence": false,
+        "posterior_is_ground_truth": false,
+        "latent_label_is_ortheme_by_declaration": false,
+        "cluster_is_worldly_state_without_declared_bridge": false,
+        "global_orthogonality_required_for_adequacy": false,
+        "nonorthogonality_proves_state_identity": false,
+        "endpoint_match_proves_mechanism_match": false,
+        "state_label_transported_across_versions": false,
+        "every_cue_remapping_is_a_metaorthemma": false,
+        "one_neuron_is_type_token_identity_of_ortheme": false
+      }
+    },
+    {
+      "id": "LS-2",
+      "title": "safe latent-state merge (a model-state difference forces no new ortheme)",
+      "setup": "The fitted model carries two distinct latent states for what the declared analysis treats as one case kind. Merging them changes no warranted prediction, classification, investigation, route, validation step, closure condition or evaluation beyond the declared tolerance, and violates no hard constraint. The admission test of Decision 0015 section 2 fails.",
+      "typed_objects": {
+        "orthemma": "m_t: this encounter, unremarkable under A",
+        "observation": "x_t = Omega_A(m_t): fully determining at the governed level",
+        "latent_candidates": "C^latent_t = {z_7, z_12}: two model-internal states, both consistent",
+        "belief_or_posterior": "b_t(z): split across z_7 and z_12, and the split is orthemically inert",
+        "internal_representation": "y_t: two mildly separated clusters in representation space",
+        "inferred_partial_profile": "p-hat_t(m): complete at the governed level despite the latent split"
+      },
+      "latent_layer": {
+        "declared": true,
+        "primitive": false
+      },
+      "metaorthemma": {
+        "bound": false,
+        "m1_material_binding": false,
+        "reason": "zero-burden rule: no material case-specific binding, default scope, no independent validity condition; GOV_TOKEN_ADEQUATE recorded not-applicable"
+      },
+      "verdicts": {
+        "EVIDENCE_SUPPORT": "pass",
+        "EXECUTION_FAITHFUL": "pass",
+        "GOV_TOKEN_ADEQUATE": "not-applicable",
+        "CLOSURE_TRUTHFUL": "pass"
+      },
+      "expected": {
+        "distinction_consequential": false,
+        "merge_within_tolerance": true,
+        "candidates_remain_plural": false,
+        "distinction_dependent_claim_withheld": false,
+        "new_orthemic_distinction_licensed": false
+      },
+      "conflation_assertions": {
+        "observation_is_occurrence": false,
+        "posterior_is_ground_truth": false,
+        "latent_label_is_ortheme_by_declaration": false,
+        "cluster_is_worldly_state_without_declared_bridge": false,
+        "global_orthogonality_required_for_adequacy": false,
+        "nonorthogonality_proves_state_identity": false,
+        "endpoint_match_proves_mechanism_match": false,
+        "state_label_transported_across_versions": false,
+        "every_cue_remapping_is_a_metaorthemma": false,
+        "one_neuron_is_type_token_identity_of_ortheme": false
+      }
+    },
+    {
+      "id": "LS-3",
+      "title": "high performance without global orthogonalization",
+      "setup": "A system meets every declared task requirement while its internal representation is not globally orthogonalized; the separation it needs lives in a low-dimensional task-relevant readout subspace. No verdict fails on the ground of representational geometry alone. Representational geometry and pathway adequacy are separate questions.",
+      "typed_objects": {
+        "orthemma": "m_t: this task instance",
+        "observation": "x_t = Omega_A(m_t): the input actually received",
+        "latent_candidates": "C^latent_t: singleton after context, adequacy independent of geometry",
+        "belief_or_posterior": "b_t(z): concentrated, above the bound threshold",
+        "internal_representation": "y_t: globally entangled, separable only within the readout subspace",
+        "inferred_partial_profile": "p-hat_t(m): correct at the governed level and tolerance"
+      },
+      "latent_layer": {
+        "declared": true,
+        "primitive": false
+      },
+      "metaorthemma": {
+        "bound": false,
+        "m1_material_binding": false,
+        "reason": "zero-burden rule: default configuration throughout"
+      },
+      "verdicts": {
+        "EVIDENCE_SUPPORT": "pass",
+        "PROCEDURE_RELIABLE": "pass",
+        "EXECUTION_FAITHFUL": "pass",
+        "GOV_TOKEN_ADEQUATE": "not-applicable",
+        "ROUTE_ADMISSIBLE": "pass",
+        "CLOSURE_TRUTHFUL": "pass"
+      },
+      "expected": {
+        "global_orthogonality_present": false,
+        "task_requirements_met": true,
+        "pathway_defect_from_geometry_alone": false,
+        "geometry_and_pathway_adequacy_distinct": true
+      },
+      "conflation_assertions": {
+        "observation_is_occurrence": false,
+        "posterior_is_ground_truth": false,
+        "latent_label_is_ortheme_by_declaration": false,
+        "cluster_is_worldly_state_without_declared_bridge": false,
+        "global_orthogonality_required_for_adequacy": false,
+        "nonorthogonality_proves_state_identity": false,
+        "endpoint_match_proves_mechanism_match": false,
+        "state_label_transported_across_versions": false,
+        "every_cue_remapping_is_a_metaorthemma": false,
+        "one_neuron_is_type_token_identity_of_ortheme": false
+      }
+    },
+    {
+      "id": "LS-4",
+      "title": "same endpoint, different trajectory",
+      "setup": "Two processes reach an identical final representational configuration by materially different intermediate sequences. Endpoint equivalence does not imply pathway or mechanism equivalence; the trajectory carries discriminating evidence that endpoint comparison lacks. This is the result/pathway separation of Decision 0003 applied to the latent layer.",
+      "typed_objects": {
+        "orthemma": "m_t: this run, considered as a case; the reified episode iota_n(e)",
+        "observation": "x_t = Omega_A(m_t): the endpoint measurement actually taken",
+        "latent_candidates": "C^latent_t: the mechanisms still consistent with the endpoint, plural",
+        "belief_or_posterior": "b_t(z): endpoint evidence does not concentrate it",
+        "internal_representation": "y_T: matching terminal geometry in both processes",
+        "inferred_partial_profile": "p-hat_t(m): mechanism component unfilled on endpoint evidence alone"
+      },
+      "latent_layer": {
+        "declared": true,
+        "primitive": false
+      },
+      "metaorthemma": {
+        "bound": true,
+        "m1_material_binding": true,
+        "reason": "bound comparison protocol: which trajectory statistics count, at what resolution, over what interval, with declared claim scope"
+      },
+      "verdicts": {
+        "EVIDENCE_SUPPORT": "pass",
+        "EXECUTION_FAITHFUL": "pass",
+        "GOV_TOKEN_ADEQUATE": "pass",
+        "CLOSURE_TRUTHFUL": "pass"
+      },
+      "expected": {
+        "endpoint_match": true,
+        "trajectory_match": false,
+        "mechanism_equivalence_established": false,
+        "pathway_equivalence_established": false,
+        "trajectory_is_stronger_constraint": true
+      },
+      "conflation_assertions": {
+        "observation_is_occurrence": false,
+        "posterior_is_ground_truth": false,
+        "latent_label_is_ortheme_by_declaration": false,
+        "cluster_is_worldly_state_without_declared_bridge": false,
+        "global_orthogonality_required_for_adequacy": false,
+        "nonorthogonality_proves_state_identity": false,
+        "endpoint_match_proves_mechanism_match": false,
+        "state_label_transported_across_versions": false,
+        "every_cue_remapping_is_a_metaorthemma": false,
+        "one_neuron_is_type_token_identity_of_ortheme": false
+      }
+    },
+    {
+      "id": "LS-5",
+      "title": "new cue rebound to an existing state",
+      "setup": "A new cue is introduced and mapped onto an already existing latent state. This is observation/emission rebinding (category 1 of the five-way distinction): the latent state set is unchanged, the transition model is unchanged, the analysis version is unchanged. No new orthemic distinction is created. Provenance and version records still update. It is NOT automatically a metaorthemma: the M1 material-binding criteria are not met here, so the zero-burden rule applies.",
+      "typed_objects": {
+        "orthemma": "m_t: this encounter under the new cue",
+        "observation": "x_t = Omega_A(m_t): the new cue, emitting from an existing symbol",
+        "latent_candidates": "C^latent_t: unchanged set; no member added",
+        "belief_or_posterior": "b_t(z): concentrates on the same pre-existing state",
+        "internal_representation": "y_t: shifted input coding, same downstream state occupancy",
+        "inferred_partial_profile": "p-hat_t(m): unchanged at the governed level"
+      },
+      "latent_layer": {
+        "declared": true,
+        "primitive": false
+      },
+      "rebinding_category": "observation-emission-rebinding",
+      "metaorthemma": {
+        "bound": false,
+        "m1_material_binding": false,
+        "reason": "zero-burden rule: a cue remapping with default scope, no case-specific binding map, no independent validity condition and no distinct binder warrant gets no token"
+      },
+      "verdicts": {
+        "EVIDENCE_CURRENT": "pass",
+        "EXECUTION_FAITHFUL": "pass",
+        "GOV_TOKEN_ADEQUATE": "not-applicable",
+        "CLOSURE_TRUTHFUL": "pass"
+      },
+      "expected": {
+        "new_latent_state_created": false,
+        "new_orthemic_distinction_licensed": false,
+        "provenance_and_version_updated": true,
+        "metaorthemma_required": false
+      },
+      "conflation_assertions": {
+        "observation_is_occurrence": false,
+        "posterior_is_ground_truth": false,
+        "latent_label_is_ortheme_by_declaration": false,
+        "cluster_is_worldly_state_without_declared_bridge": false,
+        "global_orthogonality_required_for_adequacy": false,
+        "nonorthogonality_proves_state_identity": false,
+        "endpoint_match_proves_mechanism_match": false,
+        "state_label_transported_across_versions": false,
+        "every_cue_remapping_is_a_metaorthemma": false,
+        "one_neuron_is_type_token_identity_of_ortheme": false
+      }
+    },
+    {
+      "id": "LS-6",
+      "title": "stretched/perturbed environment (inferred state is not ground truth)",
+      "setup": "The environment is perturbed relative to the conditions under which the model was fitted. The inferred latent state diverges from the situation as declared under A. The inferred state was never ground truth; the model is revised explicitly, and every claim carried across the revision is re-established or re-scoped with the carry recorded. Silent transport would be an EVIDENCE_CURRENT failure.",
+      "typed_objects": {
+        "orthemma": "m_t: this encounter in the perturbed environment",
+        "observation": "x_t = Omega_A(m_t): reading produced under out-of-fit conditions",
+        "latent_candidates": "C^latent_t: candidates from the pre-perturbation fit, now suspect",
+        "belief_or_posterior": "b_t(z): confidently concentrated and nonetheless wrong",
+        "internal_representation": "y_t: activity consistent with the stale fit",
+        "inferred_partial_profile": "p-hat_t(m): diverges from O*(m_t; A); recorded as incorrect, not redefined"
+      },
+      "latent_layer": {
+        "declared": true,
+        "primitive": false
+      },
+      "rebinding_category": "transition-model-revision",
+      "metaorthemma": {
+        "bound": true,
+        "m1_material_binding": true,
+        "reason": "bound perturbation family, revision trigger, re-establishment protocol and claim scope for the transported claims"
+      },
+      "verdicts": {
+        "EVIDENCE_CURRENT": "fail",
+        "EXECUTION_FAITHFUL": "pass",
+        "GOV_TOKEN_ADEQUATE": "pass",
+        "ROBUST_NEIGHBORHOOD": "fail",
+        "CLOSURE_TRUTHFUL": "pass"
+      },
+      "expected": {
+        "inferred_state_is_ground_truth": false,
+        "belief_confident_and_incorrect": true,
+        "revision_explicit": true,
+        "transport_auditable": true,
+        "claims_transported_silently": false
+      },
+      "conflation_assertions": {
+        "observation_is_occurrence": false,
+        "posterior_is_ground_truth": false,
+        "latent_label_is_ortheme_by_declaration": false,
+        "cluster_is_worldly_state_without_declared_bridge": false,
+        "global_orthogonality_required_for_adequacy": false,
+        "nonorthogonality_proves_state_identity": false,
+        "endpoint_match_proves_mechanism_match": false,
+        "state_label_transported_across_versions": false,
+        "every_cue_remapping_is_a_metaorthemma": false,
+        "one_neuron_is_type_token_identity_of_ortheme": false
+      }
+    },
+    {
+      "id": "LS-7",
+      "title": "continuous-cell / discrete-population negative control",
+      "setup": "The implementing elements form a continuum of graded response profiles with plastic tuning, individual elements changing functional role over time, while the population- or model-level structure is discrete under the declared analysis. NEGATIVE CONTROL: no element is an ortheme, no one-element-one-type reading is licensed, and no localization claim is made.",
+      "typed_objects": {
+        "orthemma": "m_t: this encounter",
+        "observation": "x_t = Omega_A(m_t): the reading taken",
+        "latent_candidates": "C^latent_t: discrete under A, at the population/model level only",
+        "belief_or_posterior": "b_t(z): a distribution over that discrete set",
+        "internal_representation": "y_t: a continuum of graded, role-mobile element responses",
+        "inferred_partial_profile": "p-hat_t(m): a profile under A, not a property of any element"
+      },
+      "latent_layer": {
+        "declared": true,
+        "primitive": false
+      },
+      "metaorthemma": {
+        "bound": false,
+        "m1_material_binding": false,
+        "reason": "zero-burden rule: no material case-specific binding in the control"
+      },
+      "verdicts": {
+        "EVIDENCE_SUPPORT": "pass",
+        "EXECUTION_FAITHFUL": "pass",
+        "GOV_TOKEN_ADEQUATE": "not-applicable",
+        "CLOSURE_TRUTHFUL": "pass"
+      },
+      "expected": {
+        "representation_continuous": true,
+        "discrete_structure_under_A_permitted": true,
+        "one_cell_one_type_inference_licensed": false,
+        "localization_claim_made": false,
+        "element_is_ortheme": false
+      },
+      "conflation_assertions": {
+        "observation_is_occurrence": false,
+        "posterior_is_ground_truth": false,
+        "latent_label_is_ortheme_by_declaration": false,
+        "cluster_is_worldly_state_without_declared_bridge": false,
+        "global_orthogonality_required_for_adequacy": false,
+        "nonorthogonality_proves_state_identity": false,
+        "endpoint_match_proves_mechanism_match": false,
+        "state_label_transported_across_versions": false,
+        "every_cue_remapping_is_a_metaorthemma": false,
+        "one_neuron_is_type_token_identity_of_ortheme": false
+      }
+    }
+  ]
+}

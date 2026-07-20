@@ -1,0 +1,128 @@
+schema: orthemology-current-state-v1
+note: GENERATED derived block — edit only the authored block, then run scripts/generate_current_state.py.
+  CI checks for drift.
+authored:
+  revision: R4
+  revision_label: R4 (2026-07-20) — semantic-contract, source-integrity, and project-state tie-off
+  release_status: research revision, not a numbered stable release; no tag, DOI, or archival claim
+  primary_documents:
+    manuscript: manuscript/orthemma-ortheme-systems-revised-draft.md
+    formal_core: theory/orthemic-core-formalization.md
+    multi_actor_note: theory/orthemic-multi-actor-conflict-note.md
+    companion_school_neutral: companion/orthability-and-the-ground-of-intelligibility.md
+    companion_athari: companion/orthability-divine-attributes-and-speech-athari.md
+  terminology_status: INSTRUMENT-READY PENDING BLIND HUMAN MATCHING REVIEW; NOT RUN; NO TERM ADOPTED
+  empirical_status: no designed study has been run; no utility result exists; deterministic validation
+    only
+  license_status: OPEN — none chosen; default copyright applies
+  citation_status: OPEN — no CITATION.cff and no author identity; cite by commit (docs/CITING.md)
+  owner_only_burdens:
+  - legal license choice
+  - author/citation identity (name, affiliation, ORCID)
+  - empirical execution (model spend; >=3 human raters; blind human matching review; freeze decision)
+  - external peer review / preprint / DOI submission under the owner's identity
+  - publication of private casebook material, screenshots, or transcripts
+  - acquisition of a genuinely inaccessible paid source (none currently identified)
+  research_residuals_with_triggers:
+  - id: RR-1
+    burden: edition-level pagination for six classical loci
+    trigger: library/edition access before any external submission
+  - id: RR-2
+    burden: direct full-text verification of the Evans 1998 concrete/ideal-reason page locus
+    trigger: full-text access; currently cited as reported by Doko & Turner 2023
+  - id: RR-3
+    burden: primary-locus verification queue for Taymiyyan Dar' attributions
+    trigger: continued research; all such attributions labeled secondary reconstruction meanwhile
+  open_formal_parameters:
+  - RequiredBy beyond the shipped machine-readable governance instance
+  - evidence-class exhaustiveness (working hypothesis)
+  - fusion-mapping non-uniqueness
+  - Delta_A idealizations
+  - many-to-many MetaInst typing (explicitly unimplemented in R4)
+  - the ProfileOf_A bridge between latent-state models and orthemic profiles is partial and analysis-declared
+  claim_status_wording:
+    formal: internally coherent current specification under the declared definitions, schemas, positive
+      and adversarial fixtures, source-status contract, and acknowledged open parameters
+    manuscript: complete research draft, source-verified to the stated threshold; not peer reviewed; not
+      empirically validated
+    companion_school_neutral: complete conditional philosophical draft; no claim of universal proof
+    companion_athari: complete, source-verified-to-threshold, explicitly Athari/Taymiyyan school-internal
+      draft; comparative positions accurately sourced; not a neutral theological conclusion
+    terminology: matched instrument-ready v2, not run; no term adopted
+    empirical: not run / open
+    pdfs: reproducibly built and visually inspected draft artifacts
+    legal_publication: open on license, identity, peer review, and external submission
+derived:
+  source_commit_at_generation: a37a33eafc73e1d8dbafc8016c5afd71e2afc319
+  tracked_files: 170
+  decision_ids:
+  - '0001'
+  - '0002'
+  - '0003'
+  - '0004'
+  - '0005'
+  - '0006'
+  - '0007'
+  - 0008
+  - 0009
+  - '0010'
+  - '0011'
+  - '0014'
+  - '0015'
+  decision_count: 13
+  schemas:
+  - analysis.schema.json
+  - claim-ledger.schema.json
+  - handoff.schema.json
+  - metaortheme.schema.json
+  - metaorthemma.schema.json
+  - orthemma.schema.json
+  - orthing-episode.schema.json
+  - verdict-record.schema.json
+  schema_count: 8
+  example_json_count: 8
+  example_markdown_count: 2
+  validator_scripts:
+  - audit_terminology_matching.py
+  - derive_reqpath.py
+  - validate_claim_sources.py
+  - validate_cross_document_consistency.py
+  - validate_cross_record_semantics.py
+  - validate_current_state.py
+  - validate_latent_state_fixtures.py
+  - validate_negative_fixtures.py
+  - validate_notation.py
+  - validate_quran_loci.py
+  - validate_reason_fixtures.py
+  - validate_repo.py
+  - validate_schemas.py
+  - validate_type_token_semantics.py
+  - validate_verdict_semantics.py
+  validator_count: 15
+  fixture_counts:
+    verdict: 7
+    reason: 8
+    reqpath: 5
+    latent_state: 7
+    negative: 11
+  pdfs:
+    orthability-divine-speech-athari-draft.pdf:
+      sha256: 41139d7bfeb19f39e3c4204b3d3c8d4c507631f2ef8c4df32bd3ba43bc5f3938
+      pages: 7
+      source_commit: d3b34efa6cf07225adc755a15d60785bcf1df4cb
+    orthability-ground-of-intelligibility-draft.pdf:
+      sha256: ecb0eb6b97af476409d82608c71c1f819a4b9f43293a5d94abd6034720061b8d
+      pages: 10
+      source_commit: d3b34efa6cf07225adc755a15d60785bcf1df4cb
+    orthemic-core-reference-draft.pdf:
+      sha256: 06fff799cd60efd819c579ac7749c22d4f63b6da6b718983fa77baad7f2c4c45
+      pages: 20
+      source_commit: d3b34efa6cf07225adc755a15d60785bcf1df4cb
+    orthemma-ortheme-systems-draft.pdf:
+      sha256: d55e0c0cf96965a93ca58b68eaa5d39cf1893fe15a2d25bae74bf9036b2d6f1d
+      pages: 30
+      source_commit: d3b34efa6cf07225adc755a15d60785bcf1df4cb
+  terminology_freeze_hashes:
+    pilot0_v1: 988a6522498df73ad1c7b0f73961a054ff20862d50fff6d644d0274877412772
+    pilot0_v2: a1edbd2c5e2f2df598b4a6d01a52229c455b3b68d043f10046053d0a3622a2a2
+  source_status_summary: {}
