@@ -17,7 +17,7 @@
     "review_branch": "review/r4-pr3-fable-recovery",
     "review_branch_base": "de19ccf4b3525ae536bb9bc163aefcd9f4bfedf8"
   },
-  "last_completed_action": "Phase D quarantine selective port complete (interruption record ported, ref validator hardened+ported, cache guard, PDFs rebuilt+inspected, state+manifest regenerated in order)",
+  "last_completed_action": "Phase F + sign-off issued; clean clone of f5ad055 verified 26/26; CI 29762735763 success",
   "changed_files": [
     "docs/project-closure/r4-fresh-fable-review/* (4 reports + state)",
     "docs/semantic-roles.yaml",
@@ -61,9 +61,7 @@
     }
   ],
   "unresolved_findings": [
-    "Phase E: full acceptance + tracked-cache preventive check + adversarial probes pending",
-    "Phase F: six adversarial passes pending",
-    "Sign-off, PR update, merge, merged-main verification pending"
+    "PR #3 update, ready, protected merge, merged-main fresh-clone verification pending"
   ],
-  "next_action": "Commit Phase D, then Phase E full acceptance run + adversarial probes"
+  "next_action": "Commit sign-off, rerun suite at final commit, push, CI, merge review branch into PR branch, update PR body, ready, merge, verify merged main"
 }
