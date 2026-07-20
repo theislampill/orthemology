@@ -29,6 +29,8 @@ rules:
   status: interruption-provenance
 - path: docs/project-closure/r4/MODEL-SUBSTITUTION-INTERRUPTION-PR3.md
   status: interruption-provenance
+- prefix: docs/project-closure/r6/
+  status: current
 - prefix: docs/project-closure/r5/
   status: current
 - prefix: docs/project-closure/r4-fresh-fable-review/

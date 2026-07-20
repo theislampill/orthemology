@@ -2,8 +2,8 @@ schema: orthemology-current-state-v1
 note: GENERATED derived block — edit only the authored block, then run scripts/generate_current_state.py.
   CI checks for drift.
 authored:
-  revision: R5
-  revision_label: R5 (2026-07-20) — final public-state and evidence-boundary tie-off
+  revision: R6
+  revision_label: R6 (2026-07-20) — experiment-readiness, sourcing-state, and reference-apparatus tie-off
   release_status: research revision, not a numbered stable release; no tag, DOI, or archival claim
   review_state:
     status: fresh-session-review-completed
@@ -22,7 +22,7 @@ authored:
     multi_actor_note: theory/orthemic-multi-actor-conflict-note.md
     companion_school_neutral: companion/orthability-and-the-ground-of-intelligibility.md
     companion_athari: companion/orthability-divine-attributes-and-speech-athari.md
-  terminology_status: INSTRUMENT-READY PENDING BLIND HUMAN MATCHING REVIEW; NOT RUN; NO TERM ADOPTED
+  terminology_status: READY_FOR_HUMAN_MATCHING_REVIEW (Decision 0018); NOT RUN; NO TERM ADOPTED
   empirical_status: no designed study has been run; no utility result exists; deterministic validation
     only
   license_status: OPEN — none chosen; default copyright applies
@@ -64,21 +64,22 @@ authored:
   - many-to-many MetaInst typing (explicitly unimplemented in R4)
   - the ProfileOf_A bridge between latent-state models and orthemic profiles is partial and analysis-declared
   claim_status_wording:
-    formal: internally coherent current specification under the declared definitions, schemas, positive
-      and adversarial fixtures, source-status contract, and acknowledged open parameters
+    formal: internally conformance-checked current specification over the declared definitions, schemas,
+      positive and adversarial fixtures, and source-status contract; acknowledged open parameters; no
+      proof of consistency, completeness, or utility
     manuscript: complete research draft, source-verified to the stated threshold; not peer reviewed; not
       empirically validated
     companion_school_neutral: complete conditional philosophical draft; no claim of universal proof
     companion_athari: complete, source-verified-to-threshold, explicitly Athari/Taymiyyan school-internal
       draft; comparative positions accurately sourced; not a neutral theological conclusion
-    terminology: matched instrument-ready v2, not run; no term adopted
+    terminology: v2 instrument READY_FOR_HUMAN_MATCHING_REVIEW (Decision 0018), not run; no term adopted
     empirical: not run / open
     pdfs: reproducibly built and visually inspected draft artifacts
     legal_publication: open on license, identity, peer review, and external submission
 derived:
-  source_tree_digest: a63c66fba7428ecd463b10145a555691e0698877c66f83b31dcc7003609b37c8
+  source_tree_digest: eae6e2a67b71bdd1f2cf2349e791ed957ecf35a7815949c5fa8242a5370a41e8
   source_tree_digest_policy: docs/project-state-inputs.yaml
-  tracked_files: 356
+  tracked_files: 358
   decision_ids:
   - '0001'
   - '0002'
@@ -124,6 +125,7 @@ derived:
   - validate_cross_record_semantics.py
   - validate_current_state.py
   - validate_decision_dependencies.py
+  - validate_dependency_lock.py
   - validate_evidence_boundary.py
   - validate_internal_references.py
   - validate_latent_state_fixtures.py
@@ -140,7 +142,7 @@ derived:
   - validate_state_convergence.py
   - validate_type_token_semantics.py
   - validate_verdict_semantics.py
-  validator_count: 25
+  validator_count: 26
   fixture_counts:
     verdict: 7
     reason: 8

@@ -1,0 +1,18 @@
+# Exact CI/build dependency lock (R6, audit finding B6). Consumed identically
+# by CI (.github/workflows/validate.yml) and local setup (CONTRIBUTING.md):
+#     pip install --require-virtualenv -r requirements-ci.lock.txt
+# Every third-party package imported by the validators/build scripts and its
+# transitive dependencies, version-locked exactly. This is a VERSION lock, not
+# a hash lock (stated honestly); reproducibility is claimed under the recorded
+# toolchain only, never indefinitely. scripts/validate_dependency_lock.py
+# checks lock/workflow/import consistency in CI.
+attrs==26.1.0
+jsonschema==4.26.0
+jsonschema-specifications==2025.9.1
+markdown-it-py==4.0.0
+mdurl==0.1.2
+pypdf==6.14.2
+PyYAML==6.0.3
+referencing==0.37.0
+rpds-py==2026.6.3
+typst==0.15.0
