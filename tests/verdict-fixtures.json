@@ -1,108 +1,148 @@
 {
-  "schema": "orthemology-verdict-fixtures-v1",
-  "decision": "O2 (owner, 2026-07-19): result-free pathway core; non-factive V2b^proc; factive claim-wise V2b^tok excluded from the core",
-  "core_path": ["V2a", "V2b^proc", "V2c", "V3", "V3a", "V3c", "V3b", "V3d", "V4a", "V5", "V6"],
-  "excluded_from_core": ["V1", "V2b^tok", "V4b"],
+  "schema": "orthemology-verdict-fixtures-v2",
+  "decisions": "0003 (result-free pathway core) + 0004 (verdict registry: semantic IDs authoritative; display aliases in docs/verdict-registry.yaml)",
+  "registry": "../docs/verdict-registry.yaml",
   "status_enum": ["pass", "fail", "undetermined", "not-applicable"],
   "fixtures": [
     {
       "id": "F1",
       "name": "nominal",
       "metatok_nonempty": true,
-      "required": ["V2a", "V2b^proc", "V2c", "V3", "V3a", "V3c", "V3b", "V3d", "V4a", "V5", "V6"],
+      "required": ["EVIDENCE_SUPPORT", "PROCEDURE_RELIABLE", "EVIDENCE_CURRENT", "GOV_CONFIG_ADEQUATE", "GOV_POLICY_ADEQUATE", "GOV_TOKEN_ADEQUATE", "EXECUTION_FAITHFUL", "EX_ANTE_JUSTIFIED", "ROUTE_ADMISSIBLE", "CLOSURE_TRUTHFUL", "ROBUST_NEIGHBORHOOD"],
       "statuses": {
-        "V1": "pass", "V2a": "pass", "V2b^proc": "pass", "V2c": "pass",
-        "V3": "pass", "V3a": "pass", "V3c": "pass", "V3b": "pass",
-        "V3d": "pass", "V4a": "pass", "V5": "pass", "V6": "pass",
-        "V2b^tok": "pass", "V4b": "pass"
+        "RESULT_CORRECT": "pass", "EVIDENCE_SUPPORT": "pass", "PROCEDURE_RELIABLE": "pass", "EVIDENCE_CURRENT": "pass",
+        "GOV_CONFIG_ADEQUATE": "pass", "GOV_POLICY_ADEQUATE": "pass", "GOV_TOKEN_ADEQUATE": "pass", "EXECUTION_FAITHFUL": "pass",
+        "EX_ANTE_JUSTIFIED": "pass", "ROUTE_ADMISSIBLE": "pass", "CLOSURE_TRUTHFUL": "pass", "ROBUST_NEIGHBORHOOD": "pass",
+        "TOKEN_TRUTH_LINKED": "pass", "ROUTE_QUALITY": "pass"
       },
-      "claims": [{"q": "placed-claim-1", "v2btok": "pass", "v1": "pass"}],
+      "claims": [{"q": "placed-claim-1", "token_truth_linked": "pass", "result_correct": "pass"}],
       "unevaluated": [],
       "na_reasons": {},
-      "expected": {"v1": "pass", "pathway": "adequate"}
+      "expected": {"result": "pass", "pathway": "adequate"}
     },
     {
       "id": "F2",
-      "name": "stopped-clock (SCAN-CLEAN marker validator, correct today)",
+      "name": "stopped-clock (marker validator, correct today)",
       "metatok_nonempty": false,
-      "required": ["V2a", "V2b^proc", "V2c", "V3", "V3a", "V3b", "V3d", "V6"],
+      "required": ["EVIDENCE_SUPPORT", "PROCEDURE_RELIABLE", "EVIDENCE_CURRENT", "GOV_CONFIG_ADEQUATE", "GOV_POLICY_ADEQUATE", "EXECUTION_FAITHFUL", "EX_ANTE_JUSTIFIED", "ROBUST_NEIGHBORHOOD"],
       "statuses": {
-        "V1": "pass", "V2a": "pass", "V2b^proc": "fail", "V2c": "pass",
-        "V3": "fail", "V3a": "pass", "V3b": "pass", "V3d": "pass",
-        "V6": "fail", "V2b^tok": "fail",
-        "V3c": "not-applicable", "V4a": "not-applicable", "V5": "not-applicable", "V4b": "not-applicable"
+        "RESULT_CORRECT": "pass", "EVIDENCE_SUPPORT": "pass", "PROCEDURE_RELIABLE": "fail", "EVIDENCE_CURRENT": "pass",
+        "GOV_CONFIG_ADEQUATE": "fail", "GOV_POLICY_ADEQUATE": "pass", "EXECUTION_FAITHFUL": "pass", "EX_ANTE_JUSTIFIED": "pass",
+        "ROBUST_NEIGHBORHOOD": "fail", "TOKEN_TRUTH_LINKED": "fail",
+        "GOV_TOKEN_ADEQUATE": "not-applicable", "ROUTE_ADMISSIBLE": "not-applicable", "CLOSURE_TRUTHFUL": "not-applicable", "ROUTE_QUALITY": "not-applicable"
       },
-      "claims": [{"q": "compliant", "v2btok": "fail", "v1": "pass"}],
+      "claims": [{"q": "compliant", "token_truth_linked": "fail", "result_correct": "pass"}],
       "unevaluated": [],
       "na_reasons": {
-        "V3c": "MetaTok(e) empty: no case-specific bindings, instruments, or calibration",
-        "V4a": "episode selects no route",
-        "V5": "episode makes no closure claim and dispositions no residuals",
-        "V4b": "advisory verdict; no route selected"
+        "GOV_TOKEN_ADEQUATE": "MetaTok(e) empty: no case-specific bindings, instruments, or calibration",
+        "ROUTE_ADMISSIBLE": "episode selects no route",
+        "CLOSURE_TRUTHFUL": "episode makes no closure claim and dispositions no residuals",
+        "ROUTE_QUALITY": "advisory verdict; no route selected"
       },
-      "expected": {"v1": "pass", "pathway": "defective"}
+      "expected": {"result": "pass", "pathway": "defective"}
     },
     {
       "id": "F3",
-      "name": "justified rare miss (adequate-path error)",
+      "name": "justified rare miss (AdequatePathError)",
       "metatok_nonempty": true,
-      "required": ["V2a", "V2b^proc", "V2c", "V3", "V3a", "V3c", "V3b", "V3d"],
+      "required": ["EVIDENCE_SUPPORT", "PROCEDURE_RELIABLE", "EVIDENCE_CURRENT", "GOV_CONFIG_ADEQUATE", "GOV_POLICY_ADEQUATE", "GOV_TOKEN_ADEQUATE", "EXECUTION_FAITHFUL", "EX_ANTE_JUSTIFIED"],
       "statuses": {
-        "V1": "fail", "V2a": "pass", "V2b^proc": "pass", "V2c": "pass",
-        "V3": "pass", "V3a": "pass", "V3c": "pass", "V3b": "pass",
-        "V3d": "pass", "V2b^tok": "fail",
-        "V4a": "not-applicable", "V5": "not-applicable", "V6": "not-applicable", "V4b": "not-applicable"
+        "RESULT_CORRECT": "fail", "EVIDENCE_SUPPORT": "pass", "PROCEDURE_RELIABLE": "pass", "EVIDENCE_CURRENT": "pass",
+        "GOV_CONFIG_ADEQUATE": "pass", "GOV_POLICY_ADEQUATE": "pass", "GOV_TOKEN_ADEQUATE": "pass", "EXECUTION_FAITHFUL": "pass",
+        "EX_ANTE_JUSTIFIED": "pass", "TOKEN_TRUTH_LINKED": "fail",
+        "ROUTE_ADMISSIBLE": "not-applicable", "CLOSURE_TRUTHFUL": "not-applicable", "ROBUST_NEIGHBORHOOD": "not-applicable", "ROUTE_QUALITY": "not-applicable"
       },
-      "claims": [{"q": "infrastructure-flake", "v2btok": "fail", "v1": "fail"}],
+      "claims": [{"q": "infrastructure-flake", "token_truth_linked": "fail", "result_correct": "fail"}],
       "unevaluated": [],
       "na_reasons": {
-        "V4a": "episode selects no route",
-        "V5": "episode makes no closure claim",
-        "V6": "no predeclared robustness obligation for this risk class",
-        "V4b": "advisory verdict; no route selected"
+        "ROUTE_ADMISSIBLE": "episode selects no route",
+        "CLOSURE_TRUTHFUL": "episode makes no closure claim",
+        "ROBUST_NEIGHBORHOOD": "no predeclared robustness obligation for this risk class",
+        "ROUTE_QUALITY": "advisory verdict; no route selected"
       },
-      "expected": {"v1": "fail", "pathway": "adequate"}
+      "expected": {"result": "fail", "pathway": "adequate"}
     },
     {
       "id": "F4",
       "name": "defective metaorthemma, lucky result (wrong reference plane / stale calibration)",
       "metatok_nonempty": true,
-      "required": ["V2a", "V2b^proc", "V2c", "V3", "V3a", "V3c", "V3b", "V3d"],
+      "required": ["EVIDENCE_SUPPORT", "PROCEDURE_RELIABLE", "EVIDENCE_CURRENT", "GOV_CONFIG_ADEQUATE", "GOV_POLICY_ADEQUATE", "GOV_TOKEN_ADEQUATE", "EXECUTION_FAITHFUL", "EX_ANTE_JUSTIFIED"],
       "statuses": {
-        "V1": "pass", "V2a": "pass", "V2b^proc": "pass", "V2c": "pass",
-        "V3": "pass", "V3a": "pass", "V3c": "fail", "V3b": "pass",
-        "V3d": "pass", "V2b^tok": "fail",
-        "V4a": "not-applicable", "V5": "not-applicable", "V6": "not-applicable", "V4b": "not-applicable"
+        "RESULT_CORRECT": "pass", "EVIDENCE_SUPPORT": "pass", "PROCEDURE_RELIABLE": "pass", "EVIDENCE_CURRENT": "pass",
+        "GOV_CONFIG_ADEQUATE": "pass", "GOV_POLICY_ADEQUATE": "pass", "GOV_TOKEN_ADEQUATE": "fail", "EXECUTION_FAITHFUL": "pass",
+        "EX_ANTE_JUSTIFIED": "pass", "TOKEN_TRUTH_LINKED": "fail",
+        "ROUTE_ADMISSIBLE": "not-applicable", "CLOSURE_TRUTHFUL": "not-applicable", "ROBUST_NEIGHBORHOOD": "not-applicable", "ROUTE_QUALITY": "not-applicable"
       },
-      "claims": [{"q": "pillar-orthogonal", "v2btok": "fail", "v1": "pass"}],
+      "claims": [{"q": "pillar-orthogonal", "token_truth_linked": "fail", "result_correct": "pass"}],
       "unevaluated": [],
       "na_reasons": {
-        "V4a": "episode selects no route",
-        "V5": "episode makes no closure claim",
-        "V6": "no predeclared robustness obligation for this risk class",
-        "V4b": "advisory verdict; no route selected"
+        "ROUTE_ADMISSIBLE": "episode selects no route",
+        "CLOSURE_TRUTHFUL": "episode makes no closure claim",
+        "ROBUST_NEIGHBORHOOD": "no predeclared robustness obligation for this risk class",
+        "ROUTE_QUALITY": "advisory verdict; no route selected"
       },
-      "expected": {"v1": "pass", "pathway": "defective"}
+      "expected": {"result": "pass", "pathway": "defective"}
     },
     {
       "id": "F5",
       "name": "unresolved audit (required robustness evidence not yet evaluated)",
       "metatok_nonempty": true,
-      "required": ["V2a", "V2b^proc", "V2c", "V3", "V3a", "V3c", "V3b", "V3d", "V6"],
+      "required": ["EVIDENCE_SUPPORT", "PROCEDURE_RELIABLE", "EVIDENCE_CURRENT", "GOV_CONFIG_ADEQUATE", "GOV_POLICY_ADEQUATE", "GOV_TOKEN_ADEQUATE", "EXECUTION_FAITHFUL", "EX_ANTE_JUSTIFIED", "ROBUST_NEIGHBORHOOD"],
       "statuses": {
-        "V1": "pass", "V2a": "pass", "V2b^proc": "pass", "V2c": "pass",
-        "V3": "pass", "V3a": "pass", "V3c": "pass", "V3b": "pass",
-        "V3d": "pass", "V6": "undetermined", "V2b^tok": "pass",
-        "V4a": "not-applicable", "V5": "not-applicable", "V4b": "not-applicable"
+        "RESULT_CORRECT": "pass", "EVIDENCE_SUPPORT": "pass", "PROCEDURE_RELIABLE": "pass", "EVIDENCE_CURRENT": "pass",
+        "GOV_CONFIG_ADEQUATE": "pass", "GOV_POLICY_ADEQUATE": "pass", "GOV_TOKEN_ADEQUATE": "pass", "EXECUTION_FAITHFUL": "pass",
+        "EX_ANTE_JUSTIFIED": "pass", "ROBUST_NEIGHBORHOOD": "undetermined", "TOKEN_TRUTH_LINKED": "pass",
+        "ROUTE_ADMISSIBLE": "not-applicable", "CLOSURE_TRUTHFUL": "not-applicable", "ROUTE_QUALITY": "not-applicable"
       },
-      "claims": [{"q": "placed-claim-1", "v2btok": "pass", "v1": "pass"}],
-      "unevaluated": ["V6"],
+      "claims": [{"q": "placed-claim-1", "token_truth_linked": "pass", "result_correct": "pass"}],
+      "unevaluated": ["ROBUST_NEIGHBORHOOD"],
       "na_reasons": {
-        "V4a": "episode selects no route",
-        "V5": "episode makes no closure claim",
-        "V4b": "advisory verdict; no route selected"
+        "ROUTE_ADMISSIBLE": "episode selects no route",
+        "CLOSURE_TRUTHFUL": "episode makes no closure claim",
+        "ROUTE_QUALITY": "advisory verdict; no route selected"
       },
-      "expected": {"v1": "pass", "pathway": "undetermined"}
+      "expected": {"result": "pass", "pathway": "undetermined"}
+    },
+    {
+      "id": "F6",
+      "name": "stale directive: authentic but superseded governing token, faithful execution (O3, Decision 0006)",
+      "metatok_nonempty": true,
+      "required": ["EVIDENCE_SUPPORT", "PROCEDURE_RELIABLE", "EVIDENCE_CURRENT", "GOV_CONFIG_ADEQUATE", "GOV_POLICY_ADEQUATE", "GOV_TOKEN_ADEQUATE", "EXECUTION_FAITHFUL", "EX_ANTE_JUSTIFIED", "ROUTE_ADMISSIBLE", "CLOSURE_TRUTHFUL"],
+      "statuses": {
+        "RESULT_CORRECT": "fail", "EVIDENCE_SUPPORT": "pass", "PROCEDURE_RELIABLE": "pass", "EVIDENCE_CURRENT": "fail",
+        "GOV_CONFIG_ADEQUATE": "pass", "GOV_POLICY_ADEQUATE": "pass", "GOV_TOKEN_ADEQUATE": "fail", "EXECUTION_FAITHFUL": "pass",
+        "EX_ANTE_JUSTIFIED": "pass", "ROUTE_ADMISSIBLE": "pass", "CLOSURE_TRUTHFUL": "fail", "TOKEN_TRUTH_LINKED": "fail",
+        "ROBUST_NEIGHBORHOOD": "not-applicable", "ROUTE_QUALITY": "not-applicable"
+      },
+      "claims": [{"q": "directive-in-force", "token_truth_linked": "fail", "result_correct": "fail"}],
+      "unevaluated": [],
+      "na_reasons": {
+        "ROBUST_NEIGHBORHOOD": "no predeclared robustness obligation for this risk class",
+        "ROUTE_QUALITY": "advisory verdict; route quality not at issue"
+      },
+      "notes": "The recovered directive is authentic (EVIDENCE_SUPPORT pass for authenticity claims) but superseded: the load-bearing currentness evidence fails (EVIDENCE_CURRENT), the bound governing token is not Current (GOV_TOKEN_ADEQUATE fail), the executor followed it faithfully (EXECUTION_FAITHFUL pass), and the closure claim asserted the directive was in force (CLOSURE_TRUTHFUL fail). Witnesses faithful-execution-under-defective-token with joint V2c+V3c failure.",
+      "expected": {"result": "fail", "pathway": "defective"}
+    },
+    {
+      "id": "F7",
+      "name": "safe but suboptimal route (advisory ROUTE_QUALITY fail, pathway adequate)",
+      "metatok_nonempty": false,
+      "required": ["EVIDENCE_SUPPORT", "PROCEDURE_RELIABLE", "EVIDENCE_CURRENT", "GOV_CONFIG_ADEQUATE", "GOV_POLICY_ADEQUATE", "EXECUTION_FAITHFUL", "EX_ANTE_JUSTIFIED", "ROUTE_ADMISSIBLE"],
+      "statuses": {
+        "RESULT_CORRECT": "pass", "EVIDENCE_SUPPORT": "pass", "PROCEDURE_RELIABLE": "pass", "EVIDENCE_CURRENT": "pass",
+        "GOV_CONFIG_ADEQUATE": "pass", "GOV_POLICY_ADEQUATE": "pass", "EXECUTION_FAITHFUL": "pass", "EX_ANTE_JUSTIFIED": "pass",
+        "ROUTE_ADMISSIBLE": "pass", "ROUTE_QUALITY": "fail", "TOKEN_TRUTH_LINKED": "pass",
+        "GOV_TOKEN_ADEQUATE": "not-applicable", "CLOSURE_TRUTHFUL": "not-applicable", "ROBUST_NEIGHBORHOOD": "not-applicable"
+      },
+      "claims": [{"q": "route-choice", "token_truth_linked": "pass", "result_correct": "pass"}],
+      "unevaluated": [],
+      "na_reasons": {
+        "GOV_TOKEN_ADEQUATE": "MetaTok(e) empty: no case-specific bindings",
+        "CLOSURE_TRUTHFUL": "episode makes no closure claim",
+        "ROBUST_NEIGHBORHOOD": "no predeclared robustness obligation for this risk class"
+      },
+      "notes": "Witnesses safe-is-not-best: the advisory ROUTE_QUALITY verdict fails while the pathway is adequate, because ROUTE_QUALITY is excluded from the core by Decision 0003.",
+      "expected": {"result": "pass", "pathway": "adequate"}
     }
   ]
 }

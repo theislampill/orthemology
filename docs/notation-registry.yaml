@@ -1,0 +1,127 @@
+# Orthemology notation registry — NORMATIVE (Decision 0005, 2026-07-20).
+# One symbol, one role. Semantic roles control over glyph preference. Historical
+# documents under archive/ retain old symbols and are never rewritten; the
+# notation validator (scripts/validate_notation.py) enforces the CURRENT corpus.
+registry_version: "1.0.0"
+symbols:
+  - symbol: "A"
+    role: declared analysis (identifier + version); NEVER an actor index
+  - symbol: "alpha, beta, ..."
+    glyph: "α, β"
+    role: actors; formal actor indices are never A/B
+  - symbol: "T = task(A)"
+    role: task component of the analysis
+  - symbol: "M_univ, O_univ"
+    glyph: "𝓜, 𝓞"
+    role: universal occurrence and ortheme universes
+  - symbol: "M_A, O_A"
+    role: analysis-active domain (M_A ⊆ 𝓜) and repertoire (O_A ⊆ 𝓞); the
+      unsubscripted M, O are licensed scoped shorthand once one analysis is fixed
+  - symbol: "Inst_A"
+    role: analysis-relative instantiation, Inst_A ⊆ M_A × O_A (the primitive)
+  - symbol: "O*(m; A)"
+    role: true (actual) profile of m under A
+  - symbol: "Pi_A"
+    glyph: "Π_A"
+    role: complete-profile space under A (Π_T scoped shorthand)
+  - symbol: "Pi_A_partial"
+    glyph: "Π_A^∂"
+    role: partial-profile space under A
+  - symbol: "C_hat"
+    glyph: "Ĉ_{A,α,t}(m)"
+    role: candidate set of COMPLETE profiles (equivalently the typed family C^profile)
+  - symbol: "p_hat"
+    glyph: "p̂_{A,α,t}(m) ∈ Π_A^∂"
+    role: inferred (partial) profile — belief, never ground truth
+  - symbol: "Omega"
+    glyph: "Ω_{A,α,t}"
+    role: observation map, indexed where analysis/actor/time matter (Ω_α scoped form)
+  - symbol: "mu"
+    glyph: "μ"
+    role: metaortheme type ⟨g, S_μ, select_μ, prov, ver⟩
+  - symbol: "pi_mu"
+    glyph: "π_μ"
+    role: paired meta-policy
+  - symbol: "mu_bar"
+    glyph: "μ̄_{e,j}"
+    role: the j-th metaorthemma (configuration token) in episode e
+  - symbol: "MetaInst"
+    role: token typing MetaInst(μ̄_{e,j}, μ)
+  - symbol: "Gamma_E"
+    glyph: "Γ_E = (E, ⇝)"
+    role: episode DAG (nodes = episodes, typed edges); replaces the former bare G
+  - symbol: "e_Gamma"
+    glyph: "e_Γ = comp(Γ_E)"
+    role: composed boundary-level episode (when composition conditions hold)
+  - symbol: "GoalSchema"
+    role: parametric goal schema GoalSchema(α); replaces the overloaded W(·)
+  - symbol: "G_target"
+    glyph: "𝒢_{α,A_α}"
+    role: actor-α's grounded target profile set (𝒢_α scoped shorthand)
+  - symbol: "Rep_A"
+    role: representation family under A
+  - symbol: "chi"
+    glyph: "χ"
+    role: one representation, χ ∈ Rep_A; replaces the collision-prone q
+  - symbol: "L_A_star"
+    glyph: "L_A*(χ)"
+    role: best attainable loss/risk under representation χ (replaces R*(q))
+  - symbol: "select_mu"
+    glyph: "select_μ"
+    role: metaortheme state-selecting evidence procedure (replaces overloaded ε_μ)
+  - symbol: "estatus_e"
+    role: per-claim evidence-status map of episode e (replaces overloaded bare ε)
+  - symbol: "eps_A"
+    glyph: "ε_A"
+    role: accepted tolerance of the analysis
+  - symbol: "theta_stop"
+    glyph: "θ_stop"
+    role: ANDON stop/escalation risk threshold
+  - symbol: "K_A"
+    glyph: "𝒦_A"
+    role: cause repertoire (𝒦_T scoped shorthand)
+  - symbol: "R_A"
+    glyph: "ℛ_A"
+    role: route repertoire (ℛ_T scoped shorthand)
+  - symbol: "W_A"
+    glyph: "𝒲_A"
+    role: warrant-state repertoire (𝒲_T scoped shorthand)
+  - symbol: "Q_e"
+    glyph: "𝒬_e"
+    role: claim ledger of episode e (replaces the collision-prone Q)
+  - symbol: "delta_e"
+    glyph: "δ_e"
+    role: residual-disposition map of episode e
+  - symbol: "ReqPath"
+    role: governance-derived required pathway verdicts ReqPath(e); the SOLE
+      pathway requirement function. The former App(e) is retired from normative
+      use (Decision 0005); applicability is expressed via ReqPath plus recorded
+      not-applicable reasons.
+retired_symbols:
+  - symbol: "App(e)"
+    reason: competed with ReqPath(e) as a requirement function; replaced by
+      ReqPath(e) + per-verdict recorded applicability reasons
+  - symbol: "W(·)"
+    reason: collided with warrant repertoire; replaced by GoalSchema(·)
+  - symbol: "G (bare, for the episode graph)"
+    reason: collided with target sets; replaced by Γ_E
+  - symbol: "G(α, T_α)"
+    reason: replaced by 𝒢_{α,A_α} (target sets live in per-analysis profile spaces)
+  - symbol: "q / Q (representation / representation set)"
+    reason: collided with claim ledger; replaced by χ ∈ Rep_A
+  - symbol: "R*(q)"
+    reason: collided with route repertoire and risk; replaced by L_A*(χ)
+  - symbol: "epsilon_mu (ε_μ)"
+    reason: overloaded with tolerance and evidence status; replaced by select_μ
+  - symbol: "bare epsilon (ε) as evidence-status map"
+    reason: replaced by estatus_e
+  - symbol: "tau (τ) as ANDON threshold"
+    reason: replaced by θ_stop
+  - symbol: "I_T"
+    reason: pre-D1 primitive; superseded by Inst_A (historical only)
+scoped_shorthand_rule: >
+  Task-subscripted forms (Inst_T, O*_T, Π_T, 𝒦_T, ℛ_T, 𝒲_T, ≢_T) and the
+  unsubscripted M, O are licensed ONLY after one analysis A with task(A) = T is
+  explicitly fixed, and are FORBIDDEN in multi-analysis contexts (level-indexed
+  audits, multi-actor evaluation, cross-version comparisons,
+  execution-vs-review comparisons).
