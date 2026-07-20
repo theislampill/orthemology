@@ -1,0 +1,41 @@
+# Qurʾān locus registry (R3, Decision-0009-era sourcing discipline).
+# Every Qurʾānic citation in current papers/ledgers, verified against the
+# Uthmānī text on 2026-07-20 (verification_source: Qurʾān text database via
+# MCP Quran service; normalized key = opening words, no diacritics).
+# usage: direct  = the āyah states the cited content directly;
+#        inference = the āyah supports the claim only within a school-internal
+#                    inference (labeled in the paper).
+# Renderings in papers are "interpretation of the meaning".
+schema: orthemology-quran-loci-v1
+verified: 2026-07-20
+loci:
+  - {ref: "4:87",   key: "ومن أصدق من الله حديثا",          cited_for: "who is truer in statement than Allah", usage: direct}
+  - {ref: "4:122",  key: "ومن أصدق من الله قيلا",           cited_for: "whose words truer than Allah's", usage: direct}
+  - {ref: "5:116",  key: "وإذ قال الله يا عيسى ابن مريم",   cited_for: "Allah will say: O ʿĪsā son of Maryam (speech heard)", usage: direct}
+  - {ref: "20:11-12", key: "نودي يا موسى / إني أنا ربك",    cited_for: "O Mūsā (20:11), verily I am your Lord (20:12)", usage: direct,
+     note: "R2 cited 20:11 alone — WRONG: 20:11 is the call only; the declaration is 20:12. Corrected corpus-wide in R3."}
+  - {ref: "19:52",  key: "وناديناه من جانب الطور الأيمن",   cited_for: "called from the right side of the Mount, drawn near for talk", usage: direct}
+  - {ref: "42:11",  key: "ليس كمثله شيء",                   cited_for: "nothing like Him; All-Hearer, All-Seer", usage: direct}
+  - {ref: "4:164",  key: "وكلم الله موسى تكليما",           cited_for: "Allah spoke to Mūsā with speech", usage: direct}
+  - {ref: "7:54",   key: "ألا له الخلق والأمر",             cited_for: "His is the creation and the command", usage: direct}
+  - {ref: "36:82",  key: "أن يقول له كن فيكون",             cited_for: "creation through the command Be", usage: direct}
+  - {ref: "55:1-3", key: "الرحمن علم القرآن خلق الإنسان",   cited_for: "taught the Qurʾān; created man (order of mention)", usage: inference}
+  - {ref: "2:120",  key: "بعد الذي جاءك من العلم",          cited_for: "the Qurʾān is from His knowledge", usage: inference,
+     note: "the āyah says knowledge came to you; identification of that knowledge with the revealed Qurʾān is the tradition's reading"}
+  - {ref: "3:61",   key: "من بعد ما جاءك من العلم",         cited_for: "the Qurʾān is from His knowledge", usage: inference}
+  - {ref: "18:109", key: "قل لو كان البحر مدادا لكلمات ربي", cited_for: "inexhaustibility of His words", usage: direct}
+  - {ref: "31:27",  key: "ما نفدت كلمات الله",              cited_for: "inexhaustibility of His words", usage: direct}
+  - {ref: "87:1",   key: "سبح اسم ربك الأعلى",              cited_for: "His name glorified", usage: direct}
+  - {ref: "7:180",  key: "ولله الأسماء الحسنى فادعوه بها",  cited_for: "His names invoked", usage: direct}
+  - {ref: "76:25",  key: "واذكر اسم ربك بكرة وأصيلا",       cited_for: "His name remembered", usage: direct}
+  - {ref: "32:2",   key: "تنزيل الكتاب لا ريب فيه",         cited_for: "the Book sent down from the Lord of the worlds", usage: direct}
+  - {ref: "6:114",  key: "أنزل إليكم الكتاب مفصلا",         cited_for: "He sent down the Book, detailed", usage: direct}
+  - {ref: "16:102", key: "قل نزله روح القدس من ربك بالحق",  cited_for: "sent down by the Holy Spirit from your Lord", usage: direct}
+  - {ref: "9:6",    key: "حتى يسمع كلام الله",              cited_for: "that he may hear the Word of Allah", usage: direct}
+  - {ref: "28:30",  key: "إني أنا الله رب العالمين",        cited_for: "the call at the tree: I am Allah, Lord of the worlds", usage: direct}
+  - {ref: "79:24",  key: "أنا ربكم الأعلى",                 cited_for: "Pharaoh's counter-claim (bush-absurdity contrast)", usage: direct}
+  - {ref: "29:49",  key: "آيات بينات في صدور الذين أوتوا العلم", cited_for: "preserved in breasts", usage: direct}
+  - {ref: "80:13-14", key: "في صحف مكرمة مرفوعة مطهرة",     cited_for: "in honored purified pages", usage: direct}
+  - {ref: "98:2-3", key: "يتلو صحفا مطهرة فيها كتب قيمة",   cited_for: "reciting purified pages", usage: direct}
+# ayah counts per surah used for range validation (only surahs cited here)
+surah_ayah_counts: {2: 286, 3: 200, 4: 176, 5: 120, 6: 165, 7: 206, 9: 129, 16: 128, 18: 110, 19: 98, 20: 135, 28: 88, 29: 69, 31: 34, 32: 30, 36: 83, 42: 53, 55: 78, 76: 31, 79: 46, 80: 42, 87: 19, 98: 8}

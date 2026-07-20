@@ -4,36 +4,113 @@
   "title": "Declared analysis A",
   "description": "Normative-but-provisional reference model (R2). The explicit, versionable index of ground truth (Decision 0001). A change to any component yields a new version.",
   "type": "object",
-  "required": ["analysis_id", "version", "task", "repertoire_ref"],
+  "required": [
+    "analysis_id",
+    "version",
+    "task",
+    "repertoire_ref"
+  ],
   "properties": {
-    "analysis_id": {"type": "string"},
-    "version": {"type": "string"},
-    "task": {"type": "string", "description": "T = task(A)"},
-    "boundary": {"type": "string", "description": "system and governance boundary"},
-    "repertoire_ref": {"type": "string", "description": "identifier of the active ortheme repertoire O_A"},
-    "domain_ref": {"type": "string", "description": "identifier of the active occurrence domain M_A"},
-    "evidence_repertoire": {"type": "array", "items": {"type": "string"}},
-    "action_repertoire": {"type": "array", "items": {"type": "string"}},
-    "policy_class": {"type": "string"},
-    "loss": {"type": "string"},
-    "hard_constraints": {"type": "array", "items": {"type": "string"}},
-    "horizon": {"type": "string"},
-    "tolerance": {"type": ["number", "string"], "description": "ε_A"},
-    "representation_family": {"type": "string", "description": "Rep_A"},
-    "merger_family": {"type": "string"},
+    "analysis_id": {
+      "type": "string",
+      "minLength": 1
+    },
+    "version": {
+      "type": "string",
+      "minLength": 1
+    },
+    "task": {
+      "type": "string",
+      "description": "T = task(A)"
+    },
+    "boundary": {
+      "type": "string",
+      "description": "system and governance boundary"
+    },
+    "repertoire_ref": {
+      "type": "string",
+      "description": "identifier of the active ortheme repertoire O_A"
+    },
+    "domain_ref": {
+      "type": "string",
+      "description": "identifier of the active occurrence domain M_A"
+    },
+    "evidence_repertoire": {
+      "type": "array",
+      "items": {
+        "type": "string"
+      }
+    },
+    "action_repertoire": {
+      "type": "array",
+      "items": {
+        "type": "string"
+      }
+    },
+    "policy_class": {
+      "type": "string"
+    },
+    "loss": {
+      "type": "string"
+    },
+    "hard_constraints": {
+      "type": "array",
+      "items": {
+        "type": "string"
+      }
+    },
+    "horizon": {
+      "type": "string"
+    },
+    "tolerance": {
+      "type": [
+        "number",
+        "string"
+      ],
+      "description": "ε_A"
+    },
+    "representation_family": {
+      "type": "string",
+      "description": "Rep_A"
+    },
+    "merger_family": {
+      "type": "string"
+    },
     "axes": {
       "type": "array",
       "description": "factorized profile axes with exclusivity markings and cross-axis constraints (Definition 10)",
       "items": {
         "type": "object",
-        "required": ["name", "exclusivity"],
+        "required": [
+          "name",
+          "exclusivity"
+        ],
         "properties": {
-          "name": {"type": "string"},
-          "exclusivity": {"enum": ["alternatives", "co-holding"]},
-          "values": {"type": "array", "items": {"type": "string"}}
-        }
+          "name": {
+            "type": "string"
+          },
+          "exclusivity": {
+            "enum": [
+              "alternatives",
+              "co-holding"
+            ]
+          },
+          "values": {
+            "type": "array",
+            "items": {
+              "type": "string"
+            }
+          }
+        },
+        "additionalProperties": false
       }
     },
-    "consistency_constraints": {"type": "array", "items": {"type": "string"}}
-  }
+    "consistency_constraints": {
+      "type": "array",
+      "items": {
+        "type": "string"
+      }
+    }
+  },
+  "additionalProperties": false
 }

@@ -29,7 +29,7 @@ Companion-lane rows of the project sourcing discipline; statuses as in [`docs/so
 
 | Locus → claim | Source | Status | Flags |
 |---|---|---|---|
-| §3.1 Allah speaks; heard; letters; sound; no resemblance | Qurʾān 4:87; 4:122; 5:116; 20:11; 19:52; 42:11; ibnuthaymin-lumah p.73 | āyāt: primary, checkable; creed-inference locus: VIA-COMPILATION | Atharī |
+| §3.1 Allah speaks; heard; letters; sound; no resemblance | Qurʾān 4:87; 4:122; 5:116; 20:11-12; 19:52; 42:11; ibnuthaymin-lumah p.73 | āyāt: PRIMARY-TEXT-VERIFIED (R3; the R2 bare "20:11" was wrong — the declaration is 20:12; registry: `references/quran-loci.yaml`); creed-inference locus: VIA-COMPILATION | Atharī |
 | §3.2 genus eternal / particulars when He wills | ibntaymiyya-majmu (vol. 12); Hoover 2004, *Journal of Islamic Studies* 15(3):287–329 (academic) | Hoover: WEB-VERIFIED (located this pass); Majmūʿ loci: VIA-COMPILATION | Taymiyyan articulation specifically |
 | §3.2 Aḥmad's "ancient and uncreated" courtroom report | Ṭabaqāt al-Ḥanābilah 219 | VIA-COMPILATION; **hagiographic features; cited as tradition-internal report, not verified history** | caution flagged inline |
 | §3.3 ten-proof compilation (creation/command; knowledge; inexhaustibility; names; attribution; refuge; superiority; two rational proofs) | Qurʾān loci as listed; Ḥanbal *al-Miḥnah* 45, 52–54, 210; al-Ājurrī p.80; ʿAbdullāh *as-Sunnah* 13; Ibn Abī Ḥātim p.193–195; ad-Dārimī 287/340; Muslim 2708; bukhari-khalq p.143, 2/70 | Qurʾān/Muslim: primary, checkable; classical loci: VIA-COMPILATION | reported as the creed's internal case |

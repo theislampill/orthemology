@@ -3,71 +3,276 @@
   "$id": "orthemology/orthing-episode.schema.json",
   "title": "Orthing episode e — the auditable record (core §2.2)",
   "type": "object",
-  "required": ["episode_id", "occurrence", "actor", "analysis", "time", "placement"],
+  "required": [
+    "episode_id",
+    "occurrence",
+    "actor",
+    "analysis",
+    "time",
+    "placement",
+    "observation",
+    "evidence",
+    "warrant",
+    "policy",
+    "verdict_record_ref"
+  ],
   "properties": {
-    "episode_id": {"type": "string"},
-    "occurrence": {"$ref": "orthemma.schema.json"},
-    "observation": {"type": ["string", "object"], "description": "x = Ω_e(m); what the episode actually saw"},
+    "episode_id": {
+      "type": "string",
+      "minLength": 1
+    },
+    "occurrence": {
+      "$ref": "orthemma.schema.json"
+    },
+    "observation": {
+      "type": [
+        "string",
+        "object"
+      ],
+      "description": "x = Ω_e(m); what the episode actually saw"
+    },
     "evidence": {
       "type": "array",
       "description": "H — ordered typed evidence; each item typed, scoped, provenanced, expiring",
       "items": {
         "type": "object",
-        "required": ["evidence_id", "channel", "property_class", "scope", "provenance", "validity"],
+        "required": [
+          "evidence_id",
+          "channel",
+          "property_class",
+          "scope",
+          "provenance",
+          "validity"
+        ],
         "properties": {
-          "evidence_id": {"type": "string"},
-          "channel": {"type": "string"},
-          "property_class": {"type": "string"},
-          "scope": {"type": "string", "description": "claims/versions/levels the item can bear on at all"},
-          "provenance": {"type": "string", "description": "which process, from which (κ,v)"},
-          "validity": {"type": "string", "description": "currency conditions / expiry"}
-        }
+          "evidence_id": {
+            "type": "string"
+          },
+          "channel": {
+            "type": "string"
+          },
+          "property_class": {
+            "type": "string"
+          },
+          "scope": {
+            "type": "string",
+            "description": "claims/versions/levels the item can bear on at all"
+          },
+          "provenance": {
+            "type": "string",
+            "description": "which process, from which (κ,v)"
+          },
+          "validity": {
+            "type": "string",
+            "description": "currency conditions / expiry"
+          }
+        },
+        "additionalProperties": false
       }
     },
-    "actor": {"type": "string", "description": "α — populated even for mechanical executors"},
-    "warrant": {"type": ["string", "null"], "description": "w — who/what authorized acting, with scope; distinct from evidence and from executor identity"},
+    "actor": {
+      "type": "string",
+      "description": "α — populated even for mechanical executors"
+    },
+    "warrant": {
+      "type": [
+        "string",
+        "null"
+      ],
+      "description": "w — who/what authorized acting, with scope; distinct from evidence and from executor identity"
+    },
     "analysis": {
       "type": "object",
-      "required": ["analysis_id", "version"],
-      "properties": {"analysis_id": {"type": "string"}, "version": {"type": "string"}, "task": {"type": "string"}}
+      "required": [
+        "analysis_id",
+        "version"
+      ],
+      "properties": {
+        "analysis_id": {
+          "type": "string"
+        },
+        "version": {
+          "type": "string"
+        },
+        "task": {
+          "type": "string"
+        }
+      },
+      "additionalProperties": false
     },
-    "time": {"type": "string", "description": "t — interval"},
+    "time": {
+      "type": "string",
+      "description": "t — interval"
+    },
     "governing_configuration": {
       "type": "object",
       "properties": {
-        "mu_refs": {"type": "array", "items": {"type": "object", "properties": {"mu_id": {"type": "string"}, "mu_version": {"type": "string"}}}},
-        "precedence": {"type": "array", "items": {"type": "array", "items": {"type": "string"}, "minItems": 2, "maxItems": 2}, "description": "strict partial order pairs [outranks, outranked]"}
-      }
+        "mu_refs": {
+          "type": "array",
+          "items": {
+            "type": "object",
+            "properties": {
+              "mu_id": {
+                "type": "string"
+              },
+              "mu_version": {
+                "type": "string"
+              }
+            },
+            "additionalProperties": false
+          }
+        },
+        "precedence": {
+          "type": "array",
+          "items": {
+            "type": "array",
+            "items": {
+              "type": "string"
+            },
+            "minItems": 2,
+            "maxItems": 2
+          },
+          "description": "strict partial order pairs [outranks, outranked]"
+        }
+      },
+      "additionalProperties": false
     },
-    "meta_tokens": {"type": "array", "items": {"$ref": "metaorthemma.schema.json"}, "description": "MetaTok(e); empty ⇒ GOV_TOKEN_ADEQUATE not in ReqPath (zero-burden rule)"},
-    "policy": {"type": "string", "description": "π"},
+    "meta_tokens": {
+      "type": "array",
+      "items": {
+        "$ref": "metaorthemma.schema.json"
+      },
+      "description": "MetaTok(e); empty ⇒ GOV_TOKEN_ADEQUATE not in ReqPath (zero-burden rule)"
+    },
+    "policy": {
+      "type": "string",
+      "description": "π"
+    },
     "candidates": {
       "type": "object",
       "description": "typed candidate families C⃗",
       "properties": {
-        "identity": {"type": "array", "items": {"type": "string"}},
-        "profile": {"type": "array", "items": {"type": "object"}, "description": "Ĉ ⊆ Π_A: each member a COMPLETE profile"},
-        "cause": {"type": "array", "items": {"type": "string"}},
-        "route": {"type": "array", "items": {"type": "string"}},
-        "warrant_state": {"type": "array", "items": {"enum": ["authorized", "established", "both", "neither"]}}
+        "identity": {
+          "type": "array",
+          "items": {
+            "type": "string"
+          }
+        },
+        "profile": {
+          "type": "array",
+          "items": {
+            "type": "object"
+          },
+          "description": "Ĉ ⊆ Π_A: each member a COMPLETE profile"
+        },
+        "cause": {
+          "type": "array",
+          "items": {
+            "type": "string"
+          }
+        },
+        "route": {
+          "type": "array",
+          "items": {
+            "type": "string"
+          }
+        },
+        "warrant_state": {
+          "type": "array",
+          "items": {
+            "enum": [
+              "authorized",
+              "established",
+              "both",
+              "neither"
+            ]
+          }
+        }
+      },
+      "additionalProperties": false
+    },
+    "placement": {
+      "type": "object",
+      "description": "p̂ ∈ Π_A^∂ — axis→value(s); open axes carry their admissible sets"
+    },
+    "route": {
+      "type": [
+        "string",
+        "null"
+      ]
+    },
+    "evidence_status": {
+      "type": "object",
+      "description": "estatus_e per claim",
+      "additionalProperties": {
+        "enum": [
+          "validated",
+          "provisional",
+          "stale",
+          "absent"
+        ]
       }
     },
-    "placement": {"type": "object", "description": "p̂ ∈ Π_A^∂ — axis→value(s); open axes carry their admissible sets"},
-    "route": {"type": ["string", "null"]},
-    "evidence_status": {"type": "object", "description": "estatus_e per claim", "additionalProperties": {"enum": ["validated", "provisional", "stale", "absent"]}},
-    "claim_ledger_ref": {"type": "string", "description": "claim-ledger.schema.json instance (𝒬_e + δ_e)"},
-    "handoffs_in": {"type": "array", "items": {"$ref": "handoff.schema.json"}},
-    "handoffs_out": {"type": "array", "items": {"$ref": "handoff.schema.json"}},
-    "action": {"type": ["string", "null"]},
+    "claim_ledger_ref": {
+      "type": "string",
+      "description": "claim-ledger.schema.json instance (𝒬_e + δ_e)"
+    },
+    "handoffs_in": {
+      "type": "array",
+      "items": {
+        "$ref": "handoff.schema.json"
+      }
+    },
+    "handoffs_out": {
+      "type": "array",
+      "items": {
+        "$ref": "handoff.schema.json"
+      }
+    },
+    "action": {
+      "type": [
+        "string",
+        "null"
+      ]
+    },
     "successors": {
       "type": "array",
       "items": {
         "type": "object",
-        "required": ["identity_key", "version", "action_label"],
-        "properties": {"identity_key": {"type": "string"}, "version": {"type": "string"}, "action_label": {"type": "string"}}
+        "required": [
+          "identity_key",
+          "version",
+          "action_label"
+        ],
+        "properties": {
+          "identity_key": {
+            "type": "string"
+          },
+          "version": {
+            "type": "string"
+          },
+          "action_label": {
+            "type": "string"
+          }
+        },
+        "additionalProperties": false
       }
     },
-    "trace_ref": {"type": ["string", "null"], "description": "bounded ordered trace where governance requires one; granularity is governance-declared"},
-    "verdict_record_ref": {"type": ["string", "null"], "description": "verdict-record.schema.json instance"}
-  }
+    "trace_ref": {
+      "type": [
+        "string",
+        "null"
+      ],
+      "description": "bounded ordered trace where governance requires one; granularity is governance-declared"
+    },
+    "verdict_record_ref": {
+      "type": [
+        "string",
+        "null"
+      ],
+      "description": "verdict-record.schema.json instance"
+    }
+  },
+  "additionalProperties": false,
+  "description": "Orthing episode e — the auditable record (core §2.2) R3: observation, evidence (may be empty but must be declared), warrant (nullable, declared), policy, and verdict_record_ref (nullable, declared) are required so that an episode record is auditable rather than skeletal."
 }
