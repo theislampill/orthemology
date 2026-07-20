@@ -6,22 +6,30 @@
   "repo": "https://github.com/theislampill/orthemology",
   "source_commit": "27f66dd8e25131140054691caf91c67cb0407b73",
   "branch": "closure/r3-independent-signoff",
-  "phase": "P1 READ-ONLY AUDIT — in progress",
-  "baseline_verification": {
-    "remote_main": "27f66dd8e25131140054691caf91c67cb0407b73 (verified via gh api; protected=true)",
-    "latest_main_ci": "run 29729529973 success",
-    "fresh_clone_files": 114,
-    "validators": {
-      "validate_repo": "0 failures",
-      "validate_verdict_semantics": "57 checks, 0 failures",
-      "validate_notation": "0 failures (UTF-8 console)",
-      "validate_schemas": "0 failures",
-      "validate_claim_sources": "0 failures",
-      "validate_cross_document_consistency": "0 failures",
-      "freeze_pilot0_check": "PASS",
-      "build_pdfs_check": "0 failures"
-    }
+  "phase": "P13 FINAL SIGN-OFF — closure documents written; fresh-clone verification next",
+  "commits": [
+    "4d6f20d docs: open R3 corrective ledger and supersede premature closure claims",
+    "55b26ab theory: normalize type-token and concrete/sound-reason semantics (Decision 0009)",
+    "c03b38f theory: disambiguate orthability senses and add argument map (Decision 0010)",
+    "44350c7 theory: generalize profile space and make ReqPath derivation auditable",
+    "75e4cac engineering: harden schemas, add negative/mutation tests, Quran locus registry",
+    "b273516 terminology: supersede Pilot-0 v1 with matched v2 packet",
+    "8fb55ac research: verify scriptural, classical, and scholarly sources (R3 pass)",
+    "542094f build: replace PDF renderer with reproducible structural pipeline",
+    "afdc617 docs: fix link-checker false positive in PDF QA report",
+    "1d81e56 docs: add bounded daee-epistemics integration; normalize line endings",
+    "9ff3a90 docs: include newly tracked files in release manifest  [CI GREEN, 18 steps]",
+    "d3b34ef audit: add R3 adversarial reviews A-F; editorial pass; CHANGELOG; pin CI deps",
+    "731c8ba build: final R3 artifacts at source revision d3b34ef  [CI GREEN, 18 steps incl. cross-OS PDF byte-equality]"
+  ],
+  "key_results": {
+    "quran": "29 ayat primary-verified; 20:11 -> 20:11-12 corrected corpus-wide; registry + CI validator",
+    "classical": "8 works verified (no phantom sources); paginations edition-dependent (deferred, triggers recorded)",
+    "bibliography": "26 rows re-verified; 6 mismatches fixed; 0 unverified",
+    "schemas": "R2 adversarial baseline 7/7 accepted -> R3: all rejected at schema/semantic layers; 11 negative fixtures; 208 mutants 0 survivors",
+    "terminology": "v1 hash ece0412f... immutable; v2 hash a1edbd2c...; matching audit 0 failures; NOT RUN; no term adopted",
+    "pdfs": "byte-reproducible cross-OS (CI green); source revision d3b34ef; artifact revision 731c8ba; hashes d55e0c0c../06fff799../ecb0eb6b../41139d7b..",
+    "decisions": "0009, 0010 adopted; D1/M1/O2/D3/D4/O3 untouched"
   },
-  "last_completed_action": "Phase 0 complete: remote verified, clean clone created, branch closure/r3-independent-signoff created, all baseline validators recorded",
-  "next_action": "Phase P1: read-only audit — semantic cross-document review, source-status counts, Quranic locus checks, schema adversarial baseline, terminology matching audit, PDF double-build baseline, daee-epistemics bounded review; produce R2-INDEPENDENT-READONLY-AUDIT.md"
+  "next_action": "Fresh clone of the branch; run all validators + PDF check; verify historical immutability vs 27f66dd8 (archive/, decisions 0001-0008, provenance history, terminology v0 + pilot0 v1); write R3-INDEPENDENT-SIGNOFF.md; commit; open PR; merge after checks; post-merge verification; final closeout"
 }
