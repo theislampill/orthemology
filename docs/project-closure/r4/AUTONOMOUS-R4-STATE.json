@@ -1,0 +1,21 @@
+{
+  "program": "R4 semantic-contract, source-integrity, and project-state tie-off (consolidated prompt v2; Part II latent-state amendment controlling where more specific)",
+  "model": "claude-fable-5",
+  "substitution_observed": false,
+  "repo": "https://github.com/theislampill/orthemology",
+  "starting_commit": "63d15ecf4aa50672265100b7d5620af764421862",
+  "starting_commit_verified": "live gh api; protected=true; main CI run 29743263628 success; matches supplied ZIP comment",
+  "branch": "closure/r4-semantic-contract-source-integrity",
+  "phase": "P0 COMPLETE — read-only baseline audit written; no mutation before it was complete",
+  "baseline_results": {
+    "files": 168,
+    "validators": "all 0 failures from a fresh clone",
+    "terminology_freezes": "v1 ece0412f PASS; v2 a1edbd2c PASS",
+    "pdf_check": "clean rebuild byte-identical to all four committed artifacts",
+    "adversarial_probe": "10 of 11 malformed classes accepted by BOTH schema and cross-record layers (1 partial refutation: missing required verdict statuses IS caught semantically)",
+    "mutation_operators_found": ["drop-required (top-level)", "bad-enum (top-level)", "extra-field (top-level)"]
+  },
+  "confirmed_findings": ["B1 p-hat type contradiction", "B2 strict-soundness granularity", "B3 objectivity overstatement", "B4 non-circularity overclaim", "B5 metaorthemma existence+cardinality", "B6 permissive schemas", "B7 narrow mutation coverage", "B8 attribution chain", "B9 Athari status conflict", "B10 public-state drift"],
+  "last_completed_action": "Wrote docs/project-closure/r4/R4-READONLY-BASELINE-AUDIT.md; research agents dispatched for latent-state and attribution bibliography",
+  "next_action": "P1: docs/current-state.yaml + generate/validate scripts + synchronized VERSION/README/STATUS/OPEN-DECISIONS/CHANGELOG + decision 0014; then P2 formal repairs"
+}
