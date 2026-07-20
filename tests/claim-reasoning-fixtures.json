@@ -1,0 +1,436 @@
+{
+  "schema": "orthemology-claim-reasoning-fixtures-v1",
+  "note": "Claim-relative reasoning-path family (Decision 0011; R4 independent review). ReqReason_q is DERIVED from docs/claim-reason-requirements.yaml and each claim's declared shape, never supplied post-hoc; scripts/validate_claim_reasoning_paths.py recomputes every projection, aggregation, factivity entailment, strict-soundness value, and route/closure independence probe, and must detect the CR-OMIT-1 omission attack.",
+  "fixtures": [
+    {
+      "id": "CR-9",
+      "title": "shared-upstream corroboration failure under evaluator symmetry",
+      "setup": "two evaluators independently audit the same claim, agree, and are themselves scored under the same registry (symmetry holds); both inherit one distorted upstream source, so agreement reflects the shared distortion, not truth",
+      "shared_upstream": {
+        "upstream_id": "src-institutional-digest-9",
+        "shared_by": [
+          "auditor-alpha",
+          "auditor-beta"
+        ],
+        "defect": "the single upstream digest silently dropped the disconfirming records; both evaluators consumed it as ground truth"
+      },
+      "agreement": true,
+      "evaluators": [
+        {
+          "actor": "auditor-alpha",
+          "episode_shape": {
+            "has_meta_tokens": true,
+            "selects_route": false,
+            "makes_closure_claim": false,
+            "robustness_obligation": true
+          },
+          "statuses": {
+            "EVIDENCE_SUPPORT": "pass",
+            "PROCEDURE_RELIABLE": "pass",
+            "EVIDENCE_CURRENT": "pass",
+            "GOV_CONFIG_ADEQUATE": "pass",
+            "GOV_POLICY_ADEQUATE": "pass",
+            "GOV_TOKEN_ADEQUATE": "pass",
+            "EXECUTION_FAITHFUL": "pass",
+            "EX_ANTE_JUSTIFIED": "pass",
+            "ROBUST_NEIGHBORHOOD": "pass"
+          },
+          "claims": [
+            {
+              "claim_id": "q-alpha-verdict",
+              "shape": {
+                "claim_type": "placement",
+                "evidence_kind": "testimonial",
+                "depends_on_tokens": true,
+                "robustness_obligation": true,
+                "risk_class": "standard"
+              },
+              "claim": {
+                "RESULT_CORRECT": "fail",
+                "TOKEN_TRUTH_LINKED": "fail"
+              },
+              "expected": {
+                "reasoning_state": "adequate",
+                "strictly_sound": false
+              }
+            }
+          ]
+        },
+        {
+          "actor": "auditor-beta",
+          "episode_shape": {
+            "has_meta_tokens": true,
+            "selects_route": false,
+            "makes_closure_claim": false,
+            "robustness_obligation": true
+          },
+          "statuses": {
+            "EVIDENCE_SUPPORT": "pass",
+            "PROCEDURE_RELIABLE": "pass",
+            "EVIDENCE_CURRENT": "pass",
+            "GOV_CONFIG_ADEQUATE": "pass",
+            "GOV_POLICY_ADEQUATE": "pass",
+            "GOV_TOKEN_ADEQUATE": "pass",
+            "EXECUTION_FAITHFUL": "pass",
+            "EX_ANTE_JUSTIFIED": "pass",
+            "ROBUST_NEIGHBORHOOD": "pass"
+          },
+          "claims": [
+            {
+              "claim_id": "q-beta-verdict",
+              "shape": {
+                "claim_type": "placement",
+                "evidence_kind": "testimonial",
+                "depends_on_tokens": true,
+                "robustness_obligation": true,
+                "risk_class": "standard"
+              },
+              "claim": {
+                "RESULT_CORRECT": "fail",
+                "TOKEN_TRUTH_LINKED": "fail"
+              },
+              "expected": {
+                "reasoning_state": "adequate",
+                "strictly_sound": false
+              }
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "id": "CR-10",
+      "title": "claim soundly reached; downstream route defective",
+      "setup": "the placement claim is soundly produced and truth-linked; the episode later routes the case inadmissibly — under the superseded whole-episode formula the claim would wrongly lose strict soundness",
+      "episode_shape": {
+        "has_meta_tokens": true,
+        "selects_route": true,
+        "makes_closure_claim": false,
+        "robustness_obligation": true
+      },
+      "statuses": {
+        "EVIDENCE_SUPPORT": "pass",
+        "PROCEDURE_RELIABLE": "pass",
+        "EVIDENCE_CURRENT": "pass",
+        "GOV_CONFIG_ADEQUATE": "pass",
+        "GOV_POLICY_ADEQUATE": "pass",
+        "GOV_TOKEN_ADEQUATE": "pass",
+        "EXECUTION_FAITHFUL": "pass",
+        "EX_ANTE_JUSTIFIED": "pass",
+        "ROUTE_ADMISSIBLE": "fail",
+        "ROBUST_NEIGHBORHOOD": "pass"
+      },
+      "claims": [
+        {
+          "claim_id": "q-placement",
+          "shape": {
+            "claim_type": "placement",
+            "evidence_kind": "direct",
+            "depends_on_tokens": true,
+            "robustness_obligation": true,
+            "risk_class": "standard"
+          },
+          "claim": {
+            "RESULT_CORRECT": "pass",
+            "TOKEN_TRUTH_LINKED": "pass"
+          },
+          "expected": {
+            "reasoning_state": "adequate",
+            "strictly_sound": true
+          }
+        }
+      ],
+      "expected_episode_pathway_state": "defective",
+      "diverges_from_superseded_formula": true
+    },
+    {
+      "id": "CR-11",
+      "title": "claim soundly reached; later closure claim false",
+      "setup": "the placement claim is soundly produced and truth-linked; the episode's closure claim over its residuals is false — an unrelated closure defect must not unsound the placement claim",
+      "episode_shape": {
+        "has_meta_tokens": true,
+        "selects_route": false,
+        "makes_closure_claim": true,
+        "robustness_obligation": true
+      },
+      "statuses": {
+        "EVIDENCE_SUPPORT": "pass",
+        "PROCEDURE_RELIABLE": "pass",
+        "EVIDENCE_CURRENT": "pass",
+        "GOV_CONFIG_ADEQUATE": "pass",
+        "GOV_POLICY_ADEQUATE": "pass",
+        "GOV_TOKEN_ADEQUATE": "pass",
+        "EXECUTION_FAITHFUL": "pass",
+        "EX_ANTE_JUSTIFIED": "pass",
+        "CLOSURE_TRUTHFUL": "fail",
+        "ROBUST_NEIGHBORHOOD": "pass"
+      },
+      "claims": [
+        {
+          "claim_id": "q-placement",
+          "shape": {
+            "claim_type": "placement",
+            "evidence_kind": "direct",
+            "depends_on_tokens": true,
+            "robustness_obligation": true,
+            "risk_class": "standard"
+          },
+          "claim": {
+            "RESULT_CORRECT": "pass",
+            "TOKEN_TRUTH_LINKED": "pass"
+          },
+          "expected": {
+            "reasoning_state": "adequate",
+            "strictly_sound": true
+          }
+        }
+      ],
+      "expected_episode_pathway_state": "defective",
+      "diverges_from_superseded_formula": true
+    },
+    {
+      "id": "CR-12",
+      "title": "mixed episode: one strictly sound claim, one unsound claim",
+      "setup": "one episode carries a soundly reached, truth-linked placement claim AND a routing claim whose own required route verdict fails — the episode-level aggregate cannot represent this; the claim-relative one must",
+      "episode_shape": {
+        "has_meta_tokens": true,
+        "selects_route": true,
+        "makes_closure_claim": false,
+        "robustness_obligation": false
+      },
+      "statuses": {
+        "EVIDENCE_SUPPORT": "pass",
+        "PROCEDURE_RELIABLE": "pass",
+        "EVIDENCE_CURRENT": "pass",
+        "GOV_CONFIG_ADEQUATE": "pass",
+        "GOV_POLICY_ADEQUATE": "pass",
+        "GOV_TOKEN_ADEQUATE": "pass",
+        "EXECUTION_FAITHFUL": "pass",
+        "EX_ANTE_JUSTIFIED": "pass",
+        "ROUTE_ADMISSIBLE": "fail"
+      },
+      "claims": [
+        {
+          "claim_id": "q-placement",
+          "shape": {
+            "claim_type": "placement",
+            "evidence_kind": "direct",
+            "depends_on_tokens": true,
+            "robustness_obligation": false,
+            "risk_class": "standard"
+          },
+          "claim": {
+            "RESULT_CORRECT": "pass",
+            "TOKEN_TRUTH_LINKED": "pass"
+          },
+          "expected": {
+            "reasoning_state": "adequate",
+            "strictly_sound": true
+          }
+        },
+        {
+          "claim_id": "q-routing",
+          "shape": {
+            "claim_type": "routing",
+            "evidence_kind": "derived",
+            "depends_on_tokens": true,
+            "robustness_obligation": false,
+            "risk_class": "standard"
+          },
+          "claim": {
+            "RESULT_CORRECT": "fail",
+            "TOKEN_TRUTH_LINKED": "fail"
+          },
+          "expected": {
+            "reasoning_state": "defective",
+            "strictly_sound": false
+          }
+        }
+      ],
+      "expected_episode_pathway_state": "defective"
+    },
+    {
+      "id": "CR-13",
+      "title": "correct-by-luck claim while unrelated episode verdicts pass",
+      "setup": "the claim's own evidential and procedural verdicts fail, yet the placed result happens to be right and the episode's unrelated route and closure obligations are all satisfied — luck, not soundness",
+      "episode_shape": {
+        "has_meta_tokens": true,
+        "selects_route": true,
+        "makes_closure_claim": true,
+        "robustness_obligation": false
+      },
+      "statuses": {
+        "EVIDENCE_SUPPORT": "fail",
+        "PROCEDURE_RELIABLE": "fail",
+        "EVIDENCE_CURRENT": "pass",
+        "GOV_CONFIG_ADEQUATE": "pass",
+        "GOV_POLICY_ADEQUATE": "pass",
+        "GOV_TOKEN_ADEQUATE": "pass",
+        "EXECUTION_FAITHFUL": "pass",
+        "EX_ANTE_JUSTIFIED": "pass",
+        "ROUTE_ADMISSIBLE": "pass",
+        "CLOSURE_TRUTHFUL": "pass"
+      },
+      "claims": [
+        {
+          "claim_id": "q-lucky",
+          "shape": {
+            "claim_type": "placement",
+            "evidence_kind": "derived",
+            "depends_on_tokens": true,
+            "robustness_obligation": false,
+            "risk_class": "standard"
+          },
+          "claim": {
+            "RESULT_CORRECT": "pass",
+            "TOKEN_TRUTH_LINKED": "fail"
+          },
+          "expected": {
+            "reasoning_state": "defective",
+            "strictly_sound": false
+          }
+        }
+      ],
+      "expected_episode_pathway_state": "defective"
+    },
+    {
+      "id": "CR-14",
+      "title": "rare false result through adequate claim-relevant reasoning",
+      "setup": "every claim-relevant verdict passes and the reasoning path is adequate, yet the placed result is false — claim-relative reasoning adequacy is non-factive (O2 preserved claim-wise)",
+      "episode_shape": {
+        "has_meta_tokens": true,
+        "selects_route": false,
+        "makes_closure_claim": false,
+        "robustness_obligation": true
+      },
+      "statuses": {
+        "EVIDENCE_SUPPORT": "pass",
+        "PROCEDURE_RELIABLE": "pass",
+        "EVIDENCE_CURRENT": "pass",
+        "GOV_CONFIG_ADEQUATE": "pass",
+        "GOV_POLICY_ADEQUATE": "pass",
+        "GOV_TOKEN_ADEQUATE": "pass",
+        "EXECUTION_FAITHFUL": "pass",
+        "EX_ANTE_JUSTIFIED": "pass",
+        "ROBUST_NEIGHBORHOOD": "pass"
+      },
+      "claims": [
+        {
+          "claim_id": "q-rare-miss",
+          "shape": {
+            "claim_type": "placement",
+            "evidence_kind": "direct",
+            "depends_on_tokens": true,
+            "robustness_obligation": true,
+            "risk_class": "standard"
+          },
+          "claim": {
+            "RESULT_CORRECT": "fail",
+            "TOKEN_TRUTH_LINKED": "fail"
+          },
+          "expected": {
+            "reasoning_state": "adequate",
+            "strictly_sound": false
+          }
+        }
+      ],
+      "expected_episode_pathway_state": "adequate"
+    },
+    {
+      "id": "CR-15",
+      "title": "unresolved claim while unrelated episode components are adequate",
+      "setup": "one claim-relevant verdict is undetermined, so the claim's reasoning state and strict soundness are unresolved even though every unrelated episode component passes",
+      "episode_shape": {
+        "has_meta_tokens": true,
+        "selects_route": true,
+        "makes_closure_claim": true,
+        "robustness_obligation": false
+      },
+      "statuses": {
+        "EVIDENCE_SUPPORT": "pass",
+        "PROCEDURE_RELIABLE": "pass",
+        "EVIDENCE_CURRENT": "undetermined",
+        "GOV_CONFIG_ADEQUATE": "pass",
+        "GOV_POLICY_ADEQUATE": "pass",
+        "GOV_TOKEN_ADEQUATE": "pass",
+        "EXECUTION_FAITHFUL": "pass",
+        "EX_ANTE_JUSTIFIED": "pass",
+        "ROUTE_ADMISSIBLE": "pass",
+        "CLOSURE_TRUTHFUL": "pass"
+      },
+      "claims": [
+        {
+          "claim_id": "q-unresolved",
+          "shape": {
+            "claim_type": "placement",
+            "evidence_kind": "direct",
+            "depends_on_tokens": true,
+            "robustness_obligation": false,
+            "risk_class": "standard"
+          },
+          "claim": {
+            "RESULT_CORRECT": "undetermined",
+            "TOKEN_TRUTH_LINKED": "undetermined"
+          },
+          "expected": {
+            "reasoning_state": "undetermined",
+            "strictly_sound": false
+          }
+        }
+      ],
+      "expected_episode_pathway_state": "undetermined"
+    },
+    {
+      "id": "CR-OMIT-1",
+      "title": "omission attack: recorded projection drops an inconvenient token verdict",
+      "setup": "the claim declares token dependencies and the token verdict fails; the recorded projection omits GOV_TOKEN_ADEQUATE, which would manufacture claim-level adequacy if the supplied projection were trusted — the derivation must catch the omission",
+      "episode_shape": {
+        "has_meta_tokens": true,
+        "selects_route": false,
+        "makes_closure_claim": false,
+        "robustness_obligation": false
+      },
+      "statuses": {
+        "EVIDENCE_SUPPORT": "pass",
+        "PROCEDURE_RELIABLE": "pass",
+        "EVIDENCE_CURRENT": "pass",
+        "GOV_CONFIG_ADEQUATE": "pass",
+        "GOV_POLICY_ADEQUATE": "pass",
+        "GOV_TOKEN_ADEQUATE": "fail",
+        "EXECUTION_FAITHFUL": "pass",
+        "EX_ANTE_JUSTIFIED": "pass"
+      },
+      "claims": [
+        {
+          "claim_id": "q-attacked",
+          "shape": {
+            "claim_type": "placement",
+            "evidence_kind": "direct",
+            "depends_on_tokens": true,
+            "robustness_obligation": false,
+            "risk_class": "standard"
+          },
+          "recorded_req_reason": [
+            "EVIDENCE_SUPPORT",
+            "PROCEDURE_RELIABLE",
+            "EVIDENCE_CURRENT",
+            "GOV_CONFIG_ADEQUATE",
+            "GOV_POLICY_ADEQUATE",
+            "EXECUTION_FAITHFUL",
+            "EX_ANTE_JUSTIFIED"
+          ],
+          "claim": {
+            "RESULT_CORRECT": "pass",
+            "TOKEN_TRUTH_LINKED": "fail"
+          },
+          "expected": {
+            "reasoning_state": "defective",
+            "strictly_sound": false,
+            "omission_detected": true,
+            "state_if_recorded_projection_trusted": "adequate"
+          }
+        }
+      ]
+    }
+  ]
+}

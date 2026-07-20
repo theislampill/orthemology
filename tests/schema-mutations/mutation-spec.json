@@ -1,10 +1,236 @@
 {
-  "schema": "orthemology-mutation-spec-v1",
-  "note": "Deterministic mutation operators applied by validate_negative_fixtures.py to every positive example part. Every generated mutant MUST be rejected by the hardened schemas. No randomness (mutants are enumerated exhaustively per operator), keeping CI deterministic.",
+  "schema": "orthemology-mutation-spec-v2",
+  "note": "Deterministic mutation operators. The three v1 operators are TOP-LEVEL only and are still applied by validate_negative_fixtures.py; R4 finding B7 was that top-level-only mutation made '208 mutants, 0 survivors' sound far stronger than it was. The eighteen v2 families are applied by scripts/validate_recursive_mutations.py, which walks every positive example part RECURSIVELY, resolving the effective schema at each node (through $ref, allOf and the applicable if/then and anyOf/oneOf branch) so it knows which fields are required, which arrays are sets, and which values are references. No randomness anywhere: mutants are enumerated in sorted path order, so the corpus and the report are byte-stable.",
+  "kill_criterion": "A mutant is KILLED if the hardened JSON Schema rejects the mutated part, or if validate_cross_record_semantics.collect_issues flags the mutated bundle. Every unmutated example bundle is issue-free, so any issue a mutant raises is attributable to the mutation.",
   "operators": [
-    {"id": "drop-required", "description": "remove each top-level required field, one at a time"},
-    {"id": "bad-enum", "description": "set each top-level enum-constrained field to the value 'NOT-A-LEGAL-VALUE'"},
-    {"id": "extra-field", "description": "add one undeclared top-level field '__mutant__': true"}
+    {
+      "id": "drop-required",
+      "layer": "v1-top-level",
+      "description": "remove each top-level required field, one at a time"
+    },
+    {
+      "id": "bad-enum",
+      "layer": "v1-top-level",
+      "description": "set each top-level enum-constrained field to the value 'NOT-A-LEGAL-VALUE'"
+    },
+    {
+      "id": "extra-field",
+      "layer": "v1-top-level",
+      "description": "add one undeclared top-level field '__mutant__': true"
+    },
+    {
+      "id": "delete-nested-required",
+      "family": 1,
+      "description": "delete each required field at EVERY depth, not only the top level"
+    },
+    {
+      "id": "empty-required-string",
+      "family": 2,
+      "description": "blank each required string; '' is not a declaration"
+    },
+    {
+      "id": "empty-required-array-or-map",
+      "family": 3,
+      "description": "empty each required array or map the contract requires to be nonempty"
+    },
+    {
+      "id": "duplicate-unique-member",
+      "family": 4,
+      "description": "duplicate a member of an array-as-set, and collide two ids that must differ"
+    },
+    {
+      "id": "unknown-reference-id",
+      "family": 5,
+      "description": "repoint each currently-resolvable reference (claim, token, evidence, episode) at nothing"
+    },
+    {
+      "id": "analysis-version-mismatch",
+      "family": 6,
+      "description": "desynchronise an analysis version between records that must share it"
+    },
+    {
+      "id": "occurrence-version-mismatch",
+      "family": 7,
+      "description": "desynchronise an occurrence version between records that must share it"
+    },
+    {
+      "id": "delete-disposition-conditional-field",
+      "family": 8,
+      "description": "delete the field a residual's own disposition makes mandatory"
+    },
+    {
+      "id": "claim-dependency-cycle",
+      "family": 9,
+      "description": "make a claim depend on itself, directly or through another claim"
+    },
+    {
+      "id": "remove-required-verdict-status",
+      "family": 10,
+      "description": "delete the status of a verdict the required path demands"
+    },
+    {
+      "id": "contradict-pathway-summary",
+      "family": 11,
+      "description": "state an episode- or claim-level pathway summary the statuses do not support"
+    },
+    {
+      "id": "na-without-reason",
+      "family": 12,
+      "description": "strip the reason from a not-applicable status, anywhere in the record"
+    },
+    {
+      "id": "plural-metaorthemma-type",
+      "family": 13,
+      "description": "give one token several of_type entries (the unimplemented many-to-many MetaInst)"
+    },
+    {
+      "id": "empty-metaorthemma-binding",
+      "family": 14,
+      "description": "empty the binding map: a token with no material binding"
+    },
+    {
+      "id": "postdate-reliability-declaration",
+      "family": 15,
+      "description": "declare a RelSpec at or after the result it is used to assess"
+    },
+    {
+      "id": "violate-perturbation-invariant",
+      "family": 16,
+      "description": "vary a field the PerturbSpec declares invariant"
+    },
+    {
+      "id": "collapse-candidate-set-into-partial-profile",
+      "family": 17,
+      "description": "collapse a candidate SET of complete profiles into one partial profile (finding B1)"
+    },
+    {
+      "id": "collapse-claim-path-into-episode-path",
+      "family": 18,
+      "description": "overwrite a claim's reasoning adequacy with the episode-level pathway state (finding B2)"
+    },
+    {
+      "id": "inheritance-self-or-ghost",
+      "family": 19,
+      "description": "make an analysis inherit from itself, or from a parent that resolves nowhere (D1)"
+    },
+    {
+      "id": "cross-episode-token-collision",
+      "family": 20,
+      "description": "rename an embedded token to another episode's token id (global identity, D3)"
+    },
+    {
+      "id": "token-scope-cross-ledger-leak",
+      "family": 21,
+      "description": "point a token's claim scope at a claim owned by ANOTHER episode's ledger (D4)"
+    },
+    {
+      "id": "ghost-metaortheme-reference",
+      "family": 22,
+      "description": "repoint a governing-configuration mu_ref or a token of_type at an undeclared edition (D5)"
+    },
+    {
+      "id": "precedence-self-or-cycle",
+      "family": 23,
+      "description": "add a precedence self-edge, or close a 2-cycle over declared governing types (D5)"
+    },
+    {
+      "id": "mixed-offset-time-reversal",
+      "family": 24,
+      "description": "postdate a RelSpec past the outcome using a UTC offset that string-compares earlier, or make it timezone-naive (D7)"
+    },
+    {
+      "id": "invert-token-validity",
+      "family": 25,
+      "description": "set a token's expiry before its effective_from (D7)"
+    },
+    {
+      "id": "silent-external-reference",
+      "family": 26,
+      "description": "strip or unresolve an audit-ready record's external_refs, or desynchronise its analysis from the bundle (D6)"
+    },
+    {
+      "id": "omit-claim-reasoning-verdict",
+      "family": 27,
+      "description": "drop one entry from a claim's recorded req_reason projection (omission attack, D8)"
+    }
   ],
-  "expectation": "0 surviving mutants (a surviving mutant = a mutant the schema still accepts)"
+  "expectation": "Every generated mutant is killed at a declared layer, OR is listed below as a justified equivalent with a reason why the mutation does not change what the record claims. An undeclared survivor fails the run.",
+  "justified_equivalents": [
+    {
+      "signature": "pillar-episode.json#6 1 residuals/0/evidence_refs",
+      "reason": "The residual is disposed 'validated-resolved' and carries BOTH evidence_refs and verdict_refs. The contract requires one of the two, so deleting evidence_refs leaves a record whose disposition is still fully supported by verdict_refs. This is a redundancy in the example, not a gap in the contract: deleting both IS killed (see the 'all-conditionals' mutant of family 8). (Part index re-signed #4->#6 after the R4 independent review added the two declared metaortheme records to this bundle.)"
+    },
+    {
+      "signature": "pillar-episode.json#6 8 residuals/0/evidence_refs",
+      "reason": "Same redundancy as above, reached through the disposition-conditional family. verdict_refs alone still discharges the 'validated-resolved' contract. (Part index re-signed #4->#6 after the R4 independent review added the two declared metaortheme records to this bundle.)"
+    },
+    {
+      "signature": "pillar-episode.json#6 8 residuals/0/verdict_refs",
+      "reason": "Same redundancy, other direction. evidence_refs alone still discharges the 'validated-resolved' contract. (Part index re-signed #4->#6 after the R4 independent review added the two declared metaortheme records to this bundle.)"
+    },
+    {
+      "signature": "pillar-episode.json#6 3 residuals []",
+      "reason": "A ledger that opens NO burdens is well-formed: not every episode leaves a residual. Emptying the residual list yields a record that makes a different but not malformed claim, and catching it would require an external source of truth about which burdens actually existed — which is outside the reference model by construction. (Part index re-signed #4->#6 after the R4 independent review added the two declared metaortheme records to this bundle.)"
+    },
+    {
+      "signature": "pillar-episode.json#6 3 residuals/0/evidence_refs []",
+      "reason": "Emptying evidence_refs on a residual that also carries verdict_refs leaves the 'validated-resolved' contract discharged by verdict_refs. Same redundancy as the deletion mutants above. (Part index re-signed #4->#6 after the R4 independent review added the two declared metaortheme records to this bundle.)"
+    },
+    {
+      "signature": "stale-directive.json#1 3 residuals []",
+      "reason": "As above: an empty residual list is a well-formed ledger. The record then claims no burdens rather than an unresolved one; nothing internal to the bundle contradicts it."
+    },
+    {
+      "signature": "whole-state-reread.json#0 3 residuals []",
+      "reason": "As above. This is precisely the limit the whole-state-reread example illustrates in prose: the machine floor can convict a closure claim asserted OVER a recorded unresolved burden, but it cannot know about a burden nobody recorded."
+    },
+    {
+      "signature": "rare-miss.json#0 3 evidence []",
+      "reason": "This episode declares record_mode 'minimal'. The contract lets a minimal record carry an empty evidence list precisely because it makes no audit claim; only an 'audit-ready' record must carry evidence or an explicit evidence_absent_reason. Emptying evidence here produces an honest minimal record, so there is nothing to reject."
+    },
+    {
+      "signature": "stopped-clock-validator.json#0 3 evidence []",
+      "reason": "As above: a 'minimal' record may legitimately carry no evidence. The corresponding mutation on the audit-ready record (pillar-episode) IS killed at the schema layer."
+    },
+    {
+      "signature": "shared-upstream-corroboration-failure.json#2 1 residuals/0/evidence_refs",
+      "reason": "The residual is disposed 'validated-resolved' and carries BOTH evidence_refs and verdict_refs; deleting one leaves the other, which alone still discharges the disposition's conditional-field requirement. The record's claim is unchanged. Same adjudicated class as the pillar-episode residual redundancy."
+    },
+    {
+      "signature": "shared-upstream-corroboration-failure.json#2 3 residuals []",
+      "reason": "A ledger that opens NO burdens is well-formed: not every episode leaves a residual, and no claim of the record changes. Same adjudicated class as the pillar-episode empty-residuals equivalent."
+    },
+    {
+      "signature": "shared-upstream-corroboration-failure.json#2 3 residuals/0/evidence_refs []",
+      "reason": "Emptying evidence_refs on a residual that also carries verdict_refs leaves the 'validated-resolved' disposition discharged by the verdict reference; the record's claim is unchanged."
+    },
+    {
+      "signature": "shared-upstream-corroboration-failure.json#2 8 residuals/0/evidence_refs",
+      "reason": "The residual is disposed 'validated-resolved' and carries BOTH evidence_refs and verdict_refs; deleting one leaves the other, which alone still discharges the disposition's conditional-field requirement. The record's claim is unchanged. Same adjudicated class as the pillar-episode residual redundancy."
+    },
+    {
+      "signature": "shared-upstream-corroboration-failure.json#2 8 residuals/0/verdict_refs",
+      "reason": "The residual is disposed 'validated-resolved' and carries BOTH evidence_refs and verdict_refs; deleting one leaves the other, which alone still discharges the disposition's conditional-field requirement. The record's claim is unchanged. Same adjudicated class as the pillar-episode residual redundancy."
+    },
+    {
+      "signature": "shared-upstream-corroboration-failure.json#3 1 residuals/0/evidence_refs",
+      "reason": "The residual is disposed 'validated-resolved' and carries BOTH evidence_refs and verdict_refs; deleting one leaves the other, which alone still discharges the disposition's conditional-field requirement. The record's claim is unchanged. Same adjudicated class as the pillar-episode residual redundancy."
+    },
+    {
+      "signature": "shared-upstream-corroboration-failure.json#3 3 residuals []",
+      "reason": "A ledger that opens NO burdens is well-formed: not every episode leaves a residual, and no claim of the record changes. Same adjudicated class as the pillar-episode empty-residuals equivalent."
+    },
+    {
+      "signature": "shared-upstream-corroboration-failure.json#3 3 residuals/0/evidence_refs []",
+      "reason": "Emptying evidence_refs on a residual that also carries verdict_refs leaves the 'validated-resolved' disposition discharged by the verdict reference; the record's claim is unchanged."
+    },
+    {
+      "signature": "shared-upstream-corroboration-failure.json#3 8 residuals/0/evidence_refs",
+      "reason": "The residual is disposed 'validated-resolved' and carries BOTH evidence_refs and verdict_refs; deleting one leaves the other, which alone still discharges the disposition's conditional-field requirement. The record's claim is unchanged. Same adjudicated class as the pillar-episode residual redundancy."
+    },
+    {
+      "signature": "shared-upstream-corroboration-failure.json#3 8 residuals/0/verdict_refs",
+      "reason": "The residual is disposed 'validated-resolved' and carries BOTH evidence_refs and verdict_refs; deleting one leaves the other, which alone still discharges the disposition's conditional-field requirement. The record's claim is unchanged. Same adjudicated class as the pillar-episode residual redundancy."
+    }
+  ]
 }

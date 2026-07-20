@@ -1,0 +1,26 @@
+{
+  "id": "I18-free-form-relspec",
+  "why": "a verdict record whose rel_spec is a free-form prose string. PROCEDURE_RELIABLE requires a named procedure, reference class, risk stratum, metric, threshold, protocol, evidence basis and a pre-outcome declaration timestamp — none of which a sentence supplies",
+  "expect_layer": "schema",
+  "schema": "verdict-record.schema.json",
+  "instance": {
+    "episode_id": "e1",
+    "index": {
+      "analysis_id": "AN-1",
+      "analysis_version": "1",
+      "actor": "reviewer",
+      "decision_time": "2026-07-01T12:00:00Z",
+      "information_state": "the statuses recorded in this fixture, as available at decision time"
+    },
+    "required_path": [
+      "PROCEDURE_RELIABLE"
+    ],
+    "statuses": {
+      "PROCEDURE_RELIABLE": "pass"
+    },
+    "pathway_state": "adequate",
+    "rel_spec": {
+      "q-1": "reference class: everything; metric: it usually works"
+    }
+  }
+}

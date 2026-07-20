@@ -1,0 +1,14 @@
+{
+  "id": "I29-analysis-self-inheritance",
+  "why": "a compact analysis that inherits from ITSELF: the inheritance graph must be acyclic and self-inheritance is forbidden (D1)",
+  "expect_layer": "semantic",
+  "schema": "analysis.schema.json",
+  "instance": {
+    "analysis_id": "an-self",
+    "version": "1.0",
+    "inherits_from": {
+      "analysis_id": "an-self",
+      "version": "1.0"
+    }
+  }
+}

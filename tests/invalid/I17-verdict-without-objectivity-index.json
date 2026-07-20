@@ -1,0 +1,16 @@
+{
+  "id": "I17-verdict-without-objectivity-index",
+  "why": "a verdict record with no index block. Pathway adequacy is objective GIVEN an analysis, an evaluating actor, a decision time and an information state; a record that omits them overstates its own objectivity (finding B3)",
+  "expect_layer": "schema",
+  "schema": "verdict-record.schema.json",
+  "instance": {
+    "episode_id": "e1",
+    "required_path": [
+      "EVIDENCE_SUPPORT"
+    ],
+    "statuses": {
+      "EVIDENCE_SUPPORT": "pass"
+    },
+    "pathway_state": "adequate"
+  }
+}

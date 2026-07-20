@@ -1,0 +1,17 @@
+{
+  "id": "I14-payload-free-handoff",
+  "why": "a handoff packet carrying no state claims, no evidence, no authority claims, no residual obligations and no requested action: a correctly addressed envelope that transports nothing",
+  "expect_layer": "schema",
+  "schema": "handoff.schema.json",
+  "instance": {
+    "packet_id": "pkt-1",
+    "packet_version": "1",
+    "sender_episode": "e1",
+    "receiver_episode": "e2",
+    "edge_label": "handoff",
+    "subject": {
+      "identity_key": "k",
+      "version": "1"
+    }
+  }
+}

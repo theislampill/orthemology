@@ -10,12 +10,21 @@
           {
             "claim_id": "q-migrated",
             "proposition": "all rows live in the new store and consumers read from it",
-            "target": {"identity_key": "svc-orders-store", "version": "v2"},
+            "target": {
+              "identity_key": "svc-orders-store",
+              "version": "v2"
+            },
             "property_class": "behavioral",
             "success_surface": "read-path metrics on the new store",
-            "evidence_ids": ["ev-cutover-metrics-1"],
+            "evidence_ids": [
+              "ev-cutover-metrics-1"
+            ],
             "warrant": "migration ticket MIG-114",
-            "verification_status": "validated"
+            "verification_status": "validated",
+            "analysis": {
+              "analysis_id": "store-migration",
+              "version": "1.0"
+            }
           }
         ],
         "residuals": [
@@ -25,7 +34,10 @@
             "disposition": "validated-resolved",
             "owner": null,
             "trigger": null,
-            "risk_record": null
+            "risk_record": null,
+            "evidence_refs": [
+              "ev-cutover-metrics-1"
+            ]
           },
           {
             "burden_id": "B2-rollback-rehearsal",
@@ -33,7 +45,9 @@
             "disposition": "unresolved",
             "owner": null,
             "trigger": null,
-            "risk_record": null
+            "risk_record": null,
+            "responsible_queue": "platform-reliability backlog",
+            "next_review_condition": "when a rollback path for the new store exists and can be rehearsed, or at the next release-readiness review, whichever comes first"
           }
         ],
         "closure_claim": null

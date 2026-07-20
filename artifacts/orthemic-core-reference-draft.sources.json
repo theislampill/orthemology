@@ -1,14 +1,14 @@
 {
   "pdf": "orthemic-core-reference-draft.pdf",
-  "pdf_sha256": "06fff799cd60efd819c579ac7749c22d4f63b6da6b718983fa77baad7f2c4c45",
+  "pdf_sha256": "2629d5ea45941a733c10d4581d284d1f0cd4c059c850e53dfb87fead94563772",
   "page_count": 20,
   "sources": {
-    "theory/orthemic-core-formalization.md": "4c4e4927373a55856f7eef4717e3819428b17c4260523f16a0fcfddff95d2c29",
-    "theory/orthemic-multi-actor-conflict-note.md": "2f9cc0b2d8a0de36b1de51a34a2d90148daec4da8e098b74aee94e76a7dbda1b"
+    "theory/orthemic-core-formalization.md": "0a22a1b7f0df5f2c18c3078b91b7cac4c32d258be0c4a70a54c6620714be6a97",
+    "theory/orthemic-multi-actor-conflict-note.md": "ad75cbe211a0274cd4f7c21224975b6237e24ab071bb56ce5c72ca6c9c7fff79"
   },
-  "source_commit": "d3b34efa6cf07225adc755a15d60785bcf1df4cb",
+  "source_commit": "aa38a669337814988cbe5e1ac468e77172081a82",
   "artifact_commit": "the git commit that introduces/updates this artifact (two-stage provenance; see `git log -- artifacts/`)",
-  "source_date_epoch": 1784551021,
+  "source_date_epoch": 1784566626,
   "build_command": "python scripts/build_pdfs.py",
   "tools": {
     "typst": "0.15.0",

@@ -1,7 +1,8 @@
 {
   "$schema": "https://json-schema.org/draft/2020-12/schema",
   "$id": "orthemology/metaortheme.schema.json",
-  "title": "Metaortheme type μ with paired meta-policy",
+  "title": "Metaortheme type mu with paired meta-policy",
+  "description": "R4: the selector is a TYPED OBJECT, not a bare string — a state-selecting procedure that cannot be inspected for kind and description is not a declared selector. Exclusivity of the declared state set is explicit; where selection is non-unique the record must say what a non-unique selection means. Exactly one of meta_policy or policy_ref must be present: a metaortheme without a paired meta-policy is not a metaortheme.",
   "type": "object",
   "required": [
     "mu_id",
@@ -9,15 +10,56 @@
     "governed_component",
     "states",
     "selector",
+    "exclusivity",
     "provenance"
+  ],
+  "allOf": [
+    {
+      "anyOf": [
+        {
+          "required": [
+            "meta_policy"
+          ]
+        },
+        {
+          "required": [
+            "policy_ref"
+          ]
+        }
+      ],
+      "description": "pairing rule: a declared meta-policy or an explicit reference to one"
+    },
+    {
+      "if": {
+        "properties": {
+          "exclusivity": {
+            "enum": [
+              "overlapping",
+              "uncertain"
+            ]
+          }
+        },
+        "required": [
+          "exclusivity"
+        ]
+      },
+      "then": {
+        "required": [
+          "uncertainty_semantics"
+        ],
+        "description": "when the declared states are not mutually exclusive, selection may be non-unique; the record must declare what a non-unique selection means"
+      }
+    }
   ],
   "properties": {
     "mu_id": {
-      "type": "string"
+      "type": "string",
+      "minLength": 1
     },
     "version": {
       "type": "string",
-      "description": "ver(μ) — recorded per episode so audits can scope editions"
+      "minLength": 1,
+      "description": "ver(mu) — recorded per episode so audits can scope editions"
     },
     "governed_component": {
       "enum": [
@@ -39,10 +81,12 @@
         "members": {
           "type": "array",
           "minItems": 2,
+          "uniqueItems": true,
           "items": {
-            "type": "string"
+            "type": "string",
+            "minLength": 1
           },
-          "description": "S_μ, declared in advance"
+          "description": "S_mu, declared in advance; a set — duplicates are malformed"
         },
         "partition": {
           "type": "boolean",
@@ -51,13 +95,66 @@
       },
       "additionalProperties": false
     },
-    "selector": {
+    "exclusivity": {
+      "enum": [
+        "exclusive",
+        "overlapping",
+        "uncertain"
+      ],
+      "description": "declared exclusivity of S_mu. 'exclusive': at most one state obtains. 'overlapping': several may obtain together. 'uncertain': exclusivity itself is undetermined. The latter two require uncertainty_semantics."
+    },
+    "uncertainty_semantics": {
       "type": "string",
-      "description": "select_μ — the state-selecting evidence procedure; partial (may return several states or undetermined)"
+      "minLength": 1,
+      "description": "what a non-unique or undetermined selection MEANS for conduct (required unless exclusivity is 'exclusive')"
+    },
+    "selector": {
+      "type": "object",
+      "description": "select_mu — the state-selecting evidence procedure; partial (may return several states or undetermined). R4: a typed object, never a bare string.",
+      "required": [
+        "kind",
+        "description"
+      ],
+      "properties": {
+        "kind": {
+          "type": "string",
+          "minLength": 1,
+          "description": "procedure kind (instrument-reading, human-judgment, query, ...)"
+        },
+        "description": {
+          "type": "string",
+          "minLength": 1
+        },
+        "inputs": {
+          "type": "array",
+          "minItems": 1,
+          "uniqueItems": true,
+          "items": {
+            "type": "string",
+            "minLength": 1
+          }
+        },
+        "partiality": {
+          "type": "string",
+          "minLength": 1,
+          "description": "declared behaviour on undetermined selection"
+        },
+        "procedure_ref": {
+          "type": "string",
+          "minLength": 1
+        }
+      },
+      "additionalProperties": false
     },
     "meta_policy": {
       "type": "string",
-      "description": "π_μ — conduct conditional on the obtaining state, incl. conduct on undetermined selection"
+      "minLength": 1,
+      "description": "pi_mu — conduct conditional on the obtaining state, incl. conduct on undetermined selection"
+    },
+    "policy_ref": {
+      "type": "string",
+      "minLength": 1,
+      "description": "reference to the paired meta-policy when it is recorded elsewhere"
     },
     "provenance": {
       "type": "object",
@@ -68,13 +165,16 @@
       ],
       "properties": {
         "authority": {
-          "type": "string"
+          "type": "string",
+          "minLength": 1
         },
         "warrant": {
-          "type": "string"
+          "type": "string",
+          "minLength": 1
         },
         "scope": {
-          "type": "string"
+          "type": "string",
+          "minLength": 1
         }
       },
       "additionalProperties": false

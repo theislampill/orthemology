@@ -41,6 +41,41 @@ def main():
     dupes = len(keys) != len(re.findall(r"@\w+\{([^,\s]+),", bib))
     check("bib keys unique", not dupes)
 
+    # R4 independent review: ONE bibliography surface. A fragment .bib is invisible
+    # to every check below (that is how the latent-state additions became orphaned),
+    # so any extra .bib file is a failure until it is merged or explicitly adopted
+    # by a multi-bibliography build that resolves all fragments.
+    refs_dir = os.path.join(ROOT, "references")
+    stray = sorted(f for f in os.listdir(refs_dir)
+                   if f.endswith(".bib") and f != "orthemology.bib")
+    check("no orphan bibliography fragment beside references/orthemology.bib",
+          not stray, "unresolved fragment(s): %s" % stray)
+
+    # Every source-status row citing a DOI must be citable from the bibliography,
+    # and every latent-state related-work key must carry a source-status row —
+    # the two directions that together prevent re-orphaning.
+    ss_path = os.path.join(ROOT, "references", "source-status.yaml")
+    if os.path.exists(ss_path):
+        ss_text = open(ss_path, encoding="utf-8").read()
+        for key, doi in (("sun2025orthogonalized", "10.1038/s41586-024-08548-w"),
+                         ("george2021clone", "10.1038/s41467-021-22559-5"),
+                         ("raju2024space", "10.1126/sciadv.adm8470")):
+            check("latent-state related work %s is in the main bibliography" % key,
+                  key in keys)
+            check("latent-state related work %s has a source-status row (by DOI)" % key,
+                  doi in ss_text, "DOI %s absent from references/source-status.yaml" % doi)
+        check("the corrected first author of raju2024space is used",
+              "Vasudeva Raju, Rajkumar" in bib)
+        # Scoped to AUTHOR fields: the comment block and the entry's own note
+        # deliberately record the erroneous form in order to forbid it
+        # (Decision 0015 §8). What must never carry it is an author list.
+        author_lines = "\n".join(ln for ln in bib.splitlines()
+                                 if re.match(r"\s*author\s*=", ln)
+                                 or (ln.strip().endswith("and")
+                                     and not ln.lstrip().startswith("%")))
+        check("no bib author field carries the erroneous 'Rajeev V. Raju' form",
+              "Rajeev V. Raju" not in author_lines and "Raju, Rajeev" not in author_lines)
+
     for rel in ("docs/sourcing/SOURCING-LEDGER.md", "companion/sourcing/COMPANION-SOURCING-LEDGER.md"):
         p = os.path.join(ROOT, rel)
         check(rel + " exists", os.path.exists(p))

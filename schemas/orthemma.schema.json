@@ -10,21 +10,23 @@
   "properties": {
     "identity_key": {
       "type": "string",
-      "description": "κ — which thing this is (survives change)",
-      "minLength": 1
+      "minLength": 1,
+      "description": "kappa — which thing this is (survives change)"
     },
     "version": {
       "type": "string",
-      "description": "v — which state/edition of that thing",
-      "minLength": 1
+      "minLength": 1,
+      "description": "v — which state/edition of that thing"
     },
     "kind": {
       "type": "string",
+      "minLength": 1,
       "description": "domain kind (artifact, batch, position, directive, reified-episode, ...)"
     },
     "lineage": {
       "type": "array",
       "description": "labeled successor edges INTO this occurrence (Definition 6): which action on which predecessor produced it",
+      "uniqueItems": true,
       "items": {
         "type": "object",
         "required": [
@@ -34,16 +36,20 @@
         ],
         "properties": {
           "from_identity": {
-            "type": "string"
+            "type": "string",
+            "minLength": 1
           },
           "from_version": {
-            "type": "string"
+            "type": "string",
+            "minLength": 1
           },
           "action_label": {
-            "type": "string"
+            "type": "string",
+            "minLength": 1
           },
           "producing_episode": {
-            "type": "string"
+            "type": "string",
+            "minLength": 1
           }
         },
         "additionalProperties": false
@@ -54,7 +60,8 @@
         "string",
         "null"
       ],
-      "description": "ι_n embedding: set when this occurrence is an episode cast as a higher-audit case"
+      "minLength": 1,
+      "description": "iota_n embedding: set when this occurrence is an episode cast as a higher-audit case"
     }
   },
   "additionalProperties": false

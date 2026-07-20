@@ -1,0 +1,61 @@
+{
+  "id": "I37-precedence-cycle",
+  "why": "a precedence cycle mu-a -> mu-b -> mu-a: precedence must be an acyclic strict partial order over declared governing types (D5)",
+  "expect_layer": "semantic",
+  "schema": "orthing-episode.schema.json",
+  "instance": {
+    "episode_id": "ep-prec-cycle",
+    "record_mode": "minimal",
+    "occurrence": {
+      "identity_key": "occ-x",
+      "version": "v1",
+      "kind": "case"
+    },
+    "observation": "observed state of occ-x",
+    "evidence": [
+      {
+        "evidence_id": "ev-ep-prec-cycle",
+        "channel": "inspection",
+        "property_class": "behavioral",
+        "scope": "occ-x @ v1",
+        "provenance": "inspector",
+        "validity": "this case"
+      }
+    ],
+    "actor": "actor-ep-prec-cycle",
+    "warrant": "warrant-1",
+    "analysis": {
+      "analysis_id": "an-x",
+      "version": "1.0",
+      "task": "classify occ-x"
+    },
+    "time": "2026-07-10T10:00:00Z",
+    "policy": "declared policy",
+    "placement": {
+      "kind": "class-a"
+    },
+    "verdict_record_ref": null,
+    "governing_configuration": {
+      "mu_refs": [
+        {
+          "mu_id": "mu-a",
+          "mu_version": "1.0"
+        },
+        {
+          "mu_id": "mu-b",
+          "mu_version": "1.0"
+        }
+      ],
+      "precedence": [
+        [
+          "mu-a",
+          "mu-b"
+        ],
+        [
+          "mu-b",
+          "mu-a"
+        ]
+      ]
+    }
+  }
+}

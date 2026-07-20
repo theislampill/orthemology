@@ -1,0 +1,67 @@
+{
+  "record": "R4 PR #3 fresh Fable substitution-recovery review \u2014 durable execution state",
+  "session_surfaced_model": "claude-fable-5",
+  "session_substitution_observed": false,
+  "historical_attributed_observations": {
+    "present_thread_initial_internal_harness_claim": "claude-fable-5",
+    "owner_observed_ui_substitution": "claude-opus-4.8",
+    "adjudicated": false
+  },
+  "topology": {
+    "main": "63d15ecf4aa50672265100b7d5620af764421862",
+    "pr_number": 3,
+    "pr_head_at_start": "de19ccf4b3525ae536bb9bc163aefcd9f4bfedf8",
+    "last_pre_substitution_commit": "00cf05d6",
+    "first_post_substitution_commit": "b2742d1",
+    "quarantine_head": "8df2886ebf34139ae6f0f33e74200472ba6eb0d1",
+    "review_branch": "review/r4-pr3-fable-recovery",
+    "review_branch_base": "de19ccf4b3525ae536bb9bc163aefcd9f4bfedf8"
+  },
+  "last_completed_action": "Phase F + sign-off issued; clean clone of f5ad055 verified 26/26; CI 29762735763 success",
+  "changed_files": [
+    "docs/project-closure/r4-fresh-fable-review/* (4 reports + state)",
+    "docs/semantic-roles.yaml",
+    "scripts/validate_decision_dependencies.py",
+    "docs/sourcing/SOURCING-LEDGER.md",
+    "docs/project-closure/r4-independent-review/* (2 provenance qualifiers)",
+    "docs/project-closure/r4/* (ported interruption record)",
+    "scripts/validate_internal_references.py (+hardenings)",
+    "docs/reference-exemptions.yaml",
+    ".github/workflows/validate.yml",
+    "scripts/validate_repo.py (cache guard + declared-binary)",
+    "artifacts/* (rebuilt)",
+    "docs/current-state.yaml",
+    "docs/provenance/RELEASE-MANIFEST.sha256"
+  ],
+  "tests_run": [
+    {
+      "tree": "worktree @ 63d15ecf (clean)",
+      "suite": "commit's validate.yml, 17 steps",
+      "result": "0 failing"
+    },
+    {
+      "tree": "worktree @ 00cf05d6 (clean)",
+      "suite": "commit's validate.yml, 25 steps",
+      "result": "0 failing"
+    },
+    {
+      "tree": "worktree @ de19ccf4 (clean)",
+      "suite": "commit's validate.yml, 25 steps",
+      "result": "1 failing: build_pdfs.py --check (TOTAL: 4 failures)"
+    },
+    {
+      "tree": "worktree @ 8df2886e (clean)",
+      "suite": "commit's validate.yml, 26 steps",
+      "result": "4 failing: validate_repo, generate_current_state --check, validate_current_state, manifest step; build_pdfs --check GREEN"
+    },
+    {
+      "tree": "review branch worktree (Phase D)",
+      "suite": "state/convergence/manifest/repo/internal-refs/source family",
+      "result": "0 failures each"
+    }
+  ],
+  "unresolved_findings": [
+    "PR #3 update, ready, protected merge, merged-main fresh-clone verification pending"
+  ],
+  "next_action": "Commit sign-off, rerun suite at final commit, push, CI, merge review branch into PR branch, update PR body, ready, merge, verify merged main"
+}

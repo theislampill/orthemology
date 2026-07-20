@@ -3,7 +3,7 @@
 > **Provenance.** Multi-model draft lineage with successive review passes; original headers preserved verbatim in
 > [`docs/provenance/document-history.md`](../docs/provenance/document-history.md); nothing here is experimentally validated.
 
-**Revised manuscript draft — July 2026 (revision R2). Not peer reviewed.**
+**Revised manuscript draft — July 2026 (revision R4; candidate revision pending independent review). Not peer reviewed.**
 
 ## Abstract
 
@@ -797,6 +797,26 @@ operational records but no verdict layer; assurance and metamorphic testing each
 correctness, evidential support, truth-connection, currentness, rule adequacy, policy adequacy, executor fidelity, ex-ante justification, route safety, closure truthfulness, and
 robustness are simultaneously definable — and that integration, not any component, is what remains after the concessions. Whether the integration pays for itself is Section 13's
 question, not this section's claim.
+
+
+### 12.1 Sequential latent-variable inference (bounded related work)
+
+A neighbouring literature models cognition with sequential latent-variable machinery — hidden Markov models, clone-structured graphs, recurrent
+networks — in which ambiguous immediate observations are disambiguated by sequence-sensitive inference over model-internal latent states
+(George et al. 2021; Vasudeva Raju et al. 2024; Sun et al. 2025). One reported finding is structurally relevant here: in the cited study several
+compared models reach the same endpoint while only one of the compared models matched the reported longitudinal trajectory, and high task
+performance is reported to occur without the global representation geometry that study measured. The bounded claim this paper draws is therefore
+about *underdetermination*: **final performance and final representation do not by themselves determine the learning trajectory or the mechanism**
+— which is the same separation of result from pathway that Sections 8 and 13 make operational.
+
+The boundary is fixed by Decision 0015 and is strict. A model's latent state `z` is not an ortheme; its emitted observation is not the concrete
+occurrence; a posterior over latent states is not ground truth; and an internal representation's geometry (orthogonality, decorrelation, cluster
+separation) is neither necessary nor sufficient for orthemic distinctness or for pathway adequacy. Latent labels are identified only up to
+permutation and relabelling **absent declared semantic anchoring or alignment constraints**, so they carry no cross-model or cross-version meaning
+unless an explicit, validated alignment map is exhibited. The latent apparatus is an optional extension declared inside `A`: **the core claims of
+this framework remain statable without it**, though an extension may of course use its own declared vocabulary for extension-specific claims.
+This literature is cited as related work only. It validates nothing here, supplies no etymological support for the coined vocabulary, and bears
+on no theological question.
 
 ---
 

@@ -1,0 +1,39 @@
+{
+  "program": "R4 semantic-contract, source-integrity, and project-state tie-off (consolidated prompt v2; Part II latent-state amendment controlling where more specific)",
+  "run_status": "CANDIDATE PASS — REQUIRES INDEPENDENT REVIEW. Not final closure; not independently signed off; must not be merged under this authorization.",
+  "model_provenance": {
+    "harness_surfaced_identity": "claude-fable-5",
+    "owner_reported_identity": "claude-opus-4.8",
+    "discrepancy": "UNRESOLVED. The system context available to this run states the model as claude-fable-5 and no substitution event was observed from inside the run. The owner reports, out of band, that the harness substituted claude-opus-4.8. Neither party can verify the other's view from here. Both values are recorded verbatim; NEITHER is asserted as the settled fact.",
+    "handling": "Per the owner's MODEL PROVENANCE OVERRIDE (received mid-run), this run continues under the conservative candidate-only constraints, which are safe under either identity hypothesis: candidate branch only, no merge to main, no independent sign-off, draft PR, all outputs labeled 'CANDIDATE — REQUIRES INDEPENDENT REVIEW'.",
+    "refusal_note": "This record deliberately does NOT overwrite the harness-surfaced identity with the asserted one. Fabricating a provenance value in an integrity ledger would be the exact defect class this project audits for."
+  },
+  "repo": "https://github.com/theislampill/orthemology",
+  "starting_commit": "63d15ecf4aa50672265100b7d5620af764421862",
+  "starting_commit_verified": "live gh api; protected=true; main CI run 29743263628 success; matches supplied ZIP comment",
+  "branch": "closure/r4-semantic-contract-source-integrity",
+  "branch_status": "unmerged candidate branch, pushed to origin; retained per the override's permission to continue on an existing unmerged candidate branch",
+  "remote_mutation_already_performed": {
+    "r4": "NONE — no R4 merge, no force-push, no history rewrite, no release",
+    "r3": "The R3 branch was merged to main (merge commit 63d15ecf...) BEFORE this substitution notice was received, under the then-current authorization. Recorded precisely; no destructive rollback performed, per the override's instruction."
+  },
+  "phase": "P1 in progress — generated current-state contract",
+  "integrity_findings_this_run": [
+    {
+      "id": "SELF-1",
+      "severity": "reporting error (repository unaffected)",
+      "finding": "The R2 and R3 closeouts, and three R3 documents (R3-TERMINOLOGY-READINESS.md:5, TERMINOLOGY-MATCHING-AUDIT-R3.md:7, R3-INDEPENDENT-SIGNOFF.md:7), state the pilot-0 v1 freeze hash as ece0412f16d301dcf25b0e6f8956045a45518eceb3d8da1cd63c7478753762c1. The committed FREEZE-HASH.txt has recorded 988a6522498df73ad1c7b0f73961a054ff20862d50fff6d644d0274877412772 since commit e89d68a (R2), and freeze_pilot0.py --check PASSES against it.",
+      "cause": "ece0412f was an intermediate value computed during an R2 debugging step with a broken path-separator replacement; the corrected canonical value was committed but the prose reports were never updated. The packet itself is internally consistent and was never wrong.",
+      "disposition": "Corrected in R4 with a dated note; the false value is retained in the R2/R3 historical documents' bodies (never rewritten) and superseded by the correction ledger."
+    }
+  ],
+  "baseline_results": {
+    "files": 168,
+    "validators": "all 0 failures from a fresh clone",
+    "pdf_check": "clean rebuild byte-identical to all four committed artifacts",
+    "adversarial_probe": "10 of 11 malformed classes accepted by BOTH schema and cross-record layers (1 partial refutation recorded)",
+    "mutation_operators_found": ["drop-required (top-level)", "bad-enum (top-level)", "extra-field (top-level)"]
+  },
+  "last_completed_action": "P0 baseline audit committed (a37a33e) and pushed; current-state generator written and run; SELF-1 freeze-hash reporting error identified and verified",
+  "next_action": "P1: synchronize VERSION/README/STATUS/OPEN-DECISIONS/CHANGELOG against docs/current-state.yaml; add validate_current_state.py; decision 0014; then P2 formal semantic repairs"
+}

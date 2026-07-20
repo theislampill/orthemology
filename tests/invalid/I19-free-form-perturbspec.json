@@ -1,0 +1,26 @@
+{
+  "id": "I19-free-form-perturbspec",
+  "why": "a verdict record whose perturb_spec is a free-form prose string. ROBUST_NEIGHBORHOOD requires a declared neighborhood — an enumeration or a measure, invariants, varied fields, a rebinding rule and a failure criterion",
+  "expect_layer": "schema",
+  "schema": "verdict-record.schema.json",
+  "instance": {
+    "episode_id": "e1",
+    "index": {
+      "analysis_id": "AN-1",
+      "analysis_version": "1",
+      "actor": "reviewer",
+      "decision_time": "2026-07-01T12:00:00Z",
+      "information_state": "the statuses recorded in this fixture, as available at decision time"
+    },
+    "required_path": [
+      "ROBUST_NEIGHBORHOOD"
+    ],
+    "statuses": {
+      "ROBUST_NEIGHBORHOOD": "pass"
+    },
+    "pathway_state": "adequate",
+    "perturb_spec": {
+      "q-1": "we tried some similar cases and it held up"
+    }
+  }
+}

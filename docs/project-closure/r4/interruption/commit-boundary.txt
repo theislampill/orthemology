@@ -1,0 +1,65 @@
+COMMIT BOUNDARY RECONSTRUCTION — PR #3 model-substitution containment
+Generated during the containment pass. Containment model: claude-opus-4.8.
+
+METHOD AND ITS LIMIT
+--------------------
+Repository evidence (commit SHAs, committer timestamps, reflog, CI run records)
+gives an exact ordering of commits. It does NOT contain any record of platform
+model routing. The owner supplied one contextual clue: the substitution was
+visible after the assistant message
+
+    "Now I have the full picture. Let me examine the integration targets —
+     bib, source-status, ledger, matrix, manuscript, related-work note"
+
+and before or during the ensuing Phase E work. That message was emitted after
+the Phase D commit had been made and pushed, and before any Phase E file was
+written. Mapping the clue onto the commit timeline therefore places the
+boundary between 00cf05d (12:00:46 -0400) and b2742d1 (12:06:22 -0400).
+
+This classification rests on the owner's clue plus commit timestamps. No
+independent platform-routing evidence was available to this session. Where the
+two sources would disagree, repository evidence is recorded as-is and the
+disagreement is left unadjudicated.
+
+BASE
+----
+base main (unchanged, never modified):  63d15ecf4aa50672265100b7d5620af764421862
+
+COMMITS COMPLETED BEFORE OWNER-OBSERVED SUBSTITUTION
+---------------------------------------------------
+d8517d802478e4dfb16a2e6707f643e31fc73221  2026-07-20T11:19:50-04:00  Phase A  review: read-only reproduction
+1223110e85ebc1660567f9b48618f968af41f478  2026-07-20T11:26:05-04:00  Phase B  state: convergent source-tree-digest contract
+d7b968744db5ee5f84f5384f19fbb3017d852d33  2026-07-20T11:43:20-04:00  Phase C  formal: one strict-soundness definition, CR-9..CR-15
+00cf05d6a2a54e672cf49f928dcf0e6057b8ca3d  2026-07-20T12:00:46-04:00  Phase D  schema+semantics: reference-model completion
+
+LAST COMMIT WITH A GREEN REQUIRED CHECK: 00cf05d6 (CI runs 29757727655 /
+29757730897, conclusion success). This is also the last commit classified as
+pre-substitution.
+
+COMMITS CREATED AFTER OWNER-OBSERVED SUBSTITUTION (already pushed; NOT rewritten)
+--------------------------------------------------------------------------------
+b2742d172f69f15b8859a1a6395e2eae115cb236  2026-07-20T12:06:22-04:00  Phase E  sources: latent-related-work integration; Decision 0015 amendment
+de19ccf4b3525ae536bb9bc163aefcd9f4bfedf8  2026-07-20T12:11:19-04:00  Phase F  sources: registry scope, CIR-1 split, ATH-3 downgrade
+
+Both are present on origin/closure/r4-semantic-contract-source-integrity.
+CI at de19ccf4 FAILS (runs 29758519395 / 29758527272).
+
+WORKING-TREE MATERIAL CREATED AFTER SUBSTITUTION (uncommitted at containment)
+----------------------------------------------------------------------------
+Phase G/H material, preserved only on the quarantine branch:
+  .github/workflows/validate.yml            (added one CI step)
+  docs/reference-exemptions.yaml            (new)
+  scripts/validate_internal_references.py   (new)
+  docs/current-state.yaml                   (regenerated)
+  artifacts/*.pdf and artifacts/*.sources.json  (4 PDFs rebuilt)
+
+BEGUN BEFORE AND COMPLETED AFTER SUBSTITUTION
+---------------------------------------------
+None identified. Phase D was committed and pushed before the clue message; no
+file in the post-boundary set had been opened for writing before it.
+
+BOUNDARY UNCERTAIN
+------------------
+The precise instant of substitution within the 12:00:46 -> 12:06:22 window is
+not recoverable from repository evidence. Any claim finer than "after the Phase
+D commit, before the Phase E commit" would be a guess and is not made.

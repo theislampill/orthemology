@@ -1,0 +1,27 @@
+{
+  "id": "I16-skeletal-audit-ready-episode",
+  "why": "an episode declaring record_mode 'audit-ready' while carrying an empty actor, no evidence and no evidence_absent_reason, an empty placement, and neither a claim ledger nor a verdict record: the skeletal record the R3 schemas accepted, now rejected on its own audit claim",
+  "expect_layer": "schema",
+  "schema": "orthing-episode.schema.json",
+  "instance": {
+    "episode_id": "e1",
+    "record_mode": "audit-ready",
+    "occurrence": {
+      "identity_key": "k",
+      "version": "1",
+      "kind": "case"
+    },
+    "actor": "",
+    "analysis": {
+      "analysis_id": "AN-1",
+      "version": "1"
+    },
+    "time": "",
+    "placement": {},
+    "observation": "",
+    "evidence": [],
+    "warrant": null,
+    "policy": "",
+    "verdict_record_ref": null
+  }
+}

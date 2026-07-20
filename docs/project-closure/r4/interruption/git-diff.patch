@@ -1,0 +1,746 @@
+diff --git a/.github/workflows/validate.yml b/.github/workflows/validate.yml
+index 84f0de6..65dbd6d 100644
+--- a/.github/workflows/validate.yml
++++ b/.github/workflows/validate.yml
+@@ -56,6 +56,8 @@ jobs:
+         run: python scripts/validate_claim_sources.py
+       - name: Cross-document consistency
+         run: python scripts/validate_cross_document_consistency.py
++      - name: Internal references resolve (no ghost script/fixture citations)
++        run: python scripts/validate_internal_references.py
+       - name: Terminology packet freeze hashes (v1 immutable + v2)
+         run: |
+           python scripts/freeze_pilot0.py --check
+diff --git a/artifacts/orthability-divine-speech-athari-draft.pdf b/artifacts/orthability-divine-speech-athari-draft.pdf
+index 93c50ea..73feb23 100644
+--- a/artifacts/orthability-divine-speech-athari-draft.pdf
++++ b/artifacts/orthability-divine-speech-athari-draft.pdf
+@@ -6,8 +6,8 @@ Empirical validation not completed: no designed study has been run.
+ Terminology benchmark not run: every coined term is a candidate; none adopted.
+ Companion claim status: philosophical conclusions are conditional on stated premises;
+ creed-internal material is explicitly school-labeled (Atharī) and revelational where stated.
+-Source revision (git commit): 262ac45bc6ec5b720e6abbb4f0d4b41153f45f25
+-SOURCE_DATE_EPOCH: 1784557012 (UTC 2026-07-20, from the source commit)
++Source revision (git commit): de19ccf4b3525ae536bb9bc163aefcd9f4bfedf8
++SOURCE_DATE_EPOCH: 1784563879 (UTC 2026-07-20, from the source commit)
+ Repository: theislampill/orthemology
+ Build: scripts/build_pdfs.py (markdown-it-py + typst 0.15.0; deterministic; embedded OFL fonts)
+ 
+diff --git a/artifacts/orthability-divine-speech-athari-draft.sources.json b/artifacts/orthability-divine-speech-athari-draft.sources.json
+index d7786f1..49c3b5d 100644
+--- a/artifacts/orthability-divine-speech-athari-draft.sources.json
++++ b/artifacts/orthability-divine-speech-athari-draft.sources.json
+@@ -1,13 +1,13 @@
+ {
+   "pdf": "orthability-divine-speech-athari-draft.pdf",
+-  "pdf_sha256": "6c0ede917b3d7bf6be4b4f4ffbf2a94f9f48f821e90d3c09dc21eb6a43e24383",
++  "pdf_sha256": "baeb94aa03e2091cac0cf254f070ee28f88ac1c2624b539ee6da830c0e7f815f",
+   "page_count": 7,
+   "sources": {
+     "companion/orthability-divine-attributes-and-speech-athari.md": "a7ab9695c9f5924f9b1d5d391969c241e76c2f2eaf5a5c619c7d23ec8f34e4dd"
+   },
+-  "source_commit": "262ac45bc6ec5b720e6abbb4f0d4b41153f45f25",
++  "source_commit": "de19ccf4b3525ae536bb9bc163aefcd9f4bfedf8",
+   "artifact_commit": "the git commit that introduces/updates this artifact (two-stage provenance; see `git log -- artifacts/`)",
+-  "source_date_epoch": 1784557012,
++  "source_date_epoch": 1784563879,
+   "build_command": "python scripts/build_pdfs.py",
+   "tools": {
+     "typst": "0.15.0",
+diff --git a/artifacts/orthability-ground-of-intelligibility-draft.pdf b/artifacts/orthability-ground-of-intelligibility-draft.pdf
+index d8ae4a3..caf6828 100644
+--- a/artifacts/orthability-ground-of-intelligibility-draft.pdf
++++ b/artifacts/orthability-ground-of-intelligibility-draft.pdf
+@@ -6,8 +6,8 @@ Empirical validation not completed: no designed study has been run.
+ Terminology benchmark not run: every coined term is a candidate; none adopted.
+ Companion claim status: philosophical conclusions are conditional on stated premises;
+ creed-internal material is explicitly school-labeled (Atharī) and revelational where stated.
+-Source revision (git commit): 262ac45bc6ec5b720e6abbb4f0d4b41153f45f25
+-SOURCE_DATE_EPOCH: 1784557012 (UTC 2026-07-20, from the source commit)
++Source revision (git commit): de19ccf4b3525ae536bb9bc163aefcd9f4bfedf8
++SOURCE_DATE_EPOCH: 1784563879 (UTC 2026-07-20, from the source commit)
+ Repository: theislampill/orthemology
+ Build: scripts/build_pdfs.py (markdown-it-py + typst 0.15.0; deterministic; embedded OFL fonts)
+ 
+diff --git a/artifacts/orthability-ground-of-intelligibility-draft.sources.json b/artifacts/orthability-ground-of-intelligibility-draft.sources.json
+index fa2d705..fac689b 100644
+--- a/artifacts/orthability-ground-of-intelligibility-draft.sources.json
++++ b/artifacts/orthability-ground-of-intelligibility-draft.sources.json
+@@ -1,13 +1,13 @@
+ {
+   "pdf": "orthability-ground-of-intelligibility-draft.pdf",
+-  "pdf_sha256": "036d480d36b93d97ab402de2e200aa14ff125379c56d3b6f0d7db259c4b5d896",
++  "pdf_sha256": "55b770914ad2392e514b58f2068938667acbcc857a5cf26240900ef6899f4821",
+   "page_count": 10,
+   "sources": {
+     "companion/orthability-and-the-ground-of-intelligibility.md": "10315e5f7a5f24d18dc711283d8326d86920ce6225ee1682d6c95f3f8b62cb7c"
+   },
+-  "source_commit": "262ac45bc6ec5b720e6abbb4f0d4b41153f45f25",
++  "source_commit": "de19ccf4b3525ae536bb9bc163aefcd9f4bfedf8",
+   "artifact_commit": "the git commit that introduces/updates this artifact (two-stage provenance; see `git log -- artifacts/`)",
+-  "source_date_epoch": 1784557012,
++  "source_date_epoch": 1784563879,
+   "build_command": "python scripts/build_pdfs.py",
+   "tools": {
+     "typst": "0.15.0",
+diff --git a/artifacts/orthemic-core-reference-draft.pdf b/artifacts/orthemic-core-reference-draft.pdf
+index eee7db3..5d137cd 100644
+--- a/artifacts/orthemic-core-reference-draft.pdf
++++ b/artifacts/orthemic-core-reference-draft.pdf
+@@ -5,8 +5,8 @@ Empirical validation not completed: no designed study has been run.
+ Terminology benchmark not run: every coined term is a candidate; none adopted.
+ Companion claim status: philosophical conclusions are conditional on stated premises;
+ creed-internal material is explicitly school-labeled (Atharī) and revelational where stated.
+-Source revision (git commit): 262ac45bc6ec5b720e6abbb4f0d4b41153f45f25
+-SOURCE_DATE_EPOCH: 1784557012 (UTC 2026-07-20, from the source commit)
++Source revision (git commit): de19ccf4b3525ae536bb9bc163aefcd9f4bfedf8
++SOURCE_DATE_EPOCH: 1784563879 (UTC 2026-07-20, from the source commit)
+ Repository: theislampill/orthemology
+ Build: scripts/build_pdfs.py (markdown-it-py + typst 0.15.0; deterministic; embedded OFL fonts)
+ 
+@@ -957,6 +957,17 @@ ones defective pathways. Depth matters operationally in one place only: which re
+ may perform locally versus must escalate across the governance boundary. It is an axis of the executor,
+ not of the episode’s correctness or adequacy.
+ 
++Optional latent-variable extension (Decision 0015). A declared analysis A may optionally carry
++sequential latent-variable apparatus (Z_A, transitions P_A, latent candidate sets/posteriors, and concrete
++internal representations y). That apparatus is non-primitive and optional: it adds nothing to the
++settled ontology of this formalization, a latent state is not an ortheme, a posterior is not O*(m; A), and
++representational geometry is neither necessary nor sufficient for orthemic distinctness or for pathway
++adequacy. The bridge ProfileOf_A ⊆ Z_A × Π_A is partial and must be exhibited, never assumed; latent
++labels are non-identifiable up to relabelling absent declared anchoring or a validated alignment map.
++Every core claim of this formalization remains statable without the latent layer. Declaring it
++is a version event on A. See docs/decisions/0015-latent-state-observation-and-representation-
++boundary.md and docs/related-work/LATENT-STATE-INFERENCE-AND-ORTHEMOLOGY.md.
++
+ Status ledger
+ 
+ Accepted (analytic/definitional): level-indexing via ι_n with no episode-referent “meta-orthemma”
+@@ -965,7 +976,9 @@ a different object, carried in §2.2/§3/§4.1 V3c); the record-style episode si
+ families, claim ledger, handoffs, warrant, and labeled successors (§2.2); endpoint-plus-bounded-trace with
+ governance-declared granularity (§2.2a); split model (C) with the {O,I,E,D,R,V,W} boundary (§3,
+ downsides preserved); verdict separability with governance-derived ReqPath(e) (§4.1); token-level DAG
+-with typed edges (§5.2). Rejected: literal set inclusion for episodes; forced single successor; blanket
++
++                            17
++with typed edges (§5.2). Rejected: literal set inclusion for episodes; forced single successor; blanket
+ edition-wide revision reopening; safeguard (v) word-utility test inside concept admission. Unresolved
+ alternatives: safety/reliabilist/calibration variants of V2b-P remain admissible declared criteria; single-
+ object metaortheme presentation (C1) remains permitted as user-facing shorthand. Experimental
+@@ -975,8 +988,7 @@ tier: formal coherence established analytically; operational usefulness of the d
+ observational support; nothing here is experimentally validated. Provenance: docs/provenance/
+ document-history.md this file is the canonical integrated body.
+ 
+-                            17
+-Multi-Actor / Zero-Sum Orthemic Note — stress test,
++Multi-Actor / Zero-Sum Orthemic Note — stress test,
+ corrections, and formal residue
+ 
+ Status (revision R4, 2026-07-20; candidate revision pending independent review): derived
+@@ -1023,7 +1035,8 @@ occurrence (“White checkmates Black” IS one). The repair: player A’s targe
+ “maximize my utility” is the task that SELECTS them. Utility/objective/loss are external parameters
+ (core-formalization §3), never orthemes and never metaorthemes.
+ 
+-C2 — “their orthemes are completely identical in structure.” Isomorphism is not identity. The
++                                                                    18
++C2 — “their orthemes are completely identical in structure.” Isomorphism is not identity. The
+ goal SCHEMA “win-for-me” is invariant under the role substitution φ(α→β); the EXTENSIONS differ: φ
+ maps “White checkmates Black” to “Black checkmates White.” Two consequences the source notes blur:
+ (i) nothing is “the same ortheme” here — the schemas are isomorphic, the target profiles disjoint; (ii)
+@@ -1033,8 +1046,7 @@ the interesting fact is precisely that φ exists and 
+ C3 — “the metaortheme = the rules of the game + the logic of minimax.” Three different
+ things, none of them a metaortheme:
+ 
+-                                                                    18
+-• game transition rules — the DOMAIN’s lawful-transition structure (which successor occurrences
++• game transition rules — the DOMAIN’s lawful-transition structure (which successor occurrences
+    are reachable at all);
+ 
+ • utility / rational maximization — the TASK/objective, an external parameter excluded from
+@@ -1076,44 +1088,43 @@ T_α = task(A_α)); placements are actor/analysis-indexed; the episode graph cou
+ lineage. New derived definitions worth adding (clarification, NOT a new formal addition —
+ the six-addition count is unchanged):
+ 
+-x_α = Ω_α(m)   actor-α's OBSERVATION of the shared occurrence m
++x_α = Ω_α(m)            actor-α's OBSERVATION of the shared occurrence m
++p̂(e, α, T_α)           (imperfect information: Ω_α(m) ≠ Ω_β(m) over ONE m)
++                      the current inferred profile of actor α's episode e
++GoalSchema(·)           under its analysis A_α, task T_α = task(A_α)
++                        (inferred FROM x_α, never from m directly)
++               a PARAMETRIC ortheme schema — the shared
+ 
+-               (imperfect information: Ω_α(m) ≠ Ω_β(m) over ONE m)
++               19
++        goal-form under role substitution ("win for α")
+ 
+-p̂(e, α, T_α)  the current inferred profile of actor α's episode e
++������_{α,A_α} ⊆ Π_{A_α} actor-α's grounded TARGET PROFILE SET: the profiles
+ 
+-               under its analysis A_α, task T_α = task(A_α)
++        T_α declares appropriate as outcomes — the schema's
+ 
+-               (inferred FROM x_α, never from m directly)
++        instantiation at α. NORMATIVE TYPING: a SET of
+ 
+-GoalSchema(·) a PARAMETRIC ortheme schema — the shared
++        profiles; each member is one complete profile
+ 
+-               goal-form under role substitution ("win for α")
++φ(α→β)  a role/perspective isomorphism between Π_{A_α} and
+ 
+-������_{α,A_α} ⊆ Π_{A_α} actor-α's grounded TARGET PROFILE SET: the profiles
++        Π_{A_β}, when one exists
+ 
+-               T_α declares appropriate as outcomes — the schema's
++        (schema invariance: ������_{β,A_β} = φ(������_{α,A_α}))
+ 
+-               instantiation at α. NORMATIVE TYPING: a SET of
+-
+-               profiles; each member is one complete profile
++Compat_m(������_α, ������_β) ∃ m′ ∈ Reach(m): O*(m′; A_α) ∈ ������_α ∧ O*(m′; A_β) ∈ ������_β
+ 
+-φ(α→β)         a role/perspective isomorphism between Π_{A_α} and
++        (well-typed: one shared occurrence, each analysis
+ 
+-               Π_{A_β}, when one exists
++        evaluating in its own profile space — never bare
+ 
+-               (schema invariance: ������_{β,A_β} = φ(������_{α,A_α}))
++        intersection of sets from different spaces)
+ 
+-Compat_m(������_α, ������_β) ∃ m′ ∈ Reach(m): O*(m′; A_α) ∈ ������_α ∧ O*(m′; A_β) ∈ ������_β
++Conflict_m(������_α, ������_β) no such reachable m′ exists
+ 
+-               (well-typed: one shared occurrence, each analysis
++        (cooperation: shared analysis + shared target set,
+ 
+-               19
+-                                      evaluating in its own profile space — never bare
+-                                      intersection of sets from different spaces)
+-Conflict_m(������_α, ������_β) no such reachable m′ exists
+-                                      (cooperation: shared analysis + shared target set,
+-                                      or an explicit alignment map φ(α→β))
++        or an explicit alignment map φ(α→β))
+ 
+ Three distinct relations the parametric schema untangles: (i) SCHEMA identity — players A
+ and B run the same parametric form GoalSchema(·) this is the true content of the source notes’ “locally
+@@ -1121,11 +1132,13 @@ identical” intuition; (ii) GROUNDED-ORTHEME identity — GoalSchema(α) and Go
+ DISTINCT grounded targets, never identical in a strictly competitive task; (iii) TARGET-PROFILE
+ overlap — ������_α ∩ ������_β may be empty (zero-sum win-sets), partial, or total (cooperation). Local similarity
+ is (i); material exclusivity is emptiness at (iii); no level asserts identity of the players’ orthemes.
++
+ The limited sense in which competitors DO share a metaorthemic configuration: both
+ players may consult the SAME governing distinctions — terminality (decided vs live position), evidence-
+ validity for reading the opponent’s information state, analysis-sufficiency before moving. Sharing those
+ configurations while holding opposed targets is exactly the configuration-vs-task separation:
+ metaorthemes govern HOW placements are made and validated, never WHOSE target wins.
++
+ Joint-episode picture: A’s and B’s orthing episodes alternate on one occurrence lineage; each actor’s
+ action creates the successor the other’s episode consumes (typed handoff edges); under Conflict, each
+ episode’s route choice is also an attempt to steer the lineage away from the other’s target set. Draw
+@@ -1155,5 +1168,5 @@ states are successors in neither target set.
+ Analytic note; no empirical claim. The multi-actor fixture is part of the UNRUN terminology
+ benchmark. Nothing here alters the six formal additions, the verdict vector, or any product issue.
+ 
+-                                                                    20
++        20
+ 
+diff --git a/artifacts/orthemic-core-reference-draft.sources.json b/artifacts/orthemic-core-reference-draft.sources.json
+index 886a3de..f0f67d8 100644
+--- a/artifacts/orthemic-core-reference-draft.sources.json
++++ b/artifacts/orthemic-core-reference-draft.sources.json
+@@ -1,14 +1,14 @@
+ {
+   "pdf": "orthemic-core-reference-draft.pdf",
+-  "pdf_sha256": "ccc2e2fab8b5630c9d4b21c210d39c1121f18db323012a08d767657721ee1964",
++  "pdf_sha256": "9d7a4bceba64f057b25c25f23fe6f1911d8b071caa5ad77e222d7d73998aaa35",
+   "page_count": 20,
+   "sources": {
+-    "theory/orthemic-core-formalization.md": "fc334155cb94d0113cc2b83d6a0119ef5affb1225ebf8ff08b20831e6ee2097c",
++    "theory/orthemic-core-formalization.md": "0a22a1b7f0df5f2c18c3078b91b7cac4c32d258be0c4a70a54c6620714be6a97",
+     "theory/orthemic-multi-actor-conflict-note.md": "ad75cbe211a0274cd4f7c21224975b6237e24ab071bb56ce5c72ca6c9c7fff79"
+   },
+-  "source_commit": "262ac45bc6ec5b720e6abbb4f0d4b41153f45f25",
++  "source_commit": "de19ccf4b3525ae536bb9bc163aefcd9f4bfedf8",
+   "artifact_commit": "the git commit that introduces/updates this artifact (two-stage provenance; see `git log -- artifacts/`)",
+-  "source_date_epoch": 1784557012,
++  "source_date_epoch": 1784563879,
+   "build_command": "python scripts/build_pdfs.py",
+   "tools": {
+     "typst": "0.15.0",
+diff --git a/artifacts/orthemma-ortheme-systems-draft.pdf b/artifacts/orthemma-ortheme-systems-draft.pdf
+index 15b33d3..e5bd1cb 100644
+--- a/artifacts/orthemma-ortheme-systems-draft.pdf
++++ b/artifacts/orthemma-ortheme-systems-draft.pdf
+@@ -6,8 +6,8 @@ Terminology benchmark not run: every coined term is a candidate; none adopted.
+ Companion claim status: philosophical conclusions are conditional on stated premises;
+ creed-internal material is explicitly school-labeled (Atharī) and revelational where stated.
+ 
+-Source revision (git commit): 262ac45bc6ec5b720e6abbb4f0d4b41153f45f25
+-SOURCE_DATE_EPOCH: 1784557012 (UTC 2026-07-20, from the source commit)
++Source revision (git commit): de19ccf4b3525ae536bb9bc163aefcd9f4bfedf8
++SOURCE_DATE_EPOCH: 1784563879 (UTC 2026-07-20, from the source commit)
+ Repository: theislampill/orthemology
+ Build: scripts/build_pdfs.py (markdown-it-py + typst 0.15.0; deterministic; embedded OFL fonts)
+ 
+@@ -31,11 +31,11 @@ Handling . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . .
+    12. Related Work . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . ⁠24
+    13. Empirical Program . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . ⁠25
+    14. Terminology Status . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . ⁠26
+-   15. Limitations and Honest-Evidence Appendix . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . ⁠26
+-   16. Conclusion . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . ⁠27
++   15. Limitations and Honest-Evidence Appendix . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . ⁠27
++   16. Conclusion . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . ⁠28
+    17. Data and Materials Availability . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . ⁠28
+-   References . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . ⁠28
+-   Glossary of Proposed Terms (all candidates; none adopted) . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . ⁠29
++   References . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . ⁠29
++   Glossary of Proposed Terms (all candidates; none adopted) . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . ⁠30
+ 
+                                                                      1
+ Orthemma–Ortheme Systems: An Analysis-Relative
+@@ -1427,6 +1427,30 @@ and robustness are simultaneously definable — and that integration, not any co
+ remains after the concessions. Whether the integration pays for itself is Section 13′s question, not this
+ section’s claim.
+ 
++12.1 Sequential latent-variable inference (bounded related work)
++A neighbouring literature models cognition with sequential latent-variable machinery — hidden Markov
++models, clone-structured graphs, recurrent networks — in which ambiguous immediate observations are
++disambiguated by sequence-sensitive inference over model-internal latent states (George et al. 2021;
++Vasudeva Raju et al. 2024; Sun et al. 2025). One reported finding is structurally relevant here: in the
++cited study several compared models reach the same endpoint while only one of the compared models
++matched the reported longitudinal trajectory, and high task performance is reported to occur without
++the global representation geometry that study measured. The bounded claim this paper draws is
++therefore about underdetermination: final performance and final representation do not by
++themselves determine the learning trajectory or the mechanism — which is the same
++separation of result from pathway that Sections 8 and 13 make operational.
++
++The boundary is fixed by Decision 0015 and is strict. A model’s latent state z is not an ortheme; its
++emitted observation is not the concrete occurrence; a posterior over latent states is not ground truth;
++and an internal representation’s geometry (orthogonality, decorrelation, cluster separation) is neither
++necessary nor sufficient for orthemic distinctness or for pathway adequacy. Latent labels are identified
++only up to permutation and relabelling absent declared semantic anchoring or alignment
++constraints, so they carry no cross-model or cross-version meaning unless an explicit, validated
++alignment map is exhibited. The latent apparatus is an optional extension declared inside A: the core
++claims of this framework remain statable without it, though an extension may of course use its
++own declared vocabulary for extension-specific claims. This literature is cited as related work only. It
++validates nothing here, supplies no etymological support for the coined vocabulary, and bears on no
++theological question.
++
+ 13. Empirical Program
+ 
+ Three evaluations, kept strictly separate. Nothing in this paper is experimentally validated. The
+@@ -1438,7 +1462,9 @@ none has run.
+ Environments with planted inter-orthemma aliasing, planted identity uncertainty, and validator-scope
+ traps. Treatment: an agent maintaining typed candidate families and per-burden closure (the
+ machinery of Sections 5 and 7). Baseline: argmax placement with a confidence threshold. Primary
+-endpoints: false-closure rate; the area under the risk–coverage curve (AURC) of the selective-prediction
++
++                                    25
++endpoints: false-closure rate; the area under the risk–coverage curve (AURC) of the selective-prediction
+ literature. (The metric name is corrected from an earlier draft’s “risk–coverage AUROC”, which named
+ no established metric. Methodological criticisms of AURC — its dependence on the evaluation set’s
+ coverage grid and its incomparability across error rates — will be weighed when the benchmark is
+@@ -1464,9 +1490,7 @@ conflated the second and third outcomes.
+ A fixture suite of the E1–E5 class exercises the product behaviour of an implementation: baseline-versus-
+ treatment runs with pinned versions and run hygiene, culminating in E5, the metamorphic pathway
+ fixture — a weak rule (pass iff the output contains a marker string) that returns the correct current
+-
+-                                    25
+-result, paired with neighboring perturbations (correct-without-marker; incorrect-with-marker), scored to
++result, paired with neighboring perturbations (correct-without-marker; incorrect-with-marker), scored to
+ separate current-answer correctness from pathway adequacy. E5 carries no theory vocabulary and is the
+ operational test of episode reification’s practical delta over “audit the validator when suspicious”
+ (Section 8.6). It is a product test; success or failure here transfers no verdict to the benchmark of 13.1 or
+@@ -1498,7 +1522,9 @@ companion-paper candidate orthable — is a candidate pending the matched benchm
+ 
+ Design Principle 1 (Terminological utility, retained). The vocabulary is warranted only if, under
+ matched training time, attention, and access to evidence, it improves at least one preregistered outcome
+-— placement accuracy, inter-rater agreement, defect discovery, repair traceability, transfer, calibration,
++
++                                                                    26
++— placement accuracy, inter-rater agreement, defect discovery, repair traceability, transfer, calibration,
+ or false-closure prevention — without unacceptable over-segmentation or governance cost, relative to
+ established terminology. Adjudication follows the three-outcome rule: adopt on an adequately powered
+ win; do not adopt yet on insufficient evidence; retire only on adequately powered equivalence or harm.
+@@ -1521,9 +1547,7 @@ specifications can be incomplete, contested, or imposed; exact equivalence is ra
+ approximate equivalence need not be transitive; local irreducibility depends on representation and
+ merger families; system boundaries can be chosen opportunistically. Cross-domain analogies establish no
+ shared mechanism. The formalism is conditional on objectives, losses, constraints, authority, and
+-
+-                                                                    26
+-affected-party weights and cannot derive their legitimacy: a system can place every task-relevant
++affected-party weights and cannot derive their legitimacy: a system can place every task-relevant
+ ortheme correctly and still serve harmful ends — orthemic adequacy is not ethical goodness, and
+ governance must permit contestation of the task, the loss, the authority, and the category itself.
+ Orthemic debt is demoted to a speculative instrument (Section 7.3); the metaphysical and theological
+@@ -1538,25 +1562,31 @@ acknowledged open parameters,” never mathematical completeness.
+ 15.2 Evidence tiers
+ 
+ Tier                          Content                            Status
+-Analytic                      Formal coherence of the six        Consistency shown by
+-                              additions; the split metaortheme   construction (deterministic
+-Observational, cross-project  normal form; verdict               fixtures); establishes no
+-                              separability; the DAG/             empirical claim
+-Observational, single-        composition conditions; the
+-longitudinal                  derived multi-actor extensions     Real and recurrent; base rates
+-Experimental                  Stale-evidence/lineage failures;   unknown
+-                              validator-scope failures; closure
+-                              trichotomy; plural profiles;       One case (Branch 11). Single-
+-                              failure-origin confusion (≥2       project, single-owner, transcript-
+-                              domains each, with negative        verified record. Corroborating,
+-                              controls)                          not validating; carries no cross-
+-                              The assembled-union claim;         domain weight
+-                              enumeration-mode revision;         None. All three designed, none
+-                              authority-binding                  run
+-
+-                              Machinery benefit (13.1);
+-                              episode-reification delta (13.2);
+-                              vocabulary utility (13.3)
++Analytic                                                         Consistency shown by
++                              Formal coherence of the six        construction (deterministic
++Observational, cross-project  additions; the split metaortheme   fixtures); establishes no
++                              normal form; verdict               empirical claim
++Observational, single-        separability; the DAG/
++longitudinal                  composition conditions; the        Real and recurrent; base rates
++                              derived multi-actor extensions     unknown
++
++                              Stale-evidence/lineage failures;   One case (Branch 11). Single-
++                              validator-scope failures; closure  project, single-owner, transcript-
++                              trichotomy; plural profiles;       verified record. Corroborating,
++                              failure-origin confusion (≥2
++                              domains each, with negative
++                              controls)
++
++                              The assembled-union claim;
++                              enumeration-mode revision;
++                              authority-binding
++
++                              27
++Experimental  Machinery benefit (13.1);          not validating; carries no cross-
++              episode-reification delta (13.2);  domain weight
++              vocabulary utility (13.3)
++                                                 None. All three designed, none
++                                                 run
+ 
+ Three honesty notes close the paper. Branch 11 is one case: fifty governed stops inside one tightly-
+ coupled project are one case, not fifty domains, and every sentence that leans on it says so. Base rates
+@@ -1575,9 +1605,7 @@ and pathway adequacy are separately adjudicable. Around these, six formal additi
+ prior text could only gesture at: versioned identity with labeled lineage makes “right finding, wrong
+ copy” a statable error; analysis/actor/time indexing makes ground truth explicit and disagreement
+ diagnosable; typed, scoped, expiring evidence makes the green-but-mis-scoped validator visible;
+-
+-                              27
+-factorized candidates with route composition make partial action well-formed; per-burden closure makes
++factorized candidates with route composition make partial action well-formed; per-burden closure makes
+ false closure a checkable record defect; and episode reification with the registry-normalized verdict vector
+ makes the stopped clock, the justified rare miss, the defective binding, and the stale directive all first-
+ class, machine-checkable cases (fixtures F1–F7).
+@@ -1607,7 +1635,8 @@ rights-cleared for publication, and are therefore not independently auditable; n
+ this paper rests on them, and they are cited only as motivation. No human-subject data exists; no
+ experiment has been conducted.
+ 
+-References
++              28
++References
+ 
+ • Chen, T. Y., Cheung, S. C., & Yiu, S. M. (1998). Metamorphic testing: a new approach for generating
+    next test cases. Technical Report HKUST-CS98-01, Department of Computer Science, HKUST.
+@@ -1636,8 +1665,7 @@ References
+ • Gettier, E. L. (1963). Is justified true belief knowledge? Analysis, 23(6), 121–123. doi:10.1093/
+    analys/23.6.121
+ 
+-                                                                    28
+-• Givan, R., Dean, T., & Greig, M. (2003). Equivalence notions and model minimization in Markov
++• Givan, R., Dean, T., & Greig, M. (2003). Equivalence notions and model minimization in Markov
+    decision processes. Artificial Intelligence, 147(1–2), 163–223. doi:10.1016/S0004-3702(02)00376-4
+ 
+ • Goldman, A. I. (1979). What is justified belief? In G. S. Pappas (Ed.), Justification and Knowledge
+@@ -1666,27 +1694,32 @@ References
+    Computation, 94(1), 1–28. doi:10.1016/0890-5401(91)90030-6
+ 
+ • Littman, M. L., Sutton, R. S., & Singh, S. (2001). Predictive representations of state. NIPS 14.
+-• Moreau, L., & Missier, P. (Eds.) (2013). PROV-DM: The PROV Data Model. W3C Recommendation,
+ 
++• Moreau, L., & Missier, P. (Eds.) (2013). PROV-DM: The PROV Data Model. W3C Recommendation,
+    30 April 2013. https://www.w3.org/TR/prov-dm/
+-• Scheirer, W. J., Rocha, A., Sapkota, A., & Boult, T. E. (2013). Toward open set recognition. IEEE
+ 
++• Scheirer, W. J., Rocha, A., Sapkota, A., & Boult, T. E. (2013). Toward open set recognition. IEEE
+    TPAMI, 35(7), 1757–1772. doi:10.1109/TPAMI.2012.256
+-• Shalizi, C. R., & Crutchfield, J. P. (2001). Computational mechanics: pattern and prediction,
+ 
++                                                                    29
++• Shalizi, C. R., & Crutchfield, J. P. (2001). Computational mechanics: pattern and prediction,
+    structure and simplicity. Journal of Statistical Physics, 104, 817–879. doi:10.1023/A:1010388907793
+-• Silla, C. N., & Freitas, A. A. (2011). A survey of hierarchical classification across different application
+ 
++• Silla, C. N., & Freitas, A. A. (2011). A survey of hierarchical classification across different application
+    domains. Data Mining and Knowledge Discovery, 22, 31–72. doi:10.1007/s10618-010-0175-9
+-• Traub, J., Bungert, T. J., Lüth, C. T., Baumgartner, M., Maier-Hein, K. H., Maier-Hein, L., &
+ 
++• Traub, J., Bungert, T. J., Lüth, C. T., Baumgartner, M., Maier-Hein, K. H., Maier-Hein, L., &
+    Jaeger, P. F. (2024). Overcoming common flaws in the evaluation of selective classification systems.
+    NeurIPS 37. arXiv:2407.01032
++
+ • Tsoumakas, G., & Katakis, I. (2007). Multi-label classification: an overview. International Journal of
+    Data Warehousing and Mining, 3(3), 1–13. doi:10.4018/jdwm.2007070101
++
+ • Wald, A. (1947). Sequential Analysis. John Wiley & Sons.
++
+ • Wetzel, L. (2018). Types and Tokens. In E. N. Zalta (Ed.), The Stanford Encyclopedia of Philosophy.
+    https://plato.stanford.edu/entries/types-tokens/
++
+ Machine-readable database with per-claim verification status: references/orthemology.bib and docs/
+ sourcing/SOURCING-LEDGER.md.
+ 
+@@ -1695,8 +1728,7 @@ Glossary of Proposed Terms (all candidates; none adopted)
+ • Orthemma. A concrete situated occurrence considered as something to be apprehended, carrying an
+    identity key and version. The token pole.
+ 
+-                                                                    29
+-• Ortheme. A repeatable operational state-type an orthemma instantiates, relative to a declared task.
++• Ortheme. A repeatable operational state-type an orthemma instantiates, relative to a declared task.
+    The type pole.
+ 
+ • Instantiation relation Inst_A. (m, o) ∈ Inst_A: m instantiates o under the declared, versionable
+@@ -1732,7 +1764,8 @@ Glossary of Proposed Terms (all candidates; none adopted)
+ • Residual disposition. Per burden: unresolved / deferred / transferred / owner-assigned / risk-
+    accepted / validated-resolved.
+ 
+-• False closure. A completion claim collapsing other dispositions into “validated-resolved”; a type
++                                                                    30
++• False closure. A completion claim collapsing other dispositions into “validated-resolved”; a type
+    error against the burden ledger.
+ 
+ • Orthing / orthing episode. The process type of rule-governed, evidence-updating apprehension-
+@@ -1755,5 +1788,5 @@ End of revised draft. Prior version: the original manuscript (see docs/provenanc
+ history.md). Companion formal text: theory/orthemic-core-formalization.md. Terminology
+ evaluation protocol: terminology/.
+ 
+-                                                                    30
++                                                                    31
+ 
+diff --git a/artifacts/orthemma-ortheme-systems-draft.sources.json b/artifacts/orthemma-ortheme-systems-draft.sources.json
+index 1f3c4c0..db971c1 100644
+--- a/artifacts/orthemma-ortheme-systems-draft.sources.json
++++ b/artifacts/orthemma-ortheme-systems-draft.sources.json
+@@ -1,13 +1,13 @@
+ {
+   "pdf": "orthemma-ortheme-systems-draft.pdf",
+-  "pdf_sha256": "577020771bdebd5234617c3872b0d7bdc7f60d5189a434a464a4d7cd16cbbf06",
+-  "page_count": 30,
++  "pdf_sha256": "be0b4dee1cce3f63b350f12fa5af7963cd0d8c59884a5e68002ac4d1d69d942a",
++  "page_count": 31,
+   "sources": {
+-    "manuscript/orthemma-ortheme-systems-revised-draft.md": "6aeca1d431eceee5d0cde46b7d8e31bb524dae16df4ef2aeea1503c24b756167"
++    "manuscript/orthemma-ortheme-systems-revised-draft.md": "5051b8d1c71b0fd5901f93ed569040364fdf64553927fac94a3ae644fa478d02"
+   },
+-  "source_commit": "262ac45bc6ec5b720e6abbb4f0d4b41153f45f25",
++  "source_commit": "de19ccf4b3525ae536bb9bc163aefcd9f4bfedf8",
+   "artifact_commit": "the git commit that introduces/updates this artifact (two-stage provenance; see `git log -- artifacts/`)",
+-  "source_date_epoch": 1784557012,
++  "source_date_epoch": 1784563879,
+   "build_command": "python scripts/build_pdfs.py",
+   "tools": {
+     "typst": "0.15.0",
+diff --git a/docs/current-state.yaml b/docs/current-state.yaml
+index c1f240d..d83699a 100644
+--- a/docs/current-state.yaml
++++ b/docs/current-state.yaml
+@@ -65,9 +65,9 @@ authored:
+     pdfs: reproducibly built and visually inspected draft artifacts
+     legal_publication: open on license, identity, peer review, and external submission
+ derived:
+-  source_tree_digest: b000351cfcd789d702cb64c3969f7b36f35f94ac3fbb123e2e257c2d54d25c59
++  source_tree_digest: db88a1d98b45228c77c2defd3ce4c80dcb665d11ca2abc2ac44f47d8d549625d
+   source_tree_digest_policy: docs/project-state-inputs.yaml
+-  tracked_files: 256
++  tracked_files: 258
+   decision_ids:
+   - '0001'
+   - '0002'
+@@ -108,6 +108,7 @@ derived:
+   - validate_cross_record_semantics.py
+   - validate_current_state.py
+   - validate_decision_dependencies.py
++  - validate_internal_references.py
+   - validate_latent_state_fixtures.py
+   - validate_negative_fixtures.py
+   - validate_notation.py
+@@ -120,7 +121,7 @@ derived:
+   - validate_state_convergence.py
+   - validate_type_token_semantics.py
+   - validate_verdict_semantics.py
+-  validator_count: 20
++  validator_count: 21
+   fixture_counts:
+     verdict: 7
+     reason: 8
+diff --git a/docs/reference-exemptions.yaml b/docs/reference-exemptions.yaml
+new file mode 100644
+index 0000000..111e8be
+--- /dev/null
++++ b/docs/reference-exemptions.yaml
+@@ -0,0 +1,36 @@
++schema: orthemology-reference-exemptions-v1
++note: >-
++  Declared exemptions for scripts/validate_internal_references.py, which fails when a
++  document cites a repository path that does not exist. That checker exists because of R4
++  finding §4: Decision 0011, the companion, and the correction ledger all cited fixture
++  CR-9, an example file, and a validator that were never in the tree, and nothing caught
++  it — false closure inside a project about false closure. Every entry below must state
++  WHY the path does not resolve; "it is broken" is not a reason.
++external_paths:
++  note: >-
++    Paths belonging to ANOTHER repository, cited as the provenance of a bounded import.
++    They are not expected to resolve here and no claim of this corpus depends on reading
++    them. The import-mapping document states its own boundary (no content or theology was
++    merged from that repository).
++  owner_repository: daee-epistemics
++  paths:
++  - references/diagnostics/diagnostic-ir.md
++  - references/diagnostics/recursive-state-transitions.md
++  - references/rubrics/diagnostic-render-contract.md
++retired_paths:
++  note: >-
++    Paths that DID exist and were deliberately retired. Historical decision bodies are
++    preserved verbatim (the project never rewrites history to make the present look
++    cleaner), so their original text still names the retired path; the dated amendment on
++    the same document records the retirement. A retired path must name its successor.
++  paths:
++  - path: references/latent-state-additions.bib
++    retired: 2026-07-20
++    retired_by: R4 independent review (Phase E)
++    successor: references/orthemology.bib
++    reason: >-
++      An orphan bibliography fragment is invisible to the citation validators, which is how
++      the three latent-state sources became unreferenced by CI. The entries were merged into
++      the main database and the fragment deleted; scripts/validate_claim_sources.py now fails
++      on any stray .bib. Decision 0015's preserved body still names the fragment; its
++      Amendment A2 records the merge.
+diff --git a/scripts/validate_internal_references.py b/scripts/validate_internal_references.py
+new file mode 100644
+index 0000000..a3d25d5
+--- /dev/null
++++ b/scripts/validate_internal_references.py
+@@ -0,0 +1,119 @@
++#!/usr/bin/env python3
++"""Internal-reference validator (R4 independent review).
++
++Fails when a document cites a repository path — a script, fixture, example,
++schema, decision, reference file, or Markdown link target — that does not exist.
++
++This checker exists because of R4 finding §4. Decision 0011, the companion
++prose, and the correction ledger (marked DONE) all cited fixture CR-9,
++`examples/shared-upstream-corroboration-failure.json`, and
++`scripts/validate_claim_reasoning_paths.py` while none of them was in the tree.
++Every validator was green, because no validator compared prose citations against
++the filesystem. That is false closure inside a project about false closure, and
++this is the check that makes the class impossible to repeat silently.
++
++Two exemption kinds are declared in docs/reference-exemptions.yaml, each with a
++stated reason: paths owned by ANOTHER repository (bounded-import provenance),
++and deliberately RETIRED paths still named in preserved historical bodies (each
++must name a successor that does resolve). Anything else must exist.
++
++Deterministic; offline.
++"""
++import io
++import os
++import re
++import sys
++
++try:
++    import yaml
++except ImportError as e:
++    print("FATAL: requires pyyaml:", e)
++    sys.exit(2)
++
++ROOT = os.path.dirname(os.path.dirname(os.path.abspath(__file__)))
++FAILS = []
++
++SKIP_DIRS = {".git", "__pycache__", "artifacts", "node_modules"}
++SCAN_EXT = (".md", ".yaml", ".json", ".py")
++PATH_RE = re.compile(
++    r"(?:scripts|tests|examples|schemas|references|terminology|companion|theory|"
++    r"manuscript|docs)/[A-Za-z0-9._\-/]+\.(?:py|json|yaml|yml|md|bib|txt)")
++LINK_RE = re.compile(r"\[[^\]]*\]\(([^)#\s]+)(?:#[^)]*)?\)")
++
++
++def check(name, ok, detail=""):
++    print("[%s] %s%s" % ("PASS" if ok else "FAIL", name,
++                         (" — " + detail) if detail and not ok else ""))
++    if not ok:
++        FAILS.append(name)
++
++
++def main():
++    ex = yaml.safe_load(io.open(os.path.join(ROOT, "docs", "reference-exemptions.yaml"),
++                                encoding="utf-8"))
++    external = set(ex["external_paths"]["paths"])
++    retired = {r["path"]: r for r in ex["retired_paths"]["paths"]}
++
++    # every retired entry must name a successor that actually resolves, and every
++    # exemption must carry a reason — an exemption list without reasons is just a
++    # second place for false closure to hide
++    for p, r in sorted(retired.items()):
++        check("retired path %s names a resolving successor" % p,
++              os.path.exists(os.path.join(ROOT, r.get("successor", ""))),
++              "successor %r does not resolve" % r.get("successor"))
++        check("retired path %s states a reason" % p, bool(str(r.get("reason", "")).strip()))
++    check("external-path exemptions name their owning repository",
++          bool(str(ex["external_paths"].get("owner_repository", "")).strip()))
++
++    exempt = external | set(retired)
++    missing = {}
++    for base, dirs, files in os.walk(ROOT):
++        dirs[:] = [d for d in dirs if d not in SKIP_DIRS]
++        for fn in files:
++            if not fn.endswith(SCAN_EXT):
++                continue
++            src = os.path.relpath(os.path.join(base, fn), ROOT).replace("\\", "/")
++            try:
++                text = io.open(os.path.join(base, fn), encoding="utf-8").read()
++            except (UnicodeDecodeError, OSError):
++                continue
++            cited = set(PATH_RE.findall(text))
++            if fn.endswith(".md"):
++                for target in LINK_RE.findall(text):
++                    if target.startswith(("http://", "https://", "mailto:")):
++                        continue
++                    resolved = os.path.normpath(
++                        os.path.join(os.path.dirname(src), target)).replace("\\", "/")
++                    cited.add(resolved)
++            for c in cited:
++                if c in exempt or c.startswith(".."):
++                    continue
++                if not os.path.exists(os.path.join(ROOT, c)):
++                    missing.setdefault(c, set()).add(src)
++
++    check("every repository path cited in the corpus resolves (or is a declared exemption)",
++          not missing,
++          "; ".join("%s <- %s" % (p, sorted(s)[:2]) for p, s in sorted(missing.items())[:6]))
++
++    # exemptions must stay live: an exemption nobody cites any more is stale state
++    all_text = []
++    for base, dirs, files in os.walk(ROOT):
++        dirs[:] = [d for d in dirs if d not in SKIP_DIRS]
++        for fn in files:
++            if fn.endswith(SCAN_EXT):
++                try:
++                    all_text.append(io.open(os.path.join(base, fn), encoding="utf-8").read())
++                except (UnicodeDecodeError, OSError):
++                    pass
++    blob = "\n".join(all_text)
++    for p in sorted(exempt):
++        others = blob.count(p) - blob.count("- " + p) - blob.count("  - path: " + p)
++        check("exemption %s is still actually cited somewhere" % p, others > 0,
++              "no document cites it any more — remove the stale exemption")
++
++    print("TOTAL: %d failures" % len(FAILS))
++    sys.exit(1 if FAILS else 0)
++
++
++if __name__ == "__main__":
++    main()

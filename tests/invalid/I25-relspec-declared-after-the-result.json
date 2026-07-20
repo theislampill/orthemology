@@ -1,0 +1,40 @@
+{
+  "id": "I25-relspec-declared-after-the-result",
+  "why": "a RelSpec whose declared_at falls after the decision time it is used to assess. A reliability figure chosen once the outcome is known is a rationalisation, and the pre-outcome declaration requirement is what makes PROCEDURE_RELIABLE non-circular",
+  "expect_layer": "semantic",
+  "schema": "verdict-record.schema.json",
+  "instance": {
+    "episode_id": "e1",
+    "index": {
+      "analysis_id": "AN-1",
+      "analysis_version": "1",
+      "actor": "reviewer",
+      "decision_time": "2026-07-01T12:00:00Z",
+      "information_state": "the statuses recorded in this fixture, as available at decision time"
+    },
+    "required_path": [
+      "PROCEDURE_RELIABLE"
+    ],
+    "statuses": {
+      "PROCEDURE_RELIABLE": "pass"
+    },
+    "pathway_state": "adequate",
+    "rel_spec": {
+      "q-1": {
+        "procedure_id": "proc-1",
+        "procedure_version": "1",
+        "reference_class": "the fixture's declared reference class",
+        "risk_stratum": "illustrative",
+        "metric": "precision",
+        "threshold": 0.9,
+        "evaluation_protocol": "retrospective adjudication",
+        "evidence_basis": "the fixture's declared basis",
+        "declared_at": "2026-12-31T00:00:00Z",
+        "validity": {
+          "effective_from": "2026-01-01T00:00:00Z",
+          "expiry": null
+        }
+      }
+    }
+  }
+}

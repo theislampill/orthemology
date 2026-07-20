@@ -2,42 +2,62 @@ name: validate
 on:
   push:
   pull_request:
+permissions:
+  contents: read
 jobs:
   validate:
     runs-on: ubuntu-latest
     steps:
-      - uses: actions/checkout@v4
-      - uses: actions/setup-python@v5
+      - uses: actions/checkout@v6
+      - uses: actions/setup-python@v6
         with:
           python-version: "3.11"
       - name: Install pinned dependencies (no live web checks anywhere in CI)
         run: pip install --quiet pyyaml jsonschema "typst==0.15.0" "markdown-it-py==4.0.0" "pypdf>=6,<7"
       - name: Repository hygiene + honesty checks
         run: python scripts/validate_repo.py
+      - name: Generated project state — drift check (R4, Decision 0014)
+        run: python scripts/generate_current_state.py --check
+      - name: State-contract convergence proof (commit boundary + tamper controls)
+        run: python scripts/validate_state_convergence.py
+      - name: Public state surfaces agree with the generated state
+        run: python scripts/validate_current_state.py
+      - name: Source-status registry + prose agreement (R4, Decision 0013)
+        run: python scripts/validate_source_status.py
       - name: Verdict semantics (registry-driven fixtures)
         run: python scripts/validate_verdict_semantics.py --fixtures tests/verdict-fixtures.json
       - name: Notation registry
         run: python scripts/validate_notation.py
-      - name: Type/token semantic roles (Decision 0009) + orthability senses (Decision 0010)
+      - name: Type/token semantic roles + orthability senses
         run: python scripts/validate_type_token_semantics.py
-      - name: Concrete/sound-reason fixtures CR-1..CR-8
+      - name: Concrete/sound-reason fixtures
         run: python scripts/validate_reason_fixtures.py
-      - name: JSON schemas (hardened) + machine-readable examples
+      - name: Claim-relative reasoning paths CR-9..CR-15 + omission attack (Decision 0011)
+        run: python scripts/validate_claim_reasoning_paths.py
+      - name: Decision status / supersession registry (0009 -> 0011 machine-checked)
+        run: python scripts/validate_decision_dependencies.py
+      - name: Latent-state boundary fixtures LS-1..LS-7 (R4, Decision 0015)
+        run: python scripts/validate_latent_state_fixtures.py
+      - name: JSON schemas + machine-readable examples
         run: python scripts/validate_schemas.py
-      - name: Cross-record semantics (episode/token/verdict coherence)
+      - name: Cross-record semantics
         run: python scripts/validate_cross_record_semantics.py
-      - name: Negative fixtures + deterministic mutation testing
+      - name: Negative fixtures + invalid-record corpus
         run: python scripts/validate_negative_fixtures.py
+      - name: Recursive path-aware mutation testing (per-family scope printed)
+        run: python scripts/validate_recursive_mutations.py
       - name: ReqPath governance derivation (incl. omission attack)
         run: python scripts/derive_reqpath.py
       - name: Registry-generated surfaces are current (no drift)
         run: python scripts/generate_from_registry.py --check
-      - name: Quran locus registry consistency (offline; records verified in the R3 pass)
+      - name: Qurʾān locus registry consistency (offline)
         run: python scripts/validate_quran_loci.py
-      - name: Citation/source-ledger completeness (field presence only; no web requests)
+      - name: Citation/source-ledger completeness (field presence only)
         run: python scripts/validate_claim_sources.py
       - name: Cross-document consistency
         run: python scripts/validate_cross_document_consistency.py
+      - name: Internal references resolve (no ghost script/fixture citations)
+        run: python scripts/validate_internal_references.py
       - name: Terminology packet freeze hashes (v1 immutable + v2)
         run: |
           python scripts/freeze_pilot0.py --check

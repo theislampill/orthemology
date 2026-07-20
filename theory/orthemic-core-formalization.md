@@ -7,7 +7,7 @@
 > [`docs/provenance/model-contributions.md`](../docs/provenance/model-contributions.md).
 > Nothing here is experimentally validated.
 
-**Status (revision R2, 2026-07-20):** canonical formalization of the
+**Status (revision R4, 2026-07-20; candidate revision pending independent review):** canonical formalization of the
 orthing layer (episodes, metaorthemes, metaorthemmata, pathway adequacy),
 companion to the main manuscript's definitions. All claims are
 definitional/analytic unless marked empirical; nothing is experimentally
@@ -156,7 +156,7 @@ with components (each glossed in ordinary language):
 | `MetaTok(e) = {μ̄_1,…,μ̄_j}` | concrete metaorthemmata (Decision 0002) | the case-bound CONFIGURATION TOKENS of governing types actually applied. Each `μ̄` records/references: its own identity and lineage; `(μ, ver(μ))` via the internal typing `MetaInst(μ̄, μ)`; `(A(e), ver(A(e)))` with `Compatible(μ̄, A(e))` — the token binds case-specific values WITHIN the declared analysis, references any value `A` fixes uniquely, and never overrides `A` without an explicit new analysis version; the target `(κ, v)`; governed component `g`; the case-specific binding map `B` (reference frame, tolerance value, fixture, success surface, …); scope `σ` incl. the claims in `𝒬` that depend on it; references to policy, evidence selector, instrument/tool and calibration provenance; the **binder** (actor/process that made the binding) with binding warrant `w_bind`, kept DISTINCT from the designated executor; binding time `t_bind`; validity/expiry/supersession. The token REFERENCES the episode's evidence `H`, trace, and output — it never absorbs them (the application-event view `ApplyEvent(μ̄, e) = ⟨μ̄, Trace_e\|_μ̄⟩` is derived, not primitive). **Zero-burden rule:** a configuration with no material case-specific binding, non-default scope, instrument/calibration, or independent validity condition gets no explicit token, and `V3c ∉ ReqPath(e)` (status recorded not-applicable, with reason) |
 | `π` | policy | the concrete procedure executed under `μ⃗` |
 | `C⃗` | typed candidate families | open alternatives per uncertainty axis: `C^id ⊆ M` (which occurrence), `C^profile ⊆ Π_A` (which profile), `C^cause ⊆ 𝒦_A` (which cause), `C^route ⊆ ℛ_A` (which route), `C^warrant ⊆ 𝒲_A` (which warrant state) — competing hypotheses may themselves be PROFILES, so candidates are not forced into single orthemes |
-| `p̂ ∈ Π_A^∂` | inferred placement | the profile actually placed (or a bounded set of profiles if unresolved) — **never coerced to a singleton ortheme**; `Ô ⊆ O` survives only as the derived flattening of `p̂` |
+| `p̂ ∈ Π_A^∂` | inferred placement | **exactly one partial profile** — the profile actually placed, determined on resolved axes and open on the rest; **never a set of complete profiles** (live alternatives belong in `Ĉ ⊆ Π_A`, and optional weights in the separate belief layer) and **never coerced to a singleton ortheme**; `Ô ⊆ O` survives only as the derived flattening of `p̂`. (R4 repair, Decision 0012: the pre-R4 gloss "or a bounded set of profiles if unresolved" typed one symbol into two spaces and is withdrawn; archived patches retain it as history.) |
 | `r` | route | the operation/owner the case was sent to |
 | `estatus` | evidence status map | per placed claim: validated / provisional / stale / absent |
 | `𝒬` | claim ledger | per claim: proposition; target occurrence/version; property class (#3); required success surface (#14); evidence IDs; warrant where relevant; verification status; explicit non-claims |
@@ -833,6 +833,19 @@ locally versus must escalate across the governance boundary. It is an
 axis of the executor, not of the episode's correctness or adequacy.
 
 ---
+
+**Optional latent-variable extension (Decision 0015).** A declared analysis `A` may
+optionally carry sequential latent-variable apparatus (`Z_A`, transitions `P_A`, latent
+candidate sets/posteriors, and concrete internal representations `y`). That apparatus is
+**non-primitive and optional**: it adds nothing to the settled ontology of this
+formalization, a latent state is not an ortheme, a posterior is not `O*(m; A)`, and
+representational geometry is neither necessary nor sufficient for orthemic distinctness
+or for pathway adequacy. The bridge `ProfileOf_A ⊆ Z_A × Π_A` is partial and must be
+exhibited, never assumed; latent labels are non-identifiable up to relabelling absent
+declared anchoring or a validated alignment map. **Every core claim of this formalization
+remains statable without the latent layer.** Declaring it is a version event on `A`. See
+`docs/decisions/0015-latent-state-observation-and-representation-boundary.md` and
+`docs/related-work/LATENT-STATE-INFERENCE-AND-ORTHEMOLOGY.md`.
 
 ## Status ledger
 

@@ -1,0 +1,24 @@
+{
+  "id": "I22-na-without-reason-outside-required-path",
+  "why": "a not-applicable status on ROUTE_QUALITY, which is NOT on the required path, with no recorded reason. R3 checked na_reasons only inside required_path; 'not tested' is never 'not applicable' anywhere in the record",
+  "expect_layer": "semantic",
+  "schema": "verdict-record.schema.json",
+  "instance": {
+    "episode_id": "e1",
+    "index": {
+      "analysis_id": "AN-1",
+      "analysis_version": "1",
+      "actor": "reviewer",
+      "decision_time": "2026-07-01T12:00:00Z",
+      "information_state": "the statuses recorded in this fixture, as available at decision time"
+    },
+    "required_path": [
+      "EVIDENCE_SUPPORT"
+    ],
+    "statuses": {
+      "EVIDENCE_SUPPORT": "pass",
+      "ROUTE_QUALITY": "not-applicable"
+    },
+    "pathway_state": "adequate"
+  }
+}

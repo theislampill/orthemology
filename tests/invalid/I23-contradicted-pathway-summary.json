@@ -1,0 +1,25 @@
+{
+  "id": "I23-contradicted-pathway-summary",
+  "why": "a required verdict fails while the record summarises the pathway as adequate: pathway aggregation must recompute from the statuses, never be asserted alongside them",
+  "expect_layer": "semantic",
+  "schema": "verdict-record.schema.json",
+  "instance": {
+    "episode_id": "e1",
+    "index": {
+      "analysis_id": "AN-1",
+      "analysis_version": "1",
+      "actor": "reviewer",
+      "decision_time": "2026-07-01T12:00:00Z",
+      "information_state": "the statuses recorded in this fixture, as available at decision time"
+    },
+    "required_path": [
+      "EVIDENCE_SUPPORT",
+      "PROCEDURE_RELIABLE"
+    ],
+    "statuses": {
+      "EVIDENCE_SUPPORT": "pass",
+      "PROCEDURE_RELIABLE": "fail"
+    },
+    "pathway_state": "adequate"
+  }
+}

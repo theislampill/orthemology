@@ -1,0 +1,29 @@
+{
+  "id": "I31-analysis-unresolved-chain",
+  "why": "a compact analysis chain whose parent never resolves in the bundle: the compact form is admissible ONLY with a resolvable parent, so the effective analysis cannot be materialized",
+  "expect_layer": "semantic",
+  "parts": [
+    {
+      "schema": "analysis.schema.json",
+      "instance": {
+        "analysis_id": "an-child",
+        "version": "1.0",
+        "inherits_from": {
+          "analysis_id": "an-mid",
+          "version": "1.0"
+        }
+      }
+    },
+    {
+      "schema": "analysis.schema.json",
+      "instance": {
+        "analysis_id": "an-mid",
+        "version": "1.0",
+        "inherits_from": {
+          "analysis_id": "an-ghost",
+          "version": "1.0"
+        }
+      }
+    }
+  ]
+}

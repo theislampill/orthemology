@@ -1,0 +1,23 @@
+schema: orthemology-project-state-inputs-v1
+note: >-
+  Declares the source-input set for derived.source_tree_digest in docs/current-state.yaml
+  (Decision 0014, R4 independent-review amendment). The digest is SHA-256 over the
+  concatenation of sorted records "relative-path NUL file-sha256 LF", one per git-tracked
+  file not excluded below. Entries ending in "/" are directory prefixes; all other entries
+  are exact relative paths. New files enter the digest once git-tracked (run `git add`
+  before regenerating). The digest deliberately contains no commit hash: a value derived
+  from HEAD and stored inside a tracked file can never equal the HEAD of the commit that
+  contains it, so exact commit equality is a non-convergent contract. Informational commit
+  provenance lives in git history and in the PDF source sidecars, never in the drift key.
+exclude:
+- docs/current-state.yaml
+- docs/provenance/RELEASE-MANIFEST.sha256
+- artifacts/
+- docs/generated/
+- docs/project-closure/
+exclusion_reasons:
+  docs/current-state.yaml: the generator's own output; including it is self-referential
+  docs/provenance/RELEASE-MANIFEST.sha256: generated manifest that itself covers current-state.yaml; inclusion would cycle
+  artifacts/: generated PDFs and source sidecars; their hashes are recorded separately in derived.pdfs
+  docs/generated/: registry-generated surfaces with their own drift check (generate_from_registry.py --check)
+  docs/project-closure/: closure and review reports that report the derived state rather than defining it

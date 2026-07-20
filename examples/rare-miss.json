@@ -54,13 +54,17 @@
               "binding_time": "2026-07-01T00:00:00Z"
             },
             "validity": {
-              "superseded_by": null
+              "superseded_by": null,
+              "effective_from": "2026-07-01T00:00:00Z"
             },
             "governed_component": "E",
             "scope": {
-              "claims": [],
+              "claims": [
+                "claim-cause"
+              ],
               "description": "scope as stated in the example prose"
-            }
+            },
+            "no_separate_executor_reason": "this token designates no executor separate from its binder: the episode actor executes under the same warrant, and the binder ROLE remains independently recorded"
           }
         ],
         "policy": "match-and-route per declared thresholds",
@@ -79,7 +83,8 @@
             "action_label": "open-ticket"
           }
         ],
-        "verdict_record_ref": null
+        "verdict_record_ref": null,
+        "record_mode": "minimal"
       }
     },
     {
@@ -126,9 +131,46 @@
           }
         ],
         "rel_spec": {
-          "claim-cause": "reference class: signature-matched failures over Q2; metric: precision >= 0.9; declared pre-outcome; this token was the rare miss (true cause: race in new code)"
+          "claim-cause": {
+            "procedure_id": "failure-signature-matcher",
+            "procedure_version": "triage-model 2.3",
+            "reference_class": "signature-matched test failures triaged in Q2 2026 under analysis failure-triage 4.0",
+            "risk_stratum": "routine test-failure triage; no release gate depends on this routing",
+            "metric": "precision: the fraction of infrastructure-flake routings whose established cause was indeed an infrastructure flake",
+            "threshold": 0.9,
+            "evaluation_protocol": "retrospective adjudication of every Q2 signature-matched routing against the eventually established cause",
+            "evidence_basis": "the adjudicated Q2 2026 triage log",
+            "declared_at": "2026-04-01T00:00:00Z",
+            "validity": {
+              "effective_from": "2026-04-01T00:00:00Z",
+              "expiry": "2026-10-01T00:00:00Z"
+            }
+          }
         },
-        "pathway_state": "adequate"
+        "pathway_state": "adequate",
+        "index": {
+          "analysis_id": "failure-triage",
+          "analysis_version": "4.0",
+          "actor": "triage-audit-reviewer",
+          "decision_time": "2026-07-11T04:00:00Z",
+          "information_state": "the signature-match evidence ev-sig and the routing outcome, as available at 2026-07-11T04:00:00Z"
+        },
+        "claim_reasoning_paths": [
+          {
+            "claim_id": "claim-cause",
+            "req_reason": [
+              "EVIDENCE_SUPPORT",
+              "PROCEDURE_RELIABLE",
+              "EVIDENCE_CURRENT",
+              "GOV_CONFIG_ADEQUATE",
+              "GOV_POLICY_ADEQUATE",
+              "GOV_TOKEN_ADEQUATE",
+              "EXECUTION_FAITHFUL",
+              "EX_ANTE_JUSTIFIED"
+            ],
+            "reasoning_path_adequate": "adequate"
+          }
+        ]
       }
     }
   ]

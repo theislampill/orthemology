@@ -1,0 +1,428 @@
+# Machine-readable source-status registry (Decision 0013, rescoped by the R4
+# independent review).
+#
+# SCOPE (honest, machine-declared below in `covered_claim_families`): this registry is
+# AUTHORITATIVE FOR THE SELECTED CLAIM FAMILIES IT COVERS - the R4 concrete/ideal-reason
+# attribution chain, the El-Tobgui records, the enumerated Athari per-claim rows, the
+# sequential latent-variable related work, and this project's own formal extension.
+# It is NOT a registry of every load-bearing claim in the corpus: the broader per-claim
+# sourcing surface is docs/sourcing/SOURCING-LEDGER.md and the companion ledgers, which
+# carry more rows than this file does. The earlier "authoritative for every load-bearing
+# claim" wording overstated the coverage and is withdrawn; see the Decision 0013 amendment.
+#
+# WHAT THE VALIDATOR ESTABLISHES: scripts/validate_source_status.py runs offline and checks
+# RECORD SHAPE and INTERNAL AGREEMENT of the frozen records - required fields, vocabulary,
+# status/evidence-access consistency, scope-family membership, and prose agreement. It does
+# NOT verify that a source is true, that a quotation was read, or that a DOI resolves; no
+# check here is evidence about the world.
+schema: orthemology-source-status-v2
+verified: 2026-07-20
+covered_claim_families:
+  concrete_ideal_reason_chain:
+    prefix: CIR
+    description: the modern concrete-reason / ideal-reason attribution chain (Doko & Turner 2023; Evans 1998; Turner 2022/2023)
+  el_tobgui_records:
+    prefix: ELT
+    description: El-Tobgui's dissertation, article, and monograph as three distinct works
+  athari_per_claim:
+    prefix: ATH
+    description: the enumerated Athari companion claims that replaced the R3 blanket disclaimer
+  latent_related_work:
+    prefix: LAT
+    description: the bounded sequential latent-variable related work (Decision 0015)
+  project_extension:
+    prefix: EXT
+    description: this project's own formal extension, for which no external source is claimed
+not_covered:
+  description: >-
+    Every other load-bearing claim in the corpus - the manuscript's related-work concessions,
+    the empirical-program metric claims, the epistemology parallels, the Qur'anic loci registry
+    (which has its own validator and file), and the companion's philosophical apparatus. Those
+    are tracked in docs/sourcing/SOURCING-LEDGER.md, companion/sourcing/COMPANION-SOURCING-LEDGER.md,
+    and references/quran-loci.yaml. Absence from this registry is NOT a claim that a source is
+    unverified; it means this registry does not adjudicate it.
+status_vocabulary:
+  PRIMARY_TEXT_EXACT: the exact wording was directly checked in the primary text or an authoritative rendering of it
+  PRIMARY_WORK_THEME: the work exists, attribution is confirmed, and the cited theme is confirmed; exact wording not directly checked
+  PRIMARY_LOCUS_EDITION_DEPENDENT: work and theme confirmed; the cited page/volume is edition-dependent and was not independently opened
+  SECONDARY_VERIFIED: a reputable secondary source is confirmed at publisher/official level and supports the claim
+  SECONDARY_RECONSTRUCTION: the claim is a modern scholarly reconstruction; not asserted as the classical author's own formulation
+  COMPILATION_MEDIATED: read only through the supplied compilation; not confirmed against the publisher's version
+  INFERENCE_CROSS_SOURCE: the claim is this project's synthesis across sources, not any single source's statement
+  ORTHEMOLOGICAL_EXTENSION: this project's own formal extension; no external source is claimed
+  UNVERIFIED_REMOVE_OR_DOWNSCOPE: could not be verified; must be removed or made non-load-bearing
+claims:
+
+# --- concrete/ideal reason attribution chain (R4 correction, Decision 0013) ---
+- id: CIR-1
+  locus: companion/CONCRETE-AND-SOUND-REASON.md §1,§4; companion/orthability-and-the-ground-of-intelligibility.md §2.2
+  claim_level: historical/comparative report
+  claim: the modern concrete-reason / ideal-reason contrast is applied to Ibn Taymiyyah in a 2023 Cambridge Handbook chapter
+  source: Doko, Enis and Turner, Jamie B., "Islamic Religious Epistemology", The Cambridge Handbook of Religious Epistemology, eds. Fuqua, Greco & McNabb, Cambridge University Press, 2023, ch. 10, pp. 148-162
+  source_type: secondary scholarship (edited-volume chapter)
+  doi: 10.1017/9781009047180.013
+  locus_exact: pp. 148-162 (chapter); the contrast appears in the chapter body
+  status: SECONDARY_VERIFIED
+  status_scope: >-
+    BIBLIOGRAPHIC ONLY (authorship, title, pages, year, DOI, publisher). The in-chapter
+    application and wording are covered by CIR-1W, NOT by this row's status. R4 independent
+    review: the single SECONDARY_VERIFIED value previously carried both claims at once.
+  verification_date: 2026-07-20
+  wording_directly_checked: false
+  page_edition_dependent: false
+  school_flag: none (analytic philosophy of religion)
+  support: supports; this is the verified modern application. Doko is a co-author and must be credited.
+  notes: >-
+    R4 correction. The corpus previously attributed this to Evans 2010 + Turner 2022. Crossref and
+    Cambridge Core confirm authors, title, pages, year, DOI. The chapter text was read via the supplied
+    compilation (its Section 1 IS this chapter); the publisher's version was not opened (403), so the
+    in-chapter wording is COMPILATION_MEDIATED pending publisher access - see CIR-2.
+- id: CIR-1W
+  locus: companion/CONCRETE-AND-SOUND-REASON.md §1,§4; companion/orthability-and-the-ground-of-intelligibility.md §2.2
+  claim_level: exact in-chapter wording/application
+  claim: >-
+    the specific in-chapter wording and application of the concrete-reason / ideal-reason contrast
+    to Ibn Taymiyyah, as distinct from the chapter's bibliographic existence (CIR-1)
+  source: >-
+    Doko, Enis and Turner, Jamie B., "Islamic Religious Epistemology", The Cambridge Handbook of
+    Religious Epistemology, eds. Fuqua, Greco & McNabb, Cambridge University Press, 2023, ch. 10,
+    pp. 148-162 - read through the owner-supplied compilation, whose Section 1 IS this chapter
+  source_type: secondary scholarship (edited-volume chapter) read via a supplied compilation
+  doi: 10.1017/9781009047180.013
+  locus_exact: chapter body as reproduced in the supplied compilation; publisher full text not opened (403)
+  status: COMPILATION_MEDIATED
+  verification_date: 2026-07-20
+  wording_directly_checked: false
+  page_edition_dependent: false
+  school_flag: none (analytic philosophy of religion)
+  support: >-
+    supports the wording/application claim ONLY at compilation-mediated strength, and never alone:
+    the bibliographic facts are carried by CIR-1 (SECONDARY_VERIFIED) and the underlying distinction
+    by CIR-2/CIR-3. Pending publisher access, no claim in the corpus rests solely on this row.
+  notes: >-
+    R4 independent review split of CIR-1. The audit correctly found that one SECONDARY_VERIFIED
+    value was carrying two different claims with two different evidence accesses: publisher
+    metadata WAS verified (Crossref, Cambridge Core), while the chapter wording was read only
+    through the supplied compilation and the publisher's version was not opened. Those are now
+    two rows with two statuses. Status is pending direct publisher full-text access; that access
+    is the recorded trigger for promotion to SECONDARY_VERIFIED.
+
+- id: CIR-2
+  locus: companion/CONCRETE-AND-SOUND-REASON.md §1
+  claim_level: attribution of a phrase to its originator
+  claim: the concrete/ideal reason distinction originates with C. Stephen Evans
+  source: "Evans, C. Stephen, Faith Beyond Reason: A Kierkegaardian Account, 1998 (Eerdmans, Grand Rapids; also Edinburgh University Press)"
+  source_type: primary source for the distinction (modern philosophy)
+  doi: null
+  locus_exact: reported as p. 94 by Doko & Turner 2023, citing the Eerdmans edition
+  status: SECONDARY_RECONSTRUCTION
+  verification_date: 2026-07-20
+  wording_directly_checked: false
+  page_edition_dependent: true
+  school_flag: none
+  support: supports as reported; the page locus is NOT independently verified
+  notes: >-
+    Both 1998 editions exist and were confirmed (Edinburgh UP ISBN 0748607943; Eerdmans ISBN 080284555X).
+    The p. 94 locus could not be verified from any accessible copy, snippet, or third-party quotation
+    carrying the page, and the two editions may paginate differently. The corpus therefore cites it AS
+    REPORTED BY Doko & Turner 2023 and never asserts direct page verification. Research residual RR-2.
+- id: CIR-3
+  locus: references/orthemology.bib; companion prose
+  claim_level: bibliographic
+  claim: Turner 2022 supports natural-signs/theistic-signs claims, not the concrete/ideal phrase pair
+  source: Turner, Jamie B., "Ibn Taymiyya on theistic signs and knowledge of God", Religious Studies 58(3):583-597, 2022
+  source_type: secondary scholarship (journal article)
+  doi: 10.1017/S0034412521000159
+  locus_exact: 583-597
+  status: SECONDARY_VERIFIED
+  verification_date: 2026-07-20
+  wording_directly_checked: false
+  page_edition_dependent: false
+  school_flag: none
+  support: supports only the natural-signs comparison; retained for that use alone
+  notes: R4 rescope - this work is no longer cited as the source of the concrete/ideal contrast.
+- id: CIR-4
+  locus: references/orthemology.bib
+  claim_level: bibliographic
+  claim: Turner's "Common-Sense" Philosophy chapter is 2023, not 2022
+  source: Turner, Jamie B., "Ibn Taymiyya's 'Common-Sense' Philosophy", in Pluralizing Philosophy's Past, eds. Griffioen & Backmann, Springer, 2023, pp. 197-212
+  source_type: secondary scholarship (book chapter)
+  doi: 10.1007/978-3-031-13405-0_14
+  locus_exact: 197-212
+  status: SECONDARY_VERIFIED
+  verification_date: 2026-07-20
+  wording_directly_checked: false
+  page_edition_dependent: false
+  school_flag: none
+  support: bibliographic correction only
+  notes: Book chapter, not a journal article; year corrected from 2022 to 2023.
+
+# --- El-Tobgui: three distinct records ---
+- id: ELT-1
+  locus: companion/CONCRETE-AND-SOUND-REASON.md §1
+  claim_level: bibliographic + secondary reconstruction
+  claim: El-Tobgui's reconstruction of Ibn Taymiyyah's epistemology (reason's functions; mental universals vs external particulars)
+  source: El-Tobgui, Carl Sharif, Ibn Taymiyya on Reason and Revelation - A Study of Dar' ta'arud al-'aql wa-l-naql, Brill, 2020 (IPTS 111)
+  source_type: secondary scholarship (monograph, open access)
+  doi: 10.1163/9789004412866
+  locus_exact: monograph-level; specific loci in the Dar' remain a verification queue
+  status: SECONDARY_RECONSTRUCTION
+  verification_date: 2026-07-20
+  wording_directly_checked: false
+  page_edition_dependent: false
+  school_flag: Taymiyyan studies
+  support: supports the reconstruction as a modern scholarly reading, not as Ibn Taymiyyah's own words
+  notes: ISBN 978-90-04-41285-9 hbk / 978-90-04-41286-6 OA e-book. Substantial revision of ELT-2.
+- id: ELT-2
+  locus: references/orthemology.bib
+  claim_level: bibliographic
+  claim: the 2013 McGill dissertation is a distinct record from the 2020 monograph
+  source: El-Tobgui, Carl Sharif, PhD dissertation, McGill University, Institute of Islamic Studies, 2013
+  source_type: secondary scholarship (dissertation)
+  doi: null
+  locus_exact: n/a
+  status: SECONDARY_VERIFIED
+  verification_date: 2026-07-20
+  wording_directly_checked: false
+  page_edition_dependent: false
+  school_flag: Taymiyyan studies
+  support: bibliographic distinctness confirmed
+  notes: eScholarship McGill record confirmed.
+- id: ELT-3
+  locus: companion/CONCRETE-AND-SOUND-REASON.md §9 (tawatur)
+  claim_level: secondary reconstruction
+  claim: tawatur as an epistemic architecture with independence, origin-continuity, competence, and anti-collusion conditions
+  source: El-Tobgui, Carl Sharif, "From Legal Theory to Erkenntnistheorie - Ibn Taymiyya on Tawatur as the Ultimate Guarantor of Human Cognition", Oriens 46(1-2):6-61, 2018
+  source_type: secondary scholarship (journal article)
+  doi: 10.1163/18778372-04601002
+  locus_exact: 6-61
+  status: SECONDARY_VERIFIED
+  verification_date: 2026-07-20
+  wording_directly_checked: false
+  page_edition_dependent: false
+  school_flag: Taymiyyan studies
+  support: supports the tawatur reconstruction
+  notes: >-
+    R4 correction - previously cited via the compilation. This is an independent article with its own
+    publication metadata and must not be cited as part of a monograph.
+
+# --- Atharai companion: per-claim statuses replacing the blanket front matter ---
+- id: ATH-1
+  locus: companion/orthability-divine-attributes-and-speech-athari.md §3.1
+  claim_level: revelational (scriptural citation)
+  claim: the Qur'anic loci cited for divine Speech, including the corrected 20:11-12
+  source: Qur'an, Uthmani text; registry references/quran-loci.yaml
+  source_type: primary scripture
+  doi: null
+  locus_exact: all 29 ayat enumerated in references/quran-loci.yaml
+  status: PRIMARY_TEXT_EXACT
+  verification_date: 2026-07-20
+  wording_directly_checked: true
+  page_edition_dependent: false
+  school_flag: Athari (usage), scripture (source)
+  support: supports; 20:11 corrected to 20:11-12 in R3 and revalidated in R4
+  notes: CI validator scripts/validate_quran_loci.py enforces corpus-to-registry consistency.
+- id: ATH-2
+  locus: companion/orthability-divine-attributes-and-speech-athari.md §3.3
+  claim_level: revelational (hadith)
+  claim: the seeking-refuge hadith (Muslim 2708) and its wording
+  source: Sahih Muslim 2708
+  source_type: primary hadith collection
+  doi: null
+  locus_exact: hadith number 2708
+  status: PRIMARY_TEXT_EXACT
+  verification_date: 2026-07-20
+  wording_directly_checked: true
+  page_edition_dependent: false
+  school_flag: scripture
+  support: supports
+  notes: Verified via an authoritative hadith database rendering; sunnah.com blocks automated fetch.
+- id: ATH-3
+  locus: companion/orthability-divine-attributes-and-speech-athari.md §5
+  claim_level: school-internal (classical formulation)
+  claim: "the words are the words of the Creator, and the voice is the voice of the reciter"
+  source: Ibn Taymiyyah, Majmu' al-Fatawa, vol. 12
+  source_type: primary classical text read through the owner-supplied compilation
+  doi: null
+  locus_exact: vol. 12; the commonly cited 12/98 vs 12/173-region pagination is edition-dependent
+  status: COMPILATION_MEDIATED
+  verification_date: 2026-07-20
+  wording_directly_checked: false
+  page_edition_dependent: true
+  school_flag: Athari/Taymiyyan
+  support: >-
+    supports the Athari claim at compilation-mediated strength; the corpus does not assert direct
+    verification of this locus, and no claim rests on this row alone (the doctrine is carried by the
+    ATH-1/ATH-2 primary texts and the enumerated parallels). Status is pending direct edition access.
+  notes: >-
+    R4 INDEPENDENT-REVIEW DOWNGRADE. The R4 candidate registry recorded this row as
+    PRIMARY_TEXT_EXACT with wording_directly_checked true, while the companion prose labels this
+    same locus [via compilation] at the corresponding section. Those two surfaces made incompatible
+    evidence-access claims about one citation. The independent review could not itself confirm that
+    a printed edition or an authoritative direct full-text rendering of Majmu' al-Fatawa vol. 12 was
+    opened, so it takes the WEAKER of the two claims rather than the stronger. The formula is widely
+    attested and the adopted Athari doctrine is unchanged; what changes is only the recorded strength
+    of this row's evidence access. Status is pending direct edition access; promotion trigger is
+    direct edition or authoritative full-text
+    access, which would also settle the edition-dependent pagination (research residual RR-1).
+    Recurrence is prevented mechanically: validate_source_status.py now fails any PRIMARY_TEXT_EXACT
+    row whose locus is labelled [via compilation] in the companion prose.
+- id: ATH-4
+  locus: companion/orthability-divine-attributes-and-speech-athari.md §5
+  claim_level: school-internal
+  claim: al-Bukhari's Khalq Af'al al-'Ibad divides created servant acts/voices from the uncreated recited Word
+  source: al-Bukhari, Khalq Af'al al-'Ibad
+  source_type: primary classical text
+  doi: null
+  locus_exact: work-level; cited paginations edition-dependent
+  status: PRIMARY_WORK_THEME
+  verification_date: 2026-07-20
+  wording_directly_checked: false
+  page_edition_dependent: true
+  school_flag: Athari
+  support: supports the division as the work's theme
+  notes: Existence, attribution, and theme confirmed in a full-text database; exact pagination not opened.
+- id: ATH-5
+  locus: companion/orthability-divine-attributes-and-speech-athari.md §3.2
+  claim_level: school-internal (Taymiyyan doctrine)
+  claim: genus of Speech eternal; particular acts of speaking occur when He wills; particular is not created
+  source: Ibn Taymiyyah, Majmu' al-Fatawa vol. 12 and parallels; academic treatment in Hoover 2004
+  source_type: primary classical text + secondary scholarship
+  doi: 10.1093/jis/15.3.287
+  locus_exact: Hoover, Journal of Islamic Studies 15(3):287-329, 2004
+  status: PRIMARY_LOCUS_EDITION_DEPENDENT
+  verification_date: 2026-07-20
+  wording_directly_checked: false
+  page_edition_dependent: true
+  school_flag: Athari/Taymiyyan
+  support: >-
+    supports with a scope note - Hoover 2004 establishes the eternal-genus/temporal-particulars doctrine
+    for divine ACTS AND CREATION; its extension to divine SPEECH specifically is treated in Hoover's
+    related work. The scope note is stated inline in the paper.
+  notes: The owner's adopted Athari thesis is unchanged; only the evidence scope is made precise.
+- id: ATH-6
+  locus: companion/orthability-divine-attributes-and-speech-athari.md §3.2
+  claim_level: school-internal doctrinal usage (NOT history)
+  claim: the later Hanbali "qadim ghayr makhluq" courtroom formula
+  source: Ibn Abi Ya'la, Tabaqat al-Hanabila; source criticism in Cooperson 2000 and Melchert 2006
+  source_type: primary classical text (hagiographically shaped) + secondary source criticism
+  doi: null
+  locus_exact: work-level; the cited page is edition-dependent
+  status: PRIMARY_LOCUS_EDITION_DEPENDENT
+  verification_date: 2026-07-20
+  wording_directly_checked: false
+  page_edition_dependent: true
+  school_flag: Hanbali/Athari
+  support: >-
+    NOT LOAD-BEARING - cited only as evidence of how the later school disambiguated "qadim", never as
+    verified courtroom history. One scholarly line (Madelung) holds the formula hardened post-mihna.
+  notes: Downgraded in R3; status made explicit in R4.
+- id: ATH-7
+  locus: companion/orthability-divine-attributes-and-speech-athari.md §7
+  claim_level: comparative school description
+  claim: Ash'ari and Maturidi kalam nafsi positions and their documented difference on what is heard
+  source: al-Bajuri, Tuhfat al-Murid; al-Baqillani (reported); al-Nasafi's 'Aqa'id with al-Taftazani's Sharh
+  source_type: tradition-internal texts (read via surveys/databases)
+  doi: null
+  locus_exact: work-level
+  status: SECONDARY_VERIFIED
+  verification_date: 2026-07-20
+  wording_directly_checked: false
+  page_edition_dependent: true
+  school_flag: Ash'ari and Maturidi (described, not adopted)
+  support: >-
+    supports the described split - Ash'ari authors allow that Musa heard the eternal Speech; the Maturidi
+    position is that the kalam nafsi is not itself heard but indicated by a created sound. 'Ibarah is
+    al-Ash'ari's term; hikayah is the Kullabi term.
+  notes: >-
+    An EARLY-MATURIDI critique of "hikayah" specifically was NOT confirmed; the corpus attributes the
+    wording split to Ash'ari-vs-Kullabi only. al-Taftazani is an Ash'ari-leaning commentator on a
+    Maturidi matn - stated inline in the paper.
+
+# --- sequential latent-variable related work (Decision 0015; bounded related-work scope only) ---
+- id: LAT-1
+  locus: docs/related-work/LATENT-STATE-INFERENCE-AND-ORTHEMOLOGY.md; docs/decisions/0015-latent-state-observation-and-representation-boundary.md; manuscript section 12.1
+  claim_level: related-work report about a published study's reported findings
+  claim: >-
+    a published sequential-learning study reports that several compared models can reach the
+    endpoint while only one compared model matched the reported longitudinal trajectory, and that
+    high task performance can occur without the global representation geometry the study measured
+  source: >-
+    Sun, Weinan et al., "Learning produces an orthogonalized state machine in the hippocampus",
+    Nature 640(8057):165-175, 2025
+  source_type: secondary scholarship (primary research article in another field)
+  doi: 10.1038/s41586-024-08548-w
+  locus_exact: article as published (open access, CC BY 4.0; PMC11964937)
+  status: SECONDARY_VERIFIED
+  verification_date: 2026-07-20
+  wording_directly_checked: false
+  page_edition_dependent: false
+  school_flag: none (systems neuroscience)
+  support: >-
+    supports ONLY the bounded abstract claim that endpoint performance and endpoint representation
+    do not by themselves determine the learning trajectory or mechanism. Does not identify latent
+    states with orthemes; does not validate orthemology; supplies no etymological support for
+    "ortheme"; bears nothing on fitrah, metaphysical orthability, Necessary Being, or divine Speech
+  notes: >-
+    Bibliographic record officially verified via Crossref in the R4 pass. The R4 independent review
+    did NOT re-open or reproduce the underlying experimental procedures - out of scope by the
+    controlling instruction; the repository claim is a bounded report of the source's own reported
+    findings, and the trajectory-match claim is scoped AMONG THE COMPARED MODELS UNDER THE REPORTED
+    EVALUATION, never universally.
+- id: LAT-2
+  locus: docs/related-work/LATENT-STATE-INFERENCE-AND-ORTHEMOLOGY.md; docs/decisions/0015-latent-state-observation-and-representation-boundary.md
+  claim_level: related-work report of a modeling mechanism
+  claim: the clone-structured hidden-state mechanism exists in the published modeling literature
+  source: >-
+    George, Dileep et al., "Clone-structured graph representations enable flexible learning and
+    vicarious evaluation of cognitive maps", Nature Communications 12:2392, 2021
+  source_type: secondary scholarship (primary research article in another field)
+  doi: 10.1038/s41467-021-22559-5
+  locus_exact: article as published (open access)
+  status: SECONDARY_VERIFIED
+  verification_date: 2026-07-20
+  wording_directly_checked: false
+  page_edition_dependent: false
+  school_flag: none (computational modeling)
+  support: supports only the existence and character of the modeling mechanism cited as related work
+  notes: >-
+    Expands CSCG as clone-structured COGNITIVE graph; the 2024/2025 literature uses clone-structured
+    CAUSAL graph. Rajeev V. Rikhye (this entry) is a DIFFERENT person from Rajkumar Vasudeva Raju
+    (first author of LAT-3); see the Decision 0015 section 8 correction.
+- id: LAT-3
+  locus: docs/related-work/LATENT-STATE-INFERENCE-AND-ORTHEMOLOGY.md; docs/decisions/0015-latent-state-observation-and-representation-boundary.md
+  claim_level: related-work report of a theoretical framing
+  claim: the latent-sequence framing of spatial representation exists in the published literature
+  source: >-
+    Vasudeva Raju, Rajkumar et al., "Space is a latent sequence: A theory of the hippocampus",
+    Science Advances 10(31):eadm8470, 2024
+  source_type: secondary scholarship (primary research article in another field)
+  doi: 10.1126/sciadv.adm8470
+  locus_exact: article as published (open access)
+  status: SECONDARY_VERIFIED
+  verification_date: 2026-07-20
+  wording_directly_checked: false
+  page_edition_dependent: false
+  school_flag: none (computational modeling)
+  support: supports only the existence of the latent-sequence framing cited as related work
+  notes: >-
+    FIRST-AUTHOR CORRECTION carried from Decision 0015 section 8: the controlling owner amendment
+    gave "Rajeev V. Raju", which is wrong - a conflation with Rajeev V. Rikhye of LAT-2. The
+    verified first author is Rajkumar Vasudeva Raju. The erroneous form must not be reintroduced.
+
+# --- project's own extensions (no external source claimed) ---
+- id: EXT-1
+  locus: theory/orthemic-core-formalization.md; manuscript
+  claim_level: formal extension
+  claim: the orthemic architecture itself (occurrence/type/profile/episode/verdict layers)
+  source: this project
+  source_type: original formal work
+  doi: null
+  locus_exact: n/a
+  status: ORTHEMOLOGICAL_EXTENSION
+  verification_date: 2026-07-20
+  wording_directly_checked: false
+  page_edition_dependent: false
+  school_flag: none
+  support: no external source is claimed for the framework itself
+  notes: Related-work neighbours are cited separately with their own statuses.

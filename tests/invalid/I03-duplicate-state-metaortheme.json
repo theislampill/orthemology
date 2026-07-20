@@ -1,0 +1,28 @@
+{
+  "id": "I03-duplicate-state-metaortheme",
+  "why": "a metaortheme whose declared state set repeats a member: S_mu is a SET, and a repeated member silently changes what 'exhaustive' and 'exclusive' mean",
+  "expect_layer": "schema",
+  "schema": "metaortheme.schema.json",
+  "instance": {
+    "mu_id": "mu-1",
+    "version": "1",
+    "governed_component": "E",
+    "states": {
+      "members": [
+        "s1",
+        "s1"
+      ]
+    },
+    "exclusivity": "exclusive",
+    "selector": {
+      "kind": "instrument-reading",
+      "description": "read the instrument"
+    },
+    "meta_policy": "act on the obtaining state",
+    "provenance": {
+      "authority": "auth",
+      "warrant": "w",
+      "scope": "sc"
+    }
+  }
+}

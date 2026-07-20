@@ -1,0 +1,48 @@
+# Claim-relative reasoning requirement rules (R4 independent review; Decision 0011).
+#
+# The machine-readable instance of RequiredReasonBy(A, governance, claim-type,
+# evidence-kind, token-dependencies, risk-class) that this repository ships.
+# ReqReason_q(e) is DERIVED from this table and the claim's declared shape —
+# never chosen after the outcome — and is constrained to a subset of ReqPath(e).
+# A recorded projection that omits a derivable requirement is an OMISSION ATTACK
+# and must be flagged (scripts/validate_claim_reasoning_paths.py; fixture CR-OMIT-1).
+#
+# HONEST STATUS (same posture as docs/governance-requirements.yaml):
+# RequiredReasonBy is, in general, a GOVERNANCE-SUPPLIED PARAMETERIZED INTERFACE.
+# The theory does not claim a closed universal calculus for every conceivable
+# governance regime and claim typology. What is closed here is this table: a
+# complete, typed, deterministic derivation for the claim shapes it declares,
+# with a machine-checkable per-verdict trace. A governance regime supplying
+# different rules replaces this file, not the code.
+schema: orthemology-claim-reason-requirements-v1
+claim_shape:
+  # typed input contract for one claim q
+  claim_type: "placement | routing | closure — what the claim itself asserts"
+  evidence_kind: "direct | derived | testimonial — informational unless a rule names it"
+  depends_on_tokens: "boolean: the claim declares metaorthemma token dependencies"
+  robustness_obligation: "boolean: A(e) or the claim's risk class predeclares a robustness obligation for this claim"
+  risk_class: "declared risk class (string; informational unless a rule names it)"
+  currency_exempt: "boolean, default false: the claim is about a fixed record (authenticity/provenance) whose truth does not depend on evidence currency"
+rules:
+  # verdict -> requirement condition over the claim shape.
+  #   always            = required for every claim
+  #   <boolean field>   = required when that claim-shape field is true
+  #   claim_type=X      = required exactly when the claim is itself of type X
+  EVIDENCE_SUPPORT: {when: always, rationale: "a claim's evidential grounding is always claim-relevant"}
+  PROCEDURE_RELIABLE: {when: always, rationale: "the configured procedure that produced the claim is always claim-relevant (O2)"}
+  EVIDENCE_CURRENT: {when: not_currency_exempt, rationale: "currency of the claim's evidence is claim-relevant unless the claim is currency-exempt (e.g. an authenticity/provenance claim about a fixed historical record, declared via currency_exempt: true)"}
+  GOV_CONFIG_ADEQUATE: {when: always, rationale: "the governing configuration under which the claim was placed is always claim-relevant"}
+  GOV_POLICY_ADEQUATE: {when: always, rationale: "the conduct policy governing the placement is always claim-relevant"}
+  GOV_TOKEN_ADEQUATE: {when: depends_on_tokens, rationale: "token adequacy is claim-relevant exactly when the claim declares token dependencies (M1 zero-burden rule, claim-wise)"}
+  EXECUTION_FAITHFUL: {when: always, rationale: "faithful execution of the claim-producing procedure is always claim-relevant"}
+  EX_ANTE_JUSTIFIED: {when: always, rationale: "decision-time justification of the placement is always claim-relevant"}
+  ROUTE_ADMISSIBLE: {when: claim_type=routing, rationale: "downstream route admissibility is claim-relevant only when the claim IS a routing claim (Decision 0011: unrelated later routing cannot unsound a placement claim)"}
+  CLOSURE_TRUTHFUL: {when: claim_type=closure, rationale: "closure truthfulness is claim-relevant only when the claim IS a closure claim (Decision 0011: an unrelated false closure cannot unsound a placement claim)"}
+  ROBUST_NEIGHBORHOOD: {when: robustness_obligation, rationale: "robustness binds a claim only under a predeclared obligation for that claim"}
+constraints:
+  - "ReqReason_q(e) is intersected with ReqPath(e): a verdict the episode does not owe at all cannot be owed claim-wise"
+  - "the projection is derived from the claim's declared shape before outcome inspection; the derivation trace records an inclusion or exclusion reason for every CorePath verdict"
+  - "result-side verdicts (RESULT_CORRECT, TOKEN_TRUTH_LINKED) are never reasoning-path requirements (O2), claim-wise exactly as episode-wise"
+notes:
+  - "StrictlySoundReasoning_q(e) := ReasoningPathAdequate_q(e) AND TOKEN_TRUTH_LINKED_q(e) — Decision 0011, the sole current normative formula; Decision 0009's whole-episode formula is superseded by dated notice."
+  - "Conflicting rules are a governance-configuration defect: the single-table conjunction-free form prevents two rules disagreeing about one verdict."

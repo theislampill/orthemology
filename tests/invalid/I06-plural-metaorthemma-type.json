@@ -1,0 +1,43 @@
+{
+  "id": "I06-plural-metaorthemma-type",
+  "why": "a metaorthemma carrying two of_type entries. Single-typing is the R4 rule; many-to-many MetaInst is an unimplemented future extension, and a record that assumes it must not validate against the shipped model",
+  "expect_layer": "schema",
+  "schema": "metaorthemma.schema.json",
+  "instance": {
+    "token_id": "tok-1",
+    "of_type": [
+      {
+        "mu_id": "mu-1",
+        "mu_version": "1"
+      },
+      {
+        "mu_id": "mu-2",
+        "mu_version": "1"
+      }
+    ],
+    "analysis": {
+      "analysis_id": "AN-1",
+      "version": "1"
+    },
+    "anchor": {
+      "identity_key": "k",
+      "version": "1"
+    },
+    "governed_component": "E",
+    "binding": {
+      "datum": "d"
+    },
+    "scope": {
+      "no_claim_dependency_reason": "no ledger accompanies this fixture"
+    },
+    "binder": {
+      "actor": "binder-1",
+      "binding_warrant": "w",
+      "binding_time": "2026-07-01"
+    },
+    "validity": {
+      "effective_from": "2026-07-01"
+    },
+    "no_separate_executor_reason": "no executor is designated separately from the binder in this fixture"
+  }
+}

@@ -1,0 +1,37 @@
+# Decision status and supersession registry (R4 independent review; Decision 0011 amendment).
+#
+# Purpose: make it impossible for two CURRENT decisions to define the same
+# normative symbol incompatibly without failing CI. A later decision that
+# restates a superseded formula, or supersedes an earlier clause without a
+# dated notice at the superseded site, is caught by
+# scripts/validate_decision_dependencies.py.
+schema: orthemology-decision-status-v1
+decisions:
+  "0001": {status: adopted, title: analysis-relative ground truth}
+  "0002": {status: adopted, title: metaorthemma configuration token}
+  "0003": {status: adopted, title: result-free pathway adequacy}
+  "0004": {status: adopted, title: verdict registry normalization}
+  "0005": {status: adopted, title: symbol table normalization}
+  "0006": {status: adopted, title: compaction stale-steer placement}
+  "0007": {status: adopted, title: profile space definition}
+  "0008": {status: adopted, title: thesis C disposition}
+  "0009": {status: adopted-with-superseded-clause, title: type/token soundness and concrete reason,
+           superseded_clause: strict-soundness formula, superseded_by: "0011"}
+  "0010": {status: adopted, title: orthability sense and argument boundary}
+  "0011": {status: adopted, title: claim-relative reasoning path and strict soundness}
+  "0012": {status: adopted, title: reference-model semantic contract}
+  "0013": {status: adopted, title: source attribution and status normalization}
+  "0014": {status: adopted, title: generated project state and whole-state reread}
+  "0015": {status: adopted, title: latent-state observation and representation boundary}
+normative_symbols:
+  StrictlySoundReasoning_q:
+    current:
+      decision: "0011"
+      formula: "ReasoningPathAdequate_q(e) ∧ TOKEN_TRUTH_LINKED_q(e)"
+    superseded:
+      - decision: "0009"
+        formula: "PathwayAdequate(e) ∧ TOKEN_TRUTH_LINKED_q(e)"
+        notice_must_reference: "0011"
+notes:
+  - "The superseding decision itself may quote a superseded formula (e.g. in its Problem section)."
+  - "Historical reports under docs/project-closure/ and archive/ may contain superseded formulas; current normative surfaces (theory/, manuscript/, companion/, docs/ outside those trees) may not."

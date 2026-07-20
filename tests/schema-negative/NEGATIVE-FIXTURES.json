@@ -1,6 +1,6 @@
 {
   "schema": "orthemology-negative-fixtures-v1",
-  "note": "Malformed records that MUST be rejected. expect_layer: 'schema' = the hardened JSON Schema itself rejects it; 'semantic' = it is schema-valid by design and must be rejected by validate_cross_record_semantics. From the R3 read-only audit's adversarial baseline (all seven classes were ACCEPTED by the R2 schemas).",
+  "note": "Malformed records that MUST be rejected. expect_layer: 'schema' = the hardened JSON Schema itself rejects it; 'semantic' = it is schema-valid by design and must be rejected by validate_cross_record_semantics. From the R3 read-only audit's adversarial baseline (all seven classes were ACCEPTED by the R2 schemas). R4: the semantic fixtures carry the fields the hardened schemas now require, so that each remains schema-valid BY DESIGN and its rejection is still demonstrably the cross-record layer's work.",
   "fixtures": [
     {
       "id": "N1-empty-binding",
@@ -64,7 +64,14 @@
         "statuses": {
           "EVIDENCE_SUPPORT": "fail"
         },
-        "pathway_state": "adequate"
+        "pathway_state": "adequate",
+        "index": {
+          "analysis_id": "AN-1",
+          "analysis_version": "1",
+          "actor": "reviewer",
+          "decision_time": "2026-07-01T00:00:00Z",
+          "information_state": "the fixture's declared statuses as recorded"
+        }
       }
     },
     {
@@ -132,16 +139,20 @@
               "x": 1
             },
             "scope": {
-              "claims": []
+              "no_claim_dependency_reason": "this fixture registers no claim ledger"
             },
             "binder": {
               "actor": "x",
               "binding_warrant": "w",
               "binding_time": "t"
             },
-            "validity": {}
+            "validity": {
+              "effective_from": "2026-07-01"
+            },
+            "no_separate_executor_reason": "no executor is designated separately from the binder in this fixture; the binder role remains independently recorded"
           }
-        ]
+        ],
+        "record_mode": "minimal"
       }
     },
     {
@@ -186,7 +197,8 @@
         "placement": {
           "axis": "v"
         },
-        "verdict_record_ref": null
+        "verdict_record_ref": null,
+        "record_mode": "minimal"
       }
     },
     {
@@ -220,7 +232,14 @@
           "EVIDENCE_SUPPORT": "pass",
           "GOV_TOKEN_ADEQUATE": "not-applicable"
         },
-        "pathway_state": "adequate"
+        "pathway_state": "adequate",
+        "index": {
+          "analysis_id": "AN-1",
+          "analysis_version": "1",
+          "actor": "reviewer",
+          "decision_time": "2026-07-01T00:00:00Z",
+          "information_state": "the fixture's declared statuses as recorded"
+        }
       }
     },
     {
@@ -230,8 +249,12 @@
       "schema": "verdict-record.schema.json",
       "instance": {
         "episode_id": "e1",
-        "required_path": [],
-        "statuses": {},
+        "required_path": [
+          "EVIDENCE_SUPPORT"
+        ],
+        "statuses": {
+          "EVIDENCE_SUPPORT": "pass"
+        },
         "pathway_state": "adequate",
         "per_token_v3c": [
           {
@@ -239,7 +262,14 @@
             "status": "fail",
             "failing_conjunct": "Current"
           }
-        ]
+        ],
+        "index": {
+          "analysis_id": "AN-1",
+          "analysis_version": "1",
+          "actor": "reviewer",
+          "decision_time": "2026-07-01T00:00:00Z",
+          "information_state": "the fixture's declared statuses as recorded"
+        }
       }
     },
     {
@@ -263,7 +293,26 @@
       "schema": "claim-ledger.schema.json",
       "instance": {
         "episode_id": "ep-migration-close-9",
-        "claims": [],
+        "claims": [
+          {
+            "claim_id": "q-migrated",
+            "proposition": "all rows live in the new store and consumers read from it",
+            "target": {
+              "identity_key": "svc-orders-store",
+              "version": "v2"
+            },
+            "analysis": {
+              "analysis_id": "store-migration",
+              "version": "1.0"
+            },
+            "property_class": "behavioral",
+            "success_surface": "read-path metrics on the new store",
+            "evidence_ids": [
+              "ev-cutover-metrics-1"
+            ],
+            "verification_status": "validated"
+          }
+        ],
         "residuals": [
           {
             "burden_id": "B1-migrate-store",
@@ -271,7 +320,10 @@
             "disposition": "validated-resolved",
             "owner": null,
             "trigger": null,
-            "risk_record": null
+            "risk_record": null,
+            "evidence_refs": [
+              "ev-cutover-metrics-1"
+            ]
           },
           {
             "burden_id": "B2-rollback-rehearsal",
@@ -279,7 +331,9 @@
             "disposition": "unresolved",
             "owner": null,
             "trigger": null,
-            "risk_record": null
+            "risk_record": null,
+            "responsible_queue": "platform-reliability backlog",
+            "next_review_condition": "at the next release-readiness review"
           }
         ],
         "closure_claim": {

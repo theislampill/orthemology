@@ -2,31 +2,72 @@
   "$schema": "https://json-schema.org/draft/2020-12/schema",
   "$id": "orthemology/verdict-record.schema.json",
   "title": "Episode verdict record (Decisions 0003 + 0004)",
-  "description": "Statuses keyed by SEMANTIC ID from docs/verdict-registry.yaml (display aliases are prose-only). Four-valued statuses; ReqPath is governance-derived; every excluded verdict carries a reason; pathway aggregation is conjunction over ReqPath.",
+  "description": "Statuses keyed by SEMANTIC ID from docs/verdict-registry.yaml (display aliases are prose-only). Four-valued statuses; ReqPath is governance-derived; every excluded verdict carries a reason; pathway aggregation is conjunction over ReqPath. R4 OBJECTIVITY-INDEXING REPAIR (B3): pathway adequacy is objective GIVEN a full index, so the index block is required — analysis, analysis version, evaluating actor, decision time and information state. R4 CLAIM-RELATIVE REASONING (B2): claim_reasoning_paths records per-claim reasoning adequacy over that claim's ReqReason projection, distinctly from the episode-level pathway_state; the two are NOT interchangeable and collapsing one into the other is rejected by the cross-record layer.",
   "type": "object",
   "required": [
     "episode_id",
+    "index",
     "required_path",
     "statuses",
     "pathway_state"
   ],
   "properties": {
     "episode_id": {
-      "type": "string"
+      "type": "string",
+      "minLength": 1
+    },
+    "index": {
+      "type": "object",
+      "description": "the full index relative to which this verdict is objective. Dropping any component makes 'objective' an overstatement (R4 finding B3).",
+      "required": [
+        "analysis_id",
+        "analysis_version",
+        "actor",
+        "decision_time",
+        "information_state"
+      ],
+      "properties": {
+        "analysis_id": {
+          "type": "string",
+          "minLength": 1
+        },
+        "analysis_version": {
+          "type": "string",
+          "minLength": 1
+        },
+        "actor": {
+          "type": "string",
+          "minLength": 1,
+          "description": "the evaluating actor whose EX_ANTE_JUSTIFIED index this is"
+        },
+        "decision_time": {
+          "type": "string",
+          "minLength": 1,
+          "description": "the decision time the ex-ante judgement is indexed to"
+        },
+        "information_state": {
+          "type": "string",
+          "minLength": 1,
+          "description": "the information state available at decision_time"
+        }
+      },
+      "additionalProperties": false
     },
     "required_path": {
       "type": "array",
       "items": {
         "$ref": "#/$defs/verdict_id"
       },
-      "description": "ReqPath(e) = CorePath ∩ RequiredBy(A, shape, risk, claims, governance)",
-      "uniqueItems": true
+      "description": "ReqPath(e) = CorePath intersect RequiredBy(A, shape, risk, claims, governance)",
+      "uniqueItems": true,
+      "minItems": 1
     },
     "statuses": {
       "type": "object",
       "propertyNames": {
         "$ref": "#/$defs/verdict_id"
       },
+      "minProperties": 1,
       "additionalProperties": {
         "enum": [
           "pass",
@@ -38,7 +79,7 @@
     },
     "na_reasons": {
       "type": "object",
-      "description": "REQUIRED for every not-applicable status ('not tested' is never 'not applicable')",
+      "description": "REQUIRED for EVERY not-applicable status anywhere in the record, not only on the required path ('not tested' is never 'not applicable'). Enforced by the cross-record layer, which JSON Schema cannot express over dynamic keys.",
       "propertyNames": {
         "$ref": "#/$defs/verdict_id"
       },
@@ -49,6 +90,7 @@
     },
     "claim_verdicts": {
       "type": "array",
+      "uniqueItems": true,
       "description": "claim-wise result-side records; TOKEN_TRUTH_LINKED pass entails RESULT_CORRECT pass per claim",
       "items": {
         "type": "object",
@@ -58,7 +100,8 @@
         ],
         "properties": {
           "claim_id": {
-            "type": "string"
+            "type": "string",
+            "minLength": 1
           },
           "result_correct": {
             "enum": [
@@ -101,8 +144,44 @@
         ]
       }
     },
+    "claim_reasoning_paths": {
+      "type": "array",
+      "uniqueItems": true,
+      "description": "claim-relative reasoning paths (B2). ReqReason_q(e) is the projection of ReqPath onto the verdicts that bear on claim q; reasoning_path_adequate is the conjunction over THAT projection only. A downstream routing or closure failure must not flip a soundly reached claim.",
+      "items": {
+        "type": "object",
+        "required": [
+          "claim_id",
+          "req_reason",
+          "reasoning_path_adequate"
+        ],
+        "properties": {
+          "claim_id": {
+            "type": "string",
+            "minLength": 1
+          },
+          "req_reason": {
+            "type": "array",
+            "minItems": 1,
+            "uniqueItems": true,
+            "items": {
+              "$ref": "#/$defs/verdict_id"
+            }
+          },
+          "reasoning_path_adequate": {
+            "enum": [
+              "adequate",
+              "defective",
+              "undetermined"
+            ]
+          }
+        },
+        "additionalProperties": false
+      }
+    },
     "per_token_v3c": {
       "type": "array",
+      "uniqueItems": true,
       "description": "per-token GOV_TOKEN_ADEQUATE statuses preserved alongside the conjunction",
       "items": {
         "type": "object",
@@ -112,7 +191,8 @@
         ],
         "properties": {
           "token_id": {
-            "type": "string"
+            "type": "string",
+            "minLength": 1
           },
           "status": {
             "enum": [
@@ -146,16 +226,24 @@
     },
     "rel_spec": {
       "type": "object",
-      "description": "RelSpec per claim for PROCEDURE_RELIABLE",
+      "description": "RelSpec per claim for PROCEDURE_RELIABLE. Typed extension map: keys are claim ids, values are full reliability specifications. R4: a free-form string no longer stands in for a RelSpec.",
+      "propertyNames": {
+        "minLength": 1
+      },
+      "minProperties": 1,
       "additionalProperties": {
-        "type": "string"
+        "$ref": "reliability-spec.schema.json"
       }
     },
     "perturb_spec": {
       "type": "object",
-      "description": "PerturbSpec for ROBUST_NEIGHBORHOOD (varied/invariant fields, generator, size or measure, tolerance)",
+      "description": "PerturbSpec per claim for ROBUST_NEIGHBORHOOD. Typed extension map: keys are claim ids, values are full perturbation specifications. R4: a free-form string no longer stands in for a PerturbSpec.",
+      "propertyNames": {
+        "minLength": 1
+      },
+      "minProperties": 1,
       "additionalProperties": {
-        "type": "string"
+        "$ref": "perturbation-spec.schema.json"
       }
     }
   },
