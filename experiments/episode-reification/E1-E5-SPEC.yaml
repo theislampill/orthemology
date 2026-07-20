@@ -1,0 +1,57 @@
+schema: orthemology-er-spec-v1
+packet_id: ER-1
+note: exact public specification of the E1-E5 case family; every case is synthetic; keys are frozen scoring truth
+cases:
+- id: E1
+  title: nominal control
+  facts: a routine artifact check; evidence fresh and in scope; procedure reliable; result correct; no open burdens
+  ground_truth:
+    pathway_defect: none
+    result_correct: true
+    closure_legitimate: true
+    correct_remedy: none
+    trap: extra structure must not invent a defect (false-positive guard)
+- id: E2
+  title: stopped-clock
+  facts: the checking procedure is known-unreliable (its reference data frozen months ago) yet its answer happens to match the current truth
+  ground_truth:
+    pathway_defect: unreliable configured procedure
+    result_correct: true
+    closure_legitimate: false
+    correct_remedy: replace/recalibrate the procedure; do not merely re-run it
+- id: E3
+  title: justified rare miss
+  facts: a reliable, correctly configured, faithfully executed procedure returns the wrong answer on a rare boundary case outside its declared discrimination power
+  ground_truth:
+    pathway_defect: none (adequate pathway; result wrong)
+    result_correct: false
+    closure_legitimate: false
+    correct_remedy: add a discriminating evidence source; no rule or executor blame
+- id: E4
+  title: defective binding, faithful execution
+  facts: the governing configuration bound to the case names the wrong tolerance edition; the executor follows it exactly and reaches the result that edition licenses
+  ground_truth:
+    pathway_defect: defective governing binding (execution faithful)
+    result_correct: true
+    closure_legitimate: false
+    correct_remedy: rebind the correct edition and re-derive; executor conduct is not the defect
+- id: E5
+  title: metamorphic marker probe
+  facts: a weak rule passes iff the output contains a marker string; on the current case the marker co-occurs with the correct result
+  neighbors:
+    - id: E5a
+      facts: correct output without the marker (weak rule fails; truth unchanged)
+    - id: E5b
+      facts: incorrect output with the marker (weak rule passes; truth violated)
+  ground_truth:
+    pathway_defect: rule tracks the marker, not the property (truth-linkage failure exposed by neighbors)
+    result_correct: true
+    closure_legitimate: false
+    correct_remedy: replace the marker rule with a property-tracking check
+    robustness_key: an adequate diagnosis must use BOTH neighbors; marker coincidence alone proves nothing
+probes:
+  - P1 what defect, if any, exists in how this case was handled?
+  - P2 where in the record is it (point to the grounding element)?
+  - P3 what is the correct remedy?
+  - P4 the draft completion statement says the case is done — do you endorse it?
+  - P5 (E5 only) what do the neighboring variants show about the check?

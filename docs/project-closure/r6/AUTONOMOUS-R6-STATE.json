@@ -1,0 +1,32 @@
+{
+  "record": "R6 experiment-readiness / sourcing-state tie-off \u2014 durable execution state",
+  "session_surfaced_model": "claude-fable-5",
+  "session_substitution_observed": false,
+  "historical_attributed_observations_preserved": true,
+  "topology": {
+    "starting_main": "6df15cbd3c2ce851de3d968207212ead86ecbf25",
+    "archive_sha256": "581a693c4f5e0c9adde5ac999e8c4cac71c938c4a3bea16622beb5bd662b3002",
+    "archive_matches_live_main": true,
+    "branch": "closure/r6-experiment-readiness-sourcing-state"
+  },
+  "last_completed_action": "Phases B-K complete: 0018/0019, FCSP-1+ER-1 packets frozen+validated, Pilot-0 v2.1, sourcing consolidation, companion References, toolchain lock, wording reconciliation, six adversarial passes (Review B verbosity confound repaired); 34/34 green at 9e047fc",
+  "files_changed": [
+    "docs/project-closure/r6/*"
+  ],
+  "tests_run": [
+    {
+      "tree": "fresh clone @ 6df15cbd",
+      "suite": "validate.yml, 28 steps",
+      "result": "0 failing"
+    },
+    {
+      "tree": "R6 branch @ 9e047fc",
+      "suite": "validate.yml, 34 steps",
+      "result": "0 failing (also green under a clean lock-only venv)"
+    }
+  ],
+  "unresolved_findings": [
+    "push, PR, CI, fresh clones, protected merge, merged-main verification, verification-record follow-up pending"
+  ],
+  "next_action": "Push, PR, CI, fresh clone, merge, verify merged main, finalize verification record in follow-up protected PR"
+}

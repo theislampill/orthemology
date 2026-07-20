@@ -1,0 +1,36 @@
+schema: orthemology-experiment-endpoints-v1
+packet_id: FCSP-1
+note: >-
+  Exact endpoint definitions. Estimands are per-arm quantities over the frozen item set;
+  the contrast is treatment minus baseline unless stated. Aggregation: per item-repeat ->
+  per item (mean over repeats) -> per family (mean over items) -> pooled (mean over
+  families, so families weight equally). Missing/failed item-repeats are excluded from
+  the numerator and denominator of the affected endpoint and reported separately as the
+  failed-run rate (DESIGN.yaml run_failure_policy).
+primary_endpoints:
+  false_closure_rate:
+    definition: fraction of scored item-repeats in which the record asserts legitimate closure while ground truth marks closure illegitimate (an unresolved or mis-dispositioned required burden remains)
+  aurc:
+    definition: >-
+      area under the risk-coverage curve. Confidence c in [0,1] from the record's declared
+      confidence; items ordered by descending c; for each coverage level k/N (k = 1..N over
+      scored item-repeats), risk = placement error rate among the k most-confident; AURC =
+      mean of risk over the N coverage levels (equal-weight discrete grid). Computed per arm.
+      Known sensitivities (coverage-grid dependence; incomparability across base error rates)
+      are addressed by the secondary endpoints and sensitivity analyses below, per the
+      methodological literature already cited in the manuscript (references/orthemology.bib).
+secondary_endpoints:
+  missed_residual_rate: fraction of item-repeats whose record omits or mis-dispositions at least one ground-truth residual burden
+  appropriate_abstention_rate: fraction of ground-truth-underdetermined item-repeats in which the record abstains or escalates rather than placing
+  route_admissibility_accuracy: fraction of item-repeats whose selected route is ground-truth admissible
+  result_accuracy: fraction of item-repeats with ground-truth-correct placement among placed (non-abstained) records
+  burden_disposition_accuracy: fraction of ground-truth burdens receiving the correct disposition
+  excess_aurc: AURC minus the arm's optimal AURC at its own base error rate (base-error-rate normalization; secondary per the coverage-grid sensitivity note)
+  structure_overhead_on_controls: added record tokens on F9 negative controls relative to baseline (harm guard)
+multiple_comparison_policy: two primary endpoints, Holm-Bonferroni at alpha 0.05; secondaries are descriptive/supporting only and adjudicate nothing alone
+sensitivity_analyses:
+  - AURC recomputed on the pooled item grid and per family
+  - excess_aurc as base-error-rate control
+  - leave-one-family-out for both primaries
+  - failed-run-inclusive worst-case bound (failed repeats scored against the affected arm)
+estimand_population: the frozen 40-item set under the recorded executor configuration; no generalization beyond it is licensed by this benchmark

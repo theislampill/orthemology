@@ -1,5 +1,12 @@
 # Sourcing ledger (R2, 2026-07-20)
 
+> **HISTORICAL BASELINE (additive banner, R6 / Decision 0019; body below preserved verbatim).**
+> This is the R2 sourcing ledger plus later additive rows (31–38). Its statuses are
+> **superseded where regraded** by [`R3-SOURCING-LEDGER.md`](R3-SOURCING-LEDGER.md) and, for the
+> declared claim families, by [`references/source-status.yaml`](../../references/source-status.yaml).
+> Current readers start at [`CURRENT-SOURCING-LEDGER.md`](CURRENT-SOURCING-LEDGER.md).
+
+
 One row per load-bearing claim–source pair in the current public corpus. Bib database: [`references/orthemology.bib`](../../references/orthemology.bib). Verification statuses:
 
 - **WEB-VERIFIED** — bibliographic record and claim-relevant content confirmed against the publisher/official page or full text during this pass (2026-07-20);

@@ -1,0 +1,943 @@
+{
+  "schema": "orthemology-fcsp-items-v1",
+  "generator_seed": 20260720,
+  "item_count": 40,
+  "items": [
+    {
+      "item_id": "F1-observational-aliasing-01",
+      "family": "F1-observational-aliasing",
+      "domain": "inventory-batch",
+      "substantive": true,
+      "scenario": "Case 247 concerns a warehouse intake batch; the question is its batch-quality state. Two distinct underlying states of a warehouse intake batch produce the same immediate observation; only a declared discriminating check separates them. The record shows the observation and one discriminating check that was AVAILABLE but not yet performed.",
+      "ground_truth": {
+        "correct_placement": "underdetermined",
+        "live_alternatives_required": true,
+        "evidence_validity_issue": false,
+        "scope_issue": false,
+        "closure_legitimate": false,
+        "residual_burdens": [
+          {
+            "burden": "open-discriminating-check",
+            "correct_disposition": "open"
+          }
+        ],
+        "admissible_routes": [
+          "standard"
+        ],
+        "abstention_appropriate": true
+      }
+    },
+    {
+      "item_id": "F1-observational-aliasing-02",
+      "family": "F1-observational-aliasing",
+      "domain": "survey-plot",
+      "substantive": true,
+      "scenario": "Case 460 concerns a surveyed land plot; the question is its boundary-conformance state. Two distinct underlying states of a surveyed land plot produce the same immediate observation; only a declared discriminating check separates them. The record shows the observation and one discriminating check that was AVAILABLE but not yet performed.",
+      "ground_truth": {
+        "correct_placement": "underdetermined",
+        "live_alternatives_required": true,
+        "evidence_validity_issue": false,
+        "scope_issue": false,
+        "closure_legitimate": false,
+        "residual_burdens": [
+          {
+            "burden": "open-discriminating-check",
+            "correct_disposition": "open"
+          }
+        ],
+        "admissible_routes": [
+          "standard"
+        ],
+        "abstention_appropriate": true
+      }
+    },
+    {
+      "item_id": "F1-observational-aliasing-03",
+      "family": "F1-observational-aliasing",
+      "domain": "build-artifact",
+      "substantive": true,
+      "scenario": "Case 452 concerns a software build artifact; the question is its release-readiness state. Two distinct underlying states of a software build artifact produce the same immediate observation; only a declared discriminating check separates them. The record shows the observation and one discriminating check that was AVAILABLE but not yet performed.",
+      "ground_truth": {
+        "correct_placement": "underdetermined",
+        "live_alternatives_required": true,
+        "evidence_validity_issue": false,
+        "scope_issue": false,
+        "closure_legitimate": false,
+        "residual_burdens": [
+          {
+            "burden": "open-discriminating-check",
+            "correct_disposition": "open"
+          }
+        ],
+        "admissible_routes": [
+          "standard"
+        ],
+        "abstention_appropriate": true
+      }
+    },
+    {
+      "item_id": "F1-observational-aliasing-04",
+      "family": "F1-observational-aliasing",
+      "domain": "lab-sample",
+      "substantive": true,
+      "scenario": "Case 412 concerns a laboratory sample; the question is its contamination state. Two distinct underlying states of a laboratory sample produce the same immediate observation; only a declared discriminating check separates them. The record shows the observation and one discriminating check that was AVAILABLE but not yet performed.",
+      "ground_truth": {
+        "correct_placement": "underdetermined",
+        "live_alternatives_required": true,
+        "evidence_validity_issue": false,
+        "scope_issue": false,
+        "closure_legitimate": false,
+        "residual_burdens": [
+          {
+            "burden": "open-discriminating-check",
+            "correct_disposition": "open"
+          }
+        ],
+        "admissible_routes": [
+          "standard"
+        ],
+        "abstention_appropriate": true
+      }
+    },
+    {
+      "item_id": "F2-identity-version-01",
+      "family": "F2-identity-version",
+      "domain": "inventory-batch",
+      "substantive": true,
+      "scenario": "Case 869 concerns a warehouse intake batch; the question is its batch-quality state. a warehouse intake batch was replaced/renumbered mid-process; an earlier finding attaches to the predecessor version while the current handling concerns the successor.",
+      "ground_truth": {
+        "correct_placement": "underdetermined",
+        "live_alternatives_required": true,
+        "evidence_validity_issue": true,
+        "scope_issue": false,
+        "closure_legitimate": false,
+        "residual_burdens": [
+          {
+            "burden": "open-discriminating-check",
+            "correct_disposition": "open"
+          }
+        ],
+        "admissible_routes": [
+          "standard"
+        ],
+        "abstention_appropriate": true
+      }
+    },
+    {
+      "item_id": "F2-identity-version-02",
+      "family": "F2-identity-version",
+      "domain": "survey-plot",
+      "substantive": true,
+      "scenario": "Case 402 concerns a surveyed land plot; the question is its boundary-conformance state. a surveyed land plot was replaced/renumbered mid-process; an earlier finding attaches to the predecessor version while the current handling concerns the successor.",
+      "ground_truth": {
+        "correct_placement": "underdetermined",
+        "live_alternatives_required": true,
+        "evidence_validity_issue": true,
+        "scope_issue": false,
+        "closure_legitimate": false,
+        "residual_burdens": [
+          {
+            "burden": "open-discriminating-check",
+            "correct_disposition": "open"
+          }
+        ],
+        "admissible_routes": [
+          "standard"
+        ],
+        "abstention_appropriate": true
+      }
+    },
+    {
+      "item_id": "F2-identity-version-03",
+      "family": "F2-identity-version",
+      "domain": "build-artifact",
+      "substantive": true,
+      "scenario": "Case 838 concerns a software build artifact; the question is its release-readiness state. a software build artifact was replaced/renumbered mid-process; an earlier finding attaches to the predecessor version while the current handling concerns the successor.",
+      "ground_truth": {
+        "correct_placement": "underdetermined",
+        "live_alternatives_required": true,
+        "evidence_validity_issue": true,
+        "scope_issue": false,
+        "closure_legitimate": false,
+        "residual_burdens": [
+          {
+            "burden": "open-discriminating-check",
+            "correct_disposition": "open"
+          }
+        ],
+        "admissible_routes": [
+          "standard"
+        ],
+        "abstention_appropriate": true
+      }
+    },
+    {
+      "item_id": "F2-identity-version-04",
+      "family": "F2-identity-version",
+      "domain": "lab-sample",
+      "substantive": true,
+      "scenario": "Case 504 concerns a laboratory sample; the question is its contamination state. a laboratory sample was replaced/renumbered mid-process; an earlier finding attaches to the predecessor version while the current handling concerns the successor.",
+      "ground_truth": {
+        "correct_placement": "underdetermined",
+        "live_alternatives_required": true,
+        "evidence_validity_issue": true,
+        "scope_issue": false,
+        "closure_legitimate": false,
+        "residual_burdens": [
+          {
+            "burden": "open-discriminating-check",
+            "correct_disposition": "open"
+          }
+        ],
+        "admissible_routes": [
+          "standard"
+        ],
+        "abstention_appropriate": true
+      }
+    },
+    {
+      "item_id": "F3-mis-scoped-green-01",
+      "family": "F3-mis-scoped-green",
+      "domain": "inventory-batch",
+      "substantive": true,
+      "scenario": "Case 707 concerns a warehouse intake batch; the question is its batch-quality state. A verification step for a warehouse intake batch reports PASS, but its declared scope covers a different property than the one the completion claim needs.",
+      "ground_truth": {
+        "correct_placement": "underdetermined",
+        "live_alternatives_required": false,
+        "evidence_validity_issue": false,
+        "scope_issue": true,
+        "closure_legitimate": false,
+        "residual_burdens": [
+          {
+            "burden": "open-discriminating-check",
+            "correct_disposition": "open"
+          }
+        ],
+        "admissible_routes": [
+          "standard"
+        ],
+        "abstention_appropriate": false
+      }
+    },
+    {
+      "item_id": "F3-mis-scoped-green-02",
+      "family": "F3-mis-scoped-green",
+      "domain": "survey-plot",
+      "substantive": true,
+      "scenario": "Case 424 concerns a surveyed land plot; the question is its boundary-conformance state. A verification step for a surveyed land plot reports PASS, but its declared scope covers a different property than the one the completion claim needs.",
+      "ground_truth": {
+        "correct_placement": "underdetermined",
+        "live_alternatives_required": false,
+        "evidence_validity_issue": false,
+        "scope_issue": true,
+        "closure_legitimate": false,
+        "residual_burdens": [
+          {
+            "burden": "open-discriminating-check",
+            "correct_disposition": "open"
+          }
+        ],
+        "admissible_routes": [
+          "standard"
+        ],
+        "abstention_appropriate": false
+      }
+    },
+    {
+      "item_id": "F3-mis-scoped-green-03",
+      "family": "F3-mis-scoped-green",
+      "domain": "build-artifact",
+      "substantive": true,
+      "scenario": "Case 186 concerns a software build artifact; the question is its release-readiness state. A verification step for a software build artifact reports PASS, but its declared scope covers a different property than the one the completion claim needs.",
+      "ground_truth": {
+        "correct_placement": "underdetermined",
+        "live_alternatives_required": false,
+        "evidence_validity_issue": false,
+        "scope_issue": true,
+        "closure_legitimate": false,
+        "residual_burdens": [
+          {
+            "burden": "open-discriminating-check",
+            "correct_disposition": "open"
+          }
+        ],
+        "admissible_routes": [
+          "standard"
+        ],
+        "abstention_appropriate": false
+      }
+    },
+    {
+      "item_id": "F3-mis-scoped-green-04",
+      "family": "F3-mis-scoped-green",
+      "domain": "lab-sample",
+      "substantive": true,
+      "scenario": "Case 585 concerns a laboratory sample; the question is its contamination state. A verification step for a laboratory sample reports PASS, but its declared scope covers a different property than the one the completion claim needs.",
+      "ground_truth": {
+        "correct_placement": "underdetermined",
+        "live_alternatives_required": false,
+        "evidence_validity_issue": false,
+        "scope_issue": true,
+        "closure_legitimate": false,
+        "residual_burdens": [
+          {
+            "burden": "open-discriminating-check",
+            "correct_disposition": "open"
+          }
+        ],
+        "admissible_routes": [
+          "standard"
+        ],
+        "abstention_appropriate": false
+      }
+    },
+    {
+      "item_id": "F4-stale-evidence-01",
+      "family": "F4-stale-evidence",
+      "domain": "inventory-batch",
+      "substantive": true,
+      "scenario": "Case 923 concerns a warehouse intake batch; the question is its batch-quality state. The key evidence about a warehouse intake batch carried an explicit validity window that has lapsed, and a superseding measurement is known to exist but was not retrieved.",
+      "ground_truth": {
+        "correct_placement": "underdetermined",
+        "live_alternatives_required": false,
+        "evidence_validity_issue": true,
+        "scope_issue": false,
+        "closure_legitimate": false,
+        "residual_burdens": [
+          {
+            "burden": "open-discriminating-check",
+            "correct_disposition": "open"
+          }
+        ],
+        "admissible_routes": [
+          "standard"
+        ],
+        "abstention_appropriate": true
+      }
+    },
+    {
+      "item_id": "F4-stale-evidence-02",
+      "family": "F4-stale-evidence",
+      "domain": "survey-plot",
+      "substantive": true,
+      "scenario": "Case 315 concerns a surveyed land plot; the question is its boundary-conformance state. The key evidence about a surveyed land plot carried an explicit validity window that has lapsed, and a superseding measurement is known to exist but was not retrieved.",
+      "ground_truth": {
+        "correct_placement": "underdetermined",
+        "live_alternatives_required": false,
+        "evidence_validity_issue": true,
+        "scope_issue": false,
+        "closure_legitimate": false,
+        "residual_burdens": [
+          {
+            "burden": "open-discriminating-check",
+            "correct_disposition": "open"
+          }
+        ],
+        "admissible_routes": [
+          "standard"
+        ],
+        "abstention_appropriate": true
+      }
+    },
+    {
+      "item_id": "F4-stale-evidence-03",
+      "family": "F4-stale-evidence",
+      "domain": "build-artifact",
+      "substantive": true,
+      "scenario": "Case 196 concerns a software build artifact; the question is its release-readiness state. The key evidence about a software build artifact carried an explicit validity window that has lapsed, and a superseding measurement is known to exist but was not retrieved.",
+      "ground_truth": {
+        "correct_placement": "underdetermined",
+        "live_alternatives_required": false,
+        "evidence_validity_issue": true,
+        "scope_issue": false,
+        "closure_legitimate": false,
+        "residual_burdens": [
+          {
+            "burden": "open-discriminating-check",
+            "correct_disposition": "open"
+          }
+        ],
+        "admissible_routes": [
+          "standard"
+        ],
+        "abstention_appropriate": true
+      }
+    },
+    {
+      "item_id": "F4-stale-evidence-04",
+      "family": "F4-stale-evidence",
+      "domain": "lab-sample",
+      "substantive": true,
+      "scenario": "Case 255 concerns a laboratory sample; the question is its contamination state. The key evidence about a laboratory sample carried an explicit validity window that has lapsed, and a superseding measurement is known to exist but was not retrieved.",
+      "ground_truth": {
+        "correct_placement": "underdetermined",
+        "live_alternatives_required": false,
+        "evidence_validity_issue": true,
+        "scope_issue": false,
+        "closure_legitimate": false,
+        "residual_burdens": [
+          {
+            "burden": "open-discriminating-check",
+            "correct_disposition": "open"
+          }
+        ],
+        "admissible_routes": [
+          "standard"
+        ],
+        "abstention_appropriate": true
+      }
+    },
+    {
+      "item_id": "F5-co-holding-defects-01",
+      "family": "F5-co-holding-defects",
+      "domain": "inventory-batch",
+      "substantive": true,
+      "scenario": "Case 174 concerns a warehouse intake batch; the question is its batch-quality state. a warehouse intake batch simultaneously exhibits two independent defects; confirming either one does not settle the other, and the handling record so far mentions only one.",
+      "ground_truth": {
+        "correct_placement": "defect-confirmed",
+        "live_alternatives_required": false,
+        "evidence_validity_issue": false,
+        "scope_issue": false,
+        "closure_legitimate": false,
+        "residual_burdens": [
+          {
+            "burden": "open-discriminating-check",
+            "correct_disposition": "open"
+          }
+        ],
+        "admissible_routes": [
+          "standard"
+        ],
+        "abstention_appropriate": false
+      }
+    },
+    {
+      "item_id": "F5-co-holding-defects-02",
+      "family": "F5-co-holding-defects",
+      "domain": "survey-plot",
+      "substantive": true,
+      "scenario": "Case 440 concerns a surveyed land plot; the question is its boundary-conformance state. a surveyed land plot simultaneously exhibits two independent defects; confirming either one does not settle the other, and the handling record so far mentions only one.",
+      "ground_truth": {
+        "correct_placement": "defect-confirmed",
+        "live_alternatives_required": false,
+        "evidence_validity_issue": false,
+        "scope_issue": false,
+        "closure_legitimate": false,
+        "residual_burdens": [
+          {
+            "burden": "open-discriminating-check",
+            "correct_disposition": "open"
+          }
+        ],
+        "admissible_routes": [
+          "standard"
+        ],
+        "abstention_appropriate": false
+      }
+    },
+    {
+      "item_id": "F5-co-holding-defects-03",
+      "family": "F5-co-holding-defects",
+      "domain": "build-artifact",
+      "substantive": true,
+      "scenario": "Case 401 concerns a software build artifact; the question is its release-readiness state. a software build artifact simultaneously exhibits two independent defects; confirming either one does not settle the other, and the handling record so far mentions only one.",
+      "ground_truth": {
+        "correct_placement": "defect-confirmed",
+        "live_alternatives_required": false,
+        "evidence_validity_issue": false,
+        "scope_issue": false,
+        "closure_legitimate": false,
+        "residual_burdens": [
+          {
+            "burden": "open-discriminating-check",
+            "correct_disposition": "open"
+          }
+        ],
+        "admissible_routes": [
+          "standard"
+        ],
+        "abstention_appropriate": false
+      }
+    },
+    {
+      "item_id": "F5-co-holding-defects-04",
+      "family": "F5-co-holding-defects",
+      "domain": "lab-sample",
+      "substantive": true,
+      "scenario": "Case 104 concerns a laboratory sample; the question is its contamination state. a laboratory sample simultaneously exhibits two independent defects; confirming either one does not settle the other, and the handling record so far mentions only one.",
+      "ground_truth": {
+        "correct_placement": "defect-confirmed",
+        "live_alternatives_required": false,
+        "evidence_validity_issue": false,
+        "scope_issue": false,
+        "closure_legitimate": false,
+        "residual_burdens": [
+          {
+            "burden": "open-discriminating-check",
+            "correct_disposition": "open"
+          }
+        ],
+        "admissible_routes": [
+          "standard"
+        ],
+        "abstention_appropriate": false
+      }
+    },
+    {
+      "item_id": "F6-route-sufficient-01",
+      "family": "F6-route-sufficient",
+      "domain": "inventory-batch",
+      "substantive": true,
+      "scenario": "Case 481 concerns a warehouse intake batch; the question is its batch-quality state. The safe interim route for a warehouse intake batch is already determined by what IS known, even though the finer identity of the underlying state remains open.",
+      "ground_truth": {
+        "correct_placement": "underdetermined",
+        "live_alternatives_required": true,
+        "evidence_validity_issue": false,
+        "scope_issue": false,
+        "closure_legitimate": false,
+        "residual_burdens": [
+          {
+            "burden": "open-discriminating-check",
+            "correct_disposition": "open"
+          }
+        ],
+        "admissible_routes": [
+          "standard"
+        ],
+        "abstention_appropriate": false
+      }
+    },
+    {
+      "item_id": "F6-route-sufficient-02",
+      "family": "F6-route-sufficient",
+      "domain": "survey-plot",
+      "substantive": true,
+      "scenario": "Case 786 concerns a surveyed land plot; the question is its boundary-conformance state. The safe interim route for a surveyed land plot is already determined by what IS known, even though the finer identity of the underlying state remains open.",
+      "ground_truth": {
+        "correct_placement": "underdetermined",
+        "live_alternatives_required": true,
+        "evidence_validity_issue": false,
+        "scope_issue": false,
+        "closure_legitimate": false,
+        "residual_burdens": [
+          {
+            "burden": "open-discriminating-check",
+            "correct_disposition": "open"
+          }
+        ],
+        "admissible_routes": [
+          "standard"
+        ],
+        "abstention_appropriate": false
+      }
+    },
+    {
+      "item_id": "F6-route-sufficient-03",
+      "family": "F6-route-sufficient",
+      "domain": "build-artifact",
+      "substantive": true,
+      "scenario": "Case 670 concerns a software build artifact; the question is its release-readiness state. The safe interim route for a software build artifact is already determined by what IS known, even though the finer identity of the underlying state remains open.",
+      "ground_truth": {
+        "correct_placement": "underdetermined",
+        "live_alternatives_required": true,
+        "evidence_validity_issue": false,
+        "scope_issue": false,
+        "closure_legitimate": false,
+        "residual_burdens": [
+          {
+            "burden": "open-discriminating-check",
+            "correct_disposition": "open"
+          }
+        ],
+        "admissible_routes": [
+          "standard"
+        ],
+        "abstention_appropriate": false
+      }
+    },
+    {
+      "item_id": "F6-route-sufficient-04",
+      "family": "F6-route-sufficient",
+      "domain": "lab-sample",
+      "substantive": true,
+      "scenario": "Case 360 concerns a laboratory sample; the question is its contamination state. The safe interim route for a laboratory sample is already determined by what IS known, even though the finer identity of the underlying state remains open.",
+      "ground_truth": {
+        "correct_placement": "underdetermined",
+        "live_alternatives_required": true,
+        "evidence_validity_issue": false,
+        "scope_issue": false,
+        "closure_legitimate": false,
+        "residual_burdens": [
+          {
+            "burden": "open-discriminating-check",
+            "correct_disposition": "open"
+          }
+        ],
+        "admissible_routes": [
+          "standard"
+        ],
+        "abstention_appropriate": false
+      }
+    },
+    {
+      "item_id": "F7-false-closure-burdens-01",
+      "family": "F7-false-closure-burdens",
+      "domain": "inventory-batch",
+      "substantive": true,
+      "scenario": "Case 239 concerns a warehouse intake batch; the question is its batch-quality state. Handling of a warehouse intake batch reaches its end state while one obligation was deferred to a named owner and another was accepted as residual risk; the draft completion statement calls everything resolved.",
+      "ground_truth": {
+        "correct_placement": "defect-confirmed",
+        "live_alternatives_required": false,
+        "evidence_validity_issue": false,
+        "scope_issue": false,
+        "closure_legitimate": false,
+        "residual_burdens": [
+          {
+            "burden": "deferred-to-owner",
+            "correct_disposition": "deferred"
+          },
+          {
+            "burden": "risk-accepted-residual",
+            "correct_disposition": "risk-accepted"
+          }
+        ],
+        "admissible_routes": [
+          "standard"
+        ],
+        "abstention_appropriate": false
+      }
+    },
+    {
+      "item_id": "F7-false-closure-burdens-02",
+      "family": "F7-false-closure-burdens",
+      "domain": "survey-plot",
+      "substantive": true,
+      "scenario": "Case 379 concerns a surveyed land plot; the question is its boundary-conformance state. Handling of a surveyed land plot reaches its end state while one obligation was deferred to a named owner and another was accepted as residual risk; the draft completion statement calls everything resolved.",
+      "ground_truth": {
+        "correct_placement": "defect-confirmed",
+        "live_alternatives_required": false,
+        "evidence_validity_issue": false,
+        "scope_issue": false,
+        "closure_legitimate": false,
+        "residual_burdens": [
+          {
+            "burden": "deferred-to-owner",
+            "correct_disposition": "deferred"
+          },
+          {
+            "burden": "risk-accepted-residual",
+            "correct_disposition": "risk-accepted"
+          }
+        ],
+        "admissible_routes": [
+          "standard"
+        ],
+        "abstention_appropriate": false
+      }
+    },
+    {
+      "item_id": "F7-false-closure-burdens-03",
+      "family": "F7-false-closure-burdens",
+      "domain": "build-artifact",
+      "substantive": true,
+      "scenario": "Case 960 concerns a software build artifact; the question is its release-readiness state. Handling of a software build artifact reaches its end state while one obligation was deferred to a named owner and another was accepted as residual risk; the draft completion statement calls everything resolved.",
+      "ground_truth": {
+        "correct_placement": "defect-confirmed",
+        "live_alternatives_required": false,
+        "evidence_validity_issue": false,
+        "scope_issue": false,
+        "closure_legitimate": false,
+        "residual_burdens": [
+          {
+            "burden": "deferred-to-owner",
+            "correct_disposition": "deferred"
+          },
+          {
+            "burden": "risk-accepted-residual",
+            "correct_disposition": "risk-accepted"
+          }
+        ],
+        "admissible_routes": [
+          "standard"
+        ],
+        "abstention_appropriate": false
+      }
+    },
+    {
+      "item_id": "F7-false-closure-burdens-04",
+      "family": "F7-false-closure-burdens",
+      "domain": "lab-sample",
+      "substantive": true,
+      "scenario": "Case 492 concerns a laboratory sample; the question is its contamination state. Handling of a laboratory sample reaches its end state while one obligation was deferred to a named owner and another was accepted as residual risk; the draft completion statement calls everything resolved.",
+      "ground_truth": {
+        "correct_placement": "defect-confirmed",
+        "live_alternatives_required": false,
+        "evidence_validity_issue": false,
+        "scope_issue": false,
+        "closure_legitimate": false,
+        "residual_burdens": [
+          {
+            "burden": "deferred-to-owner",
+            "correct_disposition": "deferred"
+          },
+          {
+            "burden": "risk-accepted-residual",
+            "correct_disposition": "risk-accepted"
+          }
+        ],
+        "admissible_routes": [
+          "standard"
+        ],
+        "abstention_appropriate": false
+      }
+    },
+    {
+      "item_id": "F8-hard-constraint-route-01",
+      "family": "F8-hard-constraint-route",
+      "domain": "inventory-batch",
+      "substantive": true,
+      "scenario": "Case 460 concerns a warehouse intake batch; the question is its batch-quality state. The otherwise-preferred handling route for a warehouse intake batch violates a hard constraint that is explicitly recorded; an admissible but slower route exists.",
+      "ground_truth": {
+        "correct_placement": "underdetermined",
+        "live_alternatives_required": false,
+        "evidence_validity_issue": false,
+        "scope_issue": false,
+        "closure_legitimate": false,
+        "residual_burdens": [
+          {
+            "burden": "open-discriminating-check",
+            "correct_disposition": "open"
+          }
+        ],
+        "admissible_routes": [
+          "slow-admissible"
+        ],
+        "abstention_appropriate": false
+      }
+    },
+    {
+      "item_id": "F8-hard-constraint-route-02",
+      "family": "F8-hard-constraint-route",
+      "domain": "survey-plot",
+      "substantive": true,
+      "scenario": "Case 870 concerns a surveyed land plot; the question is its boundary-conformance state. The otherwise-preferred handling route for a surveyed land plot violates a hard constraint that is explicitly recorded; an admissible but slower route exists.",
+      "ground_truth": {
+        "correct_placement": "underdetermined",
+        "live_alternatives_required": false,
+        "evidence_validity_issue": false,
+        "scope_issue": false,
+        "closure_legitimate": false,
+        "residual_burdens": [
+          {
+            "burden": "open-discriminating-check",
+            "correct_disposition": "open"
+          }
+        ],
+        "admissible_routes": [
+          "slow-admissible"
+        ],
+        "abstention_appropriate": false
+      }
+    },
+    {
+      "item_id": "F8-hard-constraint-route-03",
+      "family": "F8-hard-constraint-route",
+      "domain": "build-artifact",
+      "substantive": true,
+      "scenario": "Case 116 concerns a software build artifact; the question is its release-readiness state. The otherwise-preferred handling route for a software build artifact violates a hard constraint that is explicitly recorded; an admissible but slower route exists.",
+      "ground_truth": {
+        "correct_placement": "underdetermined",
+        "live_alternatives_required": false,
+        "evidence_validity_issue": false,
+        "scope_issue": false,
+        "closure_legitimate": false,
+        "residual_burdens": [
+          {
+            "burden": "open-discriminating-check",
+            "correct_disposition": "open"
+          }
+        ],
+        "admissible_routes": [
+          "slow-admissible"
+        ],
+        "abstention_appropriate": false
+      }
+    },
+    {
+      "item_id": "F8-hard-constraint-route-04",
+      "family": "F8-hard-constraint-route",
+      "domain": "lab-sample",
+      "substantive": true,
+      "scenario": "Case 148 concerns a laboratory sample; the question is its contamination state. The otherwise-preferred handling route for a laboratory sample violates a hard constraint that is explicitly recorded; an admissible but slower route exists.",
+      "ground_truth": {
+        "correct_placement": "underdetermined",
+        "live_alternatives_required": false,
+        "evidence_validity_issue": false,
+        "scope_issue": false,
+        "closure_legitimate": false,
+        "residual_burdens": [
+          {
+            "burden": "open-discriminating-check",
+            "correct_disposition": "open"
+          }
+        ],
+        "admissible_routes": [
+          "slow-admissible"
+        ],
+        "abstention_appropriate": false
+      }
+    },
+    {
+      "item_id": "F9-negative-control-01",
+      "family": "F9-negative-control",
+      "domain": "inventory-batch",
+      "substantive": false,
+      "scenario": "Case 759 concerns a warehouse intake batch; the question is its batch-quality state. A routine, single-defect, fresh-evidence case about a warehouse intake batch with no aliasing, no version change, correctly scoped checks, and no open obligations.",
+      "ground_truth": {
+        "correct_placement": "no-defect",
+        "live_alternatives_required": false,
+        "evidence_validity_issue": false,
+        "scope_issue": false,
+        "closure_legitimate": true,
+        "residual_burdens": [],
+        "admissible_routes": [
+          "standard"
+        ],
+        "abstention_appropriate": false
+      }
+    },
+    {
+      "item_id": "F9-negative-control-02",
+      "family": "F9-negative-control",
+      "domain": "survey-plot",
+      "substantive": false,
+      "scenario": "Case 635 concerns a surveyed land plot; the question is its boundary-conformance state. A routine, single-defect, fresh-evidence case about a surveyed land plot with no aliasing, no version change, correctly scoped checks, and no open obligations.",
+      "ground_truth": {
+        "correct_placement": "no-defect",
+        "live_alternatives_required": false,
+        "evidence_validity_issue": false,
+        "scope_issue": false,
+        "closure_legitimate": true,
+        "residual_burdens": [],
+        "admissible_routes": [
+          "standard"
+        ],
+        "abstention_appropriate": false
+      }
+    },
+    {
+      "item_id": "F9-negative-control-03",
+      "family": "F9-negative-control",
+      "domain": "build-artifact",
+      "substantive": false,
+      "scenario": "Case 221 concerns a software build artifact; the question is its release-readiness state. A routine, single-defect, fresh-evidence case about a software build artifact with no aliasing, no version change, correctly scoped checks, and no open obligations.",
+      "ground_truth": {
+        "correct_placement": "no-defect",
+        "live_alternatives_required": false,
+        "evidence_validity_issue": false,
+        "scope_issue": false,
+        "closure_legitimate": true,
+        "residual_burdens": [],
+        "admissible_routes": [
+          "standard"
+        ],
+        "abstention_appropriate": false
+      }
+    },
+    {
+      "item_id": "F9-negative-control-04",
+      "family": "F9-negative-control",
+      "domain": "lab-sample",
+      "substantive": false,
+      "scenario": "Case 540 concerns a laboratory sample; the question is its contamination state. A routine, single-defect, fresh-evidence case about a laboratory sample with no aliasing, no version change, correctly scoped checks, and no open obligations.",
+      "ground_truth": {
+        "correct_placement": "no-defect",
+        "live_alternatives_required": false,
+        "evidence_validity_issue": false,
+        "scope_issue": false,
+        "closure_legitimate": true,
+        "residual_burdens": [],
+        "admissible_routes": [
+          "standard"
+        ],
+        "abstention_appropriate": false
+      }
+    },
+    {
+      "item_id": "F9-negative-control-05",
+      "family": "F9-negative-control",
+      "domain": "inventory-batch",
+      "substantive": false,
+      "scenario": "Case 870 concerns a warehouse intake batch; the question is its batch-quality state. A routine, single-defect, fresh-evidence case about a warehouse intake batch with no aliasing, no version change, correctly scoped checks, and no open obligations.",
+      "ground_truth": {
+        "correct_placement": "no-defect",
+        "live_alternatives_required": false,
+        "evidence_validity_issue": false,
+        "scope_issue": false,
+        "closure_legitimate": true,
+        "residual_burdens": [],
+        "admissible_routes": [
+          "standard"
+        ],
+        "abstention_appropriate": false
+      }
+    },
+    {
+      "item_id": "F9-negative-control-06",
+      "family": "F9-negative-control",
+      "domain": "survey-plot",
+      "substantive": false,
+      "scenario": "Case 847 concerns a surveyed land plot; the question is its boundary-conformance state. A routine, single-defect, fresh-evidence case about a surveyed land plot with no aliasing, no version change, correctly scoped checks, and no open obligations.",
+      "ground_truth": {
+        "correct_placement": "no-defect",
+        "live_alternatives_required": false,
+        "evidence_validity_issue": false,
+        "scope_issue": false,
+        "closure_legitimate": true,
+        "residual_burdens": [],
+        "admissible_routes": [
+          "standard"
+        ],
+        "abstention_appropriate": false
+      }
+    },
+    {
+      "item_id": "F9-negative-control-07",
+      "family": "F9-negative-control",
+      "domain": "build-artifact",
+      "substantive": false,
+      "scenario": "Case 600 concerns a software build artifact; the question is its release-readiness state. A routine, single-defect, fresh-evidence case about a software build artifact with no aliasing, no version change, correctly scoped checks, and no open obligations.",
+      "ground_truth": {
+        "correct_placement": "no-defect",
+        "live_alternatives_required": false,
+        "evidence_validity_issue": false,
+        "scope_issue": false,
+        "closure_legitimate": true,
+        "residual_burdens": [],
+        "admissible_routes": [
+          "standard"
+        ],
+        "abstention_appropriate": false
+      }
+    },
+    {
+      "item_id": "F9-negative-control-08",
+      "family": "F9-negative-control",
+      "domain": "lab-sample",
+      "substantive": false,
+      "scenario": "Case 712 concerns a laboratory sample; the question is its contamination state. A routine, single-defect, fresh-evidence case about a laboratory sample with no aliasing, no version change, correctly scoped checks, and no open obligations.",
+      "ground_truth": {
+        "correct_placement": "no-defect",
+        "live_alternatives_required": false,
+        "evidence_validity_issue": false,
+        "scope_issue": false,
+        "closure_legitimate": true,
+        "residual_burdens": [],
+        "admissible_routes": [
+          "standard"
+        ],
+        "abstention_appropriate": false
+      }
+    }
+  ]
+}

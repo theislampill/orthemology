@@ -1,0 +1,10 @@
+schema: orthemology-er-facts-v1
+case: E1
+title: nominal control
+fact_keys:
+- identity
+- evidence
+- procedure
+- execution
+- result
+- closure

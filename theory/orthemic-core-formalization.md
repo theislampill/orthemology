@@ -7,7 +7,7 @@
 > [`docs/provenance/model-contributions.md`](../docs/provenance/model-contributions.md).
 > Nothing here is experimentally validated.
 
-**Status (revision R5, 2026-07-20; fresh-session repository review completed; not external human peer review; not empirically validated):** canonical formalization of the
+**Status (revision R6, 2026-07-20; fresh-session repository review completed; not external human peer review; not empirically validated):** canonical formalization of the
 orthing layer (episodes, metaorthemes, metaorthemmata, pathway adequacy),
 companion to the main manuscript's definitions. All claims are
 definitional/analytic unless marked empirical; nothing is experimentally

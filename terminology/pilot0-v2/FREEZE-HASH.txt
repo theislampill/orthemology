@@ -1,3 +1,5 @@
 Pilot 0 v2 packet freeze hash (sha256 over sorted relpath+content, excluding this file):
-a1edbd2c5e2f2df598b4a6d01a52229c455b3b68d043f10046053d0a3622a2a2
-Frozen: 2026-07-20 (R3). Any edit = new packet version. NOT RUN.
+e5e65b2f1b38d5767d79103c57afee76a02e09e9fec2fd150a3a680b0fe19c3d
+Frozen: 2026-07-20 (R6, packet version v2.1 — feasibility-only decision rule, numeric gates,
+v2-local flag-aware analysis, corrected v1 hash reference; v2.0 preserved in
+../pilot0-v2-history/). Any edit = new packet version. NOT RUN.

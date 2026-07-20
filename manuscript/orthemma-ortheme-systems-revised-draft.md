@@ -3,7 +3,7 @@
 > **Provenance.** Multi-model draft lineage with successive review passes; original headers preserved verbatim in
 > [`docs/provenance/document-history.md`](../docs/provenance/document-history.md); nothing here is experimentally validated.
 
-**Revised manuscript draft — July 2026 (revision R5; fresh-session repository review completed; not external human peer review; not empirically validated). Not peer reviewed.**
+**Revised manuscript draft — July 2026 (revision R6; fresh-session repository review completed; not external human peer review; not empirically validated). Not peer reviewed.**
 
 ## Abstract
 
@@ -19,7 +19,7 @@ result correctness from pathway adequacy and robustness on a single auditable re
 analysis/actor/time indexing; typed, scoped, expiring evidence channels; factorized candidate structure with route composition; per-burden closure status; and episode reification.
 The verdict remains conditional: nothing here is experimentally validated. The design was motivated by private internal engineering records that are not independently
 auditable or published; they function as non-evidential design provenance, and no public claim rests on them. No public observational dataset accompanies the paper. The coined
-vocabulary must beat matched established terminology on a preregistered benchmark before any term is adopted.
+vocabulary must beat matched established terminology on an adequately powered benchmark — externally registered before any run — before any term is adopted.
 
 **Keywords:** classification lifecycle; type–token distinction; analysis-relative ground truth; auditable episodes; process reliabilism; selective prediction; provenance; pathway adequacy; metamorphic testing; governance.
 
@@ -827,26 +827,27 @@ on no theological question.
 
 Three evaluations, kept strictly separate. **Nothing in this paper is experimentally validated.** The current public evidence is exactly this: machine-checked internal agreement
 over the declared definitions, schemas, examples, and adversarial fixtures — which proves no mathematical consistency or completeness and no utility — and **no public
-observational dataset**. The programs below are designed; none has run.
+observational dataset**. The first two programs below exist as frozen, deterministically validated, ready-to-run packets under `experiments/` (canonical per-packet state: `experiments/experiment-status.yaml`, Decision 0018); the terminology instrument awaits its owner-gated blind matching review. **None has run, and none is externally preregistered** — a Git freeze is not a preregistration, and registry submission is an owner/external act.
 
-### 13.1 Headline: the preregistered false-closure / selective-prediction benchmark
+### 13.1 Headline: the false-closure / selective-prediction benchmark (packet `FCSP-1` — preregistration-ready; not externally registered)
 
 Environments with planted inter-orthemma aliasing, planted identity uncertainty, and validator-scope traps. **Treatment:** an agent maintaining typed candidate families and
-per-burden closure (the machinery of Sections 5 and 7). **Baseline:** argmax placement with a confidence threshold. **Primary endpoints:** false-closure rate; the area under the risk–coverage curve (AURC) of the selective-prediction literature. (The metric name is corrected from an earlier draft's "risk–coverage AUROC", which named no established metric. Methodological criticisms of AURC — its dependence on the evaluation set's coverage grid and its incomparability across error rates — will be weighed when the benchmark is finalized, and any change of endpoint must happen before, never after, the protocol freeze.)
-Fixtures are laptop-scale and cheap; the benchmark targets the claimed residual directly (does the union behave differently from the composite?), not the vocabulary.
+per-burden closure (the machinery of Sections 5 and 7). **Baseline:** argmax placement with a confidence threshold. **Primary endpoints:** false-closure rate; the area under the risk–coverage curve (AURC) of the selective-prediction literature. (The metric name is corrected from an earlier draft's "risk–coverage AUROC", which named no established metric. Methodological criticisms of AURC — its dependence on the evaluation set's coverage grid and its incomparability across error rates — are addressed in the packet's frozen endpoint definitions by base-error-rate-normalized and per-family sensitivity analyses; any endpoint change is a new packet version, never a post-run edit.)
+Fixtures are laptop-scale and cheap; the benchmark targets the claimed residual directly (does the union behave differently from the composite?), not the vocabulary. The frozen packet is `experiments/false-closure-selective-prediction/` (protocol, design, exact endpoints, decision rules, 40 synthetic public items from a seeded generator, frozen analysis, labeled synthetic power simulation, deterministic smoke tests; status `READY_TO_RUN` / `PREREGISTRATION_READY`).
 
-**Decision rule — three outcomes, preregistered:**
+**Decision rule — locally protocol-frozen in the packet (`DECISION-RULES.yaml`), four outcomes:**
 
-- **adopt** the treatment's machinery claims on an adequately powered win at the preregistered effect size;
-- **not supported yet** on insufficient or underpowered evidence — including every underpowered null and every ordinary nonsignificant tie;
-- **retire** the behavioural claim **only** on adequately powered equivalence or demonstrated harm.
+- **supports incremental value** — both frozen primary contrasts favor the treatment at or beyond their minimum important effects, with no harm rule firing;
+- **does not yet support incremental value** — an adequately powered run in which neither the supports nor the harm rule fires (an adequately powered null IS this outcome);
+- **evidence of harm or failure** — accuracy degradation or structure-for-structure's-sake beyond the frozen harm margins;
+- **inconclusive** — only via a predeclared gate (failed-run rate, power floor, or an outcome-affecting recorded deviation), with the gate named.
 
 An underpowered miss is never read as refutation; an unpowered tie is never read as adoption. This supersedes the prior draft's bare "no improvement over established labels"
 failure criterion, which conflated the second and third outcomes.
 
 ### 13.2 The product fixture suite (separate product test)
 
-A fixture suite of the E1–E5 class exercises the product behaviour of an implementation: baseline-versus-treatment runs with pinned versions and run hygiene, culminating in **E5**,
+The frozen packet is `experiments/episode-reification/` (packet `ER-1`; exact E1–E5 specification, matched baseline/treatment renderings of one canonical fact set per case, frozen rubric and analysis, deterministic smoke tests; status `READY_TO_RUN` / `PREREGISTRATION_READY`). A fixture suite of the E1–E5 class exercises the product behaviour of an implementation: baseline-versus-treatment runs with pinned versions and run hygiene, culminating in **E5**,
 the metamorphic pathway fixture — a weak rule (pass iff the output contains a marker string) that returns the correct current result, paired with neighboring perturbations
 (correct-without-marker; incorrect-with-marker), scored to separate current-answer correctness from pathway adequacy. E5 carries no theory vocabulary and is the operational test of
 episode reification's practical delta over "audit the validator when suspicious" (Section 8.6). It is a product test; success or failure here transfers no verdict to the benchmark
@@ -856,7 +857,7 @@ of 13.1 or the terminology test of 13.3.
 
 The three-arm benchmark of the terminology evaluation spec: **Arm A** (ordinary language), **Arm B** (the operational distinctions expressed without neologisms), **Arm C** (the
 coordinated coined vocabulary with a matched primer), counterbalanced, exposure-matched, with construct-specific co-primary endpoints (false-closure detection; pathway-defect
-detection), preregistered minimum important effects, noninferiority and harm margins, and per-term three-outcome decision rules. This benchmark is **secondary and cannot be rescued
+detection), predeclared minimum important effects, noninferiority and harm margins, and per-term three-outcome decision rules (frozen locally; externally registered only by an owner act). This benchmark is **secondary and cannot be rescued
 by 13.1**: a machinery win in the headline benchmark is an Arm-B-versus-Arm-A result about *distinctions* and transfers nothing to the *words*; only Arm C versus Arm B adjudicates
 the vocabulary. The converse holds too: a vocabulary win would not validate the machinery.
 
@@ -875,7 +876,7 @@ Every coined term in this paper — **orthemma, ortheme, metaortheme, orthing,**
 Section 13.3. None is adopted; none is retired. The paper's own governing principle applies:
 
 **Design Principle 1 (Terminological utility, retained).** The vocabulary is warranted only if, under matched training time, attention, and access to evidence, it improves at least
-one preregistered outcome — placement accuracy, inter-rater agreement, defect discovery, repair traceability, transfer, calibration, or false-closure prevention — without
+one predeclared outcome — placement accuracy, inter-rater agreement, defect discovery, repair traceability, transfer, calibration, or false-closure prevention — without
 unacceptable over-segmentation or governance cost, relative to established terminology. Adjudication follows the three-outcome rule: adopt on an adequately powered win; do not
 adopt yet on insufficient evidence; retire only on adequately powered equivalence or harm.
 
@@ -897,7 +898,7 @@ opportunistically. Cross-domain analogies establish no shared mechanism. The for
 cannot derive their legitimacy: a system can place every task-relevant ortheme correctly and still serve harmful ends — orthemic adequacy is not ethical goodness, and governance
 must permit contestation of the task, the loss, the authority, and the category itself. Orthemic debt is demoted to a speculative instrument (Section 7.3); the metaphysical and
 theological extensions are split to a companion paper and no result here depends on them. Metaorthemes remain higher-order control; the episode-verdict layer's practical delta is
-untested (fixture E5); and no study yet demonstrates incremental utility of anything in this paper. Acknowledged open formal parameters (R3): `RequiredBy` beyond the shipped machine-readable governance instance; evidence-class exhaustiveness (a hypothesis); fusion-mapping non-uniqueness; the `Δ_A` idealizations — the formal lane's honest ceiling is "internally consistent specification under the declared definitions, fixtures, negative tests, and acknowledged open parameters," never mathematical completeness.
+untested (fixture E5); and no study yet demonstrates incremental utility of anything in this paper. Acknowledged open formal parameters (R3): `RequiredBy` beyond the shipped machine-readable governance instance; evidence-class exhaustiveness (a hypothesis); fusion-mapping non-uniqueness; the `Δ_A` idealizations — the formal lane's honest ceiling is "internally conformance-checked specification over the declared definitions, schemas, examples, and adversarial tests — no proof of consistency, completeness, or utility," never mathematical completeness.
 
 ### 15.2 Evidence tiers
 
@@ -918,7 +919,7 @@ itself.
 
 This paper proposed the orthemma–ortheme system as an integration discipline for the token side of classification and handling work. Its center of gravity is one relation — a concrete occurrence instantiating repeatable operational state-types relative to a declared, versioned analysis — and one further object built on that relation: the orthing episode, an auditable record on which result correctness and pathway adequacy are separately adjudicable. Around these, six formal additions close gaps the prior text could only gesture at: versioned identity with labeled lineage makes "right finding, wrong copy" a statable error; analysis/actor/time indexing makes ground truth explicit and disagreement diagnosable; typed, scoped, expiring evidence makes the green-but-mis-scoped validator visible; factorized candidates with route composition make partial action well-formed; per-burden closure makes false closure a checkable record defect; and episode reification with the registry-normalized verdict vector makes the stopped clock, the justified rare miss, the defective binding, and the stale directive all first-class, machine-checkable cases (fixtures F1–F7).
 
-What the paper deliberately does not claim is as much a result as what it claims. Every facet has a conceded neighbor; the type-individuation mathematics is inherited; a bespoke composite could represent the architecture, so the contribution is the standardized integration, not an impossibility claim; the private records that motivated the design are not independently auditable, carry no evidential weight, and validate nothing; the coined vocabulary is fully paraphrasable and strictly benchmark-gated; and the three designed studies — the false-closure benchmark, the episode-reification fixture suite, and the terminology comparison — have not been run. The framework's standing is therefore: internally conformance-checked (deterministic fixtures — not a consistency proof), design-motivated, empirically unvalidated. The next honest step is not more theory but the execution of Section 13 as preregistered — and the framework has been built so that a negative result would be recordable, on its own terms, as exactly what it is.
+What the paper deliberately does not claim is as much a result as what it claims. Every facet has a conceded neighbor; the type-individuation mathematics is inherited; a bespoke composite could represent the architecture, so the contribution is the standardized integration, not an impossibility claim; the private records that motivated the design are not independently auditable, carry no evidential weight, and validate nothing; the coined vocabulary is fully paraphrasable and strictly benchmark-gated; and the three designed studies — the false-closure benchmark (packet FCSP-1) and the episode-reification test (packet ER-1), both locally frozen and ready to run, and the terminology comparison (instrument awaiting its blind matching review) — have not been run, and none is externally preregistered. The framework's standing is therefore: internally conformance-checked (deterministic fixtures — not a consistency proof), design-motivated, empirically unvalidated. The next honest step is not more theory but the owner-authorized execution of Section 13's frozen packets — externally registered at run time — and the framework has been built so that a negative result would be recordable, on its own terms, as exactly what it is.
 
 ## 17. Data and Materials Availability
 
@@ -954,7 +955,7 @@ All public materials of this project — the formal core, this manuscript, the m
 - Wald, A. (1947). *Sequential Analysis.* John Wiley & Sons.
 - Wetzel, L. (2018). Types and Tokens. In E. N. Zalta (Ed.), *The Stanford Encyclopedia of Philosophy.* https://plato.stanford.edu/entries/types-tokens/
 
-Machine-readable database with per-claim verification status: `references/orthemology.bib` and `docs/sourcing/SOURCING-LEDGER.md`.
+Machine-readable database with per-claim verification status: `references/orthemology.bib`; current sourcing state starts at `docs/sourcing/CURRENT-SOURCING-LEDGER.md` (Decision 0019).
 
 ---
 

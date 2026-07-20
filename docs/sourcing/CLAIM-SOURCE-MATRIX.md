@@ -1,5 +1,10 @@
 # Claim–source matrix (R2)
 
+> **HISTORICAL BASELINE (additive banner, R6 / Decision 0019; body below preserved verbatim).**
+> R2 inverse view; see [`R3-CLAIM-SOURCE-MATRIX.md`](R3-CLAIM-SOURCE-MATRIX.md) and
+> [`CURRENT-SOURCING-LEDGER.md`](CURRENT-SOURCING-LEDGER.md) for current state.
+
+
 The inverse view of the [sourcing ledger](SOURCING-LEDGER.md): for each *kind* of claim the corpus makes, what sources bear on it and what the claim is allowed to say. Ledger row numbers in brackets.
 
 | Claim kind | Exemplar | Sources bearing | Permitted strength | Forbidden strength |

@@ -104,7 +104,22 @@ def main():
                                        set()).add(src)
                     continue
                 if not os.path.exists(os.path.join(ROOT, c)):
-                    missing.setdefault(c, set()).add(src)
+                    # a path can legitimately be cited relative to its OWN
+                    # document or its containing packet (packet-local docs and
+                    # scripts cite packet-local files); accept it when it
+                    # resolves from ANY ancestor directory of the citing file
+                    # (R6 hardening — root-or-ancestor, never neither)
+                    d = os.path.dirname(src)
+                    found = False
+                    while True:
+                        if os.path.exists(os.path.normpath(os.path.join(ROOT, d, c))):
+                            found = True
+                            break
+                        if not d:
+                            break
+                        d = os.path.dirname(d)
+                    if not found:
+                        missing.setdefault(c, set()).add(src)
 
     check("every repository path cited in the corpus resolves (or is a declared exemption)",
           not missing,

@@ -2,8 +2,8 @@ schema: orthemology-current-state-v1
 note: GENERATED derived block — edit only the authored block, then run scripts/generate_current_state.py.
   CI checks for drift.
 authored:
-  revision: R5
-  revision_label: R5 (2026-07-20) — final public-state and evidence-boundary tie-off
+  revision: R6
+  revision_label: R6 (2026-07-20) — experiment-readiness, sourcing-state, and reference-apparatus tie-off
   release_status: research revision, not a numbered stable release; no tag, DOI, or archival claim
   review_state:
     status: fresh-session-review-completed
@@ -22,7 +22,7 @@ authored:
     multi_actor_note: theory/orthemic-multi-actor-conflict-note.md
     companion_school_neutral: companion/orthability-and-the-ground-of-intelligibility.md
     companion_athari: companion/orthability-divine-attributes-and-speech-athari.md
-  terminology_status: INSTRUMENT-READY PENDING BLIND HUMAN MATCHING REVIEW; NOT RUN; NO TERM ADOPTED
+  terminology_status: READY_FOR_HUMAN_MATCHING_REVIEW (Decision 0018); NOT RUN; NO TERM ADOPTED
   empirical_status: no designed study has been run; no utility result exists; deterministic validation
     only
   license_status: OPEN — none chosen; default copyright applies
@@ -64,21 +64,22 @@ authored:
   - many-to-many MetaInst typing (explicitly unimplemented in R4)
   - the ProfileOf_A bridge between latent-state models and orthemic profiles is partial and analysis-declared
   claim_status_wording:
-    formal: internally coherent current specification under the declared definitions, schemas, positive
-      and adversarial fixtures, source-status contract, and acknowledged open parameters
+    formal: internally conformance-checked current specification over the declared definitions, schemas,
+      positive and adversarial fixtures, and source-status contract; acknowledged open parameters; no
+      proof of consistency, completeness, or utility
     manuscript: complete research draft, source-verified to the stated threshold; not peer reviewed; not
       empirically validated
     companion_school_neutral: complete conditional philosophical draft; no claim of universal proof
     companion_athari: complete, source-verified-to-threshold, explicitly Athari/Taymiyyan school-internal
       draft; comparative positions accurately sourced; not a neutral theological conclusion
-    terminology: matched instrument-ready v2, not run; no term adopted
+    terminology: v2 instrument READY_FOR_HUMAN_MATCHING_REVIEW (Decision 0018), not run; no term adopted
     empirical: not run / open
     pdfs: reproducibly built and visually inspected draft artifacts
     legal_publication: open on license, identity, peer review, and external submission
 derived:
-  source_tree_digest: 606812ccd75c4ab7c3cd876192f27927ef2c8d48add3d3a2393ea9ae03b60a1c
+  source_tree_digest: c29b57d518e5cab0729e23a745160e892c86813e9cc29e82cfd56f4201130c97
   source_tree_digest_policy: docs/project-state-inputs.yaml
-  tracked_files: 298
+  tracked_files: 365
   decision_ids:
   - '0001'
   - '0002'
@@ -97,7 +98,9 @@ derived:
   - '0015'
   - '0016'
   - '0017'
-  decision_count: 17
+  - 0018
+  - 0019
+  decision_count: 19
   schemas:
   - analysis.schema.json
   - claim-ledger.schema.json
@@ -117,11 +120,14 @@ derived:
   - derive_reqpath.py
   - validate_claim_reasoning_paths.py
   - validate_claim_sources.py
+  - validate_companion_references.py
   - validate_cross_document_consistency.py
   - validate_cross_record_semantics.py
   - validate_current_state.py
   - validate_decision_dependencies.py
+  - validate_dependency_lock.py
   - validate_evidence_boundary.py
+  - validate_experiment_readiness.py
   - validate_internal_references.py
   - validate_latent_state_fixtures.py
   - validate_negative_fixtures.py
@@ -133,10 +139,11 @@ derived:
   - validate_review_state.py
   - validate_schemas.py
   - validate_source_status.py
+  - validate_sourcing_state.py
   - validate_state_convergence.py
   - validate_type_token_semantics.py
   - validate_verdict_semantics.py
-  validator_count: 23
+  validator_count: 27
   fixture_counts:
     verdict: 7
     reason: 8
@@ -147,24 +154,24 @@ derived:
     invalid_records: 48
   pdfs:
     orthability-divine-speech-athari-draft.pdf:
-      sha256: 019c497b59da7f0abe0d307fee346bdd980507e361ba50e3ef81f822346f264d
-      pages: 7
-      source_commit: 28d694c4f4fe387a88a54fca544ef806895d450e
+      sha256: d80860cdfe895b51487f3c9c524ffe155a99d6b46fe8ff11b17517fa24100e72
+      pages: 8
+      source_commit: e295e321041d439cd135bd2f62f297657c491b45
     orthability-ground-of-intelligibility-draft.pdf:
-      sha256: f45927b79ff8cb7481feea47f7426efcac2456ca12b3cd1c948699253136226e
-      pages: 10
-      source_commit: 28d694c4f4fe387a88a54fca544ef806895d450e
+      sha256: ca1f3d9ba6f5b72b0e56966fdc38eb0c3d747e7744da86dbfafb7bcba066ec75
+      pages: 11
+      source_commit: e295e321041d439cd135bd2f62f297657c491b45
     orthemic-core-reference-draft.pdf:
-      sha256: 63e13101f5ce4e262b5b3db3de7cd9709dc48b432fb7a89c02ff8b080c6a88ac
+      sha256: 93104aaf6dde2ae2fe12acad432dc45276649008d786331019e60577893e63b3
       pages: 20
-      source_commit: 28d694c4f4fe387a88a54fca544ef806895d450e
+      source_commit: e295e321041d439cd135bd2f62f297657c491b45
     orthemma-ortheme-systems-draft.pdf:
-      sha256: 58537760834cfc1939415196618f5e3f09a0005e333eec2de30d4ff58e2877f7
+      sha256: f23c4f74b580a1d8debdd8ad5063aaf488d01b76f49cb5301e5163d1d63c9605
       pages: 31
-      source_commit: 28d694c4f4fe387a88a54fca544ef806895d450e
+      source_commit: e295e321041d439cd135bd2f62f297657c491b45
   terminology_freeze_hashes:
     pilot0_v1: 988a6522498df73ad1c7b0f73961a054ff20862d50fff6d644d0274877412772
-    pilot0_v2: a1edbd2c5e2f2df598b4a6d01a52229c455b3b68d043f10046053d0a3622a2a2
+    pilot0_v2: e5e65b2f1b38d5767d79103c57afee76a02e09e9fec2fd150a3a680b0fe19c3d
   source_status_summary:
     SECONDARY_VERIFIED: 9
     COMPILATION_MEDIATED: 2

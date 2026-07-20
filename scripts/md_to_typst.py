@@ -6,6 +6,8 @@ stream and emits Typst markup. STRICT: any token type without an explicit
 handler raises ConversionError — content is never silently dropped
 (the R2 pipeline's silent line-skip defect is structurally impossible here).
 """
+import re
+
 from markdown_it import MarkdownIt
 
 
@@ -66,6 +68,9 @@ def _inline(tokens):
         elif t.type == "image":
             raise ConversionError("images are not supported in this corpus")
         elif t.type == "html_inline":
+            # R6: pure comments (reference-key markers) are metadata, not content
+            if re.fullmatch(r"<!--.*?-->", t.content, re.S):
+                continue
             raise ConversionError("raw inline HTML not supported: %r" % t.content)
         else:
             raise ConversionError("unhandled inline token: %s" % t.type)
@@ -176,6 +181,13 @@ def convert(md_text):
             i += 1
             continue
         if ty == "html_block":
+            # R6: a PURE HTML comment is machine metadata (e.g. the companion
+            # reference keys <!-- ref:KEY -->), not content — dropping it loses
+            # nothing a reader sees. Anything else stays a hard error: the
+            # strict no-silent-skip contract applies to CONTENT only.
+            if re.fullmatch(r"\s*(<!--.*?-->\s*)+", t.content, re.S):
+                i += 1
+                continue
             raise ConversionError("raw HTML block not supported: %r" % t.content[:60])
         raise ConversionError("unhandled block token: %s" % ty)
     return "".join(out)

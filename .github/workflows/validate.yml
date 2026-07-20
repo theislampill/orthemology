@@ -12,8 +12,10 @@ jobs:
       - uses: actions/setup-python@v6
         with:
           python-version: "3.11"
-      - name: Install pinned dependencies (no live web checks anywhere in CI)
-        run: pip install --quiet pyyaml jsonschema "typst==0.15.0" "markdown-it-py==4.0.0" "pypdf>=6,<7"
+      - name: Install exact version-locked dependencies (requirements-ci.lock.txt; no live web checks anywhere in CI)
+        run: pip install --quiet -r requirements-ci.lock.txt
+      - name: Dependency lock consistency
+        run: python scripts/validate_dependency_lock.py
       - name: Repository hygiene + honesty checks
         run: python scripts/validate_repo.py
       - name: Generated project state — drift check (R4, Decision 0014)
@@ -62,6 +64,16 @@ jobs:
         run: python scripts/validate_cross_document_consistency.py
       - name: Internal references resolve (no ghost script/fixture citations)
         run: python scripts/validate_internal_references.py
+      - name: Experiment-packet readiness + no-run guard (R6, Decision 0018)
+        run: python scripts/validate_experiment_readiness.py
+      - name: Sourcing-state classification + navigation (R6, Decision 0019)
+        run: python scripts/validate_sourcing_state.py
+      - name: Companion references resolve (R6)
+        run: python scripts/validate_companion_references.py
+      - name: FCSP-1 packet smoke tests (deterministic; no result)
+        run: python experiments/false-closure-selective-prediction/tests/test_smoke.py
+      - name: ER-1 packet smoke tests (deterministic; no result)
+        run: python experiments/episode-reification/tests/test_smoke.py
       - name: Terminology packet freeze hashes (v1 immutable + v2)
         run: |
           python scripts/freeze_pilot0.py --check

@@ -1,6 +1,6 @@
 # Orthability and the Ground of Intelligibility: A Transcendental Argument from Rule-Governed Resolution
 
-**Status: complete philosophical DRAFT (R5, 2026-07-20; fresh-session repository review completed; not external human peer review; not empirically validated). School-neutral analysis; not peer reviewed; no empirical validation; nothing here is established by the operational manuscript, and nothing here validates it.** Claim types are labeled inline as *analytic*, *transcendental*, *explanatory*, *teleological*, *metaphysical*, *revelational*, or *school-internal*; no revelational or school-internal claim occurs in this paper (the creed-internal development is the separate Atharī companion). Supersedes nothing: the earlier claim-ladder assessment and outline are retained as supporting history (`orthemic-modal-metaphysical-assessment.md`, `orthemic-companion-paper-outline.md`); Thesis C's disposition is Decision 0008. Objection/reply detail: [`OBJECTIONS-AND-REPLIES.md`](OBJECTIONS-AND-REPLIES.md). Sources: [`sourcing/COMPANION-SOURCING-LEDGER.md`](sourcing/COMPANION-SOURCING-LEDGER.md).
+**Status: complete philosophical DRAFT (R6, 2026-07-20; fresh-session repository review completed; not external human peer review; not empirically validated). School-neutral analysis; not peer reviewed; no empirical validation; nothing here is established by the operational manuscript, and nothing here validates it.** Claim types are labeled inline as *analytic*, *transcendental*, *explanatory*, *teleological*, *metaphysical*, *revelational*, or *school-internal*; no revelational or school-internal claim occurs in this paper (the creed-internal development is the separate Atharī companion). Supersedes nothing: the earlier claim-ladder assessment and outline are retained as supporting history (`orthemic-modal-metaphysical-assessment.md`, `orthemic-companion-paper-outline.md`); Thesis C's disposition is Decision 0008. Objection/reply detail: [`OBJECTIONS-AND-REPLIES.md`](OBJECTIONS-AND-REPLIES.md). Sources: [`sourcing/R3-COMPANION-SOURCING-LEDGER.md`](sourcing/R3-COMPANION-SOURCING-LEDGER.md) (current overlay; start at [`docs/sourcing/CURRENT-SOURCING-LEDGER.md`](../docs/sourcing/CURRENT-SOURCING-LEDGER.md)).
 
 ## Abstract
 
@@ -64,7 +64,7 @@ If T1 and T2 hold, the design conclusion follows with content: the ground would 
 - **Not an argument from ignorance.** No step has the form "we cannot explain X, therefore G"; every step claims a presupposition relation, which is either exhibited or fails. (*Methodological.*)
 - **Not a psychological argument from comprehensibility.** The premise is not that humans find the world intelligible (a fact about us) but that evaluations of resolution episodes are *true* — that soundness and unsoundness are really instantiated. (*Methodological.*)
 
-What it is: a **transcendental argument** in the standard sense (Stern 2019) — from an undisputed actuality to its necessary preconditions — and it inherits the standard Stroud-type limitation (Stroud 1968): such arguments constrain what the *discourse participant* must grant, and a determined sceptic may retreat to denying the starting point or reinterpreting the preconditions as features of our conceptual scheme. This paper's conclusion is accordingly an *internal-coherence* result: given the reality of evaluable resolution, an underived ground is required; it is not a neutral proof against every retreat. (*Transcendental; scope conceded.*)
+What it is: a **transcendental argument** in the standard sense (Stern & Cheng 2023) — from an undisputed actuality to its necessary preconditions — and it inherits the standard Stroud-type limitation (Stroud 1968): such arguments constrain what the *discourse participant* must grant, and a determined sceptic may retreat to denying the starting point or reinterpreting the preconditions as features of our conceptual scheme. This paper's conclusion is accordingly an *internal-coherence* result: given the reality of evaluable resolution, an underived ground is required; it is not a neutral proof against every retreat. (*Transcendental; scope conceded.*)
 
 ### 4.2 The chain, with each step labeled
 
@@ -132,3 +132,21 @@ Suppose the chain through step 7 (intelligent ground), with its conditionality a
 ## 9. Conclusion
 
 From the reality of evaluable, rule-governed resolution, this paper argued transcendentally to an underived ground of intelligibility; explanatorily against primitivist and Platonist restings; conditionally — with every extra premise flagged — to a knowing, willing, powerful, wise ground not intrinsically incapable of disclosure. The two-axis analysis and the faculty architecture stand on their own as philosophy of the operational framework, whatever becomes of the theology. The paper's negative results are as definite as its positive ones: reliability alone yields no designer; the reductio does not defeat brutalism or primitivism outright; the token-essential-modality thesis was not defended but replaced; and nothing here is a neutral proof. Where the argument's conditional joints resolve is, in the end, a matter for continued philosophy — and, beyond §8's boundary, not for philosophy at all.
+
+---
+
+## References
+
+Sources actually cited in this paper. Bibliographic records live in [`references/orthemology.bib`](../references/orthemology.bib); per-claim evidence-access statuses remain in the sourcing surfaces (start at [`docs/sourcing/CURRENT-SOURCING-LEDGER.md`](../docs/sourcing/CURRENT-SOURCING-LEDGER.md)) and are not restated here.
+
+- Anderson, James N., and Greg Welty (2011). "The Lord of Noncontradiction: An Argument for God from Logic." *Philosophia Christi* 13(2). <!-- ref:anderson2011lord -->
+- Conee, Earl, and Richard Feldman (1998). "The Generality Problem for Reliabilism." *Philosophical Studies* 89. <!-- ref:sep-generality -->
+- El-Tobgui, Carl Sharif (2020). *Ibn Taymiyya on Reason and Revelation: A Study of Darʾ taʿāruḍ al-ʿaql wa-l-naql*. Brill. <!-- ref:eltobgui2020reason -->
+- Evans, C. Stephen (2010). *Natural Signs and Knowledge of God: A New Look at Theistic Arguments*. Oxford University Press. <!-- ref:evans2010signs -->
+- Goldman, Alvin I. (1979). "What Is Justified Belief?" In G. Pappas (ed.), *Justification and Knowledge*. Reidel. <!-- ref:goldman1979justified -->
+- Millikan, Ruth Garrett (1984). *Language, Thought, and Other Biological Categories*. MIT Press. <!-- ref:millikan1984language -->
+- Plantinga, Alvin (1993). *Warrant and Proper Function*. Oxford University Press. <!-- ref:plantinga1993warrant -->
+- Plantinga, Alvin (2011). *Where the Conflict Really Lies: Science, Religion, and Naturalism*. Oxford University Press. <!-- ref:plantinga2011conflict -->
+- Stern, Robert, and Tony Cheng (2023). "Transcendental Arguments." *Stanford Encyclopedia of Philosophy* (archive-pinned edition per the R3 ledger). <!-- ref:sep-transcendental -->
+- Stroud, Barry (1968). "Transcendental Arguments." *Journal of Philosophy* 65(9). <!-- ref:stroud1968transcendental -->
+- Turner, Jamie B. (2022). "Ibn Taymiyya on Theistic Signs and Knowledge of God." *Religious Studies* 58. <!-- ref:turner2022signs -->

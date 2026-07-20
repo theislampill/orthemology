@@ -10,7 +10,7 @@ Current papers:
 Supporting files:
 
 - [`OBJECTIONS-AND-REPLIES.md`](OBJECTIONS-AND-REPLIES.md) — adversarial ledger with honest statuses (ANSWERED / CONCEDED / UNRESOLVED / OPEN), including the researched **Hume disposition: OVERSTATED** (the self-refutation charge is not asserted as settled anywhere in the lane).
-- [`sourcing/COMPANION-SOURCING-LEDGER.md`](sourcing/COMPANION-SOURCING-LEDGER.md) — per-claim sources with verification statuses; VIA-COMPILATION rows are flagged limitations.
+- [`sourcing/R3-COMPANION-SOURCING-LEDGER.md`](sourcing/R3-COMPANION-SOURCING-LEDGER.md) (current overlay; the R2 baseline is bannered history; start at [`docs/sourcing/CURRENT-SOURCING-LEDGER.md`](../docs/sourcing/CURRENT-SOURCING-LEDGER.md)) — per-claim sources with verification statuses; VIA-COMPILATION rows are flagged limitations.
 
 Supporting history (retained, superseded in the ways stated inside the new drafts):
 

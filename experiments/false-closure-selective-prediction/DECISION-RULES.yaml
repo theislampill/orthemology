@@ -1,0 +1,36 @@
+schema: orthemology-experiment-decision-rules-v1
+packet_id: FCSP-1
+outcome_vocabulary:
+  - supports incremental value
+  - does not yet support incremental value
+  - evidence of harm or failure
+  - inconclusive
+parameters:
+  minimum_important_effect_false_closure: 0.10   # absolute reduction in false-closure rate
+  minimum_important_effect_aurc: 0.05            # absolute AURC reduction
+  harm_margin_result_accuracy: 0.05              # absolute degradation counted as harm
+  harm_margin_structure_overhead: 2.0            # ratio on F9 controls counted as harm
+  alpha: 0.05
+  power_floor: 0.80                              # from simulation/power_sim.py at the preregistration-ready assumptions
+  max_failed_run_rate: 0.05
+rules:
+  supports_incremental_value: >-
+    both primary contrasts favor treatment at or beyond their minimum important effects with
+    Holm-adjusted p < alpha, AND no harm rule fires.
+  evidence_of_harm_or_failure: >-
+    result_accuracy degrades beyond harm_margin_result_accuracy (Holm-adjusted p < alpha), OR
+    structure_overhead_on_controls exceeds harm_margin_structure_overhead, OR false_closure_rate
+    increases significantly.
+  does_not_yet_support_incremental_value: >-
+    the run is adequately powered (post-hoc sensitivity at the achieved N reaches power_floor
+    for the minimum important effects) and neither the supports nor the harm rule fires. An
+    adequately powered null IS this outcome and may not be reclassified.
+  inconclusive: >-
+    ONLY when a predeclared gate fires: failed-run rate above max_failed_run_rate in either arm,
+    or achieved power below power_floor for the minimum important effects, or a recorded
+    protocol deviation that the deviation ledger classifies as outcome-affecting. The reason
+    must be named in the report; "inconclusive" without a named gate is a scoring error.
+adoption_note: >-
+  A "supports incremental value" outcome licenses only the machinery claim of manuscript
+  section 13.1 for the tested configuration. It licenses no terminology adoption (section 13.3
+  is separate) and no generalization beyond the estimand population.

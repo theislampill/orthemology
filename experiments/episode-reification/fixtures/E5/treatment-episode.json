@@ -1,0 +1,47 @@
+{
+  "schema": "orthemology-er-episode-v1",
+  "case": "E5",
+  "title": "metamorphic marker probe",
+  "occurrence": {
+    "identity_key": "report-9",
+    "version": "v1"
+  },
+  "evidence": [
+    {
+      "id": "V-1",
+      "covers": "marker presence only",
+      "rule": "pass iff contains 'ANALYSIS COMPLETE'"
+    }
+  ],
+  "procedure": {
+    "name": "V-1",
+    "declared_purpose": "analysis completeness/correctness",
+    "actual_check": "marker string presence"
+  },
+  "execution": {
+    "instruction": "V-1",
+    "faithful": true
+  },
+  "result": {
+    "placement": "PASS",
+    "truth": "analysis genuinely complete"
+  },
+  "perturbation_neighbors": [
+    {
+      "id": "E5a",
+      "truth": "correct",
+      "v1_verdict": "FAIL"
+    },
+    {
+      "id": "E5b",
+      "truth": "incorrect",
+      "v1_verdict": "PASS"
+    }
+  ],
+  "burden_ledger": [
+    {
+      "burden": "replace marker rule with property-tracking check",
+      "disposition": "open"
+    }
+  ]
+}

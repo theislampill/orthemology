@@ -1,0 +1,52 @@
+# Canonical classification of every sourcing surface (Decision 0019).
+# scripts/validate_sourcing_state.py enforces this index, the historical
+# banners, and current-navigation hygiene. Classification only — no source
+# status is defined here.
+schema: orthemology-sourcing-status-index-v1
+classifications:
+  current-authoritative: the machine registry rows that currently adjudicate their declared claim families
+  current-view: the consolidated navigational view current readers should start from
+  overlay: a regrading pass over an earlier baseline; authoritative where it names a row, silent elsewhere
+  historical-baseline: an earlier ledger retained verbatim as history; statuses superseded where an overlay or registry regrades them
+surfaces:
+- path: docs/sourcing/CURRENT-SOURCING-LEDGER.md
+  classification: current-view
+- path: references/source-status.yaml
+  classification: current-authoritative
+  scope: declared claim families only (CIR-*, ELT-*, ATH-*, LAT-*, EXT-*); absence from the registry is not a verdict
+- path: references/quran-loci.yaml
+  classification: current-authoritative
+  scope: Qur'anic loci (primary-verified registry with its own validator)
+- path: docs/sourcing/R3-SOURCING-LEDGER.md
+  classification: overlay
+  base: docs/sourcing/SOURCING-LEDGER.md
+  note: R3 regrading of the academic corpus; supersedes the R2 statuses it names
+- path: companion/sourcing/R3-COMPANION-SOURCING-LEDGER.md
+  classification: overlay
+  base: companion/sourcing/COMPANION-SOURCING-LEDGER.md
+- path: docs/sourcing/SOURCING-LEDGER.md
+  classification: historical-baseline
+  note: R2 baseline plus later additive rows (31-38); rows 36-38 are additionally governed by registry family LAT-*
+- path: companion/sourcing/COMPANION-SOURCING-LEDGER.md
+  classification: historical-baseline
+- path: docs/sourcing/CLAIM-SOURCE-MATRIX.md
+  classification: historical-baseline
+  note: R2 inverse view; R3 counterpart below
+- path: docs/sourcing/R3-CLAIM-SOURCE-MATRIX.md
+  classification: overlay
+  base: docs/sourcing/CLAIM-SOURCE-MATRIX.md
+current_status_by_claim_area:
+  concrete_ideal_reason_chain: references/source-status.yaml rows CIR-*
+  el_tobgui_records: references/source-status.yaml rows ELT-*
+  athari_per_claim: references/source-status.yaml rows ATH-*
+  latent_related_work: references/source-status.yaml rows LAT-*
+  project_extension: references/source-status.yaml rows EXT-*
+  quranic_loci: references/quran-loci.yaml (29 loci, primary-verified R3)
+  academic_corpus: docs/sourcing/R3-SOURCING-LEDGER.md regraded rows over the R2 baseline
+  companion_philosophical_and_classical: companion/sourcing/R3-COMPANION-SOURCING-LEDGER.md over the R2 companion baseline
+standing_research_triggers:
+  - CIR-1W promotion — direct publisher full-text access (registry row)
+  - ATH-3 promotion — direct edition or authoritative full-text access (registry row; RR-1 pagination residual)
+  - RR-1 classical edition-level paginations (six loci)
+  - RR-2 Evans 1998 p.94 direct verification
+  - RR-3 Taymiyyan Dar' primary-locus queue

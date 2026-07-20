@@ -1,0 +1,36 @@
+{
+  "schema": "orthemology-er-episode-v1",
+  "case": "E2",
+  "title": "stopped-clock",
+  "occurrence": {
+    "identity_key": "batch-2201",
+    "version": "v1"
+  },
+  "evidence": [
+    {
+      "id": "S-3",
+      "covers": "contaminant class A, batch-2201 v1",
+      "value": "NEGATIVE"
+    }
+  ],
+  "procedure": {
+    "name": "screen S-3",
+    "reference": "RP-2025-10",
+    "reference_frozen": "2025-10-01",
+    "reliability_note": "reference panel stale beyond declared refresh interval"
+  },
+  "execution": {
+    "instruction": "S-3 manual",
+    "faithful": true
+  },
+  "result": {
+    "placement": "NEGATIVE",
+    "independent_confirmation": true
+  },
+  "burden_ledger": [
+    {
+      "burden": "reference-panel refresh overdue",
+      "disposition": "open"
+    }
+  ]
+}

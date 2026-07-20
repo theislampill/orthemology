@@ -1,0 +1,10 @@
+schema: orthemology-er-facts-v1
+case: E4
+title: defective binding, faithful execution
+fact_keys:
+- identity
+- evidence
+- binding
+- execution
+- result
+- closure

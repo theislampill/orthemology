@@ -1,6 +1,6 @@
 # Orthemology
 
-**Status: research-stage draft (R5); not peer reviewed; fresh-session repository review completed; not external human peer review; not empirically validated. Coined terminology is benchmark-gated, not adopted. See [STATUS.md](STATUS.md).**
+**Status: research-stage draft (R6); not peer reviewed; fresh-session repository review completed; not external human peer review; not empirically validated. Coined terminology is benchmark-gated, not adopted. See [STATUS.md](STATUS.md).**
 
 Orthemology is a proposed theory of how concrete cases get correctly classified, handled, and audited by rule-governed processes — human, institutional, or automated. It gives first-class, auditable structure to a familiar but usually implicit architecture:
 
@@ -23,7 +23,7 @@ The final assertion ("this pillar is orthogonal") is a **placement claim** judge
 - **Worked case:** [`examples/compaction-stale-steer.md`](examples/compaction-stale-steer.md) (the stale-directive pattern) plus <!-- state:example-json-count -->nine<!-- /state:example-json-count --> machine-readable episode examples under [`examples/`](examples/) validated against [`schemas/`](schemas/).
 - **Companion (metaphysical/theological — complete drafts, separate and firewalled):** [`companion/`](companion/README.md).
 - **Terminology program (READY TO RUN, NOT RUN):** [`terminology/`](terminology/README.md).
-- **Decision records:** [`docs/decisions/`](docs/decisions/) — <!-- state:decision-range -->0001–0017<!-- /state:decision-range -->: 0001–0003 (owner reconciliation R1), 0004–0008 (autonomous closure R2), 0009–0010 (type/token, soundness bearers, orthability senses — R3), 0011–0015 (claim-relative reasoning paths, reference-model semantic contract, source-status normalization, generated project state, latent-state boundary — R4).
+- **Decision records:** [`docs/decisions/`](docs/decisions/) — <!-- state:decision-range -->0001–0019<!-- /state:decision-range -->: 0001–0003 (owner reconciliation R1), 0004–0008 (autonomous closure R2), 0009–0010 (type/token, soundness bearers, orthability senses — R3), 0011–0015 (claim-relative reasoning paths, reference-model semantic contract, source-status normalization, generated project state, latent-state boundary — R4), 0016–0017 (review-state contract, private-evidence boundary — R5), 0018–0019 (experiment-packet readiness/registration, current sourcing state — R6).
 - **Generated project state:** [`docs/current-state.yaml`](docs/current-state.yaml) — the canonical machine-readable revision, counts, statuses, and burdens; VERSION/README/STATUS/OPEN-DECISIONS are checked against it in CI.
 - **Sourcing:** [`references/orthemology.bib`](references/orthemology.bib) + [`docs/sourcing/`](docs/sourcing/) — per-claim verification statuses.
 - **Closure accounting:** [`docs/project-closure/`](docs/project-closure/) — formal audit, counterexample ledger, reviews, burden ledger.
@@ -41,7 +41,7 @@ The final assertion ("this pillar is orthogonal") is a **placement claim** judge
 - **No empirical experiment has validated the framework.** Every designed study is READY TO RUN, NOT RUN; deterministic fixtures and validators check consistency only. The internal records that motivated the design are private and not independently auditable; no public claim rests on them.
 - **The coined vocabulary (orthemma/ortheme/metaortheme/metaorthemma/orthing) is candidate terminology**, gated on a designed-but-unrun comparative benchmark; every document can be read with ordinary-language substitutes.
 - **The companion theological/metaphysical papers are complete drafts, deliberately separated** from the main manuscript: philosophical conclusions are conditional on labeled premises, creed-internal material is explicitly Atharī-school-labeled, and no engineering evidence supports any metaphysical claim (absolute firewall).
-- **Related-work claims are cited with per-claim verification statuses** ([`docs/sourcing/SOURCING-LEDGER.md`](docs/sourcing/SOURCING-LEDGER.md)); statuses are honest about what was and was not re-fetched.
+- **Related-work claims are cited with per-claim verification statuses** — current state starts at [`docs/sourcing/CURRENT-SOURCING-LEDGER.md`](docs/sourcing/CURRENT-SOURCING-LEDGER.md) (Decision 0019; R2 ledgers are banners-marked historical baselines); statuses are honest about what was and was not re-fetched.
 
 ## Citing
 

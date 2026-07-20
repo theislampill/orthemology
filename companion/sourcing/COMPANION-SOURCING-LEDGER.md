@@ -1,5 +1,12 @@
 # Companion sourcing ledger (R2, 2026-07-20)
 
+> **HISTORICAL BASELINE (additive banner, R6 / Decision 0019; body below preserved verbatim).**
+> This is the R2 companion sourcing ledger. Its statuses are **superseded where regraded** by
+> [`R3-COMPANION-SOURCING-LEDGER.md`](R3-COMPANION-SOURCING-LEDGER.md) and, for the declared
+> claim families, by [`references/source-status.yaml`](../../references/source-status.yaml).
+> Current readers start at [`docs/sourcing/CURRENT-SOURCING-LEDGER.md`](../../docs/sourcing/CURRENT-SOURCING-LEDGER.md).
+
+
 Companion-lane rows of the project sourcing discipline; statuses as in [`docs/sourcing/SOURCING-LEDGER.md`](../../docs/sourcing/SOURCING-LEDGER.md) (WEB-VERIFIED / RECORD-CONFIRMED / VIA-COMPILATION). Bib keys: [`references/orthemology.bib`](../../references/orthemology.bib).
 
 ## School-neutral paper

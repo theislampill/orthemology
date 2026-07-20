@@ -1,0 +1,3 @@
+# R6 Review C — sourcing state
+
+Surfaced model: `claude-fable-5`. Attacks: (C1) the R2 main ledger reclassified `current-view` in the index — DEFEATED (single-current-view + banner rules both fire); (C2) the historical banner stripped from the R2 ledger — DEFEATED. Overlay-order dependence probed: the consolidated view names per-area authorities directly (registry rows / R3 overlay / Qurʾānic registry) and duplicates no status value, so no reading depends on overlay application order; the one status the view does state (ATH-3) is machine-compared to the registry. R2-only vocabulary appears in the current view only inside the explicitly historical sentence. No blocking findings.

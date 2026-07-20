@@ -25,6 +25,8 @@ decisions:
   "0015": {status: adopted, title: latent-state observation and representation boundary}
   "0016": {status: adopted, title: current review state and historical supersession}
   "0017": {status: adopted, title: private design records and public evidence boundary}
+  "0018": {status: adopted, title: experiment packet readiness and registration status}
+  "0019": {status: adopted, title: current sourcing ledger and historical overlays}
 normative_symbols:
   StrictlySoundReasoning_q:
     current:

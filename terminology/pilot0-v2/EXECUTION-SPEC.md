@@ -1,6 +1,6 @@
-# Pilot 0 v2 — complete execution specification (NOT RUN)
+# Pilot 0 v2 — complete execution specification (v2.1; NOT RUN)
 
-**Status: instrument-ready specification. NO EXECUTION HAS OCCURRED; no utility result exists; no term is adopted.** Running this requires the owner (model spend; ≥3 human raters; human-subjects responsibility) — see `docs/project-closure/UNAVOIDABLE-OWNER-ACTIONS.md` item 3.
+**Status (Decision 0018 vocabulary): `READY_FOR_HUMAN_MATCHING_REVIEW` · registration `NOT_REGISTERED`. NO EXECUTION HAS OCCURRED; no utility result exists; no term is adopted or retired.** The blind human matching review is the owner-gated prerequisite for `READY_TO_RUN`; running then requires the owner (model spend; ≥3 human raters; human-subjects responsibility) — see `OPEN-DECISIONS.md` and `experiments/experiment-status.yaml` (packet `TERM-P0-V2`). Version history: `../pilot0-v2-history/` (v2.0's conflicting decision rule is preserved there and superseded by §4 below).
 
 ## 1. Design
 
@@ -31,9 +31,18 @@ Four between-arm conditions: **A** (exposure-matched filler primer), **B** (ordi
 - **E2 (label-specificity / sham):** P(probe pass | C) − P(probe pass | C′), **eligible items only** (`eligible_for_c_vs_cprime: true`; the false-closure item and negative controls are excluded by flag).
 - **E3 (teaching effect):** P(probe pass | B) − P(probe pass | A), substantive items.
 - **E4 (overhead guard):** added structure tokens on negative controls, each arm vs A; success = near-zero.
-- Analysis commands and import/export format: `analysis/analyze_pilot0.py --in runs.jsonl --items items/ITEMS.json --out report.json` (script inherited from v1 with flag-aware eligibility filtering; runs.jsonl schema: one JSON object per executor output, plus run manifest header row).
-- **Decision rule (three-outcome, frozen before any run):** per term family — *adopt-candidate* (E1 and E2 both positive with pre-registered margins), *reject* (E1 ≤ 0 or E2 ≤ 0 with margins), *undetermined* (otherwise → Pilot 1). No result of this pilot adopts a term by itself; adoption is gated on the confirmatory study.
+- Analysis command and import/export format: `python analysis/analyze_pilot0_v2.py run.json --items items/ITEMS.json --out report.json` — a v2-local frozen script (this packet; derived from the immutable v1 skeleton, adding the flag-aware `eligible_for_c_vs_cprime` filtering and descriptive E1–E4 summaries; v2.0's spec referenced a flag-aware variant that did not exist in the tree — repaired in v2.1). `--selftest` traverses synthetic mock data end-to-end and yields no feasibility or scientific outcome.
+- **Decision rule (v2.1 — feasibility-only; supersedes v2.0's adopt-candidate/reject/undetermined, which conflicted with the v1 protocol's feasibility-only constraint):** Pilot 0 outputs exactly one of `ADVANCE_TO_PILOT1` · `REVISE_AND_RETEST_INSTRUMENT` · `DO_NOT_ADVANCE_THIS_ITEM_VERSION` (this item/instrument version only — never a term retirement) · `INCONCLUSIVE`, derived mechanically by the analysis script from the numeric feasibility gates of §4a. **No adoption or retirement conclusion of any kind is available from Pilot 0**; E1–E3 are computed as *descriptive estimands only* to inform Pilot 1's design. Adoption/retirement is reserved for the adequately powered confirmatory stage.
+
+### 4a. Numeric feasibility gates (exact; no "preregistered" claim — nothing is externally registered)
+
+- pairwise rater agreement ≥ **0.70** in every (item, arm) cell;
+- sham comprehension gap |C − C′| ≤ **10 pp**;
+- per-item pooled pass rate within **[0.10, 0.90]** for at least **5** of the 7 substantive items (ceiling/floor guard);
+- negative-control overhead ≤ **30 tokens** added vs Arm A, every arm.
+
+Efficacy margins (minimum important effects, noninferiority, equivalence, and harm thresholds for E1/E2) are **not** Pilot 0 parameters: they bind Pilot 1 and the confirmatory stage, are stated in `../pilot1/PILOT1-TEMPLATE.md` and `../confirmatory-v1-template/`, and any value still open there is marked `TO_BE_FROZEN_AFTER_BLIND_MATCHING_REVIEW`. Calling any local value "pre-registered" is prohibited without a named external registry record (Decision 0018).
 
 ## 5. Freeze
 
-The packet freezes by `scripts/freeze_pilot0.py --packet pilot0-v2` (hash in `FREEZE-HASH.txt`); any post-freeze edit is a new packet version. v1 (`terminology/pilot0/`, hash ece0412f…) is immutable superseded history and is never edited.
+The packet freezes by `scripts/freeze_pilot0.py --packet pilot0-v2` (hash in `FREEZE-HASH.txt`); any post-freeze edit is a new packet version, with the prior version preserved under `../pilot0-v2-history/`. v1 (`terminology/pilot0/`, packet hash `988a6522498df73ad1c7b0f73961a054ff20862d50fff6d644d0274877412772` — the R4 correction SELF-1; v2.0 mis-stated it as `ece0412f…`) is immutable superseded history and is never edited.
