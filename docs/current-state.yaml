@@ -17,12 +17,24 @@ authored:
   license_status: OPEN — none chosen; default copyright applies
   citation_status: OPEN — no CITATION.cff and no author identity; cite by commit (docs/CITING.md)
   owner_only_burdens:
-  - legal license choice
-  - author/citation identity (name, affiliation, ORCID)
-  - empirical execution (model spend; >=3 human raters; blind human matching review; freeze decision)
-  - external peer review / preprint / DOI submission under the owner's identity
-  - publication of private casebook material, screenshots, or transcripts
-  - acquisition of a genuinely inaccessible paid source (none currently identified)
+  - id: OWNER-LICENSE
+    text: Legal license choice
+    detail: no license exists; default copyright applies; choosing one is a legal act
+  - id: OWNER-CITATION-IDENTITY
+    text: Author/citation identity
+    detail: real-world author name, affiliation, ORCID, preferred bibliographic identity
+  - id: OWNER-EMPIRICAL-EXECUTION
+    text: Empirical execution
+    detail: model spend; >=3 human raters; blind human matching review; freeze decision
+  - id: OWNER-EXTERNAL-PUBLICATION
+    text: External peer review and publication
+    detail: preprint server, journal, DOI archive, or any submission under the owner's identity
+  - id: OWNER-PRIVATE-MATERIAL
+    text: Publication of private material
+    detail: internal casebook, longitudinal record, screenshots, transcripts
+  - id: OWNER-PAID-SOURCE
+    text: Acquisition of a genuinely inaccessible paid source
+    detail: none currently identified; standing category only
   research_residuals_with_triggers:
   - id: RR-1
     burden: edition-level pagination for six classical loci
@@ -53,8 +65,9 @@ authored:
     pdfs: reproducibly built and visually inspected draft artifacts
     legal_publication: open on license, identity, peer review, and external submission
 derived:
-  source_commit_at_generation: e027067e6a1a1a558fd8e73ea64352f821043b02
-  tracked_files: 226
+  source_tree_digest: 010b08e4acff6005175a252fd98acebcd1a58c46a65f94f590dc2b926a45b796
+  source_tree_digest_policy: docs/project-state-inputs.yaml
+  tracked_files: 231
   decision_ids:
   - '0001'
   - '0002'
@@ -102,9 +115,10 @@ derived:
   - validate_repo.py
   - validate_schemas.py
   - validate_source_status.py
+  - validate_state_convergence.py
   - validate_type_token_semantics.py
   - validate_verdict_semantics.py
-  validator_count: 17
+  validator_count: 18
   fixture_counts:
     verdict: 7
     reason: 8

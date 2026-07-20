@@ -30,3 +30,32 @@ Adopted from the bounded `daee-epistemics` import set: **after any burden dispos
 ## Consequences
 
 Counts and statuses stop being independently editable prose. The R2/R3 historical documents keep their bodies; their stale numbers are superseded by this generated state rather than rewritten. Ordinary research burdens are structurally separated from owner-only ones, so the owner list cannot silently inflate again.
+
+---
+
+## Amendment (2026-07-20, R4 independent review) — convergent drift key and exact surface validation
+
+The body above is preserved as adopted. This amendment replaces one derived field and strengthens the surface checks; everything else stands.
+
+### A1. Why the original derived block could not converge
+
+The original `derived` block recorded `source_commit_at_generation = git rev-parse HEAD` inside the tracked state file, and `--check` demanded exact file equality. Committing a regenerated file necessarily creates a **new** HEAD, so the stored value was stale again on the very commit that contained it. Exact equality between a commit hash and a value embedded inside that same commit is a self-referential, non-convergent contract — the CI failure on the R4 candidate head was a structural consequence of the design, not an operational slip, and repeated regenerate-and-commit cycles could never have fixed it.
+
+### A2. The new invariant
+
+`derived.source_tree_digest` = SHA-256 over the concatenation of sorted records `relative-path NUL file-sha256 LF`, one per git-tracked file in the declared source-input set. The inclusion/exclusion policy is machine-readable in `docs/project-state-inputs.yaml`. The digest is a pure function of file **contents**, never of git HEAD, so committing the regenerated state cannot invalidate it. No commit hash appears anywhere in the state file; informational commit provenance lives in git history and in the PDF source sidecars.
+
+### A3. How source, generated-surface, and artifact changes are distinguished
+
+- **Source inputs** (everything tracked and not excluded): any content change alters the digest and forces a state regeneration.
+- **Generated surfaces with their own drift checks** (`docs/generated/`, the release manifest, `docs/current-state.yaml` itself): excluded from the digest; each is guarded by its own generator `--check` or `git diff` gate, so tampering is still caught — by the responsible check, not by a cycle.
+- **Built artifacts** (`artifacts/`): excluded from the digest; their identities are recorded as explicit hashes in `derived.pdfs` and enforced by the PDF byte-equality rebuild check.
+- **Closure/review reports** (`docs/project-closure/`): excluded because they report the derived state rather than defining it.
+
+### A4. Convergence is machine-proven, not asserted
+
+`scripts/validate_state_convergence.py` (CI) builds a throwaway git repository from the tree and proves: regenerate → commit → `--check` passes **on the commit containing the regenerated file**; the check is idempotent; tampering with a declared source input fails the check; mutating a digest-excluded generated file does not trip the digest.
+
+### A5. Exact public-surface validation replaces fuzzy matching
+
+Owner-only burdens now carry stable IDs (`OWNER-LICENSE`, `OWNER-CITATION-IDENTITY`, `OWNER-EMPIRICAL-EXECUTION`, `OWNER-EXTERNAL-PUBLICATION`, `OWNER-PRIVATE-MATERIAL`, `OWNER-PAID-SOURCE`) in `authored.owner_only_burdens`. `OPEN-DECISIONS.md` marks each burden with `<!-- owner-burden:ID -->`; `validate_current_state.py` now enforces exact ID-set equality (missing, extra, and duplicate burdens all fail) and verbatim authored titles on the marker lines. README's decision range and example count and STATUS's per-lane claim wording are validated through explicit `<!-- state:... -->` marker blocks by exact comparison, not substring search. The whole-state reread rule (§3 above) is unchanged.

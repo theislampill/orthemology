@@ -53,35 +53,63 @@ def main():
                           "--check"], cwd=ROOT, stdout=subprocess.DEVNULL)
     check("derived block is current (no drift)", rc == 0, "run scripts/generate_current_state.py")
 
-    check("VERSION names the current revision (%s)" % rev, read("VERSION").strip().startswith(rev))
+    ver_first = (read("VERSION").split("\n") or [""])[0].strip()
+    check("VERSION first line is exactly the authored revision label",
+          ver_first.rstrip(".") == a["revision_label"],
+          "VERSION=%r authored=%r" % (ver_first, a["revision_label"]))
 
     for key, rel in a["primary_documents"].items():
         head = "\n".join(read(rel).split("\n")[:16])
         check("header of %s names %s" % (rel, rev), rev in head,
               "header still names an older revision")
 
+    def marker(text, name):
+        m = re.search(r"<!--\s*state:%s\s*-->(.*?)<!--\s*/state:%s\s*-->" % (name, name),
+                      text, re.S)
+        return m.group(1).strip() if m else None
+
     readme = read("README.md")
-    ids = d["decision_ids"]
+    ids = [str(i).zfill(4) for i in d["decision_ids"]]
     lo, hi = min(ids), max(ids)
-    check("README decision range covers %s-%s" % (lo, hi),
-          re.search(r"%s\s*[-–]\s*%s" % (lo, hi), readme) is not None,
-          "README decision range is stale")
+    got_range = marker(readme, "decision-range")
+    check("README decision-range marker is exactly %s–%s" % (lo, hi),
+          got_range == "%s–%s" % (lo, hi),
+          "marker content is %r" % got_range)
     n_ex = d["example_json_count"]
-    m = re.search(r"(\d+|one|two|three|four|five|six|seven|eight|nine|ten)\s+machine-readable", readme)
     words = {"one": 1, "two": 2, "three": 3, "four": 4, "five": 5, "six": 6,
              "seven": 7, "eight": 8, "nine": 9, "ten": 10}
-    stated = None
-    if m:
-        tok = m.group(1)
-        stated = int(tok) if tok.isdigit() else words.get(tok)
-    check("README machine-readable example count matches (%d)" % n_ex, stated == n_ex,
-          "README says %r, tree has %d" % (stated, n_ex))
+    got_ex = marker(readme, "example-json-count")
+    stated = int(got_ex) if (got_ex or "").isdigit() else words.get(got_ex)
+    check("README example-json-count marker matches the tree (%d)" % n_ex, stated == n_ex,
+          "marker content is %r, tree has %d" % (got_ex, n_ex))
 
+    # OPEN-DECISIONS: exact owner-burden ID set — no extras, omissions, duplicates,
+    # or stale titles. Burden IDs are stable (Decision 0014 amendment).
     od = read("OPEN-DECISIONS.md")
-    for burden in a["owner_only_burdens"]:
-        key = burden.split("(")[0].strip().split(";")[0]
-        head = " ".join(key.split()[:3]).lower()
-        check("OPEN-DECISIONS covers owner burden %r" % head, head in od.lower())
+    marker_lines = {}
+    dupes = []
+    for line in od.split("\n"):
+        for mid in re.findall(r"<!--\s*owner-burden:([A-Z0-9-]+)\s*-->", line):
+            if mid in marker_lines:
+                dupes.append(mid)
+            else:
+                marker_lines[mid] = line
+    authored_ids = [b["id"] for b in a["owner_only_burdens"]]
+    check("OPEN-DECISIONS has no duplicate owner-burden ID", not dupes,
+          "duplicated: %s" % sorted(set(dupes)))
+    check("OPEN-DECISIONS covers every authored owner burden",
+          set(authored_ids) <= set(marker_lines),
+          "missing: %s" % sorted(set(authored_ids) - set(marker_lines)))
+    check("OPEN-DECISIONS lists no extra owner burden",
+          set(marker_lines) <= set(authored_ids),
+          "extra: %s" % sorted(set(marker_lines) - set(authored_ids)))
+    check("no authored owner-burden ID is duplicated in the state file",
+          len(authored_ids) == len(set(authored_ids)))
+    for b in a["owner_only_burdens"]:
+        line = marker_lines.get(b["id"], "")
+        check("OPEN-DECISIONS %s line carries the authored title verbatim" % b["id"],
+              b["text"].lower() in line.lower(),
+              "authored title %r not on the marker line" % b["text"])
     for banned in ["classical-edition verification", "schema repair", "source verification is owner"]:
         check("OPEN-DECISIONS free of ordinary-research burden %r" % banned,
               banned.lower() not in od.lower())
@@ -91,6 +119,33 @@ def main():
     check("STATUS carries the empirical status",
           "no designed study" in status.lower() or "not run" in status.lower())
     check("STATUS records the open license decision", "license" in status.lower())
+
+    # STATUS claim-status-by-lane block: exact equality with the authored wording.
+    lane_block = marker(status, "claim-status-by-lane")
+    check("STATUS has the claim-status-by-lane marker block", lane_block is not None)
+    if lane_block is not None:
+        got = {}
+        bad_lines = []
+        for line in lane_block.split("\n"):
+            line = line.strip()
+            if not line:
+                continue
+            m = re.match(r"-\s*([a-z_]+):\s*(.*)$", line)
+            if m:
+                got[m.group(1)] = m.group(2).strip()
+            else:
+                bad_lines.append(line)
+        check("claim-status block has only well-formed '- lane: wording' lines",
+              not bad_lines, "unparsed: %r" % bad_lines[:2])
+        want = {k: " ".join(str(v).split()) for k, v in a["claim_status_wording"].items()}
+        got = {k: " ".join(v.split()) for k, v in got.items()}
+        check("claim-status block lane set is exactly the authored set",
+              set(got) == set(want),
+              "missing=%s extra=%s" % (sorted(set(want) - set(got)),
+                                       sorted(set(got) - set(want))))
+        for k in sorted(set(got) & set(want)):
+            check("claim-status wording for lane %r is verbatim" % k, got[k] == want[k],
+                  "surface=%r authored=%r" % (got[k], want[k]))
 
     for rel in ["README.md", "STATUS.md", "VERSION", "docs/CITING.md"]:
         t = read(rel).lower()

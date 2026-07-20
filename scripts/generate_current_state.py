@@ -8,8 +8,12 @@ The file has two blocks:
              The generator PRESERVES this block verbatim.
   derived:   everything countable or hashable from the tree (decision IDs,
              schema/example/fixture/validator counts, PDF paths+hashes+pages,
-             terminology freeze hashes, source-status summary, artifact and
-             source revisions). The generator RECOMPUTES this block.
+             terminology freeze hashes, source-status summary, and the
+             convergent source_tree_digest drift key over the declared
+             source-input set in docs/project-state-inputs.yaml).
+             The generator RECOMPUTES this block. No commit hash appears in
+             the derived block: exact equality with a value derived from HEAD
+             inside a tracked file cannot converge (Decision 0014 amendment).
 
 `--check` recomputes and fails on any drift instead of writing.
 """
@@ -30,10 +34,31 @@ except ImportError as e:
 
 ROOT = os.path.dirname(os.path.dirname(os.path.abspath(__file__)))
 STATE = os.path.join(ROOT, "docs", "current-state.yaml")
+INPUT_POLICY = os.path.join(ROOT, "docs", "project-state-inputs.yaml")
 
 
 def sha256(path):
     return hashlib.sha256(open(path, "rb").read()).hexdigest()
+
+
+def source_tree_digest():
+    """Convergent drift key (Decision 0014 amendment): SHA-256 over sorted
+    "relpath NUL file-sha256 LF" records for every git-tracked file not excluded
+    by docs/project-state-inputs.yaml. Contains no commit hash, so committing the
+    regenerated state file cannot invalidate it."""
+    policy = yaml.safe_load(open(INPUT_POLICY, encoding="utf-8"))
+    excl = policy.get("exclude", [])
+
+    def excluded(rel):
+        return any(rel.startswith(e) if e.endswith("/") else rel == e for e in excl)
+
+    rows = []
+    for rel in sorted(f for f in git("ls-files").splitlines() if f):
+        p = os.path.join(ROOT, rel)
+        if excluded(rel) or not os.path.isfile(p):
+            continue
+        rows.append(rel + "\x00" + sha256(p) + "\n")
+    return hashlib.sha256("".join(rows).encode("utf-8")).hexdigest()
 
 
 def git(*args, default="UNKNOWN"):
@@ -106,7 +131,8 @@ def derive():
         fixtures["invalid_records"] = len([f for f in os.listdir(inv) if f.endswith(".json")])
 
     return {
-        "source_commit_at_generation": git("rev-parse", "HEAD"),
+        "source_tree_digest": source_tree_digest(),
+        "source_tree_digest_policy": "docs/project-state-inputs.yaml",
         "tracked_files": len(git("ls-files").splitlines()),
         "decision_ids": decision_ids,
         "decision_count": len(decision_ids),

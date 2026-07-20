@@ -2,12 +2,14 @@ name: validate
 on:
   push:
   pull_request:
+permissions:
+  contents: read
 jobs:
   validate:
     runs-on: ubuntu-latest
     steps:
-      - uses: actions/checkout@v4
-      - uses: actions/setup-python@v5
+      - uses: actions/checkout@v6
+      - uses: actions/setup-python@v6
         with:
           python-version: "3.11"
       - name: Install pinned dependencies (no live web checks anywhere in CI)
@@ -16,6 +18,8 @@ jobs:
         run: python scripts/validate_repo.py
       - name: Generated project state — drift check (R4, Decision 0014)
         run: python scripts/generate_current_state.py --check
+      - name: State-contract convergence proof (commit boundary + tamper controls)
+        run: python scripts/validate_state_convergence.py
       - name: Public state surfaces agree with the generated state
         run: python scripts/validate_current_state.py
       - name: Source-status registry + prose agreement (R4, Decision 0013)

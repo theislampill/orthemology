@@ -16,4 +16,19 @@
 
 **Correction carried by R4 (SELF-1):** the R2 and R3 closeout prose reported the pilot-0 **v1** freeze hash as `ece0412f…`. The committed `terminology/pilot0/FREEZE-HASH.txt` has recorded `988a6522498df73ad1c7b0f73961a054ff20862d50fff6d644d0274877412772` since it was created, and `freeze_pilot0.py --check` has always passed against it. The packet was never wrong; three R3 documents and two closeout messages mis-stated the value. The historical documents' bodies are preserved; the correction is recorded here, in the R4 correction ledger, and is now machine-checked by `validate_current_state.py`.
 
+## Claim status by lane
+
+Exact per-lane claim wording, generated-format and machine-checked against `authored.claim_status_wording` in [docs/current-state.yaml](docs/current-state.yaml):
+
+<!-- state:claim-status-by-lane -->
+- formal: internally coherent current specification under the declared definitions, schemas, positive and adversarial fixtures, source-status contract, and acknowledged open parameters
+- manuscript: complete research draft, source-verified to the stated threshold; not peer reviewed; not empirically validated
+- companion_school_neutral: complete conditional philosophical draft; no claim of universal proof
+- companion_athari: complete, source-verified-to-threshold, explicitly Athari/Taymiyyan school-internal draft; comparative positions accurately sourced; not a neutral theological conclusion
+- terminology: matched instrument-ready v2, not run; no term adopted
+- empirical: not run / open
+- pdfs: reproducibly built and visually inspected draft artifacts
+- legal_publication: open on license, identity, peer review, and external submission
+<!-- /state:claim-status-by-lane -->
+
 Reconciliation state: **D1/M1/O2** (owner decisions, R1) and decisions **0004–0015** remain intact and are not reopened. Remaining owner-only burdens: [OPEN-DECISIONS.md](OPEN-DECISIONS.md).
