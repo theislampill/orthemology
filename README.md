@@ -1,6 +1,6 @@
 # Orthemology
 
-**Status: research-stage draft. Not peer reviewed. No completed empirical validation. Coined terminology is benchmark-gated, not adopted. See [STATUS.md](STATUS.md).**
+**Status: research-stage draft (R5); fresh-session repository review completed; not external human peer review; not empirically validated. Coined terminology is benchmark-gated, not adopted. See [STATUS.md](STATUS.md).**
 
 Orthemology is a proposed theory of how concrete cases get correctly classified, handled, and audited by rule-governed processes — human, institutional, or automated. It gives first-class, auditable structure to a familiar but usually implicit architecture:
 
@@ -23,7 +23,7 @@ The final assertion ("this pillar is orthogonal") is a **placement claim** judge
 - **Worked case:** [`examples/compaction-stale-steer.md`](examples/compaction-stale-steer.md) (the stale-directive pattern) plus <!-- state:example-json-count -->nine<!-- /state:example-json-count --> machine-readable episode examples under [`examples/`](examples/) validated against [`schemas/`](schemas/).
 - **Companion (metaphysical/theological — complete drafts, separate and firewalled):** [`companion/`](companion/README.md).
 - **Terminology program (READY TO RUN, NOT RUN):** [`terminology/`](terminology/README.md).
-- **Decision records:** [`docs/decisions/`](docs/decisions/) — <!-- state:decision-range -->0001–0015<!-- /state:decision-range -->: 0001–0003 (owner reconciliation R1), 0004–0008 (autonomous closure R2), 0009–0010 (type/token, soundness bearers, orthability senses — R3), 0011–0015 (claim-relative reasoning paths, reference-model semantic contract, source-status normalization, generated project state, latent-state boundary — R4).
+- **Decision records:** [`docs/decisions/`](docs/decisions/) — <!-- state:decision-range -->0001–0016<!-- /state:decision-range -->: 0001–0003 (owner reconciliation R1), 0004–0008 (autonomous closure R2), 0009–0010 (type/token, soundness bearers, orthability senses — R3), 0011–0015 (claim-relative reasoning paths, reference-model semantic contract, source-status normalization, generated project state, latent-state boundary — R4).
 - **Generated project state:** [`docs/current-state.yaml`](docs/current-state.yaml) — the canonical machine-readable revision, counts, statuses, and burdens; VERSION/README/STATUS/OPEN-DECISIONS are checked against it in CI.
 - **Sourcing:** [`references/orthemology.bib`](references/orthemology.bib) + [`docs/sourcing/`](docs/sourcing/) — per-claim verification statuses.
 - **Closure accounting:** [`docs/project-closure/`](docs/project-closure/) — formal audit, counterexample ledger, reviews, burden ledger.

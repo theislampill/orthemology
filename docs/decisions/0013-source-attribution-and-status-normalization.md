@@ -1,6 +1,6 @@
 # Decision 0013 — Source attribution and source-status normalization
 
-**Date:** 2026-07-20 · **Authority:** R4 owner authorization · **Status:** adopted in a **candidate revision requiring independent review** · **Reopens nothing;** the owner's adopted Atharī thesis is unchanged — only evidence status and attribution precision are corrected.
+**Date:** 2026-07-20 · **Authority:** R4 owner authorization · **Status:** adopted in a **candidate revision requiring independent review** *(historical wording; review discharged 2026-07-20 by the fresh-session review and protected merge — docs/project-closure/r4-fresh-fable-review/FABLE-REVIEW-SIGNOFF.md, Decision 0016)* · **Reopens nothing;** the owner's adopted Atharī thesis is unchanged — only evidence status and attribution precision are corrected.
 
 ## Problem
 

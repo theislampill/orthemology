@@ -23,6 +23,7 @@ decisions:
   "0013": {status: adopted, title: source attribution and status normalization}
   "0014": {status: adopted, title: generated project state and whole-state reread}
   "0015": {status: adopted, title: latent-state observation and representation boundary}
+  "0016": {status: adopted, title: current review state and historical supersession}
 normative_symbols:
   StrictlySoundReasoning_q:
     current:

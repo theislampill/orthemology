@@ -3,7 +3,7 @@
 > **Provenance.** Multi-model draft lineage with successive review passes; original headers preserved verbatim in
 > [`docs/provenance/document-history.md`](../docs/provenance/document-history.md); nothing here is experimentally validated.
 
-**Revised manuscript draft — July 2026 (revision R4; candidate revision pending independent review). Not peer reviewed.**
+**Revised manuscript draft — July 2026 (revision R5; fresh-session repository review completed; not external human peer review; not empirically validated). Not peer reviewed.**
 
 ## Abstract
 

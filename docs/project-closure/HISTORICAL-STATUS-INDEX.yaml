@@ -1,0 +1,59 @@
+# Machine-readable status classification for project-closure artifacts (Decision 0016).
+# Every file under docs/project-closure/ must be covered by exactly one matching rule
+# (first match wins; per-path overrides precede prefix rules). Historical bodies are
+# preserved verbatim; this index — not rewriting — expresses supersession.
+# scripts/validate_review_state.py enforces coverage and the current/historical split.
+schema: orthemology-historical-status-v1
+statuses:
+  current: maintained by the current revision; may be cited as current state
+  current-signoff: the standing review sign-off the current revision points to
+  historical-snapshot: point-in-time record of an earlier pass; body preserved; not current state
+  superseded: historical record whose operative content is replaced by a named successor
+  interruption-provenance: containment/provenance evidence of the R4 model-substitution event; never current state
+rules:
+- path: docs/project-closure/HISTORICAL-STATUS-INDEX.yaml
+  status: current
+- path: docs/project-closure/r4-fresh-fable-review/FABLE-REVIEW-SIGNOFF.md
+  status: current-signoff
+  note: standing sign-off of the fresh-session R4 recovery review; merge facts live in the R5 verification record
+- path: docs/project-closure/r4-fresh-fable-review/AUTONOMOUS-REVIEW-STATE.json
+  status: historical-snapshot
+  note: >-
+    PRE-MERGE durable state of the fresh review, deliberately preserved unmodified; its
+    "merge pending" wording describes the moment before PR #3 merged. Superseded as a
+    statement of current state by docs/project-closure/r5/FINAL-MERGED-STATE.json.
+- path: docs/project-closure/r4/R4-UNAVOIDABLE-OWNER-ACTIONS.md
+  status: superseded
+  note: item 7 discharged 2026-07-20 (fresh-session review + protected merge); current burdens live in docs/current-state.yaml and OPEN-DECISIONS.md
+- prefix: docs/project-closure/r4/interruption/
+  status: interruption-provenance
+- path: docs/project-closure/r4/MODEL-SUBSTITUTION-INTERRUPTION-PR3.md
+  status: interruption-provenance
+- prefix: docs/project-closure/r5/
+  status: current
+- prefix: docs/project-closure/r4-fresh-fable-review/
+  status: historical-snapshot
+  note: phase reports of the completed fresh review (evidence trail of a finished pass)
+- prefix: docs/project-closure/r4-independent-review/
+  status: historical-snapshot
+  note: the R4 candidate session's own phase reports; the two post-substitution reports carry additive provenance qualifiers
+- prefix: docs/project-closure/r4/
+  status: historical-snapshot
+- prefix: docs/project-closure/r3/
+  status: historical-snapshot
+- prefix: docs/project-closure/reviews/
+  status: historical-snapshot
+  note: R2-era adversarial reviews
+- path: docs/project-closure/UNAVOIDABLE-OWNER-ACTIONS.md
+  status: superseded
+  note: R2-era owner list; current burdens live in docs/current-state.yaml and OPEN-DECISIONS.md
+- path: docs/project-closure/CLOSURE-BURDEN-LEDGER.md
+  status: historical-snapshot
+- path: docs/project-closure/COUNTEREXAMPLE-LEDGER-R2.md
+  status: historical-snapshot
+- path: docs/project-closure/FORMAL-AUDIT-R2.md
+  status: historical-snapshot
+- path: docs/project-closure/PROJECT-CLOSURE-REPORT-R2.md
+  status: historical-snapshot
+- path: docs/project-closure/PUBLICATION-READINESS-R2.md
+  status: historical-snapshot

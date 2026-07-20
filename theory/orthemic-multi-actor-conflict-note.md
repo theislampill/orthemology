@@ -1,6 +1,6 @@
 # Multi-Actor / Zero-Sum Orthemic Note — stress test, corrections, and formal residue
 
-**Status (revision R4, 2026-07-20; candidate revision pending independent review):** derived multi-actor extension of the formal core; typing follows decisions 0009–0015; nothing here is experimentally validated.
+**Status (revision R5, 2026-07-20; fresh-session repository review completed; not external human peer review; not empirically validated):** derived multi-actor extension of the formal core; typing follows decisions 0009–0015; nothing here is experimentally validated.
 
 > **Provenance.** Written from three informal zero-sum discussion notes
 > supplied to the project (private; not published), treated as a THEORY

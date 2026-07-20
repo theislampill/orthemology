@@ -2,9 +2,20 @@ schema: orthemology-current-state-v1
 note: GENERATED derived block — edit only the authored block, then run scripts/generate_current_state.py.
   CI checks for drift.
 authored:
-  revision: R4
-  revision_label: R4 (2026-07-20) — semantic-contract, source-integrity, and project-state tie-off
+  revision: R5
+  revision_label: R5 (2026-07-20) — final public-state and evidence-boundary tie-off
   release_status: research revision, not a numbered stable release; no tag, DOI, or archival claim
+  review_state:
+    status: fresh-session-review-completed
+    scope: repository/formal/schema/source-internal review of the mixed-provenance R4 candidate; not external
+      human peer review
+    current_signoff: docs/project-closure/r4-fresh-fable-review/FABLE-REVIEW-SIGNOFF.md
+    current_merge_verification: docs/project-closure/r5/FINAL-MERGED-VERIFICATION.md
+    historical_status_index: docs/project-closure/HISTORICAL-STATUS-INDEX.yaml
+    empirical_validation: not run
+    terminology_adoption: none
+    header_wording: fresh-session repository review completed; not external human peer review; not empirically
+      validated
   primary_documents:
     manuscript: manuscript/orthemma-ortheme-systems-revised-draft.md
     formal_core: theory/orthemic-core-formalization.md
@@ -65,9 +76,9 @@ authored:
     pdfs: reproducibly built and visually inspected draft artifacts
     legal_publication: open on license, identity, peer review, and external submission
 derived:
-  source_tree_digest: ad05078fb068f3e819728a62f824872551faf76c4f3bd69af4199f943718c2fb
+  source_tree_digest: 3681f29f977158b45bc570679a9a60dfd75af66ec32c3d393c87a5f9151dd89f
   source_tree_digest_policy: docs/project-state-inputs.yaml
-  tracked_files: 282
+  tracked_files: 287
   decision_ids:
   - '0001'
   - '0002'
@@ -84,7 +95,8 @@ derived:
   - '0013'
   - '0014'
   - '0015'
-  decision_count: 15
+  - '0016'
+  decision_count: 16
   schemas:
   - analysis.schema.json
   - claim-ledger.schema.json
@@ -116,12 +128,13 @@ derived:
   - validate_reason_fixtures.py
   - validate_recursive_mutations.py
   - validate_repo.py
+  - validate_review_state.py
   - validate_schemas.py
   - validate_source_status.py
   - validate_state_convergence.py
   - validate_type_token_semantics.py
   - validate_verdict_semantics.py
-  validator_count: 21
+  validator_count: 22
   fixture_counts:
     verdict: 7
     reason: 8
