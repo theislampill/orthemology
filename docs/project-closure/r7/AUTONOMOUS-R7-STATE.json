@@ -9,7 +9,7 @@
     "branch": "closure/r7-noetic-application-experiment-validity",
     "daee_pinned_commit": "c86b3c6673147b8802fe222373a165a37d4d24a8"
   },
-  "last_completed_action": "Phases B-J complete under Opus 4.8: 0020/0021/0022; FCSP-2/ER-2 built+methods-gated; R6 packets historical byte-frozen; DAEE typed crosswalk+firewall+fixtures+boundary; docs reconciled (R6 merged label kept; R7 = candidate); 38/38 suite green",
+  "last_completed_action": "All phases complete under Opus 4.8. Branch pushed; DRAFT PR #8 opened; branch CI success (run at 145a43c); fresh-clone 38/38 green + clean tree + R1-R6 history/frozen packets unchanged. NOT merged; main untouched at 43fee0f5.",
   "tests_run": [
     {
       "tree": "fresh clone @ 43fee0f5 (lock venv)",
@@ -17,15 +17,16 @@
       "result": "0 failing"
     }
   ],
-  "unresolved_findings": [
-    "FCSP 1-10 + ER 1-10 + DAEE mapping-depth finding \u2014 all reproduced; repairs pending Phases B-K"
-  ],
-  "next_action": "Phase K adversarial reviews; commit; push branch + open DRAFT PR; DO NOT MERGE / DO NOT PUSH MAIN",
+  "unresolved_findings": [],
+  "next_action": "AWAIT genuine-Fable session or owner: re-verify from clean clone, then ready+merge PR #8 through protection. This Opus session does NOT merge.",
   "substitution_record": "docs/project-closure/r7/MODEL-SUBSTITUTION-INTERRUPTION-R7.md",
   "owner_constraints_under_substitute": [
     "branch/PR only; no merge; no push to main; no ready-for-merge state change",
     "commit trailers: Co-Authored-By: Claude Opus 4.8",
     "sequential; no subagents",
     "deliver R7 as a DRAFT PR for genuine-Fable / owner review and merge"
-  ]
+  ],
+  "draft_pr": 8,
+  "candidate_head": "145a43c8d85b7b398202e481993f18c2fcf078c1",
+  "merged": false
 }
