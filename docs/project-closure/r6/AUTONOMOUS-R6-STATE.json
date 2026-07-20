@@ -1,0 +1,17 @@
+{
+  "record": "R6 experiment-readiness / sourcing-state tie-off — durable execution state",
+  "session_surfaced_model": "claude-fable-5",
+  "session_substitution_observed": false,
+  "historical_attributed_observations_preserved": true,
+  "topology": {
+    "starting_main": "6df15cbd3c2ce851de3d968207212ead86ecbf25",
+    "archive_sha256": "581a693c4f5e0c9adde5ac999e8c4cac71c938c4a3bea16622beb5bd662b3002",
+    "archive_matches_live_main": true,
+    "branch": "closure/r6-experiment-readiness-sourcing-state"
+  },
+  "last_completed_action": "Phase A: clean clone, 28/28 baseline suite green at 6df15cbd, all 12 audit findings reproduced",
+  "files_changed": ["docs/project-closure/r6/*"],
+  "tests_run": [{"tree": "fresh clone @ 6df15cbd", "suite": "validate.yml, 28 steps", "result": "0 failing"}],
+  "unresolved_findings": ["B1-B6 + M1-M4 reproduced; repairs pending Phases B-K"],
+  "next_action": "Commit Phase A report; Phase B experiment-state contract (Decision 0018)"
+}
