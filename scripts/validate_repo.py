@@ -46,6 +46,17 @@ def main():
     files = list(text_files())
     rel = lambda p: os.path.relpath(p, ROOT).replace("\\", "/")
 
+    # 0: no tracked cache/bytecode artifact (R4 fresh review, Phase A4/E).
+    # .gitignore excludes __pycache__/ but cannot un-track a force-added file;
+    # this is the standing guard against that class entering history.
+    try:
+        tracked = subprocess.check_output(["git", "ls-files"], cwd=ROOT).decode()
+        cached = sorted(f for f in tracked.splitlines()
+                        if "__pycache__" in f or f.endswith((".pyc", ".pyo")))
+        check("no cache/bytecode artifact is git-tracked", not cached, str(cached[:5]))
+    except Exception as e:  # git absent: state the boundary instead of guessing
+        check("no cache/bytecode artifact is git-tracked (git unavailable: %s)" % e, True)
+
     # 1-3: banned patterns / secrets
     offenders = {}
     for p in files:
@@ -54,7 +65,16 @@ def main():
         try:
             c = open(p, "r", encoding="utf-8", errors="strict").read()
         except UnicodeDecodeError:
-            check("utf-8 readable: " + rel(p), False)
+            # a file the repository itself declares binary (.gitattributes -text,
+            # e.g. the binary-capable interruption patch) is exempt from the
+            # utf-8 text contract; anything else must be utf-8 (R4 fresh review)
+            try:
+                attr = subprocess.check_output(
+                    ["git", "check-attr", "text", "--", rel(p)], cwd=ROOT).decode()
+                declared_binary = attr.strip().endswith("unset")
+            except Exception:
+                declared_binary = False
+            check("utf-8 readable (or declared binary): " + rel(p), declared_binary)
             continue
         for pat, why in BANNED:
             if re.search(pat, c):

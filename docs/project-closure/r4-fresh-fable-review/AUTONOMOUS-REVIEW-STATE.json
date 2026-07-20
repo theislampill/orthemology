@@ -1,5 +1,5 @@
 {
-  "record": "R4 PR #3 fresh Fable substitution-recovery review — durable execution state",
+  "record": "R4 PR #3 fresh Fable substitution-recovery review \u2014 durable execution state",
   "session_surfaced_model": "claude-fable-5",
   "session_substitution_observed": false,
   "historical_attributed_observations": {
@@ -17,24 +17,53 @@
     "review_branch": "review/r4-pr3-fable-recovery",
     "review_branch_base": "de19ccf4b3525ae536bb9bc163aefcd9f4bfedf8"
   },
-  "last_completed_action": "Phase A read-only reproduction complete; READONLY-REPRODUCTION.md written",
+  "last_completed_action": "Phase D quarantine selective port complete (interruption record ported, ref validator hardened+ported, cache guard, PDFs rebuilt+inspected, state+manifest regenerated in order)",
   "changed_files": [
-    "docs/project-closure/r4-fresh-fable-review/READONLY-REPRODUCTION.md",
-    "docs/project-closure/r4-fresh-fable-review/AUTONOMOUS-REVIEW-STATE.json"
+    "docs/project-closure/r4-fresh-fable-review/* (4 reports + state)",
+    "docs/semantic-roles.yaml",
+    "scripts/validate_decision_dependencies.py",
+    "docs/sourcing/SOURCING-LEDGER.md",
+    "docs/project-closure/r4-independent-review/* (2 provenance qualifiers)",
+    "docs/project-closure/r4/* (ported interruption record)",
+    "scripts/validate_internal_references.py (+hardenings)",
+    "docs/reference-exemptions.yaml",
+    ".github/workflows/validate.yml",
+    "scripts/validate_repo.py (cache guard + declared-binary)",
+    "artifacts/* (rebuilt)",
+    "docs/current-state.yaml",
+    "docs/provenance/RELEASE-MANIFEST.sha256"
   ],
   "tests_run": [
-    {"tree": "worktree @ 63d15ecf (clean)", "suite": "commit's validate.yml, 17 steps", "result": "0 failing"},
-    {"tree": "worktree @ 00cf05d6 (clean)", "suite": "commit's validate.yml, 25 steps", "result": "0 failing"},
-    {"tree": "worktree @ de19ccf4 (clean)", "suite": "commit's validate.yml, 25 steps", "result": "1 failing: build_pdfs.py --check (TOTAL: 4 failures)"},
-    {"tree": "worktree @ 8df2886e (clean)", "suite": "commit's validate.yml, 26 steps", "result": "4 failing: validate_repo, generate_current_state --check, validate_current_state, manifest step; build_pdfs --check GREEN"}
+    {
+      "tree": "worktree @ 63d15ecf (clean)",
+      "suite": "commit's validate.yml, 17 steps",
+      "result": "0 failing"
+    },
+    {
+      "tree": "worktree @ 00cf05d6 (clean)",
+      "suite": "commit's validate.yml, 25 steps",
+      "result": "0 failing"
+    },
+    {
+      "tree": "worktree @ de19ccf4 (clean)",
+      "suite": "commit's validate.yml, 25 steps",
+      "result": "1 failing: build_pdfs.py --check (TOTAL: 4 failures)"
+    },
+    {
+      "tree": "worktree @ 8df2886e (clean)",
+      "suite": "commit's validate.yml, 26 steps",
+      "result": "4 failing: validate_repo, generate_current_state --check, validate_current_state, manifest step; build_pdfs --check GREEN"
+    },
+    {
+      "tree": "review branch worktree (Phase D)",
+      "suite": "state/convergence/manifest/repo/internal-refs/source family",
+      "result": "0 failures each"
+    }
   ],
   "unresolved_findings": [
-    "Phase B: pre-substitution range review pending",
-    "Phase C: post-substitution hunk review pending (Decision 0015 bounded, source-status scope, CIR, ATH-3, internal references)",
-    "Phase D: quarantine selective port pending (interruption record, PDFs, ref validator, state/manifest regeneration order)",
     "Phase E: full acceptance + tracked-cache preventive check + adversarial probes pending",
     "Phase F: six adversarial passes pending",
     "Sign-off, PR update, merge, merged-main verification pending"
   ],
-  "next_action": "Commit Phase A artifacts on review/r4-pr3-fable-recovery, then begin Phase B (pre-substitution range review 25d035a..00cf05d6)"
+  "next_action": "Commit Phase D, then Phase E full acceptance run + adversarial probes"
 }

@@ -1,0 +1,12 @@
+.github/workflows/validate.yml
+artifacts/orthability-divine-speech-athari-draft.pdf
+artifacts/orthability-divine-speech-athari-draft.sources.json
+artifacts/orthability-ground-of-intelligibility-draft.pdf
+artifacts/orthability-ground-of-intelligibility-draft.sources.json
+artifacts/orthemic-core-reference-draft.pdf
+artifacts/orthemic-core-reference-draft.sources.json
+artifacts/orthemma-ortheme-systems-draft.pdf
+artifacts/orthemma-ortheme-systems-draft.sources.json
+docs/current-state.yaml
+docs/reference-exemptions.yaml
+scripts/validate_internal_references.py
