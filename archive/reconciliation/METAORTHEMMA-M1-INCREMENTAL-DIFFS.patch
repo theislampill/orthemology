@@ -1,0 +1,128 @@
+diff --git "a/archive/reconciliation\\candidates\\d1-stage\\orthemic-core-formalization-v2-candidate.md" "b/archive/reconciliation\\candidates\\orthemic-core-formalization-v2-candidate.md"
+index 811c8ab..96e4f35 100644
+--- "a/archive/reconciliation\\candidates\\d1-stage\\orthemic-core-formalization-v2-candidate.md"
++++ "b/archive/reconciliation\\candidates\\orthemic-core-formalization-v2-candidate.md"
+@@ -106,6 +106,16 @@ with signatures), not a new pole of the type–token architecture. Register
+ the subtype; do not coin the noun. If audits over episodes later prove to
+ need operations generic placement lacks, revisit under the same test.
+ 
++**Qualification (owner decision M1, 2026-07-19).** The rejection above
++concerns "meta-orthemma" as a name for the REIFIED EPISODE. The owner has
++since adopted a different object in the same name-neighborhood: the
++**metaorthemma** `μ̄` — an episode-local, case-bound CONFIGURATION TOKEN
++of a repeatable metaortheme (§2.2, §3, V3c in §4.1). It is not the whole
++episode and not the execution event; the rejection above stands for its
++original referent and does not adjudicate the token object (its revisit
++clause was exercised). The WORD "metaorthemma" remains a benchmark-gated
++candidate term; the OBJECT is adopted.
++
+ ---
+ 
+ ## 2. Episode signature (2B)
+@@ -136,7 +146,7 @@ for one placement inside an episode (2.3).
+ 
+ An **orthing episode** is a record
+ 
+-    e = ⟨ id;  m, κ, v;  x, H;  α, w, A, T, t;  μ⃗, π;  C⃗, p̂;  r;  ε;  Q;  δ;
++    e = ⟨ id;  m, κ, v;  x, H;  α, w, A, T, t;  μ⃗, MetaTok, π;  C⃗, p̂;  r;  ε;  Q;  δ;
+           hand_in, hand_out;  a, Succ ⟩
+ 
+ with components (each glossed in ordinary language):
+@@ -155,6 +165,7 @@ with components (each glossed in ordinary language):
+ | `T = task(A)` | task | the task component of `A`, retained as a separate readable component |
+ | `t` | time interval | when the episode ran |
+ | `μ⃗ = (μ₁,…,μ_k; ≼)` | metaorthemic configuration | the governing rules in force, with precedence order `≼` |
++| `MetaTok(e) = {μ̄_1,…,μ̄_j}` | concrete metaorthemmata (owner decision M1, 2026-07-19) | the case-bound CONFIGURATION TOKENS of governing types actually applied. Each `μ̄` records/references: its own identity and lineage; `(μ, ver(μ))` via the internal typing `MetaInst(μ̄, μ)`; `(A(e), ver(A(e)))` with `Compatible(μ̄, A(e))` — the token binds case-specific values WITHIN the declared analysis, references any value `A` fixes uniquely, and never overrides `A` without an explicit new analysis version; the target `(κ, v)`; governed component `g`; the case-specific binding map `B` (reference frame, tolerance value, fixture, success surface, …); scope `σ` incl. the claims in `Q` that depend on it; references to policy, evidence selector, instrument/tool and calibration provenance; the **binder** (actor/process that made the binding) with binding warrant `w_bind`, kept DISTINCT from the designated executor; binding time `t_bind`; validity/expiry/supersession. The token REFERENCES the episode's evidence `H`, trace, and output — it never absorbs them (the application-event view `ApplyEvent(μ̄, e) = ⟨μ̄, Trace_e\|_μ̄⟩` is derived, not primitive). **Zero-burden rule:** a configuration with no material case-specific binding, non-default scope, instrument/calibration, or independent validity condition gets no explicit token, and `V3c ∉ App(e)` |
+ | `π` | policy | the concrete procedure executed under `μ⃗` |
+ | `C⃗` | typed candidate families | open alternatives per uncertainty axis: `C^id ⊆ M` (which occurrence), `C^profile ⊆ Π_T` (which profile), `C^cause ⊆ K_T` (which cause), `C^route ⊆ R_T` (which route), `C^warrant ⊆ W_T` (which warrant state) — competing hypotheses may themselves be PROFILES, so candidates are not forced into single orthemes |
+ | `p̂ ∈ Π_T` | inferred placement | the profile actually placed (or a bounded set of profiles if unresolved) — **never coerced to a singleton ortheme**; `Ô ⊆ O` survives only as the derived flattening of `p̂` |
+@@ -233,6 +244,18 @@ applicable verdict indices and pathway adequacy conjoins only over
+ 
+ ## 3. Metaortheme semantics (2C)
+ 
++**Type vs token (owner decision M1, 2026-07-19).** This section describes
++the REPEATABLE side: the metaortheme type `μ` and its paired meta-policy
++`π_μ`. Their concrete, case-bound instantiation inside an episode is the
++**metaorthemma** `μ̄` (§2.2), typed by the internal relation
++`MetaInst(μ̄, μ)` — a typing of tokens, not a second ground-truth
++primitive — and subordinated to the episode's analysis by
++`Compatible(μ̄, A(e))`. Four layers stay separate: type `μ`; policy
++`π_μ`; token `μ̄` (binding); execution of the token (episode trace,
++judged by V3b). The corresponding adequacy questions are independent:
++adequate type, adequate policy, correctly bound token, faithful
++execution.
++
+ ### 3.1 Three models
+ 
+ - **(A) Higher-order STATE/TYPE.** A metaortheme is an ortheme *of the
+@@ -389,6 +412,25 @@ matter to audits; ordinary discussion may use the compact core:
+   written. An adequate rule + adequate policy + infidelic executor is a
+   distinct failure mode routing to a different remedy (retrain/replace
+   the executor, not rewrite the rule).
++- **V3c — governing-token adequacy (owner decision M1, 2026-07-19).**
++  `V3c(e) ⟺ ∧_{μ̄ ∈ MetaTok(e)} TokenAdequate(μ̄, e)`, where
++  `TokenAdequate(μ̄, e) ⟺ MetaInst(μ̄, μ) ∧ Compatible(μ̄, A(e)) ∧
++  Anchored(μ̄, κ(e), v(e)) ∧ ScopeCorrect(μ̄, Q(e)) ∧ Current(μ̄, t(e)) ∧
++  Provenanced(μ̄) ∧ AuthorizedBinding(μ̄)` — every applicable concrete
++  metaorthemma was correctly instantiated, analysis-compatible,
++  occurrence-anchored, correctly scoped to the claims it served, current,
++  provenanced, and bound under authority. PER-TOKEN statuses are preserved
++  alongside the episode-level conjunction (the auditor must see WHICH
++  governing application failed, e.g. `μ̄_2: stale calibration; μ̄_3: wrong
++  claim scope`). Isolates the failure mode the vector previously could
++  not name: correct standard (V3) + sound policy (V3a) + faithful
++  execution (V3b) + **defective case-specific binding** — wrong reference
++  plane, wrong-role tolerance, expired calibration, wrong fixture or
++  success surface. `MetaTok(e) = ∅ ⟹ V3c ∉ App(e)` (zero-burden rule).
++  *Ordering note:* the conceptual adequacy chain runs V3 → V3a → **V3c
++  (binding)** → V3b (execution) → V3d (decision-time); the lettering
++  keeps the temporary alphabetical index pending the deferred
++  verdict-index decision.
+ - **V3d — ex-ante procedural justification.** At decision time `t`, given
+   exactly the evidence then available, the placement was the reasonable
+   one under the declared loss/decision standard (gloss: blameless-at-the-
+@@ -604,7 +646,9 @@ axis of the executor, not of the episode's correctness or adequacy.
+ ## Status ledger
+ 
+ **Accepted (analytic/definitional):** level-indexing via `ι_n` with no
+-"meta-orthemma" noun (§1, counterargument recorded); the record-style
++episode-referent "meta-orthemma" noun (§1, counterargument recorded; per
++the §1 qualification, the owner-adopted configuration-token `μ̄` of
++2026-07-19 is a different object, carried in §2.2/§3/§4.1 V3c); the record-style
+ episode signature with typed candidate families, claim ledger, handoffs,
+ warrant, and labeled successors (§2.2); endpoint-plus-bounded-trace with
+ governance-declared granularity (§2.2a); split model (C) with the
+diff --git "a/archive/reconciliation\\candidates\\d1-stage\\orthemma-ortheme-systems-revised-draft-v2-candidate.md" "b/archive/reconciliation\\candidates\\orthemma-ortheme-systems-revised-draft-v2-candidate.md"
+index ced8fa0..07f259b 100644
+--- "a/archive/reconciliation\\candidates\\d1-stage\\orthemma-ortheme-systems-revised-draft-v2-candidate.md"
++++ "b/archive/reconciliation\\candidates\\orthemma-ortheme-systems-revised-draft-v2-candidate.md"
+@@ -510,11 +510,11 @@ declared governance boundary.
+ 
+ Following the core formalization, an orthing episode is a record
+ 
+-    e = ⟨ id;  m, κ, v;  x, H;  α, w, A, T, t;  μ⃗, π;  C⃗, p̂;  r;  ε;  Q;  δ;  hand_in, hand_out;  a, Succ ⟩
++    e = ⟨ id;  m, κ, v;  x, H;  α, w, A, T, t;  μ⃗, MetaTok, π;  C⃗, p̂;  r;  ε;  Q;  δ;  hand_in, hand_out;  a, Succ ⟩
+ 
+ — in words: which run this is; the concrete case with its identity key and version; what the episode saw, and the ordered typed evidence gathered (each item with property class,
+ scope, provenance, validity); who or what executed (`α` — populated even for mechanical executors) and under what warrant (`w`, distinct from both evidence and executor identity);
+-the declared analysis `A` (identifier and version — the index against which result correctness is judged), its task `T = task(A)` retained as a separate readable component, and the time; the governing metaorthemic configurations with precedence, and the concrete policy executed under them; the typed candidate families and the
++the declared analysis `A` (identifier and version — the index against which result correctness is judged), its task `T = task(A)` retained as a separate readable component, and the time; the governing metaorthemic configurations with precedence; `MetaTok(e)` — the concrete **metaorthemmata** (owner decision M1, 2026-07-19): case-bound configuration tokens of those governing types, each recording or referencing its identity and lineage, type-and-version via `MetaInst(μ̄, μ)`, analysis compatibility `Compatible(μ̄, A(e))`, occurrence anchor `(κ, v)`, governed component, case-specific binding map, scope with the claims that depend on it, policy/evidence-selector/instrument-and-calibration references, the binder with its binding warrant (kept distinct from the designated executor), binding time, and validity — referencing but never absorbing the episode's evidence and trace, and omitted entirely where no material case-specific binding exists (then V3c is inapplicable); the concrete policy executed under them; the typed candidate families and the
+ inferred placement `p̂` (profile-valued, never coerced to a singleton ortheme); the route; the per-claim evidence-status map; the claim ledger with required success surfaces; the
+ per-burden residual-disposition map; the incoming and outgoing handoff records; and the action with its labeled successor set. Components are defined *where applicable*: a
+ read-only classification episode has no action, no successors, an empty residual map — and `App(e)`, the recorded set of applicable verdict indices, keeps "deliberately none"
+@@ -538,6 +538,7 @@ All verdicts are predicates on an episode `e`; none entails another. Pathway ade
+ | **V3 — configuration adequacy** | Was each governing configuration adequate for the case's risk class — do its declared states separate what this case class can occupy, and can its selecting evidence actually discriminate them? |
+ | **V3a — policy adequacy** | Was the meta-policy/procedure well-formed for the configuration it ran under? (A sound rulebook can carry an ill-formed procedure.) |
+ | **V3b — executor fidelity** | Did the actor actually execute the procedure as written? (Adequate rule + adequate policy + infidelic executor routes to a different remedy: retrain or replace the executor, not rewrite the rule.) |
++| **V3c — governing-token adequacy** (owner decision M1, 2026-07-19) | Was every applicable concrete metaorthemma — the case-bound configuration token of a governing type (§8.2) — correctly instantiated, analysis-compatible, occurrence-anchored, correctly scoped to its claims, current, provenanced, and bound under authority? Per-token statuses are preserved alongside the episode-level conjunction; with no applicable token, V3c ∉ App(e) (zero-burden rule). Isolates: correct standard + sound policy + faithful execution + **defective case-specific binding** (wrong reference plane, wrong-role tolerance, expired calibration, wrong fixture or success surface). Conceptual order: V3 → V3a → V3c (binding) → V3b (execution) → V3d; lettering retained pending the verdict-index decision. |
+ | **V3d — ex-ante justification** | At decision time, on exactly the evidence then available, was the placement the reasonable one under the declared standard? (Blameless-at-the-time; indexed to decision time, unlike V2a/V2b, which are audit-time verdicts.) |
+ | **V4 — route safety** | Was the route admissible under the constraints in force? Correct-route-unavailable is recorded as routing failure, not diagnostic uncertainty. (A finer near-optimality verdict may be recorded separately: safe ≠ best.) |
+ | **V5 — closure truthfulness** | Does every residual carry an admissible disposition with traceable ownership, and does the completion claim match the ledger — no collapse of deferred/transferred/risk-accepted into "resolved"? |
+@@ -867,6 +868,7 @@ replication of even the observational tier does not yet exist.
+ - **Placement / apprehension.** Assigning an inferred profile / the whole encounter-to-disposition process.
+ - **Route-sufficient apprehension.** Enough of the profile to route safely while other axes stay open; ≠ identity-complete resolution.
+ - **Labeled successor set `Succ_a(m)`.** The zero, one, or many occurrences an action creates; placement validity does not transport across an edge without re-evidence.
++- **Metaorthemma (candidate term; object adopted by owner decision, 2026-07-19).** The episode-local, case-bound configuration TOKEN of a metaortheme: `MetaInst(μ̄, μ)`; binds case-specific values (reference frame, tolerance value, instrument + calibration, fixture, success surface, scope) within the declared analysis (`Compatible(μ̄, A(e))`); its binder-with-warrant is distinct from the executor; judged by V3c; omitted where no material binding exists. The WORD remains a benchmark-gated candidate (ordinary-language equivalent: "instantiated governing-configuration token"); the OBJECT is part of the episode record.
+ - **Metaortheme.** A metaorthemic configuration `⟨g, S_μ, ε_μ, prov(μ), ver(μ)⟩` paired with a separable meta-policy; governed component in {repertoire, individuation, evidence,
+   disclosure, routing, validation, warrant-classification}; objectives, the task, and the governance meta-level excluded.
+ - **Residual disposition.** Per burden: unresolved / deferred / transferred / owner-assigned / risk-accepted / validated-resolved.

@@ -1,0 +1,530 @@
+diff --git "a/<workspace>\\orthemic-core-formalization.md" "b/archive/reconciliation\\candidates\\orthemic-core-formalization-v2-candidate.md"
+index cd84e9e..811c8ab 100644
+--- "a/<workspace>\\orthemic-core-formalization.md"
++++ "b/archive/reconciliation\\candidates\\orthemic-core-formalization-v2-candidate.md"
+@@ -1,3 +1,10 @@
++> **PROPOSED D1 CANDIDATE — NOT CANONICAL, NOT APPROVED FOR PROMOTION.**
++> Parent canonical: `<workspace>\orthemic-core-formalization.md` (SHA-256 `18a693c54a87bcd818480c014a818642aa7b30c741c965241bc8557e1edddb5d`).
++> Candidate SHA-256: recorded in `D1-GROUND-TRUTH-CHANGE-LEDGER.md` / `D1-VALIDATION-REPORT.md` (a file cannot embed its own hash).
++> Owner decision implemented: **D1(d)** — analysis-relative primitive with strictly scoped task-relative abbreviation.
++> Subsequent owner decisions (O2 PathwayAdequate, D3 verdict index, D4 symbol table, O3 compaction example, metaorthemma adjudication) may revise this candidate.
++> Any "canonical" statement in the inherited body below describes the PARENT lineage, not this candidate's status.
++
+ # Orthemic Core Formalization — Orthing, Episodes, Metaorthemes, Pathway Adequacy
+ 
+ > **Provenance.** Draft lineage: Opus 4.8 (owner/harness report). An
+@@ -27,10 +34,22 @@ validated — fixture E5 and the Arm A/B/C test remain the gates.
+ 
+ **Inherited notation.** `M` = domain of orthemmata (concrete occurrences);
+ `O` = repertoire of orthemes (repeatable operational state-types);
+-`I_T ⊆ M×O` = task-relative instantiation; `O*_T(m)` = actual profile
+-(ground truth); `Ô_t(m)` = inferred profile (belief); `C_t(m)` = candidate
+-set; `Ω` = observation map; `μ` = a metaortheme; `o-hat` = an inferred
+-ortheme.
++`Inst_A ⊆ M×O` = analysis-relative instantiation — the primitive; the
++manuscript's Definition 3 and §2.6 define the declared, versionable
++analysis `A`, whose components include the task `T = task(A)`;
++`O*(m; A)` = actual profile (ground truth relative to `A`);
++`p̂_t(m)` = inferred profile (belief; `Ô` survives only as the derived
++flattening of `p̂`, §2.2); `C_t(m)` = candidate set; `Ω` = observation
++map; `μ` = a metaortheme; `o-hat` = an inferred ortheme.
++**Abbreviation convention:** once a single analysis `A` with
++`task(A) = T` is fixed by explicit declaration, task-subscripted forms
++(`Inst_T`, `O*_T(m)`, `Π_T`, `K_T`, `R_T`, `W_T`) abbreviate their
++`A`-indexed counterparts. The shorthand is **forbidden** wherever more
++than one analysis is live — level-indexed audits (§1, §5.2), multi-actor
++episodes (§5.3), cross-version comparisons, execution-vs-review
++comparisons — where the full `O*(m; A)` form is required. (This block
++supersedes the earlier `I_T` / `O*_T`-as-primitive / `Ô_t` statement,
++which had gone stale against the revised draft.)
+ 
+ ---
+ 
+@@ -117,7 +136,7 @@ for one placement inside an episode (2.3).
+ 
+ An **orthing episode** is a record
+ 
+-    e = ⟨ id;  m, κ, v;  x, H;  α, w, T, t;  μ⃗, π;  C⃗, p̂;  r;  ε;  Q;  δ;
++    e = ⟨ id;  m, κ, v;  x, H;  α, w, A, T, t;  μ⃗, π;  C⃗, p̂;  r;  ε;  Q;  δ;
+           hand_in, hand_out;  a, Succ ⟩
+ 
+ with components (each glossed in ordinary language):
+@@ -132,7 +151,8 @@ with components (each glossed in ordinary language):
+ | `H` | ordered typed evidence sequence | the evidence gathered in order, each item with property class, scope, provenance, and validity/expiry |
+ | `α` | actor | who/what executed (human, validator, model, pipeline, institution — populated even for mechanical executors) |
+ | `w` | episode warrant | who/what authorized acting, with scope (the #12 hook); distinct from evidence and from executor identity |
+-| `T` | task | the declared task the placement is relative to |
++| `A` | declared analysis (identifier + version) | the analysis the placement is relative to (manuscript §2.6); result correctness (V1) is judged against `O*(m; A)`; within the episode's scope the task-subscripted spaces below abbreviate their `A`-indexed forms |
++| `T = task(A)` | task | the task component of `A`, retained as a separate readable component |
+ | `t` | time interval | when the episode ran |
+ | `μ⃗ = (μ₁,…,μ_k; ≼)` | metaorthemic configuration | the governing rules in force, with precedence order `≼` |
+ | `π` | policy | the concrete procedure executed under `μ⃗` |
+@@ -146,10 +166,11 @@ with components (each glossed in ordinary language):
+ | `a` | action | what was done to or with the case |
+ | `Succ ⊆ M` | successor set | the occurrences the action created/affected, as LABELED lineage edges (which action produced which successor) — zero, one, or many; the earlier forced single `m′ = succ(m,a)` is corrected |
+ 
+-`Π_T` (gloss: the task-relative profile space — every complete way the
+-case could be placed) and the labeled successor edges close the arrow the
+-manuscript lacks from action back into `M`: placements verified for
+-`(κ, v)` do not transport to `(κ, v′)` without a lineage argument.
++`Π_A` — with `Π_T` its licensed shorthand under the standing convention —
++(gloss: the profile space, every complete way the case could be placed)
++and the labeled successor edges close the arrow the manuscript lacks from
++action back into `M`: placements verified for `(κ, v)` do not transport
++to `(κ, v′)` without a lineage argument.
+ 
+ **Plain-language key for governed-component letters used below:** `O` =
+ the ortheme repertoire (which state-types exist); `I` =
+@@ -203,10 +224,10 @@ applicable verdict indices and pathway adequacy conjoins only over
+        e ⊨_μ (m : o-hat)   iff   o-hat ∈ Ô(e) and μ ∈ μ⃗(e) governed that placement
+ 
+    (gloss: "in episode `e`, under rule `μ`, the case was placed under
+-   `o-hat`"). One placement is correct iff `o-hat ∈ O*_T(m)`; the placed
++   `o-hat`"). One placement is correct iff `o-hat ∈ O*(m; A(e))`; the placed
+    profile is correct at the governed level iff `p̂(e)` agrees with
+-   `O*_T(m)` restricted to that level, or the weaker route-sufficient
+-   variant (§4).
++   `O*(m; A(e))` restricted to that level, or the weaker route-sufficient
++   variant (§4) — `A(e)` being the analysis recorded in the episode (§2.2).
+ 
+ ---
+ 
+@@ -333,9 +354,10 @@ truthfulness; robustness. **Full vector (this table)** — the finer splits
+ matter to audits; ordinary discussion may use the compact core:
+ 
+ - **V1 — placement/profile correctness.** `correct(e)`: `p̂(e)` agrees
+-  with `O*_T(m)` at the governed level; weaker `route-correct(e)`: `p̂(e)`
+-  is route-sufficient and every placed claim is in `O*_T(m)` (gloss: the
+-  answer was right, for enough of the profile to act on).
++  with `O*(m; A(e))` at the governed level; weaker `route-correct(e)`: `p̂(e)`
++  is route-sufficient and every placed claim is in `O*(m; A(e))` (gloss: the
++  answer was right, for enough of the profile to act on — judged against
++  the analysis the episode itself records).
+ - **V2a — evidential support.** The typed evidence `H`, within its
+   declared scopes, meets the DECLARED standard for each placed claim
+   (gloss: enough of the right kind of evidence, by the rulebook's own
+@@ -482,8 +504,11 @@ repeated instantiation of the same `π`, never as cycles among tokens.
+ **Composition.** The graph composes into ONE episode `E = comp(G)` — a
+ full §2 signature at the boundary level — iff:
+ 
+-1. **One case, one task:** all `eᵢ` address `m` or its `succ`-lineage
+-   under a single declared task `T`;
++1. **One case, one analysis:** all `eᵢ` address `m` or its `succ`-lineage
++   under a single declared analysis `A` (hence one task `T = task(A)`;
++   two sub-episodes sharing a task but differing in tolerance,
++   representation, or boundary do NOT compose without an explicitly
++   declared fusion analysis);
+ 2. **A declared boundary:** governance names the composite actor `α_E`
+    (pipeline, team, institution) and configuration `μ⃗_E`, including
+    precedence across sub-episode rules;
+@@ -512,34 +537,40 @@ composite level must be audited separately.
+ ### 5.3 Multi-actor episodes over one occurrence lineage (derived; added Phase C)
+ 
+ Several actors' episodes can address ONE shared occurrence lineage with
+-task-indexed, possibly opposed evaluations (competitive games are the
++analysis-indexed, possibly opposed evaluations (competitive games are the
+ clean case; the full stress test and category corrections live in
+-`orthemic-multi-actor-conflict-note.md`). Derived definitions — these are
+-clarifying extensions of the existing actor/task indices, **not a new
+-formal addition**:
++`orthemic-multi-actor-conflict-note.md`). This is a **multi-analysis
++context**: each actor `α` evaluates under its own declared analysis
++`A_α` (shared frame components, diverging at least in task
++`T_α = task(A_α)`), the task-relative abbreviation is forbidden, and
++ground truth is written in full, `O*(m; A_α)`. Actor indices are written
++`α, β` here — the letter `A` is reserved for the analysis. Derived
++definitions — clarifying extensions of the existing actor/analysis
++indices, **not a new formal addition**:
+ 
+ - `x_α = Ω_α(m)` — actor-α's OBSERVATION of the shared occurrence
+   (imperfect information is divergent observation over ONE occurrence:
+-  `Ω_A(m) ≠ Ω_B(m)`; perfect information is the special case of full,
++  `Ω_α(m) ≠ Ω_β(m)`; perfect information is the special case of full,
+   equal observation) — the observation/occurrence distinction applied per
+   actor;
+-- `p̂(e, α, T)` — actor-α's current inferred profile in episode `e` under
+-  task `T`, inferred FROM `x_α`, never from `m` directly;
+-- `W(α)` — a PARAMETRIC ortheme schema (the shared goal-form under role
+-  substitution); grounded instantiations `W(A)`, `W(B)` are DISTINCT
++- `p̂(e, α, T_α)` — actor-α's current inferred profile in episode `e`
++  under its analysis `A_α` (task `T_α`), inferred FROM `x_α`, never from
++  `m` directly;
++- `W(·)` — a PARAMETRIC ortheme schema (the shared goal-form under role
++  substitution); grounded instantiations `W(α)`, `W(β)` are DISTINCT
+   targets even when the schema is one (schema identity ≠ grounded-ortheme
+   identity ≠ target-profile overlap);
+-- `G(α, T) ⊆ Π_T` — actor-α's grounded target profile set — CANONICAL
+-  TYPING: a SET of profiles, each member one complete profile (the task's
+-  appropriateness rendered as a profile set; targets are selected BY the
+-  task, which remains an external parameter — a target profile is not an
+-  objective and an objective is not an ortheme);
+-- `φ(A→B)` — a role/perspective isomorphism on `Π_T` where one exists
+-  (goal-schema invariance with disjoint extensions:
+-  `G(B,T_B) = φ(G(A,T_A))`, possibly `G_A ∩ G_B = ∅`);
+-- `Conflict_m(G_A, G_B)` / `Compat_m(G_A, G_B)` — whether any successor
++- `G(α, T_α) ⊆ Π_{A_α}` — actor-α's grounded target profile set —
++  CANONICAL TYPING: a SET of profiles, each member one complete profile
++  (the task's appropriateness rendered as a profile set; targets are
++  selected BY the task, which remains an external parameter — a target
++  profile is not an objective and an objective is not an ortheme);
++- `φ(α→β)` — a role/perspective isomorphism between `Π_{A_α}` and
++  `Π_{A_β}` where one exists (goal-schema invariance with disjoint
++  extensions: `G(β,T_β) = φ(G(α,T_α))`, possibly `G_α ∩ G_β = ∅`);
++- `Conflict_m(G_α, G_β)` / `Compat_m(G_α, G_β)` — whether any successor
+   profile reachable from occurrence `m` realizes members of both target
+-  sets (cooperation is the special case `G_A = G_B`; zero-sum games also
++  sets (cooperation is the special case `G_α = G_β`; zero-sum games also
+   admit draw successors in neither set).
+ 
+ Coupled episodes are the §5.2 graph over the shared lineage: each actor's
+diff --git "a/<workspace>\\orthemma-ortheme-systems-revised-draft.md" "b/archive/reconciliation\\candidates\\orthemma-ortheme-systems-revised-draft-v2-candidate.md"
+index 1e13f07..ced8fa0 100644
+--- "a/<workspace>\\orthemma-ortheme-systems-revised-draft.md"
++++ "b/archive/reconciliation\\candidates\\orthemma-ortheme-systems-revised-draft-v2-candidate.md"
+@@ -1,3 +1,10 @@
++> **PROPOSED D1 CANDIDATE — NOT CANONICAL, NOT APPROVED FOR PROMOTION.**
++> Parent canonical: `<workspace>\orthemma-ortheme-systems-revised-draft.md` (SHA-256 `7ac99acb22d805edcdcb725dffcd1f82d90c5979af43c68cb43bab191c1ea964`).
++> Candidate SHA-256: recorded in `D1-GROUND-TRUTH-CHANGE-LEDGER.md` / `D1-VALIDATION-REPORT.md` (a file cannot embed its own hash).
++> Owner decision implemented: **D1(d)** — analysis-relative primitive with strictly scoped task-relative abbreviation.
++> Subsequent owner decisions (O2 PathwayAdequate, D3 verdict index, D4 symbol table, O3 compaction example, metaorthemma adjudication) may revise this candidate.
++> Any "canonical" statement in the inherited body below describes the PARENT lineage, not this candidate's status.
++
+ # Orthemma–Ortheme Systems: A Task-Relative Type–Token Architecture, Revised as an Integration Discipline for the Token Side of Classification and Handling Work
+ 
+ > **Provenance.** Revised draft produced by Claude Fable 5 (Phase C, 2026-07-17) implementing the canonical revision memo; supersedes no document; the original PDF manuscript
+@@ -102,12 +109,16 @@ this utterance now, this word-token on the page, this patient episode, this buil
+ **Definition 2 (Ortheme).** An ortheme is a repeatable operational state-type that an orthemma may instantiate, relative to a declared domain and task. It is a type whose confusion
+ with another type would change a warranted classification, prediction, investigation, route, validation condition, closure condition, or evaluation.
+ 
+-**Definition 3 (Task-relative instantiation).** Let `M` be a domain of concrete orthemmata (plain gloss: the concrete cases) and `O` a repertoire of repeatable orthemes (the
+-state-types in play). The task-relative instantiation relation is `Inst_T ⊆ M × O`, where `(m, o) ∈ Inst_T` reads: the orthemma `m` instantiates the ortheme `o`, relative to the
+-declared domain and task `T`. (Notation note: the prior manuscript wrote `I_T`; the letter `I` is now reserved for the individuation component of the governed-component key,
+-Section 6, and the relation is renamed to remove the collision.) The **orthemic profile** of `m` is its fibre,
++**Definition 3 (Analysis-relative instantiation).** Let `M` be a domain of concrete orthemmata (plain gloss: the concrete cases) and `O` a repertoire of repeatable orthemes (the
++state-types in play). The primitive instantiation relation is analysis-relative: `Inst_A ⊆ M × O`, where `(m, o) ∈ Inst_A` reads: the orthemma `m` instantiates the ortheme `o`, relative to the
++declared analysis `A` — the explicit, versionable index defined in Section 2.6, whose components include the task `T = task(A)`. (Notation note: the prior manuscript wrote `I_T`; the letter `I` is now reserved for the individuation component of the governed-component key,
++Section 6. The task-subscripted `Inst_T` of the previous revision survives only under the abbreviation convention below.) The **orthemic profile** of `m` is its fibre,
++
++    O*(m; A) = { o ∈ O : (m, o) ∈ Inst_A }.
+ 
+-    O*_T(m) = { o ∈ O : (m, o) ∈ Inst_T }.
++The occurrence `m` and its worldly facts are not created by the analysis. What is analysis-relative is which profile of consequence-bearing operational state-types truly describes `m` in the declared repertoire; the actual profile `O*(m; A)` remains distinct from the observation of `m`, from the system's inferred profile, from the evidence available, and from any actor's belief.
++
++**Abbreviation convention (task-relative shorthand).** `O*_T(m)` is permitted only as local scoped shorthand: after the text has explicitly fixed one analysis `A` with `task(A) = T`, and within that scope only, `O*_T(m) := O*(m; A)` — likewise `Inst_T`, `Π_T`, `K_T`, `R_T`, and `W_T` for their `A`-indexed counterparts. The shorthand must not be presented as a globally well-defined function of `T` alone: two analyses can share one task while differing in tolerance, representation, boundaries, or merger family. It is **forbidden wherever more than one analysis is live** — higher-order audits, multi-actor evaluation (Section 10), cross-version comparisons, differing tolerances or governance boundaries, and comparisons between base execution and reviewer analysis — where the full `O*(m; A)` form is required. **Standing scope for this paper:** except where a passage explicitly introduces a second analysis, one declared analysis `A` is fixed with `T = task(A)`, and task-subscripted notation below is that licensed shorthand, not a second primitive. No separate task-to-analysis bridging law is introduced: there is one ground-truth primitive, and the task-relative form is abbreviation only.
+ 
+ The profile is generally not a singleton. One orthemma instantiates several orthemes at once and at different descriptive levels; the relation may be hierarchical, compositional,
+ overlapping, and temporarily unresolved. A single Arabic word-token can simultaneously instantiate a lexeme, a lemma, a morphological pattern, several affixes or clitics, a
+@@ -168,12 +179,14 @@ identity, and a stale checkout evaluated as the current one.
+ ### 2.6 Analysis, actor, and time indices (formal addition 2)
+ 
+ Ground truth is only defined relative to a **declared analysis** `A`: the system and governance boundary, task, evidence and action repertoire, policy class, loss, hard
+-constraints, horizon, tolerance, representation family, and permitted-merger family. Profiles and beliefs are therefore indexed:
++constraints, horizon, tolerance, representation family, and permitted-merger family. This section is the definition site of the index Definition 3 takes as primitive: `A` must be **explicit and versionable** — it carries an identifier and version `ver(A)`, and a change to any component above yields a new analysis version. Profiles and beliefs are therefore indexed:
+ 
+-    O*_A(m)        — actual profile under analysis A (ground truth relative to A);
++    O*(m; A)       — actual profile under analysis A (ground truth relative to A);
+     p̂_{A,α,t}(m)   — the profile actor α infers at time t under A;
+     C_{A,α,t}(m)   — the candidate structure actor α maintains at time t.
+ 
++There is no second, task-only ground truth alongside this one: `O*_T(m)` is Definition 3's scoped abbreviation, licensed only while a single fixed `A` with `task(A) = T` is in force.
++
+ Placement status is **actor-indexed**: a clinician can hold a distinction absent from the record; a developer can know a failure the release gate cannot express; a reviewer can
+ carry a verdict the pipeline has no field for. **Cross-actor divergence** — two actors' inferred profiles for the same `(κ, v)` disagreeing consequentially — is promoted in this
+ revision from an aside to a first-class stop signal: it is itself diagnostic and is a legitimate trigger for the governed interruption of Section 7.5, independent of either actor's
+@@ -181,7 +194,7 @@ confidence. Multi-actor evaluation is developed further in Section 10.
+ 
+ ### 2.7 The orthemic contrast, and the inherited results
+ 
+-**Definition 7 (Orthemic contrast).** Fix a declared analysis `A`. Two orthemes are operationally non-equivalent, `o_i ≢_T o_j`, when confusing their concrete instances would alter
++**Definition 7 (Orthemic contrast).** Fix a declared analysis `A`. Two orthemes are operationally non-equivalent, `o_i ≢_A o_j`, when confusing their concrete instances would alter
+ a warranted classification, prediction, investigation, route, validation condition, closure condition, or evaluation beyond the accepted tolerance. An orthemic contrast is such a
+ non-equivalence: a criterion by which two candidate types must not be collapsed.
+ 
+@@ -193,8 +206,8 @@ identically (plain gloss: all the ways of treating them as one), and `Q` the unr
+ 
+     Δ_A(o_i, o_j) = inf_{q ∈ Q_{i=j}} R*(q)  −  inf_{q ∈ Q} R*(q),
+ 
+-with `R*(q)` the best attainable risk under representation `q` and hard-constraint violations counted as infinite risk. Then `o_i ≢_T o_j` at tolerance `ϵ` iff
+-`Δ_A > ϵ`. The individuation is relative to the representation and merger families: another architecture can make the same type distinction feasible or unnecessary.
++with `R*(q)` the best attainable risk under representation `q` and hard-constraint violations counted as infinite risk. Then `o_i ≢_A o_j` at tolerance `ϵ` iff
++`Δ_A(o_i, o_j) > ϵ`. The individuation is relative to the representation and merger families — components of `A`, which is why the contrast subscript follows the analysis (under Definition 3's convention, `≢_T` may abbreviate `≢_A` once a single `A` is fixed). Another architecture can make the same type distinction feasible or unnecessary.
+ 
+ Three inherited results, kept and presented as inherited (none is a new theorem):
+ 
+@@ -209,12 +222,12 @@ Three inherited results, kept and presented as inherited (none is a new theorem)
+ Threshold closeness is non-transitive (`h_1 ≈_ϵ h_2`, `h_2 ≈_ϵ h_3`, yet `h_1 ≉_ϵ h_3`), so there is generally no unique smallest repertoire; several incomparable repertoires can
+ be equally adequate.
+ 
+-**Definition 8 (Route-sufficient apprehension, retained).** `p̂_t(m)` is route-sufficient when it pins down enough of `O*_A(m)` to select an admissible near-optimal route, even
++**Definition 8 (Route-sufficient apprehension, retained).** `p̂_t(m)` is route-sufficient when it pins down enough of `O*(m; A)` to select an admissible near-optimal route, even
+ though other orthemes in the profile remain unresolved. It is distinct from identity-complete apprehension, in which the full profile is established for the relevant purpose.
+ Route-sufficiency ≠ complete orthemic resolution. (Hematemesis can alter urgency and routing while the bleeding source stays open; an Arabic token's root and lemma can license
+ dictionary lookup before every clitic is settled.)
+ 
+-**Definition 9 (Under- and over-segmentation, retained).** A repertoire under-segments an orthemma when it collapses orthemes in `O*_A(m)` whose separation the task requires
++**Definition 9 (Under- and over-segmentation, retained).** A repertoire under-segments an orthemma when it collapses orthemes in `O*(m; A)` whose separation the task requires
+ (excess risk above tolerance or a constraint violation). It over-segments when it assigns distinctions the orthemma does not support, or splits at no out-of-sample benefit net of
+ complexity, latency, coordination, fairness, and contestability costs.
+ 
+@@ -231,7 +244,7 @@ because casebook evidence shows it is neither of the others.
+ | | Inter-orthemma aliasing | Intra-orthemma uncertainty | Identity uncertainty |
+ |---|---|---|---|
+ | **Pattern** | Distinct occurrences produce the same or confusable observation while instantiating operationally different types | One encountered occurrence remains compatible with several candidate types | It is unresolved *which occurrence* (which `κ`, or which version `v`) is actually in hand |
+-| **Formally** | `Ω(m_1) = Ω(m_2)`, `O*_A(m_1) ≠ O*_A(m_2)` | `C^profile ⊇ {p_1, …, p_k}`, several profiles licensing non-equivalent routes | `C^id(m) ⊆ M` non-singleton: candidates for the case's own identity/version |
++| **Formally** | `Ω(m_1) = Ω(m_2)`, `O*(m_1; A) ≠ O*(m_2; A)` | `C^profile ⊇ {p_1, …, p_k}`, several profiles licensing non-equivalent routes | `C^id(m) ⊆ M` non-singleton: candidates for the case's own identity/version |
+ | **Example** | Two jars of white powder look identical; one is flour, one is cornstarch | One acoustic stream compatible with "olive juice" and "I love you" | The log line may describe this commit's build or the previous one's; the file at this path may be the original or a reused slot |
+ | **Wrong reduction** | Treating it as one case with an open profile | Treating it as two cases | Treating it as profile uncertainty about a known case |
+ 
+@@ -402,7 +415,7 @@ These are failures in the relation among occurrence, type, evidence, representat
+ - **non-disclosure** — the system never notices that `m` requires a distinction;
+ - **orthemic underdetermination** — several consequential candidates remain open;
+ - **misidentification** — `m` is placed under the wrong ortheme;
+-- **under-segmentation** — several orthemes in `O*_A(m)` are collapsed;
++- **under-segmentation** — several orthemes in `O*(m; A)` are collapsed;
+ - **over-segmentation** — distinctions are assigned that `m` does not support;
+ - **misplacement** — a valid description is attached to the wrong occurrence, component, level, or temporal version (the lineage failures of Section 2.5, including
+   review-transport: a verdict formed about one artifact carried by the review process onto another);
+@@ -497,11 +510,11 @@ declared governance boundary.
+ 
+ Following the core formalization, an orthing episode is a record
+ 
+-    e = ⟨ id;  m, κ, v;  x, H;  α, w, T, t;  μ⃗, π;  C⃗, p̂;  r;  ε;  Q;  δ;  hand_in, hand_out;  a, Succ ⟩
++    e = ⟨ id;  m, κ, v;  x, H;  α, w, A, T, t;  μ⃗, π;  C⃗, p̂;  r;  ε;  Q;  δ;  hand_in, hand_out;  a, Succ ⟩
+ 
+ — in words: which run this is; the concrete case with its identity key and version; what the episode saw, and the ordered typed evidence gathered (each item with property class,
+ scope, provenance, validity); who or what executed (`α` — populated even for mechanical executors) and under what warrant (`w`, distinct from both evidence and executor identity);
+-the declared task and the time; the governing metaorthemic configurations with precedence, and the concrete policy executed under them; the typed candidate families and the
++the declared analysis `A` (identifier and version — the index against which result correctness is judged), its task `T = task(A)` retained as a separate readable component, and the time; the governing metaorthemic configurations with precedence, and the concrete policy executed under them; the typed candidate families and the
+ inferred placement `p̂` (profile-valued, never coerced to a singleton ortheme); the route; the per-claim evidence-status map; the claim ledger with required success surfaces; the
+ per-burden residual-disposition map; the incoming and outgoing handoff records; and the action with its labeled successor set. Components are defined *where applicable*: a
+ read-only classification episode has no action, no successors, an empty residual map — and `App(e)`, the recorded set of applicable verdict indices, keeps "deliberately none"
+@@ -518,7 +531,7 @@ All verdicts are predicates on an episode `e`; none entails another. Pathway ade
+ 
+ | Verdict | Question it answers |
+ |---|---|
+-| **V1 — result correctness** | Does the placed profile agree with `O*_A(m)` at the governed level (or, weaker, is it route-sufficient with every placed claim true)? |
++| **V1 — result correctness** | Does the placed profile agree with `O*(m; A(e))` — the actual profile under the analysis recorded in the episode — at the governed level (or, weaker, is it route-sufficient with every placed claim true)? |
+ | **V2a — evidential support** | Does the typed evidence, within its declared scopes, meet the declared standard for each placed claim? |
+ | **V2b — truth-connection, at a declared reliability criterion** | Was the procedure as executed truth-connected in the declared sense? Default criterion: sensitivity — had the claim been false, the procedure as executed would (at the declared reliability level) have failed to support it. The criterion is a parameter, not a neutral truth: soundness, calibration, and perturbation-stability variants are admissible declarations. |
+ | **V2c — evidence currentness** | Is each load-bearing evidence item current for `(κ, v)` and of admissible provenance — not stale, not unsourced? |
+@@ -599,7 +612,7 @@ returning work to an author role) lives at the TYPE/policy level, represented as
+ 
+ The graph composes into ONE boundary-level episode `E = comp(G)` iff:
+ 
+-1. **one case, one task** — all sub-episodes address `m` or its successor-lineage under a single declared task;
++1. **one case, one analysis** — all sub-episodes address `m` or its successor-lineage under a single declared analysis `A` (hence one task `T = task(A)`; sub-episodes sharing a task but differing in tolerance, representation, or boundary do NOT compose without an explicitly declared fusion analysis);
+ 2. **a declared boundary** — governance names the composite actor (pipeline, team, institution) and the composite governing configuration, including precedence across sub-episode
+    rules;
+ 3. **a declared fusion rule** — the composite placement, evidence-status map, and residual ledger are a stated aggregation of sub-outputs (e.g., profile union with per-claim status
+@@ -615,34 +628,35 @@ scope, the composition transporting one out of scope). The composite level must
+ 
+ ### 10.1 One occurrence, many evaluations
+ 
+-The actor and task indices of Section 2.6 already imply that a single concrete occurrence supports several simultaneous evaluations: the same `(κ, v)` is apprehended by different
+-actors under different task indices, each with its own inferred profile and candidate structure. This section develops the special case where the actors' interests diverge. In imperfect-information games the divergence begins one level earlier, at OBSERVATION: the one concrete deal `m` is shared, but each actor observes only `x_α = Ω_α(m)` — the paper's own observation/occurrence distinction (§2.2), applied per actor. A player's information set is therefore an OBSERVATION, never part of the occurrence's identity key; perfect-information games are the special case of full, equal observation.
+-Everything here is a **derived extension of the existing actor/task indices — not a seventh formal addition**; no new primitive is introduced.
++The actor and analysis indices of Section 2.6 already imply that a single concrete occurrence supports several simultaneous evaluations: the same `(κ, v)` is apprehended by different
++actors, each under its **own declared analysis** `A_α` — sharing frame components where the actors share a game or institution, and differing at least in task `T_α = task(A_α)` — each with its own inferred profile and candidate structure. This is a multi-analysis context: Definition 3's task-relative abbreviation is forbidden here, and ground truth is written in full, `O*(m; A_α)`, per evaluating analysis. This section develops the special case where the actors' interests diverge. In imperfect-information games the divergence begins one level earlier, at OBSERVATION: the one concrete deal `m` is shared, but each actor observes only `x_α = Ω_α(m)` — the paper's own observation/occurrence distinction (§2.2), applied per actor. A player's information set is therefore an OBSERVATION, never part of the occurrence's identity key; perfect-information games are the special case of full, equal observation.
++Everything here is a **derived extension of the existing actor/analysis indices — not a seventh formal addition**; no new primitive is introduced.
+ 
+ ### 10.2 Target profiles
+ 
+-**Definition 13 (Target profile set).** For actor `α` under task `T`, the target profile set `G(α, T) ⊆ Π_T` is the SET OF PROFILES that `α`, under `T`, aims to make some future occurrence in the lineage instantiate — each member of `G(α, T)` is one complete profile (canonical typing, aligned with the core formalization §5.3; a win-ortheme such as "White checkmates Black" labels the FAMILY of terminal profiles realizing it). `G(α, T)` is the grounded instantiation at `α` of a PARAMETRIC ortheme schema `W(α)` ("win for α"): the schema is one form under role substitution; the grounded targets are distinct; and target-set overlap is a third, independent relation (empty for zero-sum win-sets, total for cooperation).
++**Definition 13 (Target profile set).** For actor `α` under its declared analysis `A_α` with task `T_α = task(A_α)`, the target profile set `G(α, T_α) ⊆ Π_{A_α}` is the SET OF PROFILES that `α`, under `T_α`, aims to make some future occurrence in the lineage instantiate — each member of `G(α, T_α)` is one complete profile (canonical typing, aligned with the core formalization §5.3; a win-ortheme such as "White checkmates Black" labels the FAMILY of terminal profiles realizing it). `G(α, T_α)` is the grounded instantiation at `α` of a PARAMETRIC ortheme schema `W(α)` ("win for α"): the schema is one form under role substitution; the grounded targets are distinct; and target-set overlap is a third, independent relation (empty for zero-sum win-sets, total for cooperation).
+ 
+ Three separations keep this well-typed:
+ 
+-- `G(α, T)` is **not the current descriptive profile** `O*_A(m)`: the descriptive profile says what the occurrence *is*; the target profile says what some successor should
++- `G(α, T_α)` is **not the current descriptive profile** `O*(m; A_α)`: the descriptive profile says what the occurrence *is*; the target profile says what some successor should
+   *become*. A chess position's descriptive profile may include "material equality, White to move"; neither player's target is a description of the present board.
+-- `G(α, T)` is **not the objective/loss**: the loss is the task's evaluation function over outcomes; the target profile is the *state-type content* of what the actor pursues — a
++- `G(α, T_α)` is **not the objective/loss**: the loss is the task's evaluation function over outcomes; the target profile is the *state-type content* of what the actor pursues — a
+   set of orthemes over future occurrences, usable in placement and routing like any other type. (Objectives are excluded from metaorthemic governance, Section 6.2; target profiles,
+-  being typed state-sets under the actor/task index, are ordinary indexed objects.)
+-- `G(α, T)` is **not a metaortheme**: it names no governed component and declares no competing higher-order states about the machinery.
++  being typed state-sets under the actor/analysis index, are ordinary indexed objects.)
++- `G(α, T_α)` is **not a metaortheme**: it names no governed component and declares no competing higher-order states about the machinery.
+ 
+ ### 10.3 Structural isomorphism is not identity of targets
+ 
+ In symmetric games, a role substitution (swap the colors, relabel the players) maps one actor's target set onto the other's: the targets are **structurally isomorphic**.
+-Isomorphism under role substitution is *not* identity: `G(White, T) ≠ G(Black, T)` even though each is the image of the other under the color swap. Conflating them is a placement
++Declared prose abbreviation for this section and the next: the role labels **White** and **Black** name the formal actors `α` and `β` respectively, with per-actor analyses `A_α, A_β` and tasks `T_α = task(A_α)`, `T_β = task(A_β)`.
++Isomorphism under role substitution is *not* identity: `G(α, T_α) ≠ G(β, T_β)` even though each is the image of the other under the color swap. Conflating them is a placement
+ error at the actor index — precisely the error a non-indexed formalism cannot even state, because it has only one profile slot per occurrence.
+ 
+ ### 10.4 Worked example: chess
+ 
+ The shared concrete occurrence `m` is *this board position in this game*, where the occurrence's identity includes the position, the full move history, and the player to move
+-(castling and en-passant rights are functions of that history). Both players apprehend the same `m`: one occurrence, two actor/task-indexed evaluations `p̂_{A,White,t}(m)` and
+-`p̂_{A,Black,t}(m)`, and two target profiles `G(White, T)` (state-types realizing a win for White) and `G(Black, T)`.
++(castling and en-passant rights are functions of that history). Both players apprehend the same `m`: one occurrence, two actor/analysis-indexed evaluations `p̂_{A_α,α,t}(m)` and
++`p̂_{A_β,β,t}(m)` (the §10.3 role-label convention: White = `α`, Black = `β`), and two target profiles `G(α, T_α)` (state-types realizing a win for White) and `G(β, T_β)`.
+ 
+ The example also calibrates what is and is not a metaortheme:
+ 
+@@ -848,7 +862,7 @@ replication of even the observational tier does not yet exist.
+ 
+ - **Orthemma.** A concrete situated occurrence considered as something to be apprehended, carrying an identity key and version. The token pole.
+ - **Ortheme.** A repeatable operational state-type an orthemma instantiates, relative to a declared task. The type pole.
+-- **Instantiation relation `Inst_T`.** `(m, o) ∈ Inst_T`: `m` instantiates `o` under task `T`; the fibre `O*_A(m)` is the actual profile under analysis `A`.
++- **Instantiation relation `Inst_A`.** `(m, o) ∈ Inst_A`: `m` instantiates `o` under the declared, versionable analysis `A` (with `T = task(A)`); the fibre `O*(m; A)` is the actual profile. `Inst_T` / `O*_T(m)` are licensed local shorthand once a single `A` with `task(A) = T` has been fixed; forbidden in multi-analysis contexts (Definition 3).
+ - **Typed candidate families `C^id, C^profile, C^cause, C^route, C^warrant`.** Open alternatives per uncertainty axis, with exclusivity marking and an evidence-to-resolve clause.
+ - **Placement / apprehension.** Assigning an inferred profile / the whole encounter-to-disposition process.
+ - **Route-sufficient apprehension.** Enough of the profile to route safely while other axes stay open; ≠ identity-complete resolution.
+@@ -862,7 +876,7 @@ replication of even the observational tier does not yet exist.
+ - **Verdict vector (V1–V6).** Result correctness; evidential support; truth-connection at a declared criterion; evidence currentness; configuration, policy, executor, and ex-ante
+   verdicts; route safety; closure truthfulness; robustness.
+ - **Generalized ANDON event.** A governed interruption when continuation or closure is not warranted under the current placement, evidence, route, warrant, or ledger.
+-- **Target profile `G(α, T)`.** The state-types an actor aims to make some successor occurrence instantiate; distinct from the descriptive profile, from the objective, and from any
++- **Target profile `G(α, T_α)`.** The state-types an actor aims to make some successor occurrence instantiate, under the actor's own analysis `A_α`; distinct from the descriptive profile, from the objective, and from any
+   metaortheme.
+ 
+ *End of revised draft. Prior version: the original PDF manuscript. Revision basis: the canonical revision memo, the core formalization, the theory reassessment, and the terminology
+diff --git "a/<workspace>\\orthemic-multi-actor-conflict-note.md" "b/archive/reconciliation\\candidates\\orthemic-multi-actor-conflict-note-v2-candidate.md"
+index 8894566..b953db5 100644
+--- "a/<workspace>\\orthemic-multi-actor-conflict-note.md"
++++ "b/archive/reconciliation\\candidates\\orthemic-multi-actor-conflict-note-v2-candidate.md"
+@@ -1,3 +1,10 @@
++> **PROPOSED D1 CANDIDATE — NOT CANONICAL, NOT APPROVED FOR PROMOTION.**
++> Parent canonical: `<workspace>\orthemic-multi-actor-conflict-note.md` (SHA-256 `53d347c8dcbe061aa1cc863f3fead8cde84fa2a458d42ee27384b406c454e40b`).
++> Candidate SHA-256: recorded in `D1-GROUND-TRUTH-CHANGE-LEDGER.md` / `D1-VALIDATION-REPORT.md` (a file cannot embed its own hash).
++> Owner decision implemented: **D1(d)** — analysis-relative primitive with strictly scoped task-relative abbreviation.
++> Subsequent owner decisions (O2 PathwayAdequate, D3 verdict index, D4 symbol table, O3 compaction example, metaorthemma adjudication) may revise this candidate.
++> Any "canonical" statement in the inherited body below describes the PARENT lineage, not this candidate's status.
++
+ # Multi-Actor / Zero-Sum Orthemic Note — stress test, corrections, and formal residue
+ 
+ > **Provenance.** Written by Claude Fable 5 (Phase C, 2026-07-17) from the
+@@ -6,16 +13,23 @@
+ > useful multi-actor layer, AND they conflate five distinct categories; the
+ > repair below preserves the insight without the conflations. The formal
+ > residue is a **clarification plus derived extensions of the existing
+-> actor/task indices — not a seventh formal addition.**
++> actor/analysis indices — not a seventh formal addition.**
+ 
+ ## 1. What the screenshots get right (preserved)
+ 
+ 1. **One shared concrete occurrence.** Both players face the SAME orthemma —
+    the game state. Multi-actor cases do not multiply occurrences; they
+    multiply perspectives on one occurrence lineage.
+-2. **Actor/task-relative evaluation can oppose.** "Correct for A" and
++2. **Actor/analysis-relative evaluation can oppose.** "Correct for A" and
+    "correct for B" genuinely diverge under a competitive task; the theory's
+-   task-indexing (A_T, Π_T) was built for exactly this and handles it.
++   per-actor analysis indexing (`A_α` with `T_α = task(A_α)`, `Π_{A_α}`)
++   was built for exactly this and handles it. (Notation update, D1
++   reconciliation: `A` is reserved for the declared analysis; the formal
++   actor indices are `α, β`, with the prose labels "Player A / Player B"
++   naming the actors `α, β` respectively. Multi-actor evaluation is a
++   multi-analysis context, so the task-relative shorthand of manuscript
++   Definition 3 is forbidden here and ground truth is written in full,
++   `O*(m; A_α)`.)
+ 3. **Structural isomorphism across actors.** A's and B's reasoning can be
+    the same schema under role substitution while their targets are
+    materially incompatible — a real and clarifying observation.
+@@ -30,20 +44,21 @@
+ **C1 — "Player A's ortheme: the state where my utility is maximized."**
+ That is not an ortheme; it is an OBJECTIVE rendered as a state description.
+ An ortheme is a repeatable state-type of the occurrence ("White checkmates
+-Black" IS one). The repair: A's *target profile set* G(A, T_A) ⊆ Π_T is the
+-set of terminal profiles that satisfy A's task — the states are orthemes;
++Black" IS one). The repair: player A's *target profile set*
++`G(α, T_α) ⊆ Π_{A_α}` is the
++set of terminal profiles that satisfy that player's task — the states are orthemes;
+ "maximize my utility" is the task that SELECTS them. Utility/objective/loss
+ are external parameters (core-formalization §3), never orthemes and never
+ metaorthemes.
+ 
+ **C2 — "their orthemes are completely identical in structure."**
+ Isomorphism is not identity. The goal SCHEMA "win-for-me" is invariant
+-under the role substitution φ(A→B); the EXTENSIONS differ: φ maps
++under the role substitution φ(α→β); the EXTENSIONS differ: φ maps
+ "White checkmates Black" to "Black checkmates White." Two consequences the
+ screenshots blur: (i) nothing is "the same ortheme" here — the schemas are
+ isomorphic, the target profiles disjoint; (ii) the interesting fact is
+-precisely that φ exists and G(B,T_B) = φ(G(A,T_A)) while
+-G(A,T_A) ∩ G(B,T_B) = ∅.
++precisely that φ exists and G(β,T_β) = φ(G(α,T_α)) while
++G(α,T_α) ∩ G(β,T_β) = ∅.
+ 
+ **C3 — "the metaortheme = the rules of the game + the logic of minimax."**
+ Three different things, none of them a metaortheme:
+@@ -71,18 +86,19 @@ player's INFORMATION SET is not part of κ: in poker the one concrete deal
+ (all hole cards) IS the occurrence m; what player α knows of it is α's
+ OBSERVATION, x_α = Ω_α(m) — the framework's own observation-vs-occurrence
+ distinction, applied per actor. Imperfect information = one shared m with
+-divergent Ω_A(m) ≠ Ω_B(m); perfect-information games are the special case
+-Ω_A = Ω_B = full state. Filing the information set into κ would invert the
++divergent Ω_α(m) ≠ Ω_β(m); perfect-information games are the special case
++Ω_α = Ω_β = full state. Filing the information set into κ would invert the
+ occurrence/observation line the theory is built on.
+ 
+ **C5 — strict zero-sum does not mean every state realizes ±X.** U_A + U_B
+-= 0 admits draws (0,0). Terminal profiles partition into G(A), G(B), and a
++= 0 admits draws (0,0) (the utility subscripts A/B are the prose player
++labels for actors α/β). Terminal profiles partition into G_α, G_β, and a
+ nonempty draw set in general; "the objective manifestation of A's ortheme
+ mathematically prevents B's" holds only between the two win-sets, not over
+ the whole terminal space.
+ 
+ **C6 — "reflexively selfish" is task language, not psychology or ethics.**
+-Under T_A = "win for A," correctness is A-indexed by construction; that is
++Under T_α = "win for the player labeled A," correctness is α-indexed by construction; that is
+ a property of the DECLARED task, not a discovery about agents. And not all
+ orthemes are actor-relative: "the file hash matches," "the parse is
+ grammatical" are actor-independent placements; actor-relativity enters
+@@ -91,35 +107,38 @@ exactly where the task does.
+ ## 3. Formal residue (assessed against the existing core)
+ 
+ Already expressible with existing machinery: episodes carry actor α and
+-task T; placements are task-indexed; the episode graph couples episodes
++declared analysis A_α (task T_α = task(A_α)); placements are
++actor/analysis-indexed; the episode graph couples episodes
+ over one lineage. **New derived definitions worth adding (clarification,
+ NOT a new formal addition — the six-addition count is unchanged):**
+ 
+ ```text
+ x_α = Ω_α(m)         actor-α's OBSERVATION of the shared occurrence m
+-                     (imperfect information: Ω_A(m) ≠ Ω_B(m) over ONE m)
+-p̂(e, α, T)          the current inferred profile of actor α's episode e
+-                     under task T (inferred FROM x_α, never from m directly)
+-W(α) / UtilityTarget(α,T)   a PARAMETRIC ortheme schema — the shared
++                     (imperfect information: Ω_α(m) ≠ Ω_β(m) over ONE m)
++p̂(e, α, T_α)        the current inferred profile of actor α's episode e
++                     under its analysis A_α, task T_α = task(A_α)
++                     (inferred FROM x_α, never from m directly)
++W(·) / UtilityTarget(α,T_α)   a PARAMETRIC ortheme schema — the shared
+                      goal-form under role substitution ("win for α")
+-G(α, T) ⊆ Π_T        actor-α's grounded TARGET PROFILE SET: the profiles T
+-                     declares appropriate as outcomes — the schema's
++G(α, T_α) ⊆ Π_{A_α}  actor-α's grounded TARGET PROFILE SET: the profiles
++                     T_α declares appropriate as outcomes — the schema's
+                      instantiation at α. CANONICAL TYPING: a SET of
+                      profiles; each member is one complete profile
+-φ(A→B)               a role/perspective isomorphism on Π_T, when one exists
+-                     (schema invariance: G(B,T_B) = φ(G(A,T_A)))
+-Conflict_m(G_A,G_B)  no profile of any occurrence reachable from m realizes
++φ(α→β)               a role/perspective isomorphism between Π_{A_α} and
++                     Π_{A_β}, when one exists
++                     (schema invariance: G(β,T_β) = φ(G(α,T_α)))
++Conflict_m(G_α,G_β)  no profile of any occurrence reachable from m realizes
+                      a member of both target sets
+-Compat_m(G_A,G_B)    some reachable occurrence's profile realizes a member
+-                     of both (cooperation is the special case G_A = G_B)
++Compat_m(G_α,G_β)    some reachable occurrence's profile realizes a member
++                     of both (cooperation is the special case G_α = G_β)
+ ```
+ 
+ **Three distinct relations the parametric schema untangles (Phase D):**
+-(i) SCHEMA identity — A and B run the same parametric form `W(α)`; this is
++(i) SCHEMA identity — players A and B run the same parametric form `W(·)`; this is
+ the true content of the owner's "locally identical" intuition; (ii)
+-GROUNDED-ORTHEME identity — `W(A)` and `W(B)` are DISTINCT grounded
++GROUNDED-ORTHEME identity — `W(α)` and `W(β)` are DISTINCT grounded
+ targets, never identical in a strictly competitive task; (iii)
+-TARGET-PROFILE overlap — `G_A ∩ G_B` may be empty (zero-sum win-sets),
++TARGET-PROFILE overlap — `G_α ∩ G_β` may be empty (zero-sum win-sets),
+ partial, or total (cooperation). Local similarity is (i); material
+ exclusivity is emptiness at (iii); no level asserts identity of the
+ players' orthemes.

@@ -1,0 +1,298 @@
+diff --git "a/archive/reconciliation\\candidates\\d1-m1-stage\\orthemic-core-formalization-v2-candidate.md" "b/archive/reconciliation\\candidates\\orthemic-core-formalization-v2-candidate.md"
+index 96e4f35..90cc6ba 100644
+--- "a/archive/reconciliation\\candidates\\d1-m1-stage\\orthemic-core-formalization-v2-candidate.md"
++++ "b/archive/reconciliation\\candidates\\orthemic-core-formalization-v2-candidate.md"
+@@ -197,7 +197,7 @@ authorized vs factually established — and what each licenses).
+ 
+ The record above is the REQUIRED endpoint. Because orthing is defined as
+ evidence-updating, an endpoint alone cannot always adjudicate pathway
+-verdicts; where those verdicts (V2b truth-connection, V3b executor
++verdicts; where those verdicts (V2b^proc truth-conduciveness, V3b executor
+ fidelity, V6 robustness — §4) must be adjudicated from the episode's own
+ record, an ordered **trace** is also required:
+ 
+@@ -217,9 +217,13 @@ applicable**: a read-only classification episode has `a = ⊥` (no action),
+ and an empty `δ`. Where a component is `⊥`, the verdicts that quantify
+ over it (V4 route, V5 closure — §4) are **not asserted of that episode**
+ rather than counted as failures; formally, `App(e)` is the recorded set of
+-applicable verdict indices and pathway adequacy conjoins only over
+-`App(e)` (§4.1). Applicability is itself recorded, so "no route"
+-(deliberately none) is distinguished from "route omitted" (a defect).
++applicable verdict indices, and pathway adequacy conjoins over the
++governance-DERIVED required set `ReqPath(e)` (§4.1, owner decision O2) —
++applicability is derived from the declared analysis, episode shape, risk
++class, claims, and governance, never a discretionary post-hoc list, and
++every excluded verdict carries a recorded applicability reason. So "no
++route" (deliberately none, with reason) is distinguished from "route
++omitted" (a defect), and "not tested" is never "not applicable".
+ 
+ ### 2.3 Three separations, stated once
+ 
+@@ -370,32 +374,66 @@ configuration-plus-policy — which the safeguards below must block.
+ 
+ ### 4.1 Separate verdicts
+ 
+-All verdicts are predicates on an episode `e`; none entails another.
++All verdicts are predicates on an episode `e` (some claim-indexed). **The
++verdicts diagnose distinct dimensions and are not identified with one
++another; they are NOT assumed pairwise logically independent.** Every
++definitional or logical implication is declared explicitly in the
++implication table at the end of this section; no implication may be
++inferred merely from proximity in the verdict numbering (owner decision
++O2, 2026-07-19; this supersedes the earlier "none entails another").
+ **Compact core (main text):** result correctness; evidential support;
+-truth-connection; rule adequacy; executor fidelity; route safety; closure
+-truthfulness; robustness. **Full vector (this table)** — the finer splits
+-matter to audits; ordinary discussion may use the compact core:
++procedure truth-conduciveness; rule adequacy; executor fidelity; route
++safety; closure truthfulness; robustness. **Full vector (this table)** —
++the finer splits matter to audits; ordinary discussion may use the
++compact core:
+ 
+ - **V1 — placement/profile correctness.** `correct(e)`: `p̂(e)` agrees
+   with `O*(m; A(e))` at the governed level; weaker `route-correct(e)`: `p̂(e)`
+   is route-sufficient and every placed claim is in `O*(m; A(e))` (gloss: the
+   answer was right, for enough of the profile to act on — judged against
+-  the analysis the episode itself records).
++  the analysis the episode itself records). **Result-side: V1 is never a
++  conjunct of `PathwayAdequate`.**
+ - **V2a — evidential support.** The typed evidence `H`, within its
+   declared scopes, meets the DECLARED standard for each placed claim
+   (gloss: enough of the right kind of evidence, by the rulebook's own
+   bar).
+-- **V2b — truth-connection at a parameterized reliability criterion.**
+-  The procedure as executed is truth-connected in the DECLARED sense.
+-  *Default criterion:* a **sensitivity**-style counterfactual — had the
+-  claim been false, the procedure as executed would (at the declared
+-  reliability level) have failed to support it (gloss: the check passed
+-  *because* the claim was true, not alongside it). The criterion is a
+-  **parameter, not a neutral truth**: soundness, completeness,
+-  calibration, and perturbation-stability variants are admissible
+-  declarations, and fixtures may test each. Sensitivity is the default
+-  because it is exactly what the stopped-clock case violates and what the
+-  paired metamorphic probe estimates (V6 alignment).
++- **V2b^proc — configured-procedure truth-conduciveness (pathway-side;
++  owner decision O2, 2026-07-19).** NON-FACTIVE. The procedure family
++  actually instantiated in this episode — under its governing
++  configuration `μ⃗`, applicable metaorthemmata `MetaTok(e)`, and
++  execution mode — satisfies the predeclared reliability criterion over
++  its DECLARED reference class. This is not an unrestricted claim about
++  the abstract procedure type. For each placed claim `q`, the reliability
++  specification records or references
++  `RelSpec_q(e) = ⟨declared reference class; relevant case/risk stratum;
++  reliability metric; threshold or tolerance; perturbation or comparison
++  family where applicable; evaluation protocol; evidence used to
++  establish reliability; version and validity conditions⟩`. The reference
++  class, criterion, and threshold must be fixed independently of this
++  episode's outcome — never selected after seeing the result merely to
++  rescue or condemn it. The current episode's correctness may contribute
++  to LATER aggregate reliability evidence, but one current correct result
++  cannot by itself establish V2b^proc. **`V2b^proc(e)` does not entail
++  `V1(e)`:** a reliable configured procedure may produce a rare error.
++  *Default criterion:* a **sensitivity**-style counterfactual (the check
++  passes because claims of this class are true, not alongside them);
++  soundness, completeness, calibration, and perturbation-stability
++  variants are admissible declarations, and fixtures may test each.
++- **V2b^tok — token-level truth linkage (result-side audit annotation;
++  EXCLUDED from the pathway core).** FACTIVE and claim-wise:
++  `V2b^tok_q(e)` holds when THIS placed claim `q` was correct through the
++  truth-relevant evidential mechanism rather than merely correct
++  alongside it; by definition `V2b^tok_q(e) → V1_q(e)` (truth of that
++  claim). One claim-level `V2b^tok_q` does not by itself entail
++  correctness of the whole profile — a profile-level reading requires
++  every placed claim covered and an explicit aggregation rule. It remains
++  reportable for stopped-clock/Gettier diagnoses; its factivity is
++  exactly why it sits outside `PathwayAdequate` (including it would
++  re-import result correctness). Token-local PROCEDURAL defects are not
++  represented by V2b^tok alone: non-factive defects must appear under the
++  appropriate pathway verdicts (V2a, V2b^proc, V2c, V3, V3a, V3c, V3b,
++  or V6). *(Labels provisional pending the deferred verdict-index
++  decision; semantics control over lettering.)*
+ - **V2c — evidence currentness/provenance.** Each load-bearing evidence
+   item is current for `(κ, v)` and carries admissible provenance (gloss:
+   not stale, not unsourced — separated from V2a because evidence can meet
+@@ -434,7 +472,7 @@ matter to audits; ordinary discussion may use the compact core:
+ - **V3d — ex-ante procedural justification.** At decision time `t`, given
+   exactly the evidence then available, the placement was the reasonable
+   one under the declared loss/decision standard (gloss: blameless-at-the-
+-  time — indexed to decision time, unlike V2a/V2b which are audit-time
++  time — indexed to decision time, unlike V2a/V2b^proc/V2b^tok which are audit-time
+   verdicts about support and truth-connection).
+ - **V4a — route safety/admissibility.** `r` is admissible under the
+   constraints in force; correct-route-unavailable is recorded as routing
+@@ -455,25 +493,94 @@ matter to audits; ordinary discussion may use the compact core:
+   `N(e) = {e′ : (e,e′) ∈ P}`, `robust(e)` iff the V1 failure rate over
+   `N(e)` is below the declared tolerance. Metamorphic fixtures (paired
+   correct-without-marker / incorrect-with-marker probes) are V6's
+-  operational estimator.
++  operational estimator. **V6 is not V2b^proc:** V2b^proc asks whether
++  the configured procedure is truth-conducive over its declared reference
++  class and criterion; V6 asks whether the episode is stable under a
++  declared neighboring perturbation family. One test suite may supply
++  evidence for both; the questions differ, and these definitions
++  introduce no entailment between them.
++
++**Result-free pathway core (owner decision O2, 2026-07-19).**
++
++    CorePath = { V2a, V2b^proc, V2c, V3, V3a, V3c, V3b, V3d, V4a, V5, V6 }
++
++Excluded by construction: **V1** (result correctness), **V2b^tok**
++(factive token-level truth linkage — entails claim truth), and **V4b**
++(route near-optimality — an advisory/quality verdict recorded separately;
++a route can be safe and adequate without being optimal).
++
++**Governed applicability.** Pathway applicability is DERIVED, never a
++discretionary post-hoc list — an executor cannot exempt a failing or
++untested verdict by omitting it:
++
++    ReqPath(e) = CorePath ∩ RequiredBy( A(e), episode-shape(e),
++                   risk-class(e), claims(e), governance(e) )
++
++Minimum derivation rules: **V3c** is required exactly when
++`MetaTok(e) ≠ ∅` (the M1 zero-burden rule is preserved:
++`MetaTok(e) = ∅ ⟹ V3c ∉ ReqPath(e)`); **V4a** is required when the
++episode selects or authorizes a route; **V5** is required when the
++episode makes a closure/completion claim or dispositions residuals;
++**V6** is required when `A(e)` or the risk class predeclares a robustness
++obligation. **"Not tested" is not "not applicable":** every verdict
++excluded from `ReqPath(e)` carries a recorded applicability reason.
++(§2.2's `App(e)` remains the episode's recorded applicability set; its
++pathway restriction must equal the governance-derived `ReqPath(e)` and is
++auditable against it.)
++
++**Verdict status is not Boolean.**
++
++    Status_i(e) ∈ { pass, fail, undetermined, not-applicable }
++
++    PathwayAdequate(e)      iff every V_i ∈ ReqPath(e) has status pass
++    PathwayDefective(e)     iff some  V_i ∈ ReqPath(e) has status fail
++    PathwayUndetermined(e)  iff no required verdict fails and at least
++                            one required verdict is undetermined
++
++A missing assessment is `undetermined` — never silently counted as pass,
++never silently removed as not-applicable.
++
++**Declared implication/dependency table** (complete; nothing else is
++asserted, and pairwise independence is NOT claimed where unproven):
++
++| Relation | Status |
++|---|---|
++| `V2b^tok_q(e) → V1_q(e)` | **Definitional entailment** (factive, claim-wise) |
++| `V2b^proc(e) → V1(e)` | **No** — non-factive by construction |
++| `V3d(e) → V1(e)` | **No** — decision-time reasonableness is result-free |
++| `PathwayAdequate(e) → V1(e)` | **No** — the core excludes V1 and V2b^tok |
++| `V1(e) → PathwayAdequate(e)` | **No** — stopped-clock and defective-binding cases |
++| `V1(e)` at the governed level vs claim-wise `V1_q(e)` | Definitional: profile-level V1 aggregates the placed claims per the declared level |
++| `PathwayAdequate(e) ↔ ¬PathwayDefective(e)` | **Not asserted** — `undetermined` is a third state |
++| V6 vs V2b^proc | **No entailment either way** (distinct questions; shared evidence possible) |
++| All other pairs | No definitional implication introduced by these definitions; empirical correlation is never entailment |
+ 
+-**Applicability.** With `App(e)` the recorded set of applicable verdicts
+-(§2.2):
++### 4.2 Result × pathway matrix
+ 
+-    PathwayAdequate(e) = ∧ { V_i(e) : i ∈ App(e) }
++The matrix applies only AFTER the pathway status is resolved as adequate
++or defective; `PathwayUndetermined` episodes remain outside the four
++resolved cells until audited. (Owner decision O2, 2026-07-19: this
++supersedes the earlier parenthetical that committed token-level V2b to
++the conjunction — the incorrect-result/adequate-pathway cell is genuinely
++representable.)
+ 
+-### 4.2 Result × pathway matrix
++| | **PathwayAdequate** | **PathwayDefective** |
++|---|---|---|
++| **Result correct (V1)** | *Nominal.* A current behavioral validator, correctly bound to the current artifact (V3c pass where applicable), under a sufficiently reliable configured procedure, returns the correct result. Nothing to fix. | *Correct + defective (stopped-clock, compensating error, or governing-side luck).* Possible failure loci: V2b^proc, V3, V3a, V3c, V3b, or V6 — the marker validator that happens to be right today; the mis-bound metaorthemma whose wrong reference plane locally coincides with the right one. Remedy targets the procedure, rule, or binding — not the verdict. |
++| **Result incorrect (¬V1)** | `AdequatePathError(e) := ¬V1(e) ∧ PathwayAdequate(e)` — the justified rare miss of a non-perfect but sufficiently reliable process used correctly: a genuine, representable cell, expected whenever such a process runs. Where V3d ∈ ReqPath(e), `JustifiedMiss(e) := AdequatePathError(e)` — V3d's pass is already inside PathwayAdequate, so no redundant conjunct is added. Remedy, if any: a new discriminating evidence source; no rule or executor blame. **Note:** orthemic adequacy does not establish moral, legal, institutional, or theological blamelessness — "blameless" is not a formal predicate here. | *Compound failure.* Wrong placement via a defective pathway — e.g., a deploy gate reads a cached test result from the previous commit and approves the current one (¬V1 with V2c and V3 failures). Remedy: both the placement and the rulebook/lineage machinery. |
+ 
+-Four explanatory cells (the labels below correct an earlier inconsistency:
+-under a token-level truth-connection verdict, an incorrect result means
+-V2b failed *for that claim instance*, so the incorrect-but-blameless cell
+-is **ex-ante justified (V3d) yet not fully pathway-adequate** — not
+-"pathway adequate" outright):
++**Worked verdict fixtures (deterministic; the four resolved cells are all
++satisfiable, plus the undetermined state — machine-checkable encodings in
++`tests/verdict-fixtures.json`, validated by
++`scripts/validate_verdict_semantics.py`):**
+ 
+-| | **Pathway verdicts favorable** | **Pathway defective** |
++| Fixture | Setup | Expected statuses |
+ |---|---|---|
+-| **Result correct (V1)** | *Correct + robust/adequate (nominal).* A release gate runs the behavioral suite against the exact commit it gates, on current artifacts; it passes; the build is in fact good. Nothing to fix. | *Correct + defective/lucky (stopped-clock).* A scan validator checks only that a marker string appears in the log; the artifact happens to be compliant. Neighbors expose it: compliant-without-marker is rejected, non-compliant-with-marker is passed. V1 holds; V2b and V6 fail; the remedy targets the rule (`ε_μ`), not the verdict. |
+-| **Result incorrect** | *Incorrect + ex-ante justified, NOT fully adequate.* A triage router places a failing test under "infrastructure flake" because every available signal points there; the true cause is a rare race in new code. V3d holds (blameless at decision time), V3/V3a/V3b may hold, but V1 and token-level V2b fail — the pathway is not certified adequate; the remedy is a new discriminating evidence source, with no rule or executor blame. | *Incorrect + defective (compound failure).* A deploy gate reads a cached test result from the previous commit and approves the current one: wrong placement (V1) via a pathway violating the current-vs-stale metaortheme (V2c, V3). Remedy: both the placement and the rulebook/lineage machinery. |
++| **F1 — nominal** | Current behavioral validator, correctly bound (V3c pass where applicable), reliable configured procedure, correct result | V1 pass; every ReqPath verdict pass ⇒ **PathwayAdequate** |
++| **F2 — stopped clock** | SCAN-CLEAN marker validator happens to be correct today but fails its declared reliability and perturbation criteria | V1 pass; V2b^proc fail; V6 fail ⇒ **PathwayDefective** (V2b^tok may also fail as a result-side diagnosis: correct, but not through the truth-relevant mechanism) |
++| **F3 — justified rare miss** | Properly configured, faithfully executed procedure meeting its declared reference-class reliability threshold errs on this token | V1 fail; V2b^proc pass; V3/V3a/V3c/V3b/V3d pass where applicable ⇒ **PathwayAdequate**; V2b^tok_q fails/unavailable (the placed claim is false). *This fixture is mandatory: it proves the lower-left cell is no longer definitionally blocked.* |
++| **F4 — defective metaorthemma, lucky result** | Sound standard and policy, faithful execution; the concrete token binds the wrong reference plane / tolerance / fixture / success surface / calibration; the result happens to be correct | V1 pass; V3 pass; V3a pass; V3b pass; **V3c fail** ⇒ **PathwayDefective** |
++| **F5 — unresolved audit** | The result is known, but required robustness or provenance evidence has not yet been evaluated | one required verdict `undetermined` ⇒ **PathwayUndetermined**; neither PathwayAdequate nor PathwayDefective is asserted |
+ 
+ ### 4.3 Epistemic constraint and nearest neighbors
+ 
+@@ -658,7 +765,7 @@ and `App(e)` (§4.1); token-level DAG with typed edges (§5.2).
+ block). **Rejected:** literal set inclusion for episodes; forced single
+ successor; blanket edition-wide revision reopening; safeguard (v)
+ word-utility test inside concept admission. **Unresolved alternatives:**
+-safety/reliabilist/calibration variants of V2b remain admissible declared
++safety/reliabilist/calibration variants of V2b^proc remain admissible declared
+ criteria; single-object metaortheme presentation (C1) remains permitted as
+ user-facing shorthand. **Experimental gates:** episode reification's
+ practical delta over "audit the validator when suspicious" — fixture E5;
+diff --git "a/archive/reconciliation\\candidates\\d1-m1-stage\\orthemma-ortheme-systems-revised-draft-v2-candidate.md" "b/archive/reconciliation\\candidates\\orthemma-ortheme-systems-revised-draft-v2-candidate.md"
+index 07f259b..a68d8e2 100644
+--- "a/archive/reconciliation\\candidates\\d1-m1-stage\\orthemma-ortheme-systems-revised-draft-v2-candidate.md"
++++ "b/archive/reconciliation\\candidates\\orthemma-ortheme-systems-revised-draft-v2-candidate.md"
+@@ -527,32 +527,34 @@ is not the episode** (the convenient one-placement notation `e ⊨_μ (m : ô)`
+ 
+ ### 8.3 The verdict vector
+ 
+-All verdicts are predicates on an episode `e`; none entails another. Pathway adequacy conjoins only over the applicable indices: `PathwayAdequate(e) = ∧ { V_i(e) : i ∈ App(e) }`.
++The verdicts diagnose distinct dimensions and are not identified with one another; they are NOT assumed pairwise logically independent — every definitional implication is declared explicitly, and the only one these definitions introduce is the claim-wise `V2b^tok_q → V1_q` (full implication table: core formalization §4.1; owner decision O2, 2026-07-19, superseding the earlier "none entails another"). Pathway adequacy conjoins over the RESULT-FREE governed core `CorePath = {V2a, V2b^proc, V2c, V3, V3a, V3c, V3b, V3d, V4a, V5, V6}` — V1 (result), V2b^tok (factive), and route near-optimality are excluded. The required set `ReqPath(e)` is DERIVED from the declared analysis, episode shape, risk class, claims, and governance (never a discretionary list; "not tested" is never "not applicable"; every exclusion carries a recorded reason), and each verdict carries a status in {pass, fail, undetermined, not-applicable}: `PathwayAdequate(e)` iff every required verdict passes; `PathwayDefective(e)` iff one fails; `PathwayUndetermined(e)` when none fails but something required is unevaluated — a missing assessment is never silently a pass.
+ 
+ | Verdict | Question it answers |
+ |---|---|
+-| **V1 — result correctness** | Does the placed profile agree with `O*(m; A(e))` — the actual profile under the analysis recorded in the episode — at the governed level (or, weaker, is it route-sufficient with every placed claim true)? |
++| **V1 — result correctness** | Does the placed profile agree with `O*(m; A(e))` — the actual profile under the analysis recorded in the episode — at the governed level (or, weaker, is it route-sufficient with every placed claim true)? **Result-side: never a conjunct of pathway adequacy.** |
+ | **V2a — evidential support** | Does the typed evidence, within its declared scopes, meet the declared standard for each placed claim? |
+-| **V2b — truth-connection, at a declared reliability criterion** | Was the procedure as executed truth-connected in the declared sense? Default criterion: sensitivity — had the claim been false, the procedure as executed would (at the declared reliability level) have failed to support it. The criterion is a parameter, not a neutral truth: soundness, calibration, and perturbation-stability variants are admissible declarations. |
++| **V2b^proc — configured-procedure truth-conduciveness** (pathway-side; NON-FACTIVE) | Does the procedure family actually instantiated here — under its governing configuration, applicable metaorthemmata, and execution mode — satisfy the predeclared reliability criterion over its DECLARED reference class (per-claim `RelSpec_q`: reference class, stratum, metric, threshold, perturbation/comparison family, protocol, reliability evidence, version/validity)? The reference class and threshold are fixed independently of this episode's outcome; one current correct result cannot by itself establish it; **it does not entail V1** — a reliable configured procedure may produce a rare error. Default criterion: sensitivity; declared variants admissible. |
++| **V2b^tok — token-level truth linkage** (result-side annotation; EXCLUDED from the pathway core) | Was THIS placed claim correct through the truth-relevant evidential mechanism rather than merely alongside it? FACTIVE and claim-wise: `V2b^tok_q → V1_q`; a profile-level reading requires every placed claim covered plus an explicit aggregation rule. Reportable for stopped-clock/Gettier diagnoses; excluded from `PathwayAdequate` precisely because its factivity would re-import result correctness. Non-factive token-local defects belong under V2a/V2b^proc/V2c/V3/V3a/V3c/V3b/V6, never under V2b^tok alone. (Labels provisional pending the verdict-index decision.) |
+ | **V2c — evidence currentness** | Is each load-bearing evidence item current for `(κ, v)` and of admissible provenance — not stale, not unsourced? |
+ | **V3 — configuration adequacy** | Was each governing configuration adequate for the case's risk class — do its declared states separate what this case class can occupy, and can its selecting evidence actually discriminate them? |
+ | **V3a — policy adequacy** | Was the meta-policy/procedure well-formed for the configuration it ran under? (A sound rulebook can carry an ill-formed procedure.) |
+ | **V3b — executor fidelity** | Did the actor actually execute the procedure as written? (Adequate rule + adequate policy + infidelic executor routes to a different remedy: retrain or replace the executor, not rewrite the rule.) |
+ | **V3c — governing-token adequacy** (owner decision M1, 2026-07-19) | Was every applicable concrete metaorthemma — the case-bound configuration token of a governing type (§8.2) — correctly instantiated, analysis-compatible, occurrence-anchored, correctly scoped to its claims, current, provenanced, and bound under authority? Per-token statuses are preserved alongside the episode-level conjunction; with no applicable token, V3c ∉ App(e) (zero-burden rule). Isolates: correct standard + sound policy + faithful execution + **defective case-specific binding** (wrong reference plane, wrong-role tolerance, expired calibration, wrong fixture or success surface). Conceptual order: V3 → V3a → V3c (binding) → V3b (execution) → V3d; lettering retained pending the verdict-index decision. |
+-| **V3d — ex-ante justification** | At decision time, on exactly the evidence then available, was the placement the reasonable one under the declared standard? (Blameless-at-the-time; indexed to decision time, unlike V2a/V2b, which are audit-time verdicts.) |
++| **V3d — ex-ante justification** | At decision time, on exactly the evidence then available, was the placement the reasonable one under the declared standard? (Blameless-at-the-time; indexed to decision time, unlike V2a/V2b^proc/V2b^tok, which are audit-time verdicts.) |
+ | **V4 — route safety** | Was the route admissible under the constraints in force? Correct-route-unavailable is recorded as routing failure, not diagnostic uncertainty. (A finer near-optimality verdict may be recorded separately: safe ≠ best.) |
+ | **V5 — closure truthfulness** | Does every residual carry an admissible disposition with traceable ownership, and does the completion claim match the ledger — no collapse of deferred/transferred/risk-accepted into "resolved"? |
+ | **V6 — robustness** | Over the declared perturbation neighborhood of the episode — same policy, same rules, inputs from a declared perturbation family (version bumped, marker removed or spoofed, evidence reordered, near-identical sibling substituted) — is the V1 failure rate below tolerance? Paired metamorphic probes are V6's operational estimator. |
+ 
+ ### 8.4 The result × pathway matrix
+ 
+-| | **Pathway verdicts favorable** | **Pathway defective** |
++The matrix applies only after the pathway status resolves as adequate or defective; `PathwayUndetermined` episodes remain outside the four cells until audited. (Owner decision O2, 2026-07-19: the earlier parenthetical committing token-level truth-connection to the conjunction is superseded — the incorrect-result/adequate-pathway cell is genuinely representable.)
++
++| | **PathwayAdequate** | **PathwayDefective** |
+ |---|---|---|
+-| **Result correct (V1)** | **Correct + robust (nominal).** A release gate runs the behavioural suite against the exact commit it gates, on current artifacts; it passes; the build is in fact good. Nothing to fix. | **Correct + lucky (stopped clock).** The answer is right; V2b and V6 fail; the remedy targets the rule, not the verdict. Worked example below. |
+-| **Result incorrect** | **Incorrect + ex-ante justified, NOT fully adequate.** A triage router places a failing test under "infrastructure flake" because every available signal points there; the true cause is a rare race in new code. V3d holds — blameless at decision time — and V3/V3a/V3b may hold, but V1 fails and token-level truth-connection fails for that claim instance, so the pathway is *not* certified adequate. Remedy: a new discriminating evidence source; no rule or executor blame. | **Incorrect + defective (compound failure).** A deploy gate reads a cached test result from the previous commit and approves the current one: wrong placement, via a pathway violating the current-vs-stale configuration (V1, V2c, V3 all fail). Remedy: both the placement and the lineage machinery. |
++| **Result correct (V1)** | **Nominal.** A release gate runs the behavioural suite against the exact commit it gates, on current artifacts, correctly bound (V3c where applicable), under a reliable configured procedure; it passes; the build is in fact good. Nothing to fix. | **Correct + defective (stopped clock / compensating error / governing-side luck).** The answer is right; the failure locus is V2b^proc, V3, V3a, V3c, V3b, or V6. The remedy targets the procedure, rule, or binding — not the verdict. Worked example below. |
++| **Result incorrect (¬V1)** | **`AdequatePathError(e) := ¬V1(e) ∧ PathwayAdequate(e)`** — the justified rare miss of a non-perfect but sufficiently reliable process used correctly. A triage router places a failing test under "infrastructure flake" because every available signal points there; the true cause is a rare race in new code: V3d holds, the procedure met its declared reference-class reliability (V2b^proc), and the pathway IS certified adequate; `V2b^tok` fails for the claim (it is false). Where V3d ∈ ReqPath(e), `JustifiedMiss(e) := AdequatePathError(e)` (V3d's pass is already inside PathwayAdequate). Remedy: a new discriminating evidence source; no rule or executor blame. Orthemic adequacy does not establish moral, legal, institutional, or theological blamelessness. | **Compound failure.** A deploy gate reads a cached test result from the previous commit and approves the current one: wrong placement via a defective pathway (¬V1; V2c, V3 fail). Remedy: both the placement and the lineage machinery. |
+ 
+-(The labels correct an earlier inconsistency: under a token-level truth-connection verdict, an incorrect result means V2b failed *for that claim instance*, so the
+-incorrect-but-blameless cell is "ex-ante justified yet not fully pathway-adequate" — not "pathway adequate" outright.)
++Deterministic fixtures establishing all four resolved cells (plus the undetermined state) are given in the core formalization §4.2 (F1–F5) with machine-checkable encodings in `tests/verdict-fixtures.json`.
+ 
+ ### 8.5 Worked example: the stopped-clock validator
+ 
+@@ -560,8 +562,8 @@ A scan validator's rule is: *pass iff the output log contains the marker string*
+ 
+ - **V1 holds:** the placed claim ("compliant") is true.
+ - **V2a arguably holds by the letter:** the declared standard — marker presence — was met.
+-- **V2b fails at the default sensitivity criterion:** had the artifact been non-compliant but the marker present (a tool version that always prints it; a spoofed log), the
+-  procedure as executed would still have supported the claim. The check did not pass *because* the artifact was compliant; it passed alongside it.
++- **V2b^proc fails at the default sensitivity criterion:** over its declared reference class, had an artifact been non-compliant with the marker present (a tool version that always prints it; a spoofed log), the
++  procedure as configured would still have supported the claim — the configured procedure is not truth-conducive. (**V2b^tok also fails as a result-side diagnosis:** this claim was correct, but not *through* the truth-relevant mechanism — the stopped-clock signature.)
+ - **V6 fails:** the perturbation neighborhood exposes it directly — compliant-without-marker is rejected; non-compliant-with-marker is passed. The paired probes are exactly the
+   metamorphic fixture pair.
+ - **V3 fails:** the governing evidence configuration is inadequate for the risk class — its selecting evidence cannot discriminate the states it is supposed to separate.

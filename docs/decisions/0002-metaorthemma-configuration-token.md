@@ -1,0 +1,11 @@
+# Decision 0002 — Metaorthemma as configuration token (M1)
+
+**Date:** 2026-07-19 · **Decider:** project owner · **Implemented by:** Claude Fable 5 under owner direction · **Status:** implemented and promoted (reconciliation R1). The *word* `metaorthemma` remains a benchmark-gated candidate; this decision adopts the conceptual **object**, not the terminology.
+
+**Question.** Does the theory need a concrete, case-bound token of a governing metaortheme inside an orthing episode — and if so, is it a configuration token (M1), an application-event token (M2), or nothing beyond episode fields (M0)?
+
+**Decision: M1 — configuration token**, tightly interpreted. A metaorthemma `μ̄` is the episode-local, case-bound instantiation of a repeatable metaortheme and its policy parameters: it records/references its own identity and lineage, metaortheme type + version (`MetaInst(μ̄, μ)`), the episode's analysis + version (`Compatible(μ̄, A(e))` — the token binds case-specific values *within* the declared analysis and never creates a hidden second one), the target occurrence `(κ, v)`, governed component, the case-specific binding map (reference frame, tolerance value, fixture, success surface, …), scope with dependent claims, instrument/calibration provenance, the **binder with binding warrant kept distinct from the executor**, binding time, and validity. It is **not** the whole episode and **not** the execution event; the application-event view is derived (`ApplyEvent(μ̄, e) = ⟨μ̄, Trace_e|_μ̄⟩`), never a second primitive. **Zero-burden rule:** configurations with no material case-specific binding get no token, and the associated verdict is inapplicable.
+
+**The missing distinction this supplies:** *correct governing standard + correct policy + faithful execution + defective case-specific binding* — wrong reference plane, wrong-role tolerance, expired calibration, wrong test fixture or success surface. Verdict **V3c** (governing-token adequacy) isolates it, with per-token statuses preserved. Classified as an explicit subobject of episode reification (the sixth formal addition), not a seventh addition. An earlier rejection of "meta-orthemma" as a name for the *reified episode* stands for that different referent.
+
+**Artifacts:** `archive/reconciliation/METAORTHEMMA-M1-INCREMENTAL-DIFFS.patch`, `METAORTHEMMA-M1-CHANGE-LEDGER.md`.
