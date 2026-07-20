@@ -4,7 +4,7 @@
 
 Current papers:
 
-- [`orthability-and-the-ground-of-intelligibility.md`](orthability-and-the-ground-of-intelligibility.md) — **school-neutral philosophical analysis**: two-axis (concrete/objective × sound/unsound) architecture; orthing faculties; the transcendental argument from orthability with every premise labeled; the self-assembly reductio with its strongest objection adjudicated; Thesis C replaced by the evaluability thesis C′ (Decision 0008); rivals and unresolved exits stated.
+- [`orthability-and-the-ground-of-intelligibility.md`](orthability-and-the-ground-of-intelligibility.md) — **school-neutral philosophical analysis**: three-axis typing (object level × instantiation × normative status, Decision 0009) with strict soundness a derived factive status; orthing faculties; the transcendental argument from orthability with every premise labeled and the senses orthability-L/O/R kept explicit (Decision 0010; step map in [`ARGUMENT-MAP-ORTHABILITY.md`](ARGUMENT-MAP-ORTHABILITY.md)); the self-assembly reductio with its strongest objection adjudicated; Thesis C replaced by the evaluability thesis C′ (Decision 0008); rivals and unresolved exits stated.
 - [`orthability-divine-attributes-and-speech-athari.md`](orthability-divine-attributes-and-speech-athari.md) — **explicitly Atharī creed-internal** development: the eight-way distinction table; the attribute of Speech (genus/particular precision); the uncreated Qurʾān; the three/four-level Arabic account; the "uncreated grammar" metaphor defined and defused; kalām nafsī described neutrally; reason/revelation accounting. **Route-specific; not a neutral conclusion and not the position of every Islamic school.**
 
 Supporting files:

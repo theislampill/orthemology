@@ -108,6 +108,31 @@ def main():
                   "must declare bearer/dimensions or the strict derived definition")
     check("banned-phrase scan complete over %d files" % len(files), True)
 
+    # orthability sense guard (Decision 0010): companion prose using the word
+    # intensively must carry the three-sense apparatus; the argument paper must
+    # state the L->O bridge explicitly.
+    SENSE_APPARATUS = re.compile(r"orthability-O|Decision 0010|ARGUMENT-MAP-ORTHABILITY", re.I)
+    HISTORICAL = {"orthemic-companion-paper-outline.md",
+                  "orthemic-modal-metaphysical-assessment.md"}  # retained as supporting history
+    for path in files:
+        rel = os.path.relpath(path, ROOT).replace("\\", "/")
+        if not rel.startswith("companion/") or os.path.basename(path) in HISTORICAL:
+            continue
+        text = open(path, encoding="utf-8").read()
+        n = len(re.findall(r"orthabilit", text, re.I))
+        if n >= 3:
+            check("%s: orthability sense apparatus present" % rel,
+                  bool(SENSE_APPARATUS.search(text)),
+                  "uses 'orthability' %d times without sense-L/O/R apparatus" % n)
+    ground = open(os.path.join(ROOT, "companion",
+                               "orthability-and-the-ground-of-intelligibility.md"),
+                  encoding="utf-8").read()
+    check("companion states the L->O bridge explicitly",
+          "L→O bridge" in ground or "L->O bridge" in ground)
+    check("companion supersedes the practice-relative-simpliciter definition",
+          "always relative to the resolving practice" not in ground
+          or "described sense L only and is superseded" in ground)
+
     # role registry
     roles_path = os.path.join(ROOT, "docs", "semantic-roles.yaml")
     reg = yaml.safe_load(open(roles_path, encoding="utf-8"))

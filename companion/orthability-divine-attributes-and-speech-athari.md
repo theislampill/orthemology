@@ -23,6 +23,8 @@ The school-neutral companion argued, transcendentally and conditionally, to an u
 
 > Every created act of orthing presupposes an uncreated orthability of being: for any created agent, process, system, or language to resolve, distinguish, signify, classify, or correctly handle anything at all, reality must already be antecedently determinable, differentiable, modally ordered, and fit for lawful resolution. This orthability cannot itself be wholly created, because the intelligible coming-to-be of orthability would already presuppose orthability. In the Atharī framing, that ground is **not an autonomous Platonic order** but is grounded in Allah's uncreated Knowledge and Speech; created languages and practices instantiate, within creation, possibilities eternally known by Allah. (*Transcendental core + school-internal identification, labeled as such.*)
 
+Sense note (Decision 0010): "orthability" throughout this paper is used in sense **orthability-O** — the objective conditions of evaluability — never the practice-relative predicate `Orthable(m; A)` (sense L) or a created practice's machinery (sense R); the philosophical companion's [`ARGUMENT-MAP-ORTHABILITY.md`](ARGUMENT-MAP-ORTHABILITY.md) fixes the senses and the L→O bridge, and nothing in this paper's creed-internal identification changes that typing.
+
 ## 3. The attribute of Speech: the Atharī articulation
 
 ### 3.1 That Allah truly speaks, with speech that is heard
