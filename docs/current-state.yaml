@@ -65,9 +65,9 @@ authored:
     pdfs: reproducibly built and visually inspected draft artifacts
     legal_publication: open on license, identity, peer review, and external submission
 derived:
-  source_tree_digest: b000351cfcd789d702cb64c3969f7b36f35f94ac3fbb123e2e257c2d54d25c59
+  source_tree_digest: db88a1d98b45228c77c2defd3ce4c80dcb665d11ca2abc2ac44f47d8d549625d
   source_tree_digest_policy: docs/project-state-inputs.yaml
-  tracked_files: 256
+  tracked_files: 258
   decision_ids:
   - '0001'
   - '0002'
@@ -108,6 +108,7 @@ derived:
   - validate_cross_record_semantics.py
   - validate_current_state.py
   - validate_decision_dependencies.py
+  - validate_internal_references.py
   - validate_latent_state_fixtures.py
   - validate_negative_fixtures.py
   - validate_notation.py
@@ -120,7 +121,7 @@ derived:
   - validate_state_convergence.py
   - validate_type_token_semantics.py
   - validate_verdict_semantics.py
-  validator_count: 20
+  validator_count: 21
   fixture_counts:
     verdict: 7
     reason: 8

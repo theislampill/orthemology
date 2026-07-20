@@ -56,6 +56,8 @@ jobs:
         run: python scripts/validate_claim_sources.py
       - name: Cross-document consistency
         run: python scripts/validate_cross_document_consistency.py
+      - name: Internal references resolve (no ghost script/fixture citations)
+        run: python scripts/validate_internal_references.py
       - name: Terminology packet freeze hashes (v1 immutable + v2)
         run: |
           python scripts/freeze_pilot0.py --check

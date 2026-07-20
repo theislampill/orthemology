@@ -1,0 +1,17 @@
+# branch.oid de19ccf4b3525ae536bb9bc163aefcd9f4bfedf8
+# branch.head closure/r4-semantic-contract-source-integrity
+# branch.upstream origin/closure/r4-semantic-contract-source-integrity
+# branch.ab +0 -0
+1 M. N... 100644 100644 100644 84f0de6a8c6e1e069a7a40f869043424749ed436 65dbd6da9a9e2cdf3049406bc6a5a8bf778fbb60 .github/workflows/validate.yml
+1 .M N... 100644 100644 100644 93c50eafb42fa8a099e43a26b2c8a7aa63a5713c 93c50eafb42fa8a099e43a26b2c8a7aa63a5713c artifacts/orthability-divine-speech-athari-draft.pdf
+1 .M N... 100644 100644 100644 d7786f1fc688086da6eee37c24e078a40e28a934 d7786f1fc688086da6eee37c24e078a40e28a934 artifacts/orthability-divine-speech-athari-draft.sources.json
+1 .M N... 100644 100644 100644 d8ae4a3ed7dbc761d28f2fa5421dae84ec69bff1 d8ae4a3ed7dbc761d28f2fa5421dae84ec69bff1 artifacts/orthability-ground-of-intelligibility-draft.pdf
+1 .M N... 100644 100644 100644 fa2d70536a4214308659e09b19283b5b20d33ae7 fa2d70536a4214308659e09b19283b5b20d33ae7 artifacts/orthability-ground-of-intelligibility-draft.sources.json
+1 .M N... 100644 100644 100644 eee7db386398d270ddcad384a8468599994ea9ef eee7db386398d270ddcad384a8468599994ea9ef artifacts/orthemic-core-reference-draft.pdf
+1 .M N... 100644 100644 100644 886a3de017562cab6719ee58811e038c9ff81662 886a3de017562cab6719ee58811e038c9ff81662 artifacts/orthemic-core-reference-draft.sources.json
+1 .M N... 100644 100644 100644 15b33d317681b7b7a59b1f72282cf2c699874d8e 15b33d317681b7b7a59b1f72282cf2c699874d8e artifacts/orthemma-ortheme-systems-draft.pdf
+1 .M N... 100644 100644 100644 1f3c4c0cfb4b28868da5567487c19e469de1659d 1f3c4c0cfb4b28868da5567487c19e469de1659d artifacts/orthemma-ortheme-systems-draft.sources.json
+1 .M N... 100644 100644 100644 c1f240d21b664d4607504e81bbeadaeb555c251a c1f240d21b664d4607504e81bbeadaeb555c251a docs/current-state.yaml
+1 A. N... 000000 100644 100644 0000000000000000000000000000000000000000 111e8be6459b725b16fd5ab1f46d3cf8bd107182 docs/reference-exemptions.yaml
+1 A. N... 000000 100644 100644 0000000000000000000000000000000000000000 a3d25d59d8bd0781d446f0b7ac7ef2dd810f3c22 scripts/validate_internal_references.py
+? docs/project-closure/r4/interruption/git-status-porcelain-v2.txt
