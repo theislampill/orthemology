@@ -72,6 +72,7 @@ registry-wide source consistency) is made or implied by a pass.
 import datetime
 import json
 import os
+import re
 import sys
 
 ROOT = os.path.dirname(os.path.dirname(os.path.abspath(__file__)))
@@ -161,6 +162,7 @@ def _time_of(episode):
 def collect_issues(parts):
     """Return a list of semantic-issue strings for one bundle of parts."""
     issues = []
+    issues.extend(naive_timestamp_issues(parts, "parts"))
 
     def inst_of(s):
         return [p["instance"] for p in parts if p["schema"] == s]
@@ -762,6 +764,35 @@ def collect_issues(parts):
                 issues.append("%s: PerturbSpec for claim %s declares %s as BOTH invariant and "
                               "varied — the neighborhood is incoherent" % (vid, cid, both))
 
+    return issues
+
+
+# R4 fresh-review hardening: EVERY timestamp-named field must be a timezone-aware
+# instant, not only the fields some ordering currently consumes. The probe that
+# motivated this: a naive `decision_time` inside an episode's placement record
+# passed both the schema layer (no format checking) and the semantic layer
+# (only ordering-relevant fields were parsed). Keys are an explicit closed set;
+# prose-valued fields like `recovered_from` are deliberately not in it.
+TS_EXACT_KEYS = {"effective_from", "declared_at", "expiry", "calibration_expiry"}
+
+
+def naive_timestamp_issues(node, path=""):
+    issues = []
+    if isinstance(node, dict):
+        for k, v in node.items():
+            here = "%s.%s" % (path, k) if path else k
+            if (isinstance(v, str) and (k in TS_EXACT_KEYS or k.endswith("_time"))
+                    and re.match(r"^\d{4}-\d{2}-\d{2}T", v)):
+                # pure dates (no time-of-day) are a legitimate coarser granularity;
+                # the tz-ambiguity class only bites values that carry a clock time
+                _, prob = _parse_ts(v)
+                if prob:
+                    issues.append("%s: %r is %s — a timestamp with a time-of-day must "
+                                  "be a timezone-aware ISO-8601 instant" % (here, v, prob))
+            issues.extend(naive_timestamp_issues(v, here))
+    elif isinstance(node, list):
+        for i, v in enumerate(node):
+            issues.extend(naive_timestamp_issues(v, "%s[%d]" % (path, i)))
     return issues
 
 
