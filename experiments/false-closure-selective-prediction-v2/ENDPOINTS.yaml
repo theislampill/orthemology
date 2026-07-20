@@ -1,0 +1,26 @@
+schema: orthemology-experiment-endpoints-v2
+packet_id: FCSP-2
+note: >-
+  Every endpoint below is implemented in analysis/analyze_fcsp2.py (audit B2 repair).
+  Aggregation for rate endpoints: record -> item mean (over repeats) -> family mean ->
+  pooled equal-family mean. AURC estimand (audit B3 repair): ONE POINT PER ITEM (item
+  confidence = mean over repeats; item error = mean over placed repeats; items with no
+  placed repeat are excluded from AURC and captured by the abstention endpoints);
+  equal-weight discrete grid over items; family-stratified and leave-one-family-out AURC
+  are computed as sensitivity views. The phrase "cluster-robust" is not used: the exact
+  implemented estimand is as stated here.
+primary_endpoints:
+  false_closure_rate: closure claimed while ground truth marks closure illegitimate; paired item contrast, arm-swap permutation p, bootstrap CI, Holm
+  aurc: item-level risk-coverage area as defined above; paired arm-swap permutation p over items, bootstrap CI, Holm
+secondary_endpoints:
+  missed_residual_rate: any ground-truth burden uncovered under disposition-multiset matching
+  burden_disposition_accuracy: fraction of ground-truth burdens matched by disposition
+  appropriate_abstention_rate: abstain/escalate on items keyed abstention-appropriate
+  route_admissibility_accuracy: selected route inside the keyed admissible set
+  result_accuracy: correct placement among placed records (harm-rule input)
+  excess_aurc: AURC minus same-base-error-mass optimal AURC (base-rate normalization)
+  structure_overhead_ratio_on_controls: record-size ratio T/B on the F9 controls (harm-rule input)
+  false_closure_worst_case_bound: pooled rate plus the arm's failed-run rate
+sensitivity_analyses: [aurc_by_family, aurc_leave_one_family_out, excess_aurc, false_closure_worst_case_bound]
+multiple_comparison_policy: Holm over the two primaries at alpha 0.05; secondaries are descriptive/harm inputs only
+estimand_population: the frozen 50-item set under the recorded executor configuration

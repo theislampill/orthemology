@@ -1,7 +1,7 @@
 {
-  "record": "R7 noetic-application / experiment-validity tie-off — durable execution state",
-  "session_surfaced_model": "claude-fable-5",
-  "session_substitution_observed": false,
+  "record": "R7 noetic-application / experiment-validity tie-off \u2014 durable execution state",
+  "session_surfaced_model": "claude-opus-4-8",
+  "session_substitution_observed": true,
   "historical_attributed_observations_preserved": true,
   "topology": {
     "starting_main": "43fee0f519e2f6984fb143c1e621c83382e71ec7",
@@ -9,8 +9,23 @@
     "branch": "closure/r7-noetic-application-experiment-validity",
     "daee_pinned_commit": "c86b3c6673147b8802fe222373a165a37d4d24a8"
   },
-  "last_completed_action": "Phase A: 34/34 baseline green at 43fee0f5; all experiment findings reproduced (E1 probe live); DAEE self-description confirmed at the pinned commit",
-  "tests_run": [{"tree": "fresh clone @ 43fee0f5 (lock venv)", "suite": "validate.yml, 34 steps", "result": "0 failing"}],
-  "unresolved_findings": ["FCSP 1-10 + ER 1-10 + DAEE mapping-depth finding — all reproduced; repairs pending Phases B-K"],
-  "next_action": "Phase A report commit, then Phase B readiness downgrade (Decision 0020)"
+  "last_completed_action": "Substitution to Opus 4.8 acknowledged mid-pass; interruption record written; FCSP-2 built+smoke-green; ER-2 generator+harness written (analysis pending)",
+  "tests_run": [
+    {
+      "tree": "fresh clone @ 43fee0f5 (lock venv)",
+      "suite": "validate.yml, 34 steps",
+      "result": "0 failing"
+    }
+  ],
+  "unresolved_findings": [
+    "FCSP 1-10 + ER 1-10 + DAEE mapping-depth finding \u2014 all reproduced; repairs pending Phases B-K"
+  ],
+  "next_action": "Finish ER-2 (analysis/schemas/smoke), DAEE crosswalk+firewall+fixtures, methods gate, doc reconciliation, adversarial reviews; push branch + open DRAFT PR; DO NOT MERGE",
+  "substitution_record": "docs/project-closure/r7/MODEL-SUBSTITUTION-INTERRUPTION-R7.md",
+  "owner_constraints_under_substitute": [
+    "branch/PR only; no merge; no push to main; no ready-for-merge state change",
+    "commit trailers: Co-Authored-By: Claude Opus 4.8",
+    "sequential; no subagents",
+    "deliver R7 as a DRAFT PR for genuine-Fable / owner review and merge"
+  ]
 }

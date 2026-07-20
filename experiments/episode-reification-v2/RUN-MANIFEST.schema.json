@@ -1,0 +1,122 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "$id": "er2-run-manifest.schema.json",
+  "title": "ER-2 run manifest (one per authorized run; none exists in this repository)",
+  "type": "object",
+  "additionalProperties": false,
+  "required": [
+    "packet_id",
+    "packet_freeze_hash",
+    "run_id",
+    "run_authorized_by",
+    "started_at",
+    "executor",
+    "sampling",
+    "repeats",
+    "seeds",
+    "registration_state",
+    "synthetic_smoke",
+    "adapter"
+  ],
+  "properties": {
+    "packet_id": {
+      "const": "ER-2"
+    },
+    "packet_freeze_hash": {
+      "type": "string",
+      "pattern": "^[0-9a-f]{64}$"
+    },
+    "run_id": {
+      "type": "string",
+      "minLength": 1
+    },
+    "run_authorized_by": {
+      "type": "string",
+      "minLength": 1,
+      "description": "owner authorization reference; execution/spend/ethics are owner acts"
+    },
+    "started_at": {
+      "type": "string",
+      "format": "date-time"
+    },
+    "executor": {
+      "type": "object",
+      "additionalProperties": false,
+      "required": [
+        "model_id",
+        "model_version_or_hash",
+        "provider"
+      ],
+      "properties": {
+        "model_id": {
+          "type": "string"
+        },
+        "model_version_or_hash": {
+          "type": "string"
+        },
+        "provider": {
+          "type": "string"
+        },
+        "context_limit": {
+          "type": "integer"
+        },
+        "tool_access": {
+          "type": "string"
+        }
+      }
+    },
+    "sampling": {
+      "type": "object",
+      "additionalProperties": false,
+      "required": [
+        "temperature",
+        "top_p",
+        "max_output_tokens"
+      ],
+      "properties": {
+        "temperature": {
+          "type": "number"
+        },
+        "top_p": {
+          "type": "number"
+        },
+        "max_output_tokens": {
+          "type": "integer"
+        }
+      }
+    },
+    "repeats": {
+      "type": "integer",
+      "minimum": 1
+    },
+    "seeds": {
+      "type": "array",
+      "items": {
+        "type": "integer"
+      },
+      "minItems": 1
+    },
+    "registration_state": {
+      "enum": [
+        "NOT_REGISTERED",
+        "PREREGISTRATION_READY",
+        "LOCALLY_PROTOCOL_FROZEN",
+        "EXTERNALLY_PREREGISTERED"
+      ]
+    },
+    "external_registry_record": {
+      "type": "string",
+      "description": "required iff registration_state is EXTERNALLY_PREREGISTERED"
+    },
+    "synthetic_smoke": {
+      "type": "boolean"
+    },
+    "adapter": {
+      "enum": [
+        "mock",
+        "cmd",
+        "provider"
+      ]
+    }
+  }
+}

@@ -1,0 +1,77 @@
+{
+  "schema": "orthemology-er2-treatment-record-v1",
+  "case": "C07",
+  "note": "structured rendering of the identical fact atoms; links relate records, they do not conclude",
+  "sections": {
+    "identity": [
+      {
+        "fact_id": "F01",
+        "text": "Case subject: firmware image FW-166, version v1, under release check."
+      },
+      {
+        "fact_id": "F02",
+        "text": "The case was opened on 2026-05-13."
+      }
+    ],
+    "evidence": [
+      {
+        "fact_id": "F04",
+        "text": "Screen S-2 was run on 2026-05-14 per its manual; the step log matches the manual."
+      }
+    ],
+    "procedure": [
+      {
+        "fact_id": "F03",
+        "text": "Screen S-2 compares against reference panel RP-A; RP-A's stated refresh interval is 60 days; RP-A was last updated on 2025-11-13."
+      }
+    ],
+    "result": [
+      {
+        "fact_id": "F05",
+        "text": "Screen S-2 reported NEGATIVE."
+      },
+      {
+        "fact_id": "F06",
+        "text": "An independent assay on 2026-05-16 also reported NEGATIVE."
+      }
+    ],
+    "obligations": [
+      {
+        "fact_id": "F07",
+        "text": "The draft completion statement declares screening complete on the S-2 result."
+      }
+    ]
+  },
+  "links": [
+    {
+      "from": "F02",
+      "relation": "same-case",
+      "to": "F01"
+    },
+    {
+      "from": "F03",
+      "relation": "same-case",
+      "to": "F01"
+    },
+    {
+      "from": "F04",
+      "relation": "same-case",
+      "to": "F01"
+    },
+    {
+      "from": "F05",
+      "relation": "same-case",
+      "to": "F01"
+    },
+    {
+      "from": "F06",
+      "relation": "same-case",
+      "to": "F01"
+    },
+    {
+      "from": "F07",
+      "relation": "same-case",
+      "to": "F01"
+    }
+  ]
+}
