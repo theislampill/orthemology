@@ -25,7 +25,7 @@ the manuscript's Definition 3 and §2.6 define the declared, versionable
 analysis `A`, whose components include the task `T = task(A)`;
 `O*(m; A)` = actual profile (ground truth relative to `A`);
 `Π_A` = the complete-profile space and `Π_A^∂` the partial-profile space
-(manuscript Definition 14); `p̂_t(m) ∈ Π_A^∂` = inferred profile (belief;
+(manuscript Definition 10); `p̂_t(m) ∈ Π_A^∂` = inferred profile (belief;
 `Ô` survives only as the derived flattening of `p̂`, §2.2);
 `Ĉ_t(m)` = candidate set of complete profiles; `Ω` = observation
 map; `μ` = a metaortheme; `o-hat` = an inferred ortheme.
@@ -166,10 +166,16 @@ with components (each glossed in ordinary language):
 | `Succ ⊆ M` | successor set | the occurrences the action created/affected, as LABELED lineage edges (which action produced which successor) — zero, one, or many; the earlier forced single `m′ = succ(m,a)` is corrected |
 
 `Π_A` — with `Π_T` its licensed shorthand under the standing convention —
-(gloss: the profile space, every complete way the case could be placed)
-and the labeled successor edges close the arrow the manuscript lacks from
-action back into `M`: placements verified for `(κ, v)` do not transport
-to `(κ, v′)` without a lineage argument.
+is the **profile space** of manuscript Definition 10: a complete profile
+is an assignment over the factorized axes selecting at most one
+*alternatives*-marked value per axis and any set of *co-holding* values,
+consistent with the declared cross-axis constraints; `Π_A^∂` is the
+partial-profile space (axes may be left undetermined), with
+`Π_A ⊆ Π_A^∂` (gloss: every complete way the case could be placed, and
+every honest partial state of knowledge about it). This and the labeled
+successor edges close the arrow the manuscript lacks from action back
+into `M`: placements verified for `(κ, v)` do not transport to `(κ, v′)`
+without a lineage argument.
 
 **Plain-language key for governed-component letters used below:** `O` =
 the ortheme repertoire (which state-types exist); `I` =
@@ -330,7 +336,12 @@ configuration-plus-policy — which the safeguards below must block.
 - **Provenance of the governing rule.** `prov(μ) = ⟨authority, warrant,
   scope, ver(μ)⟩`. A rule of unknown provenance is a stale-evidence problem
   one level up; episodes record `ver(μ)` so audits can scope which
-  placements ran under which edition.
+  placements ran under which edition. Governing *instructions* recovered
+  from records obey the same discipline: existence, authenticity,
+  recovery, authorization, and current force are five distinct predicates,
+  and an authentic recovered directive may be stale as governance — the
+  worked stale-steer case, with its directive record and fixture F6, is
+  `examples/compaction-stale-steer.md` (Decision 0006).
 - **Revision after lesson-lift (impact-scoped).** `ρ : (μ, lesson) ↦ μ′`
   increments `ver(μ)` and computes an **impact function**
   `affected(μ, μ′) →` the set of dependent claim/episode scopes: exactly
@@ -341,6 +352,16 @@ configuration-plus-policy — which the safeguards below must block.
   wrong part are reopened — not every episode that ever ran under the
   edition). Blanket reopening of the whole edition cohort is corrected to
   this scoped form.
+- **State families need not partition, and selection may be
+  undetermined.** `S_μ` declares the competing higher-order states, but
+  nothing forces them to be mutually exclusive or jointly exhaustive
+  unless the configuration declares them so (an exclusivity marking, as
+  for profile axes); and `select_μ` is a partial procedure — on a given
+  episode it may return one state, several co-holding states, or
+  **undetermined**. An undetermined selection is handled like any other
+  unresolved placement: the meta-policy must declare conduct for it
+  (stop, escalate, default conservatively), and silently assuming a
+  partition where none was declared is a configuration defect (V3a).
 - **Safeguards against inflation.** Admit a candidate `μ` only if: (i) `g`
   is named; (ii) `S_μ` is declared *in advance*, not read off one incident;
   (iii) switching the obtaining state changes validated placement, risk, or
@@ -383,8 +404,14 @@ compact core:
   with `O*(m; A(e))` at the governed level; weaker `route-correct(e)`: `p̂(e)`
   is route-sufficient and every placed claim is in `O*(m; A(e))` (gloss: the
   answer was right, for enough of the profile to act on — judged against
-  the analysis the episode itself records). **Result-side: V1 is never a
-  conjunct of `PathwayAdequate`.**
+  the analysis the episode itself records). **Aggregation, stated once:**
+  V1 is claim-wise at bottom — `V1_q(e)` holds iff placed claim `q` is
+  true of `(m; A(e))` — and the episode-level verdict aggregates by
+  CONJUNCTION over the claims placed at the governed level (for
+  `correct(e)`, additionally requiring that the placed profile is
+  determined at that level); the route-sufficient reading conjoins over
+  the placed claims only. No averaging or majority rule is admissible for
+  V1. **Result-side: V1 is never a conjunct of `PathwayAdequate`.**
 - **V2a — evidential support.** The typed evidence `H`, within its
   declared scopes, meets the DECLARED standard for each placed claim
   (gloss: enough of the right kind of evidence, by the rulebook's own
@@ -475,21 +502,37 @@ compact core:
   disposition with traceable ownership, and the completion claim matches
   the ledger — no collapse of {deferred, transferred, risk-accepted} into
   "resolved."
-- **V6 — robustness under neighboring perturbations.** Define a
-  **perturbation relation** `P ⊆ E×E`: `(e, e′) ∈ P` iff `e′` runs the
-  same `π` under the same `μ⃗` on an input from a declared perturbation
-  family of `m` — version bumped, marker string removed or spoofed,
-  evidence reordered or withheld, near-identical sibling substituted
-  (gloss: the same machine on the cases next door). With neighborhood
-  `N(e) = {e′ : (e,e′) ∈ P}`, `robust(e)` iff the V1 failure rate over
-  `N(e)` is below the declared tolerance. Metamorphic fixtures (paired
-  correct-without-marker / incorrect-with-marker probes) are V6's
-  operational estimator. **V6 is not V2b-P:** V2b-P asks whether
-  the configured procedure is truth-conducive over its declared reference
-  class and criterion; V6 asks whether the episode is stable under a
-  declared neighboring perturbation family. One test suite may supply
-  evidence for both; the questions differ, and these definitions
-  introduce no entailment between them.
+- **V6 — robustness under neighboring perturbations.** Robustness is
+  always relative to a declared **perturbation specification**
+  `PerturbSpec(e) = ⟨varied fields; invariant fields; generator or
+  enumeration; size or measure; tolerance⟩`: which episode/input fields
+  are deliberately varied (input version bumped, marker string removed or
+  spoofed, evidence reordered or withheld, near-identical sibling
+  substituted), which are held invariant (the policy `π`, the governing
+  configuration `μ⃗`, the analysis `A` and its version), and how the
+  neighborhood is generated. This induces the perturbation relation
+  `P ⊆ E×E` and neighborhood `N(e) = {e′ : (e, e′) ∈ P}` (gloss: the same
+  machine on the cases next door). `robust(e)` holds iff EITHER (i) the
+  declared neighborhood is finite and enumerated and the empirical
+  proportion of V1 failures over it is at or below the declared
+  tolerance, OR (ii) the specification declares a probability measure
+  over the perturbation family and the failure probability under that
+  measure is at or below tolerance — an undeclared "failure rate" over an
+  unspecified infinite neighborhood is not a well-formed V6 claim.
+  **Metaorthemma rebinding under perturbation:** where a perturbation
+  bumps the input version, each governing token `μ̄` is re-bound to the
+  perturbed occurrence by its own binding rule; a token that CANNOT be
+  coherently re-bound (its anchor names the unperturbed version
+  essentially) makes that perturbation inadmissible for V6 and reportable
+  under V3c instead — silence about rebinding is not permitted.
+  Metamorphic fixtures (paired correct-without-marker /
+  incorrect-with-marker probes) are V6's operational estimator under
+  clause (i). **V6 is not V2b-P:** V2b-P asks whether the configured
+  procedure is truth-conducive over its declared reference class and
+  criterion; V6 asks whether the episode is stable under a declared
+  neighboring perturbation family. One test suite may supply evidence for
+  both; the questions differ, and these definitions introduce no
+  entailment between them.
 
 **Result-free pathway core (Decision 0003).**
 
@@ -570,7 +613,7 @@ satisfiable, plus the undetermined state — machine-checkable encodings in
 |---|---|---|
 | **F1 — nominal** | Current behavioral validator, correctly bound (V3c pass where applicable), reliable configured procedure, correct result | V1 pass; every ReqPath verdict pass ⇒ **PathwayAdequate** |
 | **F2 — stopped clock** | SCAN-CLEAN marker validator happens to be correct today but fails its declared reliability and perturbation criteria | V1 pass; V2b-P fail; V6 fail ⇒ **PathwayDefective** (V2b-T may also fail as a result-side diagnosis: correct, but not through the truth-relevant mechanism) |
-| **F3 — justified rare miss** | Properly configured, faithfully executed procedure meeting its declared reference-class reliability threshold errs on this token | V1 fail; V2b-P pass; V3a/V3b/V3c/V3d/V3e pass where applicable ⇒ **PathwayAdequate**; V2b-T_q fails/unavailable (the placed claim is false). *This fixture is mandatory: it proves the lower-left cell is no longer definitionally blocked.* |
+| **F3 — justified rare miss** | Properly configured, faithfully executed procedure meeting its declared reference-class reliability threshold errs on this token | V1 fail; V2b-P pass; V3a/V3b/V3c/V3d/V3e pass where applicable ⇒ **PathwayAdequate**; V2b-T_q **fails** (the placed claim is false — a false claim's truth-linkage verdict fails by factivity; it is never recorded "unavailable" absent an explicit declared applicability rule). *This fixture is mandatory: it proves the lower-left cell is no longer definitionally blocked.* |
 | **F4 — defective metaorthemma, lucky result** | Sound standard and policy, faithful execution; the concrete token binds the wrong reference plane / tolerance / fixture / success surface / calibration; the result happens to be correct | V1 pass; V3a pass; V3b pass; V3d pass; **V3c fail** ⇒ **PathwayDefective** |
 | **F5 — unresolved audit** | The result is known, but required robustness or provenance evidence has not yet been evaluated | one required verdict `undetermined` ⇒ **PathwayUndetermined**; neither PathwayAdequate nor PathwayDefective is asserted |
 | **F6 — stale directive** (Decision 0006; worked case in `examples/compaction-stale-steer.md`) | A recovered governing directive is authentic but superseded; the executor follows it faithfully; the closure claim asserts it was in force | V1 fail; V2c fail; **V3c fail** (token not Current); V3d pass; V5 fail ⇒ **PathwayDefective** — faithful execution under a defective governing token |
@@ -636,11 +679,21 @@ and **retry-of**. Handoffs are the loci of transport error: a verdict
 crossing an edge without its scope and version is how stale evidence
 propagates.
 
+**Edge orientation, one convention.** Every edge of `Γ_E` is oriented
+from the EARLIER node to the LATER node; edge LABELS carry the semantics.
+A `handoff` edge `eᵢ ⇝ eⱼ` means `eⱼ` consumes a projection of
+`out(eᵢ)`; a `supersession` edge `eᵢ ⇝ eⱼ` means the later `eⱼ` revises
+`eᵢ`'s conclusions; a `retry-of` edge `eᵢ ⇝ eⱼ` means `eⱼ` re-attempts
+`eᵢ`'s task. (Prose like "a supersession edge to its predecessor" reads
+the label backward along the same earlier→later edge; the graph stores
+one orientation only.)
+
 **Why a DAG is right despite retries and revision loops.** Nodes are
-*dated tokens*; every typed edge points forward in time, so the token
-graph is acyclic by construction. A retry or rework loop does not add a
-back edge — it creates a *new* episode node with a `retry-of` or
-`supersession` edge to its predecessor. The genuinely cyclic structure
+*dated tokens*; every typed edge points forward in time under the
+convention above, so the token graph is acyclic by construction. A retry
+or rework loop does not add a back edge — it creates a *new* episode
+node reached by a `retry-of` or `supersession` edge from its
+predecessor. The genuinely cyclic structure
 (the same policy re-entered, review returning work to an author-role)
 lives at the TYPE/policy level, which the formalism represents as
 repeated instantiation of the same `π`, never as cycles among tokens.
@@ -712,10 +765,22 @@ indices, **not a new formal addition**:
 - `φ(α→β)` — a role/perspective isomorphism between `Π_{A_α}` and
   `Π_{A_β}` where one exists (goal-schema invariance with disjoint
   extensions: `𝒢_{β,A_β} = φ(𝒢_{α,A_α})`, possibly `𝒢_α ∩ 𝒢_β = ∅`);
-- `Conflict_m(𝒢_α, 𝒢_β)` / `Compat_m(𝒢_α, 𝒢_β)` — whether any successor
-  profile reachable from occurrence `m` realizes members of both target
-  sets (cooperation is the special case `𝒢_α = 𝒢_β`; zero-sum games also
-  admit draw successors in neither set).
+- `Conflict_m(𝒢_α, 𝒢_β)` / `Compat_m(𝒢_α, 𝒢_β)` — WELL-TYPED across
+  profile spaces: the two target sets live in different spaces
+  (`𝒢_α ⊆ Π_{A_α}`, `𝒢_β ⊆ Π_{A_β}`), so they are never compared by bare
+  set intersection. With `Reach(m)` the occurrences reachable from `m`
+  in the successor structure,
+
+      Compat_m(𝒢_α, 𝒢_β)   iff  ∃ m′ ∈ Reach(m):
+                                  O*(m′; A_α) ∈ 𝒢_α  ∧  O*(m′; A_β) ∈ 𝒢_β
+      Conflict_m(𝒢_α, 𝒢_β) iff  no such reachable m′ exists
+
+  — one shared occurrence, evaluated under each analysis separately.
+  Cooperation is joint realizability with a shared analysis and shared
+  target set (`A_α = A_β`, `𝒢_α = 𝒢_β`), or an explicit alignment map
+  `φ(α→β)` identifying targets across spaces — never bare equality of
+  sets inhabiting different profile spaces. Zero-sum games also admit
+  draw successors realizing neither target set.
 
 Coupled episodes are the §5.2 graph over the shared lineage: each actor's
 action creates the successor occurrence the other's episode consumes.

@@ -121,10 +121,13 @@ GoalSchema(·)   a PARAMETRIC ortheme schema — the shared
 φ(α→β)               a role/perspective isomorphism between Π_{A_α} and
                      Π_{A_β}, when one exists
                      (schema invariance: 𝒢_{β,A_β} = φ(𝒢_{α,A_α}))
-Conflict_m(𝒢_α, 𝒢_β)  no profile of any occurrence reachable from m realizes
-                     a member of both target sets
-Compat_m(𝒢_α, 𝒢_β)    some reachable occurrence's profile realizes a member
-                     of both (cooperation is the special case 𝒢_α = 𝒢_β)
+Compat_m(𝒢_α, 𝒢_β)    ∃ m′ ∈ Reach(m): O*(m′; A_α) ∈ 𝒢_α ∧ O*(m′; A_β) ∈ 𝒢_β
+                     (well-typed: one shared occurrence, each analysis
+                     evaluating in its own profile space — never bare
+                     intersection of sets from different spaces)
+Conflict_m(𝒢_α, 𝒢_β)  no such reachable m′ exists
+                     (cooperation: shared analysis + shared target set,
+                     or an explicit alignment map φ(α→β))
 ```
 
 **Three distinct relations the parametric schema untangles:**

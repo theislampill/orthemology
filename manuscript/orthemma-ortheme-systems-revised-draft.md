@@ -186,6 +186,8 @@ constraints, horizon, tolerance, representation family, and permitted-merger fam
 
 There is no second, task-only ground truth alongside this one: `O*_T(m)` is Definition 3's scoped abbreviation, licensed only while a single fixed `A` with `task(A) = T` is in force.
 
+Two clarifications guard the index. **Analysis relativity is not actor relativism:** the analysis is a *declared, versioned, public* index, not anyone's belief state — once `A` is fixed, `O*(m; A)` is an objective matter that every actor can be wrong about, and disagreement between actors is disagreement about one analysis-relative fact, not the coexistence of private truths. **Analysis-version transport:** a change to any component of `A` yields `ver(A)+1`, and placements, validations, and verdicts established under one analysis version do **not** transport to another without a declared transport argument (which components changed, and why the placed claims are invariant under that change) — the exact discipline Section 2.5 imposes on occurrence versions, applied to the analysis index itself.
+
 Placement status is **actor-indexed**: a clinician can hold a distinction absent from the record; a developer can know a failure the release gate cannot express; a reviewer can
 carry a verdict the pipeline has no field for. **Cross-actor divergence** — two actors' inferred profiles for the same `(κ, v)` disagreeing consequentially — is promoted in this
 revision from an aside to a first-class stop signal: it is itself diagnostic and is a legitimate trigger for the governed interruption of Section 7.5, independent of either actor's
@@ -263,9 +265,9 @@ each carrying declared metadata. An evidence item obtained through channel `k` i
 
 with components glossed:
 
-- **Property class** `τ ∈ {structural, behavioral, provenance}` — *exactly these three.* Structural evidence attests to form (the file parses, the schema matches, the artifact
+- **Property class** `τ` — the three **core cross-domain classes** are `{structural, behavioral, provenance}`. Structural evidence attests to form (the file parses, the schema matches, the artifact
   exists); behavioral evidence attests to exercised behaviour (the test ran this code path on this input and observed this output); provenance evidence attests to origin and
-  currency (this artifact was produced by that process from that version). **Authorization is not an evidence property class.** Whether an actor was *permitted* to place, route, or
+  currency (this artifact was produced by that process from that version). An analysis may declare **domain-specific subclasses** of these (e.g., histological vs serological within a clinical behavioral/structural scheme); what it may not do is admit evidence carrying *no* declared class, or let one class's pass silently discharge another class's obligation. Exhaustiveness of the three core classes across all domains is a working hypothesis of the framework, not a theorem; the subclass mechanism is the sanctioned extension point. **Authorization is not an evidence property class.** Whether an actor was *permitted* to place, route, or
   close is a separate **warrant gate** `W` (Section 6), with warrant states such as {authorized, factually established, both, neither}: authorization can be present while nothing
   is established, and a claim can be established that nobody authorized acting on. Treating an authorization record as if it were evidence for the placed claim launders permission
   into support; the two are never merged.
@@ -310,7 +312,20 @@ choice; the reverse collapse hides a disjunction. Optional weights over alternat
 one element whose members would license non-equivalent routes. An open family must carry its **evidence-to-resolve clause**: which channel, in scope, would discriminate the
 alternatives. (A list of possibilities with no path to adjudication was judged a defect in the observational record, and the definition adopts that norm.)
 
-### 5.2 Factorized profiles and route composition
+### 5.2 The profile space and partial profiles
+
+**Definition 10 (Profile space, partial profiles).** Fix a declared analysis `A` with active repertoire `O_A`. The repertoire is organized into **axes** (symptom, cause, severity, evidence-scope, …), each axis carrying the exclusivity marking of Section 5.1: on an *alternatives*-marked axis at most one value obtains; on a *co-holding* axis any subset may obtain together. A **complete profile** is an assignment over the factorized axes that selects at most one alternatives-marked value per axis and any set of co-holding values — equivalently, a subset of `O_A` consistent with the exclusivity markings and with any declared cross-axis **consistency constraints** (an analysis may declare that certain value combinations are jointly impossible; a complete profile must violate none). The **profile space** `Π_A` is the set of all complete profiles. A **partial profile** leaves one or more axes undetermined: formally, an assignment of a *set* of still-admissible values per axis (the whole axis-domain when nothing is known), and `Π_A^∂` is the space of partial profiles; every complete profile is the special case with every axis determined, so `Π_A ⊆ Π_A^∂`.
+
+Four objects now stand in definite relations, and none may be conflated with another:
+
+- the **true profile** `O*(m; A) ∈ Π_A` — one complete profile, fixed by the occurrence and the analysis, independent of anyone's evidence;
+- the **candidate set** `Ĉ_{A,α,t}(m) ⊆ Π_A` (the typed family `C^profile`) — the set of complete profiles the actor has not yet ruled out; correctness of maintenance means `O*(m; A) ∈ Ĉ` whenever the evidence so far is veridical, and investigation shrinks `Ĉ`;
+- the **inferred partial profile** `p̂_{A,α,t}(m) ∈ Π_A^∂` — what the actor currently *places*: determined on the resolved axes, open on the rest. A partial profile corresponds to the set of its completions, so `p̂` and `Ĉ` are inter-constrained (`Ĉ ⊆ completions(p̂)` when both are maintained honestly) — but **a candidate set is not one inferred profile**: `Ĉ = {p_1, p_2}` with two live complete profiles is a different epistemic state from a single vaguer `p̂`, and collapsing the former into the latter loses exactly the alternatives structure that routes and discriminating tests act on;
+- optional **belief weights** — a distribution over `Ĉ` (or over an axis's alternatives). Weights are *permitted, never required* (Section 5.1), and an unweighted candidate set is a legitimate terminal representation, not an unfinished one.
+
+This subsection supplies the definition the corpus previously used implicitly (`Π_A` appeared in the candidate-family table without a definition site); it is A-indexed through the repertoire, exclusivity markings, and constraint declarations, all components of `A` (Decision 0007).
+
+### 5.3 Factorized profiles and route composition
 
 Profiles factorize over axes: a placement may be resolved on the symptom axis, open on the cause axis, and resolved on the severity axis. Routes then compose. Let `r_1 ⊕ r_2`
 denote the **route composition** of the operations licensed by independently resolved factors, with the semantics:
@@ -331,7 +346,7 @@ dispositioned residuals rather than being forgotten or blocking all action.
 The prior draft defined a metaortheme as a higher-order distinction "acting on" the system's machinery. This revision adopts a single, narrower normal form, aligned with the core
 formalization.
 
-**Definition 10 (Metaortheme, split normal form).** A metaortheme is a **metaorthemic configuration**
+**Definition 11 (Metaortheme, split normal form).** A metaortheme is a **metaorthemic configuration**
 
     μ = ⟨ g;  S_μ;  select_μ;  prov(μ);  ver(μ) ⟩
 
@@ -428,16 +443,20 @@ be decisive under a confident placement.
 
 ### 7.3 Per-burden residual dispositions; false closure as type error
 
-**Definition 11 (Residual disposition).** Every burden of an episode carries, at closure time, exactly one disposition from
+**Definition 12 (Residual disposition).** Every burden of an episode carries, at closure time, exactly one disposition from
 
     { unresolved, deferred, transferred, owner-assigned, risk-accepted, validated-resolved }
 
 glossed: still open with no plan (unresolved); open with a declared later trigger (deferred); moved to another party with traceable ownership (transferred); waiting on a named
 owner's decision (owner-assigned); consciously left open under an accepted, recorded risk (risk-accepted); or closed on in-scope, current, sufficient evidence (validated-resolved).
+The six dispositions are **mutually exclusive by fiat** — each burden carries exactly one — with a precedence rule for the one genuinely overlapping pair: a burden that has been
+handed to a named decision-maker whose *choice* is what is awaited is **owner-assigned**; a burden whose *work* has been handed to another party is **transferred**. When both
+descriptions apply (work moved to a party who must also decide something), owner-assigned takes precedence, because the blocking condition is the decision. A disposition change is
+an event on the ledger, never a reinterpretation of the old record.
 
-**Definition 12 (False closure, retained and typed).** False closure is a completion claim that collapses distinct dispositions — unresolved, deferred, transferred, owner-assigned,
-or risk-accepted — into "validated-resolved." In this revision it is a **type error**: the completion claim quantifies over the burden ledger, and it is well-formed only when every
-burden's disposition admits it. "Done" uttered over a ledger containing a deferred burden is not an optimistic judgment; it is a claim whose type its own ledger refutes. Closure is
+**Definition 13 (False closure, retained and typed).** False closure is a completion claim that collapses distinct dispositions — unresolved, deferred, transferred, owner-assigned,
+or risk-accepted — into "validated-resolved." In this revision it is a **type error in the record/schema sense** (no type-theoretic machinery is invoked): the completion claim quantifies over the burden ledger, and it is well-formed only when every
+burden's disposition admits it — a checkable well-formedness condition on the closure record, violated exactly when the claim and its own ledger disagree. "Done" uttered over a ledger containing a deferred burden is not an optimistic judgment; it is a claim whose type its own ledger refutes. Closure is
 legitimate exactly when every required burden is validated-resolved, or explicitly deferred/transferred/ owner-assigned/risk-accepted under an admissible policy, and the evidence
 supports the declared level of completion. Safe closure is reopenable by record; false closure accrues silent exposure.
 
@@ -606,8 +625,8 @@ One case handled across sensors, validators, agents, routers, a human sign-off, 
 - **supersession** — a later episode revises an earlier one's conclusions;
 - **retry-of** — a later episode re-attempts an earlier one's task.
 
-**Why a DAG despite retries and review loops:** nodes are *dated tokens*; every typed edge points forward in time, so the token graph is acyclic by construction. A rework loop does
-not add a back edge — it creates a *new* episode node with a retry-of or supersession edge to its predecessor. The genuinely cyclic structure (the same policy re-entered; review
+**Why a DAG despite retries and review loops:** nodes are *dated tokens*; every edge is oriented from the earlier node to the later node with the semantics carried by its label (the later node of a supersession edge revises the earlier; the later node of a retry-of edge re-attempts the earlier's task), so the token graph is acyclic by construction. A rework loop does
+not add a back edge — it creates a *new* episode node reached by a retry-of or supersession edge from its predecessor. The genuinely cyclic structure (the same policy re-entered; review
 returning work to an author role) lives at the TYPE/policy level, represented as repeated instantiation of the same policy, never as cycles among tokens.
 
 ### 9.3 Composition conditions
@@ -636,7 +655,7 @@ Everything here is a **derived extension of the existing actor/analysis indices 
 
 ### 10.2 Target profiles
 
-**Definition 13 (Target profile set).** For actor `α` under its declared analysis `A_α` with task `T_α = task(A_α)`, the target profile set `𝒢_{α,A_α} ⊆ Π_{A_α}` is the SET OF PROFILES that `α`, under `T_α`, aims to make some future occurrence in the lineage instantiate — each member of `𝒢_{α,A_α}` is one complete profile (normative typing, aligned with the core formalization §5.3; a win-ortheme such as "White checkmates Black" labels the FAMILY of terminal profiles realizing it). `𝒢_{α,A_α}` is the grounded instantiation at `α` of a PARAMETRIC ortheme schema `GoalSchema(α)` ("win for α"): the schema is one form under role substitution; the grounded targets are distinct; and target-set overlap is a third, independent relation (empty for zero-sum win-sets, total for cooperation).
+**Definition 14 (Target profile set).** For actor `α` under its declared analysis `A_α` with task `T_α = task(A_α)`, the target profile set `𝒢_{α,A_α} ⊆ Π_{A_α}` is the SET OF PROFILES that `α`, under `T_α`, aims to make some future occurrence in the lineage instantiate — each member of `𝒢_{α,A_α}` is one complete profile (normative typing, aligned with the core formalization §5.3; a win-ortheme such as "White checkmates Black" labels the FAMILY of terminal profiles realizing it). `𝒢_{α,A_α}` is the grounded instantiation at `α` of a PARAMETRIC ortheme schema `GoalSchema(α)` ("win for α"): the schema is one form under role substitution; the grounded targets are distinct; and target-set overlap is a third, independent relation (empty for zero-sum win-sets, total for cooperation).
 
 Three separations keep this well-typed:
 
@@ -675,10 +694,10 @@ The example also calibrates what is and is not a metaortheme:
 **Draws exist:** not every terminal occurrence realizes a player's positive target. The two target sets do not partition the terminal states; there is a third region realizing
 neither. Any formalization that forces every terminal state into some actor's target set has mis-specified the game.
 
-Over a set of actors with target profiles `{𝒢_{α_i,A_i}}`:
+Over a set of actors with target profiles `{𝒢_{α_i,A_i}}`, the predicates are well-typed across profile spaces — the target sets live in *different* spaces (`𝒢_{α,A_α} ⊆ Π_{A_α}`), so they are never compared by bare set intersection. With `Reach(m)` the occurrences reachable from `m`:
 
-- **Conflict:** `Conflict_m(𝒢_1, 𝒢_2)` iff no reachable occurrence in the case's successor structure realizes both — zero-sum chess targets conflict by construction;
-- **Compatibility:** `Compat_m(𝒢_1, 𝒢_2)` iff some reachable occurrence realizes both;
+- **Compatibility:** `Compat_m(𝒢_1, 𝒢_2)` iff `∃ m′ ∈ Reach(m): O*(m′; A_1) ∈ 𝒢_1 ∧ O*(m′; A_2) ∈ 𝒢_2` — one shared occurrence, evaluated under each analysis separately;
+- **Conflict:** `Conflict_m(𝒢_1, 𝒢_2)` iff no such reachable `m′` exists — zero-sum chess targets conflict by construction;
 - **Cooperation (special case):** a shared target profile, `𝒢_{α_1,A} = 𝒢_{α_2,A}` under one shared analysis — the actors may still differ in evidence, roles, and routes (that is what the
   distributed-episode machinery of Section 9.2 is for), but their targets coincide.
 
@@ -737,6 +756,10 @@ unjustly. The example is retained in this abstract form only; no clinical detail
 >
 > The operation *built* this machinery in response to these failures; it did not have it in advance. That is the sense in which the record corroborates the claim that the
 > six-framework union is not assembled by default — and the full extent of what one case can show.
+
+### 11.5 The stale steer (recovered directive without current force)
+
+A system recovers an earlier governing instruction — after context compaction, a crash, or a handover — and follows it. The recovery is textually faithful, the instruction was genuinely issued under proper authority, and it had been superseded in the interim. Five claims must be kept apart: that the directive *exists*, that this copy is *authentic*, that it was *recovered* through a declared channel, that its issuer was *authorized*, and that it is *in force* now — and evidence for any one is not evidence for the next. The verdict layer needs no new machinery: currentness of the governing evidence fails (V2c), the bound governing token is not current (V3c), the executor is faithful (V3d passes — faithful execution under a defective governing token), and a closure claim of "acted under current instructions" fails V5. The full directive record, the five predicates, and the deterministic fixture (F6) are given in `examples/compaction-stale-steer.md` (Decision 0006).
 
 ---
 
@@ -848,7 +871,7 @@ untested (fixture E5); and no study yet demonstrates incremental utility of anyt
 
 | Tier | Content | Status |
 |---|---|---|
-| **Analytic** | Formal coherence of the six additions; the split metaortheme normal form; verdict separability; the DAG/composition conditions; the derived multi-actor extensions | Established by construction; establishes no empirical claim |
+| **Analytic** | Formal coherence of the six additions; the split metaortheme normal form; verdict separability; the DAG/composition conditions; the derived multi-actor extensions | Consistency shown by construction (deterministic fixtures); establishes no empirical claim |
 | **Observational, cross-project** | Stale-evidence/lineage failures; validator-scope failures; closure trichotomy; plural profiles; failure-origin confusion (≥2 domains each, with negative controls) | Real and recurrent; base rates unknown |
 | **Observational, single-longitudinal** | The assembled-union claim; enumeration-mode revision; authority-binding | **One case (Branch 11).** Single-project, single-owner, transcript-verified record. Corroborating, not validating; carries no cross-domain weight |
 | **Experimental** | Machinery benefit (13.1); episode-reification delta (13.2); vocabulary utility (13.3) | **None.** All three designed, none run |
@@ -876,8 +899,7 @@ replication of even the observational tier does not yet exist.
 - **False closure.** A completion claim collapsing other dispositions into "validated-resolved"; a type error against the burden ledger.
 - **Orthing / orthing episode.** The process type of rule-governed, evidence-updating apprehension-and-handling / one dated, situated, record-valued run of it, bearing the verdict
   vector.
-- **Verdict vector (V1–V6).** Result correctness; evidential support; truth-connection at a declared criterion; evidence currentness; configuration, policy, executor, and ex-ante
-  verdicts; route safety; closure truthfulness; robustness.
+- **Verdict vector (V1–V6, registry-normalized).** Result: V1 correctness, V2b-T factive truth linkage. Pathway core: V2a support; V2b-P procedure reliability; V2c currentness; V3a configuration, V3b policy, V3c token-binding, V3d execution, V3e decision-time adequacy; V4a route safety; V5 closure truthfulness; V6 robustness. Advisory: V4b route quality. Semantic IDs and aliases: `docs/verdict-registry.yaml` (Decision 0004).
 - **Generalized ANDON event.** A governed interruption when continuation or closure is not warranted under the current placement, evidence, route, warrant, or ledger.
 - **Target profile `𝒢_{α,A_α}`.** The state-types an actor aims to make some successor occurrence instantiate, under the actor's own analysis `A_α`; distinct from the descriptive profile, from the objective, and from any
   metaortheme.
