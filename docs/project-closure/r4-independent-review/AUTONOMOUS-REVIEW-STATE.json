@@ -1,0 +1,25 @@
+{
+  "schema": "orthemology-r4-independent-review-state-v1",
+  "session_role": "independent Fable review, repair, sign-off, and merge of PR #3",
+  "current_surfaced_model_identity": "claude-fable-5",
+  "substitution_observed_this_session": false,
+  "historical_provenance_disagreement": {
+    "implementing_run_internal_harness_claim": "claude-fable-5",
+    "owner_observed_ui_substitution": "claude-opus-4.8",
+    "disposition": "recorded as two attributed observations; not adjudicated"
+  },
+  "remote_repository": "https://github.com/theislampill/orthemology",
+  "base_commit": "63d15ecf4aa50672265100b7d5620af764421862",
+  "pr_number": 3,
+  "branch": "closure/r4-semantic-contract-source-integrity",
+  "head_at_review_start": "25d035a31311dc328b95e15c942238a796cb37c6",
+  "current_head": "25d035a31311dc328b95e15c942238a796cb37c6",
+  "last_completed_action": "Phase A read-only reproduction complete; finding matrix written; no repository mutation yet beyond review artifacts",
+  "phase": "A-complete",
+  "validator_results_at_baseline": {
+    "failing": ["generate_current_state --check", "validate_current_state (dependent)"],
+    "passing": "all other 19 workflow steps including manifest and byte-identical PDF rebuild"
+  },
+  "open_findings": "see R4-PR3-READONLY-REPRODUCTION.md section 4 — all audit findings reproduced or accepted; none refuted",
+  "next_action": "Phase B: implement convergent source_tree_digest state contract, amend Decision 0014, exact public-surface validation, Actions v6 upgrade"
+}
