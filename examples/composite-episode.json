@@ -1,0 +1,82 @@
+{
+  "example": "composite-episode",
+  "note": "Episode DAG Γ_E with typed earlier→later edges; composition e_Γ = comp(Γ_E) under the three conditions; composite verdicts do not reduce to conjunctions (counterexample ledger #15/#16: the downstream validator catches an upstream error, so a sub-episode is incorrect while the composite is correct).",
+  "parts": [
+    {
+      "schema": "orthing-episode.schema.json",
+      "instance": {
+        "episode_id": "ep-classify-1",
+        "occurrence": {"identity_key": "sample-77", "version": "received", "kind": "lab-sample"},
+        "actor": "auto-classifier",
+        "analysis": {"analysis_id": "sample-intake", "version": "2.0", "task": "classify and route incoming samples"},
+        "time": "2026-07-14T09:00:00Z",
+        "meta_tokens": [],
+        "placement": {"substance": "flour (INCORRECT)"},
+        "action": "forward",
+        "successors": []
+      }
+    },
+    {
+      "schema": "orthing-episode.schema.json",
+      "instance": {
+        "episode_id": "ep-validate-2",
+        "occurrence": {"identity_key": "sample-77", "version": "received", "kind": "lab-sample"},
+        "actor": "bench-validator",
+        "analysis": {"analysis_id": "sample-intake", "version": "2.0", "task": "classify and route incoming samples"},
+        "time": "2026-07-14T10:00:00Z",
+        "meta_tokens": [],
+        "placement": {"substance": "cornstarch"},
+        "action": "correct-and-route",
+        "successors": [{"identity_key": "sample-77", "version": "routed", "action_label": "route"}]
+      }
+    },
+    {
+      "schema": "handoff.schema.json",
+      "instance": {
+        "packet_id": "pkt-77-1",
+        "packet_version": "1",
+        "sender_episode": "ep-classify-1",
+        "receiver_episode": "ep-validate-2",
+        "edge_label": "handoff",
+        "subject": {"identity_key": "sample-77", "version": "received"},
+        "state_claims": [{"claim_id": "claim-substance", "scope": "substance axis", "valid_for_version": "received", "analysis_id": "sample-intake", "analysis_version": "2.0"}]
+      }
+    },
+    {
+      "schema": "handoff.schema.json",
+      "instance": {
+        "packet_id": "pkt-77-2",
+        "packet_version": "1",
+        "sender_episode": "ep-classify-1",
+        "receiver_episode": "ep-validate-2",
+        "edge_label": "supersession",
+        "subject": {"identity_key": "sample-77", "version": "received"},
+        "state_claims": [{"claim_id": "claim-substance", "scope": "substance axis", "valid_for_version": "received", "analysis_id": "sample-intake", "analysis_version": "2.0"}]
+      }
+    },
+    {
+      "schema": "orthing-episode.schema.json",
+      "instance": {
+        "episode_id": "ep-composite-intake-77",
+        "occurrence": {"identity_key": "sample-77", "version": "received", "kind": "lab-sample"},
+        "actor": "intake-pipeline (declared composite actor)",
+        "analysis": {"analysis_id": "sample-intake", "version": "2.0", "task": "classify and route incoming samples"},
+        "time": "2026-07-14T09:00:00Z/2026-07-14T10:30:00Z",
+        "meta_tokens": [],
+        "placement": {"substance": "cornstarch"},
+        "action": "route",
+        "successors": [{"identity_key": "sample-77", "version": "routed", "action_label": "route"}]
+      }
+    }
+  ],
+  "composition_record": {
+    "graph": {"nodes": ["ep-classify-1", "ep-validate-2"], "edges": [["ep-classify-1", "ep-validate-2", "handoff"], ["ep-classify-1", "ep-validate-2", "supersession"]]},
+    "conditions": {
+      "one_case_one_analysis": true,
+      "declared_boundary": "intake-pipeline named as composite actor by lab governance",
+      "declared_fusion_rule": "placement = latest non-superseded sub-placement; per-claim status = weakest along its supporting path; residual ledgers merged with surviving ownership"
+    },
+    "composite_id": "ep-composite-intake-77",
+    "verdict_note": "RESULT_CORRECT(composite)=pass while RESULT_CORRECT(ep-classify-1)=fail — composite verdicts are not conjunctions and the composite level is audited separately"
+  }
+}

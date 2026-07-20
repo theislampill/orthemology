@@ -1,0 +1,47 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "title": "Pilot 0 run manifest",
+  "description": "One manifest per executed run. READY TO RUN, NOT RUN: no conforming instance exists yet. The packet_freeze_hash must equal FREEZE-HASH.txt at run time; mismatch invalidates the run.",
+  "type": "object",
+  "required": ["run_id", "date_utc", "packet_freeze_hash", "executors", "arms_run", "items_run", "rater_assignment", "deviations_file"],
+  "properties": {
+    "run_id": {"type": "string"},
+    "date_utc": {"type": "string", "format": "date-time"},
+    "packet_freeze_hash": {"type": "string", "pattern": "^[0-9a-f]{64}$"},
+    "executors": {
+      "type": "array",
+      "minItems": 1,
+      "items": {
+        "type": "object",
+        "required": ["kind", "model_id", "decoding"],
+        "properties": {
+          "kind": {"enum": ["model", "human"]},
+          "model_id": {"type": "string", "description": "exact pinned version string; 'n/a' for humans"},
+          "decoding": {
+            "type": "object",
+            "properties": {
+              "temperature": {"type": "number"},
+              "top_p": {"type": "number"},
+              "max_tokens": {"type": "integer"},
+              "seed": {"type": ["integer", "null"]}
+            }
+          },
+          "fresh_context_per_item": {"const": true}
+        }
+      }
+    },
+    "arms_run": {"type": "array", "items": {"enum": ["A", "B", "C", "Cprime"]}},
+    "items_run": {"type": "array", "items": {"type": "string"}},
+    "repeats_per_cell": {"type": "integer", "minimum": 1},
+    "rater_assignment": {
+      "type": "object",
+      "required": ["raters", "between_subject_for_primer_exposure", "latin_square_order"],
+      "properties": {
+        "raters": {"type": "array", "items": {"type": "string", "description": "anonymized rater codes"}},
+        "between_subject_for_primer_exposure": {"const": true},
+        "latin_square_order": {"type": "boolean"}
+      }
+    },
+    "deviations_file": {"type": "string", "description": "path to the DEVIATION-LEDGER entry section for this run"}
+  }
+}

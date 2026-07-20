@@ -1,0 +1,55 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "$id": "orthemology/claim-ledger.schema.json",
+  "title": "Claim ledger 𝒬_e and residual-disposition map δ_e",
+  "description": "Claims are assertions; residuals are obligations; never merged. Six mutually exclusive dispositions with the owner-assigned/transferred precedence rule (Definition 12).",
+  "type": "object",
+  "required": ["episode_id", "claims", "residuals"],
+  "properties": {
+    "episode_id": {"type": "string"},
+    "claims": {
+      "type": "array",
+      "items": {
+        "type": "object",
+        "required": ["claim_id", "proposition", "target", "property_class", "success_surface", "verification_status"],
+        "properties": {
+          "claim_id": {"type": "string"},
+          "proposition": {"type": "string"},
+          "target": {
+            "type": "object",
+            "required": ["identity_key", "version"],
+            "properties": {"identity_key": {"type": "string"}, "version": {"type": "string"}}
+          },
+          "property_class": {"type": "string", "description": "core class (structural|behavioral|provenance) or a declared domain-specific subclass 'core/subclass'"},
+          "success_surface": {"type": "string", "description": "declared locus where success must be observable"},
+          "evidence_ids": {"type": "array", "items": {"type": "string"}},
+          "warrant": {"type": ["string", "null"]},
+          "depends_on_claims": {"type": "array", "items": {"type": "string"}},
+          "depends_on_tokens": {"type": "array", "items": {"type": "string"}, "description": "metaorthemma token ids this claim's standing depends on"},
+          "verification_status": {"enum": ["validated", "provisional", "stale", "absent"]},
+          "non_claims": {"type": "array", "items": {"type": "string"}, "description": "explicit non-claims recorded to block later inflation"}
+        }
+      }
+    },
+    "residuals": {
+      "type": "array",
+      "items": {
+        "type": "object",
+        "required": ["burden_id", "description", "disposition"],
+        "properties": {
+          "burden_id": {"type": "string"},
+          "description": {"type": "string"},
+          "disposition": {"enum": ["unresolved", "deferred", "transferred", "owner-assigned", "risk-accepted", "validated-resolved"]},
+          "owner": {"type": ["string", "null"], "description": "traceable ownership for transferred/owner-assigned"},
+          "trigger": {"type": ["string", "null"], "description": "declared later trigger for deferred"},
+          "risk_record": {"type": ["string", "null"], "description": "recorded accepted risk for risk-accepted"}
+        }
+      }
+    },
+    "closure_claim": {
+      "type": ["object", "null"],
+      "description": "well-formed only when every burden's disposition admits it (Definition 13)",
+      "properties": {"level": {"type": "string"}, "asserted_by": {"type": "string"}}
+    }
+  }
+}

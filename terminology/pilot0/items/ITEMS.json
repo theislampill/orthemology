@@ -1,0 +1,124 @@
+{
+  "schema": "orthemology-pilot0-items-v1",
+  "note": "READY TO RUN, NOT RUN. Scenario semantics are identical across arms; only vocabulary varies. Arm A/B use ordinary words; Arm B additionally names the distinction explicitly; Arm C uses the coined vocabulary (primer: primers/primer-armC.md); Arm Cprime uses sham labels (primers/primer-armCprime.md). Expected keys are deterministic rubric anchors, not free-text answers.",
+  "items": [
+    {
+      "id": "P0-ID-1",
+      "family": "occurrence-version-identity",
+      "scenario_common": "A reviewer approves a fix after reading a test log that shows the full suite passing. The log was produced forty minutes earlier. Between the log and the approval, a collaborator force-updated the branch with an unrelated refactor.",
+      "renderings": {
+        "A": "Question: is the approval justified? Explain what, if anything, is wrong.",
+        "B": "The distinction to apply: evidence attaches to a specific version of a specific artifact, and does not carry over to a changed version without a reason. Question: is the approval justified? Explain.",
+        "C": "The orthemma here is this branch state (identity key: the branch; version: the current commit). Question: is the approval justified? Explain using the orthemma's version.",
+        "Cprime": "The tarvemma here is this branch state (identity key: the branch; version: the current commit). Question: is the approval justified? Explain using the tarvemma's version."
+      },
+      "probes": ["Does the response state that the log describes a different version than the one approved?", "Does it require fresh evidence or a lineage argument rather than rejecting the fix outright?"],
+      "expected_key": {"detects_version_mismatch": true, "demands_reevidence_not_rejection": true}
+    },
+    {
+      "id": "P0-PL-1",
+      "family": "plural-profile-candidates",
+      "scenario_common": "A returned batch of bottles has two findings: the labels name the wrong concentration (affects all bottles), and three bottles have cracked seals (affects three). A technician proposes: 'relabel everything and ship'.",
+      "renderings": {
+        "A": "Question: evaluate the proposal.",
+        "B": "The distinction to apply: one case can carry several independent defects at once, each needing its own handling; do not collapse them into one. Question: evaluate the proposal.",
+        "C": "The batch is one orthemma whose profile contains two co-holding orthemes (mislabel; seal failure). Question: evaluate the proposal against the full profile.",
+        "Cprime": "The batch is one tarvemma whose profile contains two co-holding tarvemes (mislabel; seal failure). Question: evaluate the proposal against the full profile."
+      },
+      "probes": ["Are both defects preserved as separate obligations?", "Is a per-defect route given (relabel all; quarantine/replace the three)?"],
+      "expected_key": {"preserves_both_defects": true, "routes_compose": true}
+    },
+    {
+      "id": "P0-PW-1",
+      "family": "pathway-vs-result",
+      "scenario_common": "A security scanner passes an artifact because its output log contains the string SCAN-CLEAN. Today's artifact is in fact clean. The string is printed by the tool version in use regardless of findings.",
+      "renderings": {
+        "A": "Question: the answer was right - is anything wrong? What happens on tomorrow's artifact?",
+        "B": "The distinction to apply: a correct result and a properly working checking process are different things; a check can be right by luck. Question: is anything wrong? What happens on tomorrow's artifact?",
+        "C": "This orthing episode placed the artifact correctly, but under a defective governing metaortheme (marker-presence as evidence). Question: separate the result verdict from the pathway verdict, and predict the neighboring case.",
+        "Cprime": "This tarving episode placed the artifact correctly, but under a defective governing metatarveme (marker-presence as evidence). Question: separate the result verdict from the pathway verdict, and predict the neighboring case."
+      },
+      "probes": ["Is the correct-today/defective-process split stated?", "Is the neighboring failure (infected artifact with marker, or clean artifact without) predicted?"],
+      "expected_key": {"separates_result_from_pathway": true, "predicts_neighbor_failure": true}
+    },
+    {
+      "id": "P0-FC-1",
+      "family": "false-closure",
+      "scenario_common": "A migration ticket is closed as 'Done'. Its checklist shows: data moved (verified), consumers switched (verified), old store decommissioned (waiting on the storage team), rollback rehearsal (not performed, accepted by the tech lead as a known risk).",
+      "renderings": {
+        "A": "Question: is 'Done' the right status? Explain.",
+        "B": "The distinction to apply: each obligation has its own state (resolved, deferred, transferred, risk-accepted...), and a completion claim must match the itemized states, not summarize over them. Question: is 'Done' correct?",
+        "C": "Closure quantifies over the burden ledger; collapsing transferred and risk-accepted burdens into resolved is false closure. Question: is 'Done' correct?",
+        "Cprime": "Closure quantifies over the burden ledger; collapsing transferred and risk-accepted burdens into resolved is false closure. Question: is 'Done' correct?"
+      },
+      "probes": ["Is 'Done' rejected (or qualified) against the open transferred burden?", "Are the two non-resolved dispositions named rather than absorbed?"],
+      "expected_key": {"rejects_unqualified_done": true, "names_dispositions": true},
+      "note": "C and Cprime coincide here by design: the false-closure construct has no coined noun; this item calibrates label-independent scoring."
+    },
+    {
+      "id": "P0-RR-1",
+      "family": "governing-rule-revision",
+      "scenario_common": "In one quarter, four separate incident reviews each found the same pattern: a stale cache was read as current because the freshness check compares timestamps in local time. Each review patched the specific service involved.",
+      "renderings": {
+        "A": "Question: what should happen after the fourth review that did not happen after the first three?",
+        "B": "The distinction to apply: a recurring error class indicts the governing rule, not only its instances; rule revision is a separate act from instance repair. Question: what should happen now?",
+        "C": "Four episodes share one defective metaortheme (freshness standard with a local-time selector). Question: what does lesson-lift owe here beyond instance repair?",
+        "Cprime": "Four episodes share one defective metatarveme (freshness standard with a local-time selector). Question: what does lesson-lift owe here beyond instance repair?"
+      },
+      "probes": ["Is the timestamp-comparison rule itself revised (not a fifth patch)?", "Is the scope of past decisions under the old rule flagged for re-check?"],
+      "expected_key": {"revises_rule": true, "rechecks_impacted_scope": true}
+    },
+    {
+      "id": "P0-MB-1",
+      "family": "metaorthemma-binding",
+      "scenario_common": "A machine shop verifies a pillar's perpendicularity per the site standard: 'measure against the datum plane specified in the work order, with a calibrated level'. The fitter uses the standard correctly and carefully - but the work order bound the wrong datum plane (an adjacent wall, not the floor), and the level's calibration expired last month. The pillar happens to be truly perpendicular.",
+      "renderings": {
+        "A": "Question: the result is right - is the verification acceptable? What exactly went wrong, and what should be fixed: the standard, the procedure, the worker, or something else?",
+        "B": "The distinction to apply: a general standard can be correct, the procedure well-formed, and the worker faithful, while the case-specific binding - which datum plane, which instrument, which calibration - is defective; that bound record is its own object (an instantiated governing configuration, a configuration token, a bound governing record). Question: localize the defect.",
+        "C": "The governing metaortheme (perpendicularity standard) is sound and the execution faithful; the metaorthemma - this case's bound configuration token (datum plane, instrument, calibration) - is defective. Question: localize the defect and state the verdicts separately.",
+        "Cprime": "The governing metatarveme (perpendicularity standard) is sound and the execution faithful; the metatarvemma - this case's bound configuration token (datum plane, instrument, calibration) - is defective. Question: localize the defect and state the verdicts separately."
+      },
+      "probes": ["Is the defect localized to the case-specific binding (wrong datum + expired calibration), sparing the standard, the procedure, and the fitter?", "Is the lucky correct result separated from the defective verification pathway?", "Are BOTH binding defects (datum; calibration) caught?"],
+      "expected_key": {"localizes_to_binding": true, "separates_luck_from_pathway": true, "catches_both_binding_defects": true}
+    },
+    {
+      "id": "P0-MA-1",
+      "family": "multi-actor-separation",
+      "scenario_common": "Two chess engines analyze one middlegame position. Engine White reports 'winning'; Engine Black reports 'losing'. An observer says: 'They contradict each other - at most one can be right - and their shared evaluation rules are really the same goal.'",
+      "renderings": {
+        "A": "Question: assess the observer's claim.",
+        "B": "The distinctions to apply: one shared concrete position; per-side evaluations under per-side objectives; the objective is not the position's description; the search policy is not the rules; shared standards of analysis are not shared goals. Question: assess the observer's claim.",
+        "C": "One orthemma (the position); two analyses with opposed target profile sets; shared metaorthemes (analysis-sufficiency standards) govern HOW placements are made, never WHOSE target wins. Question: assess the observer's claim.",
+        "Cprime": "One tarvemma (the position); two analyses with opposed target profile sets; shared metatarvemes (analysis-sufficiency standards) govern HOW placements are made, never WHOSE target wins. Question: assess the observer's claim."
+      },
+      "probes": ["Is 'winning-for-White'/'losing-for-Black' recognized as consistent (same fact under two indices), not a contradiction?", "Are objective, policy, rules, and governing standards kept apart?"],
+      "expected_key": {"no_contradiction": true, "categories_kept_apart": true}
+    },
+    {
+      "id": "P0-NC-1",
+      "family": "negative-control",
+      "scenario_common": "A unit test fails because an assertion expects 41 but the correct constant is 42. Nothing else is wrong.",
+      "renderings": {
+        "A": "Question: what should be done?",
+        "B": "Question: what should be done? (Apply any distinctions only if they genuinely help.)",
+        "C": "Question: what should be done? (Apply the vocabulary only if it genuinely helps.)",
+        "Cprime": "Question: what should be done? (Apply the vocabulary only if it genuinely helps.)"
+      },
+      "probes": ["Is the answer a one-step fix without invented structure?", "Guard: added overhead tokens versus Arm A baseline."],
+      "expected_key": {"simple_fix": true, "overhead_guard": "near-zero"}
+    },
+    {
+      "id": "P0-NC-2",
+      "family": "negative-control",
+      "scenario_common": "A meeting invite has the wrong room number; the organizer notices before sending.",
+      "renderings": {
+        "A": "Question: what should be done?",
+        "B": "Question: what should be done? (Apply any distinctions only if they genuinely help.)",
+        "C": "Question: what should be done? (Apply the vocabulary only if it genuinely helps.)",
+        "Cprime": "Question: what should be done? (Apply the vocabulary only if it genuinely helps.)"
+      },
+      "probes": ["Is the answer a one-step fix without invented structure?", "Guard: added overhead tokens versus Arm A baseline."],
+      "expected_key": {"simple_fix": true, "overhead_guard": "near-zero"}
+    }
+  ]
+}

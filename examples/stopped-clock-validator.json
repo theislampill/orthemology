@@ -1,0 +1,49 @@
+{
+  "example": "stopped-clock-validator",
+  "note": "Correct today, defective pathway (F2). Marker-string validator; MetaTok empty (zero-burden).",
+  "parts": [
+    {
+      "schema": "orthing-episode.schema.json",
+      "instance": {
+        "episode_id": "ep-scan-771",
+        "occurrence": {"identity_key": "artifact-A", "version": "build-771", "kind": "artifact"},
+        "observation": "log contains SCAN-CLEAN",
+        "evidence": [{"evidence_id": "ev-log", "channel": "log-scrape", "property_class": "structural", "scope": "compliance @ build-771", "provenance": "scanner 4.2 run 771", "validity": "current build only"}],
+        "actor": "ci-gate",
+        "warrant": "pipeline-config-9",
+        "analysis": {"analysis_id": "release-compliance", "version": "1.0", "task": "gate artifacts on scan compliance"},
+        "time": "2026-07-10T12:00:00Z",
+        "meta_tokens": [],
+        "policy": "pass iff log contains SCAN-CLEAN",
+        "placement": {"compliance": "clean"},
+        "route": null,
+        "evidence_status": {"claim-clean": "provisional"},
+        "action": null,
+        "successors": []
+      }
+    },
+    {
+      "schema": "verdict-record.schema.json",
+      "instance": {
+        "episode_id": "ep-scan-771",
+        "required_path": ["EVIDENCE_SUPPORT", "PROCEDURE_RELIABLE", "EVIDENCE_CURRENT", "GOV_CONFIG_ADEQUATE", "GOV_POLICY_ADEQUATE", "EXECUTION_FAITHFUL", "EX_ANTE_JUSTIFIED", "ROBUST_NEIGHBORHOOD"],
+        "statuses": {
+          "RESULT_CORRECT": "pass", "EVIDENCE_SUPPORT": "pass", "PROCEDURE_RELIABLE": "fail", "EVIDENCE_CURRENT": "pass",
+          "GOV_CONFIG_ADEQUATE": "fail", "GOV_POLICY_ADEQUATE": "pass", "EXECUTION_FAITHFUL": "pass", "EX_ANTE_JUSTIFIED": "pass",
+          "ROBUST_NEIGHBORHOOD": "fail", "TOKEN_TRUTH_LINKED": "fail",
+          "GOV_TOKEN_ADEQUATE": "not-applicable", "ROUTE_ADMISSIBLE": "not-applicable", "CLOSURE_TRUTHFUL": "not-applicable", "ROUTE_QUALITY": "not-applicable"
+        },
+        "na_reasons": {
+          "GOV_TOKEN_ADEQUATE": "MetaTok empty: no case-specific bindings",
+          "ROUTE_ADMISSIBLE": "no route selected",
+          "CLOSURE_TRUTHFUL": "no closure claim",
+          "ROUTE_QUALITY": "advisory; no route"
+        },
+        "claim_verdicts": [{"claim_id": "claim-clean", "result_correct": "pass", "token_truth_linked": "fail"}],
+        "rel_spec": {"claim-clean": "reference class: all artifacts gated by scanner 4.2; criterion: sensitivity; declared before outcome"},
+        "perturb_spec": {"varied": "marker presence; artifact compliance", "invariant": "policy, configuration, analysis", "generator": "paired metamorphic probes", "tolerance": "0 failures on 2 probes"},
+        "pathway_state": "defective"
+      }
+    }
+  ]
+}

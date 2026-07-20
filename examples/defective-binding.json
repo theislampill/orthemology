@@ -1,0 +1,38 @@
+{
+  "example": "defective-binding",
+  "note": "F4: sound standard, sound policy, faithful execution, DEFECTIVE case-specific binding (wrong datum plane + expired calibration), luckily correct result. Per-token statuses show WHICH conjunct failed.",
+  "parts": [
+    {
+      "schema": "metaorthemma.schema.json",
+      "instance": {
+        "token_id": "tok-B9-perp-1",
+        "of_type": {"mu_id": "perpendicularity-standard", "mu_version": "3.0"},
+        "analysis": {"analysis_id": "site-perpendicularity-check", "version": "2.1"},
+        "anchor": {"identity_key": "pillar-B9", "version": "as-poured-2026-07-05"},
+        "governed_component": "E",
+        "binding": {"datum_plane": "adjacent-wall-W3 (WRONG: work order should bind floor-slab-datum-D2)", "instrument": "level-021"},
+        "scope": {"claims": ["claim-perp-B9"]},
+        "instrument": {"id": "level-021", "calibration_provenance": "cal-lab cert 2025-12-10", "calibration_expiry": "2026-06-10"},
+        "binder": {"actor": "site-engineer-5", "binding_warrant": "work-order-5540", "binding_time": "2026-07-06T07:30:00Z"},
+        "validity": {"effective_from": "2026-07-06", "expiry": null, "superseded_by": null}
+      }
+    },
+    {
+      "schema": "verdict-record.schema.json",
+      "instance": {
+        "episode_id": "ep-B9-verify-1",
+        "required_path": ["EVIDENCE_SUPPORT", "PROCEDURE_RELIABLE", "EVIDENCE_CURRENT", "GOV_CONFIG_ADEQUATE", "GOV_POLICY_ADEQUATE", "GOV_TOKEN_ADEQUATE", "EXECUTION_FAITHFUL", "EX_ANTE_JUSTIFIED"],
+        "statuses": {
+          "RESULT_CORRECT": "pass", "EVIDENCE_SUPPORT": "pass", "PROCEDURE_RELIABLE": "pass", "EVIDENCE_CURRENT": "pass",
+          "GOV_CONFIG_ADEQUATE": "pass", "GOV_POLICY_ADEQUATE": "pass", "GOV_TOKEN_ADEQUATE": "fail", "EXECUTION_FAITHFUL": "pass",
+          "EX_ANTE_JUSTIFIED": "pass", "TOKEN_TRUTH_LINKED": "fail",
+          "ROUTE_ADMISSIBLE": "not-applicable", "CLOSURE_TRUTHFUL": "not-applicable", "ROBUST_NEIGHBORHOOD": "not-applicable", "ROUTE_QUALITY": "not-applicable"
+        },
+        "na_reasons": {"ROUTE_ADMISSIBLE": "no route selected", "CLOSURE_TRUTHFUL": "no closure claim", "ROBUST_NEIGHBORHOOD": "no predeclared robustness obligation", "ROUTE_QUALITY": "advisory"},
+        "claim_verdicts": [{"claim_id": "claim-perp-B9", "result_correct": "pass", "token_truth_linked": "fail"}],
+        "per_token_v3c": [{"token_id": "tok-B9-perp-1", "status": "fail", "failing_conjunct": "Anchored"}],
+        "pathway_state": "defective"
+      }
+    }
+  ]
+}

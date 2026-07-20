@@ -1,0 +1,68 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "$id": "orthemology/metaorthemma.schema.json",
+  "title": "Metaorthemma μ̄ — case-bound configuration token (Decision 0002)",
+  "description": "Episode-local token of a metaortheme type. Not the episode; not the execution event. References — never absorbs — the episode's evidence and trace. The binder is DISTINCT from the executor.",
+  "type": "object",
+  "required": ["token_id", "of_type", "analysis", "anchor", "binding", "binder", "validity"],
+  "properties": {
+    "token_id": {"type": "string", "description": "μ̄_{e,j} identity + lineage"},
+    "of_type": {
+      "type": "object",
+      "required": ["mu_id", "mu_version"],
+      "description": "MetaInst(μ̄, μ)",
+      "properties": {"mu_id": {"type": "string"}, "mu_version": {"type": "string"}}
+    },
+    "analysis": {
+      "type": "object",
+      "required": ["analysis_id", "version"],
+      "description": "Compatible(μ̄, A(e)): binds case-specific values WITHIN the declared analysis; never overrides A without a new analysis version",
+      "properties": {"analysis_id": {"type": "string"}, "version": {"type": "string"}}
+    },
+    "anchor": {
+      "type": "object",
+      "required": ["identity_key", "version"],
+      "description": "the target occurrence (κ, v)",
+      "properties": {"identity_key": {"type": "string"}, "version": {"type": "string"}}
+    },
+    "governed_component": {"enum": ["O", "I", "E", "D", "R", "V", "W"]},
+    "binding": {
+      "type": "object",
+      "description": "the case-specific binding map B (reference frame, tolerance value, fixture, success surface, instrument, calibration, ...)",
+      "additionalProperties": {"type": ["string", "number", "boolean"]}
+    },
+    "scope": {
+      "type": "object",
+      "properties": {
+        "claims": {"type": "array", "items": {"type": "string"}, "description": "claim ids in 𝒬(e) that depend on this token"},
+        "description": {"type": "string"}
+      }
+    },
+    "instrument": {
+      "type": "object",
+      "properties": {
+        "id": {"type": "string"},
+        "calibration_provenance": {"type": "string"},
+        "calibration_expiry": {"type": ["string", "null"]}
+      }
+    },
+    "binder": {
+      "type": "object",
+      "required": ["actor", "binding_warrant", "binding_time"],
+      "description": "who/what made the binding — kept distinct from the designated executor",
+      "properties": {
+        "actor": {"type": "string"},
+        "binding_warrant": {"type": "string", "description": "w_bind"},
+        "binding_time": {"type": "string"}
+      }
+    },
+    "validity": {
+      "type": "object",
+      "properties": {
+        "effective_from": {"type": ["string", "null"]},
+        "expiry": {"type": ["string", "null"]},
+        "superseded_by": {"type": ["string", "null"]}
+      }
+    }
+  }
+}

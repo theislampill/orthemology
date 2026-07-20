@@ -1,0 +1,27 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "$id": "orthemology/orthemma.schema.json",
+  "title": "Orthemma (concrete occurrence) with versioned identity and lineage",
+  "type": "object",
+  "required": ["identity_key", "version"],
+  "properties": {
+    "identity_key": {"type": "string", "description": "κ — which thing this is (survives change)"},
+    "version": {"type": "string", "description": "v — which state/edition of that thing"},
+    "kind": {"type": "string", "description": "domain kind (artifact, batch, position, directive, reified-episode, ...)"},
+    "lineage": {
+      "type": "array",
+      "description": "labeled successor edges INTO this occurrence (Definition 6): which action on which predecessor produced it",
+      "items": {
+        "type": "object",
+        "required": ["from_identity", "from_version", "action_label"],
+        "properties": {
+          "from_identity": {"type": "string"},
+          "from_version": {"type": "string"},
+          "action_label": {"type": "string"},
+          "producing_episode": {"type": "string"}
+        }
+      }
+    },
+    "reified_from_episode": {"type": ["string", "null"], "description": "ι_n embedding: set when this occurrence is an episode cast as a higher-audit case"}
+  }
+}

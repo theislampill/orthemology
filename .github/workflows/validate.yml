@@ -10,7 +10,25 @@ jobs:
       - uses: actions/setup-python@v5
         with:
           python-version: "3.11"
+      - name: Install validator dependencies (no live web checks anywhere in CI)
+        run: pip install --quiet pyyaml jsonschema fpdf2
       - name: Repository hygiene + honesty checks
         run: python scripts/validate_repo.py
-      - name: Verdict semantics fixtures
+      - name: Verdict semantics (registry-driven fixtures)
         run: python scripts/validate_verdict_semantics.py --fixtures tests/verdict-fixtures.json
+      - name: Notation registry
+        run: python scripts/validate_notation.py
+      - name: JSON schemas + machine-readable examples
+        run: python scripts/validate_schemas.py
+      - name: Citation/source-ledger completeness (field presence only; no web requests)
+        run: python scripts/validate_claim_sources.py
+      - name: Cross-document consistency
+        run: python scripts/validate_cross_document_consistency.py
+      - name: Terminology pilot packet freeze hash
+        run: python scripts/freeze_pilot0.py --check
+      - name: Release manifest matches tree
+        run: |
+          python scripts/make_manifest.py
+          git diff --exit-code docs/provenance/RELEASE-MANIFEST.sha256
+      - name: PDF build reproducibility (source-consistency check)
+        run: python scripts/build_pdfs.py --check

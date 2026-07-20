@@ -1,0 +1,55 @@
+{
+  "example": "multi-actor-compatibility",
+  "note": "Well-typed Compat_m across profile spaces: one shared occurrence, two analyses; the target sets are never intersected directly (formal audit R2 item 11).",
+  "parts": [
+    {
+      "schema": "analysis.schema.json",
+      "instance": {"analysis_id": "chess-eval-white", "version": "1.0", "task": "win as White", "repertoire_ref": "terminal-state-types-white"}
+    },
+    {
+      "schema": "analysis.schema.json",
+      "instance": {"analysis_id": "chess-eval-black", "version": "1.0", "task": "win as Black", "repertoire_ref": "terminal-state-types-black"}
+    },
+    {
+      "schema": "orthemma.schema.json",
+      "instance": {"identity_key": "game-2214-position", "version": "after-move-31", "kind": "game-position"}
+    },
+    {
+      "schema": "orthing-episode.schema.json",
+      "instance": {
+        "episode_id": "ep-white-analyze-31",
+        "occurrence": {"identity_key": "game-2214-position", "version": "after-move-31", "kind": "game-position"},
+        "observation": "full board state (perfect information)",
+        "actor": "engine-alpha",
+        "analysis": {"analysis_id": "chess-eval-white", "version": "1.0", "task": "win as White"},
+        "time": "2026-07-13T10:00:00Z",
+        "meta_tokens": [],
+        "placement": {"evaluation": "white-advantage"},
+        "action": null,
+        "successors": []
+      }
+    },
+    {
+      "schema": "orthing-episode.schema.json",
+      "instance": {
+        "episode_id": "ep-black-analyze-31",
+        "occurrence": {"identity_key": "game-2214-position", "version": "after-move-31", "kind": "game-position"},
+        "observation": "full board state (perfect information)",
+        "actor": "engine-beta",
+        "analysis": {"analysis_id": "chess-eval-black", "version": "1.0", "task": "win as Black"},
+        "time": "2026-07-13T10:00:00Z",
+        "meta_tokens": [],
+        "placement": {"evaluation": "black-disadvantage"},
+        "action": null,
+        "successors": []
+      }
+    }
+  ],
+  "compatibility_assessment": {
+    "predicate": "Compat_m(G_white, G_black)",
+    "definition": "exists m' in Reach(m) with O*(m'; A_white) in G_white AND O*(m'; A_black) in G_black",
+    "verdict": false,
+    "reason": "zero-sum win-sets: no reachable terminal realizes a win-profile under BOTH analyses; draw successors realize neither (they are not counterexamples to Conflict)",
+    "note": "the two placements 'white-advantage' and 'black-disadvantage' are CONSISTENT: one fact under two declared analyses, not a contradiction"
+  }
+}

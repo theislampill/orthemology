@@ -1,0 +1,9 @@
+{
+  "pdf": "orthemma-ortheme-systems-draft.pdf",
+  "commit": "0063774dec2abf61dbd263d88fdbd27eaccc9d99",
+  "generated": "2026-07-20",
+  "sources": {
+    "manuscript/orthemma-ortheme-systems-revised-draft.md": "37bff9ff0648980f5aba56f8b461aadd4dc0d5923a0b4043e5556c5a2338eaf4"
+  },
+  "pipeline": "fpdf2 + matplotlib-bundled DejaVu (embedding-permissive licenses)"
+}

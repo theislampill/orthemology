@@ -1,0 +1,9 @@
+{
+  "pdf": "orthability-ground-of-intelligibility-draft.pdf",
+  "commit": "0063774dec2abf61dbd263d88fdbd27eaccc9d99",
+  "generated": "2026-07-20",
+  "sources": {
+    "companion/orthability-and-the-ground-of-intelligibility.md": "944fbde2a3e309bb74c2ffefe83bdaaba1dfdd667310f9eac6281b10b5d04592"
+  },
+  "pipeline": "fpdf2 + matplotlib-bundled DejaVu (embedding-permissive licenses)"
+}

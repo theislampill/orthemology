@@ -1,0 +1,61 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "$id": "orthemology/verdict-record.schema.json",
+  "title": "Episode verdict record (Decisions 0003 + 0004)",
+  "description": "Statuses keyed by SEMANTIC ID from docs/verdict-registry.yaml (display aliases are prose-only). Four-valued statuses; ReqPath is governance-derived; every excluded verdict carries a reason; pathway aggregation is conjunction over ReqPath.",
+  "type": "object",
+  "required": ["episode_id", "required_path", "statuses", "pathway_state"],
+  "properties": {
+    "episode_id": {"type": "string"},
+    "required_path": {
+      "type": "array",
+      "items": {"$ref": "#/$defs/verdict_id"},
+      "description": "ReqPath(e) = CorePath ∩ RequiredBy(A, shape, risk, claims, governance)"
+    },
+    "statuses": {
+      "type": "object",
+      "propertyNames": {"$ref": "#/$defs/verdict_id"},
+      "additionalProperties": {"enum": ["pass", "fail", "undetermined", "not-applicable"]}
+    },
+    "na_reasons": {
+      "type": "object",
+      "description": "REQUIRED for every not-applicable status ('not tested' is never 'not applicable')",
+      "propertyNames": {"$ref": "#/$defs/verdict_id"},
+      "additionalProperties": {"type": "string", "minLength": 1}
+    },
+    "claim_verdicts": {
+      "type": "array",
+      "description": "claim-wise result-side records; TOKEN_TRUTH_LINKED pass entails RESULT_CORRECT pass per claim",
+      "items": {
+        "type": "object",
+        "required": ["claim_id", "result_correct"],
+        "properties": {
+          "claim_id": {"type": "string"},
+          "result_correct": {"enum": ["pass", "fail", "undetermined"]},
+          "token_truth_linked": {"enum": ["pass", "fail", "undetermined", "not-applicable"]}
+        }
+      }
+    },
+    "per_token_v3c": {
+      "type": "array",
+      "description": "per-token GOV_TOKEN_ADEQUATE statuses preserved alongside the conjunction",
+      "items": {
+        "type": "object",
+        "required": ["token_id", "status"],
+        "properties": {
+          "token_id": {"type": "string"},
+          "status": {"enum": ["pass", "fail", "undetermined"]},
+          "failing_conjunct": {"enum": ["MetaInst", "Compatible", "Anchored", "ScopeCorrect", "Current", "Provenanced", "AuthorizedBinding", null]}
+        }
+      }
+    },
+    "pathway_state": {"enum": ["adequate", "defective", "undetermined"]},
+    "rel_spec": {"type": "object", "description": "RelSpec per claim for PROCEDURE_RELIABLE", "additionalProperties": {"type": "string"}},
+    "perturb_spec": {"type": "object", "description": "PerturbSpec for ROBUST_NEIGHBORHOOD (varied/invariant fields, generator, size or measure, tolerance)", "additionalProperties": {"type": "string"}}
+  },
+  "$defs": {
+    "verdict_id": {
+      "enum": ["RESULT_CORRECT", "EVIDENCE_SUPPORT", "PROCEDURE_RELIABLE", "TOKEN_TRUTH_LINKED", "EVIDENCE_CURRENT", "GOV_CONFIG_ADEQUATE", "GOV_POLICY_ADEQUATE", "GOV_TOKEN_ADEQUATE", "EXECUTION_FAITHFUL", "EX_ANTE_JUSTIFIED", "ROUTE_ADMISSIBLE", "ROUTE_QUALITY", "CLOSURE_TRUTHFUL", "ROBUST_NEIGHBORHOOD"]
+    }
+  }
+}
