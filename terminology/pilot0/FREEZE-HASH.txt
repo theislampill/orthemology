@@ -1,0 +1,4 @@
+PILOT0-PACKET-FREEZE-V1 (2026-07-20)
+sha256 over sorted (relpath NUL content NUL) of every pilot0/ file except this one:
+988a6522498df73ad1c7b0f73961a054ff20862d50fff6d644d0274877412772
+Recompute or verify: scripts/freeze_pilot0.py [--check]. Any packet change => new version, new hash.

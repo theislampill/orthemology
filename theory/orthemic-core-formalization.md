@@ -1,48 +1,44 @@
 # Orthemic Core Formalization — Orthing, Episodes, Metaorthemes, Pathway Adequacy
 
-> **Provenance.** Draft lineage: Opus 4.8 (owner/harness report). An
-> attempted review pass also ran under Opus 4.8 while falsely
-> self-identifying as Fable 5 (harness substitution; its edits are part of
-> the draft lineage). Genuine Fable 5 Gate A (read-only dispositions):
-> `fable-independent-review-v2.md` §7.1–§7.2, 2026-07-16. Genuine Fable 5
-> Gate B (this text): all fifteen Gate-A items applied 2026-07-16 —
-> reification embedding propagated everywhere; typed candidate families and
-> profile-valued placement; endpoint + governance-bounded trace; claim
-> ledger, handoff records, episode warrant, labeled successor set;
-> governed-component boundary `{O,I,E,D,R,V,W}` with plain-language keys;
-> impact-scoped revision; concept-admission/word-utility separation; the
-> V1/V2a–c/V3/V3a/V3b/V3d/V4a–b/V5/V6 verdict vector with `App(e)`;
-> corrected four-cell matrix; typed-edge DAG justification. **Final Fable
-> disposition: revised and normalized — canonical.** No prior Opus work is
-> claimed to answer any Fable-specific capability question. Provenance
-> authority throughout is the owner-observed UI/harness, not cryptographic
-> proof.
+> **Provenance.** Multi-model draft lineage with successive review passes;
+> the original headers are preserved verbatim in
+> [`docs/provenance/document-history.md`](../docs/provenance/document-history.md),
+> and model contributions in
+> [`docs/provenance/model-contributions.md`](../docs/provenance/model-contributions.md).
+> Nothing here is experimentally validated.
 
-**Date:** 2026-07-16. **Status:** proposed formalization of owner-proposed
-material (orthing, episode notation `e_mu(m) = o-hat`, five metaortheme
-examples), building on manuscript Definitions 1–11 / §5–7 and on the
-reassessment's "Owner-proposed orthing" section. All claims are
+**Status (revision R2, 2026-07-20):** canonical formalization of the
+orthing layer (episodes, metaorthemes, metaorthemmata, pathway adequacy),
+companion to the main manuscript's definitions. All claims are
 definitional/analytic unless marked empirical; nothing is experimentally
-validated — fixture E5 and the Arm A/B/C test remain the gates.
+validated — the deterministic fixture suite checks consistency only, and
+the Arm A/B/C terminology benchmark is designed but not run.
 
-**Inherited notation.** `M` = domain of orthemmata (concrete occurrences);
-`O` = repertoire of orthemes (repeatable operational state-types);
-`Inst_A ⊆ M×O` = analysis-relative instantiation — the primitive; the
-manuscript's Definition 3 and §2.6 define the declared, versionable
+**Inherited notation** (normative registry:
+[`docs/notation-registry.yaml`](../docs/notation-registry.yaml)). `𝓜`,
+`𝓞` = the universal occurrence and ortheme universes; a declared analysis
+`A` activates a domain `M_A ⊆ 𝓜` of orthemmata (concrete occurrences) and
+a repertoire `O_A ⊆ 𝓞` of orthemes (repeatable operational state-types);
+under the standing single-analysis scope these are written `M`, `O`.
+`Inst_A ⊆ M_A × O_A` = analysis-relative instantiation — the primitive;
+the manuscript's Definition 3 and §2.6 define the declared, versionable
 analysis `A`, whose components include the task `T = task(A)`;
 `O*(m; A)` = actual profile (ground truth relative to `A`);
-`p̂_t(m)` = inferred profile (belief; `Ô` survives only as the derived
-flattening of `p̂`, §2.2); `C_t(m)` = candidate set; `Ω` = observation
+`Π_A` = the complete-profile space and `Π_A^∂` the partial-profile space
+(manuscript Definition 10); `p̂_t(m) ∈ Π_A^∂` = inferred profile (belief;
+`Ô` survives only as the derived flattening of `p̂`, §2.2);
+`Ĉ_t(m)` = candidate set of complete profiles; `Ω` = observation
 map; `μ` = a metaortheme; `o-hat` = an inferred ortheme.
 **Abbreviation convention:** once a single analysis `A` with
 `task(A) = T` is fixed by explicit declaration, task-subscripted forms
-(`Inst_T`, `O*_T(m)`, `Π_T`, `K_T`, `R_T`, `W_T`) abbreviate their
-`A`-indexed counterparts. The shorthand is **forbidden** wherever more
-than one analysis is live — level-indexed audits (§1, §5.2), multi-actor
-episodes (§5.3), cross-version comparisons, execution-vs-review
-comparisons — where the full `O*(m; A)` form is required. (This block
-supersedes the earlier `I_T` / `O*_T`-as-primitive / `Ô_t` statement,
-which had gone stale against the revised draft.)
+(`Inst_T`, `O*_T(m)`, `Π_T`, `𝒦_T`, `ℛ_T`, `𝒲_T`) and the unsubscripted
+`M`, `O` abbreviate their `A`-indexed counterparts. The shorthand is
+**forbidden** wherever more than one analysis is live — level-indexed
+audits (§1, §5.2), multi-actor episodes (§5.3), cross-version comparisons,
+execution-vs-review comparisons — where the full `O*(m; A)` form is
+required. (This block supersedes the earlier statement that treated the
+task-indexed relation as primitive; the retired symbols are listed in the
+notation registry's `retired_symbols`.)
 
 ---
 
@@ -79,7 +75,7 @@ verdicts. This applies the manuscript's own licensed move ("metaorthemes
 can become first-order orthemes for a higher audit," §6) to the token
 side; the regress stops, as there, at a declared governance boundary.
 
-**Why no separate "meta-orthemma" term.** The owner notes float the noun
+**Why no separate "meta-orthemma" term.** The originating project notes float the noun
 "meta-orthemma" for the concrete operation. It is not adopted. Against the
 manuscript's own anti-vacuity standard, a new noun class must change at
 least one of representation, evidence, routing, or prediction; it changes
@@ -99,9 +95,8 @@ with signatures), not a new pole of the type–token architecture. Register
 the subtype; do not coin the noun. If audits over episodes later prove to
 need operations generic placement lacks, revisit under the same test.
 
-**Qualification (owner decision M1, 2026-07-19).** The rejection above
-concerns "meta-orthemma" as a name for the REIFIED EPISODE. The owner has
-since adopted a different object in the same name-neighborhood: the
+**Qualification (Decision 0002).** The rejection above
+concerns "meta-orthemma" as a name for the REIFIED EPISODE. Decision 0002 later adopted a different object in the same name-neighborhood: the
 **metaorthemma** `μ̄` — an episode-local, case-bound CONFIGURATION TOKEN
 of a repeatable metaortheme (§2.2, §3, V3c in §4.1). It is not the whole
 episode and not the execution event; the rejection above stands for its
@@ -139,7 +134,7 @@ for one placement inside an episode (2.3).
 
 An **orthing episode** is a record
 
-    e = ⟨ id;  m, κ, v;  x, H;  α, w, A, T, t;  μ⃗, MetaTok, π;  C⃗, p̂;  r;  ε;  Q;  δ;
+    e = ⟨ id;  m, κ, v;  x, H;  α, w, A, T, t;  μ⃗, MetaTok, π;  C⃗, p̂;  r;  estatus;  𝒬;  δ;
           hand_in, hand_out;  a, Succ ⟩
 
 with components (each glossed in ordinary language):
@@ -158,23 +153,29 @@ with components (each glossed in ordinary language):
 | `T = task(A)` | task | the task component of `A`, retained as a separate readable component |
 | `t` | time interval | when the episode ran |
 | `μ⃗ = (μ₁,…,μ_k; ≼)` | metaorthemic configuration | the governing rules in force, with precedence order `≼` |
-| `MetaTok(e) = {μ̄_1,…,μ̄_j}` | concrete metaorthemmata (owner decision M1, 2026-07-19) | the case-bound CONFIGURATION TOKENS of governing types actually applied. Each `μ̄` records/references: its own identity and lineage; `(μ, ver(μ))` via the internal typing `MetaInst(μ̄, μ)`; `(A(e), ver(A(e)))` with `Compatible(μ̄, A(e))` — the token binds case-specific values WITHIN the declared analysis, references any value `A` fixes uniquely, and never overrides `A` without an explicit new analysis version; the target `(κ, v)`; governed component `g`; the case-specific binding map `B` (reference frame, tolerance value, fixture, success surface, …); scope `σ` incl. the claims in `Q` that depend on it; references to policy, evidence selector, instrument/tool and calibration provenance; the **binder** (actor/process that made the binding) with binding warrant `w_bind`, kept DISTINCT from the designated executor; binding time `t_bind`; validity/expiry/supersession. The token REFERENCES the episode's evidence `H`, trace, and output — it never absorbs them (the application-event view `ApplyEvent(μ̄, e) = ⟨μ̄, Trace_e\|_μ̄⟩` is derived, not primitive). **Zero-burden rule:** a configuration with no material case-specific binding, non-default scope, instrument/calibration, or independent validity condition gets no explicit token, and `V3c ∉ App(e)` |
+| `MetaTok(e) = {μ̄_1,…,μ̄_j}` | concrete metaorthemmata (Decision 0002) | the case-bound CONFIGURATION TOKENS of governing types actually applied. Each `μ̄` records/references: its own identity and lineage; `(μ, ver(μ))` via the internal typing `MetaInst(μ̄, μ)`; `(A(e), ver(A(e)))` with `Compatible(μ̄, A(e))` — the token binds case-specific values WITHIN the declared analysis, references any value `A` fixes uniquely, and never overrides `A` without an explicit new analysis version; the target `(κ, v)`; governed component `g`; the case-specific binding map `B` (reference frame, tolerance value, fixture, success surface, …); scope `σ` incl. the claims in `𝒬` that depend on it; references to policy, evidence selector, instrument/tool and calibration provenance; the **binder** (actor/process that made the binding) with binding warrant `w_bind`, kept DISTINCT from the designated executor; binding time `t_bind`; validity/expiry/supersession. The token REFERENCES the episode's evidence `H`, trace, and output — it never absorbs them (the application-event view `ApplyEvent(μ̄, e) = ⟨μ̄, Trace_e\|_μ̄⟩` is derived, not primitive). **Zero-burden rule:** a configuration with no material case-specific binding, non-default scope, instrument/calibration, or independent validity condition gets no explicit token, and `V3c ∉ ReqPath(e)` (status recorded not-applicable, with reason) |
 | `π` | policy | the concrete procedure executed under `μ⃗` |
-| `C⃗` | typed candidate families | open alternatives per uncertainty axis: `C^id ⊆ M` (which occurrence), `C^profile ⊆ Π_T` (which profile), `C^cause ⊆ K_T` (which cause), `C^route ⊆ R_T` (which route), `C^warrant ⊆ W_T` (which warrant state) — competing hypotheses may themselves be PROFILES, so candidates are not forced into single orthemes |
-| `p̂ ∈ Π_T` | inferred placement | the profile actually placed (or a bounded set of profiles if unresolved) — **never coerced to a singleton ortheme**; `Ô ⊆ O` survives only as the derived flattening of `p̂` |
+| `C⃗` | typed candidate families | open alternatives per uncertainty axis: `C^id ⊆ M` (which occurrence), `C^profile ⊆ Π_A` (which profile), `C^cause ⊆ 𝒦_A` (which cause), `C^route ⊆ ℛ_A` (which route), `C^warrant ⊆ 𝒲_A` (which warrant state) — competing hypotheses may themselves be PROFILES, so candidates are not forced into single orthemes |
+| `p̂ ∈ Π_A^∂` | inferred placement | the profile actually placed (or a bounded set of profiles if unresolved) — **never coerced to a singleton ortheme**; `Ô ⊆ O` survives only as the derived flattening of `p̂` |
 | `r` | route | the operation/owner the case was sent to |
-| `ε` | evidence status map | per placed claim: validated / provisional / stale / absent |
-| `Q` | claim ledger | per claim: proposition; target occurrence/version; property class (#3); required success surface (#14); evidence IDs; warrant where relevant; verification status; explicit non-claims |
-| `δ` | residual disposition map | per obligation: unresolved / deferred / transferred / owner-assigned / risk-accepted / validated-resolved (issue #6's six values). Claims (`Q`) are assertions; residuals (`δ`) are obligations — never merged |
+| `estatus` | evidence status map | per placed claim: validated / provisional / stale / absent |
+| `𝒬` | claim ledger | per claim: proposition; target occurrence/version; property class (#3); required success surface (#14); evidence IDs; warrant where relevant; verification status; explicit non-claims |
+| `δ` | residual disposition map | per obligation: unresolved / deferred / transferred / owner-assigned / risk-accepted / validated-resolved (issue #6's six values). Claims (`𝒬`) are assertions; residuals (`δ`) are obligations — never merged |
 | `hand_in, hand_out` | handoff records | incoming/outgoing packets: packet id+version, sender/receiver episode ids, subject identity, state claims, evidence references, authority claims (the #15 hook) |
 | `a` | action | what was done to or with the case |
 | `Succ ⊆ M` | successor set | the occurrences the action created/affected, as LABELED lineage edges (which action produced which successor) — zero, one, or many; the earlier forced single `m′ = succ(m,a)` is corrected |
 
 `Π_A` — with `Π_T` its licensed shorthand under the standing convention —
-(gloss: the profile space, every complete way the case could be placed)
-and the labeled successor edges close the arrow the manuscript lacks from
-action back into `M`: placements verified for `(κ, v)` do not transport
-to `(κ, v′)` without a lineage argument.
+is the **profile space** of manuscript Definition 10: a complete profile
+is an assignment over the factorized axes selecting at most one
+*alternatives*-marked value per axis and any set of *co-holding* values,
+consistent with the declared cross-axis constraints; `Π_A^∂` is the
+partial-profile space (axes may be left undetermined), with
+`Π_A ⊆ Π_A^∂` (gloss: every complete way the case could be placed, and
+every honest partial state of knowledge about it). This and the labeled
+successor edges close the arrow the manuscript lacks from action back
+into `M`: placements verified for `(κ, v)` do not transport to `(κ, v′)`
+without a lineage argument.
 
 **Plain-language key for governed-component letters used below:** `O` =
 the ortheme repertoire (which state-types exist); `I` =
@@ -190,7 +191,7 @@ authorized vs factually established — and what each licenses).
 
 The record above is the REQUIRED endpoint. Because orthing is defined as
 evidence-updating, an endpoint alone cannot always adjudicate pathway
-verdicts; where those verdicts (V2b^proc truth-conduciveness, V3b executor
+verdicts; where those verdicts (V2b-P truth-conduciveness, V3d executor
 fidelity, V6 robustness — §4) must be adjudicated from the episode's own
 record, an ordered **trace** is also required:
 
@@ -208,25 +209,25 @@ closure claim, or open residuals. Components are defined **where
 applicable**: a read-only classification episode has `a = ⊥` (no action),
 `Succ = ∅` (no successor created), possibly `r = ⊥` (no downstream route),
 and an empty `δ`. Where a component is `⊥`, the verdicts that quantify
-over it (V4 route, V5 closure — §4) are **not asserted of that episode**
-rather than counted as failures; formally, `App(e)` is the recorded set of
-applicable verdict indices, and pathway adequacy conjoins over the
-governance-DERIVED required set `ReqPath(e)` (§4.1, owner decision O2) —
+over it (V4a route, V5 closure — §4) are **not asserted of that episode**
+rather than counted as failures; formally, pathway adequacy conjoins over
+the governance-DERIVED required set `ReqPath(e)` (§4.1, Decision 0003) —
 applicability is derived from the declared analysis, episode shape, risk
 class, claims, and governance, never a discretionary post-hoc list, and
-every excluded verdict carries a recorded applicability reason. So "no
-route" (deliberately none, with reason) is distinguished from "route
-omitted" (a defect), and "not tested" is never "not applicable".
+every verdict excluded from `ReqPath(e)` carries a recorded
+`not-applicable` reason on the episode record. So "no route" (deliberately
+none, with reason) is distinguished from "route omitted" (a defect), and
+"not tested" is never "not applicable".
 
 ### 2.3 Three separations, stated once
 
-1. **Episode ≠ output.** `out(e) = ⟨p̂, r, ε, Q, δ, a⟩` is a projection of
+1. **Episode ≠ output.** `out(e) = ⟨p̂, r, estatus, 𝒬, δ, a⟩` is a projection of
    `e`; episodes with identical outputs can differ in pathway and hence in
    every §4 verdict.
 2. **Episode ≠ policy.** `π` is repeatable and undated; `e` is one dated
    execution of `π`. Reliability claims attach to `π` (and `μ⃗`);
    correctness claims attach to `e`.
-3. **Placement inside an episode ≠ the episode.** The owner's function
+3. **Placement inside an episode ≠ the episode.** The compact function
    style becomes the derived judgment
 
        e ⊨_μ (m : o-hat)   iff   o-hat ∈ Ô(e) and μ ∈ μ⃗(e) governed that placement
@@ -241,7 +242,7 @@ omitted" (a defect), and "not tested" is never "not applicable".
 
 ## 3. Metaortheme semantics (2C)
 
-**Type vs token (owner decision M1, 2026-07-19).** This section describes
+**Type vs token (Decision 0002).** This section describes
 the REPEATABLE side: the metaortheme type `μ` and its paired meta-policy
 `π_μ`. Their concrete, case-bound instantiation inside an episode is the
 **metaorthemma** `μ̄` (§2.2), typed by the internal relation
@@ -249,7 +250,7 @@ the REPEATABLE side: the metaortheme type `μ` and its paired meta-policy
 primitive — and subordinated to the episode's analysis by
 `Compatible(μ̄, A(e))`. Four layers stay separate: type `μ`; policy
 `π_μ`; token `μ̄` (binding); execution of the token (episode trace,
-judged by V3b). The corresponding adequacy questions are independent:
+judged by V3d). The corresponding adequacy questions are independent:
 adequate type, adequate policy, correctly bound token, faithful
 execution.
 
@@ -263,8 +264,8 @@ execution.
   over the machinery: "never place on appearance alone," "quarantine on
   stale version." The rule *is* the object.
 - **(C) Split model.** A metaortheme is a **metaorthemic configuration**
-  `μ = ⟨g, S_μ, ε_μ, prov(μ), ver(μ)⟩` — governed component `g`, declared
-  competing higher-order states `S_μ`, selecting-evidence procedure `ε_μ`
+  `μ = ⟨g, S_μ, select_μ, prov(μ), ver(μ)⟩` — governed component `g`, declared
+  competing higher-order states `S_μ`, selecting-evidence procedure `select_μ`
   that determines which state obtains, provenance, version — together
   with a distinct **meta-policy** `π_μ` prescribing conduct conditional on
   the state (gloss: the *distinction the rule consults* and the *rule that
@@ -273,7 +274,7 @@ execution.
   **Governed-component boundary (adjudicated; one boundary for all
   documents).** `g ∈ {O, I, E, D, R, V, W}` — the mapping/handling
   components plus warrant/authorization-state classification (plain-
-  language key in §2.2; `W` is required by owner example 5). Excluded as
+  language key in §2.2; `W` is required by worked example 5). Excluded as
   governed components: **objectives/loss** (the Grok exchange remains the
   standing negative example of an objective mislabeled a metaortheme);
   the **task** `T` (changing the task changes the problem — rules are
@@ -285,7 +286,7 @@ execution.
   mapping subsystem — the transformation is the effect of revising `μ`,
   not `μ` itself.
 
-### 3.2 Minimum-specificity test against the five owner examples
+### 3.2 Minimum-specificity test against the five worked examples
 
 | Owner example | Governed | Competing states | Selecting evidence | Counterfactual difference | Policy relation |
 |---|---|---|---|---|---|
@@ -293,7 +294,7 @@ execution.
 | current vs stale version | identity/versioning on `M` | {current, stale} | lineage check `ver(m)` vs latest | verdicts on stale versions do not transport | policy quarantines or re-derives on stale |
 | route-sufficient vs identity-complete | `R`,`V` (routing, validation) | {route-sufficient, identity-complete} | task declaration + risk class | act-now vs investigate-further diverge | policy releases the route while holding residuals open |
 | closure-safe vs false closure | `V` (closure) | per-burden {resolved, deferred, transferred, risk-accepted} vs "all done" | residual ledger `δ` | falsely closed cases silently accrue debt; safe closure is reopenable by record | policy may claim completion only at the ledger's level |
-| owner-authorized vs factually established | `W` (warrant-state classification) | {authorized, established, both, neither} | authorization record vs validating evidence | authorized-but-unestablished placements must carry a revisit obligation | policy tags warrant type and never launders one into the other |
+| authorized vs factually established | `W` (warrant-state classification) | {authorized, established, both, neither} | authorization record vs validating evidence | authorized-but-unestablished placements must carry a revisit obligation | policy tags warrant type and never launders one into the other |
 
 Verdict per model: **A** captures competing states but has no slot for the
 last column — a state with no conduct attached governs nothing. **B**
@@ -305,10 +306,10 @@ exactly where B collapses (same `S_μ`, different `π_μ`).
 
 ### 3.3 Recommendation
 
-**Adopt (C).** It is the only model under which all five owner examples
+**Adopt (C).** It is the only model under which all five worked examples
 pass minimum specificity; it matches Definition 9's prose; it makes
-rule-adequacy (§4, V3) a predicate on `μ` separable from executor error in
-`π_μ`; and it gives lesson-lift a target (revise `S_μ` or `ε_μ`) distinct
+rule-adequacy (§4, V3a) a predicate on `μ` separable from executor error in
+`π_μ`; and it gives lesson-lift a target (revise `S_μ` or `select_μ`) distinct
 from retraining conduct (revise `π_μ`).
 
 **Preserved downsides of (C):** two objects per rule is real bookkeeping;
@@ -335,7 +336,12 @@ configuration-plus-policy — which the safeguards below must block.
 - **Provenance of the governing rule.** `prov(μ) = ⟨authority, warrant,
   scope, ver(μ)⟩`. A rule of unknown provenance is a stale-evidence problem
   one level up; episodes record `ver(μ)` so audits can scope which
-  placements ran under which edition.
+  placements ran under which edition. Governing *instructions* recovered
+  from records obey the same discipline: existence, authenticity,
+  recovery, authorization, and current force are five distinct predicates,
+  and an authentic recovered directive may be stale as governance — the
+  worked stale-steer case, with its directive record and fixture F6, is
+  `examples/compaction-stale-steer.md` (Decision 0006).
 - **Revision after lesson-lift (impact-scoped).** `ρ : (μ, lesson) ↦ μ′`
   increments `ver(μ)` and computes an **impact function**
   `affected(μ, μ′) →` the set of dependent claim/episode scopes: exactly
@@ -346,6 +352,16 @@ configuration-plus-policy — which the safeguards below must block.
   wrong part are reopened — not every episode that ever ran under the
   edition). Blanket reopening of the whole edition cohort is corrected to
   this scoped form.
+- **State families need not partition, and selection may be
+  undetermined.** `S_μ` declares the competing higher-order states, but
+  nothing forces them to be mutually exclusive or jointly exhaustive
+  unless the configuration declares them so (an exclusivity marking, as
+  for profile axes); and `select_μ` is a partial procedure — on a given
+  episode it may return one state, several co-holding states, or
+  **undetermined**. An undetermined selection is handled like any other
+  unresolved placement: the meta-policy must declare conduct for it
+  (stop, escalate, default conservatively), and silently assuming a
+  partition where none was declared is a configuration defect (V3a).
 - **Safeguards against inflation.** Admit a candidate `μ` only if: (i) `g`
   is named; (ii) `S_μ` is declared *in advance*, not read off one incident;
   (iii) switching the obtaining state changes validated placement, risk, or
@@ -357,7 +373,7 @@ configuration-plus-policy — which the safeguards below must block.
   utility are separate tests:** the four conditions above admit the
   DISTINCTION; whether the *word* "metaortheme" (or any coinage) earns
   keep over ordinary words is decided ONLY by the terminology benchmark
-  (`orthemic-terminology-evaluation-spec.md`) — a real distinction may be
+  (the terminology evaluation protocol under `terminology/`) — a real distinction may be
   admitted while its word is retired. (The former safeguard (v), which
   mixed the two tests, is deleted.)
 
@@ -372,8 +388,12 @@ verdicts diagnose distinct dimensions and are not identified with one
 another; they are NOT assumed pairwise logically independent.** Every
 definitional or logical implication is declared explicitly in the
 implication table at the end of this section; no implication may be
-inferred merely from proximity in the verdict numbering (owner decision
-O2, 2026-07-19; this supersedes the earlier "none entails another").
+inferred merely from proximity in the verdict numbering (Decision 0003;
+this supersedes the earlier "none entails another"). Verdict labels
+follow the normative registry
+([`docs/verdict-registry.yaml`](../docs/verdict-registry.yaml), Decision
+0004): semantic IDs are authoritative in machine-readable records, and
+the display aliases below are the prose forms.
 **Compact core (main text):** result correctness; evidential support;
 procedure truth-conduciveness; rule adequacy; executor fidelity; route
 safety; closure truthfulness; robustness. **Full vector (this table)** —
@@ -384,14 +404,20 @@ compact core:
   with `O*(m; A(e))` at the governed level; weaker `route-correct(e)`: `p̂(e)`
   is route-sufficient and every placed claim is in `O*(m; A(e))` (gloss: the
   answer was right, for enough of the profile to act on — judged against
-  the analysis the episode itself records). **Result-side: V1 is never a
-  conjunct of `PathwayAdequate`.**
+  the analysis the episode itself records). **Aggregation, stated once:**
+  V1 is claim-wise at bottom — `V1_q(e)` holds iff placed claim `q` is
+  true of `(m; A(e))` — and the episode-level verdict aggregates by
+  CONJUNCTION over the claims placed at the governed level (for
+  `correct(e)`, additionally requiring that the placed profile is
+  determined at that level); the route-sufficient reading conjoins over
+  the placed claims only. No averaging or majority rule is admissible for
+  V1. **Result-side: V1 is never a conjunct of `PathwayAdequate`.**
 - **V2a — evidential support.** The typed evidence `H`, within its
   declared scopes, meets the DECLARED standard for each placed claim
   (gloss: enough of the right kind of evidence, by the rulebook's own
   bar).
-- **V2b^proc — configured-procedure truth-conduciveness (pathway-side;
-  owner decision O2, 2026-07-19).** NON-FACTIVE. The procedure family
+- **V2b-P — configured-procedure truth-conduciveness (pathway-side;
+  Decision 0003).** NON-FACTIVE. The procedure family
   actually instantiated in this episode — under its governing
   configuration `μ⃗`, applicable metaorthemmata `MetaTok(e)`, and
   execution mode — satisfies the predeclared reliability criterion over
@@ -406,47 +432,42 @@ compact core:
   episode's outcome — never selected after seeing the result merely to
   rescue or condemn it. The current episode's correctness may contribute
   to LATER aggregate reliability evidence, but one current correct result
-  cannot by itself establish V2b^proc. **`V2b^proc(e)` does not entail
+  cannot by itself establish V2b-P. **`V2b-P(e)` does not entail
   `V1(e)`:** a reliable configured procedure may produce a rare error.
   *Default criterion:* a **sensitivity**-style counterfactual (the check
   passes because claims of this class are true, not alongside them);
   soundness, completeness, calibration, and perturbation-stability
   variants are admissible declarations, and fixtures may test each.
-- **V2b^tok — token-level truth linkage (result-side audit annotation;
+- **V2b-T — token-level truth linkage (result-side audit annotation;
   EXCLUDED from the pathway core).** FACTIVE and claim-wise:
-  `V2b^tok_q(e)` holds when THIS placed claim `q` was correct through the
+  `V2b-T_q(e)` holds when THIS placed claim `q` was correct through the
   truth-relevant evidential mechanism rather than merely correct
-  alongside it; by definition `V2b^tok_q(e) → V1_q(e)` (truth of that
-  claim). One claim-level `V2b^tok_q` does not by itself entail
+  alongside it; by definition `V2b-T_q(e) → V1_q(e)` (truth of that
+  claim). One claim-level `V2b-T_q` does not by itself entail
   correctness of the whole profile — a profile-level reading requires
   every placed claim covered and an explicit aggregation rule. It remains
   reportable for stopped-clock/Gettier diagnoses; its factivity is
   exactly why it sits outside `PathwayAdequate` (including it would
   re-import result correctness). Token-local PROCEDURAL defects are not
-  represented by V2b^tok alone: non-factive defects must appear under the
-  appropriate pathway verdicts (V2a, V2b^proc, V2c, V3, V3a, V3c, V3b,
-  or V6). *(Labels provisional pending the deferred verdict-index
-  decision; semantics control over lettering.)*
+  represented by V2b-T alone: non-factive defects must appear under the
+  appropriate pathway verdicts (V2a, V2b-P, V2c, V3a, V3b, V3c, V3d,
+  or V6).
 - **V2c — evidence currentness/provenance.** Each load-bearing evidence
   item is current for `(κ, v)` and carries admissible provenance (gloss:
   not stale, not unsourced — separated from V2a because evidence can meet
   the standard's *strength* while being the wrong vintage).
-- **V3 — governing-configuration adequacy.** `adeq(μ⃗, e)`: each `μᵢ` in
+- **V3a — governing-configuration adequacy.** `adeq(μ⃗, e)`: each `μᵢ` in
   force is adequate for the case's risk class — `S_μ` separates the
-  higher-order states this case class can occupy and `ε_μ` can actually
+  higher-order states this case class can occupy and `select_μ` can actually
   discriminate them (gloss: the rulebook was strong enough, whoever
   executed it).
-- **V3a — meta-policy adequacy.** The meta-policy `π_μ`/procedure `π` is
+- **V3b — meta-policy adequacy.** The meta-policy `π_μ`/procedure `π` is
   well-formed for the configuration it runs under (a sound rulebook can
   carry an ill-formed procedure).
-- **V3b — executor fidelity.** The actor `α` actually executed `π` as
-  written. An adequate rule + adequate policy + infidelic executor is a
-  distinct failure mode routing to a different remedy (retrain/replace
-  the executor, not rewrite the rule).
-- **V3c — governing-token adequacy (owner decision M1, 2026-07-19).**
+- **V3c — governing-token adequacy (Decision 0002).**
   `V3c(e) ⟺ ∧_{μ̄ ∈ MetaTok(e)} TokenAdequate(μ̄, e)`, where
   `TokenAdequate(μ̄, e) ⟺ MetaInst(μ̄, μ) ∧ Compatible(μ̄, A(e)) ∧
-  Anchored(μ̄, κ(e), v(e)) ∧ ScopeCorrect(μ̄, Q(e)) ∧ Current(μ̄, t(e)) ∧
+  Anchored(μ̄, κ(e), v(e)) ∧ ScopeCorrect(μ̄, 𝒬(e)) ∧ Current(μ̄, t(e)) ∧
   Provenanced(μ̄) ∧ AuthorizedBinding(μ̄)` — every applicable concrete
   metaorthemma was correctly instantiated, analysis-compatible,
   occurrence-anchored, correctly scoped to the claims it served, current,
@@ -454,18 +475,22 @@ compact core:
   alongside the episode-level conjunction (the auditor must see WHICH
   governing application failed, e.g. `μ̄_2: stale calibration; μ̄_3: wrong
   claim scope`). Isolates the failure mode the vector previously could
-  not name: correct standard (V3) + sound policy (V3a) + faithful
-  execution (V3b) + **defective case-specific binding** — wrong reference
+  not name: correct standard (V3a) + sound policy (V3b) + faithful
+  execution (V3d) + **defective case-specific binding** — wrong reference
   plane, wrong-role tolerance, expired calibration, wrong fixture or
-  success surface. `MetaTok(e) = ∅ ⟹ V3c ∉ App(e)` (zero-burden rule).
-  *Ordering note:* the conceptual adequacy chain runs V3 → V3a → **V3c
-  (binding)** → V3b (execution) → V3d (decision-time); the lettering
-  keeps the temporary alphabetical index pending the deferred
-  verdict-index decision.
-- **V3d — ex-ante procedural justification.** At decision time `t`, given
+  success surface. `MetaTok(e) = ∅ ⟹ V3c ∉ ReqPath(e)` (zero-burden
+  rule; status recorded not-applicable, with reason). The Decision-0004
+  lettering matches the conceptual adequacy chain: V3a (configuration) →
+  V3b (policy) → **V3c (binding)** → V3d (execution) → V3e
+  (decision-time).
+- **V3d — executor fidelity.** The actor `α` actually executed `π` as
+  written. An adequate rule + adequate policy + infidelic executor is a
+  distinct failure mode routing to a different remedy (retrain/replace
+  the executor, not rewrite the rule).
+- **V3e — ex-ante procedural justification.** At decision time `t`, given
   exactly the evidence then available, the placement was the reasonable
   one under the declared loss/decision standard (gloss: blameless-at-the-
-  time — indexed to decision time, unlike V2a/V2b^proc/V2b^tok which are audit-time
+  time — indexed to decision time, unlike V2a/V2b-P/V2b-T which are audit-time
   verdicts about support and truth-connection).
 - **V4a — route safety/admissibility.** `r` is admissible under the
   constraints in force; correct-route-unavailable is recorded as routing
@@ -477,27 +502,43 @@ compact core:
   disposition with traceable ownership, and the completion claim matches
   the ledger — no collapse of {deferred, transferred, risk-accepted} into
   "resolved."
-- **V6 — robustness under neighboring perturbations.** Define a
-  **perturbation relation** `P ⊆ E×E`: `(e, e′) ∈ P` iff `e′` runs the
-  same `π` under the same `μ⃗` on an input from a declared perturbation
-  family of `m` — version bumped, marker string removed or spoofed,
-  evidence reordered or withheld, near-identical sibling substituted
-  (gloss: the same machine on the cases next door). With neighborhood
-  `N(e) = {e′ : (e,e′) ∈ P}`, `robust(e)` iff the V1 failure rate over
-  `N(e)` is below the declared tolerance. Metamorphic fixtures (paired
-  correct-without-marker / incorrect-with-marker probes) are V6's
-  operational estimator. **V6 is not V2b^proc:** V2b^proc asks whether
-  the configured procedure is truth-conducive over its declared reference
-  class and criterion; V6 asks whether the episode is stable under a
-  declared neighboring perturbation family. One test suite may supply
-  evidence for both; the questions differ, and these definitions
-  introduce no entailment between them.
+- **V6 — robustness under neighboring perturbations.** Robustness is
+  always relative to a declared **perturbation specification**
+  `PerturbSpec(e) = ⟨varied fields; invariant fields; generator or
+  enumeration; size or measure; tolerance⟩`: which episode/input fields
+  are deliberately varied (input version bumped, marker string removed or
+  spoofed, evidence reordered or withheld, near-identical sibling
+  substituted), which are held invariant (the policy `π`, the governing
+  configuration `μ⃗`, the analysis `A` and its version), and how the
+  neighborhood is generated. This induces the perturbation relation
+  `P ⊆ E×E` and neighborhood `N(e) = {e′ : (e, e′) ∈ P}` (gloss: the same
+  machine on the cases next door). `robust(e)` holds iff EITHER (i) the
+  declared neighborhood is finite and enumerated and the empirical
+  proportion of V1 failures over it is at or below the declared
+  tolerance, OR (ii) the specification declares a probability measure
+  over the perturbation family and the failure probability under that
+  measure is at or below tolerance — an undeclared "failure rate" over an
+  unspecified infinite neighborhood is not a well-formed V6 claim.
+  **Metaorthemma rebinding under perturbation:** where a perturbation
+  bumps the input version, each governing token `μ̄` is re-bound to the
+  perturbed occurrence by its own binding rule; a token that CANNOT be
+  coherently re-bound (its anchor names the unperturbed version
+  essentially) makes that perturbation inadmissible for V6 and reportable
+  under V3c instead — silence about rebinding is not permitted.
+  Metamorphic fixtures (paired correct-without-marker /
+  incorrect-with-marker probes) are V6's operational estimator under
+  clause (i). **V6 is not V2b-P:** V2b-P asks whether the configured
+  procedure is truth-conducive over its declared reference class and
+  criterion; V6 asks whether the episode is stable under a declared
+  neighboring perturbation family. One test suite may supply evidence for
+  both; the questions differ, and these definitions introduce no
+  entailment between them.
 
-**Result-free pathway core (owner decision O2, 2026-07-19).**
+**Result-free pathway core (Decision 0003).**
 
-    CorePath = { V2a, V2b^proc, V2c, V3, V3a, V3c, V3b, V3d, V4a, V5, V6 }
+    CorePath = { V2a, V2b-P, V2c, V3a, V3b, V3c, V3d, V3e, V4a, V5, V6 }
 
-Excluded by construction: **V1** (result correctness), **V2b^tok**
+Excluded by construction: **V1** (result correctness), **V2b-T**
 (factive token-level truth linkage — entails claim truth), and **V4b**
 (route near-optimality — an advisory/quality verdict recorded separately;
 a route can be safe and adequate without being optimal).
@@ -516,10 +557,11 @@ episode selects or authorizes a route; **V5** is required when the
 episode makes a closure/completion claim or dispositions residuals;
 **V6** is required when `A(e)` or the risk class predeclares a robustness
 obligation. **"Not tested" is not "not applicable":** every verdict
-excluded from `ReqPath(e)` carries a recorded applicability reason.
-(§2.2's `App(e)` remains the episode's recorded applicability set; its
-pathway restriction must equal the governance-derived `ReqPath(e)` and is
-auditable against it.)
+excluded from `ReqPath(e)` carries a recorded applicability reason on the
+episode record. (`ReqPath(e)` is the sole pathway requirement function;
+the earlier separately recorded applicability set `App(·)` is retired by
+Decision 0005 — nothing it expressed is lost, since exclusions now live
+in the per-verdict `not-applicable` statuses and reasons.)
 
 **Verdict status is not Boolean.**
 
@@ -538,29 +580,29 @@ asserted, and pairwise independence is NOT claimed where unproven):
 
 | Relation | Status |
 |---|---|
-| `V2b^tok_q(e) → V1_q(e)` | **Definitional entailment** (factive, claim-wise) |
-| `V2b^proc(e) → V1(e)` | **No** — non-factive by construction |
-| `V3d(e) → V1(e)` | **No** — decision-time reasonableness is result-free |
-| `PathwayAdequate(e) → V1(e)` | **No** — the core excludes V1 and V2b^tok |
+| `V2b-T_q(e) → V1_q(e)` | **Definitional entailment** (factive, claim-wise) |
+| `V2b-P(e) → V1(e)` | **No** — non-factive by construction |
+| `V3e(e) → V1(e)` | **No** — decision-time reasonableness is result-free |
+| `PathwayAdequate(e) → V1(e)` | **No** — the core excludes V1 and V2b-T |
 | `V1(e) → PathwayAdequate(e)` | **No** — stopped-clock and defective-binding cases |
 | `V1(e)` at the governed level vs claim-wise `V1_q(e)` | Definitional: profile-level V1 aggregates the placed claims per the declared level |
 | `PathwayAdequate(e) ↔ ¬PathwayDefective(e)` | **Not asserted** — `undetermined` is a third state |
-| V6 vs V2b^proc | **No entailment either way** (distinct questions; shared evidence possible) |
+| V6 vs V2b-P | **No entailment either way** (distinct questions; shared evidence possible) |
 | All other pairs | No definitional implication introduced by these definitions; empirical correlation is never entailment |
 
 ### 4.2 Result × pathway matrix
 
 The matrix applies only AFTER the pathway status is resolved as adequate
 or defective; `PathwayUndetermined` episodes remain outside the four
-resolved cells until audited. (Owner decision O2, 2026-07-19: this
-supersedes the earlier parenthetical that committed token-level V2b to
+resolved cells until audited. (Decision 0003: this
+supersedes the earlier parenthetical that committed the token-level truth-connection verdict to
 the conjunction — the incorrect-result/adequate-pathway cell is genuinely
 representable.)
 
 | | **PathwayAdequate** | **PathwayDefective** |
 |---|---|---|
-| **Result correct (V1)** | *Nominal.* A current behavioral validator, correctly bound to the current artifact (V3c pass where applicable), under a sufficiently reliable configured procedure, returns the correct result. Nothing to fix. | *Correct + defective (stopped-clock, compensating error, or governing-side luck).* Possible failure loci: V2b^proc, V3, V3a, V3c, V3b, or V6 — the marker validator that happens to be right today; the mis-bound metaorthemma whose wrong reference plane locally coincides with the right one. Remedy targets the procedure, rule, or binding — not the verdict. |
-| **Result incorrect (¬V1)** | `AdequatePathError(e) := ¬V1(e) ∧ PathwayAdequate(e)` — the justified rare miss of a non-perfect but sufficiently reliable process used correctly: a genuine, representable cell, expected whenever such a process runs. Where V3d ∈ ReqPath(e), `JustifiedMiss(e) := AdequatePathError(e)` — V3d's pass is already inside PathwayAdequate, so no redundant conjunct is added. Remedy, if any: a new discriminating evidence source; no rule or executor blame. **Note:** orthemic adequacy does not establish moral, legal, institutional, or theological blamelessness — "blameless" is not a formal predicate here. | *Compound failure.* Wrong placement via a defective pathway — e.g., a deploy gate reads a cached test result from the previous commit and approves the current one (¬V1 with V2c and V3 failures). Remedy: both the placement and the rulebook/lineage machinery. |
+| **Result correct (V1)** | *Nominal.* A current behavioral validator, correctly bound to the current artifact (V3c pass where applicable), under a sufficiently reliable configured procedure, returns the correct result. Nothing to fix. | *Correct + defective (stopped-clock, compensating error, or governing-side luck).* Possible failure loci: V2b-P, V3a, V3b, V3c, V3d, or V6 — the marker validator that happens to be right today; the mis-bound metaorthemma whose wrong reference plane locally coincides with the right one. Remedy targets the procedure, rule, or binding — not the verdict. |
+| **Result incorrect (¬V1)** | `AdequatePathError(e) := ¬V1(e) ∧ PathwayAdequate(e)` — the justified rare miss of a non-perfect but sufficiently reliable process used correctly: a genuine, representable cell, expected whenever such a process runs. Where V3e ∈ ReqPath(e), `JustifiedMiss(e) := AdequatePathError(e)` — V3e's pass is already inside PathwayAdequate, so no redundant conjunct is added. Remedy, if any: a new discriminating evidence source; no rule or executor blame. **Note:** orthemic adequacy does not establish moral, legal, institutional, or theological blamelessness — "blameless" is not a formal predicate here. | *Compound failure.* Wrong placement via a defective pathway — e.g., a deploy gate reads a cached test result from the previous commit and approves the current one (¬V1 with V2c and V3a failures). Remedy: both the placement and the rulebook/lineage machinery. |
 
 **Worked verdict fixtures (deterministic; the four resolved cells are all
 satisfiable, plus the undetermined state — machine-checkable encodings in
@@ -570,17 +612,19 @@ satisfiable, plus the undetermined state — machine-checkable encodings in
 | Fixture | Setup | Expected statuses |
 |---|---|---|
 | **F1 — nominal** | Current behavioral validator, correctly bound (V3c pass where applicable), reliable configured procedure, correct result | V1 pass; every ReqPath verdict pass ⇒ **PathwayAdequate** |
-| **F2 — stopped clock** | SCAN-CLEAN marker validator happens to be correct today but fails its declared reliability and perturbation criteria | V1 pass; V2b^proc fail; V6 fail ⇒ **PathwayDefective** (V2b^tok may also fail as a result-side diagnosis: correct, but not through the truth-relevant mechanism) |
-| **F3 — justified rare miss** | Properly configured, faithfully executed procedure meeting its declared reference-class reliability threshold errs on this token | V1 fail; V2b^proc pass; V3/V3a/V3c/V3b/V3d pass where applicable ⇒ **PathwayAdequate**; V2b^tok_q fails/unavailable (the placed claim is false). *This fixture is mandatory: it proves the lower-left cell is no longer definitionally blocked.* |
-| **F4 — defective metaorthemma, lucky result** | Sound standard and policy, faithful execution; the concrete token binds the wrong reference plane / tolerance / fixture / success surface / calibration; the result happens to be correct | V1 pass; V3 pass; V3a pass; V3b pass; **V3c fail** ⇒ **PathwayDefective** |
+| **F2 — stopped clock** | SCAN-CLEAN marker validator happens to be correct today but fails its declared reliability and perturbation criteria | V1 pass; V2b-P fail; V6 fail ⇒ **PathwayDefective** (V2b-T may also fail as a result-side diagnosis: correct, but not through the truth-relevant mechanism) |
+| **F3 — justified rare miss** | Properly configured, faithfully executed procedure meeting its declared reference-class reliability threshold errs on this token | V1 fail; V2b-P pass; V3a/V3b/V3c/V3d/V3e pass where applicable ⇒ **PathwayAdequate**; V2b-T_q **fails** (the placed claim is false — a false claim's truth-linkage verdict fails by factivity; it is never recorded "unavailable" absent an explicit declared applicability rule). *This fixture is mandatory: it proves the lower-left cell is no longer definitionally blocked.* |
+| **F4 — defective metaorthemma, lucky result** | Sound standard and policy, faithful execution; the concrete token binds the wrong reference plane / tolerance / fixture / success surface / calibration; the result happens to be correct | V1 pass; V3a pass; V3b pass; V3d pass; **V3c fail** ⇒ **PathwayDefective** |
 | **F5 — unresolved audit** | The result is known, but required robustness or provenance evidence has not yet been evaluated | one required verdict `undetermined` ⇒ **PathwayUndetermined**; neither PathwayAdequate nor PathwayDefective is asserted |
+| **F6 — stale directive** (Decision 0006; worked case in `examples/compaction-stale-steer.md`) | A recovered governing directive is authentic but superseded; the executor follows it faithfully; the closure claim asserts it was in force | V1 fail; V2c fail; **V3c fail** (token not Current); V3d pass; V5 fail ⇒ **PathwayDefective** — faithful execution under a defective governing token |
+| **F7 — safe but suboptimal route** | The chosen route is admissible but demonstrably wasteful | V4a pass; **V4b fail** (advisory, outside the core) ⇒ **PathwayAdequate** — safe ≠ best, and route quality never defeats adequacy |
 
 ### 4.3 Epistemic constraint and nearest neighbors
 
-The defensible novelty claim is exactly this and no more: **the current
-manuscript and implementaudit do not explicitly represent the concrete
-classification/handling episode as an auditable occurrence distinct from
-its result.** It is *not* claimed that no established field can represent
+The defensible novelty claim is exactly this and no more: **the prior
+manuscript, and the operational discipline it describes, did not
+explicitly represent the concrete classification/handling episode as an
+auditable occurrence distinct from its result.** It is *not* claimed that no established field can represent
 episodes. Nearest neighbors, honestly: **process reliabilism**
 (epistemology) names precisely the correct-result-through-unreliable-
 process structure and the truth-connection idea — for *beliefs*; it offers
@@ -593,7 +637,7 @@ set, plural inferred profile, per-claim evidence status,
 residual-disposition ledger, or verdict layer separating result
 correctness from pathway adequacy and robustness. **Assurance practice**
 (control-effectiveness vs outcome testing) and **metamorphic testing**
-each contain one verdict (V3-like, V6-like) without the joint object. What
+each contain one verdict (V3a-like, V6-like) without the joint object. What
 the episode signature adds is the *joint* auditable object on which V1–V6
 are simultaneously definable; whether that pays for itself over "audit the
 validator when suspicious" is an open empirical question (fixture E5), not
@@ -609,8 +653,9 @@ Nothing in the episode signature or the verdicts quantifies over
 awareness. Any rule-governed, evidence-updating executor — a
 predictive-text decoder resolving an ambiguous keypress sequence, a CI
 validator, a review chain — executes orthing, and its episodes bear **all
-applicable verdicts** (`App(e)`, §4.1; the earlier "all six verdicts"
-contradicted partial applicability and is corrected). Stopped-clock
+applicable verdicts** (`ReqPath(e)` plus recorded not-applicable reasons,
+§4.1; the earlier "all six verdicts" contradicted partial applicability
+and is corrected). Stopped-clock
 analogs arise mechanically (a decoder emits the right word from a
 frequency prior that would misfire on the neighboring input), so V6 is
 meaningful without any conscious subject. **Consciousness is not
@@ -620,10 +665,10 @@ index.
 
 ### 5.2 Distributed episodes: graph and composition
 
-Consider one case handled across sensors, validators, agents, routers, an
-owner decision, and downstream consumers. Model it twice, at two levels:
+Consider one case handled across sensors, validators, agents, routers, a
+human sign-off, and downstream consumers. Model it twice, at two levels:
 
-**Sub-episode graph.** `G = (V_E, ⇝)` is a finite DAG whose nodes are
+**Sub-episode graph.** `Γ_E = (E, ⇝)` is a finite DAG whose nodes are
 episodes `e₁,…,e_n` (each with the full §2 signature — own actor `αᵢ`, own
 `μ⃗ᵢ`) and whose edges are typed: **handoffs** (`eᵢ ⇝ eⱼ` iff a projection
 of `out(eᵢ)` — a partial profile, an evidence item with its scope, a
@@ -634,16 +679,26 @@ and **retry-of**. Handoffs are the loci of transport error: a verdict
 crossing an edge without its scope and version is how stale evidence
 propagates.
 
+**Edge orientation, one convention.** Every edge of `Γ_E` is oriented
+from the EARLIER node to the LATER node; edge LABELS carry the semantics.
+A `handoff` edge `eᵢ ⇝ eⱼ` means `eⱼ` consumes a projection of
+`out(eᵢ)`; a `supersession` edge `eᵢ ⇝ eⱼ` means the later `eⱼ` revises
+`eᵢ`'s conclusions; a `retry-of` edge `eᵢ ⇝ eⱼ` means `eⱼ` re-attempts
+`eᵢ`'s task. (Prose like "a supersession edge to its predecessor" reads
+the label backward along the same earlier→later edge; the graph stores
+one orientation only.)
+
 **Why a DAG is right despite retries and revision loops.** Nodes are
-*dated tokens*; every typed edge points forward in time, so the token
-graph is acyclic by construction. A retry or rework loop does not add a
-back edge — it creates a *new* episode node with a `retry-of` or
-`supersession` edge to its predecessor. The genuinely cyclic structure
+*dated tokens*; every typed edge points forward in time under the
+convention above, so the token graph is acyclic by construction. A retry
+or rework loop does not add a back edge — it creates a *new* episode
+node reached by a `retry-of` or `supersession` edge from its
+predecessor. The genuinely cyclic structure
 (the same policy re-entered, review returning work to an author-role)
 lives at the TYPE/policy level, which the formalism represents as
 repeated instantiation of the same `π`, never as cycles among tokens.
 
-**Composition.** The graph composes into ONE episode `E = comp(G)` — a
+**Composition.** The graph composes into ONE episode `e_Γ = comp(Γ_E)` — a
 full §2 signature at the boundary level — iff:
 
 1. **One case, one analysis:** all `eᵢ` address `m` or its `succ`-lineage
@@ -651,16 +706,16 @@ full §2 signature at the boundary level — iff:
    two sub-episodes sharing a task but differing in tolerance,
    representation, or boundary do NOT compose without an explicitly
    declared fusion analysis);
-2. **A declared boundary:** governance names the composite actor `α_E`
-   (pipeline, team, institution) and configuration `μ⃗_E`, including
+2. **A declared boundary:** governance names the composite actor `α_{e_Γ}`
+   (pipeline, team, institution) and configuration `μ⃗_{e_Γ}`, including
    precedence across sub-episode rules;
-3. **A declared fusion rule:** `Ô_E`, `ε_E`, `δ_E` are a stated
+3. **A declared fusion rule:** `p̂_{e_Γ}`, `estatus_{e_Γ}`, `δ_{e_Γ}` are a stated
    aggregation of sub-outputs (e.g., profile union with per-claim status =
    weakest status along its supporting path; residual ledger = merged
    ledgers with surviving ownership) — well-defined, not read off the last
    node.
 
-Then `E` is a token in its own right, and each `eᵢ` becomes an orthemma of
+Then `e_Γ` is a token in its own right, and each `eᵢ` becomes an orthemma of
 the composite-level audit via the reification embedding
 (`ι_n(eᵢ) ∈ M^(n+1)` per §1 — never literal membership). **Answer to one-vs-graph:
 both, at different levels.** The graph is the true description at the
@@ -670,13 +725,13 @@ condition 2 or 3 fails — no declared boundary, no fusion rule — there is
 only the graph, and talk of "the system decided" is unwarranted composite
 attribution.
 
-Composite verdicts do not reduce to conjunctions: `correct(E)` can hold
+Composite verdicts do not reduce to conjunctions: `correct(e_Γ)` can hold
 while some `correct(eᵢ)` fails (a downstream validator caught it), and
-every `correct(eᵢ)` can hold while `correct(E)` fails (each verdict true
+every `correct(eᵢ)` can hold while `correct(e_Γ)` fails (each verdict true
 in scope, the composition transporting one out of scope). Hence the
 composite level must be audited separately.
 
-### 5.3 Multi-actor episodes over one occurrence lineage (derived; added Phase C)
+### 5.3 Multi-actor episodes over one occurrence lineage (derived)
 
 Several actors' episodes can address ONE shared occurrence lineage with
 analysis-indexed, possibly opposed evaluations (competitive games are the
@@ -698,22 +753,34 @@ indices, **not a new formal addition**:
 - `p̂(e, α, T_α)` — actor-α's current inferred profile in episode `e`
   under its analysis `A_α` (task `T_α`), inferred FROM `x_α`, never from
   `m` directly;
-- `W(·)` — a PARAMETRIC ortheme schema (the shared goal-form under role
-  substitution); grounded instantiations `W(α)`, `W(β)` are DISTINCT
+- `GoalSchema(·)` — a PARAMETRIC ortheme schema (the shared goal-form under role
+  substitution); grounded instantiations `GoalSchema(α)`, `GoalSchema(β)` are DISTINCT
   targets even when the schema is one (schema identity ≠ grounded-ortheme
   identity ≠ target-profile overlap);
-- `G(α, T_α) ⊆ Π_{A_α}` — actor-α's grounded target profile set —
-  CANONICAL TYPING: a SET of profiles, each member one complete profile
+- `𝒢_{α,A_α} ⊆ Π_{A_α}` — actor-α's grounded target profile set —
+  NORMATIVE TYPING: a SET of profiles, each member one complete profile
   (the task's appropriateness rendered as a profile set; targets are
   selected BY the task, which remains an external parameter — a target
   profile is not an objective and an objective is not an ortheme);
 - `φ(α→β)` — a role/perspective isomorphism between `Π_{A_α}` and
   `Π_{A_β}` where one exists (goal-schema invariance with disjoint
-  extensions: `G(β,T_β) = φ(G(α,T_α))`, possibly `G_α ∩ G_β = ∅`);
-- `Conflict_m(G_α, G_β)` / `Compat_m(G_α, G_β)` — whether any successor
-  profile reachable from occurrence `m` realizes members of both target
-  sets (cooperation is the special case `G_α = G_β`; zero-sum games also
-  admit draw successors in neither set).
+  extensions: `𝒢_{β,A_β} = φ(𝒢_{α,A_α})`, possibly `𝒢_α ∩ 𝒢_β = ∅`);
+- `Conflict_m(𝒢_α, 𝒢_β)` / `Compat_m(𝒢_α, 𝒢_β)` — WELL-TYPED across
+  profile spaces: the two target sets live in different spaces
+  (`𝒢_α ⊆ Π_{A_α}`, `𝒢_β ⊆ Π_{A_β}`), so they are never compared by bare
+  set intersection. With `Reach(m)` the occurrences reachable from `m`
+  in the successor structure,
+
+      Compat_m(𝒢_α, 𝒢_β)   iff  ∃ m′ ∈ Reach(m):
+                                  O*(m′; A_α) ∈ 𝒢_α  ∧  O*(m′; A_β) ∈ 𝒢_β
+      Conflict_m(𝒢_α, 𝒢_β) iff  no such reachable m′ exists
+
+  — one shared occurrence, evaluated under each analysis separately.
+  Cooperation is joint realizability with a shared analysis and shared
+  target set (`A_α = A_β`, `𝒢_α = 𝒢_β`), or an explicit alignment map
+  `φ(α→β)` identifying targets across spaces — never bare equality of
+  sets inhabiting different profile spaces. Zero-sum games also admit
+  draw successors realizing neither target set.
 
 Coupled episodes are the §5.2 graph over the shared lineage: each actor's
 action creates the successor occurrence the other's episode consumes.
@@ -725,10 +792,10 @@ opponent's information state, analysis-sufficiency) while holding opposed
 targets — configurations govern HOW placements are made, never WHOSE
 target wins. Occurrence identity in games includes position, history, and
 player-to-move — worldly facts (#4 applied); a player's INFORMATION SET is
-NOT identity but that player's OBSERVATION `x_α = Ω_α(m)` (corrected in
-Phase D — filing it into `κ` would invert the occurrence/observation
-line). Not all orthemes are actor-relative — actor-relativity enters
-exactly where the task does.
+NOT identity but that player's OBSERVATION `x_α = Ω_α(m)` (a correction
+adopted after external review — filing it into `κ` would invert the
+occurrence/observation line). Not all orthemes are actor-relative —
+actor-relativity enters exactly where the task does.
 
 ### 5.4 Semantic depth as an orthogonal axis
 
@@ -747,23 +814,22 @@ axis of the executor, not of the episode's correctness or adequacy.
 
 **Accepted (analytic/definitional):** level-indexing via `ι_n` with no
 episode-referent "meta-orthemma" noun (§1, counterargument recorded; per
-the §1 qualification, the owner-adopted configuration-token `μ̄` of
-2026-07-19 is a different object, carried in §2.2/§3/§4.1 V3c); the record-style
+the §1 qualification, the Decision-0002 configuration token `μ̄` is a different object, carried in §2.2/§3/§4.1 V3c); the record-style
 episode signature with typed candidate families, claim ledger, handoffs,
 warrant, and labeled successors (§2.2); endpoint-plus-bounded-trace with
 governance-declared granularity (§2.2a); split model (C) with the
 `{O,I,E,D,R,V,W}` boundary (§3, downsides preserved); verdict separability
-and `App(e)` (§4.1); token-level DAG with typed edges (§5.2).
-**Revised this pass:** all fifteen Gate-A §7.1 items (see provenance
-block). **Rejected:** literal set inclusion for episodes; forced single
+with governance-derived `ReqPath(e)` (§4.1); token-level DAG with typed
+edges (§5.2). **Rejected:** literal set inclusion for episodes; forced single
 successor; blanket edition-wide revision reopening; safeguard (v)
 word-utility test inside concept admission. **Unresolved alternatives:**
-safety/reliabilist/calibration variants of V2b^proc remain admissible declared
+safety/reliabilist/calibration variants of V2b-P remain admissible declared
 criteria; single-object metaortheme presentation (C1) remains permitted as
 user-facing shorthand. **Experimental gates:** episode reification's
 practical delta over "audit the validator when suspicious" — fixture E5;
 vocabulary utility of every coined term — the Arm A/B/C benchmark
 (designed, NOT run). **Evidence tier:** formal coherence established
 analytically; operational usefulness of the distinctions has observational
-support; nothing here is experimentally validated. **Current provenance:**
-see the header block; this file is the canonical integrated body.
+support; nothing here is experimentally validated. **Provenance:**
+`docs/provenance/document-history.md`; this file is the canonical
+integrated body.

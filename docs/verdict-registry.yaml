@@ -1,0 +1,116 @@
+# Orthemology verdict registry — NORMATIVE (Decision 0004, 2026-07-20).
+# Semantic IDs are authoritative in schemas, tests, fixtures, and machine-readable
+# records. Display aliases are for prose and equations. This file DRIVES validation:
+# scripts/validate_verdict_semantics.py and scripts/validate_schemas.py load it, so
+# reordering or renaming here cannot silently diverge from the checked semantics.
+registry_version: "1.0.0"
+status_enum: [pass, fail, undetermined, not-applicable]
+verdicts:
+  - id: RESULT_CORRECT
+    alias: V1
+    meaning: result/profile correctness against O*(m; A(e)) at the governed level
+    side: result
+    factive: true
+  - id: EVIDENCE_SUPPORT
+    alias: V2a
+    meaning: typed evidence, within declared scopes, meets the declared support standard per placed claim
+    side: pathway
+    factive: false
+  - id: PROCEDURE_RELIABLE
+    alias: V2b-P
+    meaning: configured-procedure/reference-class truth-conduciveness under the predeclared RelSpec (non-factive)
+    side: pathway
+    factive: false
+  - id: TOKEN_TRUTH_LINKED
+    alias: V2b-T
+    meaning: factive, claim-wise truth linkage — this claim correct through the truth-relevant mechanism
+    side: result
+    factive: true
+  - id: EVIDENCE_CURRENT
+    alias: V2c
+    meaning: load-bearing evidence current for (kappa, v) with admissible provenance
+    side: pathway
+    factive: false
+  - id: GOV_CONFIG_ADEQUATE
+    alias: V3a
+    meaning: governing configuration/type adequacy for the case's risk class
+    side: pathway
+    factive: false
+  - id: GOV_POLICY_ADEQUATE
+    alias: V3b
+    meaning: meta-policy/procedure well-formedness for the configuration it runs under
+    side: pathway
+    factive: false
+  - id: GOV_TOKEN_ADEQUATE
+    alias: V3c
+    meaning: metaorthemma/binding adequacy — every applicable configuration token correctly instantiated, compatible, anchored, scoped, current, provenanced, authorized
+    side: pathway
+    factive: false
+  - id: EXECUTION_FAITHFUL
+    alias: V3d
+    meaning: executor fidelity — the actor executed the procedure as written
+    side: pathway
+    factive: false
+  - id: EX_ANTE_JUSTIFIED
+    alias: V3e
+    meaning: decision-time reasonableness on exactly the evidence then available
+    side: pathway
+    factive: false
+  - id: ROUTE_ADMISSIBLE
+    alias: V4a
+    meaning: route safety/admissibility under the constraints in force
+    side: pathway
+    factive: false
+  - id: ROUTE_QUALITY
+    alias: V4b
+    meaning: near-optimality/advisory route quality (safe is not best)
+    side: advisory
+    factive: false
+  - id: CLOSURE_TRUTHFUL
+    alias: V5
+    meaning: closure matches the burden ledger — no disposition collapse
+    side: pathway
+    factive: false
+  - id: ROBUST_NEIGHBORHOOD
+    alias: V6
+    meaning: robustness under the declared perturbation family
+    side: pathway
+    factive: false
+# Result-free pathway core (Decision 0003 semantics under Decision 0004 IDs).
+core_path:
+  - EVIDENCE_SUPPORT
+  - PROCEDURE_RELIABLE
+  - EVIDENCE_CURRENT
+  - GOV_CONFIG_ADEQUATE
+  - GOV_POLICY_ADEQUATE
+  - GOV_TOKEN_ADEQUATE
+  - EXECUTION_FAITHFUL
+  - EX_ANTE_JUSTIFIED
+  - ROUTE_ADMISSIBLE
+  - CLOSURE_TRUTHFUL
+  - ROBUST_NEIGHBORHOOD
+excluded_from_core:
+  RESULT_CORRECT: result-side by construction (Decision 0003)
+  TOKEN_TRUTH_LINKED: factive — would re-import result correctness
+  ROUTE_QUALITY: advisory quality verdict, recorded separately
+# The ONLY declared definitional entailment (claim-wise).
+entailments:
+  - premise: TOKEN_TRUTH_LINKED
+    conclusion: RESULT_CORRECT
+    scope: claim-wise
+declared_non_entailments:
+  - [PROCEDURE_RELIABLE, RESULT_CORRECT]
+  - [EX_ANTE_JUSTIFIED, RESULT_CORRECT]
+  - [ROBUST_NEIGHBORHOOD, PROCEDURE_RELIABLE]
+  - [PROCEDURE_RELIABLE, ROBUST_NEIGHBORHOOD]
+# Legacy migration table (Decision 0004). Historical documents under
+# archive/ retain the old aliases and are NEVER rewritten.
+legacy_aliases:
+  V3: V3a        # old governing-configuration adequacy
+  V3a: V3b       # old meta-policy adequacy
+  V3b: V3d       # old executor fidelity
+  V3c: V3c       # unchanged (token adequacy)
+  V3d: V3e       # old ex-ante justification
+  "V2b^proc": V2b-P
+  "V2b^tok": V2b-T
+  V4: V4a        # manuscript bare V4 (route safety)

@@ -1,0 +1,47 @@
+{
+  "example": "rare-miss",
+  "note": "AdequatePathError (F3): incorrect result, adequate pathway — the cell Decision 0003 unblocked.",
+  "parts": [
+    {
+      "schema": "orthing-episode.schema.json",
+      "instance": {
+        "episode_id": "ep-triage-303",
+        "occurrence": {"identity_key": "test-failure-8812", "version": "run-303", "kind": "incident"},
+        "observation": "failure signature matches historical infra flakes",
+        "evidence": [{"evidence_id": "ev-sig", "channel": "signature-match", "property_class": "behavioral", "scope": "cause @ run-303", "provenance": "triage-model 2.3", "validity": "this run"}],
+        "actor": "triage-router",
+        "warrant": "triage-charter",
+        "analysis": {"analysis_id": "failure-triage", "version": "4.0", "task": "route test failures to owning teams"},
+        "time": "2026-07-11T03:00:00Z",
+        "meta_tokens": [{"token_id": "tok-triage-thr", "of_type": {"mu_id": "signature-threshold", "mu_version": "2.0"}, "analysis": {"analysis_id": "failure-triage", "version": "4.0"}, "anchor": {"identity_key": "test-failure-8812", "version": "run-303"}, "binding": {"threshold": 0.92}, "binder": {"actor": "triage-admin", "binding_warrant": "config-cr-441", "binding_time": "2026-07-01T00:00:00Z"}, "validity": {"superseded_by": null}}],
+        "policy": "match-and-route per declared thresholds",
+        "placement": {"cause": "infrastructure-flake"},
+        "route": "infra-queue",
+        "evidence_status": {"claim-cause": "provisional"},
+        "action": "route",
+        "successors": [{"identity_key": "ticket-9917", "version": "1", "action_label": "open-ticket"}]
+      }
+    },
+    {
+      "schema": "verdict-record.schema.json",
+      "instance": {
+        "episode_id": "ep-triage-303",
+        "required_path": ["EVIDENCE_SUPPORT", "PROCEDURE_RELIABLE", "EVIDENCE_CURRENT", "GOV_CONFIG_ADEQUATE", "GOV_POLICY_ADEQUATE", "GOV_TOKEN_ADEQUATE", "EXECUTION_FAITHFUL", "EX_ANTE_JUSTIFIED", "ROUTE_ADMISSIBLE"],
+        "statuses": {
+          "RESULT_CORRECT": "fail", "EVIDENCE_SUPPORT": "pass", "PROCEDURE_RELIABLE": "pass", "EVIDENCE_CURRENT": "pass",
+          "GOV_CONFIG_ADEQUATE": "pass", "GOV_POLICY_ADEQUATE": "pass", "GOV_TOKEN_ADEQUATE": "pass", "EXECUTION_FAITHFUL": "pass",
+          "EX_ANTE_JUSTIFIED": "pass", "ROUTE_ADMISSIBLE": "pass", "TOKEN_TRUTH_LINKED": "fail",
+          "CLOSURE_TRUTHFUL": "not-applicable", "ROBUST_NEIGHBORHOOD": "not-applicable", "ROUTE_QUALITY": "not-applicable"
+        },
+        "na_reasons": {
+          "CLOSURE_TRUTHFUL": "no closure claim",
+          "ROBUST_NEIGHBORHOOD": "no predeclared robustness obligation",
+          "ROUTE_QUALITY": "advisory"
+        },
+        "claim_verdicts": [{"claim_id": "claim-cause", "result_correct": "fail", "token_truth_linked": "fail"}],
+        "rel_spec": {"claim-cause": "reference class: signature-matched failures over Q2; metric: precision >= 0.9; declared pre-outcome; this token was the rare miss (true cause: race in new code)"},
+        "pathway_state": "adequate"
+      }
+    }
+  ]
+}

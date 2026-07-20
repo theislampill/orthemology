@@ -1,0 +1,31 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "$id": "orthemology/metaortheme.schema.json",
+  "title": "Metaortheme type μ with paired meta-policy",
+  "type": "object",
+  "required": ["mu_id", "version", "governed_component", "states", "selector", "provenance"],
+  "properties": {
+    "mu_id": {"type": "string"},
+    "version": {"type": "string", "description": "ver(μ) — recorded per episode so audits can scope editions"},
+    "governed_component": {"enum": ["O", "I", "E", "D", "R", "V", "W"]},
+    "states": {
+      "type": "object",
+      "required": ["members"],
+      "properties": {
+        "members": {"type": "array", "minItems": 2, "items": {"type": "string"}, "description": "S_μ, declared in advance"},
+        "partition": {"type": "boolean", "description": "states are exclusive+exhaustive ONLY if declared true; never assumed"}
+      }
+    },
+    "selector": {"type": "string", "description": "select_μ — the state-selecting evidence procedure; partial (may return several states or undetermined)"},
+    "meta_policy": {"type": "string", "description": "π_μ — conduct conditional on the obtaining state, incl. conduct on undetermined selection"},
+    "provenance": {
+      "type": "object",
+      "required": ["authority", "warrant", "scope"],
+      "properties": {
+        "authority": {"type": "string"},
+        "warrant": {"type": "string"},
+        "scope": {"type": "string"}
+      }
+    }
+  }
+}

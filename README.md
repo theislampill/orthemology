@@ -17,13 +17,17 @@ The final assertion ("this pillar is orthogonal") is a **placement claim** judge
 
 ## What to read
 
-- **Current main manuscript:** [`manuscript/orthemma-ortheme-systems-revised-draft.md`](manuscript/orthemma-ortheme-systems-revised-draft.md) — the one current draft; earlier renderings are superseded.
+- **Current main manuscript:** [`manuscript/orthemma-ortheme-systems-revised-draft.md`](manuscript/orthemma-ortheme-systems-revised-draft.md) — the one current draft (*Orthemma–Ortheme Systems: An Analysis-Relative Architecture for Auditable Classification and Handling*); earlier renderings are superseded.
 - **Current formal core:** [`theory/orthemic-core-formalization.md`](theory/orthemic-core-formalization.md), with the derived multi-actor extension in [`theory/orthemic-multi-actor-conflict-note.md`](theory/orthemic-multi-actor-conflict-note.md).
-- **Companion (metaphysical/theological, incomplete and separate):** [`companion/`](companion/README.md).
-- **Terminology benchmark design (designed, not run):** [`terminology/`](terminology/README.md).
-- **Decision records:** [`docs/decisions/`](docs/decisions/) — the three implemented reconciliation decisions.
-- **Reconciliation history:** [`archive/reconciliation/`](archive/reconciliation/) — exact patches, ledgers, and validation reports.
-- **Machine-checkable semantics:** [`tests/verdict-fixtures.json`](tests/verdict-fixtures.json) + [`scripts/validate_verdict_semantics.py`](scripts/validate_verdict_semantics.py).
+- **Normative registries:** [`docs/verdict-registry.yaml`](docs/verdict-registry.yaml) (verdict semantic IDs + display aliases) and [`docs/notation-registry.yaml`](docs/notation-registry.yaml) (symbol table) — both machine-enforced.
+- **Worked case:** [`examples/compaction-stale-steer.md`](examples/compaction-stale-steer.md) (the stale-directive pattern) plus seven machine-readable episode examples under [`examples/`](examples/) validated against [`schemas/`](schemas/).
+- **Companion (metaphysical/theological — complete drafts, separate and firewalled):** [`companion/`](companion/README.md).
+- **Terminology program (READY TO RUN, NOT RUN):** [`terminology/`](terminology/README.md).
+- **Decision records:** [`docs/decisions/`](docs/decisions/) — 0001–0003 (owner reconciliation R1) and 0004–0008 (autonomous closure R2).
+- **Sourcing:** [`references/orthemology.bib`](references/orthemology.bib) + [`docs/sourcing/`](docs/sourcing/) — per-claim verification statuses.
+- **Closure accounting:** [`docs/project-closure/`](docs/project-closure/) — formal audit, counterexample ledger, reviews, burden ledger.
+- **Reconciliation history:** [`archive/reconciliation/`](archive/reconciliation/) — exact patches, ledgers, and validation reports (immutable; retain pre-R2 notation by design).
+- **Draft PDFs:** [`artifacts/`](artifacts/) — DRAFT-stamped, commit-pinned renderings with source-hash sidecars.
 
 ## Two ideas that carry the theory
 
@@ -33,11 +37,11 @@ The final assertion ("this pillar is orthogonal") is a **placement claim** judge
 
 ## Honesty notes
 
-- **No empirical experiment has validated the framework.** All benchmark and fixture material is design only.
+- **No empirical experiment has validated the framework.** Every designed study is READY TO RUN, NOT RUN; deterministic fixtures and validators check consistency only. The internal records that motivated the design are private and not independently auditable; no public claim rests on them.
 - **The coined vocabulary (orthemma/ortheme/metaortheme/metaorthemma/orthing) is candidate terminology**, gated on a designed-but-unrun comparative benchmark; every document can be read with ordinary-language substitutes.
-- **The companion theological/metaphysical material is incomplete**, deliberately separated from the main manuscript, and makes no claim that engineering evidence supports metaphysics.
-- **The citation apparatus is incomplete**; related-work claims await a sourcing pass.
+- **The companion theological/metaphysical papers are complete drafts, deliberately separated** from the main manuscript: philosophical conclusions are conditional on labeled premises, creed-internal material is explicitly Atharī-school-labeled, and no engineering evidence supports any metaphysical claim (absolute firewall).
+- **Related-work claims are cited with per-claim verification statuses** ([`docs/sourcing/SOURCING-LEDGER.md`](docs/sourcing/SOURCING-LEDGER.md)); statuses are honest about what was and was not re-fetched.
 
 ## Citing
 
-No stable release, DOI, or citation metadata exists yet (license and citation decisions are open — see [OPEN-DECISIONS.md](OPEN-DECISIONS.md)). If you need to reference this work, link to this repository and the commit hash.
+No stable release, DOI, or citation metadata exists (license and identity decisions are owner-only — see [OPEN-DECISIONS.md](OPEN-DECISIONS.md)). Cite by commit per [docs/CITING.md](docs/CITING.md).

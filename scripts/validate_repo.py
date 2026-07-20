@@ -73,10 +73,14 @@ def main():
     check("formal core present and unique",
           os.path.exists(os.path.join(ROOT, "theory", "orthemic-core-formalization.md")))
 
-    # 6: status labels on proposal/archive docs
+    # 6: status labels on proposal/archive docs (pilot0 primers/items are frozen
+    # exposure-matched INSTRUMENTS, deliberately status-free; the packet's status
+    # lives in PILOT0-PROTOCOL.md and the readiness report)
     unlabeled = []
     for sub in ("companion", "terminology", "archive"):
         for dirpath, _, fns in os.walk(os.path.join(ROOT, sub)):
+            if "primers" in dirpath or os.path.join("pilot0", "items") in dirpath:
+                continue
             for fn in fns:
                 if fn.endswith(".md"):
                     c = open(os.path.join(dirpath, fn), encoding="utf-8").read()[:4000].lower()

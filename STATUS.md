@@ -1,14 +1,15 @@
 # STATUS
 
-**Draft / research-stage.** This repository is a versioned working state, published honestly with its open decisions on record.
+**Draft / research-stage (revision R2, 2026-07-20).** This repository is a versioned working state, published honestly with its open decisions on record.
 
 - **Not peer reviewed.**
-- **No completed empirical validation** — the terminology benchmark and all fixtures are designed, not run; nothing here reports an experimental result.
-- **Terminology not adopted by benchmark** — orthemma, ortheme, metaortheme, metaorthemma, orthing, and orthable are candidate coinages; adoption is gated on the unrun comparative benchmark in `terminology/`.
-- **The theological companion is not a completed paper** — `companion/` holds a school-neutral modal/metaphysical assessment and a creed-internal drafting outline; its central thesis (Thesis C) is open, its key citation is unverified against primary text, and drafting depth is an open owner decision.
-- **Citations/reference apparatus incomplete** — the manuscript's related-work claims currently rest on unverified references pending a sourcing pass.
-- **Not publication-ready** — the citation and publication gates have not passed; do not treat any document here as a finished publication.
-- **License: OPEN DECISION** — no license has been chosen yet; until one is granted, default copyright applies.
-- **Citation metadata: OPEN DECISION** — no CITATION.cff, release, or archival status yet.
+- **No completed empirical validation** — every designed study (false-closure benchmark; fixture-suite product test; terminology benchmark) is READY TO RUN, NOT RUN; nothing here reports an experimental result; deterministic validators check consistency only. This is not a completed paper program in the empirical sense.
+- **Terminology not adopted** — orthemma, ortheme, metaortheme, metaorthemma, and orthing are candidate coinages gated on the unrun benchmark in `terminology/`; `orthable` is excluded from the operational core (exploratory in the companion lane only).
+- **Companion papers are complete DRAFTS, not settled results** — the school-neutral paper's conclusions are conditional on labeled premises with named unresolved exits; the Atharī paper is explicitly school-internal and never presented as neutral; some classical loci are flagged `[via compilation]` pending edition-level verification.
+- **Sourcing is honest but partly non-refetched** — every load-bearing claim has a ledger row with a verification status (`WEB-VERIFIED` / `RECORD-CONFIRMED` / `VIA-COMPILATION` / `UNVERIFIED`); records not re-fetched this pass are flagged for re-check before any external submission.
+- **Internal casebook/longitudinal records are private and not independently auditable** — they motivate the design and validate nothing; no public claim depends on them.
+- **Draft PDFs are drafts** — each carries a DRAFT status page with commit and date; no numbered release, DOI, or archival claim exists.
+- **License: OPEN DECISION** — none chosen; default copyright applies.
+- **Citation metadata: OPEN DECISION** — no CITATION.cff; cite by commit per [docs/CITING.md](docs/CITING.md).
 
-Current reconciliation state: owner decisions **D1** (analysis-relative ground truth), **M1** (metaorthemma configuration-token), and **O2** (result-free pathway adequacy) are implemented, machine-validated (29 deterministic checks), and promoted; see `docs/decisions/` and `archive/reconciliation/`. Open items are tracked in [OPEN-DECISIONS.md](OPEN-DECISIONS.md).
+Reconciliation state: **D1/M1/O2** (owner decisions, R1) remain intact; **0004–0008** (R2 autonomous closure under the owner's standing mandate) normalize verdicts and symbols, place the stale-steer case, define the profile space, and disposition Thesis C. Machine validation: registry-driven verdict semantics (57 checks), notation, schemas+examples, claim-source completeness, cross-document consistency, manifest, and PDF-source consistency — all in CI. Remaining owner-only burdens: [OPEN-DECISIONS.md](OPEN-DECISIONS.md) and `docs/project-closure/UNAVOIDABLE-OWNER-ACTIONS.md`.

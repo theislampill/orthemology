@@ -1,0 +1,5 @@
+# Filler reading — Arm A (exposure matching). Reading time budget: 3 minutes.
+
+*(Content-neutral filler so total reading exposure matches Arms B/C/C′. It deliberately teaches nothing about the tasks.)*
+
+Workplaces handle many kinds of items in a day: documents, parts, requests, messages. Some items arrive early and some late; some are large and some small. People often keep lists of the items they handle, and lists can be kept on paper or on screens. When lists get long, people sometimes number the entries, and numbering can start at one or at zero depending on habit. Rooms where work happens have names or numbers, and buildings often have maps near the entrance. Maps help visitors, and visitors sometimes still ask for directions, which is normal. Over a year, the mix of items changes with the seasons, and teams adjust their routines accordingly. Routines are written down in some teams and remembered in others, and both approaches are common. At the end of a week, many teams look back briefly at what was done and then plan the next week. Planning can be short or long; most teams prefer short. Nothing in this passage is needed for the tasks that follow.

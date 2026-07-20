@@ -1,13 +1,10 @@
 # OPEN DECISIONS
 
-Owner decisions still open, in queue order. Nothing below is resolved by this publication.
+After the R2 autonomous closure (2026-07-20), only **genuinely owner-only or external** burdens remain open. Everything previously queued as D3/D4/O3, editorial repairs, Π_A, sourcing, companion depth, and terminology packet assembly is CLOSED — see `docs/decisions/0004`–`0008` and `docs/project-closure/`.
 
-1. **D3 — verdict-index scheme.** Final lettering/naming for the verdict vector (V2b^proc/V2b^tok labels are provisional; V3c's conceptual position is between V3a and V3b; V4a/V4b naming divergence between core and manuscript).
-2. **D4 — symbol-table normalization.** Corpus-wide glyph choices (parametric schema `W(·)`, episode-graph letter, Def-7 representation sets, ANDON threshold, evidence-status map, `μ̄` final glyph).
-3. **O3 — compaction/stale-steer worked example.** Whether and where to write the directive-currency example (design exists; main text vs appendix vs case note).
-4. **Editorial repair batch.** Manuscript §1.5 contributions sentence; definition-numbering banner; casebook availability statement; scoped universal claims; assorted minors.
-5. **Optional Π_A content definition** (`archive/reconciliation/M1-PROFILE-SPACE-DEFINITION-OPTIONAL.md`) — separate authorization required.
-6. **Citation/sourcing pass** — related-work references; the companion's load-bearing citation verification.
-7. **Terminology program** — C′ sham-arm promotion + control reconciliation at v1 freeze; Pilot-0 packet assembly authorization; `orthable` adoption pathway; whether `metaorthemma` (the word) enters the benchmark arms.
-8. **Companion depth** — outline-only vs bounded sections vs full draft; sourcing-verification-first sequencing; disposition of owner-supplied argument material.
-9. **Publication gates** — position-paper framing; PDF rebuild; license; citation metadata; any numbered release.
+1. **Legal license choice.** No license exists; default copyright applies. Choosing one is a legal act reserved to the owner.
+2. **Author/citation identity.** Real-world author name, affiliation, ORCID, and preferred bibliographic identity; only then can `CITATION.cff` or a numbered release exist honestly (interim guidance: [docs/CITING.md](docs/CITING.md)).
+3. **Empirical execution.** Running any designed study — the false-closure benchmark, the fixture-suite product test, the terminology pilots/confirmatory (READY TO RUN, NOT RUN) — requires owner resources: model spend, ≥3 human raters, and human-subjects responsibility.
+4. **External peer review and publication.** Preprint server, journal, DOI archive, or any submission under the owner's identity.
+5. **Classical-edition verification.** Independently opening the printed editions behind the Atharī companion's `[via compilation]` loci, and verifying an Ashʿarī/Māturīdī tradition-internal source before any comparative-school route (currently blocked by design).
+6. **Casebook publication decision.** The internal casebook/longitudinal record remain private (not rights-cleared); publishing a sanitized casebook, if ever, is an owner call — the public corpus no longer depends on them for any claim.
