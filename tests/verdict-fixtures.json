@@ -1,0 +1,108 @@
+{
+  "schema": "orthemology-verdict-fixtures-v1",
+  "decision": "O2 (owner, 2026-07-19): result-free pathway core; non-factive V2b^proc; factive claim-wise V2b^tok excluded from the core",
+  "core_path": ["V2a", "V2b^proc", "V2c", "V3", "V3a", "V3c", "V3b", "V3d", "V4a", "V5", "V6"],
+  "excluded_from_core": ["V1", "V2b^tok", "V4b"],
+  "status_enum": ["pass", "fail", "undetermined", "not-applicable"],
+  "fixtures": [
+    {
+      "id": "F1",
+      "name": "nominal",
+      "metatok_nonempty": true,
+      "required": ["V2a", "V2b^proc", "V2c", "V3", "V3a", "V3c", "V3b", "V3d", "V4a", "V5", "V6"],
+      "statuses": {
+        "V1": "pass", "V2a": "pass", "V2b^proc": "pass", "V2c": "pass",
+        "V3": "pass", "V3a": "pass", "V3c": "pass", "V3b": "pass",
+        "V3d": "pass", "V4a": "pass", "V5": "pass", "V6": "pass",
+        "V2b^tok": "pass", "V4b": "pass"
+      },
+      "claims": [{"q": "placed-claim-1", "v2btok": "pass", "v1": "pass"}],
+      "unevaluated": [],
+      "na_reasons": {},
+      "expected": {"v1": "pass", "pathway": "adequate"}
+    },
+    {
+      "id": "F2",
+      "name": "stopped-clock (SCAN-CLEAN marker validator, correct today)",
+      "metatok_nonempty": false,
+      "required": ["V2a", "V2b^proc", "V2c", "V3", "V3a", "V3b", "V3d", "V6"],
+      "statuses": {
+        "V1": "pass", "V2a": "pass", "V2b^proc": "fail", "V2c": "pass",
+        "V3": "fail", "V3a": "pass", "V3b": "pass", "V3d": "pass",
+        "V6": "fail", "V2b^tok": "fail",
+        "V3c": "not-applicable", "V4a": "not-applicable", "V5": "not-applicable", "V4b": "not-applicable"
+      },
+      "claims": [{"q": "compliant", "v2btok": "fail", "v1": "pass"}],
+      "unevaluated": [],
+      "na_reasons": {
+        "V3c": "MetaTok(e) empty: no case-specific bindings, instruments, or calibration",
+        "V4a": "episode selects no route",
+        "V5": "episode makes no closure claim and dispositions no residuals",
+        "V4b": "advisory verdict; no route selected"
+      },
+      "expected": {"v1": "pass", "pathway": "defective"}
+    },
+    {
+      "id": "F3",
+      "name": "justified rare miss (adequate-path error)",
+      "metatok_nonempty": true,
+      "required": ["V2a", "V2b^proc", "V2c", "V3", "V3a", "V3c", "V3b", "V3d"],
+      "statuses": {
+        "V1": "fail", "V2a": "pass", "V2b^proc": "pass", "V2c": "pass",
+        "V3": "pass", "V3a": "pass", "V3c": "pass", "V3b": "pass",
+        "V3d": "pass", "V2b^tok": "fail",
+        "V4a": "not-applicable", "V5": "not-applicable", "V6": "not-applicable", "V4b": "not-applicable"
+      },
+      "claims": [{"q": "infrastructure-flake", "v2btok": "fail", "v1": "fail"}],
+      "unevaluated": [],
+      "na_reasons": {
+        "V4a": "episode selects no route",
+        "V5": "episode makes no closure claim",
+        "V6": "no predeclared robustness obligation for this risk class",
+        "V4b": "advisory verdict; no route selected"
+      },
+      "expected": {"v1": "fail", "pathway": "adequate"}
+    },
+    {
+      "id": "F4",
+      "name": "defective metaorthemma, lucky result (wrong reference plane / stale calibration)",
+      "metatok_nonempty": true,
+      "required": ["V2a", "V2b^proc", "V2c", "V3", "V3a", "V3c", "V3b", "V3d"],
+      "statuses": {
+        "V1": "pass", "V2a": "pass", "V2b^proc": "pass", "V2c": "pass",
+        "V3": "pass", "V3a": "pass", "V3c": "fail", "V3b": "pass",
+        "V3d": "pass", "V2b^tok": "fail",
+        "V4a": "not-applicable", "V5": "not-applicable", "V6": "not-applicable", "V4b": "not-applicable"
+      },
+      "claims": [{"q": "pillar-orthogonal", "v2btok": "fail", "v1": "pass"}],
+      "unevaluated": [],
+      "na_reasons": {
+        "V4a": "episode selects no route",
+        "V5": "episode makes no closure claim",
+        "V6": "no predeclared robustness obligation for this risk class",
+        "V4b": "advisory verdict; no route selected"
+      },
+      "expected": {"v1": "pass", "pathway": "defective"}
+    },
+    {
+      "id": "F5",
+      "name": "unresolved audit (required robustness evidence not yet evaluated)",
+      "metatok_nonempty": true,
+      "required": ["V2a", "V2b^proc", "V2c", "V3", "V3a", "V3c", "V3b", "V3d", "V6"],
+      "statuses": {
+        "V1": "pass", "V2a": "pass", "V2b^proc": "pass", "V2c": "pass",
+        "V3": "pass", "V3a": "pass", "V3c": "pass", "V3b": "pass",
+        "V3d": "pass", "V6": "undetermined", "V2b^tok": "pass",
+        "V4a": "not-applicable", "V5": "not-applicable", "V4b": "not-applicable"
+      },
+      "claims": [{"q": "placed-claim-1", "v2btok": "pass", "v1": "pass"}],
+      "unevaluated": ["V6"],
+      "na_reasons": {
+        "V4a": "episode selects no route",
+        "V5": "episode makes no closure claim",
+        "V4b": "advisory verdict; no route selected"
+      },
+      "expected": {"v1": "pass", "pathway": "undetermined"}
+    }
+  ]
+}
