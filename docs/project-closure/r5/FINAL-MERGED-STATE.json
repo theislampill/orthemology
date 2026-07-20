@@ -1,7 +1,7 @@
 {
   "record": "R5 final merged-state record (Decision 0016)",
-  "provisional": true,
-  "note": "Finalized from live remote facts in a follow-up protected PR after the R5 merge; claims nothing while provisional=true.",
+  "provisional": false,
+  "note": "Finalized from live remote facts after the R5 merge; the record names the previous, already-verified merge commit, never its own containing commit.",
   "r4_merge_verified": {
     "pr": 3,
     "final_pr_head": "e8dae7d2f842ee7b64c8d43930c31277e1dfe7c3",
@@ -13,12 +13,16 @@
   },
   "r5_merge": {
     "branch": "closure/r5-final-public-state-evidence-boundary",
-    "pr": null,
-    "final_pr_head": null,
-    "merge_commit": null,
-    "actions_run": null,
-    "actions_conclusion": null,
-    "post_merge_fresh_clone": null,
-    "no_force_no_rewrite": null
+    "pr": 4,
+    "final_pr_head": "f10ee6e7cab0d0a0357af6ad175851a6ebd276ac",
+    "merge_commit": "87e10d5f5d50479e01dc5664e3ac57cd07b11164",
+    "merged_at": "2026-07-20T18:27:32Z",
+    "actions_run": 29767836405,
+    "actions_conclusion": "success",
+    "pre_merge_fresh_clone": "28/28 steps, 0 failures, clean tree @ f10ee6e7",
+    "post_merge_fresh_clone": "28/28 steps, 0 failures, clean tree @ 87e10d5f",
+    "manifest_entries": 297,
+    "manifest_sha256": "a6307d136289a8a1366031ef5cd52f72dd47f1bfe1feb65342717fb64002a132",
+    "no_force_no_rewrite": true
   }
 }

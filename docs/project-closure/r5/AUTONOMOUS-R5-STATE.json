@@ -10,7 +10,7 @@
     "branch": "closure/r5-final-public-state-evidence-boundary",
     "branch_base": "21d8a8dd18acc058aaf18dd403a91ae38ae3adfb"
   },
-  "last_completed_action": "Phases B-G complete: review-state contract, evidence boundary, ATH-3 reconciliation, claim-shape hardening, changelog+PDF rebuild, six adversarial passes (one gap repaired); 28/28 suite green at 547a30c",
+  "last_completed_action": "R5 merged (PR #4 -> 87e10d5f); merged-main fresh clone 28/28 green; CI 29767836405 success; finalizing verification record",
   "files_changed": [
     "see git log 21d8a8dd..HEAD on closure/r5-final-public-state-evidence-boundary"
   ],
@@ -26,8 +26,6 @@
       "result": "0 failing"
     }
   ],
-  "unresolved_findings": [
-    "push, PR, CI, fresh clone, protected merge, merged-main verification, follow-up verification-record PR pending"
-  ],
-  "next_action": "Push branch, open PR, CI, fresh clone, merge, verify merged main, finalize FINAL-MERGED-VERIFICATION in follow-up protected PR"
+  "unresolved_findings": [],
+  "next_action": "Merge the verification-record follow-up PR; closeout"
 }
