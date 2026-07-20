@@ -160,7 +160,9 @@ def main():
           "HISTORICAL SNAPSHOT" in t and "discharged" in t)
 
     # 8. merged-state record honesty
-    ms = json.loads(read("docs/project-closure/r5/FINAL-MERGED-STATE.json") or "{}")
+    ms_path = str(rs.get("current_merge_verification", "")).replace(
+        "FINAL-MERGED-VERIFICATION.md", "FINAL-MERGED-STATE.json")
+    ms = json.loads(read(ms_path) or "{}")
     mv = read(str(rs.get("current_merge_verification")))
     if ms.get("provisional") is True:
         check("provisional merged-state record is labeled PROVISIONAL in the md",
