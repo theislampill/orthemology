@@ -1,0 +1,24 @@
+# R4 correction ledger
+
+**CANDIDATE PASS — REQUIRES INDEPENDENT REVIEW.** Every material correction made in the R4 pass. R1/R2/R3 records keep their bodies; corrections supersede by dated notice, never by rewriting.
+
+| # | Finding | Correction | Status |
+|---|---|---|---|
+| C1 | B10 public-state drift (VERSION/headers R2; README decisions 0001–0008 and "seven examples"; owner list stale; ledger count mismatch) | `docs/current-state.yaml` (authored+derived) + generator + drift validator; VERSION, README, STATUS, OPEN-DECISIONS and all five primary headers synchronized to R4; decision 0014 | **DONE** |
+| C2 | **SELF-1** (found by R4, not in the audit): R2/R3 closeout prose and three R3 documents reported the pilot-0 **v1** freeze hash as `ece0412f…`; the committed packet has always recorded `988a6522…` and passed its own check | Correction recorded in STATUS and here; historical bodies untouched; `validate_current_state.py` now compares recorded state to the packet file so prose can no longer drift from artifact | **DONE** |
+| C3 | B1 `p̂` typed both as one partial profile and as a set of complete profiles | Core gloss rewritten: `p̂` is **exactly one** partial profile; alternatives live in `Ĉ ⊆ Π_A`; weights in the separate belief layer; archived patches retain the old gloss as history | **DONE** |
+| C4 | B2 strict soundness claim-level in name, episode-level in its conjunct | `ReqReason_q(e) ⊆ ReqPath(e)` projection; `ReasoningPathAdequate_q`; `StrictlySoundReasoning_q := ReasoningPathAdequate_q ∧ TOKEN_TRUTH_LINKED_q`; `PathwayAdequate(e)` retained for the episode; decision 0011 | **DONE** |
+| C5 | B3 objectivity overstated ("objective given `A`") | Full-index formulation adopted in current normative prose; index block required in the verdict schema | **DONE** |
+| C6 | B4 evaluator symmetry + corroboration asserted to give non-circularity | Withdrawn and replaced with the mitigation formulation; shared-upstream dependence made representable (CR-9 / `shared-upstream-corroboration-failure`) | **DONE** |
+| C7 | B5 metaorthemma existence and typing cardinality ambiguous | One existence rule (material binding or **no token**) and one cardinality rule (**exactly one** `of_type`; many-to-many marked unimplemented), stated once and schema-enforced | **DONE** |
+| C8 | B6 schemas accept 10/11 malformed classes | Reference-model semantic contract across all schemas + typed RelSpec/PerturbSpec + expanded cross-record semantics; decision 0012 | **DONE (schema phase)** |
+| C9 | B7 mutation coverage narrower than the headline | Recursive/path-aware operator families with per-family reporting and explicit coverage limits; the "208 mutants" figure is retained only as history | **DONE (schema phase)** |
+| C10 | B8 concrete/ideal-reason attribution mislocated | Doko & Turner 2023 credited for the application; Evans 1998 as the reported source with the page **not** independently verified (RR-2); Turner 2022 rescoped; Turner 2023 chapter corrected; El-Tobgui's three records separated; decision 0013 | **DONE** |
+| C11 | B9 Atharī blanket source status vs the R3 closeout | Per-claim rows ATH-1…ATH-7 in the registry; the blanket front-matter disclaimer withdrawn; **no creed position altered** | **DONE** |
+| C12 | Part II latent-state amendment | Decision 0015, related-work note, worked example, LS-1…LS-7 fixtures with ten anti-conflation assertions, three verified bib records | **DONE** |
+| C13 | **Amendment's own citation error** (found by R4): the controlling amendment cites "Rajeev V. Raju" for the *Science Advances* paper | Corrected to **Rajkumar Vasudeva Raju** (conflation with Rajeev V. Rikhye of the 2021 *Nature Communications* paper); recorded in decision 0015, the related-work note, and the bib | **DONE** |
+| C14 | Audit's B6 phrasing overstated one sub-case | Recorded as a **partial refutation**: "verdict record missing required statuses" is accepted at the schema layer but **is** caught by cross-record semantics; the other ten classes were accepted by both | **RECORDED** |
+
+## Findings raised by R4 against its own inputs
+
+Two corrections in this pass were to the *controlling instructions and prior closeouts*, not to the repository: **C2** (my own R2/R3 mis-reporting of a freeze hash) and **C13** (the amendment's conflated author name). Both are recorded here rather than silently fixed, because a correction ledger that only ever corrects other people's work is not doing its job.
