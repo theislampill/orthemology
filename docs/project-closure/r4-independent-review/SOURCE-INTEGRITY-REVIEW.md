@@ -2,6 +2,16 @@
 
 **Date:** 2026-07-20 · **Session:** independent Fable review of PR #3 (harness identity `claude-fable-5`).
 
+> **PROVENANCE QUALIFIER (added 2026-07-20 by the fresh Fable recovery review; original text below is unmodified).**
+> This report was authored inside the post-substitution window (commit `de19ccf4`,
+> after the last definitely pre-substitution commit `00cf05d6`). The "harness
+> identity `claude-fable-5`" line above records that session's *internal harness
+> claim only*; the owner observed a UI substitution to `claude-opus-4.8` for this
+> window (see `docs/project-closure/r4/MODEL-SUBSTITUTION-INTERRUPTION-PR3.md`).
+> Neither observation is adjudicated. This report is POST-SUBSTITUTION CANDIDATE
+> material; its findings were independently re-verified by the fresh review in
+> `docs/project-closure/r4-fresh-fable-review/POST-SUBSTITUTION-HUNK-REVIEW.md`.
+
 The supplied epistemology collection and the El-Tobgui dissertation were treated as **research inputs**, not automatically as primary texts. The adopted Atharī doctrine was not altered; only evidence-status precision was audited.
 
 ## F1. Registry scope — rescoped honestly rather than inflated

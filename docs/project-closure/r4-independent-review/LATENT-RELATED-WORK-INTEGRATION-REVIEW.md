@@ -2,6 +2,16 @@
 
 **Date:** 2026-07-20 · **Session:** independent Fable review of PR #3 (harness identity `claude-fable-5`).
 
+> **PROVENANCE QUALIFIER (added 2026-07-20 by the fresh Fable recovery review; original text below is unmodified).**
+> This report was authored inside the post-substitution window (commit `b2742d1`,
+> after the last definitely pre-substitution commit `00cf05d6`). The "harness
+> identity `claude-fable-5`" line above records that session's *internal harness
+> claim only*; the owner observed a UI substitution to `claude-opus-4.8` for this
+> window (see `docs/project-closure/r4/MODEL-SUBSTITUTION-INTERRUPTION-PR3.md`).
+> Neither observation is adjudicated. This report is POST-SUBSTITUTION CANDIDATE
+> material; its findings were independently re-verified by the fresh review in
+> `docs/project-closure/r4-fresh-fable-review/POST-SUBSTITUTION-HUNK-REVIEW.md`.
+
 ## Scope boundary observed
 
 Per the controlling instruction, this review inspected **only** the repository's already-authored abstract sequential-latent-variable boundary, its formal distinctions, its source metadata, and its citation integration. It did **not** re-open, reproduce, inspect, or operationalize the underlying experimental procedures, and it launched no domain-specific research lane. Bibliographic verification rests on the R4 pass's official publisher/Crossref records; no re-fetch of the study text was performed or needed for the repository-integrity work below. That access limitation is recorded honestly here and in the ledger, and it blocked nothing.
