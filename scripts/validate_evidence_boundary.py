@@ -65,6 +65,17 @@ def main():
     for phrase in REQUIRED_MANUSCRIPT:
         check("manuscript carries the standing statement %r" % phrase, phrase in ms)
 
+    # the availability section itself must carry the no-dataset statement —
+    # a copy elsewhere (e.g. the abstract) must not be able to stand in for it
+    # (found by adversarial pass G-B3)
+    avail = ms.split("## 17. Data and Materials Availability", 1)
+    avail_text = avail[1].split("\n## ", 1)[0] if len(avail) == 2 else ""
+    check("availability section itself states no public observational dataset",
+          "No public observational dataset" in avail_text)
+    check("availability section states the private records are non-evidential",
+          "no claim in this paper rests on them" in avail_text
+          or "non-evidential" in avail_text)
+
     check("manuscript labels the launch-pipeline example synthetic and non-evidential",
           "Synthetic composite" in ms and "not evidence" in ms)
     check("manuscript frames the residual as an integration proposal, not impossibility",

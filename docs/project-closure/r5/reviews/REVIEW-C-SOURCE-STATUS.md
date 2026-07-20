@@ -1,0 +1,3 @@
+# R5 Review C — source-status attacks
+
+Surfaced model: `claude-fable-5`. Both conflict directions attacked at the final tree: (1) front matter claims `PRIMARY_TEXT_EXACT` for the Majmūʿ formula against the weaker registry row — DEFEATED (work-token + row-proximity guards); (2) registry ATH-3 upgraded to `PRIMARY_TEXT_EXACT` against [via compilation] prose — DEFEATED (3 checks fire); (3) row-adjacent status drift (`SECONDARY_VERIFIED` beside `ATH-3`) — DEFEATED. Decision 0013 carries the dated R5 amendment; a validator asserts its presence. No hand-maintained aggregate summary remains (front matter defers to rows). ATH-3 stands at `COMPILATION_MEDIATED`; no upgrade was made from memory; promotion trigger recorded. No blocking findings.
