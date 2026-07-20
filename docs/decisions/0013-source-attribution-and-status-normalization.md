@@ -47,3 +47,21 @@ The corrected 20:11–12 distinction stands and the whole registry is revalidate
 ## Consequences
 
 The Atharī paper's blanket front-matter claim is replaced by a per-claim pointer; no creed position changes. `PRIMARY_TEXT_EXACT` is reserved for loci whose wording was directly checked (the Qurʾānic loci, Muslim 2708, the *Majmūʿ* vol-12 formula). CI validates the registry and the prose-to-registry agreement; no live web request runs in CI.
+
+---
+
+## Amendment (2026-07-20, R4 independent review) — honest registry scope and the CIR-1 status split
+
+The body above stands. Two corrections:
+
+### 1. Registry scope is rescoped, not inflated
+
+The body said `references/source-status.yaml` is authoritative for **every load-bearing claim**. It is not: the registry carries a selected set of rows while the manuscript and the sourcing ledgers carry many more claims. Rather than leave an overstatement standing (or manufacture rows to match a slogan), the registry is **rescoped to what it actually covers**, and the coverage is now machine-declared in the file itself under `covered_claim_families`: the concrete/ideal-reason chain (`CIR-*`), the El-Tobgui records (`ELT-*`), the enumerated Atharī per-claim rows (`ATH-*`), the sequential latent-variable related work (`LAT-*`), and this project's own extension (`EXT-*`). A companion `not_covered` block names the surfaces that carry the rest — `docs/sourcing/SOURCING-LEDGER.md`, the companion ledger, and `references/quran-loci.yaml` — and states explicitly that **absence from this registry is not a claim that a source is unverified**; it means the registry does not adjudicate it. `scripts/validate_source_status.py` enforces the scope: every row id must belong to a declared family, and no row may sit outside one.
+
+### 2. What the validator does and does not establish
+
+Stated in the registry header and enforced by the validator's own docstring: the checks are **offline record-shape and internal-agreement checks**. They confirm required fields, vocabulary membership, status/evidence-access consistency, family membership, and agreement with paper prose. They do **not** verify that a source is true, that a quotation was actually read, or that a DOI resolves. No check in this file is evidence about the world.
+
+### 3. CIR-1 carried two claims under one status
+
+`CIR-1` was `SECONDARY_VERIFIED` while its own notes recorded that publisher metadata was verified (Crossref, Cambridge Core) but the chapter wording was read only through the supplied compilation and the publisher's text was not opened (403). Those are two claims with two evidence accesses, so they are now two rows: **`CIR-1`** covers bibliographic existence/authorship/DOI/pages at `SECONDARY_VERIFIED` (with an explicit `status_scope` field saying so), and **`CIR-1W`** covers the exact in-chapter application/wording at `COMPILATION_MEDIATED`, with a recorded promotion trigger (direct publisher full-text access) and an explicit statement that no corpus claim rests on it alone.
