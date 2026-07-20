@@ -1,0 +1,25 @@
+{
+  "record": "R5 final public-state / evidence-boundary tie-off — durable execution state",
+  "session_surfaced_model": "claude-fable-5",
+  "session_substitution_observed": false,
+  "historical_attributed_observations_preserved": true,
+  "topology": {
+    "starting_main": "21d8a8dd18acc058aaf18dd403a91ae38ae3adfb",
+    "archive_sha256": "6081e0fff77be3983585fb3f8e2508d44a77448bf89a61795552125faa68cb46",
+    "archive_matches_live_main": true,
+    "branch": "closure/r5-final-public-state-evidence-boundary",
+    "branch_base": "21d8a8dd18acc058aaf18dd403a91ae38ae3adfb"
+  },
+  "last_completed_action": "Phase A: clean clone, 26/26 baseline suite green at 21d8a8dd, all 13 audit A3 findings reproduced",
+  "files_changed": [
+    "docs/project-closure/r5/AUTONOMOUS-R5-STATE.json",
+    "docs/project-closure/r5/R5-READONLY-REPRODUCTION.md"
+  ],
+  "tests_run": [
+    {"tree": "fresh clone @ 21d8a8dd (clean)", "suite": "validate.yml, 26 steps", "result": "0 failing"}
+  ],
+  "unresolved_findings": [
+    "B1-B10 + M1-M5 from orthemology-r4-postmerge-independent-audit.md — all reproduced, repairs pending in Phases B-F"
+  ],
+  "next_action": "Commit Phase A report, then Phase B review-state contract (Decision 0016)"
+}
