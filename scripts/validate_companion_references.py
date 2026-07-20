@@ -87,7 +87,9 @@ def main():
         fbody = fold(body)
         orphans = []
         for line in refsec.splitlines():
-            m = re.search(r"<!--\s*ref:[\w\-]+\s*-->\s*(.+?)\s*\((\d{4})\)", line)
+            if "ref:" not in line:
+                continue
+            m = re.search(r"^-\s*(.+?)\s*\((\d{4})\)", line)
             if m:
                 surname = fold(m.group(1).split(",")[0])
                 if surname and surname not in fbody:

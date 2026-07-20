@@ -64,6 +64,16 @@ jobs:
         run: python scripts/validate_cross_document_consistency.py
       - name: Internal references resolve (no ghost script/fixture citations)
         run: python scripts/validate_internal_references.py
+      - name: Experiment-packet readiness + no-run guard (R6, Decision 0018)
+        run: python scripts/validate_experiment_readiness.py
+      - name: Sourcing-state classification + navigation (R6, Decision 0019)
+        run: python scripts/validate_sourcing_state.py
+      - name: Companion references resolve (R6)
+        run: python scripts/validate_companion_references.py
+      - name: FCSP-1 packet smoke tests (deterministic; no result)
+        run: python experiments/false-closure-selective-prediction/tests/test_smoke.py
+      - name: ER-1 packet smoke tests (deterministic; no result)
+        run: python experiments/episode-reification/tests/test_smoke.py
       - name: Terminology packet freeze hashes (v1 immutable + v2)
         run: |
           python scripts/freeze_pilot0.py --check

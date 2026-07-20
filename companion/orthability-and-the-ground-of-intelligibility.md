@@ -139,14 +139,14 @@ From the reality of evaluable, rule-governed resolution, this paper argued trans
 
 Sources actually cited in this paper. Bibliographic records live in [`references/orthemology.bib`](../references/orthemology.bib); per-claim evidence-access statuses remain in the sourcing surfaces (start at [`docs/sourcing/CURRENT-SOURCING-LEDGER.md`](../docs/sourcing/CURRENT-SOURCING-LEDGER.md)) and are not restated here.
 
-- <!-- ref:anderson2011lord --> Anderson, James N., and Greg Welty (2011). "The Lord of Noncontradiction: An Argument for God from Logic." *Philosophia Christi* 13(2).
-- <!-- ref:sep-generality --> Conee, Earl, and Richard Feldman (1998). "The Generality Problem for Reliabilism." *Philosophical Studies* 89.
-- <!-- ref:eltobgui2020reason --> El-Tobgui, Carl Sharif (2020). *Ibn Taymiyya on Reason and Revelation: A Study of Darʾ taʿāruḍ al-ʿaql wa-l-naql*. Brill.
-- <!-- ref:evans2010signs --> Evans, C. Stephen (2010). *Natural Signs and Knowledge of God: A New Look at Theistic Arguments*. Oxford University Press.
-- <!-- ref:goldman1979justified --> Goldman, Alvin I. (1979). "What Is Justified Belief?" In G. Pappas (ed.), *Justification and Knowledge*. Reidel.
-- <!-- ref:millikan1984language --> Millikan, Ruth Garrett (1984). *Language, Thought, and Other Biological Categories*. MIT Press.
-- <!-- ref:plantinga1993warrant --> Plantinga, Alvin (1993). *Warrant and Proper Function*. Oxford University Press.
-- <!-- ref:plantinga2011conflict --> Plantinga, Alvin (2011). *Where the Conflict Really Lies: Science, Religion, and Naturalism*. Oxford University Press.
-- <!-- ref:sep-transcendental --> Stern, Robert, and Tony Cheng (2023). "Transcendental Arguments." *Stanford Encyclopedia of Philosophy* (archive-pinned edition per the R3 ledger).
-- <!-- ref:stroud1968transcendental --> Stroud, Barry (1968). "Transcendental Arguments." *Journal of Philosophy* 65(9).
-- <!-- ref:turner2022signs --> Turner, Jamie B. (2022). "Ibn Taymiyya on Theistic Signs and Knowledge of God." *Religious Studies* 58.
+- Anderson, James N., and Greg Welty (2011). "The Lord of Noncontradiction: An Argument for God from Logic." *Philosophia Christi* 13(2). <!-- ref:anderson2011lord -->
+- Conee, Earl, and Richard Feldman (1998). "The Generality Problem for Reliabilism." *Philosophical Studies* 89. <!-- ref:sep-generality -->
+- El-Tobgui, Carl Sharif (2020). *Ibn Taymiyya on Reason and Revelation: A Study of Darʾ taʿāruḍ al-ʿaql wa-l-naql*. Brill. <!-- ref:eltobgui2020reason -->
+- Evans, C. Stephen (2010). *Natural Signs and Knowledge of God: A New Look at Theistic Arguments*. Oxford University Press. <!-- ref:evans2010signs -->
+- Goldman, Alvin I. (1979). "What Is Justified Belief?" In G. Pappas (ed.), *Justification and Knowledge*. Reidel. <!-- ref:goldman1979justified -->
+- Millikan, Ruth Garrett (1984). *Language, Thought, and Other Biological Categories*. MIT Press. <!-- ref:millikan1984language -->
+- Plantinga, Alvin (1993). *Warrant and Proper Function*. Oxford University Press. <!-- ref:plantinga1993warrant -->
+- Plantinga, Alvin (2011). *Where the Conflict Really Lies: Science, Religion, and Naturalism*. Oxford University Press. <!-- ref:plantinga2011conflict -->
+- Stern, Robert, and Tony Cheng (2023). "Transcendental Arguments." *Stanford Encyclopedia of Philosophy* (archive-pinned edition per the R3 ledger). <!-- ref:sep-transcendental -->
+- Stroud, Barry (1968). "Transcendental Arguments." *Journal of Philosophy* 65(9). <!-- ref:stroud1968transcendental -->
+- Turner, Jamie B. (2022). "Ibn Taymiyya on Theistic Signs and Knowledge of God." *Religious Studies* 58. <!-- ref:turner2022signs -->
