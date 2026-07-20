@@ -1,0 +1,24 @@
+{
+  "record": "R6 final merged-state record (Decision 0016)",
+  "provisional": false,
+  "r5_merge_verified": {
+    "pr": 4,
+    "merge_commit": "87e10d5f5d50479e01dc5664e3ac57cd07b11164",
+    "followup_pr": 5,
+    "followup_merge_commit": "6df15cbd3c2ce851de3d968207212ead86ecbf25"
+  },
+  "r6_merge": {
+    "branch": "closure/r6-experiment-readiness-sourcing-state",
+    "pr": 6,
+    "final_pr_head": "ec78ec3bf7e6b58027b2cc3a8f0d9b3834a495fc",
+    "merge_commit": "b33c671aaf592c3806dbde75e251558279885044",
+    "merged_at": "2026-07-20T19:51:17Z",
+    "actions_run": 29773677574,
+    "actions_conclusion": "success",
+    "pre_merge_fresh_clone": "34/34 steps, 0 failures, clean tree @ ec78ec3b",
+    "post_merge_fresh_clone": "34/34 steps, 0 failures, clean tree @ b33c671a",
+    "manifest_entries": 364,
+    "manifest_sha256": "6c8c913b834055121ba4caeb7af0a824dd3f1883fcd112b5e06b74ed6621dc9a",
+    "no_force_no_rewrite": true
+  }
+}

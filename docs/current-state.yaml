@@ -10,7 +10,7 @@ authored:
     scope: repository/formal/schema/source-internal review of the mixed-provenance R4 candidate; not external
       human peer review
     current_signoff: docs/project-closure/r4-fresh-fable-review/FABLE-REVIEW-SIGNOFF.md
-    current_merge_verification: docs/project-closure/r5/FINAL-MERGED-VERIFICATION.md
+    current_merge_verification: docs/project-closure/r6/FINAL-MERGED-VERIFICATION.md
     historical_status_index: docs/project-closure/HISTORICAL-STATUS-INDEX.yaml
     empirical_validation: not run
     terminology_adoption: none
@@ -77,9 +77,9 @@ authored:
     pdfs: reproducibly built and visually inspected draft artifacts
     legal_publication: open on license, identity, peer review, and external submission
 derived:
-  source_tree_digest: c29b57d518e5cab0729e23a745160e892c86813e9cc29e82cfd56f4201130c97
+  source_tree_digest: e9b1917b9964171e3adfbc7f078d29a4284c192cd0bdbe063b2aafd73b2b1610
   source_tree_digest_policy: docs/project-state-inputs.yaml
-  tracked_files: 365
+  tracked_files: 367
   decision_ids:
   - '0001'
   - '0002'
