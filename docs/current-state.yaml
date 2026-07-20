@@ -76,7 +76,7 @@ authored:
     pdfs: reproducibly built and visually inspected draft artifacts
     legal_publication: open on license, identity, peer review, and external submission
 derived:
-  source_tree_digest: 028efc44feb2a8f44507f3d3e336e68d715ee9c54df8d5eeb1a73bdaf37de34b
+  source_tree_digest: 9dde013155ea8872743d2f2a5865dc388999a9c8a0705c4760e249318a64b96d
   source_tree_digest_policy: docs/project-state-inputs.yaml
   tracked_files: 292
   decision_ids:
@@ -147,21 +147,21 @@ derived:
     invalid_records: 48
   pdfs:
     orthability-divine-speech-athari-draft.pdf:
-      sha256: c78c9dcc0b0e5e53eba2a36788a1ff6b94cc6e8116539591b9611f1a8bce07e5
+      sha256: 019c497b59da7f0abe0d307fee346bdd980507e361ba50e3ef81f822346f264d
       pages: 7
-      source_commit: aa38a669337814988cbe5e1ac468e77172081a82
+      source_commit: 28d694c4f4fe387a88a54fca544ef806895d450e
     orthability-ground-of-intelligibility-draft.pdf:
-      sha256: a4a12dd5c36209699b93786e23d23d750d626811a6f39077f567f2c61bc945ec
+      sha256: f45927b79ff8cb7481feea47f7426efcac2456ca12b3cd1c948699253136226e
       pages: 10
-      source_commit: aa38a669337814988cbe5e1ac468e77172081a82
+      source_commit: 28d694c4f4fe387a88a54fca544ef806895d450e
     orthemic-core-reference-draft.pdf:
-      sha256: 2629d5ea45941a733c10d4581d284d1f0cd4c059c850e53dfb87fead94563772
+      sha256: 63e13101f5ce4e262b5b3db3de7cd9709dc48b432fb7a89c02ff8b080c6a88ac
       pages: 20
-      source_commit: aa38a669337814988cbe5e1ac468e77172081a82
+      source_commit: 28d694c4f4fe387a88a54fca544ef806895d450e
     orthemma-ortheme-systems-draft.pdf:
-      sha256: 3f2f328a52130834336f45e6b9baee5ead78b86d44c6cb086c53b340d0527bbb
+      sha256: 58537760834cfc1939415196618f5e3f09a0005e333eec2de30d4ff58e2877f7
       pages: 31
-      source_commit: aa38a669337814988cbe5e1ac468e77172081a82
+      source_commit: 28d694c4f4fe387a88a54fca544ef806895d450e
   terminology_freeze_hashes:
     pilot0_v1: 988a6522498df73ad1c7b0f73961a054ff20862d50fff6d644d0274877412772
     pilot0_v2: a1edbd2c5e2f2df598b4a6d01a52229c455b3b68d043f10046053d0a3622a2a2
