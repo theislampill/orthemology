@@ -1,14 +1,20 @@
 #!/usr/bin/env python3
-"""Recompute (or verify with --check) the Pilot 0 packet freeze hash.
+"""Recompute (or verify with --check) a pilot packet freeze hash.
 
-Hash = sha256 over sorted (relpath NUL content NUL) of every file under
-terminology/pilot0/ except FREEZE-HASH.txt itself."""
+Hash = sha256 over sorted (relpath NUL content NUL) of every file under the
+packet directory except FREEZE-HASH.txt itself. Default packet:
+terminology/pilot0 (the immutable v1). Pass --packet pilot0-v2 for the R3
+matched packet (with --check, both recorded hashes can be verified in one CI
+step by running the script twice)."""
 import hashlib
 import os
 import sys
 
+PACKET = "pilot0"
+if "--packet" in sys.argv:
+    PACKET = sys.argv[sys.argv.index("--packet") + 1]
 ROOT = os.path.join(os.path.dirname(os.path.dirname(os.path.abspath(__file__))),
-                    "terminology", "pilot0")
+                    "terminology", PACKET)
 HASH_FILE = os.path.join(ROOT, "FREEZE-HASH.txt")
 
 
@@ -39,8 +45,8 @@ def main():
                 if len(line) == 64 and all(c in "0123456789abcdef" for c in line):
                     recorded = line
         ok = digest == recorded
-        print("[%s] pilot0 packet hash %s recorded hash" % ("PASS" if ok else "FAIL",
-                                                            "matches" if ok else "does NOT match"))
+        print("[%s] %s packet hash %s recorded hash" % ("PASS" if ok else "FAIL", PACKET,
+                                                        "matches" if ok else "does NOT match"))
         sys.exit(0 if ok else 1)
     print(digest)
 
