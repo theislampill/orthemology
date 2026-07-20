@@ -1,0 +1,58 @@
+# Semantic-role registry (Decision 0009). Machine-readable companion to the
+# notation registry: names the ROLE a phrase must play, so the type/token
+# validator can check role-bearing usage instead of blindly banning strings.
+schema: orthemology-semantic-roles-v1
+roles:
+  - id: reasoning_faculty
+    gloss: actually instantiated capacity to abstract, judge, and infer; healthy/impaired
+    bearer: actor
+  - id: reasoning_episode
+    gloss: one dated situated reasoning run (ReasonEpisode(e)); concrete token; sound or unsound
+    bearer: episode
+  - id: judgment_token
+    gloss: placement / inferred profile / placement claim produced by an episode
+    bearer: placement
+  - id: represented_meta_type
+    gloss: an actor's representation of a governing standard (RepresentedMetaType); adequate/inadequate
+    bearer: representation
+  - id: metaorthemma_token
+    gloss: case-bound governing configuration token (M1); properly/improperly bound, current/stale
+    bearer: token
+  - id: execution_trace
+    gloss: the event/trace applying a token; faithful/deviant
+    bearer: execution
+  - id: placement_correctness
+    gloss: PlacementCorrect(p-hat, m, A) — correspondence with O*(m; A) at governed tolerance
+    bearer: placement
+  - id: pathway_adequacy
+    gloss: non-factive conjunction over ReqPath(e) (O2); never factive
+    bearer: episode
+  - id: strict_reason_soundness
+    gloss: DERIVED predicate StrictlySoundReasoning_q(e) = PathwayAdequate(e) AND TOKEN_TRUTH_LINKED_q(e); factive claim-wise; NOT a registry verdict
+    bearer: episode-claim
+    derived: true
+  - id: fitrah_condition
+    gloss: actor-condition state (healthy/impaired) under a declared cognitive analysis; not itself a faculty or metaortheme by definition
+    bearer: actor
+  - id: corroboration_configuration
+    gloss: tawatur-like binding — source set, origin map, independence assessment, reference class, indicants, edition, evaluator, warrant, time
+    bearer: token
+forbidden_unqualified:
+  # phrase -> why (validator enforces in current normative prose, with allowlist contexts)
+  - phrase: concrete ortheme
+    why: a judgment token is a placement, not an ortheme
+  - phrase: concrete metaortheme
+    why: a case-bound governing token is a metaorthemma
+  - phrase: sound ortheme
+    why: soundness belongs to a placement (or episode), not the state-type
+  - phrase: objective ortheme
+    why: permitted only as declared shorthand for the type-as-correctly-predicated, never as a subsisting entity
+allowlist_contexts:
+  - historical quotation
+  - explicitly analyzed rejected terminology (negating context on the same line)
+  - concrete orthemic placement
+  - concrete reasoning episode
+  - concrete representation of an ortheme/metaortheme
+  - sound placement (with definition)
+  - sound reason (with declared bearer/dimensions in the same document)
+  - concrete reason (Turner/Evans interpretive sense, source-labeled in the same document)
