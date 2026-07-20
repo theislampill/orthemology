@@ -2,7 +2,7 @@
   "$schema": "https://json-schema.org/draft/2020-12/schema",
   "$id": "orthemology/handoff.schema.json",
   "title": "Handoff record (hand_in / hand_out packet)",
-  "description": "Handoffs are the loci of transport error: a verdict crossing an edge without its scope and version is how stale evidence propagates. Edge orientation: earlier → later; label carries semantics.",
+  "description": "Handoffs are the loci of transport error: a verdict crossing an edge without its scope and version is how stale evidence propagates. Edge orientation: earlier -> later; label carries semantics. R4: a handoff must carry SUBSTANTIVE PAYLOAD — an envelope with no state claims, no evidence, no authority claims, no residual obligations and no requested action transports nothing and is rejected.",
   "type": "object",
   "required": [
     "packet_id",
@@ -12,18 +12,73 @@
     "subject",
     "edge_label"
   ],
+  "anyOf": [
+    {
+      "required": [
+        "state_claims"
+      ],
+      "properties": {
+        "state_claims": {
+          "type": "array",
+          "minItems": 1
+        }
+      }
+    },
+    {
+      "required": [
+        "evidence_refs"
+      ],
+      "properties": {
+        "evidence_refs": {
+          "type": "array",
+          "minItems": 1
+        }
+      }
+    },
+    {
+      "required": [
+        "authority_claims"
+      ],
+      "properties": {
+        "authority_claims": {
+          "type": "array",
+          "minItems": 1
+        }
+      }
+    },
+    {
+      "required": [
+        "residual_obligations"
+      ],
+      "properties": {
+        "residual_obligations": {
+          "type": "array",
+          "minItems": 1
+        }
+      }
+    },
+    {
+      "required": [
+        "requested_action"
+      ]
+    }
+  ],
   "properties": {
     "packet_id": {
-      "type": "string"
+      "type": "string",
+      "minLength": 1
     },
     "packet_version": {
-      "type": "string"
+      "type": "string",
+      "minLength": 1
     },
     "sender_episode": {
-      "type": "string"
+      "type": "string",
+      "minLength": 1
     },
     "receiver_episode": {
-      "type": "string"
+      "type": "string",
+      "minLength": 1
     },
     "edge_label": {
       "enum": [
@@ -40,39 +95,50 @@
       ],
       "properties": {
         "identity_key": {
-          "type": "string"
+          "type": "string",
+          "minLength": 1
         },
         "version": {
-          "type": "string"
+          "type": "string",
+          "minLength": 1
         }
       },
       "additionalProperties": false
     },
     "state_claims": {
       "type": "array",
+      "uniqueItems": true,
       "items": {
         "type": "object",
         "required": [
           "claim_id",
           "scope",
-          "valid_for_version"
+          "valid_for_version",
+          "analysis_id",
+          "analysis_version"
         ],
         "properties": {
           "claim_id": {
-            "type": "string"
+            "type": "string",
+            "minLength": 1
           },
           "scope": {
-            "type": "string"
+            "type": "string",
+            "minLength": 1
           },
           "valid_for_version": {
             "type": "string",
-            "description": "the (κ,v) the claim was established for — transport requires this to match or a lineage argument"
+            "minLength": 1,
+            "description": "the (kappa,v) the claim was established for — transport requires this to match or a lineage argument"
           },
           "analysis_id": {
-            "type": "string"
+            "type": "string",
+            "minLength": 1,
+            "description": "the analysis the claim was established under (R4: required — a claim crossing an edge without its analysis index is untransportable)"
           },
           "analysis_version": {
-            "type": "string"
+            "type": "string",
+            "minLength": 1
           }
         },
         "additionalProperties": false
@@ -80,15 +146,49 @@
     },
     "evidence_refs": {
       "type": "array",
+      "minItems": 0,
+      "uniqueItems": true,
       "items": {
-        "type": "string"
+        "type": "string",
+        "minLength": 1
       }
     },
     "authority_claims": {
       "type": "array",
+      "minItems": 0,
+      "uniqueItems": true,
       "items": {
-        "type": "string"
+        "type": "string",
+        "minLength": 1
       }
+    },
+    "residual_obligations": {
+      "type": "array",
+      "uniqueItems": true,
+      "description": "burdens travelling with the packet",
+      "items": {
+        "type": "object",
+        "required": [
+          "burden_id",
+          "description"
+        ],
+        "properties": {
+          "burden_id": {
+            "type": "string",
+            "minLength": 1
+          },
+          "description": {
+            "type": "string",
+            "minLength": 1
+          }
+        },
+        "additionalProperties": false
+      }
+    },
+    "requested_action": {
+      "type": "string",
+      "minLength": 1,
+      "description": "the action the receiver is asked to take"
     }
   },
   "additionalProperties": false

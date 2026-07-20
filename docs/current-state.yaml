@@ -53,8 +53,8 @@ authored:
     pdfs: reproducibly built and visually inspected draft artifacts
     legal_publication: open on license, identity, peer review, and external submission
 derived:
-  source_commit_at_generation: a37a33eafc73e1d8dbafc8016c5afd71e2afc319
-  tracked_files: 170
+  source_commit_at_generation: 306a763f6b9e8eb0569d6c4000236328431b8d24
+  tracked_files: 181
   decision_ids:
   - '0001'
   - '0002'
@@ -67,9 +67,10 @@ derived:
   - 0009
   - '0010'
   - '0011'
+  - '0013'
   - '0014'
   - '0015'
-  decision_count: 13
+  decision_count: 14
   schemas:
   - analysis.schema.json
   - claim-ledger.schema.json
@@ -78,8 +79,10 @@ derived:
   - metaorthemma.schema.json
   - orthemma.schema.json
   - orthing-episode.schema.json
+  - perturbation-spec.schema.json
+  - reliability-spec.schema.json
   - verdict-record.schema.json
-  schema_count: 8
+  schema_count: 10
   example_json_count: 8
   example_markdown_count: 2
   validator_scripts:
@@ -96,9 +99,10 @@ derived:
   - validate_reason_fixtures.py
   - validate_repo.py
   - validate_schemas.py
+  - validate_source_status.py
   - validate_type_token_semantics.py
   - validate_verdict_semantics.py
-  validator_count: 15
+  validator_count: 16
   fixture_counts:
     verdict: 7
     reason: 8
@@ -125,4 +129,10 @@ derived:
   terminology_freeze_hashes:
     pilot0_v1: 988a6522498df73ad1c7b0f73961a054ff20862d50fff6d644d0274877412772
     pilot0_v2: a1edbd2c5e2f2df598b4a6d01a52229c455b3b68d043f10046053d0a3622a2a2
-  source_status_summary: {}
+  source_status_summary:
+    SECONDARY_VERIFIED: 6
+    SECONDARY_RECONSTRUCTION: 2
+    PRIMARY_TEXT_EXACT: 3
+    PRIMARY_WORK_THEME: 1
+    PRIMARY_LOCUS_EDITION_DEPENDENT: 2
+    ORTHEMOLOGICAL_EXTENSION: 1

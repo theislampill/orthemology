@@ -1,0 +1,95 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "$id": "orthemology/reliability-spec.schema.json",
+  "title": "RelSpec — declared reliability specification for PROCEDURE_RELIABLE",
+  "description": "PROCEDURE_RELIABLE is not a feeling about a procedure: it is a claim about a NAMED procedure, over a DECLARED reference class, at a DECLARED risk stratum, against a DECLARED metric and threshold, under a DECLARED evaluation protocol, on a DECLARED evidence basis, declared BEFORE the outcome it is used to assess. declared_at is the timestamp that makes pre-outcome declaration checkable; the cross-record layer rejects any RelSpec declared at or after the recorded result time.",
+  "type": "object",
+  "required": [
+    "procedure_id",
+    "procedure_version",
+    "reference_class",
+    "risk_stratum",
+    "metric",
+    "threshold",
+    "evaluation_protocol",
+    "evidence_basis",
+    "declared_at",
+    "validity"
+  ],
+  "properties": {
+    "procedure_id": {
+      "type": "string",
+      "minLength": 1,
+      "description": "the procedure whose reliability is claimed"
+    },
+    "procedure_version": {
+      "type": "string",
+      "minLength": 1,
+      "description": "the edition of that procedure; reliability does not transfer across editions without argument"
+    },
+    "reference_class": {
+      "type": "string",
+      "minLength": 1,
+      "description": "the population over which the reliability figure is defined"
+    },
+    "risk_stratum": {
+      "type": "string",
+      "minLength": 1,
+      "description": "the declared risk stratum the threshold is set for"
+    },
+    "metric": {
+      "type": "string",
+      "minLength": 1,
+      "description": "the reliability metric (precision, sensitivity, false-negative rate, ...)"
+    },
+    "threshold": {
+      "description": "the value the metric must meet",
+      "oneOf": [
+        {
+          "type": "number"
+        },
+        {
+          "type": "string",
+          "minLength": 1
+        }
+      ]
+    },
+    "evaluation_protocol": {
+      "type": "string",
+      "minLength": 1,
+      "description": "how the metric is measured, including sampling and blinding"
+    },
+    "evidence_basis": {
+      "type": "string",
+      "minLength": 1,
+      "description": "the evidence the reliability figure rests on"
+    },
+    "declared_at": {
+      "type": "string",
+      "minLength": 1,
+      "description": "timestamp of declaration; must precede any recorded result time (pre-outcome declaration — checked by validate_cross_record_semantics)"
+    },
+    "validity": {
+      "type": "object",
+      "required": [
+        "effective_from",
+        "expiry"
+      ],
+      "properties": {
+        "effective_from": {
+          "type": "string",
+          "minLength": 1
+        },
+        "expiry": {
+          "type": [
+            "string",
+            "null"
+          ],
+          "minLength": 1
+        }
+      },
+      "additionalProperties": false
+    }
+  },
+  "additionalProperties": false
+}

@@ -2,13 +2,91 @@
   "$schema": "https://json-schema.org/draft/2020-12/schema",
   "$id": "orthemology/analysis.schema.json",
   "title": "Declared analysis A",
-  "description": "Normative-but-provisional reference model (R2). The explicit, versionable index of ground truth (Decision 0001). A change to any component yields a new version.",
+  "description": "Normative-but-provisional reference model (R4). The explicit, versionable index of ground truth (Decision 0001). A change to any component yields a new version. R4 DECLARATION CONTRACT (D1): every constitutive component must be DECLARED — either as a nonempty value or as an explicit typed disposition object {\"disposition\": \"not_applicable\" | \"unspecified_with_reason\", \"reason\": \"...\"}. Silence is no longer a legal declaration. The compact form (analysis_id + version alone) is admissible ONLY when a resolvable 'inherits_from' parent analysis reference is present; the parent supplies the undeclared components and the cross-record layer checks that the parent actually resolves.",
   "type": "object",
+  "$defs": {
+    "disposition": {
+      "type": "object",
+      "description": "explicit typed disposition standing in for a D1 component",
+      "required": [
+        "disposition",
+        "reason"
+      ],
+      "properties": {
+        "disposition": {
+          "enum": [
+            "not_applicable",
+            "unspecified_with_reason"
+          ]
+        },
+        "reason": {
+          "type": "string",
+          "minLength": 1
+        }
+      },
+      "additionalProperties": false
+    },
+    "declared_string": {
+      "oneOf": [
+        {
+          "type": "string",
+          "minLength": 1
+        },
+        {
+          "$ref": "#/$defs/disposition"
+        }
+      ]
+    },
+    "declared_string_array": {
+      "oneOf": [
+        {
+          "type": "array",
+          "minItems": 1,
+          "uniqueItems": true,
+          "items": {
+            "type": "string",
+            "minLength": 1
+          }
+        },
+        {
+          "$ref": "#/$defs/disposition"
+        }
+      ]
+    }
+  },
   "required": [
     "analysis_id",
-    "version",
-    "task",
-    "repertoire_ref"
+    "version"
+  ],
+  "allOf": [
+    {
+      "if": {
+        "not": {
+          "required": [
+            "inherits_from"
+          ]
+        }
+      },
+      "then": {
+        "required": [
+          "analysis_id",
+          "version",
+          "task",
+          "boundary",
+          "repertoire_ref",
+          "evidence_repertoire",
+          "action_repertoire",
+          "loss",
+          "hard_constraints",
+          "horizon",
+          "tolerance",
+          "representation_family",
+          "merger_family",
+          "governance_boundary"
+        ],
+        "description": "full D1 declaration contract: with no inherited parent, every constitutive component must carry a nonempty value or a typed disposition"
+      }
+    }
   ],
   "properties": {
     "analysis_id": {
@@ -19,66 +97,90 @@
       "type": "string",
       "minLength": 1
     },
+    "inherits_from": {
+      "type": "object",
+      "description": "parent analysis whose declarations this analysis inherits; must resolve to a declared analysis in the bundle (cross-record check)",
+      "required": [
+        "analysis_id",
+        "version"
+      ],
+      "properties": {
+        "analysis_id": {
+          "type": "string",
+          "minLength": 1
+        },
+        "version": {
+          "type": "string",
+          "minLength": 1
+        }
+      },
+      "additionalProperties": false
+    },
     "task": {
-      "type": "string",
+      "$ref": "#/$defs/declared_string",
       "description": "T = task(A)"
     },
     "boundary": {
-      "type": "string",
-      "description": "system and governance boundary"
+      "$ref": "#/$defs/declared_string",
+      "description": "system boundary"
+    },
+    "governance_boundary": {
+      "$ref": "#/$defs/declared_string",
+      "description": "the governance authority whose requirements parameterize RequiredBy for this analysis"
     },
     "repertoire_ref": {
-      "type": "string",
+      "$ref": "#/$defs/declared_string",
       "description": "identifier of the active ortheme repertoire O_A"
     },
     "domain_ref": {
-      "type": "string",
+      "$ref": "#/$defs/declared_string",
       "description": "identifier of the active occurrence domain M_A"
     },
     "evidence_repertoire": {
-      "type": "array",
-      "items": {
-        "type": "string"
-      }
+      "$ref": "#/$defs/declared_string_array"
     },
     "action_repertoire": {
-      "type": "array",
-      "items": {
-        "type": "string"
-      }
+      "$ref": "#/$defs/declared_string_array"
     },
     "policy_class": {
-      "type": "string"
+      "$ref": "#/$defs/declared_string"
     },
     "loss": {
-      "type": "string"
+      "$ref": "#/$defs/declared_string"
     },
     "hard_constraints": {
-      "type": "array",
-      "items": {
-        "type": "string"
-      }
+      "$ref": "#/$defs/declared_string_array"
     },
     "horizon": {
-      "type": "string"
+      "$ref": "#/$defs/declared_string"
     },
     "tolerance": {
-      "type": [
-        "number",
-        "string"
-      ],
-      "description": "ε_A"
+      "description": "epsilon_A",
+      "oneOf": [
+        {
+          "type": "number"
+        },
+        {
+          "type": "string",
+          "minLength": 1
+        },
+        {
+          "$ref": "#/$defs/disposition"
+        }
+      ]
     },
     "representation_family": {
-      "type": "string",
+      "$ref": "#/$defs/declared_string",
       "description": "Rep_A"
     },
     "merger_family": {
-      "type": "string"
+      "$ref": "#/$defs/declared_string"
     },
     "axes": {
       "type": "array",
       "description": "factorized profile axes with exclusivity markings and cross-axis constraints (Definition 10)",
+      "minItems": 1,
+      "uniqueItems": true,
       "items": {
         "type": "object",
         "required": [
@@ -87,7 +189,8 @@
         ],
         "properties": {
           "name": {
-            "type": "string"
+            "type": "string",
+            "minLength": 1
           },
           "exclusivity": {
             "enum": [
@@ -97,8 +200,11 @@
           },
           "values": {
             "type": "array",
+            "minItems": 1,
+            "uniqueItems": true,
             "items": {
-              "type": "string"
+              "type": "string",
+              "minLength": 1
             }
           }
         },
@@ -107,8 +213,11 @@
     },
     "consistency_constraints": {
       "type": "array",
+      "minItems": 1,
+      "uniqueItems": true,
       "items": {
-        "type": "string"
+        "type": "string",
+        "minLength": 1
       }
     }
   },

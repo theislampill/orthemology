@@ -1,0 +1,137 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "$id": "orthemology/perturbation-spec.schema.json",
+  "title": "PerturbSpec — declared perturbation neighborhood for ROBUST_NEIGHBORHOOD",
+  "description": "ROBUST_NEIGHBORHOOD requires a DECLARED neighborhood, not an unstated intuition of 'similar cases'. The neighborhood is given either by a finite ENUMERATION of members or by a declared probability MEASURE — exactly one of the two (XOR). Invariants are what must NOT change; varied_fields are what does. The two sets are disjoint by construction: a field that is both invariant and varied makes the neighborhood incoherent, and the cross-record layer rejects it. metaorthemma_rebinding_rule states what happens to case-bound tokens as the case is perturbed — without it, robustness silently smuggles in a rebinding.",
+  "type": "object",
+  "required": [
+    "neighborhood_family",
+    "invariants",
+    "varied_fields",
+    "metaorthemma_rebinding_rule",
+    "failure_criterion",
+    "version",
+    "validity"
+  ],
+  "oneOf": [
+    {
+      "required": [
+        "enumeration"
+      ],
+      "not": {
+        "required": [
+          "measure"
+        ]
+      },
+      "description": "finite enumeration of neighborhood members"
+    },
+    {
+      "required": [
+        "measure"
+      ],
+      "not": {
+        "required": [
+          "enumeration"
+        ]
+      },
+      "description": "declared probability measure over the neighborhood"
+    }
+  ],
+  "properties": {
+    "neighborhood_family": {
+      "type": "string",
+      "minLength": 1,
+      "description": "the family of cases the neighborhood is drawn from"
+    },
+    "enumeration": {
+      "type": "array",
+      "minItems": 1,
+      "uniqueItems": true,
+      "items": {
+        "type": "string",
+        "minLength": 1
+      },
+      "description": "finite list of neighborhood members (XOR with measure)"
+    },
+    "measure": {
+      "type": "object",
+      "description": "declared probability measure over the neighborhood (XOR with enumeration)",
+      "required": [
+        "family",
+        "parameters",
+        "support"
+      ],
+      "properties": {
+        "family": {
+          "type": "string",
+          "minLength": 1
+        },
+        "parameters": {
+          "type": "string",
+          "minLength": 1
+        },
+        "support": {
+          "type": "string",
+          "minLength": 1
+        }
+      },
+      "additionalProperties": false
+    },
+    "invariants": {
+      "type": "array",
+      "minItems": 1,
+      "uniqueItems": true,
+      "items": {
+        "type": "string",
+        "minLength": 1
+      },
+      "description": "fields held FIXED across the neighborhood"
+    },
+    "varied_fields": {
+      "type": "array",
+      "minItems": 1,
+      "uniqueItems": true,
+      "items": {
+        "type": "string",
+        "minLength": 1
+      },
+      "description": "fields VARIED across the neighborhood; must be disjoint from invariants (cross-record check)"
+    },
+    "metaorthemma_rebinding_rule": {
+      "type": "string",
+      "minLength": 1,
+      "description": "what happens to case-bound tokens as the case varies: rebound, held, or the neighborhood is restricted to cases where the binding still holds"
+    },
+    "failure_criterion": {
+      "type": "string",
+      "minLength": 1,
+      "description": "what counts as a robustness failure over this neighborhood"
+    },
+    "version": {
+      "type": "string",
+      "minLength": 1
+    },
+    "validity": {
+      "type": "object",
+      "required": [
+        "effective_from",
+        "expiry"
+      ],
+      "properties": {
+        "effective_from": {
+          "type": "string",
+          "minLength": 1
+        },
+        "expiry": {
+          "type": [
+            "string",
+            "null"
+          ],
+          "minLength": 1
+        }
+      },
+      "additionalProperties": false
+    }
+  },
+  "additionalProperties": false
+}
