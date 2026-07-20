@@ -363,11 +363,23 @@ def generate(engine, ctx, bundle):
             m["index"]["analysis_version"] = "MUTANT-VERSION"
             engine.emit("6", bundle, idx, ("index", "analysis_version"), m)
 
-        # ---- 7: occurrence-version-mismatch
+        # ---- 7: occurrence-version-mismatch. Only generated where a SECOND record
+        # in the bundle carries the same occurrence version: with nothing to
+        # desynchronise from, the mutation is vacuous rather than undetected.
         if sname == "orthing-episode.schema.json":
-            m = copy.deepcopy(inst)
-            m["occurrence"]["version"] = "MUTANT-VERSION"
-            engine.emit("7", bundle, idx, ("occurrence", "version"), m)
+            occ_key = (inst.get("occurrence") or {}).get("identity_key")
+            has_witness = (
+                any(p["schema"] == "orthemma.schema.json"
+                    and p["instance"].get("identity_key") == occ_key for p in parts)
+                or bool(inst.get("meta_tokens"))
+                or any(p["schema"] == "handoff.schema.json"
+                       and inst.get("episode_id") in (p["instance"].get("sender_episode"),
+                                                      p["instance"].get("receiver_episode"))
+                       for p in parts))
+            if has_witness:
+                m = copy.deepcopy(inst)
+                m["occurrence"]["version"] = "MUTANT-VERSION"
+                engine.emit("7", bundle, idx, ("occurrence", "version"), m)
             for ti in range(len(inst.get("meta_tokens", []))):
                 m = copy.deepcopy(inst)
                 m["meta_tokens"][ti]["anchor"]["version"] = "MUTANT-VERSION"
@@ -377,9 +389,10 @@ def generate(engine, ctx, bundle):
             m["version"] = "MUTANT-VERSION"
             engine.emit("7", bundle, idx, ("version",), m)
         if sname == "handoff.schema.json" and episode_ids:
-            m = copy.deepcopy(inst)
-            m["subject"]["identity_key"] = MUTANT_MARK
-            engine.emit("7", bundle, idx, ("subject", "identity_key"), m)
+            for field in ("identity_key", "version"):
+                m = copy.deepcopy(inst)
+                m["subject"][field] = MUTANT_MARK
+                engine.emit("7", bundle, idx, ("subject", field), m)
 
         # ---- 8: delete-disposition-conditional-field
         if sname == "claim-ledger.schema.json":

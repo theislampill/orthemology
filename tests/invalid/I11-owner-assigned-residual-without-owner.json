@@ -1,0 +1,34 @@
+{
+  "id": "I11-owner-assigned-residual-without-owner",
+  "why": "a residual disposed 'owner-assigned' with no owner and no acceptance state: assignment requires someone to have been assigned, and to have accepted or not",
+  "expect_layer": "schema",
+  "schema": "claim-ledger.schema.json",
+  "instance": {
+    "episode_id": "e1",
+    "claims": [
+      {
+        "claim_id": "q-1",
+        "proposition": "the fixture's subject holds",
+        "target": {
+          "identity_key": "k",
+          "version": "1"
+        },
+        "analysis": {
+          "analysis_id": "AN-1",
+          "version": "1"
+        },
+        "property_class": "structural",
+        "success_surface": "the fixture's declared surface",
+        "evidence_inapplicable_reason": "this fixture registers no evidence item",
+        "verification_status": "provisional"
+      }
+    ],
+    "residuals": [
+      {
+        "burden_id": "b-1",
+        "description": "the fixture's burden",
+        "disposition": "owner-assigned"
+      }
+    ]
+  }
+}

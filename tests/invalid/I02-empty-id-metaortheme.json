@@ -1,0 +1,28 @@
+{
+  "id": "I02-empty-id-metaortheme",
+  "why": "a metaortheme type with an empty mu_id: a governing type that cannot be named cannot be cited by a token",
+  "expect_layer": "schema",
+  "schema": "metaortheme.schema.json",
+  "instance": {
+    "mu_id": "",
+    "version": "1",
+    "governed_component": "E",
+    "states": {
+      "members": [
+        "s1",
+        "s2"
+      ]
+    },
+    "exclusivity": "exclusive",
+    "selector": {
+      "kind": "instrument-reading",
+      "description": "read the instrument"
+    },
+    "meta_policy": "act on the obtaining state",
+    "provenance": {
+      "authority": "auth",
+      "warrant": "w",
+      "scope": "sc"
+    }
+  }
+}

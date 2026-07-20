@@ -1,0 +1,12 @@
+{
+  "id": "I01-empty-task-analysis",
+  "why": "an analysis whose task is the empty string and which declares no other D1 component: the R4 declaration contract requires every component to carry a nonempty value or an explicit typed disposition, and '' is neither",
+  "expect_layer": "schema",
+  "schema": "analysis.schema.json",
+  "instance": {
+    "analysis_id": "AN-1",
+    "version": "1",
+    "task": "",
+    "repertoire_ref": "rep-1"
+  }
+}

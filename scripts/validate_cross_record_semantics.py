@@ -271,7 +271,7 @@ def collect_issues(parts):
             if state.get(node) == "done":
                 return
             if state.get(node) == "open":
-                cyc = stack[stack.index(node):] + [node]
+                cyc = stack[stack.index(node):]
                 key = tuple(sorted(set(cyc)))
                 if key not in reported:
                     reported.add(key)

@@ -26,5 +26,42 @@
     {"id": "collapse-claim-path-into-episode-path", "family": 18, "description": "overwrite a claim's reasoning adequacy with the episode-level pathway state (finding B2)"}
   ],
   "expectation": "Every generated mutant is killed at a declared layer, OR is listed below as a justified equivalent with a reason why the mutation does not change what the record claims. An undeclared survivor fails the run.",
-  "justified_equivalents": []
+  "justified_equivalents": [
+    {
+      "signature": "pillar-episode.json#4 1 residuals/0/evidence_refs",
+      "reason": "The residual is disposed 'validated-resolved' and carries BOTH evidence_refs and verdict_refs. The contract requires one of the two, so deleting evidence_refs leaves a record whose disposition is still fully supported by verdict_refs. This is a redundancy in the example, not a gap in the contract: deleting both IS killed (see the 'all-conditionals' mutant of family 8)."
+    },
+    {
+      "signature": "pillar-episode.json#4 8 residuals/0/evidence_refs",
+      "reason": "Same redundancy as above, reached through the disposition-conditional family. verdict_refs alone still discharges the 'validated-resolved' contract."
+    },
+    {
+      "signature": "pillar-episode.json#4 8 residuals/0/verdict_refs",
+      "reason": "Same redundancy, other direction. evidence_refs alone still discharges the 'validated-resolved' contract."
+    },
+    {
+      "signature": "pillar-episode.json#4 3 residuals []",
+      "reason": "A ledger that opens NO burdens is well-formed: not every episode leaves a residual. Emptying the residual list yields a record that makes a different but not malformed claim, and catching it would require an external source of truth about which burdens actually existed — which is outside the reference model by construction."
+    },
+    {
+      "signature": "pillar-episode.json#4 3 residuals/0/evidence_refs []",
+      "reason": "Emptying evidence_refs on a residual that also carries verdict_refs leaves the 'validated-resolved' contract discharged by verdict_refs. Same redundancy as the deletion mutants above."
+    },
+    {
+      "signature": "stale-directive.json#1 3 residuals []",
+      "reason": "As above: an empty residual list is a well-formed ledger. The record then claims no burdens rather than an unresolved one; nothing internal to the bundle contradicts it."
+    },
+    {
+      "signature": "whole-state-reread.json#0 3 residuals []",
+      "reason": "As above. This is precisely the limit the whole-state-reread example illustrates in prose: the machine floor can convict a closure claim asserted OVER a recorded unresolved burden, but it cannot know about a burden nobody recorded."
+    },
+    {
+      "signature": "rare-miss.json#0 3 evidence []",
+      "reason": "This episode declares record_mode 'minimal'. The contract lets a minimal record carry an empty evidence list precisely because it makes no audit claim; only an 'audit-ready' record must carry evidence or an explicit evidence_absent_reason. Emptying evidence here produces an honest minimal record, so there is nothing to reject."
+    },
+    {
+      "signature": "stopped-clock-validator.json#0 3 evidence []",
+      "reason": "As above: a 'minimal' record may legitimately carry no evidence. The corresponding mutation on the audit-ready record (pillar-episode) IS killed at the schema layer."
+    }
+  ]
 }

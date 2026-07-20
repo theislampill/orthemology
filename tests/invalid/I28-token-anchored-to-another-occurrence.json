@@ -1,0 +1,62 @@
+{
+  "id": "I28-token-anchored-to-another-occurrence",
+  "why": "a schema-complete episode whose governing token is anchored to a different occurrence and a different analysis than the episode itself: the token governs a case that is not the case being decided",
+  "expect_layer": "semantic",
+  "schema": "orthing-episode.schema.json",
+  "instance": {
+    "episode_id": "e1",
+    "record_mode": "minimal",
+    "occurrence": {
+      "identity_key": "k",
+      "version": "1",
+      "kind": "case"
+    },
+    "actor": "a",
+    "analysis": {
+      "analysis_id": "AN-1",
+      "version": "1"
+    },
+    "time": "2026-07-01T12:00:00Z",
+    "placement": {
+      "axis": "v"
+    },
+    "observation": "what the episode saw",
+    "evidence": [],
+    "warrant": null,
+    "policy": "p",
+    "verdict_record_ref": null,
+    "meta_tokens": [
+      {
+        "token_id": "tok-1",
+        "of_type": {
+          "mu_id": "mu-1",
+          "mu_version": "1"
+        },
+        "analysis": {
+          "analysis_id": "AN-OTHER",
+          "version": "9"
+        },
+        "anchor": {
+          "identity_key": "OTHER-CASE",
+          "version": "9"
+        },
+        "governed_component": "E",
+        "binding": {
+          "datum": "d"
+        },
+        "scope": {
+          "no_claim_dependency_reason": "no ledger accompanies this fixture"
+        },
+        "binder": {
+          "actor": "binder-1",
+          "binding_warrant": "w",
+          "binding_time": "2026-07-01"
+        },
+        "validity": {
+          "effective_from": "2026-07-01"
+        },
+        "no_separate_executor_reason": "no executor is designated separately from the binder in this fixture"
+      }
+    ]
+  }
+}

@@ -1,0 +1,46 @@
+{
+  "id": "I26-perturbspec-invariant-also-varied",
+  "why": "a PerturbSpec that lists 'policy' as both invariant and varied. The neighborhood is then incoherent: whatever the probes show, it is not that the result survives varying one thing while the other is held fixed",
+  "expect_layer": "semantic",
+  "schema": "verdict-record.schema.json",
+  "instance": {
+    "episode_id": "e1",
+    "index": {
+      "analysis_id": "AN-1",
+      "analysis_version": "1",
+      "actor": "reviewer",
+      "decision_time": "2026-07-01T12:00:00Z",
+      "information_state": "the statuses recorded in this fixture, as available at decision time"
+    },
+    "required_path": [
+      "ROBUST_NEIGHBORHOOD"
+    ],
+    "statuses": {
+      "ROBUST_NEIGHBORHOOD": "pass"
+    },
+    "pathway_state": "adequate",
+    "perturb_spec": {
+      "q-1": {
+        "neighborhood_family": "the fixture's declared family",
+        "enumeration": [
+          "probe-A",
+          "probe-B"
+        ],
+        "invariants": [
+          "policy"
+        ],
+        "varied_fields": [
+          "marker_presence",
+          "policy"
+        ],
+        "metaorthemma_rebinding_rule": "no token is rebound",
+        "failure_criterion": "any probe disagreeing with ground truth",
+        "version": "1",
+        "validity": {
+          "effective_from": "2026-01-01T00:00:00Z",
+          "expiry": null
+        }
+      }
+    }
+  }
+}

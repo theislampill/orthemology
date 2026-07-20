@@ -1,0 +1,58 @@
+{
+  "id": "I27-claim-dependency-cycle",
+  "why": "two claims each depending on the other. A dependency cycle means neither claim's standing can be discharged by the other, while the ledger reads as though both are supported",
+  "expect_layer": "semantic",
+  "schema": "claim-ledger.schema.json",
+  "instance": {
+    "episode_id": "e1",
+    "claims": [
+      {
+        "claim_id": "q-1",
+        "proposition": "the fixture's subject holds",
+        "target": {
+          "identity_key": "k",
+          "version": "1"
+        },
+        "analysis": {
+          "analysis_id": "AN-1",
+          "version": "1"
+        },
+        "property_class": "structural",
+        "success_surface": "the fixture's declared surface",
+        "evidence_inapplicable_reason": "this fixture registers no evidence item",
+        "verification_status": "provisional",
+        "depends_on_claims": [
+          "q-2"
+        ]
+      },
+      {
+        "claim_id": "q-2",
+        "proposition": "the fixture's subject holds",
+        "target": {
+          "identity_key": "k",
+          "version": "1"
+        },
+        "analysis": {
+          "analysis_id": "AN-1",
+          "version": "1"
+        },
+        "property_class": "structural",
+        "success_surface": "the fixture's declared surface",
+        "evidence_inapplicable_reason": "this fixture registers no evidence item",
+        "verification_status": "provisional",
+        "depends_on_claims": [
+          "q-1"
+        ]
+      }
+    ],
+    "residuals": [
+      {
+        "burden_id": "b-1",
+        "description": "the fixture's burden",
+        "disposition": "unresolved",
+        "responsible_queue": "q",
+        "next_review_condition": "at the next review"
+      }
+    ]
+  }
+}

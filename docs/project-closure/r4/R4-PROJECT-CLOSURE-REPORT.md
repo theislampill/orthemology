@@ -13,11 +13,12 @@
 5. **Source integrity** — one machine-readable registry with a nine-status vocabulary; the concrete/ideal-reason attribution chain corrected to Doko & Turner 2023 citing Evans 1998, with the page locus explicitly unverified; El-Tobgui's three records separated; the Atharī blanket disclaimer replaced by per-claim rows with **no creed position altered** (Decision 0013).
 6. **Bounded latent-state integration** — Decision 0015, a related-work note, a worked example, and LS-1…LS-7 fixtures with ten anti-conflation assertions; the amendment's own citation error corrected.
 
-## Corrections R4 made to its own inputs
+## Corrections R4 made to its own inputs and its own reporting
 
 - **SELF-1:** the R2 and R3 closeouts (mine) mis-reported the pilot-0 v1 freeze hash. The packet was always right; the prose was wrong; nothing compared them. A check now does.
 - **C13:** the controlling amendment's citation of "Rajeev V. Raju" conflated two researchers; corrected to Rajkumar Vasudeva Raju.
 - **C14:** one sub-case of the audit's schema finding was overstated; recorded as a partial refutation with evidence.
+- **SELF-2:** this pass's first report and closeout stated the recursive mutation engine and invalid-fixture corpus were **not built**. They were. The claim was written from a stale check while the work was landing. Corrected across five surfaces; true figures recorded. Understating completed work is the same reporting defect as overstating it.
 
 ## Lane verdicts (candidate; all bounded)
 

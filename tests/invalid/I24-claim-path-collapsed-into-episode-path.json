@@ -1,0 +1,37 @@
+{
+  "id": "I24-claim-path-collapsed-into-episode-path",
+  "why": "a claim whose own ReqReason projection is entirely passing is recorded as 'defective' because the episode-level pathway is defective (a downstream closure failure). This is finding B2: claim-relative reasoning adequacy is not the episode-level pathway state, and a routing or closure failure must not retroactively flip a soundly reached claim",
+  "expect_layer": "semantic",
+  "schema": "verdict-record.schema.json",
+  "instance": {
+    "episode_id": "e1",
+    "index": {
+      "analysis_id": "AN-1",
+      "analysis_version": "1",
+      "actor": "reviewer",
+      "decision_time": "2026-07-01T12:00:00Z",
+      "information_state": "the statuses recorded in this fixture, as available at decision time"
+    },
+    "required_path": [
+      "EVIDENCE_SUPPORT",
+      "PROCEDURE_RELIABLE",
+      "CLOSURE_TRUTHFUL"
+    ],
+    "statuses": {
+      "EVIDENCE_SUPPORT": "pass",
+      "PROCEDURE_RELIABLE": "pass",
+      "CLOSURE_TRUTHFUL": "fail"
+    },
+    "pathway_state": "defective",
+    "claim_reasoning_paths": [
+      {
+        "claim_id": "q-1",
+        "req_reason": [
+          "EVIDENCE_SUPPORT",
+          "PROCEDURE_RELIABLE"
+        ],
+        "reasoning_path_adequate": "defective"
+      }
+    ]
+  }
+}

@@ -1,0 +1,25 @@
+{
+  "id": "I15-handoff-state-claim-without-valid-for-version",
+  "why": "a handoff whose state claim omits valid_for_version: a claim crossing an edge without the (kappa, v) it was established for is exactly how stale evidence propagates",
+  "expect_layer": "schema",
+  "schema": "handoff.schema.json",
+  "instance": {
+    "packet_id": "pkt-1",
+    "packet_version": "1",
+    "sender_episode": "e1",
+    "receiver_episode": "e2",
+    "edge_label": "handoff",
+    "subject": {
+      "identity_key": "k",
+      "version": "1"
+    },
+    "state_claims": [
+      {
+        "claim_id": "q-1",
+        "scope": "the whole subject",
+        "analysis_id": "AN-1",
+        "analysis_version": "1"
+      }
+    ]
+  }
+}

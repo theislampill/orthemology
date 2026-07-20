@@ -1,0 +1,37 @@
+{
+  "id": "I05-empty-anchor-metaorthemma",
+  "why": "a metaorthemma whose anchor identity is empty: a case-bound token bound to no case",
+  "expect_layer": "schema",
+  "schema": "metaorthemma.schema.json",
+  "instance": {
+    "token_id": "tok-1",
+    "of_type": {
+      "mu_id": "mu-1",
+      "mu_version": "1"
+    },
+    "analysis": {
+      "analysis_id": "AN-1",
+      "version": "1"
+    },
+    "anchor": {
+      "identity_key": "",
+      "version": "1"
+    },
+    "governed_component": "E",
+    "binding": {
+      "datum": "d"
+    },
+    "scope": {
+      "no_claim_dependency_reason": "no ledger accompanies this fixture"
+    },
+    "binder": {
+      "actor": "binder-1",
+      "binding_warrant": "w",
+      "binding_time": "2026-07-01"
+    },
+    "validity": {
+      "effective_from": "2026-07-01"
+    },
+    "no_separate_executor_reason": "no executor is designated separately from the binder in this fixture"
+  }
+}

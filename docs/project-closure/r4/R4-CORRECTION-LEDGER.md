@@ -12,13 +12,22 @@
 | C6 | B4 evaluator symmetry + corroboration asserted to give non-circularity | Withdrawn and replaced with the mitigation formulation; shared-upstream dependence made representable (CR-9 / `shared-upstream-corroboration-failure`) | **DONE** |
 | C7 | B5 metaorthemma existence and typing cardinality ambiguous | One existence rule (material binding or **no token**) and one cardinality rule (**exactly one** `of_type`; many-to-many marked unimplemented), stated once and schema-enforced | **DONE** |
 | C8 | B6 schemas accept 10/11 malformed classes | Reference-model semantic contract across all schemas + typed RelSpec/PerturbSpec + expanded cross-record semantics; decision 0012 | **DONE (schema phase)** |
-| C9 | B7 mutation coverage narrower than the headline | Recursive/path-aware operator families with per-family reporting and explicit coverage limits; the "208 mutants" figure is retained only as history | **DONE (schema phase)** |
+| C9 | B7 mutation coverage narrower than the headline | 18 path-aware operator families + 28 invalid fixtures: 1,247 mutants, 1,113 schema-killed, 125 semantic-killed, 9 declared-equivalent, 0 unjustified survivors; per-family reporting with explicit coverage limits; the "208 mutants" figure retained only as history | **DONE** |
 | C10 | B8 concrete/ideal-reason attribution mislocated | Doko & Turner 2023 credited for the application; Evans 1998 as the reported source with the page **not** independently verified (RR-2); Turner 2022 rescoped; Turner 2023 chapter corrected; El-Tobgui's three records separated; decision 0013 | **DONE** |
 | C11 | B9 Atharī blanket source status vs the R3 closeout | Per-claim rows ATH-1…ATH-7 in the registry; the blanket front-matter disclaimer withdrawn; **no creed position altered** | **DONE** |
 | C12 | Part II latent-state amendment | Decision 0015, related-work note, worked example, LS-1…LS-7 fixtures with ten anti-conflation assertions, three verified bib records | **DONE** |
 | C13 | **Amendment's own citation error** (found by R4): the controlling amendment cites "Rajeev V. Raju" for the *Science Advances* paper | Corrected to **Rajkumar Vasudeva Raju** (conflation with Rajeev V. Rikhye of the 2021 *Nature Communications* paper); recorded in decision 0015, the related-work note, and the bib | **DONE** |
 | C14 | Audit's B6 phrasing overstated one sub-case | Recorded as a **partial refutation**: "verdict record missing required statuses" is accepted at the schema layer but **is** caught by cross-record semantics; the other ten classes were accepted by both | **RECORDED** |
 
-## Findings raised by R4 against its own inputs
+| C15 | **SELF-2** (found immediately after the first closeout): the first revision of `R4-SCHEMA-AND-MUTATION-REPORT.md`, decision 0012's scope note, ledger row C9, the draft PR body, and the session closeout all stated that the recursive mutation engine and `tests/invalid/` were **not built**. They **were** built; the work landed during the final commit window and the claim was written from a stale check | All five surfaces corrected; a dated correction notice added at the top of the report; the true figures recorded (18 families, 1,247 mutants, 1,113 schema-killed, 125 semantic-killed, 9 declared-equivalent, 0 unjustified survivors) | **DONE** |
 
-Two corrections in this pass were to the *controlling instructions and prior closeouts*, not to the repository: **C2** (my own R2/R3 mis-reporting of a freeze hash) and **C13** (the amendment's conflated author name). Both are recorded here rather than silently fixed, because a correction ledger that only ever corrects other people's work is not doing its job.
+## Findings raised by R4 against its own inputs and its own reporting
+
+Four corrections in this pass were to the *controlling instructions and to this run's own claims*, not to the repository:
+
+- **C2 / SELF-1** — my R2 and R3 closeouts mis-reported the pilot-0 v1 freeze hash.
+- **C13** — the controlling amendment's conflated author name.
+- **C14** — one audit sub-case overstated (partial refutation).
+- **C15 / SELF-2** — **this run reported completed work as not completed.** The error direction is the unusual one — understating rather than overstating — but it is the same defect: a completion claim written from a stale observation instead of checked against the artifact at the moment of claiming. It was caught only because the owner surfaced the agent-completion record.
+
+A correction ledger that only ever corrects other people's work is not doing its job; a project whose subject is false closure has to apply the standard to its own reporting in both directions.

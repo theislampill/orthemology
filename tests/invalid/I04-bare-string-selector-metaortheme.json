@@ -1,0 +1,25 @@
+{
+  "id": "I04-bare-string-selector-metaortheme",
+  "why": "a metaortheme whose selector is a bare string: a state-selecting procedure that cannot be inspected for kind and description is not a declared selector",
+  "expect_layer": "schema",
+  "schema": "metaortheme.schema.json",
+  "instance": {
+    "mu_id": "mu-1",
+    "version": "1",
+    "governed_component": "E",
+    "states": {
+      "members": [
+        "s1",
+        "s2"
+      ]
+    },
+    "exclusivity": "exclusive",
+    "selector": "read the instrument",
+    "meta_policy": "act on the obtaining state",
+    "provenance": {
+      "authority": "auth",
+      "warrant": "w",
+      "scope": "sc"
+    }
+  }
+}

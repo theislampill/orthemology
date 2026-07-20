@@ -36,6 +36,10 @@ ID uniqueness; reference resolution; analysis/version compatibility; occurrence 
 
 Re-running the same eleven-class probe against the hardened layer: **0 of 11 accepted** — every class is rejected at a declared layer (previously 10 of 11 accepted by both).
 
+## Adversarial verification
+
+`tests/invalid/` carries **28** expected-failure fixtures, and `scripts/validate_recursive_mutations.py` implements **18 path-aware operator families**: **1,247 mutants — 1,113 killed at the schema layer, 125 at the semantic layer, 9 declared-equivalent with stated reasons, 0 unjustified survivors.** Two families target the R4 blocking findings directly (`collapse-candidate-set-into-partial-profile` for B1; `collapse-claim-path-into-episode-path` for B2). Details and the equivalence reasons: `../project-closure/r4/R4-SCHEMA-AND-MUTATION-REPORT.md`.
+
 ## Honest scope limit
 
-This decision covers the **contract**. The recursive/path-aware mutation engine and the `tests/invalid/` corpus specified by the R4 program are **not complete in this candidate pass** — see `../project-closure/r4/R4-SCHEMA-AND-MUTATION-REPORT.md`, which states exactly what exists and what does not. The pre-existing top-level mutation suite (three operators) still runs; its narrow coverage is reported as narrow and is **not** described as semantic completeness.
+The operators are path-aware but finite and hand-declared; they exercise the **structure of the contract**, not its adequacy to the world. Neither this figure nor the historical "208 mutants" figure may be cited as semantic completeness. What is supported is narrow: the shipped reference model deterministically rejects the enumerated malformed-record classes at a declared layer.
