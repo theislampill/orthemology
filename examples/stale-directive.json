@@ -1,201 +1,203 @@
 {
- "example": "stale-directive",
- "note": "F6 / Decision 0006: authentic recovered directive, superseded; faithful execution under a defective governing token; false closure claim. See examples/compaction-stale-steer.md.",
- "parts": [
-  {
-   "schema": "metaorthemma.schema.json",
-   "instance": {
-    "token_id": "tok-rollback-dir-17",
-    "of_type": {
-     "mu_id": "deployment-directive",
-     "mu_version": "17"
+  "example": "stale-directive",
+  "note": "F6 / Decision 0006: authentic recovered directive, superseded; faithful execution under a defective governing token; false closure claim. See examples/compaction-stale-steer.md.",
+  "parts": [
+    {
+      "schema": "metaorthemma.schema.json",
+      "instance": {
+        "token_id": "tok-rollback-dir-17",
+        "of_type": {
+          "mu_id": "deployment-directive",
+          "mu_version": "17"
+        },
+        "analysis": {
+          "analysis_id": "deploy-governance",
+          "version": "3.2"
+        },
+        "anchor": {
+          "identity_key": "service-payments",
+          "version": "release-88"
+        },
+        "governed_component": "R",
+        "binding": {
+          "directive_id": "DIR-17",
+          "directive_edition": "1",
+          "recovered_from": "incident-channel transcript export",
+          "recovery_channel": "declared"
+        },
+        "scope": {
+          "claims": [
+            "claim-in-force"
+          ]
+        },
+        "binder": {
+          "actor": "on-call-agent",
+          "binding_warrant": "incident-role-warrant",
+          "binding_time": "2026-07-12T22:10:00Z"
+        },
+        "validity": {
+          "effective_from": "2026-07-12T20:00:00Z",
+          "expiry": null,
+          "superseded_by": "DIR-18 (rollback lifted 2026-07-12T21:30:00Z)"
+        },
+        "no_separate_executor_reason": "this token designates no executor separate from its binder: the episode actor executes under the same warrant, and the binder ROLE remains independently recorded",
+        "owning_episode": "ep-deploy-hold-4"
+      }
     },
-    "analysis": {
-     "analysis_id": "deploy-governance",
-     "version": "3.2"
+    {
+      "schema": "claim-ledger.schema.json",
+      "instance": {
+        "episode_id": "ep-deploy-hold-4",
+        "claims": [
+          {
+            "claim_id": "claim-authentic",
+            "proposition": "DIR-17 is a faithful copy of the issued directive",
+            "target": {
+              "identity_key": "DIR-17",
+              "version": "1"
+            },
+            "property_class": "provenance",
+            "success_surface": "the directive record",
+            "verification_status": "validated",
+            "analysis": {
+              "analysis_id": "deploy-governance",
+              "version": "3.2"
+            },
+            "evidence_inapplicable_reason": "this example records the governance token and the ledger only; no evidence item is registered in the bundle, so no evidence id can honestly be cited",
+            "currency_exempt": true,
+            "currency_exempt_reason": "authenticity of a fixed historical record: the claim is that THIS recovered copy matches the directive as issued; its truth does not decay with evidence currency",
+            "currency_exempt_scope": "fixed-record"
+          },
+          {
+            "claim_id": "claim-in-force",
+            "proposition": "DIR-17 currently binds this deployment",
+            "target": {
+              "identity_key": "DIR-17",
+              "version": "1"
+            },
+            "property_class": "provenance",
+            "success_surface": "the current governance state",
+            "depends_on_tokens": [
+              "tok-rollback-dir-17"
+            ],
+            "verification_status": "stale",
+            "non_claims": [
+              "authenticity is not force"
+            ],
+            "analysis": {
+              "analysis_id": "deploy-governance",
+              "version": "3.2"
+            },
+            "evidence_inapplicable_reason": "this example records the governance token and the ledger only; no evidence item is registered in the bundle, so no evidence id can honestly be cited"
+          }
+        ],
+        "residuals": [
+          {
+            "burden_id": "b-supersession-check",
+            "description": "verify directive currency against the supersession chain",
+            "disposition": "unresolved",
+            "responsible_queue": "deploy-governance review queue",
+            "next_review_condition": "at the incident review for the 2026-07-12 deployment hold, or on the next invocation of a recovered directive, whichever comes first"
+          }
+        ],
+        "closure_claim": {
+          "level": "acted under current instructions",
+          "asserted_by": "on-call-agent"
+        }
+      }
     },
-    "anchor": {
-     "identity_key": "service-payments",
-     "version": "release-88"
-    },
-    "governed_component": "R",
-    "binding": {
-     "directive_id": "DIR-17",
-     "directive_edition": "1",
-     "recovered_from": "incident-channel transcript export",
-     "recovery_channel": "declared"
-    },
-    "scope": {
-     "claims": [
-      "claim-in-force"
-     ]
-    },
-    "binder": {
-     "actor": "on-call-agent",
-     "binding_warrant": "incident-role-warrant",
-     "binding_time": "2026-07-12T22:10:00Z"
-    },
-    "validity": {
-     "effective_from": "2026-07-12T20:00:00Z",
-     "expiry": null,
-     "superseded_by": "DIR-18 (rollback lifted 2026-07-12T21:30:00Z)"
-    },
-    "no_separate_executor_reason": "this token designates no executor separate from its binder: the episode actor executes under the same warrant, and the binder ROLE remains independently recorded",
-    "owning_episode": "ep-deploy-hold-4"
-   }
-  },
-  {
-   "schema": "claim-ledger.schema.json",
-   "instance": {
-    "episode_id": "ep-deploy-hold-4",
-    "claims": [
-     {
-      "claim_id": "claim-authentic",
-      "proposition": "DIR-17 is a faithful copy of the issued directive",
-      "target": {
-       "identity_key": "DIR-17",
-       "version": "1"
-      },
-      "property_class": "provenance",
-      "success_surface": "the directive record",
-      "verification_status": "validated",
-      "analysis": {
-       "analysis_id": "deploy-governance",
-       "version": "3.2"
-      },
-      "evidence_inapplicable_reason": "this example records the governance token and the ledger only; no evidence item is registered in the bundle, so no evidence id can honestly be cited",
-      "currency_exempt": true
-     },
-     {
-      "claim_id": "claim-in-force",
-      "proposition": "DIR-17 currently binds this deployment",
-      "target": {
-       "identity_key": "DIR-17",
-       "version": "1"
-      },
-      "property_class": "provenance",
-      "success_surface": "the current governance state",
-      "depends_on_tokens": [
-       "tok-rollback-dir-17"
-      ],
-      "verification_status": "stale",
-      "non_claims": [
-       "authenticity is not force"
-      ],
-      "analysis": {
-       "analysis_id": "deploy-governance",
-       "version": "3.2"
-      },
-      "evidence_inapplicable_reason": "this example records the governance token and the ledger only; no evidence item is registered in the bundle, so no evidence id can honestly be cited"
-     }
-    ],
-    "residuals": [
-     {
-      "burden_id": "b-supersession-check",
-      "description": "verify directive currency against the supersession chain",
-      "disposition": "unresolved",
-      "responsible_queue": "deploy-governance review queue",
-      "next_review_condition": "at the incident review for the 2026-07-12 deployment hold, or on the next invocation of a recovered directive, whichever comes first"
-     }
-    ],
-    "closure_claim": {
-     "level": "acted under current instructions",
-     "asserted_by": "on-call-agent"
+    {
+      "schema": "verdict-record.schema.json",
+      "instance": {
+        "episode_id": "ep-deploy-hold-4",
+        "required_path": [
+          "EVIDENCE_SUPPORT",
+          "PROCEDURE_RELIABLE",
+          "EVIDENCE_CURRENT",
+          "GOV_CONFIG_ADEQUATE",
+          "GOV_POLICY_ADEQUATE",
+          "GOV_TOKEN_ADEQUATE",
+          "EXECUTION_FAITHFUL",
+          "EX_ANTE_JUSTIFIED",
+          "ROUTE_ADMISSIBLE",
+          "CLOSURE_TRUTHFUL"
+        ],
+        "statuses": {
+          "RESULT_CORRECT": "fail",
+          "EVIDENCE_SUPPORT": "pass",
+          "PROCEDURE_RELIABLE": "pass",
+          "EVIDENCE_CURRENT": "fail",
+          "GOV_CONFIG_ADEQUATE": "pass",
+          "GOV_POLICY_ADEQUATE": "pass",
+          "GOV_TOKEN_ADEQUATE": "fail",
+          "EXECUTION_FAITHFUL": "pass",
+          "EX_ANTE_JUSTIFIED": "pass",
+          "ROUTE_ADMISSIBLE": "pass",
+          "CLOSURE_TRUTHFUL": "fail",
+          "TOKEN_TRUTH_LINKED": "fail",
+          "ROBUST_NEIGHBORHOOD": "not-applicable",
+          "ROUTE_QUALITY": "not-applicable"
+        },
+        "na_reasons": {
+          "ROBUST_NEIGHBORHOOD": "no predeclared robustness obligation",
+          "ROUTE_QUALITY": "advisory; quality not at issue"
+        },
+        "claim_verdicts": [
+          {
+            "claim_id": "claim-authentic",
+            "result_correct": "pass",
+            "token_truth_linked": "pass"
+          },
+          {
+            "claim_id": "claim-in-force",
+            "result_correct": "fail",
+            "token_truth_linked": "fail"
+          }
+        ],
+        "per_token_v3c": [
+          {
+            "token_id": "tok-rollback-dir-17",
+            "status": "fail",
+            "failing_conjunct": "Current"
+          }
+        ],
+        "pathway_state": "defective",
+        "index": {
+          "analysis_id": "deploy-governance",
+          "analysis_version": "3.2",
+          "actor": "incident-reviewer",
+          "decision_time": "2026-07-13T09:00:00Z",
+          "information_state": "the recovered DIR-17 export, the supersession chain including DIR-18, and the deployment hold record, as available at 2026-07-13T09:00:00Z"
+        },
+        "claim_reasoning_paths": [
+          {
+            "claim_id": "claim-authentic",
+            "req_reason": [
+              "EVIDENCE_SUPPORT",
+              "PROCEDURE_RELIABLE",
+              "GOV_CONFIG_ADEQUATE",
+              "GOV_POLICY_ADEQUATE",
+              "EXECUTION_FAITHFUL",
+              "EX_ANTE_JUSTIFIED"
+            ],
+            "reasoning_path_adequate": "adequate"
+          },
+          {
+            "claim_id": "claim-in-force",
+            "req_reason": [
+              "EVIDENCE_SUPPORT",
+              "PROCEDURE_RELIABLE",
+              "EVIDENCE_CURRENT",
+              "GOV_CONFIG_ADEQUATE",
+              "GOV_POLICY_ADEQUATE",
+              "GOV_TOKEN_ADEQUATE",
+              "EXECUTION_FAITHFUL",
+              "EX_ANTE_JUSTIFIED"
+            ],
+            "reasoning_path_adequate": "defective"
+          }
+        ]
+      }
     }
-   }
-  },
-  {
-   "schema": "verdict-record.schema.json",
-   "instance": {
-    "episode_id": "ep-deploy-hold-4",
-    "required_path": [
-     "EVIDENCE_SUPPORT",
-     "PROCEDURE_RELIABLE",
-     "EVIDENCE_CURRENT",
-     "GOV_CONFIG_ADEQUATE",
-     "GOV_POLICY_ADEQUATE",
-     "GOV_TOKEN_ADEQUATE",
-     "EXECUTION_FAITHFUL",
-     "EX_ANTE_JUSTIFIED",
-     "ROUTE_ADMISSIBLE",
-     "CLOSURE_TRUTHFUL"
-    ],
-    "statuses": {
-     "RESULT_CORRECT": "fail",
-     "EVIDENCE_SUPPORT": "pass",
-     "PROCEDURE_RELIABLE": "pass",
-     "EVIDENCE_CURRENT": "fail",
-     "GOV_CONFIG_ADEQUATE": "pass",
-     "GOV_POLICY_ADEQUATE": "pass",
-     "GOV_TOKEN_ADEQUATE": "fail",
-     "EXECUTION_FAITHFUL": "pass",
-     "EX_ANTE_JUSTIFIED": "pass",
-     "ROUTE_ADMISSIBLE": "pass",
-     "CLOSURE_TRUTHFUL": "fail",
-     "TOKEN_TRUTH_LINKED": "fail",
-     "ROBUST_NEIGHBORHOOD": "not-applicable",
-     "ROUTE_QUALITY": "not-applicable"
-    },
-    "na_reasons": {
-     "ROBUST_NEIGHBORHOOD": "no predeclared robustness obligation",
-     "ROUTE_QUALITY": "advisory; quality not at issue"
-    },
-    "claim_verdicts": [
-     {
-      "claim_id": "claim-authentic",
-      "result_correct": "pass",
-      "token_truth_linked": "pass"
-     },
-     {
-      "claim_id": "claim-in-force",
-      "result_correct": "fail",
-      "token_truth_linked": "fail"
-     }
-    ],
-    "per_token_v3c": [
-     {
-      "token_id": "tok-rollback-dir-17",
-      "status": "fail",
-      "failing_conjunct": "Current"
-     }
-    ],
-    "pathway_state": "defective",
-    "index": {
-     "analysis_id": "deploy-governance",
-     "analysis_version": "3.2",
-     "actor": "incident-reviewer",
-     "decision_time": "2026-07-13T09:00:00Z",
-     "information_state": "the recovered DIR-17 export, the supersession chain including DIR-18, and the deployment hold record, as available at 2026-07-13T09:00:00Z"
-    },
-    "claim_reasoning_paths": [
-     {
-      "claim_id": "claim-authentic",
-      "req_reason": [
-       "EVIDENCE_SUPPORT",
-       "PROCEDURE_RELIABLE",
-       "GOV_CONFIG_ADEQUATE",
-       "GOV_POLICY_ADEQUATE",
-       "EXECUTION_FAITHFUL",
-       "EX_ANTE_JUSTIFIED"
-      ],
-      "reasoning_path_adequate": "adequate"
-     },
-     {
-      "claim_id": "claim-in-force",
-      "req_reason": [
-       "EVIDENCE_SUPPORT",
-       "PROCEDURE_RELIABLE",
-       "EVIDENCE_CURRENT",
-       "GOV_CONFIG_ADEQUATE",
-       "GOV_POLICY_ADEQUATE",
-       "GOV_TOKEN_ADEQUATE",
-       "EXECUTION_FAITHFUL",
-       "EX_ANTE_JUSTIFIED"
-      ],
-      "reasoning_path_adequate": "defective"
-     }
-    ]
-   }
-  }
- ]
+  ]
 }

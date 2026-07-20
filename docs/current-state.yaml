@@ -76,9 +76,9 @@ authored:
     pdfs: reproducibly built and visually inspected draft artifacts
     legal_publication: open on license, identity, peer review, and external submission
 derived:
-  source_tree_digest: 5d5f161368e177ec8175602a262e6b315ce7443422d82f7bd126339d28e6dde4
+  source_tree_digest: 028efc44feb2a8f44507f3d3e336e68d715ee9c54df8d5eeb1a73bdaf37de34b
   source_tree_digest_policy: docs/project-state-inputs.yaml
-  tracked_files: 289
+  tracked_files: 292
   decision_ids:
   - '0001'
   - '0002'
@@ -144,7 +144,7 @@ derived:
     reqpath: 5
     latent_state: 7
     negative: 11
-    invalid_records: 45
+    invalid_records: 48
   pdfs:
     orthability-divine-speech-athari-draft.pdf:
       sha256: c78c9dcc0b0e5e53eba2a36788a1ff6b94cc6e8116539591b9611f1a8bce07e5

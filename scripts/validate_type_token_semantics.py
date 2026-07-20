@@ -164,6 +164,16 @@ def main():
           "not a new primitive verdict" in note or "NOT a registry verdict" in note
           or "No primitive `SOUND_REASON` verdict" in note)
 
+    # R5 regression (audit B9): the pre-R4 shorthand "objective given A" was
+    # withdrawn, and the note once carried a duplicated splice that restated it
+    # after its own withdrawal sentence. The withdrawal must be present; the
+    # restating fragment must never return.
+    check("the withdrawn 'objective given A' shorthand is only mentioned as withdrawn",
+          "is withdrawn" in note
+          and "objective given `A` and the governance data" not in note)
+    check("the shorthand appears exactly once — inside its own withdrawal sentence",
+          note.count("objective given `A`") == 1)
+
     print("TOTAL: %d failures" % len(FAILS))
     sys.exit(1 if FAILS else 0)
 

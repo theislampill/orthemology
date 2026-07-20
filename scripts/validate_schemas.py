@@ -39,11 +39,26 @@ def main():
         resources.append((doc.get("$id", fn), Resource.from_contents(doc)))
     registry = Registry().with_resources(resources)
 
-    check("all 8 expected schemas present",
+    # R5 wording fix (audit M5): the 8 are the required historical CORE subset,
+    # not the whole inventory — the full inventory is asserted separately
+    # against the generated current state.
+    check("all 8 core schemas present",
           {"analysis.schema.json", "orthemma.schema.json", "metaortheme.schema.json",
            "metaorthemma.schema.json", "orthing-episode.schema.json", "verdict-record.schema.json",
            "handoff.schema.json", "claim-ledger.schema.json"} <= set(schemas),
           str(sorted(schemas)))
+    try:
+        import yaml
+        state = yaml.safe_load(open(os.path.join(ROOT, "docs", "current-state.yaml"),
+                                    encoding="utf-8"))
+        declared = state["derived"]["schemas"]
+        check("the complete schema inventory declared by current state compiles "
+              "(%d schemas)" % len(declared),
+              set(declared) == set(schemas),
+              "declared=%s present=%s" % (sorted(set(declared) - set(schemas)),
+                                          sorted(set(schemas) - set(declared))))
+    except Exception as e:
+        check("schema inventory cross-check against current state", False, str(e))
 
     for fn, doc in schemas.items():
         try:
