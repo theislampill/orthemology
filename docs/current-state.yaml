@@ -65,7 +65,7 @@ authored:
     pdfs: reproducibly built and visually inspected draft artifacts
     legal_publication: open on license, identity, peer review, and external submission
 derived:
-  source_tree_digest: 1f9514b83b167b763a65c468673be706479a3ed7d90e3026e6c50c91ffaea8a6
+  source_tree_digest: 0e94b063a991ad9e5664abd58f316b21e594af19cd9c1f7a164ac9e7bb76db23
   source_tree_digest_policy: docs/project-state-inputs.yaml
   tracked_files: 255
   decision_ids:
@@ -150,7 +150,7 @@ derived:
     pilot0_v1: 988a6522498df73ad1c7b0f73961a054ff20862d50fff6d644d0274877412772
     pilot0_v2: a1edbd2c5e2f2df598b4a6d01a52229c455b3b68d043f10046053d0a3622a2a2
   source_status_summary:
-    SECONDARY_VERIFIED: 6
+    SECONDARY_VERIFIED: 9
     SECONDARY_RECONSTRUCTION: 2
     PRIMARY_TEXT_EXACT: 3
     PRIMARY_WORK_THEME: 1

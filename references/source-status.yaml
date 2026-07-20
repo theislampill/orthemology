@@ -253,6 +253,77 @@ claims:
     wording split to Ash'ari-vs-Kullabi only. al-Taftazani is an Ash'ari-leaning commentator on a
     Maturidi matn - stated inline in the paper.
 
+# --- sequential latent-variable related work (Decision 0015; bounded related-work scope only) ---
+- id: LAT-1
+  locus: docs/related-work/LATENT-STATE-INFERENCE-AND-ORTHEMOLOGY.md; docs/decisions/0015-latent-state-observation-and-representation-boundary.md; manuscript section 12.1
+  claim_level: related-work report about a published study's reported findings
+  claim: >-
+    a published sequential-learning study reports that several compared models can reach the
+    endpoint while only one compared model matched the reported longitudinal trajectory, and that
+    high task performance can occur without the global representation geometry the study measured
+  source: >-
+    Sun, Weinan et al., "Learning produces an orthogonalized state machine in the hippocampus",
+    Nature 640(8057):165-175, 2025
+  source_type: secondary scholarship (primary research article in another field)
+  doi: 10.1038/s41586-024-08548-w
+  locus_exact: article as published (open access, CC BY 4.0; PMC11964937)
+  status: SECONDARY_VERIFIED
+  verification_date: 2026-07-20
+  wording_directly_checked: false
+  page_edition_dependent: false
+  school_flag: none (systems neuroscience)
+  support: >-
+    supports ONLY the bounded abstract claim that endpoint performance and endpoint representation
+    do not by themselves determine the learning trajectory or mechanism. Does not identify latent
+    states with orthemes; does not validate orthemology; supplies no etymological support for
+    "ortheme"; bears nothing on fitrah, metaphysical orthability, Necessary Being, or divine Speech
+  notes: >-
+    Bibliographic record officially verified via Crossref in the R4 pass. The R4 independent review
+    did NOT re-open or reproduce the underlying experimental procedures - out of scope by the
+    controlling instruction; the repository claim is a bounded report of the source's own reported
+    findings, and the trajectory-match claim is scoped AMONG THE COMPARED MODELS UNDER THE REPORTED
+    EVALUATION, never universally.
+- id: LAT-2
+  locus: docs/related-work/LATENT-STATE-INFERENCE-AND-ORTHEMOLOGY.md; docs/decisions/0015-latent-state-observation-and-representation-boundary.md
+  claim_level: related-work report of a modeling mechanism
+  claim: the clone-structured hidden-state mechanism exists in the published modeling literature
+  source: >-
+    George, Dileep et al., "Clone-structured graph representations enable flexible learning and
+    vicarious evaluation of cognitive maps", Nature Communications 12:2392, 2021
+  source_type: secondary scholarship (primary research article in another field)
+  doi: 10.1038/s41467-021-22559-5
+  locus_exact: article as published (open access)
+  status: SECONDARY_VERIFIED
+  verification_date: 2026-07-20
+  wording_directly_checked: false
+  page_edition_dependent: false
+  school_flag: none (computational modeling)
+  support: supports only the existence and character of the modeling mechanism cited as related work
+  notes: >-
+    Expands CSCG as clone-structured COGNITIVE graph; the 2024/2025 literature uses clone-structured
+    CAUSAL graph. Rajeev V. Rikhye (this entry) is a DIFFERENT person from Rajkumar Vasudeva Raju
+    (first author of LAT-3); see the Decision 0015 section 8 correction.
+- id: LAT-3
+  locus: docs/related-work/LATENT-STATE-INFERENCE-AND-ORTHEMOLOGY.md; docs/decisions/0015-latent-state-observation-and-representation-boundary.md
+  claim_level: related-work report of a theoretical framing
+  claim: the latent-sequence framing of spatial representation exists in the published literature
+  source: >-
+    Vasudeva Raju, Rajkumar et al., "Space is a latent sequence: A theory of the hippocampus",
+    Science Advances 10(31):eadm8470, 2024
+  source_type: secondary scholarship (primary research article in another field)
+  doi: 10.1126/sciadv.adm8470
+  locus_exact: article as published (open access)
+  status: SECONDARY_VERIFIED
+  verification_date: 2026-07-20
+  wording_directly_checked: false
+  page_edition_dependent: false
+  school_flag: none (computational modeling)
+  support: supports only the existence of the latent-sequence framing cited as related work
+  notes: >-
+    FIRST-AUTHOR CORRECTION carried from Decision 0015 section 8: the controlling owner amendment
+    gave "Rajeev V. Raju", which is wrong - a conflation with Rajeev V. Rikhye of LAT-2. The
+    verified first author is Rajkumar Vasudeva Raju. The erroneous form must not be reintroduced.
+
 # --- project's own extensions (no external source claimed) ---
 - id: EXT-1
   locus: theory/orthemic-core-formalization.md; manuscript

@@ -834,6 +834,19 @@ axis of the executor, not of the episode's correctness or adequacy.
 
 ---
 
+**Optional latent-variable extension (Decision 0015).** A declared analysis `A` may
+optionally carry sequential latent-variable apparatus (`Z_A`, transitions `P_A`, latent
+candidate sets/posteriors, and concrete internal representations `y`). That apparatus is
+**non-primitive and optional**: it adds nothing to the settled ontology of this
+formalization, a latent state is not an ortheme, a posterior is not `O*(m; A)`, and
+representational geometry is neither necessary nor sufficient for orthemic distinctness
+or for pathway adequacy. The bridge `ProfileOf_A ⊆ Z_A × Π_A` is partial and must be
+exhibited, never assumed; latent labels are non-identifiable up to relabelling absent
+declared anchoring or a validated alignment map. **Every core claim of this formalization
+remains statable without the latent layer.** Declaring it is a version event on `A`. See
+`docs/decisions/0015-latent-state-observation-and-representation-boundary.md` and
+`docs/related-work/LATENT-STATE-INFERENCE-AND-ORTHEMOLOGY.md`.
+
 ## Status ledger
 
 **Accepted (analytic/definitional):** level-indexing via `ι_n` with no

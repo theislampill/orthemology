@@ -108,3 +108,31 @@ Related nomenclature note: the 2021 paper expands CSCG as clone-structured **cog
 ## Consequences
 
 New: `docs/related-work/LATENT-STATE-INFERENCE-AND-ORTHEMOLOGY.md` (bounded related-work note with the mapping table and scope limits); `examples/latent-state-sensory-aliasing.md` (worked case); `tests/latent-state-fixtures.json` with `scripts/validate_latent_state_fixtures.py` (fixtures LS-1…LS-7, plus machine-checked anti-conflation assertions); `references/latent-state-additions.bib` (bibliography fragment; three OFFICIAL-PUBLISHER-VERIFIED entries with the Raju correction noted). The validator fails closed on any fixture asserting an identity this decision forbids.
+
+---
+
+## Amendment (2026-07-20, R4 independent review) — precision corrections and completed integration
+
+The body above stands. The independent audit (§8) found the repository integration incomplete and several formulations stronger than the machinery supports. Both are repaired here; the anti-conflation rules of §§1–7 are preserved unchanged.
+
+### A1. Precision corrections to the body
+
+1. **"Six-way" vs seven rows.** §1's table has seven numbered rows because row 2 is the declared analysis `A` — the *index*, not one of the represented objects. Read the heading as **six represented object kinds (rows 1, 3, 4, 5, 6, 7) plus the analysis index (row 2)**. The count of distinguished objects is unchanged; the label was imprecise.
+2. **Non-identifiability is conditional, not absolute.** §3's "identified only up to permutation and relabelling" holds **absent semantic anchoring or alignment constraints**. Anchoring constraints (a declared, validated correspondence between labels and an external referent) can make labels meaningful; the default, with no such constraint declared, is non-identifiability.
+3. **Transport is conditionally prohibited.** §6's "never transportable" means: **not transportable without an explicit, validated cross-version alignment/transport map**. Where such a map is exhibited and validated, transport is permitted and must be recorded like any other carry (which claim, from which version, to which, on what warrant). Silent transport remains an `EVIDENCE_CURRENT` failure.
+4. **Statability is scoped to core claims.** §1's non-primitivity clause is too strong as written for extension-specific claims. The correct requirement: **every CORE orthemology claim must remain statable without the latent apparatus.** An optional declared extension may state extension-specific claims in its own declared vocabulary; what it may not do is make a core claim depend on the optional layer.
+5. **The five rebinding categories may co-occur.** §5's categories are distinct *kinds* of change, not mutually exclusive events: one revision can be simultaneously an emission rebinding and a transition-model revision, and a metaortheme revision can accompany an analysis-version change. What §5 forbids is leaving unstated *which* changed — not asserting that only one did.
+6. **Model artifact identity is distinct from analysis version.** A fitted model artifact (its weights, its fit, its checkpoint) carries its **own identity and version**, distinct from the version of the analysis `A` that declares the latent layer. Refitting the same declared model on the same declared analysis yields a new model artifact without necessarily re-versioning `A`; conversely re-versioning `A` does not silently re-identify an artifact. Both must be recorded when a claim depends on either.
+7. **LS "checks" are contract assertions, not empirical validation.** The LS-1…LS-7 counts are deterministic contract assertions over authored fixtures. They establish that the repository's own anti-conflation rules are machine-enforced on those fixtures. They are **not** empirical evidence, not a validation of any claim about cognition, and not a measurement of anything.
+
+### A2. Completed repository integration
+
+The three bibliographic records were merged from the orphan fragment into `references/orthemology.bib` and the fragment was retired; `scripts/validate_claim_sources.py` now **fails on any stray `.bib` fragment**, requires each of the three keys to be present in the main bibliography and to carry a source-status row by DOI, and forbids the erroneous first-author form in any author field. Rows **LAT-1…LAT-3** were added to `references/source-status.yaml`, rows 36–38 to `docs/sourcing/SOURCING-LEDGER.md`, and one row to `docs/sourcing/CLAIM-SOURCE-MATRIX.md`. The manuscript gained the bounded related-work subsection **§12.1**, and `theory/orthemic-core-formalization.md` gained a concise cross-reference before its status ledger.
+
+### A3. Scope boundary observed by this review
+
+Per the controlling instruction, this review inspected **only** the repository's already-authored abstract boundary, formal distinctions, source metadata, and citation integration. It did **not** re-open, reproduce, or operationalize the underlying experimental procedures, and launched no domain-specific research lane. The bounded claim carried into the manuscript is exactly:
+
+> A published sequential-learning study provides a neighbouring example in which ambiguous immediate observations are disambiguated by sequence-sensitive latent-state inference; final task performance and final representation do not by themselves determine the learning trajectory or mechanism. This does not identify latent states with orthemes and does not validate orthemology.
+
+The source's reported findings — that several compared models can reach an endpoint while only one compared model matched the reported longitudinal trajectory, and that high task performance can occur without the global representation geometry measured in that study — are reported **as that source's reported findings**, scoped among the compared models under the reported evaluation, never universally. Nothing from this source bears on fiṭrah, metaphysical orthability, Necessary Being, or divine Speech.

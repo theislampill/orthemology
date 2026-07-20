@@ -1,6 +1,6 @@
 # Related work — sequential latent-variable inference under ambiguous observations
 
-**Status:** bounded related-work note (Decision 0015). Analytic; **no empirical claim is made by this project**, and nothing here is validation of orthemology. Notation follows `docs/notation-registry.yaml`; verdicts follow `docs/verdict-registry.yaml`. Bibliography fragment: `references/latent-state-additions.bib`.
+**Status:** bounded related-work note (Decision 0015). Analytic; **no empirical claim is made by this project**, and nothing here is validation of orthemology. Notation follows `docs/notation-registry.yaml`; verdicts follow `docs/verdict-registry.yaml`. Bibliography: `references/orthemology.bib` (the R4 independent review merged the former `latent-state-additions.bib` fragment into the main database and retired it, so no bibliography surface escapes CI resolution); per-claim source status: rows LAT-1..LAT-3 in `references/source-status.yaml`.
 
 **Inference-boundary legend** (as in `companion/CONCRETE-AND-SOUND-REASON.md` §1 and the R3 sourcing ledger): **[direct-source]** (reported from a named source), **[secondary-reconstruction]**, **[synthesis]** (across sources), **[orthemological extension]** (this project's own mapping). Every substantive claim below carries a tag.
 
