@@ -11,7 +11,7 @@
 
 ## Automated text-structure QA (every build and every `--check`)
 
-Per PDF: no `|---|` pipe-table rows, no literal `> ` blockquote markers, no raw `[text](http…)` Markdown links, no standalone `---` rules in the extracted text — all PASS (each of these was PRESENT in the R2 artifacts); every source H1/H2 heading present in the PDF text layer (alphanumeric-normalized; smart-quote aware) — PASS; page counts recorded in sidecars.
+Per PDF: no `|---|` pipe-table rows, no literal `> ` blockquote markers, no raw square-bracket-parenthesis Markdown link syntax, no standalone `---` rules in the extracted text — all PASS (each of these was PRESENT in the R2 artifacts); every source H1/H2 heading present in the PDF text layer (alphanumeric-normalized; smart-quote aware) — PASS; page counts recorded in sidecars.
 
 ## Visual pass (every page rendered to PNG at 110 ppi via `--png`; inspected)
 
