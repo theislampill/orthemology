@@ -1,0 +1,40 @@
+{
+  "record": "R4 PR #3 fresh Fable substitution-recovery review — durable execution state",
+  "session_surfaced_model": "claude-fable-5",
+  "session_substitution_observed": false,
+  "historical_attributed_observations": {
+    "present_thread_initial_internal_harness_claim": "claude-fable-5",
+    "owner_observed_ui_substitution": "claude-opus-4.8",
+    "adjudicated": false
+  },
+  "topology": {
+    "main": "63d15ecf4aa50672265100b7d5620af764421862",
+    "pr_number": 3,
+    "pr_head_at_start": "de19ccf4b3525ae536bb9bc163aefcd9f4bfedf8",
+    "last_pre_substitution_commit": "00cf05d6",
+    "first_post_substitution_commit": "b2742d1",
+    "quarantine_head": "8df2886ebf34139ae6f0f33e74200472ba6eb0d1",
+    "review_branch": "review/r4-pr3-fable-recovery",
+    "review_branch_base": "de19ccf4b3525ae536bb9bc163aefcd9f4bfedf8"
+  },
+  "last_completed_action": "Phase A read-only reproduction complete; READONLY-REPRODUCTION.md written",
+  "changed_files": [
+    "docs/project-closure/r4-fresh-fable-review/READONLY-REPRODUCTION.md",
+    "docs/project-closure/r4-fresh-fable-review/AUTONOMOUS-REVIEW-STATE.json"
+  ],
+  "tests_run": [
+    {"tree": "worktree @ 63d15ecf (clean)", "suite": "commit's validate.yml, 17 steps", "result": "0 failing"},
+    {"tree": "worktree @ 00cf05d6 (clean)", "suite": "commit's validate.yml, 25 steps", "result": "0 failing"},
+    {"tree": "worktree @ de19ccf4 (clean)", "suite": "commit's validate.yml, 25 steps", "result": "1 failing: build_pdfs.py --check (TOTAL: 4 failures)"},
+    {"tree": "worktree @ 8df2886e (clean)", "suite": "commit's validate.yml, 26 steps", "result": "4 failing: validate_repo, generate_current_state --check, validate_current_state, manifest step; build_pdfs --check GREEN"}
+  ],
+  "unresolved_findings": [
+    "Phase B: pre-substitution range review pending",
+    "Phase C: post-substitution hunk review pending (Decision 0015 bounded, source-status scope, CIR, ATH-3, internal references)",
+    "Phase D: quarantine selective port pending (interruption record, PDFs, ref validator, state/manifest regeneration order)",
+    "Phase E: full acceptance + tracked-cache preventive check + adversarial probes pending",
+    "Phase F: six adversarial passes pending",
+    "Sign-off, PR update, merge, merged-main verification pending"
+  ],
+  "next_action": "Commit Phase A artifacts on review/r4-pr3-fable-recovery, then begin Phase B (pre-substitution range review 25d035a..00cf05d6)"
+}
