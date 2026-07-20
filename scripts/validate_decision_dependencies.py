@@ -96,7 +96,14 @@ def main():
             check("%s: no other decision restates the superseded formula" % sym,
                   not offenders, "restated in: %s" % offenders)
 
-            # 5. current normative surfaces are free of the superseded formula
+            # 5. current normative surfaces are free of the superseded formula.
+            # Scans .md AND .yaml/.yml (a YAML gloss is as normative as prose), and
+            # matches an ASCII-normalized form (∧ -> AND, := -> =, whitespace
+            # collapsed) so a paraphrase cannot evade the exact-string scan — the
+            # defect class the R4 fresh review found in docs/semantic-roles.yaml.
+            def norm(s):
+                return re.sub(r"\s+", " ", s.replace("∧", "AND").replace(":=", "="))
+
             offenders = []
             for base, _dirs, fns in os.walk(ROOT):
                 rel_base = os.path.relpath(base, ROOT).replace("\\", "/")
@@ -105,12 +112,15 @@ def main():
                                         "artifacts", "terminology")):
                     continue
                 for fn in fns:
-                    if not fn.endswith(".md"):
+                    if not fn.endswith((".md", ".yaml", ".yml")):
                         continue
                     rel = (rel_base + "/" + fn).lstrip("./")
-                    if old["formula"] in read(rel):
+                    if rel == "docs/decision-status.yaml":
+                        continue  # the supersession registry records the formula by design
+                    if norm(old["formula"]) in norm(read(rel)):
                         offenders.append(rel)
-            check("%s: no current normative surface states the superseded formula" % sym,
+            check("%s: no current normative surface states the superseded formula "
+                  "(md+yaml, ASCII-normalized)" % sym,
                   not offenders, str(offenders))
 
     print("TOTAL: %d failures" % len(FAILS))

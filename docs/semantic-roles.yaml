@@ -28,7 +28,7 @@ roles:
     gloss: non-factive conjunction over ReqPath(e) (O2); never factive
     bearer: episode
   - id: strict_reason_soundness
-    gloss: DERIVED predicate StrictlySoundReasoning_q(e) = PathwayAdequate(e) AND TOKEN_TRUTH_LINKED_q(e); factive claim-wise; NOT a registry verdict
+    gloss: DERIVED predicate StrictlySoundReasoning_q(e) = ReasoningPathAdequate_q(e) AND TOKEN_TRUTH_LINKED_q(e) (Decision 0011; Decision 0009's whole-episode conjunct is superseded); factive claim-wise; NOT a registry verdict
     bearer: episode-claim
     derived: true
   - id: fitrah_condition
