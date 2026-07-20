@@ -1,0 +1,486 @@
+% Orthemology reference database (R2 sourcing pass, 2026-07-20).
+% Verification status per entry is tracked in docs/sourcing/SOURCING-LEDGER.md.
+% No entry is cited for more than its ledger row says it establishes.
+
+% ---------- Decision-theoretic / RL / state abstraction ----------
+
+@article{kaelbling1998pomdp,
+  author  = {Kaelbling, Leslie Pack and Littman, Michael L. and Cassandra, Anthony R.},
+  title   = {Planning and acting in partially observable stochastic domains},
+  journal = {Artificial Intelligence},
+  volume  = {101},
+  number  = {1--2},
+  pages   = {99--134},
+  year    = {1998},
+  doi     = {10.1016/S0004-3702(98)00023-X}
+}
+
+@inproceedings{littman2001predictive,
+  author    = {Littman, Michael L. and Sutton, Richard S. and Singh, Satinder},
+  title     = {Predictive representations of state},
+  booktitle = {Advances in Neural Information Processing Systems 14 (NIPS 2001)},
+  year      = {2001}
+}
+
+@article{givan2003equivalence,
+  author  = {Givan, Robert and Dean, Thomas and Greig, Matthew},
+  title   = {Equivalence notions and model minimization in {M}arkov decision processes},
+  journal = {Artificial Intelligence},
+  volume  = {147},
+  number  = {1--2},
+  pages   = {163--223},
+  year    = {2003},
+  doi     = {10.1016/S0004-3702(02)00376-4}
+}
+
+@article{larsen1991bisimulation,
+  author  = {Larsen, Kim G. and Skou, Arne},
+  title   = {Bisimulation through probabilistic testing},
+  journal = {Information and Computation},
+  volume  = {94},
+  number  = {1},
+  pages   = {1--28},
+  year    = {1991},
+  doi     = {10.1016/0890-5401(91)90030-6}
+}
+
+@incollection{hopcroft1971nlogn,
+  author    = {Hopcroft, John},
+  title     = {An $n \log n$ algorithm for minimizing states in a finite automaton},
+  booktitle = {Theory of Machines and Computations},
+  editor    = {Kohavi, Zvi and Paz, Azaria},
+  publisher = {Academic Press},
+  pages     = {189--196},
+  year      = {1971},
+  doi       = {10.1016/B978-0-12-417750-5.50022-1}
+}
+
+@article{fisher1922foundations,
+  author  = {Fisher, Ronald A.},
+  title   = {On the mathematical foundations of theoretical statistics},
+  journal = {Philosophical Transactions of the Royal Society of London. Series A},
+  volume  = {222},
+  pages   = {309--368},
+  year    = {1922},
+  doi     = {10.1098/rsta.1922.0009}
+}
+
+@article{crutchfield1989inferring,
+  author  = {Crutchfield, James P. and Young, Karl},
+  title   = {Inferring statistical complexity},
+  journal = {Physical Review Letters},
+  volume  = {63},
+  number  = {2},
+  pages   = {105--108},
+  year    = {1989},
+  doi     = {10.1103/PhysRevLett.63.105}
+}
+
+@article{shalizi2001computational,
+  author  = {Shalizi, Cosma Rohilla and Crutchfield, James P.},
+  title   = {Computational mechanics: pattern and prediction, structure and simplicity},
+  journal = {Journal of Statistical Physics},
+  volume  = {104},
+  pages   = {817--879},
+  year    = {2001},
+  doi     = {10.1023/A:1010388907793}
+}
+
+% ---------- Classification, abstention, selective prediction ----------
+
+@article{chow1970reject,
+  author  = {Chow, C. K.},
+  title   = {On optimum recognition error and reject tradeoff},
+  journal = {IEEE Transactions on Information Theory},
+  volume  = {16},
+  number  = {1},
+  pages   = {41--46},
+  year    = {1970},
+  doi     = {10.1109/TIT.1970.1054406}
+}
+
+@article{tsoumakas2007multilabel,
+  author  = {Tsoumakas, Grigorios and Katakis, Ioannis},
+  title   = {Multi-label classification: an overview},
+  journal = {International Journal of Data Warehousing and Mining},
+  volume  = {3},
+  number  = {3},
+  pages   = {1--13},
+  year    = {2007},
+  doi     = {10.4018/jdwm.2007070101}
+}
+
+@article{silla2011hierarchical,
+  author  = {Silla, Carlos N. and Freitas, Alex A.},
+  title   = {A survey of hierarchical classification across different application domains},
+  journal = {Data Mining and Knowledge Discovery},
+  volume  = {22},
+  pages   = {31--72},
+  year    = {2011},
+  doi     = {10.1007/s10618-010-0175-9}
+}
+
+@article{elyaniv2010foundations,
+  author  = {El-Yaniv, Ran and Wiener, Yair},
+  title   = {On the foundations of noise-free selective classification},
+  journal = {Journal of Machine Learning Research},
+  volume  = {11},
+  pages   = {1605--1641},
+  year    = {2010}
+}
+
+@inproceedings{geifman2017selective,
+  author    = {Geifman, Yonatan and El-Yaniv, Ran},
+  title     = {Selective classification for deep neural networks},
+  booktitle = {Advances in Neural Information Processing Systems 30 (NeurIPS 2017)},
+  year      = {2017}
+}
+
+@inproceedings{geifman2019biasreduced,
+  author    = {Geifman, Yonatan and Uziel, Guy and El-Yaniv, Ran},
+  title     = {Bias-reduced uncertainty estimation for deep neural classifiers},
+  booktitle = {International Conference on Learning Representations (ICLR)},
+  year      = {2019},
+  note      = {Derives the AURC and E-AURC metrics}
+}
+
+@inproceedings{traub2024overcoming,
+  author    = {Traub, Jeremias and Bungert, Till J. and Luth, Carsten T. and Baumgartner, Michael and Maier-Hein, Klaus H. and Maier-Hein, Lena and Jaeger, Paul F.},
+  title     = {Overcoming common flaws in the evaluation of selective classification systems},
+  booktitle = {Advances in Neural Information Processing Systems 37 (NeurIPS 2024)},
+  year      = {2024},
+  note      = {arXiv:2407.01032; methodological criticism of AURC-style evaluation; proposes AUGRC}
+}
+
+@article{scheirer2013openset,
+  author  = {Scheirer, Walter J. and de Rezende Rocha, Anderson and Sapkota, Archana and Boult, Terrance E.},
+  title   = {Toward open set recognition},
+  journal = {IEEE Transactions on Pattern Analysis and Machine Intelligence},
+  volume  = {35},
+  number  = {7},
+  pages   = {1757--1772},
+  year    = {2013},
+  doi     = {10.1109/TPAMI.2012.256}
+}
+
+@inproceedings{hendrycks2017baseline,
+  author    = {Hendrycks, Dan and Gimpel, Kevin},
+  title     = {A baseline for detecting misclassified and out-of-distribution examples in neural networks},
+  booktitle = {International Conference on Learning Representations (ICLR)},
+  year      = {2017}
+}
+
+% ---------- Information value, stopping ----------
+
+@article{howard1966voi,
+  author  = {Howard, Ronald A.},
+  title   = {Information value theory},
+  journal = {IEEE Transactions on Systems Science and Cybernetics},
+  volume  = {2},
+  number  = {1},
+  pages   = {22--26},
+  year    = {1966},
+  doi     = {10.1109/TSSC.1966.300074}
+}
+
+@book{wald1947sequential,
+  author    = {Wald, Abraham},
+  title     = {Sequential Analysis},
+  publisher = {John Wiley \& Sons},
+  year      = {1947}
+}
+
+% ---------- Provenance, audit, assurance, testing ----------
+
+@techreport{w3c2013provdm,
+  author      = {Moreau, Luc and Missier, Paolo},
+  title       = {{PROV-DM}: The {PROV} Data Model},
+  institution = {World Wide Web Consortium},
+  type        = {W3C Recommendation},
+  year        = {2013},
+  note        = {30 April 2013},
+  url         = {https://www.w3.org/TR/prov-dm/}
+}
+
+@techreport{chen1998metamorphic,
+  author      = {Chen, Tsong Yueh and Cheung, Shing Chi and Yiu, Siu Ming},
+  title       = {Metamorphic testing: a new approach for generating next test cases},
+  institution = {Department of Computer Science, Hong Kong University of Science and Technology},
+  number      = {HKUST-CS98-01},
+  year        = {1998},
+  note        = {arXiv:2002.12543 (later posting)}
+}
+
+@article{chen2018metamorphicsurvey,
+  author  = {Chen, Tsong Yueh and Kuo, Fei-Ching and Liu, Huai and Poon, Pak-Lok and Towey, Dave and Tse, T. H. and Zhou, Zhi Quan},
+  title   = {Metamorphic testing: a review of challenges and opportunities},
+  journal = {ACM Computing Surveys},
+  volume  = {51},
+  number  = {1},
+  pages   = {4:1--4:27},
+  year    = {2018},
+  doi     = {10.1145/3143561}
+}
+
+@techreport{iaasb2009isa330,
+  author      = {{International Auditing and Assurance Standards Board}},
+  title       = {International Standard on Auditing 330: The Auditor's Responses to Assessed Risks},
+  institution = {IFAC},
+  year        = {2009},
+  note        = {Distinguishes tests of controls (control effectiveness) from substantive procedures (outcome testing)}
+}
+
+@techreport{iso31000risk,
+  author      = {{International Organization for Standardization}},
+  title       = {{ISO} 31000:2018 Risk management --- Guidelines},
+  institution = {ISO},
+  year        = {2018}
+}
+
+% ---------- Epistemology ----------
+
+@article{gettier1963justified,
+  author  = {Gettier, Edmund L.},
+  title   = {Is justified true belief knowledge?},
+  journal = {Analysis},
+  volume  = {23},
+  number  = {6},
+  pages   = {121--123},
+  year    = {1963},
+  doi     = {10.1093/analys/23.6.121}
+}
+
+@incollection{goldman1979justified,
+  author    = {Goldman, Alvin I.},
+  title     = {What is justified belief?},
+  booktitle = {Justification and Knowledge},
+  editor    = {Pappas, George S.},
+  publisher = {D. Reidel},
+  pages     = {1--23},
+  year      = {1979},
+  doi       = {10.1007/978-94-009-9493-5_1}
+}
+
+@book{plantinga1993warrant,
+  author    = {Plantinga, Alvin},
+  title     = {Warrant and Proper Function},
+  publisher = {Oxford University Press},
+  year      = {1993},
+  doi       = {10.1093/0195078640.001.0001}
+}
+
+@book{millikan1984language,
+  author    = {Millikan, Ruth Garrett},
+  title     = {Language, Thought, and Other Biological Categories},
+  publisher = {MIT Press},
+  year      = {1984}
+}
+
+@incollection{sep-reliabilism,
+  author    = {Goldman, Alvin and Beddor, Bob},
+  title     = {Reliabilist Epistemology},
+  booktitle = {The Stanford Encyclopedia of Philosophy},
+  editor    = {Zalta, Edward N.},
+  year      = {2021},
+  url       = {https://plato.stanford.edu/entries/reliabilism/}
+}
+
+@incollection{sep-generality,
+  author    = {Bishop, Michael A. and Trout, J. D.},
+  title     = {The generality problem for reliabilism (see also Conee and Feldman 1998)},
+  booktitle = {see Conee, Earl and Feldman, Richard, ``The Generality Problem for Reliabilism'', Philosophical Studies 89 (1998): 1--29},
+  year      = {1998},
+  note      = {Primary: Conee \& Feldman 1998, doi:10.1023/A:1004243308503}
+}
+
+@incollection{sep-types-tokens,
+  author    = {Wetzel, Linda},
+  title     = {Types and Tokens},
+  booktitle = {The Stanford Encyclopedia of Philosophy},
+  editor    = {Zalta, Edward N.},
+  year      = {2018},
+  url       = {https://plato.stanford.edu/entries/types-tokens/}
+}
+
+% ---------- Philosophy of religion / metaphysics (companion lane) ----------
+
+@incollection{sep-transcendental,
+  author    = {Stern, Robert},
+  title     = {Transcendental Arguments},
+  booktitle = {The Stanford Encyclopedia of Philosophy},
+  editor    = {Zalta, Edward N.},
+  year      = {2019},
+  url       = {https://plato.stanford.edu/entries/transcendental-arguments/}
+}
+
+@article{stroud1968transcendental,
+  author  = {Stroud, Barry},
+  title   = {Transcendental arguments},
+  journal = {The Journal of Philosophy},
+  volume  = {65},
+  number  = {9},
+  pages   = {241--256},
+  year    = {1968},
+  doi     = {10.2307/2024395}
+}
+
+@incollection{sep-abstract-objects,
+  author    = {Falguera, Jos{\'e} L. and Mart{\'i}nez-Vidal, Concha and Rosen, Gideon},
+  title     = {Abstract Objects},
+  booktitle = {The Stanford Encyclopedia of Philosophy},
+  editor    = {Zalta, Edward N.},
+  year      = {2022},
+  url       = {https://plato.stanford.edu/entries/abstract-objects/}
+}
+
+@incollection{sep-modality-varieties,
+  author    = {Kment, Boris},
+  title     = {Varieties of Modality},
+  booktitle = {The Stanford Encyclopedia of Philosophy},
+  editor    = {Zalta, Edward N.},
+  year      = {2021},
+  url       = {https://plato.stanford.edu/entries/modality-varieties/}
+}
+
+@incollection{sep-ontological,
+  author    = {Oppy, Graham},
+  title     = {Ontological Arguments},
+  booktitle = {The Stanford Encyclopedia of Philosophy},
+  editor    = {Zalta, Edward N.},
+  year      = {2019},
+  url       = {https://plato.stanford.edu/entries/ontological-arguments/}
+}
+
+@incollection{sep-cosmological,
+  author    = {Reichenbach, Bruce},
+  title     = {Cosmological Argument},
+  booktitle = {The Stanford Encyclopedia of Philosophy},
+  editor    = {Zalta, Edward N.},
+  year      = {2022},
+  url       = {https://plato.stanford.edu/entries/cosmological-argument/}
+}
+
+@article{anderson2011lord,
+  author  = {Anderson, James N. and Welty, Greg},
+  title   = {The Lord of noncontradiction: an argument for {G}od from logic},
+  journal = {Philosophia Christi},
+  volume  = {13},
+  number  = {2},
+  pages   = {321--338},
+  year    = {2011},
+  doi     = {10.5840/pc201113229}
+}
+
+@book{plantinga2011conflict,
+  author    = {Plantinga, Alvin},
+  title     = {Where the Conflict Really Lies: Science, Religion, and Naturalism},
+  publisher = {Oxford University Press},
+  year      = {2011},
+  note      = {Ch. 10: the evolutionary argument against naturalism},
+  doi       = {10.1093/acprof:oso/9780199812097.001.0001}
+}
+
+% ---------- Hume (primary) and scholarship ----------
+
+@book{hume1739treatise,
+  author    = {Hume, David},
+  title     = {A Treatise of Human Nature},
+  year      = {1739--1740},
+  publisher = {John Noon (London)},
+  note      = {Critical edition: Norton \& Norton (eds.), Oxford University Press, 2000. Cited by book.part.section.paragraph (T 1.3.6, T 1.4.1, T 1.4.7)}
+}
+
+@book{hume1748enquiry,
+  author    = {Hume, David},
+  title     = {An Enquiry Concerning Human Understanding},
+  year      = {1748},
+  publisher = {A. Millar (London)},
+  note      = {Critical edition: Beauchamp (ed.), Oxford University Press, 2000. Cited by section.paragraph (EHU 4--5, 12)}
+}
+
+@incollection{sep-hume,
+  author    = {Morris, William Edward and Brown, Charlotte R.},
+  title     = {David Hume},
+  booktitle = {The Stanford Encyclopedia of Philosophy},
+  editor    = {Zalta, Edward N.},
+  year      = {2023},
+  url       = {https://plato.stanford.edu/entries/hume/}
+}
+
+@incollection{sep-induction,
+  author    = {Henderson, Leah},
+  title     = {The Problem of Induction},
+  booktitle = {The Stanford Encyclopedia of Philosophy},
+  editor    = {Zalta, Edward N.},
+  year      = {2022},
+  url       = {https://plato.stanford.edu/entries/induction-problem/}
+}
+
+@book{garrett1997cognition,
+  author    = {Garrett, Don},
+  title     = {Cognition and Commitment in Hume's Philosophy},
+  publisher = {Oxford University Press},
+  year      = {1997}
+}
+
+@article{kemp_smith1905naturalism,
+  author  = {Kemp Smith, Norman},
+  title   = {The naturalism of {H}ume ({I})},
+  journal = {Mind},
+  volume  = {14},
+  number  = {54},
+  pages   = {149--173},
+  year    = {1905},
+  doi     = {10.1093/mind/XIV.2.149}
+}
+
+% ---------- Islamic primary and classical sources (companion lane; Atharī paper) ----------
+
+@book{quran,
+  title = {al-Qur{\textquotesingle}{\=a}n al-Kar{\=i}m},
+  note  = {Cited by s{\=u}rah:{\=a}yah. English renderings marked ``interpretation of the meaning''}
+}
+
+@book{bukhari-khalq,
+  author    = {al-Bukh{\=a}r{\=i}, Mu{\d h}ammad ibn Ism{\=a}{\textquotesingle}{\=i}l},
+  title     = {Khalq Af{\textquotesingle}{\=a}l al-{\textquotesingle}Ib{\=a}d},
+  year      = {9th century CE / 3rd century AH},
+  note      = {On the createdness of the servants' actions and the uncreated Qur{\textquotesingle}{\=a}n; loci cited from the printed edition used by the secondary compilation (see ledger)}
+}
+
+@book{tahawi-aqida,
+  author = {al-{\d T}a{\d h}{\=a}w{\=i}, Ab{\=u} Ja{\textquotesingle}far},
+  title  = {al-{\textquotesingle}Aq{\=i}dah al-{\d T}a{\d h}{\=a}wiyyah},
+  year   = {10th century CE / 4th century AH},
+  note   = {With the commentary (Shar{\d h}) of Ibn Ab{\=i} al-{\textquotesingle}Izz al-{\d H}anaf{\=i}}
+}
+
+@book{ibntaymiyya-majmu,
+  author = {Ibn Taymiyyah, A{\d h}mad ibn {\textquotesingle}Abd al-{\d H}al{\=i}m},
+  title  = {Majm{\=u}{\textquotesingle} al-Fat{\=a}w{\=a}},
+  note   = {Vol. 12 (al-Qur{\textquotesingle}{\=a}n Kal{\=a}m All{\=a}h); loci 12/53, 12/98, 23/349 cited via the secondary compilation (see ledger)}
+}
+
+@book{ibnqayyim-sawaiq,
+  author = {Ibn al-Qayyim, Mu{\d h}ammad ibn Ab{\=i} Bakr},
+  title  = {Mukhta{\d s}ar a{\d s}-{\d S}aw{\=a}{\textquotesingle}iq al-Mursalah},
+  note   = {Loci 503--510 cited via the secondary compilation (see ledger)}
+}
+
+@book{ibnuthaymin-wasitiyya,
+  author = {Ibn {\textquotesingle}Uthaym{\=i}n, Mu{\d h}ammad ibn {\d S}{\=a}li{\d h}},
+  title  = {Shar{\d h} al-{\textquotesingle}Aq{\=i}dah al-W{\=a}si{\d t}iyyah},
+  note   = {Loci 1/418--441 cited via the secondary compilation (see ledger)}
+}
+
+@book{ibnuthaymin-lumah,
+  author = {Ibn {\textquotesingle}Uthaym{\=i}n, Mu{\d h}ammad ibn {\d S}{\=a}li{\d h}},
+  title  = {Shar{\d h} Lum{\textquotesingle}at al-I{\textquotesingle}tiq{\=a}d},
+  note   = {p. 73 cited via the secondary compilation (see ledger)}
+}
+
+@book{lalikai-sharh,
+  author = {al-L{\=a}lik{\=a}{\textquotesingle}{\=i}, Hibatull{\=a}h ibn al-{\d H}asan},
+  title  = {Shar{\d h} U{\d s}{\=u}l I{\textquotesingle}tiq{\=a}d Ahl as-Sunnah wa-l-Jam{\=a}{\textquotesingle}ah},
+  note   = {Entry 493 (the 550-scholar report) cited via the secondary compilation (see ledger)}
+}

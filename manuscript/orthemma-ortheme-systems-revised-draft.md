@@ -769,17 +769,17 @@ Established constructs largely theorise the type side, and each facet of the pre
 
 | Facet of this paper | Nearest established neighbor |
 |---|---|
-| Plural, hierarchical profiles | multi-label and hierarchical classification |
-| Maintained candidate structure | POMDP belief states; predictive-state representations |
-| Abstention, escalation, quarantine | reject-option classification; selective prediction; open-set recognition; OOD detection |
-| Deciding when to stop investigating | value-of-information and optimal stopping |
-| Residual obligations with owners | risk registers; hazard logs |
-| Placement statuses and transitions | ticket/workflow state machines |
-| Lineage, versions, audit records | W3C PROV, audit trails, ML lineage systems |
-| Correct result through defective process | process reliabilism (for beliefs) |
-| Perturbation probes for weak rules | metamorphic testing |
-| Rule adequacy vs outcome testing | assurance practice (control-effectiveness vs outcome testing) |
-| Type individuation and safe merger | sufficient statistics; causal states; bisimulation and state abstraction; automata minimisation |
+| Plural, hierarchical profiles | multi-label and hierarchical classification (Tsoumakas & Katakis 2007; Silla & Freitas 2011) |
+| Maintained candidate structure | POMDP belief states (Kaelbling, Littman & Cassandra 1998); predictive-state representations (Littman, Sutton & Singh 2001) |
+| Abstention, escalation, quarantine | reject-option classification (Chow 1970); selective prediction (El-Yaniv & Wiener 2010; Geifman & El-Yaniv 2017); open-set recognition (Scheirer et al. 2013); OOD detection (Hendrycks & Gimpel 2017) |
+| Deciding when to stop investigating | value-of-information (Howard 1966) and sequential/optimal stopping (Wald 1947) |
+| Residual obligations with owners | risk registers and risk-management guidelines (ISO 31000:2018); hazard logs |
+| Placement statuses and transitions | ticket/workflow state machines (commodity practice; no single citable origin is load-bearing here) |
+| Lineage, versions, audit records | W3C PROV-DM (Moreau & Missier 2013); audit trails; ML lineage systems |
+| Correct result through defective process | process reliabilism, for beliefs (Goldman 1979; the structure of Gettier 1963) |
+| Perturbation probes for weak rules | metamorphic testing (Chen, Cheung & Yiu 1998; Chen et al. 2018) |
+| Rule adequacy vs outcome testing | assurance practice: tests of controls vs substantive procedures (ISA 330) |
+| Type individuation and safe merger | sufficient statistics (Fisher 1922); causal states (Crutchfield & Young 1989; Shalizi & Crutchfield 2001); bisimulation and MDP state abstraction (Larsen & Skou 1991; Givan, Dean & Greig 2003); automata minimisation (Hopcroft 1971) |
 
 The type-individuation mathematics is inherited outright. The claimed residual is exactly three things. (1) **The union:** no listed framework supplies the others, and the
 observational record shows a disciplined practice assembling the union piecewise at real cost rather than possessing it by default. (2) **The lifecycle:** the explicit,
@@ -880,6 +880,50 @@ Three honesty notes close the paper. *Branch 11 is one case:* fifty governed sto
 on it says so. *Base rates are unknown:* the casebook establishes existence and recurrence of the failure patterns, not their frequency in any population of projects; nothing here
 estimates how often the machinery would matter. *The record is single-owner:* the longitudinal record was produced and curated within one operation by one owner, and independent
 replication of even the observational tier does not yet exist.
+
+---
+
+## 16. Conclusion
+
+This paper proposed the orthemma–ortheme system as an integration discipline for the token side of classification and handling work. Its center of gravity is one relation — a concrete occurrence instantiating repeatable operational state-types relative to a declared, versioned analysis — and one further object built on that relation: the orthing episode, an auditable record on which result correctness and pathway adequacy are separately adjudicable. Around these, six formal additions close gaps the prior text could only gesture at: versioned identity with labeled lineage makes "right finding, wrong copy" a statable error; analysis/actor/time indexing makes ground truth explicit and disagreement diagnosable; typed, scoped, expiring evidence makes the green-but-mis-scoped validator visible; factorized candidates with route composition make partial action well-formed; per-burden closure makes false closure a checkable record defect; and episode reification with the registry-normalized verdict vector makes the stopped clock, the justified rare miss, the defective binding, and the stale directive all first-class, machine-checkable cases (fixtures F1–F7).
+
+What the paper deliberately does not claim is as much a result as what it claims. Every facet has a conceded neighbor; the type-individuation mathematics is inherited; the internal records that motivated the design are not independently auditable and validate nothing; the coined vocabulary is fully paraphrasable and strictly benchmark-gated; and the three designed studies — the false-closure benchmark, the episode-reification fixture suite, and the terminology comparison — have not been run. The framework's standing is therefore: analytically coherent (deterministically checked), operationally motivated, empirically unvalidated. The next honest step is not more theory but the execution of Section 13 as preregistered — and the framework has been built so that a negative result would be recordable, on its own terms, as exactly what it is.
+
+## 17. Data and Materials Availability
+
+All public materials of this project — the formal core, this manuscript, the multi-actor note, machine-readable schemas and worked examples, deterministic fixtures and validators, the verdict and notation registries, decision records, and the designed (unrun) terminology-evaluation packets — are available in the public repository (`theislampill/orthemology` on GitHub), with a SHA-256 release manifest under `docs/provenance/`. **Not available:** the internal casebook and the internal longitudinal engineering record referenced as design motivation (Sections 1.4, 11.4, 13.4). They contain private working material, are not rights-cleared for publication, and are therefore not independently auditable; no quantitative claim in this paper rests on them, and they are cited only as motivation. No human-subject data exists; no experiment has been conducted.
+
+## References
+
+- Chen, T. Y., Cheung, S. C., & Yiu, S. M. (1998). *Metamorphic testing: a new approach for generating next test cases.* Technical Report HKUST-CS98-01, Department of Computer Science, HKUST.
+- Chen, T. Y., Kuo, F.-C., Liu, H., Poon, P.-L., Towey, D., Tse, T. H., & Zhou, Z. Q. (2018). Metamorphic testing: a review of challenges and opportunities. *ACM Computing Surveys*, 51(1), 4:1–4:27. doi:10.1145/3143561
+- Chow, C. K. (1970). On optimum recognition error and reject tradeoff. *IEEE Transactions on Information Theory*, 16(1), 41–46. doi:10.1109/TIT.1970.1054406
+- Crutchfield, J. P., & Young, K. (1989). Inferring statistical complexity. *Physical Review Letters*, 63(2), 105–108. doi:10.1103/PhysRevLett.63.105
+- El-Yaniv, R., & Wiener, Y. (2010). On the foundations of noise-free selective classification. *Journal of Machine Learning Research*, 11, 1605–1641.
+- Fisher, R. A. (1922). On the mathematical foundations of theoretical statistics. *Philosophical Transactions of the Royal Society A*, 222, 309–368. doi:10.1098/rsta.1922.0009
+- Geifman, Y., & El-Yaniv, R. (2017). Selective classification for deep neural networks. *NeurIPS 30*.
+- Geifman, Y., Uziel, G., & El-Yaniv, R. (2019). Bias-reduced uncertainty estimation for deep neural classifiers. *ICLR*. (Derivation of AURC/E-AURC.)
+- Gettier, E. L. (1963). Is justified true belief knowledge? *Analysis*, 23(6), 121–123. doi:10.1093/analys/23.6.121
+- Givan, R., Dean, T., & Greig, M. (2003). Equivalence notions and model minimization in Markov decision processes. *Artificial Intelligence*, 147(1–2), 163–223. doi:10.1016/S0004-3702(02)00376-4
+- Goldman, A. I. (1979). What is justified belief? In G. S. Pappas (Ed.), *Justification and Knowledge* (pp. 1–23). D. Reidel. doi:10.1007/978-94-009-9493-5_1
+- Hendrycks, D., & Gimpel, K. (2017). A baseline for detecting misclassified and out-of-distribution examples in neural networks. *ICLR*.
+- Hopcroft, J. (1971). An n log n algorithm for minimizing states in a finite automaton. In *Theory of Machines and Computations* (pp. 189–196). Academic Press.
+- Howard, R. A. (1966). Information value theory. *IEEE Transactions on Systems Science and Cybernetics*, 2(1), 22–26. doi:10.1109/TSSC.1966.300074
+- International Auditing and Assurance Standards Board (2009). *ISA 330: The Auditor's Responses to Assessed Risks.* IFAC.
+- International Organization for Standardization (2018). *ISO 31000:2018 Risk management — Guidelines.*
+- Kaelbling, L. P., Littman, M. L., & Cassandra, A. R. (1998). Planning and acting in partially observable stochastic domains. *Artificial Intelligence*, 101(1–2), 99–134. doi:10.1016/S0004-3702(98)00023-X
+- Larsen, K. G., & Skou, A. (1991). Bisimulation through probabilistic testing. *Information and Computation*, 94(1), 1–28. doi:10.1016/0890-5401(91)90030-6
+- Littman, M. L., Sutton, R. S., & Singh, S. (2001). Predictive representations of state. *NIPS 14*.
+- Moreau, L., & Missier, P. (Eds.) (2013). *PROV-DM: The PROV Data Model.* W3C Recommendation, 30 April 2013. https://www.w3.org/TR/prov-dm/
+- Scheirer, W. J., Rocha, A., Sapkota, A., & Boult, T. E. (2013). Toward open set recognition. *IEEE TPAMI*, 35(7), 1757–1772. doi:10.1109/TPAMI.2012.256
+- Shalizi, C. R., & Crutchfield, J. P. (2001). Computational mechanics: pattern and prediction, structure and simplicity. *Journal of Statistical Physics*, 104, 817–879. doi:10.1023/A:1010388907793
+- Silla, C. N., & Freitas, A. A. (2011). A survey of hierarchical classification across different application domains. *Data Mining and Knowledge Discovery*, 22, 31–72. doi:10.1007/s10618-010-0175-9
+- Traub, J., Bungert, T. J., Lüth, C. T., Baumgartner, M., Maier-Hein, K. H., Maier-Hein, L., & Jaeger, P. F. (2024). Overcoming common flaws in the evaluation of selective classification systems. *NeurIPS 37*. arXiv:2407.01032
+- Tsoumakas, G., & Katakis, I. (2007). Multi-label classification: an overview. *International Journal of Data Warehousing and Mining*, 3(3), 1–13. doi:10.4018/jdwm.2007070101
+- Wald, A. (1947). *Sequential Analysis.* John Wiley & Sons.
+- Wetzel, L. (2018). Types and Tokens. In E. N. Zalta (Ed.), *The Stanford Encyclopedia of Philosophy.* https://plato.stanford.edu/entries/types-tokens/
+
+Machine-readable database with per-claim verification status: `references/orthemology.bib` and `docs/sourcing/SOURCING-LEDGER.md`.
 
 ---
 
