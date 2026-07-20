@@ -9,11 +9,24 @@
       "schema": "metaorthemma.schema.json",
       "instance": {
         "token_id": "t1",
-        "of_type": {"mu_id": "m", "mu_version": "1"},
-        "analysis": {"analysis_id": "a", "version": "1"},
-        "anchor": {"identity_key": "k", "version": "1"},
+        "of_type": {
+          "mu_id": "m",
+          "mu_version": "1"
+        },
+        "analysis": {
+          "analysis_id": "a",
+          "version": "1"
+        },
+        "anchor": {
+          "identity_key": "k",
+          "version": "1"
+        },
         "binding": {},
-        "binder": {"actor": "x", "binding_warrant": "w", "binding_time": "t"},
+        "binder": {
+          "actor": "x",
+          "binding_warrant": "w",
+          "binding_time": "t"
+        },
         "validity": {}
       }
     },
@@ -24,9 +37,16 @@
       "schema": "orthing-episode.schema.json",
       "instance": {
         "episode_id": "e1",
-        "occurrence": {"identity_key": "k", "version": "1", "kind": "case"},
+        "occurrence": {
+          "identity_key": "k",
+          "version": "1",
+          "kind": "case"
+        },
         "actor": "a",
-        "analysis": {"analysis_id": "a", "version": "1"},
+        "analysis": {
+          "analysis_id": "a",
+          "version": "1"
+        },
         "time": "t",
         "placement": {}
       }
@@ -38,8 +58,12 @@
       "schema": "verdict-record.schema.json",
       "instance": {
         "episode_id": "e1",
-        "required_path": ["EVIDENCE_SUPPORT"],
-        "statuses": {"EVIDENCE_SUPPORT": "fail"},
+        "required_path": [
+          "EVIDENCE_SUPPORT"
+        ],
+        "statuses": {
+          "EVIDENCE_SUPPORT": "fail"
+        },
         "pathway_state": "adequate"
       }
     },
@@ -54,7 +78,11 @@
         "statuses": {},
         "pathway_state": "adequate",
         "claim_verdicts": [
-          {"claim_id": "q1", "result_correct": "fail", "token_truth_linked": "pass"}
+          {
+            "claim_id": "q1",
+            "result_correct": "fail",
+            "token_truth_linked": "pass"
+          }
         ]
       }
     },
@@ -65,26 +93,52 @@
       "schema": "orthing-episode.schema.json",
       "instance": {
         "episode_id": "e1",
-        "occurrence": {"identity_key": "CASE-A", "version": "1", "kind": "case"},
+        "occurrence": {
+          "identity_key": "CASE-A",
+          "version": "1",
+          "kind": "case"
+        },
         "observation": "x",
         "evidence": [],
         "actor": "a",
         "warrant": null,
-        "analysis": {"analysis_id": "AN-1", "version": "1"},
+        "analysis": {
+          "analysis_id": "AN-1",
+          "version": "1"
+        },
         "time": "t",
         "policy": "p",
-        "placement": {"axis": "v"},
+        "placement": {
+          "axis": "v"
+        },
         "verdict_record_ref": null,
         "meta_tokens": [
           {
             "token_id": "t1",
-            "of_type": {"mu_id": "m", "mu_version": "1"},
-            "analysis": {"analysis_id": "AN-OTHER", "version": "9"},
-            "anchor": {"identity_key": "CASE-B", "version": "3"},
+            "of_type": {
+              "mu_id": "m",
+              "mu_version": "1"
+            },
+            "analysis": {
+              "analysis_id": "AN-OTHER",
+              "version": "9"
+            },
+            "anchor": {
+              "identity_key": "CASE-B",
+              "version": "3"
+            },
             "governed_component": "E",
-            "binding": {"x": 1},
-            "scope": {"claims": []},
-            "binder": {"actor": "x", "binding_warrant": "w", "binding_time": "t"},
+            "binding": {
+              "x": 1
+            },
+            "scope": {
+              "claims": []
+            },
+            "binder": {
+              "actor": "x",
+              "binding_warrant": "w",
+              "binding_time": "t"
+            },
             "validity": {}
           }
         ]
@@ -97,18 +151,41 @@
       "schema": "orthing-episode.schema.json",
       "instance": {
         "episode_id": "e1",
-        "occurrence": {"identity_key": "k", "version": "1", "kind": "case"},
+        "occurrence": {
+          "identity_key": "k",
+          "version": "1",
+          "kind": "case"
+        },
         "observation": "x",
         "evidence": [
-          {"evidence_id": "E1", "channel": "c", "property_class": "p", "scope": "s", "provenance": "pr", "validity": "v"},
-          {"evidence_id": "E1", "channel": "c2", "property_class": "p2", "scope": "s2", "provenance": "pr2", "validity": "v2"}
+          {
+            "evidence_id": "E1",
+            "channel": "c",
+            "property_class": "p",
+            "scope": "s",
+            "provenance": "pr",
+            "validity": "v"
+          },
+          {
+            "evidence_id": "E1",
+            "channel": "c2",
+            "property_class": "p2",
+            "scope": "s2",
+            "provenance": "pr2",
+            "validity": "v2"
+          }
         ],
         "actor": "a",
         "warrant": null,
-        "analysis": {"analysis_id": "a", "version": "1"},
+        "analysis": {
+          "analysis_id": "a",
+          "version": "1"
+        },
         "time": "t",
         "policy": "p",
-        "placement": {"axis": "v"},
+        "placement": {
+          "axis": "v"
+        },
         "verdict_record_ref": null
       }
     },
@@ -122,7 +199,9 @@
         "required_path": [],
         "statuses": {},
         "pathway_state": "adequate",
-        "totally_undeclared_field": {"anything": true},
+        "totally_undeclared_field": {
+          "anything": true
+        },
         "another_one": 42
       }
     },
@@ -133,8 +212,14 @@
       "schema": "verdict-record.schema.json",
       "instance": {
         "episode_id": "e1",
-        "required_path": ["EVIDENCE_SUPPORT", "GOV_TOKEN_ADEQUATE"],
-        "statuses": {"EVIDENCE_SUPPORT": "pass", "GOV_TOKEN_ADEQUATE": "not-applicable"},
+        "required_path": [
+          "EVIDENCE_SUPPORT",
+          "GOV_TOKEN_ADEQUATE"
+        ],
+        "statuses": {
+          "EVIDENCE_SUPPORT": "pass",
+          "GOV_TOKEN_ADEQUATE": "not-applicable"
+        },
         "pathway_state": "adequate"
       }
     },
@@ -149,7 +234,11 @@
         "statuses": {},
         "pathway_state": "adequate",
         "per_token_v3c": [
-          {"token_id": "GHOST-TOKEN", "status": "fail", "failing_conjunct": "Current"}
+          {
+            "token_id": "GHOST-TOKEN",
+            "status": "fail",
+            "failing_conjunct": "Current"
+          }
         ]
       }
     },
@@ -161,8 +250,42 @@
       "instance": {
         "episode_id": "e1",
         "required_path": [],
-        "statuses": {"SOUND_REASON": "pass"},
+        "statuses": {
+          "SOUND_REASON": "pass"
+        },
         "pathway_state": "adequate"
+      }
+    },
+    {
+      "id": "N11-false-closure-over-unresolved",
+      "why": "closure claim asserted while a residual is unresolved (the pre-reread state of examples/whole-state-reread.json) - Definition 13 machine floor",
+      "expect_layer": "semantic",
+      "schema": "claim-ledger.schema.json",
+      "instance": {
+        "episode_id": "ep-migration-close-9",
+        "claims": [],
+        "residuals": [
+          {
+            "burden_id": "B1-migrate-store",
+            "description": "move data",
+            "disposition": "validated-resolved",
+            "owner": null,
+            "trigger": null,
+            "risk_record": null
+          },
+          {
+            "burden_id": "B2-rollback-rehearsal",
+            "description": "acceptance basis voided by B1",
+            "disposition": "unresolved",
+            "owner": null,
+            "trigger": null,
+            "risk_record": null
+          }
+        ],
+        "closure_claim": {
+          "level": "done",
+          "asserted_by": "executor"
+        }
       }
     }
   ]

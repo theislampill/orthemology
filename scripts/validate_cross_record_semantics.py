@@ -49,8 +49,27 @@ def collect_issues(parts):
     issues = []
     episodes = [p["instance"] for p in parts if p["schema"] == "orthing-episode.schema.json"]
     verdicts = [p["instance"] for p in parts if p["schema"] == "verdict-record.schema.json"]
+    ledgers = [p["instance"] for p in parts if p["schema"] == "claim-ledger.schema.json"]
     standalone_tokens = {p["instance"]["token_id"] for p in parts
                          if p["schema"] == "metaorthemma.schema.json"}
+
+    # whole-state reread rule (Definition 13 machine floor; daee-epistemics
+    # import 2): a closure claim over an unresolved residual is ill-formed —
+    # UNLESS the bundle's verdict record for that episode convicts it
+    # (CLOSURE_TRUTHFUL fail/undetermined), in which case the record is a
+    # legitimate REPRESENTATION of a false closure (e.g. the O3 case, F6).
+    for led in ledgers:
+        if led.get("closure_claim") is not None:
+            bad = [r["burden_id"] for r in led.get("residuals", [])
+                   if r["disposition"] == "unresolved"]
+            if bad:
+                vr = next((v for v in verdicts
+                           if v.get("episode_id") == led.get("episode_id")), None)
+                convicted = vr is not None and vr.get("statuses", {}).get(
+                    "CLOSURE_TRUTHFUL") in ("fail", "undetermined")
+                if not convicted:
+                    issues.append("%s: closure claim asserted over unresolved residual(s) %s (false closure)"
+                                  % (led.get("episode_id", "?"), bad))
 
     for ep in episodes:
         eid = ep.get("episode_id", "?")

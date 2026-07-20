@@ -1,0 +1,43 @@
+{
+  "title": "Whole-state reread after a burden lands (daee-epistemics import 2)",
+  "note": "Two coupled burdens: B1 (migrate the store) and B2 (rollback rehearsal, whose plan depends on the OLD store). Resolving B1 invalidates B2's risk-acceptance basis: the reread after B1 lands re-dispositions B2 to unresolved instead of letting the episode close on the locally repaired item. The ledger below is the POST-REREAD state: B2 is honestly unresolved and, per Definition 13 (machine rule: validate_cross_record_semantics), no closure claim exists. The pre-reread false-closure variant (closure_claim asserted over an unresolved residual) is negative fixture N11 and must be rejected.",
+  "parts": [
+    {
+      "schema": "claim-ledger.schema.json",
+      "instance": {
+        "episode_id": "ep-migration-close-9",
+        "claims": [
+          {
+            "claim_id": "q-migrated",
+            "proposition": "all rows live in the new store and consumers read from it",
+            "target": {"identity_key": "svc-orders-store", "version": "v2"},
+            "property_class": "behavioral",
+            "success_surface": "read-path metrics on the new store",
+            "evidence_ids": ["ev-cutover-metrics-1"],
+            "warrant": "migration ticket MIG-114",
+            "verification_status": "validated"
+          }
+        ],
+        "residuals": [
+          {
+            "burden_id": "B1-migrate-store",
+            "description": "move data and switch consumers to the new store",
+            "disposition": "validated-resolved",
+            "owner": null,
+            "trigger": null,
+            "risk_record": null
+          },
+          {
+            "burden_id": "B2-rollback-rehearsal",
+            "description": "rehearse rollback; the accepted-risk record was written when rollback meant 'repoint to the old store' — B1's completion decommissioned that path, so the acceptance basis is void",
+            "disposition": "unresolved",
+            "owner": null,
+            "trigger": null,
+            "risk_record": null
+          }
+        ],
+        "closure_claim": null
+      }
+    }
+  ]
+}

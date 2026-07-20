@@ -101,8 +101,8 @@ def main():
                     state = "adequate"
                 check("example %s: pathway_state matches recomputation" % fn,
                       state == inst["pathway_state"], "computed=%s declared=%s" % (state, inst["pathway_state"]))
-    check("expected example files present (7)",
-          n_parts > 0 and len([f for f in os.listdir(edir) if f.endswith(".json")]) == 7,
+    check("expected example files present (8)",
+          n_parts > 0 and len([f for f in os.listdir(edir) if f.endswith(".json")]) == 8,
           str(sorted(f for f in os.listdir(edir) if f.endswith(".json"))))
 
     print("TOTAL: %d failures" % len(FAILS))
