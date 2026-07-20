@@ -39,7 +39,7 @@ d1af3906062076648a2df3681c372b0e43d4e0322739821a2ccf83329a130587  companion/sour
 121d212288e5f27f525dbe15ff2202c0839b9f7e490d50e745b76033b2f07a5d  docs/CITING.md
 a5a27123ab7d3f42cfca23e1c8ff5f37f2563c897d7b029555d67c0f30fd251d  docs/architecture-overview.md
 0dd851d413d1fd4a15fcff8d4a11de51266ce1fbb3bae28501feef9310012224  docs/claim-reason-requirements.yaml
-2bca28c1ab75c4f0d5ab6fd4d5bece79f6997b0e544d1cc9ca5aa8c3dfdac38c  docs/current-state.yaml
+ed1d0bd1f784937d509de3e9f5c55c9d0bec0e5e4e68c3a1c242a24db1973ec1  docs/current-state.yaml
 4676eb685882e14d069ede8fff2b99908a566647d841835bd22ce064e4baa3e8  docs/decision-status.yaml
 f014c45f78df78b6de99ff3e968c45332a7d18aedd4085fb36c6a57c65b536e4  docs/decisions/0001-analysis-relative-ground-truth.md
 d819e97e623fa8e20447ec9496cb2e932071b3fc54604df77c4c24396ecafe07  docs/decisions/0002-metaorthemma-configuration-token.md
@@ -92,6 +92,12 @@ b2fb56d8a37e80d35c6cf25675cf5ce9f54ff2ebe641536c841b9930cdc79d5a  docs/project-c
 c7a42cf4d36464ab83018475eba5a6f8f524fa46f94a05d76dd6cd21fc602a78  docs/project-closure/r4-fresh-fable-review/PRE-SUBSTITUTION-REVIEW.md
 3ffc3d1394bd81a406b7e41e77b0bbf3f9d0f17ffb6b31a8fd04f2fc3f38fbbb  docs/project-closure/r4-fresh-fable-review/QUARANTINE-PORT-REVIEW.md
 b11f9e9c755861f1ea5d66caa9ac5d5ffce493db11a2fec023d5d5d45f092836  docs/project-closure/r4-fresh-fable-review/READONLY-REPRODUCTION.md
+47d888521a7bd28ccbcc5df18c28969619fbfa3ec6f57d307b661a06e4891208  docs/project-closure/r4-fresh-fable-review/reviews/REVIEW-A-FORMAL-TYPE.md
+3fe5f7fbbb54e8a286d9af7b1f1e78f6e026a0511c708bdc3c79ab91d21571d6  docs/project-closure/r4-fresh-fable-review/reviews/REVIEW-B-SCHEMA-REFERENCE.md
+8bdfe780bfe52d0ec7f70417464b39c05fb856ac6967b629a4ec3cbc9262ffd1  docs/project-closure/r4-fresh-fable-review/reviews/REVIEW-C-SOURCE-ATTRIBUTION.md
+709d314f157c023371d60b4082b0c1a9426f778f04505c10bd49eb3b865f4c85  docs/project-closure/r4-fresh-fable-review/reviews/REVIEW-D-MANUSCRIPT-COMPANION.md
+147f6408a8331649806cc1792b07f133a61ae9c69abf27569531534b9c89124c  docs/project-closure/r4-fresh-fable-review/reviews/REVIEW-E-BUILD-STATE.md
+d1ea50c438944f6da2c346790bd837475281d5b0048e3783a0d310e4acb71d8b  docs/project-closure/r4-fresh-fable-review/reviews/REVIEW-F-PROVENANCE-CLOSURE.md
 050c30700eded2dec54e1ad1a455e77eb8ec95253243702766cbec527ed16a47  docs/project-closure/r4-independent-review/AUTONOMOUS-REVIEW-STATE.json
 abe4fedbb425ed03872da4d8632c500c42447912aa34b78c0c86056bf93dd57f  docs/project-closure/r4-independent-review/LATENT-RELATED-WORK-INTEGRATION-REVIEW.md
 1271a9aeeb80b8823dc9baa05db1506d1b17f366bd2735c3c36aa321b8965385  docs/project-closure/r4-independent-review/R4-PR3-READONLY-REPRODUCTION.md
