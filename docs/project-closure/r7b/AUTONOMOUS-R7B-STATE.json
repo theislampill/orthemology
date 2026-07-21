@@ -76,6 +76,12 @@
       "suite": "46/46 green; 5 PDFs byte-identical on rebuild; manifest matches; tree clean"
     }
   ],
-  "child_head": "set-after-final-commit",
+  "child_head": "1bd90b7c300efb890a517ea8161d20f6cd89c560",
+  "child_head_note": "head of the substantive R7B work; the state-finalize commit that adds this pointer is +1 and changes nothing else",
+  "child_pr": 9,
+  "child_pr_url": "https://github.com/theislampill/orthemology/pull/9",
+  "child_pr_base": "closure/r7-noetic-application-experiment-validity (the PR #8 branch, NOT main)",
+  "merged": false,
+  "next_action": "AWAIT fresh-Fable / owner review of PR #9 (every hunk + math + boundaries), then the protected merges (child -> PR #8 -> main). This Opus session performs NO merge and NO main push.",
   "no_merge_statement": "This child branch is an Opus CANDIDATE. It has not been merged into PR #8 or main. A fresh Fable session must review every hunk, verify the mathematics and conceptual boundaries, and perform the protected merges."
 }
