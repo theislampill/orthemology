@@ -47,6 +47,24 @@ BANNED_CURRENT = [
 
 REVIEW_STATE_VOCAB = {"fresh-session-review-completed"}
 
+R7D_BASE = "e34d2cd56057766f8f656a4ff3486eb34dad607e"
+R7E_HEAD_AT_OBSERVATION = "cbab14747835855d232448f648eefa1d4e36074e"
+R7E_SOL_FINDING_IDS = {
+    "R7E-SOL-F%03d" % n for n in range(1, 16)
+}
+R7E_PATHS = {
+    "applications/daee-epistemics/SOUND-DESCENT-MODEL-COMPARISON.md",
+    "artifacts/dynamic-orthing-noetic-learning-orthability-draft.pdf",
+    "artifacts/dynamic-orthing-noetic-learning-orthability-draft.sources.json",
+    "companion/DYNAMIC-ORTHABILITY-ARGUMENT-MAP.yaml",
+    "companion/dynamic-orthing-noetic-learning-and-orthability.md",
+    "docs/current-state.yaml",
+    "docs/project-closure/HISTORICAL-STATUS-INDEX.yaml",
+    "docs/project-closure/r7e/AUTONOMOUS-R7E-STATE.json",
+    "docs/project-closure/r7e/ORTHING-CANDIDATE-BACKLOG.md",
+    "docs/provenance/RELEASE-MANIFEST.sha256",
+}
+
 
 def check(name, ok, detail=""):
     print("[%s] %s%s" % ("PASS" if ok else "FAIL", name, (" — " + detail) if detail and not ok else ""))
@@ -153,6 +171,85 @@ def main():
     check("the pre-merge fresh-review state JSON is a historical snapshot",
           classify("docs/project-closure/r4-fresh-fable-review/AUTONOMOUS-REVIEW-STATE.json")
           == "historical-snapshot")
+
+    # 6a. R7E Sol independent-review control plane (Decision 0034). These
+    # records are current-candidate evidence only: never sign-off or merge
+    # readiness. Exact SHAs are timestamped observations, not HEAD contracts.
+    check("R7E-Sol control-plane prefix is current-candidate",
+          classify("docs/project-closure/r7e-sol/AUTONOMOUS-R7E-SOL-STATE.json")
+          == "current-candidate")
+
+    sol = json.loads(read(
+        "docs/project-closure/r7e-sol/AUTONOMOUS-R7E-SOL-STATE.json") or "{}")
+    obs = sol.get("r7e_observation") or {}
+    check("R7E-Sol state records the exact R7D base observation",
+          obs.get("base") == R7D_BASE, repr(obs.get("base")))
+    check("R7E-Sol state records the exact R7E head-at-observation",
+          obs.get("head_at_observation") == R7E_HEAD_AT_OBSERVATION,
+          repr(obs.get("head_at_observation")))
+    gate = sol.get("model_gate") or {}
+    check("R7E-Sol state records the controller-confirmed gpt-5.6-sol gate",
+          gate.get("required") == "gpt-5.6-sol"
+          and gate.get("selected") == "gpt-5.6-sol"
+          and gate.get("evidence") == "controller-confirmed-agent-model-selection"
+          and gate.get("environment_variable_observation") is False)
+    baseline = sol.get("baseline") or {}
+    check("R7E-Sol baseline accounts for 53 direct plus three unchanged UTF-8 reruns",
+          baseline.get("logical_validations") == 56
+          and baseline.get("passing") == 56
+          and baseline.get("direct_passes") == 53
+          and baseline.get("utf8_unchanged_reruns") == 3
+          and baseline.get("validator_logic_failures") == 0)
+    pdf = baseline.get("pdf_rebuild") or {}
+    check("R7E-Sol baseline records six byte-identical PDF rebuilds",
+          pdf.get("artifacts") == 6 and pdf.get("byte_identical") == 6)
+    check("R7E-Sol state refuses sign-off, readiness, and merge claims",
+          sol.get("independent_signoff") is False
+          and sol.get("ready_for_merge") is False
+          and sol.get("merged") is False)
+
+    matrix = yaml.safe_load(read(
+        "docs/project-closure/r7e-sol/R7E-INDEPENDENT-FINDING-MATRIX.yaml")) or {}
+    findings = matrix.get("findings") or []
+    finding_ids = [row.get("id") for row in findings]
+    check("R7E-Sol finding matrix has the complete unique finding-ID set",
+          set(finding_ids) == R7E_SOL_FINDING_IDS
+          and len(finding_ids) == len(set(finding_ids)), repr(finding_ids))
+    allowed_findings = {"reproduced", "refuted", "partially-reproduced", "unverified"}
+    allowed_terminal = {"open", "resolved", "deferred", "blocked"}
+    malformed_findings = [
+        str(row.get("id")) for row in findings
+        if row.get("disposition") not in allowed_findings
+        or not row.get("evidence")
+        or not str(row.get("severity", "")).strip()
+        or not isinstance(row.get("repair_task"), int)
+        or row.get("terminal_status") not in allowed_terminal
+    ]
+    check("every R7E-Sol finding has disposition, evidence, severity, repair task, and terminal status",
+          not malformed_findings, repr(malformed_findings))
+
+    hunk_text = read("docs/project-closure/r7e-sol/R7E-HUNK-DISPOSITION.md")
+    hunk_rows = re.findall(
+        r"^\|\s*`([^`]+)`\s*\|\s*`?(keep|revise|drop|provenance-only)`?\s*\|",
+        hunk_text, re.M)
+    hunk_paths = [path for path, _disposition in hunk_rows]
+    check("all ten R7E paths have exactly one allowed hunk disposition",
+          set(hunk_paths) == R7E_PATHS and len(hunk_paths) == len(R7E_PATHS),
+          repr(hunk_paths))
+    check("R7E PDF and release manifest are provenance-only",
+          ("artifacts/dynamic-orthing-noetic-learning-orthability-draft.pdf",
+           "provenance-only") in hunk_rows
+          and ("docs/provenance/RELEASE-MANIFEST.sha256", "provenance-only")
+          in hunk_rows)
+
+    d34 = (reg.get("decisions") or {}).get("0034") or {}
+    check("Decision 0034 is proposed-candidate on PR 12",
+          d34.get("status") == "proposed-candidate" and d34.get("pr") == 12)
+    d34_text = read("docs/decisions/0034-r7e-sol-independent-repair-contract.md")
+    check("Decision 0034 carries the Sol candidate and no-self-promotion boundary",
+          "SOL CANDIDATE" in d34_text
+          and "Status:** proposed-candidate" in d34_text
+          and "cannot self-promote" in d34_text)
 
     # 7. discharged owner action
     t = read("docs/project-closure/r4/R4-UNAVOIDABLE-OWNER-ACTIONS.md")
