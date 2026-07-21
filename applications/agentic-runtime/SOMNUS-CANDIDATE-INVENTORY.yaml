@@ -24,9 +24,11 @@ candidates:
   dependencies: [versioned activation contracts, captured occurrence identity]
   event_emissions: [orthability_assessed]
   authority_limit: may gate a claim but cannot erase capture, prove its own boundary, or authorize irreversible action
+  authority_boundary: {scope: bounded record or proposal production only, automatic_authorization: prohibited, automatic_execution: prohibited, automatic_writeback: prohibited, historical_rewrite: prohibited}
   residual_behavior: retain inapplicable and indeterminate attempts
   downstream_owner: external agent-host routing owner
   non_claims: [not an executable skill, not deployed, does not prove evaluator correctness]
+  non_claim_boundaries: {executable_skill: not-implemented, deployed_runtime: not-implemented, correctness: not-established, empirical_utility: not-established}
 - <<: *candidate
   candidate_id: orthing-ledger
   layer: infrastructure

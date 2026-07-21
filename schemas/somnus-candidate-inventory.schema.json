@@ -1,0 +1,60 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "$id": "orthemology/somnus-candidate-inventory.schema.json",
+  "title": "Outline-only Somnus candidate inventory",
+  "type": "object",
+  "additionalProperties": false,
+  "required": ["schema", "status", "execution", "runtime owner", "claim_status", "candidates"],
+  "properties": {
+    "schema": {"const": "orthemology-somnus-candidate-inventory-v1"},
+    "status": {"const": "outline-only"},
+    "execution": {"const": "not implemented"},
+    "runtime owner": {"const": "external/downstream"},
+    "claim_status": {"type": "object"},
+    "candidates": {
+      "type": "array", "minItems": 1,
+      "items": {
+        "type": "object", "additionalProperties": false,
+        "required": ["candidate_id", "status", "execution", "layer", "inputs", "outputs", "dependencies", "event_emissions", "authority_limit", "authority_boundary", "residual_behavior", "downstream_owner", "non_claims", "non_claim_boundaries"],
+        "properties": {
+          "candidate_id": {"type": "string", "minLength": 1},
+          "status": {"const": "outline-only"},
+          "execution": {"const": "not implemented"},
+          "layer": {"type": "string", "minLength": 1},
+          "inputs": {"$ref": "#/$defs/nonempty_strings"},
+          "outputs": {"$ref": "#/$defs/nonempty_strings"},
+          "dependencies": {"$ref": "#/$defs/nonempty_strings"},
+          "event_emissions": {"$ref": "#/$defs/nonempty_strings"},
+          "authority_limit": {"type": "string", "minLength": 1},
+          "authority_boundary": {
+            "type": "object", "additionalProperties": false,
+            "required": ["scope", "automatic_authorization", "automatic_execution", "automatic_writeback", "historical_rewrite"],
+            "properties": {
+              "scope": {"type": "string", "minLength": 1},
+              "automatic_authorization": {"const": "prohibited"},
+              "automatic_execution": {"const": "prohibited"},
+              "automatic_writeback": {"const": "prohibited"},
+              "historical_rewrite": {"const": "prohibited"}
+            }
+          },
+          "residual_behavior": {"type": "string", "minLength": 1},
+          "downstream_owner": {"type": "string", "minLength": 1},
+          "non_claims": {"$ref": "#/$defs/nonempty_strings"},
+          "non_claim_boundaries": {
+            "type": "object", "additionalProperties": false,
+            "required": ["executable_skill", "deployed_runtime", "correctness", "empirical_utility"],
+            "properties": {
+              "executable_skill": {"const": "not-implemented"},
+              "deployed_runtime": {"const": "not-implemented"},
+              "correctness": {"const": "not-established"},
+              "empirical_utility": {"const": "not-established"}
+            }
+          }
+        }
+      }
+    }
+  },
+  "$defs": {
+    "nonempty_strings": {"type": "array", "minItems": 1, "uniqueItems": true, "items": {"type": "string", "minLength": 1}}
+  }
+}

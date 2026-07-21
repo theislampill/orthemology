@@ -574,7 +574,7 @@ collective_execution: not-implemented
 ```
 <!-- somnus-claim-status-projection:end -->
 
-The bounded v0 operation is controlled residual-recurrence assessment. Fingerprint equality establishes only a structural recurrence candidate; distinct episode IDs do not prove independence, a threshold is only a review trigger, and suspected locus remains distinct from causal diagnosis or intervention. Assessment, intervention disposition, proposal, authorization, application, and later outcome evaluation remain separate. The schemas and fixtures under `schemas/` and `examples/somnus/` are offline conformance artifacts, not a live ledger, scheduler, analyzer, writeback engine, collective network, or learning result (Decision 0035).
+The bounded v0 operation is controlled residual-recurrence assessment. Fingerprint equality establishes only a structural recurrence candidate; support resolves through typed episode, session, orthing, actor, source-family, input-family, and occurrence-time records. A threshold requires distinct orthings and distinct episodes and is only a review trigger; the opportunity denominator is backed by explicit opportunity records, while independence uses a fixed declared policy. Suspected locus remains distinct from causal diagnosis or intervention. Assessment, intervention disposition, proposal, authorization, application, and later outcome evaluation remain separate. The schemas and fixtures under `schemas/` and `examples/somnus/` are offline conformance artifacts, not a live ledger, scheduler, analyzer, writeback engine, collective network, or learning result (Decision 0035).
 
 ### 8.3 The verdict vector
 

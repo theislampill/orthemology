@@ -4,7 +4,7 @@
   "title": "Append-only orthing checkpoint event",
   "type": "object",
   "additionalProperties": false,
-  "required": ["event_id", "sequence", "session_id", "episode_id", "occurrence_id", "orthing_id", "event_type", "occurred_at", "actor_id", "capture_mode", "source_revision", "privacy_source_disposition", "governing_versions", "evidence_timing", "append_only"],
+  "required": ["event_id", "sequence", "session_id", "episode_id", "occurrence_id", "orthing_id", "event_type", "occurred_at", "actor_id", "capture_mode", "provenance_record_id", "source_revision", "privacy_source_disposition", "governing_versions", "evidence_timing", "append_only"],
   "allOf": [
     {
       "if": {"properties": {"event_type": {"const": "orthability_assessed"}}, "required": ["event_type"]},
@@ -29,6 +29,7 @@
     "occurred_at": {"type": "string", "format": "date-time"},
     "actor_id": {"type": "string", "minLength": 1},
     "capture_mode": {"enum": ["live_capture", "retrospective_reconstruction", "bootstrap_provenance", "unknown"]},
+    "provenance_record_id": {"type": "string", "minLength": 1},
     "source_case": {"type": "string", "minLength": 1},
     "source_revision": {"type": "string", "minLength": 1},
     "privacy_source_disposition": {

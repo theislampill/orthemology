@@ -5,6 +5,28 @@ evaluators:
   result_vocabulary: [applicable, inapplicable, indeterminate]
   non_claims:
   - indicators are evidence about required properties, not the boundary itself
+authoring_records:
+- provenance_record_id: BOOTSTRAP-AUTHORING-001
+  capture_mode: bootstrap_provenance
+  immutable: true
+  boundary_problem: distinguish theological propositions and worldview-bearing tasks from lexical near-boundary uses
+  selected_contract_ref: theological-claimant-activation@1.0.0
+  fixture_ids: [ACT-POS-001, ACT-NEG-001, ACT-MIXED-LEXICAL-001, ACT-OVERLAP-001]
+  unresolved_residuals: [mixed-domain overlap remains conflict-bearing]
+- provenance_record_id: BOOTSTRAP-AUTHORING-002
+  capture_mode: bootstrap_provenance
+  immutable: true
+  boundary_problem: distinguish requested data-model operations from schema language used outside a data operation
+  selected_contract_ref: database-schema-activation@1.0.0
+  fixture_ids: [ACT-DB-POS-001, ACT-DB-NEG-001, ACT-DB-INDETERMINATE-001, ACT-OVERLAP-001]
+  unresolved_residuals: [mixed-domain overlap remains conflict-bearing]
+- provenance_record_id: BOOTSTRAP-AUTHORING-003
+  capture_mode: bootstrap_provenance
+  immutable: true
+  boundary_problem: determine whether preserved records support a bounded residual-recurrence assessment
+  selected_contract_ref: recurrence-meta-assessability@1.0.0
+  fixture_ids: [ACT-REC-POS-001, ACT-REC-NEG-001, ACT-REC-INDETERMINATE-001, ACT-REC-OVERLAP-001]
+  unresolved_residuals: [assessability does not establish recurrence cause or remedy]
 contracts:
 - contract_id: theological-claimant-activation
   contract_version: 1.0.0
@@ -46,6 +68,26 @@ contracts:
   authorship: {mode: bootstrap_provenance, provenance_record_id: BOOTSTRAP-AUTHORING-002}
   status: accepted
   fixture_outcomes: [ACT-DB-POS-001, ACT-DB-NEG-001, ACT-DB-INDETERMINATE-001, ACT-OVERLAP-001]
+- contract_id: recurrence-meta-assessability
+  contract_version: 1.0.0
+  claimant_id: residual-recurrence-standard
+  claimant_version: 1.0.0
+  required_properties: [preserved-target, sufficient-residual-structure]
+  positive_indicators: [controlled-fingerprint, immutable-target-record]
+  exclusion_indicators: [mutable-target-history, missing-target-record]
+  boundary_counterexamples: [free-text-similarity-without-preserved-target, copied-residual-without-distinct-orthing]
+  tolerated_ambiguity: incomplete residual structure remains indeterminate or record-insufficient
+  fallback_claimants: [historical-record-audit, no-retrospective-assessment]
+  no_claim_allowed: true
+  decision_policy: applicable only when the target is preserved and the record contains sufficient controlled residual structure
+  indeterminate_policy: preserve the target and emit no assessment when applicability or record sufficiency is unresolved
+  fixture_suite: examples/somnus/activation-contract-fixtures.yaml
+  effective: {from_revision: task4-fixture-v1, through_revision: null}
+  supersedes: null
+  superseded_by: null
+  authorship: {mode: bootstrap_provenance, provenance_record_id: BOOTSTRAP-AUTHORING-003}
+  status: accepted
+  fixture_outcomes: [ACT-REC-POS-001, ACT-REC-NEG-001, ACT-REC-INDETERMINATE-001, ACT-REC-OVERLAP-001]
 fixture_outcomes:
 - fixture_id: ACT-POS-001
   fixture_class: positive
@@ -183,6 +225,85 @@ fixture_outcomes:
   conflict:
     conflict_id: ACT-CONFLICT-001
     claimant_contracts: [theological-claimant-activation@1.0.0, database-schema-activation@1.0.0]
+    disposition: provisional_multi_claimant
+    conflict_unresolved: true
+    authorization_rule_id: no-irreversible-action-with-unresolved-conflict
+- fixture_id: ACT-REC-POS-001
+  fixture_class: positive
+  occurrence: Assess a preserved orthing whose controlled residual fields and evidence state are complete.
+  observed_indicators: [controlled-fingerprint, immutable-target-record]
+  observed_exclusions: []
+  property_findings: {satisfied: [preserved-target, sufficient-residual-structure], absent: [], indeterminate: []}
+  claimant_assessments:
+  - claimant_id: residual-recurrence-standard
+    activation_contract_id: recurrence-meta-assessability
+    activation_contract_version: 1.0.0
+    evaluator_id: property-boundary-evaluator
+    evaluator_version: 1.0.0
+    result: applicable
+    property_findings: {satisfied: [preserved-target, sufficient-residual-structure], absent: [], indeterminate: []}
+    observed_indicators: [controlled-fingerprint, immutable-target-record]
+    observed_exclusions: []
+- fixture_id: ACT-REC-NEG-001
+  fixture_class: negative-near-boundary
+  occurrence: A copied residual string lacks a preserved target orthing record.
+  observed_indicators: [controlled-fingerprint]
+  observed_exclusions: [missing-target-record]
+  property_findings: {satisfied: [sufficient-residual-structure], absent: [preserved-target], indeterminate: []}
+  claimant_assessments:
+  - claimant_id: residual-recurrence-standard
+    activation_contract_id: recurrence-meta-assessability
+    activation_contract_version: 1.0.0
+    evaluator_id: property-boundary-evaluator
+    evaluator_version: 1.0.0
+    result: inapplicable
+    property_findings: {satisfied: [sufficient-residual-structure], absent: [preserved-target], indeterminate: []}
+    observed_indicators: [controlled-fingerprint]
+    observed_exclusions: [missing-target-record]
+- fixture_id: ACT-REC-INDETERMINATE-001
+  fixture_class: indeterminate
+  occurrence: A preserved target exists but the residual structure is incomplete.
+  observed_indicators: [immutable-target-record]
+  observed_exclusions: []
+  property_findings: {satisfied: [preserved-target], absent: [], indeterminate: [sufficient-residual-structure]}
+  claimant_assessments:
+  - claimant_id: residual-recurrence-standard
+    activation_contract_id: recurrence-meta-assessability
+    activation_contract_version: 1.0.0
+    evaluator_id: property-boundary-evaluator
+    evaluator_version: 1.0.0
+    result: indeterminate
+    property_findings: {satisfied: [preserved-target], absent: [], indeterminate: [sufficient-residual-structure]}
+    observed_indicators: [immutable-target-record]
+    observed_exclusions: []
+- fixture_id: ACT-REC-OVERLAP-001
+  fixture_class: overlap
+  occurrence: A preserved residual describes a concrete database-schema routing defect.
+  observed_indicators: [controlled-fingerprint, immutable-target-record, database, schema]
+  observed_exclusions: []
+  property_findings: {satisfied: [preserved-target, sufficient-residual-structure, data-model-operation], absent: [], indeterminate: []}
+  claimant_assessments:
+  - claimant_id: residual-recurrence-standard
+    activation_contract_id: recurrence-meta-assessability
+    activation_contract_version: 1.0.0
+    evaluator_id: property-boundary-evaluator
+    evaluator_version: 1.0.0
+    result: applicable
+    property_findings: {satisfied: [preserved-target, sufficient-residual-structure], absent: [], indeterminate: []}
+    observed_indicators: [controlled-fingerprint, immutable-target-record]
+    observed_exclusions: []
+  - claimant_id: database-schema-claimant
+    activation_contract_id: database-schema-activation
+    activation_contract_version: 1.0.0
+    evaluator_id: property-boundary-evaluator
+    evaluator_version: 1.0.0
+    result: applicable
+    property_findings: {satisfied: [data-model-operation], absent: [], indeterminate: []}
+    observed_indicators: [database, schema]
+    observed_exclusions: []
+  conflict:
+    conflict_id: ACT-CONFLICT-REC-001
+    claimant_contracts: [recurrence-meta-assessability@1.0.0, database-schema-activation@1.0.0]
     disposition: provisional_multi_claimant
     conflict_unresolved: true
     authorization_rule_id: no-irreversible-action-with-unresolved-conflict

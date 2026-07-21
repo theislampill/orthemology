@@ -27,6 +27,7 @@ SCHEMAS = [
     ROOT / "schemas" / name
     for name in (
         "activation-contract.schema.json",
+        "activation-contract-fixtures.schema.json",
         "orthing-event.schema.json",
         "meta-orthability-assessment.schema.json",
         "somnus-run.schema.json",
@@ -34,6 +35,7 @@ SCHEMAS = [
         "residual-recurrence-report.schema.json",
         "somnus-record-fixtures.schema.json",
         "somnus-claim-status.schema.json",
+        "somnus-candidate-inventory.schema.json",
         "hermes-writeback-adoption-profile.schema.json",
         "collective-somnus-transclusion-profile.schema.json",
     )
@@ -673,6 +675,244 @@ runtime: implemented
             with self.subTest(case=name):
                 self.assertRejected(**changes)
 
+    def test_third_review_40_cross_document_mutations_fail_closed(self):
+        """Close the fresh second-rereview's exact cross-document families."""
+        cases = []
+
+        # Exact activation-contract/evaluator/evidence/authorship binding (8).
+        mutation = copy.deepcopy(self.records)
+        mutation["meta_orthability_assessments"][0]["activation_contract_id"] = "unknown-contract"
+        cases.append(("meta-01-unknown-contract", {"records": mutation}))
+
+        mutation = copy.deepcopy(self.records)
+        mutation["meta_orthability_assessments"][0]["activation_contract_version"] = "99.0.0"
+        cases.append(("meta-02-unknown-contract-version", {"records": mutation}))
+
+        mutation = copy.deepcopy(self.records)
+        mutation["meta_orthability_assessments"][0]["orthability_evaluator_id"] = "unknown-evaluator"
+        cases.append(("meta-03-unknown-evaluator", {"records": mutation}))
+
+        mutation = copy.deepcopy(self.records)
+        mutation["meta_orthability_assessments"][0]["orthability_evaluator_version"] = "99.0.0"
+        cases.append(("meta-04-unknown-evaluator-version", {"records": mutation}))
+
+        mutation = copy.deepcopy(self.records)
+        mutation["meta_orthability_assessments"][0]["evidence_state_ids"] = ["E-UNKNOWN"]
+        cases.append(("meta-05-unknown-evidence", {"records": mutation}))
+
+        mutation = copy.deepcopy(self.records)
+        gate = mutation["meta_orthability_assessments"][0]
+        gate["satisfied_properties"] = ["preserved-target"]
+        gate["absent_properties"] = ["sufficient-residual-structure"]
+        cases.append(("meta-06-applicable-with-absent-property", {"records": mutation}))
+
+        mutation = copy.deepcopy(self.records)
+        mutation["meta_orthability_assessments"][0]["non_assessment_reason"] = "not assessable"
+        cases.append(("meta-07-applicable-with-non-assessment-reason", {"records": mutation}))
+
+        mutation = copy.deepcopy(self.activation)
+        mutation["contracts"][0]["authorship"] = {"mode": "normal", "orthing_id": "ORTH-UNKNOWN"}
+        cases.append(("meta-08-unknown-normal-authoring-orthing", {"activation": mutation}))
+
+        # Globally typed event identity, provenance, and lifecycle order (6).
+        mutation = copy.deepcopy(self.records)
+        replacement = {
+            "session_id": "SESSION-UNREGISTERED",
+            "episode_id": "EP-UNREGISTERED",
+            "occurrence_id": "OCC-UNREGISTERED",
+            "orthing_id": "ORTH-UNREGISTERED",
+        }
+        for event_id in ("EV-WAKE-001", "EV-WAKE-001-ASSESS", "EV-WAKE-001-ROUTE"):
+            item(mutation["orthing_events"], "event_id", event_id).update(replacement)
+        mutation["claimant_routing_cases"][0]["occurrence_id"] = "OCC-UNREGISTERED"
+        cases.append(("event-01-unregistered-lifecycle-identities", {"records": mutation}))
+
+        mutation = copy.deepcopy(self.records)
+        retro = item(mutation["orthing_events"], "event_id", "EV-R7E-RETRO-001")
+        retro.pop("source_case")
+        retro["capture_mode"] = "live_capture"
+        cases.append(("event-02-retrospective-provenance-bypass", {"records": mutation}))
+
+        mutation = copy.deepcopy(self.records)
+        assessed = item(mutation["orthing_events"], "event_id", "EV-WAKE-001-ASSESS")
+        routed = item(mutation["orthing_events"], "event_id", "EV-WAKE-001-ROUTE")
+        assessed.update(sequence=3, occurred_at="2026-07-20T10:02:00Z")
+        routed.update(sequence=2, occurred_at="2026-07-20T10:01:00Z")
+        cases.append(("event-03-route-before-assessment", {"records": mutation}))
+
+        mutation = copy.deepcopy(self.records)
+        item(mutation["orthing_events"], "event_id", "EV-WAKE-002-CAPTURE")["actor_id"] = "SESSION-001"
+        cases.append(("event-04-wrong-kind-actor-identity", {"records": mutation}))
+
+        mutation = copy.deepcopy(self.records)
+        item(mutation["orthing_events"], "event_id", "EV-WAKE-002-CAPTURE")["occurrence_id"] = "OCC-UNKNOWN"
+        item(mutation["orthing_events"], "event_id", "EV-WAKE-002")["occurrence_id"] = "OCC-UNKNOWN"
+        cases.append(("event-05-unknown-occurrence-identity", {"records": mutation}))
+
+        mutation = copy.deepcopy(self.records)
+        duplicate = copy.deepcopy(mutation["claimant_routing_cases"][0])
+        duplicate["case_id"] = "ROUTE-DUPLICATE-001"
+        duplicate["claimant_assessments"] = [{
+            "claim_attempt_id": "CA-001",
+            "orthability_assessment_id": "OA-001",
+            "claimant_id": "claimant-duplicate",
+            "result": "applicable",
+        }]
+        duplicate["selected_claimant_id"] = "claimant-duplicate"
+        duplicate["retained_residual_claimants"] = []
+        duplicate["retained_inapplicable_claimants"] = []
+        mutation["claimant_routing_cases"].append(duplicate)
+        cases.append(("event-06-duplicate-route-for-occurrence", {"records": mutation}))
+
+        # Append-only assessment history and globally unique run output ownership (7).
+        mutation = copy.deepcopy(self.records)
+        item(mutation["somnic_assessments"], "assessment_id", "SA-CLOSED-001")["prior_assessment_ids"] = ["SA-CLOSED-001"]
+        cases.append(("history-01-self-prior-assessment", {"records": mutation}))
+
+        mutation = copy.deepcopy(self.records)
+        item(mutation["somnic_assessments"], "assessment_id", "SA-CLOSED-001")["prior_assessment_ids"] = ["SA-REOPENED-001"]
+        item(mutation["somnic_assessments"], "assessment_id", "SA-REOPENED-001")["prior_assessment_ids"] = ["SA-CLOSED-001"]
+        cases.append(("history-02-cyclic-prior-assessments", {"records": mutation}))
+
+        mutation = copy.deepcopy(self.records)
+        item(mutation["somnic_assessments"], "assessment_id", "SA-RECURRENCE-001")["target_history_digest"] = "2" * 64
+        cases.append(("history-03-unverifiable-target-digest", {"records": mutation}))
+
+        mutation = copy.deepcopy(self.records)
+        item(mutation["recurrence_reports"], "recurrence_report_id", "RR-001")["recurrence_report_id"] = "SA-RECURRENCE-001"
+        run = item(mutation["somnus_runs"], "somnus_run_id", "RUN-RECURRENCE-001")
+        run["output_ids"] = [value for value in run["output_ids"] if value != "RR-001"]
+        cases.append(("output-01-cross-kind-id-collision", {"records": mutation}))
+
+        mutation = copy.deepcopy(self.records)
+        item(mutation["somnic_assessments"], "assessment_id", "SA-RECURRENCE-001")["t2_configuration"]["assessed_at"] = "2026-07-21T18:30:00Z"
+        cases.append(("output-02-assessment-before-owning-run", {"records": mutation}))
+
+        mutation = copy.deepcopy(self.records)
+        item(mutation["somnic_assessments"], "assessment_id", "SA-RECURRENCE-001")["t2_configuration"]["assessed_at"] = "2026-07-21T20:00:00Z"
+        cases.append(("output-03-assessment-after-owning-run", {"records": mutation}))
+
+        mutation = copy.deepcopy(self.records)
+        item(mutation["somnus_runs"], "somnus_run_id", "RUN-RECURRENCE-001")["historical_comparators_reopened"] = True
+        cases.append(("output-04-false-comparator-reopened-assertion", {"records": mutation}))
+
+        # Recurrence provenance, threshold, fingerprint, opportunity, and policy (6).
+        mutation = copy.deepcopy(self.records)
+        report = item(mutation["recurrence_reports"], "recurrence_report_id", "RR-001")
+        report["supporting_occurrences"][0]["episode_id"] = "EP-FABRICATED"
+        cases.append(("recurrence-01-fabricated-episode", {"records": mutation}))
+
+        mutation = copy.deepcopy(self.records)
+        report = item(mutation["recurrence_reports"], "recurrence_report_id", "RR-001")
+        report["supporting_occurrences"][0]["session_id"] = "SESSION-FABRICATED"
+        cases.append(("recurrence-02-fabricated-session", {"records": mutation}))
+
+        mutation = copy.deepcopy(self.records)
+        report = item(mutation["recurrence_reports"], "recurrence_report_id", "RR-001")
+        for row in report["supporting_occurrences"]:
+            row["episode_id"] = "EP-ONE"
+        report["dependence_dimensions"]["episode_count"] = 1
+        cases.append(("recurrence-03-threshold-with-one-episode", {"records": mutation}))
+
+        mutation = copy.deepcopy(self.records)
+        report = item(mutation["recurrence_reports"], "recurrence_report_id", "RR-001")
+        report["supporting_occurrences"][2]["session_id"] = "SESSION-THIRD"
+        report["dependence_dimensions"]["session_count"] = 3
+        independence = report["independence_assessment"]
+        independence["required_dimensions"] = ["session_count"]
+        independence["evaluated_dimensions"]["session_count"] = True
+        independence.update(passed=True, label="independent episodes")
+        cases.append(("recurrence-04-ad-hoc-weakened-independence-policy", {"records": mutation}))
+
+        mutation = copy.deepcopy(self.records)
+        item(mutation["recurrence_reports"], "recurrence_report_id", "RR-001")["fingerprint"]["normalized_object"] = "unrelated-family"
+        cases.append(("recurrence-05-fingerprint-not-bound-to-support", {"records": mutation}))
+
+        mutation = copy.deepcopy(self.records)
+        item(mutation["recurrence_reports"], "recurrence_report_id", "RR-001")["opportunity_denominator"] = 999
+        cases.append(("recurrence-06-unbacked-opportunity-denominator", {"records": mutation}))
+
+        # Writeback coherence and authoritative time (4).
+        mutation = copy.deepcopy(self.records)
+        item(mutation["proposals"], "proposal_id", "PROP-CONTRACT-001")["status"] = "rejected"
+        cases.append(("writeback-01-applied-rejected-proposal", {"records": mutation}))
+
+        mutation = copy.deepcopy(self.records)
+        item(mutation["somnic_assessments"], "assessment_id", "SA-CORRECT-DEFECTIVE-001")["assessment_result"] = "no_change"
+        cases.append(("writeback-02-no-change-result-with-mutation-proposal", {"records": mutation}))
+
+        mutation = copy.deepcopy(self.records)
+        mutation["writeback_timeline"][2]["occurred_at"] = "2026-07-21T19:02:30Z"
+        cases.append(("writeback-03-timeline-contradicts-authoritative-authorization", {"records": mutation}))
+
+        mutation = copy.deepcopy(self.records)
+        proposal = item(mutation["proposals"], "proposal_id", "PROP-CONTRACT-001")
+        proposal.update(provenance_mode="legacy_reflective_proposal", supporting_assessment_id="unavailable")
+        cases.append(("writeback-04-legacy-proposal-laundered-into-assessment", {"records": mutation}))
+
+        # Closed adoption vocabularies and typed candidate/non-claim boundaries (6).
+        mutation = copy.deepcopy(self.adoption)
+        mutation["subsumption"]["outcomes"] = [f"garbage-outcome-{index}" for index in range(6)]
+        mutation["record_separation"] = [f"garbage-record-{index}" for index in range(6)]
+        mutation["temporal_roles"] = [f"garbage-time-{index}" for index in range(5)]
+        cases.append(("profile-01-adoption-vocabularies-replaced", {"adoption": mutation}))
+
+        mutation = copy.deepcopy(self.inventory)
+        mutation["candidates"][0]["inputs"] = []
+        cases.append(("profile-02-empty-candidate-inputs", {"inventory": mutation}))
+
+        mutation = copy.deepcopy(self.inventory)
+        mutation["candidates"][0]["outputs"] = []
+        cases.append(("profile-03-empty-candidate-outputs", {"inventory": mutation}))
+
+        mutation = copy.deepcopy(self.inventory)
+        mutation["candidates"][0]["dependencies"] = []
+        cases.append(("profile-04-empty-candidate-dependencies", {"inventory": mutation}))
+
+        mutation = copy.deepcopy(self.inventory)
+        mutation["candidates"][0]["authority_limit"] = "automatic execution authorized"
+        cases.append(("profile-05-candidate-authority-inverted", {"inventory": mutation}))
+
+        mutation = copy.deepcopy(self.collective)
+        mutation["non_claims"] = [
+            "automatic writeback is implemented",
+            "a collective runtime is deployed",
+        ]
+        cases.append(("profile-06-collective-non-claims-contradict-owner", {"collective": mutation}))
+
+        # Exact malformed shapes from the second re-review (3).
+        mutation = copy.deepcopy(self.activation)
+        item(mutation["fixture_outcomes"], "fixture_id", "ACT-POS-001")["claimant_assessments"][0]["evaluator_id"] = []
+        cases.append(("malformed-01-evaluator-id-list", {"activation": mutation}))
+
+        mutation = copy.deepcopy(self.records)
+        item(mutation["recurrence_reports"], "recurrence_report_id", "RR-001")["independence_assessment"]["required_dimensions"] = [["nested"]]
+        cases.append(("malformed-02-required-dimensions-list", {"records": mutation}))
+
+        mutation = copy.deepcopy(self.records)
+        item(mutation["recurrence_reports"], "recurrence_report_id", "RR-001")["independence_assessment"]["required_dimensions"] = [{"nested": True}]
+        cases.append(("malformed-03-required-dimensions-map", {"records": mutation}))
+
+        self.assertEqual(40, len(cases))
+        observed = {"rejected": [], "false_pass": [], "traceback": []}
+        for name, changes in cases:
+            code, output = production_exit(
+                changes.get("activation", self.activation),
+                changes.get("records", self.records),
+                changes.get("inventory", self.inventory),
+                changes.get("adoption", self.adoption),
+                changes.get("collective", self.collective),
+            )
+            if code == 1 and "TRACEBACK" not in output:
+                observed["rejected"].append(name)
+            elif code == 99 or "TRACEBACK" in output:
+                observed["traceback"].append(name)
+            else:
+                observed["false_pass"].append(name)
+        self.assertEqual([], observed["false_pass"], observed)
+        self.assertEqual([], observed["traceback"], observed)
+        self.assertEqual(40, len(observed["rejected"]), observed)
+
     def test_nested_map_and_list_variants_never_reach_hash_operations(self):
         cases = []
 
@@ -739,6 +979,62 @@ runtime: implemented
         mutation = copy.deepcopy(self.adoption)
         mutation["subsumption"]["governing_targets"] = [{"nested": True}]
         cases.append(("adoption-governing-target-set", {"adoption": mutation}))
+
+        mutation = copy.deepcopy(self.activation)
+        mutation["authoring_records"][0]["provenance_record_id"] = []
+        cases.append(("activation-authoring-record-key", {"activation": mutation}))
+
+        mutation = copy.deepcopy(self.activation)
+        mutation["contracts"][0]["authorship"] = {"mode": "normal", "orthing_id": []}
+        cases.append(("activation-normal-authoring-orthing-key", {"activation": mutation}))
+
+        mutation = copy.deepcopy(self.records)
+        mutation["identity_registry"][0]["identity_id"] = []
+        cases.append(("identity-registry-key", {"records": mutation}))
+
+        mutation = copy.deepcopy(self.records)
+        item(mutation["orthing_events"], "event_id", "EV-WAKE-001")["provenance_record_id"] = []
+        cases.append(("event-provenance-key", {"records": mutation}))
+
+        mutation = copy.deepcopy(self.records)
+        mutation["meta_orthability_assessments"][0]["evidence_state_ids"] = [["nested"]]
+        cases.append(("meta-evidence-state-set", {"records": mutation}))
+
+        mutation = copy.deepcopy(self.records)
+        mutation["meta_orthability_assessments"][0]["activation_contract_id"] = []
+        cases.append(("meta-contract-key", {"records": mutation}))
+
+        mutation = copy.deepcopy(self.records)
+        item(mutation["somnic_assessments"], "assessment_id", "SA-CLOSED-001")["prior_assessment_ids"] = [{"nested": True}]
+        cases.append(("assessment-prior-set", {"records": mutation}))
+
+        mutation = copy.deepcopy(self.records)
+        item(mutation["somnic_assessments"], "assessment_id", "SA-CLOSED-001")["t2_configuration"] = []
+        cases.append(("assessment-t2-map", {"records": mutation}))
+
+        mutation = copy.deepcopy(self.records)
+        mutation["recurrence_support_records"][0]["support_record_id"] = []
+        cases.append(("support-registry-key", {"records": mutation}))
+
+        mutation = copy.deepcopy(self.records)
+        item(mutation["recurrence_reports"], "recurrence_report_id", "RR-001")["supporting_occurrences"][0]["episode_id"] = []
+        cases.append(("support-episode-key", {"records": mutation}))
+
+        mutation = copy.deepcopy(self.records)
+        mutation["opportunity_records"][0]["opportunity_id"] = []
+        cases.append(("opportunity-registry-key", {"records": mutation}))
+
+        mutation = copy.deepcopy(self.records)
+        item(mutation["recurrence_reports"], "recurrence_report_id", "RR-001")["independence_assessment"]["rule_id"] = []
+        cases.append(("independence-policy-key", {"records": mutation}))
+
+        mutation = copy.deepcopy(self.inventory)
+        mutation["candidates"][0]["authority_boundary"] = []
+        cases.append(("candidate-authority-map", {"inventory": mutation}))
+
+        mutation = copy.deepcopy(self.collective)
+        mutation["non_claims"] = []
+        cases.append(("collective-non-claims-map", {"collective": mutation}))
 
         for name, changes in cases:
             with self.subTest(case=name):

@@ -5,6 +5,7 @@ This is an offline conformance validator.  It is not a recurrence analyzer,
 ledger emitter, scheduler, writeback engine, or collective runtime.
 """
 import json
+import hashlib
 import re
 import sys
 from collections import Counter, defaultdict
@@ -34,8 +35,10 @@ SCHEMA_NAMES = {
     "recurrence_reports": "residual-recurrence-report.schema.json",
 }
 AUX_SCHEMA_NAMES = {
+    "activation_bundle": "activation-contract-fixtures.schema.json",
     "records_bundle": "somnus-record-fixtures.schema.json",
     "claim_status": "somnus-claim-status.schema.json",
+    "candidate_inventory": "somnus-candidate-inventory.schema.json",
     "adoption_profile": "hermes-writeback-adoption-profile.schema.json",
     "collective_profile": "collective-somnus-transclusion-profile.schema.json",
 }
@@ -159,8 +162,12 @@ def _parse_time(value, label, issues):
 
 def _activation_issues(document, schemas, store):
     issues = []
+    issues += _schema_issues(
+        "activation", document, schemas[AUX_SCHEMA_NAMES["activation_bundle"]], store
+    )
     contracts = _objects(document, "contracts", issues, "activation")
     evaluators = _objects(document, "evaluators", issues, "activation")
+    authoring_records = _objects(document, "authoring_records", issues, "activation")
     outcomes = _objects(document, "fixture_outcomes", issues, "activation")
     for index, contract in enumerate(contracts):
         issues += _schema_issues("activation.contracts[%d]" % index, contract,
@@ -168,6 +175,9 @@ def _activation_issues(document, schemas, store):
     if {row.get("fixture_class") for row in outcomes if isinstance(row.get("fixture_class"), str)} != FIXTURE_CLASSES:
         issues.append("fixture outcomes must cover positive, negative-near-boundary, indeterminate, and overlap")
     outcome_by_id = _unique_index(outcomes, "fixture_id", "activation outcomes", issues)
+    authoring_by_id = _unique_index(
+        authoring_records, "provenance_record_id", "activation authoring records", issues
+    )
     contract_by_key = {}
     for contract in contracts:
         key = _string_tuple_key(contract.get("contract_id"), contract.get("contract_version"))
@@ -205,8 +215,10 @@ def _activation_issues(document, schemas, store):
             if contract is None:
                 issues.append("fixture %s references unknown activation contract/version" % fixture_id)
                 continue
-            evaluator_key = (assessment.get("evaluator_id"), assessment.get("evaluator_version"))
-            if evaluator_key not in evaluator_by_key:
+            evaluator_key = _string_tuple_key(
+                assessment.get("evaluator_id"), assessment.get("evaluator_version")
+            )
+            if evaluator_key is None or evaluator_key not in evaluator_by_key:
                 issues.append("fixture %s references unknown evaluator/version" % fixture_id)
             if assessment.get("claimant_id") != contract.get("claimant_id"):
                 issues.append("fixture %s claimant does not match its activation contract" % fixture_id)
@@ -267,10 +279,22 @@ def _activation_issues(document, schemas, store):
         }
         if represented != FIXTURE_CLASSES:
             issues.append("accepted contract %s requires per-contract positive, negative-near-boundary, indeterminate, and overlap assessments" % contract.get("contract_id"))
+        authorship = _mapping(
+            contract.get("authorship"),
+            "activation contract %s authorship" % contract.get("contract_id"), issues,
+        )
+        if authorship.get("mode") == "bootstrap_provenance":
+            record = _string_lookup(authoring_by_id, authorship.get("provenance_record_id"))
+            expected_ref = "%s@%s" % key
+            if (record is None or record.get("capture_mode") != "bootstrap_provenance"
+                    or record.get("immutable") is not True
+                    or record.get("selected_contract_ref") != expected_ref
+                    or _string_set(record.get("fixture_ids")) != _string_set(refs)):
+                issues.append("accepted contract %s requires an exact immutable bootstrap authoring record" % contract.get("contract_id"))
     return issues
 
 
-def _records_issues(document, schemas, store):
+def _records_issues(document, activation, schemas, store):
     issues = []
     issues += _schema_issues(
         "records", document, schemas[AUX_SCHEMA_NAMES["records_bundle"]], store
@@ -294,6 +318,17 @@ def _records_issues(document, schemas, store):
     reports = collections["recurrence_reports"]
     meta_assessments = collections["meta_orthability_assessments"]
 
+    activation_contract_rows = _objects(activation, "contracts", issues, "activation")
+    activation_evaluator_rows = _objects(activation, "evaluators", issues, "activation")
+    activation_contract_by_key = {
+        key: row for row in activation_contract_rows
+        if (key := _string_tuple_key(row.get("contract_id"), row.get("contract_version"))) is not None
+    }
+    activation_evaluator_by_key = {
+        key: row for row in activation_evaluator_rows
+        if (key := _string_tuple_key(row.get("evaluator_id"), row.get("evaluator_version"))) is not None
+    }
+
     identity = _mapping(document.get("identity_fixture"), "records.identity_fixture", issues)
     identity_fields = (
         "session_ids", "occurrence_ids", "episode_ids", "orthing_ids",
@@ -305,11 +340,30 @@ def _records_issues(document, schemas, store):
         if not isinstance(values, list) or not values or any(not isinstance(value, str) for value in values):
             issues.append("records.identity_fixture.%s must be a nonempty ID array" % field)
             values = []
-        identity_sets[field] = set(values)
+        identity_sets[field] = _string_set(values)
     for index, left in enumerate(identity_fields):
         for right in identity_fields[index + 1:]:
             if identity_sets[left] & identity_sets[right]:
                 issues.append("global identity levels %s and %s must remain distinct" % (left, right))
+
+    identity_rows = _objects(document, "identity_registry", issues, "records")
+    identity_by_id = _unique_index(identity_rows, "identity_id", "typed identity registry", issues)
+    identity_kind_by_id = {key: row.get("identity_kind") for key, row in identity_by_id.items()}
+    fixture_kind = {
+        "session_ids": "session", "episode_ids": "episode",
+        "occurrence_ids": "occurrence", "orthing_ids": "orthing",
+        "claim_attempt_ids": "claim_attempt",
+        "orthability_assessment_ids": "orthability_assessment",
+    }
+    for field, kind in fixture_kind.items():
+        for identity_id in identity_sets[field]:
+            if identity_kind_by_id.get(identity_id) != kind:
+                issues.append("identity fixture %s must resolve as typed %s" % (identity_id, kind))
+
+    provenance_rows = _objects(document, "provenance_records", issues, "records")
+    provenance_by_id = _unique_index(
+        provenance_rows, "provenance_record_id", "provenance registry", issues
+    )
 
     route_rows = _objects(document, "claimant_routing_cases", issues, "records")
     selected_route_pairs = {}
@@ -350,6 +404,17 @@ def _records_issues(document, schemas, store):
     evidence_timing = {key: row.get("timing") for key, row in evidence_by_id.items()}
     subject_rows = _objects(document, "subject_records", issues, "records")
     subject_by_id = _unique_index(subject_rows, "subject_id", "subject registry", issues)
+    for subject_id, subject in subject_by_id.items():
+        if subject.get("subject_kind") in {"waking_orthing", "counterexample"}:
+            if identity_kind_by_id.get(subject_id) != "orthing":
+                issues.append("subject %s must resolve as a globally typed orthing identity" % subject_id)
+    for contract in activation_contract_rows:
+        authorship = contract.get("authorship")
+        if isinstance(authorship, dict) and authorship.get("mode") == "normal":
+            orthing_id = authorship.get("orthing_id")
+            if (not _string_member(subject_by_id, orthing_id)
+                    or _string_lookup(identity_kind_by_id, orthing_id) != "orthing"):
+                issues.append("normal activation-contract authorship must resolve to a typed authoring orthing")
     delta_rows = _objects(document, "material_deltas", issues, "records")
     delta_by_id = _unique_index(delta_rows, "material_delta_id", "material delta registry", issues)
     event_by_id = _unique_index(events, "event_id", "orthing events", issues)
@@ -366,7 +431,26 @@ def _records_issues(document, schemas, store):
         string_identities = [identity for identity in identities if isinstance(identity, str)]
         if len(string_identities) == len(identities) and len(identities) != len(set(string_identities)):
             issues.append("event %s collapses distinct identity levels" % event_id)
-        if event.get("source_case") == "R7E" and event.get("capture_mode") != "retrospective_reconstruction":
+        event_identity_fields = {
+            "session_id": "session", "episode_id": "episode",
+            "occurrence_id": "occurrence", "orthing_id": "orthing",
+            "actor_id": "actor",
+        }
+        for field, kind in event_identity_fields.items():
+            if _string_lookup(identity_kind_by_id, event.get(field)) != kind:
+                issues.append("event %s %s must resolve through the global typed identity registry" % (event_id, field))
+        for field, kind in (
+                ("claim_attempt_id", "claim_attempt"),
+                ("orthability_assessment_id", "orthability_assessment")):
+            value = event.get(field)
+            if value is not None and _string_lookup(identity_kind_by_id, value) != kind:
+                issues.append("event %s %s must resolve through the global typed identity registry" % (event_id, field))
+        provenance = _string_lookup(provenance_by_id, event.get("provenance_record_id"))
+        if (provenance is None or provenance.get("immutable") is not True
+                or provenance.get("capture_mode") != event.get("capture_mode")
+                or provenance.get("source_revision") != event.get("source_revision")):
+            issues.append("event %s capture classification must resolve to an exact immutable provenance record" % event_id)
+        if provenance is not None and provenance.get("source_case") == "R7E" and provenance.get("capture_mode") != "retrospective_reconstruction":
             issues.append("R7E retrospective reconstruction cannot be relabeled as live capture")
         if event.get("claim_attempt_id") is not None and not _string_member(identity_sets["claim_attempt_ids"], event.get("claim_attempt_id")):
             issues.append("event %s has unresolved claim attempt identity" % event_id)
@@ -407,6 +491,13 @@ def _records_issues(document, schemas, store):
                 issues.append("live orthing lifecycle %s must begin with occurrence capture" % (group,))
             if any(row.get("event_type") == "orthability_assessed" for row in live):
                 live_lifecycle_seen = True
+            event_positions = defaultdict(list)
+            for position, row in enumerate(live):
+                event_positions[row.get("event_type")].append(position)
+            if event_positions["route_selected"]:
+                if (not event_positions["orthability_assessed"]
+                        or min(event_positions["orthability_assessed"]) >= min(event_positions["route_selected"])):
+                    issues.append("live orthing lifecycle %s must preserve capture then assessment then route order" % (group,))
     if not live_lifecycle_seen:
         issues.append("records require an incremental capture-before-claimant-assessment lifecycle")
 
@@ -414,6 +505,9 @@ def _records_issues(document, schemas, store):
     assessment_by_id = _unique_index(assessments, "assessment_id", "somnic assessments", issues)
     report_by_id = _unique_index(reports, "recurrence_report_id", "recurrence reports", issues)
     meta_by_id = _unique_index(meta_assessments, "meta_orthability_assessment_id", "meta-orthability assessments", issues)
+    cross_kind_output_ids = set(assessment_by_id) & set(report_by_id)
+    if cross_kind_output_ids:
+        issues.append("somnic assessment and recurrence-report output IDs must be globally unique across kinds: %s" % sorted(cross_kind_output_ids))
     output_by_id = dict(assessment_by_id)
     output_by_id.update(report_by_id)
 
@@ -441,8 +535,56 @@ def _records_issues(document, schemas, store):
             issues.append("meta-orthability assessment %s has incoherent assessability" % meta.get("meta_orthability_assessment_id"))
         if meta.get("result") != "applicable_assessable" and meta.get("assessable") is not False:
             issues.append("meta-orthability assessment %s has incoherent non-assessability" % meta.get("meta_orthability_assessment_id"))
+        contract_key = _string_tuple_key(
+            meta.get("activation_contract_id"), meta.get("activation_contract_version")
+        )
+        evaluator_key = _string_tuple_key(
+            meta.get("orthability_evaluator_id"), meta.get("orthability_evaluator_version")
+        )
+        contract = activation_contract_by_key.get(contract_key)
+        if contract is None or contract.get("status") != "accepted":
+            issues.append("meta-orthability assessment %s must resolve an exact accepted activation contract/version" % meta_id)
+            continue
+        if evaluator_key not in activation_evaluator_by_key:
+            issues.append("meta-orthability assessment %s must resolve an exact evaluator/version" % meta_id)
+        property_sets = {
+            field: _string_set(meta.get(field))
+            for field in ("satisfied_properties", "absent_properties", "indeterminate_properties")
+        }
+        if any(property_sets[left] & property_sets[right] for left, right in (
+                ("satisfied_properties", "absent_properties"),
+                ("satisfied_properties", "indeterminate_properties"),
+                ("absent_properties", "indeterminate_properties"))):
+            issues.append("meta-orthability assessment %s property partitions must be mutually exclusive" % meta_id)
+        required = _string_set(contract.get("required_properties"))
+        if set().union(*property_sets.values()) != required:
+            issues.append("meta-orthability assessment %s must disposition the exact required property set" % meta_id)
+        exclusions = _string_set(meta.get("observed_exclusions"))
+        controlling_exclusion = bool(exclusions & _string_set(contract.get("exclusion_indicators")))
+        evidence_ids = _string_set(meta.get("evidence_state_ids"))
+        if any(evidence_id not in evidence_by_id for evidence_id in evidence_ids):
+            issues.append("meta-orthability assessment %s has unresolved evidence state" % meta_id)
+        result = meta.get("result")
+        non_reason = meta.get("non_assessment_reason")
+        if result == "applicable_assessable":
+            if (property_sets["satisfied_properties"] != required
+                    or property_sets["absent_properties"]
+                    or property_sets["indeterminate_properties"]
+                    or controlling_exclusion or not evidence_ids or non_reason is not None):
+                issues.append("meta-orthability assessment %s applicable result contradicts properties, exclusions, evidence, or non-assessment reason" % meta_id)
+        elif result == "inapplicable":
+            if (not property_sets["absent_properties"] and not controlling_exclusion) or not non_reason:
+                issues.append("meta-orthability assessment %s inapplicable result requires absence/exclusion and a non-assessment reason" % meta_id)
+        elif result == "indeterminate":
+            if not property_sets["indeterminate_properties"] or not non_reason:
+                issues.append("meta-orthability assessment %s indeterminate result requires indeterminate properties and a non-assessment reason" % meta_id)
+        elif result == "record_insufficient":
+            if evidence_ids or not non_reason:
+                issues.append("meta-orthability assessment %s record-insufficient result requires missing evidence and a reason" % meta_id)
 
     zero_proposal_dispositions = {"no_change", "investigation", "evidence_request", "preserve_residual"}
+    assessment_time_by_id = {}
+    prior_graph = defaultdict(set)
     for assessment in assessments:
         aid = assessment.get("assessment_id")
         if assessment.get("target_history_mutated") is not False or assessment.get("explicit_non_mutation") is not True:
@@ -457,6 +599,8 @@ def _records_issues(document, schemas, store):
             issues.append("assessment %s has unresolved target subjects %s" % (aid, unresolved_targets))
         t2 = _mapping(assessment.get("t2_configuration"), "assessment %s t2_configuration" % aid, issues)
         assessed_at = _parse_time(t2.get("assessed_at"), "assessment %s assessed_at" % aid, issues)
+        if isinstance(aid, str) and assessed_at is not None:
+            assessment_time_by_id[aid] = assessed_at
         for target in targets:
             subject = _string_lookup(subject_by_id, target)
             if subject:
@@ -476,9 +620,27 @@ def _records_issues(document, schemas, store):
         for prior in _string_set(assessment.get("prior_assessment_ids")):
             if prior not in assessment_by_id:
                 issues.append("assessment %s has unresolved prior assessment" % aid)
+            elif isinstance(aid, str):
+                prior_graph[aid].add(prior)
+        if assessment.get("target_history_digest_mode") != "derived-subject-record-sha256-v1":
+            issues.append("assessment %s target history digest must declare the derived verification mode" % aid)
+        if targets and not unresolved_targets:
+            payload = [subject_by_id[target] for target in sorted(targets)]
+            canonical = json.dumps(payload, sort_keys=True, separators=(",", ":")).encode("utf-8")
+            expected_digest = hashlib.sha256(canonical).hexdigest()
+            if assessment.get("target_history_digest") != expected_digest:
+                issues.append("assessment %s target history digest must be derived from its authoritative subject records" % aid)
         issues += _evidence_timing_issues(aid, assessment.get("evidence_timing"), evidence_timing)
         proposals = _string_set(assessment.get("proposal_ids"))
         disposition = assessment.get("intervention_disposition")
+        assessment_result = assessment.get("assessment_result")
+        if assessment_result == "no_change" and disposition != "no_change":
+            issues.append("assessment %s no-change result requires a no-change disposition" % aid)
+        if assessment_result == "no_change" and proposals:
+            issues.append("assessment %s no-change result cannot carry a mutation proposal" % aid)
+        if assessment_result == "unassessable" and disposition not in {
+                "investigation", "evidence_request", "preserve_residual"}:
+            issues.append("assessment %s unassessable result cannot produce a mutation disposition" % aid)
         if disposition in zero_proposal_dispositions and proposals:
             issues.append("assessment %s %s disposition cannot carry a proposal" % (aid, disposition.replace("_", "-")))
         if disposition == "alternative_proposals" and len(proposals) < 2:
@@ -500,6 +662,28 @@ def _records_issues(document, schemas, store):
             refs = _string_set(assessment.get(field))
             if any(ref not in registry for ref in refs):
                 issues.append("assessment %s has unresolved %s" % (aid, field))
+
+    for assessment_id, priors in prior_graph.items():
+        for prior_id in priors:
+            current_time = assessment_time_by_id.get(assessment_id)
+            prior_time = assessment_time_by_id.get(prior_id)
+            if prior_id == assessment_id or (
+                    current_time is not None and prior_time is not None and prior_time >= current_time):
+                issues.append("assessment %s prior-assessment graph must be acyclic and strictly time-ordered" % assessment_id)
+    visit_state = {}
+    def visit_prior(node):
+        state = visit_state.get(node, 0)
+        if state == 1:
+            return True
+        if state == 2:
+            return False
+        visit_state[node] = 1
+        if any(visit_prior(prior) for prior in prior_graph.get(node, ())):
+            return True
+        visit_state[node] = 2
+        return False
+    if any(visit_prior(node) for node in prior_graph):
+        issues.append("prior-assessment references must form an acyclic graph")
 
     closed_ids = {
         row.get("assessment_id") for row in assessments
@@ -527,6 +711,11 @@ def _records_issues(document, schemas, store):
                 issues.append("run %s automatically requeues closed assessment %s without material delta" % (rid, subject))
         if comparators & reopens:
             issues.append("run %s reopens a historical comparator merely to use it" % rid)
+        expected_comparators_reopened = bool(comparators & reopens)
+        if run.get("historical_comparators_reopened") is not expected_comparators_reopened:
+            issues.append("run %s historical-comparator reopened assertion must be recomputed" % rid)
+        if not reopens <= anchors:
+            issues.append("run %s reopened subjects must enter the anchor frontier" % rid)
         started = _parse_time(run.get("started_at"), "run %s started_at" % rid, issues)
         completed = _parse_time(run.get("completed_at"), "run %s completed_at" % rid, issues)
         if started and completed and started >= completed:
@@ -539,6 +728,16 @@ def _records_issues(document, schemas, store):
             output_record = output_by_id.get(output)
             if output_record is not None and output_record.get("somnus_run_id") != rid:
                 issues.append("run %s output %s belongs to a different run" % (rid, output))
+            output_time = None
+            if output in assessment_by_id:
+                output_time = _parse_time(
+                    _mapping(output_record.get("t2_configuration"), "output %s t2_configuration" % output, issues).get("assessed_at"),
+                    "output %s assessed_at" % output, issues,
+                )
+            elif output in report_by_id:
+                output_time = _parse_time(output_record.get("emitted_at"), "output %s emitted_at" % output, issues)
+            if started and completed and output_time and not (started <= output_time <= completed):
+                issues.append("run %s output %s timestamp must fall within its owning run interval" % (rid, output))
         signature = {
             "operation_id": run.get("operation_id"),
             "operation_version": run.get("operation_version"),
@@ -571,12 +770,49 @@ def _records_issues(document, schemas, store):
                 % (output_id, expected_run)
             )
 
+    source_family_rows = _objects(document, "source_family_records", issues, "records")
+    source_family_by_id = _unique_index(
+        source_family_rows, "source_family_id", "source family registry", issues
+    )
+    input_family_rows = _objects(document, "input_family_records", issues, "records")
+    input_family_by_id = _unique_index(
+        input_family_rows, "normalized_input_family_id", "input family registry", issues
+    )
+    support_record_rows = _objects(document, "recurrence_support_records", issues, "records")
+    support_record_by_id = _unique_index(
+        support_record_rows, "support_record_id", "recurrence support registry", issues
+    )
+    opportunity_rows = _objects(document, "opportunity_records", issues, "records")
+    opportunity_by_id = _unique_index(
+        opportunity_rows, "opportunity_id", "recurrence opportunity registry", issues
+    )
+    for opportunity_id, opportunity in opportunity_by_id.items():
+        if not _string_member(subject_by_id, opportunity.get("subject_id")):
+            issues.append("recurrence opportunity %s has unresolved subject provenance" % opportunity_id)
+    policy_rows = _objects(document, "independence_policies", issues, "records")
+    policy_by_id = _unique_index(policy_rows, "rule_id", "independence policy registry", issues)
+
     for report in reports:
         report_id = report.get("recurrence_report_id")
         if not _string_member(run_by_id, report.get("somnus_run_id")):
             issues.append("recurrence report %s has unresolved somnus run" % report_id)
         support = report.get("supporting_occurrences") if isinstance(report.get("supporting_occurrences"), list) else []
         support = [row for row in support if isinstance(row, dict)]
+        for row in support:
+            support_record = _string_lookup(support_record_by_id, row.get("support_record_id"))
+            if support_record is None or support_record != row:
+                issues.append("recurrence report %s support must resolve exactly to authoritative provenance records" % report_id)
+            typed_dimensions = {
+                "orthing_id": "orthing", "episode_id": "episode",
+                "session_id": "session", "actor_id": "actor",
+            }
+            for field, kind in typed_dimensions.items():
+                if _string_lookup(identity_kind_by_id, row.get(field)) != kind:
+                    issues.append("recurrence report %s support %s must resolve as typed %s" % (report_id, field, kind))
+            if not _string_member(source_family_by_id, row.get("source_family")):
+                issues.append("recurrence report %s support has unresolved source-family provenance" % report_id)
+            if not _string_member(input_family_by_id, row.get("normalized_input_family")):
+                issues.append("recurrence report %s support has unresolved normalized-input provenance" % report_id)
         fields = {
             "episode_count": "episode_id", "session_count": "session_id",
             "normalized_input_family_count": "normalized_input_family",
@@ -587,6 +823,7 @@ def _records_issues(document, schemas, store):
             for dimension, field in fields.items()
         }
         unique_orthings = {row.get("orthing_id") for row in support if isinstance(row.get("orthing_id"), str)}
+        unique_episodes = {row.get("episode_id") for row in support if isinstance(row.get("episode_id"), str)}
         if len(unique_orthings) != len(support):
             issues.append("recurrence support must count distinct episodes and orthings, not copies")
         if any(orthing not in subject_by_id for orthing in unique_orthings):
@@ -611,12 +848,31 @@ def _records_issues(document, schemas, store):
         fingerprint_sources = _string_set(fingerprint.get("source_orthing_ids"))
         if fingerprint_sources != unique_orthings:
             issues.append("recurrence fingerprint sources must exactly match supporting orthings")
+        support_input_families = {
+            row.get("normalized_input_family") for row in support
+            if isinstance(row.get("normalized_input_family"), str)
+        }
+        if support_input_families != {fingerprint.get("normalized_object")}:
+            issues.append("recurrence fingerprint normalized object must bind exactly to its support input family")
         threshold = report.get("threshold")
         denominator = report.get("opportunity_denominator")
-        if not isinstance(threshold, int) or threshold > len(support):
-            issues.append("recurrence threshold cannot exceed distinct support")
-        if not isinstance(denominator, int) or denominator < len(support) + len(counterexamples):
-            issues.append("recurrence opportunity denominator cannot be smaller than support plus counterexamples")
+        if (not isinstance(threshold, int) or threshold > len(unique_orthings)
+                or threshold > len(unique_episodes)):
+            issues.append("recurrence threshold requires distinct orthing and episode support")
+        opportunity_ids = _string_set(report.get("opportunity_ids"))
+        opportunities = [opportunity_by_id[ref] for ref in opportunity_ids if ref in opportunity_by_id]
+        if len(opportunities) != len(opportunity_ids):
+            issues.append("recurrence opportunity denominator has unresolved opportunity IDs")
+        if not isinstance(denominator, int) or denominator != len(opportunity_ids):
+            issues.append("recurrence opportunity denominator must equal its resolvable opportunity-ID set")
+        support_opportunity_subjects = {
+            row.get("subject_id") for row in opportunities if row.get("classification") == "support"
+        }
+        counterexample_opportunity_subjects = {
+            row.get("subject_id") for row in opportunities if row.get("classification") == "counterexample"
+        }
+        if support_opportunity_subjects != unique_orthings or counterexample_opportunity_subjects != counterexamples:
+            issues.append("recurrence opportunity records must back the exact support and counterexample subjects")
         independence = _mapping(report.get("independence_assessment"), "recurrence report %s independence_assessment" % report_id, issues)
         evaluated = _mapping(independence.get("evaluated_dimensions"), "recurrence report %s evaluated independence dimensions" % report_id, issues)
         expected_evaluated = {
@@ -625,11 +881,21 @@ def _records_issues(document, schemas, store):
         }
         if evaluated != expected_evaluated:
             issues.append("recurrence independence dimensions must be recomputed from support")
-        required_dimensions = independence.get("required_dimensions") if isinstance(independence.get("required_dimensions"), list) else []
-        expected_pass = bool(required_dimensions) and all(expected_evaluated.get(name) is True for name in required_dimensions)
+        required_dimensions = _string_set(independence.get("required_dimensions"))
+        policy = _string_lookup(policy_by_id, independence.get("rule_id"))
+        if policy is None:
+            issues.append("recurrence independence assessment must resolve a declared fixed policy")
+            policy_dimensions = set()
+        else:
+            policy_dimensions = _string_set(policy.get("required_dimensions"))
+            if required_dimensions != policy_dimensions:
+                issues.append("recurrence independence dimensions cannot weaken the declared policy")
+        expected_pass = bool(policy_dimensions) and all(expected_evaluated.get(name) is True for name in policy_dimensions)
         if independence.get("passed") is not expected_pass:
             issues.append("recurrence independence result must evaluate its declared structured rule")
-        expected_label = "independent episodes" if expected_pass else "distinct episodes"
+        expected_label = (
+            policy.get("pass_label") if expected_pass else policy.get("fail_label")
+        ) if policy is not None else ("independent episodes" if expected_pass else "distinct episodes")
         if independence.get("label") != expected_label:
             issues.append("recurrence independence label must match the evaluated rule")
         if report.get("systemic_defect_proven") is not False or report.get("threshold_effect") != "review_trigger_only":
@@ -650,12 +916,23 @@ def _records_issues(document, schemas, store):
             issues.append("proposal %s has unresolved successor target" % proposal_id)
         elif successor.get("action_label") != action.get("action_label"):
             issues.append("proposal %s action must match its successor-state action" % proposal_id)
+        _parse_time(proposal.get("proposed_at"), "proposal %s proposed_at" % proposal_id, issues)
 
     for auth in auth_rows:
         if not _string_member(proposal_by_id, auth.get("proposal_id")):
             issues.append("authorization %s has unresolved proposal" % auth.get("authorization_id"))
         if auth.get("source") != "independent_governance":
             issues.append("proposal cannot self-authorize; authorization source must be independent governance")
+        proposal = _string_lookup(proposal_by_id, auth.get("proposal_id"))
+        if proposal is not None:
+            proposed_at = _parse_time(
+                proposal.get("proposed_at"), "proposal %s proposed_at" % proposal.get("proposal_id"), issues
+            )
+            decided_at = _parse_time(
+                auth.get("decided_at"), "authorization %s decided_at" % auth.get("authorization_id"), issues
+            )
+            if proposed_at and decided_at and proposed_at >= decided_at:
+                issues.append("authorization %s must occur after its proposal" % auth.get("authorization_id"))
 
     outcome_application_ids = {
         row.get("application_id") for row in outcome_rows
@@ -676,10 +953,23 @@ def _records_issues(document, schemas, store):
         elif application.get("status") == "applied" and authorization.get("decision") != "authorized":
             issues.append("application cannot apply under rejected authorization")
         if application.get("status") == "applied":
+            if proposal is not None and proposal.get("status") != "proposed":
+                issues.append("applied mutation requires a non-rejected active proposal")
             if application.get("outcome_evaluation_required") is not True or application_id not in outcome_application_ids:
                 issues.append("applied mutation requires later outcome evaluation")
             if not _string_member(successor_by_id, application.get("successor_state_id")):
                 issues.append("applied mutation requires a resolvable successor state")
+            else:
+                successor = successor_by_id[application.get("successor_state_id")]
+                successor_time = _parse_time(
+                    successor.get("created_at"),
+                    "successor %s created_at" % successor.get("successor_state_id"), issues,
+                )
+                applied_time = _parse_time(
+                    application.get("applied_at"), "application %s applied_at" % application_id, issues
+                )
+                if successor_time and applied_time and successor_time != applied_time:
+                    issues.append("applied mutation and successor state must share the authoritative application time")
         elif application.get("successor_state_id") is not None:
             issues.append("non-applied mutation cannot claim a successor state")
         if authorization is not None:
@@ -788,6 +1078,41 @@ def _records_issues(document, schemas, store):
                         issues.append("writeback timeline t4 must name the exact applications and produced successors")
                     if t5_refs != expected_outcomes:
                         issues.append("writeback timeline t5 must name the exact later outcomes for that application chain")
+                    authoritative_times = []
+                    t1_times = [
+                        _parse_time(subject_by_id[ref].get("t1_at"), "subject %s t1_at" % ref, issues)
+                        for ref in expected_t1 if ref in subject_by_id
+                    ]
+                    authoritative_times.append(max((value for value in t1_times if value), default=None))
+                    authoritative_times.append(_parse_time(
+                        _mapping(assessment.get("t2_configuration"), "assessment %s t2_configuration" % assessment_id, issues).get("assessed_at"),
+                        "assessment %s assessed_at" % assessment_id, issues,
+                    ))
+                    t3_times = []
+                    for ref in expected_proposals:
+                        if ref in proposal_by_id:
+                            t3_times.append(_parse_time(proposal_by_id[ref].get("proposed_at"), "proposal %s proposed_at" % ref, issues))
+                    for ref in expected_auths:
+                        if ref in auth_by_id:
+                            t3_times.append(_parse_time(auth_by_id[ref].get("decided_at"), "authorization %s decided_at" % ref, issues))
+                    authoritative_times.append(max((value for value in t3_times if value), default=None))
+                    t4_times = []
+                    for ref in expected_apps:
+                        if ref in application_by_id:
+                            t4_times.append(_parse_time(application_by_id[ref].get("applied_at"), "application %s applied_at" % ref, issues))
+                    for ref in expected_successors:
+                        if ref in successor_by_id:
+                            t4_times.append(_parse_time(successor_by_id[ref].get("created_at"), "successor %s created_at" % ref, issues))
+                    authoritative_times.append(max((value for value in t4_times if value), default=None))
+                    t5_times = [
+                        _parse_time(outcome_by_id[ref].get("evaluated_at"), "outcome %s evaluated_at" % ref, issues)
+                        for ref in expected_outcomes if ref in outcome_by_id
+                    ]
+                    authoritative_times.append(max((value for value in t5_times if value), default=None))
+                    if len(timeline_times) == 5:
+                        for role, displayed, authoritative in zip(expected_roles, timeline_times, authoritative_times):
+                            if displayed and authoritative and displayed != authoritative:
+                                issues.append("writeback timeline %s must equal its authoritative record time" % role)
 
     if document.get("runtime_status") != "fixture_only_no_runtime":
         issues.append("records must state explicit fixture-only non-runtime status")
@@ -825,6 +1150,9 @@ def _evidence_timing_issues(record_id, timing, registry):
 def _inventory_issues(document, schemas, store):
     issues = []
     candidates = _objects(document, "candidates", issues, "inventory")
+    issues += _schema_issues(
+        "inventory", document, schemas[AUX_SCHEMA_NAMES["candidate_inventory"]], store
+    )
     if not isinstance(document, dict) or document.get("status") != "outline-only" or document.get("execution") != "not implemented":
         issues.append("inventory must be outline-only and not implemented")
     if isinstance(document, dict):
@@ -832,7 +1160,7 @@ def _inventory_issues(document, schemas, store):
             "inventory.claim_status", document.get("claim_status"),
             schemas[AUX_SCHEMA_NAMES["claim_status"]], store,
         )
-    required = {"candidate_id", "status", "execution", "inputs", "outputs", "dependencies", "event_emissions", "authority_limit", "residual_behavior", "downstream_owner", "non_claims"}
+    required = {"candidate_id", "status", "execution", "inputs", "outputs", "dependencies", "event_emissions", "authority_limit", "authority_boundary", "residual_behavior", "downstream_owner", "non_claims", "non_claim_boundaries"}
     expected = {"orthability-check", "orthing-ledger", "episode-residual-live", "residual-recurrence-somnic", "metaorthemma-conflict", "intervention-disposition", "verdict-aware-patch-proposal", "guarded-writeback-actuator", "orthing-dream", "somnus-export", "somnus-import", "metaortheme-transclusion", "collective-somnus", "somnus-council", "transclusion-ledger"}
     if {row.get("candidate_id") for row in candidates if isinstance(row.get("candidate_id"), str)} != expected:
         issues.append("inventory does not contain the exact bounded candidate set")
@@ -841,6 +1169,21 @@ def _inventory_issues(document, schemas, store):
             issues.append("inventory candidate %s lacks its complete outline contract" % row.get("candidate_id"))
         if row.get("status") != "outline-only" or row.get("execution") != "not implemented":
             issues.append("inventory candidate %s must remain outline-only and undeployed" % row.get("candidate_id"))
+        for field in ("inputs", "outputs", "dependencies"):
+            if not _string_set(row.get(field)):
+                issues.append("inventory candidate %s requires nonempty typed %s" % (row.get("candidate_id"), field))
+        authority = _mapping(
+            row.get("authority_boundary"),
+            "inventory candidate %s authority_boundary" % row.get("candidate_id"), issues,
+        )
+        if any(authority.get(field) != "prohibited" for field in (
+                "automatic_authorization", "automatic_execution",
+                "automatic_writeback", "historical_rewrite")):
+            issues.append("inventory candidate %s authority boundary must prohibit authorization, execution, writeback, and historical rewrite" % row.get("candidate_id"))
+        authority_text = row.get("authority_limit")
+        if (isinstance(authority_text, str) and "automatic" in authority_text.lower()
+                and any(token in authority_text.lower() for token in ("authorized", "allowed", "permitted"))):
+            issues.append("inventory candidate %s prose contradicts its structured authority boundary" % row.get("candidate_id"))
     return issues
 
 
@@ -878,6 +1221,15 @@ def _adoption_issues(document, schemas, store):
         issues.append("writeback adoption profile must preserve the complete ordinary target vocabulary")
     if not expected_governing <= _string_set(subsumption.get("governing_targets")):
         issues.append("writeback adoption profile must preserve the complete governing target vocabulary")
+    expected_outcomes = {"no_change", "investigation", "evidence_request", "preserve_residual", "one_proposal", "alternative_proposals"}
+    expected_records = {"somnic_assessment", "intervention_disposition", "mutation_proposal", "mutation_authorization", "applied_mutation", "later_outcome_evaluation"}
+    expected_times = {"t1_waking_orthing", "t2_somnic_assessment", "t3_proposal_and_authorization", "t4_application_and_successor_state", "t5_outcome_evaluation"}
+    if _string_set(subsumption.get("outcomes")) != expected_outcomes:
+        issues.append("writeback adoption profile must preserve the exact outcome vocabulary")
+    if _string_set(document.get("record_separation")) != expected_records:
+        issues.append("writeback adoption profile must preserve the exact record-separation vocabulary")
+    if _string_set(document.get("temporal_roles")) != expected_times:
+        issues.append("writeback adoption profile must preserve the exact t1-t5 vocabulary")
     return issues
 
 
@@ -989,6 +1341,22 @@ def _collective_issues(document, schemas, store):
     for field, value in exact.items():
         if document.get(field) != value:
             issues.append("collective automatic boundary %s must be %s" % (field, value))
+    non_claims = _mapping(document.get("non_claims"), "collective.non_claims", issues)
+    expected_non_claims = {
+        "runtime": "not-implemented", "collective_execution": "not-implemented",
+        "automatic_writeback": "not-implemented", "semantic_identity": "not-established",
+        "local_applicability": "not-established", "authorization": "not-established",
+        "recipient_uptake": "not-established",
+    }
+    if non_claims != expected_non_claims:
+        issues.append("collective non-claims must remain structured and consistent with the claim-status owner")
+    claim_status = document.get("claim_status") if isinstance(document.get("claim_status"), dict) else {}
+    if (isinstance(claim_status.get("runtime"), dict)
+            and non_claims.get("runtime") != claim_status["runtime"].get("status")):
+        issues.append("collective runtime non-claim contradicts the claim-status owner")
+    if (isinstance(claim_status.get("collective_execution"), dict)
+            and non_claims.get("collective_execution") != claim_status["collective_execution"].get("status")):
+        issues.append("collective execution non-claim contradicts the claim-status owner")
     return issues
 
 
@@ -1051,7 +1419,7 @@ def collect_issues(activation, records, inventory, adoption, collective,
     else:
         issues.append("activation fixture document must be an object")
     if isinstance(records, dict):
-        issues += _records_issues(records, schemas, store)
+        issues += _records_issues(records, activation, schemas, store)
     else:
         issues.append("somnus record fixture document must be an object")
     issues += _inventory_issues(inventory, schemas, store)

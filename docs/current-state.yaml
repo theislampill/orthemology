@@ -77,9 +77,9 @@ authored:
     pdfs: reproducibly built and visually inspected draft artifacts
     legal_publication: open on license, identity, peer review, and external submission
 derived:
-  source_tree_digest: 539949fae2fe34315ef8325e8c862cccd93bd54b7352d277e92d429f912ea725
+  source_tree_digest: abf9ab35a3ce4b460f32b624dc2e22d917ea46ea497db82a345122b6f6776c0f
   source_tree_digest_policy: docs/project-state-inputs.yaml
-  tracked_files: 620
+  tracked_files: 622
   decision_ids:
   - '0001'
   - '0002'
@@ -118,6 +118,7 @@ derived:
   - '0035'
   decision_count: 35
   schemas:
+  - activation-contract-fixtures.schema.json
   - activation-contract.schema.json
   - analysis.schema.json
   - candidate-overlay.schema.json
@@ -137,11 +138,12 @@ derived:
   - reliability-spec.schema.json
   - residual-recurrence-report.schema.json
   - somnic-assessment.schema.json
+  - somnus-candidate-inventory.schema.json
   - somnus-claim-status.schema.json
   - somnus-record-fixtures.schema.json
   - somnus-run.schema.json
   - verdict-record.schema.json
-  schema_count: 23
+  schema_count: 25
   example_json_count: 9
   example_markdown_count: 2
   validator_scripts:

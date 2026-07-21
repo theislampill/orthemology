@@ -21,13 +21,13 @@
         "ordinary_reflective_writeback_question_is_first_class": {"const": true},
         "ordinary_targets": {"type": "array", "minItems": 4, "uniqueItems": true, "items": {"enum": ["memory", "user_state", "fact", "skill"]}},
         "governing_targets": {"type": "array", "minItems": 11, "uniqueItems": true, "items": {"type": "string", "minLength": 1}},
-        "outcomes": {"type": "array", "minItems": 6, "uniqueItems": true, "items": {"type": "string", "minLength": 1}}
+        "outcomes": {"type": "array", "minItems": 6, "maxItems": 6, "uniqueItems": true, "items": {"enum": ["no_change", "investigation", "evidence_request", "preserve_residual", "one_proposal", "alternative_proposals"]}}
       }
     },
     "actuator": {"type": "object"},
-    "record_separation": {"type": "array", "minItems": 6, "uniqueItems": true, "items": {"type": "string", "minLength": 1}},
+    "record_separation": {"type": "array", "minItems": 6, "maxItems": 6, "uniqueItems": true, "items": {"enum": ["somnic_assessment", "intervention_disposition", "mutation_proposal", "mutation_authorization", "applied_mutation", "later_outcome_evaluation"]}},
     "proposal_provenance_modes": {"type": "array", "minItems": 2, "maxItems": 2, "uniqueItems": true, "items": {"enum": ["legacy_reflective_proposal", "somnus_grounded_proposal"]}},
-    "temporal_roles": {"type": "array", "minItems": 5, "maxItems": 5, "uniqueItems": true, "items": {"type": "string", "minLength": 1}},
+    "temporal_roles": {"type": "array", "minItems": 5, "maxItems": 5, "uniqueItems": true, "items": {"enum": ["t1_waking_orthing", "t2_somnic_assessment", "t3_proposal_and_authorization", "t4_application_and_successor_state", "t5_outcome_evaluation"]}},
     "automatic_proposal": {"const": "prohibited"},
     "automatic authorization": {"const": "prohibited"},
     "automatic application": {"const": "prohibited"},

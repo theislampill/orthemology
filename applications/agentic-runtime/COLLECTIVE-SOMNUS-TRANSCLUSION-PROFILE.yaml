@@ -59,5 +59,10 @@ semantic_boundaries:
   multi_operator_recurrence_proves_truth: false
   multi_operator_recurrence_supplies_authorization: false
 non_claims:
-- no collective network, transport, shared-memory service, distributed learning, independent testimony, or civilisational result is implemented or demonstrated
-- a parsed packet is not proof of semantic identity, local applicability, authorization, or uptake
+  runtime: not-implemented
+  collective_execution: not-implemented
+  automatic_writeback: not-implemented
+  semantic_identity: not-established
+  local_applicability: not-established
+  authorization: not-established
+  recipient_uptake: not-established

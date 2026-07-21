@@ -138,6 +138,18 @@
         "multi_operator_recurrence_supplies_authorization": {"const": false}
       }
     },
-    "non_claims": {"type": "array", "minItems": 2, "uniqueItems": true, "items": {"type": "string", "minLength": 1}}
+    "non_claims": {
+      "type": "object", "additionalProperties": false,
+      "required": ["runtime", "collective_execution", "automatic_writeback", "semantic_identity", "local_applicability", "authorization", "recipient_uptake"],
+      "properties": {
+        "runtime": {"const": "not-implemented"},
+        "collective_execution": {"const": "not-implemented"},
+        "automatic_writeback": {"const": "not-implemented"},
+        "semantic_identity": {"const": "not-established"},
+        "local_applicability": {"const": "not-established"},
+        "authorization": {"const": "not-established"},
+        "recipient_uptake": {"const": "not-established"}
+      }
+    }
   }
 }
