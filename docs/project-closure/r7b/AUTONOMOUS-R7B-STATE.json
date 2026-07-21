@@ -1,0 +1,52 @@
+{
+  "record": "AUTONOMOUS-R7B-STATE",
+  "label": "OPUS CANDIDATE — REQUIRES FRESH FABLE REVIEW BEFORE MERGE",
+  "controlling_instruction": "opus-r7b-pr8-deep-noetic-latent-math-candidate-prompt.md",
+  "independent_finding_set": "orthemology-pr8-deep-dynamics-and-typesetting-independent-audit.md",
+  "model_provenance": {
+    "requested_model_for_this_pass": "Opus 4.8",
+    "surfaced_model_at_this_write": "claude-opus-4-8",
+    "substitution_this_pass": false,
+    "note": "R7B was requested AS Opus 4.8; the surfaced identity matches the request. Unlike R7 (Fable requested, Opus substituted), there is no substitution here. This remains a CANDIDATE pass with no self-sign-off and no merge authority."
+  },
+  "authority_boundary": {
+    "may": ["create child branch", "open ONE draft child PR into the PR #8 branch", "commit to the child branch", "run deterministic offline validators and smoke tests"],
+    "must_not": ["merge any PR", "push to main", "mark any PR ready for merge", "force-push", "rewrite shared history", "issue final/independent sign-off", "run an empirical study", "make a live provider call", "adopt terminology", "make theological/soul-state claims"]
+  },
+  "heads": {
+    "live_main": "43fee0f519e2f6984fb143c1e621c83382e71ec7",
+    "pr8_head_verified_live": "b0538601913c8234511a1f1131a58eb23a4a0dc4",
+    "child_branch": "candidate/r7b-deep-noetic-latent-math",
+    "child_branch_base": "b0538601913c8234511a1f1131a58eb23a4a0dc4",
+    "child_head": "TBD-after-first-commit"
+  },
+  "input_archive": {
+    "name": "orthemology-closure-r7-noetic-application-experiment-validity.zip",
+    "expected_sha256": "d2d98f5277dcea46906d84912bd012ddd190cf5d2a11b39b5f7a944af2adc6cb",
+    "note": "archive is a convenience snapshot; the local working tree at b053860 was verified equal to live PR #8 head and is the source of truth for edits"
+  },
+  "pinned_daee_commit": "c86b3c6673147b8802fe222373a165a37d4d24a8",
+  "osm_source": "opendataloader-output/s41586-024-08548-w.md (Sun et al., Nature 2025, OSM/CSCG) — used for reported abstract computational structure only; no biological/wet-lab procedure, no human/metaphysical transfer",
+  "environment": {
+    "python": "3.11.9",
+    "typst_python_package": "0.15.0 (present; drives current PDF build via scripts/md_to_typst.py + build_pdfs.py)",
+    "pandoc_binary": "NOT on PATH at session start (gates audit's leading P2 pipeline until provisioned/pinned)",
+    "typst_binary": "NOT on PATH (current build does not need it; uses the typst PyPI package)"
+  },
+  "phase_log": [
+    {
+      "phase": "0 + A (read-only reproduction)",
+      "status": "complete",
+      "baseline_suite": "40/40 green from clean checkout (validate.yml faithfully mirrored); PDFs byte-identical; manifest matches",
+      "artifacts": [
+        "docs/project-closure/r7b/AUTONOMOUS-R7B-STATE.json",
+        "docs/project-closure/r7b/R7B-PDF-MATH-BASELINE.md",
+        "docs/project-closure/r7b/R7B-READONLY-REPRODUCTION.md"
+      ],
+      "changed_files": "docs/project-closure/r7b/* only",
+      "unresolved_findings": "none blocking; math-typesetting defect and dynamic-depth gaps reproduced and scheduled for Phases B-J",
+      "next_action": "Phase B math-source/typesetting design spike (Decision 0023); determine Pandoc availability, prototype, decide pipeline"
+    }
+  ],
+  "no_merge_statement": "This child branch is an Opus CANDIDATE. It has not been merged into PR #8 or main. A fresh Fable session must review every hunk, verify the mathematics and conceptual boundaries, and perform the protected merges."
+}
