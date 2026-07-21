@@ -1,0 +1,103 @@
+{
+  "schema": "orthemology-r7e-input-provenance-v1",
+  "status": "current-candidate",
+  "scope": "R7E implementing-run inputs and evidence availability; no merge or scholarship claim",
+  "repository_sources": [
+    {
+      "path": "docs/project-closure/r7e/AUTONOMOUS-R7E-STATE.json",
+      "sha256": "359c7041a6c4045aa9b8e3af2c40164a282e27caa35cc2bfab715e8c3e66c9d7",
+      "evidence_state": "repository-verified",
+      "claim_boundary": "File identity is verified; its workflow prose and statistics remain implementing-run-attributed."
+    },
+    {
+      "path": "docs/project-closure/r7e/ORTHING-CANDIDATE-BACKLOG.md",
+      "sha256": "ea0cfac0e55629441885f782d4b807d61de7890515ed73510e4b07a7524c285a",
+      "evidence_state": "repository-verified",
+      "claim_boundary": "File identity and parseable rows are verified; agent sourcing and screening claims are not scholarship verification."
+    }
+  ],
+  "artifacts": [
+    {
+      "artifact_id": "workflow-journal",
+      "name": "workflow journal.jsonl",
+      "availability": "missing",
+      "evidence_state": "missing",
+      "original_run_binding": "unresolved"
+    },
+    {
+      "artifact_id": "per-agent-reports",
+      "name": "per-agent reports",
+      "availability": "missing",
+      "evidence_state": "missing",
+      "original_run_binding": "unresolved"
+    },
+    {
+      "artifact_id": "full-candidate-drafts",
+      "name": "full candidate drafts",
+      "availability": "missing",
+      "evidence_state": "missing",
+      "original_run_binding": "unresolved"
+    },
+    {
+      "artifact_id": "rebake-attachment",
+      "name": "daee_epistemics_architecture_application_PROPER_REBAKE_v0.4.4.0.md",
+      "availability": "attachment-observed",
+      "evidence_state": "attachment-observed",
+      "sha256": "926d6705efc5a134ed8d9db05f073d093bca7d76602c95e00ae5c4a3a2f90a25",
+      "original_run_binding": "unresolved",
+      "repository_source": false
+    },
+    {
+      "artifact_id": "maximaltrajectory-attachment",
+      "name": "maximaltrajectory.md",
+      "availability": "attachment-observed",
+      "evidence_state": "attachment-observed",
+      "sha256": "a9c24805b5e2af97ec54300461c8f2a47c3cf5242c7f58476b2890bfac08e5d6",
+      "original_run_binding": "unresolved",
+      "repository_source": false
+    },
+    {
+      "artifact_id": "rejection-records",
+      "name": "R7E adversarial rejection bullets",
+      "availability": "partial-repository",
+      "evidence_state": "repository-verified-partial",
+      "original_run_binding": "implementing-run-attributed",
+      "preserved_count": 8,
+      "reported_count": 16,
+      "missing_count": 8
+    }
+  ],
+  "reported_statistics": [
+    {"claim_id": "agent-count", "reported_value": "36 agents", "evidence_state": "implementing-run-attributed", "independently_reconstructed": false},
+    {"claim_id": "phase-shape", "reported_value": "12 + 12 + 12 agents across three phases", "evidence_state": "implementing-run-attributed", "independently_reconstructed": false},
+    {"claim_id": "workflow-errors", "reported_value": "0 errors", "evidence_state": "implementing-run-attributed", "independently_reconstructed": false},
+    {"claim_id": "subagent-tokens", "reported_value": "4.9M subagent tokens", "evidence_state": "implementing-run-attributed", "independently_reconstructed": false},
+    {"claim_id": "candidate-total", "reported_value": "237 candidates", "evidence_state": "implementing-run-attributed", "independently_reconstructed": false},
+    {"claim_id": "survivor-total", "reported_value": "221 survived", "evidence_state": "implementing-run-attributed", "independently_reconstructed": false},
+    {"claim_id": "keep-total", "reported_value": "99 keep", "evidence_state": "implementing-run-attributed", "independently_reconstructed": false},
+    {"claim_id": "bound-total", "reported_value": "122 bound", "evidence_state": "implementing-run-attributed", "independently_reconstructed": false},
+    {"claim_id": "rejection-total", "reported_value": "16 rejected", "evidence_state": "implementing-run-attributed", "independently_reconstructed": false}
+  ],
+  "coverage": {
+    "complete": false,
+    "mapped_parseable_survivor_rows": 221,
+    "available_rejection_records": 8,
+    "missing_rejection_records": 8,
+    "missing_artifact_ids": ["workflow-journal", "per-agent-reports", "full-candidate-drafts"],
+    "unresolved_attachment_bindings": ["rebake-attachment", "maximaltrajectory-attachment"]
+  },
+  "non_claims": [
+    "Turn identity is not orthing identity, and session identity is not episode identity.",
+    "Episode IDs do not prove independent observations.",
+    "Retrospective reconstruction is not live capture.",
+    "No missing rejection record is inferred.",
+    "Current Sol evidence is not inserted into the original R7E t1 evidence state.",
+    "No single sound/unsound field replaces defect-locus accounting.",
+    "No recurrence is claimed without a controlled fingerprint or distinct-source accounting.",
+    "A candidate survivor row is not source verification, correctness, approval, or merge readiness.",
+    "Agent-generated prose is not scholarship.",
+    "Attachment observation does not bind an attachment to the original R7E run.",
+    "The implementing-run statistics are not independently reconstructed.",
+    "PR #12 and all parent PRs remain unmerged."
+  ]
+}

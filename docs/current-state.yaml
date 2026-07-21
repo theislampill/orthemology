@@ -77,9 +77,9 @@ authored:
     pdfs: reproducibly built and visually inspected draft artifacts
     legal_publication: open on license, identity, peer review, and external submission
 derived:
-  source_tree_digest: b155a10f3a3986daf6c8a70e2ac17910724aa7aad8382be0c5a0e990e2e33d8b
+  source_tree_digest: eaa92091c20dbf39c7366d969bafc3016d2b6ce841804fbe76bff75fdcef1b49
   source_tree_digest_policy: docs/project-state-inputs.yaml
-  tracked_files: 595
+  tracked_files: 601
   decision_ids:
   - '0001'
   - '0002'
@@ -125,17 +125,19 @@ derived:
   - metaortheme.schema.json
   - metaorthemma.schema.json
   - orthemma.schema.json
+  - orthing-candidate-ledger.schema.json
   - orthing-episode.schema.json
   - perturbation-spec.schema.json
   - reliability-spec.schema.json
   - verdict-record.schema.json
-  schema_count: 12
+  schema_count: 13
   example_json_count: 9
   example_markdown_count: 2
   validator_scripts:
   - audit_terminology_matching.py
   - derive_reqpath.py
   - validate_argument_map.py
+  - validate_candidate_provenance.py
   - validate_candidate_state.py
   - validate_claim_reasoning_paths.py
   - validate_claim_sources.py
@@ -177,7 +179,7 @@ derived:
   - validate_state_convergence.py
   - validate_type_token_semantics.py
   - validate_verdict_semantics.py
-  validator_count: 44
+  validator_count: 45
   fixture_counts:
     verdict: 7
     reason: 8

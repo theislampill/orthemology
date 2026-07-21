@@ -16,8 +16,8 @@ The range changes exactly ten paths. Dispositions are limited to `keep`,
 | `companion/dynamic-orthing-noetic-learning-and-orthability.md` | `revise` | Preserve the two-scale warning; revise the gap/falsifiability prose, notation collision, objective-gradient wording, convergence wording, and doctrinal boundary. |
 | `docs/current-state.yaml` | `provenance-only` | Generated project-state update caused by R7E sources/artifacts; not an independent semantic addition. Regenerate after each owning task. |
 | `docs/project-closure/HISTORICAL-STATUS-INDEX.yaml` | `keep` | Correctly classifies R7E as current-candidate. Extend the same status to the R7E-Sol control-plane prefix without rewriting history. |
-| `docs/project-closure/r7e/AUTONOMOUS-R7E-STATE.json` | `revise` | Preserve as the attributed implementing-run record, but supersede its unreconstructible workflow statistics through explicit provenance qualification. |
-| `docs/project-closure/r7e/ORTHING-CANDIDATE-BACKLOG.md` | `revise` | Preserve as historical candidate input; supersede duplicate IDs, truncated loci/text, missing drafts, and incomplete rejections with an immutable structured ledger. |
+| `docs/project-closure/r7e/AUTONOMOUS-R7E-STATE.json` | `keep` | Preserve byte-identically as the attributed implementing-run record; `R7E-INPUT-PROVENANCE.json` and the provenance audit supersede its unreconstructible workflow statistics for current review. |
+| `docs/project-closure/r7e/ORTHING-CANDIDATE-BACKLOG.md` | `keep` | Preserve byte-identically as historical candidate input; the immutable structured ledger supersedes its duplicate IDs, truncated loci/text, missing drafts, and incomplete rejections for current review. |
 | `docs/provenance/RELEASE-MANIFEST.sha256` | `provenance-only` | Generated integrity manifest; not an independent semantic addition. Regenerate last. |
 
 ## Eight integrated semantic changes

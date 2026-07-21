@@ -24,9 +24,11 @@ findings:
   evidence:
   - docs/project-closure/r7e/AUTONOMOUS-R7E-STATE.json asserts aggregate workflow statistics
   - complete workflow journal, per-agent records, and full drafts are absent from the repository
+  - docs/project-closure/r7e-sol/R7E-INPUT-PROVENANCE.json preserves the statistics as implementing-run-attributed and makes the absent records explicit
+  - scripts/validate_candidate_provenance.py rejects attribution-to-verification promotion
   severity: blocker
   repair_task: 3
-  terminal_status: open
+  terminal_status: resolved
 - id: R7E-SOL-F003
   title: candidate backlog is not a reliable evidence ledger
   audit_locus: principal blocking finding 3
@@ -34,9 +36,11 @@ findings:
   evidence:
   - docs/project-closure/r7e/ORTHING-CANDIDATE-BACKLOG.md contains 221 data rows but only 172 unique legacy IDs
   - 49 rows reuse IDs across 19 duplicated IDs, paths/text are truncated, and only eight of the attributed sixteen rejections are preserved
+  - docs/project-closure/r7e-sol/ORTHING-CANDIDATE-LEDGER.json maps each of the 221 parseable legacy occurrences exactly once by stable source line while retaining legacy IDs
+  - scripts/validate_candidate_provenance.py rejects mapping drift, false completeness, and provenance promotion
   severity: blocker
   repair_task: 3
-  terminal_status: open
+  terminal_status: resolved
 - id: R7E-SOL-F004
   title: R7E cites an unavailable REBAKE input
   audit_locus: principal blocking finding 4

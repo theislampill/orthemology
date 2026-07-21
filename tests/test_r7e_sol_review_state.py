@@ -103,8 +103,8 @@ EXPECTED_REPRODUCTION_LINK_TARGETS = {
 
 EXPECTED_FINDING_ADJUDICATIONS = {
     "R7E-SOL-F001": ("reproduced", "blocker", 2, "open"),
-    "R7E-SOL-F002": ("reproduced", "blocker", 3, "open"),
-    "R7E-SOL-F003": ("reproduced", "blocker", 3, "open"),
+    "R7E-SOL-F002": ("reproduced", "blocker", 3, "resolved"),
+    "R7E-SOL-F003": ("reproduced", "blocker", 3, "resolved"),
     "R7E-SOL-F004": ("reproduced", "high", 7, "open"),
     "R7E-SOL-F005": ("reproduced", "blocker", 2, "open"),
     "R7E-SOL-F006": ("reproduced", "blocker", 8, "open"),
@@ -367,7 +367,7 @@ def test_findings_and_hunks() -> None:
         )
         for row in findings
     }
-    check("finding adjudications exactly match the Task 1 boundary",
+    check("finding adjudications exactly match the Task 3 boundary",
           actual_adjudications == EXPECTED_FINDING_ADJUDICATIONS,
           repr(actual_adjudications))
     by_id = {str(row.get("id")): row for row in findings}
@@ -379,10 +379,10 @@ def test_findings_and_hunks() -> None:
           repr(by_id.get("R7E-SOL-F011", {}).get("evidence")))
     resolved = {fid for fid, values in actual_adjudications.items()
                 if values[3] == "resolved"}
-    check("F001-F014 remain open and F015 is the only resolved finding",
-          resolved == {"R7E-SOL-F015"}
+    check("F002, F003, and F015 alone are resolved",
+          resolved == {"R7E-SOL-F002", "R7E-SOL-F003", "R7E-SOL-F015"}
           and all(actual_adjudications.get("R7E-SOL-F%03d" % n, (None,) * 4)[3]
-                  == "open" for n in range(1, 15)),
+                  == "open" for n in [1, *range(4, 15)]),
           repr(sorted(resolved)))
 
     hunk_text = read("docs/project-closure/r7e-sol/R7E-HUNK-DISPOSITION.md")
@@ -399,6 +399,9 @@ def test_findings_and_hunks() -> None:
            "provenance-only") in rows)
     check("release manifest is provenance-only",
           ("docs/provenance/RELEASE-MANIFEST.sha256", "provenance-only") in rows)
+    check("preserved R7E provenance inputs are kept byte-identical",
+          ("docs/project-closure/r7e/AUTONOMOUS-R7E-STATE.json", "keep") in rows
+          and ("docs/project-closure/r7e/ORTHING-CANDIDATE-BACKLOG.md", "keep") in rows)
 
 
 def test_decision_boundary_and_validator() -> None:
