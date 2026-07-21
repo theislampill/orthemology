@@ -1,0 +1,65 @@
+schema: orthemology-noetic-field-dynamics-v1
+# R7B, Decision 0025. Adjudication of daee's gradient/field vocabulary and the
+# corrective-dynamics discipline. daee statements pinned to the reviewed commit.
+# No empirical or theological claim; asserts no soul access.
+daee_pinned_commit: c86b3c6673147b8802fe222373a165a37d4d24a8
+gradient_adjudication:
+  models: [G0, G1, G2]
+  adopted: G1
+  G0:
+    name: metaphor only
+    reading: "'gradient/field/attractor/descent' are analogies; no formal monotonicity or convergence follows"
+  G1:
+    name: order-theoretic / route-ranked corrective descent
+    status: adopted
+    reading: "a vector or partially-ordered burden state ranked by a governing functional; a step is sound only if it improves a declared ordering, preserves hard constraints, hides no burden, retains provenance/uncertainty, and triggers a whole-state reread"
+  G2:
+    name: literal differentiable gradient flow
+    status: conditional-future
+    requirements: [state-space-or-manifold, scalar-potential-or-typed-vector-objective, metric, differentiability, gradient-operator, step-rule, convergence-or-stopping, treatment-of-local-minima-nonconvexity-hysteresis-path-dependence]
+    reading: "not supplied by the repository; remains conditional/future"
+  daee_own_bound:
+    status: direct
+    source: docs/algebraic-notation-and-noetic-formalism.md
+    statement: "nabla is a route-ranking functional, 'Not literal physical gradient'; nabla-dot / nabla-cross are 'not literal divergence/curl unless a rigorous target space is later defined'"
+  preferred_phrasing: "governed, route-ranked, descent-like restorative dynamics"
+burden_functional:
+  raw_count_is_not_a_potential: true
+  reason: "discovery can raise the ledger while improving the epistemic position (fixture N18)"
+  lexicographic_order:
+  - truthful-disclosure
+  - evidence-integrity
+  - dependency-correctness
+  - hard-constraints
+  - justified-holds
+  - legitimate-burden-reduction
+  - truthful-closure
+  anti_gaming: "the system cannot simulate descent by deleting or concealing burdens it failed to address"
+non_monotonicity:
+- newly-disclosed-burdens-raise-the-ledger
+- local-minima
+- loops-and-curl
+- path-dependence
+- hysteresis
+- restarts-and-holds
+- metaortheme-revision
+- no-guaranteed-convergence
+state_spaces:
+  note: "these must stay separate; runtime closure is not demonstrated interior restoration (N19)"
+  spaces:
+  - actual-noetic-condition
+  - inferred-profile-p-hat
+  - runtime-control-state
+  - social-metaorthemic-propagation-field-Gamma-mu
+  - released-linguistic-action
+  - actual-uptake-or-restoration
+fitrah_boundary:
+  status: creed-internal
+  is: "normative orientation / proper-function ground within the creed-internal model"
+  is_not: [one-coordinate, one-metaortheme, one-algorithm, one-measured-scalar-target, one-directly-observed-point]
+  min_entropy_attractor: "provisional and creed-internal; daee states the Shannon analogy does not prove noetic collapse [direct]"
+non_claims:
+- no descent claim asserts any interior state, motive, or soul-state
+- runtime closure is not demonstrated restoration
+- fitrah is not measured from discourse; it is a creed-internal normative ground, not a coordinate
+- this adjudication validates neither daee nor Orthemology

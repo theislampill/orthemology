@@ -43,10 +43,18 @@
         "docs/project-closure/r7b/R7B-PDF-MATH-BASELINE.md",
         "docs/project-closure/r7b/R7B-READONLY-REPRODUCTION.md"
       ],
-      "changed_files": "docs/project-closure/r7b/* only",
-      "unresolved_findings": "none blocking; math-typesetting defect and dynamic-depth gaps reproduced and scheduled for Phases B-J",
-      "next_action": "Phase B math-source/typesetting design spike (Decision 0023); determine Pandoc availability, prototype, decide pipeline"
+      "result": "audit A2.1-A2.7 and sections 2-6 reproduced against primary sources (daee pin c86b3c66, OSM Nature source); none refuted; OSM narrowed to 'external exemplification and constraint'."
+    },
+    {
+      "phase": "B + C (math source/typesetting pipeline, Decision 0023)",
+      "status": "complete (pipeline + gallery + validators); corpus in-place migration DEFERRED to reviewed continuation",
+      "suite": "43/43 green (added math_source, math_pipeline_tests, pdf_math); 4 corpus PDFs byte-identical; gallery byte-reproducible",
+      "decision": "P1 adopted (in-repo strict LaTeX-subset -> Typst-math translator, zero new deps); P2 (pinned Pandoc) recorded as merged-CI target — pandoc not deterministically provisionable here",
+      "defect_status": "publication-blocking notdef FIXED and proven: notation gallery renders vec-mu/vec-C and every registry symbol with ZERO notdef; corpus known notdef pinned (core 26, ms 6) and tracked by validate_pdf_math",
+      "child_head_after_phase": "725ca8c",
+      "next_action": "Phase D dynamic-orthing/latent-state learning (Decision 0024)"
     }
   ],
+  "child_head": "725ca8c",
   "no_merge_statement": "This child branch is an Opus CANDIDATE. It has not been merged into PR #8 or main. A fresh Fable session must review every hunk, verify the mathematics and conceptual boundaries, and perform the protected merges."
 }

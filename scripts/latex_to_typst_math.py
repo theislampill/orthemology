@@ -57,7 +57,9 @@ COMMANDS = {
     "Rightarrow": "arrow.r.double", "Leftarrow": "arrow.l.double",
     "leftrightarrow": "arrow.l.r", "Leftrightarrow": "arrow.l.r.double",
     "iff": "arrow.l.r.double", "implies": "arrow.r.double",
-    "mapsto": "arrow.r.bar", "hookrightarrow": "arrow.r.hook",
+    "mapsto": "arrow.r.bar", "longmapsto": "arrow.r.long.bar",
+    "longrightarrow": "arrow.r.long", "longleftarrow": "arrow.l.long",
+    "hookrightarrow": "arrow.r.hook",
     "rightsquigarrow": "arrow.r.squiggly", "leadsto": "arrow.r.squiggly",
     "uparrow": "arrow.t", "downarrow": "arrow.b", "harpoonup": "harpoon.rt",
     "rightharpoonup": "harpoon.rt",
@@ -96,6 +98,7 @@ STYLE = {
     "operatorname": None,  # -> op("...")
     "text": None,          # -> "..."
     "textrm": None,        # -> "..."
+    "textbf": None,        # -> bold("...")
 }
 
 
@@ -195,6 +198,8 @@ def _render_command(name, s, i):
             return 'op("' + _typ_text(inner.strip()) + '")', j
         if name in ("text", "textrm"):
             return '"' + _typ_text(inner) + '"', j
+        if name == "textbf":
+            return 'bold("' + _typ_text(inner) + '")', j
         return fn + "(" + _translate(inner) + ")", j
     if name in SPACING:
         tok = SPACING[name]

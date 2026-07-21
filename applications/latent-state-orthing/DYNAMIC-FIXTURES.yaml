@@ -1,0 +1,70 @@
+schema: orthemology-dynamic-fixtures-v1
+# R7B, Decision 0024. Fixtures asserting the dynamic-orthing separations. Each
+# states a scenario, the distinction it protects, the collapse it forbids, and a
+# non-claim. scripts/validate_dynamic_orthing.py enforces structure + invariants.
+# Deterministic; establishes no empirical, human, or metaphysical claim.
+update_levels: [episode-inference, representation-learning, repertoire-revision, analysis-version-change]
+fixtures:
+- id: DYN-1
+  name: episode inference is not model learning
+  level: episode-inference
+  scenario: "Within a fixed analysis A and model theta, new evidence in one episode revises belief b_t -> b_{t+1} and the inferred profile p-hat_t -> p-hat_{t+1}."
+  distinction: "a within-episode belief update is NOT a change to theta or to the repertoire O_A"
+  forbids: "recording a belief revision as if the model or repertoire had been revised"
+  non_claim: "belief is not ground truth O*(m;A); no interior/soul access"
+- id: DYN-2
+  name: world transition vs learner update
+  level: representation-learning
+  scenario: "An action a_t yields a successor occurrence m_{t+1}; separately a learning update U_A(e_t) changes theta_t -> theta_{t+1}."
+  distinction: "the occurrence/world edge m_t --a_t--> m_{t+1} is not the learner edge theta_t --U_A--> theta_{t+1}"
+  forbids: "attributing a model change to the world, or a world change to the model"
+  non_claim: "neither edge asserts anything about a person's interior"
+- id: DYN-3
+  name: analysis-version change blocks transport
+  level: analysis-version-change
+  scenario: "A change in task/tolerance/boundaries/representation family/governance yields A_t -> A_{t+1}."
+  distinction: "placements, validations, and verdicts under A_t do NOT transport to A_{t+1} without a declared transport argument"
+  forbids: "carrying a verdict across an analysis-version change as if invariant"
+  non_claim: "analysis relativity is not relativism; O*(m;A) is objective once A is fixed"
+- id: DYN-4
+  name: ortheme admission is by ablation, not latent split
+  level: representation-learning
+  scenario: "A model acquires a new latent-state distinction during learning."
+  distinction: "the split becomes orthemically consequential ONLY if a declared merge/ablation test shows collapsing it changes warranted prediction/action/route/validation/closure/loss beyond epsilon_A"
+  forbids: "promoting a latent split to an ortheme merely because the model represents it"
+  non_claim: "an overcomplete model can invent splits; representation is not truth"
+- id: DYN-5
+  name: no one-to-one latent-to-profile map
+  level: representation-learning
+  scenario: "Comparing latent states Z_A with the profile space Pi_A."
+  distinction: "one latent state may encode a whole profile; several latent states may share one profile; one orthemic distinction may be distributed over many model dimensions"
+  forbids: "assuming a bijection between latent states and orthemic profiles"
+  non_claim: "no claim that the model's dimensions are the world's distinctions"
+- id: DYN-6
+  name: orthogonalization is one geometry
+  level: representation-learning
+  scenario: "Decorrelation produces near-orthogonal representations (OSM)."
+  distinction: "orthogonality is one implementation geometry; it does not define an ortheme"
+  forbids: "defining orthemes, pathway adequacy, or strict soundness via vector orthogonality"
+  non_claim: "orthogonalization is neither necessary nor sufficient for distinct orthemes"
+- id: DYN-7
+  name: endpoint underdetermines mechanism
+  level: representation-learning
+  scenario: "Several models reach the same final orthogonalized representation; only CSCG also reproduces the learning trajectory."
+  distinction: "endpoint equivalence does not identify the mechanism; trajectory evidence is stronger"
+  forbids: "inferring the learning mechanism from endpoint performance alone"
+  non_claim: "this constrains a dynamic account; it does not validate Orthemology"
+- id: DYN-9
+  name: repertoire revision changes what exists, under governance
+  level: repertoire-revision
+  scenario: "A recurring error across episodes triggers a governed revision changing the metaortheme set mu_t -> mu_{t+1} or the repertoire O_{A,t} -> O_{A,t+1}."
+  distinction: "repertoire revision is neither a within-episode belief update (DYN-1) nor a model-parameter change (DYN-2); it changes WHICH metaorthemes/routes exist"
+  forbids: "adding or retiring a metaortheme/route without a governed, provenance-tracked revision record"
+  non_claim: "revision is governed and recorded, not automatic learning; it asserts nothing about any interior state"
+- id: DYN-8
+  name: OSM is exemplification and constraint, not validation
+  level: analysis-version-change
+  scenario: "Using the OSM/CSCG source in the dynamic extension."
+  distinction: "the source supplies an independent example and constraints a dynamic account must represent; it is NOT evidence for the theory"
+  forbids: "citing OSM as support for Orthemology, its terminology, human noetics, fitrah, or any metaphysical claim; importing any biological/wet-lab procedure"
+  non_claim: "no human/noetic/metaphysical transfer whatsoever"

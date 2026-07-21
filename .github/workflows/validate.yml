@@ -82,6 +82,10 @@ jobs:
         run: python tests/test_math_pipeline.py
       - name: PDF math-glyph regression gate (R7B, Decision 0023)
         run: python scripts/validate_pdf_math.py
+      - name: Dynamic orthing / latent-state learning (R7B, Decision 0024)
+        run: python scripts/validate_dynamic_orthing.py
+      - name: Meta-noetic memetics + sound descent adjudication (R7B, Decision 0025)
+        run: python scripts/validate_meta_noetic_memetics.py
       - name: FCSP-2 packet smoke tests (deterministic; no result)
         run: python experiments/false-closure-selective-prediction-v2/tests/test_smoke.py
       - name: ER-2 packet smoke tests (deterministic; no result)

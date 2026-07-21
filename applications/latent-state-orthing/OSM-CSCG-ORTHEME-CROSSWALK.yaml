@@ -1,0 +1,45 @@
+schema: orthemology-osm-cscg-crosswalk-v1
+# R7B, Decision 0024. Typed crosswalk between the OSM/CSCG source's REPORTED
+# abstract computational structure and Orthemology objects. Source used for its
+# reported structure only (no biological/wet-lab procedure; no human/noetic/
+# metaphysical transfer). claim_status is one of:
+#   source-report        - a statement the OSM/CSCG paper reports
+#   model-mechanics       - how the CSCG/HMM model works (algorithmic)
+#   synthesis             - this project's typed reading joining the two
+#   orthemology-extension - a Decision 0024 extension object
+# Every row carries non_claims. Establishes no validation of Orthemology.
+osm_source: opendataloader-output/s41586-024-08548-w.md
+overall_status: "external exemplification and constraint, NOT validation"
+rows:
+- osm_concept: "sensory-similar contexts, different task states (observational aliasing)"
+  claim_status: source-report
+  orthemology_object: "occurrence m vs observation x = Omega_A(m) (Decision 0015): the same observation is consistent with distinct occurrences/states"
+  non_claims: ["the observation is not the occurrence", "aliasing is not deformation, deception, or noetic pathology"]
+- osm_concept: "latent task state inferred from history (hidden-state inference)"
+  claim_status: source-report
+  orthemology_object: "latent model state z_t in Z_A and belief b_t in Delta(Z_A); NOT an ortheme and NOT the inferred profile p-hat_t"
+  non_claims: ["a latent state is not an ortheme by itself (admission is by ablation, DYN-4)", "z_t is not ground truth O*(m;A)"]
+- osm_concept: "clones / state cells (fixed-emission latent copies)"
+  claim_status: model-mechanics
+  orthemology_object: "representation dimensions y_t = f_theta(history); a modelling device, not a type-token pole"
+  non_claims: ["clones are not orthemmata and not metaorthemes", "a state cell is not a bearer of truth"]
+- osm_concept: "progressive decorrelation into orthogonalized representations"
+  claim_status: source-report
+  orthemology_object: "representation geometry over learning; ONE geometry that can reduce interference among aliased-but-distinct states"
+  non_claims: ["orthogonality does NOT define an ortheme", "orthogonalization is neither necessary nor sufficient for distinct worldly states, pathway adequacy, or strict soundness"]
+- osm_concept: "learned transition graph among latent states (OSM = state machine)"
+  claim_status: model-mechanics
+  orthemology_object: "learner transition model theta_t; its change is representation learning theta_t -> theta_{t+1}, distinct from world edge m_t --a--> m_{t+1}"
+  non_claims: ["the learned graph is the model's, not the world's occurrence lineage", "a fitted transition is not a validated route repertoire R_A"]
+- osm_concept: "CSCG uniquely reproduces final states AND learning trajectory"
+  claim_status: source-report
+  orthemology_object: "endpoint equivalence UNDERDETERMINES mechanism; trajectory evidence is stronger than endpoint fit"
+  non_claims: ["matching endpoints does not identify the mechanism", "this is not evidence for Orthemology; it constrains what a dynamic extension must be able to represent"]
+- osm_concept: "flexible adaptation of the OSM under altered cues / segment lengths"
+  claim_status: source-report
+  orthemology_object: "representation/analysis transport under changed conditions; a candidate A_t -> A_{t+1} or theta_t -> theta_{t+1}, never silent transport"
+  non_claims: ["adaptation is not guaranteed learnability or convergence", "no transfer to human cognition, fitrah, or metaphysics"]
+- osm_concept: "hidden state inference as a fundamental computational principle"
+  claim_status: synthesis
+  orthemology_object: "exemplifies that observation/state separation and history-dependent disambiguation MUST be representable in a dynamic account (Decision 0015 + 0024)"
+  non_claims: ["'fundamental' is the paper's claim about the model class, not a proof of Orthemology", "no metaphysical or theological consequence follows"]

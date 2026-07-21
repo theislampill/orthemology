@@ -77,9 +77,9 @@ authored:
     pdfs: reproducibly built and visually inspected draft artifacts
     legal_publication: open on license, identity, peer review, and external submission
 derived:
-  source_tree_digest: 727156d5c6df6bccf03e7b4d00dc9681f290a414a4ea6b07bab68fb601e20046
+  source_tree_digest: 9634bcc57ebbe274ea42cca1d5b268bfde7765687148b3f8b926d14ceadce1f8
   source_tree_digest_policy: docs/project-state-inputs.yaml
-  tracked_files: 501
+  tracked_files: 513
   decision_ids:
   - '0001'
   - '0002'
@@ -104,7 +104,9 @@ derived:
   - '0021'
   - '0022'
   - '0023'
-  decision_count: 23
+  - '0024'
+  - '0025'
+  decision_count: 25
   schemas:
   - analysis.schema.json
   - claim-ledger.schema.json
@@ -131,12 +133,14 @@ derived:
   - validate_daee_crosswalk.py
   - validate_decision_dependencies.py
   - validate_dependency_lock.py
+  - validate_dynamic_orthing.py
   - validate_evidence_boundary.py
   - validate_experiment_methods.py
   - validate_experiment_readiness.py
   - validate_internal_references.py
   - validate_latent_state_fixtures.py
   - validate_math_source.py
+  - validate_meta_noetic_memetics.py
   - validate_negative_fixtures.py
   - validate_noetic_application.py
   - validate_notation.py
@@ -152,7 +156,7 @@ derived:
   - validate_state_convergence.py
   - validate_type_token_semantics.py
   - validate_verdict_semantics.py
-  validator_count: 32
+  validator_count: 34
   fixture_counts:
     verdict: 7
     reason: 8

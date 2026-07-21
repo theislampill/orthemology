@@ -87,3 +87,85 @@ fixtures:
   correct_action: resolve at the proposition level; add NO deep noetic diagnosis
   forbidden_placements: [invent a deformation the evidence does not support, assert motive or soul-state]
   distinction_tested: extra noetic machinery must not manufacture a deformation
+# --- R7B meta-noetic memetics fixtures (Decision 0025): the represented-standard
+#     bearer mu-tilde, carrier/rule separation, the ecology, and corrective dynamics.
+- id: N11
+  title: represented metaortheme persists across episodes
+  observation: the same governing standard appears in two episodes months apart, carried by different utterances
+  candidate_profiles: [one-represented-standard-persisting, two-unrelated-case-bindings, coincidence]
+  inferred_profile: represented-standard-persisting (mu-tilde_{alpha,t}, distinct from any one metaorthemma)
+  correct_action: track the represented standard mu-tilde across episodes; do not collapse it into one episode-local metaorthemma
+  forbidden_placements: [treat persistence as proof of bad faith, assert the carrier's motive or soul-state]
+  distinction_tested: represented standard mu-tilde vs case-bound metaorthemma mu-bar
+- id: N12
+  title: one carrier mutates while the governing rule remains
+  observation: a slogan's wording changes across retellings while the governing proof-rule it carries is unchanged
+  candidate_profiles: [carrier-mutation-rule-stable]
+  inferred_profile: carrier-token-mutated-standard-stable
+  correct_action: separate carrier mutation (orthemma) from the stability of the carried governing standard
+  forbidden_placements: [treat wording change as rule change, assert motive or soul-state]
+  distinction_tested: carrier token vs carried governing standard
+- id: N13
+  title: wording remains while the governing rule changes
+  observation: identical public wording is used, but the governing standard it now carries differs
+  candidate_profiles: [constant-carrier-changed-standard]
+  inferred_profile: stable-carrier-changed-represented-standard
+  correct_action: detect the governing-rule change under constant wording; do not assume same words imply the same standard
+  forbidden_placements: [assume constant wording proves a constant standard, assert motive or soul-state]
+  distinction_tested: constant carrier vs changed governing standard
+- id: N14
+  title: one upstream standard creates false convergence (false tawatur)
+  observation: a hundred apparent sources assert the same claim
+  candidate_profiles: [independent-convergence, copies-of-one-upstream, one-institutional-standard-reproduced, mutations-of-one-carrier]
+  inferred_profile: underdetermined-without-dependency-analysis (count is not tawatur-like independence)
+  correct_action: map source origin, independence, dependency, and mutation lineage before treating agreement as corroboration
+  forbidden_placements: [treat count as independence, assert the sources' motives or soul-states]
+  distinction_tested: source independence vs source count (false tawatur)
+- id: N15
+  title: case-bound token misapplies a sound represented standard
+  observation: a sound governing standard is invoked but bound to the wrong case
+  candidate_profiles: [sound-standard-wrong-case-binding]
+  inferred_profile: sound-standard-defective-metaorthemma
+  correct_action: flag the metaorthemma binding as defective; the represented standard stays sound
+  forbidden_placements: [condemn the standard for a binding error, assert motive or culpability or soul-state]
+  distinction_tested: sound represented standard vs defective case binding
+- id: N16
+  title: institution-level reinforcement / hysteresis
+  observation: an institution repeatedly reinforces a standard; challenges do not shift it
+  candidate_profiles: [institutional-reinforcement-hysteresis]
+  inferred_profile: ecology-level-path-dependent-stabilization
+  correct_action: model the reinforcement and hysteresis at the ecology level (Gamma-mu); infer no individual's interior
+  forbidden_placements: [infer any member's motive or soul-state, read institutional stability as individual conviction]
+  distinction_tested: institutional stabilization vs individual noetic state
+- id: N17
+  title: evaluator inherits the same standard being audited
+  observation: the evaluator's own represented standard is the one under audit
+  candidate_profiles: [evaluator-standard-inheritance]
+  inferred_profile: circularity-risk-evaluator-symmetry-required
+  correct_action: apply the framework to the evaluator's inherited standard; do not privilege self-certification (non-circularity is not proven)
+  forbidden_placements: [privilege the evaluator's standard, assert the audited party's motive or soul-state]
+  distinction_tested: audited standard vs the evaluator's inherited standard
+- id: N18
+  title: burden discovery raises the visible ledger while improving disclosure
+  observation: an audit discovers three previously hidden burdens; the ledger grows
+  candidate_profiles: [disclosure-repair-larger-ledger]
+  inferred_profile: epistemic-improvement-despite-larger-ledger
+  correct_action: score by the lexicographic order (disclosure first), not raw burden count; a larger ledger can be progress
+  forbidden_placements: [treat ledger growth as deterioration, assert motive or soul-state]
+  distinction_tested: raw burden count vs anti-gaming lexicographic progress
+- id: N19
+  title: runtime field closes without uptake
+  observation: the runtime control field closes while the person is unchanged
+  candidate_profiles: [runtime-closed-person-unchanged]
+  inferred_profile: runtime-closure-only-no-demonstrated-restoration
+  correct_action: record runtime closure only; keep it separate from actual uptake or restoration
+  forbidden_placements: [assert restoration, assert the person's motive or soul-state]
+  distinction_tested: runtime closure vs actual uptake/restoration
+- id: N20
+  title: negative control (ordinary disagreement, no deformation)
+  observation: two parties disagree on evidence with no sign of deformation
+  candidate_profiles: [ordinary-evidential-disagreement]
+  inferred_profile: no-deformation
+  correct_action: refuse to invent a deformation; ordinary disagreement is not a noetic pathology
+  forbidden_placements: [manufacture a deformation, assert motive or soul-state]
+  distinction_tested: ordinary disagreement vs noetic deformation (negative control)

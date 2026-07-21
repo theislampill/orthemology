@@ -41,7 +41,29 @@ GALLERY = "docs/notation-gallery.md"
 COMBINING = re.compile(r"[̀-ͯ⃗]")
 DISPLAY_RE = re.compile(r"\$\$(.+?)\$\$", re.S)
 INLINE_RE = re.compile(r"\$([^\$\n]+?)\$")
-FENCE_MATH_RE = re.compile(r"```math\n(.*?)```", re.S)
+CODE_FENCE_RE = re.compile(r"```(\w*)\n(.*?)```", re.S)
+INLINE_CODE_RE = re.compile(r"`[^`]*`")
+
+
+def real_math_spans(text):
+    """Extract genuine math spans, ignoring $ that appears inside code fences or
+    inline `code` (e.g. prose describing the $...$ syntax). Returns (kind, body)
+    with kind 'i' (inline) or 'd' (display/fence)."""
+    spans = []
+
+    def fence_sub(m):
+        if m.group(1).strip() == "math":
+            spans.append(("d", m.group(2)))
+        return "\n"
+
+    t = CODE_FENCE_RE.sub(fence_sub, text)
+    t = INLINE_CODE_RE.sub(" ", t)
+    for m in DISPLAY_RE.finditer(t):
+        spans.append(("d", m.group(1)))
+    t = DISPLAY_RE.sub(" ", t)
+    for m in INLINE_RE.finditer(t):
+        spans.append(("i", m.group(1)))
+    return spans
 
 
 def check(name, ok, detail=""):
@@ -86,9 +108,12 @@ def main():
               ("$" + e["latex"] + "$") in gallery_text or e["latex"] in gallery_text,
               "latex not found verbatim in %s" % GALLERY)
 
-    # 4. no combining accents in publication math source anywhere
+    # 4. every math source span across the corpus (a) carries no precomposed
+    #    combining accent and (b) translates cleanly through the strict subset —
+    #    so no shipped math source can render broken or use the notdef antipattern.
     scan_roots = ["manuscript", "theory", "companion", "docs", "applications"]
     bad_accents = []
+    bad_translate = []
     for r in scan_roots:
         base = os.path.join(ROOT, r)
         if not os.path.isdir(base):
@@ -100,13 +125,17 @@ def main():
                     continue
                 rel = os.path.relpath(os.path.join(dp, fn), ROOT).replace("\\", "/")
                 text = io.open(os.path.join(dp, fn), encoding="utf-8").read()
-                spans = (DISPLAY_RE.findall(text) + INLINE_RE.findall(text)
-                         + FENCE_MATH_RE.findall(text))
-                for sp in spans:
+                for kind, sp in real_math_spans(text):
                     if COMBINING.search(sp):
                         bad_accents.append("%s: %r" % (rel, sp[:40]))
+                    try:
+                        translate_inline(sp) if kind == "i" else translate_display(sp)
+                    except MathConvertError as ex:
+                        bad_translate.append("%s: %r -> %s" % (rel, sp[:30], ex))
     check("no precomposed combining accents in publication math source",
           not bad_accents, "; ".join(bad_accents[:5]))
+    check("every math source span translates through the strict subset",
+          not bad_translate, "; ".join(bad_translate[:5]))
 
     # 5. migration manifest covers every build source doc
     mig = yaml.safe_load(read("docs/math-migration-status.yaml"))
