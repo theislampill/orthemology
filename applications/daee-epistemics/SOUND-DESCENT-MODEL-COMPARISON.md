@@ -43,11 +43,27 @@ position (non-disclosure repaired). So
 |\mathbf{B}_{t+1}| > |\mathbf{B}_t| \ \text{does not imply deterioration}, \qquad |\mathbf{B}_{t+1}| < |\mathbf{B}_t| \ \text{does not imply progress}
 ```
 
-Progress is **lexicographic**: truthful disclosure $\succ$ evidence integrity
-$\succ$ dependency correctness $\succ$ hard constraints $\succ$ justified holds
-$\succ$ legitimate reduction $\succ$ truthful closure. Otherwise the system could
-simulate descent by deleting or concealing the very burdens it failed to address
-(fixture N18).
+Correction is therefore **feasibility-first**, not one universal total
+lexicographic order (audit B14). **First**, a route violating any hard
+constraint is *inadmissible* and filtered out — $\operatorname{Admissible}_A(S,r)$
+— before any ranking; hard constraints are feasibility, not a rankable dimension.
+**Second**, mandatory invariants are preserved (truthful disclosure, evidence and
+provenance integrity, target and dependency correctness, retained uncertainty,
+explicit holds, no fabricated closure). **Third**, admissible successors are
+compared by a declared **partial order** $S' \succeq_A S$ — some routes remain
+incomparable, licensing hold, escalation, parallel inquiry, or owner decision.
+Otherwise the system could simulate descent by deleting or concealing the very
+burdens it failed to address (fixture N18).
+
+## Two timescales (audit B15)
+
+**Fast** episode-level correction ($S_{e,t} \to S_{e,t+1}$: evidence, candidate
+revision, token binding, route, burden landing, reread, hold/recurse/stop) is
+distinct from **slow** meta-level adaptation ($\Gamma^\mu_t \to \Gamma^\mu_{t+1}$,
+$\tilde\mu_t \to \tilde\mu_{t+1}$, $\mu_t \to \mu_{t+1}$, $A_t \to A_{t+1}$). A
+pathway-adequate episode need not change the represented standard; a long-run
+ecology may improve despite a failed episode; one runtime closure does not
+establish interior restoration. `NOETIC-FIELD-DYNAMICS.yaml` `corrective_dynamics`.
 
 ## G2 — literal differentiable gradient flow (CONDITIONAL / FUTURE)
 

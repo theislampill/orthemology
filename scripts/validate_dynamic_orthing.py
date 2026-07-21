@@ -73,9 +73,22 @@ def main():
             check("fixture %s has %s" % (fid, field), bool(str(f.get(field, "")).strip()))
         check("fixture %s level is valid" % fid, f.get("level") in LEVELS, f.get("level"))
 
-    # 3. required fixtures present
-    for req in ("DYN-1", "DYN-2", "DYN-3", "DYN-4", "DYN-5", "DYN-6", "DYN-7", "DYN-8"):
+    # 3. required fixtures present (R7C extended to the failure families DYN-10..DYN-20)
+    for n in range(1, 21):
+        req = "DYN-%d" % n
         check("fixture %s present" % req, req in ids)
+
+    # 3b. update coupling (R7C, audit B7): each of the four levels is GOVERNED
+    coupling = load(APP + "/UPDATE-COUPLING.yaml")
+    ct = {t["level"]: t for t in coupling.get("transitions", [])}
+    check("update coupling covers all four levels", set(ct) == LEVELS, str(sorted(ct)))
+    for lvl, t in sorted(ct.items()):
+        for field in ("trigger", "authority", "input", "version", "transport", "invalidated", "reopening", "rollback"):
+            check("coupling[%s] declares %s" % (lvl, field), bool(t.get(field)))
+    rr = ct.get("repertoire-revision", {})
+    check("repertoire revision changes the DECLARED repertoire, not worldly facts",
+          "represent" in str(rr.get("non_claim", "")).lower()
+          and "not worldly" in str(rr.get("non_claim", "")).lower())
 
     # 4. OSM boundary: DYN-8 forbids validation-use + wet-lab + metaphysical transfer
     dyn8 = next((f for f in fixtures if f.get("id") == "DYN-8"), {})

@@ -26,15 +26,41 @@ gradient_adjudication:
 burden_functional:
   raw_count_is_not_a_potential: true
   reason: "discovery can raise the ledger while improving the epistemic position (fixture N18)"
-  lexicographic_order:
-  - truthful-disclosure
-  - evidence-integrity
-  - dependency-correctness
-  - hard-constraints
-  - justified-holds
-  - legitimate-burden-reduction
-  - truthful-closure
   anti_gaming: "the system cannot simulate descent by deleting or concealing burdens it failed to address"
+# R7C, Decision 0025 amendment (audit B14/B15): the R7B single lexicographic order
+# (which placed hard-constraints 4th) is CORRECTED. Correction is feasibility-first
+# constrained order-theoretic, over TWO timescales.
+corrective_dynamics:
+  feasibility_first:
+    predicate: "Admissible_A(S, r)"
+    rule: "a route violating ANY hard constraint is INADMISSIBLE and filtered out BEFORE any ranking; hard constraints are feasibility, not a rankable dimension (corrects R7B's lexicographic 4th-place placement)"
+  mandatory_invariants:
+  - truthful-disclosure
+  - evidence-and-provenance-integrity
+  - target-correctness
+  - dependency-correctness
+  - retained-uncertainty
+  - explicit-holds
+  - no-fabricated-closure
+  ordering:
+    type: partial-order-or-governance-declared-ranking
+    relation: "S' >=_A S over ADMISSIBLE successors only"
+    universal_total_lexicographic: false
+    incomparable: "some routes remain incomparable, licensing hold / escalation / parallel inquiry / owner decision"
+    permissive_guard: "'improves the declared ordering or justified expected value' is meaningful ONLY once the ordering, uncertainty model, and objective are declared"
+  two_timescales:
+    fast_episode: "S_{e,t} -> S_{e,t+1}: evidence acquisition, candidate revision, token binding, route selection, burden landing, reread, hold/recurse/stop"
+    slow_meta: "Gamma^mu_t -> Gamma^mu_{t+1}; mu-tilde_t -> mu-tilde_{t+1}; mu_t -> mu_{t+1}; A_t -> A_{t+1}"
+    coupling: "a pathway-adequate episode need not change the represented standard; a long-run ecology may improve despite a failed episode; one runtime closure does not establish interior restoration"
+  verdict_connection:
+  - evidence-support-and-currentness
+  - governing-type-adequacy
+  - metaorthemma-adequacy
+  - executor-fidelity
+  - route-admissibility
+  - closure-truthfulness
+  - robustness
+  no_result_or_restoration_entailment: "no runtime improvement entails result truth or human restoration"
 non_monotonicity:
 - newly-disclosed-burdens-raise-the-ledger
 - local-minima

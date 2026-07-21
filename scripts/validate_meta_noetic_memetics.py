@@ -112,9 +112,21 @@ def main():
           "descent-like" in str(ga.get("preferred_phrasing", "")).lower())
     bf = fd.get("burden_functional", {})
     check("raw burden count is NOT a potential", bf.get("raw_count_is_not_a_potential") is True)
-    order = bf.get("lexicographic_order", [])
-    check("lexicographic order leads with truthful disclosure",
-          bool(order) and "disclosure" in order[0])
+    # R7C (B14/B15): feasibility-first constrained order, two timescales
+    cd = fd.get("corrective_dynamics", {})
+    ff = cd.get("feasibility_first", {})
+    check("hard constraints are feasibility-first (filtered before ranking)",
+          bool(ff.get("predicate")) and ("before" in str(ff.get("rule", "")).lower()
+                                          and "inadmissible" in str(ff.get("rule", "")).lower()))
+    check("ordering is a partial/declared order, NOT one universal total lexicographic",
+          cd.get("ordering", {}).get("universal_total_lexicographic") is False)
+    check("mandatory invariants lead with truthful disclosure",
+          "truthful-disclosure" in cd.get("mandatory_invariants", []))
+    tt = cd.get("two_timescales", {})
+    check("two timescales (fast episode vs slow meta) are separated",
+          bool(tt.get("fast_episode")) and bool(tt.get("slow_meta")) and bool(tt.get("coupling")))
+    check("no runtime improvement entails result truth or restoration",
+          "restoration" in str(cd.get("no_result_or_restoration_entailment", "")).lower())
     check("non-monotonicity includes no-guaranteed-convergence",
           "no-guaranteed-convergence" in fd.get("non_monotonicity", []))
     spaces = fd.get("state_spaces", {}).get("spaces", [])
