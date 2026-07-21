@@ -77,9 +77,9 @@ authored:
     pdfs: reproducibly built and visually inspected draft artifacts
     legal_publication: open on license, identity, peer review, and external submission
 derived:
-  source_tree_digest: a329589c17851c0aa323a05ca7748989fb07de06ac018894e3ae29532f37c6e9
+  source_tree_digest: 546ffa35fd1ae77d42a42d553122e64960b364ad9792b8aa54ea75228be293b9
   source_tree_digest_policy: docs/project-state-inputs.yaml
-  tracked_files: 588
+  tracked_files: 593
   decision_ids:
   - '0001'
   - '0002'
@@ -118,6 +118,8 @@ derived:
   decision_count: 34
   schemas:
   - analysis.schema.json
+  - candidate-overlay.schema.json
+  - candidate-topology.schema.json
   - claim-ledger.schema.json
   - handoff.schema.json
   - metaortheme.schema.json
@@ -127,7 +129,7 @@ derived:
   - perturbation-spec.schema.json
   - reliability-spec.schema.json
   - verdict-record.schema.json
-  schema_count: 10
+  schema_count: 12
   example_json_count: 9
   example_markdown_count: 2
   validator_scripts:

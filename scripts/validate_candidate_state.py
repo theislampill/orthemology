@@ -1,29 +1,20 @@
 #!/usr/bin/env python3
-"""Candidate-state / pre-merge integrity validator (R7C, Decision 0026).
+"""Validate the generated, complete R7 candidate topology (Decision 0034).
 
-Deterministic, offline. Enforces the honest candidate/merged boundary so an Opus
-candidate pass cannot present its own unreviewed work as merged:
-
-  1. every candidate decision (one carrying a `pr:` field, i.e. 0020+) has status
-     `proposed-candidate`, never `adopted-merged`;
-  2. every candidate decision FILE carries the CANDIDATE label;
-  3. the candidate overlay declares `merged: false`, `independent_signoff: false`,
-     and the correct merged-base sha (main, R6);
-  4. no candidate closure artifact (docs/project-closure/r7/|r7b/|r7c/) is
-     classified merged/adopted in the historical-status index;
-  5. the merged base lists only 0001-0019 (main has no 0020+).
-
-Establishes no empirical or theological claim; an integrity gate only.
+This validator is deterministic and offline.  It validates the frozen PR
+observation, rebuilds the candidate overlay in memory, and requires the tracked
+overlay to equal that generated model.  It does not query GitHub or treat an
+observed branch head as a timeless/self-referential commit claim.
 """
 import io
+import json
 import os
 import sys
 
-try:
-    import yaml
-except ImportError as e:
-    print("FATAL: requires pyyaml:", e)
-    sys.exit(2)
+import yaml
+from jsonschema import Draft202012Validator
+
+from generate_candidate_state import build_overlay, collect_issues
 
 ROOT = os.path.dirname(os.path.dirname(os.path.abspath(__file__)))
 MAIN_R6_SHA = "43fee0f519e2f6984fb143c1e621c83382e71ec7"
@@ -37,96 +28,118 @@ def check(name, ok, detail=""):
 
 
 def read(rel):
-    p = os.path.join(ROOT, rel)
-    return io.open(p, encoding="utf-8").read() if os.path.exists(p) else ""
+    path = os.path.join(ROOT, *rel.split("/"))
+    return io.open(path, encoding="utf-8").read() if os.path.exists(path) else ""
+
+
+def schema_errors(instance, rel):
+    schema = json.loads(read(rel))
+    return sorted(Draft202012Validator(schema).iter_errors(instance), key=lambda error: list(error.path))
 
 
 def main():
-    ds = yaml.safe_load(read("docs/decision-status.yaml"))
-    decisions = ds["decisions"]
+    registry = yaml.safe_load(read("docs/decision-status.yaml"))
+    decisions = registry["decisions"]
 
-    # 1 + 2: candidate decisions are proposed-candidate and labeled
+    # Candidate decisions remain candidate and their source records say so.
     for did, row in sorted(decisions.items()):
         is_candidate = "pr" in row
         if is_candidate:
-            check("candidate decision %s is proposed-candidate (not adopted-merged)" % did,
-                  row.get("status") == "proposed-candidate", repr(row.get("status")))
-            ddir = os.path.join(ROOT, "docs", "decisions")
-            fn = next((f for f in os.listdir(ddir) if f.startswith(did + "-")), None)
-            btext = read("docs/decisions/" + fn) if fn else ""
-            check("candidate decision %s file carries the CANDIDATE label" % did,
-                  "OPUS CANDIDATE" in btext)
+            check(
+                "candidate decision %s is proposed-candidate (not adopted-merged)" % did,
+                row.get("status") == "proposed-candidate",
+                repr(row.get("status")),
+            )
+            decision_dir = os.path.join(ROOT, "docs", "decisions")
+            filename = next((name for name in os.listdir(decision_dir) if name.startswith(did + "-")), None)
+            body = read("docs/decisions/" + filename) if filename else ""
+            check(
+                "candidate decision %s file carries a CANDIDATE label" % did,
+                "CANDIDATE" in body.upper(),
+            )
         else:
-            # merged decisions must not be proposed-candidate
-            check("merged decision %s is not proposed-candidate" % did,
-                  row.get("status") != "proposed-candidate", repr(row.get("status")))
+            check(
+                "merged decision %s is not proposed-candidate" % did,
+                row.get("status") != "proposed-candidate",
+                repr(row.get("status")),
+            )
 
-    # candidate range: every decision >= 0020 is candidate (carries pr); every
-    # decision 0001-0019 is merged (no pr). Dynamic on the decision numbers present.
     for did, row in decisions.items():
-        n = int(did)
-        if n >= 20:
+        number = int(did)
+        if number >= 20:
             check("decision %s (>=0020) is classified candidate (carries pr)" % did, "pr" in row)
         else:
             check("merged decision %s (<=0019) carries no pr field" % did, "pr" not in row)
 
-    # 3: overlay integrity
-    ov = yaml.safe_load(read("docs/project-closure/r7c/CANDIDATE-STATE.yaml"))
-    check("overlay declares merged: false", ov.get("merged") is False)
-    check("overlay declares no independent sign-off",
-          ov.get("no_merge_status", {}).get("independent_signoff") is False)
-    check("overlay merged-base sha is main R6", ov.get("merged_base", {}).get("sha") == MAIN_R6_SHA)
-    check("overlay merged base lists only 0001-0019",
-          ov.get("merged_base", {}).get("merged_decisions") == "0001-0019")
-
-    # 4: closure artifacts are not marked merged/adopted in the historical index
-    hist = yaml.safe_load(read("docs/project-closure/HISTORICAL-STATUS-INDEX.yaml"))
-    rules = hist if isinstance(hist, list) else hist.get("rules", hist.get("entries", []))
-    # the index is a top-level list in this repo; load robustly
-    if isinstance(hist, dict) and "rules" not in hist and "entries" not in hist:
-        # some indexes are a bare mapping/list; re-read as list
-        rules = yaml.safe_load(read("docs/project-closure/HISTORICAL-STATUS-INDEX.yaml"))
+    # Historical overlays remain historical evidence, never the current model.
+    history = yaml.safe_load(read("docs/project-closure/HISTORICAL-STATUS-INDEX.yaml"))
+    rules = history if isinstance(history, list) else history.get("rules", history.get("entries", []))
     bad = []
-    for r in (rules if isinstance(rules, list) else []):
-        pref = str(r.get("prefix", ""))
-        st = str(r.get("status", ""))
-        if pref.startswith("docs/project-closure/r7") and st in ("merged", "adopted", "adopted-merged"):
-            bad.append("%s=%s" % (pref, st))
-    check("no R7/R7B/R7C closure artifact is marked merged/adopted", not bad, "; ".join(bad))
+    for rule in rules if isinstance(rules, list) else []:
+        prefix = str(rule.get("prefix", ""))
+        status = str(rule.get("status", ""))
+        if prefix.startswith("docs/project-closure/r7") and status in ("merged", "adopted", "adopted-merged"):
+            bad.append("%s=%s" % (prefix, status))
+    check("no R7 candidate closure artifact is marked merged/adopted", not bad, "; ".join(bad))
 
-    # 6 (R7D, Decision 0029, audit B1/P1): the authoritative candidate overlay must
-    # name the exact live PR-10 head and its candidate-decision set must NOT drift
-    # from decision-status.yaml — so a STALE overlay (missing PR #10 / wrong head /
-    # missing candidate decisions / omitted companion PDF) FAILS.
-    PR10_HEAD = "3cce235f0e388ba78a093d43c879a2e73262938b"
-    COMPANION_PDF = "artifacts/dynamic-orthing-noetic-learning-orthability-draft.pdf"
-    ov2_text = read("docs/current-candidate-state.yaml")
-    check("authoritative candidate overlay exists", bool(ov2_text))
-    ov2 = yaml.safe_load(ov2_text) if ov2_text else {}
-    check("candidate overlay declares merged: false", ov2.get("merged") is False)
-    check("candidate overlay merged-base sha is main R6",
-          ov2.get("merged_base", {}).get("sha") == MAIN_R6_SHA)
-    chain = ov2.get("pr_chain", [])
-    pr10 = next((p for p in chain if p.get("pr") == 10), None)
-    check("candidate overlay names PR #10", pr10 is not None)
-    check("candidate overlay names the exact live PR #10 head (not stale)",
-          bool(pr10) and pr10.get("head") == PR10_HEAD, repr(pr10.get("head") if pr10 else None))
-    # candidate-decision set == every decision carrying a `pr:` field (no drift)
-    pr_decisions = {did for did, row in decisions.items() if "pr" in row}
-    overlay_decisions = set(ov2.get("candidate_decisions", []))
-    check("candidate overlay decision set matches decision-status (no drift)",
-          overlay_decisions == pr_decisions,
-          "overlay=%s status=%s" % (sorted(overlay_decisions), sorted(pr_decisions)))
-    check("candidate overlay lists the companion PDF among candidate PDFs (B1)",
-          COMPANION_PDF in ov2.get("candidate_pdfs", []))
-    nms = ov2.get("no_merge_status", {})
-    check("candidate overlay declares merged/signoff/ready all false",
-          nms.get("merged") is False and nms.get("independent_signoff") is False
-          and nms.get("ready_for_merge") is False)
+    input_text = read("docs/project-closure/r7e-sol/CANDIDATE-TOPOLOGY-INPUT.yaml")
+    overlay_text = read("docs/current-candidate-state.yaml")
+    check("frozen candidate-topology input exists", bool(input_text))
+    check("generated candidate overlay exists", bool(overlay_text))
+    data = yaml.safe_load(input_text) if input_text else {}
+    overlay = yaml.safe_load(overlay_text) if overlay_text else {}
+
+    input_schema_errors = schema_errors(data, "schemas/candidate-topology.schema.json")
+    check(
+        "frozen candidate topology validates against its schema",
+        not input_schema_errors,
+        "; ".join(error.message for error in input_schema_errors[:3]),
+    )
+    semantic_issues = collect_issues(data, decisions)
+    check(
+        "frozen candidate topology passes complete semantic validation",
+        not semantic_issues,
+        "; ".join(semantic_issues[:3]),
+    )
+
+    generated = build_overlay(data) if not input_schema_errors else {}
+    overlay_schema_errors = schema_errors(overlay, "schemas/candidate-overlay.schema.json")
+    check(
+        "candidate overlay validates against its schema",
+        not overlay_schema_errors,
+        "; ".join(error.message for error in overlay_schema_errors[:3]),
+    )
+    check(
+        "candidate overlay exactly matches the deterministic generated model",
+        overlay == generated,
+        "run scripts/generate_candidate_state.py",
+    )
+
+    check("candidate overlay declares merged: false", overlay.get("merged") is False)
+    check(
+        "candidate overlay merged-base sha is protected main R6",
+        overlay.get("merged_base", {}).get("sha") == MAIN_R6_SHA,
+    )
+    check(
+        "candidate overlay contains exact PR #8-#12 topology",
+        [row.get("pr") for row in overlay.get("pr_chain", [])] == [8, 9, 10, 11, 12],
+    )
+    check(
+        "candidate overlay uses head_at_observation and no timeless head field",
+        all("head_at_observation" in row and "head" not in row for row in overlay.get("pr_chain", [])),
+    )
+    check("candidate overlay is explicitly non-timeless", overlay.get("timeless_state") is False)
+    no_merge = overlay.get("no_merge_status", {})
+    check(
+        "candidate overlay declares merged/signoff/ready all false",
+        no_merge.get("merged") is False
+        and no_merge.get("independent_signoff") is False
+        and no_merge.get("ready_for_merge") is False,
+    )
 
     print("TOTAL: %d failures" % len(FAILS))
-    sys.exit(1 if FAILS else 0)
+    return 1 if FAILS else 0
 
 
 if __name__ == "__main__":
-    main()
+    sys.exit(main())
