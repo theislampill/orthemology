@@ -104,12 +104,12 @@ findings:
   repair_task: 6
   terminal_status: open
 - id: R7E-SOL-F011
-  title: dynamic companion contains modality and notation contradictions
+  title: dynamic companion contains notation and objective-gradient defects
   audit_locus: dynamic companion internal contradictions
-  disposition: reproduced
+  disposition: partially-reproduced
   evidence:
-  - current prose mixes an eight-modality list with stale six-level limitation wording
-  - Reach_A(m, Pi) collides with established profile-space notation and objective-gradient language overstates the contract
+  - cbab14747835855d232448f648eefa1d4e36074e:companion/dynamic-orthing-noetic-learning-and-orthability.md:113 and :235 use Pi as the reachability policy/action-sequence argument, while cbab14747835855d232448f648eefa1d4e36074e:docs/notation-registry.yaml:24-26 fixes Pi_A as the complete-profile space; the glyph/role reuse is a notation collision
+  - cbab14747835855d232448f648eefa1d4e36074e:companion/dynamic-orthing-noetic-learning-and-orthability.md:237-238 says correction tracks an objective gradient even though :125-127 disclaims a literal scalar gradient; the objective-gradient formulation overstates the typed contract
   severity: high
   repair_task: 8
   terminal_status: open

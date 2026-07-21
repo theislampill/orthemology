@@ -29,6 +29,7 @@ import json
 import os
 import re
 import sys
+from datetime import datetime, timezone
 
 try:
     import yaml
@@ -51,6 +52,112 @@ R7D_BASE = "e34d2cd56057766f8f656a4ff3486eb34dad607e"
 R7E_HEAD_AT_OBSERVATION = "cbab14747835855d232448f648eefa1d4e36074e"
 R7E_SOL_FINDING_IDS = {
     "R7E-SOL-F%03d" % n for n in range(1, 16)
+}
+R7E_TOPOLOGY_AT_OBSERVATION = [
+    {
+        "pr": 8,
+        "base_branch": "main",
+        "base_head": "43fee0f519e2f6984fb143c1e621c83382e71ec7",
+        "head_branch": "closure/r7-noetic-application-experiment-validity",
+        "head_at_observation": "b0538601913c8234511a1f1131a58eb23a4a0dc4",
+        "state": "OPEN",
+        "draft": True,
+        "mergeable_at_observation": "MERGEABLE",
+        "checks_at_observation": "SUCCESS",
+    },
+    {
+        "pr": 9,
+        "base_branch": "closure/r7-noetic-application-experiment-validity",
+        "base_head": "b0538601913c8234511a1f1131a58eb23a4a0dc4",
+        "head_branch": "candidate/r7b-deep-noetic-latent-math",
+        "head_at_observation": "86b8bbdddf35ac1e45748279bac05e5a2d4ed85e",
+        "state": "OPEN",
+        "draft": True,
+        "mergeable_at_observation": "MERGEABLE",
+        "checks_at_observation": "SUCCESS",
+    },
+    {
+        "pr": 10,
+        "base_branch": "candidate/r7b-deep-noetic-latent-math",
+        "base_head": "86b8bbdddf35ac1e45748279bac05e5a2d4ed85e",
+        "head_branch": "candidate/r7c-full-math-multitarget-noetic-dynamics",
+        "head_at_observation": "3cce235f0e388ba78a093d43c879a2e73262938b",
+        "state": "OPEN",
+        "draft": True,
+        "mergeable_at_observation": "MERGEABLE",
+        "checks_at_observation": "SUCCESS",
+    },
+    {
+        "pr": 11,
+        "base_branch": "candidate/r7c-full-math-multitarget-noetic-dynamics",
+        "base_head": "3cce235f0e388ba78a093d43c879a2e73262938b",
+        "head_branch": "candidate/r7d-final-semantic-math-noetic-integration",
+        "head_at_observation": "e34d2cd56057766f8f656a4ff3486eb34dad607e",
+        "state": "OPEN",
+        "draft": True,
+        "mergeable_at_observation": "MERGEABLE",
+        "checks_at_observation": "SUCCESS",
+    },
+    {
+        "pr": 12,
+        "base_branch": "candidate/r7d-final-semantic-math-noetic-integration",
+        "base_head": "e34d2cd56057766f8f656a4ff3486eb34dad607e",
+        "head_branch": "candidate/r7e-orthing-supplementation",
+        "head_at_observation": "cbab14747835855d232448f648eefa1d4e36074e",
+        "state": "OPEN",
+        "draft": True,
+        "mergeable_at_observation": "MERGEABLE",
+        "checks_at_observation": "SUCCESS",
+    },
+]
+R7E_CONTROL_PLANE = {
+    "reproduction": "docs/project-closure/r7e-sol/R7E-SOL-READONLY-REPRODUCTION.md",
+    "finding_matrix": "docs/project-closure/r7e-sol/R7E-INDEPENDENT-FINDING-MATRIX.yaml",
+    "hunk_disposition": "docs/project-closure/r7e-sol/R7E-HUNK-DISPOSITION.md",
+    "decision": "docs/decisions/0034-r7e-sol-independent-repair-contract.md",
+}
+R7E_REPRODUCTION_LINK_TARGETS = {
+    "AUTONOMOUS-R7E-SOL-STATE.json",
+    "R7E-INDEPENDENT-FINDING-MATRIX.yaml",
+    "R7E-HUNK-DISPOSITION.md",
+    "../../decisions/0034-r7e-sol-independent-repair-contract.md",
+}
+R7E_FINDING_ADJUDICATIONS = {
+    "R7E-SOL-F001": ("reproduced", "blocker", 2, "open"),
+    "R7E-SOL-F002": ("reproduced", "blocker", 3, "open"),
+    "R7E-SOL-F003": ("reproduced", "blocker", 3, "open"),
+    "R7E-SOL-F004": ("reproduced", "high", 7, "open"),
+    "R7E-SOL-F005": ("reproduced", "blocker", 2, "open"),
+    "R7E-SOL-F006": ("reproduced", "blocker", 8, "open"),
+    "R7E-SOL-F007": ("reproduced", "blocker", 5, "open"),
+    "R7E-SOL-F008": ("partially-reproduced", "high", 5, "open"),
+    "R7E-SOL-F009": ("reproduced", "high", 7, "open"),
+    "R7E-SOL-F010": ("reproduced", "high", 6, "open"),
+    "R7E-SOL-F011": ("partially-reproduced", "high", 8, "open"),
+    "R7E-SOL-F012": ("reproduced", "blocker", 8, "open"),
+    "R7E-SOL-F013": ("reproduced", "blocker", 8, "open"),
+    "R7E-SOL-F014": ("reproduced", "blocker", 10, "open"),
+    "R7E-SOL-F015": ("refuted", "historical-high", 12, "resolved"),
+}
+R7E_F001_EVIDENCE = [
+    "docs/current-candidate-state.yaml stops at a placeholder R7D child and does not name exact PR 11 or PR 12 observations",
+    "scripts/validate_candidate_state.py passes the stale natural state",
+]
+R7E_F011_EVIDENCE = [
+    "cbab14747835855d232448f648eefa1d4e36074e:companion/dynamic-orthing-noetic-learning-and-orthability.md:113 and :235 use Pi as the reachability policy/action-sequence argument, while cbab14747835855d232448f648eefa1d4e36074e:docs/notation-registry.yaml:24-26 fixes Pi_A as the complete-profile space; the glyph/role reuse is a notation collision",
+    "cbab14747835855d232448f648eefa1d4e36074e:companion/dynamic-orthing-noetic-learning-and-orthability.md:237-238 says correction tracks an objective gradient even though :125-127 disclaims a literal scalar gradient; the objective-gradient formulation overstates the typed contract",
+]
+R7E_DECISION_BOUNDARY = {
+    "schema": "orthemology-decision-candidate-boundary-v1",
+    "decision": "0034",
+    "status": "proposed-candidate",
+    "pr": 12,
+    "scope": "review-state-accounting-only",
+    "preserves_decisions": ["0001-0022"],
+    "reopens": [],
+    "independent_signoff": False,
+    "ready_for_merge": False,
+    "merged": False,
 }
 R7E_PATHS = {
     "applications/daee-epistemics/SOUND-DESCENT-MODEL-COMPARISON.md",
@@ -75,6 +182,27 @@ def check(name, ok, detail=""):
 def read(rel):
     p = os.path.join(ROOT, rel)
     return io.open(p, encoding="utf-8").read() if os.path.exists(p) else ""
+
+
+def valid_utc_timestamp(value):
+    if not isinstance(value, str) or not re.fullmatch(
+            r"\d{4}-\d{2}-\d{2}T\d{2}:\d{2}:\d{2}Z", value):
+        return False
+    try:
+        parsed = datetime.fromisoformat(value.replace("Z", "+00:00"))
+    except ValueError:
+        return False
+    return parsed.tzinfo is not None and parsed.utcoffset() == timezone.utc.utcoffset(parsed)
+
+
+def decision_candidate_boundary(text):
+    match = re.search(
+        r"<!-- decision-candidate-boundary:start -->\s*```yaml\s*(.*?)\s*```\s*"
+        r"<!-- decision-candidate-boundary:end -->",
+        text,
+        re.S,
+    )
+    return yaml.safe_load(match.group(1)) if match else {}
 
 
 def main():
@@ -181,12 +309,21 @@ def main():
 
     sol = json.loads(read(
         "docs/project-closure/r7e-sol/AUTONOMOUS-R7E-SOL-STATE.json") or "{}")
+    check("R7E-Sol state records a valid UTC observation timestamp",
+          valid_utc_timestamp(sol.get("observed_at_utc")),
+          repr(sol.get("observed_at_utc")))
     obs = sol.get("r7e_observation") or {}
     check("R7E-Sol state records the exact R7D base observation",
           obs.get("base") == R7D_BASE, repr(obs.get("base")))
     check("R7E-Sol state records the exact R7E head-at-observation",
           obs.get("head_at_observation") == R7E_HEAD_AT_OBSERVATION,
           repr(obs.get("head_at_observation")))
+    check("R7E-Sol state marks the R7E observation as non-timeless",
+          obs.get("timeless_state") is False,
+          repr(obs.get("timeless_state")))
+    check("R7E-Sol state records the exact PR 8-12 topology observation",
+          sol.get("topology_at_observation") == R7E_TOPOLOGY_AT_OBSERVATION,
+          repr(sol.get("topology_at_observation")))
     gate = sol.get("model_gate") or {}
     check("R7E-Sol state records the controller-confirmed gpt-5.6-sol gate",
           gate.get("required") == "gpt-5.6-sol"
@@ -207,6 +344,16 @@ def main():
           sol.get("independent_signoff") is False
           and sol.get("ready_for_merge") is False
           and sol.get("merged") is False)
+    control_plane = sol.get("control_plane") or {}
+    check("R7E-Sol state records the exact control-plane links",
+          control_plane == R7E_CONTROL_PLANE, repr(control_plane))
+    check("every R7E-Sol state control-plane link resolves",
+          all(bool(read(path)) for path in R7E_CONTROL_PLANE.values()))
+    reproduction = read(R7E_CONTROL_PLANE["reproduction"])
+    reproduction_links = set(re.findall(r"\]\(([^)]+)\)", reproduction))
+    check("R7E-Sol reproduction links every control-plane artifact",
+          R7E_REPRODUCTION_LINK_TARGETS <= reproduction_links,
+          repr(sorted(reproduction_links)))
 
     matrix = yaml.safe_load(read(
         "docs/project-closure/r7e-sol/R7E-INDEPENDENT-FINDING-MATRIX.yaml")) or {}
@@ -227,6 +374,37 @@ def main():
     ]
     check("every R7E-Sol finding has disposition, evidence, severity, repair task, and terminal status",
           not malformed_findings, repr(malformed_findings))
+    actual_adjudications = {
+        str(row.get("id")): (
+            row.get("disposition"),
+            row.get("severity"),
+            row.get("repair_task"),
+            row.get("terminal_status"),
+        )
+        for row in findings
+    }
+    check("R7E-Sol finding adjudications exactly match the Task 1 boundary",
+          actual_adjudications == R7E_FINDING_ADJUDICATIONS,
+          repr(actual_adjudications))
+    findings_by_id = {str(row.get("id")): row for row in findings}
+    check("R7E-Sol F001 retains exact review evidence",
+          findings_by_id.get("R7E-SOL-F001", {}).get("evidence")
+          == R7E_F001_EVIDENCE,
+          repr(findings_by_id.get("R7E-SOL-F001", {}).get("evidence")))
+    check("R7E-Sol F011 uses only exact current-source evidence",
+          findings_by_id.get("R7E-SOL-F011", {}).get("evidence")
+          == R7E_F011_EVIDENCE,
+          repr(findings_by_id.get("R7E-SOL-F011", {}).get("evidence")))
+    resolved_findings = {
+        fid for fid, values in actual_adjudications.items()
+        if values[3] == "resolved"
+    }
+    check("R7E-Sol F001-F014 remain open and F015 alone is resolved",
+          resolved_findings == {"R7E-SOL-F015"}
+          and all(actual_adjudications.get(
+              "R7E-SOL-F%03d" % n, (None,) * 4)[3] == "open"
+              for n in range(1, 15)),
+          repr(sorted(resolved_findings)))
 
     hunk_text = read("docs/project-closure/r7e-sol/R7E-HUNK-DISPOSITION.md")
     hunk_rows = re.findall(
@@ -246,10 +424,9 @@ def main():
     check("Decision 0034 is proposed-candidate on PR 12",
           d34.get("status") == "proposed-candidate" and d34.get("pr") == 12)
     d34_text = read("docs/decisions/0034-r7e-sol-independent-repair-contract.md")
-    check("Decision 0034 carries the Sol candidate and no-self-promotion boundary",
-          "SOL CANDIDATE" in d34_text
-          and "Status:** proposed-candidate" in d34_text
-          and "cannot self-promote" in d34_text)
+    d34_boundary = decision_candidate_boundary(d34_text)
+    check("Decision 0034 carries the exact structured candidate boundary",
+          d34_boundary == R7E_DECISION_BOUNDARY, repr(d34_boundary))
 
     # 7. discharged owner action
     t = read("docs/project-closure/r4/R4-UNAVOIDABLE-OWNER-ACTIONS.md")

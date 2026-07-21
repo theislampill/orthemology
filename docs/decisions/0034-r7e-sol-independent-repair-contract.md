@@ -2,6 +2,21 @@
 
 **Date:** 2026-07-21 · **Authority:** SOL CANDIDATE independent-review pass · **Status:** proposed-candidate · **PR:** #12 · **Reopens nothing:** Decisions 0001–0022 remain byte-identical and stand.
 
+<!-- decision-candidate-boundary:start -->
+```yaml
+schema: orthemology-decision-candidate-boundary-v1
+decision: "0034"
+status: proposed-candidate
+pr: 12
+scope: review-state-accounting-only
+preserves_decisions: ["0001-0022"]
+reopens: []
+independent_signoff: false
+ready_for_merge: false
+merged: false
+```
+<!-- decision-candidate-boundary:end -->
+
 ## Problem
 
 PR #12 contains useful candidate changes, but its inherited candidate overlay
