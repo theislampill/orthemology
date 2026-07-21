@@ -1,0 +1,115 @@
+schema: orthemology-dynamic-orthability-argument-map-v1
+# R7D Phase J (audit B41). The metaphysical ladder as a MACHINE-READABLE argument map:
+# every rung declares its premise, inference type, conclusion, dependency, evidence /
+# source status, strongest objection, rival exit, and school-neutral vs Athari-internal
+# status. OSM and DAEE are lower-level exemplifications/applications (rungs 1-3), NOT a
+# proof of the upper bridge. scripts/validate_argument_map.py checks the fields and that
+# no lower application is claimed to prove an upper rung.
+label: OPUS CANDIDATE — REQUIRES FRESH FABLE REVIEW BEFORE MERGE
+non_entailments:
+- "OSM/DAEE exemplify rungs 1-3 only; they do not prove rungs 4-10"
+- "static evaluability does not entail objective corrigibility"
+- "learnability/convergence does not entail normative proper function"
+- "no empirical result supports any metaphysical or theological rung"
+rungs:
+- n: 1
+  rung: static evaluability
+  premise: "placements under a declared analysis A have determinate correctness conditions"
+  inference_type: analytic
+  conclusion: "an episode's placement is evaluable as correct/incorrect relative to A"
+  dependency: none
+  evidence_status: orthemological-extension
+  objection: "deflationary metalanguage reply — 'correct' is disquotational only"
+  rival_exit: "expressivism about placement talk"
+  status: school-neutral
+- n: 2
+  rung: dynamic corrigibility
+  premise: "evaluable placements can be revised toward correctness over time"
+  inference_type: explanatory
+  conclusion: "there is an objective correction gradient the process can track"
+  dependency: 1
+  evidence_status: orthemological-extension
+  objection: "corrigibility is brute regularity, not objective correction"
+  rival_exit: "Humean regularity about improvement"
+  status: school-neutral
+- n: 3
+  rung: agent-accessible learnability
+  premise: "a learner can, under conditions, converge its representations toward the corrigible structure"
+  inference_type: empirical-exemplary
+  conclusion: "the correction structure is accessible to a learning process in at least one reported case"
+  dependency: 2
+  evidence_status: cross-source-synthesis
+  objection: "learnability != objective corrigibility; one paradigm overgeneralizes"
+  rival_exit: "instrumentalism about learned representations"
+  status: school-neutral
+  exemplified_by: "externally exemplified constrained learning and representational adaptation in one reported OSM/CSCG task/model comparison (bounded; not a unique biological mechanism)"
+- n: 4
+  rung: normative proper function
+  premise: "the correction structure carries a norm of proper function, not mere regularity"
+  inference_type: explanatory
+  conclusion: "there is a fact about how the faculty OUGHT to function"
+  dependency: 3
+  evidence_status: cross-source-synthesis
+  objection: "naturalized teleosemantics (Millikan) reduces the norm to selection history"
+  rival_exit: "teleosemantic naturalism"
+  status: school-neutral
+- n: 5
+  rung: irreducible teleology
+  premise: "the norm of proper function does not reduce to non-normative facts"
+  inference_type: anti-primitivist
+  conclusion: "teleology/normativity is irreducible"
+  dependency: 4
+  evidence_status: creed-internal-inference
+  objection: "primitivism about norms — take them as brute"
+  rival_exit: "normative primitivism"
+  status: school-neutral
+- n: 6
+  rung: intellectual ground
+  premise: "irreducible intelligibility/normativity requires an intellectual ground"
+  inference_type: transcendental
+  conclusion: "there is an intellectual ground of intelligibility"
+  dependency: 5
+  evidence_status: creed-internal-inference
+  objection: "Platonism / structural realism — abstract structure suffices"
+  rival_exit: "Platonic structuralism"
+  status: school-neutral
+- n: 7
+  rung: necessary ground
+  premise: "the intellectual ground is not contingent"
+  inference_type: metaphysical
+  conclusion: "the ground is a Necessary Being"
+  dependency: 6
+  evidence_status: creed-internal-inference
+  objection: "modal primitivism — necessity is brute"
+  rival_exit: "modal primitivism"
+  status: school-neutral
+- n: 8
+  rung: Knowledge / Will / Power / Wisdom
+  premise: "the necessary intellectual ground is personal, with knowledge, will, power, wisdom"
+  inference_type: metaphysical
+  conclusion: "the ground has personal attributes"
+  dependency: 7
+  evidence_status: creed-internal-inference
+  objection: "impersonal ground — an abstract principle, not a person"
+  rival_exit: "impersonalism"
+  status: athari-internal
+- n: 9
+  rung: capacity for disclosure
+  premise: "a personal necessary ground can disclose / speak"
+  inference_type: explanatory
+  conclusion: "disclosure (Speech) is possible"
+  dependency: 8
+  evidence_status: creed-internal-inference
+  objection: "silent ground — capacity without exercise"
+  rival_exit: "deist silence"
+  status: athari-internal
+- n: 10
+  rung: revelation-specific divine Speech
+  premise: "the disclosure is realized as revealed divine Speech under the Athari route"
+  inference_type: creed-internal
+  conclusion: "the Qur'an is divine Speech (uncreated) under the Athari route; created Arabic wording/media are its creaturely reception"
+  dependency: 9
+  evidence_status: creed-internal-inference
+  objection: "school-internal dispute (Ashari/Maturidi/Kullabi kalam nafsi variants)"
+  rival_exit: "alternative kalam-nafsi construals"
+  status: athari-internal

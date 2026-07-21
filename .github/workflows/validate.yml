@@ -104,6 +104,8 @@ jobs:
         run: python scripts/validate_memetic_ecology.py
       - name: Governed corrective search + transition witness (R7D, Decision 0033)
         run: python scripts/validate_corrective_transition.py
+      - name: Dynamic-orthability argument map (R7D, Phase J)
+        run: python scripts/validate_argument_map.py
       - name: FCSP-2 packet smoke tests (deterministic; no result)
         run: python experiments/false-closure-selective-prediction-v2/tests/test_smoke.py
       - name: ER-2 packet smoke tests (deterministic; no result)
