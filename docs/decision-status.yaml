@@ -6,33 +6,46 @@
 # dated notice at the superseded site, is caught by
 # scripts/validate_decision_dependencies.py.
 schema: orthemology-decision-status-v1
+# R7C (Decision 0026): status vocabulary distinguishes merged from candidate.
+#   adopted-merged                 - on protected main (43fee0f5, R6: 0001-0019)
+#   adopted-with-superseded-clause - merged, with a superseded clause (0009)
+#   proposed-candidate             - in the unmerged PR chain (PR #8: 0020-0022;
+#                                    PR #9: 0023-0025; R7C: 0026+). NOT merged.
+#   superseded / historical / rejected - reserved for lifecycle transitions.
+# An Opus candidate MUST NOT mark a proposed-candidate decision adopted-merged;
+# scripts/validate_candidate_state.py enforces this. "adopted" is retained only
+# as a legacy alias in the validator vocabulary; no row uses it after R7C.
+status_vocabulary: [adopted-merged, adopted-with-superseded-clause, proposed-candidate, superseded, historical, rejected]
 decisions:
-  "0001": {status: adopted, title: analysis-relative ground truth}
-  "0002": {status: adopted, title: metaorthemma configuration token}
-  "0003": {status: adopted, title: result-free pathway adequacy}
-  "0004": {status: adopted, title: verdict registry normalization}
-  "0005": {status: adopted, title: symbol table normalization}
-  "0006": {status: adopted, title: compaction stale-steer placement}
-  "0007": {status: adopted, title: profile space definition}
-  "0008": {status: adopted, title: thesis C disposition}
+  "0001": {status: adopted-merged, title: analysis-relative ground truth}
+  "0002": {status: adopted-merged, title: metaorthemma configuration token}
+  "0003": {status: adopted-merged, title: result-free pathway adequacy}
+  "0004": {status: adopted-merged, title: verdict registry normalization}
+  "0005": {status: adopted-merged, title: symbol table normalization}
+  "0006": {status: adopted-merged, title: compaction stale-steer placement}
+  "0007": {status: adopted-merged, title: profile space definition}
+  "0008": {status: adopted-merged, title: thesis C disposition}
   "0009": {status: adopted-with-superseded-clause, title: type/token soundness and concrete reason,
            superseded_clause: strict-soundness formula, superseded_by: "0011"}
-  "0010": {status: adopted, title: orthability sense and argument boundary}
-  "0011": {status: adopted, title: claim-relative reasoning path and strict soundness}
-  "0012": {status: adopted, title: reference-model semantic contract}
-  "0013": {status: adopted, title: source attribution and status normalization}
-  "0014": {status: adopted, title: generated project state and whole-state reread}
-  "0015": {status: adopted, title: latent-state observation and representation boundary}
-  "0016": {status: adopted, title: current review state and historical supersession}
-  "0017": {status: adopted, title: private design records and public evidence boundary}
-  "0018": {status: adopted, title: experiment packet readiness and registration status}
-  "0019": {status: adopted, title: current sourcing ledger and historical overlays}
-  "0020": {status: adopted, title: experiment inferential readiness and packet versioning}
-  "0021": {status: adopted, title: daee-epistemics as noetic orthing application}
-  "0022": {status: adopted, title: experiment methods and ready-to-run gate}
-  "0023": {status: adopted, title: mathematical source and typesetting pipeline}
-  "0024": {status: adopted, title: dynamic orthing and representation learning}
-  "0025": {status: adopted, title: meta-noetic memetics and sound corrective dynamics}
+  "0010": {status: adopted-merged, title: orthability sense and argument boundary}
+  "0011": {status: adopted-merged, title: claim-relative reasoning path and strict soundness}
+  "0012": {status: adopted-merged, title: reference-model semantic contract}
+  "0013": {status: adopted-merged, title: source attribution and status normalization}
+  "0014": {status: adopted-merged, title: generated project state and whole-state reread}
+  "0015": {status: adopted-merged, title: latent-state observation and representation boundary}
+  "0016": {status: adopted-merged, title: current review state and historical supersession}
+  "0017": {status: adopted-merged, title: private design records and public evidence boundary}
+  "0018": {status: adopted-merged, title: experiment packet readiness and registration status}
+  "0019": {status: adopted-merged, title: current sourcing ledger and historical overlays}
+  "0020": {status: proposed-candidate, pr: 8, title: experiment inferential readiness and packet versioning}
+  "0021": {status: proposed-candidate, pr: 8, title: daee-epistemics as noetic orthing application}
+  "0022": {status: proposed-candidate, pr: 8, title: experiment methods and ready-to-run gate}
+  "0023": {status: proposed-candidate, pr: 9, title: mathematical source and typesetting pipeline}
+  "0024": {status: proposed-candidate, pr: 9, title: dynamic orthing and representation learning}
+  "0025": {status: proposed-candidate, pr: 9, title: meta-noetic memetics and sound corrective dynamics}
+  "0026": {status: proposed-candidate, pr: "9-child (R7C grandchild)", title: candidate state and premerge decision status}
+  "0027": {status: proposed-candidate, pr: "9-child (R7C grandchild)", title: multi-target noetic orthing and claim bearers}
+  "0028": {status: proposed-candidate, pr: "9-child (R7C grandchild)", title: represented metaorthemes and memetic ecology}
 normative_symbols:
   StrictlySoundReasoning_q:
     current:

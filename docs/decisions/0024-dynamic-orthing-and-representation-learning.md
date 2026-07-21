@@ -1,6 +1,6 @@
 # Decision 0024 — Dynamic orthing and representation learning
 
-**Date:** 2026-07-21 · **Authority:** R7B owner authorization (Opus candidate pass) · **Status:** adopted · **Reopens nothing:** Decisions 0001–0023 stand. This **extends** Decision 0015's static latent-state boundary with an update/learning architecture. It adds no school-neutral core primitive; it is a bounded application-level extension under `applications/latent-state-orthing/`.
+**Date:** 2026-07-21 · **Authority:** R7B owner authorization (Opus candidate pass) · **Status:** proposed-candidate · **Reopens nothing:** Decisions 0001–0023 stand. This **extends** Decision 0015's static latent-state boundary with an update/learning architecture. It adds no school-neutral core primitive; it is a bounded application-level extension under `applications/latent-state-orthing/`.
 
 **Provenance:** OPUS CANDIDATE — REQUIRES FRESH FABLE REVIEW BEFORE MERGE.
 
@@ -10,7 +10,7 @@ Decision 0015 correctly separated the static objects — occurrence $m_t$, laten
 model state $z_t$, observation $x_t$, posterior/belief $b_t$, internal
 representation $y_t$, inferred orthemic profile $\hat p_t$ — and refused to
 define orthemes by vector orthogonality. But it is a **boundary note, not a
-theory of dynamics**. The OSM/CSCG source (`opendataloader-output/s41586-024-08548-w.md`)
+theory of dynamics**. The OSM/CSCG source (the OSM source (Sun et al., Nature 2025, DOI 10.1038/s41586-024-08548-w; local extraction `opendataloader-output/s41586-024-08548-w.md` is evidence provenance only))
 reports progressive decorrelation into an orthogonalized state machine, learned
 transitions among latent states, endpoint performance that **underdetermines**
 learning mechanism (CSCG uniquely reproduced both the final states *and* the
@@ -90,3 +90,21 @@ human-cognition, fiṭrah, or metaphysical content is imported.
 - `scripts/validate_dynamic_orthing.py` — enforces the four-level separation, the world-vs-learner edge, ablation-based admission, and the not-validation boundary; wired into CI.
 
 Reopens nothing; establishes no empirical or metaphysical claim.
+
+## R7C amendment (2026-07-21, Opus candidate; audit B6/B7/B8)
+
+- **D5/D6/D7 formal repairs** (`DYNAMIC-ORTHING-AND-LATENT-STATE-LEARNING.md`):
+  endpoint compares representation geometry `Geom_A` (not parameters); the
+  latent→profile map is a **relation** `ProfileOf_A ⊆ Z_A × Π_A` (not a function);
+  ortheme admission uses a **scalar** merger contrast `Δ^merge_A(z_i,z_j) > ε_A`.
+- **OSM object separation** (`OSM-CSCG-ORTHEME-CROSSWALK.yaml`): the conflated
+  "clones / state cells" row is split into biological state-cell response, CSCG
+  clone, latent posterior, and model representation geometry — separately typed.
+- **Governed update coupling** (`UPDATE-COUPLING.yaml`): each of the four levels
+  declares trigger / authority / input / version / transport / invalidated /
+  reopening / rollback; repertoire revision changes what the **declared
+  repertoire** can represent, not worldly facts.
+- **Failure-family fixtures** DYN-10..DYN-20 (label permutation, overcomplete
+  split, underfit merge, OOD, nonstationary map, catastrophic forgetting,
+  endpoint-vs-trajectory, model-update-without-profile-change and its converse,
+  analysis-vs-model drift, hysteresis/rollback). Gate: `validate_dynamic_orthing.py`.

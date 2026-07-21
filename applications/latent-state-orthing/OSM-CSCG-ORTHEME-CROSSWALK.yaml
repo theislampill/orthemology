@@ -8,7 +8,8 @@ schema: orthemology-osm-cscg-crosswalk-v1
 #   synthesis             - this project's typed reading joining the two
 #   orthemology-extension - a Decision 0024 extension object
 # Every row carries non_claims. Establishes no validation of Orthemology.
-osm_source: opendataloader-output/s41586-024-08548-w.md
+osm_citation: "Sun et al. (2025), Learning produces an orthogonalized state machine in the hippocampus, Nature 640; DOI 10.1038/s41586-024-08548-w (bib key sun2025orthogonalized; OFFICIAL-PUBLISHER-VERIFIED, CC BY 4.0)"
+osm_evidence_provenance: opendataloader-output/s41586-024-08548-w.md  # local extraction; NOT the public citation surface (audit B21)
 overall_status: "external exemplification and constraint, NOT validation"
 rows:
 - osm_concept: "sensory-similar contexts, different task states (observational aliasing)"
@@ -19,10 +20,26 @@ rows:
   claim_status: source-report
   orthemology_object: "latent model state z_t in Z_A and belief b_t in Delta(Z_A); NOT an ortheme and NOT the inferred profile p-hat_t"
   non_claims: ["a latent state is not an ortheme by itself (admission is by ablation, DYN-4)", "z_t is not ground truth O*(m;A)"]
-- osm_concept: "clones / state cells (fixed-emission latent copies)"
+# R7C (audit B8): the R7B single row "clones / state cells" conflated distinct
+# objects. Split into separately typed rows. The OSM source reports biological
+# population/cell dynamics and compares them to models; it does NOT identify a
+# biological state cell with a CSCG clone, nor a clone label with an ortheme.
+- osm_concept: "biological state-cell response (a CA1 neuron acquiring task-state-specific activity)"
+  claim_status: source-report
+  orthemology_object: "an OBSERVED biological signal; evidence about a task state, not a representation dimension and not an ortheme"
+  non_claims: ["a biological state cell is not a CSCG clone, not a latent posterior, and not an ortheme", "the source reports population/cell dynamics; it does not identify cells with model parameters"]
+- osm_concept: "CSCG clone (a fixed-emission latent copy in the model)"
   claim_status: model-mechanics
-  orthemology_object: "representation dimensions y_t = f_theta(history); a modelling device, not a type-token pole"
-  non_claims: ["clones are not orthemmata and not metaorthemes", "a state cell is not a bearer of truth"]
+  orthemology_object: "a MODEL device: one latent-state slot with a deterministic emission; a modelling construct, not a type-token pole"
+  non_claims: ["a clone is not a biological state cell, not an orthemma, and not a metaortheme", "clone labels are permutation-arbitrary (fixture DYN-10)"]
+- osm_concept: "latent-state posterior (belief over latent states)"
+  claim_status: model-mechanics
+  orthemology_object: "belief b_t in Delta(Z_A); an inference state, distinct from the inferred orthemic profile p-hat_t"
+  non_claims: ["a posterior is not ground truth and not an ortheme"]
+- osm_concept: "model representation geometry (decorrelation / dimensions y_t)"
+  claim_status: model-mechanics
+  orthemology_object: "representation geometry Geom_A(theta); y_t = f_theta(history); ONE geometry, not a type-token pole"
+  non_claims: ["representation geometry is not a worldly state, not an inferred profile, and does not define an ortheme"]
 - osm_concept: "progressive decorrelation into orthogonalized representations"
   claim_status: source-report
   orthemology_object: "representation geometry over learning; ONE geometry that can reduce interference among aliased-but-distinct states"

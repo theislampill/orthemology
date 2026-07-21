@@ -68,3 +68,81 @@ fixtures:
   distinction: "the source supplies an independent example and constraints a dynamic account must represent; it is NOT evidence for the theory"
   forbids: "citing OSM as support for Orthemology, its terminology, human noetics, fitrah, or any metaphysical claim; importing any biological/wet-lab procedure"
   non_claim: "no human/noetic/metaphysical transfer whatsoever"
+# R7C (audit B7 E7): failure families the dynamic account must represent.
+- id: DYN-10
+  name: latent-label permutation
+  level: representation-learning
+  scenario: "The latent-state / clone labels are permuted."
+  distinction: "relabeling latent states changes no warranted prediction/action/route/validation/closure — labels are permutation-arbitrary"
+  forbids: "treating a latent label as an ortheme identity"
+  non_claim: "clone labels carry no orthemic identity"
+- id: DYN-11
+  name: overcomplete spurious split
+  level: representation-learning
+  scenario: "An overcomplete model invents a latent split with no ablation consequence."
+  distinction: "a split with zero merge/ablation consequence (Delta^merge <= epsilon_A) is NOT orthemically consequential"
+  forbids: "promoting a spurious split to an ortheme"
+  non_claim: "representation capacity is not truth"
+- id: DYN-12
+  name: underfit merge (hidden consequential distinction)
+  level: representation-learning
+  scenario: "An underfit model merges two states whose separation matters."
+  distinction: "an underfit model can hide a consequential distinction (Delta^merge > epsilon_A); absence in the model is not absence in the world"
+  forbids: "concluding no distinction exists because the model lacks it"
+  non_claim: "model silence is not worldly identity"
+- id: DYN-13
+  name: out-of-distribution failure
+  level: representation-learning
+  scenario: "Input falls outside the training/analysis distribution."
+  distinction: "OOD inputs make the model unreliable; the runtime must flag/hold, not assert a placement"
+  forbids: "asserting a confident placement on OOD input"
+  non_claim: "no interior claim; unreliability is disclosed, not hidden"
+- id: DYN-14
+  name: nonstationary observation/emission map
+  level: analysis-version-change
+  scenario: "The observation map Omega (or emission model) changes over time."
+  distinction: "a changed Omega/emission is an analysis or model change; prior placements do not transport without a declared transport argument"
+  forbids: "silently transporting placements across a changed observation map"
+  non_claim: "no claim survives a silent map change"
+- id: DYN-15
+  name: catastrophic forgetting
+  level: representation-learning
+  scenario: "A model update degrades previously-adequate competence."
+  distinction: "a learning update can lose prior competence; it must be DETECTED and recorded, and may trigger rollback"
+  forbids: "assuming a model update is monotone improvement"
+  non_claim: "learning is not guaranteed improvement"
+- id: DYN-16
+  name: same endpoint, different trajectory
+  level: representation-learning
+  scenario: "Two models reach the same endpoint via different trajectories."
+  distinction: "endpoint geometry equivalence underdetermines mechanism; trajectory evidence is stronger (echoes DYN-7)"
+  forbids: "inferring mechanism from endpoint alone"
+  non_claim: "endpoint match is not mechanism identity"
+- id: DYN-17
+  name: model update without profile change
+  level: representation-learning
+  scenario: "theta_t -> theta_{t+1} occurs but the warranted orthemic profile is unchanged."
+  distinction: "a model change need not change p-hat; representation learning is not episode inference"
+  forbids: "recording a model update as a placement change"
+  non_claim: "theta change is not p-hat change"
+- id: DYN-18
+  name: profile change without model update
+  level: episode-inference
+  scenario: "New evidence revises p-hat within a fixed theta and A."
+  distinction: "belief/profile can change with no model update; episode inference is not representation learning"
+  forbids: "recording a belief update as a model change"
+  non_claim: "p-hat change is not theta change"
+- id: DYN-19
+  name: analysis drift vs model drift
+  level: analysis-version-change
+  scenario: "A change could be an analysis-version change or a model update."
+  distinction: "A_t -> A_{t+1} (task/tolerance/boundaries/governance) is distinct from theta_t -> theta_{t+1}; they are governed differently and block transport differently"
+  forbids: "conflating an analysis-version change with a model update"
+  non_claim: "no transport across an unacknowledged analysis change"
+- id: DYN-20
+  name: hysteresis and rollback
+  level: repertoire-revision
+  scenario: "A governed repertoire revision is later rolled back."
+  distinction: "revisions are path-dependent and may be rolled back; the transport/reopening record must support rollback"
+  forbids: "treating a revision as irreversible or forgetting its provenance"
+  non_claim: "revision history is retained; rollback asserts nothing about any interior state"

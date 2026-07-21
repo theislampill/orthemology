@@ -25,6 +25,7 @@ claim; asserts no soul access.
 """
 import io
 import os
+import re
 import sys
 
 try:
@@ -32,6 +33,12 @@ try:
 except ImportError as e:
     print("FATAL: requires pyyaml:", e)
     sys.exit(2)
+
+# SEMANTIC guard (R7C, audit B19-3): the four bearers stay DISTINCT. A bearer
+# gloss must not equate it to another bearer. This catches the tamper probe
+# "mu-tilde gloss = the same object as a case-bound metaorthemma".
+CONFLATE = re.compile(r"\b(same\s+(object\s+)?as|identical\s+to|equal\s+to|is\s+the\s+same\s+(object\s+)?as)\b", re.I)
+OTHER_BEARERS = ["metaorthemma", "mu-bar", "mu-tilde", "execution", "metaortheme type"]
 
 ROOT = os.path.dirname(os.path.dirname(os.path.abspath(__file__)))
 APP = "applications/daee-epistemics"
@@ -60,7 +67,19 @@ def main():
         check("bearer present: %s" % tok, tok in bearer_names)
     check("bearers declared distinct (!=)", "!=" in str(cw.get("distinctness", "")))
     for b in cw.get("bearers", []):
-        check("bearer %s has non_claims" % b.get("name", "?")[:16], bool(b.get("non_claims")))
+        nm = b.get("name", "?")
+        check("bearer %s has non_claims" % nm[:16], bool(b.get("non_claims")))
+        # SEMANTIC: a bearer gloss must not equate it to another bearer (B19-3)
+        gloss = str(b.get("gloss", ""))
+        m = CONFLATE.search(gloss)
+        conflated = m and any(o in gloss.lower() for o in OTHER_BEARERS)
+        check("bearer %s gloss does not equate it to another bearer" % nm[:16],
+              not conflated, "found %r in gloss" % (m.group(0) if m else ""))
+    # the represented-standard bearer must stay distinct from the metaorthemma
+    mut = next((b for b in cw.get("bearers", []) if "mu-tilde" in b.get("name", "")), {})
+    mtext = (str(mut.get("gloss", "")) + " " + " ".join(mut.get("non_claims", []))).lower()
+    check("mu-tilde is not equated with a metaorthemma/mu-bar",
+          not (("same" in mtext or "identical" in mtext) and ("metaorthemma" in mtext or "mu-bar" in mtext)))
     roles = cw.get("carrier_roles", {}).get("roles", [])
     check("carrier roles >= 6 (one artifact, several roles)", len(roles) >= 6, "%d" % len(roles))
     hist = cw.get("three_histories", {}).get("histories", [])
@@ -93,9 +112,21 @@ def main():
           "descent-like" in str(ga.get("preferred_phrasing", "")).lower())
     bf = fd.get("burden_functional", {})
     check("raw burden count is NOT a potential", bf.get("raw_count_is_not_a_potential") is True)
-    order = bf.get("lexicographic_order", [])
-    check("lexicographic order leads with truthful disclosure",
-          bool(order) and "disclosure" in order[0])
+    # R7C (B14/B15): feasibility-first constrained order, two timescales
+    cd = fd.get("corrective_dynamics", {})
+    ff = cd.get("feasibility_first", {})
+    check("hard constraints are feasibility-first (filtered before ranking)",
+          bool(ff.get("predicate")) and ("before" in str(ff.get("rule", "")).lower()
+                                          and "inadmissible" in str(ff.get("rule", "")).lower()))
+    check("ordering is a partial/declared order, NOT one universal total lexicographic",
+          cd.get("ordering", {}).get("universal_total_lexicographic") is False)
+    check("mandatory invariants lead with truthful disclosure",
+          "truthful-disclosure" in cd.get("mandatory_invariants", []))
+    tt = cd.get("two_timescales", {})
+    check("two timescales (fast episode vs slow meta) are separated",
+          bool(tt.get("fast_episode")) and bool(tt.get("slow_meta")) and bool(tt.get("coupling")))
+    check("no runtime improvement entails result truth or restoration",
+          "restoration" in str(cd.get("no_result_or_restoration_entailment", "")).lower())
     check("non-monotonicity includes no-guaranteed-convergence",
           "no-guaranteed-convergence" in fd.get("non_monotonicity", []))
     spaces = fd.get("state_spaces", {}).get("spaces", [])

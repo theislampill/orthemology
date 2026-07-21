@@ -30,21 +30,29 @@ class ConversionError(Exception):
 _MATH = []  # per-convert store of (kind, latex); reset at the top of convert()
 _PH_OPEN, _PH_CLOSE = "", ""
 _PH_RE = re.compile(_PH_OPEN + r"(\d+)" + _PH_CLOSE)
-_DISPLAY_RE = re.compile(r"\$\$(.+?)\$\$", re.S)
-_INLINE_RE = re.compile(r"\$([^\$\n]+?)\$")
+# One ordered scanner: code regions (fenced blocks, then inline `code`) are
+# passed through UNCHANGED so a literal `$...$` written to DESCRIBE the syntax is
+# never protected (R7C fix for audit B3 — the gallery prose leaked placeholders).
+# Only $$...$$ / $...$ OUTSIDE code become math placeholders.
+_PROTECT_RE = re.compile(
+    r"(?P<fence>```.*?```)"          # fenced code block (incl. ```math; the fence
+    r"|(?P<code>`[^`]*`)"            #   token handler deals with those separately)
+    r"|(?P<disp>\$\$.+?\$\$)"        # display math
+    r"|(?P<inl>\$[^\$\n]+?\$)",      # inline math
+    re.S)
 
 
 def _protect_math(md_text):
-    """Replace $$...$$ and $...$ with placeholder sentinels markdown-it passes
-    through verbatim; record the LaTeX bodies in _MATH by index."""
-    def repl(kind):
-        def f(m):
-            _MATH.append((kind, m.group(1)))
-            return _PH_OPEN + str(len(_MATH) - 1) + _PH_CLOSE
-        return f
-    md_text = _DISPLAY_RE.sub(repl("display"), md_text)
-    md_text = _INLINE_RE.sub(repl("inline"), md_text)
-    return md_text
+    """Replace $$...$$ and $...$ (only outside code) with placeholder sentinels
+    markdown-it passes through verbatim; record the LaTeX bodies in _MATH."""
+    def sub(m):
+        if m.lastgroup in ("fence", "code"):
+            return m.group(0)  # code passes through unchanged
+        kind = "display" if m.lastgroup == "disp" else "inline"
+        body = m.group(0)[2:-2] if kind == "display" else m.group(0)[1:-1]
+        _MATH.append((kind, body))
+        return _PH_OPEN + str(len(_MATH) - 1) + _PH_CLOSE
+    return _PROTECT_RE.sub(sub, md_text)
 
 
 def _expand_math(text):

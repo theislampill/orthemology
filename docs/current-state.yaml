@@ -77,9 +77,9 @@ authored:
     pdfs: reproducibly built and visually inspected draft artifacts
     legal_publication: open on license, identity, peer review, and external submission
 derived:
-  source_tree_digest: a275c59a7a7810273393678678095475e50713bbc4192bbb15ec064fbe1023ee
+  source_tree_digest: c442cb9ea630b02ddfe44a8d2a6dd8254ecf2f3cf09082e88f43edf1f913d08f
   source_tree_digest_policy: docs/project-state-inputs.yaml
-  tracked_files: 518
+  tracked_files: 544
   decision_ids:
   - '0001'
   - '0002'
@@ -106,7 +106,10 @@ derived:
   - '0023'
   - '0024'
   - '0025'
-  decision_count: 25
+  - '0026'
+  - '0027'
+  - 0028
+  decision_count: 28
   schemas:
   - analysis.schema.json
   - claim-ledger.schema.json
@@ -124,6 +127,7 @@ derived:
   validator_scripts:
   - audit_terminology_matching.py
   - derive_reqpath.py
+  - validate_candidate_state.py
   - validate_claim_reasoning_paths.py
   - validate_claim_sources.py
   - validate_companion_references.py
@@ -141,9 +145,11 @@ derived:
   - validate_latent_state_fixtures.py
   - validate_layer_map.py
   - validate_math_source.py
+  - validate_memetic_ecology.py
   - validate_meta_noetic_memetics.py
   - validate_negative_fixtures.py
   - validate_noetic_application.py
+  - validate_noetic_targets.py
   - validate_notation.py
   - validate_pdf_math.py
   - validate_quran_loci.py
@@ -157,7 +163,7 @@ derived:
   - validate_state_convergence.py
   - validate_type_token_semantics.py
   - validate_verdict_semantics.py
-  validator_count: 35
+  validator_count: 38
   fixture_counts:
     verdict: 7
     reason: 8
@@ -167,10 +173,14 @@ derived:
     negative: 11
     invalid_records: 48
   pdfs:
+    dynamic-orthing-noetic-learning-orthability-draft.pdf:
+      sha256: b8904d38dd3213df28d7f1b66e699d04ee92391766ff0e20dd644320e6b8c16e
+      pages: 4
+      source_commit: 0e26554ef79b4186f6fac099995181ba2ee49e0e
     notation-gallery.pdf:
-      sha256: 08af19aca8cb2ed358db3c561a07112ad8c8d31da6b08eef011020657be9fa1f
+      sha256: 479608cdf1b8cb84a16a58be8d3ab37882359fe1855cd83c98b0fa37a87264fc
       pages: 3
-      source_commit: daaf87b302a942b77ed98dc89dcf88754ab41614
+      source_commit: b6223964dfea6f3f91b757b6d1a6c91b4b712a8f
     orthability-divine-speech-athari-draft.pdf:
       sha256: 4bb0a1b24baf84395ea4b519b7497a9063704e1164142988d982307941c3f62f
       pages: 8

@@ -19,6 +19,7 @@ Establishes no empirical, human, or metaphysical claim.
 """
 import io
 import os
+import re
 import sys
 
 try:
@@ -26,6 +27,12 @@ try:
 except ImportError as e:
     print("FATAL: requires pyyaml:", e)
     sys.exit(2)
+
+# SEMANTIC guard (R7C, audit B19-2): a latent/model object may be a VEHICLE for
+# orthemic distinctions but is never an ortheme "by declaration". This catches
+# the tamper probe "latent model state z_t IS an ortheme by declaration".
+# Negated forms ("is NOT an ortheme", "not define an ortheme") do not match.
+ORTHEME_ASSERT = re.compile(r"\b(is|are|becomes?|declared)\s+(an?\s+)?orthemes?\b", re.I)
 
 ROOT = os.path.dirname(os.path.dirname(os.path.abspath(__file__)))
 APP = "applications/latent-state-orthing"
@@ -66,9 +73,22 @@ def main():
             check("fixture %s has %s" % (fid, field), bool(str(f.get(field, "")).strip()))
         check("fixture %s level is valid" % fid, f.get("level") in LEVELS, f.get("level"))
 
-    # 3. required fixtures present
-    for req in ("DYN-1", "DYN-2", "DYN-3", "DYN-4", "DYN-5", "DYN-6", "DYN-7", "DYN-8"):
+    # 3. required fixtures present (R7C extended to the failure families DYN-10..DYN-20)
+    for n in range(1, 21):
+        req = "DYN-%d" % n
         check("fixture %s present" % req, req in ids)
+
+    # 3b. update coupling (R7C, audit B7): each of the four levels is GOVERNED
+    coupling = load(APP + "/UPDATE-COUPLING.yaml")
+    ct = {t["level"]: t for t in coupling.get("transitions", [])}
+    check("update coupling covers all four levels", set(ct) == LEVELS, str(sorted(ct)))
+    for lvl, t in sorted(ct.items()):
+        for field in ("trigger", "authority", "input", "version", "transport", "invalidated", "reopening", "rollback"):
+            check("coupling[%s] declares %s" % (lvl, field), bool(t.get(field)))
+    rr = ct.get("repertoire-revision", {})
+    check("repertoire revision changes the DECLARED repertoire, not worldly facts",
+          "represent" in str(rr.get("non_claim", "")).lower()
+          and "not worldly" in str(rr.get("non_claim", "")).lower())
 
     # 4. OSM boundary: DYN-8 forbids validation-use + wet-lab + metaphysical transfer
     dyn8 = next((f for f in fixtures if f.get("id") == "DYN-8"), {})
@@ -100,6 +120,22 @@ def main():
     endp = [r for r in rows if "endpoint" in str(r.get("osm_concept", "")).lower()
             or "trajectory" in str(r.get("osm_concept", "")).lower()]
     check("endpoint-underdetermines-mechanism row exists", bool(endp))
+
+    # SEMANTIC: no row asserts a latent/model object IS an ortheme (B19-2)
+    for r in rows:
+        obj = str(r.get("orthemology_object", ""))
+        m = ORTHEME_ASSERT.search(obj)
+        check("row '%s' does not assert a latent/model object IS an ortheme"
+              % str(r.get("osm_concept", "?"))[:28], m is None,
+              "found %r" % (m.group(0) if m else ""))
+    # the latent-state row must explicitly deny ortheme status and require ablation
+    lat = [r for r in rows if "latent" in str(r.get("osm_concept", "")).lower()
+           and "state" in str(r.get("osm_concept", "")).lower()]
+    check("a latent-state row exists", bool(lat))
+    if lat:
+        nc = " ".join(lat[0].get("non_claims", [])).lower()
+        check("latent-state row denies ortheme status (admission is by ablation)",
+              "not an ortheme" in nc and "ablation" in nc)
 
     print("TOTAL: %d failures" % len(FAILS))
     sys.exit(1 if FAILS else 0)
