@@ -1,9 +1,9 @@
 {
-  "pdf": "orthemma-ortheme-systems-draft.pdf",
-  "pdf_sha256": "d55a00bd7e2793a9ecc3fe72f935562ce5e2400c2c23a04be49ec3098bbac0cf",
-  "page_count": 32,
+  "pdf": "notation-gallery.pdf",
+  "pdf_sha256": "56f4630025654e12d5db5b6a871bbb062af19d0ef44b4d2fe5616593f4a136d3",
+  "page_count": 3,
   "sources": {
-    "manuscript/orthemma-ortheme-systems-revised-draft.md": "8f674a6623bdf5a9ef7b6157793a0e77fee762e1b60e6bb8abe1c4f1f92fd57a"
+    "docs/notation-gallery.md": "8d90b921107b1252299105de587effbfde0411b3752df67ed7410b40f4b2a949"
   },
   "source_commit": "8f260b3f526e9da4d261f601f5424c23dda42bb3",
   "artifact_commit": "the git commit that introduces/updates this artifact (two-stage provenance; see `git log -- artifacts/`)",

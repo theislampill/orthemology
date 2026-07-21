@@ -119,6 +119,115 @@ retired_symbols:
     reason: replaced by θ_stop
   - symbol: "I_T"
     reason: pre-D1 primitive; superseded by Inst_A (historical only)
+# --- R7B render map (Decision 0023) -----------------------------------------
+# Render metadata for the mathematical-typesetting pipeline. `registry_symbol`
+# equals a `symbols[].symbol` value verbatim; `latex` is the GitHub-compatible
+# source (rendered on GitHub via MathJax and translated to Typst math by
+# scripts/latex_to_typst_math.py). scripts/validate_math_source.py asserts a
+# bijection between non-retired symbols and these entries and that every `latex`
+# appears in docs/notation-gallery.md. This EXTENDS the registry (Decision 0005);
+# it does not change any symbol's meaning — a typography layer, not a redesign.
+render_map_version: "1.0.0"
+render_map:
+- registry_symbol: "A"
+  latex: "A"
+  role: declared analysis (identifier + version)
+- registry_symbol: "alpha, beta, ..."
+  latex: "\\alpha, \\beta"
+  role: actor indices
+- registry_symbol: "T = task(A)"
+  latex: "T = \\operatorname{task}(A)"
+  role: task component of the analysis
+- registry_symbol: "M_univ, O_univ"
+  latex: "\\mathcal{M}, \\mathcal{O}"
+  role: universal occurrence and ortheme universes
+- registry_symbol: "M_A, O_A"
+  latex: "\\mathcal{M}_A \\subseteq \\mathcal{M}, \\ \\mathcal{O}_A \\subseteq \\mathcal{O}"
+  role: analysis-active domain and repertoire
+- registry_symbol: "Inst_A"
+  latex: "\\operatorname{Inst}_A \\subseteq \\mathcal{M}_A \\times \\mathcal{O}_A"
+  role: analysis-relative instantiation (the primitive)
+- registry_symbol: "O*(m; A)"
+  latex: "O^*(m; A)"
+  role: true (actual) profile of m under A
+- registry_symbol: "Pi_A"
+  latex: "\\Pi_A"
+  role: complete-profile space under A
+- registry_symbol: "Pi_A_partial"
+  latex: "\\Pi_A^\\partial"
+  role: partial-profile space under A
+- registry_symbol: "C_hat"
+  latex: "\\hat C_{A,\\alpha,t}(m)"
+  role: candidate set of complete profiles
+- registry_symbol: "p_hat"
+  latex: "\\hat p_{A,\\alpha,t}(m) \\in \\Pi_A^\\partial"
+  role: inferred (partial) profile — belief, never ground truth
+- registry_symbol: "Omega"
+  latex: "\\Omega_{A,\\alpha,t}"
+  role: observation map
+- registry_symbol: "mu"
+  latex: "\\mu = \\langle g, S_\\mu, \\operatorname{select}_\\mu, \\operatorname{prov}, \\operatorname{ver} \\rangle"
+  role: metaortheme type
+- registry_symbol: "pi_mu"
+  latex: "\\pi_\\mu"
+  role: paired meta-policy
+- registry_symbol: "mu_bar"
+  latex: "\\bar\\mu_{e,j}"
+  role: the j-th metaorthemma in episode e
+- registry_symbol: "MetaInst"
+  latex: "\\operatorname{MetaInst}(\\bar\\mu_{e,j}, \\mu)"
+  role: token typing of a metaorthemma under a metaortheme
+- registry_symbol: "Gamma_E"
+  latex: "\\Gamma_E = (E, \\rightsquigarrow)"
+  role: episode DAG
+- registry_symbol: "e_Gamma"
+  latex: "e_\\Gamma = \\operatorname{comp}(\\Gamma_E)"
+  role: composed boundary-level episode
+- registry_symbol: "GoalSchema"
+  latex: "\\operatorname{GoalSchema}(\\alpha)"
+  role: parametric goal schema
+- registry_symbol: "G_target"
+  latex: "\\mathcal{G}_{\\alpha, A_\\alpha}"
+  role: actor-alpha's grounded target profile set
+- registry_symbol: "Rep_A"
+  latex: "\\operatorname{Rep}_A"
+  role: representation family under A
+- registry_symbol: "chi"
+  latex: "\\chi \\in \\operatorname{Rep}_A"
+  role: one representation
+- registry_symbol: "L_A_star"
+  latex: "L_A^*(\\chi)"
+  role: best attainable loss/risk under representation chi
+- registry_symbol: "select_mu"
+  latex: "\\operatorname{select}_\\mu"
+  role: metaortheme state-selecting evidence procedure
+- registry_symbol: "estatus_e"
+  latex: "\\operatorname{estatus}_e"
+  role: per-claim evidence-status map of episode e
+- registry_symbol: "eps_A"
+  latex: "\\epsilon_A"
+  role: accepted tolerance of the analysis
+- registry_symbol: "theta_stop"
+  latex: "\\theta_{\\text{stop}}"
+  role: ANDON stop/escalation risk threshold
+- registry_symbol: "K_A"
+  latex: "\\mathcal{K}_A"
+  role: cause repertoire
+- registry_symbol: "R_A"
+  latex: "\\mathcal{R}_A"
+  role: route repertoire
+- registry_symbol: "W_A"
+  latex: "\\mathcal{W}_A"
+  role: warrant-state repertoire
+- registry_symbol: "Q_e"
+  latex: "\\mathcal{Q}_e"
+  role: claim ledger of episode e
+- registry_symbol: "delta_e"
+  latex: "\\delta_e"
+  role: residual-disposition map of episode e
+- registry_symbol: "ReqPath"
+  latex: "\\operatorname{ReqPath}(e)"
+  role: governance-derived required pathway verdicts
 scoped_shorthand_rule: >
   Task-subscripted forms (Inst_T, O*_T, Π_T, 𝒦_T, ℛ_T, 𝒲_T, ≢_T) and the
   unsubscripted M, O are licensed ONLY after one analysis A with task(A) = T is

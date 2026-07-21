@@ -1,0 +1,48 @@
+schema: orthemology-math-migration-status-v1
+# R7B, Decision 0023. The mathematical-typesetting pipeline
+# (scripts/latex_to_typst_math.py; canonical GitHub-compatible $...$ / ```math
+# source; rendered by the pinned typst package) is PROVEN end-to-end on
+# docs/notation-gallery.md -> artifacts/notation-gallery.pdf (zero notdef).
+#
+# The four publication corpus documents are NOT yet migrated in place. Their
+# known missing-glyph (notdef/NUL) counts are pinned below so the reproduced
+# defect (R7B-PDF-MATH-BASELINE.md) is TRACKED: scripts/validate_pdf_math.py
+# fails if a PDF's notdef count differs from the value here, so the defect can
+# neither silently grow nor be silently declared fixed. When a document is
+# migrated, set migrated: true and expected_notdef: 0 in the same commit that
+# migrates its source. Full corpus migration is the reviewed continuation (a
+# fresh-Fable-reviewed pass), made safe by these validators. A Git freeze is
+# not a migration.
+pipeline:
+  implemented: "P1 — in-repo LaTeX-subset -> Typst-math translator; zero new dependencies; keeps the deterministic typst-package build and byte-reproducibility"
+  recommended_target: "P2 — pinned Pandoc -> Typst writer -> pinned Typst — if and when a pinned pandoc binary + hash is added to CI (not deterministically provisionable in the R7B environment)"
+  decision: docs/decisions/0023-mathematical-source-and-typesetting-pipeline.md
+combining_accent_ban: "Publication math source must use \\hat/\\bar/\\vec, never precomposed combining marks (U+0300-U+036F, U+20D7). validate_math_source.py enforces this inside $...$ / $$...$$ / ```math."
+documents:
+- pdf: notation-gallery
+  role: reference
+  sources: [docs/notation-gallery.md]
+  migrated: true
+  expected_notdef: 0
+- pdf: orthemic-core-reference-draft
+  role: corpus
+  sources: [theory/orthemic-core-formalization.md, theory/orthemic-multi-actor-conflict-note.md]
+  migrated: false
+  known_notdef: 26
+  notdef_cause: "combining arrow U+20D7 over mu / C (episode-signature vec-mu, vec-C) rendered under #raw monospace"
+- pdf: orthemma-ortheme-systems-draft
+  role: corpus
+  sources: [manuscript/orthemma-ortheme-systems-revised-draft.md]
+  migrated: false
+  known_notdef: 6
+  notdef_cause: "combining-mark math notation rendered under #raw monospace"
+- pdf: orthability-ground-of-intelligibility-draft
+  role: corpus
+  sources: [companion/orthability-and-the-ground-of-intelligibility.md]
+  migrated: false
+  known_notdef: 0
+- pdf: orthability-divine-speech-athari-draft
+  role: corpus
+  sources: [companion/orthability-divine-attributes-and-speech-athari.md]
+  migrated: false
+  known_notdef: 0

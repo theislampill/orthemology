@@ -1,13 +1,13 @@
 {
   "pdf": "orthability-divine-speech-athari-draft.pdf",
-  "pdf_sha256": "fe5162ecfe165080625337ce6fc526926fce7a8f570058e5ca1088576ca55665",
+  "pdf_sha256": "93ac86246126df0657b33975e141595fdfeffe7ad6ef56a418df5985cdf6f47d",
   "page_count": 8,
   "sources": {
     "companion/orthability-divine-attributes-and-speech-athari.md": "41b41689eb82a9e24ef07aefe79b76f9c30bd1623bef125a1c9cc91dc344f139"
   },
-  "source_commit": "e69e455272d9097bb27643ea0c543ef3a412717e",
+  "source_commit": "8f260b3f526e9da4d261f601f5424c23dda42bb3",
   "artifact_commit": "the git commit that introduces/updates this artifact (two-stage provenance; see `git log -- artifacts/`)",
-  "source_date_epoch": 1784583213,
+  "source_date_epoch": 1784597175,
   "build_command": "python scripts/build_pdfs.py",
   "tools": {
     "typst": "0.15.0",

@@ -63,6 +63,9 @@ DOCS = [
     ("orthability-divine-speech-athari-draft",
      ["companion/orthability-divine-attributes-and-speech-athari.md"],
      "Orthability, Divine Attributes, and Speech — Atharī (companion draft)"),
+    ("notation-gallery",
+     ["docs/notation-gallery.md"],
+     "Orthemology Notation Gallery (R7B mathematical-typesetting pipeline, Decision 0023)"),
 ]
 
 STATUS_LINES = [
