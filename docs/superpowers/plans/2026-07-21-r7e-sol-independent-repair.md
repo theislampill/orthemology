@@ -8,14 +8,22 @@
 
 **Tech stack:** Python 3.11.9; PyYAML; jsonschema; markdown-it-py; Typst 0.15.0; pypdf 6.14.2; Markdown/YAML/JSON/JSON Schema; GitHub Actions and protected pull requests.
 
-**Exact environment:** `C:\workspace\ai\orthemology-r7\venv-lock\Scripts\python.exe` with `requirements-ci.lock.txt`. Set `PYTHONUTF8=1` and `PYTHONIOENCODING=utf-8` for Windows command parity. Do not use the ambient Python environment to generate artifacts.
+**Exact environment:** A task-specific virtual environment outside the repository, created with Python 3.11 and installed only from `requirements-ci.lock.txt`. Set `PYTHONUTF8=1` and `PYTHONIOENCODING=utf-8` for Windows command parity. Do not use the ambient Python environment to generate artifacts.
 
 Before running plan commands in PowerShell:
 
 ```powershell
-$PY = 'C:\workspace\ai\orthemology-r7\venv-lock\Scripts\python.exe'
+$venvDir = Join-Path ([System.IO.Path]::GetTempPath()) 'orthemology-r7e-sol-py311'
+$venvPython = Join-Path $venvDir 'Scripts\python.exe'
+if (-not (Test-Path -LiteralPath $venvPython)) {
+  py -3.11 -m venv $venvDir
+  & $venvPython -m pip install -r requirements-ci.lock.txt
+}
+$PY = $venvPython
 $env:PYTHONUTF8 = '1'
 $env:PYTHONIOENCODING = 'utf-8'
+& $PY --version
+& $PY scripts/validate_dependency_lock.py
 ```
 
 **Controlling design:** `docs/superpowers/specs/2026-07-21-r7e-sol-independent-repair-design.md`
