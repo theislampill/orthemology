@@ -24,8 +24,10 @@ import sys
 
 try:
     import yaml
+    import jsonschema
+    import json
 except ImportError as e:
-    print("FATAL: requires pyyaml:", e)
+    print("FATAL: requires pyyaml + jsonschema:", e)
     sys.exit(2)
 
 # SEMANTIC guard (R7C, audit B19-2): a latent/model object may be a VEHICLE for
@@ -78,17 +80,49 @@ def main():
         req = "DYN-%d" % n
         check("fixture %s present" % req, req in ids)
 
-    # 3b. update coupling (R7C, audit B7): each of the four levels is GOVERNED
+    # 3b. update coupling (R7C B7; R7D B34/P7): each level is GOVERNED and now
+    #     SCHEMA-VALIDATED with STRUCTURED, GATED transport — silent transport fails.
     coupling = load(APP + "/UPDATE-COUPLING.yaml")
+    uc_schema = json.loads(io.open(os.path.join(ROOT, APP, "UPDATE-COUPLING.schema.json"), encoding="utf-8").read())
+    try:
+        jsonschema.validate(coupling, uc_schema)
+        check("update-coupling validates against its schema", True)
+    except jsonschema.ValidationError as e:
+        check("update-coupling validates against its schema", False, e.message)
     ct = {t["level"]: t for t in coupling.get("transitions", [])}
     check("update coupling covers all four levels", set(ct) == LEVELS, str(sorted(ct)))
     for lvl, t in sorted(ct.items()):
-        for field in ("trigger", "authority", "input", "version", "transport", "invalidated", "reopening", "rollback"):
+        for field in ("trigger", "authority", "input", "version", "transport", "calibration",
+                      "catastrophic_forgetting_check", "invalidated", "reopening", "rollback"):
             check("coupling[%s] declares %s" % (lvl, field), bool(t.get(field)))
+        # P7: transport is a gated object; silence/blanket transport is forbidden
+        tr = t.get("transport", {})
+        check("coupling[%s] transport requires an argument (no silent/universal transport, P7)" % lvl,
+              isinstance(tr, dict) and tr.get("default") == "no-transport-without-argument"
+              and tr.get("argument_required") is True,
+              repr(tr if not isinstance(tr, dict) else {k: tr.get(k) for k in ("default", "argument_required")}))
     rr = ct.get("repertoire-revision", {})
     check("repertoire revision changes the DECLARED repertoire, not worldly facts",
           "represent" in str(rr.get("non_claim", "")).lower()
           and "not worldly" in str(rr.get("non_claim", "")).lower())
+
+    # 3c. OSM dynamics definitions (R7D B31/B32/B33/B35): Geom_A, ProfileOf_A, merger
+    defs = load(APP + "/OSM-DYNAMICS-DEFINITIONS.yaml")
+    geo = defs.get("geometry_definition", {})
+    for f in ("representation_extraction", "metric", "alignment", "permutation_invariance",
+              "rotation_scale_handling", "uncertainty", "evaluated_distribution"):
+        check("Geom_A defines %s (B31)" % f, bool(str(geo.get(f, "")).strip()))
+    pr = defs.get("profile_relation", {})
+    for f in ("relation_status", "evidence_basis", "analysis_version", "cardinality", "uncertainty", "transport"):
+        check("ProfileOf_A defines %s (B32)" % f, bool(str(pr.get(f, "")).strip()))
+    check("ProfileOf_A denies latent==ortheme-by-declaration",
+          any("not an ortheme" in nc.lower() or "by declaration" in nc.lower() for nc in pr.get("non_claims", [])))
+    mc = defs.get("merger_contrast", {})
+    for f in ("merge_operation", "evaluation_distribution", "horizon", "action_loss_surfaces",
+              "hard_constraints", "uncertainty_interval", "tolerance_source", "admission_rule"):
+        check("merger contrast defines %s (B33)" % f, bool(str(mc.get(f, "")).strip()))
+    om = defs.get("object_map", {}).get("layers", [])
+    check("OSM object map keeps >=11 distinct layers (B35)", len(om) >= 11, "got %d" % len(om))
 
     # 4. OSM boundary: DYN-8 forbids validation-use + wet-lab + metaphysical transfer
     dyn8 = next((f for f in fixtures if f.get("id") == "DYN-8"), {})

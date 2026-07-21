@@ -74,6 +74,13 @@
       "result": "B26: G1 reclassified adopted->proposed-candidate in NOETIC-FIELD-DYNAMICS.yaml (validator updated). B27: predicate vocabulary AdmissibleCorrectiveTransition/PathwayAdequateCorrection/GovernedCorrectiveSearch; strict soundness reserved for the factive Decision-0011 predicate. B28/B29: CORRECTIVE-TRANSITION schema/example keeping all stages separate (state-before, admissibility, eligibility, selection, binding, execution, delta, diagnostics, reread, terminal posture); validate_corrective_transition.py enforces admissible-route-only, ranking-witness, delta!=soundness, reread-at-closure, closure!=restoration, no-burden-deletion, no-unauthorized-global-revision. Fixtures CT1-CT8; all H6 probes CAUGHT. B30: two-timescale coupling stated (slow revision needs authorization).",
       "suite": "53/53 green; manifest clean; 6 PDFs byte-equal",
       "next_action": "Phase I OSM/dynamic formal completion + P7 update-transport schema"
+    },
+    {
+      "phase": "I (OSM/dynamic formal completion, Decision 0024 dated amendment)",
+      "status": "complete",
+      "result": "Closes P7/B31-B36. B34/P7: UPDATE-COUPLING.yaml transport made a STRUCTURED gated object + UPDATE-COUPLING.schema.json; validate_dynamic_orthing schema-validates it and requires default=no-transport-without-argument + argument_required:true per level -> silent/blanket transport FAILS (probe CAUGHT). B31/B32/B33/B35: OSM-DYNAMICS-DEFINITIONS.yaml defines Geom_A (extraction/metric/alignment/invariances/uncertainty/distribution), ProfileOf_A (evidence/version/status/cardinality/uncertainty/transport), Delta^merge_A (op/dist/horizon/surfaces/constraints/interval/tolerance/admission), and an 11-layer object map; validator checks the definitional fields. B36: bounded CSCG source claim. Decision 0024 carries a dated R7D amendment (no new decision number).",
+      "suite": "53/53 green; manifest clean; 6 PDFs byte-equal",
+      "next_action": "Phase G current DAEE runtime delta adjudication + crosswalk"
     }
   ],
   "no_merge_statement": "R7D is an Opus CANDIDATE on a draft child PR based on PR #10. It has not been merged into PR #10, PR #9, PR #8, or main. A fresh Fable session must review every hunk, verify the sources, formal semantics, mathematics, PDF rendering, and candidate state, and perform any protected merges."
