@@ -568,8 +568,180 @@ runtime: implemented
         item(mutation["proposals"], "proposal_id", "PROP-CONTRACT-001")["proposed_action"]["action_label"] = "mismatched-action"
         cases.append({"records": mutation})
 
+        mutation = copy.deepcopy(self.records)
+        item(mutation["somnus_runs"], "somnus_run_id", "RUN-NEXT-001")["output_ids"] = ["SA-RECURRENCE-001"]
+        cases.append({"records": mutation})
+
+        mutation = copy.deepcopy(self.records)
+        item(mutation["meta_orthability_assessments"], "meta_orthability_assessment_id", "MOA-001")["subject_ids"].append("ORTH-002")
+        cases.append({"records": mutation})
+
+        mutation = copy.deepcopy(self.records)
+        item(mutation["outcome_evaluations"], "outcome_evaluation_id", "OUTCOME-001")["evaluated_at"] = "2026-07-21T19:04:00Z"
+        cases.append({"records": mutation})
+
         for index, changes in enumerate(cases, 1):
             with self.subTest(variant=index):
+                self.assertRejected(**changes)
+
+    def test_second_rereview_18_fresh_mutations_fail_closed(self):
+        cases = []
+
+        # Meta-orthability scope and bidirectional run-output ownership (3).
+        mutation = copy.deepcopy(self.records)
+        item(mutation["meta_orthability_assessments"], "meta_orthability_assessment_id", "MOA-001")["subject_ids"] = ["ORTH-002"]
+        cases.append(("meta-gate-wrong-resolved-subject", {"records": mutation}))
+
+        mutation = copy.deepcopy(self.records)
+        gate = item(mutation["meta_orthability_assessments"], "meta_orthability_assessment_id", "MOA-001")
+        gate.update(result="inapplicable", assessable=False, non_assessment_reason="declared inapplicable")
+        cases.append(("meta-gate-coherent-but-nonassessable", {"records": mutation}))
+
+        mutation = copy.deepcopy(self.records)
+        item(mutation["somnic_assessments"], "assessment_id", "SA-EVIDENCE-TIMING-001")["somnus_run_id"] = "RUN-NEXT-001"
+        cases.append(("assessment-missing-from-declared-run-outputs", {"records": mutation}))
+
+        # One authoritative t1-t5 writeback chain and record chronology (2).
+        mutation = copy.deepcopy(self.records)
+        mutation["writeback_timeline"][2]["record_ids"] = ["PROP-MEMORY-001", "AUTH-FAILED-001"]
+        mutation["writeback_timeline"][3]["record_ids"] = ["APP-FAILED-001", "SUCCESSOR-CONTRACT-001"]
+        cases.append(("disconnected-but-resolvable-writeback-timeline", {"records": mutation}))
+
+        mutation = copy.deepcopy(self.records)
+        item(mutation["applications"], "application_id", "APP-APPLIED-001")["applied_at"] = "2026-07-21T19:02:00Z"
+        cases.append(("application-record-time-precedes-authorization", {"records": mutation}))
+
+        # Count-preserving Collective semantic inversions (5).
+        mutation = copy.deepcopy(self.collective)
+        for index, mode in enumerate(mutation["modes"], 1):
+            mode.update(name=f"garbage-name-{index}", information_path=f"garbage-path-{index}", coordination=f"garbage-rule-{index}")
+        cases.append(("collective-mode-meanings-replaced", {"collective": mutation}))
+
+        mutation = copy.deepcopy(self.collective)
+        mutation["dependence_dimensions"] = [f"garbage-dependence-{index}" for index in range(9)]
+        cases.append(("collective-dependence-vocabulary-replaced", {"collective": mutation}))
+
+        mutation = copy.deepcopy(self.collective)
+        for level in mutation["transclusion"]["levels"]:
+            level["permitted_effect"] = "automatic_execution"
+            level["prohibited_effect"] = "local_assessment"
+        cases.append(("collective-level-effects-inverted", {"collective": mutation}))
+
+        mutation = copy.deepcopy(self.collective)
+        mutation["source_envelope"]["disclosure"] = [f"garbage-disclosure-{index}" for index in range(6)]
+        cases.append(("collective-disclosure-vocabulary-replaced", {"collective": mutation}))
+
+        mutation = copy.deepcopy(self.collective)
+        mutation["collective_closure"]["permitted"] = [f"garbage-closure-{index}" for index in range(7)]
+        cases.append(("collective-closure-vocabulary-replaced", {"collective": mutation}))
+
+        # Nested malformed values must diagnose through production main (8).
+        mutation = copy.deepcopy(self.activation)
+        mutation["contracts"][0]["required_properties"] = [["nested"]]
+        cases.append(("malformed-activation-required-properties", {"activation": mutation}))
+
+        mutation = copy.deepcopy(self.activation)
+        mutation["contracts"][0]["contract_id"] = []
+        cases.append(("malformed-activation-contract-id", {"activation": mutation}))
+
+        mutation = copy.deepcopy(self.records)
+        item(mutation["claimant_routing_cases"], "case_id", "ROUTE-MULTI-001")["claimant_assessments"][0]["claimant_id"] = []
+        cases.append(("malformed-routing-claimant-id", {"records": mutation}))
+
+        mutation = copy.deepcopy(self.records)
+        item(mutation["orthing_events"], "event_id", "EV-WAKE-001")["session_id"] = []
+        cases.append(("malformed-event-session-id", {"records": mutation}))
+
+        mutation = copy.deepcopy(self.records)
+        item(mutation["somnus_runs"], "somnus_run_id", "RUN-RECURRENCE-001")["anchor_subject_ids"] = [["nested"]]
+        cases.append(("malformed-run-anchor-subjects", {"records": mutation}))
+
+        mutation = copy.deepcopy(self.collective)
+        mutation["modes"][0]["information_path"] = {}
+        cases.append(("malformed-collective-information-path", {"collective": mutation}))
+
+        mutation = copy.deepcopy(self.collective)
+        mutation["bearer_separation"] = [["nested"], "represented_standard_at_actor_time", "case_bound_metaorthemma", "execution_trace", "transclusion_envelope"]
+        cases.append(("malformed-collective-bearer-separation", {"collective": mutation}))
+
+        mutation = copy.deepcopy(self.adoption)
+        mutation["subsumption"]["ordinary_targets"] = [["nested"]]
+        cases.append(("malformed-adoption-ordinary-targets", {"adoption": mutation}))
+
+        self.assertEqual(18, len(cases))
+        for name, changes in cases:
+            with self.subTest(case=name):
+                self.assertRejected(**changes)
+
+    def test_nested_map_and_list_variants_never_reach_hash_operations(self):
+        cases = []
+
+        mutation = copy.deepcopy(self.activation)
+        mutation["evaluators"][0]["result_vocabulary"] = [{"nested": True}]
+        cases.append(("activation-evaluator-vocabulary", {"activation": mutation}))
+
+        mutation = copy.deepcopy(self.activation)
+        item(mutation["fixture_outcomes"], "fixture_id", "ACT-OVERLAP-001")["conflict"]["claimant_contracts"] = [{"nested": True}, ["nested"]]
+        cases.append(("activation-overlap-contract-set", {"activation": mutation}))
+
+        mutation = copy.deepcopy(self.records)
+        item(mutation["claimant_routing_cases"], "case_id", "ROUTE-MULTI-001")["selected_claimant_id"] = {"nested": True}
+        cases.append(("routing-selected-claimant-key", {"records": mutation}))
+
+        mutation = copy.deepcopy(self.records)
+        item(mutation["orthing_events"], "event_id", "EV-WAKE-001-ROUTE")["occurrence_id"] = {"nested": True}
+        cases.append(("event-selected-route-key", {"records": mutation}))
+
+        mutation = copy.deepcopy(self.records)
+        item(mutation["somnic_assessments"], "assessment_id", "SA-RECURRENCE-001")["target_orthing_ids"] = [{"nested": True}]
+        cases.append(("assessment-target-set", {"records": mutation}))
+
+        mutation = copy.deepcopy(self.records)
+        item(mutation["somnic_assessments"], "assessment_id", "SA-CORRECT-DEFECTIVE-001")["proposal_ids"] = [{"nested": True}]
+        cases.append(("assessment-proposal-set", {"records": mutation}))
+
+        mutation = copy.deepcopy(self.records)
+        item(mutation["somnus_runs"], "somnus_run_id", "RUN-RECURRENCE-001")["output_ids"] = [{"nested": True}]
+        cases.append(("run-output-set", {"records": mutation}))
+
+        mutation = copy.deepcopy(self.records)
+        item(mutation["somnus_runs"], "somnus_run_id", "RUN-RECURRENCE-001")["governing_versions"] = [["nested"]]
+        cases.append(("run-governing-version-sort", {"records": mutation}))
+
+        mutation = copy.deepcopy(self.records)
+        item(mutation["recurrence_reports"], "recurrence_report_id", "RR-001")["counterexample_ids"] = [{"nested": True}]
+        cases.append(("report-counterexample-set", {"records": mutation}))
+
+        mutation = copy.deepcopy(self.records)
+        item(mutation["recurrence_reports"], "recurrence_report_id", "RR-001")["fingerprint"]["source_orthing_ids"] = [["nested"]]
+        cases.append(("report-fingerprint-source-set", {"records": mutation}))
+
+        mutation = copy.deepcopy(self.records)
+        mutation["writeback_timeline"][2]["record_ids"] = [{"nested": True}]
+        cases.append(("timeline-record-set", {"records": mutation}))
+
+        mutation = copy.deepcopy(self.inventory)
+        mutation["candidates"][0]["candidate_id"] = {"nested": True}
+        cases.append(("inventory-candidate-set", {"inventory": mutation}))
+
+        mutation = copy.deepcopy(self.collective)
+        mutation["transclusion"]["gates"] = [{"nested": True}]
+        cases.append(("collective-gate-set", {"collective": mutation}))
+
+        mutation = copy.deepcopy(self.collective)
+        mutation["privacy"]["controls"] = [["nested"]]
+        cases.append(("collective-privacy-set", {"collective": mutation}))
+
+        mutation = copy.deepcopy(self.collective)
+        mutation["transclusion"]["levels"][0]["level"] = ["nested"]
+        cases.append(("collective-level-key", {"collective": mutation}))
+
+        mutation = copy.deepcopy(self.adoption)
+        mutation["subsumption"]["governing_targets"] = [{"nested": True}]
+        cases.append(("adoption-governing-target-set", {"adoption": mutation}))
+
+        for name, changes in cases:
+            with self.subTest(case=name):
                 self.assertRejected(**changes)
 
 

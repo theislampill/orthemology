@@ -159,9 +159,10 @@ orthing_events:
   evidence_timing: {observed_at_t1: [], used_at_t1: [], indexed_unused_at_t1: [], discovered_after_t1: [E-T2-DISCOVERED]}
   append_only: true
 meta_orthability_assessments:
-- meta_orthability_assessment_id: MOA-001
+- &meta_gate_base
+  meta_orthability_assessment_id: MOA-001
   subject_kind: waking_orthing
-  subject_id: ORTH-001
+  subject_ids: [ORTH-NEW-001, ORTH-OLD-001]
   proposed_standard: residual-recurrence-standard@1
   activation_contract_id: theological-claimant-activation
   activation_contract_version: 1.0.0
@@ -176,6 +177,24 @@ meta_orthability_assessments:
   observed_exclusions: []
   evidence_state_ids: [E-T1-OBSERVED, E-T2-DISCOVERED]
   non_assessment_reason: null
+- <<: *meta_gate_base
+  meta_orthability_assessment_id: MOA-EVIDENCE-TIMING-001
+  subject_ids: [ORTH-001]
+- <<: *meta_gate_base
+  meta_orthability_assessment_id: MOA-CORRECT-DEFECTIVE-001
+  subject_ids: [ORTH-CORRECT-DEFECTIVE-001]
+- <<: *meta_gate_base
+  meta_orthability_assessment_id: MOA-CLOSED-001
+  subject_ids: [ORTH-OLD-001]
+- <<: *meta_gate_base
+  meta_orthability_assessment_id: MOA-NO-CHANGE-001
+  subject_ids: [ORTH-NO-CHANGE-001]
+- <<: *meta_gate_base
+  meta_orthability_assessment_id: MOA-ALTERNATIVES-001
+  subject_ids: [ORTH-ALTERNATIVES-001]
+- <<: *meta_gate_base
+  meta_orthability_assessment_id: MOA-REOPENED-001
+  subject_ids: [ORTH-OLD-001]
 somnus_runs:
 - somnus_run_id: RUN-RECURRENCE-001
   operation_id: residual_recurrence_assessment
@@ -191,7 +210,7 @@ somnus_runs:
   idempotency_key: recurrence-0.1.0:ORTH-NEW-001:LEDGER-REV-001
   started_at: '2026-07-21T19:00:00Z'
   completed_at: '2026-07-21T19:00:01Z'
-  output_ids: [RR-001, SA-RECURRENCE-001]
+  output_ids: [RR-001, SA-RECURRENCE-001, SA-EVIDENCE-TIMING-001, SA-CORRECT-DEFECTIVE-001, SA-CLOSED-001, SA-NO-CHANGE-001, SA-ALTERNATIVES-001]
   runtime_status: fixture_only_no_runtime
 - somnus_run_id: RUN-NEXT-001
   operation_id: residual_recurrence_assessment
@@ -252,12 +271,14 @@ somnic_assessments:
   explicit_non_mutation: true
 - <<: *assessment_base
   assessment_id: SA-EVIDENCE-TIMING-001
+  meta_orthability_assessment_id: MOA-EVIDENCE-TIMING-001
   assessment_target: t1_reasonableness
   target_orthing_ids: [ORTH-001]
   evidence_timing: {observed_at_t1: [E-T1-OBSERVED], used_at_t1: [E-T1-USED], indexed_unused_at_t1: [E-T1-UNUSED], discovered_after_t1: [E-T2-DISCOVERED]}
   target_history_digest: bbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbb
 - <<: *assessment_base
   assessment_id: SA-CORRECT-DEFECTIVE-001
+  meta_orthability_assessment_id: MOA-CORRECT-DEFECTIVE-001
   target_orthing_ids: [ORTH-CORRECT-DEFECTIVE-001]
   assessment_target: pathway
   assessment_result: defective
@@ -272,6 +293,7 @@ somnic_assessments:
   target_history_digest: cccccccccccccccccccccccccccccccccccccccccccccccccccccccccccccccc
 - <<: *assessment_base
   assessment_id: SA-CLOSED-001
+  meta_orthability_assessment_id: MOA-CLOSED-001
   target_orthing_ids: [ORTH-OLD-001]
   closure_status: closed
   assessment_result: reasonable
@@ -279,6 +301,7 @@ somnic_assessments:
   target_history_digest: dddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddd
 - <<: *assessment_base
   assessment_id: SA-NO-CHANGE-001
+  meta_orthability_assessment_id: MOA-NO-CHANGE-001
   target_orthing_ids: [ORTH-NO-CHANGE-001]
   assessment_result: no_change
   intervention_disposition: no_change
@@ -286,6 +309,7 @@ somnic_assessments:
   target_history_digest: eeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeee
 - <<: *assessment_base
   assessment_id: SA-ALTERNATIVES-001
+  meta_orthability_assessment_id: MOA-ALTERNATIVES-001
   target_orthing_ids: [ORTH-ALTERNATIVES-001]
   intervention_disposition: alternative_proposals
   proposal_ids: [PROP-MEMORY-001, PROP-SKILL-001]
@@ -295,6 +319,7 @@ somnic_assessments:
   target_history_digest: ffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffff
 - <<: *assessment_base
   assessment_id: SA-REOPENED-001
+  meta_orthability_assessment_id: MOA-REOPENED-001
   somnus_run_id: RUN-REOPEN-001
   target_orthing_ids: [ORTH-OLD-001]
   prior_assessment_ids: [SA-CLOSED-001]
@@ -375,7 +400,7 @@ writeback_case_details:
 - {case_id: upstream-evidence-defect, disposition: evidence_request, apparent_target: fact, diagnosed_locus: evidence_adequacy}
 - {case_id: correct-output-defective-pathway, disposition: proposal, apparent_target: skill-output, diagnosed_locus: activation_contract}
 writeback_timeline:
-- {time_role: t1, record_kind: waking_orthing, record_ids: [ORTH-001], occurred_at: '2026-07-20T10:00:00Z'}
+- {time_role: t1, record_kind: waking_orthing, record_ids: [ORTH-CORRECT-DEFECTIVE-001], occurred_at: '2026-07-20T11:00:00Z'}
 - {time_role: t2, record_kind: somnic_assessment, record_ids: [SA-CORRECT-DEFECTIVE-001], occurred_at: '2026-07-21T19:00:01Z'}
 - {time_role: t3, record_kind: proposal_authorization, record_ids: [PROP-CONTRACT-001, AUTH-INDEPENDENT-001], occurred_at: '2026-07-21T19:03:00Z'}
 - {time_role: t4, record_kind: applied_mutation, record_ids: [APP-APPLIED-001, SUCCESSOR-CONTRACT-001], occurred_at: '2026-07-21T19:05:00Z'}

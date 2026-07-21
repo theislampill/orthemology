@@ -29,9 +29,9 @@
         "required": ["mode_id", "name", "information_path", "coordination"],
         "properties": {
           "mode_id": {"enum": ["C1", "C2", "C3"]},
-          "name": {"type": "string", "minLength": 1},
-          "information_path": {"type": "string", "minLength": 1},
-          "coordination": {"type": "string", "minLength": 1}
+          "name": {"enum": ["independent-type-convergent-orthing", "federated-transclusive-orthing", "coordinated-council-orthing"]},
+          "information_path": {"enum": ["none-during-discovery", "provenance-preserving-transclusion", "intentionally-shared-evidence-and-assessments"]},
+          "coordination": {"enum": ["none-required", "recipient-locally-re-orths", "bounded-deliberation"]}
         }
       }
     },
@@ -45,8 +45,8 @@
       }
     },
     "bearer_separation": {
-      "type": "array", "minItems": 5, "uniqueItems": true,
-      "items": {"type": "string", "minLength": 1}
+      "type": "array", "minItems": 5, "maxItems": 5, "uniqueItems": true,
+      "items": {"enum": ["normative_metaortheme_type", "represented_standard_at_actor_time", "case_bound_metaorthemma", "execution_trace", "transclusion_envelope"]}
     },
     "transclusion": {
       "type": "object", "additionalProperties": false,
@@ -61,8 +61,8 @@
             "required": ["level", "permitted_effect", "prohibited_effect"],
             "properties": {
               "level": {"enum": ["evidential_artifact", "normative_standard", "operational_dsl_ir"]},
-              "permitted_effect": {"type": "string", "minLength": 1},
-              "prohibited_effect": {"type": "string", "minLength": 1}
+              "permitted_effect": {"enum": ["available_evidence_or_comparator", "local_meta_orthability_candidate", "inspectable_capability_candidate"]},
+              "prohibited_effect": {"enum": ["governing_or_executable", "locally_governing_without_version_acceptance_and_authorization", "execution_from_parse_success"]}
             }
           }
         },
@@ -75,7 +75,7 @@
       "properties": {
         "immutable": {"const": true},
         "required_identity": {"type": "array", "minItems": 6, "uniqueItems": true, "items": {"type": "string", "minLength": 1}},
-        "disclosure": {"type": "array", "minItems": 6, "uniqueItems": true, "items": {"type": "string", "minLength": 1}}
+        "disclosure": {"type": "array", "minItems": 6, "maxItems": 6, "uniqueItems": true, "items": {"enum": ["redactions", "permitted_use", "intended_recipient", "expiry_or_review_trigger", "residuals", "non_claims"]}}
       }
     },
     "receiving_assessment": {
@@ -91,14 +91,14 @@
     "source_applicability_auto_propagates": {"const": false},
     "receipt_can_govern_or_execute": {"const": false},
     "multi_operator_count_implies": {"type": "array", "maxItems": 0},
-    "dependence_dimensions": {"type": "array", "minItems": 9, "uniqueItems": true, "items": {"type": "string", "minLength": 1}},
+    "dependence_dimensions": {"type": "array", "minItems": 9, "maxItems": 9, "uniqueItems": true, "items": {"enum": ["operator_count", "model_family_count", "contract_version_count", "source_family_count", "input_family_count", "institutional_origin_count", "coordination_path", "time_span", "counterexample_count"]}},
     "collective_closure": {
       "type": "object", "additionalProperties": false,
       "required": ["bounded_scope", "preserves_dissent", "permitted"],
       "properties": {
         "bounded_scope": {"const": true},
         "preserves_dissent": {"const": true},
-        "permitted": {"type": "array", "minItems": 7, "uniqueItems": true, "items": {"type": "string", "minLength": 1}}
+        "permitted": {"type": "array", "minItems": 7, "maxItems": 7, "uniqueItems": true, "items": {"enum": ["shared_placement", "bounded_agreement_with_dissent", "several_local_placements", "unresolved_conflict", "insufficient_shared_evidence", "domain_scope_split", "hold_partial_recurse"]}}
       }
     },
     "privacy": {
