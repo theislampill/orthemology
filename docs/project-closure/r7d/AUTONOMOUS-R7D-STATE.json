@@ -102,6 +102,13 @@
       "result": "B41: DYNAMIC-ORTHABILITY-ARGUMENT-MAP.yaml — 10 rungs, each with premise/inference-type/conclusion/dependency/evidence-status/objection/rival-exit/school-status; non_entailments (OSM/DAEE exemplify only 1-3, prove no upper rung); validate_argument_map.py enforces the chain + five-status hierarchy + exemplification-only-on-1-3. B39: modalities expanded 6->8 (added objective-reachability/controllability split + representation-class-learnability/convergence split). B42: bounded Arabic/divine-Speech cross-section keeping created-convention/created-media/eternally-known-possibility/divine-act/revealed-wording/creaturely-reception/Quran-as-divine-Speech distinct; firewall preserved (dynamic apparatus models only the created/learnable side). B43: five-status source hierarchy incl creed-internal-inference. B38 already fixed in Phase B. Companion PDF rebuilt (5pp, zero notdef). HONEST: companion is ~1788 words (up from 1370) with all required sections + machine-readable map — a substantial bounded draft, not the full 4000-8000-word scholarly paper the audit targets.",
       "suite": "55/55 green; manifest clean; 6 PDFs byte-equal",
       "next_action": "Phase L+M semantic probe consolidation + adversarial reviews, then delivery"
+    },
+    {
+      "phase": "L+M (semantic probe corpus + adversarial reviews)",
+      "status": "complete",
+      "result": "docs/project-closure/r7d/reviews/ADVERSARIAL-REVIEWS.md: all 24 mandatory probes (audit §12) addressed — 12 mechanical attacks held live this pass (mutate/revert, tree clean), 7 by CI negative fixtures (NC/CT), 5 structurally prevented; consolidated harness reproducible. 20 adversarial review passes documented, all HELD. Genuine limitations recorded honestly (companion word count; math allowlist-removal reclassification remaining; full-corpus P1/P2 parity not re-run).",
+      "suite": "55/55 green; manifest clean; 6 PDFs byte-equal",
+      "next_action": "Delivery: final full suite, fresh-clone verification, push branch, open ONE draft child PR into PR #10, closeout"
     }
   ],
   "no_merge_statement": "R7D is an Opus CANDIDATE on a draft child PR based on PR #10. It has not been merged into PR #10, PR #9, PR #8, or main. A fresh Fable session must review every hunk, verify the sources, formal semantics, mathematics, PDF rendering, and candidate state, and perform any protected merges."
