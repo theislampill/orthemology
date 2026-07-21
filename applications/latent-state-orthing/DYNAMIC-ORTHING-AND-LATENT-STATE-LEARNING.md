@@ -3,7 +3,7 @@
 **Status:** DRAFT — application-level extension (Decision 0024). OPUS CANDIDATE —
 REQUIRES FRESH FABLE REVIEW BEFORE MERGE. Establishes no empirical, human, or
 metaphysical claim. The OSM/CSCG source is used for its reported abstract
-computational structure only (`opendataloader-output/s41586-024-08548-w.md`); no
+computational structure only (the OSM source (Sun et al., Nature 2025, DOI 10.1038/s41586-024-08548-w; local extraction `opendataloader-output/s41586-024-08548-w.md` is evidence provenance only)); no
 biological procedure and no human/noetic/metaphysical transfer.
 
 This note adds a **learning/update architecture** to Decision 0015's static

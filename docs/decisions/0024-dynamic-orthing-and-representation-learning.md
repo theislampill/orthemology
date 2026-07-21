@@ -10,7 +10,7 @@ Decision 0015 correctly separated the static objects — occurrence $m_t$, laten
 model state $z_t$, observation $x_t$, posterior/belief $b_t$, internal
 representation $y_t$, inferred orthemic profile $\hat p_t$ — and refused to
 define orthemes by vector orthogonality. But it is a **boundary note, not a
-theory of dynamics**. The OSM/CSCG source (`opendataloader-output/s41586-024-08548-w.md`)
+theory of dynamics**. The OSM/CSCG source (the OSM source (Sun et al., Nature 2025, DOI 10.1038/s41586-024-08548-w; local extraction `opendataloader-output/s41586-024-08548-w.md` is evidence provenance only))
 reports progressive decorrelation into an orthogonalized state machine, learned
 transitions among latent states, endpoint performance that **underdetermines**
 learning mechanism (CSCG uniquely reproduced both the final states *and* the

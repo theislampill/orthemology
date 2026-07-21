@@ -8,7 +8,8 @@ schema: orthemology-osm-cscg-crosswalk-v1
 #   synthesis             - this project's typed reading joining the two
 #   orthemology-extension - a Decision 0024 extension object
 # Every row carries non_claims. Establishes no validation of Orthemology.
-osm_source: opendataloader-output/s41586-024-08548-w.md
+osm_citation: "Sun et al. (2025), Learning produces an orthogonalized state machine in the hippocampus, Nature 640; DOI 10.1038/s41586-024-08548-w (bib key sun2025orthogonalized; OFFICIAL-PUBLISHER-VERIFIED, CC BY 4.0)"
+osm_evidence_provenance: opendataloader-output/s41586-024-08548-w.md  # local extraction; NOT the public citation surface (audit B21)
 overall_status: "external exemplification and constraint, NOT validation"
 rows:
 - osm_concept: "sensory-similar contexts, different task states (observational aliasing)"

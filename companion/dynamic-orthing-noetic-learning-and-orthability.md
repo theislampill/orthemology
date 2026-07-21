@@ -4,104 +4,176 @@
 premises. OPUS CANDIDATE — REQUIRES FRESH FABLE REVIEW BEFORE MERGE. Creed-
 internal material is school-labeled (Atharī) where it appears. **No empirical
 claim; no theological claim is asserted as established; asserts no soul access.**
-The Taymiyyan material is used as **secondary reconstruction** (an interpretive
-compilation and a dissertation), never converted into primary evidence.
 
-This companion places the R7B extensions — dynamic orthing (Decision 0024),
-meta-noetic memetics and corrective dynamics (Decision 0025) — inside the
-project's epistemology and metaphysics, and proposes a **candidate** concept of
-*dynamic orthability*. It adds only bounded cross-references to the main
-manuscript and the two existing companions.
+## 1. Source-status note
 
-## 1. Epistemology: the bearers stay separate
+Four source statuses are used and never conflated: **primary-text verified** (a
+located classical text), **secondary reconstruction** (a modern scholarly
+compilation or dissertation), **cross-source synthesis** (this project's joining
+of sources), and **orthemological extension** (a claim of this framework). The
+supplied `Ibn Taymiyyah's Epistemology.md` is a **collection** of modern
+scholarly materials, not one authorial work by Ibn Taymiyya; the "concrete
+reason / ideal reason" contrast is a **modern interpretive lens** (associated
+with Evans and applied by Turner), not Ibn Taymiyya's own fixed technical pair.
+El-Tobgui's study of the *Darʾ Taʿāruḍ al-ʿaql wa-l-naql* is a **secondary
+reconstruction**. Nothing here converts a secondary compilation into primary-text
+verification; doctrinal loci carry a verification queue in the sourcing ledger.
 
-A dynamic account must keep separate, and never collapse:
+## 2. Bearer ontology (the distinctions that must not collapse)
 
-- **faculty / disposition** — the capacity to judge (in the creed-internal model,
-  fiṭrah as a normative readiness, not a measured faculty);
+- **faculty / disposition** — the capacity to judge (creed-internally, fiṭrah as
+  a normative readiness, not a measured faculty);
 - **represented standard** $\tilde\mu_{\alpha,t}$ — an adopted/embodied governing rule;
+- **metaortheme** $\mu$ — the repeatable normative type;
 - **metaorthemma** $\bar\mu_{e,j}$ — the case binding;
-- **execution** — what was actually done;
+- **execution** — what was done;
 - **placement / judgment** $\hat p$ — the inferred profile (belief, never ground truth);
 - **objective result** $O^*(m; A)$ — the actual profile under the analysis;
 - **truth linkage** — whether the placement is truth-linked.
 
-The supplied Taymiyyan scholarship (secondary reconstruction) motivates this
-layering: it distinguishes concrete, historically embodied reasoning from sound
-or clear reason; mental universals from external particulars; perception, report,
-and rational judgment; and it treats corruption through inherited premises,
-desire, conjecture, habit, motive, or imitation. Orthemology's contribution is
-only the **typed separation** — it does not adjudicate the scholarship's own
-claims.
+These are the epistemological bearers a dynamic account must keep separate
+(Decisions 0025, 0027, 0028). Orthemology's contribution is the **typed
+separation**; it does not adjudicate the scholarship's own claims.
 
-### Tawātur vs memetic propagation
+## 3. Concrete versus sound reason
 
-Meta-noetic memetics makes the false-tawātur problem central (Decision 0025 §4;
-fixture N14). Many apparent reports may be independent corroboration, copies of
-one upstream source, repetitions produced by one institutional rule, mutations of
-one carrier, or genuine convergence. **Count is insufficient**; the ecology
-$\Gamma^\mu$ supplies the origin / independence / dependency / mutation-lineage /
-authority-order structure that a count cannot. This is a representational point,
-not a ruling on any actual report's status.
+"Concrete" describes *instantiation* or historical embodiment; "sound" describes
+a declared *normative/epistemic status*. Neither entails the other: concrete
+reasoning can be sound or unsound. Soundness here is **claim-relative** — its
+proper bearer and dimensions are those of StrictlySoundReasoning, i.e.
+$\operatorname{StrictlySoundReasoning}_q(e) := \operatorname{ReasoningPathAdequate}_q(e) \wedge \operatorname{TOKEN\_TRUTH\_LINKED}_q(e)$
+(Decision 0011), not a free-floating predicate. The Taymiyyan reconstruction (secondary)
+locates the load-bearing contrast within concretely instantiated reason —
+*ʿaql ṣarīḥ* (clear reason through a sound disposition and valid sources) versus
+reason corrupted by inherited premises, whim, conjecture, habit, motive, or
+imitation — not between "the concrete" and "the sound."
 
-## 2. Dynamic orthability (candidate concept)
+## 4. Fiṭrah and proper function
 
-The metaphysical companion treats **static** conditions of evaluability
-(determinacy, possibility, identity, correctness/error, fittingness, lawful
-transition). Dynamic orthing raises a **dynamic** question:
+Within the creed-internal (Atharī) model, fiṭrah is a **normative disposition /
+proper-function orientation**, not one measured faculty, one coordinate, one
+metaortheme, one algorithm, or one quantity inferred from discourse (Decision
+0025 §4; fixture N19 keeps runtime closure separate from restoration). Any
+"minimum-entropy attractor" phrasing is provisional and creed-internal.
 
-> what must reality be like for error to be discoverable, distinctions to be
-> learnable, correction trajectories to be possible, and governing standards to
-> be revisable — **without truth being created by the learner**?
+## 5. Tawātur versus memetic propagation
 
-**Candidate:** *dynamic orthability* is the analysis-relative availability of
-lawful, evidence-sensitive, correction-capable trajectories among unresolved,
-mistaken, and more adequate states of representation and action under a declared
-analysis $A$.
+Meta-noetic memetics makes the false-tawātur problem central (Decision 0028;
+fixtures TW1–TW6). Many apparent reports may be independent corroboration, copies
+of one upstream source, repetitions produced by one institutional rule, mutations
+of one carrier, or convergence after genuinely independent routes. The Taymiyyan
+material treats tawātur as depending on **more than number** — origin, path
+independence, dependence, and qualitative/circumstantial indicants. The ecology
+$\Gamma^\mu$ supplies exactly this structure; **count and graph degree establish
+no warrant**.
 
-This sits inside **Decision 0010's three-sense apparatus** and does not replace
-it: dynamic orthability concerns whether lawful, evidence-sensitive correction-
-trajectories among **orthability-L** states (analysis-relative aptness,
-`Orthable(m; A)`) are *available* — a dynamic aspect of the **orthability-O**
-conditions of evaluability — as exercised through the created machinery of
-**orthability-R**. It adds a temporal/trajectory question to L/O/R; it introduces
-no new sense.
+## 6. Mental / external anti-reification
 
-It does **not** entail: guaranteed learnability; universal convergence; one
-scalar gradient (Decision 0025 adopts G1, not G2); that a created learner
-produces the underlying modal order (orthability-O is not created); or the
-metaphysical bridge to a personal Necessary Ground. OSM and DAEE are **worked explananda**, not proof:
+Latent states, noetic fields, orthemes, metaorthemes, and orthability are
+**formal / modelling / analysis objects**. Objectivity lies in the truth of the
+analysis-relative instantiation/placement relation constrained by concrete
+reality ($\operatorname{Inst}_A$, $O^*(m; A)$ once $A$ is fixed — Decision 0005),
+**not** in separately subsisting Platonic universals (Decision 0009 §6).
 
-- OSM: a learned representation does not create the task relations it comes to
-  encode (Decision 0024; external exemplification, not validation);
-- DAEE: a restorative runtime presupposes normative standards it attempts to
-  apply (Decision 0025; creed-internal where it names fiṭrah).
+## 7. Multi-target noetic orthing
 
-## 3. The metaphysical ladder (each rung is a separate premise)
+A discourse occurrence $m_{\text{disc}}$ is **evidence about** a possible subject
+target $m_{\text{subj}}$, never identical to it (Decision 0027). A deformation
+state-type, if placed, belongs to the subject under a declared analysis — never
+to the utterance because the utterance is observed. Every noetic claim names its
+target, evidence, scope, analysis, status, and non-claims; no operation
+manipulates a soul-state.
 
-```math
-\text{static evaluability} \to \text{dynamic correctability} \to \text{normative proper function} \to \text{irreducible teleology} \to \text{intellectual ground} \to \text{Will / Power / Wisdom} \to \text{capacity for disclosure} \to \text{revelation-specific Speech}
-```
+## 8. Dynamic orthability (candidate concept)
+
+The metaphysical companion treats **static** conditions of evaluability. Dynamic
+orthing raises the **dynamic** question: what must reality be like for error to be
+discoverable, distinctions learnable, correction trajectories possible, and
+governing standards revisable — **without truth being created by the learner**?
+
+This sits inside **Decision 0010's three-sense apparatus** (orthability-L/O/R) and
+adds a temporal/trajectory question; it introduces no new sense. **Candidate:**
+dynamic orthability is the analysis-relative availability of lawful, evidence-
+sensitive, correction-capable trajectories among unresolved, mistaken, and more
+adequate states of representation and action under a declared analysis $A$.
+
+### 8.1 Six modalities that must not collapse
+
+"Correction-capable trajectories are available" is ambiguous across (audit B18):
+
+1. **metaphysical possibility** — a correction trajectory exists in some possible world;
+2. **nomological possibility** — one exists under the actual laws;
+3. **reachability** — $m' \in \operatorname{Reach}_A(m, \Pi)$: some action reaches it;
+4. **actor accessibility** — $m' \in \operatorname{Accessible}_{A,\alpha,t}(m, H_t)$: *this* actor can reach it from its history;
+5. **discoverability** — it is findable under the available evidence;
+6. **learnability / convergence** — this representation class can learn it, and/or is guaranteed to converge.
+
+Dynamic orthability is at levels 1–3 (objective corrigibility); it must **not** be
+collapsed into 4–6 (agent-relative accessibility, learnability, convergence). It
+does **not** entail guaranteed learnability, universal convergence, one scalar
+gradient (Decision 0025 adopts G1, not G2), a created learner producing the modal
+order (orthability-O is not created), or the metaphysical bridge.
+
+## 9. Metaphysical argument map
+
+Each rung is a **separate premise**, with an inference type, an objection, and a
+rival exit. OSM and DAEE are **worked explananda / applications** at the lower
+levels, not proof of the upper bridge.
+
+| # | Rung | Inference | Objection / rival exit |
+|---|---|---|---|
+| 1 | static evaluability | analytic | deflationary metalanguage reply |
+| 2 | dynamic corrigibility | explanatory | corrigibility as brute regularity |
+| 3 | agent-accessible learnability | empirical/exemplary (OSM) | learnability ≠ objective corrigibility |
+| 4 | normative proper function | explanatory | naturalized teleosemantics (Millikan) |
+| 5 | irreducible teleology | anti-primitivist | primitivism about norms |
+| 6 | intellectual ground | transcendental | Platonism / structural realism |
+| 7 | necessary ground | metaphysical | modal primitivism |
+| 8 | Knowledge / Will / Power / Wisdom | metaphysical | impersonal ground |
+| 9 | capacity for disclosure | explanatory | silent ground |
+| 10 | revelation-specific divine Speech | creed-internal (Atharī) | school-internal dispute |
 
 Rungs 1–3 are what the static and dynamic Orthemology material addresses. Rungs
-4–8 each require **explicit bridge premises already identified in the companion
-papers**; OSM and DAEE are explananda for rungs 1–3 and do **not** prove rungs
-4–8. The move to a Necessary Mind, Will, Power, Wisdom, or divine Speech is
-therefore never carried by the learning/diagnosis material alone. Rung 8
-(revelation-specific Speech) is creed-internal (Atharī) and school-labeled.
+4–10 each require **explicit bridge premises already identified in the companion
+papers**; the learning/diagnosis material never carries them. Rung 10 is
+creed-internal (Atharī) and school-labeled.
 
-## 4. Anti-reification
+## 10. Theological / Atharī route
 
-Latent states, noetic fields, orthemes, metaorthemes, orthability, and the
-"linguistic possibility-space" are **formal / modelling / analysis objects**.
-Their use does **not** require treating them as independently subsisting Platonic
-universals. Objectivity remains in the truth of the analysis-relative
-instantiation/placement relation constrained by concrete reality
-($\operatorname{Inst}_A$, $O^*(m; A)$ once $A$ is fixed — Decision 0005), not in
-any reified entity.
+Rung 10 (revelation-specific Speech) is developed only in the Atharī companion
+(`orthability-divine-attributes-and-speech-athari.md`), under explicit
+school-labeled, revelational premises. The reason/revelation firewall (§8 of that
+companion) stands: no engineering or learning evidence supports any theological
+rung.
+
+## 11. Objections and rival exits
+
+- **"OSM proves normative proper function."** No — OSM empirically exemplifies
+  learning dynamics (rung 3); it does not establish rung 4. Reply: keep the
+  explanandum/proof distinction (row 3 vs 4).
+- **"DAEE's restorative norms prove their own ground."** No — DAEE *presupposes*
+  the norms it applies (epistemological circularity); it is a worked explanandum,
+  not a proof (Decision 0025; fixtures N5/N17).
+- **"Dynamic orthability entails a converging learner."** No — it is levels 1–3,
+  explicitly not 4–6.
+
+## 12. Limitations
+
+This is a placement, not a proof. The bridge premises (rungs 4–10) are argued
+elsewhere and remain conditional. Primary-text verification of the Taymiyyan loci
+is a standing queue. No empirical study validates any claim here.
+
+## 13. References
+
+- Sun, W., et al. (2025). *Learning produces an orthogonalized state machine in the hippocampus.* **Nature** 640. DOI 10.1038/s41586-024-08548-w (CC BY 4.0). <!-- ref:sun2025orthogonalized -->
+- El-Tobgui, C. S. (2013). *Reason, Revelation and the Reconstitution of Rationality: Ibn Taymiyya's Darʾ Taʿāruḍ al-ʿAql wa-l-Naql.* PhD dissertation, McGill University (secondary reconstruction). <!-- ref:eltobgui2013 -->
+- Turner, J. B. (2022). *Ibn Taymiyya on Theistic Signs and Knowledge of God.* **Religious Studies** 58 (secondary). <!-- ref:turner2022signs -->
+- Evans, C. S. (2010). *Natural Signs and Knowledge of God.* Oxford University Press (secondary; the "natural signs" lens). <!-- ref:evans2010signs -->
+- Companion papers: `orthability-and-the-ground-of-intelligibility.md`, `orthability-divine-attributes-and-speech-athari.md`; Decisions 0010, 0024, 0025, 0027, 0028.
 
 ## Cross-references (bounded)
 
-- Dynamic orthing / latent learning: `applications/latent-state-orthing/` (Decision 0024).
-- Meta-noetic memetics / corrective dynamics: `applications/daee-epistemics/META-NOETIC-MEMETICS-AND-DYNAMIC-ORTHING.md`, `SOUND-DESCENT-MODEL-COMPARISON.md` (Decision 0025).
-- Static orthability + the bridge premises: the two existing companions.
+Dynamic orthing / latent learning: `applications/latent-state-orthing/` (Decision
+0024). Meta-noetic memetics / corrective dynamics:
+`applications/daee-epistemics/` (Decision 0025). Multi-target noetic orthing:
+Decision 0027. Represented standards + ecology: Decision 0028.

@@ -66,6 +66,9 @@ DOCS = [
     ("notation-gallery",
      ["docs/notation-gallery.md"],
      "Orthemology Notation Gallery (R7B mathematical-typesetting pipeline, Decision 0023)"),
+    ("dynamic-orthing-noetic-learning-orthability-draft",
+     ["companion/dynamic-orthing-noetic-learning-and-orthability.md"],
+     "Dynamic Orthing, Noetic Learning, and Dynamic Orthability (R7C companion draft)"),
 ]
 
 STATUS_LINES = [

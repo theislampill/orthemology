@@ -29,6 +29,12 @@ documents:
   sources: [docs/notation-gallery.md]
   migrated: true
   expected_notdef: 0
+- pdf: dynamic-orthing-noetic-learning-orthability-draft
+  role: companion
+  sources: [companion/dynamic-orthing-noetic-learning-and-orthability.md]
+  migrated: true
+  expected_notdef: 0
+  note: "R7C Phase G companion, authored math-first ($...$); renders zero notdef"
 - pdf: orthemic-core-reference-draft
   role: corpus
   sources: [theory/orthemic-core-formalization.md, theory/orthemic-multi-actor-conflict-note.md]
