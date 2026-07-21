@@ -31,6 +31,54 @@ PRESERVED_SHA256 = {
     BACKLOG: "ea0cfac0e55629441885f782d4b807d61de7890515ed73510e4b07a7524c285a",
 }
 
+PROVENANCE_BOUNDARIES = (
+    {
+        "boundary_id": "R7E-PROV-B001-IDENTITY-COLLAPSE",
+        "status": "disallowed",
+        "assertion": (
+            "turn identity may equal orthing identity or session identity may equal "
+            "episode identity"
+        ),
+    },
+    {
+        "boundary_id": "R7E-PROV-B002-EPISODE-INDEPENDENCE",
+        "status": "disallowed",
+        "assertion": "episode IDs prove independent observations",
+    },
+    {
+        "boundary_id": "R7E-PROV-B003-RETROSPECTIVE-LIVE-CAPTURE",
+        "status": "disallowed",
+        "assertion": "retrospective reconstruction may be treated as live capture",
+    },
+    {
+        "boundary_id": "R7E-PROV-B004-EVIDENCE-BACKDATING",
+        "status": "disallowed",
+        "assertion": (
+            "current Sol evidence may be inserted into the original R7E t1 evidence state"
+        ),
+    },
+    {
+        "boundary_id": "R7E-PROV-B005-DEFECT-LOCUS-COLLAPSE",
+        "status": "disallowed",
+        "assertion": (
+            "a single sound/unsound field may replace defect-locus accounting"
+        ),
+    },
+    {
+        "boundary_id": "R7E-PROV-B006-UNCONTROLLED-RECURRENCE",
+        "status": "disallowed",
+        "assertion": (
+            "recurrence may be claimed without controlled fingerprint and distinct-source "
+            "accounting"
+        ),
+    },
+    {
+        "boundary_id": "R7E-PROV-B007-INFERRED-REJECTION",
+        "status": "disallowed",
+        "assertion": "missing rejection records or rationale may be inferred",
+    },
+)
+
 
 def source_rows(text: str) -> list[tuple[int, str]]:
     rows = []
@@ -239,21 +287,21 @@ class CandidateProvenanceTests(unittest.TestCase):
         ):
             self.assertIn(phrase, text)
 
-    def test_later_crosswalk_unknowns_are_not_laundered_into_r7e_provenance(self):
-        provenance_text = json.dumps(self.provenance, ensure_ascii=False)
-        audit_text = AUDIT.read_text(encoding="utf-8")
-        for phrase in (
-            "session identity is not episode identity",
-            "Episode IDs do not prove independent observations",
-            "Retrospective reconstruction is not live capture",
-            "No missing rejection record is inferred",
-            "Current Sol evidence is not inserted into the original R7E t1 evidence state",
-            "No single sound/unsound field replaces defect-locus accounting",
-            "No recurrence is claimed without a controlled fingerprint",
-        ):
-            with self.subTest(phrase=phrase):
-                self.assertIn(phrase, provenance_text)
-                self.assertIn(phrase, audit_text)
+    def test_all_seven_provenance_boundary_reversals_are_rejected(self):
+        for boundary in PROVENANCE_BOUNDARIES:
+            mutation = copy.deepcopy(self.provenance)
+            mutation["provenance_boundaries"] = copy.deepcopy(PROVENANCE_BOUNDARIES)
+            row = next(
+                item
+                for item in mutation["provenance_boundaries"]
+                if item["boundary_id"] == boundary["boundary_id"]
+            )
+            row["status"] = "allowed"
+            with self.subTest(boundary_id=boundary["boundary_id"]):
+                self.assertRejected(
+                    provenance=mutation,
+                    fragment=boundary["boundary_id"],
+                )
 
 
 if __name__ == "__main__":

@@ -10,7 +10,7 @@ from pathlib import Path
 
 ROOT = Path(__file__).resolve().parents[1]
 VALIDATOR = ROOT / "scripts" / "validate_internal_references.py"
-PLANNED_PATH = "docs/project-closure/" + "r7e-sol/ORTHING-CANDIDATE-LEDGER.json"
+PLANNED_PATH = "docs/decisions/" + "0035-somnic-orthing-and-activation-contracts.md"
 PLAN = ROOT / "docs" / "superpowers" / "plans" / "2026-07-21-r7e-sol-independent-repair.md"
 
 

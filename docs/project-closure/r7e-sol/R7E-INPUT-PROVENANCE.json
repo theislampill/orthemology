@@ -86,14 +86,44 @@
     "missing_artifact_ids": ["workflow-journal", "per-agent-reports", "full-candidate-drafts"],
     "unresolved_attachment_bindings": ["rebake-attachment", "maximaltrajectory-attachment"]
   },
+  "provenance_boundaries": [
+    {
+      "boundary_id": "R7E-PROV-B001-IDENTITY-COLLAPSE",
+      "status": "disallowed",
+      "assertion": "turn identity may equal orthing identity or session identity may equal episode identity"
+    },
+    {
+      "boundary_id": "R7E-PROV-B002-EPISODE-INDEPENDENCE",
+      "status": "disallowed",
+      "assertion": "episode IDs prove independent observations"
+    },
+    {
+      "boundary_id": "R7E-PROV-B003-RETROSPECTIVE-LIVE-CAPTURE",
+      "status": "disallowed",
+      "assertion": "retrospective reconstruction may be treated as live capture"
+    },
+    {
+      "boundary_id": "R7E-PROV-B004-EVIDENCE-BACKDATING",
+      "status": "disallowed",
+      "assertion": "current Sol evidence may be inserted into the original R7E t1 evidence state"
+    },
+    {
+      "boundary_id": "R7E-PROV-B005-DEFECT-LOCUS-COLLAPSE",
+      "status": "disallowed",
+      "assertion": "a single sound/unsound field may replace defect-locus accounting"
+    },
+    {
+      "boundary_id": "R7E-PROV-B006-UNCONTROLLED-RECURRENCE",
+      "status": "disallowed",
+      "assertion": "recurrence may be claimed without controlled fingerprint and distinct-source accounting"
+    },
+    {
+      "boundary_id": "R7E-PROV-B007-INFERRED-REJECTION",
+      "status": "disallowed",
+      "assertion": "missing rejection records or rationale may be inferred"
+    }
+  ],
   "non_claims": [
-    "Turn identity is not orthing identity, and session identity is not episode identity.",
-    "Episode IDs do not prove independent observations.",
-    "Retrospective reconstruction is not live capture.",
-    "No missing rejection record is inferred.",
-    "Current Sol evidence is not inserted into the original R7E t1 evidence state.",
-    "No single sound/unsound field replaces defect-locus accounting.",
-    "No recurrence is claimed without a controlled fingerprint or distinct-source accounting.",
     "A candidate survivor row is not source verification, correctness, approval, or merge readiness.",
     "Agent-generated prose is not scholarship.",
     "Attachment observation does not bind an attachment to the original R7E run.",

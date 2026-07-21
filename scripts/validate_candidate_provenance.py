@@ -6,8 +6,6 @@ validator requires a one-to-one immutable mapping of every parseable survivor
 row while preventing implementing-run attributions, truncated text, missing
 artifacts, or observed attachments from being promoted into verification.
 """
-from __future__ import annotations
-
 import json
 import re
 import sys
@@ -37,6 +35,31 @@ MISSING_ARTIFACT_IDS = {
     "full-candidate-drafts",
 }
 ATTACHMENT_IDS = {"rebake-attachment", "maximaltrajectory-attachment"}
+EXPECTED_PROVENANCE_BOUNDARIES = {
+    "R7E-PROV-B001-IDENTITY-COLLAPSE": (
+        "turn identity may equal orthing identity or session identity may equal "
+        "episode identity"
+    ),
+    "R7E-PROV-B002-EPISODE-INDEPENDENCE": (
+        "episode IDs prove independent observations"
+    ),
+    "R7E-PROV-B003-RETROSPECTIVE-LIVE-CAPTURE": (
+        "retrospective reconstruction may be treated as live capture"
+    ),
+    "R7E-PROV-B004-EVIDENCE-BACKDATING": (
+        "current Sol evidence may be inserted into the original R7E t1 evidence state"
+    ),
+    "R7E-PROV-B005-DEFECT-LOCUS-COLLAPSE": (
+        "a single sound/unsound field may replace defect-locus accounting"
+    ),
+    "R7E-PROV-B006-UNCONTROLLED-RECURRENCE": (
+        "recurrence may be claimed without controlled fingerprint and distinct-source "
+        "accounting"
+    ),
+    "R7E-PROV-B007-INFERRED-REJECTION": (
+        "missing rejection records or rationale may be inferred"
+    ),
+}
 
 
 def parse_legacy_rows(text: str) -> list[dict[str, object]]:
@@ -178,6 +201,33 @@ def _provenance_issues(provenance: object, rejection_count: int) -> list[str]:
     if set(ids) != EXPECTED_ARTIFACT_IDS or len(ids) != len(set(ids)):
         issues.append("provenance artifact inventory is incomplete or duplicated")
     by_id = {str(row.get("artifact_id")): row for row in artifact_rows}
+
+    boundaries = provenance.get("provenance_boundaries")
+    if not isinstance(boundaries, list):
+        issues.append("provenance boundaries must be an array")
+    else:
+        boundary_rows = [row for row in boundaries if isinstance(row, dict)]
+        if len(boundary_rows) != len(boundaries):
+            issues.append("provenance boundaries contain a non-object row")
+        boundary_ids = [str(row.get("boundary_id")) for row in boundary_rows]
+        if (
+            set(boundary_ids) != set(EXPECTED_PROVENANCE_BOUNDARIES)
+            or len(boundary_ids) != len(set(boundary_ids))
+        ):
+            issues.append("provenance boundary inventory is incomplete, duplicated, or expanded")
+        boundaries_by_id = {
+            str(row.get("boundary_id")): row for row in boundary_rows
+        }
+        for boundary_id, assertion in EXPECTED_PROVENANCE_BOUNDARIES.items():
+            row = boundaries_by_id.get(boundary_id, {})
+            if (
+                set(row) != {"boundary_id", "status", "assertion"}
+                or row.get("status") != "disallowed"
+                or row.get("assertion") != assertion
+            ):
+                issues.append(
+                    "%s provenance boundary must remain exact and disallowed" % boundary_id
+                )
 
     for artifact_id in MISSING_ARTIFACT_IDS:
         row = by_id.get(artifact_id, {})
