@@ -46,7 +46,7 @@ def corpus_files():
 
 def text_files(corpus=None):
     for path in corpus if corpus is not None else corpus_files():
-        if path.endswith((".md", ".patch", ".json", ".py", ".yml", ".cff", ".txt",
+        if path.endswith((".md", ".patch", ".json", ".py", ".yml", ".yaml", ".cff", ".txt",
                           ".gitignore", ".gitattributes", ".editorconfig", ".sha256")):
             yield path
 

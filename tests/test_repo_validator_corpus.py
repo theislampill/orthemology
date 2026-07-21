@@ -76,6 +76,19 @@ class RepoValidatorCorpusTests(unittest.TestCase):
         self.assertIn(mutation.name, output)
         self.assertIn("absolute workspace path", output)
 
+    def test_nonignored_prospective_yaml_banned_path_is_rejected(self):
+        mutation = ROOT / "docs" / "repo-validator-banned-path-mutation.yaml"
+        banned = "C:" + "\\work" + "space\\private\\evidence.md"
+        mutation.write_text(f"private_path: '{banned}'\n", encoding="utf-8")
+        try:
+            result = run_validator()
+        finally:
+            mutation.unlink(missing_ok=True)
+        output = result.stdout + result.stderr
+        self.assertEqual(1, result.returncode, output)
+        self.assertIn(mutation.name, output)
+        self.assertIn("absolute workspace path", output)
+
     def test_ignored_control_reports_do_not_fail_repo_validation(self):
         result = run_validator()
         output = result.stdout + result.stderr
