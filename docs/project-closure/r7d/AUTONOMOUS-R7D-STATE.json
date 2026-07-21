@@ -53,6 +53,13 @@
       "result": "B1/P1 fixed: authoritative overlay docs/current-candidate-state.yaml names the full PR chain incl PR #10 head 3cce235 + companion PDF; validate_candidate_state hardened to fail on a stale overlay (probe: stale head -> CAUGHT). B2: current-candidate status; r7/r7b/r7c/r7d reclassified. B3: README/STATUS/CONTRIBUTING readiness prose made exact per-packet; validate_public_readiness.py bans scalar 'all READY TO RUN' (probe CAUGHT). B4: 'check consistency' -> bounded-conformance language. B5/B38: validate_decision_references.py + fixed companion Inst_A/O*(m;A) miscite 0005->0001 (probe CAUGHT). Companion PDF rebuilt (only that PDF changed; byte-equal).",
       "suite": "51/51 green (49 + validate_public_readiness + validate_decision_references); manifest clean; 6 PDFs byte-equal",
       "next_action": "Phase C evidence-bound multi-target noetic claims (Decision 0030)"
+    },
+    {
+      "phase": "C (evidence-bound multi-target noetic claims, Decision 0030)",
+      "status": "complete",
+      "result": "Closes P2/P3/B10/B11. NoeticClaim schema (6 bearers incl m_reasoning_episode; 10 target types incl the overt-avowal/inferred-profile/motive split); NOETIC-EVIDENCE-REGISTRY (typed evidence: property class, provenance, scope, currentness, validity, relation-to-target); validate_noetic_claims.py support gate — target must exist+in-scope before asserted; subject-interior type never on m_discourse; evidence_ids must resolve (non-claims never count); motive/soul-state never asserted; asserted inferred interior needs >=2 evidence + bridge (thin -> held); avowed-commitment assertable on public wording; NC1-NC10 fixtures. The exact P3 breach (asserted m_subject, 'no evidence', disclaimer) = NC2 -> CAUGHT (subject-asserted-thin).",
+      "suite": "52/52 green; manifest clean; 6 PDFs byte-equal",
+      "next_action": "Phase D represented-standard relations + carrier stance (Decision 0031)"
     }
   ],
   "no_merge_statement": "R7D is an Opus CANDIDATE on a draft child PR based on PR #10. It has not been merged into PR #10, PR #9, PR #8, or main. A fresh Fable session must review every hunk, verify the sources, formal semantics, mathematics, PDF rendering, and candidate state, and perform any protected merges."

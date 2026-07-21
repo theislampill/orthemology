@@ -1,0 +1,31 @@
+{
+  "$schema": "http://json-schema.org/draft-07/schema#",
+  "$id": "orthemology-noetic-evidence-registry-v1",
+  "title": "Noetic evidence registry (R7D, Decision 0030)",
+  "description": "Typed evidence records that a NoeticClaim's evidence_ids must resolve to. A non-claim (e.g. 'no soul access') is NOT an evidence record and can never appear here as support (audit B10).",
+  "type": "object",
+  "additionalProperties": false,
+  "required": ["schema", "evidence"],
+  "properties": {
+    "schema": {"const": "orthemology-noetic-evidence-registry-v1"},
+    "note": {"type": "string"},
+    "evidence": {
+      "type": "array",
+      "items": {
+        "type": "object",
+        "additionalProperties": false,
+        "required": ["evidence_id", "observed_occurrence", "property_class", "provenance", "scope", "currentness", "validity", "relation_to_target"],
+        "properties": {
+          "evidence_id": {"type": "string", "minLength": 1},
+          "observed_occurrence": {"type": "string", "minLength": 1, "description": "which observed occurrence this evidence comes from (normally m_discourse / m_runtime / m_response)"},
+          "property_class": {"enum": ["structural", "behavioral", "provenance"]},
+          "provenance": {"type": "string", "minLength": 1},
+          "scope": {"type": "string", "minLength": 1},
+          "currentness": {"enum": ["current", "dated", "stale", "unknown"]},
+          "validity": {"enum": ["valid", "provisional", "disputed", "withdrawn"]},
+          "relation_to_target": {"type": "string", "minLength": 1, "description": "how this evidence bears on the target claim; must NOT assert direct interior access"}
+        }
+      }
+    }
+  }
+}

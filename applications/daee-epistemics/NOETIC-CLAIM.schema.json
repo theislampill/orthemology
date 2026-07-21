@@ -1,0 +1,73 @@
+{
+  "$schema": "http://json-schema.org/draft-07/schema#",
+  "$id": "orthemology-noetic-claim-v1",
+  "title": "Evidence-bound multi-target noetic claim (R7D, Decision 0030)",
+  "description": "A NoeticClaim binds a claim to a typed target with resolvable evidence, a support rule, uncertainty, candidate alternatives, defeaters, and non-claims. Subject-interior targets are distinguished (audit B11); motive/culpability/soul-state is normally held or out of scope. Semantics are enforced by scripts/validate_noetic_claims.py; the schema is the structural floor.",
+  "type": "object",
+  "additionalProperties": false,
+  "required": ["schema", "claims"],
+  "properties": {
+    "schema": {"const": "orthemology-noetic-claim-v1"},
+    "note": {"type": "string"},
+    "claims": {
+      "type": "array",
+      "items": {
+        "type": "object",
+        "additionalProperties": false,
+        "required": ["claim_id", "target_bearer", "target_id", "target_version", "target_type", "analysis_id", "analysis_version", "proposition", "candidate_alternatives", "evidence_ids", "support_rule", "uncertainty", "status", "defeaters", "non_claims"],
+        "properties": {
+          "claim_id": {"type": "string", "minLength": 1},
+          "target_bearer": {"enum": ["m_discourse", "m_subject", "m_reasoning_episode", "m_runtime", "m_response", "m_uptake"]},
+          "target_id": {"type": "string", "minLength": 1},
+          "target_version": {"type": "string", "minLength": 1},
+          "target_type": {
+            "enum": [
+              "overt-discourse",
+              "avowed-commitment",
+              "reasoning-episode",
+              "represented-standard",
+              "inferred-noetic-profile",
+              "faculty-disposition",
+              "motive-culpability-soul-state",
+              "runtime-closure",
+              "route-quality",
+              "uptake"
+            ]
+          },
+          "analysis_id": {"type": "string", "minLength": 1},
+          "analysis_version": {"type": "string", "minLength": 1},
+          "proposition": {"type": "string", "minLength": 1},
+          "candidate_alternatives": {"type": "array", "items": {"type": "string"}},
+          "evidence_ids": {"type": "array", "items": {"type": "string"}},
+          "bridges": {
+            "type": "array",
+            "items": {
+              "type": "object",
+              "additionalProperties": false,
+              "required": ["evidence_id", "observed_from", "about", "establishes_truth"],
+              "properties": {
+                "evidence_id": {"type": "string"},
+                "observed_from": {"type": "string"},
+                "about": {"type": "string"},
+                "establishes_truth": {"const": false}
+              }
+            }
+          },
+          "support_rule": {"type": "string", "minLength": 1},
+          "uncertainty": {
+            "type": "object",
+            "additionalProperties": false,
+            "required": ["level", "basis"],
+            "properties": {
+              "level": {"enum": ["low", "medium", "high", "underdetermined"]},
+              "basis": {"type": "string", "minLength": 1}
+            }
+          },
+          "status": {"enum": ["asserted", "held", "underdetermined", "rejected", "out-of-scope"]},
+          "defeaters": {"type": "array", "items": {"type": "string"}},
+          "non_claims": {"type": "array", "items": {"type": "string"}, "minItems": 1}
+        }
+      }
+    }
+  }
+}
