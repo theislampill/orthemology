@@ -6,13 +6,63 @@ stream and emits Typst markup. STRICT: any token type without an explicit
 handler raises ConversionError — content is never silently dropped
 (the R2 pipeline's silent line-skip defect is structurally impossible here).
 """
+import os
 import re
+import sys
 
 from markdown_it import MarkdownIt
+
+# sibling import works regardless of caller (build_pdfs, validators, direct run)
+sys.path.insert(0, os.path.dirname(os.path.abspath(__file__)))
+from latex_to_typst_math import translate_inline, translate_display, MathConvertError
 
 
 class ConversionError(Exception):
     pass
+
+
+# R7B math pipeline (Decision 0023): canonical source carries mathematics in
+# GitHub-compatible LaTeX ($...$, $$...$$, ```math fences). markdown-it-py does
+# not tokenize `$`, so `$...$`/`$$...$$` are PROTECTED into placeholders before
+# parsing and expanded to Typst math in the text renderer; ```math fences are
+# handled as a block token. Backtick code is unchanged: identifiers/paths stay
+# monospace `#raw`. See docs/project-closure/r7b/R7B-PDF-MATH-BASELINE.md.
+_MATH = []  # per-convert store of (kind, latex); reset at the top of convert()
+_PH_OPEN, _PH_CLOSE = "", ""
+_PH_RE = re.compile(_PH_OPEN + r"(\d+)" + _PH_CLOSE)
+_DISPLAY_RE = re.compile(r"\$\$(.+?)\$\$", re.S)
+_INLINE_RE = re.compile(r"\$([^\$\n]+?)\$")
+
+
+def _protect_math(md_text):
+    """Replace $$...$$ and $...$ with placeholder sentinels markdown-it passes
+    through verbatim; record the LaTeX bodies in _MATH by index."""
+    def repl(kind):
+        def f(m):
+            _MATH.append((kind, m.group(1)))
+            return _PH_OPEN + str(len(_MATH) - 1) + _PH_CLOSE
+        return f
+    md_text = _DISPLAY_RE.sub(repl("display"), md_text)
+    md_text = _INLINE_RE.sub(repl("inline"), md_text)
+    return md_text
+
+
+def _expand_math(text):
+    """Expand math placeholders inside a text token; escape the rest as usual."""
+    out, last = [], 0
+    for m in _PH_RE.finditer(text):
+        out.append(esc(text[last:m.start()]))
+        kind, latex = _MATH[int(m.group(1))]
+        try:
+            if kind == "display":
+                out.append("$ " + translate_display(latex) + " $")
+            else:
+                out.append("$" + translate_inline(latex) + "$")
+        except MathConvertError as e:
+            raise ConversionError("math translation failed for %r: %s" % (latex, e))
+        last = m.end()
+    out.append(esc(text[last:]))
+    return "".join(out)
 
 
 # characters with markup meaning in Typst text context
@@ -34,7 +84,7 @@ def _inline(tokens):
     out = []
     for t in tokens:
         if t.type == "text":
-            out.append(esc(t.content))
+            out.append(_expand_math(t.content))
         elif t.type == "code_inline":
             out.append("#raw(" + _typst_str(t.content) + ")")
         elif t.type == "strong_open":
@@ -82,6 +132,9 @@ def _typst_str(s):
 
 
 def convert(md_text):
+    global _MATH
+    _MATH = []
+    md_text = _protect_math(md_text)
     md = MarkdownIt("commonmark").enable("table").enable("strikethrough")
     tokens = md.parse(md_text)
     out = []
@@ -132,7 +185,14 @@ def convert(md_text):
             i += 1
             continue
         if ty == "fence" or ty == "code_block":
-            out.append("\n#raw(block: true, " + _typst_str(t.content.rstrip("\n")) + ")\n")
+            info = (getattr(t, "info", "") or "").strip()
+            if info == "math":
+                try:
+                    out.append("\n$ " + translate_display(t.content.rstrip("\n")) + " $\n")
+                except MathConvertError as e:
+                    raise ConversionError("math fence translation failed: %s" % e)
+            else:
+                out.append("\n#raw(block: true, " + _typst_str(t.content.rstrip("\n")) + ")\n")
             i += 1
             continue
         if ty == "hr":

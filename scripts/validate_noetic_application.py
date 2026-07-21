@@ -21,7 +21,7 @@ except ImportError as e:
 
 ROOT = os.path.dirname(os.path.dirname(os.path.abspath(__file__)))
 FAILS = []
-WANT = {"N%d" % i for i in range(1, 11)}
+WANT = {"N%d" % i for i in range(1, 21)}  # R7B extended N1..N10 -> N1..N20 (Decision 0025)
 
 
 def check(name, ok, detail=""):
@@ -37,7 +37,7 @@ def read(rel):
 def main():
     doc = yaml.safe_load(read("tests/noetic-application-fixtures.yaml"))
     fx = {f["id"]: f for f in doc["fixtures"]}
-    check("all ten fixtures N1..N10 present", set(fx) == WANT, str(sorted(set(fx) ^ WANT)))
+    check("all twenty fixtures N1..N20 present", set(fx) == WANT, str(sorted(set(fx) ^ WANT)))
     check("the no-soul-access invariant is declared", "no_soul_access_invariant" in doc)
 
     for fid, f in sorted(fx.items()):

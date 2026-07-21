@@ -18,7 +18,15 @@ external_paths:
     which cites more foreign daee paths (pinned commit c86b3c66...). These are that
     repository's paths under its atomics/skill/references/ tree; the internal-reference
     regex extracts the references/... tail, which cannot and should not resolve locally.
+  note_r7b: >-
+    R7B (Decisions 0024/0025) cites more daee-repository files by their real daee-internal
+    paths at the same pinned commit c86b3c66... — the algebraic-notation formalism doc and
+    the field-gradient/loop-closure implementation audit. These live under the daee repo's
+    docs/ tree, not this one; the internal-reference regex extracts the docs/... path, which
+    cannot and should not resolve locally. They do not shadow any local path.
   paths:
+  - docs/algebraic-notation-and-noetic-formalism.md
+  - docs/audits/v0.4.1.0-field-gradient-loop-closure-coupling-implementation-audit.md
   - references/diagnostics/diagnostic-ir.md
   - references/diagnostics/recursive-state-transitions.md
   - references/rubrics/diagnostic-render-contract.md

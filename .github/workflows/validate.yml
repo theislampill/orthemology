@@ -76,6 +76,18 @@ jobs:
         run: python scripts/validate_noetic_application.py
       - name: Experiment methods / READY_TO_RUN gate (R7, Decision 0022)
         run: python scripts/validate_experiment_methods.py
+      - name: Math source discipline + notation-gallery drift (R7B, Decision 0023)
+        run: python scripts/validate_math_source.py
+      - name: Math pipeline unit tests (R7B, Decision 0023)
+        run: python tests/test_math_pipeline.py
+      - name: PDF math-glyph regression gate (R7B, Decision 0023)
+        run: python scripts/validate_pdf_math.py
+      - name: Dynamic orthing / latent-state learning (R7B, Decision 0024)
+        run: python scripts/validate_dynamic_orthing.py
+      - name: Meta-noetic memetics + sound descent adjudication (R7B, Decision 0025)
+        run: python scripts/validate_meta_noetic_memetics.py
+      - name: Project layer map + firewall (R7B, Phase H)
+        run: python scripts/validate_layer_map.py
       - name: FCSP-2 packet smoke tests (deterministic; no result)
         run: python experiments/false-closure-selective-prediction-v2/tests/test_smoke.py
       - name: ER-2 packet smoke tests (deterministic; no result)
