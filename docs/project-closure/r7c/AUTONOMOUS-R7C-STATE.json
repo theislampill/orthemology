@@ -19,7 +19,13 @@
     "pr9_head_verified_live": "86b8bbdddf35ac1e45748279bac05e5a2d4ed85e (draft, open, CI success)",
     "grandchild_branch": "candidate/r7c-full-math-multitarget-noetic-dynamics",
     "grandchild_base": "candidate/r7b-deep-noetic-latent-math (the PR #9 branch, NOT main)",
-    "grandchild_head": "set-after-commits"
+    "grandchild_head": "4bc3a0ed07b7... (substantive R7C head; the pointer-finalize commit is +1)",
+    "grandchild_pr": 10,
+    "grandchild_pr_url": "https://github.com/theislampill/orthemology/pull/10",
+    "grandchild_pr_base": "candidate/r7b-deep-noetic-latent-math (the PR #9 branch, NOT main)",
+    "merged": false,
+    "ci": "success on the grandchild head",
+    "next_action": "AWAIT fresh-Fable / owner review of PR #10 (every hunk + sources + formal semantics + math + PDFs), then protected merges (grandchild -> PR #9 -> PR #8 -> main). This Opus session merges nothing and promotes no candidate decision."
   },
   "input_archive": {"name": "orthemology-candidate-r7b-deep-noetic-latent-math.zip", "expected_sha256": "c1aacbc631d400527bcd9b533035e74dc223f50ae19d4abd73a955463eccbfbe", "note": "convenience snapshot; local working tree at 86b8bbd verified == live PR #9 head"},
   "pinned_daee_commit": "c86b3c6673147b8802fe222373a165a37d4d24a8 (kept; local daee HEAD is 112 commits ahead — delta adoption DEFERRED per A3)",
