@@ -77,9 +77,9 @@ authored:
     pdfs: reproducibly built and visually inspected draft artifacts
     legal_publication: open on license, identity, peer review, and external submission
 derived:
-  source_tree_digest: ebf0427c96121598c9fd991cd1ed2c7d8752260931fbf1b4dc6fb41278b9c63a
+  source_tree_digest: c75aa1a81bf465674edf6bb12153b3f15e50c8e659a51cd4320676a8b75496d5
   source_tree_digest_policy: docs/project-state-inputs.yaml
-  tracked_files: 616
+  tracked_files: 620
   decision_ids:
   - '0001'
   - '0002'
@@ -123,7 +123,9 @@ derived:
   - candidate-overlay.schema.json
   - candidate-topology.schema.json
   - claim-ledger.schema.json
+  - collective-somnus-transclusion-profile.schema.json
   - handoff.schema.json
+  - hermes-writeback-adoption-profile.schema.json
   - meta-orthability-assessment.schema.json
   - metaortheme.schema.json
   - metaorthemma.schema.json
@@ -135,9 +137,11 @@ derived:
   - reliability-spec.schema.json
   - residual-recurrence-report.schema.json
   - somnic-assessment.schema.json
+  - somnus-claim-status.schema.json
+  - somnus-record-fixtures.schema.json
   - somnus-run.schema.json
   - verdict-record.schema.json
-  schema_count: 19
+  schema_count: 23
   example_json_count: 9
   example_markdown_count: 2
   validator_scripts:

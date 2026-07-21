@@ -5,6 +5,17 @@ implemented in orthemology: "no"
 automatic adoption: prohibited
 automatic execution: prohibited
 automatic writeback: prohibited
+claim_status:
+  claim_status_id: somnus-claim-boundaries-v1
+  empirical_validation: {status: not-established, owner: future empirical study, evidence_basis: no empirical study was run}
+  performance: {status: not-established, owner: future comparative evaluation, evidence_basis: no matched workflow comparison was run}
+  learning: {status: not-established, owner: future governed outcome study, evidence_basis: no modification and later-outcome loop was executed}
+  generalization: {status: not-established, owner: future cross-model and cross-domain study, evidence_basis: fixtures do not establish transfer}
+  internal_ontology: {status: not-established, owner: future interpretability inquiry, evidence_basis: records do not expose an actor interior state}
+  terminology_utility: {status: not-established, owner: terminology benchmark, evidence_basis: terminology benchmark was not run}
+  terminology_adoption: {status: not-established, owner: human terminology review, evidence_basis: no term was adopted}
+  runtime: {status: not-implemented, owner: external downstream runtime owner, evidence_basis: this repository contains schemas fixtures and offline validation only}
+  collective_execution: {status: not-implemented, owner: external collective runtime owner, evidence_basis: no network transport council or shared service exists}
 modes:
 - {mode_id: C1, name: independent-type-convergent-orthing, information_path: none-during-discovery, coordination: none-required}
 - {mode_id: C2, name: federated-transclusive-orthing, information_path: provenance-preserving-transclusion, coordination: recipient-locally-re-orths}
@@ -43,7 +54,10 @@ semantic_boundaries:
   nar_or_field_witness_similarity_proves_identity: false
   source_execution_closure_proves_recipient_uptake: false
   exported_record_is_direct_soul_access: false
+  multi_operator_recurrence_proves_independence: false
   multi_operator_recurrence_proves_tawatur: false
+  multi_operator_recurrence_proves_truth: false
+  multi_operator_recurrence_supplies_authorization: false
 non_claims:
 - no collective network, transport, shared-memory service, distributed learning, independent testimony, or civilisational result is implemented or demonstrated
 - a parsed packet is not proof of semantic identity, local applicability, authorization, or uptake

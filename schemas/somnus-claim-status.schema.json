@@ -1,0 +1,55 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "$id": "orthemology/somnus-claim-status.schema.json",
+  "title": "Bounded Somnus claim-status owner",
+  "type": "object",
+  "additionalProperties": false,
+  "required": [
+    "claim_status_id",
+    "empirical_validation",
+    "performance",
+    "learning",
+    "generalization",
+    "internal_ontology",
+    "terminology_utility",
+    "terminology_adoption",
+    "runtime",
+    "collective_execution"
+  ],
+  "properties": {
+    "claim_status_id": {"const": "somnus-claim-boundaries-v1"},
+    "empirical_validation": {"$ref": "#/$defs/not_established"},
+    "performance": {"$ref": "#/$defs/not_established"},
+    "learning": {"$ref": "#/$defs/not_established"},
+    "generalization": {"$ref": "#/$defs/not_established"},
+    "internal_ontology": {"$ref": "#/$defs/not_established"},
+    "terminology_utility": {"$ref": "#/$defs/not_established"},
+    "terminology_adoption": {"$ref": "#/$defs/not_established"},
+    "runtime": {"$ref": "#/$defs/not_implemented"},
+    "collective_execution": {"$ref": "#/$defs/not_implemented"}
+  },
+  "$defs": {
+    "base": {
+      "type": "object",
+      "additionalProperties": false,
+      "required": ["status", "owner", "evidence_basis"],
+      "properties": {
+        "status": {"type": "string"},
+        "owner": {"type": "string", "minLength": 1},
+        "evidence_basis": {"type": "string", "minLength": 1}
+      }
+    },
+    "not_established": {
+      "allOf": [
+        {"$ref": "#/$defs/base"},
+        {"properties": {"status": {"const": "not-established"}}}
+      ]
+    },
+    "not_implemented": {
+      "allOf": [
+        {"$ref": "#/$defs/base"},
+        {"properties": {"status": {"const": "not-implemented"}}}
+      ]
+    }
+  }
+}

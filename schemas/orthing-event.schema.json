@@ -4,9 +4,21 @@
   "title": "Append-only orthing checkpoint event",
   "type": "object",
   "additionalProperties": false,
-  "required": ["event_id", "session_id", "episode_id", "occurrence_id", "orthing_id", "event_type", "occurred_at", "actor_id", "capture_mode", "source_revision", "governing_versions", "evidence_timing", "append_only"],
+  "required": ["event_id", "sequence", "session_id", "episode_id", "occurrence_id", "orthing_id", "event_type", "occurred_at", "actor_id", "capture_mode", "source_revision", "privacy_source_disposition", "governing_versions", "evidence_timing", "append_only"],
+  "allOf": [
+    {
+      "if": {"properties": {"event_type": {"const": "orthability_assessed"}}, "required": ["event_type"]},
+      "then": {
+        "properties": {
+          "claim_attempt_id": {"type": "string", "minLength": 1},
+          "orthability_assessment_id": {"type": "string", "minLength": 1}
+        }
+      }
+    }
+  ],
   "properties": {
     "event_id": {"type": "string", "minLength": 1},
+    "sequence": {"type": "integer", "minimum": 1},
     "session_id": {"type": "string", "minLength": 1},
     "episode_id": {"type": "string", "minLength": 1},
     "occurrence_id": {"type": "string", "minLength": 1},
@@ -19,6 +31,15 @@
     "capture_mode": {"enum": ["live_capture", "retrospective_reconstruction", "bootstrap_provenance", "unknown"]},
     "source_case": {"type": "string", "minLength": 1},
     "source_revision": {"type": "string", "minLength": 1},
+    "privacy_source_disposition": {
+      "type": "object", "additionalProperties": false,
+      "required": ["privacy_scope_applied", "source_scope_applied", "minimal_capture_precedes_claiming"],
+      "properties": {
+        "privacy_scope_applied": {"const": true},
+        "source_scope_applied": {"const": true},
+        "minimal_capture_precedes_claiming": {"const": true}
+      }
+    },
     "governing_versions": {
       "type": "object", "additionalProperties": false,
       "required": ["analysis", "activation_contract", "orthability_evaluator", "selector"],

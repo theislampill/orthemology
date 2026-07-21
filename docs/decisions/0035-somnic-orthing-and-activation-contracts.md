@@ -17,6 +17,21 @@ merged: false
 ```
 <!-- decision-candidate-boundary:end -->
 
+<!-- somnus-claim-status:start -->
+```yaml
+claim_status_id: somnus-claim-boundaries-v1
+empirical_validation: {status: not-established, owner: future empirical study, evidence_basis: no empirical study was run}
+performance: {status: not-established, owner: future comparative evaluation, evidence_basis: no matched workflow comparison was run}
+learning: {status: not-established, owner: future governed outcome study, evidence_basis: no modification and later-outcome loop was executed}
+generalization: {status: not-established, owner: future cross-model and cross-domain study, evidence_basis: fixtures do not establish transfer}
+internal_ontology: {status: not-established, owner: future interpretability inquiry, evidence_basis: records do not expose an actor interior state}
+terminology_utility: {status: not-established, owner: terminology benchmark, evidence_basis: terminology benchmark was not run}
+terminology_adoption: {status: not-established, owner: human terminology review, evidence_basis: no term was adopted}
+runtime: {status: not-implemented, owner: external downstream runtime owner, evidence_basis: this repository contains schemas fixtures and offline validation only}
+collective_execution: {status: not-implemented, owner: external collective runtime owner, evidence_basis: no network transport council or shared service exists}
+```
+<!-- somnus-claim-status:end -->
+
 ## Decision
 
 > **Waking orths experience.<br>

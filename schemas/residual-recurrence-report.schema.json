@@ -26,9 +26,9 @@
       "type": "array", "minItems": 1,
       "items": {
         "type": "object", "additionalProperties": false,
-        "required": ["orthing_id", "episode_id", "session_id", "normalized_input_family", "actor_id", "source_family"],
+        "required": ["orthing_id", "episode_id", "session_id", "normalized_input_family", "actor_id", "source_family", "occurred_at"],
         "properties": {
-          "orthing_id": {"type": "string", "minLength": 1}, "episode_id": {"type": "string", "minLength": 1}, "session_id": {"type": "string", "minLength": 1}, "normalized_input_family": {"type": "string", "minLength": 1}, "actor_id": {"type": "string", "minLength": 1}, "source_family": {"type": "string", "minLength": 1}
+          "orthing_id": {"type": "string", "minLength": 1}, "episode_id": {"type": "string", "minLength": 1}, "session_id": {"type": "string", "minLength": 1}, "normalized_input_family": {"type": "string", "minLength": 1}, "actor_id": {"type": "string", "minLength": 1}, "source_family": {"type": "string", "minLength": 1}, "occurred_at": {"type": "string", "format": "date-time"}
         }
       }
     },
@@ -49,8 +49,23 @@
     },
     "independence_assessment": {
       "type": "object", "additionalProperties": false,
-      "required": ["rule_id", "passed", "label"],
-      "properties": {"rule_id": {"type": "string", "minLength": 1}, "passed": {"type": "boolean"}, "label": {"enum": ["distinct episodes", "independent episodes"]}}
+      "required": ["rule_id", "required_dimensions", "evaluated_dimensions", "passed", "label"],
+      "properties": {
+        "rule_id": {"type": "string", "minLength": 1},
+        "required_dimensions": {"type": "array", "minItems": 1, "uniqueItems": true, "items": {"enum": ["session_count", "normalized_input_family_count", "actor_count", "source_family_count"]}},
+        "evaluated_dimensions": {
+          "type": "object", "additionalProperties": false,
+          "required": ["session_count", "normalized_input_family_count", "actor_count", "source_family_count"],
+          "properties": {
+            "session_count": {"type": "boolean"},
+            "normalized_input_family_count": {"type": "boolean"},
+            "actor_count": {"type": "boolean"},
+            "source_family_count": {"type": "boolean"}
+          }
+        },
+        "passed": {"type": "boolean"},
+        "label": {"enum": ["distinct episodes", "independent episodes"]}
+      }
     },
     "systemic_defect_proven": {"const": false},
     "emitted_actions": {"type": "array", "maxItems": 0},

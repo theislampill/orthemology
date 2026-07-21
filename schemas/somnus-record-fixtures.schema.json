@@ -1,0 +1,201 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "$id": "orthemology/somnus-record-fixtures.schema.json",
+  "title": "Cross-record Somnus fixture bundle",
+  "type": "object",
+  "additionalProperties": false,
+  "required": [
+    "schema", "runtime_status", "reference_operation_status", "successor_trigger",
+    "claim_status", "identity_fixture", "claimant_routing_cases", "evidence_records",
+    "subject_records", "material_deltas", "orthing_events",
+    "meta_orthability_assessments", "somnus_runs", "somnic_assessments",
+    "recurrence_reports", "proposals", "authorizations", "applications",
+    "successor_states", "outcome_evaluations", "writeback_fixture_cases",
+    "writeback_case_details", "writeback_timeline", "non_claims"
+  ],
+  "properties": {
+    "schema": {"const": "orthemology-somnus-record-fixtures-v1"},
+    "runtime_status": {"const": "fixture_only_no_runtime"},
+    "reference_operation_status": {"const": "specified_and_validated_not_implemented"},
+    "successor_trigger": {"type": "string", "minLength": 1},
+    "claim_status": {"type": "object"},
+    "identity_fixture": {
+      "type": "object", "additionalProperties": false,
+      "required": ["turn_id", "session_ids", "occurrence_ids", "episode_ids", "orthing_ids", "claim_attempt_ids", "orthability_assessment_ids"],
+      "properties": {
+        "turn_id": {"type": "string", "minLength": 1},
+        "session_ids": {"$ref": "#/$defs/nonempty_ids"},
+        "occurrence_ids": {"$ref": "#/$defs/nonempty_ids"},
+        "episode_ids": {"$ref": "#/$defs/nonempty_ids"},
+        "orthing_ids": {"$ref": "#/$defs/nonempty_ids"},
+        "claim_attempt_ids": {"$ref": "#/$defs/nonempty_ids"},
+        "orthability_assessment_ids": {"$ref": "#/$defs/nonempty_ids"}
+      }
+    },
+    "claimant_routing_cases": {
+      "type": "array", "minItems": 1,
+      "items": {
+        "type": "object", "additionalProperties": false,
+        "required": ["case_id", "occurrence_id", "claimant_assessments", "selected_claimant_id", "route_status", "retained_residual_claimants", "retained_inapplicable_claimants"],
+        "properties": {
+          "case_id": {"type": "string", "minLength": 1},
+          "occurrence_id": {"type": "string", "minLength": 1},
+          "claimant_assessments": {
+            "type": "array", "minItems": 1,
+            "items": {
+              "type": "object", "additionalProperties": false,
+              "required": ["claim_attempt_id", "orthability_assessment_id", "claimant_id", "result"],
+              "properties": {
+                "claim_attempt_id": {"type": "string", "minLength": 1},
+                "orthability_assessment_id": {"type": "string", "minLength": 1},
+                "claimant_id": {"type": "string", "minLength": 1},
+                "result": {"enum": ["applicable", "inapplicable", "indeterminate"]}
+              }
+            }
+          },
+          "selected_claimant_id": {"type": ["string", "null"], "minLength": 1},
+          "route_status": {"enum": ["selected", "provisional", "deferred", "no_claim"]},
+          "retained_residual_claimants": {"$ref": "#/$defs/ids"},
+          "retained_inapplicable_claimants": {"$ref": "#/$defs/ids"}
+        }
+      }
+    },
+    "evidence_records": {"type": "array", "minItems": 1, "items": {"$ref": "#/$defs/evidence"}},
+    "subject_records": {"type": "array", "minItems": 1, "items": {"$ref": "#/$defs/subject"}},
+    "material_deltas": {"type": "array", "items": {"$ref": "#/$defs/delta"}},
+    "orthing_events": {"type": "array", "minItems": 1, "items": {"type": "object"}},
+    "meta_orthability_assessments": {"type": "array", "minItems": 1, "items": {"type": "object"}},
+    "somnus_runs": {"type": "array", "minItems": 1, "items": {"type": "object"}},
+    "somnic_assessments": {"type": "array", "minItems": 1, "items": {"type": "object"}},
+    "recurrence_reports": {"type": "array", "minItems": 1, "items": {"type": "object"}},
+    "proposals": {"type": "array", "minItems": 1, "items": {"$ref": "#/$defs/proposal"}},
+    "authorizations": {"type": "array", "minItems": 1, "items": {"$ref": "#/$defs/authorization"}},
+    "applications": {"type": "array", "minItems": 1, "items": {"$ref": "#/$defs/application"}},
+    "successor_states": {"type": "array", "minItems": 1, "items": {"$ref": "#/$defs/successor"}},
+    "outcome_evaluations": {"type": "array", "minItems": 1, "items": {"$ref": "#/$defs/outcome"}},
+    "writeback_fixture_cases": {"$ref": "#/$defs/nonempty_ids"},
+    "writeback_case_details": {"type": "array", "minItems": 3, "items": {"type": "object"}},
+    "writeback_timeline": {
+      "type": "array", "minItems": 5, "maxItems": 5,
+      "items": {
+        "type": "object", "additionalProperties": false,
+        "required": ["time_role", "record_kind", "record_ids", "occurred_at"],
+        "properties": {
+          "time_role": {"enum": ["t1", "t2", "t3", "t4", "t5"]},
+          "record_kind": {"enum": ["waking_orthing", "somnic_assessment", "proposal_authorization", "applied_mutation", "outcome_evaluation"]},
+          "record_ids": {"$ref": "#/$defs/nonempty_ids"},
+          "occurred_at": {"type": "string", "format": "date-time"}
+        }
+      }
+    },
+    "non_claims": {"type": "array", "minItems": 3, "uniqueItems": true, "items": {"type": "string", "minLength": 1}}
+  },
+  "$defs": {
+    "ids": {"type": "array", "uniqueItems": true, "items": {"type": "string", "minLength": 1}},
+    "nonempty_ids": {"type": "array", "minItems": 1, "uniqueItems": true, "items": {"type": "string", "minLength": 1}},
+    "evidence": {
+      "type": "object", "additionalProperties": false,
+      "required": ["evidence_id", "timing", "source_scope"],
+      "properties": {
+        "evidence_id": {"type": "string", "minLength": 1},
+        "timing": {"enum": ["observed_at_t1", "used_at_t1", "indexed_unused_at_t1", "discovered_after_t1"]},
+        "source_scope": {"type": "string", "minLength": 1}
+      }
+    },
+    "subject": {
+      "type": "object", "additionalProperties": false,
+      "required": ["subject_id", "subject_kind", "t1_at", "source_record_ref"],
+      "properties": {
+        "subject_id": {"type": "string", "minLength": 1},
+        "subject_kind": {"enum": ["waking_orthing", "somnic_assessment", "governing_artifact", "counterexample"]},
+        "t1_at": {"type": "string", "format": "date-time"},
+        "source_record_ref": {"type": "string", "minLength": 1}
+      }
+    },
+    "delta": {
+      "type": "object", "additionalProperties": false,
+      "required": ["material_delta_id", "delta_kind", "recorded_at", "source_ref"],
+      "properties": {
+        "material_delta_id": {"type": "string", "minLength": 1},
+        "delta_kind": {"type": "string", "minLength": 1},
+        "recorded_at": {"type": "string", "format": "date-time"},
+        "source_ref": {"type": "string", "minLength": 1}
+      }
+    },
+    "proposal": {
+      "type": "object", "additionalProperties": false,
+      "required": ["proposal_id", "supporting_assessment_id", "diagnosed_locus", "target_kind", "provenance_mode", "status", "claim_ledger_ref", "verdict_record_ref", "proposed_action"],
+      "properties": {
+        "proposal_id": {"type": "string", "minLength": 1},
+        "supporting_assessment_id": {"type": "string", "minLength": 1},
+        "diagnosed_locus": {"type": "string", "minLength": 1},
+        "target_kind": {"enum": ["memory", "user_state", "fact", "skill", "activation_contract", "orthability_evaluator", "selector", "metaortheme", "metaorthemma_binding_rule", "evidence_requirement", "closure_rule", "residual_rule", "fixture", "provenance", "documentation"]},
+        "provenance_mode": {"enum": ["legacy_reflective_proposal", "somnus_grounded_proposal"]},
+        "status": {"enum": ["proposed", "rejected", "withdrawn"]},
+        "claim_ledger_ref": {"const": "schemas/claim-ledger.schema.json"},
+        "verdict_record_ref": {"const": "schemas/verdict-record.schema.json"},
+        "proposed_action": {
+          "type": "object", "additionalProperties": false,
+          "required": ["action_label", "successor_target_id"],
+          "properties": {
+            "action_label": {"type": "string", "minLength": 1},
+            "successor_target_id": {"type": "string", "minLength": 1}
+          }
+        }
+      }
+    },
+    "authorization": {
+      "type": "object", "additionalProperties": false,
+      "required": ["authorization_id", "proposal_id", "source", "decision", "authorization_rule_ref", "decided_at", "reason"],
+      "properties": {
+        "authorization_id": {"type": "string", "minLength": 1},
+        "proposal_id": {"type": "string", "minLength": 1},
+        "source": {"const": "independent_governance"},
+        "decision": {"enum": ["authorized", "rejected"]},
+        "authorization_rule_ref": {"type": "string", "minLength": 1},
+        "decided_at": {"type": "string", "format": "date-time"},
+        "reason": {"type": "string", "minLength": 1}
+      }
+    },
+    "application": {
+      "type": "object", "additionalProperties": false,
+      "required": ["application_id", "proposal_id", "authorization_id", "status", "action_record_ref", "corrective_transition_ref", "successor_state_id", "applied_at", "assessment_history_mutated", "proposal_history_mutated", "outcome_evaluation_required"],
+      "properties": {
+        "application_id": {"type": "string", "minLength": 1},
+        "proposal_id": {"type": "string", "minLength": 1},
+        "authorization_id": {"type": "string", "minLength": 1},
+        "status": {"enum": ["failed", "applied", "reverted"]},
+        "action_record_ref": {"const": "schemas/orthing-episode.schema.json#action"},
+        "corrective_transition_ref": {"const": "applications/daee-epistemics/CORRECTIVE-TRANSITION.schema.json"},
+        "successor_state_id": {"type": ["string", "null"], "minLength": 1},
+        "applied_at": {"type": "string", "format": "date-time"},
+        "assessment_history_mutated": {"const": false},
+        "proposal_history_mutated": {"const": false},
+        "outcome_evaluation_required": {"type": "boolean"}
+      }
+    },
+    "successor": {
+      "type": "object", "additionalProperties": false,
+      "required": ["successor_state_id", "identity_key", "version", "action_label"],
+      "properties": {
+        "successor_state_id": {"type": "string", "minLength": 1},
+        "identity_key": {"type": "string", "minLength": 1},
+        "version": {"type": "string", "minLength": 1},
+        "action_label": {"type": "string", "minLength": 1}
+      }
+    },
+    "outcome": {
+      "type": "object", "additionalProperties": false,
+      "required": ["outcome_evaluation_id", "application_id", "time_role", "evaluated_at", "result", "verdict_record_ref", "self_validating"],
+      "properties": {
+        "outcome_evaluation_id": {"type": "string", "minLength": 1},
+        "application_id": {"type": "string", "minLength": 1},
+        "time_role": {"const": "t5"},
+        "evaluated_at": {"type": "string", "format": "date-time"},
+        "result": {"enum": ["pending", "effective", "ineffective", "harmful", "undetermined"]},
+        "verdict_record_ref": {"const": "schemas/verdict-record.schema.json"},
+        "self_validating": {"const": false}
+      }
+    }
+  }
+}

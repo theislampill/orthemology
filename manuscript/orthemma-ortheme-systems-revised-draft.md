@@ -559,6 +559,21 @@ A **waking orthing** takes up an occurrence under the analysis, evidence, govern
 
 The runtime-neutral contract distinguishes session, episode, occurrence, claim attempt, claimant-level orthability assessment, orthing, somnic assessment, and proposal identities; a conversational turn supplies none of these equalities. Privacy and source limits precede minimal occurrence capture, while versioned activation contracts gate claiming after capture. The record separately identifies evidence observed at episode time, used then, indexed but unused then, and discovered later. A somnic run selects newly unassessed or materially reopened anchors, queries an eligible historical corpus, and records the comparators actually used; a closed assessment is not recursively requeued without a material delta.
 
+<!-- somnus-claim-status-projection:start -->
+```yaml
+claim_status_ref: docs/decisions/0035-somnic-orthing-and-activation-contracts.md#somnus-claim-status
+empirical_validation: not-established
+performance: not-established
+learning: not-established
+generalization: not-established
+internal_ontology: not-established
+terminology_utility: not-established
+terminology_adoption: not-established
+runtime: not-implemented
+collective_execution: not-implemented
+```
+<!-- somnus-claim-status-projection:end -->
+
 The bounded v0 operation is controlled residual-recurrence assessment. Fingerprint equality establishes only a structural recurrence candidate; distinct episode IDs do not prove independence, a threshold is only a review trigger, and suspected locus remains distinct from causal diagnosis or intervention. Assessment, intervention disposition, proposal, authorization, application, and later outcome evaluation remain separate. The schemas and fixtures under `schemas/` and `examples/somnus/` are offline conformance artifacts, not a live ledger, scheduler, analyzer, writeback engine, collective network, or learning result (Decision 0035).
 
 ### 8.3 The verdict vector

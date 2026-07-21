@@ -45,7 +45,7 @@ contracts:
   superseded_by: null
   authorship: {mode: bootstrap_provenance, provenance_record_id: BOOTSTRAP-AUTHORING-002}
   status: accepted
-  fixture_outcomes: [ACT-POS-001, ACT-NEG-001, ACT-MIXED-LEXICAL-001, ACT-OVERLAP-001]
+  fixture_outcomes: [ACT-DB-POS-001, ACT-DB-NEG-001, ACT-DB-INDETERMINATE-001, ACT-OVERLAP-001]
 fixture_outcomes:
 - fixture_id: ACT-POS-001
   fixture_class: positive
@@ -63,6 +63,9 @@ fixture_outcomes:
     evaluator_id: property-boundary-evaluator
     evaluator_version: 1.0.0
     result: applicable
+    property_findings: {satisfied: [theological-proposition, worldview-bearing-task], absent: [], indeterminate: []}
+    observed_indicators: [tawhid, divine-unity]
+    observed_exclusions: []
 - fixture_id: ACT-NEG-001
   fixture_class: negative-near-boundary
   occurrence: Rename a database column whose literal name is tawhid.
@@ -79,6 +82,9 @@ fixture_outcomes:
     evaluator_id: property-boundary-evaluator
     evaluator_version: 1.0.0
     result: inapplicable
+    property_findings: {satisfied: [], absent: [theological-proposition, worldview-bearing-task], indeterminate: []}
+    observed_indicators: [tawhid]
+    observed_exclusions: [database-column-only]
 - fixture_id: ACT-MIXED-LEXICAL-001
   fixture_class: indeterminate
   occurrence: Model a database that may encode theological propositions under a column named tawhid.
@@ -95,6 +101,57 @@ fixture_outcomes:
     evaluator_id: property-boundary-evaluator
     evaluator_version: 1.0.0
     result: indeterminate
+    property_findings: {satisfied: [], absent: [worldview-bearing-task], indeterminate: [theological-proposition]}
+    observed_indicators: [tawhid]
+    observed_exclusions: []
+- fixture_id: ACT-DB-POS-001
+  fixture_class: positive
+  occurrence: Add a required column to a database schema.
+  observed_indicators: [database, column, schema]
+  observed_exclusions: []
+  property_findings: {satisfied: [data-model-operation], absent: [], indeterminate: []}
+  claimant_assessments:
+  - claimant_id: database-schema-claimant
+    activation_contract_id: database-schema-activation
+    activation_contract_version: 1.0.0
+    evaluator_id: property-boundary-evaluator
+    evaluator_version: 1.0.0
+    result: applicable
+    property_findings: {satisfied: [data-model-operation], absent: [], indeterminate: []}
+    observed_indicators: [database, column, schema]
+    observed_exclusions: []
+- fixture_id: ACT-DB-NEG-001
+  fixture_class: negative-near-boundary
+  occurrence: Explain a theological proposition without changing a data model.
+  observed_indicators: [schema]
+  observed_exclusions: [theology-only]
+  property_findings: {satisfied: [], absent: [data-model-operation], indeterminate: []}
+  claimant_assessments:
+  - claimant_id: database-schema-claimant
+    activation_contract_id: database-schema-activation
+    activation_contract_version: 1.0.0
+    evaluator_id: property-boundary-evaluator
+    evaluator_version: 1.0.0
+    result: inapplicable
+    property_findings: {satisfied: [], absent: [data-model-operation], indeterminate: []}
+    observed_indicators: [schema]
+    observed_exclusions: [theology-only]
+- fixture_id: ACT-DB-INDETERMINATE-001
+  fixture_class: indeterminate
+  occurrence: Discuss whether a represented schema might later require a data-model change.
+  observed_indicators: [schema]
+  observed_exclusions: []
+  property_findings: {satisfied: [], absent: [], indeterminate: [data-model-operation]}
+  claimant_assessments:
+  - claimant_id: database-schema-claimant
+    activation_contract_id: database-schema-activation
+    activation_contract_version: 1.0.0
+    evaluator_id: property-boundary-evaluator
+    evaluator_version: 1.0.0
+    result: indeterminate
+    property_findings: {satisfied: [], absent: [], indeterminate: [data-model-operation]}
+    observed_indicators: [schema]
+    observed_exclusions: []
 - fixture_id: ACT-OVERLAP-001
   fixture_class: overlap
   occurrence: Compare a data model and its explicit theological claim about divine unity.
@@ -111,14 +168,21 @@ fixture_outcomes:
     evaluator_id: property-boundary-evaluator
     evaluator_version: 1.0.0
     result: applicable
+    property_findings: {satisfied: [theological-proposition, worldview-bearing-task], absent: [], indeterminate: []}
+    observed_indicators: [tawhid, divine-unity]
+    observed_exclusions: []
   - claimant_id: database-schema-claimant
     activation_contract_id: database-schema-activation
     activation_contract_version: 1.0.0
     evaluator_id: property-boundary-evaluator
     evaluator_version: 1.0.0
     result: applicable
+    property_findings: {satisfied: [data-model-operation], absent: [], indeterminate: []}
+    observed_indicators: [tawhid, divine-unity]
+    observed_exclusions: []
   conflict:
     conflict_id: ACT-CONFLICT-001
-    selected_route: provisional-multi-claimant
+    claimant_contracts: [theological-claimant-activation@1.0.0, database-schema-activation@1.0.0]
+    disposition: provisional_multi_claimant
     conflict_unresolved: true
     authorization_rule_id: no-irreversible-action-with-unresolved-conflict

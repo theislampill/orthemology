@@ -2,8 +2,20 @@ schema: orthemology-somnus-record-fixtures-v1
 runtime_status: fixture_only_no_runtime
 reference_operation_status: specified_and_validated_not_implemented
 successor_trigger: a separately approved downstream runtime owner adopts these schemas and proves a direct fixture-driven operation with deterministic idempotency, material-delta reopening, privacy limits, and separate authorization
+claim_status:
+  claim_status_id: somnus-claim-boundaries-v1
+  empirical_validation: {status: not-established, owner: future empirical study, evidence_basis: no empirical study was run}
+  performance: {status: not-established, owner: future comparative evaluation, evidence_basis: no matched workflow comparison was run}
+  learning: {status: not-established, owner: future governed outcome study, evidence_basis: no modification and later-outcome loop was executed}
+  generalization: {status: not-established, owner: future cross-model and cross-domain study, evidence_basis: fixtures do not establish transfer}
+  internal_ontology: {status: not-established, owner: future interpretability inquiry, evidence_basis: records do not expose an actor interior state}
+  terminology_utility: {status: not-established, owner: terminology benchmark, evidence_basis: terminology benchmark was not run}
+  terminology_adoption: {status: not-established, owner: human terminology review, evidence_basis: no term was adopted}
+  runtime: {status: not-implemented, owner: external downstream runtime owner, evidence_basis: this repository contains schemas fixtures and offline validation only}
+  collective_execution: {status: not-implemented, owner: external collective runtime owner, evidence_basis: no network transport council or shared service exists}
 identity_fixture:
   turn_id: TURN-001
+  session_ids: [SESSION-001, SESSION-R7E-RECONSTRUCTION]
   occurrence_ids: [OCC-001, OCC-002]
   episode_ids: [EP-001, EP-002]
   orthing_ids: [ORTH-001, ORTH-002]
@@ -13,38 +25,106 @@ claimant_routing_cases:
 - case_id: ROUTE-MULTI-001
   occurrence_id: OCC-001
   claimant_assessments:
-  - {orthability_assessment_id: OA-001, claimant_id: claimant-c, result: indeterminate}
-  - {orthability_assessment_id: OA-002, claimant_id: claimant-d, result: applicable}
-  - {orthability_assessment_id: OA-003, claimant_id: claimant-e, result: inapplicable}
+  - {claim_attempt_id: CA-001, orthability_assessment_id: OA-001, claimant_id: claimant-c, result: indeterminate}
+  - {claim_attempt_id: CA-002, orthability_assessment_id: OA-002, claimant_id: claimant-d, result: applicable}
+  - {claim_attempt_id: CA-003, orthability_assessment_id: OA-003, claimant_id: claimant-e, result: inapplicable}
   selected_claimant_id: claimant-d
   route_status: selected
   retained_residual_claimants: [claimant-c]
   retained_inapplicable_claimants: [claimant-e]
 evidence_records:
-- {evidence_id: E-T1-OBSERVED, timing: observed_at_t1}
-- {evidence_id: E-T1-USED, timing: used_at_t1}
-- {evidence_id: E-T1-UNUSED, timing: indexed_unused_at_t1}
-- {evidence_id: E-T2-DISCOVERED, timing: discovered_after_t1}
+- {evidence_id: E-T1-OBSERVED, timing: observed_at_t1, source_scope: local occurrence record}
+- {evidence_id: E-T1-USED, timing: used_at_t1, source_scope: local placement record}
+- {evidence_id: E-T1-UNUSED, timing: indexed_unused_at_t1, source_scope: local indexed evidence}
+- {evidence_id: E-T2-DISCOVERED, timing: discovered_after_t1, source_scope: later review evidence}
+subject_records:
+- {subject_id: ORTH-001, subject_kind: waking_orthing, t1_at: '2026-07-20T10:00:00Z', source_record_ref: EV-WAKE-001}
+- {subject_id: ORTH-002, subject_kind: waking_orthing, t1_at: '2026-07-20T10:05:00Z', source_record_ref: EV-WAKE-002}
+- {subject_id: ORTH-NEW-001, subject_kind: waking_orthing, t1_at: '2026-07-21T18:00:00Z', source_record_ref: fixture-subject-ORTH-NEW-001}
+- {subject_id: ORTH-NEW-002, subject_kind: waking_orthing, t1_at: '2026-07-22T18:00:00Z', source_record_ref: fixture-subject-ORTH-NEW-002}
+- {subject_id: ORTH-OLD-001, subject_kind: waking_orthing, t1_at: '2026-04-22T18:00:00Z', source_record_ref: fixture-subject-ORTH-OLD-001}
+- {subject_id: ORTH-OLD-002, subject_kind: waking_orthing, t1_at: '2026-06-01T18:00:00Z', source_record_ref: fixture-subject-ORTH-OLD-002}
+- {subject_id: ORTH-SUCCESS-001, subject_kind: counterexample, t1_at: '2026-05-15T18:00:00Z', source_record_ref: fixture-subject-ORTH-SUCCESS-001}
+- {subject_id: ORTH-CORRECT-DEFECTIVE-001, subject_kind: waking_orthing, t1_at: '2026-07-20T11:00:00Z', source_record_ref: fixture-subject-ORTH-CORRECT-DEFECTIVE-001}
+- {subject_id: ORTH-NO-CHANGE-001, subject_kind: waking_orthing, t1_at: '2026-07-20T12:00:00Z', source_record_ref: fixture-subject-ORTH-NO-CHANGE-001}
+- {subject_id: ORTH-ALTERNATIVES-001, subject_kind: waking_orthing, t1_at: '2026-07-20T13:00:00Z', source_record_ref: fixture-subject-ORTH-ALTERNATIVES-001}
+- {subject_id: SA-CLOSED-001, subject_kind: somnic_assessment, t1_at: '2026-07-21T19:00:01Z', source_record_ref: SA-CLOSED-001}
+material_deltas:
+- {material_delta_id: DELTA-CONTRACT-0.1.1, delta_kind: contract_revision, recorded_at: '2026-07-23T18:00:00Z', source_ref: recurrence-contract@0.1.1}
 orthing_events:
 - event_id: EV-WAKE-001
+  sequence: 1
   session_id: SESSION-001
   episode_id: EP-001
   occurrence_id: OCC-001
-  claim_attempt_id: CA-001
-  orthability_assessment_id: OA-001
+  claim_attempt_id: null
+  orthability_assessment_id: null
   orthing_id: ORTH-001
   event_type: occurrence_apprehended
   occurred_at: '2026-07-20T10:00:00Z'
   actor_id: actor-local-1
   capture_mode: live_capture
   source_revision: task4-fixture-v1
+  privacy_source_disposition: {privacy_scope_applied: true, source_scope_applied: true, minimal_capture_precedes_claiming: true}
   governing_versions: {analysis: analysis-1@1, activation_contract: theological-claimant-activation@1.0.0, orthability_evaluator: property-boundary-evaluator@1.0.0, selector: selector-1@1}
   evidence_timing: {observed_at_t1: [E-T1-OBSERVED], used_at_t1: [E-T1-USED], indexed_unused_at_t1: [E-T1-UNUSED], discovered_after_t1: []}
   append_only: true
   episode_record_ref: schemas/orthing-episode.schema.json
   claim_ledger_ref: schemas/claim-ledger.schema.json
   verdict_record_ref: schemas/verdict-record.schema.json
+- event_id: EV-WAKE-001-ASSESS
+  sequence: 2
+  session_id: SESSION-001
+  episode_id: EP-001
+  occurrence_id: OCC-001
+  claim_attempt_id: CA-001
+  orthability_assessment_id: OA-001
+  orthing_id: ORTH-001
+  event_type: orthability_assessed
+  occurred_at: '2026-07-20T10:01:00Z'
+  actor_id: actor-local-1
+  capture_mode: live_capture
+  source_revision: task4-fixture-v1
+  privacy_source_disposition: {privacy_scope_applied: true, source_scope_applied: true, minimal_capture_precedes_claiming: true}
+  governing_versions: {analysis: analysis-1@1, activation_contract: theological-claimant-activation@1.0.0, orthability_evaluator: property-boundary-evaluator@1.0.0, selector: selector-1@1}
+  evidence_timing: {observed_at_t1: [E-T1-OBSERVED], used_at_t1: [E-T1-USED], indexed_unused_at_t1: [E-T1-UNUSED], discovered_after_t1: []}
+  append_only: true
+- event_id: EV-WAKE-001-ROUTE
+  sequence: 3
+  session_id: SESSION-001
+  episode_id: EP-001
+  occurrence_id: OCC-001
+  claim_attempt_id: CA-002
+  orthability_assessment_id: OA-002
+  orthing_id: ORTH-001
+  event_type: route_selected
+  occurred_at: '2026-07-20T10:02:00Z'
+  actor_id: actor-local-1
+  capture_mode: live_capture
+  source_revision: task4-fixture-v1
+  privacy_source_disposition: {privacy_scope_applied: true, source_scope_applied: true, minimal_capture_precedes_claiming: true}
+  governing_versions: {analysis: analysis-1@1, activation_contract: theological-claimant-activation@1.0.0, orthability_evaluator: property-boundary-evaluator@1.0.0, selector: selector-1@1}
+  evidence_timing: {observed_at_t1: [E-T1-OBSERVED], used_at_t1: [E-T1-USED], indexed_unused_at_t1: [E-T1-UNUSED], discovered_after_t1: []}
+  append_only: true
+- event_id: EV-WAKE-002-CAPTURE
+  sequence: 4
+  session_id: SESSION-001
+  episode_id: EP-002
+  occurrence_id: OCC-002
+  claim_attempt_id: null
+  orthability_assessment_id: null
+  orthing_id: ORTH-002
+  event_type: occurrence_apprehended
+  occurred_at: '2026-07-20T10:04:00Z'
+  actor_id: actor-local-1
+  capture_mode: live_capture
+  source_revision: task4-fixture-v1
+  privacy_source_disposition: {privacy_scope_applied: true, source_scope_applied: true, minimal_capture_precedes_claiming: true}
+  governing_versions: {analysis: analysis-1@1, activation_contract: theological-claimant-activation@1.0.0, orthability_evaluator: property-boundary-evaluator@1.0.0, selector: selector-1@1}
+  evidence_timing: {observed_at_t1: [E-T1-OBSERVED], used_at_t1: [E-T1-USED], indexed_unused_at_t1: [], discovered_after_t1: []}
+  append_only: true
 - event_id: EV-WAKE-002
+  sequence: 5
   session_id: SESSION-001
   episode_id: EP-002
   occurrence_id: OCC-002
@@ -56,10 +136,12 @@ orthing_events:
   actor_id: actor-local-1
   capture_mode: live_capture
   source_revision: task4-fixture-v1
+  privacy_source_disposition: {privacy_scope_applied: true, source_scope_applied: true, minimal_capture_precedes_claiming: true}
   governing_versions: {analysis: analysis-1@1, activation_contract: theological-claimant-activation@1.0.0, orthability_evaluator: property-boundary-evaluator@1.0.0, selector: selector-1@1}
   evidence_timing: {observed_at_t1: [E-T1-OBSERVED], used_at_t1: [E-T1-USED], indexed_unused_at_t1: [], discovered_after_t1: []}
   append_only: true
 - event_id: EV-R7E-RETRO-001
+  sequence: 1
   session_id: SESSION-R7E-RECONSTRUCTION
   episode_id: EP-R7E-RECONSTRUCTION
   occurrence_id: OCC-R7E-SURVIVING-TRACE
@@ -72,6 +154,7 @@ orthing_events:
   capture_mode: retrospective_reconstruction
   source_case: R7E
   source_revision: ddfdebf
+  privacy_source_disposition: {privacy_scope_applied: true, source_scope_applied: true, minimal_capture_precedes_claiming: true}
   governing_versions: {analysis: r7e-reconstruction@1, activation_contract: bootstrap-not-live@1, orthability_evaluator: retrospective-record-gate@1, selector: no-live-selector@1}
   evidence_timing: {observed_at_t1: [], used_at_t1: [], indexed_unused_at_t1: [], discovered_after_t1: [E-T2-DISCOVERED]}
   append_only: true
@@ -183,6 +266,9 @@ somnic_assessments:
   pathway_result: defective
   intervention_disposition: proposal
   proposal_ids: [PROP-CONTRACT-001]
+  authorization_refs: [AUTH-INDEPENDENT-001]
+  application_refs: [APP-APPLIED-001]
+  outcome_evaluation_refs: [OUTCOME-001]
   target_history_digest: cccccccccccccccccccccccccccccccccccccccccccccccccccccccccccccccc
 - <<: *assessment_base
   assessment_id: SA-CLOSED-001
@@ -203,7 +289,20 @@ somnic_assessments:
   target_orthing_ids: [ORTH-ALTERNATIVES-001]
   intervention_disposition: alternative_proposals
   proposal_ids: [PROP-MEMORY-001, PROP-SKILL-001]
+  authorization_refs: [AUTH-FAILED-001]
+  application_refs: [APP-FAILED-001]
+  outcome_evaluation_refs: []
   target_history_digest: ffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffff
+- <<: *assessment_base
+  assessment_id: SA-REOPENED-001
+  somnus_run_id: RUN-REOPEN-001
+  target_orthing_ids: [ORTH-OLD-001]
+  prior_assessment_ids: [SA-CLOSED-001]
+  t2_configuration: {analysis: analysis-retro@1, metaortheme: recurrence-standard@1, metaorthemma: recurrence-binding@1, evaluator: recurrence-evaluator@0.1.1, assessed_at: '2026-07-23T19:00:01Z'}
+  closure_status: open
+  intervention_disposition: preserve_residual
+  proposal_ids: []
+  target_history_digest: '1111111111111111111111111111111111111111111111111111111111111111'
 recurrence_reports:
 - recurrence_report_id: RR-001
   somnus_run_id: RUN-RECURRENCE-001
@@ -217,9 +316,9 @@ recurrence_reports:
     raw_residual_texts: [claimant boundary remained indeterminate, same boundary remained indeterminate]
     source_orthing_ids: [ORTH-NEW-001, ORTH-OLD-001, ORTH-OLD-002]
   supporting_occurrences:
-  - {orthing_id: ORTH-NEW-001, episode_id: EP-NEW-001, session_id: SESSION-NEW-001, normalized_input_family: malformed-input-family-A, actor_id: actor-local-1, source_family: corpus-A}
-  - {orthing_id: ORTH-OLD-001, episode_id: EP-OLD-001, session_id: SESSION-OLD-001, normalized_input_family: malformed-input-family-A, actor_id: actor-local-1, source_family: corpus-A}
-  - {orthing_id: ORTH-OLD-002, episode_id: EP-OLD-002, session_id: SESSION-OLD-001, normalized_input_family: malformed-input-family-A, actor_id: actor-local-1, source_family: corpus-A}
+  - {orthing_id: ORTH-NEW-001, episode_id: EP-NEW-001, session_id: SESSION-NEW-001, normalized_input_family: malformed-input-family-A, actor_id: actor-local-1, source_family: corpus-A, occurred_at: '2026-07-21T18:00:00Z'}
+  - {orthing_id: ORTH-OLD-001, episode_id: EP-OLD-001, session_id: SESSION-OLD-001, normalized_input_family: malformed-input-family-A, actor_id: actor-local-1, source_family: corpus-A, occurred_at: '2026-04-22T18:00:00Z'}
+  - {orthing_id: ORTH-OLD-002, episode_id: EP-OLD-002, session_id: SESSION-OLD-001, normalized_input_family: malformed-input-family-A, actor_id: actor-local-1, source_family: corpus-A, occurred_at: '2026-06-01T18:00:00Z'}
   counterexample_ids: [ORTH-SUCCESS-001]
   opportunity_denominator: 8
   threshold: 3
@@ -229,25 +328,34 @@ recurrence_reports:
   causal_diagnosis: not-established
   proposed_intervention: not-produced-by-v0
   dependence_dimensions: {episode_count: 3, session_count: 2, normalized_input_family_count: 1, actor_count: 1, source_family_count: 1, time_span: P90D, success_counterexample_count: 1}
-  independence_assessment: {rule_id: independence-rule-v1, passed: false, label: distinct episodes}
+  independence_assessment:
+    rule_id: independence-rule-v1
+    required_dimensions: [session_count, normalized_input_family_count, actor_count, source_family_count]
+    evaluated_dimensions: {session_count: false, normalized_input_family_count: false, actor_count: false, source_family_count: false}
+    passed: false
+    label: distinct episodes
   systemic_defect_proven: false
   emitted_actions: []
   unresolved_questions: [whether the shared normalized input caused the recurrence]
 proposals:
-- {proposal_id: PROP-MEMORY-001, supporting_assessment_id: SA-ALTERNATIVES-001, diagnosed_locus: memory, target_kind: memory, provenance_mode: somnus_grounded_proposal, authorized: false, status: proposed}
-- {proposal_id: PROP-SKILL-001, supporting_assessment_id: SA-ALTERNATIVES-001, diagnosed_locus: skill, target_kind: skill, provenance_mode: somnus_grounded_proposal, authorized: false, status: proposed}
-- {proposal_id: PROP-CONTRACT-001, supporting_assessment_id: SA-CORRECT-DEFECTIVE-001, diagnosed_locus: activation_contract, target_kind: governing_artifact, provenance_mode: somnus_grounded_proposal, authorized: false, status: proposed}
-- {proposal_id: PROP-LEGACY-001, supporting_assessment_id: unavailable, diagnosed_locus: memory, target_kind: memory, provenance_mode: legacy_reflective_proposal, authorized: false, status: rejected}
+- {proposal_id: PROP-MEMORY-001, supporting_assessment_id: SA-ALTERNATIVES-001, diagnosed_locus: memory, target_kind: memory, provenance_mode: somnus_grounded_proposal, status: proposed, claim_ledger_ref: schemas/claim-ledger.schema.json, verdict_record_ref: schemas/verdict-record.schema.json, proposed_action: {action_label: update-memory, successor_target_id: SUCCESSOR-MEMORY-001}}
+- {proposal_id: PROP-SKILL-001, supporting_assessment_id: SA-ALTERNATIVES-001, diagnosed_locus: skill, target_kind: skill, provenance_mode: somnus_grounded_proposal, status: proposed, claim_ledger_ref: schemas/claim-ledger.schema.json, verdict_record_ref: schemas/verdict-record.schema.json, proposed_action: {action_label: propose-skill-change, successor_target_id: SUCCESSOR-SKILL-001}}
+- {proposal_id: PROP-CONTRACT-001, supporting_assessment_id: SA-CORRECT-DEFECTIVE-001, diagnosed_locus: activation_contract, target_kind: activation_contract, provenance_mode: somnus_grounded_proposal, status: proposed, claim_ledger_ref: schemas/claim-ledger.schema.json, verdict_record_ref: schemas/verdict-record.schema.json, proposed_action: {action_label: propose-contract-change, successor_target_id: SUCCESSOR-CONTRACT-001}}
+- {proposal_id: PROP-LEGACY-001, supporting_assessment_id: unavailable, diagnosed_locus: memory, target_kind: memory, provenance_mode: legacy_reflective_proposal, status: rejected, claim_ledger_ref: schemas/claim-ledger.schema.json, verdict_record_ref: schemas/verdict-record.schema.json, proposed_action: {action_label: reject-legacy-proposal, successor_target_id: SUCCESSOR-LEGACY-001}}
 authorizations:
-- {authorization_id: AUTH-PROVISIONAL-001, proposal_id: PROP-CONTRACT-001, source: provisional_placement, authorized: false, reason: provisional placement cannot authorize mutation}
-- {authorization_id: AUTH-REJECTED-001, proposal_id: PROP-LEGACY-001, source: independent_governance, authorized: false, reason: rejected without rewriting assessment}
-- {authorization_id: AUTH-FAILED-001, proposal_id: PROP-MEMORY-001, source: independent_governance, authorized: true, reason: authorized attempt may still fail without rewriting history}
-- {authorization_id: AUTH-INDEPENDENT-001, proposal_id: PROP-CONTRACT-001, source: independent_governance, authorized: true, reason: authorization is independent of provisional placement}
+- {authorization_id: AUTH-REJECTED-001, proposal_id: PROP-LEGACY-001, source: independent_governance, decision: rejected, authorization_rule_ref: independent-governance-rule@1, decided_at: '2026-07-21T19:01:00Z', reason: rejected without rewriting assessment}
+- {authorization_id: AUTH-FAILED-001, proposal_id: PROP-MEMORY-001, source: independent_governance, decision: authorized, authorization_rule_ref: independent-governance-rule@1, decided_at: '2026-07-21T19:02:00Z', reason: authorized attempt may still fail without rewriting history}
+- {authorization_id: AUTH-INDEPENDENT-001, proposal_id: PROP-CONTRACT-001, source: independent_governance, decision: authorized, authorization_rule_ref: independent-governance-rule@1, decided_at: '2026-07-21T19:03:00Z', reason: authorization is independent of provisional placement}
 applications:
-- {application_id: APP-FAILED-001, proposal_id: PROP-MEMORY-001, authorization_id: AUTH-FAILED-001, status: failed, assessment_history_mutated: false, proposal_history_mutated: false}
-- {application_id: APP-APPLIED-001, proposal_id: PROP-CONTRACT-001, authorization_id: AUTH-INDEPENDENT-001, status: applied, assessment_history_mutated: false, proposal_history_mutated: false, outcome_evaluation_required: true}
+- {application_id: APP-FAILED-001, proposal_id: PROP-MEMORY-001, authorization_id: AUTH-FAILED-001, status: failed, action_record_ref: 'schemas/orthing-episode.schema.json#action', corrective_transition_ref: applications/daee-epistemics/CORRECTIVE-TRANSITION.schema.json, successor_state_id: null, applied_at: '2026-07-21T19:04:00Z', assessment_history_mutated: false, proposal_history_mutated: false, outcome_evaluation_required: false}
+- {application_id: APP-APPLIED-001, proposal_id: PROP-CONTRACT-001, authorization_id: AUTH-INDEPENDENT-001, status: applied, action_record_ref: 'schemas/orthing-episode.schema.json#action', corrective_transition_ref: applications/daee-epistemics/CORRECTIVE-TRANSITION.schema.json, successor_state_id: SUCCESSOR-CONTRACT-001, applied_at: '2026-07-21T19:05:00Z', assessment_history_mutated: false, proposal_history_mutated: false, outcome_evaluation_required: true}
+successor_states:
+- {successor_state_id: SUCCESSOR-MEMORY-001, identity_key: memory-state, version: proposed-v2, action_label: update-memory}
+- {successor_state_id: SUCCESSOR-SKILL-001, identity_key: skill-state, version: proposed-v2, action_label: propose-skill-change}
+- {successor_state_id: SUCCESSOR-CONTRACT-001, identity_key: activation-contract-state, version: 1.0.1, action_label: propose-contract-change}
+- {successor_state_id: SUCCESSOR-LEGACY-001, identity_key: legacy-proposal-state, version: rejected-v1, action_label: reject-legacy-proposal}
 outcome_evaluations:
-- {outcome_evaluation_id: OUTCOME-001, application_id: APP-APPLIED-001, time_role: t5, result: pending, self_validating: false}
+- {outcome_evaluation_id: OUTCOME-001, application_id: APP-APPLIED-001, time_role: t5, evaluated_at: '2026-07-22T19:05:00Z', result: pending, verdict_record_ref: schemas/verdict-record.schema.json, self_validating: false}
 writeback_fixture_cases:
 - memory-proposal
 - skill-proposal
@@ -267,11 +375,11 @@ writeback_case_details:
 - {case_id: upstream-evidence-defect, disposition: evidence_request, apparent_target: fact, diagnosed_locus: evidence_adequacy}
 - {case_id: correct-output-defective-pathway, disposition: proposal, apparent_target: skill-output, diagnosed_locus: activation_contract}
 writeback_timeline:
-- {time_role: t1, record_kind: waking_orthing, record_id: ORTH-001}
-- {time_role: t2, record_kind: somnic_assessment, record_id: SA-CORRECT-DEFECTIVE-001}
-- {time_role: t3, record_kind: proposal_authorization, record_id: PROP-CONTRACT-001}
-- {time_role: t4, record_kind: applied_mutation, record_id: APP-APPLIED-001}
-- {time_role: t5, record_kind: outcome_evaluation, record_id: OUTCOME-001}
+- {time_role: t1, record_kind: waking_orthing, record_ids: [ORTH-001], occurred_at: '2026-07-20T10:00:00Z'}
+- {time_role: t2, record_kind: somnic_assessment, record_ids: [SA-CORRECT-DEFECTIVE-001], occurred_at: '2026-07-21T19:00:01Z'}
+- {time_role: t3, record_kind: proposal_authorization, record_ids: [PROP-CONTRACT-001, AUTH-INDEPENDENT-001], occurred_at: '2026-07-21T19:03:00Z'}
+- {time_role: t4, record_kind: applied_mutation, record_ids: [APP-APPLIED-001, SUCCESSOR-CONTRACT-001], occurred_at: '2026-07-21T19:05:00Z'}
+- {time_role: t5, record_kind: outcome_evaluation, record_ids: [OUTCOME-001], occurred_at: '2026-07-22T19:05:00Z'}
 non_claims:
 - no replay or counterfactual replay is implemented
 - no runtime writeback, guarded apply/revert, governed learning, patching, promotion, or closure is implemented
