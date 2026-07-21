@@ -1,0 +1,32 @@
+{
+  "schema": "orthemology-rep-meta-assessment-v1",
+  "note": "mutilde-X represents two metaortheme types with DIFFERENT fidelity/stance: faithful+endorses to mu-type-A, distorted+opposes to mu-type-corroboration. This is why fidelity/stance cannot be one global field on the standard.",
+  "assessments": [
+    {
+      "represented_standard_id": "mutilde-X",
+      "represented_standard_version": "1",
+      "metaortheme_type_id": "mu-type-A",
+      "metaortheme_type_version": "1",
+      "stance": "endorses",
+      "fidelity": "faithful",
+      "assessor": "declared analysis A review",
+      "evidence": ["ev-X-teaching-corpus"],
+      "scope": "X's public teaching of the source-order standard",
+      "uncertainty": "faithful on the source-order axis; assessed from the public teaching corpus",
+      "validity": "current"
+    },
+    {
+      "represented_standard_id": "mutilde-X",
+      "represented_standard_version": "1",
+      "metaortheme_type_id": "mu-type-corroboration",
+      "metaortheme_type_version": "1",
+      "stance": "distorts",
+      "fidelity": "distorted",
+      "assessor": "declared analysis A review",
+      "evidence": ["ev-X-corroboration-usage"],
+      "scope": "X's use of the corroboration standard",
+      "uncertainty": "distorts the corroboration standard by treating apparent count as independence",
+      "validity": "current"
+    }
+  ]
+}

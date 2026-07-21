@@ -108,3 +108,29 @@ Reopens nothing; establishes no empirical or metaphysical claim.
   split, underfit merge, OOD, nonstationary map, catastrophic forgetting,
   endpoint-vs-trajectory, model-update-without-profile-change and its converse,
   analysis-vs-model drift, hysteresis/rollback). Gate: `validate_dynamic_orthing.py`.
+
+## R7D dated amendment (2026-07-21, Decision 0033 / Phase I; audit B31–B36, probe P7)
+
+**Provenance:** OPUS CANDIDATE — REQUIRES FRESH FABLE REVIEW BEFORE MERGE.
+
+R7C named the dynamic relations; R7D **defines** them and closes the silent-transport
+probe:
+
+- **Gated transport (B34/P7).** `UPDATE-COUPLING.yaml` is now schema-validated
+  (`UPDATE-COUPLING.schema.json`): every level's `transport` is a structured object
+  requiring `default: no-transport-without-argument` and `argument_required: true`, plus
+  a `calibration` and a `catastrophic_forgetting_check`. A silent or blanket-universal
+  transport rule fails CI (`validate_dynamic_orthing.py`).
+- **Definitions (B31/B32/B33/B35).** `OSM-DYNAMICS-DEFINITIONS.yaml` defines
+  `Geom_A(theta)` (extraction, metric, alignment, permutation/rotation/scale invariance,
+  uncertainty, distribution); `ProfileOf_A ⊆ Z_A × Π_A` (evidence basis, analysis/model
+  version, relation status, many-to-many cardinality, uncertainty, transport); and the
+  merger contrast `Delta^merge_A` (model version, merge operation, evaluation
+  distribution, horizon, action/loss surfaces, hard constraints, uncertainty interval,
+  tolerance source, admission rule). The OSM object map keeps eleven distinct layers.
+- **Bounded source claim (B36).** The CSCG comparison stays within the reported
+  model/settings comparison; no unique biological mechanism, clone=neuron identity,
+  latent=ortheme identity, or human/metaphysical/theological transfer.
+
+This amendment reopens no settled Decision, adopts no terminology, runs no experiment,
+and asserts no interior/soul or metaphysical claim.

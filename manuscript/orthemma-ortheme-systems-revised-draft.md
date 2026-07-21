@@ -415,7 +415,7 @@ Five configurations, each passing the minimum-specificity test:
 
 ### 6.4 Plurality, conflict, precedence
 
-A typical episode runs under several metaorthemes at once — a version rule, an evidence-grade rule, and a closure rule — written `μ⃗ = ({μ_1, …, μ_k}, ≼)` with `≼` a declared
+A typical episode runs under several metaorthemes at once — a version rule, an evidence-grade rule, and a closure rule — written $\vec{\mu} = (\{\mu_1, \dots, \mu_k\}, \preceq)$ with `≼` a declared
 strict partial precedence order. Configurations governing disjoint components compose freely (their constraints conjoin). Two rules conflict at an episode when their meta-policies
 prescribe incompatible constraints on the same component under the states that actually obtain; resolution is only via `≼`, and a conflict unresolved by `≼` is a stop condition
 (Section 7.5) — silent override is itself a metaorthemic error. Metaorthemes can become first-order orthemes for a higher audit (Section 8.1); the regress stops at the declared
@@ -538,7 +538,7 @@ declared governance boundary.
 
 Following the core formalization, an orthing episode is a record
 
-    e = ⟨ id;  m, κ, v;  x, H;  α, w, A, T, t;  μ⃗, MetaTok, π;  C⃗, p̂;  r;  estatus;  𝒬;  δ;  hand_in, hand_out;  a, Succ ⟩
+$$e = \langle\, \mathrm{id};\ m, \kappa, v;\ x, H;\ \alpha, w, A, T, t;\ \vec{\mu}, \mathrm{MetaTok}, \pi;\ \vec{C}, \hat{p};\ r;\ \mathrm{estatus};\ \mathcal{Q};\ \delta;\ \mathrm{hand}_{\mathrm{in}}, \mathrm{hand}_{\mathrm{out}};\ a, \mathrm{Succ} \,\rangle$$
 
 — in words: which run this is; the concrete case with its identity key and version; what the episode saw, and the ordered typed evidence gathered (each item with property class,
 scope, provenance, validity); who or what executed (`α` — populated even for mechanical executors) and under what warrant (`w`, distinct from both evidence and executor identity);

@@ -40,7 +40,23 @@
         "timestamp": {"type": "string"},
         "provenance": {"type": "string"},
         "status": {"enum": ["current", "superseded", "contested", "retired"]},
-        "mutation_identity": {"enum": ["same-standard-new-token", "new-version-same-standard", "mutation-preserving-function", "new-governing-type"], "description": "for mutation edges: the identity relation (ablation-based, not wording similarity)"},
+        "transmitted_standard": {"type": "string", "description": "for transmission edges (R7D, B18): the represented-standard id transmitted; must resolve to a represented-standard node"},
+        "mutation_identity": {
+          "type": "object",
+          "description": "for mutation edges (R7D, B19): a structured ablation witness, not a bare enum",
+          "additionalProperties": false,
+          "required": ["classification", "compared_versions", "preserved_invariants", "changed_fields", "witness", "evidence", "assessor"],
+          "properties": {
+            "classification": {"enum": ["same-standard-new-token", "new-version-same-standard", "mutation-preserving-function", "new-governing-type"]},
+            "compared_versions": {"type": "array", "items": {"type": "string"}, "minItems": 2},
+            "preserved_invariants": {"type": "array", "items": {"type": "string"}},
+            "changed_fields": {"type": "array", "items": {"type": "string"}},
+            "witness": {"type": "string", "minLength": 1},
+            "evidence": {"type": "array", "items": {"type": "string"}},
+            "assessor": {"type": "string"},
+            "uncertainty": {"type": "string"}
+          }
+        },
         "note": {"type": "string"}
       }
     },
@@ -63,7 +79,7 @@
             "qualitative_indicants": {"type": "string"}
           }
         },
-        "warrant_conclusion": {"enum": ["tawatur-like-independence", "false-tawatur-common-source", "false-tawatur-copying", "underdetermined-needs-more-origin-analysis"]},
+        "warrant_conclusion": {"enum": ["dependence-detected", "source-independence-supported", "origin-analysis-underdetermined", "false-tawatur-common-source", "false-tawatur-copying", "underdetermined-needs-more-origin-analysis"], "description": "R7D (B23): the MACHINE conclusion is source-safe and never a tawatur WARRANT; tawatur-like-independence is removed from the machine vocabulary"},
         "non_claims": {"type": "array", "items": {"type": "string"}}
       }
     }

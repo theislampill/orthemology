@@ -72,6 +72,8 @@ jobs:
         run: python scripts/validate_companion_references.py
       - name: daee crosswalk + notation firewall (R7, Decision 0021)
         run: python scripts/validate_daee_crosswalk.py
+      - name: Current DAEE runtime crosswalk (R7D, Phase G)
+        run: python scripts/validate_daee_current_crosswalk.py
       - name: Noetic-application fixtures + example (R7, Decision 0021)
         run: python scripts/validate_noetic_application.py
       - name: Experiment methods / READY_TO_RUN gate (R7, Decision 0022)
@@ -88,12 +90,22 @@ jobs:
         run: python scripts/validate_meta_noetic_memetics.py
       - name: Project layer map + firewall (R7B, Phase H)
         run: python scripts/validate_layer_map.py
-      - name: Candidate-state / pre-merge decision status (R7C, Decision 0026)
+      - name: Candidate-state / pre-merge decision status (R7C 0026; R7D 0029 live-head gate)
         run: python scripts/validate_candidate_state.py
+      - name: Public experiment-readiness conformance (R7D, Decision 0029)
+        run: python scripts/validate_public_readiness.py
+      - name: Semantic decision references (R7D, Decision 0029)
+        run: python scripts/validate_decision_references.py
       - name: Multi-target noetic orthing + claim bearers (R7C, Decision 0027)
         run: python scripts/validate_noetic_targets.py
+      - name: Evidence-bound multi-target noetic claims (R7D, Decision 0030)
+        run: python scripts/validate_noetic_claims.py
       - name: Represented standards + memetic ecology (R7C, Decision 0028)
         run: python scripts/validate_memetic_ecology.py
+      - name: Governed corrective search + transition witness (R7D, Decision 0033)
+        run: python scripts/validate_corrective_transition.py
+      - name: Dynamic-orthability argument map (R7D, Phase J)
+        run: python scripts/validate_argument_map.py
       - name: FCSP-2 packet smoke tests (deterministic; no result)
         run: python experiments/false-closure-selective-prediction-v2/tests/test_smoke.py
       - name: ER-2 packet smoke tests (deterministic; no result)

@@ -1,0 +1,36 @@
+{
+  "schema": "orthemology-noetic-evidence-registry-v1",
+  "note": "Every evidence_id a NoeticClaim asserts on must resolve here. Interior subject-level claims resolve only to evidence ABOUT the subject (observation bridge), never to direct interior access.",
+  "evidence": [
+    {
+      "evidence_id": "ev-wording-1",
+      "observed_occurrence": "m_discourse",
+      "property_class": "structural",
+      "provenance": "the objection's public wording and immediate context, as received",
+      "scope": "the utterance surface reading only",
+      "currentness": "current",
+      "validity": "valid",
+      "relation_to_target": "directly evidences the discourse-interpretation claim; only ABOUT (not direct access to) the subject"
+    },
+    {
+      "evidence_id": "ev-reread-1",
+      "observed_occurrence": "m_runtime",
+      "property_class": "behavioral",
+      "provenance": "the DAEE runtime Diagnostic-IR whole-state reread trace (field_witness projection)",
+      "scope": "the runtime control field only",
+      "currentness": "current",
+      "validity": "valid",
+      "relation_to_target": "evidences runtime closure; not interior restoration of the subject"
+    },
+    {
+      "evidence_id": "ev-route-1",
+      "observed_occurrence": "m_response",
+      "property_class": "structural",
+      "provenance": "the released response artifact and its route register",
+      "scope": "the response artifact and route only",
+      "currentness": "current",
+      "validity": "valid",
+      "relation_to_target": "evidences route quality; does not entail uptake"
+    }
+  ]
+}

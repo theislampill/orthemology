@@ -1,0 +1,66 @@
+schema: orthemology-osm-dynamics-definitions-v1
+# R7D Phase I (audit B31/B32/B33/B35). R7C named Geom_A, ProfileOf_A, and the merger
+# contrast; R7D DEFINES them. scripts/validate_dynamic_orthing.py checks the required
+# fields are present and non-empty. Bounded to the reported OSM/CSCG model comparison;
+# no unique biological mechanism, no human/metaphysical transfer.
+
+# I1 (B31): representation geometry
+geometry_definition:
+  symbol: "Geom_A(theta)"
+  representation_extraction: "the layer/population code extracted from model theta on a declared probe distribution"
+  metric: "a declared representational-similarity metric (e.g. linear-CKA or a stated RSA distance)"
+  alignment: "label/state alignment via a declared assignment before comparison"
+  permutation_invariance: "invariant to latent-index permutation (relabeling does not change geometry)"
+  rotation_scale_handling: "rotation/scale handled per the declared metric (CKA is rotation/scale invariant; RSA is stated)"
+  uncertainty: "reported with a bootstrap interval over probe samples"
+  evaluated_distribution: "the declared probe distribution and time index"
+  non_claims: ["geometry equivalence under relabeling is not latent-parameter equality", "no unique biological mechanism"]
+
+# I2 (B32): latent -> profile relation
+profile_relation:
+  symbol: "ProfileOf_A ⊆ Z_A × Π_A"
+  relation_status: "representational/interpretive relation under a declared analysis A — not causal, not identity"
+  evidence_basis: "the declared evidence linking a latent state to a profile placement"
+  analysis_version: "indexed to ver(A) and ver(theta)"
+  cardinality: "many-to-many (no bijection; one latent may map to several profiles and vice versa)"
+  uncertainty: "each pairing carries a confidence/uncertainty annotation"
+  transport: "does NOT transport under relabeling or model update without a declared transport argument (see UPDATE-COUPLING)"
+  non_claims: ["a latent state is never an ortheme by declaration; admission is by ablation", "the relation is analysis-relative, not a worldly fact"]
+
+# I3 (B33): merger / ablation contrast
+merger_contrast:
+  symbol: "Delta^merge_A(z_i, z_j)"
+  model_version: "ver(theta) under which the contrast is computed"
+  states_merged: "the two latent states z_i, z_j"
+  merge_operation: "the declared merge operator (e.g. tie their representations / share a clone)"
+  evaluation_distribution: "the declared task distribution used to score before/after"
+  horizon: "the declared rollout horizon"
+  action_loss_surfaces: "the declared action/reward/loss surfaces compared"
+  hard_constraints: "feasibility constraints that must hold for the contrast to count"
+  uncertainty_interval: "a reported interval over the contrast"
+  tolerance_source: "epsilon_A from the declared analysis, not chosen post hoc"
+  admission_rule: "split admitted iff the contrast exceeds epsilon_A with the interval excluding it; a single training-set delta is insufficient"
+  non_claims: ["a latent split does not become an orthemic distinction by one training-set performance delta"]
+
+# I5 (B35): OSM object separation — the eleven-way distinction kept explicit
+object_map:
+  layers:
+  - world/task state
+  - concrete occurrence
+  - sensory observation
+  - biological cell response
+  - biological population representation
+  - CSCG clone
+  - model latent posterior
+  - model parameter state
+  - representation geometry
+  - inferred orthemic profile
+  - actual orthemic profile
+  non_claims:
+  - "a CSCG clone is not a biological neuron; a latent state is not an ortheme; parameter equality is not representation equivalence"
+
+# I6 (B36): bounded source claim
+source_claim:
+  bounded_statement: "among the reported models/settings, several attained selected final structures, while CSCG most closely reproduced both the reported endpoint organization and the learning trajectory"
+  citation: "10.1038/s41586-024-08548-w"
+  forbidden: ["a uniquely proven biological mechanism", "identity between clone and neuron", "identity between latent state and ortheme", "human noetic structure", "metaphysical orthability", "divine attributes"]

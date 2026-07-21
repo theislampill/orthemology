@@ -5,14 +5,23 @@ schema: orthemology-noetic-field-dynamics-v1
 daee_pinned_commit: c86b3c6673147b8802fe222373a165a37d4d24a8
 gradient_adjudication:
   models: [G0, G1, G2]
-  adopted: G1
+  # R7D, Decision 0033 (audit B26): G1 is a CANDIDATE, not adopted — it lives in the
+  # unmerged PR chain and awaits fresh Fable review + protected merge.
+  proposed_candidate: G1
+  # Predicate vocabulary (R7D, B27): a runtime transition is AdmissibleCorrectiveTransition
+  # / PathwayAdequateCorrection / GovernedCorrectiveSearch — NOT "strictly sound".
+  # Strict soundness (Decision 0011) is factive and claim-relative; obeying constraints,
+  # improving an order, landing a burden, or reaching closure does not make a transition
+  # strictly sound.
+  predicate_vocabulary: [AdmissibleCorrectiveTransition, PathwayAdequateCorrection, GovernedCorrectiveSearch]
+  strict_soundness_reserved: "strict soundness is reserved for the factive claim-relative predicate (Decision 0011); it is never asserted of a merely admissible runtime transition"
   G0:
     name: metaphor only
     reading: "'gradient/field/attractor/descent' are analogies; no formal monotonicity or convergence follows"
   G1:
     name: order-theoretic / route-ranked corrective descent
-    status: adopted
-    reading: "a vector or partially-ordered burden state ranked by a governing functional; a step is sound only if it improves a declared ordering, preserves hard constraints, hides no burden, retains provenance/uncertainty, and triggers a whole-state reread"
+    status: proposed-candidate
+    reading: "a vector or partially-ordered burden state ranked by a governing functional; a transition is an ADMISSIBLE / pathway-adequate GOVERNED corrective transition (never 'strictly sound') only if it improves a declared ordering, preserves hard constraints, hides no burden, retains provenance/uncertainty, and triggers a whole-state reread"
   G2:
     name: literal differentiable gradient flow
     status: conditional-future

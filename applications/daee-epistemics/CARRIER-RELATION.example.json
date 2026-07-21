@@ -1,0 +1,28 @@
+{
+  "schema": "orthemology-carrier-relation-v1",
+  "note": "One institution carries the same represented standard in distinct modes toward distinct types; a quotation is not an endorsement.",
+  "relations": [
+    {
+      "carrier_id": "inst-X",
+      "carrier_version": "1",
+      "represented_standard_id": "mutilde-X",
+      "represented_standard_version": "1",
+      "content_scope": "the source-order component",
+      "mode": "endorses",
+      "evidence": ["ev-X-teaching-corpus"],
+      "time": "t0",
+      "validity": "current"
+    },
+    {
+      "carrier_id": "artifact-src",
+      "carrier_version": "1",
+      "represented_standard_id": "mutilde-X",
+      "represented_standard_version": "1",
+      "content_scope": "the corroboration component, quoted not endorsed",
+      "mode": "quotes",
+      "evidence": ["ev-src-quotation"],
+      "time": "t0",
+      "validity": "current"
+    }
+  ]
+}

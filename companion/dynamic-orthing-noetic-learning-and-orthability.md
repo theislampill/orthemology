@@ -7,10 +7,15 @@ claim; no theological claim is asserted as established; asserts no soul access.*
 
 ## 1. Source-status note
 
-Four source statuses are used and never conflated: **primary-text verified** (a
+Five source statuses are used and never conflated: **primary-text verified** (a
 located classical text), **secondary reconstruction** (a modern scholarly
 compilation or dissertation), **cross-source synthesis** (this project's joining
-of sources), and **orthemological extension** (a claim of this framework). The
+of sources), **orthemological extension** (a claim of this framework), and
+**creed-internal inference** (a step valid only inside a labeled school, e.g. the
+Atharī route on rungs 8–10). Every load-bearing claim below and every rung in
+[`DYNAMIC-ORTHABILITY-ARGUMENT-MAP.yaml`](DYNAMIC-ORTHABILITY-ARGUMENT-MAP.yaml)
+carries one of these five labels; a creed-internal step is never presented as
+school-neutral, and no empirical result is ever labeled above cross-source synthesis. The
 supplied `Ibn Taymiyyah's Epistemology.md` is a **collection** of modern
 scholarly materials, not one authorial work by Ibn Taymiyya; the "concrete
 reason / ideal reason" contrast is a **modern interpretive lens** (associated
@@ -72,7 +77,8 @@ no warrant**.
 Latent states, noetic fields, orthemes, metaorthemes, and orthability are
 **formal / modelling / analysis objects**. Objectivity lies in the truth of the
 analysis-relative instantiation/placement relation constrained by concrete
-reality ($\operatorname{Inst}_A$, $O^*(m; A)$ once $A$ is fixed — Decision 0005),
+reality ($\operatorname{Inst}_A$, $O^*(m; A)$ once $A$ is fixed — Decision 0001;
+symbol normalization is Decision 0005),
 **not** in separately subsisting Platonic universals (Decision 0009 §6).
 
 ## 7. Multi-target noetic orthing
@@ -97,22 +103,29 @@ dynamic orthability is the analysis-relative availability of lawful, evidence-
 sensitive, correction-capable trajectories among unresolved, mistaken, and more
 adequate states of representation and action under a declared analysis $A$.
 
-### 8.1 Six modalities that must not collapse
+### 8.1 Eight modalities that must not collapse
 
-"Correction-capable trajectories are available" is ambiguous across (audit B18):
+"Correction-capable trajectories are available" is ambiguous across **eight** distinct
+modalities (audit B39); collapsing any two is a fallacy:
 
 1. **metaphysical possibility** — a correction trajectory exists in some possible world;
 2. **nomological possibility** — one exists under the actual laws;
-3. **reachability** — $m' \in \operatorname{Reach}_A(m, \Pi)$: some action reaches it;
-4. **actor accessibility** — $m' \in \operatorname{Accessible}_{A,\alpha,t}(m, H_t)$: *this* actor can reach it from its history;
-5. **discoverability** — it is findable under the available evidence;
-6. **learnability / convergence** — this representation class can learn it, and/or is guaranteed to converge.
+3. **objective reachability** — $m' \in \operatorname{Reach}_A(m, \Pi)$: some admissible action-sequence reaches it (a fact about the state space, actor-independent);
+4. **controllability** — a *governed* policy can steer the system to it (reachability plus a control law), still actor-independent;
+5. **actor accessibility** — $m' \in \operatorname{Accessible}_{A,\alpha,t}(m, H_t)$: *this* actor can reach it from *its* history and capacities;
+6. **evidence-relative discoverability** — it is findable under the evidence actually available to the inquiry;
+7. **representation-class learnability** — this representation/hypothesis class *can* learn the correction structure at all;
+8. **convergence** — a learning procedure is *guaranteed* to converge to it (rate/limit claims), a strictly stronger claim than learnability.
 
-Dynamic orthability is at levels 1–3 (objective corrigibility); it must **not** be
-collapsed into 4–6 (agent-relative accessibility, learnability, convergence). It
-does **not** entail guaranteed learnability, universal convergence, one scalar
-gradient (Decision 0025 adopts G1, not G2), a created learner producing the modal
-order (orthability-O is not created), or the metaphysical bridge.
+Dynamic orthability is an **objective corrigibility** notion at levels 1–4 (the
+correction structure and its reachability/controllability are not created by any
+learner); it must **not** be collapsed into 5–8 (agent-relative accessibility,
+evidence-relative discoverability, representation-class learnability, guaranteed
+convergence). Levels 3–4 are *objective but modal*, not "already actual"; only levels
+1–2 are unconditioned. Dynamic orthability does **not** entail guaranteed learnability,
+universal convergence, one scalar gradient (Decision 0025/0033 hold G1 as
+proposed-candidate, not literal G2), a created learner producing the modal order
+(orthability-O is not created, Decision 0010), or the metaphysical bridge.
 
 ## 9. Metaphysical argument map
 
@@ -136,15 +149,45 @@ levels, not proof of the upper bridge.
 Rungs 1–3 are what the static and dynamic Orthemology material addresses. Rungs
 4–10 each require **explicit bridge premises already identified in the companion
 papers**; the learning/diagnosis material never carries them. Rung 10 is
-creed-internal (Atharī) and school-labeled.
+creed-internal (Atharī) and school-labeled. The full machine-readable map — every
+rung's premise, inference type, conclusion, dependency, evidence/source status,
+strongest objection, rival exit, and school-neutral vs Atharī-internal status — is
+[`DYNAMIC-ORTHABILITY-ARGUMENT-MAP.yaml`](DYNAMIC-ORTHABILITY-ARGUMENT-MAP.yaml),
+checked in CI. Its `non_entailments` block records that OSM/DAEE exemplify only rungs
+1–3 and prove no upper rung.
 
-## 10. Theological / Atharī route
+## 10. Theological / Atharī route and the created/uncreated distinction
 
-Rung 10 (revelation-specific Speech) is developed only in the Atharī companion
-(`orthability-divine-attributes-and-speech-athari.md`), under explicit
-school-labeled, revelational premises. The reason/revelation firewall (§8 of that
-companion) stands: no engineering or learning evidence supports any theological
-rung.
+Rung 10 (revelation-specific Speech) is developed in full in the Atharī companion
+(`orthability-divine-attributes-and-speech-athari.md`), under explicit school-labeled,
+revelational premises. The reason/revelation firewall stands: **no engineering or
+learning evidence supports any theological rung**, and OSM/DAEE belong only to the
+lower explanatory levels.
+
+This section adds only a **bounded dynamic cross-section**, not a replacement doctrine.
+The dynamic/learning vocabulary of this paper must keep the following strictly separate
+(none is reducible to another, and none is established by OSM or DAEE):
+
+- **created human linguistic convention** — the historically evolved conventions of a
+  human language (a created, dynamic, learned system);
+- **created token and media** — the created sound, ink, page, screen, and recitation
+  through which wording is borne;
+- **eternally known linguistic possibility** — that a given wording is possible/known is
+  not itself a created event;
+- **the divine act of speaking** — a divine act, not a creaturely learning trajectory;
+- **revealed Arabic wording** — the specific revealed wording, received in a created
+  human language;
+- **creaturely reception** — the created hearing, recitation, and writing by which
+  creatures receive it;
+- **the Qur'an as divine Speech** — under the Atharī route, divine Speech (uncreated),
+  distinguished from the created media that convey it.
+
+The dynamic-orthing apparatus of this paper models only the **created, learnable** side
+(convention, media, reception) and the analysis-relative structure of intelligibility
+(orthability-L/O/R). It says nothing for or against the uncreated status of divine
+Speech; that is a creed-internal claim carried solely by the Atharī companion's labeled
+premises. Collapsing "created Arabic media are learned/dynamic" into "divine Speech is
+created" is exactly the conflation the firewall forbids.
 
 ## 11. Objections and rival exits
 

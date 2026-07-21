@@ -1,0 +1,93 @@
+# Evidence-bound noetic-claim fixtures (R7D, Decision 0030, audit B10/B11).
+# Each fixture is a full NoeticClaim run through scripts/validate_noetic_claims.py's
+# support-rule gate against the target map (occurrence identity/version/in_scope) and
+# the evidence registry. `expected_valid` is what the gate must return; invalid
+# fixtures name the `violates` rule. No fixture asserts a soul-state or motive verdict.
+schema: orthemology-noetic-claim-fixtures-v1
+target_map_identities:
+  m_discourse: {identity: objection-utterance-abc123, version: as-received}
+  m_subject: {identity: interlocutor-at-t, version: at-time-of-engagement}
+  m_uptake: {identity: uptake-unobserved, version: none}
+fixtures:
+- id: NC1
+  distinction: target out of scope cannot be asserted
+  expected_valid: false
+  violates: target-out-of-scope-asserted
+  claim: {claim_id: f1, target_bearer: m_uptake, target_id: uptake-unobserved, target_version: none,
+          target_type: uptake, analysis_id: A, analysis_version: v1, proposition: the subject accepted and was restored,
+          candidate_alternatives: [], evidence_ids: [], support_rule: none, uncertainty: {level: high, basis: none},
+          status: asserted, defeaters: [], non_claims: [no soul access]}
+- id: NC2
+  distinction: asserted subject-interior claim with zero evidence (the P3 breach)
+  expected_valid: false
+  violates: subject-asserted-thin
+  claim: {claim_id: f2, target_bearer: m_subject, target_id: interlocutor-at-t, target_version: at-time-of-engagement,
+          target_type: inferred-noetic-profile, analysis_id: A, analysis_version: v1, proposition: the subject has hawa,
+          candidate_alternatives: [], evidence_ids: [], support_rule: disclaimer, uncertainty: {level: high, basis: none},
+          status: asserted, defeaters: [], non_claims: [no soul access]}
+- id: NC3
+  distinction: unresolved evidence id
+  expected_valid: false
+  violates: evidence-unresolved
+  claim: {claim_id: f3, target_bearer: m_discourse, target_id: objection-utterance-abc123, target_version: as-received,
+          target_type: overt-discourse, analysis_id: A, analysis_version: v1, proposition: surface reading X,
+          candidate_alternatives: [], evidence_ids: [ev-DOES-NOT-EXIST], support_rule: structural, uncertainty: {level: low, basis: wording},
+          status: asserted, defeaters: [], non_claims: [no interior claim]}
+- id: NC4
+  distinction: subject claim citing evidence without an observation bridge
+  expected_valid: false
+  violates: subject-no-bridge
+  claim: {claim_id: f4, target_bearer: m_subject, target_id: interlocutor-at-t, target_version: at-time-of-engagement,
+          target_type: inferred-noetic-profile, analysis_id: A, analysis_version: v1, proposition: candidate defect,
+          candidate_alternatives: [a, b], evidence_ids: [ev-wording-1], support_rule: about-bridge-thin,
+          uncertainty: {level: high, basis: one feature}, status: held, defeaters: [], non_claims: [no soul access]}
+- id: NC5
+  distinction: wrong target version (target unresolved)
+  expected_valid: false
+  violates: target-unresolved
+  claim: {claim_id: f5, target_bearer: m_subject, target_id: interlocutor-at-t, target_version: WRONG-VERSION,
+          target_type: inferred-noetic-profile, analysis_id: A, analysis_version: v1, proposition: candidate defect,
+          candidate_alternatives: [a, b], evidence_ids: [ev-wording-1],
+          bridges: [{evidence_id: ev-wording-1, observed_from: m_discourse, about: m_subject, establishes_truth: false}],
+          support_rule: about-bridge-thin, uncertainty: {level: high, basis: one feature}, status: held, defeaters: [], non_claims: [no soul access]}
+- id: NC6
+  distinction: subject-interior type attached to the discourse token
+  expected_valid: false
+  violates: subject-type-on-discourse
+  claim: {claim_id: f6, target_bearer: m_discourse, target_id: objection-utterance-abc123, target_version: as-received,
+          target_type: inferred-noetic-profile, analysis_id: A, analysis_version: v1, proposition: the utterance IS a deformation,
+          candidate_alternatives: [], evidence_ids: [ev-wording-1], support_rule: structural, uncertainty: {level: low, basis: wording},
+          status: asserted, defeaters: [], non_claims: [none]}
+- id: NC7
+  distinction: overt avowed commitment (public) may be asserted on public evidence
+  expected_valid: true
+  claim: {claim_id: f7, target_bearer: m_subject, target_id: interlocutor-at-t, target_version: at-time-of-engagement,
+          target_type: avowed-commitment, analysis_id: A, analysis_version: v1, proposition: the subject publicly avows criterion C,
+          candidate_alternatives: [avowal is rhetorical], evidence_ids: [ev-wording-1],
+          bridges: [{evidence_id: ev-wording-1, observed_from: m_discourse, about: m_subject, establishes_truth: false}],
+          support_rule: "public-avowal: an overt public avowal is evidenced by its own wording, distinct from an inferred interior",
+          uncertainty: {level: medium, basis: public avowal is overt but its interior sincerity is not accessed},
+          status: asserted, defeaters: [later retraction], non_claims: [no soul access, avowal is not interior sincerity]}
+- id: NC8
+  distinction: several live subject profiles held with alternatives (valid)
+  expected_valid: true
+  claim: {claim_id: f8, target_bearer: m_subject, target_id: interlocutor-at-t, target_version: at-time-of-engagement,
+          target_type: inferred-noetic-profile, analysis_id: A, analysis_version: v1, proposition: a criterion-import defect best fits,
+          candidate_alternatives: [sincere confusion, inherited premise, malformed criterion], evidence_ids: [ev-wording-1],
+          bridges: [{evidence_id: ev-wording-1, observed_from: m_discourse, about: m_subject, establishes_truth: false}],
+          support_rule: about-bridge-thin, uncertainty: {level: high, basis: one feature; several profiles live},
+          status: held, defeaters: [a discriminating observation], non_claims: [no soul access, no motive verdict]}
+- id: NC9
+  distinction: later uptake modeled as a separate occurrence, not asserted
+  expected_valid: true
+  claim: {claim_id: f9, target_bearer: m_uptake, target_id: uptake-unobserved, target_version: none,
+          target_type: uptake, analysis_id: A, analysis_version: v1, proposition: no later uptake occurrence has been observed,
+          candidate_alternatives: [], evidence_ids: [], support_rule: "uptake-separate: uptake is a distinct later occurrence, not entailed by runtime closure",
+          uncertainty: {level: underdetermined, basis: no uptake observed}, status: out-of-scope, defeaters: [], non_claims: [runtime closure is not uptake]}
+- id: NC10
+  distinction: negative control — plain proposition-level discourse claim (valid)
+  expected_valid: true
+  claim: {claim_id: f10, target_bearer: m_discourse, target_id: objection-utterance-abc123, target_version: as-received,
+          target_type: overt-discourse, analysis_id: A, analysis_version: v1, proposition: the utterance states a factual gap,
+          candidate_alternatives: [reading is charitable], evidence_ids: [ev-wording-1], support_rule: structural-surface-reading,
+          uncertainty: {level: low, basis: public wording}, status: asserted, defeaters: [author restatement], non_claims: [no interior/motive claim]}

@@ -1,0 +1,122 @@
+schema: orthemology-daee-current-runtime-crosswalk-v1
+# R7D Phase G (audit B24/B25). Read-only adjudication of the CURRENT daee-epistemics
+# runtime objects against Orthemology. No DAEE modification; no merge; no import as a
+# school-neutral core primitive.
+#
+# DUAL-PIN FINDING (refutes B24 at the commit level): the live published
+# daee-epistemics `main` == the R7B/R7C pin c86b3c66 (2026-06-18). The Diagnostic IR /
+# field-witness / MRP / owner-activation content the audit calls "current developments"
+# exists AT that commit (diagnostic-ir.md present at ref=main, sha c0393249, verified
+# read-only this pass). There is NO published post-pin delta; the "112 commits ahead"
+# was a local scratch checkout, not origin/main. What IS real is that R7C did not fully
+# crosswalk that IR content — done here.
+dual_pin:
+  historical_r7b_pin: c86b3c6673147b8802fe222373a165a37d4d24a8
+  current_live_main: c86b3c6673147b8802fe222373a165a37d4d24a8
+  coincide: true
+  verified_read_only: "diagnostic-ir.md present at ref=main sha c0393249; objects grounded by content grep (Diagnostic IR 19, burden 93, field_witness 20, closure 17, reread 12, owner activation 3, PsiN 3, PsiI 2)"
+  note: "adjudicate the pinned content (= current main); do NOT chase a nonexistent published delta or import DAEE objects as school-neutral core primitives"
+
+# G2: file-by-file adjudication of the current runtime objects
+file_adjudication:
+- file: README.md
+  disposition: keep-old-reading
+  note: "positioning only; no Orthemology object depends on it"
+- file: VISION.md
+  disposition: keep-old-reading
+- file: atomics/skill/SKILL.md
+  disposition: revise-crosswalk
+  note: "runtime skill entry; maps to the application layer, not the core"
+- file: atomics/skill/references/diagnostics/diagnostic-ir.md
+  disposition: new-application-extension
+  note: "the Diagnostic IR is the object the correspondence table below adjudicates"
+- file: recursive-state-transitions.md
+  disposition: revise-crosswalk
+- file: routing-precedence.md
+  disposition: revise-crosswalk
+- file: output-release.md
+  disposition: revise-crosswalk
+- file: pattern-profiling.md
+  disposition: defer
+  note: "no new Orthemology object; revisit if a reproducible defect appears"
+- file: algebraic-notation-and-noetic-formalism.md
+  disposition: keep-old-reading
+  note: "already cited in Decision 0025 for the [direct] nabla=route-ranking bound"
+
+# G3: mandatory DAEE-object -> Orthemology correspondence (bounded; not import)
+correspondence:
+- daee_object: Diagnostic IR
+  orthemology_role: episode-internal control representation / inferred operational state
+  mapping_type: application-extension
+  evidence_status: read-only grounded (diagnostic-ir.md at pin)
+  non_claims: ["not ground truth", "not one metaorthemma", "not a school-neutral core primitive"]
+- daee_object: burden nodes + dependency graph
+  orthemology_role: claim / residual / dependency records
+  mapping_type: application-extension
+  evidence_status: read-only grounded (burden x93)
+  non_claims: ["a burden is not a verdict; disclosure of burdens can raise the ledger while improving the position (N18)"]
+- daee_object: owner activation plan
+  orthemology_role: pre-execution governing / route plan
+  mapping_type: application-extension
+  evidence_status: read-only grounded (owner activation x3)
+  non_claims: ["a plan is not execution", "not automatically a metaorthemma"]
+- daee_object: owner/ACT execution row
+  orthemology_role: execution record that may reference one or more metaorthemmata
+  mapping_type: application-extension
+  evidence_status: read-only grounded
+  non_claims: ["not identical to the configuration token"]
+- daee_object: route pressure (nabla)
+  orthemology_role: eligibility / ranking read over admissible live routes
+  mapping_type: application-extension
+  evidence_status: read-only grounded (Decision 0025 [direct] bound)
+  non_claims: ["not a differential gradient"]
+- daee_object: Delta
+  orthemology_role: event-local runtime / control-state transition
+  mapping_type: application-extension
+  evidence_status: read-only grounded
+  non_claims: ["not result correctness"]
+- daee_object: field_witness
+  orthemology_role: auditable projection / trace / closure witness over an episode
+  mapping_type: application-extension
+  evidence_status: read-only grounded (field_witness x20)
+  non_claims: ["not the full world", "a projection, not ground truth"]
+- daee_object: normalized activation record (NAR)
+  orthemology_role: normalized execution / transition projection
+  mapping_type: application-extension
+  evidence_status: read-only grounded
+  non_claims: ["a projection, not the episode"]
+- daee_object: Mid-Reread Pressure (MRP)
+  orthemology_role: governed post-transition reinspection / activation harness
+  mapping_type: application-extension
+  evidence_status: read-only grounded (reread x12)
+  non_claims: ["not a truth metric"]
+- daee_object: R(H, Delta)
+  orthemology_role: whole-state reread after transition
+  mapping_type: application-extension
+  evidence_status: read-only grounded
+  non_claims: ["reread blocks closure over a live dependency; not a truth claim"]
+- daee_object: Psi-N
+  orthemology_role: runtime execution-field closure only
+  mapping_type: application-extension
+  evidence_status: read-only grounded (PsiN x3)
+  non_claims: ["runtime closure is not human restoration"]
+- daee_object: Psi-I
+  orthemology_role: uncertain inferred interlocutor field
+  mapping_type: application-extension
+  evidence_status: read-only grounded (PsiI x2)
+  non_claims: ["no soul access; uncertainty-bearing inference only"]
+- daee_object: T_lang
+  orthemology_role: partial coupling to a later possible uptake occurrence
+  mapping_type: application-extension
+  evidence_status: read-only grounded
+  non_claims: ["no guaranteed uptake"]
+- daee_object: hard registers / live lenses
+  orthemology_role: application-specific derived registers
+  mapping_type: application-extension
+  evidence_status: read-only grounded
+  non_claims: ["NOT school-neutral core primitives"]
+
+non_claims:
+- "co-development with DAEE is not validation; shared owner/model lineage prevents any independent-validation claim"
+- "no DAEE object is imported as a school-neutral Orthemology core primitive; all are application-layer extensions"
+- "no OSM/DAEE evidence supports any human, metaphysical, or theological conclusion"

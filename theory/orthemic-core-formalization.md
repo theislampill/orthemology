@@ -134,8 +134,7 @@ for one placement inside an episode (2.3).
 
 An **orthing episode** is a record
 
-    e = ⟨ id;  m, κ, v;  x, H;  α, w, A, T, t;  μ⃗, MetaTok, π;  C⃗, p̂;  r;  estatus;  𝒬;  δ;
-          hand_in, hand_out;  a, Succ ⟩
+$$e = \langle\, \mathrm{id};\ m, \kappa, v;\ x, H;\ \alpha, w, A, T, t;\ \vec{\mu}, \mathrm{MetaTok}, \pi;\ \vec{C}, \hat{p};\ r;\ \mathrm{estatus};\ \mathcal{Q};\ \delta;\ \mathrm{hand}_{\mathrm{in}}, \mathrm{hand}_{\mathrm{out}};\ a, \mathrm{Succ} \,\rangle$$
 
 with components (each glossed in ordinary language):
 
@@ -152,10 +151,10 @@ with components (each glossed in ordinary language):
 | `A` | declared analysis (identifier + version) | the analysis the placement is relative to (manuscript §2.6); result correctness (V1) is judged against `O*(m; A)`; within the episode's scope the task-subscripted spaces below abbreviate their `A`-indexed forms |
 | `T = task(A)` | task | the task component of `A`, retained as a separate readable component |
 | `t` | time interval | when the episode ran |
-| `μ⃗ = (μ₁,…,μ_k; ≼)` | metaorthemic configuration | the governing rules in force, with precedence order `≼` |
+| $\vec{\mu} = (\mu_1, \dots, \mu_k; \preceq)$ | metaorthemic configuration | the governing rules in force, with precedence order `≼` |
 | `MetaTok(e) = {μ̄_1,…,μ̄_j}` | concrete metaorthemmata (Decision 0002) | the case-bound CONFIGURATION TOKENS of governing types actually applied. Each `μ̄` records/references: its own identity and lineage; `(μ, ver(μ))` via the internal typing `MetaInst(μ̄, μ)`; `(A(e), ver(A(e)))` with `Compatible(μ̄, A(e))` — the token binds case-specific values WITHIN the declared analysis, references any value `A` fixes uniquely, and never overrides `A` without an explicit new analysis version; the target `(κ, v)`; governed component `g`; the case-specific binding map `B` (reference frame, tolerance value, fixture, success surface, …); scope `σ` incl. the claims in `𝒬` that depend on it; references to policy, evidence selector, instrument/tool and calibration provenance; the **binder** (actor/process that made the binding) with binding warrant `w_bind`, kept DISTINCT from the designated executor; binding time `t_bind`; validity/expiry/supersession. The token REFERENCES the episode's evidence `H`, trace, and output — it never absorbs them (the application-event view `ApplyEvent(μ̄, e) = ⟨μ̄, Trace_e\|_μ̄⟩` is derived, not primitive). **Zero-burden rule:** a configuration with no material case-specific binding, non-default scope, instrument/calibration, or independent validity condition gets no explicit token, and `V3c ∉ ReqPath(e)` (status recorded not-applicable, with reason) |
-| `π` | policy | the concrete procedure executed under `μ⃗` |
-| `C⃗` | typed candidate families | open alternatives per uncertainty axis: `C^id ⊆ M` (which occurrence), `C^profile ⊆ Π_A` (which profile), `C^cause ⊆ 𝒦_A` (which cause), `C^route ⊆ ℛ_A` (which route), `C^warrant ⊆ 𝒲_A` (which warrant state) — competing hypotheses may themselves be PROFILES, so candidates are not forced into single orthemes |
+| `π` | policy | the concrete procedure executed under $\vec{\mu}$ |
+| $\vec{C}$ | typed candidate families | open alternatives per uncertainty axis: `C^id ⊆ M` (which occurrence), `C^profile ⊆ Π_A` (which profile), `C^cause ⊆ 𝒦_A` (which cause), `C^route ⊆ ℛ_A` (which route), `C^warrant ⊆ 𝒲_A` (which warrant state) — competing hypotheses may themselves be PROFILES, so candidates are not forced into single orthemes |
 | `p̂ ∈ Π_A^∂` | inferred placement | **exactly one partial profile** — the profile actually placed, determined on resolved axes and open on the rest; **never a set of complete profiles** (live alternatives belong in `Ĉ ⊆ Π_A`, and optional weights in the separate belief layer) and **never coerced to a singleton ortheme**; `Ô ⊆ O` survives only as the derived flattening of `p̂`. (R4 repair, Decision 0012: the pre-R4 gloss "or a bounded set of profiles if unresolved" typed one symbol into two spaces and is withdrawn; archived patches retain it as history.) |
 | `r` | route | the operation/owner the case was sent to |
 | `estatus` | evidence status map | per placed claim: validated / provisional / stale / absent |
@@ -233,12 +232,12 @@ none, with reason) is distinguished from "route omitted" (a defect), and
    `e`; episodes with identical outputs can differ in pathway and hence in
    every §4 verdict.
 2. **Episode ≠ policy.** `π` is repeatable and undated; `e` is one dated
-   execution of `π`. Reliability claims attach to `π` (and `μ⃗`);
+   execution of `π`. Reliability claims attach to `π` (and $\vec{\mu}$);
    correctness claims attach to `e`.
 3. **Placement inside an episode ≠ the episode.** The compact function
    style becomes the derived judgment
 
-       e ⊨_μ (m : o-hat)   iff   o-hat ∈ Ô(e) and μ ∈ μ⃗(e) governed that placement
+$$e \models_{\mu} (m : \hat{o}) \iff \hat{o} \in \hat{O}(e) \ \text{and}\ \mu \in \vec{\mu}(e)\ \text{governed that placement}$$
 
    (gloss: "in episode `e`, under rule `μ`, the case was placed under
    `o-hat`"). One placement is correct iff `o-hat ∈ O*(m; A(e))`; the placed
@@ -330,7 +329,7 @@ configuration-plus-policy — which the safeguards below must block.
 
 ### 3.4 Plurality, conflict, precedence, provenance, revision, safeguards
 
-- **Several metaorthemes per episode.** `μ⃗(e) = ({μ₁,…,μ_k}, ≼)`.
+- **Several metaorthemes per episode.** $\vec{\mu}(e) = (\{\mu_1, \dots, \mu_k\}, \preceq)$.
   Configurations governing *disjoint* components compose freely (their
   constraints conjoin); a typical episode runs under a version rule, an
   evidence-grade rule, and a closure rule at once.
@@ -427,7 +426,7 @@ compact core:
 - **V2b-P — configured-procedure truth-conduciveness (pathway-side;
   Decision 0003).** NON-FACTIVE. The procedure family
   actually instantiated in this episode — under its governing
-  configuration `μ⃗`, applicable metaorthemmata `MetaTok(e)`, and
+  configuration $\vec{\mu}$, applicable metaorthemmata `MetaTok(e)`, and
   execution mode — satisfies the predeclared reliability criterion over
   its DECLARED reference class. This is not an unrestricted claim about
   the abstract procedure type. For each placed claim `q`, the reliability
@@ -464,7 +463,7 @@ compact core:
   item is current for `(κ, v)` and carries admissible provenance (gloss:
   not stale, not unsourced — separated from V2a because evidence can meet
   the standard's *strength* while being the wrong vintage).
-- **V3a — governing-configuration adequacy.** `adeq(μ⃗, e)`: each `μᵢ` in
+- **V3a — governing-configuration adequacy.** $\operatorname{adeq}(\vec{\mu}, e)$: each `μᵢ` in
   force is adequate for the case's risk class — `S_μ` separates the
   higher-order states this case class can occupy and `select_μ` can actually
   discriminate them (gloss: the rulebook was strong enough, whoever
@@ -517,7 +516,7 @@ compact core:
   are deliberately varied (input version bumped, marker string removed or
   spoofed, evidence reordered or withheld, near-identical sibling
   substituted), which are held invariant (the policy `π`, the governing
-  configuration `μ⃗`, the analysis `A` and its version), and how the
+  configuration $\vec{\mu}$, the analysis `A` and its version), and how the
   neighborhood is generated. This induces the perturbation relation
   `P ⊆ E×E` and neighborhood `N(e) = {e′ : (e, e′) ∈ P}` (gloss: the same
   machine on the cases next door). `robust(e)` holds iff EITHER (i) the
@@ -694,7 +693,7 @@ human sign-off, and downstream consumers. Model it twice, at two levels:
 
 **Sub-episode graph.** `Γ_E = (E, ⇝)` is a finite DAG whose nodes are
 episodes `e₁,…,e_n` (each with the full §2 signature — own actor `αᵢ`, own
-`μ⃗ᵢ`) and whose edges are typed: **handoffs** (`eᵢ ⇝ eⱼ` iff a projection
+$\vec{\mu}_i$) and whose edges are typed: **handoffs** (`eᵢ ⇝ eⱼ` iff a projection
 of `out(eᵢ)` — a partial profile, an evidence item with its scope, a
 route, a disposition — appears in the input or evidence `Hⱼ` of `eⱼ`;
 gloss: what one worker concluded is what the next starts from),
@@ -731,7 +730,7 @@ full §2 signature at the boundary level — iff:
    representation, or boundary do NOT compose without an explicitly
    declared fusion analysis);
 2. **A declared boundary:** governance names the composite actor `α_{e_Γ}`
-   (pipeline, team, institution) and configuration `μ⃗_{e_Γ}`, including
+   (pipeline, team, institution) and configuration $\vec{\mu}_{e_\Gamma}$, including
    precedence across sub-episode rules;
 3. **A declared fusion rule:** `p̂_{e_Γ}`, `estatus_{e_Γ}`, `δ_{e_Γ}` are a stated
    aggregation of sub-outputs (e.g., profile union with per-claim status =

@@ -3,6 +3,7 @@
   "t": "snapshot-example-001",
   "nodes": [
     {"id": "mu-type-A", "version": "1", "node_type": "metaortheme-type", "label": "a normative source-order standard", "provenance": "declared analysis A", "status": "current"},
+    {"id": "mu-type-corroboration", "version": "1", "node_type": "metaortheme-type", "label": "a normative corroboration/independence standard", "provenance": "declared analysis A", "status": "current"},
     {"id": "inst-X", "version": "1", "node_type": "institution", "label": "an interpretive community X", "provenance": "declared", "status": "current"},
     {"id": "mutilde-X", "version": "1", "node_type": "represented-standard", "label": "X's represented version of mu-type-A (+ one other type)", "provenance": "REPRESENTED-STANDARD.example.json", "status": "current"},
     {"id": "actor-a", "version": "1", "node_type": "actor", "label": "actor a", "provenance": "declared", "status": "current"},
@@ -13,11 +14,12 @@
   ],
   "edges": [
     {"id": "e1", "edge_type": "endorsement", "source": "inst-X", "target": "mutilde-X", "provenance": "declared", "status": "current"},
-    {"id": "e2", "edge_type": "transmission", "source": "inst-X", "target": "actor-a", "provenance": "declared", "status": "current", "note": "actor-a inherits X's represented standard"},
+    {"id": "e2", "edge_type": "transmission", "source": "inst-X", "target": "actor-a", "transmitted_standard": "mutilde-X", "provenance": "declared", "status": "current", "note": "actor-a inherits X's represented standard mutilde-X"},
     {"id": "e3", "edge_type": "application", "source": "mutilde-X", "target": "episode-e1", "provenance": "declared", "status": "current"},
     {"id": "e4", "edge_type": "copying-dependence", "source": "artifact-c1", "target": "artifact-src", "provenance": "declared", "status": "current", "note": "copy-1 depends on the single upstream source"},
     {"id": "e5", "edge_type": "copying-dependence", "source": "artifact-c2", "target": "artifact-src", "provenance": "declared", "status": "current"},
-    {"id": "e6", "edge_type": "mutation", "source": "artifact-c2", "target": "artifact-c1", "provenance": "declared", "status": "current", "mutation_identity": "same-standard-new-token", "note": "wording mutated; governing standard preserved"}
+    {"id": "e6", "edge_type": "mutation", "source": "artifact-c2", "target": "artifact-c1", "provenance": "declared", "status": "current", "note": "wording mutated; governing standard preserved",
+     "mutation_identity": {"classification": "same-standard-new-token", "compared_versions": ["artifact-c2:1", "artifact-c1:1"], "preserved_invariants": ["governing proof-rule admitted/denied set"], "changed_fields": ["surface wording"], "witness": "ablation: substituting the mutated token leaves the governing standard's admitted/denied set unchanged", "evidence": ["ev-ablation-c2-c1"], "assessor": "analysis A review", "uncertainty": "low"}}
   ],
   "tawatur_analyses": [
     {
@@ -30,8 +32,8 @@
         "mutation_lineage": true,
         "qualitative_indicants": "all five trace to artifact-src via copying/mutation; only one genuinely independent route"
       },
-      "warrant_conclusion": "false-tawatur-common-source",
-      "non_claims": ["a count of five apparent witnesses does NOT establish tawatur-like independence", "graph degree, popularity, and institutional prevalence are not warrant"]
+      "warrant_conclusion": "dependence-detected",
+      "non_claims": ["a count of five apparent witnesses does NOT establish source independence or tawatur warrant", "graph degree, popularity, and institutional prevalence are not warrant", "tawatur warrant is a separate creed-internal, school-labeled judgement (TAWATUR-WARRANT), not a machine conclusion"]
     }
   ],
   "non_claims": [

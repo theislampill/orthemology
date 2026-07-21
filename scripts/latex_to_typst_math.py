@@ -57,6 +57,7 @@ COMMANDS = {
     "Rightarrow": "arrow.r.double", "Leftarrow": "arrow.l.double",
     "leftrightarrow": "arrow.l.r", "Leftrightarrow": "arrow.l.r.double",
     "iff": "arrow.l.r.double", "implies": "arrow.r.double",
+    "models": "tack.r.double", "vDash": "tack.r.double", "vdash": "tack.r",
     "mapsto": "arrow.r.bar", "longmapsto": "arrow.r.long.bar",
     "longrightarrow": "arrow.r.long", "longleftarrow": "arrow.l.long",
     "hookrightarrow": "arrow.r.hook",

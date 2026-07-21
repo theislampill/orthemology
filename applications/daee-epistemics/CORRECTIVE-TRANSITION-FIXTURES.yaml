@@ -1,0 +1,66 @@
+# Corrective-transition fixtures (R7D, Decision 0033, audit B28/B29, phase-H6 probes).
+# Each fixture is run through scripts/validate_corrective_transition.py's transition_ok
+# gate. Invalid fixtures name the `violates` rule. No fixture asserts a soul-state.
+schema: orthemology-corrective-transition-fixtures-v1
+fixtures:
+- id: CT1
+  distinction: hard-constraint-violating route ranked as an improvement
+  expected_valid: false
+  violates: route-not-admissible
+  transition: {selected_route: route-delete-burden, eligible_routes: [route-clarify], ranking_witness: order,
+               delta: control-state change, terminal_posture: HOLD, reread: {performed: true, outcome: ok},
+               verdicts: {runtime_closure: false, strictly_sound: not-claimed}, hard_constraints: [no burden deletion],
+               non_claims: [no soul access]}
+- id: CT2
+  distinction: route selected without a ranking witness
+  expected_valid: false
+  violates: no-ranking-witness
+  transition: {selected_route: route-clarify, eligible_routes: [route-clarify], ranking_witness: "",
+               delta: control-state change, terminal_posture: HOLD, reread: {performed: true, outcome: ok},
+               verdicts: {runtime_closure: false, strictly_sound: not-claimed}, hard_constraints: [], non_claims: [no soul access]}
+- id: CT3
+  distinction: delta conflated with correctness (strict soundness asserted of a runtime transition)
+  expected_valid: false
+  violates: delta-as-soundness
+  transition: {selected_route: route-clarify, eligible_routes: [route-clarify], ranking_witness: order,
+               delta: control-state change, terminal_posture: HOLD, reread: {performed: true, outcome: ok},
+               verdicts: {runtime_closure: false, strictly_sound: true}, hard_constraints: [], non_claims: [no soul access]}
+- id: CT4
+  distinction: reread omitted at closure
+  expected_valid: false
+  violates: reread-omitted
+  transition: {selected_route: route-clarify, eligible_routes: [route-clarify], ranking_witness: order,
+               delta: control-state change, terminal_posture: CLOSURE, reread: {performed: false, outcome: skipped},
+               verdicts: {runtime_closure: true, strictly_sound: not-claimed}, hard_constraints: [],
+               non_claims: [runtime closure is not human restoration]}
+- id: CT5
+  distinction: runtime closure asserted as human restoration
+  expected_valid: false
+  violates: closure-as-restoration
+  transition: {selected_route: route-clarify, eligible_routes: [route-clarify], ranking_witness: order,
+               delta: control-state change, terminal_posture: CLOSURE, reread: {performed: true, outcome: ok},
+               verdicts: {runtime_closure: true, strictly_sound: not-claimed}, hard_constraints: [],
+               non_claims: [the subject was restored]}
+- id: CT6
+  distinction: burden deletion as progress
+  expected_valid: false
+  violates: burden-deletion
+  transition: {selected_route: route-clarify, eligible_routes: [route-clarify], ranking_witness: order,
+               delta: "deleted the residual dependency burden to reach closure", terminal_posture: CLOSURE,
+               reread: {performed: true, outcome: ok}, verdicts: {runtime_closure: true, strictly_sound: not-claimed},
+               hard_constraints: [no burden deletion], non_claims: [runtime closure is not human restoration]}
+- id: CT7
+  distinction: one episode silently revises the global standard
+  expected_valid: false
+  violates: unauthorized-global-revision
+  transition: {selected_route: route-clarify, eligible_routes: [route-clarify], ranking_witness: order,
+               delta: "silently revises the global metaortheme standard from this one episode", terminal_posture: HOLD,
+               reread: {performed: true, outcome: ok}, verdicts: {runtime_closure: false, strictly_sound: not-claimed},
+               hard_constraints: [], non_claims: [no soul access]}
+- id: CT8
+  distinction: valid governed corrective transition (control)
+  expected_valid: true
+  transition: {selected_route: route-clarify, eligible_routes: [route-clarify, route-observe], ranking_witness: "disclosure-first partial order",
+               delta: "control-state change: burden addressed; dependency still live", terminal_posture: HOLD,
+               reread: {performed: true, outcome: dependency still live}, verdicts: {runtime_closure: false, strictly_sound: not-claimed},
+               hard_constraints: [no burden deletion], non_claims: [delta is not correctness, runtime closure is not human restoration]}
