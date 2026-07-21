@@ -77,9 +77,9 @@ authored:
     pdfs: reproducibly built and visually inspected draft artifacts
     legal_publication: open on license, identity, peer review, and external submission
 derived:
-  source_tree_digest: 9634bcc57ebbe274ea42cca1d5b268bfde7765687148b3f8b926d14ceadce1f8
+  source_tree_digest: 67136a7ed9ee91fcbf7cdc11149b5fa37db3e59bfc2b53e5d8d77ee9aa55a424
   source_tree_digest_policy: docs/project-state-inputs.yaml
-  tracked_files: 513
+  tracked_files: 517
   decision_ids:
   - '0001'
   - '0002'
@@ -139,6 +139,7 @@ derived:
   - validate_experiment_readiness.py
   - validate_internal_references.py
   - validate_latent_state_fixtures.py
+  - validate_layer_map.py
   - validate_math_source.py
   - validate_meta_noetic_memetics.py
   - validate_negative_fixtures.py
@@ -156,7 +157,7 @@ derived:
   - validate_state_convergence.py
   - validate_type_token_semantics.py
   - validate_verdict_semantics.py
-  validator_count: 34
+  validator_count: 35
   fixture_counts:
     verdict: 7
     reason: 8
@@ -167,25 +168,25 @@ derived:
     invalid_records: 48
   pdfs:
     notation-gallery.pdf:
-      sha256: 56f4630025654e12d5db5b6a871bbb062af19d0ef44b4d2fe5616593f4a136d3
+      sha256: 08af19aca8cb2ed358db3c561a07112ad8c8d31da6b08eef011020657be9fa1f
       pages: 3
-      source_commit: 8f260b3f526e9da4d261f601f5424c23dda42bb3
+      source_commit: daaf87b302a942b77ed98dc89dcf88754ab41614
     orthability-divine-speech-athari-draft.pdf:
-      sha256: 93ac86246126df0657b33975e141595fdfeffe7ad6ef56a418df5985cdf6f47d
+      sha256: 4bb0a1b24baf84395ea4b519b7497a9063704e1164142988d982307941c3f62f
       pages: 8
-      source_commit: 8f260b3f526e9da4d261f601f5424c23dda42bb3
+      source_commit: daaf87b302a942b77ed98dc89dcf88754ab41614
     orthability-ground-of-intelligibility-draft.pdf:
-      sha256: 27e0a01cc2a7d3d6e30e169cbf3244e45bcce00a4c891f9dc174eb0aff0347ca
+      sha256: 29f1f8fca1bb6e8602d4e18422ee070d60df54915a5e675ea94740f4024d9f5e
       pages: 11
-      source_commit: 8f260b3f526e9da4d261f601f5424c23dda42bb3
+      source_commit: daaf87b302a942b77ed98dc89dcf88754ab41614
     orthemic-core-reference-draft.pdf:
-      sha256: 7f833573a21302dc8985a4f07d5d5fc89b02279b9989931be3e94ed7b9a7dc12
+      sha256: 0461c743117670491054e219a6631bb245559a3ba51a1b5b5e167edf93e735a7
       pages: 20
-      source_commit: 8f260b3f526e9da4d261f601f5424c23dda42bb3
+      source_commit: daaf87b302a942b77ed98dc89dcf88754ab41614
     orthemma-ortheme-systems-draft.pdf:
-      sha256: d55a00bd7e2793a9ecc3fe72f935562ce5e2400c2c23a04be49ec3098bbac0cf
+      sha256: 6873d7d47d7687adf64f35469fe6f074d0c7118e420bd113a138022fdcaf40c7
       pages: 32
-      source_commit: 8f260b3f526e9da4d261f601f5424c23dda42bb3
+      source_commit: daaf87b302a942b77ed98dc89dcf88754ab41614
   terminology_freeze_hashes:
     pilot0_v1: 988a6522498df73ad1c7b0f73961a054ff20862d50fff6d644d0274877412772
     pilot0_v2: e5e65b2f1b38d5767d79103c57afee76a02e09e9fec2fd150a3a680b0fe19c3d

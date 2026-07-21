@@ -1,13 +1,13 @@
 {
   "pdf": "notation-gallery.pdf",
-  "pdf_sha256": "56f4630025654e12d5db5b6a871bbb062af19d0ef44b4d2fe5616593f4a136d3",
+  "pdf_sha256": "08af19aca8cb2ed358db3c561a07112ad8c8d31da6b08eef011020657be9fa1f",
   "page_count": 3,
   "sources": {
     "docs/notation-gallery.md": "8d90b921107b1252299105de587effbfde0411b3752df67ed7410b40f4b2a949"
   },
-  "source_commit": "8f260b3f526e9da4d261f601f5424c23dda42bb3",
+  "source_commit": "daaf87b302a942b77ed98dc89dcf88754ab41614",
   "artifact_commit": "the git commit that introduces/updates this artifact (two-stage provenance; see `git log -- artifacts/`)",
-  "source_date_epoch": 1784597175,
+  "source_date_epoch": 1784599672,
   "build_command": "python scripts/build_pdfs.py",
   "tools": {
     "typst": "0.15.0",

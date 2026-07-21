@@ -1,13 +1,13 @@
 {
   "pdf": "orthability-ground-of-intelligibility-draft.pdf",
-  "pdf_sha256": "27e0a01cc2a7d3d6e30e169cbf3244e45bcce00a4c891f9dc174eb0aff0347ca",
+  "pdf_sha256": "29f1f8fca1bb6e8602d4e18422ee070d60df54915a5e675ea94740f4024d9f5e",
   "page_count": 11,
   "sources": {
-    "companion/orthability-and-the-ground-of-intelligibility.md": "890a133fdc905bb38d4959efdb38d18278049837f78ae267da760fb169c0fef7"
+    "companion/orthability-and-the-ground-of-intelligibility.md": "26987c0c341ea80dc317e3f877daf7fbe4e36048c339126775144f03d7eb59e7"
   },
-  "source_commit": "8f260b3f526e9da4d261f601f5424c23dda42bb3",
+  "source_commit": "daaf87b302a942b77ed98dc89dcf88754ab41614",
   "artifact_commit": "the git commit that introduces/updates this artifact (two-stage provenance; see `git log -- artifacts/`)",
-  "source_date_epoch": 1784597175,
+  "source_date_epoch": 1784599672,
   "build_command": "python scripts/build_pdfs.py",
   "tools": {
     "typst": "0.15.0",

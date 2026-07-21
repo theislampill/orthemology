@@ -994,3 +994,5 @@ Machine-readable database with per-claim verification status: `references/orthem
   metaortheme.
 
 *End of revised draft. Prior version: the original manuscript (see `docs/provenance/document-history.md`). Companion formal text: `theory/orthemic-core-formalization.md`. Terminology evaluation protocol: `terminology/`.*
+
+*R7B bounded extensions (candidate; require fresh review before merge).* Two application-level extensions deepen the framework without changing the core: a dynamic-orthing / representation-learning account (four update levels, world-vs-learner edges, ablation-based ortheme admission) in `applications/latent-state-orthing/` (Decision 0024), and a meta-noetic memetics + sound-corrective-dynamics account (the represented-standard bearer, the ecology, and the G1 route-ranked descent adjudication) in `applications/daee-epistemics/` (Decision 0025). The six-layer firewall — formal core, dynamic extension, noetic application, school-neutral metaphysics, Atharī identification, empirical programs — is mapped in `docs/architecture/ORTHEMOLOGY-LAYER-MAP.md`. None of it is empirical validation or a theological proof.*
