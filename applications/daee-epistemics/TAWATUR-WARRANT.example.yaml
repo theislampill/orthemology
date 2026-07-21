@@ -1,0 +1,31 @@
+# Creed-internal tawatur WARRANT assessment (R7D, Decision 0032, audit B23).
+#
+# This is SEPARATE from the machine independence conclusion. The machine may only
+# report dependence-detected / source-independence-supported / origin-analysis-
+# underdetermined. A tawatur warrant judgement is creed-internal and school-labeled;
+# it makes qualitative indicants, origin, and cognition-wide corroboration
+# load-bearing and does NOT reduce to a route count or a numeric threshold. The
+# supplied Taymiyyan material is treated as SECONDARY reconstruction until primary
+# loci are verified; no universal numerical threshold is encoded.
+schema: orthemology-tawatur-warrant-v1
+assessments:
+- id: TWW-1
+  school: "Atharī (creed-internal; one route among schools)"
+  source_status: "secondary-reconstruction (El-Tobgui / epistemology collection); primary loci not yet verified here"
+  proposition: "a widely reported creedal proposition P"
+  source_units: "the distinct originating transmitter-units (not apparent copies)"
+  origin: "traced to plural independent originating groups, not a single upstream source"
+  copying_or_common_cause: "no common source or copying dependence found among the originating units"
+  path_independence: "the originating routes are mutually independent on the available evidence"
+  qualitative_indicants: "breadth across regions/generations; absence of motive-to-collude; content coherence; cognition-wide corroboration"
+  no_collusion_premise: "collusion across the independent originating groups is implausible on the circumstantial evidence"
+  content_coherence: "the reports cohere in load-bearing content, not merely in a slogan"
+  mutation_lineage: "no single-carrier mutation lineage explains the agreement"
+  defeaters: ["a later-discovered common source", "evidence of coordination", "a hidden copying route"]
+  assessor: "creed-internal reviewer under analysis A; school-labeled"
+  evidence: ["ev-transmission-map-P"]
+  warrant_conclusion: "creed-internal tawatur warrant SUPPORTED for P under the Atharī route, conditional on the labeled premises; NOT a machine-derived or count-derived conclusion"
+  non_claims:
+  - "this is not the machine independence conclusion; the machine may only report source independence, never tawatur warrant"
+  - "count, graph degree, popularity, and institutional prevalence are never warrant"
+  - "secondary reconstruction; a primary-locus verification is required before doctrinal use"

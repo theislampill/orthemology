@@ -1,0 +1,34 @@
+{
+  "$schema": "http://json-schema.org/draft-07/schema#",
+  "$id": "orthemology-rep-meta-assessment-v1",
+  "title": "Relation-level represented-standard assessment (R7D, Decision 0031)",
+  "description": "Fidelity and stance are properties of a REPRESENTATION RELATION between one represented standard and one metaortheme type, not one global field on the standard (audit B15/B16). One represented standard may faithfully represent one type, distort a second, and oppose a third.",
+  "type": "object",
+  "additionalProperties": false,
+  "required": ["schema", "assessments"],
+  "properties": {
+    "schema": {"const": "orthemology-rep-meta-assessment-v1"},
+    "note": {"type": "string"},
+    "assessments": {
+      "type": "array",
+      "items": {
+        "type": "object",
+        "additionalProperties": false,
+        "required": ["represented_standard_id", "represented_standard_version", "metaortheme_type_id", "metaortheme_type_version", "stance", "fidelity", "assessor", "evidence", "scope", "uncertainty", "validity"],
+        "properties": {
+          "represented_standard_id": {"type": "string", "minLength": 1},
+          "represented_standard_version": {"type": "string", "minLength": 1},
+          "metaortheme_type_id": {"type": "string", "minLength": 1},
+          "metaortheme_type_version": {"type": "string", "minLength": 1},
+          "stance": {"enum": ["expresses", "quotes", "endorses", "embodies", "applies", "opposes", "distorts", "transmits"]},
+          "fidelity": {"enum": ["faithful", "partial", "distorted", "hostile", "unassessed"]},
+          "assessor": {"type": "string", "minLength": 1},
+          "evidence": {"type": "array", "items": {"type": "string"}},
+          "scope": {"type": "string", "minLength": 1},
+          "uncertainty": {"type": "string", "minLength": 1},
+          "validity": {"enum": ["current", "superseded", "contested", "retired"]}
+        }
+      }
+    }
+  }
+}

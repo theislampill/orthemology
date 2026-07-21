@@ -1,0 +1,32 @@
+{
+  "$schema": "http://json-schema.org/draft-07/schema#",
+  "$id": "orthemology-carrier-relation-v1",
+  "title": "Carrier relation (R7D, Decision 0031)",
+  "description": "Carrier stance is a typed relation between a carrier occurrence and a represented standard (audit B16). One document/institution may quote one standard, endorse a second, oppose a third, and distort a fourth. Quotation is not endorsement; endorsement is not faithful embodiment.",
+  "type": "object",
+  "additionalProperties": false,
+  "required": ["schema", "relations"],
+  "properties": {
+    "schema": {"const": "orthemology-carrier-relation-v1"},
+    "note": {"type": "string"},
+    "relations": {
+      "type": "array",
+      "items": {
+        "type": "object",
+        "additionalProperties": false,
+        "required": ["carrier_id", "carrier_version", "represented_standard_id", "represented_standard_version", "content_scope", "mode", "evidence", "time", "validity"],
+        "properties": {
+          "carrier_id": {"type": "string", "minLength": 1},
+          "carrier_version": {"type": "string", "minLength": 1},
+          "represented_standard_id": {"type": "string", "minLength": 1},
+          "represented_standard_version": {"type": "string", "minLength": 1},
+          "content_scope": {"type": "string", "minLength": 1},
+          "mode": {"enum": ["expresses", "quotes", "endorses", "embodies", "applies", "opposes", "distorts", "transmits"]},
+          "evidence": {"type": "array", "items": {"type": "string"}},
+          "time": {"type": "string", "minLength": 1},
+          "validity": {"enum": ["current", "superseded", "contested", "retired"]}
+        }
+      }
+    }
+  }
+}

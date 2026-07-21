@@ -57,7 +57,7 @@ pr_chain:
     revision: R7D
     decisions: "0029+"
     provenance: Opus-requested = surfaced (no substitution)
-candidate_decisions: ["0020", "0021", "0022", "0023", "0024", "0025", "0026", "0027", "0028", "0029", "0030"]
+candidate_decisions: ["0020", "0021", "0022", "0023", "0024", "0025", "0026", "0027", "0028", "0029", "0030", "0031", "0032"]
 candidate_documents:
   applications:
     - applications/daee-epistemics/

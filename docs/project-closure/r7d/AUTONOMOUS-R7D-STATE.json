@@ -60,6 +60,13 @@
       "result": "Closes P2/P3/B10/B11. NoeticClaim schema (6 bearers incl m_reasoning_episode; 10 target types incl the overt-avowal/inferred-profile/motive split); NOETIC-EVIDENCE-REGISTRY (typed evidence: property class, provenance, scope, currentness, validity, relation-to-target); validate_noetic_claims.py support gate — target must exist+in-scope before asserted; subject-interior type never on m_discourse; evidence_ids must resolve (non-claims never count); motive/soul-state never asserted; asserted inferred interior needs >=2 evidence + bridge (thin -> held); avowed-commitment assertable on public wording; NC1-NC10 fixtures. The exact P3 breach (asserted m_subject, 'no evidence', disclaimer) = NC2 -> CAUGHT (subject-asserted-thin).",
       "suite": "52/52 green; manifest clean; 6 PDFs byte-equal",
       "next_action": "Phase D represented-standard relations + carrier stance (Decision 0031)"
+    },
+    {
+      "phase": "D+E+F (represented-standard relations, governed ecology, source dependence; Decisions 0031/0032)",
+      "status": "complete",
+      "result": "Closes P4/P5/P6/P8, B13-B23. D (0031): REP-META-ASSESSMENT (per-(standard,type) fidelity+stance) + CARRIER-RELATION (per-carrier mode); ghost-type resolution against ecology metaortheme-type nodes; self-lineage rejected; mixed per-type fidelity rolls up to global 'partial'. E (0032): unique node/edge ids; typed endpoints per edge_type; transmission names a resolvable transmitted_standard; mutation declares a structured ablation witness (compared versions/invariants/changed fields/witness/evidence/assessor); machine truth-firewall. F (0032): machine independence_conclusion is source-safe (dependence-detected / source-independence-supported / origin-analysis-underdetermined) and NEVER concludes tawatur warrant; TAWATUR-WARRANT.example.yaml is the separate school-labeled creed-internal record; independent_routes<=apparent_witnesses + non-empty indicants enforced. Probes CAUGHT: ghost type, self-lineage, duplicate node id, illegal endpoint, payload-free transmission, mutation-no-witness; independence_conclusion(F,F,2)=source-independence-supported (not tawatur-like).",
+      "suite": "52/52 green; manifest clean; 6 PDFs byte-equal",
+      "next_action": "Phase G current DAEE runtime delta + two-way crosswalk"
     }
   ],
   "no_merge_statement": "R7D is an Opus CANDIDATE on a draft child PR based on PR #10. It has not been merged into PR #10, PR #9, PR #8, or main. A fresh Fable session must review every hunk, verify the sources, formal semantics, mathematics, PDF rendering, and candidate state, and perform any protected merges."
