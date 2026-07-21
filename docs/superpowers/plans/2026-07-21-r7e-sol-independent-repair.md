@@ -4,7 +4,7 @@
 
 **Goal:** Repair every independently reproduced blocker in the cumulative R7E candidate, prove the strengthened contracts under adversarial mutation and a clean clone, then conditionally perform the authorized protected PR cascade and verify merged `main`.
 
-**Architecture:** Preserve the existing source/generated boundary. Add typed, offline contracts and pure validation helpers first; migrate prose and publication math only after failing semantic tests exist. Treat R7E as a candidate and its LLM-mediated workflow as a provenance-qualified observational witness, never empirical validation or comparative evidence.
+**Architecture:** Preserve the existing source/generated boundary. Add typed, offline contracts and pure validation helpers first; migrate prose and publication math only after failing semantic tests exist. Treat R7E as a candidate and its LLM-mediated workflow as a provenance-qualified observational witness, never empirical validation or comparative evidence. Preserve waking `t1` records append-only; type later `t2` somnic assessment through versioned activation/evaluator contracts; demonstrate only deterministic residual recurrence over fixtures and a retrospective R7E case, never a deployed agent skill or scheduler.
 
 **Tech stack:** Python 3.11.9; PyYAML; jsonschema; markdown-it-py; Typst 0.15.0; pypdf 6.14.2; Markdown/YAML/JSON/JSON Schema; GitHub Actions and protected pull requests.
 
@@ -143,7 +143,40 @@ Expected: 221 legacy rows include only 172 unique legacy IDs, 49 reused rows acr
 
 **Step 5 — commit:** Update finding/hunk records, generated state, and manifest; commit `fix: supersede unreconstructible R7E provenance claims`.
 
-## Task 4: Classify R7E as a bounded LLM-mediated orthing witness
+## Task 4: Specify waking/somnic contracts and residual-recurrence v0
+
+**Files:**
+
+- Create: `docs/decisions/0035-somnic-orthing-and-activation-contracts.md`
+- Create: `schemas/activation-contract.schema.json`
+- Create: `schemas/orthing-event.schema.json`
+- Create: `schemas/meta-orthability-assessment.schema.json`
+- Create: `schemas/somnus-run.schema.json`
+- Create: `schemas/somnic-assessment.schema.json`
+- Create: `schemas/residual-recurrence-report.schema.json`
+- Create: `examples/somnus/activation-contract-fixtures.yaml`
+- Create: `examples/somnus/somnus-record-fixtures.yaml`
+- Create: `applications/agentic-runtime/SOMNUS-CANDIDATE-INVENTORY.yaml`
+- Create: `applications/agentic-runtime/README.md`
+- Create: `scripts/validate_somnic_orthing.py`
+- Create: `tests/test_somnic_orthing.py`
+- Modify: `.github/workflows/validate.yml`
+- Modify where crosswalk requires it: `schemas/orthing-episode.schema.json`
+- Modify where crosswalk requires it: `schemas/verdict-record.schema.json`
+- Modify where crosswalk requires it: `schemas/claim-ledger.schema.json`
+- Modify where crosswalk requires it: `manuscript/orthemma-ortheme-systems-revised-draft.md`
+
+**Step 1 — brownfield map:** Prove which existing episode, verdict, evidence, residual, route, analysis, metaortheme, metaorthemma, and provenance fields already satisfy the contract. Extend or crosswalk them; do not create a parallel episode ontology, verdict registry, evidence vocabulary, or duplicate field.
+
+**Step 2 — red:** Add focused production-path mutations for all eighteen controlling attacks: target-history overwrite; missing target identity; collapsed identity levels; missing contract/evaluator versions; keyword-only applicability; binary-only evaluation; later evidence relabeled as `t1`; retrospective R7E capture relabeled live; accepted contract without fixture outcomes; non-bootstrap contract without authoring orthing; revision rewriting historical conformity; reopen without material delta; duplicate idempotency output; copy-count inflated recurrence; threshold treated as defect proof; automatic patch/promotion/closure from v0; provisional placement self-authorizing irreversible action; and outline-only candidates represented as implemented/deployed. Add positive, negative near-boundary, indeterminate, and overlap activation fixtures, including mixed lexical and genuinely overlapping cases.
+
+**Step 3 — implement:** Define waking versus somnic orthing, meta-orthability, the two-time append-only rule, distinct session/episode/occurrence/orthing/assessment/proposal identity, incremental event vocabulary, four-way evidence timing, capture modes, versioned activation contracts, separate versioned evaluator, tri-state result, plural fallback/no-claim, bootstrap versus normal authorship provenance, unassessed/reopened frontier, material deltas, idempotency, and conflict/authorization separation. Reuse existing verdict statuses when possible. Limit v0 to controlled residual fingerprints and deterministic recurrence reports; a configurable threshold is a review trigger only. Do not implement replay, counterfactual replay, consequence classification, patching, promotion, closure, or governance mutation.
+
+**Step 4 — application boundary:** Land only an outline-only inventory for orthability checking, append-only ledgering, separate live residual recording and later recurrence assessment, conflict handling, verdict-aware patch proposals, and a somnus orchestrator. Every entry declares inputs, outputs, dependencies, event emissions, authority limit, residual behavior, external/downstream owner, and non-claims. Do not create a skill package, private prompt, host configuration, scheduler, daemon, scheduled workflow, live emitter, or external runtime mutation. Implement a direct deterministic reference analyzer only if an existing repository execution owner is proven; otherwise record the exact successor trigger and keep this task schema/fixture/validator-only.
+
+**Step 5 — verify and commit:** Run the focused test/validator created in this task, schemas, cross-record validation, recursive mutations, internal references, repo hygiene, current-state/convergence, manifest parity, and the affected pinned suite. Record fixture and mutation counts, activation/evaluator versions, authorship mode, recurrence fixture/run identities, idempotency outcome, and explicit non-runtime status. Commit `feat: specify bounded somnic orthing contracts`.
+
+## Task 5: Classify R7E as a bounded LLM-mediated orthing witness
 
 **Files:**
 
@@ -152,9 +185,10 @@ Expected: 221 legacy rows include only 172 unique legacy IDs, 49 reused rows acr
 - Create: `docs/project-closure/r7e-sol/R7E-LLM-MEDIATED-ORTHING-WITNESS.md`
 - Create: `scripts/validate_r7e_llm_witness.py`
 - Create: `tests/test_r7e_llm_witness.py`
+- Create: `docs/project-closure/r7e-sol/R7E-SOMNIC-CASE-CROSSWALK.yaml`
 - Modify after the ledger validates: `manuscript/orthemma-ortheme-systems-revised-draft.md`
 
-**Step 1 — red:** Require evidence-qualified fields for orthemmata, declared analysis, executor/subagent roles, governing types, case-bound applications, sources, candidate findings/profiles, routes, integrated actions, residual backlog, successor state, and higher-order audit. Reject missing artifacts labeled verified, aggregate statistics promoted to repository fact, duplicate witness IDs, missing evidence references, self-certifying higher-order audit, or language implying correctness, comparative utility, exact internal ontology, empirical validation, terminology benefit, or cross-model/domain generalization.
+**Step 1 — red:** Require evidence-qualified fields for orthemmata, declared analysis, executor/subagent roles, governing types, case-bound applications, sources, candidate findings/profiles, routes, integrated actions, residual backlog, successor state, and higher-order audit. Reject missing artifacts labeled verified, aggregate statistics promoted to repository fact, duplicate witness IDs, missing evidence references, self-certifying higher-order audit, retrospective reconstruction labeled live capture, later evidence inserted into `t1`, higher-order assessment without meta-orthability disposition, or language implying correctness, comparative utility, exact internal ontology, empirical validation, terminology benefit, cross-model/domain generalization, live append-only capture, contract enforcement, recurrence detection, idempotent frontier processing, or nightly autonomy.
 
 **Step 2 — observe failure:**
 
@@ -162,13 +196,13 @@ Expected: 221 legacy rows include only 172 unique legacy IDs, 49 reused rows acr
 # Run the focused LLM-witness test created in this task.
 ```
 
-**Step 3 — implement:** Use only `repository-verified|attachment-observed|implementing-run-attributed|missing|unresolved`. Classify `llm_applicability` as supported, `llm_mediated_realizability` as provisional/partially supported, and `comparative_utility` as not established. Cross-reference the orthing-episode, metaortheme, metaorthemma, claim-ledger, and verdict contracts without changing Decisions 0001–0022. Add the suggested bounded manuscript paragraph only if every clause has a ledger reference.
+**Step 3 — implement:** Use only `repository-verified|attachment-observed|implementing-run-attributed|missing|unresolved` for evidence and the approved capture-mode vocabulary for reconstructed records. Classify `llm_applicability` as supported, `llm_mediated_realizability` as provisional/partially supported, and `comparative_utility` as not established. Cross-reference the existing episode/governance/evidence/verdict contracts and the Task 4 append-only/meta-orthability contracts without changing Decisions 0001–0022. Treat original R7E as a waking episode or family only where supported, and the independent Sol review as a later human/LLM-mediated retrospective assessment, not proof of deployed somnus. Preserve missing journals/reports/drafts, duplicate IDs, incomplete rejections, unresolved attachment bindings, and attributed statistics. Add the bounded manuscript paragraph only if every clause has a ledger reference.
 
 **Step 4 — verify:** Run witness tests, schema validation, evidence-boundary validation, claim-source validation, and manuscript/PDF checks if prose changed.
 
 **Step 5 — commit:** Regenerate state/artifacts as required and commit `docs: classify the bounded R7E LLM orthing witness`.
 
-## Task 5: Add the typed DAEE semantic-operator contract
+## Task 6: Add the typed DAEE semantic-operator contract
 
 **Files:**
 
@@ -202,7 +236,7 @@ Expected: 221 legacy rows include only 172 unique legacy IDs, 49 reused rows acr
 
 **Step 5 — commit:** Add the validator to CI, regenerate state/manifest, commit `fix: type DAEE corrective operators and boundaries`.
 
-## Task 6: Repair epistemology and meta-noetic evidence semantics
+## Task 7: Repair epistemology and meta-noetic evidence semantics
 
 **Files:**
 
@@ -226,7 +260,7 @@ Expected: 221 legacy rows include only 172 unique legacy IDs, 49 reused rows acr
 
 **Step 4 — commit:** Regenerate state/manifest; commit `fix: bound fitrah tawatur and mental existence claims`.
 
-## Task 7: Correct the OSM/CSCG comparison and object firewall
+## Task 8: Correct the OSM/CSCG comparison and object firewall
 
 **Files:**
 
@@ -246,7 +280,7 @@ Expected: 221 legacy rows include only 172 unique legacy IDs, 49 reused rows acr
 
 **Step 4 — commit:** Remove or directly re-source the absent REBAKE prose citation; update ledgers, state, manifest; commit `fix: bound OSM as a task-specific computational analogy`.
 
-## Task 8: Repair the argument map, metaphysical bridges, and divine Speech
+## Task 9: Repair the argument map, metaphysical bridges, and divine Speech
 
 **Files:**
 
@@ -275,9 +309,9 @@ Expected: 221 legacy rows include only 172 unique legacy IDs, 49 reused rows acr
 & $PY scripts/validate_companion_references.py
 ```
 
-**Step 4 — commit:** Rebuild affected PDFs only after committing sources per Task 12; for now commit source/tests/generator as `fix: repair metaphysical and divine Speech argument boundaries`.
+**Step 4 — commit:** Rebuild affected PDFs only after committing sources per Task 13; for now commit source/tests/generator as `fix: repair metaphysical and divine Speech argument boundaries`.
 
-## Task 9: Correct terminology provenance without adopting terminology
+## Task 10: Correct terminology provenance without adopting terminology
 
 **Files:**
 
@@ -297,7 +331,7 @@ Expected: 221 legacy rows include only 172 unique legacy IDs, 49 reused rows acr
 
 **Step 4 — commit:** Regenerate state/manifest and commit `docs: correct terminology provenance and utility claims`.
 
-## Task 10: Replace the math allowlist with locus-sensitive classification
+## Task 11: Replace the math allowlist with locus-sensitive classification
 
 **Files:**
 
@@ -317,7 +351,7 @@ Expected: 221 legacy rows include only 172 unique legacy IDs, 49 reused rows acr
 
 **Step 5 — commit:** Commit classification/validator changes before source migration as `test: enforce complete publication math classification`.
 
-## Task 11: Migrate all seven publication sources to mathematical markup
+## Task 12: Migrate all seven publication sources to mathematical markup
 
 **Files:**
 
@@ -340,7 +374,7 @@ Expected: 221 legacy rows include only 172 unique legacy IDs, 49 reused rows acr
 
 ```powershell
 & $PY tests/test_math_pipeline.py
-# Run the focused math-source inventory test created in Task 10.
+# Run the focused math-source inventory test created in Task 11.
 & $PY scripts/validate_math_source.py
 ```
 
@@ -348,7 +382,7 @@ Expected final state: every publication source has `full_math_source_migrated: t
 
 **Step 4 — source commit:** Regenerate current state and manifest, run affected prose/semantic validators, then commit source migration separately as `docs: complete publication math source migration`. Do not generate PDF sidecars before this commit exists.
 
-## Task 12: Repair PDF provenance, candidate status, and artifact generation
+## Task 13: Repair PDF provenance, candidate status, and artifact generation
 
 **Files:**
 
@@ -361,7 +395,7 @@ Expected final state: every publication source has `full_math_source_migrated: t
 
 **Step 1 — red:** Add tests that every sidecar `source_commit` contains each recorded source hash, tool identity includes exact versions plus lock hash, status copy comes from explicit candidate-state input rather than hard-coded R5 wording, committed-PDF rasterization clears stale output, and all six artifacts are covered.
 
-**Step 2 — implement:** Use the Task 11 source commit as sidecar provenance. Correct the hard-coded R5 preamble. Make `--check` materialize/verify source bytes at `source_commit`. Keep double-build and text-structure checks. Add committed-PDF rasterization or a separate deterministic QA command; `--png` source rendering alone is insufficient.
+**Step 2 — implement:** Use the Task 12 source commit as sidecar provenance. Correct the hard-coded R5 preamble. Make `--check` materialize/verify source bytes at `source_commit`. Keep double-build and text-structure checks. Add committed-PDF rasterization or a separate deterministic QA command; `--png` source rendering alone is insufficient.
 
 **Step 3 — build in pinned environment:**
 
@@ -378,7 +412,7 @@ $env:PYTHONUTF8='1'; $env:PYTHONIOENCODING='utf-8'
 
 **Step 5 — artifact commit:** Regenerate the manifest last, verify no source drift, and commit `build: regenerate verified publication PDFs`.
 
-## Task 13: Run the complete adversarial and recursive mutation program
+## Task 14: Run the complete adversarial and recursive mutation program
 
 **Files:**
 
@@ -387,7 +421,7 @@ $env:PYTHONUTF8='1'; $env:PYTHONIOENCODING='utf-8'
 - Create: `docs/project-closure/r7e-sol/R7E-SOL-ADVERSARIAL-REPORT.md`
 - Modify all new fixture files as required.
 
-**Step 1:** Make every mandatory attack durable: stale/omitted topology; self-promotion; literal gradient; div/curl without field; transition-as-correctness; omitted reread; closure-as-uptake; hidden burden deletion; unauthorized global revision; strict soundness from admissibility; tawātur by count/popularity; fiṭrah coordinate; mental-to-external entailment; OSM identity collapse; argument-map contradiction; unsafe created wording; witness overclaim; and unapproved formula spans.
+**Step 1:** Make every mandatory attack durable: stale/omitted topology; self-promotion; literal gradient; div/curl without field; transition-as-correctness; omitted reread; closure-as-uptake; hidden burden deletion; unauthorized global revision; strict soundness from admissibility; tawātur by count/popularity; fiṭrah coordinate; mental-to-external entailment; OSM identity collapse; argument-map contradiction; unsafe created wording; witness overclaim; unapproved formula spans; historical-record overwrite; collapsed identity levels; missing activation/evaluator version; indicator-only applicability; binary-only evaluation; later evidence relabeled as `t1`; false live capture; unfixture-tested accepted contract; missing authoring orthing; retroactive conformity rewrite; delta-free reopen; duplicate idempotency output; copy-inflated recurrence; threshold-as-proof; v0 automatic mutation; placement-as-authorization; and outline-as-runtime.
 
 **Step 2 — prove each attack is rejected:** Run every new focused test against its valid control and invalid mutation. The report records command, mutation ID, intended invariant, exit code, and result. A phrase-presence-only rejection is insufficient where structured semantics are available.
 
@@ -400,7 +434,7 @@ $env:PYTHONUTF8='1'; $env:PYTHONIOENCODING='utf-8'
 
 **Step 4 — reviewer:** A fresh Sol reviewer attempts counterexamples and checks for false negatives/false positives. Fix every blocker, then commit `test: close R7E semantic mutation gaps`.
 
-## Task 14: Run the exact pinned full suite and clean-clone candidate proof
+## Task 15: Run the exact pinned full suite and clean-clone candidate proof
 
 **Files:**
 
@@ -415,9 +449,9 @@ $env:PYTHONUTF8='1'; $env:PYTHONIOENCODING='utf-8'
 
 **Step 3 — clean clone:** Push the review branch only after the local gate, clone it into a new explicit directory, create a new venv from `requirements-ci.lock.txt`, rerun the exact full suite, rebuild/check PDFs, rasterize and inspect all pages, and confirm `git status --porcelain` is empty. Do not reuse caches or untracked control artifacts as evidence.
 
-**Step 4 — closure commit:** Update records with immutable commit/hash evidence, regenerate state and manifest, run the full suite once more if the records affect it, and commit `docs: record clean-clone R7E Sol verification`.
+**Step 4 — closure commit:** Update records with immutable commit/hash evidence, regenerate state and manifest, run the full suite once more if the records affect it, and commit `docs: record clean-clone R7E Sol verification`. The closeout names exact normative/core files; crosswalks to existing episode/verdict/evidence/residual owners; activation/evaluator versions; fixture counts by class; contract-authorship mode; mutation counts; whether recurrence was implemented as a direct reference operation or only specified/validated; R7E capture mode and missing evidence; somnus run/assessment fixture IDs and idempotency result; outline-only candidates and downstream owners; explicit absence of skill package, cron, automatic patch, or external runtime mutation; and successor triggers for live capture, scheduling, conflict detection, replay, verdict decomposition, and patch proposals. End with the waking/somnus governing distinction intact.
 
-## Task 15: Perform the authorized protected integration cascade
+## Task 16: Perform the authorized protected integration cascade
 
 **Preconditions:** Root metadata still reports `gpt-5.6-sol`; all findings terminal; all tests and attacks green; math/PDF/clean-tree/clean-clone gates green; no owner-only blocker; exact live PR topology unchanged except expected review-branch commits.
 
