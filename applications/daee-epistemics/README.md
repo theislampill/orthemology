@@ -19,6 +19,21 @@ restoration architecture (Decision 0021).
   `tests/noetic-application-fixtures.yaml`; example
   `examples/noetic-analysis-episode.json`.
 
+### R7B dynamic extension (Decision 0025 — Opus candidate)
+
+The R7 crosswalk modelled one noetic case; R7B adds the longitudinal/social
+structure and adjudicates the gradient vocabulary:
+
+- Represented-standard bearer `μ̃`, carrier roles, the ecology `Γ^μ`, and the
+  memetic modes: [`META-NOETIC-MEMETICS-AND-DYNAMIC-ORTHING.md`](META-NOETIC-MEMETICS-AND-DYNAMIC-ORTHING.md),
+  [`DYNAMIC-CROSSWALK.yaml`](DYNAMIC-CROSSWALK.yaml)
+- Sound-descent adjudication (G0/G1/G2 → **G1**), anti-gaming burden order,
+  fiṭrah boundary: [`SOUND-DESCENT-MODEL-COMPARISON.md`](SOUND-DESCENT-MODEL-COMPARISON.md),
+  [`NOETIC-FIELD-DYNAMICS.yaml`](NOETIC-FIELD-DYNAMICS.yaml)
+- Fixtures N11–N20 (`tests/noetic-application-fixtures.yaml`); validator
+  `scripts/validate_meta_noetic_memetics.py`. Companion placement:
+  `companion/dynamic-orthing-noetic-learning-and-orthability.md`.
+
 ## What this is — and is not
 
 daee is a **constructive, domain-specific realization of noetic orthing under

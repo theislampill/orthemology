@@ -53,8 +53,29 @@
       "defect_status": "publication-blocking notdef FIXED and proven: notation gallery renders vec-mu/vec-C and every registry symbol with ZERO notdef; corpus known notdef pinned (core 26, ms 6) and tracked by validate_pdf_math",
       "child_head_after_phase": "725ca8c",
       "next_action": "Phase D dynamic-orthing/latent-state learning (Decision 0024)"
+    },
+    {
+      "phase": "D + E + F (dynamic orthing; meta-noetic memetics; descent adjudication)",
+      "status": "complete",
+      "decisions": ["0024 dynamic orthing / representation learning", "0025 meta-noetic memetics + sound corrective dynamics"],
+      "added": "applications/latent-state-orthing/* (DYN-1..DYN-9, validate_dynamic_orthing.py); applications/daee-epistemics/{META-NOETIC-MEMETICS,SOUND-DESCENT,DYNAMIC-CROSSWALK,NOETIC-FIELD-DYNAMICS}; fixtures N11-N20; validate_meta_noetic_memetics.py",
+      "key_results": "mu-tilde represented-standard bearer + carrier roles + Gamma-mu ecology + three histories; four update levels separated; ortheme admission by ablation; OSM = exemplification not validation; gradient adjudicated G0/G1/G2 -> G1 adopted (daee bounds nabla to a ranking functional); anti-gaming lexicographic burden order; fitrah bounded creed-internal. All math via Decision 0023 pipeline (translates + compiles, zero notdef).",
+      "child_head_after_phase": "daaf87b"
+    },
+    {
+      "phase": "G + H (epistemology/metaphysics placement; project layer map)",
+      "status": "complete",
+      "added": "companion/dynamic-orthing-noetic-learning-and-orthability.md (dynamic orthability candidate; 8-rung ladder; anti-reification; Taymiyyan scholarship as SECONDARY only); docs/architecture/ORTHEMOLOGY-LAYER-MAP.{md,yaml} + validate_layer_map.py; bounded cross-refs in manuscript + neutral companion (PDFs rebuilt, notdef pinned 6/0 unchanged)",
+      "child_head_after_phase": "3b41627"
+    },
+    {
+      "phase": "I + J (regression; adversarial)",
+      "status": "complete",
+      "regression": "FCSP-2, ER-2, terminology, schemas, all validators re-ran green; no empirical run; no live provider call",
+      "adversarial": "7 mechanical injection attacks all HELD (combining-accent, soul-state, gradient-G2, false-progress, notdef-pin, firewall, OSM-as-validation); 12/12 audits held; 0 weaknesses this pass; docs/project-closure/r7b/reviews/ADVERSARIAL-REVIEWS.md",
+      "suite": "46/46 green; 5 PDFs byte-identical on rebuild; manifest matches; tree clean"
     }
   ],
-  "child_head": "725ca8c",
+  "child_head": "set-after-final-commit",
   "no_merge_statement": "This child branch is an Opus CANDIDATE. It has not been merged into PR #8 or main. A fresh Fable session must review every hunk, verify the mathematics and conceptual boundaries, and perform the protected merges."
 }
