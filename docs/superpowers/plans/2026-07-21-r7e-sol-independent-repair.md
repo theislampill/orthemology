@@ -289,7 +289,7 @@ Expected: 221 legacy rows include only 172 unique legacy IDs, 49 reused rows acr
 - Modify: `references/orthemology.bib`
 - Modify: `references/source-status.yaml`
 - Create: `tests/terminology-etymology-fixtures.yaml`
-- Create or modify: `scripts/validate_terminology_etymology.py`
+- Create: `scripts/validate_terminology_etymology.py`
 - Do not modify frozen `terminology/pilot0/` or `terminology/pilot0-v2/` packets.
 
 **Step 1 — red:** Reject claims that `-emma` is an inherited productive English token suffix, that Greek `ema` derives `-ma`, that the coinages are already adopted, or that the system supplies universal primitives/proven isomorphism.

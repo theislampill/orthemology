@@ -95,11 +95,11 @@ def main():
         not input_schema_errors,
         "; ".join(error.message for error in input_schema_errors[:3]),
     )
-    semantic_issues = collect_issues(data, decisions)
+    semantic_issues = [] if input_schema_errors else collect_issues(data, decisions)
     check(
         "frozen candidate topology passes complete semantic validation",
-        not semantic_issues,
-        "; ".join(semantic_issues[:3]),
+        not input_schema_errors and not semantic_issues,
+        "; ".join(semantic_issues[:3]) if semantic_issues else "schema validation failed",
     )
 
     generated = build_overlay(data) if not input_schema_errors else {}

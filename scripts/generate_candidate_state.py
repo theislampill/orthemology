@@ -29,9 +29,45 @@ DECISIONS_PATH = os.path.join(ROOT, "docs", "decision-status.yaml")
 REQUIRED_PRS = [8, 9, 10, 11, 12]
 REQUIRED_MERGE_ORDER = [12, 11, 10, 9, 8]
 REQUIRED_OBSERVED_AT = "2026-07-21T18:10:22Z"
+REQUIRED_OBSERVATION_SOURCE = (
+    "Frozen from docs/project-closure/r7e-sol/AUTONOMOUS-R7E-SOL-STATE.json after "
+    "the verified read-only GitHub PR observation and local Git object comparison."
+)
+REQUIRED_CANDIDATE_DOCUMENTS = {
+    "applications": [
+        "applications/daee-epistemics/",
+        "applications/latent-state-orthing/",
+    ],
+    "companions": ["companion/dynamic-orthing-noetic-learning-and-orthability.md"],
+    "architecture": [
+        "docs/architecture/ORTHEMOLOGY-LAYER-MAP.md",
+        "docs/architecture/ORTHEMOLOGY-LAYER-MAP.yaml",
+    ],
+    "closure": [
+        "docs/project-closure/r7/",
+        "docs/project-closure/r7b/",
+        "docs/project-closure/r7c/",
+        "docs/project-closure/r7d/",
+        "docs/project-closure/r7e/",
+        "docs/project-closure/r7e-sol/",
+    ],
+}
+REQUIRED_CANDIDATE_PDFS = [
+    "artifacts/notation-gallery.pdf",
+    "artifacts/dynamic-orthing-noetic-learning-orthability-draft.pdf",
+]
+REQUIRED_REVIEW_PROVENANCE = {
+    "layer": "independent-review",
+    "model": "gpt-5.6-sol",
+    "statement": (
+        "Controller-confirmed Sol review provenance; separate from the historical "
+        "candidate implementation provenance."
+    ),
+}
 SHA40 = re.compile(r"^[0-9a-f]{40}$")
 EXPECTED_TOPOLOGY = {
     8: {
+        "revision": "R7",
         "base_branch": "main",
         "base_head_at_observation": "43fee0f519e2f6984fb143c1e621c83382e71ec7",
         "head_branch": "closure/r7-noetic-application-experiment-validity",
@@ -42,6 +78,7 @@ EXPECTED_TOPOLOGY = {
         "checks_at_observation": "SUCCESS",
     },
     9: {
+        "revision": "R7B",
         "base_branch": "closure/r7-noetic-application-experiment-validity",
         "base_head_at_observation": "b0538601913c8234511a1f1131a58eb23a4a0dc4",
         "head_branch": "candidate/r7b-deep-noetic-latent-math",
@@ -52,6 +89,7 @@ EXPECTED_TOPOLOGY = {
         "checks_at_observation": "SUCCESS",
     },
     10: {
+        "revision": "R7C",
         "base_branch": "candidate/r7b-deep-noetic-latent-math",
         "base_head_at_observation": "86b8bbdddf35ac1e45748279bac05e5a2d4ed85e",
         "head_branch": "candidate/r7c-full-math-multitarget-noetic-dynamics",
@@ -62,6 +100,7 @@ EXPECTED_TOPOLOGY = {
         "checks_at_observation": "SUCCESS",
     },
     11: {
+        "revision": "R7D",
         "base_branch": "candidate/r7c-full-math-multitarget-noetic-dynamics",
         "base_head_at_observation": "3cce235f0e388ba78a093d43c879a2e73262938b",
         "head_branch": "candidate/r7d-final-semantic-math-noetic-integration",
@@ -72,6 +111,7 @@ EXPECTED_TOPOLOGY = {
         "checks_at_observation": "SUCCESS",
     },
     12: {
+        "revision": "R7E",
         "base_branch": "candidate/r7d-final-semantic-math-noetic-integration",
         "base_head_at_observation": "e34d2cd56057766f8f656a4ff3486eb34dad607e",
         "head_branch": "candidate/r7e-orthing-supplementation",
@@ -81,6 +121,13 @@ EXPECTED_TOPOLOGY = {
         "mergeable_at_observation": "MERGEABLE",
         "checks_at_observation": "SUCCESS",
     },
+}
+EXPECTED_PROVENANCE = {
+    8: {"layer": "owner-observed-model-substitution", "model": "Claude Opus 4.8"},
+    9: {"layer": "surfaced-model-attestation", "model": "Claude Opus 4.8"},
+    10: {"layer": "surfaced-model-attestation", "model": "Claude Opus 4.8"},
+    11: {"layer": "surfaced-model-attestation", "model": "Claude Opus 4.8"},
+    12: {"layer": "surfaced-model-attestation", "model": "Claude Opus 4.8"},
 }
 DECISION_PR_ALIASES = {
     "9-child (R7C grandchild)": 10,
@@ -120,6 +167,8 @@ def collect_issues(data, decisions):
 
     if data.get("observed_at_utc") != REQUIRED_OBSERVED_AT:
         issues.append("frozen observation is stale; expected %s" % REQUIRED_OBSERVED_AT)
+    if data.get("observation_source") != REQUIRED_OBSERVATION_SOURCE:
+        issues.append("observation_source drift from the frozen Task 1 boundary")
     if data.get("timeless_state") is not False:
         issues.append("frozen observation must declare timeless_state: false")
     if data.get("merge_order") != REQUIRED_MERGE_ORDER:
@@ -133,6 +182,14 @@ def collect_issues(data, decisions):
         provenance = row.get("provenance")
         if not isinstance(provenance, dict) or not provenance.get("layer"):
             issues.append("PR #%d provenance layer is missing" % pr)
+        else:
+            expected_provenance = EXPECTED_PROVENANCE.get(pr, {})
+            for field in ("layer", "model"):
+                if provenance.get(field) != expected_provenance.get(field):
+                    issues.append(
+                        "PR #%d provenance %s drift: expected %r, got %r"
+                        % (pr, field, expected_provenance.get(field), provenance.get(field))
+                    )
 
         expected = EXPECTED_TOPOLOGY.get(pr)
         if expected:
@@ -142,6 +199,27 @@ def collect_issues(data, decisions):
                         "PR #%d frozen %s drift: expected %r, got %r"
                         % (pr, field, wanted, row.get(field))
                     )
+
+    documents = data.get("candidate_documents")
+    if documents != REQUIRED_CANDIDATE_DOCUMENTS:
+        issues.append("candidate document inventory must match the canonical inventory exactly")
+    pdfs = data.get("candidate_pdfs")
+    if pdfs != REQUIRED_CANDIDATE_PDFS:
+        issues.append("candidate PDF inventory must match the canonical inventory exactly")
+    inventory_paths = []
+    if isinstance(documents, dict):
+        for paths in documents.values():
+            if isinstance(paths, list):
+                inventory_paths.extend(path for path in paths if isinstance(path, str))
+    if isinstance(pdfs, list):
+        inventory_paths.extend(path for path in pdfs if isinstance(path, str))
+    for path in inventory_paths:
+        local_path = os.path.join(ROOT, *path.rstrip("/").split("/"))
+        if not os.path.exists(local_path):
+            issues.append("candidate artifact does not resolve locally: %s" % path)
+
+    if data.get("review_provenance") != REQUIRED_REVIEW_PROVENANCE:
+        issues.append("Sol review provenance drift from the controller-confirmed boundary")
 
     for previous, current in zip(REQUIRED_PRS, REQUIRED_PRS[1:]):
         parent = by_pr.get(previous)
@@ -241,6 +319,7 @@ def build_overlay(data):
         "provenance_layers": {
             row["revision"].lower(): copy.deepcopy(row["provenance"]) for row in rows
         },
+        "review_provenance": copy.deepcopy(data["review_provenance"]),
         "status_claims": claims,
         "no_merge_status": {
             "merged": False,
@@ -270,7 +349,8 @@ def main():
     topology_schema = json.load(io.open(TOPOLOGY_SCHEMA, encoding="utf-8"))
     overlay_schema = json.load(io.open(OVERLAY_SCHEMA, encoding="utf-8"))
     issues = _schema_issues(data, topology_schema, "candidate topology")
-    issues.extend(collect_issues(data, decisions))
+    if not issues:
+        issues.extend(collect_issues(data, decisions))
     if issues:
         for issue in issues:
             print("[FAIL] " + issue)

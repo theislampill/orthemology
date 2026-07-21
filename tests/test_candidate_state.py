@@ -1,8 +1,12 @@
 #!/usr/bin/env python3
 """Focused contract tests for the generated R7 candidate topology."""
 import copy
+import contextlib
+import importlib.util
+import io
 import json
 import sys
+import tempfile
 import unittest
 from pathlib import Path
 
@@ -13,6 +17,7 @@ ROOT = Path(__file__).resolve().parents[1]
 sys.path.insert(0, str(ROOT))
 
 from scripts.generate_candidate_state import build_overlay, collect_issues  # noqa: E402
+import scripts.generate_candidate_state as candidate_generator  # noqa: E402
 
 
 INPUT = ROOT / "docs" / "project-closure" / "r7e-sol" / "CANDIDATE-TOPOLOGY-INPUT.yaml"
@@ -20,6 +25,74 @@ OUTPUT = ROOT / "docs" / "current-candidate-state.yaml"
 TOPOLOGY_SCHEMA = ROOT / "schemas" / "candidate-topology.schema.json"
 OVERLAY_SCHEMA = ROOT / "schemas" / "candidate-overlay.schema.json"
 DECISIONS = ROOT / "docs" / "decision-status.yaml"
+SCRIPTS = ROOT / "scripts"
+
+
+def generator_exit(data):
+    """Run the real generator main against a disposable frozen input."""
+    with tempfile.TemporaryDirectory() as temp_dir:
+        input_path = Path(temp_dir) / "input.yaml"
+        output_path = Path(temp_dir) / "output.yaml"
+        input_path.write_text(yaml.safe_dump(data, sort_keys=False), encoding="utf-8")
+        old_input = candidate_generator.INPUT_PATH
+        old_output = candidate_generator.OUTPUT_PATH
+        old_argv = sys.argv
+        candidate_generator.INPUT_PATH = str(input_path)
+        candidate_generator.OUTPUT_PATH = str(output_path)
+        sys.argv = ["generate_candidate_state.py"]
+        stream = io.StringIO()
+        try:
+            with contextlib.redirect_stdout(stream), contextlib.redirect_stderr(stream):
+                try:
+                    exit_code = candidate_generator.main()
+                except Exception as exc:  # test boundary: a traceback is a contract failure
+                    exit_code = 99
+                    stream.write("TRACEBACK: %s: %s" % (type(exc).__name__, exc))
+        finally:
+            candidate_generator.INPUT_PATH = old_input
+            candidate_generator.OUTPUT_PATH = old_output
+            sys.argv = old_argv
+        return exit_code, stream.getvalue(), output_path.exists()
+
+
+def production_validator_exit(data, overlay=None):
+    """Run the real production validator with only input/output reads replaced."""
+    scripts_path = str(SCRIPTS)
+    if scripts_path not in sys.path:
+        sys.path.insert(0, scripts_path)
+    spec = importlib.util.spec_from_file_location(
+        "candidate_state_production_probe",
+        SCRIPTS / "validate_candidate_state.py",
+    )
+    if spec is None or spec.loader is None:
+        return 2, "could not import production validator"
+    module = importlib.util.module_from_spec(spec)
+    spec.loader.exec_module(module)
+    if overlay is None:
+        try:
+            overlay = build_overlay(data)
+        except Exception:
+            overlay = yaml.safe_load(OUTPUT.read_text(encoding="utf-8"))
+    overrides = {
+        "docs/project-closure/r7e-sol/CANDIDATE-TOPOLOGY-INPUT.yaml": yaml.safe_dump(
+            data, sort_keys=False
+        ),
+        "docs/current-candidate-state.yaml": yaml.safe_dump(overlay, sort_keys=False),
+    }
+    real_read = module.read
+    module.read = lambda rel: overrides.get(rel, real_read(rel))
+    module.FAILS.clear()
+    stream = io.StringIO()
+    try:
+        with contextlib.redirect_stdout(stream), contextlib.redirect_stderr(stream):
+            try:
+                exit_code = module.main()
+            except Exception as exc:  # test boundary: a traceback is a contract failure
+                exit_code = 99
+                stream.write("TRACEBACK: %s: %s" % (type(exc).__name__, exc))
+    finally:
+        module.read = real_read
+    return exit_code, stream.getvalue()
 
 
 class CandidateStateTests(unittest.TestCase):
@@ -35,6 +108,53 @@ class CandidateStateTests(unittest.TestCase):
             any(fragment in issue for issue in issues),
             f"expected issue containing {fragment!r}, got {issues!r}",
         )
+
+    def authority_mutations(self):
+        cases = []
+
+        omitted_document = copy.deepcopy(self.data)
+        omitted_document["candidate_documents"]["closure"].pop()
+        cases.append(("omitted document", omitted_document, "candidate document inventory"))
+
+        extra_document = copy.deepcopy(self.data)
+        extra_document["candidate_documents"]["closure"].append("README.md")
+        cases.append(("extra document", extra_document, "candidate document inventory"))
+
+        nonexistent_document = copy.deepcopy(self.data)
+        nonexistent_document["candidate_documents"]["closure"][-1] = (
+            "docs/" + "does-not-exist.md"
+        )
+        cases.append(("nonexistent document", nonexistent_document, "does not resolve"))
+
+        omitted_pdf = copy.deepcopy(self.data)
+        omitted_pdf["candidate_pdfs"].pop()
+        cases.append(("omitted PDF", omitted_pdf, "candidate PDF inventory"))
+
+        extra_pdf = copy.deepcopy(self.data)
+        extra_pdf["candidate_pdfs"].append("artifacts/orthemic-core-reference-draft.pdf")
+        cases.append(("extra PDF", extra_pdf, "candidate PDF inventory"))
+
+        nonexistent_pdf = copy.deepcopy(self.data)
+        nonexistent_pdf["candidate_pdfs"][-1] = "artifacts/does-not-exist.pdf"
+        cases.append(("nonexistent PDF", nonexistent_pdf, "does not resolve"))
+
+        revision = copy.deepcopy(self.data)
+        revision["pull_requests"][-1]["revision"] = "R7F"
+        cases.append(("revision drift", revision, "revision drift"))
+
+        provenance_layer = copy.deepcopy(self.data)
+        provenance_layer["pull_requests"][-1]["provenance"]["layer"] = "fabricated-layer"
+        cases.append(("provenance layer drift", provenance_layer, "provenance layer drift"))
+
+        provenance_model = copy.deepcopy(self.data)
+        provenance_model["pull_requests"][-1]["provenance"]["model"] = "Unknown"
+        cases.append(("provenance model drift", provenance_model, "provenance model drift"))
+
+        observation_source = copy.deepcopy(self.data)
+        observation_source["observation_source"] = "fabricated"
+        cases.append(("observation-source drift", observation_source, "observation_source drift"))
+
+        return cases
 
     def test_frozen_input_and_generated_overlay_validate_against_schemas(self):
         topology_schema = json.loads(TOPOLOGY_SCHEMA.read_text(encoding="utf-8"))
@@ -66,6 +186,83 @@ class CandidateStateTests(unittest.TestCase):
 
     def test_valid_topology_has_no_issues(self):
         self.assertEqual([], self.issues())
+
+    def test_review_provenance_is_distinct_from_implementation_provenance(self):
+        self.assertEqual(
+            {
+                "layer": "independent-review",
+                "model": "gpt-5.6-sol",
+                "statement": (
+                    "Controller-confirmed Sol review provenance; separate from the "
+                    "historical candidate implementation provenance."
+                ),
+            },
+            self.data.get("review_provenance"),
+        )
+        overlay = build_overlay(self.data)
+        self.assertEqual(self.data["review_provenance"], overlay.get("review_provenance"))
+        self.assertNotEqual(
+            overlay["pr_chain"][-1]["provenance"],
+            overlay["review_provenance"],
+        )
+
+    def test_semantics_reject_complete_authority_mutations(self):
+        for name, mutated, fragment in self.authority_mutations():
+            with self.subTest(name=name):
+                self.assertIssue(self.issues(mutated), fragment)
+
+    def test_generator_rejects_complete_authority_mutations(self):
+        for name, mutated, _ in self.authority_mutations():
+            with self.subTest(name=name):
+                exit_code, output, output_exists = generator_exit(mutated)
+                self.assertEqual(1, exit_code, output)
+                self.assertNotIn("TRACEBACK", output)
+                self.assertFalse(output_exists, output)
+
+    def test_production_validator_rejects_complete_authority_mutations(self):
+        for name, mutated, _ in self.authority_mutations():
+            with self.subTest(name=name):
+                exit_code, output = production_validator_exit(mutated)
+                self.assertEqual(1, exit_code, output)
+                self.assertNotIn("TRACEBACK", output)
+
+        key_drift_overlay = build_overlay(self.data)
+        key_drift_overlay["provenance_layers"]["r7f"] = key_drift_overlay[
+            "provenance_layers"
+        ].pop("r7e")
+        exit_code, output = production_validator_exit(self.data, key_drift_overlay)
+        self.assertEqual(1, exit_code, output)
+        self.assertNotIn("TRACEBACK", output)
+
+    def test_generator_and_validator_report_malformed_shapes_without_traceback(self):
+        cases = []
+
+        nested_decision = copy.deepcopy(self.data)
+        nested_decision["pull_requests"][-1]["candidate_decisions"] = [["0034"]]
+        cases.append(("nested-list decision ID", nested_decision))
+
+        nonmapping_claims = copy.deepcopy(self.data)
+        nonmapping_claims["status_claims"] = []
+        cases.append(("non-mapping status_claims", nonmapping_claims))
+
+        nonmapping_evidence = copy.deepcopy(self.data)
+        nonmapping_evidence["status_claims"]["evidence"] = "fabricated"
+        cases.append(("non-mapping evidence", nonmapping_evidence))
+
+        for name, mutated in cases:
+            with self.subTest(component="generator", name=name):
+                exit_code, output, output_exists = generator_exit(mutated)
+                self.assertEqual(1, exit_code, output)
+                self.assertIn("schema:", output)
+                self.assertIn("TOTAL:", output)
+                self.assertNotIn("TRACEBACK", output)
+                self.assertFalse(output_exists, output)
+            with self.subTest(component="production validator", name=name):
+                exit_code, output = production_validator_exit(mutated)
+                self.assertEqual(1, exit_code, output)
+                self.assertIn("schema", output)
+                self.assertIn("TOTAL:", output)
+                self.assertNotIn("TRACEBACK", output)
 
     def test_omitted_pr_11_or_12_is_rejected(self):
         for omitted in (11, 12):

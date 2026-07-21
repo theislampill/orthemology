@@ -10,6 +10,7 @@
     "label",
     "observed_at_utc",
     "observation_source",
+    "review_provenance",
     "timeless_state",
     "merged",
     "merged_base",
@@ -28,7 +29,16 @@
     "generated_from": {"const": "docs/project-closure/r7e-sol/CANDIDATE-TOPOLOGY-INPUT.yaml"},
     "label": {"type": "string", "minLength": 1},
     "observed_at_utc": {"type": "string", "format": "date-time"},
-    "observation_source": {"type": "string", "minLength": 1},
+    "observation_source": {
+      "const": "Frozen from docs/project-closure/r7e-sol/AUTONOMOUS-R7E-SOL-STATE.json after the verified read-only GitHub PR observation and local Git object comparison."
+    },
+    "review_provenance": {
+      "const": {
+        "layer": "independent-review",
+        "model": "gpt-5.6-sol",
+        "statement": "Controller-confirmed Sol review provenance; separate from the historical candidate implementation provenance."
+      }
+    },
     "timeless_state": {"const": false},
     "merged": {"const": false},
     "merged_base": {"$ref": "#/$defs/merged_base"},
@@ -49,16 +59,46 @@
       "items": {"type": "string", "pattern": "^[0-9]{4}$"},
       "uniqueItems": true
     },
-    "candidate_documents": {"type": "object"},
+    "candidate_documents": {
+      "const": {
+        "applications": [
+          "applications/daee-epistemics/",
+          "applications/latent-state-orthing/"
+        ],
+        "companions": [
+          "companion/dynamic-orthing-noetic-learning-and-orthability.md"
+        ],
+        "architecture": [
+          "docs/architecture/ORTHEMOLOGY-LAYER-MAP.md",
+          "docs/architecture/ORTHEMOLOGY-LAYER-MAP.yaml"
+        ],
+        "closure": [
+          "docs/project-closure/r7/",
+          "docs/project-closure/r7b/",
+          "docs/project-closure/r7c/",
+          "docs/project-closure/r7d/",
+          "docs/project-closure/r7e/",
+          "docs/project-closure/r7e-sol/"
+        ]
+      }
+    },
     "candidate_pdfs": {
-      "type": "array",
-      "items": {"type": "string", "minLength": 1},
-      "uniqueItems": true
+      "const": [
+        "artifacts/notation-gallery.pdf",
+        "artifacts/dynamic-orthing-noetic-learning-orthability-draft.pdf"
+      ]
     },
     "provenance_layers": {
       "type": "object",
-      "minProperties": 5,
-      "additionalProperties": {"$ref": "#/$defs/provenance"}
+      "required": ["r7", "r7b", "r7c", "r7d", "r7e"],
+      "properties": {
+        "r7": {"$ref": "#/$defs/r7_provenance"},
+        "r7b": {"$ref": "#/$defs/opus_provenance"},
+        "r7c": {"$ref": "#/$defs/opus_provenance"},
+        "r7d": {"$ref": "#/$defs/opus_provenance"},
+        "r7e": {"$ref": "#/$defs/opus_provenance"}
+      },
+      "additionalProperties": false
     },
     "status_claims": {"$ref": "#/$defs/status_claims"},
     "no_merge_status": {
@@ -96,6 +136,28 @@
         "statement": {"type": "string", "minLength": 1}
       },
       "additionalProperties": false
+    },
+    "r7_provenance": {
+      "allOf": [
+        {"$ref": "#/$defs/provenance"},
+        {
+          "properties": {
+            "layer": {"const": "owner-observed-model-substitution"},
+            "model": {"const": "Claude Opus 4.8"}
+          }
+        }
+      ]
+    },
+    "opus_provenance": {
+      "allOf": [
+        {"$ref": "#/$defs/provenance"},
+        {
+          "properties": {
+            "layer": {"const": "surfaced-model-attestation"},
+            "model": {"const": "Claude Opus 4.8"}
+          }
+        }
+      ]
     },
     "status_claims": {
       "type": "object",
@@ -153,6 +215,53 @@
         },
         "provenance": {"$ref": "#/$defs/provenance"}
       },
+      "allOf": [
+        {
+          "if": {"properties": {"pr": {"const": 8}}, "required": ["pr"]},
+          "then": {
+            "properties": {
+              "revision": {"const": "R7"},
+              "provenance": {"$ref": "#/$defs/r7_provenance"}
+            }
+          }
+        },
+        {
+          "if": {"properties": {"pr": {"const": 9}}, "required": ["pr"]},
+          "then": {
+            "properties": {
+              "revision": {"const": "R7B"},
+              "provenance": {"$ref": "#/$defs/opus_provenance"}
+            }
+          }
+        },
+        {
+          "if": {"properties": {"pr": {"const": 10}}, "required": ["pr"]},
+          "then": {
+            "properties": {
+              "revision": {"const": "R7C"},
+              "provenance": {"$ref": "#/$defs/opus_provenance"}
+            }
+          }
+        },
+        {
+          "if": {"properties": {"pr": {"const": 11}}, "required": ["pr"]},
+          "then": {
+            "properties": {
+              "revision": {"const": "R7D"},
+              "provenance": {"$ref": "#/$defs/opus_provenance"}
+            }
+          }
+        },
+        {
+          "if": {"properties": {"pr": {"const": 12}}, "required": ["pr"]},
+          "then": {
+            "properties": {
+              "revision": {"const": "R7E"},
+              "provenance": {"$ref": "#/$defs/opus_provenance"}
+            }
+          }
+        }
+      ],
       "additionalProperties": false
     }
   },

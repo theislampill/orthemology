@@ -171,6 +171,11 @@ provenance_layers:
     model: Claude Opus 4.8
     statement: R7E requested and surfaced Opus 4.8; the later Sol independent-review layer is separate
       and does not rewrite the candidate implementation provenance.
+review_provenance:
+  layer: independent-review
+  model: gpt-5.6-sol
+  statement: Controller-confirmed Sol review provenance; separate from the historical candidate implementation
+    provenance.
 status_claims:
   candidate_status: proposed-candidate
   merged: false

@@ -3,6 +3,12 @@ observed_at_utc: '2026-07-21T18:10:22Z'
 observation_source: >-
   Frozen from docs/project-closure/r7e-sol/AUTONOMOUS-R7E-SOL-STATE.json after
   the verified read-only GitHub PR observation and local Git object comparison.
+review_provenance:
+  layer: independent-review
+  model: gpt-5.6-sol
+  statement: >-
+    Controller-confirmed Sol review provenance; separate from the historical
+    candidate implementation provenance.
 timeless_state: false
 merged_base:
   ref: main

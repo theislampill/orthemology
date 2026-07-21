@@ -7,6 +7,7 @@
     "schema",
     "observed_at_utc",
     "observation_source",
+    "review_provenance",
     "timeless_state",
     "merged_base",
     "pull_requests",
@@ -18,7 +19,16 @@
   "properties": {
     "schema": {"const": "orthemology-candidate-topology-v1"},
     "observed_at_utc": {"type": "string", "format": "date-time"},
-    "observation_source": {"type": "string", "minLength": 1},
+    "observation_source": {
+      "const": "Frozen from docs/project-closure/r7e-sol/AUTONOMOUS-R7E-SOL-STATE.json after the verified read-only GitHub PR observation and local Git object comparison."
+    },
+    "review_provenance": {
+      "const": {
+        "layer": "independent-review",
+        "model": "gpt-5.6-sol",
+        "statement": "Controller-confirmed Sol review provenance; separate from the historical candidate implementation provenance."
+      }
+    },
     "timeless_state": {"const": false},
     "merged_base": {"$ref": "#/$defs/merged_base"},
     "pull_requests": {
@@ -34,18 +44,33 @@
       "items": {"type": "integer"}
     },
     "candidate_documents": {
-      "type": "object",
-      "minProperties": 1,
-      "additionalProperties": {
-        "type": "array",
-        "items": {"type": "string", "minLength": 1},
-        "uniqueItems": true
+      "const": {
+        "applications": [
+          "applications/daee-epistemics/",
+          "applications/latent-state-orthing/"
+        ],
+        "companions": [
+          "companion/dynamic-orthing-noetic-learning-and-orthability.md"
+        ],
+        "architecture": [
+          "docs/architecture/ORTHEMOLOGY-LAYER-MAP.md",
+          "docs/architecture/ORTHEMOLOGY-LAYER-MAP.yaml"
+        ],
+        "closure": [
+          "docs/project-closure/r7/",
+          "docs/project-closure/r7b/",
+          "docs/project-closure/r7c/",
+          "docs/project-closure/r7d/",
+          "docs/project-closure/r7e/",
+          "docs/project-closure/r7e-sol/"
+        ]
       }
     },
     "candidate_pdfs": {
-      "type": "array",
-      "items": {"type": "string", "minLength": 1},
-      "uniqueItems": true
+      "const": [
+        "artifacts/notation-gallery.pdf",
+        "artifacts/dynamic-orthing-noetic-learning-orthability-draft.pdf"
+      ]
     },
     "status_claims": {"$ref": "#/$defs/status_claims"}
   },
@@ -108,6 +133,78 @@
         },
         "provenance": {"$ref": "#/$defs/provenance"}
       },
+      "allOf": [
+        {
+          "if": {"properties": {"pr": {"const": 8}}, "required": ["pr"]},
+          "then": {
+            "properties": {
+              "revision": {"const": "R7"},
+              "provenance": {
+                "properties": {
+                  "layer": {"const": "owner-observed-model-substitution"},
+                  "model": {"const": "Claude Opus 4.8"}
+                }
+              }
+            }
+          }
+        },
+        {
+          "if": {"properties": {"pr": {"const": 9}}, "required": ["pr"]},
+          "then": {
+            "properties": {
+              "revision": {"const": "R7B"},
+              "provenance": {
+                "properties": {
+                  "layer": {"const": "surfaced-model-attestation"},
+                  "model": {"const": "Claude Opus 4.8"}
+                }
+              }
+            }
+          }
+        },
+        {
+          "if": {"properties": {"pr": {"const": 10}}, "required": ["pr"]},
+          "then": {
+            "properties": {
+              "revision": {"const": "R7C"},
+              "provenance": {
+                "properties": {
+                  "layer": {"const": "surfaced-model-attestation"},
+                  "model": {"const": "Claude Opus 4.8"}
+                }
+              }
+            }
+          }
+        },
+        {
+          "if": {"properties": {"pr": {"const": 11}}, "required": ["pr"]},
+          "then": {
+            "properties": {
+              "revision": {"const": "R7D"},
+              "provenance": {
+                "properties": {
+                  "layer": {"const": "surfaced-model-attestation"},
+                  "model": {"const": "Claude Opus 4.8"}
+                }
+              }
+            }
+          }
+        },
+        {
+          "if": {"properties": {"pr": {"const": 12}}, "required": ["pr"]},
+          "then": {
+            "properties": {
+              "revision": {"const": "R7E"},
+              "provenance": {
+                "properties": {
+                  "layer": {"const": "surfaced-model-attestation"},
+                  "model": {"const": "Claude Opus 4.8"}
+                }
+              }
+            }
+          }
+        }
+      ],
       "additionalProperties": false
     },
     "status_claims": {
