@@ -1,0 +1,19 @@
+{
+  "id": "mutilde-X",
+  "version": "1",
+  "bearer": {"bearer_type": "institution", "bearer_id": "inst-X"},
+  "represented_content": "interpretive community X's adopted version of a source-order standard, combined with a corroboration standard",
+  "represented_metaortheme_types": ["mu-type-A", "mu-type-corroboration"],
+  "stance": "endorses",
+  "scope": "X's public teaching and its inherited applications",
+  "provenance": "declared analysis A; institution X",
+  "validity": {"from": "t0", "status": "current"},
+  "fidelity_status": "partial",
+  "uncertainty": "X's representation is faithful to mu-type-A in some respects and distorted in others; assessed as partial",
+  "lineage": [],
+  "non_claims": [
+    "a represented standard is not the normative metaortheme type mu, not a case-bound metaorthemma mu-bar, and not the execution event",
+    "it is not the actor's whole noetic profile, and asserts nothing about motive or soul-state",
+    "endorsing a standard is distinct from faithfully embodying it (fidelity_status: partial)"
+  ]
+}

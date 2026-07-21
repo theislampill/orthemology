@@ -1,0 +1,56 @@
+schema: orthemology-false-tawatur-fixtures-v1
+# R7C, Decision 0028. Tawatur warrant depends on origin/independence/copying/
+# common-source/mutation-lineage/qualitative indicants — NOT on count or graph
+# degree. scripts/validate_memetic_ecology.py checks that each dependence
+# structure yields the expected warrant conclusion (rule: any common_source or
+# copying_dependence => NOT tawatur-like-independence). Establishes no epistemic
+# warrant from number, popularity, or institutional prevalence.
+fixtures:
+- id: TW1
+  distinction: many independent routes -> tawatur-like
+  apparent_witnesses: 40
+  independent_routes: 40
+  common_source: false
+  copying_dependence: false
+  mutation_lineage: false
+  expected: tawatur-like-independence
+- id: TW2
+  distinction: copies of one source -> false
+  apparent_witnesses: 40
+  independent_routes: 1
+  common_source: true
+  copying_dependence: true
+  mutation_lineage: false
+  expected: false-tawatur-common-source
+- id: TW3
+  distinction: one institutional rule reproduced -> false
+  apparent_witnesses: 100
+  independent_routes: 1
+  common_source: true
+  copying_dependence: false
+  mutation_lineage: false
+  expected: false-tawatur-common-source
+- id: TW4
+  distinction: mutations of one carrier -> false (copying)
+  apparent_witnesses: 12
+  independent_routes: 1
+  common_source: true
+  copying_dependence: true
+  mutation_lineage: true
+  expected: false-tawatur-copying
+- id: TW5
+  distinction: convergence after genuinely independent inquiry -> tawatur-like
+  apparent_witnesses: 8
+  independent_routes: 8
+  common_source: false
+  copying_dependence: false
+  mutation_lineage: false
+  expected: tawatur-like-independence
+- id: TW6
+  distinction: high count but origin unknown -> underdetermined
+  apparent_witnesses: 200
+  independent_routes: 0
+  common_source: false
+  copying_dependence: false
+  mutation_lineage: false
+  expected: underdetermined-needs-more-origin-analysis

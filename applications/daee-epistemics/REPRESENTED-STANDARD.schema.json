@@ -1,0 +1,53 @@
+{
+  "$schema": "http://json-schema.org/draft-07/schema#",
+  "title": "Represented governing standard (mu-tilde) record (R7C, Decision 0028)",
+  "description": "An actor/institution's represented, adopted, or embodied version of a governing standard. Typed with identity, stance, fidelity, and lineage so it is never conflated with the normative metaortheme type (mu) or the case-bound metaorthemma (mu-bar). RepMeta is many-to-many: one represented standard may combine several metaortheme types; one type may have many represented versions.",
+  "type": "object",
+  "additionalProperties": false,
+  "required": ["id", "version", "bearer", "represented_content", "represented_metaortheme_types", "stance", "scope", "provenance", "validity", "fidelity_status", "uncertainty", "lineage"],
+  "properties": {
+    "id": {"type": "string"},
+    "version": {"type": "string"},
+    "bearer": {
+      "type": "object",
+      "additionalProperties": false,
+      "required": ["bearer_type", "bearer_id"],
+      "properties": {
+        "bearer_type": {"enum": ["actor", "institution", "artifact", "interpretive-community"]},
+        "bearer_id": {"type": "string"}
+      }
+    },
+    "represented_content": {"type": "string"},
+    "represented_metaortheme_types": {
+      "type": "array",
+      "minItems": 1,
+      "description": "RepMeta_A: the normative metaortheme type(s) this standard represents (many-to-many)",
+      "items": {"type": "string"}
+    },
+    "stance": {
+      "type": "string",
+      "enum": ["expresses", "quotes", "endorses", "embodies", "applies", "opposes", "distorts", "transmits"],
+      "description": "the carrier's stance toward the represented content; mention/quotation is not endorsement, and a carrier token is not automatically a faithful instance"
+    },
+    "scope": {"type": "string"},
+    "provenance": {"type": "string"},
+    "validity": {
+      "type": "object",
+      "additionalProperties": false,
+      "required": ["from", "status"],
+      "properties": {
+        "from": {"type": "string"},
+        "until": {"type": "string"},
+        "status": {"enum": ["current", "superseded", "contested", "retired"]}
+      }
+    },
+    "fidelity_status": {"enum": ["faithful", "partial", "distorted", "hostile", "unassessed"]},
+    "uncertainty": {"type": "string"},
+    "lineage": {
+      "type": "array",
+      "description": "prior represented-standard ids this one derives from (mutation/inheritance)",
+      "items": {"type": "string"}
+    },
+    "non_claims": {"type": "array", "items": {"type": "string"}}
+  }
+}

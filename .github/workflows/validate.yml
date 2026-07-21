@@ -92,6 +92,8 @@ jobs:
         run: python scripts/validate_candidate_state.py
       - name: Multi-target noetic orthing + claim bearers (R7C, Decision 0027)
         run: python scripts/validate_noetic_targets.py
+      - name: Represented standards + memetic ecology (R7C, Decision 0028)
+        run: python scripts/validate_memetic_ecology.py
       - name: FCSP-2 packet smoke tests (deterministic; no result)
         run: python experiments/false-closure-selective-prediction-v2/tests/test_smoke.py
       - name: ER-2 packet smoke tests (deterministic; no result)

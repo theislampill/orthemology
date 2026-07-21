@@ -1,0 +1,41 @@
+{
+  "schema": "orthemology-memetic-ecology-v1",
+  "t": "snapshot-example-001",
+  "nodes": [
+    {"id": "mu-type-A", "version": "1", "node_type": "metaortheme-type", "label": "a normative source-order standard", "provenance": "declared analysis A", "status": "current"},
+    {"id": "inst-X", "version": "1", "node_type": "institution", "label": "an interpretive community X", "provenance": "declared", "status": "current"},
+    {"id": "mutilde-X", "version": "1", "node_type": "represented-standard", "label": "X's represented version of mu-type-A (+ one other type)", "provenance": "REPRESENTED-STANDARD.example.json", "status": "current"},
+    {"id": "actor-a", "version": "1", "node_type": "actor", "label": "actor a", "provenance": "declared", "status": "current"},
+    {"id": "artifact-src", "version": "1", "node_type": "artifact", "label": "one upstream source document", "provenance": "declared", "status": "current"},
+    {"id": "artifact-c1", "version": "1", "node_type": "artifact", "label": "copy 1", "provenance": "declared", "status": "current"},
+    {"id": "artifact-c2", "version": "1", "node_type": "artifact", "label": "copy 2", "provenance": "declared", "status": "current"},
+    {"id": "episode-e1", "version": "1", "node_type": "episode", "label": "an orthing episode applying mutilde-X", "provenance": "declared", "status": "current"}
+  ],
+  "edges": [
+    {"id": "e1", "edge_type": "endorsement", "source": "inst-X", "target": "mutilde-X", "provenance": "declared", "status": "current"},
+    {"id": "e2", "edge_type": "transmission", "source": "inst-X", "target": "actor-a", "provenance": "declared", "status": "current", "note": "actor-a inherits X's represented standard"},
+    {"id": "e3", "edge_type": "application", "source": "mutilde-X", "target": "episode-e1", "provenance": "declared", "status": "current"},
+    {"id": "e4", "edge_type": "copying-dependence", "source": "artifact-c1", "target": "artifact-src", "provenance": "declared", "status": "current", "note": "copy-1 depends on the single upstream source"},
+    {"id": "e5", "edge_type": "copying-dependence", "source": "artifact-c2", "target": "artifact-src", "provenance": "declared", "status": "current"},
+    {"id": "e6", "edge_type": "mutation", "source": "artifact-c2", "target": "artifact-c1", "provenance": "declared", "status": "current", "mutation_identity": "same-standard-new-token", "note": "wording mutated; governing standard preserved"}
+  ],
+  "tawatur_analyses": [
+    {
+      "claim_id": "claim-widely-attested-P",
+      "apparent_witnesses": 5,
+      "origin_analysis": {
+        "independent_routes": 1,
+        "common_source": true,
+        "copying_dependence": true,
+        "mutation_lineage": true,
+        "qualitative_indicants": "all five trace to artifact-src via copying/mutation; only one genuinely independent route"
+      },
+      "warrant_conclusion": "false-tawatur-common-source",
+      "non_claims": ["a count of five apparent witnesses does NOT establish tawatur-like independence", "graph degree, popularity, and institutional prevalence are not warrant"]
+    }
+  ],
+  "non_claims": [
+    "no edge or degree establishes epistemic warrant; warrant depends on origin/independence/copying/mutation-lineage/qualitative indicants",
+    "the ecology models transmission/mutation of represented standards, not any actor's interior state, motive, or soul"
+  ]
+}

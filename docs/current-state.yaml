@@ -77,9 +77,9 @@ authored:
     pdfs: reproducibly built and visually inspected draft artifacts
     legal_publication: open on license, identity, peer review, and external submission
 derived:
-  source_tree_digest: 96791e74a872730df3094cc2db6540635009d03117148494f8ffad2c62e5b982
+  source_tree_digest: d359b7b4832244e991bf716eec469beca2f1bb70aac1e76c616c517368970d0d
   source_tree_digest_policy: docs/project-state-inputs.yaml
-  tracked_files: 530
+  tracked_files: 537
   decision_ids:
   - '0001'
   - '0002'
@@ -108,7 +108,8 @@ derived:
   - '0025'
   - '0026'
   - '0027'
-  decision_count: 27
+  - 0028
+  decision_count: 28
   schemas:
   - analysis.schema.json
   - claim-ledger.schema.json
@@ -144,6 +145,7 @@ derived:
   - validate_latent_state_fixtures.py
   - validate_layer_map.py
   - validate_math_source.py
+  - validate_memetic_ecology.py
   - validate_meta_noetic_memetics.py
   - validate_negative_fixtures.py
   - validate_noetic_application.py
@@ -161,7 +163,7 @@ derived:
   - validate_state_convergence.py
   - validate_type_token_semantics.py
   - validate_verdict_semantics.py
-  validator_count: 37
+  validator_count: 38
   fixture_counts:
     verdict: 7
     reason: 8
