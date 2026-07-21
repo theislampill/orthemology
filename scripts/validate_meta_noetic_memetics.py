@@ -25,6 +25,7 @@ claim; asserts no soul access.
 """
 import io
 import os
+import re
 import sys
 
 try:
@@ -32,6 +33,12 @@ try:
 except ImportError as e:
     print("FATAL: requires pyyaml:", e)
     sys.exit(2)
+
+# SEMANTIC guard (R7C, audit B19-3): the four bearers stay DISTINCT. A bearer
+# gloss must not equate it to another bearer. This catches the tamper probe
+# "mu-tilde gloss = the same object as a case-bound metaorthemma".
+CONFLATE = re.compile(r"\b(same\s+(object\s+)?as|identical\s+to|equal\s+to|is\s+the\s+same\s+(object\s+)?as)\b", re.I)
+OTHER_BEARERS = ["metaorthemma", "mu-bar", "mu-tilde", "execution", "metaortheme type"]
 
 ROOT = os.path.dirname(os.path.dirname(os.path.abspath(__file__)))
 APP = "applications/daee-epistemics"
@@ -60,7 +67,19 @@ def main():
         check("bearer present: %s" % tok, tok in bearer_names)
     check("bearers declared distinct (!=)", "!=" in str(cw.get("distinctness", "")))
     for b in cw.get("bearers", []):
-        check("bearer %s has non_claims" % b.get("name", "?")[:16], bool(b.get("non_claims")))
+        nm = b.get("name", "?")
+        check("bearer %s has non_claims" % nm[:16], bool(b.get("non_claims")))
+        # SEMANTIC: a bearer gloss must not equate it to another bearer (B19-3)
+        gloss = str(b.get("gloss", ""))
+        m = CONFLATE.search(gloss)
+        conflated = m and any(o in gloss.lower() for o in OTHER_BEARERS)
+        check("bearer %s gloss does not equate it to another bearer" % nm[:16],
+              not conflated, "found %r in gloss" % (m.group(0) if m else ""))
+    # the represented-standard bearer must stay distinct from the metaorthemma
+    mut = next((b for b in cw.get("bearers", []) if "mu-tilde" in b.get("name", "")), {})
+    mtext = (str(mut.get("gloss", "")) + " " + " ".join(mut.get("non_claims", []))).lower()
+    check("mu-tilde is not equated with a metaorthemma/mu-bar",
+          not (("same" in mtext or "identical" in mtext) and ("metaorthemma" in mtext or "mu-bar" in mtext)))
     roles = cw.get("carrier_roles", {}).get("roles", [])
     check("carrier roles >= 6 (one artifact, several roles)", len(roles) >= 6, "%d" % len(roles))
     hist = cw.get("three_histories", {}).get("histories", [])

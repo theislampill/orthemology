@@ -71,27 +71,38 @@ The left edge changes the world lineage; the right edge changes the model. DYN-2
 
 ### D5 — endpoint vs learning trajectory
 
+Compare **representation geometry** under a declared analysis (via a typed
+observable/representation map $\operatorname{Geom}_A$), never model-specific
+parameter vectors — different model families do not share a parameter space:
+
 ```math
-\theta^{\text{CSCG}}_{\text{final}} \approx \theta^{\text{RNN}}_{\text{final}} \quad\text{yet}\quad \{\theta^{\text{CSCG}}_t\}_t \neq \{\theta^{\text{RNN}}_t\}_t
+\operatorname{Geom}_A(\theta^{\text{CSCG}}_{\text{final}}) \approx_A \operatorname{Geom}_A(\theta^{\text{RNN}}_{\text{final}}) \quad\text{yet}\quad \operatorname{Geom}_A(\theta^{\text{CSCG}}_t) \neq \operatorname{Geom}_A(\theta^{\text{RNN}}_t) \ \text{along the trajectory}
 ```
 
-Several models reach the same final orthogonalized representation; only CSCG
-also reproduces the reported learning *trajectory*. Endpoint equivalence
-underdetermines mechanism. DYN-7.
+Several models reach a similar final orthogonalized representation; only CSCG
+also reproduces the reported learning *trajectory*. Endpoint equivalence of the
+represented structure underdetermines mechanism. DYN-7. (Corrects R7B's
+parameter-equality form; audit B6.1.)
 
 ### D6 — latent state / orthemic profile is a partial relation
 
+A **relation**, not a function — one latent state may encode a whole profile;
+several may share one; one orthemic distinction may spread over many dimensions:
+
 ```math
-Z_A \to \Pi_A \ \text{is many-to-many, not a bijection}
+\operatorname{ProfileOf}_A \subseteq Z_A \times \Pi_A \quad (\text{many-to-many; not a function, not a bijection})
 ```
 
-One latent state may encode a whole profile; several may share one profile; one
-orthemic distinction may be distributed over many model dimensions. DYN-5.
+DYN-5. (Corrects R7B's function-arrow form; audit B6.2.)
 
 ### D7 — ortheme admission is by ablation, not by latent split
 
+A **scalar** merger contrast: the increase in best attainable loss when the
+representation family is constrained to merge $z_i, z_j$, versus unconstrained
+(loss $L_A^*$ from the registry; over $\operatorname{Rep}_A$):
+
 ```math
-\text{split admitted} \iff \operatorname{ablate}(\text{merge } z_i, z_j) \text{ changes warranted } \{\text{prediction, action, route, validation, closure, loss}\} > \epsilon_A
+\Delta^{\text{merge}}_A(z_i, z_j) := \inf_{\chi \in \operatorname{Rep}_A(z_i = z_j)} L_A^*(\chi) - \inf_{\chi \in \operatorname{Rep}_A} L_A^*(\chi), \qquad \text{split admitted} \iff \Delta^{\text{merge}}_A(z_i, z_j) > \epsilon_A
 ```
 
 A model representing a distinction does not make it an ortheme. DYN-4, DYN-6
