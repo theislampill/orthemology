@@ -77,7 +77,7 @@ authored:
     pdfs: reproducibly built and visually inspected draft artifacts
     legal_publication: open on license, identity, peer review, and external submission
 derived:
-  source_tree_digest: 667b738d9c14c697bfa9497a60e65840e9f31ec3f5bd75f999b8be5444e708eb
+  source_tree_digest: 4a29e38394b7861d1a2159e41339261ff9daf2984e6b66e5f5755f251507235a
   source_tree_digest_policy: docs/project-state-inputs.yaml
   tracked_files: 575
   decision_ids:
@@ -200,13 +200,13 @@ derived:
       pages: 11
       source_commit: daaf87b302a942b77ed98dc89dcf88754ab41614
     orthemic-core-reference-draft.pdf:
-      sha256: 0461c743117670491054e219a6631bb245559a3ba51a1b5b5e167edf93e735a7
+      sha256: 33f71dd67ed1a71b06c0ace88daa85bc1d3453cacd310b91bcd9a140df6327f7
       pages: 20
-      source_commit: daaf87b302a942b77ed98dc89dcf88754ab41614
+      source_commit: d3da5bbfced04831940846bd91802b0faf15c600
     orthemma-ortheme-systems-draft.pdf:
-      sha256: 6873d7d47d7687adf64f35469fe6f074d0c7118e420bd113a138022fdcaf40c7
+      sha256: 22d5efc0884badd5ddbf289ef098f9c9ad1d77b7bdad5fbe55887d4a302f0210
       pages: 32
-      source_commit: daaf87b302a942b77ed98dc89dcf88754ab41614
+      source_commit: d3da5bbfced04831940846bd91802b0faf15c600
   terminology_freeze_hashes:
     pilot0_v1: 988a6522498df73ad1c7b0f73961a054ff20862d50fff6d644d0274877412772
     pilot0_v2: e5e65b2f1b38d5767d79103c57afee76a02e09e9fec2fd150a3a680b0fe19c3d

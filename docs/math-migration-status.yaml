@@ -20,8 +20,8 @@ pipeline:
   r7c_migration_infrastructure:
     inventory: "docs/math-source-inventory.yaml — every FORMULA-bearing backtick span (218 across 29 files) classified; validate_math_source.py FAILS on any formula-in-backtick not recorded here (defeats tamper probe 1, audit B5)"
     tool: "scripts/unicode_math_to_latex.py — the migration engine; PROVEN: all 177 combining/math target spans in the five build docs translate + compile with ZERO notdef under the pinned typst package"
-    status: "IN-PLACE CORPUS MIGRATION APPLICATION IS THE REVIEWED CONTINUATION. R7C delivered the parity decision, the complete inventory, the proven tool, and the probe-1 gate; applying it in place (inline spans + indented display blocks + per-formula fresh-Fable review + byte-repro across the two large docs) is deferred. The notdef pins below remain tracked by validate_pdf_math until a document is migrated."
-    notdef_source: "confirmed exactly the U+20D7 (vec) occurrences: 13 in the core (-> 26 NUL), 3 in the manuscript (-> 6 NUL); companions/note have 0"
+    status: "R7D Phase K: the NOTDEF DEFECT IS ELIMINATED IN PLACE. All 16 U+20D7 (vec) occurrences (13 core, 3 manuscript) were migrated to $...$/$$ math in the corpus source; both PDFs rebuild with ZERO notdef and are now migrated: true / expected_notdef: 0, enforced by validate_pdf_math. REMAINING (bounded, tooled): the broader reclassification of the ~190 non-notdef formula-like backtick spans (registry IDs vs literal code vs mathematics) into an allowlist-free state is the reviewed continuation — the inventory + proven tool + probe-1 gate make it mechanical, and it needs per-formula fresh-Fable review before the allowlist is removed. No corpus PDF now contains any NUL/notdef/tofu glyph."
+    notdef_source: "confirmed exactly the U+20D7 (vec) occurrences: WAS 13 in the core (-> 26 NUL), 3 in the manuscript (-> 6 NUL); companions/note have 0. R7D migrated all 16 -> now zero across the corpus."
 combining_accent_ban: "Publication math source must use \\hat/\\bar/\\vec, never precomposed combining marks (U+0300-U+036F, U+20D7). validate_math_source.py enforces this inside $...$ / $$...$$ / ```math."
 documents:
 - pdf: notation-gallery
@@ -38,15 +38,15 @@ documents:
 - pdf: orthemic-core-reference-draft
   role: corpus
   sources: [theory/orthemic-core-formalization.md, theory/orthemic-multi-actor-conflict-note.md]
-  migrated: false
-  known_notdef: 26
-  notdef_cause: "combining arrow U+20D7 over mu / C (episode-signature vec-mu, vec-C) rendered under #raw monospace"
+  migrated: true
+  expected_notdef: 0
+  migration_note: "R7D Phase K: the 13 U+20D7 (vec) occurrences migrated in place to $...$ math (episode signature -> $$ display; e |= judgment -> $$ display; 7 inline vec code spans -> inline math). Rebuilt PDF renders ZERO notdef; validate_pdf_math now enforces notdef-free."
 - pdf: orthemma-ortheme-systems-draft
   role: corpus
   sources: [manuscript/orthemma-ortheme-systems-revised-draft.md]
-  migrated: false
-  known_notdef: 6
-  notdef_cause: "combining-mark math notation rendered under #raw monospace"
+  migrated: true
+  expected_notdef: 0
+  migration_note: "R7D Phase K: the 3 U+20D7 (vec) occurrences migrated in place to $...$ math (episode signature -> $$ display; inline mu-vec span -> inline math). Rebuilt PDF renders ZERO notdef."
 - pdf: orthability-ground-of-intelligibility-draft
   role: corpus
   sources: [companion/orthability-and-the-ground-of-intelligibility.md]

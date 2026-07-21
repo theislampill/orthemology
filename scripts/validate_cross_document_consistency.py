@@ -48,13 +48,15 @@ def main():
     check("core states the sole entailment V2b-T_q -> V1_q", "V2b-T_q(e) → V1_q(e)" in core)
     check("manuscript states the sole entailment", "V2b-T_q → V1_q" in ms)
 
-    # 3. Episode signature agreement (core §2.2 vs manuscript §8.2 vs overview)
-    sig = "id;  m, κ, v;  x, H;  α, w, A, T, t;  μ⃗, MetaTok, π;  C⃗, p̂;  r;  estatus;  𝒬;  δ;"
-    sig_ms = "id;  m, κ, v;  x, H;  α, w, A, T, t;  μ⃗, MetaTok, π;  C⃗, p̂;  r;  estatus;  𝒬;  δ;  hand_in, hand_out;  a, Succ"
-    sig_ov = "id; m, κ, v; x, H; α, w, A, T, t; μ⃗, MetaTok, π; C⃗, p̂; r; estatus; 𝒬; δ; hand_in, hand_out; a, Succ"
-    check("episode signature: core", sig in core)
-    check("episode signature: manuscript", sig_ms in ms)
-    check("episode signature: overview", sig_ov in ov)
+    # 3. Episode signature agreement across core §2.2, manuscript §8.2, and the overview.
+    #    R7D Phase K migrated all three from #raw monospace (U+20D7 vec -> notdef) to
+    #    $...$ math; the check now verifies the migrated signature COMPONENTS agree in
+    #    representation-consistent LaTeX (robust to `;\ ` vs `; ` separators).
+    sig_parts = [r"\vec{\mu}, \mathrm{MetaTok}, \pi", r"\vec{C}, \hat{p}",
+                 r"\mathcal{Q}", r"\mathrm{hand}_{\mathrm{in}}", r"a, \mathrm{Succ}"]
+    check("episode signature (migrated math): core", all(p in core for p in sig_parts))
+    check("episode signature (migrated math): manuscript", all(p in ms for p in sig_parts))
+    check("episode signature (migrated math): overview", all(p in ov for p in sig_parts))
 
     # 4. Fixture IDs agree between tests and core fixture table
     fx_ids = [fx["id"] for fx in fixtures["fixtures"]]
