@@ -15,8 +15,13 @@ schema: orthemology-math-migration-status-v1
 # not a migration.
 pipeline:
   implemented: "P1 — in-repo LaTeX-subset -> Typst-math translator; zero new dependencies; keeps the deterministic typst-package build and byte-reproducibility"
-  recommended_target: "P2 — pinned Pandoc -> Typst writer -> pinned Typst — if and when a pinned pandoc binary + hash is added to CI (not deterministically provisionable in the R7B environment)"
+  recommended_target: "P2 — pinned Pandoc -> Typst writer. R7C settled the choice by EVIDENCE (docs/project-closure/r7c/MATH-PIPELINE-PARITY-AUDIT.md): pandoc 3.6.4 IS provisionable (sha256 a9e5feb3...; refutes R7B's premise, audit B4), but P1 beat it on the corpus (36/36 vs 34/36 zero-notdef) and adds no CI dependency. P1 retained; P2 recorded as a proven portability alternative (canonical $...$ source is pipeline-agnostic)."
   decision: docs/decisions/0023-mathematical-source-and-typesetting-pipeline.md
+  r7c_migration_infrastructure:
+    inventory: "docs/math-source-inventory.yaml — every FORMULA-bearing backtick span (218 across 29 files) classified; validate_math_source.py FAILS on any formula-in-backtick not recorded here (defeats tamper probe 1, audit B5)"
+    tool: "scripts/unicode_math_to_latex.py — the migration engine; PROVEN: all 177 combining/math target spans in the five build docs translate + compile with ZERO notdef under the pinned typst package"
+    status: "IN-PLACE CORPUS MIGRATION APPLICATION IS THE REVIEWED CONTINUATION. R7C delivered the parity decision, the complete inventory, the proven tool, and the probe-1 gate; applying it in place (inline spans + indented display blocks + per-formula fresh-Fable review + byte-repro across the two large docs) is deferred. The notdef pins below remain tracked by validate_pdf_math until a document is migrated."
+    notdef_source: "confirmed exactly the U+20D7 (vec) occurrences: 13 in the core (-> 26 NUL), 3 in the manuscript (-> 6 NUL); companions/note have 0"
 combining_accent_ban: "Publication math source must use \\hat/\\bar/\\vec, never precomposed combining marks (U+0300-U+036F, U+20D7). validate_math_source.py enforces this inside $...$ / $$...$$ / ```math."
 documents:
 - pdf: notation-gallery

@@ -1,0 +1,1524 @@
+schema: orthemology-math-source-inventory-v1
+note: 'R7C, Decision 0023/H2. Every FORMULA-bearing backtick span currently in the publication + application corpus (relational op / set-builder / U+20D7). These are pending migration to $...$ (Decision 0023); scripts/validate_math_source.py
+  FAILS on any formula-in-backtick NOT recorded here (catches tamper probe 1). Migration tool: scripts/unicode_math_to_latex.py (every target translates + compiles zero-notdef). in_build_pipeline marks the five PDF source docs. Single symbol
+  references (semantic-id) and paths/keys (code) are NOT formula spans and stay backticked.'
+totals:
+  formula_spans: 218
+documents:
+- file: manuscript/orthemma-ortheme-systems-revised-draft.md
+  in_build_pipeline: true
+  formula_spans: 53
+  targets:
+  - line: 114
+    text: Inst_A ⊆ M × O
+    class: math
+    replacement: $Inst_A \subseteq M \times O$
+    translates: true
+  - line: 114
+    text: (m, o) ∈ Inst_A
+    class: math
+    replacement: $(m, o) \in Inst_A$
+    translates: true
+  - line: 115
+    text: T = task(A)
+    class: math
+    replacement: $T = task(A)$
+    translates: true
+  - line: 122
+    text: task(A) = T
+    class: math
+    replacement: $task(A) = T$
+    translates: true
+  - line: 122
+    text: O*_T(m) := O*(m; A)
+    class: math
+    replacement: $O^*_T(m) := O^*(m; A)$
+    translates: true
+  - line: 122
+    text: M_A ⊆ 𝓜
+    class: math
+    replacement: $M_A \subseteq \mathcal{M}$
+    translates: true
+  - line: 122
+    text: O_A ⊆ 𝓞
+    class: math
+    replacement: $O_A \subseteq \mathcal{O}$
+    translates: true
+  - line: 122
+    text: T = task(A)
+    class: math
+    replacement: $T = task(A)$
+    translates: true
+  - line: 131
+    text: x = Ω(m)
+    class: math
+    replacement: $x = \Omega(m)$
+    translates: true
+  - line: 163
+    text: κ = id(m)
+    class: math
+    replacement: $\kappa = id(m)$
+    translates: true
+  - line: 163
+    text: v = ver(m)
+    class: math
+    replacement: $v = ver(m)$
+    translates: true
+  - line: 172
+    text: m′ = succ(m, a)
+    class: math
+    replacement: $m' = succ(m, a)$
+    translates: true
+  - line: 189
+    text: task(A) = T
+    class: math
+    replacement: $task(A) = T$
+    translates: true
+  - line: 207
+    text: Rep_A^{i=j}
+    class: math
+    replacement: $Rep_A^{i=j}$
+    translates: true
+  - line: 250
+    text: Ω(m_1) = Ω(m_2)
+    class: math
+    replacement: $\Omega(m_1) = \Omega(m_2)$
+    translates: true
+  - line: 250
+    text: O*(m_1; A) ≠ O*(m_2; A)
+    class: math
+    replacement: $O^*(m_1; A) ≠ O^*(m_2; A)$
+    translates: true
+  - line: 250
+    text: C^id(m) ⊆ M
+    class: math
+    replacement: $C^{id}(m) \subseteq M$
+    translates: true
+  - line: 321
+    text: Π_A ⊆ 𝒫(O_A)
+    class: math
+    replacement: $\Pi_A \subseteq \mathcal{P}(O_A)$
+    translates: true
+  - line: 327
+    text: Π_A ⊆ Π_A^∂
+    class: math
+    replacement: $\Pi_A \subseteq \Pi_A^\partial$
+    translates: true
+  - line: 331
+    text: O*(m; A) ∈ Π_A
+    class: math
+    replacement: $O^*(m; A) \in \Pi_A$
+    translates: true
+  - line: 332
+    text: Ĉ_{A,α,t}(m) ⊆ Π_A
+    class: math
+    replacement: $\hat{C}_{A,\alpha,t}(m) \subseteq \Pi_A$
+    translates: true
+  - line: 332
+    text: O*(m; A) ∈ Ĉ
+    class: math
+    replacement: $O^*(m; A) \in \hat{C}$
+    translates: true
+  - line: 333
+    text: p̂_{A,α,t}(m) ∈ Π_A^∂
+    class: combining
+    replacement: $\hat{p}_{A,\alpha,t}(m) \in \Pi_A^\partial$
+    translates: true
+  - line: 333
+    text: Ĉ ⊆ completions(p̂)
+    class: combining
+    replacement: $\hat{C} \subseteq completions(\hat{p})$
+    translates: true
+  - line: 333
+    text: Ĉ = {p_1, p_2}
+    class: math
+    replacement: $\hat{C} = {p_1, p_2}$
+    translates: true
+  - line: 369
+    text: prov(μ) = ⟨authority, warrant, scope, ver(μ)⟩
+    class: math
+    replacement: $prov(\mu) = \langle authority, warrant, scope, ver(\mu)\rangle$
+    translates: true
+  - line: 385
+    text: g ∈ {O, I, E, D, R, V, W}
+    class: math
+    replacement: $g \in {O, I, E, D, R, V, W}$
+    translates: true
+  - line: 418
+    text: μ⃗ = ({μ_1, …, μ_k}, ≼)
+    class: combining
+    replacement: $\vec{\mu} = ({\mu_1, \dots, \mu_k}, \preceq)$
+    translates: true
+  - line: 418
+    text: ≼
+    class: math
+    replacement: $\preceq$
+    translates: true
+  - line: 420
+    text: ≼
+    class: math
+    replacement: $\preceq$
+    translates: true
+  - line: 420
+    text: ≼
+    class: math
+    replacement: $\preceq$
+    translates: true
+  - line: 545
+    text: T = task(A)
+    class: math
+    replacement: $T = task(A)$
+    translates: true
+  - line: 558
+    text: V2b-T_q → V1_q
+    class: math
+    replacement: $V2b-T_q \to V1_q$
+    translates: true
+  - line: 558
+    text: CorePath = {V2a, V2b-P, V2c, V3a, V3b, V3c, V3d, V3e, V4a, V5, V6}
+    class: math
+    replacement: $CorePath = {V2a, V2b-P, V2c, V3a, V3b, V3c, V3d, V3e, V4a, V5, V6}$
+    translates: true
+  - line: 565
+    text: V2b-T_q → V1_q
+    class: math
+    replacement: $V2b-T_q \to V1_q$
+    translates: true
+  - line: 583
+    text: AdequatePathError(e) := ¬V1(e) ∧ PathwayAdequate(e)
+    class: math
+    replacement: $AdequatePathError(e) := \neg V1(e) \wedge PathwayAdequate(e)$
+    translates: true
+  - line: 583
+    text: JustifiedMiss(e) := AdequatePathError(e)
+    class: math
+    replacement: $JustifiedMiss(e) := AdequatePathError(e)$
+    translates: true
+  - line: 630
+    text: Γ_E = (E, ⇝)
+    class: math
+    replacement: $\Gamma_E = (E, \rightsquigarrow)$
+    translates: true
+  - line: 644
+    text: e_Γ = comp(Γ_E)
+    class: math
+    replacement: $e_\Gamma = comp(\Gamma_E)$
+    translates: true
+  - line: 646
+    text: T = task(A)
+    class: math
+    replacement: $T = task(A)$
+    translates: true
+  - line: 663
+    text: T_α = task(A_α)
+    class: math
+    replacement: $T_\alpha = task(A_\alpha)$
+    translates: true
+  - line: 663
+    text: x_α = Ω_α(m)
+    class: math
+    replacement: $x_\alpha = \Omega_\alpha(m)$
+    translates: true
+  - line: 668
+    text: T_α = task(A_α)
+    class: math
+    replacement: $T_\alpha = task(A_\alpha)$
+    translates: true
+  - line: 668
+    text: 𝒢_{α,A_α} ⊆ Π_{A_α}
+    class: math
+    replacement: $\mathcal{G}_{\alpha,A_\alpha} \subseteq \Pi_{A_\alpha}$
+    translates: true
+  - line: 682
+    text: T_α = task(A_α)
+    class: math
+    replacement: $T_\alpha = task(A_\alpha)$
+    translates: true
+  - line: 682
+    text: T_β = task(A_β)
+    class: math
+    replacement: $T_\beta = task(A_\beta)$
+    translates: true
+  - line: 683
+    text: 𝒢_{α,A_α} ≠ 𝒢_{β,A_β}
+    class: math
+    replacement: $\mathcal{G}_{\alpha,A_\alpha} ≠ \mathcal{G}_{\beta,A_\beta}$
+    translates: true
+  - line: 707
+    text: 𝒢_{α,A_α} ⊆ Π_{A_α}
+    class: math
+    replacement: $\mathcal{G}_{\alpha,A_\alpha} \subseteq \Pi_{A_\alpha}$
+    translates: true
+  - line: 709
+    text: '∃ m′ ∈ Reach(m): O*(m′; A_1) ∈ 𝒢_1 ∧ O*(m′; A_2) ∈ 𝒢_2'
+    class: math
+    replacement: '$\exists m'' \in Reach(m): O^*(m''; A_1) \in \mathcal{G}_1 \wedge O^*(m''; A_2) \in \mathcal{G}_2$'
+    translates: true
+  - line: 711
+    text: 𝒢_{α_1,A} = 𝒢_{α_2,A}
+    class: math
+    replacement: $\mathcal{G}_{\alpha_1,A} = \mathcal{G}_{\alpha_2,A}$
+    translates: true
+  - line: 979
+    text: (m, o) ∈ Inst_A
+    class: math
+    replacement: $(m, o) \in Inst_A$
+    translates: true
+  - line: 979
+    text: T = task(A)
+    class: math
+    replacement: $T = task(A)$
+    translates: true
+  - line: 979
+    text: task(A) = T
+    class: math
+    replacement: $task(A) = T$
+    translates: true
+- file: theory/orthemic-core-formalization.md
+  in_build_pipeline: true
+  formula_spans: 86
+  targets:
+  - line: 20
+    text: M_A ⊆ 𝓜
+    class: math
+    replacement: $M_A \subseteq \mathcal{M}$
+    translates: true
+  - line: 21
+    text: O_A ⊆ 𝓞
+    class: math
+    replacement: $O_A \subseteq \mathcal{O}$
+    translates: true
+  - line: 23
+    text: Inst_A ⊆ M_A × O_A
+    class: math
+    replacement: $Inst_A \subseteq M_A \times O_A$
+    translates: true
+  - line: 25
+    text: T = task(A)
+    class: math
+    replacement: $T = task(A)$
+    translates: true
+  - line: 28
+    text: p̂_t(m) ∈ Π_A^∂
+    class: combining
+    replacement: $\hat{p}_t(m) \in \Pi_A^\partial$
+    translates: true
+  - line: 33
+    text: task(A) = T
+    class: math
+    replacement: $task(A) = T$
+    translates: true
+  - line: 87
+    text: ι_n(e) ∈ M^(n+1)
+    class: math
+    replacement: $\iota_n(e) \in M^(n+1)$
+    translates: true
+  - line: 113
+    text: e_μ(m) = o-hat
+    class: math
+    replacement: $e_\mu(m) = o-hat$
+    translates: true
+  - line: 115
+    text: o-hat = o*
+    class: math
+    replacement: $o-hat = o^*$
+    translates: true
+  - line: 146
+    text: κ = id(m)
+    class: math
+    replacement: $\kappa = id(m)$
+    translates: true
+  - line: 147
+    text: v = ver(m)
+    class: math
+    replacement: $v = ver(m)$
+    translates: true
+  - line: 148
+    text: x = Ω_e(m)
+    class: math
+    replacement: $x = \Omega_e(m)$
+    translates: true
+  - line: 153
+    text: T = task(A)
+    class: math
+    replacement: $T = task(A)$
+    translates: true
+  - line: 155
+    text: μ⃗ = (μ₁,…,μ_k; ≼)
+    class: combining
+    replacement: $\vec{\mu} = (\mu_1,\dots,\mu_k; \preceq)$
+    translates: true
+  - line: 155
+    text: ≼
+    class: math
+    replacement: $\preceq$
+    translates: true
+  - line: 156
+    text: MetaTok(e) = {μ̄_1,…,μ̄_j}
+    class: combining
+    replacement: $MetaTok(e) = {\bar{\mu}_1,\dots,\bar{\mu}_j}$
+    translates: true
+  - line: 156
+    text: ApplyEvent(μ̄, e) = ⟨μ̄, Trace_e\|_μ̄⟩
+    class: combining
+    replacement: $ApplyEvent(\bar{\mu}, e) = \langle\bar{\mu}, Trace_e \|_\bar{\mu}\rangle$
+    translates: true
+  - line: 157
+    text: μ⃗
+    class: combining
+    replacement: $\vec{\mu}$
+    translates: true
+  - line: 158
+    text: C⃗
+    class: combining
+    replacement: $\vec{C}$
+    translates: true
+  - line: 158
+    text: C^id ⊆ M
+    class: math
+    replacement: $C^{id} \subseteq M$
+    translates: true
+  - line: 158
+    text: C^profile ⊆ Π_A
+    class: math
+    replacement: $C^{profile} \subseteq \Pi_A$
+    translates: true
+  - line: 158
+    text: C^cause ⊆ 𝒦_A
+    class: math
+    replacement: $C^{cause} \subseteq \mathcal{K}_A$
+    translates: true
+  - line: 158
+    text: C^route ⊆ ℛ_A
+    class: math
+    replacement: $C^{route} \subseteq \mathcal{R}_A$
+    translates: true
+  - line: 158
+    text: C^warrant ⊆ 𝒲_A
+    class: math
+    replacement: $C^{warrant} \subseteq \mathcal{W}_A$
+    translates: true
+  - line: 159
+    text: p̂ ∈ Π_A^∂
+    class: combining
+    replacement: $\hat{p} \in \Pi_A^\partial$
+    translates: true
+  - line: 159
+    text: Ĉ ⊆ Π_A
+    class: math
+    replacement: $\hat{C} \subseteq \Pi_A$
+    translates: true
+  - line: 159
+    text: Ô ⊆ O
+    class: math
+    replacement: $\hat{O} \subseteq O$
+    translates: true
+  - line: 166
+    text: Succ ⊆ M
+    class: math
+    replacement: $Succ \subseteq M$
+    translates: true
+  - line: 166
+    text: m′ = succ(m,a)
+    class: math
+    replacement: $m' = succ(m,a)$
+    translates: true
+  - line: 170
+    text: Π_A ⊆ 𝒫(O_A)
+    class: math
+    replacement: $\Pi_A \subseteq \mathcal{P}(O_A)$
+    translates: true
+  - line: 182
+    text: Π_A ⊆ Π_A^∂
+    class: math
+    replacement: $\Pi_A \subseteq \Pi_A^\partial$
+    translates: true
+  - line: 217
+    text: a = ⊥
+    class: math
+    replacement: $a = \bot$
+    translates: true
+  - line: 218
+    text: Succ = ∅
+    class: math
+    replacement: $Succ = \emptyset$
+    translates: true
+  - line: 218
+    text: r = ⊥
+    class: math
+    replacement: $r = \bot$
+    translates: true
+  - line: 232
+    text: out(e) = ⟨p̂, r, estatus, 𝒬, δ, a⟩
+    class: combining
+    replacement: $out(e) = \langle \hat{p}, r, estatus, \mathcal{Q}, \delta, a \rangle$
+    translates: true
+  - line: 236
+    text: μ⃗
+    class: combining
+    replacement: $\vec{\mu}$
+    translates: true
+  - line: 244
+    text: o-hat ∈ O*(m; A(e))
+    class: math
+    replacement: $o-hat \in O^*(m; A(e))$
+    translates: true
+  - line: 275
+    text: μ = ⟨g, S_μ, select_μ, prov(μ), ver(μ)⟩
+    class: math
+    replacement: $\mu = \langle g, S_\mu, select_\mu, prov(\mu), ver(\mu)\rangle$
+    translates: true
+  - line: 283
+    text: g ∈ {O, I, E, D, R, V, W}
+    class: math
+    replacement: $g \in {O, I, E, D, R, V, W}$
+    translates: true
+  - line: 290
+    text: ≼
+    class: math
+    replacement: $\preceq$
+    translates: true
+  - line: 333
+    text: μ⃗(e) = ({μ₁,…,μ_k}, ≼)
+    class: combining
+    replacement: $\vec{\mu}(e) = ({\mu_1,\dots,\mu_k}, \preceq)$
+    translates: true
+  - line: 340
+    text: ≼
+    class: math
+    replacement: $\preceq$
+    translates: true
+  - line: 341
+    text: ≼
+    class: math
+    replacement: $\preceq$
+    translates: true
+  - line: 344
+    text: "prov(μ) = ⟨authority, warrant,\n  scope, ver(μ)⟩"
+    class: math
+    replacement: "$prov(\\mu) = \\langle authority, warrant,\n  scope, ver(\\mu)\\rangle$"
+    translates: true
+  - line: 353
+    text: 'ρ : (μ, lesson) ↦ μ′'
+    class: math
+    replacement: '$\rho : (\mu, lesson) \mapsto \mu''$'
+    translates: true
+  - line: 355
+    text: affected(μ, μ′) →
+    class: math
+    replacement: $affected(\mu, \mu') \to$
+    translates: true
+  - line: 430
+    text: μ⃗
+    class: combining
+    replacement: $\vec{\mu}$
+    translates: true
+  - line: 435
+    text: "RelSpec_q(e) = ⟨declared reference class; relevant case/risk stratum;\n  reliability metric; threshold or tolerance; perturbation or comparison\n  family where applicable; evaluation protocol; evidence used to\n  establish reliability;\
+      \ version and validity conditions⟩"
+    class: code
+    replacement: "$RelSpec_q(e) = \\langle declared reference class; relevant case/risk stratum;\n  reliability metric; threshold or tolerance; perturbation or comparison\n  family where applicable; evaluation protocol; evidence used to\n  establish\
+      \ reliability; version and validity conditions \\rangle$"
+    translates: true
+  - line: 453
+    text: V2b-T_q(e) → V1_q(e)
+    class: math
+    replacement: $V2b-T_q(e) \to V1_q(e)$
+    translates: true
+  - line: 467
+    text: adeq(μ⃗, e)
+    class: combining
+    replacement: $adeq(\vec{\mu}, e)$
+    translates: true
+  - line: 476
+    text: V3c(e) ⟺ ∧_{μ̄ ∈ MetaTok(e)} TokenAdequate(μ̄, e)
+    class: combining
+    replacement: $V3c(e) \Leftrightarrow \wedge_{\bar{\mu} \in MetaTok(e)} TokenAdequate(\bar{\mu}, e)$
+    translates: true
+  - line: 477
+    text: "TokenAdequate(μ̄, e) ⟺ MetaInst(μ̄, μ) ∧ Compatible(μ̄, A(e)) ∧\n  Anchored(μ̄, κ(e), v(e)) ∧ ScopeCorrect(μ̄, \U0001D4AC(e)) ∧ Current(μ̄, t(e)) ∧\n  Provenanced(μ̄) ∧ AuthorizedBinding(μ̄)"
+    class: combining
+    replacement: "$TokenAdequate(\\bar{\\mu}, e) \\Leftrightarrow MetaInst(\\bar{\\mu}, \\mu) \\wedge Compatible(\\bar{\\mu}, A(e)) \\wedge\n  Anchored(\\bar{\\mu}, \\kappa(e), v(e)) \\wedge ScopeCorrect(\\bar{\\mu}, \\mathcal{Q}(e)) \\wedge\
+      \ Current(\\bar{\\mu}, t(e)) \\wedge\n  Provenanced(\\bar{\\mu}) \\wedge AuthorizedBinding(\\bar{\\mu})$"
+    translates: true
+  - line: 489
+    text: MetaTok(e) = ∅ ⟹ V3c ∉ ReqPath(e)
+    class: math
+    replacement: $MetaTok(e) = \emptyset \Rightarrow V3c \in̸ ReqPath(e)$
+    translates: true
+  - line: 515
+    text: "PerturbSpec(e) = ⟨varied fields; invariant fields; generator or\n  enumeration; size or measure; tolerance⟩"
+    class: math
+    replacement: "$PerturbSpec(e) = \\langle varied fields; invariant fields; generator or\n  enumeration; size or measure; tolerance \\rangle$"
+    translates: true
+  - line: 520
+    text: μ⃗
+    class: combining
+    replacement: $\vec{\mu}$
+    translates: true
+  - line: 522
+    text: P ⊆ E×E
+    class: math
+    replacement: $P \subseteq E \times E$
+    translates: true
+  - line: 522
+    text: 'N(e) = {e′ : (e, e′) ∈ P}'
+    class: math
+    replacement: '$N(e) = {e'' : (e, e'') \in P}$'
+    translates: true
+  - line: 562
+    text: MetaTok(e) ≠ ∅
+    class: math
+    replacement: $MetaTok(e) ≠ \emptyset$
+    translates: true
+  - line: 563
+    text: MetaTok(e) = ∅ ⟹ V3c ∉ ReqPath(e)
+    class: math
+    replacement: $MetaTok(e) = \emptyset \Rightarrow V3c \in̸ ReqPath(e)$
+    translates: true
+  - line: 607
+    text: V2b-T_q(e) → V1_q(e)
+    class: math
+    replacement: $V2b-T_q(e) \to V1_q(e)$
+    translates: true
+  - line: 608
+    text: V2b-P(e) → V1(e)
+    class: math
+    replacement: $V2b-P(e) \to V1(e)$
+    translates: true
+  - line: 609
+    text: V3e(e) → V1(e)
+    class: math
+    replacement: $V3e(e) \to V1(e)$
+    translates: true
+  - line: 610
+    text: PathwayAdequate(e) → V1(e)
+    class: math
+    replacement: $PathwayAdequate(e) \to V1(e)$
+    translates: true
+  - line: 611
+    text: V1(e) → PathwayAdequate(e)
+    class: math
+    replacement: $V1(e) \to PathwayAdequate(e)$
+    translates: true
+  - line: 629
+    text: AdequatePathError(e) := ¬V1(e) ∧ PathwayAdequate(e)
+    class: math
+    replacement: $AdequatePathError(e) := \neg V1(e) \wedge PathwayAdequate(e)$
+    translates: true
+  - line: 629
+    text: JustifiedMiss(e) := AdequatePathError(e)
+    class: math
+    replacement: $JustifiedMiss(e) := AdequatePathError(e)$
+    translates: true
+  - line: 695
+    text: Γ_E = (E, ⇝)
+    class: math
+    replacement: $\Gamma_E = (E, \rightsquigarrow)$
+    translates: true
+  - line: 697
+    text: μ⃗ᵢ
+    class: combining
+    replacement: $\vec{\mu}_i$
+    translates: true
+  - line: 725
+    text: e_Γ = comp(Γ_E)
+    class: math
+    replacement: $e_\Gamma = comp(\Gamma_E)$
+    translates: true
+  - line: 729
+    text: T = task(A)
+    class: math
+    replacement: $T = task(A)$
+    translates: true
+  - line: 734
+    text: μ⃗_{e_Γ}
+    class: combining
+    replacement: $\vec{\mu}_{e_\Gamma}$
+    translates: true
+  - line: 744
+    text: ι_n(eᵢ) ∈ M^(n+1)
+    class: math
+    replacement: $\iota_n(e_i) \in M^(n+1)$
+    translates: true
+  - line: 766
+    text: T_α = task(A_α)
+    class: math
+    replacement: $T_\alpha = task(A_\alpha)$
+    translates: true
+  - line: 772
+    text: x_α = Ω_α(m)
+    class: math
+    replacement: $x_\alpha = \Omega_\alpha(m)$
+    translates: true
+  - line: 774
+    text: Ω_α(m) ≠ Ω_β(m)
+    class: math
+    replacement: $\Omega_\alpha(m) ≠ \Omega_\beta(m)$
+    translates: true
+  - line: 784
+    text: 𝒢_{α,A_α} ⊆ Π_{A_α}
+    class: math
+    replacement: $\mathcal{G}_{\alpha,A_\alpha} \subseteq \Pi_{A_\alpha}$
+    translates: true
+  - line: 789
+    text: φ(α→β)
+    class: math
+    replacement: $\phi(\alpha \to \beta)$
+    translates: true
+  - line: 791
+    text: 𝒢_{β,A_β} = φ(𝒢_{α,A_α})
+    class: math
+    replacement: $\mathcal{G}_{\beta,A_\beta} = \phi(\mathcal{G}_{\alpha,A_\alpha})$
+    translates: true
+  - line: 791
+    text: 𝒢_α ∩ 𝒢_β = ∅
+    class: math
+    replacement: $\mathcal{G}_\alpha \cap \mathcal{G}_\beta = \emptyset$
+    translates: true
+  - line: 794
+    text: 𝒢_α ⊆ Π_{A_α}
+    class: math
+    replacement: $\mathcal{G}_\alpha \subseteq \Pi_{A_\alpha}$
+    translates: true
+  - line: 794
+    text: 𝒢_β ⊆ Π_{A_β}
+    class: math
+    replacement: $\mathcal{G}_\beta \subseteq \Pi_{A_\beta}$
+    translates: true
+  - line: 804
+    text: A_α = A_β
+    class: math
+    replacement: $A_\alpha = A_\beta$
+    translates: true
+  - line: 804
+    text: 𝒢_α = 𝒢_β
+    class: math
+    replacement: $\mathcal{G}_\alpha = \mathcal{G}_\beta$
+    translates: true
+  - line: 805
+    text: φ(α→β)
+    class: math
+    replacement: $\phi(\alpha \to \beta)$
+    translates: true
+  - line: 819
+    text: x_α = Ω_α(m)
+    class: math
+    replacement: $x_\alpha = \Omega_\alpha(m)$
+    translates: true
+  - line: 843
+    text: ProfileOf_A ⊆ Z_A × Π_A
+    class: math
+    replacement: $ProfileOf_A \subseteq Z_A \times \Pi_A$
+    translates: true
+- file: theory/orthemic-multi-actor-conflict-note.md
+  in_build_pipeline: true
+  formula_spans: 3
+  targets:
+  - line: 22
+    text: T_α = task(A_α)
+    class: math
+    replacement: $T_\alpha = task(A_\alpha)$
+    translates: true
+  - line: 45
+    text: 𝒢_{α,A_α} ⊆ Π_{A_α}
+    class: math
+    replacement: $\mathcal{G}_{\alpha,A_\alpha} \subseteq \Pi_{A_\alpha}$
+    translates: true
+  - line: 111
+    text: "text\nx_α = Ω_α(m)         actor-α's OBSERVATION of the shared occurrence m\n                     (imperfect information: Ω_α(m) ≠ Ω_β(m) over ONE m)\np̂(e, α, T_α)        the current inferred profile of actor α's episode e\n     \
+      \                under its analysis A_α, task T_α = task(A_α)\n                     (inferred FROM x_α, never from m directly)\nGoalSchema(·)   a PARAMETRIC ortheme schema — the shared\n                     goal-form under role substitution\
+      \ (\"win for α\")\n\U0001D4A2_{α,A_α} ⊆ Π_{A_α}  actor-α's grounded TARGET PROFILE SET: the profiles\n                     T_α declares appropriate as outcomes — the schema's\n                     instantiation at α. NORMATIVE TYPING: a\
+      \ SET of\n                     profiles; each member is one complete profile\nφ(α→β)               a role/perspective isomorphism between Π_{A_α} and\n                     Π_{A_β}, when one exists\n                     (schema invariance:\
+      \ \U0001D4A2_{β,A_β} = φ(\U0001D4A2_{α,A_α}))\nCompat_m(\U0001D4A2_α, \U0001D4A2_β)    ∃ m′ ∈ Reach(m): O*(m′; A_α) ∈ \U0001D4A2_α ∧ O*(m′; A_β) ∈ \U0001D4A2_β\n                     (well-typed: one shared occurrence, each analysis\n  \
+      \                   evaluating in its own profile space — never bare\n                     intersection of sets from different spaces)\nConflict_m(\U0001D4A2_α, \U0001D4A2_β)  no such reachable m′ exists\n                     (cooperation:\
+      \ shared analysis + shared target set,\n                     or an explicit alignment map φ(α→β))\n"
+    class: combining
+    replacement: "$text\nx_\\alpha = \\Omega_\\alpha(m)         actor-\\alpha's OBSERVATION of the shared occurrence m\n                     (imperfect information: \\Omega_\\alpha(m) ≠ \\Omega_\\beta(m) over ONE m)\n\\hat{p}(e, \\alpha, T_\\\
+      alpha)        the current inferred profile of actor \\alpha's episode e\n                     under its analysis A_\\alpha, task T_\\alpha = task(A_\\alpha)\n                     (inferred FROM x_\\alpha, never from m directly)\nGoalSchema(\\\
+      cdot)   a PARAMETRIC ortheme schema — the shared\n                     goal-form under role substitution (\"win for \\alpha\")\n\\mathcal{G}_{\\alpha,A_\\alpha} \\subseteq \\Pi_{A_\\alpha}  actor-\\alpha's grounded TARGET PROFILE SET: the\
+      \ profiles\n                     T_\\alpha declares appropriate as outcomes — the schema's\n                     instantiation at \\alpha. NORMATIVE TYPING: a SET of\n                     profiles; each member is one complete profile\n\\\
+      phi(\\alpha \\to \\beta)               a role/perspective isomorphism between \\Pi_{A_\\alpha} and\n                     \\Pi_{A_\\beta}, when one exists\n                     (schema invariance: \\mathcal{G}_{\\beta,A_\\beta} = \\phi(\\\
+      mathcal{G}_{\\alpha,A_\\alpha}))\nCompat_m(\\mathcal{G}_\\alpha, \\mathcal{G}_\\beta)    \\exists m' \\in Reach(m): O^*(m'; A_\\alpha) \\in \\mathcal{G}_\\alpha \\wedge O^*(m'; A_\\beta) \\in \\mathcal{G}_\\beta\n                     (well-typed:\
+      \ one shared occurrence, each analysis\n                     evaluating in its own profile space — never bare\n                     intersection of sets from different spaces)\nConflict_m(\\mathcal{G}_\\alpha, \\mathcal{G}_\\beta)  no such\
+      \ reachable m' exists\n                     (cooperation: shared analysis + shared target set,\n                     or an explicit alignment map \\phi(\\alpha \\to \\beta))\n$"
+    translates: true
+- file: companion/CONCRETE-AND-SOUND-REASON.md
+  in_build_pipeline: false
+  formula_spans: 2
+  targets:
+  - line: 35
+    text: ' = ⟨accepted premises; inferential repertoire; semantic conventions; evidential authorities; default abstractions; institutional incentives; habitual exclusions⟩ — a *composite*, sound in some respects and unsound in others; never
+      one ortheme. **(sense B):** one actor''s dated, situated reasoning run '
+    class: math
+    replacement: $ = \langle accepted premises; inferential repertoire; semantic conventions; evidential authorities; default abstractions; institutional incentives; habitual exclusions \rangle — a *composite^*, sound in some respects and unsound
+      in others; never one ortheme. **(sense B):** one actor's dated, situated reasoning run $
+    translates: true
+  - line: 35
+    text: ' — a token that can be sound or unsound. Sliding A→B unannounced is forbidden. **[synthesis]**
+
+      - **Ideal reason:** a normative specification or regulative model of rational functioning, not the historically dominant conception of one culture — and not a reified abstract entity. **[secondary-reconstruction]**
+
+      - **ʿAql ṣarīḥ:** in the Taymiyyan reconstruction, clear/pure/unadulterated reason operating through sound fiṭrah and valid sources, opposed not to "concreteness" but to reason corrupted by inherited doctrine, whim, conjecture, doubt, ulterior
+      motive, habit, or imitation; not equatable with one modern formal logic, one cultural common sense, or majority opinion. Whether the term names a faculty, a condition, a body of immediate truths, valid reasoning, or a family resemblance
+      among these is **left open** — the sources do not warrant false precision. **[secondary-reconstruction]**
+
+      - **Sound reason:** ambiguous until bearer and threshold are declared. Dimensions: (1) faculty condition; (2) premise/source soundness; (3) governing-standard adequacy; (4) token adequacy; (5) execution fidelity; (6) inferential validity;
+      (7) result correctness; (8) truth linkage. "Sound reasoning" as a summary is permissible only after these are visible. **[orthemological extension]**
+
+
+      ## 5. Formal mapping to placements and verdicts **[orthemological extension]**
+
+
+      - '
+    class: code
+    replacement: '$ — a token that can be sound or unsound. Sliding A \to B unannounced is forbidden. **[synthesis]**
+
+      - **Ideal reason:** a normative specification or regulative model of rational functioning, not the historically dominant conception of one culture — and not a reified abstract entity. **[secondary-reconstruction]**
+
+      - **ʿAql ṣar\bar{i}ḥ:** in the Taymiyyan reconstruction, clear/pure/unadulterated reason operating through sound fiṭrah and valid sources, opposed not to "concreteness" but to reason corrupted by inherited doctrine, whim, conjecture,
+      doubt, ulterior motive, habit, or imitation; not equatable with one modern formal logic, one cultural common sense, or majority opinion. Whether the term names a faculty, a condition, a body of immediate truths, valid reasoning, or a family
+      resemblance among these is **left open^** — the sources do not warrant false precision. **[secondary-reconstruction]**
+
+      - **Sound reason:** ambiguous until bearer and threshold are declared. Dimensions: (1) faculty condition; (2) premise/source soundness; (3) governing-standard adequacy; (4) token adequacy; (5) execution fidelity; (6) inferential validity;
+      (7) result correctness; (8) truth linkage. "Sound reasoning" as a summary is permissible only after these are visible. **[orthemological extension]**
+
+
+      ## 5. Formal mapping to placements and verdicts **[orthemological extension]**
+
+
+      - $'
+    translates: true
+- file: companion/orthability-and-the-ground-of-intelligibility.md
+  in_build_pipeline: true
+  formula_spans: 2
+  targets:
+  - line: 25
+    text: StrictlySoundReasoning_q(e) := ReasoningPathAdequate_q(e) ∧ TOKEN_TRUTH_LINKED_q(e)
+    class: math
+    replacement: $StrictlySoundReasoning_q(e) := ReasoningPathAdequate_q(e) \wedge TOKEN_{TRUTH}_{LINKED}_q(e)$
+    translates: true
+  - line: 27
+    text: ReqReason_q(e) ⊆ ReqPath(e)
+    class: math
+    replacement: $ReqReason_q(e) \subseteq ReqPath(e)$
+    translates: true
+- file: companion/orthemic-companion-paper-outline.md
+  in_build_pipeline: false
+  formula_spans: 1
+  targets:
+  - line: 74
+    text: F = ⟨X, Y, R, A, N, E, Ag, ⊳⟩
+    class: math
+    replacement: $F = \langle X, Y, R, A, N, E, Ag, ⊳\rangle$
+    translates: true
+- file: companion/orthemic-modal-metaphysical-assessment.md
+  in_build_pipeline: false
+  formula_spans: 4
+  targets:
+  - line: 8
+    text: 'N_T: X → P(X)'
+    class: math
+    replacement: '$N_T: X \to P(X)$'
+    translates: true
+  - line: 26
+    text: O(x,r)=y
+    class: math
+    replacement: $O(x,r)=y$
+    translates: true
+  - line: 72
+    text: x′ ∈ N(x)
+    class: math
+    replacement: $x' \in N(x)$
+    translates: true
+  - line: 340
+    text: 'N: X →
+
+      P(P(X))'
+    class: math
+    replacement: '$N: X \to
+
+      P(P(X))$'
+    translates: true
+- file: applications/daee-epistemics/META-NOETIC-MEMETICS-AND-DYNAMIC-ORTHING.md
+  in_build_pipeline: false
+  formula_spans: 1
+  targets:
+  - line: 47
+    text: 'math
+
+      \Gamma^{\mu}_t = (V^{\mu}_t, E^{\mu}_t)
+
+      '
+    class: math
+    replacement: '$math
+
+      \Gamma^{\mu}_t = (V^{\mu}_t, E^{\mu}_t)
+
+      $'
+    translates: true
+- file: applications/daee-epistemics/NOETIC-ORTHING-APPLICATION.md
+  in_build_pipeline: false
+  formula_spans: 2
+  targets:
+  - line: 27
+    text: "text\nconcrete engagement  ≠  observed discourse  ≠  candidate noetic profiles\n   ≠  inferred profile (Ψᴵ)  ≠  actual interior condition\n   ≠  released response  ≠  actual uptake/restoration\n"
+    class: code
+    replacement: null
+    translates: false
+  - line: 47
+    text: " is operative in this case\"** is a **placement claim** under a\n  repeatable noetic state-type — an **ortheme-level** claim requiring evidence;\n- the rule distinguishing bias from evidential disagreement, incomplete\n  evidence,\
+      \ or sincere confusion, and fixing what evidence licenses that\n  placement, is **metaorthemic**;\n- this case's concrete evidence, threshold, source status, module version, and\n  scope form one or more **metaorthemmata**;\n- the whole\
+      \ intake → diagnosis → route → response → reread is the **episode**.\n\nThe taxonomy's truth is **[creed-internal]** and is **not** imported into the\nschool-neutral core (Decision 0021 §4). Placements assert nothing about\nmotive, culpability,\
+      \ or soul-state.\n\n## 4. Diagnostic IR is a composite control representation, not a metaorthemma\n\ndaee's Diagnostic IR carries claims, criteria, grounding relations, governing\nepistemic rules, testimonial posture, interpretive filters,\
+      \ routes, and\nrestoration targets **[direct: diagnostic-ir.md]**. Typed **[crosswalk]**, it\nis the **episode-internal control representation** — observations, candidate\nplacements, governing bindings, route state, and residual/claim\
+      \ ledgers — a\n**composite**, **not** one metaorthemma and **not** ground truth. Collapsing\nthe IR into a single metaorthemma, or into the interior state, is the error\nfixture-Review-A attacks.\n\n## 5. Meta-noetic memetics is a longitudinal\
+      \ metaortheme/revision extension\n\ndaee describes how governing epistemic rules form, stabilize, mutate,\nreproduce, and propagate through language and social structure **[direct:\nREADME.md; pattern-profiling.md]**. Typed **[crosswalk]**,\
+      \ this is Orthemology\nmetaortheme **versioning + cross-episode transport + recurrence-triggered\nrevision + impact-scoped reopening (collapse radius)** — a **domain-specific\nextension across episodes and actors**, requiring **no new primitive**.\n\
+      \n## 6. Two-way stress test: what daee requires of Orthemology, and exposes\n\nThe relation runs both ways. daee's operation demands, and Orthemology\nsupplies, exactly these separations — each a fixture ("
+    class: code
+    replacement: "$ is operative in this case\"** is a **placement claim^** under a\n  repeatable noetic state-type — an **ortheme-level^** claim requiring evidence;\n- the rule distinguishing bias from evidential disagreement, incomplete\n \
+      \ evidence, or sincere confusion, and fixing what evidence licenses that\n  placement, is **metaorthemic^**;\n- this case's concrete evidence, threshold, source status, module version, and\n  scope form one or more **metaorthemmata^**;\n\
+      - the whole intake \\to diagnosis \\to route \\to response \\to reread is the **episode^**.\n\nThe taxonomy's truth is **[creed-internal]** and is **not^** imported into the\nschool-neutral core (Decision 0021 §4). Placements assert nothing\
+      \ about\nmotive, culpability, or soul-state.\n\n## 4. Diagnostic IR is a composite control representation, not a metaorthemma\n\ndaee's Diagnostic IR carries claims, criteria, grounding relations, governing\nepistemic rules, testimonial\
+      \ posture, interpretive filters, routes, and\nrestoration targets **[direct: diagnostic-ir.md]**. Typed **[crosswalk]**, it\nis the **episode-internal control representation^** — observations, candidate\nplacements, governing bindings,\
+      \ route state, and residual/claim ledgers — a\n**composite^**, **not^** one metaorthemma and **not^** ground truth. Collapsing\nthe IR into a single metaorthemma, or into the interior state, is the error\nfixture-Review-A attacks.\n\n##\
+      \ 5. Meta-noetic memetics is a longitudinal metaortheme/revision extension\n\ndaee describes how governing epistemic rules form, stabilize, mutate,\nreproduce, and propagate through language and social structure **[direct:\nREADME.md; pattern-profiling.md]**.\
+      \ Typed **[crosswalk]**, this is Orthemology\nmetaortheme **versioning + cross-episode transport + recurrence-triggered\nrevision + impact-scoped reopening (collapse radius)^** — a **domain-specific\nextension across episodes and actors^**,\
+      \ requiring **no new primitive^**.\n\n## 6. Two-way stress test: what daee requires of Orthemology, and exposes\n\nThe relation runs both ways. daee's operation demands, and Orthemology\nsupplies, exactly these separations — each a fixture\
+      \ ($"
+    translates: true
+- file: applications/daee-epistemics/SOUND-DESCENT-MODEL-COMPARISON.md
+  in_build_pipeline: false
+  formula_spans: 1
+  targets:
+  - line: 26
+    text: 'math
+
+      \mathbf{B}_t = \langle B^{\text{disclosure}}_t, B^{\text{evidence}}_t, B^{\text{warrant}}_t, B^{\text{dependency}}_t, B^{\text{route}}_t, B^{\text{closure}}_t \rangle
+
+      '
+    class: math
+    replacement: '$math
+
+      \mathbf{B}_t = \langle B^{\text{disclosure}}_t, B^{\text{evidence}}_t, B^{\text{warrant}}_t, B^{\text{dependency}}_t, B^{\text{route}}_t, B^{\text{closure}}_t \rangle
+
+      $'
+    translates: true
+- file: applications/latent-state-orthing/DYNAMIC-ORTHING-AND-LATENT-STATE-LEARNING.md
+  in_build_pipeline: false
+  formula_spans: 2
+  targets:
+  - line: 57
+    text: 'math
+
+      b_{t+1} = \operatorname{update}(b_t, x_{t+1}, H_t) \qquad H_t = (x_1, a_1, \dots, x_t)
+
+      '
+    class: math
+    replacement: '$math
+
+      b_{t+1} = \operatorname{update}(b_t, x_{t+1}, H_t) \qquad H_t = (x_1, a_1, \dots, x_t)
+
+      $'
+    translates: true
+  - line: 104
+    text: 'math
+
+      \Delta^{\text{merge}}_A(z_i, z_j) := \inf_{\chi \in \operatorname{Rep}_A(z_i = z_j)} L_A^*(\chi) - \inf_{\chi \in \operatorname{Rep}_A} L_A^*(\chi), \qquad \text{split admitted} \iff \Delta^{\text{merge}}_A(z_i, z_j) > \epsilon_A
+
+      '
+    class: math
+    replacement: '$math
+
+      \Delta^{\text{merge}}_A(z_i, z_j) := \inf_{\chi \in \operatorname{Rep}_A(z_i = z_j)} L_A^*(\chi) - \inf_{\chi \in \operatorname{Rep}_A} L_A^*(\chi), \qquad \text{split admitted} \iff \Delta^{\text{merge}}_A(z_i, z_j) > \epsilon_A
+
+      $'
+    translates: true
+- file: docs/architecture-overview.md
+  in_build_pipeline: false
+  formula_spans: 4
+  targets:
+  - line: 5
+    text: Inst_A ⊆ M × O
+    class: math
+    replacement: $Inst_A \subseteq M \times O$
+    translates: true
+  - line: 5
+    text: x = Ω(m)
+    class: math
+    replacement: $x = \Omega(m)$
+    translates: true
+  - line: 7
+    text: μ = ⟨g, S_μ, select_μ, prov(μ), ver(μ)⟩
+    class: math
+    replacement: $\mu = \langle g, S_\mu, select_\mu, prov(\mu), ver(\mu)\rangle$
+    translates: true
+  - line: 9
+    text: e = ⟨id; m, κ, v; x, H; α, w, A, T, t; μ⃗, MetaTok, π; C⃗, p̂; r; estatus; 𝒬; δ; hand_in, hand_out; a, Succ⟩
+    class: combining
+    replacement: $e = \langle id; m, \kappa, v; x, H; \alpha, w, A, T, t; \vec{\mu}, MetaTok, \pi; \vec{C}, \hat{p}; r; estatus; \mathcal{Q}; \delta; hand_{in}, hand_{out}; a, Succ \rangle$
+    translates: true
+- file: docs/notation-gallery.md
+  in_build_pipeline: false
+  formula_spans: 3
+  targets:
+  - line: 24
+    text: T = task(A)
+    class: math
+    replacement: $T = task(A)$
+    translates: true
+  - line: 66
+    text: 'math
+
+      e = \langle \operatorname{id};\ m, \kappa, v;\ x, H;\ \alpha, w, A, T, t;\ \vec\mu, \operatorname{MetaTok}, \pi;\ \vec C, \hat p;\ r;\ \operatorname{estatus};\ \mathcal{Q};\ \delta;\ \operatorname{hand\_in}, \operatorname{hand\_out};\ a,
+      \operatorname{Succ} \rangle
+
+      '
+    class: math
+    replacement: '$math
+
+      e = \langle \operatorname{id};\ m, \kappa, v;\ x, H;\ \alpha, w, A, T, t;\ \vec \mu, \operatorname{MetaTok}, \pi;\ \vec C, \hat p;\ r;\ \operatorname{estatus};\ \mathcal{Q};\ \delta;\ \operatorname{hand \_{in}}, \operatorname{hand \_{out}};\
+      a, \operatorname{Succ} \rangle
+
+      $'
+    translates: true
+  - line: 77
+    text: '
+
+
+      ### 2.3 Set comprehension and predicate
+
+
+      Grounded target (a set of **profiles**, $\subseteq \Pi_{A_\alpha}$, not of occurrences): $\mathcal{G}_{\alpha,A_\alpha} = \{\, p \in \Pi_{A_\alpha} \mid \operatorname{GoalSchema}(\alpha)(p) \,\}$, and
+
+      strict soundness $\operatorname{StrictlySoundReasoning}_\chi(e) := \operatorname{ReasoningPathAdequate}_\chi(e) \wedge \operatorname{TokenTruthLinked}_\chi(e)$.
+
+
+      ### 2.4 Underbrace
+
+
+      $\underbrace{O^*(m; A)}_{\text{ground truth, never asserted from discourse}} \neq \underbrace{\hat p_{A,\alpha,t}(m)}_{\text{inferred belief}}$
+
+
+      ### 2.5 Labeled arrows (world transition vs learner update)
+
+
+      $m_t \xrightarrow{a_t} m_{t+1}$ (occurrence lineage) is not $\theta_t \xrightarrow{U_A(e_t)} \theta_{t+1}$ (learner update).
+
+
+      ### 2.6 Table containing inline math
+
+
+      | Object | Symbol | Non-claim |
+
+      |---|---|---|
+
+      | observation map | $\Omega_{A,\alpha,t}$ | not the occurrence |
+
+      | inferred profile | $\hat p_{A,\alpha,t}(m)$ | not $O^*(m; A)$ |
+
+      | metaorthemma | $\bar\mu_{e,j}$ | not the metaortheme type $\mu$ |
+
+
+      All notation meanings are those of '
+    class: math
+    replacement: '$
+
+
+      ### 2.3 Set comprehension and predicate
+
+
+      Grounded target (a set of **profiles^**, $\subseteq \Pi_{A_\alpha}$, not of occurrences): $\mathcal{G}_{\alpha,A_\alpha} = \{\, p \in \Pi_{A_\alpha} \mid \operatorname{GoalSchema}(\alpha)(p) \,\}$, and
+
+      strict soundness $\operatorname{StrictlySoundReasoning}_\chi(e) := \operatorname{ReasoningPathAdequate}_\chi(e) \wedge \operatorname{TokenTruthLinked}_\chi(e)$.
+
+
+      ### 2.4 Underbrace
+
+
+      $\underbrace{O^*(m; A)}_{\text{ground truth, never asserted from discourse}} \neq \underbrace{\hat p_{A,\alpha,t}(m)}_{\text{inferred belief}}$
+
+
+      ### 2.5 Labeled arrows (world transition vs learner update)
+
+
+      $m_t \xrightarrow{a_t} m_{t+1}$ (occurrence lineage) is not $\theta_t \xrightarrow{U_A(e_t)} \theta_{t+1}$ (learner update).
+
+
+      ### 2.6 Table containing inline math
+
+
+      | Object | Symbol | Non-claim |
+
+      |---|---|---|
+
+      | observation map | $\Omega_{A,\alpha,t}$ | not the occurrence |
+
+      | inferred profile | $\hat p_{A,\alpha,t}(m)$ | not $O^*(m; A)$ |
+
+      | metaorthemma | $\bar \mu_{e,j}$ | not the metaortheme type $\mu$ |
+
+
+      All notation meanings are those of $'
+    translates: true
+- file: docs/decisions/0001-analysis-relative-ground-truth.md
+  in_build_pipeline: false
+  formula_spans: 2
+  targets:
+  - line: 7
+    text: Inst_A ⊆ M × O
+    class: math
+    replacement: $Inst_A \subseteq M \times O$
+    translates: true
+  - line: 7
+    text: task(A) = T
+    class: math
+    replacement: $task(A) = T$
+    translates: true
+- file: docs/decisions/0002-metaorthemma-configuration-token.md
+  in_build_pipeline: false
+  formula_spans: 1
+  targets:
+  - line: 7
+    text: ApplyEvent(μ̄, e) = ⟨μ̄, Trace_e|_μ̄⟩
+    class: combining
+    replacement: $ApplyEvent(\bar{\mu}, e) = \langle\bar{\mu}, Trace_e|_\bar{\mu}\rangle$
+    translates: true
+- file: docs/decisions/0003-result-free-pathway-adequacy.md
+  in_build_pipeline: false
+  formula_spans: 2
+  targets:
+  - line: 7
+    text: V2b^tok_q → V1_q
+    class: math
+    replacement: $V2b^{tok}_q \to V1_q$
+    translates: true
+  - line: 7
+    text: V2b^tok_q → V1_q
+    class: math
+    replacement: $V2b^{tok}_q \to V1_q$
+    translates: true
+- file: docs/decisions/0004-verdict-registry-normalization.md
+  in_build_pipeline: false
+  formula_spans: 2
+  targets:
+  - line: 26
+    text: CorePath = {V2a, V2b-P, V2c, V3a, V3b, V3c, V3d, V3e, V4a, V5, V6}
+    class: math
+    replacement: $CorePath = {V2a, V2b-P, V2c, V3a, V3b, V3c, V3d, V3e, V4a, V5, V6}$
+    translates: true
+  - line: 26
+    text: V2b-T_q → V1_q
+    class: math
+    replacement: $V2b-T_q \to V1_q$
+    translates: true
+- file: docs/decisions/0005-symbol-table-normalization.md
+  in_build_pipeline: false
+  formula_spans: 6
+  targets:
+  - line: 10
+    text: M_A ⊆ 𝓜
+    class: math
+    replacement: $M_A \subseteq \mathcal{M}$
+    translates: true
+  - line: 10
+    text: O_A ⊆ 𝓞
+    class: math
+    replacement: $O_A \subseteq \mathcal{O}$
+    translates: true
+  - line: 11
+    text: Inst_A ⊆ M_A × O_A
+    class: math
+    replacement: $Inst_A \subseteq M_A \times O_A$
+    translates: true
+  - line: 11
+    text: p̂_{A,α,t}(m) ∈ Π_A^∂
+    class: combining
+    replacement: $\hat{p}_{A,\alpha,t}(m) \in \Pi_A^\partial$
+    translates: true
+  - line: 13
+    text: Γ_E = (E, ⇝)
+    class: math
+    replacement: $\Gamma_E = (E, \rightsquigarrow)$
+    translates: true
+  - line: 13
+    text: e_Γ = comp(Γ_E)
+    class: math
+    replacement: $e_\Gamma = comp(\Gamma_E)$
+    translates: true
+- file: docs/decisions/0007-profile-space-definition.md
+  in_build_pipeline: false
+  formula_spans: 4
+  targets:
+  - line: 11
+    text: O*(m; A) ∈ Π_A
+    class: math
+    replacement: $O^*(m; A) \in \Pi_A$
+    translates: true
+  - line: 11
+    text: Ĉ_{A,α,t}(m) ⊆ Π_A
+    class: math
+    replacement: $\hat{C}_{A,\alpha,t}(m) \subseteq \Pi_A$
+    translates: true
+  - line: 11
+    text: p̂_{A,α,t}(m) ∈ Π_A^∂
+    class: combining
+    replacement: $\hat{p}_{A,\alpha,t}(m) \in \Pi_A^\partial$
+    translates: true
+  - line: 13
+    text: p̂ ∈ Π_A^∂
+    class: combining
+    replacement: $\hat{p} \in \Pi_A^\partial$
+    translates: true
+- file: docs/decisions/0009-type-token-soundness-and-concrete-reason.md
+  in_build_pipeline: false
+  formula_spans: 5
+  targets:
+  - line: 39
+    text: StrictlySoundReasoning_q(e) := PathwayAdequate(e) ∧ TOKEN_TRUTH_LINKED_q(e)
+    class: math
+    replacement: $StrictlySoundReasoning_q(e) := PathwayAdequate(e) \wedge TOKEN_{TRUTH}_{LINKED}_q(e)$
+    translates: true
+  - line: 40
+    text: StrictlySoundReasoning_q(e) := ReasoningPathAdequate_q(e) ∧ TOKEN_TRUTH_LINKED_q(e)
+    class: math
+    replacement: $StrictlySoundReasoning_q(e) := ReasoningPathAdequate_q(e) \wedge TOKEN_{TRUTH}_{LINKED}_q(e)$
+    translates: true
+  - line: 40
+    text: ReqReason_q(e) ⊆ ReqPath(e)
+    class: math
+    replacement: $ReqReason_q(e) \subseteq ReqPath(e)$
+    translates: true
+  - line: 57
+    text: fiṭrah = a metaortheme
+    class: math
+    replacement: $fiṭrah = a metaortheme$
+    translates: true
+  - line: 57
+    text: = the orthing faculty
+    class: math
+    replacement: $= the orthing faculty$
+    translates: true
+- file: docs/decisions/0011-claim-relative-reasoning-path-and-strict-soundness.md
+  in_build_pipeline: false
+  formula_spans: 4
+  targets:
+  - line: 9
+    text: StrictlySoundReasoning_q(e) := PathwayAdequate(e) ∧ TOKEN_TRUTH_LINKED_q(e)
+    class: math
+    replacement: $StrictlySoundReasoning_q(e) := PathwayAdequate(e) \wedge TOKEN_{TRUTH}_{LINKED}_q(e)$
+    translates: true
+  - line: 17
+    text: ReqReason_q(e) ⊆ ReqPath(e)
+    class: math
+    replacement: $ReqReason_q(e) \subseteq ReqPath(e)$
+    translates: true
+  - line: 25
+    text: StrictlySoundReasoning_q(e) := ReasoningPathAdequate_q(e) ∧ TOKEN_TRUTH_LINKED_q(e)
+    class: math
+    replacement: $StrictlySoundReasoning_q(e) := ReasoningPathAdequate_q(e) \wedge TOKEN_{TRUTH}_{LINKED}_q(e)$
+    translates: true
+  - line: 53
+    text: PathwayAdequate(e) ∧ TOKEN_TRUTH_LINKED_q(e)
+    class: math
+    replacement: $PathwayAdequate(e) \wedge TOKEN_{TRUTH}_{LINKED}_q(e)$
+    translates: true
+- file: docs/decisions/0014-generated-project-state-and-whole-state-reread.md
+  in_build_pipeline: false
+  formula_spans: 1
+  targets:
+  - line: 42
+    text: source_commit_at_generation = git rev-parse HEAD
+    class: math
+    replacement: $source_{commit}_{at}_{generation} = git rev-parse HEAD$
+    translates: true
+- file: docs/decisions/0015-latent-state-observation-and-representation-boundary.md
+  in_build_pipeline: false
+  formula_spans: 10
+  targets:
+  - line: 19
+    text: m_t ∈ M_A
+    class: math
+    replacement: $m_t \in M_A$
+    translates: true
+  - line: 21
+    text: z_t ∈ Z_A
+    class: math
+    replacement: $z_t \in Z_A$
+    translates: true
+  - line: 22
+    text: x_t = Ω_A(m_t)
+    class: math
+    replacement: $x_t = \Omega_A(m_t)$
+    translates: true
+  - line: 23
+    text: C^latent_t ⊆ Z_A
+    class: math
+    replacement: $C^{latent}_t \subseteq Z_A$
+    translates: true
+  - line: 24
+    text: p̂_t(m) ∈ Π_A^∂
+    class: combining
+    replacement: $\hat{p}_t(m) \in \Pi_A^\partial$
+    translates: true
+  - line: 29
+    text: m ≠ z ≠ x ≠ b ≠ y ≠ p̂
+    class: combining
+    replacement: $m ≠ z ≠ x ≠ b ≠ y ≠ \hat{p}$
+    translates: true
+  - line: 35
+    text: z_i ≠ z_j
+    class: math
+    replacement: $z_i ≠ z_j$
+    translates: true
+  - line: 53
+    text: z_i ≠ z_j
+    class: math
+    replacement: $z_i ≠ z_j$
+    translates: true
+  - line: 63
+    text: z_i ≠ z_j
+    class: math
+    replacement: $z_i ≠ z_j$
+    translates: true
+  - line: 64
+    text: z_i ≠ z_j
+    class: math
+    replacement: $z_i ≠ z_j$
+    translates: true
+- file: docs/decisions/0018-experiment-packet-readiness-and-registration-status.md
+  in_build_pipeline: false
+  formula_spans: 1
+  targets:
+  - line: 13
+    text: DRAFT → SPEC_COMPLETE → DETERMINISTICALLY_VALIDATED → READY_FOR_HUMAN_MATCHING_REVIEW → READY_TO_RUN → RUN_IN_PROGRESS → RUN_COMPLETE_UNADJUDICATED → ADJUDICATED
+    class: math
+    replacement: $DRAFT \to SPEC_{COMPLETE} \to DETERMINISTICALLY_{VALIDATED} \to READY_{FOR}_{HUMAN}_{MATCHING}_{REVIEW} \to READY_{TO}_{RUN} \to RUN_{IN}_{PROGRESS} \to RUN_{COMPLETE}_{UNADJUDICATED} \to ADJUDICATED$
+    translates: true
+- file: docs/decisions/0023-mathematical-source-and-typesetting-pipeline.md
+  in_build_pipeline: false
+  formula_spans: 4
+  targets:
+  - line: 17
+    text: μ⃗
+    class: combining
+    replacement: $\vec{\mu}$
+    translates: true
+  - line: 17
+    text: C⃗
+    class: combining
+    replacement: $\vec{C}$
+    translates: true
+  - line: 63
+    text: μ⃗
+    class: combining
+    replacement: $\vec{\mu}$
+    translates: true
+  - line: 63
+    text: C⃗
+    class: combining
+    replacement: $\vec{C}$
+    translates: true
+- file: docs/decisions/0024-dynamic-orthing-and-representation-learning.md
+  in_build_pipeline: false
+  formula_spans: 3
+  targets:
+  - line: 55
+    text: 'math
+
+      D_A = \langle Z_A, X_A, Y_A, B_A, \Theta_A, P_A, \operatorname{Emission}_A, U_A, \operatorname{Revision}_A \rangle
+
+      '
+    class: math
+    replacement: '$math
+
+      D_A = \langle Z_A, X_A, Y_A, B_A, \Theta_A, P_A, \operatorname{Emission}_A, U_A, \operatorname{Revision}_A \rangle
+
+      $'
+    translates: true
+  - line: 57
+    text: '
+
+
+      with $x_t = \Omega_A(m_t)$, $b_t \in \Delta(Z_A)$ (a distribution over latent
+
+      states), $y_t = f_{\theta_t}(\text{history})$, $\hat p_t \in \Pi_A^\partial$,
+
+      $a_t = \pi_{\bar\mu_t}(\hat p_t, H_t)$, $m_{t+1} \in \operatorname{Succ}_{a_t}(m_t)$,
+
+      $\theta_{t+1} = U_A(\theta_t, e_t)$. This is one candidate instrument, not a
+
+      commitment; a system may realize dynamics without it.
+
+
+      **4. Ortheme admission is by declared ablation, never by latent split.** A
+
+      latent/model distinction earns orthemic status **only** when a declared
+
+      merge/ablation test shows that collapsing it changes warranted prediction,
+
+      action, routing, validation, closure, or loss beyond tolerance $\epsilon_A$.
+
+      Consequently there is **no** assumed one-to-one map between $Z_A$ and
+
+      $\Pi_A$: one latent state may encode a whole profile; several may share one
+
+      profile; one orthemic distinction may be distributed over many model dimensions;
+
+      an overcomplete model may invent splits; an underfit model may hide consequential
+
+      ones.
+
+
+      **5. OSM/CSCG claim status is external exemplification and constraint — not
+
+      validation.** The source is used only for its reported abstract computational
+
+      structure (observation/state separation, hidden-state inference, representation
+
+      learning, endpoint-vs-trajectory, altered-cue transport, representation
+
+      geometry). It does **not** validate Orthemology, its terminology, human noetics,
+
+      or any metaphysical claim. Orthogonalization is **one** representational
+
+      geometry, neither necessary nor sufficient for distinct worldly states, distinct
+
+      orthemes, pathway adequacy, or strict soundness. No biological, wet-lab,
+
+      human-cognition, fiṭrah, or metaphysical content is imported.
+
+
+      ## Artifacts and gate
+
+
+      - '
+    class: code
+    replacement: '$
+
+
+      with $x_t = \Omega_A(m_t)$, $b_t \in \Delta(Z_A)$ (a distribution over latent
+
+      states), $y_t = f_{\theta_t}(\text{history})$, $\hat p_t \in \Pi_A^\partial$,
+
+      $a_t = \pi_{\bar \mu_t}(\hat p_t, H_t)$, $m_{t+1} \in \operatorname{Succ}_{a_t}(m_t)$,
+
+      $\theta_{t+1} = U_A(\theta_t, e_t)$. This is one candidate instrument, not a
+
+      commitment; a system may realize dynamics without it.
+
+
+      **4. Ortheme admission is by declared ablation, never by latent split.** A
+
+      latent/model distinction earns orthemic status **only^** when a declared
+
+      merge/ablation test shows that collapsing it changes warranted prediction,
+
+      action, routing, validation, closure, or loss beyond tolerance $\epsilon_A$.
+
+      Consequently there is **no^** assumed one-to-one map between $Z_A$ and
+
+      $\Pi_A$: one latent state may encode a whole profile; several may share one
+
+      profile; one orthemic distinction may be distributed over many model dimensions;
+
+      an overcomplete model may invent splits; an underfit model may hide consequential
+
+      ones.
+
+
+      **5. OSM/CSCG claim status is external exemplification and constraint — not
+
+      validation.** The source is used only for its reported abstract computational
+
+      structure (observation/state separation, hidden-state inference, representation
+
+      learning, endpoint-vs-trajectory, altered-cue transport, representation
+
+      geometry). It does **not^** validate Orthemology, its terminology, human noetics,
+
+      or any metaphysical claim. Orthogonalization is **one^** representational
+
+      geometry, neither necessary nor sufficient for distinct worldly states, distinct
+
+      orthemes, pathway adequacy, or strict soundness. No biological, wet-lab,
+
+      human-cognition, fiṭrah, or metaphysical content is imported.
+
+
+      ## Artifacts and gate
+
+
+      - $'
+    translates: true
+  - line: 97
+    text: " (not parameters); the\n  latent→profile map is a **relation** "
+    class: math
+    replacement: "$ (not parameters); the\n  latent \\to profile map is a **relation^** $"
+    translates: true
+- file: docs/decisions/0025-meta-noetic-memetics-and-sound-corrective-dynamics.md
+  in_build_pipeline: false
+  formula_spans: 1
+  targets:
+  - line: 54
+    text: 'math
+
+      \Gamma^{\mu}_t = (V^{\mu}_t, E^{\mu}_t)
+
+      '
+    class: math
+    replacement: '$math
+
+      \Gamma^{\mu}_t = (V^{\mu}_t, E^{\mu}_t)
+
+      $'
+    translates: true
+- file: docs/provenance/document-history.md
+  in_build_pipeline: false
+  formula_spans: 1
+  targets:
+  - line: 32
+    text: e_mu(m) = o-hat
+    class: math
+    replacement: $e_{mu}(m) = o-hat$
+    translates: true
+- file: docs/related-work/LATENT-STATE-INFERENCE-AND-ORTHEMOLOGY.md
+  in_build_pipeline: false
+  formula_spans: 7
+  targets:
+  - line: 33
+    text: m_t ∈ M_A
+    class: math
+    replacement: $m_t \in M_A$
+    translates: true
+  - line: 34
+    text: z_t ∈ Z_A
+    class: math
+    replacement: $z_t \in Z_A$
+    translates: true
+  - line: 35
+    text: x_t = Ω_A(m_t)
+    class: math
+    replacement: $x_t = \Omega_A(m_t)$
+    translates: true
+  - line: 36
+    text: C^latent_t ⊆ Z_A
+    class: math
+    replacement: $C^{latent}_t \subseteq Z_A$
+    translates: true
+  - line: 38
+    text: p̂_t(m) ∈ Π_A^∂
+    class: combining
+    replacement: $\hat{p}_t(m) \in \Pi_A^\partial$
+    translates: true
+  - line: 42
+    text: m ≠ z ≠ x ≠ b ≠ y ≠ p̂
+    class: combining
+    replacement: $m ≠ z ≠ x ≠ b ≠ y ≠ \hat{p}$
+    translates: true
+  - line: 42
+    text: ProfileOf_A ⊆ Z_A × Π_A
+    class: math
+    replacement: $ProfileOf_A \subseteq Z_A \times \Pi_A$
+    translates: true

@@ -137,6 +137,38 @@ def main():
     check("every math source span translates through the strict subset",
           not bad_translate, "; ".join(bad_translate[:5]))
 
+    # 4b. (R7C, audit B5) no math-FORMULA or notdef-producing (U+20D7) span may sit
+    #     in a backtick code span UNLESS it is a recorded, pending migration target
+    #     in docs/math-source-inventory.yaml. This is the check that catches a
+    #     formula left in code (tamper probe 1), which the corpus's own pending
+    #     targets are allowlisted against by text.
+    inv = yaml.safe_load(read("docs/math-source-inventory.yaml"))
+    allow = set()
+    for d in inv.get("documents", []):
+        for t in d.get("targets", []):
+            allow.add(t["text"])
+    FORMULA = re.compile(r"[=∈⊆⊂⟺⇔→↦∧∨≼≠≤≥∀∃]|\{[^}]*\|[^}]*\}|⃗")
+    INLINE_CODE = re.compile(r"`([^`]+)`")
+    stray = []
+    for r in ("manuscript", "theory", "companion", "applications", "docs"):
+        base = os.path.join(ROOT, r)
+        if not os.path.isdir(base):
+            continue
+        for dp, dirs, fns in os.walk(base):
+            dirs[:] = [d for d in dirs if d not in (".git", "__pycache__", "project-closure", "archive")]
+            for fn in fns:
+                if not fn.endswith(".md"):
+                    continue
+                rel = os.path.relpath(os.path.join(dp, fn), ROOT).replace("\\", "/")
+                if rel.endswith("math-source-inventory.yaml"):
+                    continue
+                for m in INLINE_CODE.finditer(io.open(os.path.join(dp, fn), encoding="utf-8").read()):
+                    span = m.group(1)
+                    if FORMULA.search(span) and span not in allow:
+                        stray.append("%s: `%s`" % (rel, span[:40]))
+    check("no un-inventoried math-formula/notdef span left in a code span (B5/probe-1)",
+          not stray, "; ".join(stray[:5]))
+
     # 5. migration manifest covers every build source doc
     mig = yaml.safe_load(read("docs/math-migration-status.yaml"))
     listed = set()

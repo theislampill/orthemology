@@ -248,7 +248,19 @@ def _translate(s):
             while i < n and s[i] != "\n":
                 i += 1
             continue
-        out.append(c)  # ordinary char: letters, digits, ( ) [ ] + - = < > | . , ; : ! ? / * space
+        if c.isascii() and c.isalpha():
+            # gather a maximal ASCII identifier run; multi-character runs are
+            # operator/function/label names in this corpus (Inst, task, MetaTok,
+            # Succ, V3c, ...) and render as UPRIGHT operators, not unknown Typst
+            # variables. Single letters stay italic math variables.
+            j = i + 1
+            while j < n and s[j].isascii() and s[j].isalnum():
+                j += 1
+            run = s[i:j]
+            out.append('op("' + run + '")' if len(run) >= 2 else run)
+            i = j
+            continue
+        out.append(c)  # ordinary char: digits, ( ) [ ] + - = < > | . , ; : ! ? / * space
         i += 1
     return "".join(out)
 

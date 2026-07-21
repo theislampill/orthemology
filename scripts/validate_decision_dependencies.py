@@ -116,8 +116,9 @@ def main():
                     if not fn.endswith((".md", ".yaml", ".yml")):
                         continue
                     rel = (rel_base + "/" + fn).lstrip("./")
-                    if rel == "docs/decision-status.yaml":
-                        continue  # the supersession registry records the formula by design
+                    if rel in ("docs/decision-status.yaml", "docs/math-source-inventory.yaml"):
+                        continue  # the supersession registry and the math-source ledger
+                        # record formula strings by design (a ledger, not a normative surface)
                     if norm(old["formula"]) in norm(read(rel)):
                         offenders.append(rel)
             check("%s: no current normative surface states the superseded formula "
