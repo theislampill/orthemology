@@ -61,14 +61,14 @@ def main():
             check("merged decision %s is not proposed-candidate" % did,
                   row.get("status") != "proposed-candidate", repr(row.get("status")))
 
-    # candidate range sanity: 0020-0026 all carry pr (candidate)
-    for did in ["0020", "0021", "0022", "0023", "0024", "0025", "0026"]:
-        check("decision %s is classified candidate (carries pr)" % did,
-              "pr" in decisions.get(did, {}))
-    # merged range: 0001-0019 carry no pr
-    for n in range(1, 20):
-        did = "%04d" % n
-        check("merged decision %s carries no pr field" % did, "pr" not in decisions.get(did, {}))
+    # candidate range: every decision >= 0020 is candidate (carries pr); every
+    # decision 0001-0019 is merged (no pr). Dynamic on the decision numbers present.
+    for did, row in decisions.items():
+        n = int(did)
+        if n >= 20:
+            check("decision %s (>=0020) is classified candidate (carries pr)" % did, "pr" in row)
+        else:
+            check("merged decision %s (<=0019) carries no pr field" % did, "pr" not in row)
 
     # 3: overlay integrity
     ov = yaml.safe_load(read("docs/project-closure/r7c/CANDIDATE-STATE.yaml"))

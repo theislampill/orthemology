@@ -27,9 +27,9 @@ pr_chain:
   branch: candidate/r7c-full-math-multitarget-noetic-dynamics
   revision: R7C
   base: candidate/r7b-deep-noetic-latent-math
-  candidate_decisions: ["0026"]
+  candidate_decisions: ["0026", "0027"]
   state: in-progress-draft-unmerged
-candidate_decisions_all: ["0020", "0021", "0022", "0023", "0024", "0025", "0026"]
+candidate_decisions_all: ["0020", "0021", "0022", "0023", "0024", "0025", "0026", "0027"]
 candidate_documents:
   applications: [applications/daee-epistemics/, applications/latent-state-orthing/]
   companions: [companion/dynamic-orthing-noetic-learning-and-orthability.md]

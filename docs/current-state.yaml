@@ -77,9 +77,9 @@ authored:
     pdfs: reproducibly built and visually inspected draft artifacts
     legal_publication: open on license, identity, peer review, and external submission
 derived:
-  source_tree_digest: 9891ca22eeee1fdf73e9aa037b0e681167159711a4412b909ec21d6ad79c1cab
+  source_tree_digest: 96791e74a872730df3094cc2db6540635009d03117148494f8ffad2c62e5b982
   source_tree_digest_policy: docs/project-state-inputs.yaml
-  tracked_files: 524
+  tracked_files: 530
   decision_ids:
   - '0001'
   - '0002'
@@ -107,7 +107,8 @@ derived:
   - '0024'
   - '0025'
   - '0026'
-  decision_count: 26
+  - '0027'
+  decision_count: 27
   schemas:
   - analysis.schema.json
   - claim-ledger.schema.json
@@ -146,6 +147,7 @@ derived:
   - validate_meta_noetic_memetics.py
   - validate_negative_fixtures.py
   - validate_noetic_application.py
+  - validate_noetic_targets.py
   - validate_notation.py
   - validate_pdf_math.py
   - validate_quran_loci.py
@@ -159,7 +161,7 @@ derived:
   - validate_state_convergence.py
   - validate_type_token_semantics.py
   - validate_verdict_semantics.py
-  validator_count: 36
+  validator_count: 37
   fixture_counts:
     verdict: 7
     reason: 8
