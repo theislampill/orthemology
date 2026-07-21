@@ -34,6 +34,10 @@ jobs:
         run: |
           python tests/test_candidate_provenance.py
           python scripts/validate_candidate_provenance.py
+      - name: Bounded waking/somnic contracts and residual-recurrence fixtures (Decision 0035)
+        run: |
+          python tests/test_somnic_orthing.py
+          python scripts/validate_somnic_orthing.py
       - name: Generated candidate-state overlay — drift check
         run: python scripts/generate_candidate_state.py --check
       - name: Public/private evidence boundary (R5, Decision 0017)

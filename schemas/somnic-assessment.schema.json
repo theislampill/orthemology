@@ -1,0 +1,70 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "$id": "orthemology/somnic-assessment.schema.json",
+  "title": "Append-only somnic assessment",
+  "type": "object",
+  "additionalProperties": false,
+  "required": ["assessment_id", "somnus_run_id", "target_orthing_ids", "prior_assessment_ids", "meta_orthability_assessment_id", "t2_configuration", "assessment_target", "assessment_result", "confidence", "defect_loci", "evidence_timing", "target_history_digest", "target_history_mutated", "retroactive_conformity_rewrite", "closure_status", "intervention_disposition", "proposal_ids", "authorization_refs", "application_refs", "outcome_evaluation_refs", "placement_result", "pathway_result", "explicit_non_mutation"],
+  "properties": {
+    "assessment_id": {"type": "string", "minLength": 1},
+    "somnus_run_id": {"type": "string", "minLength": 1},
+    "target_orthing_ids": {"type": "array", "minItems": 1, "uniqueItems": true, "items": {"type": "string", "minLength": 1}},
+    "prior_assessment_ids": {"type": "array", "uniqueItems": true, "items": {"type": "string", "minLength": 1}},
+    "meta_orthability_assessment_id": {"type": "string", "minLength": 1},
+    "t2_configuration": {
+      "type": "object", "additionalProperties": false,
+      "required": ["analysis", "metaortheme", "metaorthemma", "evaluator", "assessed_at"],
+      "properties": {
+        "analysis": {"type": "string", "minLength": 1},
+        "metaortheme": {"type": "string", "minLength": 1},
+        "metaorthemma": {"type": "string", "minLength": 1},
+        "evaluator": {"type": "string", "minLength": 1},
+        "assessed_at": {"type": "string", "format": "date-time"}
+      }
+    },
+    "assessment_target": {"enum": ["t1_reasonableness", "current_placement", "pathway", "residual", "relation", "governing_artifact"]},
+    "assessment_result": {"enum": ["reasonable", "defective", "underdetermined", "stale", "superseded", "unassessable", "no_change"]},
+    "confidence": {"enum": ["low", "medium", "high", "undetermined"]},
+    "defect_loci": {
+      "type": "object", "additionalProperties": false,
+      "required": ["metaortheme_adequacy", "activation_contract_adequacy", "orthability_evaluator_accuracy", "metaorthemma_binding_correctness", "execution_fidelity", "evidence_adequacy", "placement_correctness", "closure_adequacy"],
+      "properties": {
+        "metaortheme_adequacy": {"$ref": "#/$defs/locus"},
+        "activation_contract_adequacy": {"$ref": "#/$defs/locus"},
+        "orthability_evaluator_accuracy": {"$ref": "#/$defs/locus"},
+        "metaorthemma_binding_correctness": {"$ref": "#/$defs/locus"},
+        "execution_fidelity": {"$ref": "#/$defs/locus"},
+        "evidence_adequacy": {"$ref": "#/$defs/locus"},
+        "placement_correctness": {"$ref": "#/$defs/locus"},
+        "closure_adequacy": {"$ref": "#/$defs/locus"}
+      }
+    },
+    "evidence_timing": {"$ref": "#/$defs/evidence_timing"},
+    "target_history_digest": {"type": "string", "pattern": "^[0-9a-f]{64}$"},
+    "target_history_mutated": {"const": false},
+    "retroactive_conformity_rewrite": {"const": false},
+    "closure_status": {"enum": ["open", "closed", "superseded", "held"]},
+    "intervention_disposition": {"enum": ["no_change", "proposal", "alternative_proposals", "investigation", "evidence_request", "preserve_residual"]},
+    "proposal_ids": {"type": "array", "uniqueItems": true, "items": {"type": "string", "minLength": 1}},
+    "authorization_refs": {"type": "array", "uniqueItems": true, "items": {"type": "string", "minLength": 1}},
+    "application_refs": {"type": "array", "uniqueItems": true, "items": {"type": "string", "minLength": 1}},
+    "outcome_evaluation_refs": {"type": "array", "uniqueItems": true, "items": {"type": "string", "minLength": 1}},
+    "placement_result": {"enum": ["correct", "incorrect", "undetermined", "not_assessed"]},
+    "pathway_result": {"enum": ["adequate", "defective", "undetermined", "not_assessed"]},
+    "explicit_non_mutation": {"const": true}
+  },
+  "$defs": {
+    "locus": {"enum": ["adequate", "defective", "undetermined", "not_assessed"]},
+    "id_set": {"type": "array", "uniqueItems": true, "items": {"type": "string", "minLength": 1}},
+    "evidence_timing": {
+      "type": "object", "additionalProperties": false,
+      "required": ["observed_at_t1", "used_at_t1", "indexed_unused_at_t1", "discovered_after_t1"],
+      "properties": {
+        "observed_at_t1": {"$ref": "#/$defs/id_set"},
+        "used_at_t1": {"$ref": "#/$defs/id_set"},
+        "indexed_unused_at_t1": {"$ref": "#/$defs/id_set"},
+        "discovered_after_t1": {"$ref": "#/$defs/id_set"}
+      }
+    }
+  }
+}

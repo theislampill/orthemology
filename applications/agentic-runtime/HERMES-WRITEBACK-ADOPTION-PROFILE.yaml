@@ -1,0 +1,33 @@
+schema: orthemology-hermes-writeback-adoption-profile-v1
+status: outline-only
+execution: not implemented in orthemology
+runtime owner: external/downstream
+upstream adoption: candidate, not normative dependency
+source_verification:
+  source_code: pending
+  license: pending
+  commit: pending
+  tests: pending
+  implementation_claims: externally supplied and not repository-verified
+predecessor_characterization: coarser-or-more-implicit orthing oriented toward source interpretation, proposal generation, destination selection, and safe writeback
+subsumption:
+  ordinary_reflective_writeback_question_is_first_class: true
+  ordinary_targets: [memory, user_state, fact, skill]
+  governing_targets: [activation_contract, orthability_evaluator, selector, metaortheme, metaorthemma_binding_rule, evidence_requirement, closure_rule, residual_rule, fixture, provenance, documentation]
+  outcomes: [no_change, investigation, evidence_request, preserve_residual, one_proposal, alternative_proposals]
+actuator:
+  role: first-class downstream actuator
+  ontology_center: false
+  unrelated_accessory: false
+  stages: [proposal, review, approve_or_reject, validation, dry_run, apply_or_revert]
+record_separation: [somnic_assessment, intervention_disposition, mutation_proposal, mutation_authorization, applied_mutation, later_outcome_evaluation]
+proposal_provenance_modes: [legacy_reflective_proposal, somnus_grounded_proposal]
+temporal_roles: [t1_waking_orthing, t2_somnic_assessment, t3_proposal_and_authorization, t4_application_and_successor_state, t5_outcome_evaluation]
+automatic_proposal: prohibited
+automatic authorization: prohibited
+automatic application: prohibited
+automatic writeback: prohibited
+non_claims:
+- no Hermes source, license, commit, test count, class behavior, or repository statistic is verified here
+- no empirical superiority or governed learning is claimed
+- no runtime writeback engine is implemented

@@ -37,6 +37,7 @@ REQUIRED_CANDIDATE_DOCUMENTS = {
     "applications": [
         "applications/daee-epistemics/",
         "applications/latent-state-orthing/",
+        "applications/agentic-runtime/",
     ],
     "companions": ["companion/dynamic-orthing-noetic-learning-and-orthability.md"],
     "architecture": [

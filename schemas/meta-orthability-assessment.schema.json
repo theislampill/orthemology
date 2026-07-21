@@ -1,0 +1,27 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "$id": "orthemology/meta-orthability-assessment.schema.json",
+  "title": "Retrospective applicability and assessability gate",
+  "type": "object",
+  "additionalProperties": false,
+  "required": ["meta_orthability_assessment_id", "subject_kind", "subject_id", "proposed_standard", "activation_contract_id", "activation_contract_version", "orthability_evaluator_id", "orthability_evaluator_version", "result", "assessable", "satisfied_properties", "absent_properties", "indeterminate_properties", "observed_indicators", "observed_exclusions", "evidence_state_ids", "non_assessment_reason"],
+  "properties": {
+    "meta_orthability_assessment_id": {"type": "string", "minLength": 1},
+    "subject_kind": {"enum": ["waking_orthing", "somnic_assessment", "governing_artifact", "transcluded_artifact"]},
+    "subject_id": {"type": "string", "minLength": 1},
+    "proposed_standard": {"type": "string", "minLength": 1},
+    "activation_contract_id": {"type": "string", "minLength": 1},
+    "activation_contract_version": {"type": "string", "minLength": 1},
+    "orthability_evaluator_id": {"type": "string", "minLength": 1},
+    "orthability_evaluator_version": {"type": "string", "minLength": 1},
+    "result": {"enum": ["applicable_assessable", "inapplicable", "indeterminate", "record_insufficient"]},
+    "assessable": {"type": "boolean"},
+    "satisfied_properties": {"type": "array", "uniqueItems": true, "items": {"type": "string", "minLength": 1}},
+    "absent_properties": {"type": "array", "uniqueItems": true, "items": {"type": "string", "minLength": 1}},
+    "indeterminate_properties": {"type": "array", "uniqueItems": true, "items": {"type": "string", "minLength": 1}},
+    "observed_indicators": {"type": "array", "uniqueItems": true, "items": {"type": "string", "minLength": 1}},
+    "observed_exclusions": {"type": "array", "uniqueItems": true, "items": {"type": "string", "minLength": 1}},
+    "evidence_state_ids": {"type": "array", "uniqueItems": true, "items": {"type": "string", "minLength": 1}},
+    "non_assessment_reason": {"type": ["string", "null"], "minLength": 1}
+  }
+}

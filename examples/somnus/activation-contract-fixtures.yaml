@@ -1,0 +1,124 @@
+schema: orthemology-activation-contract-fixtures-v1
+evaluators:
+- evaluator_id: property-boundary-evaluator
+  evaluator_version: 1.0.0
+  result_vocabulary: [applicable, inapplicable, indeterminate]
+  non_claims:
+  - indicators are evidence about required properties, not the boundary itself
+contracts:
+- contract_id: theological-claimant-activation
+  contract_version: 1.0.0
+  claimant_id: theological-claimant
+  claimant_version: 1.0.0
+  required_properties: [theological-proposition, worldview-bearing-task]
+  positive_indicators: [tawhid, divine-unity]
+  exclusion_indicators: [database-column-only, quoted-token-only]
+  boundary_counterexamples: [tawhid-column-name, quoted-term-without-theological-claim]
+  tolerated_ambiguity: mixed-domain tasks remain indeterminate until the proposition and requested operation are separated
+  fallback_claimants: [baseline-reasoning, database-schema-claimant]
+  no_claim_allowed: true
+  decision_policy: applicable only when every required property is satisfied and no controlling exclusion applies
+  indeterminate_policy: retain the attempt and permit another applicable claimant or the declared baseline rule
+  fixture_suite: examples/somnus/activation-contract-fixtures.yaml
+  effective: {from_revision: task4-fixture-v1, through_revision: null}
+  supersedes: null
+  superseded_by: null
+  authorship: {mode: bootstrap_provenance, provenance_record_id: BOOTSTRAP-AUTHORING-001}
+  status: accepted
+  fixture_outcomes: [ACT-POS-001, ACT-NEG-001, ACT-MIXED-LEXICAL-001, ACT-OVERLAP-001]
+- contract_id: database-schema-activation
+  contract_version: 1.0.0
+  claimant_id: database-schema-claimant
+  claimant_version: 1.0.0
+  required_properties: [data-model-operation]
+  positive_indicators: [database, column, schema]
+  exclusion_indicators: [theology-only]
+  boundary_counterexamples: [theological-proposition-without-data-operation]
+  tolerated_ambiguity: mixed-domain tasks may overlap with another applicable claimant
+  fallback_claimants: [baseline-reasoning]
+  no_claim_allowed: true
+  decision_policy: applicable when a data-model operation is present
+  indeterminate_policy: retain the attempt and defer or route through another applicable claimant
+  fixture_suite: examples/somnus/activation-contract-fixtures.yaml
+  effective: {from_revision: task4-fixture-v1, through_revision: null}
+  supersedes: null
+  superseded_by: null
+  authorship: {mode: bootstrap_provenance, provenance_record_id: BOOTSTRAP-AUTHORING-002}
+  status: accepted
+  fixture_outcomes: [ACT-POS-001, ACT-NEG-001, ACT-MIXED-LEXICAL-001, ACT-OVERLAP-001]
+fixture_outcomes:
+- fixture_id: ACT-POS-001
+  fixture_class: positive
+  occurrence: A question comparing two theological accounts of divine unity.
+  observed_indicators: [tawhid, divine-unity]
+  observed_exclusions: []
+  property_findings:
+    satisfied: [theological-proposition, worldview-bearing-task]
+    absent: []
+    indeterminate: []
+  claimant_assessments:
+  - claimant_id: theological-claimant
+    activation_contract_id: theological-claimant-activation
+    activation_contract_version: 1.0.0
+    evaluator_id: property-boundary-evaluator
+    evaluator_version: 1.0.0
+    result: applicable
+- fixture_id: ACT-NEG-001
+  fixture_class: negative-near-boundary
+  occurrence: Rename a database column whose literal name is tawhid.
+  observed_indicators: [tawhid]
+  observed_exclusions: [database-column-only]
+  property_findings:
+    satisfied: []
+    absent: [theological-proposition, worldview-bearing-task]
+    indeterminate: []
+  claimant_assessments:
+  - claimant_id: theological-claimant
+    activation_contract_id: theological-claimant-activation
+    activation_contract_version: 1.0.0
+    evaluator_id: property-boundary-evaluator
+    evaluator_version: 1.0.0
+    result: inapplicable
+- fixture_id: ACT-MIXED-LEXICAL-001
+  fixture_class: indeterminate
+  occurrence: Model a database that may encode theological propositions under a column named tawhid.
+  observed_indicators: [tawhid]
+  observed_exclusions: []
+  property_findings:
+    satisfied: []
+    absent: [worldview-bearing-task]
+    indeterminate: [theological-proposition]
+  claimant_assessments:
+  - claimant_id: theological-claimant
+    activation_contract_id: theological-claimant-activation
+    activation_contract_version: 1.0.0
+    evaluator_id: property-boundary-evaluator
+    evaluator_version: 1.0.0
+    result: indeterminate
+- fixture_id: ACT-OVERLAP-001
+  fixture_class: overlap
+  occurrence: Compare a data model and its explicit theological claim about divine unity.
+  observed_indicators: [tawhid, divine-unity]
+  observed_exclusions: []
+  property_findings:
+    satisfied: [theological-proposition, worldview-bearing-task, data-model-operation]
+    absent: []
+    indeterminate: []
+  claimant_assessments:
+  - claimant_id: theological-claimant
+    activation_contract_id: theological-claimant-activation
+    activation_contract_version: 1.0.0
+    evaluator_id: property-boundary-evaluator
+    evaluator_version: 1.0.0
+    result: applicable
+  - claimant_id: database-schema-claimant
+    activation_contract_id: database-schema-activation
+    activation_contract_version: 1.0.0
+    evaluator_id: property-boundary-evaluator
+    evaluator_version: 1.0.0
+    result: applicable
+  conflict:
+    conflict_id: ACT-CONFLICT-001
+    selected_route: provisional-multi-claimant
+    conflict_unresolved: true
+    authorization_rule_id: no-irreversible-action-with-unresolved-conflict

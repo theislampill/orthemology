@@ -1,0 +1,49 @@
+schema: orthemology-collective-somnus-transclusion-profile-v1
+status: outline-only
+runtime owner: external/downstream
+implemented in orthemology: "no"
+automatic adoption: prohibited
+automatic execution: prohibited
+automatic writeback: prohibited
+modes:
+- {mode_id: C1, name: independent-type-convergent-orthing, information_path: none-during-discovery, coordination: none-required}
+- {mode_id: C2, name: federated-transclusive-orthing, information_path: provenance-preserving-transclusion, coordination: recipient-locally-re-orths}
+- {mode_id: C3, name: coordinated-council-orthing, information_path: intentionally-shared-evidence-and-assessments, coordination: bounded-deliberation}
+shared_types_supply_transport: false
+event_instances: {actor_ledger_version_indexed: true, actor_neutral_type_is_not_agentless_instance: true}
+bearer_separation: [normative_metaortheme_type, represented_standard_at_actor_time, case_bound_metaorthemma, execution_trace, transclusion_envelope]
+transclusion:
+  definition: source-preserved availability for local orthing
+  semantic_character: structurally encoded and semantically reconstructible within declared limits
+  levels:
+  - {level: evidential_artifact, permitted_effect: available_evidence_or_comparator, prohibited_effect: governing_or_executable}
+  - {level: normative_standard, permitted_effect: local_meta_orthability_candidate, prohibited_effect: locally_governing_without_version_acceptance_and_authorization}
+  - {level: operational_dsl_ir, permitted_effect: inspectable_capability_candidate, prohibited_effect: execution_from_parse_success}
+  gates: [schema_compatibility, source_authenticity, semantic_reconstruction, domain_applicability, contract_owner_validity, local_authorization, execution_capability, post_execution_witness]
+source_envelope:
+  immutable: true
+  required_identity: [source_actor_id, source_ledger_id, source_occurrence_ids, source_orthing_ids, source_assessment_ids, source_versions]
+  disclosure: [redactions, permitted_use, intended_recipient, expiry_or_review_trigger, residuals, non_claims]
+receiving_assessment: {append_only: true, source_and_local_versions_separate: true, local_meta_orthability_required: true, local_authorization_required: true}
+source_applicability_auto_propagates: false
+receipt_can_govern_or_execute: false
+multi_operator_count_implies: []
+dependence_dimensions: [operator_count, model_family_count, contract_version_count, source_family_count, input_family_count, institutional_origin_count, coordination_path, time_span, counterexample_count]
+collective_closure:
+  bounded_scope: true
+  preserves_dissent: true
+  permitted: [shared_placement, bounded_agreement_with_dissent, several_local_placements, unresolved_conflict, insufficient_shared_evidence, domain_scope_split, hold_partial_recurse]
+privacy:
+  controls: [minimum_necessary_disclosure, selective_projection, redaction, consent_authorization, purpose_limitation, retention_limits, recipient_scope, future_access_retirement]
+  redacted_projection_may_claim_complete: false
+security:
+  threats: [instruction_injection, malicious_dsl_ir, poisoned_represented_standard, authority_laundering, sybil_multiplication, collusion, common_source_dependence, schema_version_drift, semantic_decoding_drift, stale_contract, privacy_leakage, transclusion_cycle, recursive_assessment_storm, receipt_triggered_execution, consensus_as_truth, provenance_loss]
+  controls: [bounded_cycle_depth, immutable_source_reference, integrity_check, version_compatibility, fail_closed_parsing, separate_execution_authorization, local_hold_override, audit_trail]
+semantic_boundaries:
+  nar_or_field_witness_similarity_proves_identity: false
+  source_execution_closure_proves_recipient_uptake: false
+  exported_record_is_direct_soul_access: false
+  multi_operator_recurrence_proves_tawatur: false
+non_claims:
+- no collective network, transport, shared-memory service, distributed learning, independent testimony, or civilisational result is implemented or demonstrated
+- a parsed packet is not proof of semantic identity, local applicability, authorization, or uptake
