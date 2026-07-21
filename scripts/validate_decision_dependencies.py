@@ -32,7 +32,8 @@ except ImportError as e:
 
 ROOT = os.path.dirname(os.path.dirname(os.path.abspath(__file__)))
 FAILS = []
-VALID_STATUSES = {"adopted", "adopted-with-superseded-clause", "superseded"}
+VALID_STATUSES = {"adopted", "adopted-merged", "adopted-with-superseded-clause",
+                  "superseded", "proposed-candidate", "historical", "rejected"}
 
 
 def check(name, ok, detail=""):

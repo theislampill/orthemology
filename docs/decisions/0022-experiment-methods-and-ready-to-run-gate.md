@@ -1,6 +1,8 @@
 # Decision 0022 — Experiment methods and the READY_TO_RUN gate
 
-**Date:** 2026-07-20 · **Authority:** R7 owner authorization · **Status:** adopted · **Reopens nothing:** Decisions 0001–0021 stand; extends Decision 0018's readiness ladder with an enforced methods gate.
+> **OPUS CANDIDATE — REQUIRES FRESH FABLE REVIEW BEFORE MERGE.** R7 candidate decision on the unmerged PR #8 chain (Decision 0026 reclassified this proposed-candidate; `main` R6 has only 0001–0019).
+
+**Date:** 2026-07-20 · **Authority:** R7 owner authorization · **Status:** proposed-candidate · **Reopens nothing:** Decisions 0001–0021 stand; extends Decision 0018's readiness ladder with an enforced methods gate.
 
 ## Problem
 

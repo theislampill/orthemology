@@ -1,6 +1,8 @@
 # Decision 0020 — Experiment inferential readiness and packet versioning
 
-**Date:** 2026-07-20 · **Authority:** R7 owner authorization (noetic-application/experiment-validity tie-off) · **Status:** adopted · **Reopens nothing:** Decisions 0001–0019 stand; Decision 0018's vocabularies are unchanged — this decision corrects their *application*.
+> **OPUS CANDIDATE — REQUIRES FRESH FABLE REVIEW BEFORE MERGE.** R7 candidate decision on the unmerged PR #8 chain (Decision 0026 reclassified this proposed-candidate; `main` R6 has only 0001–0019).
+
+**Date:** 2026-07-20 · **Authority:** R7 owner authorization (noetic-application/experiment-validity tie-off) · **Status:** proposed-candidate · **Reopens nothing:** Decisions 0001–0019 stand; Decision 0018's vocabularies are unchanged — this decision corrects their *application*.
 
 ## Problem
 

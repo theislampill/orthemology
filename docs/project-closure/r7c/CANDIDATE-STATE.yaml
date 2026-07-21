@@ -1,0 +1,49 @@
+schema: orthemology-candidate-state-v1
+# R7C, Decision 0026. The authoritative candidate overlay: what is MERGED vs what
+# is CANDIDATE. docs/current-state.yaml is the generated derived state of the
+# working tree; THIS file records the merged base and the unmerged PR chain so no
+# candidate work is mistaken for merged state. scripts/validate_candidate_state.py
+# enforces it. OPUS CANDIDATE — REQUIRES FRESH FABLE REVIEW BEFORE MERGE.
+merged: false
+merged_base:
+  ref: main
+  sha: "43fee0f519e2f6984fb143c1e621c83382e71ec7"
+  revision: R6
+  merged_decisions: "0001-0019"
+pr_chain:
+- pr: 8
+  branch: closure/r7-noetic-application-experiment-validity
+  revision: R7
+  head: "b0538601913c8234511a1f1131a58eb23a4a0dc4"
+  candidate_decisions: ["0020", "0021", "0022"]
+  state: draft-open-unmerged
+- pr: 9
+  branch: candidate/r7b-deep-noetic-latent-math
+  revision: R7B
+  head: "86b8bbdddf35ac1e45748279bac05e5a2d4ed85e"
+  candidate_decisions: ["0023", "0024", "0025"]
+  state: draft-open-unmerged
+- pr: "9-child (R7C grandchild)"
+  branch: candidate/r7c-full-math-multitarget-noetic-dynamics
+  revision: R7C
+  base: candidate/r7b-deep-noetic-latent-math
+  candidate_decisions: ["0026"]
+  state: in-progress-draft-unmerged
+candidate_decisions_all: ["0020", "0021", "0022", "0023", "0024", "0025", "0026"]
+candidate_documents:
+  applications: [applications/daee-epistemics/, applications/latent-state-orthing/]
+  companions: [companion/dynamic-orthing-noetic-learning-and-orthability.md]
+  architecture: [docs/architecture/ORTHEMOLOGY-LAYER-MAP.md, docs/architecture/ORTHEMOLOGY-LAYER-MAP.yaml]
+  closure: [docs/project-closure/r7/, docs/project-closure/r7b/, docs/project-closure/r7c/]
+candidate_pdfs: [artifacts/notation-gallery.pdf]
+provenance:
+  r7: "Opus 4.8 (Fable requested; owner-observed substitution mid-pass; interruption record docs/project-closure/r7/MODEL-SUBSTITUTION-INTERRUPTION-R7.md)"
+  r7b: "Opus 4.8 (requested Opus; no substitution)"
+  r7c: "Opus 4.8 (requested Opus; no substitution)"
+validation_state:
+  branch_suite: "green (grandchild branch)"
+  note: "deterministic offline suite; not an independent sign-off"
+no_merge_status:
+  merged: false
+  independent_signoff: false
+  next_act: "a fresh Fable review + protected merges (R7C grandchild -> PR #9 -> PR #8 -> main); no Opus pass merges or promotes its own decisions"
