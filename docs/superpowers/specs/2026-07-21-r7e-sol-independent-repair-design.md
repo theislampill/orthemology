@@ -64,6 +64,20 @@ The validator must reject omitted PRs, placeholders, duplicate PRs, broken paren
 
 The R7E swarm claims are not independently reproducible from the repository. Unless complete journals and reports are recovered, counts remain attributed implementing-run observations. The backlog becomes a structured ledger with globally unique immutable IDs, exact loci, full proposal/rejection text available in-repo where rights permit, evidence status, reviewer status, and integration disposition. No extension-stripping workaround is permitted.
 
+### 2A. Bounded R7E LLM-mediated orthing witness
+
+Audit the R7E supplementation pass itself against the formal episode architecture without reopening Decisions 0001–0022. A machine-readable or tabular crosswalk records, only where supported, the orthemmata taken up, declared analysis, LLM executor and subagent roles, governing metaortheme types, case-bound metaorthemmata, evidence/source records, candidate findings or profiles, routing decisions, integrated actions, residual backlog, successor repository state, and the later higher-order audit.
+
+The evidential classification keeps three claims separate:
+
+1. **LLM applicability:** an LLM can act as an executor inside an orthing episode.
+2. **LLM-mediated realizability:** an externally scaffolded LLM workflow can instantiate substantial parts of the architecture.
+3. **Comparative utility or validity:** Orthemology improves correctness, robustness, efficiency, transfer, or coordination over matched ordinary workflows.
+
+R7E may support the first and provide bounded observational evidence for the second. It cannot establish the third because no matched comparison or empirical terminology study was run. It also cannot establish universal correctness, exact internal ontological representation, cross-model or cross-domain generalization, or full swarm reconstructibility.
+
+Every witness field carries an evidence state such as `repository-verified`, `attachment-observed`, `implementing-run-attributed`, `missing`, or `unresolved`. The classification expressly preserves the missing complete workflow journal, absent per-agent reports and full drafts, duplicate backlog identifiers, incomplete rejection records, unresolved source attachments, and unverifiable swarm statistics. If the supported claim survives, publication prose labels it a constructive behavioral witness or observational case, never empirical validation.
+
 ### 3. Semantic operator and DAEE boundary
 
 Retain `c86b3c6673147b8802fe222373a165a37d4d24a8` as both the historical pin and the currently observed public DAEE `main` commit. The independent audit's “new current commit” premise is refuted; its deeper-crosswalk concern remains live because the prior reading of that same commit is incomplete.
@@ -148,6 +162,7 @@ After the final merge, fresh-clone `main`, rerun the full pinned suite and PDF b
 
 - no empirical experiment, live provider/model call, terminology study, or blind human matching review;
 - no terminology adoption;
+- no reopening of Decisions 0001–0022 for the R7E witness classification;
 - no DAEE repository mutation;
 - no inference of soul state, guidance, persuasion, or theology from runtime traces;
 - no biological-procedure reconstruction;
@@ -169,4 +184,4 @@ Stop before the next write or merge, preserve the exact state, and leave affecte
 
 ## Done when
 
-Every independent finding and PR #12 hunk has a durable evidence-backed disposition; all blockers are repaired or refuted; the semantic contracts and attacks prevent the known false passes; the scholarship boundaries are explicit; all publication sources are fully math-migrated; every PDF passes byte, text, glyph, and visual checks; the repaired branch passes the exact pinned suite from a clean clone; every authorized integration step passes refreshed CI; protected `main` passes the same clean-clone verification; and the final record states exactly what was verified, what remains owner/external, and what was not claimed.
+Every independent finding and PR #12 hunk has a durable evidence-backed disposition; all blockers are repaired or refuted; the semantic contracts and attacks prevent the known false passes; the scholarship boundaries are explicit; the R7E episode has a provenance-qualified LLM-witness classification that cannot imply comparative utility; all publication sources are fully math-migrated; every PDF passes byte, text, glyph, and visual checks; the repaired branch passes the exact pinned suite from a clean clone; every authorized integration step passes refreshed CI; protected `main` passes the same clean-clone verification; and the final record states exactly what was verified, what remains owner/external, and what was not claimed.
