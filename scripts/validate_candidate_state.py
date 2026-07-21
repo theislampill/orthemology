@@ -115,27 +115,28 @@ def main():
         "run scripts/generate_candidate_state.py",
     )
 
-    check("candidate overlay declares merged: false", overlay.get("merged") is False)
-    check(
-        "candidate overlay merged-base sha is protected main R6",
-        overlay.get("merged_base", {}).get("sha") == MAIN_R6_SHA,
-    )
-    check(
-        "candidate overlay contains exact PR #8-#12 topology",
-        [row.get("pr") for row in overlay.get("pr_chain", [])] == [8, 9, 10, 11, 12],
-    )
-    check(
-        "candidate overlay uses head_at_observation and no timeless head field",
-        all("head_at_observation" in row and "head" not in row for row in overlay.get("pr_chain", [])),
-    )
-    check("candidate overlay is explicitly non-timeless", overlay.get("timeless_state") is False)
-    no_merge = overlay.get("no_merge_status", {})
-    check(
-        "candidate overlay declares merged/signoff/ready all false",
-        no_merge.get("merged") is False
-        and no_merge.get("independent_signoff") is False
-        and no_merge.get("ready_for_merge") is False,
-    )
+    if not overlay_schema_errors:
+        check("candidate overlay declares merged: false", overlay.get("merged") is False)
+        check(
+            "candidate overlay merged-base sha is protected main R6",
+            overlay.get("merged_base", {}).get("sha") == MAIN_R6_SHA,
+        )
+        check(
+            "candidate overlay contains exact PR #8-#12 topology",
+            [row.get("pr") for row in overlay.get("pr_chain", [])] == [8, 9, 10, 11, 12],
+        )
+        check(
+            "candidate overlay uses head_at_observation and no timeless head field",
+            all("head_at_observation" in row and "head" not in row for row in overlay.get("pr_chain", [])),
+        )
+        check("candidate overlay is explicitly non-timeless", overlay.get("timeless_state") is False)
+        no_merge = overlay.get("no_merge_status", {})
+        check(
+            "candidate overlay declares merged/signoff/ready all false",
+            no_merge.get("merged") is False
+            and no_merge.get("independent_signoff") is False
+            and no_merge.get("ready_for_merge") is False,
+        )
 
     print("TOTAL: %d failures" % len(FAILS))
     return 1 if FAILS else 0

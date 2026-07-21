@@ -39,12 +39,17 @@ ROOT = os.path.dirname(os.path.dirname(os.path.abspath(__file__)))
 FAILS = []
 
 SCAN_EXT = (".md", ".yaml", ".json", ".py")
-PATH_RE = re.compile(
+PATH_PATTERN = (
+    r"(?<![A-Za-z0-9._/\\-])"
     r"(?:applications|experiments|scripts|tests|examples|schemas|references|"
-    r"terminology|companion|theory|manuscript|docs)/[A-Za-z0-9._\-/]+\."
-    r"(?:py|json|yaml|yml|md|bib|txt)")
+    r"terminology|companion|theory|manuscript|docs)[\\/]"
+    r"[A-Za-z0-9._/\\-]+\.(?:py|json|yaml|yml|md|bib|txt)"
+)
+PATH_RE = re.compile(PATH_PATTERN)
 LINK_RE = re.compile(r"\[[^\]]*\]\(([^)#\s]+)(?:#[^)]*)?\)")
-CREATE_LINE_RE = re.compile(r"^\s*-\s+Create:\s+")
+CREATE_LINE_RE = re.compile(
+    rf"^\s*-\s+Create:\s+(?:`{PATH_PATTERN}`|{PATH_PATTERN})\s*$"
+)
 PLAN_RE = re.compile(r"^docs/superpowers/plans/[^/]+\.md$")
 
 
@@ -87,11 +92,34 @@ def _corpus_files():
 
 
 def _committed_plans():
-    return {
-        path
-        for path in _git_files("--cached", "--", "docs/superpowers/plans/*.md")
-        if PLAN_RE.fullmatch(path)
+    """Return plans in immutable HEAD, independent of mutable index state."""
+    result = subprocess.run(
+        [
+            "git",
+            "ls-tree",
+            "-r",
+            "--name-only",
+            "-z",
+            "HEAD",
+            "--",
+            "docs/superpowers/plans",
+        ],
+        cwd=ROOT,
+        stdout=subprocess.PIPE,
+        stderr=subprocess.PIPE,
+        check=False,
+    )
+    if result.returncode:
+        raise RuntimeError(
+            "git ls-tree HEAD failed: "
+            + result.stderr.decode("utf-8", errors="replace").strip()
+        )
+    paths = {
+        item.decode("utf-8").replace("\\", "/")
+        for item in result.stdout.split(b"\0")
+        if item
     }
+    return {path for path in paths if PLAN_RE.fullmatch(path)}
 
 
 def _resolves(src, cited):
@@ -109,7 +137,7 @@ def _resolves(src, cited):
 def _citation_occurrences(src, text):
     for line in text.splitlines():
         for cited in PATH_RE.findall(line):
-            yield cited, line
+            yield cited.replace("\\", "/"), line
         if src.endswith(".md"):
             for target in LINK_RE.findall(line):
                 if target.startswith(("http://", "https://", "mailto:")):
@@ -122,14 +150,11 @@ def _citation_occurrences(src, text):
                 )
 
 
-def _declared_planned_outputs(src, text, committed_plans):
-    if src not in committed_plans:
-        return set()
-    declared = set()
-    for line in text.splitlines():
-        if CREATE_LINE_RE.match(line):
-            declared.update(PATH_RE.findall(line))
-    return declared
+def _is_planned_output_occurrence(src, cited, line, committed_plans):
+    """Return true only for this exact ``- Create:`` occurrence in a HEAD plan."""
+    if src not in committed_plans or not CREATE_LINE_RE.fullmatch(line):
+        return False
+    return cited in {match.replace("\\", "/") for match in PATH_RE.findall(line)}
 
 
 def main():
@@ -168,7 +193,6 @@ def main():
         except (UnicodeDecodeError, OSError):
             continue
         corpus_text[src] = text
-        planned_outputs = _declared_planned_outputs(src, text, committed_plans)
         for cited, line in _citation_occurrences(src, text):
             if cited in exempt:
                 continue
@@ -180,10 +204,9 @@ def main():
                 continue
             if _resolves(src, cited):
                 continue
-            if cited in planned_outputs:
-                # This classification is local to the one committed plan that
-                # explicitly declares the output. The same missing path cited
-                # by any other corpus source is still recorded as missing.
+            if _is_planned_output_occurrence(src, cited, line, committed_plans):
+                # Exemption is occurrence-local: only this exact inventory line
+                # in a plan present in HEAD may name a not-yet-created output.
                 continue
             missing.setdefault(cited, set()).add(src)
 
@@ -192,7 +215,7 @@ def main():
           "; ".join("%s <- %s" % (p, sorted(s)[:2]) for p, s in sorted(missing.items())[:6]))
 
     # exemptions must stay live: an exemption nobody cites any more is stale state
-    blob = "\n".join(corpus_text.values())
+    blob = "\n".join(corpus_text.values()).replace("\\", "/")
     for p in sorted(exempt):
         others = blob.count(p) - blob.count("- " + p) - blob.count("  - path: " + p)
         check("exemption %s is still actually cited somewhere" % p, others > 0,

@@ -264,6 +264,31 @@ class CandidateStateTests(unittest.TestCase):
                 self.assertIn("TOTAL:", output)
                 self.assertNotIn("TRACEBACK", output)
 
+    def test_production_validator_rejects_malformed_generated_overlays_without_traceback(self):
+        malformed_row = build_overlay(self.data)
+        malformed_row["pr_chain"][0] = ["bad"]
+
+        nonmapping_merged_base = build_overlay(self.data)
+        nonmapping_merged_base["merged_base"] = []
+
+        nonmapping_no_merge_status = build_overlay(self.data)
+        nonmapping_no_merge_status["no_merge_status"] = "bad"
+
+        cases = [
+            ("list overlay", []),
+            ("string overlay", "bad"),
+            ("malformed pr_chain row", malformed_row),
+            ("non-mapping merged_base", nonmapping_merged_base),
+            ("non-mapping no_merge_status", nonmapping_no_merge_status),
+        ]
+        for name, overlay in cases:
+            with self.subTest(name=name):
+                exit_code, output = production_validator_exit(self.data, overlay)
+                self.assertEqual(1, exit_code, output)
+                self.assertIn("schema", output)
+                self.assertIn("TOTAL:", output)
+                self.assertNotIn("TRACEBACK", output)
+
     def test_omitted_pr_11_or_12_is_rejected(self):
         for omitted in (11, 12):
             with self.subTest(omitted=omitted):

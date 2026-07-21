@@ -126,7 +126,7 @@ Expected: present overlay is stale and no generator exists.
 **Step 2 — observe failure:**
 
 ```powershell
-& $PY tests/test_candidate_provenance.py
+# Run the focused provenance test created in this task.
 ```
 
 Expected: 221 legacy rows include only 172 unique legacy IDs, 49 reused rows across 19 duplicate IDs; the repository has only eight rejection bullets for the attributed sixteen.
@@ -136,8 +136,7 @@ Expected: 221 legacy rows include only 172 unique legacy IDs, 49 reused rows acr
 **Step 4 — verify:**
 
 ```powershell
-& $PY tests/test_candidate_provenance.py
-& $PY scripts/validate_candidate_provenance.py
+# Run the focused provenance test and validator created in this task.
 & $PY scripts/validate_repo.py
 & $PY scripts/validate_internal_references.py
 ```
@@ -160,7 +159,7 @@ Expected: 221 legacy rows include only 172 unique legacy IDs, 49 reused rows acr
 **Step 2 — observe failure:**
 
 ```powershell
-& $PY tests/test_r7e_llm_witness.py
+# Run the focused LLM-witness test created in this task.
 ```
 
 **Step 3 — implement:** Use only `repository-verified|attachment-observed|implementing-run-attributed|missing|unresolved`. Classify `llm_applicability` as supported, `llm_mediated_realizability` as provisional/partially supported, and `comparative_utility` as not established. Cross-reference the orthing-episode, metaortheme, metaorthemma, claim-ledger, and verdict contracts without changing Decisions 0001–0022. Add the suggested bounded manuscript paragraph only if every clause has a ledger reference.
@@ -194,8 +193,7 @@ Expected: 221 legacy rows include only 172 unique legacy IDs, 49 reused rows acr
 **Step 4 — verify:**
 
 ```powershell
-& $PY tests/test_semantic_operator_contract.py
-& $PY scripts/validate_semantic_operator_contract.py
+# Run the focused semantic-operator test and validator created in this task.
 & $PY scripts/validate_daee_current_crosswalk.py
 & $PY scripts/validate_corrective_transition.py
 & $PY scripts/validate_noetic_targets.py
@@ -269,8 +267,7 @@ Expected: 221 legacy rows include only 172 unique legacy IDs, 49 reused rows acr
 **Step 3 — verify:**
 
 ```powershell
-& $PY tests/test_argument_map_semantics.py
-& $PY scripts/generate_argument_map.py --check
+# Run the focused argument-map test and generator drift check created in this task.
 & $PY scripts/validate_argument_map.py
 & $PY scripts/validate_quran_loci.py
 & $PY scripts/validate_source_status.py
@@ -343,7 +340,7 @@ Expected: 221 legacy rows include only 172 unique legacy IDs, 49 reused rows acr
 
 ```powershell
 & $PY tests/test_math_pipeline.py
-& $PY tests/test_math_source_inventory.py
+# Run the focused math-source inventory test created in Task 10.
 & $PY scripts/validate_math_source.py
 ```
 
