@@ -1,0 +1,38 @@
+{
+  "schema": "orthemology-corrective-transition-v1",
+  "note": "One governed corrective transition. Hard constraints filter admissibility BEFORE ranking; delta is a control-state change (not correctness); reread is performed; runtime closure is not human restoration; strict soundness is not claimed.",
+  "transitions": [
+    {
+      "transition_id": "CT-example-1",
+      "state_before": "IR with a live criterion-import burden and one residual dependency",
+      "live_burdens": ["criterion-import defect", "residual source-independence dependency"],
+      "hard_constraints": ["no soul-state assertion", "no burden deletion", "preserve provenance/uncertainty"],
+      "eligible_routes": ["route-clarify-criterion", "route-request-discriminating-observation"],
+      "ranking_witness": "governance partial-order over admissible routes: disclosure-first, then reversibility; NOT a differential gradient",
+      "selected_route": "route-clarify-criterion",
+      "governing_types": ["mu-type-A"],
+      "represented_standards": ["mutilde-X"],
+      "metaorthemmata": ["mubar-case-1"],
+      "executor_operation": "issue a criterion-clarification operator bound to mubar-case-1",
+      "evidence": ["ev-wording-1", "ev-reread-1"],
+      "delta": "control-state change: the criterion-import burden moves from live to addressed; the residual dependency stays live",
+      "state_after": "IR with the criterion-import burden addressed; one dependency still live",
+      "field_diagnostics": "route admissible; disclosure improved; one dependency unresolved",
+      "reread": {"performed": true, "outcome": "reread finds the residual dependency still live; closure withheld"},
+      "terminal_posture": "HOLD",
+      "verdicts": {
+        "admissible": true,
+        "pathway_adequate": true,
+        "strictly_sound": "not-claimed",
+        "runtime_closure": false,
+        "human_uptake": "unobserved"
+      },
+      "non_claims": [
+        "delta is a runtime control-state change, not result correctness",
+        "an admissible, pathway-adequate transition is not strictly sound; strict soundness is a factive claim-relative predicate (Decision 0011)",
+        "runtime closure would not be human restoration; no soul-state is asserted",
+        "no burden was deleted or concealed to simulate progress"
+      ]
+    }
+  ]
+}

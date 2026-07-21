@@ -102,7 +102,14 @@ def main():
     # --- NOETIC-FIELD-DYNAMICS ---
     check("field-dynamics pins the daee commit", fd.get("daee_pinned_commit") == PIN)
     ga = fd.get("gradient_adjudication", {})
-    check("adopted descent model is G1", ga.get("adopted") == "G1")
+    # R7D (Decision 0033, B26): G1 is a CANDIDATE, not adopted, inside an unmerged PR
+    check("descent model G1 is proposed-candidate (not adopted; R7D B26)",
+          ga.get("proposed_candidate") == "G1" and ga.get("G1", {}).get("status") == "proposed-candidate")
+    g1_reading = str(ga.get("G1", {}).get("reading", "")).lower()
+    check("G1 uses admissible/pathway-adequate vocabulary, not 'strictly sound' (B27)",
+          "AdmissibleCorrectiveTransition" in ga.get("predicate_vocabulary", [])
+          and "strict soundness is reserved" in str(ga.get("strict_soundness_reserved", "")).lower()
+          and "admissible" in g1_reading and "never 'strictly sound'" in g1_reading)
     check("G2 is conditional/future", ga.get("G2", {}).get("status") == "conditional-future")
     check("G2 lists its requirements", len(ga.get("G2", {}).get("requirements", [])) >= 6)
     dob = ga.get("daee_own_bound", {})

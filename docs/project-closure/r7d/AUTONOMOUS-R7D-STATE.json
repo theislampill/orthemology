@@ -67,6 +67,13 @@
       "result": "Closes P4/P5/P6/P8, B13-B23. D (0031): REP-META-ASSESSMENT (per-(standard,type) fidelity+stance) + CARRIER-RELATION (per-carrier mode); ghost-type resolution against ecology metaortheme-type nodes; self-lineage rejected; mixed per-type fidelity rolls up to global 'partial'. E (0032): unique node/edge ids; typed endpoints per edge_type; transmission names a resolvable transmitted_standard; mutation declares a structured ablation witness (compared versions/invariants/changed fields/witness/evidence/assessor); machine truth-firewall. F (0032): machine independence_conclusion is source-safe (dependence-detected / source-independence-supported / origin-analysis-underdetermined) and NEVER concludes tawatur warrant; TAWATUR-WARRANT.example.yaml is the separate school-labeled creed-internal record; independent_routes<=apparent_witnesses + non-empty indicants enforced. Probes CAUGHT: ghost type, self-lineage, duplicate node id, illegal endpoint, payload-free transmission, mutation-no-witness; independence_conclusion(F,F,2)=source-independence-supported (not tawatur-like).",
       "suite": "52/52 green; manifest clean; 6 PDFs byte-equal",
       "next_action": "Phase G current DAEE runtime delta + two-way crosswalk"
+    },
+    {
+      "phase": "H (governed corrective search + transition witness, Decision 0033)",
+      "status": "complete",
+      "result": "B26: G1 reclassified adopted->proposed-candidate in NOETIC-FIELD-DYNAMICS.yaml (validator updated). B27: predicate vocabulary AdmissibleCorrectiveTransition/PathwayAdequateCorrection/GovernedCorrectiveSearch; strict soundness reserved for the factive Decision-0011 predicate. B28/B29: CORRECTIVE-TRANSITION schema/example keeping all stages separate (state-before, admissibility, eligibility, selection, binding, execution, delta, diagnostics, reread, terminal posture); validate_corrective_transition.py enforces admissible-route-only, ranking-witness, delta!=soundness, reread-at-closure, closure!=restoration, no-burden-deletion, no-unauthorized-global-revision. Fixtures CT1-CT8; all H6 probes CAUGHT. B30: two-timescale coupling stated (slow revision needs authorization).",
+      "suite": "53/53 green; manifest clean; 6 PDFs byte-equal",
+      "next_action": "Phase I OSM/dynamic formal completion + P7 update-transport schema"
     }
   ],
   "no_merge_statement": "R7D is an Opus CANDIDATE on a draft child PR based on PR #10. It has not been merged into PR #10, PR #9, PR #8, or main. A fresh Fable session must review every hunk, verify the sources, formal semantics, mathematics, PDF rendering, and candidate state, and perform any protected merges."
