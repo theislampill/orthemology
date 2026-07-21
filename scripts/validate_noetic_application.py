@@ -47,10 +47,12 @@ def main():
         forb = " ".join(f.get("forbidden_placements", [])).lower()
         check("%s forbids asserting motive/culpability/soul-state" % fid,
               "motive" in forb or "soul" in forb or "culpability" in forb, forb[:60])
-        # the correct action never rests on an interior/motive assertion
+        # the correct action never rests on an interior/motive assertion, and
+        # never asserts restoration (runtime closure is not human restoration; B19/P12)
         ca = f["correct_action"].lower()
         check("%s correct action is not a moralized interior verdict" % fid,
-              "motive" not in ca and "soul" not in ca and "culpable" not in ca)
+              "motive" not in ca and "soul" not in ca and "culpable" not in ca
+              and "restored" not in ca)
 
     # specific distinctions the audit demanded
     check("N1 holds under underdetermination (no moralized placement)",

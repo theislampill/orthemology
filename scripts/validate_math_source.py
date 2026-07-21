@@ -149,7 +149,8 @@ def main():
             allow.add(t["text"])
     FORMULA = re.compile(r"[=∈⊆⊂⟺⇔→↦∧∨≼≠≤≥∀∃]|\{[^}]*\|[^}]*\}|⃗")
     INLINE_CODE = re.compile(r"`([^`]+)`")
-    stray = []
+    FENCE_STRIP = re.compile(r"```.*?```", re.S)  # remove ``` blocks so their backticks
+    stray = []                                    # do not mis-pair the inline scanner
     for r in ("manuscript", "theory", "companion", "applications", "docs"):
         base = os.path.join(ROOT, r)
         if not os.path.isdir(base):
@@ -162,7 +163,8 @@ def main():
                 rel = os.path.relpath(os.path.join(dp, fn), ROOT).replace("\\", "/")
                 if rel.endswith("math-source-inventory.yaml"):
                     continue
-                for m in INLINE_CODE.finditer(io.open(os.path.join(dp, fn), encoding="utf-8").read()):
+                body = FENCE_STRIP.sub("", io.open(os.path.join(dp, fn), encoding="utf-8").read())
+                for m in INLINE_CODE.finditer(body):
                     span = m.group(1)
                     if FORMULA.search(span) and span not in allow:
                         stray.append("%s: `%s`" % (rel, span[:40]))
