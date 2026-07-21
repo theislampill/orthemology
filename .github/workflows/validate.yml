@@ -88,8 +88,12 @@ jobs:
         run: python scripts/validate_meta_noetic_memetics.py
       - name: Project layer map + firewall (R7B, Phase H)
         run: python scripts/validate_layer_map.py
-      - name: Candidate-state / pre-merge decision status (R7C, Decision 0026)
+      - name: Candidate-state / pre-merge decision status (R7C 0026; R7D 0029 live-head gate)
         run: python scripts/validate_candidate_state.py
+      - name: Public experiment-readiness conformance (R7D, Decision 0029)
+        run: python scripts/validate_public_readiness.py
+      - name: Semantic decision references (R7D, Decision 0029)
+        run: python scripts/validate_decision_references.py
       - name: Multi-target noetic orthing + claim bearers (R7C, Decision 0027)
         run: python scripts/validate_noetic_targets.py
       - name: Represented standards + memetic ecology (R7C, Decision 0028)

@@ -46,6 +46,13 @@
       "code_confirmed": "P2 schema accepts out-of-scope/no-bridge subject claim; P7 validate_dynamic_orthing checks only field PRESENCE of transport, not gating (silent-transport tamper stays green); B24 refuted at commit level (see daee_dual_pin)",
       "artifacts": ["docs/project-closure/r7d/AUTONOMOUS-R7D-STATE.json", "docs/project-closure/r7d/R7D-READONLY-REPRODUCTION.md"],
       "next_action": "Phase B exact candidate/public state (Decision 0029)"
+    },
+    {
+      "phase": "B (exact candidate/public state, Decision 0029)",
+      "status": "complete",
+      "result": "B1/P1 fixed: authoritative overlay docs/current-candidate-state.yaml names the full PR chain incl PR #10 head 3cce235 + companion PDF; validate_candidate_state hardened to fail on a stale overlay (probe: stale head -> CAUGHT). B2: current-candidate status; r7/r7b/r7c/r7d reclassified. B3: README/STATUS/CONTRIBUTING readiness prose made exact per-packet; validate_public_readiness.py bans scalar 'all READY TO RUN' (probe CAUGHT). B4: 'check consistency' -> bounded-conformance language. B5/B38: validate_decision_references.py + fixed companion Inst_A/O*(m;A) miscite 0005->0001 (probe CAUGHT). Companion PDF rebuilt (only that PDF changed; byte-equal).",
+      "suite": "51/51 green (49 + validate_public_readiness + validate_decision_references); manifest clean; 6 PDFs byte-equal",
+      "next_action": "Phase C evidence-bound multi-target noetic claims (Decision 0030)"
     }
   ],
   "no_merge_statement": "R7D is an Opus CANDIDATE on a draft child PR based on PR #10. It has not been merged into PR #10, PR #9, PR #8, or main. A fresh Fable session must review every hunk, verify the sources, formal semantics, mathematics, PDF rendering, and candidate state, and perform any protected merges."

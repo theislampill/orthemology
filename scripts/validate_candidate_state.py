@@ -94,6 +94,36 @@ def main():
             bad.append("%s=%s" % (pref, st))
     check("no R7/R7B/R7C closure artifact is marked merged/adopted", not bad, "; ".join(bad))
 
+    # 6 (R7D, Decision 0029, audit B1/P1): the authoritative candidate overlay must
+    # name the exact live PR-10 head and its candidate-decision set must NOT drift
+    # from decision-status.yaml — so a STALE overlay (missing PR #10 / wrong head /
+    # missing candidate decisions / omitted companion PDF) FAILS.
+    PR10_HEAD = "3cce235f0e388ba78a093d43c879a2e73262938b"
+    COMPANION_PDF = "artifacts/dynamic-orthing-noetic-learning-orthability-draft.pdf"
+    ov2_text = read("docs/current-candidate-state.yaml")
+    check("authoritative candidate overlay exists", bool(ov2_text))
+    ov2 = yaml.safe_load(ov2_text) if ov2_text else {}
+    check("candidate overlay declares merged: false", ov2.get("merged") is False)
+    check("candidate overlay merged-base sha is main R6",
+          ov2.get("merged_base", {}).get("sha") == MAIN_R6_SHA)
+    chain = ov2.get("pr_chain", [])
+    pr10 = next((p for p in chain if p.get("pr") == 10), None)
+    check("candidate overlay names PR #10", pr10 is not None)
+    check("candidate overlay names the exact live PR #10 head (not stale)",
+          bool(pr10) and pr10.get("head") == PR10_HEAD, repr(pr10.get("head") if pr10 else None))
+    # candidate-decision set == every decision carrying a `pr:` field (no drift)
+    pr_decisions = {did for did, row in decisions.items() if "pr" in row}
+    overlay_decisions = set(ov2.get("candidate_decisions", []))
+    check("candidate overlay decision set matches decision-status (no drift)",
+          overlay_decisions == pr_decisions,
+          "overlay=%s status=%s" % (sorted(overlay_decisions), sorted(pr_decisions)))
+    check("candidate overlay lists the companion PDF among candidate PDFs (B1)",
+          COMPANION_PDF in ov2.get("candidate_pdfs", []))
+    nms = ov2.get("no_merge_status", {})
+    check("candidate overlay declares merged/signoff/ready all false",
+          nms.get("merged") is False and nms.get("independent_signoff") is False
+          and nms.get("ready_for_merge") is False)
+
     print("TOTAL: %d failures" % len(FAILS))
     sys.exit(1 if FAILS else 0)
 

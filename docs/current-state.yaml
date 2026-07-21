@@ -77,9 +77,9 @@ authored:
     pdfs: reproducibly built and visually inspected draft artifacts
     legal_publication: open on license, identity, peer review, and external submission
 derived:
-  source_tree_digest: c442cb9ea630b02ddfe44a8d2a6dd8254ecf2f3cf09082e88f43edf1f913d08f
+  source_tree_digest: edf83729178693cf56a9268627295b2239b93217607ab3ac6583a197e48f4694
   source_tree_digest_policy: docs/project-state-inputs.yaml
-  tracked_files: 546
+  tracked_files: 550
   decision_ids:
   - '0001'
   - '0002'
@@ -109,7 +109,8 @@ derived:
   - '0026'
   - '0027'
   - 0028
-  decision_count: 28
+  - 0029
+  decision_count: 29
   schemas:
   - analysis.schema.json
   - claim-ledger.schema.json
@@ -136,6 +137,7 @@ derived:
   - validate_current_state.py
   - validate_daee_crosswalk.py
   - validate_decision_dependencies.py
+  - validate_decision_references.py
   - validate_dependency_lock.py
   - validate_dynamic_orthing.py
   - validate_evidence_boundary.py
@@ -152,6 +154,7 @@ derived:
   - validate_noetic_targets.py
   - validate_notation.py
   - validate_pdf_math.py
+  - validate_public_readiness.py
   - validate_quran_loci.py
   - validate_reason_fixtures.py
   - validate_recursive_mutations.py
@@ -163,7 +166,7 @@ derived:
   - validate_state_convergence.py
   - validate_type_token_semantics.py
   - validate_verdict_semantics.py
-  validator_count: 38
+  validator_count: 40
   fixture_counts:
     verdict: 7
     reason: 8
@@ -174,9 +177,9 @@ derived:
     invalid_records: 48
   pdfs:
     dynamic-orthing-noetic-learning-orthability-draft.pdf:
-      sha256: b8904d38dd3213df28d7f1b66e699d04ee92391766ff0e20dd644320e6b8c16e
+      sha256: 7d7eeb7a6486c0a1d24bac40ef5d055d5fac94307bf0df7126de6837567256f7
       pages: 4
-      source_commit: 0e26554ef79b4186f6fac099995181ba2ee49e0e
+      source_commit: 2a20f0e88f2178c2316760cf0d33884b93fd14e7
     notation-gallery.pdf:
       sha256: 479608cdf1b8cb84a16a58be8d3ab37882359fe1855cd83c98b0fa37a87264fc
       pages: 3

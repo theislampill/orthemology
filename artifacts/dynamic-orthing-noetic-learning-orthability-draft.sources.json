@@ -1,11 +1,11 @@
 {
   "pdf": "dynamic-orthing-noetic-learning-orthability-draft.pdf",
-  "pdf_sha256": "b8904d38dd3213df28d7f1b66e699d04ee92391766ff0e20dd644320e6b8c16e",
+  "pdf_sha256": "7d7eeb7a6486c0a1d24bac40ef5d055d5fac94307bf0df7126de6837567256f7",
   "page_count": 4,
   "sources": {
-    "companion/dynamic-orthing-noetic-learning-and-orthability.md": "7d567f7d1c2391db6ec52fc2a4af2398fd58a8f11c71e9a7c2cb939430fad4a9"
+    "companion/dynamic-orthing-noetic-learning-and-orthability.md": "7553100b47c9b0656e32fd7197d447be92bd0143e665ed7ce44a40c68726750a"
   },
-  "source_commit": "0e26554ef79b4186f6fac099995181ba2ee49e0e",
+  "source_commit": "2a20f0e88f2178c2316760cf0d33884b93fd14e7",
   "artifact_commit": "the git commit that introduces/updates this artifact (two-stage provenance; see `git log -- artifacts/`)",
   "source_date_epoch": 1784608111,
   "build_command": "python scripts/build_pdfs.py",

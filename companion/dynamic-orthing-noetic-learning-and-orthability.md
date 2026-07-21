@@ -72,7 +72,8 @@ no warrant**.
 Latent states, noetic fields, orthemes, metaorthemes, and orthability are
 **formal / modelling / analysis objects**. Objectivity lies in the truth of the
 analysis-relative instantiation/placement relation constrained by concrete
-reality ($\operatorname{Inst}_A$, $O^*(m; A)$ once $A$ is fixed — Decision 0005),
+reality ($\operatorname{Inst}_A$, $O^*(m; A)$ once $A$ is fixed — Decision 0001;
+symbol normalization is Decision 0005),
 **not** in separately subsisting Platonic universals (Decision 0009 §6).
 
 ## 7. Multi-target noetic orthing
