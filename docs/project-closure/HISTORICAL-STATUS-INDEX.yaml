@@ -30,6 +30,9 @@ rules:
   status: interruption-provenance
 - path: docs/project-closure/r4/MODEL-SUBSTITUTION-INTERRUPTION-PR3.md
   status: interruption-provenance
+- prefix: docs/project-closure/r7e/
+  status: current-candidate
+  note: R7E Opus candidate orthing-supplementation (draft PR into the R7D branch); unmerged; never merged current state
 - prefix: docs/project-closure/r7d/
   status: current-candidate
   note: R7D Opus candidate closure (draft child PR into PR #10); unmerged; never merged current state

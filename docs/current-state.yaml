@@ -77,9 +77,9 @@ authored:
     pdfs: reproducibly built and visually inspected draft artifacts
     legal_publication: open on license, identity, peer review, and external submission
 derived:
-  source_tree_digest: 060adf7f4f28a3a8e052478b288511795bd0ca5db68992f62d2d50c09e14e03e
+  source_tree_digest: 62da4cdc0a24a4a3480ca0b21d19b85a11cc7d5c0b6e325d3dc40bc0bdc3855a
   source_tree_digest_policy: docs/project-state-inputs.yaml
-  tracked_files: 578
+  tracked_files: 580
   decision_ids:
   - '0001'
   - '0002'
@@ -185,9 +185,9 @@ derived:
     invalid_records: 48
   pdfs:
     dynamic-orthing-noetic-learning-orthability-draft.pdf:
-      sha256: d8adb5bc6e6b08ef1516d1f2ece84f85ac4008ca1918935566075db89b12f994
-      pages: 5
-      source_commit: b3a20231e274ab9aec6b3e4383507008e514d0a6
+      sha256: 30293c9057021d513dc8f34d533ec26f0648f895a1e213609b2797cade4f0147
+      pages: 6
+      source_commit: e34d2cd56057766f8f656a4ff3486eb34dad607e
     notation-gallery.pdf:
       sha256: 479608cdf1b8cb84a16a58be8d3ab37882359fe1855cd83c98b0fa37a87264fc
       pages: 3

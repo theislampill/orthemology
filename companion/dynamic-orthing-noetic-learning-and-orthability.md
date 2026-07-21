@@ -127,6 +127,18 @@ universal convergence, one scalar gradient (Decision 0025/0033 hold G1 as
 proposed-candidate, not literal G2), a created learner producing the modal order
 (orthability-O is not created, Decision 0010), or the metaphysical bridge.
 
+### 8.2 Two numbered scales — do not conflate
+
+This paper uses **two** numbered scales. The **eight modalities** (§8.1) disambiguate
+the *meaning* of "a correction is available"; the **ten rungs** (§9,
+`DYNAMIC-ORTHABILITY-ARGUMENT-MAP.yaml`) are the metaphysical ladder. They are
+different scales. Modalities 1–4 (objective corrigibility) are what rung 2 (dynamic
+corrigibility) asserts; modalities 5–8 (agent-relative accessibility,
+discoverability, learnability, convergence) are what rung 3 (agent-accessible
+learnability) concerns and what OSM exemplifies. "Level *n*" in §8.1 therefore never
+means "rung *n*". Dynamic orthability is defined at modalities 1–4 and addressed by
+rungs 1–3; neither scale's lower entries license any upper entry of the other.
+
 ## 9. Metaphysical argument map
 
 Each rung is a **separate premise**, with an inference type, an objection, and a
@@ -145,6 +157,16 @@ levels, not proof of the upper bridge.
 | 8 | Knowledge / Will / Power / Wisdom | metaphysical | impersonal ground |
 | 9 | capacity for disclosure | explanatory | silent ground |
 | 10 | revelation-specific divine Speech | creed-internal (Atharī) | school-internal dispute |
+
+**Gap invariance (rung 3 → rung 4).** The step from agent-accessible learnability
+(rung 3) to normative proper function (rung 4) is the framework's critical inductive
+gap — a regularity → norm (broadly is/ought) transition. It is **invariant under
+additional exemplification**: no quantity of further OSM/DAEE-type learning results,
+however many cases converge, can close it, because more instances of what a faculty
+*does* do not by themselves yield a fact about what it *ought* to do. Rung 4 is
+carried only by the explanatory/teleological bridge premise (rival exit:
+teleosemantic naturalism), never by learning evidence. Empirical density at rung 3
+therefore leaves rung 4's status exactly where it was.
 
 Rungs 1–3 are what the static and dynamic Orthemology material addresses. Rungs
 4–10 each require **explicit bridge premises already identified in the companion
@@ -205,6 +227,17 @@ created" is exactly the conflation the firewall forbids.
 This is a placement, not a proof. The bridge premises (rungs 4–10) are argued
 elsewhere and remain conditional. Primary-text verification of the Taymiyyan loci
 is a standing queue. No empirical study validates any claim here.
+
+**Absence conditions (when dynamic orthability fails under A).** The candidate is
+falsifiable-in-principle relative to a declared analysis $A$. Dynamic orthability is
+*absent* under $A$ when any of: (i) placements lack determinate correctness
+conditions, so rung 1 fails and there is nothing to be corrected toward; (ii) no
+more-adequate state is reachable — $\operatorname{Reach}_A(m, \Pi) = \varnothing$ for
+every unresolved or mistaken $m$ — so the correction structure is empty; or (iii)
+apparent improvement is shown to be brute regularity with no truth-linkage (rung 2's
+rival exit obtains and "correction" tracks no objective gradient). Stating these
+keeps the concept from being unfalsifiable; showing a real case meets (i)–(iii) is
+itself analysis-relative and empirical, not settled here.
 
 ## 13. References
 
