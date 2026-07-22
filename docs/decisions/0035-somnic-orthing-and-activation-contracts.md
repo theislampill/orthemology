@@ -44,6 +44,10 @@ A waking orthing takes up an occurrence and places, withholds, or revises a plac
 
 The `t1` waking event history is authoritative and append-only. Checkpoints are appended during operation; closure or interruption appends another event; a materialized episode view is derived. A `t2` somnic assessment references the preserved target and a reproducible digest derived from the authoritative subject records. Prior-assessment references must form a strictly time-ordered acyclic graph. A later assessment may supersede an earlier assessment by reference, but it cannot edit the target history, insert later evidence into the `t1` state, or retrospectively change which historical contract version governed. Evidence is separated into observed at `t1`, used at `t1`, indexed but unused at `t1`, and discovered after `t1`.
 
+#### History checkpoint chain
+
+The immutable checkpoint-chain authority is this append-only history contract. A checkpoint digest identifies the exact prior checkpoint and the subject, source, and event projection captured through its recorded time; later checkpoints extend that chain and do not replace it.
+
 Session, episode, occurrence, claim attempt, claimant-level orthability assessment, orthing, somnic assessment, and proposal identities remain distinct. A conversational turn is not the primary unit and establishes none of those equalities. Privacy and source-scope limits apply before minimal occurrence capture; activation contracts gate claiming after capture. Inapplicable and indeterminate attempts remain auditable.
 
 ### Brownfield ownership

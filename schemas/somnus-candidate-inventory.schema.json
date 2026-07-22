@@ -15,9 +15,10 @@
       "type": "array", "minItems": 1,
       "items": {
         "type": "object", "additionalProperties": false,
-        "required": ["candidate_id", "status", "execution", "layer", "inputs", "outputs", "dependencies", "event_emissions", "authority_limit", "authority_boundary", "residual_behavior", "downstream_owner", "non_claims", "non_claim_boundaries"],
+        "required": ["candidate_id", "semantic_contract_version", "status", "execution", "layer", "inputs", "outputs", "dependencies", "event_emissions", "authority_limit", "authority_boundary", "residual_behavior", "downstream_owner", "non_claims", "non_claim_boundaries"],
         "properties": {
           "candidate_id": {"type": "string", "minLength": 1},
+          "semantic_contract_version": {"const": "1.0.0"},
           "status": {"const": "outline-only"},
           "execution": {"const": "not implemented"},
           "layer": {"type": "string", "minLength": 1},

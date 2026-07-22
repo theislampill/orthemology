@@ -12,7 +12,7 @@
     "source_family_records", "input_family_records", "recurrence_support_records",
     "opportunity_records", "independence_policies", "orthing_events",
     "meta_orthability_assessments", "somnus_runs", "somnic_assessments",
-    "recurrence_reports", "proposals", "authorizations", "applications",
+    "recurrence_reports", "proposals", "authorization_rule_records", "authorizations", "applications",
     "successor_states", "outcome_evaluations", "writeback_fixture_cases",
     "writeback_case_details", "writeback_timeline", "non_claims"
   ],
@@ -110,6 +110,7 @@
     "somnic_assessments": {"type": "array", "minItems": 1, "items": {"type": "object"}},
     "recurrence_reports": {"type": "array", "minItems": 1, "items": {"type": "object"}},
     "proposals": {"type": "array", "minItems": 1, "items": {"$ref": "#/$defs/proposal"}},
+    "authorization_rule_records": {"type": "array", "minItems": 1, "items": {"$ref": "#/$defs/authorization_rule"}},
     "authorizations": {"type": "array", "minItems": 1, "items": {"$ref": "#/$defs/authorization"}},
     "applications": {"type": "array", "minItems": 1, "items": {"$ref": "#/$defs/application"}},
     "successor_states": {"type": "array", "minItems": 1, "items": {"$ref": "#/$defs/successor"}},
@@ -230,6 +231,20 @@
         "reason": {"type": "string", "minLength": 1}
       }
     },
+    "authorization_rule": {
+      "type": "object", "additionalProperties": false,
+      "required": ["authorization_rule_ref", "rule_id", "rule_version", "owner_ref", "ordering_scope", "ordering_key", "simultaneous_decisions", "immutable"],
+      "properties": {
+        "authorization_rule_ref": {"const": "independent-governance-rule@1"},
+        "rule_id": {"const": "independent-governance-rule"},
+        "rule_version": {"const": "1"},
+        "owner_ref": {"const": "docs/decisions/0035-somnic-orthing-and-activation-contracts.md#writeback-and-authorization-boundary"},
+        "ordering_scope": {"const": "proposal"},
+        "ordering_key": {"const": "decided_at"},
+        "simultaneous_decisions": {"const": "prohibited"},
+        "immutable": {"const": true}
+      }
+    },
     "application": {
       "type": "object", "additionalProperties": false,
       "required": ["application_id", "proposal_id", "authorization_id", "status", "action_record_ref", "corrective_transition_ref", "successor_state_id", "applied_at", "assessment_history_mutated", "proposal_history_mutated", "outcome_evaluation_required"],
@@ -244,7 +259,28 @@
         "applied_at": {"type": "string", "format": "date-time"},
         "assessment_history_mutated": {"const": false},
         "proposal_history_mutated": {"const": false},
-        "outcome_evaluation_required": {"type": "boolean"}
+        "outcome_evaluation_required": {"type": "boolean"},
+        "revert_transition": {"$ref": "#/$defs/revert_transition"}
+      },
+      "allOf": [
+        {
+          "if": {"properties": {"status": {"const": "reverted"}}, "required": ["status"]},
+          "then": {"required": ["revert_transition"]},
+          "else": {"not": {"required": ["revert_transition"]}}
+        }
+      ]
+    },
+    "revert_transition": {
+      "type": "object", "additionalProperties": false,
+      "required": ["revert_transition_id", "application_id", "prior_successor_state_id", "reverted_at", "restoration_disposition", "revert_provenance_ref", "immutable"],
+      "properties": {
+        "revert_transition_id": {"type": "string", "minLength": 1},
+        "application_id": {"type": "string", "minLength": 1},
+        "prior_successor_state_id": {"type": "string", "minLength": 1},
+        "reverted_at": {"type": "string", "format": "date-time"},
+        "restoration_disposition": {"enum": ["restored_prior_state", "superseded_by_corrective_state", "held_for_governance"]},
+        "revert_provenance_ref": {"type": "string", "minLength": 1},
+        "immutable": {"const": true}
       }
     },
     "successor": {

@@ -16,6 +16,7 @@ claim_status:
 candidates:
 - &candidate
   candidate_id: orthability-check
+  semantic_contract_version: 1.0.0
   status: outline-only
   execution: not implemented
   layer: live-routing

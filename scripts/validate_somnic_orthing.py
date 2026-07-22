@@ -106,6 +106,18 @@ EXPECTED_VERSION_TRANSITION_AUTHORITY = {
 EXPECTED_REFERENCE_CORPUS_OWNER = (
     "docs/decisions/0035-somnic-orthing-and-activation-contracts.md#frontier-recurrence-and-retrospective-loci"
 )
+EXPECTED_AUTHORIZATION_RULES = {
+    "independent-governance-rule@1": {
+        "authorization_rule_ref": "independent-governance-rule@1",
+        "rule_id": "independent-governance-rule",
+        "rule_version": "1",
+        "owner_ref": "docs/decisions/0035-somnic-orthing-and-activation-contracts.md#writeback-and-authorization-boundary",
+        "ordering_scope": "proposal",
+        "ordering_key": "decided_at",
+        "simultaneous_decisions": "prohibited",
+        "immutable": True,
+    },
+}
 EXPECTED_RUN_OWNER_ROLES = {"analysis", "operation_contract"}
 EXPECTED_CANDIDATE_EVENTS = {
     "orthability-check": {"orthability_assessed"},
@@ -160,6 +172,34 @@ ALLOWED_CANDIDATE_OWNER_ROLES = {
     "transclusion-ledger owner", "external change-proposal custodian",
     "downstream guarded actuation service owner",
     "external bounded-record custody operator",
+}
+EXPECTED_CANDIDATE_SEMANTIC_DIGESTS = {
+    "orthability-check": "cf242d6b54f20dd7ca776dce776fe172ca96baada846f5737dd8c929b9a892c9",
+    "orthing-ledger": "e314f6dd4188c8481228e6a59c9a1144b082cbee76e08d9bf2d8731bdeda8575",
+    "episode-residual-live": "682785d794617c1ee8c03dedcb321aaf44d8e362c9e93fef7799cc62b798ddab",
+    "residual-recurrence-somnic": "364575d6b029447652b77d41ad72b502b897ecbdba125a80cc7c1f15c0b93f05",
+    "metaorthemma-conflict": "a715f118f81c7c05490054aca1af361e6eab5e0d7ceb110f4a4fe51692f098ab",
+    "intervention-disposition": "ea50fc7bfb34b7b9e94571bcc19a372e82e577676ee91452675bb164126d74cf",
+    "verdict-aware-patch-proposal": "dcd6bfb2601b45d39de63ff241891be2e970d157539799e387fc4ebc0e570afc",
+    "guarded-writeback-actuator": "e626342b1ea5a7da722fd01d326238815b15801f0b0c9bde24eef41944f0321e",
+    "orthing-dream": "203272f6ab25c97f4632d766be0db11c650cc32de198431f72a505e551997e6c",
+    "somnus-export": "08d7af255fc294ca6241f9364687e76ab7da37260a389f52dbfc586cd707299f",
+    "somnus-import": "116183a002eabd25f65041a279a50c80c28c30cf4976291a464e152d5dca7c36",
+    "metaortheme-transclusion": "97050e0300e0ba878428aadad0cad42764a0b7101ac96c53062516438e518ec3",
+    "collective-somnus": "4cfdaa1168b60612a99eed9ac972428a2eaf01165c7ad585f40b344a04de8957",
+    "somnus-council": "907513e41452df6b872c75a26faf3d2a2f05106e00f25f659f9dfe8904a43b41",
+    "transclusion-ledger": "63883269de990dc4d6f2ab4121dca195eb19502c3580178016992445771381fe",
+}
+CANDIDATE_OWNER_ROLE_ALIASES = {
+    "verdict-aware-patch-proposal": {
+        "external change-proposal custodian": "proposal owner",
+    },
+    "guarded-writeback-actuator": {
+        "downstream guarded actuation service owner": "writeback runtime owner",
+    },
+    "somnus-export": {
+        "external bounded-record custody operator": "transport owner",
+    },
 }
 EXPECTED_CANDIDATE_RESIDUALS = {
     "orthability-check": "retain inapplicable and indeterminate attempts",
@@ -316,6 +356,105 @@ def _canonical_digest(value):
     return hashlib.sha256(encoded).hexdigest()
 
 
+def _version_authority_issues(authority):
+    """Validate fixed version rows as an explicitly sequenced registry, not a list."""
+    issues = []
+    if not isinstance(authority, dict):
+        return ["activation version transition authority must be an object"]
+    if authority.get("authority_ref") != EXPECTED_VERSION_TRANSITION_AUTHORITY["authority_ref"]:
+        issues.append("activation version transition authority must retain its Decision 0035 owner")
+    if authority.get("append_only") is not True:
+        issues.append("activation version transition authority must remain append-only")
+    rows = authority.get("accepted_versions")
+    if not isinstance(rows, list) or any(not isinstance(row, dict) for row in rows):
+        return issues + ["activation accepted versions must be typed records"]
+    expected_rows = EXPECTED_VERSION_TRANSITION_AUTHORITY["accepted_versions"]
+    key = lambda row: (row.get("artifact_kind"), row.get("artifact_id"), row.get("artifact_version"))
+    actual_by_key = {}
+    for row in rows:
+        identity = key(row)
+        if not all(isinstance(part, str) and part for part in identity):
+            issues.append("activation accepted version has an incomplete typed identity")
+            continue
+        if identity in actual_by_key:
+            issues.append("activation accepted versions duplicate %s@%s" % (identity[1], identity[2]))
+        else:
+            actual_by_key[identity] = row
+    expected_by_key = {key(row): row for row in expected_rows}
+    if actual_by_key != expected_by_key:
+        issues.append(
+            "activation contract and evaluator versions must resolve to the fixed append-only Decision 0035 transition authority"
+        )
+    chains = defaultdict(list)
+    for identity, row in actual_by_key.items():
+        sequence = row.get("sequence")
+        if not isinstance(sequence, int) or isinstance(sequence, bool) or sequence < 1:
+            issues.append("activation accepted version %s@%s requires a positive sequence" % (identity[1], identity[2]))
+        chains[(identity[0], identity[1])].append(row)
+    for chain_key, chain in chains.items():
+        sequence_values = [
+            row.get("sequence") for row in chain
+            if isinstance(row.get("sequence"), int)
+            and not isinstance(row.get("sequence"), bool)
+        ]
+        if len(sequence_values) != len(set(sequence_values)):
+            issues.append("activation version chain %s/%s duplicates a sequence" % chain_key)
+        ordered = sorted(
+            (row for row in chain
+             if isinstance(row.get("sequence"), int)
+             and not isinstance(row.get("sequence"), bool)),
+            key=lambda row: row["sequence"],
+        )
+        for index, row in enumerate(ordered):
+            expected_supersedes = None if index == 0 else ordered[index - 1].get("artifact_version")
+            if row.get("supersedes") != expected_supersedes:
+                issues.append("activation version chain %s/%s has inconsistent supersession" % chain_key)
+    return issues
+
+
+def _candidate_semantic_digest(candidate):
+    owner = candidate.get("downstream_owner")
+    normalized_owner = dict(owner) if isinstance(owner, dict) else owner
+    candidate_id = candidate.get("candidate_id")
+    if isinstance(normalized_owner, dict):
+        aliases = _string_lookup(CANDIDATE_OWNER_ROLE_ALIASES, candidate_id) or {}
+        role = normalized_owner.get("owner_role")
+        normalized_owner["owner_role"] = aliases.get(role, role)
+    projection = {
+        "layer": candidate.get("layer"),
+        "inputs": sorted(_string_set(candidate.get("inputs"))),
+        "outputs": sorted(_string_set(candidate.get("outputs"))),
+        "dependencies": sorted(_string_set(candidate.get("dependencies"))),
+        "downstream_owner": normalized_owner,
+    }
+    return _canonical_digest(projection)
+
+
+def _heading_slug(value):
+    value = re.sub(r"[`*_]", "", value.strip().lower())
+    value = re.sub(r"[^a-z0-9\s-]", "", value)
+    return re.sub(r"-+", "-", re.sub(r"\s+", "-", value)).strip("-")
+
+
+def _decision_authority_issues(decision_text, authority_refs):
+    if not isinstance(decision_text, str):
+        return ["Decision authority references cannot resolve without Decision 0035"]
+    heading_counts = Counter(
+        _heading_slug(match.group(1))
+        for match in re.finditer(r"^#{1,6}\s+(.+?)\s*$", decision_text, re.M)
+    )
+    issues = []
+    decision_path = "docs/decisions/0035-somnic-orthing-and-activation-contracts.md"
+    for authority_ref in sorted(authority_refs, key=lambda value: str(value)):
+        if not isinstance(authority_ref, str) or "#" not in authority_ref:
+            issues.append("Decision authority reference %r is not a typed path fragment" % authority_ref)
+            continue
+        path, fragment = authority_ref.split("#", 1)
+        if path != decision_path or heading_counts.get(fragment) != 1:
+            issues.append("Decision authority reference %s must resolve to exactly one owned heading" % authority_ref)
+    return issues
+
+
 def _activation_contract_digest(contract):
     return _canonical_digest(contract)
 
@@ -355,10 +494,7 @@ def _activation_issues(document, schemas, store):
         document.get("version_transition_authority") if isinstance(document, dict) else None,
         "activation.version_transition_authority", issues,
     )
-    if transition_authority != EXPECTED_VERSION_TRANSITION_AUTHORITY:
-        issues.append(
-            "activation contract and evaluator versions must resolve to the fixed append-only Decision 0035 transition authority"
-        )
+    issues += _version_authority_issues(transition_authority)
     for index, contract in enumerate(contracts):
         issues += _schema_issues("activation.contracts[%d]" % index, contract,
                                  schemas[SCHEMA_NAMES["contracts"]], store)
@@ -991,6 +1127,13 @@ def _records_issues(document, activation, history, schemas, store):
     corpus_by_revision = _unique_index(
         corpus_rows, "reference_corpus_revision", "reference corpus registry", issues
     )
+    for corpus_revision, corpus in corpus_by_revision.items():
+        if (corpus.get("owner_ref") != EXPECTED_REFERENCE_CORPUS_OWNER
+                or corpus.get("immutable") is not True):
+            issues.append(
+                "reference corpus revision %s must resolve to the immutable Decision 0035 corpus owner"
+                % corpus_revision
+            )
     assessment_by_id = _unique_index(assessments, "assessment_id", "somnic assessments", issues)
     report_by_id = _unique_index(reports, "recurrence_report_id", "recurrence reports", issues)
     meta_by_id = _unique_index(meta_assessments, "meta_orthability_assessment_id", "meta-orthability assessments", issues)
@@ -1004,6 +1147,19 @@ def _records_issues(document, activation, history, schemas, store):
     proposal_by_id = _unique_index(proposal_rows, "proposal_id", "proposals", issues)
     auth_rows = _objects(document, "authorizations", issues, "records")
     auth_by_id = _unique_index(auth_rows, "authorization_id", "authorizations", issues)
+    authorization_rule_rows = _objects(
+        document, "authorization_rule_records", issues, "records"
+    )
+    authorization_rule_by_ref = _unique_index(
+        authorization_rule_rows,
+        "authorization_rule_ref",
+        "authorization rule registry",
+        issues,
+    )
+    if authorization_rule_by_ref != EXPECTED_AUTHORIZATION_RULES:
+        issues.append(
+            "authorization rule registry must equal the immutable typed Decision 0035 owner"
+        )
     application_rows = _objects(document, "applications", issues, "records")
     application_by_id = _unique_index(application_rows, "application_id", "applications", issues)
     successor_rows = _objects(document, "successor_states", issues, "records")
@@ -1704,6 +1860,12 @@ def _records_issues(document, activation, history, schemas, store):
                 "source family %s provenance_ref must resolve to an immutable provenance owner"
                 % source_family_id
             )
+    for source in source_record_rows:
+        if not _string_member(source_family_by_id, source.get("source_family")):
+            issues.append(
+                "source record %s source_family must resolve through the authoritative source family registry"
+                % source.get("source_record_id")
+            )
     input_family_rows = _objects(document, "input_family_records", issues, "records")
     input_family_by_id = _unique_index(
         input_family_rows, "normalized_input_family_id", "input family registry", issues
@@ -1975,6 +2137,12 @@ def _records_issues(document, activation, history, schemas, store):
             )
 
     for auth in auth_rows:
+        rule_ref = auth.get("authorization_rule_ref")
+        if not _string_member(authorization_rule_by_ref, rule_ref):
+            issues.append(
+                "authorization %s must resolve through the immutable typed authorization rule registry"
+                % auth.get("authorization_id")
+            )
         if not _string_member(proposal_by_id, auth.get("proposal_id")):
             issues.append("authorization %s has unresolved proposal" % auth.get("authorization_id"))
         if auth.get("source") != "independent_governance":
@@ -2086,6 +2254,42 @@ def _records_issues(document, activation, history, schemas, store):
                     or outcomes[0].get("result") not in {"ineffective", "harmful"}):
                 issues.append(
                     "reverted application requires one ineffective or harmful outcome"
+                )
+            transition = _mapping(
+                application.get("revert_transition"),
+                "application %s revert_transition" % application_id,
+                issues,
+            )
+            if (transition.get("application_id") != application_id
+                    or transition.get("prior_successor_state_id")
+                    != application.get("successor_state_id")
+                    or transition.get("immutable") is not True):
+                issues.append(
+                    "reverted application must own an immutable transition from its materialized successor"
+                )
+            reverted_at = _parse_time(
+                transition.get("reverted_at"),
+                "application %s revert_transition.reverted_at" % application_id,
+                issues,
+            )
+            applied_at = _parse_time(
+                application.get("applied_at"),
+                "application %s applied_at" % application_id,
+                issues,
+            )
+            outcome_at = (
+                _parse_time(
+                    outcomes[0].get("evaluated_at"),
+                    "application %s outcome evaluated_at" % application_id,
+                    issues,
+                )
+                if len(outcomes) == 1 else None
+            )
+            if (reverted_at is not None
+                    and ((applied_at is not None and reverted_at <= applied_at)
+                         or (outcome_at is not None and reverted_at <= outcome_at))):
+                issues.append(
+                    "revert transition must occur after application and its harmful or ineffective outcome"
                 )
         if authorization is not None:
             authorized_at = _parse_time(
@@ -2327,7 +2531,7 @@ def _inventory_issues(document, schemas, store):
             "inventory.claim_status", document.get("claim_status"),
             schemas[AUX_SCHEMA_NAMES["claim_status"]], store,
         )
-    required = {"candidate_id", "status", "execution", "inputs", "outputs", "dependencies", "event_emissions", "authority_limit", "authority_boundary", "residual_behavior", "downstream_owner", "non_claims", "non_claim_boundaries"}
+    required = {"candidate_id", "semantic_contract_version", "status", "execution", "inputs", "outputs", "dependencies", "event_emissions", "authority_limit", "authority_boundary", "residual_behavior", "downstream_owner", "non_claims", "non_claim_boundaries"}
     expected = {"orthability-check", "orthing-ledger", "episode-residual-live", "residual-recurrence-somnic", "metaorthemma-conflict", "intervention-disposition", "verdict-aware-patch-proposal", "guarded-writeback-actuator", "orthing-dream", "somnus-export", "somnus-import", "metaortheme-transclusion", "collective-somnus", "somnus-council", "transclusion-ledger"}
     if {row.get("candidate_id") for row in candidates if isinstance(row.get("candidate_id"), str)} != expected:
         issues.append("inventory does not contain the exact bounded candidate set")
@@ -2340,6 +2544,16 @@ def _inventory_issues(document, schemas, store):
             if not _string_set(row.get(field)):
                 issues.append("inventory candidate %s requires nonempty typed %s" % (row.get("candidate_id"), field))
         candidate_id = row.get("candidate_id")
+        expected_semantic_digest = _string_lookup(
+            EXPECTED_CANDIDATE_SEMANTIC_DIGESTS, candidate_id
+        )
+        if (row.get("semantic_contract_version") != "1.0.0"
+                or expected_semantic_digest is None
+                or _candidate_semantic_digest(row) != expected_semantic_digest):
+            issues.append(
+                "inventory candidate %s must preserve its candidate-specific versioned owner, layer, input, output, and dependency contract"
+                % candidate_id
+            )
         expected_events = (
             EXPECTED_CANDIDATE_EVENTS.get(candidate_id, set())
             if isinstance(candidate_id, str) else set()
@@ -2688,6 +2902,27 @@ def collect_issues(activation, records, history, inventory, adoption, collective
     issues += _collective_issues(collective, schemas, store)
     decision_issues, claim_status = _decision_issues(decision_text)
     issues += decision_issues
+    authority_refs = []
+    if isinstance(activation, dict):
+        transition_authority = activation.get("version_transition_authority")
+        if isinstance(transition_authority, dict):
+            authority_refs.append(transition_authority.get("authority_ref"))
+    if isinstance(history, dict):
+        history_chain = history.get("chain")
+        if isinstance(history_chain, dict):
+            authority_refs.append(history_chain.get("authority_ref"))
+    if isinstance(records, dict):
+        authority_refs.extend(
+            row.get("owner_ref")
+            for row in records.get("reference_corpus_records", [])
+            if isinstance(row, dict)
+        )
+        authority_refs.extend(
+            row.get("owner_ref")
+            for row in records.get("authorization_rule_records", [])
+            if isinstance(row, dict)
+        )
+    issues += _decision_authority_issues(decision_text, authority_refs)
     if claim_status is not None:
         issues += _schema_issues(
             "Decision 0035 claim_status", claim_status,
