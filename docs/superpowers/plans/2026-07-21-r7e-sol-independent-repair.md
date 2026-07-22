@@ -6,7 +6,7 @@
 
 **Architecture:** Preserve the existing source/generated boundary. Add typed, offline contracts and pure validation helpers first; migrate prose and publication math only after failing semantic tests exist. Treat R7E as a candidate and its LLM-mediated workflow as a provenance-qualified observational witness, never empirical validation or comparative evidence. Preserve waking `t1` records append-only; type later `t2` somnic assessment through versioned activation/evaluator contracts; demonstrate only deterministic residual recurrence over fixtures and a retrospective R7E case, never a deployed agent skill or scheduler.
 
-**Tech stack:** Python 3.11.9; PyYAML; jsonschema; markdown-it-py; Typst 0.15.0; pypdf 6.14.2; Markdown/YAML/JSON/JSON Schema; GitHub Actions and protected pull requests.
+**Tech stack:** Python 3.11.9; PyYAML; jsonschema; markdown-it-py; PDFLaTeX through `latexmk` in a pinned arXiv-supported TeX Live generation; the repository-declared bibliography processor; Poppler; pypdf 6.14.2; Markdown/YAML/JSON/JSON Schema; GitHub Actions and protected pull requests. Typst 0.15.0 remains a historical, noncanonical compatibility surface only.
 
 **Exact environment:** A task-specific virtual environment outside the repository, created with Python 3.11 and installed only from `requirements-ci.lock.txt`. Set `PYTHONUTF8=1` and `PYTHONIOENCODING=utf-8` for Windows command parity. Do not use the ambient Python environment to generate artifacts.
 
@@ -31,6 +31,8 @@ $env:PYTHONIOENCODING = 'utf-8'
 **Base and branch:** `review/r7e-sol-independent-repair` from `candidate/r7e-orthing-supplementation@cbab14747835855d232448f648eefa1d4e36074e`.
 
 **Universal task protocol:** Before each task, verify root and agent metadata still surface `gpt-5.6-sol`, verify the branch and clean/expected dirty state, write the task brief, and run the narrow baseline. The implementer must write a red test before behavior changes, observe the intended failure, implement the smallest coherent repair, run narrow and affected checks, inspect the diff, update generated state and manifest when tracked sources change, commit, and write a report. A separate reviewer then inspects the commit and reruns the decisive tests. Reviewer findings are fixed by a fresh implementer before proceeding.
+
+**Publication profile amendment for Tasks 11–13:** The target is a `generic arXiv-compatible two-column technical-paper profile`. This is venue-neutral and must not be described as an official arXiv template or as evidence of venue selection, submission, processing, endorsement, acceptance, or publication. The seven Markdown sources remain the authoritative owners of substantive prose. A deterministic tracked LaTeX tree is generated from them and may not acquire independent semantic edits. PDFs, sidecars, and source archives are derived artifacts.
 
 ---
 
@@ -356,12 +358,16 @@ Do not create or clone an external repository, distributed agent network, shared
 - Modify: `scripts/validate_math_source.py`
 - Modify: `tests/test_math_pipeline.py`
 - Create: `tests/test_math_source_inventory.py`
+- Create: `schemas/publication-profile.schema.json`
+- Create: `docs/publication-profile.yaml`
+- Create: `scripts/validate_publication_profile.py`
+- Create: `tests/test_publication_profile.py`
 
-**Step 1 — red:** Inventory all inline-code occurrences in the seven publication sources as `literal-code|semantic-registry-id|mathematics`, keyed by file/locus/occurrence. Reject a new formula-like backtick, a copied allowlisted formula in another file, duplicate occurrence, orphan inventory row, false registry-ID classification, formula lacking current operator regex such as `V1(e)`, combining accent, removed build source, or removed gallery symbol.
+**Step 1 — red:** Inventory all inline-code occurrences in the seven publication sources as `literal-code|semantic-registry-id|mathematics`, keyed by file/locus/occurrence. Reject a new formula-like backtick, a copied allowlisted formula in another file, duplicate occurrence, orphan inventory row, false registry-ID classification, formula lacking current operator regex such as `V1(e)`, combining accent, removed build source, or removed gallery symbol. Also reject venue branding or status fabrication, an unrecorded profile exception, a missing entry point, conflicting bibliography owners, system-font or hidden-environment dependencies, shell escape, absolute paths, unsupported packages, undeclared hard limits, a missing appendix policy, or removal of source qualifications.
 
 **Step 2 — observe failure:** The present global-text allowlist and misleading `migrated: true` statuses must fail the new contract.
 
-**Step 3 — implement:** Split `glyph_defect_repaired` from `full_math_source_migrated`, add complete publication coverage and visual-QA state, and require zero math-classified backticks for a migrated source. Do not mechanically convert code or registry identifiers.
+**Step 3 — implement:** Split `glyph_defect_repaired` from `full_math_source_migrated`, add complete publication coverage and visual-QA state, and require zero math-classified backticks for a migrated source. Do not mechanically convert code or registry identifiers. The publication profile maps all seven substantive sources to the existing six artifact identities and records each artifact as `technical-paper` or the explicit `diagnostic-reference` exception. It owns the entry point, bibliography owner, engine, TeX Live generation, bibliography processor, overfull-box tolerance, package policy, appendix policy, and source-package owner. The five paper-shaped artifacts use article-class 10-point US Letter output with two-column bodies and references, full-width title and abstract front matter, and single-column technical appendices. The notation gallery is the diagnostic-reference exception but remains subject to the same provenance, font, extraction, packaging, clean-build, and visual gates.
 
 **Step 4 — verify:** Run inventory tests, math pipeline tests, math source validator, and adversarial copies/moves/deletions.
 
@@ -380,11 +386,15 @@ Do not create or clone an external repository, distributed agent network, shared
 - Modify: `docs/notation-gallery.md`
 - Modify: `docs/math-source-inventory.yaml`
 - Modify: `docs/math-migration-status.yaml`
+- Create: `publication/latex/`
+- Create: `scripts/generate_latex_sources.py`
+- Create: `scripts/validate_latex_sources.py`
+- Create: `tests/test_latex_source_generation.py`
 - Modify translator/tests only when a reviewed expression requires bounded syntax.
 
-**Step 1 — tests first:** For each source batch, add the unique expressions to translation/compile tests before editing prose. Include literal dollars in code, escaped currency, math in tables/links, multiline aligned expressions, semantic `\operatorname{...}`, malformed delimiters, and hard failures for unsupported raw HTML/images.
+**Step 1 — tests first:** For each source batch, add the unique expressions to translation/compile tests before editing prose. Include literal dollars in code, escaped currency, math in tables/links, multiline aligned expressions, semantic `\operatorname{...}`, malformed delimiters, and hard failures for unsupported raw HTML/images. Require deterministic LaTeX generation, one declared bibliography owner, the profile-owned front matter/body/appendix layout, and rejection of shell escape, absolute paths, venue metadata, or semantic divergence from the Markdown owners.
 
-**Step 2 — migrate in small batches:** Use `unicode_math_to_latex.py` only to propose replacements. Review every expression for mathematical meaning, upright semantic operators/IDs, collision-free notation, inline versus display form, citations/links, and adjacent ASCII/accessibility explanation.
+**Step 2 — migrate in small batches:** Use `unicode_math_to_latex.py` only to propose replacements. Review every expression for mathematical meaning, upright semantic operators/IDs, collision-free notation, inline versus display form, citations/links, and adjacent ASCII/accessibility explanation. Generate the tracked LaTeX tree deterministically from the authoritative Markdown sources. Do not edit generated LaTeX as an independent prose owner.
 
 **Step 3 — verify each batch:**
 
@@ -396,7 +406,7 @@ Do not create or clone an external repository, distributed agent network, shared
 
 Expected final state: every publication source has `full_math_source_migrated: true`, `expected_notdef: 0`, and zero unapproved formula backticks.
 
-**Step 4 — source commit:** Regenerate current state and manifest, run affected prose/semantic validators, then commit source migration separately as `docs: complete publication math source migration`. Do not generate PDF sidecars before this commit exists.
+**Step 4 — source commit:** Regenerate current state and manifest, run affected prose/semantic and LaTeX-source validators, then commit the authoritative prose and generated LaTeX tree separately as `docs: complete publication math source migration`. Do not include PDFs, sidecars, source archives, build logs, auxiliary files, or frozen QA output before this commit exists.
 
 ## Task 13: Repair PDF provenance, candidate status, and artifact generation
 
@@ -407,11 +417,16 @@ Expected final state: every publication source has `full_math_source_migrated: t
 - Modify: `tests/test_math_pipeline.py`
 - Modify: six `artifacts/*.pdf`
 - Modify: six `artifacts/*.sources.json`
+- Create: `scripts/validate_arxiv_source_package.py`
+- Create: `tests/test_arxiv_source_package.py`
+- Create: six `artifacts/*.source.tar.gz`
+- Create: six `artifacts/*.source-manifest.json`
+- Create: `docs/project-closure/r7e-sol/R7E-SOL-ARXIV-COMPATIBILITY.md`
 - Create: `docs/project-closure/r7e-sol/R7E-SOL-PDF-VISUAL-QA.md`
 
-**Step 1 — red:** Add tests that every sidecar `source_commit` contains each recorded source hash, tool identity includes exact versions plus lock hash, status copy comes from explicit candidate-state input rather than hard-coded R5 wording, committed-PDF rasterization clears stale output, and all six artifacts are covered.
+**Step 1 — red:** Add tests that every sidecar `source_commit` contains each recorded Markdown and generated-LaTeX source hash, tool identity includes exact versions plus lock and publication-profile hashes, status copy comes from explicit candidate-state input rather than hard-coded R5 wording, committed-PDF rasterization clears stale output, and all six artifacts are covered. Reject removal of the appendix switch, absolute paths, missing declared styles or bibliography, unresolved references or citations, undeclared fonts, clipping, and developer-only packages.
 
-**Step 2 — implement:** Use the Task 12 source commit as sidecar provenance. Correct the hard-coded R5 preamble. Make `--check` materialize/verify source bytes at `source_commit`. Keep double-build and text-structure checks. Add committed-PDF rasterization or a separate deterministic QA command; `--png` source rendering alone is insufficient.
+**Step 2 — implement:** Use the Task 12 source commit as sidecar provenance. Correct the hard-coded R5 preamble. Build with PDFLaTeX through `latexmk` using the pinned TeX Live generation and declared bibliography processor. Make `--check` materialize and verify source bytes at `source_commit`. Each sidecar records Markdown and LaTeX hashes, source commit, exact tool versions, profile hash, entry point, build command, build time, source-package hash, source-manifest hash, and PDF hash. Produce one deterministic, self-contained source package per artifact that builds offline without shell escape, private fonts, hidden dependencies, stale auxiliary state, conversion, or files outside the package. Keep double-build and text-structure checks. Add committed-PDF rasterization or a separate deterministic QA command; `--png` source rendering alone is insufficient.
 
 **Step 3 — build in pinned environment:**
 
@@ -424,9 +439,11 @@ $env:PYTHONUTF8='1'; $env:PYTHONIOENCODING='utf-8'
 & $PY scripts/build_pdfs.py --check
 ```
 
-**Step 4 — visual QA:** Render every page of all six committed PDFs at readable resolution. Inspect formulas, missing glyphs, clipping/overflow, blank pages, tables, links, headings, page numbers, and status pages. Record every artifact hash, page count, rendered-page count, issue and disposition in the QA record. Use the PDF skill and inspect every page, not a sample.
+**Step 4 — visual QA:** Build twice with byte identity, reject unresolved references or citations and overfull boxes above the profile-declared tolerance, and require embedded fonts with no Type 3 fonts. Verify extracted structure, absence of rasterized text and active JavaScript, links, page order, glyphs, and source-package clean builds. Render every page of all six committed PDFs at readable resolution. Inspect formulas, missing glyphs, clipping/overflow, blank pages, tables, links, headings, page numbers, and status pages. Record every artifact hash, package hash, page count, rendered-page count, exact build/runtime versions, issue, and disposition in the QA record. Use the PDF skill and inspect every page, not a sample.
 
 **Step 5 — artifact commit:** Regenerate the manifest last, verify no source drift, and commit `build: regenerate verified publication PDFs`.
+
+The only final compatibility claim permitted by this task is: `A venue-neutral, generic arXiv-compatible two-column technical paper with full-width front matter and single-column technical appendices.`
 
 ## Task 14: Run the complete adversarial and recursive mutation program
 
@@ -459,11 +476,11 @@ $env:PYTHONUTF8='1'; $env:PYTHONIOENCODING='utf-8'
 - Update: `docs/project-closure/r7e-sol/R7E-INDEPENDENT-FINDING-MATRIX.yaml`
 - Update: `docs/project-closure/r7e-sol/R7E-HUNK-DISPOSITION.md`
 
-**Step 1 — local full suite:** Extract and execute every `.github/workflows/validate.yml` command in order under the pinned venv. Record the exact command count. The final manifest regeneration must leave no diff and `build_pdfs.py --check` must pass. Record any Windows UTF-8 wrapper without altering the underlying validator.
+**Step 1 — local full suite:** Extract and execute every `.github/workflows/validate.yml` command in order under the pinned venv. Record the exact command count. The final manifest regeneration must leave no diff. Publication-profile validation, LaTeX regeneration parity, source-package validation, clean unpacked package builds, PDF conformance, and all-page rendering must pass alongside `build_pdfs.py --check`. Record any Windows UTF-8 wrapper without altering the underlying validator.
 
 **Step 2 — final whole-branch review:** A fresh Sol reviewer inspects `cbab147..HEAD`, every finding disposition, every PR #12 hunk disposition, source boundaries, math sources, PDFs, and tests. Resolve all blocking findings.
 
-**Step 3 — clean clone:** Push the review branch only after the local gate, clone it into a new explicit directory, create a new venv from `requirements-ci.lock.txt`, rerun the exact full suite, rebuild/check PDFs, rasterize and inspect all pages, and confirm `git status --porcelain` is empty. Do not reuse caches or untracked control artifacts as evidence.
+**Step 3 — clean clone:** Push the review branch only after the local gate, clone it into a new explicit directory, create a new venv from `requirements-ci.lock.txt`, rerun the exact full suite, regenerate LaTeX, build each source package from a clean unpacked directory, rebuild/check PDFs, rasterize and inspect all pages, and confirm `git status --porcelain` is empty. Do not reuse caches or untracked control artifacts as evidence.
 
 **Step 4 — closure commit:** Update records with immutable commit/hash evidence, regenerate state and manifest, run the full suite once more if the records affect it, and commit `docs: record clean-clone R7E Sol verification`. The closeout names exact normative/core files; crosswalks to existing episode/verdict/evidence/residual/action/actor-handoff/represented-standard owners; claimant-level and episode-level identity behavior; activation/evaluator versions; fixture counts by class; contract-authorship mode; mutation counts; whether recurrence was implemented as a direct reference operation or only specified/validated; anchor/reference/comparator and independence behavior; R7E capture mode and missing evidence; somnus run/assessment fixture IDs, reopening and idempotency results; retrospective defect loci; assessment/intervention/proposal/authorization/application/outcome separation; legacy versus grounded proposal provenance; no-change fixtures; three collective modes, transclusion levels, local-adoption/authorization and privacy/security boundaries; outline-only candidates/adoption profiles and downstream owners; explicit absence of skill package, external repository/network/shared service, cron, writeback engine, transclusion transport, automatic patch, or external runtime mutation; and successor triggers for live capture, scheduling, conflict detection, replay, verdict decomposition, governed proposal/apply/revert, later outcome evaluation, and federated/council runtime evidence. End with the waking/somnus/frontier/ledger and collective local-re-orthing distinctions intact.
 
@@ -483,7 +500,7 @@ $env:PYTHONUTF8='1'; $env:PYTHONIOENCODING='utf-8'
 
 Stop before the next write/merge on any red check, stale head, unexpected commit, changed topology/protection, surviving semantic attack, model substitution, or genuine owner-only blocker. Preserve exact state and leave all affected PRs unmerged.
 
-**Step 3 — merged-main proof:** Fresh-clone merged `main`, install only the exact lock, rerun the complete suite, rebuild/check all PDFs, rasterize/inspect every page, verify the clean tree, and record the actual main merge SHA.
+**Step 3 — merged-main proof:** Fresh-clone merged `main`, install only the exact lock, rerun the complete suite, regenerate LaTeX, build every source package from a clean unpacked directory, rebuild/check all PDFs, rasterize/inspect every page, verify the clean tree, and record the actual main merge SHA.
 
 **Step 4 — non-self-referential verification record:** If the merge SHA could not be included beforehand, create a protected follow-up branch/PR containing the final merged verification record, generated state, and manifest. Run CI, merge normally, then read back protected `main` and verify the record names the earlier merge and its own follow-up commit honestly.
 

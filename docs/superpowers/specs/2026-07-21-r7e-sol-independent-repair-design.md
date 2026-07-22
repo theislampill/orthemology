@@ -12,7 +12,7 @@
 
 ## Objective
 
-Independently reproduce, adjudicate, and repair every blocking finding against R7E/PR #12 and its cumulative R7 candidate stack; complete publication-grade mathematical-source migration and PDF QA; then, only if every gate passes and no owner-only blocker remains, integrate without history rewriting through PR #12 → #11 → #10 → #9 → #8 → protected `main`, with fresh validation after every step and a final clean-clone verification.
+Independently reproduce, adjudicate, and repair every blocking finding against R7E/PR #12 and its cumulative R7 candidate stack; complete publication-grade mathematical-source migration, a venue-neutral generic arXiv-compatible two-column LaTeX profile, self-contained source packages, machine-readable PDFs, and all-page PDF QA without implying publication status; then, only if every gate passes and no owner-only blocker remains, integrate without history rewriting through PR #12 → #11 → #10 → #9 → #8 → protected `main`, with fresh validation after every step and a final clean-clone verification.
 
 ## Current verified topology
 
@@ -172,6 +172,10 @@ Split `glyph_defect_repaired` from `full_math_source_migrated`. Inventory every 
 
 Cover the main manuscript, formal core, multi-actor note, school-neutral companion, Atharī companion, dynamic companion, and notation gallery. Use typed, collision-free notation; upright semantic operators/IDs; explicit ASCII/accessibility prose; tables and multiline displays that preserve citations and links.
 
+The seven Markdown documents remain the substantive prose owners. A deterministic tracked LaTeX tree is generated from them and cannot acquire independent semantic edits. A typed publication profile maps those sources to the existing six artifact identities and owns the entry point, bibliography owner, PDFLaTeX engine through `latexmk`, pinned arXiv-supported TeX Live generation, bibliography processor, package policy, overfull-box tolerance, appendix policy, and source-package owner. The five paper-shaped artifacts use two-column bodies and references with full-width title and abstract front matter and single-column technical appendices. The notation gallery is an explicit diagnostic-reference exception, not an unrecorded divergence.
+
+Each artifact has a deterministic, self-contained source package and machine-readable source manifest. A package must build offline from a clean unpacked directory without shell escape, private or system-only fonts, hidden dependencies, absolute paths, stale auxiliary files, conversion steps, or files outside the package. Generated LaTeX, PDFs, sidecars, source packages, and manifests remain derived artifacts owned through their declared generators.
+
 Publication gates require:
 
 - `full_math_source_migrated: true` for every publication paper;
@@ -183,13 +187,15 @@ Publication gates require:
 - rendered page images for every PDF;
 - human/model visual inspection of every page, with special attention to formula-heavy pages, overflow, blank pages, glyphs, tables, links, and headings.
 
+The compatibility claim is strictly venue-neutral: `A venue-neutral, generic arXiv-compatible two-column technical paper with full-width front matter and single-column technical appendices.` It does not identify an official arXiv template or establish venue selection, submission, processing, endorsement, acceptance, or publication.
+
 ### 7. Adversarial review and clean-clone proof
 
 Every implementation task follows test-first red/green/refactor when behavior or validation changes. Required mutations cover stale/omitted candidate topology, candidate self-promotion, literal physical gradient, divergence/curl without a multi-node field, transition-as-correctness, omitted reread, closure-as-uptake, hidden-burden deletion, unauthorized global revision, strict soundness on mere admissibility, tawātur-by-count/popularity, fiṭrah-as-coordinate, mental-to-external entailment, argument-map status contradictions, unsafe created-wording implications, and unapproved formula spans.
 
 Fresh independent agents review each task for specification compliance and quality, then a final Sol reviewer audits the whole branch. Agent reports never replace local diff inspection or fresh tests.
 
-After the full pinned suite passes, clone the repaired branch into a new directory, reinstall only from the exact lock, rerun the complete suite, double-build PDFs, render pages, and verify a clean tree.
+After the full pinned suite passes, clone the repaired branch into a new directory, reinstall only from the exact lock, rerun the complete suite, regenerate the LaTeX tree, build every source package from a clean unpacked directory, double-build PDFs, render every page, and verify a clean tree.
 
 ### 8. Protected integration
 
@@ -220,6 +226,7 @@ After the final merge, fresh-clone `main`, rerun the full pinned suite and PDF b
 - no inference of soul state, guidance, persuasion, or theology from runtime traces;
 - no biological-procedure reconstruction;
 - no external registration, peer-review claim, preprint, DOI, author identity, license, or other legal/publication status fabrication;
+- no official arXiv house-style claim, venue selection, submission, processing-success, endorsement, acceptance, or publication implication from the generic compatibility profile;
 - no force-push, history rewrite, destructive cleanup, or provenance collapse;
 - no publication of private transcripts, journals, session identifiers, or rights-sensitive material.
 
@@ -237,4 +244,4 @@ Stop before the next write or merge, preserve the exact state, and leave affecte
 
 ## Done when
 
-Every independent finding and PR #12 hunk has a durable evidence-backed disposition; all blockers are repaired or refuted; the semantic contracts and attacks prevent the known false passes; the scholarship boundaries are explicit; the R7E episode has a provenance-qualified LLM-witness and retrospective somnic-case classification that cannot imply comparative utility or deployed runtime; the repository preserves the two-time append-only rule, versioned activation/evaluator separation, tri-state applicability, deterministic residual-recurrence fixtures, and outline-only downstream ownership; all publication sources are fully math-migrated; every PDF passes byte, text, glyph, and visual checks; the repaired branch passes the exact pinned suite from a clean clone; every authorized integration step passes refreshed CI; protected `main` passes the same clean-clone verification; and the final record states exactly what was verified, what remains owner/external, and what was not claimed.
+Every independent finding and PR #12 hunk has a durable evidence-backed disposition; all blockers are repaired or refuted; the semantic contracts and attacks prevent the known false passes; the scholarship boundaries are explicit; the R7E episode has a provenance-qualified LLM-witness and retrospective somnic-case classification that cannot imply comparative utility or deployed runtime; the repository preserves the two-time append-only rule, versioned activation/evaluator separation, tri-state applicability, deterministic residual-recurrence fixtures, and outline-only downstream ownership; all publication sources are fully math-migrated; the venue-neutral publication profile, deterministic generated LaTeX tree, and clean-building self-contained source packages pass their declared gates; every PDF passes byte, text, font, glyph, machine-readability, and all-page visual checks; the repaired branch passes the exact pinned suite from a clean clone; every authorized integration step passes refreshed CI; protected `main` passes the same clean-clone verification; and the final record states exactly what was verified, what remains owner/external, and what was not claimed.
