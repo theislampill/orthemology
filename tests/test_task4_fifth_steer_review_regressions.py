@@ -26,6 +26,10 @@ def relation(records, relation_id):
     )
 
 
+def subject(records, subject_id):
+    return item(records["subject_records"], "subject_id", subject_id)
+
+
 class FifthSteerReviewRegressions(unittest.TestCase):
     """The eight reproduced false passes plus the review's valid controls."""
 
@@ -102,6 +106,87 @@ class FifthSteerReviewRegressions(unittest.TestCase):
             )["provenance"].__setitem__("redactions", []),
             "transclusion must preserve its recorded redactions",
         )
+
+    def test_i09_transclusion_rejects_recorded_redaction_substitution(self):
+        def mutate(records):
+            edge = relation(records, "ISR-CROSS-OPERATOR-TRANSCLUSION-001")
+            edge["provenance"]["redactions"] = ["contract-text"]
+
+        self.assertRejected(
+            mutate,
+            "transclusion must preserve its recorded redactions",
+        )
+
+    def test_i10_transclusion_rejects_recorded_redaction_expansion(self):
+        def mutate(records):
+            edge = relation(records, "ISR-CROSS-OPERATOR-TRANSCLUSION-001")
+            edge["provenance"]["redactions"].append("contract-text")
+
+        self.assertRejected(
+            mutate,
+            "transclusion must preserve its recorded redactions",
+        )
+
+    def test_redaction_owner_exact_preservation_is_accepted(self):
+        packet = subject(self.records, "TRANSCLUSION-PACKET-001")
+        edge = relation(self.records, "ISR-CROSS-OPERATOR-TRANSCLUSION-001")
+        self.assertEqual(
+            packet.get("recorded_redactions"),
+            edge["provenance"]["redactions"],
+        )
+        self.assertAccepted()
+
+    def test_generalized_redaction_owner_exact_preservation_is_accepted(self):
+        def mutate(records):
+            edge = copy.deepcopy(
+                relation(records, "ISR-CROSS-OPERATOR-TRANSCLUSION-001")
+            )
+            edge.update(
+                {
+                    "inter_somnic_relation_id": "ISR-CROSS-OPERATOR-TRANSCLUSION-ALT-903",
+                    "asserting_episode_id": "SEP-RECURRENCE-002",
+                    "target_episode_id": "SEP-RECURRENCE-002",
+                    "idempotency_key": (
+                        "ISR:SEP-REMOTE-001:SEP-RECURRENCE-002:"
+                        "transcludes-from:direct-transclusion:0.1.0"
+                    ),
+                }
+            )
+            edge["provenance"].update(
+                {
+                    "target_ledger_id": "PROV-LEDGER-LOCAL-001",
+                    "received_artifact_ref": "TRANSCLUSION-PACKET-ALT-903",
+                    "redactions": ["contract-text"],
+                    "local_meta_orthability_assessment_id": "MOA-TRANSCLUSION-ALT-903",
+                }
+            )
+            packet = copy.deepcopy(subject(records, "TRANSCLUSION-PACKET-001"))
+            packet.update(
+                {
+                    "subject_id": "TRANSCLUSION-PACKET-ALT-903",
+                    "source_record_ref": "ISR-CROSS-OPERATOR-TRANSCLUSION-ALT-903",
+                    "recorded_redactions": ["contract-text"],
+                }
+            )
+            gate = copy.deepcopy(
+                item(
+                    records["meta_orthability_assessments"],
+                    "meta_orthability_assessment_id",
+                    "MOA-TRANSCLUSION-001",
+                )
+            )
+            gate.update(
+                {
+                    "meta_orthability_assessment_id": "MOA-TRANSCLUSION-ALT-903",
+                    "subject_ids": ["TRANSCLUSION-PACKET-ALT-903"],
+                    "receiving_somnic_episode_ids": ["SEP-RECURRENCE-002"],
+                }
+            )
+            records["subject_records"].append(packet)
+            records["meta_orthability_assessments"].append(gate)
+            records["inter_somnic_relations"].append(edge)
+
+        self.assertAccepted(mutate)
 
     def test_i16_transclusion_meta_assessment_is_receiving_case_bound(self):
         self.assertRejected(

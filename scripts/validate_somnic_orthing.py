@@ -1510,6 +1510,7 @@ def _records_issues(document, activation, history, schemas, store):
                 meta_by_id, provenance.get("local_meta_orthability_assessment_id")
             )
             artifact_ref = provenance.get("received_artifact_ref")
+            artifact = _string_lookup(subject_by_id, artifact_ref)
             if (relation.get("independence_claim") is not False
                     or provenance.get("received_artifact_ref") is None
                     or provenance.get("receipt_time") is None
@@ -1517,7 +1518,11 @@ def _records_issues(document, activation, history, schemas, store):
                 issues.append(
                     "direct transclusion requires receipt provenance and local assessment without independence"
                 )
-            if not _string_set(provenance.get("redactions")):
+            if (artifact is None
+                    or artifact.get("subject_kind") != "transcluded_artifact"
+                    or not _string_set(provenance.get("redactions"))
+                    or _string_set(provenance.get("redactions"))
+                    != _string_set(artifact.get("recorded_redactions"))):
                 issues.append("transclusion must preserve its recorded redactions")
             if (local_meta is None
                     or local_meta.get("subject_kind") != "transcluded_artifact"

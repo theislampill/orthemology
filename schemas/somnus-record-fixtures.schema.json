@@ -168,8 +168,13 @@
         "subject_id": {"type": "string", "minLength": 1},
         "subject_kind": {"enum": ["waking_orthing", "somnic_assessment", "governing_artifact", "transcluded_artifact", "counterexample"]},
         "t1_at": {"type": "string", "format": "date-time"},
-        "source_record_ref": {"type": "string", "minLength": 1}
-      }
+        "source_record_ref": {"type": "string", "minLength": 1},
+        "recorded_redactions": {"$ref": "#/$defs/ids"}
+      },
+      "allOf": [{
+        "if": {"properties": {"subject_kind": {"const": "transcluded_artifact"}}},
+        "then": {"required": ["recorded_redactions"]}
+      }]
     },
     "source_record": {
       "type": "object", "additionalProperties": false,

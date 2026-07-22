@@ -121,7 +121,7 @@ subject_records:
 - {subject_id: ORTH-NO-CHANGE-001, subject_kind: waking_orthing, t1_at: '2026-07-20T12:00:00Z', source_record_ref: fixture-subject-ORTH-NO-CHANGE-001}
 - {subject_id: ORTH-ALTERNATIVES-001, subject_kind: waking_orthing, t1_at: '2026-07-20T13:00:00Z', source_record_ref: fixture-subject-ORTH-ALTERNATIVES-001}
 - {subject_id: SA-CLOSED-001, subject_kind: somnic_assessment, t1_at: '2026-07-21T19:00:01Z', source_record_ref: SA-CLOSED-001}
-- {subject_id: TRANSCLUSION-PACKET-001, subject_kind: transcluded_artifact, t1_at: '2026-07-21T18:59:00Z', source_record_ref: ISR-CROSS-OPERATOR-TRANSCLUSION-001}
+- {subject_id: TRANSCLUSION-PACKET-001, subject_kind: transcluded_artifact, t1_at: '2026-07-21T18:59:00Z', source_record_ref: ISR-CROSS-OPERATOR-TRANSCLUSION-001, recorded_redactions: [private-session-identifiers]}
 - {subject_id: ORTH-OPP-001, subject_kind: counterexample, t1_at: '2026-03-01T18:00:00Z', source_record_ref: fixture-subject-ORTH-OPP-001}
 - {subject_id: ORTH-OPP-002, subject_kind: counterexample, t1_at: '2026-03-15T18:00:00Z', source_record_ref: fixture-subject-ORTH-OPP-002}
 - {subject_id: ORTH-OPP-003, subject_kind: counterexample, t1_at: '2026-04-01T18:00:00Z', source_record_ref: fixture-subject-ORTH-OPP-003}
