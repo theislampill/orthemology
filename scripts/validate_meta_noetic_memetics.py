@@ -50,6 +50,13 @@ FITRAH_PROHIBITED = {
     "measurable-scalar", "field-coordinate", "metaortheme", "algorithm",
     "discourse-readable-soul-state", "guaranteed-attractor",
 }
+FITRAH_FIELDS = {
+    "status", "model_properties", "is", "is_not", "corruption_assessment",
+    "rejected_analogy",
+}
+FITRAH_CORRUPTION_FIELDS = {
+    "requires_independent_evidence", "dissent_alone_sufficient", "interior_status",
+}
 
 
 def check(name, ok, detail=""):
@@ -67,6 +74,8 @@ def validate_fitrah_boundary(boundary):
     if not isinstance(boundary, dict):
         return ["fitrah-boundary-not-object"]
     issues = []
+    if set(boundary) - FITRAH_FIELDS:
+        issues.append("fitrah-boundary-unknown-field")
     if boundary.get("status") != "creed-internal":
         issues.append("fitrah-not-creed-internal")
     properties = boundary.get("model_properties")
@@ -97,6 +106,8 @@ def validate_fitrah_boundary(boundary):
     if not isinstance(corruption, dict):
         issues.append("fitrah-corruption-boundary-missing")
     else:
+        if set(corruption) - FITRAH_CORRUPTION_FIELDS:
+            issues.append("fitrah-corruption-boundary-unknown-field")
         if corruption.get("dissent_alone_sufficient") is not False:
             issues.append("dissent-alone-circular")
         if corruption.get("requires_independent_evidence") is not True:

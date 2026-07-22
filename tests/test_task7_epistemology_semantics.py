@@ -166,6 +166,34 @@ class TawaturContractTests(unittest.TestCase):
                     assessment["transmitter_quality"][1]["domain_competence"] = "underdetermined"
                 self.assertIn(expected_issue, self.issues(case))
 
+    def test_supported_warrant_requires_all_qualitative_dimensions(self):
+        mutations = {
+            "common-cause": lambda assessment: assessment["origin_analysis"].update(
+                {"common_cause_status": "detected", "path_independence": "rejected"}),
+            "copying": lambda assessment: assessment["origin_analysis"].update(
+                {"copying_status": "detected", "path_independence": "rejected"}),
+            "non-collusion-rejected": lambda assessment: assessment["origin_analysis"].update(
+                {"non_collusion": "rejected"}),
+            "non-collusion-underdetermined": lambda assessment: assessment["origin_analysis"].update(
+                {"non_collusion": "underdetermined"}),
+            "single-lineage": lambda assessment: assessment["origin_analysis"].update(
+                {"mutation_lineage": "single-lineage-detected"}),
+            "content-incoherent": lambda assessment: assessment["content_coherence"].update(
+                {"status": "rejected"}),
+        }
+        for label, mutate in mutations.items():
+            with self.subTest(label=label):
+                case = valid_warrant()
+                mutate(case["assessments"][0])
+                self.assertTrue(self.issues(case))
+
+    def test_adverse_qualitative_dimension_remains_representable_when_held(self):
+        case = valid_warrant()
+        assessment = case["assessments"][0]
+        assessment["origin_analysis"]["non_collusion"] = "rejected"
+        assessment["subject_assessments"][0]["warrant_conclusion"] = "held"
+        self.assertEqual([], self.issues(case))
+
     def test_held_single_route_record_remains_representable(self):
         case = valid_warrant()
         assessment = case["assessments"][0]
@@ -286,9 +314,15 @@ class ClaimRoleAndMentalBoundaryTests(unittest.TestCase):
             "source_kind": "mental-conceivability",
             "conclusion_kind": "external-possibility",
             "bridge_status": "independently-warranted",
-            "bridge_evidence_ids": ["ev-wording-1"],
+            "bridge_evidence_ids": ["ev-authoritative-external-premise"],
         }
         return claim, occurrences, source_statuses
+
+    def evidence_records(self):
+        registry = json.loads(
+            (APP / "NOETIC-EVIDENCE-REGISTRY.example.json").read_text(encoding="utf-8")
+        )
+        return {record["evidence_id"]: record for record in registry["evidence"]}
 
     def test_claim_role_and_access_status_are_distinct(self):
         case = valid_claim()
@@ -346,16 +380,99 @@ class ClaimRoleAndMentalBoundaryTests(unittest.TestCase):
             "source_kind": "mental-conceivability",
             "conclusion_kind": "external-possibility",
             "bridge_status": "independently-warranted",
-            "bridge_evidence_ids": ["ev-wording-1"],
+            "bridge_evidence_ids": ["ev-authoritative-external-premise"],
         }
-        self.assertEqual([], self.issues(case))
+        self.assertEqual([], NOETIC.claim_semantic_issues(
+            case,
+            {
+                "ELT-1": "SECONDARY_RECONSTRUCTION",
+                "ELT-3": "SECONDARY_VERIFIED",
+                "EXT-1": "ORTHEMOLOGICAL_EXTENSION",
+            },
+            self.evidence_records(),
+        ))
 
     def test_external_bridge_control_resolves_and_accepts(self):
         control, occurrences, source_statuses = self.external_claim_context()
         self.assertEqual(
             (True, None),
-            NOETIC.claim_supported(control, {"ev-wording-1"}, occurrences, source_statuses),
+            NOETIC.claim_supported(
+                control, self.evidence_records(), occurrences, source_statuses
+            ),
         )
+
+    def test_external_bridge_requires_typed_current_valid_relevant_evidence(self):
+        control, occurrences, source_statuses = self.external_claim_context()
+        records = self.evidence_records()
+        control["inference_boundary"]["bridge_evidence_ids"] = ["ev-external-premise"]
+        records["ev-external-premise"] = {
+            "evidence_id": "ev-external-premise",
+            "observed_occurrence": "m_external_premise",
+            "property_class": "provenance",
+            "provenance": "independent evidence for the external premise",
+            "scope": "external-possibility",
+            "currentness": "current",
+            "validity": "valid",
+            "relation_to_target": "independently supports the external conclusion",
+            "support_roles": ["mental-external-bridge"],
+            "supported_target_types": ["external-possibility"],
+        }
+        self.assertEqual(
+            (True, None),
+            NOETIC.claim_supported(control, records, occurrences, source_statuses),
+        )
+
+        for evidence_id in ("ev-reread-1", "ev-route-1"):
+            with self.subTest(evidence_id=evidence_id):
+                case = copy.deepcopy(control)
+                case["inference_boundary"]["bridge_evidence_ids"] = [evidence_id]
+                self.assertEqual(
+                    (False, "bridge-evidence-not-authoritative"),
+                    NOETIC.claim_supported(case, records, occurrences, source_statuses),
+                )
+
+    def test_malformed_structured_claim_scalars_reject_without_exception(self):
+        mutations = {
+            "claim-role": lambda claim: claim.update(
+                {"claim_role": {"nested": "secondary-reconstruction"}}),
+            "access-status": lambda claim: claim.update(
+                {"evidence_access_status": {"nested": "secondary-reconstruction"}}),
+            "target-type": lambda claim: claim.update(
+                {"target_type": {"nested": "overt-discourse"}}),
+            "source-kind": lambda claim: claim["inference_boundary"].update(
+                {"source_kind": {"nested": "mental-conceivability"}}),
+        }
+        for label, mutate in mutations.items():
+            with self.subTest(label=label):
+                case, occurrences, source_statuses = self.external_claim_context()
+                mutate(case)
+                try:
+                    ok, rule = NOETIC.claim_supported(
+                        case, self.evidence_records(), occurrences, source_statuses
+                    )
+                except Exception as exc:  # pragma: no cover - regression assertion
+                    self.fail("validator raised %s: %s" % (type(exc).__name__, exc))
+                self.assertFalse(ok)
+                self.assertIsInstance(rule, str)
+
+    def test_malformed_typed_bridge_record_rejects_without_exception(self):
+        control, occurrences, source_statuses = self.external_claim_context()
+        mutations = {
+            "support-roles-null": lambda record: record.update({"support_roles": None}),
+            "target-types-map": lambda record: record.update(
+                {"supported_target_types": {"nested": "external-possibility"}}),
+        }
+        for label, mutate in mutations.items():
+            with self.subTest(label=label):
+                records = self.evidence_records()
+                mutate(records["ev-authoritative-external-premise"])
+                try:
+                    result = NOETIC.claim_supported(
+                        control, records, occurrences, source_statuses
+                    )
+                except Exception as exc:  # pragma: no cover - regression assertion
+                    self.fail("validator raised %s: %s" % (type(exc).__name__, exc))
+                self.assertEqual((False, "bridge-evidence-not-authoritative"), result)
 
     def test_external_bridge_evidence_must_resolve(self):
         control, occurrences, source_statuses = self.external_claim_context()
@@ -434,6 +551,25 @@ class FitrahBoundaryTests(unittest.TestCase):
 
     def test_qualitative_defeasible_multidimensional_control_accepts(self):
         self.assertEqual([], META.validate_fitrah_boundary(self.boundary()))
+
+    def test_qualitative_metadata_control_accepts(self):
+        case = self.boundary()
+        case["rejected_analogy"] = "minimum-entropy attractor is not adopted"
+        self.assertEqual([], META.validate_fitrah_boundary(case))
+
+    def test_explicit_reifying_fields_reject_at_every_allowed_level(self):
+        mutations = {
+            "top-level-scalar": lambda boundary: boundary.update({"scalar_score": 0.9}),
+            "top-level-coordinate": lambda boundary: boundary.update(
+                {"field_coordinate": [0.2, 0.8]}),
+            "nested-soul-readout": lambda boundary: boundary["corruption_assessment"].update(
+                {"soul_state_readout": "corrupt"}),
+        }
+        for label, mutate in mutations.items():
+            with self.subTest(label=label):
+                case = self.boundary()
+                mutate(case)
+                self.assertTrue(META.validate_fitrah_boundary(case))
 
     def test_each_reified_or_interior_model_rejects_when_not_forbidden(self):
         for prohibited in ("measurable-scalar", "field-coordinate", "metaortheme", "algorithm",

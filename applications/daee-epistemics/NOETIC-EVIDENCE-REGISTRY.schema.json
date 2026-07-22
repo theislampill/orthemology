@@ -14,7 +14,7 @@
       "items": {
         "type": "object",
         "additionalProperties": false,
-        "required": ["evidence_id", "observed_occurrence", "property_class", "provenance", "scope", "currentness", "validity", "relation_to_target"],
+        "required": ["evidence_id", "observed_occurrence", "property_class", "provenance", "scope", "currentness", "validity", "relation_to_target", "support_roles", "supported_target_types"],
         "properties": {
           "evidence_id": {"type": "string", "minLength": 1},
           "observed_occurrence": {"type": "string", "minLength": 1, "description": "which observed occurrence this evidence comes from (normally m_discourse / m_runtime / m_response)"},
@@ -23,7 +23,15 @@
           "scope": {"type": "string", "minLength": 1},
           "currentness": {"enum": ["current", "dated", "stale", "unknown"]},
           "validity": {"enum": ["valid", "provisional", "disputed", "withdrawn"]},
-          "relation_to_target": {"type": "string", "minLength": 1, "description": "how this evidence bears on the target claim; must NOT assert direct interior access"}
+          "relation_to_target": {"type": "string", "minLength": 1, "description": "how this evidence bears on the target claim; must NOT assert direct interior access"},
+          "support_roles": {
+            "type": "array", "minItems": 1, "uniqueItems": true,
+            "items": {"enum": ["claim-support", "observation-bridge", "runtime-closure", "route-quality", "mental-external-bridge"]}
+          },
+          "supported_target_types": {
+            "type": "array", "minItems": 1, "uniqueItems": true,
+            "items": {"enum": ["overt-discourse", "avowed-commitment", "reasoning-episode", "represented-standard", "inferred-noetic-profile", "faculty-disposition", "motive-culpability-soul-state", "runtime-closure", "route-quality", "uptake", "mental-analytic-representation", "external-possibility", "external-existence", "unseen-modality"]}
+          }
         }
       }
     }

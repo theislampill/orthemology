@@ -279,6 +279,18 @@ read by `validate_meta_noetic_memetics.py` and must carry the positive and
 negative boundaries that validator enforces. Omitting either owner would force
 schema drift or validator weakening, so both are added narrowly to Task 7.
 
+**Second scope amendment (2026-07-22):**
+`applications/daee-epistemics/NOETIC-EVIDENCE-REGISTRY.schema.json` is the
+structural owner of evidence currentness, validity, scope, relation, and typed
+support semantics. Its prior free-text scope and relation fields cannot express
+or validate which evidence role and target type an authoritative record may
+support. Fixture-specific case or literal matching, prose-substring matching,
+and evidence-ID allowlisting are prohibited. `applications/daee-epistemics/NOETIC-EVIDENCE-REGISTRY.example.json`
+is the authoritative record set resolved by the production validator and must
+carry those typed roles and target-type bounds, including a current, valid,
+independently relevant external-premise bridge control. These two owners are
+therefore added narrowly to Task 7; no other scope is changed.
+
 **Step 1 — red:** Reject tawātur-by-count/popularity/graph degree, missing transmitter quality or subject-relative conditions, common-cause copies treated as independent, fiṭrah as scalar/coordinate/algorithm/metaortheme/soul readout/guaranteed attractor, corruption inferred circularly from dissent, and mental representation/conceivability/universal abstraction entailing external existence, possibility, or unseen modality.
 
 **Step 2 — implement:** Keep evidence-access status distinct from claim role. Add `computational-analogy` to the six claim roles without corrupting `references/source-status.yaml`. Mark El-Tobgui/Turner claims as secondary reconstruction and proper-function warrant as modern comparison. Preserve objective truth while making acquisition conditions subject-relative and routes plural.

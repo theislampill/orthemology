@@ -67,11 +67,17 @@ def check(name, ok, detail=""):
 
 
 def read(rel):
-    return io.open(os.path.join(ROOT, rel), encoding="utf-8").read()
+    with io.open(os.path.join(ROOT, rel), encoding="utf-8") as handle:
+        return handle.read()
 
 
 def resolve_target(claim, occ):
-    o = occ.get(claim.get("target_bearer"))
+    if not isinstance(claim, dict) or not isinstance(occ, dict):
+        return None
+    bearer = claim.get("target_bearer")
+    if not isinstance(bearer, str):
+        return None
+    o = occ.get(bearer)
     if not o:
         return None
     if o.get("identity") != claim.get("target_id"):
@@ -81,16 +87,61 @@ def resolve_target(claim, occ):
     return o
 
 
-def claim_semantic_issues(claim, source_status_ids, evidence_ids=None):
+def _canonical_evidence_records():
+    """Load the authoritative evidence records with bounded failure."""
+    try:
+        registry = json.loads(read(APP + "/NOETIC-EVIDENCE-REGISTRY.example.json"))
+    except (OSError, ValueError, TypeError):
+        return {}
+    records = registry.get("evidence") if isinstance(registry, dict) else None
+    if not isinstance(records, list):
+        return {}
+    return {
+        record.get("evidence_id"): record
+        for record in records
+        if isinstance(record, dict) and isinstance(record.get("evidence_id"), str)
+    }
+
+
+def _evidence_records(evidence_registry):
+    """Normalize a typed registry or a legacy ID collection without inventing records."""
+    if isinstance(evidence_registry, dict):
+        return {
+            evidence_id: record
+            for evidence_id, record in evidence_registry.items()
+            if isinstance(evidence_id, str) and isinstance(record, dict)
+        }
+    if isinstance(evidence_registry, (set, list, tuple)):
+        if any(not isinstance(evidence_id, str) for evidence_id in evidence_registry):
+            return {}
+        canonical = _canonical_evidence_records()
+        return {
+            evidence_id: canonical[evidence_id]
+            for evidence_id in evidence_registry
+            if evidence_id in canonical
+        }
+    return {}
+
+
+def claim_semantic_issues(claim, source_status_ids, evidence_registry=None):
     """Return bounded, general Task 7 semantic diagnostics for one claim."""
     if not isinstance(claim, dict):
         return ["claim-not-object"]
     issues = []
+    claim_evidence = claim.get("evidence_ids")
+    if (not isinstance(claim_evidence, list)
+            or any(not isinstance(evidence_id, str) for evidence_id in claim_evidence)):
+        issues.append("malformed-evidence-ids")
     role = claim.get("claim_role")
-    if role not in CLAIM_ROLES:
+    if not isinstance(role, str) or role not in CLAIM_ROLES:
         issues.append("invalid-claim-role")
     refs = claim.get("source_status_refs")
-    known_ids = set(source_status_ids)
+    if isinstance(source_status_ids, dict):
+        known_ids = {item for item in source_status_ids if isinstance(item, str)}
+    elif isinstance(source_status_ids, (set, list, tuple)):
+        known_ids = {item for item in source_status_ids if isinstance(item, str)}
+    else:
+        known_ids = set()
     if not isinstance(refs, list) or not refs or any(
             not isinstance(ref, str) or ref not in known_ids for ref in refs):
         issues.append("unresolved-source-status-ref")
@@ -98,7 +149,8 @@ def claim_semantic_issues(claim, source_status_ids, evidence_ids=None):
         resolved_access = {
             ACCESS_STATUS_BY_REGISTRY_STATUS.get(source_status_ids[ref]) for ref in refs
         }
-        if resolved_access != {claim.get("evidence_access_status")}:
+        access_status = claim.get("evidence_access_status")
+        if not isinstance(access_status, str) or resolved_access != {access_status}:
             issues.append("evidence-access-status-mismatch")
     if claim.get("comparison_scope") == "modern-comparison" and role == "primary-text-verified":
         issues.append("modern-comparison-not-primary")
@@ -111,28 +163,54 @@ def claim_semantic_issues(claim, source_status_ids, evidence_ids=None):
             conclusion = boundary.get("conclusion_kind")
             status = boundary.get("bridge_status")
             evidence = boundary.get("bridge_evidence_ids")
+            if not isinstance(source, str):
+                issues.append("malformed-inference-source-kind")
+            if not isinstance(conclusion, str):
+                issues.append("malformed-inference-conclusion-kind")
+            if not isinstance(status, str):
+                issues.append("malformed-inference-bridge-status")
             if conclusion is not None and conclusion != claim.get("target_type"):
                 issues.append("inference-conclusion-target-mismatch")
-            if (isinstance(evidence, list)
-                    and any(not isinstance(item, str) for item in evidence)):
+            evidence_is_typed = (isinstance(evidence, list)
+                                 and all(isinstance(item, str) for item in evidence))
+            if isinstance(evidence, list) and not evidence_is_typed:
                 issues.append("malformed-bridge-evidence-ids")
-            elif (isinstance(evidence, list) and evidence_ids is not None
-                    and any(item not in evidence_ids for item in evidence)):
+            records = _evidence_records(evidence_registry)
+            if (evidence_is_typed and evidence_registry is not None
+                    and any(item not in records for item in evidence)):
                 issues.append("bridge-evidence-unresolved")
-            if source in MENTAL_SOURCES and conclusion in EXTERNAL_CONCLUSIONS:
+            if (isinstance(source, str) and isinstance(conclusion, str)
+                    and source in MENTAL_SOURCES and conclusion in EXTERNAL_CONCLUSIONS):
                 if status == "direct-entailment":
                     issues.append("mental-external-direct-entailment")
                 if status == "independently-warranted" and (not isinstance(evidence, list) or not evidence):
                     issues.append("independent-bridge-without-evidence")
+                elif status == "independently-warranted" and evidence_is_typed:
+                    for evidence_id in evidence:
+                        record = records.get(evidence_id) if isinstance(evidence_id, str) else None
+                        roles = record.get("support_roles") if isinstance(record, dict) else None
+                        targets = (record.get("supported_target_types")
+                                   if isinstance(record, dict) else None)
+                        if (not isinstance(record, dict)
+                                or record.get("currentness") != "current"
+                                or record.get("validity") != "valid"
+                                or not isinstance(roles, list)
+                                or any(not isinstance(role, str) for role in roles)
+                                or "mental-external-bridge" not in roles
+                                or not isinstance(targets, list)
+                                or any(not isinstance(target, str) for target in targets)
+                                or conclusion not in targets):
+                            issues.append("bridge-evidence-not-authoritative")
+                            break
                 if status == "held" and claim.get("status") == "asserted":
                     issues.append("asserted-external-conclusion-without-warranted-bridge")
     return list(dict.fromkeys(issues))
 
 
-def claim_supported(claim, ev_ids, occ, source_status_ids=None):
+def claim_supported(claim, evidence_registry, occ, source_status_ids=None):
     """Return (ok, rule_violated) under the R7D support discipline."""
     if source_status_ids is not None:
-        semantic = claim_semantic_issues(claim, source_status_ids, ev_ids)
+        semantic = claim_semantic_issues(claim, source_status_ids, evidence_registry)
         if semantic:
             return False, semantic[0]
     o = resolve_target(claim, occ)
@@ -141,6 +219,12 @@ def claim_supported(claim, ev_ids, occ, source_status_ids=None):
     status = claim.get("status")
     ttype = claim.get("target_type")
     bearer = claim.get("target_bearer")
+    if not isinstance(status, str):
+        return False, "malformed-claim-status"
+    if not isinstance(ttype, str):
+        return False, "malformed-target-type"
+    if not isinstance(bearer, str):
+        return False, "malformed-target-bearer"
     if not o.get("in_scope", False) and status == "asserted":
         return False, "target-out-of-scope-asserted"
     if bearer == "m_discourse" and ttype in SUBJECT_INTERIOR:
@@ -149,7 +233,8 @@ def claim_supported(claim, ev_ids, occ, source_status_ids=None):
     if (not isinstance(evidence_ids, list)
             or any(not isinstance(evidence_id, str) for evidence_id in evidence_ids)):
         return False, "malformed-evidence-ids"
-    unresolved = [e for e in evidence_ids if e not in ev_ids]
+    evidence_records = _evidence_records(evidence_registry)
+    unresolved = [e for e in evidence_ids if e not in evidence_records]
     if unresolved:
         return False, "evidence-unresolved"
     n_ev = len(evidence_ids)
@@ -195,12 +280,12 @@ def main():
         except jsonschema.ValidationError as e:
             check("%s validates against its schema" % name, False, e.message)
 
-    ev_ids = {e["evidence_id"] for e in ev_reg["evidence"]}
+    ev_records = {e["evidence_id"]: e for e in ev_reg["evidence"]}
     occ = tmap["occurrences"]
 
     # 2. every example claim is supported (and every evidence_id resolves)
     for c in claim_ex["claims"]:
-        ok, rule = claim_supported(c, ev_ids, occ, source_status_ids)
+        ok, rule = claim_supported(c, ev_records, occ, source_status_ids)
         check("example claim %s is evidence-supported" % c["claim_id"], ok, "violates %s" % rule)
 
     # 2b. evidence-relation records never assert direct interior access
@@ -219,7 +304,7 @@ def main():
             check("fixture %s is structurally typed" % f["id"], True)
         except jsonschema.ValidationError as e:
             check("fixture %s is structurally typed" % f["id"], False, e.message)
-        ok, rule = claim_supported(f["claim"], ev_ids, occ, source_status_ids)
+        ok, rule = claim_supported(f["claim"], ev_records, occ, source_status_ids)
         exp = f["expected_valid"]
         check("fixture %s (%s) validity == %s" % (f["id"], f["distinction"][:34], exp),
               ok == exp, "got valid=%s (rule %s)" % (ok, rule))

@@ -223,6 +223,21 @@ def validate_tawatur_document(document, source_status_ids=None, schema=None):
                     continue
                 if subject.get("warrant_conclusion") != "supported":
                     continue
+                qualitative_requirements = {
+                    "common_cause_status": "not-detected",
+                    "copying_status": "not-detected",
+                    "path_independence": "supported",
+                    "non_collusion": "supported",
+                    "mutation_lineage": "no-single-lineage-detected",
+                }
+                if not isinstance(origin, dict) or any(
+                        origin.get(field) != required
+                        for field, required in qualitative_requirements.items()):
+                    issues.append("supported-warrant-origin-analysis-insufficient")
+                coherence = assessment.get("content_coherence")
+                if (not isinstance(coherence, dict)
+                        or coherence.get("status") != "supported"):
+                    issues.append("supported-warrant-content-coherence-insufficient")
                 if subject.get("access_status") != "acquired":
                     issues.append("supported-warrant-requires-acquired-access")
                 if len(set(route_refs)) < 2:
