@@ -53,6 +53,7 @@ decisions:
   "0033": {status: proposed-candidate, pr: "10-child (R7D)", title: governed corrective search and transition witness}
   "0034": {status: proposed-candidate, pr: 12, title: R7E Sol independent repair contract}
   "0035": {status: proposed-candidate, pr: 12, title: somnic orthing and activation contracts}
+  "0036": {status: proposed-candidate, pr: 12, title: somnic episode identity and intra/inter-somnic relations}
 normative_symbols:
   StrictlySoundReasoning_q:
     current:

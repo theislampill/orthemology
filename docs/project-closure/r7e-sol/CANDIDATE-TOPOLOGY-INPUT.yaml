@@ -89,7 +89,7 @@ pull_requests:
   draft: true
   mergeable_at_observation: MERGEABLE
   checks_at_observation: SUCCESS
-  candidate_decisions: ['0034', '0035']
+  candidate_decisions: ['0034', '0035', '0036']
   provenance:
     layer: surfaced-model-attestation
     model: Claude Opus 4.8

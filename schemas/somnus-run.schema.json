@@ -4,7 +4,7 @@
   "title": "Bounded somnus operation run",
   "type": "object",
   "additionalProperties": false,
-  "required": ["somnus_run_id", "operation_id", "operation_version", "anchor_subject_ids", "reference_corpus_revision", "historical_comparator_ids", "used_comparator_ids", "historical_comparators_reopened", "selection_rule", "governing_versions", "governing_input_owners", "material_delta_ids", "idempotency_key", "started_at", "completed_at", "output_ids", "runtime_status"],
+  "required": ["somnus_run_id", "operation_id", "operation_version", "anchor_subject_ids", "reference_corpus_revision", "historical_comparator_ids", "used_comparator_ids", "historical_comparators_reopened", "selection_rule", "governing_versions", "governing_input_owners", "material_delta_ids", "idempotency_key", "started_at", "completed_at", "output_ids", "somnic_episode_ids", "run_disposition", "children_auto_completed", "runtime_status"],
   "properties": {
     "somnus_run_id": {"type": "string", "minLength": 1},
     "operation_id": {"const": "residual_recurrence_assessment"},
@@ -33,6 +33,9 @@
     "started_at": {"type": "string", "format": "date-time"},
     "completed_at": {"type": "string", "format": "date-time"},
     "output_ids": {"type": "array", "uniqueItems": true, "items": {"type": "string", "minLength": 1}},
+    "somnic_episode_ids": {"type": "array", "uniqueItems": true, "items": {"type": "string", "minLength": 1}},
+    "run_disposition": {"enum": ["completed", "failed"]},
+    "children_auto_completed": {"const": false},
     "runtime_status": {"const": "fixture_only_no_runtime"}
   }
 }

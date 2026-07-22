@@ -11,7 +11,7 @@
     "subject_records", "source_records", "reference_corpus_records", "material_deltas",
     "source_family_records", "input_family_records", "recurrence_support_records",
     "opportunity_records", "independence_policies", "orthing_events",
-    "meta_orthability_assessments", "somnus_runs", "somnic_assessments",
+    "meta_orthability_assessments", "somnus_runs", "somnic_episodes", "somnic_assessments", "inter_somnic_relations",
     "recurrence_reports", "proposals", "authorization_rule_records", "authorizations", "revert_provenance_records", "applications",
     "successor_states", "outcome_evaluations", "writeback_fixture_cases",
     "writeback_case_details", "writeback_timeline", "non_claims"
@@ -107,7 +107,9 @@
     "orthing_events": {"type": "array", "minItems": 1, "items": {"type": "object"}},
     "meta_orthability_assessments": {"type": "array", "minItems": 1, "items": {"type": "object"}},
     "somnus_runs": {"type": "array", "minItems": 1, "items": {"type": "object"}},
+    "somnic_episodes": {"type": "array", "minItems": 1, "items": {"type": "object"}},
     "somnic_assessments": {"type": "array", "minItems": 1, "items": {"type": "object"}},
+    "inter_somnic_relations": {"type": "array", "minItems": 1, "items": {"type": "object"}},
     "recurrence_reports": {"type": "array", "minItems": 1, "items": {"type": "object"}},
     "proposals": {"type": "array", "minItems": 1, "items": {"$ref": "#/$defs/proposal"}},
     "authorization_rule_records": {"type": "array", "minItems": 1, "items": {"$ref": "#/$defs/authorization_rule"}},

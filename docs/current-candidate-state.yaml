@@ -103,6 +103,7 @@ pr_chain:
   candidate_decisions:
   - '0034'
   - '0035'
+  - '0036'
   provenance:
     layer: surfaced-model-attestation
     model: Claude Opus 4.8
@@ -131,6 +132,7 @@ candidate_decisions:
 - '0033'
 - '0034'
 - '0035'
+- '0036'
 candidate_documents:
   applications:
   - applications/daee-epistemics/

@@ -8,7 +8,7 @@
     "schema", "status", "runtime owner", "implemented in orthemology",
     "automatic adoption", "automatic execution", "automatic writeback",
     "claim_status", "modes", "shared_types_supply_transport", "event_instances",
-    "bearer_separation", "transclusion", "source_envelope", "receiving_assessment",
+    "bearer_separation", "episode_semantics", "transclusion", "source_envelope", "receiving_assessment",
     "source_applicability_auto_propagates", "receipt_can_govern_or_execute",
     "multi_operator_count_implies", "dependence_dimensions", "collective_closure",
     "privacy", "security", "semantic_boundaries", "non_claims"
@@ -47,6 +47,17 @@
     "bearer_separation": {
       "type": "array", "minItems": 5, "maxItems": 5, "uniqueItems": true,
       "items": {"enum": ["normative_metaortheme_type", "represented_standard_at_actor_time", "case_bound_metaorthemma", "execution_trace", "transclusion_envelope"]}
+    },
+    "episode_semantics": {
+      "type": "object", "additionalProperties": false,
+      "required": ["collective_episode_has_own_identity", "internal_activity", "source_edges", "preserves_source_closure", "preserves_dissent"],
+      "properties": {
+        "collective_episode_has_own_identity": {"const": true},
+        "internal_activity": {"const": "intra-somnic"},
+        "source_edges": {"const": "inter-somnic"},
+        "preserves_source_closure": {"const": true},
+        "preserves_dissent": {"const": true}
+      }
     },
     "transclusion": {
       "type": "object", "additionalProperties": false,

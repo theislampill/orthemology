@@ -33,7 +33,9 @@ SCHEMA_NAMES = {
     "orthing_events": "orthing-event.schema.json",
     "meta_orthability_assessments": "meta-orthability-assessment.schema.json",
     "somnus_runs": "somnus-run.schema.json",
+    "somnic_episodes": "somnic-episode.schema.json",
     "somnic_assessments": "somnic-assessment.schema.json",
+    "inter_somnic_relations": "inter-somnic-relation.schema.json",
     "recurrence_reports": "residual-recurrence-report.schema.json",
 }
 AUX_SCHEMA_NAMES = {
@@ -795,7 +797,9 @@ def _records_issues(document, activation, history, schemas, store):
             issues += _schema_issues("records.%s[%d]" % (key, index), row, schema, store)
     events = collections["orthing_events"]
     runs = collections["somnus_runs"]
+    somnic_episodes = collections["somnic_episodes"]
     assessments = collections["somnic_assessments"]
+    inter_somnic_relations = collections["inter_somnic_relations"]
     reports = collections["recurrence_reports"]
     meta_assessments = collections["meta_orthability_assessments"]
 
@@ -1171,6 +1175,25 @@ def _records_issues(document, activation, history, schemas, store):
                 % corpus_revision
             )
     assessment_by_id = _unique_index(assessments, "assessment_id", "somnic assessments", issues)
+    somnic_episode_by_id = _unique_index(
+        somnic_episodes, "somnic_episode_id", "somnic episode registry", issues
+    )
+    inter_somnic_relation_by_id = _unique_index(
+        inter_somnic_relations, "inter_somnic_relation_id",
+        "inter-somnic relation registry", issues,
+    )
+    somnic_activity_rows = [
+        activity
+        for episode in somnic_episodes
+        for activity in (
+            episode.get("activity_events")
+            if isinstance(episode.get("activity_events"), list) else []
+        )
+        if isinstance(activity, dict)
+    ]
+    somnic_activity_by_id = _unique_index(
+        somnic_activity_rows, "activity_id", "somnic activity registry", issues
+    )
     report_by_id = _unique_index(reports, "recurrence_report_id", "recurrence reports", issues)
     meta_by_id = _unique_index(meta_assessments, "meta_orthability_assessment_id", "meta-orthability assessments", issues)
     cross_kind_output_ids = set(assessment_by_id) & set(report_by_id)
@@ -1221,6 +1244,320 @@ def _records_issues(document, activation, history, schemas, store):
     successor_by_id = _unique_index(successor_rows, "successor_state_id", "successor states", issues)
     outcome_rows = _objects(document, "outcome_evaluations", issues, "records")
     outcome_by_id = _unique_index(outcome_rows, "outcome_evaluation_id", "outcome evaluations", issues)
+
+    # Decision 0036 additive owners: the run is an orchestration envelope,
+    # the episode is the semantic unit, and an assessment is a placement made
+    # inside exactly one episode.  Recompute every classification from those
+    # owners instead of trusting the fixture's declarative labels.
+    episodes_by_run = defaultdict(set)
+    assessments_by_episode = defaultdict(set)
+    for episode_id, episode in somnic_episode_by_id.items():
+        run_id = episode.get("somnus_run_id")
+        if not _string_member(run_by_id, run_id):
+            issues.append("somnic episode %s has unresolved somnus run" % episode_id)
+        else:
+            episodes_by_run[run_id].add(episode_id)
+        if _string_lookup(identity_kind_by_id, episode.get("operator_id")) != "actor":
+            issues.append("somnic episode %s operator must resolve as a typed actor" % episode_id)
+        ledger_owner = _string_lookup(provenance_by_id, episode.get("ledger_id"))
+        if ledger_owner is None or ledger_owner.get("immutable") is not True:
+            issues.append(
+                "somnic episode %s ledger must resolve through an immutable provenance owner"
+                % episode_id
+            )
+        activity_ids = set()
+        for activity in episode.get("activity_events", []):
+            if not isinstance(activity, dict):
+                continue
+            activity_id = activity.get("activity_id")
+            if isinstance(activity_id, str):
+                activity_ids.add(activity_id)
+            if (activity.get("somnic_episode_id") != episode_id
+                    or activity.get("activity_scope") != "intra-somnic"):
+                issues.append(
+                    "somnic episode %s activity must remain intra-somnic to exactly that episode"
+                    % episode_id
+                )
+        if len(activity_ids) != len(episode.get("activity_events", [])):
+            issues.append("somnic episode %s has duplicate activity identity" % episode_id)
+        if episode.get("source_state_mutated") is not False:
+            issues.append("somnic episode %s cannot mutate a source episode" % episode_id)
+        if episode.get("disposition") == "open":
+            if episode.get("disposed_at") is not None:
+                issues.append("open somnic episode %s cannot have a disposition time" % episode_id)
+        elif episode.get("disposed_at") is None:
+            issues.append("disposed somnic episode %s requires an explicit disposition time" % episode_id)
+        if (episode_id == "SEP-R7E-RECONSTRUCTION"
+                or "R7E" in _string_set(episode.get("subject_ids"))):
+            if episode.get("telemetry_status") != "reconstructed-analogue-not-live":
+                issues.append("R7E reconstruction cannot claim live telemetry")
+
+    for run_id, run in run_by_id.items():
+        declared_episode_ids = _string_set(run.get("somnic_episode_ids"))
+        if declared_episode_ids != episodes_by_run.get(run_id, set()):
+            issues.append(
+                "somnus run %s episode membership must exactly match child episode owners"
+                % run_id
+            )
+        if run.get("children_auto_completed") is not False:
+            issues.append("run completion cannot auto-complete child episodes")
+        if run.get("run_disposition") == "completed":
+            undisposed = [
+                episode_id for episode_id in declared_episode_ids
+                if _string_lookup(somnic_episode_by_id, episode_id) is None
+                or somnic_episode_by_id[episode_id].get("disposition") not in {
+                    "closed", "partial", "held", "abandoned"
+                }
+            ]
+            if undisposed:
+                issues.append(
+                    "completed somnus run %s has child episodes without explicit dispositions"
+                    % run_id
+                )
+
+    for assessment_id, assessment in assessment_by_id.items():
+        episode_id = assessment.get("somnic_episode_id")
+        run_id = assessment.get("somnus_run_id")
+        if episode_id == run_id:
+            issues.append("episode identity must remain distinct from run identity")
+        episode = _string_lookup(somnic_episode_by_id, episode_id)
+        if episode is None:
+            issues.append("somnic assessment %s has unresolved somnic episode" % assessment_id)
+        else:
+            assessments_by_episode[episode_id].add(assessment_id)
+            if episode.get("somnus_run_id") != run_id:
+                issues.append(
+                    "somnic assessment %s run and episode ownership must agree"
+                    % assessment_id
+                )
+        if assessment.get("auto_requeue") is not False:
+            issues.append("somnic assessment %s cannot auto-requeue" % assessment_id)
+        depth = assessment.get("assessment_depth")
+        priors = _string_set(assessment.get("prior_assessment_ids"))
+        prior_depths = [
+            prior.get("assessment_depth")
+            for prior_id in priors
+            if (prior := _string_lookup(assessment_by_id, prior_id)) is not None
+            and isinstance(prior.get("assessment_depth"), int)
+        ]
+        if ((priors and (len(prior_depths) != len(priors)
+                         or depth != max(prior_depths) + 1))
+                or (not priors and depth != 0)):
+            issues.append(
+                "somnic assessment %s depth must be derived from its assessment lineage"
+                % assessment_id
+            )
+        if (assessment.get("closure_status") == "closed"
+                and not priors
+                and _string_set(assessment.get("frontier_trigger_ids"))):
+            issues.append(
+                "closed assessment %s cannot re-enter a frontier without a later trigger"
+                % assessment_id
+            )
+    for episode_id, episode in somnic_episode_by_id.items():
+        if _string_set(episode.get("assessment_ids")) != assessments_by_episode.get(
+                episode_id, set()):
+            issues.append(
+                "somnic episode %s assessment membership must be exact and reciprocal"
+                % episode_id
+            )
+
+    relation_identity_owners = {}
+    relation_idempotency_owners = {}
+    reopen_graph = defaultdict(set)
+    relations_by_assessment = defaultdict(set)
+    collective_sources_by_target = defaultdict(set)
+    for relation_id, relation in inter_somnic_relation_by_id.items():
+        source_id = relation.get("source_episode_id")
+        target_id = relation.get("target_episode_id")
+        asserting_id = relation.get("asserting_episode_id")
+        source = _string_lookup(somnic_episode_by_id, source_id)
+        target = _string_lookup(somnic_episode_by_id, target_id)
+        if source_id == target_id:
+            issues.append(
+                "inter-somnic relation %s requires distinct source and target episodes"
+                % relation_id
+            )
+        if source is None or target is None:
+            issues.append("inter-somnic relation %s has unresolved episode identity" % relation_id)
+            continue
+        if asserting_id != target_id:
+            issues.append(
+                "inter-somnic relation %s must be asserted by its identified target episode"
+                % relation_id
+            )
+        actual_run_relation = (
+            "same-run" if source.get("somnus_run_id") == target.get("somnus_run_id")
+            else "cross-run"
+        )
+        actual_operator_relation = (
+            "same-operator" if source.get("operator_id") == target.get("operator_id")
+            else "cross-operator"
+        )
+        if relation.get("run_relation") != actual_run_relation:
+            issues.append("inter-somnic relation %s run relation is not derived from episode owners" % relation_id)
+        if relation.get("operator_relation") != actual_operator_relation:
+            issues.append("inter-somnic relation %s operator relation is not derived from episode owners" % relation_id)
+        provenance = _mapping(
+            relation.get("provenance"), "inter-somnic relation %s provenance" % relation_id,
+            issues,
+        )
+        if (provenance.get("source_operator_id") != source.get("operator_id")
+                or provenance.get("source_ledger_id") != source.get("ledger_id")
+                or provenance.get("target_operator_id") != target.get("operator_id")
+                or provenance.get("target_ledger_id") != target.get("ledger_id")):
+            issues.append(
+                "inter-somnic relation %s provenance must resolve exact episode operators and ledgers"
+                % relation_id
+            )
+        for assessment_role in ("source_assessment_ids", "target_assessment_ids"):
+            expected_episode = source_id if assessment_role.startswith("source") else target_id
+            for assessment_id in _string_set(relation.get(assessment_role)):
+                assessment = _string_lookup(assessment_by_id, assessment_id)
+                if assessment is None or assessment.get("somnic_episode_id") != expected_episode:
+                    issues.append(
+                        "inter-somnic relation %s %s must resolve within its episode"
+                        % (relation_id, assessment_role)
+                    )
+                else:
+                    relations_by_assessment[assessment_id].add(relation_id)
+        if relation.get("source_episode_state_preserved") is not True or relation.get(
+                "source_assessment_state_preserved") is not True:
+            issues.append(
+                "inter-somnic relation %s must preserve source episode and assessment state"
+                % relation_id
+            )
+        if relation.get("inherited_properties") != []:
+            issues.append("inter-somnic relation %s cannot inherit source properties" % relation_id)
+        expected_non_claims = {
+            "does-not-transfer-applicability", "does-not-transfer-closure",
+            "does-not-transfer-confidence", "does-not-transfer-authority",
+            "does-not-transfer-evidence-time",
+        }
+        if _string_set(relation.get("non_claims")) != expected_non_claims:
+            issues.append(
+                "inter-somnic relation %s must preserve every authority non-inheritance boundary"
+                % relation_id
+            )
+        if _string_set(relation.get("received_at_t2_evidence_ids")) & (
+                _string_set(relation.get("source_t1_evidence_ids"))
+                | _string_set(relation.get("target_t1_evidence_ids"))):
+            issues.append("received t2 evidence cannot become target t1 evidence")
+        semantic_relation = relation.get("semantic_relation")
+        if semantic_relation == "compares-with":
+            if relation.get("reopens_source") is not False or relation.get("material_delta_id") is not None:
+                issues.append("comparison cannot reopen its source")
+        elif semantic_relation == "reopens":
+            reopen_graph[source_id].add(target_id)
+            delta_id = relation.get("material_delta_id")
+            source_assessment_ids = _string_set(relation.get("source_assessment_ids"))
+            target_assessment_ids = _string_set(relation.get("target_assessment_ids"))
+            target_lineage = set().union(*(
+                _string_set(assessment_by_id[assessment_id].get("prior_assessment_ids"))
+                for assessment_id in target_assessment_ids
+                if assessment_id in assessment_by_id
+            )) if target_assessment_ids else set()
+            target_triggers = set().union(*(
+                _string_set(assessment_by_id[assessment_id].get("frontier_trigger_ids"))
+                for assessment_id in target_assessment_ids
+                if assessment_id in assessment_by_id
+            )) if target_assessment_ids else set()
+            if (relation.get("reopens_source") is not True
+                    or not _string_member(delta_by_id, delta_id)
+                    or not source_assessment_ids
+                    or not target_assessment_ids
+                    or not source_assessment_ids.issubset(target_lineage)
+                    or delta_id not in target_triggers):
+                issues.append(
+                    "reopening requires a new episode, material delta, and assessment lineage"
+                )
+        elif semantic_relation == "reassesses":
+            if (not _string_set(relation.get("source_assessment_ids"))
+                    or not _string_set(relation.get("target_assessment_ids"))
+                    or not isinstance(relation.get("assessment_depth"), int)
+                    or relation.get("assessment_depth") < 1
+                    or relation.get("auto_requeue") is not False):
+                issues.append(
+                    "reassessment requires bounded assessment lineage and no auto-requeue"
+                )
+        if relation.get("information_path") == "direct-transclusion":
+            if (relation.get("independence_claim") is not False
+                    or provenance.get("received_artifact_ref") is None
+                    or provenance.get("receipt_time") is None
+                    or not _string_member(
+                        meta_by_id,
+                        provenance.get("local_meta_orthability_assessment_id"),
+                    )):
+                issues.append(
+                    "direct transclusion requires receipt provenance and local assessment without independence"
+                )
+        elif relation.get("information_path") == "none-independent-discovery":
+            if relation.get("independence_claim") is not True:
+                issues.append(
+                    "independent discovery requires the no-communication information path"
+                )
+        elif relation.get("independence_claim") is True:
+            issues.append("communication-bearing relation cannot claim independence")
+        if semantic_relation == "collective-synthesizes":
+            collective_sources_by_target[target_id].add(source_id)
+        identity_key = _string_tuple_key(
+            asserting_id, source_id, target_id, semantic_relation,
+            relation.get("information_path"), relation.get("operation_version"),
+            relation.get("material_delta_id") or "<no-material-delta>",
+        )
+        if identity_key is not None:
+            prior = relation_identity_owners.get(identity_key)
+            if prior is not None and prior != relation_id:
+                issues.append("inter-somnic relation semantic identity must be stable and unique")
+            else:
+                relation_identity_owners[identity_key] = relation_id
+        idempotency_key = relation.get("idempotency_key")
+        if isinstance(idempotency_key, str):
+            prior = relation_idempotency_owners.get(idempotency_key)
+            if prior is not None and prior != relation_id:
+                issues.append("inter-somnic relation idempotency collision emits a duplicate")
+            else:
+                relation_idempotency_owners[idempotency_key] = relation_id
+
+    for assessment_id, assessment in assessment_by_id.items():
+        if _string_set(assessment.get("inter_somnic_relation_ids")) != relations_by_assessment.get(
+                assessment_id, set()):
+            issues.append(
+                "somnic assessment %s inter-somnic relation membership must be exact and reciprocal"
+                % assessment_id
+            )
+    for episode_id, episode in somnic_episode_by_id.items():
+        collective = episode.get("collective_context")
+        if not isinstance(collective, dict):
+            continue
+        source_ids = _string_set(collective.get("source_episode_ids"))
+        if source_ids != collective_sources_by_target.get(episode_id, set()):
+            issues.append(
+                "collective episode %s source edges must be exact and inter-somnic"
+                % episode_id
+            )
+        if (collective.get("dissent_preserved") is not True
+                or any(
+                    _string_lookup(somnic_episode_by_id, source_id) is None
+                    or somnic_episode_by_id[source_id].get("disposition") != "closed"
+                    for source_id in source_ids
+                )):
+            issues.append(
+                "collective episode %s must preserve dissent and source episode closure"
+                % episode_id
+            )
+
+    for start in list(reopen_graph):
+        stack = [(start, set())]
+        while stack:
+            current, path = stack.pop()
+            if current in path:
+                issues.append("reopening relation graph must be acyclic")
+                break
+            stack.extend(
+                (next_id, path | {current})
+                for next_id in reopen_graph.get(current, set())
+            )
 
     for revert_ref, revert_provenance in revert_provenance_by_ref.items():
         application = _string_lookup(
@@ -1287,8 +1624,11 @@ def _records_issues(document, activation, history, schemas, store):
         ("orthing_event", event_by_id),
         ("material_delta", delta_by_id),
         ("somnus_run", run_by_id),
+        ("somnic_episode", somnic_episode_by_id),
+        ("somnic_activity", somnic_activity_by_id),
         ("reference_corpus_revision", corpus_by_revision),
         ("somnic_assessment", assessment_by_id),
+        ("inter_somnic_relation", inter_somnic_relation_by_id),
         ("meta_orthability_assessment", meta_by_id),
         ("recurrence_report", report_by_id),
         ("proposal", proposal_by_id),

@@ -378,6 +378,17 @@ def build_cases(baseline):
         item(doc["records"]["material_deltas"], "material_delta_id", old)["material_delta_id"] = new
         run = item(doc["records"]["somnus_runs"], "somnus_run_id", "RUN-REOPEN-001")
         run["material_delta_ids"] = [new]
+        assessment = item(
+            doc["records"]["somnic_assessments"], "assessment_id", "SA-REOPENED-001"
+        )
+        assessment["frontier_trigger_ids"] = [new]
+        for relation_id in ("ISR-REOPENS-001", "ISR-REASSESSES-001"):
+            relation = item(
+                doc["records"]["inter_somnic_relations"],
+                "inter_somnic_relation_id", relation_id,
+            )
+            relation["material_delta_id"] = new
+            relation["idempotency_key"] = relation["idempotency_key"].replace(old, new)
 
     control("C08", "consistent-material-delta-id-rename", c08)
 

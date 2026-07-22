@@ -73,6 +73,7 @@ identity_registry:
 - {identity_id: claimant-f, identity_kind: claimant}
 - {identity_id: actor-local-1, identity_kind: actor}
 - {identity_id: r7e-sol-review, identity_kind: actor}
+- {identity_id: actor-remote-1, identity_kind: actor}
 lifecycle_associations:
 - {session_id: SESSION-001, episode_id: EP-001, occurrence_id: OCC-001, orthing_id: ORTH-001, immutable: true}
 - {session_id: SESSION-001, episode_id: EP-002, occurrence_id: OCC-002, orthing_id: ORTH-002, immutable: true}
@@ -80,6 +81,9 @@ lifecycle_associations:
 provenance_records:
 - {provenance_record_id: PROV-LIVE-001, capture_mode: live_capture, immutable: true, source_revision: task4-fixture-v1}
 - {provenance_record_id: PROV-R7E-001, capture_mode: retrospective_reconstruction, immutable: true, source_revision: ddfdebf, source_case: R7E}
+- {provenance_record_id: PROV-LEDGER-LOCAL-001, capture_mode: bootstrap_provenance, immutable: true, source_revision: task4-fifth-steer-v1}
+- {provenance_record_id: PROV-LEDGER-REMOTE-001, capture_mode: bootstrap_provenance, immutable: true, source_revision: task4-fifth-steer-v1}
+- {provenance_record_id: PROV-LEDGER-COLLECTIVE-001, capture_mode: bootstrap_provenance, immutable: true, source_revision: task4-fifth-steer-v1}
 contract_authoring_records: []
 claimant_routing_cases:
 - case_id: ROUTE-MULTI-001
@@ -368,6 +372,9 @@ somnus_runs:
   started_at: '2026-07-21T19:00:00Z'
   completed_at: '2026-07-21T19:00:01Z'
   output_ids: [RR-001, SA-RECURRENCE-001, SA-EVIDENCE-TIMING-001, SA-CORRECT-DEFECTIVE-001, SA-CLOSED-001, SA-NO-CHANGE-001, SA-ALTERNATIVES-001]
+  somnic_episode_ids: [SEP-RECURRENCE-001, SEP-RECURRENCE-002, SEP-REMOTE-001, SEP-SOURCE-SECOND-001, SEP-COLLECTIVE-001]
+  run_disposition: completed
+  children_auto_completed: false
   runtime_status: fixture_only_no_runtime
 - somnus_run_id: RUN-NEXT-001
   operation_id: residual_recurrence_assessment
@@ -386,6 +393,9 @@ somnus_runs:
   started_at: '2026-07-22T19:00:00Z'
   completed_at: '2026-07-22T19:00:01Z'
   output_ids: []
+  somnic_episode_ids: [SEP-NEXT-001, SEP-R7E-RECONSTRUCTION]
+  run_disposition: completed
+  children_auto_completed: false
   runtime_status: fixture_only_no_runtime
 - somnus_run_id: RUN-REOPEN-001
   operation_id: residual_recurrence_assessment
@@ -404,11 +414,127 @@ somnus_runs:
   started_at: '2026-07-23T19:00:00Z'
   completed_at: '2026-07-23T19:00:01Z'
   output_ids: [SA-REOPENED-001]
+  somnic_episode_ids: [SEP-REOPEN-001]
+  run_disposition: completed
+  children_auto_completed: false
   runtime_status: fixture_only_no_runtime
+somnic_episodes:
+- somnic_episode_id: SEP-RECURRENCE-001
+  somnus_run_id: RUN-RECURRENCE-001
+  operator_id: actor-local-1
+  ledger_id: PROV-LEDGER-LOCAL-001
+  subject_ids: [ORTH-NEW-001, ORTH-OLD-001]
+  activity_events:
+  - {activity_id: SACT-REC-OPEN-001, activity_type: episode-opened, somnic_episode_id: SEP-RECURRENCE-001, activity_scope: intra-somnic}
+  - {activity_id: SACT-REC-ASSESS-001, activity_type: assessment-recorded, somnic_episode_id: SEP-RECURRENCE-001, activity_scope: intra-somnic}
+  - {activity_id: SACT-REC-CLOSE-001, activity_type: episode-disposed, somnic_episode_id: SEP-RECURRENCE-001, activity_scope: intra-somnic}
+  assessment_ids: [SA-RECURRENCE-001, SA-EVIDENCE-TIMING-001, SA-CORRECT-DEFECTIVE-001, SA-CLOSED-001, SA-NO-CHANGE-001]
+  disposition: closed
+  opened_at: '2026-07-21T19:00:00Z'
+  disposed_at: '2026-07-21T19:00:01Z'
+  telemetry_status: fixture-only-not-live
+  source_state_mutated: false
+- somnic_episode_id: SEP-RECURRENCE-002
+  somnus_run_id: RUN-RECURRENCE-001
+  operator_id: actor-local-1
+  ledger_id: PROV-LEDGER-LOCAL-001
+  subject_ids: [ORTH-ALTERNATIVES-001]
+  activity_events:
+  - {activity_id: SACT-REC2-OPEN-001, activity_type: episode-opened, somnic_episode_id: SEP-RECURRENCE-002, activity_scope: intra-somnic}
+  - {activity_id: SACT-REC2-ASSESS-001, activity_type: assessment-recorded, somnic_episode_id: SEP-RECURRENCE-002, activity_scope: intra-somnic}
+  - {activity_id: SACT-REC2-PARTIAL-001, activity_type: episode-disposed, somnic_episode_id: SEP-RECURRENCE-002, activity_scope: intra-somnic}
+  assessment_ids: [SA-ALTERNATIVES-001]
+  disposition: partial
+  opened_at: '2026-07-21T19:00:00Z'
+  disposed_at: '2026-07-21T19:00:01Z'
+  telemetry_status: fixture-only-not-live
+  source_state_mutated: false
+- &remote_episode
+  somnic_episode_id: SEP-REMOTE-001
+  somnus_run_id: RUN-RECURRENCE-001
+  operator_id: actor-remote-1
+  ledger_id: PROV-LEDGER-REMOTE-001
+  subject_ids: [ORTH-OLD-002]
+  activity_events:
+  - {activity_id: SACT-REMOTE-OPEN-001, activity_type: episode-opened, somnic_episode_id: SEP-REMOTE-001, activity_scope: intra-somnic}
+  - {activity_id: SACT-REMOTE-CLOSE-001, activity_type: episode-disposed, somnic_episode_id: SEP-REMOTE-001, activity_scope: intra-somnic}
+  assessment_ids: []
+  disposition: closed
+  opened_at: '2026-07-21T18:00:00Z'
+  disposed_at: '2026-07-21T18:01:00Z'
+  telemetry_status: fixture-only-not-live
+  source_state_mutated: false
+- <<: *remote_episode
+  somnic_episode_id: SEP-SOURCE-SECOND-001
+  operator_id: actor-local-1
+  ledger_id: PROV-LEDGER-LOCAL-001
+  subject_ids: [ORTH-OLD-001]
+  activity_events:
+  - {activity_id: SACT-SOURCE2-OPEN-001, activity_type: episode-opened, somnic_episode_id: SEP-SOURCE-SECOND-001, activity_scope: intra-somnic}
+  - {activity_id: SACT-SOURCE2-CLOSE-001, activity_type: episode-disposed, somnic_episode_id: SEP-SOURCE-SECOND-001, activity_scope: intra-somnic}
+- somnic_episode_id: SEP-COLLECTIVE-001
+  somnus_run_id: RUN-RECURRENCE-001
+  operator_id: actor-local-1
+  ledger_id: PROV-LEDGER-COLLECTIVE-001
+  subject_ids: [SEP-REMOTE-001, SEP-SOURCE-SECOND-001]
+  activity_events:
+  - {activity_id: SACT-COLLECTIVE-OPEN-001, activity_type: episode-opened, somnic_episode_id: SEP-COLLECTIVE-001, activity_scope: intra-somnic}
+  - {activity_id: SACT-COLLECTIVE-SYNTHESIS-001, activity_type: collective-synthesis-recorded, somnic_episode_id: SEP-COLLECTIVE-001, activity_scope: intra-somnic}
+  - {activity_id: SACT-COLLECTIVE-CLOSE-001, activity_type: episode-disposed, somnic_episode_id: SEP-COLLECTIVE-001, activity_scope: intra-somnic}
+  assessment_ids: []
+  disposition: closed
+  opened_at: '2026-07-21T19:00:00Z'
+  disposed_at: '2026-07-21T19:00:01Z'
+  telemetry_status: fixture-only-not-live
+  source_state_mutated: false
+  collective_context: {source_episode_ids: [SEP-REMOTE-001, SEP-SOURCE-SECOND-001], dissent_preserved: true, source_scope_preserved: true}
+- somnic_episode_id: SEP-NEXT-001
+  somnus_run_id: RUN-NEXT-001
+  operator_id: actor-local-1
+  ledger_id: PROV-LEDGER-LOCAL-001
+  subject_ids: [ORTH-NEW-002]
+  activity_events:
+  - {activity_id: SACT-NEXT-OPEN-001, activity_type: episode-opened, somnic_episode_id: SEP-NEXT-001, activity_scope: intra-somnic}
+  - {activity_id: SACT-NEXT-CLOSE-001, activity_type: episode-disposed, somnic_episode_id: SEP-NEXT-001, activity_scope: intra-somnic}
+  assessment_ids: []
+  disposition: closed
+  opened_at: '2026-07-22T19:00:00Z'
+  disposed_at: '2026-07-22T19:00:01Z'
+  telemetry_status: fixture-only-not-live
+  source_state_mutated: false
+- somnic_episode_id: SEP-REOPEN-001
+  somnus_run_id: RUN-REOPEN-001
+  operator_id: actor-local-1
+  ledger_id: PROV-LEDGER-LOCAL-001
+  subject_ids: [SA-CLOSED-001]
+  activity_events:
+  - {activity_id: SACT-REOPEN-OPEN-001, activity_type: episode-opened, somnic_episode_id: SEP-REOPEN-001, activity_scope: intra-somnic}
+  - {activity_id: SACT-REOPEN-ASSESS-001, activity_type: assessment-recorded, somnic_episode_id: SEP-REOPEN-001, activity_scope: intra-somnic}
+  - {activity_id: SACT-REOPEN-PARTIAL-001, activity_type: episode-disposed, somnic_episode_id: SEP-REOPEN-001, activity_scope: intra-somnic}
+  assessment_ids: [SA-REOPENED-001]
+  disposition: partial
+  opened_at: '2026-07-23T19:00:00Z'
+  disposed_at: '2026-07-23T19:00:01Z'
+  telemetry_status: fixture-only-not-live
+  source_state_mutated: false
+- somnic_episode_id: SEP-R7E-RECONSTRUCTION
+  somnus_run_id: RUN-NEXT-001
+  operator_id: r7e-sol-review
+  ledger_id: PROV-R7E-001
+  subject_ids: [ORTH-R7E-RECONSTRUCTED]
+  activity_events:
+  - {activity_id: SACT-R7E-RECONSTRUCTED-001, activity_type: subject-set-established, somnic_episode_id: SEP-R7E-RECONSTRUCTION, activity_scope: intra-somnic}
+  assessment_ids: []
+  disposition: partial
+  opened_at: '2026-07-22T19:00:00Z'
+  disposed_at: '2026-07-22T19:00:01Z'
+  telemetry_status: reconstructed-analogue-not-live
+  source_state_mutated: false
 somnic_assessments:
 - &assessment_base
   assessment_id: SA-RECURRENCE-001
   somnus_run_id: RUN-RECURRENCE-001
+  somnic_episode_id: SEP-RECURRENCE-001
   target_orthing_ids: [ORTH-NEW-001, ORTH-OLD-001]
   prior_assessment_ids: []
   meta_orthability_assessment_id: MOA-001
@@ -432,8 +558,13 @@ somnic_assessments:
   placement_result: not_assessed
   pathway_result: undetermined
   explicit_non_mutation: true
+  assessment_depth: 0
+  auto_requeue: false
+  frontier_trigger_ids: []
+  inter_somnic_relation_ids: [ISR-SAME-RUN-COMPARE-001]
 - <<: *assessment_base
   assessment_id: SA-EVIDENCE-TIMING-001
+  inter_somnic_relation_ids: []
   meta_orthability_assessment_id: MOA-EVIDENCE-TIMING-001
   assessment_target: t1_reasonableness
   target_orthing_ids: [ORTH-001]
@@ -442,6 +573,7 @@ somnic_assessments:
   target_history_digest: 8f6b748b56c9b9b5bf471aa08abc19ec2f7ae2d4b5062de0ef4a12540401500b
 - <<: *assessment_base
   assessment_id: SA-CORRECT-DEFECTIVE-001
+  inter_somnic_relation_ids: []
   meta_orthability_assessment_id: MOA-CORRECT-DEFECTIVE-001
   target_orthing_ids: [ORTH-CORRECT-DEFECTIVE-001]
   target_history_checkpoint_ids: [CP-ORTH-CORRECT-DEFECTIVE-001-T2]
@@ -458,6 +590,7 @@ somnic_assessments:
   target_history_digest: 7f7941a49a7af9a23a618a02862653f13b3a13f2dd21dc446f366c35b2469bfc
 - <<: *assessment_base
   assessment_id: SA-CLOSED-001
+  inter_somnic_relation_ids: [ISR-CROSS-RUN-COMPARE-001, ISR-REOPENS-001, ISR-REASSESSES-001]
   meta_orthability_assessment_id: MOA-CLOSED-001
   target_orthing_ids: [ORTH-OLD-001]
   target_history_checkpoint_ids: [CP-ORTH-OLD-001-T2]
@@ -467,6 +600,7 @@ somnic_assessments:
   target_history_digest: 63572526dd49207750757a8bba50e506c61c1b2dbb8b8879331011a9b1b96b3d
 - <<: *assessment_base
   assessment_id: SA-NO-CHANGE-001
+  inter_somnic_relation_ids: []
   meta_orthability_assessment_id: MOA-NO-CHANGE-001
   target_orthing_ids: [ORTH-NO-CHANGE-001]
   target_history_checkpoint_ids: [CP-ORTH-NO-CHANGE-001-T2]
@@ -476,6 +610,7 @@ somnic_assessments:
   target_history_digest: 2243c6c789c08130a1723a7b869df347b774e40b3c8d43b454c1900f35a6d72c
 - <<: *assessment_base
   assessment_id: SA-ALTERNATIVES-001
+  somnic_episode_id: SEP-RECURRENCE-002
   meta_orthability_assessment_id: MOA-ALTERNATIVES-001
   target_orthing_ids: [ORTH-ALTERNATIVES-001]
   target_history_checkpoint_ids: [CP-ORTH-ALTERNATIVES-001-T2]
@@ -489,6 +624,7 @@ somnic_assessments:
   assessment_id: SA-REOPENED-001
   meta_orthability_assessment_id: MOA-REOPENED-001
   somnus_run_id: RUN-REOPEN-001
+  somnic_episode_id: SEP-REOPEN-001
   target_orthing_ids: [ORTH-OLD-001]
   target_history_checkpoint_ids: [CP-ORTH-OLD-001-REOPEN-T2]
   prior_assessment_ids: [SA-CLOSED-001]
@@ -496,7 +632,139 @@ somnic_assessments:
   closure_status: open
   intervention_disposition: preserve_residual
   proposal_ids: []
+  assessment_depth: 1
+  frontier_trigger_ids: [DELTA-CONTRACT-0.1.1]
+  inter_somnic_relation_ids: [ISR-REOPENS-001, ISR-REASSESSES-001]
   target_history_digest: 147d89f5431f96a344772ae554559efa59938ba8d0de9f4f7c951a097fe8155c
+inter_somnic_relations:
+- &relation_base
+  inter_somnic_relation_id: ISR-SAME-RUN-COMPARE-001
+  asserting_episode_id: SEP-RECURRENCE-002
+  source_episode_id: SEP-RECURRENCE-001
+  target_episode_id: SEP-RECURRENCE-002
+  source_assessment_ids: [SA-RECURRENCE-001]
+  target_assessment_ids: [SA-ALTERNATIVES-001]
+  semantic_relation: compares-with
+  relation_reason: bounded historical comparison without reopening
+  run_relation: same-run
+  operator_relation: same-operator
+  information_path: local-historical-lookup
+  material_delta_id: null
+  provenance: &local_provenance {source_operator_id: actor-local-1, source_ledger_id: PROV-LEDGER-LOCAL-001, target_operator_id: actor-local-1, target_ledger_id: PROV-LEDGER-LOCAL-001, received_artifact_ref: null, receipt_time: null, redactions: [], source_status_result: verified, local_meta_orthability_assessment_id: MOA-ALTERNATIVES-001, local_disposition: comparator-only}
+  asserted_at: '2026-07-21T19:00:01Z'
+  confidence: medium
+  claim_status: qualified
+  reopens_source: false
+  source_episode_state_preserved: true
+  source_assessment_state_preserved: true
+  inherited_properties: []
+  non_claims: [does-not-transfer-applicability, does-not-transfer-closure, does-not-transfer-confidence, does-not-transfer-authority, does-not-transfer-evidence-time]
+  received_at_t2_evidence_ids: []
+  source_t1_evidence_ids: [E-T1-USED]
+  target_t1_evidence_ids: [E-T1-OBSERVED]
+  independence_claim: false
+  assessment_depth: null
+  auto_requeue: false
+  idempotency_key: ISR:SEP-RECURRENCE-001:SEP-RECURRENCE-002:compares-with:local-historical-lookup:0.1.0
+  operation_version: 0.1.0
+- <<: *relation_base
+  inter_somnic_relation_id: ISR-CROSS-RUN-COMPARE-001
+  asserting_episode_id: SEP-NEXT-001
+  target_episode_id: SEP-NEXT-001
+  source_assessment_ids: [SA-CLOSED-001]
+  target_assessment_ids: []
+  run_relation: cross-run
+  asserted_at: '2026-07-22T19:00:01Z'
+  provenance: {<<: *local_provenance, local_meta_orthability_assessment_id: null}
+  idempotency_key: ISR:SEP-RECURRENCE-001:SEP-NEXT-001:compares-with:local-historical-lookup:0.1.0
+- <<: *relation_base
+  inter_somnic_relation_id: ISR-CROSS-OPERATOR-TRANSCLUSION-001
+  asserting_episode_id: SEP-COLLECTIVE-001
+  source_episode_id: SEP-REMOTE-001
+  target_episode_id: SEP-COLLECTIVE-001
+  source_assessment_ids: []
+  target_assessment_ids: []
+  semantic_relation: transcludes-from
+  relation_reason: provenance-bearing artifact received for local assessment
+  operator_relation: cross-operator
+  information_path: direct-transclusion
+  provenance: {source_operator_id: actor-remote-1, source_ledger_id: PROV-LEDGER-REMOTE-001, target_operator_id: actor-local-1, target_ledger_id: PROV-LEDGER-COLLECTIVE-001, received_artifact_ref: TRANSCLUSION-PACKET-001, receipt_time: '2026-07-21T18:59:00Z', redactions: [private-session-identifiers], source_status_result: qualified, local_meta_orthability_assessment_id: MOA-001, local_disposition: locally-assessable}
+  received_at_t2_evidence_ids: [E-T2-DISCOVERED]
+  target_t1_evidence_ids: [E-T1-OBSERVED]
+  independence_claim: false
+  idempotency_key: ISR:SEP-REMOTE-001:SEP-COLLECTIVE-001:transcludes-from:direct-transclusion:0.1.0
+- <<: *relation_base
+  inter_somnic_relation_id: ISR-REOPENS-001
+  asserting_episode_id: SEP-REOPEN-001
+  source_episode_id: SEP-RECURRENCE-001
+  target_episode_id: SEP-REOPEN-001
+  source_assessment_ids: [SA-CLOSED-001]
+  target_assessment_ids: [SA-REOPENED-001]
+  semantic_relation: reopens
+  relation_reason: contract revision is a material delta warranting a new episode
+  run_relation: cross-run
+  material_delta_id: DELTA-CONTRACT-0.1.1
+  provenance: {<<: *local_provenance, local_meta_orthability_assessment_id: MOA-REOPENED-001, local_disposition: locally-assessable}
+  asserted_at: '2026-07-23T19:00:01Z'
+  reopens_source: true
+  assessment_depth: 1
+  idempotency_key: ISR:SEP-RECURRENCE-001:SEP-REOPEN-001:reopens:local-historical-lookup:DELTA-CONTRACT-0.1.1:0.1.0
+- <<: *relation_base
+  inter_somnic_relation_id: ISR-REASSESSES-001
+  asserting_episode_id: SEP-REOPEN-001
+  source_episode_id: SEP-RECURRENCE-001
+  target_episode_id: SEP-REOPEN-001
+  source_assessment_ids: [SA-CLOSED-001]
+  target_assessment_ids: [SA-REOPENED-001]
+  semantic_relation: reassesses
+  relation_reason: prior assessment is a bounded higher-order target after contract revision
+  run_relation: cross-run
+  material_delta_id: DELTA-CONTRACT-0.1.1
+  provenance: {<<: *local_provenance, local_meta_orthability_assessment_id: MOA-REOPENED-001, local_disposition: locally-assessable}
+  asserted_at: '2026-07-23T19:00:01Z'
+  assessment_depth: 1
+  idempotency_key: ISR:SEP-RECURRENCE-001:SEP-REOPEN-001:reassesses:local-historical-lookup:DELTA-CONTRACT-0.1.1:0.1.0
+- <<: *relation_base
+  inter_somnic_relation_id: ISR-COLLECTIVE-SOURCE-A-001
+  asserting_episode_id: SEP-COLLECTIVE-001
+  source_episode_id: SEP-REMOTE-001
+  target_episode_id: SEP-COLLECTIVE-001
+  source_assessment_ids: []
+  target_assessment_ids: []
+  semantic_relation: collective-synthesizes
+  relation_reason: source episode contributes to a bounded collective synthesis
+  operator_relation: cross-operator
+  information_path: explicit-coordination
+  provenance: {source_operator_id: actor-remote-1, source_ledger_id: PROV-LEDGER-REMOTE-001, target_operator_id: actor-local-1, target_ledger_id: PROV-LEDGER-COLLECTIVE-001, received_artifact_ref: COLLECTIVE-SOURCE-A, receipt_time: '2026-07-21T18:59:00Z', redactions: [], source_status_result: verified, local_meta_orthability_assessment_id: MOA-001, local_disposition: locally-assessable}
+  independence_claim: false
+  idempotency_key: ISR:SEP-REMOTE-001:SEP-COLLECTIVE-001:collective-synthesizes:explicit-coordination:0.1.0
+- <<: *relation_base
+  inter_somnic_relation_id: ISR-COLLECTIVE-SOURCE-B-001
+  asserting_episode_id: SEP-COLLECTIVE-001
+  source_episode_id: SEP-SOURCE-SECOND-001
+  target_episode_id: SEP-COLLECTIVE-001
+  source_assessment_ids: []
+  target_assessment_ids: []
+  semantic_relation: collective-synthesizes
+  relation_reason: source episode contributes to a bounded collective synthesis
+  information_path: explicit-coordination
+  provenance: {<<: *local_provenance, target_ledger_id: PROV-LEDGER-COLLECTIVE-001, received_artifact_ref: COLLECTIVE-SOURCE-B, receipt_time: '2026-07-21T18:59:00Z', local_meta_orthability_assessment_id: MOA-001, local_disposition: locally-assessable}
+  independence_claim: false
+  idempotency_key: ISR:SEP-SOURCE-SECOND-001:SEP-COLLECTIVE-001:collective-synthesizes:explicit-coordination:0.1.0
+- <<: *relation_base
+  inter_somnic_relation_id: ISR-INDEPENDENT-CORROBORATION-001
+  asserting_episode_id: SEP-SOURCE-SECOND-001
+  source_episode_id: SEP-REMOTE-001
+  target_episode_id: SEP-SOURCE-SECOND-001
+  source_assessment_ids: []
+  target_assessment_ids: []
+  semantic_relation: corroborates
+  relation_reason: independently discovered bounded findings are compared after discovery
+  operator_relation: cross-operator
+  information_path: none-independent-discovery
+  provenance: {source_operator_id: actor-remote-1, source_ledger_id: PROV-LEDGER-REMOTE-001, target_operator_id: actor-local-1, target_ledger_id: PROV-LEDGER-LOCAL-001, received_artifact_ref: null, receipt_time: null, redactions: [], source_status_result: qualified, local_meta_orthability_assessment_id: null, local_disposition: comparator-only}
+  independence_claim: true
+  idempotency_key: ISR:SEP-REMOTE-001:SEP-SOURCE-SECOND-001:corroborates:none-independent-discovery:0.1.0
 recurrence_reports:
 - recurrence_report_id: RR-001
   somnus_run_id: RUN-RECURRENCE-001

@@ -23,6 +23,12 @@ modes:
 shared_types_supply_transport: false
 event_instances: {actor_ledger_version_indexed: true, actor_neutral_type_is_not_agentless_instance: true}
 bearer_separation: [normative_metaortheme_type, represented_standard_at_actor_time, case_bound_metaorthemma, execution_trace, transclusion_envelope]
+episode_semantics:
+  collective_episode_has_own_identity: true
+  internal_activity: intra-somnic
+  source_edges: inter-somnic
+  preserves_source_closure: true
+  preserves_dissent: true
 transclusion:
   definition: source-preserved availability for local orthing
   semantic_character: structurally encoded and semantically reconstructible within declared limits

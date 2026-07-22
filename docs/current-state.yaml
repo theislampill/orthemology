@@ -77,9 +77,9 @@ authored:
     pdfs: reproducibly built and visually inspected draft artifacts
     legal_publication: open on license, identity, peer review, and external submission
 derived:
-  source_tree_digest: c6dd333a6f5a22357c13d350a30e806f30881765b8c91e4418f2616ced15fe3d
+  source_tree_digest: 967b2c84ce4da49e42a780b82832fbcde15ee102ffa937a10554670e9a7c8cfc
   source_tree_digest_policy: docs/project-state-inputs.yaml
-  tracked_files: 634
+  tracked_files: 638
   decision_ids:
   - '0001'
   - '0002'
@@ -116,7 +116,8 @@ derived:
   - '0033'
   - '0034'
   - '0035'
-  decision_count: 35
+  - '0036'
+  decision_count: 36
   schemas:
   - activation-contract-fixtures.schema.json
   - activation-contract.schema.json
@@ -127,6 +128,7 @@ derived:
   - collective-somnus-transclusion-profile.schema.json
   - handoff.schema.json
   - hermes-writeback-adoption-profile.schema.json
+  - inter-somnic-relation.schema.json
   - meta-orthability-assessment.schema.json
   - metaortheme.schema.json
   - metaorthemma.schema.json
@@ -138,13 +140,14 @@ derived:
   - reliability-spec.schema.json
   - residual-recurrence-report.schema.json
   - somnic-assessment.schema.json
+  - somnic-episode.schema.json
   - somnus-candidate-inventory.schema.json
   - somnus-claim-status.schema.json
   - somnus-history-checkpoints.schema.json
   - somnus-record-fixtures.schema.json
   - somnus-run.schema.json
   - verdict-record.schema.json
-  schema_count: 26
+  schema_count: 28
   example_json_count: 9
   example_markdown_count: 2
   validator_scripts:
