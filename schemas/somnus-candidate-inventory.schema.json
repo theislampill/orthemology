@@ -24,7 +24,10 @@
           "inputs": {"$ref": "#/$defs/nonempty_strings"},
           "outputs": {"$ref": "#/$defs/nonempty_strings"},
           "dependencies": {"$ref": "#/$defs/nonempty_strings"},
-          "event_emissions": {"$ref": "#/$defs/nonempty_strings"},
+          "event_emissions": {
+            "type": "array", "minItems": 1, "uniqueItems": true,
+            "items": {"enum": ["occurrence_apprehended", "orthability_assessed", "candidate_set_recorded", "route_selected", "placement_committed", "residual_recorded", "orthing_closed", "orthing_abandoned", "orthing_reopened", "somnus_assessment_emitted", "proposal_emitted", "none"]}
+          },
           "authority_limit": {"type": "string", "minLength": 1},
           "authority_boundary": {
             "type": "object", "additionalProperties": false,
@@ -39,22 +42,25 @@
           },
           "residual_behavior": {"type": "string", "minLength": 1},
           "downstream_owner": {"type": "string", "minLength": 1},
-          "non_claims": {"$ref": "#/$defs/nonempty_strings"},
+          "non_claims": {"$ref": "#/$defs/non_claim_boundaries"},
           "non_claim_boundaries": {
-            "type": "object", "additionalProperties": false,
-            "required": ["executable_skill", "deployed_runtime", "correctness", "empirical_utility"],
-            "properties": {
-              "executable_skill": {"const": "not-implemented"},
-              "deployed_runtime": {"const": "not-implemented"},
-              "correctness": {"const": "not-established"},
-              "empirical_utility": {"const": "not-established"}
-            }
+            "$ref": "#/$defs/non_claim_boundaries"
           }
         }
       }
     }
   },
   "$defs": {
-    "nonempty_strings": {"type": "array", "minItems": 1, "uniqueItems": true, "items": {"type": "string", "minLength": 1}}
+    "nonempty_strings": {"type": "array", "minItems": 1, "uniqueItems": true, "items": {"type": "string", "minLength": 1}},
+    "non_claim_boundaries": {
+      "type": "object", "additionalProperties": false,
+      "required": ["executable_skill", "deployed_runtime", "correctness", "empirical_utility"],
+      "properties": {
+        "executable_skill": {"const": "not-implemented"},
+        "deployed_runtime": {"const": "not-implemented"},
+        "correctness": {"const": "not-established"},
+        "empirical_utility": {"const": "not-established"}
+      }
+    }
   }
 }

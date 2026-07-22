@@ -913,6 +913,331 @@ runtime: implemented
         self.assertEqual([], observed["traceback"], observed)
         self.assertEqual(40, len(observed["rejected"]), observed)
 
+    def test_fourth_review_32_production_entry_regressions_fail_closed(self):
+        """Close the third rereview's exact 32 production-entry cases."""
+        cases = []
+
+        # Activation authorship and deterministic fixture-summary binding (2).
+        mutation = copy.deepcopy(self.activation)
+        mutation["contracts"][0]["authorship"] = {
+            "mode": "normal",
+            "orthing_id": "ORTH-001",
+        }
+        cases.append((
+            "activation-normal-authorship-unrelated-orthing",
+            {"activation": mutation},
+        ))
+
+        mutation = copy.deepcopy(self.activation)
+        outcome = item(mutation["fixture_outcomes"], "fixture_id", "ACT-POS-001")
+        outcome["property_findings"] = {
+            "satisfied": [],
+            "absent": ["theological-proposition", "worldview-bearing-task"],
+            "indeterminate": [],
+        }
+        cases.append((
+            "activation-outcome-summary-contradicts-claimant-assessment",
+            {"activation": mutation},
+        ))
+
+        # Identity, routing, source resolution, target history, and chronology (5).
+        mutation = copy.deepcopy(self.records)
+        mutation["orthing_events"] = [
+            row for row in mutation["orthing_events"]
+            if row["event_id"] != "EV-WAKE-001-ROUTE"
+        ]
+        cases.append(("routing-selected-case-has-no-route-event", {"records": mutation}))
+
+        mutation = copy.deepcopy(self.records)
+        route = item(mutation["claimant_routing_cases"], "case_id", "ROUTE-MULTI-001")
+        claimant = item(route["claimant_assessments"], "claimant_id", "claimant-d")
+        claimant["claimant_id"] = "SESSION-001"
+        route["selected_claimant_id"] = "SESSION-001"
+        cases.append(("routing-claimant-collides-with-session-identity", {"records": mutation}))
+
+        mutation = copy.deepcopy(self.records)
+        item(mutation["subject_records"], "subject_id", "ORTH-002")["source_record_ref"] = "SOURCE-MISSING"
+        cases.append(("subject-source-record-unresolved", {"records": mutation}))
+
+        mutation = copy.deepcopy(self.records)
+        item(mutation["orthing_events"], "event_id", "EV-WAKE-001-ROUTE")["governing_versions"]["selector"] = "selector-mutated@2"
+        cases.append((
+            "target-history-digest-ignores-governing-event-mutation",
+            {"records": mutation},
+        ))
+
+        mutation = copy.deepcopy(self.records)
+        assessed = item(mutation["orthing_events"], "event_id", "EV-WAKE-001-ASSESS")
+        routed = item(mutation["orthing_events"], "event_id", "EV-WAKE-001-ROUTE")
+        assessed.update(sequence=3, occurred_at="2026-07-20T10:01:00Z")
+        routed.update(sequence=4, occurred_at="2026-07-20T10:02:00Z")
+        placement = copy.deepcopy(assessed)
+        placement.update(
+            event_id="EV-WAKE-001-EARLY-PLACEMENT",
+            sequence=2,
+            event_type="placement_committed",
+            occurred_at="2026-07-20T10:00:30Z",
+            claim_attempt_id=None,
+            orthability_assessment_id=None,
+        )
+        mutation["orthing_events"].append(placement)
+        cases.append(("placement-committed-before-claimant-assessment", {"records": mutation}))
+
+        # Recurrence, reopening, provenance, opportunity, and policy ownership (6).
+        mutation = copy.deepcopy(self.records)
+        item(mutation["recurrence_support_records"], "support_record_id", "SUPPORT-OLD-002")["occurred_at"] = "2026-06-02T18:00:00Z"
+        report = item(mutation["recurrence_reports"], "recurrence_report_id", "RR-001")
+        item(report["supporting_occurrences"], "support_record_id", "SUPPORT-OLD-002")["occurred_at"] = "2026-06-02T18:00:00Z"
+        cases.append(("recurrence-support-time-contradicts-subject-t1", {"records": mutation}))
+
+        mutation = copy.deepcopy(self.records)
+        item(mutation["material_deltas"], "material_delta_id", "DELTA-CONTRACT-0.1.1")["recorded_at"] = "2026-07-24T18:00:00Z"
+        cases.append(("reopening-uses-future-material-delta", {"records": mutation}))
+
+        mutation = copy.deepcopy(self.records)
+        item(mutation["source_family_records"], "source_family_id", "corpus-A")["provenance_ref"] = "PROV-MISSING"
+        cases.append(("source-family-provenance-unresolved", {"records": mutation}))
+
+        mutation = copy.deepcopy(self.records)
+        mutation["opportunity_records"].append({
+            "opportunity_id": "OPP-DUPLICATE-SUBJECT",
+            "subject_id": "ORTH-OPP-001",
+            "classification": "other",
+        })
+        report = item(mutation["recurrence_reports"], "recurrence_report_id", "RR-001")
+        report["opportunity_ids"].append("OPP-DUPLICATE-SUBJECT")
+        report["opportunity_denominator"] = 9
+        cases.append(("opportunity-denominator-inflated-by-duplicate-subject", {"records": mutation}))
+
+        mutation = copy.deepcopy(self.records)
+        mutation["opportunity_records"].append({
+            "opportunity_id": "OPP-SAME-SUPPORT-COUNTEREXAMPLE",
+            "subject_id": "ORTH-NEW-001",
+            "classification": "counterexample",
+        })
+        report = item(mutation["recurrence_reports"], "recurrence_report_id", "RR-001")
+        report["counterexample_ids"].append("ORTH-NEW-001")
+        report["opportunity_ids"].append("OPP-SAME-SUPPORT-COUNTEREXAMPLE")
+        report["opportunity_denominator"] = 9
+        report["dependence_dimensions"]["success_counterexample_count"] = 2
+        cases.append(("same-subject-is-support-and-counterexample", {"records": mutation}))
+
+        mutation = copy.deepcopy(self.records)
+        item(mutation["independence_policies"], "rule_id", "independence-rule-v1")["required_dimensions"] = ["session_count"]
+        report = item(mutation["recurrence_reports"], "recurrence_report_id", "RR-001")
+        report["independence_assessment"]["required_dimensions"] = ["session_count"]
+        cases.append(("independence-policy-registry-weakened-to-session-only", {"records": mutation}))
+
+        # Global writeback IDs, reverse ownership, and chronology (3).
+        mutation = copy.deepcopy(self.records)
+        proposal = item(mutation["proposals"], "proposal_id", "PROP-MEMORY-001")
+        proposal["proposal_id"] = "RR-001"
+        assessment = item(mutation["somnic_assessments"], "assessment_id", "SA-ALTERNATIVES-001")
+        assessment["proposal_ids"] = [
+            "RR-001" if value == "PROP-MEMORY-001" else value
+            for value in assessment["proposal_ids"]
+        ]
+        item(mutation["authorizations"], "authorization_id", "AUTH-FAILED-001")["proposal_id"] = "RR-001"
+        item(mutation["applications"], "application_id", "APP-FAILED-001")["proposal_id"] = "RR-001"
+        cases.append(("cross-kind-report-and-proposal-id-collision", {"records": mutation}))
+
+        mutation = copy.deepcopy(self.records)
+        legacy = item(mutation["proposals"], "proposal_id", "PROP-LEGACY-001")
+        legacy.update(
+            provenance_mode="somnus_grounded_proposal",
+            supporting_assessment_id="SA-NO-CHANGE-001",
+        )
+        cases.append((
+            "grounded-proposal-not-owned-by-supporting-assessment",
+            {"records": mutation},
+        ))
+
+        mutation = copy.deepcopy(self.records)
+        item(mutation["proposals"], "proposal_id", "PROP-CONTRACT-001")["proposed_at"] = "2026-07-21T18:59:30Z"
+        cases.append(("proposal-created-before-supporting-assessment", {"records": mutation}))
+
+        # Adoption and inventory contract meaning (6).
+        mutation = copy.deepcopy(self.adoption)
+        mutation["predecessor_characterization"] = "a non-reasoning toy with no meaningful stages"
+        cases.append(("adoption-caricatures-predecessor", {"adoption": mutation}))
+
+        mutation = copy.deepcopy(self.adoption)
+        mutation["actuator"]["stages"] = []
+        cases.append(("adoption-actuator-stages-erased", {"adoption": mutation}))
+
+        mutation = copy.deepcopy(self.adoption)
+        mutation["non_claims"] = [
+            "Hermes implementation is repository verified",
+            "empirical superiority is established",
+            "runtime writeback is implemented",
+        ]
+        cases.append(("adoption-nonclaims-inverted", {"adoption": mutation}))
+
+        mutation = copy.deepcopy(self.inventory)
+        mutation["candidates"][0]["non_claims"] = [
+            "an executable skill",
+            "deployed runtime",
+            "correctness established",
+        ]
+        cases.append(("inventory-nonclaims-inverted", {"inventory": mutation}))
+
+        mutation = copy.deepcopy(self.inventory)
+        mutation["candidates"][0]["event_emissions"] = ["rewrites_everything"]
+        cases.append(("inventory-event-vocabulary-replaced", {"inventory": mutation}))
+
+        mutation = copy.deepcopy(self.adoption)
+        mutation["actuator"]["unknown_nested_key"] = "accepted because the object is open"
+        cases.append(("adoption-unknown-nested-key", {"adoption": mutation}))
+
+        # Exact malformed subtree controls (10): six bounded, four tracebacks at RED.
+        mutation = copy.deepcopy(self.records)
+        item(mutation["orthing_events"], "event_id", "EV-WAKE-001")["event_type"] = {"nested": True}
+        cases.append(("malformed-event-type-map", {"records": mutation}))
+
+        mutation = copy.deepcopy(self.records)
+        item(mutation["orthing_events"], "event_id", "EV-WAKE-001")["event_type"] = ["nested"]
+        cases.append(("event-type-list", {"records": mutation}))
+
+        mutation = copy.deepcopy(self.records)
+        item(mutation["somnic_assessments"], "assessment_id", "SA-RECURRENCE-001")["intervention_disposition"] = {"nested": True}
+        cases.append(("assessment-disposition-map", {"records": mutation}))
+
+        mutation = copy.deepcopy(self.records)
+        item(mutation["subject_records"], "subject_id", "ORTH-001")["subject_kind"] = ["waking_orthing"]
+        cases.append(("subject-kind-list", {"records": mutation}))
+
+        mutation = copy.deepcopy(self.records)
+        item(mutation["orthing_events"], "event_id", "EV-WAKE-001")["privacy_source_disposition"] = ["malformed"]
+        cases.append(("event-privacy-list", {"records": mutation}))
+
+        mutation = copy.deepcopy(self.records)
+        item(mutation["somnic_assessments"], "assessment_id", "SA-RECURRENCE-001")["assessment_result"] = ["reasonable"]
+        cases.append(("assessment-result-list", {"records": mutation}))
+
+        mutation = copy.deepcopy(self.records)
+        item(mutation["applications"], "application_id", "APP-FAILED-001")["status"] = {"nested": True}
+        cases.append(("application-status-map", {"records": mutation}))
+
+        mutation = copy.deepcopy(self.records)
+        item(mutation["opportunity_records"], "opportunity_id", "OPP-OTHER-001")["classification"] = ["other"]
+        cases.append(("opportunity-classification-list", {"records": mutation}))
+
+        mutation = copy.deepcopy(self.activation)
+        mutation["contracts"][0]["status"] = {"nested": True}
+        cases.append(("contract-status-map", {"activation": mutation}))
+
+        mutation = copy.deepcopy(self.records)
+        item(mutation["proposals"], "proposal_id", "PROP-CONTRACT-001")["unknown_nested_key"] = True
+        cases.append(("proposal-unknown-nested-key", {"records": mutation}))
+
+        self.assertEqual(32, len(cases))
+        observed = {"rejected": [], "false_pass": [], "traceback": []}
+        for name, changes in cases:
+            code, output = production_exit(
+                changes.get("activation", self.activation),
+                changes.get("records", self.records),
+                changes.get("inventory", self.inventory),
+                changes.get("adoption", self.adoption),
+                changes.get("collective", self.collective),
+            )
+            if code == 1 and "TRACEBACK" not in output:
+                observed["rejected"].append(name)
+            elif code == 99 or "TRACEBACK" in output:
+                observed["traceback"].append(name)
+            else:
+                observed["false_pass"].append(name)
+        self.assertEqual([], observed["false_pass"], observed)
+        self.assertEqual([], observed["traceback"], observed)
+        self.assertEqual(32, len(observed["rejected"]), observed)
+
+    def test_fourth_review_neighboring_semantic_and_shape_controls_fail_closed(self):
+        """Cover equivalent owner/time attacks and adjacent scalar/list/map shapes."""
+        cases = []
+
+        mutation = copy.deepcopy(self.activation)
+        item(mutation["fixture_outcomes"], "fixture_id", "ACT-POS-001")["observed_indicators"] = ["database"]
+        cases.append(("activation-summary-indicator-disagrees", {"activation": mutation}))
+
+        mutation = copy.deepcopy(self.activation)
+        overlap = item(mutation["fixture_outcomes"], "fixture_id", "ACT-REC-OVERLAP-001")
+        overlap["property_findings"]["satisfied"] = ["preserved-target", "sufficient-residual-structure"]
+        cases.append(("activation-overlap-summary-is-not-deterministic-union", {"activation": mutation}))
+
+        mutation = copy.deepcopy(self.records)
+        item(mutation["subject_records"], "subject_id", "ORTH-002")["source_record_ref"] = "EV-WAKE-001"
+        cases.append(("subject-source-record-resolves-to-wrong-owner", {"records": mutation}))
+
+        mutation = copy.deepcopy(self.records)
+        report = item(mutation["recurrence_reports"], "recurrence_report_id", "RR-001")
+        report_support = item(report["supporting_occurrences"], "support_record_id", "SUPPORT-OLD-001")
+        registry_support = item(mutation["recurrence_support_records"], "support_record_id", "SUPPORT-OLD-001")
+        report_support["episode_id"] = "EP-OLD-002"
+        registry_support["episode_id"] = "EP-OLD-002"
+        cases.append(("recurrence-support-synced-to-wrong-authoritative-episode", {"records": mutation}))
+
+        mutation = copy.deepcopy(self.records)
+        run = item(mutation["somnus_runs"], "somnus_run_id", "RUN-RECURRENCE-001")
+        run["historical_comparator_ids"] = ["ORTH-OLD-001"]
+        cases.append((
+            "recurrence-support-outside-owning-run-inputs",
+            {"records": mutation},
+        ))
+
+        mutation = copy.deepcopy(self.records)
+        item(mutation["material_deltas"], "material_delta_id", "DELTA-CONTRACT-0.1.1")["source_ref"] = "recurrence-contract@unowned"
+        cases.append(("reopening-material-delta-source-not-in-run-inputs", {"records": mutation}))
+
+        mutation = copy.deepcopy(self.records)
+        item(mutation["proposals"], "proposal_id", "PROP-CONTRACT-001")["proposed_at"] = "2026-07-21T19:00:01Z"
+        cases.append(("proposal-created-at-supporting-assessment-time", {"records": mutation}))
+
+        mutation = copy.deepcopy(self.adoption)
+        mutation["source_verification"]["implementation_claims"] = "source and behavior verified"
+        cases.append(("adoption-source-verification-inverted", {"adoption": mutation}))
+
+        mutation = copy.deepcopy(self.records)
+        item(mutation["somnic_assessments"], "assessment_id", "SA-RECURRENCE-001")["intervention_disposition"] = ["investigation"]
+        cases.append(("assessment-disposition-list", {"records": mutation}))
+
+        mutation = copy.deepcopy(self.records)
+        item(mutation["subject_records"], "subject_id", "ORTH-001")["subject_kind"] = {"kind": "waking_orthing"}
+        cases.append(("subject-kind-map", {"records": mutation}))
+
+        mutation = copy.deepcopy(self.records)
+        item(mutation["orthing_events"], "event_id", "EV-WAKE-001")["governing_versions"] = ["malformed"]
+        cases.append(("event-governing-versions-list", {"records": mutation}))
+
+        mutation = copy.deepcopy(self.records)
+        item(mutation["proposals"], "proposal_id", "PROP-CONTRACT-001")["status"] = ["proposed"]
+        cases.append(("proposal-status-list", {"records": mutation}))
+
+        self.assertEqual(12, len(cases))
+        for name, changes in cases:
+            with self.subTest(case=name):
+                self.assertRejected(**changes)
+
+    def test_fourth_review_exact_normal_authorship_positive_control(self):
+        """A normal contract may pass only with its exact typed authoring record."""
+        activation = copy.deepcopy(self.activation)
+        records = copy.deepcopy(self.records)
+        contract = activation["contracts"][0]
+        contract["authorship"] = {"mode": "normal", "orthing_id": "ORTH-001"}
+        records["contract_authoring_records"] = [{
+            "authoring_record_id": "AUTHORING-NORMAL-001",
+            "orthing_id": "ORTH-001",
+            "contract_id": contract["contract_id"],
+            "contract_version": contract["contract_version"],
+            "authored_at": "2026-07-20T10:02:00Z",
+            "fixture_suite": contract["fixture_suite"],
+            "fixture_ids": list(contract["fixture_outcomes"]),
+            "immutable": True,
+        }]
+        code, output = production_exit(
+            activation, records, self.inventory, self.adoption, self.collective
+        )
+        self.assertEqual(0, code, output)
+        self.assertIn("TOTAL: 0 failures", output)
+
     def test_nested_map_and_list_variants_never_reach_hash_operations(self):
         cases = []
 

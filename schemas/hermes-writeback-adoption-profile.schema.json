@@ -12,8 +12,18 @@
     "runtime owner": {"const": "external/downstream"},
     "upstream adoption": {"const": "candidate, not normative dependency"},
     "claim_status": {"type": "object"},
-    "source_verification": {"type": "object"},
-    "predecessor_characterization": {"type": "string", "minLength": 1},
+    "source_verification": {
+      "type": "object", "additionalProperties": false,
+      "required": ["source_code", "license", "commit", "tests", "implementation_claims"],
+      "properties": {
+        "source_code": {"const": "pending"},
+        "license": {"const": "pending"},
+        "commit": {"const": "pending"},
+        "tests": {"const": "pending"},
+        "implementation_claims": {"const": "externally supplied and not repository-verified"}
+      }
+    },
+    "predecessor_characterization": {"const": "coarser-or-more-implicit orthing oriented toward source interpretation, proposal generation, destination selection, and safe writeback"},
     "subsumption": {
       "type": "object", "additionalProperties": false,
       "required": ["ordinary_reflective_writeback_question_is_first_class", "ordinary_targets", "governing_targets", "outcomes"],
@@ -24,7 +34,19 @@
         "outcomes": {"type": "array", "minItems": 6, "maxItems": 6, "uniqueItems": true, "items": {"enum": ["no_change", "investigation", "evidence_request", "preserve_residual", "one_proposal", "alternative_proposals"]}}
       }
     },
-    "actuator": {"type": "object"},
+    "actuator": {
+      "type": "object", "additionalProperties": false,
+      "required": ["role", "ontology_center", "unrelated_accessory", "stages"],
+      "properties": {
+        "role": {"const": "first-class downstream actuator"},
+        "ontology_center": {"const": false},
+        "unrelated_accessory": {"const": false},
+        "stages": {
+          "type": "array", "minItems": 6, "maxItems": 6, "uniqueItems": true,
+          "items": {"enum": ["proposal", "review", "approve_or_reject", "validation", "dry_run", "apply_or_revert"]}
+        }
+      }
+    },
     "record_separation": {"type": "array", "minItems": 6, "maxItems": 6, "uniqueItems": true, "items": {"enum": ["somnic_assessment", "intervention_disposition", "mutation_proposal", "mutation_authorization", "applied_mutation", "later_outcome_evaluation"]}},
     "proposal_provenance_modes": {"type": "array", "minItems": 2, "maxItems": 2, "uniqueItems": true, "items": {"enum": ["legacy_reflective_proposal", "somnus_grounded_proposal"]}},
     "temporal_roles": {"type": "array", "minItems": 5, "maxItems": 5, "uniqueItems": true, "items": {"enum": ["t1_waking_orthing", "t2_somnic_assessment", "t3_proposal_and_authorization", "t4_application_and_successor_state", "t5_outcome_evaluation"]}},
@@ -32,6 +54,15 @@
     "automatic authorization": {"const": "prohibited"},
     "automatic application": {"const": "prohibited"},
     "automatic writeback": {"const": "prohibited"},
-    "non_claims": {"type": "array", "minItems": 3, "uniqueItems": true, "items": {"type": "string", "minLength": 1}}
+    "non_claims": {
+      "type": "object", "additionalProperties": false,
+      "required": ["source_implementation", "empirical_superiority", "governed_learning", "runtime_writeback"],
+      "properties": {
+        "source_implementation": {"const": "not-verified"},
+        "empirical_superiority": {"const": "not-established"},
+        "governed_learning": {"const": "not-established"},
+        "runtime_writeback": {"const": "not-implemented"}
+      }
+    }
   }
 }

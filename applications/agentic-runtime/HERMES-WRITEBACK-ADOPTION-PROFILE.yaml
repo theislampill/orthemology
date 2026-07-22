@@ -39,6 +39,7 @@ automatic authorization: prohibited
 automatic application: prohibited
 automatic writeback: prohibited
 non_claims:
-- no Hermes source, license, commit, test count, class behavior, or repository statistic is verified here
-- no empirical superiority or governed learning is claimed
-- no runtime writeback engine is implemented
+  source_implementation: not-verified
+  empirical_superiority: not-established
+  governed_learning: not-established
+  runtime_writeback: not-implemented

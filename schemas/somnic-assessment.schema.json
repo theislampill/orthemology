@@ -41,7 +41,7 @@
     },
     "evidence_timing": {"$ref": "#/$defs/evidence_timing"},
     "target_history_digest": {"type": "string", "pattern": "^[0-9a-f]{64}$"},
-    "target_history_digest_mode": {"const": "derived-subject-record-sha256-v1"},
+    "target_history_digest_mode": {"const": "derived-target-history-sha256-v2"},
     "target_history_mutated": {"const": false},
     "retroactive_conformity_rewrite": {"const": false},
     "closure_status": {"enum": ["open", "closed", "superseded", "held"]},
