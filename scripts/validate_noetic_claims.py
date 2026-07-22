@@ -81,7 +81,7 @@ def resolve_target(claim, occ):
     return o
 
 
-def claim_semantic_issues(claim, source_status_ids):
+def claim_semantic_issues(claim, source_status_ids, evidence_ids=None):
     """Return bounded, general Task 7 semantic diagnostics for one claim."""
     if not isinstance(claim, dict):
         return ["claim-not-object"]
@@ -111,18 +111,28 @@ def claim_semantic_issues(claim, source_status_ids):
             conclusion = boundary.get("conclusion_kind")
             status = boundary.get("bridge_status")
             evidence = boundary.get("bridge_evidence_ids")
+            if conclusion is not None and conclusion != claim.get("target_type"):
+                issues.append("inference-conclusion-target-mismatch")
+            if (isinstance(evidence, list)
+                    and any(not isinstance(item, str) for item in evidence)):
+                issues.append("malformed-bridge-evidence-ids")
+            elif (isinstance(evidence, list) and evidence_ids is not None
+                    and any(item not in evidence_ids for item in evidence)):
+                issues.append("bridge-evidence-unresolved")
             if source in MENTAL_SOURCES and conclusion in EXTERNAL_CONCLUSIONS:
                 if status == "direct-entailment":
                     issues.append("mental-external-direct-entailment")
                 if status == "independently-warranted" and (not isinstance(evidence, list) or not evidence):
                     issues.append("independent-bridge-without-evidence")
+                if status == "held" and claim.get("status") == "asserted":
+                    issues.append("asserted-external-conclusion-without-warranted-bridge")
     return list(dict.fromkeys(issues))
 
 
 def claim_supported(claim, ev_ids, occ, source_status_ids=None):
     """Return (ok, rule_violated) under the R7D support discipline."""
     if source_status_ids is not None:
-        semantic = claim_semantic_issues(claim, source_status_ids)
+        semantic = claim_semantic_issues(claim, source_status_ids, ev_ids)
         if semantic:
             return False, semantic[0]
     o = resolve_target(claim, occ)
@@ -135,10 +145,14 @@ def claim_supported(claim, ev_ids, occ, source_status_ids=None):
         return False, "target-out-of-scope-asserted"
     if bearer == "m_discourse" and ttype in SUBJECT_INTERIOR:
         return False, "subject-type-on-discourse"
-    unresolved = [e for e in claim.get("evidence_ids", []) if e not in ev_ids]
+    evidence_ids = claim.get("evidence_ids")
+    if (not isinstance(evidence_ids, list)
+            or any(not isinstance(evidence_id, str) for evidence_id in evidence_ids)):
+        return False, "malformed-evidence-ids"
+    unresolved = [e for e in evidence_ids if e not in ev_ids]
     if unresolved:
         return False, "evidence-unresolved"
-    n_ev = len(claim.get("evidence_ids", []))
+    n_ev = len(evidence_ids)
     if ttype == "motive-culpability-soul-state" and status == "asserted":
         return False, "motive-asserted"
     # any m_subject claim citing evidence needs an observation bridge

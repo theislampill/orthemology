@@ -70,14 +70,29 @@ def validate_fitrah_boundary(boundary):
     if boundary.get("status") != "creed-internal":
         issues.append("fitrah-not-creed-internal")
     properties = boundary.get("model_properties")
-    if not isinstance(properties, list) or not FITRAH_PROPERTIES.issubset(set(properties)):
+    property_set = {item for item in properties if isinstance(item, str)} if isinstance(properties, list) else set()
+    if not isinstance(properties, list) or not FITRAH_PROPERTIES.issubset(property_set):
         issues.append("fitrah-properties-incomplete")
+    if isinstance(properties, list) and any(not isinstance(item, str) for item in properties):
+        issues.append("fitrah-properties-malformed")
+    if isinstance(properties, list) and property_set - FITRAH_PROPERTIES:
+        issues.append("fitrah-properties-forbidden")
     positive = boundary.get("is")
-    if not isinstance(positive, list) or not FITRAH_POSITIVE.issubset(set(positive)):
+    positive_set = {item for item in positive if isinstance(item, str)} if isinstance(positive, list) else set()
+    if not isinstance(positive, list) or not FITRAH_POSITIVE.issubset(positive_set):
         issues.append("fitrah-positive-model-incomplete")
+    if isinstance(positive, list) and any(not isinstance(item, str) for item in positive):
+        issues.append("fitrah-positive-model-malformed")
+    if isinstance(positive, list) and positive_set - FITRAH_POSITIVE:
+        issues.append("fitrah-positive-model-forbidden")
     prohibited = boundary.get("is_not")
-    if not isinstance(prohibited, list) or not FITRAH_PROHIBITED.issubset(set(prohibited)):
+    prohibited_set = {item for item in prohibited if isinstance(item, str)} if isinstance(prohibited, list) else set()
+    if not isinstance(prohibited, list) or not FITRAH_PROHIBITED.issubset(prohibited_set):
         issues.append("fitrah-prohibitions-incomplete")
+    if isinstance(prohibited, list) and any(not isinstance(item, str) for item in prohibited):
+        issues.append("fitrah-prohibitions-malformed")
+    if positive_set & prohibited_set:
+        issues.append("fitrah-positive-negative-conflict")
     corruption = boundary.get("corruption_assessment")
     if not isinstance(corruption, dict):
         issues.append("fitrah-corruption-boundary-missing")

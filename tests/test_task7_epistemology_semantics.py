@@ -132,6 +132,68 @@ class TawaturContractTests(unittest.TestCase):
         case["assessments"][0]["origin_analysis"]["common_cause_status"] = "detected"
         self.assertIn("common-cause-conflicts-with-independence", self.issues(case))
 
+    def test_source_unit_origin_and_path_overlap_constrain_independence(self):
+        cases = {
+            "shared-origin": ("origin_id", "source-origin-common-cause-conflict"),
+            "shared-path": ("transmission_paths", "source-path-independence-conflict"),
+        }
+        for label, (field, expected_issue) in cases.items():
+            with self.subTest(label=label):
+                case = valid_warrant()
+                units = case["assessments"][0]["source_units"]
+                units[1][field] = copy.deepcopy(units[0][field])
+                self.assertIn(expected_issue, self.issues(case))
+
+    def test_supported_warrant_requires_plural_qualifying_routes(self):
+        case = valid_warrant()
+        assessment = case["assessments"][0]
+        assessment["acquisition_routes"] = assessment["acquisition_routes"][:1]
+        assessment["subject_assessments"][0]["route_refs"] = ["AR-1"]
+        self.assertIn("supported-warrant-requires-plural-routes", self.issues(case))
+
+    def test_supported_warrant_routes_must_be_independent_and_quality_supported(self):
+        cases = {
+            "same-source-unit": "supported-warrant-routes-not-independent",
+            "quality-underdetermined": "supported-warrant-route-quality-insufficient",
+        }
+        for label, expected_issue in cases.items():
+            with self.subTest(label=label):
+                case = valid_warrant()
+                assessment = case["assessments"][0]
+                if label == "same-source-unit":
+                    assessment["acquisition_routes"][1]["source_unit_ids"] = ["SU-1"]
+                else:
+                    assessment["transmitter_quality"][1]["domain_competence"] = "underdetermined"
+                self.assertIn(expected_issue, self.issues(case))
+
+    def test_held_single_route_record_remains_representable(self):
+        case = valid_warrant()
+        assessment = case["assessments"][0]
+        assessment["acquisition_routes"] = assessment["acquisition_routes"][:1]
+        subject = assessment["subject_assessments"][0]
+        subject["access_status"] = "underdetermined"
+        subject["route_refs"] = ["AR-1"]
+        subject["warrant_conclusion"] = "held"
+        self.assertEqual([], self.issues(case))
+
+    def test_proposition_identity_preserves_text_and_objective_truth(self):
+        control = valid_warrant()
+        second = copy.deepcopy(control["assessments"][0])
+        second["id"] = "TWW-SECOND"
+        second["subject_assessments"][0]["subject_id"] = "SUB-SECOND"
+        control["assessments"].append(second)
+        self.assertEqual([], self.issues(control))
+
+        conflicts = {
+            "truth": ("objective_truth_status", "false", "proposition-identity-truth-conflict"),
+            "text": ("text", "a conflicting proposition text", "proposition-identity-text-conflict"),
+        }
+        for label, (field, value, expected_issue) in conflicts.items():
+            with self.subTest(label=label):
+                case = copy.deepcopy(control)
+                case["assessments"][1]["proposition"][field] = value
+                self.assertIn(expected_issue, self.issues(case))
+
     def test_quality_and_subject_context_are_required(self):
         for field in ("transmitter_quality", "subject_assessments"):
             with self.subTest(field=field):
@@ -166,6 +228,40 @@ class TawaturContractTests(unittest.TestCase):
                 self.assertTrue(issues)
                 self.assertTrue(all("Traceback" not in issue for issue in issues))
 
+    def test_cross_record_nested_values_reject_without_exception(self):
+        mutations = {
+            "proposition-id": lambda assessment: assessment["proposition"].update(
+                {"id": {"nested": "PROP-P"}}),
+            "source-status-refs": lambda assessment: assessment.update(
+                {"source_status_refs": [{"nested": "ELT-3"}]}),
+            "source-unit-id": lambda assessment: assessment["source_units"][0].update(
+                {"unit_id": {"nested": "SU-1"}}),
+            "source-origin-id": lambda assessment: assessment["source_units"][0].update(
+                {"origin_id": {"nested": "O-1"}}),
+            "source-transmission-paths": lambda assessment: assessment["source_units"][0].update(
+                {"transmission_paths": None}),
+            "quality-source-unit-id": lambda assessment: assessment["transmitter_quality"][0].update(
+                {"source_unit_id": {"nested": "SU-1"}}),
+            "route-id": lambda assessment: assessment["acquisition_routes"][0].update(
+                {"route_id": {"nested": "AR-1"}}),
+            "route-source-unit-ids": lambda assessment: assessment["acquisition_routes"][0].update(
+                {"source_unit_ids": [{"nested": "SU-1"}]}),
+            "subject-id": lambda assessment: assessment["subject_assessments"][0].update(
+                {"subject_id": {"nested": "SUB-A"}}),
+            "subject-route-refs": lambda assessment: assessment["subject_assessments"][0].update(
+                {"route_refs": None}),
+        }
+        for label, mutate in mutations.items():
+            with self.subTest(label=label):
+                case = valid_warrant()
+                mutate(case["assessments"][0])
+                try:
+                    issues = self.issues(case)
+                except Exception as exc:  # pragma: no cover - regression assertion
+                    self.fail("validator raised %s: %s" % (type(exc).__name__, exc))
+                self.assertTrue(issues)
+                self.assertTrue(all("Traceback" not in issue for issue in issues))
+
 
 class ClaimRoleAndMentalBoundaryTests(unittest.TestCase):
     def issues(self, claim):
@@ -174,6 +270,25 @@ class ClaimRoleAndMentalBoundaryTests(unittest.TestCase):
             "ELT-3": "SECONDARY_VERIFIED",
             "EXT-1": "ORTHEMOLOGICAL_EXTENSION",
         })
+
+    def external_claim_context(self):
+        occurrences = {
+            "m_discourse": {
+                "identity": "objection-utterance-abc123",
+                "version": "as-received",
+                "in_scope": True,
+            }
+        }
+        source_statuses = {"ELT-1": "SECONDARY_RECONSTRUCTION"}
+        claim = valid_claim()
+        claim["target_type"] = "external-possibility"
+        claim["inference_boundary"] = {
+            "source_kind": "mental-conceivability",
+            "conclusion_kind": "external-possibility",
+            "bridge_status": "independently-warranted",
+            "bridge_evidence_ids": ["ev-wording-1"],
+        }
+        return claim, occurrences, source_statuses
 
     def test_claim_role_and_access_status_are_distinct(self):
         case = valid_claim()
@@ -226,13 +341,51 @@ class ClaimRoleAndMentalBoundaryTests(unittest.TestCase):
 
     def test_separately_warranted_external_bridge_accepts(self):
         case = valid_claim()
+        case["target_type"] = "external-possibility"
         case["inference_boundary"] = {
             "source_kind": "mental-conceivability",
             "conclusion_kind": "external-possibility",
             "bridge_status": "independently-warranted",
-            "bridge_evidence_ids": ["ev-external-premise"],
+            "bridge_evidence_ids": ["ev-wording-1"],
         }
         self.assertEqual([], self.issues(case))
+
+    def test_external_bridge_control_resolves_and_accepts(self):
+        control, occurrences, source_statuses = self.external_claim_context()
+        self.assertEqual(
+            (True, None),
+            NOETIC.claim_supported(control, {"ev-wording-1"}, occurrences, source_statuses),
+        )
+
+    def test_external_bridge_evidence_must_resolve(self):
+        control, occurrences, source_statuses = self.external_claim_context()
+        unresolved = copy.deepcopy(control)
+        unresolved["inference_boundary"]["bridge_evidence_ids"] = ["ev-missing"]
+        self.assertEqual(
+            (False, "bridge-evidence-unresolved"),
+            NOETIC.claim_supported(unresolved, {"ev-wording-1"}, occurrences, source_statuses),
+        )
+
+    def test_asserted_external_conclusion_rejects_held_bridge(self):
+        control, occurrences, source_statuses = self.external_claim_context()
+        held = copy.deepcopy(control)
+        held["inference_boundary"]["bridge_status"] = "held"
+        held["inference_boundary"]["bridge_evidence_ids"] = []
+        self.assertEqual(
+            (False, "asserted-external-conclusion-without-warranted-bridge"),
+            NOETIC.claim_supported(held, {"ev-wording-1"}, occurrences, source_statuses),
+        )
+
+    def test_inference_conclusion_kind_must_match_claim_target(self):
+        case = valid_claim()
+        case["target_type"] = "external-existence"
+        case["inference_boundary"] = {
+            "source_kind": "mental-conceivability",
+            "conclusion_kind": "external-possibility",
+            "bridge_status": "independently-warranted",
+            "bridge_evidence_ids": ["ev-wording-1"],
+        }
+        self.assertIn("inference-conclusion-target-mismatch", self.issues(case))
 
     def test_malformed_inference_boundary_rejects_without_traceback(self):
         case = valid_claim()
@@ -240,6 +393,28 @@ class ClaimRoleAndMentalBoundaryTests(unittest.TestCase):
         issues = self.issues(case)
         self.assertTrue(issues)
         self.assertTrue(all("Traceback" not in issue for issue in issues))
+
+    def test_malformed_bridge_evidence_ids_reject_without_exception(self):
+        case, occurrences, source_statuses = self.external_claim_context()
+        case["inference_boundary"]["bridge_evidence_ids"] = [{"nested": "ev-wording-1"}]
+        try:
+            result = NOETIC.claim_supported(
+                case, {"ev-wording-1"}, occurrences, source_statuses
+            )
+        except Exception as exc:  # pragma: no cover - regression assertion
+            self.fail("validator raised %s: %s" % (type(exc).__name__, exc))
+        self.assertEqual((False, "malformed-bridge-evidence-ids"), result)
+
+    def test_malformed_claim_evidence_ids_reject_without_exception(self):
+        case, occurrences, source_statuses = self.external_claim_context()
+        case["evidence_ids"] = [{"nested": "ev-wording-1"}]
+        try:
+            result = NOETIC.claim_supported(
+                case, {"ev-wording-1"}, occurrences, source_statuses
+            )
+        except Exception as exc:  # pragma: no cover - regression assertion
+            self.fail("validator raised %s: %s" % (type(exc).__name__, exc))
+        self.assertEqual((False, "malformed-evidence-ids"), result)
 
 
 class FitrahBoundaryTests(unittest.TestCase):
@@ -268,6 +443,23 @@ class FitrahBoundaryTests(unittest.TestCase):
                 case["is_not"].remove(prohibited)
                 self.assertTrue(META.validate_fitrah_boundary(case))
 
+    def test_forbidden_positive_fitrah_property_rejects(self):
+        positive = self.boundary()
+        positive["is"].append("discourse-readable-soul-state")
+        positive_issues = META.validate_fitrah_boundary(positive)
+        self.assertIn("fitrah-positive-model-forbidden", positive_issues)
+        self.assertIn("fitrah-positive-negative-conflict", positive_issues)
+
+    def test_quantitative_fitrah_property_rejects(self):
+        quantitative = self.boundary()
+        quantitative["model_properties"].append("quantitative")
+        self.assertIn("fitrah-properties-forbidden", META.validate_fitrah_boundary(quantitative))
+
+    def test_positive_and_negative_vocabularies_cannot_intersect(self):
+        case = self.boundary()
+        case["is_not"].append("normative-disposition")
+        self.assertIn("fitrah-positive-negative-conflict", META.validate_fitrah_boundary(case))
+
     def test_dissent_alone_cannot_establish_corruption(self):
         case = self.boundary()
         case["corruption_assessment"]["dissent_alone_sufficient"] = True
@@ -277,6 +469,15 @@ class FitrahBoundaryTests(unittest.TestCase):
         for malformed in (None, "fitrah", []):
             with self.subTest(malformed=malformed):
                 issues = META.validate_fitrah_boundary(malformed)
+                self.assertTrue(issues)
+                self.assertTrue(all("Traceback" not in issue for issue in issues))
+
+    def test_malformed_nested_fitrah_vocabularies_reject_without_exception(self):
+        for field in ("model_properties", "is", "is_not"):
+            with self.subTest(field=field):
+                case = self.boundary()
+                case[field].append({"nested": "value"})
+                issues = META.validate_fitrah_boundary(case)
                 self.assertTrue(issues)
                 self.assertTrue(all("Traceback" not in issue for issue in issues))
 

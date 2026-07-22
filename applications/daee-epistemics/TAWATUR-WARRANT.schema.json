@@ -153,7 +153,16 @@
               "assessor_evidence": {"$ref": "#/definitions/nonemptyStrings"},
               "defeaters": {"$ref": "#/definitions/nonemptyStrings"},
               "warrant_conclusion": {"enum": ["supported", "rejected", "held", "underdetermined"]}
-            }
+            },
+            "allOf": [
+              {
+                "if": {
+                  "properties": {"warrant_conclusion": {"const": "supported"}},
+                  "required": ["warrant_conclusion"]
+                },
+                "then": {"properties": {"route_refs": {"minItems": 2}}}
+              }
+            ]
           }
         },
         "non_claims": {"$ref": "#/definitions/nonemptyStrings"}
