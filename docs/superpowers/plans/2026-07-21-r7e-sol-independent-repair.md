@@ -262,13 +262,22 @@ Do not create or clone an external repository, distributed agent network, shared
 - Modify: `applications/daee-epistemics/TAWATUR-WARRANT.example.yaml`
 - Modify: `applications/daee-epistemics/FALSE-TAWATUR-FIXTURES.yaml`
 - Modify: `applications/daee-epistemics/NOETIC-CLAIM.schema.json`
+- Modify: `applications/daee-epistemics/NOETIC-CLAIM.example.json`
 - Modify: `applications/daee-epistemics/NOETIC-CLAIM-FIXTURES.yaml`
+- Modify: `applications/daee-epistemics/NOETIC-FIELD-DYNAMICS.yaml`
 - Modify: `applications/daee-epistemics/EPISTEMOLOGICAL-AND-METAPHYSICAL-BOUNDARY.md`
 - Modify: `applications/daee-epistemics/META-NOETIC-MEMETICS-AND-DYNAMIC-ORTHING.md`
 - Modify: `companion/CONCRETE-AND-SOUND-REASON.md`
 - Modify: `scripts/validate_memetic_ecology.py`
 - Modify: `scripts/validate_noetic_claims.py`
 - Modify: `scripts/validate_meta_noetic_memetics.py`
+
+**Scope amendment (2026-07-22):** `NOETIC-CLAIM.example.json` is the positive
+record governed by the schema changed in this task and must receive the new
+required fields. `NOETIC-FIELD-DYNAMICS.yaml` is the authoritative fiṭrah model
+read by `validate_meta_noetic_memetics.py` and must carry the positive and
+negative boundaries that validator enforces. Omitting either owner would force
+schema drift or validator weakening, so both are added narrowly to Task 7.
 
 **Step 1 — red:** Reject tawātur-by-count/popularity/graph degree, missing transmitter quality or subject-relative conditions, common-cause copies treated as independent, fiṭrah as scalar/coordinate/algorithm/metaortheme/soul readout/guaranteed attractor, corruption inferred circularly from dissent, and mental representation/conceivability/universal abstraction entailing external existence, possibility, or unseen modality.
 
