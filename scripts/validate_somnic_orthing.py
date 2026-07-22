@@ -20,6 +20,7 @@ ROOT = Path(__file__).resolve().parents[1]
 SCHEMA_DIR = ROOT / "schemas"
 ACTIVATION_PATH = ROOT / "examples" / "somnus" / "activation-contract-fixtures.yaml"
 RECORDS_PATH = ROOT / "examples" / "somnus" / "somnus-record-fixtures.yaml"
+HISTORY_PATH = ROOT / "examples" / "somnus" / "somnus-history-checkpoints.yaml"
 INVENTORY_PATH = ROOT / "applications" / "agentic-runtime" / "SOMNUS-CANDIDATE-INVENTORY.yaml"
 ADOPTION_PATH = ROOT / "applications" / "agentic-runtime" / "HERMES-WRITEBACK-ADOPTION-PROFILE.yaml"
 COLLECTIVE_PATH = ROOT / "applications" / "agentic-runtime" / "COLLECTIVE-SOMNUS-TRANSCLUSION-PROFILE.yaml"
@@ -37,6 +38,7 @@ SCHEMA_NAMES = {
 AUX_SCHEMA_NAMES = {
     "activation_bundle": "activation-contract-fixtures.schema.json",
     "records_bundle": "somnus-record-fixtures.schema.json",
+    "history_checkpoints": "somnus-history-checkpoints.schema.json",
     "claim_status": "somnus-claim-status.schema.json",
     "candidate_inventory": "somnus-candidate-inventory.schema.json",
     "adoption_profile": "hermes-writeback-adoption-profile.schema.json",
@@ -85,6 +87,33 @@ STANDARD_CANDIDATE_NON_CLAIMS = {
     "deployed_runtime": "not-implemented",
     "correctness": "not-established",
     "empirical_utility": "not-established",
+}
+PROHIBITED_CANDIDATE_OPERATIONS = {
+    "schedule_runtime", "execute_mutation", "promote_governance",
+    "close_governance_finding", "mutate_governance",
+}
+ORDERED_ACTUATOR_STAGES = [
+    "proposal", "review", "approve_or_reject", "validation", "dry_run",
+    "apply_or_revert",
+]
+EXPECTED_PREDECESSOR_CLASSIFICATION = {
+    "relative_granularity": "coarser_or_more_implicit",
+    "scope": [
+        "source_interpretation", "proposal_generation", "destination_selection",
+        "safe_writeback",
+    ],
+}
+DELTA_OWNER_ROLES = {
+    "analysis_revision": "analysis",
+    "contract_revision": "operation_contract",
+    "selection_rule_revision": "selection_rule",
+    "evaluator_revision": "evaluator",
+    "metaortheme_revision": "metaortheme",
+    "contradicting_evidence": "evidence",
+    "later_outcome": "outcome",
+    "assessment_conflict": "assessment",
+    "expiry": "expiry",
+    "governance_action": "governance",
 }
 
 
@@ -285,8 +314,22 @@ def _activation_issues(document, schemas, store):
                 issues.append("fixture %s observed_exclusions must be an array" % fixture_id)
                 exclusions = []
             controlling_exclusion = bool(_string_set(exclusions) & _string_set(contract.get("exclusion_indicators")))
+            indicators = assessment.get("observed_indicators")
+            if not isinstance(indicators, list):
+                issues.append("fixture %s observed_indicators must be an array" % fixture_id)
+                indicators = []
+            if not _string_set(indicators) <= _string_set(contract.get("positive_indicators")):
+                issues.append(
+                    "fixture %s indicators must be owned by its exact activation contract/version"
+                    % fixture_id
+                )
+            if not _string_set(exclusions) <= _string_set(contract.get("exclusion_indicators")):
+                issues.append(
+                    "fixture %s exclusions must be owned by its exact activation contract/version"
+                    % fixture_id
+                )
             result = assessment.get("result")
-            if result not in TRI_STATE:
+            if not isinstance(result, str) or result not in TRI_STATE:
                 issues.append("fixture %s has result outside tri-state vocabulary" % fixture_id)
             elif result == "applicable" and (required != finding_sets["satisfied"] or controlling_exclusion):
                 issues.append("fixture %s cannot infer applicability while required properties are absent, indeterminate, or excluded" % fixture_id)
@@ -329,7 +372,7 @@ def _activation_issues(document, schemas, store):
             conflict = _mapping(outcome.get("conflict"), "overlap fixture %s conflict" % fixture_id, issues)
             named = conflict.get("claimant_contracts")
             if (not isinstance(named, list) or len(_string_set(named)) < 2
-                    or not _string_set(contract_keys_in_fixture) <= _string_set(named)
+                    or _string_set(contract_keys_in_fixture) != _string_set(named)
                     or conflict.get("disposition") not in {"provisional_multi_claimant", "hold", "defer"}
                     or conflict.get("conflict_unresolved") is not True
                     or not conflict.get("authorization_rule_id")):
@@ -347,7 +390,7 @@ def _activation_issues(document, schemas, store):
             continue
         represented = {
             fixture_class for fixture_class, fixture_id, _ in assessments_by_contract.get(key, [])
-            if fixture_id in refs
+            if isinstance(fixture_class, str) and fixture_id in refs
         }
         if represented != FIXTURE_CLASSES:
             issues.append("accepted contract %s requires per-contract positive, negative-near-boundary, indeterminate, and overlap assessments" % contract.get("contract_id"))
@@ -366,7 +409,7 @@ def _activation_issues(document, schemas, store):
     return issues
 
 
-def _records_issues(document, activation, schemas, store):
+def _records_issues(document, activation, history, schemas, store):
     issues = []
     issues += _schema_issues(
         "records", document, schemas[AUX_SCHEMA_NAMES["records_bundle"]], store
@@ -376,6 +419,10 @@ def _records_issues(document, activation, schemas, store):
             "records.claim_status", document.get("claim_status"),
             schemas[AUX_SCHEMA_NAMES["claim_status"]], store,
         )
+    issues += _schema_issues(
+        "history checkpoints", history,
+        schemas[AUX_SCHEMA_NAMES["history_checkpoints"]], store,
+    )
     collections = {}
     for key in SCHEMA_NAMES:
         if key == "contracts":
@@ -450,6 +497,8 @@ def _records_issues(document, activation, schemas, store):
     route_rows = _objects(document, "claimant_routing_cases", issues, "records")
     _unique_index(route_rows, "case_id", "claimant routing cases", issues)
     selected_route_pairs = {}
+    selected_route_claimants = {}
+    route_pair_owners = {}
     route_occurrences = set()
     for route in route_rows:
         occurrence_id = route.get("occurrence_id")
@@ -460,6 +509,11 @@ def _records_issues(document, activation, schemas, store):
                     % occurrence_id
                 )
             route_occurrences.add(occurrence_id)
+            if _string_lookup(identity_kind_by_id, occurrence_id) != "occurrence":
+                issues.append(
+                    "claimant route %s occurrence must resolve through the global typed identity registry"
+                    % route.get("case_id")
+                )
         route_assessments = route.get("claimant_assessments")
         if not isinstance(route_assessments, list):
             continue
@@ -477,6 +531,7 @@ def _records_issues(document, activation, schemas, store):
                 selected_route_pairs[occurrence_id] = (
                     selected.get("claim_attempt_id"), selected.get("orthability_assessment_id")
                 )
+                selected_route_claimants[occurrence_id] = selected.get("claimant_id")
         for row in route_assessments:
             if not isinstance(row, dict):
                 continue
@@ -489,6 +544,20 @@ def _records_issues(document, activation, schemas, store):
                     "claimant route %s claimant must resolve through the global typed identity registry"
                     % route.get("case_id")
                 )
+            pair = _string_tuple_key(
+                row.get("claim_attempt_id"), row.get("orthability_assessment_id")
+            )
+            if pair is not None and isinstance(occurrence_id, str):
+                owner_key = (occurrence_id, pair)
+                prior_owner = route_pair_owners.get(owner_key)
+                claimant_id = row.get("claimant_id")
+                if prior_owner is not None and prior_owner != claimant_id:
+                    issues.append(
+                        "claimant route %s reassigns one assessment pair across claimants"
+                        % route.get("case_id")
+                    )
+                elif isinstance(claimant_id, str):
+                    route_pair_owners[owner_key] = claimant_id
         residuals = _string_set(route.get("retained_residual_claimants"))
         inapplicable = _string_set(route.get("retained_inapplicable_claimants"))
         expected_residuals = {key for key, row in by_claimant.items() if row.get("result") == "indeterminate"}
@@ -552,6 +621,12 @@ def _records_issues(document, activation, schemas, store):
             value = event.get(field)
             if value is not None and _string_lookup(identity_kind_by_id, value) != kind:
                 issues.append("event %s %s must resolve through the global typed identity registry" % (event_id, field))
+        claimant_id = event.get("claimant_id")
+        if claimant_id is not None and _string_lookup(identity_kind_by_id, claimant_id) != "claimant":
+            issues.append(
+                "event %s claimant_id must resolve through the global typed identity registry"
+                % event_id
+            )
         provenance = _string_lookup(provenance_by_id, event.get("provenance_record_id"))
         if (provenance is None or provenance.get("immutable") is not True
                 or provenance.get("capture_mode") != event.get("capture_mode")
@@ -568,8 +643,22 @@ def _records_issues(document, activation, schemas, store):
                 or event.get("orthability_assessment_id") is not None):
             issues.append("event %s must capture the occurrence before claimant evaluation" % event_id)
         if event.get("event_type") == "orthability_assessed" and (
-                not event.get("claim_attempt_id") or not event.get("orthability_assessment_id")):
+                not event.get("claim_attempt_id") or not event.get("orthability_assessment_id")
+                or not event.get("claimant_id")):
             issues.append("event %s orthability assessment requires claimant identities" % event_id)
+        event_type = event.get("event_type")
+        if isinstance(event_type, str) and event_type in {
+                "orthability_assessed", "route_selected", "placement_committed"}:
+            occurrence_id = event.get("occurrence_id")
+            selected_pair = _string_lookup(selected_route_pairs, occurrence_id)
+            selected_claimant = _string_lookup(selected_route_claimants, occurrence_id)
+            event_pair = (event.get("claim_attempt_id"), event.get("orthability_assessment_id"))
+            if (selected_pair is None or event_pair != selected_pair
+                    or event.get("claimant_id") != selected_claimant):
+                issues.append(
+                    "event %s assessment, route, and placement binding must match the exact selected claimant pair"
+                    % event_id
+                )
         if event.get("event_type") == "route_selected":
             selected_pair = _string_lookup(selected_route_pairs, event.get("occurrence_id"))
             event_pair = (event.get("claim_attempt_id"), event.get("orthability_assessment_id"))
@@ -703,6 +792,110 @@ def _records_issues(document, activation, schemas, store):
             )
         else:
             resolved_source_by_subject[subject_id] = source
+
+    history_document = _mapping(history, "history checkpoints", issues)
+    history_chain = _mapping(
+        history_document.get("chain"), "history checkpoints.chain", issues
+    )
+    history_checkpoint_rows = _objects(
+        history_document, "checkpoints", issues, "history checkpoints"
+    )
+    history_checkpoint_by_id = _unique_index(
+        history_checkpoint_rows, "checkpoint_id", "history checkpoints", issues
+    )
+    checkpoint_time_by_id = {}
+    checkpoint_subject_by_id = {}
+    checkpoints_by_subject = defaultdict(list)
+    chain_projection = {
+        "chain_id": history_chain.get("chain_id"),
+        "chain_version": history_chain.get("chain_version"),
+        "digest_algorithm": history_chain.get("digest_algorithm"),
+    }
+    for checkpoint_id, checkpoint in history_checkpoint_by_id.items():
+        subject_id = checkpoint.get("subject_id")
+        captured_through = _parse_time(
+            checkpoint.get("captured_through"),
+            "history checkpoint %s captured_through" % checkpoint_id, issues,
+        )
+        if captured_through is not None:
+            checkpoint_time_by_id[checkpoint_id] = captured_through
+        if isinstance(subject_id, str):
+            checkpoint_subject_by_id[checkpoint_id] = subject_id
+            checkpoints_by_subject[subject_id].append(checkpoint)
+        subject = _string_lookup(subject_by_id, subject_id)
+        source = _string_lookup(resolved_source_by_subject, subject_id)
+        eligible_events = []
+        for event in events:
+            if event.get("orthing_id") != subject_id:
+                continue
+            occurred_at = _parse_time(
+                event.get("occurred_at"),
+                "history checkpoint %s event %s occurred_at"
+                % (checkpoint_id, event.get("event_id")), issues,
+            )
+            if captured_through is not None and occurred_at is not None and occurred_at <= captured_through:
+                eligible_events.append(event)
+        eligible_events = sorted(
+            eligible_events,
+            key=lambda event: (
+                event.get("sequence") if isinstance(event.get("sequence"), int) else 0,
+                event.get("event_id") if isinstance(event.get("event_id"), str) else "",
+            ),
+        )
+        expected_event_ids = {
+            event.get("event_id") for event in eligible_events
+            if isinstance(event.get("event_id"), str)
+        }
+        if _string_set(checkpoint.get("event_ids")) != expected_event_ids:
+            issues.append(
+                "history checkpoint %s must own the exact target events through its cutoff"
+                % checkpoint_id
+            )
+        payload = {
+            "chain": chain_projection,
+            "subject": subject,
+            "source_record": source,
+            "event_history": eligible_events,
+            "captured_through": checkpoint.get("captured_through"),
+            "predecessor_checkpoint_digest": checkpoint.get(
+                "predecessor_checkpoint_digest"
+            ),
+        }
+        canonical = json.dumps(
+            payload, sort_keys=True, separators=(",", ":")
+        ).encode("utf-8")
+        expected_digest = hashlib.sha256(canonical).hexdigest()
+        if checkpoint.get("checkpoint_digest") != expected_digest:
+            issues.append(
+                "history checkpoint %s digest must bind its authoritative subject, source, event cutoff, and predecessor"
+                % checkpoint_id
+            )
+
+    for subject_id, checkpoints in checkpoints_by_subject.items():
+        ordered = sorted(
+            checkpoints,
+            key=lambda checkpoint: (
+                checkpoint_time_by_id.get(checkpoint.get("checkpoint_id"), datetime.min.replace(tzinfo=timezone.utc)),
+                checkpoint.get("checkpoint_id") if isinstance(checkpoint.get("checkpoint_id"), str) else "",
+            ),
+        )
+        predecessor = None
+        prior_time = None
+        for checkpoint in ordered:
+            checkpoint_id = checkpoint.get("checkpoint_id")
+            checkpoint_time = checkpoint_time_by_id.get(checkpoint_id)
+            if prior_time is not None and checkpoint_time is not None and checkpoint_time <= prior_time:
+                issues.append(
+                    "history checkpoint chain for %s must advance strictly in time"
+                    % subject_id
+                )
+            if checkpoint.get("predecessor_checkpoint_digest") != predecessor:
+                issues.append(
+                    "history checkpoint %s must extend the prior immutable checkpoint digest"
+                    % checkpoint_id
+                )
+            predecessor = checkpoint.get("checkpoint_digest")
+            prior_time = checkpoint_time
 
     for contract in activation_contract_rows:
         authorship = contract.get("authorship")
@@ -839,27 +1032,79 @@ def _records_issues(document, activation, schemas, store):
                 issues.append("assessment %s has unresolved prior assessment" % aid)
             elif isinstance(aid, str):
                 prior_graph[aid].add(prior)
-        if assessment.get("target_history_digest_mode") != "derived-target-history-sha256-v2":
-            issues.append("assessment %s target history digest must declare the derived verification mode" % aid)
-        if targets and not unresolved_targets:
-            payload = []
-            for target in sorted(targets):
-                history_events = sorted(
-                    [event for event in events if event.get("orthing_id") == target],
-                    key=lambda event: (
-                        event.get("sequence") if isinstance(event.get("sequence"), int) else 0,
-                        event.get("event_id") if isinstance(event.get("event_id"), str) else "",
-                    ),
-                )
-                payload.append({
-                    "subject": subject_by_id[target],
-                    "source_record": resolved_source_by_subject.get(target),
-                    "event_history": history_events,
-                })
-            canonical = json.dumps(payload, sort_keys=True, separators=(",", ":")).encode("utf-8")
-            expected_digest = hashlib.sha256(canonical).hexdigest()
-            if assessment.get("target_history_digest") != expected_digest:
-                issues.append("assessment %s target history digest must be derived from authoritative subject, source, and immutable event history" % aid)
+                if _string_set(assessment_by_id[prior].get("target_orthing_ids")) != targets:
+                    issues.append(
+                        "assessment %s prior assessment %s must own the same exact target set"
+                        % (aid, prior)
+                    )
+        if assessment.get("target_history_digest_mode") != "immutable-checkpoint-chain-sha256-v3":
+            issues.append(
+                "assessment %s target history digest must declare the immutable checkpoint-chain mode"
+                % aid
+            )
+        checkpoint_ids = _string_set(assessment.get("target_history_checkpoint_ids"))
+        checkpoints = [
+            history_checkpoint_by_id[checkpoint_id]
+            for checkpoint_id in checkpoint_ids
+            if checkpoint_id in history_checkpoint_by_id
+        ]
+        checkpoint_subjects = {
+            checkpoint.get("subject_id") for checkpoint in checkpoints
+            if isinstance(checkpoint.get("subject_id"), str)
+        }
+        if len(checkpoints) != len(checkpoint_ids) or checkpoint_subjects != targets:
+            issues.append(
+                "assessment %s must resolve one authoritative history checkpoint for each exact target"
+                % aid
+            )
+        checkpoint_payload = []
+        for checkpoint in checkpoints:
+            checkpoint_id = checkpoint.get("checkpoint_id")
+            subject_id = checkpoint.get("subject_id")
+            checkpoint_time = checkpoint_time_by_id.get(checkpoint_id)
+            if assessed_at is not None and checkpoint_time is not None:
+                if checkpoint_time > assessed_at:
+                    issues.append(
+                        "assessment %s cannot use a history checkpoint after its t2 cutoff"
+                        % aid
+                    )
+                later_target_events = [
+                    event for event in events
+                    if event.get("orthing_id") == subject_id
+                    and (event_time := _parse_time(
+                        event.get("occurred_at"),
+                        "assessment %s target event %s occurred_at"
+                        % (aid, event.get("event_id")), issues,
+                    )) is not None
+                    and checkpoint_time < event_time <= assessed_at
+                ]
+                if later_target_events:
+                    issues.append(
+                        "assessment %s history checkpoint is stale at its t2 cutoff"
+                        % aid
+                    )
+            checkpoint_payload.append({
+                "checkpoint_id": checkpoint_id,
+                "subject_id": subject_id,
+                "captured_through": checkpoint.get("captured_through"),
+                "checkpoint_digest": checkpoint.get("checkpoint_digest"),
+            })
+        checkpoint_payload = sorted(
+            checkpoint_payload,
+            key=lambda row: (
+                row.get("subject_id") if isinstance(row.get("subject_id"), str) else "",
+                row.get("checkpoint_id") if isinstance(row.get("checkpoint_id"), str) else "",
+            ),
+        )
+        canonical = json.dumps(
+            checkpoint_payload, sort_keys=True, separators=(",", ":")
+        ).encode("utf-8")
+        expected_digest = hashlib.sha256(canonical).hexdigest()
+        if assessment.get("target_history_digest") != expected_digest:
+            issues.append(
+                "assessment %s target history digest must derive from its immutable checkpoint owners"
+                % aid
+            )
         issues += _evidence_timing_issues(aid, assessment.get("evidence_timing"), evidence_timing)
         proposals = _string_set(assessment.get("proposal_ids"))
         disposition = assessment.get("intervention_disposition")
@@ -936,6 +1181,11 @@ def _records_issues(document, activation, schemas, store):
             issues.append("run %s has unresolved material delta" % rid)
         if reopens and not deltas:
             issues.append("run %s reopens a subject without a material delta" % rid)
+        if not reopens <= closed_ids:
+            issues.append(
+                "run %s may reopen only subjects backed by actually closed assessments"
+                % rid
+            )
         for subject in anchors & closed_ids:
             if subject not in reopens or not deltas:
                 issues.append("run %s automatically requeues closed assessment %s without material delta" % (rid, subject))
@@ -950,6 +1200,21 @@ def _records_issues(document, activation, schemas, store):
         completed = _parse_time(run.get("completed_at"), "run %s completed_at" % rid, issues)
         if started and completed and started >= completed:
             issues.append("run %s must complete after it starts" % rid)
+        governing_owner_rows = run.get("governing_input_owners")
+        if not isinstance(governing_owner_rows, list):
+            governing_owner_rows = []
+        governing_owners = {
+            row.get("owner_role"): row.get("source_ref")
+            for row in governing_owner_rows
+            if isinstance(row, dict)
+            and isinstance(row.get("owner_role"), str)
+            and isinstance(row.get("source_ref"), str)
+        }
+        if set(governing_owners.values()) != _string_set(run.get("governing_versions")):
+            issues.append(
+                "run %s governing versions must equal its typed governing-input owners"
+                % rid
+            )
         for delta_id in deltas:
             delta = _string_lookup(delta_by_id, delta_id)
             if delta is None:
@@ -959,11 +1224,16 @@ def _records_issues(document, activation, schemas, store):
                 "material delta %s recorded_at" % delta_id, issues,
             )
             delta_source = delta.get("source_ref")
-            if (started and recorded_at and recorded_at > started) or (
-                    not isinstance(delta_source, str)
-                    or delta_source not in _string_set(run.get("governing_versions"))):
+            delta_kind = delta.get("delta_kind")
+            owner_role = delta.get("owner_role")
+            expected_owner_role = _string_lookup(DELTA_OWNER_ROLES, delta_kind)
+            if (started and recorded_at and recorded_at >= started) or (
+                    expected_owner_role is None
+                    or owner_role != expected_owner_role
+                    or not isinstance(delta_source, str)
+                    or _string_lookup(governing_owners, owner_role) != delta_source):
                 issues.append(
-                    "run %s material delta %s must be recorded by run start and resolve to a governing input"
+                    "run %s material delta %s must strictly predate the run and resolve through its typed governing owner"
                     % (rid, delta_id)
                 )
         outputs = sorted(_string_set(run.get("output_ids")))
@@ -1016,6 +1286,20 @@ def _records_issues(document, activation, schemas, store):
                 % (output_id, expected_run)
             )
 
+    for run in runs:
+        rid = run.get("somnus_run_id")
+        reopens = _string_set(run.get("reopens_subject_ids"))
+        reopened_priors = set()
+        for output_id in _string_set(run.get("output_ids")):
+            output = _string_lookup(assessment_by_id, output_id)
+            if output is not None:
+                reopened_priors |= _string_set(output.get("prior_assessment_ids"))
+        if reopened_priors != reopens:
+            issues.append(
+                "run %s reopened subjects must equal the exact prior assessments owned by its outputs"
+                % rid
+            )
+
     source_family_rows = _objects(document, "source_family_records", issues, "records")
     source_family_by_id = _unique_index(
         source_family_rows, "source_family_id", "source family registry", issues
@@ -1060,6 +1344,20 @@ def _records_issues(document, activation, schemas, store):
             )
         support = report.get("supporting_occurrences") if isinstance(report.get("supporting_occurrences"), list) else []
         support = [row for row in support if isinstance(row, dict)]
+        support_subjects = {
+            row.get("orthing_id") for row in support
+            if isinstance(row.get("orthing_id"), str)
+        }
+        if report_run is not None:
+            declared_comparators = _string_set(
+                report_run.get("historical_comparator_ids")
+            )
+            actual_comparators = support_subjects & declared_comparators
+            if actual_comparators != declared_comparators:
+                issues.append(
+                    "recurrence report %s must use every declared historical comparator"
+                    % report_id
+                )
         for row in support:
             support_record = _string_lookup(support_record_by_id, row.get("support_record_id"))
             if support_record is None or support_record != row:
@@ -1255,6 +1553,11 @@ def _records_issues(document, activation, schemas, store):
             issues.append("proposal cannot self-authorize; authorization source must be independent governance")
         proposal = _string_lookup(proposal_by_id, auth.get("proposal_id"))
         if proposal is not None:
+            if proposal.get("status") != "proposed" and auth.get("decision") == "authorized":
+                issues.append(
+                    "authorization %s cannot authorize a rejected or withdrawn proposal"
+                    % auth.get("authorization_id")
+                )
             proposed_at = _parse_time(
                 proposal.get("proposed_at"), "proposal %s proposed_at" % proposal.get("proposal_id"), issues
             )
@@ -1280,11 +1583,15 @@ def _records_issues(document, activation, schemas, store):
             issues.append("application %s authorization reference must resolve" % application_id)
         elif authorization.get("proposal_id") != application.get("proposal_id"):
             issues.append("application authorization must govern the same proposal")
-        elif application.get("status") == "applied" and authorization.get("decision") != "authorized":
-            issues.append("application cannot apply under rejected authorization")
+        elif authorization.get("decision") != "authorized":
+            issues.append(
+                "application attempt cannot exist under rejected authorization"
+            )
+        if proposal is not None and proposal.get("status") != "proposed":
+            issues.append(
+                "application attempt requires a non-rejected active proposal"
+            )
         if application.get("status") == "applied":
-            if proposal is not None and proposal.get("status") != "proposed":
-                issues.append("applied mutation requires a non-rejected active proposal")
             if application.get("outcome_evaluation_required") is not True or application_id not in outcome_application_ids:
                 issues.append("applied mutation requires later outcome evaluation")
             if not _string_member(successor_by_id, application.get("successor_state_id")):
@@ -1325,6 +1632,19 @@ def _records_issues(document, activation, schemas, store):
         if proposal is None:
             issues.append("successor %s has unresolved proposal owner" % successor_id)
         application_id = successor.get("application_id")
+        successor_time = _parse_time(
+            successor.get("created_at"),
+            "successor %s created_at" % successor_id, issues,
+        )
+        proposed_at = _parse_time(
+            proposal.get("proposed_at") if proposal is not None else None,
+            "successor %s owning proposal time" % successor_id, issues,
+        )
+        if successor_time and proposed_at and successor_time < proposed_at:
+            issues.append(
+                "successor %s cannot predate its owning proposal"
+                % successor_id
+            )
         if successor.get("status") == "materialized":
             application = _string_lookup(application_by_id, application_id)
             if application is None or application.get("successor_state_id") != successor_id:
@@ -1555,10 +1875,30 @@ def _inventory_issues(document, schemas, store):
                 "automatic_authorization", "automatic_execution",
                 "automatic_writeback", "historical_rewrite")):
             issues.append("inventory candidate %s authority boundary must prohibit authorization, execution, writeback, and historical rewrite" % row.get("candidate_id"))
-        authority_text = row.get("authority_limit")
-        if (isinstance(authority_text, str) and "automatic" in authority_text.lower()
-                and any(token in authority_text.lower() for token in ("authorized", "allowed", "permitted"))):
-            issues.append("inventory candidate %s prose contradicts its structured authority boundary" % row.get("candidate_id"))
+        authority_limit = _mapping(
+            row.get("authority_limit"),
+            "inventory candidate %s authority_limit" % row.get("candidate_id"), issues,
+        )
+        if (authority_limit.get("scope") != "bounded record or proposal production only"
+                or authority_limit.get("operator_request_authorizes_mutation") is not False
+                or _string_set(authority_limit.get("prohibited_operations"))
+                != PROHIBITED_CANDIDATE_OPERATIONS):
+            issues.append(
+                "inventory candidate %s must preserve the exact structured prohibited-operation boundary"
+                % row.get("candidate_id")
+            )
+        downstream_owner = _mapping(
+            row.get("downstream_owner"),
+            "inventory candidate %s downstream_owner" % row.get("candidate_id"), issues,
+        )
+        if (downstream_owner.get("ownership_scope") != "external/downstream"
+                or downstream_owner.get("local_runtime_ownership") != "prohibited"
+                or not isinstance(downstream_owner.get("owner_role"), str)
+                or not downstream_owner.get("owner_role")):
+            issues.append(
+                "inventory candidate %s must bind a structured external/downstream owner"
+                % row.get("candidate_id")
+            )
     return issues
 
 
@@ -1580,15 +1920,26 @@ def _adoption_issues(document, schemas, store):
     actuator = _mapping(document.get("actuator"), "adoption.actuator", issues)
     if actuator.get("role") != "first-class downstream actuator" or actuator.get("ontology_center") is not False or actuator.get("unrelated_accessory") is not False:
         issues.append("writeback must be a first-class downstream actuator, not the ontology center or unrelated accessory")
-    expected_stages = {"proposal", "review", "approve_or_reject", "validation", "dry_run", "apply_or_revert"}
-    if _string_set(actuator.get("stages")) != expected_stages:
+    if actuator.get("stages") != ORDERED_ACTUATOR_STAGES:
         issues.append("writeback actuator must preserve proposal, review, decision, validation, dry-run, and apply/revert stages")
     source = _mapping(document.get("source_verification"), "adoption.source_verification", issues)
     if (any(source.get(field) != "pending" for field in ("source_code", "license", "commit", "tests"))
             or source.get("implementation_claims") != "externally supplied and not repository-verified"):
         issues.append("Hermes implementation claims must remain pending source verification")
-    if document.get("predecessor_characterization") != "coarser-or-more-implicit orthing oriented toward source interpretation, proposal generation, destination selection, and safe writeback":
-        issues.append("Hermes predecessor characterization must remain neutral and source-qualified")
+    predecessor = _mapping(
+        document.get("predecessor_classification"),
+        "adoption.predecessor_classification", issues,
+    )
+    if (predecessor.get("relative_granularity")
+            != EXPECTED_PREDECESSOR_CLASSIFICATION["relative_granularity"]
+            or _string_set(predecessor.get("scope"))
+            != set(EXPECTED_PREDECESSOR_CLASSIFICATION["scope"])):
+        issues.append(
+            "Hermes predecessor classification must remain structured, neutral, and source-qualified"
+        )
+    if (not isinstance(document.get("predecessor_characterization"), str)
+            or not document.get("predecessor_characterization")):
+        issues.append("Hermes predecessor explanatory characterization must be nonempty")
     for field in ("automatic_proposal", "automatic authorization", "automatic application", "automatic writeback"):
         if document.get(field) != "prohibited":
             issues.append("%s must be prohibited" % field)
@@ -1600,8 +1951,8 @@ def _adoption_issues(document, schemas, store):
     }
     if _string_set(subsumption.get("ordinary_targets")) != expected_ordinary:
         issues.append("writeback adoption profile must preserve the complete ordinary target vocabulary")
-    if not expected_governing <= _string_set(subsumption.get("governing_targets")):
-        issues.append("writeback adoption profile must preserve the complete governing target vocabulary")
+    if _string_set(subsumption.get("governing_targets")) != expected_governing:
+        issues.append("writeback adoption profile must preserve the exact bounded governing target vocabulary")
     expected_outcomes = {"no_change", "investigation", "evidence_request", "preserve_residual", "one_proposal", "alternative_proposals"}
     expected_records = {"somnic_assessment", "intervention_disposition", "mutation_proposal", "mutation_authorization", "applied_mutation", "later_outcome_evaluation"}
     expected_times = {"t1_waking_orthing", "t2_somnic_assessment", "t3_proposal_and_authorization", "t4_application_and_successor_state", "t5_outcome_evaluation"}
@@ -1804,7 +2155,7 @@ def _manuscript_issues(text, claim_status):
     return issues
 
 
-def collect_issues(activation, records, inventory, adoption, collective,
+def collect_issues(activation, records, history, inventory, adoption, collective,
                    decision_text, manuscript_text, schemas):
     store = {}
     for name, schema in schemas.items():
@@ -1816,7 +2167,7 @@ def collect_issues(activation, records, inventory, adoption, collective,
     else:
         issues.append("activation fixture document must be an object")
     if isinstance(records, dict):
-        issues += _records_issues(records, activation, schemas, store)
+        issues += _records_issues(records, activation, history, schemas, store)
     else:
         issues.append("somnus record fixture document must be an object")
     issues += _inventory_issues(inventory, schemas, store)
@@ -1841,7 +2192,9 @@ def collect_issues(activation, records, inventory, adoption, collective,
 def main():
     inputs = []
     preload_issues = []
-    for path in (ACTIVATION_PATH, RECORDS_PATH, INVENTORY_PATH, ADOPTION_PATH, COLLECTIVE_PATH):
+    for path in (
+            ACTIVATION_PATH, RECORDS_PATH, HISTORY_PATH, INVENTORY_PATH,
+            ADOPTION_PATH, COLLECTIVE_PATH):
         value, issue = _load_yaml(path)
         inputs.append(value)
         if issue:

@@ -28,7 +28,18 @@
             "type": "array", "minItems": 1, "uniqueItems": true,
             "items": {"enum": ["occurrence_apprehended", "orthability_assessed", "candidate_set_recorded", "route_selected", "placement_committed", "residual_recorded", "orthing_closed", "orthing_abandoned", "orthing_reopened", "somnus_assessment_emitted", "proposal_emitted", "none"]}
           },
-          "authority_limit": {"type": "string", "minLength": 1},
+          "authority_limit": {
+            "type": "object", "additionalProperties": false,
+            "required": ["scope", "operator_request_authorizes_mutation", "prohibited_operations"],
+            "properties": {
+              "scope": {"const": "bounded record or proposal production only"},
+              "operator_request_authorizes_mutation": {"const": false},
+              "prohibited_operations": {
+                "type": "array", "minItems": 5, "maxItems": 5, "uniqueItems": true,
+                "items": {"enum": ["schedule_runtime", "execute_mutation", "promote_governance", "close_governance_finding", "mutate_governance"]}
+              }
+            }
+          },
           "authority_boundary": {
             "type": "object", "additionalProperties": false,
             "required": ["scope", "automatic_authorization", "automatic_execution", "automatic_writeback", "historical_rewrite"],
@@ -41,7 +52,15 @@
             }
           },
           "residual_behavior": {"type": "string", "minLength": 1},
-          "downstream_owner": {"type": "string", "minLength": 1},
+          "downstream_owner": {
+            "type": "object", "additionalProperties": false,
+            "required": ["ownership_scope", "owner_role", "local_runtime_ownership"],
+            "properties": {
+              "ownership_scope": {"const": "external/downstream"},
+              "owner_role": {"type": "string", "minLength": 1},
+              "local_runtime_ownership": {"const": "prohibited"}
+            }
+          },
           "non_claims": {"$ref": "#/$defs/non_claim_boundaries"},
           "non_claim_boundaries": {
             "$ref": "#/$defs/non_claim_boundaries"

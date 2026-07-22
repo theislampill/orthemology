@@ -129,7 +129,7 @@ source_records:
 - {source_record_id: fixture-subject-ORTH-OPP-003, subject_id: ORTH-OPP-003, record_kind: fixture_subject, occurred_at: '2026-04-01T18:00:00Z', immutable: true}
 - {source_record_id: fixture-subject-ORTH-OPP-004, subject_id: ORTH-OPP-004, record_kind: fixture_subject, occurred_at: '2026-05-01T18:00:00Z', immutable: true}
 material_deltas:
-- {material_delta_id: DELTA-CONTRACT-0.1.1, delta_kind: contract_revision, recorded_at: '2026-07-23T18:00:00Z', source_ref: recurrence-contract@0.1.1}
+- {material_delta_id: DELTA-CONTRACT-0.1.1, delta_kind: contract_revision, owner_role: operation_contract, recorded_at: '2026-07-23T18:00:00Z', source_ref: recurrence-contract@0.1.1}
 source_family_records:
 - {source_family_id: corpus-A, provenance_ref: PROV-LIVE-001}
 input_family_records:
@@ -176,8 +176,9 @@ orthing_events:
   session_id: SESSION-001
   episode_id: EP-001
   occurrence_id: OCC-001
-  claim_attempt_id: CA-001
-  orthability_assessment_id: OA-001
+  claim_attempt_id: CA-002
+  orthability_assessment_id: OA-002
+  claimant_id: claimant-d
   orthing_id: ORTH-001
   event_type: orthability_assessed
   occurred_at: '2026-07-20T10:01:00Z'
@@ -196,6 +197,7 @@ orthing_events:
   occurrence_id: OCC-001
   claim_attempt_id: CA-002
   orthability_assessment_id: OA-002
+  claimant_id: claimant-d
   orthing_id: ORTH-001
   event_type: route_selected
   occurred_at: '2026-07-20T10:02:00Z'
@@ -232,6 +234,7 @@ orthing_events:
   occurrence_id: OCC-002
   claim_attempt_id: CA-004
   orthability_assessment_id: OA-004
+  claimant_id: claimant-f
   orthing_id: ORTH-002
   event_type: orthability_assessed
   occurred_at: '2026-07-20T10:04:20Z'
@@ -250,6 +253,7 @@ orthing_events:
   occurrence_id: OCC-002
   claim_attempt_id: CA-004
   orthability_assessment_id: OA-004
+  claimant_id: claimant-f
   orthing_id: ORTH-002
   event_type: route_selected
   occurred_at: '2026-07-20T10:04:40Z'
@@ -268,6 +272,7 @@ orthing_events:
   occurrence_id: OCC-002
   claim_attempt_id: CA-004
   orthability_assessment_id: OA-004
+  claimant_id: claimant-f
   orthing_id: ORTH-002
   event_type: placement_committed
   occurred_at: '2026-07-20T10:05:00Z'
@@ -345,6 +350,7 @@ somnus_runs:
   historical_comparators_reopened: false
   selection_rule: newly unassessed waking orthings only
   governing_versions: [analysis-retro@1, recurrence-contract@0.1.0]
+  governing_input_owners: [{owner_role: analysis, source_ref: analysis-retro@1}, {owner_role: operation_contract, source_ref: recurrence-contract@0.1.0}]
   material_delta_ids: []
   reopens_subject_ids: []
   idempotency_key: recurrence-0.1.0:ORTH-NEW-001:LEDGER-REV-001
@@ -361,6 +367,7 @@ somnus_runs:
   historical_comparators_reopened: false
   selection_rule: exclude closed somnic assessments absent material delta
   governing_versions: [analysis-retro@1, recurrence-contract@0.1.0]
+  governing_input_owners: [{owner_role: analysis, source_ref: analysis-retro@1}, {owner_role: operation_contract, source_ref: recurrence-contract@0.1.0}]
   material_delta_ids: []
   reopens_subject_ids: []
   idempotency_key: recurrence-0.1.0:ORTH-NEW-002:LEDGER-REV-002
@@ -377,6 +384,7 @@ somnus_runs:
   historical_comparators_reopened: false
   selection_rule: explicit material-delta reopening only
   governing_versions: [analysis-retro@1, recurrence-contract@0.1.1]
+  governing_input_owners: [{owner_role: analysis, source_ref: analysis-retro@1}, {owner_role: operation_contract, source_ref: recurrence-contract@0.1.1}]
   material_delta_ids: [DELTA-CONTRACT-0.1.1]
   reopens_subject_ids: [SA-CLOSED-001]
   idempotency_key: recurrence-0.1.1:SA-CLOSED-001:DELTA-CONTRACT-0.1.1
@@ -397,8 +405,9 @@ somnic_assessments:
   confidence: medium
   defect_loci: &eight_loci {metaortheme_adequacy: undetermined, activation_contract_adequacy: undetermined, orthability_evaluator_accuracy: undetermined, metaorthemma_binding_correctness: undetermined, execution_fidelity: undetermined, evidence_adequacy: adequate, placement_correctness: not_assessed, closure_adequacy: not_assessed}
   evidence_timing: {observed_at_t1: [E-T1-OBSERVED], used_at_t1: [E-T1-USED], indexed_unused_at_t1: [E-T1-UNUSED], discovered_after_t1: [E-T2-DISCOVERED]}
-  target_history_digest: 0f59d892f8dd349da688bcbf550f005321d035c607292cd00e8685ea3967fbf2
-  target_history_digest_mode: derived-target-history-sha256-v2
+  target_history_checkpoint_ids: [CP-ORTH-NEW-001-T2, CP-ORTH-OLD-001-T2]
+  target_history_digest: 74e396b51fa08b9133a25fdc9217a218223be570e9125815b993d242b2b2ffc5
+  target_history_digest_mode: immutable-checkpoint-chain-sha256-v3
   target_history_mutated: false
   retroactive_conformity_rewrite: false
   closure_status: closed
@@ -415,12 +424,14 @@ somnic_assessments:
   meta_orthability_assessment_id: MOA-EVIDENCE-TIMING-001
   assessment_target: t1_reasonableness
   target_orthing_ids: [ORTH-001]
+  target_history_checkpoint_ids: [CP-ORTH-001-T2]
   evidence_timing: {observed_at_t1: [E-T1-OBSERVED], used_at_t1: [E-T1-USED], indexed_unused_at_t1: [E-T1-UNUSED], discovered_after_t1: [E-T2-DISCOVERED]}
-  target_history_digest: 0c2b7fa613c6d70ebe7c3f98ad1f3a86c0cb49c0ededf53d7d83b0b72c5e43c7
+  target_history_digest: 8f6b748b56c9b9b5bf471aa08abc19ec2f7ae2d4b5062de0ef4a12540401500b
 - <<: *assessment_base
   assessment_id: SA-CORRECT-DEFECTIVE-001
   meta_orthability_assessment_id: MOA-CORRECT-DEFECTIVE-001
   target_orthing_ids: [ORTH-CORRECT-DEFECTIVE-001]
+  target_history_checkpoint_ids: [CP-ORTH-CORRECT-DEFECTIVE-001-T2]
   assessment_target: pathway
   assessment_result: defective
   defect_loci: {metaortheme_adequacy: adequate, activation_contract_adequacy: defective, orthability_evaluator_accuracy: adequate, metaorthemma_binding_correctness: adequate, execution_fidelity: adequate, evidence_adequacy: adequate, placement_correctness: adequate, closure_adequacy: adequate}
@@ -431,44 +442,48 @@ somnic_assessments:
   authorization_refs: [AUTH-INDEPENDENT-001]
   application_refs: [APP-APPLIED-001]
   outcome_evaluation_refs: [OUTCOME-001]
-  target_history_digest: 409c3ed7d8ee5c7f04bc31d21bba7ea5eb682de81a6f2536d572123556300967
+  target_history_digest: 6a44d109457542b54a27185714c89f4719bcf27f9a95f0e7504fc5ca2cc557c3
 - <<: *assessment_base
   assessment_id: SA-CLOSED-001
   meta_orthability_assessment_id: MOA-CLOSED-001
   target_orthing_ids: [ORTH-OLD-001]
+  target_history_checkpoint_ids: [CP-ORTH-OLD-001-T2]
   closure_status: closed
   assessment_result: reasonable
   intervention_disposition: no_change
-  target_history_digest: 30e47df2d9218a6a35ea6da6eebcd14c9ce14b38ea201af38cfad94870068b01
+  target_history_digest: 63572526dd49207750757a8bba50e506c61c1b2dbb8b8879331011a9b1b96b3d
 - <<: *assessment_base
   assessment_id: SA-NO-CHANGE-001
   meta_orthability_assessment_id: MOA-NO-CHANGE-001
   target_orthing_ids: [ORTH-NO-CHANGE-001]
+  target_history_checkpoint_ids: [CP-ORTH-NO-CHANGE-001-T2]
   assessment_result: no_change
   intervention_disposition: no_change
   proposal_ids: []
-  target_history_digest: 31dd4142f6d0e9b0137471862c1f1489b36053fea809bdab1a7a44cd21901ac8
+  target_history_digest: 1c52713b08a05a3fdf23bfd2fb0a3f7d9718168187ffc98d69d81fb8e10c337c
 - <<: *assessment_base
   assessment_id: SA-ALTERNATIVES-001
   meta_orthability_assessment_id: MOA-ALTERNATIVES-001
   target_orthing_ids: [ORTH-ALTERNATIVES-001]
+  target_history_checkpoint_ids: [CP-ORTH-ALTERNATIVES-001-T2]
   intervention_disposition: alternative_proposals
   proposal_ids: [PROP-MEMORY-001, PROP-SKILL-001]
   authorization_refs: [AUTH-FAILED-001]
   application_refs: [APP-FAILED-001]
   outcome_evaluation_refs: []
-  target_history_digest: 999d4b842a1389aaa121dd3d811b391801fd20bb8a08ae83605c398de0b6e9f4
+  target_history_digest: 04db50b6f3f0c1046f1b131834a99e05708d1c16e2a1919e6c7238fd9b49aafe
 - <<: *assessment_base
   assessment_id: SA-REOPENED-001
   meta_orthability_assessment_id: MOA-REOPENED-001
   somnus_run_id: RUN-REOPEN-001
   target_orthing_ids: [ORTH-OLD-001]
+  target_history_checkpoint_ids: [CP-ORTH-OLD-001-REOPEN-T2]
   prior_assessment_ids: [SA-CLOSED-001]
   t2_configuration: {analysis: analysis-retro@1, metaortheme: recurrence-standard@1, metaorthemma: recurrence-binding@1, evaluator: recurrence-evaluator@0.1.1, assessed_at: '2026-07-23T19:00:01Z'}
   closure_status: open
   intervention_disposition: preserve_residual
   proposal_ids: []
-  target_history_digest: 30e47df2d9218a6a35ea6da6eebcd14c9ce14b38ea201af38cfad94870068b01
+  target_history_digest: 147d89f5431f96a344772ae554559efa59938ba8d0de9f4f7c951a097fe8155c
 recurrence_reports:
 - recurrence_report_id: RR-001
   somnus_run_id: RUN-RECURRENCE-001

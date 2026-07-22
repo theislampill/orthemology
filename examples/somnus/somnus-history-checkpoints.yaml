@@ -1,0 +1,56 @@
+schema: orthemology-somnus-history-checkpoints-v1
+chain:
+  chain_id: somnus-target-history
+  chain_version: 1.0.0
+  digest_algorithm: sha256-canonical-json-v1
+  immutable: true
+checkpoints:
+- checkpoint_id: CP-ORTH-001-T2
+  subject_id: ORTH-001
+  captured_through: '2026-07-21T19:00:01Z'
+  event_ids: [EV-WAKE-001, EV-WAKE-001-ASSESS, EV-WAKE-001-ROUTE]
+  predecessor_checkpoint_digest: null
+  checkpoint_digest: 164c866060f194fa29d0bc88497261f1e629d6ebec9837c8a7156667725569fa
+  immutable: true
+- checkpoint_id: CP-ORTH-NEW-001-T2
+  subject_id: ORTH-NEW-001
+  captured_through: '2026-07-21T19:00:01Z'
+  event_ids: []
+  predecessor_checkpoint_digest: null
+  checkpoint_digest: 938bdb0333eee15cc41c134ade1c156a4a02895ce2f21bb11207d0d7475a978b
+  immutable: true
+- checkpoint_id: CP-ORTH-OLD-001-T2
+  subject_id: ORTH-OLD-001
+  captured_through: '2026-07-21T19:00:01Z'
+  event_ids: []
+  predecessor_checkpoint_digest: null
+  checkpoint_digest: 1341aae27ca735966a2d8713049004ac336530c6ffe3f63f8d78f8b9237c4214
+  immutable: true
+- checkpoint_id: CP-ORTH-OLD-001-REOPEN-T2
+  subject_id: ORTH-OLD-001
+  captured_through: '2026-07-23T19:00:01Z'
+  event_ids: []
+  predecessor_checkpoint_digest: 1341aae27ca735966a2d8713049004ac336530c6ffe3f63f8d78f8b9237c4214
+  checkpoint_digest: 226ac67d8f0ae93cf656d2e99f46e4fc1a324e628eb424ceb0a65e1edcfaa5f9
+  immutable: true
+- checkpoint_id: CP-ORTH-CORRECT-DEFECTIVE-001-T2
+  subject_id: ORTH-CORRECT-DEFECTIVE-001
+  captured_through: '2026-07-21T19:00:01Z'
+  event_ids: []
+  predecessor_checkpoint_digest: null
+  checkpoint_digest: f307b218ccb004206e822853ee3e4e04d8c953de5f21b3acb1fe177e914c79c6
+  immutable: true
+- checkpoint_id: CP-ORTH-NO-CHANGE-001-T2
+  subject_id: ORTH-NO-CHANGE-001
+  captured_through: '2026-07-21T19:00:01Z'
+  event_ids: []
+  predecessor_checkpoint_digest: null
+  checkpoint_digest: 18ccf620ea0ab84ebe452be02023677024469128c557e1cc95137ac2108f81fd
+  immutable: true
+- checkpoint_id: CP-ORTH-ALTERNATIVES-001-T2
+  subject_id: ORTH-ALTERNATIVES-001
+  captured_through: '2026-07-21T19:00:01Z'
+  event_ids: []
+  predecessor_checkpoint_digest: null
+  checkpoint_digest: 9d392170e777fe0fd50d151bf9da0f8fc35a3c6177f7ffe826fcbb06a1fe0ddf
+  immutable: true

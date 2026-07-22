@@ -77,9 +77,9 @@ authored:
     pdfs: reproducibly built and visually inspected draft artifacts
     legal_publication: open on license, identity, peer review, and external submission
 derived:
-  source_tree_digest: d35b98c3c403353f93aaeaf7db59f3cb875482945ee51bea995a7cb50c2e23df
+  source_tree_digest: 9e8d6959577e13b9698e41d3991097d9e8580b67193c32d3c89fde820b245783
   source_tree_digest_policy: docs/project-state-inputs.yaml
-  tracked_files: 622
+  tracked_files: 624
   decision_ids:
   - '0001'
   - '0002'
@@ -140,10 +140,11 @@ derived:
   - somnic-assessment.schema.json
   - somnus-candidate-inventory.schema.json
   - somnus-claim-status.schema.json
+  - somnus-history-checkpoints.schema.json
   - somnus-record-fixtures.schema.json
   - somnus-run.schema.json
   - verdict-record.schema.json
-  schema_count: 25
+  schema_count: 26
   example_json_count: 9
   example_markdown_count: 2
   validator_scripts:

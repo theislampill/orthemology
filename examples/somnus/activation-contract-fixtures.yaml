@@ -197,7 +197,7 @@ fixture_outcomes:
 - fixture_id: ACT-OVERLAP-001
   fixture_class: overlap
   occurrence: Compare a data model and its explicit theological claim about divine unity.
-  observed_indicators: [tawhid, divine-unity]
+  observed_indicators: [tawhid, divine-unity, schema]
   observed_exclusions: []
   property_findings:
     satisfied: [theological-proposition, worldview-bearing-task, data-model-operation]
@@ -220,7 +220,7 @@ fixture_outcomes:
     evaluator_version: 1.0.0
     result: applicable
     property_findings: {satisfied: [data-model-operation], absent: [], indeterminate: []}
-    observed_indicators: [tawhid, divine-unity]
+    observed_indicators: [schema]
     observed_exclusions: []
   conflict:
     conflict_id: ACT-CONFLICT-001

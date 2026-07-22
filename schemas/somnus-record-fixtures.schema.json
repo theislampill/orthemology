@@ -179,10 +179,11 @@
     },
     "delta": {
       "type": "object", "additionalProperties": false,
-      "required": ["material_delta_id", "delta_kind", "recorded_at", "source_ref"],
+      "required": ["material_delta_id", "delta_kind", "owner_role", "recorded_at", "source_ref"],
       "properties": {
         "material_delta_id": {"type": "string", "minLength": 1},
-        "delta_kind": {"type": "string", "minLength": 1},
+        "delta_kind": {"enum": ["analysis_revision", "contract_revision", "selection_rule_revision", "evaluator_revision", "metaortheme_revision", "contradicting_evidence", "later_outcome", "assessment_conflict", "expiry", "governance_action"]},
+        "owner_role": {"enum": ["analysis", "operation_contract", "selection_rule", "evaluator", "metaortheme", "evidence", "outcome", "assessment", "expiry", "governance"]},
         "recorded_at": {"type": "string", "format": "date-time"},
         "source_ref": {"type": "string", "minLength": 1}
       }

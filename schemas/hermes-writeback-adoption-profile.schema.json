@@ -4,7 +4,7 @@
   "title": "Outline-only downstream writeback adoption profile",
   "type": "object",
   "additionalProperties": false,
-  "required": ["schema", "status", "execution", "runtime owner", "upstream adoption", "claim_status", "source_verification", "predecessor_characterization", "subsumption", "actuator", "record_separation", "proposal_provenance_modes", "temporal_roles", "automatic_proposal", "automatic authorization", "automatic application", "automatic writeback", "non_claims"],
+  "required": ["schema", "status", "execution", "runtime owner", "upstream adoption", "claim_status", "source_verification", "predecessor_classification", "predecessor_characterization", "subsumption", "actuator", "record_separation", "proposal_provenance_modes", "temporal_roles", "automatic_proposal", "automatic authorization", "automatic application", "automatic writeback", "non_claims"],
   "properties": {
     "schema": {"const": "orthemology-hermes-writeback-adoption-profile-v1"},
     "status": {"const": "outline-only"},
@@ -23,14 +23,25 @@
         "implementation_claims": {"const": "externally supplied and not repository-verified"}
       }
     },
-    "predecessor_characterization": {"const": "coarser-or-more-implicit orthing oriented toward source interpretation, proposal generation, destination selection, and safe writeback"},
+    "predecessor_classification": {
+      "type": "object", "additionalProperties": false,
+      "required": ["relative_granularity", "scope"],
+      "properties": {
+        "relative_granularity": {"const": "coarser_or_more_implicit"},
+        "scope": {
+          "type": "array", "minItems": 4, "maxItems": 4, "uniqueItems": true,
+          "items": {"enum": ["source_interpretation", "proposal_generation", "destination_selection", "safe_writeback"]}
+        }
+      }
+    },
+    "predecessor_characterization": {"type": "string", "minLength": 1},
     "subsumption": {
       "type": "object", "additionalProperties": false,
       "required": ["ordinary_reflective_writeback_question_is_first_class", "ordinary_targets", "governing_targets", "outcomes"],
       "properties": {
         "ordinary_reflective_writeback_question_is_first_class": {"const": true},
         "ordinary_targets": {"type": "array", "minItems": 4, "uniqueItems": true, "items": {"enum": ["memory", "user_state", "fact", "skill"]}},
-        "governing_targets": {"type": "array", "minItems": 11, "uniqueItems": true, "items": {"type": "string", "minLength": 1}},
+        "governing_targets": {"type": "array", "minItems": 11, "maxItems": 11, "uniqueItems": true, "items": {"enum": ["activation_contract", "orthability_evaluator", "selector", "metaortheme", "metaorthemma_binding_rule", "evidence_requirement", "closure_rule", "residual_rule", "fixture", "provenance", "documentation"]}},
         "outcomes": {"type": "array", "minItems": 6, "maxItems": 6, "uniqueItems": true, "items": {"enum": ["no_change", "investigation", "evidence_request", "preserve_residual", "one_proposal", "alternative_proposals"]}}
       }
     },
@@ -43,7 +54,15 @@
         "unrelated_accessory": {"const": false},
         "stages": {
           "type": "array", "minItems": 6, "maxItems": 6, "uniqueItems": true,
-          "items": {"enum": ["proposal", "review", "approve_or_reject", "validation", "dry_run", "apply_or_revert"]}
+          "prefixItems": [
+            {"const": "proposal"},
+            {"const": "review"},
+            {"const": "approve_or_reject"},
+            {"const": "validation"},
+            {"const": "dry_run"},
+            {"const": "apply_or_revert"}
+          ],
+          "items": false
         }
       }
     },

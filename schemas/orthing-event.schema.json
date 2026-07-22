@@ -7,11 +7,13 @@
   "required": ["event_id", "sequence", "session_id", "episode_id", "occurrence_id", "orthing_id", "event_type", "occurred_at", "actor_id", "capture_mode", "provenance_record_id", "source_revision", "privacy_source_disposition", "governing_versions", "evidence_timing", "append_only"],
   "allOf": [
     {
-      "if": {"properties": {"event_type": {"const": "orthability_assessed"}}, "required": ["event_type"]},
+      "if": {"properties": {"event_type": {"enum": ["orthability_assessed", "route_selected", "placement_committed"]}}, "required": ["event_type"]},
       "then": {
+        "required": ["claim_attempt_id", "orthability_assessment_id", "claimant_id"],
         "properties": {
           "claim_attempt_id": {"type": "string", "minLength": 1},
-          "orthability_assessment_id": {"type": "string", "minLength": 1}
+          "orthability_assessment_id": {"type": "string", "minLength": 1},
+          "claimant_id": {"type": "string", "minLength": 1}
         }
       }
     }
@@ -24,6 +26,7 @@
     "occurrence_id": {"type": "string", "minLength": 1},
     "claim_attempt_id": {"type": ["string", "null"], "minLength": 1},
     "orthability_assessment_id": {"type": ["string", "null"], "minLength": 1},
+    "claimant_id": {"type": ["string", "null"], "minLength": 1},
     "orthing_id": {"type": "string", "minLength": 1},
     "event_type": {"enum": ["occurrence_apprehended", "orthability_assessed", "candidate_set_recorded", "route_selected", "placement_committed", "residual_recorded", "orthing_closed", "orthing_abandoned", "orthing_reopened", "somnus_assessment_emitted", "proposal_emitted"]},
     "occurred_at": {"type": "string", "format": "date-time"},

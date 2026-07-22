@@ -4,7 +4,7 @@
   "title": "Append-only somnic assessment",
   "type": "object",
   "additionalProperties": false,
-  "required": ["assessment_id", "somnus_run_id", "target_orthing_ids", "prior_assessment_ids", "meta_orthability_assessment_id", "t2_configuration", "assessment_target", "assessment_result", "confidence", "defect_loci", "evidence_timing", "target_history_digest", "target_history_digest_mode", "target_history_mutated", "retroactive_conformity_rewrite", "closure_status", "intervention_disposition", "proposal_ids", "authorization_refs", "application_refs", "outcome_evaluation_refs", "placement_result", "pathway_result", "explicit_non_mutation"],
+  "required": ["assessment_id", "somnus_run_id", "target_orthing_ids", "prior_assessment_ids", "meta_orthability_assessment_id", "t2_configuration", "assessment_target", "assessment_result", "confidence", "defect_loci", "evidence_timing", "target_history_checkpoint_ids", "target_history_digest", "target_history_digest_mode", "target_history_mutated", "retroactive_conformity_rewrite", "closure_status", "intervention_disposition", "proposal_ids", "authorization_refs", "application_refs", "outcome_evaluation_refs", "placement_result", "pathway_result", "explicit_non_mutation"],
   "properties": {
     "assessment_id": {"type": "string", "minLength": 1},
     "somnus_run_id": {"type": "string", "minLength": 1},
@@ -40,8 +40,9 @@
       }
     },
     "evidence_timing": {"$ref": "#/$defs/evidence_timing"},
+    "target_history_checkpoint_ids": {"type": "array", "minItems": 1, "uniqueItems": true, "items": {"type": "string", "minLength": 1}},
     "target_history_digest": {"type": "string", "pattern": "^[0-9a-f]{64}$"},
-    "target_history_digest_mode": {"const": "derived-target-history-sha256-v2"},
+    "target_history_digest_mode": {"const": "immutable-checkpoint-chain-sha256-v3"},
     "target_history_mutated": {"const": false},
     "retroactive_conformity_rewrite": {"const": false},
     "closure_status": {"enum": ["open", "closed", "superseded", "held"]},
