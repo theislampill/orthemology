@@ -166,7 +166,7 @@
       "required": ["subject_id", "subject_kind", "t1_at", "source_record_ref"],
       "properties": {
         "subject_id": {"type": "string", "minLength": 1},
-        "subject_kind": {"enum": ["waking_orthing", "somnic_assessment", "governing_artifact", "counterexample"]},
+        "subject_kind": {"enum": ["waking_orthing", "somnic_assessment", "governing_artifact", "transcluded_artifact", "counterexample"]},
         "t1_at": {"type": "string", "format": "date-time"},
         "source_record_ref": {"type": "string", "minLength": 1}
       }

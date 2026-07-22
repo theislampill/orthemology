@@ -1443,7 +1443,20 @@ def _records_issues(document, activation, history, schemas, store):
                 _string_set(relation.get("source_t1_evidence_ids"))
                 | _string_set(relation.get("target_t1_evidence_ids"))):
             issues.append("received t2 evidence cannot become target t1 evidence")
+        received_t2_ids = _string_set(relation.get("received_at_t2_evidence_ids"))
+        source_t1_ids = _string_set(relation.get("source_t1_evidence_ids"))
+        target_t1_ids = _string_set(relation.get("target_t1_evidence_ids"))
+        t1_timings = {"observed_at_t1", "used_at_t1", "indexed_unused_at_t1"}
+        if (any(evidence_timing.get(evidence_id) != "discovered_after_t1"
+                for evidence_id in received_t2_ids)
+                or any(evidence_timing.get(evidence_id) not in t1_timings
+                       for evidence_id in source_t1_ids | target_t1_ids)):
+            issues.append(
+                "relation evidence IDs must resolve through their exact timing owners"
+            )
         semantic_relation = relation.get("semantic_relation")
+        if semantic_relation != "reopens" and relation.get("reopens_source") is not False:
+            issues.append("only a reopening relation can reopen its source")
         if semantic_relation == "compares-with":
             if relation.get("reopens_source") is not False or relation.get("material_delta_id") is not None:
                 issues.append("comparison cannot reopen its source")
@@ -1472,26 +1485,54 @@ def _records_issues(document, activation, history, schemas, store):
                     "reopening requires a new episode, material delta, and assessment lineage"
                 )
         elif semantic_relation == "reassesses":
-            if (not _string_set(relation.get("source_assessment_ids"))
-                    or not _string_set(relation.get("target_assessment_ids"))
-                    or not isinstance(relation.get("assessment_depth"), int)
-                    or relation.get("assessment_depth") < 1
+            source_assessment_ids = _string_set(relation.get("source_assessment_ids"))
+            target_assessment_ids = _string_set(relation.get("target_assessment_ids"))
+            target_predecessors = set().union(*(
+                _string_set(assessment_by_id[assessment_id].get("prior_assessment_ids"))
+                for assessment_id in target_assessment_ids
+                if assessment_id in assessment_by_id
+            )) if target_assessment_ids else set()
+            target_depths = {
+                assessment_by_id[assessment_id].get("assessment_depth")
+                for assessment_id in target_assessment_ids
+                if assessment_id in assessment_by_id
+            }
+            if (not source_assessment_ids
+                    or not target_assessment_ids
+                    or source_assessment_ids != target_predecessors
+                    or target_depths != {relation.get("assessment_depth")}
                     or relation.get("auto_requeue") is not False):
                 issues.append(
-                    "reassessment requires bounded assessment lineage and no auto-requeue"
+                    "reassessment must match target assessment lineage and depth"
                 )
         if relation.get("information_path") == "direct-transclusion":
+            local_meta = _string_lookup(
+                meta_by_id, provenance.get("local_meta_orthability_assessment_id")
+            )
+            artifact_ref = provenance.get("received_artifact_ref")
             if (relation.get("independence_claim") is not False
                     or provenance.get("received_artifact_ref") is None
                     or provenance.get("receipt_time") is None
-                    or not _string_member(
-                        meta_by_id,
-                        provenance.get("local_meta_orthability_assessment_id"),
-                    )):
+                    or local_meta is None):
                 issues.append(
                     "direct transclusion requires receipt provenance and local assessment without independence"
                 )
+            if not _string_set(provenance.get("redactions")):
+                issues.append("transclusion must preserve its recorded redactions")
+            if (local_meta is None
+                    or local_meta.get("subject_kind") != "transcluded_artifact"
+                    or _string_set(local_meta.get("subject_ids")) != {artifact_ref}
+                    or _string_set(local_meta.get("receiving_somnic_episode_ids"))
+                    != {target_id}):
+                issues.append(
+                    "local meta-orthability assessment must be bound to the receiving case"
+                )
         elif relation.get("information_path") == "none-independent-discovery":
+            if (provenance.get("received_artifact_ref") is not None
+                    or provenance.get("receipt_time") is not None):
+                issues.append(
+                    "receipt-bearing relation cannot claim independent discovery"
+                )
             if relation.get("independence_claim") is not True:
                 issues.append(
                     "independent discovery requires the no-communication information path"
@@ -1661,6 +1702,21 @@ def _records_issues(document, activation, history, schemas, store):
                         assessment_source.get("t2_configuration"),
                         "source assessment %s t2_configuration" % source_ref, issues,
                     ).get("assessed_at")
+                else:
+                    relation_source = _string_lookup(
+                        inter_somnic_relation_by_id, source_ref
+                    )
+                    if relation_source is not None:
+                        source = relation_source
+                        relation_provenance = _mapping(
+                            relation_source.get("provenance"),
+                            "source relation %s provenance" % source_ref,
+                            issues,
+                        )
+                        source_subject_id = relation_provenance.get(
+                            "received_artifact_ref"
+                        )
+                        source_time = relation_provenance.get("receipt_time")
         if source is None or source_subject_id != subject_id or source_time != subject.get("t1_at"):
             issues.append(
                 "subject %s source_record_ref must resolve to its exact authoritative source and t1"
@@ -1836,6 +1892,12 @@ def _records_issues(document, activation, history, schemas, store):
         if any(subject_by_id[subject_id].get("subject_kind") != expected_kind
                for subject_id in subject_ids if subject_id in subject_by_id):
             issues.append("meta-orthability assessment %s subject kind disagrees with its exact subject scope" % meta_id)
+        if any(episode_id not in somnic_episode_by_id for episode_id in
+               _string_set(meta.get("receiving_somnic_episode_ids"))):
+            issues.append(
+                "meta-orthability assessment %s has an unresolved receiving episode"
+                % meta_id
+            )
         if meta.get("result") == "applicable_assessable" and meta.get("assessable") is not True:
             issues.append("meta-orthability assessment %s has incoherent assessability" % meta.get("meta_orthability_assessment_id"))
         if meta.get("result") != "applicable_assessable" and meta.get("assessable") is not False:
