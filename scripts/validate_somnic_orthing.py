@@ -419,7 +419,8 @@ def _candidate_semantic_digest(candidate):
     if isinstance(normalized_owner, dict):
         aliases = _string_lookup(CANDIDATE_OWNER_ROLE_ALIASES, candidate_id) or {}
         role = normalized_owner.get("owner_role")
-        normalized_owner["owner_role"] = aliases.get(role, role)
+        if isinstance(role, str):
+            normalized_owner["owner_role"] = aliases.get(role, role)
     projection = {
         "layer": candidate.get("layer"),
         "inputs": sorted(_string_set(candidate.get("inputs"))),
@@ -436,13 +437,38 @@ def _heading_slug(value):
     return re.sub(r"-+", "-", re.sub(r"\s+", "-", value)).strip("-")
 
 
+def _markdown_heading_slugs(document):
+    """Return ATX heading slugs while excluding fenced code blocks."""
+    headings = []
+    fence_character = None
+    fence_length = 0
+    for line in document.splitlines():
+        fence = re.match(r"^ {0,3}(`{3,}|~{3,})(.*)$", line)
+        if fence_character is not None:
+            closing = re.match(
+                r"^ {0,3}%s{%d,}[ \t]*$"
+                % (re.escape(fence_character), fence_length),
+                line,
+            )
+            if closing:
+                fence_character = None
+                fence_length = 0
+            continue
+        if fence:
+            marker = fence.group(1)
+            fence_character = marker[0]
+            fence_length = len(marker)
+            continue
+        heading = re.match(r"^ {0,3}#{1,6}[ \t]+(.+?)[ \t]*#*[ \t]*$", line)
+        if heading:
+            headings.append(_heading_slug(heading.group(1)))
+    return headings
+
+
 def _decision_authority_issues(decision_text, authority_refs):
     if not isinstance(decision_text, str):
         return ["Decision authority references cannot resolve without Decision 0035"]
-    heading_counts = Counter(
-        _heading_slug(match.group(1))
-        for match in re.finditer(r"^#{1,6}\s+(.+?)\s*$", decision_text, re.M)
-    )
+    heading_counts = Counter(_markdown_heading_slugs(decision_text))
     issues = []
     decision_path = "docs/decisions/0035-somnic-orthing-and-activation-contracts.md"
     for authority_ref in sorted(authority_refs, key=lambda value: str(value)):
@@ -523,9 +549,17 @@ def _activation_issues(document, schemas, store):
         if _string_set(evaluator.get("result_vocabulary")) != TRI_STATE:
             issues.append("orthability evaluator %s must preserve the tri-state vocabulary" % evaluator.get("evaluator_id"))
     authority_refs = {
-        (row.get("artifact_kind"), row.get("artifact_id"), row.get("artifact_version"))
+        identity
         for row in transition_authority.get("accepted_versions", [])
         if isinstance(row, dict)
+        for identity in [
+            _string_tuple_key(
+                row.get("artifact_kind"),
+                row.get("artifact_id"),
+                row.get("artifact_version"),
+            )
+        ]
+        if identity is not None
     }
     if any(
         ("activation_contract", key[0], key[1]) not in authority_refs
@@ -1162,6 +1196,15 @@ def _records_issues(document, activation, history, schemas, store):
         )
     application_rows = _objects(document, "applications", issues, "records")
     application_by_id = _unique_index(application_rows, "application_id", "applications", issues)
+    revert_provenance_rows = _objects(
+        document, "revert_provenance_records", issues, "records"
+    )
+    revert_provenance_by_ref = _unique_index(
+        revert_provenance_rows,
+        "revert_provenance_ref",
+        "revert provenance registry",
+        issues,
+    )
     successor_rows = _objects(document, "successor_states", issues, "records")
     successor_by_id = _unique_index(successor_rows, "successor_state_id", "successor states", issues)
     outcome_rows = _objects(document, "outcome_evaluations", issues, "records")
@@ -2267,6 +2310,18 @@ def _records_issues(document, activation, history, schemas, store):
                 issues.append(
                     "reverted application must own an immutable transition from its materialized successor"
                 )
+            revert_provenance = _string_lookup(
+                revert_provenance_by_ref,
+                transition.get("revert_provenance_ref"),
+            )
+            if (revert_provenance is None
+                    or revert_provenance.get("immutable") is not True
+                    or revert_provenance.get("application_id") != application_id
+                    or revert_provenance.get("authorization_id")
+                    != application.get("authorization_id")):
+                issues.append(
+                    "reverted application must resolve revert provenance through its authorized immutable owner"
+                )
             reverted_at = _parse_time(
                 transition.get("reverted_at"),
                 "application %s revert_transition.reverted_at" % application_id,
@@ -2533,7 +2588,10 @@ def _inventory_issues(document, schemas, store):
         )
     required = {"candidate_id", "semantic_contract_version", "status", "execution", "inputs", "outputs", "dependencies", "event_emissions", "authority_limit", "authority_boundary", "residual_behavior", "downstream_owner", "non_claims", "non_claim_boundaries"}
     expected = {"orthability-check", "orthing-ledger", "episode-residual-live", "residual-recurrence-somnic", "metaorthemma-conflict", "intervention-disposition", "verdict-aware-patch-proposal", "guarded-writeback-actuator", "orthing-dream", "somnus-export", "somnus-import", "metaortheme-transclusion", "collective-somnus", "somnus-council", "transclusion-ledger"}
-    if {row.get("candidate_id") for row in candidates if isinstance(row.get("candidate_id"), str)} != expected:
+    candidate_by_id = _unique_index(
+        candidates, "candidate_id", "inventory candidates", issues
+    )
+    if set(candidate_by_id) != expected:
         issues.append("inventory does not contain the exact bounded candidate set")
     for row in candidates:
         if not required <= set(row):
