@@ -77,9 +77,9 @@ authored:
     pdfs: reproducibly built and visually inspected draft artifacts
     legal_publication: open on license, identity, peer review, and external submission
 derived:
-  source_tree_digest: 77cbe5c212a9644040cc9f4c9a150a69050fa287ce3aa25cdf800ddd41e99c64
+  source_tree_digest: de2f9dab1a559228b7b9ff86da5b03dc36110fcc1fe9fdfe556afb9d2ba6430c
   source_tree_digest_policy: docs/project-state-inputs.yaml
-  tracked_files: 640
+  tracked_files: 646
   decision_ids:
   - '0001'
   - '0002'
@@ -129,6 +129,7 @@ derived:
   - handoff.schema.json
   - hermes-writeback-adoption-profile.schema.json
   - inter-somnic-relation.schema.json
+  - llm-mediated-orthing-witness.schema.json
   - meta-orthability-assessment.schema.json
   - metaortheme.schema.json
   - metaorthemma.schema.json
@@ -147,7 +148,7 @@ derived:
   - somnus-record-fixtures.schema.json
   - somnus-run.schema.json
   - verdict-record.schema.json
-  schema_count: 28
+  schema_count: 29
   example_json_count: 9
   example_markdown_count: 2
   validator_scripts:
@@ -186,6 +187,7 @@ derived:
   - validate_pdf_math.py
   - validate_public_readiness.py
   - validate_quran_loci.py
+  - validate_r7e_llm_witness.py
   - validate_reason_fixtures.py
   - validate_recursive_mutations.py
   - validate_repo.py
@@ -197,7 +199,7 @@ derived:
   - validate_state_convergence.py
   - validate_type_token_semantics.py
   - validate_verdict_semantics.py
-  validator_count: 46
+  validator_count: 47
   fixture_counts:
     verdict: 7
     reason: 8
