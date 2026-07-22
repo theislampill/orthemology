@@ -202,6 +202,21 @@ class R7ELLMWitnessTests(unittest.TestCase):
     def test_neighboring_bounded_control_accepts(self):
         self.assertAccepted()
 
+    def test_neighboring_extra_unresolved_evidence_accepts(self):
+        witness, _, _ = bounded_control()
+        witness["evidence_registry"].append({
+            "evidence_id": "E-FUTURE-UNRESOLVED",
+            "source_ref": "future unresolved packet",
+            "state": "unresolved",
+            "claim_boundary": "no claim until resolved",
+        })
+        self.assertAccepted(witness=witness)
+
+    def test_neighboring_distinct_audit_authority_accepts(self):
+        witness, _, _ = bounded_control()
+        witness["higher_order_audit"]["audit_authority_id"] = "R7E-SOL-INDEPENDENT-REVIEW-2"
+        self.assertAccepted(witness=witness)
+
     def test_canonical_schema_and_records_accept(self):
         self.assertTrue(SCHEMA.exists(), "Task 5 schema is missing")
         schema = json.loads(SCHEMA.read_text(encoding="utf-8"))
@@ -337,6 +352,94 @@ class R7ELLMWitnessTests(unittest.TestCase):
         witness, _, _ = bounded_control()
         witness["proof_protocol_placement"]["implemented"] = True
         self.assertRejected(witness=witness, fragment="separate reviewed follow-up")
+
+    def test_review_rejects_invented_repository_evidence_as_identity_authority(self):
+        witness, crosswalk, _ = bounded_control()
+        witness["evidence_registry"].append({
+            "evidence_id": "E-INVENTED-IDENTITY",
+            "source_ref": "invented unauthenticated identity table",
+            "state": "repository-verified",
+            "claim_boundary": "asserted identity table",
+        })
+        witness["original_history"]["authoritative_identity_evidence_refs"] = ["E-INVENTED-IDENTITY"]
+        witness["original_history"]["episode_cardinality"] = "single-episode"
+        crosswalk["original_history"]["episode_cardinality"] = "single-episode"
+        self.assertRejected(witness=witness, crosswalk=crosswalk, fragment="identity authority")
+
+    def test_review_rejects_unsuitable_existing_identity_authority(self):
+        witness, crosswalk, _ = bounded_control()
+        witness["original_history"]["authoritative_identity_evidence_refs"] = ["E-R7E-STATE"]
+        witness["original_history"]["episode_cardinality"] = "single-episode"
+        crosswalk["original_history"]["episode_cardinality"] = "single-episode"
+        self.assertRejected(witness=witness, crosswalk=crosswalk, fragment="identity authority")
+
+    def test_review_rejects_unowned_original_t1_statuses(self):
+        witness, crosswalk, _ = bounded_control()
+        witness["original_history"]["original_t1_checkpoint_status"] = "repository-verified"
+        witness["original_history"]["original_t1_evidence_status"] = "repository-verified"
+        crosswalk["original_history"].update({
+            "t1_checkpoint_status": "repository-verified",
+            "t1_evidence_partition_status": "repository-verified",
+        })
+        self.assertRejected(witness=witness, crosswalk=crosswalk, fragment="original t1")
+
+    def test_review_rejects_unsuitable_original_t1_references(self):
+        witness, _, _ = bounded_control()
+        witness["higher_order_audit"]["original_t1_evidence_refs"] = [
+            "E-R7E-STATE", "E-R7E-PROVENANCE", "E-AGGREGATE-STATISTICS", "E-ATTACHMENTS"
+        ]
+        self.assertRejected(witness=witness, fragment="original t1")
+
+    def test_review_rejects_unowned_somnic_conformance(self):
+        witness, crosswalk, _ = bounded_control()
+        audit = witness["higher_order_audit"]
+        audit.update({
+            "authoritative_target_identity_status": "repository-verified",
+            "target_history_checkpoint_status": "repository-verified",
+            "target_history_digest_status": "repository-verified",
+            "meta_orthability_disposition": "applicable-assessable",
+            "somnic_conformance": "established",
+        })
+        crosswalk["later_review"].update({
+            "meta_orthability_disposition": "applicable-assessable",
+            "somnic_conformance": "established",
+        })
+        self.assertRejected(witness=witness, crosswalk=crosswalk, fragment="target-history authority")
+
+    def test_review_rejects_promoted_structured_evidence_claim(self):
+        witness, _, _ = bounded_control()
+        witness["evidence_registry"][0]["claim_boundary"] = (
+            "authoritatively establishes the original episode identities, correctness, and deployed runtime"
+        )
+        self.assertRejected(witness=witness, fragment="structured evidence claim")
+
+    def test_review_rejects_promoted_unsupported_runtime_description(self):
+        witness, _, _ = bounded_control()
+        row = next(item for item in witness["witness_objects"] if item["object_kind"] == "case-bound-applications")
+        row["description"] = "Original live bindings are verified and prove deployed Somnus correctness."
+        self.assertRejected(witness=witness, fragment="structured witness claim")
+
+    def test_review_rejects_historical_fact_backed_only_by_missing_evidence(self):
+        witness, _, _ = bounded_control()
+        row = next(item for item in witness["witness_objects"] if item["object_kind"] == "executor-subagent-roles")
+        row["evidence_refs"] = ["E-WORKFLOW-JOURNAL"]
+        self.assertRejected(witness=witness, fragment="documented historical fact")
+
+    def test_review_rejects_relation_reason_that_contradicts_disposition(self):
+        _, crosswalk, _ = bounded_control()
+        crosswalk["relation_disposition"]["reason"] = "Temporal separation alone establishes an inter-somnic relation."
+        self.assertRejected(crosswalk=crosswalk, fragment="relation reason")
+
+    def test_review_rejects_whitespace_alias_self_certification(self):
+        witness, _, _ = bounded_control()
+        witness["higher_order_audit"]["audit_authority_id"] = "R7E-IMPLEMENTING-RUN "
+        self.assertRejected(witness=witness, fragment="canonical authority")
+
+    def test_review_rejects_unregistered_reconstruction_event(self):
+        witness, _, _ = bounded_control()
+        row = next(item for item in witness["identity_records"] if item["identity_kind"] == "reconstruction_event")
+        row["identifier"] = "EV-INVENTED-UNREGISTERED-999"
+        self.assertRejected(witness=witness, fragment="retained Task 4 event")
 
     def test_malformed_inputs_fail_closed_without_traceback(self):
         for witness, crosswalk, narrative in (([], {}, ""), ({}, [], ""), ({"bad": object()}, {}, None)):

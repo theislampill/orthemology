@@ -36,10 +36,10 @@
       "required": ["capture_mode", "episode_cardinality", "authoritative_identity_evidence_refs", "original_t1_checkpoint_status", "original_t1_evidence_status"],
       "properties": {
         "capture_mode": {"enum": ["retrospective_reconstruction", "live_capture", "bootstrap_provenance", "unknown"]},
-        "episode_cardinality": {"enum": ["underdetermined", "single-episode", "episode-family"]},
-        "authoritative_identity_evidence_refs": {"$ref": "#/$defs/id_set"},
-        "original_t1_checkpoint_status": {"enum": ["missing", "unresolved", "repository-verified"]},
-        "original_t1_evidence_status": {"enum": ["not-observed", "unresolved", "repository-verified"]}
+        "episode_cardinality": {"const": "underdetermined"},
+        "authoritative_identity_evidence_refs": {"type": "array", "maxItems": 0},
+        "original_t1_checkpoint_status": {"const": "missing"},
+        "original_t1_evidence_status": {"const": "not-observed"}
       }
     },
     "identity_records": {
@@ -87,16 +87,16 @@
       "properties": {
         "audit_id": {"type": "string", "minLength": 1},
         "subject_witness_id": {"type": "string", "minLength": 1},
-        "audit_authority_id": {"type": "string", "minLength": 1},
-        "implementing_authority_id": {"type": "string", "minLength": 1},
+        "audit_authority_id": {"type": "string", "pattern": "^[A-Z0-9]+(?:-[A-Z0-9]+)*$"},
+        "implementing_authority_id": {"type": "string", "pattern": "^[A-Z0-9]+(?:-[A-Z0-9]+)*$"},
         "self_certifying": {"type": "boolean"},
         "assessment_kind": {"const": "human-llm-mediated-retrospective-assessment"},
-        "meta_orthability_disposition": {"enum": ["record-insufficient", "applicable-assessable", "inapplicable", "indeterminate"]},
-        "somnic_conformance": {"enum": ["not-established", "established"]},
-        "authoritative_target_identity_status": {"enum": ["unresolved", "repository-verified"]},
-        "target_history_checkpoint_status": {"enum": ["missing", "unresolved", "repository-verified"]},
-        "target_history_digest_status": {"enum": ["not-observed", "unresolved", "repository-verified"]},
-        "original_t1_evidence_refs": {"$ref": "#/$defs/id_set"},
+        "meta_orthability_disposition": {"const": "record-insufficient"},
+        "somnic_conformance": {"const": "not-established"},
+        "authoritative_target_identity_status": {"const": "unresolved"},
+        "target_history_checkpoint_status": {"const": "missing"},
+        "target_history_digest_status": {"const": "not-observed"},
+        "original_t1_evidence_refs": {"type": "array", "maxItems": 0},
         "later_evidence_refs": {"$ref": "#/$defs/id_set"}
       }
     },

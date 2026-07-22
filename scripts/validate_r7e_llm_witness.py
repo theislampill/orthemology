@@ -17,6 +17,7 @@ SCHEMA_PATH = ROOT / "schemas" / "llm-mediated-orthing-witness.schema.json"
 WITNESS_PATH = ROOT / "docs" / "project-closure" / "r7e-sol" / "R7E-LLM-MEDIATED-ORTHING-WITNESS.yaml"
 CROSSWALK_PATH = ROOT / "docs" / "project-closure" / "r7e-sol" / "R7E-SOMNIC-CASE-CROSSWALK.yaml"
 NARRATIVE_PATH = ROOT / "docs" / "project-closure" / "r7e-sol" / "R7E-LLM-MEDIATED-ORTHING-WITNESS.md"
+TASK4_FIXTURES_PATH = ROOT / "examples" / "somnus" / "somnus-record-fixtures.yaml"
 
 EVIDENCE_STATES = {
     "repository-verified",
@@ -72,6 +73,11 @@ EXPECTED_SOURCE_STATES = {
     "supplied R7E attachments": "attachment-observed",
     "R7E implementing-run aggregate statistics": "implementing-run-attributed",
 }
+# The retained Task 5 source registry is descriptive evidence, not an authority
+# registry. None of its current members owns original R7E identity, original t1
+# history, or authoritative target history. A future owner requires a reviewed
+# contract change rather than promotion based only on evidence state.
+SOURCE_AUTHORITY_SCOPES = {source_ref: frozenset() for source_ref in EXPECTED_SOURCE_STATES}
 EXPECTED_OBJECT_ROLES = {
     "orthemmata": "retrospective-reconstruction",
     "declared-analysis": "schema-conformant-illustrative-mapping",
@@ -86,6 +92,24 @@ EXPECTED_OBJECT_ROLES = {
     "successor-state": "documented-historical-fact",
     "higher-order-audit": "retrospective-reconstruction",
 }
+AUTHORITY_ID = re.compile(r"[A-Z0-9]+(?:-[A-Z0-9]+)*\Z")
+PROMOTED_CLAIM = re.compile(
+    r"(?:"
+    r"\bauthoritative(?:ly)?\b[^.\n]{0,120}\b(?:identit(?:y|ies)|correctness|runtime|Somnus)\b"
+    r"|\bverified\b[^.\n]{0,120}\b(?:deploy(?:ed|ment)?|runtime|correctness|Somnus)\b"
+    r"|\b(?:proves?|proved|establishes|established|demonstrates?|demonstrated|validates?|validated)\b"
+    r"[^.\n]{0,120}\b(?:correctness|comparative utility|empirical validation|terminology (?:benefit|adoption)|"
+    r"internal model ontology|generalization|recurrence|frontier|writeback|autonomy|runtime|Somnus|original .{0,30}identit(?:y|ies))\b"
+    r")",
+    re.IGNORECASE,
+)
+TEMPORAL_RELATION_PROMOTION = re.compile(
+    r"(?:\b(?:temporal separation|different times?|time difference)\b[^.\n]{0,100}\b(?:alone|solely|sufficient)\b"
+    r"[^.\n]{0,100}\b(?:establish(?:es|ed)?|prove(?:s|d)?|constitute(?:s|d)?)\b"
+    r"|\b(?:establish(?:es|ed)?|prove(?:s|d)?|constitute(?:s|d)?)\b[^.\n]{0,100}"
+    r"\b(?:solely|only)\b[^.\n]{0,40}\b(?:time|temporal)\b)",
+    re.IGNORECASE,
+)
 
 
 def _schema_issues(witness: object) -> list[str]:
@@ -129,6 +153,44 @@ def _refs(value: object) -> set[str]:
     return {item for item in value if isinstance(item, str)}
 
 
+def _has_source_authority(evidence_by_id: dict, ref: str, scope: str) -> bool:
+    row = evidence_by_id.get(ref)
+    if not isinstance(row, dict) or row.get("state") != "repository-verified":
+        return False
+    source_ref = row.get("source_ref")
+    return isinstance(source_ref, str) and scope in SOURCE_AUTHORITY_SCOPES.get(source_ref, frozenset())
+
+
+def _task4_r7e_events(issues: list[str]) -> dict[str, dict]:
+    try:
+        fixtures = yaml.safe_load(TASK4_FIXTURES_PATH.read_text(encoding="utf-8"))
+    except (OSError, yaml.YAMLError) as exc:
+        issues.append("retained Task 4 event owner is unavailable: %s" % exc)
+        return {}
+    if not isinstance(fixtures, dict):
+        issues.append("retained Task 4 event owner must be structured")
+        return {}
+    provenance = {
+        row.get("provenance_record_id"): row
+        for row in fixtures.get("provenance_records", [])
+        if isinstance(row, dict) and isinstance(row.get("provenance_record_id"), str)
+    }
+    retained = {}
+    for event in fixtures.get("orthing_events", []):
+        if not isinstance(event, dict) or not isinstance(event.get("event_id"), str):
+            continue
+        owner = provenance.get(event.get("provenance_record_id"))
+        if (
+            event.get("capture_mode") == "retrospective_reconstruction"
+            and event.get("source_case") == "R7E"
+            and isinstance(owner, dict)
+            and owner.get("capture_mode") == "retrospective_reconstruction"
+            and owner.get("source_case") == "R7E"
+        ):
+            retained[event["event_id"]] = event
+    return retained
+
+
 def _witness_issues(witness: dict) -> list[str]:
     issues: list[str] = []
     evidence = _objects(witness.get("evidence_registry"), "evidence registry", issues)
@@ -155,6 +217,9 @@ def _witness_issues(witness: dict) -> list[str]:
                 issues.append("attributed statistic cannot be promoted to repository fact")
             else:
                 issues.append("source %s must retain evidence state %s" % (source_ref, expected))
+        claim_boundary = row.get("claim_boundary")
+        if isinstance(claim_boundary, str) and PROMOTED_CLAIM.search(claim_boundary):
+            issues.append("structured evidence claim exceeds its typed source purpose")
 
     objects = _objects(witness.get("witness_objects"), "witness objects", issues)
     object_ids = [row.get("object_id") for row in objects]
@@ -170,6 +235,18 @@ def _witness_issues(witness: dict) -> list[str]:
         kind = row.get("object_kind")
         if EXPECTED_OBJECT_ROLES.get(kind) != row.get("illustration_role"):
             issues.append("illustration role disagrees with object kind %s" % kind)
+        description = row.get("description")
+        if isinstance(description, str) and PROMOTED_CLAIM.search(description):
+            issues.append("structured witness claim exceeds its illustration and evidence boundary")
+        row_refs = _refs(row.get("evidence_refs"))
+        if row.get("illustration_role") == "documented-historical-fact" and not any(
+            evidence_by_id.get(ref, {}).get("state") == "repository-verified" for ref in row_refs
+        ):
+            issues.append("documented historical fact requires repository-verified supporting evidence")
+        if row.get("illustration_role") == "unsupported-live-runtime-claim" and any(
+            evidence_by_id.get(ref, {}).get("state") not in {"missing", "unresolved"} for ref in row_refs
+        ):
+            issues.append("unsupported live runtime illustration cannot be promoted by available evidence")
 
     referenced: set[str] = set()
     analysis = witness.get("declared_analysis")
@@ -189,10 +266,15 @@ def _witness_issues(witness: dict) -> list[str]:
     if isinstance(history, dict):
         authoritative = _refs(history.get("authoritative_identity_evidence_refs"))
         cardinality = history.get("episode_cardinality")
-        if cardinality != "underdetermined":
-            resolved = [evidence_by_id.get(ref, {}).get("state") == "repository-verified" for ref in authoritative]
-            if not authoritative or not all(resolved):
-                issues.append("original episode cardinality cannot be resolved without authoritative identity evidence")
+        identity_authorized = bool(authoritative) and all(
+            _has_source_authority(evidence_by_id, ref, "original-identity") for ref in authoritative
+        )
+        if authoritative and not identity_authorized:
+            issues.append("original identity authority must resolve through a typed owner")
+        if cardinality != "underdetermined" and not identity_authorized:
+            issues.append("original episode cardinality cannot be resolved without typed identity authority")
+        if history.get("original_t1_checkpoint_status") != "missing" or history.get("original_t1_evidence_status") != "not-observed":
+            issues.append("original t1 history cannot be promoted without a typed checkpoint owner")
         if history.get("capture_mode") != "retrospective_reconstruction":
             issues.append("R7E retrospective reconstruction cannot be relabeled as live capture or another mode")
 
@@ -207,27 +289,54 @@ def _witness_issues(witness: dict) -> list[str]:
         if kind in {"turn", "session", "episode", "occurrence", "orthing"} and (
             isinstance(identifier, str) or row.get("status") == "repository-verified"
         ):
-            resolved = [
-                evidence_by_id.get(ref, {}).get("state") == "repository-verified"
-                for ref in authoritative
-            ]
-            if not authoritative or not all(resolved):
-                issues.append("original identity %s cannot be resolved without authoritative identity evidence" % kind)
+            if not authoritative or not all(
+                _has_source_authority(evidence_by_id, ref, "original-identity") for ref in authoritative
+            ):
+                issues.append("original identity %s cannot be resolved without typed identity authority" % kind)
         if isinstance(identifier, str):
             prior = resolved_ids.get(identifier)
             if prior and prior != kind:
                 issues.append("turn, session, episode, occurrence, and orthing identity levels must remain distinct")
             resolved_ids[identifier] = str(kind)
 
+    retained_events = _task4_r7e_events(issues)
+    reconstruction = next((row for row in identities if row.get("identity_kind") == "reconstruction_event"), None)
+    if not isinstance(reconstruction, dict) or reconstruction.get("status") != "reconstruction-only" or reconstruction.get("identifier") not in retained_events:
+        issues.append("reconstruction event must resolve through the retained Task 4 event owner")
+
     if isinstance(audit, dict):
         if audit.get("subject_witness_id") != witness.get("witness_id"):
             issues.append("higher-order audit must identify its exact witness subject")
-        if audit.get("self_certifying") is not False or audit.get("audit_authority_id") == audit.get("implementing_authority_id"):
+        audit_authority = audit.get("audit_authority_id")
+        implementing_authority = audit.get("implementing_authority_id")
+        canonical_authorities = all(
+            isinstance(value, str) and AUTHORITY_ID.fullmatch(value) is not None
+            for value in (audit_authority, implementing_authority)
+        )
+        if not canonical_authorities:
+            issues.append("canonical authority IDs must be trimmed uppercase identifiers")
+        normalized_audit = audit_authority.strip().casefold() if isinstance(audit_authority, str) else ""
+        normalized_implementing = implementing_authority.strip().casefold() if isinstance(implementing_authority, str) else ""
+        if audit.get("self_certifying") is not False or normalized_audit == normalized_implementing:
             issues.append("higher-order audit cannot self-certify the implementing witness")
         original_t1 = _refs(audit.get("original_t1_evidence_refs"))
         later = _refs(audit.get("later_evidence_refs"))
         if original_t1 & later or any("SOL" in ref for ref in original_t1):
             issues.append("later evidence cannot be inserted into the original t1 evidence state")
+        if original_t1 and not all(_has_source_authority(evidence_by_id, ref, "original-t1-history") for ref in original_t1):
+            issues.append("original t1 evidence must resolve through a typed history owner")
+        expected_target_boundary = (
+            "unresolved", "missing", "not-observed", "record-insufficient", "not-established"
+        )
+        observed_target_boundary = (
+            audit.get("authoritative_target_identity_status"),
+            audit.get("target_history_checkpoint_status"),
+            audit.get("target_history_digest_status"),
+            audit.get("meta_orthability_disposition"),
+            audit.get("somnic_conformance"),
+        )
+        if observed_target_boundary != expected_target_boundary:
+            issues.append("target-history authority is absent; the R7E review must remain record-insufficient")
         unresolved_target = audit.get("authoritative_target_identity_status") != "repository-verified"
         missing_checkpoints = audit.get("target_history_checkpoint_status") != "repository-verified"
         missing_digest = audit.get("target_history_digest_status") != "repository-verified"
@@ -298,6 +407,10 @@ def _crosswalk_issues(witness: dict, crosswalk: object) -> list[str]:
         issues.append("relation disposition must be structured")
     elif relation.get("inter_somnic_relation") != "not-established" or relation.get("temporal_separation_is_sufficient") is not False:
         issues.append("temporal separation alone cannot establish an inter-somnic relation")
+    else:
+        reason = relation.get("reason")
+        if not isinstance(reason, str) or not reason.strip() or TEMPORAL_RELATION_PROMOTION.search(reason):
+            issues.append("relation reason contradicts the not-established temporal disposition")
     roles = crosswalk.get("illustration_roles")
     if not isinstance(roles, list) or set(roles) != ILLUSTRATION_ROLES or len(roles) != len(ILLUSTRATION_ROLES):
         issues.append("crosswalk illustration roles are incomplete or duplicated")
