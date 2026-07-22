@@ -34,7 +34,7 @@
         }
       }
     },
-    "predecessor_characterization": {"type": "string", "minLength": 1},
+    "predecessor_characterization": {"enum": ["coarser-or-more-implicit orthing oriented toward source interpretation, proposal generation, destination selection, and safe writeback", "a coarser or more implicit orthing architecture focused on source interpretation, proposal generation, destination selection, and safe writeback", "a more implicit and coarser predecessor covering safe destination-bound proposal writeback"]},
     "subsumption": {
       "type": "object", "additionalProperties": false,
       "required": ["ordinary_reflective_writeback_question_is_first_class", "ordinary_targets", "governing_targets", "outcomes"],

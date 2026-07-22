@@ -169,7 +169,7 @@
     },
     "source_record": {
       "type": "object", "additionalProperties": false,
-      "required": ["source_record_id", "subject_id", "record_kind", "occurred_at", "immutable"],
+      "required": ["source_record_id", "subject_id", "record_kind", "occurred_at", "session_id", "episode_id", "actor_id", "source_family", "immutable"],
       "properties": {
         "source_record_id": {"type": "string", "minLength": 1},
         "subject_id": {"type": "string", "minLength": 1},

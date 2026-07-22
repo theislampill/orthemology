@@ -69,6 +69,43 @@ EXPECTED_HISTORY_CHAIN = {
     "authority_ref": "docs/decisions/0035-somnic-orthing-and-activation-contracts.md#history-checkpoint-chain",
     "immutable": True,
 }
+EXPECTED_VERSION_TRANSITION_AUTHORITY = {
+    "authority_ref": "docs/decisions/0035-somnic-orthing-and-activation-contracts.md#activation-and-claimant-routing",
+    "append_only": True,
+    "accepted_versions": [
+        {
+            "artifact_kind": "activation_contract",
+            "artifact_id": "database-schema-activation",
+            "artifact_version": "1.0.0",
+            "sequence": 1,
+            "supersedes": None,
+        },
+        {
+            "artifact_kind": "activation_contract",
+            "artifact_id": "recurrence-meta-assessability",
+            "artifact_version": "1.0.0",
+            "sequence": 1,
+            "supersedes": None,
+        },
+        {
+            "artifact_kind": "activation_contract",
+            "artifact_id": "theological-claimant-activation",
+            "artifact_version": "1.0.0",
+            "sequence": 1,
+            "supersedes": None,
+        },
+        {
+            "artifact_kind": "orthability_evaluator",
+            "artifact_id": "property-boundary-evaluator",
+            "artifact_version": "1.0.0",
+            "sequence": 1,
+            "supersedes": None,
+        },
+    ],
+}
+EXPECTED_REFERENCE_CORPUS_OWNER = (
+    "docs/decisions/0035-somnic-orthing-and-activation-contracts.md#frontier-recurrence-and-retrospective-loci"
+)
 EXPECTED_RUN_OWNER_ROLES = {"analysis", "operation_contract"}
 EXPECTED_CANDIDATE_EVENTS = {
     "orthability-check": {"orthability_assessed"},
@@ -113,6 +150,38 @@ EXPECTED_PREDECESSOR_CLASSIFICATION = {
 }
 EXPECTED_GUARDED_ACTUATOR_OUTPUTS = {
     "application or rejection record", "revert provenance",
+}
+ALLOWED_CANDIDATE_OWNER_ROLES = {
+    "agent-host routing owner", "durable-ledger owner", "runtime capture owner",
+    "somnus operation owner after successor trigger", "conflict-detection owner",
+    "intervention-governance owner", "proposal owner", "writeback runtime owner",
+    "host/orchestrator owner", "transport owner", "import owner",
+    "normative-adoption owner", "collective-assessment owner", "council owner",
+    "transclusion-ledger owner", "external change-proposal custodian",
+    "downstream guarded actuation service owner",
+    "external bounded-record custody operator",
+}
+EXPECTED_CANDIDATE_RESIDUALS = {
+    "orthability-check": "retain inapplicable and indeterminate attempts",
+    "orthing-ledger": "append interruption and incomplete-record residuals",
+    "episode-residual-live": "preserve raw text and governed disposition",
+    "residual-recurrence-somnic": "preserve dependence and counterexample uncertainty",
+    "metaorthemma-conflict": "retain conflict and confidence effect",
+    "intervention-disposition": "no-change and held residuals remain valid outcomes",
+    "verdict-aware-patch-proposal": "rejection and failure do not rewrite assessment",
+    "guarded-writeback-actuator": "failed application preserves histories",
+    "orthing-dream": "closed outputs remain outside the frontier absent material delta",
+    "somnus-export": "disclose redactions and non-claims",
+    "somnus-import": "hold incompatible or insufficient packets",
+    "metaortheme-transclusion": "retain source/local version distinction",
+    "collective-somnus": "preserve unresolved conflict and scope limits",
+    "somnus-council": "preserve plural closure",
+    "transclusion-ledger": "record cycles, redactions, and incompatible versions",
+}
+ALLOWED_PREDECESSOR_CHARACTERIZATIONS = {
+    "coarser-or-more-implicit orthing oriented toward source interpretation, proposal generation, destination selection, and safe writeback",
+    "a coarser or more implicit orthing architecture focused on source interpretation, proposal generation, destination selection, and safe writeback",
+    "a more implicit and coarser predecessor covering safe destination-bound proposal writeback",
 }
 DELTA_OWNER_ROLES = {
     "analysis_revision": "analysis",
@@ -282,6 +351,14 @@ def _activation_issues(document, schemas, store):
     evaluators = _objects(document, "evaluators", issues, "activation")
     authoring_records = _objects(document, "authoring_records", issues, "activation")
     outcomes = _objects(document, "fixture_outcomes", issues, "activation")
+    transition_authority = _mapping(
+        document.get("version_transition_authority") if isinstance(document, dict) else None,
+        "activation.version_transition_authority", issues,
+    )
+    if transition_authority != EXPECTED_VERSION_TRANSITION_AUTHORITY:
+        issues.append(
+            "activation contract and evaluator versions must resolve to the fixed append-only Decision 0035 transition authority"
+        )
     for index, contract in enumerate(contracts):
         issues += _schema_issues("activation.contracts[%d]" % index, contract,
                                  schemas[SCHEMA_NAMES["contracts"]], store)
@@ -309,6 +386,21 @@ def _activation_issues(document, schemas, store):
         evaluator_by_key[key] = evaluator
         if _string_set(evaluator.get("result_vocabulary")) != TRI_STATE:
             issues.append("orthability evaluator %s must preserve the tri-state vocabulary" % evaluator.get("evaluator_id"))
+    authority_refs = {
+        (row.get("artifact_kind"), row.get("artifact_id"), row.get("artifact_version"))
+        for row in transition_authority.get("accepted_versions", [])
+        if isinstance(row, dict)
+    }
+    if any(
+        ("activation_contract", key[0], key[1]) not in authority_refs
+        for key in contract_by_key
+    ):
+        issues.append("every activation contract version must resolve through the append-only transition authority")
+    if any(
+        ("orthability_evaluator", key[0], key[1]) not in authority_refs
+        for key in evaluator_by_key
+    ):
+        issues.append("every evaluator version must resolve through the append-only transition authority")
 
     assessments_by_contract = defaultdict(list)
     for outcome in outcomes:
@@ -703,6 +795,29 @@ def _records_issues(document, activation, history, schemas, store):
     source_record_by_id = _unique_index(
         source_record_rows, "source_record_id", "authoritative source records", issues
     )
+    source_by_subject = {}
+    for source in source_record_rows:
+        source_id = source.get("source_record_id")
+        subject_id = source.get("subject_id")
+        prior = source_by_subject.get(subject_id) if isinstance(subject_id, str) else None
+        if prior is not None:
+            issues.append(
+                "subject %s has conflicting authoritative source records %s and %s"
+                % (subject_id, prior, source_id)
+            )
+        elif isinstance(subject_id, str):
+            source_by_subject[subject_id] = source_id
+        if subject_id not in subject_by_id:
+            issues.append("source record %s has an unresolved subject owner" % source_id)
+        for field, expected_kind in (
+                ("subject_id", "orthing"), ("session_id", "session"),
+                ("episode_id", "episode"), ("actor_id", "actor")):
+            value = source.get(field)
+            if _string_lookup(identity_kind_by_id, value) != expected_kind:
+                issues.append(
+                    "source record %s %s must resolve as a typed %s identity"
+                    % (source_id, field, expected_kind)
+                )
     for subject_id, subject in subject_by_id.items():
         subject_kind = subject.get("subject_kind")
         if isinstance(subject_kind, str) and subject_kind in {"waking_orthing", "counterexample"}:
@@ -1404,6 +1519,11 @@ def _records_issues(document, activation, history, schemas, store):
                 "run %s reference corpus revision requires an immutable owner"
                 % rid
             )
+        elif corpus.get("owner_ref") != EXPECTED_REFERENCE_CORPUS_OWNER:
+            issues.append(
+                "run %s reference corpus owner must resolve to the approved Decision 0035 authority"
+                % rid
+            )
         if anchors & comparators:
             issues.append("run %s anchor frontier and historical comparators must be disjoint" % rid)
         for ref in anchors | comparators:
@@ -1875,6 +1995,22 @@ def _records_issues(document, activation, history, schemas, store):
             if proposed_at and decided_at and proposed_at >= decided_at:
                 issues.append("authorization %s must occur after its proposal" % auth.get("authorization_id"))
 
+    authorization_times = defaultdict(list)
+    for auth in auth_rows:
+        key = _string_tuple_key(auth.get("proposal_id"), auth.get("authorization_rule_ref"))
+        decided_at = _parse_time(
+            auth.get("decided_at"),
+            "authorization %s decided_at" % auth.get("authorization_id"), issues,
+        )
+        if key is not None and decided_at is not None:
+            authorization_times[(key, decided_at)].append(auth.get("authorization_id"))
+    for (key, decided_at), authorization_ids in authorization_times.items():
+        if len(authorization_ids) > 1:
+            issues.append(
+                "proposal %s authorization rule %s has a non-total effective order at %s"
+                % (key[0], key[1], decided_at.isoformat())
+            )
+
     outcome_application_ids = {
         row.get("application_id") for row in outcome_rows
         if isinstance(row.get("application_id"), str)
@@ -1904,9 +2040,18 @@ def _records_issues(document, activation, history, schemas, store):
                 "application attempt requires a non-rejected active proposal"
             )
         if application.get("status") == "applied":
+            outcome_results = {
+                outcome.get("result")
+                for outcome in outcomes_by_application.get(application_id, [])
+                if isinstance(outcome.get("result"), str)
+            }
             if (application.get("outcome_evaluation_required") is not True
                     or len(outcomes_by_application.get(application_id, [])) != 1):
                 issues.append("applied mutation requires later outcome evaluation")
+            if outcome_results & {"ineffective", "harmful"}:
+                issues.append(
+                    "ineffective or harmful evaluated applications must transition to reverted"
+                )
             if not _string_member(successor_by_id, application.get("successor_state_id")):
                 issues.append("applied mutation requires a resolvable successor state")
             else:
@@ -2244,19 +2389,19 @@ def _inventory_issues(document, schemas, store):
             row.get("downstream_owner"),
             "inventory candidate %s downstream_owner" % row.get("candidate_id"), issues,
         )
+        owner_role = downstream_owner.get("owner_role")
         if (downstream_owner.get("ownership_scope") != "external/downstream"
                 or downstream_owner.get("local_runtime_ownership") != "prohibited"
-                or not isinstance(downstream_owner.get("owner_role"), str)
-                or not downstream_owner.get("owner_role")):
+                or not isinstance(owner_role, str)
+                or owner_role not in ALLOWED_CANDIDATE_OWNER_ROLES):
             issues.append(
-                "inventory candidate %s must bind a structured external/downstream owner"
+                "inventory candidate %s must bind an approved closed external/downstream owner role"
                 % row.get("candidate_id")
             )
-        owner_words = _normalized_words(downstream_owner.get("owner_role"))
-        if ("runtime" in owner_words
-                and {"orthemology", "built", "deployed"} <= owner_words):
+        expected_residual = _string_lookup(EXPECTED_CANDIDATE_RESIDUALS, candidate_id)
+        if expected_residual is None or row.get("residual_behavior") != expected_residual:
             issues.append(
-                "inventory candidate %s owner label contradicts external downstream ownership"
+                "inventory candidate %s must preserve its closed structured residual disposition"
                 % row.get("candidate_id")
             )
         if (candidate_id == "guarded-writeback-actuator"
@@ -2304,14 +2449,9 @@ def _adoption_issues(document, schemas, store):
             "Hermes predecessor classification must remain structured, neutral, and source-qualified"
         )
     characterization = document.get("predecessor_characterization")
-    if (not isinstance(characterization, str) or not characterization):
-        issues.append("Hermes predecessor explanatory characterization must be nonempty")
-    characterization_words = _normalized_words(characterization)
-    if ({"non", "reasoning"} <= characterization_words
-            or {"no", "interpretation"} <= characterization_words
-            or {"no", "writeback"} <= characterization_words):
+    if characterization not in ALLOWED_PREDECESSOR_CHARACTERIZATIONS:
         issues.append(
-            "Hermes predecessor characterization cannot contradict its structured reasoning scope"
+            "Hermes predecessor characterization must use a closed neutral explanation bound to its structured scope"
         )
     for field in ("automatic_proposal", "automatic authorization", "automatic application", "automatic writeback"):
         if document.get(field) != "prohibited":

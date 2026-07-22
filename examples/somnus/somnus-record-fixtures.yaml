@@ -27,12 +27,14 @@ identity_registry:
 - {identity_id: SESSION-R7E-RECONSTRUCTION, identity_kind: session}
 - {identity_id: SESSION-NEW-001, identity_kind: session}
 - {identity_id: SESSION-OLD-001, identity_kind: session}
+- {identity_id: SESSION-FIXTURE-CORPUS, identity_kind: session}
 - {identity_id: EP-001, identity_kind: episode}
 - {identity_id: EP-002, identity_kind: episode}
 - {identity_id: EP-R7E-RECONSTRUCTION, identity_kind: episode}
 - {identity_id: EP-NEW-001, identity_kind: episode}
 - {identity_id: EP-OLD-001, identity_kind: episode}
 - {identity_id: EP-OLD-002, identity_kind: episode}
+- {identity_id: EP-FIXTURE-CORPUS, identity_kind: episode}
 - {identity_id: OCC-001, identity_kind: occurrence}
 - {identity_id: OCC-002, identity_kind: occurrence}
 - {identity_id: OCC-R7E-SURVIVING-TRACE, identity_kind: occurrence}
@@ -121,21 +123,21 @@ subject_records:
 - {subject_id: ORTH-OPP-004, subject_kind: counterexample, t1_at: '2026-05-01T18:00:00Z', source_record_ref: fixture-subject-ORTH-OPP-004}
 source_records:
 - {source_record_id: fixture-subject-ORTH-NEW-001, subject_id: ORTH-NEW-001, record_kind: fixture_subject, occurred_at: '2026-07-21T18:00:00Z', session_id: SESSION-NEW-001, episode_id: EP-NEW-001, actor_id: actor-local-1, source_family: corpus-A, immutable: true}
-- {source_record_id: fixture-subject-ORTH-NEW-002, subject_id: ORTH-NEW-002, record_kind: fixture_subject, occurred_at: '2026-07-22T18:00:00Z', immutable: true}
+- {source_record_id: fixture-subject-ORTH-NEW-002, subject_id: ORTH-NEW-002, record_kind: fixture_subject, occurred_at: '2026-07-22T18:00:00Z', session_id: SESSION-FIXTURE-CORPUS, episode_id: EP-FIXTURE-CORPUS, actor_id: actor-local-1, source_family: corpus-A, immutable: true}
 - {source_record_id: fixture-subject-ORTH-OLD-001, subject_id: ORTH-OLD-001, record_kind: fixture_subject, occurred_at: '2026-04-22T18:00:00Z', session_id: SESSION-OLD-001, episode_id: EP-OLD-001, actor_id: actor-local-1, source_family: corpus-A, immutable: true}
 - {source_record_id: fixture-subject-ORTH-OLD-002, subject_id: ORTH-OLD-002, record_kind: fixture_subject, occurred_at: '2026-06-01T18:00:00Z', session_id: SESSION-OLD-001, episode_id: EP-OLD-002, actor_id: actor-local-1, source_family: corpus-A, immutable: true}
-- {source_record_id: fixture-subject-ORTH-SUCCESS-001, subject_id: ORTH-SUCCESS-001, record_kind: fixture_subject, occurred_at: '2026-05-15T18:00:00Z', immutable: true}
-- {source_record_id: fixture-subject-ORTH-CORRECT-DEFECTIVE-001, subject_id: ORTH-CORRECT-DEFECTIVE-001, record_kind: fixture_subject, occurred_at: '2026-07-20T11:00:00Z', immutable: true}
-- {source_record_id: fixture-subject-ORTH-NO-CHANGE-001, subject_id: ORTH-NO-CHANGE-001, record_kind: fixture_subject, occurred_at: '2026-07-20T12:00:00Z', immutable: true}
-- {source_record_id: fixture-subject-ORTH-ALTERNATIVES-001, subject_id: ORTH-ALTERNATIVES-001, record_kind: fixture_subject, occurred_at: '2026-07-20T13:00:00Z', immutable: true}
-- {source_record_id: fixture-subject-ORTH-OPP-001, subject_id: ORTH-OPP-001, record_kind: fixture_subject, occurred_at: '2026-03-01T18:00:00Z', immutable: true}
-- {source_record_id: fixture-subject-ORTH-OPP-002, subject_id: ORTH-OPP-002, record_kind: fixture_subject, occurred_at: '2026-03-15T18:00:00Z', immutable: true}
-- {source_record_id: fixture-subject-ORTH-OPP-003, subject_id: ORTH-OPP-003, record_kind: fixture_subject, occurred_at: '2026-04-01T18:00:00Z', immutable: true}
-- {source_record_id: fixture-subject-ORTH-OPP-004, subject_id: ORTH-OPP-004, record_kind: fixture_subject, occurred_at: '2026-05-01T18:00:00Z', immutable: true}
+- {source_record_id: fixture-subject-ORTH-SUCCESS-001, subject_id: ORTH-SUCCESS-001, record_kind: fixture_subject, occurred_at: '2026-05-15T18:00:00Z', session_id: SESSION-FIXTURE-CORPUS, episode_id: EP-FIXTURE-CORPUS, actor_id: actor-local-1, source_family: corpus-A, immutable: true}
+- {source_record_id: fixture-subject-ORTH-CORRECT-DEFECTIVE-001, subject_id: ORTH-CORRECT-DEFECTIVE-001, record_kind: fixture_subject, occurred_at: '2026-07-20T11:00:00Z', session_id: SESSION-FIXTURE-CORPUS, episode_id: EP-FIXTURE-CORPUS, actor_id: actor-local-1, source_family: corpus-A, immutable: true}
+- {source_record_id: fixture-subject-ORTH-NO-CHANGE-001, subject_id: ORTH-NO-CHANGE-001, record_kind: fixture_subject, occurred_at: '2026-07-20T12:00:00Z', session_id: SESSION-FIXTURE-CORPUS, episode_id: EP-FIXTURE-CORPUS, actor_id: actor-local-1, source_family: corpus-A, immutable: true}
+- {source_record_id: fixture-subject-ORTH-ALTERNATIVES-001, subject_id: ORTH-ALTERNATIVES-001, record_kind: fixture_subject, occurred_at: '2026-07-20T13:00:00Z', session_id: SESSION-FIXTURE-CORPUS, episode_id: EP-FIXTURE-CORPUS, actor_id: actor-local-1, source_family: corpus-A, immutable: true}
+- {source_record_id: fixture-subject-ORTH-OPP-001, subject_id: ORTH-OPP-001, record_kind: fixture_subject, occurred_at: '2026-03-01T18:00:00Z', session_id: SESSION-FIXTURE-CORPUS, episode_id: EP-FIXTURE-CORPUS, actor_id: actor-local-1, source_family: corpus-A, immutable: true}
+- {source_record_id: fixture-subject-ORTH-OPP-002, subject_id: ORTH-OPP-002, record_kind: fixture_subject, occurred_at: '2026-03-15T18:00:00Z', session_id: SESSION-FIXTURE-CORPUS, episode_id: EP-FIXTURE-CORPUS, actor_id: actor-local-1, source_family: corpus-A, immutable: true}
+- {source_record_id: fixture-subject-ORTH-OPP-003, subject_id: ORTH-OPP-003, record_kind: fixture_subject, occurred_at: '2026-04-01T18:00:00Z', session_id: SESSION-FIXTURE-CORPUS, episode_id: EP-FIXTURE-CORPUS, actor_id: actor-local-1, source_family: corpus-A, immutable: true}
+- {source_record_id: fixture-subject-ORTH-OPP-004, subject_id: ORTH-OPP-004, record_kind: fixture_subject, occurred_at: '2026-05-01T18:00:00Z', session_id: SESSION-FIXTURE-CORPUS, episode_id: EP-FIXTURE-CORPUS, actor_id: actor-local-1, source_family: corpus-A, immutable: true}
 reference_corpus_records:
-- {reference_corpus_revision: LEDGER-REV-001, owner_ref: docs/decisions/0035-somnic-orthing-and-activation-contracts.md#reference-corpus, immutable: true}
-- {reference_corpus_revision: LEDGER-REV-002, owner_ref: docs/decisions/0035-somnic-orthing-and-activation-contracts.md#reference-corpus, immutable: true}
-- {reference_corpus_revision: LEDGER-REV-003, owner_ref: docs/decisions/0035-somnic-orthing-and-activation-contracts.md#reference-corpus, immutable: true}
+- {reference_corpus_revision: LEDGER-REV-001, owner_ref: docs/decisions/0035-somnic-orthing-and-activation-contracts.md#frontier-recurrence-and-retrospective-loci, immutable: true}
+- {reference_corpus_revision: LEDGER-REV-002, owner_ref: docs/decisions/0035-somnic-orthing-and-activation-contracts.md#frontier-recurrence-and-retrospective-loci, immutable: true}
+- {reference_corpus_revision: LEDGER-REV-003, owner_ref: docs/decisions/0035-somnic-orthing-and-activation-contracts.md#frontier-recurrence-and-retrospective-loci, immutable: true}
 material_deltas:
 - {material_delta_id: DELTA-CONTRACT-0.1.1, delta_kind: contract_revision, owner_role: operation_contract, recorded_at: '2026-07-23T18:00:00Z', source_ref: recurrence-contract@0.1.1, applies_to_ids: [SA-CLOSED-001]}
 source_family_records:
@@ -453,7 +455,7 @@ somnic_assessments:
   authorization_refs: [AUTH-INDEPENDENT-001]
   application_refs: [APP-APPLIED-001]
   outcome_evaluation_refs: [OUTCOME-001]
-  target_history_digest: 6a44d109457542b54a27185714c89f4719bcf27f9a95f0e7504fc5ca2cc557c3
+  target_history_digest: 7f7941a49a7af9a23a618a02862653f13b3a13f2dd21dc446f366c35b2469bfc
 - <<: *assessment_base
   assessment_id: SA-CLOSED-001
   meta_orthability_assessment_id: MOA-CLOSED-001
@@ -471,7 +473,7 @@ somnic_assessments:
   assessment_result: no_change
   intervention_disposition: no_change
   proposal_ids: []
-  target_history_digest: 1c52713b08a05a3fdf23bfd2fb0a3f7d9718168187ffc98d69d81fb8e10c337c
+  target_history_digest: 2243c6c789c08130a1723a7b869df347b774e40b3c8d43b454c1900f35a6d72c
 - <<: *assessment_base
   assessment_id: SA-ALTERNATIVES-001
   meta_orthability_assessment_id: MOA-ALTERNATIVES-001
@@ -482,7 +484,7 @@ somnic_assessments:
   authorization_refs: [AUTH-FAILED-001]
   application_refs: [APP-FAILED-001]
   outcome_evaluation_refs: []
-  target_history_digest: 04db50b6f3f0c1046f1b131834a99e05708d1c16e2a1919e6c7238fd9b49aafe
+  target_history_digest: a791e97211c53944664811c3defa46437c45a17e87e8e5995db8ac95079b0dcf
 - <<: *assessment_base
   assessment_id: SA-REOPENED-001
   meta_orthability_assessment_id: MOA-REOPENED-001

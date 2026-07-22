@@ -39,19 +39,19 @@ checkpoints:
   captured_through: '2026-07-21T19:00:01Z'
   event_ids: []
   predecessor_checkpoint_digest: null
-  checkpoint_digest: f307b218ccb004206e822853ee3e4e04d8c953de5f21b3acb1fe177e914c79c6
+  checkpoint_digest: 6255f2ae70a831514399160fc54b49a8804763b1f3a42c93289f2ad6032a2e26
   immutable: true
 - checkpoint_id: CP-ORTH-NO-CHANGE-001-T2
   subject_id: ORTH-NO-CHANGE-001
   captured_through: '2026-07-21T19:00:01Z'
   event_ids: []
   predecessor_checkpoint_digest: null
-  checkpoint_digest: 18ccf620ea0ab84ebe452be02023677024469128c557e1cc95137ac2108f81fd
+  checkpoint_digest: a1b14ca0d01d0bb0804d36c1f5d8229a2e529a22c671de8087ae73b58c786a41
   immutable: true
 - checkpoint_id: CP-ORTH-ALTERNATIVES-001-T2
   subject_id: ORTH-ALTERNATIVES-001
   captured_through: '2026-07-21T19:00:01Z'
   event_ids: []
   predecessor_checkpoint_digest: null
-  checkpoint_digest: 9d392170e777fe0fd50d151bf9da0f8fc35a3c6177f7ffe826fcbb06a1fe0ddf
+  checkpoint_digest: 0b01051f1686b133f266ec11ba84f9018918133154b8fda3191e09e76ccbc704
   immutable: true

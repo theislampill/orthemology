@@ -1,4 +1,12 @@
 schema: orthemology-activation-contract-fixtures-v1
+version_transition_authority:
+  authority_ref: docs/decisions/0035-somnic-orthing-and-activation-contracts.md#activation-and-claimant-routing
+  append_only: true
+  accepted_versions:
+  - {artifact_kind: activation_contract, artifact_id: database-schema-activation, artifact_version: 1.0.0, sequence: 1, supersedes: null}
+  - {artifact_kind: activation_contract, artifact_id: recurrence-meta-assessability, artifact_version: 1.0.0, sequence: 1, supersedes: null}
+  - {artifact_kind: activation_contract, artifact_id: theological-claimant-activation, artifact_version: 1.0.0, sequence: 1, supersedes: null}
+  - {artifact_kind: orthability_evaluator, artifact_id: property-boundary-evaluator, artifact_version: 1.0.0, sequence: 1, supersedes: null}
 evaluators:
 - evaluator_id: property-boundary-evaluator
   evaluator_version: 1.0.0

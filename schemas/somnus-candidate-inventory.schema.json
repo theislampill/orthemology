@@ -51,13 +51,13 @@
               "historical_rewrite": {"const": "prohibited"}
             }
           },
-          "residual_behavior": {"type": "string", "minLength": 1},
+          "residual_behavior": {"enum": ["retain inapplicable and indeterminate attempts", "append interruption and incomplete-record residuals", "preserve raw text and governed disposition", "preserve dependence and counterexample uncertainty", "retain conflict and confidence effect", "no-change and held residuals remain valid outcomes", "rejection and failure do not rewrite assessment", "failed application preserves histories", "closed outputs remain outside the frontier absent material delta", "disclose redactions and non-claims", "hold incompatible or insufficient packets", "retain source/local version distinction", "preserve unresolved conflict and scope limits", "preserve plural closure", "record cycles, redactions, and incompatible versions"]},
           "downstream_owner": {
             "type": "object", "additionalProperties": false,
             "required": ["ownership_scope", "owner_role", "local_runtime_ownership"],
             "properties": {
               "ownership_scope": {"const": "external/downstream"},
-              "owner_role": {"type": "string", "minLength": 1},
+              "owner_role": {"enum": ["agent-host routing owner", "durable-ledger owner", "runtime capture owner", "somnus operation owner after successor trigger", "conflict-detection owner", "intervention-governance owner", "proposal owner", "writeback runtime owner", "host/orchestrator owner", "transport owner", "import owner", "normative-adoption owner", "collective-assessment owner", "council owner", "transclusion-ledger owner", "external change-proposal custodian", "downstream guarded actuation service owner", "external bounded-record custody operator"]},
               "local_runtime_ownership": {"const": "prohibited"}
             }
           },
