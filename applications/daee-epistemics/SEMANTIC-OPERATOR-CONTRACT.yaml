@@ -22,6 +22,11 @@ predicate_registry:
   computation: decision-0011-required-reason-projection
   factive: false
   requires: []
+- canonical_id: token_truth_linked_q
+  normative_symbol: TOKEN_TRUTH_LINKED_q(e)
+  computation: decision-0011-token-truth-linkage
+  factive: true
+  requires: []
 - canonical_id: strictly_sound_reasoning_q
   normative_symbol: StrictlySoundReasoning_q(e)
   computation: decision-0011-conjunction
@@ -29,6 +34,12 @@ predicate_registry:
   requires: [reasoning_path_adequate_q, token_truth_linked_q]
 owner_aliases:
 - {owner_family: MRP, canonical_owner: TTP-MRP-mid-reread-pressure, relation: typed-owner-family-alias}
+owner_registry:
+- {owner_kind: governance-source, owner_id: recursive-state-transitions, source_ref: atomics/skill/references/diagnostics/recursive-state-transitions.md}
+- {owner_kind: governance-source, owner_id: corrective-transition-owner, source_ref: atomics/skill/references/diagnostics/recursive-state-transitions.md}
+- {owner_kind: owner-family-ground, owner_id: MRP, source_ref: TTP-MRP-mid-reread-pressure}
+- {owner_kind: catalogue-module, owner_id: TTP-MRP-mid-reread-pressure, source_ref: atomics/skill/references/diagnostics/module-catalogue.json}
+- {owner_kind: governance-source, owner_id: output-release, source_ref: atomics/skill/references/diagnostics/output-release.md}
 governance:
   whole_state_reread_required_before_closure: true
   burden_retention: address-or-carry-forward-with-provenance

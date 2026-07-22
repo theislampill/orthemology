@@ -3,14 +3,14 @@
   "$id": "orthemology-daee-semantic-operator-contract-v1",
   "type": "object",
   "additionalProperties": false,
-  "required": ["schema", "status", "daee_pin", "type_registry", "predicate_registry", "operator_contracts", "owner_aliases", "governance", "non_claims"],
+  "required": ["schema", "status", "daee_pin", "type_registry", "predicate_registry", "operator_contracts", "owner_aliases", "owner_registry", "governance", "non_claims"],
   "properties": {
     "schema": {"const": "orthemology-daee-semantic-operator-contract-v1"},
     "status": {"const": "current"},
     "daee_pin": {"const": "c86b3c6673147b8802fe222373a165a37d4d24a8"},
     "type_registry": {"type": "array", "minItems": 1, "uniqueItems": true, "items": {"type": "string", "minLength": 1}},
     "predicate_registry": {
-      "type": "array", "minItems": 5,
+      "type": "array", "minItems": 6,
       "items": {
         "type": "object", "additionalProperties": false,
         "required": ["canonical_id", "normative_symbol", "computation", "factive", "requires"],
@@ -37,6 +37,18 @@
         "properties": {
           "owner_family": {"type": "string"}, "canonical_owner": {"type": "string"},
           "relation": {"const": "typed-owner-family-alias"}
+        }
+      }
+    },
+    "owner_registry": {
+      "type": "array", "minItems": 1, "uniqueItems": true,
+      "items": {
+        "type": "object", "additionalProperties": false,
+        "required": ["owner_kind", "owner_id", "source_ref"],
+        "properties": {
+          "owner_kind": {"type": "string", "minLength": 1},
+          "owner_id": {"type": "string", "minLength": 1},
+          "source_ref": {"type": "string", "minLength": 1}
         }
       }
     },

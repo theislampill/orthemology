@@ -62,9 +62,9 @@
           "properties": {
             "original_record_identity": {"type": "string"}, "original_content_digest": {"type": "string", "pattern": "^[0-9a-f]{64}$"},
             "source_contract": {"const": "orthemology-corrective-transition-v1"}, "migration_operation": {"const": "explicit-v1-to-v2-copy"},
-            "migration_version": {"const": "orthemology-corrective-transition-migration-v1"}, "migration_time": {"type": "string"},
-            "provenance": {"type": "string"}, "fields_mapped_directly": {"type": "array", "items": {"type": "string"}},
-            "fields_newly_supplied": {"type": "array", "items": {"type": "string"}}, "fields_unavailable_or_held": {"type": "array", "items": {"type": "string"}},
+            "migration_version": {"const": "orthemology-corrective-transition-migration-v1"}, "migration_time": {"type": "string", "minLength": 1},
+            "provenance": {"type": "string", "minLength": 1}, "fields_mapped_directly": {"type": "array", "uniqueItems": true, "items": {"type": "string"}},
+            "fields_newly_supplied": {"type": "array", "minItems": 1, "uniqueItems": true, "items": {"type": "string"}}, "fields_unavailable_or_held": {"type": "array", "uniqueItems": true, "items": {"type": "string"}},
             "resulting_v2_digest": {"type": "string", "pattern": "^[0-9a-f]{64}$"}
           }
         }

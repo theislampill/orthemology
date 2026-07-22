@@ -17,6 +17,11 @@ EXPECTED_OPERATORS = {
     "route-pressure", "event-transition", "field-divergence", "field-curl",
     "loop-break", "whole-state-reread", "runtime-closure",
 }
+EXPECTED_PREDICATES = {
+    "admissible_corrective_transition", "locally_improving_transition",
+    "transition_pathway_adequate", "reasoning_path_adequate_q",
+    "token_truth_linked_q", "strictly_sound_reasoning_q",
+}
 REQUIRED_ROW_FIELDS = {
     "semantic_operator_id", "display_name", "symbol", "inputs", "outputs",
     "target_field", "preconditions", "semantic_kind", "claim_role", "owner_binding",
@@ -32,17 +37,70 @@ def read(rel):
 def issue_codes(contract):
     """Return deterministic semantic issue codes without fixture-string matching."""
     issues = []
+    if not isinstance(contract, dict):
+        return ["malformed-contract-root"]
+
+    declared_types = contract.get("type_registry", [])
+    if not isinstance(declared_types, list) or not all(
+            isinstance(value, str) and value for value in declared_types):
+        issues.append("malformed-type-registry")
+        declared_types = []
+    declared_types = set(declared_types)
+
+    owner_rows = contract.get("owner_registry", [])
+    if not isinstance(owner_rows, list):
+        issues.append("malformed-owner-registry")
+        owner_rows = []
+    declared_owners = set()
+    owner_ids = set()
+    for owner in owner_rows:
+        if not isinstance(owner, dict):
+            issues.append("malformed-owner-registry")
+            continue
+        binding = (owner.get("owner_kind"), owner.get("owner_id"), owner.get("source_ref"))
+        if not all(isinstance(value, str) and value for value in binding):
+            issues.append("malformed-owner-registry")
+            continue
+        declared_owners.add(binding)
+        owner_ids.add(owner["owner_id"])
+    if len(declared_owners) != len(owner_rows):
+        issues.append("duplicate-owner-binding")
+
     rows = contract.get("operator_contracts", [])
-    ids = [r.get("semantic_operator_id") for r in rows]
+    if not isinstance(rows, list):
+        issues.append("malformed-operator-registry")
+        rows = []
+    ids = [r.get("semantic_operator_id") for r in rows if isinstance(r, dict)]
     if set(ids) != EXPECTED_OPERATORS or len(ids) != len(EXPECTED_OPERATORS):
         issues.append("operator-registry-incomplete")
     for row in rows:
+        if not isinstance(row, dict):
+            issues.append("malformed-operator-row")
+            continue
         if not REQUIRED_ROW_FIELDS.issubset(row):
             issues.append("operator-row-incomplete")
             continue
+        for field in ("inputs", "outputs"):
+            values = row.get(field)
+            if not isinstance(values, list) or not all(
+                    isinstance(value, str) and value for value in values):
+                issues.append("malformed-operator-types")
+            elif any(value not in declared_types for value in values):
+                issues.append("unresolved-operator-type")
+        owner = row.get("owner_binding")
+        if not isinstance(owner, dict):
+            issues.append("malformed-owner-binding")
+        elif (owner.get("owner_kind"), owner.get("owner_id"), owner.get("source_ref")) \
+                not in declared_owners:
+            issues.append("unresolved-owner-binding")
         target = row.get("target_field", {})
+        if not isinstance(target, dict):
+            issues.append("malformed-target-field")
+            target = {}
         if row.get("semantic_operator_id") in {"field-divergence", "field-curl"}:
-            if target.get("field_kind") != "typed-multi-node-field" or len(target.get("node_types", [])) < 2:
+            node_types = target.get("node_types")
+            if target.get("field_kind") != "typed-multi-node-field" \
+                    or not isinstance(node_types, list) or len(node_types) < 2:
                 issues.append("untyped-field-target")
         if row.get("semantic_kind") == "differentiable-gradient":
             issues.append("literal-differentiable-gradient")
@@ -54,19 +112,58 @@ def issue_codes(contract):
             issues.append("operator-nonclaim-missing")
 
     predicates = contract.get("predicate_registry", [])
-    canonical_ids = [p.get("canonical_id") for p in predicates]
-    symbols = [p.get("normative_symbol") for p in predicates]
+    if not isinstance(predicates, list):
+        issues.append("malformed-predicate-registry")
+        predicates = []
+    predicate_rows = [p for p in predicates if isinstance(p, dict)]
+    if len(predicate_rows) != len(predicates):
+        issues.append("malformed-predicate-registry")
+    canonical_ids = [p.get("canonical_id") for p in predicate_rows]
+    symbols = [p.get("normative_symbol") for p in predicate_rows]
+    if set(canonical_ids) != EXPECTED_PREDICATES or len(canonical_ids) != len(EXPECTED_PREDICATES):
+        issues.append("predicate-registry-incomplete")
     if len(canonical_ids) != len(set(canonical_ids)) or len(symbols) != len(set(symbols)):
         issues.append("duplicate-normative-predicate")
-    reason = [p for p in predicates if p.get("canonical_id") == "reasoning_path_adequate_q"]
+    predicate_ids = set(canonical_ids)
+    for predicate in predicate_rows:
+        requires = predicate.get("requires")
+        if not isinstance(requires, list) or not all(
+                isinstance(value, str) and value for value in requires):
+            issues.append("malformed-predicate-relation")
+        elif any(value not in predicate_ids for value in requires):
+            issues.append("unresolved-predicate-relation")
+    reason = [p for p in predicate_rows if p.get("canonical_id") == "reasoning_path_adequate_q"]
     if len(reason) != 1 or reason[0].get("normative_symbol") != "ReasoningPathAdequate_q(e)" \
-            or reason[0].get("computation") != "decision-0011-required-reason-projection":
+            or reason[0].get("computation") != "decision-0011-required-reason-projection" \
+            or reason[0].get("requires") != [] or "alias_of" in reason[0]:
         issues.append("predicate-semantics-changed")
-    strict = [p for p in predicates if p.get("canonical_id") == "strictly_sound_reasoning_q"]
+    strict = [p for p in predicate_rows if p.get("canonical_id") == "strictly_sound_reasoning_q"]
     if len(strict) != 1 or strict[0].get("requires") != ["reasoning_path_adequate_q", "token_truth_linked_q"]:
         issues.append("strict-soundness-substitution")
     if "ClaimRelevantReasoningPathAdequate" in canonical_ids:
         issues.append("duplicate-normative-predicate")
+    for row in rows:
+        if not isinstance(row, dict):
+            continue
+        relation = row.get("pathway_relation")
+        if not isinstance(relation, dict):
+            issues.append("malformed-pathway-relation")
+            continue
+        canonical = relation.get("canonical_predicate")
+        if canonical not in predicate_ids:
+            issues.append("unresolved-predicate-relation")
+        if canonical == "strictly_sound_reasoning_q":
+            issues.append("operator-supplies-strict-soundness")
+        if canonical == "reasoning_path_adequate_q":
+            issues.append("operator-substitutes-claim-relative-predicate")
+
+    aliases = contract.get("owner_aliases", [])
+    if not isinstance(aliases, list):
+        issues.append("malformed-owner-alias")
+        aliases = []
+    for alias in aliases:
+        if not isinstance(alias, dict) or alias.get("canonical_owner") not in owner_ids:
+            issues.append("unresolved-owner-alias")
     statuses = contract.get("predicate_alias_statuses")
     if statuses:
         issues.append("duplicate-alias-status")
