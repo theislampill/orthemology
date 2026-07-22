@@ -78,6 +78,22 @@ EXPECTED_SOURCE_STATES = {
 # history, or authoritative target history. A future owner requires a reviewed
 # contract change rather than promotion based only on evidence state.
 SOURCE_AUTHORITY_SCOPES = {source_ref: frozenset() for source_ref in EXPECTED_SOURCE_STATES}
+SOURCE_OBJECT_PURPOSES = {
+    "docs/project-closure/r7e/AUTONOMOUS-R7E-STATE.json": frozenset({
+        "executor-subagent-roles",
+        "sources",
+        "integrated-actions",
+    }),
+    "docs/project-closure/r7e-sol/R7E-INPUT-PROVENANCE.json": frozenset({
+        "sources",
+        "residual-backlog",
+    }),
+    "docs/project-closure/r7e-sol/R7E-INDEPENDENT-FINDING-MATRIX.yaml": frozenset({
+        "integrated-actions",
+        "successor-state",
+    }),
+    "eight repository rejection bullets": frozenset({"integrated-actions"}),
+}
 EXPECTED_OBJECT_ROLES = {
     "orthemmata": "retrospective-reconstruction",
     "declared-analysis": "schema-conformant-illustrative-mapping",
@@ -100,6 +116,10 @@ PROMOTED_CLAIM = re.compile(
     r"|\b(?:proves?|proved|establishes|established|demonstrates?|demonstrated|validates?|validated)\b"
     r"[^.\n]{0,120}\b(?:correctness|comparative utility|empirical validation|terminology (?:benefit|adoption)|"
     r"internal model ontology|generalization|recurrence|frontier|writeback|autonomy|runtime|Somnus|original .{0,30}identit(?:y|ies))\b"
+    r"|\b(?:is|are|was|were|be|been|being|remains?)\b"
+    r"(?![^.\n]{0,40}\b(?:not|never)\b)[^.\n]{0,40}\bcorrect(?:ness|ly)?\b"
+    r"|\b(?:is|are|was|were|be|been|being|has|have|had)\b"
+    r"(?![^.\n]{0,40}\b(?:not|never)\b)[^.\n]{0,40}\bdeploy(?:ed|ing|ment)?\b"
     r")",
     re.IGNORECASE,
 )
@@ -159,6 +179,18 @@ def _has_source_authority(evidence_by_id: dict, ref: str, scope: str) -> bool:
         return False
     source_ref = row.get("source_ref")
     return isinstance(source_ref, str) and scope in SOURCE_AUTHORITY_SCOPES.get(source_ref, frozenset())
+
+
+def _has_object_purpose(evidence_by_id: dict, ref: str, object_kind: object) -> bool:
+    row = evidence_by_id.get(ref)
+    if not isinstance(row, dict) or row.get("state") != "repository-verified":
+        return False
+    source_ref = row.get("source_ref")
+    return (
+        isinstance(source_ref, str)
+        and isinstance(object_kind, str)
+        and object_kind in SOURCE_OBJECT_PURPOSES.get(source_ref, frozenset())
+    )
 
 
 def _task4_r7e_events(issues: list[str]) -> dict[str, dict]:
@@ -240,9 +272,9 @@ def _witness_issues(witness: dict) -> list[str]:
             issues.append("structured witness claim exceeds its illustration and evidence boundary")
         row_refs = _refs(row.get("evidence_refs"))
         if row.get("illustration_role") == "documented-historical-fact" and not any(
-            evidence_by_id.get(ref, {}).get("state") == "repository-verified" for ref in row_refs
+            _has_object_purpose(evidence_by_id, ref, kind) for ref in row_refs
         ):
-            issues.append("documented historical fact requires repository-verified supporting evidence")
+            issues.append("documented historical fact requires a compatible typed source purpose")
         if row.get("illustration_role") == "unsupported-live-runtime-claim" and any(
             evidence_by_id.get(ref, {}).get("state") not in {"missing", "unresolved"} for ref in row_refs
         ):

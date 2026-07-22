@@ -413,10 +413,21 @@ class R7ELLMWitnessTests(unittest.TestCase):
         )
         self.assertRejected(witness=witness, fragment="structured evidence claim")
 
+    def test_terminal_rejects_direct_correctness_claim(self):
+        witness, _, _ = bounded_control()
+        witness["evidence_registry"][0]["claim_boundary"] = "The original system is correct."
+        self.assertRejected(witness=witness, fragment="structured evidence claim")
+
     def test_review_rejects_promoted_unsupported_runtime_description(self):
         witness, _, _ = bounded_control()
         row = next(item for item in witness["witness_objects"] if item["object_kind"] == "case-bound-applications")
         row["description"] = "Original live bindings are verified and prove deployed Somnus correctness."
+        self.assertRejected(witness=witness, fragment="structured witness claim")
+
+    def test_terminal_rejects_direct_runtime_deployment_claim(self):
+        witness, _, _ = bounded_control()
+        row = next(item for item in witness["witness_objects"] if item["object_kind"] == "case-bound-applications")
+        row["description"] = "The original system is deployed and correct."
         self.assertRejected(witness=witness, fragment="structured witness claim")
 
     def test_review_rejects_historical_fact_backed_only_by_missing_evidence(self):
@@ -424,6 +435,12 @@ class R7ELLMWitnessTests(unittest.TestCase):
         row = next(item for item in witness["witness_objects"] if item["object_kind"] == "executor-subagent-roles")
         row["evidence_refs"] = ["E-WORKFLOW-JOURNAL"]
         self.assertRejected(witness=witness, fragment="documented historical fact")
+
+    def test_terminal_rejects_historical_fact_with_incompatible_source_purpose(self):
+        witness, _, _ = bounded_control()
+        row = next(item for item in witness["witness_objects"] if item["object_kind"] == "executor-subagent-roles")
+        row["evidence_refs"] = ["E-SOL-REVIEW"]
+        self.assertRejected(witness=witness, fragment="typed source purpose")
 
     def test_review_rejects_relation_reason_that_contradicts_disposition(self):
         _, crosswalk, _ = bounded_control()
