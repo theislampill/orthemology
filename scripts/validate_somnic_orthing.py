@@ -14,6 +14,7 @@ from pathlib import Path
 
 import yaml
 from jsonschema import Draft202012Validator
+from markdown_it import MarkdownIt
 
 
 ROOT = Path(__file__).resolve().parents[1]
@@ -438,30 +439,12 @@ def _heading_slug(value):
 
 
 def _markdown_heading_slugs(document):
-    """Return ATX heading slugs while excluding fenced code blocks."""
+    """Return real Markdown heading slugs from parsed heading tokens."""
     headings = []
-    fence_character = None
-    fence_length = 0
-    for line in document.splitlines():
-        fence = re.match(r"^ {0,3}(`{3,}|~{3,})(.*)$", line)
-        if fence_character is not None:
-            closing = re.match(
-                r"^ {0,3}%s{%d,}[ \t]*$"
-                % (re.escape(fence_character), fence_length),
-                line,
-            )
-            if closing:
-                fence_character = None
-                fence_length = 0
-            continue
-        if fence:
-            marker = fence.group(1)
-            fence_character = marker[0]
-            fence_length = len(marker)
-            continue
-        heading = re.match(r"^ {0,3}#{1,6}[ \t]+(.+?)[ \t]*#*[ \t]*$", line)
-        if heading:
-            headings.append(_heading_slug(heading.group(1)))
+    tokens = MarkdownIt("commonmark").parse(document)
+    for index, token in enumerate(tokens[:-1]):
+        if token.type == "heading_open" and tokens[index + 1].type == "inline":
+            headings.append(_heading_slug(tokens[index + 1].content))
     return headings
 
 
@@ -1210,6 +1193,32 @@ def _records_issues(document, activation, history, schemas, store):
     outcome_rows = _objects(document, "outcome_evaluations", issues, "records")
     outcome_by_id = _unique_index(outcome_rows, "outcome_evaluation_id", "outcome evaluations", issues)
 
+    for revert_ref, revert_provenance in revert_provenance_by_ref.items():
+        application = _string_lookup(
+            application_by_id, revert_provenance.get("application_id")
+        )
+        authorization = _string_lookup(
+            auth_by_id, revert_provenance.get("authorization_id")
+        )
+        source_revision = revert_provenance.get("source_revision")
+        if (application is None
+                or authorization is None
+                or not isinstance(source_revision, str)
+                or not source_revision.strip()
+                or revert_provenance.get("immutable") is not True):
+            issues.append(
+                "revert provenance %s must resolve its application, authorization, source revision, and immutable owner"
+                % revert_ref
+            )
+            continue
+        if (application.get("authorization_id") != revert_provenance.get("authorization_id")
+                or authorization.get("proposal_id") != application.get("proposal_id")
+                or authorization.get("decision") != "authorized"):
+            issues.append(
+                "revert provenance %s must resolve the exact authorized application chain"
+                % revert_ref
+            )
+
     governed_sources_by_role = defaultdict(set)
     for run in runs:
         for owner in run.get("governing_input_owners", []):
@@ -1235,6 +1244,7 @@ def _records_issues(document, activation, history, schemas, store):
         ("proposal", proposal_by_id),
         ("authorization", auth_by_id),
         ("application", application_by_id),
+        ("revert_provenance", revert_provenance_by_ref),
         ("successor", successor_by_id),
         ("outcome", outcome_by_id),
     )
