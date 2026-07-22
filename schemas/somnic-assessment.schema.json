@@ -26,6 +26,7 @@
     "assessment_target": {"enum": ["t1_reasonableness", "current_placement", "pathway", "residual", "relation", "governing_artifact"]},
     "assessment_result": {"enum": ["reasonable", "defective", "underdetermined", "stale", "superseded", "unassessable", "no_change"]},
     "confidence": {"enum": ["low", "medium", "high", "undetermined"]},
+    "source_status_result": {"enum": ["verified", "qualified", "unverified", "not-applicable"]},
     "defect_loci": {
       "type": "object", "additionalProperties": false,
       "required": ["metaortheme_adequacy", "activation_contract_adequacy", "orthability_evaluator_accuracy", "metaorthemma_binding_correctness", "execution_fidelity", "evidence_adequacy", "placement_correctness", "closure_adequacy"],

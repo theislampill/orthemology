@@ -34,6 +34,13 @@ checkpoints:
   predecessor_checkpoint_digest: 1341aae27ca735966a2d8713049004ac336530c6ffe3f63f8d78f8b9237c4214
   checkpoint_digest: 226ac67d8f0ae93cf656d2e99f46e4fc1a324e628eb424ceb0a65e1edcfaa5f9
   immutable: true
+- checkpoint_id: CP-ORTH-OLD-002-REMOTE-T2
+  subject_id: ORTH-OLD-002
+  captured_through: '2026-07-21T18:01:00Z'
+  event_ids: []
+  predecessor_checkpoint_digest: null
+  checkpoint_digest: ae6bd7e2cea918ce8acc7f71228b55858a2637abab58aefbbb51e57d220dd984
+  immutable: true
 - checkpoint_id: CP-ORTH-CORRECT-DEFECTIVE-001-T2
   subject_id: ORTH-CORRECT-DEFECTIVE-001
   captured_through: '2026-07-21T19:00:01Z'

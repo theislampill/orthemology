@@ -1511,6 +1511,14 @@ def _records_issues(document, activation, history, schemas, store):
             )
             artifact_ref = provenance.get("received_artifact_ref")
             artifact = _string_lookup(subject_by_id, artifact_ref)
+            source_assessment_ids = _string_set(
+                relation.get("source_assessment_ids")
+            )
+            source_status_owners = [
+                assessment_by_id[assessment_id].get("source_status_result")
+                for assessment_id in source_assessment_ids
+                if assessment_id in assessment_by_id
+            ]
             if (relation.get("independence_claim") is not False
                     or provenance.get("received_artifact_ref") is None
                     or provenance.get("receipt_time") is None
@@ -1518,12 +1526,29 @@ def _records_issues(document, activation, history, schemas, store):
                 issues.append(
                     "direct transclusion requires receipt provenance and local assessment without independence"
                 )
+            provenance_redactions = provenance.get("redactions")
+            artifact_redactions = (
+                artifact.get("recorded_redactions") if artifact is not None else None
+            )
             if (artifact is None
                     or artifact.get("subject_kind") != "transcluded_artifact"
-                    or not _string_set(provenance.get("redactions"))
-                    or _string_set(provenance.get("redactions"))
-                    != _string_set(artifact.get("recorded_redactions"))):
-                issues.append("transclusion must preserve its recorded redactions")
+                    or not isinstance(provenance_redactions, list)
+                    or any(not isinstance(value, str) for value in provenance_redactions)
+                    or not isinstance(artifact_redactions, list)
+                    or any(not isinstance(value, str) for value in artifact_redactions)
+                    or provenance_redactions != artifact_redactions):
+                issues.append(
+                    "transclusion must preserve its recorded redactions in order"
+                )
+            if (not source_assessment_ids
+                    or len(source_status_owners) != len(source_assessment_ids)
+                    or any(
+                        status != provenance.get("source_status_result")
+                        for status in source_status_owners
+                    )):
+                issues.append(
+                    "direct transclusion source status must equal its authoritative source assessment owner"
+                )
             if (local_meta is None
                     or local_meta.get("subject_kind") != "transcluded_artifact"
                     or _string_set(local_meta.get("subject_ids")) != {artifact_ref}
@@ -1664,6 +1689,14 @@ def _records_issues(document, activation, history, schemas, store):
 
     global_typed_registries = [
         ("lifecycle_identity", identity_by_id),
+        (
+            "transcluded_artifact",
+            {
+                subject_id: subject
+                for subject_id, subject in subject_by_id.items()
+                if subject.get("subject_kind") == "transcluded_artifact"
+            },
+        ),
         ("capture_provenance", provenance_by_id),
         ("evidence", evidence_by_id),
         ("source_record", source_record_by_id),

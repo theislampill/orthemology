@@ -185,6 +185,14 @@ class FifthSteerReviewRegressions(unittest.TestCase):
             records["subject_records"].append(packet)
             records["meta_orthability_assessments"].append(gate)
             records["inter_somnic_relations"].append(edge)
+            source_assessment = item(
+                records["somnic_assessments"],
+                "assessment_id",
+                edge["source_assessment_ids"][0],
+            )
+            source_assessment["inter_somnic_relation_ids"].append(
+                edge["inter_somnic_relation_id"]
+            )
 
         self.assertAccepted(mutate)
 

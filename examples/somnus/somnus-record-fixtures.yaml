@@ -357,6 +357,9 @@ meta_orthability_assessments:
   meta_orthability_assessment_id: MOA-REOPENED-001
   subject_ids: [ORTH-OLD-001]
 - <<: *meta_gate_base
+  meta_orthability_assessment_id: MOA-REMOTE-SOURCE-001
+  subject_ids: [ORTH-OLD-002]
+- <<: *meta_gate_base
   meta_orthability_assessment_id: MOA-TRANSCLUSION-001
   subject_kind: transcluded_artifact
   subject_ids: [TRANSCLUSION-PACKET-001]
@@ -376,9 +379,9 @@ somnus_runs:
   material_delta_ids: []
   reopens_subject_ids: []
   idempotency_key: recurrence-0.1.0:ORTH-NEW-001:LEDGER-REV-001
-  started_at: '2026-07-21T19:00:00Z'
+  started_at: '2026-07-21T18:00:00Z'
   completed_at: '2026-07-21T19:00:01Z'
-  output_ids: [RR-001, SA-RECURRENCE-001, SA-EVIDENCE-TIMING-001, SA-CORRECT-DEFECTIVE-001, SA-CLOSED-001, SA-NO-CHANGE-001, SA-ALTERNATIVES-001]
+  output_ids: [RR-001, SA-RECURRENCE-001, SA-EVIDENCE-TIMING-001, SA-CORRECT-DEFECTIVE-001, SA-CLOSED-001, SA-NO-CHANGE-001, SA-ALTERNATIVES-001, SA-REMOTE-SOURCE-001]
   somnic_episode_ids: [SEP-RECURRENCE-001, SEP-RECURRENCE-002, SEP-REMOTE-001, SEP-SOURCE-SECOND-001, SEP-COLLECTIVE-001]
   run_disposition: completed
   children_auto_completed: false
@@ -464,8 +467,9 @@ somnic_episodes:
   subject_ids: [ORTH-OLD-002]
   activity_events:
   - {activity_id: SACT-REMOTE-OPEN-001, activity_type: episode-opened, somnic_episode_id: SEP-REMOTE-001, activity_scope: intra-somnic}
+  - {activity_id: SACT-REMOTE-ASSESS-001, activity_type: assessment-recorded, somnic_episode_id: SEP-REMOTE-001, activity_scope: intra-somnic}
   - {activity_id: SACT-REMOTE-CLOSE-001, activity_type: episode-disposed, somnic_episode_id: SEP-REMOTE-001, activity_scope: intra-somnic}
-  assessment_ids: []
+  assessment_ids: [SA-REMOTE-SOURCE-001]
   disposition: closed
   opened_at: '2026-07-21T18:00:00Z'
   disposed_at: '2026-07-21T18:01:00Z'
@@ -476,6 +480,7 @@ somnic_episodes:
   operator_id: actor-local-1
   ledger_id: PROV-LEDGER-LOCAL-001
   subject_ids: [ORTH-OLD-001]
+  assessment_ids: []
   activity_events:
   - {activity_id: SACT-SOURCE2-OPEN-001, activity_type: episode-opened, somnic_episode_id: SEP-SOURCE-SECOND-001, activity_scope: intra-somnic}
   - {activity_id: SACT-SOURCE2-CLOSE-001, activity_type: episode-disposed, somnic_episode_id: SEP-SOURCE-SECOND-001, activity_scope: intra-somnic}
@@ -643,6 +648,21 @@ somnic_assessments:
   frontier_trigger_ids: [DELTA-CONTRACT-0.1.1]
   inter_somnic_relation_ids: [ISR-REOPENS-001, ISR-REASSESSES-001]
   target_history_digest: 147d89f5431f96a344772ae554559efa59938ba8d0de9f4f7c951a097fe8155c
+- <<: *assessment_base
+  assessment_id: SA-REMOTE-SOURCE-001
+  somnic_episode_id: SEP-REMOTE-001
+  target_orthing_ids: [ORTH-OLD-002]
+  meta_orthability_assessment_id: MOA-REMOTE-SOURCE-001
+  t2_configuration: {analysis: analysis-retro@1, metaortheme: recurrence-standard@1, metaorthemma: recurrence-binding@1, evaluator: recurrence-evaluator@0.1.0, assessed_at: '2026-07-21T18:01:00Z'}
+  assessment_target: t1_reasonableness
+  assessment_result: reasonable
+  source_status_result: qualified
+  target_history_checkpoint_ids: [CP-ORTH-OLD-002-REMOTE-T2]
+  target_history_digest: 6d43e646d45b98db577aca75a21d418a919c69fa3ef10e46f44bf4382be46749
+  closure_status: closed
+  intervention_disposition: no_change
+  proposal_ids: []
+  inter_somnic_relation_ids: [ISR-CROSS-OPERATOR-TRANSCLUSION-001]
 inter_somnic_relations:
 - &relation_base
   inter_somnic_relation_id: ISR-SAME-RUN-COMPARE-001
@@ -689,7 +709,7 @@ inter_somnic_relations:
   asserting_episode_id: SEP-COLLECTIVE-001
   source_episode_id: SEP-REMOTE-001
   target_episode_id: SEP-COLLECTIVE-001
-  source_assessment_ids: []
+  source_assessment_ids: [SA-REMOTE-SOURCE-001]
   target_assessment_ids: []
   semantic_relation: transcludes-from
   relation_reason: provenance-bearing artifact received for local assessment
