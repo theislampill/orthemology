@@ -44,6 +44,12 @@ ROOT = os.path.dirname(os.path.dirname(os.path.abspath(__file__)))
 APP = "applications/daee-epistemics"
 PIN = "c86b3c6673147b8802fe222373a165a37d4d24a8"
 FAILS = []
+FITRAH_PROPERTIES = {"qualitative", "defeasible", "multidimensional"}
+FITRAH_POSITIVE = {"normative-disposition", "proper-function-orientation"}
+FITRAH_PROHIBITED = {
+    "measurable-scalar", "field-coordinate", "metaortheme", "algorithm",
+    "discourse-readable-soul-state", "guaranteed-attractor",
+}
 
 
 def check(name, ok, detail=""):
@@ -54,6 +60,35 @@ def check(name, ok, detail=""):
 
 def load(rel):
     return yaml.safe_load(io.open(os.path.join(ROOT, rel), encoding="utf-8").read())
+
+
+def validate_fitrah_boundary(boundary):
+    """Validate the school-internal fiṭrah model without reading subject interiors."""
+    if not isinstance(boundary, dict):
+        return ["fitrah-boundary-not-object"]
+    issues = []
+    if boundary.get("status") != "creed-internal":
+        issues.append("fitrah-not-creed-internal")
+    properties = boundary.get("model_properties")
+    if not isinstance(properties, list) or not FITRAH_PROPERTIES.issubset(set(properties)):
+        issues.append("fitrah-properties-incomplete")
+    positive = boundary.get("is")
+    if not isinstance(positive, list) or not FITRAH_POSITIVE.issubset(set(positive)):
+        issues.append("fitrah-positive-model-incomplete")
+    prohibited = boundary.get("is_not")
+    if not isinstance(prohibited, list) or not FITRAH_PROHIBITED.issubset(set(prohibited)):
+        issues.append("fitrah-prohibitions-incomplete")
+    corruption = boundary.get("corruption_assessment")
+    if not isinstance(corruption, dict):
+        issues.append("fitrah-corruption-boundary-missing")
+    else:
+        if corruption.get("dissent_alone_sufficient") is not False:
+            issues.append("dissent-alone-circular")
+        if corruption.get("requires_independent_evidence") is not True:
+            issues.append("corruption-without-independent-evidence")
+        if corruption.get("interior_status") != "held-or-underdetermined":
+            issues.append("interior-status-overclaimed")
+    return issues
 
 
 def main():
@@ -142,10 +177,9 @@ def main():
     check("state spaces include the social-metaorthemic field", "metaorthemic" in joined)
     check("state spaces include actual-uptake", "uptake" in joined)
     fb = fd.get("fitrah_boundary", {})
-    check("fitrah boundary is creed-internal", fb.get("status") == "creed-internal")
-    isnot = fb.get("is_not", [])
-    check("fitrah is NOT one coordinate/metaortheme/algorithm/scalar",
-          all(any(k in x for x in isnot) for k in ("coordinate", "metaortheme", "algorithm", "scalar")))
+    fb_issues = validate_fitrah_boundary(fb)
+    check("fitrah boundary is qualitative, defeasible, multidimensional, and anti-reifying",
+          not fb_issues, "; ".join(fb_issues))
     fd_nc = " ".join(fd.get("non_claims", [])).lower()
     check("field-dynamics non-claims forbid motive/soul assertion",
           "soul" in fd_nc and ("motive" in fd_nc or "interior" in fd_nc))

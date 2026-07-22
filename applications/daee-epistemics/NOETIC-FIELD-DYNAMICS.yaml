@@ -98,9 +98,14 @@ state_spaces:
   - actual-uptake-or-restoration
 fitrah_boundary:
   status: creed-internal
-  is: "normative orientation / proper-function ground within the creed-internal model"
-  is_not: [one-coordinate, one-metaortheme, one-algorithm, one-measured-scalar-target, one-directly-observed-point]
-  min_entropy_attractor: "provisional and creed-internal; daee states the Shannon analogy does not prove noetic collapse [direct]"
+  model_properties: [qualitative, defeasible, multidimensional]
+  is: [normative-disposition, proper-function-orientation]
+  is_not: [measurable-scalar, field-coordinate, metaortheme, algorithm, discourse-readable-soul-state, guaranteed-attractor]
+  corruption_assessment:
+    requires_independent_evidence: true
+    dissent_alone_sufficient: false
+    interior_status: held-or-underdetermined
+  rejected_analogy: "minimum-entropy attractor is not the adopted fitrah model; daee states that the Shannon analogy does not prove noetic collapse [direct]"
 non_claims:
 - no descent claim asserts any interior state, motive, or soul-state
 - runtime closure is not demonstrated restoration

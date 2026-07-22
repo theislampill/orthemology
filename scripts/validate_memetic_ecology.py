@@ -44,6 +44,10 @@ ENDPOINT_RULES = {
     "mutation": ({"artifact", "represented-standard"}, {"artifact", "represented-standard"}),
 }
 STANCES = {"expresses", "quotes", "endorses", "embodies", "applies", "opposes", "distorts", "transmits"}
+PROHIBITED_WARRANT_KEYS = {
+    "witness_count", "minimum_count", "popularity", "graph_degree",
+    "institutional_persistence", "numeric_threshold",
+}
 
 
 def check(name, ok, detail=""):
@@ -53,7 +57,8 @@ def check(name, ok, detail=""):
 
 
 def read(rel):
-    return io.open(os.path.join(ROOT, rel), encoding="utf-8").read()
+    with io.open(os.path.join(ROOT, rel), encoding="utf-8") as handle:
+        return handle.read()
 
 
 def independence_conclusion(common_source, copying, independent_routes):
@@ -66,6 +71,82 @@ def independence_conclusion(common_source, copying, independent_routes):
     if independent_routes >= 2:
         return "source-independence-supported"
     return "origin-analysis-underdetermined"
+
+
+def _schema_issues(document, schema):
+    """Return bounded structural diagnostics instead of raising on malformed input."""
+    try:
+        validator = jsonschema.Draft7Validator(schema)
+        return ["schema:%s" % e.message for e in sorted(validator.iter_errors(document), key=lambda e: list(e.path))]
+    except (TypeError, ValueError, jsonschema.SchemaError) as exc:
+        return ["schema:%s" % str(exc)]
+
+
+def validate_tawatur_document(document, source_status_ids=None, schema=None):
+    """Validate the closed warrant contract and its cross-field invariants."""
+    if schema is None:
+        try:
+            schema = json.loads(read(APP + "/TAWATUR-WARRANT.schema.json"))
+        except (OSError, ValueError) as exc:
+            return ["schema-load:%s" % exc]
+    issues = _schema_issues(document, schema)
+    if not isinstance(document, dict):
+        return issues or ["document-not-object"]
+    assessments = document.get("assessments")
+    if not isinstance(assessments, list):
+        return issues or ["assessments-not-array"]
+    for assessment in assessments:
+        if not isinstance(assessment, dict):
+            continue
+        if PROHIBITED_WARRANT_KEYS.intersection(assessment):
+            issues.append("numeric-or-prevalence-warrant-field")
+        refs = assessment.get("source_status_refs", [])
+        if source_status_ids is not None and isinstance(refs, list):
+            if any(ref not in source_status_ids for ref in refs):
+                issues.append("unresolved-source-status-ref")
+        units = assessment.get("source_units")
+        if isinstance(units, list):
+            unit_ids = [u.get("unit_id") for u in units if isinstance(u, dict)]
+            if len(unit_ids) != len(set(unit_ids)):
+                issues.append("duplicate-source-unit")
+            unit_set = set(unit_ids)
+        else:
+            unit_set = set()
+        origin = assessment.get("origin_analysis")
+        if isinstance(origin, dict):
+            if (origin.get("common_cause_status") == "detected"
+                    and origin.get("path_independence") == "supported"):
+                issues.append("common-cause-conflicts-with-independence")
+            if (origin.get("copying_status") == "detected"
+                    and origin.get("path_independence") == "supported"):
+                issues.append("copying-conflicts-with-independence")
+        qualities = assessment.get("transmitter_quality")
+        if isinstance(qualities, list):
+            quality_ids = [q.get("source_unit_id") for q in qualities if isinstance(q, dict)]
+            if unit_set and set(quality_ids) != unit_set:
+                issues.append("transmitter-quality-coverage-mismatch")
+        routes = assessment.get("acquisition_routes")
+        if isinstance(routes, list):
+            route_ids = [r.get("route_id") for r in routes if isinstance(r, dict)]
+            route_set = set(route_ids)
+            if len(route_ids) != len(route_set):
+                issues.append("duplicate-acquisition-route")
+            for route in routes:
+                if isinstance(route, dict) and any(
+                        unit not in unit_set for unit in route.get("source_unit_ids", [])):
+                    issues.append("acquisition-route-unresolved-source-unit")
+        else:
+            route_set = set()
+        subjects = assessment.get("subject_assessments")
+        if isinstance(subjects, list):
+            subject_ids = [s.get("subject_id") for s in subjects if isinstance(s, dict)]
+            if len(subject_ids) != len(set(subject_ids)):
+                issues.append("duplicate-subject-assessment")
+            for subject in subjects:
+                if isinstance(subject, dict) and any(
+                        route not in route_set for route in subject.get("route_refs", [])):
+                    issues.append("subject-route-unresolved")
+    return list(dict.fromkeys(issues))
 
 
 def main():
@@ -196,7 +277,12 @@ def main():
               any("count" in nc.lower() or "degree" in nc.lower() or "popularity" in nc.lower()
                   for nc in a.get("non_claims", [])))
 
-    fx = yaml.safe_load(read(APP + "/FALSE-TAWATUR-FIXTURES.yaml"))["fixtures"]
+    fx_doc = yaml.safe_load(read(APP + "/FALSE-TAWATUR-FIXTURES.yaml"))
+    check("false-tawatur fixtures point to the current warrant contract",
+          fx_doc.get("warrant_contract") == "orthemology-tawatur-warrant-v2")
+    check("false-tawatur fixtures enumerate the Task 7 warrant regression surface",
+          len(fx_doc.get("warrant_regression_surface", [])) == 7)
+    fx = fx_doc["fixtures"]
     for f in fx:
         # B22: impossible origin counts rejected (independent routes cannot exceed witnesses)
         check("fixture %s: independent_routes <= apparent_witnesses (B22)" % f["id"],
@@ -211,15 +297,18 @@ def main():
         check("fixture %s machine conclusion is not a tawatur WARRANT claim (B23)" % f["id"],
               got != "tawatur-like-independence")
 
-    # creed-internal tawatur warrant is a SEPARATE, school-labeled record
+    # Creed-internal tawatur warrant is a separate, closed, school-labeled record.
     tw = yaml.safe_load(read(APP + "/TAWATUR-WARRANT.example.yaml"))
-    for w in tw["assessments"]:
-        for field in ("proposition", "source_units", "origin", "copying_or_common_cause", "path_independence",
-                      "qualitative_indicants", "mutation_lineage", "defeaters", "source_status", "assessor", "warrant_conclusion"):
-            check("tawatur-warrant %s declares %s" % (w["id"], field), bool(str(w.get(field, "")).strip()))
-        check("tawatur-warrant %s is school-labeled" % w["id"], bool(str(w.get("school", "")).strip()))
-        check("tawatur-warrant %s has non-empty qualitative indicants (B22)" % w["id"],
-              bool(str(w.get("qualitative_indicants", "")).strip()))
+    source_registry = yaml.safe_load(read("references/source-status.yaml"))
+    source_ids = {row["id"] for row in source_registry.get("claims", [])}
+    tw_issues = validate_tawatur_document(tw, source_ids)
+    check("tawatur-warrant example validates structurally and semantically", not tw_issues,
+          "; ".join(tw_issues[:8]))
+    for w in tw.get("assessments", []):
+        check("tawatur-warrant %s is school-labeled" % w.get("id", "?"),
+              bool(str(w.get("school", "")).strip()))
+        check("tawatur-warrant %s keeps objective truth outside subject assessments" % w.get("id", "?"),
+              all("objective_truth_status" not in s for s in w.get("subject_assessments", [])))
 
     print("TOTAL: %d failures" % len(FAILS))
     sys.exit(1 if FAILS else 0)

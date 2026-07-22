@@ -41,6 +41,23 @@ SUBJECT_INTERIOR = {"avowed-commitment", "reasoning-episode", "inferred-noetic-p
                     "faculty-disposition", "motive-culpability-soul-state"}
 # inferred (non-overt) interior types subject to the thin-evidence rule
 INFERRED_INTERIOR = {"reasoning-episode", "inferred-noetic-profile", "faculty-disposition"}
+CLAIM_ROLES = {
+    "primary-text-verified", "secondary-reconstruction", "cross-source-synthesis",
+    "orthemological-extension", "computational-analogy", "creed-internal-inference",
+}
+MENTAL_SOURCES = {"mental-conceivability", "universal-abstraction", "model-representation"}
+EXTERNAL_CONCLUSIONS = {"external-possibility", "external-existence", "unseen-modality"}
+ACCESS_STATUS_BY_REGISTRY_STATUS = {
+    "PRIMARY_TEXT_EXACT": "primary-text-exact",
+    "PRIMARY_WORK_THEME": "primary-work-theme",
+    "PRIMARY_LOCUS_EDITION_DEPENDENT": "primary-locus-edition-dependent",
+    "SECONDARY_VERIFIED": "secondary-verified",
+    "SECONDARY_RECONSTRUCTION": "secondary-reconstruction",
+    "COMPILATION_MEDIATED": "compilation-mediated",
+    "INFERENCE_CROSS_SOURCE": "cross-source-inference",
+    "ORTHEMOLOGICAL_EXTENSION": "orthemological-extension",
+    "UNVERIFIED_REMOVE_OR_DOWNSCOPE": "unverified-held",
+}
 
 
 def check(name, ok, detail=""):
@@ -64,8 +81,50 @@ def resolve_target(claim, occ):
     return o
 
 
-def claim_supported(claim, ev_ids, occ):
+def claim_semantic_issues(claim, source_status_ids):
+    """Return bounded, general Task 7 semantic diagnostics for one claim."""
+    if not isinstance(claim, dict):
+        return ["claim-not-object"]
+    issues = []
+    role = claim.get("claim_role")
+    if role not in CLAIM_ROLES:
+        issues.append("invalid-claim-role")
+    refs = claim.get("source_status_refs")
+    known_ids = set(source_status_ids)
+    if not isinstance(refs, list) or not refs or any(
+            not isinstance(ref, str) or ref not in known_ids for ref in refs):
+        issues.append("unresolved-source-status-ref")
+    elif isinstance(source_status_ids, dict):
+        resolved_access = {
+            ACCESS_STATUS_BY_REGISTRY_STATUS.get(source_status_ids[ref]) for ref in refs
+        }
+        if resolved_access != {claim.get("evidence_access_status")}:
+            issues.append("evidence-access-status-mismatch")
+    if claim.get("comparison_scope") == "modern-comparison" and role == "primary-text-verified":
+        issues.append("modern-comparison-not-primary")
+    boundary = claim.get("inference_boundary")
+    if boundary is not None:
+        if not isinstance(boundary, dict):
+            issues.append("malformed-inference-boundary")
+        else:
+            source = boundary.get("source_kind")
+            conclusion = boundary.get("conclusion_kind")
+            status = boundary.get("bridge_status")
+            evidence = boundary.get("bridge_evidence_ids")
+            if source in MENTAL_SOURCES and conclusion in EXTERNAL_CONCLUSIONS:
+                if status == "direct-entailment":
+                    issues.append("mental-external-direct-entailment")
+                if status == "independently-warranted" and (not isinstance(evidence, list) or not evidence):
+                    issues.append("independent-bridge-without-evidence")
+    return list(dict.fromkeys(issues))
+
+
+def claim_supported(claim, ev_ids, occ, source_status_ids=None):
     """Return (ok, rule_violated) under the R7D support discipline."""
+    if source_status_ids is not None:
+        semantic = claim_semantic_issues(claim, source_status_ids)
+        if semantic:
+            return False, semantic[0]
     o = resolve_target(claim, occ)
     if o is None:
         return False, "target-unresolved"
@@ -110,6 +169,8 @@ def main():
     ev_schema = json.loads(read(APP + "/NOETIC-EVIDENCE-REGISTRY.schema.json"))
     ev_reg = json.loads(read(APP + "/NOETIC-EVIDENCE-REGISTRY.example.json"))
     tmap = json.loads(read(APP + "/NOETIC-TARGET-MAP.example.json"))
+    source_registry = yaml.safe_load(read("references/source-status.yaml"))
+    source_status_ids = {row["id"]: row["status"] for row in source_registry.get("claims", [])}
 
     # 1. schema validation
     for name, obj, sch in [("claim example", claim_ex, claim_schema),
@@ -125,7 +186,7 @@ def main():
 
     # 2. every example claim is supported (and every evidence_id resolves)
     for c in claim_ex["claims"]:
-        ok, rule = claim_supported(c, ev_ids, occ)
+        ok, rule = claim_supported(c, ev_ids, occ, source_status_ids)
         check("example claim %s is evidence-supported" % c["claim_id"], ok, "violates %s" % rule)
 
     # 2b. evidence-relation records never assert direct interior access
@@ -139,7 +200,12 @@ def main():
     ids = {f["id"] for f in fx["fixtures"]}
     check("all ten claim fixtures present", ids == {"NC%d" % i for i in range(1, 11)}, str(sorted(ids)))
     for f in fx["fixtures"]:
-        ok, rule = claim_supported(f["claim"], ev_ids, occ)
+        try:
+            jsonschema.validate({"schema": claim_ex["schema"], "claims": [f["claim"]]}, claim_schema)
+            check("fixture %s is structurally typed" % f["id"], True)
+        except jsonschema.ValidationError as e:
+            check("fixture %s is structurally typed" % f["id"], False, e.message)
+        ok, rule = claim_supported(f["claim"], ev_ids, occ, source_status_ids)
         exp = f["expected_valid"]
         check("fixture %s (%s) validity == %s" % (f["id"], f["distinction"][:34], exp),
               ok == exp, "got valid=%s (rule %s)" % (ok, rule))

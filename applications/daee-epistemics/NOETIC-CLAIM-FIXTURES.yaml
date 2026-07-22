@@ -14,7 +14,8 @@ fixtures:
   expected_valid: false
   violates: target-out-of-scope-asserted
   claim: {claim_id: f1, target_bearer: m_uptake, target_id: uptake-unobserved, target_version: none,
-          target_type: uptake, analysis_id: A, analysis_version: v1, proposition: the subject accepted and was restored,
+          target_type: uptake, analysis_id: A, analysis_version: v1, proposition_identity: PROP-NC1, proposition_truth_status: not-adjudicated, proposition: the subject accepted and was restored,
+          claim_role: orthemological-extension, source_status_refs: [EXT-1], evidence_access_status: orthemological-extension, comparison_scope: not-applicable,
           candidate_alternatives: [], evidence_ids: [], support_rule: none, uncertainty: {level: high, basis: none},
           status: asserted, defeaters: [], non_claims: [no soul access]}
 - id: NC2
@@ -22,7 +23,8 @@ fixtures:
   expected_valid: false
   violates: subject-asserted-thin
   claim: {claim_id: f2, target_bearer: m_subject, target_id: interlocutor-at-t, target_version: at-time-of-engagement,
-          target_type: inferred-noetic-profile, analysis_id: A, analysis_version: v1, proposition: the subject has hawa,
+          target_type: inferred-noetic-profile, analysis_id: A, analysis_version: v1, proposition_identity: PROP-NC2, proposition_truth_status: not-adjudicated, proposition: the subject has hawa,
+          claim_role: orthemological-extension, source_status_refs: [EXT-1], evidence_access_status: orthemological-extension, comparison_scope: not-applicable,
           candidate_alternatives: [], evidence_ids: [], support_rule: disclaimer, uncertainty: {level: high, basis: none},
           status: asserted, defeaters: [], non_claims: [no soul access]}
 - id: NC3
@@ -30,7 +32,8 @@ fixtures:
   expected_valid: false
   violates: evidence-unresolved
   claim: {claim_id: f3, target_bearer: m_discourse, target_id: objection-utterance-abc123, target_version: as-received,
-          target_type: overt-discourse, analysis_id: A, analysis_version: v1, proposition: surface reading X,
+          target_type: overt-discourse, analysis_id: A, analysis_version: v1, proposition_identity: PROP-NC3, proposition_truth_status: not-adjudicated, proposition: surface reading X,
+          claim_role: orthemological-extension, source_status_refs: [EXT-1], evidence_access_status: orthemological-extension, comparison_scope: not-applicable,
           candidate_alternatives: [], evidence_ids: [ev-DOES-NOT-EXIST], support_rule: structural, uncertainty: {level: low, basis: wording},
           status: asserted, defeaters: [], non_claims: [no interior claim]}
 - id: NC4
@@ -38,7 +41,8 @@ fixtures:
   expected_valid: false
   violates: subject-no-bridge
   claim: {claim_id: f4, target_bearer: m_subject, target_id: interlocutor-at-t, target_version: at-time-of-engagement,
-          target_type: inferred-noetic-profile, analysis_id: A, analysis_version: v1, proposition: candidate defect,
+          target_type: inferred-noetic-profile, analysis_id: A, analysis_version: v1, proposition_identity: PROP-NC4, proposition_truth_status: not-adjudicated, proposition: candidate defect,
+          claim_role: orthemological-extension, source_status_refs: [EXT-1], evidence_access_status: orthemological-extension, comparison_scope: not-applicable,
           candidate_alternatives: [a, b], evidence_ids: [ev-wording-1], support_rule: about-bridge-thin,
           uncertainty: {level: high, basis: one feature}, status: held, defeaters: [], non_claims: [no soul access]}
 - id: NC5
@@ -46,7 +50,8 @@ fixtures:
   expected_valid: false
   violates: target-unresolved
   claim: {claim_id: f5, target_bearer: m_subject, target_id: interlocutor-at-t, target_version: WRONG-VERSION,
-          target_type: inferred-noetic-profile, analysis_id: A, analysis_version: v1, proposition: candidate defect,
+          target_type: inferred-noetic-profile, analysis_id: A, analysis_version: v1, proposition_identity: PROP-NC5, proposition_truth_status: not-adjudicated, proposition: candidate defect,
+          claim_role: orthemological-extension, source_status_refs: [EXT-1], evidence_access_status: orthemological-extension, comparison_scope: not-applicable,
           candidate_alternatives: [a, b], evidence_ids: [ev-wording-1],
           bridges: [{evidence_id: ev-wording-1, observed_from: m_discourse, about: m_subject, establishes_truth: false}],
           support_rule: about-bridge-thin, uncertainty: {level: high, basis: one feature}, status: held, defeaters: [], non_claims: [no soul access]}
@@ -55,14 +60,16 @@ fixtures:
   expected_valid: false
   violates: subject-type-on-discourse
   claim: {claim_id: f6, target_bearer: m_discourse, target_id: objection-utterance-abc123, target_version: as-received,
-          target_type: inferred-noetic-profile, analysis_id: A, analysis_version: v1, proposition: the utterance IS a deformation,
+          target_type: inferred-noetic-profile, analysis_id: A, analysis_version: v1, proposition_identity: PROP-NC6, proposition_truth_status: not-adjudicated, proposition: the utterance IS a deformation,
+          claim_role: orthemological-extension, source_status_refs: [EXT-1], evidence_access_status: orthemological-extension, comparison_scope: not-applicable,
           candidate_alternatives: [], evidence_ids: [ev-wording-1], support_rule: structural, uncertainty: {level: low, basis: wording},
           status: asserted, defeaters: [], non_claims: [none]}
 - id: NC7
   distinction: overt avowed commitment (public) may be asserted on public evidence
   expected_valid: true
   claim: {claim_id: f7, target_bearer: m_subject, target_id: interlocutor-at-t, target_version: at-time-of-engagement,
-          target_type: avowed-commitment, analysis_id: A, analysis_version: v1, proposition: the subject publicly avows criterion C,
+          target_type: avowed-commitment, analysis_id: A, analysis_version: v1, proposition_identity: PROP-NC7, proposition_truth_status: not-adjudicated, proposition: the subject publicly avows criterion C,
+          claim_role: orthemological-extension, source_status_refs: [EXT-1], evidence_access_status: orthemological-extension, comparison_scope: not-applicable,
           candidate_alternatives: [avowal is rhetorical], evidence_ids: [ev-wording-1],
           bridges: [{evidence_id: ev-wording-1, observed_from: m_discourse, about: m_subject, establishes_truth: false}],
           support_rule: "public-avowal: an overt public avowal is evidenced by its own wording, distinct from an inferred interior",
@@ -72,7 +79,8 @@ fixtures:
   distinction: several live subject profiles held with alternatives (valid)
   expected_valid: true
   claim: {claim_id: f8, target_bearer: m_subject, target_id: interlocutor-at-t, target_version: at-time-of-engagement,
-          target_type: inferred-noetic-profile, analysis_id: A, analysis_version: v1, proposition: a criterion-import defect best fits,
+          target_type: inferred-noetic-profile, analysis_id: A, analysis_version: v1, proposition_identity: PROP-NC8, proposition_truth_status: not-adjudicated, proposition: a criterion-import defect best fits,
+          claim_role: orthemological-extension, source_status_refs: [EXT-1], evidence_access_status: orthemological-extension, comparison_scope: not-applicable,
           candidate_alternatives: [sincere confusion, inherited premise, malformed criterion], evidence_ids: [ev-wording-1],
           bridges: [{evidence_id: ev-wording-1, observed_from: m_discourse, about: m_subject, establishes_truth: false}],
           support_rule: about-bridge-thin, uncertainty: {level: high, basis: one feature; several profiles live},
@@ -81,13 +89,15 @@ fixtures:
   distinction: later uptake modeled as a separate occurrence, not asserted
   expected_valid: true
   claim: {claim_id: f9, target_bearer: m_uptake, target_id: uptake-unobserved, target_version: none,
-          target_type: uptake, analysis_id: A, analysis_version: v1, proposition: no later uptake occurrence has been observed,
+          target_type: uptake, analysis_id: A, analysis_version: v1, proposition_identity: PROP-NC9, proposition_truth_status: not-adjudicated, proposition: no later uptake occurrence has been observed,
+          claim_role: orthemological-extension, source_status_refs: [EXT-1], evidence_access_status: orthemological-extension, comparison_scope: not-applicable,
           candidate_alternatives: [], evidence_ids: [], support_rule: "uptake-separate: uptake is a distinct later occurrence, not entailed by runtime closure",
           uncertainty: {level: underdetermined, basis: no uptake observed}, status: out-of-scope, defeaters: [], non_claims: [runtime closure is not uptake]}
 - id: NC10
   distinction: negative control — plain proposition-level discourse claim (valid)
   expected_valid: true
   claim: {claim_id: f10, target_bearer: m_discourse, target_id: objection-utterance-abc123, target_version: as-received,
-          target_type: overt-discourse, analysis_id: A, analysis_version: v1, proposition: the utterance states a factual gap,
+          target_type: overt-discourse, analysis_id: A, analysis_version: v1, proposition_identity: PROP-NC10, proposition_truth_status: not-adjudicated, proposition: the utterance states a factual gap,
+          claim_role: orthemological-extension, source_status_refs: [EXT-1], evidence_access_status: orthemological-extension, comparison_scope: not-applicable,
           candidate_alternatives: [reading is charitable], evidence_ids: [ev-wording-1], support_rule: structural-surface-reading,
           uncertainty: {level: low, basis: public wording}, status: asserted, defeaters: [author restatement], non_claims: [no interior/motive claim]}
