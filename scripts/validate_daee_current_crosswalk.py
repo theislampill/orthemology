@@ -46,6 +46,21 @@ def read(rel):
 def main():
     cw = yaml.safe_load(read(APP + "/CURRENT-RUNTIME-CROSSWALK.yaml"))
 
+    contract = yaml.safe_load(read(APP + "/SEMANTIC-OPERATOR-CONTRACT.yaml"))
+    contract_ids = {r["semantic_operator_id"] for r in contract.get("operator_contracts", [])}
+    declared = cw.get("semantic_operator_contract", {})
+    check("crosswalk resolves the exact semantic-operator registry",
+          declared.get("schema") == contract.get("schema") and set(declared.get("operator_ids", [])) == contract_ids)
+    identity = cw.get("predicate_identity", {})
+    check("display label aliases the sole Decision 0011 canonical predicate",
+          identity.get("canonical_id") == "reasoning_path_adequate_q"
+          and identity.get("normative_symbol") == "ReasoningPathAdequate_q(e)"
+          and identity.get("display_label") == "ClaimRelevantReasoningPathAdequate"
+          and identity.get("alias_of") == "reasoning_path_adequate_q"
+          and identity.get("computation") == "decision-0011-required-reason-projection")
+    check("strict soundness consumes the canonical claim-relative predicate",
+          identity.get("strict_soundness_requires") == ["reasoning_path_adequate_q", "token_truth_linked_q"])
+
     dp = cw.get("dual_pin", {})
     check("dual pin: historical R7B pin == current live main == c86b3c66",
           dp.get("historical_r7b_pin") == PIN and dp.get("current_live_main") == PIN and dp.get("coincide") is True)

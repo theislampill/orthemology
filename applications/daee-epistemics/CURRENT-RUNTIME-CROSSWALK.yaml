@@ -1,4 +1,15 @@
 schema: orthemology-daee-current-runtime-crosswalk-v1
+semantic_operator_contract:
+  schema: orthemology-daee-semantic-operator-contract-v1
+  path: applications/daee-epistemics/SEMANTIC-OPERATOR-CONTRACT.yaml
+  operator_ids: [route-pressure, event-transition, field-divergence, field-curl, loop-break, whole-state-reread, runtime-closure]
+predicate_identity:
+  canonical_id: reasoning_path_adequate_q
+  normative_symbol: ReasoningPathAdequate_q(e)
+  display_label: ClaimRelevantReasoningPathAdequate
+  alias_of: reasoning_path_adequate_q
+  computation: decision-0011-required-reason-projection
+  strict_soundness_requires: [reasoning_path_adequate_q, token_truth_linked_q]
 # R7D Phase G (audit B24/B25). Read-only adjudication of the CURRENT daee-epistemics
 # runtime objects against Orthemology. No DAEE modification; no merge; no import as a
 # school-neutral core primitive.

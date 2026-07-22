@@ -1,5 +1,5 @@
 {
-  "schema": "orthemology-corrective-transition-v1",
+  "schema": "orthemology-corrective-transition-v2",
   "note": "One governed corrective transition. Hard constraints filter admissibility BEFORE ranking; delta is a control-state change (not correctness); reread is performed; runtime closure is not human restoration; strict soundness is not claimed.",
   "transitions": [
     {
@@ -18,6 +18,16 @@
       "delta": "control-state change: the criterion-import burden moves from live to addressed; the residual dependency stays live",
       "state_after": "IR with the criterion-import burden addressed; one dependency still live",
       "field_diagnostics": "route admissible; disclosure improved; one dependency unresolved",
+      "operator_trace": ["route-pressure", "event-transition", "whole-state-reread"],
+      "burden_accounting": {
+        "addressed": ["criterion-import defect"],
+        "carried_forward": ["residual source-independence dependency"]
+      },
+      "global_revision": {
+        "requested": false,
+        "authorized": false,
+        "authorization_ref": null
+      },
       "reread": {"performed": true, "outcome": "reread finds the residual dependency still live; closure withheld"},
       "terminal_posture": "HOLD",
       "verdicts": {

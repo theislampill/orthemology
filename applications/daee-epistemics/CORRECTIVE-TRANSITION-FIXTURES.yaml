@@ -2,6 +2,33 @@
 # Each fixture is run through scripts/validate_corrective_transition.py's transition_ok
 # gate. Invalid fixtures name the `violates` rule. No fixture asserts a soul-state.
 schema: orthemology-corrective-transition-fixtures-v1
+historical_v1_record:
+  schema: orthemology-corrective-transition-v1
+  note: "One governed corrective transition. Hard constraints filter admissibility BEFORE ranking; delta is a control-state change (not correctness); reread is performed; runtime closure is not human restoration; strict soundness is not claimed."
+  transitions:
+  - transition_id: CT-example-1
+    state_before: IR with a live criterion-import burden and one residual dependency
+    live_burdens: [criterion-import defect, residual source-independence dependency]
+    hard_constraints: [no soul-state assertion, no burden deletion, preserve provenance/uncertainty]
+    eligible_routes: [route-clarify-criterion, route-request-discriminating-observation]
+    ranking_witness: "governance partial-order over admissible routes: disclosure-first, then reversibility; NOT a differential gradient"
+    selected_route: route-clarify-criterion
+    governing_types: [mu-type-A]
+    represented_standards: [mutilde-X]
+    metaorthemmata: [mubar-case-1]
+    executor_operation: issue a criterion-clarification operator bound to mubar-case-1
+    evidence: [ev-wording-1, ev-reread-1]
+    delta: "control-state change: the criterion-import burden moves from live to addressed; the residual dependency stays live"
+    state_after: IR with the criterion-import burden addressed; one dependency still live
+    field_diagnostics: route admissible; disclosure improved; one dependency unresolved
+    reread: {performed: true, outcome: "reread finds the residual dependency still live; closure withheld"}
+    terminal_posture: HOLD
+    verdicts: {admissible: true, pathway_adequate: true, strictly_sound: not-claimed, runtime_closure: false, human_uptake: unobserved}
+    non_claims:
+    - delta is a runtime control-state change, not result correctness
+    - an admissible, pathway-adequate transition is not strictly sound; strict soundness is a factive claim-relative predicate (Decision 0011)
+    - runtime closure would not be human restoration; no soul-state is asserted
+    - no burden was deleted or concealed to simulate progress
 fixtures:
 - id: CT1
   distinction: hard-constraint-violating route ranked as an improvement
@@ -39,7 +66,7 @@ fixtures:
   violates: closure-as-restoration
   transition: {selected_route: route-clarify, eligible_routes: [route-clarify], ranking_witness: order,
                delta: control-state change, terminal_posture: CLOSURE, reread: {performed: true, outcome: ok},
-               verdicts: {runtime_closure: true, strictly_sound: not-claimed}, hard_constraints: [],
+               verdicts: {runtime_closure: true, strictly_sound: not-claimed, human_uptake: observed}, hard_constraints: [],
                non_claims: [the subject was restored]}
 - id: CT6
   distinction: burden deletion as progress
@@ -48,7 +75,9 @@ fixtures:
   transition: {selected_route: route-clarify, eligible_routes: [route-clarify], ranking_witness: order,
                delta: "deleted the residual dependency burden to reach closure", terminal_posture: CLOSURE,
                reread: {performed: true, outcome: ok}, verdicts: {runtime_closure: true, strictly_sound: not-claimed},
-               hard_constraints: [no burden deletion], non_claims: [runtime closure is not human restoration]}
+               hard_constraints: [no burden deletion], live_burdens: [residual-dependency],
+               burden_accounting: {addressed: [], carried_forward: []},
+               non_claims: [runtime closure is not human restoration]}
 - id: CT7
   distinction: one episode silently revises the global standard
   expected_valid: false
@@ -56,7 +85,8 @@ fixtures:
   transition: {selected_route: route-clarify, eligible_routes: [route-clarify], ranking_witness: order,
                delta: "silently revises the global metaortheme standard from this one episode", terminal_posture: HOLD,
                reread: {performed: true, outcome: ok}, verdicts: {runtime_closure: false, strictly_sound: not-claimed},
-               hard_constraints: [], non_claims: [no soul access]}
+               hard_constraints: [], global_revision: {requested: true, authorized: false, authorization_ref: null},
+               non_claims: [no soul access]}
 - id: CT8
   distinction: valid governed corrective transition (control)
   expected_valid: true
