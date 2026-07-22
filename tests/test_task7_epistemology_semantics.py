@@ -557,6 +557,26 @@ class FitrahBoundaryTests(unittest.TestCase):
         case["rejected_analogy"] = "minimum-entropy attractor is not adopted"
         self.assertEqual([], META.validate_fitrah_boundary(case))
 
+    def test_rejected_analogy_remains_qualitative_metadata(self):
+        control = self.boundary()
+        control["rejected_analogy"] = "minimum-entropy attractor is not adopted"
+        self.assertEqual([], META.validate_fitrah_boundary(control))
+
+        structured_payloads = {
+            "scalar-score": {"scalar_score": 0.8},
+            "nested-field-coordinate": {"nested": {"field_coordinate": [1, 2]}},
+            "nested-soul-state-readout": {
+                "nested": {"soul_state_readout": "guided"},
+            },
+        }
+        for label, payload in structured_payloads.items():
+            with self.subTest(label=label):
+                case = self.boundary()
+                case["rejected_analogy"] = payload
+                issues = META.validate_fitrah_boundary(case)
+                self.assertIn("fitrah-rejected-analogy-not-qualitative", issues)
+                self.assertTrue(all("Traceback" not in issue for issue in issues))
+
     def test_explicit_reifying_fields_reject_at_every_allowed_level(self):
         mutations = {
             "top-level-scalar": lambda boundary: boundary.update({"scalar_score": 0.9}),

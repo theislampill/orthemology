@@ -76,6 +76,11 @@ def validate_fitrah_boundary(boundary):
     issues = []
     if set(boundary) - FITRAH_FIELDS:
         issues.append("fitrah-boundary-unknown-field")
+    rejected_analogy = boundary.get("rejected_analogy")
+    if "rejected_analogy" in boundary and (
+        not isinstance(rejected_analogy, str) or not rejected_analogy.strip()
+    ):
+        issues.append("fitrah-rejected-analogy-not-qualitative")
     if boundary.get("status") != "creed-internal":
         issues.append("fitrah-not-creed-internal")
     properties = boundary.get("model_properties")
