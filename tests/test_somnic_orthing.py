@@ -58,13 +58,27 @@ def item(rows, key, value):
     return next(row for row in rows if row[key] == value)
 
 
-def production_exit(activation, records, inventory, adoption, collective, decision_text=None):
+def production_exit(
+    activation,
+    records,
+    inventory,
+    adoption,
+    collective,
+    decision_text=None,
+    history=None,
+):
     module = load_module()
     with tempfile.TemporaryDirectory() as temp_dir:
         temp = Path(temp_dir)
         documents = {
             "ACTIVATION_PATH": (temp / "activation.yaml", activation),
             "RECORDS_PATH": (temp / "records.yaml", records),
+            "HISTORY_PATH": (
+                temp / "history.yaml",
+                yaml.safe_load(HISTORY.read_text(encoding="utf-8"))
+                if history is None
+                else history,
+            ),
             "INVENTORY_PATH": (temp / "inventory.yaml", inventory),
             "ADOPTION_PATH": (temp / "adoption.yaml", adoption),
             "COLLECTIVE_PATH": (temp / "collective.yaml", collective),
@@ -97,6 +111,7 @@ class SomnicOrthingTests(unittest.TestCase):
         self.assertEqual([], [str(path) for path in required if not path.exists()])
         self.activation = yaml.safe_load(ACTIVATION.read_text(encoding="utf-8"))
         self.records = yaml.safe_load(RECORDS.read_text(encoding="utf-8"))
+        self.history = yaml.safe_load(HISTORY.read_text(encoding="utf-8"))
         self.inventory = yaml.safe_load(INVENTORY.read_text(encoding="utf-8"))
         self.adoption = yaml.safe_load(ADOPTION.read_text(encoding="utf-8"))
         self.collective = yaml.safe_load(COLLECTIVE.read_text(encoding="utf-8"))

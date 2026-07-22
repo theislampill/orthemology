@@ -3,6 +3,7 @@ chain:
   chain_id: somnus-target-history
   chain_version: 1.0.0
   digest_algorithm: sha256-canonical-json-v1
+  authority_ref: docs/decisions/0035-somnic-orthing-and-activation-contracts.md#history-checkpoint-chain
   immutable: true
 checkpoints:
 - checkpoint_id: CP-ORTH-001-T2

@@ -12,13 +12,26 @@ authoring_records:
   boundary_problem: distinguish theological propositions and worldview-bearing tasks from lexical near-boundary uses
   selected_contract_ref: theological-claimant-activation@1.0.0
   fixture_ids: [ACT-POS-001, ACT-NEG-001, ACT-MIXED-LEXICAL-001, ACT-OVERLAP-001]
+  contract_body_digest: 1ece6dea432eca94da54d0ae290d36945b95f63a3be882e00742aba78eb4b49e
+  fixture_semantic_digests:
+    ACT-MIXED-LEXICAL-001: 4262d815d008930c9d538b63bdfb4564f07f998c02d4b920d77d71a6a55e71fc
+    ACT-NEG-001: 83b34152ee16cfb3d6167a98b8407caa8c8b3f66a7b5f3511ebc9ea5094c857c
+    ACT-OVERLAP-001: 8a5644286be3b921ab3d8dfa30e390c6712ffa5aec28142939feb1e6f2b356d0
+    ACT-POS-001: 4768bb229a1f0006e01e3486d917e34be73b2463f2096e661502948a5a5fa837
   unresolved_residuals: [mixed-domain overlap remains conflict-bearing]
 - provenance_record_id: BOOTSTRAP-AUTHORING-002
   capture_mode: bootstrap_provenance
   immutable: true
   boundary_problem: distinguish requested data-model operations from schema language used outside a data operation
   selected_contract_ref: database-schema-activation@1.0.0
-  fixture_ids: [ACT-DB-POS-001, ACT-DB-NEG-001, ACT-DB-INDETERMINATE-001, ACT-OVERLAP-001]
+  fixture_ids: [ACT-DB-POS-001, ACT-DB-NEG-001, ACT-DB-INDETERMINATE-001, ACT-OVERLAP-001, ACT-REC-OVERLAP-001]
+  contract_body_digest: 1f2156852ffde748ec3df533d14205475b6fb20d1998d04d8525d1a1f25109eb
+  fixture_semantic_digests:
+    ACT-DB-INDETERMINATE-001: 5c55542c7ea2990027b459a4b360ac49dcadd20e81f9c7030b99e7266ccc33c3
+    ACT-DB-NEG-001: 5a3b5da8edee543370636929498cc7509540f048387f5a75dc42d70af15d1e42
+    ACT-DB-POS-001: 0c401c6363cc86858c3dd43e75cacf4077d6b02d56d1c10d8054b54524801358
+    ACT-OVERLAP-001: 8a5644286be3b921ab3d8dfa30e390c6712ffa5aec28142939feb1e6f2b356d0
+    ACT-REC-OVERLAP-001: a10f2edf33ce5fd6cd6ea25867d661431670f40ed3e6b2119c33289763cd53f1
   unresolved_residuals: [mixed-domain overlap remains conflict-bearing]
 - provenance_record_id: BOOTSTRAP-AUTHORING-003
   capture_mode: bootstrap_provenance
@@ -26,6 +39,12 @@ authoring_records:
   boundary_problem: determine whether preserved records support a bounded residual-recurrence assessment
   selected_contract_ref: recurrence-meta-assessability@1.0.0
   fixture_ids: [ACT-REC-POS-001, ACT-REC-NEG-001, ACT-REC-INDETERMINATE-001, ACT-REC-OVERLAP-001]
+  contract_body_digest: ce9cabad44e264e0a60bbb6c4156c64cfd1772e8cb5534bf1abc7d97ad10dec6
+  fixture_semantic_digests:
+    ACT-REC-INDETERMINATE-001: 442d3c7bee925a88393b013f19aee0b464992f9d0410164947bd117dd1b04439
+    ACT-REC-NEG-001: 34a2d953a09b4056e14317d895260fd54eed023e2b4cbd5a882cdc904635ceb4
+    ACT-REC-OVERLAP-001: a10f2edf33ce5fd6cd6ea25867d661431670f40ed3e6b2119c33289763cd53f1
+    ACT-REC-POS-001: a6d4e5ea2dbaeba14c749dd451b3ec92cebae36e8addb1cd59d1517739e885c3
   unresolved_residuals: [assessability does not establish recurrence cause or remedy]
 contracts:
 - contract_id: theological-claimant-activation
@@ -67,7 +86,7 @@ contracts:
   superseded_by: null
   authorship: {mode: bootstrap_provenance, provenance_record_id: BOOTSTRAP-AUTHORING-002}
   status: accepted
-  fixture_outcomes: [ACT-DB-POS-001, ACT-DB-NEG-001, ACT-DB-INDETERMINATE-001, ACT-OVERLAP-001]
+  fixture_outcomes: [ACT-DB-POS-001, ACT-DB-NEG-001, ACT-DB-INDETERMINATE-001, ACT-OVERLAP-001, ACT-REC-OVERLAP-001]
 - contract_id: recurrence-meta-assessability
   contract_version: 1.0.0
   claimant_id: residual-recurrence-standard
