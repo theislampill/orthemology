@@ -438,12 +438,16 @@ def _heading_slug(value):
     return re.sub(r"-+", "-", re.sub(r"\s+", "-", value)).strip("-")
 
 
-def _rendered_inline_text(token):
+def _rendered_inline_text(token, parser=None):
     """Return the visible text represented by a CommonMark inline token."""
+    parser = parser or MarkdownIt("commonmark")
     parts = []
     for child in token.children or []:
-        if child.type in {"text", "code_inline", "image"}:
+        if child.type in {"text", "text_special", "code_inline"}:
             parts.append(child.content)
+        elif child.type == "image":
+            image_inline = parser.parseInline(child.content)[0]
+            parts.append(_rendered_inline_text(image_inline, parser))
         elif child.type in {"softbreak", "hardbreak"}:
             parts.append(" ")
     return "".join(parts)
@@ -452,13 +456,14 @@ def _rendered_inline_text(token):
 def _markdown_heading_slugs(document):
     """Return slugs for document-owned top-level CommonMark headings."""
     headings = []
-    tokens = MarkdownIt("commonmark").parse(document)
+    parser = MarkdownIt("commonmark")
+    tokens = parser.parse(document)
     for index, token in enumerate(tokens[:-1]):
         inline = tokens[index + 1]
         if (token.type == "heading_open"
                 and token.level == 0
                 and inline.type == "inline"):
-            headings.append(_heading_slug(_rendered_inline_text(inline)))
+            headings.append(_heading_slug(_rendered_inline_text(inline, parser)))
     return headings
 
 
@@ -1274,12 +1279,17 @@ def _records_issues(document, activation, history, schemas, store):
                 % delta_id
             )
 
-    global_typed_registries = (
+    global_typed_registries = [
         ("lifecycle_identity", identity_by_id),
+        ("capture_provenance", provenance_by_id),
+        ("evidence", evidence_by_id),
+        ("source_record", source_record_by_id),
         ("orthing_event", event_by_id),
         ("material_delta", delta_by_id),
         ("somnus_run", run_by_id),
+        ("reference_corpus_revision", corpus_by_revision),
         ("somnic_assessment", assessment_by_id),
+        ("meta_orthability_assessment", meta_by_id),
         ("recurrence_report", report_by_id),
         ("proposal", proposal_by_id),
         ("authorization", auth_by_id),
@@ -1288,17 +1298,7 @@ def _records_issues(document, activation, history, schemas, store):
         ("revert_transition", revert_transition_by_id),
         ("successor", successor_by_id),
         ("outcome", outcome_by_id),
-    )
-    global_id_kinds = defaultdict(list)
-    for kind, registry in global_typed_registries:
-        for record_id in registry:
-            global_id_kinds[record_id].append(kind)
-    for record_id, kinds in global_id_kinds.items():
-        if len(kinds) != 1:
-            issues.append(
-                "global typed record ID %s collides across kinds %s"
-                % (record_id, sorted(kinds))
-            )
+    ]
 
     resolved_source_by_subject = {}
     for subject_id, subject in subject_by_id.items():
@@ -1972,6 +1972,22 @@ def _records_issues(document, activation, history, schemas, store):
     opportunity_by_id = _unique_index(
         opportunity_rows, "opportunity_id", "recurrence opportunity registry", issues
     )
+    global_typed_registries.extend((
+        ("source_family", source_family_by_id),
+        ("normalized_input_family", input_family_by_id),
+        ("recurrence_support", support_record_by_id),
+        ("opportunity", opportunity_by_id),
+    ))
+    global_id_kinds = defaultdict(list)
+    for kind, registry in global_typed_registries:
+        for record_id in registry:
+            global_id_kinds[record_id].append(kind)
+    for record_id, kinds in global_id_kinds.items():
+        if len(kinds) != 1:
+            issues.append(
+                "global typed record ID %s collides across kinds %s"
+                % (record_id, sorted(kinds))
+            )
     for opportunity_id, opportunity in opportunity_by_id.items():
         if not _string_member(subject_by_id, opportunity.get("subject_id")):
             issues.append("recurrence opportunity %s has unresolved subject provenance" % opportunity_id)
