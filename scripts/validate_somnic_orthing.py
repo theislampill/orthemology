@@ -438,13 +438,27 @@ def _heading_slug(value):
     return re.sub(r"-+", "-", re.sub(r"\s+", "-", value)).strip("-")
 
 
+def _rendered_inline_text(token):
+    """Return the visible text represented by a CommonMark inline token."""
+    parts = []
+    for child in token.children or []:
+        if child.type in {"text", "code_inline", "image"}:
+            parts.append(child.content)
+        elif child.type in {"softbreak", "hardbreak"}:
+            parts.append(" ")
+    return "".join(parts)
+
+
 def _markdown_heading_slugs(document):
-    """Return real Markdown heading slugs from parsed heading tokens."""
+    """Return slugs for document-owned top-level CommonMark headings."""
     headings = []
     tokens = MarkdownIt("commonmark").parse(document)
     for index, token in enumerate(tokens[:-1]):
-        if token.type == "heading_open" and tokens[index + 1].type == "inline":
-            headings.append(_heading_slug(tokens[index + 1].content))
+        inline = tokens[index + 1]
+        if (token.type == "heading_open"
+                and token.level == 0
+                and inline.type == "inline"):
+            headings.append(_heading_slug(_rendered_inline_text(inline)))
     return headings
 
 
@@ -1188,6 +1202,16 @@ def _records_issues(document, activation, history, schemas, store):
         "revert provenance registry",
         issues,
     )
+    revert_transition_rows = [
+        row["revert_transition"] for row in application_rows
+        if isinstance(row.get("revert_transition"), dict)
+    ]
+    revert_transition_by_id = _unique_index(
+        revert_transition_rows,
+        "revert_transition_id",
+        "revert transition registry",
+        issues,
+    )
     successor_rows = _objects(document, "successor_states", issues, "records")
     successor_by_id = _unique_index(successor_rows, "successor_state_id", "successor states", issues)
     outcome_rows = _objects(document, "outcome_evaluations", issues, "records")
@@ -1218,6 +1242,19 @@ def _records_issues(document, activation, history, schemas, store):
                 "revert provenance %s must resolve the exact authorized application chain"
                 % revert_ref
             )
+            continue
+        successor = _string_lookup(
+            successor_by_id, application.get("successor_state_id")
+        )
+        if (application.get("status") not in {"applied", "reverted"}
+                or successor is None
+                or successor.get("status") != "materialized"
+                or successor.get("application_id") != application.get("application_id")
+                or successor.get("proposal_id") != application.get("proposal_id")):
+            issues.append(
+                "revert provenance %s must be owned by a materialized revert-capable application"
+                % revert_ref
+            )
 
     governed_sources_by_role = defaultdict(set)
     for run in runs:
@@ -1239,12 +1276,16 @@ def _records_issues(document, activation, history, schemas, store):
 
     global_typed_registries = (
         ("lifecycle_identity", identity_by_id),
+        ("orthing_event", event_by_id),
+        ("material_delta", delta_by_id),
+        ("somnus_run", run_by_id),
         ("somnic_assessment", assessment_by_id),
         ("recurrence_report", report_by_id),
         ("proposal", proposal_by_id),
         ("authorization", auth_by_id),
         ("application", application_by_id),
         ("revert_provenance", revert_provenance_by_ref),
+        ("revert_transition", revert_transition_by_id),
         ("successor", successor_by_id),
         ("outcome", outcome_by_id),
     )
