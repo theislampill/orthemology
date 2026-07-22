@@ -299,6 +299,64 @@ therefore added narrowly to Task 7; no other scope is changed.
 
 **Step 4 — commit:** Regenerate state/manifest; commit `fix: bound fitrah tawatur and mental existence claims`.
 
+### Post-Task-7 remote CI checkpoint amendment
+
+Before Task 8, close the two inherited infrastructure failures that block the
+ordered matrix and exact-head remote checkpoint. This amendment does not
+renumber Tasks 8–16 and does not reopen or modify Task 7 semantic owners.
+Task 7 remains approved at exact commit
+`79e0bac9c3da7b6a6b6f6e783fcd73f9e6df18cd`; both micro-scope commits must be
+descendants and may not alter or revert that commit or any Task 7 semantic
+owner.
+
+**Dependency-classification micro-scope — files:**
+
+- Modify: `scripts/validate_dependency_lock.py`
+- Create: `tests/test_dependency_lock.py`
+- Modify: `.github/workflows/validate.yml` only to run the focused dependency test beside the existing production validator, without adding or changing any package-install path
+- Regenerate: `docs/current-state.yaml`
+- Regenerate: `docs/provenance/RELEASE-MANIFEST.sha256`
+
+**Dependency-classification micro-scope — red and repair:** Use Python 3.11's
+`sys.stdlib_module_names` as the authoritative standard-library namespace while
+retaining explicit `IMPORT_TO_DIST` ownership and repository-local exclusion.
+Prove RED for `__future__`, a second old-hint omission such as `zoneinfo` or
+`tomllib`, mixed partitioning, and the retained repository import. Preserve
+mapped third-party, local-module, missing-pin, and unknown-import-fails-closed
+controls. Do not add `__future__` to the dependency lock or import map and do
+not remove the legitimate future import.
+
+**Internal-reference test micro-scope — files:**
+
+- Modify: `tests/test_internal_references.py`
+- Modify: `.github/workflows/validate.yml` only to run the focused test beside the unchanged production validator, without adding or changing any package-install path
+- Regenerate: `docs/current-state.yaml`
+- Regenerate: `docs/provenance/RELEASE-MANIFEST.sha256`
+
+**Internal-reference test micro-scope — red and repair:** Preserve the two
+current stale assertions as RED, then replace their live-roadmap missing-path
+fixture with an isolated temporary committed Git corpus and synthetic exact
+`- Create:` sentinel. Prove exact planned-output exemption, current-evidence
+and ordinary-line rejection, materialized-path resolution, untracked and
+staged-only non-authority, malformed-create rejection, and unchanged real-tree
+production validation. Materializing the sentinel must resolve the exact
+`- Create:` occurrence, ordinary-plan reuse, and separate current-evidence
+occurrence. The temporary corpus must be removed on success or failure without
+tracked, staged, or ignored repository residue. Do not rotate the sentinel to another Task 8–16 output,
+fabricate a permanent plan entry, remove the real Task 5 witness, or change
+`scripts/validate_internal_references.py` unless isolated RED demonstrates a
+separate production defect.
+
+Implement the two micro-scopes as separate test-first descendant commits with
+separate finite independent reviews. After both are approved, rerun the exact
+23-command matrix and require 23/23 GREEN, deterministic state/manifest parity,
+clean tracked state, and a new exact-SHA push/PR CI checkpoint before Task 8.
+Preserve runs `29939915234` and `29939917400` as failed dependency evidence for
+exact SHA `48570f4ee43b3139ca387617ccc7c1c8732936b3`, not as internal-reference
+evidence. The new push and PR runs must both resolve to one exact descendant
+SHA and pass before Task 8. No force-push, rebase, amend, or history rewrite is
+authorized.
+
 ## Task 8: Correct the OSM/CSCG comparison and object firewall
 
 **Files:**
