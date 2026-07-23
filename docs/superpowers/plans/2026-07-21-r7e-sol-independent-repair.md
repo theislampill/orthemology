@@ -357,6 +357,46 @@ evidence. The new push and PR runs must both resolve to one exact descendant
 SHA and pass before Task 8. No force-push, rebase, amend, or history rewrite is
 authorized.
 
+### Post-Task-7 CI checkpoint amendment: inline machine-assignment classification
+
+The exact-SHA push and pull-request workflows for
+`ced16f4d3b81002b4ed40f140d7cfc330408d6bc`, runs `29969662735` and
+`29969664501`, passed the two approved CI-owner repairs and then failed
+identically in `scripts/validate_math_source.py`. The B5 inline-code scanner
+classified the plan's two required Windows environment assignments as
+un-inventoried mathematical formulas solely because each contains an equals
+sign. Preserve those runs as failed math-source-classification evidence. This
+amendment does not change Task 7 semantics, begin Task 8, weaken the B5
+notdef/formula guard, or authorize fixture-specific string matching.
+
+**Files:**
+
+- Modify: `scripts/validate_math_source.py`
+- Create: `tests/test_math_source_validator.py`
+- Modify: `.github/workflows/validate.yml` only to run the focused test beside
+  the existing production math-source validator
+- Regenerate: `docs/current-state.yaml`
+- Regenerate: `docs/provenance/RELEASE-MANIFEST.sha256`
+
+**Red and repair:** First prove the two reproduced machine assignments are
+false positives through a temporary isolated corpus or a pure classifier
+boundary. Retain invalid controls for an equality formula, set-builder
+notation, relation and implication symbols, and the combining-vector/notdef
+mark. Add valid controls for ordinary environment assignments and neighboring
+machine identifiers. Implement the smallest syntax-based, deterministic
+classification that distinguishes a complete machine assignment from
+mathematical notation generally. Do not exempt arbitrary spans merely because
+they contain a known environment-variable name, match this plan path, or occur
+in a plan document. Malformed assignments and mixed assignment-plus-formula
+spans must remain rejected with bounded diagnostics.
+
+Implement this as one test-first descendant commit and submit that exact commit
+to one finite independent review. Then rerun the exact 23-command matrix,
+generated-state and manifest parity, affected Task 4-7 checks, and clean-tree
+review. Push one exact fast-forward descendant, require both new exact-SHA push
+and pull-request workflows to pass, and only then open Task 8. No force-push,
+rebase, amend, or history rewrite is authorized.
+
 ## Task 8: Correct the OSM/CSCG comparison and object firewall
 
 **Files:**
