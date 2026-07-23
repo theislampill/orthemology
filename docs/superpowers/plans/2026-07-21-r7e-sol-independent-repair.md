@@ -496,14 +496,81 @@ force-push, rebase, amend, or history rewrite is authorized.
 - Modify: `docs/related-work/LATENT-STATE-INFERENCE-AND-ORTHEMOLOGY.md`
 - Modify: `applications/daee-epistemics/SOUND-DESCENT-MODEL-COMPARISON.md`
 - Modify: `scripts/validate_dynamic_orthing.py`
+- Create: `tests/test_osm_claim_boundaries.py`
+- Modify: `references/source-status.yaml`
+- Modify: `manuscript/orthemma-ortheme-systems-revised-draft.md`
+- Modify only if the load-bearing current matrix expands:
+  `docs/sourcing/R3-CLAIM-SOURCE-MATRIX.md`
+- Regenerate: `docs/current-state.yaml`
+- Regenerate: `docs/provenance/RELEASE-MANIFEST.sha256`
 
-**Step 1 — red:** Reject clone=neuron, posterior=world/profile, parameter=geometry, Viterbi-as-training, all-methods-as-gradient-ascent, Adam omission, adaptation-as-correctness/convergence/generalization, and OSM as validation of Orthemology or theology.
+**Source and preparation reconciliation:** Recreate the useful design from the
+isolated Task 8 packet against the approved Task 7 vocabulary; do not copy or
+cherry-pick its outputs. The Nature version of record and its hashed access copy
+support the article claims. Extraction line numbers are custody locators, not
+journal pagination. Code-dependent MAP-decoding claims require the pinned
+official code commit `c1d1788b54c737efe24402e02762eee10da0d0d7`; they must
+not be attributed to the article text. Use `references/source-status.yaml`
+`LAT-1` as the smallest public source/custody owner. Keep biological source
+report, model mechanics, model comparison, and project extension as distinct
+`content_kind` values; use the approved Task 7 `claim_role`, separate
+`evidence_access_status`, exact source locators, and row-local nonclaims.
 
-**Step 2 — implement:** Preserve world/task → observation → biological response → population representation → CSCG clone → latent posterior → parameter → geometry → inferred profile → actual profile. State Baum–Welch as EM likelihood estimation, Viterbi as decoding/refinement, BPTT as gradient computation, and Adam as optimizer with the reported loss. Use bounded progressive adaptation/differentiation and note that CSCG-like representation is not necessary for task performance.
+**Step 1 — red:** Recreate OSM-T01 through OSM-T22 as complete valid structured
+controls plus one-field invalid mutations. Require exact unique object IDs and
+typed resolvable relations, not a count. Reject clone=neuron, biological
+observation=model symbol, cell=population, posterior=world/profile,
+parameter=representation output/geometry, endpoint=trajectory/mechanism,
+all-methods-as-gradient, Adam=loss, omitted cross-entropy, and biological
+adaptation promoted to correctness, convergence, generalization, or model
+transport. Reject Viterbi presented as the sole or primary CSCG fit method,
+Viterbi-training refinement collapsed with Baum-Welch EM or MAP decoding, and
+omission of the reported refinement stage. Include a valid literal
+`Viterbi training` control. Reject OSM as validation of Orthemology, its
+terminology, human noetics, fiṭrah, metaphysics, Necessary Being, divine
+attributes, divine Speech, or theology.
 
-**Step 3 — verify:** Run dynamic orthing, latent-state fixtures, source status, claim sources, cross-document consistency, and new mutations.
+**Step 2 — implement:** Preserve thirteen distinct typed objects: world/task
+state; concrete occurrence; biological sensory observation; model observation
+symbol/emission; biological single-cell response; biological population
+representation; CSCG clone/model latent state; latent posterior/clone-occupancy
+vector; model parameter state; model representation output; derived
+representation geometry; inferred orthemic profile; and actual orthemic
+profile. Declare typed nonidentity relations between them. Keep project-side
+occurrence/profile objects and comparison methods explicitly project-owned.
 
-**Step 4 — commit:** Remove or directly re-source the absent REBAKE prose citation; update ledgers, state, manifest; commit `fix: bound OSM as a task-specific computational analogy`.
+State the CSCG method sequence as Baum-Welch expectation-maximization
+likelihood fit followed by Viterbi-training transition refinement. Keep the
+code-corroborated max-product/backtrace MAP decode separate. For vanilla RNNs,
+state BPTT as gradient computation, Adam as parameter optimizer, and
+cross-entropy as objective; locate Adam/cross-entropy separately for LSTM and
+transformer; keep the Hebbian RNN's local timing update distinct from
+end-to-end gradient training. Scope trajectory uniqueness to tested models
+under the reported evaluation, use a declared similar-endpoint criterion
+rather than identity, record high-performing non-orthogonal controls, and keep
+endpoint geometry, performance, trajectory, adaptation, and mechanism in
+separate fields. Bound altered-cue/stretched-track claims to reported
+biological CA1 reuse/adaptation with model response held as future work.
+
+Refactor `scripts/validate_dynamic_orthing.py` to expose pure mapping/root
+checks used by the focused tests before applying them to repository owners.
+Do not match case IDs or literal attack strings. Preserve the approved
+`computational-analogy` role and keep it distinct from project-owned
+`orthemological-extension`.
+
+**Step 3 — verify:** Run the focused OSM-T01–T22 suite, dynamic orthing,
+latent-state fixtures, Task 7 claim-role/evidence boundaries, source status,
+claim sources, schemas, cross-record and cross-document consistency, negative
+and recursive mutations, structured parsing, changed-Python AST, current and
+candidate state, Decisions 0001-0022 preservation, and deterministic manifest
+parity. The main manuscript changes in this task may make the interim Typst
+artifact stale; do not regenerate or claim final PDFs here. Task 13 remains the
+next PDF/source-package owner after Tasks 9-12.
+
+**Step 4 — commit:** Remove or directly re-source the absent REBAKE prose
+citation; update only current sourcing owners, state, and manifest; commit
+`fix: bound OSM as a task-specific computational analogy`. Submit the exact
+commit to one finite independent Task 8 review before Task 9.
 
 ## Task 9: Repair the argument map, metaphysical bridges, and divine Speech
 
