@@ -97,7 +97,9 @@ jobs:
       - name: Experiment methods / READY_TO_RUN gate (R7, Decision 0022)
         run: python scripts/validate_experiment_methods.py
       - name: Math source discipline + notation-gallery drift (R7B, Decision 0023)
-        run: python scripts/validate_math_source.py
+        run: |
+          python tests/test_math_source_validator.py
+          python scripts/validate_math_source.py
       - name: Math pipeline unit tests (R7B, Decision 0023)
         run: python tests/test_math_pipeline.py
       - name: PDF math-glyph regression gate (R7B, Decision 0023)
