@@ -603,6 +603,39 @@ class OSMClaimBoundaryTests(unittest.TestCase):
                     "their structured owners",
                 )
 
+    def test_crosswalk_object_nonclaims_are_bound_by_object_identity(self):
+        relative = (
+            "applications/latent-state-orthing/"
+            "OSM-CSCG-ORTHEME-CROSSWALK.yaml"
+        )
+        invalid_mutations = [
+            lambda doc: doc["rows"][0].pop("non_claims"),
+            lambda doc: doc["rows"][0].__setitem__(
+                "non_claims", ["unrelated boundary"]
+            ),
+            lambda doc: doc["rows"][0].__setitem__(
+                "non_claims", [{"nested": "value"}]
+            ),
+        ]
+        for mutate_document in invalid_mutations:
+            with self.subTest(mutation=mutate_document):
+                self.assertTrue(
+                    self.root_issues_after(relative, mutate_document),
+                    "each object row must preserve its declared nonclaims",
+                )
+
+        def reorder_declared_sets(document):
+            document["rows"].reverse()
+            for row in document["rows"]:
+                if row.get("object_id") and isinstance(row.get("non_claims"), list):
+                    row["non_claims"].reverse()
+
+        self.assertEqual(
+            [],
+            self.root_issues_after(relative, reorder_declared_sets),
+            "row order and object-row nonclaim order are non-semantic",
+        )
+
 
 if __name__ == "__main__":
     unittest.main()

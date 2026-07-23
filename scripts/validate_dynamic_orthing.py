@@ -169,6 +169,59 @@ TASK8_CROSSWALK_LOCATORS = {
         "Decision 0015 and OSM-DYNAMICS-DEFINITIONS.yaml#profile_relation",
     "actual_orthemic_profile": "Decision 0015",
 }
+TASK8_CROSSWALK_NONCLAIMS = {
+    "world_task_state": {
+        "the world/task state is not an observation, clone, posterior, or orthemic profile",
+    },
+    "concrete_occurrence": {
+        "the article does not claim the project's occurrence object",
+        "an occurrence is not a sensory or model symbol",
+    },
+    "biological_sensory_observation": {
+        "the animal-facing observation is not the model's discrete symbol",
+        "the observation is not the occurrence",
+    },
+    "model_observation_symbol": {
+        "abstraction is a typed relation, not identity",
+        "a model symbol is not raw biological input",
+    },
+    "biological_single_cell_response": {
+        "a biological response is not a CSCG clone, population representation, "
+        "model parameter, or ortheme",
+    },
+    "biological_population_representation": {
+        "a population representation is not one cell response",
+        "it is not a clone-occupancy vector by identity",
+    },
+    "cscg_clone_latent_state": {
+        "a latent state is not an ortheme; project admission is by ablation",
+        "a clone is not a neuron, occurrence, posterior, or profile",
+    },
+    "latent_posterior": {
+        "a posterior is not a world/task state, clone, inferred profile, actual "
+        "profile, or ground truth",
+    },
+    "model_parameter_state": {
+        "parameters are not representation outputs or derived geometry",
+        "cross-model parameter equality is not asserted",
+    },
+    "model_representation_output": {
+        "an output is not its parameters",
+        "an output is not the statistic later derived from it",
+    },
+    "derived_representation_geometry": {
+        "orthogonalization does not define an ortheme",
+        "geometry is not a worldly state, output, parameter, or orthemic profile",
+    },
+    "inferred_orthemic_profile": {
+        "the article does not report an orthemic profile",
+        "a model posterior may inform but never equals this profile",
+    },
+    "actual_orthemic_profile": {
+        "the model does not manufacture ground truth",
+        "the article supplies no actual orthemic profile",
+    },
+}
 TASK8_COMPARISON_ROWS = {
     "endpoint_trajectory_comparison": {
         "content_kind": "model-comparison",
@@ -568,6 +621,13 @@ def validate_osm_root(root):
                           "and evidence-access role" % object_id)
         if row.get("source_locator") != TASK8_CROSSWALK_LOCATORS[object_id]:
             issues.append("crosswalk object %s must preserve its exact source locator" % object_id)
+        nonclaim_rows, nonclaims = _string_set(
+            row.get("non_claims"), "crosswalk object %s.non_claims" % object_id, issues)
+        expected_nonclaims = TASK8_CROSSWALK_NONCLAIMS[object_id]
+        if (nonclaims != expected_nonclaims
+                or len(nonclaim_rows) != len(expected_nonclaims)):
+            issues.append("crosswalk object %s must preserve its declared nonclaims"
+                          % object_id)
 
     comparison_rows = {}
     for index, value in enumerate(crosswalk_rows):
