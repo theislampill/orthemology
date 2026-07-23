@@ -1,6 +1,6 @@
 # Argument map — orthability to the ground of intelligibility
 
-**Status: normative step map (R3, 2026-07-20; Decision 0010).** Every step of the school-neutral companion's argument, classified, with its extra premises exposed and its rival exits named. Sense key: **L** = `Orthable(m; A)` local analysis-relative aptness; **O** = objective conditions of evaluability; **R** = created representation/application. No step is stronger than its classification; nothing later strengthens anything earlier.
+**Status: normative step map (R3, 2026-07-20; Decision 0010; Task 9 boundary clarified).** Every step of the cross-framework dialectical argument is classified with its extra premises and rival exits exposed. Cross-framework means common-premise accessibility, not a neutral or coequal tribunal; the declared operative noetic frame of the separate creed-internal route is Atharī/Taymiyyan. Sense key: **L** = `Orthable(m; A)` local analysis-relative aptness; **O** = objective conditions of evaluability; **R** = created representation/application. No step is stronger than its classification; nothing later strengthens anything earlier.
 
 ## The chain (companion §4.2)
 
@@ -15,7 +15,7 @@
 | 7 | The underived locus is intelligent | O | metaphysical/explanatory, conditional | causal adequacy to meanings/norms (T2-style); adequacy-to-intelligibility is intellectual | impersonal-structure terminus (marked exit) |
 | 8 | Will | — | metaphysical, conditional | selection-requires-selector (contingent instantiation not brute) | brute-contingency stop (A6) |
 | 9 | Power | — | metaphysical, conditional | selection without efficacy institutes nothing | same family as 8 |
-| 10 | Wisdom | — | teleological | T1 (irreducible teleology; §3.3) | selected-function naturalism |
+| 10 | Wisdom | — | **held as a cross-framework positive bridge** | T1 alone does not establish Wisdom; a further intellective/teleological premise is required | selected-function naturalism; intrinsic-form/value realism; Euthyphro/fittingness; impersonal order |
 | 11 | Communicative orthability (O includes determinate representation/disclosure) | O | analytic observation | none | — |
 | §8 | Capacity for disclosure (not intrinsically mute) | O | metaphysical, conditional | proportionate-causality premise for perfection-relevant capacities (E1) | capacity-scepticism about grounds |
 | — | **Actual** divine Speech, its words, letters, sound, occasions | — | **revelational/school-internal — outside this paper** | revelation | everyone who stops at philosophy; made only in the Atharī companion |
