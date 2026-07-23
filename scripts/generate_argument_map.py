@@ -66,9 +66,12 @@ def collect_issues(data: Any, source_registry: Any = None) -> list[str]:
     return issues[:100]
 
 
-def render_argument_map(data: Any) -> str:
+def render_argument_map(data: Any, source_registry: Any = None) -> str:
     """Render the canonical ordered summary using LF only."""
-    issues = collect_issues(data)
+    registry = source_registry
+    if registry is None:
+        registry = yaml.safe_load(SOURCE_STATUS_PATH.read_text(encoding="utf-8"))
+    issues = collect_issues(data, registry)
     if issues:
         raise ValueError("; ".join(issues))
     model = copy.deepcopy(data)
@@ -114,6 +117,9 @@ def render_argument_map(data: Any) -> str:
 def replace_generated_section(document: str, rendered: str) -> str:
     """Replace exactly one non-nested marker pair and normalize LF."""
     normalized = document.replace("\r\n", "\n").replace("\r", "\n")
+    rendered_normalized = rendered.replace("\r\n", "\n").replace("\r", "\n")
+    if BEGIN_MARKER in rendered_normalized or END_MARKER in rendered_normalized:
+        raise ValueError("rendered payload must not contain generated markers")
     if normalized.count(BEGIN_MARKER) != 1 or normalized.count(END_MARKER) != 1:
         raise ValueError("document must contain exactly one generated marker pair")
     begin = normalized.index(BEGIN_MARKER)
@@ -123,7 +129,7 @@ def replace_generated_section(document: str, rendered: str) -> str:
     interior = normalized[begin + len(BEGIN_MARKER) : end]
     if BEGIN_MARKER in interior or END_MARKER in interior:
         raise ValueError("generated markers are nested")
-    replacement = f"{BEGIN_MARKER}\n{rendered.rstrip()}\n{END_MARKER}"
+    replacement = f"{BEGIN_MARKER}\n{rendered_normalized.rstrip()}\n{END_MARKER}"
     return normalized[:begin] + replacement + normalized[end + len(END_MARKER) :]
 
 
@@ -135,7 +141,9 @@ def build() -> tuple[Path, str]:
     if issues:
         raise ValueError("; ".join(issues))
     current = COMPANION_PATH.read_text(encoding="utf-8")
-    return COMPANION_PATH, replace_generated_section(current, render_argument_map(data))
+    return COMPANION_PATH, replace_generated_section(
+        current, render_argument_map(data, registry)
+    )
 
 
 def main() -> int:

@@ -7,17 +7,15 @@ claim; no theological claim is asserted as established; asserts no soul access.*
 
 ## 1. Source-status note
 
-Six canonical claim roles are used and never conflated: **primary-text verified** (a
+Five source statuses are used and never conflated: **primary-text verified** (a
 located classical text), **secondary reconstruction** (a modern scholarly
 compilation or dissertation), **cross-source synthesis** (this project's joining
 of sources), **orthemological extension** (a claim of this framework), and
-**computational analogy** (a bounded comparison), and **creed-internal
-inference** (a step valid only inside a labeled school). Every load-bearing claim
-below and every node in
+**creed-internal inference** (a step valid only inside a labeled school, e.g. the
+Atharī route on rungs 8–10). Every load-bearing claim below and every rung in
 [`DYNAMIC-ORTHABILITY-ARGUMENT-MAP.yaml`](DYNAMIC-ORTHABILITY-ARGUMENT-MAP.yaml)
-carries exactly one of these hyphenated roles; a creed-internal step is never
-presented as cross-framework warrant, and no empirical result is ever promoted
-into a metaphysical or theological conclusion. The
+carries one of these five labels; a creed-internal step is never presented as
+school-neutral, and no empirical result is ever labeled above cross-source synthesis. The
 supplied `Ibn Taymiyyah's Epistemology.md` is a **collection** of modern
 scholarly materials, not one authorial work by Ibn Taymiyya; the "concrete
 reason / ideal reason" contrast is a **modern interpretive lens** (associated
@@ -112,7 +110,7 @@ modalities (audit B39); collapsing any two is a fallacy:
 
 1. **metaphysical possibility** — a correction trajectory exists in some possible world;
 2. **nomological possibility** — one exists under the actual laws;
-3. **objective reachability** — $m' \in \operatorname{Reach}_A(m, \sigma)$: some admissible action-sequence $\sigma$ reaches it (a fact about the state space, actor-independent);
+3. **objective reachability** — $m' \in \operatorname{Reach}_A(m, \Pi)$: some admissible action-sequence reaches it (a fact about the state space, actor-independent);
 4. **controllability** — a *governed* policy can steer the system to it (reachability plus a control law), still actor-independent;
 5. **actor accessibility** — $m' \in \operatorname{Accessible}_{A,\alpha,t}(m, H_t)$: *this* actor can reach it from *its* history and capacities;
 6. **evidence-relative discoverability** — it is findable under the evidence actually available to the inquiry;
@@ -132,7 +130,7 @@ proposed-candidate, not literal G2), a created learner producing the modal order
 ### 8.2 Two numbered scales — do not conflate
 
 This paper uses **two** numbered scales. The **eight modalities** (§8.1) disambiguate
-the *meaning* of "a correction is available"; the **ten rungs** (§9,
+the *meaning* of "a correction is available"; the **fourteen argument nodes** (§9,
 `DYNAMIC-ORTHABILITY-ARGUMENT-MAP.yaml`) are the metaphysical ladder. They are
 different scales. Modalities 1–4 (objective corrigibility) are what rung 2 (dynamic
 corrigibility) asserts; modalities 5–8 (agent-relative accessibility,
@@ -143,12 +141,9 @@ rungs 1–3; neither scale's lower entries license any upper entry of the other.
 
 ## 9. Metaphysical argument map
 
-Each node carries a distinct premise set, inference type, bridge status,
-objection, and rival exit. OSM and DAEE are **worked explananda /
-applications** at the lower levels, not proof of any metaphysical or theological
-bridge. “Cross-framework” below means dialectical accessibility and rival
-routing, not a criterion-free or coequal tribunal; the declared operative
-noetic frame is Atharī/Taymiyyan, and its label does not substitute for warrant.
+Each rung is a **separate premise**, with an inference type, an objection, and a
+rival exit. OSM and DAEE are **worked explananda / applications** at the lower
+levels, not proof of the upper bridge.
 
 <!-- BEGIN GENERATED ARGUMENT MAP -->
 ### Generated typed argument-node summary
@@ -190,20 +185,19 @@ carried only by the explanatory/teleological bridge premise (rival exit:
 teleosemantic naturalism), never by learning evidence. Empirical density at rung 3
 therefore leaves rung 4's status exactly where it was.
 
-Nodes 1–3 are what the static and dynamic Orthemology material addresses. Every
-upper node requires **explicit bridge premises identified in the companion
-papers**; the learning/diagnosis material never carries them. The Speech nodes
-are creed-internal (Atharī/Taymiyyan) and school-labeled. The full
-machine-readable map — every node's stable identity, premise, inference and
-bridge type, conclusion, dependencies, claim role, source references, evidence
-access, strongest objection, rival exit, and typed epistemic scope — is
+Rungs 1–3 are what the static and dynamic Orthemology material addresses. Rungs
+4–10 each require **explicit bridge premises already identified in the companion
+papers**; the learning/diagnosis material never carries them. Rung 10 is
+creed-internal (Atharī) and school-labeled. The full machine-readable map — every
+rung's premise, inference type, conclusion, dependency, evidence/source status,
+strongest objection, rival exit, and school-neutral vs Atharī-internal status — is
 [`DYNAMIC-ORTHABILITY-ARGUMENT-MAP.yaml`](DYNAMIC-ORTHABILITY-ARGUMENT-MAP.yaml),
-checked in CI. Its `non_entailments` block records that OSM/DAEE prove no upper
-node.
+checked in CI. Its `non_entailments` block records that OSM/DAEE exemplify only rungs
+1–3 and prove no upper rung.
 
 ## 10. Theological / Atharī route and the created/uncreated distinction
 
-Actual revelation-specific Speech is developed in full in the Atharī companion
+Rung 10 (revelation-specific Speech) is developed in full in the Atharī companion
 (`orthability-divine-attributes-and-speech-athari.md`), under explicit school-labeled,
 revelational premises. The reason/revelation firewall stands: **no engineering or
 learning evidence supports any theological rung**, and OSM/DAEE belong only to the
@@ -247,19 +241,18 @@ created" is exactly the conflation the firewall forbids.
 
 ## 12. Limitations
 
-This is a placement, not a proof. Every upper bridge is separately typed and
-conditional or held. Source verification queues do not promote access, source
-identity, or a school label into warrant. No empirical study validates any
-metaphysical or theological claim here.
+This is a placement, not a proof. The bridge premises (rungs 4–10) are argued
+elsewhere and remain conditional. Primary-text verification of the Taymiyyan loci
+is a standing queue. No empirical study validates any claim here.
 
 **Absence conditions (when dynamic orthability fails under A).** The candidate is
 falsifiable-in-principle relative to a declared analysis $A$. Dynamic orthability is
 *absent* under $A$ when any of: (i) placements lack determinate correctness
 conditions, so rung 1 fails and there is nothing to be corrected toward; (ii) no
-more-adequate state is reachable — $\operatorname{Reach}_A(m, \sigma) = \varnothing$ for
+more-adequate state is reachable — $\operatorname{Reach}_A(m, \Pi) = \varnothing$ for
 every unresolved or mistaken $m$ — so the correction structure is empty; or (iii)
 apparent improvement is shown to be brute regularity with no truth-linkage (rung 2's
-rival exit obtains and no objective route-ranking is established). Stating these
+rival exit obtains and "correction" tracks no objective gradient). Stating these
 keeps the concept from being unfalsifiable; showing a real case meets (i)–(iii) is
 itself analysis-relative and empirical, not settled here.
 

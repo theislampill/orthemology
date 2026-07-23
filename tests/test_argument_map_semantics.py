@@ -42,6 +42,9 @@ class ArgumentMapSemanticsTests(unittest.TestCase):
     def issues(self, data):
         return validator.validate_mapping(data, self.registry)
 
+    def issues_with_registry(self, data, registry):
+        return validator.validate_mapping(data, registry)
+
     def mutated(self, mutator):
         data = copy.deepcopy(self.model)
         mutator(data)
@@ -53,6 +56,10 @@ class ArgumentMapSemanticsTests(unittest.TestCase):
             any(fragment in issue for issue in issues),
             f"expected {fragment!r} in {issues!r}",
         )
+
+    def assert_rejected(self, mutator):
+        issues = self.issues(self.mutated(mutator))
+        self.assertTrue(issues, "expected invalid mapping to be rejected")
 
     def test_canonical_mapping_is_valid(self):
         self.assertEqual([], self.issues(copy.deepcopy(self.model)))
@@ -90,11 +97,25 @@ class ArgumentMapSemanticsTests(unittest.TestCase):
             "duplicate node id",
         )
 
+    def test_exact_node_identity_set_is_stable(self):
+        self.assert_rejected(lambda d: d["nodes"].pop())
+        self.assert_rejected(
+            lambda d: d["nodes"][-1].__setitem__("id", "ARG-15")
+        )
+
     def test_order_and_dependency_parity(self):
         self.assert_invalid(lambda d: d["nodes"][1].__setitem__("order", 99), "order")
         self.assert_invalid(
             lambda d: d["nodes"][1]["dependencies"].append("ARG-MISSING"),
             "dangling dependency",
+        )
+        self.assert_rejected(
+            lambda d: d["nodes"][5]["dependencies"].append("ARG-08")
+        )
+
+    def test_conclusion_cannot_be_its_own_bridge_premise(self):
+        self.assert_rejected(
+            lambda d: d["nodes"][7]["bridge_premise_refs"].append("ARG-08-C")
         )
 
     def test_scope_is_not_neutral_tribunal(self):
@@ -122,10 +143,68 @@ class ArgumentMapSemanticsTests(unittest.TestCase):
             "invalid bridge_status",
         )
 
+    def test_each_node_keeps_its_exact_typed_semantic_contract(self):
+        def substitute_allowed_source(data):
+            node = data["nodes"][0]
+            status = next(
+                row["status"]
+                for row in self.registry["claims"]
+                if row["id"] == "LAT-1"
+            )
+            node["source_status_refs"] = ["LAT-1"]
+            node["evidence_access_status"] = {"LAT-1": status}
+            node["reference_roles"] = {"LAT-1": "comparative"}
+
+        mutations = (
+            lambda d: d["nodes"][0].__setitem__(
+                "scope", "athari-taymiyyan-operative"
+            ),
+            lambda d: d["nodes"][0].__setitem__(
+                "claim_role", "cross-source-synthesis"
+            ),
+            lambda d: d["nodes"][3].__setitem__("inference_type", "metaphysical"),
+            lambda d: d["nodes"][3].__setitem__("bridge_status", "held"),
+            lambda d: d["nodes"][11].__setitem__(
+                "warrant_basis", "stated-premises-and-inference"
+            ),
+            substitute_allowed_source,
+            lambda d: d["nodes"][0].__setitem__("label", "neutral tribunal"),
+            lambda d: d["nodes"][0]["rival_exit"].__setitem__(
+                "joint", "ARG-04"
+            ),
+            lambda d: d["nodes"][0]["rival_exit"].__setitem__(
+                "id", "instrumentalism"
+            ),
+        )
+        for mutation in mutations:
+            with self.subTest(mutation=mutation):
+                self.assert_rejected(mutation)
+
     def test_non_entailment_firewalls_are_complete(self):
         self.assert_invalid(
             lambda d: d["non_entailments"].pop(),
             "missing non_entailment",
+        )
+
+    def test_claims_bind_typed_semantic_boundaries(self):
+        boundaries = self.model.get("semantic_boundaries")
+        self.assertIsInstance(boundaries, dict)
+        self.assertTrue(boundaries)
+        for node in self.model["nodes"]:
+            for claim in [*node["premises"], node["conclusion"]]:
+                with self.subTest(claim=claim["id"]):
+                    self.assertIsInstance(claim.get("boundary_refs"), list)
+                    self.assertTrue(
+                        set(claim["boundary_refs"]).issubset(boundaries),
+                        claim,
+                    )
+        self.assert_rejected(
+            lambda d: d["nodes"][-1]["premises"][0]["boundary_refs"].clear()
+        )
+        self.assert_rejected(
+            lambda d: d["semantic_boundaries"][
+                "BOUND-RABB-NONCONJUNCTIVE"
+            ].__setitem__("owner", "cross_framework_policy")
         )
 
     def test_school_or_source_label_cannot_be_warrant(self):
@@ -136,6 +215,12 @@ class ArgumentMapSemanticsTests(unittest.TestCase):
         self.assert_invalid(
             lambda d: d["nodes"][0].__setitem__("warrant_basis", "source-identity"),
             "warrant_basis",
+        )
+        self.assert_rejected(
+            lambda d: d["nodes"][0].__setitem__(
+                "warrant_basis",
+                "revelation-and-declared-creed-internal-inference",
+            )
         )
 
     def test_common_premise_wisdom_bridge_stays_held(self):
@@ -149,6 +234,24 @@ class ArgumentMapSemanticsTests(unittest.TestCase):
             lambda d: d["nodes"][9].__setitem__("bridge_status", "established"),
             "Athari Wisdom",
         )
+        self.assert_rejected(
+            lambda d: d["common_premise_fittingness_to_wisdom"].__setitem__(
+                "reason", "the positive inference is established"
+            )
+        )
+        self.assert_rejected(
+            lambda d: d["common_premise_fittingness_to_wisdom"].__setitem__(
+                "permitted_use", "autonomous proof of divine Wisdom"
+            )
+        )
+
+    def test_conditional_common_premise_wisdom_control_is_valid(self):
+        data = self.mutated(
+            lambda d: d["common_premise_fittingness_to_wisdom"].__setitem__(
+                "status", "conditional"
+            )
+        )
+        self.assertEqual([], self.issues(data))
 
     def test_upper_nodes_cannot_be_promoted_by_osm_or_daee(self):
         self.assert_invalid(
@@ -165,13 +268,13 @@ class ArgumentMapSemanticsTests(unittest.TestCase):
             lambda d: d["nodes"][1]["conclusion"].__setitem__(
                 "text", "an objective differentiable correction gradient exists"
             ),
-            "gradient",
+            "contract drift",
         )
         self.assert_invalid(
             lambda d: d["nodes"][2]["conclusion"].__setitem__(
                 "text", "all learners are guaranteed to converge"
             ),
-            "convergence",
+            "contract drift",
         )
 
     def test_empirical_learnability_does_not_supply_normativity(self):
@@ -185,10 +288,11 @@ class ArgumentMapSemanticsTests(unittest.TestCase):
             lambda d: d["nodes"][6]["premises"].append(
                 {"id": "P-CIRC", "text": "the ground is already personal and intelligent"}
             ),
-            "premise assumes its conclusion",
+            "claim identities",
         )
 
     def test_all_rival_families_are_routed(self):
+        self.assertIn("primitivism", self.model["rival_routes"])
         for family in (
             "selected-function-naturalism",
             "modal-primitivism",
@@ -208,6 +312,16 @@ class ArgumentMapSemanticsTests(unittest.TestCase):
                 "joint", "ARG-MISSING"
             ),
             "rival route joint",
+        )
+        self.assert_rejected(
+            lambda d: d["rival_routes"]["modal-primitivism"].__setitem__(
+                "joint", "ARG-04"
+            )
+        )
+        self.assert_rejected(
+            lambda d: d["nodes"][3]["rival_exit"].__setitem__(
+                "joint", "actual-Speech"
+            )
         )
 
     def test_source_references_resolve_and_roles_match(self):
@@ -236,6 +350,49 @@ class ArgumentMapSemanticsTests(unittest.TestCase):
             "evidence access drift",
         )
 
+    def test_source_role_and_claim_role_must_match_source_status(self):
+        def make_elt_secondary(data):
+            node = data["nodes"][0]
+            row = next(
+                item for item in self.registry["claims"] if item["id"] == "ELT-1"
+            )
+            node["claim_role"] = "secondary-reconstruction"
+            node["source_status_refs"] = ["ELT-1"]
+            node["evidence_access_status"] = {"ELT-1": row["status"]}
+            node["reference_roles"] = {"ELT-1": "secondary-scholarship"}
+
+        valid = self.mutated(make_elt_secondary)
+        self.assertEqual([], self.issues(valid))
+
+        primary_role = copy.deepcopy(valid)
+        primary_role["nodes"][0]["reference_roles"]["ELT-1"] = "primary-text"
+        self.assertTrue(self.issues(primary_role))
+
+        primary_claim = copy.deepcopy(valid)
+        primary_claim["nodes"][0]["claim_role"] = "primary-text-verified"
+        self.assertTrue(self.issues(primary_claim))
+
+    def test_research_only_packet_cannot_be_registered_as_support(self):
+        data = copy.deepcopy(self.model)
+        registry = copy.deepcopy(self.registry)
+        discovery = copy.deepcopy(
+            next(item for item in registry["claims"] if item["id"] == "EXT-1")
+        )
+        discovery.update(
+            {
+                "id": "EXT-DR19",
+                "claim": "Deep Research report 19 establishes the positive route",
+                "source": "Deep Research report 19",
+                "support": "supports the claim",
+            }
+        )
+        registry["claims"].append(discovery)
+        node = data["nodes"][0]
+        node["source_status_refs"] = ["EXT-DR19"]
+        node["evidence_access_status"] = {"EXT-DR19": discovery["status"]}
+        node["reference_roles"] = {"EXT-DR19": "comparative"}
+        self.assertTrue(self.issues_with_registry(data, registry))
+
     def test_citation_edition_locator_and_extraction_are_not_copied(self):
         for field in (
             "citation_locator",
@@ -247,6 +404,11 @@ class ArgumentMapSemanticsTests(unittest.TestCase):
                     lambda d, f=field: d["nodes"][0].__setitem__(f, "self-asserted"),
                     "copied source-custody field",
                 )
+        self.assert_rejected(
+            lambda d: d["nodes"][0]["conclusion"].__setitem__(
+                "citation_locator", "self-asserted local extraction line 1"
+            )
+        )
 
     def test_claim_roles_are_canonical_hyphenated_values(self):
         self.assert_invalid(
@@ -271,6 +433,22 @@ class ArgumentMapSemanticsTests(unittest.TestCase):
             lambda d: d["rabb_lexical_crosswalk"]["layers"].pop("context_binding"),
             "Rabb layer context_binding",
         )
+        self.assert_rejected(
+            lambda d: d["nodes"][-1]["premises"][0].__setitem__(
+                "text",
+                "every lexical sense of Rabb applies conjunctively to every token",
+            )
+        )
+        self.assert_rejected(
+            lambda d: d["nodes"][-1]["conclusion"].__setitem__(
+                "text", "the etymology of Rabb proves theology and divine Wisdom"
+            )
+        )
+        self.assert_rejected(
+            lambda d: d["nodes"][-1]["conclusion"].__setitem__(
+                "text", "Rabb brings the creature to complete self-sufficiency"
+            )
+        )
 
     def test_fitrah_and_proper_function_boundaries(self):
         self.assert_invalid(
@@ -283,12 +461,51 @@ class ArgumentMapSemanticsTests(unittest.TestCase):
             ),
             "proper functionalism",
         )
+        self.assert_rejected(
+            lambda d: d["nodes"][3]["conclusion"].__setitem__(
+                "text",
+                "Ibn Taymiyya authored Plantingian proper functionalism, which proves a Designer",
+            )
+        )
+        self.assert_rejected(
+            lambda d: d["nodes"][3]["premises"][0].__setitem__(
+                "text",
+                "fitrah is one measurable scalar coordinate and guaranteed attractor",
+            )
+        )
 
     def test_allah_is_not_a_formal_object(self):
         self.assert_invalid(
             lambda d: d.__setitem__("divine_formal_object_policy", "internal-formal-object"),
             "Allah",
         )
+        self.assert_rejected(
+            lambda d: d["nodes"][5]["conclusion"].__setitem__(
+                "text", "Allah is represented as an internal formal object"
+            )
+        )
+
+    def test_structured_nonclaim_boundaries_reject_direct_contradictions(self):
+        mutations = (
+            lambda d: d["nodes"][8]["conclusion"].__setitem__(
+                "text",
+                "the OSM result validates the metaphysical and theological conclusion",
+            ),
+            lambda d: d["nodes"][3]["conclusion"].__setitem__(
+                "text",
+                "empirical learnability alone yields normative proper function",
+            ),
+            lambda d: d["nodes"][7]["premises"][0].__setitem__(
+                "text", "a personal willing agent performs every contingent selection"
+            ),
+            lambda d: d["nodes"][5]["conclusion"].__setitem__(
+                "text",
+                "cross-framework neutrality is a coequal tribunal of soundness",
+            ),
+        )
+        for mutation in mutations:
+            with self.subTest(mutation=mutation):
+                self.assert_rejected(mutation)
 
     def test_seven_speech_bearers_are_exact_and_distinct(self):
         self.assertEqual(7, len(self.model["speech_bearers"]))
@@ -319,7 +536,18 @@ class ArgumentMapSemanticsTests(unittest.TestCase):
             lambda d: d["nodes"][-3]["conclusion"].__setitem__(
                 "text", "created Arabic wording is the receiver's artifact"
             ),
-            "created Arabic wording",
+            "contract drift",
+        )
+        self.assert_rejected(
+            lambda d: d["speech_boundary"].__setitem__(
+                "unsafe_created_arabic_wording", "permitted"
+            )
+        )
+        self.assert_rejected(
+            lambda d: d["nodes"][11]["conclusion"].__setitem__(
+                "text",
+                "capacity for disclosure by itself entails an actual divine Speech event",
+            )
         )
 
     def test_nested_objection_and_exit_shapes_reject(self):
@@ -346,6 +574,8 @@ class ArgumentMapSemanticsTests(unittest.TestCase):
         )
         issues = generator.collect_issues(data, self.registry)
         self.assertTrue(any("dialectical accessibility" in issue for issue in issues))
+        with self.assertRaises(ValueError):
+            generator.render_argument_map(data)
 
     def test_malformed_nested_values_return_bounded_issues(self):
         samples = [
@@ -359,6 +589,16 @@ class ArgumentMapSemanticsTests(unittest.TestCase):
             self.mutated(lambda d: d["nodes"][0].__setitem__("dependencies", [{}])),
             self.mutated(lambda d: d["nodes"][0].__setitem__("source_status_refs", [{}])),
             self.mutated(lambda d: d.__setitem__("non_entailments", [["bad"]])),
+            self.mutated(
+                lambda d: d["nodes"][0]["reference_roles"].__setitem__("EXT-1", [])
+            ),
+            self.mutated(lambda d: d["nodes"][0].__setitem__("claim_role", [])),
+            self.mutated(lambda d: d["nodes"][9].__setitem__("conclusion", [])),
+            self.mutated(
+                lambda d: d["rival_routes"]["modal-primitivism"].__setitem__(
+                    "joint", []
+                )
+            ),
         ]
         for sample in samples:
             with self.subTest(sample=repr(sample)[:60]):
@@ -388,6 +628,12 @@ class ArgumentMapSemanticsTests(unittest.TestCase):
             with self.subTest(document=document):
                 with self.assertRaises(ValueError):
                     generator.replace_generated_section(document, rendered)
+        with self.assertRaises(ValueError):
+            generator.replace_generated_section(
+                f"before\n{generator.BEGIN_MARKER}\nold\n"
+                f"{generator.END_MARKER}\nafter\n",
+                f"payload\n{generator.BEGIN_MARKER}\n",
+            )
 
     def test_marker_replacement_is_singular_and_lf(self):
         document = f"before\r\n{generator.BEGIN_MARKER}\r\nold\r\n{generator.END_MARKER}\r\nafter\r\n"
@@ -403,6 +649,13 @@ class ArgumentMapSemanticsTests(unittest.TestCase):
             expected,
             path.read_text(encoding="utf-8").replace("\r\n", "\n"),
         )
+
+    def test_companion_uses_current_node_count_not_stale_rung_count(self):
+        companion = (
+            ROOT / "companion/dynamic-orthing-noetic-learning-and-orthability.md"
+        ).read_text(encoding="utf-8")
+        self.assertNotIn("**ten rungs**", companion)
+        self.assertIn(f"Argument nodes: **{len(self.model['nodes'])}**.", companion)
 
 
 if __name__ == "__main__":
