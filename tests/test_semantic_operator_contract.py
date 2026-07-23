@@ -7,7 +7,6 @@ import importlib.util
 import io
 import json
 import os
-import subprocess
 import unittest
 
 import yaml
@@ -15,6 +14,15 @@ import yaml
 
 ROOT = os.path.dirname(os.path.dirname(os.path.abspath(__file__)))
 APP = os.path.join(ROOT, "applications", "daee-epistemics")
+HISTORICAL_V1_SHA256 = (
+    "9b19572d7e1e43ed513a910811b21cbd49f9ab8c58a4626ea5347f1175216d5e"
+)
+HISTORICAL_V1_GIT_BLOB = "17f0dfe3f9eba976fce573bebf0c2583a93a76aa"
+
+
+def git_blob_identity(payload):
+    header = f"blob {len(payload)}\0".encode("ascii")
+    return hashlib.sha1(header + payload).hexdigest()
 
 
 def load_module(name, rel):
@@ -299,18 +307,23 @@ class CorrectiveTransitionV2Tests(unittest.TestCase):
         self.assertTrue(os.path.isfile(historical_path))
         with io.open(historical_path, "rb") as handle:
             historical_bytes = handle.read()
-        parent_bytes = subprocess.check_output(
-            [
-                "git", "show",
-                "167ce32bdc396490d219cdfbbd436babaa59e21a:"
-                "applications/daee-epistemics/CORRECTIVE-TRANSITION.example.json",
-            ],
-            cwd=ROOT,
-        )
-        self.assertEqual(parent_bytes, historical_bytes)
         self.assertEqual(
-            "9b19572d7e1e43ed513a910811b21cbd49f9ab8c58a4626ea5347f1175216d5e",
+            HISTORICAL_V1_SHA256,
             hashlib.sha256(historical_bytes).hexdigest(),
+        )
+        self.assertEqual(
+            HISTORICAL_V1_GIT_BLOB,
+            git_blob_identity(historical_bytes),
+        )
+
+        tampered_bytes = historical_bytes + b"\n"
+        self.assertNotEqual(
+            HISTORICAL_V1_SHA256,
+            hashlib.sha256(tampered_bytes).hexdigest(),
+        )
+        self.assertNotEqual(
+            HISTORICAL_V1_GIT_BLOB,
+            git_blob_identity(tampered_bytes),
         )
 
 
