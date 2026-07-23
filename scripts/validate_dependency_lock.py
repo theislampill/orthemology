@@ -27,9 +27,54 @@ IMPORT_TO_DIST = {"yaml": "PyYAML", "jsonschema": "jsonschema", "typst": "typst"
                   "referencing": "referencing", "attrs": "attrs", "attr": "attrs",
                   "rpds": "rpds-py", "mdurl": "mdurl",
                   "jsonschema_specifications": "jsonschema-specifications"}
-STDLIB_HINT = set("""argparse collections datetime hashlib io itertools json os random re
-shutil statistics subprocess sys tempfile unicodedata glob math time functools textwrap importlib
-pathlib copy string urllib typing dataclasses""".split())
+
+
+def scan_repository_imports(root):
+    """Return top-level imports from the repository trees governed by the lock."""
+    used = set()
+    for tree in ("scripts", "experiments", "terminology"):
+        for base, dirs, fns in os.walk(os.path.join(root, tree)):
+            dirs[:] = [d for d in dirs if d != "__pycache__"]
+            for fn in fns:
+                if not fn.endswith(".py"):
+                    continue
+                with io.open(os.path.join(base, fn), encoding="utf-8") as stream:
+                    src = stream.read()
+                for match in re.finditer(
+                        r"^\s*(?:import\s+([A-Za-z_][A-Za-z0-9_]*)"
+                        r"|from\s+([A-Za-z_][A-Za-z0-9_]*)\s+import\s)", src, re.M):
+                    used.add(match.group(1) or match.group(2))
+    return used
+
+
+def find_local_modules(root):
+    """Return repository-local Python module basenames excluded from lock ownership."""
+    return {os.path.splitext(os.path.basename(path))[0]
+            for path in glob.glob(os.path.join(str(root), "**", "*.py"), recursive=True)}
+
+
+def classify_imports(used, local_modules, import_to_dist=None, stdlib_modules=None):
+    """Partition imported names by authoritative Python/distribution ownership."""
+    import_to_dist = IMPORT_TO_DIST if import_to_dist is None else import_to_dist
+    stdlib_modules = sys.stdlib_module_names if stdlib_modules is None else stdlib_modules
+    result = {name: set() for name in ("stdlib", "third_party", "local", "unmapped")}
+    for module in used:
+        if module in stdlib_modules:
+            result["stdlib"].add(module)
+        elif module in import_to_dist:
+            result["third_party"].add(module)
+        elif module in local_modules:
+            result["local"].add(module)
+        else:
+            result["unmapped"].add(module)
+    return result
+
+
+def find_missing_distributions(third_party, pins, import_to_dist=None):
+    """Return mapped distributions used by code but absent from exact pins."""
+    import_to_dist = IMPORT_TO_DIST if import_to_dist is None else import_to_dist
+    return sorted({import_to_dist[module] for module in third_party
+                   if import_to_dist[module] not in pins})
 
 
 def check(name, ok, detail=""):
@@ -56,28 +101,13 @@ def main():
     check("every lock line is an exact name==version pin", not bad, str(bad[:3]))
 
     # imports actually used by repository code
-    used = set()
-    for tree in ("scripts", "experiments", "terminology"):
-        for base, dirs, fns in os.walk(os.path.join(ROOT, tree)):
-            dirs[:] = [d for d in dirs if d != "__pycache__"]
-            for fn in fns:
-                if not fn.endswith(".py"):
-                    continue
-                src = io.open(os.path.join(base, fn), encoding="utf-8").read()
-                for m in re.finditer(
-                        r"^\s*(?:import\s+([A-Za-z_][A-Za-z0-9_]*)"
-                        r"|from\s+([A-Za-z_][A-Za-z0-9_]*)\s+import\s)", src, re.M):
-                    used.add(m.group(1) or m.group(2))
-    third_party = sorted(m for m in used
-                         if m not in STDLIB_HINT and m in IMPORT_TO_DIST)
-    local_modules = {os.path.splitext(os.path.basename(f))[0]
-                     for f in glob.glob(os.path.join(ROOT, "**", "*.py"), recursive=True)}
-    unmapped = sorted(m for m in used
-                      if m not in STDLIB_HINT and m not in IMPORT_TO_DIST
-                      and m not in local_modules)
+    used = scan_repository_imports(ROOT)
+    classified = classify_imports(used, find_local_modules(ROOT))
+    third_party = classified["third_party"]
+    unmapped = sorted(classified["unmapped"])
     check("no unmapped third-party import (extend IMPORT_TO_DIST when adding deps)",
           not unmapped, str(unmapped[:5]))
-    missing = [IMPORT_TO_DIST[m] for m in third_party if IMPORT_TO_DIST[m] not in pins]
+    missing = find_missing_distributions(third_party, pins)
     check("every imported third-party package is represented in the lock",
           not missing, str(missing))
 

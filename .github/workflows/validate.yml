@@ -15,7 +15,9 @@ jobs:
       - name: Install exact version-locked dependencies (requirements-ci.lock.txt; no live web checks anywhere in CI)
         run: pip install --quiet -r requirements-ci.lock.txt
       - name: Dependency lock consistency
-        run: python scripts/validate_dependency_lock.py
+        run: |
+          python tests/test_dependency_lock.py
+          python scripts/validate_dependency_lock.py
       - name: Repository hygiene + honesty checks
         run: python scripts/validate_repo.py
       - name: Generated project state — drift check (R4, Decision 0014)
