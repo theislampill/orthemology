@@ -1,0 +1,43 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "$id": "orthemology/somnic-episode.schema.json",
+  "title": "Bounded somnic episode",
+  "type": "object",
+  "additionalProperties": false,
+  "required": ["somnic_episode_id", "somnus_run_id", "operator_id", "ledger_id", "subject_ids", "activity_events", "assessment_ids", "disposition", "opened_at", "disposed_at", "telemetry_status", "source_state_mutated"],
+  "properties": {
+    "somnic_episode_id": {"type": "string", "minLength": 1},
+    "somnus_run_id": {"type": "string", "minLength": 1},
+    "operator_id": {"type": "string", "minLength": 1},
+    "ledger_id": {"type": "string", "minLength": 1},
+    "subject_ids": {"type": "array", "minItems": 1, "uniqueItems": true, "items": {"type": "string", "minLength": 1}},
+    "activity_events": {
+      "type": "array", "minItems": 1,
+      "items": {
+        "type": "object", "additionalProperties": false,
+        "required": ["activity_id", "activity_type", "somnic_episode_id", "activity_scope"],
+        "properties": {
+          "activity_id": {"type": "string", "minLength": 1},
+          "activity_type": {"enum": ["episode-opened", "subject-set-established", "historical-comparator-linked", "retrospective-standard-proposed", "meta-orthability-assessed", "assessment-recorded", "residual-recorded", "intervention-recorded", "collective-synthesis-recorded", "episode-disposed"]},
+          "somnic_episode_id": {"type": "string", "minLength": 1},
+          "activity_scope": {"const": "intra-somnic"}
+        }
+      }
+    },
+    "assessment_ids": {"type": "array", "uniqueItems": true, "items": {"type": "string", "minLength": 1}},
+    "disposition": {"enum": ["open", "closed", "partial", "held", "abandoned"]},
+    "opened_at": {"type": "string", "format": "date-time"},
+    "disposed_at": {"type": ["string", "null"], "format": "date-time"},
+    "telemetry_status": {"enum": ["fixture-only-not-live", "reconstructed-analogue-not-live"]},
+    "source_state_mutated": {"const": false},
+    "collective_context": {
+      "type": "object", "additionalProperties": false,
+      "required": ["source_episode_ids", "dissent_preserved", "source_scope_preserved"],
+      "properties": {
+        "source_episode_ids": {"type": "array", "minItems": 2, "uniqueItems": true, "items": {"type": "string", "minLength": 1}},
+        "dissent_preserved": {"const": true},
+        "source_scope_preserved": {"const": true}
+      }
+    }
+  }
+}

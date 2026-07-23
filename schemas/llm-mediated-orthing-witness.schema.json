@@ -1,0 +1,136 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "$id": "orthemology/llm-mediated-orthing-witness.schema.json",
+  "title": "Bounded R7E LLM-mediated orthing witness",
+  "type": "object",
+  "additionalProperties": false,
+  "required": [
+    "schema", "status", "witness_id", "declared_analysis", "classifications",
+    "original_history", "identity_records", "evidence_registry", "witness_objects",
+    "higher_order_audit", "claim_boundaries", "proof_protocol_placement"
+  ],
+  "properties": {
+    "schema": {"const": "orthemology-llm-mediated-orthing-witness-v1"},
+    "status": {"const": "current-candidate"},
+    "witness_id": {"type": "string", "minLength": 1},
+    "declared_analysis": {
+      "type": "object", "additionalProperties": false,
+      "required": ["analysis_id", "scope", "evidence_refs"],
+      "properties": {
+        "analysis_id": {"type": "string", "minLength": 1},
+        "scope": {"type": "string", "minLength": 1},
+        "evidence_refs": {"$ref": "#/$defs/id_set"}
+      }
+    },
+    "classifications": {
+      "type": "object", "additionalProperties": false,
+      "required": ["llm_applicability", "llm_mediated_realizability", "comparative_utility"],
+      "properties": {
+        "llm_applicability": {"const": "supported"},
+        "llm_mediated_realizability": {"const": "partially-supported"},
+        "comparative_utility": {"const": "not-established"}
+      }
+    },
+    "original_history": {
+      "type": "object", "additionalProperties": false,
+      "required": ["capture_mode", "episode_cardinality", "authoritative_identity_evidence_refs", "original_t1_checkpoint_status", "original_t1_evidence_status"],
+      "properties": {
+        "capture_mode": {"enum": ["retrospective_reconstruction", "live_capture", "bootstrap_provenance", "unknown"]},
+        "episode_cardinality": {"const": "underdetermined"},
+        "authoritative_identity_evidence_refs": {"type": "array", "maxItems": 0},
+        "original_t1_checkpoint_status": {"const": "missing"},
+        "original_t1_evidence_status": {"const": "not-observed"}
+      }
+    },
+    "identity_records": {
+      "type": "array", "minItems": 6,
+      "items": {
+        "type": "object", "additionalProperties": false,
+        "required": ["identity_kind", "status", "identifier"],
+        "properties": {
+          "identity_kind": {"enum": ["turn", "session", "episode", "occurrence", "orthing", "reconstruction_event"]},
+          "status": {"enum": ["unknown", "unresolved", "underdetermined", "reconstruction-only", "repository-verified"]},
+          "identifier": {"type": ["string", "null"], "minLength": 1}
+        }
+      }
+    },
+    "evidence_registry": {
+      "type": "array", "minItems": 1,
+      "items": {
+        "type": "object", "additionalProperties": false,
+        "required": ["evidence_id", "source_ref", "state", "claim_boundary"],
+        "properties": {
+          "evidence_id": {"type": "string", "minLength": 1},
+          "source_ref": {"type": "string", "minLength": 1},
+          "state": {"enum": ["repository-verified", "attachment-observed", "implementing-run-attributed", "missing", "unresolved"]},
+          "claim_boundary": {"type": "string", "minLength": 1}
+        }
+      }
+    },
+    "witness_objects": {
+      "type": "array", "minItems": 12,
+      "items": {
+        "type": "object", "additionalProperties": false,
+        "required": ["object_id", "object_kind", "illustration_role", "evidence_refs", "description"],
+        "properties": {
+          "object_id": {"type": "string", "minLength": 1},
+          "object_kind": {"enum": ["orthemmata", "declared-analysis", "executor-subagent-roles", "governing-types", "case-bound-applications", "sources", "candidate-findings-profiles", "routes", "integrated-actions", "residual-backlog", "successor-state", "higher-order-audit"]},
+          "illustration_role": {"$ref": "#/$defs/illustration_role"},
+          "evidence_refs": {"$ref": "#/$defs/id_set"},
+          "description": {"type": "string", "minLength": 1}
+        }
+      }
+    },
+    "higher_order_audit": {
+      "type": "object", "additionalProperties": false,
+      "required": ["audit_id", "subject_witness_id", "audit_authority_id", "implementing_authority_id", "self_certifying", "assessment_kind", "meta_orthability_disposition", "somnic_conformance", "authoritative_target_identity_status", "target_history_checkpoint_status", "target_history_digest_status", "original_t1_evidence_refs", "later_evidence_refs"],
+      "properties": {
+        "audit_id": {"type": "string", "minLength": 1},
+        "subject_witness_id": {"type": "string", "minLength": 1},
+        "audit_authority_id": {"type": "string", "pattern": "^[A-Z0-9]+(?:-[A-Z0-9]+)*$"},
+        "implementing_authority_id": {"type": "string", "pattern": "^[A-Z0-9]+(?:-[A-Z0-9]+)*$"},
+        "self_certifying": {"type": "boolean"},
+        "assessment_kind": {"const": "human-llm-mediated-retrospective-assessment"},
+        "meta_orthability_disposition": {"const": "record-insufficient"},
+        "somnic_conformance": {"const": "not-established"},
+        "authoritative_target_identity_status": {"const": "unresolved"},
+        "target_history_checkpoint_status": {"const": "missing"},
+        "target_history_digest_status": {"const": "not-observed"},
+        "original_t1_evidence_refs": {"type": "array", "maxItems": 0},
+        "later_evidence_refs": {"$ref": "#/$defs/id_set"}
+      }
+    },
+    "claim_boundaries": {
+      "type": "object", "additionalProperties": false,
+      "required": ["correctness", "empirical_validation", "terminology_benefit_or_adoption", "exact_internal_model_ontology", "cross_model_or_domain_generalization", "live_append_only_capture", "claimant_contract_enforcement", "recurrence_detection", "idempotent_frontier_processing", "full_somnus_writeback_chain", "nightly_autonomy", "runtime_deployment"],
+      "properties": {
+        "correctness": {"const": "not-established"},
+        "empirical_validation": {"const": "not-established"},
+        "terminology_benefit_or_adoption": {"const": "not-established"},
+        "exact_internal_model_ontology": {"const": "not-established"},
+        "cross_model_or_domain_generalization": {"const": "not-established"},
+        "live_append_only_capture": {"const": "not-observed"},
+        "claimant_contract_enforcement": {"const": "not-observed"},
+        "recurrence_detection": {"const": "not-observed"},
+        "idempotent_frontier_processing": {"const": "not-observed"},
+        "full_somnus_writeback_chain": {"const": "not-implemented"},
+        "nightly_autonomy": {"const": "not-implemented"},
+        "runtime_deployment": {"const": "not-implemented"}
+      }
+    },
+    "proof_protocol_placement": {
+      "type": "object", "additionalProperties": false,
+      "required": ["status", "concepts", "implemented", "normative_owner_created"],
+      "properties": {
+        "status": {"const": "requires-separately-numbered-reviewed-follow-up"},
+        "concepts": {"type": "array", "const": ["PoW", "PoR", "Proof-of-Orth", "capability-grant", "execution-receipt"]},
+        "implemented": {"const": false},
+        "normative_owner_created": {"const": false}
+      }
+    }
+  },
+  "$defs": {
+    "id_set": {"type": "array", "uniqueItems": true, "items": {"type": "string", "minLength": 1}},
+    "illustration_role": {"enum": ["documented-historical-fact", "retrospective-reconstruction", "schema-conformant-illustrative-mapping", "unsupported-live-runtime-claim"]}
+  }
+}

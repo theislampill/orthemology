@@ -1,0 +1,76 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "$id": "orthemology/residual-recurrence-report.schema.json",
+  "title": "Controlled residual recurrence report",
+  "type": "object",
+  "additionalProperties": false,
+  "required": ["recurrence_report_id", "somnus_run_id", "emitted_at", "fingerprint", "supporting_occurrences", "counterexample_ids", "opportunity_ids", "opportunity_denominator", "threshold", "threshold_effect", "pattern_equivalence", "suspected_locus", "causal_diagnosis", "proposed_intervention", "dependence_dimensions", "independence_assessment", "systemic_defect_proven", "emitted_actions", "unresolved_questions"],
+  "properties": {
+    "recurrence_report_id": {"type": "string", "minLength": 1},
+    "somnus_run_id": {"type": "string", "minLength": 1},
+    "emitted_at": {"type": "string", "format": "date-time"},
+    "fingerprint": {
+      "type": "object", "additionalProperties": false,
+      "required": ["residual_type", "affected_ortheme_or_boundary", "locus", "failure_or_uncertainty_class", "normalized_object", "route_stage", "raw_residual_texts", "source_orthing_ids"],
+      "properties": {
+        "residual_type": {"type": "string", "minLength": 1},
+        "affected_ortheme_or_boundary": {"type": "string", "minLength": 1},
+        "locus": {"type": "string", "minLength": 1},
+        "failure_or_uncertainty_class": {"type": "string", "minLength": 1},
+        "normalized_object": {"type": "string", "minLength": 1},
+        "route_stage": {"type": "string", "minLength": 1},
+        "raw_residual_texts": {"type": "array", "minItems": 1, "items": {"type": "string", "minLength": 1}},
+        "source_orthing_ids": {"type": "array", "minItems": 1, "uniqueItems": true, "items": {"type": "string", "minLength": 1}}
+      }
+    },
+    "supporting_occurrences": {
+      "type": "array", "minItems": 1,
+      "items": {
+        "type": "object", "additionalProperties": false,
+        "required": ["support_record_id", "orthing_id", "episode_id", "session_id", "normalized_input_family", "actor_id", "source_family", "occurred_at"],
+        "properties": {
+          "support_record_id": {"type": "string", "minLength": 1}, "orthing_id": {"type": "string", "minLength": 1}, "episode_id": {"type": "string", "minLength": 1}, "session_id": {"type": "string", "minLength": 1}, "normalized_input_family": {"type": "string", "minLength": 1}, "actor_id": {"type": "string", "minLength": 1}, "source_family": {"type": "string", "minLength": 1}, "occurred_at": {"type": "string", "format": "date-time"}
+        }
+      }
+    },
+    "counterexample_ids": {"type": "array", "uniqueItems": true, "items": {"type": "string", "minLength": 1}},
+    "opportunity_ids": {"type": "array", "minItems": 1, "uniqueItems": true, "items": {"type": "string", "minLength": 1}},
+    "opportunity_denominator": {"type": "integer", "minimum": 1},
+    "threshold": {"type": "integer", "minimum": 2},
+    "threshold_effect": {"const": "review_trigger_only"},
+    "pattern_equivalence": {"const": "structural_recurrence_candidate"},
+    "suspected_locus": {"type": "string", "minLength": 1},
+    "causal_diagnosis": {"const": "not-established"},
+    "proposed_intervention": {"const": "not-produced-by-v0"},
+    "dependence_dimensions": {
+      "type": "object", "additionalProperties": false,
+      "required": ["episode_count", "session_count", "normalized_input_family_count", "actor_count", "source_family_count", "time_span", "success_counterexample_count"],
+      "properties": {
+        "episode_count": {"type": "integer", "minimum": 1}, "session_count": {"type": "integer", "minimum": 1}, "normalized_input_family_count": {"type": "integer", "minimum": 1}, "actor_count": {"type": "integer", "minimum": 1}, "source_family_count": {"type": "integer", "minimum": 1}, "time_span": {"type": "string", "minLength": 1}, "success_counterexample_count": {"type": "integer", "minimum": 0}
+      }
+    },
+    "independence_assessment": {
+      "type": "object", "additionalProperties": false,
+      "required": ["rule_id", "required_dimensions", "evaluated_dimensions", "passed", "label"],
+      "properties": {
+        "rule_id": {"type": "string", "minLength": 1},
+        "required_dimensions": {"type": "array", "minItems": 1, "uniqueItems": true, "items": {"enum": ["session_count", "normalized_input_family_count", "actor_count", "source_family_count"]}},
+        "evaluated_dimensions": {
+          "type": "object", "additionalProperties": false,
+          "required": ["session_count", "normalized_input_family_count", "actor_count", "source_family_count"],
+          "properties": {
+            "session_count": {"type": "boolean"},
+            "normalized_input_family_count": {"type": "boolean"},
+            "actor_count": {"type": "boolean"},
+            "source_family_count": {"type": "boolean"}
+          }
+        },
+        "passed": {"type": "boolean"},
+        "label": {"enum": ["distinct episodes", "independent episodes"]}
+      }
+    },
+    "systemic_defect_proven": {"const": false},
+    "emitted_actions": {"type": "array", "maxItems": 0},
+    "unresolved_questions": {"type": "array", "minItems": 1, "items": {"type": "string", "minLength": 1}}
+  }
+}

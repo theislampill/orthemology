@@ -1,59 +1,72 @@
 {
   "$schema": "http://json-schema.org/draft-07/schema#",
-  "$id": "orthemology-corrective-transition-v1",
-  "title": "Governed corrective-transition record (R7D, Decision 0033)",
-  "description": "A single runtime corrective transition with all stages kept separate (audit B28/B29): live-state construction, hard-constraint admissibility, route eligibility/pressure, route selection, metaorthemma binding, executor operation, event-local delta, field diagnostics, whole-state reread, and terminal posture. Route pressure is not a differential gradient; delta is not result correctness; runtime closure is not human restoration; strict soundness (Decision 0011) is never asserted of a merely admissible transition.",
-  "type": "object",
-  "additionalProperties": false,
-  "required": ["schema", "transitions"],
-  "properties": {
-    "schema": {"const": "orthemology-corrective-transition-v1"},
-    "note": {"type": "string"},
-    "transitions": {
-      "type": "array",
-      "items": {
-        "type": "object",
-        "additionalProperties": false,
-        "required": ["transition_id", "state_before", "live_burdens", "hard_constraints", "eligible_routes", "ranking_witness", "selected_route", "governing_types", "represented_standards", "metaorthemmata", "executor_operation", "evidence", "delta", "state_after", "field_diagnostics", "reread", "terminal_posture", "verdicts", "non_claims"],
-        "properties": {
-          "transition_id": {"type": "string", "minLength": 1},
-          "state_before": {"type": "string", "minLength": 1},
-          "live_burdens": {"type": "array", "items": {"type": "string"}},
-          "hard_constraints": {"type": "array", "items": {"type": "string"}},
-          "eligible_routes": {"type": "array", "items": {"type": "string"}, "description": "routes surviving hard-constraint admissibility (feasibility filtered FIRST)"},
-          "ranking_witness": {"type": "string", "minLength": 1, "description": "the governance/partial-order witness for the selection; NOT a differential gradient"},
-          "selected_route": {"type": "string", "minLength": 1},
-          "governing_types": {"type": "array", "items": {"type": "string"}},
-          "represented_standards": {"type": "array", "items": {"type": "string"}},
-          "metaorthemmata": {"type": "array", "items": {"type": "string"}},
-          "executor_operation": {"type": "string", "minLength": 1},
-          "evidence": {"type": "array", "items": {"type": "string"}},
-          "delta": {"type": "string", "minLength": 1, "description": "the event-local runtime/control-state transition; NOT result correctness"},
-          "state_after": {"type": "string", "minLength": 1},
-          "field_diagnostics": {"type": "string", "minLength": 1},
-          "reread": {
-            "type": "object",
-            "additionalProperties": false,
-            "required": ["performed", "outcome"],
-            "properties": {
-              "performed": {"type": "boolean"},
-              "outcome": {"type": "string", "minLength": 1}
-            }
-          },
-          "terminal_posture": {"enum": ["STOP", "HOLD", "PARTIAL", "RECURSE", "CLOSURE"]},
-          "verdicts": {
-            "type": "object",
-            "additionalProperties": false,
-            "required": ["admissible", "pathway_adequate", "strictly_sound", "runtime_closure", "human_uptake"],
-            "properties": {
-              "admissible": {"type": "boolean"},
-              "pathway_adequate": {"type": "boolean"},
-              "strictly_sound": {"description": "only true when the relevant CLAIM is truth-linked under Decision 0011; a runtime transition being admissible never makes this true", "enum": ["not-claimed", true, false]},
-              "runtime_closure": {"type": "boolean"},
-              "human_uptake": {"enum": ["unobserved", "observed", "not-claimed"]}
-            }
-          },
-          "non_claims": {"type": "array", "items": {"type": "string"}, "minItems": 1}
+  "$id": "orthemology-corrective-transition-contracts",
+  "title": "Versioned governed corrective-transition records",
+  "oneOf": [
+    {"$ref": "#/$defs/v1"},
+    {"$ref": "#/$defs/v2"}
+  ],
+  "$defs": {
+    "verdicts": {
+      "type": "object", "additionalProperties": false,
+      "required": ["admissible", "pathway_adequate", "strictly_sound", "runtime_closure", "human_uptake"],
+      "properties": {
+        "admissible": {"type": "boolean"}, "pathway_adequate": {"type": "boolean"},
+        "strictly_sound": {"enum": ["not-claimed", true, false]},
+        "runtime_closure": {"type": "boolean"},
+        "human_uptake": {"enum": ["unobserved", "observed", "not-claimed"]}
+      }
+    },
+    "reread": {
+      "type": "object", "additionalProperties": false, "required": ["performed", "outcome"],
+      "properties": {"performed": {"type": "boolean"}, "outcome": {"type": "string", "minLength": 1}}
+    },
+    "baseTransition": {
+      "type": "object", "additionalProperties": false,
+      "required": ["transition_id", "state_before", "live_burdens", "hard_constraints", "eligible_routes", "ranking_witness", "selected_route", "governing_types", "represented_standards", "metaorthemmata", "executor_operation", "evidence", "delta", "state_after", "field_diagnostics", "reread", "terminal_posture", "verdicts", "non_claims"],
+      "properties": {
+        "transition_id": {"type": "string", "minLength": 1}, "state_before": {"type": "string", "minLength": 1},
+        "live_burdens": {"type": "array", "uniqueItems": true, "items": {"type": "string"}},
+        "hard_constraints": {"type": "array", "uniqueItems": true, "items": {"type": "string"}},
+        "eligible_routes": {"type": "array", "uniqueItems": true, "items": {"type": "string"}},
+        "ranking_witness": {"type": "string", "minLength": 1}, "selected_route": {"type": "string", "minLength": 1},
+        "governing_types": {"type": "array", "items": {"type": "string"}}, "represented_standards": {"type": "array", "items": {"type": "string"}},
+        "metaorthemmata": {"type": "array", "items": {"type": "string"}}, "executor_operation": {"type": "string", "minLength": 1},
+        "evidence": {"type": "array", "items": {"type": "string"}}, "delta": {"type": "string", "minLength": 1},
+        "state_after": {"type": "string", "minLength": 1}, "field_diagnostics": {"type": "string", "minLength": 1},
+        "reread": {"$ref": "#/$defs/reread"}, "terminal_posture": {"enum": ["STOP", "HOLD", "PARTIAL", "RECURSE", "CLOSURE"]},
+        "verdicts": {"$ref": "#/$defs/verdicts"}, "non_claims": {"type": "array", "minItems": 1, "items": {"type": "string"}},
+        "operator_trace": {"type": "array", "minItems": 1, "uniqueItems": true, "items": {"enum": ["route-pressure", "event-transition", "field-divergence", "field-curl", "loop-break", "whole-state-reread", "runtime-closure"]}},
+        "burden_accounting": {
+          "type": "object", "additionalProperties": false, "required": ["addressed", "carried_forward"],
+          "properties": {"addressed": {"type": "array", "uniqueItems": true, "items": {"type": "string"}}, "carried_forward": {"type": "array", "uniqueItems": true, "items": {"type": "string"}}}
+        },
+        "global_revision": {
+          "type": "object", "additionalProperties": false, "required": ["requested", "authorized", "authorization_ref"],
+          "properties": {"requested": {"type": "boolean"}, "authorized": {"type": "boolean"}, "authorization_ref": {"anyOf": [{"type": "null"}, {"type": "string", "minLength": 1}]}}
+        }
+      }
+    },
+    "v1": {
+      "type": "object", "additionalProperties": false, "required": ["schema", "transitions"],
+      "properties": {"schema": {"const": "orthemology-corrective-transition-v1"}, "note": {"type": "string"}, "compatibility_status": {"const": "historical-v1-only"}, "transitions": {"type": "array", "items": {"$ref": "#/$defs/baseTransition"}}}
+    },
+    "v2": {
+      "type": "object", "additionalProperties": false, "required": ["schema", "transitions"],
+      "properties": {
+        "schema": {"const": "orthemology-corrective-transition-v2"}, "note": {"type": "string"},
+        "transitions": {"type": "array", "items": {"allOf": [{"$ref": "#/$defs/baseTransition"}, {"required": ["operator_trace", "burden_accounting", "global_revision"]}]}},
+        "migration": {
+          "type": "object", "additionalProperties": false,
+          "required": ["original_record_identity", "original_content_digest", "source_contract", "migration_operation", "migration_version", "migration_time", "provenance", "fields_mapped_directly", "fields_newly_supplied", "fields_unavailable_or_held", "resulting_v2_digest"],
+          "properties": {
+            "original_record_identity": {"type": "string"}, "original_content_digest": {"type": "string", "pattern": "^[0-9a-f]{64}$"},
+            "source_contract": {"const": "orthemology-corrective-transition-v1"}, "migration_operation": {"const": "explicit-v1-to-v2-copy"},
+            "migration_version": {"const": "orthemology-corrective-transition-migration-v1"}, "migration_time": {"type": "string", "minLength": 1},
+            "provenance": {"type": "string", "minLength": 1}, "fields_mapped_directly": {"type": "array", "uniqueItems": true, "items": {"type": "string"}},
+            "fields_newly_supplied": {"type": "array", "minItems": 1, "uniqueItems": true, "items": {"type": "string"}}, "fields_unavailable_or_held": {"type": "array", "uniqueItems": true, "items": {"type": "string"}},
+            "resulting_v2_digest": {"type": "string", "pattern": "^[0-9a-f]{64}$"}
+          }
         }
       }
     }

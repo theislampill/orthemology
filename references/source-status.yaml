@@ -344,31 +344,44 @@ claims:
   locus: docs/related-work/LATENT-STATE-INFERENCE-AND-ORTHEMOLOGY.md; docs/decisions/0015-latent-state-observation-and-representation-boundary.md; manuscript section 12.1
   claim_level: related-work report about a published study's reported findings
   claim: >-
-    a published sequential-learning study reports that several compared models can reach the
-    endpoint while only one compared model matched the reported longitudinal trajectory, and that
-    high task performance can occur without the global representation geometry the study measured
+    the reported CSCG pipeline uses Baum-Welch expectation-maximization fit followed by
+    Viterbi-training transition refinement; the pinned official code separately implements MAP
+    decode; several tested model settings reach a similar measured endpoint while only CSCG
+    consistently matches the reported decorrelation order under the reported evaluation; and high
+    task performance can occur without the global representation geometry the study measured
   source: >-
     Sun, Weinan et al., "Learning produces an orthogonalized state machine in the hippocampus",
     Nature 640(8057):165-175, 2025
-  source_type: secondary scholarship (primary research article in another field)
+  source_type: primary research article in another field
   doi: 10.1038/s41586-024-08548-w
-  locus_exact: article as published (open access, CC BY 4.0; PMC11964937)
-  status: SECONDARY_VERIFIED
-  verification_date: 2026-07-20
-  wording_directly_checked: false
+  locus_exact: >-
+    version of record, Methods (CSCG; Vanilla RNNs; LSTM; Transformers; Hebbian-RNN),
+    Figures 4-5 and accompanying text; open access, CC BY 4.0; PMC11964937
+  status: PRIMARY_TEXT_EXACT
+  verification_date: 2026-07-22
+  wording_directly_checked: true
   page_edition_dependent: false
   school_flag: none (systems neuroscience)
   support: >-
-    supports ONLY the bounded abstract claim that endpoint performance and endpoint representation
-    do not by themselves determine the learning trajectory or mechanism. Does not identify latent
-    states with orthemes; does not validate orthemology; supplies no etymological support for
-    "ortheme"; bears nothing on fitrah, metaphysical orthability, Necessary Being, or divine Speech
+    supports ONLY the bounded source/model claims and task-specific comparison above. It does not
+    identify latent states with orthemes; does not validate orthemology; supplies no etymological
+    support for "ortheme"; and bears nothing on human noetics, fitrah, metaphysical orthability,
+    Necessary Being, divine attributes, divine Speech, or theology
   notes: >-
-    Bibliographic record officially verified via Crossref in the R4 pass. The R4 independent review
-    did NOT re-open or reproduce the underlying experimental procedures - out of scope by the
-    controlling instruction; the repository claim is a bounded report of the source's own reported
-    findings, and the trajectory-match claim is scoped AMONG THE COMPARED MODELS UNDER THE REPORTED
-    EVALUATION, never universally.
+    The Task 8 source refresh directly checked the retained access-copy wording against the article
+    identity and recorded the access-copy hash below. Extraction line numbers are custody locators,
+    not journal pagination. MAP decode is supported only by the pinned official article code, not
+    by the article-text extraction. No underlying experiment was reproduced. The trajectory claim
+    is scoped AMONG THE TESTED MODELS UNDER THE REPORTED EVALUATION, never universally.
+  task8_custody:
+    access_copy_sha256: 0D097CBA7BBB25A949E2BF95AF28B5A2259BD8D60B0E5FAC5A74CDF7D05AA814
+    access_copy_role: local-primary-text-custody-only
+    access_copy_sole_public_evidence: false
+    extraction_lines_are_journal_pagination: false
+    official_code_repository: sprustonlab/OSM_Paper_Figures
+    official_code_commit: c1d1788b54c737efe24402e02762eee10da0d0d7
+    map_decode_locator: "fig_4/fig_4_CSCG/chmm_actions.py:176-187"
+    map_decode_evidence_access_status: pinned-official-code
 - id: LAT-2
   locus: docs/related-work/LATENT-STATE-INFERENCE-AND-ORTHEMOLOGY.md; docs/decisions/0015-latent-state-observation-and-representation-boundary.md
   claim_level: related-work report of a modeling mechanism

@@ -1,0 +1,12 @@
+schema: orthemology-daee-semantic-operator-fixtures-v1
+fixtures:
+- {id: SO-CONTROL, expected_valid: true}
+- {id: SO-01, mutation: literal-differentiable-gradient, expected_valid: false, violates: literal-differentiable-gradient}
+- {id: SO-02, mutation: untyped-field-target, operator: field-divergence, expected_valid: false, violates: untyped-field-target}
+- {id: SO-03, mutation: untyped-field-target, operator: field-curl, expected_valid: false, violates: untyped-field-target}
+- {id: SO-04, mutation: transition-as-correctness, expected_valid: false, violates: transition-as-correctness}
+- {id: SO-05, mutation: whole-state-reread-omitted, expected_valid: false, violates: whole-state-reread-omitted}
+- {id: SO-06, mutation: closure-as-uptake-restoration, expected_valid: false, violates: closure-as-uptake-restoration}
+- {id: SO-07, mutation: hidden-burden-deletion, expected_valid: false, violates: hidden-burden-deletion}
+- {id: SO-08, mutation: unauthorized-global-revision, expected_valid: false, violates: unauthorized-global-revision}
+- {id: SO-09, mutation: admissibility-as-strict-soundness, expected_valid: false, violates: admissibility-as-strict-soundness}

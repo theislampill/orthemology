@@ -1,0 +1,125 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "$id": "orthemology/activation-contract-fixtures.schema.json",
+  "title": "Activation contract fixture and authoring bundle",
+  "type": "object",
+  "additionalProperties": false,
+  "required": ["schema", "version_transition_authority", "evaluators", "authoring_records", "contracts", "fixture_outcomes"],
+  "properties": {
+    "schema": {"const": "orthemology-activation-contract-fixtures-v1"},
+    "version_transition_authority": {
+      "type": "object", "additionalProperties": false,
+      "required": ["authority_ref", "append_only", "accepted_versions"],
+      "properties": {
+        "authority_ref": {"const": "docs/decisions/0035-somnic-orthing-and-activation-contracts.md#activation-and-claimant-routing"},
+        "append_only": {"const": true},
+        "accepted_versions": {
+          "type": "array", "minItems": 1, "uniqueItems": true,
+          "items": {
+            "type": "object", "additionalProperties": false,
+            "required": ["artifact_kind", "artifact_id", "artifact_version", "sequence", "supersedes"],
+            "properties": {
+              "artifact_kind": {"enum": ["activation_contract", "orthability_evaluator"]},
+              "artifact_id": {"type": "string", "minLength": 1},
+              "artifact_version": {"type": "string", "minLength": 1},
+              "sequence": {"type": "integer", "minimum": 1},
+              "supersedes": {"type": ["string", "null"], "minLength": 1}
+            }
+          }
+        }
+      }
+    },
+    "evaluators": {
+      "type": "array", "minItems": 1,
+      "items": {
+        "type": "object", "additionalProperties": false,
+        "required": ["evaluator_id", "evaluator_version", "result_vocabulary", "non_claims"],
+        "properties": {
+          "evaluator_id": {"type": "string", "minLength": 1},
+          "evaluator_version": {"type": "string", "minLength": 1},
+          "result_vocabulary": {"type": "array", "minItems": 3, "maxItems": 3, "uniqueItems": true, "items": {"enum": ["applicable", "inapplicable", "indeterminate"]}},
+          "non_claims": {"type": "array", "minItems": 1, "uniqueItems": true, "items": {"type": "string", "minLength": 1}}
+        }
+      }
+    },
+    "authoring_records": {
+      "type": "array", "minItems": 1,
+      "items": {
+        "type": "object", "additionalProperties": false,
+        "required": ["provenance_record_id", "capture_mode", "immutable", "boundary_problem", "selected_contract_ref", "fixture_ids", "contract_body_digest", "fixture_semantic_digests", "unresolved_residuals"],
+        "properties": {
+          "provenance_record_id": {"type": "string", "minLength": 1},
+          "capture_mode": {"const": "bootstrap_provenance"},
+          "immutable": {"const": true},
+          "boundary_problem": {"type": "string", "minLength": 1},
+          "selected_contract_ref": {"type": "string", "minLength": 1},
+          "fixture_ids": {"type": "array", "minItems": 4, "uniqueItems": true, "items": {"type": "string", "minLength": 1}},
+          "contract_body_digest": {"type": "string", "pattern": "^[0-9a-f]{64}$"},
+          "fixture_semantic_digests": {
+            "type": "object", "minProperties": 4,
+            "propertyNames": {"type": "string", "minLength": 1},
+            "additionalProperties": {"type": "string", "pattern": "^[0-9a-f]{64}$"}
+          },
+          "unresolved_residuals": {"type": "array", "items": {"type": "string", "minLength": 1}}
+        }
+      }
+    },
+    "contracts": {"type": "array", "minItems": 1, "items": {"type": "object"}},
+    "fixture_outcomes": {
+      "type": "array", "minItems": 4,
+      "items": {
+        "type": "object", "additionalProperties": false,
+        "required": ["fixture_id", "fixture_class", "occurrence", "observed_indicators", "observed_exclusions", "property_findings", "claimant_assessments"],
+        "properties": {
+          "fixture_id": {"type": "string", "minLength": 1},
+          "fixture_class": {"enum": ["positive", "negative-near-boundary", "indeterminate", "overlap"]},
+          "occurrence": {"type": "string", "minLength": 1},
+          "observed_indicators": {"$ref": "#/$defs/ids"},
+          "observed_exclusions": {"$ref": "#/$defs/ids"},
+          "property_findings": {"$ref": "#/$defs/property_findings"},
+          "claimant_assessments": {
+            "type": "array", "minItems": 1,
+            "items": {
+              "type": "object", "additionalProperties": false,
+              "required": ["claimant_id", "activation_contract_id", "activation_contract_version", "evaluator_id", "evaluator_version", "result", "property_findings", "observed_indicators", "observed_exclusions"],
+              "properties": {
+                "claimant_id": {"type": "string", "minLength": 1},
+                "activation_contract_id": {"type": "string", "minLength": 1},
+                "activation_contract_version": {"type": "string", "minLength": 1},
+                "evaluator_id": {"type": "string", "minLength": 1},
+                "evaluator_version": {"type": "string", "minLength": 1},
+                "result": {"enum": ["applicable", "inapplicable", "indeterminate"]},
+                "property_findings": {"$ref": "#/$defs/property_findings"},
+                "observed_indicators": {"$ref": "#/$defs/ids"},
+                "observed_exclusions": {"$ref": "#/$defs/ids"}
+              }
+            }
+          },
+          "conflict": {
+            "type": "object", "additionalProperties": false,
+            "required": ["conflict_id", "claimant_contracts", "disposition", "conflict_unresolved", "authorization_rule_id"],
+            "properties": {
+              "conflict_id": {"type": "string", "minLength": 1},
+              "claimant_contracts": {"type": "array", "minItems": 2, "uniqueItems": true, "items": {"type": "string", "minLength": 1}},
+              "disposition": {"enum": ["provisional_multi_claimant", "hold", "defer"]},
+              "conflict_unresolved": {"const": true},
+              "authorization_rule_id": {"type": "string", "minLength": 1}
+            }
+          }
+        }
+      }
+    }
+  },
+  "$defs": {
+    "ids": {"type": "array", "uniqueItems": true, "items": {"type": "string", "minLength": 1}},
+    "property_findings": {
+      "type": "object", "additionalProperties": false,
+      "required": ["satisfied", "absent", "indeterminate"],
+      "properties": {
+        "satisfied": {"$ref": "#/$defs/ids"},
+        "absent": {"$ref": "#/$defs/ids"},
+        "indeterminate": {"$ref": "#/$defs/ids"}
+      }
+    }
+  }
+}

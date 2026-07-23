@@ -1,13 +1,13 @@
 {
   "pdf": "orthemma-ortheme-systems-draft.pdf",
-  "pdf_sha256": "22d5efc0884badd5ddbf289ef098f9c9ad1d77b7bdad5fbe55887d4a302f0210",
-  "page_count": 32,
+  "pdf_sha256": "126df362ddbde3aa49f237dc32ee6b567e3dc2d41c3718cba1e6b4da326925b8",
+  "page_count": 33,
   "sources": {
-    "manuscript/orthemma-ortheme-systems-revised-draft.md": "4f573ad95bdbe33544ce1c7a1ffa248dbb31ce9cdf4278658ef50fd54d5edb1a"
+    "manuscript/orthemma-ortheme-systems-revised-draft.md": "1c295b3c4dfa04c3e4d339061e23c37bf4237c902cf17b4393cbd0c730a4b364"
   },
-  "source_commit": "d3da5bbfced04831940846bd91802b0faf15c600",
+  "source_commit": "9deda9c908e40bbf3b3ea5604bf5c3a6683d8afd",
   "artifact_commit": "the git commit that introduces/updates this artifact (two-stage provenance; see `git log -- artifacts/`)",
-  "source_date_epoch": 1784599672,
+  "source_date_epoch": 1784772365,
   "build_command": "python scripts/build_pdfs.py",
   "tools": {
     "typst": "0.15.0",

@@ -77,9 +77,9 @@ authored:
     pdfs: reproducibly built and visually inspected draft artifacts
     legal_publication: open on license, identity, peer review, and external submission
 derived:
-  source_tree_digest: 060adf7f4f28a3a8e052478b288511795bd0ca5db68992f62d2d50c09e14e03e
+  source_tree_digest: ab6e0756cfe26446d5c04c134ed8aa52b6b8198c841d46f7998607b00d480026
   source_tree_digest_policy: docs/project-state-inputs.yaml
-  tracked_files: 578
+  tracked_files: 659
   decision_ids:
   - '0001'
   - '0002'
@@ -114,25 +114,48 @@ derived:
   - '0031'
   - '0032'
   - '0033'
-  decision_count: 33
+  - '0034'
+  - '0035'
+  - '0036'
+  decision_count: 36
   schemas:
+  - activation-contract-fixtures.schema.json
+  - activation-contract.schema.json
   - analysis.schema.json
+  - candidate-overlay.schema.json
+  - candidate-topology.schema.json
   - claim-ledger.schema.json
+  - collective-somnus-transclusion-profile.schema.json
   - handoff.schema.json
+  - hermes-writeback-adoption-profile.schema.json
+  - inter-somnic-relation.schema.json
+  - llm-mediated-orthing-witness.schema.json
+  - meta-orthability-assessment.schema.json
   - metaortheme.schema.json
   - metaorthemma.schema.json
   - orthemma.schema.json
+  - orthing-candidate-ledger.schema.json
   - orthing-episode.schema.json
+  - orthing-event.schema.json
   - perturbation-spec.schema.json
   - reliability-spec.schema.json
+  - residual-recurrence-report.schema.json
+  - somnic-assessment.schema.json
+  - somnic-episode.schema.json
+  - somnus-candidate-inventory.schema.json
+  - somnus-claim-status.schema.json
+  - somnus-history-checkpoints.schema.json
+  - somnus-record-fixtures.schema.json
+  - somnus-run.schema.json
   - verdict-record.schema.json
-  schema_count: 10
+  schema_count: 29
   example_json_count: 9
   example_markdown_count: 2
   validator_scripts:
   - audit_terminology_matching.py
   - derive_reqpath.py
   - validate_argument_map.py
+  - validate_candidate_provenance.py
   - validate_candidate_state.py
   - validate_claim_reasoning_paths.py
   - validate_claim_sources.py
@@ -164,17 +187,20 @@ derived:
   - validate_pdf_math.py
   - validate_public_readiness.py
   - validate_quran_loci.py
+  - validate_r7e_llm_witness.py
   - validate_reason_fixtures.py
   - validate_recursive_mutations.py
   - validate_repo.py
   - validate_review_state.py
   - validate_schemas.py
+  - validate_semantic_operator_contract.py
+  - validate_somnic_orthing.py
   - validate_source_status.py
   - validate_sourcing_state.py
   - validate_state_convergence.py
   - validate_type_token_semantics.py
   - validate_verdict_semantics.py
-  validator_count: 44
+  validator_count: 48
   fixture_counts:
     verdict: 7
     reason: 8
@@ -185,37 +211,37 @@ derived:
     invalid_records: 48
   pdfs:
     dynamic-orthing-noetic-learning-orthability-draft.pdf:
-      sha256: d8adb5bc6e6b08ef1516d1f2ece84f85ac4008ca1918935566075db89b12f994
-      pages: 5
-      source_commit: b3a20231e274ab9aec6b3e4383507008e514d0a6
+      sha256: 4d0c888e853d434a3d2eb90775e3cd746f3d70b16ad2523fdb3d07d6494ee8bd
+      pages: 6
+      source_commit: 9deda9c908e40bbf3b3ea5604bf5c3a6683d8afd
     notation-gallery.pdf:
-      sha256: 479608cdf1b8cb84a16a58be8d3ab37882359fe1855cd83c98b0fa37a87264fc
+      sha256: af6aad99edd3661cbdf0baf996de297924e9dd9e9484c8843ff5461f96887a04
       pages: 3
-      source_commit: b6223964dfea6f3f91b757b6d1a6c91b4b712a8f
+      source_commit: 9deda9c908e40bbf3b3ea5604bf5c3a6683d8afd
     orthability-divine-speech-athari-draft.pdf:
-      sha256: 4bb0a1b24baf84395ea4b519b7497a9063704e1164142988d982307941c3f62f
+      sha256: 2edb6f0bf42787abc9909b68b84a4d8c5dd6611dca13abdaec9a067e18bf5772
       pages: 8
-      source_commit: daaf87b302a942b77ed98dc89dcf88754ab41614
+      source_commit: 9deda9c908e40bbf3b3ea5604bf5c3a6683d8afd
     orthability-ground-of-intelligibility-draft.pdf:
-      sha256: 29f1f8fca1bb6e8602d4e18422ee070d60df54915a5e675ea94740f4024d9f5e
+      sha256: 8a428ce03a92834df2ba383ab6417565a227da6b5e7acb003bd08a3e6204f945
       pages: 11
-      source_commit: daaf87b302a942b77ed98dc89dcf88754ab41614
+      source_commit: 9deda9c908e40bbf3b3ea5604bf5c3a6683d8afd
     orthemic-core-reference-draft.pdf:
-      sha256: 33f71dd67ed1a71b06c0ace88daa85bc1d3453cacd310b91bcd9a140df6327f7
+      sha256: 346568795799e4d1b8f53ed4c44c4dd4720d3a71cf7187c850a78c437bcb4fdb
       pages: 20
-      source_commit: d3da5bbfced04831940846bd91802b0faf15c600
+      source_commit: 9deda9c908e40bbf3b3ea5604bf5c3a6683d8afd
     orthemma-ortheme-systems-draft.pdf:
-      sha256: 22d5efc0884badd5ddbf289ef098f9c9ad1d77b7bdad5fbe55887d4a302f0210
-      pages: 32
-      source_commit: d3da5bbfced04831940846bd91802b0faf15c600
+      sha256: 126df362ddbde3aa49f237dc32ee6b567e3dc2d41c3718cba1e6b4da326925b8
+      pages: 33
+      source_commit: 9deda9c908e40bbf3b3ea5604bf5c3a6683d8afd
   terminology_freeze_hashes:
     pilot0_v1: 988a6522498df73ad1c7b0f73961a054ff20862d50fff6d644d0274877412772
     pilot0_v2: e5e65b2f1b38d5767d79103c57afee76a02e09e9fec2fd150a3a680b0fe19c3d
   source_status_summary:
-    SECONDARY_VERIFIED: 9
+    SECONDARY_VERIFIED: 8
     COMPILATION_MEDIATED: 2
     SECONDARY_RECONSTRUCTION: 2
-    PRIMARY_TEXT_EXACT: 2
+    PRIMARY_TEXT_EXACT: 3
     PRIMARY_WORK_THEME: 1
     PRIMARY_LOCUS_EDITION_DEPENDENT: 2
     ORTHEMOLOGICAL_EXTENSION: 1

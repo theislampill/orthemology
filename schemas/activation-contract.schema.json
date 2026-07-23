@@ -1,0 +1,39 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "$id": "orthemology/activation-contract.schema.json",
+  "title": "Versioned claimant activation contract",
+  "type": "object",
+  "additionalProperties": false,
+  "required": ["contract_id", "contract_version", "claimant_id", "claimant_version", "required_properties", "positive_indicators", "exclusion_indicators", "boundary_counterexamples", "tolerated_ambiguity", "fallback_claimants", "no_claim_allowed", "decision_policy", "indeterminate_policy", "fixture_suite", "effective", "authorship", "status", "fixture_outcomes"],
+  "properties": {
+    "contract_id": {"type": "string", "minLength": 1},
+    "contract_version": {"type": "string", "minLength": 1},
+    "claimant_id": {"type": "string", "minLength": 1},
+    "claimant_version": {"type": "string", "minLength": 1},
+    "required_properties": {"type": "array", "minItems": 1, "uniqueItems": true, "items": {"type": "string", "minLength": 1}},
+    "positive_indicators": {"type": "array", "minItems": 1, "uniqueItems": true, "items": {"type": "string", "minLength": 1}},
+    "exclusion_indicators": {"type": "array", "minItems": 1, "uniqueItems": true, "items": {"type": "string", "minLength": 1}},
+    "boundary_counterexamples": {"type": "array", "minItems": 1, "uniqueItems": true, "items": {"type": "string", "minLength": 1}},
+    "tolerated_ambiguity": {"type": "string", "minLength": 1},
+    "fallback_claimants": {"type": "array", "minItems": 1, "uniqueItems": true, "items": {"type": "string", "minLength": 1}},
+    "no_claim_allowed": {"const": true},
+    "decision_policy": {"type": "string", "minLength": 1},
+    "indeterminate_policy": {"type": "string", "minLength": 1},
+    "fixture_suite": {"type": "string", "minLength": 1},
+    "effective": {
+      "type": "object", "additionalProperties": false,
+      "required": ["from_revision"],
+      "properties": {"from_revision": {"type": "string", "minLength": 1}, "through_revision": {"type": ["string", "null"], "minLength": 1}}
+    },
+    "supersedes": {"type": ["string", "null"], "minLength": 1},
+    "superseded_by": {"type": ["string", "null"], "minLength": 1},
+    "authorship": {
+      "oneOf": [
+        {"type": "object", "additionalProperties": false, "required": ["mode", "provenance_record_id"], "properties": {"mode": {"const": "bootstrap_provenance"}, "provenance_record_id": {"type": "string", "minLength": 1}}},
+        {"type": "object", "additionalProperties": false, "required": ["mode", "orthing_id"], "properties": {"mode": {"const": "normal"}, "orthing_id": {"type": "string", "minLength": 1}}}
+      ]
+    },
+    "status": {"enum": ["draft", "accepted", "retired"]},
+    "fixture_outcomes": {"type": "array", "minItems": 4, "uniqueItems": true, "items": {"type": "string", "minLength": 1}}
+  }
+}

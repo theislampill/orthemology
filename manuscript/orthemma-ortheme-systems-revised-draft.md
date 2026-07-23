@@ -553,6 +553,29 @@ Three separations, stated once: the **episode is not its output** (episodes with
 policy** (the policy is repeatable and undated; reliability claims attach to the policy and its governing rules, correctness claims to the episode); a **placement inside an episode
 is not the episode** (the convenient one-placement notation `e ⊨_μ (m : ô)` is derived, not definitional).
 
+### 8.2.1 Waking and somnic orthing
+
+A **waking orthing** takes up an occurrence under the analysis, evidence, governing configuration, claimant contracts, evaluator versions, and selector versions then in force. A later episode may reify that preserved orthing as its orthemma. **Meta-orthability** is the later episode's applicability and record-sufficiency gate; **somnic orthing** is the later placement of the prior orthing, pathway, residual, governing artifact, or relation. Thus: **waking orths experience; Somnus orths the available orthings of experience.** The earlier event history remains append-only: a later assessment may reference or supersede another assessment, but it cannot rewrite the target episode or insert later-discovered evidence into its historical evidence state.
+
+The runtime-neutral contract distinguishes session, episode, occurrence, claim attempt, claimant-level orthability assessment, orthing, somnic assessment, and proposal identities; a conversational turn supplies none of these equalities. Privacy and source limits precede minimal occurrence capture, while versioned activation contracts gate claiming after capture. The record separately identifies evidence observed at episode time, used then, indexed but unused then, and discovered later. A somnic run selects newly unassessed or materially reopened anchors, queries an eligible historical corpus, and records the comparators actually used; a closed assessment is not recursively requeued without a material delta.
+
+<!-- somnus-claim-status-projection:start -->
+```yaml
+claim_status_ref: docs/decisions/0035-somnic-orthing-and-activation-contracts.md#somnus-claim-status
+empirical_validation: not-established
+performance: not-established
+learning: not-established
+generalization: not-established
+internal_ontology: not-established
+terminology_utility: not-established
+terminology_adoption: not-established
+runtime: not-implemented
+collective_execution: not-implemented
+```
+<!-- somnus-claim-status-projection:end -->
+
+The bounded v0 operation is controlled residual-recurrence assessment. Fingerprint equality establishes only a structural recurrence candidate; support resolves through typed episode, session, orthing, actor, source-family, input-family, and occurrence-time records. A threshold requires distinct orthings and distinct episodes and is only a review trigger; the opportunity denominator is backed by explicit opportunity records, while independence uses a fixed declared policy. Suspected locus remains distinct from causal diagnosis or intervention. Assessment, intervention disposition, proposal, authorization, application, and later outcome evaluation remain separate. The schemas and fixtures under `schemas/` and `examples/somnus/` are offline conformance artifacts, not a live ledger, scheduler, analyzer, writeback engine, collective network, or learning result (Decision 0035).
+
 ### 8.3 The verdict vector
 
 The verdicts diagnose distinct dimensions and are not identified with one another; they are NOT assumed pairwise logically independent — every definitional implication is declared explicitly, and the only one these definitions introduce is the claim-wise `V2b-T_q → V1_q` (full implication table: core formalization §4.1; Decision 0003, superseding the earlier "none entails another"). Verdict labels follow the normative registry (`docs/verdict-registry.yaml`, Decision 0004): semantic IDs — `RESULT_CORRECT`, `EVIDENCE_SUPPORT`, `PROCEDURE_RELIABLE`, `TOKEN_TRUTH_LINKED`, `EVIDENCE_CURRENT`, `GOV_CONFIG_ADEQUATE`, `GOV_POLICY_ADEQUATE`, `GOV_TOKEN_ADEQUATE`, `EXECUTION_FAITHFUL`, `EX_ANTE_JUSTIFIED`, `ROUTE_ADMISSIBLE`, `ROUTE_QUALITY`, `CLOSURE_TRUTHFUL`, `ROBUST_NEIGHBORHOOD` — are authoritative in machine-readable records; the `V…` display aliases below are the prose forms. Pathway adequacy conjoins over the RESULT-FREE governed core `CorePath = {V2a, V2b-P, V2c, V3a, V3b, V3c, V3d, V3e, V4a, V5, V6}` — V1 (result), V2b-T (factive), and route near-optimality are excluded. The required set `ReqPath(e)` is DERIVED from the declared analysis, episode shape, risk class, claims, and governance (never a discretionary list; "not tested" is never "not applicable"; every exclusion carries a recorded reason), and each verdict carries a status in {pass, fail, undetermined, not-applicable}: `PathwayAdequate(e)` iff every required verdict passes; `PathwayDefective(e)` iff one fails; `PathwayUndetermined(e)` when none fails but something required is unevaluated — a missing assessment is never silently a pass. (R3 honesty note: the repository ships the derivation as a machine-readable governance rule table with a per-verdict trace and an omission-attack fixture — `docs/governance-requirements.yaml`, `scripts/derive_reqpath.py` — while `RequiredBy` *in general* remains a governance-supplied parameterized interface, an acknowledged open parameter rather than a closed universal calculus; core formalization §4.1.)
@@ -807,8 +830,9 @@ integration pays for itself is Section 13's question, not this section's claim.
 A neighbouring literature models cognition with sequential latent-variable machinery — hidden Markov models, clone-structured graphs, recurrent
 networks — in which ambiguous immediate observations are disambiguated by sequence-sensitive inference over model-internal latent states
 (George et al. 2021; Vasudeva Raju et al. 2024; Sun et al. 2025). One reported finding is structurally relevant here: in the cited study several
-compared models reach the same endpoint while only one of the compared models matched the reported longitudinal trajectory, and high task
-performance is reported to occur without the global representation geometry that study measured. The bounded claim this paper draws is therefore
+compared model settings satisfy a declared similar-final-representational-structure criterion while only CSCG consistently matched the reported
+decorrelation order among the tested models under the reported evaluation, and high task performance is reported to occur without the global
+representation geometry that study measured. The bounded claim this paper draws is therefore
 about *underdetermination*: **final performance and final representation do not by themselves determine the learning trajectory or the mechanism**
 — which is the same separation of result from pathway that Sections 8 and 13 make operational.
 

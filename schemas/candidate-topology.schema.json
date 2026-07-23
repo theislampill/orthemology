@@ -1,0 +1,235 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "$id": "orthemology/candidate-topology.schema.json",
+  "title": "Frozen candidate pull-request topology observation",
+  "type": "object",
+  "required": [
+    "schema",
+    "observed_at_utc",
+    "observation_source",
+    "review_provenance",
+    "timeless_state",
+    "merged_base",
+    "pull_requests",
+    "merge_order",
+    "candidate_documents",
+    "candidate_pdfs",
+    "status_claims"
+  ],
+  "properties": {
+    "schema": {"const": "orthemology-candidate-topology-v1"},
+    "observed_at_utc": {"type": "string", "format": "date-time"},
+    "observation_source": {
+      "const": "Frozen from docs/project-closure/r7e-sol/AUTONOMOUS-R7E-SOL-STATE.json after the verified read-only GitHub PR observation and local Git object comparison."
+    },
+    "review_provenance": {
+      "const": {
+        "layer": "independent-review",
+        "model": "gpt-5.6-sol",
+        "statement": "Controller-confirmed Sol review provenance; separate from the historical candidate implementation provenance."
+      }
+    },
+    "timeless_state": {"const": false},
+    "merged_base": {"$ref": "#/$defs/merged_base"},
+    "pull_requests": {
+      "type": "array",
+      "minItems": 5,
+      "maxItems": 5,
+      "items": {"$ref": "#/$defs/pull_request"}
+    },
+    "merge_order": {
+      "type": "array",
+      "minItems": 5,
+      "maxItems": 5,
+      "items": {"type": "integer"}
+    },
+    "candidate_documents": {
+      "const": {
+        "applications": [
+          "applications/daee-epistemics/",
+          "applications/latent-state-orthing/",
+          "applications/agentic-runtime/"
+        ],
+        "companions": [
+          "companion/dynamic-orthing-noetic-learning-and-orthability.md"
+        ],
+        "architecture": [
+          "docs/architecture/ORTHEMOLOGY-LAYER-MAP.md",
+          "docs/architecture/ORTHEMOLOGY-LAYER-MAP.yaml"
+        ],
+        "closure": [
+          "docs/project-closure/r7/",
+          "docs/project-closure/r7b/",
+          "docs/project-closure/r7c/",
+          "docs/project-closure/r7d/",
+          "docs/project-closure/r7e/",
+          "docs/project-closure/r7e-sol/"
+        ]
+      }
+    },
+    "candidate_pdfs": {
+      "const": [
+        "artifacts/notation-gallery.pdf",
+        "artifacts/dynamic-orthing-noetic-learning-orthability-draft.pdf"
+      ]
+    },
+    "status_claims": {"$ref": "#/$defs/status_claims"}
+  },
+  "$defs": {
+    "sha": {"type": "string", "pattern": "^[0-9a-f]{40}$"},
+    "decision_id": {"type": "string", "pattern": "^[0-9]{4}$"},
+    "merged_base": {
+      "type": "object",
+      "required": ["ref", "sha", "revision", "merged_decisions", "protection"],
+      "properties": {
+        "ref": {"const": "main"},
+        "sha": {"$ref": "#/$defs/sha"},
+        "revision": {"type": "string", "minLength": 1},
+        "merged_decisions": {"type": "string", "minLength": 1},
+        "protection": {"type": "string", "minLength": 1}
+      },
+      "additionalProperties": false
+    },
+    "provenance": {
+      "type": "object",
+      "required": ["layer", "model", "statement"],
+      "properties": {
+        "layer": {"type": "string", "minLength": 1},
+        "model": {"type": "string", "minLength": 1},
+        "statement": {"type": "string", "minLength": 1}
+      },
+      "additionalProperties": false
+    },
+    "pull_request": {
+      "type": "object",
+      "required": [
+        "pr",
+        "revision",
+        "base_branch",
+        "base_head_at_observation",
+        "head_branch",
+        "head_at_observation",
+        "state",
+        "draft",
+        "mergeable_at_observation",
+        "checks_at_observation",
+        "candidate_decisions",
+        "provenance"
+      ],
+      "properties": {
+        "pr": {"type": "integer"},
+        "revision": {"type": "string", "minLength": 1},
+        "base_branch": {"type": "string", "minLength": 1},
+        "base_head_at_observation": {"$ref": "#/$defs/sha"},
+        "head_branch": {"type": "string", "minLength": 1},
+        "head_at_observation": {"$ref": "#/$defs/sha"},
+        "state": {"type": "string", "minLength": 1},
+        "draft": {"type": "boolean"},
+        "mergeable_at_observation": {"type": "string", "minLength": 1},
+        "checks_at_observation": {"type": "string", "minLength": 1},
+        "candidate_decisions": {
+          "type": "array",
+          "items": {"$ref": "#/$defs/decision_id"},
+          "uniqueItems": true
+        },
+        "provenance": {"$ref": "#/$defs/provenance"}
+      },
+      "allOf": [
+        {
+          "if": {"properties": {"pr": {"const": 8}}, "required": ["pr"]},
+          "then": {
+            "properties": {
+              "revision": {"const": "R7"},
+              "provenance": {
+                "properties": {
+                  "layer": {"const": "owner-observed-model-substitution"},
+                  "model": {"const": "Claude Opus 4.8"}
+                }
+              }
+            }
+          }
+        },
+        {
+          "if": {"properties": {"pr": {"const": 9}}, "required": ["pr"]},
+          "then": {
+            "properties": {
+              "revision": {"const": "R7B"},
+              "provenance": {
+                "properties": {
+                  "layer": {"const": "surfaced-model-attestation"},
+                  "model": {"const": "Claude Opus 4.8"}
+                }
+              }
+            }
+          }
+        },
+        {
+          "if": {"properties": {"pr": {"const": 10}}, "required": ["pr"]},
+          "then": {
+            "properties": {
+              "revision": {"const": "R7C"},
+              "provenance": {
+                "properties": {
+                  "layer": {"const": "surfaced-model-attestation"},
+                  "model": {"const": "Claude Opus 4.8"}
+                }
+              }
+            }
+          }
+        },
+        {
+          "if": {"properties": {"pr": {"const": 11}}, "required": ["pr"]},
+          "then": {
+            "properties": {
+              "revision": {"const": "R7D"},
+              "provenance": {
+                "properties": {
+                  "layer": {"const": "surfaced-model-attestation"},
+                  "model": {"const": "Claude Opus 4.8"}
+                }
+              }
+            }
+          }
+        },
+        {
+          "if": {"properties": {"pr": {"const": 12}}, "required": ["pr"]},
+          "then": {
+            "properties": {
+              "revision": {"const": "R7E"},
+              "provenance": {
+                "properties": {
+                  "layer": {"const": "surfaced-model-attestation"},
+                  "model": {"const": "Claude Opus 4.8"}
+                }
+              }
+            }
+          }
+        }
+      ],
+      "additionalProperties": false
+    },
+    "status_claims": {
+      "type": "object",
+      "required": ["candidate_status", "merged", "independent_signoff", "ready_for_merge", "evidence", "next_action"],
+      "properties": {
+        "candidate_status": {"const": "proposed-candidate"},
+        "merged": {"type": "boolean"},
+        "independent_signoff": {"type": "boolean"},
+        "ready_for_merge": {"type": "boolean"},
+        "evidence": {
+          "type": "object",
+          "required": ["merged", "independent_signoff", "ready_for_merge"],
+          "properties": {
+            "merged": {"type": "array", "items": {"type": "string", "minLength": 1}},
+            "independent_signoff": {"type": "array", "items": {"type": "string", "minLength": 1}},
+            "ready_for_merge": {"type": "array", "items": {"type": "string", "minLength": 1}}
+          },
+          "additionalProperties": false
+        },
+        "next_action": {"type": "string", "minLength": 1}
+      },
+      "additionalProperties": false
+    }
+  },
+  "additionalProperties": false
+}

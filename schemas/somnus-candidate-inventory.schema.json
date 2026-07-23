@@ -1,0 +1,86 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "$id": "orthemology/somnus-candidate-inventory.schema.json",
+  "title": "Outline-only Somnus candidate inventory",
+  "type": "object",
+  "additionalProperties": false,
+  "required": ["schema", "status", "execution", "runtime owner", "claim_status", "candidates"],
+  "properties": {
+    "schema": {"const": "orthemology-somnus-candidate-inventory-v1"},
+    "status": {"const": "outline-only"},
+    "execution": {"const": "not implemented"},
+    "runtime owner": {"const": "external/downstream"},
+    "claim_status": {"type": "object"},
+    "candidates": {
+      "type": "array", "minItems": 1,
+      "items": {
+        "type": "object", "additionalProperties": false,
+        "required": ["candidate_id", "semantic_contract_version", "status", "execution", "layer", "inputs", "outputs", "dependencies", "event_emissions", "authority_limit", "authority_boundary", "residual_behavior", "downstream_owner", "non_claims", "non_claim_boundaries"],
+        "properties": {
+          "candidate_id": {"type": "string", "minLength": 1},
+          "semantic_contract_version": {"const": "1.0.0"},
+          "status": {"const": "outline-only"},
+          "execution": {"const": "not implemented"},
+          "layer": {"type": "string", "minLength": 1},
+          "inputs": {"$ref": "#/$defs/nonempty_strings"},
+          "outputs": {"$ref": "#/$defs/nonempty_strings"},
+          "dependencies": {"$ref": "#/$defs/nonempty_strings"},
+          "event_emissions": {
+            "type": "array", "minItems": 1, "uniqueItems": true,
+            "items": {"enum": ["occurrence_apprehended", "orthability_assessed", "candidate_set_recorded", "route_selected", "placement_committed", "residual_recorded", "orthing_closed", "orthing_abandoned", "orthing_reopened", "somnus_assessment_emitted", "proposal_emitted", "none"]}
+          },
+          "authority_limit": {
+            "type": "object", "additionalProperties": false,
+            "required": ["scope", "operator_request_authorizes_mutation", "prohibited_operations"],
+            "properties": {
+              "scope": {"const": "bounded record or proposal production only"},
+              "operator_request_authorizes_mutation": {"const": false},
+              "prohibited_operations": {
+                "type": "array", "minItems": 5, "maxItems": 5, "uniqueItems": true,
+                "items": {"enum": ["schedule_runtime", "execute_mutation", "promote_governance", "close_governance_finding", "mutate_governance"]}
+              }
+            }
+          },
+          "authority_boundary": {
+            "type": "object", "additionalProperties": false,
+            "required": ["scope", "automatic_authorization", "automatic_execution", "automatic_writeback", "historical_rewrite"],
+            "properties": {
+              "scope": {"const": "bounded record or proposal production only"},
+              "automatic_authorization": {"const": "prohibited"},
+              "automatic_execution": {"const": "prohibited"},
+              "automatic_writeback": {"const": "prohibited"},
+              "historical_rewrite": {"const": "prohibited"}
+            }
+          },
+          "residual_behavior": {"enum": ["retain inapplicable and indeterminate attempts", "append interruption and incomplete-record residuals", "preserve raw text and governed disposition", "preserve dependence and counterexample uncertainty", "retain conflict and confidence effect", "no-change and held residuals remain valid outcomes", "rejection and failure do not rewrite assessment", "failed application preserves histories", "closed outputs remain outside the frontier absent material delta", "disclose redactions and non-claims", "hold incompatible or insufficient packets", "retain source/local version distinction", "preserve unresolved conflict and scope limits", "preserve plural closure", "record cycles, redactions, and incompatible versions"]},
+          "downstream_owner": {
+            "type": "object", "additionalProperties": false,
+            "required": ["ownership_scope", "owner_role", "local_runtime_ownership"],
+            "properties": {
+              "ownership_scope": {"const": "external/downstream"},
+              "owner_role": {"enum": ["agent-host routing owner", "durable-ledger owner", "runtime capture owner", "somnus operation owner after successor trigger", "conflict-detection owner", "intervention-governance owner", "proposal owner", "writeback runtime owner", "host/orchestrator owner", "transport owner", "import owner", "normative-adoption owner", "collective-assessment owner", "council owner", "transclusion-ledger owner", "external change-proposal custodian", "downstream guarded actuation service owner", "external bounded-record custody operator"]},
+              "local_runtime_ownership": {"const": "prohibited"}
+            }
+          },
+          "non_claims": {"$ref": "#/$defs/non_claim_boundaries"},
+          "non_claim_boundaries": {
+            "$ref": "#/$defs/non_claim_boundaries"
+          }
+        }
+      }
+    }
+  },
+  "$defs": {
+    "nonempty_strings": {"type": "array", "minItems": 1, "uniqueItems": true, "items": {"type": "string", "minLength": 1}},
+    "non_claim_boundaries": {
+      "type": "object", "additionalProperties": false,
+      "required": ["executable_skill", "deployed_runtime", "correctness", "empirical_utility"],
+      "properties": {
+        "executable_skill": {"const": "not-implemented"},
+        "deployed_runtime": {"const": "not-implemented"},
+        "correctness": {"const": "not-established"},
+        "empirical_utility": {"const": "not-established"}
+      }
+    }
+  }
+}

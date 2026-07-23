@@ -1,0 +1,172 @@
+{
+  "$schema": "http://json-schema.org/draft-07/schema#",
+  "$id": "orthemology-tawatur-warrant-v2",
+  "title": "Creed-internal qualitative tawatur warrant",
+  "type": "object",
+  "additionalProperties": false,
+  "required": ["schema", "assessments"],
+  "properties": {
+    "schema": {"const": "orthemology-tawatur-warrant-v2"},
+    "assessments": {
+      "type": "array",
+      "minItems": 1,
+      "items": {"$ref": "#/definitions/assessment"}
+    }
+  },
+  "definitions": {
+    "nonemptyString": {"type": "string", "minLength": 1},
+    "nonemptyStrings": {
+      "type": "array",
+      "minItems": 1,
+      "uniqueItems": true,
+      "items": {"$ref": "#/definitions/nonemptyString"}
+    },
+    "claimRole": {
+      "enum": [
+        "primary-text-verified",
+        "secondary-reconstruction",
+        "cross-source-synthesis",
+        "orthemological-extension",
+        "computational-analogy",
+        "creed-internal-inference"
+      ]
+    },
+    "assessment": {
+      "type": "object",
+      "additionalProperties": false,
+      "required": [
+        "id", "school", "proposition", "claim_role", "source_status_refs",
+        "source_units", "origin_analysis", "transmitter_quality",
+        "circumstantial_indicants", "content_coherence", "acquisition_routes",
+        "subject_assessments", "non_claims"
+      ],
+      "properties": {
+        "id": {"$ref": "#/definitions/nonemptyString"},
+        "school": {"$ref": "#/definitions/nonemptyString"},
+        "proposition": {
+          "type": "object",
+          "additionalProperties": false,
+          "required": ["id", "text", "objective_truth_status"],
+          "properties": {
+            "id": {"$ref": "#/definitions/nonemptyString"},
+            "text": {"$ref": "#/definitions/nonemptyString"},
+            "objective_truth_status": {
+              "enum": ["true", "false", "underdetermined", "not-adjudicated"]
+            }
+          }
+        },
+        "claim_role": {"$ref": "#/definitions/claimRole"},
+        "source_status_refs": {"$ref": "#/definitions/nonemptyStrings"},
+        "source_units": {
+          "type": "array",
+          "minItems": 1,
+          "items": {
+            "type": "object",
+            "additionalProperties": false,
+            "required": ["unit_id", "origin_id", "transmission_paths", "unit_status"],
+            "properties": {
+              "unit_id": {"$ref": "#/definitions/nonemptyString"},
+              "origin_id": {"$ref": "#/definitions/nonemptyString"},
+              "transmission_paths": {"$ref": "#/definitions/nonemptyStrings"},
+              "unit_status": {
+                "enum": ["originating-unit", "derivative-copy", "status-underdetermined"]
+              }
+            }
+          }
+        },
+        "origin_analysis": {
+          "type": "object",
+          "additionalProperties": false,
+          "required": [
+            "common_cause_status", "copying_status", "path_independence",
+            "non_collusion", "mutation_lineage", "evidence_refs"
+          ],
+          "properties": {
+            "common_cause_status": {"enum": ["detected", "not-detected", "underdetermined"]},
+            "copying_status": {"enum": ["detected", "not-detected", "underdetermined"]},
+            "path_independence": {"enum": ["supported", "rejected", "underdetermined"]},
+            "non_collusion": {"enum": ["supported", "rejected", "underdetermined"]},
+            "mutation_lineage": {
+              "enum": ["single-lineage-detected", "no-single-lineage-detected", "underdetermined"]
+            },
+            "evidence_refs": {"$ref": "#/definitions/nonemptyStrings"}
+          }
+        },
+        "transmitter_quality": {
+          "type": "array",
+          "minItems": 1,
+          "items": {
+            "type": "object",
+            "additionalProperties": false,
+            "required": ["source_unit_id", "honesty_or_trust", "domain_competence", "evidence_refs"],
+            "properties": {
+              "source_unit_id": {"$ref": "#/definitions/nonemptyString"},
+              "honesty_or_trust": {"enum": ["supported", "rejected", "underdetermined"]},
+              "domain_competence": {"enum": ["supported", "rejected", "underdetermined"]},
+              "evidence_refs": {"$ref": "#/definitions/nonemptyStrings"}
+            }
+          }
+        },
+        "circumstantial_indicants": {"$ref": "#/definitions/nonemptyStrings"},
+        "content_coherence": {
+          "type": "object",
+          "additionalProperties": false,
+          "required": ["status", "evidence_refs"],
+          "properties": {
+            "status": {"enum": ["supported", "rejected", "underdetermined"]},
+            "evidence_refs": {"$ref": "#/definitions/nonemptyStrings"}
+          }
+        },
+        "acquisition_routes": {
+          "type": "array",
+          "minItems": 1,
+          "items": {
+            "type": "object",
+            "additionalProperties": false,
+            "required": ["route_id", "source_unit_ids"],
+            "properties": {
+              "route_id": {"$ref": "#/definitions/nonemptyString"},
+              "source_unit_ids": {"$ref": "#/definitions/nonemptyStrings"}
+            }
+          }
+        },
+        "subject_assessments": {
+          "type": "array",
+          "minItems": 1,
+          "items": {
+            "type": "object",
+            "additionalProperties": false,
+            "required": [
+              "subject_id", "access_status", "route_refs", "subject_relative_conditions",
+              "assessor_id", "assessor_evidence", "defeaters", "warrant_conclusion"
+            ],
+            "properties": {
+              "subject_id": {"$ref": "#/definitions/nonemptyString"},
+              "access_status": {"enum": ["acquired", "not-acquired", "not-observed", "underdetermined"]},
+              "route_refs": {
+                "type": "array",
+                "uniqueItems": true,
+                "items": {"$ref": "#/definitions/nonemptyString"}
+              },
+              "subject_relative_conditions": {"$ref": "#/definitions/nonemptyStrings"},
+              "assessor_id": {"$ref": "#/definitions/nonemptyString"},
+              "assessor_evidence": {"$ref": "#/definitions/nonemptyStrings"},
+              "defeaters": {"$ref": "#/definitions/nonemptyStrings"},
+              "warrant_conclusion": {"enum": ["supported", "rejected", "held", "underdetermined"]}
+            },
+            "allOf": [
+              {
+                "if": {
+                  "properties": {"warrant_conclusion": {"const": "supported"}},
+                  "required": ["warrant_conclusion"]
+                },
+                "then": {"properties": {"route_refs": {"minItems": 2}}}
+              }
+            ]
+          }
+        },
+        "non_claims": {"$ref": "#/definitions/nonemptyStrings"}
+      }
+    }
+  }
+}

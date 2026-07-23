@@ -1,0 +1,131 @@
+{
+  "record": "AUTONOMOUS-R7E-SOL-STATE",
+  "label": "SOL INDEPENDENT REVIEW CANDIDATE — NO SIGNOFF OR MERGE READINESS",
+  "observed_at_utc": "2026-07-21T18:10:22Z",
+  "r7e_observation": {
+    "pr": 12,
+    "base": "e34d2cd56057766f8f656a4ff3486eb34dad607e",
+    "head_at_observation": "cbab14747835855d232448f648eefa1d4e36074e",
+    "source": "read-only GitHub PR observation plus local Git object comparison",
+    "timeless_state": false
+  },
+  "model_gate": {
+    "required": "gpt-5.6-sol",
+    "selected": "gpt-5.6-sol",
+    "evidence": "controller-confirmed-agent-model-selection",
+    "environment_variable_observation": false,
+    "note": "The controller confirmed the explicit orchestrator model selection before the first Task 1 write; no model environment variable was present."
+  },
+  "topology_at_observation": [
+    {
+      "pr": 8,
+      "base_branch": "main",
+      "base_head": "43fee0f519e2f6984fb143c1e621c83382e71ec7",
+      "head_branch": "closure/r7-noetic-application-experiment-validity",
+      "head_at_observation": "b0538601913c8234511a1f1131a58eb23a4a0dc4",
+      "state": "OPEN",
+      "draft": true,
+      "mergeable_at_observation": "MERGEABLE",
+      "checks_at_observation": "SUCCESS"
+    },
+    {
+      "pr": 9,
+      "base_branch": "closure/r7-noetic-application-experiment-validity",
+      "base_head": "b0538601913c8234511a1f1131a58eb23a4a0dc4",
+      "head_branch": "candidate/r7b-deep-noetic-latent-math",
+      "head_at_observation": "86b8bbdddf35ac1e45748279bac05e5a2d4ed85e",
+      "state": "OPEN",
+      "draft": true,
+      "mergeable_at_observation": "MERGEABLE",
+      "checks_at_observation": "SUCCESS"
+    },
+    {
+      "pr": 10,
+      "base_branch": "candidate/r7b-deep-noetic-latent-math",
+      "base_head": "86b8bbdddf35ac1e45748279bac05e5a2d4ed85e",
+      "head_branch": "candidate/r7c-full-math-multitarget-noetic-dynamics",
+      "head_at_observation": "3cce235f0e388ba78a093d43c879a2e73262938b",
+      "state": "OPEN",
+      "draft": true,
+      "mergeable_at_observation": "MERGEABLE",
+      "checks_at_observation": "SUCCESS"
+    },
+    {
+      "pr": 11,
+      "base_branch": "candidate/r7c-full-math-multitarget-noetic-dynamics",
+      "base_head": "3cce235f0e388ba78a093d43c879a2e73262938b",
+      "head_branch": "candidate/r7d-final-semantic-math-noetic-integration",
+      "head_at_observation": "e34d2cd56057766f8f656a4ff3486eb34dad607e",
+      "state": "OPEN",
+      "draft": true,
+      "mergeable_at_observation": "MERGEABLE",
+      "checks_at_observation": "SUCCESS"
+    },
+    {
+      "pr": 12,
+      "base_branch": "candidate/r7d-final-semantic-math-noetic-integration",
+      "base_head": "e34d2cd56057766f8f656a4ff3486eb34dad607e",
+      "head_branch": "candidate/r7e-orthing-supplementation",
+      "head_at_observation": "cbab14747835855d232448f648eefa1d4e36074e",
+      "state": "OPEN",
+      "draft": true,
+      "mergeable_at_observation": "MERGEABLE",
+      "checks_at_observation": "SUCCESS"
+    }
+  ],
+  "environment": {
+    "python": "3.11.9",
+    "dependency_lock": "requirements-ci.lock.txt",
+    "dependencies": {
+      "attrs": "26.1.0",
+      "jsonschema": "4.26.0",
+      "jsonschema-specifications": "2025.9.1",
+      "markdown-it-py": "4.0.0",
+      "mdurl": "0.1.2",
+      "pypdf": "6.14.2",
+      "PyYAML": "6.0.3",
+      "referencing": "0.37.0",
+      "rpds-py": "2026.6.3",
+      "typing-extensions": "4.16.0",
+      "typst": "0.15.0"
+    },
+    "io": {
+      "PYTHONUTF8": "1",
+      "PYTHONIOENCODING": "utf-8"
+    }
+  },
+  "baseline": {
+    "source": "read-only baseline before Task 1 production edits",
+    "logical_validations": 56,
+    "passing": 56,
+    "direct_passes": 53,
+    "utf8_unchanged_reruns": 3,
+    "validator_logic_failures": 0,
+    "utf8_rerun_commands": [
+      "python scripts/validate_source_status.py",
+      "python scripts/validate_notation.py",
+      "python scripts/validate_quran_loci.py"
+    ],
+    "pdf_rebuild": {
+      "artifacts": 6,
+      "byte_identical": 6,
+      "nul_or_notdef": 0,
+      "replacement_characters": 0
+    },
+    "clean_tree": {
+      "command": "git status --porcelain",
+      "porcelain": "",
+      "scope": "before the Task 1 red test"
+    }
+  },
+  "control_plane": {
+    "reproduction": "docs/project-closure/r7e-sol/R7E-SOL-READONLY-REPRODUCTION.md",
+    "finding_matrix": "docs/project-closure/r7e-sol/R7E-INDEPENDENT-FINDING-MATRIX.yaml",
+    "hunk_disposition": "docs/project-closure/r7e-sol/R7E-HUNK-DISPOSITION.md",
+    "decision": "docs/decisions/0034-r7e-sol-independent-repair-contract.md"
+  },
+  "next_action": "Task 2: generate and validate the complete candidate topology; do not merge or claim independent signoff.",
+  "independent_signoff": false,
+  "ready_for_merge": false,
+  "merged": false
+}

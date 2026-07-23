@@ -43,6 +43,54 @@ DISPLAY_RE = re.compile(r"\$\$(.+?)\$\$", re.S)
 INLINE_RE = re.compile(r"\$([^\$\n]+?)\$")
 CODE_FENCE_RE = re.compile(r"```(\w*)\n(.*?)```", re.S)
 INLINE_CODE_RE = re.compile(r"`[^`]*`")
+MACHINE_ASSIGNMENT_RE = re.compile(
+    r"(?:(?:export )?[A-Z_][A-Z0-9_]*|\$env:[A-Za-z_][A-Za-z0-9_]*)=(.*)",
+    re.S,
+)
+MATH_OR_CONTROL_IN_VALUE_RE = re.compile(
+    r"[=∈⊆⊂⟺⇔→↦∧∨≼≠≤≥∀∃⃗{}|;&<>`]"
+)
+
+
+def is_machine_assignment(span):
+    """Return whether *span* is one complete shell environment assignment.
+
+    Bare shell names use the conventional uppercase environment-name grammar;
+    PowerShell's explicit ``$env:`` namespace also permits mixed-case names.
+    The value may be one wholly quoted scalar or one whitespace-free unquoted
+    scalar, but may not contain formula or command-control syntax.
+    """
+    match = MACHINE_ASSIGNMENT_RE.fullmatch(span)
+    if not match:
+        return False
+    value = match.group(1)
+    powershell_env = span.startswith("$env:")
+    control_value = value
+    if powershell_env and value.startswith('"') and value.endswith('"'):
+        control_value = value.replace("`$", "")
+    if not value or MATH_OR_CONTROL_IN_VALUE_RE.search(control_value):
+        return False
+    if value[0] in "'\"":
+        quote = value[0]
+        structurally_complete = (
+            len(value) >= 2
+            and value[-1] == quote
+            and quote not in value[1:-1]
+            and "\n" not in value
+        )
+        if not structurally_complete or quote == "'":
+            return structurally_complete
+        interior = value[1:-1]
+        if "$" not in interior:
+            return True
+        unescaped = interior.replace("`$", "")
+        return powershell_env and "$" not in unescaped and "`" not in unescaped
+    return (
+        "$" not in value
+        and "(" not in value
+        and ")" not in value
+        and not any(ch.isspace() or ch in "'\"" for ch in value)
+    )
 
 
 def real_math_spans(text):
@@ -166,7 +214,7 @@ def main():
                 body = FENCE_STRIP.sub("", io.open(os.path.join(dp, fn), encoding="utf-8").read())
                 for m in INLINE_CODE.finditer(body):
                     span = m.group(1)
-                    if FORMULA.search(span) and span not in allow:
+                    if FORMULA.search(span) and span not in allow and not is_machine_assignment(span):
                         stray.append("%s: `%s`" % (rel, span[:40]))
     check("no un-inventoried math-formula/notdef span left in a code span (B5/probe-1)",
           not stray, "; ".join(stray[:5]))

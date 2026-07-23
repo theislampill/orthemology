@@ -7,6 +7,10 @@ schema: orthemology-osm-dynamics-definitions-v1
 # I1 (B31): representation geometry
 geometry_definition:
   symbol: "Geom_A(theta)"
+  ownership: project
+  content_kind: project-extension
+  claim_role: orthemological-extension
+  evidence_access_status: project-owned-definition
   representation_extraction: "the layer/population code extracted from model theta on a declared probe distribution"
   metric: "a declared representational-similarity metric (e.g. linear-CKA or a stated RSA distance)"
   alignment: "label/state alignment via a declared assignment before comparison"
@@ -42,25 +46,168 @@ merger_contrast:
   admission_rule: "split admitted iff the contrast exceeds epsilon_A with the interval excluding it; a single training-set delta is insufficient"
   non_claims: ["a latent split does not become an orthemic distinction by one training-set performance delta"]
 
-# I5 (B35): OSM object separation — the eleven-way distinction kept explicit
-object_map:
-  layers:
-  - world/task state
-  - concrete occurrence
-  - sensory observation
-  - biological cell response
-  - biological population representation
-  - CSCG clone
-  - model latent posterior
-  - model parameter state
-  - representation geometry
-  - inferred orthemic profile
-  - actual orthemic profile
-  non_claims:
-  - "a CSCG clone is not a biological neuron; a latent state is not an ortheme; parameter equality is not representation equivalence"
-
-# I6 (B36): bounded source claim
-source_claim:
-  bounded_statement: "among the reported models/settings, several attained selected final structures, while CSCG most closely reproduced both the reported endpoint organization and the learning trajectory"
-  citation: "10.1038/s41586-024-08548-w"
-  forbidden: ["a uniquely proven biological mechanism", "identity between clone and neuron", "identity between latent state and ortheme", "human noetic structure", "metaphysical orthability", "divine attributes"]
+# I5/I6, Task 8: exact typed object, method, comparison, custody, and claim
+# boundary contract. Source-side objects and project-side import objects remain
+# distinct; every relation is typed and non-identity.
+osm_task8_contract:
+  schema: orthemology-osm-task8-contract-v1
+  objects:
+  - {id: world_task_state, type: world-task-state, ownership: source-reported}
+  - {id: concrete_occurrence, type: concrete-occurrence, ownership: project}
+  - {id: biological_sensory_observation, type: biological-sensory-observation, ownership: source-reported}
+  - {id: model_observation_symbol, type: model-observation-symbol, ownership: source-reported}
+  - {id: biological_single_cell_response, type: biological-single-cell-response, ownership: source-reported}
+  - {id: biological_population_representation, type: biological-population-representation, ownership: source-reported}
+  - {id: cscg_clone_latent_state, type: cscg-clone-latent-state, ownership: source-reported}
+  - {id: latent_posterior, type: latent-posterior, ownership: source-reported}
+  - {id: model_parameter_state, type: model-parameter-state, ownership: source-reported}
+  - {id: model_representation_output, type: model-representation-output, ownership: source-reported}
+  - {id: derived_representation_geometry, type: derived-representation-geometry, ownership: project}
+  - {id: inferred_orthemic_profile, type: inferred-orthemic-profile, ownership: project}
+  - {id: actual_orthemic_profile, type: actual-orthemic-profile, ownership: project}
+  relations:
+  - {id: rel_world_observation, subject: world_task_state, predicate: generates, object: biological_sensory_observation, ownership: source-reported, identity: false}
+  - {id: rel_symbol_abstraction, subject: model_observation_symbol, predicate: abstracts, object: biological_sensory_observation, ownership: source-reported, identity: false}
+  - {id: rel_observation_response, subject: biological_sensory_observation, predicate: elicits-measured, object: biological_single_cell_response, ownership: source-reported, identity: false}
+  - {id: rel_population_aggregation, subject: biological_population_representation, predicate: aggregates, object: biological_single_cell_response, ownership: source-reported, identity: false}
+  - {id: rel_clone_emission, subject: cscg_clone_latent_state, predicate: deterministically-emits, object: model_observation_symbol, ownership: source-reported, identity: false}
+  - {id: rel_posterior_support, subject: latent_posterior, predicate: ranges-over, object: cscg_clone_latent_state, ownership: source-reported, identity: false}
+  - {id: rel_parameter_output, subject: model_parameter_state, predicate: generates, object: model_representation_output, ownership: source-reported, identity: false}
+  - {id: rel_output_geometry, subject: derived_representation_geometry, predicate: derived-from, object: model_representation_output, ownership: project, identity: false}
+  - {id: rel_latent_profile, subject: cscg_clone_latent_state, predicate: partially-relates-to, object: inferred_orthemic_profile, ownership: project, identity: false}
+  asserted_identities: []
+  method_roles:
+  - id: baum_welch_em
+    model_families: [cscg]
+    role: likelihood-fit
+    process_class: expectation-maximization
+    sequence: 1
+    primary_cscg_fit: true
+    phrase: Baum-Welch expectation-maximization
+    evidence_access_status: article-text
+    source_locator: "DOI 10.1038/s41586-024-08548-w; Methods: CSCG"
+  - id: viterbi_training
+    model_families: [cscg]
+    role: transition-refinement
+    process_class: viterbi-training
+    sequence: 2
+    primary_cscg_fit: false
+    phrase: Viterbi training
+    evidence_access_status: article-text
+    source_locator: "DOI 10.1038/s41586-024-08548-w; Methods: CSCG transition-matrix extraction"
+  - id: map_decode
+    model_families: [cscg]
+    role: latent-assignment-decode
+    process_class: max-product-backtrace
+    sequence: 3
+    primary_cscg_fit: false
+    phrase: MAP decode
+    evidence_access_status: pinned-official-code
+    source_locator: "sprustonlab/OSM_Paper_Figures@c1d1788b54c737efe24402e02762eee10da0d0d7; fig_4/fig_4_CSCG/chmm_actions.py:176-187"
+  - id: bptt
+    model_families: [vanilla-rnn]
+    role: gradient-computation
+    process_class: backpropagation-through-time
+    sequence: 1
+    primary_cscg_fit: false
+    phrase: backpropagation through time
+    evidence_access_status: article-text
+    source_locator: "DOI 10.1038/s41586-024-08548-w; Methods: Vanilla RNNs"
+  - id: adam
+    model_families: [vanilla-rnn, lstm, transformer]
+    role: parameter-optimizer
+    process_class: gradient-optimizer
+    sequence: 2
+    primary_cscg_fit: false
+    phrase: Adam
+    evidence_access_status: article-text
+    source_locator: "DOI 10.1038/s41586-024-08548-w; Methods: Vanilla RNNs, LSTM, Transformers"
+  - id: cross_entropy
+    model_families: [vanilla-rnn, lstm, transformer]
+    role: objective
+    process_class: cross-entropy
+    sequence: 0
+    primary_cscg_fit: false
+    phrase: cross-entropy
+    evidence_access_status: article-text
+    source_locator: "DOI 10.1038/s41586-024-08548-w; Methods: Vanilla RNNs, LSTM, Transformers"
+  - id: local_hebbian_timing
+    model_families: [hebbian-rnn]
+    role: local-timing-weight-update
+    process_class: local-hebbian
+    sequence: 1
+    primary_cscg_fit: false
+    phrase: local timing-based Hebbian update
+    evidence_access_status: article-text
+    source_locator: "DOI 10.1038/s41586-024-08548-w; Methods: Hebbian-RNN"
+  comparison:
+    endpoint:
+      criterion: similar-reported-final-representational-structure
+      exact_identity: false
+      cross_model_parameter_equality: false
+      mechanism_inferred: false
+    trajectory:
+      claim: cscg-consistently-matched-reported-decorrelation-order
+      scope: among-tested-models-under-reported-evaluation
+      universal_uniqueness: false
+      unique_biological_mechanism: false
+      further_research_required: true
+    performance:
+      high_performance_without_global_orthogonalization: true
+      nonorthogonal_controls: [relu-rnn, sigmoid-rnn, lstm, transformer]
+      all_non_cscg_failed: false
+      geometry_necessary: false
+    mechanism:
+      status: underdetermined-by-reported-endpoint-and-trajectory
+      identity_established: false
+      causal_equivalence_established: false
+      unique_biological_mechanism_established: false
+      non_claims:
+      - endpoint similarity does not identify a mechanism
+      - trajectory discrimination does not establish mechanism identity or causal equivalence
+    adaptation:
+      subject: biological-ca1-representations
+      conditions: [novel-indicator-cues, stretched-track-segments]
+      interpretations: [new-state-creation, observation-rebinding-to-existing-state]
+      model_response: future-work
+      promotes_to: []
+  source_custody:
+    doi: 10.1038/s41586-024-08548-w
+    article_loci:
+    - "Methods: CSCG"
+    - "Methods: Vanilla RNNs"
+    - "Methods: LSTM"
+    - "Methods: Transformers"
+    - "Methods: Hebbian-RNN"
+    - "Figure 4 and accompanying text"
+    - "Figure 5 and accompanying text"
+    local_access_copy:
+      sha256: 0D097CBA7BBB25A949E2BF95AF28B5A2259BD8D60B0E5FAC5A74CDF7D05AA814
+      locator_role: custody-only
+      sole_public_evidence: false
+      extraction_lines_are_journal_pagination: false
+    official_code:
+      repository: sprustonlab/OSM_Paper_Figures
+      commit: c1d1788b54c737efe24402e02762eee10da0d0d7
+      map_decode_locator: "fig_4/fig_4_CSCG/chmm_actions.py:176-187"
+      map_decode_evidence_access_status: pinned-official-code
+  claim_boundaries:
+    overall_claim_role: computational-analogy
+    content_kind: model-comparison
+    evidence_access_status: article-text-and-pinned-code
+    geometry_definition:
+      content_kind: project-extension
+      claim_role: orthemological-extension
+      evidence_access_status: project-owned-definition
+    supported_domains: []
+    biological_or_wet_lab_procedure_imported: false
+    forbidden_promotions:
+    - Orthemology
+    - candidate terminology
+    - human noetics
+    - fitrah
+    - metaphysics
+    - Necessary Being
+    - divine attributes
+    - divine Speech
+    - theology

@@ -1,0 +1,128 @@
+{
+  "$schema": "http://json-schema.org/draft-07/schema#",
+  "$id": "orthemology-daee-semantic-operator-contract-v1",
+  "type": "object",
+  "additionalProperties": false,
+  "required": ["schema", "status", "daee_pin", "type_registry", "predicate_registry", "operator_contracts", "owner_aliases", "owner_registry", "governance", "non_claims"],
+  "properties": {
+    "schema": {"const": "orthemology-daee-semantic-operator-contract-v1"},
+    "status": {"const": "current"},
+    "daee_pin": {"const": "c86b3c6673147b8802fe222373a165a37d4d24a8"},
+    "type_registry": {"type": "array", "minItems": 1, "uniqueItems": true, "items": {"type": "string", "minLength": 1}},
+    "predicate_registry": {
+      "type": "array", "minItems": 6,
+      "items": {
+        "type": "object", "additionalProperties": false,
+        "required": ["canonical_id", "normative_symbol", "computation", "factive", "requires"],
+        "properties": {
+          "canonical_id": {"type": "string", "minLength": 1},
+          "normative_symbol": {"type": "string", "minLength": 1},
+          "display_label": {"type": "string", "minLength": 1},
+          "alias_of": {"type": "string", "minLength": 1},
+          "computation": {"type": "string", "minLength": 1},
+          "factive": {"type": "boolean"},
+          "requires": {"type": "array", "items": {"type": "string"}}
+        }
+      }
+    },
+    "operator_contracts": {
+      "type": "array", "minItems": 7, "maxItems": 7,
+      "items": {"$ref": "#/$defs/operator"}
+    },
+    "owner_aliases": {
+      "type": "array",
+      "items": {
+        "type": "object", "additionalProperties": false,
+        "required": ["owner_family", "canonical_owner", "relation"],
+        "properties": {
+          "owner_family": {"type": "string"}, "canonical_owner": {"type": "string"},
+          "relation": {"const": "typed-owner-family-alias"}
+        }
+      }
+    },
+    "owner_registry": {
+      "type": "array", "minItems": 1, "uniqueItems": true,
+      "items": {
+        "type": "object", "additionalProperties": false,
+        "required": ["owner_kind", "owner_id", "source_ref"],
+        "properties": {
+          "owner_kind": {"type": "string", "minLength": 1},
+          "owner_id": {"type": "string", "minLength": 1},
+          "source_ref": {"type": "string", "minLength": 1}
+        }
+      }
+    },
+    "governance": {
+      "type": "object", "additionalProperties": false,
+      "required": ["whole_state_reread_required_before_closure", "burden_retention", "global_revision_requires_explicit_authorization", "runtime_closure_entails_human_restoration", "admissibility_entails_strict_soundness"],
+      "properties": {
+        "whole_state_reread_required_before_closure": {"const": true},
+        "burden_retention": {"const": "address-or-carry-forward-with-provenance"},
+        "global_revision_requires_explicit_authorization": {"const": true},
+        "runtime_closure_entails_human_restoration": {"const": false},
+        "admissibility_entails_strict_soundness": {"const": false}
+      }
+    },
+    "non_claims": {"type": "array", "minItems": 1, "items": {"type": "string"}}
+  },
+  "$defs": {
+    "relation": {
+      "type": "object", "additionalProperties": false,
+      "required": ["relation", "entails_result_correctness"],
+      "properties": {"relation": {"type": "string"}, "entails_result_correctness": {"const": false}}
+    },
+    "target": {
+      "type": "object", "additionalProperties": false,
+      "required": ["field_kind", "node_types"],
+      "properties": {
+        "field_kind": {"enum": ["route-set", "runtime-control-state", "typed-multi-node-field", "loop-state", "whole-runtime-state", "runtime-closure-state"]},
+        "node_types": {"type": "array", "minItems": 1, "uniqueItems": true, "items": {"type": "string"}}
+      }
+    },
+    "owner": {
+      "type": "object", "additionalProperties": false,
+      "required": ["owner_kind", "owner_id", "source_ref"],
+      "properties": {
+        "owner_kind": {"enum": ["governance-source", "catalogue-module", "owner-family-ground"]},
+        "owner_id": {"type": "string", "minLength": 1},
+        "source_ref": {"type": "string", "minLength": 1}
+      }
+    },
+    "source": {
+      "type": "object", "additionalProperties": false,
+      "required": ["source_role", "status_layer", "repository", "revision", "path", "supports"],
+      "properties": {
+        "source_role": {"enum": ["direct-daee-definition", "direct-daee-schema", "direct-daee-validator", "direct-daee-fixture", "orthemology-crosswalk", "orthemology-semantic-owner"]},
+        "status_layer": {"enum": ["direct-repository-description", "orthemological-crosswalk"]},
+        "repository": {"enum": ["daee-epistemics", "orthemology"]},
+        "revision": {"type": "string", "minLength": 1},
+        "path": {"type": "string", "minLength": 1},
+        "supports": {"type": "string", "minLength": 1}
+      },
+      "allOf": [
+        {"if": {"properties": {"source_role": {"enum": ["direct-daee-definition", "direct-daee-schema", "direct-daee-validator", "direct-daee-fixture"]}}}, "then": {"properties": {"status_layer": {"const": "direct-repository-description"}, "repository": {"const": "daee-epistemics"}, "revision": {"const": "c86b3c6673147b8802fe222373a165a37d4d24a8"}}}},
+        {"if": {"properties": {"source_role": {"enum": ["orthemology-crosswalk", "orthemology-semantic-owner"]}}}, "then": {"properties": {"status_layer": {"const": "orthemological-crosswalk"}, "repository": {"const": "orthemology"}}}}
+      ]
+    },
+    "operator": {
+      "type": "object", "additionalProperties": false,
+      "required": ["semantic_operator_id", "display_name", "symbol", "inputs", "outputs", "target_field", "preconditions", "semantic_kind", "claim_role", "owner_binding", "sources", "correctness_relation", "pathway_relation", "non_claims"],
+      "properties": {
+        "semantic_operator_id": {"enum": ["route-pressure", "event-transition", "field-divergence", "field-curl", "loop-break", "whole-state-reread", "runtime-closure"]},
+        "display_name": {"type": "string", "minLength": 1},
+        "symbol": {"type": "string", "minLength": 1},
+        "inputs": {"type": "array", "minItems": 1, "items": {"type": "string"}},
+        "outputs": {"type": "array", "minItems": 1, "items": {"type": "string"}},
+        "target_field": {"$ref": "#/$defs/target"},
+        "preconditions": {"type": "array", "minItems": 1, "items": {"type": "string"}},
+        "semantic_kind": {"enum": ["route-ranking", "event-local-transition", "field-diagnostic", "governed-loop-interruption", "whole-state-reinspection", "runtime-terminal-predicate"]},
+        "claim_role": {"enum": ["non-factive-control", "non-factive-diagnostic", "non-factive-runtime-predicate"]},
+        "owner_binding": {"$ref": "#/$defs/owner"},
+        "sources": {"type": "array", "minItems": 1, "items": {"$ref": "#/$defs/source"}},
+        "correctness_relation": {"$ref": "#/$defs/relation"},
+        "pathway_relation": {"type": "object", "additionalProperties": false, "required": ["relation", "canonical_predicate"], "properties": {"relation": {"type": "string"}, "canonical_predicate": {"type": "string"}}},
+        "non_claims": {"type": "object", "additionalProperties": false, "required": ["entails_human_uptake", "entails_human_restoration", "entails_soul_access"], "properties": {"entails_human_uptake": {"const": false}, "entails_human_restoration": {"const": false}, "entails_soul_access": {"const": false}}}
+      }
+    }
+  }
+}

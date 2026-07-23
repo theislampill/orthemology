@@ -10,7 +10,9 @@
       "scope": "the utterance surface reading only",
       "currentness": "current",
       "validity": "valid",
-      "relation_to_target": "directly evidences the discourse-interpretation claim; only ABOUT (not direct access to) the subject"
+      "relation_to_target": "directly evidences the discourse-interpretation claim; only ABOUT (not direct access to) the subject",
+      "support_roles": ["claim-support", "observation-bridge"],
+      "supported_target_types": ["overt-discourse", "inferred-noetic-profile"]
     },
     {
       "evidence_id": "ev-reread-1",
@@ -20,7 +22,9 @@
       "scope": "the runtime control field only",
       "currentness": "current",
       "validity": "valid",
-      "relation_to_target": "evidences runtime closure; not interior restoration of the subject"
+      "relation_to_target": "evidences runtime closure; not interior restoration of the subject",
+      "support_roles": ["runtime-closure"],
+      "supported_target_types": ["runtime-closure"]
     },
     {
       "evidence_id": "ev-route-1",
@@ -30,7 +34,21 @@
       "scope": "the response artifact and route only",
       "currentness": "current",
       "validity": "valid",
-      "relation_to_target": "evidences route quality; does not entail uptake"
+      "relation_to_target": "evidences route quality; does not entail uptake",
+      "support_roles": ["route-quality"],
+      "supported_target_types": ["route-quality"]
+    },
+    {
+      "evidence_id": "ev-authoritative-external-premise",
+      "observed_occurrence": "m_external_premise",
+      "property_class": "provenance",
+      "provenance": "a separately warranted external premise, represented here only as a schema control",
+      "scope": "external possibility",
+      "currentness": "current",
+      "validity": "valid",
+      "relation_to_target": "independently supports the external-possibility conclusion; it is not inferred from conceivability alone",
+      "support_roles": ["mental-external-bridge"],
+      "supported_target_types": ["external-possibility"]
     }
   ]
 }

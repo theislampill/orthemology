@@ -1,4 +1,13 @@
 schema: orthemology-false-tawatur-fixtures-v1
+warrant_contract: orthemology-tawatur-warrant-v2
+warrant_regression_surface:
+- numeric-or-prevalence-fields-never-supply-warrant
+- hidden-common-cause-conflicts-with-independence
+- transmitter-honesty-and-domain-competence-are-separate
+- subject-conditions-and-assessor-evidence-are-required
+- objective-proposition-truth-is-not-subject-relative
+- malformed-nested-values-reject-without-traceback
+- qualitative-nonnumeric-control-accepts
 # R7C Decision 0028; R7D Decision 0032 (audit B21/B22/B23). The MACHINE conclusion is
 # source-safe and NEVER concludes tawatur warrant: dependence (common source OR
 # copying) => `dependence-detected`; >=2 independent routes => `source-independence-
