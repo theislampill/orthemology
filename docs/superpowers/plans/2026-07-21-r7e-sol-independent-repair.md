@@ -583,12 +583,85 @@ commit to one finite independent Task 8 review before Task 9.
 - Modify: `companion/ARGUMENT-MAP-ORTHABILITY.md`
 - Modify: `companion/OBJECTIONS-AND-REPLIES.md`
 - Modify: `companion/orthability-divine-attributes-and-speech-athari.md`
+- Modify when new report-19, Rabb, or classical sources are cited: `references/source-status.yaml`
+- Modify when new report-19, Rabb, or classical sources are cited: `references/orthemology.bib`
 - Modify: `scripts/validate_argument_map.py`
 - Create: `tests/test_argument_map_semantics.py`
 
-**Step 1 — red:** Require stable IDs, scope, bridge/inference type, source role and references, strongest objection, rival exit, and generated count/ID parity. Reject objective-gradient language, convergence, empirical learnability yielding normativity without a bridge, premise/conclusion circularity, capacity implying actual Speech, OSM/DAEE support for theology, unsafe “created Arabic wording,” and upper-rung empirical promotion.
+**Step 0 — plan-review gate:** Before writing official Task 9 RED, submit this
+amended Task 9 boundary to a fresh independent read-only reviewer. The reviewer
+must confirm that the typed epistemic lanes, source-custody rules, Speech
+bearers, pure-validation obligations, and exact commit boundary below are
+finite and internally consistent. Do not begin implementation until the
+amendment is approved.
 
-**Step 2 — implement:** Repair rung 8 so it does not assume the personal attributes it argues for. Route the naturalist, primitivist, Platonist, modal, aseity/bootstrapping, Euthyphro/fittingness, and impersonal exits explicitly. Separate created convention; created creaturely speech/recitation/writing; created voice/breath/ink/page/screen/media; Allah's act of speaking; revealed Arabic wording as Allah's Speech; and created creaturely hearing/reception. Capacity for disclosure is not actual divine Speech.
+**Step 1 — red:** Require stable IDs, scope, bridge/inference type, source role
+and references, strongest objection, rival exit, and generated count/ID parity.
+Represent cross-framework dialectical accessibility separately from the
+declared Atharī/Taymiyyan operative noetic frame. Cross-framework scope is not a
+criterion-free or coequal tribunal of truth or soundness; objective orthability
+means that a proposed criterion is itself objectively assessable. Neither a
+school label nor source identity supplies warrant by itself.
+
+The common-premise positive fittingness-to-Wisdom bridge is presently
+unestablished. Tests must require it to remain explicitly
+`held|conditional|removed` and must prevent its promotion from comparative
+materials. This does not block a source-bounded Atharī/Taymiyyan route whose
+premises, source roles, inferential reach, and operative frame are declared.
+
+Add RED for neutral-tribunal promotion; missing operative frame; school or
+source label used as warrant; unsupported cross-framework promotion; source
+role, evidence-access, citation, edition, or locator drift; modern
+proper-function comparison attributed to Ibn Taymiyya or treated as proof of a
+Designer; fiṭrah reduced to a scalar, coordinate, algorithm, guaranteed
+attractor, or discourse-readable soul state; Rabb lexical range collapsed into
+conjunctive token entailment or etymological proof of theology/Wisdom; Allah
+represented as an internal formal object; objective-gradient language;
+convergence; empirical learnability yielding normativity without a bridge;
+premise/conclusion circularity; capacity implying actual Speech; OSM/DAEE
+support for metaphysics or theology; unsafe “created Arabic wording”; and
+upper-rung empirical promotion. Retain complete neighboring valid controls,
+including conditional cross-framework routing and the bounded
+Atharī/Taymiyyan route.
+
+The tracked tests must exercise pure structured validator/generator functions,
+malformed nested records, bounded diagnostics without traceback, deterministic
+marker replacement, exactly one generated block, generated count/ID parity,
+and generator drift checks. Production checks must be general structural and
+semantic rules, never fixture-ID or literal-string matches.
+
+**Step 2 — implement:** Repair rung 8 so it does not assume the personal
+attributes it argues for. Route the naturalist, primitivist, Platonist, modal,
+aseity/bootstrapping, Euthyphro/fittingness, and impersonal exits explicitly.
+Use distinct source roles: `primary_text`, `secondary_reconstruction`,
+`cross_source_synthesis`, `comparative_or_rival`,
+`creed_internal_inference`, and `proposed_orthemological_extension`. Evidence
+access, repository extraction, citation locator, edition, and primary/secondary
+status remain separate and cannot promote one another.
+
+Freeze these source guardrails:
+
+- report 19 supports only a bounded classical/Atharī route, subject to exact
+  locator, edition, translation, and source-role status;
+- El-Tobgui is secondary reconstruction, never a substitute for cited primary
+  text;
+- Plantinga/proper functionalism is modern comparison, not Ibn Taymiyya's named
+  theory and not proof of a Designer;
+- Rabb lexical evidence may support a layered candidate crosswalk across
+  token, sense, interpretive rule, context binding, and disambiguation, but a
+  lexical range is not conjunctive entailment at every token and etymology
+  cannot establish theology or divine Wisdom;
+- Allah is never modeled as an internal formal object;
+- fiṭrah remains qualitative, defeasible, and multidimensional, with no
+  guaranteed scalar, algorithm, coordinate, or attractor;
+- the OSM computational analogy and the DAEE governed application cannot
+  validate metaphysics or theology.
+
+Separate exactly seven Speech bearers: created human convention; created
+creaturely speaking/recitation/writing; created voice/breath; created
+ink/page/screen/media; Allah's act of speaking; revealed Arabic wording as
+Allah's Speech; and created creaturely hearing/reception. Capacity for
+disclosure is not actual divine Speech.
 
 **Step 3 — verify:**
 
@@ -601,7 +674,18 @@ commit to one finite independent Task 8 review before Task 9.
 & $PY scripts/validate_companion_references.py
 ```
 
-**Step 4 — commit:** Rebuild affected PDFs only after committing sources per Task 13; for now commit source/tests/generator as `fix: repair metaphysical and divine Speech argument boundaries`.
+Also run schema/structured parsing, malformed-input and recursive mutations,
+current-state and candidate-state checks, deterministic manifest parity, changed
+Python AST parsing, Decisions 0001–0022 preservation, and the affected pinned
+suite. The reviewer must confirm all RED cases and neighboring controls against
+the exact candidate commit.
+
+**Step 4 — commit:** Commit exactly the Task 9 source, tests, generator,
+validator, source-status, bibliography, generated current state, and release
+manifest owners as one bounded commit
+`fix: repair metaphysical and divine Speech argument boundaries`. Preserve the
+Task 8 OSM owners and obligations. Do not rebuild, edit, or commit PDFs,
+sidecars, LaTeX, or publication archives; Task 13 remains their owner.
 
 ## Task 10: Correct terminology provenance without adopting terminology
 

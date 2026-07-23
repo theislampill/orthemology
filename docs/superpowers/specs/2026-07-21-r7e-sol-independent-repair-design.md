@@ -162,9 +162,58 @@ Meta-noetic ecology keeps type, represented standard, carrier relation, case-bou
 
 The terminology account says the coined forms are **constructed but morphologically grounded**. `orth-` and English `-eme` are established; `-emma` is not presented as an inherited productive English token suffix. Greek `-ma/-mat-` may motivate result/object/instance morphology. Greek `ema` may appear only as deliberately superposed possessive resonance, not as the derivation of `-ma`. Cross-domain usefulness remains a benchmark-gated mnemonic/meta-schema hypothesis, not universal primitives or proven isomorphism.
 
-The dynamic companion and argument map are expanded together. Counts and identifiers are generated from the map. Each rung carries premises, inference type, conclusion, dependencies, source/evidence status, strongest objection, rival exit, scope, and school-neutral versus Atharī-internal status. Empirical learnability does not yield normativity without an explicit, separately defended bridge. Personal attributes cannot be assumed in the premise that purports to establish them.
+The dynamic companion and argument map are expanded together. Counts and
+identifiers are generated from the map. Each rung carries premises, inference
+type, conclusion, dependencies, source/evidence status, strongest objection,
+rival exit, and typed epistemic scope. Keep **cross-framework dialectical
+accessibility** distinct from the declared **Atharī/Taymiyyan operative noetic
+frame**. Cross-framework presentation identifies shared premises, conditional
+entailments, and rival exits; it is not a criterion-free or coequal tribunal of
+truth or soundness. Objective orthability makes proposed criteria themselves
+objectively assessable. School identity and source identity are source-status
+facts, not independent warrant.
 
-The Atharī divine-Speech route remains explicit and source-bounded. It distinguishes created human convention; created creaturely speaking, reciting, and writing; created voice, ink, page, and media; Allah's act of speaking; revealed Arabic wording as Allah's Speech; and creaturely hearing/reception. Capacity for disclosure is not actual divine Speech. No OSM or DAEE result supplies this route.
+The positive common-premise fittingness-to-Wisdom bridge remains unestablished
+and therefore held, conditional, or removed. That dialectical-accessibility gap
+does not block a source-bounded Atharī/Taymiyyan route with declared premises
+and inferential boundaries. Empirical learnability does not yield normativity
+without an explicit, separately defended bridge. Personal attributes cannot be
+assumed in the premise that purports to establish them.
+
+Keep `primary_text`, `secondary_reconstruction`, `cross_source_synthesis`,
+`comparative_or_rival`, `creed_internal_inference`, and
+`proposed_orthemological_extension` as distinct source roles. Evidence access,
+local extraction, exact locator, edition/translation identity, and source role
+cannot promote one another. Report 19 supports only a bounded classical/Atharī
+route pending exact locator and edition status. El-Tobgui remains secondary
+reconstruction. Plantinga/proper functionalism is modern comparison, not Ibn
+Taymiyya's named theory and not proof of a Designer.
+
+Rabb lexical evidence supports at most a layered candidate crosswalk among
+token, sense, interpretive rule, context binding, and disambiguation. A lexical
+range is not conjunctive token entailment, and etymology does not prove
+theology or divine Wisdom. Fiṭrah remains qualitative, defeasible, and
+multidimensional; it is not a scalar, algorithm, field coordinate, guaranteed
+attractor, or discourse-readable soul state. Allah is never an internal formal
+object. The OSM computational analogy and DAEE governed application cannot
+validate metaphysics or theology.
+
+The Atharī divine-Speech route remains explicit and source-bounded. It
+distinguishes exactly seven bearers: created human convention; created
+creaturely speaking, reciting, and writing; created voice and breath; created
+ink, page, screen, and media; Allah's act of speaking; revealed Arabic wording
+as Allah's Speech; and created creaturely hearing/reception. Capacity for
+disclosure is not actual divine Speech. No OSM or DAEE result supplies this
+route.
+
+Task 9 validation is pure and structured: malformed nested inputs fail with
+bounded diagnostics rather than traceback; marker replacement is deterministic
+and singular; generated counts and IDs exactly match the source map; and tests
+cover both invalid cases and neighboring valid controls. Implementation remains
+inside the declared Task 9 source/test/generator/validator/source-custody
+owners, with current state and manifest regenerated only through their
+authoritative generators. PDFs and publication derivatives remain deferred to
+Task 13.
 
 ### 6. Mathematical source and PDF publication pipeline
 
