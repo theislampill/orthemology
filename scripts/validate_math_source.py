@@ -68,13 +68,14 @@ def is_machine_assignment(span):
         return False
     if value[0] in "'\"":
         quote = value[0]
-        return (
+        structurally_complete = (
             len(value) >= 2
             and value[-1] == quote
             and quote not in value[1:-1]
             and "\n" not in value
         )
-    return not any(ch.isspace() or ch in "'\"" for ch in value)
+        return structurally_complete and (quote == "'" or "$" not in value[1:-1])
+    return "$" not in value and not any(ch.isspace() or ch in "'\"" for ch in value)
 
 
 def real_math_spans(text):

@@ -37,6 +37,10 @@ class MachineAssignmentClassificationTests(unittest.TestCase):
             "BUILD_ID=run-17",
             "CI_JOB_ID=12345",
             "$env:PYTHONHASHSEED=\"0\"",
+            "MODE='$HOME'",
+            "$env:MODE='$env:HOME'",
+            "MODE='$(whoami)'",
+            "PRICE='literal$cash'",
         )
         for span in accepted:
             with self.subTest(span=span):
@@ -57,6 +61,12 @@ class MachineAssignmentClassificationTests(unittest.TestCase):
             "MODE=fast=slow",
             "MODE=fast ∧ x",
             "MODE={x | P(x)}",
+            "MODE=$(whoami)",
+            "MODE=$HOME",
+            "$env:MODE=$(Get-Date)",
+            "$env:MODE=$env:HOME",
+            'MODE="$HOME"',
+            '$env:MODE="$env:HOME"',
         )
         for span in rejected:
             with self.subTest(span=span):
