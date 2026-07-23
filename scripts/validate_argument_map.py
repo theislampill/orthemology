@@ -4,6 +4,7 @@
 from __future__ import annotations
 
 import re
+from collections import Counter
 from pathlib import Path
 from typing import Any
 
@@ -192,6 +193,17 @@ EXPECTED_CLAIMS = {
     "ARG-14-P1": "a contextual token may have multiple candidate senses selected through evidence and interpretive rules",
     "ARG-14-C": "token sense rule context binding and disambiguation may be modeled as distinct orthemological layers without theological entailment",
 }
+EXPECTED_CLAIM_PLACEMENTS = {
+    node_id: {
+        "premises": frozenset(
+            claim_id
+            for claim_id in EXPECTED_CLAIMS
+            if claim_id.startswith(f"{node_id}-P")
+        ),
+        "conclusion": f"{node_id}-C",
+    }
+    for node_id in EXPECTED_NODE_IDS
+}
 EXPECTED_BOUNDARIES = {
     "BOUND-CROSS-FRAMEWORK-NOT-TRIBUNAL": ("scope-firewall", "cross_framework_policy.warrant_role"),
     "BOUND-WISDOM-HELD": ("source-hold", "common_premise_fittingness_to_wisdom"),
@@ -363,6 +375,7 @@ SPEECH_BEARER_TEXT = {
     "SPEECH-BEARER-06": "revealed Arabic wording as Allah's Speech",
     "SPEECH-BEARER-07": "created creaturely hearing and reception",
 }
+SPEECH_BEARER_IDS = frozenset(SPEECH_BEARER_TEXT)
 NON_ENTAILMENTS = {
     "OSM and DAEE do not validate metaphysics or theology",
     "empirical learnability does not yield normativity without a separate bridge",
@@ -597,6 +610,8 @@ def validate_mapping(data: Any, source_registry: Any) -> list[str]:
                 _add(issues, "Allah's act of speaking must remain distinct")
             if bearer_id == "SPEECH-BEARER-06" and created_status != "uncreated-divine-speech":
                 _add(issues, "revealed Arabic wording must remain Allah's Speech")
+        if ids != SPEECH_BEARER_IDS:
+            _add(issues, "Speech bearer identities must equal the frozen registry")
 
     routes = data.get("rival_routes")
     if not isinstance(routes, dict):
@@ -649,20 +664,21 @@ def validate_mapping(data: Any, source_registry: Any) -> list[str]:
         for node in nodes
         if isinstance(node, dict) and isinstance(node.get("id"), str)
     }
-    claim_ids: set[str] = set()
+    claim_occurrences: list[str] = []
     for raw_node in nodes:
         if not isinstance(raw_node, dict):
             continue
         raw_premises = raw_node.get("premises")
         if isinstance(raw_premises, list):
-            claim_ids.update(
+            claim_occurrences.extend(
                 item["id"]
                 for item in raw_premises
                 if isinstance(item, dict) and isinstance(item.get("id"), str)
             )
         raw_conclusion = raw_node.get("conclusion")
         if isinstance(raw_conclusion, dict) and isinstance(raw_conclusion.get("id"), str):
-            claim_ids.add(raw_conclusion["id"])
+            claim_occurrences.append(raw_conclusion["id"])
+    claim_ids = set(claim_occurrences)
     seen: set[str] = set()
     for index, node in enumerate(nodes, start=1):
         if not isinstance(node, dict):
@@ -718,6 +734,15 @@ def validate_mapping(data: Any, source_registry: Any) -> list[str]:
                         _add(issues, f"{node_id}: premise boundary contract drift for {premise['id']}")
                     elif any(ref not in boundary_ids for ref in boundary_refs):
                         _add(issues, f"{node_id}: unresolved premise boundary reference")
+            if isinstance(node_id, str) and node_id in EXPECTED_CLAIM_PLACEMENTS:
+                premise_ids = {
+                    premise.get("id")
+                    for premise in premises
+                    if isinstance(premise, dict)
+                    and isinstance(premise.get("id"), str)
+                }
+                if premise_ids != EXPECTED_CLAIM_PLACEMENTS[node_id]["premises"]:
+                    _add(issues, f"{node_id}: premise identities drift from the frozen placement registry")
         conclusion = node.get("conclusion")
         if not isinstance(conclusion, dict) or not isinstance(conclusion.get("id"), str) or not isinstance(conclusion.get("text"), str):
             _add(issues, f"{node_id}: malformed conclusion")
@@ -734,6 +759,16 @@ def validate_mapping(data: Any, source_registry: Any) -> list[str]:
                 _add(issues, f"{node_id}: conclusion boundary contract drift for {conclusion['id']}")
             elif any(ref not in boundary_ids for ref in boundary_refs):
                 _add(issues, f"{node_id}: unresolved conclusion boundary reference")
+        if (
+            isinstance(node_id, str)
+            and node_id in EXPECTED_CLAIM_PLACEMENTS
+            and (
+                not isinstance(conclusion, dict)
+                or conclusion.get("id")
+                != EXPECTED_CLAIM_PLACEMENTS[node_id]["conclusion"]
+            )
+        ):
+            _add(issues, f"{node_id}: conclusion identity drifts from the frozen placement registry")
 
         dependencies = node.get("dependencies")
         if not isinstance(dependencies, list):
@@ -898,8 +933,12 @@ def validate_mapping(data: Any, source_registry: Any) -> list[str]:
             ):
                 _add(issues, f"{node_id}: primary-text-verified claim requires primary sources")
 
-    if claim_ids != set(EXPECTED_CLAIMS):
-        _add(issues, "claim identities must equal the frozen Task 9 claim registry")
+    if (
+        claim_ids != set(EXPECTED_CLAIMS)
+        or Counter(claim_occurrences)
+        != Counter({claim_id: 1 for claim_id in EXPECTED_CLAIMS})
+    ):
+        _add(issues, "claim identities must occur exactly once in the frozen Task 9 claim registry")
     dependency_map = {
         node["id"]: node["dependencies"]
         for node in nodes

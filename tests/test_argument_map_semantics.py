@@ -524,6 +524,44 @@ class ArgumentMapSemanticsTests(unittest.TestCase):
             ),
             "Speech bearer semantics",
         )
+        self.assert_rejected(
+            lambda d: d["speech_bearers"][-1].update(
+                {
+                    "id": "SPEECH-BEARER-99",
+                    "bearer": None,
+                    "created_status": "unknown",
+                }
+            )
+        )
+
+    def test_speech_bearer_collection_order_is_nonsemantic(self):
+        data = self.mutated(lambda d: d["speech_bearers"].reverse())
+        self.assertEqual([], self.issues(data))
+
+    def test_claim_identity_occurs_exactly_once(self):
+        self.assert_rejected(
+            lambda d: d["nodes"][0]["premises"].append(
+                copy.deepcopy(d["nodes"][0]["premises"][0])
+            )
+        )
+
+    def test_claim_identity_is_bound_to_canonical_node(self):
+        def swap_node_owners(data):
+            data["nodes"][0]["premises"][0], data["nodes"][1]["premises"][0] = (
+                data["nodes"][1]["premises"][0],
+                data["nodes"][0]["premises"][0],
+            )
+
+        self.assert_rejected(swap_node_owners)
+
+    def test_claim_identity_is_bound_to_premise_or_conclusion_position(self):
+        def swap_premise_and_conclusion(data):
+            data["nodes"][0]["premises"][0], data["nodes"][0]["conclusion"] = (
+                data["nodes"][0]["conclusion"],
+                data["nodes"][0]["premises"][0],
+            )
+
+        self.assert_rejected(swap_premise_and_conclusion)
 
     def test_capacity_does_not_imply_actual_speech(self):
         self.assert_invalid(
