@@ -211,29 +211,29 @@ derived:
     invalid_records: 48
   pdfs:
     dynamic-orthing-noetic-learning-orthability-draft.pdf:
-      sha256: 30293c9057021d513dc8f34d533ec26f0648f895a1e213609b2797cade4f0147
+      sha256: 4d0c888e853d434a3d2eb90775e3cd746f3d70b16ad2523fdb3d07d6494ee8bd
       pages: 6
-      source_commit: e34d2cd56057766f8f656a4ff3486eb34dad607e
+      source_commit: 9deda9c908e40bbf3b3ea5604bf5c3a6683d8afd
     notation-gallery.pdf:
-      sha256: 479608cdf1b8cb84a16a58be8d3ab37882359fe1855cd83c98b0fa37a87264fc
+      sha256: af6aad99edd3661cbdf0baf996de297924e9dd9e9484c8843ff5461f96887a04
       pages: 3
-      source_commit: b6223964dfea6f3f91b757b6d1a6c91b4b712a8f
+      source_commit: 9deda9c908e40bbf3b3ea5604bf5c3a6683d8afd
     orthability-divine-speech-athari-draft.pdf:
-      sha256: 4bb0a1b24baf84395ea4b519b7497a9063704e1164142988d982307941c3f62f
+      sha256: 2edb6f0bf42787abc9909b68b84a4d8c5dd6611dca13abdaec9a067e18bf5772
       pages: 8
-      source_commit: daaf87b302a942b77ed98dc89dcf88754ab41614
+      source_commit: 9deda9c908e40bbf3b3ea5604bf5c3a6683d8afd
     orthability-ground-of-intelligibility-draft.pdf:
-      sha256: 29f1f8fca1bb6e8602d4e18422ee070d60df54915a5e675ea94740f4024d9f5e
+      sha256: 8a428ce03a92834df2ba383ab6417565a227da6b5e7acb003bd08a3e6204f945
       pages: 11
-      source_commit: daaf87b302a942b77ed98dc89dcf88754ab41614
+      source_commit: 9deda9c908e40bbf3b3ea5604bf5c3a6683d8afd
     orthemic-core-reference-draft.pdf:
-      sha256: 33f71dd67ed1a71b06c0ace88daa85bc1d3453cacd310b91bcd9a140df6327f7
+      sha256: 346568795799e4d1b8f53ed4c44c4dd4720d3a71cf7187c850a78c437bcb4fdb
       pages: 20
-      source_commit: d3da5bbfced04831940846bd91802b0faf15c600
+      source_commit: 9deda9c908e40bbf3b3ea5604bf5c3a6683d8afd
     orthemma-ortheme-systems-draft.pdf:
-      sha256: 22d5efc0884badd5ddbf289ef098f9c9ad1d77b7bdad5fbe55887d4a302f0210
-      pages: 32
-      source_commit: d3da5bbfced04831940846bd91802b0faf15c600
+      sha256: 126df362ddbde3aa49f237dc32ee6b567e3dc2d41c3718cba1e6b4da326925b8
+      pages: 33
+      source_commit: 9deda9c908e40bbf3b3ea5604bf5c3a6683d8afd
   terminology_freeze_hashes:
     pilot0_v1: 988a6522498df73ad1c7b0f73961a054ff20862d50fff6d644d0274877412772
     pilot0_v2: e5e65b2f1b38d5767d79103c57afee76a02e09e9fec2fd150a3a680b0fe19c3d
