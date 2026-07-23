@@ -79,7 +79,9 @@ jobs:
       - name: Cross-document consistency
         run: python scripts/validate_cross_document_consistency.py
       - name: Internal references resolve (no ghost script/fixture citations)
-        run: python scripts/validate_internal_references.py
+        run: |
+          python tests/test_internal_references.py
+          python scripts/validate_internal_references.py
       - name: Experiment-packet readiness + no-run guard (R6, Decision 0018)
         run: python scripts/validate_experiment_readiness.py
       - name: Sourcing-state classification + navigation (R6, Decision 0019)
