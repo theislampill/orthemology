@@ -17,7 +17,8 @@ Three readings must be distinguished.
 
 Beyond the direct bound that $\nabla\cdot$ / $\nabla\times$ are "not literal
 divergence/curl" **[direct]**, daee's own discipline constrains their *use*
-**[crosswalk of `c86b3c66`; REBAKE §7.3 notation table, §7.5]**. $\nabla\cdot T$ and
+**[crosswalk of `c86b3c66`; direct source documents named above and the typed
+semantic-operator contract]**. $\nabla\cdot T$ and
 $\nabla\times T$ are well-formed only over an **explicit multi-node target field**
 $T$ carrying residual pressure, dependency, loop, or churn — never over a one-point
 summary; this is why the framework rejects "proof-by-symbol" and scalarized closure.
@@ -91,15 +92,20 @@ these**, so G2 remains conditional/future.
 
 ### Literal optimization exists elsewhere — and does not transfer
 
-Literal optimization trajectories *do* occur in the OSM comparison: the RNNs are
-trained by backpropagation-through-time and the CSCG is fit by Baum–Welch
-expectation-maximization **[primary: 10.1038/s41586-024-08548-w]**. These are
-literal descent/ascent over a defined objective in **model training** — a different
-object from daee's runtime $\nabla$. The OSM result does **not** supply daee's
-missing G2 conditions (no state space, metric, or differentiable gradient over the
-runtime field), and daee's route-ranking imports **no** latent=ortheme or
-clone=neuron identity. "Descent" and "trajectory" therefore carry two non-identical
-senses across the corpus; neither transfers to the other.
+Literal numerical estimation and optimization occur in the OSM comparison, but
+their method roles are not interchangeable. The CSCG is fitted by Baum–Welch
+expectation-maximization likelihood estimation and then receives
+Viterbi-training transition refinement; the article-linked code separately
+implements max-product/backtrace MAP decode. For the reported vanilla RNNs,
+BPTT computes gradients, Adam updates parameters, and cross-entropy is the
+objective; Adam and cross-entropy occur at the reported LSTM and transformer
+loci, while the Hebbian RNN uses a distinct local timing rule
+**[primary article: 10.1038/s41586-024-08548-w; MAP decode: pinned official code
+`sprustonlab/OSM_Paper_Figures@c1d1788b54c737efe24402e02762eee10da0d0d7`]**.
+None supplies a literal differentiable gradient over daee's runtime field, and
+daee's route-ranking imports **no** latent=ortheme or clone=neuron identity.
+"Descent," "fit," "refinement," "decode," and "trajectory" therefore retain
+their typed, non-transferable senses.
 
 ## Non-monotonicity and separate state spaces
 

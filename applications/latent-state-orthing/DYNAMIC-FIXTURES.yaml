@@ -50,8 +50,8 @@ fixtures:
 - id: DYN-7
   name: endpoint underdetermines mechanism
   level: representation-learning
-  scenario: "Several models reach the same final orthogonalized representation; only CSCG also reproduces the learning trajectory."
-  distinction: "endpoint equivalence does not identify the mechanism; trajectory evidence is stronger"
+  scenario: "Several tested settings satisfy a declared similar-final-representational-structure criterion; among the tested models under the reported evaluation, only CSCG consistently matches the reported decorrelation order."
+  distinction: "similar endpoint geometry is not exact representation or parameter identity and does not identify the mechanism; trajectory evidence is a separate constraint"
   forbids: "inferring the learning mechanism from endpoint performance alone"
   non_claim: "this constrains a dynamic account; it does not validate Orthemology"
 - id: DYN-9
@@ -112,12 +112,12 @@ fixtures:
   forbids: "assuming a model update is monotone improvement"
   non_claim: "learning is not guaranteed improvement"
 - id: DYN-16
-  name: same endpoint, different trajectory
+  name: similar endpoint criterion, different trajectory
   level: representation-learning
-  scenario: "Two models reach the same endpoint via different trajectories."
-  distinction: "endpoint geometry equivalence underdetermines mechanism; trajectory evidence is stronger (echoes DYN-7)"
+  scenario: "Two models satisfy the same declared endpoint criterion via different trajectories."
+  distinction: "criterion-level endpoint similarity underdetermines mechanism and parameter identity; trajectory evidence remains separate (echoes DYN-7)"
   forbids: "inferring mechanism from endpoint alone"
-  non_claim: "endpoint match is not mechanism identity"
+  non_claim: "endpoint-criterion match is not representation, parameter, trajectory, or mechanism identity"
 - id: DYN-17
   name: model update without profile change
   level: representation-learning
@@ -146,3 +146,31 @@ fixtures:
   distinction: "revisions are path-dependent and may be rolled back; the transport/reopening record must support rollback"
   forbids: "treating a revision as irreversible or forgetting its provenance"
   non_claim: "revision history is retained; rollback asserts nothing about any interior state"
+- id: DYN-21
+  name: CSCG fit refinement and decode remain separate
+  level: representation-learning
+  scenario: "The reported CSCG pipeline uses Baum-Welch expectation-maximization likelihood fit, then Viterbi training for transition refinement; the pinned official code separately performs max-product/backtrace MAP decode."
+  distinction: "fit, refinement, and decode are three typed roles with article-text versus pinned-code evidence kept explicit"
+  forbids: "using Viterbi as the sole or primary fit; collapsing Viterbi refinement with Baum-Welch or MAP decode; rejecting the literal phrase Viterbi training"
+  non_claim: "the code-dependent MAP operation is not attributed to the article-text extraction"
+- id: DYN-22
+  name: reported neural-network method loci remain typed
+  level: representation-learning
+  scenario: "For the reported vanilla RNNs BPTT computes gradients, Adam updates parameters, and cross-entropy is the objective; Adam and cross-entropy also occur at the reported LSTM and transformer loci, while the Hebbian RNN uses a distinct local timing update."
+  distinction: "gradient computation, optimizer, objective, and local learning rule are different method roles"
+  forbids: "BPTT-as-optimizer, Adam-as-loss, omitted cross-entropy, or all-compared-methods-as-gradient"
+  non_claim: "method-role separation supplies no cross-model mechanism identity or broad optimization claim"
+- id: DYN-23
+  name: high performance without measured global geometry
+  level: representation-learning
+  scenario: "Reported ReLU and sigmoid RNN, LSTM, and transformer controls achieve high prediction performance without the measured global orthogonalized geometry."
+  distinction: "task performance, endpoint geometry, trajectory match, adaptation, and mechanism are separate result fields"
+  forbids: "claiming that CSCG-like global geometry is necessary for task performance, correctness, learning, or generalization"
+  non_claim: "a high-performing nonorthogonal control does not validate Orthemology or settle its mechanism"
+- id: DYN-24
+  name: bounded biological adaptation with model response held
+  level: analysis-version-change
+  scenario: "The source reports CA1 reuse or adaptation under novel indicator cues and stretched track segments; new-state creation and observation rebinding remain alternatives, and computational-model response is future work."
+  distinction: "reported biological adaptation is not model transport and does not choose one latent-state interpretation"
+  forbids: "promotion to correctness, convergence, broad generalization, forced new-state creation, or computational-model transport"
+  non_claim: "no human/noetic/metaphysical transfer and no biological or wet-lab procedure import"

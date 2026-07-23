@@ -830,8 +830,9 @@ integration pays for itself is Section 13's question, not this section's claim.
 A neighbouring literature models cognition with sequential latent-variable machinery — hidden Markov models, clone-structured graphs, recurrent
 networks — in which ambiguous immediate observations are disambiguated by sequence-sensitive inference over model-internal latent states
 (George et al. 2021; Vasudeva Raju et al. 2024; Sun et al. 2025). One reported finding is structurally relevant here: in the cited study several
-compared models reach the same endpoint while only one of the compared models matched the reported longitudinal trajectory, and high task
-performance is reported to occur without the global representation geometry that study measured. The bounded claim this paper draws is therefore
+compared model settings satisfy a declared similar-final-representational-structure criterion while only CSCG consistently matched the reported
+decorrelation order among the tested models under the reported evaluation, and high task performance is reported to occur without the global
+representation geometry that study measured. The bounded claim this paper draws is therefore
 about *underdetermination*: **final performance and final representation do not by themselves determine the learning trajectory or the mechanism**
 — which is the same separation of result from pathway that Sections 8 and 13 make operational.
 
