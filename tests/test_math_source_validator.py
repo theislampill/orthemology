@@ -41,6 +41,11 @@ class MachineAssignmentClassificationTests(unittest.TestCase):
             "$env:MODE='$env:HOME'",
             "MODE='$(whoami)'",
             "PRICE='literal$cash'",
+            "MODE='(whoami)'",
+            'MODE="(literal)"',
+            '$env:MODE="(Get-Date)"',
+            '$env:MODE="`$env:HOME"',
+            '$env:MODE="prefix-`$env:HOME"',
         )
         for span in accepted:
             with self.subTest(span=span):
@@ -67,6 +72,12 @@ class MachineAssignmentClassificationTests(unittest.TestCase):
             "$env:MODE=$env:HOME",
             'MODE="$HOME"',
             '$env:MODE="$env:HOME"',
+            "MODE=(whoami)",
+            "$env:MODE=(Get-Date)",
+            'MODE="`$HOME"',
+            '$env:MODE="``$env:HOME"',
+            '$env:MODE="`$env:HOME`"',
+            '$env:MODE="`"',
         )
         for span in rejected:
             with self.subTest(span=span):

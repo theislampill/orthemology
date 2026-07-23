@@ -64,7 +64,11 @@ def is_machine_assignment(span):
     if not match:
         return False
     value = match.group(1)
-    if not value or MATH_OR_CONTROL_IN_VALUE_RE.search(value):
+    powershell_env = span.startswith("$env:")
+    control_value = value
+    if powershell_env and value.startswith('"') and value.endswith('"'):
+        control_value = value.replace("`$", "")
+    if not value or MATH_OR_CONTROL_IN_VALUE_RE.search(control_value):
         return False
     if value[0] in "'\"":
         quote = value[0]
@@ -74,8 +78,19 @@ def is_machine_assignment(span):
             and quote not in value[1:-1]
             and "\n" not in value
         )
-        return structurally_complete and (quote == "'" or "$" not in value[1:-1])
-    return "$" not in value and not any(ch.isspace() or ch in "'\"" for ch in value)
+        if not structurally_complete or quote == "'":
+            return structurally_complete
+        interior = value[1:-1]
+        if "$" not in interior:
+            return True
+        unescaped = interior.replace("`$", "")
+        return powershell_env and "$" not in unescaped and "`" not in unescaped
+    return (
+        "$" not in value
+        and "(" not in value
+        and ")" not in value
+        and not any(ch.isspace() or ch in "'\"" for ch in value)
+    )
 
 
 def real_math_spans(text):
