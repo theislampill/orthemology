@@ -180,6 +180,16 @@ def valid_mapping():
                 "all_non_cscg_failed": False,
                 "geometry_necessary": False,
             },
+            "mechanism": {
+                "status": "underdetermined-by-reported-endpoint-and-trajectory",
+                "identity_established": False,
+                "causal_equivalence_established": False,
+                "unique_biological_mechanism_established": False,
+                "non_claims": [
+                    "endpoint similarity does not identify a mechanism",
+                    "trajectory discrimination does not establish mechanism identity or causal equivalence",
+                ],
+            },
             "adaptation": {
                 "subject": "biological-ca1-representations",
                 "conditions": ["novel-indicator-cues", "stretched-track-segments"],
@@ -209,6 +219,7 @@ def valid_mapping():
                 "repository": "sprustonlab/OSM_Paper_Figures",
                 "commit": "c1d1788b54c737efe24402e02762eee10da0d0d7",
                 "map_decode_locator": "fig_4/fig_4_CSCG/chmm_actions.py:176-187",
+                "map_decode_evidence_access_status": "pinned-official-code",
             },
         },
         "claim_boundaries": {
@@ -260,6 +271,27 @@ def method_index(method_id):
 class OSMClaimBoundaryTests(unittest.TestCase):
     def assert_rejected(self, mapping, label):
         self.assertTrue(issues_for(mapping), label)
+
+    def root_issues_after(self, relative, mutate_document):
+        with tempfile.TemporaryDirectory(prefix="orthemology-task8-parity-root-") as tmp:
+            temp_root = pathlib.Path(tmp)
+            for owner in (
+                "applications/latent-state-orthing/OSM-DYNAMICS-DEFINITIONS.yaml",
+                "applications/latent-state-orthing/OSM-CSCG-ORTHEME-CROSSWALK.yaml",
+                "references/source-status.yaml",
+            ):
+                source = pathlib.Path(ROOT, owner)
+                target = temp_root / owner
+                target.parent.mkdir(parents=True, exist_ok=True)
+                shutil.copyfile(source, target)
+            target = temp_root / relative
+            document = yaml.safe_load(target.read_text(encoding="utf-8"))
+            mutate_document(document)
+            target.write_text(
+                yaml.safe_dump(document, sort_keys=False, allow_unicode=True),
+                encoding="utf-8",
+            )
+            return VALIDATOR.validate_osm_root(str(temp_root))
 
     def test_osm_t01_clone_neuron_identity_rejects(self):
         doc = mutate(("objects", 6, "id"), "biological_single_cell_response")
@@ -443,6 +475,133 @@ class OSMClaimBoundaryTests(unittest.TestCase):
                 encoding="utf-8",
             )
             self.assertTrue(VALIDATOR.validate_osm_root(str(temp_root)))
+
+    def test_comparison_declares_separate_mechanism_result(self):
+        definitions = yaml.safe_load(
+            pathlib.Path(
+                ROOT,
+                "applications/latent-state-orthing/OSM-DYNAMICS-DEFINITIONS.yaml",
+            ).read_text(encoding="utf-8")
+        )
+        comparison = definitions["osm_task8_contract"]["comparison"]
+        self.assertIn(
+            "mechanism",
+            comparison,
+            "mechanism must be a separate structured result beside endpoint, "
+            "trajectory, performance, and adaptation",
+        )
+        mutations = [
+            (("comparison", "mechanism", "identity_established"), True),
+            (
+                ("comparison", "mechanism", "causal_equivalence_established"),
+                True,
+            ),
+            (
+                (
+                    "comparison",
+                    "mechanism",
+                    "unique_biological_mechanism_established",
+                ),
+                True,
+            ),
+            (("comparison", "mechanism", "non_claims"), []),
+            (
+                ("comparison", "mechanism", "non_claims"),
+                [{"malformed": "nested value"}],
+            ),
+        ]
+        for path, value in mutations:
+            with self.subTest(path=path, value=value):
+                self.assert_rejected(
+                    mutate(path, value),
+                    "the mechanism result must retain its negative identity, "
+                    "equivalence, uniqueness, and nonclaim boundaries",
+                )
+
+    def test_crosswalk_source_custody_parity_rejects_one_field_drift(self):
+        relative = (
+            "applications/latent-state-orthing/"
+            "OSM-CSCG-ORTHEME-CROSSWALK.yaml"
+        )
+        mutations = [
+            lambda doc: doc["source_custody"]["official_code"].__setitem__(
+                "commit", "0" * 40
+            ),
+            lambda doc: doc["source_custody"]["official_code"].__setitem__(
+                "role", "article-text"
+            ),
+            lambda doc: doc["source_custody"]["local_access_copy"].__setitem__(
+                "sole_public_evidence", True
+            ),
+            lambda doc: doc["source_custody"]["local_access_copy"].__setitem__(
+                "extraction_lines_are_journal_pagination", True
+            ),
+        ]
+        for mutate_document in mutations:
+            with self.subTest(mutation=mutate_document):
+                self.assertTrue(
+                    self.root_issues_after(relative, mutate_document),
+                    "crosswalk custody must remain structurally bound to the "
+                    "contract and source-status owner",
+                )
+
+    def test_crosswalk_semantic_parity_rejects_one_field_drift(self):
+        crosswalk_relative = (
+            "applications/latent-state-orthing/"
+            "OSM-CSCG-ORTHEME-CROSSWALK.yaml"
+        )
+        definitions_relative = (
+            "applications/latent-state-orthing/OSM-DYNAMICS-DEFINITIONS.yaml"
+        )
+        mutations = [
+            (
+                crosswalk_relative,
+                lambda doc: doc.__setitem__(
+                    "overall_status", "empirical validation of Orthemology"
+                ),
+            ),
+            (
+                crosswalk_relative,
+                lambda doc: doc["rows"][13].__setitem__(
+                    "claim_role", "primary-text-verified"
+                ),
+            ),
+            (
+                crosswalk_relative,
+                lambda doc: doc["rows"][13].__setitem__(
+                    "content_kind", "biological-source-report"
+                ),
+            ),
+            (
+                crosswalk_relative,
+                lambda doc: doc["rows"][13].__setitem__(
+                    "evidence_access_status", "pinned-official-code"
+                ),
+            ),
+            (
+                crosswalk_relative,
+                lambda doc: doc["rows"][13].__setitem__("non_claims", []),
+            ),
+            (
+                crosswalk_relative,
+                lambda doc: doc["rows"][3].__setitem__(
+                    "source_locator", "article text"
+                ),
+            ),
+            (
+                definitions_relative,
+                lambda doc: doc["geometry_definition"].__setitem__(
+                    "claim_role", "primary-text-verified"
+                ),
+            ),
+        ]
+        for relative, mutate_document in mutations:
+            with self.subTest(relative=relative, mutation=mutate_document):
+                self.assertTrue(
+                    self.root_issues_after(relative, mutate_document),
+                    "crosswalk and geometry semantics must remain bound to "
+                    "their structured owners",
+                )
 
 
 if __name__ == "__main__":

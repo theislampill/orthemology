@@ -127,12 +127,71 @@ TASK8_METHODS = {
         "evidence_access_status": "article-text",
     },
 }
+TASK8_DOI = "10.1038/s41586-024-08548-w"
 TASK8_CODE_COMMIT = "c1d1788b54c737efe24402e02762eee10da0d0d7"
+TASK8_MAP_LOCATOR = "fig_4/fig_4_CSCG/chmm_actions.py:176-187"
 TASK8_EXTRACTION_SHA256 = "0D097CBA7BBB25A949E2BF95AF28B5A2259BD8D60B0E5FAC5A74CDF7D05AA814"
 TASK8_FORBIDDEN_PROMOTIONS = {
     "Orthemology", "candidate terminology", "human noetics", "fitrah",
     "metaphysics", "Necessary Being", "divine attributes", "divine Speech",
     "theology",
+}
+TASK8_MECHANISM_NONCLAIMS = {
+    "endpoint similarity does not identify a mechanism",
+    "trajectory discrimination does not establish mechanism identity or causal equivalence",
+}
+TASK8_CROSSWALK_STATUS = "bounded computational analogy and constraint; NOT validation"
+TASK8_CROSSWALK_LOCATORS = {
+    "world_task_state":
+        "DOI 10.1038/s41586-024-08548-w; Methods: Modelling, CSCG",
+    "concrete_occurrence":
+        "Decision 0015 and OSM-DYNAMICS-DEFINITIONS.yaml#osm_task8_contract",
+    "biological_sensory_observation":
+        "DOI 10.1038/s41586-024-08548-w; Methods: Modelling",
+    "model_observation_symbol":
+        "DOI 10.1038/s41586-024-08548-w; Methods: CSCG",
+    "biological_single_cell_response":
+        "DOI 10.1038/s41586-024-08548-w; Figure 3 and Discussion",
+    "biological_population_representation":
+        "DOI 10.1038/s41586-024-08548-w; Figures 2 and 4",
+    "cscg_clone_latent_state":
+        "DOI 10.1038/s41586-024-08548-w; Methods: CSCG",
+    "latent_posterior":
+        "DOI 10.1038/s41586-024-08548-w; Figure 4 comparison",
+    "model_parameter_state":
+        "DOI 10.1038/s41586-024-08548-w; Methods model sections",
+    "model_representation_output":
+        "DOI 10.1038/s41586-024-08548-w; Figure 4 and model Methods",
+    "derived_representation_geometry":
+        ("DOI 10.1038/s41586-024-08548-w; Figures 2 and 4; "
+         "OSM-DYNAMICS-DEFINITIONS.yaml#geometry_definition"),
+    "inferred_orthemic_profile":
+        "Decision 0015 and OSM-DYNAMICS-DEFINITIONS.yaml#profile_relation",
+    "actual_orthemic_profile": "Decision 0015",
+}
+TASK8_COMPARISON_ROWS = {
+    "endpoint_trajectory_comparison": {
+        "content_kind": "model-comparison",
+        "claim_role": "computational-analogy",
+        "evidence_access_status": "article-text",
+        "source_locator":
+            "DOI 10.1038/s41586-024-08548-w; Figure 4 and accompanying text",
+        "non_claims": {
+            "matching endpoints does not identify a mechanism",
+            "trajectory uniqueness is only among tested models under the reported evaluation",
+        },
+    },
+    "biological_adaptation_comparison": {
+        "content_kind": "biological-source-report",
+        "claim_role": "primary-text-verified",
+        "evidence_access_status": "article-text",
+        "source_locator":
+            "DOI 10.1038/s41586-024-08548-w; Figure 5 and accompanying text",
+        "non_claims": {
+            "model response is future work",
+            "no correctness, convergence, broad generalization, or model transport follows",
+        },
+    },
 }
 
 
@@ -287,6 +346,20 @@ def validate_osm_mapping(mapping):
         if performance.get(field) is not False:
             issues.append("$.comparison.performance.%s must be false" % field)
 
+    mechanism = _as_mapping(comparison.get("mechanism"), "$.comparison.mechanism", issues)
+    if mechanism.get("status") != "underdetermined-by-reported-endpoint-and-trajectory":
+        issues.append("$.comparison.mechanism.status must preserve reported underdetermination")
+    for field in (
+            "identity_established", "causal_equivalence_established",
+            "unique_biological_mechanism_established"):
+        if mechanism.get(field) is not False:
+            issues.append("$.comparison.mechanism.%s must be false" % field)
+    mechanism_nonclaim_rows, mechanism_nonclaims = _string_set(
+        mechanism.get("non_claims"), "$.comparison.mechanism.non_claims", issues)
+    if (mechanism_nonclaims != TASK8_MECHANISM_NONCLAIMS
+            or len(mechanism_nonclaim_rows) != len(TASK8_MECHANISM_NONCLAIMS)):
+        issues.append("$.comparison.mechanism.non_claims must preserve both mechanism boundaries")
+
     adaptation = _as_mapping(comparison.get("adaptation"), "$.comparison.adaptation", issues)
     if adaptation.get("subject") != "biological-ca1-representations":
         issues.append("$.comparison.adaptation.subject must remain biological CA1 representations")
@@ -304,7 +377,7 @@ def validate_osm_mapping(mapping):
         issues.append("$.comparison.adaptation.promotes_to must remain empty")
 
     custody = _as_mapping(doc.get("source_custody"), "$.source_custody", issues)
-    if custody.get("doi") != "10.1038/s41586-024-08548-w":
+    if custody.get("doi") != TASK8_DOI:
         issues.append("$.source_custody.doi must name the Nature article")
     article_loci = _as_list(custody.get("article_loci"), "$.source_custody.article_loci", issues)
     if not article_loci or any(not isinstance(item, str) or not item.strip() for item in article_loci):
@@ -326,6 +399,8 @@ def validate_osm_mapping(mapping):
     if not isinstance(code.get("map_decode_locator"), str) or "chmm_actions.py" not in code.get(
             "map_decode_locator", ""):
         issues.append("$.source_custody.official_code.map_decode_locator must name chmm_actions.py")
+    if code.get("map_decode_evidence_access_status") != "pinned-official-code":
+        issues.append("$.source_custody.official_code MAP decode must remain pinned-official-code evidence")
 
     boundaries = _as_mapping(doc.get("claim_boundaries"), "$.claim_boundaries", issues)
     if boundaries.get("overall_claim_role") != "computational-analogy":
@@ -376,13 +451,76 @@ def validate_osm_root(root):
     definitions = _as_mapping(
         read_yaml(APP + "/OSM-DYNAMICS-DEFINITIONS.yaml"),
         APP + "/OSM-DYNAMICS-DEFINITIONS.yaml", issues)
-    issues.extend(validate_osm_mapping(definitions.get("osm_task8_contract")))
+    contract = _as_mapping(
+        definitions.get("osm_task8_contract"), "definitions.osm_task8_contract", issues)
+    issues.extend(validate_osm_mapping(contract))
+    contract_custody = _as_mapping(
+        contract.get("source_custody"), "contract.source_custody", issues)
+    contract_access = _as_mapping(
+        contract_custody.get("local_access_copy"),
+        "contract.source_custody.local_access_copy", issues)
+    contract_code = _as_mapping(
+        contract_custody.get("official_code"),
+        "contract.source_custody.official_code", issues)
+    contract_boundaries = _as_mapping(
+        contract.get("claim_boundaries"), "contract.claim_boundaries", issues)
+    contract_geometry = _as_mapping(
+        contract_boundaries.get("geometry_definition"),
+        "contract.claim_boundaries.geometry_definition", issues)
+    top_geometry = _as_mapping(
+        definitions.get("geometry_definition"), "definitions.geometry_definition", issues)
+    top_geometry_role = {
+        field: top_geometry.get(field)
+        for field in ("content_kind", "claim_role", "evidence_access_status")
+    }
+    if top_geometry_role != contract_geometry:
+        issues.append("top-level geometry definition must preserve the project-owned contract role")
 
     crosswalk = _as_mapping(
         read_yaml(APP + "/OSM-CSCG-ORTHEME-CROSSWALK.yaml"),
         APP + "/OSM-CSCG-ORTHEME-CROSSWALK.yaml", issues)
     if crosswalk.get("task8_contract_ref") != "OSM-DYNAMICS-DEFINITIONS.yaml#osm_task8_contract":
         issues.append("crosswalk.task8_contract_ref must resolve to the Task 8 contract")
+    if crosswalk.get("overall_status") != TASK8_CROSSWALK_STATUS:
+        issues.append("crosswalk.overall_status must remain a bounded analogy and NOT validation")
+    supported_rows, supported_domains = _string_set(
+        crosswalk.get("supported_domains"), "crosswalk.supported_domains", issues)
+    contract_supported_rows, contract_supported_domains = _string_set(
+        contract_boundaries.get("supported_domains"),
+        "contract.claim_boundaries.supported_domains", issues)
+    if (supported_domains != contract_supported_domains
+            or len(supported_rows) != len(contract_supported_rows)
+            or supported_domains):
+        issues.append("crosswalk.supported_domains must match the empty contract domain")
+
+    crosswalk_custody = _as_mapping(
+        crosswalk.get("source_custody"), "crosswalk.source_custody", issues)
+    crosswalk_article = _as_mapping(
+        crosswalk_custody.get("article"), "crosswalk.source_custody.article", issues)
+    crosswalk_access = _as_mapping(
+        crosswalk_custody.get("local_access_copy"),
+        "crosswalk.source_custody.local_access_copy", issues)
+    crosswalk_code = _as_mapping(
+        crosswalk_custody.get("official_code"),
+        "crosswalk.source_custody.official_code", issues)
+    if crosswalk_article.get("doi") != contract_custody.get("doi"):
+        issues.append("crosswalk article DOI must equal the contract DOI")
+    if crosswalk_article.get("role") != "public-version-of-record":
+        issues.append("crosswalk article role must remain public-version-of-record")
+    if crosswalk_access.get("sha256") != contract_access.get("sha256"):
+        issues.append("crosswalk access-copy hash must equal the contract custody hash")
+    if crosswalk_access.get("role") != "evidence-custody-only":
+        issues.append("crosswalk access-copy role must remain evidence-custody-only")
+    for field in ("sole_public_evidence", "extraction_lines_are_journal_pagination"):
+        if crosswalk_access.get(field) != contract_access.get(field):
+            issues.append("crosswalk access-copy %s must equal the contract boundary" % field)
+    for field in ("repository", "commit", "map_decode_locator"):
+        if crosswalk_code.get(field) != contract_code.get(field):
+            issues.append("crosswalk official-code %s must equal the contract custody" % field)
+    if crosswalk_code.get("role") != "pinned-official-code-evidence-for-map-decode":
+        issues.append("crosswalk MAP role must remain pinned official-code evidence")
+    if contract_code.get("map_decode_evidence_access_status") != "pinned-official-code":
+        issues.append("contract MAP role must remain pinned-official-code")
     crosswalk_rows = _as_list(crosswalk.get("rows"), "crosswalk.rows", issues)
     crosswalk_object_ids = [
         row.get("object_id") for row in crosswalk_rows
@@ -428,6 +566,37 @@ def validate_osm_root(root):
         if actual != expected:
             issues.append("crosswalk object %s must preserve content kind, claim role, "
                           "and evidence-access role" % object_id)
+        if row.get("source_locator") != TASK8_CROSSWALK_LOCATORS[object_id]:
+            issues.append("crosswalk object %s must preserve its exact source locator" % object_id)
+
+    comparison_rows = {}
+    for index, value in enumerate(crosswalk_rows):
+        row = _as_mapping(value, "crosswalk.rows[%d]" % index, issues)
+        comparison_id = row.get("comparison_id")
+        if comparison_id is not None:
+            if not isinstance(comparison_id, str) or not comparison_id:
+                issues.append("crosswalk.rows[%d].comparison_id must be a nonempty string" % index)
+            elif comparison_id in comparison_rows:
+                issues.append("crosswalk comparison_id %s is duplicated" % comparison_id)
+            else:
+                comparison_rows[comparison_id] = row
+    if set(comparison_rows) != set(TASK8_COMPARISON_ROWS):
+        issues.append("crosswalk comparison rows must equal the endpoint and adaptation set")
+    for comparison_id, expected in TASK8_COMPARISON_ROWS.items():
+        row = comparison_rows.get(comparison_id, {})
+        for field in (
+                "content_kind", "claim_role", "evidence_access_status",
+                "source_locator"):
+            if row.get(field) != expected[field]:
+                issues.append("crosswalk comparison %s.%s must preserve its contract value"
+                              % (comparison_id, field))
+        nonclaim_rows, nonclaims = _string_set(
+            row.get("non_claims"),
+            "crosswalk comparison %s.non_claims" % comparison_id, issues)
+        if (nonclaims != expected["non_claims"]
+                or len(nonclaim_rows) != len(expected["non_claims"])):
+            issues.append("crosswalk comparison %s must preserve its required nonclaims"
+                          % comparison_id)
 
     registry = _as_mapping(
         read_yaml("references/source-status.yaml"), "references/source-status.yaml", issues)
@@ -442,6 +611,26 @@ def validate_osm_root(root):
         issues.append("LAT-1.task8_custody extraction lines may not be journal pagination")
     if task8_custody.get("map_decode_evidence_access_status") != "pinned-official-code":
         issues.append("LAT-1.task8_custody MAP decode must remain pinned-official-code evidence")
+    if lat1.get("doi") != contract_custody.get("doi"):
+        issues.append("LAT-1 DOI must equal the Task 8 contract DOI")
+    if task8_custody.get("access_copy_sha256") != contract_access.get("sha256"):
+        issues.append("LAT-1 access-copy hash must equal the Task 8 contract custody hash")
+    if task8_custody.get("access_copy_role") != "local-primary-text-custody-only":
+        issues.append("LAT-1 access-copy role must remain custody-only")
+    if task8_custody.get("access_copy_sole_public_evidence") != contract_access.get(
+            "sole_public_evidence"):
+        issues.append("LAT-1 sole-public-evidence flag must equal the contract boundary")
+    if task8_custody.get("extraction_lines_are_journal_pagination") != contract_access.get(
+            "extraction_lines_are_journal_pagination"):
+        issues.append("LAT-1 pagination flag must equal the contract boundary")
+    for lat_field, contract_field in (
+            ("official_code_repository", "repository"),
+            ("official_code_commit", "commit"),
+            ("map_decode_locator", "map_decode_locator"),
+            ("map_decode_evidence_access_status", "map_decode_evidence_access_status")):
+        if task8_custody.get(lat_field) != contract_code.get(contract_field):
+            issues.append("LAT-1 %s must equal contract official-code %s"
+                          % (lat_field, contract_field))
     return issues
 
 

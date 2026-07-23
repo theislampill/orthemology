@@ -157,6 +157,14 @@ osm_task8_contract:
       nonorthogonal_controls: [relu-rnn, sigmoid-rnn, lstm, transformer]
       all_non_cscg_failed: false
       geometry_necessary: false
+    mechanism:
+      status: underdetermined-by-reported-endpoint-and-trajectory
+      identity_established: false
+      causal_equivalence_established: false
+      unique_biological_mechanism_established: false
+      non_claims:
+      - endpoint similarity does not identify a mechanism
+      - trajectory discrimination does not establish mechanism identity or causal equivalence
     adaptation:
       subject: biological-ca1-representations
       conditions: [novel-indicator-cues, stretched-track-segments]
@@ -182,6 +190,7 @@ osm_task8_contract:
       repository: sprustonlab/OSM_Paper_Figures
       commit: c1d1788b54c737efe24402e02762eee10da0d0d7
       map_decode_locator: "fig_4/fig_4_CSCG/chmm_actions.py:176-187"
+      map_decode_evidence_access_status: pinned-official-code
   claim_boundaries:
     overall_claim_role: computational-analogy
     content_kind: model-comparison

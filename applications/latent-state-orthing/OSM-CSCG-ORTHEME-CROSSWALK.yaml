@@ -27,6 +27,7 @@ source_custody:
     map_decode_locator: "fig_4/fig_4_CSCG/chmm_actions.py:176-187"
     role: pinned-official-code-evidence-for-map-decode
 overall_status: "bounded computational analogy and constraint; NOT validation"
+supported_domains: []
 rows:
 - osm_concept: "world/task state (position plus trial type in the reported task)"
   object_id: world_task_state
@@ -146,6 +147,7 @@ rows:
   orthemology_object: "actual_orthemic_profile; project ground truth under a declared analysis"
   non_claims: ["the model does not manufacture ground truth", "the article supplies no actual orthemic profile"]
 - osm_concept: "endpoint similarity and trajectory discrimination"
+  comparison_id: endpoint_trajectory_comparison
   claim_status: source-report
   content_kind: model-comparison
   claim_role: computational-analogy
@@ -154,6 +156,7 @@ rows:
   orthemology_object: "similar reported final representational structure is distinct from trajectory, performance, adaptation, mechanism, and parameter identity"
   non_claims: ["matching endpoints does not identify a mechanism", "trajectory uniqueness is only among tested models under the reported evaluation"]
 - osm_concept: "altered-cue and stretched-track biological adaptation"
+  comparison_id: biological_adaptation_comparison
   claim_status: source-report
   content_kind: biological-source-report
   claim_role: primary-text-verified

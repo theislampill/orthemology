@@ -376,6 +376,7 @@ claims:
   task8_custody:
     access_copy_sha256: 0D097CBA7BBB25A949E2BF95AF28B5A2259BD8D60B0E5FAC5A74CDF7D05AA814
     access_copy_role: local-primary-text-custody-only
+    access_copy_sole_public_evidence: false
     extraction_lines_are_journal_pagination: false
     official_code_repository: sprustonlab/OSM_Paper_Figures
     official_code_commit: c1d1788b54c737efe24402e02762eee10da0d0d7
