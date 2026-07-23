@@ -716,20 +716,84 @@ sidecars, LaTeX, or publication archives; Task 13 remains their owner.
 **Files:**
 
 - Modify: `manuscript/orthemma-ortheme-systems-revised-draft.md`
+- Modify: `terminology/README.md`
 - Modify: `terminology/orthemic-terminology-pilot-protocol.md`
 - Modify: `references/orthemology.bib`
 - Modify: `references/source-status.yaml`
 - Create: `tests/terminology-etymology-fixtures.yaml`
 - Create: `scripts/validate_terminology_etymology.py`
+- Verify: `scripts/validate_experiment_readiness.py`
+- Regenerate: `docs/current-state.yaml`
+- Regenerate: `docs/provenance/RELEASE-MANIFEST.sha256`
 - Do not modify frozen `terminology/pilot0/` or `terminology/pilot0-v2/` packets.
 
-**Step 1 — red:** Reject claims that `-emma` is an inherited productive English token suffix, that Greek `ema` derives `-ma`, that the coinages are already adopted, or that the system supplies universal primitives/proven isomorphism.
+**Step 0 — reconcile and approve the boundary:** Import no preparation output.
+Reinspect the official post-Task-9 tree and the ignored Task 10 preparation
+packet only as research evidence. Independently review this plan amendment
+before creating Task 10 RED. The amendment resolves two current-owner
+contradictions: `terminology/README.md` must not say `READY TO RUN` while
+Decision 0018 and the experiment owner say
+`READY_FOR_HUMAN_MATCHING_REVIEW`; and the manuscript glossary's CT-01
+definition must say that ortheme instantiation is analysis-relative, with
+task-relative notation licensed only as shorthand after one analysis has been
+fixed. This explicit correction supersedes the stale preparation instruction
+not to alter definitions. Preserve Tasks 11–16 and all Task 9 owners
+byte-for-byte.
 
-**Step 2 — implement:** Say “constructed but morphologically grounded”; preserve established `orth-` and English `-eme`; ground `-emma` only in Greek `-ma/-mat-` result/object/instance morphology; treat `ema` only as deliberately superposed possessive resonance. Frame cross-domain usefulness as benchmark-gated mnemonic/meta-schema hypothesis. If primer semantics must change, create a new frozen packet version instead of editing an old one.
+**Step 1 — red:** Before production changes, add tracked invalid fixtures and
+neighboring valid controls. Reject claims that `-emma` is an inherited
+productive English token suffix, that Greek `ema` derives `-ma`, that the
+coinages are adopted, original, first-coined, empirically taken up, or validated
+by unrelated earlier uses, or that the system supplies universal primitives or
+a proven isomorphism. Reject use of task-relative notation as a primitive or
+outside a scope that fixes one analysis. Reject any readiness value other than
+the exact current `READY_FOR_HUMAN_MATCHING_REVIEW` state while its human gate
+is pending, and reject claims that a bounded negative search establishes
+novelty or first coinage. Add malformed, missing, and duplicate bibliography,
+source-status, and fixture structures; malformed and duplicate analysis
+indexing; benchmark bypasses; readiness-gate bypasses; and mutations of either
+frozen pilot packet. Each invalid case must have a directly neighboring valid
+control with bounded diagnostics.
 
-**Step 3 — verify:** Run the new validator, source-status, terminology matching, both freeze checks, claim sources, and relevant PDF source conversion.
+**Step 2 — implement:** Say “constructed but morphologically grounded”;
+preserve established `orth-` and English `-eme`. Bound Smyth's direct support to
+Greek result/effect morphology and the `-mat-` to `-ma` relation; “object” and
+“instance” are project glosses, not quotations or direct source claims. LSJ
+supports the possessive form only. The deliberately superposed possessive
+resonance and its non-derivational relationship to `-ma/-mat-` are declared
+project/cross-source synthesis, not an LSJ or Smyth conclusion. Unicode 1999
+and Burridge–Blaxter 2020 are unrelated historical spelling/sense attestations
+only. They never establish this project's sense, adoption, originality,
+priority, empirical uptake, or lineage. A bounded negative search is reported
+only as bounded search evidence and never as proof of novelty or first coinage.
+Frame cross-domain usefulness as a benchmark-gated mnemonic/meta-schema
+hypothesis. Correct the live terminology README to the exact Decision 0018
+readiness state. Correct the manuscript glossary so the ortheme definition is
+analysis-relative and task-relative notation is shorthand only after fixing an
+analysis. If any frozen primer semantics must change, create a separately
+reviewed new packet version rather than editing an old packet.
 
-**Step 4 — commit:** Regenerate state/manifest and commit `docs: correct terminology provenance and utility claims`.
+**Step 3 — verify:** Run the new validator,
+`scripts/validate_experiment_readiness.py`, source-status, terminology
+matching, both freeze checks, claim sources, the focused RED/valid-control
+suite, schema and structured parsing, malformed-input and recursive mutation
+checks, current-state and candidate-state checks, repo validation, and the
+affected pinned suite. Regenerate current state through its owner and regenerate
+the release manifest twice with byte parity; then rerun their read-only checks.
+Confirm analysis-index exactness, readiness exactness, benchmark gating,
+historical-attestation boundaries, and frozen-packet hashes. Preserve Decisions
+0001–0022 and the complete Tasks 11–16 plan suffix byte-for-byte. Review the
+complete diff for scope and hygiene. Do not build, edit, or commit PDFs,
+sidecars, LaTeX, source archives, or claimed render output; Task 13 remains
+their owner.
+
+**Step 4 — commit and review:** Commit exactly the bounded Task 10 terminology,
+source, bibliography, fixture, validator, current-state, and manifest owners as
+`docs: correct terminology provenance and utility claims`. Submit that exact
+commit to a fresh finite independent review against the explicit Task 10
+acceptance boundary. Repair only reproduced blockers through a new tracked RED
+and one sole writer, rerun the complete Task 10 gate on the final tree, and
+approve Task 10 before opening official Task 11 integration.
 
 ## Task 11: Replace the math allowlist with locus-sensitive classification
 
