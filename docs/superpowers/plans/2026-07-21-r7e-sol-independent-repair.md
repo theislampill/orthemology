@@ -436,6 +436,55 @@ Push one exact fast-forward descendant and require both new exact-SHA workflows
 to pass before Task 8. No force-push, rebase, amend, or history rewrite is
 authorized.
 
+### Post-Task-7 CI checkpoint amendment: current Typst PDF parity
+
+The exact-SHA push and pull-request workflows for
+`978d1f64edb454f56f6eb92d000bf9e125424b8e`, runs `29973296710` and
+`29973299054`, passed the approved Task 6 portability repair and every prior
+workflow step, then failed identically at `scripts/build_pdfs.py --check`.
+Only `orthemma-ortheme-systems-draft` had a stale source hash and nonidentical
+clean rebuild; the other five artifacts passed every PDF check. Preserve these
+runs as artifact-parity evidence. This amendment is an interim consistency
+checkpoint for the current Typst artifacts. It does not begin Task 13, replace
+Task 13's final LaTeX/source-package work, or authorize importing preparation
+PDFs or sidecars.
+
+**Files:**
+
+- Regenerate through `scripts/build_pdfs.py`: all six `artifacts/*.pdf`
+- Regenerate through `scripts/build_pdfs.py`: all six
+  `artifacts/*.sources.json`
+- Regenerate: `docs/current-state.yaml`
+- Regenerate: `docs/provenance/RELEASE-MANIFEST.sha256`
+
+**Repair and verification:** Run the repository owner once from the exact
+approved source commit immediately preceding the artifact commit. Review the
+complete generated diff; do not hand-edit PDF bytes, source hashes, sidecar
+hashes, source commits, page counts, tool versions, or generation status. All
+sidecars must name that exact source commit, recompute their declared source and
+PDF hashes, and preserve the two-stage artifact-commit wording. Build twice
+from clean temporary state and require byte equality, then require
+`build_pdfs.py --check` to pass all source, sidecar, clean-rebuild, heading,
+Markdown-leak, and deterministic-metadata checks.
+
+Render every page of every changed PDF through the repository renderer or
+Poppler. Visually inspect the complete main manuscript, with explicit attention
+to the migrated formula around section 6.4, the episode tuple and new
+waking/somnic section around 8.2, headings, page transitions, clipping,
+overlap, tofu, replacement characters, and raw math-like text. For the five
+source-unchanged documents, require extracted content parity apart from the
+declared provenance header and inspect their title/provenance pages plus a
+formula-heavy sample. Record exact Python, Typst, markdown-it-py, pypdf, and
+renderer versions. Do not call this the final Task 13 visual approval.
+
+Commit one bounded generated-artifact descendant and submit that exact commit
+to one finite independent artifact review. Rerun the exact 23-command matrix,
+the complete workflow command surface including the PDF check, state/candidate
+checks, twice-byte-identical manifest parity, structured parsing, Decisions
+0001-0022 preservation, and clean-tree review. Push one exact fast-forward
+descendant and require both new exact-SHA workflows to pass before Task 8. No
+force-push, rebase, amend, or history rewrite is authorized.
+
 ## Task 8: Correct the OSM/CSCG comparison and object firewall
 
 **Files:**
