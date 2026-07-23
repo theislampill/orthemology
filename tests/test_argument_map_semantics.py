@@ -107,6 +107,26 @@ class ArgumentMapSemanticsTests(unittest.TestCase):
         self.assert_invalid(
             lambda d: d.pop("operative_noetic_frame"), "operative_noetic_frame"
         )
+        self.assert_invalid(
+            lambda d: d["nodes"][0].__setitem__("scope", "school-neutral"),
+            "invalid scope",
+        )
+
+    def test_inference_and_bridge_vocabularies_are_closed(self):
+        self.assert_invalid(
+            lambda d: d["nodes"][0].__setitem__("inference_type", "obvious"),
+            "invalid inference_type",
+        )
+        self.assert_invalid(
+            lambda d: d["nodes"][0].__setitem__("bridge_status", "proven"),
+            "invalid bridge_status",
+        )
+
+    def test_non_entailment_firewalls_are_complete(self):
+        self.assert_invalid(
+            lambda d: d["non_entailments"].pop(),
+            "missing non_entailment",
+        )
 
     def test_school_or_source_label_cannot_be_warrant(self):
         self.assert_invalid(
@@ -183,6 +203,12 @@ class ArgumentMapSemanticsTests(unittest.TestCase):
                     lambda d, f=family: d["rival_routes"].pop(f),
                     f"missing rival route {family}",
                 )
+        self.assert_invalid(
+            lambda d: d["rival_routes"]["modal-primitivism"].__setitem__(
+                "joint", "ARG-MISSING"
+            ),
+            "rival route joint",
+        )
 
     def test_source_references_resolve_and_roles_match(self):
         self.assert_invalid(
@@ -275,6 +301,12 @@ class ArgumentMapSemanticsTests(unittest.TestCase):
             lambda d: d["speech_bearers"][1].__setitem__("created_status", "uncreated"),
             "created bearer",
         )
+        self.assert_invalid(
+            lambda d: d["speech_bearers"][0].__setitem__(
+                "bearer", "generic created thing"
+            ),
+            "Speech bearer semantics",
+        )
 
     def test_capacity_does_not_imply_actual_speech(self):
         self.assert_invalid(
@@ -306,6 +338,15 @@ class ArgumentMapSemanticsTests(unittest.TestCase):
             "dangling bridge_premise_ref",
         )
 
+    def test_generator_pure_validation_rejects_semantic_mutation(self):
+        data = self.mutated(
+            lambda d: d["cross_framework_policy"].__setitem__(
+                "warrant_role", "coequal-neutral-tribunal"
+            )
+        )
+        issues = generator.collect_issues(data, self.registry)
+        self.assertTrue(any("dialectical accessibility" in issue for issue in issues))
+
     def test_malformed_nested_values_return_bounded_issues(self):
         samples = [
             None,
@@ -314,6 +355,10 @@ class ArgumentMapSemanticsTests(unittest.TestCase):
             {"nodes": ["not-an-object"]},
             self.mutated(lambda d: d["nodes"][0].__setitem__("premises", "bad")),
             self.mutated(lambda d: d.__setitem__("speech_bearers", {"bad": "shape"})),
+            self.mutated(lambda d: d["nodes"][0].__setitem__("id", ["bad"])),
+            self.mutated(lambda d: d["nodes"][0].__setitem__("dependencies", [{}])),
+            self.mutated(lambda d: d["nodes"][0].__setitem__("source_status_refs", [{}])),
+            self.mutated(lambda d: d.__setitem__("non_entailments", [["bad"]])),
         ]
         for sample in samples:
             with self.subTest(sample=repr(sample)[:60]):

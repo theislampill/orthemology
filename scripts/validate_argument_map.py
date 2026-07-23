@@ -22,6 +22,34 @@ CLAIM_ROLES = {
     "computational-analogy",
     "creed-internal-inference",
 }
+SCOPES = {
+    "cross-framework-dialectical",
+    "athari-taymiyyan-operative",
+    "source-bounded-proposed-crosswalk",
+}
+INFERENCE_TYPES = {
+    "analytic",
+    "explanatory",
+    "computational-analogy",
+    "teleological",
+    "transcendental-scope-limited",
+    "metaphysical-explanatory",
+    "modal",
+    "metaphysical",
+    "creed-internal-teleological",
+    "revelational-school-internal",
+    "typed-creed-internal-distinction",
+    "orthemological-extension",
+}
+BRIDGE_STATUSES = {
+    "bounded",
+    "conditional",
+    "illustrative-only",
+    "held",
+    "held-pending-source-custody",
+    "revelational",
+    "held-pending-individually-verified-lexical-sources",
+}
 REFERENCE_ROLES = {
     "primary-text",
     "secondary-scholarship",
@@ -75,6 +103,22 @@ SPEECH_CREATED = {
     "SPEECH-BEARER-03",
     "SPEECH-BEARER-04",
     "SPEECH-BEARER-07",
+}
+SPEECH_BEARER_TEXT = {
+    "SPEECH-BEARER-01": "created human convention",
+    "SPEECH-BEARER-02": "created creaturely speaking recitation and writing",
+    "SPEECH-BEARER-03": "created voice and breath",
+    "SPEECH-BEARER-04": "created ink page screen and media",
+    "SPEECH-BEARER-05": "Allah's act of speaking",
+    "SPEECH-BEARER-06": "revealed Arabic wording as Allah's Speech",
+    "SPEECH-BEARER-07": "created creaturely hearing and reception",
+}
+NON_ENTAILMENTS = {
+    "OSM and DAEE do not validate metaphysics or theology",
+    "empirical learnability does not yield normativity without a separate bridge",
+    "a school label or source identity does not supply warrant",
+    "a lexical range does not conjunctively entail every sense at every token",
+    "capacity for disclosure does not entail an actual divine Speech event",
 }
 
 
@@ -136,6 +180,17 @@ def validate_mapping(data: Any, source_registry: Any) -> list[str]:
 
     if data.get("divine_formal_object_policy") != "Allah-is-never-an-internal-formal-object":
         _add(issues, "Allah must never be represented as an internal formal object")
+    non_entailments = data.get("non_entailments")
+    if not isinstance(non_entailments, list):
+        _add(issues, "non_entailments must be a list")
+    else:
+        declared_non_entailments = {
+            item for item in non_entailments if isinstance(item, str)
+        }
+        if len(declared_non_entailments) != len(non_entailments):
+            _add(issues, "non_entailments entries must be strings")
+        for missing in sorted(NON_ENTAILMENTS - declared_non_entailments):
+            _add(issues, f"missing non_entailment: {missing}")
 
     fitrah = data.get("fitrah_boundary")
     if (
@@ -149,7 +204,13 @@ def validate_mapping(data: Any, source_registry: Any) -> list[str]:
             "guaranteed-attractor",
             "discourse-readable-soul-state",
             "metaortheme",
-        }.issubset(set(fitrah.get("not", [])))
+        }.issubset(
+            {
+                item
+                for item in fitrah.get("not", [])
+                if isinstance(item, str)
+            }
+        )
     ):
         _add(issues, "fiṭrah must remain qualitative, defeasible, and multidimensional")
 
@@ -209,6 +270,8 @@ def validate_mapping(data: Any, source_registry: Any) -> list[str]:
                 _add(issues, "seven Speech bearers require distinct stable ids")
                 continue
             ids.add(bearer_id)
+            if bearer.get("bearer") != SPEECH_BEARER_TEXT.get(bearer_id):
+                _add(issues, f"Speech bearer semantics drift for {bearer_id}")
             created_status = bearer.get("created_status")
             if bearer_id in SPEECH_CREATED and created_status != "created":
                 _add(issues, f"created bearer {bearer_id} must remain created")
@@ -222,8 +285,27 @@ def validate_mapping(data: Any, source_registry: Any) -> list[str]:
         for family in sorted(RIVAL_FAMILIES):
             _add(issues, f"missing rival route {family}")
     else:
+        route_nodes = data.get("nodes")
+        route_node_ids = (
+            {
+                node.get("id")
+                for node in route_nodes
+                if isinstance(node, dict) and isinstance(node.get("id"), str)
+            }
+            if isinstance(route_nodes, list)
+            else set()
+        )
         for family in sorted(RIVAL_FAMILIES - set(routes)):
             _add(issues, f"missing rival route {family}")
+        for family, route in routes.items():
+            if family not in RIVAL_FAMILIES:
+                _add(issues, f"unexpected rival route {family}")
+            if (
+                not isinstance(route, dict)
+                or route.get("joint") not in route_node_ids
+                or not isinstance(route.get("disposition"), str)
+            ):
+                _add(issues, f"rival route joint or disposition invalid for {family}")
 
     nodes = data.get("nodes")
     if not isinstance(nodes, list) or not nodes:
@@ -263,7 +345,7 @@ def validate_mapping(data: Any, source_registry: Any) -> list[str]:
                 issues,
                 f"{node_id}: copied source-custody field {field} is prohibited; resolve it from the registry owner",
             )
-        if node_id in seen:
+        if isinstance(node_id, str) and node_id in seen:
             _add(issues, f"duplicate node id {node_id}")
         elif isinstance(node_id, str):
             seen.add(node_id)
@@ -271,6 +353,12 @@ def validate_mapping(data: Any, source_registry: Any) -> list[str]:
             _add(issues, f"{node_id}: order must equal canonical position {index}")
         if not isinstance(node_id, str) or not re.fullmatch(r"ARG-\d{2}", node_id):
             _add(issues, f"{node_id}: id must be stable ARG-NN")
+        if node.get("scope") not in SCOPES:
+            _add(issues, f"{node_id}: invalid scope {node.get('scope')}")
+        if node.get("inference_type") not in INFERENCE_TYPES:
+            _add(issues, f"{node_id}: invalid inference_type {node.get('inference_type')}")
+        if node.get("bridge_status") not in BRIDGE_STATUSES:
+            _add(issues, f"{node_id}: invalid bridge_status {node.get('bridge_status')}")
 
         premises = node.get("premises")
         if not isinstance(premises, list) or not premises:
@@ -288,7 +376,9 @@ def validate_mapping(data: Any, source_registry: Any) -> list[str]:
             _add(issues, f"{node_id}: dependencies must be a list")
         else:
             for dependency in dependencies:
-                if dependency not in node_ids:
+                if not isinstance(dependency, str):
+                    _add(issues, f"{node_id}: malformed dependency")
+                elif dependency not in node_ids:
                     _add(issues, f"{node_id}: dangling dependency {dependency}")
                 elif dependency == node_id:
                     _add(issues, f"{node_id}: self dependency")
@@ -297,7 +387,9 @@ def validate_mapping(data: Any, source_registry: Any) -> list[str]:
             _add(issues, f"{node_id}: bridge_premise_refs must be a list")
         else:
             for bridge_ref in bridge_refs:
-                if bridge_ref not in claim_ids:
+                if not isinstance(bridge_ref, str):
+                    _add(issues, f"{node_id}: malformed bridge_premise_ref")
+                elif bridge_ref not in claim_ids:
                     _add(issues, f"{node_id}: dangling bridge_premise_ref {bridge_ref}")
 
         role = node.get("claim_role")
@@ -305,6 +397,10 @@ def validate_mapping(data: Any, source_registry: Any) -> list[str]:
             _add(issues, f"{node_id}: invalid claim_role {role}")
         if index >= 4 and role == "computational-analogy":
             _add(issues, f"{node_id}: upper node cannot use computational-analogy")
+        if role == "creed-internal-inference" and node.get("scope") != "athari-taymiyyan-operative":
+            _add(issues, f"{node_id}: creed-internal claim requires Athari operative scope")
+        if node.get("scope") == "cross-framework-dialectical" and role == "creed-internal-inference":
+            _add(issues, f"{node_id}: cross-framework node cannot use creed-internal warrant")
         if node.get("warrant_basis") not in WARRANT_BASES:
             _add(issues, f"{node_id}: invalid warrant_basis")
         objection = node.get("strongest_objection")
@@ -330,17 +426,20 @@ def validate_mapping(data: Any, source_registry: Any) -> list[str]:
         if not isinstance(refs, list):
             _add(issues, f"{node_id}: source_status_refs must be a list")
             refs = []
+        valid_refs = [ref for ref in refs if isinstance(ref, str)]
+        if len(valid_refs) != len(refs):
+            _add(issues, f"{node_id}: source_status_refs entries must be strings")
         if not isinstance(access, dict):
             _add(issues, f"{node_id}: evidence_access_status must be a mapping")
             access = {}
         if not isinstance(ref_roles, dict):
             _add(issues, f"{node_id}: reference_roles must be a mapping")
             ref_roles = {}
-        if set(ref_roles) != set(refs):
+        if set(ref_roles) != set(valid_refs):
             _add(issues, f"{node_id}: reference_roles keys must equal source_status_refs")
-        if set(access) != set(refs):
+        if set(access) != set(valid_refs):
             _add(issues, f"{node_id}: evidence_access_status keys must equal source_status_refs")
-        for ref in refs:
+        for ref in valid_refs:
             row = source_rows.get(ref)
             if row is None:
                 _add(issues, f"{node_id}: unresolved source_status_ref {ref}")
@@ -362,7 +461,11 @@ def validate_mapping(data: Any, source_registry: Any) -> list[str]:
         if index >= 4 and ("osm-supported" in text or "daee-result" in text or "empirical proof" in text):
             _add(issues, f"{node_id}: upper node cannot be validated by OSM/DAEE")
 
-    by_id = {node.get("id"): node for node in nodes if isinstance(node, dict)}
+    by_id = {
+        node.get("id"): node
+        for node in nodes
+        if isinstance(node, dict) and isinstance(node.get("id"), str)
+    }
     norm = by_id.get("ARG-04")
     if isinstance(norm, dict):
         dependencies = norm.get("dependencies")

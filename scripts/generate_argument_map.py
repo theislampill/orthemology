@@ -5,6 +5,8 @@ from __future__ import annotations
 
 import argparse
 import copy
+import importlib.util
+import sys
 from pathlib import Path
 from typing import Any
 
@@ -45,6 +47,22 @@ def collect_issues(data: Any, source_registry: Any = None) -> list[str]:
             seen.add(node_id)
         if raw.get("order") != index:
             issues.append(f"node {node_id or index} order must be {index}")
+    if source_registry is not None:
+        module_name = "_task9_argument_validator_for_generator"
+        validator = sys.modules.get(module_name)
+        if validator is None:
+            validator_path = ROOT / "scripts" / "validate_argument_map.py"
+            spec = importlib.util.spec_from_file_location(module_name, validator_path)
+            if spec is None or spec.loader is None:
+                issues.append("could not load independent semantic validator")
+            else:
+                validator = importlib.util.module_from_spec(spec)
+                sys.modules[module_name] = validator
+                spec.loader.exec_module(validator)
+        if validator is not None:
+            for issue in validator.validate_mapping(data, source_registry):
+                if issue not in issues:
+                    issues.append(issue)
     return issues[:100]
 
 
