@@ -397,6 +397,45 @@ review. Push one exact fast-forward descendant, require both new exact-SHA push
 and pull-request workflows to pass, and only then open Task 8. No force-push,
 rebase, amend, or history rewrite is authorized.
 
+### Post-Task-7 CI checkpoint amendment: historical-v1 test portability
+
+The exact-SHA push and pull-request workflows for
+`c11b32d2daf6948f280e7155974a0d5e9e3e6d4a`, runs `29972056552` and
+`29972058381`, passed the approved math-source classifier gate and failed
+identically in `tests/test_semantic_operator_contract.py`. Twelve of thirteen
+Task 6 tests passed. The remaining test attempted to read a file from ancestor
+commit `167ce32bdc396490d219cdfbbd436babaa59e21a`, which is not an available
+object in the default shallow GitHub Actions checkout. Preserve the two runs as
+test-owner portability evidence. This amendment does not reopen Task 6
+semantics, alter the immutable v1 owner, begin Task 8, or authorize fetching
+repository history in CI.
+
+**Files:**
+
+- Modify: `tests/test_semantic_operator_contract.py`
+- Regenerate: `docs/current-state.yaml`
+- Regenerate: `docs/provenance/RELEASE-MANIFEST.sha256`
+
+**Red and repair:** Treat the two exact remote failures as the frozen RED and
+reproduce the boundary in an isolated depth-one checkout before production
+test-owner changes. Replace the ancestor-history lookup with deterministic
+verification of both the immutable v1 file's fixed SHA-256 content digest and
+its fixed Git blob identity computed from the working-tree bytes. Add a
+neighboring tamper control proving changed bytes cannot satisfy either frozen
+identity. Preserve the current v1/v2 discriminator, explicit migration,
+determinism, idempotency, historical identity, and all other Task 6 tests. Do
+not skip based on checkout depth, weaken the expected identities, modify the
+historical v1 file, add a network fetch, or match CI environment names.
+
+Implement this as one bounded descendant commit and submit the exact commit to
+one finite independent review. Rerun the Task 6 focused and production checks,
+the exact 23-command matrix, the accumulated Task 4-7 affected surface,
+generated-state and twice-byte-identical manifest parity, structured parsing,
+changed-Python AST, Decisions 0001-0022 preservation, and clean-tree review.
+Push one exact fast-forward descendant and require both new exact-SHA workflows
+to pass before Task 8. No force-push, rebase, amend, or history rewrite is
+authorized.
+
 ## Task 8: Correct the OSM/CSCG comparison and object firewall
 
 **Files:**
