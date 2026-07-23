@@ -583,8 +583,10 @@ commit to one finite independent Task 8 review before Task 9.
 - Modify: `companion/ARGUMENT-MAP-ORTHABILITY.md`
 - Modify: `companion/OBJECTIONS-AND-REPLIES.md`
 - Modify: `companion/orthability-divine-attributes-and-speech-athari.md`
-- Modify when new report-19, Rabb, or classical sources are cited: `references/source-status.yaml`
-- Modify when new report-19, Rabb, or classical sources are cited: `references/orthemology.bib`
+- Modify when an individually identified underlying Rabb or classical work is
+  cited: `references/source-status.yaml`
+- Modify when an individually identified underlying Rabb or classical work is
+  cited: `references/orthemology.bib`
 - Modify: `scripts/validate_argument_map.py`
 - Create: `tests/test_argument_map_semantics.py`
 
@@ -595,8 +597,9 @@ bearers, pure-validation obligations, and exact commit boundary below are
 finite and internally consistent. Do not begin implementation until the
 amendment is approved.
 
-**Step 1 — red:** Require stable IDs, scope, bridge/inference type, source role
-and references, strongest objection, rival exit, and generated count/ID parity.
+**Step 1 — red:** Require stable IDs, scope, bridge/inference type, canonical
+claim role, resolvable source-status references, per-reference roles, evidence
+access status, strongest objection, rival exit, and generated count/ID parity.
 Represent cross-framework dialectical accessibility separately from the
 declared Atharī/Taymiyyan operative noetic frame. Cross-framework scope is not a
 criterion-free or coequal tribunal of truth or soundness; objective orthability
@@ -607,11 +610,13 @@ The common-premise positive fittingness-to-Wisdom bridge is presently
 unestablished. Tests must require it to remain explicitly
 `held|conditional|removed` and must prevent its promotion from comparative
 materials. This does not block a source-bounded Atharī/Taymiyyan route whose
-premises, source roles, inferential reach, and operative frame are declared.
+premises, claim roles, per-reference roles, inferential reach, and operative
+frame are declared.
 
 Add RED for neutral-tribunal promotion; missing operative frame; school or
-source label used as warrant; unsupported cross-framework promotion; source
-role, evidence-access, citation, edition, or locator drift; modern
+source label used as warrant; unsupported cross-framework promotion; claim-role,
+per-reference-role, source-status-reference, evidence-access, citation,
+edition, or locator drift; modern
 proper-function comparison attributed to Ibn Taymiyya or treated as proof of a
 Designer; fiṭrah reduced to a scalar, coordinate, algorithm, guaranteed
 attractor, or discourse-readable soul state; Rabb lexical range collapsed into
@@ -633,16 +638,35 @@ semantic rules, never fixture-ID or literal-string matches.
 **Step 2 — implement:** Repair rung 8 so it does not assume the personal
 attributes it argues for. Route the naturalist, primitivist, Platonist, modal,
 aseity/bootstrapping, Euthyphro/fittingness, and impersonal exits explicitly.
-Use distinct source roles: `primary_text`, `secondary_reconstruction`,
-`cross_source_synthesis`, `comparative_or_rival`,
-`creed_internal_inference`, and `proposed_orthemological_extension`. Evidence
-access, repository extraction, citation locator, edition, and primary/secondary
-status remain separate and cannot promote one another.
+Preserve the Task 7 field owners and canonical hyphenated vocabulary:
+
+- `claim_role` is exactly one of `primary-text-verified`,
+  `secondary-reconstruction`, `cross-source-synthesis`,
+  `orthemological-extension`, `computational-analogy`, or
+  `creed-internal-inference`;
+- `source_status_refs` contains only resolvable IDs from
+  `references/source-status.yaml`;
+- `evidence_access_status` remains a separate access/status classification
+  compatible with the referenced registry rows; and
+- `reference_roles` is a per-reference mapping keyed by each
+  `source_status_ref`, with a bounded role such as `primary-text`,
+  `secondary-scholarship`, `comparative`, `rival`, or `lexical-reference`.
+
+Do not put `creed-internal-inference` or `orthemological-extension` into
+`reference_roles`; they remain claim roles. When one prose sentence would need
+multiple incompatible claim roles, split it into separately identified claim
+nodes rather than making either field multi-purpose. Evidence access,
+repository extraction, citation locator, edition, and primary/secondary status
+remain separate and cannot promote one another.
 
 Freeze these source guardrails:
 
-- report 19 supports only a bounded classical/Atharī route, subject to exact
-  locator, edition, translation, and source-role status;
+- report 19 and every Deep Research packet are research-only discovery aids:
+  they are non-citable, are not repository evidence, and cannot support a
+  claim. Only an individually identified underlying work entered through
+  `references/orthemology.bib` and `references/source-status.yaml`, with its
+  edition, locator, translation where applicable, access status, and
+  per-reference role verified, may support the bounded classical/Atharī route;
 - El-Tobgui is secondary reconstruction, never a substitute for cited primary
   text;
 - Plantinga/proper functionalism is modern comparison, not Ibn Taymiyya's named

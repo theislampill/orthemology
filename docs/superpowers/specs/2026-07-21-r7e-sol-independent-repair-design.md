@@ -180,14 +180,30 @@ and inferential boundaries. Empirical learnability does not yield normativity
 without an explicit, separately defended bridge. Personal attributes cannot be
 assumed in the premise that purports to establish them.
 
-Keep `primary_text`, `secondary_reconstruction`, `cross_source_synthesis`,
-`comparative_or_rival`, `creed_internal_inference`, and
-`proposed_orthemological_extension` as distinct source roles. Evidence access,
-local extraction, exact locator, edition/translation identity, and source role
-cannot promote one another. Report 19 supports only a bounded classical/Atharī
-route pending exact locator and edition status. El-Tobgui remains secondary
-reconstruction. Plantinga/proper functionalism is modern comparison, not Ibn
-Taymiyya's named theory and not proof of a Designer.
+Preserve the Task 7 source fields rather than creating a second claim-role
+namespace. `claim_role` uses exactly the canonical hyphenated values
+`primary-text-verified`, `secondary-reconstruction`,
+`cross-source-synthesis`, `orthemological-extension`,
+`computational-analogy`, and `creed-internal-inference`.
+`source_status_refs` contains only resolvable `references/source-status.yaml`
+IDs. `evidence_access_status` separately records access/status and must agree
+with those registry rows. A separate `reference_roles` mapping assigns each
+referenced ID its bounded per-reference function:
+`primary-text|secondary-scholarship|comparative|rival|lexical-reference`.
+Creed-internal inference and proposed orthemological extension are claim roles,
+not source roles. A composite sentence that would require incompatible claim
+roles is split into separately identified claim nodes. Evidence access, local
+extraction, exact locator, edition/translation identity, source status, claim
+role, and per-reference role cannot promote one another.
+
+Report 19 and all Deep Research packets are research-only discovery aids. They
+are non-citable, are not repository evidence, and cannot support a claim. Only
+individually identified underlying works entered through the bibliography and
+source-status owners, with verified edition, locator, translation where
+applicable, access status, and reference role, may support the bounded
+classical/Atharī route. El-Tobgui remains secondary reconstruction.
+Plantinga/proper functionalism is modern comparison, not Ibn Taymiyya's named
+theory and not proof of a Designer.
 
 Rabb lexical evidence supports at most a layered candidate crosswalk among
 token, sense, interpretive rule, context binding, and disambiguation. A lexical
