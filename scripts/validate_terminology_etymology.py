@@ -62,8 +62,45 @@ def normalize(text: str) -> str:
     return " ".join(text.split())
 
 
+def _claim_clauses(text: str) -> list[str]:
+    return [
+        clause.strip()
+        for clause in re.split(r"(?<=[.!?;])\s+|\n+", text)
+        if clause.strip()
+    ]
+
+
+def _positive_claim_role(
+    clause: str,
+    subject_pattern: str,
+    predicate_pattern: str,
+    object_pattern: str,
+    *,
+    max_span: int = 220,
+) -> bool:
+    """Match a bounded positive subject-predicate-object claim in one clause."""
+    subjects = list(re.finditer(subject_pattern, clause))
+    predicates = list(re.finditer(predicate_pattern, clause))
+    objects = list(re.finditer(object_pattern, clause))
+    for subject in subjects:
+        for predicate in predicates:
+            if predicate.start() < subject.end():
+                continue
+            for claimed_object in objects:
+                if claimed_object.start() < predicate.end():
+                    continue
+                if claimed_object.end() - subject.start() > max_span:
+                    continue
+                role_span = clause[subject.start():claimed_object.end()]
+                if re.search(r"\b(?:not|never|no|none|neither|without)\b", role_span):
+                    continue
+                return True
+    return False
+
+
 def claim_failures(text: str) -> set[str]:
     n = normalize(text)
+    clauses = _claim_clauses(n)
     failures: set[str] = set()
     if re.search(r"\b(inherited|productive) english suffix -?emma\b", n):
         failures.add("E_EMMA_ENGLISH_SUFFIX")
@@ -93,6 +130,20 @@ def claim_failures(text: str) -> set[str]:
             r"(?:project-specific|project's).{0,15}(?:meaning|definition|sense)",
             n,
         )
+        or any(
+            _positive_claim_role(
+                clause,
+                r"\b(?:smyth|lsj|merriam-webster|constable|burridge|blaxter|"
+                r"unicode|dictionary|grammar|lexicon)\b",
+                r"\b(?:shows?|defines?|gives?|supplies?|fixes?|determines?|"
+                r"establishes?|proves?)\b",
+                r"(?:\b(?:ortheme|orthemma)\b.{0,45}\b(?:correct |complete )?"
+                r"(?:project(?:'s|-specific)? )?(?:definition|meaning|sense)\b|"
+                r"\b(?:correct |complete )?project(?:'s|-specific)? "
+                r"(?:definition|meaning|sense)\b.{0,30}\b(?:ortheme|orthemma)\b)",
+            )
+            for clause in clauses
+        )
     ):
         failures.add("E_SOURCE_SCOPE")
     if (
@@ -108,6 +159,16 @@ def claim_failures(text: str) -> set[str]:
             r"(?:has|have) been accepted.{0,35}(?:official|project|terminology|vocabulary)",
             n,
         )
+        or any(
+            _positive_claim_role(
+                clause,
+                r"\bproject\b",
+                r"\b(?:adopts?|adopted|accepts?|accepted|approves?|approved)\b",
+                r"\b(?:all |any |the )?(?:candidate |coined |project )?"
+                r"(?:terms|terminology|vocabulary)\b",
+            )
+            for clause in clauses
+        )
     ):
         failures.add("E_TERMINOLOGY_ADOPTION")
     if re.search(r"decision 0002 adopts the word metaorthemma", n):
@@ -121,6 +182,16 @@ def claim_failures(text: str) -> set[str]:
     if (
         re.search(r"bounded search found no hit.{0,55}(?:unique|original|novel|first)", n)
         or re.search(r"no (?:authoritative )?hit.{0,55}(?:proves?|establishes)(?! no).{0,30}(?:novel|unique|original|first)", n)
+        or any(
+            _positive_claim_role(
+                clause,
+                r"\b(?:a |the )?bounded(?: negative)? search\b",
+                r"\b(?:proves?|establishes?|shows?|demonstrates?|confirms?)\b",
+                r"\b(?:the )?(?:first coinage|first use|novelty|originality|"
+                r"priority|earliest use|uniqueness)\b",
+            )
+            for clause in clauses
+        )
     ):
         failures.add("E_NEGATIVE_SEARCH_NOVELTY")
     if re.search(r"(?:examples|morphology).{0,35}(?:establish|prove).{0,35}cross-domain utility", n):

@@ -105,13 +105,13 @@ invalid_cases:
     prose: Repeated repository use is sufficient to establish terminology utility without the matched benchmark.
     expected_failure_codes: [E_BENCHMARK_BYPASS]
   - id: I20-adoption-paraphrase
-    prose: The candidate vocabulary has been accepted as the project's official terminology.
+    prose: The project has adopted all candidate terms.
     expected_failure_codes: [E_TERMINOLOGY_ADOPTION]
   - id: I21-first-coinage-paraphrase
-    prose: This project introduced ortheme before any prior use.
-    expected_failure_codes: [E_ORTHEME_ORIGINALITY]
+    prose: A bounded negative search proves this is the first coinage.
+    expected_failure_codes: [E_NEGATIVE_SEARCH_NOVELTY]
   - id: I22-source-defined-project-meaning
-    prose: Smyth gives orthemma its project-specific meaning.
+    prose: Smyth shows that orthemma is the correct project definition.
     expected_failure_codes: [E_SOURCE_SCOPE]
   - id: I23-universal-task-ground-truth
     prose: O*_T(m) supplies task-wide ground truth for all analyses with task T.
@@ -165,6 +165,15 @@ valid_controls:
     expected_failure_codes: []
   - id: V14-readiness-exact
     prose: TERM-P0-V2 is READY_FOR_HUMAN_MATCHING_REVIEW while its human gate is pending.
+    expected_failure_codes: []
+  - id: V15-project-non-adoption
+    prose: The project has not adopted any candidate terms.
+    expected_failure_codes: []
+  - id: V16-negative-search-boundary
+    prose: A bounded negative search does not prove first coinage.
+    expected_failure_codes: []
+  - id: V17-source-definition-boundary
+    prose: Smyth does not show that orthemma is the correct project definition.
     expected_failure_codes: []
 
 required_live_claims:
