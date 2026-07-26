@@ -175,6 +175,15 @@ valid_controls:
   - id: V17-source-definition-boundary
     prose: Smyth does not show that orthemma is the correct project definition.
     expected_failure_codes: []
+  - id: V18-feedback-not-adoption
+    prose: The project accepted feedback about the candidate terminology.
+    expected_failure_codes: []
+  - id: V19-unestablished-novelty
+    prose: A bounded negative search shows why novelty remains unestablished.
+    expected_failure_codes: []
+  - id: V20-source-contrast
+    prose: Smyth shows a contrast between orthemma and the correct project definition.
+    expected_failure_codes: []
 
 required_live_claims:
   - document: manuscript/orthemma-ortheme-systems-revised-draft.md

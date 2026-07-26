@@ -76,6 +76,7 @@ def _positive_claim_role(
     predicate_pattern: str,
     object_pattern: str,
     *,
+    complement_pattern: str = r"\s*",
     max_span: int = 220,
 ) -> bool:
     """Match a bounded positive subject-predicate-object claim in one clause."""
@@ -91,8 +92,16 @@ def _positive_claim_role(
                     continue
                 if claimed_object.end() - subject.start() > max_span:
                     continue
-                role_span = clause[subject.start():claimed_object.end()]
-                if re.search(r"\b(?:not|never|no|none|neither|without)\b", role_span):
+                complement = clause[predicate.end():claimed_object.start()]
+                if not re.fullmatch(complement_pattern, complement):
+                    continue
+                polarity_span = clause[
+                    subject.start():min(len(clause), claimed_object.end() + 48)
+                ]
+                if re.search(
+                    r"\b(?:not|never|no|none|neither|without|unestablished)\b",
+                    polarity_span,
+                ):
                     continue
                 return True
     return False
@@ -141,6 +150,7 @@ def claim_failures(text: str) -> set[str]:
                 r"(?:project(?:'s|-specific)? )?(?:definition|meaning|sense)\b|"
                 r"\b(?:correct |complete )?project(?:'s|-specific)? "
                 r"(?:definition|meaning|sense)\b.{0,30}\b(?:ortheme|orthemma)\b)",
+                complement_pattern=r"\s*(?:that\s+)?",
             )
             for clause in clauses
         )
@@ -166,6 +176,7 @@ def claim_failures(text: str) -> set[str]:
                 r"\b(?:adopts?|adopted|accepts?|accepted|approves?|approved)\b",
                 r"\b(?:all |any |the )?(?:candidate |coined |project )?"
                 r"(?:terms|terminology|vocabulary)\b",
+                complement_pattern=r"\s*",
             )
             for clause in clauses
         )
@@ -189,6 +200,7 @@ def claim_failures(text: str) -> set[str]:
                 r"\b(?:proves?|establishes?|shows?|demonstrates?|confirms?)\b",
                 r"\b(?:the )?(?:first coinage|first use|novelty|originality|"
                 r"priority|earliest use|uniqueness)\b",
+                complement_pattern=r"\s*(?:(?:that\s+)?(?:this|it)\s+is\s+)?",
             )
             for clause in clauses
         )
