@@ -77,9 +77,9 @@ authored:
     pdfs: reproducibly built and visually inspected draft artifacts
     legal_publication: open on license, identity, peer review, and external submission
 derived:
-  source_tree_digest: ab6e0756cfe26446d5c04c134ed8aa52b6b8198c841d46f7998607b00d480026
+  source_tree_digest: f3824997c9bb54f8cd29051a308723caa768110469a2aa28e4229243dcbb5715
   source_tree_digest_policy: docs/project-state-inputs.yaml
-  tracked_files: 659
+  tracked_files: 661
   decision_ids:
   - '0001'
   - '0002'
@@ -198,9 +198,10 @@ derived:
   - validate_source_status.py
   - validate_sourcing_state.py
   - validate_state_convergence.py
+  - validate_terminology_etymology.py
   - validate_type_token_semantics.py
   - validate_verdict_semantics.py
-  validator_count: 48
+  validator_count: 49
   fixture_counts:
     verdict: 7
     reason: 8
@@ -238,10 +239,10 @@ derived:
     pilot0_v1: 988a6522498df73ad1c7b0f73961a054ff20862d50fff6d644d0274877412772
     pilot0_v2: e5e65b2f1b38d5767d79103c57afee76a02e09e9fec2fd150a3a680b0fe19c3d
   source_status_summary:
-    SECONDARY_VERIFIED: 8
+    SECONDARY_VERIFIED: 12
     COMPILATION_MEDIATED: 2
     SECONDARY_RECONSTRUCTION: 2
-    PRIMARY_TEXT_EXACT: 3
+    PRIMARY_TEXT_EXACT: 5
     PRIMARY_WORK_THEME: 1
     PRIMARY_LOCUS_EDITION_DEPENDENT: 2
     ORTHEMOLOGICAL_EXTENSION: 1

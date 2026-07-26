@@ -1,0 +1,196 @@
+schema: terminology-etymology-fixtures-v1
+rules:
+  - id: R01
+    failure_code: E_EMMA_ENGLISH_SUFFIX
+    scope: Reject inherited or productive English -emma suffix claims.
+  - id: R02
+    failure_code: E_EMA_DERIVATION
+    scope: Reject derivation of -ma or -emma from Greek ema.
+  - id: R03
+    failure_code: E_UNQUALIFIED_GREEK_DERIVATION
+    scope: Require constructed and analogical qualification.
+  - id: R04
+    failure_code: E_ORTHEME_ORIGINALITY
+    scope: Reject priority or first-coinage claims for ortheme.
+  - id: R05
+    failure_code: E_SOURCE_SCOPE
+    scope: Reject transfer from a source's bounded role to a project definition.
+  - id: R06
+    failure_code: E_ATTESTATION_ADOPTION
+    scope: Reject adoption or retirement conclusions from historical attestation.
+  - id: R07
+    failure_code: E_TERMINOLOGY_ADOPTION
+    scope: Reject claims that the untested candidate vocabulary is adopted.
+  - id: R08
+    failure_code: E_OBJECT_WORD_COLLAPSE
+    scope: Keep conceptual-object adoption distinct from word adoption.
+  - id: R09
+    failure_code: E_UNIVERSALITY
+    scope: Reject universal-primitives claims.
+  - id: R10
+    failure_code: E_PROVEN_ISOMORPHISM
+    scope: Reject proven cross-domain isomorphism claims.
+  - id: R11
+    failure_code: E_NEGATIVE_SEARCH_NOVELTY
+    scope: Reject novelty conclusions from a bounded negative search.
+  - id: R12
+    failure_code: E_UTILITY_OVERCLAIM
+    scope: Keep utility benchmark-gated.
+  - id: R13
+    failure_code: E_TASK_RELATIVE_PRIMITIVE
+    scope: Keep task-relative notation scoped shorthand after one analysis is fixed.
+  - id: R14
+    failure_code: E_READINESS_STATE
+    scope: Reject readiness states beyond the pending human matching review.
+  - id: R15
+    failure_code: E_BENCHMARK_BYPASS
+    scope: Reject adoption or utility conclusions that bypass the matched benchmark.
+
+invalid_cases:
+  - id: I01-inherited-english-emma
+    prose: The inherited English suffix -emma supplies the project label.
+    expected_failure_codes: [E_EMMA_ENGLISH_SUFFIX]
+  - id: I02-productive-english-emma
+    prose: The productive English suffix -emma can form new project nouns.
+    expected_failure_codes: [E_EMMA_ENGLISH_SUFFIX]
+  - id: I03-ema-derives-ma
+    prose: Greek ema is the derivation of Greek -ma.
+    expected_failure_codes: [E_EMA_DERIVATION]
+  - id: I04-ema-derives-emma
+    prose: Greek ἐμά is the derivation of the project ending -emma.
+    expected_failure_codes: [E_EMA_DERIVATION]
+  - id: I05-unqualified-greek-derived
+    prose: The project labels are Greek-derived terms.
+    expected_failure_codes: [E_UNQUALIFIED_GREEK_DERIVATION]
+  - id: I06-ortheme-first-coinage
+    prose: This project first coined the exact spelling ortheme.
+    expected_failure_codes: [E_ORTHEME_ORIGINALITY]
+  - id: I07-prior-use-same-sense
+    prose: The 1999 orthographic-unit use establishes the project's state-type definition.
+    expected_failure_codes: [E_SOURCE_SCOPE]
+  - id: I08-attestation-adopts-term
+    prose: The historical attestation means that this project adopts ortheme.
+    expected_failure_codes: [E_ATTESTATION_ADOPTION]
+  - id: I09-source-proves-definition
+    prose: Smyth establishes the complete project definition of orthemma.
+    expected_failure_codes: [E_SOURCE_SCOPE]
+  - id: I10-terms-already-adopted
+    prose: The project vocabulary is adopted terminology.
+    expected_failure_codes: [E_TERMINOLOGY_ADOPTION]
+  - id: I11-object-word-collapse
+    prose: Decision 0002 adopts the word metaorthemma.
+    expected_failure_codes: [E_OBJECT_WORD_COLLAPSE]
+  - id: I12-universal-primitives
+    prose: These labels name universal primitives across all domains.
+    expected_failure_codes: [E_UNIVERSALITY]
+  - id: I13-proven-isomorphism
+    prose: The terminology proves a cross-domain isomorphism.
+    expected_failure_codes: [E_PROVEN_ISOMORPHISM]
+  - id: I14-bounded-search-proves-novelty
+    prose: Because the bounded search found no hit, metaorthemma is uniquely original.
+    expected_failure_codes: [E_NEGATIVE_SEARCH_NOVELTY]
+  - id: I15-proven-cross-domain-utility
+    prose: The examples establish the cross-domain utility of the terms.
+    expected_failure_codes: [E_UTILITY_OVERCLAIM]
+  - id: I16-provenance-retires-collision
+    prose: The earlier spelling collision requires this project to retire ortheme.
+    expected_failure_codes: [E_ATTESTATION_ADOPTION]
+  - id: I17-task-relative-primitive
+    prose: O*_T(m) is the primitive ground-truth profile for every analysis sharing task T.
+    expected_failure_codes: [E_TASK_RELATIVE_PRIMITIVE]
+  - id: I18-readiness-bypass
+    prose: TERM-P0-V2 is READY_TO_RUN while human matching review is pending.
+    expected_failure_codes: [E_READINESS_STATE]
+  - id: I19-benchmark-bypass
+    prose: Repeated repository use is sufficient to establish terminology utility without the matched benchmark.
+    expected_failure_codes: [E_BENCHMARK_BYPASS]
+
+valid_controls:
+  - id: V01-constructed-grounded
+    prose: The vocabulary is constructed but morphologically grounded; this formation account does not adopt it.
+    expected_failure_codes: []
+  - id: V02-orth-scope
+    prose: Merriam-Webster supports established orth- and its correct or corrective combining-form sense only.
+    expected_failure_codes: []
+  - id: V03-eme-scope
+    prose: English -eme supplies a linguistic-unit analogy, not the project's operational definition.
+    expected_failure_codes: []
+  - id: V04-ma-mat-scope
+    prose: Greek -ma with stem -mat- directly marks result or effect; object or instance is a bounded project gloss.
+    expected_failure_codes: []
+  - id: V05-ema-resonance
+    prose: Greek ἐμά is a deliberately superposed possessive resonance, not a derivation of -ma or -emma.
+    expected_failure_codes: []
+  - id: V06-prior-different-sense
+    prose: Earlier uses attest ortheme in a different orthographic-unit sense only.
+    expected_failure_codes: []
+  - id: V07-attestation-not-adoption
+    prose: Historical attestation and project terminology adoption are independent.
+    expected_failure_codes: []
+  - id: V08-object-not-word
+    prose: Decision 0002 adopts the conceptual object while metaorthemma remains a candidate word.
+    expected_failure_codes: []
+  - id: V09-benchmark-gate
+    prose: Utility and adoption remain unestablished because the matched benchmark has not run.
+    expected_failure_codes: []
+  - id: V10-mnemonic-hypothesis
+    prose: Cross-domain usefulness is a benchmark-gated mnemonic or meta-schema hypothesis.
+    expected_failure_codes: []
+  - id: V11-bounded-negative
+    prose: No authoritative hit was located in the bounded pass; this establishes no novelty or priority.
+    expected_failure_codes: []
+  - id: V12-preserve-owner-terms
+    prose: The prior spelling collision changes provenance wording only and neither renames nor retires the candidate term.
+    expected_failure_codes: []
+  - id: V13-analysis-scoped-shorthand
+    prose: After one analysis A with task(A) = T is fixed, O*_T(m) is local shorthand for O*(m; A), not a primitive.
+    expected_failure_codes: []
+  - id: V14-readiness-exact
+    prose: TERM-P0-V2 is READY_FOR_HUMAN_MATCHING_REVIEW while its human gate is pending.
+    expected_failure_codes: []
+
+required_live_claims:
+  - document: manuscript/orthemma-ortheme-systems-revised-draft.md
+    start_marker: "<!-- TERMINOLOGY-PROVENANCE:START -->"
+    end_marker: "<!-- TERMINOLOGY-PROVENANCE:END -->"
+    required_assertion_ids:
+      - CONSTRUCTED_GROUNDED
+      - ORTH_SCOPE
+      - EME_SCOPE
+      - MA_MAT_SCOPE
+      - EMA_RESONANCE
+      - PRIOR_DIFFERENT_SENSE
+      - NON_ADOPTION
+      - BENCHMARK_GATE
+  - document: terminology/orthemic-terminology-pilot-protocol.md
+    start_marker: "<!-- TERMINOLOGY-PROVENANCE:START -->"
+    end_marker: "<!-- TERMINOLOGY-PROVENANCE:END -->"
+    required_assertion_ids:
+      - CONSTRUCTED_GROUNDED
+      - ORTH_SCOPE
+      - EME_SCOPE
+      - MA_MAT_SCOPE
+      - EMA_RESONANCE
+      - PRIOR_DIFFERENT_SENSE
+      - NON_ADOPTION
+      - BENCHMARK_GATE
+
+required_source_rows:
+  - {id: ETY-1, bibliography_key: merriamwebsterOrthCombiningForm}
+  - {id: ETY-2, bibliography_key: merriamwebsterEmeSuffix}
+  - {id: ETY-3, bibliography_key: smyth1920GreekGrammar}
+  - {id: ETY-4, bibliography_key: lsjEmos}
+  - {id: ETY-5A, bibliography_key: constable1999Ortheme}
+  - {id: ETY-5B, bibliography_key: burridgeBlaxter2020LinguisticCopying}
+
+required_document_assertions:
+  - document: manuscript/orthemma-ortheme-systems-revised-draft.md
+    assertion_id: ANALYSIS_RELATIVE_GLOSSARY
+
+required_readiness:
+  document: terminology/README.md
+  exact_state: READY_FOR_HUMAN_MATCHING_REVIEW
+
+frozen_packets:
+  - {path: terminology/pilot0, sha256: 988a6522498df73ad1c7b0f73961a054ff20862d50fff6d644d0274877412772}
+  - {path: terminology/pilot0-v2, sha256: e5e65b2f1b38d5767d79103c57afee76a02e09e9fec2fd150a3a680b0fe19c3d}

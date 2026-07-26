@@ -909,8 +909,32 @@ unestablished. Experimental: none. No stronger claim is made anywhere in this pa
 
 ## 14. Terminology Status
 
-Every coined term in this paper — **orthemma, ortheme, metaortheme, orthing,** and the companion-paper candidate **orthable** — is a **candidate** pending the matched benchmark of
+Every coined term in this paper — **orthemma, ortheme, metaorthemma, metaortheme, orthing,** and the companion-paper candidate **orthable** — is a **candidate** pending the matched benchmark of
 Section 13.3. None is adopted; none is retired. The paper's own governing principle applies:
+
+### 14.1 Formation and provenance boundary
+
+<!-- TERMINOLOGY-PROVENANCE:START -->
+The vocabulary is **constructed but morphologically grounded**. Merriam-Webster
+supports established `orth-`, including its **correct or corrective** combining-form
+sense, and English `-eme`, whose linguistic-unit sense supplies an **analogy** rather
+than the project's operational definition. Smyth §§841.2 and 861.2 directly
+describe Greek `-ma` with stem `-mat-` as morphology for a **result or effect**;
+“object” or “instance” is only a bounded project gloss from the cited concrete
+examples. LSJ s.v. `ἐμός` supports Greek `ἐμά` as a deliberately superposed
+**possessive resonance**, **not a derivation** of `-ma`, `-emma`, or any project
+word.
+
+The same spelling `ortheme` occurs in a prior, different **orthographic-unit
+sense** in Peter Constable's 17 June 1999 Unicode archive message and in Burridge
+and Blaxter (2020, p. 24). Those attestations do not supply this project's
+state-type sense. A bounded search that located no authoritative earlier hit for
+other project strings establishes no novelty, originality, priority, or first
+coinage. This provenance account **does not adopt** or retire any term and
+supplies no empirical utility result. Cross-domain usefulness remains a
+**benchmark-gated mnemonic or meta-schema hypothesis**, not universal primitives
+or a proven isomorphism.
+<!-- TERMINOLOGY-PROVENANCE:END -->
 
 **Design Principle 1 (Terminological utility, retained).** The vocabulary is warranted only if, under matched training time, attention, and access to evidence, it improves at least
 one predeclared outcome — placement accuracy, inter-rater agreement, defect discovery, repair traceability, transfer, calibration, or false-closure prevention — without
@@ -984,6 +1008,12 @@ All public materials of this project — the formal core, this manuscript, the m
 - Larsen, K. G., & Skou, A. (1991). Bisimulation through probabilistic testing. *Information and Computation*, 94(1), 1–28. doi:10.1016/0890-5401(91)90030-6
 - Littman, M. L., Sutton, R. S., & Singh, S. (2001). Predictive representations of state. *NIPS 14*.
 - Moreau, L., & Missier, P. (Eds.) (2013). *PROV-DM: The PROV Data Model.* W3C Recommendation, 30 April 2013. https://www.w3.org/TR/prov-dm/
+- Merriam-Webster. “Orth-.” *Merriam-Webster.com Dictionary.* https://www.merriam-webster.com/dictionary/orth- (accessed 26 July 2026).
+- Merriam-Webster. “-eme.” *Merriam-Webster.com Dictionary.* https://www.merriam-webster.com/dictionary/-eme (accessed 26 July 2026).
+- Smyth, H. W. (1920). *A Greek Grammar for Colleges.* American Book Company, §§841.2, 861.2.
+- Liddell, H. G., Scott, R., & Jones, H. S. *A Greek-English Lexicon*, s.v. `ἐμός`.
+- Constable, P. (1999, June 17). “Re: Amerindian Characters.” *Unicode Mail List Archive.*
+- Burridge, J., & Blaxter, T. (2020). Using spatial patterns of English folk speech to infer the universality class of linguistic copying. *Physical Review Research*, 2, 043053, p. 24. doi:10.1103/PhysRevResearch.2.043053
 - Scheirer, W. J., Rocha, A., Sapkota, A., & Boult, T. E. (2013). Toward open set recognition. *IEEE TPAMI*, 35(7), 1757–1772. doi:10.1109/TPAMI.2012.256
 - Shalizi, C. R., & Crutchfield, J. P. (2001). Computational mechanics: pattern and prediction, structure and simplicity. *Journal of Statistical Physics*, 104, 817–879. doi:10.1023/A:1010388907793
 - Silla, C. N., & Freitas, A. A. (2011). A survey of hierarchical classification across different application domains. *Data Mining and Knowledge Discovery*, 22, 31–72. doi:10.1007/s10618-010-0175-9
@@ -999,7 +1029,7 @@ Machine-readable database with per-claim verification status: `references/orthem
 ## Glossary of Proposed Terms (all candidates; none adopted)
 
 - **Orthemma.** A concrete situated occurrence considered as something to be apprehended, carrying an identity key and version. The token pole.
-- **Ortheme.** A repeatable operational state-type an orthemma instantiates, relative to a declared task. The type pole.
+- **Ortheme.** A repeatable operational state-type an orthemma instantiates, relative to a declared, versioned analysis. The type pole. Task-relative wording is shorthand only after one analysis with that task has been fixed.
 - **Instantiation relation `Inst_A`.** `(m, o) ∈ Inst_A`: `m` instantiates `o` under the declared, versionable analysis `A` (with `T = task(A)`); the fibre `O*(m; A)` is the actual profile. `Inst_T` / `O*_T(m)` are licensed local shorthand once a single `A` with `task(A) = T` has been fixed; forbidden in multi-analysis contexts (Definition 3).
 - **Typed candidate families `C^id, C^profile, C^cause, C^route, C^warrant`.** Open alternatives per uncertainty axis, with exclusivity marking and an evidence-to-resolve clause.
 - **Placement / apprehension.** Assigning an inferred profile / the whole encounter-to-disposition process.
