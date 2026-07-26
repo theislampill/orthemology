@@ -95,13 +95,16 @@ def _positive_claim_role(
                 complement = clause[predicate.end():claimed_object.start()]
                 if not re.fullmatch(complement_pattern, complement):
                     continue
-                polarity_span = clause[
-                    subject.start():min(len(clause), claimed_object.end() + 48)
-                ]
-                if re.search(
-                    r"\b(?:not|never|no|none|neither|without|unestablished)\b",
-                    polarity_span,
-                ):
+                predicate_prefix = clause[subject.end():predicate.start()]
+                predicate_is_negated = re.search(
+                    r"\b(?:not|never|neither|without)\s*$",
+                    predicate_prefix,
+                )
+                object_is_negated = re.match(
+                    r"(?:no|none|neither)\b",
+                    claimed_object.group(0),
+                )
+                if predicate_is_negated or object_is_negated:
                     continue
                 return True
     return False
@@ -174,7 +177,7 @@ def claim_failures(text: str) -> set[str]:
                 clause,
                 r"\bproject\b",
                 r"\b(?:adopts?|adopted|accepts?|accepted|approves?|approved)\b",
-                r"\b(?:all |any |the )?(?:candidate |coined |project )?"
+                r"\b(?:all |any |the |no )?(?:candidate |coined |project )?"
                 r"(?:terms|terminology|vocabulary)\b",
                 complement_pattern=r"\s*",
             )

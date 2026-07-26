@@ -122,6 +122,9 @@ invalid_cases:
   - id: I25-analysis-anchor-with-task-primitive-contradiction
     prose: Ground truth is relative to a declared, versioned analysis. Nevertheless, O*_T(m) supplies the ground truth for every analysis sharing task T.
     expected_failure_codes: [E_TASK_RELATIVE_PRIMITIVE]
+  - id: I26-contrastive-not-after-adoption
+    prose: The project adopted all candidate terms, not merely the preferred ones.
+    expected_failure_codes: [E_TERMINOLOGY_ADOPTION]
 
 valid_controls:
   - id: V01-constructed-grounded
@@ -183,6 +186,12 @@ valid_controls:
     expected_failure_codes: []
   - id: V20-source-contrast
     prose: Smyth shows a contrast between orthemma and the correct project definition.
+    expected_failure_codes: []
+  - id: V21-predicate-negates-adoption
+    prose: The project did not adopt all candidate terms.
+    expected_failure_codes: []
+  - id: V22-object-negates-adoption
+    prose: The project adopted no candidate terms.
     expected_failure_codes: []
 
 required_live_claims:
