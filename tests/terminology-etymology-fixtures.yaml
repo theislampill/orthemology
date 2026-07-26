@@ -104,6 +104,24 @@ invalid_cases:
   - id: I19-benchmark-bypass
     prose: Repeated repository use is sufficient to establish terminology utility without the matched benchmark.
     expected_failure_codes: [E_BENCHMARK_BYPASS]
+  - id: I20-adoption-paraphrase
+    prose: The candidate vocabulary has been accepted as the project's official terminology.
+    expected_failure_codes: [E_TERMINOLOGY_ADOPTION]
+  - id: I21-first-coinage-paraphrase
+    prose: This project introduced ortheme before any prior use.
+    expected_failure_codes: [E_ORTHEME_ORIGINALITY]
+  - id: I22-source-defined-project-meaning
+    prose: Smyth gives orthemma its project-specific meaning.
+    expected_failure_codes: [E_SOURCE_SCOPE]
+  - id: I23-universal-task-ground-truth
+    prose: O*_T(m) supplies task-wide ground truth for all analyses with task T.
+    expected_failure_codes: [E_TASK_RELATIVE_PRIMITIVE]
+  - id: I24-readiness-conflict
+    prose: TERM-P0-V2 is READY_FOR_HUMAN_MATCHING_REVIEW; it is also READY_TO_RUN.
+    expected_failure_codes: [E_READINESS_STATE]
+  - id: I25-analysis-anchor-with-task-primitive-contradiction
+    prose: Ground truth is relative to a declared, versioned analysis. Nevertheless, O*_T(m) supplies the ground truth for every analysis sharing task T.
+    expected_failure_codes: [E_TASK_RELATIVE_PRIMITIVE]
 
 valid_controls:
   - id: V01-constructed-grounded
@@ -175,13 +193,114 @@ required_live_claims:
       - NON_ADOPTION
       - BENCHMARK_GATE
 
+complete_claim_surfaces:
+  - manuscript/orthemma-ortheme-systems-revised-draft.md
+  - terminology/orthemic-terminology-pilot-protocol.md
+
 required_source_rows:
-  - {id: ETY-1, bibliography_key: merriamwebsterOrthCombiningForm}
-  - {id: ETY-2, bibliography_key: merriamwebsterEmeSuffix}
-  - {id: ETY-3, bibliography_key: smyth1920GreekGrammar}
-  - {id: ETY-4, bibliography_key: lsjEmos}
-  - {id: ETY-5A, bibliography_key: constable1999Ortheme}
-  - {id: ETY-5B, bibliography_key: burridgeBlaxter2020LinguisticCopying}
+  - id: ETY-1
+    bibliography_key: merriamwebsterOrthCombiningForm
+    claim_level: bounded dictionary report
+    claim: English orth- or ortho- is an established combining form with a correct or corrective sense and Greek orthos ancestry
+    source_type: authoritative English dictionary
+    status: SECONDARY_VERIFIED
+    direct_support: supports only the established combining form, the cited sense, and the dictionary's ancestry statement
+    exclusions: ["project's definitions", novelty, adoption, utility, universality, isomorphism]
+    exclusion_statement: Does not support the project's definitions, novelty, adoption, utility, universality, or isomorphism.
+    locator: combining-form senses 1-3 and Word History
+    identifier: {field: url, value: "https://www.merriam-webster.com/dictionary/orth-"}
+  - id: ETY-2
+    bibliography_key: merriamwebsterEmeSuffix
+    claim_level: bounded dictionary report
+    claim: English -eme is an established noun suffix for a significantly distinctive unit of language structure
+    source_type: authoritative English dictionary
+    status: SECONDARY_VERIFIED
+    direct_support: supports a linguistic-unit analogy only, not the project's operational state-type definition
+    exclusions: [adoption, utility, universality, isomorphism]
+    exclusion_statement: Does not support terminology adoption, utility, universality, or isomorphism.
+    locator: noun-suffix definition and Word History
+    identifier: {field: url, value: "https://www.merriam-webster.com/dictionary/-eme"}
+  - id: ETY-3
+    bibliography_key: smyth1920GreekGrammar
+    claim_level: bounded grammar report plus labeled project gloss
+    claim: Greek -ma with stem -mat- is result-or-effect morphology; object or instance is a bounded project gloss from concrete examples
+    source_type: scholarly reference grammar
+    status: SECONDARY_VERIFIED
+    direct_support: directly supports result or effect and the -mat- to -ma relation only
+    exclusions: [inherited English -emma suffix, ema derivation, adoption, utility]
+    exclusion_statement: Does not support an inherited English -emma suffix, an ema derivation, or project adoption or utility.
+    locator: sections 841.2 and 861.2
+    identifier: {field: url, value: "https://www.perseus.tufts.edu/hopper/text?doc=Perseus%3Atext%3A1999.04.0007%3Apart%3D3"}
+  - id: ETY-4
+    bibliography_key: lsjEmos
+    claim_level: bounded lexicon report plus labeled project synthesis
+    claim: Greek ἐμά is a possessive form associated with ἐμός; its superposed resonance is project synthesis and not derivation
+    source_type: scholarly historical Greek lexicon on the Scaife ATLAS surface
+    status: SECONDARY_VERIFIED
+    direct_support: supports the possessive form only; the resonance and non-derivational pairing are project synthesis
+    exclusions: [-ma, -mat-, -emma, orthemma, metaorthemma, adoption, utility]
+    exclusion_statement: Does not derive -ma, -mat-, -emma, orthemma, or metaorthemma and does not support adoption or utility.
+    locator: headword ἐμός; mine; τὰ ἐμά examples including Plato, Gorgias 508e
+    identifier: {field: url, value: "https://atlas.perseus.tufts.edu/dictionaries/entry/urn%3Acite2%3Ascaife-viewer%3Adictionaries.v1%3Alsj-n34194/"}
+  - id: ETY-5A
+    bibliography_key: constable1999Ortheme
+    claim_level: exact historical spelling attestation
+    claim: the spelling ortheme was publicly used in 1999 for units within an orthography
+    source_type: archived primary public message, not scholarship
+    status: PRIMARY_TEXT_EXACT
+    direct_support: supports pre-project public attestation of the same spelling in a different orthographic-unit sense
+    exclusions: [earliest use, project definition, derivation, ownership, adoption, utility, universality, isomorphism]
+    exclusion_statement: Does not establish earliest use, the project definition, derivation, ownership, adoption, utility, universality, or isomorphism.
+    locator: message dated 1999-06-17; paragraph defining orthemes as units within an orthography
+    identifier: {field: url, value: "https://www.unicode.org/mail-arch/unicode-ml/Archives-Old/UML016/0256.html"}
+  - id: ETY-5B
+    bibliography_key: burridgeBlaxter2020LinguisticCopying
+    claim_level: exact historical spelling attestation
+    claim: a peer-reviewed 2020 article uses ortheme in an orthographic-unit sense
+    source_type: peer-reviewed primary research article
+    status: PRIMARY_TEXT_EXACT
+    direct_support: supports pre-project scholarly attestation of the same spelling in a different orthographic-unit sense
+    exclusions: [earliest use, project definition, derivation, adoption, utility, universality, isomorphism]
+    exclusion_statement: Does not establish earliest use, the project definition, derivation, adoption, utility, universality, or isomorphism.
+    locator: Physical Review Research 2, 043053, page 24, onset-f voicing discussion
+    identifier: {field: doi, value: 10.1103/PhysRevResearch.2.043053}
+
+fixture_mutation_cases:
+  - {id: F01-empty-rules, operation: empty_collection, target: rules, expected_diagnostic: rules must be nonempty}
+  - {id: F02-empty-invalid-cases, operation: empty_collection, target: invalid_cases, expected_diagnostic: invalid_cases must be nonempty}
+  - {id: F03-empty-valid-controls, operation: empty_collection, target: valid_controls, expected_diagnostic: valid_controls must be nonempty}
+  - {id: F04-duplicate-rule-id, operation: duplicate_first, target: rules, expected_diagnostic: duplicate rule ids}
+  - {id: F05-duplicate-invalid-id, operation: duplicate_first, target: invalid_cases, expected_diagnostic: duplicate fixture case ids}
+  - {id: F06-malformed-source-expectation, operation: remove_first_field, target: required_source_rows, field: id, expected_diagnostic: source expectation lacks fields}
+  - {id: F07-malformed-rule-id, operation: set_first_field, target: rules, field: id, value: [], expected_diagnostic: every rule requires an id}
+  - {id: F08-malformed-live-expectation, operation: remove_first_field, target: required_live_claims, field: document, expected_diagnostic: live claim expectation lacks fields}
+
+source_record_mutation_cases:
+  - id: S01-provenance-role-contradiction
+    row_id: ETY-1
+    set_fields:
+      claim: This source establishes the project's terminology adoption, utility, originality, and first coinage.
+      claim_level: terminology adoption and first-coinage finding
+      source_type: project authority
+      status: PRIMARY_TEXT_EXACT
+      support: supports adoption, utility, originality, and first coinage
+      notes: Supports the project's definitions, novelty, adoption, utility, universality, and isomorphism.
+      locus_exact: entire source
+      bibliography_key: burridgeBlaxter2020LinguisticCopying
+    expected_diagnostics: [claim differs, claim_level, source_type, status, direct support, exclusions, locator, bibliography association]
+  - {id: S02-missing-source-row, row_id: ETY-2, operation: remove, expected_diagnostics: [must occur exactly once]}
+  - {id: S03-duplicate-source-row, row_id: ETY-3, operation: duplicate, expected_diagnostics: [must occur exactly once]}
+  - {id: S04-malformed-source-family, operation: malform_family, expected_diagnostics: [terminology_provenance family must be a mapping]}
+
+bibliography_mutation_cases:
+  - {id: B01-unclosed-orth-entry, bibliography_key: merriamwebsterOrthCombiningForm, operation: remove_entry_close, expected_diagnostic: unclosed bibliography entry}
+  - {id: B02-unclosed-eme-entry, bibliography_key: merriamwebsterEmeSuffix, operation: remove_entry_close, expected_diagnostic: unclosed bibliography entry}
+  - {id: B03-unclosed-grammar-entry, bibliography_key: smyth1920GreekGrammar, operation: remove_entry_close, expected_diagnostic: unclosed bibliography entry}
+  - {id: B04-unclosed-lexicon-entry, bibliography_key: lsjEmos, operation: remove_entry_close, expected_diagnostic: unclosed bibliography entry}
+  - {id: B05-unclosed-archive-entry, bibliography_key: constable1999Ortheme, operation: remove_entry_close, expected_diagnostic: unclosed bibliography entry}
+  - {id: B06-unclosed-article-entry, bibliography_key: burridgeBlaxter2020LinguisticCopying, operation: remove_entry_close, expected_diagnostic: unclosed bibliography entry}
+  - {id: B07-missing-entry, bibliography_key: merriamwebsterEmeSuffix, operation: remove, expected_diagnostic: must occur exactly once in bibliography}
+  - {id: B08-duplicate-entry, bibliography_key: smyth1920GreekGrammar, operation: duplicate, expected_diagnostic: must occur exactly once in bibliography}
 
 required_document_assertions:
   - document: manuscript/orthemma-ortheme-systems-revised-draft.md

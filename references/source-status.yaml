@@ -429,6 +429,7 @@ claims:
 
 # --- terminology formation and provenance (Task 10; no adoption or utility inference) ---
 - id: ETY-1
+  bibliography_key: merriamwebsterOrthCombiningForm
   locus: manuscript §14.1; terminology/orthemic-terminology-pilot-protocol.md Formation and provenance boundary
   claim_level: bounded dictionary report
   claim: English orth- or ortho- is an established combining form with a correct or corrective sense and Greek orthos ancestry
@@ -444,6 +445,7 @@ claims:
   support: supports only the established combining form, the cited sense, and the dictionary's ancestry statement
   notes: Does not support the project's definitions, novelty, adoption, utility, universality, or isomorphism.
 - id: ETY-2
+  bibliography_key: merriamwebsterEmeSuffix
   locus: manuscript §14.1; terminology/orthemic-terminology-pilot-protocol.md Formation and provenance boundary
   claim_level: bounded dictionary report
   claim: English -eme is an established noun suffix for a significantly distinctive unit of language structure
@@ -459,6 +461,7 @@ claims:
   support: supports a linguistic-unit analogy only, not the project's operational state-type definition
   notes: Does not support terminology adoption, utility, universality, or isomorphism.
 - id: ETY-3
+  bibliography_key: smyth1920GreekGrammar
   locus: manuscript §14.1; terminology/orthemic-terminology-pilot-protocol.md Formation and provenance boundary
   claim_level: bounded grammar report plus labeled project gloss
   claim: Greek -ma with stem -mat- is result-or-effect morphology; object or instance is a bounded project gloss from concrete examples
@@ -474,6 +477,7 @@ claims:
   support: directly supports result or effect and the -mat- to -ma relation only
   notes: Does not support an inherited English -emma suffix, an ema derivation, or project adoption or utility.
 - id: ETY-4
+  bibliography_key: lsjEmos
   locus: manuscript §14.1; terminology/orthemic-terminology-pilot-protocol.md Formation and provenance boundary
   claim_level: bounded lexicon report plus labeled project synthesis
   claim: Greek ἐμά is a possessive form associated with ἐμός; its superposed resonance is project synthesis and not derivation
@@ -489,6 +493,7 @@ claims:
   support: supports the possessive form only; the resonance and non-derivational pairing are project synthesis
   notes: Does not derive -ma, -mat-, -emma, orthemma, or metaorthemma and does not support adoption or utility.
 - id: ETY-5A
+  bibliography_key: constable1999Ortheme
   locus: manuscript §14.1; terminology/orthemic-terminology-pilot-protocol.md Formation and provenance boundary
   claim_level: exact historical spelling attestation
   claim: the spelling ortheme was publicly used in 1999 for units within an orthography
@@ -504,6 +509,7 @@ claims:
   support: supports pre-project public attestation of the same spelling in a different orthographic-unit sense
   notes: Does not establish earliest use, the project definition, derivation, ownership, adoption, utility, universality, or isomorphism.
 - id: ETY-5B
+  bibliography_key: burridgeBlaxter2020LinguisticCopying
   locus: manuscript §14.1; terminology/orthemic-terminology-pilot-protocol.md Formation and provenance boundary
   claim_level: exact historical spelling attestation
   claim: a peer-reviewed 2020 article uses ortheme in an orthographic-unit sense
