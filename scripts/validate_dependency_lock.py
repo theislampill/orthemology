@@ -48,9 +48,14 @@ def scan_repository_imports(root):
 
 
 def find_local_modules(root):
-    """Return repository-local Python module basenames excluded from lock ownership."""
-    return {os.path.splitext(os.path.basename(path))[0]
-            for path in glob.glob(os.path.join(str(root), "**", "*.py"), recursive=True)}
+    """Return repository-local modules and top-level namespace packages."""
+    paths = glob.glob(os.path.join(str(root), "**", "*.py"), recursive=True)
+    modules = {os.path.splitext(os.path.basename(path))[0] for path in paths}
+    for path in paths:
+        relative_parts = os.path.relpath(path, root).split(os.sep)
+        if len(relative_parts) > 1 and relative_parts[0].isidentifier():
+            modules.add(relative_parts[0])
+    return modules
 
 
 def classify_imports(used, local_modules, import_to_dist=None, stdlib_modules=None):

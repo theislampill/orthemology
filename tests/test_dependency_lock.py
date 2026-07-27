@@ -4,7 +4,9 @@ from __future__ import annotations
 
 import importlib.util
 import sys
+import tempfile
 import unittest
+from importlib import metadata
 from pathlib import Path
 
 
@@ -60,6 +62,21 @@ class DependencyClassificationTests(unittest.TestCase):
             ),
         )
 
+    def test_python311_transitive_backport_is_exactly_pinned(self):
+        self.assertLess(sys.version_info, (3, 13))
+        requirements = metadata.requires("referencing") or []
+        self.assertTrue(
+            any(requirement.startswith("typing-extensions") for requirement in requirements)
+        )
+        lock_lines = {
+            line.strip()
+            for line in (ROOT / "requirements-ci.lock.txt")
+            .read_text(encoding="utf-8")
+            .splitlines()
+            if line.strip() and not line.startswith("#")
+        }
+        self.assertIn("typing_extensions==4.16.0", lock_lines)
+
     def test_unknown_import_fails_closed(self):
         unknown = "orthemology_unmapped_dependency_probe"
         result = self.classify({unknown})
@@ -74,6 +91,23 @@ class DependencyClassificationTests(unittest.TestCase):
         self.assertEqual({local}, result["local"])
         self.assertEqual(set(), result["third_party"])
         self.assertEqual(set(), result["unmapped"])
+
+    def test_top_level_namespace_package_is_repository_local(self):
+        with tempfile.TemporaryDirectory() as td:
+            root = Path(td)
+            namespace = root / "local_namespace"
+            namespace.mkdir()
+            (namespace / "helper.py").write_text("VALUE = 1\n", encoding="utf-8")
+            package = root / "local_package"
+            package.mkdir()
+            (package / "__init__.py").write_text("", encoding="utf-8")
+            unrelated = root / "unrelated_directory"
+            unrelated.mkdir()
+
+            local_modules = validator.find_local_modules(root)
+            self.assertIn("local_namespace", local_modules)
+            self.assertIn("local_package", local_modules)
+            self.assertNotIn("unrelated_directory", local_modules)
 
     def test_mixed_partition_is_exact_and_disjoint(self):
         local = "orthemology_local_dependency_probe"
