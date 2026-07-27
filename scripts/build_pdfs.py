@@ -231,6 +231,23 @@ def render_compatibility_artifact_table(root):
     return "\n".join(lines)
 
 
+def is_total_page_record_candidate(line):
+    """Recognize semantic total markers despite Unicode punctuation variants."""
+    normalized = unicodedata.normalize("NFKC", line).casefold()
+    token_text = []
+    for character in normalized:
+        category = unicodedata.category(character)
+        if category == "Cf":
+            continue
+        token_text.append(character if character.isalnum() else " ")
+    tokens = "".join(token_text).split()
+    marker = ["total", "final", "page", "count"]
+    return any(
+        tokens[index : index + len(marker)] == marker
+        for index in range(len(tokens) - len(marker) + 1)
+    )
+
+
 def compatibility_report_table_issues(root):
     """Return field-specific drift between the report table and artifact owners."""
     root = pathlib.Path(root)
@@ -311,18 +328,14 @@ def compatibility_report_table_issues(root):
                     "%s %s differs from owner" % (artifact_id, label)
                 )
     expected_total = sum(row["pages"] for row in expected_rows)
-    total_marker = re.compile(
-        r"total\s+final\s+page(?:[\s-]+)count",
-        re.I,
-    )
     total_record_indexes = [
         index
         for index, line in enumerate(lines)
-        if total_marker.search(line)
+        if is_total_page_record_candidate(line)
     ]
     total_match = (
         re.fullmatch(
-            r"Total final page count: `(0|[1-9][0-9]*)`\.",
+            r"Total final page count: `(0|[1-9][0-9]{0,5})`\.",
             lines[total_record_indexes[0]],
         )
         if len(total_record_indexes) == 1
@@ -365,19 +378,15 @@ def rewrite_compatibility_artifact_table(root):
         row["pages"] for row in compatibility_artifact_rows(root)
     )
     updated_lines = updated.splitlines()
-    total_marker = re.compile(
-        r"total\s+final\s+page(?:[\s-]+)count",
-        re.I,
-    )
     total_record_indexes = [
         index
         for index, line in enumerate(updated_lines)
-        if total_marker.search(line)
+        if is_total_page_record_candidate(line)
     ]
     if (
         len(total_record_indexes) != 1
         or re.fullmatch(
-            r"Total final page count: `(?:0|[1-9][0-9]*)`\.",
+            r"Total final page count: `(?:0|[1-9][0-9]{0,5})`\.",
             updated_lines[total_record_indexes[0]],
         )
         is None
@@ -402,7 +411,7 @@ def rewrite_compatibility_artifact_table(root):
             "compatibility report total page count is not in canonical table position"
         )
     updated, total_count = re.subn(
-        r"^Total final page count: `(?:0|[1-9][0-9]*)`\.$",
+        r"^Total final page count: `(?:0|[1-9][0-9]{0,5})`\.$",
         "Total final page count: `%d`." % expected_total,
         updated,
         count=1,

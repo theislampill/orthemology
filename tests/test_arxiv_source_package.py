@@ -1337,6 +1337,12 @@ class SourcePackageContractTests(unittest.TestCase):
             "Total final page count: `61.0`.",
             "Total final page count: `٦١`.",
             "Total final page count: `６１`.",
+            "Total final page‐count: `999`.",
+            "Total final page‑count: `999`.",
+            "Total final page‒count: `999`.",
+            "Total final page–count: `999`.",
+            "Total final page—count: `999`.",
+            "Total final page−count: `999`.",
         )
         for addition in additions:
             with self.subTest(addition=addition):
@@ -1379,6 +1385,7 @@ class SourcePackageContractTests(unittest.TestCase):
             "Total final page count: `61.0`.",
             "Total final page count: `٦١`.",
             "Total final page count: `６１`.",
+            "Total final page count: `%s`." % ("9" * 5000),
         )
         report = (
             ROOT
