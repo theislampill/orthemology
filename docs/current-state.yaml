@@ -77,7 +77,7 @@ authored:
     pdfs: reproducibly built and visually inspected draft artifacts
     legal_publication: open on license, identity, peer review, and external submission
 derived:
-  source_tree_digest: 0fd244f18a63553b0974fad5f59f881ea2177d3db47ae5ba615de739d23205d1
+  source_tree_digest: c842294f213b2d058ba19d0636fbccdcbde688208c51e64a18a5413306fa4010
   source_tree_digest_policy: docs/project-state-inputs.yaml
   tracked_files: 698
   decision_ids:

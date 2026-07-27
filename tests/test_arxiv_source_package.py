@@ -1332,6 +1332,11 @@ class SourcePackageContractTests(unittest.TestCase):
             "Total  final page count: `999`.",
             "Total\tfinal\tpage\tcount: `999`.",
             "Total final page-count: `999`.",
+            "Total final page count: `061`.",
+            "Total final page count: `+61`.",
+            "Total final page count: `61.0`.",
+            "Total final page count: `٦١`.",
+            "Total final page count: `６１`.",
         )
         for addition in additions:
             with self.subTest(addition=addition):
@@ -1363,6 +1368,50 @@ class SourcePackageContractTests(unittest.TestCase):
                         any("exactly one" in issue for issue in issues),
                         issues,
                     )
+
+    def test_compatibility_report_rewrite_rejects_noncanonical_total_numbers(self):
+        rewrite = self.api(BUILD, "rewrite_compatibility_artifact_table")
+        validate = self.api(BUILD, "compatibility_report_table_issues")
+        canonical = "Total final page count: `61`."
+        variants = (
+            "Total final page count: `061`.",
+            "Total final page count: `+61`.",
+            "Total final page count: `61.0`.",
+            "Total final page count: `٦١`.",
+            "Total final page count: `６１`.",
+        )
+        report = (
+            ROOT
+            / "docs"
+            / "project-closure"
+            / "r7e-sol"
+            / "R7E-SOL-ARXIV-COMPATIBILITY.md"
+        ).read_text(encoding="utf-8")
+        for variant in variants:
+            with self.subTest(variant=variant):
+                with tempfile.TemporaryDirectory() as temporary:
+                    root = pathlib.Path(temporary)
+                    shutil.copytree(ROOT / "artifacts", root / "artifacts")
+                    report_target = (
+                        root
+                        / "docs"
+                        / "project-closure"
+                        / "r7e-sol"
+                        / "R7E-SOL-ARXIV-COMPATIBILITY.md"
+                    )
+                    report_target.parent.mkdir(parents=True)
+                    report_target.write_text(
+                        report.replace(canonical, variant, 1),
+                        encoding="utf-8",
+                        newline="\n",
+                    )
+                    issues = validate(root)
+                    self.assertTrue(
+                        any("exactly one" in issue for issue in issues),
+                        issues,
+                    )
+                    with self.assertRaises(BUILD.PipelineError):
+                        rewrite(root)
 
     def test_compatibility_report_rejects_moved_total_record(self):
         validate = self.api(BUILD, "compatibility_report_table_issues")

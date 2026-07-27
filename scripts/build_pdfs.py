@@ -322,7 +322,7 @@ def compatibility_report_table_issues(root):
     ]
     total_match = (
         re.fullmatch(
-            r"Total final page count: `(\d+)`\.",
+            r"Total final page count: `(0|[1-9][0-9]*)`\.",
             lines[total_record_indexes[0]],
         )
         if len(total_record_indexes) == 1
@@ -377,7 +377,7 @@ def rewrite_compatibility_artifact_table(root):
     if (
         len(total_record_indexes) != 1
         or re.fullmatch(
-            r"Total final page count: `\d+`\.",
+            r"Total final page count: `(?:0|[1-9][0-9]*)`\.",
             updated_lines[total_record_indexes[0]],
         )
         is None
@@ -402,7 +402,7 @@ def rewrite_compatibility_artifact_table(root):
             "compatibility report total page count is not in canonical table position"
         )
     updated, total_count = re.subn(
-        r"^Total final page count: `\d+`\.$",
+        r"^Total final page count: `(?:0|[1-9][0-9]*)`\.$",
         "Total final page count: `%d`." % expected_total,
         updated,
         count=1,
