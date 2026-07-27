@@ -6,12 +6,21 @@ import pathlib
 import unittest
 import unicodedata
 
+import yaml
+
 ROOT = pathlib.Path(__file__).resolve().parents[1]
 SPEC = importlib.util.spec_from_file_location(
     "validate_math_source_inventory", ROOT / "scripts" / "validate_math_source.py"
 )
 VALIDATOR = importlib.util.module_from_spec(SPEC)
 SPEC.loader.exec_module(VALIDATOR)
+
+APPROVED_DIAGNOSTIC_PATH = "theory/orthemic-core-formalization.md"
+APPROVED_DIAGNOSTIC_LOCUS = {"line": 477, "column": 38}
+APPROVED_DIAGNOSTIC_OCCURRENCE = 13
+APPROVED_DIAGNOSTIC_TEXT = (
+    "μ̄_2: stale calibration; μ̄_3: wrong\n  claim scope"
+)
 
 
 def inventory_issues(inventory, source_texts, registry_ids=()):
@@ -45,6 +54,51 @@ def build_source_issues(build_sources, declared_sources):
 
 def extract_occurrences(source):
     return VALIDATOR.extract_inline_code_occurrences(source)
+
+
+def literal_inventory(path, source):
+    """Build an exact minimal literal-code inventory from *source*."""
+    extracted = extract_occurrences(source)
+    rows = [
+        {
+            "file": path,
+            "locus": copy.deepcopy(occurrence["locus"]),
+            "occurrence": occurrence["occurrence"],
+            "text": occurrence["text"],
+            "classification": "literal-code",
+        }
+        for occurrence in extracted
+    ]
+    return {
+        "schema": "orthemology-math-source-inventory-v2",
+        "classes": ["literal-code", "semantic-registry-id", "mathematics"],
+        "sources": [
+            {
+                "file": path,
+                "occurrence_count": len(rows),
+                "classification_counts": {
+                    "literal-code": len(rows),
+                    "semantic-registry-id": 0,
+                    "mathematics": 0,
+                },
+            }
+        ],
+        "occurrences": rows,
+    }, {path: source}
+
+
+def diagnostic_inventory(
+    status=APPROVED_DIAGNOSTIC_TEXT,
+    path=APPROVED_DIAGNOSTIC_PATH,
+    copied_status=None,
+):
+    """Build a source whose diagnostic has the exact reviewed locus/ordinal."""
+    lines = ["`token_%d`" % index for index in range(1, 13)]
+    lines.extend([""] * (476 - len(lines)))
+    lines.append(" " * 37 + "`%s`" % status)
+    if copied_status is not None:
+        lines.append(" " * 37 + "`%s`" % copied_status)
+    return literal_inventory(path, "\n".join(lines))
 
 
 def valid_inventory():
@@ -282,41 +336,18 @@ class OccurrenceIdentityTests(unittest.TestCase):
             "combining accent classified as nonmathematics",
         )
 
-    def test_multiline_token_status_example_remains_literal_code(self):
-        status = "μ̄_2: stale calibration; μ̄_3: wrong\nclaim scope"
-        source = "Diagnostic: `%s`.\n" % status
-        inventory = {
-            "schema": "orthemology-math-source-inventory-v2",
-            "classes": ["literal-code", "semantic-registry-id", "mathematics"],
-            "sources": [
-                {
-                    "file": "publication/example.md",
-                    "occurrence_count": 1,
-                    "classification_counts": {
-                        "literal-code": 1,
-                        "semantic-registry-id": 0,
-                        "mathematics": 0,
-                    },
-                }
-            ],
-            "occurrences": [
-                {
-                    "file": "publication/example.md",
-                    "locus": {"line": 1, "column": 13},
-                    "occurrence": 1,
-                    "text": status,
-                    "classification": "literal-code",
-                }
-            ],
-        }
+    def test_approved_multiline_token_status_example_remains_literal_code(self):
+        inventory, source_texts = diagnostic_inventory()
+        self.assertEqual(inventory_issues(inventory, source_texts), [])
 
-        self.assertEqual(
-            inventory_issues(inventory, {"publication/example.md": source}),
-            [],
+    def test_diagnostic_literal_requires_exact_inventory_identity_and_text(self):
+        occurrence_key = (
+            APPROVED_DIAGNOSTIC_PATH,
+            APPROVED_DIAGNOSTIC_LOCUS["line"],
+            APPROVED_DIAGNOSTIC_LOCUS["column"],
+            APPROVED_DIAGNOSTIC_OCCURRENCE,
         )
-
-    def test_diagnostic_literal_requires_structural_token_identifiers(self):
-        accepted = (
+        generic_statuses = (
             "μ̄_2: stale calibration; μ̄_3: wrong\nclaim scope",
             "μ̄_17: stale calibration; μ̄_204: wrong\nclaim scope",
             "token_17: stale calibration; agent_4: wrong\nclaim scope",
@@ -362,20 +393,138 @@ class OccurrenceIdentityTests(unittest.TestCase):
             "≃: stale calibration; token_3: wrong\nclaim scope",
         )
 
-        for status in accepted:
+        self.assertTrue(
+            VALIDATOR.is_approved_diagnostic_literal(
+                occurrence_key,
+                APPROVED_DIAGNOSTIC_TEXT,
+            )
+        )
+        for status in generic_statuses:
             with self.subTest(status=status):
-                self.assertTrue(
-                    VALIDATOR.is_diagnostic_code_literal(status),
+                self.assertFalse(
+                    VALIDATOR.is_approved_diagnostic_literal(
+                        occurrence_key,
+                        status,
+                    ),
                     status,
                 )
         for status in rejected:
             with self.subTest(status=status):
                 self.assertFalse(
-                    VALIDATOR.is_diagnostic_code_literal(status),
+                    VALIDATOR.is_approved_diagnostic_literal(
+                        occurrence_key,
+                        status,
+                    ),
                     status,
                 )
 
-    def test_formula_bearing_diagnostic_keys_cannot_bypass_literal_classification(self):
+    def test_only_exact_approved_diagnostic_occurrence_is_exempt(self):
+        inventory, source_texts = diagnostic_inventory()
+        self.assertEqual(inventory_issues(inventory, source_texts), [])
+
+    def test_malformed_diagnostic_near_misses_are_rejected(self):
+        malformed = (
+            ": pass;\nagent_2: fail",
+            "agent_1: pass;\n: fail",
+            "pass;\nagent_2: fail",
+            "agent_1: pass;\nfail",
+            "agent_1: pass;\nagent_2: fail;",
+            "agent_1: pass;;\nagent_2: fail",
+            "agent 1: pass;\nagent_2: fail",
+            "agent_1 : pass;\nagent_2: fail",
+            "agent_1:: pass;\nagent_2: fail",
+        )
+        for status in malformed:
+            with self.subTest(status=status):
+                inventory, source_texts = diagnostic_inventory(status=status)
+                self.assertIssue(
+                    inventory_issues(inventory, source_texts),
+                    "invalid diagnostic literal",
+                )
+
+    def test_approved_diagnostic_mutations_are_rejected(self):
+        mutated = (
+            "μ̄_3: wrong\n  claim scope; μ̄_2: stale calibration",
+            "μ̄_2: stale calibration; μ̄_2: wrong\n  claim scope",
+            "μ̄_2: fresh calibration; μ̄_3: wrong\n  claim scope",
+            "μ̄_2: stale calibration; μ̄_3: incorrect\n  claim scope",
+            "μ̄_2: stale calibration ; μ̄_3: wrong\n  claim scope",
+            "μ̄_2: stale calibration; μ̄_3: wrong\n claim scope",
+        )
+        for status in mutated:
+            with self.subTest(status=status):
+                inventory, source_texts = diagnostic_inventory(status=status)
+                self.assertIssue(
+                    inventory_issues(inventory, source_texts),
+                    "invalid diagnostic literal",
+                )
+
+    def test_approved_diagnostic_cannot_be_moved(self):
+        moved_inventory, moved_sources = diagnostic_inventory(
+            path="publication/example.md",
+        )
+        self.assertIssue(
+            inventory_issues(moved_inventory, moved_sources),
+            "invalid diagnostic literal",
+        )
+
+    def test_approved_diagnostic_cannot_be_copied(self):
+        copied_inventory, copied_sources = diagnostic_inventory(
+            copied_status=APPROVED_DIAGNOSTIC_TEXT,
+        )
+        copied_issues = inventory_issues(copied_inventory, copied_sources)
+        self.assertEqual(
+            sum("invalid diagnostic literal" in issue for issue in copied_issues),
+            1,
+            copied_issues,
+        )
+
+    def test_unrelated_multiline_literal_code_remains_valid(self):
+        controls = (
+            "printf first;\nprintf second",
+            "first: value\nsecond: value",
+            "line one\nline two",
+        )
+        for control in controls:
+            with self.subTest(control=control):
+                source = "Control: `%s`.\n" % control
+                inventory, source_texts = literal_inventory(
+                    "publication/example.md",
+                    source,
+                )
+                self.assertEqual(inventory_issues(inventory, source_texts), [])
+
+    def test_inventory_corpus_has_one_reviewed_multiline_literal(self):
+        inventory = yaml.safe_load(
+            (ROOT / "docs" / "math-source-inventory.yaml").read_text(
+                encoding="utf-8"
+            )
+        )
+        multiline_literals = [
+            {
+                "file": row.get("file"),
+                "locus": row.get("locus"),
+                "occurrence": row.get("occurrence"),
+                "text": row.get("text"),
+            }
+            for row in inventory["occurrences"]
+            if row.get("classification") == "literal-code"
+            and isinstance(row.get("text"), str)
+            and "\n" in row["text"]
+        ]
+        self.assertEqual(
+            multiline_literals,
+            [
+                {
+                    "file": APPROVED_DIAGNOSTIC_PATH,
+                    "locus": APPROVED_DIAGNOSTIC_LOCUS,
+                    "occurrence": APPROVED_DIAGNOSTIC_OCCURRENCE,
+                    "text": APPROVED_DIAGNOSTIC_TEXT,
+                }
+            ],
+        )
+
+    def test_diagnostic_shaped_literals_cannot_bypass_literal_classification(self):
         formula_statuses = (
             "V1(e): stale calibration; token_3: wrong\nclaim scope",
             "RelSpec_q(e): stale calibration; token_3: wrong\nclaim scope",
@@ -447,13 +596,13 @@ class OccurrenceIdentityTests(unittest.TestCase):
                     ],
                 }
 
-                self.assertIssue(
-                    inventory_issues(
-                        inventory,
-                        {"publication/example.md": source},
-                    ),
-                    "formula-like literal classification",
+                issues = inventory_issues(
+                    inventory,
+                    {"publication/example.md": source},
                 )
+                self.assertIssue(issues, "invalid diagnostic literal")
+                if VALIDATOR._formula_like(status):
+                    self.assertIssue(issues, "formula-like literal classification")
 
     def test_invalid_operator_keys_use_structural_rejection_not_formula_heuristics(self):
         operator_keys = ("+", "/", "⋅", "−", "·", "^", "≈", "≃")

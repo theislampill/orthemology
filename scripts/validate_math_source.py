@@ -56,9 +56,15 @@ FORMULA_SIGNAL_RE = re.compile(
     r"|\{[^}]*\|[^}]*\}"
     r"|(?:^|[^A-Za-z0-9_])[A-Za-z][A-Za-z0-9_-]*\([^)]*\)"
 )
-DIAGNOSTIC_META_TOKEN_RE = re.compile("^\u03bc\u0304_[0-9]+$")
-ASCII_DIAGNOSTIC_IDENTIFIER_RE = re.compile(
-    r"^[A-Za-z](?:[A-Za-z0-9_]*[A-Za-z0-9])?$"
+APPROVED_DIAGNOSTIC_OCCURRENCE_KEY = (
+    "theory/orthemic-core-formalization.md",
+    477,
+    38,
+    13,
+)
+APPROVED_DIAGNOSTIC_TEXT = (
+    "\u03bc\u0304_2: stale calibration; \u03bc\u0304_3: wrong\n"
+    "  claim scope"
 )
 MACHINE_ASSIGNMENT_RE = re.compile(
     r"(?:(?:export )?[A-Z_][A-Z0-9_]*|\$env:[A-Za-z_][A-Za-z0-9_]*)=(.*)",
@@ -273,37 +279,14 @@ def _formula_like(span):
     )
 
 
-def _diagnostic_identifier(key):
-    """Return whether *key* is a plain token identifier, not a formula."""
-    return bool(
-        DIAGNOSTIC_META_TOKEN_RE.fullmatch(key)
-        or ASCII_DIAGNOSTIC_IDENTIFIER_RE.fullmatch(key)
-    )
+def is_approved_diagnostic_literal(key, span):
+    """Return whether *span* is the one reviewed diagnostic occurrence."""
+    return key == APPROVED_DIAGNOSTIC_OCCURRENCE_KEY and span == APPROVED_DIAGNOSTIC_TEXT
 
 
-def _diagnostic_status_keys(span):
-    """Return keys for a structurally complete multiline diagnostic sample."""
-    if "\n" not in span:
-        return None
-    clauses = [" ".join(part.split()) for part in span.split(";")]
-    if len(clauses) < 2:
-        return None
-    keys = []
-    for clause in clauses:
-        match = re.fullmatch(
-            r"([^\s:;]+):\s+([A-Za-z][A-Za-z0-9 /_-]*)",
-            clause,
-        )
-        if match is None:
-            return None
-        keys.append(match.group(1))
-    return keys
-
-
-def is_diagnostic_code_literal(span):
-    """Return whether a multiline span is a token-to-status diagnostic sample."""
-    keys = _diagnostic_status_keys(span)
-    return keys is not None and all(_diagnostic_identifier(key) for key in keys)
+def _diagnostic_status_like(span):
+    """Detect diagnostic-shaped multiline text, including malformed near-misses."""
+    return "\n" in span and ";" in span and ":" in span
 
 
 def validate_inventory_data(inventory, source_texts, registry_ids=None):
@@ -397,22 +380,21 @@ def validate_inventory_data(inventory, source_texts, registry_ids=None):
         if not isinstance(span, str):
             issues.append("inventory occurrence text must be a string at %r" % (key,))
             continue
-        diagnostic_keys = (
-            _diagnostic_status_keys(span)
-            if classification == "literal-code"
-            else None
+        approved_diagnostic_literal = (
+            classification == "literal-code"
+            and is_approved_diagnostic_literal(key, span)
         )
-        diagnostic_literal = (
-            diagnostic_keys is not None
-            and all(_diagnostic_identifier(item) for item in diagnostic_keys)
+        invalid_diagnostic_literal = (
+            classification == "literal-code"
+            and _diagnostic_status_like(span)
+            and not approved_diagnostic_literal
         )
-        invalid_diagnostic_key = (
-            diagnostic_keys is not None and not diagnostic_literal
-        )
+        if invalid_diagnostic_literal:
+            issues.append("invalid diagnostic literal at %r" % (key,))
         if (
             COMBINING.search(span)
             and classification != "mathematics"
-            and not diagnostic_literal
+            and not approved_diagnostic_literal
         ):
             issues.append(
                 "combining accent classified as nonmathematics at %r" % (key,)
@@ -424,9 +406,9 @@ def validate_inventory_data(inventory, source_texts, registry_ids=None):
                 issues.append("false registry-ID classification at %r" % (key,))
         if (
             classification == "literal-code"
-            and (_formula_like(span) or invalid_diagnostic_key)
+            and _formula_like(span)
             and not is_machine_assignment(span)
-            and not diagnostic_literal
+            and not approved_diagnostic_literal
         ):
             issues.append("formula-like literal classification at %r" % (key,))
 
@@ -439,6 +421,21 @@ def validate_inventory_data(inventory, source_texts, registry_ids=None):
     for key in inventoried:
         if key not in actual:
             issues.append("orphan inventory row: %r" % (key,))
+
+    if APPROVED_DIAGNOSTIC_OCCURRENCE_KEY[0] in source_files:
+        approved_row = inventoried.get(APPROVED_DIAGNOSTIC_OCCURRENCE_KEY)
+        approved_source_occurrence = actual.get(APPROVED_DIAGNOSTIC_OCCURRENCE_KEY)
+        if (
+            approved_row is None
+            or approved_source_occurrence is None
+            or approved_row.get("classification") != "literal-code"
+            or approved_row.get("text") != APPROVED_DIAGNOSTIC_TEXT
+            or approved_source_occurrence.get("text") != APPROVED_DIAGNOSTIC_TEXT
+        ):
+            issues.append(
+                "approved diagnostic occurrence must match its exact "
+                "inventory identity and extracted source text"
+            )
 
     for source_row in source_rows:
         if not isinstance(source_row, dict) or "file" not in source_row:
