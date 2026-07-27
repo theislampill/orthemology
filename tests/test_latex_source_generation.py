@@ -3,6 +3,7 @@
 
 import importlib.util
 import pathlib
+import re
 import sys
 import tempfile
 import unittest
@@ -27,6 +28,29 @@ def load_generator():
     module = importlib.util.module_from_spec(spec)
     spec.loader.exec_module(module)
     return module
+
+
+def extract_latex_outline(rendered):
+    """Return balanced H2-H4 command/label pairs from generated LaTeX."""
+    command_re = re.compile(r"\\(section|subsection|subsubsection)(\*)?\{")
+    result = []
+    for match in command_re.finditer(rendered):
+        depth = 1
+        index = match.end()
+        while depth and index < len(rendered):
+            if rendered[index] == "{" and (
+                index == 0 or rendered[index - 1] != "\\"
+            ):
+                depth += 1
+            elif rendered[index] == "}" and (
+                index == 0 or rendered[index - 1] != "\\"
+            ):
+                depth -= 1
+            index += 1
+        if depth:
+            raise AssertionError("unterminated generated LaTeX heading")
+        result.append((match.group(1), match.group(2) == "*", rendered[match.end(): index - 1]))
+    return result
 
 
 class AthariSourceBatchTests(unittest.TestCase):
@@ -331,59 +355,152 @@ class MultilineCoverageMigrationTests(unittest.TestCase):
 
 
 class MarkdownRenderingTests(unittest.TestCase):
-    def test_matching_outline_prefixes_are_not_repeated_in_latex_headings(self):
+    def test_all_declared_source_headings_appear_once_in_exact_order(self):
+        generator = load_generator()
+        self.assertIsNotNone(generator, "Task 12 LaTeX generator is missing")
+        profile = yaml.safe_load(
+            (ROOT / "docs" / "publication-profile.yaml").read_text(encoding="utf-8")
+        )
+        tree = generator.expected_latex_tree(ROOT, profile)
+        total = 0
+
+        for artifact in profile["artifacts"]:
+            expected = []
+            for source in artifact["sources"]:
+                for line in (ROOT / source).read_text(encoding="utf-8").splitlines():
+                    match = re.match(r"^(#{2,4})[ \t]+(.+)$", line)
+                    if match is None:
+                        continue
+                    protected, math = generator._protect_math(line)
+                    tokens = (
+                        generator.MarkdownIt("commonmark")
+                        .enable("table")
+                        .enable("strikethrough")
+                        .parse(protected)
+                    )
+                    inline = tokens[1]
+                    expected.append(
+                        (
+                            {
+                                2: "section",
+                                3: "subsection",
+                                4: "subsubsection",
+                            }[len(match.group(1))],
+                            True,
+                            generator._render_inline(inline.children or [], math),
+                        )
+                    )
+            actual = extract_latex_outline(
+                tree["%s/main.tex" % artifact["artifact_id"]]
+            )
+            self.assertEqual(
+                actual,
+                expected,
+                "heading sequence drift in %s" % artifact["artifact_id"],
+            )
+            total += len(expected)
+
+        self.assertEqual(total, 162)
+        self.assertTrue(all(r"\appendix" not in content for content in tree.values()))
+
+    def test_source_heading_labels_are_preserved_in_starred_latex_commands(self):
         generator = load_generator()
         self.assertIsNotNone(generator, "Task 12 LaTeX generator is missing")
         markdown = (
+            "## Abstract\n\n"
             "## 1. First section\n\n"
             "### 1.1 First subsection\n\n"
-            "### 1.2 Second subsection\n\n"
-            "## 2. Second section\n"
+            "### 2.2a Endpoint plus bounded trace\n\n"
+            "#### 2.2a.i H4 detail\n\n"
+            "## Status\n\n"
+            "## 3D geometry remains descriptive\n\n"
+            "## 2026 results remain descriptive\n"
         )
 
         rendered = generator.render_markdown(
             markdown,
-            source_name="matching-outline-prefixes.md",
+            source_name="preserved-source-heading-labels.md",
         )
 
-        self.assertIn(r"\section{First section}", rendered)
-        self.assertIn(r"\subsection{First subsection}", rendered)
-        self.assertIn(r"\subsection{Second subsection}", rendered)
-        self.assertIn(r"\section{Second section}", rendered)
-        for repeated in (
-            r"\section{1. First section}",
-            r"\subsection{1.1 First subsection}",
-            r"\subsection{1.2 Second subsection}",
-            r"\section{2. Second section}",
+        for expected in (
+            r"\section*{Abstract}",
+            r"\section*{1. First section}",
+            r"\subsection*{1.1 First subsection}",
+            r"\subsection*{2.2a Endpoint plus bounded trace}",
+            r"\subsubsection*{2.2a.i H4 detail}",
+            r"\section*{Status}",
+            r"\section*{3D geometry remains descriptive}",
+            r"\section*{2026 results remain descriptive}",
         ):
-            self.assertNotIn(repeated, rendered)
+            self.assertEqual(rendered.count(expected), 1)
+        self.assertNotRegex(
+            rendered,
+            r"\\(?:section|subsection|subsubsection)\{",
+        )
+        self.assertNotIn(r"\appendix", rendered)
 
-    def test_nonmatching_and_nonnumeric_heading_prefixes_are_preserved(self):
+    def test_heading_order_and_labels_do_not_reset_across_source_boundaries(self):
         generator = load_generator()
         self.assertIsNotNone(generator, "Task 12 LaTeX generator is missing")
-        markdown = (
-            "## 9. Nonmatching section\n\n"
-            "### 9.1 Nonmatching subsection\n\n"
-            "## Descriptive section\n\n"
-            "### Qualitative subsection\n\n"
-            "## 3.2 Numeric text at section level\n\n"
-            "## 3D geometry remains descriptive\n"
+        first = generator.render_markdown(
+            "## Abstract\n\n## 1. First\n\n### 2.2a Endpoint\n\n",
+            source_name="first.md",
+        )
+        second = generator.render_markdown(
+            "## Status\n\n## 1. Independent source numbering\n\n",
+            source_name="second.md",
         )
 
+        rendered = first + second
+        expected = (
+            r"\section*{Abstract}",
+            r"\section*{1. First}",
+            r"\subsection*{2.2a Endpoint}",
+            r"\section*{Status}",
+            r"\section*{1. Independent source numbering}",
+        )
+        positions = [rendered.index(item) for item in expected]
+        self.assertEqual(positions, sorted(positions))
+        for item in expected:
+            self.assertEqual(rendered.count(item), 1)
+
+    def test_inline_markup_is_rendered_without_changing_full_heading_label(self):
+        generator = load_generator()
+        self.assertIsNotNone(generator, "Task 12 LaTeX generator is missing")
         rendered = generator.render_markdown(
-            markdown,
-            source_name="preserved-heading-prefixes.md",
+            "## 7. *Emphasis*, **weight**, and `code`\n",
+            source_name="inline-heading.md",
+        )
+        self.assertEqual(
+            rendered.count(
+                r"\section*{7. \emph{Emphasis}, \textbf{weight}, and \texttt{code}}"
+            ),
+            1,
         )
 
-        for preserved in (
-            r"\section{9. Nonmatching section}",
-            r"\subsection{9.1 Nonmatching subsection}",
-            r"\section{Descriptive section}",
-            r"\subsection{Qualitative subsection}",
-            r"\section{3.2 Numeric text at section level}",
-            r"\section{3D geometry remains descriptive}",
-        ):
-            self.assertIn(preserved, rendered)
+    def test_technical_appendix_layout_ends_at_next_top_level_heading(self):
+        generator = load_generator()
+        self.assertIsNotNone(generator, "Task 12 LaTeX generator is missing")
+        rendered = generator.render_markdown(
+            "## 14. Before\n\n"
+            "## 15. Limitations and Honest-Evidence Appendix\n\n"
+            "### 15.1 Limitations\n\n"
+            "## 16. Conclusion\n",
+            source_name="appendix-layout.md",
+        )
+        expected_in_order = (
+            r"\section*{14. Before}",
+            "\\onecolumn",
+            r"\section*{15. Limitations and Honest-Evidence Appendix}",
+            r"\subsection*{15.1 Limitations}",
+            "\\twocolumn",
+            r"\section*{16. Conclusion}",
+        )
+        positions = [rendered.index(item) for item in expected_in_order]
+        self.assertEqual(positions, sorted(positions))
+        self.assertEqual(rendered.count("\\onecolumn"), 1)
+        self.assertEqual(rendered.count("\\twocolumn"), 1)
+        self.assertNotIn(r"\appendix", rendered)
 
     def test_math_and_literal_dollars_remain_distinct(self):
         generator = load_generator()
@@ -1717,7 +1834,20 @@ class ArtifactGenerationTests(unittest.TestCase):
         )
         self.assertIn(r"\twocolumn[", latex)
         self.assertIn(r"\onecolumn", latex)
-        self.assertIn(r"\appendix", latex)
+        self.assertNotIn(r"\appendix", latex)
+        self.assertIn(r"\section*{Appendix A. Check}", latex)
+        self.assertLess(
+            latex.index(r"\onecolumn"),
+            latex.index(r"\section*{Appendix A. Check}"),
+        )
+        self.assertLess(
+            latex.index(r"\section*{Appendix A. Check}"),
+            latex.index(r"\section*{References}"),
+        )
+        self.assertLess(
+            latex.index(r"\twocolumn", latex.index(r"\onecolumn")),
+            latex.index(r"\section*{References}"),
+        )
         self.assertEqual(latex.count(r"\bibliography{"), 1)
         self.assertIn(
             r"\bibliography{../../../references/orthemology}",
@@ -1726,7 +1856,7 @@ class ArtifactGenerationTests(unittest.TestCase):
         self.assertIn("% source-qualification: research-stage-draft", latex)
         self.assertIn("% source-qualification: not-peer-reviewed", latex)
 
-    def test_outline_number_matching_spans_front_matter_and_body(self):
+    def test_explicit_labels_span_front_matter_and_body_without_counter_state(self):
         source_texts = {
             "docs/notation-gallery.md": (
                 "# Sample title\n\n"
@@ -1744,11 +1874,13 @@ class ArtifactGenerationTests(unittest.TestCase):
             source_texts,
         )
 
-        self.assertIn(r"\section{Abstract}", latex)
-        self.assertIn(r"\section{Body}", latex)
-        self.assertIn(r"\subsection{Detail}", latex)
-        self.assertNotIn(r"\section{2. Body}", latex)
-        self.assertNotIn(r"\subsection{2.1 Detail}", latex)
+        self.assertIn(r"\section*{Abstract}", latex)
+        self.assertIn(r"\section*{2. Body}", latex)
+        self.assertIn(r"\subsection*{2.1 Detail}", latex)
+        self.assertNotRegex(
+            latex,
+            r"\\(?:section|subsection|subsubsection)\{",
+        )
 
     def test_expected_tree_is_deterministic_and_validator_catches_tampering(self):
         with tempfile.TemporaryDirectory() as tmp:

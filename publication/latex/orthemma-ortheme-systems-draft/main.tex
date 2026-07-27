@@ -32,7 +32,7 @@
 \textbf{Revised manuscript draft — July 2026 (revision R6; fresh-session repository review completed; not external human peer review; not empirically validated). Not peer reviewed.}
 
 
-\section{Abstract}
+\section*{Abstract}
 This paper proposes and analyzes an orthemma–ortheme system: an information-processing architecture that encounters concrete occurrences, infers which repeatable operational state-types they instantiate, preserves uncertainty when that identity is unresolved, routes each occurrence by its sufficiently validated profile, and revises its types and governing rules when recurring error shows the current mapping inadequate. The two poles are a token and a type: an \emph{orthemma} is a concrete situated occurrence — this utterance, this word-token, this patient presentation, this build report for this commit — and an \emph{ortheme} is a repeatable operational state-type it instantiates, relative to a declared, versioned \emph{analysis} (of which the task is one component; ground truth is analysis-relative, never task-only and never actor-relative). The thesis is stated at the outset as an \textbf{integration discipline}: every facet of the architecture has an established neighbor (multi-label classification, POMDP belief states, the reject option, value-of-information stopping, risk registers, ticket state machines, provenance records, process reliabilism), and the claimed contribution is not any single facet but the union, the placement lifecycle that connects the facets, and one further object — the reified handling \emph{episode} carrying a joint verdict vector that separates result correctness from pathway adequacy and robustness on a single auditable record. The formal core is extended by six additions: versioned identity with labeled lineage; analysis/actor/time indexing; typed, scoped, expiring evidence channels; factorized candidate structure with route composition; per-burden closure status; and episode reification. The verdict remains conditional: nothing here is experimentally validated. The design was motivated by private internal engineering records that are not independently auditable or published; they function as non-evidential design provenance, and no public claim rests on them. No public observational dataset accompanies the paper. The coined vocabulary must beat matched established terminology on an adequately powered benchmark — externally registered before any run — before any term is adopted.
 
 \textbf{Keywords:} classification lifecycle; type–token distinction; analysis-relative ground truth; auditable episodes; process reliabilism; selective prediction; provenance; pathway adequacy; metamorphic testing; governance.
@@ -42,9 +42,9 @@ This paper proposes and analyzes an orthemma–ortheme system: an information-pr
 \vspace{1em}
 ]
 
-\section{1. Introduction}
+\section*{1. Introduction}
 
-\subsection{1.1 Four concrete occurrences}
+\subsection*{1.1 Four concrete occurrences}
 Consider four concrete occurrences.
 
 
@@ -61,7 +61,7 @@ Consider four concrete occurrences.
 Each is a concrete situated occurrence. In none of them is the system's first task to decide whether two \emph{other} cases may be merged. Its first task is to apprehend \emph{this} occurrence: to determine which repeatable, consequence-bearing state-types it instantiates, to act on the part of that identity it has established, and to hold the rest open. That is the phenomenon this paper is about.
 
 
-\subsection{1.2 Two poles}
+\subsection*{1.2 Two poles}
 We give the phenomenon a type–token vocabulary:
 
 
@@ -74,17 +74,17 @@ We give the phenomenon a type–token vocabulary:
 An orthemma–ortheme system is an architecture built around the relation between them: concrete occurrences are encountered, apprehended, investigated, classified, represented, routed, validated, dispositioned, and learned from by determining which orthemes they instantiate. The primary object is the relation and its lifecycle, not an isolated type and not a bare partition boundary.
 
 
-\subsection{1.3 The thesis, stated as an integration discipline}
+\subsection*{1.3 The thesis, stated as an integration discipline}
 \textbf{Central thesis.} An orthemma–ortheme system is an \emph{integration discipline} for the token side of classification and handling work: an information-processing architecture that encounters concrete occurrences, infers which repeatable operational state-types they instantiate, preserves uncertainty when that identity is unresolved, routes each occurrence according to its sufficiently validated orthemic profile, dispositions every residual obligation explicitly, records each handling episode as an auditable object distinct from its result, and revises its orthemes and governing rules when recurring error shows the current mapping inadequate.
 
 We concede up front that each facet of this architecture has an established neighbor. Plural profiles are multi-label and hierarchical classification. The maintained candidate set is a POMDP belief state. Abstention and escalation are the reject option and selective prediction. Deciding when to stop investigating is value-of-information stopping. Residual obligations are risk registers; placement statuses are ticket state machines; lineage is provenance; correct-result-through-defective-process is process reliabilism; perturbation probes are metamorphic testing. None of these facets is claimed as new. What is proposed is threefold: (i) the \textbf{union} — no one of those frameworks, in its standard individual form, supplies the others; (ii) the \textbf{lifecycle} — the explicit connection of disclosure, evidence, representation, routing, validation, closure, and revision to the placement status of a single concrete occurrence and its successors; and (iii) the \textbf{joint episode-verdict object} — a reified handling episode on which result correctness, evidential support, truth-connection, rule adequacy, executor fidelity, route safety, closure truthfulness, and robustness are simultaneously definable and separately adjudicable. All three are an integration proposal with an accompanying utility hypothesis (Section 13), not an established result.
 
 
-\subsection{1.4 The redundancy critique, answered inline}
+\subsection*{1.4 The redundancy critique, answered inline}
 The strongest objection is the redundancy critique: \emph{a composite of POMDP belief states, the reject option, multi-label classification, value-of-information stopping, a risk register, and a ticket state machine would act identically; the residual is a glossary.} Our answer, developed in Section 12 and maintained throughout, is: the critique is correct about each facet taken separately, and it is correct that the type-individuation mathematics is inherited. What remains is narrower than impossibility, and still substantive. The six-framework composite the critique invokes is a union that no member framework names: in their standard individual forms, the neighbors do not by themselves supply one shared, occurrence-centered episode/verdict record on which result correctness and pathway adequacy are jointly statable. A custom composite certainly \emph{could} be extended with such a record — this paper's proposal just \textbf{is} that extension, stated once and generically: a common lifecycle, a shared machine-checkable record contract, and the hypothesis that standardizing the integration improves auditability and practice. That hypothesis is adjudicated by the unrun benchmark of Section 13, not by this paper's argument, and no observational claim about how costly the union is to assemble in practice is made here — the synthetic worked example of Section 11.4 illustrates the claimed integration burden without being evidence for it.
 
 
-\subsection{1.5 Contributions and claim levels}
+\subsection*{1.5 Contributions and claim levels}
 Relative to the prior manuscript, this revision makes six formal additions:
 
 
@@ -107,9 +107,9 @@ Five kinds of claim stay separate throughout — conceptual framework, formal de
 
 \bigskip\hrule\bigskip
 
-\section{2. Core Objects}
+\section*{2. Core Objects}
 
-\subsection{2.1 Occurrence, type, and the instantiation relation}
+\subsection*{2.1 Occurrence, type, and the instantiation relation}
 \textbf{Definition 1 (Orthemma).} An orthemma is a concrete situated occurrence — an event, object, utterance, token, episode, or artifact — considered as something to be apprehended: this utterance now, this word-token on the page, this patient episode, this build report for this commit.
 
 \textbf{Definition 2 (Ortheme).} An ortheme is a repeatable operational state-type that an orthemma may instantiate, relative to a declared analysis (Definition 3 and Section 2.6 — the domain and task are among its components). It is a type whose confusion with another type would change a warranted classification, prediction, investigation, route, validation condition, closure condition, or evaluation.
@@ -127,7 +127,7 @@ The occurrence $m$ and its worldly facts are not created by the analysis. What i
 The profile is generally not a singleton. One orthemma instantiates several orthemes at once and at different descriptive levels; the relation may be hierarchical, compositional, overlapping, and temporarily unresolved. A single Arabic word-token can simultaneously instantiate a lexeme, a lemma, a morphological pattern, several affixes or clitics, a syntactic role, a semantic contribution, and a discourse function. A build report can simultaneously instantiate a test-outcome type, an evidence-scope type, and a provenance-currency type. An orthemma is not assigned to one mutually exclusive box.
 
 
-\subsection{2.2 Observation is not the orthemma}
+\subsection*{2.2 Observation is not the orthemma}
 The occurrence and the signal it presents are different objects. Let $\Omega : M \rightharpoonup X$ be the (partial, typed) observation map and $x = \Omega(m)$ the presently available observation of $m$. The observation may be impoverished, aliased, or misleading; the orthemma is the concrete event that produced or occasioned it. Apprehension runs
 
 
@@ -139,7 +139,7 @@ m --Ω--> x --evidence H_t--> p̂_t(m) --placement--> a_t --creates--> Succ ⊆ 
 where $\hat{p}_t(m)$ is the system's current inferred profile (belief), $a_t$ is the resulting interpretation, investigation, route, or action, and — new in this revision — the action's \textbf{successor set} $\operatorname{Succ}$ closes the loop back into the occurrence domain (Section 2.5). The ground truth $O^*_T(m)$ and the belief $\hat{p}_t(m)$ are distinct; so are the observation $x$ and the occurrence $m$.
 
 
-\subsection{2.3 Known orthemma, unresolved identity}
+\subsection*{2.3 Known orthemma, unresolved identity}
 A system may know that an orthemma occurred while not knowing its orthemic identity: $m$ is encountered, yet $\hat{p}_t(m)$ remains open. The right description is
 
 
@@ -149,11 +149,11 @@ m is encountered; p̂_t(m) remains unresolved,
 not "an unknown ortheme floats free." Types do not hover independently of occurrences; what is unresolved is the placement of a present, concrete case. This also separates the four things "the hidden distinction" can mean, as facets of one relation: the actual profile $O^*_T(m)$ (ground truth), the evidence and candidate structure (Section 5), the inferred profile $\hat{p}_t(m)$ (belief), and the way the belief is encoded (representation). None entails the others.
 
 
-\subsection{2.4 Placement and apprehension}
+\subsection*{2.4 Placement and apprehension}
 \textbf{Definition 4 (Placement and apprehension).} Placement is the assignment of an inferred profile $\hat{p}_t(m)$ to an orthemma. Apprehension is the whole process of Section 2.2: encountering $m$, observing $x$, accumulating typed evidence, narrowing the candidate structure, placing $\hat{p}_t(m)$, routing $a_t$, and dispositioning what remains. Placement is provisional until validated and may be revised.
 
 
-\subsection{2.5 Versioned identity and lineage (formal addition 1)}
+\subsection*{2.5 Versioned identity and lineage (formal addition 1)}
 The prior manuscript said "this build report \emph{for this commit}" and warned that "a correct classification attached to stale provenance is not a valid placement of the current artifact" — but gave those phrases no formal object. This subsection promotes them.
 
 \textbf{Definition 5 (Identity key and version).} Every orthemma carries an identity key $\kappa = \operatorname{id}(m)$ (plain gloss: \emph{which thing this is}, surviving change) and a version $v = \operatorname{ver}(m)$ (\emph{which state or edition of that thing}). Two orthemmata may share $\kappa$ and differ in $v$ (the same file before and after an edit); two may share an observation and differ in $\kappa$ (a reused storage slot occupied by a new file).
@@ -169,7 +169,7 @@ of size \textbf{zero, one, or many}. (A read-only classification creates none; a
 \textbf{Transport principle.} Placement validity is bound to $(\kappa, v)$. A placement or validation established for $(\kappa, v)$ does \textbf{not} transport across a successor edge to $(\kappa, v')$ — or to a different $\kappa$ behind the same observation — without a lineage argument and, where the edge could have changed the placed property, fresh evidence. This makes "right finding, wrong copy" a well-formed, detectable error rather than an invisible one: the finding was valid, and it is attached to an occurrence that no longer exists in the relevant version. Illustrative failure modes of this class — of the kind that motivated the design, stated here generically — include a reused storage slot treated as the same file, verdicts silently carried across a tree substitution, ordinal position mistaken for identity, and a stale checkout evaluated as the current one.
 
 
-\subsection{2.6 Analysis, actor, and time indices (formal addition 2)}
+\subsection*{2.6 Analysis, actor, and time indices (formal addition 2)}
 Ground truth is only defined relative to a \textbf{declared analysis} $A$: the system and governance boundary, task, evidence and action repertoire, policy class, loss, hard constraints, horizon, tolerance, representation family, and permitted-merger family. This section is the definition site of the index Definition 3 takes as primitive: $A$ must be \textbf{explicit and versionable} — it carries an identifier and version $\operatorname{ver}(A)$, and a change to any component above yields a new analysis version. Profiles and beliefs are therefore indexed:
 
 
@@ -185,7 +185,7 @@ Two clarifications guard the index. \textbf{Analysis relativity is not actor rel
 Placement status is \textbf{actor-indexed}: a clinician can hold a distinction absent from the record; a developer can know a failure the release gate cannot express; a reviewer can carry a verdict the pipeline has no field for. \textbf{Cross-actor divergence} — two actors' inferred profiles for the same $(\kappa, v)$ disagreeing consequentially — is promoted in this revision from an aside to a first-class stop signal: it is itself diagnostic and is a legitimate trigger for the governed interruption of Section 7.5, independent of either actor's confidence. Multi-actor evaluation is developed further in Section 10.
 
 
-\subsection{2.7 The orthemic contrast, and the inherited results}
+\subsection*{2.7 The orthemic contrast, and the inherited results}
 \textbf{Definition 7 (Orthemic contrast).} Fix a declared analysis $A$. Two orthemes are operationally non-equivalent, $o_i ≢_A o_j$, when confusing their concrete instances would alter a warranted classification, prediction, investigation, route, validation condition, closure condition, or evaluation beyond the accepted tolerance. An orthemic contrast is such a non-equivalence: a criterion by which two candidate types must not be collapsed.
 
 The contrast is a relation on types. It explains why two orthemes must remain distinguishable; it does not, by itself, tell a system what a present orthemma is. Contrast individuates the types; instantiation constitutes the system.
@@ -220,7 +220,7 @@ Threshold closeness is non-transitive ($h_1 \approx_{\epsilon_A} h_2$, $h_2 \app
 
 \bigskip\hrule\bigskip
 
-\section{3. Aliasing and Identity Uncertainty}
+\section*{3. Aliasing and Identity Uncertainty}
 The type–token framing exposes three related but distinct uncertainty patterns. The prior manuscript distinguished the first two; this revision adds the third as its own column, because it is a distinct pattern in kind — conflatable with, but reducible to, neither of the others.
 
 
@@ -241,7 +241,7 @@ The first concerns observational equivalence across concrete cases; the second c
 
 \bigskip\hrule\bigskip
 
-\section{4. Evidence: Typed, Scoped, Expiring Channels (formal addition 3)}
+\section*{4. Evidence: Typed, Scoped, Expiring Channels (formal addition 3)}
 The prior manuscript's single observation map $\Omega$ is replaced by a family of \textbf{typed evidence channels} $\{\Omega_k\}$, each partial (not every channel applies to every occurrence) and each carrying declared metadata. An evidence item obtained through channel $k$ is a record
 
 
@@ -274,9 +274,9 @@ Validation discipline follows from the typing: a structural check does not valid
 
 \bigskip\hrule\bigskip
 
-\section{5. Candidate Structure (formal addition 4)}
+\section*{5. Candidate Structure (formal addition 4)}
 
-\subsection{5.1 Typed candidate families}
+\subsection*{5.1 Typed candidate families}
 The prior manuscript's single candidate set $C_t(m)$ is split by uncertainty axis into \textbf{typed candidate families}, indexed like everything else by analysis, actor, time, and descriptive level:
 
 
@@ -296,7 +296,7 @@ $C^{\mathrm{warrant}}$ & $\mathcal{W}_A$ (warrant states) & \emph{which warrant 
 Each family carries an \textbf{exclusivity marking}: elements are flagged as \emph{alternatives} (at most one obtains — this powder is flour or cornstarch, not both) or as \emph{co-holding components} (several may obtain together — this one occurrence has an identity defect \emph{and} a quantity defect). Collapsing co-holding components into alternatives forces a false choice; the reverse collapse hides a disjunction. Optional weights over alternatives are permitted but never required; a family is consequentially open when it contains more than one element whose members would license non-equivalent routes. An open family must carry its \textbf{evidence-to-resolve clause}: which channel, in scope, would discriminate the alternatives. (A list of possibilities with no path to adjudication is treated as a definitional defect here — the norm this definition adopts.)
 
 
-\subsection{5.2 The profile space and partial profiles}
+\subsection*{5.2 The profile space and partial profiles}
 \textbf{Definition 10 (Profile space, partial profiles — general form first, R3).} Fix a declared analysis $A$ with active repertoire $\mathcal{O}_A$. In its most general form the \textbf{profile space} is
 
 
@@ -326,7 +326,7 @@ Four objects now stand in definite relations, and none may be conflated with ano
 This subsection supplies the definition the corpus previously used implicitly ($\Pi_A$ appeared in the candidate-family table without a definition site); it is A-indexed through the repertoire, exclusivity markings, and constraint declarations, all components of $A$ (Decision 0007).
 
 
-\subsection{5.3 Factorized profiles and route composition}
+\subsection*{5.3 Factorized profiles and route composition}
 Profiles factorize over axes: a placement may be resolved on the symptom axis, open on the cause axis, and resolved on the severity axis. Routes then compose. Let $r_1 ⊕ r_2$ denote the \textbf{route composition} of the operations licensed by independently resolved factors, with the semantics:
 
 
@@ -343,9 +343,9 @@ This is what makes route-sufficient action well-formed in the plural case: the s
 
 \bigskip\hrule\bigskip
 
-\section{6. Metaorthemes: The Split Normal Form}
+\section*{6. Metaorthemes: The Split Normal Form}
 
-\subsection{6.1 Definition}
+\subsection*{6.1 Definition}
 The prior draft defined a metaortheme as a higher-order distinction "acting on" the system's machinery. This revision adopts a single, narrower normal form, aligned with the core formalization.
 
 \textbf{Definition 11 (Metaortheme, split normal form).} A metaortheme is a \textbf{metaorthemic configuration}
@@ -376,7 +376,7 @@ The distinction the rule consults and the rule that consults it are two objects.
 \textbf{Anti-vacuity conditions (part of the definition, not advice).} A candidate $\mu$ is admitted only if: (i) $g$ is named; (ii) $S_\mu$ is declared in advance; (iii) switching the obtaining state changes validated placement, risk, or constraints in at least one episode class; and (iv) it is not a first-order ortheme, nor a tunable parameter of an ordinary policy in disguise. A good policy that consults no in-advance-declared competing higher-order states is just a good policy. (Whether the \emph{word} "metaortheme" earns keep over ordinary words is a separate question, decided only by the terminology benchmark — Section 14; a real distinction may be admitted while its word is retired.)
 
 
-\subsection{6.2 Governed components, glossed}
+\subsection*{6.2 Governed components, glossed}
 $g \in \{\mathrm{O}, \mathrm{I}, \mathrm{E}, \mathrm{D}, \mathrm{R}, \mathrm{V}, \mathrm{W}\}$, in plain language:
 
 
@@ -401,7 +401,7 @@ $g \in \{\mathrm{O}, \mathrm{I}, \mathrm{E}, \mathrm{D}, \mathrm{R}, \mathrm{V},
 \textbf{Negative example (calibration).} In a widely discussed exchange, a conversational system's instruction of the form "be maximally truth-seeking" was described as if it were a governing distinction of this kind. It fails every anti-vacuity condition: it names no governed component, declares no competing higher-order states in advance, specifies no selecting evidence, and is not separable into a consultable distinction and a conduct rule. It is an \emph{objective} — and objectives are excluded from $g$ by construction. The exchange is retained as the standing negative example of an objective mislabeled a metaortheme.
 
 
-\subsection{6.3 Worked configurations}
+\subsection*{6.3 Worked configurations}
 Five configurations, each passing the minimum-specificity test:
 
 
@@ -455,19 +455,19 @@ Five configurations, each passing the minimum-specificity test:
 \hrule height 0.8pt
 \par\medskip
 
-\subsection{6.4 Plurality, conflict, precedence}
+\subsection*{6.4 Plurality, conflict, precedence}
 A typical episode runs under several metaorthemes at once — a version rule, an evidence-grade rule, and a closure rule — written $\vec{\mu} = (\{\mu_1, \dots, \mu_k\}, \preceq)$ with $\preceq$ a declared strict partial precedence order. Configurations governing disjoint components compose freely (their constraints conjoin). Two rules conflict at an episode when their meta-policies prescribe incompatible constraints on the same component under the states that actually obtain; resolution is only via $\preceq$, and a conflict unresolved by $\preceq$ is a stop condition (Section 7.5) — silent override is itself a metaorthemic error. Metaorthemes can become first-order orthemes for a higher audit (Section 8.1); the regress stops at the declared governance boundary.
 
 
 \bigskip\hrule\bigskip
 
-\section{7. Closure, the Lifecycle, and Revision (formal addition 5)}
+\section*{7. Closure, the Lifecycle, and Revision (formal addition 5)}
 
-\subsection{7.1 The lifecycle, recast per burden}
+\subsection*{7.1 The lifecycle, recast per burden}
 The prior draft drew the lifecycle as one line — encountered → unresolved → candidate profile → investigated → provisionally placed → validated → routed → integrated. The line survives as a \emph{typical trajectory of a single burden}, but the object that matures is not the case as a whole; it is each \textbf{burden} — each claim to be established and each obligation to be discharged — separately. A case has no scalar completion state, and scalar "percent complete" reporting is banned as ill-typed: it averages incommensurable burden states into a number that licenses nothing.
 
 
-\subsection{7.2 Failure modes as relation failures (retained taxonomy)}
+\subsection*{7.2 Failure modes as relation failures (retained taxonomy)}
 These are failures in the relation among occurrence, type, evidence, representation, and operation — not merely partition errors:
 
 
@@ -496,7 +496,7 @@ These are failures in the relation among occurrence, type, evidence, representat
 Each has a distinct remedy; they need not share a cause. Low confidence is not the only abstention trigger: broken provenance, an unavailable route, or a hard safety conflict can be decisive under a confident placement.
 
 
-\subsection{7.3 Per-burden residual dispositions; false closure as type error}
+\subsection*{7.3 Per-burden residual dispositions; false closure as type error}
 \textbf{Definition 12 (Residual disposition).} Every burden of an episode carries, at closure time, exactly one disposition from
 
 
@@ -510,13 +510,13 @@ glossed: still open with no plan (unresolved); open with a declared later trigge
 \emph{Remark (demotion).} The prior draft's "orthemic debt" register is demoted to a speculative instrument: it remains unvalidated against ordinary defect counts, hazard registers, and technical-debt metrics, and no public evidence supports it. It is no longer part of the core proposal.
 
 
-\subsection{7.4 The claim ledger and required success surfaces}
+\subsection*{7.4 The claim ledger and required success surfaces}
 Closure quantifies over an explicit \textbf{claim ledger} $Q$: per claim, the record holds the proposition; the target occurrence and version $(\kappa, v)$ it is about; the property class of evidence that could support it (Section 4); the \textbf{required success surface}; the supporting evidence items by identifier; the warrant where relevant; the verification status; and explicit non-claims (what is \emph{not} being asserted, recorded to block later inflation).
 
 The \textbf{required success surface} is the declared locus where the claim's success must be observable: a repair claim's success surface is the live behaviour of the current version, not the repository diff; a migration claim's surface is the serving system, not the migration log. A claim verified anywhere other than its declared surface is at best provisional. (The canonical synthetic instance: every check a repository can express passes while the user-visible surface is broken — the claim was verified off-surface.)
 
 
-\subsection{7.5 Generalized ANDON: stop on risk, not on surprise (retained)}
+\subsection*{7.5 Generalized ANDON: stop on risk, not on surprise (retained)}
 A generalized ANDON event is a governed interruption when safe continuation or closure is not warranted under the current placement, evidence, model, route, or objective. Its signals are heterogeneous — observation novelty, intra-orthemma underdetermination, identity uncertainty, transition surprise, structural contradiction, evidence insufficiency or expiry, routing or capacity failure, validation failure, false-closure detection, cross-actor divergence (Section 2.6), unresolved metaorthemic conflict (Section 6.4), and safety conflict — and they are not the same signal. Stopping should track continuation risk, not anomaly:
 
 \textbf{Proposition (ANDON sufficiency, retained framing).} If stopping or escalating is admissible with conditional risk at most $\theta_{\text{stop}}$, while every continuation action exceeds risk $\theta_{\text{stop}}$ or violates a hard constraint, then every risk-minimising admissible policy stops or escalates. \emph{(The stop/escalate action has lower conditional risk than every admissible continuation and meets the constraints, so no continuation is optimal.)}
@@ -524,7 +524,7 @@ A generalized ANDON event is a governed interruption when safe continuation or c
 The loop ends when residual obligations in the ledger have been reread — not when the original alarm disappears.
 
 
-\subsection{7.6 Revision as a governed mode}
+\subsection*{7.6 Revision as a governed mode}
 The prior draft's "revise" was one word. The record shows it needs its own machinery. A \textbf{revision operator}
 
 
@@ -549,15 +549,15 @@ is governed by:
 
 \bigskip\hrule\bigskip
 
-\section{8. Episode Reification: Orthing Episodes and the Verdict Layer (formal addition 6)}
+\section*{8. Episode Reification: Orthing Episodes and the Verdict Layer (formal addition 6)}
 
-\subsection{8.1 The process type, the concrete token, and the reification embedding}
+\subsection*{8.1 The process type, the concrete token, and the reification embedding}
 \textbf{Orthing} (gloss: the doing of apprehension-and-handling) is a process TYPE: the rule-governed, evidence-updating operation kind by which an orthemma is individuated, observed, assigned typed candidate families and an inferred profile, routed, validated, dispositioned, and revised under one or more metaorthemes. It stands to its runs as "compilation" stands to "the 14:32 build of commit \texttt{abc123}." An \textbf{orthing episode} $e$ is a concrete TOKEN: one dated, situated run, with an actor, a time, an input occurrence, and a result; two episodes are distinct occurrences even when inputs and outputs agree.
 
 When a higher audit asks "was this placement made correctly, on adequate evidence, under an adequate rule?", the episode is itself apprehended, via an explicit \textbf{reification embedding} $\iota_n : E^{(n)} \hookrightarrow M^{(n+1)}$ — yesterday's classification act, re-cast as today's case. This is a modeling step, not set membership: an episode is a different kind of thing from a jar of powder and becomes a base occurrence of the higher audit only by being cast as one. The audit's orthemes at level $n+1$ are pathway state-types — evidence-sufficient placement, stale-rule placement, false closure — precisely the verdicts below. No separate noun ("meta-orthemma") is coined for the reified episode: against the paper's own anti-vacuity standard, the new noun changes no representation, evidence, routing, or prediction that the embedding does not already provide. The regress stops, as always, at the declared governance boundary.
 
 
-\subsection{8.2 The episode signature (cited compactly)}
+\subsection*{8.2 The episode signature (cited compactly)}
 Following the core formalization, an orthing episode is a record
 
 
@@ -574,7 +574,7 @@ e = \langle\, \mathrm{id};\ m, \kappa, v;\ x, H;\ \alpha, w, A, T, t;\\
 Three separations, stated once: the \textbf{episode is not its output} (episodes with identical outputs can differ in pathway and hence in every verdict); the \textbf{episode is not the policy} (the policy is repeatable and undated; reliability claims attach to the policy and its governing rules, correctness claims to the episode); a \textbf{placement inside an episode is not the episode} (the convenient one-placement notation $e \models_\mu (m : \hat{o})$ is derived, not definitional).
 
 
-\subsection{8.2.1 Waking and somnic orthing}
+\subsection*{8.2.1 Waking and somnic orthing}
 A \textbf{waking orthing} takes up an occurrence under the analysis, evidence, governing configuration, claimant contracts, evaluator versions, and selector versions then in force. A later episode may reify that preserved orthing as its orthemma. \textbf{Meta-orthability} is the later episode's applicability and record-sufficiency gate; \textbf{somnic orthing} is the later placement of the prior orthing, pathway, residual, governing artifact, or relation. Thus: \textbf{waking orths experience; Somnus orths the available orthings of experience.} The earlier event history remains append-only: a later assessment may reference or supersede another assessment, but it cannot rewrite the target episode or insert later-discovered evidence into its historical evidence state.
 
 The runtime-neutral contract distinguishes session, episode, occurrence, claim attempt, claimant-level orthability assessment, orthing, somnic assessment, and proposal identities; a conversational turn supplies none of these equalities. Privacy and source limits precede minimal occurrence capture, while versioned activation contracts gate claiming after capture. The record separately identifies evidence observed at episode time, used then, indexed but unused then, and discovered later. A somnic run selects newly unassessed or materially reopened anchors, queries an eligible historical corpus, and records the comparators actually used; a closed assessment is not recursively requeued without a material delta.
@@ -595,7 +595,7 @@ collective_execution: not-implemented
 The bounded v0 operation is controlled residual-recurrence assessment. Fingerprint equality establishes only a structural recurrence candidate; support resolves through typed episode, session, orthing, actor, source-family, input-family, and occurrence-time records. A threshold requires distinct orthings and distinct episodes and is only a review trigger; the opportunity denominator is backed by explicit opportunity records, while independence uses a fixed declared policy. Suspected locus remains distinct from causal diagnosis or intervention. Assessment, intervention disposition, proposal, authorization, application, and later outcome evaluation remain separate. The schemas and fixtures under \texttt{schemas/\allowbreak{}} and \texttt{examples/\allowbreak{}somnus/\allowbreak{}} are offline conformance artifacts, not a live ledger, scheduler, analyzer, writeback engine, collective network, or learning result (Decision 0035).
 
 
-\subsection{8.3 The verdict vector}
+\subsection*{8.3 The verdict vector}
 The verdicts diagnose distinct dimensions and are not identified with one another; they are NOT assumed pairwise logically independent — every definitional implication is declared explicitly, and the only one these definitions introduce is the claim-wise $\operatorname{V2b-T}_q \to \operatorname{V1}_q$ (full implication table: core formalization §4.1; Decision 0003, superseding the earlier "none entails another"). Verdict labels follow the normative registry (\texttt{docs/\allowbreak{}verdict-\allowbreak{}registry.\allowbreak{}yaml}, Decision 0004): semantic IDs — \texttt{RESULT\_CORRECT}, \texttt{EVIDENCE\_SUPPORT}, \texttt{PROCEDURE\_RELIABLE}, \texttt{TOKEN\_TRUTH\_LINKED}, \texttt{EVIDENCE\_CURRENT}, \texttt{GOV\_CONFIG\_ADEQUATE}, \texttt{GOV\_POLICY\_ADEQUATE}, \texttt{GOV\_TOKEN\_ADEQUATE}, \texttt{EXECUTION\_FAITHFUL}, \texttt{EX\_ANTE\_JUSTIFIED}, \texttt{ROUTE\_ADMISSIBLE}, \texttt{ROUTE\_QUALITY}, \texttt{CLOSURE\_TRUTHFUL}, \texttt{ROBUST\_NEIGHBORHOOD} — are authoritative in machine-readable records; the $\operatorname{V}\dots$ display aliases below are the prose forms. Pathway adequacy conjoins over the RESULT-FREE governed core $\operatorname{CorePath} =\allowbreak{} \{\operatorname{V2a},\allowbreak{} \operatorname{V2b-P},\allowbreak{} \operatorname{V2c},\allowbreak{} \operatorname{V3a},\allowbreak{} \operatorname{V3b},\allowbreak{} \operatorname{V3c},\allowbreak{} \operatorname{V3d},\allowbreak{} \operatorname{V3e},\allowbreak{} \operatorname{V4a},\allowbreak{} \operatorname{V5},\allowbreak{} \operatorname{V6}\}$ — V1 (result), V2b-T (factive), and route near-optimality are excluded. The required set $\operatorname{ReqPath}(e)$ is DERIVED from the declared analysis, episode shape, risk class, claims, and governance (never a discretionary list; "not tested" is never "not applicable"; every exclusion carries a recorded reason), and each verdict carries a status in \{pass, fail, undetermined, not-applicable\}: $\operatorname{PathwayAdequate}(e)$ iff every required verdict passes; $\operatorname{PathwayDefective}(e)$ iff one fails; $\operatorname{PathwayUndetermined}(e)$ when none fails but something required is unevaluated — a missing assessment is never silently a pass. (R3 honesty note: the repository ships the derivation as a machine-readable governance rule table with a per-verdict trace and an omission-attack fixture — \texttt{docs/\allowbreak{}governance-\allowbreak{}requirements.\allowbreak{}yaml}, \texttt{scripts/\allowbreak{}derive\_\allowbreak{}reqpath.\allowbreak{}py} — while $\operatorname{RequiredBy}$ \emph{in general} remains a governance-supplied parameterized interface, an acknowledged open parameter rather than a closed universal calculus; core formalization §4.1.)
 
 
@@ -682,7 +682,7 @@ The verdicts diagnose distinct dimensions and are not identified with one anothe
 \hrule height 0.8pt
 \par\medskip
 
-\subsection{8.4 The result × pathway matrix}
+\subsection*{8.4 The result × pathway matrix}
 The matrix applies only after the pathway status resolves as adequate or defective; $\operatorname{PathwayUndetermined}$ episodes remain outside the four cells until audited. (Decision 0003: the earlier parenthetical committing token-level truth-connection to the conjunction is superseded — the incorrect-result/adequate-pathway cell is genuinely representable.)
 
 
@@ -707,7 +707,7 @@ The matrix applies only after the pathway status resolves as adequate or defecti
 Deterministic fixtures establishing all four resolved cells (plus the undetermined state, the stale-directive case, and safe-but-suboptimal routing) are given in the core formalization §4.2 (F1–F7) with machine-checkable encodings in \texttt{tests/\allowbreak{}verdict-\allowbreak{}fixtures.\allowbreak{}json}.
 
 
-\subsection{8.5 Worked example: the stopped-clock validator}
+\subsection*{8.5 Worked example: the stopped-clock validator}
 A scan validator's rule is: \emph{pass iff the output log contains the marker string} \texttt{SCAN-CLEAN}. On today's artifact it passes, and the artifact happens to be genuinely compliant.
 
 
@@ -726,19 +726,19 @@ A scan validator's rule is: \emph{pass iff the output log contains the marker st
 This is the operational analogue of the stopped clock that shows the right time twice a day: correct result, defective pathway, high neighboring-case failure risk. The verdict layer expresses this on the episode record itself; a system tracking only result correctness has no object on which the defect is even statable, and will discover it only when a neighbor arrives.
 
 
-\subsection{8.6 The novelty claim, stated narrowly}
+\subsection*{8.6 The novelty claim, stated narrowly}
 The defensible claim is exactly this and no more: \textbf{the prior manuscript, and the operational discipline it describes, did not explicitly represent the concrete classification/handling episode as an auditable occurrence distinct from its result.} It is \emph{not} claimed that episodes are inexpressible elsewhere. Process reliabilism names precisely the correct-result-through-unreliable-process structure and the truth-connection idea — for \emph{beliefs}; it offers no operational record schema (no typed evidence, route, residual disposition, successor set, or perturbation estimator for agent and validator episodes). Provenance and audit-trail systems (W3C PROV, audit logs, ML lineage) are operational and token-level — who did what to which artifact when — but typically carry no candidate structure, plural inferred profile, per-claim evidence status, residual-disposition ledger, or verdict layer separating result correctness from pathway adequacy and robustness. Assurance practice (control-effectiveness vs outcome testing) and metamorphic testing each contain one verdict without the joint object. The residual contribution is the \textbf{integrated joint verdict layer on one auditable object}; whether that integration pays for itself over "audit the validator when suspicious" is an open empirical question (Section 13.2), not a settled fact.
 
 
 \bigskip\hrule\bigskip
 
-\section{9. Mechanical and Distributed Orthing}
+\section*{9. Mechanical and Distributed Orthing}
 
-\subsection{9.1 Consciousness is not required}
+\subsection*{9.1 Consciousness is not required}
 Nothing in the episode signature or the verdicts quantifies over awareness. Any rule-governed, evidence-updating executor — a predictive-text decoder resolving an ambiguous keypress sequence, a CI validator, a triage pipeline, a review chain, an institution — executes orthing, and its episodes bear all \emph{applicable} verdicts. Stopped-clock analogues arise mechanically: a decoder emits the right word from a frequency prior that would misfire on the neighboring input — correct message, defective pathway, no conscious subject anywhere. The actor field $\alpha$ is therefore populated with the mechanical executor — never left empty — and executor identity is distinct from any warrant or authority index. Semantic depth (hard-coded check < model-based inference over declared alternatives < reflective capacity to propose rule revisions) is a real axis of the \emph{executor}, orthogonal to every verdict on the \emph{episode}: shallow executors can run adequate pathways and deep ones defective pathways. Depth matters operationally in one place only: which revisions the executor may perform locally versus must escalate across the governance boundary.
 
 
-\subsection{9.2 Distributed episodes: the token-level DAG}
+\subsection*{9.2 Distributed episodes: the token-level DAG}
 One case handled across sensors, validators, agents, routers, a human sign-off, and downstream consumers is modeled as a finite \textbf{DAG} $\Gamma_E = (E, \rightsquigarrow)$ whose nodes are episodes (each with the full signature — its own actor, its own governing configuration) and whose edges are \textbf{typed}:
 
 
@@ -753,7 +753,7 @@ One case handled across sensors, validators, agents, routers, a human sign-off, 
 \textbf{Why a DAG despite retries and review loops:} nodes are \emph{dated tokens}; every edge is oriented from the earlier node to the later node with the semantics carried by its label (the later node of a supersession edge revises the earlier; the later node of a retry-of edge re-attempts the earlier's task), so the token graph is acyclic by construction. A rework loop does not add a back edge — it creates a \emph{new} episode node reached by a retry-of or supersession edge from its predecessor. The genuinely cyclic structure (the same policy re-entered; review returning work to an author role) lives at the TYPE/policy level, represented as repeated instantiation of the same policy, never as cycles among tokens.
 
 
-\subsection{9.3 Composition conditions}
+\subsection*{9.3 Composition conditions}
 The graph composes into ONE boundary-level episode $e_\Gamma = \operatorname{comp}(\Gamma_E)$ iff:
 
 
@@ -770,13 +770,13 @@ When condition 2 or 3 fails there is only the graph, and talk of "the system dec
 
 \bigskip\hrule\bigskip
 
-\section{10. Multi-Actor and Competitive Settings}
+\section*{10. Multi-Actor and Competitive Settings}
 
-\subsection{10.1 One occurrence, many evaluations}
+\subsection*{10.1 One occurrence, many evaluations}
 The actor and analysis indices of Section 2.6 already imply that a single concrete occurrence supports several simultaneous evaluations: the same $(\kappa, v)$ is apprehended by different actors, each under its \textbf{own declared analysis} $A_\alpha$ — sharing frame components where the actors share a game or institution, and differing at least in task $T_\alpha = \operatorname{task}(A_\alpha)$ — each with its own inferred profile and candidate structure. This is a multi-analysis context: Definition 3's task-relative abbreviation is forbidden here, and ground truth is written in full, $O^*(m; A_\alpha)$, per evaluating analysis. This section develops the special case where the actors' interests diverge. In imperfect-information games the divergence begins one level earlier, at OBSERVATION: the one concrete deal $m$ is shared, but each actor observes only $x_\alpha = \Omega_\alpha(m)$ — the paper's own observation/occurrence distinction (§2.2), applied per actor. A player's information set is therefore an OBSERVATION, never part of the occurrence's identity key; perfect-information games are the special case of full, equal observation. Everything here is a \textbf{derived extension of the existing actor/analysis indices — not a seventh formal addition}; no new primitive is introduced.
 
 
-\subsection{10.2 Target profiles}
+\subsection*{10.2 Target profiles}
 \textbf{Definition 14 (Target profile set).} For actor $\alpha$ under its declared analysis $A_\alpha$ with task $T_\alpha = \operatorname{task}(A_\alpha)$, the target profile set $\mathcal{G}_{\alpha,A_\alpha} \subseteq \Pi_{A_\alpha}$ is the SET OF PROFILES that $\alpha$, under $T_\alpha$, aims to make some future occurrence in the lineage instantiate — each member of $\mathcal{G}_{\alpha,A_\alpha}$ is one complete profile (normative typing, aligned with the core formalization §5.3; a win-ortheme such as "White checkmates Black" labels the FAMILY of terminal profiles realizing it). $\mathcal{G}_{\alpha,A_\alpha}$ is the grounded instantiation at $\alpha$ of a PARAMETRIC ortheme schema $\operatorname{GoalSchema}(\alpha)$ ("win for α"): the schema is one form under role substitution; the grounded targets are distinct; and target-set overlap is a third, independent relation (empty for zero-sum win-sets, total for cooperation).
 
 Three separations keep this well-typed:
@@ -791,11 +791,11 @@ Three separations keep this well-typed:
 
 \end{itemize}
 
-\subsection{10.3 Structural isomorphism is not identity of targets}
+\subsection*{10.3 Structural isomorphism is not identity of targets}
 In symmetric games, a role substitution (swap the colors, relabel the players) maps one actor's target set onto the other's: the targets are \textbf{structurally isomorphic}. Declared prose abbreviation for this section and the next: the role labels \textbf{White} and \textbf{Black} name the formal actors $\alpha$ and $\beta$ respectively, with per-actor analyses $A_\alpha, A_\beta$ and tasks $T_\alpha = \operatorname{task}(A_\alpha)$, $T_\beta = \operatorname{task}(A_\beta)$. Isomorphism under role substitution is \emph{not} identity: $\mathcal{G}_{\alpha,A_\alpha} \neq \mathcal{G}_{\beta,A_\beta}$ even though each is the image of the other under the color swap. Conflating them is a placement error at the actor index — precisely the error a non-indexed formalism cannot even state, because it has only one profile slot per occurrence.
 
 
-\subsection{10.4 Worked example: chess}
+\subsection*{10.4 Worked example: chess}
 The shared concrete occurrence $m$ is \emph{this board position in this game}, where the occurrence's identity includes the position, the full move history, and the player to move (castling and en-passant rights are functions of that history). Both players apprehend the same $m$: one occurrence, two actor/analysis-indexed evaluations $\hat{p}_{A_\alpha,\alpha,t}(m)$ and $\hat{p}_{A_\beta,\beta,t}(m)$ (the §10.3 role-label convention: White = $\alpha$, Black = $\beta$), and two target profiles $\mathcal{G}_{\alpha,A_\alpha}$ (state-types realizing a win for White) and $\mathcal{G}_{\beta,A_\beta}$.
 
 The example also calibrates what is and is not a metaortheme:
@@ -812,7 +812,7 @@ The example also calibrates what is and is not a metaortheme:
 
 \end{itemize}
 
-\subsection{10.5 Draws, cooperation, and conflict predicates}
+\subsection*{10.5 Draws, cooperation, and conflict predicates}
 \textbf{Draws exist:} not every terminal occurrence realizes a player's positive target. The two target sets do not partition the terminal states; there is a third region realizing neither. Any formalization that forces every terminal state into some actor's target set has mis-specified the game.
 
 Over a set of actors with target profiles $\{\mathcal{G}_{\alpha_i,A_i}\}$, the predicates are well-typed across profile spaces — the target sets live in \emph{different} spaces ($\mathcal{G}_{\alpha,A_\alpha} \subseteq \Pi_{A_\alpha}$), so they are never compared by bare set intersection. With $\operatorname{Reach}(m)$ the occurrences reachable from $m$:
@@ -831,23 +831,23 @@ Mixed-motive settings sit between: targets partially overlap, and the conflict/c
 
 \bigskip\hrule\bigskip
 
-\section{11. Examples}
+\section*{11. Examples}
 Each example is one architecture: orthemma → typed candidate families → typed evidence → validated placement → composed route → dispositioned residuals. The framework is substrate-neutral only as a design heuristic; it claims no shared mechanism across the domains. For each case the analyst must name the physical and social information carriers, boundary, decision rights, and validation.
 
 
-\subsection{11.1 The build report}
+\subsection*{11.1 The build report}
 The orthemma is \emph{this build report for this commit} — with identity key (the commit) and version (the artifact set actually built). The observation is the string "all tests pass." The candidate structure is typed: $C^{\mathrm{profile}}$ contains "behaviour genuinely exercised" and "files merely exist" as alternatives on the evidence-scope axis; $C^{\mathrm{id}}$ contains "report describes this commit" and "report describes the previous commit" (identity uncertainty, Section 3); $C^{\mathrm{warrant}}$ records whether the release is authorized, established, both, or neither. The discriminating evidence is typed: a behavioural channel (the suite demonstrably executed these paths on this artifact) versus a structural channel (the log line exists) versus a provenance channel (the log was produced by this run from this commit). A green check whose scope does not intersect the release claim is a mis-scoped pass and contributes nothing to closure. The route composes over resolved factors — release, repair, or reject — and closure quantifies over the burden ledger: a release with a deferred flake-investigation burden is closed \emph{with a deferred residual}, not "done."
 
 
-\subsection{11.2 The Arabic word-token}
+\subsection*{11.2 The Arabic word-token}
 The orthemma is \emph{this word-token} on this page. Its candidate profile spans segmentation, lemma, lexeme, morphological pattern, clitics, syntactic role, and vocalisation — co-holding components, not alternatives: a future particle plus imperfect verb plus plural marking plus object clitic is one composed placement, and Arabic computational morphology explicitly separates tokenisation, lemmatisation, features, clitics, and contextual disambiguation. Root and lemma can be route-sufficient for dictionary lookup before every dependency is resolved — the factorized profile acts on resolved axes while the syntactic-role axis stays open with a declared evidence-to-resolve clause (more context). A fluent gloss does not validate a source-linked parse: the gloss is evidence on the semantic axis whose scope does not intersect the morphological claim.
 
 
-\subsection{11.3 Clinical case (abstract only)}
+\subsection*{11.3 Clinical case (abstract only)}
 A patient presentation is an orthemma whose factorized profile includes a symptom axis, a risk/urgency axis, a cause axis, and a severity axis. The symptom-axis placement can become route-sufficient — altering urgency and routing — while the cause axis stays open as an explicitly maintained candidate family with a discriminating test declared. Shared symptoms do not establish shared etiology (an evidence-grade configuration), and orthemic accuracy is not clinical or ethical goodness: a system can place correctly and route unjustly. The example is retained in this abstract form only; no clinical detail is load-bearing anywhere in the paper.
 
 
-\subsection{11.4 Worked example: a launch pipeline (synthetic composite)}
+\subsection*{11.4 Worked example: a launch pipeline (synthetic composite)}
 
 \begin{quote}
 \textbf{Synthetic composite — illustrative only; not evidence.}
@@ -860,13 +860,13 @@ An operation without the union in advance would have to build each piece in resp
 
 \end{quote}
 
-\subsection{11.5 The stale steer (recovered directive without current force)}
+\subsection*{11.5 The stale steer (recovered directive without current force)}
 A system recovers an earlier governing instruction — after context compaction, a crash, or a handover — and follows it. The recovery is textually faithful, the instruction was genuinely issued under proper authority, and it had been superseded in the interim. Five claims must be kept apart: that the directive \emph{exists}, that this copy is \emph{authentic}, that it was \emph{recovered} through a declared channel, that its issuer was \emph{authorized}, and that it is \emph{in force} now — and evidence for any one is not evidence for the next. The verdict layer needs no new machinery: currentness of the governing evidence fails (V2c), the bound governing token is not current (V3c), the executor is faithful (V3d passes — faithful execution under a defective governing token), and a closure claim of "acted under current instructions" fails V5. The full directive record, the five predicates, and the deterministic fixture (F6) are given in \texttt{examples/\allowbreak{}compaction-\allowbreak{}stale-\allowbreak{}steer.\allowbreak{}md} (Decision 0006).
 
 
 \bigskip\hrule\bigskip
 
-\section{12. Related Work}
+\section*{12. Related Work}
 Established constructs largely theorise the type side, and each facet of the present architecture has a nearest neighbor, conceded here facet by facet:
 
 
@@ -943,23 +943,23 @@ Established constructs largely theorise the type side, and each facet of the pre
 The type-individuation mathematics is inherited outright. The proposed residual is exactly three things. (1) \textbf{The union:} no listed framework, in its standard individual form, supplies the others or names their union. (2) \textbf{The lifecycle:} the explicit, single-object connection of disclosure, evidence typing, representation, routing, validation, per-burden closure, and governed revision to the placement status of a concrete occurrence and its successors. (3) \textbf{The joint verdict layer:} process reliabilism names truth-connection for beliefs but has no operational record; provenance systems have operational records but no verdict layer; assurance and metamorphic testing each hold one verdict without the joint object. The orthing episode is one standardized object on which result correctness, evidential support, truth-connection, currentness, rule adequacy, policy adequacy, executor fidelity, ex-ante justification, route safety, closure truthfulness, and robustness are simultaneously definable. A bespoke composite could of course be extended with an equivalent record; the contribution claimed here is to state that integration once, generically, with a machine-checkable contract — an integration proposal and a standardization hypothesis, not an impossibility result. Whether the integration pays for itself is Section 13's question, not this section's claim.
 
 
-\subsection{12.1 Sequential latent-variable inference (bounded related work)}
+\subsection*{12.1 Sequential latent-variable inference (bounded related work)}
 A neighbouring literature models cognition with sequential latent-variable machinery — hidden Markov models, clone-structured graphs, recurrent networks — in which ambiguous immediate observations are disambiguated by sequence-sensitive inference over model-internal latent states (George et al. 2021; Vasudeva Raju et al. 2024; Sun et al. 2025). One reported finding is structurally relevant here: in the cited study several compared model settings satisfy a declared similar-final-representational-structure criterion while only CSCG consistently matched the reported decorrelation order among the tested models under the reported evaluation, and high task performance is reported to occur without the global representation geometry that study measured. The bounded claim this paper draws is therefore about \emph{underdetermination}: \textbf{final performance and final representation do not by themselves determine the learning trajectory or the mechanism} — which is the same separation of result from pathway that Sections 8 and 13 make operational.
 
 The boundary is fixed by Decision 0015 and is strict. A model's latent state $z$ is not an ortheme; its emitted observation is not the concrete occurrence; a posterior over latent states is not ground truth; and an internal representation's geometry (orthogonality, decorrelation, cluster separation) is neither necessary nor sufficient for orthemic distinctness or for pathway adequacy. Latent labels are identified only up to permutation and relabelling \textbf{absent declared semantic anchoring or alignment constraints}, so they carry no cross-model or cross-version meaning unless an explicit, validated alignment map is exhibited. The latent apparatus is an optional extension declared inside $A$: \textbf{the core claims of this framework remain statable without it}, though an extension may of course use its own declared vocabulary for extension-specific claims. This literature is cited as related work only. It validates nothing here, supplies no etymological support for the coined vocabulary, and bears on no theological question.
 
 
-\subsection{12.2 A domain-specific application (bounded; not evidence, not part of the contribution claim)}
+\subsection*{12.2 A domain-specific application (bounded; not evidence, not part of the contribution claim)}
 A separate, co-developed repository (\texttt{theislampill/\allowbreak{}daee-\allowbreak{}epistemics}, inspected read-only at a pinned commit) is a domain-specific noetic-diagnostic runtime whose objects can be \emph{typed through} this framework: an engagement is an immediate occurrence; public discourse is observation; an inferred noetic profile is a candidate placement, never the person's interior state; the governing distinctions are metaorthemes, their case bindings metaorthemmata, and the whole run an episode with a claim/residual ledger and a whole-state reread. That crosswalk (with a mandatory notation firewall and ten adversarial fixtures) is documented under \texttt{applications/\allowbreak{}daee-\allowbreak{}epistemics/\allowbreak{}}. Its role here is strictly bounded: it demonstrates that the architecture can \textbf{type a real designed system} (representability) and it \textbf{stress-tests} the framework's ability to keep state, observation, governing standard, application token, execution, closure, and restoration distinct. Because the two repositories share an owner and a related model lineage, any apparent convergence may reflect \textbf{co-development}; the application is therefore \textbf{not independent validation}, \textbf{not} evidence for any claim of this paper, and \textbf{not part of the contribution/novelty argument} — which remains an integration proposal adjudicated only by the unrun benchmarks of Section 13. It establishes nothing about fiṭrah, metaphysical orthability, a Necessary Being, or divine Speech.
 
 
 \bigskip\hrule\bigskip
 
-\section{13. Empirical Program}
+\section*{13. Empirical Program}
 Three evaluations, kept strictly separate. \textbf{Nothing in this paper is experimentally validated.} The current public evidence is exactly this: machine-checked internal agreement over the declared definitions, schemas, examples, and adversarial fixtures — which proves no mathematical consistency or completeness and no utility — and \textbf{no public observational dataset}. The first two programs below exist as frozen, deterministically validated, ready-to-run packets under \texttt{experiments/\allowbreak{}} (canonical per-packet state: \texttt{experiments/\allowbreak{}experiment-\allowbreak{}status.\allowbreak{}yaml}, Decision 0018); the terminology instrument awaits its owner-gated blind matching review. \textbf{None has run, and none is externally preregistered} — a Git freeze is not a preregistration, and registry submission is an owner/external act.
 
 
-\subsection{13.1 Headline: the false-closure / selective-prediction benchmark (packet \texttt{FCSP-2} — preregistration-ready; not externally registered)}
+\subsection*{13.1 Headline: the false-closure / selective-prediction benchmark (packet \texttt{FCSP-2} — preregistration-ready; not externally registered)}
 Environments with planted inter-orthemma aliasing, planted identity uncertainty, and validator-scope traps. \textbf{Treatment:} an agent maintaining typed candidate families and per-burden closure (the machinery of Sections 5 and 7). \textbf{Baseline:} argmax placement with a confidence threshold. \textbf{Primary endpoints:} false-closure rate; the area under the risk–coverage curve (AURC) of the selective-prediction literature. (The metric name is corrected from an earlier draft's "risk–coverage AUROC", which named no established metric. Methodological criticisms of AURC — its dependence on the evaluation set's coverage grid and its incomparability across error rates — are addressed in the packet's frozen endpoint definitions by base-error-rate-normalized and per-family sensitivity analyses; any endpoint change is a new packet version, never a post-run edit.) Fixtures are laptop-scale and cheap; the benchmark targets the claimed residual directly (does the union behave differently from the composite?), not the vocabulary. The current frozen packet is \texttt{experiments/\allowbreak{}false-\allowbreak{}closure-\allowbreak{}selective-\allowbreak{}prediction-\allowbreak{}v2/\allowbreak{}} (packet \texttt{FCSP-2}; run harness with a mock adapter and public/hidden-key separation, neutral stimuli whose defects are inferable-not-stated, exact endpoints with paired permutation tests and Holm adjustment, mechanical decision-rule execution, a pre-run item-level sensitivity plan, deterministic smoke tests; status \texttt{READY\_TO\_RUN} / \texttt{PREREGISTRATION\_READY}; it passes the Decision 0022 methods gate). It supersedes the historical R6 packet \texttt{FCSP-1}, whose methods defects are recorded in Decision 0020. \textbf{No run has occurred; no result exists.}
 
 \textbf{Decision rule — locally protocol-frozen in the packet (\texttt{DECISION-RULES.yaml}), four outcomes:}
@@ -978,25 +978,25 @@ Environments with planted inter-orthemma aliasing, planted identity uncertainty,
 An underpowered miss is never read as refutation; an unpowered tie is never read as adoption. This supersedes the prior draft's bare "no improvement over established labels" failure criterion, which conflated the second and third outcomes.
 
 
-\subsection{13.2 The product fixture suite (separate product test)}
+\subsection*{13.2 The product fixture suite (separate product test)}
 The current frozen packet is \texttt{experiments/\allowbreak{}episode-\allowbreak{}reification-\allowbreak{}v2/\allowbreak{}} (packet \texttt{ER-2}; five archetypes A1–A5 with four neutral surface variants each, both arms rendered label-free from one canonical fact list, a run harness, corrected scoring — completion by equality, semantic E5/traceability — complete paired inference, and mechanical decision execution; status \texttt{READY\_TO\_RUN} / \texttt{PREREGISTRATION\_READY}; it passes the Decision 0022 methods gate). It supersedes the historical R6 packet \texttt{ER-1}, whose scoring/leakage defects are recorded in Decision 0020. A fixture suite of the A1–A5 class exercises the product behaviour of an implementation: baseline-versus-treatment runs with pinned versions and run hygiene, culminating in \textbf{A5}, the metamorphic pathway fixture — a weak rule (pass iff the output contains a marker string) that returns the correct current result, paired with neighboring perturbations (correct-without-marker; incorrect-with-marker), scored to separate current-answer correctness from pathway adequacy. E5 carries no theory vocabulary and is the operational test of episode reification's practical delta over "audit the validator when suspicious" (Section 8.6). It is a product test; success or failure here transfers no verdict to the benchmark of 13.1 or the terminology test of 13.3.
 
 
-\subsection{13.3 The terminology benchmark (explicitly secondary)}
+\subsection*{13.3 The terminology benchmark (explicitly secondary)}
 The three-arm benchmark of the terminology evaluation spec: \textbf{Arm A} (ordinary language), \textbf{Arm B} (the operational distinctions expressed without neologisms), \textbf{Arm C} (the coordinated coined vocabulary with a matched primer), counterbalanced, exposure-matched, with construct-specific co-primary endpoints (false-closure detection; pathway-defect detection), predeclared minimum important effects, noninferiority and harm margins, and per-term three-outcome decision rules (frozen locally; externally registered only by an owner act). This benchmark is \textbf{secondary and cannot be rescued by 13.1}: a machinery win in the headline benchmark is an Arm-B-versus-Arm-A result about \emph{distinctions} and transfers nothing to the \emph{words}; only Arm C versus Arm B adjudicates the vocabulary. The converse holds too: a vocabulary win would not validate the machinery.
 
 
-\subsection{13.4 Evidence status, stated plainly}
+\subsection*{13.4 Evidence status, stated plainly}
 Machine-checked conformance: the definitions and separations of Sections 2–10 agree under the repository's declared schemas, examples, and adversarial fixtures — internal conformance over the declared cases, not a proof of consistency, completeness, or utility. Public observational: \textbf{none} — the private records that motivated the design are not independently auditable and carry no evidential weight in this paper (Section 17); the existence, recurrence, and base rates of the motivating failure patterns are publicly unestablished. Experimental: none. No stronger claim is made anywhere in this paper, and any sentence read as making one should be corrected against this section.
 
 
 \bigskip\hrule\bigskip
 
-\section{14. Terminology Status}
+\section*{14. Terminology Status}
 Every coined term in this paper — \textbf{orthemma, ortheme, metaorthemma, metaortheme, orthing,} and the companion-paper candidate \textbf{orthable} — is a \textbf{candidate} pending the matched benchmark of Section 13.3. None is adopted; none is retired. The paper's own governing principle applies:
 
 
-\subsection{14.1 Formation and provenance boundary}
+\subsection*{14.1 Formation and provenance boundary}
 The vocabulary is \textbf{constructed but morphologically grounded}. Merriam-Webster supports established \texttt{orth-}, including its \textbf{correct or corrective} combining-form sense, and English \texttt{-eme}, whose linguistic-unit sense supplies an \textbf{analogy} rather than the project's operational definition. Smyth §§841.2 and 861.2 directly describe Greek \texttt{-ma} with stem \texttt{-mat-} as morphology for a \textbf{result or effect}; “object” or “instance” is only a bounded project gloss from the cited concrete examples. LSJ s.v. \texttt{ἐμός} supports Greek \texttt{ἐμά} as a deliberately superposed \textbf{possessive resonance}, \textbf{not a derivation} of \texttt{-ma}, \texttt{-emma}, or any project word.
 
 The same spelling \texttt{ortheme} occurs in a prior, different \textbf{orthographic-unit sense} in Peter Constable's 17 June 1999 Unicode archive message and in Burridge and Blaxter (2020, p. 24). Those attestations do not supply this project's state-type sense. A bounded search that located no authoritative earlier hit for other project strings establishes no novelty, originality, priority, or first coinage. This provenance account \textbf{does not adopt} or retire any term and supplies no empirical utility result. Cross-domain usefulness remains a \textbf{benchmark-gated mnemonic or meta-schema hypothesis}, not universal primitives or a proven isomorphism.
@@ -1009,15 +1009,14 @@ Two facts are recorded without tension. First: \textbf{every distinction in this
 \bigskip\hrule\bigskip
 
 \onecolumn
-\appendix
 
-\section{15. Limitations and Honest-Evidence Appendix}
+\section*{15. Limitations and Honest-Evidence Appendix}
 
-\subsection{15.1 Limitations}
+\subsection*{15.1 Limitations}
 The decision-theoretic core is inherited, and the terminology may add load rather than value. Task specifications can be incomplete, contested, or imposed; exact equivalence is rarely estimable; approximate equivalence need not be transitive; local irreducibility depends on representation and merger families; system boundaries can be chosen opportunistically. Cross-domain analogies establish no shared mechanism. The formalism is conditional on objectives, losses, constraints, authority, and affected-party weights and cannot derive their legitimacy: a system can place every task-relevant ortheme correctly and still serve harmful ends — orthemic adequacy is not ethical goodness, and governance must permit contestation of the task, the loss, the authority, and the category itself. Orthemic debt is demoted to a speculative instrument (Section 7.3); the metaphysical and theological extensions are split to a companion paper and no result here depends on them. Metaorthemes remain higher-order control; the episode-verdict layer's practical delta is untested (fixture E5); and no study yet demonstrates incremental utility of anything in this paper. Acknowledged open formal parameters (R3): $\operatorname{RequiredBy}$ beyond the shipped machine-readable governance instance; evidence-class exhaustiveness (a hypothesis); fusion-mapping non-uniqueness; the $\Delta_A$ idealizations — the formal lane's honest ceiling is "internally conformance-checked specification over the declared definitions, schemas, examples, and adversarial tests — no proof of consistency, completeness, or utility," never mathematical completeness.
 
 
-\subsection{15.2 Evidence tiers}
+\subsection*{15.2 Evidence tiers}
 
 \begin{center}
 \begin{tabular}{@{}p{0.313\linewidth}p{0.313\linewidth}p{0.313\linewidth}@{}}
@@ -1035,19 +1034,19 @@ Three honesty notes close the paper. \emph{No public observational dataset exist
 
 \bigskip\hrule\bigskip
 
-\section{16. Conclusion}
+\twocolumn
+
+\section*{16. Conclusion}
 This paper proposed the orthemma–ortheme system as an integration discipline for the token side of classification and handling work. Its center of gravity is one relation — a concrete occurrence instantiating repeatable operational state-types relative to a declared, versioned analysis — and one further object built on that relation: the orthing episode, an auditable record on which result correctness and pathway adequacy are separately adjudicable. Around these, six formal additions close gaps the prior text could only gesture at: versioned identity with labeled lineage makes "right finding, wrong copy" a statable error; analysis/actor/time indexing makes ground truth explicit and disagreement diagnosable; typed, scoped, expiring evidence makes the green-but-mis-scoped validator visible; factorized candidates with route composition make partial action well-formed; per-burden closure makes false closure a checkable record defect; and episode reification with the registry-normalized verdict vector makes the stopped clock, the justified rare miss, the defective binding, and the stale directive all first-class, machine-checkable cases (fixtures F1–F7).
 
 What the paper deliberately does not claim is as much a result as what it claims. Every facet has a conceded neighbor; the type-individuation mathematics is inherited; a bespoke composite could represent the architecture, so the contribution is the standardized integration, not an impossibility claim; the private records that motivated the design are not independently auditable, carry no evidential weight, and validate nothing; the coined vocabulary is fully paraphrasable and strictly benchmark-gated; and the three designed studies — the false-closure benchmark (packet FCSP-2) and the episode-reification test (packet ER-2), both locally frozen and ready to run, and the terminology comparison (instrument awaiting its blind matching review) — have not been run, and none is externally preregistered. The framework's standing is therefore: internally conformance-checked (deterministic fixtures — not a consistency proof), design-motivated, empirically unvalidated. The next honest step is not more theory but the owner-authorized execution of Section 13's frozen packets — externally registered at run time — and the framework has been built so that a negative result would be recordable, on its own terms, as exactly what it is.
 
 
-\section{17. Data and Materials Availability}
+\section*{17. Data and Materials Availability}
 All public materials of this project — the formal core, this manuscript, the multi-actor note, machine-readable schemas (hardened, with negative and mutation test suites) and worked examples, deterministic fixtures and validators (including the governance-derivation, cross-record-semantics, Qurʾān-locus, type/token, and terminology-matching validators added in R3), the verdict and notation registries with their generated surfaces, decision records, the R3 sourcing ledgers, and the designed (unrun) terminology-evaluation packets — are available in the public repository (\texttt{theislampill/orthemology} on GitHub), with a SHA-256 release manifest under \texttt{docs/\allowbreak{}provenance/\allowbreak{}} and byte-reproducible draft PDFs under \texttt{artifacts/\allowbreak{}}. \textbf{Not available:} the private internal design-history records (a cross-project defect collection and a single-project longitudinal engineering record) that motivated the framework. They contain private working material, are not rights-cleared for publication, and are therefore not independently auditable; they are non-evidential design provenance — \textbf{no claim in this paper rests on them} (Sections 11.4, 13.4, 15.2). \textbf{No public observational dataset accompanies this paper.} No human-subject data exists; no experiment has been conducted.
 
 
-\twocolumn
-
-\section{References}
+\section*{References}
 
 \begin{itemize}
 \item Chen, T. Y., Cheung, S. C., \& Yiu, S. M. (1998). \emph{Metamorphic testing: a new approach for generating next test cases.} Technical Report HKUST-CS98-01, Department of Computer Science, HKUST.
@@ -1122,7 +1121,7 @@ Machine-readable database with per-claim verification status: \texttt{references
 
 \bigskip\hrule\bigskip
 
-\section{Glossary of Proposed Terms (all candidates; none adopted)}
+\section*{Glossary of Proposed Terms (all candidates; none adopted)}
 
 \begin{itemize}
 \item \textbf{Orthemma.} A concrete situated occurrence considered as something to be apprehended, carrying an identity key and version. The token pole.
