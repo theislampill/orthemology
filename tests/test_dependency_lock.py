@@ -236,6 +236,16 @@ class DependencyClassificationTests(unittest.TestCase):
             provisioner.index("str(micromamba),"),
         )
 
+    def test_workflow_fetches_publication_source_history(self):
+        workflow = WORKFLOW.read_text(encoding="utf-8")
+        self.assertIn(
+            "- uses: actions/checkout@v6\n"
+            "        with:\n"
+            "          fetch-depth: 0",
+            workflow,
+            "PDF parity requires the source commits bound by package sidecars",
+        )
+
 
 if __name__ == "__main__":
     unittest.main(verbosity=2)
