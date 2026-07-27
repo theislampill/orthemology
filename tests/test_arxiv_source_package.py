@@ -1346,6 +1346,12 @@ class SourcePackageContractTests(unittest.TestCase):
 
     def test_compatibility_report_rejects_duplicate_or_malformed_total_records(self):
         validate = self.api(BUILD, "compatibility_report_table_issues")
+        format_controls = ("\u200b", "\u200c", "\u200d", "\u200e", "\u2060")
+        format_control_separators = tuple(
+            control.join(("Total", "final", "page", "count")) + ": `999`."
+            for control in format_controls
+        )
+        stacked_format_controls = "".join(format_controls)
         additions = (
             "Total final page count: `999`.",
             "Total final page count: 999.",
@@ -1375,6 +1381,28 @@ class SourcePackageContractTests(unittest.TestCase):
             "Total final pa\u0301ge count: `999`.",
             "Total final page cou\u0301nt: `999`.",
             "Total\u200bfinal\u200epage\u2060count: `999`.",
+            (
+                "To\u200btal\u200cfi\u200dnal\u2060pa\u200bge"
+                "\u200ecou\u2060nt: `999`."
+            ),
+            (
+                stacked_format_controls.join(
+                    ("Total", "final", "page", "count")
+                )
+                + ": `999`."
+            ),
+            (
+                "T"
+                + stacked_format_controls
+                + "otal f"
+                + stacked_format_controls
+                + "inal p"
+                + stacked_format_controls
+                + "age c"
+                + stacked_format_controls
+                + "ount: `999`."
+            ),
+            *format_control_separators,
         )
         for addition in additions:
             with self.subTest(addition=addition):
