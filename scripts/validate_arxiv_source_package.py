@@ -137,6 +137,105 @@ def _alternate_source_read_issues(cleaned):
     return issues
 
 
+def _control_sequence_policy_issues(cleaned, origin):
+    """Reject TeX primitives that can synthesize or alias file-read commands."""
+    issues = []
+    prohibited = {
+        "afterassignment",
+        "aftergroup",
+        "catcode",
+        "edef",
+        "endlinechar",
+        "escapechar",
+        "everydisplay",
+        "everyeof",
+        "everyhbox",
+        "everyjob",
+        "everymath",
+        "everypar",
+        "everyvbox",
+        "expandafter",
+        "futurelet",
+        "gdef",
+        "lowercase",
+        "newread",
+        "newtoks",
+        "openin",
+        "output",
+        "read",
+        "readline",
+        "scantokens",
+        "toks",
+        "uppercase",
+        "xdef",
+    }
+    # Collapse whitespace after comment removal so a control word cannot be
+    # hidden by a comment/newline or spacing construction.
+    policy_scan = re.sub(r"\s+", "", cleaned)
+    command_matches = list(re.finditer(r"\\([A-Za-z@]+)", policy_scan))
+    for match in command_matches:
+        command = match.group(1)
+        if command.lower() in prohibited:
+            issues.append(
+                "prohibited control-sequence policy primitive: \\%s"
+                % command
+            )
+
+    is_compatibility_origin = (
+        pathlib.PurePosixPath(origin).name == PDFTEX_COMPAT_OWNER.name
+    )
+    allowed_definitions = {
+        "orthemologyTaskThirteenZero",
+        "orthemologyTaskThirteenPatchLayout",
+        "orthemologyTaskThirteenArgumentlessTwoColumn",
+        "orthemologyTaskThirteenBibliographyCount",
+    }
+    for match in re.finditer(r"\\def(?![A-Za-z@])", cleaned, re.I):
+        declaration = re.match(
+            r"\\def(?![A-Za-z@])\s*\\([A-Za-z@]+)",
+            cleaned[match.start() :],
+            re.I,
+        )
+        target = declaration.group(1) if declaration else None
+        if not is_compatibility_origin or target not in allowed_definitions:
+            issues.append(
+                "prohibited control-sequence policy definition target: %s"
+                % (target or "<malformed>")
+            )
+
+    allowed_aliases = {
+        (
+            "orthemologyTaskThirteenOriginalTwoColumn",
+            "twocolumn",
+        ),
+        (
+            "orthemologyTaskThirteenOriginalTheBibliography",
+            "thebibliography",
+        ),
+        (
+            "orthemologyTaskThirteenOriginalEndTheBibliography",
+            "endthebibliography",
+        ),
+    }
+    for match in re.finditer(r"\\let(?![A-Za-z@])", cleaned, re.I):
+        declaration = re.match(
+            r"\\let(?![A-Za-z@])\s*\\([A-Za-z@]+)\s*\\([A-Za-z@]+)",
+            cleaned[match.start() :],
+            re.I,
+        )
+        alias = (
+            (declaration.group(1), declaration.group(2))
+            if declaration
+            else None
+        )
+        if not is_compatibility_origin or alias not in allowed_aliases:
+            issues.append(
+                "prohibited control-sequence policy alias: %s"
+                % (alias or "<malformed>",)
+            )
+    return issues
+
+
 def _declared_input_issues(text, origin, contents, allowed_local_inputs):
     issues = []
     origin_dir = posixpath.dirname(origin)
@@ -145,6 +244,7 @@ def _declared_input_issues(text, origin, contents, allowed_local_inputs):
             "prohibited alternate source-read command uses a TeX caret escape"
         )
     without_comments = _strip_tex_comments(text)
+    issues.extend(_control_sequence_policy_issues(without_comments, origin))
     issues.extend(_alternate_source_read_issues(without_comments))
     for match in re.finditer(
         r"\\(input|include)\b",

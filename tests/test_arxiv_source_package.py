@@ -840,6 +840,52 @@ class SourcePackageContractTests(unittest.TestCase):
                     issues,
                 )
 
+    def test_rejects_category_code_and_dynamic_control_construction_primitives(self):
+        attacks = {
+            "category-code alias": (
+                "\\catcode`\\!=7\n"
+                "\\!!69nput{pdftex-unicode-compat.tex}\n"
+            ),
+            "spaced category-code alias": (
+                "\\catcode  `\\!=7\n"
+                "\\!!69nput{pdftex-unicode-compat.tex}\n"
+            ),
+            "comment-split category-code alias": (
+                "\\cat% split\ncode`\\!=7\n"
+                "\\!!69nput{pdftex-unicode-compat.tex}\n"
+            ),
+            "future alias": "\\futurelet\\x\\relax\n",
+            "expansion primitive": "\\expandafter\\relax\\relax\n",
+            "escape character mutation": "\\escapechar=92\n",
+            "line character mutation": "\\endlinechar=13\n",
+            "end-of-file hook": "\\everyeof{\\relax}\n",
+            "token rescan": "\\scantokens{safe}\n",
+            "file stream": "\\openin0=main.tex\n",
+            "stream allocation": "\\newread\\x\n",
+            "stream read": "\\read0 to \\x\n",
+            "global definition": "\\gdef\\x{safe}\n",
+            "expanded definition": "\\edef\\x{safe}\n",
+            "global expanded definition": "\\xdef\\x{safe}\n",
+            "unowned definition": "\\def\\x{safe}\n",
+            "unowned alias": "\\let\\x\\relax\n",
+        }
+        for name, payload in attacks.items():
+            with self.subTest(name=name):
+                main = payload + BASE_MAIN
+                archive, manifest = self.create(main=main)
+                issues = self.validate(
+                    archive,
+                    manifest,
+                    source_blobs={
+                        MAIN_PATH: main.encode("utf-8"),
+                        BIB_PATH: BASE_BIB.encode("utf-8"),
+                    },
+                )
+                self.assertTrue(
+                    any("control-sequence policy" in issue for issue in issues),
+                    issues,
+                )
+
     def test_rejects_noncanonical_gnu_and_pax_tar_encodings(self):
         archive, manifest = self.create()
         for name, (tar_format, pax_header) in {
