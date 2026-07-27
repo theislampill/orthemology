@@ -838,6 +838,11 @@ $$
             "and/or",
             "x/y",
             "--root/path",
+            "V2b-P/V2b-T",
+            "ARG-01/ARG-02",
+            "v1.2/v2.0",
+            "2026-07-27/2026-08-01",
+            "STATUS_A/STATUS_B",
         )
 
         for control in controls:
@@ -855,6 +860,139 @@ $$
                     generator.INLINE_CODE_PATH_LAYOUT_BREAK,
                     rendered,
                 )
+
+    def test_inline_code_path_roots_are_closed_and_tracked(self):
+        generator = load_generator()
+        self.assertIsNotNone(generator, "Task 12 LaTeX generator is missing")
+        expected_roots = {
+            "applications",
+            "artifacts",
+            "companion",
+            "docs",
+            "examples",
+            "experiments",
+            "references",
+            "schemas",
+            "scripts",
+            "terminology",
+            "tests",
+            "theory",
+        }
+        self.assertEqual(
+            generator.DECLARED_REPOSITORY_INLINE_CODE_ROOTS,
+            expected_roots,
+        )
+        tracked_roots = generator.tracked_repository_root_segments(ROOT)
+        self.assertTrue(expected_roots <= tracked_roots)
+        self.assertNotIn("sourcing", tracked_roots)
+        self.assertNotIn("theislampill", tracked_roots)
+        generator.validate_inline_code_path_declarations(ROOT)
+
+        self.assertEqual(
+            generator.DECLARED_EXTERNAL_REPOSITORY_SLUGS,
+            {"theislampill/daee-epistemics"},
+        )
+        self.assertTrue(
+            generator.is_path_like_inline_code(
+                "theislampill/daee-epistemics"
+            )
+        )
+        self.assertFalse(
+            generator.is_path_like_inline_code("theislampill/other")
+        )
+        self.assertFalse(
+            generator.is_path_like_inline_code(
+                "another-owner/daee-epistemics"
+            )
+        )
+
+        self.assertEqual(
+            generator.DECLARED_SOURCE_RELATIVE_INLINE_CODE_PATHS,
+            {"sourcing/R3-COMPANION-SOURCING-LEDGER.md"},
+        )
+        self.assertTrue(
+            generator.is_path_like_inline_code(
+                "sourcing/R3-COMPANION-SOURCING-LEDGER.md"
+            )
+        )
+        self.assertFalse(
+            generator.is_path_like_inline_code(
+                "sourcing/COPIED-NONPATH.md"
+            )
+        )
+
+    def test_repository_path_grammar_accepts_valid_nested_forms_only(self):
+        generator = load_generator()
+        self.assertIsNotNone(generator, "Task 12 LaTeX generator is missing")
+        valid = (
+            "applications/daee-epistemics/",
+            "docs/architecture/ORTHEMOLOGY-LAYER-MAP.md",
+            "docs/project-closure/r7b/R7B-PDF-MATH-BASELINE.md",
+            "scripts/generate_latex_sources.py",
+            "scripts/latex_to_typst_math.py",
+            "tests/reqpath-fixtures.json",
+            "references/source-status.yaml",
+        )
+        copied_nonpaths = (
+            "V2b-P/V2b-T",
+            "ARG-01/ARG-02",
+            "v1.2/v2.0",
+            "2026-07-27/2026-08-01",
+            "STATUS_A/STATUS_B",
+            "unknown/docs/current-state.yaml",
+            "scripts//generate_latex_sources.py",
+            "/docs/current-state.yaml",
+            "../docs/current-state.yaml",
+        )
+
+        for path in valid:
+            with self.subTest(valid=path):
+                self.assertTrue(generator.is_path_like_inline_code(path))
+        for text in copied_nonpaths:
+            with self.subTest(copied_nonpath=text):
+                self.assertFalse(generator.is_path_like_inline_code(text))
+
+    def test_current_path_inventory_and_layout_marker_counts_remain_exact(self):
+        generator = load_generator()
+        self.assertIsNotNone(generator, "Task 12 LaTeX generator is missing")
+        profile = yaml.safe_load(
+            (ROOT / "docs" / "publication-profile.yaml").read_text(
+                encoding="utf-8"
+            )
+        )
+
+        def walk(tokens):
+            for token in tokens:
+                yield token
+                if token.children:
+                    yield from walk(token.children)
+
+        path_values = []
+        for artifact in profile["artifacts"]:
+            for relative in artifact["sources"]:
+                source = (ROOT / relative).read_text(encoding="utf-8")
+                protected, _ = generator._protect_math(source)
+                tokens = (
+                    generator.MarkdownIt("commonmark")
+                    .enable("table")
+                    .enable("strikethrough")
+                    .parse(protected)
+                )
+                path_values.extend(
+                    token.content
+                    for token in walk(tokens)
+                    if token.type == "code_inline"
+                    and generator.is_path_like_inline_code(token.content)
+                )
+
+        tree = generator.expected_latex_tree(ROOT, profile)
+        marker_count = sum(
+            content.count(generator.INLINE_CODE_PATH_LAYOUT_BREAK)
+            for content in tree.values()
+        )
+        self.assertEqual(len(path_values), 65)
+        self.assertEqual(len(set(path_values)), 39)
+        self.assertEqual(marker_count, 241)
 
     def test_commonmark_multiline_code_span_is_preserved_as_literal_code(self):
         generator = load_generator()

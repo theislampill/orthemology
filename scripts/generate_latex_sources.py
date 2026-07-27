@@ -5,6 +5,7 @@ import argparse
 import hashlib
 import pathlib
 import re
+import subprocess
 import sys
 
 import yaml
@@ -36,7 +37,33 @@ REVIEWED_DISPLAY_MATH_BREAK_COMMANDS = frozenset(
 )
 INLINE_CODE_PATH_LAYOUT_BREAK = r"\allowbreak{}"
 INLINE_CODE_PATH_BREAK_CHARACTERS = frozenset("/-._")
-INLINE_CODE_PATH_RE = re.compile(r"[A-Za-z0-9._/-]+")
+INLINE_CODE_PATH_SEGMENT_RE = re.compile(r"[A-Za-z0-9][A-Za-z0-9._-]*")
+DECLARED_REPOSITORY_INLINE_CODE_ROOTS = frozenset(
+    {
+        "applications",
+        "artifacts",
+        "companion",
+        "docs",
+        "examples",
+        "experiments",
+        "references",
+        "schemas",
+        "scripts",
+        "terminology",
+        "tests",
+        "theory",
+    }
+)
+DECLARED_EXTERNAL_REPOSITORY_SLUGS = frozenset(
+    {
+        "theislampill/daee-epistemics",
+    }
+)
+DECLARED_SOURCE_RELATIVE_INLINE_CODE_PATHS = frozenset(
+    {
+        "sourcing/R3-COMPANION-SOURCING-LEDGER.md",
+    }
+)
 PLACEHOLDER_OPEN = "\ue000"
 PLACEHOLDER_CLOSE = "\ue001"
 PLACEHOLDER_RE = re.compile(
@@ -188,31 +215,95 @@ def _escape_code(text):
     return escaped.replace(r"\$", r"\char36{}")
 
 
-def is_path_like_inline_code(text):
-    """Return whether literal inline code has conservative repository-path form."""
+def _inline_code_path_segments(text):
     if (
         "/" not in text
         or any(character.isspace() for character in text)
         or "://" in text
         or text.startswith("--")
         or "//" in text
-        or INLINE_CODE_PATH_RE.fullmatch(text) is None
     ):
+        return None
+    body = text[:-1] if text.endswith("/") else text
+    if not body:
+        return None
+    segments = tuple(body.split("/"))
+    if not all(INLINE_CODE_PATH_SEGMENT_RE.fullmatch(item) for item in segments):
+        return None
+    return segments
+
+
+def is_path_like_inline_code(text):
+    """Accept only closed repository paths and exact declared exceptions."""
+    segments = _inline_code_path_segments(text)
+    if segments is None:
         return False
-    stripped = text.strip("/")
-    if not stripped:
-        return False
-    segments = stripped.split("/")
     return (
-        text.startswith(("/", "./", "../"))
-        or text.endswith("/")
-        or text.count("/") >= 2
-        or any(
-            punctuation in segment
-            for segment in segments
-            for punctuation in ".-_"
-        )
+        segments[0] in DECLARED_REPOSITORY_INLINE_CODE_ROOTS
+        or text in DECLARED_EXTERNAL_REPOSITORY_SLUGS
+        or text in DECLARED_SOURCE_RELATIVE_INLINE_CODE_PATHS
     )
+
+
+def _tracked_repository_paths(root):
+    try:
+        result = subprocess.run(
+            ["git", "-C", str(pathlib.Path(root)), "ls-files", "-z"],
+            check=True,
+            stdout=subprocess.PIPE,
+            stderr=subprocess.PIPE,
+        )
+    except (OSError, subprocess.CalledProcessError) as exc:
+        raise GenerationError("cannot enumerate tracked repository paths") from exc
+    return {
+        item.decode("utf-8")
+        for item in result.stdout.split(b"\0")
+        if item
+    }
+
+
+def tracked_repository_root_segments(root=ROOT):
+    """Return first path segments backed by at least one tracked nested file."""
+    roots = set()
+    for tracked_path in _tracked_repository_paths(root):
+        parts = pathlib.PurePosixPath(tracked_path).parts
+        if len(parts) > 1:
+            roots.add(parts[0])
+    return roots
+
+
+def validate_inline_code_path_declarations(root=ROOT):
+    """Validate closed local and source-relative path declarations."""
+    tracked_paths = _tracked_repository_paths(root)
+    tracked_roots = {
+        pathlib.PurePosixPath(path).parts[0]
+        for path in tracked_paths
+        if len(pathlib.PurePosixPath(path).parts) > 1
+    }
+    missing_roots = DECLARED_REPOSITORY_INLINE_CODE_ROOTS - tracked_roots
+    if missing_roots:
+        raise GenerationError(
+            "declared inline-code path roots are not tracked: %s"
+            % sorted(missing_roots)
+        )
+    for relative in DECLARED_SOURCE_RELATIVE_INLINE_CODE_PATHS:
+        matches = [
+            path
+            for path in tracked_paths
+            if path == relative or path.endswith("/" + relative)
+        ]
+        if len(matches) != 1:
+            raise GenerationError(
+                "source-relative inline-code path must resolve uniquely: %s"
+                % relative
+            )
+    if DECLARED_REPOSITORY_INLINE_CODE_ROOTS & {
+        _inline_code_path_segments(path)[0]
+        for path in DECLARED_EXTERNAL_REPOSITORY_SLUGS
+    }:
+        raise GenerationError(
+            "external repository slugs overlap declared local roots"
+        )
 
 
 def remove_inline_code_path_layout_breaks(body):
@@ -789,6 +880,8 @@ def render_artifact(profile, artifact, source_texts):
 
 def expected_latex_tree(root, profile=None, artifacts=None):
     root = pathlib.Path(root)
+    if (root / ".git").exists():
+        validate_inline_code_path_declarations(root)
     if profile is None:
         profile = yaml.safe_load((root / PROFILE_PATH).read_text(encoding="utf-8"))
     if artifacts is None:
