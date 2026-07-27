@@ -25,6 +25,8 @@ BREAKABLE_TABLE_COLUMN_THRESHOLD = 5
 DISPLAY_MATH_MULTLINE_THRESHOLD = 120
 DISPLAY_MATH_TARGET_WIDTH = 72
 DISPLAY_MATH_LAYOUT_BREAK = "\\\\\n"
+ALIGNED_MATH_LAYOUT_BREAK = "\\\\\n&\\quad{} "
+ALIGNED_MATH_RELATION_BREAK = "\\\\\n&\\quad"
 REVIEWED_DISPLAY_MATH_BREAK_COMMANDS = frozenset(
     {
         r"\iff",
@@ -34,6 +36,21 @@ REVIEWED_DISPLAY_MATH_BREAK_COMMANDS = frozenset(
         r"\Rightarrow",
         r"\vee",
         r"\wedge",
+    }
+)
+REVIEWED_ALIGNED_MATH_CONTINUATION_COMMANDS = frozenset(
+    {
+        r"\vee",
+        r"\wedge",
+    }
+)
+REVIEWED_ALIGNED_MATH_RELATION_COMMANDS = frozenset(
+    {
+        r"\iff",
+        r"\implies",
+        r"\Leftrightarrow",
+        r"\Longrightarrow",
+        r"\Rightarrow",
     }
 )
 INLINE_MATH_BREAK_THRESHOLD = 120
@@ -513,6 +530,100 @@ def remove_display_math_layout_breaks(body):
     return body.replace(DISPLAY_MATH_LAYOUT_BREAK, "")
 
 
+def remove_aligned_math_layout_breaks(body):
+    """Remove only reversible continuation rows inserted inside aligned math."""
+    return body.replace(ALIGNED_MATH_LAYOUT_BREAK, "").replace(
+        ALIGNED_MATH_RELATION_BREAK, ""
+    )
+
+
+def reviewed_aligned_math_continuation_positions(body):
+    """Return top-level conjunction starts safe for an aligned continuation."""
+    command_ends = _reviewed_math_break_positions(
+        body,
+        REVIEWED_ALIGNED_MATH_CONTINUATION_COMMANDS,
+        frozenset(),
+    )
+    positions = []
+    for command_end in command_ends:
+        for command in REVIEWED_ALIGNED_MATH_CONTINUATION_COMMANDS:
+            command_start = command_end - len(command)
+            if body[command_start:command_end] == command:
+                positions.append(command_start)
+                break
+    return positions
+
+
+def reviewed_aligned_math_relation_ends(body):
+    """Return top-level relation ends safe for an aligned RHS continuation."""
+    return _reviewed_math_break_positions(
+        body,
+        REVIEWED_ALIGNED_MATH_RELATION_COMMANDS,
+        frozenset(),
+    )
+
+
+def reviewed_aligned_math_clause_ends(body):
+    """Return top-level colon ends safe for a further aligned continuation."""
+    return _reviewed_math_break_positions(
+        body,
+        frozenset(),
+        frozenset(":"),
+    )
+
+
+def _render_aligned_math(source):
+    """Wrap only overlong aligned RHS conjunctions with reversible layout."""
+    opening = "\\begin{aligned}\n"
+    closing = "\n\\end{aligned}"
+    if not source.startswith(opening) or not source.endswith(closing):
+        return None
+    body = source[len(opening) : -len(closing)]
+    output = []
+    for line in body.splitlines():
+        if len(line) < DISPLAY_MATH_MULTLINE_THRESHOLD or "&" not in line:
+            output.append(line)
+            continue
+        alignment = line.index("&")
+        candidates = [
+            position
+            for position in reviewed_aligned_math_continuation_positions(line)
+            if position > alignment and position >= DISPLAY_MATH_TARGET_WIDTH
+        ]
+        if candidates:
+            position = min(candidates)
+            output.append(
+                line[:position] + ALIGNED_MATH_LAYOUT_BREAK + line[position:]
+            )
+            continue
+        relations = [
+            position
+            for position in reviewed_aligned_math_relation_ends(line)
+            if position > alignment
+        ]
+        if relations:
+            relation = min(relations)
+            positions = [relation] + [
+                position
+                for position in reviewed_aligned_math_clause_ends(line)
+                if position > relation
+            ]
+            cursor = 0
+            pieces = []
+            for position in positions:
+                pieces.append(line[cursor:position])
+                pieces.append(ALIGNED_MATH_RELATION_BREAK)
+                cursor = position
+            pieces.append(line[cursor:])
+            output.append("".join(pieces))
+            continue
+        output.append(line)
+    layout = opening + "\n".join(output) + closing
+    if remove_aligned_math_layout_breaks(layout) != source:
+        raise GenerationError("aligned-math layout changed the source token stream")
+    return layout
+
+
 def _multline_break_positions(body):
     candidates = reviewed_display_math_break_positions(body)
     selected = []
@@ -535,6 +646,9 @@ def _multline_break_positions(body):
 
 def _render_display_math(body):
     source = body.strip()
+    aligned = _render_aligned_math(source)
+    if aligned is not None:
+        return "\n\\[\n%s\n\\]\n" % aligned
     if (
         len(source) < DISPLAY_MATH_MULTLINE_THRESHOLD
         or r"\begin{" in source

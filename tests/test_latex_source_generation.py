@@ -375,6 +375,69 @@ $$
         self.assertIn(r"\begin{aligned}", rendered)
         self.assertIn(r"\[", rendered)
 
+    def test_overlong_aligned_conjunction_uses_reconstructable_continuation(self):
+        generator = load_generator()
+        self.assertIsNotNone(generator, "Task 12 LaTeX generator is missing")
+        aligned = r"""\begin{aligned}
+\operatorname{TokenAdequate}(\bar\mu, e) &\Leftrightarrow \operatorname{MetaInst}(\bar\mu, \mu) \wedge \operatorname{Compatible}(\bar\mu, A(e)) \\
+\operatorname{V3c}(e) &\Leftrightarrow \forall \bar\mu \in \operatorname{MetaTok}(e): \operatorname{TokenAdequate}(\bar\mu, e)
+\end{aligned}"""
+        markdown = "$$\n%s\n$$\n" % aligned
+
+        first = generator.render_markdown(
+            markdown,
+            source_name="exact-notation-gallery-aligned-control.md",
+        )
+        second = generator.render_markdown(
+            markdown,
+            source_name="exact-notation-gallery-aligned-control.md",
+        )
+
+        self.assertEqual(first, second)
+        layout_break = "\\\\\n&\\quad{} "
+        self.assertIn(
+            r"\operatorname{MetaInst}(\bar\mu, \mu) "
+            + layout_break
+            + r"\wedge \operatorname{Compatible}(\bar\mu, A(e))",
+            first,
+        )
+        relation_break = "\\\\\n&\\quad"
+        self.assertIn(
+            r"\operatorname{V3c}(e) &\Leftrightarrow"
+            + relation_break
+            + r" \forall \bar\mu \in \operatorname{MetaTok}(e):"
+            + relation_break
+            + r" "
+            + r"\operatorname{TokenAdequate}(\bar\mu, e)",
+            first,
+        )
+        self.assertEqual(first.count("\n&\\quad"), 3)
+        begin = first.index(r"\begin{aligned}")
+        end = first.index(r"\end{aligned}", begin) + len(r"\end{aligned}")
+        layout_body = first[begin:end]
+        self.assertEqual(
+            generator.remove_aligned_math_layout_breaks(layout_body),
+            aligned,
+        )
+        for token in (
+            r"\operatorname{TokenAdequate}",
+            r"\operatorname{MetaInst}",
+            r"\operatorname{Compatible}",
+            r"\operatorname{V3c}",
+            r"\Leftrightarrow",
+            r"\wedge",
+        ):
+            self.assertEqual(layout_body.count(token), aligned.count(token))
+        for prohibited in (
+            r"\resizebox",
+            r"\scalebox",
+            r"\small",
+            r"\footnotesize",
+            r"\hfuzz",
+            r"\sloppy",
+        ):
+            self.assertNotIn(prohibited, first)
+
     def test_long_table_threshold_is_explicitly_row_or_content_based(self):
         generator = load_generator()
         self.assertIsNotNone(generator, "Task 12 LaTeX generator is missing")

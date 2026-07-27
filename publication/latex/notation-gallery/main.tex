@@ -286,8 +286,11 @@ e = \langle \operatorname{id};\ m, \kappa, v;\ x, H;\ \alpha, w, A, T,\\
 
 \[
 \begin{aligned}
-\operatorname{TokenAdequate}(\bar\mu, e) &\Leftrightarrow \operatorname{MetaInst}(\bar\mu, \mu) \wedge \operatorname{Compatible}(\bar\mu, A(e)) \\
-\operatorname{V3c}(e) &\Leftrightarrow \forall \bar\mu \in \operatorname{MetaTok}(e): \operatorname{TokenAdequate}(\bar\mu, e)
+\operatorname{TokenAdequate}(\bar\mu, e) &\Leftrightarrow \operatorname{MetaInst}(\bar\mu, \mu) \\
+&\quad{} \wedge \operatorname{Compatible}(\bar\mu, A(e)) \\
+\operatorname{V3c}(e) &\Leftrightarrow\\
+&\quad \forall \bar\mu \in \operatorname{MetaTok}(e):\\
+&\quad \operatorname{TokenAdequate}(\bar\mu, e)
 \end{aligned}
 \]
 
