@@ -419,10 +419,11 @@ class OccurrenceIdentityTests(unittest.TestCase):
                 )
 
     def test_only_exact_approved_diagnostic_occurrence_is_exempt(self):
+        self.assertTrue(VALIDATOR._formula_like(APPROVED_DIAGNOSTIC_TEXT))
         inventory, source_texts = diagnostic_inventory()
         self.assertEqual(inventory_issues(inventory, source_texts), [])
 
-    def test_malformed_diagnostic_near_misses_are_rejected(self):
+    def test_nonformula_status_near_misses_remain_literal_code(self):
         malformed = (
             ": pass;\nagent_2: fail",
             "agent_1: pass;\n: fail",
@@ -433,45 +434,42 @@ class OccurrenceIdentityTests(unittest.TestCase):
             "agent 1: pass;\nagent_2: fail",
             "agent_1 : pass;\nagent_2: fail",
             "agent_1:: pass;\nagent_2: fail",
+            "agent_1: PASS;\nagent_2: FAIL!",
+            "PASS;\nFAIL",
         )
         for status in malformed:
             with self.subTest(status=status):
-                inventory, source_texts = diagnostic_inventory(status=status)
-                self.assertIssue(
-                    inventory_issues(inventory, source_texts),
-                    "invalid diagnostic literal",
+                self.assertFalse(VALIDATOR._formula_like(status), status)
+                inventory, source_texts = diagnostic_inventory(
+                    status=status,
+                    path="publication/example.md",
                 )
+                self.assertEqual(inventory_issues(inventory, source_texts), [])
 
-    def test_missing_separator_diagnostic_is_rejected(self):
+    def test_nonformula_missing_separator_status_remains_literal_code(self):
         status = "agent_1: pass\nagent_2: fail"
-        self.assertTrue(VALIDATOR._diagnostic_status_like(status))
+        self.assertFalse(VALIDATOR._formula_like(status), status)
         inventory, source_texts = diagnostic_inventory(
             status=status,
             path="publication/example.md",
         )
-        self.assertIssue(
-            inventory_issues(inventory, source_texts),
-            "invalid diagnostic literal",
-        )
+        self.assertEqual(inventory_issues(inventory, source_texts), [])
 
-    def test_missing_colon_diagnostics_are_rejected(self):
+    def test_nonformula_missing_colon_statuses_remain_literal_code(self):
         malformed = (
             "agent_1 pass;\nagent_2 fail",
             "agent_1: pass\nagent_2 fail",
         )
         for status in malformed:
             with self.subTest(status=status):
-                self.assertTrue(VALIDATOR._diagnostic_status_like(status))
+                self.assertFalse(VALIDATOR._formula_like(status), status)
                 inventory, source_texts = diagnostic_inventory(
                     status=status,
                     path="publication/example.md",
                 )
-                self.assertIssue(
-                    inventory_issues(inventory, source_texts),
-                    "invalid diagnostic literal",
-                )
+                self.assertEqual(inventory_issues(inventory, source_texts), [])
 
-    def test_approved_diagnostic_mutations_are_rejected(self):
+    def test_formula_bearing_approved_diagnostic_mutations_are_rejected(self):
         mutated = (
             "μ̄_3: wrong\n  claim scope; μ̄_2: stale calibration",
             "μ̄_2: stale calibration; μ̄_2: wrong\n  claim scope",
@@ -482,10 +480,11 @@ class OccurrenceIdentityTests(unittest.TestCase):
         )
         for status in mutated:
             with self.subTest(status=status):
+                self.assertTrue(VALIDATOR._formula_like(status), status)
                 inventory, source_texts = diagnostic_inventory(status=status)
                 self.assertIssue(
                     inventory_issues(inventory, source_texts),
-                    "invalid diagnostic literal",
+                    "formula-like literal classification",
                 )
 
     def test_approved_diagnostic_cannot_be_moved(self):
@@ -494,7 +493,7 @@ class OccurrenceIdentityTests(unittest.TestCase):
         )
         self.assertIssue(
             inventory_issues(moved_inventory, moved_sources),
-            "invalid diagnostic literal",
+            "formula-like literal classification",
         )
 
     def test_approved_diagnostic_cannot_be_copied(self):
@@ -503,7 +502,10 @@ class OccurrenceIdentityTests(unittest.TestCase):
         )
         copied_issues = inventory_issues(copied_inventory, copied_sources)
         self.assertEqual(
-            sum("invalid diagnostic literal" in issue for issue in copied_issues),
+            sum(
+                "formula-like literal classification" in issue
+                for issue in copied_issues
+            ),
             1,
             copied_issues,
         )
@@ -538,7 +540,6 @@ class OccurrenceIdentityTests(unittest.TestCase):
         for control in controls:
             with self.subTest(control=control):
                 self.assertFalse(VALIDATOR._formula_like(control), control)
-                self.assertFalse(VALIDATOR._diagnostic_status_like(control), control)
                 source = "Control: `%s`.\n" % control
                 inventory, source_texts = literal_inventory(
                     "publication/example.md",
@@ -576,10 +577,21 @@ class OccurrenceIdentityTests(unittest.TestCase):
             ],
         )
 
-    def test_diagnostic_shaped_literals_cannot_bypass_literal_classification(self):
+    def test_formula_bearing_literals_are_classified_independently_of_status_shape(self):
         formula_statuses = (
             "V1(e): stale calibration; token_3: wrong\nclaim scope",
             "RelSpec_q(e): stale calibration; token_3: wrong\nclaim scope",
+            "x+y: PASS;\nagent_2: FAIL!",
+            "x/y — pass?\nagent_2 says FAIL.",
+            "x⋅y: status unknown\nplain continuation",
+            "x·y, status unknown\nplain continuation",
+            "x-y: status unknown\nplain continuation",
+            "x−y: status unknown\nplain continuation",
+            "x^y, status unknown\nplain continuation",
+            "x<y: status unknown\nplain continuation",
+            "x>y, status unknown\nplain continuation",
+            "x≈y: status unknown\nplain continuation",
+            "x≃y, status unknown\nplain continuation",
             "x∈S: stale calibration; token_3: wrong\nclaim scope",
             "x=y: stale calibration; token_3: wrong\nclaim scope",
             "p→q: stale calibration; token_3: wrong\nclaim scope",
@@ -618,6 +630,7 @@ class OccurrenceIdentityTests(unittest.TestCase):
         )
         for status in formula_statuses:
             with self.subTest(status=status):
+                self.assertTrue(VALIDATOR._formula_like(status), status)
                 source = "Diagnostic: `%s`.\n" % status
                 inventory = {
                     "schema": "orthemology-math-source-inventory-v2",
@@ -652,15 +665,33 @@ class OccurrenceIdentityTests(unittest.TestCase):
                     inventory,
                     {"publication/example.md": source},
                 )
-                self.assertIssue(issues, "invalid diagnostic literal")
-                if VALIDATOR._formula_like(status):
-                    self.assertIssue(issues, "formula-like literal classification")
+                self.assertIssue(issues, "formula-like literal classification")
 
-    def test_invalid_operator_keys_use_structural_rejection_not_formula_heuristics(self):
-        operator_keys = ("+", "/", "⋅", "−", "·", "^", "≈", "≃")
-        for key in operator_keys:
-            with self.subTest(key=key):
-                self.assertFalse(VALIDATOR._formula_like(key), key)
+    def test_operator_and_binary_formulae_are_detected_directly(self):
+        formulae = (
+            "+",
+            "/",
+            "⋅",
+            "−",
+            "·",
+            "^",
+            "≈",
+            "≃",
+            "x+y",
+            "x/y",
+            "x⋅y",
+            "x·y",
+            "x-y",
+            "x−y",
+            "x^y",
+            "x<y",
+            "x>y",
+            "x≈y",
+            "x≃y",
+        )
+        for formula in formulae:
+            with self.subTest(formula=formula):
+                self.assertTrue(VALIDATOR._formula_like(formula), formula)
 
     def test_unicode_formula_style_keys_are_detected_without_diagnostic_context(self):
         formula_style_keys = (
@@ -672,6 +703,12 @@ class OccurrenceIdentityTests(unittest.TestCase):
             "xₐ",
             "𝑥",
             "𝐕1",
+            "Ｖ1",
+            "V１",
+            "Ⓥ1",
+            "Ⅴ1",
+            "α_2",
+            "é_2",
         )
         for key in formula_style_keys:
             with self.subTest(key=key):

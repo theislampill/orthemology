@@ -52,9 +52,23 @@ CODE_FENCE_RE = re.compile(r"```(\w*)\n(.*?)```", re.S)
 INLINE_CODE_RE = re.compile(r"`[^`]*`")
 FENCE_OPEN_RE = re.compile(r"^ {0,3}(`{3,}|~{3,})([^\r\n]*)$")
 FORMULA_SIGNAL_RE = re.compile(
-    r"[=∈⊆⊂⟺⇔→↦∧∨≼≠≤≥∀∃∅⊥⊨⊭±×÷∩∪⟨⟩]"
+    r"[=∈⊆⊂⟺⇔→↦∧∨≼≠≤≥∀∃∅⊥⊨⊭±×÷∩∪⟨⟩⋅·−≈≃]"
     r"|\{[^}]*\|[^}]*\}"
     r"|(?:^|[^A-Za-z0-9_])[A-Za-z][A-Za-z0-9_-]*\([^)]*\)"
+)
+FORMULA_OPERAND_PATTERN = r"[^\W\d_](?:[0-9]+|_[A-Za-z0-9]+)?"
+BINARY_FORMULA_RE = re.compile(
+    r"(?<![\w/?=&-])"
+    + FORMULA_OPERAND_PATTERN
+    + r"\s*(?:[+/\-^<>⋅·−≈≃])\s*"
+    + FORMULA_OPERAND_PATTERN
+    + r"(?![\w/?=&-])"
+)
+ISOLATED_FORMULA_OPERATOR_RE = re.compile(
+    r"(?<![\w/])(?:[+/^])(?![\w/])"
+)
+UNICODE_INDEXED_IDENTIFIER_RE = re.compile(
+    r"(?<!\w)([^\W\d_]\w*_[A-Za-z0-9]+)(?!\w)"
 )
 APPROVED_DIAGNOSTIC_OCCURRENCE_KEY = (
     "theory/orthemic-core-formalization.md",
@@ -65,15 +79,6 @@ APPROVED_DIAGNOSTIC_OCCURRENCE_KEY = (
 APPROVED_DIAGNOSTIC_TEXT = (
     "\u03bc\u0304_2: stale calibration; \u03bc\u0304_3: wrong\n"
     "  claim scope"
-)
-DIAGNOSTIC_STATUS_VALUES = frozenset(
-    ("pass", "fail", "stale calibration", "wrong", "wrong claim scope")
-)
-DIAGNOSTIC_CLAUSE_SEPARATOR_RE = re.compile(r"[;\n]")
-DIAGNOSTIC_KEY_ANCHOR_RE = re.compile(
-    r"(?<![A-Za-z0-9_])"
-    r"(?:agent(?:[_ ]?[0-9]+)|token(?:[_ ]?[0-9]+)|\u03bc\u0304_?[0-9]+)"
-    r"(?![A-Za-z0-9_])"
 )
 MACHINE_ASSIGNMENT_RE = re.compile(
     r"(?:(?:export )?[A-Z_][A-Z0-9_]*|\$env:[A-Za-z_][A-Za-z0-9_]*)=(.*)",
@@ -275,38 +280,37 @@ def _unicode_formula_style(span):
             name.startswith("MATHEMATICAL ")
             or "SUBSCRIPT" in name
             or "SUPERSCRIPT" in name
+            or (
+                unicodedata.normalize("NFKC", char) != char
+                and unicodedata.category(char)[0] in {"L", "N", "S"}
+            )
         ):
             return True
     return False
+
+
+def _unicode_indexed_identifier(span):
+    """Return whether an indexed identifier contains a non-ASCII letter."""
+    return any(
+        any(ord(char) > 127 for char in match.group(1))
+        for match in UNICODE_INDEXED_IDENTIFIER_RE.finditer(span)
+    )
 
 
 def _formula_like(span):
     return bool(
         COMBINING.search(span)
         or FORMULA_SIGNAL_RE.search(span)
+        or BINARY_FORMULA_RE.search(span)
+        or ISOLATED_FORMULA_OPERATOR_RE.search(span)
         or _unicode_formula_style(span)
+        or _unicode_indexed_identifier(span)
     )
 
 
 def is_approved_diagnostic_literal(key, span):
     """Return whether *span* is the one reviewed diagnostic occurrence."""
     return key == APPROVED_DIAGNOSTIC_OCCURRENCE_KEY and span == APPROVED_DIAGNOSTIC_TEXT
-
-
-def _diagnostic_status_like(span):
-    """Detect reviewed diagnostic anchors across malformed multiline clauses."""
-    if "\n" not in span:
-        return False
-    status_anchors = 0
-    for clause in DIAGNOSTIC_CLAUSE_SEPARATOR_RE.split(span):
-        normalized = " ".join(clause.split())
-        if ":" in normalized:
-            _, normalized = normalized.rsplit(":", 1)
-            normalized = normalized.strip()
-        if normalized in DIAGNOSTIC_STATUS_VALUES:
-            status_anchors += 1
-    key_anchors = len(DIAGNOSTIC_KEY_ANCHOR_RE.findall(span))
-    return status_anchors + key_anchors >= 2
 
 
 def validate_inventory_data(inventory, source_texts, registry_ids=None):
@@ -404,13 +408,6 @@ def validate_inventory_data(inventory, source_texts, registry_ids=None):
             classification == "literal-code"
             and is_approved_diagnostic_literal(key, span)
         )
-        invalid_diagnostic_literal = (
-            classification == "literal-code"
-            and _diagnostic_status_like(span)
-            and not approved_diagnostic_literal
-        )
-        if invalid_diagnostic_literal:
-            issues.append("invalid diagnostic literal at %r" % (key,))
         if (
             COMBINING.search(span)
             and classification != "mathematics"
