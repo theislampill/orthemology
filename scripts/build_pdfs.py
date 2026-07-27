@@ -311,8 +311,16 @@ def compatibility_report_table_issues(root):
                     "%s %s differs from owner" % (artifact_id, label)
                 )
     expected_total = sum(row["pages"] for row in expected_rows)
-    total_match = re.search(r"^Total final page count: `(\d+)`\.$", text, re.M)
-    if total_match is None or int(total_match.group(1)) != expected_total:
+    total_matches = re.findall(
+        r"^Total final page count: `(\d+)`\.$",
+        text,
+        re.M,
+    )
+    if len(total_matches) != 1:
+        issues.append(
+            "compatibility report must contain exactly one total page count"
+        )
+    elif int(total_matches[0]) != expected_total:
         issues.append("compatibility report total page count differs from owners")
     return issues
 
@@ -336,6 +344,15 @@ def rewrite_compatibility_artifact_table(root):
     expected_total = sum(
         row["pages"] for row in compatibility_artifact_rows(root)
     )
+    total_matches = re.findall(
+        r"^Total final page count: `\d+`\.$",
+        updated,
+        re.M,
+    )
+    if len(total_matches) != 1:
+        raise PipelineError(
+            "compatibility report must contain exactly one total page count"
+        )
     updated, total_count = re.subn(
         r"^Total final page count: `\d+`\.$",
         "Total final page count: `%d`." % expected_total,

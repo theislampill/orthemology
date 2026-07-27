@@ -770,6 +770,11 @@ class SourcePackageContractTests(unittest.TestCase):
                 "\\csname RequirePackage\\endcsname{todonotes}\n"
                 + BASE_MAIN
             ),
+            "caret-escaped input": BASE_MAIN.replace(
+                "\\begin{document}",
+                "\\^^69nput{pdftex-unicode-compat.tex}\n"
+                "\\begin{document}",
+            ),
         }
         for name, main in mutations.items():
             with self.subTest(name=name):
@@ -794,6 +799,7 @@ class SourcePackageContractTests(unittest.TestCase):
                             "dynamic conditional file read",
                             "dynamic internal file read",
                             "dynamic package load",
+                            "caret-escaped input",
                         }
                         else "package"
                     )
@@ -1235,6 +1241,37 @@ class SourcePackageContractTests(unittest.TestCase):
                         any("table region" in issue for issue in issues),
                         issues,
                     )
+
+    def test_compatibility_report_rejects_duplicate_total_page_records(self):
+        validate = self.api(BUILD, "compatibility_report_table_issues")
+        with tempfile.TemporaryDirectory() as temporary:
+            root = pathlib.Path(temporary)
+            shutil.copytree(ROOT / "artifacts", root / "artifacts")
+            report_target = (
+                root
+                / "docs"
+                / "project-closure"
+                / "r7e-sol"
+                / "R7E-SOL-ARXIV-COMPATIBILITY.md"
+            )
+            report_target.parent.mkdir(parents=True)
+            report = (
+                ROOT
+                / "docs"
+                / "project-closure"
+                / "r7e-sol"
+                / "R7E-SOL-ARXIV-COMPATIBILITY.md"
+            ).read_text(encoding="utf-8")
+            report_target.write_text(
+                report + "\nTotal final page count: `999`.\n",
+                encoding="utf-8",
+                newline="\n",
+            )
+            issues = validate(root)
+            self.assertTrue(
+                any("exactly one" in issue for issue in issues),
+                issues,
+            )
 
 
 if __name__ == "__main__":

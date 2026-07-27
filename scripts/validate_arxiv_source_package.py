@@ -120,6 +120,10 @@ def _package_declarations(text, command):
 def _alternate_source_read_issues(cleaned):
     """Reject file-read control sequences outside the audited input grammar."""
     issues = []
+    if "^^" in cleaned:
+        issues.append(
+            "prohibited alternate source-read command uses a TeX caret escape"
+        )
     for match in re.finditer(r"\\([A-Za-z@]+)", cleaned):
         command = match.group(1)
         lowered = command.lower()
