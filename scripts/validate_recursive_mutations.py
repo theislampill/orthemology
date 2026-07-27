@@ -40,6 +40,10 @@ import sys
 
 import yaml
 
+ROOT = os.path.dirname(os.path.dirname(os.path.abspath(__file__)))
+if ROOT not in sys.path:
+    sys.path.insert(0, ROOT)
+
 try:
     from scripts.task14_probe_registry import load_registry
     from scripts.task14_direct_probes import execute_direct_probe
@@ -49,7 +53,6 @@ except ModuleNotFoundError:
 from jsonschema import Draft202012Validator
 from referencing import Registry, Resource
 
-ROOT = os.path.dirname(os.path.dirname(os.path.abspath(__file__)))
 sys.path.insert(0, os.path.join(ROOT, "scripts"))
 from validate_cross_record_semantics import collect_issues, aggregate  # noqa: E402
 
