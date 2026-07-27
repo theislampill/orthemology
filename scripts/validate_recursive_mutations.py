@@ -33,8 +33,11 @@ import argparse
 import copy
 import json
 import os
+import pathlib
+import subprocess
 import sys
 
+import yaml
 from jsonschema import Draft202012Validator
 from referencing import Registry, Resource
 
@@ -102,6 +105,291 @@ FAMILIES = [
 ]
 
 MUTANT_MARK = "MUTANT-NO-SUCH-ID"
+TASK14_PLAN = (
+    "docs/superpowers/plans/2026-07-21-r7e-sol-independent-repair.md"
+)
+TASK14_LEDGER = (
+    "docs/project-closure/r7e-sol/AR6_TO_TASKS_10_16_IMPACT_LEDGER.yaml"
+)
+TASK14_REPORT = (
+    "docs/project-closure/r7e-sol/R7E-SOL-ADVERSARIAL-REPORT.md"
+)
+
+
+def _task14_plan_names(root):
+    plan = pathlib.Path(root) / TASK14_PLAN
+    prefix = "**Step 1:** Make every mandatory attack durable:"
+    lines = plan.read_text(encoding="utf-8").splitlines()
+    matching = [line for line in lines if line.startswith(prefix)]
+    if len(matching) != 1:
+        raise ValueError("authoritative plan must contain one Task 14 Step 1 inventory")
+    names = matching[0].split("durable: ", 1)[1].rstrip(".").split("; ")
+    names[-1] = names[-1].removeprefix("and ")
+    return names
+
+
+def load_task14_ar6_rows(root):
+    ledger_path = pathlib.Path(root) / TASK14_LEDGER
+    ledger = yaml.safe_load(ledger_path.read_text(encoding="utf-8"))
+    entries = ledger.get("entries", []) if isinstance(ledger, dict) else []
+    return [
+        row for row in entries
+        if isinstance(row, dict) and row.get("closest_tracked_task") == "Task 14"
+    ]
+
+
+def audit_task14_spec(spec, root):
+    """Return deterministic issues in the authoritative Task 14 inventory."""
+    issues = []
+    attacks = spec.get("mandatory_attacks")
+    if not isinstance(attacks, list):
+        return ["mandatory_attacks must be a list"]
+    try:
+        plan_names = _task14_plan_names(root)
+    except (OSError, ValueError) as exc:
+        return [str(exc)]
+    observed_names = [
+        row.get("name") if isinstance(row, dict) else None for row in attacks
+    ]
+    if observed_names != plan_names:
+        issues.append("plan attack inventory differs from the authoritative Step 1 order")
+
+    attack_ids = []
+    mutation_ids = []
+    for index, row in enumerate(attacks, 1):
+        expected_id = "R7E-T14-A%02d" % index
+        if not isinstance(row, dict):
+            issues.append("%s must be an object" % expected_id)
+            continue
+        attack_id = row.get("attack_id")
+        mutation_id = row.get("mutation_id")
+        attack_ids.append(attack_id)
+        mutation_ids.append(mutation_id)
+        if attack_id != expected_id:
+            issues.append("attack %d ID must be %s" % (index, expected_id))
+        if mutation_id != expected_id + "-M01":
+            issues.append("%s mutation ID must be %s-M01" % (expected_id, expected_id))
+        if row.get("coverage_kind") != "structured-semantic":
+            issues.append("%s must use structured semantic coverage" % expected_id)
+        for field in ("invariant", "owner", "control"):
+            value = row.get(field)
+            if not isinstance(value, str) or not value.strip():
+                issues.append("%s has no %s" % (expected_id, field))
+        coverage = row.get("coverage")
+        if not (
+            isinstance(coverage, list)
+            and coverage
+            and all(isinstance(item, str) and item.strip() for item in coverage)
+        ):
+            issues.append("%s has no exact structured coverage selector" % expected_id)
+        command = row.get("command")
+        if not (
+            isinstance(command, list)
+            and len(command) >= 4
+            and command[:3] == ["python", "-m", "unittest"]
+            and all(isinstance(token, str) and token for token in command)
+        ):
+            issues.append("%s command must invoke exact unittest selectors" % expected_id)
+        else:
+            selectors = command[3:]
+            if selectors[-1] == "-v":
+                selectors = selectors[:-1]
+            if not selectors or any(selector.count(".") < 2 for selector in selectors):
+                issues.append("%s command has no exact unittest method selector" % expected_id)
+
+    for value in sorted({value for value in attack_ids if attack_ids.count(value) > 1}):
+        issues.append("duplicate attack ID %s" % value)
+    for value in sorted(
+        {value for value in mutation_ids if mutation_ids.count(value) > 1}
+    ):
+        issues.append("duplicate mutation ID %s" % value)
+
+    try:
+        ledger_rows = load_task14_ar6_rows(root)
+    except (OSError, yaml.YAMLError) as exc:
+        issues.append("Task 14 AR6 ledger cannot be loaded: %s" % exc)
+        ledger_rows = []
+    expected_ar6 = {
+        row.get("artifact_id") for row in ledger_rows if row.get("artifact_id")
+    }
+    declared_ar6 = spec.get("task14_ar6_artifact_ids")
+    if not isinstance(declared_ar6, list) or set(declared_ar6) != expected_ar6:
+        issues.append("Task 14 AR6 artifact inventory differs from the impact ledger")
+    if isinstance(declared_ar6, list) and len(declared_ar6) != len(set(declared_ar6)):
+        issues.append("Task 14 AR6 artifact inventory contains duplicates")
+    allowed_dispositions = {
+        "INTERRUPTED_UNVERIFIED_RESEARCH",
+        "COUNTERMODEL_OR_NEGATIVE_EVIDENCE",
+    }
+    for row in ledger_rows:
+        if row.get("required_disposition") not in allowed_dispositions:
+            issues.append(
+                "%s has a non-adversarial Task 14 disposition"
+                % row.get("artifact_id", "unknown AR6 artifact")
+            )
+        if row.get("normative_flow_status") != "NO_AUTOMATIC_NORMATIVE_FLOW":
+            issues.append(
+                "%s is not bounded away from automatic normative flow"
+                % row.get("artifact_id", "unknown AR6 artifact")
+            )
+    return issues
+
+
+def run_task14_attacks(spec, root, runner=subprocess.run, python=sys.executable):
+    """Run each exact focused command once and account for every mandatory attack."""
+    issues = audit_task14_spec(spec, root)
+    if issues:
+        return [], issues
+    cache = {}
+    for row in spec["mandatory_attacks"]:
+        key = tuple(row["command"])
+        if key in cache:
+            continue
+        command = [python] + list(key[1:])
+        try:
+            cache[key] = runner(
+                command,
+                cwd=str(root),
+                capture_output=True,
+                text=True,
+                encoding="utf-8",
+                timeout=180,
+            )
+        except (OSError, subprocess.TimeoutExpired) as exc:
+            cache[key] = type(
+                "Task14CommandFailure",
+                (),
+                {"returncode": 124, "stdout": "", "stderr": str(exc)},
+            )()
+
+    results = []
+    for row in spec["mandatory_attacks"]:
+        completed = cache[tuple(row["command"])]
+        passed = completed.returncode == 0
+        result = {
+            "attack_id": row["attack_id"],
+            "name": row["name"],
+            "mutation_id": row["mutation_id"],
+            "invariant": row["invariant"],
+            "owner": row["owner"],
+            "coverage": list(row["coverage"]),
+            "command": " ".join(row["command"]),
+            "control_result": "accepted" if passed else "unverified",
+            "mutation_result": "rejected" if passed else "unverified",
+            "verification_exit_code": completed.returncode,
+        }
+        results.append(result)
+        if not passed:
+            detail = (completed.stderr or completed.stdout or "").strip()
+            issues.append(
+                "%s exact verification command exited %d%s"
+                % (
+                    row["attack_id"],
+                    completed.returncode,
+                    ": " + detail[-500:] if detail else "",
+                )
+            )
+    return results, issues
+
+
+def _cell(value):
+    return str(value).replace("|", "\\|").replace("\n", " ")
+
+
+def render_task14_report(spec, results, root, recursive_totals=None):
+    """Render the byte-stable Task 14 report from current executable results."""
+    recursive_totals = recursive_totals or {}
+    unique_commands = {row["command"] for row in results}
+    passed = [row for row in results if row["verification_exit_code"] == 0]
+    variants = sum(len(row.get("coverage", [])) for row in results)
+    lines = [
+        "# R7E Sol adversarial and mutation report",
+        "",
+        "This report is derived from the integrated tree. It does not copy historical "
+        "R7C/R7D totals or infer interrupted research outcomes.",
+        "",
+        "## Method and current totals",
+        "",
+        "- Exact approved Task 13 base: `%s`" % spec.get("task14_exact_base", "UNDECLARED"),
+        "- Mandatory attacks: %d" % len(spec.get("mandatory_attacks", [])),
+        "- Structured coverage variants: %d" % variants,
+        "- Executed unique focused commands: %d" % len(unique_commands),
+        "- Passing attacks: %d" % len(passed),
+        "- Valid controls asserted accepted: %d" % sum(
+            row["control_result"] == "accepted" for row in results
+        ),
+        "- Invalid mutations asserted rejected: %d" % sum(
+            row["mutation_result"] == "rejected" for row in results
+        ),
+    ]
+    if recursive_totals:
+        lines.extend([
+            "- Recursive operator families: %d" % recursive_totals.get("families", 0),
+            "- Recursive mutants generated: %d" % recursive_totals.get("generated", 0),
+            "- Schema-killed: %d" % recursive_totals.get("killed_schema", 0),
+            "- Semantic-killed: %d" % recursive_totals.get("killed_semantic", 0),
+            "- Justified equivalents: %d" % recursive_totals.get("justified", 0),
+            "- Unjustified survivors: %d" % recursive_totals.get("unjustified", 0),
+        ])
+    lines.extend([
+        "",
+        "A zero command exit means the named exact test method asserted both the "
+        "neighboring valid control and the structured invalid mutation. The two "
+        "outcome columns below are therefore asserted test outcomes, not labels "
+        "copied from inventory metadata.",
+        "",
+        "## Mandatory attacks",
+        "",
+        "| Attack ID | Attack | Mutation ID | Invariant | Exact command | Control | Mutation | RC | Owner | Structured coverage |",
+        "|---|---|---|---|---|---|---|---:|---|---|",
+    ])
+    for row in results:
+        lines.append(
+            "| %s | %s | %s | %s | `%s` | %s | %s | %d | %s | %s |"
+            % (
+                _cell(row["attack_id"]),
+                _cell(row["name"]),
+                _cell(row["mutation_id"]),
+                _cell(row["invariant"]),
+                _cell(row["command"]),
+                _cell(row["control_result"]),
+                _cell(row["mutation_result"]),
+                row["verification_exit_code"],
+                _cell(row["owner"]),
+                _cell("; ".join(row["coverage"])),
+            )
+        )
+    lines.extend([
+        "",
+        "## AR6 adversarial reconciliation",
+        "",
+        "Interrupted AR6 research is excluded from normative and publication flow. "
+        "Only entries already dispositioned as countermodels or negative evidence "
+        "may inform reproduced attacks; no interrupted claim is promoted.",
+        "",
+        "| Artifact ID | Tranche | Function | Disposition | Integration | Current representation | Task 14 use |",
+        "|---|---|---|---|---|---|---|",
+    ])
+    for row in load_task14_ar6_rows(root):
+        disposition = row.get("required_disposition", "")
+        use = (
+            "reproduced negative evidence only"
+            if disposition == "COUNTERMODEL_OR_NEGATIVE_EVIDENCE"
+            else "excluded interrupted research"
+        )
+        lines.append(
+            "| %s | %s | %s | %s | %s | %s | %s |"
+            % (
+                _cell(row.get("artifact_id", "")),
+                _cell(row.get("research_tranche", "")),
+                _cell(row.get("claim_or_function", "")),
+                _cell(disposition),
+                _cell(row.get("integration_status", "")),
+                _cell(row.get("current_repository_representation", "")),
+                use,
+            )
+        )
+    return "\n".join(lines) + "\n"
 
 
 # --------------------------------------------------------------- schema loading
@@ -684,6 +972,11 @@ def main():
     ap = argparse.ArgumentParser()
     ap.add_argument("--verbose", action="store_true",
                     help="list every survivor signature")
+    ap.add_argument(
+        "--write-adversarial-report",
+        action="store_true",
+        help="write the derived Task 14 report after every executable gate passes",
+    )
     args = ap.parse_args()
 
     schemas, registry = load_schemas()
@@ -692,6 +985,7 @@ def main():
     spec_path = os.path.join(ROOT, "tests", "schema-mutations", "mutation-spec.json")
     spec = json.load(open(spec_path, encoding="utf-8"))
     equivalents = {e["signature"]: e["reason"] for e in spec.get("justified_equivalents", [])}
+    task14_inventory_issues = audit_task14_spec(spec, ROOT)
 
     edir = os.path.join(ROOT, "examples")
     bundles = []
@@ -777,6 +1071,49 @@ def main():
         for s in unjustified:
             print("  - %s" % s)
         fails += 1
+
+    task14_results = []
+    task14_execution_issues = list(task14_inventory_issues)
+    if not task14_inventory_issues:
+        task14_results, task14_execution_issues = run_task14_attacks(spec, ROOT)
+    if task14_execution_issues:
+        print("FAIL: Task 14 mandatory attack program:")
+        for issue in task14_execution_issues:
+            print("  - %s" % issue)
+        fails += 1
+    else:
+        unique_commands = {
+            row["command"] for row in task14_results
+        }
+        print(
+            "PASS: Task 14 accounted for %d mandatory attacks through %d exact "
+            "focused command(s)." % (len(task14_results), len(unique_commands))
+        )
+
+    report = render_task14_report(
+        spec,
+        task14_results,
+        ROOT,
+        recursive_totals={
+            "families": len(FAMILIES),
+            "generated": tot["generated"],
+            "killed_schema": tot["killed_schema"],
+            "killed_semantic": tot["killed_semantic"],
+            "justified": len(justified),
+            "unjustified": len(unjustified),
+        },
+    )
+    report_path = pathlib.Path(ROOT) / TASK14_REPORT
+    if args.write_adversarial_report and not fails:
+        report_path.write_text(report, encoding="utf-8", newline="\n")
+        print("WROTE: %s" % TASK14_REPORT)
+    elif not args.write_adversarial_report:
+        if not report_path.exists():
+            print("FAIL: derived Task 14 report is missing: %s" % TASK14_REPORT)
+            fails += 1
+        elif report_path.read_text(encoding="utf-8") != report:
+            print("FAIL: derived Task 14 report has drifted: %s" % TASK14_REPORT)
+            fails += 1
 
     if not fails:
         print("PASS: every generated mutant is killed at a declared layer, or is declared "

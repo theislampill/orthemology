@@ -68,6 +68,8 @@ jobs:
         run: python scripts/validate_negative_fixtures.py
       - name: Recursive path-aware mutation testing (per-family scope printed)
         run: python scripts/validate_recursive_mutations.py
+      - name: Task 14 adversarial inventory, runner, and report contract
+        run: python tests/test_task14_adversarial_program.py
       - name: ReqPath governance derivation (incl. omission attack)
         run: python scripts/derive_reqpath.py
       - name: Registry-generated surfaces are current (no drift)

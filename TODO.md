@@ -21,13 +21,12 @@ artifacts and interrupted external research do not satisfy that gate.
   observation.
 - PR #12 exact-SHA CI: RED only on the known Task 13 PDF clean-rebuild and
   parity gate; the preceding workflow gates pass.
-- Local authoritative source base:
-  `1703a783d9b25a9cfa93370c4a1a0b568fa497d0`, tree
-  `8edff88e8df79e8d0792d441c65227b9729403a9`.
-- Last independently approved source task: Task 12, including the reviewed
-  source-repair tree represented by
-  `9dc0094cc6df908fbba1b965bb36d5f3f00979c0`.
-- Task 13 is implemented and ready for independent review. It is the first
+- Local authoritative approved base:
+  `61ad3b6f59a72a9b1fca53bd93a7a958e84f6e08`, tree
+  `1447d891f0e3651c91f78df7f43d82eb7bbac587`.
+- Last independently approved source task: Task 13 at
+  `61ad3b6f59a72a9b1fca53bd93a7a958e84f6e08`.
+- Task 14 is implemented and ready for independent review. It is the first
   unfinished approval gate.
 - AR6 status: `INTERRUPTED_IN_PROGRESS`. Its 1,329 records are reconciled, but
   no AR6 patch, claim, proof, theorem, source assertion, formal artifact, or
@@ -177,9 +176,8 @@ artifacts and interrupted external research do not satisfy that gate.
 
 ### Task 13 — Repair PDF provenance, candidate status, and artifact generation
 
-- [ ] Obtain independent approval of the exact Task 13 candidate commit.
-- Status: implementation complete and ready for independent review. No approval
-  is claimed.
+- Status: completed and independently approved at
+  `61ad3b6f59a72a9b1fca53bd93a7a958e84f6e08`.
 - Implementation/review: all six governed PDFs, sidecars, source archives, and
   source manifests bind the authoritative Task 12 source tree and pinned
   offline toolchain. The source-package and heading validators were repaired
@@ -190,21 +188,28 @@ artifacts and interrupted external research do not satisfy that gate.
   extraction, text structure, link safety, and visual QA pass locally. Exact
   evidence is in `R7E-SOL-ARXIV-COMPATIBILITY.md` and
   `R7E-SOL-PDF-VISUAL-QA.md`.
-- Blocker: fresh independent review of the exact Task 13 commit.
-- Next action: dispatch the independent Task 13 reviewer against the immutable
-  candidate diff and source packages.
+- Blocker: none specific to Task 13.
+- Next action: preserve the approved source packages and PDF parity as Task 14
+  and Task 15 inputs.
 
 ### Task 14 — Run the complete adversarial and recursive mutation program
 
-- [ ] Regenerate and close the full adversarial inventory against the integrated
-  Tasks 10–13 tree.
-- Status: unfinished; isolated reporting mechanics require adaptation.
-- Implementation/review: regenerate counterexamples and invalid mutations from
-  the integrated tree and independently review false positives and negatives.
-- CI/publication: every attack must be rejected for its intended structured
-  invariant while neighboring controls pass.
-- Blocker: independent Task 13 approval.
-- Next action: regenerate the attack inventory after Tasks 11–13 integrate.
+- [ ] Obtain independent approval of the exact Task 14 candidate commit.
+- Status: implementation complete and ready for independent review. No approval
+  is claimed.
+- Implementation/review: the authoritative plan inventory contains all 59
+  mandatory attacks exactly once, with unique mutation IDs, exact focused
+  control/mutation commands, and 19 disposition-bound AR6 inputs. Six formerly
+  indirect boundaries now have one valid control and eight direct structured
+  invalid mutations through the production entry point.
+- CI/publication: 20 unique focused commands assert all 59 valid-control and
+  invalid-mutation outcomes. The current recursive engine generates 1,813
+  mutants across 27 families: 1,546 schema-killed, 248 semantic-killed, and 19
+  justified equivalents, with zero unjustified survivors. The canonical report
+  is `docs/project-closure/r7e-sol/R7E-SOL-ADVERSARIAL-REPORT.md`.
+- Blocker: fresh independent review of the exact Task 14 commit.
+- Next action: dispatch the independent Task 14 reviewer against the immutable
+  candidate diff and regenerated report.
 
 ### Task 15 — Run the exact pinned full suite and clean-clone candidate proof
 
@@ -215,9 +220,9 @@ artifacts and interrupted external research do not satisfy that gate.
   candidate diff, source boundaries, tests, artifacts, and exclusions.
 - CI/publication: requires the exact pinned workflow locally and in a clean
   clone, fresh exact-SHA remote checks, clean generated owners, and a clean tree.
-- Blocker: approved Tasks 11–14 and fresh remote evidence.
-- Next action: adapt the proof runbook only after the final integrated tree
-  exists.
+- Blocker: Task 14 approval and fresh remote evidence.
+- Next action: after Task 14 approval, run the exact pinned local, clean-clone,
+  and remote proof against the reviewed candidate.
 
 ### Task 16 — Perform the authorized protected integration cascade
 
