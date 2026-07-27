@@ -59,16 +59,35 @@ URL_RE = re.compile(
     r"(?<![A-Za-z0-9+.-])https?://[^\s<>`\"']+",
     re.IGNORECASE,
 )
-POSIX_FILE_PATH_RE = re.compile(
+FILE_TOKEN_RE = re.compile(
     r"(?<![\w.])"
-    r"(?:\.{1,2}/|[A-Za-z0-9_.-]+/)"
-    r"(?:[A-Za-z0-9_.-]+/)*"
-    r"[A-Za-z0-9_.-]+\.[A-Za-z0-9]+"
+    r"(?:\.{1,2}[\\/])?"
+    r"(?:[\w()\-]+[\\/])*"
+    r"[\w()\-]+(?:\.[A-Za-z0-9]+)+"
     r"(?![\w.])"
 )
+SEMVER_TOKEN_RE = re.compile(
+    r"(?<![0-9A-Za-z])"
+    r"v?(?:0|[1-9][0-9]*)"
+    r"\.(?:0|[1-9][0-9]*)"
+    r"\.(?:0|[1-9][0-9]*)"
+    r"(?:-[0-9A-Za-z-]+(?:\.[0-9A-Za-z-]+)*)?"
+    r"(?:\+[0-9A-Za-z-]+(?:\.[0-9A-Za-z-]+)*)?"
+    r"(?![0-9A-Za-z])"
+)
+STATUS_ID_TOKEN_RE = re.compile(
+    r"(?<![A-Z0-9])"
+    r"(?![A-Z]-[A-Z](?![A-Z0-9-]))"
+    r"[A-Z][A-Z0-9]*(?:-[A-Z0-9]+)+"
+    r"(?![A-Z0-9])"
+)
 FILE_SUFFIX_RE = re.compile(r"\.[A-Za-z0-9]+/?$")
-CALLABLE_FORMULA_RE = re.compile(
-    r"(?<![\w./?=&-])[^\W\d_]\w*\s*\([^)]*\)"
+CALLABLE_FORMULA_CANDIDATE_RE = re.compile(
+    r"(?<![\w./?=&-])(?P<name>[^\W\d_]\w*)\s*\([^)]*\)"
+)
+CLI_COMMAND_TOKEN_RE = re.compile(r"[A-Za-z_.][A-Za-z0-9_.\\/:-]+")
+CLI_FLAG_TOKEN_RE = re.compile(
+    r"-{1,2}[A-Za-z][A-Za-z0-9_-]*(?:=[^\s]+)?"
 )
 FORMULA_OPERAND_PATTERN = (
     r"(?:[+\-\u2212]?(?:\d+(?:\.\d+)?|\.\d+)|[^\W\d_]\w*)"
@@ -78,7 +97,7 @@ FORMULA_OPERAND_AT_END_RE = re.compile(FORMULA_OPERAND_PATTERN + r"$")
 FORMULA_OPERAND_AT_START_RE = re.compile(FORMULA_OPERAND_PATTERN)
 OPERAND_BOUNDARY_CHARS = frozenset("./\\?&=#@")
 PUNCTUATION_FORMULA_OPERATORS = frozenset("*/^-·")
-ISOLATED_FORMULA_OPERATOR_RE = re.compile(r"(?<![\w/])(?:[+*/^])(?![\w/])")
+ISOLATED_FORMULA_OPERATOR_RE = re.compile(r"(?<![\w/])(?:[+/^])(?![\w/])")
 UNICODE_INDEXED_IDENTIFIER_RE = re.compile(
     r"(?<!\w)([^\W\d_]\w*_[A-Za-z0-9]+)(?!\w)"
 )
@@ -104,6 +123,19 @@ MATH_OR_CONTROL_IN_VALUE_RE = re.compile(
 def _without_syntactic_urls(span):
     """Replace complete HTTP(S) URL tokens before formula classification."""
     return URL_RE.sub(lambda match: " " * len(match.group(0)), span)
+
+
+def _is_cli_command(span):
+    """Return whether *span* is a complete command containing CLI flag tokens."""
+    if "\n" in span or "\r" in span:
+        return False
+    tokens = span.strip().split()
+    if len(tokens) < 2 or not CLI_COMMAND_TOKEN_RE.fullmatch(tokens[0]):
+        return False
+    return any(
+        CLI_FLAG_TOKEN_RE.fullmatch(token.strip("'\""))
+        for token in tokens[1:]
+    )
 
 
 def is_machine_assignment(span):
@@ -291,8 +323,24 @@ def extract_inline_code_occurrences(text):
 
 
 def _without_syntactic_file_paths(span):
-    """Replace unambiguous relative POSIX file paths before classification."""
-    return POSIX_FILE_PATH_RE.sub(lambda match: " " * len(match.group(0)), span)
+    """Replace unambiguous filenames and relative paths before classification."""
+    def replace(match):
+        token = match.group(0)
+        if any(char.isalpha() or char in "_()" for char in token):
+            return " " * len(token)
+        return token
+
+    return FILE_TOKEN_RE.sub(replace, span)
+
+
+def _without_semver_tokens(span):
+    """Replace complete semantic-version tokens before operator classification."""
+    return SEMVER_TOKEN_RE.sub(lambda match: " " * len(match.group(0)), span)
+
+
+def _without_status_ids(span):
+    """Replace uppercase hyphenated status identifiers before classification."""
+    return STATUS_ID_TOKEN_RE.sub(lambda match: " " * len(match.group(0)), span)
 
 
 def _contains_unicode_mark(span):
@@ -357,7 +405,10 @@ def _binary_formula_structure(span):
         line_prefix = span[line_start:operator_start]
         if (
             operator_text == "--"
-            or (operator_text == "-" and not line_prefix.strip())
+            or (
+                operator_text in {"-", "*"}
+                and not line_prefix.strip()
+            )
         ):
             continue
         left_operand = _operand_before(span, operator_start)
@@ -373,13 +424,7 @@ def _binary_formula_structure(span):
             and FORMULA_IDENTIFIER_RE.fullmatch(left_operand)
             and FORMULA_IDENTIFIER_RE.fullmatch(right_operand)
             and (
-                (
-                    left_operand.isascii()
-                    and right_operand.isascii()
-                    and left_operand.isupper()
-                    and right_operand.isupper()
-                )
-                or "/" in span
+                "/" in span
                 or "\\" in span
                 or FILE_SUFFIX_RE.search(span)
             )
@@ -417,6 +462,23 @@ def _unicode_formula_style(span):
     return False
 
 
+def _callable_formula_structure(span):
+    """Detect reviewed callable math names without treating prose as a call."""
+    for match in CALLABLE_FORMULA_CANDIDATE_RE.finditer(span):
+        name = match.group("name")
+        if (
+            len(name) == 1
+            or any(char.isdigit() for char in name)
+            or "_" in name
+            or _unicode_formula_style(name)
+        ):
+            return True
+        preceding_word = re.search(r"\w\s+$", span[:match.start()])
+        if any(char.isupper() for char in name) and not preceding_word:
+            return True
+    return False
+
+
 def _unicode_indexed_identifier(span):
     """Return whether an indexed identifier contains a non-ASCII letter."""
     return any(
@@ -426,13 +488,17 @@ def _unicode_indexed_identifier(span):
 
 
 def _formula_like(span):
+    if _is_cli_command(span):
+        return False
     candidate = _without_syntactic_urls(span)
+    candidate = _without_semver_tokens(candidate)
     candidate = _without_syntactic_file_paths(candidate)
+    candidate = _without_status_ids(candidate)
     return bool(
         _contains_unicode_mark(candidate)
         or FORMULA_SIGNAL_RE.search(candidate)
         or _binary_formula_structure(candidate)
-        or CALLABLE_FORMULA_RE.search(candidate)
+        or _callable_formula_structure(candidate)
         or ISOLATED_FORMULA_OPERATOR_RE.search(candidate)
         or _unicode_formula_style(candidate)
         or _unicode_indexed_identifier(candidate)

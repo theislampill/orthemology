@@ -134,6 +134,15 @@ class OccurrenceIdentityTests(unittest.TestCase):
     def assertIssue(self, issues, fragment):
         self.assertTrue(any(fragment in issue for issue in issues), issues)
 
+    def assertLiteralControl(self, span):
+        self.assertFalse(VALIDATOR._formula_like(span), span)
+        source = "Literal: `%s`.\n" % span
+        inventory, source_texts = literal_inventory(
+            "publication/example.md",
+            source,
+        )
+        self.assertEqual(inventory_issues(inventory, source_texts), [])
+
     def test_rejects_duplicate_file_locus_occurrence_key(self):
         inventory, source_texts = valid_inventory()
         inventory["occurrences"].append(copy.deepcopy(inventory["occurrences"][0]))
@@ -688,6 +697,7 @@ class OccurrenceIdentityTests(unittest.TestCase):
             "x>y",
             "x≈y",
             "x≃y",
+            "A-B",
         )
         for formula in formulae:
             with self.subTest(formula=formula):
@@ -844,6 +854,76 @@ class OccurrenceIdentityTests(unittest.TestCase):
         for control in controls:
             with self.subTest(control=control):
                 self.assertFalse(VALIDATOR._formula_like(control), control)
+
+    def test_cli_commands_and_complete_flag_tokens_remain_literal(self):
+        controls = (
+            "pytest -q --disable-warnings",
+            "pytest --maxfail=1",
+            "python -m pytest -q",
+            "validator --count=2 --verbose",
+        )
+        for control in controls:
+            with self.subTest(control=control):
+                self.assertLiteralControl(control)
+
+    def test_filenames_paths_and_archive_names_precede_callable_detection(self):
+        controls = (
+            "report(v1)" + ".md",
+            "task-12-report" + ".md",
+            "release(v2).tar" + ".gz",
+            "notes(archived)" + ".txt",
+            "artifact-v1.2.3" + ".zip",
+            "docs/notation-gallery.md",
+            "scripts/validate_math_source.py",
+        )
+        for control in controls:
+            with self.subTest(control=control):
+                self.assertLiteralControl(control)
+
+    def test_semver_tokens_precede_operator_detection(self):
+        controls = (
+            "1.2.3-alpha+001",
+            "v2.0.0-rc.1+build.7",
+            "0.0.1",
+            "10.20.30-beta.2",
+        )
+        for control in controls:
+            with self.subTest(control=control):
+                self.assertLiteralControl(control)
+
+    def test_uppercase_status_ids_precede_binary_hyphen_detection(self):
+        controls = (
+            "TASK-12",
+            "R7E-12",
+            "TASK-12-REVIEW",
+            "R7E-12A",
+        )
+        for control in controls:
+            with self.subTest(control=control):
+                self.assertLiteralControl(control)
+
+    def test_line_leading_asterisks_are_list_markers_not_multiplication(self):
+        controls = (
+            "*",
+            "* item",
+            "  * item",
+            "items:\n  * first\n  * second",
+        )
+        for control in controls:
+            with self.subTest(control=control):
+                self.assertLiteralControl(control)
+
+    def test_multiword_parenthetical_prose_is_not_a_callable(self):
+        controls = (
+            "plain prose (aside)",
+            "release notes (draft)",
+            "two words (context only)",
+            "Plain Notes (Draft)",
+            "release Notes (draft)",
+        )
+        for control in controls:
+            with self.subTest(control=control):
+                self.assertLiteralControl(control)
 
     def test_unicode_formula_style_keys_are_detected_without_diagnostic_context(self):
         formula_style_keys = (
