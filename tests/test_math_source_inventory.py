@@ -318,6 +318,7 @@ class OccurrenceIdentityTests(unittest.TestCase):
     def test_diagnostic_literal_requires_structural_token_identifiers(self):
         accepted = (
             "μ̄_2: stale calibration; μ̄_3: wrong\nclaim scope",
+            "μ̄_17: stale calibration; μ̄_204: wrong\nclaim scope",
             "token_17: stale calibration; agent_4: wrong\nclaim scope",
         )
         rejected = (
@@ -327,6 +328,16 @@ class OccurrenceIdentityTests(unittest.TestCase):
             "x=y: stale calibration; token_3: wrong\nclaim scope",
             "p→q: stale calibration; token_3: wrong\nclaim scope",
             "{x|P(x)}: stale calibration; token_3: wrong\nclaim scope",
+            "x̂: stale calibration; token_3: wrong\nclaim scope",
+            "μ⃗: stale calibration; token_3: wrong\nclaim scope",
+            "x̄_2: stale calibration; token_3: wrong\nclaim scope",
+            "μ̂_2: stale calibration; token_3: wrong\nclaim scope",
+            "μ⃗_2: stale calibration; token_3: wrong\nclaim scope",
+            "q̄_17: stale calibration; token_3: wrong\nclaim scope",
+            "μ̄₂: stale calibration; token_3: wrong\nclaim scope",
+            "μ̄_₂: stale calibration; token_3: wrong\nclaim scope",
+            "μ̄_x: stale calibration; token_3: wrong\nclaim scope",
+            "μ̄_2a: stale calibration; token_3: wrong\nclaim scope",
         )
 
         for status in accepted:
@@ -349,6 +360,16 @@ class OccurrenceIdentityTests(unittest.TestCase):
             "x∈S: stale calibration; token_3: wrong\nclaim scope",
             "x=y: stale calibration; token_3: wrong\nclaim scope",
             "p→q: stale calibration; token_3: wrong\nclaim scope",
+            "x̂: stale calibration; token_3: wrong\nclaim scope",
+            "μ⃗: stale calibration; token_3: wrong\nclaim scope",
+            "x̄_2: stale calibration; token_3: wrong\nclaim scope",
+            "μ̂_2: stale calibration; token_3: wrong\nclaim scope",
+            "μ⃗_2: stale calibration; token_3: wrong\nclaim scope",
+            "q̄_17: stale calibration; token_3: wrong\nclaim scope",
+            "μ̄₂: stale calibration; token_3: wrong\nclaim scope",
+            "μ̄_₂: stale calibration; token_3: wrong\nclaim scope",
+            "μ̄_x: stale calibration; token_3: wrong\nclaim scope",
+            "μ̄_2a: stale calibration; token_3: wrong\nclaim scope",
         )
         for status in formula_statuses:
             with self.subTest(status=status):

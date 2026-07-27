@@ -56,6 +56,7 @@ FORMULA_SIGNAL_RE = re.compile(
     r"|\{[^}]*\|[^}]*\}"
     r"|(?:^|[^A-Za-z0-9_])[A-Za-z][A-Za-z0-9_-]*\([^)]*\)"
 )
+DIAGNOSTIC_META_TOKEN_RE = re.compile("^\u03bc\u0304_[0-9]+$")
 MACHINE_ASSIGNMENT_RE = re.compile(
     r"(?:(?:export )?[A-Z_][A-Z0-9_]*|\$env:[A-Za-z_][A-Za-z0-9_]*)=(.*)",
     re.S,
@@ -254,12 +255,16 @@ def _formula_like(span):
 
 def _diagnostic_identifier(key):
     """Return whether *key* is a plain token identifier, not a formula."""
+    if DIAGNOSTIC_META_TOKEN_RE.fullmatch(key):
+        return True
+    if _formula_like(key):
+        return False
     if not key or unicodedata.category(key[0])[0] != "L":
         return False
     for char in key[1:]:
         if char == "_":
             continue
-        if unicodedata.category(char)[0] not in {"L", "M", "N"}:
+        if unicodedata.category(char)[0] not in {"L", "N"}:
             return False
     return key[-1] != "_"
 
