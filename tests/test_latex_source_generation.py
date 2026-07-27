@@ -356,6 +356,92 @@ class MultilineCoverageMigrationTests(unittest.TestCase):
 
 
 class MarkdownRenderingTests(unittest.TestCase):
+    def test_publication_links_resolve_from_artifacts_without_losing_external_urls(self):
+        generator = load_generator()
+        self.assertIsNotNone(generator, "Task 13 link resolver is missing")
+        resolve = getattr(generator, "resolve_publication_link", None)
+        self.assertIsNotNone(resolve, "resolve_publication_link")
+
+        self.assertEqual(
+            resolve(
+                "OBJECTIONS-AND-REPLIES.md",
+                source_name=(
+                    "companion/"
+                    "orthability-and-the-ground-of-intelligibility.md"
+                ),
+                root=ROOT,
+            ),
+            "../companion/OBJECTIONS-AND-REPLIES.md",
+        )
+        self.assertEqual(
+            resolve(
+                "../references/source-status.yaml",
+                source_name=(
+                    "companion/"
+                    "orthability-divine-attributes-and-speech-athari.md"
+                ),
+                root=ROOT,
+            ),
+            "../references/source-status.yaml",
+        )
+        self.assertEqual(
+            resolve(
+                "https://example.test/path?q=1",
+                source_name="companion/example.md",
+                root=ROOT,
+            ),
+            "https://example.test/path?q=1",
+        )
+
+    def test_publication_link_resolution_rejects_absolute_escape_and_missing_targets(self):
+        generator = load_generator()
+        self.assertIsNotNone(generator, "Task 13 link resolver is missing")
+        resolve = getattr(generator, "resolve_publication_link", None)
+        self.assertIsNotNone(resolve, "resolve_publication_link")
+
+        for target in (
+            "/etc/passwd",
+            "C:/private/file.md",
+            "../../outside.md",
+            "MISSING-LOCAL-TARGET.md",
+        ):
+            with self.subTest(target=target):
+                with self.assertRaises(generator.GenerationError):
+                    resolve(
+                        target,
+                        source_name="companion/source.md",
+                        root=ROOT,
+                    )
+
+    def test_current_generated_tree_rewrites_the_exact_twelve_broken_annotations(self):
+        generator = load_generator()
+        self.assertIsNotNone(generator, "Task 13 link resolver is missing")
+        profile = yaml.safe_load(
+            (ROOT / "docs" / "publication-profile.yaml").read_text(
+                encoding="utf-8"
+            )
+        )
+        tree = generator.expected_latex_tree(ROOT, profile)
+        rewritten = {
+            "../companion/DYNAMIC-ORTHABILITY-ARGUMENT-MAP.yaml": 2,
+            "../companion/orthability-and-the-ground-of-intelligibility.md": 1,
+            "../companion/ARGUMENT-MAP-ORTHABILITY.md": 2,
+            "../companion/OBJECTIONS-AND-REPLIES.md": 2,
+            "../companion/sourcing/R3-COMPANION-SOURCING-LEDGER.md": 1,
+            "../companion/CONCRETE-AND-SOUND-REASON.md": 1,
+        }
+        combined = "\n".join(tree.values())
+        self.assertEqual(
+            sum(combined.count(r"\href{\detokenize{%s}}" % target) for target in rewritten),
+            9,
+        )
+        for target, expected in rewritten.items():
+            with self.subTest(target=target):
+                self.assertEqual(
+                    combined.count(r"\href{\detokenize{%s}}" % target),
+                    expected,
+                )
+
     def test_all_declared_source_headings_appear_once_in_exact_order(self):
         generator = load_generator()
         self.assertIsNotNone(generator, "Task 12 LaTeX generator is missing")
@@ -513,7 +599,11 @@ class MarkdownRenderingTests(unittest.TestCase):
             "math $\\operatorname{Orthable}(m; A)$.\n"
         )
 
-        rendered = generator.render_markdown(markdown, source_name="sample.md")
+        rendered = generator.render_markdown(
+            markdown,
+            source_name="sample.md",
+            root=ROOT,
+        )
 
         self.assertIn(r"\texttt{cost \char36{}5}", rendered)
         self.assertIn(r"currency \$7", rendered)
@@ -536,12 +626,16 @@ y &\to z
 $$
 """
 
-        rendered = generator.render_markdown(markdown, source_name="sample.md")
+        rendered = generator.render_markdown(
+            markdown,
+            source_name="sample.md",
+            root=ROOT,
+        )
 
         self.assertIn(r"\begin{tabular}", rendered)
         self.assertIn(r"$O^*(m; A)$", rendered)
         self.assertIn(
-            r"\href{\detokenize{docs/publication-profile.yaml}}{",
+            r"\href{\detokenize{../docs/publication-profile.yaml}}{",
             rendered,
         )
         self.assertIn(r"\begin{aligned}", rendered)

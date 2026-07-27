@@ -5,9 +5,11 @@ import argparse
 import functools
 import hashlib
 import pathlib
+import posixpath
 import re
 import subprocess
 import sys
+import urllib.parse
 
 import yaml
 from markdown_it import MarkdownIt
@@ -846,7 +848,45 @@ def _escape_url(url):
     return r"\detokenize{%s}" % url
 
 
-def _render_inline(tokens, math):
+def resolve_publication_link(target, *, source_name, root):
+    """Return a URI that resolves from artifacts/<artifact>.pdf."""
+    target = str(target)
+    parsed = urllib.parse.urlsplit(target)
+    if parsed.scheme in {"http", "https"} and parsed.netloc:
+        return target
+    if parsed.scheme or parsed.netloc:
+        raise GenerationError("unsupported link target scheme: %s" % target)
+    if target.startswith("#") and parsed.path == "":
+        return target
+    if (
+        not parsed.path
+        or "\\" in parsed.path
+        or parsed.path.startswith("/")
+        or re.match(r"^[A-Za-z]:", parsed.path)
+    ):
+        raise GenerationError("absolute or empty local link target: %s" % target)
+    source = pathlib.PurePosixPath(str(source_name).replace("\\", "/"))
+    if source.is_absolute() or ".." in source.parts:
+        raise GenerationError("unsafe publication source path: %s" % source_name)
+    repository_path = posixpath.normpath(
+        posixpath.join(source.parent.as_posix(), parsed.path)
+    )
+    pure = pathlib.PurePosixPath(repository_path)
+    if pure.is_absolute() or ".." in pure.parts:
+        raise GenerationError("local link target escapes repository: %s" % target)
+    owner = pathlib.Path(root).joinpath(*pure.parts)
+    if not owner.is_file():
+        raise GenerationError(
+            "local link target is missing: %s -> %s"
+            % (target, pure.as_posix())
+        )
+    rewritten_path = posixpath.relpath(pure.as_posix(), "artifacts")
+    return urllib.parse.urlunsplit(
+        ("", "", rewritten_path, parsed.query, parsed.fragment)
+    )
+
+
+def _render_inline(tokens, math, *, link_resolver=None):
     output = []
     for token in tokens:
         kind = token.type
@@ -867,7 +907,10 @@ def _render_inline(tokens, math):
         elif kind == "s_close":
             output.append("}")
         elif kind == "link_open":
-            output.append(r"\href{%s}{" % _escape_url(token.attrGet("href") or ""))
+            target = token.attrGet("href") or ""
+            if link_resolver is not None:
+                target = link_resolver(target)
+            output.append(r"\href{%s}{" % _escape_url(target))
         elif kind == "link_close":
             output.append("}")
         elif kind == "softbreak":
@@ -1033,7 +1076,7 @@ def _render_table(table):
     return _render_standard_table(table, columns, rows)
 
 
-def render_markdown(markdown, source_name="<memory>"):
+def render_markdown(markdown, source_name="<memory>", root=None):
     """Render bounded CommonMark, tables, code, links, and canonical math."""
     try:
         protected, math = _protect_math(markdown)
@@ -1046,6 +1089,17 @@ def render_markdown(markdown, source_name="<memory>"):
         raise GenerationError("%s: Markdown parse failed: %s" % (source_name, exc)) from exc
 
     output = []
+    link_resolver = (
+        (
+            lambda target: resolve_publication_link(
+                target,
+                source_name=source_name,
+                root=root,
+            )
+        )
+        if root is not None
+        else None
+    )
     index = 0
     list_stack = []
     table = None
@@ -1071,7 +1125,11 @@ def render_markdown(markdown, source_name="<memory>"):
                 5: "paragraph",
                 6: "subparagraph",
             }[level]
-            rendered_heading = _render_inline(inline.children or [], math)
+            rendered_heading = _render_inline(
+                inline.children or [],
+                math,
+                link_resolver=link_resolver,
+            )
             output.append(
                 "\n\\%s{%s}\n"
                 % (command, rendered_heading)
@@ -1080,7 +1138,11 @@ def render_markdown(markdown, source_name="<memory>"):
             continue
         if kind == "paragraph_open":
             inline = tokens[index + 1]
-            body = _render_inline(inline.children or [], math)
+            body = _render_inline(
+                inline.children or [],
+                math,
+                link_resolver=link_resolver,
+            )
             output.append(body + ("\n" if list_stack else "\n\n"))
             index += 3
             continue
@@ -1146,7 +1208,11 @@ def render_markdown(markdown, source_name="<memory>"):
         if kind in ("th_open", "td_open"):
             inline = tokens[index + 1]
             cell = (
-                _render_inline(inline.children or [], math)
+                _render_inline(
+                    inline.children or [],
+                    math,
+                    link_resolver=link_resolver,
+                )
                 if inline.type == "inline"
                 else ""
             )
@@ -1221,7 +1287,7 @@ EXPECTED_DIRECT_PACKAGES = [
 EXPECTED_SUPPORTED_PACKAGES = EXPECTED_DIRECT_PACKAGES + ["fvextra"]
 
 
-def render_artifact(profile, artifact, source_texts):
+def render_artifact(profile, artifact, source_texts, *, root=None):
     """Render one profile artifact from its declared Markdown source owners."""
     source_paths = artifact.get("sources", [])
     if not source_paths:
@@ -1279,12 +1345,14 @@ def render_artifact(profile, artifact, source_texts):
         render_markdown(
             front_matter,
             source_name=source_paths[0],
+            root=root,
         ),
         "\\vspace{1em}\n",
         "]\n",
         render_markdown(
             body,
             source_name=source_paths[0],
+            root=root,
         ),
     ]
     for path in source_paths[1:]:
@@ -1292,6 +1360,7 @@ def render_artifact(profile, artifact, source_texts):
             render_markdown(
                 source_texts[path],
                 source_name=path,
+                root=root,
             )
         )
 
@@ -1336,6 +1405,7 @@ def expected_latex_tree(root, profile=None, artifacts=None):
             profile,
             artifact,
             source_texts,
+            root=root,
         )
     return tree
 

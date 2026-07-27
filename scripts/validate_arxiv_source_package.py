@@ -1,12 +1,14 @@
 #!/usr/bin/env python3
 """Validate deterministic, closed Task 13 publication source packages."""
 import argparse
+import gzip
 import hashlib
 import io
 import json
 import pathlib
 import posixpath
 import re
+import subprocess
 import sys
 import tarfile
 
@@ -34,8 +36,70 @@ def _safe_name(name):
     )
 
 
-def validate_source_package_bytes(archive_bytes, manifest, profile):
+def _git_blob(root, commit, relative_path):
+    result = subprocess.run(
+        ["git", "-C", str(root), "show", "%s:%s" % (commit, relative_path)],
+        stdout=subprocess.PIPE,
+        stderr=subprocess.PIPE,
+        check=False,
+    )
+    if result.returncode:
+        raise ValueError(
+            "source commit materialization failed for %s: %s"
+            % (
+                relative_path,
+                result.stderr.decode("utf-8", errors="replace").strip(),
+            )
+        )
+    return result.stdout
+
+
+def _declared_input_issues(text, origin, contents, allowed_local_inputs):
+    issues = []
+    origin_dir = posixpath.dirname(origin)
+    for command, target in re.findall(
+        r"\\(input|include)\s*\{([^}]+)\}",
+        text,
+        re.I,
+    ):
+        target = target.strip()
+        if (
+            not target
+            or "\\" in target
+            or target.startswith("/")
+            or re.match(r"^[A-Za-z]:", target)
+        ):
+            issues.append(
+                "declared source dependency is absolute or malformed: %s"
+                % target
+            )
+            continue
+        resolved = posixpath.normpath(posixpath.join(origin_dir, target))
+        if not posixpath.splitext(resolved)[1]:
+            resolved += ".tex"
+        if resolved.startswith("../") or resolved not in contents:
+            issues.append(
+                "declared source dependency is absent or escapes package: %s"
+                % target
+            )
+        elif resolved not in allowed_local_inputs:
+            issues.append(
+                "declared source dependency is not package-approved: %s"
+                % resolved
+            )
+    return issues
+
+
+def validate_source_package_bytes(
+    archive_bytes,
+    manifest,
+    profile,
+    *,
+    root=ROOT,
+    source_blobs=None,
+):
     """Return deterministic issues for one archive, manifest, and profile."""
+    root = pathlib.Path(root)
     issues = []
     artifact_id = manifest.get("artifact_id") if isinstance(manifest, dict) else None
     expected_main = (
@@ -51,6 +115,22 @@ def validate_source_package_bytes(archive_bytes, manifest, profile):
         else None
     )
     expected_names = [expected_rc, expected_main, expected_compat, expected_bib]
+    expected_roles = {
+        expected_rc: "build-driver",
+        expected_main: "entry-point",
+        expected_compat: "compatibility-input",
+        expected_bib: "bibliography-owner",
+    }
+    expected_epoch = (
+        manifest.get("source_date_epoch") if isinstance(manifest, dict) else None
+    )
+    if (
+        len(archive_bytes) < 10
+        or archive_bytes[:2] != b"\x1f\x8b"
+        or not isinstance(expected_epoch, int)
+        or int.from_bytes(archive_bytes[4:8], "little") != expected_epoch
+    ):
+        issues.append("archive gzip mtime differs from source epoch")
     try:
         with tarfile.open(fileobj=io.BytesIO(archive_bytes), mode="r:gz") as archive:
             members = archive.getmembers()
@@ -71,6 +151,11 @@ def validate_source_package_bytes(archive_bytes, manifest, profile):
                     or member.gname
                 ):
                     issues.append("archive metadata is not normalized: %s" % member.name)
+                if member.mtime != expected_epoch:
+                    issues.append(
+                        "archive member mtime differs from source epoch: %s"
+                        % member.name
+                    )
             names = [member.name for member in members]
     except (OSError, tarfile.TarError) as exc:
         return ["archive load failed: %s" % exc]
@@ -80,6 +165,47 @@ def validate_source_package_bytes(archive_bytes, manifest, profile):
             "archive members must be exact and sorted: expected %r, got %r"
             % (expected_names, names)
         )
+    expected_manifest_fields = {
+        "schema",
+        "artifact_id",
+        "source_commit",
+        "source_tree",
+        "independently_reviewed_equivalent_source_commit",
+        "independently_reviewed_equivalent_source_tree",
+        "source_tree_equivalence",
+        "source_date_epoch",
+        "archive",
+        "entry_point",
+        "build_workdir",
+        "publication_profile_sha256",
+        "toolchain_lock_sha256",
+        "tex_live_dependencies",
+        "compatibility_inputs",
+        "members",
+    }
+    if set(manifest) != expected_manifest_fields:
+        issues.append("manifest schema fields are incomplete or unexpected")
+    if manifest.get("schema") != "orthemology-source-manifest-v1":
+        issues.append("manifest schema identity differs")
+    expected_archive_record = {
+        "path": "artifacts/%s.source.tar.gz" % artifact_id,
+        "sha256": _sha(archive_bytes),
+        "format": "tar-gzip-ustar",
+    }
+    if manifest.get("archive") != expected_archive_record:
+        issues.append("archive path, hash, or format does not match manifest")
+    if manifest.get("entry_point") != expected_main:
+        issues.append("manifest entry point differs")
+    if manifest.get("build_workdir") != "publication/latex/%s" % artifact_id:
+        issues.append("manifest build workdir differs")
+    profile_path = root / "docs" / "publication-profile.yaml"
+    lock_path = root / TOOLCHAIN_LOCK_OWNER
+    if manifest.get("publication_profile_sha256") != _sha(
+        profile_path.read_bytes()
+    ):
+        issues.append("manifest publication profile hash differs from owner")
+    if manifest.get("toolchain_lock_sha256") != _sha(lock_path.read_bytes()):
+        issues.append("manifest toolchain lock hash differs from owner")
     if manifest.get("archive", {}).get("sha256") != _sha(archive_bytes):
         issues.append("archive hash does not match manifest")
     provenance = profile.get("source_provenance", {})
@@ -106,6 +232,7 @@ def validate_source_package_bytes(archive_bytes, manifest, profile):
             "sha256": _sha(contents[name]),
             "bytes": len(contents[name]),
             "mode": "0644",
+            "role": expected_roles[name],
         }
         for name in expected_names
         if name in contents
@@ -114,8 +241,8 @@ def validate_source_package_bytes(archive_bytes, manifest, profile):
         issues.append("manifest member hashes or metadata do not match archive")
 
     owner_inputs = {
-        expected_rc: ROOT.joinpath(LATEXMKRC_OWNER).read_bytes(),
-        expected_compat: ROOT.joinpath(PDFTEX_COMPAT_OWNER).read_bytes(),
+        expected_rc: root.joinpath(LATEXMKRC_OWNER).read_bytes(),
+        expected_compat: root.joinpath(PDFTEX_COMPAT_OWNER).read_bytes(),
     }
     for member_name, expected_bytes in owner_inputs.items():
         if contents.get(member_name) != expected_bytes:
@@ -130,7 +257,7 @@ def validate_source_package_bytes(archive_bytes, manifest, profile):
     if manifest.get("compatibility_inputs") != expected_compatibility:
         issues.append("manifest compatibility-input hashes are incomplete")
     toolchain_lock = yaml.safe_load(
-        ROOT.joinpath(TOOLCHAIN_LOCK_OWNER).read_text(encoding="utf-8")
+        root.joinpath(TOOLCHAIN_LOCK_OWNER).read_text(encoding="utf-8")
     )
     expected_dependencies = toolchain_lock.get("tex_packages", {})
     if manifest.get("tex_live_dependencies") != expected_dependencies:
@@ -246,6 +373,57 @@ def validate_source_package_bytes(archive_bytes, manifest, profile):
     if expected_bib not in contents:
         issues.append("declared bibliography is missing")
 
+    if source_blobs is None:
+        try:
+            source_blobs = {
+                expected_main: _git_blob(
+                    root,
+                    manifest.get("source_commit"),
+                    expected_main,
+                ),
+                expected_bib: _git_blob(
+                    root,
+                    manifest.get("source_commit"),
+                    expected_bib,
+                ),
+            }
+        except (OSError, ValueError) as exc:
+            issues.append(str(exc))
+            source_blobs = {}
+    for source_path in (expected_main, expected_bib):
+        if contents.get(source_path) != source_blobs.get(source_path):
+            issues.append(
+                "package differs from source commit materialization: %s"
+                % source_path
+            )
+
+    allowed_local_inputs = {expected_compat}
+    issues.extend(
+        _declared_input_issues(
+            main,
+            expected_main,
+            contents,
+            allowed_local_inputs,
+        )
+    )
+    issues.extend(
+        _declared_input_issues(
+            compatibility_text,
+            expected_compat,
+            contents,
+            allowed_local_inputs,
+        )
+    )
+    rc_text = contents.get(expected_rc, b"").decode(
+        "utf-8", errors="replace"
+    )
+    rc_inputs = re.findall(r"\\input\{([^}]+)\}", rc_text)
+    if rc_inputs != ["pdftex-unicode-compat.tex"]:
+        issues.append(
+            "declared source dependency in .latexmkrc is not exact: %r"
+            % rc_inputs
+        )
+
     artifact = next(
         (
             row
@@ -297,7 +475,10 @@ def validate_repository_packages(root=ROOT):
             continue
         manifest = json.loads(manifest_path.read_text(encoding="utf-8"))
         for issue in validate_source_package_bytes(
-            archive_path.read_bytes(), manifest, profile
+            archive_path.read_bytes(),
+            manifest,
+            profile,
+            root=root,
         ):
             issues.append("%s: %s" % (artifact_id, issue))
     return issues

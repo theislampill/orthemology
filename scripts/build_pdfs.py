@@ -35,6 +35,9 @@ CANDIDATE_PATH = pathlib.Path("docs/current-candidate-state.yaml")
 BIB_PATH = pathlib.Path("references/orthemology.bib")
 LATEXMKRC_PATH = pathlib.Path("publication/latexmkrc")
 PDFTEX_COMPAT_PATH = pathlib.Path("publication/pdftex-unicode-compat.tex")
+COMPATIBILITY_REPORT_PATH = pathlib.Path(
+    "docs/project-closure/r7e-sol/R7E-SOL-ARXIV-COMPATIBILITY.md"
+)
 BIBTEX_STATUS_NAME = "main.bibtex.rc"
 EXPECTED_BIBLIOGRAPHY_DATABASE = "../../../references/orthemology.bib"
 EXPECTED_BIBLIOGRAPHY_AUX_DATABASE = "../../../references/orthemology"
@@ -179,6 +182,140 @@ def json_bytes(value):
     ).encode("utf-8")
 
 
+def compatibility_artifact_rows(root):
+    """Derive the compatibility evidence table from committed artifact owners."""
+    root = pathlib.Path(root)
+    rows = []
+    for artifact_id, _sources in DOCS:
+        pdf_path = root / "artifacts" / (artifact_id + ".pdf")
+        archive_path = root / "artifacts" / (artifact_id + ".source.tar.gz")
+        manifest_path = root / "artifacts" / (
+            artifact_id + ".source-manifest.json"
+        )
+        for path in (pdf_path, archive_path, manifest_path):
+            if not path.is_file():
+                raise PipelineError(
+                    "compatibility report owner is missing: %s"
+                    % path.relative_to(root).as_posix()
+                )
+        rows.append(
+            {
+                "artifact_id": artifact_id,
+                "pages": len(PdfReader(str(pdf_path)).pages),
+                "pdf_sha256": sha256_file(pdf_path),
+                "source_archive_sha256": sha256_file(archive_path),
+                "source_manifest_sha256": sha256_file(manifest_path),
+            }
+        )
+    return rows
+
+
+def render_compatibility_artifact_table(root):
+    lines = [
+        "| Artifact | Pages | PDF SHA-256 | Source archive SHA-256 | "
+        "Source manifest SHA-256 |",
+        "|---|---:|---|---|---|",
+    ]
+    for row in compatibility_artifact_rows(root):
+        lines.append(
+            "| `%s` | %d | `%s` | `%s` | `%s` |"
+            % (
+                row["artifact_id"],
+                row["pages"],
+                row["pdf_sha256"],
+                row["source_archive_sha256"],
+                row["source_manifest_sha256"],
+            )
+        )
+    return "\n".join(lines)
+
+
+def compatibility_report_table_issues(root):
+    """Return field-specific drift between the report table and artifact owners."""
+    root = pathlib.Path(root)
+    report_path = root / COMPATIBILITY_REPORT_PATH
+    if not report_path.is_file():
+        return ["compatibility report is missing"]
+    text = report_path.read_text(encoding="utf-8")
+    row_pattern = re.compile(
+        r"^\| `([^`]+)` \| (\d+) \| `([0-9a-f]{64})` \| "
+        r"`([0-9a-f]{64})` \| `([0-9a-f]{64})` \|$",
+        re.M,
+    )
+    reported = {
+        match.group(1): {
+            "pages": int(match.group(2)),
+            "pdf_sha256": match.group(3),
+            "source_archive_sha256": match.group(4),
+            "source_manifest_sha256": match.group(5),
+        }
+        for match in row_pattern.finditer(text)
+    }
+    expected_rows = compatibility_artifact_rows(root)
+    expected_ids = [row["artifact_id"] for row in expected_rows]
+    issues = []
+    if list(reported) != expected_ids:
+        issues.append(
+            "compatibility report artifact order differs: expected %r, got %r"
+            % (expected_ids, list(reported))
+        )
+    labels = {
+        "pages": "page count",
+        "pdf_sha256": "PDF SHA-256",
+        "source_archive_sha256": "source archive SHA-256",
+        "source_manifest_sha256": "source manifest SHA-256",
+    }
+    for expected in expected_rows:
+        artifact_id = expected["artifact_id"]
+        actual = reported.get(artifact_id)
+        if actual is None:
+            issues.append(
+                "%s compatibility report row is missing" % artifact_id
+            )
+            continue
+        for field, label in labels.items():
+            if actual.get(field) != expected[field]:
+                issues.append(
+                    "%s %s differs from owner" % (artifact_id, label)
+                )
+    expected_total = sum(row["pages"] for row in expected_rows)
+    total_match = re.search(r"^Total final page count: `(\d+)`\.$", text, re.M)
+    if total_match is None or int(total_match.group(1)) != expected_total:
+        issues.append("compatibility report total page count differs from owners")
+    return issues
+
+
+def rewrite_compatibility_artifact_table(root):
+    root = pathlib.Path(root)
+    report_path = root / COMPATIBILITY_REPORT_PATH
+    text = report_path.read_text(encoding="utf-8")
+    pattern = re.compile(
+        r"^\| Artifact \| Pages \| PDF SHA-256 \| Source archive SHA-256 \| "
+        r"Source manifest SHA-256 \|\n"
+        r"^\|---\|---:\|---\|---\|---\|\n"
+        r"(?:^\| `[^`]+` \| \d+ \| `[0-9a-f]{64}` \| `[0-9a-f]{64}` "
+        r"\| `[0-9a-f]{64}` \|\n?)+",
+        re.M,
+    )
+    replacement = render_compatibility_artifact_table(root) + "\n"
+    updated, count = pattern.subn(replacement, text, count=1)
+    if count != 1:
+        raise PipelineError("compatibility report artifact table is malformed")
+    expected_total = sum(
+        row["pages"] for row in compatibility_artifact_rows(root)
+    )
+    updated, total_count = re.subn(
+        r"^Total final page count: `\d+`\.$",
+        "Total final page count: `%d`." % expected_total,
+        updated,
+        count=1,
+        flags=re.M,
+    )
+    if total_count != 1:
+        raise PipelineError("compatibility report total page count is missing")
+    report_path.write_text(updated, encoding="utf-8", newline="\n")
+
+
 def run(command, *, cwd=ROOT, timeout=300, env=None):
     return subprocess.run(
         command,
@@ -200,10 +337,10 @@ def configure_utf8_diagnostics():
             reconfigure(encoding="utf-8", errors="backslashreplace")
 
 
-def git(*args, text=True):
+def git(*args, text=True, root=ROOT):
     result = subprocess.run(
         ["git", *args],
-        cwd=str(ROOT),
+        cwd=str(pathlib.Path(root)),
         capture_output=True,
         text=text,
         check=False,
@@ -214,34 +351,48 @@ def git(*args, text=True):
     return result.stdout
 
 
-def git_head():
-    return git("rev-parse", "HEAD").strip()
+def git_head(*, root=ROOT):
+    return git("rev-parse", "HEAD", root=root).strip()
 
 
-def validate_commit(commit):
+def validate_commit(commit, *, root=ROOT):
     if not re.fullmatch(r"[0-9a-f]{40}", commit or ""):
         raise PipelineError("source commit must be a full lowercase SHA-1")
-    result = run(["git", "cat-file", "-e", commit + "^{commit}"])
+    result = run(
+        ["git", "cat-file", "-e", commit + "^{commit}"],
+        cwd=root,
+    )
     if result.returncode:
         raise PipelineError("source commit is unavailable: %s" % commit)
 
 
-def git_blob(commit, relative_path):
+def git_blob(commit, relative_path, *, root=ROOT):
     relative = pathlib.PurePosixPath(str(relative_path).replace("\\", "/"))
     if relative.is_absolute() or ".." in relative.parts:
         raise PipelineError("unsafe repository path: %s" % relative_path)
-    return git("show", "%s:%s" % (commit, relative.as_posix()), text=False)
+    return git(
+        "show",
+        "%s:%s" % (commit, relative.as_posix()),
+        text=False,
+        root=root,
+    )
 
 
-def git_commit_epoch(commit):
-    value = git("show", "-s", "--format=%ct", commit).strip()
+def git_commit_epoch(commit, *, root=ROOT):
+    value = git(
+        "show",
+        "-s",
+        "--format=%ct",
+        commit,
+        root=root,
+    ).strip()
     if not value.isdigit():
         raise PipelineError("source commit has no numeric committer epoch")
     return int(value)
 
 
-def git_tree(commit):
-    return git("rev-parse", commit + "^{tree}").strip()
+def git_tree(commit, *, root=ROOT):
+    return git("rev-parse", commit + "^{tree}", root=root).strip()
 
 
 def load_profile(root=ROOT):
@@ -254,7 +405,13 @@ def load_toolchain_lock(root=ROOT):
     return yaml.safe_load(path.read_text(encoding="utf-8"))
 
 
-def validate_source_provenance(profile, lock, requested_commit=None):
+def validate_source_provenance(
+    profile,
+    lock,
+    requested_commit=None,
+    *,
+    root=ROOT,
+):
     """Return the pinned active source ancestor after exact tree validation."""
     profile_record = profile.get("source_provenance")
     lock_record = lock.get("source_provenance")
@@ -274,14 +431,14 @@ def validate_source_provenance(profile, lock, requested_commit=None):
     reviewed_commit = profile_record[
         "independently_reviewed_equivalent_source_commit"
     ]
-    validate_commit(source_commit)
-    validate_commit(reviewed_commit)
+    validate_commit(source_commit, root=root)
+    validate_commit(reviewed_commit, root=root)
     if requested_commit is not None and requested_commit != source_commit:
         raise PipelineError(
             "requested source commit differs from the pinned active ancestor"
         )
-    source_tree = git_tree(source_commit)
-    reviewed_tree = git_tree(reviewed_commit)
+    source_tree = git_tree(source_commit, root=root)
+    reviewed_tree = git_tree(reviewed_commit, root=root)
     if source_tree != profile_record["source_tree"]:
         raise PipelineError("active source tree differs from provenance")
     if reviewed_tree != profile_record[
@@ -292,9 +449,15 @@ def validate_source_provenance(profile, lock, requested_commit=None):
         raise PipelineError("active and independently reviewed source trees differ")
     if profile_record["source_tree_equivalence"] != "verified-identical":
         raise PipelineError("source tree equivalence is not verified")
-    if git_commit_epoch(source_commit) != profile_record["source_date_epoch"]:
+    if (
+        git_commit_epoch(source_commit, root=root)
+        != profile_record["source_date_epoch"]
+    ):
         raise PipelineError("source date epoch differs from active source commit")
-    ancestry = run(["git", "merge-base", "--is-ancestor", source_commit, "HEAD"])
+    ancestry = run(
+        ["git", "merge-base", "--is-ancestor", source_commit, "HEAD"],
+        cwd=root,
+    )
     if ancestry.returncode:
         raise PipelineError("pinned active source commit is not an ancestor of HEAD")
     return dict(profile_record)
@@ -352,8 +515,9 @@ def unicode_mapping_issues(latex_inputs, compatibility_bytes):
     return issues
 
 
-def toolchain_lock_issues(lock):
+def toolchain_lock_issues(lock, *, root=ROOT):
     issues = []
+    root = pathlib.Path(root)
     container = lock.get("container", {})
     tools = lock.get("tools", {})
     image = container.get("image", "")
@@ -378,11 +542,63 @@ def toolchain_lock_issues(lock):
         issues.append("TeX tool versions differ from the approved lock")
     if lock.get("tex_packages") != EXPECTED_TEX_PACKAGES:
         issues.append("TeX package identities differ from the approved lock")
+    if container.get("config_digest") != (
+        "sha256:58b5c7718b4fd239c651873cd267b6c7c82caa5d9a25fe22845d1b8720fff6b1"
+    ):
+        issues.append("container configuration digest differs from the approved lock")
+    python_lock = lock.get("python", {})
+    requirements_path = python_lock.get("requirements_lock")
+    if requirements_path != "requirements-ci.lock.txt":
+        issues.append("Python requirements lock path differs from the approved lock")
+    else:
+        path = root / requirements_path
+        if (
+            not path.is_file()
+            or python_lock.get("requirements_lock_sha256")
+            != sha256_file(path)
+        ):
+            issues.append("Python requirements lock hash differs from owner")
+    if python_lock.get("version") != "3.11.9":
+        issues.append("Python version differs from the approved lock")
+    if python_lock.get("pypdf") != "6.14.2":
+        issues.append("pypdf version differs from the approved lock")
+    if lock.get("qa", {}).get("poppler") != "25.07.0":
+        issues.append("Poppler version differs from the approved lock")
     timeout = lock.get("build", {}).get("timeout_seconds")
     if timeout != 120:
         issues.append("latexmk execution timeout must be exactly 120 seconds")
     if lock.get("build", {}).get("runaway_page_guard") != 500:
         issues.append("runaway page guard must be exactly 500 pages")
+    return issues
+
+
+def runtime_toolchain_issues(lock, evidence):
+    """Compare independently probed runtime evidence to the complete lock."""
+    expected = {
+        "container_manifest_digest": lock["container"]["manifest_digest"],
+        "container_config_digest": lock["container"]["config_digest"],
+        "container_os": "linux",
+        "container_architecture": "amd64",
+        "python": lock["python"]["version"],
+        "requirements_lock_sha256": lock["python"][
+            "requirements_lock_sha256"
+        ],
+        "pypdf": lock["python"]["pypdf"],
+        "poppler": lock["qa"]["poppler"],
+        "latexmk": lock["tools"]["latexmk"],
+        "pdftex": lock["tools"]["pdftex"],
+        "bibtex": lock["tools"]["bibtex"],
+        "kpathsea": lock["tools"]["kpathsea"],
+    }
+    issues = []
+    if set(evidence) != set(expected):
+        issues.append("runtime toolchain evidence fields are incomplete")
+    for field, value in expected.items():
+        if evidence.get(field) != value:
+            issues.append(
+                "runtime toolchain evidence differs for %s: expected %s, got %s"
+                % (field, value, evidence.get(field))
+            )
     return issues
 
 
@@ -656,9 +872,10 @@ def classify_bibliography_run(
     return issues, record
 
 
-def probe_utf8_verbatim_compatibility(lock):
+def probe_utf8_verbatim_compatibility(lock, *, root=ROOT):
     """Compile and extract a multibyte verbatim line under the pinned engine."""
-    parent = ROOT / "tmp" / "pdf-builds"
+    root = pathlib.Path(root)
+    parent = root / "tmp" / "pdf-builds"
     parent.mkdir(parents=True, exist_ok=True)
     artifact_id = "utf8-verbatim-probe"
     with tempfile.TemporaryDirectory(dir=str(parent)) as temporary:
@@ -667,7 +884,7 @@ def probe_utf8_verbatim_compatibility(lock):
             package_root / "publication" / "latex" / artifact_id
         )
         workdir.mkdir(parents=True)
-        compatibility = compatibility_input_bytes()
+        compatibility = compatibility_input_bytes(root)
         (workdir / ".latexmkrc").write_bytes(
             compatibility[LATEXMKRC_PATH.as_posix()]
         )
@@ -737,7 +954,7 @@ def probe_utf8_verbatim_compatibility(lock):
         }
 
 
-def _probe_bibliography_case(lock, package_root, *, cited):
+def _probe_bibliography_case(lock, package_root, *, cited, root=ROOT):
     artifact_id = (
         "nonempty-bibliography-probe"
         if cited
@@ -747,7 +964,7 @@ def _probe_bibliography_case(lock, package_root, *, cited):
     bibliography_path = package_root / BIB_PATH
     workdir.mkdir(parents=True)
     bibliography_path.parent.mkdir(parents=True, exist_ok=True)
-    compatibility = compatibility_input_bytes()
+    compatibility = compatibility_input_bytes(root)
     (workdir / ".latexmkrc").write_bytes(
         compatibility[LATEXMKRC_PATH.as_posix()]
     )
@@ -862,14 +1079,25 @@ def _probe_bibliography_case(lock, package_root, *, cited):
     return bibliography_qa
 
 
-def probe_bibliography_compatibility(lock):
+def probe_bibliography_compatibility(lock, *, root=ROOT):
     """Compile exact empty and nonempty bibliography layout controls."""
-    parent = ROOT / "tmp" / "pdf-builds"
+    root = pathlib.Path(root)
+    parent = root / "tmp" / "pdf-builds"
     parent.mkdir(parents=True, exist_ok=True)
     with tempfile.TemporaryDirectory(dir=str(parent)) as temporary:
         package_root = pathlib.Path(temporary)
-        empty = _probe_bibliography_case(lock, package_root, cited=False)
-        nonempty = _probe_bibliography_case(lock, package_root, cited=True)
+        empty = _probe_bibliography_case(
+            lock,
+            package_root,
+            cited=False,
+            root=root,
+        )
+        nonempty = _probe_bibliography_case(
+            lock,
+            package_root,
+            cited=True,
+            root=root,
+        )
         return {"empty": empty, "nonempty": nonempty}
 
 
@@ -890,12 +1118,19 @@ def create_source_package(
     tex_live_dependencies,
 ):
     members = {
-        "publication/latex/%s/main.tex" % artifact_id: bytes(main_tex),
-        "publication/latex/%s/.latexmkrc" % artifact_id: bytes(latexmkrc),
-        "publication/latex/%s/pdftex-unicode-compat.tex" % artifact_id: bytes(
-            pdftex_compat
+        "publication/latex/%s/main.tex" % artifact_id: (
+            bytes(main_tex),
+            "entry-point",
         ),
-        BIB_PATH.as_posix(): bytes(bibliography),
+        "publication/latex/%s/.latexmkrc" % artifact_id: (
+            bytes(latexmkrc),
+            "build-driver",
+        ),
+        "publication/latex/%s/pdftex-unicode-compat.tex" % artifact_id: (
+            bytes(pdftex_compat),
+            "compatibility-input",
+        ),
+        BIB_PATH.as_posix(): (bytes(bibliography), "bibliography-owner"),
     }
     raw = io.BytesIO()
     with gzip.GzipFile(
@@ -909,7 +1144,7 @@ def create_source_package(
             fileobj=gz, mode="w", format=tarfile.USTAR_FORMAT
         ) as archive:
             for name in sorted(members):
-                payload = members[name]
+                payload, _role = members[name]
                 info = tarfile.TarInfo(name)
                 info.size = len(payload)
                 info.mtime = source_date_epoch
@@ -950,9 +1185,10 @@ def create_source_package(
         "members": [
             {
                 "path": name,
-                "sha256": sha256_bytes(members[name]),
-                "bytes": len(members[name]),
+                "sha256": sha256_bytes(members[name][0]),
+                "bytes": len(members[name][0]),
                 "mode": "0644",
+                "role": members[name][1],
             }
             for name in sorted(members)
         ],
@@ -1079,12 +1315,42 @@ def extract_source_package(archive_bytes, destination):
             target.write_bytes(stream.read())
 
 
-def probe_toolchain(lock):
-    issues = toolchain_lock_issues(lock)
+def _find_poppler_binary():
+    candidates = []
+    if os.name == "nt":
+        result = subprocess.run(
+            ["where.exe", "pdftoppm"],
+            stdout=subprocess.PIPE,
+            stderr=subprocess.PIPE,
+            text=True,
+            encoding="utf-8",
+            errors="replace",
+            check=False,
+        )
+        if result.returncode == 0:
+            candidates.extend(
+                pathlib.Path(line.strip())
+                for line in result.stdout.splitlines()
+                if line.strip()
+            )
+    found = shutil.which("pdftoppm")
+    if found:
+        candidates.append(pathlib.Path(found))
+    for candidate in candidates:
+        if candidate.is_file() and (
+            os.name != "nt" or candidate.suffix.casefold() == ".exe"
+        ):
+            return candidate
+    raise PipelineError("a runnable pdftoppm binary is required")
+
+
+def probe_toolchain(lock, *, root=ROOT, runner=run):
+    root = pathlib.Path(root)
+    issues = toolchain_lock_issues(lock, root=root)
     if issues:
         raise PipelineError("; ".join(issues))
     image = lock["container"]["image"]
-    inspect = run(
+    inspect = runner(
         [
             "docker",
             "image",
@@ -1100,13 +1366,28 @@ def probe_toolchain(lock):
             "pinned TeX image is not locally available; pull it before the "
             "offline build: %s" % inspect.stderr.strip()
         )
-    manifest = lock["container"]["manifest_digest"]
-    expected = "%s|linux|amd64" % manifest
-    if inspect.stdout.strip() != expected:
+    inspect_parts = inspect.stdout.strip().split("|")
+    if len(inspect_parts) != 3:
         raise PipelineError(
-            "local image identity mismatch: expected %s, got %s"
-            % (expected, inspect.stdout.strip())
+            "local image identity probe is malformed: %s"
+            % inspect.stdout.strip()
         )
+    manifest_digest, container_os, container_architecture = inspect_parts
+    raw_manifest = runner(
+        ["docker", "buildx", "imagetools", "inspect", "--raw", image],
+        timeout=60,
+    )
+    if raw_manifest.returncode:
+        raise PipelineError(
+            "container configuration probe failed: %s"
+            % raw_manifest.stderr.strip()
+        )
+    try:
+        config_digest = json.loads(raw_manifest.stdout)["config"]["digest"]
+    except (KeyError, TypeError, ValueError) as exc:
+        raise PipelineError(
+            "container configuration probe returned malformed manifest JSON"
+        ) from exc
     tex_bin = lock["container"]["tex_bin"]
     version_command = [
         "docker",
@@ -1127,36 +1408,88 @@ def probe_toolchain(lock):
         )
         % (tex_bin, tex_bin, tex_bin, tex_bin),
     ]
-    probe = run(version_command, timeout=60)
+    probe = runner(version_command, timeout=60)
     if probe.returncode:
         raise PipelineError("TeX toolchain probe failed: %s" % probe.stderr.strip())
-    expected_fragments = [
-        "Version 4.87",
-        "1.40.28",
-        "BibTeX 0.99d",
-        "kpathsea version 6.4.1",
-    ]
-    missing = [fragment for fragment in expected_fragments if fragment not in probe.stdout]
-    if missing:
-        raise PipelineError("TeX toolchain version mismatch: %r" % missing)
-    probe_utf8_verbatim_compatibility(lock)
-    probe_bibliography_compatibility(lock)
+    version_patterns = {
+        "latexmk": r"Latexmk,.*?Version\s+([0-9.]+)",
+        "pdftex": r"pdfTeX[^\n]*?-([0-9]+\.[0-9]+\.[0-9]+)",
+        "bibtex": r"BibTeX\s+([0-9.]+[a-z]?)",
+        "kpathsea": r"kpathsea version\s+([0-9.]+)",
+    }
+    tex_versions = {}
+    for name, pattern in version_patterns.items():
+        match = re.search(pattern, probe.stdout, re.I | re.S)
+        if match is None:
+            raise PipelineError(
+                "TeX toolchain version probe omitted %s" % name
+            )
+        tex_versions[name] = match.group(1)
+    probe_utf8_verbatim_compatibility(lock, root=root)
+    probe_bibliography_compatibility(lock, root=root)
     import pypdf
 
-    return {
-        "latexmk": lock["tools"]["latexmk"],
-        "pdftex": lock["tools"]["pdftex"],
-        "bibtex": lock["tools"]["bibtex"],
-        "kpathsea": lock["tools"]["kpathsea"],
+    poppler_binary = _find_poppler_binary()
+    poppler_probe = runner([str(poppler_binary), "-v"], timeout=30)
+    poppler_output = poppler_probe.stdout + "\n" + poppler_probe.stderr
+    poppler_match = re.search(
+        r"pdftoppm version\s+([0-9.]+)",
+        poppler_output,
+        re.I,
+    )
+    if poppler_probe.returncode not in (0, 99) or poppler_match is None:
+        raise PipelineError(
+            "Poppler version probe failed: %s" % poppler_output.strip()
+        )
+    evidence = {
+        **tex_versions,
+        "container_manifest_digest": manifest_digest,
+        "container_config_digest": config_digest,
+        "container_os": container_os,
+        "container_architecture": container_architecture,
         "python": sys.version.split()[0],
+        "requirements_lock_sha256": sha256_file(
+            root / lock["python"]["requirements_lock"]
+        ),
         "pypdf": pypdf.__version__,
-        "poppler": lock["qa"]["poppler"],
+        "poppler": poppler_match.group(1),
+    }
+    runtime_issues = runtime_toolchain_issues(lock, evidence)
+    if runtime_issues:
+        raise PipelineError("; ".join(runtime_issues))
+    return {
+        name: evidence[name]
+        for name in (
+            "latexmk",
+            "pdftex",
+            "bibtex",
+            "kpathsea",
+            "python",
+            "pypdf",
+            "poppler",
+        )
     }
 
 
-def fls_issues(fls_text, artifact_id):
+def fls_issues(
+    fls_text,
+    artifact_id,
+    *,
+    declared_package_inputs=None,
+):
     issues = []
     workdir = "/work/publication/latex/%s" % artifact_id
+    declared = (
+        {str(path).replace("\\", "/") for path in declared_package_inputs}
+        if declared_package_inputs is not None
+        else None
+    )
+    generated = {
+        "publication/latex/%s/main.aux" % artifact_id,
+        "publication/latex/%s/main.bbl" % artifact_id,
+        "publication/latex/%s/main.out" % artifact_id,
+        "publication/latex/%s/main.toc" % artifact_id,
+    }
     seen_main = False
     seen_bbl = False
     for line in fls_text.splitlines():
@@ -1167,19 +1500,36 @@ def fls_issues(fls_text, artifact_id):
             seen_main = True
         if raw.endswith("/main.bbl") or raw == "main.bbl":
             seen_bbl = True
+        repository_input = None
+        if re.match(r"^[A-Za-z]:", raw):
+            issues.append("recorder input uses an absolute drive path: %s" % raw)
+            continue
         if raw.startswith("/"):
             allowed = (
-                raw.startswith("/work/")
-                or raw.startswith("/usr/local/texlive/2025/")
+                raw.startswith("/usr/local/texlive/2025/")
                 or raw.startswith("/tmp/texmf-")
                 or raw == "/dev/null"
             )
-            if not allowed:
+            if raw.startswith("/work/"):
+                repository_input = posixpath.normpath(raw)[len("/work/") :]
+            elif not allowed:
                 issues.append("undeclared absolute build input: %s" % raw)
         else:
             resolved = posixpath.normpath(posixpath.join(workdir, raw))
             if not resolved.startswith("/work/"):
-                issues.append("relative build input escapes package: %s" % raw)
+                issues.append("recorder input escapes package: %s" % raw)
+            else:
+                repository_input = resolved[len("/work/") :]
+        if (
+            declared is not None
+            and repository_input is not None
+            and repository_input not in declared
+            and repository_input not in generated
+        ):
+            issues.append(
+                "recorder input is outside the declared source boundary: %s"
+                % raw
+            )
     if not seen_main:
         issues.append("recorder did not observe main.tex")
     if not seen_bbl:
@@ -1394,40 +1744,64 @@ def pdf_structure_issues(pdf_bytes, markdown_bytes):
     }
 
 
-def source_inputs(spec, source_commit):
+def source_inputs(spec, source_commit, *, root=ROOT):
     artifact_id = spec["artifact_id"]
     markdown = {
-        rel: git_blob(source_commit, rel) for rel in spec.get("sources", [])
+        rel: git_blob(source_commit, rel, root=root)
+        for rel in spec.get("sources", [])
     }
     latex_path = "publication/latex/%s/main.tex" % artifact_id
-    latex = {latex_path: git_blob(source_commit, latex_path)}
-    bibliography = git_blob(source_commit, BIB_PATH.as_posix())
+    latex = {
+        latex_path: git_blob(source_commit, latex_path, root=root)
+    }
+    bibliography = git_blob(
+        source_commit,
+        BIB_PATH.as_posix(),
+        root=root,
+    )
     return markdown, latex, bibliography
 
 
-def verify_worktree_source_inputs(markdown, latex, bibliography):
+def verify_worktree_source_inputs(
+    markdown,
+    latex,
+    bibliography,
+    *,
+    root=ROOT,
+):
+    root = pathlib.Path(root)
     issues = []
     for rel, expected in {**markdown, **latex}.items():
-        path = ROOT / rel
+        path = root / rel
         if not path.is_file() or path.read_bytes() != expected:
             issues.append("%s differs from the pinned source commit" % rel)
-    bib_path = ROOT / BIB_PATH
+    bib_path = root / BIB_PATH
     if not bib_path.is_file() or bib_path.read_bytes() != bibliography:
         issues.append("%s differs from the pinned source commit" % BIB_PATH.as_posix())
     return issues
 
 
 def build_archive_once(
-    archive_bytes, manifest, profile, lock, *, temporary_parent=None
+    archive_bytes,
+    manifest,
+    profile,
+    lock,
+    *,
+    temporary_parent=None,
+    root=ROOT,
 ):
     from validate_arxiv_source_package import validate_source_package_bytes
 
     package_issues = validate_source_package_bytes(
-        archive_bytes, manifest, profile
+        archive_bytes,
+        manifest,
+        profile,
+        root=root,
     )
     if package_issues:
         raise PipelineError("source package invalid: %s" % "; ".join(package_issues))
-    parent = pathlib.Path(temporary_parent or ROOT / "tmp" / "pdf-builds")
+    root = pathlib.Path(root)
+    parent = pathlib.Path(temporary_parent or root / "tmp" / "pdf-builds")
     parent.mkdir(parents=True, exist_ok=True)
     with tempfile.TemporaryDirectory(dir=str(parent)) as temporary:
         package_root = pathlib.Path(temporary)
@@ -1500,7 +1874,13 @@ def build_archive_once(
         if not fls_path.is_file():
             raise PipelineError("latexmk recorder output main.fls is missing")
         fls_text = fls_path.read_text(encoding="utf-8", errors="replace")
-        recorded_issues = fls_issues(fls_text, manifest["artifact_id"])
+        recorded_issues = fls_issues(
+            fls_text,
+            manifest["artifact_id"],
+            declared_package_inputs={
+                row["path"] for row in manifest["members"]
+            },
+        )
         if recorded_issues:
             raise PipelineError(
                 "%s recorder: %s"
@@ -1571,7 +1951,10 @@ def build_artifact(
     candidate_status,
     *,
     check_only,
+    root=ROOT,
 ):
+    root = pathlib.Path(root)
+    artifacts_root = root / "artifacts"
     artifact_id = spec["artifact_id"]
     source_commit = source_provenance["source_commit"]
     source_tree = source_provenance["source_tree"]
@@ -1581,14 +1964,23 @@ def build_artifact(
     reviewed_tree = source_provenance[
         "independently_reviewed_equivalent_source_tree"
     ]
-    epoch = git_commit_epoch(source_commit)
-    markdown, latex, bibliography = source_inputs(spec, source_commit)
-    source_drift = verify_worktree_source_inputs(markdown, latex, bibliography)
+    epoch = git_commit_epoch(source_commit, root=root)
+    markdown, latex, bibliography = source_inputs(
+        spec,
+        source_commit,
+        root=root,
+    )
+    source_drift = verify_worktree_source_inputs(
+        markdown,
+        latex,
+        bibliography,
+        root=root,
+    )
     if source_drift:
         raise PipelineError("; ".join(source_drift))
-    profile_hash = sha256_file(ROOT / PROFILE_PATH)
-    lock_hash = sha256_file(ROOT / LOCK_PATH)
-    compatibility = compatibility_input_bytes()
+    profile_hash = sha256_file(root / PROFILE_PATH)
+    lock_hash = sha256_file(root / LOCK_PATH)
+    compatibility = compatibility_input_bytes(root)
     unicode_issues = unicode_mapping_issues(
         latex, compatibility[PDFTEX_COMPAT_PATH.as_posix()]
     )
@@ -1610,8 +2002,20 @@ def build_artifact(
         tex_live_dependencies=lock["tex_packages"],
     )
     manifest_payload = json_bytes(manifest)
-    first = build_archive_once(archive_bytes, manifest, profile, lock)
-    second = build_archive_once(archive_bytes, manifest, profile, lock)
+    first = build_archive_once(
+        archive_bytes,
+        manifest,
+        profile,
+        lock,
+        root=root,
+    )
+    second = build_archive_once(
+        archive_bytes,
+        manifest,
+        profile,
+        lock,
+        root=root,
+    )
     if first["pdf"] != second["pdf"]:
         raise PipelineError("%s independent builds are not byte-identical" % artifact_id)
     if first["bibliography_qa"] != second["bibliography_qa"]:
@@ -1654,10 +2058,10 @@ def build_artifact(
     )
     sidecar_payload = json_bytes(sidecar)
     expected = {
-        ART / (artifact_id + ".pdf"): first["pdf"],
-        ART / (artifact_id + ".source.tar.gz"): archive_bytes,
-        ART / (artifact_id + ".source-manifest.json"): manifest_payload,
-        ART / (artifact_id + ".sources.json"): sidecar_payload,
+        artifacts_root / (artifact_id + ".pdf"): first["pdf"],
+        artifacts_root / (artifact_id + ".source.tar.gz"): archive_bytes,
+        artifacts_root / (artifact_id + ".source-manifest.json"): manifest_payload,
+        artifacts_root / (artifact_id + ".sources.json"): sidecar_payload,
     }
     if check_only:
         mismatches = [
@@ -1671,7 +2075,7 @@ def build_artifact(
                 % (artifact_id, ", ".join(mismatches))
             )
     else:
-        ART.mkdir(parents=True, exist_ok=True)
+        artifacts_root.mkdir(parents=True, exist_ok=True)
         for path, payload in expected.items():
             path.write_bytes(payload)
     return {
@@ -1686,16 +2090,20 @@ def build_artifact(
     }
 
 
-def execute_pipeline(*, check_only, source_commit=None):
-    profile = load_profile()
-    lock = load_toolchain_lock()
+def execute_pipeline(*, check_only, source_commit=None, root=ROOT):
+    root = pathlib.Path(root)
+    profile = load_profile(root)
+    lock = load_toolchain_lock(root)
     source_provenance = validate_source_provenance(
-        profile, lock, requested_commit=source_commit
+        profile,
+        lock,
+        requested_commit=source_commit,
+        root=root,
     )
-    tool_versions = probe_toolchain(lock)
-    candidate_status = load_candidate_status()
+    tool_versions = probe_toolchain(lock, root=root)
+    candidate_status = load_candidate_status(root)
     results = []
-    for spec in artifact_specs():
+    for spec in artifact_specs(root):
         result = build_artifact(
             spec,
             source_provenance,
@@ -1704,6 +2112,7 @@ def execute_pipeline(*, check_only, source_commit=None):
             tool_versions,
             candidate_status,
             check_only=check_only,
+            root=root,
         )
         results.append(result)
         print(
@@ -1715,6 +2124,12 @@ def execute_pipeline(*, check_only, source_commit=None):
                 result["package_sha256"][:16],
             )
         )
+    if check_only:
+        report_issues = compatibility_report_table_issues(root)
+        if report_issues:
+            raise PipelineError("; ".join(report_issues))
+    else:
+        rewrite_compatibility_artifact_table(root)
     return results
 
 
@@ -1730,15 +2145,22 @@ def find_pdftoppm(explicit=None):
     raise PipelineError("pdftoppm is required for committed-PDF rasterization")
 
 
-def render_committed_pdf(artifact_id, *, output_dir=None, pdftoppm=None):
-    valid = {row["artifact_id"] for row in artifact_specs()}
+def render_committed_pdf(
+    artifact_id,
+    *,
+    output_dir=None,
+    pdftoppm=None,
+    root=ROOT,
+):
+    root = pathlib.Path(root)
+    valid = {row["artifact_id"] for row in artifact_specs(root)}
     if artifact_id not in valid:
         raise PipelineError("unknown artifact identity: %s" % artifact_id)
-    pdf_path = ART / (artifact_id + ".pdf")
+    pdf_path = root / "artifacts" / (artifact_id + ".pdf")
     if not pdf_path.is_file():
         raise PipelineError("committed PDF is missing: %s" % pdf_path)
     output = pathlib.Path(
-        output_dir or ROOT / "tmp" / "pdfs" / artifact_id
+        output_dir or root / "tmp" / "pdfs" / artifact_id
     )
     prepare_render_directory(output)
     renderer = find_pdftoppm(pdftoppm)
@@ -1773,6 +2195,7 @@ def render_committed_pdf(artifact_id, *, output_dir=None, pdftoppm=None):
 def main(argv=None):
     configure_utf8_diagnostics()
     parser = argparse.ArgumentParser()
+    parser.add_argument("--root", type=pathlib.Path, default=ROOT)
     parser.add_argument("--check", action="store_true")
     parser.add_argument("--source-commit")
     parser.add_argument("--render-committed", metavar="ARTIFACT_ID")
@@ -1785,6 +2208,7 @@ def main(argv=None):
                 args.render_committed,
                 output_dir=args.output_dir,
                 pdftoppm=args.pdftoppm,
+                root=args.root,
             )
             print(
                 "[PASS] rendered %d committed pages to %s"
@@ -1792,7 +2216,9 @@ def main(argv=None):
             )
             return 0
         execute_pipeline(
-            check_only=args.check, source_commit=args.source_commit
+            check_only=args.check,
+            source_commit=args.source_commit,
+            root=args.root,
         )
         print("TOTAL: 0 failures")
         return 0
