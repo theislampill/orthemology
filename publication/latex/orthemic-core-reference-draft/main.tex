@@ -28,12 +28,12 @@
 \maketitle
 
 \begin{quote}
-\textbf{Provenance.} Multi-model draft lineage with successive review passes; the original headers are preserved verbatim in \href{\detokenize{../docs/provenance/document-history.md}}{\texttt{docs/provenance/document-history.md}}, and model contributions in \href{\detokenize{../docs/provenance/model-contributions.md}}{\texttt{docs/provenance/model-contributions.md}}. Nothing here is experimentally validated.
+\textbf{Provenance.} Multi-model draft lineage with successive review passes; the original headers are preserved verbatim in \href{\detokenize{../docs/provenance/document-history.md}}{\texttt{docs/\allowbreak{}provenance/\allowbreak{}document-\allowbreak{}history.\allowbreak{}md}}, and model contributions in \href{\detokenize{../docs/provenance/model-contributions.md}}{\texttt{docs/\allowbreak{}provenance/\allowbreak{}model-\allowbreak{}contributions.\allowbreak{}md}}. Nothing here is experimentally validated.
 
 \end{quote}
 \textbf{Status (revision R6, 2026-07-20; fresh-session repository review completed; not external human peer review; not empirically validated):} canonical formalization of the orthing layer (episodes, metaorthemes, metaorthemmata, pathway adequacy), companion to the main manuscript's definitions. All claims are definitional/analytic unless marked empirical; nothing is experimentally validated — the deterministic fixture suite checks consistency only, and the Arm A/B/C terminology benchmark is designed but not run.
 
-\textbf{Inherited notation} (normative registry: \href{\detokenize{../docs/notation-registry.yaml}}{\texttt{docs/notation-registry.yaml}}). $\mathcal{M}$, $\mathcal{O}$ = the universal occurrence and ortheme universes; a declared analysis $A$ activates a domain $\mathcal{M}_A \subseteq \mathcal{M}$ of orthemmata (concrete occurrences) and a repertoire $\mathcal{O}_A \subseteq \mathcal{O}$ of orthemes (repeatable operational state-types); under the standing single-analysis scope these are written $M$, $O$. $\operatorname{Inst}_A \subseteq \mathcal{M}_A \times \mathcal{O}_A$ = analysis-relative instantiation — the primitive; the manuscript's Definition 3 and §2.6 define the declared, versionable analysis $A$, whose components include the task $T = \operatorname{task}(A)$; $O^*(m; A)$ = actual profile (ground truth relative to $A$); $\Pi_A$ = the complete-profile space and $\Pi_A^\partial$ the partial-profile space (manuscript Definition 10); $\hat{p}_t(m) \in \Pi_A^\partial$ = inferred profile (belief; $\hat{O}$ survives only as the derived flattening of $\hat{p}$, §2.2); $\hat{C}_t(m)$ = candidate set of complete profiles; $\Omega$ = observation map; $\mu$ = a metaortheme; $\hat o$ = an inferred ortheme. \textbf{Abbreviation convention:} once a single analysis $A$ with $\operatorname{task}(A) = T$ is fixed by explicit declaration, task-subscripted forms ($\operatorname{Inst}_T$, $O^*_T(m)$, $\Pi_T$, $\mathcal{K}_T$, $\mathcal{R}_T$, $\mathcal{W}_T$) and the unsubscripted $M$, $O$ abbreviate their $A$-indexed counterparts. The shorthand is \textbf{forbidden} wherever more than one analysis is live — level-indexed audits (§1, §5.2), multi-actor episodes (§5.3), cross-version comparisons, execution-vs-review comparisons — where the full $O^*(m; A)$ form is required. (This block supersedes the earlier statement that treated the task-indexed relation as primitive; the retired symbols are listed in the notation registry's \texttt{retired\_symbols}.)
+\textbf{Inherited notation} (normative registry: \href{\detokenize{../docs/notation-registry.yaml}}{\texttt{docs/\allowbreak{}notation-\allowbreak{}registry.\allowbreak{}yaml}}). $\mathcal{M}$, $\mathcal{O}$ = the universal occurrence and ortheme universes; a declared analysis $A$ activates a domain $\mathcal{M}_A \subseteq \mathcal{M}$ of orthemmata (concrete occurrences) and a repertoire $\mathcal{O}_A \subseteq \mathcal{O}$ of orthemes (repeatable operational state-types); under the standing single-analysis scope these are written $M$, $O$. $\operatorname{Inst}_A \subseteq \mathcal{M}_A \times \mathcal{O}_A$ = analysis-relative instantiation — the primitive; the manuscript's Definition 3 and §2.6 define the declared, versionable analysis $A$, whose components include the task $T = \operatorname{task}(A)$; $O^*(m; A)$ = actual profile (ground truth relative to $A$); $\Pi_A$ = the complete-profile space and $\Pi_A^\partial$ the partial-profile space (manuscript Definition 10); $\hat{p}_t(m) \in \Pi_A^\partial$ = inferred profile (belief; $\hat{O}$ survives only as the derived flattening of $\hat{p}$, §2.2); $\hat{C}_t(m)$ = candidate set of complete profiles; $\Omega$ = observation map; $\mu$ = a metaortheme; $\hat o$ = an inferred ortheme. \textbf{Abbreviation convention:} once a single analysis $A$ with $\operatorname{task}(A) = T$ is fixed by explicit declaration, task-subscripted forms ($\operatorname{Inst}_T$, $O^*_T(m)$, $\Pi_T$, $\mathcal{K}_T$, $\mathcal{R}_T$, $\mathcal{W}_T$) and the unsubscripted $M$, $O$ abbreviate their $A$-indexed counterparts. The shorthand is \textbf{forbidden} wherever more than one analysis is live — level-indexed audits (§1, §5.2), multi-actor episodes (§5.3), cross-version comparisons, execution-vs-review comparisons — where the full $O^*(m; A)$ form is required. (This block supersedes the earlier statement that treated the task-indexed relation as primitive; the retired symbols are listed in the notation registry's \texttt{retired\_symbols}.)
 
 
 \bigskip\hrule\bigskip
@@ -75,45 +75,182 @@
 An \textbf{orthing episode} is a record
 
 
-\[
-e = \langle\, \mathrm{id};\ m, \kappa, v;\ x, H;\ \alpha, w, A, T, t;\ \vec{\mu}, \mathrm{MetaTok}, \pi;\ \vec{C}, \hat{p};\ r;\ \mathrm{estatus};\ \mathcal{Q};\ \delta;\ \mathrm{hand}_{\mathrm{in}}, \mathrm{hand}_{\mathrm{out}};\ a, \mathrm{Succ} \,\rangle
-\]
+\begin{multline*}
+e = \langle\, \mathrm{id};\ m, \kappa, v;\ x, H;\ \alpha, w, A, T, t;\\
+\ \vec{\mu}, \mathrm{MetaTok}, \pi;\ \vec{C}, \hat{p};\ r;\\
+\ \mathrm{estatus};\ \mathcal{Q};\ \delta;\ \mathrm{hand}_{\mathrm{in}},\\
+ \mathrm{hand}_{\mathrm{out}};\ a, \mathrm{Succ} \,\rangle
+\end{multline*}
 
 
 with components (each glossed in ordinary language):
 
 
-\begin{center}
-\begin{tabular}{@{}p{0.313\linewidth}p{0.313\linewidth}p{0.313\linewidth}@{}}
-\toprule
-\textbf{Component} & \textbf{Type} & \textbf{Gloss} \\
-\midrule
-\texttt{id} & episode identifier & which run this is (referenced by handoffs and audits) \\
-$m$ & $M$ & the input orthemma — the concrete case handled \\
-$\kappa = \operatorname{id}(m)$ & identity key & which thing this is (survives change) \\
-$v = \operatorname{ver}(m)$ & version & which state/edition of that thing \\
-$x = \Omega_e(m)$ & observation & what the episode actually saw \\
-$H$ & ordered typed evidence sequence & the evidence gathered in order, each item with property class, scope, provenance, and validity/expiry \\
-$\alpha$ & actor & who/what executed (human, validator, model, pipeline, institution — populated even for mechanical executors) \\
-$w$ & episode warrant & who/what authorized acting, with scope (the \#12 hook); distinct from evidence and from executor identity \\
-$A$ & declared analysis (identifier + version) & the analysis the placement is relative to (manuscript §2.6); result correctness (V1) is judged against $O^*(m; A)$; within the episode's scope the task-subscripted spaces below abbreviate their $A$-indexed forms \\
-$T = \operatorname{task}(A)$ & task & the task component of $A$, retained as a separate readable component \\
-$t$ & time interval & when the episode ran \\
-$\vec{\mu} = (\mu_1, \dots, \mu_k; \preceq)$ & metaorthemic configuration & the governing rules in force, with precedence order $\preceq$ \\
-$\operatorname{MetaTok}(e) = \{\bar\mu_1, \dots, \bar\mu_j\}$ & concrete metaorthemmata (Decision 0002) & the case-bound CONFIGURATION TOKENS of governing types actually applied. Each $\bar{\mu}$ records/references: its own identity and lineage; $(\mu, \operatorname{ver}(\mu))$ via the internal typing $\operatorname{MetaInst}(\bar{\mu}, \mu)$; $(A(e), \operatorname{ver}(A(e)))$ with $\operatorname{Compatible}(\bar{\mu}, A(e))$ — the token binds case-specific values WITHIN the declared analysis, references any value $A$ fixes uniquely, and never overrides $A$ without an explicit new analysis version; the target $(\kappa, v)$; governed component $g$; the case-specific binding map $B$ (reference frame, tolerance value, fixture, success surface, …); scope $\sigma$ incl. the claims in $\mathcal{Q}$ that depend on it; references to policy, evidence selector, instrument/tool and calibration provenance; the \textbf{binder} (actor/process that made the binding) with binding warrant $w_{\mathrm{bind}}$, kept DISTINCT from the designated executor; binding time $t_{\mathrm{bind}}$; validity/expiry/supersession. The token REFERENCES the episode's evidence $H$, trace, and output — it never absorbs them (the application-event view $\operatorname{ApplyEvent}(\bar{\mu}, e) = \langle\bar{\mu}, \operatorname{Trace}_e |_{\bar{\mu}}\rangle$ is derived, not primitive). \textbf{Zero-burden rule:} a configuration with no material case-specific binding, non-default scope, instrument/calibration, or independent validity condition gets no explicit token, and $\operatorname{V3c} \notin \operatorname{ReqPath}(e)$ (status recorded not-applicable, with reason) \\
-$\pi$ & policy & the concrete procedure executed under $\vec{\mu}$ \\
-$\vec{C}$ & typed candidate families & open alternatives per uncertainty axis: $C^{\mathrm{id}} \subseteq M$ (which occurrence), $C^{\mathrm{profile}} \subseteq \Pi_A$ (which profile), $C^{\mathrm{cause}} \subseteq \mathcal{K}_A$ (which cause), $C^{\mathrm{route}} \subseteq \mathcal{R}_A$ (which route), $C^{\mathrm{warrant}} \subseteq \mathcal{W}_A$ (which warrant state) — competing hypotheses may themselves be PROFILES, so candidates are not forced into single orthemes \\
-$\hat{p} \in \Pi_A^\partial$ & inferred placement & \textbf{exactly one partial profile} — the profile actually placed, determined on resolved axes and open on the rest; \textbf{never a set of complete profiles} (live alternatives belong in $\hat{C} \subseteq \Pi_A$, and optional weights in the separate belief layer) and \textbf{never coerced to a singleton ortheme}; $\hat{O} \subseteq O$ survives only as the derived flattening of $\hat{p}$. (R4 repair, Decision 0012: the pre-R4 gloss "or a bounded set of profiles if unresolved" typed one symbol into two spaces and is withdrawn; archived patches retain it as history.) \\
-$r$ & route & the operation/owner the case was sent to \\
-$\operatorname{estatus}$ & evidence status map & per placed claim: validated / provisional / stale / absent \\
-$\mathcal{Q}$ & claim ledger & per claim: proposition; target occurrence/version; property class (\#3); required success surface (\#14); evidence IDs; warrant where relevant; verification status; explicit non-claims \\
-$\delta$ & residual disposition map & per obligation: unresolved / deferred / transferred / owner-assigned / risk-accepted / validated-resolved (issue \#6's six values). Claims ($\mathcal{Q}$) are assertions; residuals ($\delta$) are obligations — never merged \\
-$\operatorname{hand\_in}, \operatorname{hand\_out}$ & handoff records & incoming/outgoing packets: packet id+version, sender/receiver episode ids, subject identity, state claims, evidence references, authority claims (the \#15 hook) \\
-$a$ & action & what was done to or with the case \\
-$\operatorname{Succ} \subseteq M$ & successor set & the occurrences the action created/affected, as LABELED lineage edges (which action produced which successor) — zero, one, or many; the earlier forced single $m' = \operatorname{succ}(m,a)$ is corrected \\
-\bottomrule
-\end{tabular}
-\end{center}
+% breakable-row-table: data-rows=23 total-rendered-characters=5182 max-row-rendered-characters=1651
+\par\medskip
+\hrule height 0.8pt
+\smallskip
+% breakable-row: 1/23
+\noindent\textbf{Component}: \texttt{id}\par
+\noindent\textbf{Type}: episode identifier\par
+\noindent\textbf{Gloss}: which run this is (referenced by handoffs and audits)\par
+\smallskip
+\hrule height 0.4pt
+\smallskip
+% breakable-row: 2/23
+\noindent\textbf{Component}: $m$\par
+\noindent\textbf{Type}: $M$\par
+\noindent\textbf{Gloss}: the input orthemma — the concrete case handled\par
+\smallskip
+\hrule height 0.4pt
+\smallskip
+% breakable-row: 3/23
+\noindent\textbf{Component}: $\kappa = \operatorname{id}(m)$\par
+\noindent\textbf{Type}: identity key\par
+\noindent\textbf{Gloss}: which thing this is (survives change)\par
+\smallskip
+\hrule height 0.4pt
+\smallskip
+% breakable-row: 4/23
+\noindent\textbf{Component}: $v = \operatorname{ver}(m)$\par
+\noindent\textbf{Type}: version\par
+\noindent\textbf{Gloss}: which state/edition of that thing\par
+\smallskip
+\hrule height 0.4pt
+\smallskip
+% breakable-row: 5/23
+\noindent\textbf{Component}: $x = \Omega_e(m)$\par
+\noindent\textbf{Type}: observation\par
+\noindent\textbf{Gloss}: what the episode actually saw\par
+\smallskip
+\hrule height 0.4pt
+\smallskip
+% breakable-row: 6/23
+\noindent\textbf{Component}: $H$\par
+\noindent\textbf{Type}: ordered typed evidence sequence\par
+\noindent\textbf{Gloss}: the evidence gathered in order, each item with property class, scope, provenance, and validity/expiry\par
+\smallskip
+\hrule height 0.4pt
+\smallskip
+% breakable-row: 7/23
+\noindent\textbf{Component}: $\alpha$\par
+\noindent\textbf{Type}: actor\par
+\noindent\textbf{Gloss}: who/what executed (human, validator, model, pipeline, institution — populated even for mechanical executors)\par
+\smallskip
+\hrule height 0.4pt
+\smallskip
+% breakable-row: 8/23
+\noindent\textbf{Component}: $w$\par
+\noindent\textbf{Type}: episode warrant\par
+\noindent\textbf{Gloss}: who/what authorized acting, with scope (the \#12 hook); distinct from evidence and from executor identity\par
+\smallskip
+\hrule height 0.4pt
+\smallskip
+% breakable-row: 9/23
+\noindent\textbf{Component}: $A$\par
+\noindent\textbf{Type}: declared analysis (identifier + version)\par
+\noindent\textbf{Gloss}: the analysis the placement is relative to (manuscript §2.6); result correctness (V1) is judged against $O^*(m; A)$; within the episode's scope the task-subscripted spaces below abbreviate their $A$-indexed forms\par
+\smallskip
+\hrule height 0.4pt
+\smallskip
+% breakable-row: 10/23
+\noindent\textbf{Component}: $T = \operatorname{task}(A)$\par
+\noindent\textbf{Type}: task\par
+\noindent\textbf{Gloss}: the task component of $A$, retained as a separate readable component\par
+\smallskip
+\hrule height 0.4pt
+\smallskip
+% breakable-row: 11/23
+\noindent\textbf{Component}: $t$\par
+\noindent\textbf{Type}: time interval\par
+\noindent\textbf{Gloss}: when the episode ran\par
+\smallskip
+\hrule height 0.4pt
+\smallskip
+% breakable-row: 12/23
+\noindent\textbf{Component}: $\vec{\mu} = (\mu_1, \dots, \mu_k; \preceq)$\par
+\noindent\textbf{Type}: metaorthemic configuration\par
+\noindent\textbf{Gloss}: the governing rules in force, with precedence order $\preceq$\par
+\smallskip
+\hrule height 0.4pt
+\smallskip
+% breakable-row: 13/23
+\noindent\textbf{Component}: $\operatorname{MetaTok}(e) = \{\bar\mu_1, \dots, \bar\mu_j\}$\par
+\noindent\textbf{Type}: concrete metaorthemmata (Decision 0002)\par
+\noindent\textbf{Gloss}: the case-bound CONFIGURATION TOKENS of governing types actually applied. Each $\bar{\mu}$ records/references: its own identity and lineage; $(\mu, \operatorname{ver}(\mu))$ via the internal typing $\operatorname{MetaInst}(\bar{\mu}, \mu)$; $(A(e), \operatorname{ver}(A(e)))$ with $\operatorname{Compatible}(\bar{\mu}, A(e))$ — the token binds case-specific values WITHIN the declared analysis, references any value $A$ fixes uniquely, and never overrides $A$ without an explicit new analysis version; the target $(\kappa, v)$; governed component $g$; the case-specific binding map $B$ (reference frame, tolerance value, fixture, success surface, …); scope $\sigma$ incl. the claims in $\mathcal{Q}$ that depend on it; references to policy, evidence selector, instrument/tool and calibration provenance; the \textbf{binder} (actor/process that made the binding) with binding warrant $w_{\mathrm{bind}}$, kept DISTINCT from the designated executor; binding time $t_{\mathrm{bind}}$; validity/expiry/supersession. The token REFERENCES the episode's evidence $H$, trace, and output — it never absorbs them (the application-event view $\operatorname{ApplyEvent}(\bar{\mu}, e) = \langle\bar{\mu}, \operatorname{Trace}_e |_{\bar{\mu}}\rangle$ is derived, not primitive). \textbf{Zero-burden rule:} a configuration with no material case-specific binding, non-default scope, instrument/calibration, or independent validity condition gets no explicit token, and $\operatorname{V3c} \notin \operatorname{ReqPath}(e)$ (status recorded not-applicable, with reason)\par
+\smallskip
+\hrule height 0.4pt
+\smallskip
+% breakable-row: 14/23
+\noindent\textbf{Component}: $\pi$\par
+\noindent\textbf{Type}: policy\par
+\noindent\textbf{Gloss}: the concrete procedure executed under $\vec{\mu}$\par
+\smallskip
+\hrule height 0.4pt
+\smallskip
+% breakable-row: 15/23
+\noindent\textbf{Component}: $\vec{C}$\par
+\noindent\textbf{Type}: typed candidate families\par
+\noindent\textbf{Gloss}: open alternatives per uncertainty axis: $C^{\mathrm{id}} \subseteq M$ (which occurrence), $C^{\mathrm{profile}} \subseteq \Pi_A$ (which profile), $C^{\mathrm{cause}} \subseteq \mathcal{K}_A$ (which cause), $C^{\mathrm{route}} \subseteq \mathcal{R}_A$ (which route), $C^{\mathrm{warrant}} \subseteq \mathcal{W}_A$ (which warrant state) — competing hypotheses may themselves be PROFILES, so candidates are not forced into single orthemes\par
+\smallskip
+\hrule height 0.4pt
+\smallskip
+% breakable-row: 16/23
+\noindent\textbf{Component}: $\hat{p} \in \Pi_A^\partial$\par
+\noindent\textbf{Type}: inferred placement\par
+\noindent\textbf{Gloss}: \textbf{exactly one partial profile} — the profile actually placed, determined on resolved axes and open on the rest; \textbf{never a set of complete profiles} (live alternatives belong in $\hat{C} \subseteq \Pi_A$, and optional weights in the separate belief layer) and \textbf{never coerced to a singleton ortheme}; $\hat{O} \subseteq O$ survives only as the derived flattening of $\hat{p}$. (R4 repair, Decision 0012: the pre-R4 gloss "or a bounded set of profiles if unresolved" typed one symbol into two spaces and is withdrawn; archived patches retain it as history.)\par
+\smallskip
+\hrule height 0.4pt
+\smallskip
+% breakable-row: 17/23
+\noindent\textbf{Component}: $r$\par
+\noindent\textbf{Type}: route\par
+\noindent\textbf{Gloss}: the operation/owner the case was sent to\par
+\smallskip
+\hrule height 0.4pt
+\smallskip
+% breakable-row: 18/23
+\noindent\textbf{Component}: $\operatorname{estatus}$\par
+\noindent\textbf{Type}: evidence status map\par
+\noindent\textbf{Gloss}: per placed claim: validated / provisional / stale / absent\par
+\smallskip
+\hrule height 0.4pt
+\smallskip
+% breakable-row: 19/23
+\noindent\textbf{Component}: $\mathcal{Q}$\par
+\noindent\textbf{Type}: claim ledger\par
+\noindent\textbf{Gloss}: per claim: proposition; target occurrence/version; property class (\#3); required success surface (\#14); evidence IDs; warrant where relevant; verification status; explicit non-claims\par
+\smallskip
+\hrule height 0.4pt
+\smallskip
+% breakable-row: 20/23
+\noindent\textbf{Component}: $\delta$\par
+\noindent\textbf{Type}: residual disposition map\par
+\noindent\textbf{Gloss}: per obligation: unresolved / deferred / transferred / owner-assigned / risk-accepted / validated-resolved (issue \#6's six values). Claims ($\mathcal{Q}$) are assertions; residuals ($\delta$) are obligations — never merged\par
+\smallskip
+\hrule height 0.4pt
+\smallskip
+% breakable-row: 21/23
+\noindent\textbf{Component}: $\operatorname{hand\_in}, \operatorname{hand\_out}$\par
+\noindent\textbf{Type}: handoff records\par
+\noindent\textbf{Gloss}: incoming/outgoing packets: packet id+version, sender/receiver episode ids, subject identity, state claims, evidence references, authority claims (the \#15 hook)\par
+\smallskip
+\hrule height 0.4pt
+\smallskip
+% breakable-row: 22/23
+\noindent\textbf{Component}: $a$\par
+\noindent\textbf{Type}: action\par
+\noindent\textbf{Gloss}: what was done to or with the case\par
+\smallskip
+\hrule height 0.4pt
+\smallskip
+% breakable-row: 23/23
+\noindent\textbf{Component}: $\operatorname{Succ} \subseteq M$\par
+\noindent\textbf{Type}: successor set\par
+\noindent\textbf{Gloss}: the occurrences the action created/affected, as LABELED lineage edges (which action produced which successor) — zero, one, or many; the earlier forced single $m' = \operatorname{succ}(m,a)$ is corrected\par
+\smallskip
+\hrule height 0.8pt
+\par\medskip
 $\Pi_A$ — with $\Pi_T$ its licensed shorthand under the standing convention — is the \textbf{profile space} of manuscript Definition 10, R3 general form: $\Pi_A \subseteq \mathcal{P}(\mathcal{O}_A)$, the set of admissible complete profiles under the constraints declared by $A$. Factorized axes are one \emph{permitted representation family}, not a universal ontology: where declared, a complete profile selects exactly one admissible value per \textbf{applicable} alternatives-marked axis, records an explicit \texttt{not-applicable} value on an objectively inapplicable axis (a fact about the case, never uncertainty), and contains any declared-admissible — possibly empty — subset per co-holding axis, consistent with the declared cross-axis constraints. Objective absence, objective inapplicability, epistemic openness, evidence absence, and candidate plurality are five distinct states; only the first two live in profiles. $\Pi_A^\partial$ is the partial-profile space (resolutions may be left undetermined), with $\Pi_A \subseteq \Pi_A^\partial$ (gloss: every complete way the case could be placed, and every honest partial state of knowledge about it). This and the labeled successor edges close the arrow the manuscript lacks from action back into $M$: placements verified for $(\kappa, v)$ do not transport to $(\kappa, v')$ without a lineage argument.
 
 \textbf{Plain-language key for governed-component letters used below:} $O$ = the ortheme repertoire (which state-types exist); $I$ = individuation/identity (what counts as the same case, versioning); $E$ = evidence procedure (what evidence counts, at what grade); $D$ = disclosure/uncertainty handling (what may be left open and how it is declared); $R$ = routing (where cases are sent); $V$ = validation/closure (what may be called done, at what standard); $W$ = warrant/authorization-state classification (which warrant states exist — authorized vs factually established — and what each licenses).
@@ -170,19 +307,60 @@ e \models_{\mu} (m : \hat{o}) \iff \hat{o} \in \hat{O}(e) \ \text{and}\ \mu \in 
 
 \subsection{3.2 Minimum-specificity test against the five worked examples}
 
-\begin{center}
-\begin{tabular}{@{}p{0.157\linewidth}p{0.157\linewidth}p{0.157\linewidth}p{0.157\linewidth}p{0.157\linewidth}p{0.157\linewidth}@{}}
-\toprule
-\textbf{Owner example} & \textbf{Governed} & \textbf{Competing states} & \textbf{Selecting evidence} & \textbf{Counterfactual difference} & \textbf{Policy relation} \\
-\midrule
-appearance-only vs provenance/discriminating evidence & $E$ (evidence procedure) & \{appearance-grade, provenance-grade\} & source record or discriminating test & appearance-grade placements are reversible on test; provenance-grade support closure & policy chooses which test to run before placing \\
-current vs stale version & identity/versioning on $M$ & \{current, stale\} & lineage check $\operatorname{ver}(m)$ vs latest & verdicts on stale versions do not transport & policy quarantines or re-derives on stale \\
-route-sufficient vs identity-complete & $R$,$V$ (routing, validation) & \{route-sufficient, identity-complete\} & task declaration + risk class & act-now vs investigate-further diverge & policy releases the route while holding residuals open \\
-closure-safe vs false closure & $V$ (closure) & per-burden \{resolved, deferred, transferred, risk-accepted\} vs "all done" & residual ledger $\delta$ & falsely closed cases silently accrue debt; safe closure is reopenable by record & policy may claim completion only at the ledger's level \\
-authorized vs factually established & $W$ (warrant-state classification) & \{authorized, established, both, neither\} & authorization record vs validating evidence & authorized-but-unestablished placements must carry a revisit obligation & policy tags warrant type and never launders one into the other \\
-\bottomrule
-\end{tabular}
-\end{center}
+% breakable-row-table: data-rows=5 total-rendered-characters=1363 max-row-rendered-characters=287
+\par\medskip
+\hrule height 0.8pt
+\smallskip
+% breakable-row: 1/5
+\noindent\textbf{Owner example}: appearance-only vs provenance/discriminating evidence\par
+\noindent\textbf{Governed}: $E$ (evidence procedure)\par
+\noindent\textbf{Competing states}: \{appearance-grade, provenance-grade\}\par
+\noindent\textbf{Selecting evidence}: source record or discriminating test\par
+\noindent\textbf{Counterfactual difference}: appearance-grade placements are reversible on test; provenance-grade support closure\par
+\noindent\textbf{Policy relation}: policy chooses which test to run before placing\par
+\smallskip
+\hrule height 0.4pt
+\smallskip
+% breakable-row: 2/5
+\noindent\textbf{Owner example}: current vs stale version\par
+\noindent\textbf{Governed}: identity/versioning on $M$\par
+\noindent\textbf{Competing states}: \{current, stale\}\par
+\noindent\textbf{Selecting evidence}: lineage check $\operatorname{ver}(m)$ vs latest\par
+\noindent\textbf{Counterfactual difference}: verdicts on stale versions do not transport\par
+\noindent\textbf{Policy relation}: policy quarantines or re-derives on stale\par
+\smallskip
+\hrule height 0.4pt
+\smallskip
+% breakable-row: 3/5
+\noindent\textbf{Owner example}: route-sufficient vs identity-complete\par
+\noindent\textbf{Governed}: $R$,$V$ (routing, validation)\par
+\noindent\textbf{Competing states}: \{route-sufficient, identity-complete\}\par
+\noindent\textbf{Selecting evidence}: task declaration + risk class\par
+\noindent\textbf{Counterfactual difference}: act-now vs investigate-further diverge\par
+\noindent\textbf{Policy relation}: policy releases the route while holding residuals open\par
+\smallskip
+\hrule height 0.4pt
+\smallskip
+% breakable-row: 4/5
+\noindent\textbf{Owner example}: closure-safe vs false closure\par
+\noindent\textbf{Governed}: $V$ (closure)\par
+\noindent\textbf{Competing states}: per-burden \{resolved, deferred, transferred, risk-accepted\} vs "all done"\par
+\noindent\textbf{Selecting evidence}: residual ledger $\delta$\par
+\noindent\textbf{Counterfactual difference}: falsely closed cases silently accrue debt; safe closure is reopenable by record\par
+\noindent\textbf{Policy relation}: policy may claim completion only at the ledger's level\par
+\smallskip
+\hrule height 0.4pt
+\smallskip
+% breakable-row: 5/5
+\noindent\textbf{Owner example}: authorized vs factually established\par
+\noindent\textbf{Governed}: $W$ (warrant-state classification)\par
+\noindent\textbf{Competing states}: \{authorized, established, both, neither\}\par
+\noindent\textbf{Selecting evidence}: authorization record vs validating evidence\par
+\noindent\textbf{Counterfactual difference}: authorized-but-unestablished placements must carry a revisit obligation\par
+\noindent\textbf{Policy relation}: policy tags warrant type and never launders one into the other\par
+\smallskip
+\hrule height 0.8pt
+\par\medskip
 Verdict per model: \textbf{A} captures competing states but has no slot for the last column — a state with no conduct attached governs nothing. \textbf{B} captures conduct but fails the manuscript's anti-vacuity clause (iv) — a rule renamed as a noun — and cannot say what two rules consulting the \emph{same} distinction (quarantine vs re-derive on staleness) have in common. \textbf{C} fills every cell of every row; the state/policy split is load-bearing exactly where B collapses (same $S_\mu$, different $\pi_\mu$).
 
 
@@ -199,13 +377,13 @@ Verdict per model: \textbf{A} captures competing states but has no slot for the 
 
 \item \textbf{Conflict and precedence.} $\mu_i, \mu_j$ conflict at $e$ when their meta-policies prescribe incompatible constraints on the same component under the states that actually obtain. Resolution only via the declared strict partial order $\preceq$ (gloss: which rule outranks which, fixed by governance in advance). A conflict unresolved by $\preceq$ is an ANDON condition — stop or escalate; silent override is itself a metaorthemic error.
 
-\item \textbf{Provenance of the governing rule.} $\operatorname{prov}(\mu) = \langle \mathrm{authority}, \mathrm{warrant}, \mathrm{scope}, \operatorname{ver}(\mu) \rangle$. A rule of unknown provenance is a stale-evidence problem one level up; episodes record $\operatorname{ver}(\mu)$ so audits can scope which placements ran under which edition. Governing \emph{instructions} recovered from records obey the same discipline: existence, authenticity, recovery, authorization, and current force are five distinct predicates, and an authentic recovered directive may be stale as governance — the worked stale-steer case, with its directive record and fixture F6, is \texttt{examples/compaction-stale-steer.md} (Decision 0006).
+\item \textbf{Provenance of the governing rule.} $\operatorname{prov}(\mu) = \langle \mathrm{authority}, \mathrm{warrant}, \mathrm{scope}, \operatorname{ver}(\mu) \rangle$. A rule of unknown provenance is a stale-evidence problem one level up; episodes record $\operatorname{ver}(\mu)$ so audits can scope which placements ran under which edition. Governing \emph{instructions} recovered from records obey the same discipline: existence, authenticity, recovery, authorization, and current force are five distinct predicates, and an authentic recovered directive may be stale as governance — the worked stale-steer case, with its directive record and fixture F6, is \texttt{examples/\allowbreak{}compaction-\allowbreak{}stale-\allowbreak{}steer.\allowbreak{}md} (Decision 0006).
 
 \item \textbf{Revision after lesson-lift (impact-scoped).} $\rho : (\mu, \mathrm{lesson}) \mapsto \mu'$ increments $\operatorname{ver}(\mu)$ and computes an \textbf{impact function} $\operatorname{affected}(\mu, \mu') \to$ the set of dependent claim/episode scopes: exactly the prior episodes whose placement CONSULTED the revised state-distinction or selector where the two editions disagree. Only those episodes' $\epsilon$ is downgraded from validated to provisional pending re-check (gloss: when the rule was wrong, the wins that depended on the wrong part are reopened — not every episode that ever ran under the edition). Blanket reopening of the whole edition cohort is corrected to this scoped form.
 
 \item \textbf{State families need not partition, and selection may be undetermined.} $S_\mu$ declares the competing higher-order states, but nothing forces them to be mutually exclusive or jointly exhaustive unless the configuration declares them so (an exclusivity marking, as for profile axes); and $\operatorname{select}_\mu$ is a partial procedure — on a given episode it may return one state, several co-holding states, or \textbf{undetermined}. An undetermined selection is handled like any other unresolved placement: the meta-policy must declare conduct for it (stop, escalate, default conservatively), and silently assuming a partition where none was declared is a configuration defect (V3a).
 
-\item \textbf{Safeguards against inflation.} Admit a candidate $\mu$ only if: (i) $g$ is named; (ii) $S_\mu$ is declared \emph{in advance}, not read off one incident; (iii) switching the obtaining state changes validated placement, risk, or constraints in at least one episode class; (iv) it is not a first-order ortheme or a tunable parameter of $\pi$ in disguise. This is the manuscript's anti-vacuity test with (ii)–(iii) sharpened to episode classes. A good policy that consults no in-advance-declared competing higher-order states is just a good policy. \textbf{Concept admission vs word utility are separate tests:} the four conditions above admit the DISTINCTION; whether the \emph{word} "metaortheme" (or any coinage) earns keep over ordinary words is decided ONLY by the terminology benchmark (the terminology evaluation protocol under \texttt{terminology/}) — a real distinction may be admitted while its word is retired. (The former safeguard (v), which mixed the two tests, is deleted.)
+\item \textbf{Safeguards against inflation.} Admit a candidate $\mu$ only if: (i) $g$ is named; (ii) $S_\mu$ is declared \emph{in advance}, not read off one incident; (iii) switching the obtaining state changes validated placement, risk, or constraints in at least one episode class; (iv) it is not a first-order ortheme or a tunable parameter of $\pi$ in disguise. This is the manuscript's anti-vacuity test with (ii)–(iii) sharpened to episode classes. A good policy that consults no in-advance-declared competing higher-order states is just a good policy. \textbf{Concept admission vs word utility are separate tests:} the four conditions above admit the DISTINCTION; whether the \emph{word} "metaortheme" (or any coinage) earns keep over ordinary words is decided ONLY by the terminology benchmark (the terminology evaluation protocol under \texttt{terminology/\allowbreak{}}) — a real distinction may be admitted while its word is retired. (The former safeguard (v), which mixed the two tests, is deleted.)
 
 \end{itemize}
 
@@ -214,7 +392,7 @@ Verdict per model: \textbf{A} captures competing states but has no slot for the 
 \section{4. Pathway adequacy (2D)}
 
 \subsection{4.1 Separate verdicts}
-All verdicts are predicates on an episode $e$ (some claim-indexed). \textbf{The verdicts diagnose distinct dimensions and are not identified with one another; they are NOT assumed pairwise logically independent.} Every definitional or logical implication is declared explicitly in the implication table at the end of this section; no implication may be inferred merely from proximity in the verdict numbering (Decision 0003; this supersedes the earlier "none entails another"). Verdict labels follow the normative registry (\href{\detokenize{../docs/verdict-registry.yaml}}{\texttt{docs/verdict-registry.yaml}}, Decision 0004): semantic IDs are authoritative in machine-readable records, and the display aliases below are the prose forms. \textbf{Compact core (main text):} result correctness; evidential support; procedure truth-conduciveness; rule adequacy; executor fidelity; route safety; closure truthfulness; robustness. \textbf{Full vector (this table)} — the finer splits matter to audits; ordinary discussion may use the compact core:
+All verdicts are predicates on an episode $e$ (some claim-indexed). \textbf{The verdicts diagnose distinct dimensions and are not identified with one another; they are NOT assumed pairwise logically independent.} Every definitional or logical implication is declared explicitly in the implication table at the end of this section; no implication may be inferred merely from proximity in the verdict numbering (Decision 0003; this supersedes the earlier "none entails another"). Verdict labels follow the normative registry (\href{\detokenize{../docs/verdict-registry.yaml}}{\texttt{docs/\allowbreak{}verdict-\allowbreak{}registry.\allowbreak{}yaml}}, Decision 0004): semantic IDs are authoritative in machine-readable records, and the display aliases below are the prose forms. \textbf{Compact core (main text):} result correctness; evidential support; procedure truth-conduciveness; rule adequacy; executor fidelity; route safety; closure truthfulness; robustness. \textbf{Full vector (this table)} — the finer splits matter to audits; ordinary discussion may use the compact core:
 
 
 \begin{itemize}
@@ -264,7 +442,7 @@ ReqPath(e) = CorePath ∩ RequiredBy( A(e), episode-shape(e),
 \end{verbatim}
 Minimum derivation rules: \textbf{V3c} is required exactly when $\operatorname{MetaTok}(e) \neq \emptyset$ (the M1 zero-burden rule is preserved: $\operatorname{MetaTok}(e) = \emptyset \Rightarrow \operatorname{V3c} \notin \operatorname{ReqPath}(e)$); \textbf{V4a} is required when the episode selects or authorizes a route; \textbf{V5} is required when the episode makes a closure/completion claim or dispositions residuals; \textbf{V6} is required when $A(e)$ or the risk class predeclares a robustness obligation. \textbf{"Not tested" is not "not applicable":} every verdict excluded from $\operatorname{ReqPath}(e)$ carries a recorded applicability reason on the episode record. ($\operatorname{ReqPath}(e)$ is the sole pathway requirement function; the earlier separately recorded applicability set $\operatorname{App}(\cdot)$ is retired by Decision 0005 — nothing it expressed is lost, since exclusions now live in the per-verdict \texttt{not-applicable} statuses and reasons.)
 
-\textbf{Machine-readable derivation and honest status (R3).} The repository ships $\operatorname{RequiredBy}$ as a machine-readable governance rule table (\texttt{docs/governance-requirements.yaml}) over a typed episode-shape input contract (\texttt{has\_meta\_tokens}, \texttt{selects\_route}, \texttt{makes\_closure\_claim}, \texttt{robustness\_obligation}, \texttt{risk\_class}), and \texttt{scripts/derive\_reqpath.py} derives $\operatorname{ReqPath}(e)$ from it with a per-verdict derivation trace (required / not-required, governing rule, rationale); fixtures in \texttt{tests/reqpath-fixtures.json} pin the derivation, including an omission-attack case in which a declared path missing a derivable requirement is detected rather than tolerated. Honest scope: the shipped table is \emph{one} complete, deterministic governance instance. $\operatorname{RequiredBy}$ in general remains a \textbf{governance-supplied parameterized interface} — the theory does not claim a closed universal calculus over every conceivable governance regime, and this part of the formalism is accordingly an open parameter, not "closed."
+\textbf{Machine-readable derivation and honest status (R3).} The repository ships $\operatorname{RequiredBy}$ as a machine-readable governance rule table (\texttt{docs/\allowbreak{}governance-\allowbreak{}requirements.\allowbreak{}yaml}) over a typed episode-shape input contract (\texttt{has\_meta\_tokens}, \texttt{selects\_route}, \texttt{makes\_closure\_claim}, \texttt{robustness\_obligation}, \texttt{risk\_class}), and \texttt{scripts/\allowbreak{}derive\_\allowbreak{}reqpath.\allowbreak{}py} derives $\operatorname{ReqPath}(e)$ from it with a per-verdict derivation trace (required / not-required, governing rule, rationale); fixtures in \texttt{tests/\allowbreak{}reqpath-\allowbreak{}fixtures.\allowbreak{}json} pin the derivation, including an omission-attack case in which a declared path missing a derivable requirement is detected rather than tolerated. Honest scope: the shipped table is \emph{one} complete, deterministic governance instance. $\operatorname{RequiredBy}$ in general remains a \textbf{governance-supplied parameterized interface} — the theory does not claim a closed universal calculus over every conceivable governance regime, and this part of the formalism is accordingly an open parameter, not "closed."
 
 \textbf{Verdict status is not Boolean.}
 
@@ -304,34 +482,80 @@ All other pairs & No definitional implication introduced by these definitions; e
 The matrix applies only AFTER the pathway status is resolved as adequate or defective; $\operatorname{PathwayUndetermined}$ episodes remain outside the four resolved cells until audited. (Decision 0003: this supersedes the earlier parenthetical that committed the token-level truth-connection verdict to the conjunction — the incorrect-result/adequate-pathway cell is genuinely representable.)
 
 
-\begin{center}
-\begin{tabular}{@{}p{0.313\linewidth}p{0.313\linewidth}p{0.313\linewidth}@{}}
-\toprule
-\textbf{} & \textbf{\textbf{PathwayAdequate}} & \textbf{\textbf{PathwayDefective}} \\
-\midrule
-\textbf{Result correct (V1)} & \emph{Nominal.} A current behavioral validator, correctly bound to the current artifact (V3c pass where applicable), under a sufficiently reliable configured procedure, returns the correct result. Nothing to fix. & \emph{Correct + defective (stopped-clock, compensating error, or governing-side luck).} Possible failure loci: V2b-P, V3a, V3b, V3c, V3d, or V6 — the marker validator that happens to be right today; the mis-bound metaorthemma whose wrong reference plane locally coincides with the right one. Remedy targets the procedure, rule, or binding — not the verdict. \\
-\textbf{Result incorrect (¬V1)} & $\operatorname{AdequatePathError}(e) := \neg \operatorname{V1}(e) \wedge \operatorname{PathwayAdequate}(e)$ — the justified rare miss of a non-perfect but sufficiently reliable process used correctly: a genuine, representable cell, expected whenever such a process runs. Where V3e ∈ ReqPath(e), $\operatorname{JustifiedMiss}(e) := \operatorname{AdequatePathError}(e)$ — V3e's pass is already inside PathwayAdequate, so no redundant conjunct is added. Remedy, if any: a new discriminating evidence source; no rule or executor blame. \textbf{Note:} orthemic adequacy does not establish moral, legal, institutional, or theological blamelessness — "blameless" is not a formal predicate here. & \emph{Compound failure.} Wrong placement via a defective pathway — e.g., a deploy gate reads a cached test result from the previous commit and approves the current one (¬V1 with V2c and V3a failures). Remedy: both the placement and the rulebook/lineage machinery. \\
-\bottomrule
-\end{tabular}
-\end{center}
-\textbf{Worked verdict fixtures (deterministic; the four resolved cells are all satisfiable, plus the undetermined state — machine-checkable encodings in \texttt{tests/verdict-fixtures.json}, validated by \texttt{scripts/validate\_verdict\_semantics.py}):}
+% breakable-row-table: data-rows=2 total-rendered-characters=1627 max-row-rendered-characters=981
+\par\medskip
+\hrule height 0.8pt
+\smallskip
+% breakable-row: 1/2
+\noindent\textbf{Column 1}: \textbf{Result correct (V1)}\par
+\noindent\textbf{PathwayAdequate}: \emph{Nominal.} A current behavioral validator, correctly bound to the current artifact (V3c pass where applicable), under a sufficiently reliable configured procedure, returns the correct result. Nothing to fix.\par
+\noindent\textbf{PathwayDefective}: \emph{Correct + defective (stopped-clock, compensating error, or governing-side luck).} Possible failure loci: V2b-P, V3a, V3b, V3c, V3d, or V6 — the marker validator that happens to be right today; the mis-bound metaorthemma whose wrong reference plane locally coincides with the right one. Remedy targets the procedure, rule, or binding — not the verdict.\par
+\smallskip
+\hrule height 0.4pt
+\smallskip
+% breakable-row: 2/2
+\noindent\textbf{Column 1}: \textbf{Result incorrect (¬V1)}\par
+\noindent\textbf{PathwayAdequate}: $\operatorname{AdequatePathError}(e) := \neg \operatorname{V1}(e) \wedge \operatorname{PathwayAdequate}(e)$ — the justified rare miss of a non-perfect but sufficiently reliable process used correctly: a genuine, representable cell, expected whenever such a process runs. Where V3e ∈ ReqPath(e), $\operatorname{JustifiedMiss}(e) := \operatorname{AdequatePathError}(e)$ — V3e's pass is already inside PathwayAdequate, so no redundant conjunct is added. Remedy, if any: a new discriminating evidence source; no rule or executor blame. \textbf{Note:} orthemic adequacy does not establish moral, legal, institutional, or theological blamelessness — "blameless" is not a formal predicate here.\par
+\noindent\textbf{PathwayDefective}: \emph{Compound failure.} Wrong placement via a defective pathway — e.g., a deploy gate reads a cached test result from the previous commit and approves the current one (¬V1 with V2c and V3a failures). Remedy: both the placement and the rulebook/lineage machinery.\par
+\smallskip
+\hrule height 0.8pt
+\par\medskip
+\textbf{Worked verdict fixtures (deterministic; the four resolved cells are all satisfiable, plus the undetermined state — machine-checkable encodings in \texttt{tests/\allowbreak{}verdict-\allowbreak{}fixtures.\allowbreak{}json}, validated by \texttt{scripts/\allowbreak{}validate\_\allowbreak{}verdict\_\allowbreak{}semantics.\allowbreak{}py}):}
 
 
-\begin{center}
-\begin{tabular}{@{}p{0.313\linewidth}p{0.313\linewidth}p{0.313\linewidth}@{}}
-\toprule
-\textbf{Fixture} & \textbf{Setup} & \textbf{Expected statuses} \\
-\midrule
-\textbf{F1 — nominal} & Current behavioral validator, correctly bound (V3c pass where applicable), reliable configured procedure, correct result & V1 pass; every ReqPath verdict pass ⇒ \textbf{PathwayAdequate} \\
-\textbf{F2 — stopped clock} & SCAN-CLEAN marker validator happens to be correct today but fails its declared reliability and perturbation criteria & V1 pass; V2b-P fail; V6 fail ⇒ \textbf{PathwayDefective} (V2b-T may also fail as a result-side diagnosis: correct, but not through the truth-relevant mechanism) \\
-\textbf{F3 — justified rare miss} & Properly configured, faithfully executed procedure meeting its declared reference-class reliability threshold errs on this token & V1 fail; V2b-P pass; V3a/V3b/V3c/V3d/V3e pass where applicable ⇒ \textbf{PathwayAdequate}; V2b-T\_q \textbf{fails} (the placed claim is false — a false claim's truth-linkage verdict fails by factivity; it is never recorded "unavailable" absent an explicit declared applicability rule). \emph{This fixture is mandatory: it proves the lower-left cell is no longer definitionally blocked.} \\
-\textbf{F4 — defective metaorthemma, lucky result} & Sound standard and policy, faithful execution; the concrete token binds the wrong reference plane / tolerance / fixture / success surface / calibration; the result happens to be correct & V1 pass; V3a pass; V3b pass; V3d pass; \textbf{V3c fail} ⇒ \textbf{PathwayDefective} \\
-\textbf{F5 — unresolved audit} & The result is known, but required robustness or provenance evidence has not yet been evaluated & one required verdict \texttt{undetermined} ⇒ \textbf{PathwayUndetermined}; neither PathwayAdequate nor PathwayDefective is asserted \\
-\textbf{F6 — stale directive} (Decision 0006; worked case in \texttt{examples/compaction-stale-steer.md}) & A recovered governing directive is authentic but superseded; the executor follows it faithfully; the closure claim asserts it was in force & V1 fail; V2c fail; \textbf{V3c fail} (token not Current); V3d pass; V5 fail ⇒ \textbf{PathwayDefective} — faithful execution under a defective governing token \\
-\textbf{F7 — safe but suboptimal route} & The chosen route is admissible but demonstrably wasteful & V4a pass; \textbf{V4b fail} (advisory, outside the core) ⇒ \textbf{PathwayAdequate} — safe ≠ best, and route quality never defeats adequacy \\
-\bottomrule
-\end{tabular}
-\end{center}
+% breakable-row-table: data-rows=7 total-rendered-characters=2343 max-row-rendered-characters=547
+\par\medskip
+\hrule height 0.8pt
+\smallskip
+% breakable-row: 1/7
+\noindent\textbf{Fixture}: \textbf{F1 — nominal}\par
+\noindent\textbf{Setup}: Current behavioral validator, correctly bound (V3c pass where applicable), reliable configured procedure, correct result\par
+\noindent\textbf{Expected statuses}: V1 pass; every ReqPath verdict pass ⇒ \textbf{PathwayAdequate}\par
+\smallskip
+\hrule height 0.4pt
+\smallskip
+% breakable-row: 2/7
+\noindent\textbf{Fixture}: \textbf{F2 — stopped clock}\par
+\noindent\textbf{Setup}: SCAN-CLEAN marker validator happens to be correct today but fails its declared reliability and perturbation criteria\par
+\noindent\textbf{Expected statuses}: V1 pass; V2b-P fail; V6 fail ⇒ \textbf{PathwayDefective} (V2b-T may also fail as a result-side diagnosis: correct, but not through the truth-relevant mechanism)\par
+\smallskip
+\hrule height 0.4pt
+\smallskip
+% breakable-row: 3/7
+\noindent\textbf{Fixture}: \textbf{F3 — justified rare miss}\par
+\noindent\textbf{Setup}: Properly configured, faithfully executed procedure meeting its declared reference-class reliability threshold errs on this token\par
+\noindent\textbf{Expected statuses}: V1 fail; V2b-P pass; V3a/V3b/V3c/V3d/V3e pass where applicable ⇒ \textbf{PathwayAdequate}; V2b-T\_q \textbf{fails} (the placed claim is false — a false claim's truth-linkage verdict fails by factivity; it is never recorded "unavailable" absent an explicit declared applicability rule). \emph{This fixture is mandatory: it proves the lower-left cell is no longer definitionally blocked.}\par
+\smallskip
+\hrule height 0.4pt
+\smallskip
+% breakable-row: 4/7
+\noindent\textbf{Fixture}: \textbf{F4 — defective metaorthemma, lucky result}\par
+\noindent\textbf{Setup}: Sound standard and policy, faithful execution; the concrete token binds the wrong reference plane / tolerance / fixture / success surface / calibration; the result happens to be correct\par
+\noindent\textbf{Expected statuses}: V1 pass; V3a pass; V3b pass; V3d pass; \textbf{V3c fail} ⇒ \textbf{PathwayDefective}\par
+\smallskip
+\hrule height 0.4pt
+\smallskip
+% breakable-row: 5/7
+\noindent\textbf{Fixture}: \textbf{F5 — unresolved audit}\par
+\noindent\textbf{Setup}: The result is known, but required robustness or provenance evidence has not yet been evaluated\par
+\noindent\textbf{Expected statuses}: one required verdict \texttt{undetermined} ⇒ \textbf{PathwayUndetermined}; neither PathwayAdequate nor PathwayDefective is asserted\par
+\smallskip
+\hrule height 0.4pt
+\smallskip
+% breakable-row: 6/7
+\noindent\textbf{Fixture}: \textbf{F6 — stale directive} (Decision 0006; worked case in \texttt{examples/\allowbreak{}compaction-\allowbreak{}stale-\allowbreak{}steer.\allowbreak{}md})\par
+\noindent\textbf{Setup}: A recovered governing directive is authentic but superseded; the executor follows it faithfully; the closure claim asserts it was in force\par
+\noindent\textbf{Expected statuses}: V1 fail; V2c fail; \textbf{V3c fail} (token not Current); V3d pass; V5 fail ⇒ \textbf{PathwayDefective} — faithful execution under a defective governing token\par
+\smallskip
+\hrule height 0.4pt
+\smallskip
+% breakable-row: 7/7
+\noindent\textbf{Fixture}: \textbf{F7 — safe but suboptimal route}\par
+\noindent\textbf{Setup}: The chosen route is admissible but demonstrably wasteful\par
+\noindent\textbf{Expected statuses}: V4a pass; \textbf{V4b fail} (advisory, outside the core) ⇒ \textbf{PathwayAdequate} — safe ≠ best, and route quality never defeats adequacy\par
+\smallskip
+\hrule height 0.8pt
+\par\medskip
 
 \subsection{4.3 Epistemic constraint and nearest neighbors}
 The defensible novelty claim is exactly this and no more: \textbf{the prior manuscript, and the operational discipline it describes, did not explicitly represent the concrete classification/handling episode as an auditable occurrence distinct from its result.} It is \emph{not} claimed that no established field can represent episodes. Nearest neighbors, honestly: \textbf{process reliabilism} (epistemology) names precisely the correct-result-through-unreliable- process structure and the truth-connection idea — for \emph{beliefs}; it offers no operational record schema (no typed evidence, route, residual disposition, successor occurrence, or perturbation estimator for agent/validator episodes). \textbf{Audit trails / provenance records} (W3C PROV, audit logs, ML lineage systems) are operational and token-level — who did what to which artifact when — but typically carry no candidate set, plural inferred profile, per-claim evidence status, residual-disposition ledger, or verdict layer separating result correctness from pathway adequacy and robustness. \textbf{Assurance practice} (control-effectiveness vs outcome testing) and \textbf{metamorphic testing} each contain one verdict (V3a-like, V6-like) without the joint object. What the episode signature adds is the \emph{joint} auditable object on which V1–V6 are simultaneously definable; whether that pays for itself over "audit the validator when suspicious" is an open empirical question (fixture E5), not a settled fact.
@@ -403,11 +627,11 @@ Define, informally, $\operatorname{depth}(e)$ as the executor's grasp of the gov
 
 
 \bigskip\hrule\bigskip
-\textbf{Optional latent-variable extension (Decision 0015).} A declared analysis $A$ may optionally carry sequential latent-variable apparatus ($Z_A$, transitions $P_A$, latent candidate sets/posteriors, and concrete internal representations $y$). That apparatus is \textbf{non-primitive and optional}: it adds nothing to the settled ontology of this formalization, a latent state is not an ortheme, a posterior is not $O^*(m; A)$, and representational geometry is neither necessary nor sufficient for orthemic distinctness or for pathway adequacy. The bridge $\operatorname{ProfileOf}_A \subseteq Z_A \times \Pi_A$ is partial and must be exhibited, never assumed; latent labels are non-identifiable up to relabelling absent declared anchoring or a validated alignment map. \textbf{Every core claim of this formalization remains statable without the latent layer.} Declaring it is a version event on $A$. See \texttt{docs/decisions/0015-latent-state-observation-and-representation-boundary.md} and \texttt{docs/related-work/LATENT-STATE-INFERENCE-AND-ORTHEMOLOGY.md}.
+\textbf{Optional latent-variable extension (Decision 0015).} A declared analysis $A$ may optionally carry sequential latent-variable apparatus ($Z_A$, transitions $P_A$, latent candidate sets/posteriors, and concrete internal representations $y$). That apparatus is \textbf{non-primitive and optional}: it adds nothing to the settled ontology of this formalization, a latent state is not an ortheme, a posterior is not $O^*(m; A)$, and representational geometry is neither necessary nor sufficient for orthemic distinctness or for pathway adequacy. The bridge $\operatorname{ProfileOf}_A \subseteq Z_A \times \Pi_A$ is partial and must be exhibited, never assumed; latent labels are non-identifiable up to relabelling absent declared anchoring or a validated alignment map. \textbf{Every core claim of this formalization remains statable without the latent layer.} Declaring it is a version event on $A$. See \texttt{docs/\allowbreak{}decisions/\allowbreak{}0015-\allowbreak{}latent-\allowbreak{}state-\allowbreak{}observation-\allowbreak{}and-\allowbreak{}representation-\allowbreak{}boundary.\allowbreak{}md} and \texttt{docs/\allowbreak{}related-\allowbreak{}work/\allowbreak{}LATENT-\allowbreak{}STATE-\allowbreak{}INFERENCE-\allowbreak{}AND-\allowbreak{}ORTHEMOLOGY.\allowbreak{}md}.
 
 
 \section{Status ledger}
-\textbf{Accepted (analytic/definitional):} level-indexing via $\iota_n$ with no episode-referent "meta-orthemma" noun (§1, counterargument recorded; per the §1 qualification, the Decision-0002 configuration token $\bar{\mu}$ is a different object, carried in §2.2/§3/§4.1 V3c); the record-style episode signature with typed candidate families, claim ledger, handoffs, warrant, and labeled successors (§2.2); endpoint-plus-bounded-trace with governance-declared granularity (§2.2a); split model (C) with the $\{\mathrm{O}, \mathrm{I}, \mathrm{E}, \mathrm{D}, \mathrm{R}, \mathrm{V}, \mathrm{W}\}$ boundary (§3, downsides preserved); verdict separability with governance-derived $\operatorname{ReqPath}(e)$ (§4.1); token-level DAG with typed edges (§5.2). \textbf{Rejected:} literal set inclusion for episodes; forced single successor; blanket edition-wide revision reopening; safeguard (v) word-utility test inside concept admission. \textbf{Unresolved alternatives:} safety/reliabilist/calibration variants of V2b-P remain admissible declared criteria; single-object metaortheme presentation (C1) remains permitted as user-facing shorthand. \textbf{Experimental gates:} episode reification's practical delta over "audit the validator when suspicious" — fixture E5; vocabulary utility of every coined term — the Arm A/B/C benchmark (designed, NOT run). \textbf{Evidence tier:} machine-checked internal agreement over the declared definitions, schemas, examples, and adversarial fixtures — not a proof of mathematical consistency or completeness; no public observational dataset exists; operational usefulness is untested; nothing here is experimentally validated. \textbf{Provenance:} \texttt{docs/provenance/document-history.md}; this file is the canonical integrated body.
+\textbf{Accepted (analytic/definitional):} level-indexing via $\iota_n$ with no episode-referent "meta-orthemma" noun (§1, counterargument recorded; per the §1 qualification, the Decision-0002 configuration token $\bar{\mu}$ is a different object, carried in §2.2/§3/§4.1 V3c); the record-style episode signature with typed candidate families, claim ledger, handoffs, warrant, and labeled successors (§2.2); endpoint-plus-bounded-trace with governance-declared granularity (§2.2a); split model (C) with the $\{\mathrm{O}, \mathrm{I}, \mathrm{E}, \mathrm{D}, \mathrm{R}, \mathrm{V}, \mathrm{W}\}$ boundary (§3, downsides preserved); verdict separability with governance-derived $\operatorname{ReqPath}(e)$ (§4.1); token-level DAG with typed edges (§5.2). \textbf{Rejected:} literal set inclusion for episodes; forced single successor; blanket edition-wide revision reopening; safeguard (v) word-utility test inside concept admission. \textbf{Unresolved alternatives:} safety/reliabilist/calibration variants of V2b-P remain admissible declared criteria; single-object metaortheme presentation (C1) remains permitted as user-facing shorthand. \textbf{Experimental gates:} episode reification's practical delta over "audit the validator when suspicious" — fixture E5; vocabulary utility of every coined term — the Arm A/B/C benchmark (designed, NOT run). \textbf{Evidence tier:} machine-checked internal agreement over the declared definitions, schemas, examples, and adversarial fixtures — not a proof of mathematical consistency or completeness; no public observational dataset exists; operational usefulness is untested; nothing here is experimentally validated. \textbf{Provenance:} \texttt{docs/\allowbreak{}provenance/\allowbreak{}document-\allowbreak{}history.\allowbreak{}md}; this file is the canonical integrated body.
 
 
 \part*{Multi-Actor / Zero-Sum Orthemic Note — stress test, corrections, and formal residue}
@@ -415,7 +639,7 @@ Define, informally, $\operatorname{depth}(e)$ as the executor's grasp of the gov
 
 
 \begin{quote}
-\textbf{Provenance.} Written from three informal zero-sum discussion notes supplied to the project (private; not published), treated as a THEORY STRESS TEST, not accepted doctrine — original header preserved in \href{\detokenize{../docs/provenance/document-history.md}}{\texttt{docs/provenance/document-history.md}}. Verdict up front: the source notes surface a real and useful multi-actor layer, AND they conflate five distinct categories; the repair below preserves the insight without the conflations. The formal residue is a \textbf{clarification plus derived extensions of the existing actor/analysis indices — not a seventh formal addition.}
+\textbf{Provenance.} Written from three informal zero-sum discussion notes supplied to the project (private; not published), treated as a THEORY STRESS TEST, not accepted doctrine — original header preserved in \href{\detokenize{../docs/provenance/document-history.md}}{\texttt{docs/\allowbreak{}provenance/\allowbreak{}document-\allowbreak{}history.\allowbreak{}md}}. Verdict up front: the source notes surface a real and useful multi-actor layer, AND they conflate five distinct categories; the repair below preserves the insight without the conflations. The formal residue is a \textbf{clarification plus derived extensions of the existing actor/analysis indices — not a seventh formal addition.}
 
 \end{quote}
 

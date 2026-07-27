@@ -16,6 +16,27 @@ from latex_to_typst_math import MathConvertError, translate_display, translate_i
 ROOT = pathlib.Path(__file__).resolve().parents[1]
 PROFILE_PATH = pathlib.Path("docs/publication-profile.yaml")
 OUTPUT_PATH = pathlib.Path("publication/latex")
+LONG_TABLE_ROW_THRESHOLD = 10
+LONG_TABLE_TOTAL_CONTENT_THRESHOLD = 1500
+LONG_TABLE_MAX_ROW_CONTENT_THRESHOLD = 800
+BREAKABLE_TABLE_COLUMN_THRESHOLD = 5
+DISPLAY_MATH_MULTLINE_THRESHOLD = 180
+DISPLAY_MATH_TARGET_WIDTH = 72
+DISPLAY_MATH_LAYOUT_BREAK = "\\\\\n"
+REVIEWED_DISPLAY_MATH_BREAK_COMMANDS = frozenset(
+    {
+        r"\iff",
+        r"\implies",
+        r"\Leftrightarrow",
+        r"\Longrightarrow",
+        r"\Rightarrow",
+        r"\vee",
+        r"\wedge",
+    }
+)
+INLINE_CODE_PATH_LAYOUT_BREAK = r"\allowbreak{}"
+INLINE_CODE_PATH_BREAK_CHARACTERS = frozenset("/-._")
+INLINE_CODE_PATH_RE = re.compile(r"[A-Za-z0-9._/-]+")
 PLACEHOLDER_OPEN = "\ue000"
 PLACEHOLDER_CLOSE = "\ue001"
 PLACEHOLDER_RE = re.compile(
@@ -167,6 +188,152 @@ def _escape_code(text):
     return escaped.replace(r"\$", r"\char36{}")
 
 
+def is_path_like_inline_code(text):
+    """Return whether literal inline code has conservative repository-path form."""
+    if (
+        "/" not in text
+        or any(character.isspace() for character in text)
+        or "://" in text
+        or text.startswith("--")
+        or "//" in text
+        or INLINE_CODE_PATH_RE.fullmatch(text) is None
+    ):
+        return False
+    stripped = text.strip("/")
+    if not stripped:
+        return False
+    segments = stripped.split("/")
+    return (
+        text.startswith(("/", "./", "../"))
+        or text.endswith("/")
+        or text.count("/") >= 2
+        or any(
+            punctuation in segment
+            for segment in segments
+            for punctuation in ".-_"
+        )
+    )
+
+
+def remove_inline_code_path_layout_breaks(body):
+    """Remove only discretionary breaks inserted in a validated inline path."""
+    return body.replace(INLINE_CODE_PATH_LAYOUT_BREAK, "")
+
+
+def _render_inline_code(text):
+    escaped = _escape_code(text)
+    if not is_path_like_inline_code(text):
+        return escaped
+    output = []
+    for character in text:
+        output.append(_escape_code(character))
+        if character in INLINE_CODE_PATH_BREAK_CHARACTERS:
+            output.append(INLINE_CODE_PATH_LAYOUT_BREAK)
+    layout_body = "".join(output)
+    if remove_inline_code_path_layout_breaks(layout_body) != escaped:
+        raise GenerationError("inline-code path layout changed the source token stream")
+    return layout_body
+
+
+def reviewed_display_math_break_positions(body):
+    """Return reviewed top-level token boundaries that can take a layout break."""
+    positions = []
+    brace_depth = 0
+    parenthesis_depth = 0
+    bracket_depth = 0
+    index = 0
+    while index < len(body):
+        character = body[index]
+        if character == "\\":
+            command_end = index + 1
+            if command_end < len(body) and body[command_end].isalpha():
+                while command_end < len(body) and body[command_end].isalpha():
+                    command_end += 1
+            elif command_end < len(body):
+                command_end += 1
+            command = body[index:command_end]
+            if (
+                brace_depth == 0
+                and parenthesis_depth == 0
+                and bracket_depth == 0
+                and command in REVIEWED_DISPLAY_MATH_BREAK_COMMANDS
+            ):
+                positions.append(command_end)
+            index = command_end
+            continue
+        if character == "{":
+            brace_depth += 1
+        elif character == "}":
+            brace_depth = max(0, brace_depth - 1)
+        elif brace_depth == 0:
+            if character == "(":
+                parenthesis_depth += 1
+            elif character == ")":
+                parenthesis_depth = max(0, parenthesis_depth - 1)
+            elif character == "[":
+                bracket_depth += 1
+            elif character == "]":
+                bracket_depth = max(0, bracket_depth - 1)
+            elif (
+                character in ",;"
+                and parenthesis_depth == 0
+                and bracket_depth == 0
+            ):
+                positions.append(index + 1)
+        index += 1
+    return positions
+
+
+def remove_display_math_layout_breaks(body):
+    """Remove only layout breaks inserted by the long-display renderer."""
+    return body.replace(DISPLAY_MATH_LAYOUT_BREAK, "")
+
+
+def _multline_break_positions(body):
+    candidates = reviewed_display_math_break_positions(body)
+    selected = []
+    line_start = 0
+    while len(body) - line_start > DISPLAY_MATH_TARGET_WIDTH:
+        remaining = [
+            position
+            for position in candidates
+            if line_start < position < len(body)
+        ]
+        if not remaining:
+            break
+        target = line_start + DISPLAY_MATH_TARGET_WIDTH
+        before_target = [position for position in remaining if position <= target]
+        position = max(before_target) if before_target else min(remaining)
+        selected.append(position)
+        line_start = position
+    return selected
+
+
+def _render_display_math(body):
+    source = body.strip()
+    if (
+        len(source) < DISPLAY_MATH_MULTLINE_THRESHOLD
+        or r"\begin{" in source
+        or r"\end{" in source
+        or "\\\\\n" in source
+    ):
+        return "\n\\[\n%s\n\\]\n" % source
+    break_positions = _multline_break_positions(source)
+    if not break_positions:
+        return "\n\\[\n%s\n\\]\n" % source
+    output = []
+    cursor = 0
+    for position in break_positions:
+        output.append(source[cursor:position])
+        output.append(DISPLAY_MATH_LAYOUT_BREAK)
+        cursor = position
+    output.append(source[cursor:])
+    layout_body = "".join(output)
+    if remove_display_math_layout_breaks(layout_body) != source:
+        raise GenerationError("display-math layout changed the source token stream")
+    return "\n\\begin{multline*}\n%s\n\\end{multline*}\n" % layout_body
+
+
 def _render_text(text, math):
     output = []
     cursor = 0
@@ -174,7 +341,7 @@ def _render_text(text, math):
         output.append(_escape_text(text[cursor : match.start()]))
         kind, body = math[int(match.group(1))]
         if kind == "display":
-            output.append("\n\\[\n%s\n\\]\n" % body.strip())
+            output.append(_render_display_math(body))
         else:
             output.append("$%s$" % body)
         cursor = match.end()
@@ -195,7 +362,7 @@ def _render_inline(tokens, math):
         if kind == "text":
             output.append(_render_text(token.content, math))
         elif kind == "code_inline":
-            output.append(r"\texttt{%s}" % _escape_code(token.content))
+            output.append(r"\texttt{%s}" % _render_inline_code(token.content))
         elif kind == "strong_open":
             output.append(r"\textbf{")
         elif kind == "strong_close":
@@ -231,6 +398,148 @@ def _render_inline(tokens, math):
 def _column_spec(count):
     width = max(0.06, min(0.47, 0.94 / max(count, 1)))
     return "@{}" + "".join("p{%.3f\\linewidth}" % width for _ in range(count)) + "@{}"
+
+
+def table_requires_breakable_rows(
+    data_rows,
+    total_rendered_characters,
+    max_row_rendered_characters,
+    columns,
+):
+    """Return whether a table needs normal-flow, page-breakable row blocks."""
+    return data_rows > 0 and (
+        data_rows >= LONG_TABLE_ROW_THRESHOLD
+        or total_rendered_characters >= LONG_TABLE_TOTAL_CONTENT_THRESHOLD
+        or max_row_rendered_characters >= LONG_TABLE_MAX_ROW_CONTENT_THRESHOLD
+        or columns >= BREAKABLE_TABLE_COLUMN_THRESHOLD
+    )
+
+
+def _table_shape(table):
+    row_lengths = [len(table["header"])] + [
+        len(row) for row in table["rows"]
+    ]
+    columns = max(row_lengths or [1])
+    rows = [
+        row + [""] * (columns - len(row))
+        for row in table["rows"]
+    ]
+    row_rendered_characters = [
+        sum(len(cell) for cell in row)
+        for row in rows
+    ]
+    total_rendered_characters = sum(
+        len(cell)
+        for row in [table["header"], *rows]
+        for cell in row
+    )
+    return (
+        columns,
+        rows,
+        total_rendered_characters,
+        max(row_rendered_characters, default=0),
+    )
+
+
+def _render_standard_table(table, columns, rows):
+    output = [
+        "\n\\begin{center}\n\\begin{tabular}{%s}\n\\toprule\n"
+        % _column_spec(columns)
+    ]
+    if table["header"]:
+        output.append(
+            " & ".join(r"\textbf{%s}" % cell for cell in table["header"])
+            + " \\\\\n\\midrule\n"
+        )
+    for row in rows:
+        output.append(" & ".join(row) + " \\\\\n")
+    output.append("\\bottomrule\n\\end{tabular}\n\\end{center}\n")
+    return "".join(output)
+
+
+def _normal_flow_header_label(header, column_index):
+    label = header if header else "Column %d" % (column_index + 1)
+    if label.startswith(r"\textbf{") and label.endswith("}"):
+        label = label[len(r"\textbf{") : -1]
+    return r"\textbf{%s}:" % label
+
+
+def _render_breakable_table(
+    table,
+    columns,
+    rows,
+    total_rendered_characters,
+    max_row_rendered_characters,
+):
+    headers = table["header"] + [""] * (columns - len(table["header"]))
+    output = [
+        (
+            "\n%% breakable-row-table: data-rows=%d "
+            "total-rendered-characters=%d max-row-rendered-characters=%d\n"
+        )
+        % (
+            len(rows),
+            total_rendered_characters,
+            max_row_rendered_characters,
+        ),
+        "\\par\\medskip\n",
+        "\\hrule height 0.8pt\n",
+        "\\smallskip\n",
+    ]
+    for row_index, row in enumerate(rows):
+        output.append(
+            "%% breakable-row: %d/%d\n" % (row_index + 1, len(rows))
+        )
+        for column_index, cell in enumerate(row):
+            output.append(
+                "\\noindent%s %s\\par\n"
+                % (
+                    _normal_flow_header_label(
+                        headers[column_index],
+                        column_index,
+                    ),
+                    cell,
+                )
+            )
+        if row_index != len(rows) - 1:
+            output.extend(
+                [
+                    "\\smallskip\n",
+                    "\\hrule height 0.4pt\n",
+                    "\\smallskip\n",
+                ]
+            )
+    output.extend(
+        [
+            "\\smallskip\n",
+            "\\hrule height 0.8pt\n",
+            "\\par\\medskip\n",
+        ]
+    )
+    return "".join(output)
+
+
+def _render_table(table):
+    (
+        columns,
+        rows,
+        total_rendered_characters,
+        max_row_rendered_characters,
+    ) = _table_shape(table)
+    if table_requires_breakable_rows(
+        len(rows),
+        total_rendered_characters,
+        max_row_rendered_characters,
+        columns,
+    ):
+        return _render_breakable_table(
+            table,
+            columns,
+            rows,
+            total_rendered_characters,
+            max_row_rendered_characters,
+        )
+    return _render_standard_table(table, columns, rows)
 
 
 def render_markdown(markdown, source_name="<memory>"):
@@ -320,7 +629,7 @@ def render_markdown(markdown, source_name="<memory>"):
                     raise GenerationError(
                         "%s: math fence translation failed: %s" % (source_name, exc)
                     ) from exc
-                output.append("\n\\[\n%s\n\\]\n" % content)
+                output.append(_render_display_math(content))
             else:
                 if r"\end{verbatim}" in content:
                     raise GenerationError("code block contains an unsafe verbatim terminator")
@@ -364,23 +673,7 @@ def render_markdown(markdown, source_name="<memory>"):
             index += 1
             continue
         if kind == "table_close":
-            row_lengths = [len(table["header"])] + [
-                len(row) for row in table["rows"]
-            ]
-            columns = max(row_lengths or [1])
-            output.append(
-                "\n\\begin{center}\n\\begin{tabular}{%s}\n\\toprule\n"
-                % _column_spec(columns)
-            )
-            if table["header"]:
-                output.append(
-                    " & ".join(r"\textbf{%s}" % cell for cell in table["header"])
-                    + " \\\\\n\\midrule\n"
-                )
-            for row in table["rows"]:
-                padded = row + [""] * (columns - len(row))
-                output.append(" & ".join(padded) + " \\\\\n")
-            output.append("\\bottomrule\n\\end{tabular}\n\\end{center}\n")
+            output.append(_render_table(table))
             table = None
             index += 1
             continue

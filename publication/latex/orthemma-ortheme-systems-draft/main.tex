@@ -26,7 +26,7 @@
 \maketitle
 
 \begin{quote}
-\textbf{Provenance.} Multi-model draft lineage with successive review passes; original headers preserved verbatim in \href{\detokenize{../docs/provenance/document-history.md}}{\texttt{docs/provenance/document-history.md}}; nothing here is experimentally validated.
+\textbf{Provenance.} Multi-model draft lineage with successive review passes; original headers preserved verbatim in \href{\detokenize{../docs/provenance/document-history.md}}{\texttt{docs/\allowbreak{}provenance/\allowbreak{}document-\allowbreak{}history.\allowbreak{}md}}; nothing here is experimentally validated.
 
 \end{quote}
 \textbf{Revised manuscript draft — July 2026 (revision R6; fresh-session repository review completed; not external human peer review; not empirically validated). Not peer reviewed.}
@@ -405,19 +405,55 @@ $g \in \{\mathrm{O}, \mathrm{I}, \mathrm{E}, \mathrm{D}, \mathrm{R}, \mathrm{V},
 Five configurations, each passing the minimum-specificity test:
 
 
-\begin{center}
-\begin{tabular}{@{}p{0.188\linewidth}p{0.188\linewidth}p{0.188\linewidth}p{0.188\linewidth}p{0.188\linewidth}@{}}
-\toprule
-\textbf{Configuration} & \textbf{$g$} & \textbf{$S_\mu$} & \textbf{$\operatorname{select}_\mu$} & \textbf{Meta-policy examples} \\
-\midrule
-Evidence grade & E & \{appearance-grade, provenance-grade\} & source record or discriminating test & choose which test to run before placing \\
-Version currency & I & \{current, stale\} & lineage check of $\operatorname{ver}(m)$ against latest & quarantine on stale; or re-derive on stale \\
-Depth of resolution & R, V & \{route-sufficient, identity-complete\} & task declaration + risk class & release the route while holding residuals open \\
-Closure standard & V & per-burden dispositions vs "all done" & the residual ledger (Section 7) & claim completion only at the ledger's level \\
-Warrant state & W & \{authorized, established, both, neither\} & authorization record vs validating evidence & tag warrant type; never launder one into the other \\
-\bottomrule
-\end{tabular}
-\end{center}
+% breakable-row-table: data-rows=5 total-rendered-characters=744 max-row-rendered-characters=149
+\par\medskip
+\hrule height 0.8pt
+\smallskip
+% breakable-row: 1/5
+\noindent\textbf{Configuration}: Evidence grade\par
+\noindent\textbf{$g$}: E\par
+\noindent\textbf{$S_\mu$}: \{appearance-grade, provenance-grade\}\par
+\noindent\textbf{$\operatorname{select}_\mu$}: source record or discriminating test\par
+\noindent\textbf{Meta-policy examples}: choose which test to run before placing\par
+\smallskip
+\hrule height 0.4pt
+\smallskip
+% breakable-row: 2/5
+\noindent\textbf{Configuration}: Version currency\par
+\noindent\textbf{$g$}: I\par
+\noindent\textbf{$S_\mu$}: \{current, stale\}\par
+\noindent\textbf{$\operatorname{select}_\mu$}: lineage check of $\operatorname{ver}(m)$ against latest\par
+\noindent\textbf{Meta-policy examples}: quarantine on stale; or re-derive on stale\par
+\smallskip
+\hrule height 0.4pt
+\smallskip
+% breakable-row: 3/5
+\noindent\textbf{Configuration}: Depth of resolution\par
+\noindent\textbf{$g$}: R, V\par
+\noindent\textbf{$S_\mu$}: \{route-sufficient, identity-complete\}\par
+\noindent\textbf{$\operatorname{select}_\mu$}: task declaration + risk class\par
+\noindent\textbf{Meta-policy examples}: release the route while holding residuals open\par
+\smallskip
+\hrule height 0.4pt
+\smallskip
+% breakable-row: 4/5
+\noindent\textbf{Configuration}: Closure standard\par
+\noindent\textbf{$g$}: V\par
+\noindent\textbf{$S_\mu$}: per-burden dispositions vs "all done"\par
+\noindent\textbf{$\operatorname{select}_\mu$}: the residual ledger (Section 7)\par
+\noindent\textbf{Meta-policy examples}: claim completion only at the ledger's level\par
+\smallskip
+\hrule height 0.4pt
+\smallskip
+% breakable-row: 5/5
+\noindent\textbf{Configuration}: Warrant state\par
+\noindent\textbf{$g$}: W\par
+\noindent\textbf{$S_\mu$}: \{authorized, established, both, neither\}\par
+\noindent\textbf{$\operatorname{select}_\mu$}: authorization record vs validating evidence\par
+\noindent\textbf{Meta-policy examples}: tag warrant type; never launder one into the other\par
+\smallskip
+\hrule height 0.8pt
+\par\medskip
 
 \subsection{6.4 Plurality, conflict, precedence}
 A typical episode runs under several metaorthemes at once — a version rule, an evidence-grade rule, and a closure rule — written $\vec{\mu} = (\{\mu_1, \dots, \mu_k\}, \preceq)$ with $\preceq$ a declared strict partial precedence order. Configurations governing disjoint components compose freely (their constraints conjoin). Two rules conflict at an episode when their meta-policies prescribe incompatible constraints on the same component under the states that actually obtain; resolution is only via $\preceq$, and a conflict unresolved by $\preceq$ is a stop condition (Section 7.5) — silent override is itself a metaorthemic error. Metaorthemes can become first-order orthemes for a higher audit (Section 8.1); the regress stops at the declared governance boundary.
@@ -525,9 +561,12 @@ When a higher audit asks "was this placement made correctly, on adequate evidenc
 Following the core formalization, an orthing episode is a record
 
 
-\[
-e = \langle\, \mathrm{id};\ m, \kappa, v;\ x, H;\ \alpha, w, A, T, t;\ \vec{\mu}, \mathrm{MetaTok}, \pi;\ \vec{C}, \hat{p};\ r;\ \mathrm{estatus};\ \mathcal{Q};\ \delta;\ \mathrm{hand}_{\mathrm{in}}, \mathrm{hand}_{\mathrm{out}};\ a, \mathrm{Succ} \,\rangle
-\]
+\begin{multline*}
+e = \langle\, \mathrm{id};\ m, \kappa, v;\ x, H;\ \alpha, w, A, T, t;\\
+\ \vec{\mu}, \mathrm{MetaTok}, \pi;\ \vec{C}, \hat{p};\ r;\\
+\ \mathrm{estatus};\ \mathcal{Q};\ \delta;\ \mathrm{hand}_{\mathrm{in}},\\
+ \mathrm{hand}_{\mathrm{out}};\ a, \mathrm{Succ} \,\rangle
+\end{multline*}
 
 
 — in words: which run this is; the concrete case with its identity key and version; what the episode saw, and the ordered typed evidence gathered (each item with property class, scope, provenance, validity); who or what executed ($\alpha$ — populated even for mechanical executors) and under what warrant ($w$, distinct from both evidence and executor identity); the declared analysis $A$ (identifier and version — the index against which result correctness is judged), its task $T = \operatorname{task}(A)$ retained as a separate readable component, and the time; the governing metaorthemic configurations with precedence; $\operatorname{MetaTok}(e)$ — the concrete \textbf{metaorthemmata} (Decision 0002): case-bound configuration tokens of those governing types, each recording or referencing its identity and lineage, type-and-version via $\operatorname{MetaInst}(\bar{\mu}, \mu)$, analysis compatibility $\operatorname{Compatible}(\bar{\mu}, A(e))$, occurrence anchor $(\kappa, v)$, governed component, case-specific binding map, scope with the claims that depend on it, policy/evidence-selector/instrument-and-calibration references, the binder with its binding warrant (kept distinct from the designated executor), binding time, and validity — referencing but never absorbing the episode's evidence and trace, and omitted entirely where no material case-specific binding exists (then V3c is inapplicable); the concrete policy executed under them; the typed candidate families and the inferred placement $\hat{p}$ (profile-valued, never coerced to a singleton ortheme); the route; the per-claim evidence-status map; the claim ledger with required success surfaces; the per-burden residual-disposition map; the incoming and outgoing handoff records; and the action with its labeled successor set. Components are defined \emph{where applicable}: a read-only classification episode has no action, no successors, an empty residual map — and the governance-derived required set $\operatorname{ReqPath}(e)$, together with a recorded \texttt{not-applicable} reason for every excluded verdict, keeps "deliberately none" distinct from "omitted." Where the pathway verdicts below must be adjudicated from the episode's own record, a bounded ordered trace of states and updates is also required, at a granularity governance declares — trivial cases carry no trace, and maximal logging is never a blanket requirement.
@@ -553,50 +592,119 @@ terminology_adoption: not-established
 runtime: not-implemented
 collective_execution: not-implemented
 \end{verbatim}
-The bounded v0 operation is controlled residual-recurrence assessment. Fingerprint equality establishes only a structural recurrence candidate; support resolves through typed episode, session, orthing, actor, source-family, input-family, and occurrence-time records. A threshold requires distinct orthings and distinct episodes and is only a review trigger; the opportunity denominator is backed by explicit opportunity records, while independence uses a fixed declared policy. Suspected locus remains distinct from causal diagnosis or intervention. Assessment, intervention disposition, proposal, authorization, application, and later outcome evaluation remain separate. The schemas and fixtures under \texttt{schemas/} and \texttt{examples/somnus/} are offline conformance artifacts, not a live ledger, scheduler, analyzer, writeback engine, collective network, or learning result (Decision 0035).
+The bounded v0 operation is controlled residual-recurrence assessment. Fingerprint equality establishes only a structural recurrence candidate; support resolves through typed episode, session, orthing, actor, source-family, input-family, and occurrence-time records. A threshold requires distinct orthings and distinct episodes and is only a review trigger; the opportunity denominator is backed by explicit opportunity records, while independence uses a fixed declared policy. Suspected locus remains distinct from causal diagnosis or intervention. Assessment, intervention disposition, proposal, authorization, application, and later outcome evaluation remain separate. The schemas and fixtures under \texttt{schemas/\allowbreak{}} and \texttt{examples/\allowbreak{}somnus/\allowbreak{}} are offline conformance artifacts, not a live ledger, scheduler, analyzer, writeback engine, collective network, or learning result (Decision 0035).
 
 
 \subsection{8.3 The verdict vector}
-The verdicts diagnose distinct dimensions and are not identified with one another; they are NOT assumed pairwise logically independent — every definitional implication is declared explicitly, and the only one these definitions introduce is the claim-wise $\operatorname{V2b-T}_q \to \operatorname{V1}_q$ (full implication table: core formalization §4.1; Decision 0003, superseding the earlier "none entails another"). Verdict labels follow the normative registry (\texttt{docs/verdict-registry.yaml}, Decision 0004): semantic IDs — \texttt{RESULT\_CORRECT}, \texttt{EVIDENCE\_SUPPORT}, \texttt{PROCEDURE\_RELIABLE}, \texttt{TOKEN\_TRUTH\_LINKED}, \texttt{EVIDENCE\_CURRENT}, \texttt{GOV\_CONFIG\_ADEQUATE}, \texttt{GOV\_POLICY\_ADEQUATE}, \texttt{GOV\_TOKEN\_ADEQUATE}, \texttt{EXECUTION\_FAITHFUL}, \texttt{EX\_ANTE\_JUSTIFIED}, \texttt{ROUTE\_ADMISSIBLE}, \texttt{ROUTE\_QUALITY}, \texttt{CLOSURE\_TRUTHFUL}, \texttt{ROBUST\_NEIGHBORHOOD} — are authoritative in machine-readable records; the $\operatorname{V}\dots$ display aliases below are the prose forms. Pathway adequacy conjoins over the RESULT-FREE governed core $\operatorname{CorePath} = \{\operatorname{V2a}, \operatorname{V2b-P}, \operatorname{V2c}, \operatorname{V3a}, \operatorname{V3b}, \operatorname{V3c}, \operatorname{V3d}, \operatorname{V3e}, \operatorname{V4a}, \operatorname{V5}, \operatorname{V6}\}$ — V1 (result), V2b-T (factive), and route near-optimality are excluded. The required set $\operatorname{ReqPath}(e)$ is DERIVED from the declared analysis, episode shape, risk class, claims, and governance (never a discretionary list; "not tested" is never "not applicable"; every exclusion carries a recorded reason), and each verdict carries a status in \{pass, fail, undetermined, not-applicable\}: $\operatorname{PathwayAdequate}(e)$ iff every required verdict passes; $\operatorname{PathwayDefective}(e)$ iff one fails; $\operatorname{PathwayUndetermined}(e)$ when none fails but something required is unevaluated — a missing assessment is never silently a pass. (R3 honesty note: the repository ships the derivation as a machine-readable governance rule table with a per-verdict trace and an omission-attack fixture — \texttt{docs/governance-requirements.yaml}, \texttt{scripts/derive\_reqpath.py} — while $\operatorname{RequiredBy}$ \emph{in general} remains a governance-supplied parameterized interface, an acknowledged open parameter rather than a closed universal calculus; core formalization §4.1.)
+The verdicts diagnose distinct dimensions and are not identified with one another; they are NOT assumed pairwise logically independent — every definitional implication is declared explicitly, and the only one these definitions introduce is the claim-wise $\operatorname{V2b-T}_q \to \operatorname{V1}_q$ (full implication table: core formalization §4.1; Decision 0003, superseding the earlier "none entails another"). Verdict labels follow the normative registry (\texttt{docs/\allowbreak{}verdict-\allowbreak{}registry.\allowbreak{}yaml}, Decision 0004): semantic IDs — \texttt{RESULT\_CORRECT}, \texttt{EVIDENCE\_SUPPORT}, \texttt{PROCEDURE\_RELIABLE}, \texttt{TOKEN\_TRUTH\_LINKED}, \texttt{EVIDENCE\_CURRENT}, \texttt{GOV\_CONFIG\_ADEQUATE}, \texttt{GOV\_POLICY\_ADEQUATE}, \texttt{GOV\_TOKEN\_ADEQUATE}, \texttt{EXECUTION\_FAITHFUL}, \texttt{EX\_ANTE\_JUSTIFIED}, \texttt{ROUTE\_ADMISSIBLE}, \texttt{ROUTE\_QUALITY}, \texttt{CLOSURE\_TRUTHFUL}, \texttt{ROBUST\_NEIGHBORHOOD} — are authoritative in machine-readable records; the $\operatorname{V}\dots$ display aliases below are the prose forms. Pathway adequacy conjoins over the RESULT-FREE governed core $\operatorname{CorePath} = \{\operatorname{V2a}, \operatorname{V2b-P}, \operatorname{V2c}, \operatorname{V3a}, \operatorname{V3b}, \operatorname{V3c}, \operatorname{V3d}, \operatorname{V3e}, \operatorname{V4a}, \operatorname{V5}, \operatorname{V6}\}$ — V1 (result), V2b-T (factive), and route near-optimality are excluded. The required set $\operatorname{ReqPath}(e)$ is DERIVED from the declared analysis, episode shape, risk class, claims, and governance (never a discretionary list; "not tested" is never "not applicable"; every exclusion carries a recorded reason), and each verdict carries a status in \{pass, fail, undetermined, not-applicable\}: $\operatorname{PathwayAdequate}(e)$ iff every required verdict passes; $\operatorname{PathwayDefective}(e)$ iff one fails; $\operatorname{PathwayUndetermined}(e)$ when none fails but something required is unevaluated — a missing assessment is never silently a pass. (R3 honesty note: the repository ships the derivation as a machine-readable governance rule table with a per-verdict trace and an omission-attack fixture — \texttt{docs/\allowbreak{}governance-\allowbreak{}requirements.\allowbreak{}yaml}, \texttt{scripts/\allowbreak{}derive\_\allowbreak{}reqpath.\allowbreak{}py} — while $\operatorname{RequiredBy}$ \emph{in general} remains a governance-supplied parameterized interface, an acknowledged open parameter rather than a closed universal calculus; core formalization §4.1.)
 
 
-\begin{center}
-\begin{tabular}{@{}p{0.470\linewidth}p{0.470\linewidth}@{}}
-\toprule
-\textbf{Verdict} & \textbf{Question it answers} \\
-\midrule
-\textbf{V1 — result correctness} & Does the placed profile agree with $O^*(m; A(e))$ — the actual profile under the analysis recorded in the episode — at the governed level (or, weaker, is it route-sufficient with every placed claim true)? \textbf{Result-side: never a conjunct of pathway adequacy.} \\
-\textbf{V2a — evidential support} & Does the typed evidence, within its declared scopes, meet the declared standard for each placed claim? \\
-\textbf{V2b-P — configured-procedure truth-conduciveness} (pathway-side; NON-FACTIVE) & Does the procedure family actually instantiated here — under its governing configuration, applicable metaorthemmata, and execution mode — satisfy the predeclared reliability criterion over its DECLARED reference class (per-claim $\operatorname{RelSpec}_q$: reference class, stratum, metric, threshold, perturbation/comparison family, protocol, reliability evidence, version/validity)? The reference class and threshold are fixed independently of this episode's outcome; one current correct result cannot by itself establish it; \textbf{it does not entail V1} — a reliable configured procedure may produce a rare error. Default criterion: sensitivity; declared variants admissible. \\
-\textbf{V2b-T — token-level truth linkage} (result-side annotation; EXCLUDED from the pathway core) & Was THIS placed claim correct through the truth-relevant evidential mechanism rather than merely alongside it? FACTIVE and claim-wise: $\operatorname{V2b-T}_q \to \operatorname{V1}_q$; a profile-level reading requires every placed claim covered plus an explicit aggregation rule. Reportable for stopped-clock/Gettier diagnoses; excluded from $\operatorname{PathwayAdequate}$ precisely because its factivity would re-import result correctness. Non-factive token-local defects belong under V2a/V2b-P/V2c/V3a/V3b/V3c/V3d/V6, never under V2b-T alone. \\
-\textbf{V2c — evidence currentness} & Is each load-bearing evidence item current for $(\kappa, v)$ and of admissible provenance — not stale, not unsourced? \\
-\textbf{V3a — configuration adequacy} & Was each governing configuration adequate for the case's risk class — do its declared states separate what this case class can occupy, and can its selecting evidence actually discriminate them? \\
-\textbf{V3b — policy adequacy} & Was the meta-policy/procedure well-formed for the configuration it ran under? (A sound rulebook can carry an ill-formed procedure.) \\
-\textbf{V3c — governing-token adequacy} (Decision 0002) & Was every applicable concrete metaorthemma — the case-bound configuration token of a governing type (§8.2) — correctly instantiated, analysis-compatible, occurrence-anchored, correctly scoped to its claims, current, provenanced, and bound under authority? Per-token statuses are preserved alongside the episode-level conjunction; with no applicable token, V3c ∉ ReqPath(e) (zero-burden rule; status recorded not-applicable, with reason). Isolates: correct standard + sound policy + faithful execution + \textbf{defective case-specific binding} (wrong reference plane, wrong-role tolerance, expired calibration, wrong fixture or success surface). The Decision-0004 lettering matches the conceptual order: V3a → V3b → V3c (binding) → V3d (execution) → V3e. \\
-\textbf{V3d — executor fidelity} & Did the actor actually execute the procedure as written? (Adequate rule + adequate policy + infidelic executor routes to a different remedy: retrain or replace the executor, not rewrite the rule.) \\
-\textbf{V3e — ex-ante justification} & At decision time, on exactly the evidence then available, was the placement the reasonable one under the declared standard? (Blameless-at-the-time; indexed to decision time, unlike V2a/V2b-P/V2b-T, which are audit-time verdicts.) \\
-\textbf{V4a — route safety} & Was the route admissible under the constraints in force? Correct-route-unavailable is recorded as routing failure, not diagnostic uncertainty. (A finer near-optimality verdict may be recorded separately: safe ≠ best.) \\
-\textbf{V5 — closure truthfulness} & Does every residual carry an admissible disposition with traceable ownership, and does the completion claim match the ledger — no collapse of deferred/transferred/risk-accepted into "resolved"? \\
-\textbf{V6 — robustness} & Over the declared perturbation neighborhood of the episode — same policy, same rules, inputs from a declared perturbation family (version bumped, marker removed or spoofed, evidence reordered, near-identical sibling substituted) — is the V1 failure rate below tolerance? Paired metamorphic probes are V6's operational estimator. \\
-\bottomrule
-\end{tabular}
-\end{center}
+% breakable-row-table: data-rows=13 total-rendered-characters=4535 max-row-rendered-characters=809
+\par\medskip
+\hrule height 0.8pt
+\smallskip
+% breakable-row: 1/13
+\noindent\textbf{Verdict}: \textbf{V1 — result correctness}\par
+\noindent\textbf{Question it answers}: Does the placed profile agree with $O^*(m; A(e))$ — the actual profile under the analysis recorded in the episode — at the governed level (or, weaker, is it route-sufficient with every placed claim true)? \textbf{Result-side: never a conjunct of pathway adequacy.}\par
+\smallskip
+\hrule height 0.4pt
+\smallskip
+% breakable-row: 2/13
+\noindent\textbf{Verdict}: \textbf{V2a — evidential support}\par
+\noindent\textbf{Question it answers}: Does the typed evidence, within its declared scopes, meet the declared standard for each placed claim?\par
+\smallskip
+\hrule height 0.4pt
+\smallskip
+% breakable-row: 3/13
+\noindent\textbf{Verdict}: \textbf{V2b-P — configured-procedure truth-conduciveness} (pathway-side; NON-FACTIVE)\par
+\noindent\textbf{Question it answers}: Does the procedure family actually instantiated here — under its governing configuration, applicable metaorthemmata, and execution mode — satisfy the predeclared reliability criterion over its DECLARED reference class (per-claim $\operatorname{RelSpec}_q$: reference class, stratum, metric, threshold, perturbation/comparison family, protocol, reliability evidence, version/validity)? The reference class and threshold are fixed independently of this episode's outcome; one current correct result cannot by itself establish it; \textbf{it does not entail V1} — a reliable configured procedure may produce a rare error. Default criterion: sensitivity; declared variants admissible.\par
+\smallskip
+\hrule height 0.4pt
+\smallskip
+% breakable-row: 4/13
+\noindent\textbf{Verdict}: \textbf{V2b-T — token-level truth linkage} (result-side annotation; EXCLUDED from the pathway core)\par
+\noindent\textbf{Question it answers}: Was THIS placed claim correct through the truth-relevant evidential mechanism rather than merely alongside it? FACTIVE and claim-wise: $\operatorname{V2b-T}_q \to \operatorname{V1}_q$; a profile-level reading requires every placed claim covered plus an explicit aggregation rule. Reportable for stopped-clock/Gettier diagnoses; excluded from $\operatorname{PathwayAdequate}$ precisely because its factivity would re-import result correctness. Non-factive token-local defects belong under V2a/V2b-P/V2c/V3a/V3b/V3c/V3d/V6, never under V2b-T alone.\par
+\smallskip
+\hrule height 0.4pt
+\smallskip
+% breakable-row: 5/13
+\noindent\textbf{Verdict}: \textbf{V2c — evidence currentness}\par
+\noindent\textbf{Question it answers}: Is each load-bearing evidence item current for $(\kappa, v)$ and of admissible provenance — not stale, not unsourced?\par
+\smallskip
+\hrule height 0.4pt
+\smallskip
+% breakable-row: 6/13
+\noindent\textbf{Verdict}: \textbf{V3a — configuration adequacy}\par
+\noindent\textbf{Question it answers}: Was each governing configuration adequate for the case's risk class — do its declared states separate what this case class can occupy, and can its selecting evidence actually discriminate them?\par
+\smallskip
+\hrule height 0.4pt
+\smallskip
+% breakable-row: 7/13
+\noindent\textbf{Verdict}: \textbf{V3b — policy adequacy}\par
+\noindent\textbf{Question it answers}: Was the meta-policy/procedure well-formed for the configuration it ran under? (A sound rulebook can carry an ill-formed procedure.)\par
+\smallskip
+\hrule height 0.4pt
+\smallskip
+% breakable-row: 8/13
+\noindent\textbf{Verdict}: \textbf{V3c — governing-token adequacy} (Decision 0002)\par
+\noindent\textbf{Question it answers}: Was every applicable concrete metaorthemma — the case-bound configuration token of a governing type (§8.2) — correctly instantiated, analysis-compatible, occurrence-anchored, correctly scoped to its claims, current, provenanced, and bound under authority? Per-token statuses are preserved alongside the episode-level conjunction; with no applicable token, V3c ∉ ReqPath(e) (zero-burden rule; status recorded not-applicable, with reason). Isolates: correct standard + sound policy + faithful execution + \textbf{defective case-specific binding} (wrong reference plane, wrong-role tolerance, expired calibration, wrong fixture or success surface). The Decision-0004 lettering matches the conceptual order: V3a → V3b → V3c (binding) → V3d (execution) → V3e.\par
+\smallskip
+\hrule height 0.4pt
+\smallskip
+% breakable-row: 9/13
+\noindent\textbf{Verdict}: \textbf{V3d — executor fidelity}\par
+\noindent\textbf{Question it answers}: Did the actor actually execute the procedure as written? (Adequate rule + adequate policy + infidelic executor routes to a different remedy: retrain or replace the executor, not rewrite the rule.)\par
+\smallskip
+\hrule height 0.4pt
+\smallskip
+% breakable-row: 10/13
+\noindent\textbf{Verdict}: \textbf{V3e — ex-ante justification}\par
+\noindent\textbf{Question it answers}: At decision time, on exactly the evidence then available, was the placement the reasonable one under the declared standard? (Blameless-at-the-time; indexed to decision time, unlike V2a/V2b-P/V2b-T, which are audit-time verdicts.)\par
+\smallskip
+\hrule height 0.4pt
+\smallskip
+% breakable-row: 11/13
+\noindent\textbf{Verdict}: \textbf{V4a — route safety}\par
+\noindent\textbf{Question it answers}: Was the route admissible under the constraints in force? Correct-route-unavailable is recorded as routing failure, not diagnostic uncertainty. (A finer near-optimality verdict may be recorded separately: safe ≠ best.)\par
+\smallskip
+\hrule height 0.4pt
+\smallskip
+% breakable-row: 12/13
+\noindent\textbf{Verdict}: \textbf{V5 — closure truthfulness}\par
+\noindent\textbf{Question it answers}: Does every residual carry an admissible disposition with traceable ownership, and does the completion claim match the ledger — no collapse of deferred/transferred/risk-accepted into "resolved"?\par
+\smallskip
+\hrule height 0.4pt
+\smallskip
+% breakable-row: 13/13
+\noindent\textbf{Verdict}: \textbf{V6 — robustness}\par
+\noindent\textbf{Question it answers}: Over the declared perturbation neighborhood of the episode — same policy, same rules, inputs from a declared perturbation family (version bumped, marker removed or spoofed, evidence reordered, near-identical sibling substituted) — is the V1 failure rate below tolerance? Paired metamorphic probes are V6's operational estimator.\par
+\smallskip
+\hrule height 0.8pt
+\par\medskip
 
 \subsection{8.4 The result × pathway matrix}
 The matrix applies only after the pathway status resolves as adequate or defective; $\operatorname{PathwayUndetermined}$ episodes remain outside the four cells until audited. (Decision 0003: the earlier parenthetical committing token-level truth-connection to the conjunction is superseded — the incorrect-result/adequate-pathway cell is genuinely representable.)
 
 
-\begin{center}
-\begin{tabular}{@{}p{0.313\linewidth}p{0.313\linewidth}p{0.313\linewidth}@{}}
-\toprule
-\textbf{} & \textbf{\textbf{PathwayAdequate}} & \textbf{\textbf{PathwayDefective}} \\
-\midrule
-\textbf{Result correct (V1)} & \textbf{Nominal.} A release gate runs the behavioural suite against the exact commit it gates, on current artifacts, correctly bound (V3c where applicable), under a reliable configured procedure; it passes; the build is in fact good. Nothing to fix. & \textbf{Correct + defective (stopped clock / compensating error / governing-side luck).} The answer is right; the failure locus is V2b-P, V3a, V3b, V3c, V3d, or V6. The remedy targets the procedure, rule, or binding — not the verdict. Worked example below. \\
-\textbf{Result incorrect (¬V1)} & \textbf{$\operatorname{AdequatePathError}(e) := \neg \operatorname{V1}(e) \wedge \operatorname{PathwayAdequate}(e)$} — the justified rare miss of a non-perfect but sufficiently reliable process used correctly. A triage router places a failing test under "infrastructure flake" because every available signal points there; the true cause is a rare race in new code: V3e holds, the procedure met its declared reference-class reliability (V2b-P), and the pathway IS certified adequate; \texttt{V2b-T} fails for the claim (it is false). Where V3e ∈ ReqPath(e), $\operatorname{JustifiedMiss}(e) := \operatorname{AdequatePathError}(e)$ (V3e's pass is already inside PathwayAdequate). Remedy: a new discriminating evidence source; no rule or executor blame. Orthemic adequacy does not establish moral, legal, institutional, or theological blamelessness. & \textbf{Compound failure.} A deploy gate reads a cached test result from the previous commit and approves the current one: wrong placement via a defective pathway (¬V1; V2c, V3a fail). Remedy: both the placement and the lineage machinery. \\
-\bottomrule
-\end{tabular}
-\end{center}
-Deterministic fixtures establishing all four resolved cells (plus the undetermined state, the stale-directive case, and safe-but-suboptimal routing) are given in the core formalization §4.2 (F1–F7) with machine-checkable encodings in \texttt{tests/verdict-fixtures.json}.
+% breakable-row-table: data-rows=2 total-rendered-characters=1697 max-row-rendered-characters=1115
+\par\medskip
+\hrule height 0.8pt
+\smallskip
+% breakable-row: 1/2
+\noindent\textbf{Column 1}: \textbf{Result correct (V1)}\par
+\noindent\textbf{PathwayAdequate}: \textbf{Nominal.} A release gate runs the behavioural suite against the exact commit it gates, on current artifacts, correctly bound (V3c where applicable), under a reliable configured procedure; it passes; the build is in fact good. Nothing to fix.\par
+\noindent\textbf{PathwayDefective}: \textbf{Correct + defective (stopped clock / compensating error / governing-side luck).} The answer is right; the failure locus is V2b-P, V3a, V3b, V3c, V3d, or V6. The remedy targets the procedure, rule, or binding — not the verdict. Worked example below.\par
+\smallskip
+\hrule height 0.4pt
+\smallskip
+% breakable-row: 2/2
+\noindent\textbf{Column 1}: \textbf{Result incorrect (¬V1)}\par
+\noindent\textbf{PathwayAdequate}: \textbf{$\operatorname{AdequatePathError}(e) := \neg \operatorname{V1}(e) \wedge \operatorname{PathwayAdequate}(e)$} — the justified rare miss of a non-perfect but sufficiently reliable process used correctly. A triage router places a failing test under "infrastructure flake" because every available signal points there; the true cause is a rare race in new code: V3e holds, the procedure met its declared reference-class reliability (V2b-P), and the pathway IS certified adequate; \texttt{V2b-T} fails for the claim (it is false). Where V3e ∈ ReqPath(e), $\operatorname{JustifiedMiss}(e) := \operatorname{AdequatePathError}(e)$ (V3e's pass is already inside PathwayAdequate). Remedy: a new discriminating evidence source; no rule or executor blame. Orthemic adequacy does not establish moral, legal, institutional, or theological blamelessness.\par
+\noindent\textbf{PathwayDefective}: \textbf{Compound failure.} A deploy gate reads a cached test result from the previous commit and approves the current one: wrong placement via a defective pathway (¬V1; V2c, V3a fail). Remedy: both the placement and the lineage machinery.\par
+\smallskip
+\hrule height 0.8pt
+\par\medskip
+Deterministic fixtures establishing all four resolved cells (plus the undetermined state, the stale-directive case, and safe-but-suboptimal routing) are given in the core formalization §4.2 (F1–F7) with machine-checkable encodings in \texttt{tests/\allowbreak{}verdict-\allowbreak{}fixtures.\allowbreak{}json}.
 
 
 \subsection{8.5 Worked example: the stopped-clock validator}
@@ -753,7 +861,7 @@ An operation without the union in advance would have to build each piece in resp
 \end{quote}
 
 \subsection{11.5 The stale steer (recovered directive without current force)}
-A system recovers an earlier governing instruction — after context compaction, a crash, or a handover — and follows it. The recovery is textually faithful, the instruction was genuinely issued under proper authority, and it had been superseded in the interim. Five claims must be kept apart: that the directive \emph{exists}, that this copy is \emph{authentic}, that it was \emph{recovered} through a declared channel, that its issuer was \emph{authorized}, and that it is \emph{in force} now — and evidence for any one is not evidence for the next. The verdict layer needs no new machinery: currentness of the governing evidence fails (V2c), the bound governing token is not current (V3c), the executor is faithful (V3d passes — faithful execution under a defective governing token), and a closure claim of "acted under current instructions" fails V5. The full directive record, the five predicates, and the deterministic fixture (F6) are given in \texttt{examples/compaction-stale-steer.md} (Decision 0006).
+A system recovers an earlier governing instruction — after context compaction, a crash, or a handover — and follows it. The recovery is textually faithful, the instruction was genuinely issued under proper authority, and it had been superseded in the interim. Five claims must be kept apart: that the directive \emph{exists}, that this copy is \emph{authentic}, that it was \emph{recovered} through a declared channel, that its issuer was \emph{authorized}, and that it is \emph{in force} now — and evidence for any one is not evidence for the next. The verdict layer needs no new machinery: currentness of the governing evidence fails (V2c), the bound governing token is not current (V3c), the executor is faithful (V3d passes — faithful execution under a defective governing token), and a closure claim of "acted under current instructions" fails V5. The full directive record, the five predicates, and the deterministic fixture (F6) are given in \texttt{examples/\allowbreak{}compaction-\allowbreak{}stale-\allowbreak{}steer.\allowbreak{}md} (Decision 0006).
 
 
 \bigskip\hrule\bigskip
@@ -762,25 +870,76 @@ A system recovers an earlier governing instruction — after context compaction,
 Established constructs largely theorise the type side, and each facet of the present architecture has a nearest neighbor, conceded here facet by facet:
 
 
-\begin{center}
-\begin{tabular}{@{}p{0.470\linewidth}p{0.470\linewidth}@{}}
-\toprule
-\textbf{Facet of this paper} & \textbf{Nearest established neighbor} \\
-\midrule
-Plural, hierarchical profiles & multi-label and hierarchical classification (Tsoumakas \& Katakis 2007; Silla \& Freitas 2011) \\
-Maintained candidate structure & POMDP belief states (Kaelbling, Littman \& Cassandra 1998); predictive-state representations (Littman, Sutton \& Singh 2001) \\
-Abstention, escalation, quarantine & reject-option classification (Chow 1970); selective prediction (El-Yaniv \& Wiener 2010; Geifman \& El-Yaniv 2017); open-set recognition (Scheirer et al. 2013); OOD detection (Hendrycks \& Gimpel 2017) \\
-Deciding when to stop investigating & value-of-information (Howard 1966) and sequential/optimal stopping (Wald 1947) \\
-Residual obligations with owners & risk registers and risk-management guidelines (ISO 31000:2018); hazard logs \\
-Placement statuses and transitions & ticket/workflow state machines (commodity practice; no single citable origin is load-bearing here) \\
-Lineage, versions, audit records & W3C PROV-DM (Moreau \& Missier 2013); audit trails; ML lineage systems \\
-Correct result through defective process & process reliabilism, for beliefs (Goldman 1979; the structure of Gettier 1963) \\
-Perturbation probes for weak rules & metamorphic testing (Chen, Cheung \& Yiu 1998; Chen et al. 2018) \\
-Rule adequacy vs outcome testing & assurance practice: tests of controls vs substantive procedures (ISA 330) \\
-Type individuation and safe merger & sufficient statistics (Fisher 1922); causal states (Crutchfield \& Young 1989; Shalizi \& Crutchfield 2001); bisimulation and MDP state abstraction (Larsen \& Skou 1991; Givan, Dean \& Greig 2003); automata minimisation (Hopcroft 1971) \\
-\bottomrule
-\end{tabular}
-\end{center}
+% breakable-row-table: data-rows=11 total-rendered-characters=1603 max-row-rendered-characters=269
+\par\medskip
+\hrule height 0.8pt
+\smallskip
+% breakable-row: 1/11
+\noindent\textbf{Facet of this paper}: Plural, hierarchical profiles\par
+\noindent\textbf{Nearest established neighbor}: multi-label and hierarchical classification (Tsoumakas \& Katakis 2007; Silla \& Freitas 2011)\par
+\smallskip
+\hrule height 0.4pt
+\smallskip
+% breakable-row: 2/11
+\noindent\textbf{Facet of this paper}: Maintained candidate structure\par
+\noindent\textbf{Nearest established neighbor}: POMDP belief states (Kaelbling, Littman \& Cassandra 1998); predictive-state representations (Littman, Sutton \& Singh 2001)\par
+\smallskip
+\hrule height 0.4pt
+\smallskip
+% breakable-row: 3/11
+\noindent\textbf{Facet of this paper}: Abstention, escalation, quarantine\par
+\noindent\textbf{Nearest established neighbor}: reject-option classification (Chow 1970); selective prediction (El-Yaniv \& Wiener 2010; Geifman \& El-Yaniv 2017); open-set recognition (Scheirer et al. 2013); OOD detection (Hendrycks \& Gimpel 2017)\par
+\smallskip
+\hrule height 0.4pt
+\smallskip
+% breakable-row: 4/11
+\noindent\textbf{Facet of this paper}: Deciding when to stop investigating\par
+\noindent\textbf{Nearest established neighbor}: value-of-information (Howard 1966) and sequential/optimal stopping (Wald 1947)\par
+\smallskip
+\hrule height 0.4pt
+\smallskip
+% breakable-row: 5/11
+\noindent\textbf{Facet of this paper}: Residual obligations with owners\par
+\noindent\textbf{Nearest established neighbor}: risk registers and risk-management guidelines (ISO 31000:2018); hazard logs\par
+\smallskip
+\hrule height 0.4pt
+\smallskip
+% breakable-row: 6/11
+\noindent\textbf{Facet of this paper}: Placement statuses and transitions\par
+\noindent\textbf{Nearest established neighbor}: ticket/workflow state machines (commodity practice; no single citable origin is load-bearing here)\par
+\smallskip
+\hrule height 0.4pt
+\smallskip
+% breakable-row: 7/11
+\noindent\textbf{Facet of this paper}: Lineage, versions, audit records\par
+\noindent\textbf{Nearest established neighbor}: W3C PROV-DM (Moreau \& Missier 2013); audit trails; ML lineage systems\par
+\smallskip
+\hrule height 0.4pt
+\smallskip
+% breakable-row: 8/11
+\noindent\textbf{Facet of this paper}: Correct result through defective process\par
+\noindent\textbf{Nearest established neighbor}: process reliabilism, for beliefs (Goldman 1979; the structure of Gettier 1963)\par
+\smallskip
+\hrule height 0.4pt
+\smallskip
+% breakable-row: 9/11
+\noindent\textbf{Facet of this paper}: Perturbation probes for weak rules\par
+\noindent\textbf{Nearest established neighbor}: metamorphic testing (Chen, Cheung \& Yiu 1998; Chen et al. 2018)\par
+\smallskip
+\hrule height 0.4pt
+\smallskip
+% breakable-row: 10/11
+\noindent\textbf{Facet of this paper}: Rule adequacy vs outcome testing\par
+\noindent\textbf{Nearest established neighbor}: assurance practice: tests of controls vs substantive procedures (ISA 330)\par
+\smallskip
+\hrule height 0.4pt
+\smallskip
+% breakable-row: 11/11
+\noindent\textbf{Facet of this paper}: Type individuation and safe merger\par
+\noindent\textbf{Nearest established neighbor}: sufficient statistics (Fisher 1922); causal states (Crutchfield \& Young 1989; Shalizi \& Crutchfield 2001); bisimulation and MDP state abstraction (Larsen \& Skou 1991; Givan, Dean \& Greig 2003); automata minimisation (Hopcroft 1971)\par
+\smallskip
+\hrule height 0.8pt
+\par\medskip
 The type-individuation mathematics is inherited outright. The proposed residual is exactly three things. (1) \textbf{The union:} no listed framework, in its standard individual form, supplies the others or names their union. (2) \textbf{The lifecycle:} the explicit, single-object connection of disclosure, evidence typing, representation, routing, validation, per-burden closure, and governed revision to the placement status of a concrete occurrence and its successors. (3) \textbf{The joint verdict layer:} process reliabilism names truth-connection for beliefs but has no operational record; provenance systems have operational records but no verdict layer; assurance and metamorphic testing each hold one verdict without the joint object. The orthing episode is one standardized object on which result correctness, evidential support, truth-connection, currentness, rule adequacy, policy adequacy, executor fidelity, ex-ante justification, route safety, closure truthfulness, and robustness are simultaneously definable. A bespoke composite could of course be extended with an equivalent record; the contribution claimed here is to state that integration once, generically, with a machine-checkable contract — an integration proposal and a standardization hypothesis, not an impossibility result. Whether the integration pays for itself is Section 13's question, not this section's claim.
 
 
@@ -791,17 +950,17 @@ The boundary is fixed by Decision 0015 and is strict. A model's latent state $z$
 
 
 \subsection{12.2 A domain-specific application (bounded; not evidence, not part of the contribution claim)}
-A separate, co-developed repository (\texttt{theislampill/daee-epistemics}, inspected read-only at a pinned commit) is a domain-specific noetic-diagnostic runtime whose objects can be \emph{typed through} this framework: an engagement is an immediate occurrence; public discourse is observation; an inferred noetic profile is a candidate placement, never the person's interior state; the governing distinctions are metaorthemes, their case bindings metaorthemmata, and the whole run an episode with a claim/residual ledger and a whole-state reread. That crosswalk (with a mandatory notation firewall and ten adversarial fixtures) is documented under \texttt{applications/daee-epistemics/}. Its role here is strictly bounded: it demonstrates that the architecture can \textbf{type a real designed system} (representability) and it \textbf{stress-tests} the framework's ability to keep state, observation, governing standard, application token, execution, closure, and restoration distinct. Because the two repositories share an owner and a related model lineage, any apparent convergence may reflect \textbf{co-development}; the application is therefore \textbf{not independent validation}, \textbf{not} evidence for any claim of this paper, and \textbf{not part of the contribution/novelty argument} — which remains an integration proposal adjudicated only by the unrun benchmarks of Section 13. It establishes nothing about fiṭrah, metaphysical orthability, a Necessary Being, or divine Speech.
+A separate, co-developed repository (\texttt{theislampill/\allowbreak{}daee-\allowbreak{}epistemics}, inspected read-only at a pinned commit) is a domain-specific noetic-diagnostic runtime whose objects can be \emph{typed through} this framework: an engagement is an immediate occurrence; public discourse is observation; an inferred noetic profile is a candidate placement, never the person's interior state; the governing distinctions are metaorthemes, their case bindings metaorthemmata, and the whole run an episode with a claim/residual ledger and a whole-state reread. That crosswalk (with a mandatory notation firewall and ten adversarial fixtures) is documented under \texttt{applications/\allowbreak{}daee-\allowbreak{}epistemics/\allowbreak{}}. Its role here is strictly bounded: it demonstrates that the architecture can \textbf{type a real designed system} (representability) and it \textbf{stress-tests} the framework's ability to keep state, observation, governing standard, application token, execution, closure, and restoration distinct. Because the two repositories share an owner and a related model lineage, any apparent convergence may reflect \textbf{co-development}; the application is therefore \textbf{not independent validation}, \textbf{not} evidence for any claim of this paper, and \textbf{not part of the contribution/novelty argument} — which remains an integration proposal adjudicated only by the unrun benchmarks of Section 13. It establishes nothing about fiṭrah, metaphysical orthability, a Necessary Being, or divine Speech.
 
 
 \bigskip\hrule\bigskip
 
 \section{13. Empirical Program}
-Three evaluations, kept strictly separate. \textbf{Nothing in this paper is experimentally validated.} The current public evidence is exactly this: machine-checked internal agreement over the declared definitions, schemas, examples, and adversarial fixtures — which proves no mathematical consistency or completeness and no utility — and \textbf{no public observational dataset}. The first two programs below exist as frozen, deterministically validated, ready-to-run packets under \texttt{experiments/} (canonical per-packet state: \texttt{experiments/experiment-status.yaml}, Decision 0018); the terminology instrument awaits its owner-gated blind matching review. \textbf{None has run, and none is externally preregistered} — a Git freeze is not a preregistration, and registry submission is an owner/external act.
+Three evaluations, kept strictly separate. \textbf{Nothing in this paper is experimentally validated.} The current public evidence is exactly this: machine-checked internal agreement over the declared definitions, schemas, examples, and adversarial fixtures — which proves no mathematical consistency or completeness and no utility — and \textbf{no public observational dataset}. The first two programs below exist as frozen, deterministically validated, ready-to-run packets under \texttt{experiments/\allowbreak{}} (canonical per-packet state: \texttt{experiments/\allowbreak{}experiment-\allowbreak{}status.\allowbreak{}yaml}, Decision 0018); the terminology instrument awaits its owner-gated blind matching review. \textbf{None has run, and none is externally preregistered} — a Git freeze is not a preregistration, and registry submission is an owner/external act.
 
 
 \subsection{13.1 Headline: the false-closure / selective-prediction benchmark (packet \texttt{FCSP-2} — preregistration-ready; not externally registered)}
-Environments with planted inter-orthemma aliasing, planted identity uncertainty, and validator-scope traps. \textbf{Treatment:} an agent maintaining typed candidate families and per-burden closure (the machinery of Sections 5 and 7). \textbf{Baseline:} argmax placement with a confidence threshold. \textbf{Primary endpoints:} false-closure rate; the area under the risk–coverage curve (AURC) of the selective-prediction literature. (The metric name is corrected from an earlier draft's "risk–coverage AUROC", which named no established metric. Methodological criticisms of AURC — its dependence on the evaluation set's coverage grid and its incomparability across error rates — are addressed in the packet's frozen endpoint definitions by base-error-rate-normalized and per-family sensitivity analyses; any endpoint change is a new packet version, never a post-run edit.) Fixtures are laptop-scale and cheap; the benchmark targets the claimed residual directly (does the union behave differently from the composite?), not the vocabulary. The current frozen packet is \texttt{experiments/false-closure-selective-prediction-v2/} (packet \texttt{FCSP-2}; run harness with a mock adapter and public/hidden-key separation, neutral stimuli whose defects are inferable-not-stated, exact endpoints with paired permutation tests and Holm adjustment, mechanical decision-rule execution, a pre-run item-level sensitivity plan, deterministic smoke tests; status \texttt{READY\_TO\_RUN} / \texttt{PREREGISTRATION\_READY}; it passes the Decision 0022 methods gate). It supersedes the historical R6 packet \texttt{FCSP-1}, whose methods defects are recorded in Decision 0020. \textbf{No run has occurred; no result exists.}
+Environments with planted inter-orthemma aliasing, planted identity uncertainty, and validator-scope traps. \textbf{Treatment:} an agent maintaining typed candidate families and per-burden closure (the machinery of Sections 5 and 7). \textbf{Baseline:} argmax placement with a confidence threshold. \textbf{Primary endpoints:} false-closure rate; the area under the risk–coverage curve (AURC) of the selective-prediction literature. (The metric name is corrected from an earlier draft's "risk–coverage AUROC", which named no established metric. Methodological criticisms of AURC — its dependence on the evaluation set's coverage grid and its incomparability across error rates — are addressed in the packet's frozen endpoint definitions by base-error-rate-normalized and per-family sensitivity analyses; any endpoint change is a new packet version, never a post-run edit.) Fixtures are laptop-scale and cheap; the benchmark targets the claimed residual directly (does the union behave differently from the composite?), not the vocabulary. The current frozen packet is \texttt{experiments/\allowbreak{}false-\allowbreak{}closure-\allowbreak{}selective-\allowbreak{}prediction-\allowbreak{}v2/\allowbreak{}} (packet \texttt{FCSP-2}; run harness with a mock adapter and public/hidden-key separation, neutral stimuli whose defects are inferable-not-stated, exact endpoints with paired permutation tests and Holm adjustment, mechanical decision-rule execution, a pre-run item-level sensitivity plan, deterministic smoke tests; status \texttt{READY\_TO\_RUN} / \texttt{PREREGISTRATION\_READY}; it passes the Decision 0022 methods gate). It supersedes the historical R6 packet \texttt{FCSP-1}, whose methods defects are recorded in Decision 0020. \textbf{No run has occurred; no result exists.}
 
 \textbf{Decision rule — locally protocol-frozen in the packet (\texttt{DECISION-RULES.yaml}), four outcomes:}
 
@@ -820,7 +979,7 @@ An underpowered miss is never read as refutation; an unpowered tie is never read
 
 
 \subsection{13.2 The product fixture suite (separate product test)}
-The current frozen packet is \texttt{experiments/episode-reification-v2/} (packet \texttt{ER-2}; five archetypes A1–A5 with four neutral surface variants each, both arms rendered label-free from one canonical fact list, a run harness, corrected scoring — completion by equality, semantic E5/traceability — complete paired inference, and mechanical decision execution; status \texttt{READY\_TO\_RUN} / \texttt{PREREGISTRATION\_READY}; it passes the Decision 0022 methods gate). It supersedes the historical R6 packet \texttt{ER-1}, whose scoring/leakage defects are recorded in Decision 0020. A fixture suite of the A1–A5 class exercises the product behaviour of an implementation: baseline-versus-treatment runs with pinned versions and run hygiene, culminating in \textbf{A5}, the metamorphic pathway fixture — a weak rule (pass iff the output contains a marker string) that returns the correct current result, paired with neighboring perturbations (correct-without-marker; incorrect-with-marker), scored to separate current-answer correctness from pathway adequacy. E5 carries no theory vocabulary and is the operational test of episode reification's practical delta over "audit the validator when suspicious" (Section 8.6). It is a product test; success or failure here transfers no verdict to the benchmark of 13.1 or the terminology test of 13.3.
+The current frozen packet is \texttt{experiments/\allowbreak{}episode-\allowbreak{}reification-\allowbreak{}v2/\allowbreak{}} (packet \texttt{ER-2}; five archetypes A1–A5 with four neutral surface variants each, both arms rendered label-free from one canonical fact list, a run harness, corrected scoring — completion by equality, semantic E5/traceability — complete paired inference, and mechanical decision execution; status \texttt{READY\_TO\_RUN} / \texttt{PREREGISTRATION\_READY}; it passes the Decision 0022 methods gate). It supersedes the historical R6 packet \texttt{ER-1}, whose scoring/leakage defects are recorded in Decision 0020. A fixture suite of the A1–A5 class exercises the product behaviour of an implementation: baseline-versus-treatment runs with pinned versions and run hygiene, culminating in \textbf{A5}, the metamorphic pathway fixture — a weak rule (pass iff the output contains a marker string) that returns the correct current result, paired with neighboring perturbations (correct-without-marker; incorrect-with-marker), scored to separate current-answer correctness from pathway adequacy. E5 carries no theory vocabulary and is the operational test of episode reification's practical delta over "audit the validator when suspicious" (Section 8.6). It is a product test; success or failure here transfers no verdict to the benchmark of 13.1 or the terminology test of 13.3.
 
 
 \subsection{13.3 The terminology benchmark (explicitly secondary)}
@@ -883,7 +1042,7 @@ What the paper deliberately does not claim is as much a result as what it claims
 
 
 \section{17. Data and Materials Availability}
-All public materials of this project — the formal core, this manuscript, the multi-actor note, machine-readable schemas (hardened, with negative and mutation test suites) and worked examples, deterministic fixtures and validators (including the governance-derivation, cross-record-semantics, Qurʾān-locus, type/token, and terminology-matching validators added in R3), the verdict and notation registries with their generated surfaces, decision records, the R3 sourcing ledgers, and the designed (unrun) terminology-evaluation packets — are available in the public repository (\texttt{theislampill/orthemology} on GitHub), with a SHA-256 release manifest under \texttt{docs/provenance/} and byte-reproducible draft PDFs under \texttt{artifacts/}. \textbf{Not available:} the private internal design-history records (a cross-project defect collection and a single-project longitudinal engineering record) that motivated the framework. They contain private working material, are not rights-cleared for publication, and are therefore not independently auditable; they are non-evidential design provenance — \textbf{no claim in this paper rests on them} (Sections 11.4, 13.4, 15.2). \textbf{No public observational dataset accompanies this paper.} No human-subject data exists; no experiment has been conducted.
+All public materials of this project — the formal core, this manuscript, the multi-actor note, machine-readable schemas (hardened, with negative and mutation test suites) and worked examples, deterministic fixtures and validators (including the governance-derivation, cross-record-semantics, Qurʾān-locus, type/token, and terminology-matching validators added in R3), the verdict and notation registries with their generated surfaces, decision records, the R3 sourcing ledgers, and the designed (unrun) terminology-evaluation packets — are available in the public repository (\texttt{theislampill/orthemology} on GitHub), with a SHA-256 release manifest under \texttt{docs/\allowbreak{}provenance/\allowbreak{}} and byte-reproducible draft PDFs under \texttt{artifacts/\allowbreak{}}. \textbf{Not available:} the private internal design-history records (a cross-project defect collection and a single-project longitudinal engineering record) that motivated the framework. They contain private working material, are not rights-cleared for publication, and are therefore not independently auditable; they are non-evidential design provenance — \textbf{no claim in this paper rests on them} (Sections 11.4, 13.4, 15.2). \textbf{No public observational dataset accompanies this paper.} No human-subject data exists; no experiment has been conducted.
 
 
 \twocolumn
@@ -958,7 +1117,7 @@ All public materials of this project — the formal core, this manuscript, the m
 \item Wetzel, L. (2018). Types and Tokens. In E. N. Zalta (Ed.), \emph{The Stanford Encyclopedia of Philosophy.} https://plato.stanford.edu/entries/types-tokens/
 
 \end{itemize}
-Machine-readable database with per-claim verification status: \texttt{references/orthemology.bib}; current sourcing state starts at \texttt{docs/sourcing/CURRENT-SOURCING-LEDGER.md} (Decision 0019).
+Machine-readable database with per-claim verification status: \texttt{references/\allowbreak{}orthemology.\allowbreak{}bib}; current sourcing state starts at \texttt{docs/\allowbreak{}sourcing/\allowbreak{}CURRENT-\allowbreak{}SOURCING-\allowbreak{}LEDGER.\allowbreak{}md} (Decision 0019).
 
 
 \bigskip\hrule\bigskip
@@ -990,16 +1149,16 @@ Machine-readable database with per-claim verification status: \texttt{references
 
 \item \textbf{Orthing / orthing episode.} The process type of rule-governed, evidence-updating apprehension-and-handling / one dated, situated, record-valued run of it, bearing the verdict vector.
 
-\item \textbf{Verdict vector (V1–V6, registry-normalized).} Result: V1 correctness, V2b-T factive truth linkage. Pathway core: V2a support; V2b-P procedure reliability; V2c currentness; V3a configuration, V3b policy, V3c token-binding, V3d execution, V3e decision-time adequacy; V4a route safety; V5 closure truthfulness; V6 robustness. Advisory: V4b route quality. Semantic IDs and aliases: \texttt{docs/verdict-registry.yaml} (Decision 0004).
+\item \textbf{Verdict vector (V1–V6, registry-normalized).} Result: V1 correctness, V2b-T factive truth linkage. Pathway core: V2a support; V2b-P procedure reliability; V2c currentness; V3a configuration, V3b policy, V3c token-binding, V3d execution, V3e decision-time adequacy; V4a route safety; V5 closure truthfulness; V6 robustness. Advisory: V4b route quality. Semantic IDs and aliases: \texttt{docs/\allowbreak{}verdict-\allowbreak{}registry.\allowbreak{}yaml} (Decision 0004).
 
 \item \textbf{Generalized ANDON event.} A governed interruption when continuation or closure is not warranted under the current placement, evidence, route, warrant, or ledger.
 
 \item \textbf{Target profile $\mathcal{G}_{\alpha,A_\alpha}$.} The state-types an actor aims to make some successor occurrence instantiate, under the actor's own analysis $A_\alpha$; distinct from the descriptive profile, from the objective, and from any metaortheme.
 
 \end{itemize}
-\emph{End of revised draft. Prior version: the original manuscript (see \texttt{docs/provenance/document-history.md}). Companion formal text: \texttt{theory/orthemic-core-formalization.md}. Terminology evaluation protocol: \texttt{terminology/}.}
+\emph{End of revised draft. Prior version: the original manuscript (see \texttt{docs/\allowbreak{}provenance/\allowbreak{}document-\allowbreak{}history.\allowbreak{}md}). Companion formal text: \texttt{theory/\allowbreak{}orthemic-\allowbreak{}core-\allowbreak{}formalization.\allowbreak{}md}. Terminology evaluation protocol: \texttt{terminology/\allowbreak{}}.}
 
-\emph{R7B bounded extensions (candidate; require fresh review before merge).} Two application-level extensions deepen the framework without changing the core: a dynamic-orthing / representation-learning account (four update levels, world-vs-learner edges, ablation-based ortheme admission) in \texttt{applications/latent-state-orthing/} (Decision 0024), and a meta-noetic memetics + sound-corrective-dynamics account (the represented-standard bearer, the ecology, and the G1 route-ranked descent adjudication) in \texttt{applications/daee-epistemics/} (Decision 0025). The six-layer firewall — formal core, dynamic extension, noetic application, school-neutral metaphysics, Atharī identification, empirical programs — is mapped in \texttt{docs/architecture/ORTHEMOLOGY-LAYER-MAP.md}. None of it is empirical validation or a theological proof.*
+\emph{R7B bounded extensions (candidate; require fresh review before merge).} Two application-level extensions deepen the framework without changing the core: a dynamic-orthing / representation-learning account (four update levels, world-vs-learner edges, ablation-based ortheme admission) in \texttt{applications/\allowbreak{}latent-\allowbreak{}state-\allowbreak{}orthing/\allowbreak{}} (Decision 0024), and a meta-noetic memetics + sound-corrective-dynamics account (the represented-standard bearer, the ecology, and the G1 route-ranked descent adjudication) in \texttt{applications/\allowbreak{}daee-\allowbreak{}epistemics/\allowbreak{}} (Decision 0025). The six-layer firewall — formal core, dynamic extension, noetic application, school-neutral metaphysics, Atharī identification, empirical programs — is mapped in \texttt{docs/\allowbreak{}architecture/\allowbreak{}ORTHEMOLOGY-\allowbreak{}LAYER-\allowbreak{}MAP.\allowbreak{}md}. None of it is empirical validation or a theological proof.*
 
 
 \twocolumn

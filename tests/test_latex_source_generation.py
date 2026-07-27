@@ -375,6 +375,487 @@ $$
         self.assertIn(r"\begin{aligned}", rendered)
         self.assertIn(r"\[", rendered)
 
+    def test_long_table_threshold_is_explicitly_row_or_content_based(self):
+        generator = load_generator()
+        self.assertIsNotNone(generator, "Task 12 LaTeX generator is missing")
+
+        self.assertEqual(generator.LONG_TABLE_ROW_THRESHOLD, 10)
+        self.assertEqual(generator.LONG_TABLE_TOTAL_CONTENT_THRESHOLD, 1500)
+        self.assertEqual(generator.LONG_TABLE_MAX_ROW_CONTENT_THRESHOLD, 800)
+        self.assertEqual(generator.BREAKABLE_TABLE_COLUMN_THRESHOLD, 5)
+        self.assertFalse(
+            generator.table_requires_breakable_rows(
+                data_rows=generator.LONG_TABLE_ROW_THRESHOLD - 1,
+                total_rendered_characters=(
+                    generator.LONG_TABLE_TOTAL_CONTENT_THRESHOLD - 1
+                ),
+                max_row_rendered_characters=(
+                    generator.LONG_TABLE_MAX_ROW_CONTENT_THRESHOLD - 1
+                ),
+                columns=generator.BREAKABLE_TABLE_COLUMN_THRESHOLD - 1,
+            )
+        )
+        self.assertTrue(
+            generator.table_requires_breakable_rows(
+                data_rows=generator.LONG_TABLE_ROW_THRESHOLD,
+                total_rendered_characters=0,
+                max_row_rendered_characters=0,
+                columns=1,
+            )
+        )
+        self.assertTrue(
+            generator.table_requires_breakable_rows(
+                data_rows=1,
+                total_rendered_characters=(
+                    generator.LONG_TABLE_TOTAL_CONTENT_THRESHOLD
+                ),
+                max_row_rendered_characters=0,
+                columns=1,
+            )
+        )
+        self.assertTrue(
+            generator.table_requires_breakable_rows(
+                data_rows=1,
+                total_rendered_characters=0,
+                max_row_rendered_characters=(
+                    generator.LONG_TABLE_MAX_ROW_CONTENT_THRESHOLD
+                ),
+                columns=1,
+            )
+        )
+        self.assertTrue(
+            generator.table_requires_breakable_rows(
+                data_rows=1,
+                total_rendered_characters=1,
+                max_row_rendered_characters=1,
+                columns=generator.BREAKABLE_TABLE_COLUMN_THRESHOLD,
+            )
+        )
+
+    def test_exact_fifteen_line_verdict_table_uses_breakable_row_blocks(self):
+        generator = load_generator()
+        self.assertIsNotNone(generator, "Task 12 LaTeX generator is missing")
+        source = (
+            ROOT / "manuscript" / "orthemma-ortheme-systems-revised-draft.md"
+        ).read_text(encoding="utf-8")
+        start = source.index("| Verdict | Question it answers |")
+        end = source.index("\n\n", start)
+        verdict_table = source[start:end] + "\n"
+        self.assertEqual(len(verdict_table.strip().splitlines()), 15)
+
+        rendered = generator.render_markdown(
+            verdict_table,
+            source_name="exact-verdict-table.md",
+        )
+
+        self.assertIn("% breakable-row-table:", rendered)
+        self.assertEqual(rendered.count("% breakable-row:"), 13)
+        self.assertNotIn(r"\begin{tabular}", rendered)
+        self.assertNotIn(r"\begin{minipage}", rendered)
+        self.assertNotIn(r"\parbox", rendered)
+        self.assertEqual(rendered.count(r"\hrule height 0.8pt"), 2)
+        self.assertEqual(rendered.count(r"\hrule height 0.4pt"), 12)
+        self.assertEqual(rendered.count(r"\textbf{Verdict}:"), 13)
+        self.assertEqual(
+            rendered.count(r"\textbf{Question it answers}:"),
+            13,
+        )
+        self.assertNotIn(r"\small", rendered.splitlines())
+        for prohibited in (
+            r"\footnotesize",
+            r"\resizebox",
+            r"\scalebox",
+        ):
+            self.assertNotIn(prohibited, rendered)
+
+        row_labels = (
+            "V1 — result correctness",
+            "V2a — evidential support",
+            "V2b-P — configured-procedure truth-conduciveness",
+            "V2b-T — token-level truth linkage",
+            "V2c — evidence currentness",
+            "V3a — configuration adequacy",
+            "V3b — policy adequacy",
+            "V3c — governing-token adequacy",
+            "V3d — executor fidelity",
+            "V3e — ex-ante justification",
+            "V4a — route safety",
+            "V5 — closure truthfulness",
+            "V6 — robustness",
+        )
+        positions = [rendered.index(label) for label in row_labels]
+        self.assertEqual(positions, sorted(positions))
+
+    def test_two_row_result_pathway_matrix_uses_normal_flow_for_tall_row(self):
+        generator = load_generator()
+        self.assertIsNotNone(generator, "Task 12 LaTeX generator is missing")
+        source = (
+            ROOT / "manuscript" / "orthemma-ortheme-systems-revised-draft.md"
+        ).read_text(encoding="utf-8")
+        start = source.index("| | **PathwayAdequate** | **PathwayDefective** |")
+        end = source.index("\n\n", start)
+        matrix = source[start:end] + "\n"
+
+        rendered = generator.render_markdown(
+            matrix,
+            source_name="exact-result-pathway-matrix.md",
+        )
+
+        self.assertIn("% breakable-row-table:", rendered)
+        self.assertEqual(rendered.count("% breakable-row:"), 2)
+        self.assertNotIn(r"\begin{tabular}", rendered)
+        self.assertNotIn(r"\begin{minipage}", rendered)
+        self.assertIn(r"\textbf{PathwayAdequate}:", rendered)
+        self.assertIn(r"\textbf{PathwayDefective}:", rendered)
+        self.assertLess(
+            rendered.index("Result correct (V1)"),
+            rendered.index("Result incorrect (¬V1)"),
+        )
+
+    def test_short_table_remains_one_existing_tabular(self):
+        generator = load_generator()
+        self.assertIsNotNone(generator, "Task 12 LaTeX generator is missing")
+        markdown = (
+            "| Key | Meaning |\n"
+            "|---|---|\n"
+            "| A | Alpha |\n"
+            "| B | Beta |\n"
+        )
+
+        rendered = generator.render_markdown(
+            markdown,
+            source_name="short-table.md",
+        )
+
+        self.assertNotIn("% breakable-row-table:", rendered)
+        self.assertEqual(rendered.count(r"\begin{tabular}"), 1)
+        self.assertEqual(rendered.count(r"\end{tabular}"), 1)
+        self.assertIn(r"\toprule", rendered)
+        self.assertIn(r"\midrule", rendered)
+        self.assertIn(r"\bottomrule", rendered)
+
+    def test_exact_five_column_configuration_table_uses_normal_flow(self):
+        generator = load_generator()
+        self.assertIsNotNone(generator, "Task 12 LaTeX generator is missing")
+        source = (
+            ROOT / "manuscript" / "orthemma-ortheme-systems-revised-draft.md"
+        ).read_text(encoding="utf-8")
+        start = source.index(
+            "| Configuration | $g$ | $S_\\mu$ | "
+            "$\\operatorname{select}_\\mu$ | Meta-policy examples |"
+        )
+        end = source.index("\n\n", start)
+        configuration_table = source[start:end] + "\n"
+        self.assertEqual(len(configuration_table.strip().splitlines()), 7)
+
+        rendered = generator.render_markdown(
+            configuration_table,
+            source_name="exact-five-column-configuration-table.md",
+        )
+
+        self.assertIn("% breakable-row-table:", rendered)
+        self.assertEqual(rendered.count("% breakable-row:"), 5)
+        self.assertNotIn(r"\begin{tabular}", rendered)
+        self.assertEqual(rendered.count(r"\textbf{Configuration}:"), 5)
+        self.assertEqual(rendered.count(r"\textbf{Meta-policy examples}:"), 5)
+        row_labels = (
+            "Evidence grade",
+            "Version currency",
+            "Depth of resolution",
+            "Closure standard",
+            "Warrant state",
+        )
+        positions = [rendered.index(label) for label in row_labels]
+        self.assertEqual(positions, sorted(positions))
+
+    def test_short_four_column_table_retains_exact_standard_rendering(self):
+        generator = load_generator()
+        self.assertIsNotNone(generator, "Task 12 LaTeX generator is missing")
+        markdown = (
+            "| A | B | C | D |\n"
+            "|---|---|---|---|\n"
+            "| a | b | c | d |\n"
+        )
+        expected = (
+            "\n\\begin{center}\n"
+            "\\begin{tabular}{@{}p{0.235\\linewidth}p{0.235\\linewidth}"
+            "p{0.235\\linewidth}p{0.235\\linewidth}@{}}\n"
+            "\\toprule\n"
+            "\\textbf{A} & \\textbf{B} & \\textbf{C} & \\textbf{D} \\\\\n"
+            "\\midrule\n"
+            "a & b & c & d \\\\\n"
+            "\\bottomrule\n"
+            "\\end{tabular}\n"
+            "\\end{center}\n"
+        )
+
+        rendered = generator.render_markdown(
+            markdown,
+            source_name="short-four-column-table.md",
+        )
+
+        self.assertEqual(rendered, expected)
+
+    def test_breakable_table_preserves_escaped_pipe_math_citation_and_order(self):
+        generator = load_generator()
+        self.assertIsNotNone(generator, "Task 12 LaTeX generator is missing")
+        rows = [
+            (
+                "R1",
+                r"escaped \| pipe; math $x \mid y$; citation [@source-one]",
+            )
+        ] + [("R%d" % number, "Meaning %d" % number) for number in range(2, 11)]
+        markdown = (
+            "| Label | Meaning |\n"
+            "|---|---|\n"
+            + "".join("| %s | %s |\n" % row for row in rows)
+        )
+
+        first = generator.render_markdown(
+            markdown,
+            source_name="semantic-table.md",
+        )
+        second = generator.render_markdown(
+            markdown,
+            source_name="semantic-table.md",
+        )
+
+        self.assertEqual(first, second)
+        self.assertIn("% breakable-row-table:", first)
+        self.assertNotIn(r"\begin{tabular}", first)
+        self.assertNotIn(r"\begin{minipage}", first)
+        self.assertEqual(first.count("% breakable-row:"), 10)
+        self.assertEqual(first.count(r"\textbf{Label}:"), 10)
+        self.assertEqual(first.count(r"\textbf{Meaning}:"), 10)
+        self.assertIn("escaped | pipe", first)
+        self.assertIn(r"math $x \mid y$", first)
+        self.assertIn("citation [@source-one]", first)
+        expected_cells = ["R1", "escaped | pipe"] + [
+            "R%d" % number for number in range(2, 11)
+        ]
+        positions = [first.index(cell) for cell in expected_cells]
+        self.assertEqual(positions, sorted(positions))
+
+    def test_exact_episode_signature_uses_reconstructable_multline_layout(self):
+        generator = load_generator()
+        self.assertIsNotNone(generator, "Task 12 LaTeX generator is missing")
+        source = (
+            ROOT / "manuscript" / "orthemma-ortheme-systems-revised-draft.md"
+        ).read_text(encoding="utf-8")
+        _, math = generator._protect_math(source)
+        displays = [body.strip() for kind, body in math if kind == "display"]
+        self.assertEqual(len(displays), 1)
+        signature = displays[0]
+        self.assertEqual(len(signature), 257)
+        markdown = "$$\n%s\n$$\n" % signature
+
+        first = generator.render_markdown(
+            markdown,
+            source_name="exact-episode-signature.md",
+        )
+        second = generator.render_markdown(
+            markdown,
+            source_name="exact-episode-signature.md",
+        )
+
+        self.assertEqual(first, second)
+        self.assertIn("\\begin{multline*}\n", first)
+        self.assertNotIn(r"\[", first)
+        begin = first.index("\\begin{multline*}\n") + len("\\begin{multline*}\n")
+        end = first.index("\n\\end{multline*}", begin)
+        layout_body = first[begin:end]
+        self.assertGreaterEqual(
+            layout_body.count(generator.DISPLAY_MATH_LAYOUT_BREAK),
+            2,
+        )
+        self.assertEqual(
+            generator.remove_display_math_layout_breaks(layout_body),
+            signature,
+        )
+        self.assertEqual(layout_body.count(";"), signature.count(";"))
+        self.assertEqual(layout_body.count(","), signature.count(","))
+        for prohibited in (
+            r"\resizebox",
+            r"\scalebox",
+            r"\small",
+            r"\footnotesize",
+        ):
+            self.assertNotIn(prohibited, first)
+
+    def test_long_tuple_conjunction_and_implication_preserve_math_tokens(self):
+        generator = load_generator()
+        self.assertIsNotNone(generator, "Task 12 LaTeX generator is missing")
+        examples = {
+            "tuple": (
+                r"\langle a_1, a_2, a_3, a_4, a_5, a_6, a_7, a_8, "
+                r"a_9, a_{10}, a_{11}, a_{12}, a_{13}, a_{14}, a_{15}, "
+                r"a_{16}, a_{17}, a_{18}, a_{19}, a_{20}, a_{21}, a_{22}, "
+                r"a_{23}, a_{24}, a_{25} \rangle"
+            ),
+            "conjunction": (
+                r"\forall x,\ \operatorname{Eligible}(x) "
+                r"\wedge \operatorname{Grounded}(x) "
+                r"\wedge \operatorname{Authorized}(x) "
+                r"\wedge \operatorname{Current}(x) "
+                r"\wedge \operatorname{Traceable}(x) "
+                r"\wedge \operatorname{Robust}(x)"
+            ),
+            "implication": (
+                r"\operatorname{Configured}(e) "
+                r"\wedge \operatorname{Executed}(e) "
+                r"\Rightarrow \operatorname{Traceable}(e) "
+                r"\wedge \operatorname{Current}(e) "
+                r"\Rightarrow \operatorname{Reviewable}(e) "
+                r"\Leftrightarrow \operatorname{Auditable}(e)"
+            ),
+        }
+
+        for name, original in examples.items():
+            with self.subTest(name=name):
+                rendered = generator.render_markdown(
+                    "$$\n%s\n$$\n" % original,
+                    source_name="%s-control.md" % name,
+                )
+                begin = rendered.index("\\begin{multline*}\n") + len(
+                    "\\begin{multline*}\n"
+                )
+                end = rendered.index("\n\\end{multline*}", begin)
+                layout_body = rendered[begin:end]
+                reconstructed = generator.remove_display_math_layout_breaks(
+                    layout_body
+                )
+                self.assertEqual(reconstructed, original)
+                for token in (
+                    ",",
+                    r"\forall",
+                    r"\wedge",
+                    r"\Rightarrow",
+                    r"\Leftrightarrow",
+                ):
+                    self.assertEqual(
+                        layout_body.count(token),
+                        original.count(token),
+                    )
+
+    def test_display_break_candidates_exclude_nested_punctuation(self):
+        generator = load_generator()
+        self.assertIsNotNone(generator, "Task 12 LaTeX generator is missing")
+        body = (
+            r"\operatorname{Pair}(a,b) "
+            r"\wedge \operatorname{Tagged}{x,y} "
+            r"\Rightarrow z,w"
+        )
+        positions = generator.reviewed_display_math_break_positions(body)
+
+        nested_commas = [
+            index + 1
+            for index, character in enumerate(body)
+            if character == "," and index + 1 != body.rindex(",") + 1
+        ]
+        for position in nested_commas:
+            self.assertNotIn(position, positions)
+        self.assertIn(body.rindex(",") + 1, positions)
+        self.assertIn(body.index(r"\wedge") + len(r"\wedge"), positions)
+        self.assertIn(
+            body.index(r"\Rightarrow") + len(r"\Rightarrow"),
+            positions,
+        )
+
+    def test_short_display_and_long_inline_math_keep_existing_rendering(self):
+        generator = load_generator()
+        self.assertIsNotNone(generator, "Task 12 LaTeX generator is missing")
+        short_display = (
+            r"e \models_{\mu} (m : \hat{o}) \iff \hat{o} \in \hat{O}(e) "
+            r"\ \text{and}\ \mu \in \vec{\mu}(e)"
+            r"\ \text{governed that placement}"
+        )
+        self.assertLess(
+            len(short_display),
+            generator.DISPLAY_MATH_MULTLINE_THRESHOLD,
+        )
+        rendered_display = generator.render_markdown(
+            "$$\n%s\n$$\n" % short_display,
+            source_name="short-display.md",
+        )
+        self.assertIn("\n\\[\n%s\n\\]\n" % short_display, rendered_display)
+        self.assertNotIn(r"\begin{multline*}", rendered_display)
+
+        long_inline = (
+            r"\operatorname{Configured}(e) "
+            r"\wedge \operatorname{Executed}(e) "
+            r"\Rightarrow \operatorname{Traceable}(e) "
+            r"\wedge \operatorname{Current}(e) "
+            r"\Rightarrow \operatorname{Reviewable}(e) "
+            r"\Leftrightarrow \operatorname{Auditable}(e)"
+        )
+        self.assertGreaterEqual(
+            len(long_inline),
+            generator.DISPLAY_MATH_MULTLINE_THRESHOLD,
+        )
+        rendered_inline = generator.render_markdown(
+            "Inline $%s$ remains inline.\n" % long_inline,
+            source_name="long-inline.md",
+        )
+        self.assertIn("$%s$" % long_inline, rendered_inline)
+        self.assertNotIn(r"\begin{multline*}", rendered_inline)
+
+    def test_exact_long_inline_code_path_gets_reconstructable_breaks(self):
+        generator = load_generator()
+        self.assertIsNotNone(generator, "Task 12 LaTeX generator is missing")
+        path = "experiments/false-closure-selective-prediction-v2/"
+        markdown = "Packet `%s` is frozen.\n" % path
+
+        first = generator.render_markdown(
+            markdown,
+            source_name="exact-inline-code-path.md",
+        )
+        second = generator.render_markdown(
+            markdown,
+            source_name="exact-inline-code-path.md",
+        )
+
+        self.assertEqual(first, second)
+        self.assertTrue(generator.is_path_like_inline_code(path))
+        texttt_open = first.index(r"\texttt{") + len(r"\texttt{")
+        texttt_close = first.index("} is frozen.", texttt_open)
+        layout_body = first[texttt_open:texttt_close]
+        self.assertGreaterEqual(
+            layout_body.count(generator.INLINE_CODE_PATH_LAYOUT_BREAK),
+            4,
+        )
+        self.assertEqual(
+            generator.remove_inline_code_path_layout_breaks(layout_body),
+            generator._escape_code(path),
+        )
+
+    def test_inline_code_registry_command_url_and_nonpath_controls_are_unchanged(self):
+        generator = load_generator()
+        self.assertIsNotNone(generator, "Task 12 LaTeX generator is missing")
+        controls = (
+            "RESULT_CORRECT",
+            "python scripts/generate_latex_sources.py --check",
+            "https://example.test/a-b",
+            "and/or",
+            "x/y",
+            "--root/path",
+        )
+
+        for control in controls:
+            with self.subTest(control=control):
+                self.assertFalse(generator.is_path_like_inline_code(control))
+                rendered = generator.render_markdown(
+                    "Control `%s` remains literal.\n" % control,
+                    source_name="inline-code-control.md",
+                )
+                self.assertIn(
+                    r"\texttt{%s}" % generator._escape_code(control),
+                    rendered,
+                )
+                self.assertNotIn(
+                    generator.INLINE_CODE_PATH_LAYOUT_BREAK,
+                    rendered,
+                )
+
     def test_commonmark_multiline_code_span_is_preserved_as_literal_code(self):
         generator = load_generator()
         self.assertIsNotNone(generator, "Task 12 LaTeX generator is missing")
