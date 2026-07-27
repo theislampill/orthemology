@@ -86,5 +86,23 @@ class MachineAssignmentClassificationTests(unittest.TestCase):
                 self.assertFalse(classify(span), span)
 
 
+class BuildSourceExtractionTests(unittest.TestCase):
+    def test_extracts_only_docs_owner_and_ignores_unrelated_paths(self):
+        build_text = """
+COMPATIBILITY_REPORT_PATH = pathlib.Path(
+    "docs/project-closure/report.md"
+)
+DOCS = [
+    ("sample", ["manuscript/source.md", "companion/source.md"]),
+]
+"""
+        extract = getattr(VALIDATOR, "extract_build_sources", None)
+        self.assertIsNotNone(extract, "exact DOCS source extraction is missing")
+        self.assertEqual(
+            extract(build_text),
+            {"manuscript/source.md", "companion/source.md"},
+        )
+
+
 if __name__ == "__main__":
     unittest.main()

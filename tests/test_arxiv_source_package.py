@@ -625,8 +625,10 @@ class SourcePackageContractTests(unittest.TestCase):
                 parents=True
             )
             (root / "references").mkdir()
-            (root / "docs").mkdir()
-            (root / "docs" / "owner.md").write_bytes(b"isolated owner\n")
+            (root / "owner-notes").mkdir()
+            (root / "owner-notes" / "owner.md").write_bytes(
+                b"isolated owner\n"
+            )
             (
                 root / "publication" / "latex" / "sample" / "main.tex"
             ).write_bytes(b"isolated latex\n")
@@ -660,18 +662,21 @@ class SourcePackageContractTests(unittest.TestCase):
                 text=True,
             ).strip()
             self.assertEqual(
-                git_blob(commit, "docs/owner.md", root=root),
+                git_blob(commit, "owner-notes/owner.md", root=root),
                 b"isolated owner\n",
             )
             markdown, latex, bibliography = source_inputs(
                 {
                     "artifact_id": "sample",
-                    "sources": ["docs/owner.md"],
+                    "sources": ["owner-notes/owner.md"],
                 },
                 commit,
                 root=root,
             )
-            self.assertEqual(markdown["docs/owner.md"], b"isolated owner\n")
+            self.assertEqual(
+                markdown["owner-notes/owner.md"],
+                b"isolated owner\n",
+            )
             self.assertEqual(
                 latex["publication/latex/sample/main.tex"],
                 b"isolated latex\n",
@@ -1055,6 +1060,49 @@ class SourcePackageContractTests(unittest.TestCase):
         validate = self.api(BUILD, "compatibility_report_table_issues")
         issues = validate(ROOT)
         self.assertEqual(issues, [])
+
+    def test_pdf_local_uri_targets_resolve_from_the_artifacts_directory(self):
+        validate = self.api(BUILD, "local_pdf_uri_issues")
+        artifact_id = "sample"
+        with tempfile.TemporaryDirectory() as temporary:
+            root = pathlib.Path(temporary)
+            (root / "artifacts").mkdir()
+            (root / "companion").mkdir()
+            (root / "companion" / "owner.yaml").write_text(
+                "owner: exact\n",
+                encoding="utf-8",
+            )
+            self.assertEqual(
+                validate(
+                    "../companion/owner.yaml",
+                    artifact_id=artifact_id,
+                    root=root,
+                ),
+                [],
+            )
+            self.assertEqual(
+                validate(
+                    "https://example.invalid/source",
+                    artifact_id=artifact_id,
+                    root=root,
+                ),
+                [],
+            )
+            for name, uri in {
+                "old artifact-relative target": "owner.yaml",
+                "absolute target": "/etc/passwd",
+                "outside repository": "../../outside.yaml",
+                "file scheme": "file:///etc/passwd",
+            }.items():
+                with self.subTest(name=name):
+                    self.assertTrue(
+                        validate(
+                            uri,
+                            artifact_id=artifact_id,
+                            root=root,
+                        ),
+                        uri,
+                    )
 
     def test_compatibility_report_validator_rejects_a_stale_owner_hash(self):
         validate = self.api(BUILD, "compatibility_report_table_issues")

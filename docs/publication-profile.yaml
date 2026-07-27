@@ -15,11 +15,11 @@ source_ownership:
   generated_latex_semantic_edits: prohibited
   bibliography_owner: references/orthemology.bib
 source_provenance:
-  source_commit: 1703a783d9b25a9cfa93370c4a1a0b568fa497d0
-  source_tree: 8edff88e8df79e8d0792d441c65227b9729403a9
-  source_date_epoch: 1785161731
-  independently_reviewed_equivalent_source_commit: 9dc0094cc6df908fbba1b965bb36d5f3f00979c0
-  independently_reviewed_equivalent_source_tree: 8edff88e8df79e8d0792d441c65227b9729403a9
+  source_commit: aee5c7389b57ec7c3150d8fee3b3e398195d1395
+  source_tree: 766a3cfd57058d56538a0571fcff176ca44288b3
+  source_date_epoch: 1785167892
+  independently_reviewed_equivalent_source_commit: aee5c7389b57ec7c3150d8fee3b3e398195d1395
+  independently_reviewed_equivalent_source_tree: 766a3cfd57058d56538a0571fcff176ca44288b3
   source_tree_equivalence: verified-identical
 toolchain:
   driver: latexmk

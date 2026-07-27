@@ -23,6 +23,7 @@ Deterministic, offline. Guards the math-source discipline the audit requires:
 This is a typography/consistency gate. It establishes no empirical or
 theological claim, and it does not change any symbol's meaning (Decision 0005).
 """
+import ast
 import io
 import json
 import os
@@ -741,6 +742,34 @@ def validate_build_source_parity(build_sources, declared_sources):
     ]
 
 
+def extract_build_sources(build_text):
+    """Extract source paths only from build_pdfs.py's explicit DOCS owner."""
+    tree = ast.parse(build_text)
+    owners = []
+    for node in tree.body:
+        if not isinstance(node, (ast.Assign, ast.AnnAssign)):
+            continue
+        targets = node.targets if isinstance(node, ast.Assign) else [node.target]
+        if not any(isinstance(target, ast.Name) and target.id == "DOCS" for target in targets):
+            continue
+        owners.append(ast.literal_eval(node.value))
+    if len(owners) != 1:
+        raise ValueError("build_pdfs.py must declare exactly one literal DOCS owner")
+    sources = set()
+    for row in owners[0]:
+        if (
+            not isinstance(row, (list, tuple))
+            or len(row) != 2
+            or not isinstance(row[1], (list, tuple))
+        ):
+            raise ValueError("DOCS rows must be (artifact_id, source_paths)")
+        for source in row[1]:
+            if not isinstance(source, str):
+                raise ValueError("DOCS source paths must be strings")
+            sources.add(source)
+    return sources
+
+
 def validate_migration_data(migration, inventory):
     issues = []
     if not isinstance(migration, dict):
@@ -953,9 +982,10 @@ def main():
         for artifact in profile.get("artifacts", [])
         for source in artifact.get("sources", [])
     }
-    # derive build sources from build_pdfs.py DOCS
+    # Derive build sources from the literal DOCS compatibility owner only.
+    # Other repository paths in the builder are not publication source inputs.
     bp = read("scripts/build_pdfs.py")
-    build_sources = set(re.findall(r'"([a-z0-9_\-]+/[A-Za-z0-9._\-/]+\.md)"', bp))
+    build_sources = extract_build_sources(bp)
     build_source_issues = validate_build_source_parity(
         build_sources, profile_sources
     )

@@ -387,7 +387,10 @@ class MarkdownRenderingTests(unittest.TestCase):
         self.assertEqual(
             resolve(
                 "https://example.test/path?q=1",
-                source_name="companion/example.md",
+                source_name=(
+                    "companion/"
+                    "orthability-and-the-ground-of-intelligibility.md"
+                ),
                 root=ROOT,
             ),
             "https://example.test/path?q=1",
@@ -409,7 +412,10 @@ class MarkdownRenderingTests(unittest.TestCase):
                 with self.assertRaises(generator.GenerationError):
                     resolve(
                         target,
-                        source_name="companion/source.md",
+                        source_name=(
+                            "companion/"
+                            "orthability-and-the-ground-of-intelligibility.md"
+                        ),
                         root=ROOT,
                     )
 

@@ -22,6 +22,7 @@ import sys
 import tarfile
 import tempfile
 import unicodedata
+import urllib.parse
 
 import yaml
 from pypdf import PdfReader
@@ -1640,7 +1641,39 @@ def _image_count(reader):
     return count
 
 
-def _link_issues(reader):
+def local_pdf_uri_issues(uri, *, artifact_id, root=ROOT):
+    """Validate one PDF URI from artifacts/<artifact_id>.pdf."""
+    root = pathlib.Path(root).resolve()
+    uri = str(uri).strip()
+    parsed = urllib.parse.urlsplit(uri)
+    if parsed.scheme:
+        if parsed.scheme.lower() in {"http", "https"} and parsed.netloc:
+            return []
+        return [
+            "%s has a prohibited URI scheme: %s"
+            % (artifact_id, parsed.scheme)
+        ]
+    if parsed.netloc:
+        return ["%s has a network-relative URI" % artifact_id]
+    target = urllib.parse.unquote(parsed.path)
+    if (
+        not target
+        or "\\" in target
+        or target.startswith("/")
+        or re.match(r"^[A-Za-z]:", target)
+    ):
+        return ["%s has an absolute or malformed local URI: %s" % (artifact_id, uri)]
+    resolved = (root / "artifacts" / target).resolve()
+    try:
+        resolved.relative_to(root)
+    except ValueError:
+        return ["%s local URI escapes the repository: %s" % (artifact_id, uri)]
+    if not resolved.is_file():
+        return ["%s local URI target is missing: %s" % (artifact_id, uri)]
+    return []
+
+
+def _link_issues(reader, *, artifact_id=None, root=ROOT):
     issues = []
     count = 0
     for page_number, page in enumerate(reader.pages, 1):
@@ -1654,6 +1687,15 @@ def _link_issues(reader):
                 action_type = str(action.get("/S", ""))
                 if action_type == "/URI" and not str(action.get("/URI", "")).strip():
                     issues.append("page %d has an empty URI link" % page_number)
+                elif action_type == "/URI" and artifact_id is not None:
+                    issues.extend(
+                        "page %d %s" % (page_number, issue)
+                        for issue in local_pdf_uri_issues(
+                            action.get("/URI", ""),
+                            artifact_id=artifact_id,
+                            root=root,
+                        )
+                    )
                 elif action_type not in ("/URI", "/GoTo", ""):
                     issues.append(
                         "page %d has an unsupported link action %s"
@@ -1732,7 +1774,13 @@ def heading_sequence_issues(extracted_text, headings):
     return issues
 
 
-def pdf_structure_issues(pdf_bytes, markdown_bytes):
+def pdf_structure_issues(
+    pdf_bytes,
+    markdown_bytes,
+    *,
+    artifact_id=None,
+    root=ROOT,
+):
     issues = []
     try:
         reader = PdfReader(io.BytesIO(pdf_bytes))
@@ -1765,7 +1813,11 @@ def pdf_structure_issues(pdf_bytes, markdown_bytes):
             "PDF contains %d image XObjects; rasterized text is prohibited"
             % image_count
         )
-    link_issues, link_count = _link_issues(reader)
+    link_issues, link_count = _link_issues(
+        reader,
+        artifact_id=artifact_id,
+        root=root,
+    )
     issues.extend(link_issues)
     return issues, {
         "page_count": len(reader.pages),
@@ -2053,7 +2105,12 @@ def build_artifact(
         raise PipelineError(
             "%s independent bibliography QA records differ" % artifact_id
         )
-    structure_issues, structure = pdf_structure_issues(first["pdf"], markdown)
+    structure_issues, structure = pdf_structure_issues(
+        first["pdf"],
+        markdown,
+        artifact_id=artifact_id,
+        root=root,
+    )
     if structure_issues:
         raise PipelineError(
             "%s PDF structure: %s"
