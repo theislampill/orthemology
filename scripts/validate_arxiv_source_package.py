@@ -144,6 +144,9 @@ def _control_sequence_policy_issues(cleaned, origin):
         "afterassignment",
         "aftergroup",
         "catcode",
+        "closein",
+        "closeout",
+        "directlua",
         "edef",
         "endlinechar",
         "escapechar",
@@ -157,16 +160,26 @@ def _control_sequence_policy_issues(cleaned, origin):
         "expandafter",
         "futurelet",
         "gdef",
+        "ifeof",
+        "iffileexists",
+        "includegraphics",
+        "latelua",
+        "lstinputlisting",
         "lowercase",
         "newread",
         "newtoks",
+        "newwrite",
         "openin",
+        "openout",
         "output",
         "read",
         "readline",
         "scantokens",
+        "special",
         "toks",
         "uppercase",
+        "verbatiminput",
+        "write",
         "xdef",
     }
     # Collapse whitespace after comment removal so a control word cannot be
@@ -175,7 +188,14 @@ def _control_sequence_policy_issues(cleaned, origin):
     command_matches = list(re.finditer(r"\\([A-Za-z@]+)", policy_scan))
     for match in command_matches:
         command = match.group(1)
-        if command.lower() in prohibited:
+        lowered = command.lower()
+        if (
+            lowered in prohibited
+            or lowered == "font"
+            or lowered.startswith("pdf")
+            or lowered.startswith("xetex")
+            or lowered.startswith("lua")
+        ):
             issues.append(
                 "prohibited control-sequence policy primitive: \\%s"
                 % command

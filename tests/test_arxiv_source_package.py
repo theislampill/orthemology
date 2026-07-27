@@ -868,6 +868,31 @@ class SourcePackageContractTests(unittest.TestCase):
             "global expanded definition": "\\xdef\\x{safe}\n",
             "unowned definition": "\\def\\x{safe}\n",
             "unowned alias": "\\let\\x\\relax\n",
+            "PDF file dump": (
+                "\\pdffiledump offset 0 length 1 {main.tex}\n"
+            ),
+            "PDF file modification date": "\\pdffilemoddate{main.tex}\n",
+            "PDF file size": "\\pdffilesize{main.tex}\n",
+            "PDF file digest": "\\pdfmdfivesum file {main.tex}\n",
+            "PDF image read": "\\pdfximage{main.tex}\n",
+            "PDF legacy image read": "\\pdfimage{main.tex}\n",
+            "PDF object file stream": "\\pdfobj stream file {main.tex}\n",
+            "XeTeX image read": "\\XeTeXpicfile{main.tex}\n",
+            "XeTeX PDF read": "\\XeTeXpdffile{main.tex}\n",
+            "Lua direct execution": "\\directlua{safe}\n",
+            "Lua delayed execution": "\\latelua{safe}\n",
+            "graphics file read": "\\includegraphics{main.tex}\n",
+            "verbatim file read": "\\verbatiminput{main.tex}\n",
+            "listing file read": "\\lstinputlisting{main.tex}\n",
+            "font file read": "\\font\\x=cmr10\n",
+            "file existence read": "\\IfFileExists{main.tex}{}{}\n",
+            "stream close": "\\closein0\n",
+            "stream status": "\\ifeof0\n",
+            "driver special": "\\special{safe}\n",
+            "output stream": "\\openout0=outside.txt\n",
+            "output allocation": "\\newwrite\\x\n",
+            "output close": "\\closeout0\n",
+            "output write": "\\write0{outside}\n",
         }
         for name, payload in attacks.items():
             with self.subTest(name=name):
@@ -1343,6 +1368,12 @@ class SourcePackageContractTests(unittest.TestCase):
             "Total final page–count: `999`.",
             "Total final page—count: `999`.",
             "Total final page−count: `999`.",
+            "Tot\u0301al final page count: `999`.",
+            "Tótal final page count: `999`.",
+            "To\u0301\u0323tal final page count: `999`.",
+            "Total fi\u0301nal page count: `999`.",
+            "Total final pa\u0301ge count: `999`.",
+            "Total final page cou\u0301nt: `999`.",
         )
         for addition in additions:
             with self.subTest(addition=addition):
@@ -1386,6 +1417,8 @@ class SourcePackageContractTests(unittest.TestCase):
             "Total final page count: `٦١`.",
             "Total final page count: `６１`.",
             "Total final page count: `%s`." % ("9" * 5000),
+            "Tot\u0301al final page count: `61`.",
+            "Tótal final page count: `61`.",
         )
         report = (
             ROOT

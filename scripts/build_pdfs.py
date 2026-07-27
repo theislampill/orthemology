@@ -233,11 +233,11 @@ def render_compatibility_artifact_table(root):
 
 def is_total_page_record_candidate(line):
     """Recognize semantic total markers despite Unicode punctuation variants."""
-    normalized = unicodedata.normalize("NFKC", line).casefold()
+    normalized = unicodedata.normalize("NFKD", line).casefold()
     token_text = []
     for character in normalized:
         category = unicodedata.category(character)
-        if category == "Cf":
+        if category == "Cf" or category.startswith("M"):
             continue
         token_text.append(character if character.isalnum() else " ")
     tokens = "".join(token_text).split()
