@@ -114,6 +114,8 @@ TASK14_LEDGER = (
 TASK14_REPORT = (
     "docs/project-closure/r7e-sol/R7E-SOL-ADVERSARIAL-REPORT.md"
 )
+TASK14_PROBE = "scripts/run_task14_probe.py"
+TASK14_OBSERVATION_SCHEMA = "orthemology-task14-observation-v1"
 
 
 def _task14_plan_names(root):
@@ -156,49 +158,96 @@ def audit_task14_spec(spec, root):
 
     attack_ids = []
     mutation_ids = []
+    variant_ids = []
     for index, row in enumerate(attacks, 1):
         expected_id = "R7E-T14-A%02d" % index
         if not isinstance(row, dict):
             issues.append("%s must be an object" % expected_id)
             continue
         attack_id = row.get("attack_id")
-        mutation_id = row.get("mutation_id")
         attack_ids.append(attack_id)
-        mutation_ids.append(mutation_id)
         if attack_id != expected_id:
             issues.append("attack %d ID must be %s" % (index, expected_id))
-        if mutation_id != expected_id + "-M01":
-            issues.append("%s mutation ID must be %s-M01" % (expected_id, expected_id))
-        if row.get("coverage_kind") != "structured-semantic":
-            issues.append("%s must use structured semantic coverage" % expected_id)
-        for field in ("invariant", "owner", "control"):
+        if "coverage_kind" in row or "coverage" in row or "command" in row:
+            issues.append(
+                "%s must not use an arbitrary coverage label or shared command"
+                % expected_id
+            )
+        for field in ("invariant", "owner"):
             value = row.get(field)
             if not isinstance(value, str) or not value.strip():
                 issues.append("%s has no %s" % (expected_id, field))
-        coverage = row.get("coverage")
-        if not (
-            isinstance(coverage, list)
-            and coverage
-            and all(isinstance(item, str) and item.strip() for item in coverage)
-        ):
-            issues.append("%s has no exact structured coverage selector" % expected_id)
-        command = row.get("command")
-        if not (
-            isinstance(command, list)
-            and len(command) >= 4
-            and command[:3] == ["python", "-m", "unittest"]
-            and all(isinstance(token, str) and token for token in command)
-        ):
-            issues.append("%s command must invoke exact unittest selectors" % expected_id)
-        else:
-            selectors = command[3:]
-            if selectors[-1] == "-v":
-                selectors = selectors[:-1]
-            if not selectors or any(selector.count(".") < 2 for selector in selectors):
-                issues.append("%s command has no exact unittest method selector" % expected_id)
+        variants = row.get("variants")
+        if not isinstance(variants, list) or not variants:
+            issues.append("%s has no explicit control/mutation variants" % expected_id)
+            continue
+        for variant_index, variant in enumerate(variants, 1):
+            expected_variant_id = "%s-V%02d" % (expected_id, variant_index)
+            expected_mutation_id = "%s-M%02d" % (expected_id, variant_index)
+            if not isinstance(variant, dict):
+                issues.append("%s variant %d must be an object" % (expected_id, variant_index))
+                continue
+            variant_id = variant.get("variant_id")
+            mutation_id = variant.get("mutation_id")
+            variant_ids.append(variant_id)
+            mutation_ids.append(mutation_id)
+            if variant_id != expected_variant_id or mutation_id != expected_mutation_id:
+                issues.append("%s variant command identity mismatch" % expected_id)
+            if variant.get("validator_owner") != row.get("owner"):
+                issues.append(
+                    "%s %s validator owner differs from attack owner"
+                    % (expected_id, variant_id)
+                )
+            for field in (
+                "neutral_concept",
+                "validator_entry_point",
+                "control_evidence_selector",
+                "mutation_evidence_selector",
+            ):
+                value = variant.get(field)
+                if not isinstance(value, str) or not value.strip():
+                    issues.append("%s %s has no %s" % (expected_id, variant_id, field))
+            if (
+                variant.get("control_evidence_selector")
+                == variant.get("mutation_evidence_selector")
+            ):
+                issues.append(
+                    "%s %s reuses one selector for control and mutation"
+                    % (expected_id, variant_id)
+                )
+            entry_point = variant.get("validator_entry_point")
+            if (
+                isinstance(entry_point, str)
+                and entry_point
+                and not (pathlib.Path(root) / entry_point).is_file()
+            ):
+                issues.append("%s %s production validator is missing" % (expected_id, variant_id))
+            for role in ("control", "mutation"):
+                command = variant.get(role + "_command")
+                if command is None:
+                    issues.append("%s %s has no %s command" % (expected_id, variant_id, role))
+                    continue
+                expected_command = [
+                    "python",
+                    TASK14_PROBE,
+                    "--attack-id",
+                    expected_id,
+                    "--variant-id",
+                    expected_variant_id,
+                    "--role",
+                    role,
+                ]
+                if command != expected_command:
+                    issues.append(
+                        "%s %s %s command must invoke the production observation probe; "
+                        "variant command identity mismatch"
+                        % (expected_id, variant_id, role)
+                    )
 
     for value in sorted({value for value in attack_ids if attack_ids.count(value) > 1}):
         issues.append("duplicate attack ID %s" % value)
+    for value in sorted({value for value in variant_ids if variant_ids.count(value) > 1}):
+        issues.append("duplicate variant ID %s" % value)
     for value in sorted(
         {value for value in mutation_ids if mutation_ids.count(value) > 1}
     ):
@@ -232,63 +281,210 @@ def audit_task14_spec(spec, root):
                 "%s is not bounded away from automatic normative flow"
                 % row.get("artifact_id", "unknown AR6 artifact")
             )
+    mappings = spec.get("task14_ar6_mappings")
+    if not isinstance(mappings, list):
+        issues.append("Task 14 AR6 impact mappings must be a list")
+        mappings = []
+    mapping_ids = [
+        row.get("artifact_id") for row in mappings if isinstance(row, dict)
+    ]
+    if set(mapping_ids) != expected_ar6 or len(mapping_ids) != len(set(mapping_ids)):
+        issues.append("Task 14 AR6 impact mappings do not cover each ledger row exactly once")
+    attack_variant_pairs = {
+        (attack.get("attack_id"), variant.get("variant_id"))
+        for attack in attacks
+        if isinstance(attack, dict)
+        for variant in attack.get("variants", [])
+        if isinstance(variant, dict)
+    }
+    ledger_by_id = {
+        row.get("artifact_id"): row for row in ledger_rows if row.get("artifact_id")
+    }
+    for mapping in mappings:
+        if not isinstance(mapping, dict):
+            issues.append("Task 14 AR6 impact mapping must be an object")
+            continue
+        artifact_id = mapping.get("artifact_id", "unknown AR6 artifact")
+        ledger_row = ledger_by_id.get(artifact_id)
+        status = mapping.get("reproduction_status")
+        if not isinstance(mapping.get("neutral_concept"), str) or not mapping[
+            "neutral_concept"
+        ].strip():
+            issues.append("%s AR6 mapping lacks a neutral concept" % artifact_id)
+        if status == "REPRODUCED_AGAINST_INTEGRATED_TREE":
+            pair = (mapping.get("attack_id"), mapping.get("variant_id"))
+            if (
+                pair not in attack_variant_pairs
+                or mapping.get("normative_flow") != "NEGATIVE_EVIDENCE_ONLY"
+            ):
+                issues.append(
+                    "%s reproduced AR6 row lacks exact attack/variant/result mapping"
+                    % artifact_id
+                )
+            if (
+                not isinstance(ledger_row, dict)
+                or ledger_row.get("required_disposition")
+                != "COUNTERMODEL_OR_NEGATIVE_EVIDENCE"
+                or ledger_row.get("current_repository_representation")
+                == "NO_CANONICAL_REPOSITORY_OWNER_IDENTIFIED"
+            ):
+                issues.append(
+                    "%s may not be classified as reproduced against the integrated tree"
+                    % artifact_id
+                )
+        elif status == "NOT_REPRODUCED_RETAINED_PROVENANCE_ONLY":
+            if (
+                mapping.get("attack_id") is not None
+                or mapping.get("variant_id") is not None
+                or mapping.get("normative_flow") != "NO_NORMATIVE_OR_PUBLICATION_FLOW"
+            ):
+                issues.append(
+                    "%s unreproduced AR6 row may not enter normative flow" % artifact_id
+                )
+        else:
+            issues.append("%s has an invalid AR6 reproduction status" % artifact_id)
     return issues
 
 
+def task14_probe_identity(command):
+    """Parse one exact Task 14 observation-probe command."""
+    tokens = list(command)
+    if len(tokens) != 8 or tokens[1] != TASK14_PROBE:
+        raise ValueError("command is not an exact Task 14 observation probe")
+    if tokens[2] != "--attack-id" or tokens[4] != "--variant-id" or tokens[6] != "--role":
+        raise ValueError("Task 14 observation-probe argument order drifted")
+    if tokens[7] not in {"control", "mutation"}:
+        raise ValueError("Task 14 observation-probe role is invalid")
+    return {
+        "attack_id": tokens[3],
+        "variant_id": tokens[5],
+        "role": tokens[7],
+    }
+
+
+def _parse_task14_observation(completed, expected):
+    if completed.returncode != 0:
+        detail = (completed.stderr or completed.stdout or "").strip()
+        raise ValueError(
+            "observation probe exited %d%s"
+            % (completed.returncode, ": " + detail[-500:] if detail else "")
+        )
+    try:
+        payload = json.loads(completed.stdout)
+    except (TypeError, ValueError) as exc:
+        raise ValueError("missing machine-readable observation: %s" % exc)
+    if not isinstance(payload, dict) or payload.get("schema") != TASK14_OBSERVATION_SCHEMA:
+        raise ValueError("missing machine-readable observation schema")
+    for field, value in expected.items():
+        if payload.get(field) != value:
+            raise ValueError(
+                "observation identity mismatch for %s: expected %r, observed %r"
+                % (field, value, payload.get(field))
+            )
+    expected_outcome = "accepted" if expected["role"] == "control" else "rejected"
+    if payload.get("asserted_validator_outcome") != expected_outcome:
+        raise ValueError(
+            "%s assertion observed %s instead of %s"
+            % (
+                expected["role"],
+                payload.get("asserted_validator_outcome", "missing"),
+                expected_outcome,
+            )
+        )
+    if payload.get("evidence_process_exit_code") != 0:
+        raise ValueError(
+            "%s evidence process exit semantics drifted: expected 0, observed %r"
+            % (
+                expected["role"],
+                payload.get("evidence_process_exit_code"),
+            )
+        )
+    semantics = payload.get("exit_semantics")
+    if (
+        not isinstance(semantics, str)
+        or "not the validator's own exit code" not in semantics
+    ):
+        raise ValueError("%s evidence exit semantics are missing" % expected["role"])
+    return payload
+
+
 def run_task14_attacks(spec, root, runner=subprocess.run, python=sys.executable):
-    """Run each exact focused command once and account for every mandatory attack."""
+    """Run separate controls and mutations and retain their semantic observations."""
     issues = audit_task14_spec(spec, root)
     if issues:
         return [], issues
-    cache = {}
-    for row in spec["mandatory_attacks"]:
-        key = tuple(row["command"])
-        if key in cache:
-            continue
-        command = [python] + list(key[1:])
-        try:
-            cache[key] = runner(
-                command,
-                cwd=str(root),
-                capture_output=True,
-                text=True,
-                encoding="utf-8",
-                timeout=180,
-            )
-        except (OSError, subprocess.TimeoutExpired) as exc:
-            cache[key] = type(
-                "Task14CommandFailure",
-                (),
-                {"returncode": 124, "stdout": "", "stderr": str(exc)},
-            )()
-
     results = []
-    for row in spec["mandatory_attacks"]:
-        completed = cache[tuple(row["command"])]
-        passed = completed.returncode == 0
-        result = {
-            "attack_id": row["attack_id"],
-            "name": row["name"],
-            "mutation_id": row["mutation_id"],
-            "invariant": row["invariant"],
-            "owner": row["owner"],
-            "coverage": list(row["coverage"]),
-            "command": " ".join(row["command"]),
-            "control_result": "accepted" if passed else "unverified",
-            "mutation_result": "rejected" if passed else "unverified",
-            "verification_exit_code": completed.returncode,
-        }
-        results.append(result)
-        if not passed:
-            detail = (completed.stderr or completed.stdout or "").strip()
-            issues.append(
-                "%s exact verification command exited %d%s"
-                % (
-                    row["attack_id"],
-                    completed.returncode,
-                    ": " + detail[-500:] if detail else "",
-                )
+    for attack in spec["mandatory_attacks"]:
+        for variant in attack["variants"]:
+            observations = {}
+            failed = False
+            for role in ("control", "mutation"):
+                command = [python] + list(variant[role + "_command"][1:])
+                try:
+                    completed = runner(
+                        command,
+                        cwd=str(root),
+                        capture_output=True,
+                        text=True,
+                        encoding="utf-8",
+                        timeout=180,
+                    )
+                except (OSError, subprocess.TimeoutExpired) as exc:
+                    completed = type(
+                        "Task14CommandFailure",
+                        (),
+                        {"returncode": 124, "stdout": "", "stderr": str(exc)},
+                    )()
+                expected = {
+                    "attack_id": attack["attack_id"],
+                    "variant_id": variant["variant_id"],
+                    "role": role,
+                    "validator_owner": variant["validator_owner"],
+                    "validator_entry_point": variant["validator_entry_point"],
+                }
+                try:
+                    observations[role] = _parse_task14_observation(completed, expected)
+                except ValueError as exc:
+                    issues.append(
+                        "%s %s %s: %s"
+                        % (
+                            attack["attack_id"],
+                            variant["variant_id"],
+                            role,
+                            exc,
+                        )
+                    )
+                    failed = True
+            if failed:
+                continue
+            results.append(
+                {
+                    "attack_id": attack["attack_id"],
+                    "name": attack["name"],
+                    "variant_id": variant["variant_id"],
+                    "mutation_id": variant["mutation_id"],
+                    "neutral_concept": variant["neutral_concept"],
+                    "invariant": attack["invariant"],
+                    "owner": attack["owner"],
+                    "validator_entry_point": variant["validator_entry_point"],
+                    "control_command": " ".join(variant["control_command"]),
+                    "mutation_command": " ".join(variant["mutation_command"]),
+                    "control_asserted_outcome": observations["control"][
+                        "asserted_validator_outcome"
+                    ],
+                    "control_evidence_process_exit_code": observations["control"][
+                        "evidence_process_exit_code"
+                    ],
+                    "mutation_asserted_outcome": observations["mutation"][
+                        "asserted_validator_outcome"
+                    ],
+                    "mutation_evidence_process_exit_code": observations["mutation"][
+                        "evidence_process_exit_code"
+                    ],
+                }
             )
+    if issues:
+        return [], issues
     return results, issues
 
 
@@ -299,9 +495,18 @@ def _cell(value):
 def render_task14_report(spec, results, root, recursive_totals=None):
     """Render the byte-stable Task 14 report from current executable results."""
     recursive_totals = recursive_totals or {}
-    unique_commands = {row["command"] for row in results}
-    passed = [row for row in results if row["verification_exit_code"] == 0]
-    variants = sum(len(row.get("coverage", [])) for row in results)
+    unique_commands = {
+        command
+        for row in results
+        for command in (row["control_command"], row["mutation_command"])
+    }
+    passed = [
+        row
+        for row in results
+        if row["control_asserted_outcome"] == "accepted"
+        and row["mutation_asserted_outcome"] == "rejected"
+    ]
+    variants = len(results)
     lines = [
         "# R7E Sol adversarial and mutation report",
         "",
@@ -313,13 +518,13 @@ def render_task14_report(spec, results, root, recursive_totals=None):
         "- Exact approved Task 13 base: `%s`" % spec.get("task14_exact_base", "UNDECLARED"),
         "- Mandatory attacks: %d" % len(spec.get("mandatory_attacks", [])),
         "- Structured coverage variants: %d" % variants,
-        "- Executed unique focused commands: %d" % len(unique_commands),
-        "- Passing attacks: %d" % len(passed),
+        "- Executed separate control/mutation commands: %d" % len(unique_commands),
+        "- Passing variants: %d" % len(passed),
         "- Valid controls asserted accepted: %d" % sum(
-            row["control_result"] == "accepted" for row in results
+            row["control_asserted_outcome"] == "accepted" for row in results
         ),
         "- Invalid mutations asserted rejected: %d" % sum(
-            row["mutation_result"] == "rejected" for row in results
+            row["mutation_asserted_outcome"] == "rejected" for row in results
         ),
     ]
     if recursive_totals:
@@ -333,30 +538,34 @@ def render_task14_report(spec, results, root, recursive_totals=None):
         ])
     lines.extend([
         "",
-        "A zero command exit means the named exact test method asserted both the "
-        "neighboring valid control and the structured invalid mutation. The two "
-        "outcome columns below are therefore asserted test outcomes, not labels "
-        "copied from inventory metadata.",
+        "Every row comes from two distinct processes. Each process emits an exact "
+        "machine-readable observation bound to the attack, variant, role, production "
+        "validator, and validator owner. A wrapper exit code alone is never treated "
+        "as a semantic outcome.",
         "",
         "## Mandatory attacks",
         "",
-        "| Attack ID | Attack | Mutation ID | Invariant | Exact command | Control | Mutation | RC | Owner | Structured coverage |",
-        "|---|---|---|---|---|---|---|---:|---|---|",
+        "| Attack ID | Attack | Variant | Mutation ID | Neutral concept | Invariant | Production validator | Control command / observed RC | Mutation command / observed RC | Owner |",
+        "|---|---|---|---|---|---|---|---|---|---|",
     ])
     for row in results:
         lines.append(
-            "| %s | %s | %s | %s | `%s` | %s | %s | %d | %s | %s |"
+            "| %s | %s | %s | %s | %s | %s | `%s` | `%s` / %s (%d) | `%s` / %s (%d) | %s |"
             % (
                 _cell(row["attack_id"]),
                 _cell(row["name"]),
+                _cell(row["variant_id"]),
                 _cell(row["mutation_id"]),
+                _cell(row["neutral_concept"]),
                 _cell(row["invariant"]),
-                _cell(row["command"]),
-                _cell(row["control_result"]),
-                _cell(row["mutation_result"]),
-                row["verification_exit_code"],
+                _cell(row["validator_entry_point"]),
+                _cell(row["control_command"]),
+                _cell(row["control_asserted_outcome"]),
+                row["control_evidence_process_exit_code"],
+                _cell(row["mutation_command"]),
+                _cell(row["mutation_asserted_outcome"]),
+                row["mutation_evidence_process_exit_code"],
                 _cell(row["owner"]),
-                _cell("; ".join(row["coverage"])),
             )
         )
     lines.extend([
@@ -367,26 +576,44 @@ def render_task14_report(spec, results, root, recursive_totals=None):
         "Only entries already dispositioned as countermodels or negative evidence "
         "may inform reproduced attacks; no interrupted claim is promoted.",
         "",
-        "| Artifact ID | Tranche | Function | Disposition | Integration | Current representation | Task 14 use |",
-        "|---|---|---|---|---|---|---|",
+        "| Artifact ID | Tranche | Disposition | Neutral concept | Reproduction status | Exact Task 14 mapping | Production command and observed result | Normative flow |",
+        "|---|---|---|---|---|---|---|---|",
     ])
+    mappings = {
+        row["artifact_id"]: row
+        for row in spec.get("task14_ar6_mappings", [])
+        if isinstance(row, dict) and row.get("artifact_id")
+    }
+    result_by_pair = {
+        (row["attack_id"], row["variant_id"]): row for row in results
+    }
     for row in load_task14_ar6_rows(root):
-        disposition = row.get("required_disposition", "")
-        use = (
-            "reproduced negative evidence only"
-            if disposition == "COUNTERMODEL_OR_NEGATIVE_EVIDENCE"
-            else "excluded interrupted research"
-        )
+        artifact_id = row.get("artifact_id", "")
+        mapping = mappings.get(artifact_id, {})
+        status = mapping.get("reproduction_status", "UNMAPPED")
+        pair = (mapping.get("attack_id"), mapping.get("variant_id"))
+        observed = result_by_pair.get(pair)
+        if status == "REPRODUCED_AGAINST_INTEGRATED_TREE" and observed:
+            exact_mapping = "%s / %s" % pair
+            command_result = "`%s` -> %s assertion passed (evidence process rc %d)" % (
+                observed["mutation_command"],
+                observed["mutation_asserted_outcome"],
+                observed["mutation_evidence_process_exit_code"],
+            )
+        else:
+            exact_mapping = "none"
+            command_result = "not reproduced; retained as provenance only"
         lines.append(
-            "| %s | %s | %s | %s | %s | %s | %s |"
+            "| %s | %s | %s | %s | %s | %s | %s | %s |"
             % (
-                _cell(row.get("artifact_id", "")),
+                _cell(artifact_id),
                 _cell(row.get("research_tranche", "")),
-                _cell(row.get("claim_or_function", "")),
-                _cell(disposition),
-                _cell(row.get("integration_status", "")),
-                _cell(row.get("current_repository_representation", "")),
-                use,
+                _cell(row.get("required_disposition", "")),
+                _cell(mapping.get("neutral_concept", "")),
+                _cell(status),
+                _cell(exact_mapping),
+                _cell(command_result),
+                _cell(mapping.get("normative_flow", "")),
             )
         )
     return "\n".join(lines) + "\n"
@@ -1083,11 +1310,13 @@ def main():
         fails += 1
     else:
         unique_commands = {
-            row["command"] for row in task14_results
+            command
+            for row in task14_results
+            for command in (row["control_command"], row["mutation_command"])
         }
         print(
-            "PASS: Task 14 accounted for %d mandatory attacks through %d exact "
-            "focused command(s)." % (len(task14_results), len(unique_commands))
+            "PASS: Task 14 accounted for %d explicit variants through %d separate "
+            "control/mutation command(s)." % (len(task14_results), len(unique_commands))
         )
 
     report = render_task14_report(

@@ -198,12 +198,19 @@ artifacts and interrupted external research do not satisfy that gate.
 - Status: implementation complete and ready for independent review. No approval
   is claimed.
 - Implementation/review: the authoritative plan inventory contains all 59
-  mandatory attacks exactly once, with unique mutation IDs, exact focused
-  control/mutation commands, and 19 disposition-bound AR6 inputs. Six formerly
-  indirect boundaries now have one valid control and eight direct structured
-  invalid mutations through the production entry point.
-- CI/publication: 20 unique focused commands assert all 59 valid-control and
-  invalid-mutation outcomes. The current recursive engine generates 1,813
+  mandatory attacks exactly once and expands them into 77 explicit variants.
+  Every variant has a unique mutation ID, a separate valid-control probe, a
+  separate invalid-mutation probe, and a machine-readable observation bound to
+  its production validator and owner. The 19 Task 14 AR6 inputs are mapped
+  exactly once: seven bounded AR2–AR4 negative-evidence records are reproduced
+  against exact Task 14 variants, two negative-evidence records without a
+  canonical repository owner remain provenance-only, and ten interrupted AR6
+  records remain external and provenance-only. The multi-operator attack now
+  carries explicit source-independence, warrant, truth, and testimonial-
+  transmission promotion mutations through the production entry point.
+- CI/publication: 154 separate control/mutation processes assert all 77
+  variant outcomes; an arbitrary successful command cannot stand in for either
+  semantic outcome. The current recursive engine generates 1,813
   mutants across 27 families: 1,546 schema-killed, 248 semantic-killed, and 19
   justified equivalents, with zero unjustified survivors. The canonical report
   is `docs/project-closure/r7e-sol/R7E-SOL-ADVERSARIAL-REPORT.md`.

@@ -1729,7 +1729,18 @@ runtime: implemented
                 )
             )
 
-        self.assertEqual(8, len(cases))
+        collective = copy.deepcopy(self.collective)
+        collective["semantic_boundaries"][
+            "multi_operator_recurrence_proves_tawatur"
+        ] = True
+        cases.append(
+            (
+                "multi-operator-testimonial-transmission-promotion",
+                {"collective": collective},
+            )
+        )
+
+        self.assertEqual(9, len(cases))
         for name, changes in cases:
             with self.subTest(mutation=name):
                 self.assertRejected(**changes)
