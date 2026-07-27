@@ -1327,6 +1327,11 @@ class SourcePackageContractTests(unittest.TestCase):
             "Total final page count : `999`.",
             " Total final page count: `999`.",
             "Total final page count: `999`. trailing",
+            "total final page count: `999`.",
+            "TOTAL FINAL PAGE COUNT: `999`.",
+            "Total  final page count: `999`.",
+            "Total\tfinal\tpage\tcount: `999`.",
+            "Total final page-count: `999`.",
         )
         for addition in additions:
             with self.subTest(addition=addition):
@@ -1356,6 +1361,45 @@ class SourcePackageContractTests(unittest.TestCase):
                     issues = validate(root)
                     self.assertTrue(
                         any("exactly one" in issue for issue in issues),
+                        issues,
+                    )
+
+    def test_compatibility_report_rejects_moved_total_record(self):
+        validate = self.api(BUILD, "compatibility_report_table_issues")
+        total = "Total final page count: `61`."
+        report = (
+            ROOT
+            / "docs"
+            / "project-closure"
+            / "r7e-sol"
+            / "R7E-SOL-ARXIV-COMPATIBILITY.md"
+        ).read_text(encoding="utf-8")
+        without_total = report.replace(total + "\n\n", "", 1)
+        mutations = {
+            "before table": total + "\n\n" + without_total,
+            "document end": without_total.rstrip() + "\n\n" + total + "\n",
+        }
+        for name, mutation in mutations.items():
+            with self.subTest(name=name):
+                with tempfile.TemporaryDirectory() as temporary:
+                    root = pathlib.Path(temporary)
+                    shutil.copytree(ROOT / "artifacts", root / "artifacts")
+                    report_target = (
+                        root
+                        / "docs"
+                        / "project-closure"
+                        / "r7e-sol"
+                        / "R7E-SOL-ARXIV-COMPATIBILITY.md"
+                    )
+                    report_target.parent.mkdir(parents=True)
+                    report_target.write_text(
+                        mutation,
+                        encoding="utf-8",
+                        newline="\n",
+                    )
+                    issues = validate(root)
+                    self.assertTrue(
+                        any("canonical table position" in issue for issue in issues),
                         issues,
                     )
 

@@ -311,12 +311,21 @@ def compatibility_report_table_issues(root):
                     "%s %s differs from owner" % (artifact_id, label)
                 )
     expected_total = sum(row["pages"] for row in expected_rows)
-    total_record_lines = [
-        line for line in lines if "Total final page count" in line
+    total_marker = re.compile(
+        r"total\s+final\s+page(?:[\s-]+)count",
+        re.I,
+    )
+    total_record_indexes = [
+        index
+        for index, line in enumerate(lines)
+        if total_marker.search(line)
     ]
     total_match = (
-        re.fullmatch(r"Total final page count: `(\d+)`\.", total_record_lines[0])
-        if len(total_record_lines) == 1
+        re.fullmatch(
+            r"Total final page count: `(\d+)`\.",
+            lines[total_record_indexes[0]],
+        )
+        if len(total_record_indexes) == 1
         else None
     )
     if total_match is None:
@@ -325,6 +334,14 @@ def compatibility_report_table_issues(root):
         )
     elif int(total_match.group(1)) != expected_total:
         issues.append("compatibility report total page count differs from owners")
+    elif (
+        len(header_indexes) != 1
+        or total_record_indexes[0]
+        != header_indexes[0] + len(expected_table_lines) + 1
+    ):
+        issues.append(
+            "compatibility report total page count is not in canonical table position"
+        )
     return issues
 
 
@@ -347,21 +364,42 @@ def rewrite_compatibility_artifact_table(root):
     expected_total = sum(
         row["pages"] for row in compatibility_artifact_rows(root)
     )
-    total_record_lines = [
-        line
-        for line in updated.splitlines()
-        if "Total final page count" in line
+    updated_lines = updated.splitlines()
+    total_marker = re.compile(
+        r"total\s+final\s+page(?:[\s-]+)count",
+        re.I,
+    )
+    total_record_indexes = [
+        index
+        for index, line in enumerate(updated_lines)
+        if total_marker.search(line)
     ]
     if (
-        len(total_record_lines) != 1
+        len(total_record_indexes) != 1
         or re.fullmatch(
             r"Total final page count: `\d+`\.",
-            total_record_lines[0],
+            updated_lines[total_record_indexes[0]],
         )
         is None
     ):
         raise PipelineError(
             "compatibility report must contain exactly one total page count"
+        )
+    header_indexes = [
+        index
+        for index, line in enumerate(updated_lines)
+        if line == render_compatibility_artifact_table(root).splitlines()[0]
+    ]
+    expected_table_line_count = len(
+        render_compatibility_artifact_table(root).splitlines()
+    )
+    if (
+        len(header_indexes) != 1
+        or total_record_indexes[0]
+        != header_indexes[0] + expected_table_line_count + 1
+    ):
+        raise PipelineError(
+            "compatibility report total page count is not in canonical table position"
         )
     updated, total_count = re.subn(
         r"^Total final page count: `\d+`\.$",
