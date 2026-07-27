@@ -761,24 +761,286 @@ $$
             positions,
         )
 
-    def test_short_display_and_long_inline_math_keep_existing_rendering(self):
+    def test_exact_124_character_display_uses_reconstructable_multline_layout(self):
         generator = load_generator()
         self.assertIsNotNone(generator, "Task 12 LaTeX generator is missing")
-        short_display = (
+        exact_display = (
             r"e \models_{\mu} (m : \hat{o}) \iff \hat{o} \in \hat{O}(e) "
             r"\ \text{and}\ \mu \in \vec{\mu}(e)"
             r"\ \text{governed that placement}"
         )
-        self.assertLess(
-            len(short_display),
+        self.assertEqual(len(exact_display), 124)
+        self.assertGreaterEqual(
+            len(exact_display),
             generator.DISPLAY_MATH_MULTLINE_THRESHOLD,
         )
+        first = generator.render_markdown(
+            "$$\n%s\n$$\n" % exact_display,
+            source_name="exact-124-character-display.md",
+        )
+        second = generator.render_markdown(
+            "$$\n%s\n$$\n" % exact_display,
+            source_name="exact-124-character-display.md",
+        )
+
+        self.assertEqual(first, second)
+        begin = first.index("\\begin{multline*}\n") + len(
+            "\\begin{multline*}\n"
+        )
+        end = first.index("\n\\end{multline*}", begin)
+        layout_body = first[begin:end]
+        self.assertEqual(
+            layout_body.count(generator.DISPLAY_MATH_LAYOUT_BREAK),
+            1,
+        )
+        self.assertIn(
+            r"\iff" + generator.DISPLAY_MATH_LAYOUT_BREAK,
+            layout_body,
+        )
+        self.assertEqual(
+            generator.remove_display_math_layout_breaks(layout_body),
+            exact_display,
+        )
+        self.assertIn(r"\text{and}", layout_body)
+        self.assertIn(r"\text{governed that placement}", layout_body)
+
+    def test_display_multline_threshold_is_exact_and_reconstructable(self):
+        generator = load_generator()
+        self.assertIsNotNone(generator, "Task 12 LaTeX generator is missing")
+
+        def formula_of_length(length):
+            connective = r" \iff "
+            payload = length - len(connective)
+            left = payload // 2
+            return ("x" * left) + connective + ("y" * (payload - left))
+
+        below = formula_of_length(
+            generator.DISPLAY_MATH_MULTLINE_THRESHOLD - 1
+        )
+        at_boundary = formula_of_length(
+            generator.DISPLAY_MATH_MULTLINE_THRESHOLD
+        )
+        self.assertEqual(
+            len(below),
+            generator.DISPLAY_MATH_MULTLINE_THRESHOLD - 1,
+        )
+        self.assertEqual(
+            len(at_boundary),
+            generator.DISPLAY_MATH_MULTLINE_THRESHOLD,
+        )
+
+        rendered_below = generator._render_display_math(below)
+        self.assertEqual(rendered_below, "\n\\[\n%s\n\\]\n" % below)
+
+        rendered_boundary = generator._render_display_math(at_boundary)
+        begin = rendered_boundary.index("\\begin{multline*}\n") + len(
+            "\\begin{multline*}\n"
+        )
+        end = rendered_boundary.index("\n\\end{multline*}", begin)
+        layout_body = rendered_boundary[begin:end]
+        self.assertEqual(
+            generator.remove_display_math_layout_breaks(layout_body),
+            at_boundary,
+        )
+
+    def test_exact_long_inline_tuples_get_reconstructable_safe_breaks(self):
+        generator = load_generator()
+        self.assertIsNotNone(generator, "Task 12 LaTeX generator is missing")
+        examples = {
+            "relspec": (
+                r"\operatorname{RelSpec}_q(e) = \langle "
+                r"\text{declared reference class}; "
+                r"\text{relevant case/risk stratum}; "
+                r"\text{reliability metric}; "
+                r"\text{threshold or tolerance}; "
+                r"\text{perturbation or comparison family where applicable}; "
+                r"\text{evaluation protocol}; "
+                r"\text{evidence used to establish reliability}; "
+                r"\text{version and validity conditions} \rangle"
+            ),
+            "perturbspec": (
+                r"\operatorname{PerturbSpec}(e) = \langle "
+                r"\text{varied fields}; "
+                r"\text{invariant fields}; "
+                r"\text{generator or enumeration}; "
+                r"\text{size or measure}; "
+                r"\text{tolerance} \rangle"
+            ),
+        }
+        self.assertEqual(len(examples["relspec"]), 344)
+        self.assertEqual(len(examples["perturbspec"]), 168)
+
+        for name, original in examples.items():
+            with self.subTest(name=name):
+                rendered = generator.render_markdown(
+                    "Inline $%s$ remains inline.\n" % original,
+                    source_name="%s-inline.md" % name,
+                )
+                prefix = "Inline $"
+                suffix = "$ remains inline."
+                begin = rendered.index(prefix) + len(prefix)
+                end = rendered.index(suffix, begin)
+                layout_body = rendered[begin:end]
+                self.assertGreaterEqual(
+                    layout_body.count(r"\allowbreak{}"),
+                    5,
+                )
+                self.assertEqual(
+                    generator.normalize_inline_math_layout(layout_body),
+                    original,
+                )
+                self.assertIn(r"\operatorname{", layout_body)
+                self.assertIn(r"\text{", layout_body)
+                self.assertNotIn(r"\operatorname\allowbreak{}", layout_body)
+                self.assertNotIn(r"\text\allowbreak{}", layout_body)
+                self.assertNotIn(r"\begin{multline*}", rendered)
+
+    def test_exact_overlong_text_phrase_splits_at_reviewed_word_space(self):
+        generator = load_generator()
+        self.assertIsNotNone(generator, "Task 12 LaTeX generator is missing")
+        original = (
+            r"\operatorname{RelSpec}_q(e) = \langle "
+            r"\text{declared reference class}; "
+            r"\text{relevant case/risk stratum}; "
+            r"\text{reliability metric}; "
+            r"\text{threshold or tolerance}; "
+            r"\text{perturbation or comparison family where applicable}; "
+            r"\text{evaluation protocol}; "
+            r"\text{evidence used to establish reliability}; "
+            r"\text{version and validity conditions} \rangle"
+        )
+        rendered = generator._render_inline_math(original)
+        expected_split = (
+            r"\text{perturbation or comparison }"
+            r"\allowbreak{}"
+            r"\text{family where applicable}"
+        )
+
+        self.assertIn(expected_split, rendered)
+        self.assertNotEqual(
+            generator.remove_inline_math_layout_breaks(rendered),
+            original,
+        )
+        self.assertEqual(
+            generator.normalize_inline_math_layout(rendered),
+            original,
+        )
+
+    def test_inline_text_split_threshold_and_escaped_content_are_bounded(self):
+        generator = load_generator()
+        self.assertIsNotNone(generator, "Task 12 LaTeX generator is missing")
+        below = "one two three four five six seven eight"
+        at_boundary = below + "x"
+        escaped = r"alpha beta gamma \{delta\} epsilon zeta eta theta"
+        self.assertEqual(
+            len(below),
+            generator.INLINE_MATH_TEXT_GROUP_BREAK_THRESHOLD - 1,
+        )
+        self.assertEqual(
+            len(at_boundary),
+            generator.INLINE_MATH_TEXT_GROUP_BREAK_THRESHOLD,
+        )
+
+        def qualifying_formula(content):
+            return (
+                r"\operatorname{TextSpec}(e) = \langle \text{"
+                + content
+                + r"}; \text{padding words keep this structured formula "
+                r"above the inline threshold} \rangle"
+            )
+
+        below_formula = qualifying_formula(below)
+        below_layout = generator._render_inline_math(below_formula)
+        self.assertIn(r"\text{%s}" % below, below_layout)
+        self.assertEqual(
+            generator.normalize_inline_math_layout(below_layout),
+            below_formula,
+        )
+
+        boundary_formula = qualifying_formula(at_boundary)
+        boundary_layout = generator._render_inline_math(boundary_formula)
+        self.assertNotIn(r"\text{%s}" % at_boundary, boundary_layout)
+        self.assertIn(
+            r"}\allowbreak{}\text{",
+            boundary_layout,
+        )
+        self.assertEqual(
+            generator.normalize_inline_math_layout(boundary_layout),
+            boundary_formula,
+        )
+
+        escaped_formula = qualifying_formula(escaped)
+        escaped_layout = generator._render_inline_math(escaped_formula)
+        self.assertIn(r"\text{%s}" % escaped, escaped_layout)
+        self.assertEqual(
+            generator.normalize_inline_math_layout(escaped_layout),
+            escaped_formula,
+        )
+
+        short_formula = r"\text{%s}" % at_boundary
+        self.assertLess(
+            len(short_formula),
+            generator.INLINE_MATH_BREAK_THRESHOLD,
+        )
+        self.assertEqual(
+            generator._render_inline_math(short_formula),
+            short_formula,
+        )
+
+    def test_inline_break_candidates_exclude_nested_math_syntax(self):
+        generator = load_generator()
+        self.assertIsNotNone(generator, "Task 12 LaTeX generator is missing")
+        body = (
+            r"\operatorname{Pair}(a,b) = \text{left,right}; "
+            r"x_{i,j} \wedge y,z"
+        )
+        positions = generator.reviewed_inline_math_break_positions(body)
+
+        excluded_commas = [
+            body.index(",", body.index("(a,b)")) + 1,
+            body.index(",", body.index(r"\text{left,right}")) + 1,
+            body.index(",", body.index(r"_{i,j}")) + 1,
+        ]
+        for position in excluded_commas:
+            self.assertNotIn(position, positions)
+        self.assertIn(body.index("=") + 1, positions)
+        self.assertIn(body.index(";") + 1, positions)
+        self.assertIn(
+            body.index(r"\wedge") + len(r"\wedge"),
+            positions,
+        )
+        self.assertIn(body.rindex(",") + 1, positions)
+
+    def test_short_math_controls_stay_unchanged_and_long_inline_is_breakable(self):
+        generator = load_generator()
+        self.assertIsNotNone(generator, "Task 12 LaTeX generator is missing")
+        short_display = r"x \iff y"
         rendered_display = generator.render_markdown(
             "$$\n%s\n$$\n" % short_display,
             source_name="short-display.md",
         )
         self.assertIn("\n\\[\n%s\n\\]\n" % short_display, rendered_display)
         self.assertNotIn(r"\begin{multline*}", rendered_display)
+
+        short_inline = r"\operatorname{Pair}(x,y) = z"
+        rendered_short_inline = generator.render_markdown(
+            "Inline $%s$ remains inline.\n" % short_inline,
+            source_name="short-inline.md",
+        )
+        self.assertIn("$%s$" % short_inline, rendered_short_inline)
+        self.assertNotIn(r"\allowbreak{}", rendered_short_inline)
+
+        unstructured_inline = (
+            r"\operatorname{Unbroken}{"
+            + ("x" * generator.INLINE_MATH_BREAK_THRESHOLD)
+            + "}"
+        )
+        rendered_unstructured = generator.render_markdown(
+            "Inline $%s$ remains inline.\n" % unstructured_inline,
+            source_name="unstructured-long-inline.md",
+        )
+        self.assertIn("$%s$" % unstructured_inline, rendered_unstructured)
+        self.assertNotIn(r"\allowbreak{}", rendered_unstructured)
 
         long_inline = (
             r"\operatorname{Configured}(e) "
@@ -796,7 +1058,19 @@ $$
             "Inline $%s$ remains inline.\n" % long_inline,
             source_name="long-inline.md",
         )
-        self.assertIn("$%s$" % long_inline, rendered_inline)
+        prefix = "Inline $"
+        suffix = "$ remains inline."
+        begin = rendered_inline.index(prefix) + len(prefix)
+        end = rendered_inline.index(suffix, begin)
+        layout_body = rendered_inline[begin:end]
+        self.assertGreaterEqual(
+            layout_body.count(r"\allowbreak{}"),
+            5,
+        )
+        self.assertEqual(
+            generator.normalize_inline_math_layout(layout_body),
+            long_inline,
+        )
         self.assertNotIn(r"\begin{multline*}", rendered_inline)
 
     def test_exact_long_inline_code_path_gets_reconstructable_breaks(self):
@@ -952,7 +1226,7 @@ $$
             with self.subTest(copied_nonpath=text):
                 self.assertFalse(generator.is_path_like_inline_code(text))
 
-    def test_current_path_inventory_and_layout_marker_counts_remain_exact(self):
+    def test_current_path_and_inline_math_layout_inventories_remain_exact(self):
         generator = load_generator()
         self.assertIsNotNone(generator, "Task 12 LaTeX generator is missing")
         profile = yaml.safe_load(
@@ -986,13 +1260,20 @@ $$
                 )
 
         tree = generator.expected_latex_tree(ROOT, profile)
-        marker_count = sum(
+        total_marker_count = sum(
             content.count(generator.INLINE_CODE_PATH_LAYOUT_BREAK)
             for content in tree.values()
         )
+        path_marker_count = sum(
+            generator._render_inline_code(path).count(
+                generator.INLINE_CODE_PATH_LAYOUT_BREAK
+            )
+            for path in path_values
+        )
         self.assertEqual(len(path_values), 65)
         self.assertEqual(len(set(path_values)), 39)
-        self.assertEqual(marker_count, 241)
+        self.assertEqual(path_marker_count, 241)
+        self.assertEqual(total_marker_count - path_marker_count, 45)
 
     def test_commonmark_multiline_code_span_is_preserved_as_literal_code(self):
         generator = load_generator()

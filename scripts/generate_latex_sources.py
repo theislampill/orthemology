@@ -21,7 +21,7 @@ LONG_TABLE_ROW_THRESHOLD = 10
 LONG_TABLE_TOTAL_CONTENT_THRESHOLD = 1500
 LONG_TABLE_MAX_ROW_CONTENT_THRESHOLD = 800
 BREAKABLE_TABLE_COLUMN_THRESHOLD = 5
-DISPLAY_MATH_MULTLINE_THRESHOLD = 180
+DISPLAY_MATH_MULTLINE_THRESHOLD = 120
 DISPLAY_MATH_TARGET_WIDTH = 72
 DISPLAY_MATH_LAYOUT_BREAK = "\\\\\n"
 REVIEWED_DISPLAY_MATH_BREAK_COMMANDS = frozenset(
@@ -31,6 +31,38 @@ REVIEWED_DISPLAY_MATH_BREAK_COMMANDS = frozenset(
         r"\Leftrightarrow",
         r"\Longrightarrow",
         r"\Rightarrow",
+        r"\vee",
+        r"\wedge",
+    }
+)
+INLINE_MATH_BREAK_THRESHOLD = 120
+INLINE_MATH_LAYOUT_BREAK = r"\allowbreak{}"
+INLINE_MATH_TEXT_GROUP_BREAK_THRESHOLD = 40
+INLINE_MATH_TEXT_GROUP_TARGET_WIDTH = 32
+REVIEWED_INLINE_MATH_BREAK_COMMANDS = frozenset(
+    {
+        r"\approx",
+        r"\equiv",
+        r"\ge",
+        r"\geq",
+        r"\iff",
+        r"\implies",
+        r"\in",
+        r"\le",
+        r"\leq",
+        r"\Leftrightarrow",
+        r"\Longrightarrow",
+        r"\mapsto",
+        r"\models",
+        r"\neq",
+        r"\notin",
+        r"\Rightarrow",
+        r"\sim",
+        r"\subset",
+        r"\subseteq",
+        r"\supset",
+        r"\supseteq",
+        r"\to",
         r"\vee",
         r"\wedge",
     }
@@ -326,8 +358,8 @@ def _render_inline_code(text):
     return layout_body
 
 
-def reviewed_display_math_break_positions(body):
-    """Return reviewed top-level token boundaries that can take a layout break."""
+def _reviewed_math_break_positions(body, commands, literal_boundaries):
+    """Return reviewed top-level boundaries without entering nested TeX syntax."""
     positions = []
     brace_depth = 0
     parenthesis_depth = 0
@@ -347,7 +379,7 @@ def reviewed_display_math_break_positions(body):
                 brace_depth == 0
                 and parenthesis_depth == 0
                 and bracket_depth == 0
-                and command in REVIEWED_DISPLAY_MATH_BREAK_COMMANDS
+                and command in commands
             ):
                 positions.append(command_end)
             index = command_end
@@ -366,13 +398,31 @@ def reviewed_display_math_break_positions(body):
             elif character == "]":
                 bracket_depth = max(0, bracket_depth - 1)
             elif (
-                character in ",;"
+                character in literal_boundaries
                 and parenthesis_depth == 0
                 and bracket_depth == 0
             ):
                 positions.append(index + 1)
         index += 1
     return positions
+
+
+def reviewed_display_math_break_positions(body):
+    """Return reviewed top-level boundaries that can take a display break."""
+    return _reviewed_math_break_positions(
+        body,
+        REVIEWED_DISPLAY_MATH_BREAK_COMMANDS,
+        frozenset(",;"),
+    )
+
+
+def reviewed_inline_math_break_positions(body):
+    """Return reviewed top-level inline relation, assignment, and list boundaries."""
+    return _reviewed_math_break_positions(
+        body,
+        REVIEWED_INLINE_MATH_BREAK_COMMANDS,
+        frozenset("=,;"),
+    )
 
 
 def remove_display_math_layout_breaks(body):
@@ -425,6 +475,159 @@ def _render_display_math(body):
     return "\n\\begin{multline*}\n%s\n\\end{multline*}\n" % layout_body
 
 
+def remove_inline_math_layout_breaks(body):
+    """Remove only discretionary breaks inserted in qualifying inline math."""
+    return body.replace(INLINE_MATH_LAYOUT_BREAK, "")
+
+
+def _matching_closing_brace(body, opening):
+    depth = 1
+    index = opening + 1
+    while index < len(body):
+        character = body[index]
+        if character == "\\":
+            command_end = index + 1
+            if command_end < len(body) and body[command_end].isalpha():
+                while command_end < len(body) and body[command_end].isalpha():
+                    command_end += 1
+            elif command_end < len(body):
+                command_end += 1
+            index = command_end
+            continue
+        if character == "{":
+            depth += 1
+        elif character == "}":
+            depth -= 1
+            if depth == 0:
+                return index
+        index += 1
+    return None
+
+
+def _reviewed_text_group_break_positions(content):
+    if (
+        len(content) < INLINE_MATH_TEXT_GROUP_BREAK_THRESHOLD
+        or any(character in content for character in "\\{}")
+    ):
+        return []
+    candidates = [
+        index + 1
+        for index, character in enumerate(content)
+        if (
+            character == " "
+            and 0 < index < len(content) - 1
+            and content[index - 1] != " "
+            and content[index + 1] != " "
+        )
+    ]
+    selected = []
+    line_start = 0
+    while len(content) - line_start >= INLINE_MATH_TEXT_GROUP_BREAK_THRESHOLD:
+        remaining = [
+            position
+            for position in candidates
+            if line_start < position < len(content)
+        ]
+        if not remaining:
+            break
+        target = line_start + INLINE_MATH_TEXT_GROUP_TARGET_WIDTH
+        before_target = [position for position in remaining if position <= target]
+        position = max(before_target) if before_target else min(remaining)
+        selected.append(position)
+        line_start = position
+    return selected
+
+
+def _split_overlong_inline_text_groups(body):
+    output = []
+    cursor = 0
+    brace_depth = 0
+    index = 0
+    while index < len(body):
+        character = body[index]
+        if character == "\\":
+            command_end = index + 1
+            if command_end < len(body) and body[command_end].isalpha():
+                while command_end < len(body) and body[command_end].isalpha():
+                    command_end += 1
+            elif command_end < len(body):
+                command_end += 1
+            command = body[index:command_end]
+            if (
+                command == r"\text"
+                and brace_depth == 0
+                and command_end < len(body)
+                and body[command_end] == "{"
+            ):
+                closing = _matching_closing_brace(body, command_end)
+                if closing is None:
+                    raise GenerationError("inline math contains an unclosed text group")
+                content = body[command_end + 1 : closing]
+                break_positions = _reviewed_text_group_break_positions(content)
+                if break_positions:
+                    output.append(body[cursor:index])
+                    content_cursor = 0
+                    for position in break_positions:
+                        output.append(r"\text{%s}" % content[content_cursor:position])
+                        output.append(INLINE_MATH_LAYOUT_BREAK)
+                        content_cursor = position
+                    output.append(r"\text{%s}" % content[content_cursor:])
+                    cursor = closing + 1
+                index = closing + 1
+                continue
+            index = command_end
+            continue
+        if character == "{":
+            brace_depth += 1
+        elif character == "}":
+            brace_depth = max(0, brace_depth - 1)
+        index += 1
+    output.append(body[cursor:])
+    return "".join(output)
+
+
+PLAIN_SPLIT_TEXT_GROUP_RE = re.compile(
+    r"\\text\{([^{}\\]*)\}"
+    + re.escape(INLINE_MATH_LAYOUT_BREAK)
+    + r"\\text\{([^{}\\]*)\}"
+)
+
+
+def normalize_inline_math_layout(body):
+    """Remove generated inline layout while rejoining split plain text groups."""
+    normalized = body
+    while True:
+        normalized, count = PLAIN_SPLIT_TEXT_GROUP_RE.subn(
+            lambda match: r"\text{%s}" % (match.group(1) + match.group(2)),
+            normalized,
+        )
+        if count == 0:
+            break
+    return remove_inline_math_layout_breaks(normalized)
+
+
+def _render_inline_math(body):
+    if (
+        len(body) < INLINE_MATH_BREAK_THRESHOLD
+        or INLINE_MATH_LAYOUT_BREAK in body
+    ):
+        return body
+    break_positions = reviewed_inline_math_break_positions(body)
+    if not break_positions:
+        return body
+    output = []
+    cursor = 0
+    for position in break_positions:
+        output.append(body[cursor:position])
+        output.append(INLINE_MATH_LAYOUT_BREAK)
+        cursor = position
+    output.append(body[cursor:])
+    layout_body = _split_overlong_inline_text_groups("".join(output))
+    if normalize_inline_math_layout(layout_body) != body:
+        raise GenerationError("inline-math layout changed the source token stream")
+    return layout_body
+
+
 def _render_text(text, math):
     output = []
     cursor = 0
@@ -434,7 +637,7 @@ def _render_text(text, math):
         if kind == "display":
             output.append(_render_display_math(body))
         else:
-            output.append("$%s$" % body)
+            output.append("$%s$" % _render_inline_math(body))
         cursor = match.end()
     output.append(_escape_text(text[cursor:]))
     return "".join(output)
