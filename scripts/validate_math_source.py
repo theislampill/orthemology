@@ -28,6 +28,7 @@ import json
 import os
 import re
 import sys
+import unicodedata
 from collections import Counter
 
 try:
@@ -49,7 +50,7 @@ DISPLAY_RE = re.compile(r"\$\$(.+?)\$\$", re.S)
 INLINE_RE = re.compile(r"\$([^\$\n]+?)\$")
 CODE_FENCE_RE = re.compile(r"```(\w*)\n(.*?)```", re.S)
 INLINE_CODE_RE = re.compile(r"`[^`]*`")
-FENCE_BLOCK_RE = re.compile(r"```.*?```", re.S)
+FENCE_OPEN_RE = re.compile(r"^ {0,3}(`{3,}|~{3,})([^\r\n]*)$")
 FORMULA_SIGNAL_RE = re.compile(
     r"[=∈⊆⊂⟺⇔→↦∧∨≼≠≤≥∀∃∅⊥⊨⊭±×÷∩∪⟨⟩]"
     r"|\{[^}]*\|[^}]*\}"
@@ -127,10 +128,49 @@ def real_math_spans(text):
 
 
 def _mask_fences(text):
-    def mask(match):
-        return "".join("\n" if char == "\n" else " " for char in match.group(0))
+    """Mask CommonMark fenced code while retaining every source offset.
 
-    return FENCE_BLOCK_RE.sub(mask, text)
+    Backtick and tilde fences may use any run of three or more markers. A
+    closing run must use the same marker and be at least as long as the opener;
+    shorter interior runs remain code. An unclosed fence extends to end of
+    input, as it does under CommonMark.
+    """
+    masked = list(text)
+    fence = None
+    fence_start = None
+    offset = 0
+    for line in text.splitlines(keepends=True):
+        content = line.rstrip("\r\n")
+        if fence is None:
+            match = FENCE_OPEN_RE.fullmatch(content)
+            if match is not None:
+                marker = match.group(1)
+                info = match.group(2)
+                if marker[0] == "`" and "`" in info:
+                    match = None
+            if match is not None:
+                fence = (marker[0], len(marker))
+                fence_start = offset
+        else:
+            marker, minimum_length = fence
+            close = re.fullmatch(
+                r" {0,3}%s{%d,}[ \t]*"
+                % (re.escape(marker), minimum_length),
+                content,
+            )
+            if close is not None:
+                end = offset + len(line)
+                for index in range(fence_start, end):
+                    if masked[index] != "\n":
+                        masked[index] = " "
+                fence = None
+                fence_start = None
+        offset += len(line)
+    if fence is not None:
+        for index in range(fence_start, len(masked)):
+            if masked[index] != "\n":
+                masked[index] = " "
+    return "".join(masked)
 
 
 class InlineCodeParseError(ValueError):
@@ -212,6 +252,18 @@ def _formula_like(span):
     return bool(COMBINING.search(span) or FORMULA_SIGNAL_RE.search(span))
 
 
+def _diagnostic_identifier(key):
+    """Return whether *key* is a plain token identifier, not a formula."""
+    if not key or unicodedata.category(key[0])[0] != "L":
+        return False
+    for char in key[1:]:
+        if char == "_":
+            continue
+        if unicodedata.category(char)[0] not in {"L", "M", "N"}:
+            return False
+    return key[-1] != "_"
+
+
 def is_diagnostic_code_literal(span):
     """Return whether a multiline span is a token-to-status diagnostic sample."""
     if "\n" not in span:
@@ -219,10 +271,14 @@ def is_diagnostic_code_literal(span):
     clauses = [" ".join(part.split()) for part in span.split(";")]
     if len(clauses) < 2:
         return False
-    return all(
-        re.fullmatch(r"[^\s:;]+:\s+[A-Za-z][A-Za-z0-9 /_-]*", clause)
-        for clause in clauses
-    )
+    for clause in clauses:
+        match = re.fullmatch(
+            r"([^\s:;]+):\s+([A-Za-z][A-Za-z0-9 /_-]*)",
+            clause,
+        )
+        if match is None or not _diagnostic_identifier(match.group(1)):
+            return False
+    return True
 
 
 def validate_inventory_data(inventory, source_texts, registry_ids=None):

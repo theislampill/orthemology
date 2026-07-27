@@ -214,6 +214,39 @@ class OccurrenceIdentityTests(unittest.TestCase):
             "malformed single-backtick delimiter",
         )
 
+    def test_commonmark_fence_masking_preserves_loci_for_tildes_and_long_runs(self):
+        source = (
+            "~~~text\n"
+            "hidden: `x = y`\n"
+            "~~~\n"
+            "````text\n"
+            "hidden: `f(x)`\n"
+            "```\n"
+            "still hidden: `p → q`\n"
+            "`````\n"
+            "~~~~text\n"
+            "hidden: `x ∈ S`\n"
+            "~~~\n"
+            "still hidden: `a = b`\n"
+            "~~~~\n"
+            "Real: `V1`.\n"
+        )
+
+        self.assertEqual(
+            extract_occurrences(source),
+            [
+                {
+                    "locus": {"line": 14, "column": 7},
+                    "occurrence": 1,
+                    "text": "V1",
+                }
+            ],
+        )
+        self.assertEqual(
+            extract_occurrences("~~~text\nhidden: `x = y`\n"),
+            [],
+        )
+
     def test_rejects_formula_as_registry_id_including_bare_operator_call(self):
         inventory, source_texts = valid_inventory()
         inventory["occurrences"][0]["classification"] = "semantic-registry-id"
@@ -281,6 +314,81 @@ class OccurrenceIdentityTests(unittest.TestCase):
             inventory_issues(inventory, {"publication/example.md": source}),
             [],
         )
+
+    def test_diagnostic_literal_requires_structural_token_identifiers(self):
+        accepted = (
+            "μ̄_2: stale calibration; μ̄_3: wrong\nclaim scope",
+            "token_17: stale calibration; agent_4: wrong\nclaim scope",
+        )
+        rejected = (
+            "V1(e): stale calibration; token_3: wrong\nclaim scope",
+            "RelSpec_q(e): stale calibration; token_3: wrong\nclaim scope",
+            "x∈S: stale calibration; token_3: wrong\nclaim scope",
+            "x=y: stale calibration; token_3: wrong\nclaim scope",
+            "p→q: stale calibration; token_3: wrong\nclaim scope",
+            "{x|P(x)}: stale calibration; token_3: wrong\nclaim scope",
+        )
+
+        for status in accepted:
+            with self.subTest(status=status):
+                self.assertTrue(
+                    VALIDATOR.is_diagnostic_code_literal(status),
+                    status,
+                )
+        for status in rejected:
+            with self.subTest(status=status):
+                self.assertFalse(
+                    VALIDATOR.is_diagnostic_code_literal(status),
+                    status,
+                )
+
+    def test_formula_bearing_diagnostic_keys_cannot_bypass_literal_classification(self):
+        formula_statuses = (
+            "V1(e): stale calibration; token_3: wrong\nclaim scope",
+            "RelSpec_q(e): stale calibration; token_3: wrong\nclaim scope",
+            "x∈S: stale calibration; token_3: wrong\nclaim scope",
+            "x=y: stale calibration; token_3: wrong\nclaim scope",
+            "p→q: stale calibration; token_3: wrong\nclaim scope",
+        )
+        for status in formula_statuses:
+            with self.subTest(status=status):
+                source = "Diagnostic: `%s`.\n" % status
+                inventory = {
+                    "schema": "orthemology-math-source-inventory-v2",
+                    "classes": [
+                        "literal-code",
+                        "semantic-registry-id",
+                        "mathematics",
+                    ],
+                    "sources": [
+                        {
+                            "file": "publication/example.md",
+                            "occurrence_count": 1,
+                            "classification_counts": {
+                                "literal-code": 1,
+                                "semantic-registry-id": 0,
+                                "mathematics": 0,
+                            },
+                        }
+                    ],
+                    "occurrences": [
+                        {
+                            "file": "publication/example.md",
+                            "locus": {"line": 1, "column": 13},
+                            "occurrence": 1,
+                            "text": status,
+                            "classification": "literal-code",
+                        }
+                    ],
+                }
+
+                self.assertIssue(
+                    inventory_issues(
+                        inventory,
+                        {"publication/example.md": source},
+                    ),
+                    "formula-like literal classification",
+                )
 
     def test_preserves_literal_command_and_true_registry_id(self):
         source = "Run `python --version`; inspect `V1`.\n"

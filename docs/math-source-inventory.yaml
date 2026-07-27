@@ -3781,7 +3781,7 @@ migration:
       column: 1072
     original_occurrence: 87
     original_text: ApplyEvent(μ̄, e) = ⟨μ̄, Trace_e\|_μ̄⟩
-    replacement: \operatorname{ApplyEvent}(\bar{\mu}, e) = \langle\bar{\mu}, \operatorname{Trace}_e \|_\bar{\mu}\rangle
+    replacement: \operatorname{ApplyEvent}(\bar{\mu}, e) = \langle\bar{\mu}, \operatorname{Trace}_e |_{\bar{\mu}}\rangle
     form: inline
     state: migrated
   - file: theory/orthemic-core-formalization.md

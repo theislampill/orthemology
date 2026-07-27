@@ -174,6 +174,44 @@ class MigrationLedgerTests(unittest.TestCase):
                 ):
                     self.assertNotIn(fragment, record["replacement"])
 
+    def test_apply_event_restriction_preserves_the_legacy_single_bar(self):
+        inventory = yaml.safe_load(
+            (ROOT / "docs" / "math-source-inventory.yaml").read_text(
+                encoding="utf-8"
+            )
+        )
+        records = [
+            record
+            for record in inventory.get("migration", {}).get("records", [])
+            if record.get("original_text", "").startswith("ApplyEvent(")
+        ]
+        self.assertEqual(len(records), 1)
+        record = records[0]
+        legacy = "ApplyEvent(μ̄, e) = ⟨μ̄, Trace_e\\|_μ̄⟩"
+        expected = (
+            r"\operatorname{ApplyEvent}(\bar{\mu}, e) = "
+            r"\langle\bar{\mu}, \operatorname{Trace}_e |_{\bar{\mu}}\rangle"
+        )
+        rejected = r"\operatorname{Trace}_e \|_"
+        source = (
+            ROOT / "theory" / "orthemic-core-formalization.md"
+        ).read_text(encoding="utf-8")
+        generated = (
+            ROOT
+            / "publication"
+            / "latex"
+            / "orthemic-core-reference-draft"
+            / "main.tex"
+        ).read_text(encoding="utf-8")
+
+        translate_inline(expected)
+        self.assertEqual(record["original_text"], legacy)
+        self.assertEqual(record["replacement"], expected)
+        self.assertEqual(source.count("$%s$" % expected), 1)
+        self.assertEqual(generated.count(expected), 1)
+        for surface in (record["replacement"], source, generated):
+            self.assertNotIn(rejected, surface)
+
     def test_completed_inventory_and_migration_status_are_exact(self):
         inventory = yaml.safe_load(
             (ROOT / "docs" / "math-source-inventory.yaml").read_text(
