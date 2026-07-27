@@ -358,6 +358,12 @@ def _render_inline_code(text):
     return layout_body
 
 
+def _next_nonspace_token_is_script(body, position):
+    while position < len(body) and body[position].isspace():
+        position += 1
+    return position < len(body) and body[position] in "_^"
+
+
 def _reviewed_math_break_positions(body, commands, literal_boundaries):
     """Return reviewed top-level boundaries without entering nested TeX syntax."""
     positions = []
@@ -380,6 +386,7 @@ def _reviewed_math_break_positions(body, commands, literal_boundaries):
                 and parenthesis_depth == 0
                 and bracket_depth == 0
                 and command in commands
+                and not _next_nonspace_token_is_script(body, command_end)
             ):
                 positions.append(command_end)
             index = command_end
@@ -401,6 +408,7 @@ def _reviewed_math_break_positions(body, commands, literal_boundaries):
                 character in literal_boundaries
                 and parenthesis_depth == 0
                 and bracket_depth == 0
+                and not _next_nonspace_token_is_script(body, index + 1)
             ):
                 positions.append(index + 1)
         index += 1

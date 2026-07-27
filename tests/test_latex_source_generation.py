@@ -1011,6 +1011,61 @@ $$
         )
         self.assertIn(body.rindex(",") + 1, positions)
 
+    def test_inline_break_candidates_preserve_subscript_and_superscript_attachment(self):
+        generator = load_generator()
+        self.assertIsNotNone(generator, "Task 12 LaTeX generator is missing")
+        scripted_boundaries = (
+            (r"left =_{q} right", "="),
+            (r"left =   ^{q} right", "="),
+            (r"left \sim_{q} right", r"\sim"),
+            (r"left \sim   ^{q} right", r"\sim"),
+            (r"left \wedge_{\mu} right", r"\wedge"),
+            (r"left \iff  ^{q} right", r"\iff"),
+        )
+
+        for body, boundary in scripted_boundaries:
+            with self.subTest(body=body):
+                positions = generator.reviewed_inline_math_break_positions(body)
+                boundary_end = body.index(boundary) + len(boundary)
+                self.assertNotIn(boundary_end, positions)
+
+        ordinary = r"left = right \sim other \wedge final"
+        ordinary_positions = generator.reviewed_inline_math_break_positions(
+            ordinary
+        )
+        for boundary in ("=", r"\sim", r"\wedge"):
+            with self.subTest(ordinary_boundary=boundary):
+                self.assertIn(
+                    ordinary.index(boundary) + len(boundary),
+                    ordinary_positions,
+                )
+
+    def test_long_inline_renderer_never_separates_scripted_math_bases(self):
+        generator = load_generator()
+        self.assertIsNotNone(generator, "Task 12 LaTeX generator is missing")
+        original = (
+            r"\operatorname{Guarded}(e) =_{q} "
+            r"\operatorname{Left}(e) \wedge_{\mu} "
+            r"\operatorname{RightWithLongPayloadForLayoutQualification}"
+            r"(e, q, \mu)"
+        )
+        self.assertGreaterEqual(
+            len(original),
+            generator.INLINE_MATH_BREAK_THRESHOLD,
+        )
+
+        rendered = generator._render_inline_math(original)
+
+        self.assertEqual(rendered, original)
+        self.assertNotIn(
+            generator.INLINE_MATH_LAYOUT_BREAK + "_",
+            rendered,
+        )
+        self.assertNotIn(
+            generator.INLINE_MATH_LAYOUT_BREAK + "^",
+            rendered,
+        )
+
     def test_short_math_controls_stay_unchanged_and_long_inline_is_breakable(self):
         generator = load_generator()
         self.assertIsNotNone(generator, "Task 12 LaTeX generator is missing")
@@ -1273,7 +1328,17 @@ $$
         self.assertEqual(len(path_values), 65)
         self.assertEqual(len(set(path_values)), 39)
         self.assertEqual(path_marker_count, 241)
-        self.assertEqual(total_marker_count - path_marker_count, 45)
+        self.assertEqual(total_marker_count - path_marker_count, 44)
+        for path, content in tree.items():
+            with self.subTest(generated_path=path):
+                self.assertNotIn(
+                    generator.INLINE_MATH_LAYOUT_BREAK + "_",
+                    content,
+                )
+                self.assertNotIn(
+                    generator.INLINE_MATH_LAYOUT_BREAK + "^",
+                    content,
+                )
 
     def test_commonmark_multiline_code_span_is_preserved_as_literal_code(self):
         generator = load_generator()
