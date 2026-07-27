@@ -1374,6 +1374,7 @@ class SourcePackageContractTests(unittest.TestCase):
             "Total fi\u0301nal page count: `999`.",
             "Total final pa\u0301ge count: `999`.",
             "Total final page cou\u0301nt: `999`.",
+            "Total\u200bfinal\u200epage\u2060count: `999`.",
         )
         for addition in additions:
             with self.subTest(addition=addition):

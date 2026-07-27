@@ -234,18 +234,25 @@ def render_compatibility_artifact_table(root):
 def is_total_page_record_candidate(line):
     """Recognize semantic total markers despite Unicode punctuation variants."""
     normalized = unicodedata.normalize("NFKD", line).casefold()
-    token_text = []
-    for character in normalized:
-        category = unicodedata.category(character)
-        if category == "Cf" or category.startswith("M"):
-            continue
-        token_text.append(character if character.isalnum() else " ")
-    tokens = "".join(token_text).split()
     marker = ["total", "final", "page", "count"]
-    return any(
-        tokens[index : index + len(marker)] == marker
-        for index in range(len(tokens) - len(marker) + 1)
-    )
+    for format_controls_are_boundaries in (False, True):
+        token_text = []
+        for character in normalized:
+            category = unicodedata.category(character)
+            if category.startswith("M"):
+                continue
+            if category == "Cf":
+                if format_controls_are_boundaries:
+                    token_text.append(" ")
+                continue
+            token_text.append(character if character.isalnum() else " ")
+        tokens = "".join(token_text).split()
+        if any(
+            tokens[index : index + len(marker)] == marker
+            for index in range(len(tokens) - len(marker) + 1)
+        ):
+            return True
+    return False
 
 
 def compatibility_report_table_issues(root):
