@@ -11,7 +11,9 @@ jobs:
       - uses: actions/checkout@v6
       - uses: actions/setup-python@v6
         with:
-          python-version: "3.11"
+          python-version: "3.11.9"
+      - name: Provision and verify exact PDF infrastructure
+        run: python scripts/provision_ci_infrastructure.py
       - name: Install exact version-locked dependencies (requirements-ci.lock.txt; no live web checks anywhere in CI)
         run: pip install --quiet -r requirements-ci.lock.txt
       - name: Dependency lock consistency

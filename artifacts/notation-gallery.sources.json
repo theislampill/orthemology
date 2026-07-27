@@ -33,7 +33,7 @@
   },
   "toolchain_lock": {
     "path": "publication/toolchain-lock.yaml",
-    "sha256": "1040d4a2a0947e6eb719de50cbb4afd776a46bf408370afc1b58a7a3050f42c9"
+    "sha256": "25eba4659e5817f1d90d1511facff15afadcaa463be3b6aea491bc145a8dc4d4"
   },
   "candidate_status": {
     "source": "docs/current-candidate-state.yaml",
@@ -63,7 +63,7 @@
   },
   "source_manifest": {
     "path": "artifacts/notation-gallery.source-manifest.json",
-    "sha256": "2999c9d2197f60e88632691a850c8992f22b99d936da7659e40f6f4a729879cf"
+    "sha256": "ea4519b1509e16dbb174a894e12f9b369aed6ec3d587ebedffbc822bb14675aa"
   },
   "tools": {
     "bibtex": "0.99d",

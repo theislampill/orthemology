@@ -15,7 +15,7 @@
   "entry_point": "publication/latex/orthability-ground-of-intelligibility-draft/main.tex",
   "build_workdir": "publication/latex/orthability-ground-of-intelligibility-draft",
   "publication_profile_sha256": "176e78534db91ad9c3c6f441676fa6a506470e344b5acba7060262a0d0b973a6",
-  "toolchain_lock_sha256": "1040d4a2a0947e6eb719de50cbb4afd776a46bf408370afc1b58a7a3050f42c9",
+  "toolchain_lock_sha256": "25eba4659e5817f1d90d1511facff15afadcaa463be3b6aea491bc145a8dc4d4",
   "tex_live_dependencies": {
     "fvextra": {
       "tex_live_package": "fvextra",

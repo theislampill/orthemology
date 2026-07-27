@@ -560,6 +560,43 @@ class SourcePackageContractTests(unittest.TestCase):
             )
         )
         self.assertEqual(lock_issues(lock, root=ROOT), [])
+        self.assertEqual(
+            lock["ci"],
+            {
+                "micromamba": {
+                    "version": "2.8.1-0",
+                    "url": (
+                        "https://github.com/mamba-org/micromamba-releases/"
+                        "releases/download/2.8.1-0/micromamba-linux-64"
+                    ),
+                    "sha256": (
+                        "9689782d863c05a1bf5d2d371ba527104e7a4eb4310c1637"
+                        "d8653b751aed9c82"
+                    ),
+                },
+                "poppler_lock": {
+                    "path": "publication/poppler-linux-64.explicit.txt",
+                    "sha256": (
+                        "bc1b26e6a386d853fd6e07225bb3b0b7a17a2a19b2ed51b5"
+                        "aaacedb3597ec6c3"
+                    ),
+                    "package_count": 61,
+                    "poppler_build": "25.07.0-h13eef12_1",
+                    "poppler_sha256": (
+                        "a45c9c35808c44d817209af859d2e9d90b89c72f8cd8fcea"
+                        "20163ee774583ed8"
+                    ),
+                },
+            },
+        )
+        self.assertEqual(
+            "bc1b26e6a386d853fd6e07225bb3b0b7a17a2a19b2ed51b5aaacedb3597ec6c3",
+            hashlib.sha256(
+                (
+                    ROOT / "publication" / "poppler-linux-64.explicit.txt"
+                ).read_bytes()
+            ).hexdigest(),
+        )
         evidence = {
             "container_manifest_digest": lock["container"][
                 "manifest_digest"
