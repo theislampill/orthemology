@@ -1,5 +1,5 @@
 #!/usr/bin/env python3
-"""Validate the venue-neutral, deferred publication target profile."""
+"""Validate the venue-neutral, Task 13-verified publication target profile."""
 import argparse
 import json
 import pathlib
@@ -58,6 +58,25 @@ EXPECTED_QUALIFICATIONS = {
     "dynamic-orthing-noetic-learning-orthability-draft": COMPANION_QUALIFICATIONS,
     "notation-gallery": BASE_QUALIFICATIONS,
 }
+EXPECTED_APPENDIX_MODES = {
+    artifact_id: (
+        "single-column"
+        if artifact_id == "orthemma-ortheme-systems-draft"
+        else "none"
+    )
+    for artifact_id in EXPECTED_MAPPING
+}
+EXPECTED_DIRECT_PACKAGES = [
+    "amsmath",
+    "amssymb",
+    "booktabs",
+    "geometry",
+    "hyperref",
+    "microtype",
+    "natbib",
+    "xcolor",
+]
+EXPECTED_SUPPORTED_PACKAGES = EXPECTED_DIRECT_PACKAGES + ["fvextra"]
 
 
 def _schema(root):
@@ -73,6 +92,27 @@ def validate_profile_data(profile, schema=None):
     for error in sorted(validator.iter_errors(profile), key=lambda item: list(item.path)):
         path = ".".join(str(part) for part in error.absolute_path) or "<root>"
         issues.append("schema: %s: %s" % (path, error.message))
+
+    package_policy = profile.get("package_policy", {}) if isinstance(profile, dict) else {}
+    direct_packages = package_policy.get("direct_packages")
+    supported_packages = package_policy.get("supported_packages")
+    if direct_packages != EXPECTED_DIRECT_PACKAGES:
+        issues.append("direct package policy must preserve the exact ordered main set")
+    if supported_packages != EXPECTED_SUPPORTED_PACKAGES:
+        issues.append(
+            "supported package policy must be the exact ordered direct set plus fvextra"
+        )
+    if (
+        isinstance(direct_packages, list)
+        and isinstance(supported_packages, list)
+        and (
+            not set(direct_packages) < set(supported_packages)
+            or set(supported_packages) - set(direct_packages) != {"fvextra"}
+        )
+    ):
+        issues.append(
+            "package policy requires one disjoint compatibility-only package: fvextra"
+        )
 
     artifacts = profile.get("artifacts", []) if isinstance(profile, dict) else []
     if not isinstance(artifacts, list):
@@ -130,6 +170,12 @@ def validate_profile_data(profile, schema=None):
             issues.append(
                 "source qualifications missing for %s"
                 % (artifact_id or "<unknown>")
+            )
+        if artifact.get("appendix_mode") != EXPECTED_APPENDIX_MODES.get(
+            artifact_id
+        ):
+            issues.append(
+                "appendix mode mismatch for %s" % (artifact_id or "<unknown>")
             )
     return issues
 

@@ -1208,6 +1208,19 @@ def _source_comment(path, text):
     return "%% source: %s\n%% source-sha256: %s\n" % (path, digest)
 
 
+EXPECTED_DIRECT_PACKAGES = [
+    "amsmath",
+    "amssymb",
+    "booktabs",
+    "geometry",
+    "hyperref",
+    "microtype",
+    "natbib",
+    "xcolor",
+]
+EXPECTED_SUPPORTED_PACKAGES = EXPECTED_DIRECT_PACKAGES + ["fvextra"]
+
+
 def render_artifact(profile, artifact, source_texts):
     """Render one profile artifact from its declared Markdown source owners."""
     source_paths = artifact.get("sources", [])
@@ -1239,7 +1252,16 @@ def render_artifact(profile, artifact, source_texts):
     for qualification in artifact.get("source_qualifications", []):
         comments.append("%% source-qualification: %s\n" % qualification)
 
-    packages = profile.get("package_policy", {}).get("supported_packages", [])
+    package_policy = profile.get("package_policy", {})
+    packages = package_policy.get("direct_packages")
+    if packages != EXPECTED_DIRECT_PACKAGES:
+        raise GenerationError(
+            "direct package policy must be the exact ordered main set"
+        )
+    if package_policy.get("supported_packages") != EXPECTED_SUPPORTED_PACKAGES:
+        raise GenerationError(
+            "supported package policy must be direct packages plus fvextra"
+        )
     package_lines = ["\\usepackage{%s}\n" % package for package in packages]
     preamble = [
         *comments,

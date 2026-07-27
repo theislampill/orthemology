@@ -1,18 +1,91 @@
 {
+  "schema": "orthemology-pdf-sources-v2",
+  "artifact_id": "dynamic-orthing-noetic-learning-orthability-draft",
   "pdf": "dynamic-orthing-noetic-learning-orthability-draft.pdf",
-  "pdf_sha256": "4d0c888e853d434a3d2eb90775e3cd746f3d70b16ad2523fdb3d07d6494ee8bd",
-  "page_count": 6,
-  "sources": {
-    "companion/dynamic-orthing-noetic-learning-and-orthability.md": "ba84d58326b05fb07c50158b44564a784e2ac33f563112334ec2709c5b02ec2b"
+  "pdf_sha256": "cf333a15261a01c2acddccff240a5c601a9e1760df6e592947e58aed355e2474",
+  "page_count": 5,
+  "source_commit": "1703a783d9b25a9cfa93370c4a1a0b568fa497d0",
+  "source_tree": "8edff88e8df79e8d0792d441c65227b9729403a9",
+  "independently_reviewed_equivalent_source_commit": "9dc0094cc6df908fbba1b965bb36d5f3f00979c0",
+  "independently_reviewed_equivalent_source_tree": "8edff88e8df79e8d0792d441c65227b9729403a9",
+  "source_tree_equivalence": "verified-identical",
+  "source_date_epoch": 1785161731,
+  "build_time_utc": "2026-07-27T14:15:31Z",
+  "source_hashes": {
+    "markdown": {
+      "companion/dynamic-orthing-noetic-learning-and-orthability.md": "e626ad00c5eb947a2295f653538266f3b87c8b7732a7070a50273780fdd31f0b"
+    },
+    "latex": {
+      "publication/latex/dynamic-orthing-noetic-learning-orthability-draft/main.tex": "ea3a699fee1a84fc6a9ff96a57d562d832362fca318d36a47e18408955ba14fa"
+    },
+    "bibliography": {
+      "path": "references/orthemology.bib",
+      "sha256": "ca6bd2e96c52ff35db569793443331f54c6f5415fa69c1f2fa2592c16bb7cc56"
+    },
+    "compatibility": {
+      "publication/latexmkrc": "8fab079b47dda579db9b75aef4f25a4b3c78bc19089957e7076a95f1dc717979",
+      "publication/pdftex-unicode-compat.tex": "3d3eb3d8ecd1619a67fa3575866de56c38390f4c28f2ea95a76a70aacbba4771"
+    }
   },
-  "source_commit": "9deda9c908e40bbf3b3ea5604bf5c3a6683d8afd",
-  "artifact_commit": "the git commit that introduces/updates this artifact (two-stage provenance; see `git log -- artifacts/`)",
-  "source_date_epoch": 1784772365,
-  "build_command": "python scripts/build_pdfs.py",
+  "publication_profile": {
+    "path": "docs/publication-profile.yaml",
+    "sha256": "527ea4a4c5d6797d3f3d14aeb42196ba37a553fd3c480a6831539d14cab803ef"
+  },
+  "toolchain_lock": {
+    "path": "publication/toolchain-lock.yaml",
+    "sha256": "411730a47b29e80258adcdba208f2145cb548d3df11d9104297668eaac3d4673"
+  },
+  "candidate_status": {
+    "source": "docs/current-candidate-state.yaml",
+    "sha256": "7311b9d973761648f8b02ee47c222e64b8a752df57e86bcc74e47c34edc34fce",
+    "label": "SOL INDEPENDENT REVIEW CANDIDATE — NO SIGNOFF OR MERGE READINESS",
+    "observed_at_utc": "2026-07-21T18:10:22Z",
+    "timeless_state": false,
+    "status_claims": {
+      "candidate_status": "proposed-candidate",
+      "merged": false,
+      "independent_signoff": false,
+      "ready_for_merge": false,
+      "evidence": {
+        "merged": [],
+        "independent_signoff": [],
+        "ready_for_merge": []
+      },
+      "next_action": "Complete the bounded Sol repair and independent review before any separately authorized protected integration; refresh every PR observation first."
+    }
+  },
+  "entry_point": "publication/latex/dynamic-orthing-noetic-learning-orthability-draft/main.tex",
+  "build_workdir": "publication/latex/dynamic-orthing-noetic-learning-orthability-draft",
+  "build_command": "/usr/local/texlive/2025/bin/x86_64-linux/latexmk main.tex",
+  "source_package": {
+    "path": "artifacts/dynamic-orthing-noetic-learning-orthability-draft.source.tar.gz",
+    "sha256": "34f3405493264dfbb699b6a7a633a655a87ea300fa2382db8c6df83eab565993"
+  },
+  "source_manifest": {
+    "path": "artifacts/dynamic-orthing-noetic-learning-orthability-draft.source-manifest.json",
+    "sha256": "493f0687a65e04f611063811db6dccc0677e3b9824437e8d5b93ff9395ba73fc"
+  },
   "tools": {
-    "typst": "0.15.0",
-    "markdown-it-py": "4.0.0",
+    "bibtex": "0.99d",
+    "kpathsea": "6.4.1",
+    "latexmk": "4.87",
+    "pdftex": "1.40.28",
+    "poppler": "25.07.0",
+    "pypdf": "6.14.2",
     "python": "3.11.9"
   },
-  "generation_status": "complete; strict conversion (no skipped content); double-build verified"
+  "bibliography_qa": {
+    "disposition": "EMPTY_BIBLIOGRAPHY_NO_CITATIONS",
+    "bibtex_return_code": 2,
+    "bibtex_version": "0.99d",
+    "database_path": "../../../references/orthemology.bib",
+    "bibliography_style": "plainnat",
+    "citation_commands": 0,
+    "aux_citations": 0,
+    "bbl_sha256": "8e5c0a84578475116bd7e34d81ab6a955fa410c276f07902a2ba9c41ed532db6",
+    "blg_sha256": "e42a8085c7f72304a16ef66b8435e519e8fb2fed16ff2a0e303b6f63fbe57ebf",
+    "bibliography_sha256": "ca6bd2e96c52ff35db569793443331f54c6f5415fa69c1f2fa2592c16bb7cc56",
+    "stale_bbl_preexisting": false
+  },
+  "generation_status": "complete; PDFLaTeX through latexmk; independent double build byte-identical; clean source-package rebuild verified"
 }

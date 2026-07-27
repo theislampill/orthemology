@@ -1,6 +1,6 @@
 # R7E Sol execution TODO
 
-Status date: 2026-07-26
+Status date: 2026-07-27
 
 Tracked plan: `docs/superpowers/plans/2026-07-21-r7e-sol-independent-repair.md`
 
@@ -21,9 +21,14 @@ artifacts and interrupted external research do not satisfy that gate.
   observation.
 - PR #12 exact-SHA CI: RED only on the known Task 13 PDF clean-rebuild and
   parity gate; the preceding workflow gates pass.
-- Local approved continuity base: Task 10 at
-  `72826864abf6fc4ad9d4cf6a29d55a32ed6edd77`.
-- Task 11 is the first unfinished tracked task.
+- Local authoritative source base:
+  `1703a783d9b25a9cfa93370c4a1a0b568fa497d0`, tree
+  `8edff88e8df79e8d0792d441c65227b9729403a9`.
+- Last independently approved source task: Task 12, including the reviewed
+  source-repair tree represented by
+  `9dc0094cc6df908fbba1b965bb36d5f3f00979c0`.
+- Task 13 is implemented and ready for independent review. It is the first
+  unfinished approval gate.
 - AR6 status: `INTERRUPTED_IN_PROGRESS`. Its 1,329 records are reconciled, but
   no AR6 patch, claim, proof, theorem, source assertion, formal artifact, or
   executable artifact is applied or approved.
@@ -144,44 +149,50 @@ artifacts and interrupted external research do not satisfy that gate.
 
 ### Task 11 — Replace the math allowlist with locus-sensitive classification
 
-- [ ] Build, review, and approve the fresh occurrence and publication-profile
-  inventory.
-- Status: first unfinished task; isolated preparation is reusable only with
-  adaptation and is not integrated.
-- Implementation/review: rescan the official post-Task-10 tree, classify each
-  occurrence by locus and role, and add adversarial copy/move/delete coverage.
-- CI/publication: requires focused inventory tests, exact fresh counts, and
-  publication-profile validation; the old provisional count is not evidence.
-- Blocker: no predecessor blocker remains; Task 11 has not started officially.
-- Next action: recreate RED inventory tests against the approved Task 10 tree.
+- Status: completed and independently approved at
+  `66e148fc98906fe708474c4a5c628247b8427ef1`.
+- Implementation/review: the official post-Task-10 tree was rescanned,
+  occurrences were classified by locus and role, and adversarial
+  copy/move/delete controls were accepted.
+- CI/publication: focused inventory, exact-count, and publication-profile gates
+  passed in the approved Task 11 review.
+- Blocker: none specific to Task 11.
+- Next action: preserve the approved inventory as Task 12 and Task 14 input.
 
 ### Task 12 — Migrate all seven publication sources to mathematical markup
 
-- [ ] Migrate the seven canonical sources and independently approve the source
-  commit.
-- Status: unfinished; isolated preparation is not authoritative or integrated.
-- Implementation/review: disposition research statements, proofs,
-  countermodels, formal sources, and notation before reviewed source migration.
-- CI/publication: requires zero unapproved mathematical backticks,
-  deterministic generated-source parity, and source/profile validation.
-- Blocker: approved Task 11 inventory.
-- Next action: after Task 11 approval, create focused RED translation and
-  compilation cases and migrate in bounded batches.
+- Status: completed and independently approved. The migration closure begins at
+  `fd73f65256efbc8f78420f8057b692dd698acefd`; subsequent bounded source repairs
+  preserve the reviewed tree represented by
+  `9dc0094cc6df908fbba1b965bb36d5f3f00979c0`.
+- Implementation/review: all seven canonical sources were dispositioned and
+  migrated. Table flow, path roots, long mathematics, scripted attachment,
+  unique source filenames, and exact source-owned heading repairs were each
+  independently reviewed.
+- CI/publication: source classification, deterministic generated-source parity,
+  mathematical-markup validation, and source/profile validation passed.
+- Blocker: none specific to Task 12.
+- Next action: preserve the authoritative source commit
+  `1703a783d9b25a9cfa93370c4a1a0b568fa497d0` and its reviewed-equivalent tree.
 
 ### Task 13 — Repair PDF provenance, candidate status, and artifact generation
 
-- [ ] Build and independently verify all governed publication artifacts after
-  Task 12 stabilizes.
-- Status: unfinished; the current exact-SHA PDF parity failure is evidence for
-  this task and is not repaired or relabeled here.
-- Implementation/review: reconcile canonical publication inputs, rebuild all
-  governed PDFs and sidecars, then perform source-package and every-page review.
-- CI/publication: requires double-build byte identity, source/hash parity,
-  embedded-font checks, clean offline builds, text-structure checks, and
-  recorded visual QA.
-- Blocker: approved Task 12 source commit.
-- Next action: preserve the current failure; create Task 13 RED only after Task
-  12 stabilizes.
+- [ ] Obtain independent approval of the exact Task 13 candidate commit.
+- Status: implementation complete and ready for independent review. No approval
+  is claimed.
+- Implementation/review: all six governed PDFs, sidecars, source archives, and
+  source manifests bind the authoritative Task 12 source tree and pinned
+  offline toolchain. The source-package and heading validators were repaired
+  test-first. All 61 final pages were rerendered after stale-page clearing and
+  visually inspected.
+- CI/publication: double-build byte identity, repository parity, embedded and
+  subset font checks, clean offline package builds, ordered 162-heading
+  extraction, text structure, link safety, and visual QA pass locally. Exact
+  evidence is in `R7E-SOL-ARXIV-COMPATIBILITY.md` and
+  `R7E-SOL-PDF-VISUAL-QA.md`.
+- Blocker: fresh independent review of the exact Task 13 commit.
+- Next action: dispatch the independent Task 13 reviewer against the immutable
+  candidate diff and source packages.
 
 ### Task 14 — Run the complete adversarial and recursive mutation program
 
@@ -192,7 +203,7 @@ artifacts and interrupted external research do not satisfy that gate.
   the integrated tree and independently review false positives and negatives.
 - CI/publication: every attack must be rejected for its intended structured
   invariant while neighboring controls pass.
-- Blocker: approved Tasks 11–13.
+- Blocker: independent Task 13 approval.
 - Next action: regenerate the attack inventory after Tasks 11–13 integrate.
 
 ### Task 15 — Run the exact pinned full suite and clean-clone candidate proof
@@ -211,14 +222,15 @@ artifacts and interrupted external research do not satisfy that gate.
 ### Task 16 — Perform the authorized protected integration cascade
 
 - [ ] Execute and verify the protected PR cascade without rewriting provenance.
-- Status: unfinished and not authorized by this continuity commit.
+- Status: unfinished; execution is authorized after every Task 15 and protected
+  integration gate is satisfied.
 - Implementation/review: verify the exact reviewed SHA, topology, protection,
   permissions, generated owners, and clean state before every authorized write.
 - CI/publication: every merge-created SHA requires fresh exact-SHA CI; the final
   `main` tree requires a fresh-clone proof.
 - Blocker: Task 15 approval, current PR #12 CI RED, and all PRs remaining draft.
-- Next action: do not push, merge, tag, release, or publish until every
-  predecessor and protection gate is terminal.
+- Next action: after Task 15 approval, freshly verify the protected topology and
+  execute only exact-SHA writes whose required checks are GREEN.
 
 ## AR6 reconciliation boundary
 

@@ -1,5 +1,5 @@
 #!/usr/bin/env python3
-"""Focused schema tests for the deferred publication target profile."""
+"""Focused schema tests for the Task 13-verified publication target profile."""
 import copy
 import importlib.util
 import json
@@ -95,6 +95,11 @@ def valid_profile():
             "sources": sources,
             "bibliography_owner": "references/orthemology.bib",
             "source_qualifications": qualifications,
+            "appendix_mode": (
+                "single-column"
+                if artifact_id == "orthemma-ortheme-systems-draft"
+                else "none"
+            ),
         }
         if kind == "diagnostic-reference":
             row["exception"] = {
@@ -111,8 +116,8 @@ def valid_profile():
             "appendices."
         ),
         "status": {
-            "target_state": "deferred-tasks-12-13",
-            "current_artifact_conformance": "not-claimed",
+            "target_state": "task-13-verified",
+            "current_artifact_conformance": "verified-against-declared-profile",
             "venue_selection": "none",
             "submission": "not-submitted",
             "processing": "not-claimed",
@@ -125,6 +130,18 @@ def valid_profile():
             "generated_latex_semantic_edits": "prohibited",
             "bibliography_owner": "references/orthemology.bib",
         },
+        "source_provenance": {
+            "source_commit": "1703a783d9b25a9cfa93370c4a1a0b568fa497d0",
+            "source_tree": "8edff88e8df79e8d0792d441c65227b9729403a9",
+            "source_date_epoch": 1785161731,
+            "independently_reviewed_equivalent_source_commit": (
+                "9dc0094cc6df908fbba1b965bb36d5f3f00979c0"
+            ),
+            "independently_reviewed_equivalent_source_tree": (
+                "8edff88e8df79e8d0792d441c65227b9729403a9"
+            ),
+            "source_tree_equivalence": "verified-identical",
+        },
         "toolchain": {
             "driver": "latexmk",
             "engine": "pdflatex",
@@ -134,9 +151,29 @@ def valid_profile():
             "environment_dependencies": "declared-only",
             "absolute_paths": "prohibited",
             "font_source": "tex-live-distribution-only",
+            "lock": "publication/toolchain-lock.yaml",
+            "tex_live_package_identities": [
+                "fvextra",
+                "fancyvrb",
+                "etoolbox",
+                "upquote",
+                "textcomp",
+                "lineno",
+                "keyval",
+            ],
         },
         "package_policy": {
             "policy": "closed",
+            "direct_packages": [
+                "amsmath",
+                "amssymb",
+                "booktabs",
+                "geometry",
+                "hyperref",
+                "microtype",
+                "natbib",
+                "xcolor",
+            ],
             "supported_packages": [
                 "amsmath",
                 "amssymb",
@@ -146,6 +183,7 @@ def valid_profile():
                 "microtype",
                 "natbib",
                 "xcolor",
+                "fvextra",
             ],
             "conversion_steps": "prohibited",
             "files_outside_package": "prohibited",
@@ -164,6 +202,7 @@ def valid_profile():
             "overfull_box_tolerance_pt": 5,
             "page_count": "none",
             "source_package_bytes": "none",
+            "runaway_page_guard": 500,
         },
         "appendix_policy": "technical-appendices-single-column",
         "source_package": {
@@ -171,14 +210,21 @@ def valid_profile():
             "entry_point": "main.tex",
             "one_package_per_artifact": True,
             "self_contained": True,
+            "archive_layout": "repository-relative",
+            "build_workdir": "publication/latex/<artifact_id>",
+            "bibliography_path": "references/orthemology.bib",
+            "compatibility_inputs": [
+                "publication/latexmkrc",
+                "publication/pdftex-unicode-compat.tex",
+            ],
         },
         "gates": {
-            "provenance": "deferred-task-13",
-            "font_embedding": "deferred-task-13",
-            "text_extraction": "deferred-task-13",
-            "source_packaging": "deferred-task-13",
-            "clean_build": "deferred-task-13",
-            "visual_qa": "deferred-task-13",
+            "provenance": "verified-task-13",
+            "font_embedding": "verified-task-13",
+            "text_extraction": "verified-task-13",
+            "source_packaging": "verified-task-13",
+            "clean_build": "verified-task-13",
+            "visual_qa": "verified-task-13",
         },
         "artifacts": artifacts,
     }
@@ -218,10 +264,20 @@ class PublicationProfileMutationTests(unittest.TestCase):
             ("source_package", "entry_point"),
             ("source_package", "owner"),
             ("source_ownership", "bibliography_owner"),
+            ("source_provenance", "source_commit"),
+            ("source_provenance", "source_tree"),
+            ("source_provenance", "source_date_epoch"),
+            (
+                "source_provenance",
+                "independently_reviewed_equivalent_source_commit",
+            ),
             ("toolchain", "engine"),
             ("toolchain", "tex_live_generation"),
             ("toolchain", "bibliography_processor"),
+            ("toolchain", "lock"),
+            ("toolchain", "tex_live_package_identities"),
             ("hard_limits", "overfull_box_tolerance_pt"),
+            ("hard_limits", "runaway_page_guard"),
         ):
             with self.subTest(path=path):
                 profile = valid_profile()
@@ -256,7 +312,7 @@ class PublicationProfileMutationTests(unittest.TestCase):
             ("status", "submission", "submitted"),
             ("status", "acceptance", "accepted"),
             ("status", "publication", "published"),
-            ("status", "current_artifact_conformance", "conforming"),
+            ("status", "current_artifact_conformance", "officially-conforming"),
         ]
         for owner, key, value in mutations:
             with self.subTest(owner=owner, key=key):
@@ -284,6 +340,32 @@ class PublicationProfileMutationTests(unittest.TestCase):
         profile["package_policy"]["supported_packages"].append(
             "unlisted-package"
         )
+        self.assertIssue(profile, "schema:")
+
+        for field in ("direct_packages", "supported_packages"):
+            profile = valid_profile()
+            profile["package_policy"].pop(field)
+            self.assertIssue(profile, "schema:")
+
+        profile = valid_profile()
+        profile["package_policy"]["direct_packages"].remove("xcolor")
+        self.assertIssue(profile, "direct package policy")
+
+        profile = valid_profile()
+        profile["package_policy"]["direct_packages"].append("fvextra")
+        self.assertIssue(profile, "direct package policy")
+
+        profile = valid_profile()
+        profile["package_policy"]["supported_packages"].remove("fvextra")
+        self.assertIssue(profile, "supported package policy")
+
+        profile = valid_profile()
+        profile["package_policy"]["supported_packages"].insert(0, "fvextra")
+        profile["package_policy"]["supported_packages"].pop()
+        self.assertIssue(profile, "supported package policy")
+
+        profile = valid_profile()
+        profile["toolchain"]["tex_live_package_identities"].remove("fancyvrb")
         self.assertIssue(profile, "schema:")
 
     def test_rejects_undeclared_limit_missing_appendix_policy_or_qualifications(self):

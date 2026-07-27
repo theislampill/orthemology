@@ -29,6 +29,16 @@ VENUE_METADATA_RE = re.compile(
     re.I,
 )
 PACKAGE_RE = re.compile(r"\\usepackage(?:\[[^\]]*\])?\{([^}]+)\}")
+EXPECTED_DIRECT_PACKAGES = [
+    "amsmath",
+    "amssymb",
+    "booktabs",
+    "geometry",
+    "hyperref",
+    "microtype",
+    "natbib",
+    "xcolor",
+]
 
 
 def validate_latex_tree(root=ROOT, profile=None, artifacts=None):
@@ -51,9 +61,7 @@ def validate_latex_tree(root=ROOT, profile=None, artifacts=None):
     for relative in sorted(actual_paths - expected_paths):
         issues.append("unexpected generated file: %s" % relative)
 
-    supported_packages = set(
-        profile.get("package_policy", {}).get("supported_packages", [])
-    )
+    direct_packages = profile.get("package_policy", {}).get("direct_packages")
     bibliography_owner = profile.get("source_ownership", {}).get(
         "bibliography_owner", ""
     )
@@ -72,15 +80,17 @@ def validate_latex_tree(root=ROOT, profile=None, artifacts=None):
             issues.append("absolute path is prohibited: %s" % relative)
         if VENUE_METADATA_RE.search(content):
             issues.append("venue metadata is prohibited: %s" % relative)
-        packages = {
+        packages = [
             package.strip()
             for match in PACKAGE_RE.finditer(content)
             for package in match.group(1).split(",")
-        }
-        undeclared = sorted(packages - supported_packages)
-        if undeclared:
+        ]
+        if direct_packages != EXPECTED_DIRECT_PACKAGES:
+            issues.append("profile direct package policy is not exact")
+        if packages != EXPECTED_DIRECT_PACKAGES:
             issues.append(
-                "undeclared LaTeX package in %s: %s" % (relative, undeclared)
+                "generated main package set is not exact in %s: %r"
+                % (relative, packages)
             )
         if content.count(r"\bibliography{") != 1:
             issues.append("one bibliography owner required: %s" % relative)

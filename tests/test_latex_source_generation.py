@@ -1,6 +1,7 @@
 #!/usr/bin/env python3
 """Task 12 contracts for deterministic LaTeX source generation and migration."""
 
+import copy
 import importlib.util
 import pathlib
 import re
@@ -1786,6 +1787,16 @@ class ArtifactGenerationTests(unittest.TestCase):
                 "bibliography_owner": "references/orthemology.bib",
             },
             "package_policy": {
+                "direct_packages": [
+                    "amsmath",
+                    "amssymb",
+                    "booktabs",
+                    "geometry",
+                    "hyperref",
+                    "microtype",
+                    "natbib",
+                    "xcolor",
+                ],
                 "supported_packages": [
                     "amsmath",
                     "amssymb",
@@ -1795,6 +1806,7 @@ class ArtifactGenerationTests(unittest.TestCase):
                     "microtype",
                     "natbib",
                     "xcolor",
+                    "fvextra",
                 ],
             },
         }
@@ -1855,6 +1867,33 @@ class ArtifactGenerationTests(unittest.TestCase):
         )
         self.assertIn("% source-qualification: research-stage-draft", latex)
         self.assertIn("% source-qualification: not-peer-reviewed", latex)
+        self.assertNotIn(r"\usepackage{fvextra}", latex)
+
+    def test_generator_requires_exact_direct_package_policy_without_fallback(self):
+        for mutation in ("missing", "extra", "compatibility-direct"):
+            with self.subTest(mutation=mutation):
+                profile = copy.deepcopy(self.profile)
+                if mutation == "missing":
+                    profile["package_policy"]["direct_packages"].pop()
+                elif mutation == "extra":
+                    profile["package_policy"]["direct_packages"].append("tikz")
+                else:
+                    profile["package_policy"]["direct_packages"].append("fvextra")
+                with self.assertRaises(self.generator.GenerationError):
+                    self.generator.render_artifact(
+                        profile,
+                        self.artifact,
+                        self.source_texts,
+                    )
+
+        profile = copy.deepcopy(self.profile)
+        profile["package_policy"].pop("direct_packages")
+        with self.assertRaises(self.generator.GenerationError):
+            self.generator.render_artifact(
+                profile,
+                self.artifact,
+                self.source_texts,
+            )
 
     def test_explicit_labels_span_front_matter_and_body_without_counter_state(self):
         source_texts = {

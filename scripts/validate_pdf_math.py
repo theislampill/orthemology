@@ -50,32 +50,54 @@ def pdf_text(name):
     return "\n".join(pg.extract_text() or "" for pg in r.pages)
 
 
+def validate_pdf_records(documents, text_by_artifact):
+    """Return v2 migration-ledger PDF glyph issues without legacy key aliases."""
+    issues = []
+    for document in documents:
+        name = document.get("artifact_id")
+        if not name:
+            issues.append("migration document missing artifact_id")
+            continue
+        text = text_by_artifact.get(name)
+        if text is None:
+            issues.append("%s artifact present" % name)
+            continue
+        notdef = text.count("\x00")
+        replacement = text.count("�")
+        expected = document.get("expected_notdef")
+        if not isinstance(expected, int) or notdef != expected:
+            issues.append(
+                "%s notdef count == pinned (%r); observed %d"
+                % (name, expected, notdef)
+            )
+        if replacement:
+            issues.append(
+                "%s has no U+FFFD replacement glyph; observed %d"
+                % (name, replacement)
+            )
+        if document.get("full_math_source_migrated") is True and notdef:
+            issues.append("%s migrated artifact must be notdef-free" % name)
+    gallery = text_by_artifact.get("notation-gallery")
+    if gallery is not None:
+        for token in GALLERY_TOKENS:
+            if token not in gallery:
+                issues.append(
+                    "notation-gallery PDF renders operator %r" % token
+                )
+    return issues
+
+
 def main():
     mig = yaml.safe_load(io.open(os.path.join(ROOT, "docs/math-migration-status.yaml"),
                                  encoding="utf-8").read())
-    for d in mig["documents"]:
-        name = d["pdf"]
-        txt = pdf_text(name)
-        if txt is None:
-            check("%s artifact present" % name, False)
-            continue
-        notdef = txt.count("\x00")
-        fffd = txt.count("�")
-        expected = d["expected_notdef"] if d.get("migrated") else d["known_notdef"]
-        check("%s notdef count == pinned (%d)" % (name, expected),
-              notdef == expected,
-              "observed %d notdef vs pinned %d — update the source migration or the ledger, never silently"
-              % (notdef, expected))
-        check("%s has no U+FFFD replacement glyph" % name, fffd == 0,
-              "%d replacement chars" % fffd)
-        if d.get("migrated"):
-            check("%s (migrated) is notdef-free" % name, notdef == 0,
-                  "a migrated document must render every glyph")
-
-    gtxt = pdf_text("notation-gallery") or ""
-    for tok in GALLERY_TOKENS:
-        check("notation-gallery PDF renders operator %r (no equation loss)" % tok,
-              tok in gtxt)
+    text_by_artifact = {
+        document.get("artifact_id"): pdf_text(document.get("artifact_id"))
+        for document in mig["documents"]
+        if document.get("artifact_id")
+    }
+    issues = validate_pdf_records(mig["documents"], text_by_artifact)
+    for issue in issues:
+        check(issue, False)
 
     print("TOTAL: %d failures" % len(FAILS))
     sys.exit(1 if FAILS else 0)

@@ -2,8 +2,8 @@ schema: orthemology-publication-profile-v1
 profile_id: generic-arxiv-compatible-two-column-technical-paper
 compatibility_claim: A venue-neutral, generic arXiv-compatible two-column technical paper with full-width front matter and single-column technical appendices.
 status:
-  target_state: deferred-tasks-12-13
-  current_artifact_conformance: not-claimed
+  target_state: task-13-verified
+  current_artifact_conformance: verified-against-declared-profile
   venue_selection: none
   submission: not-submitted
   processing: not-claimed
@@ -14,6 +14,13 @@ source_ownership:
   substantive_prose_owner: authoritative-markdown-sources
   generated_latex_semantic_edits: prohibited
   bibliography_owner: references/orthemology.bib
+source_provenance:
+  source_commit: 1703a783d9b25a9cfa93370c4a1a0b568fa497d0
+  source_tree: 8edff88e8df79e8d0792d441c65227b9729403a9
+  source_date_epoch: 1785161731
+  independently_reviewed_equivalent_source_commit: 9dc0094cc6df908fbba1b965bb36d5f3f00979c0
+  independently_reviewed_equivalent_source_tree: 8edff88e8df79e8d0792d441c65227b9729403a9
+  source_tree_equivalence: verified-identical
 toolchain:
   driver: latexmk
   engine: pdflatex
@@ -23,8 +30,26 @@ toolchain:
   environment_dependencies: declared-only
   absolute_paths: prohibited
   font_source: tex-live-distribution-only
+  lock: publication/toolchain-lock.yaml
+  tex_live_package_identities:
+  - fvextra
+  - fancyvrb
+  - etoolbox
+  - upquote
+  - textcomp
+  - lineno
+  - keyval
 package_policy:
   policy: closed
+  direct_packages:
+  - amsmath
+  - amssymb
+  - booktabs
+  - geometry
+  - hyperref
+  - microtype
+  - natbib
+  - xcolor
   supported_packages:
   - amsmath
   - amssymb
@@ -34,6 +59,7 @@ package_policy:
   - microtype
   - natbib
   - xcolor
+  - fvextra
   conversion_steps: prohibited
   files_outside_package: prohibited
   stale_auxiliary_files: prohibited
@@ -49,19 +75,26 @@ hard_limits:
   overfull_box_tolerance_pt: 5
   page_count: none
   source_package_bytes: none
+  runaway_page_guard: 500
 appendix_policy: technical-appendices-single-column
 source_package:
   owner: scripts/build_pdfs.py
   entry_point: main.tex
   one_package_per_artifact: true
   self_contained: true
+  archive_layout: repository-relative
+  build_workdir: publication/latex/<artifact_id>
+  bibliography_path: references/orthemology.bib
+  compatibility_inputs:
+  - publication/latexmkrc
+  - publication/pdftex-unicode-compat.tex
 gates:
-  provenance: deferred-task-13
-  font_embedding: deferred-task-13
-  text_extraction: deferred-task-13
-  source_packaging: deferred-task-13
-  clean_build: deferred-task-13
-  visual_qa: deferred-task-13
+  provenance: verified-task-13
+  font_embedding: verified-task-13
+  text_extraction: verified-task-13
+  source_packaging: verified-task-13
+  clean_build: verified-task-13
+  visual_qa: verified-task-13
 artifacts:
 - artifact_id: orthemma-ortheme-systems-draft
   profile_kind: technical-paper
@@ -74,6 +107,7 @@ artifacts:
   - not-externally-peer-reviewed
   - not-empirically-validated
   - candidate-terminology-not-adopted
+  appendix_mode: single-column
 - artifact_id: orthemic-core-reference-draft
   profile_kind: technical-paper
   sources:
@@ -86,6 +120,7 @@ artifacts:
   - not-externally-peer-reviewed
   - not-empirically-validated
   - candidate-terminology-not-adopted
+  appendix_mode: none
 - artifact_id: orthability-ground-of-intelligibility-draft
   profile_kind: technical-paper
   sources:
@@ -99,6 +134,7 @@ artifacts:
   - candidate-terminology-not-adopted
   - philosophical-conclusions-conditional-on-stated-premises
   - engineering-evidence-does-not-support-metaphysical-claims
+  appendix_mode: none
 - artifact_id: orthability-divine-speech-athari-draft
   profile_kind: technical-paper
   sources:
@@ -113,6 +149,7 @@ artifacts:
   - philosophical-conclusions-conditional-on-stated-premises
   - creed-internal-material-school-labeled
   - engineering-evidence-does-not-support-metaphysical-claims
+  appendix_mode: none
 - artifact_id: dynamic-orthing-noetic-learning-orthability-draft
   profile_kind: technical-paper
   sources:
@@ -126,6 +163,7 @@ artifacts:
   - candidate-terminology-not-adopted
   - philosophical-conclusions-conditional-on-stated-premises
   - engineering-evidence-does-not-support-metaphysical-claims
+  appendix_mode: none
 - artifact_id: notation-gallery
   profile_kind: diagnostic-reference
   sources:
@@ -136,6 +174,7 @@ artifacts:
   - not-peer-reviewed
   - not-externally-peer-reviewed
   - not-empirically-validated
+  appendix_mode: none
   exception:
     exception_id: notation-gallery-diagnostic-reference
     reason: notation-symbol-diagnostic-reference

@@ -1,0 +1,127 @@
+% Task 13 package-local pdfTeX compatibility for literal Unicode code examples.
+% Uses only LaTeX/pdfTeX primitives and declared distribution fonts.
+\RequirePackage{fvextra}
+\DefineVerbatimEnvironment{verbatim}{Verbatim}{
+  breaklines=true,
+  breakafter={/-.:},
+  breakbefore={|},
+  breakautoindent=false,
+  breakindent=0pt,
+  breaksymbolleft={},
+  breaksymbolright={}
+}
+\newcount\orthemologyTaskThirteenPageGuard
+\AddToHook{shipout/before}{%
+  \global\advance\orthemologyTaskThirteenPageGuard by 1
+  \ifnum\orthemologyTaskThirteenPageGuard>500
+    \PackageError{orthemology-task13}{Task 13 runaway page guard exceeded}{%
+      The PDFLaTeX build attempted to ship more than 500 pages.%
+    }%
+  \fi
+}
+\DeclareUnicodeCharacter{00A7}{\S{}}
+\DeclareUnicodeCharacter{00AC}{\ensuremath{\neg}}
+\DeclareUnicodeCharacter{00B1}{\ensuremath{\pm}}
+\DeclareUnicodeCharacter{00B7}{\ensuremath{\cdot}}
+\DeclareUnicodeCharacter{00D7}{\ensuremath{\times}}
+\DeclareUnicodeCharacter{00FC}{\"u}
+\DeclareUnicodeCharacter{0100}{\={A}}
+\DeclareUnicodeCharacter{0101}{\={a}}
+\DeclareUnicodeCharacter{012A}{\={I}}
+\DeclareUnicodeCharacter{012B}{\={i}}
+\DeclareUnicodeCharacter{016B}{\={u}}
+\DeclareUnicodeCharacter{02BE}{\textquoteright}
+\DeclareUnicodeCharacter{02BF}{\textquoteleft}
+\DeclareUnicodeCharacter{0302}{\ensuremath{{}^{\wedge}}}
+\DeclareUnicodeCharacter{0304}{\ensuremath{{}^{-}}}
+\DeclareUnicodeCharacter{0394}{\ensuremath{\Delta}}
+\DeclareUnicodeCharacter{03A0}{\ensuremath{\Pi}}
+\DeclareUnicodeCharacter{03A9}{\ensuremath{\Omega}}
+\DeclareUnicodeCharacter{03AC}{\ensuremath{\acute{\alpha}}}
+\DeclareUnicodeCharacter{03B1}{\ensuremath{\alpha}}
+\DeclareUnicodeCharacter{03B2}{\ensuremath{\beta}}
+\DeclareUnicodeCharacter{03B9}{\ensuremath{\iota}}
+\DeclareUnicodeCharacter{03BA}{\ensuremath{\kappa}}
+\DeclareUnicodeCharacter{03BC}{\ensuremath{\mu}}
+\DeclareUnicodeCharacter{03C1}{\ensuremath{\rho}}
+\DeclareUnicodeCharacter{03C2}{\ensuremath{\varsigma}}
+\DeclareUnicodeCharacter{03C3}{\ensuremath{\sigma}}
+\DeclareUnicodeCharacter{03C4}{\ensuremath{\tau}}
+\DeclareUnicodeCharacter{03C6}{\ensuremath{\phi}}
+\DeclareUnicodeCharacter{03C7}{\ensuremath{\chi}}
+\DeclareUnicodeCharacter{03CC}{\ensuremath{\acute{o}}}
+\DeclareUnicodeCharacter{1E0D}{\d{d}}
+\DeclareUnicodeCharacter{1E24}{\d{H}}
+\DeclareUnicodeCharacter{1E25}{\d{h}}
+\DeclareUnicodeCharacter{1E62}{\d{S}}
+\DeclareUnicodeCharacter{1E63}{\d{s}}
+\DeclareUnicodeCharacter{1E6C}{\d{T}}
+\DeclareUnicodeCharacter{1E6D}{\d{t}}
+\DeclareUnicodeCharacter{1E93}{\d{z}}
+\DeclareUnicodeCharacter{1F10}{\ensuremath{\epsilon}}
+\DeclareUnicodeCharacter{2013}{--}
+\DeclareUnicodeCharacter{2014}{---}
+\DeclareUnicodeCharacter{201C}{\textquotedblleft}
+\DeclareUnicodeCharacter{201D}{\textquotedblright}
+\DeclareUnicodeCharacter{2026}{\ldots}
+\DeclareUnicodeCharacter{2032}{\ensuremath{{}^{\prime}}}
+\DeclareUnicodeCharacter{2192}{\ensuremath{\rightarrow}}
+\DeclareUnicodeCharacter{21A6}{\ensuremath{\mapsto}}
+\DeclareUnicodeCharacter{21AA}{\ensuremath{\hookrightarrow}}
+\DeclareUnicodeCharacter{21D2}{\ensuremath{\Rightarrow}}
+\DeclareUnicodeCharacter{2203}{\ensuremath{\exists}}
+\DeclareUnicodeCharacter{2205}{\ensuremath{\varnothing}}
+\DeclareUnicodeCharacter{2208}{\ensuremath{\in}}
+\DeclareUnicodeCharacter{2209}{\ensuremath{\notin}}
+\DeclareUnicodeCharacter{2212}{\ensuremath{-}}
+\DeclareUnicodeCharacter{2227}{\ensuremath{\wedge}}
+\DeclareUnicodeCharacter{2229}{\ensuremath{\cap}}
+\DeclareUnicodeCharacter{2249}{\ensuremath{\not\approx}}
+\DeclareUnicodeCharacter{2260}{\ensuremath{\neq}}
+\DeclareUnicodeCharacter{2261}{\ensuremath{\equiv}}
+\DeclareUnicodeCharacter{2262}{\ensuremath{\not\equiv}}
+\DeclareUnicodeCharacter{2286}{\ensuremath{\subseteq}}
+\DeclareUnicodeCharacter{2295}{\ensuremath{\oplus}}
+\DeclareUnicodeCharacter{25A1}{\ensuremath{\square}}
+\DeclareUnicodeCharacter{25C7}{\ensuremath{\Diamond}}
+\DeclareUnicodeCharacter{27E8}{\ensuremath{\langle}}
+\DeclareUnicodeCharacter{27E9}{\ensuremath{\rangle}}
+\DeclareUnicodeCharacter{1D4A2}{\ensuremath{\mathcal{G}}}
+\makeatletter
+\newif\iforthemologyTaskThirteenEmptyBibliography
+\def\orthemologyTaskThirteenZero{0}
+\def\orthemologyTaskThirteenPatchLayout{%
+  \let\orthemologyTaskThirteenOriginalTwoColumn\twocolumn
+  \def\orthemologyTaskThirteenArgumentlessTwoColumn{%
+    \if@twocolumn
+    \else
+      \orthemologyTaskThirteenOriginalTwoColumn
+    \fi
+  }%
+  \renewcommand{\twocolumn}{%
+    \@ifnextchar[%
+      {\orthemologyTaskThirteenOriginalTwoColumn}%
+      {\orthemologyTaskThirteenArgumentlessTwoColumn}%
+  }%
+  \let\orthemologyTaskThirteenOriginalTheBibliography\thebibliography
+  \let\orthemologyTaskThirteenOriginalEndTheBibliography\endthebibliography
+  \renewenvironment{thebibliography}[1]{%
+    \def\orthemologyTaskThirteenBibliographyCount{##1}%
+    \ifx\orthemologyTaskThirteenBibliographyCount\orthemologyTaskThirteenZero
+      \orthemologyTaskThirteenEmptyBibliographytrue
+    \else
+      \orthemologyTaskThirteenEmptyBibliographyfalse
+      \orthemologyTaskThirteenOriginalTheBibliography{##1}%
+    \fi
+  }{%
+    \iforthemologyTaskThirteenEmptyBibliography
+    \else
+      \orthemologyTaskThirteenOriginalEndTheBibliography
+    \fi
+  }%
+}
+\AtBeginDocument{%
+  \setlength{\tabcolsep}{3pt}%
+  \orthemologyTaskThirteenPatchLayout
+}
+\makeatother

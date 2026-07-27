@@ -10,8 +10,9 @@ Checks:
   1. authored.review_state exists with the full field set; status from a
      closed vocabulary; no commit hash inside the block (Decision 0014);
   2. the sign-off, merge-verification, and historical-index paths resolve;
-  3. every CURRENT surface (STATUS, README, the five primary headers, the PDF
-     status lines in build_pdfs.py) carries the authored header_wording;
+  3. every CURRENT surface (STATUS, README, the five primary headers, and
+     their generated publication-LaTeX owners) carries the authored
+     header_wording;
   4. no current surface carries a banned stale phrase;
   5. a decision whose registry status is adopted may say "requiring
      independent review" only alongside a dated "review discharged" notice;
@@ -244,15 +245,34 @@ def main():
         for phrase in BANNED_CURRENT:
             check("%s free of stale phrase %r" % (rel, phrase), phrase not in text)
 
-    # PDF status page: the STATUS_LINES literal in build_pdfs.py
-    bp = read("scripts/build_pdfs.py")
-    m = re.search(r"STATUS_LINES\s*=\s*\[(.*?)\]", bp, re.S)
-    lines = " ".join(re.findall(r'"([^"]*)"', m.group(1))) if m else ""
-    check("PDF status lines carry the review-state wording",
-          "fresh-session repository review completed" in lines
-          and "not external human peer review" in lines, lines[:120])
+    # Generated publication sources, not a builder-owned status literal, are
+    # the current PDF text owners. Require every primary document to map to an
+    # artifact whose generated LaTeX preserves the authored review wording.
+    profile = yaml.safe_load(read("docs/publication-profile.yaml"))
+    artifact_by_source = {
+        source: artifact.get("artifact_id")
+        for artifact in profile.get("artifacts", [])
+        for source in artifact.get("sources", [])
+    }
+    generated_status_text = []
+    missing_generated_status = []
+    for rel in primaries:
+        artifact_id = artifact_by_source.get(rel)
+        generated_rel = (
+            "publication/latex/%s/main.tex" % artifact_id
+            if artifact_id
+            else ""
+        )
+        text = read(generated_rel) if generated_rel else ""
+        generated_status_text.append(text)
+        if wording not in text:
+            missing_generated_status.append(rel)
+    lines = "\n".join(generated_status_text)
+    check("generated PDF sources carry the review-state wording",
+          not missing_generated_status, repr(missing_generated_status))
     for phrase in BANNED_CURRENT:
-        check("PDF status lines free of stale phrase %r" % phrase, phrase not in lines)
+        check("generated PDF sources free of stale phrase %r" % phrase,
+              phrase not in lines)
 
     # 5. decision headers vs registry
     reg = yaml.safe_load(read("docs/decision-status.yaml"))
