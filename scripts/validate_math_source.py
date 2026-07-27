@@ -75,10 +75,15 @@ SEMVER_TOKEN_RE = re.compile(
     r"(?:\+[0-9A-Za-z-]+(?:\.[0-9A-Za-z-]+)*)?"
     r"(?![0-9A-Za-z])"
 )
+CLOSED_SINGLE_LETTER_STATUS_PREFIXES = "ABCDEFGHIKMNOPRSV"
 STATUS_ID_TOKEN_RE = re.compile(
     r"(?<![A-Z0-9])"
-    r"(?![A-Z]-[A-Z](?![A-Z0-9-]))"
-    r"[A-Z][A-Z0-9]*(?:-[A-Z0-9]+)+"
+    r"(?:"
+    r"[A-Z][A-Z0-9]+(?:-[A-Z0-9]+)+"
+    r"|"
+    rf"[{CLOSED_SINGLE_LETTER_STATUS_PREFIXES}]"
+    r"(?=[A-Z0-9-]*[0-9])(?:-[A-Z0-9]+)+"
+    r")"
     r"(?![A-Z0-9])"
 )
 FILE_SUFFIX_RE = re.compile(r"\.[A-Za-z0-9]+/?$")
@@ -88,6 +93,10 @@ CALLABLE_FORMULA_CANDIDATE_RE = re.compile(
 CLI_COMMAND_TOKEN_RE = re.compile(r"[A-Za-z_.][A-Za-z0-9_.\\/:-]+")
 CLI_FLAG_TOKEN_RE = re.compile(
     r"-{1,2}[A-Za-z][A-Za-z0-9_-]*(?:=[^\s]+)?"
+)
+CLI_TOKEN_RE = re.compile(r"\S+")
+COMMONMARK_LIST_MARKER_RE = re.compile(
+    r"(?m)^(?P<indent> {0,3})[+*-](?=[ \t]+|\r?$)"
 )
 FORMULA_OPERAND_PATTERN = (
     r"(?:[+\-\u2212]?(?:\d+(?:\.\d+)?|\.\d+)|[^\W\d_]\w*)"
@@ -136,6 +145,21 @@ def _is_cli_command(span):
         CLI_FLAG_TOKEN_RE.fullmatch(token.strip("'\""))
         for token in tokens[1:]
     )
+
+
+def _without_cli_syntax(span):
+    """Mask only the command and complete option tokens in a CLI-shaped span."""
+    if not _is_cli_command(span):
+        return span
+    characters = list(span)
+    for index, match in enumerate(CLI_TOKEN_RE.finditer(span)):
+        token = match.group(0)
+        if (
+            index == 0
+            or CLI_FLAG_TOKEN_RE.fullmatch(token.strip("'\""))
+        ):
+            characters[match.start():match.end()] = " " * len(token)
+    return "".join(characters)
 
 
 def is_machine_assignment(span):
@@ -343,6 +367,14 @@ def _without_status_ids(span):
     return STATUS_ID_TOKEN_RE.sub(lambda match: " " * len(match.group(0)), span)
 
 
+def _without_commonmark_list_markers(span):
+    """Mask 0–3-space CommonMark unordered-list markers line by line."""
+    return COMMONMARK_LIST_MARKER_RE.sub(
+        lambda match: match.group("indent") + " ",
+        span,
+    )
+
+
 def _contains_unicode_mark(span):
     """Return whether *span* contains any Unicode Mark category."""
     return any(unicodedata.category(char).startswith("M") for char in span)
@@ -473,9 +505,6 @@ def _callable_formula_structure(span):
             or _unicode_formula_style(name)
         ):
             return True
-        preceding_word = re.search(r"\w\s+$", span[:match.start()])
-        if any(char.isupper() for char in name) and not preceding_word:
-            return True
     return False
 
 
@@ -488,12 +517,12 @@ def _unicode_indexed_identifier(span):
 
 
 def _formula_like(span):
-    if _is_cli_command(span):
-        return False
-    candidate = _without_syntactic_urls(span)
+    candidate = _without_cli_syntax(span)
+    candidate = _without_syntactic_urls(candidate)
     candidate = _without_semver_tokens(candidate)
     candidate = _without_syntactic_file_paths(candidate)
     candidate = _without_status_ids(candidate)
+    candidate = _without_commonmark_list_markers(candidate)
     return bool(
         _contains_unicode_mark(candidate)
         or FORMULA_SIGNAL_RE.search(candidate)

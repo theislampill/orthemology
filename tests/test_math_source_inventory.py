@@ -143,6 +143,18 @@ class OccurrenceIdentityTests(unittest.TestCase):
         )
         self.assertEqual(inventory_issues(inventory, source_texts), [])
 
+    def assertFormulaControl(self, span):
+        self.assertTrue(VALIDATOR._formula_like(span), span)
+        source = "Formula: `%s`.\n" % span
+        inventory, source_texts = literal_inventory(
+            "publication/example.md",
+            source,
+        )
+        self.assertIssue(
+            inventory_issues(inventory, source_texts),
+            "formula-like literal classification",
+        )
+
     def test_rejects_duplicate_file_locus_occurrence_key(self):
         inventory, source_texts = valid_inventory()
         inventory["occurrences"].append(copy.deepcopy(inventory["occurrences"][0]))
@@ -678,7 +690,6 @@ class OccurrenceIdentityTests(unittest.TestCase):
 
     def test_operator_and_binary_formulae_are_detected_directly(self):
         formulae = (
-            "+",
             "/",
             "⋅",
             "−",
@@ -755,19 +766,11 @@ class OccurrenceIdentityTests(unittest.TestCase):
             "φ(x)",
             "𝑓 (x)",
             "RelSpec_q (e)",
+            "V1(e)",
         )
         for formula in formulae:
             with self.subTest(formula=formula):
-                self.assertTrue(VALIDATOR._formula_like(formula), formula)
-                source = "Formula: `%s`.\n" % formula
-                inventory, source_texts = literal_inventory(
-                    "publication/example.md",
-                    source,
-                )
-                self.assertIssue(
-                    inventory_issues(inventory, source_texts),
-                    "formula-like literal classification",
-                )
+                self.assertFormulaControl(formula)
 
     def test_every_unicode_mark_category_is_formula_like(self):
         mark_codepoints = (
@@ -866,6 +869,17 @@ class OccurrenceIdentityTests(unittest.TestCase):
             with self.subTest(control=control):
                 self.assertLiteralControl(control)
 
+    def test_cli_masking_preserves_formulae_after_complete_option_tokens(self):
+        formulae = (
+            "pytest -q then x+2",
+            "validator --count=2 then φ(x)",
+            "python -m pytest then 2.5*x",
+            "validator --verbose then RelSpec_q (e)",
+        )
+        for formula in formulae:
+            with self.subTest(formula=formula):
+                self.assertFormulaControl(formula)
+
     def test_filenames_paths_and_archive_names_precede_callable_detection(self):
         controls = (
             "report(v1)" + ".md",
@@ -897,10 +911,23 @@ class OccurrenceIdentityTests(unittest.TestCase):
             "R7E-12",
             "TASK-12-REVIEW",
             "R7E-12A",
+            "SCAN-CLEAN",
+            "M-1",
+            "E-T1-USED",
         )
         for control in controls:
             with self.subTest(control=control):
                 self.assertLiteralControl(control)
+
+    def test_non_status_single_letter_hyphens_remain_formulae(self):
+        formulae = (
+            "X-2",
+            "Y-17",
+            "A-B",
+        )
+        for formula in formulae:
+            with self.subTest(formula=formula):
+                self.assertFormulaControl(formula)
 
     def test_line_leading_asterisks_are_list_markers_not_multiplication(self):
         controls = (
@@ -913,6 +940,32 @@ class OccurrenceIdentityTests(unittest.TestCase):
             with self.subTest(control=control):
                 self.assertLiteralControl(control)
 
+    def test_commonmark_unordered_list_markers_are_masked_line_by_line(self):
+        controls = (
+            "+",
+            "-",
+            "+ item",
+            " + item",
+            "  + item",
+            "   + item",
+            "- item",
+            "  * item",
+            "items:\n+ first\n  * second\n   - third",
+        )
+        for control in controls:
+            with self.subTest(control=control):
+                self.assertLiteralControl(control)
+
+        formulae = (
+            "x+y",
+            "2.5*x",
+            "+ x+y",
+            "  * 2.5*x",
+        )
+        for formula in formulae:
+            with self.subTest(formula=formula):
+                self.assertFormulaControl(formula)
+
     def test_multiword_parenthetical_prose_is_not_a_callable(self):
         controls = (
             "plain prose (aside)",
@@ -920,6 +973,10 @@ class OccurrenceIdentityTests(unittest.TestCase):
             "two words (context only)",
             "Plain Notes (Draft)",
             "release Notes (draft)",
+            "Title (Draft)",
+            "Release (Candidate)",
+            "Title(Draft)",
+            "Release(Candidate)",
         )
         for control in controls:
             with self.subTest(control=control):
