@@ -96,11 +96,20 @@ def _positive_claim_role(
                 if not re.fullmatch(complement_pattern, complement):
                     continue
                 predicate_prefix = clause[subject.end():predicate.start()]
-                predicate_is_negated = re.search(
-                    r"\b(?:not|never|neither|without)"
-                    r"(?:\s+[a-z]+(?:-[a-z]+)*ly){0,2}\s*$",
+                predicate_negation = re.search(
+                    r"\b(?P<negator>not|never|neither|without)"
+                    r"(?P<modifiers>(?:\s+[a-z]+(?:-[a-z]+)*ly){0,2})\s*$",
                     predicate_prefix,
                 )
+                contrastive_not = (
+                    predicate_negation
+                    and predicate_negation.group("negator") == "not"
+                    and re.search(
+                        r"\b(?:only|merely)\b",
+                        predicate_negation.group("modifiers"),
+                    )
+                )
+                predicate_is_negated = predicate_negation and not contrastive_not
                 object_is_negated = re.match(
                     r"(?:no|none|neither)\b",
                     claimed_object.group(0),

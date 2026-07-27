@@ -125,6 +125,15 @@ invalid_cases:
   - id: I26-contrastive-not-after-adoption
     prose: The project adopted all candidate terms, not merely the preferred ones.
     expected_failure_codes: [E_TERMINOLOGY_ADOPTION]
+  - id: I27-not-only-affirms-adoption
+    prose: The project not only adopted all candidate terms but promoted them.
+    expected_failure_codes: [E_TERMINOLOGY_ADOPTION]
+  - id: I28-has-not-merely-affirms-adoption
+    prose: The project has not merely adopted all candidate terms but promoted them.
+    expected_failure_codes: [E_TERMINOLOGY_ADOPTION]
+  - id: I29-did-not-merely-affirms-adoption
+    prose: The project did not merely adopt all candidate terms but promoted them.
+    expected_failure_codes: [E_TERMINOLOGY_ADOPTION]
 
 valid_controls:
   - id: V01-constructed-grounded
