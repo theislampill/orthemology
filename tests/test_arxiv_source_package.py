@@ -622,6 +622,50 @@ class SourcePackageContractTests(unittest.TestCase):
                 attacked[field] = "wrong"
                 self.assertTrue(runtime_issues(lock, attacked), field)
 
+    def test_container_probe_keeps_manifest_and_config_digests_distinct(self):
+        inspect_identity = self.api(BUILD, "inspect_container_identity")
+        lock = yaml.safe_load(
+            (ROOT / "publication" / "toolchain-lock.yaml").read_text(
+                encoding="utf-8"
+            )
+        )
+        calls = []
+
+        def runner(command, timeout):
+            calls.append(command)
+            if command[:3] == ["docker", "image", "inspect"]:
+                return subprocess.CompletedProcess(
+                    command,
+                    0,
+                    stdout=(
+                        '{"Id":"sha256:58b5c7718b4fd239c651873cd267b6c7c82caa5d9'
+                        'a25fe22845d1b8720fff6b1","RepoDigests":["texlive/texlive@'
+                        'sha256:ccf0168bb3dc1e5ba18094131ebb57177f90eca37ab2727bc'
+                        '2d2afb54ad60a51"],"Os":"linux","Architecture":"amd64"}\n'
+                    ),
+                    stderr="",
+                )
+            return subprocess.CompletedProcess(
+                command,
+                0,
+                stdout=(
+                    '{"config":{"digest":"sha256:58b5c7718b4fd239c651873cd267b6'
+                    'c7c82caa5d9a25fe22845d1b8720fff6b1"}}'
+                ),
+                stderr="",
+            )
+
+        self.assertEqual(
+            inspect_identity(lock, runner=runner),
+            (
+                lock["container"]["manifest_digest"],
+                lock["container"]["config_digest"],
+                "linux",
+                "amd64",
+            ),
+        )
+        self.assertEqual(calls[0][-2:], ["--format", "{{json .}}"])
+
     def test_toolchain_lock_rejects_requirements_python_pypdf_poppler_and_config_drift(self):
         lock_issues = self.api(BUILD, "toolchain_lock_issues")
         lock = yaml.safe_load(

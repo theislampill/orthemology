@@ -1489,11 +1489,8 @@ def _find_poppler_binary():
     raise PipelineError("a runnable pdftoppm binary is required")
 
 
-def probe_toolchain(lock, *, root=ROOT, runner=run):
-    root = pathlib.Path(root)
-    issues = toolchain_lock_issues(lock, root=root)
-    if issues:
-        raise PipelineError("; ".join(issues))
+def inspect_container_identity(lock, *, runner=run):
+    """Return the independently verified manifest, config, OS, and architecture."""
     image = lock["container"]["image"]
     inspect = runner(
         [
@@ -1502,7 +1499,7 @@ def probe_toolchain(lock, *, root=ROOT, runner=run):
             "inspect",
             image,
             "--format",
-            "{{.Id}}|{{.Os}}|{{.Architecture}}",
+            "{{json .}}",
         ],
         timeout=60,
     )
@@ -1511,13 +1508,23 @@ def probe_toolchain(lock, *, root=ROOT, runner=run):
             "pinned TeX image is not locally available; pull it before the "
             "offline build: %s" % inspect.stderr.strip()
         )
-    inspect_parts = inspect.stdout.strip().split("|")
-    if len(inspect_parts) != 3:
+    try:
+        record = json.loads(inspect.stdout)
+        container_os = record["Os"]
+        container_architecture = record["Architecture"]
+        repo_digests = record["RepoDigests"]
+    except (KeyError, TypeError, ValueError) as exc:
         raise PipelineError(
             "local image identity probe is malformed: %s"
             % inspect.stdout.strip()
+        ) from exc
+    manifest_digest = lock["container"]["manifest_digest"]
+    if not any(
+        item.endswith("@" + manifest_digest) for item in (repo_digests or [])
+    ):
+        raise PipelineError(
+            "local image repository digest differs from the pinned manifest"
         )
-    manifest_digest, container_os, container_architecture = inspect_parts
     raw_manifest = runner(
         ["docker", "buildx", "imagetools", "inspect", "--raw", image],
         timeout=60,
@@ -1533,6 +1540,26 @@ def probe_toolchain(lock, *, root=ROOT, runner=run):
         raise PipelineError(
             "container configuration probe returned malformed manifest JSON"
         ) from exc
+    return (
+        manifest_digest,
+        config_digest,
+        container_os,
+        container_architecture,
+    )
+
+
+def probe_toolchain(lock, *, root=ROOT, runner=run):
+    root = pathlib.Path(root)
+    issues = toolchain_lock_issues(lock, root=root)
+    if issues:
+        raise PipelineError("; ".join(issues))
+    image = lock["container"]["image"]
+    (
+        manifest_digest,
+        config_digest,
+        container_os,
+        container_architecture,
+    ) = inspect_container_identity(lock, runner=runner)
     tex_bin = lock["container"]["tex_bin"]
     version_command = [
         "docker",
