@@ -54,10 +54,73 @@ def _git_blob(root, commit, relative_path):
     return result.stdout
 
 
+def _strip_tex_comments(text):
+    """Normalize TeX newlines and remove comments without hiding commands."""
+    output = []
+    index = 0
+    while index < len(text):
+        character = text[index]
+        if character == "\r":
+            output.append("\n")
+            index += 2 if index + 1 < len(text) and text[index + 1] == "\n" else 1
+            continue
+        if character == "%":
+            backslashes = 0
+            cursor = index - 1
+            while cursor >= 0 and text[cursor] == "\\":
+                backslashes += 1
+                cursor -= 1
+            if backslashes % 2 == 0:
+                index += 1
+                while index < len(text) and text[index] not in "\r\n":
+                    index += 1
+                continue
+        output.append(character)
+        index += 1
+    return "".join(output)
+
+
+def _package_declarations(text, command):
+    """Return parsed declarations and fail-closed syntax issues."""
+    cleaned = _strip_tex_comments(text)
+    declarations = []
+    issues = []
+    command_pattern = re.compile(
+        r"\\" + re.escape(command) + r"(?![A-Za-z@])",
+        re.I,
+    )
+    declaration_pattern = re.compile(
+        r"\\" + re.escape(command)
+        + r"(?![A-Za-z@])\s*(?:\[[^\]]*\]\s*)?\{([^}]*)\}",
+        re.I | re.S,
+    )
+    for command_match in command_pattern.finditer(cleaned):
+        declaration = declaration_pattern.match(cleaned, command_match.start())
+        if declaration is None:
+            issues.append(
+                "package declaration uses malformed syntax: %s"
+                % command_match.group(0)
+            )
+            continue
+        packages = [
+            item.strip() for item in declaration.group(1).split(",")
+        ]
+        if not packages or any(
+            not re.fullmatch(r"[A-Za-z0-9_.-]+", package)
+            for package in packages
+        ):
+            issues.append(
+                "package declaration contains an invalid package identity"
+            )
+            continue
+        declarations.extend(packages)
+    return declarations, issues, cleaned
+
+
 def _declared_input_issues(text, origin, contents, allowed_local_inputs):
     issues = []
     origin_dir = posixpath.dirname(origin)
-    without_comments = re.sub(r"(?<!\\)%[^\n]*", "", text)
+    without_comments = _strip_tex_comments(text)
     for match in re.finditer(
         r"\\(input|include)\b",
         without_comments,
@@ -178,6 +241,39 @@ def validate_source_package_bytes(
             names = [member.name for member in members]
     except (EOFError, OSError, tarfile.TarError) as exc:
         return ["archive load failed: %s" % exc]
+
+    if (
+        isinstance(expected_epoch, int)
+        and names == expected_names
+        and all(name in contents for name in expected_names)
+    ):
+        canonical = io.BytesIO()
+        with gzip.GzipFile(
+            fileobj=canonical,
+            mode="wb",
+            filename="",
+            mtime=expected_epoch,
+        ) as compressed:
+            with tarfile.open(
+                fileobj=compressed,
+                mode="w",
+                format=tarfile.USTAR_FORMAT,
+            ) as rebuilt:
+                for name in expected_names:
+                    payload = contents[name]
+                    member = tarfile.TarInfo(name)
+                    member.size = len(payload)
+                    member.mode = 0o644
+                    member.uid = 0
+                    member.gid = 0
+                    member.uname = ""
+                    member.gname = ""
+                    member.mtime = expected_epoch
+                    rebuilt.addfile(member, io.BytesIO(payload))
+        if archive_bytes != canonical.getvalue():
+            issues.append(
+                "archive is not the exact canonical USTAR byte encoding"
+            )
 
     if names != expected_names:
         issues.append(
@@ -323,20 +419,19 @@ def validate_source_package_bytes(
     ):
         issues.append("package policy direct and compatibility sets are invalid")
 
-    main_declared = []
-    for match in re.finditer(r"\\usepackage(?:\[[^\]]*\])?\{([^}]+)\}", main):
-        main_declared.extend(item.strip() for item in match.group(1).split(","))
+    main_declared, package_issues, main_without_comments = (
+        _package_declarations(main, "usepackage")
+    )
+    issues.extend(package_issues)
     compatibility_text = contents.get(expected_compat, b"").decode(
         "utf-8", errors="replace"
     )
-    compatibility_declared = []
-    for match in re.finditer(
-        r"\\RequirePackage(?:\[[^\]]*\])?\{([^}]+)\}",
-        compatibility_text,
-    ):
-        compatibility_declared.extend(
-            item.strip() for item in match.group(1).split(",")
-        )
+    (
+        compatibility_declared,
+        compatibility_package_issues,
+        _compatibility_without_comments,
+    ) = _package_declarations(compatibility_text, "RequirePackage")
+    issues.extend(compatibility_package_issues)
     if main_declared != expected_direct:
         issues.append(
             "main package declarations must equal direct package policy: %r"
@@ -368,13 +463,13 @@ def validate_source_package_bytes(
         )
     if re.search(
         r"\\(?:immediate\s*)?write18|\\ShellEscape|\\usepackage\{shellesc\}",
-        main,
+        main_without_comments,
         re.I,
     ):
         issues.append("shell escape is prohibited")
     if re.search(
         r"\\(?:usepackage\{fontspec\}|setmainfont|setsansfont|setmonofont)",
-        main,
+        main_without_comments,
         re.I,
     ):
         issues.append("undeclared or system font selection is prohibited")

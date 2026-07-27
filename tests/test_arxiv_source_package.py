@@ -155,6 +155,22 @@ def unsafe_archive(entries, *, member_mtime=EPOCH):
     return raw.getvalue()
 
 
+def repack_archive(archive_bytes, *, tar_format, pax_header=False):
+    with tarfile.open(fileobj=io.BytesIO(archive_bytes), mode="r:gz") as source:
+        entries = [
+            (copy.copy(member), source.extractfile(member).read())
+            for member in source.getmembers()
+        ]
+    raw = io.BytesIO()
+    with gzip.GzipFile(fileobj=raw, mode="wb", filename="", mtime=EPOCH) as gz:
+        with tarfile.open(fileobj=gz, mode="w", format=tar_format) as target:
+            for member, payload in entries:
+                if pax_header:
+                    member.pax_headers = {"comment": "noncanonical extension"}
+                target.addfile(member, io.BytesIO(payload))
+    return raw.getvalue()
+
+
 class SourcePackageContractTests(unittest.TestCase):
     def api(self, module, name):
         self.assertIsNotNone(
@@ -713,6 +729,63 @@ class SourcePackageContractTests(unittest.TestCase):
                 issues = self.validate(archive, manifest)
                 self.assertTrue(issues, name)
 
+    def test_tex_lexing_rejects_cr_comments_and_split_package_declarations(self):
+        mutations = {
+            "carriage-return comment escape": (
+                "% harmless\r\\input /etc/passwd\n" + BASE_MAIN
+            ),
+            "split unsupported package": BASE_MAIN.replace(
+                "\\usepackage{amsmath}",
+                "\\usepackage% split\n{todonotes}\n\\usepackage{amsmath}",
+            ),
+            "split prohibited font package": BASE_MAIN.replace(
+                "\\usepackage{amsmath}",
+                "\\usepackage% split\n{fontspec}\n\\usepackage{amsmath}",
+            ),
+        }
+        for name, main in mutations.items():
+            with self.subTest(name=name):
+                archive, manifest = self.create(main=main)
+                issues = self.validate(
+                    archive,
+                    manifest,
+                    source_blobs={
+                        MAIN_PATH: main.encode("utf-8"),
+                        BIB_PATH: BASE_BIB.encode("utf-8"),
+                    },
+                )
+                expected_fragment = (
+                    "dependency"
+                    if name == "carriage-return comment escape"
+                    else "package"
+                )
+                self.assertTrue(
+                    any(expected_fragment in issue for issue in issues),
+                    issues,
+                )
+
+    def test_rejects_noncanonical_gnu_and_pax_tar_encodings(self):
+        archive, manifest = self.create()
+        for name, (tar_format, pax_header) in {
+            "gnu": (tarfile.GNU_FORMAT, False),
+            "pax extension": (tarfile.PAX_FORMAT, True),
+        }.items():
+            with self.subTest(name=name):
+                repacked = repack_archive(
+                    archive,
+                    tar_format=tar_format,
+                    pax_header=pax_header,
+                )
+                attacked_manifest = copy.deepcopy(manifest)
+                attacked_manifest["archive"]["sha256"] = hashlib.sha256(
+                    repacked
+                ).hexdigest()
+                issues = self.validate(repacked, attacked_manifest)
+                self.assertTrue(
+                    any("USTAR" in issue for issue in issues),
+                    issues,
+                )
+
     def test_package_policy_separates_main_and_compatibility_declarations(self):
         valid_archive, manifest = self.create()
         self.assertEqual(self.validate(valid_archive, manifest), [])
@@ -1028,6 +1101,42 @@ class SourcePackageContractTests(unittest.TestCase):
             issues = validate(root)
             self.assertTrue(
                 any("duplicate" in issue for issue in issues),
+                issues,
+            )
+
+    def test_compatibility_report_rejects_malformed_extra_table_row(self):
+        validate = self.api(BUILD, "compatibility_report_table_issues")
+        with tempfile.TemporaryDirectory() as temporary:
+            root = pathlib.Path(temporary)
+            shutil.copytree(ROOT / "artifacts", root / "artifacts")
+            report_target = (
+                root
+                / "docs"
+                / "project-closure"
+                / "r7e-sol"
+                / "R7E-SOL-ARXIV-COMPATIBILITY.md"
+            )
+            report_target.parent.mkdir(parents=True)
+            report = (
+                ROOT
+                / "docs"
+                / "project-closure"
+                / "r7e-sol"
+                / "R7E-SOL-ARXIV-COMPATIBILITY.md"
+            ).read_text(encoding="utf-8")
+            separator = "|---|---:|---|---|---|"
+            report_target.write_text(
+                report.replace(
+                    separator,
+                    separator + "\n| unexpected | row |",
+                    1,
+                ),
+                encoding="utf-8",
+                newline="\n",
+            )
+            issues = validate(root)
+            self.assertTrue(
+                any("table region" in issue for issue in issues),
                 issues,
             )
 

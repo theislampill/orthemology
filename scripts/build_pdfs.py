@@ -237,6 +237,26 @@ def compatibility_report_table_issues(root):
     if not report_path.is_file():
         return ["compatibility report is missing"]
     text = report_path.read_text(encoding="utf-8")
+    lines = text.splitlines()
+    expected_table_lines = render_compatibility_artifact_table(root).splitlines()
+    table_header = expected_table_lines[0]
+    header_indexes = [
+        index for index, line in enumerate(lines) if line == table_header
+    ]
+    issues = []
+    if len(header_indexes) != 1:
+        issues.append(
+            "compatibility report must contain exactly one artifact table region"
+        )
+    else:
+        start = header_indexes[0]
+        end = start
+        while end < len(lines) and lines[end].startswith("|"):
+            end += 1
+        if lines[start:end] != expected_table_lines:
+            issues.append(
+                "compatibility report artifact table region is not exact"
+            )
     row_pattern = re.compile(
         r"^\| `([^`]+)` \| (\d+) \| `([0-9a-f]{64})` \| "
         r"`([0-9a-f]{64})` \| `([0-9a-f]{64})` \|$",
@@ -244,7 +264,6 @@ def compatibility_report_table_issues(root):
     )
     row_matches = list(row_pattern.finditer(text))
     row_ids = [match.group(1) for match in row_matches]
-    issues = []
     duplicate_ids = sorted(
         artifact_id
         for artifact_id in set(row_ids)
