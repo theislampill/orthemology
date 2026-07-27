@@ -43,6 +43,10 @@ def build_source_issues(build_sources, declared_sources):
     )
 
 
+def extract_occurrences(source):
+    return VALIDATOR.extract_inline_code_occurrences(source)
+
+
 def valid_inventory():
     source = "A classified occurrence: `V1(e)`.\n"
     inventory = {
@@ -121,6 +125,95 @@ class OccurrenceIdentityTests(unittest.TestCase):
             inventory_issues(orphan, source_texts), "orphan inventory row"
         )
 
+    def test_multiline_single_backtick_span_has_exact_source_identity(self):
+        source = "Formula: `x = y\n+ z`; then `V1`.\n"
+        occurrences = extract_occurrences(source)
+
+        self.assertEqual(
+            occurrences,
+            [
+                {
+                    "locus": {"line": 1, "column": 10},
+                    "occurrence": 1,
+                    "text": "x = y\n+ z",
+                },
+                {
+                    "locus": {"line": 2, "column": 12},
+                    "occurrence": 2,
+                    "text": "V1",
+                },
+            ],
+        )
+
+    def test_multiline_span_copy_move_and_orphan_are_rejected(self):
+        source = "Formula: `x = y\n+ z`.\n"
+        inventory = {
+            "schema": "orthemology-math-source-inventory-v2",
+            "classes": ["literal-code", "semantic-registry-id", "mathematics"],
+            "sources": [
+                {
+                    "file": "publication/example.md",
+                    "occurrence_count": 1,
+                    "classification_counts": {
+                        "literal-code": 0,
+                        "semantic-registry-id": 0,
+                        "mathematics": 1,
+                    },
+                }
+            ],
+            "occurrences": [
+                {
+                    "file": "publication/example.md",
+                    "locus": {"line": 1, "column": 10},
+                    "occurrence": 1,
+                    "text": "x = y\n+ z",
+                    "classification": "mathematics",
+                }
+            ],
+        }
+        self.assertEqual(
+            inventory_issues(inventory, {"publication/example.md": source}),
+            [],
+        )
+
+        copied = {"publication/example.md": source + source}
+        self.assertIssue(
+            inventory_issues(inventory, copied),
+            "unclassified source occurrence",
+        )
+
+        moved = {"publication/example.md": "Prefix.\n" + source}
+        moved_issues = inventory_issues(inventory, moved)
+        self.assertIssue(moved_issues, "unclassified source occurrence")
+        self.assertIssue(moved_issues, "orphan inventory row")
+
+        orphan = copy.deepcopy(inventory)
+        orphan["occurrences"][0]["locus"]["column"] += 1
+        self.assertIssue(
+            inventory_issues(orphan, {"publication/example.md": source}),
+            "orphan inventory row",
+        )
+
+    def test_multiline_scanner_masks_fences_and_rejects_unclosed_delimiter(self):
+        source = (
+            "```text\n"
+            "not an occurrence: `x = y\n"
+            "+ z`\n"
+            "```\n"
+            "Real: `a = b\n"
+            "+ c`.\n"
+        )
+        occurrences = extract_occurrences(source)
+        self.assertEqual(len(occurrences), 1)
+        self.assertEqual(occurrences[0]["text"], "a = b\n+ c")
+
+        inventory, source_texts = valid_inventory()
+        source_texts["publication/example.md"] = "Unclosed `x = y.\n"
+        self.assertIssue(
+            inventory_issues(inventory, source_texts),
+            "malformed single-backtick delimiter",
+        )
+
     def test_rejects_formula_as_registry_id_including_bare_operator_call(self):
         inventory, source_texts = valid_inventory()
         inventory["occurrences"][0]["classification"] = "semantic-registry-id"
@@ -154,6 +247,39 @@ class OccurrenceIdentityTests(unittest.TestCase):
         self.assertIssue(
             inventory_issues(inventory, source_texts),
             "combining accent classified as nonmathematics",
+        )
+
+    def test_multiline_token_status_example_remains_literal_code(self):
+        status = "μ̄_2: stale calibration; μ̄_3: wrong\nclaim scope"
+        source = "Diagnostic: `%s`.\n" % status
+        inventory = {
+            "schema": "orthemology-math-source-inventory-v2",
+            "classes": ["literal-code", "semantic-registry-id", "mathematics"],
+            "sources": [
+                {
+                    "file": "publication/example.md",
+                    "occurrence_count": 1,
+                    "classification_counts": {
+                        "literal-code": 1,
+                        "semantic-registry-id": 0,
+                        "mathematics": 0,
+                    },
+                }
+            ],
+            "occurrences": [
+                {
+                    "file": "publication/example.md",
+                    "locus": {"line": 1, "column": 13},
+                    "occurrence": 1,
+                    "text": status,
+                    "classification": "literal-code",
+                }
+            ],
+        }
+
+        self.assertEqual(
+            inventory_issues(inventory, {"publication/example.md": source}),
+            [],
         )
 
     def test_preserves_literal_command_and_true_registry_id(self):

@@ -49,7 +49,6 @@ DISPLAY_RE = re.compile(r"\$\$(.+?)\$\$", re.S)
 INLINE_RE = re.compile(r"\$([^\$\n]+?)\$")
 CODE_FENCE_RE = re.compile(r"```(\w*)\n(.*?)```", re.S)
 INLINE_CODE_RE = re.compile(r"`[^`]*`")
-INLINE_CODE_CAPTURE_RE = re.compile(r"`([^`\n]+)`")
 FENCE_BLOCK_RE = re.compile(r"```.*?```", re.S)
 FORMULA_SIGNAL_RE = re.compile(
     r"[=∈⊆⊂⟺⇔→↦∧∨≼≠≤≥∀∃∅⊥⊨⊭±×÷∩∪⟨⟩]"
@@ -134,12 +133,68 @@ def _mask_fences(text):
     return FENCE_BLOCK_RE.sub(mask, text)
 
 
+class InlineCodeParseError(ValueError):
+    """Raised when a single-backtick code span has no closing delimiter."""
+
+
+def _single_backtick_spans(masked):
+    """Return source offsets for CommonMark code spans delimited by one backtick.
+
+    A code span may cross line boundaries. Runs of two or more backticks are
+    paired and skipped as separate CommonMark code spans, so a single backtick
+    inside one is never misclassified. Fenced blocks must be masked first.
+    """
+    spans = []
+    cursor = 0
+    length = len(masked)
+    while cursor < length:
+        opening = masked.find("`", cursor)
+        if opening < 0:
+            break
+        run_end = opening + 1
+        while run_end < length and masked[run_end] == "`":
+            run_end += 1
+        run_length = run_end - opening
+
+        closing = run_end
+        while True:
+            closing = masked.find("`", closing)
+            if closing < 0:
+                if run_length == 1:
+                    line = masked.count("\n", 0, opening) + 1
+                    last_newline = masked.rfind("\n", 0, opening)
+                    column = opening - last_newline
+                    raise InlineCodeParseError(
+                        "malformed single-backtick delimiter at line %d, column %d"
+                        % (line, column)
+                    )
+                cursor = run_end
+                break
+            closing_end = closing + 1
+            while closing_end < length and masked[closing_end] == "`":
+                closing_end += 1
+            if closing_end - closing == run_length:
+                if run_length == 1:
+                    spans.append(
+                        {
+                            "start": opening,
+                            "end": closing_end,
+                            "content_start": run_end,
+                            "content_end": closing,
+                        }
+                    )
+                cursor = closing_end
+                break
+            closing = closing_end
+    return spans
+
+
 def extract_inline_code_occurrences(text):
     """Return source-ordered inline-code occurrences with stable source loci."""
     masked = _mask_fences(text)
     occurrences = []
-    for ordinal, match in enumerate(INLINE_CODE_CAPTURE_RE.finditer(masked), 1):
-        start = match.start()
+    for ordinal, span in enumerate(_single_backtick_spans(masked), 1):
+        start = span["start"]
         line = masked.count("\n", 0, start) + 1
         last_newline = masked.rfind("\n", 0, start)
         column = start - last_newline
@@ -147,7 +202,7 @@ def extract_inline_code_occurrences(text):
             {
                 "locus": {"line": line, "column": column},
                 "occurrence": ordinal,
-                "text": text[match.start(1):match.end(1)],
+                "text": text[span["content_start"]:span["content_end"]],
             }
         )
     return occurrences
@@ -155,6 +210,19 @@ def extract_inline_code_occurrences(text):
 
 def _formula_like(span):
     return bool(COMBINING.search(span) or FORMULA_SIGNAL_RE.search(span))
+
+
+def is_diagnostic_code_literal(span):
+    """Return whether a multiline span is a token-to-status diagnostic sample."""
+    if "\n" not in span:
+        return False
+    clauses = [" ".join(part.split()) for part in span.split(";")]
+    if len(clauses) < 2:
+        return False
+    return all(
+        re.fullmatch(r"[^\s:;]+:\s+[A-Za-z][A-Za-z0-9 /_-]*", clause)
+        for clause in clauses
+    )
 
 
 def validate_inventory_data(inventory, source_texts, registry_ids=None):
@@ -199,7 +267,11 @@ def validate_inventory_data(inventory, source_texts, registry_ids=None):
         if path not in source_texts:
             issues.append("missing publication source: %s" % path)
             continue
-        extracted = extract_inline_code_occurrences(source_texts[path])
+        try:
+            extracted = extract_inline_code_occurrences(source_texts[path])
+        except InlineCodeParseError as exc:
+            issues.append("%s: %s" % (path, exc))
+            extracted = []
         actual_by_file[path] = extracted
         for occurrence in extracted:
             key = (
@@ -244,7 +316,15 @@ def validate_inventory_data(inventory, source_texts, registry_ids=None):
         if not isinstance(span, str):
             issues.append("inventory occurrence text must be a string at %r" % (key,))
             continue
-        if COMBINING.search(span) and classification != "mathematics":
+        diagnostic_literal = (
+            classification == "literal-code"
+            and is_diagnostic_code_literal(span)
+        )
+        if (
+            COMBINING.search(span)
+            and classification != "mathematics"
+            and not diagnostic_literal
+        ):
             issues.append(
                 "combining accent classified as nonmathematics at %r" % (key,)
             )
@@ -257,6 +337,7 @@ def validate_inventory_data(inventory, source_texts, registry_ids=None):
             classification == "literal-code"
             and _formula_like(span)
             and not is_machine_assignment(span)
+            and not diagnostic_literal
         ):
             issues.append("formula-like literal classification at %r" % (key,))
 

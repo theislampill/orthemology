@@ -35,27 +35,27 @@ documents:
   - theory/orthemic-core-formalization.md
   - theory/orthemic-multi-actor-conflict-note.md
   glyph_defect_repaired: true
-  full_math_source_migrated: false
+  full_math_source_migrated: true
   expected_notdef: 0
   visual_qa_state: deferred-task-13
 - artifact_id: orthemma-ortheme-systems-draft
   sources:
   - manuscript/orthemma-ortheme-systems-revised-draft.md
   glyph_defect_repaired: true
-  full_math_source_migrated: false
+  full_math_source_migrated: true
   expected_notdef: 0
   visual_qa_state: deferred-task-13
 - artifact_id: orthability-ground-of-intelligibility-draft
   sources:
   - companion/orthability-and-the-ground-of-intelligibility.md
   glyph_defect_repaired: true
-  full_math_source_migrated: false
+  full_math_source_migrated: true
   expected_notdef: 0
   visual_qa_state: deferred-task-13
 - artifact_id: orthability-divine-speech-athari-draft
   sources:
   - companion/orthability-divine-attributes-and-speech-athari.md
   glyph_defect_repaired: true
-  full_math_source_migrated: false
+  full_math_source_migrated: true
   expected_notdef: 0
   visual_qa_state: deferred-task-13

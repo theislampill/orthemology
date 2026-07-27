@@ -28,6 +28,15 @@ def read(rel):
         return f.read()
 
 
+def latex_operator(name):
+    return r"\operatorname{%s}" % name
+
+
+def contains_inline_math(document, expression):
+    """Require one complete inline-math occurrence of a canonical expression."""
+    return ("$%s$" % expression) in document
+
+
 def main():
     reg = yaml.safe_load(read("docs/verdict-registry.yaml"))
     aliases = {v["id"]: v["alias"] for v in reg["verdicts"]}
@@ -40,13 +49,40 @@ def main():
 
     # 1. CorePath equation appears identically in core and manuscript, matching the registry
     expected = "{ " + ", ".join(core_aliases) + " }"
-    expected_ms = "{" + ", ".join(core_aliases) + "}"
+    expected_ms = (
+        latex_operator("CorePath")
+        + r" = \{"
+        + ", ".join(latex_operator(alias) for alias in core_aliases)
+        + r"\}"
+    )
     check("core states the registry CorePath", expected in core, expected)
-    check("manuscript states the registry CorePath", expected_ms in ms, expected_ms)
+    check(
+        "manuscript states the registry CorePath",
+        contains_inline_math(ms, expected_ms),
+        expected_ms,
+    )
 
     # 2. Sole entailment stated in both
-    check("core states the sole entailment V2b-T_q -> V1_q", "V2b-T_q(e) → V1_q(e)" in core)
-    check("manuscript states the sole entailment", "V2b-T_q → V1_q" in ms)
+    core_entailment = (
+        latex_operator("V2b-T")
+        + r"_q(e) \to "
+        + latex_operator("V1")
+        + "_q(e)"
+    )
+    manuscript_entailment = (
+        latex_operator("V2b-T")
+        + r"_q \to "
+        + latex_operator("V1")
+        + "_q"
+    )
+    check(
+        "core states the sole entailment V2b-T_q -> V1_q",
+        contains_inline_math(core, core_entailment),
+    )
+    check(
+        "manuscript states the sole entailment",
+        contains_inline_math(ms, manuscript_entailment),
+    )
 
     # 3. Episode signature agreement across core §2.2, manuscript §8.2, and the overview.
     #    R7D Phase K migrated all three from #raw monospace (U+20D7 vec -> notdef) to
@@ -76,7 +112,16 @@ def main():
     check("every referenced decision record exists", not ghosts, str(ghosts))
 
     # 7. Zero-burden rule phrased via ReqPath in both (no stray App(e))
-    check("zero-burden rule uses ReqPath in core", "V3c ∉ ReqPath(e)" in core)
+    zero_burden = (
+        latex_operator("V3c")
+        + r" \notin "
+        + latex_operator("ReqPath")
+        + "(e)"
+    )
+    check(
+        "zero-burden rule uses ReqPath in core",
+        contains_inline_math(core, zero_burden),
+    )
     check("zero-burden rule uses ReqPath in manuscript", "V3c ∉ ReqPath(e)" in ms)
 
     # 8. Verdict-record schema enum equals registry IDs (also checked by validate_schemas)
