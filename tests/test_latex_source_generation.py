@@ -331,6 +331,60 @@ class MultilineCoverageMigrationTests(unittest.TestCase):
 
 
 class MarkdownRenderingTests(unittest.TestCase):
+    def test_matching_outline_prefixes_are_not_repeated_in_latex_headings(self):
+        generator = load_generator()
+        self.assertIsNotNone(generator, "Task 12 LaTeX generator is missing")
+        markdown = (
+            "## 1. First section\n\n"
+            "### 1.1 First subsection\n\n"
+            "### 1.2 Second subsection\n\n"
+            "## 2. Second section\n"
+        )
+
+        rendered = generator.render_markdown(
+            markdown,
+            source_name="matching-outline-prefixes.md",
+        )
+
+        self.assertIn(r"\section{First section}", rendered)
+        self.assertIn(r"\subsection{First subsection}", rendered)
+        self.assertIn(r"\subsection{Second subsection}", rendered)
+        self.assertIn(r"\section{Second section}", rendered)
+        for repeated in (
+            r"\section{1. First section}",
+            r"\subsection{1.1 First subsection}",
+            r"\subsection{1.2 Second subsection}",
+            r"\section{2. Second section}",
+        ):
+            self.assertNotIn(repeated, rendered)
+
+    def test_nonmatching_and_nonnumeric_heading_prefixes_are_preserved(self):
+        generator = load_generator()
+        self.assertIsNotNone(generator, "Task 12 LaTeX generator is missing")
+        markdown = (
+            "## 9. Nonmatching section\n\n"
+            "### 9.1 Nonmatching subsection\n\n"
+            "## Descriptive section\n\n"
+            "### Qualitative subsection\n\n"
+            "## 3.2 Numeric text at section level\n\n"
+            "## 3D geometry remains descriptive\n"
+        )
+
+        rendered = generator.render_markdown(
+            markdown,
+            source_name="preserved-heading-prefixes.md",
+        )
+
+        for preserved in (
+            r"\section{9. Nonmatching section}",
+            r"\subsection{9.1 Nonmatching subsection}",
+            r"\section{Descriptive section}",
+            r"\subsection{Qualitative subsection}",
+            r"\section{3.2 Numeric text at section level}",
+            r"\section{3D geometry remains descriptive}",
+        ):
+            self.assertIn(preserved, rendered)
+
     def test_math_and_literal_dollars_remain_distinct(self):
         generator = load_generator()
         self.assertIsNotNone(generator, "Task 12 LaTeX generator is missing")
@@ -1671,6 +1725,30 @@ class ArtifactGenerationTests(unittest.TestCase):
         )
         self.assertIn("% source-qualification: research-stage-draft", latex)
         self.assertIn("% source-qualification: not-peer-reviewed", latex)
+
+    def test_outline_number_matching_spans_front_matter_and_body(self):
+        source_texts = {
+            "docs/notation-gallery.md": (
+                "# Sample title\n\n"
+                "## Abstract\n\n"
+                "Abstract body.\n\n"
+                "## 2. Body\n\n"
+                "### 2.1 Detail\n\n"
+                "Body prose.\n"
+            )
+        }
+
+        latex = self.generator.render_artifact(
+            self.profile,
+            self.artifact,
+            source_texts,
+        )
+
+        self.assertIn(r"\section{Abstract}", latex)
+        self.assertIn(r"\section{Body}", latex)
+        self.assertIn(r"\subsection{Detail}", latex)
+        self.assertNotIn(r"\section{2. Body}", latex)
+        self.assertNotIn(r"\subsection{2.1 Detail}", latex)
 
     def test_expected_tree_is_deterministic_and_validator_catches_tampering(self):
         with tempfile.TemporaryDirectory() as tmp:

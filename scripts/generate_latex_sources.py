@@ -131,10 +131,38 @@ PLACEHOLDER_RE = re.compile(
     re.escape(PLACEHOLDER_OPEN) + r"(\d+)" + re.escape(PLACEHOLDER_CLOSE)
 )
 PURE_COMMENT_RE = re.compile(r"\s*(?:<!--.*?-->\s*)+", re.S)
+EXPLICIT_NUMERIC_HEADING_PREFIX_RE = re.compile(
+    r"^(?P<number>\d+(?:\.\d+)*)(?:\.)?[ \t]+(?P<title>\S.*)$"
+)
 
 
 class GenerationError(ValueError):
     """Raised when Markdown cannot be represented by the bounded LaTeX writer."""
+
+
+class DocumentOutlineState:
+    """Track the numbered LaTeX outline across source-rendering boundaries."""
+
+    def __init__(self):
+        self.counters = {2: 0, 3: 0, 4: 0}
+        self.appendix_numbering = False
+
+    def enter_appendix(self):
+        self.counters = {2: 0, 3: 0, 4: 0}
+        self.appendix_numbering = True
+
+    def advance(self, level):
+        if level not in self.counters:
+            return None
+        self.counters[level] += 1
+        for nested_level in range(level + 1, 5):
+            self.counters[nested_level] = 0
+        if self.appendix_numbering:
+            return None
+        return ".".join(
+            str(self.counters[current_level])
+            for current_level in range(2, level + 1)
+        )
 
 
 def _is_escaped(text, index):
@@ -1033,7 +1061,19 @@ def _render_table(table):
     return _render_standard_table(table, columns, rows)
 
 
-def render_markdown(markdown, source_name="<memory>"):
+def _strip_matching_heading_number(heading_text, rendered_heading, outline_number):
+    if outline_number is None:
+        return rendered_heading
+    match = EXPLICIT_NUMERIC_HEADING_PREFIX_RE.match(heading_text)
+    if match is None or match.group("number") != outline_number:
+        return rendered_heading
+    prefix = heading_text[: match.start("title")]
+    if not rendered_heading.startswith(prefix):
+        return rendered_heading
+    return rendered_heading[len(prefix) :]
+
+
+def render_markdown(markdown, source_name="<memory>", outline_state=None):
     """Render bounded CommonMark, tables, code, links, and canonical math."""
     try:
         protected, math = _protect_math(markdown)
@@ -1050,6 +1090,8 @@ def render_markdown(markdown, source_name="<memory>"):
     list_stack = []
     table = None
     appendix_active = False
+    if outline_state is None:
+        outline_state = DocumentOutlineState()
     while index < len(tokens):
         token = tokens[index]
         kind = token.type
@@ -1060,6 +1102,7 @@ def render_markdown(markdown, source_name="<memory>"):
             if level == 2 and "appendix" in heading_text.casefold() and not appendix_active:
                 output.append("\n\\onecolumn\n\\appendix\n")
                 appendix_active = True
+                outline_state.enter_appendix()
             if level == 2 and re.search(r"\breferences\b", heading_text, re.I) and appendix_active:
                 output.append("\n\\twocolumn\n")
                 appendix_active = False
@@ -1071,9 +1114,15 @@ def render_markdown(markdown, source_name="<memory>"):
                 5: "paragraph",
                 6: "subparagraph",
             }[level]
+            rendered_heading = _render_inline(inline.children or [], math)
+            rendered_heading = _strip_matching_heading_number(
+                heading_text,
+                rendered_heading,
+                outline_state.advance(level),
+            )
             output.append(
                 "\n\\%s{%s}\n"
-                % (command, _render_inline(inline.children or [], math))
+                % (command, rendered_heading)
             )
             index += 3
             continue
@@ -1240,6 +1289,7 @@ def render_artifact(profile, artifact, source_texts):
 
     packages = profile.get("package_policy", {}).get("supported_packages", [])
     package_lines = ["\\usepackage{%s}\n" % package for package in packages]
+    outline_state = DocumentOutlineState()
     preamble = [
         *comments,
         "\\documentclass[10pt,letterpaper,twocolumn]{article}\n",
@@ -1253,13 +1303,27 @@ def render_artifact(profile, artifact, source_texts):
         "\\begin{document}\n",
         "\\twocolumn[\n",
         "\\maketitle\n",
-        render_markdown(front_matter, source_name=source_paths[0]),
+        render_markdown(
+            front_matter,
+            source_name=source_paths[0],
+            outline_state=outline_state,
+        ),
         "\\vspace{1em}\n",
         "]\n",
-        render_markdown(body, source_name=source_paths[0]),
+        render_markdown(
+            body,
+            source_name=source_paths[0],
+            outline_state=outline_state,
+        ),
     ]
     for path in source_paths[1:]:
-        preamble.append(render_markdown(source_texts[path], source_name=path))
+        preamble.append(
+            render_markdown(
+                source_texts[path],
+                source_name=path,
+                outline_state=outline_state,
+            )
+        )
 
     bibliography = artifact["bibliography_owner"]
     if pathlib.PurePosixPath(bibliography).is_absolute() or re.match(
