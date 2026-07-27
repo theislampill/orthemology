@@ -2,6 +2,7 @@
 """Generate deterministic LaTeX derivatives from publication Markdown owners."""
 
 import argparse
+import functools
 import hashlib
 import pathlib
 import re
@@ -70,6 +71,17 @@ REVIEWED_INLINE_MATH_BREAK_COMMANDS = frozenset(
 INLINE_CODE_PATH_LAYOUT_BREAK = r"\allowbreak{}"
 INLINE_CODE_PATH_BREAK_CHARACTERS = frozenset("/-._")
 INLINE_CODE_PATH_SEGMENT_RE = re.compile(r"[A-Za-z0-9][A-Za-z0-9._-]*")
+ALLOWED_INLINE_CODE_BASENAME_EXTENSIONS = frozenset(
+    {
+        ".bib",
+        ".json",
+        ".md",
+        ".py",
+        ".tex",
+        ".yaml",
+        ".yml",
+    }
+)
 DECLARED_REPOSITORY_INLINE_CODE_ROOTS = frozenset(
     {
         "applications",
@@ -265,18 +277,6 @@ def _inline_code_path_segments(text):
     return segments
 
 
-def is_path_like_inline_code(text):
-    """Accept only closed repository paths and exact declared exceptions."""
-    segments = _inline_code_path_segments(text)
-    if segments is None:
-        return False
-    return (
-        segments[0] in DECLARED_REPOSITORY_INLINE_CODE_ROOTS
-        or text in DECLARED_EXTERNAL_REPOSITORY_SLUGS
-        or text in DECLARED_SOURCE_RELATIVE_INLINE_CODE_PATHS
-    )
-
-
 def _tracked_repository_paths(root):
     try:
         result = subprocess.run(
@@ -292,6 +292,66 @@ def _tracked_repository_paths(root):
         for item in result.stdout.split(b"\0")
         if item
     }
+
+
+def _is_inline_code_basename_candidate(text):
+    if (
+        "/" in text
+        or "\\" in text
+        or any(character.isspace() for character in text)
+        or not INLINE_CODE_PATH_SEGMENT_RE.fullmatch(text)
+    ):
+        return False
+    return (
+        pathlib.PurePosixPath(text).suffix.casefold()
+        in ALLOWED_INLINE_CODE_BASENAME_EXTENSIONS
+    )
+
+
+@functools.lru_cache(maxsize=None)
+def _tracked_unique_inline_code_basename_resolution_items(root_key):
+    tracked_paths = _tracked_repository_paths(pathlib.Path(root_key))
+    resolutions = {}
+    ambiguous = set()
+    for path in tracked_paths:
+        basename = pathlib.PurePosixPath(path).name
+        if not _is_inline_code_basename_candidate(basename):
+            continue
+        if basename in resolutions:
+            ambiguous.add(basename)
+        else:
+            resolutions[basename] = path
+    for basename in ambiguous:
+        resolutions.pop(basename, None)
+    return tuple(sorted(resolutions.items()))
+
+
+def tracked_unique_inline_code_basename_resolutions(root=ROOT):
+    """Map only uniquely tracked source/document basenames to exact paths."""
+    root_key = str(pathlib.Path(root).resolve())
+    return dict(
+        _tracked_unique_inline_code_basename_resolution_items(root_key)
+    )
+
+
+def is_uniquely_tracked_inline_code_basename(text, root=ROOT):
+    """Return whether a closed filename resolves to one Git-tracked path."""
+    return (
+        _is_inline_code_basename_candidate(text)
+        and text in tracked_unique_inline_code_basename_resolutions(root)
+    )
+
+
+def is_path_like_inline_code(text, root=ROOT):
+    """Accept only closed repository paths and exact tracked filenames."""
+    segments = _inline_code_path_segments(text)
+    if segments is None:
+        return is_uniquely_tracked_inline_code_basename(text, root)
+    return (
+        segments[0] in DECLARED_REPOSITORY_INLINE_CODE_ROOTS
+        or text in DECLARED_EXTERNAL_REPOSITORY_SLUGS
+        or text in DECLARED_SOURCE_RELATIVE_INLINE_CODE_PATHS
+    )
 
 
 def tracked_repository_root_segments(root=ROOT):
@@ -336,6 +396,21 @@ def validate_inline_code_path_declarations(root=ROOT):
         raise GenerationError(
             "external repository slugs overlap declared local roots"
         )
+    resolutions = tracked_unique_inline_code_basename_resolutions(root)
+    for basename, path in resolutions.items():
+        matches = sorted(
+            tracked
+            for tracked in tracked_paths
+            if pathlib.PurePosixPath(tracked).name == basename
+        )
+        if (
+            not _is_inline_code_basename_candidate(basename)
+            or matches != [path]
+        ):
+            raise GenerationError(
+                "tracked inline-code basename does not resolve uniquely: %s"
+                % basename
+            )
 
 
 def remove_inline_code_path_layout_breaks(body):

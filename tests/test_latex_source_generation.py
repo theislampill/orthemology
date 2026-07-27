@@ -1157,6 +1157,102 @@ $$
             generator._escape_code(path),
         )
 
+    def test_unique_tracked_source_filenames_get_reconstructable_breaks(self):
+        generator = load_generator()
+        self.assertIsNotNone(generator, "Task 12 LaTeX generator is missing")
+        expected = {
+            "orthability-and-the-ground-of-intelligibility.md": (
+                "companion/orthability-and-the-ground-of-intelligibility.md"
+            ),
+            "orthability-divine-attributes-and-speech-athari.md": (
+                "companion/orthability-divine-attributes-and-speech-athari.md"
+            ),
+        }
+        resolutions = (
+            generator.tracked_unique_inline_code_basename_resolutions(ROOT)
+        )
+
+        for filename, relative in expected.items():
+            with self.subTest(filename=filename):
+                self.assertEqual(resolutions.get(filename), relative)
+                self.assertTrue(
+                    generator.is_path_like_inline_code(filename)
+                )
+                rendered = generator.render_markdown(
+                    "Companion `%s` remains exact.\n" % filename,
+                    source_name="unique-source-filename.md",
+                )
+                texttt_open = rendered.index(r"\texttt{") + len(r"\texttt{")
+                texttt_close = rendered.index("} remains exact.", texttt_open)
+                layout_body = rendered[texttt_open:texttt_close]
+                self.assertGreaterEqual(
+                    layout_body.count(
+                        generator.INLINE_CODE_PATH_LAYOUT_BREAK
+                    ),
+                    4,
+                )
+                self.assertEqual(
+                    generator.remove_inline_code_path_layout_breaks(
+                        layout_body
+                    ),
+                    generator._escape_code(filename),
+                )
+
+    def test_ambiguous_nonexistent_and_nonfilename_controls_stay_literal(self):
+        generator = load_generator()
+        self.assertIsNotNone(generator, "Task 12 LaTeX generator is missing")
+        resolutions = (
+            generator.tracked_unique_inline_code_basename_resolutions(ROOT)
+        )
+        tracked_paths = generator._tracked_repository_paths(ROOT)
+        controls = (
+            "README.md",
+            "report(v1).md",
+            "v1.2",
+            "2026-07-27",
+            "STATUS_A",
+            "RESULT_CORRECT",
+        )
+
+        self.assertEqual(
+            generator.ALLOWED_INLINE_CODE_BASENAME_EXTENSIONS,
+            {".bib", ".json", ".md", ".py", ".tex", ".yaml", ".yml"},
+        )
+        self.assertGreater(
+            sum(
+                pathlib.PurePosixPath(path).name == "README.md"
+                for path in tracked_paths
+            ),
+            1,
+        )
+        self.assertNotIn("README.md", resolutions)
+        self.assertNotIn("report(v1).md", resolutions)
+        for basename, path in resolutions.items():
+            with self.subTest(resolution=basename):
+                self.assertEqual(
+                    sorted(
+                        tracked
+                        for tracked in tracked_paths
+                        if pathlib.PurePosixPath(tracked).name == basename
+                    ),
+                    [path],
+                )
+        for control in controls:
+            with self.subTest(control=control):
+                self.assertFalse(generator.is_path_like_inline_code(control))
+                rendered = generator.render_markdown(
+                    "Control `%s` remains literal.\n" % control,
+                    source_name="inline-code-basename-control.md",
+                )
+                self.assertIn(
+                    r"\texttt{%s}" % generator._escape_code(control),
+                    rendered,
+                )
+                self.assertNotIn(
+                    generator.INLINE_CODE_PATH_LAYOUT_BREAK,
+                    rendered,
+                )
+
     def test_inline_code_registry_command_url_and_nonpath_controls_are_unchanged(self):
         generator = load_generator()
         self.assertIsNotNone(generator, "Task 12 LaTeX generator is missing")
@@ -1297,6 +1393,7 @@ $$
                     yield from walk(token.children)
 
         path_values = []
+        basename_values = []
         for artifact in profile["artifacts"]:
             for relative in artifact["sources"]:
                 source = (ROOT / relative).read_text(encoding="utf-8")
@@ -1307,12 +1404,17 @@ $$
                     .enable("strikethrough")
                     .parse(protected)
                 )
-                path_values.extend(
-                    token.content
-                    for token in walk(tokens)
-                    if token.type == "code_inline"
-                    and generator.is_path_like_inline_code(token.content)
-                )
+                for token in walk(tokens):
+                    if token.type != "code_inline":
+                        continue
+                    if generator._inline_code_path_segments(token.content):
+                        if generator.is_path_like_inline_code(token.content):
+                            path_values.append(token.content)
+                    elif generator.is_uniquely_tracked_inline_code_basename(
+                        token.content,
+                        ROOT,
+                    ):
+                        basename_values.append(token.content)
 
         tree = generator.expected_latex_tree(ROOT, profile)
         total_marker_count = sum(
@@ -1325,10 +1427,31 @@ $$
             )
             for path in path_values
         )
+        basename_marker_count = sum(
+            generator._render_inline_code(filename).count(
+                generator.INLINE_CODE_PATH_LAYOUT_BREAK
+            )
+            for filename in basename_values
+        )
         self.assertEqual(len(path_values), 65)
         self.assertEqual(len(set(path_values)), 39)
         self.assertEqual(path_marker_count, 241)
-        self.assertEqual(total_marker_count - path_marker_count, 44)
+        self.assertEqual(len(basename_values), 16)
+        self.assertEqual(len(set(basename_values)), 10)
+        self.assertEqual(basename_marker_count, 70)
+        for filename in set(basename_values):
+            with self.subTest(reconstructable_basename=filename):
+                layout_body = generator._render_inline_code(filename)
+                self.assertEqual(
+                    generator.remove_inline_code_path_layout_breaks(
+                        layout_body
+                    ),
+                    generator._escape_code(filename),
+                )
+        self.assertEqual(
+            total_marker_count - path_marker_count - basename_marker_count,
+            44,
+        )
         for path, content in tree.items():
             with self.subTest(generated_path=path):
                 self.assertNotIn(
