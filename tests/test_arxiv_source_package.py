@@ -770,9 +770,35 @@ class SourcePackageContractTests(unittest.TestCase):
                 "\\csname RequirePackage\\endcsname{todonotes}\n"
                 + BASE_MAIN
             ),
-            "caret-escaped input": BASE_MAIN.replace(
+            "lowercase hex caret input": BASE_MAIN.replace(
                 "\\begin{document}",
                 "\\^^69nput{pdftex-unicode-compat.tex}\n"
+                "\\begin{document}",
+            ),
+            "uppercase hex caret input": BASE_MAIN.replace(
+                "\\begin{document}",
+                "\\^^49nput{pdftex-unicode-compat.tex}\n"
+                "\\begin{document}",
+            ),
+            "mixed-case caret input": BASE_MAIN.replace(
+                "\\begin{document}",
+                "\\^^69NPUT{pdftex-unicode-compat.tex}\n"
+                "\\begin{document}",
+            ),
+            "unbraced caret input": BASE_MAIN.replace(
+                "\\begin{document}",
+                "\\^^69nput pdftex-unicode-compat.tex\n"
+                "\\begin{document}",
+            ),
+            "line-split caret input": BASE_MAIN.replace(
+                "\\begin{document}",
+                "\\^^69nput% split\n"
+                "{pdftex-unicode-compat.tex}\n"
+                "\\begin{document}",
+            ),
+            "commented caret escape": BASE_MAIN.replace(
+                "\\begin{document}",
+                "% \\^^69nput{pdftex-unicode-compat.tex}\n"
                 "\\begin{document}",
             ),
         }
@@ -799,7 +825,12 @@ class SourcePackageContractTests(unittest.TestCase):
                             "dynamic conditional file read",
                             "dynamic internal file read",
                             "dynamic package load",
-                            "caret-escaped input",
+                            "lowercase hex caret input",
+                            "uppercase hex caret input",
+                            "mixed-case caret input",
+                            "unbraced caret input",
+                            "line-split caret input",
+                            "commented caret escape",
                         }
                         else "package"
                     )
@@ -1242,36 +1273,45 @@ class SourcePackageContractTests(unittest.TestCase):
                         issues,
                     )
 
-    def test_compatibility_report_rejects_duplicate_total_page_records(self):
+    def test_compatibility_report_rejects_duplicate_or_malformed_total_records(self):
         validate = self.api(BUILD, "compatibility_report_table_issues")
-        with tempfile.TemporaryDirectory() as temporary:
-            root = pathlib.Path(temporary)
-            shutil.copytree(ROOT / "artifacts", root / "artifacts")
-            report_target = (
-                root
-                / "docs"
-                / "project-closure"
-                / "r7e-sol"
-                / "R7E-SOL-ARXIV-COMPATIBILITY.md"
-            )
-            report_target.parent.mkdir(parents=True)
-            report = (
-                ROOT
-                / "docs"
-                / "project-closure"
-                / "r7e-sol"
-                / "R7E-SOL-ARXIV-COMPATIBILITY.md"
-            ).read_text(encoding="utf-8")
-            report_target.write_text(
-                report + "\nTotal final page count: `999`.\n",
-                encoding="utf-8",
-                newline="\n",
-            )
-            issues = validate(root)
-            self.assertTrue(
-                any("exactly one" in issue for issue in issues),
-                issues,
-            )
+        additions = (
+            "Total final page count: `999`.",
+            "Total final page count: 999.",
+            "Total final page count : `999`.",
+            " Total final page count: `999`.",
+            "Total final page count: `999`. trailing",
+        )
+        for addition in additions:
+            with self.subTest(addition=addition):
+                with tempfile.TemporaryDirectory() as temporary:
+                    root = pathlib.Path(temporary)
+                    shutil.copytree(ROOT / "artifacts", root / "artifacts")
+                    report_target = (
+                        root
+                        / "docs"
+                        / "project-closure"
+                        / "r7e-sol"
+                        / "R7E-SOL-ARXIV-COMPATIBILITY.md"
+                    )
+                    report_target.parent.mkdir(parents=True)
+                    report = (
+                        ROOT
+                        / "docs"
+                        / "project-closure"
+                        / "r7e-sol"
+                        / "R7E-SOL-ARXIV-COMPATIBILITY.md"
+                    ).read_text(encoding="utf-8")
+                    report_target.write_text(
+                        report + "\n" + addition + "\n",
+                        encoding="utf-8",
+                        newline="\n",
+                    )
+                    issues = validate(root)
+                    self.assertTrue(
+                        any("exactly one" in issue for issue in issues),
+                        issues,
+                    )
 
 
 if __name__ == "__main__":
