@@ -390,6 +390,23 @@ class SourcePackageContractTests(unittest.TestCase):
         attacked[4:8] = int(EPOCH + 1).to_bytes(4, "little")
         issues = self.validate(bytes(attacked), manifest)
         self.assertTrue(any("gzip mtime" in issue for issue in issues), issues)
+        for index, value, label in (
+            (3, 4, "flags"),
+            (8, 0, "XFL"),
+            (9, 3, "OS"),
+        ):
+            with self.subTest(gzip_header=label):
+                attacked = bytearray(archive)
+                attacked[index] = value
+                attacked_manifest = copy.deepcopy(manifest)
+                attacked_manifest["archive"]["sha256"] = hashlib.sha256(
+                    attacked
+                ).hexdigest()
+                issues = self.validate(bytes(attacked), attacked_manifest)
+                self.assertTrue(
+                    any("gzip header" in issue for issue in issues),
+                    issues,
+                )
 
         entries = [
             (
@@ -444,6 +461,22 @@ class SourcePackageContractTests(unittest.TestCase):
             "undeclared local input": BASE_MAIN.replace(
                 "\\begin{document}",
                 "\\include{extra}\n\\begin{document}",
+            ),
+            "unbraced absolute input": BASE_MAIN.replace(
+                "\\begin{document}",
+                "\\input /etc/passwd \n\\begin{document}",
+            ),
+            "unbraced generated input": BASE_MAIN.replace(
+                "\\begin{document}",
+                "\\input main.bbl \n\\begin{document}",
+            ),
+            "unbraced include": BASE_MAIN.replace(
+                "\\begin{document}",
+                "\\include extra\n\\begin{document}",
+            ),
+            "comment-separated unbraced input": BASE_MAIN.replace(
+                "\\begin{document}",
+                "\\input % comment\nmain.bbl \n\\begin{document}",
             ),
         }
         for name, main in attacks.items():
@@ -959,6 +992,42 @@ class SourcePackageContractTests(unittest.TestCase):
             issues = validate(root)
             self.assertTrue(
                 any("source manifest SHA-256" in issue for issue in issues),
+                issues,
+            )
+
+    def test_compatibility_report_rejects_duplicate_owner_rows(self):
+        validate = self.api(BUILD, "compatibility_report_table_issues")
+        with tempfile.TemporaryDirectory() as temporary:
+            root = pathlib.Path(temporary)
+            shutil.copytree(ROOT / "artifacts", root / "artifacts")
+            report_target = (
+                root
+                / "docs"
+                / "project-closure"
+                / "r7e-sol"
+                / "R7E-SOL-ARXIV-COMPATIBILITY.md"
+            )
+            report_target.parent.mkdir(parents=True)
+            report = (
+                ROOT
+                / "docs"
+                / "project-closure"
+                / "r7e-sol"
+                / "R7E-SOL-ARXIV-COMPATIBILITY.md"
+            ).read_text(encoding="utf-8")
+            row = next(
+                line
+                for line in report.splitlines()
+                if line.startswith("| `orthemma-ortheme-systems-draft`")
+            )
+            report_target.write_text(
+                report.replace(row, row + "\n" + row, 1),
+                encoding="utf-8",
+                newline="\n",
+            )
+            issues = validate(root)
+            self.assertTrue(
+                any("duplicate" in issue for issue in issues),
                 issues,
             )
 

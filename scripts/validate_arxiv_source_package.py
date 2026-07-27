@@ -57,11 +57,21 @@ def _git_blob(root, commit, relative_path):
 def _declared_input_issues(text, origin, contents, allowed_local_inputs):
     issues = []
     origin_dir = posixpath.dirname(origin)
-    for command, target in re.findall(
-        r"\\(input|include)\s*\{([^}]+)\}",
-        text,
+    without_comments = re.sub(r"(?<!\\)%[^\n]*", "", text)
+    for match in re.finditer(
+        r"\\(input|include)\b",
+        without_comments,
         re.I,
     ):
+        remainder = without_comments[match.end() :]
+        argument = re.match(r"\s*\{([^}]*)\}", remainder, re.S)
+        if argument is None:
+            issues.append(
+                "declared source dependency uses prohibited unbraced syntax: %s"
+                % match.group(0)
+            )
+            continue
+        target = argument.group(1)
         target = target.strip()
         if (
             not target
@@ -124,13 +134,22 @@ def validate_source_package_bytes(
     expected_epoch = (
         manifest.get("source_date_epoch") if isinstance(manifest, dict) else None
     )
+    canonical_header = (
+        len(archive_bytes) >= 10
+        and archive_bytes[0:4] == b"\x1f\x8b\x08\x00"
+        and archive_bytes[8] == 2
+        and archive_bytes[9] == 255
+    )
+    if not canonical_header:
+        issues.append("archive gzip header metadata is not canonical")
     if (
-        len(archive_bytes) < 10
-        or archive_bytes[:2] != b"\x1f\x8b"
+        len(archive_bytes) < 8
         or not isinstance(expected_epoch, int)
         or int.from_bytes(archive_bytes[4:8], "little") != expected_epoch
     ):
         issues.append("archive gzip mtime differs from source epoch")
+    if not canonical_header:
+        return issues
     try:
         with tarfile.open(fileobj=io.BytesIO(archive_bytes), mode="r:gz") as archive:
             members = archive.getmembers()
@@ -157,7 +176,7 @@ def validate_source_package_bytes(
                         % member.name
                     )
             names = [member.name for member in members]
-    except (OSError, tarfile.TarError) as exc:
+    except (EOFError, OSError, tarfile.TarError) as exc:
         return ["archive load failed: %s" % exc]
 
     if names != expected_names:

@@ -242,6 +242,19 @@ def compatibility_report_table_issues(root):
         r"`([0-9a-f]{64})` \| `([0-9a-f]{64})` \|$",
         re.M,
     )
+    row_matches = list(row_pattern.finditer(text))
+    row_ids = [match.group(1) for match in row_matches]
+    issues = []
+    duplicate_ids = sorted(
+        artifact_id
+        for artifact_id in set(row_ids)
+        if row_ids.count(artifact_id) > 1
+    )
+    if duplicate_ids:
+        issues.append(
+            "compatibility report has duplicate artifact rows: %r"
+            % duplicate_ids
+        )
     reported = {
         match.group(1): {
             "pages": int(match.group(2)),
@@ -249,15 +262,14 @@ def compatibility_report_table_issues(root):
             "source_archive_sha256": match.group(4),
             "source_manifest_sha256": match.group(5),
         }
-        for match in row_pattern.finditer(text)
+        for match in row_matches
     }
     expected_rows = compatibility_artifact_rows(root)
     expected_ids = [row["artifact_id"] for row in expected_rows]
-    issues = []
-    if list(reported) != expected_ids:
+    if row_ids != expected_ids:
         issues.append(
             "compatibility report artifact order differs: expected %r, got %r"
-            % (expected_ids, list(reported))
+            % (expected_ids, row_ids)
         )
     labels = {
         "pages": "page count",
