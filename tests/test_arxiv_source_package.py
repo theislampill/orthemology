@@ -754,6 +754,17 @@ class SourcePackageContractTests(unittest.TestCase):
             "dynamic file read": (
                 "\\csname input\\endcsname{main.bbl}\n" + BASE_MAIN
             ),
+            "dynamic conditional file read": (
+                "\\csname InputIfFileExists\\endcsname{main.bbl}{}{}\n"
+                + BASE_MAIN
+            ),
+            "dynamic internal file read": (
+                "\\csname @input\\endcsname{main.bbl}\n" + BASE_MAIN
+            ),
+            "dynamic package load": (
+                "\\csname RequirePackage\\endcsname{todonotes}\n"
+                + BASE_MAIN
+            ),
         }
         for name, main in mutations.items():
             with self.subTest(name=name):
@@ -771,7 +782,14 @@ class SourcePackageContractTests(unittest.TestCase):
                     if name == "carriage-return comment escape"
                     else (
                         "source-read"
-                        if name in {"conditional file read", "dynamic file read"}
+                        if name
+                        in {
+                            "conditional file read",
+                            "dynamic file read",
+                            "dynamic conditional file read",
+                            "dynamic internal file read",
+                            "dynamic package load",
+                        }
                         else "package"
                     )
                 )
@@ -1122,8 +1140,14 @@ class SourcePackageContractTests(unittest.TestCase):
 
     def test_compatibility_report_rejects_malformed_or_indented_extra_table_row(self):
         validate = self.api(BUILD, "compatibility_report_table_issues")
-        for prefix in ("", " ", "   "):
-            with self.subTest(prefix=repr(prefix)):
+        for row in (
+            "| unexpected | row |",
+            " | unexpected | row |",
+            "   | unexpected | row |",
+            "unexpected | row",
+            " unexpected | row",
+        ):
+            with self.subTest(row=repr(row)):
                 with tempfile.TemporaryDirectory() as temporary:
                     root = pathlib.Path(temporary)
                     shutil.copytree(ROOT / "artifacts", root / "artifacts")
@@ -1152,8 +1176,7 @@ class SourcePackageContractTests(unittest.TestCase):
                             last_row,
                             last_row
                             + "\n"
-                            + prefix
-                            + "| unexpected | row |",
+                            + row,
                             1,
                         ),
                         encoding="utf-8",

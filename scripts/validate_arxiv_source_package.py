@@ -130,12 +130,10 @@ def _alternate_source_read_issues(cleaned):
             issues.append(
                 "prohibited alternate source-read command: \\%s" % command
             )
-    if re.search(
-        r"\\csname\s*(?:input|include|openin|read|readline)\s*\\endcsname",
-        cleaned,
-        re.I,
-    ):
-        issues.append("prohibited dynamic source-read command")
+    if re.search(r"\\csname(?![A-Za-z@])", cleaned, re.I):
+        issues.append(
+            "prohibited dynamic source-read/control-sequence construction"
+        )
     return issues
 
 
