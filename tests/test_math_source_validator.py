@@ -90,17 +90,26 @@ class BuildSourceExtractionTests(unittest.TestCase):
     def test_extracts_only_docs_owner_and_ignores_unrelated_paths(self):
         build_text = """
 COMPATIBILITY_REPORT_PATH = pathlib.Path(
-    "docs/project-closure/report.md"
+    "docs/project-closure/r7e-sol/R7E-SOL-ARXIV-COMPATIBILITY.md"
 )
 DOCS = [
-    ("sample", ["manuscript/source.md", "companion/source.md"]),
+    (
+        "sample",
+        [
+            "manuscript/orthemma-ortheme-systems-revised-draft.md",
+            "companion/orthability-and-the-ground-of-intelligibility.md",
+        ],
+    ),
 ]
 """
         extract = getattr(VALIDATOR, "extract_build_sources", None)
         self.assertIsNotNone(extract, "exact DOCS source extraction is missing")
         self.assertEqual(
             extract(build_text),
-            {"manuscript/source.md", "companion/source.md"},
+            {
+                "manuscript/orthemma-ortheme-systems-revised-draft.md",
+                "companion/orthability-and-the-ground-of-intelligibility.md",
+            },
         )
 
 
