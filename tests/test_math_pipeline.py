@@ -10,6 +10,7 @@ sys.path.insert(0, os.path.join(ROOT, "scripts"))
 
 from latex_to_typst_math import translate_inline, translate_display, MathConvertError
 import md_to_typst
+from validate_math_source import extract_inline_code_occurrences
 
 FAILS = []
 
@@ -74,6 +75,32 @@ ok("```math fence -> display", "$ arrow(mu)" in out2, out2)
 
 out3 = md_to_typst.convert("Identifier `Inst_A` stays code.")
 ok("backtick identifier stays #raw", '#raw("Inst_A")' in out3, out3)
+
+out4 = md_to_typst.convert(
+    "Literal `python --version` and registry ID `V1` stay code."
+)
+ok(
+    "literal command and semantic registry ID stay #raw",
+    '#raw("python --version")' in out4 and '#raw("V1")' in out4,
+    out4,
+)
+
+inventory_probe = extract_inline_code_occurrences(
+    "Keep `V1` and classify `V1(e)`.\n```\n`fenced` is not inline\n```\n"
+)
+eq(
+    "inventory extractor is locus-sensitive and fence-aware",
+    [
+        (
+            row["locus"]["line"],
+            row["locus"]["column"],
+            row["occurrence"],
+            row["text"],
+        )
+        for row in inventory_probe
+    ],
+    [(1, 6, 1, "V1"), (1, 24, 2, "V1(e)")],
+)
 
 # a math translation failure inside convert() surfaces as ConversionError
 try:

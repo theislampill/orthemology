@@ -14,16 +14,21 @@ Deterministic, offline. Guards the math-source discipline the audit requires:
      math source ($...$, $$...$$, ```math) anywhere in the corpus — publication
      math must use \\hat / \\bar / \\vec (this is the exact source antipattern
      behind the reproduced notdef defect, R7B-PDF-MATH-BASELINE.md);
-  5. the math-migration-status manifest covers every build_pdfs source document
-     (nothing is silently omitted from the migration ledger).
+  5. build, migration, inventory, and publication-profile source ownership is
+     exact and bidirectional;
+  6. every inline-code occurrence in the seven publication sources has one
+     file/locus/occurrence classification; and
+  7. the deferred publication profile is schema-valid and venue-neutral.
 
 This is a typography/consistency gate. It establishes no empirical or
 theological claim, and it does not change any symbol's meaning (Decision 0005).
 """
 import io
+import json
 import os
 import re
 import sys
+from collections import Counter
 
 try:
     import yaml
@@ -34,6 +39,7 @@ except ImportError as e:
 ROOT = os.path.dirname(os.path.dirname(os.path.abspath(__file__)))
 sys.path.insert(0, os.path.join(ROOT, "scripts"))
 from latex_to_typst_math import translate_inline, translate_display, MathConvertError
+from validate_publication_profile import validate_profile
 
 FAILS = []
 GALLERY = "docs/notation-gallery.md"
@@ -43,6 +49,13 @@ DISPLAY_RE = re.compile(r"\$\$(.+?)\$\$", re.S)
 INLINE_RE = re.compile(r"\$([^\$\n]+?)\$")
 CODE_FENCE_RE = re.compile(r"```(\w*)\n(.*?)```", re.S)
 INLINE_CODE_RE = re.compile(r"`[^`]*`")
+INLINE_CODE_CAPTURE_RE = re.compile(r"`([^`\n]+)`")
+FENCE_BLOCK_RE = re.compile(r"```.*?```", re.S)
+FORMULA_SIGNAL_RE = re.compile(
+    r"[=∈⊆⊂⟺⇔→↦∧∨≼≠≤≥∀∃∅⊥⊨⊭±×÷∩∪⟨⟩]"
+    r"|\{[^}]*\|[^}]*\}"
+    r"|(?:^|[^A-Za-z0-9_])[A-Za-z][A-Za-z0-9_-]*\([^)]*\)"
+)
 MACHINE_ASSIGNMENT_RE = re.compile(
     r"(?:(?:export )?[A-Z_][A-Z0-9_]*|\$env:[A-Za-z_][A-Za-z0-9_]*)=(.*)",
     re.S,
@@ -112,6 +125,339 @@ def real_math_spans(text):
     for m in INLINE_RE.finditer(t):
         spans.append(("i", m.group(1)))
     return spans
+
+
+def _mask_fences(text):
+    def mask(match):
+        return "".join("\n" if char == "\n" else " " for char in match.group(0))
+
+    return FENCE_BLOCK_RE.sub(mask, text)
+
+
+def extract_inline_code_occurrences(text):
+    """Return source-ordered inline-code occurrences with stable source loci."""
+    masked = _mask_fences(text)
+    occurrences = []
+    for ordinal, match in enumerate(INLINE_CODE_CAPTURE_RE.finditer(masked), 1):
+        start = match.start()
+        line = masked.count("\n", 0, start) + 1
+        last_newline = masked.rfind("\n", 0, start)
+        column = start - last_newline
+        occurrences.append(
+            {
+                "locus": {"line": line, "column": column},
+                "occurrence": ordinal,
+                "text": text[match.start(1):match.end(1)],
+            }
+        )
+    return occurrences
+
+
+def _formula_like(span):
+    return bool(COMBINING.search(span) or FORMULA_SIGNAL_RE.search(span))
+
+
+def validate_inventory_data(inventory, source_texts, registry_ids=None):
+    """Validate exact source occurrence <-> inventory row parity."""
+    registry_ids = set(registry_ids or ())
+    issues = []
+    if not isinstance(inventory, dict):
+        return ["inventory must be a mapping"]
+    if inventory.get("schema") != "orthemology-math-source-inventory-v2":
+        issues.append("inventory schema must be orthemology-math-source-inventory-v2")
+    if inventory.get("classes") != [
+        "literal-code",
+        "semantic-registry-id",
+        "mathematics",
+    ]:
+        issues.append("inventory classes must preserve the closed classification enum")
+
+    source_rows = inventory.get("sources")
+    occurrence_rows = inventory.get("occurrences")
+    if not isinstance(source_rows, list):
+        source_rows = []
+        issues.append("inventory sources must be a list")
+    if not isinstance(occurrence_rows, list):
+        occurrence_rows = []
+        issues.append("inventory occurrences must be a list")
+
+    source_files = []
+    for source_row in source_rows:
+        if not isinstance(source_row, dict) or not isinstance(source_row.get("file"), str):
+            issues.append("inventory source row must contain a file")
+            continue
+        source_files.append(source_row["file"])
+    duplicates = sorted(
+        path for path, count in Counter(source_files).items() if count > 1
+    )
+    if duplicates:
+        issues.append("duplicate publication source row: %s" % duplicates)
+
+    actual = {}
+    actual_by_file = {}
+    for path in source_files:
+        if path not in source_texts:
+            issues.append("missing publication source: %s" % path)
+            continue
+        extracted = extract_inline_code_occurrences(source_texts[path])
+        actual_by_file[path] = extracted
+        for occurrence in extracted:
+            key = (
+                path,
+                occurrence["locus"]["line"],
+                occurrence["locus"]["column"],
+                occurrence["occurrence"],
+            )
+            actual[key] = occurrence
+
+    inventoried = {}
+    rows_by_file = {}
+    for row in occurrence_rows:
+        if not isinstance(row, dict):
+            issues.append("inventory occurrence row must be a mapping")
+            continue
+        locus = row.get("locus")
+        if not isinstance(locus, dict):
+            issues.append("inventory occurrence row lacks locus")
+            continue
+        key = (
+            row.get("file"),
+            locus.get("line"),
+            locus.get("column"),
+            row.get("occurrence"),
+        )
+        if key in inventoried:
+            issues.append("duplicate occurrence key: %r" % (key,))
+        else:
+            inventoried[key] = row
+        rows_by_file.setdefault(row.get("file"), []).append(row)
+
+        classification = row.get("classification")
+        span = row.get("text")
+        if classification not in {
+            "literal-code",
+            "semantic-registry-id",
+            "mathematics",
+        }:
+            issues.append("invalid occurrence classification at %r" % (key,))
+            continue
+        if not isinstance(span, str):
+            issues.append("inventory occurrence text must be a string at %r" % (key,))
+            continue
+        if COMBINING.search(span) and classification != "mathematics":
+            issues.append(
+                "combining accent classified as nonmathematics at %r" % (key,)
+            )
+        if classification == "semantic-registry-id":
+            if _formula_like(span) and span not in registry_ids:
+                issues.append("formula-like registry classification at %r" % (key,))
+            elif span not in registry_ids:
+                issues.append("false registry-ID classification at %r" % (key,))
+        if (
+            classification == "literal-code"
+            and _formula_like(span)
+            and not is_machine_assignment(span)
+        ):
+            issues.append("formula-like literal classification at %r" % (key,))
+
+    for key, occurrence in actual.items():
+        row = inventoried.get(key)
+        if row is None:
+            issues.append("unclassified source occurrence: %r" % (key,))
+        elif row.get("text") != occurrence["text"]:
+            issues.append("inventory text mismatch at %r" % (key,))
+    for key in inventoried:
+        if key not in actual:
+            issues.append("orphan inventory row: %r" % (key,))
+
+    for source_row in source_rows:
+        if not isinstance(source_row, dict) or "file" not in source_row:
+            continue
+        path = source_row["file"]
+        rows = rows_by_file.get(path, [])
+        if source_row.get("occurrence_count") != len(rows):
+            issues.append("source occurrence count mismatch: %s" % path)
+        counts = Counter(
+            row.get("classification") for row in rows if isinstance(row, dict)
+        )
+        declared = source_row.get("classification_counts")
+        expected = {
+            "literal-code": counts["literal-code"],
+            "semantic-registry-id": counts["semantic-registry-id"],
+            "mathematics": counts["mathematics"],
+        }
+        if declared != expected:
+            issues.append("source classification counts mismatch: %s" % path)
+    totals = inventory.get("totals")
+    if isinstance(totals, dict):
+        counts = Counter(
+            row.get("classification") for row in occurrence_rows if isinstance(row, dict)
+        )
+        expected_totals = {
+            "sources": len(source_rows),
+            "occurrences": len(occurrence_rows),
+            "literal-code": counts["literal-code"],
+            "semantic-registry-id": counts["semantic-registry-id"],
+            "mathematics": counts["mathematics"],
+        }
+        if totals != expected_totals:
+            issues.append("inventory totals mismatch")
+    return issues
+
+
+def validate_gallery_data(gallery_text, render_map):
+    issues = []
+    for entry in render_map:
+        latex = entry.get("latex")
+        symbol = entry.get("registry_symbol")
+        if not isinstance(latex, str) or (
+            "$" + latex + "$" not in gallery_text and latex not in gallery_text
+        ):
+            issues.append("gallery missing registry symbol: %s" % symbol)
+    return issues
+
+
+def validate_build_source_parity(build_sources, declared_sources):
+    build_sources = set(build_sources)
+    declared_sources = set(declared_sources)
+    if build_sources == declared_sources:
+        return []
+    return [
+        "build source parity mismatch: missing from build %s; undeclared in profile %s"
+        % (
+            sorted(declared_sources - build_sources),
+            sorted(build_sources - declared_sources),
+        )
+    ]
+
+
+def validate_migration_data(migration, inventory):
+    issues = []
+    if not isinstance(migration, dict):
+        return ["migration status must be a mapping"]
+    if migration.get("schema") != "orthemology-math-migration-status-v2":
+        issues.append("migration schema must split glyph and full-source state")
+    documents = migration.get("documents")
+    if not isinstance(documents, list):
+        return issues + ["migration documents must be a list"]
+    math_sources = {
+        row.get("file")
+        for row in inventory.get("occurrences", [])
+        if isinstance(row, dict) and row.get("classification") == "mathematics"
+    }
+    covered = []
+    for document in documents:
+        if not isinstance(document, dict):
+            issues.append("migration document must be a mapping")
+            continue
+        for field in (
+            "artifact_id",
+            "sources",
+            "glyph_defect_repaired",
+            "full_math_source_migrated",
+            "expected_notdef",
+            "visual_qa_state",
+        ):
+            if field not in document:
+                issues.append("migration document missing %s" % field)
+        sources = document.get("sources", [])
+        if isinstance(sources, list):
+            covered.extend(sources)
+        if document.get("full_math_source_migrated") is True:
+            blocked = sorted(set(sources) & math_sources)
+            if blocked:
+                issues.append(
+                    "full_math_source_migrated conflicts with math backticks: %s"
+                    % blocked
+                )
+        if document.get("visual_qa_state") != "deferred-task-13":
+            issues.append("visual QA must remain deferred to Task 13")
+    inventory_sources = [
+        row.get("file")
+        for row in inventory.get("sources", [])
+        if isinstance(row, dict)
+    ]
+    if Counter(covered) != Counter(inventory_sources):
+        issues.append("migration status must cover every publication source exactly once")
+    return issues
+
+
+def _registry_ids(root):
+    ids = set()
+    semantic_key = re.compile(
+        r"(?:^id$|_id$|^alias$|^symbol$|^registry_symbol$|"
+        r"status|vocabulary|enum)"
+    )
+    semantic_token = re.compile(
+        r"^(?:(?:ARG|ATH|FCSP|ER)-[A-Z0-9]+|"
+        r"[A-Z][A-Z0-9]*(?:[-_][A-Za-z0-9]+)+)$"
+    )
+
+    def collect(value, owner_key=""):
+        if isinstance(value, dict):
+            for key, child in value.items():
+                if owner_key == "legacy_aliases":
+                    if isinstance(key, str):
+                        ids.add(key)
+                    if isinstance(child, str):
+                        ids.add(child)
+                if isinstance(key, str) and semantic_token.fullmatch(key):
+                    ids.add(key)
+                if (
+                    isinstance(key, str)
+                    and semantic_key.search(key)
+                    and isinstance(child, str)
+                ):
+                    ids.add(child)
+                collect(child, key if isinstance(key, str) else "")
+        elif isinstance(value, list):
+            for child in value:
+                if (
+                    isinstance(child, str)
+                    and (
+                        semantic_key.search(owner_key)
+                        or semantic_token.fullmatch(child)
+                    )
+                ):
+                    ids.add(child)
+                collect(child, owner_key)
+
+    for rel in (
+        "docs/verdict-registry.yaml",
+        "docs/notation-registry.yaml",
+        "experiments/experiment-status.yaml",
+        "references/source-status.yaml",
+        "companion/DYNAMIC-ORTHABILITY-ARGUMENT-MAP.yaml",
+    ):
+        path = os.path.join(root, rel)
+        if os.path.exists(path):
+            collect(yaml.safe_load(io.open(path, encoding="utf-8")))
+    schema_path = os.path.join(root, "schemas/handoff.schema.json")
+    if os.path.exists(schema_path):
+        collect(json.load(io.open(schema_path, encoding="utf-8")))
+    return ids
+
+
+def validate_inventory(root=ROOT):
+    root = os.fspath(root)
+    inventory_path = os.path.join(root, "docs/math-source-inventory.yaml")
+    migration_path = os.path.join(root, "docs/math-migration-status.yaml")
+    try:
+        inventory = yaml.safe_load(io.open(inventory_path, encoding="utf-8"))
+        migration = yaml.safe_load(io.open(migration_path, encoding="utf-8"))
+    except (OSError, yaml.YAMLError) as exc:
+        return ["inventory load: %s" % exc]
+    source_texts = {}
+    if isinstance(inventory, dict):
+        for source in inventory.get("sources", []):
+            if not isinstance(source, dict) or not isinstance(source.get("file"), str):
+                continue
+            path = os.path.join(root, source["file"])
+            if os.path.exists(path):
+                source_texts[source["file"]] = io.open(path, encoding="utf-8").read()
+    issues = validate_inventory_data(inventory, source_texts, _registry_ids(root))
+    issues.extend(validate_migration_data(migration, inventory))
+    return issues
 
 
 def check(name, ok, detail=""):
@@ -185,52 +531,42 @@ def main():
     check("every math source span translates through the strict subset",
           not bad_translate, "; ".join(bad_translate[:5]))
 
-    # 4b. (R7C, audit B5) no math-FORMULA or notdef-producing (U+20D7) span may sit
-    #     in a backtick code span UNLESS it is a recorded, pending migration target
-    #     in docs/math-source-inventory.yaml. This is the check that catches a
-    #     formula left in code (tamper probe 1), which the corpus's own pending
-    #     targets are allowlisted against by text.
-    inv = yaml.safe_load(read("docs/math-source-inventory.yaml"))
-    allow = set()
-    for d in inv.get("documents", []):
-        for t in d.get("targets", []):
-            allow.add(t["text"])
-    FORMULA = re.compile(r"[=∈⊆⊂⟺⇔→↦∧∨≼≠≤≥∀∃]|\{[^}]*\|[^}]*\}|⃗")
-    INLINE_CODE = re.compile(r"`([^`]+)`")
-    FENCE_STRIP = re.compile(r"```.*?```", re.S)  # remove ``` blocks so their backticks
-    stray = []                                    # do not mis-pair the inline scanner
-    for r in ("manuscript", "theory", "companion", "applications", "docs"):
-        base = os.path.join(ROOT, r)
-        if not os.path.isdir(base):
-            continue
-        for dp, dirs, fns in os.walk(base):
-            dirs[:] = [d for d in dirs if d not in (".git", "__pycache__", "project-closure", "archive")]
-            for fn in fns:
-                if not fn.endswith(".md"):
-                    continue
-                rel = os.path.relpath(os.path.join(dp, fn), ROOT).replace("\\", "/")
-                if rel.endswith("math-source-inventory.yaml"):
-                    continue
-                body = FENCE_STRIP.sub("", io.open(os.path.join(dp, fn), encoding="utf-8").read())
-                for m in INLINE_CODE.finditer(body):
-                    span = m.group(1)
-                    if FORMULA.search(span) and span not in allow and not is_machine_assignment(span):
-                        stray.append("%s: `%s`" % (rel, span[:40]))
-    check("no un-inventoried math-formula/notdef span left in a code span (B5/probe-1)",
-          not stray, "; ".join(stray[:5]))
-
     # 5. migration manifest covers every build source doc
     mig = yaml.safe_load(read("docs/math-migration-status.yaml"))
     listed = set()
     for d in mig["documents"]:
         for s in d.get("sources", []):
             listed.add(s)
+    profile = yaml.safe_load(read("docs/publication-profile.yaml"))
+    profile_sources = {
+        source
+        for artifact in profile.get("artifacts", [])
+        for source in artifact.get("sources", [])
+    }
     # derive build sources from build_pdfs.py DOCS
     bp = read("scripts/build_pdfs.py")
     build_sources = set(re.findall(r'"([a-z0-9_\-]+/[A-Za-z0-9._\-/]+\.md)"', bp))
-    uncovered = sorted(build_sources - listed)
-    check("math-migration-status lists every build source document",
-          not uncovered, "uncovered: %s" % uncovered)
+    build_source_issues = validate_build_source_parity(
+        build_sources, profile_sources
+    )
+    check("math-migration-status has exact build-source parity",
+          not build_source_issues, "; ".join(build_source_issues))
+    migration_profile_issues = validate_build_source_parity(
+        listed, profile_sources
+    )
+    check("math-migration-status has exact publication-profile source parity",
+          not migration_profile_issues, "; ".join(migration_profile_issues))
+
+    # 6. Task 11 replaces the global text allowlist with exact, bidirectional
+    #    file/locus/occurrence ownership for all seven publication sources.
+    inventory_issues = validate_inventory(ROOT)
+    check("publication inline-code inventory has exact bidirectional parity",
+          not inventory_issues, "; ".join(inventory_issues[:5]))
+
+    # 7. The existing CI entry point also owns the deferred publication profile.
+    profile_issues = validate_profile(ROOT)
+    check("publication profile is schema-valid and preserves deferred ownership",
+          not profile_issues, "; ".join(profile_issues[:5]))
 
     print("TOTAL: %d failures" % len(FAILS))
     sys.exit(1 if FAILS else 0)

@@ -1,949 +1,6199 @@
-schema: orthemology-math-source-inventory-v1
-note: 'R7C, Decision 0023/H2. Every FORMULA-bearing INLINE backtick span (fenced code stripped) in the publication+application corpus. Pending migration to $...$; validate_math_source.py FAILS on any formula-in-backtick not recorded here (catches
-  tamper probe 1). Tool: scripts/unicode_math_to_latex.py (all targets translate+compile zero-notdef). in_build_pipeline marks the five PDF source docs.'
+schema: orthemology-math-source-inventory-v2
+classes:
+- literal-code
+- semantic-registry-id
+- mathematics
+classification_method:
+  identity: file plus one-based line and column plus source occurrence ordinal
+  extractor: single-backtick inline spans after fenced-code masking; multiline spans excluded
+  review: per-locus contextual classification; text equality is evidence but never the identity
+  manual_context_review_occurrences: 223
+  method_counts:
+    argument-map-id: 14
+    authoritative-registry-id: 38
+    command-path-field-or-lexical-literal: 65
+    contextual-symbol-or-operator: 31
+    explicit-mathematical-signal: 414
+    gallery-command-or-path: 13
+    gallery-registry-column: 33
+    manual-context-review: 223
+    source-id-or-path: 10
+    source-path: 24
+    source-registry-id: 8
+    symbolic-predicate: 1
+    verdict-registry-id: 1
 totals:
-  formula_spans: 208
-documents:
+  sources: 7
+  occurrences: 875
+  literal-code: 112
+  semantic-registry-id: 94
+  mathematics: 669
+sources:
 - file: manuscript/orthemma-ortheme-systems-revised-draft.md
-  in_build_pipeline: true
-  formula_spans: 53
-  targets:
-  - text: Inst_A ⊆ M × O
-    class: math
-    replacement: $Inst_A \subseteq M \times O$
-    translates: true
-  - text: (m, o) ∈ Inst_A
-    class: math
-    replacement: $(m, o) \in Inst_A$
-    translates: true
-  - text: T = task(A)
-    class: math
-    replacement: $T = task(A)$
-    translates: true
-  - text: task(A) = T
-    class: math
-    replacement: $task(A) = T$
-    translates: true
-  - text: O*_T(m) := O*(m; A)
-    class: math
-    replacement: $O^*_T(m) := O^*(m; A)$
-    translates: true
-  - text: M_A ⊆ 𝓜
-    class: math
-    replacement: $M_A \subseteq \mathcal{M}$
-    translates: true
-  - text: O_A ⊆ 𝓞
-    class: math
-    replacement: $O_A \subseteq \mathcal{O}$
-    translates: true
-  - text: T = task(A)
-    class: math
-    replacement: $T = task(A)$
-    translates: true
-  - text: x = Ω(m)
-    class: math
-    replacement: $x = \Omega(m)$
-    translates: true
-  - text: κ = id(m)
-    class: math
-    replacement: $\kappa = id(m)$
-    translates: true
-  - text: v = ver(m)
-    class: math
-    replacement: $v = ver(m)$
-    translates: true
-  - text: m′ = succ(m, a)
-    class: math
-    replacement: $m' = succ(m, a)$
-    translates: true
-  - text: task(A) = T
-    class: math
-    replacement: $task(A) = T$
-    translates: true
-  - text: Rep_A^{i=j}
-    class: math
-    replacement: $Rep_A^{i=j}$
-    translates: true
-  - text: Ω(m_1) = Ω(m_2)
-    class: math
-    replacement: $\Omega(m_1) = \Omega(m_2)$
-    translates: true
-  - text: O*(m_1; A) ≠ O*(m_2; A)
-    class: math
-    replacement: $O^*(m_1; A) ≠ O^*(m_2; A)$
-    translates: true
-  - text: C^id(m) ⊆ M
-    class: math
-    replacement: $C^{id}(m) \subseteq M$
-    translates: true
-  - text: Π_A ⊆ 𝒫(O_A)
-    class: math
-    replacement: $\Pi_A \subseteq \mathcal{P}(O_A)$
-    translates: true
-  - text: Π_A ⊆ Π_A^∂
-    class: math
-    replacement: $\Pi_A \subseteq \Pi_A^\partial$
-    translates: true
-  - text: O*(m; A) ∈ Π_A
-    class: math
-    replacement: $O^*(m; A) \in \Pi_A$
-    translates: true
-  - text: Ĉ_{A,α,t}(m) ⊆ Π_A
-    class: math
-    replacement: $\hat{C}_{A,\alpha,t}(m) \subseteq \Pi_A$
-    translates: true
-  - text: O*(m; A) ∈ Ĉ
-    class: math
-    replacement: $O^*(m; A) \in \hat{C}$
-    translates: true
-  - text: p̂_{A,α,t}(m) ∈ Π_A^∂
-    class: combining
-    replacement: $\hat{p}_{A,\alpha,t}(m) \in \Pi_A^\partial$
-    translates: true
-  - text: Ĉ ⊆ completions(p̂)
-    class: combining
-    replacement: $\hat{C} \subseteq completions(\hat{p})$
-    translates: true
-  - text: Ĉ = {p_1, p_2}
-    class: math
-    replacement: $\hat{C} = {p_1, p_2}$
-    translates: true
-  - text: prov(μ) = ⟨authority, warrant, scope, ver(μ)⟩
-    class: math
-    replacement: $prov(\mu) = \langle authority, warrant, scope, ver(\mu)\rangle$
-    translates: true
-  - text: g ∈ {O, I, E, D, R, V, W}
-    class: math
-    replacement: $g \in {O, I, E, D, R, V, W}$
-    translates: true
-  - text: μ⃗ = ({μ_1, …, μ_k}, ≼)
-    class: combining
-    replacement: $\vec{\mu} = ({\mu_1, \dots, \mu_k}, \preceq)$
-    translates: true
-  - text: ≼
-    class: math
-    replacement: $\preceq$
-    translates: true
-  - text: ≼
-    class: math
-    replacement: $\preceq$
-    translates: true
-  - text: ≼
-    class: math
-    replacement: $\preceq$
-    translates: true
-  - text: T = task(A)
-    class: math
-    replacement: $T = task(A)$
-    translates: true
-  - text: V2b-T_q → V1_q
-    class: math
-    replacement: $V2b-T_q \to V1_q$
-    translates: true
-  - text: CorePath = {V2a, V2b-P, V2c, V3a, V3b, V3c, V3d, V3e, V4a, V5, V6}
-    class: math
-    replacement: $CorePath = {V2a, V2b-P, V2c, V3a, V3b, V3c, V3d, V3e, V4a, V5, V6}$
-    translates: true
-  - text: V2b-T_q → V1_q
-    class: math
-    replacement: $V2b-T_q \to V1_q$
-    translates: true
-  - text: AdequatePathError(e) := ¬V1(e) ∧ PathwayAdequate(e)
-    class: math
-    replacement: $AdequatePathError(e) := \neg V1(e) \wedge PathwayAdequate(e)$
-    translates: true
-  - text: JustifiedMiss(e) := AdequatePathError(e)
-    class: math
-    replacement: $JustifiedMiss(e) := AdequatePathError(e)$
-    translates: true
-  - text: Γ_E = (E, ⇝)
-    class: math
-    replacement: $\Gamma_E = (E, \rightsquigarrow)$
-    translates: true
-  - text: e_Γ = comp(Γ_E)
-    class: math
-    replacement: $e_\Gamma = comp(\Gamma_E)$
-    translates: true
-  - text: T = task(A)
-    class: math
-    replacement: $T = task(A)$
-    translates: true
-  - text: T_α = task(A_α)
-    class: math
-    replacement: $T_\alpha = task(A_\alpha)$
-    translates: true
-  - text: x_α = Ω_α(m)
-    class: math
-    replacement: $x_\alpha = \Omega_\alpha(m)$
-    translates: true
-  - text: T_α = task(A_α)
-    class: math
-    replacement: $T_\alpha = task(A_\alpha)$
-    translates: true
-  - text: 𝒢_{α,A_α} ⊆ Π_{A_α}
-    class: math
-    replacement: $\mathcal{G}_{\alpha,A_\alpha} \subseteq \Pi_{A_\alpha}$
-    translates: true
-  - text: T_α = task(A_α)
-    class: math
-    replacement: $T_\alpha = task(A_\alpha)$
-    translates: true
-  - text: T_β = task(A_β)
-    class: math
-    replacement: $T_\beta = task(A_\beta)$
-    translates: true
-  - text: 𝒢_{α,A_α} ≠ 𝒢_{β,A_β}
-    class: math
-    replacement: $\mathcal{G}_{\alpha,A_\alpha} ≠ \mathcal{G}_{\beta,A_\beta}$
-    translates: true
-  - text: 𝒢_{α,A_α} ⊆ Π_{A_α}
-    class: math
-    replacement: $\mathcal{G}_{\alpha,A_\alpha} \subseteq \Pi_{A_\alpha}$
-    translates: true
-  - text: '∃ m′ ∈ Reach(m): O*(m′; A_1) ∈ 𝒢_1 ∧ O*(m′; A_2) ∈ 𝒢_2'
-    class: math
-    replacement: '$\exists m'' \in Reach(m): O^*(m''; A_1) \in \mathcal{G}_1 \wedge O^*(m''; A_2) \in \mathcal{G}_2$'
-    translates: true
-  - text: 𝒢_{α_1,A} = 𝒢_{α_2,A}
-    class: math
-    replacement: $\mathcal{G}_{\alpha_1,A} = \mathcal{G}_{\alpha_2,A}$
-    translates: true
-  - text: (m, o) ∈ Inst_A
-    class: math
-    replacement: $(m, o) \in Inst_A$
-    translates: true
-  - text: T = task(A)
-    class: math
-    replacement: $T = task(A)$
-    translates: true
-  - text: task(A) = T
-    class: math
-    replacement: $task(A) = T$
-    translates: true
+  occurrence_count: 365
+  classification_counts:
+    literal-code: 40
+    semantic-registry-id: 27
+    mathematics: 298
 - file: theory/orthemic-core-formalization.md
-  in_build_pipeline: true
-  formula_spans: 86
-  targets:
-  - text: M_A ⊆ 𝓜
-    class: math
-    replacement: $M_A \subseteq \mathcal{M}$
-    translates: true
-  - text: O_A ⊆ 𝓞
-    class: math
-    replacement: $O_A \subseteq \mathcal{O}$
-    translates: true
-  - text: Inst_A ⊆ M_A × O_A
-    class: math
-    replacement: $Inst_A \subseteq M_A \times O_A$
-    translates: true
-  - text: T = task(A)
-    class: math
-    replacement: $T = task(A)$
-    translates: true
-  - text: p̂_t(m) ∈ Π_A^∂
-    class: combining
-    replacement: $\hat{p}_t(m) \in \Pi_A^\partial$
-    translates: true
-  - text: task(A) = T
-    class: math
-    replacement: $task(A) = T$
-    translates: true
-  - text: ι_n(e) ∈ M^(n+1)
-    class: math
-    replacement: $\iota_n(e) \in M^(n+1)$
-    translates: true
-  - text: e_μ(m) = o-hat
-    class: math
-    replacement: $e_\mu(m) = o-hat$
-    translates: true
-  - text: o-hat = o*
-    class: math
-    replacement: $o-hat = o^*$
-    translates: true
-  - text: κ = id(m)
-    class: math
-    replacement: $\kappa = id(m)$
-    translates: true
-  - text: v = ver(m)
-    class: math
-    replacement: $v = ver(m)$
-    translates: true
-  - text: x = Ω_e(m)
-    class: math
-    replacement: $x = \Omega_e(m)$
-    translates: true
-  - text: T = task(A)
-    class: math
-    replacement: $T = task(A)$
-    translates: true
-  - text: μ⃗ = (μ₁,…,μ_k; ≼)
-    class: combining
-    replacement: $\vec{\mu} = (\mu_1,\dots,\mu_k; \preceq)$
-    translates: true
-  - text: ≼
-    class: math
-    replacement: $\preceq$
-    translates: true
-  - text: MetaTok(e) = {μ̄_1,…,μ̄_j}
-    class: combining
-    replacement: $MetaTok(e) = {\bar{\mu}_1,\dots,\bar{\mu}_j}$
-    translates: true
-  - text: ApplyEvent(μ̄, e) = ⟨μ̄, Trace_e\|_μ̄⟩
-    class: combining
-    replacement: $ApplyEvent(\bar{\mu}, e) = \langle\bar{\mu}, Trace_e \|_\bar{\mu}\rangle$
-    translates: true
-  - text: μ⃗
-    class: combining
-    replacement: $\vec{\mu}$
-    translates: true
-  - text: C⃗
-    class: combining
-    replacement: $\vec{C}$
-    translates: true
-  - text: C^id ⊆ M
-    class: math
-    replacement: $C^{id} \subseteq M$
-    translates: true
-  - text: C^profile ⊆ Π_A
-    class: math
-    replacement: $C^{profile} \subseteq \Pi_A$
-    translates: true
-  - text: C^cause ⊆ 𝒦_A
-    class: math
-    replacement: $C^{cause} \subseteq \mathcal{K}_A$
-    translates: true
-  - text: C^route ⊆ ℛ_A
-    class: math
-    replacement: $C^{route} \subseteq \mathcal{R}_A$
-    translates: true
-  - text: C^warrant ⊆ 𝒲_A
-    class: math
-    replacement: $C^{warrant} \subseteq \mathcal{W}_A$
-    translates: true
-  - text: p̂ ∈ Π_A^∂
-    class: combining
-    replacement: $\hat{p} \in \Pi_A^\partial$
-    translates: true
-  - text: Ĉ ⊆ Π_A
-    class: math
-    replacement: $\hat{C} \subseteq \Pi_A$
-    translates: true
-  - text: Ô ⊆ O
-    class: math
-    replacement: $\hat{O} \subseteq O$
-    translates: true
-  - text: Succ ⊆ M
-    class: math
-    replacement: $Succ \subseteq M$
-    translates: true
-  - text: m′ = succ(m,a)
-    class: math
-    replacement: $m' = succ(m,a)$
-    translates: true
-  - text: Π_A ⊆ 𝒫(O_A)
-    class: math
-    replacement: $\Pi_A \subseteq \mathcal{P}(O_A)$
-    translates: true
-  - text: Π_A ⊆ Π_A^∂
-    class: math
-    replacement: $\Pi_A \subseteq \Pi_A^\partial$
-    translates: true
-  - text: a = ⊥
-    class: math
-    replacement: $a = \bot$
-    translates: true
-  - text: Succ = ∅
-    class: math
-    replacement: $Succ = \emptyset$
-    translates: true
-  - text: r = ⊥
-    class: math
-    replacement: $r = \bot$
-    translates: true
-  - text: out(e) = ⟨p̂, r, estatus, 𝒬, δ, a⟩
-    class: combining
-    replacement: $out(e) = \langle \hat{p}, r, estatus, \mathcal{Q}, \delta, a \rangle$
-    translates: true
-  - text: μ⃗
-    class: combining
-    replacement: $\vec{\mu}$
-    translates: true
-  - text: o-hat ∈ O*(m; A(e))
-    class: math
-    replacement: $o-hat \in O^*(m; A(e))$
-    translates: true
-  - text: μ = ⟨g, S_μ, select_μ, prov(μ), ver(μ)⟩
-    class: math
-    replacement: $\mu = \langle g, S_\mu, select_\mu, prov(\mu), ver(\mu)\rangle$
-    translates: true
-  - text: g ∈ {O, I, E, D, R, V, W}
-    class: math
-    replacement: $g \in {O, I, E, D, R, V, W}$
-    translates: true
-  - text: ≼
-    class: math
-    replacement: $\preceq$
-    translates: true
-  - text: μ⃗(e) = ({μ₁,…,μ_k}, ≼)
-    class: combining
-    replacement: $\vec{\mu}(e) = ({\mu_1,\dots,\mu_k}, \preceq)$
-    translates: true
-  - text: ≼
-    class: math
-    replacement: $\preceq$
-    translates: true
-  - text: ≼
-    class: math
-    replacement: $\preceq$
-    translates: true
-  - text: "prov(μ) = ⟨authority, warrant,\n  scope, ver(μ)⟩"
-    class: math
-    replacement: "$prov(\\mu) = \\langle authority, warrant,\n  scope, ver(\\mu)\\rangle$"
-    translates: true
-  - text: 'ρ : (μ, lesson) ↦ μ′'
-    class: math
-    replacement: '$\rho : (\mu, lesson) \mapsto \mu''$'
-    translates: true
-  - text: affected(μ, μ′) →
-    class: math
-    replacement: $affected(\mu, \mu') \to$
-    translates: true
-  - text: μ⃗
-    class: combining
-    replacement: $\vec{\mu}$
-    translates: true
-  - text: "RelSpec_q(e) = ⟨declared reference class; relevant case/risk stratum;\n  reliability metric; threshold or tolerance; perturbation or comparison\n  family where applicable; evaluation protocol; evidence used to\n  establish reliability;\
-      \ version and validity conditions⟩"
-    class: code
-    replacement: "$RelSpec_q(e) = \\langle declared reference class; relevant case/risk stratum;\n  reliability metric; threshold or tolerance; perturbation or comparison\n  family where applicable; evaluation protocol; evidence used to\n  establish\
-      \ reliability; version and validity conditions \\rangle$"
-    translates: true
-  - text: V2b-T_q(e) → V1_q(e)
-    class: math
-    replacement: $V2b-T_q(e) \to V1_q(e)$
-    translates: true
-  - text: adeq(μ⃗, e)
-    class: combining
-    replacement: $adeq(\vec{\mu}, e)$
-    translates: true
-  - text: V3c(e) ⟺ ∧_{μ̄ ∈ MetaTok(e)} TokenAdequate(μ̄, e)
-    class: combining
-    replacement: $V3c(e) \Leftrightarrow \wedge_{\bar{\mu} \in MetaTok(e)} TokenAdequate(\bar{\mu}, e)$
-    translates: true
-  - text: "TokenAdequate(μ̄, e) ⟺ MetaInst(μ̄, μ) ∧ Compatible(μ̄, A(e)) ∧\n  Anchored(μ̄, κ(e), v(e)) ∧ ScopeCorrect(μ̄, \U0001D4AC(e)) ∧ Current(μ̄, t(e)) ∧\n  Provenanced(μ̄) ∧ AuthorizedBinding(μ̄)"
-    class: combining
-    replacement: "$TokenAdequate(\\bar{\\mu}, e) \\Leftrightarrow MetaInst(\\bar{\\mu}, \\mu) \\wedge Compatible(\\bar{\\mu}, A(e)) \\wedge\n  Anchored(\\bar{\\mu}, \\kappa(e), v(e)) \\wedge ScopeCorrect(\\bar{\\mu}, \\mathcal{Q}(e)) \\wedge\
-      \ Current(\\bar{\\mu}, t(e)) \\wedge\n  Provenanced(\\bar{\\mu}) \\wedge AuthorizedBinding(\\bar{\\mu})$"
-    translates: true
-  - text: MetaTok(e) = ∅ ⟹ V3c ∉ ReqPath(e)
-    class: math
-    replacement: $MetaTok(e) = \emptyset \Rightarrow V3c \in̸ ReqPath(e)$
-    translates: true
-  - text: "PerturbSpec(e) = ⟨varied fields; invariant fields; generator or\n  enumeration; size or measure; tolerance⟩"
-    class: math
-    replacement: "$PerturbSpec(e) = \\langle varied fields; invariant fields; generator or\n  enumeration; size or measure; tolerance \\rangle$"
-    translates: true
-  - text: μ⃗
-    class: combining
-    replacement: $\vec{\mu}$
-    translates: true
-  - text: P ⊆ E×E
-    class: math
-    replacement: $P \subseteq E \times E$
-    translates: true
-  - text: 'N(e) = {e′ : (e, e′) ∈ P}'
-    class: math
-    replacement: '$N(e) = {e'' : (e, e'') \in P}$'
-    translates: true
-  - text: MetaTok(e) ≠ ∅
-    class: math
-    replacement: $MetaTok(e) ≠ \emptyset$
-    translates: true
-  - text: MetaTok(e) = ∅ ⟹ V3c ∉ ReqPath(e)
-    class: math
-    replacement: $MetaTok(e) = \emptyset \Rightarrow V3c \in̸ ReqPath(e)$
-    translates: true
-  - text: V2b-T_q(e) → V1_q(e)
-    class: math
-    replacement: $V2b-T_q(e) \to V1_q(e)$
-    translates: true
-  - text: V2b-P(e) → V1(e)
-    class: math
-    replacement: $V2b-P(e) \to V1(e)$
-    translates: true
-  - text: V3e(e) → V1(e)
-    class: math
-    replacement: $V3e(e) \to V1(e)$
-    translates: true
-  - text: PathwayAdequate(e) → V1(e)
-    class: math
-    replacement: $PathwayAdequate(e) \to V1(e)$
-    translates: true
-  - text: V1(e) → PathwayAdequate(e)
-    class: math
-    replacement: $V1(e) \to PathwayAdequate(e)$
-    translates: true
-  - text: AdequatePathError(e) := ¬V1(e) ∧ PathwayAdequate(e)
-    class: math
-    replacement: $AdequatePathError(e) := \neg V1(e) \wedge PathwayAdequate(e)$
-    translates: true
-  - text: JustifiedMiss(e) := AdequatePathError(e)
-    class: math
-    replacement: $JustifiedMiss(e) := AdequatePathError(e)$
-    translates: true
-  - text: Γ_E = (E, ⇝)
-    class: math
-    replacement: $\Gamma_E = (E, \rightsquigarrow)$
-    translates: true
-  - text: μ⃗ᵢ
-    class: combining
-    replacement: $\vec{\mu}_i$
-    translates: true
-  - text: e_Γ = comp(Γ_E)
-    class: math
-    replacement: $e_\Gamma = comp(\Gamma_E)$
-    translates: true
-  - text: T = task(A)
-    class: math
-    replacement: $T = task(A)$
-    translates: true
-  - text: μ⃗_{e_Γ}
-    class: combining
-    replacement: $\vec{\mu}_{e_\Gamma}$
-    translates: true
-  - text: ι_n(eᵢ) ∈ M^(n+1)
-    class: math
-    replacement: $\iota_n(e_i) \in M^(n+1)$
-    translates: true
-  - text: T_α = task(A_α)
-    class: math
-    replacement: $T_\alpha = task(A_\alpha)$
-    translates: true
-  - text: x_α = Ω_α(m)
-    class: math
-    replacement: $x_\alpha = \Omega_\alpha(m)$
-    translates: true
-  - text: Ω_α(m) ≠ Ω_β(m)
-    class: math
-    replacement: $\Omega_\alpha(m) ≠ \Omega_\beta(m)$
-    translates: true
-  - text: 𝒢_{α,A_α} ⊆ Π_{A_α}
-    class: math
-    replacement: $\mathcal{G}_{\alpha,A_\alpha} \subseteq \Pi_{A_\alpha}$
-    translates: true
-  - text: φ(α→β)
-    class: math
-    replacement: $\phi(\alpha \to \beta)$
-    translates: true
-  - text: 𝒢_{β,A_β} = φ(𝒢_{α,A_α})
-    class: math
-    replacement: $\mathcal{G}_{\beta,A_\beta} = \phi(\mathcal{G}_{\alpha,A_\alpha})$
-    translates: true
-  - text: 𝒢_α ∩ 𝒢_β = ∅
-    class: math
-    replacement: $\mathcal{G}_\alpha \cap \mathcal{G}_\beta = \emptyset$
-    translates: true
-  - text: 𝒢_α ⊆ Π_{A_α}
-    class: math
-    replacement: $\mathcal{G}_\alpha \subseteq \Pi_{A_\alpha}$
-    translates: true
-  - text: 𝒢_β ⊆ Π_{A_β}
-    class: math
-    replacement: $\mathcal{G}_\beta \subseteq \Pi_{A_\beta}$
-    translates: true
-  - text: A_α = A_β
-    class: math
-    replacement: $A_\alpha = A_\beta$
-    translates: true
-  - text: 𝒢_α = 𝒢_β
-    class: math
-    replacement: $\mathcal{G}_\alpha = \mathcal{G}_\beta$
-    translates: true
-  - text: φ(α→β)
-    class: math
-    replacement: $\phi(\alpha \to \beta)$
-    translates: true
-  - text: x_α = Ω_α(m)
-    class: math
-    replacement: $x_\alpha = \Omega_\alpha(m)$
-    translates: true
-  - text: ProfileOf_A ⊆ Z_A × Π_A
-    class: math
-    replacement: $ProfileOf_A \subseteq Z_A \times \Pi_A$
-    translates: true
+  occurrence_count: 375
+  classification_counts:
+    literal-code: 25
+    semantic-registry-id: 11
+    mathematics: 339
 - file: theory/orthemic-multi-actor-conflict-note.md
-  in_build_pipeline: true
-  formula_spans: 2
-  targets:
-  - text: T_α = task(A_α)
-    class: math
-    replacement: $T_\alpha = task(A_\alpha)$
-    translates: true
-  - text: 𝒢_{α,A_α} ⊆ Π_{A_α}
-    class: math
-    replacement: $\mathcal{G}_{\alpha,A_\alpha} \subseteq \Pi_{A_\alpha}$
-    translates: true
-- file: companion/CONCRETE-AND-SOUND-REASON.md
-  in_build_pipeline: false
-  formula_spans: 2
-  targets:
-  - text: ReqReason_q(e) ⊆ ReqPath(e)
-    class: math
-    replacement: $ReqReason_q(e) \subseteq ReqPath(e)$
-    translates: true
-  - text: StrictlySoundReasoning_q(e) := ReasoningPathAdequate_q(e) ∧ TOKEN_TRUTH_LINKED_q(e)
-    class: math
-    replacement: $StrictlySoundReasoning_q(e) := ReasoningPathAdequate_q(e) \wedge TOKEN_{TRUTH}_{LINKED}_q(e)$
-    translates: true
+  occurrence_count: 14
+  classification_counts:
+    literal-code: 2
+    semantic-registry-id: 0
+    mathematics: 12
 - file: companion/orthability-and-the-ground-of-intelligibility.md
-  in_build_pipeline: true
-  formula_spans: 2
-  targets:
-  - text: StrictlySoundReasoning_q(e) := ReasoningPathAdequate_q(e) ∧ TOKEN_TRUTH_LINKED_q(e)
-    class: math
-    replacement: $StrictlySoundReasoning_q(e) := ReasoningPathAdequate_q(e) \wedge TOKEN_{TRUTH}_{LINKED}_q(e)$
-    translates: true
-  - text: ReqReason_q(e) ⊆ ReqPath(e)
-    class: math
-    replacement: $ReqReason_q(e) \subseteq ReqPath(e)$
-    translates: true
-- file: companion/orthemic-companion-paper-outline.md
-  in_build_pipeline: false
-  formula_spans: 1
-  targets:
-  - text: F = ⟨X, Y, R, A, N, E, Ag, ⊳⟩
-    class: math
-    replacement: $F = \langle X, Y, R, A, N, E, Ag, ⊳\rangle$
-    translates: true
-- file: companion/orthemic-modal-metaphysical-assessment.md
-  in_build_pipeline: false
-  formula_spans: 4
-  targets:
-  - text: 'N_T: X → P(X)'
-    class: math
-    replacement: '$N_T: X \to P(X)$'
-    translates: true
-  - text: O(x,r)=y
-    class: math
-    replacement: $O(x,r)=y$
-    translates: true
-  - text: x′ ∈ N(x)
-    class: math
-    replacement: $x' \in N(x)$
-    translates: true
-  - text: 'N: X →
-
-      P(P(X))'
-    class: math
-    replacement: '$N: X \to
-
-      P(P(X))$'
-    translates: true
-- file: docs/architecture-overview.md
-  in_build_pipeline: false
-  formula_spans: 4
-  targets:
-  - text: Inst_A ⊆ M × O
-    class: math
-    replacement: $Inst_A \subseteq M \times O$
-    translates: true
-  - text: x = Ω(m)
-    class: math
-    replacement: $x = \Omega(m)$
-    translates: true
-  - text: μ = ⟨g, S_μ, select_μ, prov(μ), ver(μ)⟩
-    class: math
-    replacement: $\mu = \langle g, S_\mu, select_\mu, prov(\mu), ver(\mu)\rangle$
-    translates: true
-  - text: e = ⟨id; m, κ, v; x, H; α, w, A, T, t; μ⃗, MetaTok, π; C⃗, p̂; r; estatus; 𝒬; δ; hand_in, hand_out; a, Succ⟩
-    class: combining
-    replacement: $e = \langle id; m, \kappa, v; x, H; \alpha, w, A, T, t; \vec{\mu}, MetaTok, \pi; \vec{C}, \hat{p}; r; estatus; \mathcal{Q}; \delta; hand_{in}, hand_{out}; a, Succ \rangle$
-    translates: true
+  occurrence_count: 35
+  classification_counts:
+    literal-code: 15
+    semantic-registry-id: 1
+    mathematics: 19
+- file: companion/orthability-divine-attributes-and-speech-athari.md
+  occurrence_count: 16
+  classification_counts:
+    literal-code: 7
+    semantic-registry-id: 8
+    mathematics: 1
+- file: companion/dynamic-orthing-noetic-learning-and-orthability.md
+  occurrence_count: 24
+  classification_counts:
+    literal-code: 10
+    semantic-registry-id: 14
+    mathematics: 0
 - file: docs/notation-gallery.md
-  in_build_pipeline: false
-  formula_spans: 1
-  targets:
-  - text: T = task(A)
-    class: math
-    replacement: $T = task(A)$
-    translates: true
-- file: docs/decisions/0001-analysis-relative-ground-truth.md
-  in_build_pipeline: false
-  formula_spans: 2
-  targets:
-  - text: Inst_A ⊆ M × O
-    class: math
-    replacement: $Inst_A \subseteq M \times O$
-    translates: true
-  - text: task(A) = T
-    class: math
-    replacement: $task(A) = T$
-    translates: true
-- file: docs/decisions/0002-metaorthemma-configuration-token.md
-  in_build_pipeline: false
-  formula_spans: 1
-  targets:
-  - text: ApplyEvent(μ̄, e) = ⟨μ̄, Trace_e|_μ̄⟩
-    class: combining
-    replacement: $ApplyEvent(\bar{\mu}, e) = \langle\bar{\mu}, Trace_e|_\bar{\mu}\rangle$
-    translates: true
-- file: docs/decisions/0003-result-free-pathway-adequacy.md
-  in_build_pipeline: false
-  formula_spans: 2
-  targets:
-  - text: V2b^tok_q → V1_q
-    class: math
-    replacement: $V2b^{tok}_q \to V1_q$
-    translates: true
-  - text: V2b^tok_q → V1_q
-    class: math
-    replacement: $V2b^{tok}_q \to V1_q$
-    translates: true
-- file: docs/decisions/0004-verdict-registry-normalization.md
-  in_build_pipeline: false
-  formula_spans: 2
-  targets:
-  - text: CorePath = {V2a, V2b-P, V2c, V3a, V3b, V3c, V3d, V3e, V4a, V5, V6}
-    class: math
-    replacement: $CorePath = {V2a, V2b-P, V2c, V3a, V3b, V3c, V3d, V3e, V4a, V5, V6}$
-    translates: true
-  - text: V2b-T_q → V1_q
-    class: math
-    replacement: $V2b-T_q \to V1_q$
-    translates: true
-- file: docs/decisions/0005-symbol-table-normalization.md
-  in_build_pipeline: false
-  formula_spans: 6
-  targets:
-  - text: M_A ⊆ 𝓜
-    class: math
-    replacement: $M_A \subseteq \mathcal{M}$
-    translates: true
-  - text: O_A ⊆ 𝓞
-    class: math
-    replacement: $O_A \subseteq \mathcal{O}$
-    translates: true
-  - text: Inst_A ⊆ M_A × O_A
-    class: math
-    replacement: $Inst_A \subseteq M_A \times O_A$
-    translates: true
-  - text: p̂_{A,α,t}(m) ∈ Π_A^∂
-    class: combining
-    replacement: $\hat{p}_{A,\alpha,t}(m) \in \Pi_A^\partial$
-    translates: true
-  - text: Γ_E = (E, ⇝)
-    class: math
-    replacement: $\Gamma_E = (E, \rightsquigarrow)$
-    translates: true
-  - text: e_Γ = comp(Γ_E)
-    class: math
-    replacement: $e_\Gamma = comp(\Gamma_E)$
-    translates: true
-- file: docs/decisions/0007-profile-space-definition.md
-  in_build_pipeline: false
-  formula_spans: 4
-  targets:
-  - text: O*(m; A) ∈ Π_A
-    class: math
-    replacement: $O^*(m; A) \in \Pi_A$
-    translates: true
-  - text: Ĉ_{A,α,t}(m) ⊆ Π_A
-    class: math
-    replacement: $\hat{C}_{A,\alpha,t}(m) \subseteq \Pi_A$
-    translates: true
-  - text: p̂_{A,α,t}(m) ∈ Π_A^∂
-    class: combining
-    replacement: $\hat{p}_{A,\alpha,t}(m) \in \Pi_A^\partial$
-    translates: true
-  - text: p̂ ∈ Π_A^∂
-    class: combining
-    replacement: $\hat{p} \in \Pi_A^\partial$
-    translates: true
-- file: docs/decisions/0009-type-token-soundness-and-concrete-reason.md
-  in_build_pipeline: false
-  formula_spans: 5
-  targets:
-  - text: StrictlySoundReasoning_q(e) := PathwayAdequate(e) ∧ TOKEN_TRUTH_LINKED_q(e)
-    class: math
-    replacement: $StrictlySoundReasoning_q(e) := PathwayAdequate(e) \wedge TOKEN_{TRUTH}_{LINKED}_q(e)$
-    translates: true
-  - text: StrictlySoundReasoning_q(e) := ReasoningPathAdequate_q(e) ∧ TOKEN_TRUTH_LINKED_q(e)
-    class: math
-    replacement: $StrictlySoundReasoning_q(e) := ReasoningPathAdequate_q(e) \wedge TOKEN_{TRUTH}_{LINKED}_q(e)$
-    translates: true
-  - text: ReqReason_q(e) ⊆ ReqPath(e)
-    class: math
-    replacement: $ReqReason_q(e) \subseteq ReqPath(e)$
-    translates: true
-  - text: fiṭrah = a metaortheme
-    class: math
-    replacement: $fiṭrah = a metaortheme$
-    translates: true
-  - text: = the orthing faculty
-    class: math
-    replacement: $= the orthing faculty$
-    translates: true
-- file: docs/decisions/0011-claim-relative-reasoning-path-and-strict-soundness.md
-  in_build_pipeline: false
-  formula_spans: 4
-  targets:
-  - text: StrictlySoundReasoning_q(e) := PathwayAdequate(e) ∧ TOKEN_TRUTH_LINKED_q(e)
-    class: math
-    replacement: $StrictlySoundReasoning_q(e) := PathwayAdequate(e) \wedge TOKEN_{TRUTH}_{LINKED}_q(e)$
-    translates: true
-  - text: ReqReason_q(e) ⊆ ReqPath(e)
-    class: math
-    replacement: $ReqReason_q(e) \subseteq ReqPath(e)$
-    translates: true
-  - text: StrictlySoundReasoning_q(e) := ReasoningPathAdequate_q(e) ∧ TOKEN_TRUTH_LINKED_q(e)
-    class: math
-    replacement: $StrictlySoundReasoning_q(e) := ReasoningPathAdequate_q(e) \wedge TOKEN_{TRUTH}_{LINKED}_q(e)$
-    translates: true
-  - text: PathwayAdequate(e) ∧ TOKEN_TRUTH_LINKED_q(e)
-    class: math
-    replacement: $PathwayAdequate(e) \wedge TOKEN_{TRUTH}_{LINKED}_q(e)$
-    translates: true
-- file: docs/decisions/0014-generated-project-state-and-whole-state-reread.md
-  in_build_pipeline: false
-  formula_spans: 1
-  targets:
-  - text: source_commit_at_generation = git rev-parse HEAD
-    class: math
-    replacement: $source_{commit}_{at}_{generation} = git rev-parse HEAD$
-    translates: true
-- file: docs/decisions/0015-latent-state-observation-and-representation-boundary.md
-  in_build_pipeline: false
-  formula_spans: 10
-  targets:
-  - text: m_t ∈ M_A
-    class: math
-    replacement: $m_t \in M_A$
-    translates: true
-  - text: z_t ∈ Z_A
-    class: math
-    replacement: $z_t \in Z_A$
-    translates: true
-  - text: x_t = Ω_A(m_t)
-    class: math
-    replacement: $x_t = \Omega_A(m_t)$
-    translates: true
-  - text: C^latent_t ⊆ Z_A
-    class: math
-    replacement: $C^{latent}_t \subseteq Z_A$
-    translates: true
-  - text: p̂_t(m) ∈ Π_A^∂
-    class: combining
-    replacement: $\hat{p}_t(m) \in \Pi_A^\partial$
-    translates: true
-  - text: m ≠ z ≠ x ≠ b ≠ y ≠ p̂
-    class: combining
-    replacement: $m ≠ z ≠ x ≠ b ≠ y ≠ \hat{p}$
-    translates: true
-  - text: z_i ≠ z_j
-    class: math
-    replacement: $z_i ≠ z_j$
-    translates: true
-  - text: z_i ≠ z_j
-    class: math
-    replacement: $z_i ≠ z_j$
-    translates: true
-  - text: z_i ≠ z_j
-    class: math
-    replacement: $z_i ≠ z_j$
-    translates: true
-  - text: z_i ≠ z_j
-    class: math
-    replacement: $z_i ≠ z_j$
-    translates: true
-- file: docs/decisions/0018-experiment-packet-readiness-and-registration-status.md
-  in_build_pipeline: false
-  formula_spans: 1
-  targets:
-  - text: DRAFT → SPEC_COMPLETE → DETERMINISTICALLY_VALIDATED → READY_FOR_HUMAN_MATCHING_REVIEW → READY_TO_RUN → RUN_IN_PROGRESS → RUN_COMPLETE_UNADJUDICATED → ADJUDICATED
-    class: math
-    replacement: $DRAFT \to SPEC_{COMPLETE} \to DETERMINISTICALLY_{VALIDATED} \to READY_{FOR}_{HUMAN}_{MATCHING}_{REVIEW} \to READY_{TO}_{RUN} \to RUN_{IN}_{PROGRESS} \to RUN_{COMPLETE}_{UNADJUDICATED} \to ADJUDICATED$
-    translates: true
-- file: docs/decisions/0023-mathematical-source-and-typesetting-pipeline.md
-  in_build_pipeline: false
-  formula_spans: 4
-  targets:
-  - text: μ⃗
-    class: combining
-    replacement: $\vec{\mu}$
-    translates: true
-  - text: C⃗
-    class: combining
-    replacement: $\vec{C}$
-    translates: true
-  - text: μ⃗
-    class: combining
-    replacement: $\vec{\mu}$
-    translates: true
-  - text: C⃗
-    class: combining
-    replacement: $\vec{C}$
-    translates: true
-- file: docs/decisions/0024-dynamic-orthing-and-representation-learning.md
-  in_build_pipeline: false
-  formula_spans: 1
-  targets:
-  - text: ProfileOf_A ⊆ Z_A × Π_A
-    class: math
-    replacement: $ProfileOf_A \subseteq Z_A \times \Pi_A$
-    translates: true
-- file: docs/decisions/0025-meta-noetic-memetics-and-sound-corrective-dynamics.md
-  in_build_pipeline: false
-  formula_spans: 1
-  targets:
-  - text: S_{e,t}→S_{e,t+1}
-    class: math
-    replacement: $S_{e,t}\to S_{e,t+1}$
-    translates: true
-- file: docs/decisions/0027-multi-target-noetic-orthing-and-claim-bearers.md
-  in_build_pipeline: false
-  formula_spans: 1
-  targets:
-  - text: observation_bridge[*].establishes_truth = false
-    class: math
-    replacement: $observation_{bridge}[*].establishes_{truth} = false$
-    translates: true
-- file: docs/provenance/document-history.md
-  in_build_pipeline: false
-  formula_spans: 1
-  targets:
-  - text: e_mu(m) = o-hat
-    class: math
-    replacement: $e_{mu}(m) = o-hat$
-    translates: true
-- file: docs/related-work/LATENT-STATE-INFERENCE-AND-ORTHEMOLOGY.md
-  in_build_pipeline: false
-  formula_spans: 7
-  targets:
-  - text: m_t ∈ M_A
-    class: math
-    replacement: $m_t \in M_A$
-    translates: true
-  - text: z_t ∈ Z_A
-    class: math
-    replacement: $z_t \in Z_A$
-    translates: true
-  - text: x_t = Ω_A(m_t)
-    class: math
-    replacement: $x_t = \Omega_A(m_t)$
-    translates: true
-  - text: C^latent_t ⊆ Z_A
-    class: math
-    replacement: $C^{latent}_t \subseteq Z_A$
-    translates: true
-  - text: p̂_t(m) ∈ Π_A^∂
-    class: combining
-    replacement: $\hat{p}_t(m) \in \Pi_A^\partial$
-    translates: true
-  - text: m ≠ z ≠ x ≠ b ≠ y ≠ p̂
-    class: combining
-    replacement: $m ≠ z ≠ x ≠ b ≠ y ≠ \hat{p}$
-    translates: true
-  - text: ProfileOf_A ⊆ Z_A × Π_A
-    class: math
-    replacement: $ProfileOf_A \subseteq Z_A \times \Pi_A$
-    translates: true
+  occurrence_count: 46
+  classification_counts:
+    literal-code: 13
+    semantic-registry-id: 33
+    mathematics: 0
+occurrences:
+- file: manuscript/orthemma-ortheme-systems-revised-draft.md
+  locus:
+    line: 4
+    column: 4
+  occurrence: 1
+  text: docs/provenance/document-history.md
+  classification: literal-code
+- file: manuscript/orthemma-ortheme-systems-revised-draft.md
+  locus:
+    line: 113
+    column: 57
+  occurrence: 2
+  text: M
+  classification: mathematics
+- file: manuscript/orthemma-ortheme-systems-revised-draft.md
+  locus:
+    line: 113
+    column: 134
+  occurrence: 3
+  text: O
+  classification: mathematics
+- file: manuscript/orthemma-ortheme-systems-revised-draft.md
+  locus:
+    line: 114
+    column: 82
+  occurrence: 4
+  text: Inst_A ⊆ M × O
+  classification: mathematics
+- file: manuscript/orthemma-ortheme-systems-revised-draft.md
+  locus:
+    line: 114
+    column: 106
+  occurrence: 5
+  text: (m, o) ∈ Inst_A
+  classification: mathematics
+- file: manuscript/orthemma-ortheme-systems-revised-draft.md
+  locus:
+    line: 114
+    column: 144
+  occurrence: 6
+  text: m
+  classification: mathematics
+- file: manuscript/orthemma-ortheme-systems-revised-draft.md
+  locus:
+    line: 114
+    column: 173
+  occurrence: 7
+  text: o
+  classification: mathematics
+- file: manuscript/orthemma-ortheme-systems-revised-draft.md
+  locus:
+    line: 115
+    column: 19
+  occurrence: 8
+  text: A
+  classification: mathematics
+- file: manuscript/orthemma-ortheme-systems-revised-draft.md
+  locus:
+    line: 115
+    column: 115
+  occurrence: 9
+  text: T = task(A)
+  classification: mathematics
+- file: manuscript/orthemma-ortheme-systems-revised-draft.md
+  locus:
+    line: 115
+    column: 240
+  occurrence: 10
+  text: retired_symbols
+  classification: literal-code
+- file: manuscript/orthemma-ortheme-systems-revised-draft.md
+  locus:
+    line: 115
+    column: 270
+  occurrence: 11
+  text: I
+  classification: mathematics
+- file: manuscript/orthemma-ortheme-systems-revised-draft.md
+  locus:
+    line: 116
+    column: 33
+  occurrence: 12
+  text: Inst_T
+  classification: mathematics
+- file: manuscript/orthemma-ortheme-systems-revised-draft.md
+  locus:
+    line: 116
+    column: 126
+  occurrence: 13
+  text: m
+  classification: mathematics
+- file: manuscript/orthemma-ortheme-systems-revised-draft.md
+  locus:
+    line: 120
+    column: 16
+  occurrence: 14
+  text: m
+  classification: mathematics
+- file: manuscript/orthemma-ortheme-systems-revised-draft.md
+  locus:
+    line: 120
+    column: 181
+  occurrence: 15
+  text: m
+  classification: mathematics
+- file: manuscript/orthemma-ortheme-systems-revised-draft.md
+  locus:
+    line: 120
+    column: 232
+  occurrence: 16
+  text: O*(m; A)
+  classification: mathematics
+- file: manuscript/orthemma-ortheme-systems-revised-draft.md
+  locus:
+    line: 120
+    column: 284
+  occurrence: 17
+  text: m
+  classification: mathematics
+- file: manuscript/orthemma-ortheme-systems-revised-draft.md
+  locus:
+    line: 122
+    column: 56
+  occurrence: 18
+  text: O*_T(m)
+  classification: mathematics
+- file: manuscript/orthemma-ortheme-systems-revised-draft.md
+  locus:
+    line: 122
+    column: 160
+  occurrence: 19
+  text: A
+  classification: mathematics
+- file: manuscript/orthemma-ortheme-systems-revised-draft.md
+  locus:
+    line: 122
+    column: 169
+  occurrence: 20
+  text: task(A) = T
+  classification: mathematics
+- file: manuscript/orthemma-ortheme-systems-revised-draft.md
+  locus:
+    line: 122
+    column: 212
+  occurrence: 21
+  text: O*_T(m) := O*(m; A)
+  classification: mathematics
+- file: manuscript/orthemma-ortheme-systems-revised-draft.md
+  locus:
+    line: 122
+    column: 245
+  occurrence: 22
+  text: Inst_T
+  classification: mathematics
+- file: manuscript/orthemma-ortheme-systems-revised-draft.md
+  locus:
+    line: 122
+    column: 255
+  occurrence: 23
+  text: Π_T
+  classification: mathematics
+- file: manuscript/orthemma-ortheme-systems-revised-draft.md
+  locus:
+    line: 122
+    column: 262
+  occurrence: 24
+  text: 𝒦_T
+  classification: mathematics
+- file: manuscript/orthemma-ortheme-systems-revised-draft.md
+  locus:
+    line: 122
+    column: 269
+  occurrence: 25
+  text: ℛ_T
+  classification: mathematics
+- file: manuscript/orthemma-ortheme-systems-revised-draft.md
+  locus:
+    line: 122
+    column: 280
+  occurrence: 26
+  text: 𝒲_T
+  classification: mathematics
+- file: manuscript/orthemma-ortheme-systems-revised-draft.md
+  locus:
+    line: 122
+    column: 296
+  occurrence: 27
+  text: A
+  classification: mathematics
+- file: manuscript/orthemma-ortheme-systems-revised-draft.md
+  locus:
+    line: 122
+    column: 322
+  occurrence: 28
+  text: Π_A
+  classification: mathematics
+- file: manuscript/orthemma-ortheme-systems-revised-draft.md
+  locus:
+    line: 122
+    column: 329
+  occurrence: 29
+  text: 𝒦_A
+  classification: mathematics
+- file: manuscript/orthemma-ortheme-systems-revised-draft.md
+  locus:
+    line: 122
+    column: 336
+  occurrence: 30
+  text: ℛ_A
+  classification: mathematics
+- file: manuscript/orthemma-ortheme-systems-revised-draft.md
+  locus:
+    line: 122
+    column: 343
+  occurrence: 31
+  text: 𝒲_A
+  classification: mathematics
+- file: manuscript/orthemma-ortheme-systems-revised-draft.md
+  locus:
+    line: 122
+    column: 373
+  occurrence: 32
+  text: M
+  classification: mathematics
+- file: manuscript/orthemma-ortheme-systems-revised-draft.md
+  locus:
+    line: 122
+    column: 378
+  occurrence: 33
+  text: O
+  classification: mathematics
+- file: manuscript/orthemma-ortheme-systems-revised-draft.md
+  locus:
+    line: 122
+    column: 413
+  occurrence: 34
+  text: M_A ⊆ 𝓜
+  classification: mathematics
+- file: manuscript/orthemma-ortheme-systems-revised-draft.md
+  locus:
+    line: 122
+    column: 438
+  occurrence: 35
+  text: O_A ⊆ 𝓞
+  classification: mathematics
+- file: manuscript/orthemma-ortheme-systems-revised-draft.md
+  locus:
+    line: 122
+    column: 524
+  occurrence: 36
+  text: T
+  classification: mathematics
+- file: manuscript/orthemma-ortheme-systems-revised-draft.md
+  locus:
+    line: 122
+    column: 915
+  occurrence: 37
+  text: O*(m; A)
+  classification: mathematics
+- file: manuscript/orthemma-ortheme-systems-revised-draft.md
+  locus:
+    line: 122
+    column: 1065
+  occurrence: 38
+  text: A
+  classification: mathematics
+- file: manuscript/orthemma-ortheme-systems-revised-draft.md
+  locus:
+    line: 122
+    column: 1083
+  occurrence: 39
+  text: T = task(A)
+  classification: mathematics
+- file: manuscript/orthemma-ortheme-systems-revised-draft.md
+  locus:
+    line: 131
+    column: 70
+  occurrence: 40
+  text: 'Ω : M ⇀ X'
+  classification: mathematics
+- file: manuscript/orthemma-ortheme-systems-revised-draft.md
+  locus:
+    line: 131
+    column: 126
+  occurrence: 41
+  text: x = Ω(m)
+  classification: mathematics
+- file: manuscript/orthemma-ortheme-systems-revised-draft.md
+  locus:
+    line: 131
+    column: 176
+  occurrence: 42
+  text: m
+  classification: mathematics
+- file: manuscript/orthemma-ortheme-systems-revised-draft.md
+  locus:
+    line: 138
+    column: 7
+  occurrence: 43
+  text: p̂_t(m)
+  classification: mathematics
+- file: manuscript/orthemma-ortheme-systems-revised-draft.md
+  locus:
+    line: 138
+    column: 68
+  occurrence: 44
+  text: a_t
+  classification: mathematics
+- file: manuscript/orthemma-ortheme-systems-revised-draft.md
+  locus:
+    line: 139
+    column: 19
+  occurrence: 45
+  text: Succ
+  classification: mathematics
+- file: manuscript/orthemma-ortheme-systems-revised-draft.md
+  locus:
+    line: 139
+    column: 106
+  occurrence: 46
+  text: O*_T(m)
+  classification: mathematics
+- file: manuscript/orthemma-ortheme-systems-revised-draft.md
+  locus:
+    line: 139
+    column: 131
+  occurrence: 47
+  text: p̂_t(m)
+  classification: mathematics
+- file: manuscript/orthemma-ortheme-systems-revised-draft.md
+  locus:
+    line: 139
+    column: 178
+  occurrence: 48
+  text: x
+  classification: mathematics
+- file: manuscript/orthemma-ortheme-systems-revised-draft.md
+  locus:
+    line: 140
+    column: 20
+  occurrence: 49
+  text: m
+  classification: mathematics
+- file: manuscript/orthemma-ortheme-systems-revised-draft.md
+  locus:
+    line: 144
+    column: 86
+  occurrence: 50
+  text: m
+  classification: mathematics
+- file: manuscript/orthemma-ortheme-systems-revised-draft.md
+  locus:
+    line: 144
+    column: 110
+  occurrence: 51
+  text: p̂_t(m)
+  classification: mathematics
+- file: manuscript/orthemma-ortheme-systems-revised-draft.md
+  locus:
+    line: 149
+    column: 89
+  occurrence: 52
+  text: O*_T(m)
+  classification: mathematics
+- file: manuscript/orthemma-ortheme-systems-revised-draft.md
+  locus:
+    line: 150
+    column: 9
+  occurrence: 53
+  text: p̂_t(m)
+  classification: mathematics
+- file: manuscript/orthemma-ortheme-systems-revised-draft.md
+  locus:
+    line: 154
+    column: 99
+  occurrence: 54
+  text: p̂_t(m)
+  classification: mathematics
+- file: manuscript/orthemma-ortheme-systems-revised-draft.md
+  locus:
+    line: 155
+    column: 14
+  occurrence: 55
+  text: m
+  classification: mathematics
+- file: manuscript/orthemma-ortheme-systems-revised-draft.md
+  locus:
+    line: 155
+    column: 29
+  occurrence: 56
+  text: x
+  classification: mathematics
+- file: manuscript/orthemma-ortheme-systems-revised-draft.md
+  locus:
+    line: 155
+    column: 106
+  occurrence: 57
+  text: p̂_t(m)
+  classification: mathematics
+- file: manuscript/orthemma-ortheme-systems-revised-draft.md
+  locus:
+    line: 155
+    column: 125
+  occurrence: 58
+  text: a_t
+  classification: mathematics
+- file: manuscript/orthemma-ortheme-systems-revised-draft.md
+  locus:
+    line: 163
+    column: 85
+  occurrence: 59
+  text: κ = id(m)
+  classification: mathematics
+- file: manuscript/orthemma-ortheme-systems-revised-draft.md
+  locus:
+    line: 163
+    column: 166
+  occurrence: 60
+  text: v = ver(m)
+  classification: mathematics
+- file: manuscript/orthemma-ortheme-systems-revised-draft.md
+  locus:
+    line: 164
+    column: 68
+  occurrence: 61
+  text: κ
+  classification: mathematics
+- file: manuscript/orthemma-ortheme-systems-revised-draft.md
+  locus:
+    line: 164
+    column: 86
+  occurrence: 62
+  text: v
+  classification: mathematics
+- file: manuscript/orthemma-ortheme-systems-revised-draft.md
+  locus:
+    line: 164
+    column: 175
+  occurrence: 63
+  text: κ
+  classification: mathematics
+- file: manuscript/orthemma-ortheme-systems-revised-draft.md
+  locus:
+    line: 167
+    column: 55
+  occurrence: 64
+  text: a
+  classification: mathematics
+- file: manuscript/orthemma-ortheme-systems-revised-draft.md
+  locus:
+    line: 167
+    column: 88
+  occurrence: 65
+  text: m
+  classification: mathematics
+- file: manuscript/orthemma-ortheme-systems-revised-draft.md
+  locus:
+    line: 172
+    column: 11
+  occurrence: 66
+  text: m′ = succ(m, a)
+  classification: mathematics
+- file: manuscript/orthemma-ortheme-systems-revised-draft.md
+  locus:
+    line: 174
+    column: 57
+  occurrence: 67
+  text: (κ, v)
+  classification: mathematics
+- file: manuscript/orthemma-ortheme-systems-revised-draft.md
+  locus:
+    line: 174
+    column: 109
+  occurrence: 68
+  text: (κ, v)
+  classification: mathematics
+- file: manuscript/orthemma-ortheme-systems-revised-draft.md
+  locus:
+    line: 174
+    column: 168
+  occurrence: 69
+  text: (κ, v′)
+  classification: mathematics
+- file: manuscript/orthemma-ortheme-systems-revised-draft.md
+  locus:
+    line: 175
+    column: 19
+  occurrence: 70
+  text: κ
+  classification: mathematics
+- file: manuscript/orthemma-ortheme-systems-revised-draft.md
+  locus:
+    line: 182
+    column: 66
+  occurrence: 71
+  text: A
+  classification: mathematics
+- file: manuscript/orthemma-ortheme-systems-revised-draft.md
+  locus:
+    line: 183
+    column: 168
+  occurrence: 72
+  text: A
+  classification: mathematics
+- file: manuscript/orthemma-ortheme-systems-revised-draft.md
+  locus:
+    line: 183
+    column: 248
+  occurrence: 73
+  text: ver(A)
+  classification: mathematics
+- file: manuscript/orthemma-ortheme-systems-revised-draft.md
+  locus:
+    line: 189
+    column: 64
+  occurrence: 74
+  text: O*_T(m)
+  classification: mathematics
+- file: manuscript/orthemma-ortheme-systems-revised-draft.md
+  locus:
+    line: 189
+    column: 148
+  occurrence: 75
+  text: A
+  classification: mathematics
+- file: manuscript/orthemma-ortheme-systems-revised-draft.md
+  locus:
+    line: 189
+    column: 157
+  occurrence: 76
+  text: task(A) = T
+  classification: mathematics
+- file: manuscript/orthemma-ortheme-systems-revised-draft.md
+  locus:
+    line: 191
+    column: 174
+  occurrence: 77
+  text: A
+  classification: mathematics
+- file: manuscript/orthemma-ortheme-systems-revised-draft.md
+  locus:
+    line: 191
+    column: 188
+  occurrence: 78
+  text: O*(m; A)
+  classification: mathematics
+- file: manuscript/orthemma-ortheme-systems-revised-draft.md
+  locus:
+    line: 191
+    column: 441
+  occurrence: 79
+  text: A
+  classification: mathematics
+- file: manuscript/orthemma-ortheme-systems-revised-draft.md
+  locus:
+    line: 191
+    column: 452
+  occurrence: 80
+  text: ver(A)+1
+  classification: mathematics
+- file: manuscript/orthemma-ortheme-systems-revised-draft.md
+  locus:
+    line: 194
+    column: 120
+  occurrence: 81
+  text: (κ, v)
+  classification: mathematics
+- file: manuscript/orthemma-ortheme-systems-revised-draft.md
+  locus:
+    line: 200
+    column: 63
+  occurrence: 82
+  text: A
+  classification: mathematics
+- file: manuscript/orthemma-ortheme-systems-revised-draft.md
+  locus:
+    line: 200
+    column: 115
+  occurrence: 83
+  text: o_i ≢_A o_j
+  classification: mathematics
+- file: manuscript/orthemma-ortheme-systems-revised-draft.md
+  locus:
+    line: 207
+    column: 62
+  occurrence: 84
+  text: h_i, h_j
+  classification: mathematics
+- file: manuscript/orthemma-ortheme-systems-revised-draft.md
+  locus:
+    line: 207
+    column: 94
+  occurrence: 85
+  text: λ, 1−λ
+  classification: mathematics
+- file: manuscript/orthemma-ortheme-systems-revised-draft.md
+  locus:
+    line: 207
+    column: 108
+  occurrence: 86
+  text: Rep_A^{i=j}
+  classification: mathematics
+- file: manuscript/orthemma-ortheme-systems-revised-draft.md
+  locus:
+    line: 208
+    column: 70
+  occurrence: 87
+  text: Rep_A
+  classification: mathematics
+- file: manuscript/orthemma-ortheme-systems-revised-draft.md
+  locus:
+    line: 212
+    column: 6
+  occurrence: 88
+  text: L_A*(χ)
+  classification: mathematics
+- file: manuscript/orthemma-ortheme-systems-revised-draft.md
+  locus:
+    line: 212
+    column: 62
+  occurrence: 89
+  text: χ
+  classification: mathematics
+- file: manuscript/orthemma-ortheme-systems-revised-draft.md
+  locus:
+    line: 212
+    column: 128
+  occurrence: 90
+  text: o_i ≢_A o_j
+  classification: mathematics
+- file: manuscript/orthemma-ortheme-systems-revised-draft.md
+  locus:
+    line: 212
+    column: 155
+  occurrence: 91
+  text: ε_A
+  classification: mathematics
+- file: manuscript/orthemma-ortheme-systems-revised-draft.md
+  locus:
+    line: 213
+    column: 1
+  occurrence: 92
+  text: Δ_A(o_i, o_j) > ε_A
+  classification: mathematics
+- file: manuscript/orthemma-ortheme-systems-revised-draft.md
+  locus:
+    line: 213
+    column: 112
+  occurrence: 93
+  text: A
+  classification: mathematics
+- file: manuscript/orthemma-ortheme-systems-revised-draft.md
+  locus:
+    line: 213
+    column: 208
+  occurrence: 94
+  text: ≢_T
+  classification: mathematics
+- file: manuscript/orthemma-ortheme-systems-revised-draft.md
+  locus:
+    line: 213
+    column: 229
+  occurrence: 95
+  text: ≢_A
+  classification: mathematics
+- file: manuscript/orthemma-ortheme-systems-revised-draft.md
+  locus:
+    line: 213
+    column: 249
+  occurrence: 96
+  text: A
+  classification: mathematics
+- file: manuscript/orthemma-ortheme-systems-revised-draft.md
+  locus:
+    line: 222
+    column: 101
+  occurrence: 97
+  text: p̂_t(m)
+  classification: mathematics
+- file: manuscript/orthemma-ortheme-systems-revised-draft.md
+  locus:
+    line: 225
+    column: 40
+  occurrence: 98
+  text: h_1 ≈_{ε_A} h_2
+  classification: mathematics
+- file: manuscript/orthemma-ortheme-systems-revised-draft.md
+  locus:
+    line: 225
+    column: 59
+  occurrence: 99
+  text: h_2 ≈_{ε_A} h_3
+  classification: mathematics
+- file: manuscript/orthemma-ortheme-systems-revised-draft.md
+  locus:
+    line: 225
+    column: 82
+  occurrence: 100
+  text: h_1 ≉_{ε_A} h_3
+  classification: mathematics
+- file: manuscript/orthemma-ortheme-systems-revised-draft.md
+  locus:
+    line: 228
+    column: 61
+  occurrence: 101
+  text: p̂_t(m)
+  classification: mathematics
+- file: manuscript/orthemma-ortheme-systems-revised-draft.md
+  locus:
+    line: 228
+    column: 119
+  occurrence: 102
+  text: O*(m; A)
+  classification: mathematics
+- file: manuscript/orthemma-ortheme-systems-revised-draft.md
+  locus:
+    line: 233
+    column: 130
+  occurrence: 103
+  text: O*(m; A)
+  classification: mathematics
+- file: manuscript/orthemma-ortheme-systems-revised-draft.md
+  locus:
+    line: 249
+    column: 253
+  occurrence: 104
+  text: κ
+  classification: mathematics
+- file: manuscript/orthemma-ortheme-systems-revised-draft.md
+  locus:
+    line: 249
+    column: 275
+  occurrence: 105
+  text: v
+  classification: mathematics
+- file: manuscript/orthemma-ortheme-systems-revised-draft.md
+  locus:
+    line: 250
+    column: 18
+  occurrence: 106
+  text: Ω(m_1) = Ω(m_2)
+  classification: mathematics
+- file: manuscript/orthemma-ortheme-systems-revised-draft.md
+  locus:
+    line: 250
+    column: 37
+  occurrence: 107
+  text: O*(m_1; A) ≠ O*(m_2; A)
+  classification: mathematics
+- file: manuscript/orthemma-ortheme-systems-revised-draft.md
+  locus:
+    line: 250
+    column: 65
+  occurrence: 108
+  text: C^profile ⊇ {p_1, …, p_k}
+  classification: mathematics
+- file: manuscript/orthemma-ortheme-systems-revised-draft.md
+  locus:
+    line: 250
+    column: 145
+  occurrence: 109
+  text: C^id(m) ⊆ M
+  classification: mathematics
+- file: manuscript/orthemma-ortheme-systems-revised-draft.md
+  locus:
+    line: 256
+    column: 36
+  occurrence: 110
+  text: (κ, v)
+  classification: mathematics
+- file: manuscript/orthemma-ortheme-systems-revised-draft.md
+  locus:
+    line: 263
+    column: 47
+  occurrence: 111
+  text: Ω
+  classification: mathematics
+- file: manuscript/orthemma-ortheme-systems-revised-draft.md
+  locus:
+    line: 263
+    column: 106
+  occurrence: 112
+  text: '{Ω_k}'
+  classification: mathematics
+- file: manuscript/orthemma-ortheme-systems-revised-draft.md
+  locus:
+    line: 264
+    column: 76
+  occurrence: 113
+  text: k
+  classification: mathematics
+- file: manuscript/orthemma-ortheme-systems-revised-draft.md
+  locus:
+    line: 270
+    column: 22
+  occurrence: 114
+  text: τ
+  classification: mathematics
+- file: manuscript/orthemma-ortheme-systems-revised-draft.md
+  locus:
+    line: 270
+    column: 72
+  occurrence: 115
+  text: '{structural, behavioral, provenance}'
+  classification: mathematics
+- file: manuscript/orthemma-ortheme-systems-revised-draft.md
+  locus:
+    line: 273
+    column: 40
+  occurrence: 116
+  text: W
+  classification: mathematics
+- file: manuscript/orthemma-ortheme-systems-revised-draft.md
+  locus:
+    line: 276
+    column: 13
+  occurrence: 117
+  text: σ
+  classification: mathematics
+- file: manuscript/orthemma-ortheme-systems-revised-draft.md
+  locus:
+    line: 277
+    column: 64
+  occurrence: 118
+  text: (κ, v)
+  classification: mathematics
+- file: manuscript/orthemma-ortheme-systems-revised-draft.md
+  locus:
+    line: 300
+    column: 45
+  occurrence: 119
+  text: C_t(m)
+  classification: mathematics
+- file: manuscript/orthemma-ortheme-systems-revised-draft.md
+  locus:
+    line: 305
+    column: 3
+  occurrence: 120
+  text: C^id
+  classification: mathematics
+- file: manuscript/orthemma-ortheme-systems-revised-draft.md
+  locus:
+    line: 305
+    column: 12
+  occurrence: 121
+  text: M
+  classification: mathematics
+- file: manuscript/orthemma-ortheme-systems-revised-draft.md
+  locus:
+    line: 306
+    column: 3
+  occurrence: 122
+  text: C^profile
+  classification: mathematics
+- file: manuscript/orthemma-ortheme-systems-revised-draft.md
+  locus:
+    line: 306
+    column: 17
+  occurrence: 123
+  text: Π_A
+  classification: mathematics
+- file: manuscript/orthemma-ortheme-systems-revised-draft.md
+  locus:
+    line: 307
+    column: 3
+  occurrence: 124
+  text: C^cause
+  classification: mathematics
+- file: manuscript/orthemma-ortheme-systems-revised-draft.md
+  locus:
+    line: 307
+    column: 15
+  occurrence: 125
+  text: 𝒦_A
+  classification: mathematics
+- file: manuscript/orthemma-ortheme-systems-revised-draft.md
+  locus:
+    line: 308
+    column: 3
+  occurrence: 126
+  text: C^route
+  classification: mathematics
+- file: manuscript/orthemma-ortheme-systems-revised-draft.md
+  locus:
+    line: 308
+    column: 15
+  occurrence: 127
+  text: ℛ_A
+  classification: mathematics
+- file: manuscript/orthemma-ortheme-systems-revised-draft.md
+  locus:
+    line: 309
+    column: 3
+  occurrence: 128
+  text: C^warrant
+  classification: mathematics
+- file: manuscript/orthemma-ortheme-systems-revised-draft.md
+  locus:
+    line: 309
+    column: 17
+  occurrence: 129
+  text: 𝒲_A
+  classification: mathematics
+- file: manuscript/orthemma-ortheme-systems-revised-draft.md
+  locus:
+    line: 319
+    column: 103
+  occurrence: 130
+  text: A
+  classification: mathematics
+- file: manuscript/orthemma-ortheme-systems-revised-draft.md
+  locus:
+    line: 319
+    column: 130
+  occurrence: 131
+  text: O_A
+  classification: mathematics
+- file: manuscript/orthemma-ortheme-systems-revised-draft.md
+  locus:
+    line: 321
+    column: 3
+  occurrence: 132
+  text: Π_A ⊆ 𝒫(O_A)
+  classification: mathematics
+- file: manuscript/orthemma-ortheme-systems-revised-draft.md
+  locus:
+    line: 321
+    column: 98
+  occurrence: 133
+  text: A
+  classification: mathematics
+- file: manuscript/orthemma-ortheme-systems-revised-draft.md
+  locus:
+    line: 325
+    column: 521
+  occurrence: 134
+  text: not-applicable
+  classification: semantic-registry-id
+- file: manuscript/orthemma-ortheme-systems-revised-draft.md
+  locus:
+    line: 325
+    column: 595
+  occurrence: 135
+  text: A
+  classification: mathematics
+- file: manuscript/orthemma-ortheme-systems-revised-draft.md
+  locus:
+    line: 325
+    column: 951
+  occurrence: 136
+  text: A
+  classification: mathematics
+- file: manuscript/orthemma-ortheme-systems-revised-draft.md
+  locus:
+    line: 325
+    column: 1253
+  occurrence: 137
+  text: not-applicable
+  classification: semantic-registry-id
+- file: manuscript/orthemma-ortheme-systems-revised-draft.md
+  locus:
+    line: 325
+    column: 1354
+  occurrence: 138
+  text: p̂
+  classification: mathematics
+- file: manuscript/orthemma-ortheme-systems-revised-draft.md
+  locus:
+    line: 325
+    column: 1369
+  occurrence: 139
+  text: O*
+  classification: mathematics
+- file: manuscript/orthemma-ortheme-systems-revised-draft.md
+  locus:
+    line: 325
+    column: 1444
+  occurrence: 140
+  text: H
+  classification: mathematics
+- file: manuscript/orthemma-ortheme-systems-revised-draft.md
+  locus:
+    line: 325
+    column: 1533
+  occurrence: 141
+  text: Ĉ
+  classification: mathematics
+- file: manuscript/orthemma-ortheme-systems-revised-draft.md
+  locus:
+    line: 327
+    column: 237
+  occurrence: 142
+  text: Π_A^∂
+  classification: mathematics
+- file: manuscript/orthemma-ortheme-systems-revised-draft.md
+  locus:
+    line: 327
+    column: 353
+  occurrence: 143
+  text: Π_A ⊆ Π_A^∂
+  classification: mathematics
+- file: manuscript/orthemma-ortheme-systems-revised-draft.md
+  locus:
+    line: 327
+    column: 462
+  occurrence: 144
+  text: A
+  classification: mathematics
+- file: manuscript/orthemma-ortheme-systems-revised-draft.md
+  locus:
+    line: 331
+    column: 24
+  occurrence: 145
+  text: O*(m; A) ∈ Π_A
+  classification: mathematics
+- file: manuscript/orthemma-ortheme-systems-revised-draft.md
+  locus:
+    line: 332
+    column: 25
+  occurrence: 146
+  text: Ĉ_{A,α,t}(m) ⊆ Π_A
+  classification: mathematics
+- file: manuscript/orthemma-ortheme-systems-revised-draft.md
+  locus:
+    line: 332
+    column: 64
+  occurrence: 147
+  text: C^profile
+  classification: mathematics
+- file: manuscript/orthemma-ortheme-systems-revised-draft.md
+  locus:
+    line: 332
+    column: 174
+  occurrence: 148
+  text: O*(m; A) ∈ Ĉ
+  classification: mathematics
+- file: manuscript/orthemma-ortheme-systems-revised-draft.md
+  locus:
+    line: 332
+    column: 258
+  occurrence: 149
+  text: Ĉ
+  classification: mathematics
+- file: manuscript/orthemma-ortheme-systems-revised-draft.md
+  locus:
+    line: 333
+    column: 36
+  occurrence: 150
+  text: p̂_{A,α,t}(m) ∈ Π_A^∂
+  classification: mathematics
+- file: manuscript/orthemma-ortheme-systems-revised-draft.md
+  locus:
+    line: 333
+    column: 212
+  occurrence: 151
+  text: p̂
+  classification: mathematics
+- file: manuscript/orthemma-ortheme-systems-revised-draft.md
+  locus:
+    line: 333
+    column: 221
+  occurrence: 152
+  text: Ĉ
+  classification: mathematics
+- file: manuscript/orthemma-ortheme-systems-revised-draft.md
+  locus:
+    line: 333
+    column: 248
+  occurrence: 153
+  text: Ĉ ⊆ completions(p̂)
+  classification: mathematics
+- file: manuscript/orthemma-ortheme-systems-revised-draft.md
+  locus:
+    line: 333
+    column: 360
+  occurrence: 154
+  text: Ĉ = {p_1, p_2}
+  classification: mathematics
+- file: manuscript/orthemma-ortheme-systems-revised-draft.md
+  locus:
+    line: 333
+    column: 461
+  occurrence: 155
+  text: p̂
+  classification: mathematics
+- file: manuscript/orthemma-ortheme-systems-revised-draft.md
+  locus:
+    line: 334
+    column: 53
+  occurrence: 156
+  text: Ĉ
+  classification: mathematics
+- file: manuscript/orthemma-ortheme-systems-revised-draft.md
+  locus:
+    line: 336
+    column: 80
+  occurrence: 157
+  text: Π_A
+  classification: mathematics
+- file: manuscript/orthemma-ortheme-systems-revised-draft.md
+  locus:
+    line: 336
+    column: 262
+  occurrence: 158
+  text: A
+  classification: mathematics
+- file: manuscript/orthemma-ortheme-systems-revised-draft.md
+  locus:
+    line: 340
+    column: 164
+  occurrence: 159
+  text: r_1 ⊕ r_2
+  classification: mathematics
+- file: manuscript/orthemma-ortheme-systems-revised-draft.md
+  locus:
+    line: 363
+    column: 41
+  occurrence: 160
+  text: π_μ
+  classification: mathematics
+- file: manuscript/orthemma-ortheme-systems-revised-draft.md
+  locus:
+    line: 365
+    column: 3
+  occurrence: 161
+  text: g
+  classification: mathematics
+- file: manuscript/orthemma-ortheme-systems-revised-draft.md
+  locus:
+    line: 366
+    column: 3
+  occurrence: 162
+  text: S_μ
+  classification: mathematics
+- file: manuscript/orthemma-ortheme-systems-revised-draft.md
+  locus:
+    line: 368
+    column: 3
+  occurrence: 163
+  text: select_μ
+  classification: mathematics
+- file: manuscript/orthemma-ortheme-systems-revised-draft.md
+  locus:
+    line: 368
+    column: 85
+  occurrence: 164
+  text: S_μ
+  classification: mathematics
+- file: manuscript/orthemma-ortheme-systems-revised-draft.md
+  locus:
+    line: 369
+    column: 3
+  occurrence: 165
+  text: prov(μ) = ⟨authority, warrant, scope, ver(μ)⟩
+  classification: mathematics
+- file: manuscript/orthemma-ortheme-systems-revised-draft.md
+  locus:
+    line: 370
+    column: 3
+  occurrence: 166
+  text: ver(μ)
+  classification: mathematics
+- file: manuscript/orthemma-ortheme-systems-revised-draft.md
+  locus:
+    line: 371
+    column: 3
+  occurrence: 167
+  text: π_μ
+  classification: mathematics
+- file: manuscript/orthemma-ortheme-systems-revised-draft.md
+  locus:
+    line: 376
+    column: 42
+  occurrence: 168
+  text: μ
+  classification: mathematics
+- file: manuscript/orthemma-ortheme-systems-revised-draft.md
+  locus:
+    line: 376
+    column: 51
+  occurrence: 169
+  text: μ
+  classification: mathematics
+- file: manuscript/orthemma-ortheme-systems-revised-draft.md
+  locus:
+    line: 378
+    column: 79
+  occurrence: 170
+  text: μ
+  classification: mathematics
+- file: manuscript/orthemma-ortheme-systems-revised-draft.md
+  locus:
+    line: 378
+    column: 108
+  occurrence: 171
+  text: g
+  classification: mathematics
+- file: manuscript/orthemma-ortheme-systems-revised-draft.md
+  locus:
+    line: 378
+    column: 127
+  occurrence: 172
+  text: S_μ
+  classification: mathematics
+- file: manuscript/orthemma-ortheme-systems-revised-draft.md
+  locus:
+    line: 385
+    column: 1
+  occurrence: 173
+  text: g ∈ {O, I, E, D, R, V, W}
+  classification: mathematics
+- file: manuscript/orthemma-ortheme-systems-revised-draft.md
+  locus:
+    line: 395
+    column: 78
+  occurrence: 174
+  text: T
+  classification: mathematics
+- file: manuscript/orthemma-ortheme-systems-revised-draft.md
+  locus:
+    line: 401
+    column: 149
+  occurrence: 175
+  text: g
+  classification: mathematics
+- file: manuscript/orthemma-ortheme-systems-revised-draft.md
+  locus:
+    line: 408
+    column: 19
+  occurrence: 176
+  text: g
+  classification: mathematics
+- file: manuscript/orthemma-ortheme-systems-revised-draft.md
+  locus:
+    line: 408
+    column: 25
+  occurrence: 177
+  text: S_μ
+  classification: mathematics
+- file: manuscript/orthemma-ortheme-systems-revised-draft.md
+  locus:
+    line: 408
+    column: 33
+  occurrence: 178
+  text: select_μ
+  classification: mathematics
+- file: manuscript/orthemma-ortheme-systems-revised-draft.md
+  locus:
+    line: 411
+    column: 62
+  occurrence: 179
+  text: ver(m)
+  classification: mathematics
+- file: manuscript/orthemma-ortheme-systems-revised-draft.md
+  locus:
+    line: 418
+    column: 184
+  occurrence: 180
+  text: ≼
+  classification: mathematics
+- file: manuscript/orthemma-ortheme-systems-revised-draft.md
+  locus:
+    line: 420
+    column: 120
+  occurrence: 181
+  text: ≼
+  classification: mathematics
+- file: manuscript/orthemma-ortheme-systems-revised-draft.md
+  locus:
+    line: 420
+    column: 154
+  occurrence: 182
+  text: ≼
+  classification: mathematics
+- file: manuscript/orthemma-ortheme-systems-revised-draft.md
+  locus:
+    line: 439
+    column: 54
+  occurrence: 183
+  text: m
+  classification: mathematics
+- file: manuscript/orthemma-ortheme-systems-revised-draft.md
+  locus:
+    line: 441
+    column: 27
+  occurrence: 184
+  text: m
+  classification: mathematics
+- file: manuscript/orthemma-ortheme-systems-revised-draft.md
+  locus:
+    line: 442
+    column: 48
+  occurrence: 185
+  text: O*(m; A)
+  classification: mathematics
+- file: manuscript/orthemma-ortheme-systems-revised-draft.md
+  locus:
+    line: 443
+    column: 58
+  occurrence: 186
+  text: m
+  classification: mathematics
+- file: manuscript/orthemma-ortheme-systems-revised-draft.md
+  locus:
+    line: 447
+    column: 56
+  occurrence: 187
+  text: m
+  classification: mathematics
+- file: manuscript/orthemma-ortheme-systems-revised-draft.md
+  locus:
+    line: 449
+    column: 23
+  occurrence: 188
+  text: m
+  classification: mathematics
+- file: manuscript/orthemma-ortheme-systems-revised-draft.md
+  locus:
+    line: 478
+    column: 54
+  occurrence: 189
+  text: Q
+  classification: mathematics
+- file: manuscript/orthemma-ortheme-systems-revised-draft.md
+  locus:
+    line: 478
+    column: 138
+  occurrence: 190
+  text: (κ, v)
+  classification: mathematics
+- file: manuscript/orthemma-ortheme-systems-revised-draft.md
+  locus:
+    line: 494
+    column: 126
+  occurrence: 191
+  text: θ_stop
+  classification: mathematics
+- file: manuscript/orthemma-ortheme-systems-revised-draft.md
+  locus:
+    line: 494
+    column: 181
+  occurrence: 192
+  text: θ_stop
+  classification: mathematics
+- file: manuscript/orthemma-ortheme-systems-revised-draft.md
+  locus:
+    line: 512
+    column: 33
+  occurrence: 193
+  text: ρ
+  classification: mathematics
+- file: manuscript/orthemma-ortheme-systems-revised-draft.md
+  locus:
+    line: 512
+    column: 48
+  occurrence: 194
+  text: ver(μ)
+  classification: mathematics
+- file: manuscript/orthemma-ortheme-systems-revised-draft.md
+  locus:
+    line: 527
+    column: 38
+  occurrence: 195
+  text: abc123
+  classification: literal-code
+- file: manuscript/orthemma-ortheme-systems-revised-draft.md
+  locus:
+    line: 527
+    column: 72
+  occurrence: 196
+  text: e
+  classification: mathematics
+- file: manuscript/orthemma-ortheme-systems-revised-draft.md
+  locus:
+    line: 531
+    column: 13
+  occurrence: 197
+  text: 'ι_n : E^(n) ↪ M^(n+1)'
+  classification: mathematics
+- file: manuscript/orthemma-ortheme-systems-revised-draft.md
+  locus:
+    line: 532
+    column: 129
+  occurrence: 198
+  text: n+1
+  classification: mathematics
+- file: manuscript/orthemma-ortheme-systems-revised-draft.md
+  locus:
+    line: 544
+    column: 53
+  occurrence: 199
+  text: α
+  classification: mathematics
+- file: manuscript/orthemma-ortheme-systems-revised-draft.md
+  locus:
+    line: 544
+    column: 124
+  occurrence: 200
+  text: w
+  classification: mathematics
+- file: manuscript/orthemma-ortheme-systems-revised-draft.md
+  locus:
+    line: 545
+    column: 23
+  occurrence: 201
+  text: A
+  classification: mathematics
+- file: manuscript/orthemma-ortheme-systems-revised-draft.md
+  locus:
+    line: 545
+    column: 117
+  occurrence: 202
+  text: T = task(A)
+  classification: mathematics
+- file: manuscript/orthemma-ortheme-systems-revised-draft.md
+  locus:
+    line: 545
+    column: 247
+  occurrence: 203
+  text: MetaTok(e)
+  classification: mathematics
+- file: manuscript/orthemma-ortheme-systems-revised-draft.md
+  locus:
+    line: 545
+    column: 446
+  occurrence: 204
+  text: MetaInst(μ̄, μ)
+  classification: mathematics
+- file: manuscript/orthemma-ortheme-systems-revised-draft.md
+  locus:
+    line: 545
+    column: 488
+  occurrence: 205
+  text: Compatible(μ̄, A(e))
+  classification: mathematics
+- file: manuscript/orthemma-ortheme-systems-revised-draft.md
+  locus:
+    line: 545
+    column: 530
+  occurrence: 206
+  text: (κ, v)
+  classification: mathematics
+- file: manuscript/orthemma-ortheme-systems-revised-draft.md
+  locus:
+    line: 546
+    column: 20
+  occurrence: 207
+  text: p̂
+  classification: mathematics
+- file: manuscript/orthemma-ortheme-systems-revised-draft.md
+  locus:
+    line: 548
+    column: 128
+  occurrence: 208
+  text: ReqPath(e)
+  classification: mathematics
+- file: manuscript/orthemma-ortheme-systems-revised-draft.md
+  locus:
+    line: 549
+    column: 1
+  occurrence: 209
+  text: not-applicable
+  classification: semantic-registry-id
+- file: manuscript/orthemma-ortheme-systems-revised-draft.md
+  locus:
+    line: 554
+    column: 61
+  occurrence: 210
+  text: 'e ⊨_μ (m : ô)'
+  classification: mathematics
+- file: manuscript/orthemma-ortheme-systems-revised-draft.md
+  locus:
+    line: 577
+    column: 704
+  occurrence: 211
+  text: schemas/
+  classification: literal-code
+- file: manuscript/orthemma-ortheme-systems-revised-draft.md
+  locus:
+    line: 577
+    column: 719
+  occurrence: 212
+  text: examples/somnus/
+  classification: literal-code
+- file: manuscript/orthemma-ortheme-systems-revised-draft.md
+  locus:
+    line: 581
+    column: 256
+  occurrence: 213
+  text: V2b-T_q → V1_q
+  classification: mathematics
+- file: manuscript/orthemma-ortheme-systems-revised-draft.md
+  locus:
+    line: 581
+    column: 433
+  occurrence: 214
+  text: docs/verdict-registry.yaml
+  classification: literal-code
+- file: manuscript/orthemma-ortheme-systems-revised-draft.md
+  locus:
+    line: 581
+    column: 494
+  occurrence: 215
+  text: RESULT_CORRECT
+  classification: semantic-registry-id
+- file: manuscript/orthemma-ortheme-systems-revised-draft.md
+  locus:
+    line: 581
+    column: 512
+  occurrence: 216
+  text: EVIDENCE_SUPPORT
+  classification: semantic-registry-id
+- file: manuscript/orthemma-ortheme-systems-revised-draft.md
+  locus:
+    line: 581
+    column: 532
+  occurrence: 217
+  text: PROCEDURE_RELIABLE
+  classification: semantic-registry-id
+- file: manuscript/orthemma-ortheme-systems-revised-draft.md
+  locus:
+    line: 581
+    column: 554
+  occurrence: 218
+  text: TOKEN_TRUTH_LINKED
+  classification: semantic-registry-id
+- file: manuscript/orthemma-ortheme-systems-revised-draft.md
+  locus:
+    line: 581
+    column: 576
+  occurrence: 219
+  text: EVIDENCE_CURRENT
+  classification: semantic-registry-id
+- file: manuscript/orthemma-ortheme-systems-revised-draft.md
+  locus:
+    line: 581
+    column: 596
+  occurrence: 220
+  text: GOV_CONFIG_ADEQUATE
+  classification: semantic-registry-id
+- file: manuscript/orthemma-ortheme-systems-revised-draft.md
+  locus:
+    line: 581
+    column: 619
+  occurrence: 221
+  text: GOV_POLICY_ADEQUATE
+  classification: semantic-registry-id
+- file: manuscript/orthemma-ortheme-systems-revised-draft.md
+  locus:
+    line: 581
+    column: 642
+  occurrence: 222
+  text: GOV_TOKEN_ADEQUATE
+  classification: semantic-registry-id
+- file: manuscript/orthemma-ortheme-systems-revised-draft.md
+  locus:
+    line: 581
+    column: 664
+  occurrence: 223
+  text: EXECUTION_FAITHFUL
+  classification: semantic-registry-id
+- file: manuscript/orthemma-ortheme-systems-revised-draft.md
+  locus:
+    line: 581
+    column: 686
+  occurrence: 224
+  text: EX_ANTE_JUSTIFIED
+  classification: semantic-registry-id
+- file: manuscript/orthemma-ortheme-systems-revised-draft.md
+  locus:
+    line: 581
+    column: 707
+  occurrence: 225
+  text: ROUTE_ADMISSIBLE
+  classification: semantic-registry-id
+- file: manuscript/orthemma-ortheme-systems-revised-draft.md
+  locus:
+    line: 581
+    column: 727
+  occurrence: 226
+  text: ROUTE_QUALITY
+  classification: semantic-registry-id
+- file: manuscript/orthemma-ortheme-systems-revised-draft.md
+  locus:
+    line: 581
+    column: 744
+  occurrence: 227
+  text: CLOSURE_TRUTHFUL
+  classification: semantic-registry-id
+- file: manuscript/orthemma-ortheme-systems-revised-draft.md
+  locus:
+    line: 581
+    column: 764
+  occurrence: 228
+  text: ROBUST_NEIGHBORHOOD
+  classification: semantic-registry-id
+- file: manuscript/orthemma-ortheme-systems-revised-draft.md
+  locus:
+    line: 581
+    column: 839
+  occurrence: 229
+  text: V…
+  classification: mathematics
+- file: manuscript/orthemma-ortheme-systems-revised-draft.md
+  locus:
+    line: 581
+    column: 948
+  occurrence: 230
+  text: CorePath = {V2a, V2b-P, V2c, V3a, V3b, V3c, V3d, V3e, V4a, V5, V6}
+  classification: mathematics
+- file: manuscript/orthemma-ortheme-systems-revised-draft.md
+  locus:
+    line: 581
+    column: 1106
+  occurrence: 231
+  text: ReqPath(e)
+  classification: mathematics
+- file: manuscript/orthemma-ortheme-systems-revised-draft.md
+  locus:
+    line: 581
+    column: 1402
+  occurrence: 232
+  text: PathwayAdequate(e)
+  classification: mathematics
+- file: manuscript/orthemma-ortheme-systems-revised-draft.md
+  locus:
+    line: 581
+    column: 1458
+  occurrence: 233
+  text: PathwayDefective(e)
+  classification: mathematics
+- file: manuscript/orthemma-ortheme-systems-revised-draft.md
+  locus:
+    line: 581
+    column: 1495
+  occurrence: 234
+  text: PathwayUndetermined(e)
+  classification: mathematics
+- file: manuscript/orthemma-ortheme-systems-revised-draft.md
+  locus:
+    line: 581
+    column: 1779
+  occurrence: 235
+  text: docs/governance-requirements.yaml
+  classification: literal-code
+- file: manuscript/orthemma-ortheme-systems-revised-draft.md
+  locus:
+    line: 581
+    column: 1816
+  occurrence: 236
+  text: scripts/derive_reqpath.py
+  classification: literal-code
+- file: manuscript/orthemma-ortheme-systems-revised-draft.md
+  locus:
+    line: 581
+    column: 1852
+  occurrence: 237
+  text: RequiredBy
+  classification: mathematics
+- file: manuscript/orthemma-ortheme-systems-revised-draft.md
+  locus:
+    line: 585
+    column: 68
+  occurrence: 238
+  text: O*(m; A(e))
+  classification: mathematics
+- file: manuscript/orthemma-ortheme-systems-revised-draft.md
+  locus:
+    line: 587
+    column: 315
+  occurrence: 239
+  text: RelSpec_q
+  classification: mathematics
+- file: manuscript/orthemma-ortheme-systems-revised-draft.md
+  locus:
+    line: 588
+    column: 235
+  occurrence: 240
+  text: V2b-T_q → V1_q
+  classification: mathematics
+- file: manuscript/orthemma-ortheme-systems-revised-draft.md
+  locus:
+    line: 588
+    column: 410
+  occurrence: 241
+  text: PathwayAdequate
+  classification: mathematics
+- file: manuscript/orthemma-ortheme-systems-revised-draft.md
+  locus:
+    line: 589
+    column: 83
+  occurrence: 242
+  text: (κ, v)
+  classification: mathematics
+- file: manuscript/orthemma-ortheme-systems-revised-draft.md
+  locus:
+    line: 601
+    column: 85
+  occurrence: 243
+  text: PathwayUndetermined
+  classification: mathematics
+- file: manuscript/orthemma-ortheme-systems-revised-draft.md
+  locus:
+    line: 606
+    column: 34
+  occurrence: 244
+  text: AdequatePathError(e) := ¬V1(e) ∧ PathwayAdequate(e)
+  classification: mathematics
+- file: manuscript/orthemma-ortheme-systems-revised-draft.md
+  locus:
+    line: 606
+    column: 456
+  occurrence: 245
+  text: V2b-T
+  classification: semantic-registry-id
+- file: manuscript/orthemma-ortheme-systems-revised-draft.md
+  locus:
+    line: 606
+    column: 523
+  occurrence: 246
+  text: JustifiedMiss(e) := AdequatePathError(e)
+  classification: mathematics
+- file: manuscript/orthemma-ortheme-systems-revised-draft.md
+  locus:
+    line: 608
+    column: 235
+  occurrence: 247
+  text: tests/verdict-fixtures.json
+  classification: literal-code
+- file: manuscript/orthemma-ortheme-systems-revised-draft.md
+  locus:
+    line: 612
+    column: 82
+  occurrence: 248
+  text: SCAN-CLEAN
+  classification: literal-code
+- file: manuscript/orthemma-ortheme-systems-revised-draft.md
+  locus:
+    line: 646
+    column: 27
+  occurrence: 249
+  text: α
+  classification: mathematics
+- file: manuscript/orthemma-ortheme-systems-revised-draft.md
+  locus:
+    line: 653
+    column: 137
+  occurrence: 250
+  text: Γ_E = (E, ⇝)
+  classification: mathematics
+- file: manuscript/orthemma-ortheme-systems-revised-draft.md
+  locus:
+    line: 667
+    column: 52
+  occurrence: 251
+  text: e_Γ = comp(Γ_E)
+  classification: mathematics
+- file: manuscript/orthemma-ortheme-systems-revised-draft.md
+  locus:
+    line: 669
+    column: 58
+  occurrence: 252
+  text: m
+  classification: mathematics
+- file: manuscript/orthemma-ortheme-systems-revised-draft.md
+  locus:
+    line: 669
+    column: 120
+  occurrence: 253
+  text: A
+  classification: mathematics
+- file: manuscript/orthemma-ortheme-systems-revised-draft.md
+  locus:
+    line: 669
+    column: 140
+  occurrence: 254
+  text: T = task(A)
+  classification: mathematics
+- file: manuscript/orthemma-ortheme-systems-revised-draft.md
+  locus:
+    line: 685
+    column: 147
+  occurrence: 255
+  text: (κ, v)
+  classification: mathematics
+- file: manuscript/orthemma-ortheme-systems-revised-draft.md
+  locus:
+    line: 686
+    column: 50
+  occurrence: 256
+  text: A_α
+  classification: mathematics
+- file: manuscript/orthemma-ortheme-systems-revised-draft.md
+  locus:
+    line: 686
+    column: 160
+  occurrence: 257
+  text: T_α = task(A_α)
+  classification: mathematics
+- file: manuscript/orthemma-ortheme-systems-revised-draft.md
+  locus:
+    line: 686
+    column: 372
+  occurrence: 258
+  text: O*(m; A_α)
+  classification: mathematics
+- file: manuscript/orthemma-ortheme-systems-revised-draft.md
+  locus:
+    line: 686
+    column: 597
+  occurrence: 259
+  text: m
+  classification: mathematics
+- file: manuscript/orthemma-ortheme-systems-revised-draft.md
+  locus:
+    line: 686
+    column: 641
+  occurrence: 260
+  text: x_α = Ω_α(m)
+  classification: mathematics
+- file: manuscript/orthemma-ortheme-systems-revised-draft.md
+  locus:
+    line: 691
+    column: 51
+  occurrence: 261
+  text: α
+  classification: mathematics
+- file: manuscript/orthemma-ortheme-systems-revised-draft.md
+  locus:
+    line: 691
+    column: 83
+  occurrence: 262
+  text: A_α
+  classification: mathematics
+- file: manuscript/orthemma-ortheme-systems-revised-draft.md
+  locus:
+    line: 691
+    column: 99
+  occurrence: 263
+  text: T_α = task(A_α)
+  classification: mathematics
+- file: manuscript/orthemma-ortheme-systems-revised-draft.md
+  locus:
+    line: 691
+    column: 141
+  occurrence: 264
+  text: 𝒢_{α,A_α} ⊆ Π_{A_α}
+  classification: mathematics
+- file: manuscript/orthemma-ortheme-systems-revised-draft.md
+  locus:
+    line: 691
+    column: 191
+  occurrence: 265
+  text: α
+  classification: mathematics
+- file: manuscript/orthemma-ortheme-systems-revised-draft.md
+  locus:
+    line: 691
+    column: 202
+  occurrence: 266
+  text: T_α
+  classification: mathematics
+- file: manuscript/orthemma-ortheme-systems-revised-draft.md
+  locus:
+    line: 691
+    column: 289
+  occurrence: 267
+  text: 𝒢_{α,A_α}
+  classification: mathematics
+- file: manuscript/orthemma-ortheme-systems-revised-draft.md
+  locus:
+    line: 691
+    column: 487
+  occurrence: 268
+  text: 𝒢_{α,A_α}
+  classification: mathematics
+- file: manuscript/orthemma-ortheme-systems-revised-draft.md
+  locus:
+    line: 691
+    column: 532
+  occurrence: 269
+  text: α
+  classification: mathematics
+- file: manuscript/orthemma-ortheme-systems-revised-draft.md
+  locus:
+    line: 691
+    column: 567
+  occurrence: 270
+  text: GoalSchema(α)
+  classification: mathematics
+- file: manuscript/orthemma-ortheme-systems-revised-draft.md
+  locus:
+    line: 695
+    column: 3
+  occurrence: 271
+  text: 𝒢_{α,A_α}
+  classification: mathematics
+- file: manuscript/orthemma-ortheme-systems-revised-draft.md
+  locus:
+    line: 695
+    column: 58
+  occurrence: 272
+  text: O*(m; A_α)
+  classification: mathematics
+- file: manuscript/orthemma-ortheme-systems-revised-draft.md
+  locus:
+    line: 697
+    column: 3
+  occurrence: 273
+  text: 𝒢_{α,A_α}
+  classification: mathematics
+- file: manuscript/orthemma-ortheme-systems-revised-draft.md
+  locus:
+    line: 700
+    column: 3
+  occurrence: 274
+  text: 𝒢_{α,A_α}
+  classification: mathematics
+- file: manuscript/orthemma-ortheme-systems-revised-draft.md
+  locus:
+    line: 705
+    column: 123
+  occurrence: 275
+  text: α
+  classification: mathematics
+- file: manuscript/orthemma-ortheme-systems-revised-draft.md
+  locus:
+    line: 705
+    column: 131
+  occurrence: 276
+  text: β
+  classification: mathematics
+- file: manuscript/orthemma-ortheme-systems-revised-draft.md
+  locus:
+    line: 705
+    column: 173
+  occurrence: 277
+  text: A_α, A_β
+  classification: mathematics
+- file: manuscript/orthemma-ortheme-systems-revised-draft.md
+  locus:
+    line: 705
+    column: 194
+  occurrence: 278
+  text: T_α = task(A_α)
+  classification: mathematics
+- file: manuscript/orthemma-ortheme-systems-revised-draft.md
+  locus:
+    line: 705
+    column: 213
+  occurrence: 279
+  text: T_β = task(A_β)
+  classification: mathematics
+- file: manuscript/orthemma-ortheme-systems-revised-draft.md
+  locus:
+    line: 706
+    column: 56
+  occurrence: 280
+  text: 𝒢_{α,A_α} ≠ 𝒢_{β,A_β}
+  classification: mathematics
+- file: manuscript/orthemma-ortheme-systems-revised-draft.md
+  locus:
+    line: 711
+    column: 32
+  occurrence: 281
+  text: m
+  classification: mathematics
+- file: manuscript/orthemma-ortheme-systems-revised-draft.md
+  locus:
+    line: 712
+    column: 97
+  occurrence: 282
+  text: m
+  classification: mathematics
+- file: manuscript/orthemma-ortheme-systems-revised-draft.md
+  locus:
+    line: 712
+    column: 157
+  occurrence: 283
+  text: p̂_{A_α,α,t}(m)
+  classification: mathematics
+- file: manuscript/orthemma-ortheme-systems-revised-draft.md
+  locus:
+    line: 713
+    column: 1
+  occurrence: 284
+  text: p̂_{A_β,β,t}(m)
+  classification: mathematics
+- file: manuscript/orthemma-ortheme-systems-revised-draft.md
+  locus:
+    line: 713
+    column: 61
+  occurrence: 285
+  text: α
+  classification: mathematics
+- file: manuscript/orthemma-ortheme-systems-revised-draft.md
+  locus:
+    line: 713
+    column: 74
+  occurrence: 286
+  text: β
+  classification: mathematics
+- file: manuscript/orthemma-ortheme-systems-revised-draft.md
+  locus:
+    line: 713
+    column: 104
+  occurrence: 287
+  text: 𝒢_{α,A_α}
+  classification: mathematics
+- file: manuscript/orthemma-ortheme-systems-revised-draft.md
+  locus:
+    line: 713
+    column: 160
+  occurrence: 288
+  text: 𝒢_{β,A_β}
+  classification: mathematics
+- file: manuscript/orthemma-ortheme-systems-revised-draft.md
+  locus:
+    line: 717
+    column: 108
+  occurrence: 289
+  text: M
+  classification: mathematics
+- file: manuscript/orthemma-ortheme-systems-revised-draft.md
+  locus:
+    line: 730
+    column: 43
+  occurrence: 290
+  text: '{𝒢_{α_i,A_i}}'
+  classification: mathematics
+- file: manuscript/orthemma-ortheme-systems-revised-draft.md
+  locus:
+    line: 730
+    column: 158
+  occurrence: 291
+  text: 𝒢_{α,A_α} ⊆ Π_{A_α}
+  classification: mathematics
+- file: manuscript/orthemma-ortheme-systems-revised-draft.md
+  locus:
+    line: 730
+    column: 240
+  occurrence: 292
+  text: Reach(m)
+  classification: mathematics
+- file: manuscript/orthemma-ortheme-systems-revised-draft.md
+  locus:
+    line: 730
+    column: 282
+  occurrence: 293
+  text: m
+  classification: mathematics
+- file: manuscript/orthemma-ortheme-systems-revised-draft.md
+  locus:
+    line: 732
+    column: 22
+  occurrence: 294
+  text: Compat_m(𝒢_1, 𝒢_2)
+  classification: mathematics
+- file: manuscript/orthemma-ortheme-systems-revised-draft.md
+  locus:
+    line: 732
+    column: 47
+  occurrence: 295
+  text: '∃ m′ ∈ Reach(m): O*(m′; A_1) ∈ 𝒢_1 ∧ O*(m′; A_2) ∈ 𝒢_2'
+  classification: mathematics
+- file: manuscript/orthemma-ortheme-systems-revised-draft.md
+  locus:
+    line: 733
+    column: 17
+  occurrence: 296
+  text: Conflict_m(𝒢_1, 𝒢_2)
+  classification: mathematics
+- file: manuscript/orthemma-ortheme-systems-revised-draft.md
+  locus:
+    line: 733
+    column: 62
+  occurrence: 297
+  text: m′
+  classification: mathematics
+- file: manuscript/orthemma-ortheme-systems-revised-draft.md
+  locus:
+    line: 734
+    column: 60
+  occurrence: 298
+  text: 𝒢_{α_1,A} = 𝒢_{α_2,A}
+  classification: mathematics
+- file: manuscript/orthemma-ortheme-systems-revised-draft.md
+  locus:
+    line: 751
+    column: 35
+  occurrence: 299
+  text: C^profile
+  classification: mathematics
+- file: manuscript/orthemma-ortheme-systems-revised-draft.md
+  locus:
+    line: 751
+    column: 157
+  occurrence: 300
+  text: C^id
+  classification: mathematics
+- file: manuscript/orthemma-ortheme-systems-revised-draft.md
+  locus:
+    line: 752
+    column: 102
+  occurrence: 301
+  text: C^warrant
+  classification: mathematics
+- file: manuscript/orthemma-ortheme-systems-revised-draft.md
+  locus:
+    line: 782
+    column: 26
+  occurrence: 302
+  text: C^id
+  classification: mathematics
+- file: manuscript/orthemma-ortheme-systems-revised-draft.md
+  locus:
+    line: 783
+    column: 38
+  occurrence: 303
+  text: (κ, v)
+  classification: mathematics
+- file: manuscript/orthemma-ortheme-systems-revised-draft.md
+  locus:
+    line: 783
+    column: 61
+  occurrence: 304
+  text: (κ, v′)
+  classification: mathematics
+- file: manuscript/orthemma-ortheme-systems-revised-draft.md
+  locus:
+    line: 795
+    column: 925
+  occurrence: 305
+  text: examples/compaction-stale-steer.md
+  classification: literal-code
+- file: manuscript/orthemma-ortheme-systems-revised-draft.md
+  locus:
+    line: 839
+    column: 78
+  occurrence: 306
+  text: z
+  classification: mathematics
+- file: manuscript/orthemma-ortheme-systems-revised-draft.md
+  locus:
+    line: 843
+    column: 121
+  occurrence: 307
+  text: A
+  classification: mathematics
+- file: manuscript/orthemma-ortheme-systems-revised-draft.md
+  locus:
+    line: 850
+    column: 38
+  occurrence: 308
+  text: theislampill/daee-epistemics
+  classification: literal-code
+- file: manuscript/orthemma-ortheme-systems-revised-draft.md
+  locus:
+    line: 854
+    column: 60
+  occurrence: 309
+  text: applications/daee-epistemics/
+  classification: literal-code
+- file: manuscript/orthemma-ortheme-systems-revised-draft.md
+  locus:
+    line: 867
+    column: 128
+  occurrence: 310
+  text: experiments/
+  classification: literal-code
+- file: manuscript/orthemma-ortheme-systems-revised-draft.md
+  locus:
+    line: 867
+    column: 172
+  occurrence: 311
+  text: experiments/experiment-status.yaml
+  classification: literal-code
+- file: manuscript/orthemma-ortheme-systems-revised-draft.md
+  locus:
+    line: 869
+    column: 79
+  occurrence: 312
+  text: FCSP-2
+  classification: semantic-registry-id
+- file: manuscript/orthemma-ortheme-systems-revised-draft.md
+  locus:
+    line: 873
+    column: 196
+  occurrence: 313
+  text: experiments/false-closure-selective-prediction-v2/
+  classification: literal-code
+- file: manuscript/orthemma-ortheme-systems-revised-draft.md
+  locus:
+    line: 873
+    column: 257
+  occurrence: 314
+  text: FCSP-2
+  classification: semantic-registry-id
+- file: manuscript/orthemma-ortheme-systems-revised-draft.md
+  locus:
+    line: 873
+    column: 565
+  occurrence: 315
+  text: READY_TO_RUN
+  classification: semantic-registry-id
+- file: manuscript/orthemma-ortheme-systems-revised-draft.md
+  locus:
+    line: 873
+    column: 582
+  occurrence: 316
+  text: PREREGISTRATION_READY
+  classification: semantic-registry-id
+- file: manuscript/orthemma-ortheme-systems-revised-draft.md
+  locus:
+    line: 873
+    column: 689
+  occurrence: 317
+  text: FCSP-1
+  classification: semantic-registry-id
+- file: manuscript/orthemma-ortheme-systems-revised-draft.md
+  locus:
+    line: 875
+    column: 58
+  occurrence: 318
+  text: DECISION-RULES.yaml
+  classification: literal-code
+- file: manuscript/orthemma-ortheme-systems-revised-draft.md
+  locus:
+    line: 887
+    column: 30
+  occurrence: 319
+  text: experiments/episode-reification-v2/
+  classification: literal-code
+- file: manuscript/orthemma-ortheme-systems-revised-draft.md
+  locus:
+    line: 887
+    column: 76
+  occurrence: 320
+  text: ER-2
+  classification: semantic-registry-id
+- file: manuscript/orthemma-ortheme-systems-revised-draft.md
+  locus:
+    line: 887
+    column: 362
+  occurrence: 321
+  text: READY_TO_RUN
+  classification: semantic-registry-id
+- file: manuscript/orthemma-ortheme-systems-revised-draft.md
+  locus:
+    line: 887
+    column: 379
+  occurrence: 322
+  text: PREREGISTRATION_READY
+  classification: semantic-registry-id
+- file: manuscript/orthemma-ortheme-systems-revised-draft.md
+  locus:
+    line: 887
+    column: 486
+  occurrence: 323
+  text: ER-1
+  classification: semantic-registry-id
+- file: manuscript/orthemma-ortheme-systems-revised-draft.md
+  locus:
+    line: 919
+    column: 22
+  occurrence: 324
+  text: orth-
+  classification: literal-code
+- file: manuscript/orthemma-ortheme-systems-revised-draft.md
+  locus:
+    line: 920
+    column: 20
+  occurrence: 325
+  text: -eme
+  classification: literal-code
+- file: manuscript/orthemma-ortheme-systems-revised-draft.md
+  locus:
+    line: 922
+    column: 16
+  occurrence: 326
+  text: -ma
+  classification: literal-code
+- file: manuscript/orthemma-ortheme-systems-revised-draft.md
+  locus:
+    line: 922
+    column: 32
+  occurrence: 327
+  text: -mat-
+  classification: literal-code
+- file: manuscript/orthemma-ortheme-systems-revised-draft.md
+  locus:
+    line: 924
+    column: 20
+  occurrence: 328
+  text: ἐμός
+  classification: literal-code
+- file: manuscript/orthemma-ortheme-systems-revised-draft.md
+  locus:
+    line: 924
+    column: 42
+  occurrence: 329
+  text: ἐμά
+  classification: literal-code
+- file: manuscript/orthemma-ortheme-systems-revised-draft.md
+  locus:
+    line: 925
+    column: 51
+  occurrence: 330
+  text: -ma
+  classification: literal-code
+- file: manuscript/orthemma-ortheme-systems-revised-draft.md
+  locus:
+    line: 925
+    column: 58
+  occurrence: 331
+  text: -emma
+  classification: literal-code
+- file: manuscript/orthemma-ortheme-systems-revised-draft.md
+  locus:
+    line: 928
+    column: 19
+  occurrence: 332
+  text: ortheme
+  classification: literal-code
+- file: manuscript/orthemma-ortheme-systems-revised-draft.md
+  locus:
+    line: 962
+    column: 143
+  occurrence: 333
+  text: RequiredBy
+  classification: mathematics
+- file: manuscript/orthemma-ortheme-systems-revised-draft.md
+  locus:
+    line: 962
+    column: 294
+  occurrence: 334
+  text: Δ_A
+  classification: mathematics
+- file: manuscript/orthemma-ortheme-systems-revised-draft.md
+  locus:
+    line: 987
+    column: 577
+  occurrence: 335
+  text: theislampill/orthemology
+  classification: literal-code
+- file: manuscript/orthemma-ortheme-systems-revised-draft.md
+  locus:
+    line: 987
+    column: 654
+  occurrence: 336
+  text: docs/provenance/
+  classification: literal-code
+- file: manuscript/orthemma-ortheme-systems-revised-draft.md
+  locus:
+    line: 987
+    column: 712
+  occurrence: 337
+  text: artifacts/
+  classification: literal-code
+- file: manuscript/orthemma-ortheme-systems-revised-draft.md
+  locus:
+    line: 1014
+    column: 77
+  occurrence: 338
+  text: ἐμός
+  classification: literal-code
+- file: manuscript/orthemma-ortheme-systems-revised-draft.md
+  locus:
+    line: 1025
+    column: 63
+  occurrence: 339
+  text: references/orthemology.bib
+  classification: literal-code
+- file: manuscript/orthemma-ortheme-systems-revised-draft.md
+  locus:
+    line: 1025
+    column: 126
+  occurrence: 340
+  text: docs/sourcing/CURRENT-SOURCING-LEDGER.md
+  classification: literal-code
+- file: manuscript/orthemma-ortheme-systems-revised-draft.md
+  locus:
+    line: 1033
+    column: 28
+  occurrence: 341
+  text: Inst_A
+  classification: mathematics
+- file: manuscript/orthemma-ortheme-systems-revised-draft.md
+  locus:
+    line: 1033
+    column: 40
+  occurrence: 342
+  text: (m, o) ∈ Inst_A
+  classification: mathematics
+- file: manuscript/orthemma-ortheme-systems-revised-draft.md
+  locus:
+    line: 1033
+    column: 59
+  occurrence: 343
+  text: m
+  classification: mathematics
+- file: manuscript/orthemma-ortheme-systems-revised-draft.md
+  locus:
+    line: 1033
+    column: 76
+  occurrence: 344
+  text: o
+  classification: mathematics
+- file: manuscript/orthemma-ortheme-systems-revised-draft.md
+  locus:
+    line: 1033
+    column: 121
+  occurrence: 345
+  text: A
+  classification: mathematics
+- file: manuscript/orthemma-ortheme-systems-revised-draft.md
+  locus:
+    line: 1033
+    column: 131
+  occurrence: 346
+  text: T = task(A)
+  classification: mathematics
+- file: manuscript/orthemma-ortheme-systems-revised-draft.md
+  locus:
+    line: 1033
+    column: 157
+  occurrence: 347
+  text: O*(m; A)
+  classification: mathematics
+- file: manuscript/orthemma-ortheme-systems-revised-draft.md
+  locus:
+    line: 1033
+    column: 191
+  occurrence: 348
+  text: Inst_T
+  classification: mathematics
+- file: manuscript/orthemma-ortheme-systems-revised-draft.md
+  locus:
+    line: 1033
+    column: 202
+  occurrence: 349
+  text: O*_T(m)
+  classification: mathematics
+- file: manuscript/orthemma-ortheme-systems-revised-draft.md
+  locus:
+    line: 1033
+    column: 255
+  occurrence: 350
+  text: A
+  classification: mathematics
+- file: manuscript/orthemma-ortheme-systems-revised-draft.md
+  locus:
+    line: 1033
+    column: 264
+  occurrence: 351
+  text: task(A) = T
+  classification: mathematics
+- file: manuscript/orthemma-ortheme-systems-revised-draft.md
+  locus:
+    line: 1034
+    column: 30
+  occurrence: 352
+  text: C^id, C^profile, C^cause, C^route, C^warrant
+  classification: mathematics
+- file: manuscript/orthemma-ortheme-systems-revised-draft.md
+  locus:
+    line: 1037
+    column: 27
+  occurrence: 353
+  text: Succ_a(m)
+  classification: mathematics
+- file: manuscript/orthemma-ortheme-systems-revised-draft.md
+  locus:
+    line: 1038
+    column: 139
+  occurrence: 354
+  text: MetaInst(μ̄, μ)
+  classification: mathematics
+- file: manuscript/orthemma-ortheme-systems-revised-draft.md
+  locus:
+    line: 1038
+    column: 309
+  occurrence: 355
+  text: Compatible(μ̄, A(e))
+  classification: mathematics
+- file: manuscript/orthemma-ortheme-systems-revised-draft.md
+  locus:
+    line: 1039
+    column: 49
+  occurrence: 356
+  text: ⟨g, S_μ, select_μ, prov(μ), ver(μ)⟩
+  classification: mathematics
+- file: manuscript/orthemma-ortheme-systems-revised-draft.md
+  locus:
+    line: 1045
+    column: 384
+  occurrence: 357
+  text: docs/verdict-registry.yaml
+  classification: literal-code
+- file: manuscript/orthemma-ortheme-systems-revised-draft.md
+  locus:
+    line: 1047
+    column: 20
+  occurrence: 358
+  text: 𝒢_{α,A_α}
+  classification: mathematics
+- file: manuscript/orthemma-ortheme-systems-revised-draft.md
+  locus:
+    line: 1047
+    column: 143
+  occurrence: 359
+  text: A_α
+  classification: mathematics
+- file: manuscript/orthemma-ortheme-systems-revised-draft.md
+  locus:
+    line: 1050
+    column: 68
+  occurrence: 360
+  text: docs/provenance/document-history.md
+  classification: literal-code
+- file: manuscript/orthemma-ortheme-systems-revised-draft.md
+  locus:
+    line: 1050
+    column: 131
+  occurrence: 361
+  text: theory/orthemic-core-formalization.md
+  classification: literal-code
+- file: manuscript/orthemma-ortheme-systems-revised-draft.md
+  locus:
+    line: 1050
+    column: 205
+  occurrence: 362
+  text: terminology/
+  classification: literal-code
+- file: manuscript/orthemma-ortheme-systems-revised-draft.md
+  locus:
+    line: 1052
+    column: 289
+  occurrence: 363
+  text: applications/latent-state-orthing/
+  classification: literal-code
+- file: manuscript/orthemma-ortheme-systems-revised-draft.md
+  locus:
+    line: 1052
+    column: 502
+  occurrence: 364
+  text: applications/daee-epistemics/
+  classification: literal-code
+- file: manuscript/orthemma-ortheme-systems-revised-draft.md
+  locus:
+    line: 1052
+    column: 713
+  occurrence: 365
+  text: docs/architecture/ORTHEMOLOGY-LAYER-MAP.md
+  classification: literal-code
+- file: theory/orthemic-core-formalization.md
+  locus:
+    line: 5
+    column: 4
+  occurrence: 1
+  text: docs/provenance/document-history.md
+  classification: literal-code
+- file: theory/orthemic-core-formalization.md
+  locus:
+    line: 7
+    column: 4
+  occurrence: 2
+  text: docs/provenance/model-contributions.md
+  classification: literal-code
+- file: theory/orthemic-core-formalization.md
+  locus:
+    line: 18
+    column: 2
+  occurrence: 3
+  text: docs/notation-registry.yaml
+  classification: literal-code
+- file: theory/orthemic-core-formalization.md
+  locus:
+    line: 18
+    column: 67
+  occurrence: 4
+  text: 𝓜
+  classification: mathematics
+- file: theory/orthemic-core-formalization.md
+  locus:
+    line: 19
+    column: 1
+  occurrence: 5
+  text: 𝓞
+  classification: mathematics
+- file: theory/orthemic-core-formalization.md
+  locus:
+    line: 20
+    column: 1
+  occurrence: 6
+  text: A
+  classification: mathematics
+- file: theory/orthemic-core-formalization.md
+  locus:
+    line: 20
+    column: 24
+  occurrence: 7
+  text: M_A ⊆ 𝓜
+  classification: mathematics
+- file: theory/orthemic-core-formalization.md
+  locus:
+    line: 21
+    column: 14
+  occurrence: 8
+  text: O_A ⊆ 𝓞
+  classification: mathematics
+- file: theory/orthemic-core-formalization.md
+  locus:
+    line: 22
+    column: 60
+  occurrence: 9
+  text: M
+  classification: mathematics
+- file: theory/orthemic-core-formalization.md
+  locus:
+    line: 22
+    column: 65
+  occurrence: 10
+  text: O
+  classification: mathematics
+- file: theory/orthemic-core-formalization.md
+  locus:
+    line: 23
+    column: 1
+  occurrence: 11
+  text: Inst_A ⊆ M_A × O_A
+  classification: mathematics
+- file: theory/orthemic-core-formalization.md
+  locus:
+    line: 25
+    column: 10
+  occurrence: 12
+  text: A
+  classification: mathematics
+- file: theory/orthemic-core-formalization.md
+  locus:
+    line: 25
+    column: 49
+  occurrence: 13
+  text: T = task(A)
+  classification: mathematics
+- file: theory/orthemic-core-formalization.md
+  locus:
+    line: 26
+    column: 1
+  occurrence: 14
+  text: O*(m; A)
+  classification: mathematics
+- file: theory/orthemic-core-formalization.md
+  locus:
+    line: 26
+    column: 55
+  occurrence: 15
+  text: A
+  classification: mathematics
+- file: theory/orthemic-core-formalization.md
+  locus:
+    line: 27
+    column: 1
+  occurrence: 16
+  text: Π_A
+  classification: mathematics
+- file: theory/orthemic-core-formalization.md
+  locus:
+    line: 27
+    column: 40
+  occurrence: 17
+  text: Π_A^∂
+  classification: mathematics
+- file: theory/orthemic-core-formalization.md
+  locus:
+    line: 28
+    column: 29
+  occurrence: 18
+  text: p̂_t(m) ∈ Π_A^∂
+  classification: mathematics
+- file: theory/orthemic-core-formalization.md
+  locus:
+    line: 29
+    column: 1
+  occurrence: 19
+  text: Ô
+  classification: mathematics
+- file: theory/orthemic-core-formalization.md
+  locus:
+    line: 29
+    column: 48
+  occurrence: 20
+  text: p̂
+  classification: mathematics
+- file: theory/orthemic-core-formalization.md
+  locus:
+    line: 30
+    column: 1
+  occurrence: 21
+  text: Ĉ_t(m)
+  classification: mathematics
+- file: theory/orthemic-core-formalization.md
+  locus:
+    line: 30
+    column: 48
+  occurrence: 22
+  text: Ω
+  classification: mathematics
+- file: theory/orthemic-core-formalization.md
+  locus:
+    line: 31
+    column: 6
+  occurrence: 23
+  text: μ
+  classification: mathematics
+- file: theory/orthemic-core-formalization.md
+  locus:
+    line: 31
+    column: 27
+  occurrence: 24
+  text: o-hat
+  classification: mathematics
+- file: theory/orthemic-core-formalization.md
+  locus:
+    line: 32
+    column: 53
+  occurrence: 25
+  text: A
+  classification: mathematics
+- file: theory/orthemic-core-formalization.md
+  locus:
+    line: 33
+    column: 1
+  occurrence: 26
+  text: task(A) = T
+  classification: mathematics
+- file: theory/orthemic-core-formalization.md
+  locus:
+    line: 34
+    column: 2
+  occurrence: 27
+  text: Inst_T
+  classification: mathematics
+- file: theory/orthemic-core-formalization.md
+  locus:
+    line: 34
+    column: 12
+  occurrence: 28
+  text: O*_T(m)
+  classification: mathematics
+- file: theory/orthemic-core-formalization.md
+  locus:
+    line: 34
+    column: 23
+  occurrence: 29
+  text: Π_T
+  classification: mathematics
+- file: theory/orthemic-core-formalization.md
+  locus:
+    line: 34
+    column: 30
+  occurrence: 30
+  text: 𝒦_T
+  classification: mathematics
+- file: theory/orthemic-core-formalization.md
+  locus:
+    line: 34
+    column: 37
+  occurrence: 31
+  text: ℛ_T
+  classification: mathematics
+- file: theory/orthemic-core-formalization.md
+  locus:
+    line: 34
+    column: 44
+  occurrence: 32
+  text: 𝒲_T
+  classification: mathematics
+- file: theory/orthemic-core-formalization.md
+  locus:
+    line: 35
+    column: 1
+  occurrence: 33
+  text: M
+  classification: mathematics
+- file: theory/orthemic-core-formalization.md
+  locus:
+    line: 35
+    column: 6
+  occurrence: 34
+  text: O
+  classification: mathematics
+- file: theory/orthemic-core-formalization.md
+  locus:
+    line: 35
+    column: 27
+  occurrence: 35
+  text: A
+  classification: mathematics
+- file: theory/orthemic-core-formalization.md
+  locus:
+    line: 38
+    column: 50
+  occurrence: 36
+  text: O*(m; A)
+  classification: mathematics
+- file: theory/orthemic-core-formalization.md
+  locus:
+    line: 41
+    column: 21
+  occurrence: 37
+  text: retired_symbols
+  classification: literal-code
+- file: theory/orthemic-core-formalization.md
+  locus:
+    line: 52
+    column: 28
+  occurrence: 38
+  text: abc123
+  classification: literal-code
+- file: theory/orthemic-core-formalization.md
+  locus:
+    line: 52
+    column: 62
+  occurrence: 39
+  text: e
+  classification: mathematics
+- file: theory/orthemic-core-formalization.md
+  locus:
+    line: 57
+    column: 25
+  occurrence: 40
+  text: M^(0)
+  classification: mathematics
+- file: theory/orthemic-core-formalization.md
+  locus:
+    line: 58
+    column: 1
+  occurrence: 41
+  text: E^(0)
+  classification: mathematics
+- file: theory/orthemic-core-formalization.md
+  locus:
+    line: 58
+    column: 50
+  occurrence: 42
+  text: M^(0)
+  classification: mathematics
+- file: theory/orthemic-core-formalization.md
+  locus:
+    line: 63
+    column: 63
+  occurrence: 43
+  text: n
+  classification: mathematics
+- file: theory/orthemic-core-formalization.md
+  locus:
+    line: 69
+    column: 1
+  occurrence: 44
+  text: ⊇
+  classification: mathematics
+- file: theory/orthemic-core-formalization.md
+  locus:
+    line: 72
+    column: 19
+  occurrence: 45
+  text: n+1
+  classification: mathematics
+- file: theory/orthemic-core-formalization.md
+  locus:
+    line: 82
+    column: 39
+  occurrence: 46
+  text: 'ι_n : E^(n) ↪ M^(n+1)'
+  classification: mathematics
+- file: theory/orthemic-core-formalization.md
+  locus:
+    line: 87
+    column: 56
+  occurrence: 47
+  text: ι_n(e) ∈ M^(n+1)
+  classification: mathematics
+- file: theory/orthemic-core-formalization.md
+  locus:
+    line: 100
+    column: 18
+  occurrence: 48
+  text: μ̄
+  classification: mathematics
+- file: theory/orthemic-core-formalization.md
+  locus:
+    line: 113
+    column: 35
+  occurrence: 49
+  text: e_μ(m) = o-hat
+  classification: mathematics
+- file: theory/orthemic-core-formalization.md
+  locus:
+    line: 114
+    column: 13
+  occurrence: 50
+  text: μ
+  classification: mathematics
+- file: theory/orthemic-core-formalization.md
+  locus:
+    line: 114
+    column: 31
+  occurrence: 51
+  text: m
+  classification: mathematics
+- file: theory/orthemic-core-formalization.md
+  locus:
+    line: 115
+    column: 1
+  occurrence: 52
+  text: o-hat = o*
+  classification: mathematics
+- file: theory/orthemic-core-formalization.md
+  locus:
+    line: 121
+    column: 41
+  occurrence: 53
+  text: μ
+  classification: mathematics
+- file: theory/orthemic-core-formalization.md
+  locus:
+    line: 125
+    column: 50
+  occurrence: 54
+  text: E
+  classification: mathematics
+- file: theory/orthemic-core-formalization.md
+  locus:
+    line: 143
+    column: 3
+  occurrence: 55
+  text: id
+  classification: literal-code
+- file: theory/orthemic-core-formalization.md
+  locus:
+    line: 144
+    column: 3
+  occurrence: 56
+  text: m
+  classification: mathematics
+- file: theory/orthemic-core-formalization.md
+  locus:
+    line: 144
+    column: 9
+  occurrence: 57
+  text: M
+  classification: mathematics
+- file: theory/orthemic-core-formalization.md
+  locus:
+    line: 145
+    column: 3
+  occurrence: 58
+  text: κ = id(m)
+  classification: mathematics
+- file: theory/orthemic-core-formalization.md
+  locus:
+    line: 146
+    column: 3
+  occurrence: 59
+  text: v = ver(m)
+  classification: mathematics
+- file: theory/orthemic-core-formalization.md
+  locus:
+    line: 147
+    column: 3
+  occurrence: 60
+  text: x = Ω_e(m)
+  classification: mathematics
+- file: theory/orthemic-core-formalization.md
+  locus:
+    line: 148
+    column: 3
+  occurrence: 61
+  text: H
+  classification: mathematics
+- file: theory/orthemic-core-formalization.md
+  locus:
+    line: 149
+    column: 3
+  occurrence: 62
+  text: α
+  classification: mathematics
+- file: theory/orthemic-core-formalization.md
+  locus:
+    line: 150
+    column: 3
+  occurrence: 63
+  text: w
+  classification: mathematics
+- file: theory/orthemic-core-formalization.md
+  locus:
+    line: 151
+    column: 3
+  occurrence: 64
+  text: A
+  classification: mathematics
+- file: theory/orthemic-core-formalization.md
+  locus:
+    line: 151
+    column: 155
+  occurrence: 65
+  text: O*(m; A)
+  classification: mathematics
+- file: theory/orthemic-core-formalization.md
+  locus:
+    line: 151
+    column: 245
+  occurrence: 66
+  text: A
+  classification: mathematics
+- file: theory/orthemic-core-formalization.md
+  locus:
+    line: 152
+    column: 3
+  occurrence: 67
+  text: T = task(A)
+  classification: mathematics
+- file: theory/orthemic-core-formalization.md
+  locus:
+    line: 152
+    column: 48
+  occurrence: 68
+  text: A
+  classification: mathematics
+- file: theory/orthemic-core-formalization.md
+  locus:
+    line: 153
+    column: 3
+  occurrence: 69
+  text: t
+  classification: mathematics
+- file: theory/orthemic-core-formalization.md
+  locus:
+    line: 154
+    column: 131
+  occurrence: 70
+  text: ≼
+  classification: mathematics
+- file: theory/orthemic-core-formalization.md
+  locus:
+    line: 155
+    column: 3
+  occurrence: 71
+  text: MetaTok(e) = {μ̄_1,…,μ̄_j}
+  classification: mathematics
+- file: theory/orthemic-core-formalization.md
+  locus:
+    line: 155
+    column: 154
+  occurrence: 72
+  text: μ̄
+  classification: mathematics
+- file: theory/orthemic-core-formalization.md
+  locus:
+    line: 155
+    column: 209
+  occurrence: 73
+  text: (μ, ver(μ))
+  classification: mathematics
+- file: theory/orthemic-core-formalization.md
+  locus:
+    line: 155
+    column: 247
+  occurrence: 74
+  text: MetaInst(μ̄, μ)
+  classification: mathematics
+- file: theory/orthemic-core-formalization.md
+  locus:
+    line: 155
+    column: 266
+  occurrence: 75
+  text: (A(e), ver(A(e)))
+  classification: mathematics
+- file: theory/orthemic-core-formalization.md
+  locus:
+    line: 155
+    column: 291
+  occurrence: 76
+  text: Compatible(μ̄, A(e))
+  classification: mathematics
+- file: theory/orthemic-core-formalization.md
+  locus:
+    line: 155
+    column: 404
+  occurrence: 77
+  text: A
+  classification: mathematics
+- file: theory/orthemic-core-formalization.md
+  locus:
+    line: 155
+    column: 444
+  occurrence: 78
+  text: A
+  classification: mathematics
+- file: theory/orthemic-core-formalization.md
+  locus:
+    line: 155
+    column: 501
+  occurrence: 79
+  text: (κ, v)
+  classification: mathematics
+- file: theory/orthemic-core-formalization.md
+  locus:
+    line: 155
+    column: 530
+  occurrence: 80
+  text: g
+  classification: mathematics
+- file: theory/orthemic-core-formalization.md
+  locus:
+    line: 155
+    column: 565
+  occurrence: 81
+  text: B
+  classification: mathematics
+- file: theory/orthemic-core-formalization.md
+  locus:
+    line: 155
+    column: 640
+  occurrence: 82
+  text: σ
+  classification: mathematics
+- file: theory/orthemic-core-formalization.md
+  locus:
+    line: 155
+    column: 664
+  occurrence: 83
+  text: 𝒬
+  classification: mathematics
+- file: theory/orthemic-core-formalization.md
+  locus:
+    line: 155
+    column: 846
+  occurrence: 84
+  text: w_bind
+  classification: mathematics
+- file: theory/orthemic-core-formalization.md
+  locus:
+    line: 155
+    column: 913
+  occurrence: 85
+  text: t_bind
+  classification: mathematics
+- file: theory/orthemic-core-formalization.md
+  locus:
+    line: 155
+    column: 997
+  occurrence: 86
+  text: H
+  classification: mathematics
+- file: theory/orthemic-core-formalization.md
+  locus:
+    line: 155
+    column: 1072
+  occurrence: 87
+  text: ApplyEvent(μ̄, e) = ⟨μ̄, Trace_e\|_μ̄⟩
+  classification: mathematics
+- file: theory/orthemic-core-formalization.md
+  locus:
+    line: 155
+    column: 1324
+  occurrence: 88
+  text: V3c ∉ ReqPath(e)
+  classification: mathematics
+- file: theory/orthemic-core-formalization.md
+  locus:
+    line: 156
+    column: 3
+  occurrence: 89
+  text: π
+  classification: mathematics
+- file: theory/orthemic-core-formalization.md
+  locus:
+    line: 157
+    column: 82
+  occurrence: 90
+  text: C^id ⊆ M
+  classification: mathematics
+- file: theory/orthemic-core-formalization.md
+  locus:
+    line: 157
+    column: 113
+  occurrence: 91
+  text: C^profile ⊆ Π_A
+  classification: mathematics
+- file: theory/orthemic-core-formalization.md
+  locus:
+    line: 157
+    column: 148
+  occurrence: 92
+  text: C^cause ⊆ 𝒦_A
+  classification: mathematics
+- file: theory/orthemic-core-formalization.md
+  locus:
+    line: 157
+    column: 179
+  occurrence: 93
+  text: C^route ⊆ ℛ_A
+  classification: mathematics
+- file: theory/orthemic-core-formalization.md
+  locus:
+    line: 157
+    column: 210
+  occurrence: 94
+  text: C^warrant ⊆ 𝒲_A
+  classification: mathematics
+- file: theory/orthemic-core-formalization.md
+  locus:
+    line: 158
+    column: 3
+  occurrence: 95
+  text: p̂ ∈ Π_A^∂
+  classification: mathematics
+- file: theory/orthemic-core-formalization.md
+  locus:
+    line: 158
+    column: 218
+  occurrence: 96
+  text: Ĉ ⊆ Π_A
+  classification: mathematics
+- file: theory/orthemic-core-formalization.md
+  locus:
+    line: 158
+    column: 326
+  occurrence: 97
+  text: Ô ⊆ O
+  classification: mathematics
+- file: theory/orthemic-core-formalization.md
+  locus:
+    line: 158
+    column: 377
+  occurrence: 98
+  text: p̂
+  classification: mathematics
+- file: theory/orthemic-core-formalization.md
+  locus:
+    line: 159
+    column: 3
+  occurrence: 99
+  text: r
+  classification: mathematics
+- file: theory/orthemic-core-formalization.md
+  locus:
+    line: 160
+    column: 3
+  occurrence: 100
+  text: estatus
+  classification: mathematics
+- file: theory/orthemic-core-formalization.md
+  locus:
+    line: 161
+    column: 3
+  occurrence: 101
+  text: 𝒬
+  classification: mathematics
+- file: theory/orthemic-core-formalization.md
+  locus:
+    line: 162
+    column: 3
+  occurrence: 102
+  text: δ
+  classification: mathematics
+- file: theory/orthemic-core-formalization.md
+  locus:
+    line: 162
+    column: 175
+  occurrence: 103
+  text: 𝒬
+  classification: mathematics
+- file: theory/orthemic-core-formalization.md
+  locus:
+    line: 162
+    column: 207
+  occurrence: 104
+  text: δ
+  classification: mathematics
+- file: theory/orthemic-core-formalization.md
+  locus:
+    line: 163
+    column: 3
+  occurrence: 105
+  text: hand_in, hand_out
+  classification: mathematics
+- file: theory/orthemic-core-formalization.md
+  locus:
+    line: 164
+    column: 3
+  occurrence: 106
+  text: a
+  classification: mathematics
+- file: theory/orthemic-core-formalization.md
+  locus:
+    line: 165
+    column: 3
+  occurrence: 107
+  text: Succ ⊆ M
+  classification: mathematics
+- file: theory/orthemic-core-formalization.md
+  locus:
+    line: 165
+    column: 190
+  occurrence: 108
+  text: m′ = succ(m,a)
+  classification: mathematics
+- file: theory/orthemic-core-formalization.md
+  locus:
+    line: 167
+    column: 1
+  occurrence: 109
+  text: Π_A
+  classification: mathematics
+- file: theory/orthemic-core-formalization.md
+  locus:
+    line: 167
+    column: 14
+  occurrence: 110
+  text: Π_T
+  classification: mathematics
+- file: theory/orthemic-core-formalization.md
+  locus:
+    line: 169
+    column: 1
+  occurrence: 111
+  text: Π_A ⊆ 𝒫(O_A)
+  classification: mathematics
+- file: theory/orthemic-core-formalization.md
+  locus:
+    line: 170
+    column: 25
+  occurrence: 112
+  text: A
+  classification: mathematics
+- file: theory/orthemic-core-formalization.md
+  locus:
+    line: 173
+    column: 47
+  occurrence: 113
+  text: not-applicable
+  classification: semantic-registry-id
+- file: theory/orthemic-core-formalization.md
+  locus:
+    line: 179
+    column: 46
+  occurrence: 114
+  text: Π_A^∂
+  classification: mathematics
+- file: theory/orthemic-core-formalization.md
+  locus:
+    line: 181
+    column: 1
+  occurrence: 115
+  text: Π_A ⊆ Π_A^∂
+  classification: mathematics
+- file: theory/orthemic-core-formalization.md
+  locus:
+    line: 184
+    column: 6
+  occurrence: 116
+  text: M
+  classification: mathematics
+- file: theory/orthemic-core-formalization.md
+  locus:
+    line: 184
+    column: 35
+  occurrence: 117
+  text: (κ, v)
+  classification: mathematics
+- file: theory/orthemic-core-formalization.md
+  locus:
+    line: 184
+    column: 64
+  occurrence: 118
+  text: (κ, v′)
+  classification: mathematics
+- file: theory/orthemic-core-formalization.md
+  locus:
+    line: 187
+    column: 67
+  occurrence: 119
+  text: O
+  classification: mathematics
+- file: theory/orthemic-core-formalization.md
+  locus:
+    line: 188
+    column: 51
+  occurrence: 120
+  text: I
+  classification: mathematics
+- file: theory/orthemic-core-formalization.md
+  locus:
+    line: 189
+    column: 68
+  occurrence: 121
+  text: E
+  classification: mathematics
+- file: theory/orthemic-core-formalization.md
+  locus:
+    line: 190
+    column: 59
+  occurrence: 122
+  text: D
+  classification: mathematics
+- file: theory/orthemic-core-formalization.md
+  locus:
+    line: 192
+    column: 12
+  occurrence: 123
+  text: R
+  classification: mathematics
+- file: theory/orthemic-core-formalization.md
+  locus:
+    line: 192
+    column: 50
+  occurrence: 124
+  text: V
+  classification: mathematics
+- file: theory/orthemic-core-formalization.md
+  locus:
+    line: 193
+    column: 65
+  occurrence: 125
+  text: W
+  classification: mathematics
+- file: theory/orthemic-core-formalization.md
+  locus:
+    line: 207
+    column: 18
+  occurrence: 126
+  text: s_i
+  classification: mathematics
+- file: theory/orthemic-core-formalization.md
+  locus:
+    line: 208
+    column: 64
+  occurrence: 127
+  text: u_i
+  classification: mathematics
+- file: theory/orthemic-core-formalization.md
+  locus:
+    line: 210
+    column: 29
+  occurrence: 128
+  text: ver(μ)
+  classification: mathematics
+- file: theory/orthemic-core-formalization.md
+  locus:
+    line: 216
+    column: 54
+  occurrence: 129
+  text: a = ⊥
+  classification: mathematics
+- file: theory/orthemic-core-formalization.md
+  locus:
+    line: 217
+    column: 1
+  occurrence: 130
+  text: Succ = ∅
+  classification: mathematics
+- file: theory/orthemic-core-formalization.md
+  locus:
+    line: 217
+    column: 45
+  occurrence: 131
+  text: r = ⊥
+  classification: mathematics
+- file: theory/orthemic-core-formalization.md
+  locus:
+    line: 218
+    column: 14
+  occurrence: 132
+  text: δ
+  classification: mathematics
+- file: theory/orthemic-core-formalization.md
+  locus:
+    line: 218
+    column: 40
+  occurrence: 133
+  text: ⊥
+  classification: mathematics
+- file: theory/orthemic-core-formalization.md
+  locus:
+    line: 221
+    column: 37
+  occurrence: 134
+  text: ReqPath(e)
+  classification: mathematics
+- file: theory/orthemic-core-formalization.md
+  locus:
+    line: 224
+    column: 29
+  occurrence: 135
+  text: ReqPath(e)
+  classification: mathematics
+- file: theory/orthemic-core-formalization.md
+  locus:
+    line: 225
+    column: 1
+  occurrence: 136
+  text: not-applicable
+  classification: semantic-registry-id
+- file: theory/orthemic-core-formalization.md
+  locus:
+    line: 231
+    column: 26
+  occurrence: 137
+  text: out(e) = ⟨p̂, r, estatus, 𝒬, δ, a⟩
+  classification: mathematics
+- file: theory/orthemic-core-formalization.md
+  locus:
+    line: 232
+    column: 4
+  occurrence: 138
+  text: e
+  classification: mathematics
+- file: theory/orthemic-core-formalization.md
+  locus:
+    line: 234
+    column: 26
+  occurrence: 139
+  text: π
+  classification: mathematics
+- file: theory/orthemic-core-formalization.md
+  locus:
+    line: 234
+    column: 57
+  occurrence: 140
+  text: e
+  classification: mathematics
+- file: theory/orthemic-core-formalization.md
+  locus:
+    line: 235
+    column: 17
+  occurrence: 141
+  text: π
+  classification: mathematics
+- file: theory/orthemic-core-formalization.md
+  locus:
+    line: 235
+    column: 51
+  occurrence: 142
+  text: π
+  classification: mathematics
+- file: theory/orthemic-core-formalization.md
+  locus:
+    line: 236
+    column: 33
+  occurrence: 143
+  text: e
+  classification: mathematics
+- file: theory/orthemic-core-formalization.md
+  locus:
+    line: 242
+    column: 24
+  occurrence: 144
+  text: e
+  classification: mathematics
+- file: theory/orthemic-core-formalization.md
+  locus:
+    line: 242
+    column: 40
+  occurrence: 145
+  text: μ
+  classification: mathematics
+- file: theory/orthemic-core-formalization.md
+  locus:
+    line: 243
+    column: 4
+  occurrence: 146
+  text: o-hat
+  classification: mathematics
+- file: theory/orthemic-core-formalization.md
+  locus:
+    line: 243
+    column: 44
+  occurrence: 147
+  text: o-hat ∈ O*(m; A(e))
+  classification: mathematics
+- file: theory/orthemic-core-formalization.md
+  locus:
+    line: 244
+    column: 49
+  occurrence: 148
+  text: p̂(e)
+  classification: mathematics
+- file: theory/orthemic-core-formalization.md
+  locus:
+    line: 245
+    column: 4
+  occurrence: 149
+  text: O*(m; A(e))
+  classification: mathematics
+- file: theory/orthemic-core-formalization.md
+  locus:
+    line: 246
+    column: 19
+  occurrence: 150
+  text: A(e)
+  classification: mathematics
+- file: theory/orthemic-core-formalization.md
+  locus:
+    line: 253
+    column: 43
+  occurrence: 151
+  text: μ
+  classification: mathematics
+- file: theory/orthemic-core-formalization.md
+  locus:
+    line: 254
+    column: 1
+  occurrence: 152
+  text: π_μ
+  classification: mathematics
+- file: theory/orthemic-core-formalization.md
+  locus:
+    line: 255
+    column: 18
+  occurrence: 153
+  text: μ̄
+  classification: mathematics
+- file: theory/orthemic-core-formalization.md
+  locus:
+    line: 256
+    column: 1
+  occurrence: 154
+  text: MetaInst(μ̄, μ)
+  classification: mathematics
+- file: theory/orthemic-core-formalization.md
+  locus:
+    line: 258
+    column: 1
+  occurrence: 155
+  text: Compatible(μ̄, A(e))
+  classification: mathematics
+- file: theory/orthemic-core-formalization.md
+  locus:
+    line: 258
+    column: 57
+  occurrence: 156
+  text: μ
+  classification: mathematics
+- file: theory/orthemic-core-formalization.md
+  locus:
+    line: 259
+    column: 1
+  occurrence: 157
+  text: π_μ
+  classification: mathematics
+- file: theory/orthemic-core-formalization.md
+  locus:
+    line: 259
+    column: 14
+  occurrence: 158
+  text: μ̄
+  classification: mathematics
+- file: theory/orthemic-core-formalization.md
+  locus:
+    line: 274
+    column: 3
+  occurrence: 159
+  text: μ = ⟨g, S_μ, select_μ, prov(μ), ver(μ)⟩
+  classification: mathematics
+- file: theory/orthemic-core-formalization.md
+  locus:
+    line: 274
+    column: 66
+  occurrence: 160
+  text: g
+  classification: mathematics
+- file: theory/orthemic-core-formalization.md
+  locus:
+    line: 275
+    column: 33
+  occurrence: 161
+  text: S_μ
+  classification: mathematics
+- file: theory/orthemic-core-formalization.md
+  locus:
+    line: 275
+    column: 69
+  occurrence: 162
+  text: select_μ
+  classification: mathematics
+- file: theory/orthemic-core-formalization.md
+  locus:
+    line: 277
+    column: 35
+  occurrence: 163
+  text: π_μ
+  classification: mathematics
+- file: theory/orthemic-core-formalization.md
+  locus:
+    line: 282
+    column: 17
+  occurrence: 164
+  text: g ∈ {O, I, E, D, R, V, W}
+  classification: mathematics
+- file: theory/orthemic-core-formalization.md
+  locus:
+    line: 284
+    column: 25
+  occurrence: 165
+  text: W
+  classification: mathematics
+- file: theory/orthemic-core-formalization.md
+  locus:
+    line: 287
+    column: 16
+  occurrence: 166
+  text: T
+  classification: mathematics
+- file: theory/orthemic-core-formalization.md
+  locus:
+    line: 289
+    column: 45
+  occurrence: 167
+  text: ≼
+  classification: mathematics
+- file: theory/orthemic-core-formalization.md
+  locus:
+    line: 293
+    column: 68
+  occurrence: 168
+  text: μ
+  classification: mathematics
+- file: theory/orthemic-core-formalization.md
+  locus:
+    line: 294
+    column: 7
+  occurrence: 169
+  text: μ
+  classification: mathematics
+- file: theory/orthemic-core-formalization.md
+  locus:
+    line: 300
+    column: 59
+  occurrence: 170
+  text: E
+  classification: mathematics
+- file: theory/orthemic-core-formalization.md
+  locus:
+    line: 301
+    column: 53
+  occurrence: 171
+  text: M
+  classification: mathematics
+- file: theory/orthemic-core-formalization.md
+  locus:
+    line: 301
+    column: 92
+  occurrence: 172
+  text: ver(m)
+  classification: mathematics
+- file: theory/orthemic-core-formalization.md
+  locus:
+    line: 302
+    column: 43
+  occurrence: 173
+  text: R
+  classification: mathematics
+- file: theory/orthemic-core-formalization.md
+  locus:
+    line: 302
+    column: 47
+  occurrence: 174
+  text: V
+  classification: mathematics
+- file: theory/orthemic-core-formalization.md
+  locus:
+    line: 303
+    column: 35
+  occurrence: 175
+  text: V
+  classification: mathematics
+- file: theory/orthemic-core-formalization.md
+  locus:
+    line: 303
+    column: 143
+  occurrence: 176
+  text: δ
+  classification: mathematics
+- file: theory/orthemic-core-formalization.md
+  locus:
+    line: 304
+    column: 41
+  occurrence: 177
+  text: W
+  classification: mathematics
+- file: theory/orthemic-core-formalization.md
+  locus:
+    line: 312
+    column: 33
+  occurrence: 178
+  text: S_μ
+  classification: mathematics
+- file: theory/orthemic-core-formalization.md
+  locus:
+    line: 312
+    column: 50
+  occurrence: 179
+  text: π_μ
+  classification: mathematics
+- file: theory/orthemic-core-formalization.md
+  locus:
+    line: 318
+    column: 40
+  occurrence: 180
+  text: μ
+  classification: mathematics
+- file: theory/orthemic-core-formalization.md
+  locus:
+    line: 319
+    column: 1
+  occurrence: 181
+  text: π_μ
+  classification: mathematics
+- file: theory/orthemic-core-formalization.md
+  locus:
+    line: 319
+    column: 50
+  occurrence: 182
+  text: S_μ
+  classification: mathematics
+- file: theory/orthemic-core-formalization.md
+  locus:
+    line: 319
+    column: 59
+  occurrence: 183
+  text: select_μ
+  classification: mathematics
+- file: theory/orthemic-core-formalization.md
+  locus:
+    line: 320
+    column: 33
+  occurrence: 184
+  text: π_μ
+  classification: mathematics
+- file: theory/orthemic-core-formalization.md
+  locus:
+    line: 327
+    column: 37
+  occurrence: 185
+  text: if
+  classification: literal-code
+- file: theory/orthemic-core-formalization.md
+  locus:
+    line: 336
+    column: 32
+  occurrence: 186
+  text: μᵢ, μⱼ
+  classification: mathematics
+- file: theory/orthemic-core-formalization.md
+  locus:
+    line: 336
+    column: 53
+  occurrence: 187
+  text: e
+  classification: mathematics
+- file: theory/orthemic-core-formalization.md
+  locus:
+    line: 339
+    column: 24
+  occurrence: 188
+  text: ≼
+  classification: mathematics
+- file: theory/orthemic-core-formalization.md
+  locus:
+    line: 340
+    column: 52
+  occurrence: 189
+  text: ≼
+  classification: mathematics
+- file: theory/orthemic-core-formalization.md
+  locus:
+    line: 345
+    column: 33
+  occurrence: 190
+  text: ver(μ)
+  classification: mathematics
+- file: theory/orthemic-core-formalization.md
+  locus:
+    line: 351
+    column: 3
+  occurrence: 191
+  text: examples/compaction-stale-steer.md
+  classification: literal-code
+- file: theory/orthemic-core-formalization.md
+  locus:
+    line: 352
+    column: 51
+  occurrence: 192
+  text: 'ρ : (μ, lesson) ↦ μ′'
+  classification: mathematics
+- file: theory/orthemic-core-formalization.md
+  locus:
+    line: 353
+    column: 14
+  occurrence: 193
+  text: ver(μ)
+  classification: mathematics
+- file: theory/orthemic-core-formalization.md
+  locus:
+    line: 354
+    column: 3
+  occurrence: 194
+  text: affected(μ, μ′) →
+  classification: mathematics
+- file: theory/orthemic-core-formalization.md
+  locus:
+    line: 357
+    column: 19
+  occurrence: 195
+  text: ε
+  classification: mathematics
+- file: theory/orthemic-core-formalization.md
+  locus:
+    line: 363
+    column: 19
+  occurrence: 196
+  text: S_μ
+  classification: mathematics
+- file: theory/orthemic-core-formalization.md
+  locus:
+    line: 366
+    column: 26
+  occurrence: 197
+  text: select_μ
+  classification: mathematics
+- file: theory/orthemic-core-formalization.md
+  locus:
+    line: 372
+    column: 55
+  occurrence: 198
+  text: μ
+  classification: mathematics
+- file: theory/orthemic-core-formalization.md
+  locus:
+    line: 372
+    column: 72
+  occurrence: 199
+  text: g
+  classification: mathematics
+- file: theory/orthemic-core-formalization.md
+  locus:
+    line: 373
+    column: 18
+  occurrence: 200
+  text: S_μ
+  classification: mathematics
+- file: theory/orthemic-core-formalization.md
+  locus:
+    line: 376
+    column: 37
+  occurrence: 201
+  text: π
+  classification: mathematics
+- file: theory/orthemic-core-formalization.md
+  locus:
+    line: 383
+    column: 46
+  occurrence: 202
+  text: terminology/
+  classification: literal-code
+- file: theory/orthemic-core-formalization.md
+  locus:
+    line: 393
+    column: 43
+  occurrence: 203
+  text: e
+  classification: mathematics
+- file: theory/orthemic-core-formalization.md
+  locus:
+    line: 401
+    column: 3
+  occurrence: 204
+  text: docs/verdict-registry.yaml
+  classification: literal-code
+- file: theory/orthemic-core-formalization.md
+  locus:
+    line: 410
+    column: 43
+  occurrence: 205
+  text: correct(e)
+  classification: mathematics
+- file: theory/orthemic-core-formalization.md
+  locus:
+    line: 410
+    column: 57
+  occurrence: 206
+  text: p̂(e)
+  classification: mathematics
+- file: theory/orthemic-core-formalization.md
+  locus:
+    line: 411
+    column: 8
+  occurrence: 207
+  text: O*(m; A(e))
+  classification: mathematics
+- file: theory/orthemic-core-formalization.md
+  locus:
+    line: 411
+    column: 52
+  occurrence: 208
+  text: route-correct(e)
+  classification: mathematics
+- file: theory/orthemic-core-formalization.md
+  locus:
+    line: 411
+    column: 72
+  occurrence: 209
+  text: p̂(e)
+  classification: mathematics
+- file: theory/orthemic-core-formalization.md
+  locus:
+    line: 412
+    column: 52
+  occurrence: 210
+  text: O*(m; A(e))
+  classification: mathematics
+- file: theory/orthemic-core-formalization.md
+  locus:
+    line: 415
+    column: 32
+  occurrence: 211
+  text: V1_q(e)
+  classification: mathematics
+- file: theory/orthemic-core-formalization.md
+  locus:
+    line: 415
+    column: 65
+  occurrence: 212
+  text: q
+  classification: mathematics
+- file: theory/orthemic-core-formalization.md
+  locus:
+    line: 416
+    column: 11
+  occurrence: 213
+  text: (m; A(e))
+  classification: mathematics
+- file: theory/orthemic-core-formalization.md
+  locus:
+    line: 418
+    column: 3
+  occurrence: 214
+  text: correct(e)
+  classification: mathematics
+- file: theory/orthemic-core-formalization.md
+  locus:
+    line: 421
+    column: 48
+  occurrence: 215
+  text: PathwayAdequate
+  classification: mathematics
+- file: theory/orthemic-core-formalization.md
+  locus:
+    line: 422
+    column: 52
+  occurrence: 216
+  text: H
+  classification: mathematics
+- file: theory/orthemic-core-formalization.md
+  locus:
+    line: 429
+    column: 56
+  occurrence: 217
+  text: MetaTok(e)
+  classification: mathematics
+- file: theory/orthemic-core-formalization.md
+  locus:
+    line: 432
+    column: 54
+  occurrence: 218
+  text: q
+  classification: mathematics
+- file: theory/orthemic-core-formalization.md
+  locus:
+    line: 442
+    column: 39
+  occurrence: 219
+  text: V2b-P(e)
+  classification: mathematics
+- file: theory/orthemic-core-formalization.md
+  locus:
+    line: 443
+    column: 3
+  occurrence: 220
+  text: V1(e)
+  classification: mathematics
+- file: theory/orthemic-core-formalization.md
+  locus:
+    line: 450
+    column: 3
+  occurrence: 221
+  text: V2b-T_q(e)
+  classification: mathematics
+- file: theory/orthemic-core-formalization.md
+  locus:
+    line: 450
+    column: 45
+  occurrence: 222
+  text: q
+  classification: mathematics
+- file: theory/orthemic-core-formalization.md
+  locus:
+    line: 452
+    column: 31
+  occurrence: 223
+  text: V2b-T_q(e) → V1_q(e)
+  classification: mathematics
+- file: theory/orthemic-core-formalization.md
+  locus:
+    line: 453
+    column: 27
+  occurrence: 224
+  text: V2b-T_q
+  classification: mathematics
+- file: theory/orthemic-core-formalization.md
+  locus:
+    line: 457
+    column: 31
+  occurrence: 225
+  text: PathwayAdequate
+  classification: mathematics
+- file: theory/orthemic-core-formalization.md
+  locus:
+    line: 463
+    column: 23
+  occurrence: 226
+  text: (κ, v)
+  classification: mathematics
+- file: theory/orthemic-core-formalization.md
+  locus:
+    line: 466
+    column: 89
+  occurrence: 227
+  text: μᵢ
+  classification: mathematics
+- file: theory/orthemic-core-formalization.md
+  locus:
+    line: 467
+    column: 49
+  occurrence: 228
+  text: S_μ
+  classification: mathematics
+- file: theory/orthemic-core-formalization.md
+  locus:
+    line: 468
+    column: 54
+  occurrence: 229
+  text: select_μ
+  classification: mathematics
+- file: theory/orthemic-core-formalization.md
+  locus:
+    line: 471
+    column: 51
+  occurrence: 230
+  text: π_μ
+  classification: mathematics
+- file: theory/orthemic-core-formalization.md
+  locus:
+    line: 471
+    column: 67
+  occurrence: 231
+  text: π
+  classification: mathematics
+- file: theory/orthemic-core-formalization.md
+  locus:
+    line: 475
+    column: 3
+  occurrence: 232
+  text: V3c(e) ⟺ ∧_{μ̄ ∈ MetaTok(e)} TokenAdequate(μ̄, e)
+  classification: mathematics
+- file: theory/orthemic-core-formalization.md
+  locus:
+    line: 488
+    column: 20
+  occurrence: 233
+  text: MetaTok(e) = ∅ ⟹ V3c ∉ ReqPath(e)
+  classification: mathematics
+- file: theory/orthemic-core-formalization.md
+  locus:
+    line: 493
+    column: 42
+  occurrence: 234
+  text: α
+  classification: mathematics
+- file: theory/orthemic-core-formalization.md
+  locus:
+    line: 493
+    column: 64
+  occurrence: 235
+  text: π
+  classification: mathematics
+- file: theory/orthemic-core-formalization.md
+  locus:
+    line: 497
+    column: 64
+  occurrence: 236
+  text: t
+  classification: mathematics
+- file: theory/orthemic-core-formalization.md
+  locus:
+    line: 502
+    column: 41
+  occurrence: 237
+  text: r
+  classification: mathematics
+- file: theory/orthemic-core-formalization.md
+  locus:
+    line: 505
+    column: 36
+  occurrence: 238
+  text: r
+  classification: mathematics
+- file: theory/orthemic-core-formalization.md
+  locus:
+    line: 505
+    column: 62
+  occurrence: 239
+  text: p̂(e)
+  classification: mathematics
+- file: theory/orthemic-core-formalization.md
+  locus:
+    line: 508
+    column: 52
+  occurrence: 240
+  text: δ
+  classification: mathematics
+- file: theory/orthemic-core-formalization.md
+  locus:
+    line: 518
+    column: 54
+  occurrence: 241
+  text: π
+  classification: mathematics
+- file: theory/orthemic-core-formalization.md
+  locus:
+    line: 519
+    column: 43
+  occurrence: 242
+  text: A
+  classification: mathematics
+- file: theory/orthemic-core-formalization.md
+  locus:
+    line: 521
+    column: 3
+  occurrence: 243
+  text: P ⊆ E×E
+  classification: mathematics
+- file: theory/orthemic-core-formalization.md
+  locus:
+    line: 521
+    column: 30
+  occurrence: 244
+  text: 'N(e) = {e′ : (e, e′) ∈ P}'
+  classification: mathematics
+- file: theory/orthemic-core-formalization.md
+  locus:
+    line: 522
+    column: 36
+  occurrence: 245
+  text: robust(e)
+  classification: mathematics
+- file: theory/orthemic-core-formalization.md
+  locus:
+    line: 530
+    column: 49
+  occurrence: 246
+  text: μ̄
+  classification: mathematics
+- file: theory/orthemic-core-formalization.md
+  locus:
+    line: 561
+    column: 1
+  occurrence: 247
+  text: MetaTok(e) ≠ ∅
+  classification: mathematics
+- file: theory/orthemic-core-formalization.md
+  locus:
+    line: 562
+    column: 1
+  occurrence: 248
+  text: MetaTok(e) = ∅ ⟹ V3c ∉ ReqPath(e)
+  classification: mathematics
+- file: theory/orthemic-core-formalization.md
+  locus:
+    line: 565
+    column: 25
+  occurrence: 249
+  text: A(e)
+  classification: mathematics
+- file: theory/orthemic-core-formalization.md
+  locus:
+    line: 567
+    column: 15
+  occurrence: 250
+  text: ReqPath(e)
+  classification: mathematics
+- file: theory/orthemic-core-formalization.md
+  locus:
+    line: 568
+    column: 18
+  occurrence: 251
+  text: ReqPath(e)
+  classification: mathematics
+- file: theory/orthemic-core-formalization.md
+  locus:
+    line: 569
+    column: 51
+  occurrence: 252
+  text: App(·)
+  classification: mathematics
+- file: theory/orthemic-core-formalization.md
+  locus:
+    line: 571
+    column: 20
+  occurrence: 253
+  text: not-applicable
+  classification: semantic-registry-id
+- file: theory/orthemic-core-formalization.md
+  locus:
+    line: 574
+    column: 7
+  occurrence: 254
+  text: RequiredBy
+  classification: mathematics
+- file: theory/orthemic-core-formalization.md
+  locus:
+    line: 575
+    column: 2
+  occurrence: 255
+  text: docs/governance-requirements.yaml
+  classification: literal-code
+- file: theory/orthemic-core-formalization.md
+  locus:
+    line: 576
+    column: 11
+  occurrence: 256
+  text: has_meta_tokens
+  classification: literal-code
+- file: theory/orthemic-core-formalization.md
+  locus:
+    line: 576
+    column: 30
+  occurrence: 257
+  text: selects_route
+  classification: literal-code
+- file: theory/orthemic-core-formalization.md
+  locus:
+    line: 576
+    column: 47
+  occurrence: 258
+  text: makes_closure_claim
+  classification: literal-code
+- file: theory/orthemic-core-formalization.md
+  locus:
+    line: 577
+    column: 1
+  occurrence: 259
+  text: robustness_obligation
+  classification: literal-code
+- file: theory/orthemic-core-formalization.md
+  locus:
+    line: 577
+    column: 26
+  occurrence: 260
+  text: risk_class
+  classification: literal-code
+- file: theory/orthemic-core-formalization.md
+  locus:
+    line: 577
+    column: 45
+  occurrence: 261
+  text: scripts/derive_reqpath.py
+  classification: literal-code
+- file: theory/orthemic-core-formalization.md
+  locus:
+    line: 578
+    column: 9
+  occurrence: 262
+  text: ReqPath(e)
+  classification: mathematics
+- file: theory/orthemic-core-formalization.md
+  locus:
+    line: 580
+    column: 1
+  occurrence: 263
+  text: tests/reqpath-fixtures.json
+  classification: literal-code
+- file: theory/orthemic-core-formalization.md
+  locus:
+    line: 583
+    column: 61
+  occurrence: 264
+  text: RequiredBy
+  classification: mathematics
+- file: theory/orthemic-core-formalization.md
+  locus:
+    line: 598
+    column: 25
+  occurrence: 265
+  text: undetermined
+  classification: semantic-registry-id
+- file: theory/orthemic-core-formalization.md
+  locus:
+    line: 606
+    column: 3
+  occurrence: 266
+  text: V2b-T_q(e) → V1_q(e)
+  classification: mathematics
+- file: theory/orthemic-core-formalization.md
+  locus:
+    line: 607
+    column: 3
+  occurrence: 267
+  text: V2b-P(e) → V1(e)
+  classification: mathematics
+- file: theory/orthemic-core-formalization.md
+  locus:
+    line: 608
+    column: 3
+  occurrence: 268
+  text: V3e(e) → V1(e)
+  classification: mathematics
+- file: theory/orthemic-core-formalization.md
+  locus:
+    line: 609
+    column: 3
+  occurrence: 269
+  text: PathwayAdequate(e) → V1(e)
+  classification: mathematics
+- file: theory/orthemic-core-formalization.md
+  locus:
+    line: 610
+    column: 3
+  occurrence: 270
+  text: V1(e) → PathwayAdequate(e)
+  classification: mathematics
+- file: theory/orthemic-core-formalization.md
+  locus:
+    line: 611
+    column: 3
+  occurrence: 271
+  text: V1(e)
+  classification: mathematics
+- file: theory/orthemic-core-formalization.md
+  locus:
+    line: 611
+    column: 47
+  occurrence: 272
+  text: V1_q(e)
+  classification: mathematics
+- file: theory/orthemic-core-formalization.md
+  locus:
+    line: 612
+    column: 3
+  occurrence: 273
+  text: PathwayAdequate(e) ↔ ¬PathwayDefective(e)
+  classification: mathematics
+- file: theory/orthemic-core-formalization.md
+  locus:
+    line: 612
+    column: 68
+  occurrence: 274
+  text: undetermined
+  classification: semantic-registry-id
+- file: theory/orthemic-core-formalization.md
+  locus:
+    line: 619
+    column: 15
+  occurrence: 275
+  text: PathwayUndetermined
+  classification: mathematics
+- file: theory/orthemic-core-formalization.md
+  locus:
+    line: 628
+    column: 32
+  occurrence: 276
+  text: AdequatePathError(e) := ¬V1(e) ∧ PathwayAdequate(e)
+  classification: mathematics
+- file: theory/orthemic-core-formalization.md
+  locus:
+    line: 628
+    column: 273
+  occurrence: 277
+  text: JustifiedMiss(e) := AdequatePathError(e)
+  classification: mathematics
+- file: theory/orthemic-core-formalization.md
+  locus:
+    line: 632
+    column: 1
+  occurrence: 278
+  text: tests/verdict-fixtures.json
+  classification: literal-code
+- file: theory/orthemic-core-formalization.md
+  locus:
+    line: 633
+    column: 1
+  occurrence: 279
+  text: scripts/validate_verdict_semantics.py
+  classification: literal-code
+- file: theory/orthemic-core-formalization.md
+  locus:
+    line: 641
+    column: 149
+  occurrence: 280
+  text: undetermined
+  classification: semantic-registry-id
+- file: theory/orthemic-core-formalization.md
+  locus:
+    line: 642
+    column: 59
+  occurrence: 281
+  text: examples/compaction-stale-steer.md
+  classification: literal-code
+- file: theory/orthemic-core-formalization.md
+  locus:
+    line: 679
+    column: 24
+  occurrence: 282
+  text: ReqPath(e)
+  classification: mathematics
+- file: theory/orthemic-core-formalization.md
+  locus:
+    line: 685
+    column: 29
+  occurrence: 283
+  text: α
+  classification: mathematics
+- file: theory/orthemic-core-formalization.md
+  locus:
+    line: 694
+    column: 24
+  occurrence: 284
+  text: Γ_E = (E, ⇝)
+  classification: mathematics
+- file: theory/orthemic-core-formalization.md
+  locus:
+    line: 695
+    column: 10
+  occurrence: 285
+  text: e₁,…,e_n
+  classification: mathematics
+- file: theory/orthemic-core-formalization.md
+  locus:
+    line: 695
+    column: 66
+  occurrence: 286
+  text: αᵢ
+  classification: mathematics
+- file: theory/orthemic-core-formalization.md
+  locus:
+    line: 696
+    column: 57
+  occurrence: 287
+  text: eᵢ ⇝ eⱼ
+  classification: mathematics
+- file: theory/orthemic-core-formalization.md
+  locus:
+    line: 697
+    column: 4
+  occurrence: 288
+  text: out(eᵢ)
+  classification: mathematics
+- file: theory/orthemic-core-formalization.md
+  locus:
+    line: 698
+    column: 57
+  occurrence: 289
+  text: Hⱼ
+  classification: mathematics
+- file: theory/orthemic-core-formalization.md
+  locus:
+    line: 698
+    column: 65
+  occurrence: 290
+  text: eⱼ
+  classification: mathematics
+- file: theory/orthemic-core-formalization.md
+  locus:
+    line: 705
+    column: 53
+  occurrence: 291
+  text: Γ_E
+  classification: mathematics
+- file: theory/orthemic-core-formalization.md
+  locus:
+    line: 707
+    column: 3
+  occurrence: 292
+  text: handoff
+  classification: semantic-registry-id
+- file: theory/orthemic-core-formalization.md
+  locus:
+    line: 707
+    column: 18
+  occurrence: 293
+  text: eᵢ ⇝ eⱼ
+  classification: mathematics
+- file: theory/orthemic-core-formalization.md
+  locus:
+    line: 707
+    column: 34
+  occurrence: 294
+  text: eⱼ
+  classification: mathematics
+- file: theory/orthemic-core-formalization.md
+  locus:
+    line: 708
+    column: 1
+  occurrence: 295
+  text: out(eᵢ)
+  classification: mathematics
+- file: theory/orthemic-core-formalization.md
+  locus:
+    line: 708
+    column: 14
+  occurrence: 296
+  text: supersession
+  classification: semantic-registry-id
+- file: theory/orthemic-core-formalization.md
+  locus:
+    line: 708
+    column: 34
+  occurrence: 297
+  text: eᵢ ⇝ eⱼ
+  classification: mathematics
+- file: theory/orthemic-core-formalization.md
+  locus:
+    line: 708
+    column: 60
+  occurrence: 298
+  text: eⱼ
+  classification: mathematics
+- file: theory/orthemic-core-formalization.md
+  locus:
+    line: 709
+    column: 1
+  occurrence: 299
+  text: eᵢ
+  classification: mathematics
+- file: theory/orthemic-core-formalization.md
+  locus:
+    line: 709
+    column: 23
+  occurrence: 300
+  text: retry-of
+  classification: semantic-registry-id
+- file: theory/orthemic-core-formalization.md
+  locus:
+    line: 709
+    column: 39
+  occurrence: 301
+  text: eᵢ ⇝ eⱼ
+  classification: mathematics
+- file: theory/orthemic-core-formalization.md
+  locus:
+    line: 709
+    column: 55
+  occurrence: 302
+  text: eⱼ
+  classification: mathematics
+- file: theory/orthemic-core-formalization.md
+  locus:
+    line: 710
+    column: 1
+  occurrence: 303
+  text: eᵢ
+  classification: mathematics
+- file: theory/orthemic-core-formalization.md
+  locus:
+    line: 718
+    column: 19
+  occurrence: 304
+  text: retry-of
+  classification: semantic-registry-id
+- file: theory/orthemic-core-formalization.md
+  locus:
+    line: 718
+    column: 33
+  occurrence: 305
+  text: supersession
+  classification: semantic-registry-id
+- file: theory/orthemic-core-formalization.md
+  locus:
+    line: 722
+    column: 36
+  occurrence: 306
+  text: π
+  classification: mathematics
+- file: theory/orthemic-core-formalization.md
+  locus:
+    line: 724
+    column: 54
+  occurrence: 307
+  text: e_Γ = comp(Γ_E)
+  classification: mathematics
+- file: theory/orthemic-core-formalization.md
+  locus:
+    line: 727
+    column: 36
+  occurrence: 308
+  text: eᵢ
+  classification: mathematics
+- file: theory/orthemic-core-formalization.md
+  locus:
+    line: 727
+    column: 49
+  occurrence: 309
+  text: m
+  classification: mathematics
+- file: theory/orthemic-core-formalization.md
+  locus:
+    line: 727
+    column: 60
+  occurrence: 310
+  text: succ
+  classification: mathematics
+- file: theory/orthemic-core-formalization.md
+  locus:
+    line: 728
+    column: 37
+  occurrence: 311
+  text: A
+  classification: mathematics
+- file: theory/orthemic-core-formalization.md
+  locus:
+    line: 728
+    column: 57
+  occurrence: 312
+  text: T = task(A)
+  classification: mathematics
+- file: theory/orthemic-core-formalization.md
+  locus:
+    line: 732
+    column: 66
+  occurrence: 313
+  text: α_{e_Γ}
+  classification: mathematics
+- file: theory/orthemic-core-formalization.md
+  locus:
+    line: 735
+    column: 32
+  occurrence: 314
+  text: p̂_{e_Γ}
+  classification: mathematics
+- file: theory/orthemic-core-formalization.md
+  locus:
+    line: 735
+    column: 44
+  occurrence: 315
+  text: estatus_{e_Γ}
+  classification: mathematics
+- file: theory/orthemic-core-formalization.md
+  locus:
+    line: 735
+    column: 61
+  occurrence: 316
+  text: δ_{e_Γ}
+  classification: mathematics
+- file: theory/orthemic-core-formalization.md
+  locus:
+    line: 741
+    column: 6
+  occurrence: 317
+  text: e_Γ
+  classification: mathematics
+- file: theory/orthemic-core-formalization.md
+  locus:
+    line: 741
+    column: 50
+  occurrence: 318
+  text: eᵢ
+  classification: mathematics
+- file: theory/orthemic-core-formalization.md
+  locus:
+    line: 743
+    column: 2
+  occurrence: 319
+  text: ι_n(eᵢ) ∈ M^(n+1)
+  classification: mathematics
+- file: theory/orthemic-core-formalization.md
+  locus:
+    line: 745
+    column: 62
+  occurrence: 320
+  text: comp
+  classification: mathematics
+- file: theory/orthemic-core-formalization.md
+  locus:
+    line: 751
+    column: 51
+  occurrence: 321
+  text: correct(e_Γ)
+  classification: mathematics
+- file: theory/orthemic-core-formalization.md
+  locus:
+    line: 752
+    column: 12
+  occurrence: 322
+  text: correct(eᵢ)
+  classification: mathematics
+- file: theory/orthemic-core-formalization.md
+  locus:
+    line: 753
+    column: 7
+  occurrence: 323
+  text: correct(eᵢ)
+  classification: mathematics
+- file: theory/orthemic-core-formalization.md
+  locus:
+    line: 753
+    column: 36
+  occurrence: 324
+  text: correct(e_Γ)
+  classification: mathematics
+- file: theory/orthemic-core-formalization.md
+  locus:
+    line: 762
+    column: 1
+  occurrence: 325
+  text: orthemic-multi-actor-conflict-note.md
+  classification: literal-code
+- file: theory/orthemic-core-formalization.md
+  locus:
+    line: 763
+    column: 23
+  occurrence: 326
+  text: α
+  classification: mathematics
+- file: theory/orthemic-core-formalization.md
+  locus:
+    line: 764
+    column: 1
+  occurrence: 327
+  text: A_α
+  classification: mathematics
+- file: theory/orthemic-core-formalization.md
+  locus:
+    line: 765
+    column: 1
+  occurrence: 328
+  text: T_α = task(A_α)
+  classification: mathematics
+- file: theory/orthemic-core-formalization.md
+  locus:
+    line: 766
+    column: 34
+  occurrence: 329
+  text: O*(m; A_α)
+  classification: mathematics
+- file: theory/orthemic-core-formalization.md
+  locus:
+    line: 767
+    column: 1
+  occurrence: 330
+  text: α, β
+  classification: mathematics
+- file: theory/orthemic-core-formalization.md
+  locus:
+    line: 767
+    column: 26
+  occurrence: 331
+  text: A
+  classification: mathematics
+- file: theory/orthemic-core-formalization.md
+  locus:
+    line: 771
+    column: 3
+  occurrence: 332
+  text: x_α = Ω_α(m)
+  classification: mathematics
+- file: theory/orthemic-core-formalization.md
+  locus:
+    line: 773
+    column: 3
+  occurrence: 333
+  text: Ω_α(m) ≠ Ω_β(m)
+  classification: mathematics
+- file: theory/orthemic-core-formalization.md
+  locus:
+    line: 776
+    column: 3
+  occurrence: 334
+  text: p̂(e, α, T_α)
+  classification: mathematics
+- file: theory/orthemic-core-formalization.md
+  locus:
+    line: 776
+    column: 67
+  occurrence: 335
+  text: e
+  classification: mathematics
+- file: theory/orthemic-core-formalization.md
+  locus:
+    line: 777
+    column: 22
+  occurrence: 336
+  text: A_α
+  classification: mathematics
+- file: theory/orthemic-core-formalization.md
+  locus:
+    line: 777
+    column: 34
+  occurrence: 337
+  text: T_α
+  classification: mathematics
+- file: theory/orthemic-core-formalization.md
+  locus:
+    line: 777
+    column: 56
+  occurrence: 338
+  text: x_α
+  classification: mathematics
+- file: theory/orthemic-core-formalization.md
+  locus:
+    line: 778
+    column: 3
+  occurrence: 339
+  text: m
+  classification: mathematics
+- file: theory/orthemic-core-formalization.md
+  locus:
+    line: 779
+    column: 3
+  occurrence: 340
+  text: GoalSchema(·)
+  classification: mathematics
+- file: theory/orthemic-core-formalization.md
+  locus:
+    line: 780
+    column: 42
+  occurrence: 341
+  text: GoalSchema(α)
+  classification: mathematics
+- file: theory/orthemic-core-formalization.md
+  locus:
+    line: 780
+    column: 59
+  occurrence: 342
+  text: GoalSchema(β)
+  classification: mathematics
+- file: theory/orthemic-core-formalization.md
+  locus:
+    line: 783
+    column: 3
+  occurrence: 343
+  text: 𝒢_{α,A_α} ⊆ Π_{A_α}
+  classification: mathematics
+- file: theory/orthemic-core-formalization.md
+  locus:
+    line: 788
+    column: 3
+  occurrence: 344
+  text: φ(α→β)
+  classification: mathematics
+- file: theory/orthemic-core-formalization.md
+  locus:
+    line: 788
+    column: 53
+  occurrence: 345
+  text: Π_{A_α}
+  classification: mathematics
+- file: theory/orthemic-core-formalization.md
+  locus:
+    line: 789
+    column: 3
+  occurrence: 346
+  text: Π_{A_β}
+  classification: mathematics
+- file: theory/orthemic-core-formalization.md
+  locus:
+    line: 790
+    column: 15
+  occurrence: 347
+  text: 𝒢_{β,A_β} = φ(𝒢_{α,A_α})
+  classification: mathematics
+- file: theory/orthemic-core-formalization.md
+  locus:
+    line: 790
+    column: 52
+  occurrence: 348
+  text: 𝒢_α ∩ 𝒢_β = ∅
+  classification: mathematics
+- file: theory/orthemic-core-formalization.md
+  locus:
+    line: 791
+    column: 3
+  occurrence: 349
+  text: Conflict_m(𝒢_α, 𝒢_β)
+  classification: mathematics
+- file: theory/orthemic-core-formalization.md
+  locus:
+    line: 791
+    column: 28
+  occurrence: 350
+  text: Compat_m(𝒢_α, 𝒢_β)
+  classification: mathematics
+- file: theory/orthemic-core-formalization.md
+  locus:
+    line: 793
+    column: 4
+  occurrence: 351
+  text: 𝒢_α ⊆ Π_{A_α}
+  classification: mathematics
+- file: theory/orthemic-core-formalization.md
+  locus:
+    line: 793
+    column: 21
+  occurrence: 352
+  text: 𝒢_β ⊆ Π_{A_β}
+  classification: mathematics
+- file: theory/orthemic-core-formalization.md
+  locus:
+    line: 794
+    column: 26
+  occurrence: 353
+  text: Reach(m)
+  classification: mathematics
+- file: theory/orthemic-core-formalization.md
+  locus:
+    line: 794
+    column: 68
+  occurrence: 354
+  text: m
+  classification: mathematics
+- file: theory/orthemic-core-formalization.md
+  locus:
+    line: 803
+    column: 15
+  occurrence: 355
+  text: A_α = A_β
+  classification: mathematics
+- file: theory/orthemic-core-formalization.md
+  locus:
+    line: 803
+    column: 28
+  occurrence: 356
+  text: 𝒢_α = 𝒢_β
+  classification: mathematics
+- file: theory/orthemic-core-formalization.md
+  locus:
+    line: 804
+    column: 3
+  occurrence: 357
+  text: φ(α→β)
+  classification: mathematics
+- file: theory/orthemic-core-formalization.md
+  locus:
+    line: 818
+    column: 44
+  occurrence: 358
+  text: x_α = Ω_α(m)
+  classification: mathematics
+- file: theory/orthemic-core-formalization.md
+  locus:
+    line: 819
+    column: 48
+  occurrence: 359
+  text: κ
+  classification: mathematics
+- file: theory/orthemic-core-formalization.md
+  locus:
+    line: 825
+    column: 21
+  occurrence: 360
+  text: depth(e)
+  classification: mathematics
+- file: theory/orthemic-core-formalization.md
+  locus:
+    line: 827
+    column: 57
+  occurrence: 361
+  text: ρ(μ, lesson)
+  classification: mathematics
+- file: theory/orthemic-core-formalization.md
+  locus:
+    line: 836
+    column: 77
+  occurrence: 362
+  text: A
+  classification: mathematics
+- file: theory/orthemic-core-formalization.md
+  locus:
+    line: 837
+    column: 56
+  occurrence: 363
+  text: Z_A
+  classification: mathematics
+- file: theory/orthemic-core-formalization.md
+  locus:
+    line: 837
+    column: 75
+  occurrence: 364
+  text: P_A
+  classification: mathematics
+- file: theory/orthemic-core-formalization.md
+  locus:
+    line: 838
+    column: 66
+  occurrence: 365
+  text: y
+  classification: mathematics
+- file: theory/orthemic-core-formalization.md
+  locus:
+    line: 840
+    column: 69
+  occurrence: 366
+  text: O*(m; A)
+  classification: mathematics
+- file: theory/orthemic-core-formalization.md
+  locus:
+    line: 842
+    column: 37
+  occurrence: 367
+  text: ProfileOf_A ⊆ Z_A × Π_A
+  classification: mathematics
+- file: theory/orthemic-core-formalization.md
+  locus:
+    line: 845
+    column: 81
+  occurrence: 368
+  text: A
+  classification: mathematics
+- file: theory/orthemic-core-formalization.md
+  locus:
+    line: 846
+    column: 1
+  occurrence: 369
+  text: docs/decisions/0015-latent-state-observation-and-representation-boundary.md
+  classification: literal-code
+- file: theory/orthemic-core-formalization.md
+  locus:
+    line: 847
+    column: 1
+  occurrence: 370
+  text: docs/related-work/LATENT-STATE-INFERENCE-AND-ORTHEMOLOGY.md
+  classification: literal-code
+- file: theory/orthemic-core-formalization.md
+  locus:
+    line: 851
+    column: 58
+  occurrence: 371
+  text: ι_n
+  classification: mathematics
+- file: theory/orthemic-core-formalization.md
+  locus:
+    line: 853
+    column: 61
+  occurrence: 372
+  text: μ̄
+  classification: mathematics
+- file: theory/orthemic-core-formalization.md
+  locus:
+    line: 857
+    column: 1
+  occurrence: 373
+  text: '{O,I,E,D,R,V,W}'
+  classification: mathematics
+- file: theory/orthemic-core-formalization.md
+  locus:
+    line: 858
+    column: 25
+  occurrence: 374
+  text: ReqPath(e)
+  classification: mathematics
+- file: theory/orthemic-core-formalization.md
+  locus:
+    line: 872
+    column: 1
+  occurrence: 375
+  text: docs/provenance/document-history.md
+  classification: literal-code
+- file: theory/orthemic-multi-actor-conflict-note.md
+  locus:
+    line: 8
+    column: 4
+  occurrence: 1
+  text: docs/provenance/document-history.md
+  classification: literal-code
+- file: theory/orthemic-multi-actor-conflict-note.md
+  locus:
+    line: 22
+    column: 33
+  occurrence: 2
+  text: A_α
+  classification: mathematics
+- file: theory/orthemic-multi-actor-conflict-note.md
+  locus:
+    line: 22
+    column: 44
+  occurrence: 3
+  text: T_α = task(A_α)
+  classification: mathematics
+- file: theory/orthemic-multi-actor-conflict-note.md
+  locus:
+    line: 22
+    column: 63
+  occurrence: 4
+  text: Π_{A_α}
+  classification: mathematics
+- file: theory/orthemic-multi-actor-conflict-note.md
+  locus:
+    line: 24
+    column: 20
+  occurrence: 5
+  text: A
+  classification: mathematics
+- file: theory/orthemic-multi-actor-conflict-note.md
+  locus:
+    line: 25
+    column: 22
+  occurrence: 6
+  text: α, β
+  classification: mathematics
+- file: theory/orthemic-multi-actor-conflict-note.md
+  locus:
+    line: 26
+    column: 22
+  occurrence: 7
+  text: α, β
+  classification: mathematics
+- file: theory/orthemic-multi-actor-conflict-note.md
+  locus:
+    line: 29
+    column: 4
+  occurrence: 8
+  text: O*(m; A_α)
+  classification: mathematics
+- file: theory/orthemic-multi-actor-conflict-note.md
+  locus:
+    line: 45
+    column: 1
+  occurrence: 9
+  text: 𝒢_{α,A_α} ⊆ Π_{A_α}
+  classification: mathematics
+- file: theory/orthemic-multi-actor-conflict-note.md
+  locus:
+    line: 136
+    column: 68
+  occurrence: 10
+  text: GoalSchema(·)
+  classification: mathematics
+- file: theory/orthemic-multi-actor-conflict-note.md
+  locus:
+    line: 138
+    column: 29
+  occurrence: 11
+  text: GoalSchema(α)
+  classification: mathematics
+- file: theory/orthemic-multi-actor-conflict-note.md
+  locus:
+    line: 138
+    column: 49
+  occurrence: 12
+  text: GoalSchema(β)
+  classification: mathematics
+- file: theory/orthemic-multi-actor-conflict-note.md
+  locus:
+    line: 140
+    column: 26
+  occurrence: 13
+  text: 𝒢_α ∩ 𝒢_β
+  classification: mathematics
+- file: theory/orthemic-multi-actor-conflict-note.md
+  locus:
+    line: 172
+    column: 16
+  occurrence: 14
+  text: orthemma-ortheme-systems-revised-draft.md
+  classification: literal-code
+- file: companion/orthability-and-the-ground-of-intelligibility.md
+  locus:
+    line: 3
+    column: 963
+  occurrence: 1
+  text: orthemic-modal-metaphysical-assessment.md
+  classification: literal-code
+- file: companion/orthability-and-the-ground-of-intelligibility.md
+  locus:
+    line: 3
+    column: 1008
+  occurrence: 2
+  text: orthemic-companion-paper-outline.md
+  classification: literal-code
+- file: companion/orthability-and-the-ground-of-intelligibility.md
+  locus:
+    line: 3
+    column: 1114
+  occurrence: 3
+  text: OBJECTIONS-AND-REPLIES.md
+  classification: literal-code
+- file: companion/orthability-and-the-ground-of-intelligibility.md
+  locus:
+    line: 3
+    column: 1181
+  occurrence: 4
+  text: sourcing/R3-COMPANION-SOURCING-LEDGER.md
+  classification: literal-code
+- file: companion/orthability-and-the-ground-of-intelligibility.md
+  locus:
+    line: 3
+    column: 1295
+  occurrence: 5
+  text: docs/sourcing/CURRENT-SOURCING-LEDGER.md
+  classification: literal-code
+- file: companion/orthability-and-the-ground-of-intelligibility.md
+  locus:
+    line: 13
+    column: 149
+  occurrence: 6
+  text: Orthable(m; A)
+  classification: mathematics
+- file: companion/orthability-and-the-ground-of-intelligibility.md
+  locus:
+    line: 13
+    column: 179
+  occurrence: 7
+  text: m
+  classification: mathematics
+- file: companion/orthability-and-the-ground-of-intelligibility.md
+  locus:
+    line: 13
+    column: 274
+  occurrence: 8
+  text: A
+  classification: mathematics
+- file: companion/orthability-and-the-ground-of-intelligibility.md
+  locus:
+    line: 13
+    column: 1266
+  occurrence: 9
+  text: ARGUMENT-MAP-ORTHABILITY.md
+  classification: literal-code
+- file: companion/orthability-and-the-ground-of-intelligibility.md
+  locus:
+    line: 17
+    column: 175
+  occurrence: 10
+  text: p̂
+  classification: mathematics
+- file: companion/orthability-and-the-ground-of-intelligibility.md
+  locus:
+    line: 17
+    column: 445
+  occurrence: 11
+  text: O*(m; A)
+  classification: mathematics
+- file: companion/orthability-and-the-ground-of-intelligibility.md
+  locus:
+    line: 17
+    column: 558
+  occurrence: 12
+  text: PlacementCorrect(p̂, m, A)
+  classification: mathematics
+- file: companion/orthability-and-the-ground-of-intelligibility.md
+  locus:
+    line: 17
+    column: 1447
+  occurrence: 13
+  text: CONCRETE-AND-SOUND-REASON.md
+  classification: literal-code
+- file: companion/orthability-and-the-ground-of-intelligibility.md
+  locus:
+    line: 19
+    column: 362
+  occurrence: 14
+  text: AdequateMetaType(μ_rep; A)
+  classification: mathematics
+- file: companion/orthability-and-the-ground-of-intelligibility.md
+  locus:
+    line: 23
+    column: 80
+  occurrence: 15
+  text: PathwayAdequate(e)
+  classification: mathematics
+- file: companion/orthability-and-the-ground-of-intelligibility.md
+  locus:
+    line: 25
+    column: 3
+  occurrence: 16
+  text: StrictlySoundReasoning_q(e) := ReasoningPathAdequate_q(e) ∧ TOKEN_TRUTH_LINKED_q(e)
+  classification: mathematics
+- file: companion/orthability-and-the-ground-of-intelligibility.md
+  locus:
+    line: 27
+    column: 7
+  occurrence: 17
+  text: ReasoningPathAdequate_q(e)
+  classification: mathematics
+- file: companion/orthability-and-the-ground-of-intelligibility.md
+  locus:
+    line: 27
+    column: 91
+  occurrence: 18
+  text: ReqReason_q(e) ⊆ ReqPath(e)
+  classification: mathematics
+- file: companion/orthability-and-the-ground-of-intelligibility.md
+  locus:
+    line: 27
+    column: 171
+  occurrence: 19
+  text: q
+  classification: mathematics
+- file: companion/orthability-and-the-ground-of-intelligibility.md
+  locus:
+    line: 27
+    column: 388
+  occurrence: 20
+  text: PathwayAdequate(e)
+  classification: mathematics
+- file: companion/orthability-and-the-ground-of-intelligibility.md
+  locus:
+    line: 27
+    column: 610
+  occurrence: 21
+  text: PathwayAdequate(e)
+  classification: mathematics
+- file: companion/orthability-and-the-ground-of-intelligibility.md
+  locus:
+    line: 27
+    column: 1156
+  occurrence: 22
+  text: EX_ANTE_JUSTIFIED
+  classification: semantic-registry-id
+- file: companion/orthability-and-the-ground-of-intelligibility.md
+  locus:
+    line: 33
+    column: 138
+  occurrence: 23
+  text: O*(m; A)
+  classification: mathematics
+- file: companion/orthability-and-the-ground-of-intelligibility.md
+  locus:
+    line: 33
+    column: 827
+  occurrence: 24
+  text: Inst_A(m, o)
+  classification: mathematics
+- file: companion/orthability-and-the-ground-of-intelligibility.md
+  locus:
+    line: 39
+    column: 234
+  occurrence: 25
+  text: F_O
+  classification: mathematics
+- file: companion/orthability-and-the-ground-of-intelligibility.md
+  locus:
+    line: 39
+    column: 359
+  occurrence: 26
+  text: F_M
+  classification: mathematics
+- file: companion/orthability-and-the-ground-of-intelligibility.md
+  locus:
+    line: 45
+    column: 333
+  occurrence: 27
+  text: RelSpec
+  classification: mathematics
+- file: companion/orthability-and-the-ground-of-intelligibility.md
+  locus:
+    line: 105
+    column: 36
+  occurrence: 28
+  text: OBJECTIONS-AND-REPLIES.md
+  classification: literal-code
+- file: companion/orthability-and-the-ground-of-intelligibility.md
+  locus:
+    line: 136
+    column: 88
+  occurrence: 29
+  text: applications/daee-epistemics/
+  classification: literal-code
+- file: companion/orthability-and-the-ground-of-intelligibility.md
+  locus:
+    line: 136
+    column: 1258
+  occurrence: 30
+  text: companion/dynamic-orthing-noetic-learning-and-orthability.md
+  classification: literal-code
+- file: companion/orthability-and-the-ground-of-intelligibility.md
+  locus:
+    line: 136
+    column: 1342
+  occurrence: 31
+  text: applications/latent-state-orthing/
+  classification: literal-code
+- file: companion/orthability-and-the-ground-of-intelligibility.md
+  locus:
+    line: 136
+    column: 1399
+  occurrence: 32
+  text: applications/daee-epistemics/META-NOETIC-MEMETICS-AND-DYNAMIC-ORTHING.md
+  classification: literal-code
+- file: companion/orthability-and-the-ground-of-intelligibility.md
+  locus:
+    line: 136
+    column: 1572
+  occurrence: 33
+  text: docs/architecture/ORTHEMOLOGY-LAYER-MAP.md
+  classification: literal-code
+- file: companion/orthability-and-the-ground-of-intelligibility.md
+  locus:
+    line: 142
+    column: 70
+  occurrence: 34
+  text: references/orthemology.bib
+  classification: literal-code
+- file: companion/orthability-and-the-ground-of-intelligibility.md
+  locus:
+    line: 142
+    column: 210
+  occurrence: 35
+  text: docs/sourcing/CURRENT-SOURCING-LEDGER.md
+  classification: literal-code
+- file: companion/orthability-divine-attributes-and-speech-athari.md
+  locus:
+    line: 3
+    column: 800
+  occurrence: 1
+  text: orthability-and-the-ground-of-intelligibility.md
+  classification: literal-code
+- file: companion/orthability-divine-attributes-and-speech-athari.md
+  locus:
+    line: 3
+    column: 1257
+  occurrence: 2
+  text: references/source-status.yaml
+  classification: literal-code
+- file: companion/orthability-divine-attributes-and-speech-athari.md
+  locus:
+    line: 3
+    column: 1330
+  occurrence: 3
+  text: ATH-1
+  classification: semantic-registry-id
+- file: companion/orthability-divine-attributes-and-speech-athari.md
+  locus:
+    line: 3
+    column: 1338
+  occurrence: 4
+  text: ATH-7
+  classification: semantic-registry-id
+- file: companion/orthability-divine-attributes-and-speech-athari.md
+  locus:
+    line: 3
+    column: 1723
+  occurrence: 5
+  text: COMPILATION_MEDIATED
+  classification: semantic-registry-id
+- file: companion/orthability-divine-attributes-and-speech-athari.md
+  locus:
+    line: 3
+    column: 1751
+  occurrence: 6
+  text: ATH-3
+  classification: semantic-registry-id
+- file: companion/orthability-divine-attributes-and-speech-athari.md
+  locus:
+    line: 3
+    column: 2029
+  occurrence: 7
+  text: ATH-6
+  classification: semantic-registry-id
+- file: companion/orthability-divine-attributes-and-speech-athari.md
+  locus:
+    line: 37
+    column: 183
+  occurrence: 8
+  text: Orthable(m; A)
+  classification: mathematics
+- file: companion/orthability-divine-attributes-and-speech-athari.md
+  locus:
+    line: 37
+    column: 286
+  occurrence: 9
+  text: ARGUMENT-MAP-ORTHABILITY.md
+  classification: literal-code
+- file: companion/orthability-divine-attributes-and-speech-athari.md
+  locus:
+    line: 112
+    column: 70
+  occurrence: 10
+  text: references/orthemology.bib
+  classification: literal-code
+- file: companion/orthability-divine-attributes-and-speech-athari.md
+  locus:
+    line: 112
+    column: 209
+  occurrence: 11
+  text: references/source-status.yaml
+  classification: literal-code
+- file: companion/orthability-divine-attributes-and-speech-athari.md
+  locus:
+    line: 112
+    column: 281
+  occurrence: 12
+  text: ATH-1
+  classification: semantic-registry-id
+- file: companion/orthability-divine-attributes-and-speech-athari.md
+  locus:
+    line: 112
+    column: 289
+  occurrence: 13
+  text: ATH-7
+  classification: semantic-registry-id
+- file: companion/orthability-divine-attributes-and-speech-athari.md
+  locus:
+    line: 112
+    column: 334
+  occurrence: 14
+  text: docs/sourcing/CURRENT-SOURCING-LEDGER.md
+  classification: literal-code
+- file: companion/orthability-divine-attributes-and-speech-athari.md
+  locus:
+    line: 114
+    column: 35
+  occurrence: 15
+  text: references/quran-loci.yaml
+  classification: literal-code
+- file: companion/orthability-divine-attributes-and-speech-athari.md
+  locus:
+    line: 117
+    column: 105
+  occurrence: 16
+  text: ATH-3
+  classification: semantic-registry-id
+- file: companion/dynamic-orthing-noetic-learning-and-orthability.md
+  locus:
+    line: 16
+    column: 2
+  occurrence: 1
+  text: DYNAMIC-ORTHABILITY-ARGUMENT-MAP.yaml
+  classification: literal-code
+- file: companion/dynamic-orthing-noetic-learning-and-orthability.md
+  locus:
+    line: 19
+    column: 10
+  occurrence: 2
+  text: Ibn Taymiyyah's Epistemology.md
+  classification: literal-code
+- file: companion/dynamic-orthing-noetic-learning-and-orthability.md
+  locus:
+    line: 134
+    column: 1
+  occurrence: 3
+  text: DYNAMIC-ORTHABILITY-ARGUMENT-MAP.yaml
+  classification: literal-code
+- file: companion/dynamic-orthing-noetic-learning-and-orthability.md
+  locus:
+    line: 155
+    column: 7
+  occurrence: 4
+  text: ARG-01
+  classification: semantic-registry-id
+- file: companion/dynamic-orthing-noetic-learning-and-orthability.md
+  locus:
+    line: 156
+    column: 7
+  occurrence: 5
+  text: ARG-02
+  classification: semantic-registry-id
+- file: companion/dynamic-orthing-noetic-learning-and-orthability.md
+  locus:
+    line: 157
+    column: 7
+  occurrence: 6
+  text: ARG-03
+  classification: semantic-registry-id
+- file: companion/dynamic-orthing-noetic-learning-and-orthability.md
+  locus:
+    line: 158
+    column: 7
+  occurrence: 7
+  text: ARG-04
+  classification: semantic-registry-id
+- file: companion/dynamic-orthing-noetic-learning-and-orthability.md
+  locus:
+    line: 159
+    column: 7
+  occurrence: 8
+  text: ARG-05
+  classification: semantic-registry-id
+- file: companion/dynamic-orthing-noetic-learning-and-orthability.md
+  locus:
+    line: 160
+    column: 7
+  occurrence: 9
+  text: ARG-06
+  classification: semantic-registry-id
+- file: companion/dynamic-orthing-noetic-learning-and-orthability.md
+  locus:
+    line: 161
+    column: 7
+  occurrence: 10
+  text: ARG-07
+  classification: semantic-registry-id
+- file: companion/dynamic-orthing-noetic-learning-and-orthability.md
+  locus:
+    line: 162
+    column: 7
+  occurrence: 11
+  text: ARG-08
+  classification: semantic-registry-id
+- file: companion/dynamic-orthing-noetic-learning-and-orthability.md
+  locus:
+    line: 163
+    column: 7
+  occurrence: 12
+  text: ARG-09
+  classification: semantic-registry-id
+- file: companion/dynamic-orthing-noetic-learning-and-orthability.md
+  locus:
+    line: 164
+    column: 8
+  occurrence: 13
+  text: ARG-10
+  classification: semantic-registry-id
+- file: companion/dynamic-orthing-noetic-learning-and-orthability.md
+  locus:
+    line: 165
+    column: 8
+  occurrence: 14
+  text: ARG-11
+  classification: semantic-registry-id
+- file: companion/dynamic-orthing-noetic-learning-and-orthability.md
+  locus:
+    line: 166
+    column: 8
+  occurrence: 15
+  text: ARG-12
+  classification: semantic-registry-id
+- file: companion/dynamic-orthing-noetic-learning-and-orthability.md
+  locus:
+    line: 167
+    column: 8
+  occurrence: 16
+  text: ARG-13
+  classification: semantic-registry-id
+- file: companion/dynamic-orthing-noetic-learning-and-orthability.md
+  locus:
+    line: 168
+    column: 8
+  occurrence: 17
+  text: ARG-14
+  classification: semantic-registry-id
+- file: companion/dynamic-orthing-noetic-learning-and-orthability.md
+  locus:
+    line: 194
+    column: 2
+  occurrence: 18
+  text: DYNAMIC-ORTHABILITY-ARGUMENT-MAP.yaml
+  classification: literal-code
+- file: companion/dynamic-orthing-noetic-learning-and-orthability.md
+  locus:
+    line: 195
+    column: 20
+  occurrence: 19
+  text: non_entailments
+  classification: literal-code
+- file: companion/dynamic-orthing-noetic-learning-and-orthability.md
+  locus:
+    line: 201
+    column: 2
+  occurrence: 20
+  text: orthability-divine-attributes-and-speech-athari.md
+  classification: literal-code
+- file: companion/dynamic-orthing-noetic-learning-and-orthability.md
+  locus:
+    line: 265
+    column: 21
+  occurrence: 21
+  text: orthability-and-the-ground-of-intelligibility.md
+  classification: literal-code
+- file: companion/dynamic-orthing-noetic-learning-and-orthability.md
+  locus:
+    line: 265
+    column: 73
+  occurrence: 22
+  text: orthability-divine-attributes-and-speech-athari.md
+  classification: literal-code
+- file: companion/dynamic-orthing-noetic-learning-and-orthability.md
+  locus:
+    line: 269
+    column: 36
+  occurrence: 23
+  text: applications/latent-state-orthing/
+  classification: literal-code
+- file: companion/dynamic-orthing-noetic-learning-and-orthability.md
+  locus:
+    line: 271
+    column: 1
+  occurrence: 24
+  text: applications/daee-epistemics/
+  classification: literal-code
+- file: docs/notation-gallery.md
+  locus:
+    line: 5
+    column: 1
+  occurrence: 1
+  text: docs/notation-registry.yaml
+  classification: literal-code
+- file: docs/notation-gallery.md
+  locus:
+    line: 6
+    column: 13
+  occurrence: 2
+  text: $...$
+  classification: literal-code
+- file: docs/notation-gallery.md
+  locus:
+    line: 6
+    column: 44
+  occurrence: 3
+  text: math
+  classification: literal-code
+- file: docs/notation-gallery.md
+  locus:
+    line: 7
+    column: 1
+  occurrence: 4
+  text: scripts/build_pdfs.py
+  classification: literal-code
+- file: docs/notation-gallery.md
+  locus:
+    line: 7
+    column: 33
+  occurrence: 5
+  text: artifacts/notation-gallery.pdf
+  classification: literal-code
+- file: docs/notation-gallery.md
+  locus:
+    line: 8
+    column: 27
+  occurrence: 6
+  text: scripts/latex_to_typst_math.py
+  classification: literal-code
+- file: docs/notation-gallery.md
+  locus:
+    line: 10
+    column: 43
+  occurrence: 7
+  text: scripts/validate_math_source.py
+  classification: literal-code
+- file: docs/notation-gallery.md
+  locus:
+    line: 12
+    column: 1
+  occurrence: 8
+  text: scripts/validate_pdf_math.py
+  classification: literal-code
+- file: docs/notation-gallery.md
+  locus:
+    line: 14
+    column: 1
+  occurrence: 9
+  text: docs/project-closure/r7b/R7B-PDF-MATH-BASELINE.md
+  classification: literal-code
+- file: docs/notation-gallery.md
+  locus:
+    line: 14
+    column: 63
+  occurrence: 10
+  text: mu
+  classification: literal-code
+- file: docs/notation-gallery.md
+  locus:
+    line: 15
+    column: 1
+  occurrence: 11
+  text: C
+  classification: literal-code
+- file: docs/notation-gallery.md
+  locus:
+    line: 15
+    column: 46
+  occurrence: 12
+  text: '#raw'
+  classification: literal-code
+- file: docs/notation-gallery.md
+  locus:
+    line: 22
+    column: 3
+  occurrence: 13
+  text: A
+  classification: semantic-registry-id
+- file: docs/notation-gallery.md
+  locus:
+    line: 23
+    column: 3
+  occurrence: 14
+  text: alpha, beta, ...
+  classification: semantic-registry-id
+- file: docs/notation-gallery.md
+  locus:
+    line: 24
+    column: 3
+  occurrence: 15
+  text: T = task(A)
+  classification: semantic-registry-id
+- file: docs/notation-gallery.md
+  locus:
+    line: 25
+    column: 3
+  occurrence: 16
+  text: M_univ, O_univ
+  classification: semantic-registry-id
+- file: docs/notation-gallery.md
+  locus:
+    line: 26
+    column: 3
+  occurrence: 17
+  text: M_A, O_A
+  classification: semantic-registry-id
+- file: docs/notation-gallery.md
+  locus:
+    line: 27
+    column: 3
+  occurrence: 18
+  text: Inst_A
+  classification: semantic-registry-id
+- file: docs/notation-gallery.md
+  locus:
+    line: 28
+    column: 3
+  occurrence: 19
+  text: O*(m; A)
+  classification: semantic-registry-id
+- file: docs/notation-gallery.md
+  locus:
+    line: 29
+    column: 3
+  occurrence: 20
+  text: Pi_A
+  classification: semantic-registry-id
+- file: docs/notation-gallery.md
+  locus:
+    line: 30
+    column: 3
+  occurrence: 21
+  text: Pi_A_partial
+  classification: semantic-registry-id
+- file: docs/notation-gallery.md
+  locus:
+    line: 31
+    column: 3
+  occurrence: 22
+  text: C_hat
+  classification: semantic-registry-id
+- file: docs/notation-gallery.md
+  locus:
+    line: 32
+    column: 3
+  occurrence: 23
+  text: p_hat
+  classification: semantic-registry-id
+- file: docs/notation-gallery.md
+  locus:
+    line: 33
+    column: 3
+  occurrence: 24
+  text: Omega
+  classification: semantic-registry-id
+- file: docs/notation-gallery.md
+  locus:
+    line: 34
+    column: 3
+  occurrence: 25
+  text: mu
+  classification: semantic-registry-id
+- file: docs/notation-gallery.md
+  locus:
+    line: 35
+    column: 3
+  occurrence: 26
+  text: pi_mu
+  classification: semantic-registry-id
+- file: docs/notation-gallery.md
+  locus:
+    line: 36
+    column: 3
+  occurrence: 27
+  text: mu_bar
+  classification: semantic-registry-id
+- file: docs/notation-gallery.md
+  locus:
+    line: 37
+    column: 3
+  occurrence: 28
+  text: MetaInst
+  classification: semantic-registry-id
+- file: docs/notation-gallery.md
+  locus:
+    line: 38
+    column: 3
+  occurrence: 29
+  text: Gamma_E
+  classification: semantic-registry-id
+- file: docs/notation-gallery.md
+  locus:
+    line: 39
+    column: 3
+  occurrence: 30
+  text: e_Gamma
+  classification: semantic-registry-id
+- file: docs/notation-gallery.md
+  locus:
+    line: 40
+    column: 3
+  occurrence: 31
+  text: GoalSchema
+  classification: semantic-registry-id
+- file: docs/notation-gallery.md
+  locus:
+    line: 41
+    column: 3
+  occurrence: 32
+  text: G_target
+  classification: semantic-registry-id
+- file: docs/notation-gallery.md
+  locus:
+    line: 42
+    column: 3
+  occurrence: 33
+  text: Rep_A
+  classification: semantic-registry-id
+- file: docs/notation-gallery.md
+  locus:
+    line: 43
+    column: 3
+  occurrence: 34
+  text: chi
+  classification: semantic-registry-id
+- file: docs/notation-gallery.md
+  locus:
+    line: 44
+    column: 3
+  occurrence: 35
+  text: L_A_star
+  classification: semantic-registry-id
+- file: docs/notation-gallery.md
+  locus:
+    line: 45
+    column: 3
+  occurrence: 36
+  text: select_mu
+  classification: semantic-registry-id
+- file: docs/notation-gallery.md
+  locus:
+    line: 46
+    column: 3
+  occurrence: 37
+  text: estatus_e
+  classification: semantic-registry-id
+- file: docs/notation-gallery.md
+  locus:
+    line: 47
+    column: 3
+  occurrence: 38
+  text: eps_A
+  classification: semantic-registry-id
+- file: docs/notation-gallery.md
+  locus:
+    line: 48
+    column: 3
+  occurrence: 39
+  text: theta_stop
+  classification: semantic-registry-id
+- file: docs/notation-gallery.md
+  locus:
+    line: 49
+    column: 3
+  occurrence: 40
+  text: K_A
+  classification: semantic-registry-id
+- file: docs/notation-gallery.md
+  locus:
+    line: 50
+    column: 3
+  occurrence: 41
+  text: R_A
+  classification: semantic-registry-id
+- file: docs/notation-gallery.md
+  locus:
+    line: 51
+    column: 3
+  occurrence: 42
+  text: W_A
+  classification: semantic-registry-id
+- file: docs/notation-gallery.md
+  locus:
+    line: 52
+    column: 3
+  occurrence: 43
+  text: Q_e
+  classification: semantic-registry-id
+- file: docs/notation-gallery.md
+  locus:
+    line: 53
+    column: 3
+  occurrence: 44
+  text: delta_e
+  classification: semantic-registry-id
+- file: docs/notation-gallery.md
+  locus:
+    line: 54
+    column: 3
+  occurrence: 45
+  text: ReqPath
+  classification: semantic-registry-id
+- file: docs/notation-gallery.md
+  locus:
+    line: 100
+    column: 36
+  occurrence: 46
+  text: docs/notation-registry.yaml
+  classification: literal-code

@@ -1,0 +1,410 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "$id": "https://theislampill.github.io/orthemology/schemas/publication-profile.schema.json",
+  "title": "Orthemology publication target profile",
+  "type": "object",
+  "additionalProperties": false,
+  "required": [
+    "schema",
+    "profile_id",
+    "compatibility_claim",
+    "status",
+    "source_ownership",
+    "toolchain",
+    "package_policy",
+    "layout",
+    "hard_limits",
+    "appendix_policy",
+    "source_package",
+    "gates",
+    "artifacts"
+  ],
+  "properties": {
+    "schema": {
+      "const": "orthemology-publication-profile-v1"
+    },
+    "profile_id": {
+      "const": "generic-arxiv-compatible-two-column-technical-paper"
+    },
+    "compatibility_claim": {
+      "const": "A venue-neutral, generic arXiv-compatible two-column technical paper with full-width front matter and single-column technical appendices."
+    },
+    "status": {
+      "type": "object",
+      "additionalProperties": false,
+      "required": [
+        "target_state",
+        "current_artifact_conformance",
+        "venue_selection",
+        "submission",
+        "processing",
+        "endorsement",
+        "acceptance",
+        "publication"
+      ],
+      "properties": {
+        "target_state": {
+          "const": "deferred-tasks-12-13"
+        },
+        "current_artifact_conformance": {
+          "const": "not-claimed"
+        },
+        "venue_selection": {
+          "const": "none"
+        },
+        "submission": {
+          "const": "not-submitted"
+        },
+        "processing": {
+          "const": "not-claimed"
+        },
+        "endorsement": {
+          "const": "not-claimed"
+        },
+        "acceptance": {
+          "const": "not-claimed"
+        },
+        "publication": {
+          "const": "not-claimed"
+        }
+      }
+    },
+    "source_ownership": {
+      "type": "object",
+      "additionalProperties": false,
+      "required": [
+        "substantive_prose_owner",
+        "generated_latex_semantic_edits",
+        "bibliography_owner"
+      ],
+      "properties": {
+        "substantive_prose_owner": {
+          "const": "authoritative-markdown-sources"
+        },
+        "generated_latex_semantic_edits": {
+          "const": "prohibited"
+        },
+        "bibliography_owner": {
+          "const": "references/orthemology.bib"
+        }
+      }
+    },
+    "toolchain": {
+      "type": "object",
+      "additionalProperties": false,
+      "required": [
+        "driver",
+        "engine",
+        "tex_live_generation",
+        "bibliography_processor",
+        "shell_escape",
+        "environment_dependencies",
+        "absolute_paths",
+        "font_source"
+      ],
+      "properties": {
+        "driver": {
+          "const": "latexmk"
+        },
+        "engine": {
+          "const": "pdflatex"
+        },
+        "tex_live_generation": {
+          "const": "texlive-2025"
+        },
+        "bibliography_processor": {
+          "const": "bibtex"
+        },
+        "shell_escape": {
+          "const": "disabled"
+        },
+        "environment_dependencies": {
+          "const": "declared-only"
+        },
+        "absolute_paths": {
+          "const": "prohibited"
+        },
+        "font_source": {
+          "const": "tex-live-distribution-only"
+        }
+      }
+    },
+    "package_policy": {
+      "type": "object",
+      "additionalProperties": false,
+      "required": [
+        "policy",
+        "supported_packages",
+        "conversion_steps",
+        "files_outside_package",
+        "stale_auxiliary_files"
+      ],
+      "properties": {
+        "policy": {
+          "const": "closed"
+        },
+        "supported_packages": {
+          "type": "array",
+          "minItems": 1,
+          "uniqueItems": true,
+          "items": {
+            "enum": [
+              "amsmath",
+              "amssymb",
+              "booktabs",
+              "geometry",
+              "hyperref",
+              "microtype",
+              "natbib",
+              "xcolor"
+            ]
+          }
+        },
+        "conversion_steps": {
+          "const": "prohibited"
+        },
+        "files_outside_package": {
+          "const": "prohibited"
+        },
+        "stale_auxiliary_files": {
+          "const": "prohibited"
+        }
+      }
+    },
+    "layout": {
+      "type": "object",
+      "additionalProperties": false,
+      "required": [
+        "document_class",
+        "font_size_pt",
+        "paper_size",
+        "body_columns",
+        "references_columns",
+        "front_matter",
+        "technical_appendices"
+      ],
+      "properties": {
+        "document_class": {
+          "const": "article"
+        },
+        "font_size_pt": {
+          "const": 10
+        },
+        "paper_size": {
+          "const": "us-letter"
+        },
+        "body_columns": {
+          "const": 2
+        },
+        "references_columns": {
+          "const": 2
+        },
+        "front_matter": {
+          "const": "full-width-title-and-abstract"
+        },
+        "technical_appendices": {
+          "const": "single-column"
+        }
+      }
+    },
+    "hard_limits": {
+      "type": "object",
+      "additionalProperties": false,
+      "required": [
+        "overfull_box_tolerance_pt",
+        "page_count",
+        "source_package_bytes"
+      ],
+      "properties": {
+        "overfull_box_tolerance_pt": {
+          "type": "number",
+          "minimum": 0,
+          "maximum": 10
+        },
+        "page_count": {
+          "const": "none"
+        },
+        "source_package_bytes": {
+          "const": "none"
+        }
+      }
+    },
+    "appendix_policy": {
+      "const": "technical-appendices-single-column"
+    },
+    "source_package": {
+      "type": "object",
+      "additionalProperties": false,
+      "required": [
+        "owner",
+        "entry_point",
+        "one_package_per_artifact",
+        "self_contained"
+      ],
+      "properties": {
+        "owner": {
+          "const": "scripts/build_pdfs.py"
+        },
+        "entry_point": {
+          "const": "main.tex"
+        },
+        "one_package_per_artifact": {
+          "const": true
+        },
+        "self_contained": {
+          "const": true
+        }
+      }
+    },
+    "gates": {
+      "type": "object",
+      "additionalProperties": false,
+      "required": [
+        "provenance",
+        "font_embedding",
+        "text_extraction",
+        "source_packaging",
+        "clean_build",
+        "visual_qa"
+      ],
+      "properties": {
+        "provenance": {
+          "const": "deferred-task-13"
+        },
+        "font_embedding": {
+          "const": "deferred-task-13"
+        },
+        "text_extraction": {
+          "const": "deferred-task-13"
+        },
+        "source_packaging": {
+          "const": "deferred-task-13"
+        },
+        "clean_build": {
+          "const": "deferred-task-13"
+        },
+        "visual_qa": {
+          "const": "deferred-task-13"
+        }
+      }
+    },
+    "artifacts": {
+      "type": "array",
+      "minItems": 6,
+      "maxItems": 6,
+      "items": {
+        "$ref": "#/$defs/artifact"
+      }
+    }
+  },
+  "$defs": {
+    "sourcePath": {
+      "enum": [
+        "manuscript/orthemma-ortheme-systems-revised-draft.md",
+        "theory/orthemic-core-formalization.md",
+        "theory/orthemic-multi-actor-conflict-note.md",
+        "companion/orthability-and-the-ground-of-intelligibility.md",
+        "companion/orthability-divine-attributes-and-speech-athari.md",
+        "companion/dynamic-orthing-noetic-learning-and-orthability.md",
+        "docs/notation-gallery.md"
+      ]
+    },
+    "sourceQualification": {
+      "enum": [
+        "research-stage-draft",
+        "not-peer-reviewed",
+        "not-externally-peer-reviewed",
+        "not-empirically-validated",
+        "candidate-terminology-not-adopted",
+        "philosophical-conclusions-conditional-on-stated-premises",
+        "creed-internal-material-school-labeled",
+        "engineering-evidence-does-not-support-metaphysical-claims"
+      ]
+    },
+    "exception": {
+      "type": "object",
+      "additionalProperties": false,
+      "required": [
+        "exception_id",
+        "reason"
+      ],
+      "properties": {
+        "exception_id": {
+          "const": "notation-gallery-diagnostic-reference"
+        },
+        "reason": {
+          "const": "notation-symbol-diagnostic-reference"
+        }
+      }
+    },
+    "artifact": {
+      "type": "object",
+      "additionalProperties": false,
+      "required": [
+        "artifact_id",
+        "profile_kind",
+        "sources",
+        "bibliography_owner",
+        "source_qualifications"
+      ],
+      "properties": {
+        "artifact_id": {
+          "enum": [
+            "orthemma-ortheme-systems-draft",
+            "orthemic-core-reference-draft",
+            "orthability-ground-of-intelligibility-draft",
+            "orthability-divine-speech-athari-draft",
+            "dynamic-orthing-noetic-learning-orthability-draft",
+            "notation-gallery"
+          ]
+        },
+        "profile_kind": {
+          "enum": [
+            "technical-paper",
+            "diagnostic-reference"
+          ]
+        },
+        "sources": {
+          "type": "array",
+          "minItems": 1,
+          "maxItems": 2,
+          "uniqueItems": true,
+          "items": {
+            "$ref": "#/$defs/sourcePath"
+          }
+        },
+        "bibliography_owner": {
+          "const": "references/orthemology.bib"
+        },
+        "source_qualifications": {
+          "type": "array",
+          "minItems": 3,
+          "uniqueItems": true,
+          "items": {
+            "$ref": "#/$defs/sourceQualification"
+          },
+          "allOf": [
+            {
+              "contains": {
+                "const": "research-stage-draft"
+              }
+            },
+            {
+              "contains": {
+                "const": "not-peer-reviewed"
+              }
+            },
+            {
+              "contains": {
+                "const": "not-empirically-validated"
+              }
+            }
+          ]
+        },
+        "exception": {
+          "$ref": "#/$defs/exception"
+        }
+      }
+    }
+  }
+}

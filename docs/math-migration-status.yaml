@@ -1,59 +1,61 @@
-schema: orthemology-math-migration-status-v1
-# R7B, Decision 0023. The mathematical-typesetting pipeline
-# (scripts/latex_to_typst_math.py; canonical GitHub-compatible $...$ / ```math
-# source; rendered by the pinned typst package) is PROVEN end-to-end on
-# docs/notation-gallery.md -> artifacts/notation-gallery.pdf (zero notdef).
-#
-# The four publication corpus documents are NOT yet migrated in place. Their
-# known missing-glyph (notdef/NUL) counts are pinned below so the reproduced
-# defect (R7B-PDF-MATH-BASELINE.md) is TRACKED: scripts/validate_pdf_math.py
-# fails if a PDF's notdef count differs from the value here, so the defect can
-# neither silently grow nor be silently declared fixed. When a document is
-# migrated, set migrated: true and expected_notdef: 0 in the same commit that
-# migrates its source. Full corpus migration is the reviewed continuation (a
-# fresh-Fable-reviewed pass), made safe by these validators. A Git freeze is
-# not a migration.
+schema: orthemology-math-migration-status-v2
+publication_profile: docs/publication-profile.yaml
+state_semantics:
+  glyph_defect_repaired: The reproduced missing-glyph defect is absent and expected_notdef is zero.
+  full_math_source_migrated: Every occurrence classified as mathematics has left inline backticks for canonical mathematical markup.
+  visual_qa_state: Task 13 owns committed-PDF all-page visual qualification; Task 11 records only deferred truth.
 pipeline:
-  implemented: "P1 — in-repo LaTeX-subset -> Typst-math translator; zero new dependencies; keeps the deterministic typst-package build and byte-reproducibility"
-  recommended_target: "P2 — pinned Pandoc -> Typst writer. R7C settled the choice by EVIDENCE (docs/project-closure/r7c/MATH-PIPELINE-PARITY-AUDIT.md): pandoc 3.6.4 IS provisionable (sha256 a9e5feb3...; refutes R7B's premise, audit B4), but P1 beat it on the corpus (36/36 vs 34/36 zero-notdef) and adds no CI dependency. P1 retained; P2 recorded as a proven portability alternative (canonical $...$ source is pipeline-agnostic)."
-  decision: docs/decisions/0023-mathematical-source-and-typesetting-pipeline.md
-  r7c_migration_infrastructure:
-    inventory: "docs/math-source-inventory.yaml — every FORMULA-bearing backtick span (218 across 29 files) classified; validate_math_source.py FAILS on any formula-in-backtick not recorded here (defeats tamper probe 1, audit B5)"
-    tool: "scripts/unicode_math_to_latex.py — the migration engine; PROVEN: all 177 combining/math target spans in the five build docs translate + compile with ZERO notdef under the pinned typst package"
-    status: "R7D Phase K: the NOTDEF DEFECT IS ELIMINATED IN PLACE. All 16 U+20D7 (vec) occurrences (13 core, 3 manuscript) were migrated to $...$/$$ math in the corpus source; both PDFs rebuild with ZERO notdef and are now migrated: true / expected_notdef: 0, enforced by validate_pdf_math. REMAINING (bounded, tooled): the broader reclassification of the ~190 non-notdef formula-like backtick spans (registry IDs vs literal code vs mathematics) into an allowlist-free state is the reviewed continuation — the inventory + proven tool + probe-1 gate make it mechanical, and it needs per-formula fresh-Fable review before the allowlist is removed. No corpus PDF now contains any NUL/notdef/tofu glyph."
-    notdef_source: "confirmed exactly the U+20D7 (vec) occurrences: WAS 13 in the core (-> 26 NUL), 3 in the manuscript (-> 6 NUL); companions/note have 0. R7D migrated all 16 -> now zero across the corpus."
-combining_accent_ban: "Publication math source must use \\hat/\\bar/\\vec, never precomposed combining marks (U+0300-U+036F, U+20D7). validate_math_source.py enforces this inside $...$ / $$...$$ / ```math."
+  current_compatibility_surface:
+    engine: typst-0.15.0
+    status: historical-noncanonical-compatibility-surface
+  target:
+    owner: docs/publication-profile.yaml
+    status: deferred-tasks-12-13
+  inventory:
+    owner: docs/math-source-inventory.yaml
+    occurrence_identity: file-locus-occurrence
+    bidirectional_parity_required: true
 documents:
-- pdf: notation-gallery
-  role: reference
-  sources: [docs/notation-gallery.md]
-  migrated: true
+- artifact_id: notation-gallery
+  sources:
+  - docs/notation-gallery.md
+  glyph_defect_repaired: true
+  full_math_source_migrated: true
   expected_notdef: 0
-- pdf: dynamic-orthing-noetic-learning-orthability-draft
-  role: companion
-  sources: [companion/dynamic-orthing-noetic-learning-and-orthability.md]
-  migrated: true
+  visual_qa_state: deferred-task-13
+- artifact_id: dynamic-orthing-noetic-learning-orthability-draft
+  sources:
+  - companion/dynamic-orthing-noetic-learning-and-orthability.md
+  glyph_defect_repaired: true
+  full_math_source_migrated: true
   expected_notdef: 0
-  note: "R7C Phase G companion, authored math-first ($...$); renders zero notdef"
-- pdf: orthemic-core-reference-draft
-  role: corpus
-  sources: [theory/orthemic-core-formalization.md, theory/orthemic-multi-actor-conflict-note.md]
-  migrated: true
+  visual_qa_state: deferred-task-13
+- artifact_id: orthemic-core-reference-draft
+  sources:
+  - theory/orthemic-core-formalization.md
+  - theory/orthemic-multi-actor-conflict-note.md
+  glyph_defect_repaired: true
+  full_math_source_migrated: false
   expected_notdef: 0
-  migration_note: "R7D Phase K: the 13 U+20D7 (vec) occurrences migrated in place to $...$ math (episode signature -> $$ display; e |= judgment -> $$ display; 7 inline vec code spans -> inline math). Rebuilt PDF renders ZERO notdef; validate_pdf_math now enforces notdef-free."
-- pdf: orthemma-ortheme-systems-draft
-  role: corpus
-  sources: [manuscript/orthemma-ortheme-systems-revised-draft.md]
-  migrated: true
+  visual_qa_state: deferred-task-13
+- artifact_id: orthemma-ortheme-systems-draft
+  sources:
+  - manuscript/orthemma-ortheme-systems-revised-draft.md
+  glyph_defect_repaired: true
+  full_math_source_migrated: false
   expected_notdef: 0
-  migration_note: "R7D Phase K: the 3 U+20D7 (vec) occurrences migrated in place to $...$ math (episode signature -> $$ display; inline mu-vec span -> inline math). Rebuilt PDF renders ZERO notdef."
-- pdf: orthability-ground-of-intelligibility-draft
-  role: corpus
-  sources: [companion/orthability-and-the-ground-of-intelligibility.md]
-  migrated: false
-  known_notdef: 0
-- pdf: orthability-divine-speech-athari-draft
-  role: corpus
-  sources: [companion/orthability-divine-attributes-and-speech-athari.md]
-  migrated: false
-  known_notdef: 0
+  visual_qa_state: deferred-task-13
+- artifact_id: orthability-ground-of-intelligibility-draft
+  sources:
+  - companion/orthability-and-the-ground-of-intelligibility.md
+  glyph_defect_repaired: true
+  full_math_source_migrated: false
+  expected_notdef: 0
+  visual_qa_state: deferred-task-13
+- artifact_id: orthability-divine-speech-athari-draft
+  sources:
+  - companion/orthability-divine-attributes-and-speech-athari.md
+  glyph_defect_repaired: true
+  full_math_source_migrated: false
+  expected_notdef: 0
+  visual_qa_state: deferred-task-13
