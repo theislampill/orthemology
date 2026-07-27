@@ -24,6 +24,8 @@ class MachineAssignmentClassificationTests(unittest.TestCase):
             "PYTHONUTF8=1",
             "PYTHONIOENCODING=utf-8",
             "HOME=/srv/orthemology",
+            "ENDPOINT=https://example.test/search?x=1",
+            "QUERY_URL=https://example.test/search?q=a+b#result",
             "$env:Path='C:\\Python311'",
             "export LC_ALL=C.UTF-8",
         )

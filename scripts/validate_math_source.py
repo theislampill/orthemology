@@ -54,19 +54,31 @@ FENCE_OPEN_RE = re.compile(r"^ {0,3}(`{3,}|~{3,})([^\r\n]*)$")
 FORMULA_SIGNAL_RE = re.compile(
     r"[=∈⊆⊂⟺⇔→↦∧∨≼≠≤≥∀∃∅⊥⊨⊭±×÷∩∪⟨⟩⋅·−≈≃]"
     r"|\{[^}]*\|[^}]*\}"
-    r"|(?:^|[^A-Za-z0-9_])[A-Za-z][A-Za-z0-9_-]*\([^)]*\)"
 )
-FORMULA_OPERAND_PATTERN = r"[^\W\d_](?:[0-9]+|_[A-Za-z0-9]+)?"
-BINARY_FORMULA_RE = re.compile(
-    r"(?<![\w/?=&-])"
-    + FORMULA_OPERAND_PATTERN
-    + r"\s*(?:[+/\-^<>⋅·−≈≃])\s*"
-    + FORMULA_OPERAND_PATTERN
-    + r"(?![\w/?=&-])"
+URL_RE = re.compile(
+    r"(?<![A-Za-z0-9+.-])https?://[^\s<>`\"']+",
+    re.IGNORECASE,
 )
-ISOLATED_FORMULA_OPERATOR_RE = re.compile(
-    r"(?<![\w/])(?:[+/^])(?![\w/])"
+POSIX_FILE_PATH_RE = re.compile(
+    r"(?<![\w.])"
+    r"(?:\.{1,2}/|[A-Za-z0-9_.-]+/)"
+    r"(?:[A-Za-z0-9_.-]+/)*"
+    r"[A-Za-z0-9_.-]+\.[A-Za-z0-9]+"
+    r"(?![\w.])"
 )
+FILE_SUFFIX_RE = re.compile(r"\.[A-Za-z0-9]+/?$")
+CALLABLE_FORMULA_RE = re.compile(
+    r"(?<![\w./?=&-])[^\W\d_]\w*\s*\([^)]*\)"
+)
+FORMULA_OPERAND_PATTERN = (
+    r"(?:[+\-\u2212]?(?:\d+(?:\.\d+)?|\.\d+)|[^\W\d_]\w*)"
+)
+FORMULA_IDENTIFIER_RE = re.compile(r"[^\W\d_]\w*$")
+FORMULA_OPERAND_AT_END_RE = re.compile(FORMULA_OPERAND_PATTERN + r"$")
+FORMULA_OPERAND_AT_START_RE = re.compile(FORMULA_OPERAND_PATTERN)
+OPERAND_BOUNDARY_CHARS = frozenset("./\\?&=#@")
+PUNCTUATION_FORMULA_OPERATORS = frozenset("*/^-·")
+ISOLATED_FORMULA_OPERATOR_RE = re.compile(r"(?<![\w/])(?:[+*/^])(?![\w/])")
 UNICODE_INDEXED_IDENTIFIER_RE = re.compile(
     r"(?<!\w)([^\W\d_]\w*_[A-Za-z0-9]+)(?!\w)"
 )
@@ -89,6 +101,11 @@ MATH_OR_CONTROL_IN_VALUE_RE = re.compile(
 )
 
 
+def _without_syntactic_urls(span):
+    """Replace complete HTTP(S) URL tokens before formula classification."""
+    return URL_RE.sub(lambda match: " " * len(match.group(0)), span)
+
+
 def is_machine_assignment(span):
     """Return whether *span* is one complete shell environment assignment.
 
@@ -105,6 +122,7 @@ def is_machine_assignment(span):
     control_value = value
     if powershell_env and value.startswith('"') and value.endswith('"'):
         control_value = value.replace("`$", "")
+    control_value = _without_syntactic_urls(control_value)
     if not value or MATH_OR_CONTROL_IN_VALUE_RE.search(control_value):
         return False
     if value[0] in "'\"":
@@ -272,6 +290,116 @@ def extract_inline_code_occurrences(text):
     return occurrences
 
 
+def _without_syntactic_file_paths(span):
+    """Replace unambiguous relative POSIX file paths before classification."""
+    return POSIX_FILE_PATH_RE.sub(lambda match: " " * len(match.group(0)), span)
+
+
+def _contains_unicode_mark(span):
+    """Return whether *span* contains any Unicode Mark category."""
+    return any(unicodedata.category(char).startswith("M") for char in span)
+
+
+def _is_formula_operator(char):
+    """Recognize Unicode math symbols and reviewed ASCII punctuation operators."""
+    return (
+        unicodedata.category(char) == "Sm"
+        or char in PUNCTUATION_FORMULA_OPERATORS
+    )
+
+
+def _operand_before(span, operator_start):
+    prefix = span[:operator_start].rstrip()
+    match = FORMULA_OPERAND_AT_END_RE.search(prefix)
+    if not match:
+        return None
+    if (
+        match.start()
+        and (
+            prefix[match.start() - 1] in OPERAND_BOUNDARY_CHARS
+            or prefix[match.start() - 1].isalnum()
+            or prefix[match.start() - 1] == "_"
+        )
+    ):
+        return None
+    return match.group(0)
+
+
+def _operand_after(span, operator_end):
+    suffix = span[operator_end:].lstrip()
+    match = FORMULA_OPERAND_AT_START_RE.match(suffix)
+    if not match:
+        return None
+    if (
+        match.end() < len(suffix)
+        and (
+            suffix[match.end()] in OPERAND_BOUNDARY_CHARS
+            or suffix[match.end()].isalnum()
+            or suffix[match.end()] == "_"
+        )
+    ):
+        return None
+    return match.group(0)
+
+
+def _binary_formula_structure(span):
+    """Return whether operands surround a Unicode-category math operator run."""
+    index = 0
+    while index < len(span):
+        if not _is_formula_operator(span[index]):
+            index += 1
+            continue
+        operator_start = index
+        while index < len(span) and _is_formula_operator(span[index]):
+            index += 1
+        operator_text = span[operator_start:index]
+        line_start = span.rfind("\n", 0, operator_start) + 1
+        line_prefix = span[line_start:operator_start]
+        if (
+            operator_text == "--"
+            or (operator_text == "-" and not line_prefix.strip())
+        ):
+            continue
+        left_operand = _operand_before(span, operator_start)
+        right_operand = _operand_after(span, index)
+        if not left_operand or not right_operand:
+            continue
+        if (
+            operator_text == "-"
+            and operator_start
+            and index < len(span)
+            and not span[operator_start - 1].isspace()
+            and not span[index].isspace()
+            and FORMULA_IDENTIFIER_RE.fullmatch(left_operand)
+            and FORMULA_IDENTIFIER_RE.fullmatch(right_operand)
+            and (
+                (
+                    left_operand.isascii()
+                    and right_operand.isascii()
+                    and left_operand.isupper()
+                    and right_operand.isupper()
+                )
+                or "/" in span
+                or "\\" in span
+                or FILE_SUFFIX_RE.search(span)
+            )
+        ):
+            continue
+        if (
+            operator_text == "/"
+            and operator_start
+            and index < len(span)
+            and not span[operator_start - 1].isspace()
+            and not span[index].isspace()
+            and FORMULA_IDENTIFIER_RE.fullmatch(left_operand)
+            and FORMULA_IDENTIFIER_RE.fullmatch(right_operand)
+            and (len(left_operand) > 1 or len(right_operand) > 1)
+        ):
+            continue
+        return True
+    return False
+
+
 def _unicode_formula_style(span):
     """Return whether *span* uses Unicode mathematical presentation forms."""
     for char in span:
@@ -298,13 +426,16 @@ def _unicode_indexed_identifier(span):
 
 
 def _formula_like(span):
+    candidate = _without_syntactic_urls(span)
+    candidate = _without_syntactic_file_paths(candidate)
     return bool(
-        COMBINING.search(span)
-        or FORMULA_SIGNAL_RE.search(span)
-        or BINARY_FORMULA_RE.search(span)
-        or ISOLATED_FORMULA_OPERATOR_RE.search(span)
-        or _unicode_formula_style(span)
-        or _unicode_indexed_identifier(span)
+        _contains_unicode_mark(candidate)
+        or FORMULA_SIGNAL_RE.search(candidate)
+        or _binary_formula_structure(candidate)
+        or CALLABLE_FORMULA_RE.search(candidate)
+        or ISOLATED_FORMULA_OPERATOR_RE.search(candidate)
+        or _unicode_formula_style(candidate)
+        or _unicode_indexed_identifier(candidate)
     )
 
 

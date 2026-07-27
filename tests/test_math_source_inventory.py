@@ -693,6 +693,158 @@ class OccurrenceIdentityTests(unittest.TestCase):
             with self.subTest(formula=formula):
                 self.assertTrue(VALIDATOR._formula_like(formula), formula)
 
+    def test_structural_formula_operands_cover_numbers_spacing_and_unicode(self):
+        formulae = (
+            "x^2",
+            "x+2",
+            "2+x",
+            "x/2",
+            "2/x",
+            "x<2",
+            "2>x",
+            "x*y",
+            "x + 2",
+            "2 / x",
+            "alpha / beta",
+            "-2+x",
+            "x+-2",
+            "x + -2",
+            "x + −2",
+            "−2+x",
+            "2.5*x",
+            ".5 + x",
+            "x / -3.25",
+            "2.0/−.5",
+            "φ + 2",
+            "2×𝑥",
+            "𝑥^2",
+            "α≤3.5",
+            "3.5≥β",
+            "A∩B",
+        )
+        for formula in formulae:
+            with self.subTest(formula=formula):
+                self.assertTrue(
+                    VALIDATOR._binary_formula_structure(formula),
+                    formula,
+                )
+                self.assertTrue(VALIDATOR._formula_like(formula), formula)
+                source = "Formula: `%s`.\n" % formula
+                inventory, source_texts = literal_inventory(
+                    "publication/example.md",
+                    source,
+                )
+                self.assertIssue(
+                    inventory_issues(inventory, source_texts),
+                    "formula-like literal classification",
+                )
+
+    def test_callable_identifiers_cover_spacing_and_unicode(self):
+        formulae = (
+            "f (x)",
+            "φ(x)",
+            "𝑓 (x)",
+            "RelSpec_q (e)",
+        )
+        for formula in formulae:
+            with self.subTest(formula=formula):
+                self.assertTrue(VALIDATOR._formula_like(formula), formula)
+                source = "Formula: `%s`.\n" % formula
+                inventory, source_texts = literal_inventory(
+                    "publication/example.md",
+                    source,
+                )
+                self.assertIssue(
+                    inventory_issues(inventory, source_texts),
+                    "formula-like literal classification",
+                )
+
+    def test_every_unicode_mark_category_is_formula_like(self):
+        mark_codepoints = (
+            0x20DD,
+            0x0903,
+            0xFE0F,
+            0x05B0,
+            0x064B,
+            0x20E1,
+        )
+        observed_categories = set()
+        for codepoint in mark_codepoints:
+            mark = chr(codepoint)
+            category = unicodedata.category(mark)
+            observed_categories.add(category)
+            with self.subTest(codepoint=hex(codepoint), category=category):
+                self.assertTrue(category.startswith("M"), category)
+                self.assertTrue(VALIDATOR._formula_like("x" + mark), hex(codepoint))
+                source = "Mark: `x%s`.\n" % mark
+                inventory, source_texts = literal_inventory(
+                    "publication/example.md",
+                    source,
+                )
+                self.assertIssue(
+                    inventory_issues(inventory, source_texts),
+                    "formula-like literal classification",
+                )
+        self.assertEqual(observed_categories, {"Mn", "Mc", "Me"})
+
+    def test_syntactic_urls_are_removed_before_formula_heuristics(self):
+        urls = (
+            "https://example.test/search?x=1",
+            "https://example.test/search?q=a+b",
+            "https://example.test/search?q=a%2Bb",
+            "https://example.test/path#x=1",
+            "http://example.test/a/b?ratio=x%2Fy#section-2",
+            "https://example.test/f(x)?q=φ(x)",
+            "curl https://example.test/search?x=1&q=a+b#result",
+        )
+        for url in urls:
+            with self.subTest(url=url):
+                self.assertFalse(VALIDATOR._formula_like(url), url)
+                source = "Endpoint: `%s`.\n" % url
+                inventory, source_texts = literal_inventory(
+                    "publication/example.md",
+                    source,
+                )
+                self.assertEqual(inventory_issues(inventory, source_texts), [])
+
+    def test_formula_outside_a_url_remains_formula_like(self):
+        spans = (
+            "x=1 https://example.test/search?q=a+b",
+            "https://example.test/search?q=a+b then x+2",
+            "φ(x) at https://example.test/path#x=1",
+        )
+        for span in spans:
+            with self.subTest(span=span):
+                self.assertTrue(VALIDATOR._formula_like(span), span)
+                source = "Mixed: `%s`.\n" % span
+                inventory, source_texts = literal_inventory(
+                    "publication/example.md",
+                    source,
+                )
+                self.assertIssue(
+                    inventory_issues(inventory, source_texts),
+                    "formula-like literal classification",
+                )
+
+    def test_commands_paths_and_versions_remain_nonformula_controls(self):
+        controls = (
+            "python --version",
+            "git show HEAD:path",
+            "docs/notation-gallery.md",
+            "docs/verdict-registry.yaml",
+            "../docs/notation-gallery.md",
+            "theislampill/orthemology",
+            "applications/daee-epistemics/",
+            "C:\\Python311",
+            "orthemic-multi-actor-conflict-note.md",
+            "SCAN-CLEAN",
+            "v1.2.3",
+            "Python 3.11.9",
+        )
+        for control in controls:
+            with self.subTest(control=control):
+                self.assertFalse(VALIDATOR._formula_like(control), control)
+
     def test_unicode_formula_style_keys_are_detected_without_diagnostic_context(self):
         formula_style_keys = (
             "V₁",
