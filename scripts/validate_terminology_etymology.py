@@ -97,7 +97,8 @@ def _positive_claim_role(
                     continue
                 predicate_prefix = clause[subject.end():predicate.start()]
                 predicate_is_negated = re.search(
-                    r"\b(?:not|never|neither|without)\s*$",
+                    r"\b(?:not|never|neither|without)"
+                    r"(?:\s+[a-z]+(?:-[a-z]+)*ly){0,2}\s*$",
                     predicate_prefix,
                 )
                 object_is_negated = re.match(

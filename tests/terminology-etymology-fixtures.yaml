@@ -193,6 +193,15 @@ valid_controls:
   - id: V22-object-negates-adoption
     prose: The project adopted no candidate terms.
     expected_failure_codes: []
+  - id: V23-modified-adoption-negation
+    prose: The project did not formally adopt all candidate terms.
+    expected_failure_codes: []
+  - id: V24-modified-novelty-negation
+    prose: A bounded negative search does not definitively prove first coinage.
+    expected_failure_codes: []
+  - id: V25-modified-source-negation
+    prose: Smyth does not directly show that orthemma is the correct project definition.
+    expected_failure_codes: []
 
 required_live_claims:
   - document: manuscript/orthemma-ortheme-systems-revised-draft.md
