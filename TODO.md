@@ -208,7 +208,7 @@ artifacts and interrupted external research do not satisfy that gate.
   records remain external and provenance-only. The multi-operator attack now
   carries explicit source-independence, warrant, truth, and testimonial-
   transmission promotion mutations through the production entry point.
-- CI/publication: 154 separate control/mutation processes assert all 77
+- CI/publication: 154 separate direct control/mutation processes observe all 77
   variant outcomes; an arbitrary successful command cannot stand in for either
   semantic outcome. The current recursive engine generates 1,813
   mutants across 27 families: 1,546 schema-killed, 248 semantic-killed, and 19

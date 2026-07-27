@@ -31,6 +31,7 @@ exists to replace.
 """
 import argparse
 import copy
+import hashlib
 import json
 import os
 import pathlib
@@ -38,6 +39,13 @@ import subprocess
 import sys
 
 import yaml
+
+try:
+    from scripts.task14_probe_registry import load_registry
+    from scripts.task14_direct_probes import execute_direct_probe
+except ModuleNotFoundError:
+    from task14_probe_registry import load_registry
+    from task14_direct_probes import execute_direct_probe
 from jsonschema import Draft202012Validator
 from referencing import Registry, Resource
 
@@ -140,6 +148,41 @@ def load_task14_ar6_rows(root):
     ]
 
 
+def load_task14_probe_registry(root):
+    """Load the independently digest-anchored 77-variant registry."""
+    return load_registry(pathlib.Path(root))
+
+
+def expected_task14_observation(binding, role, root):
+    """Return every identity field a direct observation must match exactly."""
+    if role not in {"control", "mutation"}:
+        raise ValueError("Task 14 observation role is invalid")
+    entry_point = pathlib.Path(root) / binding.validator_entry_point
+    return {
+        "attack_id": binding.attack_id,
+        "variant_id": binding.variant_id,
+        "mutation_id": binding.mutation_id,
+        "role": role,
+        "evidence_selector": getattr(binding, role + "_evidence_selector"),
+        "validator_owner": binding.validator_owner,
+        "validator_entry_point": binding.validator_entry_point,
+        "validator_sha256": hashlib.sha256(entry_point.read_bytes()).hexdigest(),
+    }
+
+
+def task14_observation_id(expected, outcome, input_sha256):
+    canonical = json.dumps(
+        {
+            **expected,
+            "observed_validator_outcome": outcome,
+            "input_sha256": input_sha256,
+        },
+        sort_keys=True,
+        separators=(",", ":"),
+    ).encode("utf-8")
+    return hashlib.sha256(canonical).hexdigest()
+
+
 def audit_task14_spec(spec, root):
     """Return deterministic issues in the authoritative Task 14 inventory."""
     issues = []
@@ -155,6 +198,11 @@ def audit_task14_spec(spec, root):
     ]
     if observed_names != plan_names:
         issues.append("plan attack inventory differs from the authoritative Step 1 order")
+
+    try:
+        registry = load_task14_probe_registry(root)
+    except (OSError, ValueError, KeyError, TypeError, json.JSONDecodeError) as exc:
+        return ["Task 14 closed probe registry mismatch: %s" % exc]
 
     attack_ids = []
     mutation_ids = []
@@ -198,6 +246,30 @@ def audit_task14_spec(spec, root):
                     "%s %s validator owner differs from attack owner"
                     % (expected_id, variant_id)
                 )
+            binding = registry.get((expected_id, expected_variant_id))
+            if binding is None:
+                issues.append(
+                    "%s %s has no closed probe-registry binding"
+                    % (expected_id, expected_variant_id)
+                )
+            else:
+                expected_registry_fields = {
+                    "mutation_id": binding.mutation_id,
+                    "validator_owner": binding.validator_owner,
+                    "validator_entry_point": binding.validator_entry_point,
+                    "control_evidence_selector": binding.control_evidence_selector,
+                    "mutation_evidence_selector": binding.mutation_evidence_selector,
+                }
+                for field, expected_value in expected_registry_fields.items():
+                    if variant.get(field) != expected_value:
+                        issues.append(
+                            "%s %s %s differs from the closed probe registry"
+                            % (expected_id, expected_variant_id, field)
+                        )
+                if row.get("owner") != binding.owner:
+                    issues.append(
+                        "%s owner differs from the closed probe registry" % expected_id
+                    )
             for field in (
                 "neutral_concept",
                 "validator_entry_point",
@@ -215,6 +287,16 @@ def audit_task14_spec(spec, root):
                     "%s %s reuses one selector for control and mutation"
                     % (expected_id, variant_id)
                 )
+            for role in ("control", "mutation"):
+                expected_selector = "direct-probe:%s:%s" % (
+                    expected_variant_id,
+                    role,
+                )
+                if variant.get(role + "_evidence_selector") != expected_selector:
+                    issues.append(
+                        "%s %s %s selector is not the exact direct-probe identity"
+                        % (expected_id, expected_variant_id, role)
+                    )
             entry_point = variant.get("validator_entry_point")
             if (
                 isinstance(entry_point, str)
@@ -362,7 +444,9 @@ def task14_probe_identity(command):
     }
 
 
-def _parse_task14_observation(completed, expected):
+def _parse_task14_observation(
+    completed, expected, seen_observation_ids=None, trusted_direct_result=None
+):
     if completed.returncode != 0:
         detail = (completed.stderr or completed.stdout or "").strip()
         raise ValueError(
@@ -375,6 +459,23 @@ def _parse_task14_observation(completed, expected):
         raise ValueError("missing machine-readable observation: %s" % exc)
     if not isinstance(payload, dict) or payload.get("schema") != TASK14_OBSERVATION_SCHEMA:
         raise ValueError("missing machine-readable observation schema")
+    exact_fields = {
+        "schema",
+        *expected.keys(),
+        "observed_validator_outcome",
+        "evidence_process_exit_code",
+        "exit_semantics",
+        "input_sha256",
+        "observation_id",
+    }
+    if set(payload) != exact_fields:
+        raise ValueError(
+            "observation field set mismatch: missing=%s extra=%s"
+            % (
+                sorted(exact_fields - set(payload)),
+                sorted(set(payload) - exact_fields),
+            )
+        )
     for field, value in expected.items():
         if payload.get(field) != value:
             raise ValueError(
@@ -382,12 +483,12 @@ def _parse_task14_observation(completed, expected):
                 % (field, value, payload.get(field))
             )
     expected_outcome = "accepted" if expected["role"] == "control" else "rejected"
-    if payload.get("asserted_validator_outcome") != expected_outcome:
+    if payload.get("observed_validator_outcome") != expected_outcome:
         raise ValueError(
-            "%s assertion observed %s instead of %s"
+            "%s direct probe observed %s instead of %s"
             % (
                 expected["role"],
-                payload.get("asserted_validator_outcome", "missing"),
+                payload.get("observed_validator_outcome", "missing"),
                 expected_outcome,
             )
         )
@@ -402,18 +503,56 @@ def _parse_task14_observation(completed, expected):
     semantics = payload.get("exit_semantics")
     if (
         not isinstance(semantics, str)
-        or "not the validator's own exit code" not in semantics
+        or "validator acceptance or rejection is carried only by "
+        "observed_validator_outcome" not in semantics
     ):
         raise ValueError("%s evidence exit semantics are missing" % expected["role"])
+    input_sha256 = payload.get("input_sha256")
+    if (
+        not isinstance(input_sha256, str)
+        or len(input_sha256) != 64
+        or any(character not in "0123456789abcdef" for character in input_sha256)
+    ):
+        raise ValueError("%s direct-probe input digest is invalid" % expected["role"])
+    if trusted_direct_result is not None:
+        if payload.get("observed_validator_outcome") != trusted_direct_result.get(
+            "outcome"
+        ):
+            raise ValueError(
+                "%s observation outcome differs from independent direct execution"
+                % expected["role"]
+            )
+        if input_sha256 != trusted_direct_result.get("input_sha256"):
+            raise ValueError(
+                "%s observation input digest differs from independent direct execution"
+                % expected["role"]
+            )
+    observation_id = task14_observation_id(
+        expected, expected_outcome, input_sha256
+    )
+    if payload.get("observation_id") != observation_id:
+        raise ValueError("%s observation ID does not bind its payload" % expected["role"])
+    if seen_observation_ids is not None:
+        if observation_id in seen_observation_ids:
+            raise ValueError("duplicate observation %s" % observation_id)
+        seen_observation_ids.add(observation_id)
     return payload
 
 
-def run_task14_attacks(spec, root, runner=subprocess.run, python=sys.executable):
+def run_task14_attacks(
+    spec,
+    root,
+    runner=subprocess.run,
+    python=sys.executable,
+    direct_executor=execute_direct_probe,
+):
     """Run separate controls and mutations and retain their semantic observations."""
     issues = audit_task14_spec(spec, root)
     if issues:
         return [], issues
     results = []
+    observation_ids = set()
+    registry = load_task14_probe_registry(root)
     for attack in spec["mandatory_attacks"]:
         for variant in attack["variants"]:
             observations = {}
@@ -435,15 +574,29 @@ def run_task14_attacks(spec, root, runner=subprocess.run, python=sys.executable)
                         (),
                         {"returncode": 124, "stdout": "", "stderr": str(exc)},
                     )()
-                expected = {
-                    "attack_id": attack["attack_id"],
-                    "variant_id": variant["variant_id"],
-                    "role": role,
-                    "validator_owner": variant["validator_owner"],
-                    "validator_entry_point": variant["validator_entry_point"],
-                }
+                binding = registry[(attack["attack_id"], variant["variant_id"])]
+                expected = expected_task14_observation(binding, role, root)
                 try:
-                    observations[role] = _parse_task14_observation(completed, expected)
+                    trusted_direct_result = direct_executor(binding, role)
+                except (KeyError, OSError, RuntimeError, ValueError) as exc:
+                    issues.append(
+                        "%s %s %s: independent direct execution failed: %s"
+                        % (
+                            attack["attack_id"],
+                            variant["variant_id"],
+                            role,
+                            exc,
+                        )
+                    )
+                    failed = True
+                    continue
+                try:
+                    observations[role] = _parse_task14_observation(
+                        completed,
+                        expected,
+                        observation_ids,
+                        trusted_direct_result,
+                    )
                 except ValueError as exc:
                     issues.append(
                         "%s %s %s: %s"
@@ -466,21 +619,33 @@ def run_task14_attacks(spec, root, runner=subprocess.run, python=sys.executable)
                     "neutral_concept": variant["neutral_concept"],
                     "invariant": attack["invariant"],
                     "owner": attack["owner"],
+                    "validator_owner": observations["control"]["validator_owner"],
                     "validator_entry_point": variant["validator_entry_point"],
+                    "validator_sha256": observations["control"]["validator_sha256"],
                     "control_command": " ".join(variant["control_command"]),
                     "mutation_command": " ".join(variant["mutation_command"]),
-                    "control_asserted_outcome": observations["control"][
-                        "asserted_validator_outcome"
+                    "control_evidence_selector": observations["control"][
+                        "evidence_selector"
+                    ],
+                    "control_observed_outcome": observations["control"][
+                        "observed_validator_outcome"
                     ],
                     "control_evidence_process_exit_code": observations["control"][
                         "evidence_process_exit_code"
                     ],
-                    "mutation_asserted_outcome": observations["mutation"][
-                        "asserted_validator_outcome"
+                    "control_input_sha256": observations["control"]["input_sha256"],
+                    "control_observation_id": observations["control"]["observation_id"],
+                    "mutation_evidence_selector": observations["mutation"][
+                        "evidence_selector"
+                    ],
+                    "mutation_observed_outcome": observations["mutation"][
+                        "observed_validator_outcome"
                     ],
                     "mutation_evidence_process_exit_code": observations["mutation"][
                         "evidence_process_exit_code"
                     ],
+                    "mutation_input_sha256": observations["mutation"]["input_sha256"],
+                    "mutation_observation_id": observations["mutation"]["observation_id"],
                 }
             )
     if issues:
@@ -503,8 +668,8 @@ def render_task14_report(spec, results, root, recursive_totals=None):
     passed = [
         row
         for row in results
-        if row["control_asserted_outcome"] == "accepted"
-        and row["mutation_asserted_outcome"] == "rejected"
+        if row["control_observed_outcome"] == "accepted"
+        and row["mutation_observed_outcome"] == "rejected"
     ]
     variants = len(results)
     lines = [
@@ -520,11 +685,11 @@ def render_task14_report(spec, results, root, recursive_totals=None):
         "- Structured coverage variants: %d" % variants,
         "- Executed separate control/mutation commands: %d" % len(unique_commands),
         "- Passing variants: %d" % len(passed),
-        "- Valid controls asserted accepted: %d" % sum(
-            row["control_asserted_outcome"] == "accepted" for row in results
+        "- Valid controls observed accepted: %d" % sum(
+            row["control_observed_outcome"] == "accepted" for row in results
         ),
-        "- Invalid mutations asserted rejected: %d" % sum(
-            row["mutation_asserted_outcome"] == "rejected" for row in results
+        "- Invalid mutations observed rejected: %d" % sum(
+            row["mutation_observed_outcome"] == "rejected" for row in results
         ),
     ]
     if recursive_totals:
@@ -540,12 +705,14 @@ def render_task14_report(spec, results, root, recursive_totals=None):
         "",
         "Every row comes from two distinct processes. Each process emits an exact "
         "machine-readable observation bound to the attack, variant, role, production "
-        "validator, and validator owner. A wrapper exit code alone is never treated "
-        "as a semantic outcome.",
+        "validator, validator digest, direct-probe selector, concrete-input digest, "
+        "and observation ID. The adapter derives acceptance or rejection only from "
+        "the production API or CLI result; a probe-process exit code is never treated "
+        "as the validator outcome.",
         "",
         "## Mandatory attacks",
         "",
-        "| Attack ID | Attack | Variant | Mutation ID | Neutral concept | Invariant | Production validator | Control command / observed RC | Mutation command / observed RC | Owner |",
+        "| Attack ID | Attack | Variant | Mutation ID | Neutral concept | Invariant | Production validator | Control command / outcome (probe RC) | Mutation command / outcome (probe RC) | Owner |",
         "|---|---|---|---|---|---|---|---|---|---|",
     ])
     for row in results:
@@ -560,12 +727,36 @@ def render_task14_report(spec, results, root, recursive_totals=None):
                 _cell(row["invariant"]),
                 _cell(row["validator_entry_point"]),
                 _cell(row["control_command"]),
-                _cell(row["control_asserted_outcome"]),
+                _cell(row["control_observed_outcome"]),
                 row["control_evidence_process_exit_code"],
                 _cell(row["mutation_command"]),
-                _cell(row["mutation_asserted_outcome"]),
+                _cell(row["mutation_observed_outcome"]),
                 row["mutation_evidence_process_exit_code"],
                 _cell(row["owner"]),
+            )
+        )
+    lines.extend([
+        "",
+        "## Exact direct-observation bindings",
+        "",
+        "| Variant | Mutation ID | Validator owner | Validator / SHA-256 | Control selector / input / observation | Mutation selector / input / observation |",
+        "|---|---|---|---|---|---|",
+    ])
+    for row in results:
+        lines.append(
+            "| %s | %s | %s | `%s` / `%s` | `%s` / `%s` / `%s` | `%s` / `%s` / `%s` |"
+            % (
+                _cell(row["variant_id"]),
+                _cell(row["mutation_id"]),
+                _cell(row["validator_owner"]),
+                _cell(row["validator_entry_point"]),
+                _cell(row["validator_sha256"]),
+                _cell(row["control_evidence_selector"]),
+                _cell(row["control_input_sha256"]),
+                _cell(row["control_observation_id"]),
+                _cell(row["mutation_evidence_selector"]),
+                _cell(row["mutation_input_sha256"]),
+                _cell(row["mutation_observation_id"]),
             )
         )
     lines.extend([
@@ -595,9 +786,9 @@ def render_task14_report(spec, results, root, recursive_totals=None):
         observed = result_by_pair.get(pair)
         if status == "REPRODUCED_AGAINST_INTEGRATED_TREE" and observed:
             exact_mapping = "%s / %s" % pair
-            command_result = "`%s` -> %s assertion passed (evidence process rc %d)" % (
+            command_result = "`%s` -> directly observed %s (probe process rc %d)" % (
                 observed["mutation_command"],
-                observed["mutation_asserted_outcome"],
+                observed["mutation_observed_outcome"],
                 observed["mutation_evidence_process_exit_code"],
             )
         else:

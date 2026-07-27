@@ -3,6 +3,7 @@
 from __future__ import annotations
 
 import copy
+import hashlib
 import importlib.util
 import json
 import pathlib
@@ -44,6 +45,50 @@ class Task14AdversarialProgramTests(unittest.TestCase):
     def setUp(self):
         self.module = load_module()
         self.spec = json.loads(SPEC_PATH.read_text(encoding="utf-8"))
+        self.registry = self.module.load_task14_probe_registry(ROOT)
+
+    def fake_payload(self, identity, outcome=None):
+        binding = self.registry[(identity["attack_id"], identity["variant_id"])]
+        expected = self.module.expected_task14_observation(
+            binding, identity["role"], ROOT
+        )
+        observed = outcome or (
+            "accepted" if identity["role"] == "control" else "rejected"
+        )
+        direct = self.fake_direct_result(binding, identity["role"])
+        input_sha256 = direct["input_sha256"]
+        return {
+            "schema": "orthemology-task14-observation-v1",
+            **expected,
+            "observed_validator_outcome": observed,
+            "evidence_process_exit_code": 0,
+            "exit_semantics": (
+                "0 means direct probe execution succeeded; validator acceptance "
+                "or rejection is carried only by observed_validator_outcome"
+            ),
+            "input_sha256": input_sha256,
+            "observation_id": self.module.task14_observation_id(
+                expected, observed, input_sha256
+            ),
+        }
+
+    @staticmethod
+    def fake_direct_result(binding, role):
+        input_sha256 = hashlib.sha256(
+            (
+                binding.attack_id
+                + "\0"
+                + binding.variant_id
+                + "\0"
+                + binding.mutation_id
+                + "\0"
+                + role
+            ).encode("utf-8")
+        ).hexdigest()
+        return {
+            "outcome": "accepted" if role == "control" else "rejected",
+            "input_sha256": input_sha256,
+        }
 
     def test_exact_plan_inventory_is_unique_complete_and_executable(self):
         attacks = self.spec.get("mandatory_attacks")
@@ -149,34 +194,7 @@ class Task14AdversarialProgramTests(unittest.TestCase):
             del kwargs
             calls.append(tuple(command))
             identity = self.module.task14_probe_identity(command)
-            role = identity["role"]
-            attack = next(
-                row
-                for row in self.spec["mandatory_attacks"]
-                if row["attack_id"] == identity["attack_id"]
-            )
-            variant = next(
-                row
-                for row in attack["variants"]
-                if row["variant_id"] == identity["variant_id"]
-            )
-            payload = {
-                "schema": "orthemology-task14-observation-v1",
-                "attack_id": identity["attack_id"],
-                "variant_id": identity["variant_id"],
-                "role": role,
-                "validator_owner": variant["validator_owner"],
-                "validator_entry_point": variant["validator_entry_point"],
-                "asserted_validator_outcome": (
-                    "accepted" if role == "control" else "rejected"
-                ),
-                "evidence_process_exit_code": 0,
-                "exit_semantics": (
-                    "0 means the role-specific focused selector completed and its "
-                    "production-validator assertion passed; it is not the validator's "
-                    "own exit code"
-                ),
-            }
+            payload = self.fake_payload(identity)
             return type(
                 "Result",
                 (),
@@ -184,7 +202,11 @@ class Task14AdversarialProgramTests(unittest.TestCase):
             )()
 
         results, issues = self.module.run_task14_attacks(
-            self.spec, ROOT, runner=fake_runner, python="PYTHON"
+            self.spec,
+            ROOT,
+            runner=fake_runner,
+            python="PYTHON",
+            direct_executor=self.fake_direct_result,
         )
         self.assertEqual([], issues)
         variants = [
@@ -194,11 +216,11 @@ class Task14AdversarialProgramTests(unittest.TestCase):
         ]
         self.assertEqual(len(variants), len(results))
         self.assertEqual(2 * len(variants), len(calls))
-        self.assertTrue(all(row["control_asserted_outcome"] == "accepted" for row in results))
+        self.assertTrue(all(row["control_observed_outcome"] == "accepted" for row in results))
         self.assertTrue(
             all(row["control_evidence_process_exit_code"] == 0 for row in results)
         )
-        self.assertTrue(all(row["mutation_asserted_outcome"] == "rejected" for row in results))
+        self.assertTrue(all(row["mutation_observed_outcome"] == "rejected" for row in results))
         self.assertTrue(
             all(row["mutation_evidence_process_exit_code"] == 0 for row in results)
         )
@@ -213,33 +235,20 @@ class Task14AdversarialProgramTests(unittest.TestCase):
             )()
 
         results, issues = self.module.run_task14_attacks(
-            self.spec, ROOT, runner=fake_runner, python="PYTHON"
+            self.spec,
+            ROOT,
+            runner=fake_runner,
+            python="PYTHON",
+            direct_executor=self.fake_direct_result,
         )
         self.assertEqual([], results)
         self.assertTrue(any("machine-readable observation" in issue for issue in issues))
 
     def test_runner_rejects_positive_only_and_identity_drift_observations(self):
-        first = self.spec["mandatory_attacks"][0]["variants"][0]
-
         def fake_runner(command, **kwargs):
             del kwargs
             identity = self.module.task14_probe_identity(command)
-            role = identity["role"]
-            payload = {
-                "schema": "orthemology-task14-observation-v1",
-                "attack_id": identity["attack_id"],
-                "variant_id": identity["variant_id"],
-                "role": role,
-                "validator_owner": first["validator_owner"],
-                "validator_entry_point": first["validator_entry_point"],
-                "asserted_validator_outcome": "accepted",
-                "evidence_process_exit_code": 0,
-                "exit_semantics": (
-                    "0 means the role-specific focused selector completed and its "
-                    "production-validator assertion passed; it is not the validator's "
-                    "own exit code"
-                ),
-            }
+            payload = self.fake_payload(identity, outcome="accepted")
             if identity["attack_id"] != self.spec["mandatory_attacks"][0]["attack_id"]:
                 payload["attack_id"] = "R7E-T14-A00"
             return type(
@@ -249,12 +258,16 @@ class Task14AdversarialProgramTests(unittest.TestCase):
             )()
 
         results, issues = self.module.run_task14_attacks(
-            self.spec, ROOT, runner=fake_runner, python="PYTHON"
+            self.spec,
+            ROOT,
+            runner=fake_runner,
+            python="PYTHON",
+            direct_executor=self.fake_direct_result,
         )
         self.assertTrue(issues)
         self.assertTrue(
             any(
-                "mutation observed accepted" in issue
+                "mutation direct probe observed accepted" in issue
                 or "observation identity mismatch" in issue
                 for issue in issues
             )
@@ -264,34 +277,7 @@ class Task14AdversarialProgramTests(unittest.TestCase):
         def fake_runner(command, **kwargs):
             del kwargs
             identity = self.module.task14_probe_identity(command)
-            attack = next(
-                row
-                for row in self.spec["mandatory_attacks"]
-                if row["attack_id"] == identity["attack_id"]
-            )
-            variant = next(
-                row
-                for row in attack["variants"]
-                if row["variant_id"] == identity["variant_id"]
-            )
-            role = identity["role"]
-            payload = {
-                "schema": "orthemology-task14-observation-v1",
-                "attack_id": identity["attack_id"],
-                "variant_id": identity["variant_id"],
-                "role": role,
-                "validator_owner": variant["validator_owner"],
-                "validator_entry_point": variant["validator_entry_point"],
-                "asserted_validator_outcome": (
-                    "accepted" if role == "control" else "rejected"
-                ),
-                "evidence_process_exit_code": 0,
-                "exit_semantics": (
-                    "0 means the role-specific focused selector completed and its "
-                    "production-validator assertion passed; it is not the validator's "
-                    "own exit code"
-                ),
-            }
+            payload = self.fake_payload(identity)
             return type(
                 "Result",
                 (),
@@ -299,7 +285,11 @@ class Task14AdversarialProgramTests(unittest.TestCase):
             )()
 
         results, issues = self.module.run_task14_attacks(
-            self.spec, ROOT, runner=fake_runner, python="PYTHON"
+            self.spec,
+            ROOT,
+            runner=fake_runner,
+            python="PYTHON",
+            direct_executor=self.fake_direct_result,
         )
         self.assertEqual([], issues)
         report = self.module.render_task14_report(self.spec, results, ROOT)
