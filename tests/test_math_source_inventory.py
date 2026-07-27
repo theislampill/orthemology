@@ -338,6 +338,28 @@ class OccurrenceIdentityTests(unittest.TestCase):
             "μ̄_₂: stale calibration; token_3: wrong\nclaim scope",
             "μ̄_x: stale calibration; token_3: wrong\nclaim scope",
             "μ̄_2a: stale calibration; token_3: wrong\nclaim scope",
+            "V₁: stale calibration; token_3: wrong\nclaim scope",
+            "x₂: stale calibration; token_3: wrong\nclaim scope",
+            "x²: stale calibration; token_3: wrong\nclaim scope",
+            "xᵢ: stale calibration; token_3: wrong\nclaim scope",
+            "xⁿ: stale calibration; token_3: wrong\nclaim scope",
+            "xₐ: stale calibration; token_3: wrong\nclaim scope",
+            "𝑥: stale calibration; token_3: wrong\nclaim scope",
+            "𝐕1: stale calibration; token_3: wrong\nclaim scope",
+            "Ｖ1: stale calibration; token_3: wrong\nclaim scope",
+            "V１: stale calibration; token_3: wrong\nclaim scope",
+            "Ⓥ1: stale calibration; token_3: wrong\nclaim scope",
+            "Ⅴ1: stale calibration; token_3: wrong\nclaim scope",
+            "α_2: stale calibration; token_3: wrong\nclaim scope",
+            "é_2: stale calibration; token_3: wrong\nclaim scope",
+            "+: stale calibration; token_3: wrong\nclaim scope",
+            "/: stale calibration; token_3: wrong\nclaim scope",
+            "⋅: stale calibration; token_3: wrong\nclaim scope",
+            "−: stale calibration; token_3: wrong\nclaim scope",
+            "·: stale calibration; token_3: wrong\nclaim scope",
+            "^: stale calibration; token_3: wrong\nclaim scope",
+            "≈: stale calibration; token_3: wrong\nclaim scope",
+            "≃: stale calibration; token_3: wrong\nclaim scope",
         )
 
         for status in accepted:
@@ -370,6 +392,28 @@ class OccurrenceIdentityTests(unittest.TestCase):
             "μ̄_₂: stale calibration; token_3: wrong\nclaim scope",
             "μ̄_x: stale calibration; token_3: wrong\nclaim scope",
             "μ̄_2a: stale calibration; token_3: wrong\nclaim scope",
+            "V₁: stale calibration; token_3: wrong\nclaim scope",
+            "x₂: stale calibration; token_3: wrong\nclaim scope",
+            "x²: stale calibration; token_3: wrong\nclaim scope",
+            "xᵢ: stale calibration; token_3: wrong\nclaim scope",
+            "xⁿ: stale calibration; token_3: wrong\nclaim scope",
+            "xₐ: stale calibration; token_3: wrong\nclaim scope",
+            "𝑥: stale calibration; token_3: wrong\nclaim scope",
+            "𝐕1: stale calibration; token_3: wrong\nclaim scope",
+            "Ｖ1: stale calibration; token_3: wrong\nclaim scope",
+            "V１: stale calibration; token_3: wrong\nclaim scope",
+            "Ⓥ1: stale calibration; token_3: wrong\nclaim scope",
+            "Ⅴ1: stale calibration; token_3: wrong\nclaim scope",
+            "α_2: stale calibration; token_3: wrong\nclaim scope",
+            "é_2: stale calibration; token_3: wrong\nclaim scope",
+            "+: stale calibration; token_3: wrong\nclaim scope",
+            "/: stale calibration; token_3: wrong\nclaim scope",
+            "⋅: stale calibration; token_3: wrong\nclaim scope",
+            "−: stale calibration; token_3: wrong\nclaim scope",
+            "·: stale calibration; token_3: wrong\nclaim scope",
+            "^: stale calibration; token_3: wrong\nclaim scope",
+            "≈: stale calibration; token_3: wrong\nclaim scope",
+            "≃: stale calibration; token_3: wrong\nclaim scope",
         )
         for status in formula_statuses:
             with self.subTest(status=status):
@@ -410,6 +454,27 @@ class OccurrenceIdentityTests(unittest.TestCase):
                     ),
                     "formula-like literal classification",
                 )
+
+    def test_invalid_operator_keys_use_structural_rejection_not_formula_heuristics(self):
+        operator_keys = ("+", "/", "⋅", "−", "·", "^", "≈", "≃")
+        for key in operator_keys:
+            with self.subTest(key=key):
+                self.assertFalse(VALIDATOR._formula_like(key), key)
+
+    def test_unicode_formula_style_keys_are_detected_without_diagnostic_context(self):
+        formula_style_keys = (
+            "V₁",
+            "x₂",
+            "x²",
+            "xᵢ",
+            "xⁿ",
+            "xₐ",
+            "𝑥",
+            "𝐕1",
+        )
+        for key in formula_style_keys:
+            with self.subTest(key=key):
+                self.assertTrue(VALIDATOR._formula_like(key), key)
 
     def test_preserves_literal_command_and_true_registry_id(self):
         source = "Run `python --version`; inspect `V1`.\n"

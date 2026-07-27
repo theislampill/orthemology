@@ -57,6 +57,9 @@ FORMULA_SIGNAL_RE = re.compile(
     r"|(?:^|[^A-Za-z0-9_])[A-Za-z][A-Za-z0-9_-]*\([^)]*\)"
 )
 DIAGNOSTIC_META_TOKEN_RE = re.compile("^\u03bc\u0304_[0-9]+$")
+ASCII_DIAGNOSTIC_IDENTIFIER_RE = re.compile(
+    r"^[A-Za-z](?:[A-Za-z0-9_]*[A-Za-z0-9])?$"
+)
 MACHINE_ASSIGNMENT_RE = re.compile(
     r"(?:(?:export )?[A-Z_][A-Z0-9_]*|\$env:[A-Za-z_][A-Za-z0-9_]*)=(.*)",
     re.S,
@@ -249,41 +252,58 @@ def extract_inline_code_occurrences(text):
     return occurrences
 
 
+def _unicode_formula_style(span):
+    """Return whether *span* uses Unicode mathematical presentation forms."""
+    for char in span:
+        name = unicodedata.name(char, "")
+        if (
+            name.startswith("MATHEMATICAL ")
+            or "SUBSCRIPT" in name
+            or "SUPERSCRIPT" in name
+        ):
+            return True
+    return False
+
+
 def _formula_like(span):
-    return bool(COMBINING.search(span) or FORMULA_SIGNAL_RE.search(span))
+    return bool(
+        COMBINING.search(span)
+        or FORMULA_SIGNAL_RE.search(span)
+        or _unicode_formula_style(span)
+    )
 
 
 def _diagnostic_identifier(key):
     """Return whether *key* is a plain token identifier, not a formula."""
-    if DIAGNOSTIC_META_TOKEN_RE.fullmatch(key):
-        return True
-    if _formula_like(key):
-        return False
-    if not key or unicodedata.category(key[0])[0] != "L":
-        return False
-    for char in key[1:]:
-        if char == "_":
-            continue
-        if unicodedata.category(char)[0] not in {"L", "N"}:
-            return False
-    return key[-1] != "_"
+    return bool(
+        DIAGNOSTIC_META_TOKEN_RE.fullmatch(key)
+        or ASCII_DIAGNOSTIC_IDENTIFIER_RE.fullmatch(key)
+    )
 
 
-def is_diagnostic_code_literal(span):
-    """Return whether a multiline span is a token-to-status diagnostic sample."""
+def _diagnostic_status_keys(span):
+    """Return keys for a structurally complete multiline diagnostic sample."""
     if "\n" not in span:
-        return False
+        return None
     clauses = [" ".join(part.split()) for part in span.split(";")]
     if len(clauses) < 2:
-        return False
+        return None
+    keys = []
     for clause in clauses:
         match = re.fullmatch(
             r"([^\s:;]+):\s+([A-Za-z][A-Za-z0-9 /_-]*)",
             clause,
         )
-        if match is None or not _diagnostic_identifier(match.group(1)):
-            return False
-    return True
+        if match is None:
+            return None
+        keys.append(match.group(1))
+    return keys
+
+
+def is_diagnostic_code_literal(span):
+    """Return whether a multiline span is a token-to-status diagnostic sample."""
+    keys = _diagnostic_status_keys(span)
+    return keys is not None and all(_diagnostic_identifier(key) for key in keys)
 
 
 def validate_inventory_data(inventory, source_texts, registry_ids=None):
@@ -377,9 +397,17 @@ def validate_inventory_data(inventory, source_texts, registry_ids=None):
         if not isinstance(span, str):
             issues.append("inventory occurrence text must be a string at %r" % (key,))
             continue
+        diagnostic_keys = (
+            _diagnostic_status_keys(span)
+            if classification == "literal-code"
+            else None
+        )
         diagnostic_literal = (
-            classification == "literal-code"
-            and is_diagnostic_code_literal(span)
+            diagnostic_keys is not None
+            and all(_diagnostic_identifier(item) for item in diagnostic_keys)
+        )
+        invalid_diagnostic_key = (
+            diagnostic_keys is not None and not diagnostic_literal
         )
         if (
             COMBINING.search(span)
@@ -396,7 +424,7 @@ def validate_inventory_data(inventory, source_texts, registry_ids=None):
                 issues.append("false registry-ID classification at %r" % (key,))
         if (
             classification == "literal-code"
-            and _formula_like(span)
+            and (_formula_like(span) or invalid_diagnostic_key)
             and not is_machine_assignment(span)
             and not diagnostic_literal
         ):
