@@ -66,6 +66,15 @@ APPROVED_DIAGNOSTIC_TEXT = (
     "\u03bc\u0304_2: stale calibration; \u03bc\u0304_3: wrong\n"
     "  claim scope"
 )
+DIAGNOSTIC_STATUS_VALUES = frozenset(
+    ("pass", "fail", "stale calibration", "wrong", "wrong claim scope")
+)
+DIAGNOSTIC_CLAUSE_SEPARATOR_RE = re.compile(r"[;\n]")
+DIAGNOSTIC_KEY_ANCHOR_RE = re.compile(
+    r"(?<![A-Za-z0-9_])"
+    r"(?:agent(?:[_ ]?[0-9]+)|token(?:[_ ]?[0-9]+)|\u03bc\u0304_?[0-9]+)"
+    r"(?![A-Za-z0-9_])"
+)
 MACHINE_ASSIGNMENT_RE = re.compile(
     r"(?:(?:export )?[A-Z_][A-Z0-9_]*|\$env:[A-Za-z_][A-Za-z0-9_]*)=(.*)",
     re.S,
@@ -285,8 +294,19 @@ def is_approved_diagnostic_literal(key, span):
 
 
 def _diagnostic_status_like(span):
-    """Detect diagnostic-shaped multiline text, including malformed near-misses."""
-    return "\n" in span and ";" in span and ":" in span
+    """Detect reviewed diagnostic anchors across malformed multiline clauses."""
+    if "\n" not in span:
+        return False
+    status_anchors = 0
+    for clause in DIAGNOSTIC_CLAUSE_SEPARATOR_RE.split(span):
+        normalized = " ".join(clause.split())
+        if ":" in normalized:
+            _, normalized = normalized.rsplit(":", 1)
+            normalized = normalized.strip()
+        if normalized in DIAGNOSTIC_STATUS_VALUES:
+            status_anchors += 1
+    key_anchors = len(DIAGNOSTIC_KEY_ANCHOR_RE.findall(span))
+    return status_anchors + key_anchors >= 2
 
 
 def validate_inventory_data(inventory, source_texts, registry_ids=None):

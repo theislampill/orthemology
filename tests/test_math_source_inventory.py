@@ -442,6 +442,18 @@ class OccurrenceIdentityTests(unittest.TestCase):
                     "invalid diagnostic literal",
                 )
 
+    def test_missing_separator_diagnostic_is_rejected(self):
+        status = "agent_1: pass\nagent_2: fail"
+        self.assertTrue(VALIDATOR._diagnostic_status_like(status))
+        inventory, source_texts = diagnostic_inventory(
+            status=status,
+            path="publication/example.md",
+        )
+        self.assertIssue(
+            inventory_issues(inventory, source_texts),
+            "invalid diagnostic literal",
+        )
+
     def test_approved_diagnostic_mutations_are_rejected(self):
         mutated = (
             "μ̄_3: wrong\n  claim scope; μ̄_2: stale calibration",
@@ -487,6 +499,29 @@ class OccurrenceIdentityTests(unittest.TestCase):
         )
         for control in controls:
             with self.subTest(control=control):
+                source = "Control: `%s`.\n" % control
+                inventory, source_texts = literal_inventory(
+                    "publication/example.md",
+                    source,
+                )
+                self.assertEqual(inventory_issues(inventory, source_texts), [])
+
+    def test_status_punctuation_does_not_make_unrelated_multiline_code_diagnostic(self):
+        controls = (
+            "color: red;\nbackground: blue;",
+            "if ready:\n  break; continue",
+            "owner: editor;\nnotes continue here",
+            "heading:\nplain text; continuation",
+            "owner: editor;\nreviewers:\n  - alice\n  - bob",
+            "endpoint: https://example.test/a;\nretry: disabled",
+            "started: 12:30;\nended: 13:45",
+            "Note: preserve the first clause;\ncontinue with the second sentence.",
+            "items:\n  alpha; beta\nnotes: retained",
+        )
+        for control in controls:
+            with self.subTest(control=control):
+                self.assertFalse(VALIDATOR._formula_like(control), control)
+                self.assertFalse(VALIDATOR._diagnostic_status_like(control), control)
                 source = "Control: `%s`.\n" % control
                 inventory, source_texts = literal_inventory(
                     "publication/example.md",
