@@ -454,6 +454,23 @@ class OccurrenceIdentityTests(unittest.TestCase):
             "invalid diagnostic literal",
         )
 
+    def test_missing_colon_diagnostics_are_rejected(self):
+        malformed = (
+            "agent_1 pass;\nagent_2 fail",
+            "agent_1: pass\nagent_2 fail",
+        )
+        for status in malformed:
+            with self.subTest(status=status):
+                self.assertTrue(VALIDATOR._diagnostic_status_like(status))
+                inventory, source_texts = diagnostic_inventory(
+                    status=status,
+                    path="publication/example.md",
+                )
+                self.assertIssue(
+                    inventory_issues(inventory, source_texts),
+                    "invalid diagnostic literal",
+                )
+
     def test_approved_diagnostic_mutations_are_rejected(self):
         mutated = (
             "μ̄_3: wrong\n  claim scope; μ̄_2: stale calibration",
