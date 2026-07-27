@@ -251,7 +251,7 @@ def compatibility_report_table_issues(root):
     else:
         start = header_indexes[0]
         end = start
-        while end < len(lines) and lines[end].startswith("|"):
+        while end < len(lines) and re.match(r" {0,3}\|", lines[end]):
             end += 1
         if lines[start:end] != expected_table_lines:
             issues.append(

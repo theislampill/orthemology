@@ -117,10 +117,33 @@ def _package_declarations(text, command):
     return declarations, issues, cleaned
 
 
+def _alternate_source_read_issues(cleaned):
+    """Reject file-read control sequences outside the audited input grammar."""
+    issues = []
+    for match in re.finditer(r"\\([A-Za-z@]+)", cleaned):
+        command = match.group(1)
+        lowered = command.lower()
+        if (
+            ("input" in lowered or "include" in lowered)
+            and lowered not in {"input", "include"}
+        ) or lowered in {"openin", "read", "readline", "newread"}:
+            issues.append(
+                "prohibited alternate source-read command: \\%s" % command
+            )
+    if re.search(
+        r"\\csname\s*(?:input|include|openin|read|readline)\s*\\endcsname",
+        cleaned,
+        re.I,
+    ):
+        issues.append("prohibited dynamic source-read command")
+    return issues
+
+
 def _declared_input_issues(text, origin, contents, allowed_local_inputs):
     issues = []
     origin_dir = posixpath.dirname(origin)
     without_comments = _strip_tex_comments(text)
+    issues.extend(_alternate_source_read_issues(without_comments))
     for match in re.finditer(
         r"\\(input|include)\b",
         without_comments,
@@ -423,6 +446,15 @@ def validate_source_package_bytes(
         _package_declarations(main, "usepackage")
     )
     issues.extend(package_issues)
+    main_require_declared, main_require_issues, _ = _package_declarations(
+        main,
+        "RequirePackage",
+    )
+    issues.extend(main_require_issues)
+    if main_require_declared:
+        issues.append(
+            "main package declarations must use the audited usepackage command"
+        )
     compatibility_text = contents.get(expected_compat, b"").decode(
         "utf-8", errors="replace"
     )
@@ -432,6 +464,14 @@ def validate_source_package_bytes(
         _compatibility_without_comments,
     ) = _package_declarations(compatibility_text, "RequirePackage")
     issues.extend(compatibility_package_issues)
+    compatibility_use_declared, compatibility_use_issues, _ = (
+        _package_declarations(compatibility_text, "usepackage")
+    )
+    issues.extend(compatibility_use_issues)
+    if compatibility_use_declared:
+        issues.append(
+            "compatibility package declarations must use RequirePackage"
+        )
     if main_declared != expected_direct:
         issues.append(
             "main package declarations must equal direct package policy: %r"

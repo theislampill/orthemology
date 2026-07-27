@@ -742,6 +742,18 @@ class SourcePackageContractTests(unittest.TestCase):
                 "\\usepackage{amsmath}",
                 "\\usepackage% split\n{fontspec}\n\\usepackage{amsmath}",
             ),
+            "alternate unsupported package command": (
+                "\\RequirePackage{todonotes}\n" + BASE_MAIN
+            ),
+            "split alternate prohibited font command": (
+                "\\RequirePackage% split\r\n{fontspec}\n" + BASE_MAIN
+            ),
+            "conditional file read": (
+                "\\InputIfFileExists{main.bbl}{}{}\n" + BASE_MAIN
+            ),
+            "dynamic file read": (
+                "\\csname input\\endcsname{main.bbl}\n" + BASE_MAIN
+            ),
         }
         for name, main in mutations.items():
             with self.subTest(name=name):
@@ -757,7 +769,11 @@ class SourcePackageContractTests(unittest.TestCase):
                 expected_fragment = (
                     "dependency"
                     if name == "carriage-return comment escape"
-                    else "package"
+                    else (
+                        "source-read"
+                        if name in {"conditional file read", "dynamic file read"}
+                        else "package"
+                    )
                 )
                 self.assertTrue(
                     any(expected_fragment in issue for issue in issues),
@@ -1104,41 +1120,50 @@ class SourcePackageContractTests(unittest.TestCase):
                 issues,
             )
 
-    def test_compatibility_report_rejects_malformed_extra_table_row(self):
+    def test_compatibility_report_rejects_malformed_or_indented_extra_table_row(self):
         validate = self.api(BUILD, "compatibility_report_table_issues")
-        with tempfile.TemporaryDirectory() as temporary:
-            root = pathlib.Path(temporary)
-            shutil.copytree(ROOT / "artifacts", root / "artifacts")
-            report_target = (
-                root
-                / "docs"
-                / "project-closure"
-                / "r7e-sol"
-                / "R7E-SOL-ARXIV-COMPATIBILITY.md"
-            )
-            report_target.parent.mkdir(parents=True)
-            report = (
-                ROOT
-                / "docs"
-                / "project-closure"
-                / "r7e-sol"
-                / "R7E-SOL-ARXIV-COMPATIBILITY.md"
-            ).read_text(encoding="utf-8")
-            separator = "|---|---:|---|---|---|"
-            report_target.write_text(
-                report.replace(
-                    separator,
-                    separator + "\n| unexpected | row |",
-                    1,
-                ),
-                encoding="utf-8",
-                newline="\n",
-            )
-            issues = validate(root)
-            self.assertTrue(
-                any("table region" in issue for issue in issues),
-                issues,
-            )
+        for prefix in ("", " ", "   "):
+            with self.subTest(prefix=repr(prefix)):
+                with tempfile.TemporaryDirectory() as temporary:
+                    root = pathlib.Path(temporary)
+                    shutil.copytree(ROOT / "artifacts", root / "artifacts")
+                    report_target = (
+                        root
+                        / "docs"
+                        / "project-closure"
+                        / "r7e-sol"
+                        / "R7E-SOL-ARXIV-COMPATIBILITY.md"
+                    )
+                    report_target.parent.mkdir(parents=True)
+                    report = (
+                        ROOT
+                        / "docs"
+                        / "project-closure"
+                        / "r7e-sol"
+                        / "R7E-SOL-ARXIV-COMPATIBILITY.md"
+                    ).read_text(encoding="utf-8")
+                    last_row = next(
+                        line
+                        for line in report.splitlines()
+                        if line.startswith("| `notation-gallery`")
+                    )
+                    report_target.write_text(
+                        report.replace(
+                            last_row,
+                            last_row
+                            + "\n"
+                            + prefix
+                            + "| unexpected | row |",
+                            1,
+                        ),
+                        encoding="utf-8",
+                        newline="\n",
+                    )
+                    issues = validate(root)
+                    self.assertTrue(
+                        any("table region" in issue for issue in issues),
+                        issues,
+                    )
 
 
 if __name__ == "__main__":
