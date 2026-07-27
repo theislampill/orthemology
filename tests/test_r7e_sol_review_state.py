@@ -89,6 +89,7 @@ EXPECTED_TOPOLOGY_AT_OBSERVATION = [
 
 EXPECTED_CONTROL_PLANE = {
     "reproduction": "docs/project-closure/r7e-sol/R7E-SOL-READONLY-REPRODUCTION.md",
+    "clean_clone_verification": "docs/project-closure/r7e-sol/R7E-SOL-CLEAN-CLONE-VERIFICATION.md",
     "finding_matrix": "docs/project-closure/r7e-sol/R7E-INDEPENDENT-FINDING-MATRIX.yaml",
     "hunk_disposition": "docs/project-closure/r7e-sol/R7E-HUNK-DISPOSITION.md",
     "decision": "docs/decisions/0034-r7e-sol-independent-repair-contract.md",
@@ -96,26 +97,27 @@ EXPECTED_CONTROL_PLANE = {
 
 EXPECTED_REPRODUCTION_LINK_TARGETS = {
     "AUTONOMOUS-R7E-SOL-STATE.json",
+    "R7E-SOL-CLEAN-CLONE-VERIFICATION.md",
     "R7E-INDEPENDENT-FINDING-MATRIX.yaml",
     "R7E-HUNK-DISPOSITION.md",
     "../../decisions/0034-r7e-sol-independent-repair-contract.md",
 }
 
 EXPECTED_FINDING_ADJUDICATIONS = {
-    "R7E-SOL-F001": ("reproduced", "blocker", 2, "open"),
+    "R7E-SOL-F001": ("reproduced", "blocker", 2, "resolved"),
     "R7E-SOL-F002": ("reproduced", "blocker", 3, "resolved"),
     "R7E-SOL-F003": ("reproduced", "blocker", 3, "resolved"),
-    "R7E-SOL-F004": ("reproduced", "high", 7, "open"),
-    "R7E-SOL-F005": ("reproduced", "blocker", 2, "open"),
-    "R7E-SOL-F006": ("reproduced", "blocker", 8, "open"),
-    "R7E-SOL-F007": ("reproduced", "blocker", 5, "open"),
-    "R7E-SOL-F008": ("partially-reproduced", "high", 5, "open"),
-    "R7E-SOL-F009": ("reproduced", "high", 7, "open"),
-    "R7E-SOL-F010": ("reproduced", "high", 6, "open"),
-    "R7E-SOL-F011": ("partially-reproduced", "high", 8, "open"),
-    "R7E-SOL-F012": ("reproduced", "blocker", 8, "open"),
-    "R7E-SOL-F013": ("reproduced", "blocker", 8, "open"),
-    "R7E-SOL-F014": ("reproduced", "blocker", 10, "open"),
+    "R7E-SOL-F004": ("reproduced", "high", 7, "resolved"),
+    "R7E-SOL-F005": ("reproduced", "blocker", 2, "resolved"),
+    "R7E-SOL-F006": ("reproduced", "blocker", 8, "resolved"),
+    "R7E-SOL-F007": ("reproduced", "blocker", 5, "resolved"),
+    "R7E-SOL-F008": ("partially-reproduced", "high", 5, "resolved"),
+    "R7E-SOL-F009": ("reproduced", "high", 7, "resolved"),
+    "R7E-SOL-F010": ("reproduced", "high", 6, "resolved"),
+    "R7E-SOL-F011": ("partially-reproduced", "high", 8, "resolved"),
+    "R7E-SOL-F012": ("reproduced", "blocker", 8, "resolved"),
+    "R7E-SOL-F013": ("reproduced", "blocker", 8, "resolved"),
+    "R7E-SOL-F014": ("reproduced", "blocker", 10, "resolved"),
     "R7E-SOL-F015": ("refuted", "historical-high", 12, "resolved"),
 }
 
@@ -297,10 +299,32 @@ def test_prefix_and_state() -> None:
           and model.get("selected") == REQUIRED_MODEL
           and model.get("evidence") == "controller-confirmed-agent-model-selection"
           and model.get("environment_variable_observation") is False)
-    check("state does not claim sign-off or merge readiness",
-          state.get("independent_signoff") is False
+    check("state records candidate sign-off without claiming Task 16 completion",
+          state.get("independent_signoff") is True
           and state.get("ready_for_merge") is False
           and state.get("merged") is False)
+    task15 = state.get("task15_verification", {})
+    check("Task 15 state binds the exact approved remote candidate",
+          task15.get("candidate_commit")
+          == "ad57371b8ef88c313f9b92c43c7618500337e0ed"
+          and task15.get("remote_head")
+          == "ad57371b8ef88c313f9b92c43c7618500337e0ed"
+          and task15.get("independent_review_verdict") == "APPROVED")
+    check("Task 15 state binds exact-SHA CI and clean-clone validation",
+          task15.get("github_actions_run") == 30313374447
+          and task15.get("github_actions_conclusion") == "SUCCESS"
+          and task15.get("workflow_command_count") == 71
+          and task15.get("supplemental_command_count") == 8
+          and task15.get("clean_clone_head")
+          == "ad57371b8ef88c313f9b92c43c7618500337e0ed"
+          and task15.get("clean_clone_status_porcelain") == "")
+    check("Task 15 state accounts for deterministic all-page PDF QA",
+          task15.get("pdf_artifacts") == 6
+          and task15.get("pdf_pages") == 61
+          and task15.get("raster_passes") == 2
+          and task15.get("raster_hash_lists_identical") is True
+          and task15.get("visually_inspected_pages") == 61
+          and task15.get("prohibited_semantic_hits") == 0)
 
     baseline = state.get("baseline", {}) if isinstance(state, dict) else {}
     check("baseline accounts for all 56 logical workflow validations",
@@ -367,22 +391,22 @@ def test_findings_and_hunks() -> None:
         )
         for row in findings
     }
-    check("finding adjudications exactly match the Task 3 boundary",
+    check("finding adjudications exactly match the Task 15 boundary",
           actual_adjudications == EXPECTED_FINDING_ADJUDICATIONS,
           repr(actual_adjudications))
     by_id = {str(row.get("id")): row for row in findings}
-    check("F001 retains exact review evidence",
-          by_id.get("R7E-SOL-F001", {}).get("evidence") == EXPECTED_F001_EVIDENCE,
+    check("F001 retains exact review evidence before resolution evidence",
+          by_id.get("R7E-SOL-F001", {}).get("evidence", [])[:2]
+          == EXPECTED_F001_EVIDENCE,
           repr(by_id.get("R7E-SOL-F001", {}).get("evidence")))
-    check("F011 uses only exact current-source evidence",
-          by_id.get("R7E-SOL-F011", {}).get("evidence") == EXPECTED_F011_EVIDENCE,
+    check("F011 retains exact source evidence before resolution evidence",
+          by_id.get("R7E-SOL-F011", {}).get("evidence", [])[:2]
+          == EXPECTED_F011_EVIDENCE,
           repr(by_id.get("R7E-SOL-F011", {}).get("evidence")))
     resolved = {fid for fid, values in actual_adjudications.items()
                 if values[3] == "resolved"}
-    check("F002, F003, and F015 alone are resolved",
-          resolved == {"R7E-SOL-F002", "R7E-SOL-F003", "R7E-SOL-F015"}
-          and all(actual_adjudications.get("R7E-SOL-F%03d" % n, (None,) * 4)[3]
-                  == "open" for n in [1, *range(4, 15)]),
+    check("all fifteen R7E-Sol findings are terminally resolved",
+          resolved == EXPECTED_FINDING_IDS,
           repr(sorted(resolved)))
 
     hunk_text = read("docs/project-closure/r7e-sol/R7E-HUNK-DISPOSITION.md")
@@ -402,6 +426,9 @@ def test_findings_and_hunks() -> None:
     check("preserved R7E provenance inputs are kept byte-identical",
           ("docs/project-closure/r7e/AUTONOMOUS-R7E-STATE.json", "keep") in rows
           and ("docs/project-closure/r7e/ORTHING-CANDIDATE-BACKLOG.md", "keep") in rows)
+    check("hunk disposition records Task 15 terminal candidate status",
+          "TASK 15 VERIFIED CANDIDATE" in hunk_text
+          and "TASK 16 INTEGRATION PENDING" in hunk_text)
 
 
 def test_decision_boundary_and_validator() -> None:
@@ -462,10 +489,10 @@ def test_production_validator_rejects_adversarial_mutations() -> None:
     mutated_control_plane = copy.deepcopy(state)
     mutated_control_plane["control_plane"]["reproduction"] = "fabricated.md"
 
-    resolved_f014 = copy.deepcopy(matrix)
-    f014 = next(row for row in resolved_f014["findings"]
+    reopened_f014 = copy.deepcopy(matrix)
+    f014 = next(row for row in reopened_f014["findings"]
                 if row["id"] == "R7E-SOL-F014")
-    f014["terminal_status"] = "resolved"
+    f014["terminal_status"] = "open"
 
     open_f015 = copy.deepcopy(matrix)
     f015 = next(row for row in open_f015["findings"]
@@ -483,7 +510,7 @@ def test_production_validator_rejects_adversarial_mutations() -> None:
         ("non-UTC observation timestamp", {state_path: json.dumps(invalid_timestamp)}),
         ("mutated PR topology branch", {state_path: json.dumps(mutated_topology)}),
         ("mutated control-plane link", {state_path: json.dumps(mutated_control_plane)}),
-        ("F014 falsely resolved", {matrix_path: yaml.safe_dump(resolved_f014, sort_keys=False)}),
+        ("F014 improperly reopened", {matrix_path: yaml.safe_dump(reopened_f014, sort_keys=False)}),
         ("F015 no longer resolved", {matrix_path: yaml.safe_dump(open_f015, sort_keys=False)}),
         ("Decision 0034 candidate self-promotion", {decision_path: mutated_decision}),
     ]

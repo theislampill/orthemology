@@ -1,6 +1,6 @@
 {
   "record": "AUTONOMOUS-R7E-SOL-STATE",
-  "label": "SOL INDEPENDENT REVIEW CANDIDATE — NO SIGNOFF OR MERGE READINESS",
+  "label": "TASK 15 VERIFIED CANDIDATE — TASK 16 INTEGRATION PENDING",
   "observed_at_utc": "2026-07-21T18:10:22Z",
   "r7e_observation": {
     "pr": 12,
@@ -120,12 +120,42 @@
   },
   "control_plane": {
     "reproduction": "docs/project-closure/r7e-sol/R7E-SOL-READONLY-REPRODUCTION.md",
+    "clean_clone_verification": "docs/project-closure/r7e-sol/R7E-SOL-CLEAN-CLONE-VERIFICATION.md",
     "finding_matrix": "docs/project-closure/r7e-sol/R7E-INDEPENDENT-FINDING-MATRIX.yaml",
     "hunk_disposition": "docs/project-closure/r7e-sol/R7E-HUNK-DISPOSITION.md",
     "decision": "docs/decisions/0034-r7e-sol-independent-repair-contract.md"
   },
-  "next_action": "Task 2: generate and validate the complete candidate topology; do not merge or claim independent signoff.",
-  "independent_signoff": false,
+  "task15_verification": {
+    "observed_at_utc": "2026-07-27T23:20:44Z",
+    "candidate_commit": "ad57371b8ef88c313f9b92c43c7618500337e0ed",
+    "candidate_parent": "c9fcf44d64208b8defcec9b809fbbb3ceb39a65c",
+    "remote_branch": "review/r7e-sol-independent-repair",
+    "remote_head": "ad57371b8ef88c313f9b92c43c7618500337e0ed",
+    "independent_review_verdict": "APPROVED",
+    "github_actions_run": 30313374447,
+    "github_actions_url": "https://github.com/theislampill/orthemology/actions/runs/30313374447",
+    "github_actions_conclusion": "SUCCESS",
+    "workflow_command_count": 71,
+    "supplemental_command_count": 8,
+    "python": "3.11.9",
+    "requirements_lock_sha256": "3011af491f65eef07ff9f3854ead9c0b69ea42c031a0bd863b43cd80f5d997fd",
+    "clean_clone_locator": "operator-local/task15-clean-clone-ad57371",
+    "clean_clone_head": "ad57371b8ef88c313f9b92c43c7618500337e0ed",
+    "clean_clone_status_porcelain": "",
+    "pdf_artifacts": 6,
+    "pdf_pages": 61,
+    "raster_passes": 2,
+    "raster_hash_lists_identical": true,
+    "visually_inspected_pages": 61,
+    "visual_defects": 0,
+    "prohibited_semantic_hits": 0,
+    "compressed_binary_false_positives": 1,
+    "compressed_binary_false_positive_classification": "UNRELATED_ACRONYM_OR_FALSE_POSITIVE",
+    "ar6_status": "INTERRUPTED_IN_PROGRESS",
+    "ar6_normative_promotions": 0
+  },
+  "next_action": "Task 16: after independent review and exact-SHA CI of the closure-record commit, reverify topology and execute only the authorized protected integration cascade.",
+  "independent_signoff": true,
   "ready_for_merge": false,
   "merged": false
 }

@@ -17,17 +17,23 @@ artifacts and interrupted external research do not satisfy that gate.
 
 - Protected `main`: `43fee0f519e2f6984fb143c1e621c83382e71ec7`.
 - PR #12 remote head: `00b469af002c87724a7e5ea80320d4f8d8931b41`.
-- PRs #8–#12: open, draft, mergeable, and correctly stacked at the 2026-07-26
+- Review branch remote head:
+  `ad57371b8ef88c313f9b92c43c7618500337e0ed`.
+- PRs #8–#12: open, draft, mergeable, and correctly stacked at the 2026-07-27
   observation.
-- PR #12 exact-SHA CI: RED only on the known Task 13 PDF clean-rebuild and
-  parity gate; the preceding workflow gates pass.
+- Review-branch exact-SHA CI: GREEN at
+  `ad57371b8ef88c313f9b92c43c7618500337e0ed`, GitHub Actions run
+  `30313374447`.
+- PR #12 remains at its preserved pre-integration head. Its historical red PDF
+  runs are superseded as candidate evidence by the green review-branch run, but
+  PR #12 must receive fresh CI after Task 16 changes its effective head.
 - Local authoritative approved base:
-  `61ad3b6f59a72a9b1fca53bd93a7a958e84f6e08`, tree
-  `1447d891f0e3651c91f78df7f43d82eb7bbac587`.
-- Last independently approved source task: Task 13 at
-  `61ad3b6f59a72a9b1fca53bd93a7a958e84f6e08`.
-- Task 14 is implemented and ready for independent review. It is the first
-  unfinished approval gate.
+  `ad57371b8ef88c313f9b92c43c7618500337e0ed`.
+- Last independently approved implementation task: Task 15 candidate at
+  `ad57371b8ef88c313f9b92c43c7618500337e0ed`.
+- Task 15 local, remote, clean-clone, source-package, PDF, terminology, and
+  all-page evidence is complete. The exact closure-record commit containing
+  this TODO remains the final Task 15 review/CI gate.
 - AR6 status: `INTERRUPTED_IN_PROGRESS`. Its 1,329 records are reconciled, but
   no AR6 patch, claim, proof, theorem, source assertion, formal artifact, or
   executable artifact is applied or approved.
@@ -141,8 +147,8 @@ artifacts and interrupted external research do not satisfy that gate.
   historical-attestation, analysis-relative glossary, readiness, benchmark,
   malformed-input, and contrastive-claim boundaries.
 - CI/publication: approved local gates passed; the implementation is not yet on
-  the PR #12 remote head and no push or publication is authorized. The known
-  Task 13 PDF parity failure remains unchanged.
+  the PR #12 head, but it is an ancestor of the independently reviewed and green
+  review-branch head. No publication is claimed.
 - Blocker: none specific to Task 10.
 - Next action: preserve Task 10 as the approved predecessor to Task 11.
 
@@ -194,9 +200,8 @@ artifacts and interrupted external research do not satisfy that gate.
 
 ### Task 14 — Run the complete adversarial and recursive mutation program
 
-- [ ] Obtain independent approval of the exact Task 14 candidate commit.
-- Status: implementation complete and ready for independent review. No approval
-  is claimed.
+- Status: completed and independently approved at
+  `5af68cd1e9aa6f16012e4abeeabb3be862b7fc4d`.
 - Implementation/review: the authoritative plan inventory contains all 59
   mandatory attacks exactly once and expands them into 77 explicit variants.
   Every variant has a unique mutation ID, a separate valid-control probe, a
@@ -214,22 +219,31 @@ artifacts and interrupted external research do not satisfy that gate.
   mutants across 27 families: 1,546 schema-killed, 248 semantic-killed, and 19
   justified equivalents, with zero unjustified survivors. The canonical report
   is `docs/project-closure/r7e-sol/R7E-SOL-ADVERSARIAL-REPORT.md`.
-- Blocker: fresh independent review of the exact Task 14 commit.
-- Next action: dispatch the independent Task 14 reviewer against the immutable
-  candidate diff and regenerated report.
+- Blocker: none specific to Task 14.
+- Next action: preserve the approved inventory and exact direct-observation
+  bindings as Task 15 and Task 16 evidence.
 
 ### Task 15 — Run the exact pinned full suite and clean-clone candidate proof
 
-- [ ] Complete and independently approve the exact local, branch, remote, and
-  clean-clone proof.
-- Status: unfinished; historical preparation is not acceptance evidence.
-- Implementation/review: reconcile all prior material and review the complete
-  candidate diff, source boundaries, tests, artifacts, and exclusions.
-- CI/publication: requires the exact pinned workflow locally and in a clean
-  clone, fresh exact-SHA remote checks, clean generated owners, and a clean tree.
-- Blocker: Task 14 approval and fresh remote evidence.
-- Next action: after Task 14 approval, run the exact pinned local, clean-clone,
-  and remote proof against the reviewed candidate.
+- Status: candidate implementation and verification complete at
+  `ad57371b8ef88c313f9b92c43c7618500337e0ed`; terminal Task 15 closure is the
+  independent approval and exact-SHA CI of the non-self-referential commit that
+  contains this record.
+- Implementation/review: the complete `cbab147..ad57371` lineage, source
+  boundaries, tests, artifacts, exclusions, PDF container identities, and
+  prohibited-terminology boundary were independently reviewed. All 15 original
+  findings are terminally resolved without rewriting their original evidence.
+- CI/publication: 71/71 re-extracted workflow commands and 8/8 supplemental
+  publication commands pass in a new GitHub clone and fresh Python 3.11.9
+  lock-only environment. Exact-SHA run `30313374447` is GREEN. Six source
+  packages and PDFs pass; two 61-page raster passes are hash-identical; all 61
+  pages were visually inspected; generated state and manifest converge; the
+  fresh clone is clean.
+- Blocker: only independent review and exact-SHA CI of this closure-record
+  commit. No semantic, source, PDF, dependency, topology, or owner-only blocker
+  remains.
+- Next action: obtain the terminal review of this exact closure-record commit,
+  push only the approved SHA, require GREEN exact-SHA CI, then begin Task 16.
 
 ### Task 16 — Perform the authorized protected integration cascade
 
@@ -241,8 +255,9 @@ artifacts and interrupted external research do not satisfy that gate.
 - CI/publication: every merge-created SHA requires fresh exact-SHA CI; the final
   `main` tree requires a fresh-clone proof.
 - Blocker: Task 15 approval, current PR #12 CI RED, and all PRs remaining draft.
-- Next action: after Task 15 approval, freshly verify the protected topology and
-  execute only exact-SHA writes whose required checks are GREEN.
+- Next action: after the Task 15 closure-record gate, freshly verify the
+  protected topology and execute only exact-SHA writes whose required checks
+  are GREEN. Historical PR #12 CI cannot be reused after its head changes.
 
 ## AR6 reconciliation boundary
 
@@ -268,7 +283,9 @@ theory unless a later reviewed task accepts a bounded result.
 
 ## Protected integration boundary
 
-No push, PR mutation, merge, tag, release, publication, or protected-branch
-write is authorized by this continuity commit. The current PR order remains
-PR #12 → #11 → #10 → #9 → #8 → protected `main`, subject to Tasks 11–16 and
-fresh exact-state verification.
+The reviewed candidate is present only on
+`review/r7e-sol-independent-repair`. No PR mutation, merge, tag, release,
+publication, or protected-branch write has occurred. The current authorized
+order remains review branch → PR #12 → #11 → #10 → #9 → #8 → protected
+`main`, subject to the Task 15 closure-record gate and fresh exact-state
+verification before every Task 16 write.

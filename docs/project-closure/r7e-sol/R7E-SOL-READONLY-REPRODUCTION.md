@@ -21,6 +21,7 @@ push, mark a PR ready, issue independent signoff, or reopen Decisions
 ## Control-plane links
 
 - [Autonomous review state](AUTONOMOUS-R7E-SOL-STATE.json)
+- [Task 15 clean-clone verification](R7E-SOL-CLEAN-CLONE-VERIFICATION.md)
 - [Independent finding matrix](R7E-INDEPENDENT-FINDING-MATRIX.yaml)
 - [PR #12 hunk disposition](R7E-HUNK-DISPOSITION.md)
 - [Decision 0034 candidate boundary](../../decisions/0034-r7e-sol-independent-repair-contract.md)
