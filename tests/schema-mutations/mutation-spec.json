@@ -232,5 +232,2888 @@
       "signature": "shared-upstream-corroboration-failure.json#3 8 residuals/0/verdict_refs",
       "reason": "The residual is disposed 'validated-resolved' and carries BOTH evidence_refs and verdict_refs; deleting one leaves the other, which alone still discharges the disposition's conditional-field requirement. The record's claim is unchanged. Same adjudicated class as the pillar-episode residual redundancy."
     }
+  ],
+  "task14_exact_base": "61ad3b6f59a72a9b1fca53bd93a7a958e84f6e08",
+  "task14_ar6_artifact_ids": [
+    "AR6-ART-DCFCE4829D349341868A1901",
+    "AR6-ART-FE87A26530A6B2BC11BB8589",
+    "AR6-ART-B173EC14E54EEB0DDE791777",
+    "AR6-ART-4E448EA229DF2FFF0EA1FA23",
+    "AR6-ART-0F058EA08639FEE587D7EF33",
+    "AR6-ART-E2334A507CF4E1B74F2057F3",
+    "AR6-ART-351BEADF9E93C818EAC47A94",
+    "AR6-ART-A5D235BD0361FFC9F46D70DA",
+    "AR6-ART-4579F97C0171411C5F32C873",
+    "AR6-ART-D8BB192F086AA1CCB5FD1379",
+    "AR6-ART-4C6B6C989A76AEBC6C5ACD35",
+    "AR6-ART-A2483CCCA1183411BF061066",
+    "AR6-ART-467D71154F4016E2BEF2BF20",
+    "AR6-ART-3DA782593EAD8E8A92D2A4A2",
+    "AR6-ART-EAD88C531603E9BF904B1CF2",
+    "AR6-ART-1495AD0E2AA7CA1B5649C19C",
+    "AR6-ART-31C5C6DCE6796D1E12E61810",
+    "AR6-ART-93A8FC21B4BD675313C3DA8E",
+    "AR6-ART-AD89BECB272A4728ABA24966"
+  ],
+  "mandatory_attacks": [
+    {
+      "attack_id": "R7E-T14-A01",
+      "name": "stale/omitted topology",
+      "invariant": "The complete frozen PR topology is current and present.",
+      "owner": "Task 10 candidate-state owner",
+      "variants": [
+        {
+          "variant_id": "R7E-T14-A01-V01",
+          "mutation_id": "R7E-T14-A01-M01",
+          "neutral_concept": "omitted PR 11/12",
+          "validator_owner": "Task 10 candidate-state owner",
+          "validator_entry_point": "scripts/generate_candidate_state.py",
+          "control_evidence_selector": "direct-probe:R7E-T14-A01-V01:control",
+          "mutation_evidence_selector": "direct-probe:R7E-T14-A01-V01:mutation",
+          "control_command": [
+            "python",
+            "scripts/run_task14_probe.py",
+            "--attack-id",
+            "R7E-T14-A01",
+            "--variant-id",
+            "R7E-T14-A01-V01",
+            "--role",
+            "control"
+          ],
+          "mutation_command": [
+            "python",
+            "scripts/run_task14_probe.py",
+            "--attack-id",
+            "R7E-T14-A01",
+            "--variant-id",
+            "R7E-T14-A01-V01",
+            "--role",
+            "mutation"
+          ]
+        },
+        {
+          "variant_id": "R7E-T14-A01-V02",
+          "mutation_id": "R7E-T14-A01-M02",
+          "neutral_concept": "stale observation timestamp",
+          "validator_owner": "Task 10 candidate-state owner",
+          "validator_entry_point": "scripts/generate_candidate_state.py",
+          "control_evidence_selector": "direct-probe:R7E-T14-A01-V02:control",
+          "mutation_evidence_selector": "direct-probe:R7E-T14-A01-V02:mutation",
+          "control_command": [
+            "python",
+            "scripts/run_task14_probe.py",
+            "--attack-id",
+            "R7E-T14-A01",
+            "--variant-id",
+            "R7E-T14-A01-V02",
+            "--role",
+            "control"
+          ],
+          "mutation_command": [
+            "python",
+            "scripts/run_task14_probe.py",
+            "--attack-id",
+            "R7E-T14-A01",
+            "--variant-id",
+            "R7E-T14-A01-V02",
+            "--role",
+            "mutation"
+          ]
+        }
+      ]
+    },
+    {
+      "attack_id": "R7E-T14-A02",
+      "name": "self-promotion",
+      "invariant": "Candidate evidence cannot confer approval or merge status on itself.",
+      "owner": "Task 10 candidate-state owner",
+      "variants": [
+        {
+          "variant_id": "R7E-T14-A02-V01",
+          "mutation_id": "R7E-T14-A02-M01",
+          "neutral_concept": "candidate decision status adopted-merged",
+          "validator_owner": "Task 10 candidate-state owner",
+          "validator_entry_point": "scripts/generate_candidate_state.py",
+          "control_evidence_selector": "direct-probe:R7E-T14-A02-V01:control",
+          "mutation_evidence_selector": "direct-probe:R7E-T14-A02-V01:mutation",
+          "control_command": [
+            "python",
+            "scripts/run_task14_probe.py",
+            "--attack-id",
+            "R7E-T14-A02",
+            "--variant-id",
+            "R7E-T14-A02-V01",
+            "--role",
+            "control"
+          ],
+          "mutation_command": [
+            "python",
+            "scripts/run_task14_probe.py",
+            "--attack-id",
+            "R7E-T14-A02",
+            "--variant-id",
+            "R7E-T14-A02-V01",
+            "--role",
+            "mutation"
+          ]
+        }
+      ]
+    },
+    {
+      "attack_id": "R7E-T14-A03",
+      "name": "literal gradient",
+      "invariant": "A mathematical analogy cannot be asserted as a literal differentiable gradient.",
+      "owner": "Task 6 semantic-operator owner",
+      "variants": [
+        {
+          "variant_id": "R7E-T14-A03-V01",
+          "mutation_id": "R7E-T14-A03-M01",
+          "neutral_concept": "SO-01 literal-differentiable-gradient",
+          "validator_owner": "Task 6 semantic-operator owner",
+          "validator_entry_point": "scripts/validate_semantic_operator_contract.py",
+          "control_evidence_selector": "direct-probe:R7E-T14-A03-V01:control",
+          "mutation_evidence_selector": "direct-probe:R7E-T14-A03-V01:mutation",
+          "control_command": [
+            "python",
+            "scripts/run_task14_probe.py",
+            "--attack-id",
+            "R7E-T14-A03",
+            "--variant-id",
+            "R7E-T14-A03-V01",
+            "--role",
+            "control"
+          ],
+          "mutation_command": [
+            "python",
+            "scripts/run_task14_probe.py",
+            "--attack-id",
+            "R7E-T14-A03",
+            "--variant-id",
+            "R7E-T14-A03-V01",
+            "--role",
+            "mutation"
+          ]
+        }
+      ]
+    },
+    {
+      "attack_id": "R7E-T14-A04",
+      "name": "div/curl without field",
+      "invariant": "Divergence and curl claims require typed field targets.",
+      "owner": "Task 6 semantic-operator owner",
+      "variants": [
+        {
+          "variant_id": "R7E-T14-A04-V01",
+          "mutation_id": "R7E-T14-A04-M01",
+          "neutral_concept": "SO-02 untyped divergence target",
+          "validator_owner": "Task 6 semantic-operator owner",
+          "validator_entry_point": "scripts/validate_semantic_operator_contract.py",
+          "control_evidence_selector": "direct-probe:R7E-T14-A04-V01:control",
+          "mutation_evidence_selector": "direct-probe:R7E-T14-A04-V01:mutation",
+          "control_command": [
+            "python",
+            "scripts/run_task14_probe.py",
+            "--attack-id",
+            "R7E-T14-A04",
+            "--variant-id",
+            "R7E-T14-A04-V01",
+            "--role",
+            "control"
+          ],
+          "mutation_command": [
+            "python",
+            "scripts/run_task14_probe.py",
+            "--attack-id",
+            "R7E-T14-A04",
+            "--variant-id",
+            "R7E-T14-A04-V01",
+            "--role",
+            "mutation"
+          ]
+        },
+        {
+          "variant_id": "R7E-T14-A04-V02",
+          "mutation_id": "R7E-T14-A04-M02",
+          "neutral_concept": "SO-03 untyped curl target",
+          "validator_owner": "Task 6 semantic-operator owner",
+          "validator_entry_point": "scripts/validate_semantic_operator_contract.py",
+          "control_evidence_selector": "direct-probe:R7E-T14-A04-V02:control",
+          "mutation_evidence_selector": "direct-probe:R7E-T14-A04-V02:mutation",
+          "control_command": [
+            "python",
+            "scripts/run_task14_probe.py",
+            "--attack-id",
+            "R7E-T14-A04",
+            "--variant-id",
+            "R7E-T14-A04-V02",
+            "--role",
+            "control"
+          ],
+          "mutation_command": [
+            "python",
+            "scripts/run_task14_probe.py",
+            "--attack-id",
+            "R7E-T14-A04",
+            "--variant-id",
+            "R7E-T14-A04-V02",
+            "--role",
+            "mutation"
+          ]
+        }
+      ]
+    },
+    {
+      "attack_id": "R7E-T14-A05",
+      "name": "transition-as-correctness",
+      "invariant": "A transition does not establish correctness.",
+      "owner": "Task 6 semantic-operator owner",
+      "variants": [
+        {
+          "variant_id": "R7E-T14-A05-V01",
+          "mutation_id": "R7E-T14-A05-M01",
+          "neutral_concept": "SO-04 transition-as-correctness",
+          "validator_owner": "Task 6 semantic-operator owner",
+          "validator_entry_point": "scripts/validate_semantic_operator_contract.py",
+          "control_evidence_selector": "direct-probe:R7E-T14-A05-V01:control",
+          "mutation_evidence_selector": "direct-probe:R7E-T14-A05-V01:mutation",
+          "control_command": [
+            "python",
+            "scripts/run_task14_probe.py",
+            "--attack-id",
+            "R7E-T14-A05",
+            "--variant-id",
+            "R7E-T14-A05-V01",
+            "--role",
+            "control"
+          ],
+          "mutation_command": [
+            "python",
+            "scripts/run_task14_probe.py",
+            "--attack-id",
+            "R7E-T14-A05",
+            "--variant-id",
+            "R7E-T14-A05-V01",
+            "--role",
+            "mutation"
+          ]
+        }
+      ]
+    },
+    {
+      "attack_id": "R7E-T14-A06",
+      "name": "omitted reread",
+      "invariant": "Closure requires a whole-state reread.",
+      "owner": "Task 6 semantic-operator owner",
+      "variants": [
+        {
+          "variant_id": "R7E-T14-A06-V01",
+          "mutation_id": "R7E-T14-A06-M01",
+          "neutral_concept": "SO-05 whole-state-reread-omitted",
+          "validator_owner": "Task 6 semantic-operator owner",
+          "validator_entry_point": "scripts/validate_semantic_operator_contract.py",
+          "control_evidence_selector": "direct-probe:R7E-T14-A06-V01:control",
+          "mutation_evidence_selector": "direct-probe:R7E-T14-A06-V01:mutation",
+          "control_command": [
+            "python",
+            "scripts/run_task14_probe.py",
+            "--attack-id",
+            "R7E-T14-A06",
+            "--variant-id",
+            "R7E-T14-A06-V01",
+            "--role",
+            "control"
+          ],
+          "mutation_command": [
+            "python",
+            "scripts/run_task14_probe.py",
+            "--attack-id",
+            "R7E-T14-A06",
+            "--variant-id",
+            "R7E-T14-A06-V01",
+            "--role",
+            "mutation"
+          ]
+        }
+      ]
+    },
+    {
+      "attack_id": "R7E-T14-A07",
+      "name": "closure-as-uptake",
+      "invariant": "Closure does not imply uptake or restoration.",
+      "owner": "Task 6 semantic-operator owner",
+      "variants": [
+        {
+          "variant_id": "R7E-T14-A07-V01",
+          "mutation_id": "R7E-T14-A07-M01",
+          "neutral_concept": "SO-06 closure-as-uptake-restoration",
+          "validator_owner": "Task 6 semantic-operator owner",
+          "validator_entry_point": "scripts/validate_semantic_operator_contract.py",
+          "control_evidence_selector": "direct-probe:R7E-T14-A07-V01:control",
+          "mutation_evidence_selector": "direct-probe:R7E-T14-A07-V01:mutation",
+          "control_command": [
+            "python",
+            "scripts/run_task14_probe.py",
+            "--attack-id",
+            "R7E-T14-A07",
+            "--variant-id",
+            "R7E-T14-A07-V01",
+            "--role",
+            "control"
+          ],
+          "mutation_command": [
+            "python",
+            "scripts/run_task14_probe.py",
+            "--attack-id",
+            "R7E-T14-A07",
+            "--variant-id",
+            "R7E-T14-A07-V01",
+            "--role",
+            "mutation"
+          ]
+        }
+      ]
+    },
+    {
+      "attack_id": "R7E-T14-A08",
+      "name": "hidden burden deletion",
+      "invariant": "Unresolved burdens remain explicit until disposed.",
+      "owner": "Task 6 semantic-operator owner",
+      "variants": [
+        {
+          "variant_id": "R7E-T14-A08-V01",
+          "mutation_id": "R7E-T14-A08-M01",
+          "neutral_concept": "SO-07 hidden-burden-deletion",
+          "validator_owner": "Task 6 semantic-operator owner",
+          "validator_entry_point": "scripts/validate_semantic_operator_contract.py",
+          "control_evidence_selector": "direct-probe:R7E-T14-A08-V01:control",
+          "mutation_evidence_selector": "direct-probe:R7E-T14-A08-V01:mutation",
+          "control_command": [
+            "python",
+            "scripts/run_task14_probe.py",
+            "--attack-id",
+            "R7E-T14-A08",
+            "--variant-id",
+            "R7E-T14-A08-V01",
+            "--role",
+            "control"
+          ],
+          "mutation_command": [
+            "python",
+            "scripts/run_task14_probe.py",
+            "--attack-id",
+            "R7E-T14-A08",
+            "--variant-id",
+            "R7E-T14-A08-V01",
+            "--role",
+            "mutation"
+          ]
+        }
+      ]
+    },
+    {
+      "attack_id": "R7E-T14-A09",
+      "name": "unauthorized global revision",
+      "invariant": "Local corrective transitions cannot silently revise global governing state.",
+      "owner": "Task 6 semantic-operator owner",
+      "variants": [
+        {
+          "variant_id": "R7E-T14-A09-V01",
+          "mutation_id": "R7E-T14-A09-M01",
+          "neutral_concept": "SO-08 unauthorized-global-revision",
+          "validator_owner": "Task 6 semantic-operator owner",
+          "validator_entry_point": "scripts/validate_semantic_operator_contract.py",
+          "control_evidence_selector": "direct-probe:R7E-T14-A09-V01:control",
+          "mutation_evidence_selector": "direct-probe:R7E-T14-A09-V01:mutation",
+          "control_command": [
+            "python",
+            "scripts/run_task14_probe.py",
+            "--attack-id",
+            "R7E-T14-A09",
+            "--variant-id",
+            "R7E-T14-A09-V01",
+            "--role",
+            "control"
+          ],
+          "mutation_command": [
+            "python",
+            "scripts/run_task14_probe.py",
+            "--attack-id",
+            "R7E-T14-A09",
+            "--variant-id",
+            "R7E-T14-A09-V01",
+            "--role",
+            "mutation"
+          ]
+        }
+      ]
+    },
+    {
+      "attack_id": "R7E-T14-A10",
+      "name": "strict soundness from admissibility",
+      "invariant": "Admissibility does not establish strict soundness.",
+      "owner": "Task 6 semantic-operator owner",
+      "variants": [
+        {
+          "variant_id": "R7E-T14-A10-V01",
+          "mutation_id": "R7E-T14-A10-M01",
+          "neutral_concept": "SO-09 admissibility-as-strict-soundness",
+          "validator_owner": "Task 6 semantic-operator owner",
+          "validator_entry_point": "scripts/validate_semantic_operator_contract.py",
+          "control_evidence_selector": "direct-probe:R7E-T14-A10-V01:control",
+          "mutation_evidence_selector": "direct-probe:R7E-T14-A10-V01:mutation",
+          "control_command": [
+            "python",
+            "scripts/run_task14_probe.py",
+            "--attack-id",
+            "R7E-T14-A10",
+            "--variant-id",
+            "R7E-T14-A10-V01",
+            "--role",
+            "control"
+          ],
+          "mutation_command": [
+            "python",
+            "scripts/run_task14_probe.py",
+            "--attack-id",
+            "R7E-T14-A10",
+            "--variant-id",
+            "R7E-T14-A10-V01",
+            "--role",
+            "mutation"
+          ]
+        }
+      ]
+    },
+    {
+      "attack_id": "R7E-T14-A11",
+      "name": "tawātur by count/popularity",
+      "invariant": "Count and popularity cannot supply testimonial warrant.",
+      "owner": "Task 7 epistemology owner",
+      "variants": [
+        {
+          "variant_id": "R7E-T14-A11-V01",
+          "mutation_id": "R7E-T14-A11-M01",
+          "neutral_concept": "count-derived warrant",
+          "validator_owner": "Task 7 epistemology owner",
+          "validator_entry_point": "scripts/validate_memetic_ecology.py",
+          "control_evidence_selector": "direct-probe:R7E-T14-A11-V01:control",
+          "mutation_evidence_selector": "direct-probe:R7E-T14-A11-V01:mutation",
+          "control_command": [
+            "python",
+            "scripts/run_task14_probe.py",
+            "--attack-id",
+            "R7E-T14-A11",
+            "--variant-id",
+            "R7E-T14-A11-V01",
+            "--role",
+            "control"
+          ],
+          "mutation_command": [
+            "python",
+            "scripts/run_task14_probe.py",
+            "--attack-id",
+            "R7E-T14-A11",
+            "--variant-id",
+            "R7E-T14-A11-V01",
+            "--role",
+            "mutation"
+          ]
+        },
+        {
+          "variant_id": "R7E-T14-A11-V02",
+          "mutation_id": "R7E-T14-A11-M02",
+          "neutral_concept": "popularity-derived warrant",
+          "validator_owner": "Task 7 epistemology owner",
+          "validator_entry_point": "scripts/validate_memetic_ecology.py",
+          "control_evidence_selector": "direct-probe:R7E-T14-A11-V02:control",
+          "mutation_evidence_selector": "direct-probe:R7E-T14-A11-V02:mutation",
+          "control_command": [
+            "python",
+            "scripts/run_task14_probe.py",
+            "--attack-id",
+            "R7E-T14-A11",
+            "--variant-id",
+            "R7E-T14-A11-V02",
+            "--role",
+            "control"
+          ],
+          "mutation_command": [
+            "python",
+            "scripts/run_task14_probe.py",
+            "--attack-id",
+            "R7E-T14-A11",
+            "--variant-id",
+            "R7E-T14-A11-V02",
+            "--role",
+            "mutation"
+          ]
+        }
+      ]
+    },
+    {
+      "attack_id": "R7E-T14-A12",
+      "name": "fiṭrah coordinate",
+      "invariant": "Fiṭrah is not reified as a quantitative or interior coordinate.",
+      "owner": "Task 7 epistemology owner",
+      "variants": [
+        {
+          "variant_id": "R7E-T14-A12-V01",
+          "mutation_id": "R7E-T14-A12-M01",
+          "neutral_concept": "reified coordinate",
+          "validator_owner": "Task 7 epistemology owner",
+          "validator_entry_point": "scripts/validate_meta_noetic_memetics.py",
+          "control_evidence_selector": "direct-probe:R7E-T14-A12-V01:control",
+          "mutation_evidence_selector": "direct-probe:R7E-T14-A12-V01:mutation",
+          "control_command": [
+            "python",
+            "scripts/run_task14_probe.py",
+            "--attack-id",
+            "R7E-T14-A12",
+            "--variant-id",
+            "R7E-T14-A12-V01",
+            "--role",
+            "control"
+          ],
+          "mutation_command": [
+            "python",
+            "scripts/run_task14_probe.py",
+            "--attack-id",
+            "R7E-T14-A12",
+            "--variant-id",
+            "R7E-T14-A12-V01",
+            "--role",
+            "mutation"
+          ]
+        },
+        {
+          "variant_id": "R7E-T14-A12-V02",
+          "mutation_id": "R7E-T14-A12-M02",
+          "neutral_concept": "quantitative property",
+          "validator_owner": "Task 7 epistemology owner",
+          "validator_entry_point": "scripts/validate_meta_noetic_memetics.py",
+          "control_evidence_selector": "direct-probe:R7E-T14-A12-V02:control",
+          "mutation_evidence_selector": "direct-probe:R7E-T14-A12-V02:mutation",
+          "control_command": [
+            "python",
+            "scripts/run_task14_probe.py",
+            "--attack-id",
+            "R7E-T14-A12",
+            "--variant-id",
+            "R7E-T14-A12-V02",
+            "--role",
+            "control"
+          ],
+          "mutation_command": [
+            "python",
+            "scripts/run_task14_probe.py",
+            "--attack-id",
+            "R7E-T14-A12",
+            "--variant-id",
+            "R7E-T14-A12-V02",
+            "--role",
+            "mutation"
+          ]
+        }
+      ]
+    },
+    {
+      "attack_id": "R7E-T14-A13",
+      "name": "mental-to-external entailment",
+      "invariant": "Mental content alone does not entail an external conclusion.",
+      "owner": "Task 7 epistemology owner",
+      "variants": [
+        {
+          "variant_id": "R7E-T14-A13-V01",
+          "mutation_id": "R7E-T14-A13-M01",
+          "neutral_concept": "direct mental-to-external inference",
+          "validator_owner": "Task 7 epistemology owner",
+          "validator_entry_point": "scripts/validate_noetic_claims.py",
+          "control_evidence_selector": "direct-probe:R7E-T14-A13-V01:control",
+          "mutation_evidence_selector": "direct-probe:R7E-T14-A13-V01:mutation",
+          "control_command": [
+            "python",
+            "scripts/run_task14_probe.py",
+            "--attack-id",
+            "R7E-T14-A13",
+            "--variant-id",
+            "R7E-T14-A13-V01",
+            "--role",
+            "control"
+          ],
+          "mutation_command": [
+            "python",
+            "scripts/run_task14_probe.py",
+            "--attack-id",
+            "R7E-T14-A13",
+            "--variant-id",
+            "R7E-T14-A13-V01",
+            "--role",
+            "mutation"
+          ]
+        }
+      ]
+    },
+    {
+      "attack_id": "R7E-T14-A14",
+      "name": "OSM identity collapse",
+      "invariant": "OSM biological, population, posterior, profile, parameter, output, and geometry identities remain distinct.",
+      "owner": "Task 8 OSM owner",
+      "variants": [
+        {
+          "variant_id": "R7E-T14-A14-V01",
+          "mutation_id": "R7E-T14-A14-M01",
+          "neutral_concept": "OSM-T01",
+          "validator_owner": "Task 8 OSM owner",
+          "validator_entry_point": "scripts/validate_dynamic_orthing.py",
+          "control_evidence_selector": "direct-probe:R7E-T14-A14-V01:control",
+          "mutation_evidence_selector": "direct-probe:R7E-T14-A14-V01:mutation",
+          "control_command": [
+            "python",
+            "scripts/run_task14_probe.py",
+            "--attack-id",
+            "R7E-T14-A14",
+            "--variant-id",
+            "R7E-T14-A14-V01",
+            "--role",
+            "control"
+          ],
+          "mutation_command": [
+            "python",
+            "scripts/run_task14_probe.py",
+            "--attack-id",
+            "R7E-T14-A14",
+            "--variant-id",
+            "R7E-T14-A14-V01",
+            "--role",
+            "mutation"
+          ]
+        },
+        {
+          "variant_id": "R7E-T14-A14-V02",
+          "mutation_id": "R7E-T14-A14-M02",
+          "neutral_concept": "OSM-T02",
+          "validator_owner": "Task 8 OSM owner",
+          "validator_entry_point": "scripts/validate_dynamic_orthing.py",
+          "control_evidence_selector": "direct-probe:R7E-T14-A14-V02:control",
+          "mutation_evidence_selector": "direct-probe:R7E-T14-A14-V02:mutation",
+          "control_command": [
+            "python",
+            "scripts/run_task14_probe.py",
+            "--attack-id",
+            "R7E-T14-A14",
+            "--variant-id",
+            "R7E-T14-A14-V02",
+            "--role",
+            "control"
+          ],
+          "mutation_command": [
+            "python",
+            "scripts/run_task14_probe.py",
+            "--attack-id",
+            "R7E-T14-A14",
+            "--variant-id",
+            "R7E-T14-A14-V02",
+            "--role",
+            "mutation"
+          ]
+        },
+        {
+          "variant_id": "R7E-T14-A14-V03",
+          "mutation_id": "R7E-T14-A14-M03",
+          "neutral_concept": "OSM-T03",
+          "validator_owner": "Task 8 OSM owner",
+          "validator_entry_point": "scripts/validate_dynamic_orthing.py",
+          "control_evidence_selector": "direct-probe:R7E-T14-A14-V03:control",
+          "mutation_evidence_selector": "direct-probe:R7E-T14-A14-V03:mutation",
+          "control_command": [
+            "python",
+            "scripts/run_task14_probe.py",
+            "--attack-id",
+            "R7E-T14-A14",
+            "--variant-id",
+            "R7E-T14-A14-V03",
+            "--role",
+            "control"
+          ],
+          "mutation_command": [
+            "python",
+            "scripts/run_task14_probe.py",
+            "--attack-id",
+            "R7E-T14-A14",
+            "--variant-id",
+            "R7E-T14-A14-V03",
+            "--role",
+            "mutation"
+          ]
+        },
+        {
+          "variant_id": "R7E-T14-A14-V04",
+          "mutation_id": "R7E-T14-A14-M04",
+          "neutral_concept": "OSM-T04",
+          "validator_owner": "Task 8 OSM owner",
+          "validator_entry_point": "scripts/validate_dynamic_orthing.py",
+          "control_evidence_selector": "direct-probe:R7E-T14-A14-V04:control",
+          "mutation_evidence_selector": "direct-probe:R7E-T14-A14-V04:mutation",
+          "control_command": [
+            "python",
+            "scripts/run_task14_probe.py",
+            "--attack-id",
+            "R7E-T14-A14",
+            "--variant-id",
+            "R7E-T14-A14-V04",
+            "--role",
+            "control"
+          ],
+          "mutation_command": [
+            "python",
+            "scripts/run_task14_probe.py",
+            "--attack-id",
+            "R7E-T14-A14",
+            "--variant-id",
+            "R7E-T14-A14-V04",
+            "--role",
+            "mutation"
+          ]
+        },
+        {
+          "variant_id": "R7E-T14-A14-V05",
+          "mutation_id": "R7E-T14-A14-M05",
+          "neutral_concept": "OSM-T05",
+          "validator_owner": "Task 8 OSM owner",
+          "validator_entry_point": "scripts/validate_dynamic_orthing.py",
+          "control_evidence_selector": "direct-probe:R7E-T14-A14-V05:control",
+          "mutation_evidence_selector": "direct-probe:R7E-T14-A14-V05:mutation",
+          "control_command": [
+            "python",
+            "scripts/run_task14_probe.py",
+            "--attack-id",
+            "R7E-T14-A14",
+            "--variant-id",
+            "R7E-T14-A14-V05",
+            "--role",
+            "control"
+          ],
+          "mutation_command": [
+            "python",
+            "scripts/run_task14_probe.py",
+            "--attack-id",
+            "R7E-T14-A14",
+            "--variant-id",
+            "R7E-T14-A14-V05",
+            "--role",
+            "mutation"
+          ]
+        }
+      ]
+    },
+    {
+      "attack_id": "R7E-T14-A15",
+      "name": "argument-map contradiction",
+      "invariant": "Typed non-claim boundaries cannot be contradicted by argument-map prose.",
+      "owner": "Task 9 argument-map owner",
+      "variants": [
+        {
+          "variant_id": "R7E-T14-A15-V01",
+          "mutation_id": "R7E-T14-A15-M01",
+          "neutral_concept": "four direct typed non-claim contradictions",
+          "validator_owner": "Task 9 argument-map owner",
+          "validator_entry_point": "scripts/validate_argument_map.py",
+          "control_evidence_selector": "direct-probe:R7E-T14-A15-V01:control",
+          "mutation_evidence_selector": "direct-probe:R7E-T14-A15-V01:mutation",
+          "control_command": [
+            "python",
+            "scripts/run_task14_probe.py",
+            "--attack-id",
+            "R7E-T14-A15",
+            "--variant-id",
+            "R7E-T14-A15-V01",
+            "--role",
+            "control"
+          ],
+          "mutation_command": [
+            "python",
+            "scripts/run_task14_probe.py",
+            "--attack-id",
+            "R7E-T14-A15",
+            "--variant-id",
+            "R7E-T14-A15-V01",
+            "--role",
+            "mutation"
+          ]
+        }
+      ]
+    },
+    {
+      "attack_id": "R7E-T14-A16",
+      "name": "unsafe created wording",
+      "invariant": "Created-status wording stays bound to the correct Speech bearer.",
+      "owner": "Task 9 argument-map owner",
+      "variants": [
+        {
+          "variant_id": "R7E-T14-A16-V01",
+          "mutation_id": "R7E-T14-A16-M01",
+          "neutral_concept": "revealed wording marked created",
+          "validator_owner": "Task 9 argument-map owner",
+          "validator_entry_point": "scripts/validate_argument_map.py",
+          "control_evidence_selector": "direct-probe:R7E-T14-A16-V01:control",
+          "mutation_evidence_selector": "direct-probe:R7E-T14-A16-V01:mutation",
+          "control_command": [
+            "python",
+            "scripts/run_task14_probe.py",
+            "--attack-id",
+            "R7E-T14-A16",
+            "--variant-id",
+            "R7E-T14-A16-V01",
+            "--role",
+            "control"
+          ],
+          "mutation_command": [
+            "python",
+            "scripts/run_task14_probe.py",
+            "--attack-id",
+            "R7E-T14-A16",
+            "--variant-id",
+            "R7E-T14-A16-V01",
+            "--role",
+            "mutation"
+          ]
+        },
+        {
+          "variant_id": "R7E-T14-A16-V02",
+          "mutation_id": "R7E-T14-A16-M02",
+          "neutral_concept": "created bearer marked uncreated",
+          "validator_owner": "Task 9 argument-map owner",
+          "validator_entry_point": "scripts/validate_argument_map.py",
+          "control_evidence_selector": "direct-probe:R7E-T14-A16-V02:control",
+          "mutation_evidence_selector": "direct-probe:R7E-T14-A16-V02:mutation",
+          "control_command": [
+            "python",
+            "scripts/run_task14_probe.py",
+            "--attack-id",
+            "R7E-T14-A16",
+            "--variant-id",
+            "R7E-T14-A16-V02",
+            "--role",
+            "control"
+          ],
+          "mutation_command": [
+            "python",
+            "scripts/run_task14_probe.py",
+            "--attack-id",
+            "R7E-T14-A16",
+            "--variant-id",
+            "R7E-T14-A16-V02",
+            "--role",
+            "mutation"
+          ]
+        }
+      ]
+    },
+    {
+      "attack_id": "R7E-T14-A17",
+      "name": "witness overclaim",
+      "invariant": "Bounded witness evidence cannot be promoted into unsupported correctness, history, or runtime claims.",
+      "owner": "Task 5 witness owner",
+      "variants": [
+        {
+          "variant_id": "R7E-T14-A17-V01",
+          "mutation_id": "R7E-T14-A17-M01",
+          "neutral_concept": "claim-boundary promotions",
+          "validator_owner": "Task 5 witness owner",
+          "validator_entry_point": "scripts/validate_r7e_llm_witness.py",
+          "control_evidence_selector": "direct-probe:R7E-T14-A17-V01:control",
+          "mutation_evidence_selector": "direct-probe:R7E-T14-A17-V01:mutation",
+          "control_command": [
+            "python",
+            "scripts/run_task14_probe.py",
+            "--attack-id",
+            "R7E-T14-A17",
+            "--variant-id",
+            "R7E-T14-A17-V01",
+            "--role",
+            "control"
+          ],
+          "mutation_command": [
+            "python",
+            "scripts/run_task14_probe.py",
+            "--attack-id",
+            "R7E-T14-A17",
+            "--variant-id",
+            "R7E-T14-A17-V01",
+            "--role",
+            "mutation"
+          ]
+        },
+        {
+          "variant_id": "R7E-T14-A17-V02",
+          "mutation_id": "R7E-T14-A17-M02",
+          "neutral_concept": "runtime deployment promotion",
+          "validator_owner": "Task 5 witness owner",
+          "validator_entry_point": "scripts/validate_r7e_llm_witness.py",
+          "control_evidence_selector": "direct-probe:R7E-T14-A17-V02:control",
+          "mutation_evidence_selector": "direct-probe:R7E-T14-A17-V02:mutation",
+          "control_command": [
+            "python",
+            "scripts/run_task14_probe.py",
+            "--attack-id",
+            "R7E-T14-A17",
+            "--variant-id",
+            "R7E-T14-A17-V02",
+            "--role",
+            "control"
+          ],
+          "mutation_command": [
+            "python",
+            "scripts/run_task14_probe.py",
+            "--attack-id",
+            "R7E-T14-A17",
+            "--variant-id",
+            "R7E-T14-A17-V02",
+            "--role",
+            "mutation"
+          ]
+        },
+        {
+          "variant_id": "R7E-T14-A17-V03",
+          "mutation_id": "R7E-T14-A17-M03",
+          "neutral_concept": "historical fact promotion",
+          "validator_owner": "Task 5 witness owner",
+          "validator_entry_point": "scripts/validate_r7e_llm_witness.py",
+          "control_evidence_selector": "direct-probe:R7E-T14-A17-V03:control",
+          "mutation_evidence_selector": "direct-probe:R7E-T14-A17-V03:mutation",
+          "control_command": [
+            "python",
+            "scripts/run_task14_probe.py",
+            "--attack-id",
+            "R7E-T14-A17",
+            "--variant-id",
+            "R7E-T14-A17-V03",
+            "--role",
+            "control"
+          ],
+          "mutation_command": [
+            "python",
+            "scripts/run_task14_probe.py",
+            "--attack-id",
+            "R7E-T14-A17",
+            "--variant-id",
+            "R7E-T14-A17-V03",
+            "--role",
+            "mutation"
+          ]
+        }
+      ]
+    },
+    {
+      "attack_id": "R7E-T14-A18",
+      "name": "unapproved formula spans",
+      "invariant": "Formula-bearing spans require exact approved inventory identity.",
+      "owner": "Task 12 source-math owner",
+      "variants": [
+        {
+          "variant_id": "R7E-T14-A18-V01",
+          "mutation_id": "R7E-T14-A18-M01",
+          "neutral_concept": "formula-bearing diagnostic mutations",
+          "validator_owner": "Task 12 source-math owner",
+          "validator_entry_point": "scripts/validate_math_source.py",
+          "control_evidence_selector": "direct-probe:R7E-T14-A18-V01:control",
+          "mutation_evidence_selector": "direct-probe:R7E-T14-A18-V01:mutation",
+          "control_command": [
+            "python",
+            "scripts/run_task14_probe.py",
+            "--attack-id",
+            "R7E-T14-A18",
+            "--variant-id",
+            "R7E-T14-A18-V01",
+            "--role",
+            "control"
+          ],
+          "mutation_command": [
+            "python",
+            "scripts/run_task14_probe.py",
+            "--attack-id",
+            "R7E-T14-A18",
+            "--variant-id",
+            "R7E-T14-A18-V01",
+            "--role",
+            "mutation"
+          ]
+        }
+      ]
+    },
+    {
+      "attack_id": "R7E-T14-A19",
+      "name": "historical-record overwrite",
+      "invariant": "Historical target records are append-only.",
+      "owner": "Task 4 episode semantics owner",
+      "variants": [
+        {
+          "variant_id": "R7E-T14-A19-V01",
+          "mutation_id": "R7E-T14-A19-M01",
+          "neutral_concept": "target-history overwrite",
+          "validator_owner": "Task 4 episode semantics owner",
+          "validator_entry_point": "scripts/validate_somnic_orthing.py",
+          "control_evidence_selector": "direct-probe:R7E-T14-A19-V01:control",
+          "mutation_evidence_selector": "direct-probe:R7E-T14-A19-V01:mutation",
+          "control_command": [
+            "python",
+            "scripts/run_task14_probe.py",
+            "--attack-id",
+            "R7E-T14-A19",
+            "--variant-id",
+            "R7E-T14-A19-V01",
+            "--role",
+            "control"
+          ],
+          "mutation_command": [
+            "python",
+            "scripts/run_task14_probe.py",
+            "--attack-id",
+            "R7E-T14-A19",
+            "--variant-id",
+            "R7E-T14-A19-V01",
+            "--role",
+            "mutation"
+          ]
+        }
+      ]
+    },
+    {
+      "attack_id": "R7E-T14-A20",
+      "name": "collapsed identity levels",
+      "invariant": "Session, episode, occurrence, and orthing identities remain distinct.",
+      "owner": "Task 4 episode semantics owner",
+      "variants": [
+        {
+          "variant_id": "R7E-T14-A20-V01",
+          "mutation_id": "R7E-T14-A20-M01",
+          "neutral_concept": "collapsed session/episode/occurrence/orthing IDs",
+          "validator_owner": "Task 4 episode semantics owner",
+          "validator_entry_point": "scripts/validate_somnic_orthing.py",
+          "control_evidence_selector": "direct-probe:R7E-T14-A20-V01:control",
+          "mutation_evidence_selector": "direct-probe:R7E-T14-A20-V01:mutation",
+          "control_command": [
+            "python",
+            "scripts/run_task14_probe.py",
+            "--attack-id",
+            "R7E-T14-A20",
+            "--variant-id",
+            "R7E-T14-A20-V01",
+            "--role",
+            "control"
+          ],
+          "mutation_command": [
+            "python",
+            "scripts/run_task14_probe.py",
+            "--attack-id",
+            "R7E-T14-A20",
+            "--variant-id",
+            "R7E-T14-A20-V01",
+            "--role",
+            "mutation"
+          ]
+        }
+      ]
+    },
+    {
+      "attack_id": "R7E-T14-A21",
+      "name": "missing activation/evaluator version",
+      "invariant": "Activation and evaluator decisions are version-bound.",
+      "owner": "Task 4 episode semantics owner",
+      "variants": [
+        {
+          "variant_id": "R7E-T14-A21-V01",
+          "mutation_id": "R7E-T14-A21-M01",
+          "neutral_concept": "missing evaluator version",
+          "validator_owner": "Task 4 episode semantics owner",
+          "validator_entry_point": "scripts/validate_somnic_orthing.py",
+          "control_evidence_selector": "direct-probe:R7E-T14-A21-V01:control",
+          "mutation_evidence_selector": "direct-probe:R7E-T14-A21-V01:mutation",
+          "control_command": [
+            "python",
+            "scripts/run_task14_probe.py",
+            "--attack-id",
+            "R7E-T14-A21",
+            "--variant-id",
+            "R7E-T14-A21-V01",
+            "--role",
+            "control"
+          ],
+          "mutation_command": [
+            "python",
+            "scripts/run_task14_probe.py",
+            "--attack-id",
+            "R7E-T14-A21",
+            "--variant-id",
+            "R7E-T14-A21-V01",
+            "--role",
+            "mutation"
+          ]
+        },
+        {
+          "variant_id": "R7E-T14-A21-V02",
+          "mutation_id": "R7E-T14-A21-M02",
+          "neutral_concept": "missing activation contract version",
+          "validator_owner": "Task 4 episode semantics owner",
+          "validator_entry_point": "scripts/validate_somnic_orthing.py",
+          "control_evidence_selector": "direct-probe:R7E-T14-A21-V02:control",
+          "mutation_evidence_selector": "direct-probe:R7E-T14-A21-V02:mutation",
+          "control_command": [
+            "python",
+            "scripts/run_task14_probe.py",
+            "--attack-id",
+            "R7E-T14-A21",
+            "--variant-id",
+            "R7E-T14-A21-V02",
+            "--role",
+            "control"
+          ],
+          "mutation_command": [
+            "python",
+            "scripts/run_task14_probe.py",
+            "--attack-id",
+            "R7E-T14-A21",
+            "--variant-id",
+            "R7E-T14-A21-V02",
+            "--role",
+            "mutation"
+          ]
+        }
+      ]
+    },
+    {
+      "attack_id": "R7E-T14-A22",
+      "name": "indicator-only applicability",
+      "invariant": "Indicators alone cannot establish contract applicability.",
+      "owner": "Task 4 episode semantics owner",
+      "variants": [
+        {
+          "variant_id": "R7E-T14-A22-V01",
+          "mutation_id": "R7E-T14-A22-M01",
+          "neutral_concept": "keyword-only applicability",
+          "validator_owner": "Task 4 episode semantics owner",
+          "validator_entry_point": "scripts/validate_somnic_orthing.py",
+          "control_evidence_selector": "direct-probe:R7E-T14-A22-V01:control",
+          "mutation_evidence_selector": "direct-probe:R7E-T14-A22-V01:mutation",
+          "control_command": [
+            "python",
+            "scripts/run_task14_probe.py",
+            "--attack-id",
+            "R7E-T14-A22",
+            "--variant-id",
+            "R7E-T14-A22-V01",
+            "--role",
+            "control"
+          ],
+          "mutation_command": [
+            "python",
+            "scripts/run_task14_probe.py",
+            "--attack-id",
+            "R7E-T14-A22",
+            "--variant-id",
+            "R7E-T14-A22-V01",
+            "--role",
+            "mutation"
+          ]
+        }
+      ]
+    },
+    {
+      "attack_id": "R7E-T14-A23",
+      "name": "binary-only evaluation",
+      "invariant": "Evaluation preserves the indeterminate state.",
+      "owner": "Task 4 episode semantics owner",
+      "variants": [
+        {
+          "variant_id": "R7E-T14-A23-V01",
+          "mutation_id": "R7E-T14-A23-M01",
+          "neutral_concept": "binary-only evaluator vocabulary",
+          "validator_owner": "Task 4 episode semantics owner",
+          "validator_entry_point": "scripts/validate_somnic_orthing.py",
+          "control_evidence_selector": "direct-probe:R7E-T14-A23-V01:control",
+          "mutation_evidence_selector": "direct-probe:R7E-T14-A23-V01:mutation",
+          "control_command": [
+            "python",
+            "scripts/run_task14_probe.py",
+            "--attack-id",
+            "R7E-T14-A23",
+            "--variant-id",
+            "R7E-T14-A23-V01",
+            "--role",
+            "control"
+          ],
+          "mutation_command": [
+            "python",
+            "scripts/run_task14_probe.py",
+            "--attack-id",
+            "R7E-T14-A23",
+            "--variant-id",
+            "R7E-T14-A23-V01",
+            "--role",
+            "mutation"
+          ]
+        }
+      ]
+    },
+    {
+      "attack_id": "R7E-T14-A24",
+      "name": "later evidence relabeled as `t1`",
+      "invariant": "Later evidence cannot be relabeled as evidence available at t1.",
+      "owner": "Task 4 episode semantics owner",
+      "variants": [
+        {
+          "variant_id": "R7E-T14-A24-V01",
+          "mutation_id": "R7E-T14-A24-M01",
+          "neutral_concept": "later evidence moved into observed_at_t1",
+          "validator_owner": "Task 4 episode semantics owner",
+          "validator_entry_point": "scripts/validate_somnic_orthing.py",
+          "control_evidence_selector": "direct-probe:R7E-T14-A24-V01:control",
+          "mutation_evidence_selector": "direct-probe:R7E-T14-A24-V01:mutation",
+          "control_command": [
+            "python",
+            "scripts/run_task14_probe.py",
+            "--attack-id",
+            "R7E-T14-A24",
+            "--variant-id",
+            "R7E-T14-A24-V01",
+            "--role",
+            "control"
+          ],
+          "mutation_command": [
+            "python",
+            "scripts/run_task14_probe.py",
+            "--attack-id",
+            "R7E-T14-A24",
+            "--variant-id",
+            "R7E-T14-A24-V01",
+            "--role",
+            "mutation"
+          ]
+        }
+      ]
+    },
+    {
+      "attack_id": "R7E-T14-A25",
+      "name": "false live capture",
+      "invariant": "Retrospective reconstruction cannot be represented as live capture.",
+      "owner": "Task 4 episode semantics owner",
+      "variants": [
+        {
+          "variant_id": "R7E-T14-A25-V01",
+          "mutation_id": "R7E-T14-A25-M01",
+          "neutral_concept": "retrospective event relabeled live",
+          "validator_owner": "Task 4 episode semantics owner",
+          "validator_entry_point": "scripts/validate_somnic_orthing.py",
+          "control_evidence_selector": "direct-probe:R7E-T14-A25-V01:control",
+          "mutation_evidence_selector": "direct-probe:R7E-T14-A25-V01:mutation",
+          "control_command": [
+            "python",
+            "scripts/run_task14_probe.py",
+            "--attack-id",
+            "R7E-T14-A25",
+            "--variant-id",
+            "R7E-T14-A25-V01",
+            "--role",
+            "control"
+          ],
+          "mutation_command": [
+            "python",
+            "scripts/run_task14_probe.py",
+            "--attack-id",
+            "R7E-T14-A25",
+            "--variant-id",
+            "R7E-T14-A25-V01",
+            "--role",
+            "mutation"
+          ]
+        }
+      ]
+    },
+    {
+      "attack_id": "R7E-T14-A26",
+      "name": "unfixture-tested accepted contract",
+      "invariant": "Accepted contracts retain their fixture outcomes.",
+      "owner": "Task 4 episode semantics owner",
+      "variants": [
+        {
+          "variant_id": "R7E-T14-A26-V01",
+          "mutation_id": "R7E-T14-A26-M01",
+          "neutral_concept": "accepted contract with empty fixture outcomes",
+          "validator_owner": "Task 4 episode semantics owner",
+          "validator_entry_point": "scripts/validate_somnic_orthing.py",
+          "control_evidence_selector": "direct-probe:R7E-T14-A26-V01:control",
+          "mutation_evidence_selector": "direct-probe:R7E-T14-A26-V01:mutation",
+          "control_command": [
+            "python",
+            "scripts/run_task14_probe.py",
+            "--attack-id",
+            "R7E-T14-A26",
+            "--variant-id",
+            "R7E-T14-A26-V01",
+            "--role",
+            "control"
+          ],
+          "mutation_command": [
+            "python",
+            "scripts/run_task14_probe.py",
+            "--attack-id",
+            "R7E-T14-A26",
+            "--variant-id",
+            "R7E-T14-A26-V01",
+            "--role",
+            "mutation"
+          ]
+        }
+      ]
+    },
+    {
+      "attack_id": "R7E-T14-A27",
+      "name": "missing authoring orthing",
+      "invariant": "Normal authorship identifies its authoring orthing.",
+      "owner": "Task 4 episode semantics owner",
+      "variants": [
+        {
+          "variant_id": "R7E-T14-A27-V01",
+          "mutation_id": "R7E-T14-A27-M01",
+          "neutral_concept": "normal authorship without orthing identity",
+          "validator_owner": "Task 4 episode semantics owner",
+          "validator_entry_point": "scripts/validate_somnic_orthing.py",
+          "control_evidence_selector": "direct-probe:R7E-T14-A27-V01:control",
+          "mutation_evidence_selector": "direct-probe:R7E-T14-A27-V01:mutation",
+          "control_command": [
+            "python",
+            "scripts/run_task14_probe.py",
+            "--attack-id",
+            "R7E-T14-A27",
+            "--variant-id",
+            "R7E-T14-A27-V01",
+            "--role",
+            "control"
+          ],
+          "mutation_command": [
+            "python",
+            "scripts/run_task14_probe.py",
+            "--attack-id",
+            "R7E-T14-A27",
+            "--variant-id",
+            "R7E-T14-A27-V01",
+            "--role",
+            "mutation"
+          ]
+        }
+      ]
+    },
+    {
+      "attack_id": "R7E-T14-A28",
+      "name": "retroactive conformity rewrite",
+      "invariant": "Later revision cannot rewrite historical conformity.",
+      "owner": "Task 4 episode semantics owner",
+      "variants": [
+        {
+          "variant_id": "R7E-T14-A28-V01",
+          "mutation_id": "R7E-T14-A28-M01",
+          "neutral_concept": "retroactive conformity rewrite flag",
+          "validator_owner": "Task 4 episode semantics owner",
+          "validator_entry_point": "scripts/validate_somnic_orthing.py",
+          "control_evidence_selector": "direct-probe:R7E-T14-A28-V01:control",
+          "mutation_evidence_selector": "direct-probe:R7E-T14-A28-V01:mutation",
+          "control_command": [
+            "python",
+            "scripts/run_task14_probe.py",
+            "--attack-id",
+            "R7E-T14-A28",
+            "--variant-id",
+            "R7E-T14-A28-V01",
+            "--role",
+            "control"
+          ],
+          "mutation_command": [
+            "python",
+            "scripts/run_task14_probe.py",
+            "--attack-id",
+            "R7E-T14-A28",
+            "--variant-id",
+            "R7E-T14-A28-V01",
+            "--role",
+            "mutation"
+          ]
+        }
+      ]
+    },
+    {
+      "attack_id": "R7E-T14-A29",
+      "name": "delta-free reopen",
+      "invariant": "Reopening a closed assessment requires a material delta.",
+      "owner": "Task 4 episode semantics owner",
+      "variants": [
+        {
+          "variant_id": "R7E-T14-A29-V01",
+          "mutation_id": "R7E-T14-A29-M01",
+          "neutral_concept": "reopen with empty material-delta IDs",
+          "validator_owner": "Task 4 episode semantics owner",
+          "validator_entry_point": "scripts/validate_somnic_orthing.py",
+          "control_evidence_selector": "direct-probe:R7E-T14-A29-V01:control",
+          "mutation_evidence_selector": "direct-probe:R7E-T14-A29-V01:mutation",
+          "control_command": [
+            "python",
+            "scripts/run_task14_probe.py",
+            "--attack-id",
+            "R7E-T14-A29",
+            "--variant-id",
+            "R7E-T14-A29-V01",
+            "--role",
+            "control"
+          ],
+          "mutation_command": [
+            "python",
+            "scripts/run_task14_probe.py",
+            "--attack-id",
+            "R7E-T14-A29",
+            "--variant-id",
+            "R7E-T14-A29-V01",
+            "--role",
+            "mutation"
+          ]
+        }
+      ]
+    },
+    {
+      "attack_id": "R7E-T14-A30",
+      "name": "duplicate idempotency output",
+      "invariant": "The same idempotency input cannot produce a different output.",
+      "owner": "Task 4 episode semantics owner",
+      "variants": [
+        {
+          "variant_id": "R7E-T14-A30-V01",
+          "mutation_id": "R7E-T14-A30-M01",
+          "neutral_concept": "duplicate idempotency key with non-equivalent output",
+          "validator_owner": "Task 4 episode semantics owner",
+          "validator_entry_point": "scripts/validate_somnic_orthing.py",
+          "control_evidence_selector": "direct-probe:R7E-T14-A30-V01:control",
+          "mutation_evidence_selector": "direct-probe:R7E-T14-A30-V01:mutation",
+          "control_command": [
+            "python",
+            "scripts/run_task14_probe.py",
+            "--attack-id",
+            "R7E-T14-A30",
+            "--variant-id",
+            "R7E-T14-A30-V01",
+            "--role",
+            "control"
+          ],
+          "mutation_command": [
+            "python",
+            "scripts/run_task14_probe.py",
+            "--attack-id",
+            "R7E-T14-A30",
+            "--variant-id",
+            "R7E-T14-A30-V01",
+            "--role",
+            "mutation"
+          ]
+        }
+      ]
+    },
+    {
+      "attack_id": "R7E-T14-A31",
+      "name": "copy-inflated recurrence",
+      "invariant": "Copied support cannot inflate recurrence.",
+      "owner": "Task 4 episode semantics owner",
+      "variants": [
+        {
+          "variant_id": "R7E-T14-A31-V01",
+          "mutation_id": "R7E-T14-A31-M01",
+          "neutral_concept": "duplicate supporting occurrences with inflated count",
+          "validator_owner": "Task 4 episode semantics owner",
+          "validator_entry_point": "scripts/validate_somnic_orthing.py",
+          "control_evidence_selector": "direct-probe:R7E-T14-A31-V01:control",
+          "mutation_evidence_selector": "direct-probe:R7E-T14-A31-V01:mutation",
+          "control_command": [
+            "python",
+            "scripts/run_task14_probe.py",
+            "--attack-id",
+            "R7E-T14-A31",
+            "--variant-id",
+            "R7E-T14-A31-V01",
+            "--role",
+            "control"
+          ],
+          "mutation_command": [
+            "python",
+            "scripts/run_task14_probe.py",
+            "--attack-id",
+            "R7E-T14-A31",
+            "--variant-id",
+            "R7E-T14-A31-V01",
+            "--role",
+            "mutation"
+          ]
+        }
+      ]
+    },
+    {
+      "attack_id": "R7E-T14-A32",
+      "name": "threshold-as-proof",
+      "invariant": "A recurrence threshold is a review trigger, not proof.",
+      "owner": "Task 4 episode semantics owner",
+      "variants": [
+        {
+          "variant_id": "R7E-T14-A32-V01",
+          "mutation_id": "R7E-T14-A32-M01",
+          "neutral_concept": "threshold promoted to systemic-defect proof",
+          "validator_owner": "Task 4 episode semantics owner",
+          "validator_entry_point": "scripts/validate_somnic_orthing.py",
+          "control_evidence_selector": "direct-probe:R7E-T14-A32-V01:control",
+          "mutation_evidence_selector": "direct-probe:R7E-T14-A32-V01:mutation",
+          "control_command": [
+            "python",
+            "scripts/run_task14_probe.py",
+            "--attack-id",
+            "R7E-T14-A32",
+            "--variant-id",
+            "R7E-T14-A32-V01",
+            "--role",
+            "control"
+          ],
+          "mutation_command": [
+            "python",
+            "scripts/run_task14_probe.py",
+            "--attack-id",
+            "R7E-T14-A32",
+            "--variant-id",
+            "R7E-T14-A32-V01",
+            "--role",
+            "mutation"
+          ]
+        }
+      ]
+    },
+    {
+      "attack_id": "R7E-T14-A33",
+      "name": "v0 automatic mutation",
+      "invariant": "The v0 profile cannot emit automatic mutation.",
+      "owner": "Task 4 episode semantics owner",
+      "variants": [
+        {
+          "variant_id": "R7E-T14-A33-V01",
+          "mutation_id": "R7E-T14-A33-M01",
+          "neutral_concept": "automatic patch emitted by v0",
+          "validator_owner": "Task 4 episode semantics owner",
+          "validator_entry_point": "scripts/validate_somnic_orthing.py",
+          "control_evidence_selector": "direct-probe:R7E-T14-A33-V01:control",
+          "mutation_evidence_selector": "direct-probe:R7E-T14-A33-V01:mutation",
+          "control_command": [
+            "python",
+            "scripts/run_task14_probe.py",
+            "--attack-id",
+            "R7E-T14-A33",
+            "--variant-id",
+            "R7E-T14-A33-V01",
+            "--role",
+            "control"
+          ],
+          "mutation_command": [
+            "python",
+            "scripts/run_task14_probe.py",
+            "--attack-id",
+            "R7E-T14-A33",
+            "--variant-id",
+            "R7E-T14-A33-V01",
+            "--role",
+            "mutation"
+          ]
+        }
+      ]
+    },
+    {
+      "attack_id": "R7E-T14-A34",
+      "name": "placement-as-authorization",
+      "invariant": "Placement does not authorize mutation.",
+      "owner": "Task 4 episode semantics owner",
+      "variants": [
+        {
+          "variant_id": "R7E-T14-A34-V01",
+          "mutation_id": "R7E-T14-A34-M01",
+          "neutral_concept": "provisional placement used as authorization source",
+          "validator_owner": "Task 4 episode semantics owner",
+          "validator_entry_point": "scripts/validate_somnic_orthing.py",
+          "control_evidence_selector": "direct-probe:R7E-T14-A34-V01:control",
+          "mutation_evidence_selector": "direct-probe:R7E-T14-A34-V01:mutation",
+          "control_command": [
+            "python",
+            "scripts/run_task14_probe.py",
+            "--attack-id",
+            "R7E-T14-A34",
+            "--variant-id",
+            "R7E-T14-A34-V01",
+            "--role",
+            "control"
+          ],
+          "mutation_command": [
+            "python",
+            "scripts/run_task14_probe.py",
+            "--attack-id",
+            "R7E-T14-A34",
+            "--variant-id",
+            "R7E-T14-A34-V01",
+            "--role",
+            "mutation"
+          ]
+        }
+      ]
+    },
+    {
+      "attack_id": "R7E-T14-A35",
+      "name": "outline-as-runtime",
+      "invariant": "An outline-only candidate cannot be represented as implemented or deployed.",
+      "owner": "Task 4 episode semantics owner",
+      "variants": [
+        {
+          "variant_id": "R7E-T14-A35-V01",
+          "mutation_id": "R7E-T14-A35-M01",
+          "neutral_concept": "outline candidate status implemented/deployed",
+          "validator_owner": "Task 4 episode semantics owner",
+          "validator_entry_point": "scripts/validate_somnic_orthing.py",
+          "control_evidence_selector": "direct-probe:R7E-T14-A35-V01:control",
+          "mutation_evidence_selector": "direct-probe:R7E-T14-A35-V01:mutation",
+          "control_command": [
+            "python",
+            "scripts/run_task14_probe.py",
+            "--attack-id",
+            "R7E-T14-A35",
+            "--variant-id",
+            "R7E-T14-A35-V01",
+            "--role",
+            "control"
+          ],
+          "mutation_command": [
+            "python",
+            "scripts/run_task14_probe.py",
+            "--attack-id",
+            "R7E-T14-A35",
+            "--variant-id",
+            "R7E-T14-A35-V01",
+            "--role",
+            "mutation"
+          ]
+        }
+      ]
+    },
+    {
+      "attack_id": "R7E-T14-A36",
+      "name": "turn-as-orthing",
+      "invariant": "A conversational turn is not automatically an orthing identity.",
+      "owner": "Task 5 provenance owner",
+      "variants": [
+        {
+          "variant_id": "R7E-T14-A36-V01",
+          "mutation_id": "R7E-T14-A36-M01",
+          "neutral_concept": "R7E-PROV-B001-IDENTITY-COLLAPSE",
+          "validator_owner": "Task 5 provenance owner",
+          "validator_entry_point": "scripts/validate_candidate_provenance.py",
+          "control_evidence_selector": "direct-probe:R7E-T14-A36-V01:control",
+          "mutation_evidence_selector": "direct-probe:R7E-T14-A36-V01:mutation",
+          "control_command": [
+            "python",
+            "scripts/run_task14_probe.py",
+            "--attack-id",
+            "R7E-T14-A36",
+            "--variant-id",
+            "R7E-T14-A36-V01",
+            "--role",
+            "control"
+          ],
+          "mutation_command": [
+            "python",
+            "scripts/run_task14_probe.py",
+            "--attack-id",
+            "R7E-T14-A36",
+            "--variant-id",
+            "R7E-T14-A36-V01",
+            "--role",
+            "mutation"
+          ]
+        }
+      ]
+    },
+    {
+      "attack_id": "R7E-T14-A37",
+      "name": "gate-before-capture",
+      "invariant": "A claimant gate cannot precede capture of its occurrence.",
+      "owner": "Task 4 episode semantics owner",
+      "variants": [
+        {
+          "variant_id": "R7E-T14-A37-V01",
+          "mutation_id": "R7E-T14-A37-M01",
+          "neutral_concept": "claimant gate sequence swapped before capture",
+          "validator_owner": "Task 4 episode semantics owner",
+          "validator_entry_point": "scripts/validate_somnic_orthing.py",
+          "control_evidence_selector": "direct-probe:R7E-T14-A37-V01:control",
+          "mutation_evidence_selector": "direct-probe:R7E-T14-A37-V01:mutation",
+          "control_command": [
+            "python",
+            "scripts/run_task14_probe.py",
+            "--attack-id",
+            "R7E-T14-A37",
+            "--variant-id",
+            "R7E-T14-A37-V01",
+            "--role",
+            "control"
+          ],
+          "mutation_command": [
+            "python",
+            "scripts/run_task14_probe.py",
+            "--attack-id",
+            "R7E-T14-A37",
+            "--variant-id",
+            "R7E-T14-A37-V01",
+            "--role",
+            "mutation"
+          ]
+        }
+      ]
+    },
+    {
+      "attack_id": "R7E-T14-A38",
+      "name": "claimant indeterminacy promoted to episode irresolution",
+      "invariant": "One indeterminate claimant does not force episode-level irresolution when another claimant applies.",
+      "owner": "Task 4 episode semantics owner",
+      "variants": [
+        {
+          "variant_id": "R7E-T14-A38-V01",
+          "mutation_id": "R7E-T14-A38-M01",
+          "neutral_concept": "capture-04 indeterminate claimant selected",
+          "validator_owner": "Task 4 episode semantics owner",
+          "validator_entry_point": "scripts/validate_somnic_orthing.py",
+          "control_evidence_selector": "direct-probe:R7E-T14-A38-V01:control",
+          "mutation_evidence_selector": "direct-probe:R7E-T14-A38-V01:mutation",
+          "control_command": [
+            "python",
+            "scripts/run_task14_probe.py",
+            "--attack-id",
+            "R7E-T14-A38",
+            "--variant-id",
+            "R7E-T14-A38-V01",
+            "--role",
+            "control"
+          ],
+          "mutation_command": [
+            "python",
+            "scripts/run_task14_probe.py",
+            "--attack-id",
+            "R7E-T14-A38",
+            "--variant-id",
+            "R7E-T14-A38-V01",
+            "--role",
+            "mutation"
+          ]
+        }
+      ]
+    },
+    {
+      "attack_id": "R7E-T14-A39",
+      "name": "frontier/reference-corpus collapse",
+      "invariant": "Frontier anchors remain distinct from the historical comparator corpus.",
+      "owner": "Task 4 episode semantics owner",
+      "variants": [
+        {
+          "variant_id": "R7E-T14-A39-V01",
+          "mutation_id": "R7E-T14-A39-M01",
+          "neutral_concept": "frontier-01 anchor/comparator overlap",
+          "validator_owner": "Task 4 episode semantics owner",
+          "validator_entry_point": "scripts/validate_somnic_orthing.py",
+          "control_evidence_selector": "direct-probe:R7E-T14-A39-V01:control",
+          "mutation_evidence_selector": "direct-probe:R7E-T14-A39-V01:mutation",
+          "control_command": [
+            "python",
+            "scripts/run_task14_probe.py",
+            "--attack-id",
+            "R7E-T14-A39",
+            "--variant-id",
+            "R7E-T14-A39-V01",
+            "--role",
+            "control"
+          ],
+          "mutation_command": [
+            "python",
+            "scripts/run_task14_probe.py",
+            "--attack-id",
+            "R7E-T14-A39",
+            "--variant-id",
+            "R7E-T14-A39-V01",
+            "--role",
+            "mutation"
+          ]
+        }
+      ]
+    },
+    {
+      "attack_id": "R7E-T14-A40",
+      "name": "comparator auto-reopen",
+      "invariant": "Historical comparators are not automatically reopened.",
+      "owner": "Task 4 episode semantics owner",
+      "variants": [
+        {
+          "variant_id": "R7E-T14-A40-V01",
+          "mutation_id": "R7E-T14-A40-M01",
+          "neutral_concept": "output-04 false comparator reopened assertion",
+          "validator_owner": "Task 4 episode semantics owner",
+          "validator_entry_point": "scripts/validate_somnic_orthing.py",
+          "control_evidence_selector": "direct-probe:R7E-T14-A40-V01:control",
+          "mutation_evidence_selector": "direct-probe:R7E-T14-A40-V01:mutation",
+          "control_command": [
+            "python",
+            "scripts/run_task14_probe.py",
+            "--attack-id",
+            "R7E-T14-A40",
+            "--variant-id",
+            "R7E-T14-A40-V01",
+            "--role",
+            "control"
+          ],
+          "mutation_command": [
+            "python",
+            "scripts/run_task14_probe.py",
+            "--attack-id",
+            "R7E-T14-A40",
+            "--variant-id",
+            "R7E-T14-A40-V01",
+            "--role",
+            "mutation"
+          ]
+        }
+      ]
+    },
+    {
+      "attack_id": "R7E-T14-A41",
+      "name": "closed-assessment auto-requeue",
+      "invariant": "Closed assessments cannot auto-requeue without a governed reopening condition.",
+      "owner": "Task 4 episode semantics owner",
+      "variants": [
+        {
+          "variant_id": "R7E-T14-A41-V01",
+          "mutation_id": "R7E-T14-A41-M01",
+          "neutral_concept": "closed assessment auto_requeue true",
+          "validator_owner": "Task 4 episode semantics owner",
+          "validator_entry_point": "scripts/validate_somnic_orthing.py",
+          "control_evidence_selector": "direct-probe:R7E-T14-A41-V01:control",
+          "mutation_evidence_selector": "direct-probe:R7E-T14-A41-V01:mutation",
+          "control_command": [
+            "python",
+            "scripts/run_task14_probe.py",
+            "--attack-id",
+            "R7E-T14-A41",
+            "--variant-id",
+            "R7E-T14-A41-V01",
+            "--role",
+            "control"
+          ],
+          "mutation_command": [
+            "python",
+            "scripts/run_task14_probe.py",
+            "--attack-id",
+            "R7E-T14-A41",
+            "--variant-id",
+            "R7E-T14-A41-V01",
+            "--role",
+            "mutation"
+          ]
+        }
+      ]
+    },
+    {
+      "attack_id": "R7E-T14-A42",
+      "name": "episode-ID independence",
+      "invariant": "Different episode IDs do not by themselves establish evidential independence.",
+      "owner": "Task 5 provenance owner",
+      "variants": [
+        {
+          "variant_id": "R7E-T14-A42-V01",
+          "mutation_id": "R7E-T14-A42-M01",
+          "neutral_concept": "R7E-PROV-B002-EPISODE-INDEPENDENCE",
+          "validator_owner": "Task 5 provenance owner",
+          "validator_entry_point": "scripts/validate_candidate_provenance.py",
+          "control_evidence_selector": "direct-probe:R7E-T14-A42-V01:control",
+          "mutation_evidence_selector": "direct-probe:R7E-T14-A42-V01:mutation",
+          "control_command": [
+            "python",
+            "scripts/run_task14_probe.py",
+            "--attack-id",
+            "R7E-T14-A42",
+            "--variant-id",
+            "R7E-T14-A42-V01",
+            "--role",
+            "control"
+          ],
+          "mutation_command": [
+            "python",
+            "scripts/run_task14_probe.py",
+            "--attack-id",
+            "R7E-T14-A42",
+            "--variant-id",
+            "R7E-T14-A42-V01",
+            "--role",
+            "mutation"
+          ]
+        }
+      ]
+    },
+    {
+      "attack_id": "R7E-T14-A43",
+      "name": "recurrence promoted to causation",
+      "invariant": "Recurrence does not establish a causal diagnosis.",
+      "owner": "Task 4 episode semantics owner",
+      "variants": [
+        {
+          "variant_id": "R7E-T14-A43-V01",
+          "mutation_id": "R7E-T14-A43-M01",
+          "neutral_concept": "causal_diagnosis promoted to established",
+          "validator_owner": "Task 4 episode semantics owner",
+          "validator_entry_point": "scripts/validate_somnic_orthing.py",
+          "control_evidence_selector": "direct-probe:R7E-T14-A43-V01:control",
+          "mutation_evidence_selector": "direct-probe:R7E-T14-A43-V01:mutation",
+          "control_command": [
+            "python",
+            "scripts/run_task14_probe.py",
+            "--attack-id",
+            "R7E-T14-A43",
+            "--variant-id",
+            "R7E-T14-A43-V01",
+            "--role",
+            "control"
+          ],
+          "mutation_command": [
+            "python",
+            "scripts/run_task14_probe.py",
+            "--attack-id",
+            "R7E-T14-A43",
+            "--variant-id",
+            "R7E-T14-A43-V01",
+            "--role",
+            "mutation"
+          ]
+        }
+      ]
+    },
+    {
+      "attack_id": "R7E-T14-A44",
+      "name": "retrospective-locus collapse",
+      "invariant": "Retrospective evidence cannot be collapsed into the original defect locus.",
+      "owner": "Task 5 provenance owner",
+      "variants": [
+        {
+          "variant_id": "R7E-T14-A44-V01",
+          "mutation_id": "R7E-T14-A44-M01",
+          "neutral_concept": "R7E-PROV-B005-DEFECT-LOCUS-COLLAPSE",
+          "validator_owner": "Task 5 provenance owner",
+          "validator_entry_point": "scripts/validate_candidate_provenance.py",
+          "control_evidence_selector": "direct-probe:R7E-T14-A44-V01:control",
+          "mutation_evidence_selector": "direct-probe:R7E-T14-A44-V01:mutation",
+          "control_command": [
+            "python",
+            "scripts/run_task14_probe.py",
+            "--attack-id",
+            "R7E-T14-A44",
+            "--variant-id",
+            "R7E-T14-A44-V01",
+            "--role",
+            "control"
+          ],
+          "mutation_command": [
+            "python",
+            "scripts/run_task14_probe.py",
+            "--attack-id",
+            "R7E-T14-A44",
+            "--variant-id",
+            "R7E-T14-A44-V01",
+            "--role",
+            "mutation"
+          ]
+        }
+      ]
+    },
+    {
+      "attack_id": "R7E-T14-A45",
+      "name": "forced proposal",
+      "invariant": "A no-change assessment cannot be forced to emit a proposal.",
+      "owner": "Task 4 writeback owner",
+      "variants": [
+        {
+          "variant_id": "R7E-T14-A45-V01",
+          "mutation_id": "R7E-T14-A45-M01",
+          "neutral_concept": "no-change assessment given forced proposal",
+          "validator_owner": "Task 4 writeback owner",
+          "validator_entry_point": "scripts/validate_somnic_orthing.py",
+          "control_evidence_selector": "direct-probe:R7E-T14-A45-V01:control",
+          "mutation_evidence_selector": "direct-probe:R7E-T14-A45-V01:mutation",
+          "control_command": [
+            "python",
+            "scripts/run_task14_probe.py",
+            "--attack-id",
+            "R7E-T14-A45",
+            "--variant-id",
+            "R7E-T14-A45-V01",
+            "--role",
+            "control"
+          ],
+          "mutation_command": [
+            "python",
+            "scripts/run_task14_probe.py",
+            "--attack-id",
+            "R7E-T14-A45",
+            "--variant-id",
+            "R7E-T14-A45-V01",
+            "--role",
+            "mutation"
+          ]
+        }
+      ]
+    },
+    {
+      "attack_id": "R7E-T14-A46",
+      "name": "assessment/proposal/authorization/application collapse",
+      "invariant": "Assessment, proposal, authorization, application, and outcome remain distinct records and temporal stages.",
+      "owner": "Task 4 writeback owner",
+      "variants": [
+        {
+          "variant_id": "R7E-T14-A46-V01",
+          "mutation_id": "R7E-T14-A46-M01",
+          "neutral_concept": "writeback-03 collapsed timeline",
+          "validator_owner": "Task 4 writeback owner",
+          "validator_entry_point": "scripts/validate_somnic_orthing.py",
+          "control_evidence_selector": "direct-probe:R7E-T14-A46-V01:control",
+          "mutation_evidence_selector": "direct-probe:R7E-T14-A46-V01:mutation",
+          "control_command": [
+            "python",
+            "scripts/run_task14_probe.py",
+            "--attack-id",
+            "R7E-T14-A46",
+            "--variant-id",
+            "R7E-T14-A46-V01",
+            "--role",
+            "control"
+          ],
+          "mutation_command": [
+            "python",
+            "scripts/run_task14_probe.py",
+            "--attack-id",
+            "R7E-T14-A46",
+            "--variant-id",
+            "R7E-T14-A46-V01",
+            "--role",
+            "mutation"
+          ]
+        },
+        {
+          "variant_id": "R7E-T14-A46-V02",
+          "mutation_id": "R7E-T14-A46-M02",
+          "neutral_concept": "writeback-04 investigation carries proposal",
+          "validator_owner": "Task 4 writeback owner",
+          "validator_entry_point": "scripts/validate_somnic_orthing.py",
+          "control_evidence_selector": "direct-probe:R7E-T14-A46-V02:control",
+          "mutation_evidence_selector": "direct-probe:R7E-T14-A46-V02:mutation",
+          "control_command": [
+            "python",
+            "scripts/run_task14_probe.py",
+            "--attack-id",
+            "R7E-T14-A46",
+            "--variant-id",
+            "R7E-T14-A46-V02",
+            "--role",
+            "control"
+          ],
+          "mutation_command": [
+            "python",
+            "scripts/run_task14_probe.py",
+            "--attack-id",
+            "R7E-T14-A46",
+            "--variant-id",
+            "R7E-T14-A46-V02",
+            "--role",
+            "mutation"
+          ]
+        }
+      ]
+    },
+    {
+      "attack_id": "R7E-T14-A47",
+      "name": "legacy proposal provenance laundering",
+      "invariant": "Legacy proposals cannot be laundered into grounded assessed proposals.",
+      "owner": "Task 4 writeback owner",
+      "variants": [
+        {
+          "variant_id": "R7E-T14-A47-V01",
+          "mutation_id": "R7E-T14-A47-M01",
+          "neutral_concept": "writeback-04 legacy proposal laundered into assessment",
+          "validator_owner": "Task 4 writeback owner",
+          "validator_entry_point": "scripts/validate_somnic_orthing.py",
+          "control_evidence_selector": "direct-probe:R7E-T14-A47-V01:control",
+          "mutation_evidence_selector": "direct-probe:R7E-T14-A47-V01:mutation",
+          "control_command": [
+            "python",
+            "scripts/run_task14_probe.py",
+            "--attack-id",
+            "R7E-T14-A47",
+            "--variant-id",
+            "R7E-T14-A47-V01",
+            "--role",
+            "control"
+          ],
+          "mutation_command": [
+            "python",
+            "scripts/run_task14_probe.py",
+            "--attack-id",
+            "R7E-T14-A47",
+            "--variant-id",
+            "R7E-T14-A47-V01",
+            "--role",
+            "mutation"
+          ]
+        }
+      ]
+    },
+    {
+      "attack_id": "R7E-T14-A48",
+      "name": "writeback actuation self-validation",
+      "invariant": "An actuation outcome cannot validate itself.",
+      "owner": "Task 4 writeback owner",
+      "variants": [
+        {
+          "variant_id": "R7E-T14-A48-V01",
+          "mutation_id": "R7E-T14-A48-M01",
+          "neutral_concept": "outcome self_validating true",
+          "validator_owner": "Task 4 writeback owner",
+          "validator_entry_point": "scripts/validate_somnic_orthing.py",
+          "control_evidence_selector": "direct-probe:R7E-T14-A48-V01:control",
+          "mutation_evidence_selector": "direct-probe:R7E-T14-A48-V01:mutation",
+          "control_command": [
+            "python",
+            "scripts/run_task14_probe.py",
+            "--attack-id",
+            "R7E-T14-A48",
+            "--variant-id",
+            "R7E-T14-A48-V01",
+            "--role",
+            "control"
+          ],
+          "mutation_command": [
+            "python",
+            "scripts/run_task14_probe.py",
+            "--attack-id",
+            "R7E-T14-A48",
+            "--variant-id",
+            "R7E-T14-A48-V01",
+            "--role",
+            "mutation"
+          ]
+        }
+      ]
+    },
+    {
+      "attack_id": "R7E-T14-A49",
+      "name": "Somnus/Hermes implementation or learning overclaim",
+      "invariant": "Proposed mechanisms cannot be promoted to implemented runtime or established learning.",
+      "owner": "Task 5 witness owner",
+      "variants": [
+        {
+          "variant_id": "R7E-T14-A49-V01",
+          "mutation_id": "R7E-T14-A49-M01",
+          "neutral_concept": "full writeback chain implemented",
+          "validator_owner": "Task 5 witness owner",
+          "validator_entry_point": "scripts/validate_r7e_llm_witness.py",
+          "control_evidence_selector": "direct-probe:R7E-T14-A49-V01:control",
+          "mutation_evidence_selector": "direct-probe:R7E-T14-A49-V01:mutation",
+          "control_command": [
+            "python",
+            "scripts/run_task14_probe.py",
+            "--attack-id",
+            "R7E-T14-A49",
+            "--variant-id",
+            "R7E-T14-A49-V01",
+            "--role",
+            "control"
+          ],
+          "mutation_command": [
+            "python",
+            "scripts/run_task14_probe.py",
+            "--attack-id",
+            "R7E-T14-A49",
+            "--variant-id",
+            "R7E-T14-A49-V01",
+            "--role",
+            "mutation"
+          ]
+        },
+        {
+          "variant_id": "R7E-T14-A49-V02",
+          "mutation_id": "R7E-T14-A49-M02",
+          "neutral_concept": "nightly autonomy implemented",
+          "validator_owner": "Task 5 witness owner",
+          "validator_entry_point": "scripts/validate_r7e_llm_witness.py",
+          "control_evidence_selector": "direct-probe:R7E-T14-A49-V02:control",
+          "mutation_evidence_selector": "direct-probe:R7E-T14-A49-V02:mutation",
+          "control_command": [
+            "python",
+            "scripts/run_task14_probe.py",
+            "--attack-id",
+            "R7E-T14-A49",
+            "--variant-id",
+            "R7E-T14-A49-V02",
+            "--role",
+            "control"
+          ],
+          "mutation_command": [
+            "python",
+            "scripts/run_task14_probe.py",
+            "--attack-id",
+            "R7E-T14-A49",
+            "--variant-id",
+            "R7E-T14-A49-V02",
+            "--role",
+            "mutation"
+          ]
+        },
+        {
+          "variant_id": "R7E-T14-A49-V03",
+          "mutation_id": "R7E-T14-A49-M03",
+          "neutral_concept": "runtime deployment implemented",
+          "validator_owner": "Task 5 witness owner",
+          "validator_entry_point": "scripts/validate_r7e_llm_witness.py",
+          "control_evidence_selector": "direct-probe:R7E-T14-A49-V03:control",
+          "mutation_evidence_selector": "direct-probe:R7E-T14-A49-V03:mutation",
+          "control_command": [
+            "python",
+            "scripts/run_task14_probe.py",
+            "--attack-id",
+            "R7E-T14-A49",
+            "--variant-id",
+            "R7E-T14-A49-V03",
+            "--role",
+            "control"
+          ],
+          "mutation_command": [
+            "python",
+            "scripts/run_task14_probe.py",
+            "--attack-id",
+            "R7E-T14-A49",
+            "--variant-id",
+            "R7E-T14-A49-V03",
+            "--role",
+            "mutation"
+          ]
+        }
+      ]
+    },
+    {
+      "attack_id": "R7E-T14-A50",
+      "name": "C1/C2/C3 collapse",
+      "invariant": "The three collective coordination modes remain semantically distinct.",
+      "owner": "Task 4 collective-profile owner",
+      "variants": [
+        {
+          "variant_id": "R7E-T14-A50-V01",
+          "mutation_id": "R7E-T14-A50-M01",
+          "neutral_concept": "mode ID collision",
+          "validator_owner": "Task 4 collective-profile owner",
+          "validator_entry_point": "scripts/validate_somnic_orthing.py",
+          "control_evidence_selector": "direct-probe:R7E-T14-A50-V01:control",
+          "mutation_evidence_selector": "direct-probe:R7E-T14-A50-V01:mutation",
+          "control_command": [
+            "python",
+            "scripts/run_task14_probe.py",
+            "--attack-id",
+            "R7E-T14-A50",
+            "--variant-id",
+            "R7E-T14-A50-V01",
+            "--role",
+            "control"
+          ],
+          "mutation_command": [
+            "python",
+            "scripts/run_task14_probe.py",
+            "--attack-id",
+            "R7E-T14-A50",
+            "--variant-id",
+            "R7E-T14-A50-V01",
+            "--role",
+            "mutation"
+          ]
+        }
+      ]
+    },
+    {
+      "attack_id": "R7E-T14-A51",
+      "name": "shared-type-as-transport",
+      "invariant": "Shared types do not themselves supply transport.",
+      "owner": "Task 4 collective-profile owner",
+      "variants": [
+        {
+          "variant_id": "R7E-T14-A51-V01",
+          "mutation_id": "R7E-T14-A51-M01",
+          "neutral_concept": "shared_types_supply_transport true",
+          "validator_owner": "Task 4 collective-profile owner",
+          "validator_entry_point": "scripts/validate_somnic_orthing.py",
+          "control_evidence_selector": "direct-probe:R7E-T14-A51-V01:control",
+          "mutation_evidence_selector": "direct-probe:R7E-T14-A51-V01:mutation",
+          "control_command": [
+            "python",
+            "scripts/run_task14_probe.py",
+            "--attack-id",
+            "R7E-T14-A51",
+            "--variant-id",
+            "R7E-T14-A51-V01",
+            "--role",
+            "control"
+          ],
+          "mutation_command": [
+            "python",
+            "scripts/run_task14_probe.py",
+            "--attack-id",
+            "R7E-T14-A51",
+            "--variant-id",
+            "R7E-T14-A51-V01",
+            "--role",
+            "mutation"
+          ]
+        }
+      ]
+    },
+    {
+      "attack_id": "R7E-T14-A52",
+      "name": "actor/ledger erasure",
+      "invariant": "Event instances retain actor and ledger-version identity.",
+      "owner": "Task 4 collective-profile owner",
+      "variants": [
+        {
+          "variant_id": "R7E-T14-A52-V01",
+          "mutation_id": "R7E-T14-A52-M01",
+          "neutral_concept": "actor_ledger_version_indexed false",
+          "validator_owner": "Task 4 collective-profile owner",
+          "validator_entry_point": "scripts/validate_somnic_orthing.py",
+          "control_evidence_selector": "direct-probe:R7E-T14-A52-V01:control",
+          "mutation_evidence_selector": "direct-probe:R7E-T14-A52-V01:mutation",
+          "control_command": [
+            "python",
+            "scripts/run_task14_probe.py",
+            "--attack-id",
+            "R7E-T14-A52",
+            "--variant-id",
+            "R7E-T14-A52-V01",
+            "--role",
+            "control"
+          ],
+          "mutation_command": [
+            "python",
+            "scripts/run_task14_probe.py",
+            "--attack-id",
+            "R7E-T14-A52",
+            "--variant-id",
+            "R7E-T14-A52-V01",
+            "--role",
+            "mutation"
+          ]
+        }
+      ]
+    },
+    {
+      "attack_id": "R7E-T14-A53",
+      "name": "receipt-as-adoption/execution",
+      "invariant": "Receipt does not govern, adopt, or execute.",
+      "owner": "Task 4 collective-profile owner",
+      "variants": [
+        {
+          "variant_id": "R7E-T14-A53-V01",
+          "mutation_id": "R7E-T14-A53-M01",
+          "neutral_concept": "receipt_can_govern_or_execute true",
+          "validator_owner": "Task 4 collective-profile owner",
+          "validator_entry_point": "scripts/validate_somnic_orthing.py",
+          "control_evidence_selector": "direct-probe:R7E-T14-A53-V01:control",
+          "mutation_evidence_selector": "direct-probe:R7E-T14-A53-V01:mutation",
+          "control_command": [
+            "python",
+            "scripts/run_task14_probe.py",
+            "--attack-id",
+            "R7E-T14-A53",
+            "--variant-id",
+            "R7E-T14-A53-V01",
+            "--role",
+            "control"
+          ],
+          "mutation_command": [
+            "python",
+            "scripts/run_task14_probe.py",
+            "--attack-id",
+            "R7E-T14-A53",
+            "--variant-id",
+            "R7E-T14-A53-V01",
+            "--role",
+            "mutation"
+          ]
+        }
+      ]
+    },
+    {
+      "attack_id": "R7E-T14-A54",
+      "name": "recipient applicability copied from source",
+      "invariant": "Recipient applicability requires a local assessment.",
+      "owner": "Task 4 collective-profile owner",
+      "variants": [
+        {
+          "variant_id": "R7E-T14-A54-V01",
+          "mutation_id": "R7E-T14-A54-M01",
+          "neutral_concept": "source_applicability_auto_propagates true",
+          "validator_owner": "Task 4 collective-profile owner",
+          "validator_entry_point": "scripts/validate_somnic_orthing.py",
+          "control_evidence_selector": "direct-probe:R7E-T14-A54-V01:control",
+          "mutation_evidence_selector": "direct-probe:R7E-T14-A54-V01:mutation",
+          "control_command": [
+            "python",
+            "scripts/run_task14_probe.py",
+            "--attack-id",
+            "R7E-T14-A54",
+            "--variant-id",
+            "R7E-T14-A54-V01",
+            "--role",
+            "control"
+          ],
+          "mutation_command": [
+            "python",
+            "scripts/run_task14_probe.py",
+            "--attack-id",
+            "R7E-T14-A54",
+            "--variant-id",
+            "R7E-T14-A54-V01",
+            "--role",
+            "mutation"
+          ]
+        }
+      ]
+    },
+    {
+      "attack_id": "R7E-T14-A55",
+      "name": "transclusion semantic-identity overclaim",
+      "invariant": "Transclusion does not establish lossless semantic identity.",
+      "owner": "Task 4 collective-profile owner",
+      "variants": [
+        {
+          "variant_id": "R7E-T14-A55-V01",
+          "mutation_id": "R7E-T14-A55-M01",
+          "neutral_concept": "transclusion marked structural, semantic, and lossless",
+          "validator_owner": "Task 4 collective-profile owner",
+          "validator_entry_point": "scripts/validate_somnic_orthing.py",
+          "control_evidence_selector": "direct-probe:R7E-T14-A55-V01:control",
+          "mutation_evidence_selector": "direct-probe:R7E-T14-A55-V01:mutation",
+          "control_command": [
+            "python",
+            "scripts/run_task14_probe.py",
+            "--attack-id",
+            "R7E-T14-A55",
+            "--variant-id",
+            "R7E-T14-A55-V01",
+            "--role",
+            "control"
+          ],
+          "mutation_command": [
+            "python",
+            "scripts/run_task14_probe.py",
+            "--attack-id",
+            "R7E-T14-A55",
+            "--variant-id",
+            "R7E-T14-A55-V01",
+            "--role",
+            "mutation"
+          ]
+        }
+      ]
+    },
+    {
+      "attack_id": "R7E-T14-A56",
+      "name": "multi-operator independence/tawatur/truth promotion",
+      "invariant": "Multiple operators do not establish source independence, warrant, or truth.",
+      "owner": "Task 4 collective-profile owner",
+      "variants": [
+        {
+          "variant_id": "R7E-T14-A56-V01",
+          "mutation_id": "R7E-T14-A56-M01",
+          "neutral_concept": "source-independence promotion",
+          "validator_owner": "Task 4 collective-profile owner",
+          "validator_entry_point": "scripts/validate_somnic_orthing.py",
+          "control_evidence_selector": "direct-probe:R7E-T14-A56-V01:control",
+          "mutation_evidence_selector": "direct-probe:R7E-T14-A56-V01:mutation",
+          "control_command": [
+            "python",
+            "scripts/run_task14_probe.py",
+            "--attack-id",
+            "R7E-T14-A56",
+            "--variant-id",
+            "R7E-T14-A56-V01",
+            "--role",
+            "control"
+          ],
+          "mutation_command": [
+            "python",
+            "scripts/run_task14_probe.py",
+            "--attack-id",
+            "R7E-T14-A56",
+            "--variant-id",
+            "R7E-T14-A56-V01",
+            "--role",
+            "mutation"
+          ]
+        },
+        {
+          "variant_id": "R7E-T14-A56-V02",
+          "mutation_id": "R7E-T14-A56-M02",
+          "neutral_concept": "warrant promotion",
+          "validator_owner": "Task 4 collective-profile owner",
+          "validator_entry_point": "scripts/validate_somnic_orthing.py",
+          "control_evidence_selector": "direct-probe:R7E-T14-A56-V02:control",
+          "mutation_evidence_selector": "direct-probe:R7E-T14-A56-V02:mutation",
+          "control_command": [
+            "python",
+            "scripts/run_task14_probe.py",
+            "--attack-id",
+            "R7E-T14-A56",
+            "--variant-id",
+            "R7E-T14-A56-V02",
+            "--role",
+            "control"
+          ],
+          "mutation_command": [
+            "python",
+            "scripts/run_task14_probe.py",
+            "--attack-id",
+            "R7E-T14-A56",
+            "--variant-id",
+            "R7E-T14-A56-V02",
+            "--role",
+            "mutation"
+          ]
+        },
+        {
+          "variant_id": "R7E-T14-A56-V03",
+          "mutation_id": "R7E-T14-A56-M03",
+          "neutral_concept": "truth promotion",
+          "validator_owner": "Task 4 collective-profile owner",
+          "validator_entry_point": "scripts/validate_somnic_orthing.py",
+          "control_evidence_selector": "direct-probe:R7E-T14-A56-V03:control",
+          "mutation_evidence_selector": "direct-probe:R7E-T14-A56-V03:mutation",
+          "control_command": [
+            "python",
+            "scripts/run_task14_probe.py",
+            "--attack-id",
+            "R7E-T14-A56",
+            "--variant-id",
+            "R7E-T14-A56-V03",
+            "--role",
+            "control"
+          ],
+          "mutation_command": [
+            "python",
+            "scripts/run_task14_probe.py",
+            "--attack-id",
+            "R7E-T14-A56",
+            "--variant-id",
+            "R7E-T14-A56-V03",
+            "--role",
+            "mutation"
+          ]
+        },
+        {
+          "variant_id": "R7E-T14-A56-V04",
+          "mutation_id": "R7E-T14-A56-M04",
+          "neutral_concept": "testimonial-transmission promotion",
+          "validator_owner": "Task 4 collective-profile owner",
+          "validator_entry_point": "scripts/validate_somnic_orthing.py",
+          "control_evidence_selector": "direct-probe:R7E-T14-A56-V04:control",
+          "mutation_evidence_selector": "direct-probe:R7E-T14-A56-V04:mutation",
+          "control_command": [
+            "python",
+            "scripts/run_task14_probe.py",
+            "--attack-id",
+            "R7E-T14-A56",
+            "--variant-id",
+            "R7E-T14-A56-V04",
+            "--role",
+            "control"
+          ],
+          "mutation_command": [
+            "python",
+            "scripts/run_task14_probe.py",
+            "--attack-id",
+            "R7E-T14-A56",
+            "--variant-id",
+            "R7E-T14-A56-V04",
+            "--role",
+            "mutation"
+          ]
+        }
+      ]
+    },
+    {
+      "attack_id": "R7E-T14-A57",
+      "name": "collective dissent erasure",
+      "invariant": "Collective closure preserves dissent.",
+      "owner": "Task 4 collective-profile owner",
+      "variants": [
+        {
+          "variant_id": "R7E-T14-A57-V01",
+          "mutation_id": "R7E-T14-A57-M01",
+          "neutral_concept": "preserves_dissent false",
+          "validator_owner": "Task 4 collective-profile owner",
+          "validator_entry_point": "scripts/validate_somnic_orthing.py",
+          "control_evidence_selector": "direct-probe:R7E-T14-A57-V01:control",
+          "mutation_evidence_selector": "direct-probe:R7E-T14-A57-V01:mutation",
+          "control_command": [
+            "python",
+            "scripts/run_task14_probe.py",
+            "--attack-id",
+            "R7E-T14-A57",
+            "--variant-id",
+            "R7E-T14-A57-V01",
+            "--role",
+            "control"
+          ],
+          "mutation_command": [
+            "python",
+            "scripts/run_task14_probe.py",
+            "--attack-id",
+            "R7E-T14-A57",
+            "--variant-id",
+            "R7E-T14-A57-V01",
+            "--role",
+            "mutation"
+          ]
+        }
+      ]
+    },
+    {
+      "attack_id": "R7E-T14-A58",
+      "name": "projection completeness overclaim",
+      "invariant": "A redacted projection cannot claim completeness.",
+      "owner": "Task 4 collective-profile owner",
+      "variants": [
+        {
+          "variant_id": "R7E-T14-A58-V01",
+          "mutation_id": "R7E-T14-A58-M01",
+          "neutral_concept": "redacted_projection_may_claim_complete true",
+          "validator_owner": "Task 4 collective-profile owner",
+          "validator_entry_point": "scripts/validate_somnic_orthing.py",
+          "control_evidence_selector": "direct-probe:R7E-T14-A58-V01:control",
+          "mutation_evidence_selector": "direct-probe:R7E-T14-A58-V01:mutation",
+          "control_command": [
+            "python",
+            "scripts/run_task14_probe.py",
+            "--attack-id",
+            "R7E-T14-A58",
+            "--variant-id",
+            "R7E-T14-A58-V01",
+            "--role",
+            "control"
+          ],
+          "mutation_command": [
+            "python",
+            "scripts/run_task14_probe.py",
+            "--attack-id",
+            "R7E-T14-A58",
+            "--variant-id",
+            "R7E-T14-A58-V01",
+            "--role",
+            "mutation"
+          ]
+        }
+      ]
+    },
+    {
+      "attack_id": "R7E-T14-A59",
+      "name": "distributed-runtime overclaim",
+      "invariant": "A collective profile cannot be promoted to an implemented distributed runtime.",
+      "owner": "Task 4 collective-profile owner",
+      "variants": [
+        {
+          "variant_id": "R7E-T14-A59-V01",
+          "mutation_id": "R7E-T14-A59-M01",
+          "neutral_concept": "collective-01 profile status implemented",
+          "validator_owner": "Task 4 collective-profile owner",
+          "validator_entry_point": "scripts/validate_somnic_orthing.py",
+          "control_evidence_selector": "direct-probe:R7E-T14-A59-V01:control",
+          "mutation_evidence_selector": "direct-probe:R7E-T14-A59-V01:mutation",
+          "control_command": [
+            "python",
+            "scripts/run_task14_probe.py",
+            "--attack-id",
+            "R7E-T14-A59",
+            "--variant-id",
+            "R7E-T14-A59-V01",
+            "--role",
+            "control"
+          ],
+          "mutation_command": [
+            "python",
+            "scripts/run_task14_probe.py",
+            "--attack-id",
+            "R7E-T14-A59",
+            "--variant-id",
+            "R7E-T14-A59-V01",
+            "--role",
+            "mutation"
+          ]
+        }
+      ]
+    }
+  ],
+  "task14_ar6_mappings": [
+    {
+      "artifact_id": "AR6-ART-DCFCE4829D349341868A1901",
+      "neutral_concept": "interrupted research retained outside repository flow",
+      "reproduction_status": "NOT_REPRODUCED_RETAINED_PROVENANCE_ONLY",
+      "attack_id": null,
+      "variant_id": null,
+      "normative_flow": "NO_NORMATIVE_OR_PUBLICATION_FLOW"
+    },
+    {
+      "artifact_id": "AR6-ART-FE87A26530A6B2BC11BB8589",
+      "neutral_concept": "interrupted research retained outside repository flow",
+      "reproduction_status": "NOT_REPRODUCED_RETAINED_PROVENANCE_ONLY",
+      "attack_id": null,
+      "variant_id": null,
+      "normative_flow": "NO_NORMATIVE_OR_PUBLICATION_FLOW"
+    },
+    {
+      "artifact_id": "AR6-ART-B173EC14E54EEB0DDE791777",
+      "neutral_concept": "interrupted research retained outside repository flow",
+      "reproduction_status": "NOT_REPRODUCED_RETAINED_PROVENANCE_ONLY",
+      "attack_id": null,
+      "variant_id": null,
+      "normative_flow": "NO_NORMATIVE_OR_PUBLICATION_FLOW"
+    },
+    {
+      "artifact_id": "AR6-ART-4E448EA229DF2FFF0EA1FA23",
+      "neutral_concept": "interrupted research retained outside repository flow",
+      "reproduction_status": "NOT_REPRODUCED_RETAINED_PROVENANCE_ONLY",
+      "attack_id": null,
+      "variant_id": null,
+      "normative_flow": "NO_NORMATIVE_OR_PUBLICATION_FLOW"
+    },
+    {
+      "artifact_id": "AR6-ART-0F058EA08639FEE587D7EF33",
+      "neutral_concept": "interrupted research retained outside repository flow",
+      "reproduction_status": "NOT_REPRODUCED_RETAINED_PROVENANCE_ONLY",
+      "attack_id": null,
+      "variant_id": null,
+      "normative_flow": "NO_NORMATIVE_OR_PUBLICATION_FLOW"
+    },
+    {
+      "artifact_id": "AR6-ART-E2334A507CF4E1B74F2057F3",
+      "neutral_concept": "interrupted research retained outside repository flow",
+      "reproduction_status": "NOT_REPRODUCED_RETAINED_PROVENANCE_ONLY",
+      "attack_id": null,
+      "variant_id": null,
+      "normative_flow": "NO_NORMATIVE_OR_PUBLICATION_FLOW"
+    },
+    {
+      "artifact_id": "AR6-ART-351BEADF9E93C818EAC47A94",
+      "neutral_concept": "interrupted research retained outside repository flow",
+      "reproduction_status": "NOT_REPRODUCED_RETAINED_PROVENANCE_ONLY",
+      "attack_id": null,
+      "variant_id": null,
+      "normative_flow": "NO_NORMATIVE_OR_PUBLICATION_FLOW"
+    },
+    {
+      "artifact_id": "AR6-ART-A5D235BD0361FFC9F46D70DA",
+      "neutral_concept": "interrupted research retained outside repository flow",
+      "reproduction_status": "NOT_REPRODUCED_RETAINED_PROVENANCE_ONLY",
+      "attack_id": null,
+      "variant_id": null,
+      "normative_flow": "NO_NORMATIVE_OR_PUBLICATION_FLOW"
+    },
+    {
+      "artifact_id": "AR6-ART-4579F97C0171411C5F32C873",
+      "neutral_concept": "interrupted research retained outside repository flow",
+      "reproduction_status": "NOT_REPRODUCED_RETAINED_PROVENANCE_ONLY",
+      "attack_id": null,
+      "variant_id": null,
+      "normative_flow": "NO_NORMATIVE_OR_PUBLICATION_FLOW"
+    },
+    {
+      "artifact_id": "AR6-ART-D8BB192F086AA1CCB5FD1379",
+      "neutral_concept": "interrupted research retained outside repository flow",
+      "reproduction_status": "NOT_REPRODUCED_RETAINED_PROVENANCE_ONLY",
+      "attack_id": null,
+      "variant_id": null,
+      "normative_flow": "NO_NORMATIVE_OR_PUBLICATION_FLOW"
+    },
+    {
+      "artifact_id": "AR6-ART-4C6B6C989A76AEBC6C5ACD35",
+      "neutral_concept": "result/pathway and governed-accessibility separation",
+      "reproduction_status": "REPRODUCED_AGAINST_INTEGRATED_TREE",
+      "attack_id": "R7E-T14-A17",
+      "variant_id": "R7E-T14-A17-V01",
+      "normative_flow": "NEGATIVE_EVIDENCE_ONLY"
+    },
+    {
+      "artifact_id": "AR6-ART-A2483CCCA1183411BF061066",
+      "neutral_concept": "collective provenance and source-independence boundary",
+      "reproduction_status": "REPRODUCED_AGAINST_INTEGRATED_TREE",
+      "attack_id": "R7E-T14-A56",
+      "variant_id": "R7E-T14-A56-V01",
+      "normative_flow": "NEGATIVE_EVIDENCE_ONLY"
+    },
+    {
+      "artifact_id": "AR6-ART-467D71154F4016E2BEF2BF20",
+      "neutral_concept": "collective provenance and source-independence boundary",
+      "reproduction_status": "REPRODUCED_AGAINST_INTEGRATED_TREE",
+      "attack_id": "R7E-T14-A56",
+      "variant_id": "R7E-T14-A56-V01",
+      "normative_flow": "NEGATIVE_EVIDENCE_ONLY"
+    },
+    {
+      "artifact_id": "AR6-ART-3DA782593EAD8E8A92D2A4A2",
+      "neutral_concept": "reason-bearing transport retains provenance and authority",
+      "reproduction_status": "REPRODUCED_AGAINST_INTEGRATED_TREE",
+      "attack_id": "R7E-T14-A47",
+      "variant_id": "R7E-T14-A47-V01",
+      "normative_flow": "NEGATIVE_EVIDENCE_ONLY"
+    },
+    {
+      "artifact_id": "AR6-ART-EAD88C531603E9BF904B1CF2",
+      "neutral_concept": "reason-bearing transport retains provenance and authority",
+      "reproduction_status": "REPRODUCED_AGAINST_INTEGRATED_TREE",
+      "attack_id": "R7E-T14-A47",
+      "variant_id": "R7E-T14-A47-V01",
+      "normative_flow": "NEGATIVE_EVIDENCE_ONLY"
+    },
+    {
+      "artifact_id": "AR6-ART-1495AD0E2AA7CA1B5649C19C",
+      "neutral_concept": "governed target formation separates proposal authorization application and outcome",
+      "reproduction_status": "REPRODUCED_AGAINST_INTEGRATED_TREE",
+      "attack_id": "R7E-T14-A46",
+      "variant_id": "R7E-T14-A46-V01",
+      "normative_flow": "NEGATIVE_EVIDENCE_ONLY"
+    },
+    {
+      "artifact_id": "AR6-ART-31C5C6DCE6796D1E12E61810",
+      "neutral_concept": "governed target formation separates proposal authorization application and outcome",
+      "reproduction_status": "REPRODUCED_AGAINST_INTEGRATED_TREE",
+      "attack_id": "R7E-T14-A46",
+      "variant_id": "R7E-T14-A46-V01",
+      "normative_flow": "NEGATIVE_EVIDENCE_ONLY"
+    },
+    {
+      "artifact_id": "AR6-ART-93A8FC21B4BD675313C3DA8E",
+      "neutral_concept": "negative-evidence source without a canonical repository owner",
+      "reproduction_status": "NOT_REPRODUCED_RETAINED_PROVENANCE_ONLY",
+      "attack_id": null,
+      "variant_id": null,
+      "normative_flow": "NO_NORMATIVE_OR_PUBLICATION_FLOW"
+    },
+    {
+      "artifact_id": "AR6-ART-AD89BECB272A4728ABA24966",
+      "neutral_concept": "negative-evidence source without a canonical repository owner",
+      "reproduction_status": "NOT_REPRODUCED_RETAINED_PROVENANCE_ONLY",
+      "attack_id": null,
+      "variant_id": null,
+      "normative_flow": "NO_NORMATIVE_OR_PUBLICATION_FLOW"
+    }
   ]
 }

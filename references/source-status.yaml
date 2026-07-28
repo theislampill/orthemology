@@ -4,7 +4,8 @@
 # SCOPE (honest, machine-declared below in `covered_claim_families`): this registry is
 # AUTHORITATIVE FOR THE SELECTED CLAIM FAMILIES IT COVERS - the R4 concrete/ideal-reason
 # attribution chain, the El-Tobgui records, the enumerated Athari per-claim rows, the
-# sequential latent-variable related work, and this project's own formal extension.
+# sequential latent-variable related work, bounded terminology provenance, and this
+# project's own formal extension.
 # It is NOT a registry of every load-bearing claim in the corpus: the broader per-claim
 # sourcing surface is docs/sourcing/SOURCING-LEDGER.md and the companion ledgers, which
 # carry more rows than this file does. The earlier "authoritative for every load-bearing
@@ -16,7 +17,7 @@
 # NOT verify that a source is true, that a quotation was read, or that a DOI resolves; no
 # check here is evidence about the world.
 schema: orthemology-source-status-v2
-verified: 2026-07-20
+verified: 2026-07-26
 covered_claim_families:
   concrete_ideal_reason_chain:
     prefix: CIR
@@ -33,6 +34,9 @@ covered_claim_families:
   project_extension:
     prefix: EXT
     description: this project's own formal extension, for which no external source is claimed
+  terminology_provenance:
+    prefix: ETY
+    description: bounded terminology formation and prior-spelling attestations; never adoption or utility evidence
 not_covered:
   description: >-
     Every other load-bearing claim in the corpus - the manuscript's related-work concessions,
@@ -422,6 +426,104 @@ claims:
     FIRST-AUTHOR CORRECTION carried from Decision 0015 section 8: the controlling owner amendment
     gave "Rajeev V. Raju", which is wrong - a conflation with Rajeev V. Rikhye of LAT-2. The
     verified first author is Rajkumar Vasudeva Raju. The erroneous form must not be reintroduced.
+
+# --- terminology formation and provenance (Task 10; no adoption or utility inference) ---
+- id: ETY-1
+  bibliography_key: merriamwebsterOrthCombiningForm
+  locus: manuscript §14.1; terminology/orthemic-terminology-pilot-protocol.md Formation and provenance boundary
+  claim_level: bounded dictionary report
+  claim: English orth- or ortho- is an established combining form with a correct or corrective sense and Greek orthos ancestry
+  source: Merriam-Webster.com Dictionary, s.v. orth-
+  source_type: authoritative English dictionary
+  doi: null
+  locus_exact: combining-form senses 1-3 and Word History
+  status: SECONDARY_VERIFIED
+  verification_date: 2026-07-26
+  wording_directly_checked: true
+  page_edition_dependent: false
+  school_flag: none
+  support: supports only the established combining form, the cited sense, and the dictionary's ancestry statement
+  notes: Does not support the project's definitions, novelty, adoption, utility, universality, or isomorphism.
+- id: ETY-2
+  bibliography_key: merriamwebsterEmeSuffix
+  locus: manuscript §14.1; terminology/orthemic-terminology-pilot-protocol.md Formation and provenance boundary
+  claim_level: bounded dictionary report
+  claim: English -eme is an established noun suffix for a significantly distinctive unit of language structure
+  source: Merriam-Webster.com Dictionary, s.v. -eme
+  source_type: authoritative English dictionary
+  doi: null
+  locus_exact: noun-suffix definition and Word History
+  status: SECONDARY_VERIFIED
+  verification_date: 2026-07-26
+  wording_directly_checked: true
+  page_edition_dependent: false
+  school_flag: none
+  support: supports a linguistic-unit analogy only, not the project's operational state-type definition
+  notes: Does not support terminology adoption, utility, universality, or isomorphism.
+- id: ETY-3
+  bibliography_key: smyth1920GreekGrammar
+  locus: manuscript §14.1; terminology/orthemic-terminology-pilot-protocol.md Formation and provenance boundary
+  claim_level: bounded grammar report plus labeled project gloss
+  claim: Greek -ma with stem -mat- is result-or-effect morphology; object or instance is a bounded project gloss from concrete examples
+  source: Herbert Weir Smyth, A Greek Grammar for Colleges
+  source_type: scholarly reference grammar
+  doi: null
+  locus_exact: sections 841.2 and 861.2
+  status: SECONDARY_VERIFIED
+  verification_date: 2026-07-26
+  wording_directly_checked: true
+  page_edition_dependent: false
+  school_flag: none
+  support: directly supports result or effect and the -mat- to -ma relation only
+  notes: Does not support an inherited English -emma suffix, an ema derivation, or project adoption or utility.
+- id: ETY-4
+  bibliography_key: lsjEmos
+  locus: manuscript §14.1; terminology/orthemic-terminology-pilot-protocol.md Formation and provenance boundary
+  claim_level: bounded lexicon report plus labeled project synthesis
+  claim: Greek ἐμά is a possessive form associated with ἐμός; its superposed resonance is project synthesis and not derivation
+  source: Liddell, Scott, and Jones, A Greek-English Lexicon, s.v. ἐμός
+  source_type: scholarly historical Greek lexicon on the Scaife ATLAS surface
+  doi: null
+  locus_exact: headword ἐμός; mine; τὰ ἐμά examples including Plato, Gorgias 508e
+  status: SECONDARY_VERIFIED
+  verification_date: 2026-07-26
+  wording_directly_checked: true
+  page_edition_dependent: false
+  school_flag: none
+  support: supports the possessive form only; the resonance and non-derivational pairing are project synthesis
+  notes: Does not derive -ma, -mat-, -emma, orthemma, or metaorthemma and does not support adoption or utility.
+- id: ETY-5A
+  bibliography_key: constable1999Ortheme
+  locus: manuscript §14.1; terminology/orthemic-terminology-pilot-protocol.md Formation and provenance boundary
+  claim_level: exact historical spelling attestation
+  claim: the spelling ortheme was publicly used in 1999 for units within an orthography
+  source: Peter Constable, Re. Amerindian Characters, Unicode Mail List Archive
+  source_type: archived primary public message, not scholarship
+  doi: null
+  locus_exact: message dated 1999-06-17; paragraph defining orthemes as units within an orthography
+  status: PRIMARY_TEXT_EXACT
+  verification_date: 2026-07-26
+  wording_directly_checked: true
+  page_edition_dependent: false
+  school_flag: none
+  support: supports pre-project public attestation of the same spelling in a different orthographic-unit sense
+  notes: Does not establish earliest use, the project definition, derivation, ownership, adoption, utility, universality, or isomorphism.
+- id: ETY-5B
+  bibliography_key: burridgeBlaxter2020LinguisticCopying
+  locus: manuscript §14.1; terminology/orthemic-terminology-pilot-protocol.md Formation and provenance boundary
+  claim_level: exact historical spelling attestation
+  claim: a peer-reviewed 2020 article uses ortheme in an orthographic-unit sense
+  source: James Burridge and Tamsin Blaxter, Using spatial patterns of English folk speech to infer the universality class of linguistic copying
+  source_type: peer-reviewed primary research article
+  doi: 10.1103/PhysRevResearch.2.043053
+  locus_exact: Physical Review Research 2, 043053, page 24, onset-f voicing discussion
+  status: PRIMARY_TEXT_EXACT
+  verification_date: 2026-07-26
+  wording_directly_checked: true
+  page_edition_dependent: false
+  school_flag: none
+  support: supports pre-project scholarly attestation of the same spelling in a different orthographic-unit sense
+  notes: Does not establish earliest use, the project definition, derivation, adoption, utility, universality, or isomorphism.
 
 # --- project's own extensions (no external source claimed) ---
 - id: EXT-1

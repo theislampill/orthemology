@@ -1,6 +1,6 @@
 # R7E / PR #12 independent hunk disposition
 
-**Status:** SOL INDEPENDENT REVIEW CANDIDATE — NO SIGNOFF OR MERGE READINESS.
+**Status:** TASK 15 VERIFIED CANDIDATE — TASK 16 INTEGRATION PENDING.
 
 Range reviewed:
 `e34d2cd56057766f8f656a4ff3486eb34dad607e..cbab14747835855d232448f648eefa1d4e36074e`.
@@ -9,16 +9,16 @@ The range changes exactly ten paths. Dispositions are limited to `keep`,
 
 | Path | Disposition | Independent review |
 |---|---|---|
-| `applications/daee-epistemics/SOUND-DESCENT-MODEL-COMPARISON.md` | `revise` | Keep the G1 candidate-status and admissibility corrections. Re-source the target-field claim, type the operators, and correct the OSM optimizer account before closure. |
-| `artifacts/dynamic-orthing-noetic-learning-orthability-draft.pdf` | `provenance-only` | Generated rendering of the changed companion source; not an independent semantic addition. Rebuild and visually re-review only after the source lane closes. |
-| `artifacts/dynamic-orthing-noetic-learning-orthability-draft.sources.json` | `provenance-only` | Generated source/PDF hash and page-count sidecar; not an independent semantic addition. Task 12 owns final provenance repair. |
-| `companion/DYNAMIC-ORTHABILITY-ARGUMENT-MAP.yaml` | `revise` | Preserve the explicit rung-3-to-rung-4 gap, but repair rung semantics, status roles, bridge premises, circularity, rival exits, and divine-Speech boundaries. |
-| `companion/dynamic-orthing-noetic-learning-and-orthability.md` | `revise` | Preserve the two-scale warning; revise the gap/falsifiability prose, notation collision, objective-gradient wording, convergence wording, and doctrinal boundary. |
-| `docs/current-state.yaml` | `provenance-only` | Generated project-state update caused by R7E sources/artifacts; not an independent semantic addition. Regenerate after each owning task. |
+| `applications/daee-epistemics/SOUND-DESCENT-MODEL-COMPARISON.md` | `revise` | The G1 candidate-status and admissibility corrections are retained. Tasks 6–8 completed the target-field sourcing, typed-operator, crosswalk, and optimizer revisions without claiming object identity. |
+| `artifacts/dynamic-orthing-noetic-learning-orthability-draft.pdf` | `provenance-only` | Generated rendering, not independent semantic support. Task 13 rebuilt it from the reviewed source and Task 15 reconfirmed exact parity and visual conformance. |
+| `artifacts/dynamic-orthing-noetic-learning-orthability-draft.sources.json` | `provenance-only` | Generated source/PDF identity and page-count sidecar, not an independent semantic addition. Task 13 closed its provenance owner and Task 15 reconfirmed it. |
+| `companion/DYNAMIC-ORTHABILITY-ARGUMENT-MAP.yaml` | `revise` | Task 9 completed the rung semantics, status roles, bridge premises, circularity, rival exits, and divine-Speech revisions while preserving held conclusions. |
+| `companion/dynamic-orthing-noetic-learning-and-orthability.md` | `revise` | Task 9 retained the two-scale warning and completed the gap, falsifiability, notation, correction, convergence, and doctrinal-boundary revisions. |
+| `docs/current-state.yaml` | `provenance-only` | Generated project-state owner; not an independent semantic addition. It converges at the Task 15 candidate boundary and must be regenerated after each Task 16 merge. |
 | `docs/project-closure/HISTORICAL-STATUS-INDEX.yaml` | `keep` | Correctly classifies R7E as current-candidate. Extend the same status to the R7E-Sol control-plane prefix without rewriting history. |
 | `docs/project-closure/r7e/AUTONOMOUS-R7E-STATE.json` | `keep` | Preserve byte-identically as the attributed implementing-run record; `R7E-INPUT-PROVENANCE.json` and the provenance audit supersede its unreconstructible workflow statistics for current review. |
 | `docs/project-closure/r7e/ORTHING-CANDIDATE-BACKLOG.md` | `keep` | Preserve byte-identically as historical candidate input; the immutable structured ledger supersedes its duplicate IDs, truncated loci/text, missing drafts, and incomplete rejections for current review. |
-| `docs/provenance/RELEASE-MANIFEST.sha256` | `provenance-only` | Generated integrity manifest; not an independent semantic addition. Regenerate last. |
+| `docs/provenance/RELEASE-MANIFEST.sha256` | `provenance-only` | Generated integrity manifest; not an independent semantic addition. Task 15 reconfirmed full convergence; Task 16 must regenerate it last after each owned change. |
 
 ## Eight integrated semantic changes
 
@@ -36,7 +36,14 @@ The range changes exactly ten paths. Dispositions are limited to `keep`,
 8. Absence/falsifiability conditions: **revise** to remove the notation
    collision and objective-gradient overstatement.
 
-The PDF, sidecar, generated current state, and release manifest are generated
+The PDF, sidecar, generated current state, and release manifest remain generated
 or provenance hunks. Their byte changes do not supply independent semantic
-support for the prose. Nothing in this disposition is independent signoff,
-merge approval, or a claim that PR #12 is ready.
+support for the prose. The three `revise` dispositions were implemented through
+the independently approved Task 6–9 lineage; `revise` records the treatment of
+the incoming hunk, not remaining work.
+
+The exact Task 15 candidate is independently approved and its local, remote,
+clean-clone, source-package, PDF, and all-page gates are green. No merge,
+publication, release, or protected-branch update is recorded here. Task 16
+remains responsible for exact-SHA review of this closure-record commit and for
+the protected integration cascade.

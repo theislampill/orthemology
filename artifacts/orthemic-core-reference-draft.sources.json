@@ -1,19 +1,92 @@
 {
+  "schema": "orthemology-pdf-sources-v2",
+  "artifact_id": "orthemic-core-reference-draft",
   "pdf": "orthemic-core-reference-draft.pdf",
-  "pdf_sha256": "346568795799e4d1b8f53ed4c44c4dd4720d3a71cf7187c850a78c437bcb4fdb",
-  "page_count": 20,
-  "sources": {
-    "theory/orthemic-core-formalization.md": "3d52e76e20b7cbdb618770d253c6d8de3d8b9f64776ff3fbf423bf7e29e2300a",
-    "theory/orthemic-multi-actor-conflict-note.md": "38015cf2ceba48fbf4aa70f38a2349e202d5288d90ffe504c706a52458084f90"
+  "pdf_sha256": "d3c405415f82702247a96fab1865c63a1b3c62789d6b3e9e3e6076eca21f481c",
+  "page_count": 14,
+  "source_commit": "aee5c7389b57ec7c3150d8fee3b3e398195d1395",
+  "source_tree": "766a3cfd57058d56538a0571fcff176ca44288b3",
+  "independently_reviewed_equivalent_source_commit": "aee5c7389b57ec7c3150d8fee3b3e398195d1395",
+  "independently_reviewed_equivalent_source_tree": "766a3cfd57058d56538a0571fcff176ca44288b3",
+  "source_tree_equivalence": "verified-identical",
+  "source_date_epoch": 1785167892,
+  "build_time_utc": "2026-07-27T15:58:12Z",
+  "source_hashes": {
+    "markdown": {
+      "theory/orthemic-core-formalization.md": "f55d98aa2dcaad231c769aa94e42fd0cec416361269c7d957b203669ca62dd72",
+      "theory/orthemic-multi-actor-conflict-note.md": "f56a56a428504e990096af1d0f9394d3f99250d488509ff182f10ca5113971c5"
+    },
+    "latex": {
+      "publication/latex/orthemic-core-reference-draft/main.tex": "709f63e354fdcd0fd83daf675530874bdf80cc1dc78102cdd638cd998c13abf4"
+    },
+    "bibliography": {
+      "path": "references/orthemology.bib",
+      "sha256": "ca6bd2e96c52ff35db569793443331f54c6f5415fa69c1f2fa2592c16bb7cc56"
+    },
+    "compatibility": {
+      "publication/latexmkrc": "8fab079b47dda579db9b75aef4f25a4b3c78bc19089957e7076a95f1dc717979",
+      "publication/pdftex-unicode-compat.tex": "3d3eb3d8ecd1619a67fa3575866de56c38390f4c28f2ea95a76a70aacbba4771"
+    }
   },
-  "source_commit": "9deda9c908e40bbf3b3ea5604bf5c3a6683d8afd",
-  "artifact_commit": "the git commit that introduces/updates this artifact (two-stage provenance; see `git log -- artifacts/`)",
-  "source_date_epoch": 1784772365,
-  "build_command": "python scripts/build_pdfs.py",
+  "publication_profile": {
+    "path": "docs/publication-profile.yaml",
+    "sha256": "176e78534db91ad9c3c6f441676fa6a506470e344b5acba7060262a0d0b973a6"
+  },
+  "toolchain_lock": {
+    "path": "publication/toolchain-lock.yaml",
+    "sha256": "25eba4659e5817f1d90d1511facff15afadcaa463be3b6aea491bc145a8dc4d4"
+  },
+  "candidate_status": {
+    "source": "docs/current-candidate-state.yaml",
+    "sha256": "7311b9d973761648f8b02ee47c222e64b8a752df57e86bcc74e47c34edc34fce",
+    "label": "SOL INDEPENDENT REVIEW CANDIDATE — NO SIGNOFF OR MERGE READINESS",
+    "observed_at_utc": "2026-07-21T18:10:22Z",
+    "timeless_state": false,
+    "status_claims": {
+      "candidate_status": "proposed-candidate",
+      "merged": false,
+      "independent_signoff": false,
+      "ready_for_merge": false,
+      "evidence": {
+        "merged": [],
+        "independent_signoff": [],
+        "ready_for_merge": []
+      },
+      "next_action": "Complete the bounded Sol repair and independent review before any separately authorized protected integration; refresh every PR observation first."
+    }
+  },
+  "entry_point": "publication/latex/orthemic-core-reference-draft/main.tex",
+  "build_workdir": "publication/latex/orthemic-core-reference-draft",
+  "build_command": "/usr/local/texlive/2025/bin/x86_64-linux/latexmk main.tex",
+  "source_package": {
+    "path": "artifacts/orthemic-core-reference-draft.source.tar.gz",
+    "sha256": "daf01421420553ce243bf44802979862407d4df7d6cc1089f4b3bd2333dafdb3"
+  },
+  "source_manifest": {
+    "path": "artifacts/orthemic-core-reference-draft.source-manifest.json",
+    "sha256": "8457e043ade06532aa9f22517a0ea7dca36c755e101d36806d410cfd88f17104"
+  },
   "tools": {
-    "typst": "0.15.0",
-    "markdown-it-py": "4.0.0",
+    "bibtex": "0.99d",
+    "kpathsea": "6.4.1",
+    "latexmk": "4.87",
+    "pdftex": "1.40.28",
+    "poppler": "25.07.0",
+    "pypdf": "6.14.2",
     "python": "3.11.9"
   },
-  "generation_status": "complete; strict conversion (no skipped content); double-build verified"
+  "bibliography_qa": {
+    "disposition": "EMPTY_BIBLIOGRAPHY_NO_CITATIONS",
+    "bibtex_return_code": 2,
+    "bibtex_version": "0.99d",
+    "database_path": "../../../references/orthemology.bib",
+    "bibliography_style": "plainnat",
+    "citation_commands": 0,
+    "aux_citations": 0,
+    "bbl_sha256": "8e5c0a84578475116bd7e34d81ab6a955fa410c276f07902a2ba9c41ed532db6",
+    "blg_sha256": "e42a8085c7f72304a16ef66b8435e519e8fb2fed16ff2a0e303b6f63fbe57ebf",
+    "bibliography_sha256": "ca6bd2e96c52ff35db569793443331f54c6f5415fa69c1f2fa2592c16bb7cc56",
+    "stale_bbl_preexisting": false
+  },
+  "generation_status": "complete; PDFLaTeX through latexmk; independent double build byte-identical; clean source-package rebuild verified"
 }

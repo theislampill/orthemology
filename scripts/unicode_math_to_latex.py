@@ -37,10 +37,20 @@ REL = {
     "⟵": "\\leftarrow", "∪": "\\cup", "∩": "\\cap", "∅": "\\emptyset", "⊤": "\\top",
     "⊥": "\\bot", "·": "\\cdot", "⇝": "\\rightsquigarrow", "…": "\\dots", "∑": "\\sum",
     "∏": "\\prod", "√": "\\sqrt", "≔": ":=", "≈": "\\approx", "≡": "\\equiv",
-    "≢": "\\neq", "∖": "\\setminus", "⊨": "\\models", "⇀": "\\rightharpoonup",
+    "≢": "≢", "∖": "\\setminus", "⊨": "\\models", "⇀": "\\rightharpoonup",
     "↔": "\\leftrightarrow", "∼": "\\sim", "≅": "\\cong", "∝": "\\propto", "∣": "\\mid",
     "′": "'", "″": "''", "⟹": "\\Rightarrow", "⟸": "\\Leftarrow", "∷": "::",
     "⟼": "\\mapsto", "↣": "\\hookrightarrow", "⊑": "\\subseteq", "⊒": "\\supseteq",
+}
+PRECOMPOSED = {
+    # NFD decomposes these relations into a base glyph plus U+0338. Preserve
+    # reviewed relation identity before accent normalization.
+    "≠": "\\neq",
+    "∉": "\\notin",
+    "≢": "≢",
+    "≉": "≉",
+    "⊕": "⊕",
+    "−": "-",
 }
 CAL = {}
 for _i, _ch in enumerate("ABCDEFGHIJKLMNOPQRSTUVWXYZ"):
@@ -66,7 +76,10 @@ def _atom(ch):
 
 
 def convert(s):
-    s = unicodedata.normalize("NFD", s)   # Ô -> O + combining circumflex, etc.
+    s = "".join(
+        PRECOMPOSED.get(ch, unicodedata.normalize("NFD", ch))
+        for ch in s
+    )   # Ô -> O + combining circumflex, while negated relations stay atomic
     out = []
     i, n = 0, len(s)
     while i < n:

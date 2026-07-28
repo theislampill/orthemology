@@ -24,6 +24,8 @@ class MachineAssignmentClassificationTests(unittest.TestCase):
             "PYTHONUTF8=1",
             "PYTHONIOENCODING=utf-8",
             "HOME=/srv/orthemology",
+            "ENDPOINT=https://example.test/search?x=1",
+            "QUERY_URL=https://example.test/search?q=a+b#result",
             "$env:Path='C:\\Python311'",
             "export LC_ALL=C.UTF-8",
         )
@@ -82,6 +84,33 @@ class MachineAssignmentClassificationTests(unittest.TestCase):
         for span in rejected:
             with self.subTest(span=span):
                 self.assertFalse(classify(span), span)
+
+
+class BuildSourceExtractionTests(unittest.TestCase):
+    def test_extracts_only_docs_owner_and_ignores_unrelated_paths(self):
+        build_text = """
+COMPATIBILITY_REPORT_PATH = pathlib.Path(
+    "docs/project-closure/r7e-sol/R7E-SOL-ARXIV-COMPATIBILITY.md"
+)
+DOCS = [
+    (
+        "sample",
+        [
+            "manuscript/orthemma-ortheme-systems-revised-draft.md",
+            "companion/orthability-and-the-ground-of-intelligibility.md",
+        ],
+    ),
+]
+"""
+        extract = getattr(VALIDATOR, "extract_build_sources", None)
+        self.assertIsNotNone(extract, "exact DOCS source extraction is missing")
+        self.assertEqual(
+            extract(build_text),
+            {
+                "manuscript/orthemma-ortheme-systems-revised-draft.md",
+                "companion/orthability-and-the-ground-of-intelligibility.md",
+            },
+        )
 
 
 if __name__ == "__main__":

@@ -1677,6 +1677,74 @@ runtime: implemented
                 observed.append((name, code, output))
         self.assertEqual([], observed)
 
+    def test_task14_direct_gap_mutations_fail_through_production_entry_point(self):
+        """Give six previously indirect Task 14 boundaries one exact mutation."""
+        code, output = production_exit(
+            self.activation, self.records, self.inventory, self.adoption, self.collective
+        )
+        self.assertEqual(0, code, output)
+
+        cases = []
+
+        activation = copy.deepcopy(self.activation)
+        item(activation["fixture_outcomes"], "fixture_id", "ACT-POS-001")[
+            "claimant_assessments"
+        ][0].pop("activation_contract_version")
+        cases.append(("missing-activation-contract-version", {"activation": activation}))
+
+        records = copy.deepcopy(self.records)
+        capture = item(records["orthing_events"], "event_id", "EV-WAKE-001")
+        assessment = item(records["orthing_events"], "event_id", "EV-WAKE-001-ASSESS")
+        capture["sequence"], assessment["sequence"] = (
+            assessment["sequence"],
+            capture["sequence"],
+        )
+        cases.append(("claimant-gate-before-capture", {"records": records}))
+
+        records = copy.deepcopy(self.records)
+        item(records["somnic_assessments"], "assessment_id", "SA-CLOSED-001")[
+            "auto_requeue"
+        ] = True
+        cases.append(("closed-assessment-auto-requeue", {"records": records}))
+
+        records = copy.deepcopy(self.records)
+        item(records["recurrence_reports"], "recurrence_report_id", "RR-001")[
+            "causal_diagnosis"
+        ] = "established"
+        cases.append(("recurrence-promoted-to-causation", {"records": records}))
+
+        records = copy.deepcopy(self.records)
+        item(records["outcome_evaluations"], "outcome_evaluation_id", "OUTCOME-001")[
+            "self_validating"
+        ] = True
+        cases.append(("writeback-actuation-self-validation", {"records": records}))
+
+        for promotion in ("source-independence", "warrant", "truth"):
+            collective = copy.deepcopy(self.collective)
+            collective["multi_operator_count_implies"] = [promotion]
+            cases.append(
+                (
+                    "multi-operator-promotion-" + promotion,
+                    {"collective": collective},
+                )
+            )
+
+        collective = copy.deepcopy(self.collective)
+        collective["semantic_boundaries"][
+            "multi_operator_recurrence_proves_tawatur"
+        ] = True
+        cases.append(
+            (
+                "multi-operator-testimonial-transmission-promotion",
+                {"collective": collective},
+            )
+        )
+
+        self.assertEqual(9, len(cases))
+        for name, changes in cases:
+            with self.subTest(mutation=name):
+                self.assertRejected(**changes)
+
 
 if __name__ == "__main__":
     unittest.main(verbosity=2)

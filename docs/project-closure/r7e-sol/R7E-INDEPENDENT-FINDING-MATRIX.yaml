@@ -1,5 +1,5 @@
 schema: orthemology-r7e-sol-independent-finding-matrix-v1
-status: current-candidate
+status: task15-terminal-candidate
 source:
   title: R7E independent audit and final findings
   sha256: ca8bc17eaf4f223239f641487197c9e17b536a5da4432953c724545b62ca8a56
@@ -14,9 +14,11 @@ findings:
   evidence:
   - docs/current-candidate-state.yaml stops at a placeholder R7D child and does not name exact PR 11 or PR 12 observations
   - scripts/validate_candidate_state.py passes the stale natural state
+  - af90c37f58b70065b2cf96e29d808dfb52f80704 independently closes the complete-topology and stale-overlay false-pass boundary
   severity: blocker
   repair_task: 2
-  terminal_status: open
+  terminal_status: resolved
+  resolution: complete generated topology and adversarial omission/drift controls
 - id: R7E-SOL-F002
   title: 36-agent workflow statistics are not independently reconstructible
   audit_locus: principal blocking finding 2
@@ -29,6 +31,7 @@ findings:
   severity: blocker
   repair_task: 3
   terminal_status: resolved
+  resolution: attributed historical statistics are preserved without promotion to reconstructed evidence
 - id: R7E-SOL-F003
   title: candidate backlog is not a reliable evidence ledger
   audit_locus: principal blocking finding 3
@@ -41,6 +44,7 @@ findings:
   severity: blocker
   repair_task: 3
   terminal_status: resolved
+  resolution: immutable occurrence-level ledger supersedes duplicate and truncated historical rows
 - id: R7E-SOL-F004
   title: R7E cites an unavailable REBAKE input
   audit_locus: principal blocking finding 4
@@ -48,36 +52,44 @@ findings:
   evidence:
   - applications/daee-epistemics/SOUND-DESCENT-MODEL-COMPARISON.md cites REBAKE sections 7.3 and 7.5
   - the cited attachment is absent from the candidate repository and archive evidence
+  - 79e0bac9c3da7b6a6b6f6e783fcd73f9e6df18cd preserves the unavailable direct-source custody boundary and prevents the absent input from carrying claims
   severity: high
   repair_task: 7
-  terminal_status: open
+  terminal_status: resolved
+  resolution: unavailable input is explicitly held and non-load-bearing rather than invented
 - id: R7E-SOL-F005
   title: stale candidate topology is a demonstrated validator false pass
   audit_locus: principal blocking finding 5 probe 1
   disposition: reproduced
   evidence:
   - python scripts/validate_candidate_state.py passes while the natural overlay omits PR 11 and PR 12
+  - af90c37f58b70065b2cf96e29d808dfb52f80704 makes omitted, stale, and fabricated topology fail closed
   severity: blocker
   repair_task: 2
-  terminal_status: open
+  terminal_status: resolved
+  resolution: production topology validator and negative controls reject the demonstrated false pass
 - id: R7E-SOL-F006
   title: literal differentiable gradient wording is a demonstrated argument-map false pass
   audit_locus: principal blocking finding 5 probe 2
   disposition: reproduced
   evidence:
   - a disposable argument-map mutation asserting literal differentiable gradient flow passed scripts/validate_argument_map.py
+  - 95da523c1f46fac437928afe9a0351798fe0344c binds the repaired map identities and rejects literal-gradient promotion
   severity: blocker
   repair_task: 8
-  terminal_status: open
+  terminal_status: resolved
+  resolution: typed operator and argument-map contracts replace the literal-gradient false pass
 - id: R7E-SOL-F007
   title: literal physical divergence and curl wording is a demonstrated semantic false pass
   audit_locus: principal blocking finding 5 probe 3
   disposition: reproduced
   evidence:
   - a disposable sound-descent mutation asserting literal physical divergence and curl passed scripts/validate_meta_noetic_memetics.py
+  - d96e322d699c51387e85536f665d2b205458edee requires typed target-field operators and rejects physical-operator promotion
   severity: blocker
   repair_task: 5
-  terminal_status: open
+  terminal_status: resolved
+  resolution: typed semantic-operator contract closes the demonstrated false pass
 - id: R7E-SOL-F008
   title: DAEE current-pin claim is wrong at commit level while the deeper crosswalk gap is real
   audit_locus: DAEE and Orthemology deeper relationship
@@ -85,18 +97,22 @@ findings:
   evidence:
   - public DAEE main at design observation equals historical pin c86b3c6673147b8802fe222373a165a37d4d24a8, refuting a published post-pin delta
   - the inherited Orthemology crosswalk does not fully type the Diagnostic IR, route pressure, transition, reread, field diagnostics, closure, and release relationships
+  - d96e322d699c51387e85536f665d2b205458edee and cca756425fa0f23dc9e34c6d0289eea313ab3336 close the typed crosswalk while preserving nonidentity
   severity: high
   repair_task: 5
-  terminal_status: open
+  terminal_status: resolved
+  resolution: exact pin correction and typed application crosswalk are independently approved
 - id: R7E-SOL-F009
   title: OSM optimizer account is technically imprecise
   audit_locus: OSM placement technical correction
   disposition: reproduced
   evidence:
   - the R7E prose compresses Baum-Welch expectation-maximization, Viterbi refinement, BPTT gradient computation, and Adam optimization under loose gradient language
+  - cca756425fa0f23dc9e34c6d0289eea313ab3336 preserves the task-specific analogy and exact optimizer/object firewall
   severity: high
   repair_task: 7
-  terminal_status: open
+  terminal_status: resolved
+  resolution: optimizer roles are stated precisely and do not transfer object identity
 - id: R7E-SOL-F010
   title: fitrah tawatur and mental-external evidence boundaries need stronger typing
   audit_locus: epistemology and meta-noetic memetics
@@ -104,9 +120,11 @@ findings:
   evidence:
   - the current warrant record lacks transmitter-quality and subject-relative fields required by the supplied secondary reconstruction
   - existing boundaries do not yet carry all planned negative tests against scalar fitrah, count-based tawatur, or mental-to-external entailment
+  - 79e0bac9c3da7b6a6b6f6e783fcd73f9e6df18cd closes the qualitative, transmitter, subject-relative, and mental-external boundaries
   severity: high
   repair_task: 6
-  terminal_status: open
+  terminal_status: resolved
+  resolution: typed warrant fields and negative controls prohibit scalar/count/entailment promotion
 - id: R7E-SOL-F011
   title: dynamic companion contains notation and objective-gradient defects
   audit_locus: dynamic companion internal contradictions
@@ -114,9 +132,11 @@ findings:
   evidence:
   - cbab14747835855d232448f648eefa1d4e36074e:companion/dynamic-orthing-noetic-learning-and-orthability.md:113 and :235 use Pi as the reachability policy/action-sequence argument, while cbab14747835855d232448f648eefa1d4e36074e:docs/notation-registry.yaml:24-26 fixes Pi_A as the complete-profile space; the glyph/role reuse is a notation collision
   - cbab14747835855d232448f648eefa1d4e36074e:companion/dynamic-orthing-noetic-learning-and-orthability.md:237-238 says correction tracks an objective gradient even though :125-127 disclaims a literal scalar gradient; the objective-gradient formulation overstates the typed contract
+  - 95da523c1f46fac437928afe9a0351798fe0344c closes the notation, reachability, correction, and convergence boundaries
   severity: high
   repair_task: 8
-  terminal_status: open
+  terminal_status: resolved
+  resolution: source and structured-map owners now agree on typed, nonliteral roles
 - id: R7E-SOL-F012
   title: argument map has status bridge and circularity defects
   audit_locus: argument-map problems
@@ -124,18 +144,22 @@ findings:
   evidence:
   - rung 3 overstates convergence and rung 4 misclassifies a philosophical extension
   - upper rungs mix school-neutral and creed-internal roles, omit bridge premises, and the personal-attributes premise assumes its conclusion
+  - 95da523c1f46fac437928afe9a0351798fe0344c binds repaired rung roles, bridge premises, rival exits, and held conclusions
   severity: blocker
   repair_task: 8
-  terminal_status: open
+  terminal_status: resolved
+  resolution: finite argument-map approval preserves cross-framework and school-internal boundaries
 - id: R7E-SOL-F013
   title: Arabic and divine-Speech wording creates a created-uncreated ambiguity
   audit_locus: Arabic and divine Speech
   disposition: reproduced
   evidence:
   - companion/DYNAMIC-ORTHABILITY-ARGUMENT-MAP.yaml and companion prose do not safely separate created convention, creaturely act/media/reception, and revealed Arabic wording as Allah's Speech under the Athari route
+  - 95da523c1f46fac437928afe9a0351798fe0344c separates created convention, creaturely carriage/reception, and creed-internal revealed-Speech conclusions
   severity: blocker
   repair_task: 8
-  terminal_status: open
+  terminal_status: resolved
+  resolution: divine-Speech boundaries are explicit, route-specific, and nonpromotional
 - id: R7E-SOL-F014
   title: full mathematical source migration remains unfinished
   audit_locus: mathematical publication remains unfinished
@@ -143,9 +167,13 @@ findings:
   evidence:
   - approximately 208 formula-like backtick spans remain unclassified or unmigrated
   - current migrated flags conflate repaired missing glyphs with complete source migration
+  - fd73f652009f182802b10d547618e7e3b29febd7 closes the finite classification boundary
+  - 1703a783d9b25a9cfa93370c4a1a0b568fa497d0 preserves the reviewed authoritative source tree
+  - 61ad3b6f59a72a9b1fca53bd93a7a958e84f6e08 closes package, PDF, and visual provenance
   severity: blocker
   repair_task: 10
-  terminal_status: open
+  terminal_status: resolved
+  resolution: all seven sources are migrated and all six governed artifact sets are reproducible
 - id: R7E-SOL-F015
   title: historical missing-glyph defect remains present
   audit_locus: mathematical publication fixed result
@@ -156,3 +184,4 @@ findings:
   severity: historical-high
   repair_task: 12
   terminal_status: resolved
+  resolution: baseline refutation is retained and the final 61-page artifact set independently reconfirms it

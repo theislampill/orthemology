@@ -1,18 +1,91 @@
 {
+  "schema": "orthemology-pdf-sources-v2",
+  "artifact_id": "notation-gallery",
   "pdf": "notation-gallery.pdf",
-  "pdf_sha256": "af6aad99edd3661cbdf0baf996de297924e9dd9e9484c8843ff5461f96887a04",
-  "page_count": 3,
-  "sources": {
-    "docs/notation-gallery.md": "449ead6c2f13ae066cf0ae20d3b08f76e498bf58c3c8b18da34e70a8d2863b49"
+  "pdf_sha256": "3d5cddca2c72b3bb8169d6cc9cfb6764c6cb22815ff35109fc82a1c8fc8ec824",
+  "page_count": 2,
+  "source_commit": "aee5c7389b57ec7c3150d8fee3b3e398195d1395",
+  "source_tree": "766a3cfd57058d56538a0571fcff176ca44288b3",
+  "independently_reviewed_equivalent_source_commit": "aee5c7389b57ec7c3150d8fee3b3e398195d1395",
+  "independently_reviewed_equivalent_source_tree": "766a3cfd57058d56538a0571fcff176ca44288b3",
+  "source_tree_equivalence": "verified-identical",
+  "source_date_epoch": 1785167892,
+  "build_time_utc": "2026-07-27T15:58:12Z",
+  "source_hashes": {
+    "markdown": {
+      "docs/notation-gallery.md": "449ead6c2f13ae066cf0ae20d3b08f76e498bf58c3c8b18da34e70a8d2863b49"
+    },
+    "latex": {
+      "publication/latex/notation-gallery/main.tex": "2bc9834204f90af9de38f7248ce524116834b8b3d856611b548b8c432b5535d8"
+    },
+    "bibliography": {
+      "path": "references/orthemology.bib",
+      "sha256": "ca6bd2e96c52ff35db569793443331f54c6f5415fa69c1f2fa2592c16bb7cc56"
+    },
+    "compatibility": {
+      "publication/latexmkrc": "8fab079b47dda579db9b75aef4f25a4b3c78bc19089957e7076a95f1dc717979",
+      "publication/pdftex-unicode-compat.tex": "3d3eb3d8ecd1619a67fa3575866de56c38390f4c28f2ea95a76a70aacbba4771"
+    }
   },
-  "source_commit": "9deda9c908e40bbf3b3ea5604bf5c3a6683d8afd",
-  "artifact_commit": "the git commit that introduces/updates this artifact (two-stage provenance; see `git log -- artifacts/`)",
-  "source_date_epoch": 1784772365,
-  "build_command": "python scripts/build_pdfs.py",
+  "publication_profile": {
+    "path": "docs/publication-profile.yaml",
+    "sha256": "176e78534db91ad9c3c6f441676fa6a506470e344b5acba7060262a0d0b973a6"
+  },
+  "toolchain_lock": {
+    "path": "publication/toolchain-lock.yaml",
+    "sha256": "25eba4659e5817f1d90d1511facff15afadcaa463be3b6aea491bc145a8dc4d4"
+  },
+  "candidate_status": {
+    "source": "docs/current-candidate-state.yaml",
+    "sha256": "7311b9d973761648f8b02ee47c222e64b8a752df57e86bcc74e47c34edc34fce",
+    "label": "SOL INDEPENDENT REVIEW CANDIDATE — NO SIGNOFF OR MERGE READINESS",
+    "observed_at_utc": "2026-07-21T18:10:22Z",
+    "timeless_state": false,
+    "status_claims": {
+      "candidate_status": "proposed-candidate",
+      "merged": false,
+      "independent_signoff": false,
+      "ready_for_merge": false,
+      "evidence": {
+        "merged": [],
+        "independent_signoff": [],
+        "ready_for_merge": []
+      },
+      "next_action": "Complete the bounded Sol repair and independent review before any separately authorized protected integration; refresh every PR observation first."
+    }
+  },
+  "entry_point": "publication/latex/notation-gallery/main.tex",
+  "build_workdir": "publication/latex/notation-gallery",
+  "build_command": "/usr/local/texlive/2025/bin/x86_64-linux/latexmk main.tex",
+  "source_package": {
+    "path": "artifacts/notation-gallery.source.tar.gz",
+    "sha256": "f0faa65a739dc4767c0b803c53db1306a60e13a92df517f66c81fa1071a527f3"
+  },
+  "source_manifest": {
+    "path": "artifacts/notation-gallery.source-manifest.json",
+    "sha256": "ea4519b1509e16dbb174a894e12f9b369aed6ec3d587ebedffbc822bb14675aa"
+  },
   "tools": {
-    "typst": "0.15.0",
-    "markdown-it-py": "4.0.0",
+    "bibtex": "0.99d",
+    "kpathsea": "6.4.1",
+    "latexmk": "4.87",
+    "pdftex": "1.40.28",
+    "poppler": "25.07.0",
+    "pypdf": "6.14.2",
     "python": "3.11.9"
   },
-  "generation_status": "complete; strict conversion (no skipped content); double-build verified"
+  "bibliography_qa": {
+    "disposition": "EMPTY_BIBLIOGRAPHY_NO_CITATIONS",
+    "bibtex_return_code": 2,
+    "bibtex_version": "0.99d",
+    "database_path": "../../../references/orthemology.bib",
+    "bibliography_style": "plainnat",
+    "citation_commands": 0,
+    "aux_citations": 0,
+    "bbl_sha256": "8e5c0a84578475116bd7e34d81ab6a955fa410c276f07902a2ba9c41ed532db6",
+    "blg_sha256": "e42a8085c7f72304a16ef66b8435e519e8fb2fed16ff2a0e303b6f63fbe57ebf",
+    "bibliography_sha256": "ca6bd2e96c52ff35db569793443331f54c6f5415fa69c1f2fa2592c16bb7cc56",
+    "stale_bbl_preexisting": false
+  },
+  "generation_status": "complete; PDFLaTeX through latexmk; independent double build byte-identical; clean source-package rebuild verified"
 }
