@@ -31,23 +31,23 @@ rules:
 - path: docs/project-closure/r4/MODEL-SUBSTITUTION-INTERRUPTION-PR3.md
   status: interruption-provenance
 - prefix: docs/project-closure/r7e-sol/
-  status: current-candidate
-  note: R7E Sol independent repair control plane on an unmerged review branch; no independent signoff or merge readiness
+  status: current
+  note: R7E Sol independently reviewed control plane and protected-main verification; the final record follows the non-self-referential protected-follow-up pattern
 - prefix: docs/project-closure/r7e/
-  status: current-candidate
-  note: R7E Opus candidate orthing-supplementation (draft PR into the R7D branch); unmerged; never merged current state
+  status: historical-snapshot
+  note: R7E candidate-era snapshot preserved after its reviewed lineage reached protected-main through the completed cascade
 - prefix: docs/project-closure/r7d/
-  status: current-candidate
-  note: R7D Opus candidate closure (draft child PR into PR #10); unmerged; never merged current state
+  status: historical-snapshot
+  note: R7D candidate-era snapshot preserved after its reviewed lineage reached protected-main through the completed cascade
 - prefix: docs/project-closure/r7c/
-  status: current-candidate
-  note: R7C Opus candidate closure (draft grandchild PR #10); unmerged
+  status: historical-snapshot
+  note: R7C candidate-era snapshot preserved after its reviewed lineage reached protected-main through the completed cascade
 - prefix: docs/project-closure/r7b/
-  status: current-candidate
-  note: R7B Opus candidate closure (draft child PR #9); unmerged
+  status: historical-snapshot
+  note: R7B candidate-era snapshot preserved after its reviewed lineage reached protected-main through the completed cascade
 - prefix: docs/project-closure/r7/
-  status: current-candidate
-  note: R7 candidate closure (draft PR #8); unmerged
+  status: historical-snapshot
+  note: R7 candidate-era snapshot preserved after its reviewed lineage reached protected-main through the completed cascade
 - prefix: docs/project-closure/r6/
   status: current
 - prefix: docs/project-closure/r5/

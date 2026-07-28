@@ -25,6 +25,7 @@ Checks:
      provisional is false — complete (no PENDING placeholders, all r5_merge
      fields non-null).
 """
+import hashlib
 import io
 import json
 import os
@@ -162,6 +163,44 @@ R7E_DECISION_BOUNDARY = {
     "ready_for_merge": False,
     "merged": False,
 }
+R7E_TASK15_REVIEWED_COMMIT = "b22d4351f4d3a76bc3f16b41704a470b4abb1aa5"
+R7E_TASK16_MAIN_MERGE = "8db1630ab715b0931907c627be97b32399d6f4fc"
+R7E_TASK16_MERGED_RECORD = (
+    "docs/project-closure/r7e-sol/R7E-SOL-MERGED-MAIN-VERIFICATION.md")
+R7E_TASK16_MERGED_RECORD_SHA256 = (
+    "d75cf18da8f6ac68fa3b5f00038a360f9dc87de056494efcf459fb7da6a1e7a3")
+R7E_TASK16_MERGES = [
+    "e12cfbbf880b52c38f4064bb7ec6e4393705e319",
+    "4d09fed5f2d2106fd5ecd9a79b1d13e6b9af32fc",
+    "f4a4804101202c056a31f3d30f2ef931e1dcca2d",
+    "2867f3510c343fea8c7fd6c37b8ad38ce5de83a6",
+    "17f6783d5d5a39a90dee7b10573ef6bc3732ae5e",
+    R7E_TASK16_MAIN_MERGE,
+]
+R7E_TASK16_RUNS = [
+    30317000439, 30317471209, 30317917503, 30317919628,
+    30318432384, 30318434266, 30318923898, 30318925662,
+    30319389233, 30319391979, 30319878639, 30319880488,
+    30320348878,
+]
+R7E_TASK16_PUBLIC_SURFACES = [
+    "README.md",
+    "STATUS.md",
+    "TODO.md",
+    "docs/current-state.yaml",
+    "docs/project-closure/HISTORICAL-STATUS-INDEX.yaml",
+    "docs/project-closure/r7e-sol/AUTONOMOUS-R7E-SOL-STATE.json",
+    "docs/project-closure/r7e-sol/R7E-HUNK-DISPOSITION.md",
+    R7E_TASK16_MERGED_RECORD,
+]
+R7E_PROHIBITED_TERMS = [
+    "ani" + "me",
+    "Ghost" + " in the Shell",
+    "Stand" + " Alone Complex",
+    "Tachi" + "koma",
+    "Fuchi" + "koma",
+]
+R7E_PROHIBITED_ACRONYM = "S" + "A" + "C"
 R7E_PATHS = {
     "applications/daee-epistemics/SOUND-DESCENT-MODEL-COMPARISON.md",
     "artifacts/dynamic-orthing-noetic-learning-orthability-draft.pdf",
@@ -187,6 +226,11 @@ def read(rel):
     return io.open(p, encoding="utf-8").read() if os.path.exists(p) else ""
 
 
+def read_bytes(rel):
+    p = os.path.join(ROOT, rel)
+    return open(p, "rb").read() if os.path.exists(p) else b""
+
+
 def valid_utc_timestamp(value):
     if not isinstance(value, str) or not re.fullmatch(
             r"\d{4}-\d{2}-\d{2}T\d{2}:\d{2}:\d{2}Z", value):
@@ -206,6 +250,49 @@ def decision_candidate_boundary(text):
         re.S,
     )
     return yaml.safe_load(match.group(1)) if match else {}
+
+
+def task16_record_claim_issues(text):
+    """Return narrow public-record promotion or self-attestation defects."""
+    issues = []
+    sentences = re.split(r"(?<=[.!?])(?:\s+|$)", text)
+    record_subject = (
+        r"\b(?:this|the)\s+(?:tracked\s+|merged-main\s+|verification\s+)?record\b")
+    attestation_verb = (
+        r"\b(?:verif(?:y|ies|ied)|validat(?:e|es|ed)|attest(?:s|ed)?|"
+        r"certif(?:y|ies|ied)|authenticat(?:e|es|ed)|prove(?:s|d)?)\b")
+    forbidden_object = (
+        r"\b(?:itself|its\s+own\s+(?:commit|merge|contents?|validity|integrity)|"
+        r"(?:its\s+)?containing(?:\s+follow-up)?\s+(?:commit|merge))\b")
+    ar6_positive = (
+        r"\b(?:approved|adopted|accepted|established|integrated|"
+        r"repository-ready|promoted)\b")
+    ar6_object = r"\b(?:theorem|proof|claim|result|work|repository\s+theory)\b"
+
+    for sentence in sentences:
+        if (
+            re.search(record_subject, sentence, flags=re.IGNORECASE)
+            and re.search(attestation_verb, sentence, flags=re.IGNORECASE)
+            and re.search(forbidden_object, sentence, flags=re.IGNORECASE)
+        ):
+            issues.append("record claims self or containing-merge attestation")
+
+        lowered = sentence.lower()
+        has_ar6_promotion_shape = (
+            "ar6" in lowered
+            and "interrupt" in lowered
+            and re.search(ar6_positive, sentence, flags=re.IGNORECASE)
+            and re.search(ar6_object, sentence, flags=re.IGNORECASE)
+        )
+        negated = (
+            "not_applied_not_approved" in lowered
+            or re.search(
+                r"\b(?:no|not|never)\b.{0,100}" + ar6_positive,
+                sentence, flags=re.IGNORECASE)
+        )
+        if has_ar6_promotion_shape and not negated:
+            issues.append("interrupted AR6 result is promoted")
+    return issues
 
 
 def main():
@@ -322,12 +409,34 @@ def main():
           classify("docs/project-closure/r4-fresh-fable-review/AUTONOMOUS-REVIEW-STATE.json")
           == "historical-snapshot")
 
-    # 6a. R7E Sol independent-review control plane (Decision 0034). These
-    # records are current-candidate evidence only: never sign-off or merge
-    # readiness. Exact SHAs are timestamped observations, not HEAD contracts.
-    check("R7E-Sol control-plane prefix is current-candidate",
+    # 6a. R7E Sol independent-review and merged-main control plane (Decision
+    # 0034). Historical topology remains a timestamped observation; the final
+    # merge record follows the non-self-referential protected-follow-up pattern.
+    check("R7E-Sol control-plane prefix is current after protected integration",
           classify("docs/project-closure/r7e-sol/AUTONOMOUS-R7E-SOL-STATE.json")
-          == "current-candidate")
+          == "current")
+    integrated_prefixes = [
+        "docs/project-closure/r7e/",
+        "docs/project-closure/r7d/",
+        "docs/project-closure/r7c/",
+        "docs/project-closure/r7b/",
+        "docs/project-closure/r7/",
+    ]
+    check("integrated candidate-era closure records are historical snapshots",
+          all(classify(prefix + "AUTONOMOUS-STATE") == "historical-snapshot"
+              for prefix in integrated_prefixes))
+    stale_integrated_notes = [
+        rule for rule in idx["rules"]
+        if rule.get("prefix") in integrated_prefixes
+        and (
+            rule.get("status") != "historical-snapshot"
+            or "protected-main" not in str(rule.get("note", "")).lower()
+            or "unmerged" in str(rule.get("note", "")).lower()
+            or "never merged" in str(rule.get("note", "")).lower()
+        )
+    ]
+    check("integrated candidate-era classifications contain no false live topology",
+          not stale_integrated_notes, repr(stale_integrated_notes))
 
     sol = json.loads(read(
         "docs/project-closure/r7e-sol/AUTONOMOUS-R7E-SOL-STATE.json") or "{}")
@@ -362,10 +471,10 @@ def main():
     pdf = baseline.get("pdf_rebuild") or {}
     check("R7E-Sol baseline records six byte-identical PDF rebuilds",
           pdf.get("artifacts") == 6 and pdf.get("byte_identical") == 6)
-    check("R7E-Sol state records candidate sign-off without claiming Task 16 completion",
+    check("R7E-Sol state records completed integration without follow-up self-attestation",
           sol.get("independent_signoff") is True
           and sol.get("ready_for_merge") is False
-          and sol.get("merged") is False)
+          and sol.get("merged") is True)
     task15 = sol.get("task15_verification") or {}
     check("R7E-Sol Task 15 binds the approved exact remote candidate",
           task15.get("candidate_commit")
@@ -388,6 +497,67 @@ def main():
           and task15.get("raster_hash_lists_identical") is True
           and task15.get("visually_inspected_pages") == 61
           and task15.get("prohibited_semantic_hits") == 0)
+    task16 = sol.get("task16_verification") or {}
+    task16_record = read(R7E_TASK16_MERGED_RECORD)
+    task16_record_sha256 = hashlib.sha256(
+        read_bytes(R7E_TASK16_MERGED_RECORD)).hexdigest()
+    check("R7E-Sol Task 16 merged-main record matches the immutable byte contract",
+          task16_record_sha256 == R7E_TASK16_MERGED_RECORD_SHA256,
+          task16_record_sha256)
+    check("R7E-Sol Task 16 binds the reviewed candidate and protected-main merge",
+          task16.get("reviewed_commit") == R7E_TASK15_REVIEWED_COMMIT
+          and task16.get("main_merge_commit") == R7E_TASK16_MAIN_MERGE
+          and task16.get("merge_commits") == R7E_TASK16_MERGES
+          and R7E_TASK15_REVIEWED_COMMIT in task16_record
+          and R7E_TASK16_MAIN_MERGE in task16_record)
+    cascade_labels = ["PR #13", "PR #12", "PR #11", "PR #10", "PR #9", "PR #8"]
+    check("R7E-Sol Task 16 record binds every intermediate merge to its PR",
+          all(re.search(
+              r"\|\s*" + re.escape(label) + r"[^|]*\|\s*`"
+              + re.escape(commit) + r"`\s*\|",
+              task16_record)
+              for label, commit in zip(cascade_labels, R7E_TASK16_MERGES)))
+    check("R7E-Sol Task 16 binds all successful exact-SHA runs",
+          task16.get("github_actions_runs") == R7E_TASK16_RUNS
+          and task16.get("github_actions_conclusion") == "SUCCESS"
+          and all(str(run) in task16_record for run in R7E_TASK16_RUNS))
+    check("R7E-Sol Task 16 records the complete fresh-main proof",
+          task16.get("workflow_command_count") == 71
+          and task16.get("supplemental_command_count") == 8
+          and task16.get("pdf_pages") == 61
+          and task16.get("visually_inspected_pages") == 61
+          and task16.get("visual_defects") == 0
+          and task16.get("tracked_paths") == 707
+          and task16.get("release_manifest_entries") == 706
+          and task16.get("prohibited_semantic_hits") == 0
+          and task16.get("ar6_records") == 1329
+          and task16.get("ar6_unclassified_counters") == 0)
+    check("R7E-Sol Task 16 preserves the non-self-referential follow-up boundary",
+          task16.get("followup_record_self_hashed") is False
+          and task16.get("followup_protected_readback") == "pending"
+          and "never self-hashed" in task16_record
+          and "protected readback" in task16_record
+          and not re.search(
+              r"containing.{0,100}\b[0-9a-f]{40}\b",
+              task16_record, flags=re.IGNORECASE | re.DOTALL))
+    record_claim_issues = task16_record_claim_issues(task16_record)
+    check("R7E-Sol Task 16 record rejects promotion and self-attestation claims",
+          not record_claim_issues, repr(record_claim_issues))
+    check("R7E-Sol Task 16 preserves AR6 interruption and non-application",
+          task16.get("ar6_status") == "INTERRUPTED_IN_PROGRESS"
+          and task16.get("ar6_integration_status") == "NOT_APPLIED_NOT_APPROVED")
+    prohibited_hits = []
+    for path in R7E_TASK16_PUBLIC_SURFACES:
+        text = read(path)
+        for term in R7E_PROHIBITED_TERMS:
+            if re.search(re.escape(term), text, flags=re.IGNORECASE):
+                prohibited_hits.append(path + ":" + term)
+        if re.search(
+                r"(?<![A-Za-z0-9])" + R7E_PROHIBITED_ACRONYM
+                + r"(?![A-Za-z0-9])", text):
+            prohibited_hits.append(path + ":prohibited-acronym")
+    check("R7E-Sol Task 16 public surfaces use neutral terminology",
+          not prohibited_hits, repr(prohibited_hits))
     control_plane = sol.get("control_plane") or {}
     check("R7E-Sol state records the exact control-plane links",
           control_plane == R7E_CONTROL_PLANE, repr(control_plane))
@@ -465,9 +635,53 @@ def main():
           in hunk_rows
           and ("docs/project-closure/r7e/ORTHING-CANDIDATE-BACKLOG.md", "keep")
           in hunk_rows)
-    check("R7E hunk disposition records the Task 15 terminal candidate",
-          "TASK 15 VERIFIED CANDIDATE" in hunk_text
-          and "TASK 16 INTEGRATION PENDING" in hunk_text)
+    check("R7E hunk disposition records Task 16 integration and follow-up boundary",
+          "TASK 16 PROTECTED CASCADE AND FRESH-MAIN PROOF COMPLETE" in hunk_text
+          and "FOLLOW-UP PROTECTED READBACK PENDING" in hunk_text)
+    check("R7E hunk disposition contains no stale Task 16 future tense",
+          "must be regenerated after each Task 16 merge" not in hunk_text
+          and "Task 16 must regenerate it last" not in hunk_text
+          and "Correctly classifies R7E as current-candidate" not in hunk_text)
+
+    todo = read("TODO.md")
+    stale_tasks = []
+    for task_number in range(1, 11):
+        match = re.search(
+            r"^### Task %d\b(?P<body>.*?)(?=^### Task \d+\b|\Z)"
+            % task_number, todo, flags=re.MULTILINE | re.DOTALL)
+        body = match.group("body") if match else ""
+        if (
+            not body
+            or "integrated to protected `main`" not in body
+            or "not merged to `main`" in body
+            or "inherits Tasks 15–16 integration gates" in body
+        ):
+            stale_tasks.append(task_number)
+    check("TODO Tasks 1-10 record completed protected-main integration",
+          not stale_tasks, repr(stale_tasks))
+    task16_match = re.search(
+        r"^### Task 16\b(?P<body>.*?)(?=^### Task \d+\b|\Z)",
+        todo, flags=re.MULTILINE | re.DOTALL)
+    task16_body = task16_match.group("body") if task16_match else ""
+    check("TODO Task 16 remains completed through protected-main verification",
+          bool(task16_body)
+          and "Status: completed through protected-main merge and fresh-main verification"
+          in task16_body
+          and "unfinished; protected cascade pending" not in task16_body)
+    readme = read("README.md")
+    check("README records current protected-main truth without adoption promotion",
+          R7E_TASK16_MAIN_MERGE in readme
+          and "R7E-SOL-MERGED-MAIN-VERIFICATION.md" in readme
+          and "Decisions 0020–0036 are `proposed-candidate` in the unmerged PR chain"
+          not in readme
+          and "No PR is merged" not in readme
+          and "Git integration does not establish" in readme)
+    status_text = read("STATUS.md")
+    check("STATUS points to current merged-main verification without adoption promotion",
+          "docs/project-closure/r7e-sol/R7E-SOL-MERGED-MAIN-VERIFICATION.md"
+          in status_text
+          and "Git integration is **not** theory or terminology adoption"
+          in status_text)
 
     d34 = (reg.get("decisions") or {}).get("0034") or {}
     check("Decision 0034 is proposed-candidate on PR 12",
@@ -483,20 +697,29 @@ def main():
           "HISTORICAL SNAPSHOT" in t and "discharged" in t)
 
     # 8. merged-state record honesty
-    ms_path = str(rs.get("current_merge_verification", "")).replace(
-        "FINAL-MERGED-VERIFICATION.md", "FINAL-MERGED-STATE.json")
-    ms = json.loads(read(ms_path) or "{}")
-    mv = read(str(rs.get("current_merge_verification")))
-    if ms.get("provisional") is True:
-        check("provisional merged-state record is labeled PROVISIONAL in the md",
-              "PROVISIONAL" in mv)
+    mv_path = str(rs.get("current_merge_verification", ""))
+    mv = read(mv_path)
+    if mv_path.endswith("R7E-SOL-MERGED-MAIN-VERIFICATION.md"):
+        check("R7E-Sol merged-main record names the earlier protected merge",
+              R7E_TASK16_MAIN_MERGE in mv)
+        check("R7E-Sol merged-main record is explicitly non-self-referential",
+              "never self-hashed" in mv
+              and "containing follow-up commit and merge live" in mv
+              and "ordinary Git history" in mv)
     else:
-        check("finalized merge-verification md contains no PENDING placeholder",
-              "PENDING" not in mv)
-        r5m = ms.get("r5_merge") or {}
-        empty = [k for k, v in r5m.items() if v in (None, "")]
-        check("finalized merged-state record has no empty r5_merge field",
-              not empty, str(empty))
+        ms_path = mv_path.replace(
+            "FINAL-MERGED-VERIFICATION.md", "FINAL-MERGED-STATE.json")
+        ms = json.loads(read(ms_path) or "{}")
+        if ms.get("provisional") is True:
+            check("provisional merged-state record is labeled PROVISIONAL in the md",
+                  "PROVISIONAL" in mv)
+        else:
+            check("finalized merge-verification md contains no PENDING placeholder",
+                  "PENDING" not in mv)
+            r5m = ms.get("r5_merge") or {}
+            empty = [k for k, v in r5m.items() if v in (None, "")]
+            check("finalized merged-state record has no empty r5_merge field",
+                  not empty, str(empty))
 
     print("TOTAL: %d failures" % len(FAILS))
     sys.exit(1 if FAILS else 0)

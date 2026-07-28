@@ -1,6 +1,6 @@
 {
   "record": "AUTONOMOUS-R7E-SOL-STATE",
-  "label": "TASK 15 VERIFIED CANDIDATE — TASK 16 INTEGRATION PENDING",
+  "label": "TASK 16 PROTECTED CASCADE AND FRESH-MAIN PROOF COMPLETE — FOLLOW-UP PROTECTED READBACK PENDING",
   "observed_at_utc": "2026-07-21T18:10:22Z",
   "r7e_observation": {
     "pr": 12,
@@ -154,8 +154,63 @@
     "ar6_status": "INTERRUPTED_IN_PROGRESS",
     "ar6_normative_promotions": 0
   },
-  "next_action": "Task 16: after independent review and exact-SHA CI of the closure-record commit, reverify topology and execute only the authorized protected integration cascade.",
+  "task16_verification": {
+    "observed_at_utc": "2026-07-28T01:58:10Z",
+    "reviewed_commit": "b22d4351f4d3a76bc3f16b41704a470b4abb1aa5",
+    "merge_commits": [
+      "e12cfbbf880b52c38f4064bb7ec6e4393705e319",
+      "4d09fed5f2d2106fd5ecd9a79b1d13e6b9af32fc",
+      "f4a4804101202c056a31f3d30f2ef931e1dcca2d",
+      "2867f3510c343fea8c7fd6c37b8ad38ce5de83a6",
+      "17f6783d5d5a39a90dee7b10573ef6bc3732ae5e",
+      "8db1630ab715b0931907c627be97b32399d6f4fc"
+    ],
+    "main_merge_commit": "8db1630ab715b0931907c627be97b32399d6f4fc",
+    "github_actions_runs": [
+      30317000439,
+      30317471209,
+      30317917503,
+      30317919628,
+      30318432384,
+      30318434266,
+      30318923898,
+      30318925662,
+      30319389233,
+      30319391979,
+      30319878639,
+      30319880488,
+      30320348878
+    ],
+    "github_actions_conclusion": "SUCCESS",
+    "python": "3.11.9",
+    "dependency_install": "requirements-ci.lock.txt only",
+    "pip_check": "PASS",
+    "workflow_command_count": 71,
+    "supplemental_command_count": 8,
+    "pdf_artifacts": 6,
+    "pdf_pages": 61,
+    "raster_passes": 2,
+    "raster_hash_lists_identical": true,
+    "visually_inspected_pages": 61,
+    "visual_defects": 0,
+    "tracked_paths": 707,
+    "release_manifest_entries": 706,
+    "source_archives": 6,
+    "source_archive_members": 24,
+    "source_status_claims": 25,
+    "prohibited_semantic_hits": 0,
+    "ar6_records": 1329,
+    "ar6_unclassified_counters": 0,
+    "ar6_status": "INTERRUPTED_IN_PROGRESS",
+    "ar6_integration_status": "NOT_APPLIED_NOT_APPROVED",
+    "git_fsck": "PASS",
+    "clean_tracked_tree": true,
+    "followup_record": "docs/project-closure/r7e-sol/R7E-SOL-MERGED-MAIN-VERIFICATION.md",
+    "followup_record_self_hashed": false,
+    "followup_protected_readback": "pending"
+  },
+  "next_action": "Independently review this non-self-referential follow-up commit, require exact-SHA CI, merge it through protection, then verify the containing commit and merge by protected-main readback.",
   "independent_signoff": true,
   "ready_for_merge": false,
-  "merged": false
+  "merged": true
 }
