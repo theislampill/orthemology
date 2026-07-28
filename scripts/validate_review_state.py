@@ -25,6 +25,7 @@ Checks:
      provisional is false — complete (no PENDING placeholders, all r5_merge
      fields non-null).
 """
+import hashlib
 import io
 import json
 import os
@@ -164,6 +165,10 @@ R7E_DECISION_BOUNDARY = {
 }
 R7E_TASK15_REVIEWED_COMMIT = "b22d4351f4d3a76bc3f16b41704a470b4abb1aa5"
 R7E_TASK16_MAIN_MERGE = "8db1630ab715b0931907c627be97b32399d6f4fc"
+R7E_TASK16_MERGED_RECORD = (
+    "docs/project-closure/r7e-sol/R7E-SOL-MERGED-MAIN-VERIFICATION.md")
+R7E_TASK16_MERGED_RECORD_SHA256 = (
+    "d75cf18da8f6ac68fa3b5f00038a360f9dc87de056494efcf459fb7da6a1e7a3")
 R7E_TASK16_MERGES = [
     "e12cfbbf880b52c38f4064bb7ec6e4393705e319",
     "4d09fed5f2d2106fd5ecd9a79b1d13e6b9af32fc",
@@ -186,7 +191,7 @@ R7E_TASK16_PUBLIC_SURFACES = [
     "docs/project-closure/HISTORICAL-STATUS-INDEX.yaml",
     "docs/project-closure/r7e-sol/AUTONOMOUS-R7E-SOL-STATE.json",
     "docs/project-closure/r7e-sol/R7E-HUNK-DISPOSITION.md",
-    "docs/project-closure/r7e-sol/R7E-SOL-MERGED-MAIN-VERIFICATION.md",
+    R7E_TASK16_MERGED_RECORD,
 ]
 R7E_PROHIBITED_TERMS = [
     "ani" + "me",
@@ -219,6 +224,11 @@ def check(name, ok, detail=""):
 def read(rel):
     p = os.path.join(ROOT, rel)
     return io.open(p, encoding="utf-8").read() if os.path.exists(p) else ""
+
+
+def read_bytes(rel):
+    p = os.path.join(ROOT, rel)
+    return open(p, "rb").read() if os.path.exists(p) else b""
 
 
 def valid_utc_timestamp(value):
@@ -488,8 +498,12 @@ def main():
           and task15.get("visually_inspected_pages") == 61
           and task15.get("prohibited_semantic_hits") == 0)
     task16 = sol.get("task16_verification") or {}
-    task16_record = read(
-        "docs/project-closure/r7e-sol/R7E-SOL-MERGED-MAIN-VERIFICATION.md")
+    task16_record = read(R7E_TASK16_MERGED_RECORD)
+    task16_record_sha256 = hashlib.sha256(
+        read_bytes(R7E_TASK16_MERGED_RECORD)).hexdigest()
+    check("R7E-Sol Task 16 merged-main record matches the immutable byte contract",
+          task16_record_sha256 == R7E_TASK16_MERGED_RECORD_SHA256,
+          task16_record_sha256)
     check("R7E-Sol Task 16 binds the reviewed candidate and protected-main merge",
           task16.get("reviewed_commit") == R7E_TASK15_REVIEWED_COMMIT
           and task16.get("main_merge_commit") == R7E_TASK16_MAIN_MERGE

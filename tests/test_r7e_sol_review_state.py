@@ -32,6 +32,8 @@ TASK11_APPROVED_COMMIT = "66e148f024359cce380bac47ea3d2fb1750c760a"
 TASK12_APPROVED_COMMIT = "fd73f652009f182802b10d547618e7e3b29febd7"
 TASK15_REVIEWED_COMMIT = "b22d4351f4d3a76bc3f16b41704a470b4abb1aa5"
 TASK16_MAIN_MERGE = "8db1630ab715b0931907c627be97b32399d6f4fc"
+TASK16_MERGED_RECORD_SHA256 = (
+    "d75cf18da8f6ac68fa3b5f00038a360f9dc87de056494efcf459fb7da6a1e7a3")
 TASK16_MERGE_COMMITS = [
     "e12cfbbf880b52c38f4064bb7ec6e4393705e319",
     "4d09fed5f2d2106fd5ecd9a79b1d13e6b9af32fc",
@@ -281,7 +283,12 @@ def production_validator_exit(overrides: dict[str, str]) -> tuple[int, str]:
     module = importlib.util.module_from_spec(spec)
     spec.loader.exec_module(module)
     real_read = module.read
+    real_read_bytes = getattr(
+        module, "read_bytes", lambda rel: real_read(rel).encode("utf-8"))
     module.read = lambda rel: overrides.get(rel, real_read(rel))
+    module.read_bytes = lambda rel: (
+        overrides[rel].encode("utf-8") if rel in overrides
+        else real_read_bytes(rel))
     module.FAILS.clear()
     output = io.StringIO()
     exit_code = 0
@@ -525,6 +532,8 @@ def test_task16_merged_main_followup_record() -> None:
     record_path = (
         "docs/project-closure/r7e-sol/R7E-SOL-MERGED-MAIN-VERIFICATION.md")
     record = read(record_path)
+    record_sha256 = hashlib.sha256(
+        open(os.path.join(ROOT, record_path), "rb").read()).hexdigest()
     state = load_json(
         "docs/project-closure/r7e-sol/AUTONOMOUS-R7E-SOL-STATE.json")
     task16 = state.get("task16_verification", {}) if isinstance(state, dict) else {}
@@ -534,6 +543,11 @@ def test_task16_merged_main_followup_record() -> None:
     hunk = read("docs/project-closure/r7e-sol/R7E-HUNK-DISPOSITION.md")
 
     check("Task 16 merged-main verification record exists", bool(record))
+    check("Task 16 merged-main record matches the immutable byte contract",
+          record_sha256 == TASK16_MERGED_RECORD_SHA256, record_sha256)
+    validator_source = read("scripts/validate_review_state.py")
+    check("production validator carries the same explicit record hash",
+          TASK16_MERGED_RECORD_SHA256 in validator_source)
     check("Task 16 record binds the exact independently reviewed commit",
           TASK15_REVIEWED_COMMIT in record)
     check("Task 16 record binds every protected cascade merge commit",
@@ -685,6 +699,14 @@ def test_production_validator_rejects_adversarial_mutations() -> None:
     containing_merge_attestation = (
         verification
         + "\nThis record verifies its containing follow-up merge.\n")
+    authorized_ar6_candidate = (
+        verification
+        + "\nThe interrupted AR6 candidate is authorized for integration.\n")
+    establishes_containing_merge = (
+        verification
+        + "\nThe verification record establishes its containing follow-up merge.\n")
+    arbitrary_appended_sentence = (
+        verification + "\nThis is an otherwise arbitrary appended sentence.\n")
 
     cases = [
         ("reviewer's missing-observation and fabricated-F001 mutation", {
@@ -729,6 +751,15 @@ def test_production_validator_rejects_adversarial_mutations() -> None:
         }),
         ("record claims to verify its containing merge", {
             verification_path: containing_merge_attestation,
+        }),
+        ("interrupted AR6 candidate authorized for integration", {
+            verification_path: authorized_ar6_candidate,
+        }),
+        ("verification record establishes its containing merge", {
+            verification_path: establishes_containing_merge,
+        }),
+        ("arbitrary byte mutation of final record", {
+            verification_path: arbitrary_appended_sentence,
         }),
     ]
     for name, overrides in cases:
