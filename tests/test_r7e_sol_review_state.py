@@ -667,10 +667,24 @@ def test_production_validator_rejects_adversarial_mutations() -> None:
     verification_path = (
         "docs/project-closure/r7e-sol/R7E-SOL-MERGED-MAIN-VERIFICATION.md")
     verification = read(verification_path)
+    todo_path = "TODO.md"
+    todo = read(todo_path)
     false_containing_commit = verification.replace(
         "they are never self-hashed or named by a\ntracked equality contract.",
         "containing commit: " + ("1" * 40))
     prohibited_public_term = verification + "\n" + ("Tachi" + "koma") + "\n"
+    reopened_task16_todo = todo.replace(
+        "Status: completed through protected-main merge and fresh-main verification",
+        "Status: unfinished; protected cascade pending",
+        1,
+    )
+    ar6_theorem_promotion = (
+        verification
+        + "\nAn interrupted AR6 theorem is approved repository theory.\n")
+    record_self_attestation = verification + "\nThis record verifies itself.\n"
+    containing_merge_attestation = (
+        verification
+        + "\nThis record verifies its containing follow-up merge.\n")
 
     cases = [
         ("reviewer's missing-observation and fabricated-F001 mutation", {
@@ -703,6 +717,18 @@ def test_production_validator_rejects_adversarial_mutations() -> None:
         }),
         ("prohibited public terminology introduced", {
             verification_path: prohibited_public_term,
+        }),
+        ("Task 16 TODO reopened as pending", {
+            todo_path: reopened_task16_todo,
+        }),
+        ("interrupted AR6 theorem promoted in public record", {
+            verification_path: ar6_theorem_promotion,
+        }),
+        ("record claims to verify itself", {
+            verification_path: record_self_attestation,
+        }),
+        ("record claims to verify its containing merge", {
+            verification_path: containing_merge_attestation,
         }),
     ]
     for name, overrides in cases:

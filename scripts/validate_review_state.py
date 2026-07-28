@@ -242,6 +242,49 @@ def decision_candidate_boundary(text):
     return yaml.safe_load(match.group(1)) if match else {}
 
 
+def task16_record_claim_issues(text):
+    """Return narrow public-record promotion or self-attestation defects."""
+    issues = []
+    sentences = re.split(r"(?<=[.!?])(?:\s+|$)", text)
+    record_subject = (
+        r"\b(?:this|the)\s+(?:tracked\s+|merged-main\s+|verification\s+)?record\b")
+    attestation_verb = (
+        r"\b(?:verif(?:y|ies|ied)|validat(?:e|es|ed)|attest(?:s|ed)?|"
+        r"certif(?:y|ies|ied)|authenticat(?:e|es|ed)|prove(?:s|d)?)\b")
+    forbidden_object = (
+        r"\b(?:itself|its\s+own\s+(?:commit|merge|contents?|validity|integrity)|"
+        r"(?:its\s+)?containing(?:\s+follow-up)?\s+(?:commit|merge))\b")
+    ar6_positive = (
+        r"\b(?:approved|adopted|accepted|established|integrated|"
+        r"repository-ready|promoted)\b")
+    ar6_object = r"\b(?:theorem|proof|claim|result|work|repository\s+theory)\b"
+
+    for sentence in sentences:
+        if (
+            re.search(record_subject, sentence, flags=re.IGNORECASE)
+            and re.search(attestation_verb, sentence, flags=re.IGNORECASE)
+            and re.search(forbidden_object, sentence, flags=re.IGNORECASE)
+        ):
+            issues.append("record claims self or containing-merge attestation")
+
+        lowered = sentence.lower()
+        has_ar6_promotion_shape = (
+            "ar6" in lowered
+            and "interrupt" in lowered
+            and re.search(ar6_positive, sentence, flags=re.IGNORECASE)
+            and re.search(ar6_object, sentence, flags=re.IGNORECASE)
+        )
+        negated = (
+            "not_applied_not_approved" in lowered
+            or re.search(
+                r"\b(?:no|not|never)\b.{0,100}" + ar6_positive,
+                sentence, flags=re.IGNORECASE)
+        )
+        if has_ar6_promotion_shape and not negated:
+            issues.append("interrupted AR6 result is promoted")
+    return issues
+
+
 def main():
     state = yaml.safe_load(read("docs/current-state.yaml"))
     a = state["authored"]
@@ -483,6 +526,9 @@ def main():
           and not re.search(
               r"containing.{0,100}\b[0-9a-f]{40}\b",
               task16_record, flags=re.IGNORECASE | re.DOTALL))
+    record_claim_issues = task16_record_claim_issues(task16_record)
+    check("R7E-Sol Task 16 record rejects promotion and self-attestation claims",
+          not record_claim_issues, repr(record_claim_issues))
     check("R7E-Sol Task 16 preserves AR6 interruption and non-application",
           task16.get("ar6_status") == "INTERRUPTED_IN_PROGRESS"
           and task16.get("ar6_integration_status") == "NOT_APPLIED_NOT_APPROVED")
@@ -599,6 +645,15 @@ def main():
             stale_tasks.append(task_number)
     check("TODO Tasks 1-10 record completed protected-main integration",
           not stale_tasks, repr(stale_tasks))
+    task16_match = re.search(
+        r"^### Task 16\b(?P<body>.*?)(?=^### Task \d+\b|\Z)",
+        todo, flags=re.MULTILINE | re.DOTALL)
+    task16_body = task16_match.group("body") if task16_match else ""
+    check("TODO Task 16 remains completed through protected-main verification",
+          bool(task16_body)
+          and "Status: completed through protected-main merge and fresh-main verification"
+          in task16_body
+          and "unfinished; protected cascade pending" not in task16_body)
     readme = read("README.md")
     check("README records current protected-main truth without adoption promotion",
           R7E_TASK16_MAIN_MERGE in readme
