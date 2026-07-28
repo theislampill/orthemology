@@ -164,12 +164,38 @@ R7E_DECISION_BOUNDARY = {
 }
 R7E_TASK15_REVIEWED_COMMIT = "b22d4351f4d3a76bc3f16b41704a470b4abb1aa5"
 R7E_TASK16_MAIN_MERGE = "8db1630ab715b0931907c627be97b32399d6f4fc"
+R7E_TASK16_MERGES = [
+    "e12cfbbf880b52c38f4064bb7ec6e4393705e319",
+    "4d09fed5f2d2106fd5ecd9a79b1d13e6b9af32fc",
+    "f4a4804101202c056a31f3d30f2ef931e1dcca2d",
+    "2867f3510c343fea8c7fd6c37b8ad38ce5de83a6",
+    "17f6783d5d5a39a90dee7b10573ef6bc3732ae5e",
+    R7E_TASK16_MAIN_MERGE,
+]
 R7E_TASK16_RUNS = [
     30317000439, 30317471209, 30317917503, 30317919628,
     30318432384, 30318434266, 30318923898, 30318925662,
     30319389233, 30319391979, 30319878639, 30319880488,
     30320348878,
 ]
+R7E_TASK16_PUBLIC_SURFACES = [
+    "README.md",
+    "STATUS.md",
+    "TODO.md",
+    "docs/current-state.yaml",
+    "docs/project-closure/HISTORICAL-STATUS-INDEX.yaml",
+    "docs/project-closure/r7e-sol/AUTONOMOUS-R7E-SOL-STATE.json",
+    "docs/project-closure/r7e-sol/R7E-HUNK-DISPOSITION.md",
+    "docs/project-closure/r7e-sol/R7E-SOL-MERGED-MAIN-VERIFICATION.md",
+]
+R7E_PROHIBITED_TERMS = [
+    "ani" + "me",
+    "Ghost" + " in the Shell",
+    "Stand" + " Alone Complex",
+    "Tachi" + "koma",
+    "Fuchi" + "koma",
+]
+R7E_PROHIBITED_ACRONYM = "S" + "A" + "C"
 R7E_PATHS = {
     "applications/daee-epistemics/SOUND-DESCENT-MODEL-COMPARISON.md",
     "artifacts/dynamic-orthing-noetic-learning-orthability-draft.pdf",
@@ -336,6 +362,28 @@ def main():
     check("R7E-Sol control-plane prefix is current after protected integration",
           classify("docs/project-closure/r7e-sol/AUTONOMOUS-R7E-SOL-STATE.json")
           == "current")
+    integrated_prefixes = [
+        "docs/project-closure/r7e/",
+        "docs/project-closure/r7d/",
+        "docs/project-closure/r7c/",
+        "docs/project-closure/r7b/",
+        "docs/project-closure/r7/",
+    ]
+    check("integrated candidate-era closure records are historical snapshots",
+          all(classify(prefix + "AUTONOMOUS-STATE") == "historical-snapshot"
+              for prefix in integrated_prefixes))
+    stale_integrated_notes = [
+        rule for rule in idx["rules"]
+        if rule.get("prefix") in integrated_prefixes
+        and (
+            rule.get("status") != "historical-snapshot"
+            or "protected-main" not in str(rule.get("note", "")).lower()
+            or "unmerged" in str(rule.get("note", "")).lower()
+            or "never merged" in str(rule.get("note", "")).lower()
+        )
+    ]
+    check("integrated candidate-era classifications contain no false live topology",
+          not stale_integrated_notes, repr(stale_integrated_notes))
 
     sol = json.loads(read(
         "docs/project-closure/r7e-sol/AUTONOMOUS-R7E-SOL-STATE.json") or "{}")
@@ -402,8 +450,16 @@ def main():
     check("R7E-Sol Task 16 binds the reviewed candidate and protected-main merge",
           task16.get("reviewed_commit") == R7E_TASK15_REVIEWED_COMMIT
           and task16.get("main_merge_commit") == R7E_TASK16_MAIN_MERGE
+          and task16.get("merge_commits") == R7E_TASK16_MERGES
           and R7E_TASK15_REVIEWED_COMMIT in task16_record
           and R7E_TASK16_MAIN_MERGE in task16_record)
+    cascade_labels = ["PR #13", "PR #12", "PR #11", "PR #10", "PR #9", "PR #8"]
+    check("R7E-Sol Task 16 record binds every intermediate merge to its PR",
+          all(re.search(
+              r"\|\s*" + re.escape(label) + r"[^|]*\|\s*`"
+              + re.escape(commit) + r"`\s*\|",
+              task16_record)
+              for label, commit in zip(cascade_labels, R7E_TASK16_MERGES)))
     check("R7E-Sol Task 16 binds all successful exact-SHA runs",
           task16.get("github_actions_runs") == R7E_TASK16_RUNS
           and task16.get("github_actions_conclusion") == "SUCCESS"
@@ -423,7 +479,25 @@ def main():
           task16.get("followup_record_self_hashed") is False
           and task16.get("followup_protected_readback") == "pending"
           and "never self-hashed" in task16_record
-          and "protected readback" in task16_record)
+          and "protected readback" in task16_record
+          and not re.search(
+              r"containing.{0,100}\b[0-9a-f]{40}\b",
+              task16_record, flags=re.IGNORECASE | re.DOTALL))
+    check("R7E-Sol Task 16 preserves AR6 interruption and non-application",
+          task16.get("ar6_status") == "INTERRUPTED_IN_PROGRESS"
+          and task16.get("ar6_integration_status") == "NOT_APPLIED_NOT_APPROVED")
+    prohibited_hits = []
+    for path in R7E_TASK16_PUBLIC_SURFACES:
+        text = read(path)
+        for term in R7E_PROHIBITED_TERMS:
+            if re.search(re.escape(term), text, flags=re.IGNORECASE):
+                prohibited_hits.append(path + ":" + term)
+        if re.search(
+                r"(?<![A-Za-z0-9])" + R7E_PROHIBITED_ACRONYM
+                + r"(?![A-Za-z0-9])", text):
+            prohibited_hits.append(path + ":prohibited-acronym")
+    check("R7E-Sol Task 16 public surfaces use neutral terminology",
+          not prohibited_hits, repr(prohibited_hits))
     control_plane = sol.get("control_plane") or {}
     check("R7E-Sol state records the exact control-plane links",
           control_plane == R7E_CONTROL_PLANE, repr(control_plane))
@@ -504,6 +578,41 @@ def main():
     check("R7E hunk disposition records Task 16 integration and follow-up boundary",
           "TASK 16 PROTECTED CASCADE AND FRESH-MAIN PROOF COMPLETE" in hunk_text
           and "FOLLOW-UP PROTECTED READBACK PENDING" in hunk_text)
+    check("R7E hunk disposition contains no stale Task 16 future tense",
+          "must be regenerated after each Task 16 merge" not in hunk_text
+          and "Task 16 must regenerate it last" not in hunk_text
+          and "Correctly classifies R7E as current-candidate" not in hunk_text)
+
+    todo = read("TODO.md")
+    stale_tasks = []
+    for task_number in range(1, 11):
+        match = re.search(
+            r"^### Task %d\b(?P<body>.*?)(?=^### Task \d+\b|\Z)"
+            % task_number, todo, flags=re.MULTILINE | re.DOTALL)
+        body = match.group("body") if match else ""
+        if (
+            not body
+            or "integrated to protected `main`" not in body
+            or "not merged to `main`" in body
+            or "inherits Tasks 15–16 integration gates" in body
+        ):
+            stale_tasks.append(task_number)
+    check("TODO Tasks 1-10 record completed protected-main integration",
+          not stale_tasks, repr(stale_tasks))
+    readme = read("README.md")
+    check("README records current protected-main truth without adoption promotion",
+          R7E_TASK16_MAIN_MERGE in readme
+          and "R7E-SOL-MERGED-MAIN-VERIFICATION.md" in readme
+          and "Decisions 0020–0036 are `proposed-candidate` in the unmerged PR chain"
+          not in readme
+          and "No PR is merged" not in readme
+          and "Git integration does not establish" in readme)
+    status_text = read("STATUS.md")
+    check("STATUS points to current merged-main verification without adoption promotion",
+          "docs/project-closure/r7e-sol/R7E-SOL-MERGED-MAIN-VERIFICATION.md"
+          in status_text
+          and "Git integration is **not** theory or terminology adoption"
+          in status_text)
 
     d34 = (reg.get("decisions") or {}).get("0034") or {}
     check("Decision 0034 is proposed-candidate on PR 12",

@@ -15,11 +15,11 @@ The range changes exactly ten paths. Dispositions are limited to `keep`,
 | `artifacts/dynamic-orthing-noetic-learning-orthability-draft.sources.json` | `provenance-only` | Generated source/PDF identity and page-count sidecar, not an independent semantic addition. Task 13 closed its provenance owner and Task 15 reconfirmed it. |
 | `companion/DYNAMIC-ORTHABILITY-ARGUMENT-MAP.yaml` | `revise` | Task 9 completed the rung semantics, status roles, bridge premises, circularity, rival exits, and divine-Speech revisions while preserving held conclusions. |
 | `companion/dynamic-orthing-noetic-learning-and-orthability.md` | `revise` | Task 9 retained the two-scale warning and completed the gap, falsifiability, notation, correction, convergence, and doctrinal-boundary revisions. |
-| `docs/current-state.yaml` | `provenance-only` | Generated project-state owner; not an independent semantic addition. It converges at the Task 15 candidate boundary and must be regenerated after each Task 16 merge. |
-| `docs/project-closure/HISTORICAL-STATUS-INDEX.yaml` | `keep` | Correctly classifies R7E as current-candidate. Extend the same status to the R7E-Sol control-plane prefix without rewriting history. |
+| `docs/current-state.yaml` | `provenance-only` | Generated project-state owner; not an independent semantic addition. Task 16 regenerated it after the completed cascade, and the follow-up record keeps it convergent. |
+| `docs/project-closure/HISTORICAL-STATUS-INDEX.yaml` | `keep` | Preserves R7–R7E candidate-era artifacts as historical snapshots while classifying the R7E-Sol merged-main control plane as current. |
 | `docs/project-closure/r7e/AUTONOMOUS-R7E-STATE.json` | `keep` | Preserve byte-identically as the attributed implementing-run record; `R7E-INPUT-PROVENANCE.json` and the provenance audit supersede its unreconstructible workflow statistics for current review. |
 | `docs/project-closure/r7e/ORTHING-CANDIDATE-BACKLOG.md` | `keep` | Preserve byte-identically as historical candidate input; the immutable structured ledger supersedes its duplicate IDs, truncated loci/text, missing drafts, and incomplete rejections for current review. |
-| `docs/provenance/RELEASE-MANIFEST.sha256` | `provenance-only` | Generated integrity manifest; not an independent semantic addition. Task 15 reconfirmed full convergence; Task 16 must regenerate it last after each owned change. |
+| `docs/provenance/RELEASE-MANIFEST.sha256` | `provenance-only` | Generated integrity manifest; not an independent semantic addition. Task 16 regenerated it last after the completed cascade and again for this bounded follow-up. |
 
 ## Eight integrated semantic changes
 

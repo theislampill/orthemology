@@ -40,6 +40,14 @@ TASK16_MERGE_COMMITS = [
     "17f6783d5d5a39a90dee7b10573ef6bc3732ae5e",
     TASK16_MAIN_MERGE,
 ]
+TASK16_CASCADE = [
+    ("PR #13", TASK16_MERGE_COMMITS[0]),
+    ("PR #12", TASK16_MERGE_COMMITS[1]),
+    ("PR #11", TASK16_MERGE_COMMITS[2]),
+    ("PR #10", TASK16_MERGE_COMMITS[3]),
+    ("PR #9", TASK16_MERGE_COMMITS[4]),
+    ("PR #8", TASK16_MERGE_COMMITS[5]),
+]
 TASK16_SUCCESSFUL_RUNS = [
     30317000439, 30317471209, 30317917503, 30317919628,
     30318432384, 30318434266, 30318923898, 30318925662,
@@ -293,6 +301,25 @@ def test_prefix_and_state() -> None:
     check("R7E-Sol closure prefix exists", rule is not None)
     check("R7E-Sol closure prefix is current after protected integration",
           bool(rule) and rule.get("status") == "current")
+    candidate_prefixes = {
+        row.get("prefix"): row for row in rules
+        if row.get("prefix") in {
+            "docs/project-closure/r7e/",
+            "docs/project-closure/r7d/",
+            "docs/project-closure/r7c/",
+            "docs/project-closure/r7b/",
+            "docs/project-closure/r7/",
+        }
+    }
+    check("integrated candidate-era closure records are historical snapshots",
+          len(candidate_prefixes) == 5
+          and all(row.get("status") == "historical-snapshot"
+                  for row in candidate_prefixes.values()))
+    check("integrated candidate-era notes contain no false live topology",
+          all("unmerged" not in str(row.get("note", "")).lower()
+              and "never merged" not in str(row.get("note", "")).lower()
+              and "protected-main" in str(row.get("note", "")).lower()
+              for row in candidate_prefixes.values()))
 
     state = load_json("docs/project-closure/r7e-sol/AUTONOMOUS-R7E-SOL-STATE.json")
     check("R7E-Sol state record exists", bool(state))
@@ -502,12 +529,21 @@ def test_task16_merged_main_followup_record() -> None:
         "docs/project-closure/r7e-sol/AUTONOMOUS-R7E-SOL-STATE.json")
     task16 = state.get("task16_verification", {}) if isinstance(state, dict) else {}
     todo = read("TODO.md")
+    readme = read("README.md")
+    status = read("STATUS.md")
+    hunk = read("docs/project-closure/r7e-sol/R7E-HUNK-DISPOSITION.md")
 
     check("Task 16 merged-main verification record exists", bool(record))
     check("Task 16 record binds the exact independently reviewed commit",
           TASK15_REVIEWED_COMMIT in record)
     check("Task 16 record binds every protected cascade merge commit",
-          all(commit in record for commit in TASK16_MERGE_COMMITS))
+          task16.get("merge_commits") == TASK16_MERGE_COMMITS
+          and all(
+              re.search(
+                  r"\|\s*" + re.escape(pr)
+                  + r"[^|]*\|\s*`" + re.escape(commit) + r"`\s*\|",
+                  record)
+              for pr, commit in TASK16_CASCADE))
     check("Task 16 record binds every successful exact-SHA CI run",
           all(str(run) in record for run in TASK16_SUCCESSFUL_RUNS))
     check("Task 16 record states the non-self-referential follow-up rule",
@@ -539,6 +575,32 @@ def test_task16_merged_main_followup_record() -> None:
           and "Status: completed through protected-main merge and fresh-main verification"
           in todo
           and "- [ ] Execute and verify the protected PR cascade" not in todo)
+    for task in range(1, 11):
+        match = re.search(
+            r"^### Task %d\b(?P<body>.*?)(?=^### Task \d+\b|\Z)" % task,
+            todo, flags=re.MULTILINE | re.DOTALL)
+        body = match.group("body") if match else ""
+        check("TODO Task %d records protected-main integration" % task,
+              bool(body)
+              and "integrated to protected `main`" in body
+              and "not merged to `main`" not in body
+              and "inherits Tasks 15–16 integration gates" not in body)
+    check("README records the verified protected-main integration",
+          TASK16_MAIN_MERGE in readme
+          and "R7E-SOL-MERGED-MAIN-VERIFICATION.md" in readme
+          and "Decisions 0020–0036 are `proposed-candidate` in the unmerged PR chain"
+          not in readme
+          and "No PR is merged" not in readme)
+    check("STATUS points to the current R7E merged-main verification",
+          "docs/project-closure/r7e-sol/R7E-SOL-MERGED-MAIN-VERIFICATION.md"
+          in status)
+    check("hunk disposition contains no stale Task 16 future tense",
+          "must be regenerated after each Task 16 merge" not in hunk
+          and "Task 16 must regenerate it last" not in hunk
+          and "Correctly classifies R7E as current-candidate" not in hunk)
+    check("AR6 remains interrupted and unapplied",
+          task16.get("ar6_status") == "INTERRUPTED_IN_PROGRESS"
+          and task16.get("ar6_integration_status") == "NOT_APPLIED_NOT_APPROVED")
 
 
 def test_production_validator_rejects_adversarial_mutations() -> None:
@@ -586,6 +648,30 @@ def test_production_validator_rejects_adversarial_mutations() -> None:
     mutated_decision = decision.replace(
         "status: proposed-candidate", "status: adopted-merged", 1)
 
+    wrong_intermediate = copy.deepcopy(state)
+    wrong_intermediate["task16_verification"]["merge_commits"][2] = "0" * 40
+
+    missing_intermediate = copy.deepcopy(state)
+    missing_intermediate["task16_verification"]["merge_commits"].pop(3)
+
+    false_self_attestation = copy.deepcopy(state)
+    false_self_attestation["task16_verification"]["followup_record_self_hashed"] = True
+
+    reopened_task16 = copy.deepcopy(state)
+    reopened_task16["merged"] = False
+
+    promoted_ar6 = copy.deepcopy(state)
+    promoted_ar6["task16_verification"]["ar6_status"] = "COMPLETED"
+    promoted_ar6["task16_verification"]["ar6_integration_status"] = "APPLIED"
+
+    verification_path = (
+        "docs/project-closure/r7e-sol/R7E-SOL-MERGED-MAIN-VERIFICATION.md")
+    verification = read(verification_path)
+    false_containing_commit = verification.replace(
+        "they are never self-hashed or named by a\ntracked equality contract.",
+        "containing commit: " + ("1" * 40))
+    prohibited_public_term = verification + "\n" + ("Tachi" + "koma") + "\n"
+
     cases = [
         ("reviewer's missing-observation and fabricated-F001 mutation", {
             state_path: json.dumps(reviewer_state),
@@ -597,6 +683,27 @@ def test_production_validator_rejects_adversarial_mutations() -> None:
         ("F014 improperly reopened", {matrix_path: yaml.safe_dump(reopened_f014, sort_keys=False)}),
         ("F015 no longer resolved", {matrix_path: yaml.safe_dump(open_f015, sort_keys=False)}),
         ("Decision 0034 candidate self-promotion", {decision_path: mutated_decision}),
+        ("wrong intermediate cascade merge identity", {
+            state_path: json.dumps(wrong_intermediate),
+        }),
+        ("missing intermediate cascade merge identity", {
+            state_path: json.dumps(missing_intermediate),
+        }),
+        ("false follow-up self-attestation", {
+            state_path: json.dumps(false_self_attestation),
+        }),
+        ("Task 16 reopened after protected integration", {
+            state_path: json.dumps(reopened_task16),
+        }),
+        ("interrupted AR6 research promoted", {
+            state_path: json.dumps(promoted_ar6),
+        }),
+        ("containing commit falsely attested in tracked record", {
+            verification_path: false_containing_commit,
+        }),
+        ("prohibited public terminology introduced", {
+            verification_path: prohibited_public_term,
+        }),
     ]
     for name, overrides in cases:
         exit_code, output = production_validator_exit(overrides)
