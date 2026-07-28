@@ -14,6 +14,14 @@ gradient_adjudication:
   # improving an order, landing a burden, or reaching closure does not make a transition
   # strictly sound.
   predicate_vocabulary: [AdmissibleCorrectiveTransition, PathwayAdequateCorrection, GovernedCorrectiveSearch]
+  predicate_identity:
+    canonical_id: reasoning_path_adequate_q
+    normative_symbol: ReasoningPathAdequate_q(e)
+    display_label: ClaimRelevantReasoningPathAdequate
+    alias_of: reasoning_path_adequate_q
+    computation: decision-0011-required-reason-projection
+    strict_soundness_requires: [reasoning_path_adequate_q, token_truth_linked_q]
+  semantic_operator_contract: applications/daee-epistemics/SEMANTIC-OPERATOR-CONTRACT.yaml
   strict_soundness_reserved: "strict soundness is reserved for the factive claim-relative predicate (Decision 0011); it is never asserted of a merely admissible runtime transition"
   G0:
     name: metaphor only
@@ -90,9 +98,14 @@ state_spaces:
   - actual-uptake-or-restoration
 fitrah_boundary:
   status: creed-internal
-  is: "normative orientation / proper-function ground within the creed-internal model"
-  is_not: [one-coordinate, one-metaortheme, one-algorithm, one-measured-scalar-target, one-directly-observed-point]
-  min_entropy_attractor: "provisional and creed-internal; daee states the Shannon analogy does not prove noetic collapse [direct]"
+  model_properties: [qualitative, defeasible, multidimensional]
+  is: [normative-disposition, proper-function-orientation]
+  is_not: [measurable-scalar, field-coordinate, metaortheme, algorithm, discourse-readable-soul-state, guaranteed-attractor]
+  corruption_assessment:
+    requires_independent_evidence: true
+    dissent_alone_sufficient: false
+    interior_status: held-or-underdetermined
+  rejected_analogy: "minimum-entropy attractor is not the adopted fitrah model; daee states that the Shannon analogy does not prove noetic collapse [direct]"
 non_claims:
 - no descent claim asserts any interior state, motive, or soul-state
 - runtime closure is not demonstrated restoration

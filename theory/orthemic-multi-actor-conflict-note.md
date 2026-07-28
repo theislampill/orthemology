@@ -19,14 +19,14 @@
    multiply perspectives on one occurrence lineage.
 2. **Actor/analysis-relative evaluation can oppose.** "Correct for A" and
    "correct for B" genuinely diverge under a competitive task; the theory's
-   per-actor analysis indexing (`A_α` with `T_α = task(A_α)`, `Π_{A_α}`)
+   per-actor analysis indexing ($A_\alpha$ with $T_\alpha = \operatorname{task}(A_\alpha)$, $\Pi_{A_\alpha}$)
    was built for exactly this and handles it. (Notation update, D1
-   reconciliation: `A` is reserved for the declared analysis; the formal
-   actor indices are `α, β`, with the prose labels "Player A / Player B"
-   naming the actors `α, β` respectively. Multi-actor evaluation is a
+   reconciliation: $A$ is reserved for the declared analysis; the formal
+   actor indices are $\alpha, \beta$, with the prose labels "Player A / Player B"
+   naming the actors $\alpha, \beta$ respectively. Multi-actor evaluation is a
    multi-analysis context, so the task-relative shorthand of manuscript
    Definition 3 is forbidden here and ground truth is written in full,
-   `O*(m; A_α)`.)
+   $O^*(m; A_\alpha)$.)
 3. **Structural isomorphism across actors.** A's and B's reasoning can be
    the same schema under role substitution while their targets are
    materially incompatible — a real and clarifying observation.
@@ -42,7 +42,7 @@
 That is not an ortheme; it is an OBJECTIVE rendered as a state description.
 An ortheme is a repeatable state-type of the occurrence ("White checkmates
 Black" IS one). The repair: player A's *target profile set*
-`𝒢_{α,A_α} ⊆ Π_{A_α}` is the
+$\mathcal{G}_{\alpha,A_\alpha} \subseteq \Pi_{A_\alpha}$ is the
 set of terminal profiles that satisfy that player's task — the states are orthemes;
 "maximize my utility" is the task that SELECTS them. Utility/objective/loss
 are external parameters (core-formalization §3), never orthemes and never
@@ -133,11 +133,11 @@ Conflict_m(𝒢_α, 𝒢_β)  no such reachable m′ exists
 ```
 
 **Three distinct relations the parametric schema untangles:**
-(i) SCHEMA identity — players A and B run the same parametric form `GoalSchema(·)`; this is
+(i) SCHEMA identity — players A and B run the same parametric form $\operatorname{GoalSchema}(\cdot)$; this is
 the true content of the source notes' "locally identical" intuition; (ii)
-GROUNDED-ORTHEME identity — `GoalSchema(α)` and `GoalSchema(β)` are DISTINCT grounded
+GROUNDED-ORTHEME identity — $\operatorname{GoalSchema}(\alpha)$ and $\operatorname{GoalSchema}(\beta)$ are DISTINCT grounded
 targets, never identical in a strictly competitive task; (iii)
-TARGET-PROFILE overlap — `𝒢_α ∩ 𝒢_β` may be empty (zero-sum win-sets),
+TARGET-PROFILE overlap — $\mathcal{G}_\alpha \cap \mathcal{G}_\beta$ may be empty (zero-sum win-sets),
 partial, or total (cooperation). Local similarity is (i); material
 exclusivity is emptiness at (iii); no level asserts identity of the
 players' orthemes.

@@ -1,0 +1,166 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "$id": "orthemology/collective-somnus-transclusion-profile.schema.json",
+  "title": "Outline-only Collective Somnus transclusion profile",
+  "type": "object",
+  "additionalProperties": false,
+  "required": [
+    "schema", "status", "runtime owner", "implemented in orthemology",
+    "automatic adoption", "automatic execution", "automatic writeback",
+    "claim_status", "modes", "shared_types_supply_transport", "event_instances",
+    "bearer_separation", "episode_semantics", "transclusion", "source_envelope", "receiving_assessment",
+    "source_applicability_auto_propagates", "receipt_can_govern_or_execute",
+    "multi_operator_count_implies", "dependence_dimensions", "collective_closure",
+    "privacy", "security", "semantic_boundaries", "non_claims"
+  ],
+  "properties": {
+    "schema": {"const": "orthemology-collective-somnus-transclusion-profile-v1"},
+    "status": {"const": "outline-only"},
+    "runtime owner": {"const": "external/downstream"},
+    "implemented in orthemology": {"const": "no"},
+    "automatic adoption": {"const": "prohibited"},
+    "automatic execution": {"const": "prohibited"},
+    "automatic writeback": {"const": "prohibited"},
+    "claim_status": {"type": "object"},
+    "modes": {
+      "type": "array", "minItems": 3, "maxItems": 3,
+      "items": {
+        "type": "object", "additionalProperties": false,
+        "required": ["mode_id", "name", "information_path", "coordination"],
+        "properties": {
+          "mode_id": {"enum": ["C1", "C2", "C3"]},
+          "name": {"enum": ["independent-type-convergent-orthing", "federated-transclusive-orthing", "coordinated-council-orthing"]},
+          "information_path": {"enum": ["none-during-discovery", "provenance-preserving-transclusion", "intentionally-shared-evidence-and-assessments"]},
+          "coordination": {"enum": ["none-required", "recipient-locally-re-orths", "bounded-deliberation"]}
+        }
+      }
+    },
+    "shared_types_supply_transport": {"const": false},
+    "event_instances": {
+      "type": "object", "additionalProperties": false,
+      "required": ["actor_ledger_version_indexed", "actor_neutral_type_is_not_agentless_instance"],
+      "properties": {
+        "actor_ledger_version_indexed": {"const": true},
+        "actor_neutral_type_is_not_agentless_instance": {"const": true}
+      }
+    },
+    "bearer_separation": {
+      "type": "array", "minItems": 5, "maxItems": 5, "uniqueItems": true,
+      "items": {"enum": ["normative_metaortheme_type", "represented_standard_at_actor_time", "case_bound_metaorthemma", "execution_trace", "transclusion_envelope"]}
+    },
+    "episode_semantics": {
+      "type": "object", "additionalProperties": false,
+      "required": ["collective_episode_has_own_identity", "internal_activity", "source_edges", "preserves_source_closure", "preserves_dissent"],
+      "properties": {
+        "collective_episode_has_own_identity": {"const": true},
+        "internal_activity": {"const": "intra-somnic"},
+        "source_edges": {"const": "inter-somnic"},
+        "preserves_source_closure": {"const": true},
+        "preserves_dissent": {"const": true}
+      }
+    },
+    "transclusion": {
+      "type": "object", "additionalProperties": false,
+      "required": ["definition", "semantic_character", "levels", "gates"],
+      "properties": {
+        "definition": {"const": "source-preserved availability for local orthing"},
+        "semantic_character": {"const": "structurally encoded and semantically reconstructible within declared limits"},
+        "levels": {
+          "type": "array", "minItems": 3, "maxItems": 3,
+          "items": {
+            "type": "object", "additionalProperties": false,
+            "required": ["level", "permitted_effect", "prohibited_effect"],
+            "properties": {
+              "level": {"enum": ["evidential_artifact", "normative_standard", "operational_dsl_ir"]},
+              "permitted_effect": {"enum": ["available_evidence_or_comparator", "local_meta_orthability_candidate", "inspectable_capability_candidate"]},
+              "prohibited_effect": {"enum": ["governing_or_executable", "locally_governing_without_version_acceptance_and_authorization", "execution_from_parse_success"]}
+            }
+          }
+        },
+        "gates": {"type": "array", "minItems": 8, "uniqueItems": true, "items": {"type": "string", "minLength": 1}}
+      }
+    },
+    "source_envelope": {
+      "type": "object", "additionalProperties": false,
+      "required": ["immutable", "required_identity", "disclosure"],
+      "properties": {
+        "immutable": {"const": true},
+        "required_identity": {"type": "array", "minItems": 6, "uniqueItems": true, "items": {"type": "string", "minLength": 1}},
+        "disclosure": {"type": "array", "minItems": 6, "maxItems": 6, "uniqueItems": true, "items": {"enum": ["redactions", "permitted_use", "intended_recipient", "expiry_or_review_trigger", "residuals", "non_claims"]}}
+      }
+    },
+    "receiving_assessment": {
+      "type": "object", "additionalProperties": false,
+      "required": ["append_only", "source_and_local_versions_separate", "local_meta_orthability_required", "local_authorization_required"],
+      "properties": {
+        "append_only": {"const": true},
+        "source_and_local_versions_separate": {"const": true},
+        "local_meta_orthability_required": {"const": true},
+        "local_authorization_required": {"const": true}
+      }
+    },
+    "source_applicability_auto_propagates": {"const": false},
+    "receipt_can_govern_or_execute": {"const": false},
+    "multi_operator_count_implies": {"type": "array", "maxItems": 0},
+    "dependence_dimensions": {"type": "array", "minItems": 9, "maxItems": 9, "uniqueItems": true, "items": {"enum": ["operator_count", "model_family_count", "contract_version_count", "source_family_count", "input_family_count", "institutional_origin_count", "coordination_path", "time_span", "counterexample_count"]}},
+    "collective_closure": {
+      "type": "object", "additionalProperties": false,
+      "required": ["bounded_scope", "preserves_dissent", "permitted"],
+      "properties": {
+        "bounded_scope": {"const": true},
+        "preserves_dissent": {"const": true},
+        "permitted": {"type": "array", "minItems": 7, "maxItems": 7, "uniqueItems": true, "items": {"enum": ["shared_placement", "bounded_agreement_with_dissent", "several_local_placements", "unresolved_conflict", "insufficient_shared_evidence", "domain_scope_split", "hold_partial_recurse"]}}
+      }
+    },
+    "privacy": {
+      "type": "object", "additionalProperties": false,
+      "required": ["controls", "redacted_projection_may_claim_complete"],
+      "properties": {
+        "controls": {"type": "array", "minItems": 8, "uniqueItems": true, "items": {"type": "string", "minLength": 1}},
+        "redacted_projection_may_claim_complete": {"const": false}
+      }
+    },
+    "security": {
+      "type": "object", "additionalProperties": false,
+      "required": ["threats", "controls"],
+      "properties": {
+        "threats": {"type": "array", "minItems": 16, "uniqueItems": true, "items": {"type": "string", "minLength": 1}},
+        "controls": {"type": "array", "minItems": 8, "uniqueItems": true, "items": {"type": "string", "minLength": 1}}
+      }
+    },
+    "semantic_boundaries": {
+      "type": "object", "additionalProperties": false,
+      "required": [
+        "nar_or_field_witness_similarity_proves_identity",
+        "source_execution_closure_proves_recipient_uptake",
+        "exported_record_is_direct_soul_access",
+        "multi_operator_recurrence_proves_independence",
+        "multi_operator_recurrence_proves_tawatur",
+        "multi_operator_recurrence_proves_truth",
+        "multi_operator_recurrence_supplies_authorization"
+      ],
+      "properties": {
+        "nar_or_field_witness_similarity_proves_identity": {"const": false},
+        "source_execution_closure_proves_recipient_uptake": {"const": false},
+        "exported_record_is_direct_soul_access": {"const": false},
+        "multi_operator_recurrence_proves_independence": {"const": false},
+        "multi_operator_recurrence_proves_tawatur": {"const": false},
+        "multi_operator_recurrence_proves_truth": {"const": false},
+        "multi_operator_recurrence_supplies_authorization": {"const": false}
+      }
+    },
+    "non_claims": {
+      "type": "object", "additionalProperties": false,
+      "required": ["runtime", "collective_execution", "automatic_writeback", "semantic_identity", "local_applicability", "authorization", "recipient_uptake"],
+      "properties": {
+        "runtime": {"const": "not-implemented"},
+        "collective_execution": {"const": "not-implemented"},
+        "automatic_writeback": {"const": "not-implemented"},
+        "semantic_identity": {"const": "not-established"},
+        "local_applicability": {"const": "not-established"},
+        "authorization": {"const": "not-established"},
+        "recipient_uptake": {"const": "not-established"}
+      }
+    }
+  }
+}

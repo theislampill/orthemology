@@ -1,31 +1,71 @@
-# Creed-internal tawatur WARRANT assessment (R7D, Decision 0032, audit B23).
-#
-# This is SEPARATE from the machine independence conclusion. The machine may only
-# report dependence-detected / source-independence-supported / origin-analysis-
-# underdetermined. A tawatur warrant judgement is creed-internal and school-labeled;
-# it makes qualitative indicants, origin, and cognition-wide corroboration
-# load-bearing and does NOT reduce to a route count or a numeric threshold. The
-# supplied Taymiyyan material is treated as SECONDARY reconstruction until primary
-# loci are verified; no universal numerical threshold is encoded.
-schema: orthemology-tawatur-warrant-v1
+# Creed-internal tawatur warrant assessment. This record is separate from the
+# machine source-dependence conclusion. It encodes no numeric warrant threshold.
+schema: orthemology-tawatur-warrant-v2
 assessments:
 - id: TWW-1
-  school: "Atharī (creed-internal; one route among schools)"
-  source_status: "secondary-reconstruction (El-Tobgui / epistemology collection); primary loci not yet verified here"
-  proposition: "a widely reported creedal proposition P"
-  source_units: "the distinct originating transmitter-units (not apparent copies)"
-  origin: "traced to plural independent originating groups, not a single upstream source"
-  copying_or_common_cause: "no common source or copying dependence found among the originating units"
-  path_independence: "the originating routes are mutually independent on the available evidence"
-  qualitative_indicants: "breadth across regions/generations; absence of motive-to-collude; content coherence; cognition-wide corroboration"
-  no_collusion_premise: "collusion across the independent originating groups is implausible on the circumstantial evidence"
-  content_coherence: "the reports cohere in load-bearing content, not merely in a slogan"
-  mutation_lineage: "no single-carrier mutation lineage explains the agreement"
-  defeaters: ["a later-discovered common source", "evidence of coordination", "a hidden copying route"]
-  assessor: "creed-internal reviewer under analysis A; school-labeled"
-  evidence: ["ev-transmission-map-P"]
-  warrant_conclusion: "creed-internal tawatur warrant SUPPORTED for P under the Atharī route, conditional on the labeled premises; NOT a machine-derived or count-derived conclusion"
+  school: "Athari creed-internal reconstruction; one route among schools"
+  proposition:
+    id: proposition-P
+    text: a widely reported creedal proposition P
+    objective_truth_status: not-adjudicated
+  claim_role: secondary-reconstruction
+  source_status_refs: [ELT-3]
+  source_units:
+  - unit_id: source-unit-A
+    origin_id: origin-A
+    transmission_paths: [path-A]
+    unit_status: originating-unit
+  - unit_id: source-unit-B
+    origin_id: origin-B
+    transmission_paths: [path-B]
+    unit_status: originating-unit
+  origin_analysis:
+    common_cause_status: not-detected
+    copying_status: not-detected
+    path_independence: supported
+    non_collusion: supported
+    mutation_lineage: no-single-lineage-detected
+    evidence_refs: [ev-transmission-map-P]
+  transmitter_quality:
+  - source_unit_id: source-unit-A
+    honesty_or_trust: supported
+    domain_competence: supported
+    evidence_refs: [ev-quality-A]
+  - source_unit_id: source-unit-B
+    honesty_or_trust: supported
+    domain_competence: supported
+    evidence_refs: [ev-quality-B]
+  circumstantial_indicants:
+  - breadth across regions and generations
+  - absence of an evidenced motive or mechanism for collusion
+  - cognition-wide corroboration under the declared school-internal analysis
+  content_coherence:
+    status: supported
+    evidence_refs: [ev-content-coherence-P]
+  acquisition_routes:
+  - route_id: acquisition-A
+    source_unit_ids: [source-unit-A]
+  - route_id: acquisition-B
+    source_unit_ids: [source-unit-B]
+  subject_assessments:
+  - subject_id: subject-with-both-routes
+    access_status: acquired
+    route_refs: [acquisition-A, acquisition-B]
+    subject_relative_conditions: [both routes are available to this subject]
+    assessor_id: creed-internal-reviewer-A
+    assessor_evidence: [ev-subject-access-A]
+    defeaters: [a later-discovered common cause, evidence of coordination]
+    warrant_conclusion: supported
+  - subject_id: subject-with-unobserved-access
+    access_status: not-observed
+    route_refs: []
+    subject_relative_conditions: [route access is not observed for this subject]
+    assessor_id: creed-internal-reviewer-A
+    assessor_evidence: [ev-subject-access-B]
+    defeaters: [new evidence of route access]
+    warrant_conclusion: held
   non_claims:
-  - "this is not the machine independence conclusion; the machine may only report source independence, never tawatur warrant"
-  - "count, graph degree, popularity, and institutional prevalence are never warrant"
-  - "secondary reconstruction; a primary-locus verification is required before doctrinal use"
+  - machine source-independence does not establish tawatur warrant
+  - count popularity graph degree and institutional persistence do not establish warrant
+  - subject-relative acquisition does not alter proposition identity or objective truth
+  - El-Tobgui is secondary reconstruction; no classical primary locus is promoted here

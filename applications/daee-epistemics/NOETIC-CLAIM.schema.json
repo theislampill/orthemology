@@ -14,7 +14,7 @@
       "items": {
         "type": "object",
         "additionalProperties": false,
-        "required": ["claim_id", "target_bearer", "target_id", "target_version", "target_type", "analysis_id", "analysis_version", "proposition", "candidate_alternatives", "evidence_ids", "support_rule", "uncertainty", "status", "defeaters", "non_claims"],
+        "required": ["claim_id", "target_bearer", "target_id", "target_version", "target_type", "analysis_id", "analysis_version", "proposition_identity", "proposition_truth_status", "proposition", "claim_role", "source_status_refs", "evidence_access_status", "comparison_scope", "candidate_alternatives", "evidence_ids", "support_rule", "uncertainty", "status", "defeaters", "non_claims"],
         "properties": {
           "claim_id": {"type": "string", "minLength": 1},
           "target_bearer": {"enum": ["m_discourse", "m_subject", "m_reasoning_episode", "m_runtime", "m_response", "m_uptake"]},
@@ -31,12 +31,29 @@
               "motive-culpability-soul-state",
               "runtime-closure",
               "route-quality",
-              "uptake"
+              "uptake",
+              "mental-analytic-representation",
+              "external-possibility",
+              "external-existence",
+              "unseen-modality"
             ]
           },
           "analysis_id": {"type": "string", "minLength": 1},
           "analysis_version": {"type": "string", "minLength": 1},
+          "proposition_identity": {"type": "string", "minLength": 1},
+          "proposition_truth_status": {"enum": ["true", "false", "underdetermined", "not-adjudicated"]},
           "proposition": {"type": "string", "minLength": 1},
+          "claim_role": {
+            "enum": ["primary-text-verified", "secondary-reconstruction", "cross-source-synthesis", "orthemological-extension", "computational-analogy", "creed-internal-inference"]
+          },
+          "source_status_refs": {
+            "type": "array", "minItems": 1, "uniqueItems": true,
+            "items": {"type": "string", "minLength": 1}
+          },
+          "evidence_access_status": {
+            "enum": ["primary-text-exact", "primary-work-theme", "primary-locus-edition-dependent", "secondary-verified", "secondary-reconstruction", "compilation-mediated", "cross-source-inference", "orthemological-extension", "unverified-held"]
+          },
+          "comparison_scope": {"enum": ["not-applicable", "modern-comparison"]},
           "candidate_alternatives": {"type": "array", "items": {"type": "string"}},
           "evidence_ids": {"type": "array", "items": {"type": "string"}},
           "bridges": {
@@ -54,6 +71,17 @@
             }
           },
           "support_rule": {"type": "string", "minLength": 1},
+          "inference_boundary": {
+            "type": "object",
+            "additionalProperties": false,
+            "required": ["source_kind", "conclusion_kind", "bridge_status", "bridge_evidence_ids"],
+            "properties": {
+              "source_kind": {"enum": ["mental-conceivability", "universal-abstraction", "model-representation", "external-evidence"]},
+              "conclusion_kind": {"enum": ["mental-analytic-representation", "external-possibility", "external-existence", "unseen-modality"]},
+              "bridge_status": {"enum": ["direct-entailment", "independently-warranted", "held"]},
+              "bridge_evidence_ids": {"type": "array", "uniqueItems": true, "items": {"type": "string", "minLength": 1}}
+            }
+          },
           "uncertainty": {
             "type": "object",
             "additionalProperties": false,

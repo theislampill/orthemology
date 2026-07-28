@@ -44,6 +44,10 @@ ENDPOINT_RULES = {
     "mutation": ({"artifact", "represented-standard"}, {"artifact", "represented-standard"}),
 }
 STANCES = {"expresses", "quotes", "endorses", "embodies", "applies", "opposes", "distorts", "transmits"}
+PROHIBITED_WARRANT_KEYS = {
+    "witness_count", "minimum_count", "popularity", "graph_degree",
+    "institutional_persistence", "numeric_threshold",
+}
 
 
 def check(name, ok, detail=""):
@@ -53,7 +57,8 @@ def check(name, ok, detail=""):
 
 
 def read(rel):
-    return io.open(os.path.join(ROOT, rel), encoding="utf-8").read()
+    with io.open(os.path.join(ROOT, rel), encoding="utf-8") as handle:
+        return handle.read()
 
 
 def independence_conclusion(common_source, copying, independent_routes):
@@ -66,6 +71,230 @@ def independence_conclusion(common_source, copying, independent_routes):
     if independent_routes >= 2:
         return "source-independence-supported"
     return "origin-analysis-underdetermined"
+
+
+def _schema_issues(document, schema):
+    """Return bounded structural diagnostics instead of raising on malformed input."""
+    try:
+        validator = jsonschema.Draft7Validator(schema)
+        return ["schema:%s" % e.message for e in sorted(validator.iter_errors(document), key=lambda e: list(e.path))]
+    except (TypeError, ValueError, jsonschema.SchemaError) as exc:
+        return ["schema:%s" % str(exc)]
+
+
+def validate_tawatur_document(document, source_status_ids=None, schema=None):
+    """Validate the closed warrant contract and its cross-field invariants."""
+    if schema is None:
+        try:
+            schema = json.loads(read(APP + "/TAWATUR-WARRANT.schema.json"))
+        except (OSError, ValueError) as exc:
+            return ["schema-load:%s" % exc]
+    issues = _schema_issues(document, schema)
+    if not isinstance(document, dict):
+        return issues or ["document-not-object"]
+    assessments = document.get("assessments")
+    if not isinstance(assessments, list):
+        return issues or ["assessments-not-array"]
+    propositions = {}
+    for assessment in assessments:
+        if not isinstance(assessment, dict):
+            continue
+        proposition = assessment.get("proposition")
+        if isinstance(proposition, dict):
+            proposition_id = proposition.get("id")
+            proposition_record = (
+                proposition.get("text"), proposition.get("objective_truth_status")
+            )
+            if isinstance(proposition_id, str) and proposition_id in propositions:
+                prior_text, prior_truth = propositions[proposition_id]
+                if proposition_record[0] != prior_text:
+                    issues.append("proposition-identity-text-conflict")
+                if proposition_record[1] != prior_truth:
+                    issues.append("proposition-identity-truth-conflict")
+            elif isinstance(proposition_id, str):
+                propositions[proposition_id] = proposition_record
+        if PROHIBITED_WARRANT_KEYS.intersection(assessment):
+            issues.append("numeric-or-prevalence-warrant-field")
+        refs = assessment.get("source_status_refs", [])
+        if source_status_ids is not None and isinstance(refs, list):
+            if (any(not isinstance(ref, str) for ref in refs)
+                    or any(ref not in source_status_ids for ref in refs if isinstance(ref, str))):
+                issues.append("unresolved-source-status-ref")
+        units = assessment.get("source_units")
+        if isinstance(units, list):
+            unit_ids = [
+                u.get("unit_id") for u in units
+                if isinstance(u, dict) and isinstance(u.get("unit_id"), str)
+            ]
+            if len(unit_ids) != len(set(unit_ids)):
+                issues.append("duplicate-source-unit")
+            unit_set = set(unit_ids)
+            unit_by_id = {
+                unit.get("unit_id"): unit for unit in units
+                if isinstance(unit, dict) and isinstance(unit.get("unit_id"), str)
+            }
+        else:
+            unit_set = set()
+            unit_by_id = {}
+        origin = assessment.get("origin_analysis")
+        if isinstance(origin, dict):
+            if (origin.get("common_cause_status") == "detected"
+                    and origin.get("path_independence") == "supported"):
+                issues.append("common-cause-conflicts-with-independence")
+            if (origin.get("copying_status") == "detected"
+                    and origin.get("path_independence") == "supported"):
+                issues.append("copying-conflicts-with-independence")
+            origin_ids = [
+                unit.get("origin_id") for unit in unit_by_id.values()
+                if isinstance(unit.get("origin_id"), str)
+            ]
+            if (len(origin_ids) != len(set(origin_ids))
+                    and origin.get("common_cause_status") == "not-detected"):
+                issues.append("source-origin-common-cause-conflict")
+            path_owners = {}
+            for unit in unit_by_id.values():
+                paths = unit.get("transmission_paths")
+                if not isinstance(paths, list) or any(not isinstance(path, str) for path in paths):
+                    issues.append("malformed-source-transmission-paths")
+                    continue
+                for path in paths:
+                    path_owners.setdefault(path, set()).add(unit.get("unit_id"))
+            if (origin.get("path_independence") == "supported"
+                    and any(len(owners) > 1 for owners in path_owners.values())):
+                issues.append("source-path-independence-conflict")
+        qualities = assessment.get("transmitter_quality")
+        if isinstance(qualities, list):
+            quality_ids = [
+                q.get("source_unit_id") for q in qualities
+                if isinstance(q, dict) and isinstance(q.get("source_unit_id"), str)
+            ]
+            if unit_set and set(quality_ids) != unit_set:
+                issues.append("transmitter-quality-coverage-mismatch")
+            quality_by_unit = {
+                quality.get("source_unit_id"): quality for quality in qualities
+                if isinstance(quality, dict) and isinstance(quality.get("source_unit_id"), str)
+            }
+        else:
+            quality_by_unit = {}
+        routes = assessment.get("acquisition_routes")
+        if isinstance(routes, list):
+            route_ids = [
+                r.get("route_id") for r in routes
+                if isinstance(r, dict) and isinstance(r.get("route_id"), str)
+            ]
+            route_set = set(route_ids)
+            if len(route_ids) != len(route_set):
+                issues.append("duplicate-acquisition-route")
+            for route in routes:
+                if not isinstance(route, dict):
+                    continue
+                source_unit_ids = route.get("source_unit_ids")
+                if (not isinstance(source_unit_ids, list)
+                        or any(not isinstance(unit, str) for unit in source_unit_ids)):
+                    issues.append("malformed-acquisition-route-source-units")
+                    continue
+                if any(unit not in unit_set for unit in source_unit_ids):
+                    issues.append("acquisition-route-unresolved-source-unit")
+            route_by_id = {
+                route.get("route_id"): route for route in routes
+                if isinstance(route, dict) and isinstance(route.get("route_id"), str)
+            }
+        else:
+            route_set = set()
+            route_by_id = {}
+        subjects = assessment.get("subject_assessments")
+        if isinstance(subjects, list):
+            subject_ids = [
+                s.get("subject_id") for s in subjects
+                if isinstance(s, dict) and isinstance(s.get("subject_id"), str)
+            ]
+            if len(subject_ids) != len(set(subject_ids)):
+                issues.append("duplicate-subject-assessment")
+            for subject in subjects:
+                if not isinstance(subject, dict):
+                    continue
+                route_refs = subject.get("route_refs")
+                if (not isinstance(route_refs, list)
+                        or any(not isinstance(route, str) for route in route_refs)):
+                    issues.append("malformed-subject-route-refs")
+                    continue
+                if any(route not in route_set for route in route_refs):
+                    issues.append("subject-route-unresolved")
+                    continue
+                if subject.get("warrant_conclusion") != "supported":
+                    continue
+                qualitative_requirements = {
+                    "common_cause_status": "not-detected",
+                    "copying_status": "not-detected",
+                    "path_independence": "supported",
+                    "non_collusion": "supported",
+                    "mutation_lineage": "no-single-lineage-detected",
+                }
+                if not isinstance(origin, dict) or any(
+                        origin.get(field) != required
+                        for field, required in qualitative_requirements.items()):
+                    issues.append("supported-warrant-origin-analysis-insufficient")
+                coherence = assessment.get("content_coherence")
+                if (not isinstance(coherence, dict)
+                        or coherence.get("status") != "supported"):
+                    issues.append("supported-warrant-content-coherence-insufficient")
+                if subject.get("access_status") != "acquired":
+                    issues.append("supported-warrant-requires-acquired-access")
+                if len(set(route_refs)) < 2:
+                    issues.append("supported-warrant-requires-plural-routes")
+                    continue
+                referenced_routes = [route_by_id[route_id] for route_id in route_refs]
+                if any(
+                        not isinstance(route.get("source_unit_ids"), list)
+                        or any(not isinstance(unit, str) for unit in route.get("source_unit_ids", []))
+                        for route in referenced_routes):
+                    issues.append("malformed-acquisition-route-source-units")
+                    continue
+                route_source_sets = [set(route["source_unit_ids"]) for route in referenced_routes]
+                referenced_units = set().union(*route_source_sets)
+                if any(
+                        not isinstance(unit_by_id.get(unit_id, {}).get("origin_id"), str)
+                        for unit_id in referenced_units):
+                    issues.append("malformed-source-origin-id")
+                    continue
+                if any(
+                        not isinstance(unit_by_id.get(unit_id, {}).get("transmission_paths"), list)
+                        or any(
+                            not isinstance(path, str)
+                            for path in unit_by_id.get(unit_id, {}).get("transmission_paths", [])
+                        )
+                        for unit_id in referenced_units):
+                    issues.append("malformed-source-transmission-paths")
+                    continue
+                route_origin_sets = [
+                    {unit_by_id[unit_id].get("origin_id") for unit_id in source_ids if unit_id in unit_by_id}
+                    for source_ids in route_source_sets
+                ]
+                route_path_sets = [
+                    {
+                        path
+                        for unit_id in source_ids if unit_id in unit_by_id
+                        for path in unit_by_id[unit_id].get("transmission_paths", [])
+                    }
+                    for source_ids in route_source_sets
+                ]
+                route_dimensions = (route_source_sets, route_origin_sets, route_path_sets)
+                if any(
+                        left & right
+                        for dimension in route_dimensions
+                        for index, left in enumerate(dimension)
+                        for right in dimension[index + 1:]):
+                    issues.append("supported-warrant-routes-not-independent")
+                if any(
+                        unit_by_id.get(unit_id, {}).get("unit_status") != "originating-unit"
+                        for unit_id in referenced_units):
+                    issues.append("supported-warrant-route-not-originating")
+                if any(
+                        quality_by_unit.get(unit_id, {}).get("honesty_or_trust") != "supported"
+                        or quality_by_unit.get(unit_id, {}).get("domain_competence") != "supported"
+                        for unit_id in referenced_units):
+                    issues.append("supported-warrant-route-quality-insufficient")
+    return list(dict.fromkeys(issues))
 
 
 def main():
@@ -196,7 +425,12 @@ def main():
               any("count" in nc.lower() or "degree" in nc.lower() or "popularity" in nc.lower()
                   for nc in a.get("non_claims", [])))
 
-    fx = yaml.safe_load(read(APP + "/FALSE-TAWATUR-FIXTURES.yaml"))["fixtures"]
+    fx_doc = yaml.safe_load(read(APP + "/FALSE-TAWATUR-FIXTURES.yaml"))
+    check("false-tawatur fixtures point to the current warrant contract",
+          fx_doc.get("warrant_contract") == "orthemology-tawatur-warrant-v2")
+    check("false-tawatur fixtures enumerate the Task 7 warrant regression surface",
+          len(fx_doc.get("warrant_regression_surface", [])) == 7)
+    fx = fx_doc["fixtures"]
     for f in fx:
         # B22: impossible origin counts rejected (independent routes cannot exceed witnesses)
         check("fixture %s: independent_routes <= apparent_witnesses (B22)" % f["id"],
@@ -211,15 +445,18 @@ def main():
         check("fixture %s machine conclusion is not a tawatur WARRANT claim (B23)" % f["id"],
               got != "tawatur-like-independence")
 
-    # creed-internal tawatur warrant is a SEPARATE, school-labeled record
+    # Creed-internal tawatur warrant is a separate, closed, school-labeled record.
     tw = yaml.safe_load(read(APP + "/TAWATUR-WARRANT.example.yaml"))
-    for w in tw["assessments"]:
-        for field in ("proposition", "source_units", "origin", "copying_or_common_cause", "path_independence",
-                      "qualitative_indicants", "mutation_lineage", "defeaters", "source_status", "assessor", "warrant_conclusion"):
-            check("tawatur-warrant %s declares %s" % (w["id"], field), bool(str(w.get(field, "")).strip()))
-        check("tawatur-warrant %s is school-labeled" % w["id"], bool(str(w.get("school", "")).strip()))
-        check("tawatur-warrant %s has non-empty qualitative indicants (B22)" % w["id"],
-              bool(str(w.get("qualitative_indicants", "")).strip()))
+    source_registry = yaml.safe_load(read("references/source-status.yaml"))
+    source_ids = {row["id"] for row in source_registry.get("claims", [])}
+    tw_issues = validate_tawatur_document(tw, source_ids)
+    check("tawatur-warrant example validates structurally and semantically", not tw_issues,
+          "; ".join(tw_issues[:8]))
+    for w in tw.get("assessments", []):
+        check("tawatur-warrant %s is school-labeled" % w.get("id", "?"),
+              bool(str(w.get("school", "")).strip()))
+        check("tawatur-warrant %s keeps objective truth outside subject assessments" % w.get("id", "?"),
+              all("objective_truth_status" not in s for s in w.get("subject_assessments", [])))
 
     print("TOTAL: %d failures" % len(FAILS))
     sys.exit(1 if FAILS else 0)

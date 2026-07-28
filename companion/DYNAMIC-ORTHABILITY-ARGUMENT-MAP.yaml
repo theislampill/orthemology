@@ -1,115 +1,447 @@
-schema: orthemology-dynamic-orthability-argument-map-v1
-# R7D Phase J (audit B41). The metaphysical ladder as a MACHINE-READABLE argument map:
-# every rung declares its premise, inference type, conclusion, dependency, evidence /
-# source status, strongest objection, rival exit, and school-neutral vs Athari-internal
-# status. OSM and DAEE are lower-level exemplifications/applications (rungs 1-3), NOT a
-# proof of the upper bridge. scripts/validate_argument_map.py checks the fields and that
-# no lower application is claimed to prove an upper rung.
-label: OPUS CANDIDATE — REQUIRES FRESH FABLE REVIEW BEFORE MERGE
+schema: orthemology-dynamic-orthability-argument-map-v2
+label: OPUS CANDIDATE — FINITE TASK 9 CONFORMANCE
+operative_noetic_frame: athari-taymiyyan
+cross_framework_policy:
+  meaning: dialectical-accessibility-and-rival-routing
+  warrant_role: presentation-only
+  objective_criteria_assessable: true
+  school_label_is_warrant: false
+  source_identity_is_warrant: false
+common_premise_fittingness_to_wisdom:
+  status: held
+  reason: no verified common-premise source establishes the positive inference
+  permitted_use: conditional rival routing only
+divine_formal_object_policy: Allah-is-never-an-internal-formal-object
 non_entailments:
-- "OSM/DAEE exemplify rungs 1-3 only; they do not prove rungs 4-10"
-- "static evaluability does not entail objective corrigibility"
-- "learnability/convergence does not entail normative proper function"
-- "no empirical result supports any metaphysical or theological rung"
-rungs:
-- n: 1
-  rung: static evaluability
-  premise: "placements under a declared analysis A have determinate correctness conditions"
-  inference_type: analytic
-  conclusion: "an episode's placement is evaluable as correct/incorrect relative to A"
-  dependency: none
-  evidence_status: orthemological-extension
-  objection: "deflationary metalanguage reply — 'correct' is disquotational only"
-  rival_exit: "expressivism about placement talk"
-  status: school-neutral
-- n: 2
-  rung: dynamic corrigibility
-  premise: "evaluable placements can be revised toward correctness over time"
-  inference_type: explanatory
-  conclusion: "there is an objective correction gradient the process can track"
-  dependency: 1
-  evidence_status: orthemological-extension
-  objection: "corrigibility is brute regularity, not objective correction"
-  rival_exit: "Humean regularity about improvement"
-  status: school-neutral
-- n: 3
-  rung: agent-accessible learnability
-  premise: "a learner can, under conditions, converge its representations toward the corrigible structure"
-  inference_type: empirical-exemplary
-  conclusion: "the correction structure is accessible to a learning process in at least one reported case"
-  dependency: 2
-  evidence_status: cross-source-synthesis
-  objection: "learnability != objective corrigibility; one paradigm overgeneralizes"
-  rival_exit: "instrumentalism about learned representations"
-  status: school-neutral
-  exemplified_by: "externally exemplified constrained learning and representational adaptation in one reported OSM/CSCG task/model comparison (bounded; not a unique biological mechanism)"
-- n: 4
-  rung: normative proper function
-  premise: "the correction structure carries a norm of proper function, not mere regularity"
-  inference_type: explanatory
-  conclusion: "there is a fact about how the faculty OUGHT to function"
-  dependency: 3
-  evidence_status: cross-source-synthesis
-  objection: "naturalized teleosemantics (Millikan) reduces the norm to selection history"
-  rival_exit: "teleosemantic naturalism"
-  status: school-neutral
-- n: 5
-  rung: irreducible teleology
-  premise: "the norm of proper function does not reduce to non-normative facts"
-  inference_type: anti-primitivist
-  conclusion: "teleology/normativity is irreducible"
-  dependency: 4
-  evidence_status: creed-internal-inference
-  objection: "primitivism about norms — take them as brute"
-  rival_exit: "normative primitivism"
-  status: school-neutral
-- n: 6
-  rung: intellectual ground
-  premise: "irreducible intelligibility/normativity requires an intellectual ground"
-  inference_type: transcendental
-  conclusion: "there is an intellectual ground of intelligibility"
-  dependency: 5
-  evidence_status: creed-internal-inference
-  objection: "Platonism / structural realism — abstract structure suffices"
-  rival_exit: "Platonic structuralism"
-  status: school-neutral
-- n: 7
-  rung: necessary ground
-  premise: "the intellectual ground is not contingent"
-  inference_type: metaphysical
-  conclusion: "the ground is a Necessary Being"
-  dependency: 6
-  evidence_status: creed-internal-inference
-  objection: "modal primitivism — necessity is brute"
-  rival_exit: "modal primitivism"
-  status: school-neutral
-- n: 8
-  rung: Knowledge / Will / Power / Wisdom
-  premise: "the necessary intellectual ground is personal, with knowledge, will, power, wisdom"
-  inference_type: metaphysical
-  conclusion: "the ground has personal attributes"
-  dependency: 7
-  evidence_status: creed-internal-inference
-  objection: "impersonal ground — an abstract principle, not a person"
-  rival_exit: "impersonalism"
-  status: athari-internal
-- n: 9
-  rung: capacity for disclosure
-  premise: "a personal necessary ground can disclose / speak"
-  inference_type: explanatory
-  conclusion: "disclosure (Speech) is possible"
-  dependency: 8
-  evidence_status: creed-internal-inference
-  objection: "silent ground — capacity without exercise"
-  rival_exit: "deist silence"
-  status: athari-internal
-- n: 10
-  rung: revelation-specific divine Speech
-  premise: "the disclosure is realized as revealed divine Speech under the Athari route"
-  inference_type: creed-internal
-  conclusion: "the Qur'an is divine Speech (uncreated) under the Athari route; created Arabic wording/media are its creaturely reception"
-  dependency: 9
-  evidence_status: creed-internal-inference
-  objection: "school-internal dispute (Ashari/Maturidi/Kullabi kalam nafsi variants)"
-  rival_exit: "alternative kalam-nafsi construals"
-  status: athari-internal
+  - OSM and DAEE do not validate metaphysics or theology
+  - empirical learnability does not yield normativity without a separate bridge
+  - a school label or source identity does not supply warrant
+  - a lexical range does not conjunctively entail every sense at every token
+  - capacity for disclosure does not entail an actual divine Speech event
+semantic_boundaries:
+  BOUND-CROSS-FRAMEWORK-NOT-TRIBUNAL: {kind: scope-firewall, owner: cross_framework_policy.warrant_role}
+  BOUND-WISDOM-HELD: {kind: source-hold, owner: common_premise_fittingness_to_wisdom}
+  BOUND-RABB-NONCONJUNCTIVE: {kind: non-entailment, owner: rabb_lexical_crosswalk.lexical_range_semantics}
+  BOUND-RABB-NONTHEOLOGICAL: {kind: non-entailment, owner: rabb_lexical_crosswalk.theological_reach}
+  BOUND-RABB-DEPENDENT-CREATURE: {kind: non-entailment, owner: rabb_lexical_crosswalk.creaturely_completion}
+  BOUND-PROPER-FUNCTION-MODERN: {kind: scope-firewall, owner: proper_function_boundary}
+  BOUND-FITRAH-QUALITATIVE: {kind: scope-firewall, owner: fitrah_boundary}
+  BOUND-DIVINE-NOT-FORMAL-OBJECT: {kind: scope-firewall, owner: divine_formal_object_policy}
+  BOUND-OSM-DAEE-NONWARRANT: {kind: non-entailment, owner: non_entailments.OSM-and-DAEE}
+  BOUND-EMPIRICAL-NOT-NORMATIVITY: {kind: non-entailment, owner: non_entailments.empirical-learnability}
+  BOUND-WILL-NONCIRCULAR: {kind: non-circularity, owner: dependency-graph.ARG-08}
+  BOUND-SPEECH-UNSAFE-WORDING: {kind: scope-firewall, owner: speech_boundary.unsafe_created_arabic_wording}
+  BOUND-CAPACITY-NOT-ACTUAL-SPEECH: {kind: non-entailment, owner: speech_boundary.capacity_entails_actual_speech}
+fitrah_boundary:
+  representation: qualitative-defeasible-multidimensional
+  not:
+    - scalar
+    - coordinate
+    - algorithm
+    - guaranteed-attractor
+    - discourse-readable-soul-state
+    - metaortheme
+proper_function_boundary:
+  historical_attribution: modern-comparative-reconstruction
+  inferential_reach: does-not-by-itself-prove-a-Designer
+rabb_lexical_crosswalk:
+  status: proposed-source-bounded-orthemological-extension
+  lexical_range_semantics: candidate-senses-selected-by-context
+  theological_reach: none-from-etymology-alone
+  creaturely_completion: remains-dependent-not-self-sufficient
+  layers:
+    token: orthemma
+    candidate_senses: orthemes
+    interpretive_rules: metaorthemes
+    context_binding: metaorthemma
+    disambiguation: orthing
+speech_boundary:
+  capacity_entails_actual_speech: false
+  actual_speech_requires: revelational-school-internal-dependency
+  unsafe_created_arabic_wording: prohibited
+speech_bearers:
+  - id: SPEECH-BEARER-01
+    bearer: created human convention
+    created_status: created
+  - id: SPEECH-BEARER-02
+    bearer: created creaturely speaking recitation and writing
+    created_status: created
+  - id: SPEECH-BEARER-03
+    bearer: created voice and breath
+    created_status: created
+  - id: SPEECH-BEARER-04
+    bearer: created ink page screen and media
+    created_status: created
+  - id: SPEECH-BEARER-05
+    bearer: Allah's act of speaking
+    created_status: uncreated-divine-attribute-act
+  - id: SPEECH-BEARER-06
+    bearer: revealed Arabic wording as Allah's Speech
+    created_status: uncreated-divine-speech
+  - id: SPEECH-BEARER-07
+    bearer: created creaturely hearing and reception
+    created_status: created
+rival_routes:
+  selected-function-naturalism:
+    joint: ARG-04
+    disposition: open-live-exit
+  primitivism:
+    joint: ARG-05
+    disposition: open-live-exit
+  modal-primitivism:
+    joint: ARG-07
+    disposition: open-live-exit
+  platonism-structural-realism:
+    joint: ARG-06
+    disposition: open-live-exit
+  brute-contingency:
+    joint: ARG-08
+    disposition: open-live-exit
+  aseity-bootstrapping:
+    joint: ARG-05
+    disposition: unresolved-scope-limited-reductio
+  euthyphro-fittingness:
+    joint: ARG-10
+    disposition: held-common-premise-positive-bridge
+  impersonal-ground:
+    joint: ARG-06
+    disposition: open-live-exit
+nodes:
+  - id: ARG-01
+    order: 1
+    label: local evaluability
+    scope: cross-framework-dialectical
+    premises:
+      - id: ARG-01-P1
+        text: placements under a declared analysis have determinate correctness conditions
+        boundary_refs: []
+    inference_type: analytic
+    bridge_status: bounded
+    bridge_premise_refs: []
+    conclusion:
+      id: ARG-01-C
+      text: a placement is evaluable as correct or incorrect under its declared analysis
+      boundary_refs: [BOUND-CROSS-FRAMEWORK-NOT-TRIBUNAL]
+    dependencies: []
+    claim_role: orthemological-extension
+    source_status_refs: [EXT-1]
+    evidence_access_status: {EXT-1: ORTHEMOLOGICAL_EXTENSION}
+    reference_roles: {EXT-1: comparative}
+    strongest_objection: {id: A1, status: unresolved, text: truth-apt evaluation discourse may be rejected}
+    rival_exit: {id: deflationism, disposition: open, joint: evaluation-truth-aptness}
+    warrant_basis: stated-premises-and-inference
+  - id: ARG-02
+    order: 2
+    label: objective corrigibility
+    scope: cross-framework-dialectical
+    premises:
+      - id: ARG-02-P1
+        text: some incorrect placements admit evidence-sensitive revision toward a correct placement
+        boundary_refs: []
+    inference_type: explanatory
+    bridge_status: conditional
+    bridge_premise_refs: [ARG-01-P1]
+    conclusion:
+      id: ARG-02-C
+      text: some cases admit objectively rankable correction paths without a scalar or differentiable gradient
+      boundary_refs: []
+    dependencies: [ARG-01]
+    claim_role: orthemological-extension
+    source_status_refs: [EXT-1]
+    evidence_access_status: {EXT-1: ORTHEMOLOGICAL_EXTENSION}
+    reference_roles: {EXT-1: comparative}
+    strongest_objection: {id: A2, status: unresolved, text: improvement may be brute regularity}
+    rival_exit: {id: humean-regularity, disposition: open, joint: truth-linked-correction}
+    warrant_basis: stated-premises-and-inference
+  - id: ARG-03
+    order: 3
+    label: bounded representational adaptation
+    scope: cross-framework-dialectical
+    premises:
+      - id: ARG-03-P1
+        text: one reported task-model comparison exhibits bounded progressive adaptation and representational differentiation
+        boundary_refs: []
+    inference_type: computational-analogy
+    bridge_status: illustrative-only
+    bridge_premise_refs: []
+    conclusion:
+      id: ARG-03-C
+      text: constrained learning can illustrate access to a lower-level correction task without metaphysical promotion
+      boundary_refs: [BOUND-OSM-DAEE-NONWARRANT, BOUND-EMPIRICAL-NOT-NORMATIVITY]
+    dependencies: [ARG-02]
+    claim_role: computational-analogy
+    source_status_refs: [EXT-1]
+    evidence_access_status: {EXT-1: ORTHEMOLOGICAL_EXTENSION}
+    reference_roles: {EXT-1: comparative}
+    strongest_objection: {id: OSM-LIMIT, status: answered-by-boundary, text: one task-model comparison cannot generalize}
+    rival_exit: {id: instrumentalism, disposition: open, joint: representational-access}
+    warrant_basis: stated-premises-and-inference
+  - id: ARG-04
+    order: 4
+    label: normative proper-function bridge
+    scope: cross-framework-dialectical
+    premises:
+      - id: ARG-04-P1
+        text: truth-linked fittingness is not supplied by empirical adaptation alone
+        boundary_refs: [BOUND-EMPIRICAL-NOT-NORMATIVITY, BOUND-FITRAH-QUALITATIVE]
+      - id: ARG-04-P2
+        text: irreducible teleology would supply a distinct normative bridge if defended
+        boundary_refs: [BOUND-PROPER-FUNCTION-MODERN]
+    inference_type: teleological
+    bridge_status: conditional
+    bridge_premise_refs: [ARG-02-C, ARG-04-P2]
+    conclusion:
+      id: ARG-04-C
+      text: proper-function normativity follows only conditionally on an independently defended teleological premise
+      boundary_refs: [BOUND-PROPER-FUNCTION-MODERN, BOUND-EMPIRICAL-NOT-NORMATIVITY]
+    dependencies: [ARG-02, ARG-03]
+    claim_role: cross-source-synthesis
+    source_status_refs: [EXT-1]
+    evidence_access_status: {EXT-1: ORTHEMOLOGICAL_EXTENSION}
+    reference_roles: {EXT-1: comparative}
+    strongest_objection: {id: B1, status: unresolved, text: selected functions may supply the relevant teleology}
+    rival_exit: {id: selected-function-naturalism, disposition: open, joint: ARG-04}
+    warrant_basis: stated-premises-and-inference
+  - id: ARG-05
+    order: 5
+    label: underived locus
+    scope: cross-framework-dialectical
+    premises:
+      - id: ARG-05-P1
+        text: an intelligible norm-governed construction of all intelligibility presupposes the conditions it purports to construct
+        boundary_refs: []
+    inference_type: transcendental-scope-limited
+    bridge_status: conditional
+    bridge_premise_refs: [ARG-01-C, ARG-05-P1]
+    conclusion:
+      id: ARG-05-C
+      text: some conditions of objective evaluability are underived within accounts that model origination as intelligible norm-governed transition
+      boundary_refs: []
+    dependencies: [ARG-01]
+    claim_role: orthemological-extension
+    source_status_refs: [EXT-1]
+    evidence_access_status: {EXT-1: ORTHEMOLOGICAL_EXTENSION}
+    reference_roles: {EXT-1: comparative}
+    strongest_objection: {id: D1, status: unresolved, text: brute emergence need not be an orthing-like transition}
+    rival_exit: {id: aseity-bootstrapping, disposition: unresolved, joint: ARG-05}
+    warrant_basis: stated-premises-and-inference
+  - id: ARG-06
+    order: 6
+    label: intellectual ground
+    scope: cross-framework-dialectical
+    premises:
+      - id: ARG-06-P1
+        text: adequacy to meanings and norms would require an intellective ground if causal adequacy to intelligibility is accepted
+        boundary_refs: []
+    inference_type: metaphysical-explanatory
+    bridge_status: conditional
+    bridge_premise_refs: [ARG-05-C, ARG-06-P1]
+    conclusion:
+      id: ARG-06-C
+      text: an intellectual ground follows only conditionally and does not refute an impersonal or Platonic terminus
+      boundary_refs: [BOUND-DIVINE-NOT-FORMAL-OBJECT, BOUND-CROSS-FRAMEWORK-NOT-TRIBUNAL]
+    dependencies: [ARG-05]
+    claim_role: cross-source-synthesis
+    source_status_refs: [EXT-1]
+    evidence_access_status: {EXT-1: ORTHEMOLOGICAL_EXTENSION}
+    reference_roles: {EXT-1: comparative}
+    strongest_objection: {id: A4, status: unresolved, text: abstract structure may be a consistent terminus}
+    rival_exit: {id: impersonal-ground, disposition: open, joint: ARG-06}
+    warrant_basis: stated-premises-and-inference
+  - id: ARG-07
+    order: 7
+    label: modal status of the ground
+    scope: cross-framework-dialectical
+    premises:
+      - id: ARG-07-P1
+        text: no complete common-premise derivation from underived to metaphysically necessary is encoded
+        boundary_refs: []
+    inference_type: modal
+    bridge_status: held
+    bridge_premise_refs: [ARG-05-C]
+    conclusion:
+      id: ARG-07-C
+      text: necessity remains a distinct unresolved joint rather than an analytic relabeling
+      boundary_refs: []
+    dependencies: [ARG-05, ARG-06]
+    claim_role: cross-source-synthesis
+    source_status_refs: [EXT-1]
+    evidence_access_status: {EXT-1: ORTHEMOLOGICAL_EXTENSION}
+    reference_roles: {EXT-1: comparative}
+    strongest_objection: {id: A3, status: unresolved, text: modal primitivism accepts the underived structure and stops}
+    rival_exit: {id: modal-primitivism, disposition: open, joint: ARG-07}
+    warrant_basis: stated-premises-and-inference
+  - id: ARG-08
+    order: 8
+    label: will
+    scope: cross-framework-dialectical
+    premises:
+      - id: ARG-08-P1
+        text: contingent selection would require a selector only if brute contingency is rejected
+        boundary_refs: [BOUND-WILL-NONCIRCULAR]
+    inference_type: metaphysical
+    bridge_status: conditional
+    bridge_premise_refs: [ARG-06-C, ARG-08-P1]
+    conclusion:
+      id: ARG-08-C
+      text: Will follows only conditionally on the selection-requires-selector premise
+      boundary_refs: [BOUND-WILL-NONCIRCULAR]
+    dependencies: [ARG-06]
+    claim_role: cross-source-synthesis
+    source_status_refs: [EXT-1]
+    evidence_access_status: {EXT-1: ORTHEMOLOGICAL_EXTENSION}
+    reference_roles: {EXT-1: comparative}
+    strongest_objection: {id: A6, status: unresolved, text: contingent instantiation may be brute}
+    rival_exit: {id: brute-contingency, disposition: open, joint: ARG-08}
+    warrant_basis: stated-premises-and-inference
+  - id: ARG-09
+    order: 9
+    label: power
+    scope: cross-framework-dialectical
+    premises:
+      - id: ARG-09-P1
+        text: selection without efficacy institutes nothing
+        boundary_refs: []
+    inference_type: metaphysical
+    bridge_status: conditional
+    bridge_premise_refs: [ARG-08-C, ARG-09-P1]
+    conclusion:
+      id: ARG-09-C
+      text: Power follows conditionally if the Will joint is granted
+      boundary_refs: [BOUND-OSM-DAEE-NONWARRANT]
+    dependencies: [ARG-08]
+    claim_role: cross-source-synthesis
+    source_status_refs: [EXT-1]
+    evidence_access_status: {EXT-1: ORTHEMOLOGICAL_EXTENSION}
+    reference_roles: {EXT-1: comparative}
+    strongest_objection: {id: POWER-EXIT, status: unresolved, text: efficacy may be attributed impersonally}
+    rival_exit: {id: impersonal-efficacy, disposition: open, joint: efficacy}
+    warrant_basis: stated-premises-and-inference
+  - id: ARG-10
+    order: 10
+    label: Wisdom and fittingness
+    scope: athari-taymiyyan-operative
+    premises:
+      - id: ARG-10-P1
+        text: the declared Athari Taymiyyan route proposes that divine acts and commands proceed for wise ends, but its underlying works require individual custody before citation here
+        boundary_refs: [BOUND-WISDOM-HELD]
+      - id: ARG-10-P2
+        text: the common-premise fittingness-to-Wisdom inference remains unestablished
+        boundary_refs: [BOUND-WISDOM-HELD]
+    inference_type: creed-internal-teleological
+    bridge_status: held-pending-source-custody
+    bridge_premise_refs: [ARG-04-C, ARG-10-P1]
+    conclusion:
+      id: ARG-10-C
+      text: the Athari route is structurally represented with exact inferential limits but its positive source assertion and the cross-framework bridge both remain held
+      boundary_refs: [BOUND-WISDOM-HELD]
+    dependencies: [ARG-04, ARG-06]
+    claim_role: creed-internal-inference
+    source_status_refs: []
+    evidence_access_status: {}
+    reference_roles: {}
+    strongest_objection: {id: EUTHYPHRO, status: unresolved, text: fittingness may be externalized or reduced to fiat}
+    rival_exit: {id: euthyphro-fittingness, disposition: held, joint: ARG-10}
+    warrant_basis: stated-premises-and-inference
+  - id: ARG-11
+    order: 11
+    label: capacity for disclosure
+    scope: cross-framework-dialectical
+    premises:
+      - id: ARG-11-P1
+        text: a proportionate-causality premise for perfection-relevant capacities would exclude intrinsic muteness
+        boundary_refs: []
+    inference_type: metaphysical
+    bridge_status: conditional
+    bridge_premise_refs: [ARG-06-C, ARG-11-P1]
+    conclusion:
+      id: ARG-11-C
+      text: at most capacity for determinate disclosure follows and no actual Speech event follows
+      boundary_refs: [BOUND-CAPACITY-NOT-ACTUAL-SPEECH]
+    dependencies: [ARG-06]
+    claim_role: cross-source-synthesis
+    source_status_refs: [EXT-1]
+    evidence_access_status: {EXT-1: ORTHEMOLOGICAL_EXTENSION}
+    reference_roles: {EXT-1: comparative}
+    strongest_objection: {id: E1, status: unresolved, text: a ground need not possess every derivative capacity in the same mode}
+    rival_exit: {id: capacity-scepticism, disposition: open, joint: proportionate-causality}
+    warrant_basis: stated-premises-and-inference
+  - id: ARG-12
+    order: 12
+    label: actual divine Speech
+    scope: athari-taymiyyan-operative
+    premises:
+      - id: ARG-12-P1
+        text: revelation identifies Allah as actually speaking within the declared Athari route
+        boundary_refs: []
+    inference_type: revelational-school-internal
+    bridge_status: revelational
+    bridge_premise_refs: [ARG-11-C]
+    conclusion:
+      id: ARG-12-C
+      text: actual divine Speech is a revelational creed-internal conclusion and not a philosophical entailment of capacity
+      boundary_refs: [BOUND-CAPACITY-NOT-ACTUAL-SPEECH, BOUND-SPEECH-UNSAFE-WORDING]
+    dependencies: [ARG-11]
+    claim_role: creed-internal-inference
+    source_status_refs: [ATH-1, ATH-2]
+    evidence_access_status: {ATH-1: PRIMARY_TEXT_EXACT, ATH-2: PRIMARY_TEXT_EXACT}
+    reference_roles: {ATH-1: primary-text, ATH-2: primary-text}
+    strongest_objection: {id: KALAM-SPEECH, status: tradition-disputed, text: Sunni schools differ on the articulation of divine Speech}
+    rival_exit: {id: alternative-kalam-articulations, disposition: comparative-only, joint: actual-Speech-articulation}
+    warrant_basis: revelation-and-declared-creed-internal-inference
+  - id: ARG-13
+    order: 13
+    label: Speech bearer classification
+    scope: athari-taymiyyan-operative
+    premises:
+      - id: ARG-13-P1
+        text: bearer identity must be fixed before created or uncreated status is predicated
+        boundary_refs: []
+    inference_type: typed-creed-internal-distinction
+    bridge_status: bounded
+    bridge_premise_refs: [ARG-12-C]
+    conclusion:
+      id: ARG-13-C
+      text: seven distinct bearers preserve revealed Arabic wording as Allah's Speech while creaturely acts voices media and reception remain created
+      boundary_refs: [BOUND-SPEECH-UNSAFE-WORDING]
+    dependencies: [ARG-12]
+    claim_role: creed-internal-inference
+    source_status_refs: [ATH-1, ATH-2, ATH-3, ATH-4, ATH-5]
+    evidence_access_status:
+      ATH-1: PRIMARY_TEXT_EXACT
+      ATH-2: PRIMARY_TEXT_EXACT
+      ATH-3: COMPILATION_MEDIATED
+      ATH-4: PRIMARY_WORK_THEME
+      ATH-5: PRIMARY_LOCUS_EDITION_DEPENDENT
+    reference_roles:
+      ATH-1: primary-text
+      ATH-2: primary-text
+      ATH-3: primary-text
+      ATH-4: primary-text
+      ATH-5: secondary-scholarship
+    strongest_objection: {id: BEARER-COLLAPSE, status: rejected-by-typing, text: language labels alone do not identify the bearer}
+    rival_exit: {id: alternative-kalam-articulations, disposition: comparative-only, joint: bearer-typing}
+    warrant_basis: revelation-and-declared-creed-internal-inference
+  - id: ARG-14
+    order: 14
+    label: Rabb lexical disambiguation candidate
+    scope: source-bounded-proposed-crosswalk
+    premises:
+      - id: ARG-14-P1
+        text: a contextual token may have multiple candidate senses selected through evidence and interpretive rules
+        boundary_refs: [BOUND-RABB-NONCONJUNCTIVE]
+    inference_type: orthemological-extension
+    bridge_status: held-pending-individually-verified-lexical-sources
+    bridge_premise_refs: []
+    conclusion:
+      id: ARG-14-C
+      text: token sense rule context binding and disambiguation may be modeled as distinct orthemological layers without theological entailment
+      boundary_refs: [BOUND-RABB-NONCONJUNCTIVE, BOUND-RABB-NONTHEOLOGICAL, BOUND-RABB-DEPENDENT-CREATURE]
+    dependencies: []
+    claim_role: orthemological-extension
+    source_status_refs: [EXT-1]
+    evidence_access_status: {EXT-1: ORTHEMOLOGICAL_EXTENSION}
+    reference_roles: {EXT-1: lexical-reference}
+    strongest_objection: {id: LEXICAL-PRESTIGE, status: blocked-by-boundary, text: lexical range may be prestige-stacked into one token}
+    rival_exit: {id: source-custody-hold, disposition: held, joint: lexical-evidence}
+    warrant_basis: stated-premises-and-inference
