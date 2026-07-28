@@ -167,7 +167,7 @@ findings:
   evidence:
   - approximately 208 formula-like backtick spans remain unclassified or unmigrated
   - current migrated flags conflate repaired missing glyphs with complete source migration
-  - fd73f65256efbc8f78420f8057b692dd698acefd closes the finite classification boundary
+  - fd73f652009f182802b10d547618e7e3b29febd7 closes the finite classification boundary
   - 1703a783d9b25a9cfa93370c4a1a0b568fa497d0 preserves the reviewed authoritative source tree
   - 61ad3b6f59a72a9b1fca53bd93a7a958e84f6e08 closes package, PDF, and visual provenance
   severity: blocker

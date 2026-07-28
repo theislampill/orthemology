@@ -28,6 +28,8 @@ FAILS: list[str] = []
 R7D_BASE = "e34d2cd56057766f8f656a4ff3486eb34dad607e"
 R7E_HEAD_AT_OBSERVATION = "cbab14747835855d232448f648eefa1d4e36074e"
 REQUIRED_MODEL = "gpt-5.6-sol"
+TASK11_APPROVED_COMMIT = "66e148f024359cce380bac47ea3d2fb1750c760a"
+TASK12_APPROVED_COMMIT = "fd73f652009f182802b10d547618e7e3b29febd7"
 
 EXPECTED_TOPOLOGY_AT_OBSERVATION = [
     {
@@ -408,6 +410,25 @@ def test_findings_and_hunks() -> None:
     check("all fifteen R7E-Sol findings are terminally resolved",
           resolved == EXPECTED_FINDING_IDS,
           repr(sorted(resolved)))
+    todo = read("TODO.md")
+    f014_evidence = "\n".join(
+        str(item) for item in by_id.get("R7E-SOL-F014", {}).get("evidence", []))
+    for task, commit, surfaces in (
+        ("Task 11", TASK11_APPROVED_COMMIT, [todo]),
+        ("Task 12", TASK12_APPROVED_COMMIT, [todo, f014_evidence]),
+    ):
+        commit_probe = subprocess.run(
+            ["git", "cat-file", "-e", commit + "^{commit}"],
+            cwd=ROOT, text=True, encoding="utf-8", capture_output=True, check=False)
+        ancestry_probe = subprocess.run(
+            ["git", "merge-base", "--is-ancestor", commit, "HEAD"],
+            cwd=ROOT, text=True, encoding="utf-8", capture_output=True, check=False)
+        check(task + " closure evidence binds the approved repository commit",
+              all(commit in surface for surface in surfaces),
+              commit)
+        check(task + " approved repository commit resolves in current ancestry",
+              commit_probe.returncode == 0 and ancestry_probe.returncode == 0,
+              (commit_probe.stderr + ancestry_probe.stderr).strip())
 
     hunk_text = read("docs/project-closure/r7e-sol/R7E-HUNK-DISPOSITION.md")
     rows = re.findall(

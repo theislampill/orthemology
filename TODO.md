@@ -155,7 +155,7 @@ artifacts and interrupted external research do not satisfy that gate.
 ### Task 11 — Replace the math allowlist with locus-sensitive classification
 
 - Status: completed and independently approved at
-  `66e148fc98906fe708474c4a5c628247b8427ef1`.
+  `66e148f024359cce380bac47ea3d2fb1750c760a`.
 - Implementation/review: the official post-Task-10 tree was rescanned,
   occurrences were classified by locus and role, and adversarial
   copy/move/delete controls were accepted.
@@ -167,7 +167,7 @@ artifacts and interrupted external research do not satisfy that gate.
 ### Task 12 — Migrate all seven publication sources to mathematical markup
 
 - Status: completed and independently approved. The migration closure begins at
-  `fd73f65256efbc8f78420f8057b692dd698acefd`; subsequent bounded source repairs
+  `fd73f652009f182802b10d547618e7e3b29febd7`; subsequent bounded source repairs
   preserve the reviewed tree represented by
   `9dc0094cc6df908fbba1b965bb36d5f3f00979c0`.
 - Implementation/review: all seven canonical sources were dispositioned and
