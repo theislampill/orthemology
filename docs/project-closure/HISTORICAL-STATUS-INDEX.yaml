@@ -31,8 +31,8 @@ rules:
 - path: docs/project-closure/r4/MODEL-SUBSTITUTION-INTERRUPTION-PR3.md
   status: interruption-provenance
 - prefix: docs/project-closure/r7e-sol/
-  status: current-candidate
-  note: R7E Sol independent repair control plane on an unmerged review branch; no independent signoff or merge readiness
+  status: current
+  note: R7E Sol independently reviewed control plane and protected-main verification; the final record follows the non-self-referential protected-follow-up pattern
 - prefix: docs/project-closure/r7e/
   status: current-candidate
   note: R7E Opus candidate orthing-supplementation (draft PR into the R7D branch); unmerged; never merged current state

@@ -1,6 +1,7 @@
 # R7E / PR #12 independent hunk disposition
 
-**Status:** TASK 15 VERIFIED CANDIDATE — TASK 16 INTEGRATION PENDING.
+**Status:** TASK 16 PROTECTED CASCADE AND FRESH-MAIN PROOF COMPLETE —
+FOLLOW-UP PROTECTED READBACK PENDING.
 
 Range reviewed:
 `e34d2cd56057766f8f656a4ff3486eb34dad607e..cbab14747835855d232448f648eefa1d4e36074e`.
@@ -42,8 +43,11 @@ support for the prose. The three `revise` dispositions were implemented through
 the independently approved Task 6–9 lineage; `revise` records the treatment of
 the incoming hunk, not remaining work.
 
-The exact Task 15 candidate is independently approved and its local, remote,
-clean-clone, source-package, PDF, and all-page gates are green. No merge,
-publication, release, or protected-branch update is recorded here. Task 16
-remains responsible for exact-SHA review of this closure-record commit and for
-the protected integration cascade.
+The exact Task 15 candidate was independently approved and its local, remote,
+clean-clone, source-package, PDF, and all-page gates were green. Task 16 then
+preserved these dispositions through the ordinary PR #13 → #12 → #11 → #10 →
+#9 → #8 cascade and protected-main merge
+`8db1630ab715b0931907c627be97b32399d6f4fc`. The fresh-main proof is recorded
+in `R7E-SOL-MERGED-MAIN-VERIFICATION.md`. The only remaining publication gate
+for this record is independent review, exact-SHA CI, protected merge, and
+protected-main readback of its non-self-referential follow-up commit.

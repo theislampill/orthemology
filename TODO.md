@@ -15,25 +15,23 @@ artifacts and interrupted external research do not satisfy that gate.
 
 ## Current verified baseline
 
-- Protected `main`: `43fee0f519e2f6984fb143c1e621c83382e71ec7`.
-- PR #12 remote head: `00b469af002c87724a7e5ea80320d4f8d8931b41`.
-- Review branch remote head:
-  `ad57371b8ef88c313f9b92c43c7618500337e0ed`.
-- PRs #8–#12: open, draft, mergeable, and correctly stacked at the 2026-07-27
-  observation.
-- Review-branch exact-SHA CI: GREEN at
-  `ad57371b8ef88c313f9b92c43c7618500337e0ed`, GitHub Actions run
-  `30313374447`.
-- PR #12 remains at its preserved pre-integration head. Its historical red PDF
-  runs are superseded as candidate evidence by the green review-branch run, but
-  PR #12 must receive fresh CI after Task 16 changes its effective head.
-- Local authoritative approved base:
-  `ad57371b8ef88c313f9b92c43c7618500337e0ed`.
-- Last independently approved implementation task: Task 15 candidate at
-  `ad57371b8ef88c313f9b92c43c7618500337e0ed`.
-- Task 15 local, remote, clean-clone, source-package, PDF, terminology, and
-  all-page evidence is complete. The exact closure-record commit containing
-  this TODO remains the final Task 15 review/CI gate.
+- Protected `main`: `8db1630ab715b0931907c627be97b32399d6f4fc`.
+- Exact independently reviewed Task 15 commit:
+  `b22d4351f4d3a76bc3f16b41704a470b4abb1aa5`.
+- Protected cascade merge commits: PR #13 `e12cfbbf880b52c38f4064bb7ec6e4393705e319`;
+  PR #12 `4d09fed5f2d2106fd5ecd9a79b1d13e6b9af32fc`; PR #11
+  `f4a4804101202c056a31f3d30f2ef931e1dcca2d`; PR #10
+  `2867f3510c343fea8c7fd6c37b8ad38ce5de83a6`; PR #9
+  `17f6783d5d5a39a90dee7b10573ef6bc3732ae5e`; PR #8/main
+  `8db1630ab715b0931907c627be97b32399d6f4fc`.
+- Exact-SHA CI: GREEN throughout the cascade. Protected-main run
+  `30320348878` is SUCCESS; the complete run ledger is in
+  `R7E-SOL-MERGED-MAIN-VERIFICATION.md`.
+- Last independently approved implementation task: Task 15 closure at
+  `b22d4351f4d3a76bc3f16b41704a470b4abb1aa5`.
+- Task 16 protected integration and fresh-main verification are complete. This
+  non-self-referential follow-up record still requires independent review,
+  exact-SHA CI, protected merge, and protected-main readback.
 - AR6 status: `INTERRUPTED_IN_PROGRESS`. Its 1,329 records are reconciled, but
   no AR6 patch, claim, proof, theorem, source assertion, formal artifact, or
   executable artifact is applied or approved.
@@ -225,10 +223,8 @@ artifacts and interrupted external research do not satisfy that gate.
 
 ### Task 15 — Run the exact pinned full suite and clean-clone candidate proof
 
-- Status: candidate implementation and verification complete at
-  `ad57371b8ef88c313f9b92c43c7618500337e0ed`; terminal Task 15 closure is the
-  independent approval and exact-SHA CI of the non-self-referential commit that
-  contains this record.
+- Status: completed and independently approved at
+  `b22d4351f4d3a76bc3f16b41704a470b4abb1aa5`.
 - Implementation/review: the complete `cbab147..ad57371` lineage, source
   boundaries, tests, artifacts, exclusions, PDF container identities, and
   prohibited-terminology boundary were independently reviewed. All 15 original
@@ -239,25 +235,28 @@ artifacts and interrupted external research do not satisfy that gate.
   packages and PDFs pass; two 61-page raster passes are hash-identical; all 61
   pages were visually inspected; generated state and manifest converge; the
   fresh clone is clean.
-- Blocker: only independent review and exact-SHA CI of this closure-record
-  commit. No semantic, source, PDF, dependency, topology, or owner-only blocker
-  remains.
-- Next action: obtain the terminal review of this exact closure-record commit,
-  push only the approved SHA, require GREEN exact-SHA CI, then begin Task 16.
+- Blocker: none specific to Task 15.
+- Next action: preserve the exact approved lineage and its immutable CI evidence.
 
 ### Task 16 — Perform the authorized protected integration cascade
 
-- [ ] Execute and verify the protected PR cascade without rewriting provenance.
-- Status: unfinished; execution is authorized after every Task 15 and protected
-  integration gate is satisfied.
-- Implementation/review: verify the exact reviewed SHA, topology, protection,
-  permissions, generated owners, and clean state before every authorized write.
-- CI/publication: every merge-created SHA requires fresh exact-SHA CI; the final
-  `main` tree requires a fresh-clone proof.
-- Blocker: Task 15 approval, current PR #12 CI RED, and all PRs remaining draft.
-- Next action: after the Task 15 closure-record gate, freshly verify the
-  protected topology and execute only exact-SHA writes whose required checks
-  are GREEN. Historical PR #12 CI cannot be reused after its head changes.
+- Status: completed through protected-main merge and fresh-main verification at
+  `8db1630ab715b0931907c627be97b32399d6f4fc`.
+- Implementation/review: the authorized PR #13 → #12 → #11 → #10 → #9 → #8
+  cascade used ordinary merge commits, preserved ancestry, and reached protected
+  `main` without force-push, squash, or rewrite.
+- CI/publication: every resulting remote SHA received fresh SUCCESS CI. The
+  isolated protected-main clone passed 71/71 workflow commands and 8/8
+  supplemental commands; six PDFs total 61 visually inspected pages with
+  identical ordered raster hashes and zero defects; 706 manifest entries,
+  six source archives with 24 members, 25 source-status claims, and 1,329 AR6
+  rows all pass their stated gates.
+- Blocker: no remaining semantic, source, proof, PDF, dependency, ancestry, or
+  protected-cascade blocker. The non-self-referential verification record
+  requires its normal independent-review, exact-SHA CI, protected-merge, and
+  protected-readback publication gate.
+- Next action: review and merge only the bounded follow-up record commit, then
+  verify its containing commit and merge through protected-main Git history.
 
 ## AR6 reconciliation boundary
 
@@ -283,9 +282,10 @@ theory unless a later reviewed task accepts a bounded result.
 
 ## Protected integration boundary
 
-The reviewed candidate is present only on
-`review/r7e-sol-independent-repair`. No PR mutation, merge, tag, release,
-publication, or protected-branch write has occurred. The current authorized
-order remains review branch → PR #12 → #11 → #10 → #9 → #8 → protected
-`main`, subject to the Task 15 closure-record gate and fresh exact-state
-verification before every Task 16 write.
+The reviewed candidate is reachable from protected `main` through the exact
+ordinary-merge lineage recorded above. This repository record attests the
+earlier merge and fresh-main proof; it does not self-hash or predict its own
+containing follow-up commit. That commit and its protected merge remain
+verifiable through Git history after protected readback. No tag, release,
+external publication, empirical validation, terminology adoption, or approval
+of interrupted AR6 work is claimed.

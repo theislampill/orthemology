@@ -1,9 +1,9 @@
 #!/usr/bin/env python3
-"""Focused contract tests for the R7E Sol independent-review control plane.
+"""Focused contract tests for the R7E Sol review and integration control plane.
 
 Runnable with ``python tests/test_r7e_sol_review_state.py``.  The checks are
-deterministic and offline: they validate durable review evidence, never merge
-readiness or independent sign-off.
+deterministic and offline: they validate durable review and merged-main
+evidence without self-attesting the containing follow-up commit.
 """
 from __future__ import annotations
 
@@ -30,6 +30,22 @@ R7E_HEAD_AT_OBSERVATION = "cbab14747835855d232448f648eefa1d4e36074e"
 REQUIRED_MODEL = "gpt-5.6-sol"
 TASK11_APPROVED_COMMIT = "66e148f024359cce380bac47ea3d2fb1750c760a"
 TASK12_APPROVED_COMMIT = "fd73f652009f182802b10d547618e7e3b29febd7"
+TASK15_REVIEWED_COMMIT = "b22d4351f4d3a76bc3f16b41704a470b4abb1aa5"
+TASK16_MAIN_MERGE = "8db1630ab715b0931907c627be97b32399d6f4fc"
+TASK16_MERGE_COMMITS = [
+    "e12cfbbf880b52c38f4064bb7ec6e4393705e319",
+    "4d09fed5f2d2106fd5ecd9a79b1d13e6b9af32fc",
+    "f4a4804101202c056a31f3d30f2ef931e1dcca2d",
+    "2867f3510c343fea8c7fd6c37b8ad38ce5de83a6",
+    "17f6783d5d5a39a90dee7b10573ef6bc3732ae5e",
+    TASK16_MAIN_MERGE,
+]
+TASK16_SUCCESSFUL_RUNS = [
+    30317000439, 30317471209, 30317917503, 30317919628,
+    30318432384, 30318434266, 30318923898, 30318925662,
+    30319389233, 30319391979, 30319878639, 30319880488,
+    30320348878,
+]
 
 EXPECTED_TOPOLOGY_AT_OBSERVATION = [
     {
@@ -275,8 +291,8 @@ def test_prefix_and_state() -> None:
     rule = next((row for row in rules
                  if row.get("prefix") == "docs/project-closure/r7e-sol/"), None)
     check("R7E-Sol closure prefix exists", rule is not None)
-    check("R7E-Sol closure prefix is current-candidate",
-          bool(rule) and rule.get("status") == "current-candidate")
+    check("R7E-Sol closure prefix is current after protected integration",
+          bool(rule) and rule.get("status") == "current")
 
     state = load_json("docs/project-closure/r7e-sol/AUTONOMOUS-R7E-SOL-STATE.json")
     check("R7E-Sol state record exists", bool(state))
@@ -301,10 +317,10 @@ def test_prefix_and_state() -> None:
           and model.get("selected") == REQUIRED_MODEL
           and model.get("evidence") == "controller-confirmed-agent-model-selection"
           and model.get("environment_variable_observation") is False)
-    check("state records candidate sign-off without claiming Task 16 completion",
+    check("state records completed protected integration without follow-up self-attestation",
           state.get("independent_signoff") is True
           and state.get("ready_for_merge") is False
-          and state.get("merged") is False)
+          and state.get("merged") is True)
     task15 = state.get("task15_verification", {})
     check("Task 15 state binds the exact approved remote candidate",
           task15.get("candidate_commit")
@@ -447,9 +463,9 @@ def test_findings_and_hunks() -> None:
     check("preserved R7E provenance inputs are kept byte-identical",
           ("docs/project-closure/r7e/AUTONOMOUS-R7E-STATE.json", "keep") in rows
           and ("docs/project-closure/r7e/ORTHING-CANDIDATE-BACKLOG.md", "keep") in rows)
-    check("hunk disposition records Task 15 terminal candidate status",
-          "TASK 15 VERIFIED CANDIDATE" in hunk_text
-          and "TASK 16 INTEGRATION PENDING" in hunk_text)
+    check("hunk disposition records Task 16 integration and follow-up boundary",
+          "TASK 16 PROTECTED CASCADE AND FRESH-MAIN PROOF COMPLETE" in hunk_text
+          and "FOLLOW-UP PROTECTED READBACK PENDING" in hunk_text)
 
 
 def test_decision_boundary_and_validator() -> None:
@@ -476,6 +492,53 @@ def test_decision_boundary_and_validator() -> None:
         cwd=ROOT, text=True, encoding="utf-8", capture_output=True, check=False)
     check("review-state validator enforces the R7E-Sol contract",
           proc.returncode == 0, (proc.stdout + proc.stderr)[-1000:])
+
+
+def test_task16_merged_main_followup_record() -> None:
+    record_path = (
+        "docs/project-closure/r7e-sol/R7E-SOL-MERGED-MAIN-VERIFICATION.md")
+    record = read(record_path)
+    state = load_json(
+        "docs/project-closure/r7e-sol/AUTONOMOUS-R7E-SOL-STATE.json")
+    task16 = state.get("task16_verification", {}) if isinstance(state, dict) else {}
+    todo = read("TODO.md")
+
+    check("Task 16 merged-main verification record exists", bool(record))
+    check("Task 16 record binds the exact independently reviewed commit",
+          TASK15_REVIEWED_COMMIT in record)
+    check("Task 16 record binds every protected cascade merge commit",
+          all(commit in record for commit in TASK16_MERGE_COMMITS))
+    check("Task 16 record binds every successful exact-SHA CI run",
+          all(str(run) in record for run in TASK16_SUCCESSFUL_RUNS))
+    check("Task 16 record states the non-self-referential follow-up rule",
+          "never self-hashed" in record
+          and "protected readback" in record
+          and "Git history" in record)
+    check("Task 16 state binds merged main and the complete fresh-main proof",
+          task16.get("reviewed_commit") == TASK15_REVIEWED_COMMIT
+          and task16.get("main_merge_commit") == TASK16_MAIN_MERGE
+          and task16.get("github_actions_runs") == TASK16_SUCCESSFUL_RUNS
+          and task16.get("workflow_command_count") == 71
+          and task16.get("supplemental_command_count") == 8
+          and task16.get("pdf_pages") == 61
+          and task16.get("visually_inspected_pages") == 61
+          and task16.get("visual_defects") == 0
+          and task16.get("tracked_paths") == 707
+          and task16.get("release_manifest_entries") == 706
+          and task16.get("prohibited_semantic_hits") == 0
+          and task16.get("ar6_records") == 1329
+          and task16.get("ar6_unclassified_counters") == 0)
+    check("Task 16 state records the completed cascade without self-attestation",
+          state.get("merged") is True
+          and state.get("ready_for_merge") is False
+          and task16.get("followup_record_self_hashed") is False
+          and task16.get("followup_protected_readback") == "pending")
+    check("TODO records Tasks 1-16 complete through merged-main verification",
+          "### Task 16 — Perform the authorized protected integration cascade"
+          in todo
+          and "Status: completed through protected-main merge and fresh-main verification"
+          in todo
+          and "- [ ] Execute and verify the protected PR cascade" not in todo)
 
 
 def test_production_validator_rejects_adversarial_mutations() -> None:
@@ -544,6 +607,7 @@ def test_production_validator_rejects_adversarial_mutations() -> None:
 test_prefix_and_state()
 test_findings_and_hunks()
 test_decision_boundary_and_validator()
+test_task16_merged_main_followup_record()
 test_production_validator_rejects_adversarial_mutations()
 
 print("TOTAL: %d failures" % len(FAILS))
