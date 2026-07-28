@@ -1,0 +1,25 @@
+schema: orthemology-r7e-somnic-case-crosswalk-v1
+status: current-candidate
+witness_ref: R7E-LLM-WITNESS-001
+source_case: R7E
+original_history:
+  episode_cardinality: underdetermined
+  target_identity_status: unresolved
+  t1_checkpoint_status: missing
+  t1_evidence_partition_status: not-observed
+  capture_mode: retrospective_reconstruction
+later_review:
+  audit_ref: R7E-SOL-RETRO-AUDIT-001
+  assessment_kind: human-llm-mediated-retrospective-assessment
+  meta_orthability_disposition: record-insufficient
+  somnic_conformance: not-established
+relation_disposition:
+  inter_somnic_relation: not-established
+  temporal_separation_is_sufficient: false
+  reason: Authoritative episode and assessment identities are unavailable.
+illustration_roles:
+  - documented-historical-fact
+  - retrospective-reconstruction
+  - schema-conformant-illustrative-mapping
+  - unsupported-live-runtime-claim
+evidence_refs: [E-R7E-STATE, E-R7E-PROVENANCE, E-SOL-REVIEW]

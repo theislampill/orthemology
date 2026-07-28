@@ -1,0 +1,72 @@
+{
+  "$schema": "http://json-schema.org/draft-07/schema#",
+  "title": "Orthemology noetic-target map (R7C, Decision 0027)",
+  "description": "A DAEE episode distinguishes several possible occurrence bearers. Every noetic claim names its target occurrence, type, evidence, scope, analysis, status, and non-claims. Discourse is EVIDENCE about a possible subject-level target, never identical to it. No claim manipulates or asserts an interior soul-state.",
+  "type": "object",
+  "additionalProperties": false,
+  "required": ["schema", "episode_id", "occurrences", "claims", "non_soul_access_invariant"],
+  "properties": {
+    "schema": {"const": "orthemology-noetic-target-map-v1"},
+    "episode_id": {"type": "string"},
+    "occurrences": {
+      "type": "object",
+      "additionalProperties": false,
+      "required": ["m_discourse"],
+      "properties": {
+        "m_discourse": {"$ref": "#/$defs/occurrence"},
+        "m_subject": {"$ref": "#/$defs/occurrence"},
+        "m_runtime": {"$ref": "#/$defs/occurrence"},
+        "m_response": {"$ref": "#/$defs/occurrence"},
+        "m_uptake": {"$ref": "#/$defs/occurrence"}
+      }
+    },
+    "observation_bridge": {
+      "type": "array",
+      "description": "ObservedFrom(h, m_discourse) + About_A(h, m_subject): discourse is evidence about a subject-level target; About does not establish truth, sufficiency, or unique identification.",
+      "items": {
+        "type": "object",
+        "additionalProperties": false,
+        "required": ["evidence_id", "observed_from", "about", "establishes_truth"],
+        "properties": {
+          "evidence_id": {"type": "string"},
+          "observed_from": {"const": "m_discourse"},
+          "about": {"enum": ["m_subject", "m_runtime", "m_response", "m_uptake"]},
+          "establishes_truth": {"const": false}
+        }
+      }
+    },
+    "claims": {"type": "array", "items": {"$ref": "#/$defs/claim"}},
+    "non_soul_access_invariant": {"type": "string", "minLength": 10}
+  },
+  "$defs": {
+    "occurrence": {
+      "type": "object",
+      "additionalProperties": false,
+      "required": ["bearer_type", "identity", "version", "in_scope"],
+      "properties": {
+        "bearer_type": {"enum": ["discourse", "subject", "runtime", "response", "uptake"]},
+        "identity": {"type": "string"},
+        "version": {"type": "string"},
+        "in_scope": {"type": "boolean", "description": "whether this bearer is legitimately targeted this episode (m_subject often in_scope but not directly observed)"},
+        "observed": {"type": "boolean"},
+        "note": {"type": "string"}
+      }
+    },
+    "claim": {
+      "type": "object",
+      "additionalProperties": false,
+      "required": ["claim_id", "target", "target_type", "evidence_ids", "evidence_scope", "analysis", "status", "non_claims"],
+      "properties": {
+        "claim_id": {"type": "string"},
+        "target": {"enum": ["m_discourse", "m_subject", "m_runtime", "m_response", "m_uptake"]},
+        "target_type": {"type": "string", "description": "the type asserted of the target (e.g. discourse-interpretation, noetic-state-type, runtime-closure, route-quality)"},
+        "evidence_ids": {"type": "array", "items": {"type": "string"}},
+        "evidence_scope": {"type": "string"},
+        "analysis": {"type": "string"},
+        "status": {"enum": ["asserted", "held", "underdetermined", "deferred", "withdrawn"]},
+        "uncertainty": {"type": "string"},
+        "non_claims": {"type": "array", "items": {"type": "string"}, "minItems": 1}
+      }
+    }
+  }
+}

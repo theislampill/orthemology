@@ -1,18 +1,91 @@
 {
+  "schema": "orthemology-pdf-sources-v2",
+  "artifact_id": "orthability-divine-speech-athari-draft",
   "pdf": "orthability-divine-speech-athari-draft.pdf",
-  "pdf_sha256": "fe5162ecfe165080625337ce6fc526926fce7a8f570058e5ca1088576ca55665",
-  "page_count": 8,
-  "sources": {
-    "companion/orthability-divine-attributes-and-speech-athari.md": "41b41689eb82a9e24ef07aefe79b76f9c30bd1623bef125a1c9cc91dc344f139"
+  "pdf_sha256": "ab22cd7d7a467c24c52e59f530c52af73f9416591cb2a0a8e2eef5c3a6ea53f7",
+  "page_count": 6,
+  "source_commit": "aee5c7389b57ec7c3150d8fee3b3e398195d1395",
+  "source_tree": "766a3cfd57058d56538a0571fcff176ca44288b3",
+  "independently_reviewed_equivalent_source_commit": "aee5c7389b57ec7c3150d8fee3b3e398195d1395",
+  "independently_reviewed_equivalent_source_tree": "766a3cfd57058d56538a0571fcff176ca44288b3",
+  "source_tree_equivalence": "verified-identical",
+  "source_date_epoch": 1785167892,
+  "build_time_utc": "2026-07-27T15:58:12Z",
+  "source_hashes": {
+    "markdown": {
+      "companion/orthability-divine-attributes-and-speech-athari.md": "64cd7d4b07bd905ee97b16dbffaa046ea51489521e6f06ff47e768b30fe77b53"
+    },
+    "latex": {
+      "publication/latex/orthability-divine-speech-athari-draft/main.tex": "536f121d32b8f68aced0fcc5263afa1664e8a7d009342f7f51c4b167b91f5718"
+    },
+    "bibliography": {
+      "path": "references/orthemology.bib",
+      "sha256": "ca6bd2e96c52ff35db569793443331f54c6f5415fa69c1f2fa2592c16bb7cc56"
+    },
+    "compatibility": {
+      "publication/latexmkrc": "8fab079b47dda579db9b75aef4f25a4b3c78bc19089957e7076a95f1dc717979",
+      "publication/pdftex-unicode-compat.tex": "3d3eb3d8ecd1619a67fa3575866de56c38390f4c28f2ea95a76a70aacbba4771"
+    }
   },
-  "source_commit": "e69e455272d9097bb27643ea0c543ef3a412717e",
-  "artifact_commit": "the git commit that introduces/updates this artifact (two-stage provenance; see `git log -- artifacts/`)",
-  "source_date_epoch": 1784583213,
-  "build_command": "python scripts/build_pdfs.py",
+  "publication_profile": {
+    "path": "docs/publication-profile.yaml",
+    "sha256": "176e78534db91ad9c3c6f441676fa6a506470e344b5acba7060262a0d0b973a6"
+  },
+  "toolchain_lock": {
+    "path": "publication/toolchain-lock.yaml",
+    "sha256": "25eba4659e5817f1d90d1511facff15afadcaa463be3b6aea491bc145a8dc4d4"
+  },
+  "candidate_status": {
+    "source": "docs/current-candidate-state.yaml",
+    "sha256": "7311b9d973761648f8b02ee47c222e64b8a752df57e86bcc74e47c34edc34fce",
+    "label": "SOL INDEPENDENT REVIEW CANDIDATE — NO SIGNOFF OR MERGE READINESS",
+    "observed_at_utc": "2026-07-21T18:10:22Z",
+    "timeless_state": false,
+    "status_claims": {
+      "candidate_status": "proposed-candidate",
+      "merged": false,
+      "independent_signoff": false,
+      "ready_for_merge": false,
+      "evidence": {
+        "merged": [],
+        "independent_signoff": [],
+        "ready_for_merge": []
+      },
+      "next_action": "Complete the bounded Sol repair and independent review before any separately authorized protected integration; refresh every PR observation first."
+    }
+  },
+  "entry_point": "publication/latex/orthability-divine-speech-athari-draft/main.tex",
+  "build_workdir": "publication/latex/orthability-divine-speech-athari-draft",
+  "build_command": "/usr/local/texlive/2025/bin/x86_64-linux/latexmk main.tex",
+  "source_package": {
+    "path": "artifacts/orthability-divine-speech-athari-draft.source.tar.gz",
+    "sha256": "29d8be14a117470c2f3ac82d12b0fba2c6a94293e9d6112cbcc426689cd92fd8"
+  },
+  "source_manifest": {
+    "path": "artifacts/orthability-divine-speech-athari-draft.source-manifest.json",
+    "sha256": "4f30983b4de02d6f928d4f61c6ff7e23711e5917e97e153f16ff9bfb9e8a6ab3"
+  },
   "tools": {
-    "typst": "0.15.0",
-    "markdown-it-py": "4.0.0",
+    "bibtex": "0.99d",
+    "kpathsea": "6.4.1",
+    "latexmk": "4.87",
+    "pdftex": "1.40.28",
+    "poppler": "25.07.0",
+    "pypdf": "6.14.2",
     "python": "3.11.9"
   },
-  "generation_status": "complete; strict conversion (no skipped content); double-build verified"
+  "bibliography_qa": {
+    "disposition": "EMPTY_BIBLIOGRAPHY_NO_CITATIONS",
+    "bibtex_return_code": 2,
+    "bibtex_version": "0.99d",
+    "database_path": "../../../references/orthemology.bib",
+    "bibliography_style": "plainnat",
+    "citation_commands": 0,
+    "aux_citations": 0,
+    "bbl_sha256": "8e5c0a84578475116bd7e34d81ab6a955fa410c276f07902a2ba9c41ed532db6",
+    "blg_sha256": "e42a8085c7f72304a16ef66b8435e519e8fb2fed16ff2a0e303b6f63fbe57ebf",
+    "bibliography_sha256": "ca6bd2e96c52ff35db569793443331f54c6f5415fa69c1f2fa2592c16bb7cc56",
+    "stale_bbl_preexisting": false
+  },
+  "generation_status": "complete; PDFLaTeX through latexmk; independent double build byte-identical; clean source-package rebuild verified"
 }

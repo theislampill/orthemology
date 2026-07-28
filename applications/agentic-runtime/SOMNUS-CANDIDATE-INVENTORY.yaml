@@ -1,0 +1,186 @@
+schema: orthemology-somnus-candidate-inventory-v1
+status: outline-only
+execution: not implemented
+runtime owner: external/downstream
+claim_status:
+  claim_status_id: somnus-claim-boundaries-v1
+  empirical_validation: {status: not-established, owner: future empirical study, evidence_basis: no empirical study was run}
+  performance: {status: not-established, owner: future comparative evaluation, evidence_basis: no matched workflow comparison was run}
+  learning: {status: not-established, owner: future governed outcome study, evidence_basis: no modification and later-outcome loop was executed}
+  generalization: {status: not-established, owner: future cross-model and cross-domain study, evidence_basis: fixtures do not establish transfer}
+  internal_ontology: {status: not-established, owner: future interpretability inquiry, evidence_basis: records do not expose an actor interior state}
+  terminology_utility: {status: not-established, owner: terminology benchmark, evidence_basis: terminology benchmark was not run}
+  terminology_adoption: {status: not-established, owner: human terminology review, evidence_basis: no term was adopted}
+  runtime: {status: not-implemented, owner: external downstream runtime owner, evidence_basis: this repository contains schemas fixtures and offline validation only}
+  collective_execution: {status: not-implemented, owner: external collective runtime owner, evidence_basis: no network transport council or shared service exists}
+candidates:
+- &candidate
+  candidate_id: orthability-check
+  semantic_contract_version: 1.0.0
+  status: outline-only
+  execution: not implemented
+  layer: live-routing
+  inputs: [minimally captured occurrence, candidate claimant, activation contract, evaluator]
+  outputs: [tri-state claimant assessment, property findings, fallback or no-claim disposition]
+  dependencies: [versioned activation contracts, captured occurrence identity]
+  event_emissions: [orthability_assessed]
+  authority_limit: &authority_limit {scope: bounded record or proposal production only, operator_request_authorizes_mutation: false, prohibited_operations: [schedule_runtime, execute_mutation, promote_governance, close_governance_finding, mutate_governance]}
+  authority_boundary: {scope: bounded record or proposal production only, automatic_authorization: prohibited, automatic_execution: prohibited, automatic_writeback: prohibited, historical_rewrite: prohibited}
+  residual_behavior: retain inapplicable and indeterminate attempts
+  downstream_owner: {ownership_scope: external/downstream, owner_role: agent-host routing owner, local_runtime_ownership: prohibited}
+  non_claims: &candidate_non_claims {executable_skill: not-implemented, deployed_runtime: not-implemented, correctness: not-established, empirical_utility: not-established}
+  non_claim_boundaries: {executable_skill: not-implemented, deployed_runtime: not-implemented, correctness: not-established, empirical_utility: not-established}
+- <<: *candidate
+  candidate_id: orthing-ledger
+  layer: infrastructure
+  inputs: [incremental waking checkpoint events]
+  outputs: [append-only events, derived episode views]
+  dependencies: [shared identity and event vocabulary, durable ledger store]
+  event_emissions: [occurrence_apprehended, placement_committed, residual_recorded, orthing_closed, orthing_abandoned]
+  authority_limit: *authority_limit
+  residual_behavior: append interruption and incomplete-record residuals
+  downstream_owner: {ownership_scope: external/downstream, owner_role: durable-ledger owner, local_runtime_ownership: prohibited}
+  non_claims: *candidate_non_claims
+- <<: *candidate
+  candidate_id: episode-residual-live
+  layer: live-capture
+  inputs: [waking orthing, claim ledger residual]
+  outputs: [typed residual record]
+  dependencies: [claim-ledger residual owner]
+  event_emissions: [residual_recorded]
+  authority_limit: *authority_limit
+  residual_behavior: preserve raw text and governed disposition
+  downstream_owner: {ownership_scope: external/downstream, owner_role: runtime capture owner, local_runtime_ownership: prohibited}
+  non_claims: *candidate_non_claims
+- <<: *candidate
+  candidate_id: residual-recurrence-somnic
+  layer: later-somnus
+  inputs: [frontier anchors, historical corpus, controlled residual fingerprints]
+  outputs: [structural recurrence report, suspected locus, unresolved questions]
+  dependencies: [somnus run contract, recurrence report contract]
+  event_emissions: [somnus_assessment_emitted]
+  authority_limit: *authority_limit
+  residual_behavior: preserve dependence and counterexample uncertainty
+  downstream_owner: {ownership_scope: external/downstream, owner_role: somnus operation owner after successor trigger, local_runtime_ownership: prohibited}
+  non_claims: *candidate_non_claims
+- <<: *candidate
+  candidate_id: metaorthemma-conflict
+  layer: live-detection-and-later-mining
+  inputs: [candidate placements, selector versions, authorization rules]
+  outputs: [provisional route, alternatives, unresolved conflict]
+  dependencies: [episode candidate and route owners]
+  event_emissions: [candidate_set_recorded, route_selected]
+  authority_limit: *authority_limit
+  residual_behavior: retain conflict and confidence effect
+  downstream_owner: {ownership_scope: external/downstream, owner_role: conflict-detection owner, local_runtime_ownership: prohibited}
+  non_claims: *candidate_non_claims
+- <<: *candidate
+  candidate_id: intervention-disposition
+  layer: later-somnus
+  inputs: [somnic assessment, defect loci, evidence state]
+  outputs: [no change, investigation, evidence request, residual preservation, or proposal references]
+  dependencies: [verdict and claim-ledger owners]
+  event_emissions: [somnus_assessment_emitted]
+  authority_limit: *authority_limit
+  residual_behavior: no-change and held residuals remain valid outcomes
+  downstream_owner: {ownership_scope: external/downstream, owner_role: intervention-governance owner, local_runtime_ownership: prohibited}
+  non_claims: *candidate_non_claims
+- <<: *candidate
+  candidate_id: verdict-aware-patch-proposal
+  layer: later-somnus
+  inputs: [assessment, diagnosed locus, regression fixtures]
+  outputs: [bounded proposal alternatives]
+  dependencies: [proposal review owner, verdict record]
+  event_emissions: [proposal_emitted]
+  authority_limit: *authority_limit
+  residual_behavior: rejection and failure do not rewrite assessment
+  downstream_owner: {ownership_scope: external/downstream, owner_role: proposal owner, local_runtime_ownership: prohibited}
+  non_claims: *candidate_non_claims
+- <<: *candidate
+  candidate_id: guarded-writeback-actuator
+  layer: downstream-actuation
+  inputs: [authorized proposal, validation and dry-run evidence]
+  outputs: [application or rejection record, revert provenance]
+  dependencies: [independent authorization, mature external actuator]
+  event_emissions: [proposal_emitted]
+  authority_limit: *authority_limit
+  residual_behavior: failed application preserves histories
+  downstream_owner: {ownership_scope: external/downstream, owner_role: writeback runtime owner, local_runtime_ownership: prohibited}
+  non_claims: *candidate_non_claims
+- <<: *candidate
+  candidate_id: orthing-dream
+  layer: somnus-orchestrator
+  inputs: [unassessed or materially reopened frontier]
+  outputs: [versioned operation runs]
+  dependencies: [durable ledger, host trigger]
+  event_emissions: [somnus_assessment_emitted]
+  authority_limit: *authority_limit
+  residual_behavior: closed outputs remain outside the frontier absent material delta
+  downstream_owner: {ownership_scope: external/downstream, owner_role: host/orchestrator owner, local_runtime_ownership: prohibited}
+  non_claims: *candidate_non_claims
+- <<: *candidate
+  candidate_id: somnus-export
+  layer: collective-downstream
+  inputs: [locally authorized projection]
+  outputs: [immutable source envelope]
+  dependencies: [privacy and disclosure authority]
+  event_emissions: [none]
+  authority_limit: *authority_limit
+  residual_behavior: disclose redactions and non-claims
+  downstream_owner: {ownership_scope: external/downstream, owner_role: transport owner, local_runtime_ownership: prohibited}
+  non_claims: *candidate_non_claims
+- <<: *candidate
+  candidate_id: somnus-import
+  layer: collective-downstream
+  inputs: [transclusion envelope]
+  outputs: [receipt and source-status assessment]
+  dependencies: [integrity, version, cycle, privacy checks]
+  event_emissions: [none]
+  authority_limit: *authority_limit
+  residual_behavior: hold incompatible or insufficient packets
+  downstream_owner: {ownership_scope: external/downstream, owner_role: import owner, local_runtime_ownership: prohibited}
+  non_claims: *candidate_non_claims
+- <<: *candidate
+  candidate_id: metaortheme-transclusion
+  layer: collective-downstream
+  inputs: [represented standard, source envelope]
+  outputs: [local meta-orthability disposition, locally versioned candidate]
+  dependencies: [represented-standard and ecology owners]
+  event_emissions: [none]
+  authority_limit: *authority_limit
+  residual_behavior: retain source/local version distinction
+  downstream_owner: {ownership_scope: external/downstream, owner_role: normative-adoption owner, local_runtime_ownership: prohibited}
+  non_claims: *candidate_non_claims
+- <<: *candidate
+  candidate_id: collective-somnus
+  layer: collective-downstream
+  inputs: [bounded participant records and declared shared scope]
+  outputs: [bounded collective assessment with dissent]
+  dependencies: [local ledgers and local meta-orthability]
+  event_emissions: [none]
+  authority_limit: *authority_limit
+  residual_behavior: preserve unresolved conflict and scope limits
+  downstream_owner: {ownership_scope: external/downstream, owner_role: collective-assessment owner, local_runtime_ownership: prohibited}
+  non_claims: *candidate_non_claims
+- <<: *candidate
+  candidate_id: somnus-council
+  layer: collective-downstream
+  inputs: [independent or dependent assessments]
+  outputs: [comparison preserving dependence and dissent]
+  dependencies: [declared coordination path]
+  event_emissions: [none]
+  authority_limit: *authority_limit
+  residual_behavior: preserve plural closure
+  downstream_owner: {ownership_scope: external/downstream, owner_role: council owner, local_runtime_ownership: prohibited}
+  non_claims: *candidate_non_claims
+- <<: *candidate
+  candidate_id: transclusion-ledger
+  layer: collective-downstream
+  inputs: [source envelope, receiving append records]
+  outputs: [exchange, adaptation, binding, and execution provenance]
+  dependencies: [actor and handoff owners]
+  event_emissions: [none]
+  authority_limit: *authority_limit
+  residual_behavior: record cycles, redactions, and incompatible versions
+  downstream_owner: {ownership_scope: external/downstream, owner_role: transclusion-ledger owner, local_runtime_ownership: prohibited}
+  non_claims: *candidate_non_claims

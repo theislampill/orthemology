@@ -1,0 +1,61 @@
+schema: orthemology-math-migration-status-v2
+publication_profile: docs/publication-profile.yaml
+state_semantics:
+  glyph_defect_repaired: The reproduced missing-glyph defect is absent and expected_notdef is zero.
+  full_math_source_migrated: Every occurrence classified as mathematics has left inline backticks for canonical mathematical markup.
+  visual_qa_state: Task 13 owns committed-PDF all-page visual qualification; Task 11 records only deferred truth.
+pipeline:
+  current_compatibility_surface:
+    engine: typst-0.15.0
+    status: historical-noncanonical-compatibility-surface
+  target:
+    owner: docs/publication-profile.yaml
+    status: deferred-tasks-12-13
+  inventory:
+    owner: docs/math-source-inventory.yaml
+    occurrence_identity: file-locus-occurrence
+    bidirectional_parity_required: true
+documents:
+- artifact_id: notation-gallery
+  sources:
+  - docs/notation-gallery.md
+  glyph_defect_repaired: true
+  full_math_source_migrated: true
+  expected_notdef: 0
+  visual_qa_state: deferred-task-13
+- artifact_id: dynamic-orthing-noetic-learning-orthability-draft
+  sources:
+  - companion/dynamic-orthing-noetic-learning-and-orthability.md
+  glyph_defect_repaired: true
+  full_math_source_migrated: true
+  expected_notdef: 0
+  visual_qa_state: deferred-task-13
+- artifact_id: orthemic-core-reference-draft
+  sources:
+  - theory/orthemic-core-formalization.md
+  - theory/orthemic-multi-actor-conflict-note.md
+  glyph_defect_repaired: true
+  full_math_source_migrated: true
+  expected_notdef: 0
+  visual_qa_state: deferred-task-13
+- artifact_id: orthemma-ortheme-systems-draft
+  sources:
+  - manuscript/orthemma-ortheme-systems-revised-draft.md
+  glyph_defect_repaired: true
+  full_math_source_migrated: true
+  expected_notdef: 0
+  visual_qa_state: deferred-task-13
+- artifact_id: orthability-ground-of-intelligibility-draft
+  sources:
+  - companion/orthability-and-the-ground-of-intelligibility.md
+  glyph_defect_repaired: true
+  full_math_source_migrated: true
+  expected_notdef: 0
+  visual_qa_state: deferred-task-13
+- artifact_id: orthability-divine-speech-athari-draft
+  sources:
+  - companion/orthability-divine-attributes-and-speech-athari.md
+  glyph_defect_repaired: true
+  full_math_source_migrated: true
+  expected_notdef: 0
+  visual_qa_state: deferred-task-13

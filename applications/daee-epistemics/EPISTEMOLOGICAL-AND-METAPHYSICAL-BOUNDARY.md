@@ -15,13 +15,21 @@ the companion develops abstractly:
   bearer-appropriate normative status (Decision 0009);
 - **proper-function / warrant architecture** — reliability, configured
   procedure, faithful execution, and truth-linkage as separable channels;
+  "proper-function" is a modern comparative reconstruction here, not an
+  unqualified classical primary-text claim;
 - **source / testimony / perception / inference ordering** — distinct
   evidence/warrant channels, not one scalar;
 - **evaluator symmetry** — the practitioner is audited by the same
   architecture (blocks privileged self-certification; does not prove
   non-circularity);
-- **`tawātur`-like independence** — corroboration requires source
-  independence and origin structure, not count (fixture N6);
+- **machine source-dependence analysis** — the machine may detect dependence,
+  support source independence, or hold origin analysis underdetermined; none is
+  a `tawātur` warrant verdict (fixture N6);
+- **creed-internal `tawātur` warrant** — a separate, school-labeled qualitative
+  assessment of actual source units, origin/common cause/copying, path
+  independence, non-collusion, transmitter trust and competence, indicants,
+  coherence, lineage, defeaters, subject conditions, assessor, and evidence;
+  count, popularity, graph degree, and institutional persistence do not suffice;
 - **candidate profiles under underdetermination** — several live noetic
   profiles where evidence is thin (fixtures N1/N10);
 - **restoration is teleological and analysis-relative**, not a neutral
@@ -59,7 +67,9 @@ standard, application token, execution, closure, and restoration distinct.*
   it is not a school-neutral conclusion and not the position of every Islamic
   school.
 - `fiṭrah` is a normative disposition, **not** reduced to one metaortheme;
-  `ʿaql ṣarīḥ` is **not** one algorithm.
+  its school-internal representation is qualitative, defeasible, and
+  multidimensional, not a scalar, coordinate, algorithm, discourse-readable
+  soul state, or guaranteed attractor. `ʿAql ṣarīḥ` is **not** one algorithm.
 - Deformation placements are **not** automatic moral verdicts; motive,
   culpability, and soul-state are explicit non-claims.
 - Revelation and source order are **analysis commitments here**, not

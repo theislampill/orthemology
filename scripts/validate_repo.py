@@ -19,14 +19,36 @@ def check(name, ok, detail=""):
         FAILS.append(name)
 
 
-def text_files():
-    for dirpath, dirnames, filenames in os.walk(ROOT):
-        dirnames[:] = [d for d in dirnames if d not in (".git", "__pycache__")]
-        for fn in filenames:
-            p = os.path.join(dirpath, fn)
-            if fn.endswith((".md", ".patch", ".json", ".py", ".yml", ".cff", ".txt",
-                            ".gitignore", ".gitattributes", ".editorconfig", ".sha256")):
-                yield p
+def corpus_files():
+    """Return Git-tracked plus non-ignored prospective worktree files."""
+    result = subprocess.run(
+        ["git", "ls-files", "-z", "--cached", "--others", "--exclude-standard"],
+        cwd=ROOT,
+        stdout=subprocess.PIPE,
+        stderr=subprocess.PIPE,
+        check=False,
+    )
+    if result.returncode:
+        raise RuntimeError(
+            "git ls-files failed: "
+            + result.stderr.decode("utf-8", errors="replace").strip()
+        )
+    paths = {
+        item.decode("utf-8").replace("\\", "/")
+        for item in result.stdout.split(b"\0")
+        if item
+    }
+    for rel in sorted(paths):
+        path = os.path.join(ROOT, *rel.split("/"))
+        if os.path.isfile(path):
+            yield path
+
+
+def text_files(corpus=None):
+    for path in corpus if corpus is not None else corpus_files():
+        if path.endswith((".md", ".patch", ".json", ".py", ".yml", ".yaml", ".cff", ".txt",
+                          ".gitignore", ".gitattributes", ".editorconfig", ".sha256")):
+            yield path
 
 
 BANNED = [
@@ -43,7 +65,8 @@ BANNED_FILENAMES = re.compile(r"(\.output$|\.jsonl$|synthesis-checks|owner_messa
 
 
 def main():
-    files = list(text_files())
+    corpus = list(corpus_files())
+    files = list(text_files(corpus))
     rel = lambda p: os.path.relpath(p, ROOT).replace("\\", "/")
 
     # 0: no tracked cache/bytecode artifact (R4 fresh review, Phase A4/E).
@@ -81,10 +104,11 @@ def main():
                 offenders.setdefault(rel(p), []).append(why)
     check("no absolute local paths / banned private patterns / secrets", not offenders, str(offenders))
     check("no .env files", not any(f.endswith(".env") for f in files))
-    check("no zip/bulk archives", not any(fn.lower().endswith((".zip", ".7z", ".rar"))
-                                          for _, _, fns in os.walk(ROOT) for fn in fns))
-    bad_names = [fn for dp, dn, fns in os.walk(ROOT) if ".git" not in dp
-                 for fn in fns if BANNED_FILENAMES.search(fn)]
+    check("no zip/bulk archives", not any(
+        path.lower().endswith((".zip", ".7z", ".rar")) for path in corpus
+    ))
+    bad_names = [os.path.basename(path) for path in corpus
+                 if BANNED_FILENAMES.search(os.path.basename(path))]
     check("no research-output/session-dump artifact files", not bad_names, str(bad_names))
 
     # 4-5: exactly one manuscript, one core

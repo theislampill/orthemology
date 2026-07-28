@@ -5,7 +5,8 @@
 # scripts/validate_review_state.py enforces coverage and the current/historical split.
 schema: orthemology-historical-status-v1
 statuses:
-  current: maintained by the current revision; may be cited as current state
+  current: maintained by the current revision; may be cited as MERGED current state (on protected main)
+  current-candidate: maintained by an UNMERGED candidate revision (R7/R7B/R7C/R7D draft PR chain); NOT merged into main; must never be cited as merged current state (R7D, audit B2)
   current-signoff: the standing review sign-off the current revision points to
   historical-snapshot: point-in-time record of an earlier pass; body preserved; not current state
   superseded: historical record whose operative content is replaced by a named successor
@@ -29,8 +30,24 @@ rules:
   status: interruption-provenance
 - path: docs/project-closure/r4/MODEL-SUBSTITUTION-INTERRUPTION-PR3.md
   status: interruption-provenance
+- prefix: docs/project-closure/r7e-sol/
+  status: current-candidate
+  note: R7E Sol independent repair control plane on an unmerged review branch; no independent signoff or merge readiness
+- prefix: docs/project-closure/r7e/
+  status: current-candidate
+  note: R7E Opus candidate orthing-supplementation (draft PR into the R7D branch); unmerged; never merged current state
+- prefix: docs/project-closure/r7d/
+  status: current-candidate
+  note: R7D Opus candidate closure (draft child PR into PR #10); unmerged; never merged current state
+- prefix: docs/project-closure/r7c/
+  status: current-candidate
+  note: R7C Opus candidate closure (draft grandchild PR #10); unmerged
+- prefix: docs/project-closure/r7b/
+  status: current-candidate
+  note: R7B Opus candidate closure (draft child PR #9); unmerged
 - prefix: docs/project-closure/r7/
-  status: current
+  status: current-candidate
+  note: R7 candidate closure (draft PR #8); unmerged
 - prefix: docs/project-closure/r6/
   status: current
 - prefix: docs/project-closure/r5/

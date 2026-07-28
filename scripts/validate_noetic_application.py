@@ -21,7 +21,7 @@ except ImportError as e:
 
 ROOT = os.path.dirname(os.path.dirname(os.path.abspath(__file__)))
 FAILS = []
-WANT = {"N%d" % i for i in range(1, 11)}
+WANT = {"N%d" % i for i in range(1, 21)}  # R7B extended N1..N10 -> N1..N20 (Decision 0025)
 
 
 def check(name, ok, detail=""):
@@ -37,7 +37,7 @@ def read(rel):
 def main():
     doc = yaml.safe_load(read("tests/noetic-application-fixtures.yaml"))
     fx = {f["id"]: f for f in doc["fixtures"]}
-    check("all ten fixtures N1..N10 present", set(fx) == WANT, str(sorted(set(fx) ^ WANT)))
+    check("all twenty fixtures N1..N20 present", set(fx) == WANT, str(sorted(set(fx) ^ WANT)))
     check("the no-soul-access invariant is declared", "no_soul_access_invariant" in doc)
 
     for fid, f in sorted(fx.items()):
@@ -47,10 +47,12 @@ def main():
         forb = " ".join(f.get("forbidden_placements", [])).lower()
         check("%s forbids asserting motive/culpability/soul-state" % fid,
               "motive" in forb or "soul" in forb or "culpability" in forb, forb[:60])
-        # the correct action never rests on an interior/motive assertion
+        # the correct action never rests on an interior/motive assertion, and
+        # never asserts restoration (runtime closure is not human restoration; B19/P12)
         ca = f["correct_action"].lower()
         check("%s correct action is not a moralized interior verdict" % fid,
-              "motive" not in ca and "soul" not in ca and "culpable" not in ca)
+              "motive" not in ca and "soul" not in ca and "culpable" not in ca
+              and "restored" not in ca)
 
     # specific distinctions the audit demanded
     check("N1 holds under underdetermination (no moralized placement)",

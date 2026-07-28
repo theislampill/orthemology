@@ -1,0 +1,336 @@
+schema: orthemology-activation-contract-fixtures-v1
+version_transition_authority:
+  authority_ref: docs/decisions/0035-somnic-orthing-and-activation-contracts.md#activation-and-claimant-routing
+  append_only: true
+  accepted_versions:
+  - {artifact_kind: activation_contract, artifact_id: database-schema-activation, artifact_version: 1.0.0, sequence: 1, supersedes: null}
+  - {artifact_kind: activation_contract, artifact_id: recurrence-meta-assessability, artifact_version: 1.0.0, sequence: 1, supersedes: null}
+  - {artifact_kind: activation_contract, artifact_id: theological-claimant-activation, artifact_version: 1.0.0, sequence: 1, supersedes: null}
+  - {artifact_kind: orthability_evaluator, artifact_id: property-boundary-evaluator, artifact_version: 1.0.0, sequence: 1, supersedes: null}
+evaluators:
+- evaluator_id: property-boundary-evaluator
+  evaluator_version: 1.0.0
+  result_vocabulary: [applicable, inapplicable, indeterminate]
+  non_claims:
+  - indicators are evidence about required properties, not the boundary itself
+authoring_records:
+- provenance_record_id: BOOTSTRAP-AUTHORING-001
+  capture_mode: bootstrap_provenance
+  immutable: true
+  boundary_problem: distinguish theological propositions and worldview-bearing tasks from lexical near-boundary uses
+  selected_contract_ref: theological-claimant-activation@1.0.0
+  fixture_ids: [ACT-POS-001, ACT-NEG-001, ACT-MIXED-LEXICAL-001, ACT-OVERLAP-001]
+  contract_body_digest: 1ece6dea432eca94da54d0ae290d36945b95f63a3be882e00742aba78eb4b49e
+  fixture_semantic_digests:
+    ACT-MIXED-LEXICAL-001: 4262d815d008930c9d538b63bdfb4564f07f998c02d4b920d77d71a6a55e71fc
+    ACT-NEG-001: 83b34152ee16cfb3d6167a98b8407caa8c8b3f66a7b5f3511ebc9ea5094c857c
+    ACT-OVERLAP-001: 8a5644286be3b921ab3d8dfa30e390c6712ffa5aec28142939feb1e6f2b356d0
+    ACT-POS-001: 4768bb229a1f0006e01e3486d917e34be73b2463f2096e661502948a5a5fa837
+  unresolved_residuals: [mixed-domain overlap remains conflict-bearing]
+- provenance_record_id: BOOTSTRAP-AUTHORING-002
+  capture_mode: bootstrap_provenance
+  immutable: true
+  boundary_problem: distinguish requested data-model operations from schema language used outside a data operation
+  selected_contract_ref: database-schema-activation@1.0.0
+  fixture_ids: [ACT-DB-POS-001, ACT-DB-NEG-001, ACT-DB-INDETERMINATE-001, ACT-OVERLAP-001, ACT-REC-OVERLAP-001]
+  contract_body_digest: 1f2156852ffde748ec3df533d14205475b6fb20d1998d04d8525d1a1f25109eb
+  fixture_semantic_digests:
+    ACT-DB-INDETERMINATE-001: 5c55542c7ea2990027b459a4b360ac49dcadd20e81f9c7030b99e7266ccc33c3
+    ACT-DB-NEG-001: 5a3b5da8edee543370636929498cc7509540f048387f5a75dc42d70af15d1e42
+    ACT-DB-POS-001: 0c401c6363cc86858c3dd43e75cacf4077d6b02d56d1c10d8054b54524801358
+    ACT-OVERLAP-001: 8a5644286be3b921ab3d8dfa30e390c6712ffa5aec28142939feb1e6f2b356d0
+    ACT-REC-OVERLAP-001: a10f2edf33ce5fd6cd6ea25867d661431670f40ed3e6b2119c33289763cd53f1
+  unresolved_residuals: [mixed-domain overlap remains conflict-bearing]
+- provenance_record_id: BOOTSTRAP-AUTHORING-003
+  capture_mode: bootstrap_provenance
+  immutable: true
+  boundary_problem: determine whether preserved records support a bounded residual-recurrence assessment
+  selected_contract_ref: recurrence-meta-assessability@1.0.0
+  fixture_ids: [ACT-REC-POS-001, ACT-REC-NEG-001, ACT-REC-INDETERMINATE-001, ACT-REC-OVERLAP-001]
+  contract_body_digest: ce9cabad44e264e0a60bbb6c4156c64cfd1772e8cb5534bf1abc7d97ad10dec6
+  fixture_semantic_digests:
+    ACT-REC-INDETERMINATE-001: 442d3c7bee925a88393b013f19aee0b464992f9d0410164947bd117dd1b04439
+    ACT-REC-NEG-001: 34a2d953a09b4056e14317d895260fd54eed023e2b4cbd5a882cdc904635ceb4
+    ACT-REC-OVERLAP-001: a10f2edf33ce5fd6cd6ea25867d661431670f40ed3e6b2119c33289763cd53f1
+    ACT-REC-POS-001: a6d4e5ea2dbaeba14c749dd451b3ec92cebae36e8addb1cd59d1517739e885c3
+  unresolved_residuals: [assessability does not establish recurrence cause or remedy]
+contracts:
+- contract_id: theological-claimant-activation
+  contract_version: 1.0.0
+  claimant_id: theological-claimant
+  claimant_version: 1.0.0
+  required_properties: [theological-proposition, worldview-bearing-task]
+  positive_indicators: [tawhid, divine-unity]
+  exclusion_indicators: [database-column-only, quoted-token-only]
+  boundary_counterexamples: [tawhid-column-name, quoted-term-without-theological-claim]
+  tolerated_ambiguity: mixed-domain tasks remain indeterminate until the proposition and requested operation are separated
+  fallback_claimants: [baseline-reasoning, database-schema-claimant]
+  no_claim_allowed: true
+  decision_policy: applicable only when every required property is satisfied and no controlling exclusion applies
+  indeterminate_policy: retain the attempt and permit another applicable claimant or the declared baseline rule
+  fixture_suite: examples/somnus/activation-contract-fixtures.yaml
+  effective: {from_revision: task4-fixture-v1, through_revision: null}
+  supersedes: null
+  superseded_by: null
+  authorship: {mode: bootstrap_provenance, provenance_record_id: BOOTSTRAP-AUTHORING-001}
+  status: accepted
+  fixture_outcomes: [ACT-POS-001, ACT-NEG-001, ACT-MIXED-LEXICAL-001, ACT-OVERLAP-001]
+- contract_id: database-schema-activation
+  contract_version: 1.0.0
+  claimant_id: database-schema-claimant
+  claimant_version: 1.0.0
+  required_properties: [data-model-operation]
+  positive_indicators: [database, column, schema]
+  exclusion_indicators: [theology-only]
+  boundary_counterexamples: [theological-proposition-without-data-operation]
+  tolerated_ambiguity: mixed-domain tasks may overlap with another applicable claimant
+  fallback_claimants: [baseline-reasoning]
+  no_claim_allowed: true
+  decision_policy: applicable when a data-model operation is present
+  indeterminate_policy: retain the attempt and defer or route through another applicable claimant
+  fixture_suite: examples/somnus/activation-contract-fixtures.yaml
+  effective: {from_revision: task4-fixture-v1, through_revision: null}
+  supersedes: null
+  superseded_by: null
+  authorship: {mode: bootstrap_provenance, provenance_record_id: BOOTSTRAP-AUTHORING-002}
+  status: accepted
+  fixture_outcomes: [ACT-DB-POS-001, ACT-DB-NEG-001, ACT-DB-INDETERMINATE-001, ACT-OVERLAP-001, ACT-REC-OVERLAP-001]
+- contract_id: recurrence-meta-assessability
+  contract_version: 1.0.0
+  claimant_id: residual-recurrence-standard
+  claimant_version: 1.0.0
+  required_properties: [preserved-target, sufficient-residual-structure]
+  positive_indicators: [controlled-fingerprint, immutable-target-record]
+  exclusion_indicators: [mutable-target-history, missing-target-record]
+  boundary_counterexamples: [free-text-similarity-without-preserved-target, copied-residual-without-distinct-orthing]
+  tolerated_ambiguity: incomplete residual structure remains indeterminate or record-insufficient
+  fallback_claimants: [historical-record-audit, no-retrospective-assessment]
+  no_claim_allowed: true
+  decision_policy: applicable only when the target is preserved and the record contains sufficient controlled residual structure
+  indeterminate_policy: preserve the target and emit no assessment when applicability or record sufficiency is unresolved
+  fixture_suite: examples/somnus/activation-contract-fixtures.yaml
+  effective: {from_revision: task4-fixture-v1, through_revision: null}
+  supersedes: null
+  superseded_by: null
+  authorship: {mode: bootstrap_provenance, provenance_record_id: BOOTSTRAP-AUTHORING-003}
+  status: accepted
+  fixture_outcomes: [ACT-REC-POS-001, ACT-REC-NEG-001, ACT-REC-INDETERMINATE-001, ACT-REC-OVERLAP-001]
+fixture_outcomes:
+- fixture_id: ACT-POS-001
+  fixture_class: positive
+  occurrence: A question comparing two theological accounts of divine unity.
+  observed_indicators: [tawhid, divine-unity]
+  observed_exclusions: []
+  property_findings:
+    satisfied: [theological-proposition, worldview-bearing-task]
+    absent: []
+    indeterminate: []
+  claimant_assessments:
+  - claimant_id: theological-claimant
+    activation_contract_id: theological-claimant-activation
+    activation_contract_version: 1.0.0
+    evaluator_id: property-boundary-evaluator
+    evaluator_version: 1.0.0
+    result: applicable
+    property_findings: {satisfied: [theological-proposition, worldview-bearing-task], absent: [], indeterminate: []}
+    observed_indicators: [tawhid, divine-unity]
+    observed_exclusions: []
+- fixture_id: ACT-NEG-001
+  fixture_class: negative-near-boundary
+  occurrence: Rename a database column whose literal name is tawhid.
+  observed_indicators: [tawhid]
+  observed_exclusions: [database-column-only]
+  property_findings:
+    satisfied: []
+    absent: [theological-proposition, worldview-bearing-task]
+    indeterminate: []
+  claimant_assessments:
+  - claimant_id: theological-claimant
+    activation_contract_id: theological-claimant-activation
+    activation_contract_version: 1.0.0
+    evaluator_id: property-boundary-evaluator
+    evaluator_version: 1.0.0
+    result: inapplicable
+    property_findings: {satisfied: [], absent: [theological-proposition, worldview-bearing-task], indeterminate: []}
+    observed_indicators: [tawhid]
+    observed_exclusions: [database-column-only]
+- fixture_id: ACT-MIXED-LEXICAL-001
+  fixture_class: indeterminate
+  occurrence: Model a database that may encode theological propositions under a column named tawhid.
+  observed_indicators: [tawhid]
+  observed_exclusions: []
+  property_findings:
+    satisfied: []
+    absent: [worldview-bearing-task]
+    indeterminate: [theological-proposition]
+  claimant_assessments:
+  - claimant_id: theological-claimant
+    activation_contract_id: theological-claimant-activation
+    activation_contract_version: 1.0.0
+    evaluator_id: property-boundary-evaluator
+    evaluator_version: 1.0.0
+    result: indeterminate
+    property_findings: {satisfied: [], absent: [worldview-bearing-task], indeterminate: [theological-proposition]}
+    observed_indicators: [tawhid]
+    observed_exclusions: []
+- fixture_id: ACT-DB-POS-001
+  fixture_class: positive
+  occurrence: Add a required column to a database schema.
+  observed_indicators: [database, column, schema]
+  observed_exclusions: []
+  property_findings: {satisfied: [data-model-operation], absent: [], indeterminate: []}
+  claimant_assessments:
+  - claimant_id: database-schema-claimant
+    activation_contract_id: database-schema-activation
+    activation_contract_version: 1.0.0
+    evaluator_id: property-boundary-evaluator
+    evaluator_version: 1.0.0
+    result: applicable
+    property_findings: {satisfied: [data-model-operation], absent: [], indeterminate: []}
+    observed_indicators: [database, column, schema]
+    observed_exclusions: []
+- fixture_id: ACT-DB-NEG-001
+  fixture_class: negative-near-boundary
+  occurrence: Explain a theological proposition without changing a data model.
+  observed_indicators: [schema]
+  observed_exclusions: [theology-only]
+  property_findings: {satisfied: [], absent: [data-model-operation], indeterminate: []}
+  claimant_assessments:
+  - claimant_id: database-schema-claimant
+    activation_contract_id: database-schema-activation
+    activation_contract_version: 1.0.0
+    evaluator_id: property-boundary-evaluator
+    evaluator_version: 1.0.0
+    result: inapplicable
+    property_findings: {satisfied: [], absent: [data-model-operation], indeterminate: []}
+    observed_indicators: [schema]
+    observed_exclusions: [theology-only]
+- fixture_id: ACT-DB-INDETERMINATE-001
+  fixture_class: indeterminate
+  occurrence: Discuss whether a represented schema might later require a data-model change.
+  observed_indicators: [schema]
+  observed_exclusions: []
+  property_findings: {satisfied: [], absent: [], indeterminate: [data-model-operation]}
+  claimant_assessments:
+  - claimant_id: database-schema-claimant
+    activation_contract_id: database-schema-activation
+    activation_contract_version: 1.0.0
+    evaluator_id: property-boundary-evaluator
+    evaluator_version: 1.0.0
+    result: indeterminate
+    property_findings: {satisfied: [], absent: [], indeterminate: [data-model-operation]}
+    observed_indicators: [schema]
+    observed_exclusions: []
+- fixture_id: ACT-OVERLAP-001
+  fixture_class: overlap
+  occurrence: Compare a data model and its explicit theological claim about divine unity.
+  observed_indicators: [tawhid, divine-unity, schema]
+  observed_exclusions: []
+  property_findings:
+    satisfied: [theological-proposition, worldview-bearing-task, data-model-operation]
+    absent: []
+    indeterminate: []
+  claimant_assessments:
+  - claimant_id: theological-claimant
+    activation_contract_id: theological-claimant-activation
+    activation_contract_version: 1.0.0
+    evaluator_id: property-boundary-evaluator
+    evaluator_version: 1.0.0
+    result: applicable
+    property_findings: {satisfied: [theological-proposition, worldview-bearing-task], absent: [], indeterminate: []}
+    observed_indicators: [tawhid, divine-unity]
+    observed_exclusions: []
+  - claimant_id: database-schema-claimant
+    activation_contract_id: database-schema-activation
+    activation_contract_version: 1.0.0
+    evaluator_id: property-boundary-evaluator
+    evaluator_version: 1.0.0
+    result: applicable
+    property_findings: {satisfied: [data-model-operation], absent: [], indeterminate: []}
+    observed_indicators: [schema]
+    observed_exclusions: []
+  conflict:
+    conflict_id: ACT-CONFLICT-001
+    claimant_contracts: [theological-claimant-activation@1.0.0, database-schema-activation@1.0.0]
+    disposition: provisional_multi_claimant
+    conflict_unresolved: true
+    authorization_rule_id: no-irreversible-action-with-unresolved-conflict
+- fixture_id: ACT-REC-POS-001
+  fixture_class: positive
+  occurrence: Assess a preserved orthing whose controlled residual fields and evidence state are complete.
+  observed_indicators: [controlled-fingerprint, immutable-target-record]
+  observed_exclusions: []
+  property_findings: {satisfied: [preserved-target, sufficient-residual-structure], absent: [], indeterminate: []}
+  claimant_assessments:
+  - claimant_id: residual-recurrence-standard
+    activation_contract_id: recurrence-meta-assessability
+    activation_contract_version: 1.0.0
+    evaluator_id: property-boundary-evaluator
+    evaluator_version: 1.0.0
+    result: applicable
+    property_findings: {satisfied: [preserved-target, sufficient-residual-structure], absent: [], indeterminate: []}
+    observed_indicators: [controlled-fingerprint, immutable-target-record]
+    observed_exclusions: []
+- fixture_id: ACT-REC-NEG-001
+  fixture_class: negative-near-boundary
+  occurrence: A copied residual string lacks a preserved target orthing record.
+  observed_indicators: [controlled-fingerprint]
+  observed_exclusions: [missing-target-record]
+  property_findings: {satisfied: [sufficient-residual-structure], absent: [preserved-target], indeterminate: []}
+  claimant_assessments:
+  - claimant_id: residual-recurrence-standard
+    activation_contract_id: recurrence-meta-assessability
+    activation_contract_version: 1.0.0
+    evaluator_id: property-boundary-evaluator
+    evaluator_version: 1.0.0
+    result: inapplicable
+    property_findings: {satisfied: [sufficient-residual-structure], absent: [preserved-target], indeterminate: []}
+    observed_indicators: [controlled-fingerprint]
+    observed_exclusions: [missing-target-record]
+- fixture_id: ACT-REC-INDETERMINATE-001
+  fixture_class: indeterminate
+  occurrence: A preserved target exists but the residual structure is incomplete.
+  observed_indicators: [immutable-target-record]
+  observed_exclusions: []
+  property_findings: {satisfied: [preserved-target], absent: [], indeterminate: [sufficient-residual-structure]}
+  claimant_assessments:
+  - claimant_id: residual-recurrence-standard
+    activation_contract_id: recurrence-meta-assessability
+    activation_contract_version: 1.0.0
+    evaluator_id: property-boundary-evaluator
+    evaluator_version: 1.0.0
+    result: indeterminate
+    property_findings: {satisfied: [preserved-target], absent: [], indeterminate: [sufficient-residual-structure]}
+    observed_indicators: [immutable-target-record]
+    observed_exclusions: []
+- fixture_id: ACT-REC-OVERLAP-001
+  fixture_class: overlap
+  occurrence: A preserved residual describes a concrete database-schema routing defect.
+  observed_indicators: [controlled-fingerprint, immutable-target-record, database, schema]
+  observed_exclusions: []
+  property_findings: {satisfied: [preserved-target, sufficient-residual-structure, data-model-operation], absent: [], indeterminate: []}
+  claimant_assessments:
+  - claimant_id: residual-recurrence-standard
+    activation_contract_id: recurrence-meta-assessability
+    activation_contract_version: 1.0.0
+    evaluator_id: property-boundary-evaluator
+    evaluator_version: 1.0.0
+    result: applicable
+    property_findings: {satisfied: [preserved-target, sufficient-residual-structure], absent: [], indeterminate: []}
+    observed_indicators: [controlled-fingerprint, immutable-target-record]
+    observed_exclusions: []
+  - claimant_id: database-schema-claimant
+    activation_contract_id: database-schema-activation
+    activation_contract_version: 1.0.0
+    evaluator_id: property-boundary-evaluator
+    evaluator_version: 1.0.0
+    result: applicable
+    property_findings: {satisfied: [data-model-operation], absent: [], indeterminate: []}
+    observed_indicators: [database, schema]
+    observed_exclusions: []
+  conflict:
+    conflict_id: ACT-CONFLICT-REC-001
+    claimant_contracts: [recurrence-meta-assessability@1.0.0, database-schema-activation@1.0.0]
+    disposition: provisional_multi_claimant
+    conflict_unresolved: true
+    authorization_rule_id: no-irreversible-action-with-unresolved-conflict

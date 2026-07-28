@@ -1,0 +1,151 @@
+schema: orthemology-daee-semantic-operator-contract-v1
+status: current
+daee_pin: c86b3c6673147b8802fe222373a165a37d4d24a8
+type_registry:
+- hard-constraint-filtered-route-set
+- runtime-control-state
+- typed-multi-node-field
+- loop-state
+- whole-runtime-state
+- runtime-closure-state
+- route-ranking-witness
+- event-local-delta
+- field-diagnostic-witness
+- reread-witness
+predicate_registry:
+- {canonical_id: admissible_corrective_transition, normative_symbol: "AdmissibleCorrectiveTransition(e)", computation: hard-constraint-feasibility, factive: false, requires: []}
+- {canonical_id: locally_improving_transition, normative_symbol: "LocallyImprovingTransition(e)", computation: declared-order-comparison, factive: false, requires: [admissible_corrective_transition]}
+- {canonical_id: transition_pathway_adequate, normative_symbol: "TransitionPathwayAdequate(e)", computation: transition-governance-verdicts, factive: false, requires: [admissible_corrective_transition]}
+- canonical_id: reasoning_path_adequate_q
+  normative_symbol: ReasoningPathAdequate_q(e)
+  display_label: ClaimRelevantReasoningPathAdequate
+  computation: decision-0011-required-reason-projection
+  factive: false
+  requires: []
+- canonical_id: token_truth_linked_q
+  normative_symbol: TOKEN_TRUTH_LINKED_q(e)
+  computation: decision-0011-token-truth-linkage
+  factive: true
+  requires: []
+- canonical_id: strictly_sound_reasoning_q
+  normative_symbol: StrictlySoundReasoning_q(e)
+  computation: decision-0011-conjunction
+  factive: true
+  requires: [reasoning_path_adequate_q, token_truth_linked_q]
+owner_aliases:
+- {owner_family: MRP, canonical_owner: TTP-MRP-mid-reread-pressure, relation: typed-owner-family-alias}
+owner_registry:
+- {owner_kind: governance-source, owner_id: recursive-state-transitions, source_ref: atomics/skill/references/diagnostics/recursive-state-transitions.md}
+- {owner_kind: governance-source, owner_id: corrective-transition-owner, source_ref: atomics/skill/references/diagnostics/recursive-state-transitions.md}
+- {owner_kind: owner-family-ground, owner_id: MRP, source_ref: TTP-MRP-mid-reread-pressure}
+- {owner_kind: catalogue-module, owner_id: TTP-MRP-mid-reread-pressure, source_ref: atomics/skill/references/diagnostics/module-catalogue.json}
+- {owner_kind: governance-source, owner_id: output-release, source_ref: atomics/skill/references/diagnostics/output-release.md}
+governance:
+  whole_state_reread_required_before_closure: true
+  burden_retention: address-or-carry-forward-with-provenance
+  global_revision_requires_explicit_authorization: true
+  runtime_closure_entails_human_restoration: false
+  admissibility_entails_strict_soundness: false
+operator_contracts:
+- semantic_operator_id: route-pressure
+  display_name: Route pressure
+  symbol: ∇
+  inputs: [hard-constraint-filtered-route-set, runtime-control-state]
+  outputs: [route-ranking-witness]
+  target_field: {field_kind: route-set, node_types: [eligible-route]}
+  preconditions: [hard-constraints-applied-before-ranking]
+  semantic_kind: route-ranking
+  claim_role: non-factive-control
+  owner_binding: {owner_kind: governance-source, owner_id: recursive-state-transitions, source_ref: atomics/skill/references/diagnostics/recursive-state-transitions.md}
+  sources: [{source_role: direct-daee-definition, status_layer: direct-repository-description, repository: daee-epistemics, revision: c86b3c6673147b8802fe222373a165a37d4d24a8, path: docs/algebraic-notation-and-noetic-formalism.md, supports: route-ranking-not-physical-gradient}]
+  correctness_relation: {relation: does-not-entail, entails_result_correctness: false}
+  pathway_relation: {relation: supplies-ranking-witness-for, canonical_predicate: admissible_corrective_transition}
+  non_claims: {entails_human_uptake: false, entails_human_restoration: false, entails_soul_access: false}
+- semantic_operator_id: event-transition
+  display_name: Event transition
+  symbol: ΔⁿB / Δκ
+  inputs: [runtime-control-state, route-ranking-witness]
+  outputs: [event-local-delta, runtime-control-state]
+  target_field: {field_kind: runtime-control-state, node_types: [burden-state, dependency-state]}
+  preconditions: [selected-route-is-admissible]
+  semantic_kind: event-local-transition
+  claim_role: non-factive-control
+  owner_binding: {owner_kind: governance-source, owner_id: corrective-transition-owner, source_ref: atomics/skill/references/diagnostics/recursive-state-transitions.md}
+  sources: [{source_role: orthemology-semantic-owner, status_layer: orthemological-crosswalk, repository: orthemology, revision: decision-0033, path: docs/decisions/0033-governed-corrective-search-and-transition-witness.md, supports: delta-is-control-change-not-correctness}]
+  correctness_relation: {relation: does-not-entail, entails_result_correctness: false}
+  pathway_relation: {relation: may-supply-verdict-input-to, canonical_predicate: transition_pathway_adequate}
+  non_claims: {entails_human_uptake: false, entails_human_restoration: false, entails_soul_access: false}
+- semantic_operator_id: field-divergence
+  display_name: Field divergence diagnostic
+  symbol: ∇·T
+  inputs: [typed-multi-node-field]
+  outputs: [field-diagnostic-witness]
+  target_field: {field_kind: typed-multi-node-field, node_types: [burden-node, dependency-node]}
+  preconditions: [target-field-has-typed-nodes-and-relations]
+  semantic_kind: field-diagnostic
+  claim_role: non-factive-diagnostic
+  owner_binding: {owner_kind: governance-source, owner_id: recursive-state-transitions, source_ref: atomics/skill/references/diagnostics/recursive-state-transitions.md}
+  sources: [{source_role: orthemology-semantic-owner, status_layer: orthemological-crosswalk, repository: orthemology, revision: decision-0025, path: applications/daee-epistemics/NOETIC-FIELD-DYNAMICS.yaml, supports: typed-field-diagnostic-boundary}]
+  correctness_relation: {relation: does-not-entail, entails_result_correctness: false}
+  pathway_relation: {relation: diagnostic-only, canonical_predicate: transition_pathway_adequate}
+  non_claims: {entails_human_uptake: false, entails_human_restoration: false, entails_soul_access: false}
+- semantic_operator_id: field-curl
+  display_name: Field curl diagnostic
+  symbol: ∇×T
+  inputs: [typed-multi-node-field]
+  outputs: [field-diagnostic-witness]
+  target_field: {field_kind: typed-multi-node-field, node_types: [route-node, dependency-node]}
+  preconditions: [target-field-has-typed-nodes-and-relations]
+  semantic_kind: field-diagnostic
+  claim_role: non-factive-diagnostic
+  owner_binding: {owner_kind: governance-source, owner_id: recursive-state-transitions, source_ref: atomics/skill/references/diagnostics/recursive-state-transitions.md}
+  sources: [{source_role: orthemology-semantic-owner, status_layer: orthemological-crosswalk, repository: orthemology, revision: decision-0025, path: applications/daee-epistemics/NOETIC-FIELD-DYNAMICS.yaml, supports: typed-field-diagnostic-boundary}]
+  correctness_relation: {relation: does-not-entail, entails_result_correctness: false}
+  pathway_relation: {relation: diagnostic-only, canonical_predicate: transition_pathway_adequate}
+  non_claims: {entails_human_uptake: false, entails_human_restoration: false, entails_soul_access: false}
+- semantic_operator_id: loop-break
+  display_name: Governed loop break
+  symbol: LoopBreak(∇×T)
+  inputs: [loop-state, field-diagnostic-witness]
+  outputs: [event-local-delta]
+  target_field: {field_kind: loop-state, node_types: [route-node, repeated-burden-node]}
+  preconditions: [loop-witness-recorded, grounding-owner-resolved]
+  semantic_kind: governed-loop-interruption
+  claim_role: non-factive-control
+  owner_binding: {owner_kind: owner-family-ground, owner_id: MRP, source_ref: TTP-MRP-mid-reread-pressure}
+  sources: [{source_role: direct-daee-definition, status_layer: direct-repository-description, repository: daee-epistemics, revision: c86b3c6673147b8802fe222373a165a37d4d24a8, path: atomics/skill/references/diagnostics/recursive-state-transitions.md, supports: governed-loop-interruption}]
+  correctness_relation: {relation: does-not-entail, entails_result_correctness: false}
+  pathway_relation: {relation: may-support, canonical_predicate: transition_pathway_adequate}
+  non_claims: {entails_human_uptake: false, entails_human_restoration: false, entails_soul_access: false}
+- semantic_operator_id: whole-state-reread
+  display_name: Whole-state reread
+  symbol: R(H,Δ)
+  inputs: [whole-runtime-state, event-local-delta]
+  outputs: [reread-witness]
+  target_field: {field_kind: whole-runtime-state, node_types: [burden-node, dependency-node, route-node]}
+  preconditions: [event-transition-recorded]
+  semantic_kind: whole-state-reinspection
+  claim_role: non-factive-control
+  owner_binding: {owner_kind: catalogue-module, owner_id: TTP-MRP-mid-reread-pressure, source_ref: atomics/skill/references/diagnostics/module-catalogue.json}
+  sources: [{source_role: direct-daee-definition, status_layer: direct-repository-description, repository: daee-epistemics, revision: c86b3c6673147b8802fe222373a165a37d4d24a8, path: atomics/skill/references/diagnostics/output-release.md, supports: reread-before-release}]
+  correctness_relation: {relation: does-not-entail, entails_result_correctness: false}
+  pathway_relation: {relation: supplies-verdict-input-to, canonical_predicate: transition_pathway_adequate}
+  non_claims: {entails_human_uptake: false, entails_human_restoration: false, entails_soul_access: false}
+- semantic_operator_id: runtime-closure
+  display_name: Runtime closure
+  symbol: 𝒞(Ψᴺ)
+  inputs: [whole-runtime-state, reread-witness]
+  outputs: [runtime-closure-state]
+  target_field: {field_kind: runtime-closure-state, node_types: [live-burden-set, dependency-set]}
+  preconditions: [whole-state-reread-performed, no-hidden-live-burden]
+  semantic_kind: runtime-terminal-predicate
+  claim_role: non-factive-runtime-predicate
+  owner_binding: {owner_kind: governance-source, owner_id: output-release, source_ref: atomics/skill/references/diagnostics/output-release.md}
+  sources: [{source_role: orthemology-semantic-owner, status_layer: orthemological-crosswalk, repository: orthemology, revision: decision-0033, path: docs/decisions/0033-governed-corrective-search-and-transition-witness.md, supports: runtime-closure-only}]
+  correctness_relation: {relation: does-not-entail, entails_result_correctness: false}
+  pathway_relation: {relation: whole-episode-only-not-claim-relative-substitute, canonical_predicate: transition_pathway_adequate}
+  non_claims: {entails_human_uptake: false, entails_human_restoration: false, entails_soul_access: false}
+non_claims:
+- The contract types runtime control semantics and establishes no result truth.
+- Runtime closure is not uptake, guidance, restoration, or soul access.
+- A field witness is an auditable projection, not the world or ground truth.

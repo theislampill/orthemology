@@ -1,0 +1,62 @@
+schema: orthemology-layer-map-v1
+# R7B, Phase H. The project's six layers, each with its dependencies, objects,
+# claim type, evidence status, non-claims, and current document. This keeps the
+# deeper thesis visible while preserving the firewall: each layer's claim type
+# and evidence status are explicit, so no layer's warrant leaks into another.
+# scripts/validate_layer_map.py enforces the closed vocabularies and coverage.
+claim_types: [formal-definitional, application-extension, creed-internal-normative, school-neutral-philosophical, theological-identification, empirical-design]
+evidence_statuses: [internally-conformance-checked, deterministically-validated, conditional-on-premises, creed-internal, not-run-no-empirical-result]
+layers:
+- id: L1
+  name: operational type/token core
+  depends_on: []
+  objects: [Inst_A, "O*(m;A)", complete/partial profiles, orthing episodes, metaorthemes mu, metaorthemmata mu-bar, verdicts, ReqPath, orthability L/O/R]
+  claim_type: formal-definitional
+  evidence_status: internally-conformance-checked
+  non_claims: [no empirical claim, no theological claim, analysis-relative not relativist]
+  document: theory/orthemic-core-formalization.md ; manuscript/orthemma-ortheme-systems-revised-draft.md
+- id: L2
+  name: dynamic orthing / representation learning
+  depends_on: [L1]
+  objects: [four update levels, world edge vs learner edge, dynamic record D_A, latent-state/profile partial relation, ablation-based ortheme admission]
+  claim_type: application-extension
+  evidence_status: deterministically-validated
+  non_claims: [OSM/CSCG is external exemplification/constraint NOT validation, no bijection Z_A<->Pi_A, no human/noetic/metaphysical transfer, no wet-lab import]
+  document: applications/latent-state-orthing/ (Decision 0024)
+- id: L3
+  name: noetic / epistemic DAEE application
+  depends_on: [L1, L2]
+  objects: [typed noetic crosswalk, Psi-I inferred profile, represented standard mu-tilde, ecology Gamma-mu, memetic modes, corrective dynamics G1]
+  claim_type: creed-internal-normative
+  evidence_status: deterministically-validated
+  non_claims: [no soul access, Psi-I is not ground truth, not validation of daee or Orthemology, no motive/culpability verdict]
+  document: applications/daee-epistemics/ (Decisions 0021, 0025)
+- id: L4
+  name: school-neutral metaphysical assessment
+  depends_on: [L1, L2, L3]
+  objects: [static orthability, dynamic orthability (candidate), metaphysical ladder rungs 1-3, anti-reification]
+  claim_type: school-neutral-philosophical
+  evidence_status: conditional-on-premises
+  non_claims: [does not prove ladder rungs 4-8, does not entail guaranteed learnability/convergence/created-truth, conditional on stated premises]
+  document: companion/orthability-and-the-ground-of-intelligibility.md ; companion/dynamic-orthing-noetic-learning-and-orthability.md
+- id: L5
+  name: Athari theological identification
+  depends_on: [L4]
+  objects: [metaphysical ladder rungs 4-8, Necessary Mind/Will/Power/Wisdom, capacity for disclosure, divine Speech]
+  claim_type: theological-identification
+  evidence_status: creed-internal
+  non_claims: [school-labeled Athari, conditional on explicit bridge premises, revelational where stated, not established by the learning/diagnosis material]
+  document: companion/orthability-divine-attributes-and-speech-athari.md
+- id: L6
+  name: empirical programs
+  depends_on: [L1]
+  objects: [FCSP-2, ER-2, terminology pilot 0 v2, confirmatory templates]
+  claim_type: empirical-design
+  evidence_status: not-run-no-empirical-result
+  non_claims: [no study has been run, no term adopted, no result exists, a Git freeze is not a preregistration]
+  document: experiments/ ; terminology/
+firewall_note: >-
+  Warrant does not flow upward: L1's formal conformance does not evidence L2-L6;
+  L2/L3 deterministic validation is representability, not truth; L4 is conditional
+  on premises; L5 is creed-internal; L6 has no empirical result. Each layer cites
+  only its own evidence status.
