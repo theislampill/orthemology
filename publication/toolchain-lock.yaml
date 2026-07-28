@@ -1,0 +1,93 @@
+schema: orthemology-pdf-toolchain-lock-v1
+container:
+  image: texlive/texlive@sha256:ccf0168bb3dc1e5ba18094131ebb57177f90eca37ab2727bc2d2afb54ad60a51
+  manifest_digest: sha256:ccf0168bb3dc1e5ba18094131ebb57177f90eca37ab2727bc2d2afb54ad60a51
+  config_digest: sha256:58b5c7718b4fd239c651873cd267b6c7c82caa5d9a25fe22845d1b8720fff6b1
+  platform: linux/amd64
+  network: none
+  locale: C.UTF-8
+  tex_bin: /usr/local/texlive/2025/bin/x86_64-linux
+tools:
+  latexmk: '4.87'
+  pdftex: '1.40.28'
+  bibtex: 0.99d
+  kpathsea: 6.4.1
+tex_packages:
+  fvextra:
+    tex_live_package: fvextra
+    revision: 78177
+    version: 1.14.0
+    path: /usr/local/texlive/2025/texmf-dist/tex/latex/fvextra/fvextra.sty
+    role: compatibility-direct
+  fancyvrb:
+    tex_live_package: fancyvrb
+    revision: 77677
+    version: '4.6'
+    path: /usr/local/texlive/2025/texmf-dist/tex/latex/fancyvrb/fancyvrb.sty
+    role: fvextra-required
+  etoolbox:
+    tex_live_package: etoolbox
+    revision: 77677
+    version: 2.5m
+    path: /usr/local/texlive/2025/texmf-dist/tex/latex/etoolbox/etoolbox.sty
+    role: fvextra-required
+  upquote:
+    tex_live_package: upquote
+    revision: 77677
+    version: '1.3'
+    path: /usr/local/texlive/2025/texmf-dist/tex/latex/upquote/upquote.sty
+    role: fvextra-required
+  textcomp:
+    tex_live_package: latex
+    revision: 76924
+    version: 2.1b
+    path: /usr/local/texlive/2025/texmf-dist/tex/latex/base/textcomp.sty
+    role: fvextra-required
+  lineno:
+    tex_live_package: lineno
+    revision: 77890
+    version: '5.7'
+    path: /usr/local/texlive/2025/texmf-dist/tex/latex/lineno/lineno.sty
+    role: fvextra-required
+  keyval:
+    tex_live_package: graphics
+    revision: 75374
+    version: '1.15'
+    path: /usr/local/texlive/2025/texmf-dist/tex/latex/graphics/keyval.sty
+    role: fancyvrb-required
+source_provenance:
+  source_commit: aee5c7389b57ec7c3150d8fee3b3e398195d1395
+  source_tree: 766a3cfd57058d56538a0571fcff176ca44288b3
+  source_date_epoch: 1785167892
+  independently_reviewed_equivalent_source_commit: aee5c7389b57ec7c3150d8fee3b3e398195d1395
+  independently_reviewed_equivalent_source_tree: 766a3cfd57058d56538a0571fcff176ca44288b3
+  source_tree_equivalence: verified-identical
+build:
+  driver: latexmk
+  engine: pdflatex
+  bibliography_processor: bibtex
+  shell_escape: disabled
+  source_date_epoch: source-commit-committer-time
+  force_source_date: true
+  timeout_seconds: 120
+  runaway_page_guard: 500
+  latexmkrc_owner: publication/latexmkrc
+  pdftex_compatibility_owner: publication/pdftex-unicode-compat.tex
+python:
+  version: 3.11.9
+  requirements_lock: requirements-ci.lock.txt
+  requirements_lock_sha256: 3011af491f65eef07ff9f3854ead9c0b69ea42c031a0bd863b43cd80f5d997fd
+  pypdf: 6.14.2
+qa:
+  poppler: 25.07.0
+ci:
+  micromamba:
+    version: 2.8.1-0
+    url: https://github.com/mamba-org/micromamba-releases/releases/download/2.8.1-0/micromamba-linux-64
+    sha256: 9689782d863c05a1bf5d2d371ba527104e7a4eb4310c1637d8653b751aed9c82
+  poppler_lock:
+    path: publication/poppler-linux-64.explicit.txt
+    sha256: bc1b26e6a386d853fd6e07225bb3b0b7a17a2a19b2ed51b5aaacedb3597ec6c3
+    package_count: 61
+    poppler_build: 25.07.0-h13eef12_1
+    poppler_sha256: a45c9c35808c44d817209af859d2e9d90b89c72f8cd8fcea20163ee774583ed8

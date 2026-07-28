@@ -1,62 +1,166 @@
-schema: orthemology-osm-cscg-crosswalk-v1
-# R7B, Decision 0024. Typed crosswalk between the OSM/CSCG source's REPORTED
-# abstract computational structure and Orthemology objects. Source used for its
-# reported structure only (no biological/wet-lab procedure; no human/noetic/
-# metaphysical transfer). claim_status is one of:
-#   source-report        - a statement the OSM/CSCG paper reports
-#   model-mechanics       - how the CSCG/HMM model works (algorithmic)
-#   synthesis             - this project's typed reading joining the two
-#   orthemology-extension - a Decision 0024 extension object
-# Every row carries non_claims. Establishes no validation of Orthemology.
-osm_citation: "Sun et al. (2025), Learning produces an orthogonalized state machine in the hippocampus, Nature 640; DOI 10.1038/s41586-024-08548-w (bib key sun2025orthogonalized; OFFICIAL-PUBLISHER-VERIFIED, CC BY 4.0)"
-osm_evidence_provenance: opendataloader-output/s41586-024-08548-w.md  # local extraction; NOT the public citation surface (audit B21)
-overall_status: "external exemplification and constraint, NOT validation"
+schema: orthemology-osm-cscg-crosswalk-v2
+# Decision 0024, repaired by Task 8. The source reports and model mechanics are
+# kept distinct from the project's computational analogy and extensions. This
+# crosswalk imports no biological procedure and supplies no evidence for
+# Orthemology, candidate terminology, noetics, fiṭrah, metaphysics, or theology.
+task8_contract_ref: OSM-DYNAMICS-DEFINITIONS.yaml#osm_task8_contract
+osm_citation: >-
+  Sun et al. (2025), Learning produces an orthogonalized state machine in the
+  hippocampus, Nature 640:165-175; DOI 10.1038/s41586-024-08548-w.
+source_custody:
+  article:
+    doi: 10.1038/s41586-024-08548-w
+    role: public-version-of-record
+    article_loci:
+    - "Methods: CSCG"
+    - "Methods: Vanilla RNNs, LSTM, Transformers, and Hebbian-RNN"
+    - "Figure 4 and accompanying text"
+    - "Figure 5 and accompanying text"
+  local_access_copy:
+    sha256: 0D097CBA7BBB25A949E2BF95AF28B5A2259BD8D60B0E5FAC5A74CDF7D05AA814
+    role: evidence-custody-only
+    extraction_lines_are_journal_pagination: false
+    sole_public_evidence: false
+  official_code:
+    repository: sprustonlab/OSM_Paper_Figures
+    commit: c1d1788b54c737efe24402e02762eee10da0d0d7
+    map_decode_locator: "fig_4/fig_4_CSCG/chmm_actions.py:176-187"
+    role: pinned-official-code-evidence-for-map-decode
+overall_status: "bounded computational analogy and constraint; NOT validation"
+supported_domains: []
 rows:
-- osm_concept: "sensory-similar contexts, different task states (observational aliasing)"
+- osm_concept: "world/task state (position plus trial type in the reported task)"
+  object_id: world_task_state
   claim_status: source-report
-  orthemology_object: "occurrence m vs observation x = Omega_A(m) (Decision 0015): the same observation is consistent with distinct occurrences/states"
-  non_claims: ["the observation is not the occurrence", "aliasing is not deformation, deception, or noetic pathology"]
-- osm_concept: "latent task state inferred from history (hidden-state inference)"
+  content_kind: biological-source-report
+  claim_role: primary-text-verified
+  evidence_access_status: article-text
+  source_locator: "DOI 10.1038/s41586-024-08548-w; Methods: Modelling, CSCG"
+  orthemology_object: "world_task_state; distinct from a concrete occurrence and every observation, model, and profile object"
+  non_claims: ["the world/task state is not an observation, clone, posterior, or orthemic profile"]
+- osm_concept: "concrete occurrence (project-side time-indexed encounter)"
+  object_id: concrete_occurrence
+  claim_status: orthemology-extension
+  content_kind: project-extension
+  claim_role: orthemological-extension
+  evidence_access_status: project-owned-definition
+  source_locator: "Decision 0015 and OSM-DYNAMICS-DEFINITIONS.yaml#osm_task8_contract"
+  orthemology_object: "concrete_occurrence; the project token to which evidence and a declared analysis may be bound"
+  non_claims: ["the article does not claim the project's occurrence object", "an occurrence is not a sensory or model symbol"]
+- osm_concept: "biological sensory observation"
+  object_id: biological_sensory_observation
   claim_status: source-report
-  orthemology_object: "latent model state z_t in Z_A and belief b_t in Delta(Z_A); NOT an ortheme and NOT the inferred profile p-hat_t"
-  non_claims: ["a latent state is not an ortheme by itself (admission is by ablation, DYN-4)", "z_t is not ground truth O*(m;A)"]
-# R7C (audit B8): the R7B single row "clones / state cells" conflated distinct
-# objects. Split into separately typed rows. The OSM source reports biological
-# population/cell dynamics and compares them to models; it does NOT identify a
-# biological state cell with a CSCG clone, nor a clone label with an ortheme.
-- osm_concept: "biological state-cell response (a CA1 neuron acquiring task-state-specific activity)"
-  claim_status: source-report
-  orthemology_object: "an OBSERVED biological signal; evidence about a task state, not a representation dimension and not an ortheme"
-  non_claims: ["a biological state cell is not a CSCG clone, not a latent posterior, and not an ortheme", "the source reports population/cell dynamics; it does not identify cells with model parameters"]
-- osm_concept: "CSCG clone (a fixed-emission latent copy in the model)"
+  content_kind: biological-source-report
+  claim_role: primary-text-verified
+  evidence_access_status: article-text
+  source_locator: "DOI 10.1038/s41586-024-08548-w; Methods: Modelling"
+  orthemology_object: "biological_sensory_observation generated by a world/task state"
+  non_claims: ["the animal-facing observation is not the model's discrete symbol", "the observation is not the occurrence"]
+- osm_concept: "model observation symbol / fixed emission"
+  object_id: model_observation_symbol
   claim_status: model-mechanics
-  orthemology_object: "a MODEL device: one latent-state slot with a deterministic emission; a modelling construct, not a type-token pole"
-  non_claims: ["a clone is not a biological state cell, not an orthemma, and not a metaortheme", "clone labels are permutation-arbitrary (fixture DYN-10)"]
-- osm_concept: "latent-state posterior (belief over latent states)"
-  claim_status: model-mechanics
-  orthemology_object: "belief b_t in Delta(Z_A); an inference state, distinct from the inferred orthemic profile p-hat_t"
-  non_claims: ["a posterior is not ground truth and not an ortheme"]
-- osm_concept: "model representation geometry (decorrelation / dimensions y_t)"
-  claim_status: model-mechanics
-  orthemology_object: "representation geometry Geom_A(theta); y_t = f_theta(history); ONE geometry, not a type-token pole"
-  non_claims: ["representation geometry is not a worldly state, not an inferred profile, and does not define an ortheme"]
-- osm_concept: "progressive decorrelation into orthogonalized representations"
+  content_kind: model-mechanics
+  claim_role: primary-text-verified
+  evidence_access_status: article-text
+  source_locator: "DOI 10.1038/s41586-024-08548-w; Methods: CSCG"
+  orthemology_object: "model_observation_symbol; a discrete surrogate that abstracts the biological observation"
+  non_claims: ["abstraction is a typed relation, not identity", "a model symbol is not raw biological input"]
+- osm_concept: "biological single-cell response"
+  object_id: biological_single_cell_response
   claim_status: source-report
-  orthemology_object: "representation geometry over learning; ONE geometry that can reduce interference among aliased-but-distinct states"
-  non_claims: ["orthogonality does NOT define an ortheme", "orthogonalization is neither necessary nor sufficient for distinct worldly states, pathway adequacy, or strict soundness"]
-- osm_concept: "learned transition graph among latent states (OSM = state machine)"
+  content_kind: biological-source-report
+  claim_role: primary-text-verified
+  evidence_access_status: article-text
+  source_locator: "DOI 10.1038/s41586-024-08548-w; Figure 3 and Discussion"
+  orthemology_object: "biological_single_cell_response; one measured biological response"
+  non_claims: ["a biological response is not a CSCG clone, population representation, model parameter, or ortheme"]
+- osm_concept: "biological population representation"
+  object_id: biological_population_representation
+  claim_status: source-report
+  content_kind: biological-source-report
+  claim_role: primary-text-verified
+  evidence_access_status: article-text
+  source_locator: "DOI 10.1038/s41586-024-08548-w; Figures 2 and 4"
+  orthemology_object: "biological_population_representation; a population-level observable derived from biological responses"
+  non_claims: ["a population representation is not one cell response", "it is not a clone-occupancy vector by identity"]
+- osm_concept: "CSCG clone / model latent state"
+  object_id: cscg_clone_latent_state
   claim_status: model-mechanics
-  orthemology_object: "learner transition model theta_t; its change is representation learning theta_t -> theta_{t+1}, distinct from world edge m_t --a--> m_{t+1}"
-  non_claims: ["the learned graph is the model's, not the world's occurrence lineage", "a fitted transition is not a validated route repertoire R_A"]
-- osm_concept: "CSCG uniquely reproduces final states AND learning trajectory"
-  claim_status: source-report
-  orthemology_object: "endpoint equivalence UNDERDETERMINES mechanism; trajectory evidence is stronger than endpoint fit"
-  non_claims: ["matching endpoints does not identify the mechanism", "this is not evidence for Orthemology; it constrains what a dynamic extension must be able to represent"]
-- osm_concept: "flexible adaptation of the OSM under altered cues / segment lengths"
-  claim_status: source-report
-  orthemology_object: "representation/analysis transport under changed conditions; a candidate A_t -> A_{t+1} or theta_t -> theta_{t+1}, never silent transport"
-  non_claims: ["adaptation is not guaranteed learnability or convergence", "no transfer to human cognition, fitrah, or metaphysics"]
-- osm_concept: "hidden state inference as a fundamental computational principle"
+  content_kind: model-mechanics
+  claim_role: primary-text-verified
+  evidence_access_status: article-text
+  source_locator: "DOI 10.1038/s41586-024-08548-w; Methods: CSCG"
+  orthemology_object: "cscg_clone_latent_state; a fixed-emission hidden-state slot in the reported model"
+  non_claims: ["a latent state is not an ortheme; project admission is by ablation", "a clone is not a neuron, occurrence, posterior, or profile"]
+- osm_concept: "latent-state posterior / clone-occupancy probability vector"
+  object_id: latent_posterior
+  claim_status: model-mechanics
+  content_kind: model-mechanics
+  claim_role: primary-text-verified
+  evidence_access_status: article-text
+  source_locator: "DOI 10.1038/s41586-024-08548-w; Figure 4 comparison"
+  orthemology_object: "latent_posterior; an inference distribution over CSCG clones"
+  non_claims: ["a posterior is not a world/task state, clone, inferred profile, actual profile, or ground truth"]
+- osm_concept: "model parameter state"
+  object_id: model_parameter_state
+  claim_status: model-mechanics
+  content_kind: model-mechanics
+  claim_role: primary-text-verified
+  evidence_access_status: article-text
+  source_locator: "DOI 10.1038/s41586-024-08548-w; Methods model sections"
+  orthemology_object: "model_parameter_state; learned transitions or neural-network parameters"
+  non_claims: ["parameters are not representation outputs or derived geometry", "cross-model parameter equality is not asserted"]
+- osm_concept: "model representation output"
+  object_id: model_representation_output
+  claim_status: model-mechanics
+  content_kind: model-mechanics
+  claim_role: primary-text-verified
+  evidence_access_status: article-text
+  source_locator: "DOI 10.1038/s41586-024-08548-w; Figure 4 and model Methods"
+  orthemology_object: "model_representation_output; clone occupancy or neural hidden activation on a declared input/probe"
+  non_claims: ["an output is not its parameters", "an output is not the statistic later derived from it"]
+- osm_concept: "derived representation geometry / progressive decorrelation"
+  object_id: derived_representation_geometry
   claim_status: synthesis
-  orthemology_object: "exemplifies that observation/state separation and history-dependent disambiguation MUST be representable in a dynamic account (Decision 0015 + 0024)"
-  non_claims: ["'fundamental' is the paper's claim about the model class, not a proof of Orthemology", "no metaphysical or theological consequence follows"]
+  content_kind: project-extension
+  claim_role: computational-analogy
+  evidence_access_status: article-text-and-project-owned-definition
+  source_locator: "DOI 10.1038/s41586-024-08548-w; Figures 2 and 4; OSM-DYNAMICS-DEFINITIONS.yaml#geometry_definition"
+  orthemology_object: "derived_representation_geometry; a declared statistic extracted from a representation output"
+  non_claims: ["orthogonalization does not define an ortheme", "geometry is not a worldly state, output, parameter, or orthemic profile"]
+- osm_concept: "inferred orthemic profile (project-side)"
+  object_id: inferred_orthemic_profile
+  claim_status: orthemology-extension
+  content_kind: project-extension
+  claim_role: orthemological-extension
+  evidence_access_status: project-owned-definition
+  source_locator: "Decision 0015 and OSM-DYNAMICS-DEFINITIONS.yaml#profile_relation"
+  orthemology_object: "inferred_orthemic_profile; a separately evidenced project placement under a declared analysis"
+  non_claims: ["the article does not report an orthemic profile", "a model posterior may inform but never equals this profile"]
+- osm_concept: "actual orthemic profile (project-side)"
+  object_id: actual_orthemic_profile
+  claim_status: orthemology-extension
+  content_kind: project-extension
+  claim_role: orthemological-extension
+  evidence_access_status: project-owned-definition
+  source_locator: "Decision 0015"
+  orthemology_object: "actual_orthemic_profile; project ground truth under a declared analysis"
+  non_claims: ["the model does not manufacture ground truth", "the article supplies no actual orthemic profile"]
+- osm_concept: "endpoint similarity and trajectory discrimination"
+  comparison_id: endpoint_trajectory_comparison
+  claim_status: source-report
+  content_kind: model-comparison
+  claim_role: computational-analogy
+  evidence_access_status: article-text
+  source_locator: "DOI 10.1038/s41586-024-08548-w; Figure 4 and accompanying text"
+  orthemology_object: "similar reported final representational structure is distinct from trajectory, performance, adaptation, mechanism, and parameter identity"
+  non_claims: ["matching endpoints does not identify a mechanism", "trajectory uniqueness is only among tested models under the reported evaluation"]
+- osm_concept: "altered-cue and stretched-track biological adaptation"
+  comparison_id: biological_adaptation_comparison
+  claim_status: source-report
+  content_kind: biological-source-report
+  claim_role: primary-text-verified
+  evidence_access_status: article-text
+  source_locator: "DOI 10.1038/s41586-024-08548-w; Figure 5 and accompanying text"
+  orthemology_object: "bounded CA1 reuse/adaptation; new-state creation and observation rebinding remain alternatives"
+  non_claims: ["model response is future work", "no correctness, convergence, broad generalization, or model transport follows"]

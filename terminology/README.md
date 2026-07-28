@@ -1,4 +1,4 @@
-# Terminology program — READY TO RUN, NOT RUN
+# Terminology program — READY_FOR_HUMAN_MATCHING_REVIEW, NOT RUN
 
 **No utility experiment has been executed. Terminology not adopted; nothing retired; no empirical claim exists.** Deterministic packet validation and synthetic smoke tests only (they validate instruments, not terms).
 

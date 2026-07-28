@@ -1,10 +1,10 @@
 schema: orthemology-update-coupling-v1
-# R7C, Decision 0024 amendment (audit B7). The four update levels are not only
-# separated but GOVERNED: each transition declares its trigger, authority, input,
-# versioning, transport map, invalidated claims, reopening scope, and rollback.
-# No level silently transports to another. "Repertoire revision changes what the
-# declared repertoire can REPRESENT/DISTINGUISH — not worldly facts or modal
-# reality." Establishes no empirical/metaphysical claim.
+# R7C Decision 0024 amendment (audit B7); R7D Decision 0033 / Phase I (audit B34, probe
+# P7). The four update levels are GOVERNED and now SCHEMA-VALIDATED: each transition's
+# `transport` is a STRUCTURED object, not free text. `default: no-transport-without-
+# argument` and `argument_required: true` are mandatory, so a silent/universal transport
+# rule fails validation (closes probe P7). Each level also declares calibration and a
+# catastrophic-forgetting check. No transition asserts any actor's interior state.
 transitions:
 - level: episode-inference
   symbol: "b_t -> b_{t+1}; p-hat_t -> p-hat_{t+1}"
@@ -12,7 +12,12 @@ transitions:
   authority: the episode's declared analysis A
   input: evidence acquired this episode; history H_t
   version: no new theta/A version; the episode advances
-  transport: beliefs update; prior placements revised in place under the same A
+  transport:
+    default: no-transport-without-argument
+    argument_required: true
+    rule: "beliefs update; prior placements are revised IN PLACE under the same A via the episode's own evidence — this is the transport argument, not silence"
+  calibration: unchanged within the episode
+  catastrophic_forgetting_check: not-applicable (no model change)
   invalidated: superseded candidate placements within the episode
   reopening: within-episode only
   rollback: revert to the prior belief on retraction of evidence
@@ -22,7 +27,12 @@ transitions:
   authority: the model owner / training regime under A
   input: training/update data and provenance
   version: theta gains a new version ver(theta_t)+1
-  transport: placements/verdicts do NOT transport across a model change without re-derivation; a model update need not change p-hat (DYN-17)
+  transport:
+    default: no-transport-without-argument
+    argument_required: true
+    rule: "placements/verdicts do NOT transport across a model change without re-derivation; a model update need not change p-hat (DYN-17)"
+  calibration: recomputed against the new theta; old calibration invalidated
+  catastrophic_forgetting_check: required; rollback to ver(theta_t) on detected forgetting (DYN-15)
   invalidated: calibration and any placement whose warrant depended on the old theta
   reopening: episodes whose warranted output depended on the changed representation
   rollback: revert to ver(theta_t) on detected catastrophic forgetting (DYN-15)
@@ -32,7 +42,12 @@ transitions:
   authority: governance (owner-licensed, provenance-tracked)
   input: recurrence evidence; impact scope
   version: the metaortheme/repertoire gains a new version
-  transport: only re-validated bindings transport; a long-run ecology may improve despite a failed episode
+  transport:
+    default: no-transport-without-argument
+    argument_required: true
+    rule: "only re-validated bindings transport; a long-run ecology may improve despite a failed episode"
+  calibration: re-validated per surviving binding
+  catastrophic_forgetting_check: revision history retained; path-dependent rollback supported (DYN-20)
   invalidated: bindings that relied on a retired metaortheme/route
   reopening: impact-scoped reopening of affected episodes
   rollback: supported and path-dependent (DYN-20); revision history retained
@@ -43,10 +58,15 @@ transitions:
   authority: the analysis owner
   input: the new analysis specification
   version: A gains a new version ver(A_t)+1
-  transport: NOTHING transports without a declared transport argument (Decision 0005 §2.5, now dynamic)
+  transport:
+    default: no-transport-without-argument
+    argument_required: true
+    rule: "NOTHING transports without a declared, per-claim transport argument (Decision 0001 analysis-relativity, now dynamic); a blanket universal transport is forbidden"
+  calibration: all calibration under A_t is invalidated absent a transport argument
+  catastrophic_forgetting_check: prior A remains a distinct, citable version (no loss)
   invalidated: all placements/validations/verdicts under A_t, absent a transport argument
   reopening: as scoped by the declared transport argument
   rollback: analyses are versioned; prior A remains a distinct, citable version
 non_claims:
 - no transition asserts anything about any actor's interior state, motive, or soul
-- transport is governed and provenance-tracked; silence is not transport
+- transport is governed, per-claim, and provenance-tracked; silence is NOT transport, and no blanket universal transport is permitted

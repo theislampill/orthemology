@@ -17,9 +17,30 @@ vocabulary); **C′ sham-label control** — the same distinctions under
 invented labels matched to the coinages in **length, pronounceability,
 memorability, morphology, mnemonic structure, semantic transparency,
 syllable count, AND primer complexity** (never arbitrary K1/K2/K3 codes) —
-otherwise Arm C wins merely because real terms are meaningful Greek-derived
-labels while shams are noise. Isolates the value of THESE terms from the
+otherwise Arm C could win merely because its constructed candidate labels carry
+deliberately designed morphological and mnemonic cues while arbitrary shams are
+noise. Isolates the value of THESE terms from the
 value of any concise, learnable labels.
+
+## Formation and provenance boundary
+
+<!-- TERMINOLOGY-PROVENANCE:START -->
+The vocabulary is **constructed but morphologically grounded**. Merriam-Webster
+supports established `orth-`, including its **correct or corrective** combining-form
+sense, and English `-eme`, whose linguistic-unit sense supplies an **analogy** rather
+than the project's operational definition. Smyth directly describes Greek `-ma`
+with stem `-mat-` as morphology for a **result or effect**; “object” or “instance”
+is only a bounded project gloss from the cited concrete examples. Greek `ἐμά` is a
+deliberately superposed **possessive resonance**, **not a derivation** of `-ma`,
+`-emma`, or any project word.
+
+The same spelling `ortheme` occurs in a prior, different **orthographic-unit
+sense** in a 1999 Unicode archive message and a 2020 article. Those attestations
+do not supply this project's state-type sense. This provenance account **does not
+adopt** or retire any term and supplies no empirical utility result. Cross-domain
+usefulness remains a **benchmark-gated mnemonic or meta-schema hypothesis**, not
+universal primitives or a proven isomorphism.
+<!-- TERMINOLOGY-PROVENANCE:END -->
 
 ## Pilot 0 — rubric and item debugging (SMALL; no utility or variance claim)
 
