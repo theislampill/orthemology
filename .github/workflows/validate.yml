@@ -9,13 +9,19 @@ jobs:
     runs-on: ubuntu-latest
     steps:
       - uses: actions/checkout@v6
+        with:
+          fetch-depth: 0
       - uses: actions/setup-python@v6
         with:
-          python-version: "3.11"
+          python-version: "3.11.9"
+      - name: Provision and verify exact PDF infrastructure
+        run: python scripts/provision_ci_infrastructure.py
       - name: Install exact version-locked dependencies (requirements-ci.lock.txt; no live web checks anywhere in CI)
         run: pip install --quiet -r requirements-ci.lock.txt
       - name: Dependency lock consistency
-        run: python scripts/validate_dependency_lock.py
+        run: |
+          python tests/test_dependency_lock.py
+          python scripts/validate_dependency_lock.py
       - name: Repository hygiene + honesty checks
         run: python scripts/validate_repo.py
       - name: Generated project state — drift check (R4, Decision 0014)
@@ -26,6 +32,20 @@ jobs:
         run: python scripts/validate_current_state.py
       - name: Review-state contract + historical supersession (R5, Decision 0016)
         run: python scripts/validate_review_state.py
+      - name: R7E Sol independent-review control plane (Decision 0034)
+        run: python tests/test_r7e_sol_review_state.py
+      - name: Complete R7 candidate-topology contract (Decision 0034)
+        run: python tests/test_candidate_state.py
+      - name: R7E provenance and immutable candidate-ledger contract (Decision 0034)
+        run: |
+          python tests/test_candidate_provenance.py
+          python scripts/validate_candidate_provenance.py
+      - name: Bounded waking/somnic contracts and residual-recurrence fixtures (Decision 0035)
+        run: |
+          python tests/test_somnic_orthing.py
+          python scripts/validate_somnic_orthing.py
+      - name: Generated candidate-state overlay — drift check
+        run: python scripts/generate_candidate_state.py --check
       - name: Public/private evidence boundary (R5, Decision 0017)
         run: python scripts/validate_evidence_boundary.py
       - name: Source-status registry + prose agreement (R4, Decision 0013)
@@ -52,6 +72,8 @@ jobs:
         run: python scripts/validate_negative_fixtures.py
       - name: Recursive path-aware mutation testing (per-family scope printed)
         run: python scripts/validate_recursive_mutations.py
+      - name: Task 14 adversarial inventory, runner, and report contract
+        run: python tests/test_task14_adversarial_program.py
       - name: ReqPath governance derivation (incl. omission attack)
         run: python scripts/derive_reqpath.py
       - name: Registry-generated surfaces are current (no drift)
@@ -63,7 +85,9 @@ jobs:
       - name: Cross-document consistency
         run: python scripts/validate_cross_document_consistency.py
       - name: Internal references resolve (no ghost script/fixture citations)
-        run: python scripts/validate_internal_references.py
+        run: |
+          python tests/test_internal_references.py
+          python scripts/validate_internal_references.py
       - name: Experiment-packet readiness + no-run guard (R6, Decision 0018)
         run: python scripts/validate_experiment_readiness.py
       - name: Sourcing-state classification + navigation (R6, Decision 0019)
@@ -72,12 +96,16 @@ jobs:
         run: python scripts/validate_companion_references.py
       - name: daee crosswalk + notation firewall (R7, Decision 0021)
         run: python scripts/validate_daee_crosswalk.py
+      - name: Current DAEE runtime crosswalk (R7D, Phase G)
+        run: python scripts/validate_daee_current_crosswalk.py
       - name: Noetic-application fixtures + example (R7, Decision 0021)
         run: python scripts/validate_noetic_application.py
       - name: Experiment methods / READY_TO_RUN gate (R7, Decision 0022)
         run: python scripts/validate_experiment_methods.py
       - name: Math source discipline + notation-gallery drift (R7B, Decision 0023)
-        run: python scripts/validate_math_source.py
+        run: |
+          python tests/test_math_source_validator.py
+          python scripts/validate_math_source.py
       - name: Math pipeline unit tests (R7B, Decision 0023)
         run: python tests/test_math_pipeline.py
       - name: PDF math-glyph regression gate (R7B, Decision 0023)
@@ -88,6 +116,26 @@ jobs:
         run: python scripts/validate_meta_noetic_memetics.py
       - name: Project layer map + firewall (R7B, Phase H)
         run: python scripts/validate_layer_map.py
+      - name: Candidate-state / pre-merge decision status (R7C 0026; R7D 0029 live-head gate)
+        run: python scripts/validate_candidate_state.py
+      - name: Public experiment-readiness conformance (R7D, Decision 0029)
+        run: python scripts/validate_public_readiness.py
+      - name: Semantic decision references (R7D, Decision 0029)
+        run: python scripts/validate_decision_references.py
+      - name: Multi-target noetic orthing + claim bearers (R7C, Decision 0027)
+        run: python scripts/validate_noetic_targets.py
+      - name: Evidence-bound multi-target noetic claims (R7D, Decision 0030)
+        run: python scripts/validate_noetic_claims.py
+      - name: Represented standards + memetic ecology (R7C, Decision 0028)
+        run: python scripts/validate_memetic_ecology.py
+      - name: Governed corrective search + transition witness (R7D, Decision 0033)
+        run: python scripts/validate_corrective_transition.py
+      - name: Typed DAEE semantic-operator contract (R7E Task 6)
+        run: |
+          python tests/test_semantic_operator_contract.py
+          python scripts/validate_semantic_operator_contract.py
+      - name: Dynamic-orthability argument map (R7D, Phase J)
+        run: python scripts/validate_argument_map.py
       - name: FCSP-2 packet smoke tests (deterministic; no result)
         run: python experiments/false-closure-selective-prediction-v2/tests/test_smoke.py
       - name: ER-2 packet smoke tests (deterministic; no result)

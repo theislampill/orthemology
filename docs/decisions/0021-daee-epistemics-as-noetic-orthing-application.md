@@ -1,6 +1,8 @@
 # Decision 0021 — daee-epistemics as a domain-specific noetic-orthing application (typed crosswalk, not validation)
 
-**Date:** 2026-07-20 · **Authority:** R7 owner authorization · **Status:** adopted · **Reopens nothing:** Decisions 0001–0020 stand; the school-neutral core, the verdict/notation registries, and the reason/revelation firewall are unchanged.
+> **OPUS CANDIDATE — REQUIRES FRESH FABLE REVIEW BEFORE MERGE.** R7 candidate decision on the unmerged PR #8 chain (Decision 0026 reclassified this proposed-candidate; `main` R6 has only 0001–0019).
+
+**Date:** 2026-07-20 · **Authority:** R7 owner authorization · **Status:** proposed-candidate · **Reopens nothing:** Decisions 0001–0020 stand; the school-neutral core, the verdict/notation registries, and the reason/revelation firewall are unchanged.
 
 ## Problem
 

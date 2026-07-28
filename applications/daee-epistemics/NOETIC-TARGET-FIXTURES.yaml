@@ -1,0 +1,97 @@
+schema: orthemology-noetic-target-fixtures-v1
+# R7C, Decision 0027. Fixtures for multi-target noetic orthing. Each is a single
+# noetic claim with its target/type/status/scope/non-claims and an expected
+# validity under the semantic rules (scripts/validate_noetic_targets.py):
+#   R1 a claim targeting m_discourse must NOT assert a subject-interior type
+#      (noetic-state / soul / interior / deformation / motive) — that belongs to
+#      the SUBJECT under a declared analysis (audit B9);
+#   R2 a subject-target claim must be held/underdetermined, or if asserted must
+#      not claim direct/unique interior access, and must carry a no-soul-access
+#      non-claim;
+#   R3 every claim carries at least one non-claim.
+# Deterministic; no empirical or theological claim; asserts no soul access.
+rules: [R1, R2, R3]
+fixtures:
+- id: NT1
+  distinction: thin discourse, subject placement held
+  target: m_subject
+  target_type: noetic-state-type (candidate)
+  status: held
+  evidence_scope: inference about the subject from thin discourse evidence
+  non_claims: [no soul access, several profiles remain live]
+  expected_valid: true
+- id: NT2
+  distinction: same discourse, two possible subject profiles
+  target: m_subject
+  target_type: noetic-state-type (two live candidates)
+  status: underdetermined
+  evidence_scope: discourse consistent with two subject-level profiles
+  non_claims: [no soul access, no motive verdict]
+  expected_valid: true
+- id: NT3
+  distinction: subject-level claim mistakenly attached to the discourse token
+  target: m_discourse
+  target_type: noetic-state-type (deformation of the interlocutor)
+  status: asserted
+  evidence_scope: the utterance wording
+  non_claims: [none stated]
+  expected_valid: false
+  violates: R1
+- id: NT4
+  distinction: correct discourse interpretation, wrong subject inference
+  target: m_discourse
+  target_type: discourse-interpretation
+  status: asserted
+  evidence_scope: the utterance's public wording
+  non_claims: [asserts nothing about the speaker's interior]
+  expected_valid: true
+- id: NT5
+  distinction: correct subject inference, wrong response route
+  target: m_response
+  target_type: route-quality
+  status: asserted
+  evidence_scope: the released response and its route register
+  non_claims: [a fitting response does not entail uptake]
+  expected_valid: true
+- id: NT6
+  distinction: runtime closure without uptake
+  target: m_runtime
+  target_type: runtime-closure
+  status: asserted
+  evidence_scope: the runtime control field only
+  non_claims: [runtime closure is not demonstrated interior restoration]
+  expected_valid: true
+- id: NT7
+  distinction: later observed uptake as a separate occurrence
+  target: m_uptake
+  target_type: observed-uptake
+  status: asserted
+  evidence_scope: a later, separately observed uptake occurrence
+  non_claims: [this is a distinct occurrence from m_discourse and m_subject]
+  expected_valid: true
+- id: NT8
+  distinction: negative control — proposition-level clarification only
+  target: m_discourse
+  target_type: discourse-interpretation
+  status: asserted
+  evidence_scope: a plain factual gap at the proposition level
+  non_claims: [no deep noetic diagnosis; no subject deformation asserted]
+  expected_valid: true
+- id: NT9
+  distinction: over-asserted subject interior from thin discourse (unique/direct)
+  target: m_subject
+  target_type: noetic-state-type
+  status: asserted
+  evidence_scope: direct and unique reading of the interior from the wording
+  non_claims: [no soul access]
+  expected_valid: false
+  violates: R2
+- id: NT10
+  distinction: subject claim missing the no-soul-access non-claim
+  target: m_subject
+  target_type: noetic-state-type
+  status: held
+  evidence_scope: inference about the subject from discourse
+  non_claims: [several profiles remain live]
+  expected_valid: false
+  violates: R2

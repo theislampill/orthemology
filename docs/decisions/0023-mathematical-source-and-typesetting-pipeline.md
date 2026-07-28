@@ -1,6 +1,6 @@
 # Decision 0023 — Mathematical source and typesetting pipeline
 
-**Date:** 2026-07-21 · **Authority:** R7B owner authorization (Opus candidate pass) · **Status:** adopted · **Reopens nothing:** Decisions 0001–0022 stand; this is a typography/rendering layer over the existing notation (Decision 0005), not a notation redesign — every symbol keeps its meaning.
+**Date:** 2026-07-21 · **Authority:** R7B owner authorization (Opus candidate pass) · **Status:** proposed-candidate · **Reopens nothing:** Decisions 0001–0022 stand; this is a typography/rendering layer over the existing notation (Decision 0005), not a notation redesign — every symbol keeps its meaning.
 
 **Provenance:** produced under model substitution to Opus 4.8 (R7B requested Opus; surfaced = Opus). OPUS CANDIDATE — REQUIRES FRESH FABLE REVIEW BEFORE MERGE.
 

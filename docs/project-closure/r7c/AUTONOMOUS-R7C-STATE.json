@@ -1,0 +1,56 @@
+{
+  "record": "AUTONOMOUS-R7C-STATE",
+  "label": "OPUS CANDIDATE — REQUIRES FRESH FABLE REVIEW BEFORE MERGE",
+  "controlling_instruction": "opus-r7c-pr9-full-math-multitarget-noetic-dynamics-candidate-prompt.md",
+  "independent_finding_set": "orthemology-pr9-r7b-independent-audit-and-r7c-findings.md",
+  "model_provenance": {
+    "requested_model": "Opus 4.8",
+    "surfaced_model_at_this_write": "claude-opus-4-8",
+    "substitution_this_pass": false,
+    "note": "R7C requested Opus 4.8 and surfaced Opus — no substitution (as in R7B). Candidate pass: no self-sign-off, no merge authority. Executed sequentially, no subagents/workflows (controlling prompt Phase 0 + model-provenance integrity override the session ultracode default)."
+  },
+  "authority_boundary": {
+    "may": ["create grandchild branch", "open ONE draft grandchild PR into the PR #9 branch", "commit to the grandchild branch", "run deterministic offline validators/build", "provision a pinned, checksum-verified pandoc for the P1/P2 parity spike (owner-requested, official source)"],
+    "must_not": ["merge any PR", "push to main/PR#9/PR#8", "mark any PR ready", "force-push", "rewrite shared history", "issue final sign-off", "promote candidate decisions to adopted-merged", "run an empirical study", "make a live provider call", "adopt terminology", "make theological/soul-state claims", "reproduce OSM biological/wet-lab procedure"]
+  },
+  "heads": {
+    "live_main": "43fee0f519e2f6984fb143c1e621c83382e71ec7 (protected: required check validate, strict, no force-push)",
+    "pr8_head": "b0538601913c8234511a1f1131a58eb23a4a0dc4 (draft, open)",
+    "pr9_head_verified_live": "86b8bbdddf35ac1e45748279bac05e5a2d4ed85e (draft, open, CI success)",
+    "grandchild_branch": "candidate/r7c-full-math-multitarget-noetic-dynamics",
+    "grandchild_base": "candidate/r7b-deep-noetic-latent-math (the PR #9 branch, NOT main)",
+    "grandchild_head": "4bc3a0ed07b7... (substantive R7C head; the pointer-finalize commit is +1)",
+    "grandchild_pr": 10,
+    "grandchild_pr_url": "https://github.com/theislampill/orthemology/pull/10",
+    "grandchild_pr_base": "candidate/r7b-deep-noetic-latent-math (the PR #9 branch, NOT main)",
+    "merged": false,
+    "ci": "success on the grandchild head",
+    "next_action": "AWAIT fresh-Fable / owner review of PR #10 (every hunk + sources + formal semantics + math + PDFs), then protected merges (grandchild -> PR #9 -> PR #8 -> main). This Opus session merges nothing and promotes no candidate decision."
+  },
+  "input_archive": {"name": "orthemology-candidate-r7b-deep-noetic-latent-math.zip", "expected_sha256": "c1aacbc631d400527bcd9b533035e74dc223f50ae19d4abd73a955463eccbfbe", "note": "convenience snapshot; local working tree at 86b8bbd verified == live PR #9 head"},
+  "pinned_daee_commit": "c86b3c6673147b8802fe222373a165a37d4d24a8 (kept; local daee HEAD is 112 commits ahead — delta adoption DEFERRED per A3)",
+  "environment": {
+    "python": "3.11.9",
+    "typst_python_package": "0.15.0 (drives P1 build)",
+    "pandoc": "3.6.4 provisioned for parity (sha256 a9e5feb3d56d2fb0e3e765d1c33b8ee6b72e6963d7de31504edeec8cd1be34b1; refutes R7B's 'not provisionable' premise, audit B4)"
+  },
+  "phase_log": [
+    {
+      "phase": "0 + A (read-only reproduction)",
+      "status": "complete",
+      "smoke_a": "46/46 green baseline on grandchild branch",
+      "reproduced": "B19 tamper probes 1-3 all breach (validators structural not semantic); B1 corpus unmigrated (counts 354/390/14/35/16, migrated:false, notdef 6/26); B2 gallery G_target = set of occurrences not profiles; B6 D5/D6/D7 ill-typed; B20 decision-status says adopted; B4 pandoc IS provisionable",
+      "artifacts": ["docs/project-closure/r7c/AUTONOMOUS-R7C-STATE.json", "docs/project-closure/r7c/R7C-READONLY-REPRODUCTION.md", "docs/project-closure/r7c/DAEE-DELTA.md"],
+      "next_action": "Phase B candidate-state integrity (Decision 0026)"
+    },
+    {"phase": "B (candidate-state, Decision 0026)", "status": "complete", "result": "honest merged/candidate split: main R6 holds 0001-0019; 0020-0028 proposed-candidate in the unmerged PR chain; retroactively corrected R7/R7B decision bodies; CANDIDATE-STATE.yaml overlay + validate_candidate_state.py (B17/B18/B20)"},
+    {"phase": "semantic repairs", "status": "complete", "result": "B2 gallery G_target = profile set; B3 gallery prose (converter now code-aware for $ inside code spans); B6 D5/D6/D7 (Geom_A / ProfileOf relation / scalar Delta^merge); B19-2/B19-3 dynamic+memetics validators hardened (probes 2&3 caught)"},
+    {"phase": "C (multi-target noetic, Decision 0027)", "status": "complete", "result": "five bearers m_discourse/subject/runtime/response/uptake; NOETIC-TARGET-MAP schema+example; observation bridge (About never establishes truth); NT1-NT10 + validate_noetic_targets.py (B9)"},
+    {"phase": "D (represented standards + ecology, Decision 0028)", "status": "complete", "result": "mu-tilde typed record (RepMeta many-to-many, 8 stance modes, fidelity, lineage); Gamma^mu typed graph schema (mutation_identity); false-tawatur dependence rule TW1-TW6; validate_memetic_ecology.py (B11/B12/B13)"},
+    {"phase": "E+F (OSM separation + descent, 0024/0025 amendments)", "status": "complete", "result": "OSM clones/state-cells row split into 4 typed rows (B8); UPDATE-COUPLING governance + DYN-10..DYN-20 (B7); feasibility-first partial-order two-timescale descent (B14/B15)"},
+    {"phase": "H (math migration infrastructure, B1/B4/B5)", "status": "infrastructure complete; in-place application DEFERRED", "result": "P1/P2 parity by EVIDENCE (pandoc 3.6.4 provisioned sha256 a9e5feb3..., P1 36/36 vs P2 34/36; B4 refuted R7B premise); math inventory (208 formula spans); proven tool scripts/unicode_math_to_latex.py (all 177 build-doc targets translate+compile zero-notdef); validate_math_source hardened (probe-1 caught). DEFERRED: in-place application (inline+display-block migration + byte-repro across the two large docs + per-formula fresh-Fable review); notdef pins (core 26/ms 6, source = 13/3 U+20D7 vec) remain tracked"},
+    {"phase": "G+B21 (companion + citation)", "status": "complete", "result": "companion expanded 774->1340 words, 13 sections, 10-rung argument map, 6 modalities, References; BUILT to PDF (4pp zero notdef); OSM cited by DOI 10.1038/s41586-024-08548-w"},
+    {"phase": "I+J (semantic probes + adversarial)", "status": "complete", "result": "8/8 injection attacks HELD (2 real weaknesses found+hardened: probe-1 fence-strip, probe-12 restoration); 4 probes structural; 14/14 audits held", "suite": "49/49 green; 6 PDFs byte-identical; manifest matches", "child_head": "4c110f5"}
+  ],
+  "no_merge_statement": "R7C is an Opus CANDIDATE on a grandchild draft PR. It has not been merged into PR #9, PR #8, or main. A fresh Fable session must review every hunk, verify sources, formal semantics, mathematics, and PDF rendering, and perform any protected merges."
+}

@@ -1,0 +1,87 @@
+{
+  "$schema": "http://json-schema.org/draft-07/schema#",
+  "title": "Metaorthemic ecology Gamma^mu (R7C, Decision 0028)",
+  "description": "A time-indexed typed graph of actors, institutions, artifacts, represented standards, metaortheme types, and episodes, with typed/versioned/provenanced edges. Not a vocabulary list: identity, timestamps, provenance, status, and lineage make transmission, copying, mutation, and false convergence distinguishable. Establishes no epistemic warrant from degree/count.",
+  "type": "object",
+  "additionalProperties": false,
+  "required": ["schema", "t", "nodes", "edges", "tawatur_analyses"],
+  "properties": {
+    "schema": {"const": "orthemology-memetic-ecology-v1"},
+    "t": {"type": "string", "description": "the time index of this snapshot"},
+    "nodes": {"type": "array", "items": {"$ref": "#/$defs/node"}},
+    "edges": {"type": "array", "items": {"$ref": "#/$defs/edge"}},
+    "tawatur_analyses": {"type": "array", "items": {"$ref": "#/$defs/tawatur"}},
+    "non_claims": {"type": "array", "items": {"type": "string"}}
+  },
+  "$defs": {
+    "node": {
+      "type": "object",
+      "additionalProperties": false,
+      "required": ["id", "version", "node_type", "label", "provenance", "status"],
+      "properties": {
+        "id": {"type": "string"},
+        "version": {"type": "string"},
+        "node_type": {"enum": ["actor", "institution", "artifact", "represented-standard", "metaortheme-type", "episode"]},
+        "label": {"type": "string"},
+        "timestamp": {"type": "string"},
+        "provenance": {"type": "string"},
+        "status": {"enum": ["current", "superseded", "contested", "retired"]}
+      }
+    },
+    "edge": {
+      "type": "object",
+      "additionalProperties": false,
+      "required": ["id", "edge_type", "source", "target", "provenance", "status"],
+      "properties": {
+        "id": {"type": "string"},
+        "edge_type": {"enum": ["transmission", "copying-dependence", "citation", "endorsement", "application", "mutation", "reinforcement", "rebuttal", "replacement", "supersession"]},
+        "source": {"type": "string"},
+        "target": {"type": "string"},
+        "timestamp": {"type": "string"},
+        "provenance": {"type": "string"},
+        "status": {"enum": ["current", "superseded", "contested", "retired"]},
+        "transmitted_standard": {"type": "string", "description": "for transmission edges (R7D, B18): the represented-standard id transmitted; must resolve to a represented-standard node"},
+        "mutation_identity": {
+          "type": "object",
+          "description": "for mutation edges (R7D, B19): a structured ablation witness, not a bare enum",
+          "additionalProperties": false,
+          "required": ["classification", "compared_versions", "preserved_invariants", "changed_fields", "witness", "evidence", "assessor"],
+          "properties": {
+            "classification": {"enum": ["same-standard-new-token", "new-version-same-standard", "mutation-preserving-function", "new-governing-type"]},
+            "compared_versions": {"type": "array", "items": {"type": "string"}, "minItems": 2},
+            "preserved_invariants": {"type": "array", "items": {"type": "string"}},
+            "changed_fields": {"type": "array", "items": {"type": "string"}},
+            "witness": {"type": "string", "minLength": 1},
+            "evidence": {"type": "array", "items": {"type": "string"}},
+            "assessor": {"type": "string"},
+            "uncertainty": {"type": "string"}
+          }
+        },
+        "note": {"type": "string"}
+      }
+    },
+    "tawatur": {
+      "type": "object",
+      "additionalProperties": false,
+      "required": ["claim_id", "apparent_witnesses", "origin_analysis", "warrant_conclusion"],
+      "properties": {
+        "claim_id": {"type": "string"},
+        "apparent_witnesses": {"type": "integer", "minimum": 1},
+        "origin_analysis": {
+          "type": "object",
+          "additionalProperties": false,
+          "required": ["independent_routes", "common_source", "copying_dependence", "mutation_lineage", "qualitative_indicants"],
+          "properties": {
+            "independent_routes": {"type": "integer", "minimum": 0},
+            "common_source": {"type": "boolean"},
+            "copying_dependence": {"type": "boolean"},
+            "mutation_lineage": {"type": "boolean"},
+            "qualitative_indicants": {"type": "string"}
+          }
+        },
+        "warrant_conclusion": {"enum": ["dependence-detected", "source-independence-supported", "origin-analysis-underdetermined", "false-tawatur-common-source", "false-tawatur-copying", "underdetermined-needs-more-origin-analysis"], "description": "R7D (B23): the MACHINE conclusion is source-safe and never a tawatur WARRANT; tawatur-like-independence is removed from the machine vocabulary"},
+        "non_claims": {"type": "array", "items": {"type": "string"}}
+      }
+    }
+  }
+}

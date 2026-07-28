@@ -2,7 +2,7 @@
 
 **Status: working adversarial ledger for the two companion drafts (R2, 2026-07-20). Honest scoreboard: replies marked ANSWERED are answered *relative to stated premises*; UNRESOLVED means the objection stands as a live exit from the argument.**
 
-## A. Against the transcendental chain (school-neutral paper §4)
+## A. Against the transcendental chain (cross-framework dialectical paper §4)
 
 | # | Objection | Reply | Status |
 |---|---|---|---|
@@ -13,7 +13,7 @@
 | A5 | **Infinitism.** Grounding descends forever. | Blocked only by well-foundedness of constitutive dependence — defended as the grounding-theoretic norm, admitted as a premise. | **UNRESOLVED (premise recorded)** |
 | A6 | **Selection-requires-selector (step 8).** Contingent instantiation might be brute. | Admitted as a labeled premise; brute contingency is a consistent stopping point that re-raises A3's price. | **UNRESOLVED (premise recorded)** |
 
-## B. Against the faculty/teleology route (school-neutral paper §3)
+## B. Against the faculty/teleology route (cross-framework dialectical paper §3)
 
 | # | Objection | Reply | Status |
 |---|---|---|---|
@@ -44,9 +44,22 @@
 |---|---|---|---|
 | E1 | **Category error: grounds need not have their effects' capacities** (rocks ground no thoughts). | The premise used is adequacy-of-ground for *perfection-relevant* capacities under a proportionate-causality principle — stated as a premise with its scholastic lineage, contested standing acknowledged. | **UNRESOLVED (premise recorded)** |
 | E2 | **From capacity to actual speech.** | No philosophical bridge is claimed. The step is revelational, made only in the Atharī paper and labeled there. | **ANSWERED (by refusal)** |
-| E3 | **School-neutrality violation:** the Atharī paper smuggles philosophy's authority. | The Atharī paper's §2 and §8 table separate bases claim-by-claim; philosophy is preparatory only. | **ANSWERED (structurally)** |
+| E3 | **Pseudo-neutral tribunal:** cross-framework presentation is treated as a superior standard of truth. | Rejected. Cross-framework labels audience and conditional premise reach only. Every proposed criterion remains objectively assessable; the declared Atharī/Taymiyyan operative frame supplies its own premises but its school label does not itself supply warrant. | **ANSWERED (typed lanes)** |
 | E4 | **The kalām nafsī alternative.** | Described neutrally in the Atharī paper §7; not adjudicated; comparative route blocked on source verification. | **OPEN by design** |
 | E5 | **VIA-COMPILATION loci.** | Real limitation; flagged inline and in the ledger; edition-level verification is a recorded closure burden. | **OPEN (burden)** |
+
+## F. Rival exits at the Wisdom joint
+
+| Rival | Exact exit | Disposition |
+|---|---|---|
+| Selected-function naturalism | Denies that ordered function requires irreducible teleology. | **OPEN** |
+| Intrinsic-form or value realism | Locates fittingness in forms or values without a personal ground. | **OPEN** |
+| Platonist / structural realist | Treats intelligible order as impersonal structure. | **OPEN** |
+| Modal primitivist | Stops at underived modal-normative order. | **OPEN** |
+| Brute contingency | Rejects selection-requires-selector. | **OPEN** |
+| Aseity / bootstrapping objection | Rejects the reductio's characterization of origination as norm-governed construction. | **UNRESOLVED outside the reductio's stated scope** |
+| Euthyphro / fittingness | Challenges both an external standard and arbitrary fiat; the common-premise positive move to Wisdom remains unestablished. | **HELD; rival-routing only** |
+| Impersonal ground | Grants order or intellective adequacy without Will, Power, or Wisdom. | **OPEN** |
 
 ## F. The Hume question — researched disposition
 

@@ -1,6 +1,6 @@
 # Decision 0025 — Meta-noetic memetics and sound corrective dynamics
 
-**Date:** 2026-07-21 · **Authority:** R7B owner authorization (Opus candidate pass) · **Status:** adopted · **Reopens nothing:** Decisions 0001–0024 stand. This **extends** the Decision 0021 daee application with the longitudinal/social structure it was missing, and adjudicates the daee gradient/field vocabulary. Application-level; no school-neutral core primitive is added.
+**Date:** 2026-07-21 · **Authority:** R7B owner authorization (Opus candidate pass) · **Status:** proposed-candidate · **Reopens nothing:** Decisions 0001–0024 stand. This **extends** the Decision 0021 daee application with the longitudinal/social structure it was missing, and adjudicates the daee gradient/field vocabulary. Application-level; no school-neutral core primitive is added.
 
 **Provenance:** OPUS CANDIDATE — REQUIRES FRESH FABLE REVIEW BEFORE MERGE. daee
 statements are pinned to commit `c86b3c6673147b8802fe222373a165a37d4d24a8`. Status
@@ -120,3 +120,17 @@ Shannon analogy does not prove noetic collapse **[direct]**.
 - gate: `scripts/validate_meta_noetic_memetics.py` (CI)
 
 Reopens nothing; establishes no empirical or theological claim; asserts no soul access.
+
+## R7C amendment (2026-07-21, Opus candidate; audit B14/B15)
+
+The R7B single lexicographic order (hard constraints 4th) is **corrected** to a
+**feasibility-first constrained order-theoretic** correction over **two
+timescales** (`NOETIC-FIELD-DYNAMICS.yaml` `corrective_dynamics`,
+`SOUND-DESCENT-MODEL-COMPARISON.md`): (1) `Admissible_A(S,r)` filters
+hard-constraint violations **before** any ranking (hard constraints are
+feasibility, not a rankable dimension); (2) mandatory invariants are preserved;
+(3) admissible successors are compared by a **declared partial order** `S' ⪰_A S`
+(not one universal total lexicographic order; incomparable routes license
+hold/escalation). Fast episode correction (`S_{e,t}→S_{e,t+1}`) is distinct from
+slow meta-adaptation (`Γ^μ, μ̃, μ, A`). No runtime improvement entails result
+truth or restoration. Gate: `validate_meta_noetic_memetics.py`.

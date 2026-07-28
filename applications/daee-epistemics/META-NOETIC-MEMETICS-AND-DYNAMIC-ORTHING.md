@@ -70,10 +70,15 @@ misrepresented standard (`DYNAMIC-CROSSWALK.yaml`).
 
 A hundred apparent reports may be: independent corroboration; copies of one
 upstream source; one institutional standard reproduced; mutations of one carrier;
-or genuine convergence after independent inquiry. The decisive structure is not
-**count** but **origin, independence, dependency, mutation lineage, authority
-order** — exactly what $\Gamma^\mu$ encodes (fixture N14). Count is not
-tawātur-like independence.
+or genuine convergence after independent inquiry. The machine-relevant
+structure is not **count** but **origin, independence, dependency, and mutation
+lineage** — exactly what $\Gamma^\mu$ encodes (fixture N14). Its bounded
+conclusion is dependence detected, source independence supported, or origin
+analysis underdetermined. A creed-internal `tawātur` warrant assessment is a
+separate, school-labeled owner that also requires qualitative transmitter,
+indicant, coherence, non-collusion, subject-condition, assessor-evidence, and
+defeater judgments. Neither machine independence nor count, popularity, graph
+degree, or institutional persistence supplies that warrant.
 
 ## 5. Boundaries
 

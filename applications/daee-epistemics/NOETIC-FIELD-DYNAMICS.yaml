@@ -5,14 +5,31 @@ schema: orthemology-noetic-field-dynamics-v1
 daee_pinned_commit: c86b3c6673147b8802fe222373a165a37d4d24a8
 gradient_adjudication:
   models: [G0, G1, G2]
-  adopted: G1
+  # R7D, Decision 0033 (audit B26): G1 is a CANDIDATE, not adopted — it lives in the
+  # unmerged PR chain and awaits fresh Fable review + protected merge.
+  proposed_candidate: G1
+  # Predicate vocabulary (R7D, B27): a runtime transition is AdmissibleCorrectiveTransition
+  # / PathwayAdequateCorrection / GovernedCorrectiveSearch — NOT "strictly sound".
+  # Strict soundness (Decision 0011) is factive and claim-relative; obeying constraints,
+  # improving an order, landing a burden, or reaching closure does not make a transition
+  # strictly sound.
+  predicate_vocabulary: [AdmissibleCorrectiveTransition, PathwayAdequateCorrection, GovernedCorrectiveSearch]
+  predicate_identity:
+    canonical_id: reasoning_path_adequate_q
+    normative_symbol: ReasoningPathAdequate_q(e)
+    display_label: ClaimRelevantReasoningPathAdequate
+    alias_of: reasoning_path_adequate_q
+    computation: decision-0011-required-reason-projection
+    strict_soundness_requires: [reasoning_path_adequate_q, token_truth_linked_q]
+  semantic_operator_contract: applications/daee-epistemics/SEMANTIC-OPERATOR-CONTRACT.yaml
+  strict_soundness_reserved: "strict soundness is reserved for the factive claim-relative predicate (Decision 0011); it is never asserted of a merely admissible runtime transition"
   G0:
     name: metaphor only
     reading: "'gradient/field/attractor/descent' are analogies; no formal monotonicity or convergence follows"
   G1:
     name: order-theoretic / route-ranked corrective descent
-    status: adopted
-    reading: "a vector or partially-ordered burden state ranked by a governing functional; a step is sound only if it improves a declared ordering, preserves hard constraints, hides no burden, retains provenance/uncertainty, and triggers a whole-state reread"
+    status: proposed-candidate
+    reading: "a vector or partially-ordered burden state ranked by a governing functional; a transition is an ADMISSIBLE / pathway-adequate GOVERNED corrective transition (never 'strictly sound') only if it improves a declared ordering, preserves hard constraints, hides no burden, retains provenance/uncertainty, and triggers a whole-state reread"
   G2:
     name: literal differentiable gradient flow
     status: conditional-future
@@ -26,15 +43,41 @@ gradient_adjudication:
 burden_functional:
   raw_count_is_not_a_potential: true
   reason: "discovery can raise the ledger while improving the epistemic position (fixture N18)"
-  lexicographic_order:
-  - truthful-disclosure
-  - evidence-integrity
-  - dependency-correctness
-  - hard-constraints
-  - justified-holds
-  - legitimate-burden-reduction
-  - truthful-closure
   anti_gaming: "the system cannot simulate descent by deleting or concealing burdens it failed to address"
+# R7C, Decision 0025 amendment (audit B14/B15): the R7B single lexicographic order
+# (which placed hard-constraints 4th) is CORRECTED. Correction is feasibility-first
+# constrained order-theoretic, over TWO timescales.
+corrective_dynamics:
+  feasibility_first:
+    predicate: "Admissible_A(S, r)"
+    rule: "a route violating ANY hard constraint is INADMISSIBLE and filtered out BEFORE any ranking; hard constraints are feasibility, not a rankable dimension (corrects R7B's lexicographic 4th-place placement)"
+  mandatory_invariants:
+  - truthful-disclosure
+  - evidence-and-provenance-integrity
+  - target-correctness
+  - dependency-correctness
+  - retained-uncertainty
+  - explicit-holds
+  - no-fabricated-closure
+  ordering:
+    type: partial-order-or-governance-declared-ranking
+    relation: "S' >=_A S over ADMISSIBLE successors only"
+    universal_total_lexicographic: false
+    incomparable: "some routes remain incomparable, licensing hold / escalation / parallel inquiry / owner decision"
+    permissive_guard: "'improves the declared ordering or justified expected value' is meaningful ONLY once the ordering, uncertainty model, and objective are declared"
+  two_timescales:
+    fast_episode: "S_{e,t} -> S_{e,t+1}: evidence acquisition, candidate revision, token binding, route selection, burden landing, reread, hold/recurse/stop"
+    slow_meta: "Gamma^mu_t -> Gamma^mu_{t+1}; mu-tilde_t -> mu-tilde_{t+1}; mu_t -> mu_{t+1}; A_t -> A_{t+1}"
+    coupling: "a pathway-adequate episode need not change the represented standard; a long-run ecology may improve despite a failed episode; one runtime closure does not establish interior restoration"
+  verdict_connection:
+  - evidence-support-and-currentness
+  - governing-type-adequacy
+  - metaorthemma-adequacy
+  - executor-fidelity
+  - route-admissibility
+  - closure-truthfulness
+  - robustness
+  no_result_or_restoration_entailment: "no runtime improvement entails result truth or human restoration"
 non_monotonicity:
 - newly-disclosed-burdens-raise-the-ledger
 - local-minima
@@ -55,9 +98,14 @@ state_spaces:
   - actual-uptake-or-restoration
 fitrah_boundary:
   status: creed-internal
-  is: "normative orientation / proper-function ground within the creed-internal model"
-  is_not: [one-coordinate, one-metaortheme, one-algorithm, one-measured-scalar-target, one-directly-observed-point]
-  min_entropy_attractor: "provisional and creed-internal; daee states the Shannon analogy does not prove noetic collapse [direct]"
+  model_properties: [qualitative, defeasible, multidimensional]
+  is: [normative-disposition, proper-function-orientation]
+  is_not: [measurable-scalar, field-coordinate, metaortheme, algorithm, discourse-readable-soul-state, guaranteed-attractor]
+  corruption_assessment:
+    requires_independent_evidence: true
+    dissent_alone_sufficient: false
+    interior_status: held-or-underdetermined
+  rejected_analogy: "minimum-entropy attractor is not the adopted fitrah model; daee states that the Shannon analogy does not prove noetic collapse [direct]"
 non_claims:
 - no descent claim asserts any interior state, motive, or soul-state
 - runtime closure is not demonstrated restoration

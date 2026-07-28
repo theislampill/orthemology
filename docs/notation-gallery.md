@@ -3,7 +3,7 @@
 **Status:** DRAFT — not peer reviewed. Rendered by the R7B mathematical-
 typesetting pipeline (Decision 0023). Every normative symbol in
 `docs/notation-registry.yaml` appears below as real mathematics: GitHub
-renders the `$...$` / ` ```math ` source through MathJax, and
+renders the `$...$` inline math and fenced `math` blocks through MathJax, and
 `scripts/build_pdfs.py` renders `artifacts/notation-gallery.pdf` through the
 pinned Typst compiler via `scripts/latex_to_typst_math.py`. This is a
 **typography layer, not a notation redesign**: each row's meaning is the
@@ -61,7 +61,7 @@ uses. These are the constructs named in the Decision 0023 design spike.
 ### 2.1 Episode signature (display)
 
 The formal-core episode signature — the exact site of the reproduced
-notdef defect — rendered as real mathematics (`\vec\mu`, `\vec C` compose):
+notdef defect — rendered as real mathematics (the vectors $\vec\mu$, $\vec C$ compose):
 
 ```math
 e = \langle \operatorname{id};\ m, \kappa, v;\ x, H;\ \alpha, w, A, T, t;\ \vec\mu, \operatorname{MetaTok}, \pi;\ \vec C, \hat p;\ r;\ \operatorname{estatus};\ \mathcal{Q};\ \delta;\ \operatorname{hand\_in}, \operatorname{hand\_out};\ a, \operatorname{Succ} \rangle
@@ -78,7 +78,7 @@ e = \langle \operatorname{id};\ m, \kappa, v;\ x, H;\ \alpha, w, A, T, t;\ \vec\
 
 ### 2.3 Set comprehension and predicate
 
-Grounded target: $\mathcal{G}_{\alpha,A_\alpha} = \{\, x \in \mathcal{M}_A \mid O^*(x; A_\alpha) \in \Pi_A \,\}$, and
+Grounded target (a set of **profiles**, $\subseteq \Pi_{A_\alpha}$, not of occurrences): $\mathcal{G}_{\alpha,A_\alpha} = \{\, p \in \Pi_{A_\alpha} \mid \operatorname{GoalSchema}(\alpha)(p) \,\}$, and
 strict soundness $\operatorname{StrictlySoundReasoning}_\chi(e) := \operatorname{ReasoningPathAdequate}_\chi(e) \wedge \operatorname{TokenTruthLinked}_\chi(e)$.
 
 ### 2.4 Underbrace

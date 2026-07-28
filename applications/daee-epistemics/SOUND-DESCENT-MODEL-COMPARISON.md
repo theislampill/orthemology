@@ -13,12 +13,27 @@ disclaims "literal mathematical performance" **[direct:
 docs/audits/v0.4.1.0-field-gradient-loop-closure-coupling-implementation-audit.md]**.
 Three readings must be distinguished.
 
+## Divergence/curl diagnostics require an explicit target field
+
+Beyond the direct bound that $\nabla\cdot$ / $\nabla\times$ are "not literal
+divergence/curl" **[direct]**, daee's own discipline constrains their *use*
+**[crosswalk of `c86b3c66`; direct source documents named above and the typed
+semantic-operator contract]**. $\nabla\cdot T$ and
+$\nabla\times T$ are well-formed only over an **explicit multi-node target field**
+$T$ carrying residual pressure, dependency, loop, or churn — never over a one-point
+summary; this is why the framework rejects "proof-by-symbol" and scalarized closure.
+An **acyclic** downstream dependency (a burden $B_2$ still live after landing $B_1$)
+is **divergence** — a possibly non-neutral $\nabla\cdot B$ — while $\nabla\times$
+stays **null** unless an actual loop, recoil, churn, or dependency rotation is
+present. These remain typed control diagnostics, not physical operators, and assert
+nothing about truth or interior states.
+
 ## G0 — metaphor only
 
 "Gradient," "field," "attractor," "descent" as analogy. Useful for describing
 directed correction; **no** formal monotonicity or convergence follows.
 
-## G1 — order-theoretic / route-ranked corrective descent (ADOPTED)
+## G1 — order-theoretic / route-ranked corrective descent (PROPOSED-CANDIDATE)
 
 The strongest reading the current daee formalism supports. A vector or partially-
 ordered burden state
@@ -28,9 +43,11 @@ ordered burden state
 ```
 
 is ranked by a governing functional $\operatorname{GradRoute}_A(\mathbf{B}_t, r)$
-over admissible routes. A step is **locally sound** only if it preserves hard
-constraints, improves a declared ordering (or justified expected value),
-preserves evidence and provenance, **hides no burden**, retains justified
+over admissible routes. A step is an **admissible / pathway-adequate governed
+corrective transition** (R7D, Decision 0033 — *never* "strictly sound", which is
+reserved for the factive claim-relative predicate of Decision 0011) only if it
+preserves hard constraints, improves a declared ordering (or justified expected
+value), preserves evidence and provenance, **hides no burden**, retains justified
 uncertainty, and triggers a whole-state reread. "Descent" means an ordered,
 governed improvement — not differentiation of a scalar loss.
 
@@ -43,11 +60,27 @@ position (non-disclosure repaired). So
 |\mathbf{B}_{t+1}| > |\mathbf{B}_t| \ \text{does not imply deterioration}, \qquad |\mathbf{B}_{t+1}| < |\mathbf{B}_t| \ \text{does not imply progress}
 ```
 
-Progress is **lexicographic**: truthful disclosure $\succ$ evidence integrity
-$\succ$ dependency correctness $\succ$ hard constraints $\succ$ justified holds
-$\succ$ legitimate reduction $\succ$ truthful closure. Otherwise the system could
-simulate descent by deleting or concealing the very burdens it failed to address
-(fixture N18).
+Correction is therefore **feasibility-first**, not one universal total
+lexicographic order (audit B14). **First**, a route violating any hard
+constraint is *inadmissible* and filtered out — $\operatorname{Admissible}_A(S,r)$
+— before any ranking; hard constraints are feasibility, not a rankable dimension.
+**Second**, mandatory invariants are preserved (truthful disclosure, evidence and
+provenance integrity, target and dependency correctness, retained uncertainty,
+explicit holds, no fabricated closure). **Third**, admissible successors are
+compared by a declared **partial order** $S' \succeq_A S$ — some routes remain
+incomparable, licensing hold, escalation, parallel inquiry, or owner decision.
+Otherwise the system could simulate descent by deleting or concealing the very
+burdens it failed to address (fixture N18).
+
+## Two timescales (audit B15)
+
+**Fast** episode-level correction ($S_{e,t} \to S_{e,t+1}$: evidence, candidate
+revision, token binding, route, burden landing, reread, hold/recurse/stop) is
+distinct from **slow** meta-level adaptation ($\Gamma^\mu_t \to \Gamma^\mu_{t+1}$,
+$\tilde\mu_t \to \tilde\mu_{t+1}$, $\mu_t \to \mu_{t+1}$, $A_t \to A_{t+1}$). A
+pathway-adequate episode need not change the represented standard; a long-run
+ecology may improve despite a failed episode; one runtime closure does not
+establish interior restoration. `NOETIC-FIELD-DYNAMICS.yaml` `corrective_dynamics`.
 
 ## G2 — literal differentiable gradient flow (CONDITIONAL / FUTURE)
 
@@ -56,6 +89,23 @@ precisely typed vector objective, a metric, differentiability, a gradient
 operator, a step rule, convergence/stopping conditions, and treatment of local
 minima, non-convexity, hysteresis, and path dependence. **daee does not supply
 these**, so G2 remains conditional/future.
+
+### Literal optimization exists elsewhere — and does not transfer
+
+Literal numerical estimation and optimization occur in the OSM comparison, but
+their method roles are not interchangeable. The CSCG is fitted by Baum–Welch
+expectation-maximization likelihood estimation and then receives
+Viterbi-training transition refinement; the article-linked code separately
+implements max-product/backtrace MAP decode. For the reported vanilla RNNs,
+BPTT computes gradients, Adam updates parameters, and cross-entropy is the
+objective; Adam and cross-entropy occur at the reported LSTM and transformer
+loci, while the Hebbian RNN uses a distinct local timing rule
+**[primary article: 10.1038/s41586-024-08548-w; MAP decode: pinned official code
+`sprustonlab/OSM_Paper_Figures@c1d1788b54c737efe24402e02762eee10da0d0d7`]**.
+None supplies a literal differentiable gradient over daee's runtime field, and
+daee's route-ranking imports **no** latent=ortheme or clone=neuron identity.
+"Descent," "fit," "refinement," "decode," and "trajectory" therefore retain
+their typed, non-transferable senses.
 
 ## Non-monotonicity and separate state spaces
 
@@ -75,6 +125,10 @@ daee itself states the Shannon analogy does not prove noetic collapse **[direct]
 
 ## Verdict
 
-Adopt **G1**. Preferred phrasing until G2's conditions are met: **governed,
+**G1 is proposed-candidate** (R7D, Decision 0033; `NOETIC-FIELD-DYNAMICS.yaml`
+`status: proposed-candidate`) — held pending fresh-Fable review and protected
+merge, not adopted. Preferred phrasing until G2's conditions are met: **governed,
 route-ranked, descent-like restorative dynamics** — not literal mathematical
-gradient descent.
+gradient descent. A feasibility-admissible, order-improving, closed runtime
+transition is an *admissible governed corrective transition*, not a strictly sound
+one.

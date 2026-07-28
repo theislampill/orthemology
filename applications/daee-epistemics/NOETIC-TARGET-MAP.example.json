@@ -1,0 +1,95 @@
+{
+  "schema": "orthemology-noetic-target-map-v1",
+  "episode_id": "example-multi-target-001",
+  "occurrences": {
+    "m_discourse": {
+      "bearer_type": "discourse",
+      "identity": "objection-utterance-abc123",
+      "version": "as-received",
+      "in_scope": true,
+      "observed": true,
+      "note": "the concrete objection/utterance/document — directly observed"
+    },
+    "m_subject": {
+      "bearer_type": "subject",
+      "identity": "interlocutor-at-t",
+      "version": "at-time-of-engagement",
+      "in_scope": true,
+      "observed": false,
+      "note": "the person-at-time / noetic bearer; legitimately in scope but its interior condition is NOT directly observed — only inferred under uncertainty"
+    },
+    "m_runtime": {
+      "bearer_type": "runtime",
+      "identity": "diagnostic-ir-state-001",
+      "version": "post-reread",
+      "in_scope": true,
+      "observed": true,
+      "note": "the DAEE runtime / Diagnostic-IR control state"
+    },
+    "m_response": {
+      "bearer_type": "response",
+      "identity": "released-reply-001",
+      "version": "as-released",
+      "in_scope": true,
+      "observed": true
+    },
+    "m_uptake": {
+      "bearer_type": "uptake",
+      "identity": "uptake-unobserved",
+      "version": "none",
+      "in_scope": false,
+      "observed": false,
+      "note": "no later uptake/restoration occurrence has been observed"
+    }
+  },
+  "observation_bridge": [
+    {"evidence_id": "ev-wording-1", "observed_from": "m_discourse", "about": "m_subject", "establishes_truth": false}
+  ],
+  "claims": [
+    {
+      "claim_id": "C1-discourse-interpretation",
+      "target": "m_discourse",
+      "target_type": "discourse-interpretation",
+      "evidence_ids": ["ev-wording-1"],
+      "evidence_scope": "the utterance's public wording and immediate context",
+      "analysis": "declared noetic analysis A (creed-internal); school-labeled",
+      "status": "asserted",
+      "uncertainty": "low for the surface reading",
+      "non_claims": ["asserts nothing about the speaker's interior, motive, or soul-state"]
+    },
+    {
+      "claim_id": "C2-subject-noetic-profile",
+      "target": "m_subject",
+      "target_type": "noetic-state-type (candidate placement under A)",
+      "evidence_ids": ["ev-wording-1"],
+      "evidence_scope": "inference ABOUT the subject FROM discourse evidence; observation_bridge; not direct interior access",
+      "analysis": "declared noetic analysis A (creed-internal)",
+      "status": "held",
+      "uncertainty": "high — several subject-level profiles remain live; thin evidence licenses a hold, not a settled placement",
+      "non_claims": ["no soul access", "no motive or culpability verdict", "discourse evidence does not establish the interior state as true, sufficient, or uniquely identified", "the deformation state-type, if any, belongs to the SUBJECT under A — never to the utterance merely because the utterance is observed"]
+    },
+    {
+      "claim_id": "C3-runtime-closure",
+      "target": "m_runtime",
+      "target_type": "runtime-closure",
+      "evidence_ids": ["ev-reread-1"],
+      "evidence_scope": "the runtime control field only",
+      "analysis": "declared noetic analysis A",
+      "status": "asserted",
+      "uncertainty": "the runtime field closed after whole-state reread",
+      "non_claims": ["runtime closure is not demonstrated interior restoration", "asserts nothing about m_subject's actual condition"]
+    },
+    {
+      "claim_id": "C4-response-route",
+      "target": "m_response",
+      "target_type": "route-quality",
+      "evidence_ids": ["ev-route-1"],
+      "evidence_scope": "the released response artifact and its route register",
+      "analysis": "declared noetic analysis A",
+      "status": "asserted",
+      "uncertainty": "route admissible; quality advisory",
+      "non_claims": ["a fitting response does not entail acceptance or uptake"]
+    }
+  ],
+  "non_soul_access_invariant": "No claim targets a soul-state, asserts motive/culpability, or treats discourse as direct interior access; every subject-level claim is inferential, held under uncertainty, and carries explicit non-claims."
+}

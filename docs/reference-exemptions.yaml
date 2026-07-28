@@ -54,3 +54,11 @@ retired_paths:
       the main database and the fragment deleted; scripts/validate_claim_sources.py now fails
       on any stray .bib. Decision 0015's preserved body still names the fragment; its
       Amendment A2 records the merge.
+  - path: tests/pre-promotion-hashes.json
+    retired: 2026-07-19
+    retired_by: O2 candidate promotion
+    successor: docs/provenance/RELEASE-MANIFEST.sha256
+    reason: >-
+      This transient pre-promotion hash input was retired after the O2 candidate was
+      promoted. The immutable O2 validation report preserves the original Windows-style
+      command and result; the release manifest is the maintained repository hash inventory.
