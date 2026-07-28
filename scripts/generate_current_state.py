@@ -79,7 +79,16 @@ def derive():
     decisions = count_files("docs/decisions", r"^\d{4}-.*\.md$")
     decision_ids = [d[:4] for d in decisions]
     schemas = count_files("schemas", r"\.schema\.json$")
-    examples_json = count_files("examples", r"\.json$")
+    # example_json_count tracks the schema-example EPISODE BUNDLES (files with
+    # a "parts" list). Other illustrative examples (e.g. the noetic-application
+    # episode, which is not a schema bundle) live in examples/ but are not
+    # counted here (R7).
+    def is_bundle(fn):
+        try:
+            return "parts" in json.load(open(os.path.join(ROOT, "examples", fn), encoding="utf-8"))
+        except Exception:
+            return False
+    examples_json = [f for f in count_files("examples", r"\.json$") if is_bundle(f)]
     examples_md = count_files("examples", r"\.md$")
     validators = sorted(f for f in os.listdir(os.path.join(ROOT, "scripts"))
                         if f.startswith(("validate_", "audit_", "derive_")) and f.endswith(".py"))

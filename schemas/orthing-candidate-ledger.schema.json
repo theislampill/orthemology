@@ -1,0 +1,103 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "$id": "https://orthemology.example/schemas/orthing-candidate-ledger.schema.json",
+  "title": "R7E orthing candidate ledger",
+  "type": "object",
+  "additionalProperties": false,
+  "required": ["schema", "status", "supersedes", "source", "summary", "rows"],
+  "properties": {
+    "schema": {"const": "orthemology-orthing-candidate-ledger-v1"},
+    "status": {"const": "current-candidate"},
+    "supersedes": {
+      "type": "array",
+      "const": ["docs/project-closure/r7e/ORTHING-CANDIDATE-BACKLOG.md"]
+    },
+    "source": {
+      "type": "object",
+      "additionalProperties": false,
+      "required": ["path", "sha256", "preserved_unchanged"],
+      "properties": {
+        "path": {"const": "docs/project-closure/r7e/ORTHING-CANDIDATE-BACKLOG.md"},
+        "sha256": {"const": "ea0cfac0e55629441885f782d4b807d61de7890515ed73510e4b07a7524c285a"},
+        "preserved_unchanged": {"const": true}
+      }
+    },
+    "summary": {
+      "type": "object",
+      "additionalProperties": false,
+      "required": [
+        "legacy_row_count",
+        "unique_legacy_id_count",
+        "reused_occurrence_count",
+        "duplicate_legacy_id_count",
+        "mapped_occurrence_count",
+        "available_rejection_record_count",
+        "implementing_run_attributed_rejection_count",
+        "missing_rejection_record_count"
+      ],
+      "properties": {
+        "legacy_row_count": {"const": 221},
+        "unique_legacy_id_count": {"const": 172},
+        "reused_occurrence_count": {"const": 49},
+        "duplicate_legacy_id_count": {"const": 19},
+        "mapped_occurrence_count": {"const": 221},
+        "available_rejection_record_count": {"const": 8},
+        "implementing_run_attributed_rejection_count": {"const": 16},
+        "missing_rejection_record_count": {"const": 8}
+      }
+    },
+    "rows": {
+      "type": "array",
+      "minItems": 221,
+      "maxItems": 221,
+      "items": {"$ref": "#/$defs/candidateOccurrence"}
+    }
+  },
+  "$defs": {
+    "candidateOccurrence": {
+      "type": "object",
+      "additionalProperties": false,
+      "required": [
+        "immutable_id",
+        "legacy_id",
+        "legacy_line",
+        "topic",
+        "legacy_disposition",
+        "substance",
+        "legacy_sourcing_claim",
+        "target",
+        "proposal_availability",
+        "rejection_availability",
+        "evidence_state",
+        "scholarship_status",
+        "review_state",
+        "disposition"
+      ],
+      "properties": {
+        "immutable_id": {"type": "string", "pattern": "^R7E-BACKLOG-L[0-9]{4}$"},
+        "legacy_id": {"type": "string", "minLength": 1},
+        "legacy_line": {"type": "integer", "minimum": 1},
+        "topic": {"type": "string", "minLength": 1},
+        "legacy_disposition": {"enum": ["keep", "bound"]},
+        "substance": {"enum": ["substantive", "borderline", "fluff"]},
+        "legacy_sourcing_claim": {"type": "string", "minLength": 1},
+        "target": {
+          "type": "object",
+          "additionalProperties": false,
+          "required": ["text", "completeness", "reference_state"],
+          "properties": {
+            "text": {"type": "string", "minLength": 1},
+            "completeness": {"const": "truncated"},
+            "reference_state": {"const": "unresolved"}
+          }
+        },
+        "proposal_availability": {"const": "truncated-repository-row-only"},
+        "rejection_availability": {"const": "not-applicable-survivor-row"},
+        "evidence_state": {"const": "implementing-run-attributed"},
+        "scholarship_status": {"const": "not-independently-verified"},
+        "review_state": {"const": "unverified"},
+        "disposition": {"const": "historical-candidate-unresolved"}
+      }
+    }
+  }
+}

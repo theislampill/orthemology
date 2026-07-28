@@ -116,9 +116,14 @@ def main():
                     state = "adequate"
                 check("example %s: pathway_state matches recomputation" % fn,
                       state == inst["pathway_state"], "computed=%s declared=%s" % (state, inst["pathway_state"]))
-    check("expected example files present (9)",
-          n_parts > 0 and len([f for f in os.listdir(edir) if f.endswith(".json")]) == 9,
-          str(sorted(f for f in os.listdir(edir) if f.endswith(".json"))))
+    # count schema-example EPISODE BUNDLES (files with a "parts" list); other
+    # illustrative examples (e.g. the noetic-application episode) are not bundles
+    def _is_bundle(fn):
+        with open(os.path.join(edir, fn), encoding="utf-8") as f:
+            return "parts" in json.load(f)
+    bundles = [f for f in os.listdir(edir) if f.endswith(".json") and _is_bundle(f)]
+    check("expected schema-example bundles present (9)",
+          n_parts > 0 and len(bundles) == 9, str(sorted(bundles)))
 
     print("TOTAL: %d failures" % len(FAILS))
     sys.exit(1 if FAILS else 0)

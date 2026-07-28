@@ -1,0 +1,65 @@
+{
+  "schema": "orthemology-noetic-analysis-episode-v1",
+  "note": "Illustrative machine-readable noetic-orthing episode (Decision 0021). SYNTHETIC and creed-internal-analysis-scoped; NOT empirical, NOT a real person, NOT a soul-state claim. Types follow the daee crosswalk; symbols are namespaced (D.*).",
+  "occurrence": {
+    "identity_key": "engagement-synthetic-0001",
+    "version": "v1",
+    "kind": "case",
+    "description": "a single written objection to a claim, considered at one moment"
+  },
+  "declared_noetic_analysis": {
+    "analysis_id": "athari-taymiyyan-noetic",
+    "version": "0.1-illustrative",
+    "school_boundary": "explicitly Athari/Taymiyyan, creed-internal; NOT school-neutral; NOT empirical",
+    "profile_space": "candidate noetic state-types under this declared analysis (deformation repertoire as CANDIDATES, not truths)"
+  },
+  "observation": {
+    "public_discourse": "the objection's wording, cited context, and source markers only",
+    "not_available": "the writer's actual interior condition (never read from surface discourse)"
+  },
+  "candidate_noetic_profiles": [
+    "sincere-confusion",
+    "inherited-premise (taqlid-candidate)",
+    "malformed-criterion (shubhah-candidate)",
+    "no-deformation"
+  ],
+  "inferred_profile": {
+    "value": "underdetermined",
+    "uncertainty": "high; the wording does not discriminate among the candidates",
+    "is_not": "NOT O*(m;A); NOT ground truth; NOT soul access; NOT a motive verdict"
+  },
+  "source_warrant_states": {
+    "channels": ["testimony", "perception", "inference", "source-order"],
+    "note": "kept as separate evidence/warrant channels, not one scalar"
+  },
+  "governing_metaorthemes": [
+    "criterion-admissibility rule",
+    "source-order / warrant rule",
+    "closure rule (whole-state reread)"
+  ],
+  "metaorthemma_bindings": [
+    {"binds": "criterion-admissibility rule", "to": "this objection's specific claimed criterion", "status": "under-review"}
+  ],
+  "diagnostic_ir": {
+    "role": "episode-internal composite control representation",
+    "carries": ["candidate placements", "governing bindings", "route state", "claim ledger", "residual ledger"],
+    "is_not": "NOT one metaorthemma; NOT ground truth"
+  },
+  "executor": {"actor": "diagnostic-runtime", "self_application": "audited by the same architecture (evaluator symmetry)"},
+  "policy_ttp": {"selected": "hold / clarify", "rationale": "underdetermined inferred profile => no moralized placement"},
+  "claim_ledger": [
+    {"claim": "an admissible criterion governs this objection", "status": "open", "non_claim": "no assertion about the writer's motive or soul-state"}
+  ],
+  "residuals_holds": [
+    {"burden": "obtain a discriminating observation to separate the candidate profiles", "disposition": "open"}
+  ],
+  "rendered_response": {"released": true, "kind": "clarifying question", "bounded": true},
+  "post_render_reread": {"closure_legitimate": false, "reason": "a load-bearing candidate-discrimination burden remains live"},
+  "explicit_non_claims": [
+    "no claim about the writer's motive",
+    "no claim about culpability",
+    "no claim about the writer's interior soul-state",
+    "no claim the writer accepted or was restored (runtime closure only)",
+    "no empirical claim; no validation of the analysis's own premises"
+  ]
+}

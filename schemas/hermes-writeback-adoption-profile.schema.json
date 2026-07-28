@@ -1,0 +1,87 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "$id": "orthemology/hermes-writeback-adoption-profile.schema.json",
+  "title": "Outline-only downstream writeback adoption profile",
+  "type": "object",
+  "additionalProperties": false,
+  "required": ["schema", "status", "execution", "runtime owner", "upstream adoption", "claim_status", "source_verification", "predecessor_classification", "predecessor_characterization", "subsumption", "actuator", "record_separation", "proposal_provenance_modes", "temporal_roles", "automatic_proposal", "automatic authorization", "automatic application", "automatic writeback", "non_claims"],
+  "properties": {
+    "schema": {"const": "orthemology-hermes-writeback-adoption-profile-v1"},
+    "status": {"const": "outline-only"},
+    "execution": {"const": "not implemented in orthemology"},
+    "runtime owner": {"const": "external/downstream"},
+    "upstream adoption": {"const": "candidate, not normative dependency"},
+    "claim_status": {"type": "object"},
+    "source_verification": {
+      "type": "object", "additionalProperties": false,
+      "required": ["source_code", "license", "commit", "tests", "implementation_claims"],
+      "properties": {
+        "source_code": {"const": "pending"},
+        "license": {"const": "pending"},
+        "commit": {"const": "pending"},
+        "tests": {"const": "pending"},
+        "implementation_claims": {"const": "externally supplied and not repository-verified"}
+      }
+    },
+    "predecessor_classification": {
+      "type": "object", "additionalProperties": false,
+      "required": ["relative_granularity", "scope"],
+      "properties": {
+        "relative_granularity": {"const": "coarser_or_more_implicit"},
+        "scope": {
+          "type": "array", "minItems": 4, "maxItems": 4, "uniqueItems": true,
+          "items": {"enum": ["source_interpretation", "proposal_generation", "destination_selection", "safe_writeback"]}
+        }
+      }
+    },
+    "predecessor_characterization": {"enum": ["coarser-or-more-implicit orthing oriented toward source interpretation, proposal generation, destination selection, and safe writeback", "a coarser or more implicit orthing architecture focused on source interpretation, proposal generation, destination selection, and safe writeback", "a more implicit and coarser predecessor covering safe destination-bound proposal writeback"]},
+    "subsumption": {
+      "type": "object", "additionalProperties": false,
+      "required": ["ordinary_reflective_writeback_question_is_first_class", "ordinary_targets", "governing_targets", "outcomes"],
+      "properties": {
+        "ordinary_reflective_writeback_question_is_first_class": {"const": true},
+        "ordinary_targets": {"type": "array", "minItems": 4, "uniqueItems": true, "items": {"enum": ["memory", "user_state", "fact", "skill"]}},
+        "governing_targets": {"type": "array", "minItems": 11, "maxItems": 11, "uniqueItems": true, "items": {"enum": ["activation_contract", "orthability_evaluator", "selector", "metaortheme", "metaorthemma_binding_rule", "evidence_requirement", "closure_rule", "residual_rule", "fixture", "provenance", "documentation"]}},
+        "outcomes": {"type": "array", "minItems": 6, "maxItems": 6, "uniqueItems": true, "items": {"enum": ["no_change", "investigation", "evidence_request", "preserve_residual", "one_proposal", "alternative_proposals"]}}
+      }
+    },
+    "actuator": {
+      "type": "object", "additionalProperties": false,
+      "required": ["role", "ontology_center", "unrelated_accessory", "stages"],
+      "properties": {
+        "role": {"const": "first-class downstream actuator"},
+        "ontology_center": {"const": false},
+        "unrelated_accessory": {"const": false},
+        "stages": {
+          "type": "array", "minItems": 6, "maxItems": 6, "uniqueItems": true,
+          "prefixItems": [
+            {"const": "proposal"},
+            {"const": "review"},
+            {"const": "approve_or_reject"},
+            {"const": "validation"},
+            {"const": "dry_run"},
+            {"const": "apply_or_revert"}
+          ],
+          "items": false
+        }
+      }
+    },
+    "record_separation": {"type": "array", "minItems": 6, "maxItems": 6, "uniqueItems": true, "items": {"enum": ["somnic_assessment", "intervention_disposition", "mutation_proposal", "mutation_authorization", "applied_mutation", "later_outcome_evaluation"]}},
+    "proposal_provenance_modes": {"type": "array", "minItems": 2, "maxItems": 2, "uniqueItems": true, "items": {"enum": ["legacy_reflective_proposal", "somnus_grounded_proposal"]}},
+    "temporal_roles": {"type": "array", "minItems": 5, "maxItems": 5, "uniqueItems": true, "items": {"enum": ["t1_waking_orthing", "t2_somnic_assessment", "t3_proposal_and_authorization", "t4_application_and_successor_state", "t5_outcome_evaluation"]}},
+    "automatic_proposal": {"const": "prohibited"},
+    "automatic authorization": {"const": "prohibited"},
+    "automatic application": {"const": "prohibited"},
+    "automatic writeback": {"const": "prohibited"},
+    "non_claims": {
+      "type": "object", "additionalProperties": false,
+      "required": ["source_implementation", "empirical_superiority", "governed_learning", "runtime_writeback"],
+      "properties": {
+        "source_implementation": {"const": "not-verified"},
+        "empirical_superiority": {"const": "not-established"},
+        "governed_learning": {"const": "not-established"},
+        "runtime_writeback": {"const": "not-implemented"}
+      }
+    }
+  }
+}

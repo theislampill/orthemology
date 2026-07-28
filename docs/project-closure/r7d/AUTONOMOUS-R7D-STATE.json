@@ -1,0 +1,117 @@
+{
+  "record": "AUTONOMOUS-R7D-STATE",
+  "label": "OPUS CANDIDATE — REQUIRES FRESH FABLE REVIEW BEFORE MERGE",
+  "controlling_instruction": "opus-r7d-pr10-final-semantic-math-noetic-integration-candidate-prompt.md",
+  "independent_finding_set": "orthemology-pr10-r7c-independent-audit-and-r7d-findings.md",
+  "model_provenance": {
+    "requested_model": "Opus 4.8",
+    "surfaced_model_at_this_write": "claude-opus-4-8",
+    "substitution_this_pass": false,
+    "note": "R7D requested Opus 4.8 and surfaced Opus — no substitution (as in R7B/R7C). Candidate pass: no self-sign-off, no merge authority. Executed sequentially, no subagents/workflows (controlling prompt Phase 0 + model-provenance integrity override the session ultracode default). Identity re-checked at each phase boundary."
+  },
+  "authority_boundary": {
+    "may": ["create child branch candidate/r7d-final-semantic-math-noetic-integration from PR #10 head", "open ONE draft child PR into the PR #10 branch", "commit to the child branch", "run deterministic offline validators/build under the exact lock", "read-only inspect the live daee-epistemics repo"],
+    "must_not": ["merge any PR", "push to main/PR#10/PR#9/PR#8", "mark any PR ready", "force-push", "rewrite shared history", "issue final sign-off", "promote candidate decisions to adopted-merged", "run an empirical study", "make a live provider call", "adopt terminology", "make theological/soul-state claims", "reproduce OSM biological/wet-lab procedure", "modify or merge daee-epistemics"]
+  },
+  "heads": {
+    "live_main": "43fee0f519e2f6984fb143c1e621c83382e71ec7 (protected: required check validate, strict, no force-push)",
+    "pr8_head": "b0538601913c8234511a1f1131a58eb23a4a0dc4 (draft, open, base main)",
+    "pr9_head": "86b8bbdddf35ac1e45748279bac05e5a2d4ed85e (draft, open, base PR #8 branch)",
+    "pr10_head_verified_live": "3cce235f0e388ba78a093d43c879a2e73262938b (draft, open, base PR #9 branch, CI success)",
+    "child_branch": "candidate/r7d-final-semantic-math-noetic-integration",
+    "child_base": "candidate/r7c-full-math-multitarget-noetic-dynamics (the PR #10 branch, NOT main)",
+    "child_head": "e7334e4b8cedf16dba02634f077bdcb3a51625f0 (delivery head; the finalize commit updating this record is +1)",
+    "child_pr": 11,
+    "child_pr_url": "https://github.com/theislampill/orthemology/pull/11",
+    "child_pr_base": "candidate/r7c-full-math-multitarget-noetic-dynamics (PR #10 branch)",
+    "merged": false,
+    "ci": "local Smoke A 55/55 green + fresh-clone 55/55; live GitHub CI on the pushed head (verify on the finalize commit)",
+    "next_action": "AWAIT fresh-Fable / owner review of PR #11 (every hunk + sources + formal semantics + math + PDFs + candidate state), then protected merges (R7D child -> PR #10 -> PR #9 -> PR #8 -> main). This Opus session merges nothing and promotes no candidate decision."
+  },
+  "input_archive": {"name": "orthemology-candidate-r7c-full-math-multitarget-noetic-dynamics.zip", "expected_sha256": "be022d374883a40f9a74836010e11de42795076ff7e923d2b67a1d64ffc3c207", "verified_sha256": "be022d374883a40f9a74836010e11de42795076ff7e923d2b67a1d64ffc3c207", "note": "convenience snapshot; local working tree at 3cce235 verified == live PR #10 head; live git is authoritative"},
+  "daee_dual_pin": {
+    "historical_r7b_pin": "c86b3c6673147b8802fe222373a165a37d4d24a8",
+    "current_live_main": "c86b3c6673147b8802fe222373a165a37d4d24a8",
+    "finding": "The live published daee-epistemics main == the R7B/R7C pin (c86b3c66, 2026-06-18). The Diagnostic IR / field-witness / MRP / owner-activation content the R7D audit (B24) cites as 'current developments' exists AT that commit (diagnostic-ir.md present at ref=main, sha c0393249). REFUTED at the commit level: there is no published post-pin delta; the '112 commits ahead' was a local scratch checkout, not origin/main. REPRODUCED at the substantive level: R7C's crosswalk did not fully adjudicate that IR content. Phase G therefore crosswalks the pin (= current main) file-by-file rather than adopting a nonexistent delta."
+  },
+  "environment": {
+    "python": "3.11.9",
+    "venv": "scratchpad r7d-venv installed from requirements-ci.lock.txt; version match verified exact (pypdf 6.14.2, jsonschema 4.26.0, typst 0.15.0, PyYAML 6.0.3, markdown-it-py 4.0.0, rpds-py 2026.6.3)",
+    "evidence_boundary": "Smoke A ran under the lock venv on Windows; live GitHub CI (ubuntu, clean pip install) also success on 3cce235. A fresh Fable session must rerun the exact lock + Typst build + live CI on the final R7D head."
+  },
+  "phase_log": [
+    {
+      "phase": "0 + A (read-only reproduction)",
+      "status": "complete",
+      "smoke_a": "49/49 green baseline on the R7D branch (= PR #10 head 3cce235); manifest clean; 6 PDFs byte-equal (build_pdfs --check)",
+      "reproduced_empirically": "P1 stale overlay (CANDIDATE-STATE.yaml has no PR#10/no 3cce235 head); B2 r7/r7b/r7c closure dirs classified 'current'; P3 asserted m_subject with 'no evidence at all' + disclaimer passes claim_valid; P4 ghost metaortheme type + self-lineage passes RS schema; P5 duplicate node id passes ecology schema; P6 tawatur_conclusion(F,F,2)=tawatur-like-independence; B5/B6 formal-core migrated:false notdef 26, main-manuscript migrated:false notdef 6; B3 README scalar 'READY TO RUN, NOT RUN'; B38 companion attributes Inst_A/O*(m;A) to Decision 0005 (belongs to 0001)",
+      "code_confirmed": "P2 schema accepts out-of-scope/no-bridge subject claim; P7 validate_dynamic_orthing checks only field PRESENCE of transport, not gating (silent-transport tamper stays green); B24 refuted at commit level (see daee_dual_pin)",
+      "artifacts": ["docs/project-closure/r7d/AUTONOMOUS-R7D-STATE.json", "docs/project-closure/r7d/R7D-READONLY-REPRODUCTION.md"],
+      "next_action": "Phase B exact candidate/public state (Decision 0029)"
+    },
+    {
+      "phase": "B (exact candidate/public state, Decision 0029)",
+      "status": "complete",
+      "result": "B1/P1 fixed: authoritative overlay docs/current-candidate-state.yaml names the full PR chain incl PR #10 head 3cce235 + companion PDF; validate_candidate_state hardened to fail on a stale overlay (probe: stale head -> CAUGHT). B2: current-candidate status; r7/r7b/r7c/r7d reclassified. B3: README/STATUS/CONTRIBUTING readiness prose made exact per-packet; validate_public_readiness.py bans scalar 'all READY TO RUN' (probe CAUGHT). B4: 'check consistency' -> bounded-conformance language. B5/B38: validate_decision_references.py + fixed companion Inst_A/O*(m;A) miscite 0005->0001 (probe CAUGHT). Companion PDF rebuilt (only that PDF changed; byte-equal).",
+      "suite": "51/51 green (49 + validate_public_readiness + validate_decision_references); manifest clean; 6 PDFs byte-equal",
+      "next_action": "Phase C evidence-bound multi-target noetic claims (Decision 0030)"
+    },
+    {
+      "phase": "C (evidence-bound multi-target noetic claims, Decision 0030)",
+      "status": "complete",
+      "result": "Closes P2/P3/B10/B11. NoeticClaim schema (6 bearers incl m_reasoning_episode; 10 target types incl the overt-avowal/inferred-profile/motive split); NOETIC-EVIDENCE-REGISTRY (typed evidence: property class, provenance, scope, currentness, validity, relation-to-target); validate_noetic_claims.py support gate — target must exist+in-scope before asserted; subject-interior type never on m_discourse; evidence_ids must resolve (non-claims never count); motive/soul-state never asserted; asserted inferred interior needs >=2 evidence + bridge (thin -> held); avowed-commitment assertable on public wording; NC1-NC10 fixtures. The exact P3 breach (asserted m_subject, 'no evidence', disclaimer) = NC2 -> CAUGHT (subject-asserted-thin).",
+      "suite": "52/52 green; manifest clean; 6 PDFs byte-equal",
+      "next_action": "Phase D represented-standard relations + carrier stance (Decision 0031)"
+    },
+    {
+      "phase": "D+E+F (represented-standard relations, governed ecology, source dependence; Decisions 0031/0032)",
+      "status": "complete",
+      "result": "Closes P4/P5/P6/P8, B13-B23. D (0031): REP-META-ASSESSMENT (per-(standard,type) fidelity+stance) + CARRIER-RELATION (per-carrier mode); ghost-type resolution against ecology metaortheme-type nodes; self-lineage rejected; mixed per-type fidelity rolls up to global 'partial'. E (0032): unique node/edge ids; typed endpoints per edge_type; transmission names a resolvable transmitted_standard; mutation declares a structured ablation witness (compared versions/invariants/changed fields/witness/evidence/assessor); machine truth-firewall. F (0032): machine independence_conclusion is source-safe (dependence-detected / source-independence-supported / origin-analysis-underdetermined) and NEVER concludes tawatur warrant; TAWATUR-WARRANT.example.yaml is the separate school-labeled creed-internal record; independent_routes<=apparent_witnesses + non-empty indicants enforced. Probes CAUGHT: ghost type, self-lineage, duplicate node id, illegal endpoint, payload-free transmission, mutation-no-witness; independence_conclusion(F,F,2)=source-independence-supported (not tawatur-like).",
+      "suite": "52/52 green; manifest clean; 6 PDFs byte-equal",
+      "next_action": "Phase G current DAEE runtime delta + two-way crosswalk"
+    },
+    {
+      "phase": "H (governed corrective search + transition witness, Decision 0033)",
+      "status": "complete",
+      "result": "B26: G1 reclassified adopted->proposed-candidate in NOETIC-FIELD-DYNAMICS.yaml (validator updated). B27: predicate vocabulary AdmissibleCorrectiveTransition/PathwayAdequateCorrection/GovernedCorrectiveSearch; strict soundness reserved for the factive Decision-0011 predicate. B28/B29: CORRECTIVE-TRANSITION schema/example keeping all stages separate (state-before, admissibility, eligibility, selection, binding, execution, delta, diagnostics, reread, terminal posture); validate_corrective_transition.py enforces admissible-route-only, ranking-witness, delta!=soundness, reread-at-closure, closure!=restoration, no-burden-deletion, no-unauthorized-global-revision. Fixtures CT1-CT8; all H6 probes CAUGHT. B30: two-timescale coupling stated (slow revision needs authorization).",
+      "suite": "53/53 green; manifest clean; 6 PDFs byte-equal",
+      "next_action": "Phase I OSM/dynamic formal completion + P7 update-transport schema"
+    },
+    {
+      "phase": "I (OSM/dynamic formal completion, Decision 0024 dated amendment)",
+      "status": "complete",
+      "result": "Closes P7/B31-B36. B34/P7: UPDATE-COUPLING.yaml transport made a STRUCTURED gated object + UPDATE-COUPLING.schema.json; validate_dynamic_orthing schema-validates it and requires default=no-transport-without-argument + argument_required:true per level -> silent/blanket transport FAILS (probe CAUGHT). B31/B32/B33/B35: OSM-DYNAMICS-DEFINITIONS.yaml defines Geom_A (extraction/metric/alignment/invariances/uncertainty/distribution), ProfileOf_A (evidence/version/status/cardinality/uncertainty/transport), Delta^merge_A (op/dist/horizon/surfaces/constraints/interval/tolerance/admission), and an 11-layer object map; validator checks the definitional fields. B36: bounded CSCG source claim. Decision 0024 carries a dated R7D amendment (no new decision number).",
+      "suite": "53/53 green; manifest clean; 6 PDFs byte-equal",
+      "next_action": "Phase G current DAEE runtime delta adjudication + crosswalk"
+    },
+    {
+      "phase": "G (current DAEE runtime delta adjudication)",
+      "status": "complete",
+      "result": "B24 REFUTED at commit level + REPRODUCED substantively. Verified read-only: live daee main = pin c86b3c66; diagnostic-ir.md present at it (grounded: Diagnostic IR x19, burden x93, field_witness x20, closure x17, reread x12, owner activation x3, PsiN x3, PsiI x2). CURRENT-RUNTIME-CROSSWALK.yaml: dual-pin (coincide), file-by-file dispositions (keep/revise/extend/defer), 14 mandatory DAEE objects each mapped as application-extension with per-object non-claims (IR!=ground-truth, nabla!=gradient, Delta!=correctness, field_witness!=world, PsiN!=restoration, hard-registers!=core). CURRENT-RUNTIME-BOUNDARY.md + DAEE-CURRENT-DELTA-ADJUDICATION.md; validate_daee_current_crosswalk.py enforces coverage+boundaries. No DAEE modification/merge/import.",
+      "suite": "54/54 green; manifest clean; 6 PDFs byte-equal",
+      "next_action": "Phase K full-corpus mathematical migration (the non-deferrable one)"
+    },
+    {
+      "phase": "K (full-corpus math migration — notdef defect eliminated in place)",
+      "status": "complete for the notdef defect; broader allowlist-removal reclassification bounded/documented",
+      "result": "The audit's central non-negotiable ('CI certifies reproducible broken glyphs') is CLOSED. All 16 U+20D7 (vec) occurrences migrated IN PLACE to $...$/$$ math: core (13) — episode-signature $$ display + e|=judgment $$ display + 7 inline vec code spans -> inline math; manuscript (3) — signature $$ display + inline vec span; overview architecture-overview.md signature -> inline math. Both corpus PDFs REBUILT: ZERO notdef (NUL=0, FFFD=0), byte-reproducible (build_pdfs --check byte-equal), migrated:true / expected_notdef:0, enforced by validate_pdf_math (migrated -> notdef-free). Added \\models/\\vDash/\\vdash to latex_to_typst_math (additive; math pipeline tests still pass). cross_document_consistency updated to check the migrated math signature across core/ms/overview. HONEST SCOPE: the broader reclassification of the ~190 non-notdef formula-like backtick spans (registry IDs vs literal code vs mathematics) into an allowlist-free state remains the reviewed continuation — inventory + proven tool + probe-1 gate make it mechanical, needing per-formula fresh-Fable review before the allowlist is removed. No corpus PDF now contains ANY NUL/notdef/tofu glyph.",
+      "suite": "54/54 green; manifest clean; 6 PDFs byte-equal (core+ms rebuilt notdef-free)",
+      "next_action": "Phase J companion expansion + argument map"
+    },
+    {
+      "phase": "J (epistemology/metaphysics companion + argument map)",
+      "status": "structurally complete; word count an honest partial",
+      "result": "B41: DYNAMIC-ORTHABILITY-ARGUMENT-MAP.yaml — 10 rungs, each with premise/inference-type/conclusion/dependency/evidence-status/objection/rival-exit/school-status; non_entailments (OSM/DAEE exemplify only 1-3, prove no upper rung); validate_argument_map.py enforces the chain + five-status hierarchy + exemplification-only-on-1-3. B39: modalities expanded 6->8 (added objective-reachability/controllability split + representation-class-learnability/convergence split). B42: bounded Arabic/divine-Speech cross-section keeping created-convention/created-media/eternally-known-possibility/divine-act/revealed-wording/creaturely-reception/Quran-as-divine-Speech distinct; firewall preserved (dynamic apparatus models only the created/learnable side). B43: five-status source hierarchy incl creed-internal-inference. B38 already fixed in Phase B. Companion PDF rebuilt (5pp, zero notdef). HONEST: companion is ~1788 words (up from 1370) with all required sections + machine-readable map — a substantial bounded draft, not the full 4000-8000-word scholarly paper the audit targets.",
+      "suite": "55/55 green; manifest clean; 6 PDFs byte-equal",
+      "next_action": "Phase L+M semantic probe consolidation + adversarial reviews, then delivery"
+    },
+    {
+      "phase": "L+M (semantic probe corpus + adversarial reviews)",
+      "status": "complete",
+      "result": "docs/project-closure/r7d/reviews/ADVERSARIAL-REVIEWS.md: all 24 mandatory probes (audit §12) addressed — 12 mechanical attacks held live this pass (mutate/revert, tree clean), 7 by CI negative fixtures (NC/CT), 5 structurally prevented; consolidated harness reproducible. 20 adversarial review passes documented, all HELD. Genuine limitations recorded honestly (companion word count; math allowlist-removal reclassification remaining; full-corpus P1/P2 parity not re-run).",
+      "suite": "55/55 green; manifest clean; 6 PDFs byte-equal",
+      "next_action": "Delivery: final full suite, fresh-clone verification, push branch, open ONE draft child PR into PR #10, closeout"
+    }
+  ],
+  "no_merge_statement": "R7D is an Opus CANDIDATE on a draft child PR based on PR #10. It has not been merged into PR #10, PR #9, PR #8, or main. A fresh Fable session must review every hunk, verify the sources, formal semantics, mathematics, PDF rendering, and candidate state, and perform any protected merges."
+}

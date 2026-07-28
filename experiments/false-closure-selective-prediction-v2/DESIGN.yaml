@@ -1,0 +1,26 @@
+schema: orthemology-experiment-design-v2
+packet_id: FCSP-2
+unit_of_inference: item, paired across arms (families are strata)
+repeat_policy: >-
+  repeats are WITHIN-ITEM technical replicates, averaged into the item aggregate before
+  any inference. For a deterministic configuration (temperature 0) repeats is 1 by design:
+  a temperature-0 rerun is a technical stability check, never independent evidence
+  (Decision 0020; audit B4). A stochastic configuration may declare repeats > 1 in its run
+  manifest; they remain within-item replicates.
+repeats_default: 1
+run_seed: 20260729
+item_generator_seed: 20260728
+executor_version_template:
+  fields: [model_id, model_version_or_hash, provider, context_limit, tool_access]
+  note: instantiated at run authorization in the manifest; never chosen after results
+sampling_parameters: {temperature: 0.0, top_p: 1.0, max_output_tokens: 2048}
+masking:
+  executor_sees: arm instruction + public item facts + answer-shape reminder only
+  executor_never_sees: [items/KEYS.json, family labels, ground truth, other arm output]
+  payload_audit: harness --dump-payloads emits every exact payload for inspection
+adjudication:
+  parse_failure: one automatic format re-prompt (logged, raw retained); still-unparseable => failed item-repeat, recorded
+run_failure_policy: failed item-repeats reported per arm; a rate above DECISION-RULES max_failed_run_rate fires the named inconclusive gate; the worst-case bound scores failures against their own arm
+exclusion_criteria: none post-hoc; deviations only via DEVIATION-LEDGER.md
+analysis_script: analysis/analyze_fcsp2.py (frozen; implements every declared endpoint and executes the decision rules)
+sensitivity_plan: simulation/design_sensitivity.py — fixed PRE-RUN, item-level units; no post-hoc power computation exists anywhere in this packet

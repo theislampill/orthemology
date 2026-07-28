@@ -1,0 +1,17 @@
+schema: orthemology-experiment-decision-rules-v2
+packet_id: ER-2
+outcome_vocabulary: [supports incremental value, does not yet support incremental value, evidence of harm or failure, inconclusive]
+parameters:
+  minimum_important_effect_defect_discovery: 0.15
+  minimum_important_effect_completion: 0.15
+  harm_margin_e1_false_positive: 0.10
+  harm_margin_cost_ratio: 2.5
+  alpha: 0.05
+  max_failed_run_rate: 0.05
+rules:
+  executed_by: analysis/analyze_er2.py — mechanical, non-synthetic runs only
+  supports_incremental_value: both Holm-adjusted primaries (defect discovery; completion correctness) at/beyond their minimum important effects, no harm rule firing
+  evidence_of_harm_or_failure: treatment refuses legitimate completion beyond the E1 false-positive margin, OR cost ratio beyond margin
+  does_not_yet_support_incremental_value: adequately designed null; NO observed-power rescue
+  inconclusive: only via a named gate (failed-run rate above max, or outcome-affecting recorded deviation)
+adoption_note: a favorable outcome licenses only the episode-reification incremental-value claim for the tested configuration; nothing transfers to FCSP-2 or terminology

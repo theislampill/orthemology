@@ -1,0 +1,83 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "$id": "er2-output.schema.json",
+  "title": "ER-2 per-case answer record",
+  "type": "object",
+  "additionalProperties": false,
+  "required": [
+    "case_id",
+    "arm",
+    "repeat",
+    "parsed_ok",
+    "synthetic_smoke",
+    "answers"
+  ],
+  "properties": {
+    "case_id": {
+      "type": "string"
+    },
+    "arm": {
+      "enum": [
+        "baseline",
+        "treatment"
+      ]
+    },
+    "repeat": {
+      "type": "integer",
+      "minimum": 1
+    },
+    "seed": {
+      "type": "integer"
+    },
+    "parsed_ok": {
+      "type": "boolean"
+    },
+    "format_retried": {
+      "type": "boolean"
+    },
+    "answer_tokens": {
+      "type": "integer",
+      "minimum": 0
+    },
+    "synthetic_smoke": {
+      "type": "boolean"
+    },
+    "answers": {
+      "type": [
+        "object",
+        "null"
+      ],
+      "additionalProperties": false,
+      "required": [
+        "defect_category",
+        "grounding_fact_ids",
+        "remedy_category",
+        "endorse_completion"
+      ],
+      "properties": {
+        "defect_category": {
+          "type": "string"
+        },
+        "grounding_fact_ids": {
+          "type": "array",
+          "items": {
+            "type": "string"
+          }
+        },
+        "remedy_category": {
+          "type": "string"
+        },
+        "endorse_completion": {
+          "type": "boolean"
+        },
+        "e5": {
+          "type": "object",
+          "additionalProperties": true
+        },
+        "rationale": {
+          "type": "string"
+        }
+      }
+    }
+  }
+}

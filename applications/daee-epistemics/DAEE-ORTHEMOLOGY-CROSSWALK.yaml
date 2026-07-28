@@ -1,0 +1,180 @@
+# Typed, two-way, read-only crosswalk: daee-epistemics <-> Orthemology (Decision 0021).
+# STATUS LAYERS (every row's `status_layer`):
+#   direct-repository-description  = what the pinned daee source explicitly says
+#   orthemological-crosswalk       = this project's typed interpretation
+#   creed-internal-normative       = a claim the daee analysis presupposes (Athari/Taymiyyan)
+#   empirical                      = currently NONE
+# This file makes NO empirical or theological claim and does not validate daee's premises.
+schema: orthemology-daee-crosswalk-v1
+daee_repository: theislampill/daee-epistemics
+daee_pinned_commit: c86b3c6673147b8802fe222373a165a37d4d24a8
+daee_pinned_date: 2026-06-18
+review_mode: read-only (repository not modified, not merged, not imported wholesale)
+mapping_types: [exact-structural-analogue, partial-analogue, one-to-many, many-to-one, application-extension, no-mapping]
+
+# ---- the mandatory typed distinctions (Decision 0021 §3): none collapses into another ----
+typed_distinctions:
+- concrete engagement occurrence (this objection/utterance/document, now)
+- public discourse observation (wording, context, source markers, interaction history)
+- candidate noetic profiles (the several underlying conditions the discourse is consistent with)
+- inferred noetic profile / Psi-I (the system's current read, under uncertainty)
+- actual interior condition (the person's real noetic state; NOT available to the system)
+- governing noetic metaorthemes (repeatable rules over source order, proof method, predication, warrant, claim level, closure)
+- case-bound metaorthemmata (this case's selected modules, rule versions, source statuses, thresholds, scopes, evidence bindings)
+- Diagnostic IR (episode-internal control representation; composite, not one metaorthemma, not ground truth)
+- selected policy / TTP (the action/route chosen at a locus)
+- orthing episode (the whole intake -> diagnosis -> route -> response -> reread run)
+- agent-runtime closure / Psi-N (closure of the executor's own field; NOT the person's restoration)
+- rendered language action (the released response)
+- actual uptake / restoration (whether the person accepted or was restored; NOT claimed)
+
+rows:
+- daee: engagement/objection/utterance intake
+  daee_source: README.md; atomics/skill/references/diagnostics/diagnostic-ir.md
+  daee_role: the concrete thing being engaged at this moment
+  orthemology_object: immediate orthemma (concrete situated case, identity key + version)
+  mapping_type: exact-structural-analogue
+  analysis_level: token
+  status_layer: orthemological-crosswalk
+  non_claims: [the orthemma is the case, not the person's soul-state]
+  notation_collision: none
+
+- daee: public wording, context, source markers, interaction history
+  daee_source: atomics/skill/references/diagnostics/diagnostic-ir.md; inference-boundary.md
+  daee_role: the observable surface the diagnosis reads
+  orthemology_object: observation / typed evidence over the orthemma (not the whole case)
+  mapping_type: exact-structural-analogue
+  analysis_level: token
+  status_layer: orthemological-crosswalk
+  non_claims: [surface discourse is an observation, never the interior state itself]
+  notation_collision: none
+
+- daee: Psi-I (inferred interlocutor field), selected/held noetic frames, deformation/concealment reads
+  daee_source: atomics/skill/references/diagnostics/recursive-state-transitions.md; inference-boundary.md
+  daee_role: the system's current read of the interlocutor's condition, under uncertainty
+  orthemology_object: inferred candidate profile p-hat / candidate set C-hat over a noetic profile space
+  mapping_type: partial-analogue
+  analysis_level: token
+  status_layer: orthemological-crosswalk
+  non_claims: [Psi-I is NOT O*(m;A) by assertion; NOT direct soul access; NOT ground truth]
+  notation_collision: "D.N_frame (daee N = selected/held frame) has no single Orthemology equivalent — do not map to one object"
+
+- daee: the person's actual noetic condition (where included in the target at all)
+  daee_source: inference-boundary.md (explicit non-isomorphism / no soul access)
+  daee_role: the real interior state
+  orthemology_object: worldly target state O*(m;A) region — NOT directly available to the system
+  mapping_type: partial-analogue
+  analysis_level: worldly
+  status_layer: orthemological-crosswalk
+  non_claims: [never asserted from thin discourse evidence; the system reads observations, not interiors]
+  notation_collision: none
+
+- daee: deformation types (hawa, taqlid, ada, gharad, shubhah, ...)
+  daee_source: atomics/skill/references/diagnostics/seven-deformations.md; modes-of-concealment.md
+  daee_role: named noetic state-types the framework can diagnose
+  orthemology_object: candidate ortheme-level state-types under a DECLARED noetic analysis (not core truths)
+  mapping_type: one-to-many
+  analysis_level: type
+  status_layer: creed-internal-normative
+  non_claims: ["'hawa is operative here' is a placement CLAIM requiring evidence, not an imported truth; never a motive/culpability/soul verdict"]
+  notation_collision: "D.m_mode (daee m = deformation/memetic mode) collides with Orthemology m (orthemma) — namespaced, never merged"
+
+- daee: rules over source order, proof method, predication, claim level, warrant admissibility, closure
+  daee_source: atomics/skill/references/diagnostics/proof-method-audit.md; routing-precedence.md; rubrics/output-release.md
+  daee_role: repeatable governing distinctions the diagnosis applies
+  orthemology_object: candidate metaorthemes (repeatable higher-order governing standards)
+  mapping_type: exact-structural-analogue
+  analysis_level: type
+  status_layer: orthemological-crosswalk
+  non_claims: [these are governing standards, not case bindings]
+  notation_collision: none
+
+- daee: this case's selected modules, rule versions, source statuses, thresholds, scopes, evidence bindings
+  daee_source: atomics/skill/references/diagnostics/diagnostic-ir.md; operative-contracts.md
+  daee_role: the concrete configuration bound to this case
+  orthemology_object: metaorthemmata (case-bound configuration tokens of the governing standards)
+  mapping_type: one-to-many
+  analysis_level: token
+  status_layer: orthemological-crosswalk
+  non_claims: [a case may bind several metaorthemmata; a wrong binding is representable while the general standard stays sound]
+  notation_collision: none
+
+- daee: Diagnostic IR (typed intermediate representation gating dispatch)
+  daee_source: atomics/skill/references/diagnostics/diagnostic-ir.md; diagnostic-ir.schema.json
+  daee_role: the episode-internal control surface (claims, criteria, grounding, routes, residuals, restoration targets)
+  orthemology_object: episode-internal control representation (observations + candidate placements + governing bindings + route state + residual/claim ledgers)
+  mapping_type: many-to-one
+  analysis_level: token
+  status_layer: orthemological-crosswalk
+  non_claims: [the IR is a COMPOSITE control representation; it is NOT one metaorthemma and NOT ground truth]
+  notation_collision: "D.Omega_ont (daee Omega = ontological grammar register) collides with Orthemology Omega (observation map) — namespaced"
+
+- daee: TTP / operator
+  daee_source: atomics/skill/references/diagnostics/routing-precedence.md; techniques/; tactics/
+  daee_role: the technique/route/action selected at a locus
+  orthemology_object: policy / action / route (per locus)
+  mapping_type: partial-analogue
+  analysis_level: token
+  status_layer: orthemological-crosswalk
+  non_claims: [correct diagnosis does not entail correct route — route quality is a separate verdict]
+  notation_collision: none
+
+- daee: burden set, held material, dependencies, collapse radius (kappa)
+  daee_source: atomics/skill/references/diagnostics/recursive-state-transitions.md
+  daee_role: what is owed, held, depended-upon, and how far a change propagates
+  orthemology_object: claim ledger + residual ledger + dependency structure + impact scope
+  mapping_type: exact-structural-analogue
+  analysis_level: token
+  status_layer: orthemological-crosswalk
+  non_claims: [impact scope is bookkeeping, not a metaphysical claim]
+  notation_collision: "D.kappa_dep (daee kappa = collapse radius/dependency set) collides with Orthemology kappa (occurrence identity key) — namespaced, NEVER merged"
+
+- daee: Land(B), Delta, R(H, Delta)
+  daee_source: atomics/skill/references/diagnostics/recursive-state-transitions.md
+  daee_role: trace update, burden transition, whole-state re-read after a move
+  orthemology_object: trace update + burden transition + whole-state reread (Decision 0006/Definition-13 machine floor)
+  mapping_type: exact-structural-analogue
+  analysis_level: token
+  status_layer: orthemological-crosswalk
+  non_claims: [reread governs closure legitimacy, not interior change]
+  notation_collision: none
+
+- daee: Psi-N closure
+  daee_source: atomics/skill/references/rubrics/output-release.md; inference-boundary.md
+  daee_role: closure of the executor's runtime field
+  orthemology_object: agent-runtime closure ONLY (closure of the executor's own field)
+  mapping_type: partial-analogue
+  analysis_level: token
+  status_layer: orthemological-crosswalk
+  non_claims: [runtime closure is NOT proof of the person's restoration or uptake]
+  notation_collision: none
+
+- daee: T_lang (Psi-N -> Psi-I), the language-mediated coupling
+  daee_source: atomics/skill/references/diagnostics/inference-boundary.md
+  daee_role: the partial language-mediated relation between the released response and the interlocutor field
+  orthemology_object: partial language-mediated action/coupling — NOT an isomorphism, surjection, guaranteed update, or soul access
+  mapping_type: partial-analogue
+  analysis_level: token
+  status_layer: direct-repository-description
+  non_claims: [daee itself states this is not an isomorphism/surjection/guaranteed update/soul access/control of guidance]
+  notation_collision: none
+
+- daee: "meta-noetic memetics (mu-mem): how governing rules form, stabilize, mutate, reproduce, propagate"
+  daee_source: README.md; atomics/skill/references/diagnostics/pattern-profiling.md
+  daee_role: longitudinal dynamics of governing epistemic rules across language/institutions/identity
+  orthemology_object: metaortheme versioning + cross-episode transport + recurrence-triggered revision + impact-scoped reopening (a domain-specific EXTENSION, no new primitive)
+  mapping_type: application-extension
+  analysis_level: type
+  status_layer: orthemological-crosswalk
+  non_claims: [this is a cross-episode/actor extension, not a new Orthemology primitive]
+  notation_collision: "D.mu_mem (daee mu = meta-noetic memetic vector) collides with Orthemology mu (metaortheme) — namespaced, NEVER merged"
+
+- daee: practitioner self-application (the analyst runs the framework on themselves)
+  daee_source: atomics/skill/references/diagnostics/noetic-reading-checklist.md; inference-boundary.md
+  daee_role: the operator audits their own read by the same architecture
+  orthemology_object: higher-order orthing / evaluator symmetry (CR-7)
+  mapping_type: exact-structural-analogue
+  analysis_level: type
+  status_layer: orthemological-crosswalk
+  non_claims: [self-application blocks privileged self-certification but does NOT prove non-circularity]
+  notation_collision: none

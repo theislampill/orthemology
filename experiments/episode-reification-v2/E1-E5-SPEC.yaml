@@ -1,0 +1,41 @@
+schema: orthemology-er2-spec-v1
+packet_id: ER-2
+note: >-
+  Exact public specification of the five archetypes (A1-A5) that supersede the historical
+  ER-1 E1-E5 labels (Decision 0020). Migration table below. Every case is synthetic; the
+  defect is INFERABLE from neutral facts, never stated; diagnostic titles, defect flags, and
+  interpretation-bearing notes NEVER appear in runner-visible materials (audit B8/H1 repair);
+  scoring truth lives only in fixtures/KEYS.json.
+migration_from_er1:
+  E1 -> A1 (nominal control)
+  E2 -> A2 (procedure reference out of date; the "stopped-clock" case, retitled and de-labeled)
+  E3 -> A3 (miss below the method's resolution; the "justified rare miss")
+  E4 -> A4 (wrong edition bound, faithful execution; "defective binding")
+  E5 -> A5 (check tracks a marker not the property; the metamorphic probe, with two neutral variant records)
+archetypes:
+- id: A1
+  primary_question_control: extra structure must not invent a defect (false-positive guard); legitimate completion must be endorsed
+  keyed: {defect_category: none, remedy_category: none, closure_legitimate: true}
+- id: A2
+  keyed: {defect_category: procedure-reference-out-of-date, remedy_category: update-procedure-reference, closure_legitimate: false}
+  inferable_from: reference-data last-updated date is older than the stated refresh interval
+- id: A3
+  keyed: {defect_category: resolution-limit-miss, remedy_category: add-discriminating-evidence, closure_legitimate: false}
+  inferable_from: a finer later audit records an offset below the method's stated resolution
+- id: A4
+  keyed: {defect_category: wrong-edition-bound, remedy_category: rebind-correct-edition-and-rederive, closure_legitimate: false}
+  inferable_from: the job-card edition differs from the contract-listed edition for the case class
+- id: A5
+  keyed: {defect_category: check-tracks-marker-not-property, remedy_category: replace-check-with-property-tracking, closure_legitimate: false}
+  neighbors: two neutral variant records (marker-removed correct output -> check FAILs; marker-present wrong output -> check PASSes)
+  e5_scoring_requires: both neighbor verdicts correct AND mismatch identified AND the correct remedy category
+probes:
+  - defect_category (from a closed vocabulary; "none" for A1)
+  - grounding_fact_ids (must exist in the case facts AND intersect the keyed supporting set)
+  - remedy_category (closed vocabulary)
+  - endorse_completion (scored by EQUALITY against closure_legitimate — audit B6 repair)
+  - e5 (A5 only): neighbor expectations + mismatch_identified
+information_match_contract: >-
+  both arms render the SAME fact atoms (stable IDs) from fixtures/<case>/facts.json; the baseline
+  is a chronological log, the treatment an explicit sectioned/linked structure. The treatment adds
+  organization and typed links only — never a conclusion, flag, or interpretation the baseline lacks.

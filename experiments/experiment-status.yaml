@@ -8,24 +8,61 @@ schema: orthemology-experiment-status-v1
 readiness_vocabulary: [DRAFT, SPEC_COMPLETE, DETERMINISTICALLY_VALIDATED, READY_FOR_HUMAN_MATCHING_REVIEW, READY_TO_RUN, RUN_IN_PROGRESS, RUN_COMPLETE_UNADJUDICATED, ADJUDICATED]
 registration_vocabulary: [NOT_REGISTERED, PREREGISTRATION_READY, LOCALLY_PROTOCOL_FROZEN, EXTERNALLY_PREREGISTERED]
 packets:
+# --- Current benchmark packets (R7, Decision 0020/0022) ---
+- packet_id: FCSP-2
+  path: experiments/false-closure-selective-prediction-v2/
+  purpose: false-closure / selective-prediction benchmark v2 (manuscript 13.1) — machinery incremental value against a matched baseline; supersedes FCSP-1
+  supersedes: FCSP-1
+  readiness_state: READY_TO_RUN
+  registration_state: PREREGISTRATION_READY
+  freeze_hash: 18b6a302dc673ba869e9e63c509129d1b80e5edc5e20f6a9d7edb6e2533601cc
+  methods_gate: passed (Decision 0022; scripts/validate_experiment_methods.py)
+  required_remaining_gates: [owner execution authorization and spend, external preregistration (owner/external act)]
+  run_exists: false
+  licensed: nothing — no result, no adoption, no empirical claim
+- packet_id: ER-2
+  path: experiments/episode-reification-v2/
+  purpose: episode-reification incremental-value test v2 (manuscript 13.2) — explicit episode/verdict record vs matched ordinary audit record; supersedes ER-1
+  supersedes: ER-1
+  readiness_state: READY_TO_RUN
+  registration_state: PREREGISTRATION_READY
+  freeze_hash: 7c1336eea26c4696b70fc1978e3c5e90c5cf5ff2b3eea9b60ccf635022ab9726
+  methods_gate: passed (Decision 0022; scripts/validate_experiment_methods.py)
+  required_remaining_gates: [owner execution authorization and spend, external preregistration (owner/external act)]
+  run_exists: false
+  licensed: nothing — no result, no adoption, no empirical claim
+# --- Historical R6 packet versions (Decision 0020: methods-unready, preserved byte-frozen) ---
 - packet_id: FCSP-1
   path: experiments/false-closure-selective-prediction/
-  purpose: false-closure / selective-prediction benchmark (manuscript 13.1) — machinery incremental value against a matched baseline
-  readiness_state: READY_TO_RUN
+  purpose: false-closure benchmark v1 (R6) — HISTORICAL; methodologically unready (no harness/parser, incomplete analysis, leaky stimuli); superseded by FCSP-2
+  historical: true
+  superseded_by: FCSP-2
+  correction_note: >-
+    R6 classified this READY_TO_RUN; the R6 audit + R7 pass reproduced its methods defects
+    (Decision 0020). Its status here is corrected to DETERMINISTICALLY_VALIDATED — the highest
+    its evidence ever justified. The packet directory and freeze hash are preserved byte-for-byte;
+    its own STATUS.yaml records what R6 claimed, as history.
+  readiness_state: DETERMINISTICALLY_VALIDATED
   registration_state: PREREGISTRATION_READY
   freeze_hash: 59c5427b2551a1446e10e5aadb24ed2fcb749e7d072335ff14fe1dfec939737b
-  required_remaining_gates: [owner execution authorization and spend, external preregistration (owner/external act)]
+  required_remaining_gates: [superseded — do not run; see FCSP-2]
   run_exists: false
-  licensed: nothing — no result, no adoption, no empirical claim
+  licensed: nothing
 - packet_id: ER-1
   path: experiments/episode-reification/
-  purpose: episode-reification incremental-value test (manuscript 13.2) — explicit episode/verdict record vs matched ordinary audit record
-  readiness_state: READY_TO_RUN
+  purpose: episode-reification test v1 (R6) — HISTORICAL; methodologically unready (E1 scoring bug, label leakage, incomplete analysis); superseded by ER-2
+  historical: true
+  superseded_by: ER-2
+  correction_note: >-
+    R6 classified this READY_TO_RUN; the R6 audit + R7 pass reproduced its methods defects
+    (Decision 0020), including a live-probed E1 completion-scoring bug and treatment-label leakage.
+    Corrected to DETERMINISTICALLY_VALIDATED; directory and freeze hash preserved byte-for-byte.
+  readiness_state: DETERMINISTICALLY_VALIDATED
   registration_state: PREREGISTRATION_READY
   freeze_hash: fd3194406f42afa8602c0a704b088154c498100c1aff4b81d1d1c9da80a9fc78
-  required_remaining_gates: [owner execution authorization and spend, external preregistration (owner/external act)]
+  required_remaining_gates: [superseded — do not run; see ER-2]
   run_exists: false
-  licensed: nothing — no result, no adoption, no empirical claim
+  licensed: nothing
 - packet_id: TERM-P0-V1
   path: terminology/pilot0/
   purpose: terminology Pilot 0 v1 (historical, superseded instrument version)

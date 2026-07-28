@@ -1,0 +1,17 @@
+schema: orthemology-experiment-decision-rules-v2
+packet_id: FCSP-2
+outcome_vocabulary: [supports incremental value, does not yet support incremental value, evidence of harm or failure, inconclusive]
+parameters:
+  minimum_important_effect_false_closure: 0.10
+  minimum_important_effect_aurc: 0.05
+  harm_margin_result_accuracy: 0.05
+  harm_margin_structure_overhead: 2.0
+  alpha: 0.05
+  max_failed_run_rate: 0.05
+rules:
+  executed_by: analysis/analyze_fcsp2.py decide() — mechanical, non-synthetic runs only
+  supports_incremental_value: both Holm-adjusted primaries favor treatment at/beyond their minimum important effects and no harm rule fires
+  evidence_of_harm_or_failure: significant result-accuracy degradation beyond margin, or control structure-overhead ratio beyond margin, or significant false-closure increase
+  does_not_yet_support_incremental_value: neither supports nor harm fires under the PRE-RUN fixed-sensitivity design; an adequately designed null IS this outcome; NO observed-power rescue exists (audit B4 repair)
+  inconclusive: ONLY via a named gate — failed-run rate above max in either arm, or an outcome-affecting recorded deviation; the gate is named in the report
+adoption_note: a favorable outcome licenses only the machinery claim of manuscript 13.1 for the tested configuration; nothing transfers to terminology

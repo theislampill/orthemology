@@ -1,0 +1,6 @@
+$pdf_mode = 1;
+$bibtex_use = 1;
+$max_repeat = 5;
+$pre_tex_code = '\input{pdftex-unicode-compat.tex}';
+$pdflatex = 'pdflatex -halt-on-error -interaction=nonstopmode -file-line-error -no-shell-escape -recorder -jobname=main %O %P';
+$bibtex = 'bibtex %O %B; status=$?; printf "%s\n" "$status" > main.bibtex.rc; if [ "$status" -eq 0 ] || [ "$status" -eq 2 ]; then exit 0; fi; exit "$status"';

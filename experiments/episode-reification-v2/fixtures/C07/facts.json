@@ -1,0 +1,33 @@
+{
+  "case": "C07",
+  "facts": [
+    {
+      "id": "F01",
+      "text": "Case subject: firmware image FW-166, version v1, under release check."
+    },
+    {
+      "id": "F02",
+      "text": "The case was opened on 2026-05-13."
+    },
+    {
+      "id": "F03",
+      "text": "Screen S-2 compares against reference panel RP-A; RP-A's stated refresh interval is 60 days; RP-A was last updated on 2025-11-13."
+    },
+    {
+      "id": "F04",
+      "text": "Screen S-2 was run on 2026-05-14 per its manual; the step log matches the manual."
+    },
+    {
+      "id": "F05",
+      "text": "Screen S-2 reported NEGATIVE."
+    },
+    {
+      "id": "F06",
+      "text": "An independent assay on 2026-05-16 also reported NEGATIVE."
+    },
+    {
+      "id": "F07",
+      "text": "The draft completion statement declares screening complete on the S-2 result."
+    }
+  ]
+}

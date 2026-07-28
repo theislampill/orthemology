@@ -1,5 +1,15 @@
 # Bounded integration note — daee-epistemics → orthemology
 
+> **SUPERSEDED (additive dated banner, R7 / Decision 0021; body below preserved verbatim).**
+> This R3-era note treated daee-epistemics as a donor of *generic control discipline* only.
+> The independent R6 audit and the R7 pass found that too shallow: daee is a **domain-specific
+> noetic application** of the orthemma–ortheme–metaortheme architecture. The current, typed,
+> two-way treatment lives in [`applications/daee-epistemics/`](../../applications/daee-epistemics/README.md)
+> (crosswalk, notation firewall, fixtures, epistemological/metaphysical boundary). The
+> non-identity and non-validation cautions of this note remain correct and are carried forward;
+> its "generic controls only" classification is superseded. daee remains an application / stress
+> test, **not** independent validation and **not** part of any novelty proof.
+
 **Date:** 2026-07-20 (R3) · **Reviewed:** public `theislampill/daee-epistemics` (read-only). **Non-identity boundary, stated first:** the two projects are not merged and are not the same system; daee-epistemics's theological commitments are **not evidence** for orthemology (and vice versa); no term is imported merely because both projects have a nearby concept; no large prose body is copied. What is imported is *generic control discipline*, translated into ordinary language and re-derived inside orthemology's own formalism.
 
 ## R4 recheck (2026-07-20)

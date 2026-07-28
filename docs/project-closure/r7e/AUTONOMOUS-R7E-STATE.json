@@ -1,0 +1,57 @@
+{
+  "record": "AUTONOMOUS-R7E-STATE",
+  "label": "OPUS CANDIDATE — REQUIRES FRESH FABLE REVIEW BEFORE MERGE",
+  "task": "Owner-requested 3-pass orthing supplementation: identify orthemmata (OSM/latent, daee-runtime, epistemology, meta-noetic memetics, noetic field topology, recursive governed gradient descent) and supplement the papers — robust/academic/accurate, no fluff.",
+  "inputs": {
+    "attachments": [
+      "daee_epistemics_architecture_application_PROPER_REBAKE_v0.4.4.0.md",
+      "maximaltrajectory.md (vision doc — claims to be BOUNDED, not imported)"
+    ],
+    "corpus": "all orthemology papers + prior PDFs/prompts as metaortheme source",
+    "osm_source": "opendataloader-output/s41586-024-08548-w.md (bounded computational claims only)"
+  },
+  "model_provenance": {
+    "requested_model": "Opus 4.8",
+    "surfaced_model_at_this_write": "claude-opus-4-8",
+    "substitution_this_pass": false,
+    "note": "Owner explicitly requested multi-agent orchestration (~12 subagents per pass, ~36 total). This overrides the R7D sequential constraint (which was specific to the R7D controlling prompt). Orchestration used to IDENTIFY + adversarially VERIFY; the main loop INTEGRATES survivors with CI green."
+  },
+  "authority_boundary": {
+    "may": ["create branch candidate/r7e-orthing-supplementation from R7D head e34d2cd", "run a 3-pass identify/verify workflow (read-only agents)", "integrate adversarially-verified survivors as candidate supplementation", "open ONE draft PR into the R7D branch", "commit to the r7e branch"],
+    "must_not": ["merge any PR", "push to main/PR#8/#9/#10/#11", "promote candidate decisions to adopted-merged", "import daee objects as core primitives", "derive metaphysical/theological/human claims from OSM", "reproduce OSM biology", "add overclaim/fluff", "reopen settled Decisions 0001-0022", "collapse R7/R7B/R7C/R7D/R7E provenance"]
+  },
+  "heads": {
+    "live_main": "43fee0f519e2f6984fb143c1e621c83382e71ec7 (R6, untouched)",
+    "pr8": "b0538601913c8234511a1f1131a58eb23a4a0dc4 (R7, untouched)",
+    "pr9": "86b8bbdddf35ac1e45748279bac05e5a2d4ed85e (R7B, untouched)",
+    "pr10": "3cce235f0e388ba78a093d43c879a2e73262938b (R7C, untouched)",
+    "pr11": "e34d2cd56057766f8f656a4ff3486eb34dad607e (R7D, untouched; child PR #11)",
+    "r7e_branch": "candidate/r7e-orthing-supplementation (from e34d2cd)",
+    "merged": false
+  },
+  "governing_metaorthemes": [
+    "daee firewall: read-only application pinned to c86b3c66; co-development != validation; no import as core primitive; deformations are ortheme-level candidates not metaorthemes",
+    "OSM boundary: bounded computational/learning/representation claims; no biological/human/metaphysical/theological transfer",
+    "reason/revelation + evidence firewall; conformance != consistency/empirical proof",
+    "sourcing discipline: five-status hierarchy; secondary != primary; no phantom sources",
+    "no overclaim, no fluff (maximaltrajectory.md rhetoric bounded, not imported)",
+    "candidate-only; settled core 0001-0022 not reopened; provenance preserved; nothing merged"
+  ],
+  "phase_log": [
+    {
+      "phase": "0 setup + workflow launch",
+      "status": "complete",
+      "workflow_run_id": "wf_4be905d1-4a1",
+      "design": "Pass 1 (12 agents, generative + bounded drafts) -> Pass 2 (12 agents, read-only discovery, blind) -> dedup barrier -> Pass 3 (12 agents, adversarial keep/bound/reject). Agents identify+verify (read-only); main loop integrates survivors.",
+      "result": "36 agents, 0 errors, 4.9M subagent tokens, ~40 min. 237 candidates -> 221 adversarially-survived (99 keep / 122 bound) / 16 rejected. Adversarial pass caught fabricated premises ('central factual claims FALSE against the pin'), Firewall-1 breaches (citing daee script paths as evidence), and a citation miscite (ninety-ninety rule)."
+    },
+    {
+      "phase": "1 curation + integration",
+      "status": "complete",
+      "result": "Applied a SECOND stricter curation filter (221 survivors is too many to integrate wholesale = bloat). Curated to 24 firewall-clean, framework's-own-structural (orthemological-extension / cross-source-synthesis), no-new-external-citation items. Integrated a focused, individually-verified subset of 8 highest-value + cleanest: (1-3) SOUND-DESCENT G1 staleness fix — adopted->proposed-candidate, 'locally sound'->admissible governed corrective transition, verdict corrected (consistent with R7D Decision 0033); (4) SOUND-DESCENT div/curl require an explicit multi-node target field; (5) SOUND-DESCENT literal-optimization-exists-in-OSM-training-but-does-not-transfer [primary DOI]; (6) companion 8.2 two-numbered-scales (modalities vs rungs) do-not-conflate; (7) companion gap-invariance rung3->rung4 is/ought + YAML non_entailment; (8) companion 12 absence/falsifiability conditions. Full 221 survivors + 16 rejected recorded in ORTHING-CANDIDATE-BACKLOG.md for fresh-Fable triage (sourcing labels are agent claims; classical primary-text additions NOT integrated — need located loci per repo discipline).",
+      "suite": "55/55 green; manifest clean; 6 PDFs byte-equal (companion rebuilt 6pp, zero notdef)",
+      "next_action": "Commit; open draft PR into the R7D branch; closeout."
+    }
+  ],
+  "no_merge_statement": "R7E is an Opus CANDIDATE supplementation pass on its own branch. Nothing is merged. A fresh Fable session must review every added hunk (sourcing, firewalls, substance) before any protected merge."
+}

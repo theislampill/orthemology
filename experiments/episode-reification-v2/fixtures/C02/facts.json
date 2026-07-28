@@ -1,0 +1,33 @@
+{
+  "case": "C02",
+  "facts": [
+    {
+      "id": "F01",
+      "text": "Case subject: survey plot SP-235, version v1, under boundary check."
+    },
+    {
+      "id": "F02",
+      "text": "The case was opened on 2026-05-16."
+    },
+    {
+      "id": "F03",
+      "text": "Measurement M-1 was taken on 2026-05-17; its scope line covers the checked property; its stated validity is 30 days."
+    },
+    {
+      "id": "F04",
+      "text": "The measuring procedure's reference data was updated on 2026-05-01; its stated refresh interval is 90 days."
+    },
+    {
+      "id": "F05",
+      "text": "The operator followed work instruction WI-4; the step log matches WI-4's steps."
+    },
+    {
+      "id": "F06",
+      "text": "The check result was PASS."
+    },
+    {
+      "id": "F07",
+      "text": "The obligations table has no open rows."
+    }
+  ]
+}

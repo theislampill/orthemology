@@ -1,0 +1,48 @@
+schema: orthemology-hermes-writeback-adoption-profile-v1
+status: outline-only
+execution: not implemented in orthemology
+runtime owner: external/downstream
+upstream adoption: candidate, not normative dependency
+claim_status:
+  claim_status_id: somnus-claim-boundaries-v1
+  empirical_validation: {status: not-established, owner: future empirical study, evidence_basis: no empirical study was run}
+  performance: {status: not-established, owner: future comparative evaluation, evidence_basis: no matched workflow comparison was run}
+  learning: {status: not-established, owner: future governed outcome study, evidence_basis: no modification and later-outcome loop was executed}
+  generalization: {status: not-established, owner: future cross-model and cross-domain study, evidence_basis: fixtures do not establish transfer}
+  internal_ontology: {status: not-established, owner: future interpretability inquiry, evidence_basis: records do not expose an actor interior state}
+  terminology_utility: {status: not-established, owner: terminology benchmark, evidence_basis: terminology benchmark was not run}
+  terminology_adoption: {status: not-established, owner: human terminology review, evidence_basis: no term was adopted}
+  runtime: {status: not-implemented, owner: external downstream runtime owner, evidence_basis: this repository contains schemas fixtures and offline validation only}
+  collective_execution: {status: not-implemented, owner: external collective runtime owner, evidence_basis: no network transport council or shared service exists}
+source_verification:
+  source_code: pending
+  license: pending
+  commit: pending
+  tests: pending
+  implementation_claims: externally supplied and not repository-verified
+predecessor_classification:
+  relative_granularity: coarser_or_more_implicit
+  scope: [source_interpretation, proposal_generation, destination_selection, safe_writeback]
+predecessor_characterization: coarser-or-more-implicit orthing oriented toward source interpretation, proposal generation, destination selection, and safe writeback
+subsumption:
+  ordinary_reflective_writeback_question_is_first_class: true
+  ordinary_targets: [memory, user_state, fact, skill]
+  governing_targets: [activation_contract, orthability_evaluator, selector, metaortheme, metaorthemma_binding_rule, evidence_requirement, closure_rule, residual_rule, fixture, provenance, documentation]
+  outcomes: [no_change, investigation, evidence_request, preserve_residual, one_proposal, alternative_proposals]
+actuator:
+  role: first-class downstream actuator
+  ontology_center: false
+  unrelated_accessory: false
+  stages: [proposal, review, approve_or_reject, validation, dry_run, apply_or_revert]
+record_separation: [somnic_assessment, intervention_disposition, mutation_proposal, mutation_authorization, applied_mutation, later_outcome_evaluation]
+proposal_provenance_modes: [legacy_reflective_proposal, somnus_grounded_proposal]
+temporal_roles: [t1_waking_orthing, t2_somnic_assessment, t3_proposal_and_authorization, t4_application_and_successor_state, t5_outcome_evaluation]
+automatic_proposal: prohibited
+automatic authorization: prohibited
+automatic application: prohibited
+automatic writeback: prohibited
+non_claims:
+  source_implementation: not-verified
+  empirical_superiority: not-established
+  governed_learning: not-established
+  runtime_writeback: not-implemented

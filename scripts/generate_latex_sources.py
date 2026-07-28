@@ -1,0 +1,1465 @@
+#!/usr/bin/env python3
+"""Generate deterministic LaTeX derivatives from publication Markdown owners."""
+
+import argparse
+import functools
+import hashlib
+import pathlib
+import posixpath
+import re
+import subprocess
+import sys
+import urllib.parse
+
+import yaml
+from markdown_it import MarkdownIt
+
+from latex_to_typst_math import MathConvertError, translate_display, translate_inline
+
+
+ROOT = pathlib.Path(__file__).resolve().parents[1]
+PROFILE_PATH = pathlib.Path("docs/publication-profile.yaml")
+OUTPUT_PATH = pathlib.Path("publication/latex")
+LONG_TABLE_ROW_THRESHOLD = 10
+LONG_TABLE_TOTAL_CONTENT_THRESHOLD = 1500
+LONG_TABLE_MAX_ROW_CONTENT_THRESHOLD = 800
+BREAKABLE_TABLE_COLUMN_THRESHOLD = 5
+DISPLAY_MATH_MULTLINE_THRESHOLD = 120
+DISPLAY_MATH_TARGET_WIDTH = 72
+DISPLAY_MATH_LAYOUT_BREAK = "\\\\\n"
+ALIGNED_MATH_LAYOUT_BREAK = "\\\\\n&\\quad{} "
+ALIGNED_MATH_RELATION_BREAK = "\\\\\n&\\quad"
+REVIEWED_DISPLAY_MATH_BREAK_COMMANDS = frozenset(
+    {
+        r"\iff",
+        r"\implies",
+        r"\Leftrightarrow",
+        r"\Longrightarrow",
+        r"\Rightarrow",
+        r"\vee",
+        r"\wedge",
+    }
+)
+REVIEWED_ALIGNED_MATH_CONTINUATION_COMMANDS = frozenset(
+    {
+        r"\vee",
+        r"\wedge",
+    }
+)
+REVIEWED_ALIGNED_MATH_RELATION_COMMANDS = frozenset(
+    {
+        r"\iff",
+        r"\implies",
+        r"\Leftrightarrow",
+        r"\Longrightarrow",
+        r"\Rightarrow",
+    }
+)
+INLINE_MATH_BREAK_THRESHOLD = 120
+INLINE_MATH_LAYOUT_BREAK = r"\allowbreak{}"
+INLINE_MATH_TEXT_GROUP_BREAK_THRESHOLD = 40
+INLINE_MATH_TEXT_GROUP_TARGET_WIDTH = 32
+REVIEWED_INLINE_MATH_BREAK_COMMANDS = frozenset(
+    {
+        r"\approx",
+        r"\equiv",
+        r"\ge",
+        r"\geq",
+        r"\iff",
+        r"\implies",
+        r"\in",
+        r"\le",
+        r"\leq",
+        r"\Leftrightarrow",
+        r"\Longrightarrow",
+        r"\mapsto",
+        r"\models",
+        r"\neq",
+        r"\notin",
+        r"\Rightarrow",
+        r"\sim",
+        r"\subset",
+        r"\subseteq",
+        r"\supset",
+        r"\supseteq",
+        r"\to",
+        r"\vee",
+        r"\wedge",
+    }
+)
+INLINE_CODE_PATH_LAYOUT_BREAK = r"\allowbreak{}"
+INLINE_CODE_PATH_BREAK_CHARACTERS = frozenset("/-._")
+INLINE_CODE_PATH_SEGMENT_RE = re.compile(r"[A-Za-z0-9][A-Za-z0-9._-]*")
+ALLOWED_INLINE_CODE_BASENAME_EXTENSIONS = frozenset(
+    {
+        ".bib",
+        ".json",
+        ".md",
+        ".py",
+        ".tex",
+        ".yaml",
+        ".yml",
+    }
+)
+DECLARED_REPOSITORY_INLINE_CODE_ROOTS = frozenset(
+    {
+        "applications",
+        "artifacts",
+        "companion",
+        "docs",
+        "examples",
+        "experiments",
+        "references",
+        "schemas",
+        "scripts",
+        "terminology",
+        "tests",
+        "theory",
+    }
+)
+DECLARED_EXTERNAL_REPOSITORY_SLUGS = frozenset(
+    {
+        "theislampill/daee-epistemics",
+    }
+)
+DECLARED_SOURCE_RELATIVE_INLINE_CODE_PATHS = frozenset(
+    {
+        "sourcing/R3-COMPANION-SOURCING-LEDGER.md",
+    }
+)
+PLACEHOLDER_OPEN = "\ue000"
+PLACEHOLDER_CLOSE = "\ue001"
+PLACEHOLDER_RE = re.compile(
+    re.escape(PLACEHOLDER_OPEN) + r"(\d+)" + re.escape(PLACEHOLDER_CLOSE)
+)
+PURE_COMMENT_RE = re.compile(r"\s*(?:<!--.*?-->\s*)+", re.S)
+
+
+class GenerationError(ValueError):
+    """Raised when Markdown cannot be represented by the bounded LaTeX writer."""
+
+
+def _is_escaped(text, index):
+    slash_count = 0
+    index -= 1
+    while index >= 0 and text[index] == "\\":
+        slash_count += 1
+        index -= 1
+    return slash_count % 2 == 1
+
+
+def _find_closing_dollar(text, start, delimiter):
+    index = start
+    while True:
+        index = text.find(delimiter, index)
+        if index < 0:
+            return -1
+        if not _is_escaped(text, index):
+            if delimiter == "$" and "\n" in text[start:index]:
+                return -1
+            return index
+        index += len(delimiter)
+
+
+def _fence_end(text, start, marker):
+    line_end = text.find("\n", start)
+    if line_end < 0:
+        return len(text)
+    pattern = re.compile(
+        r"(?m)^ {0,3}" + re.escape(marker[0]) + "{%d,}\\s*$" % len(marker)
+    )
+    match = pattern.search(text, line_end + 1)
+    if match is None:
+        raise GenerationError("unclosed fenced code block")
+    close_end = text.find("\n", match.end())
+    return len(text) if close_end < 0 else close_end + 1
+
+
+def _find_closing_backtick_run(text, start, run_length):
+    cursor = start
+    while True:
+        closing = text.find("`", cursor)
+        if closing < 0:
+            return -1
+        closing_end = closing + 1
+        while closing_end < len(text) and text[closing_end] == "`":
+            closing_end += 1
+        if closing_end - closing == run_length:
+            return closing_end
+        cursor = closing_end
+
+
+def _protect_math(markdown):
+    if PLACEHOLDER_OPEN in markdown or PLACEHOLDER_CLOSE in markdown:
+        raise GenerationError("source contains reserved math placeholder")
+    protected = []
+    math = []
+    index = 0
+    line_start = True
+    while index < len(markdown):
+        if line_start:
+            fence_match = re.match(r" {0,3}(`{3,}|~{3,})[^\n]*(?:\n|$)", markdown[index:])
+            if fence_match:
+                marker = fence_match.group(1)
+                end = _fence_end(markdown, index, marker)
+                protected.append(markdown[index:end])
+                index = end
+                line_start = index == 0 or markdown[index - 1] == "\n"
+                continue
+        char = markdown[index]
+        if char == "`":
+            run = 1
+            while index + run < len(markdown) and markdown[index + run] == "`":
+                run += 1
+            end = _find_closing_backtick_run(markdown, index + run, run)
+            if end < 0:
+                raise GenerationError("unclosed inline-code delimiter")
+            protected.append(markdown[index:end])
+            index = end
+            line_start = False
+            continue
+        if char == "\\" and index + 1 < len(markdown):
+            protected.append(markdown[index : index + 2])
+            line_start = markdown[index + 1] == "\n"
+            index += 2
+            continue
+        if char == "$":
+            delimiter = "$$" if markdown.startswith("$$", index) else "$"
+            body_start = index + len(delimiter)
+            end = _find_closing_dollar(markdown, body_start, delimiter)
+            if end < 0:
+                raise GenerationError(
+                    "unclosed %s math delimiter" % ("display" if delimiter == "$$" else "inline")
+                )
+            body = markdown[body_start:end]
+            if not body.strip():
+                raise GenerationError("empty math delimiter")
+            kind = "display" if delimiter == "$$" else "inline"
+            try:
+                if kind == "display":
+                    translate_display(body)
+                else:
+                    translate_inline(body)
+            except MathConvertError as exc:
+                raise GenerationError("math translation failed: %s" % exc) from exc
+            math.append((kind, body))
+            protected.append(
+                PLACEHOLDER_OPEN + str(len(math) - 1) + PLACEHOLDER_CLOSE
+            )
+            index = end + len(delimiter)
+            line_start = False
+            continue
+        protected.append(char)
+        line_start = char == "\n"
+        index += 1
+    return "".join(protected), math
+
+
+TEXT_ESCAPES = {
+    "\\": r"\textbackslash{}",
+    "{": r"\{",
+    "}": r"\}",
+    "#": r"\#",
+    "$": r"\$",
+    "%": r"\%",
+    "&": r"\&",
+    "_": r"\_",
+    "~": r"\textasciitilde{}",
+    "^": r"\textasciicircum{}",
+}
+
+
+def _escape_text(text):
+    return "".join(TEXT_ESCAPES.get(char, char) for char in text)
+
+
+def _escape_code(text):
+    escaped = _escape_text(text)
+    return escaped.replace(r"\$", r"\char36{}")
+
+
+def _inline_code_path_segments(text):
+    if (
+        "/" not in text
+        or any(character.isspace() for character in text)
+        or "://" in text
+        or text.startswith("--")
+        or "//" in text
+    ):
+        return None
+    body = text[:-1] if text.endswith("/") else text
+    if not body:
+        return None
+    segments = tuple(body.split("/"))
+    if not all(INLINE_CODE_PATH_SEGMENT_RE.fullmatch(item) for item in segments):
+        return None
+    return segments
+
+
+def _tracked_repository_paths(root):
+    try:
+        result = subprocess.run(
+            ["git", "-C", str(pathlib.Path(root)), "ls-files", "-z"],
+            check=True,
+            stdout=subprocess.PIPE,
+            stderr=subprocess.PIPE,
+        )
+    except (OSError, subprocess.CalledProcessError) as exc:
+        raise GenerationError("cannot enumerate tracked repository paths") from exc
+    return {
+        item.decode("utf-8")
+        for item in result.stdout.split(b"\0")
+        if item
+    }
+
+
+def _is_inline_code_basename_candidate(text):
+    if (
+        "/" in text
+        or "\\" in text
+        or any(character.isspace() for character in text)
+        or not INLINE_CODE_PATH_SEGMENT_RE.fullmatch(text)
+    ):
+        return False
+    return (
+        pathlib.PurePosixPath(text).suffix.casefold()
+        in ALLOWED_INLINE_CODE_BASENAME_EXTENSIONS
+    )
+
+
+@functools.lru_cache(maxsize=None)
+def _tracked_unique_inline_code_basename_resolution_items(root_key):
+    tracked_paths = _tracked_repository_paths(pathlib.Path(root_key))
+    resolutions = {}
+    ambiguous = set()
+    for path in tracked_paths:
+        basename = pathlib.PurePosixPath(path).name
+        if not _is_inline_code_basename_candidate(basename):
+            continue
+        if basename in resolutions:
+            ambiguous.add(basename)
+        else:
+            resolutions[basename] = path
+    for basename in ambiguous:
+        resolutions.pop(basename, None)
+    return tuple(sorted(resolutions.items()))
+
+
+def tracked_unique_inline_code_basename_resolutions(root=ROOT):
+    """Map only uniquely tracked source/document basenames to exact paths."""
+    root_key = str(pathlib.Path(root).resolve())
+    return dict(
+        _tracked_unique_inline_code_basename_resolution_items(root_key)
+    )
+
+
+def is_uniquely_tracked_inline_code_basename(text, root=ROOT):
+    """Return whether a closed filename resolves to one Git-tracked path."""
+    return (
+        _is_inline_code_basename_candidate(text)
+        and text in tracked_unique_inline_code_basename_resolutions(root)
+    )
+
+
+def is_path_like_inline_code(text, root=ROOT):
+    """Accept only closed repository paths and exact tracked filenames."""
+    segments = _inline_code_path_segments(text)
+    if segments is None:
+        return is_uniquely_tracked_inline_code_basename(text, root)
+    return (
+        segments[0] in DECLARED_REPOSITORY_INLINE_CODE_ROOTS
+        or text in DECLARED_EXTERNAL_REPOSITORY_SLUGS
+        or text in DECLARED_SOURCE_RELATIVE_INLINE_CODE_PATHS
+    )
+
+
+def tracked_repository_root_segments(root=ROOT):
+    """Return first path segments backed by at least one tracked nested file."""
+    roots = set()
+    for tracked_path in _tracked_repository_paths(root):
+        parts = pathlib.PurePosixPath(tracked_path).parts
+        if len(parts) > 1:
+            roots.add(parts[0])
+    return roots
+
+
+def validate_inline_code_path_declarations(root=ROOT):
+    """Validate closed local and source-relative path declarations."""
+    tracked_paths = _tracked_repository_paths(root)
+    tracked_roots = {
+        pathlib.PurePosixPath(path).parts[0]
+        for path in tracked_paths
+        if len(pathlib.PurePosixPath(path).parts) > 1
+    }
+    missing_roots = DECLARED_REPOSITORY_INLINE_CODE_ROOTS - tracked_roots
+    if missing_roots:
+        raise GenerationError(
+            "declared inline-code path roots are not tracked: %s"
+            % sorted(missing_roots)
+        )
+    for relative in DECLARED_SOURCE_RELATIVE_INLINE_CODE_PATHS:
+        matches = [
+            path
+            for path in tracked_paths
+            if path == relative or path.endswith("/" + relative)
+        ]
+        if len(matches) != 1:
+            raise GenerationError(
+                "source-relative inline-code path must resolve uniquely: %s"
+                % relative
+            )
+    if DECLARED_REPOSITORY_INLINE_CODE_ROOTS & {
+        _inline_code_path_segments(path)[0]
+        for path in DECLARED_EXTERNAL_REPOSITORY_SLUGS
+    }:
+        raise GenerationError(
+            "external repository slugs overlap declared local roots"
+        )
+    resolutions = tracked_unique_inline_code_basename_resolutions(root)
+    for basename, path in resolutions.items():
+        matches = sorted(
+            tracked
+            for tracked in tracked_paths
+            if pathlib.PurePosixPath(tracked).name == basename
+        )
+        if (
+            not _is_inline_code_basename_candidate(basename)
+            or matches != [path]
+        ):
+            raise GenerationError(
+                "tracked inline-code basename does not resolve uniquely: %s"
+                % basename
+            )
+
+
+def remove_inline_code_path_layout_breaks(body):
+    """Remove only discretionary breaks inserted in a validated inline path."""
+    return body.replace(INLINE_CODE_PATH_LAYOUT_BREAK, "")
+
+
+def _render_inline_code(text):
+    escaped = _escape_code(text)
+    if not is_path_like_inline_code(text):
+        return escaped
+    output = []
+    for character in text:
+        output.append(_escape_code(character))
+        if character in INLINE_CODE_PATH_BREAK_CHARACTERS:
+            output.append(INLINE_CODE_PATH_LAYOUT_BREAK)
+    layout_body = "".join(output)
+    if remove_inline_code_path_layout_breaks(layout_body) != escaped:
+        raise GenerationError("inline-code path layout changed the source token stream")
+    return layout_body
+
+
+def _next_nonspace_token_is_script(body, position):
+    while position < len(body) and body[position].isspace():
+        position += 1
+    return position < len(body) and body[position] in "_^"
+
+
+def _reviewed_math_break_positions(body, commands, literal_boundaries):
+    """Return reviewed top-level boundaries without entering nested TeX syntax."""
+    positions = []
+    brace_depth = 0
+    parenthesis_depth = 0
+    bracket_depth = 0
+    index = 0
+    while index < len(body):
+        character = body[index]
+        if character == "\\":
+            command_end = index + 1
+            if command_end < len(body) and body[command_end].isalpha():
+                while command_end < len(body) and body[command_end].isalpha():
+                    command_end += 1
+            elif command_end < len(body):
+                command_end += 1
+            command = body[index:command_end]
+            if (
+                brace_depth == 0
+                and parenthesis_depth == 0
+                and bracket_depth == 0
+                and command in commands
+                and not _next_nonspace_token_is_script(body, command_end)
+            ):
+                positions.append(command_end)
+            index = command_end
+            continue
+        if character == "{":
+            brace_depth += 1
+        elif character == "}":
+            brace_depth = max(0, brace_depth - 1)
+        elif brace_depth == 0:
+            if character == "(":
+                parenthesis_depth += 1
+            elif character == ")":
+                parenthesis_depth = max(0, parenthesis_depth - 1)
+            elif character == "[":
+                bracket_depth += 1
+            elif character == "]":
+                bracket_depth = max(0, bracket_depth - 1)
+            elif (
+                character in literal_boundaries
+                and parenthesis_depth == 0
+                and bracket_depth == 0
+                and not _next_nonspace_token_is_script(body, index + 1)
+            ):
+                positions.append(index + 1)
+        index += 1
+    return positions
+
+
+def reviewed_display_math_break_positions(body):
+    """Return reviewed top-level boundaries that can take a display break."""
+    return _reviewed_math_break_positions(
+        body,
+        REVIEWED_DISPLAY_MATH_BREAK_COMMANDS,
+        frozenset(",;"),
+    )
+
+
+def reviewed_inline_math_break_positions(body):
+    """Return reviewed top-level inline relation, assignment, and list boundaries."""
+    return _reviewed_math_break_positions(
+        body,
+        REVIEWED_INLINE_MATH_BREAK_COMMANDS,
+        frozenset("=,;"),
+    )
+
+
+def remove_display_math_layout_breaks(body):
+    """Remove only layout breaks inserted by the long-display renderer."""
+    return body.replace(DISPLAY_MATH_LAYOUT_BREAK, "")
+
+
+def remove_aligned_math_layout_breaks(body):
+    """Remove only reversible continuation rows inserted inside aligned math."""
+    return body.replace(ALIGNED_MATH_LAYOUT_BREAK, "").replace(
+        ALIGNED_MATH_RELATION_BREAK, ""
+    )
+
+
+def reviewed_aligned_math_continuation_positions(body):
+    """Return top-level conjunction starts safe for an aligned continuation."""
+    command_ends = _reviewed_math_break_positions(
+        body,
+        REVIEWED_ALIGNED_MATH_CONTINUATION_COMMANDS,
+        frozenset(),
+    )
+    positions = []
+    for command_end in command_ends:
+        for command in REVIEWED_ALIGNED_MATH_CONTINUATION_COMMANDS:
+            command_start = command_end - len(command)
+            if body[command_start:command_end] == command:
+                positions.append(command_start)
+                break
+    return positions
+
+
+def reviewed_aligned_math_relation_ends(body):
+    """Return top-level relation ends safe for an aligned RHS continuation."""
+    return _reviewed_math_break_positions(
+        body,
+        REVIEWED_ALIGNED_MATH_RELATION_COMMANDS,
+        frozenset(),
+    )
+
+
+def reviewed_aligned_math_clause_ends(body):
+    """Return top-level colon ends safe for a further aligned continuation."""
+    return _reviewed_math_break_positions(
+        body,
+        frozenset(),
+        frozenset(":"),
+    )
+
+
+def _render_aligned_math(source):
+    """Wrap only overlong aligned RHS conjunctions with reversible layout."""
+    opening = "\\begin{aligned}\n"
+    closing = "\n\\end{aligned}"
+    if not source.startswith(opening) or not source.endswith(closing):
+        return None
+    body = source[len(opening) : -len(closing)]
+    output = []
+    for line in body.splitlines():
+        if len(line) < DISPLAY_MATH_MULTLINE_THRESHOLD or "&" not in line:
+            output.append(line)
+            continue
+        alignment = line.index("&")
+        candidates = [
+            position
+            for position in reviewed_aligned_math_continuation_positions(line)
+            if position > alignment and position >= DISPLAY_MATH_TARGET_WIDTH
+        ]
+        if candidates:
+            position = min(candidates)
+            output.append(
+                line[:position] + ALIGNED_MATH_LAYOUT_BREAK + line[position:]
+            )
+            continue
+        relations = [
+            position
+            for position in reviewed_aligned_math_relation_ends(line)
+            if position > alignment
+        ]
+        if relations:
+            relation = min(relations)
+            positions = [relation] + [
+                position
+                for position in reviewed_aligned_math_clause_ends(line)
+                if position > relation
+            ]
+            cursor = 0
+            pieces = []
+            for position in positions:
+                pieces.append(line[cursor:position])
+                pieces.append(ALIGNED_MATH_RELATION_BREAK)
+                cursor = position
+            pieces.append(line[cursor:])
+            output.append("".join(pieces))
+            continue
+        output.append(line)
+    layout = opening + "\n".join(output) + closing
+    if remove_aligned_math_layout_breaks(layout) != source:
+        raise GenerationError("aligned-math layout changed the source token stream")
+    return layout
+
+
+def _multline_break_positions(body):
+    candidates = reviewed_display_math_break_positions(body)
+    selected = []
+    line_start = 0
+    while len(body) - line_start > DISPLAY_MATH_TARGET_WIDTH:
+        remaining = [
+            position
+            for position in candidates
+            if line_start < position < len(body)
+        ]
+        if not remaining:
+            break
+        target = line_start + DISPLAY_MATH_TARGET_WIDTH
+        before_target = [position for position in remaining if position <= target]
+        position = max(before_target) if before_target else min(remaining)
+        selected.append(position)
+        line_start = position
+    return selected
+
+
+def _render_display_math(body):
+    source = body.strip()
+    aligned = _render_aligned_math(source)
+    if aligned is not None:
+        return "\n\\[\n%s\n\\]\n" % aligned
+    if (
+        len(source) < DISPLAY_MATH_MULTLINE_THRESHOLD
+        or r"\begin{" in source
+        or r"\end{" in source
+        or "\\\\\n" in source
+    ):
+        return "\n\\[\n%s\n\\]\n" % source
+    break_positions = _multline_break_positions(source)
+    if not break_positions:
+        return "\n\\[\n%s\n\\]\n" % source
+    output = []
+    cursor = 0
+    for position in break_positions:
+        output.append(source[cursor:position])
+        output.append(DISPLAY_MATH_LAYOUT_BREAK)
+        cursor = position
+    output.append(source[cursor:])
+    layout_body = "".join(output)
+    if remove_display_math_layout_breaks(layout_body) != source:
+        raise GenerationError("display-math layout changed the source token stream")
+    return "\n\\begin{multline*}\n%s\n\\end{multline*}\n" % layout_body
+
+
+def remove_inline_math_layout_breaks(body):
+    """Remove only discretionary breaks inserted in qualifying inline math."""
+    return body.replace(INLINE_MATH_LAYOUT_BREAK, "")
+
+
+def _matching_closing_brace(body, opening):
+    depth = 1
+    index = opening + 1
+    while index < len(body):
+        character = body[index]
+        if character == "\\":
+            command_end = index + 1
+            if command_end < len(body) and body[command_end].isalpha():
+                while command_end < len(body) and body[command_end].isalpha():
+                    command_end += 1
+            elif command_end < len(body):
+                command_end += 1
+            index = command_end
+            continue
+        if character == "{":
+            depth += 1
+        elif character == "}":
+            depth -= 1
+            if depth == 0:
+                return index
+        index += 1
+    return None
+
+
+def _reviewed_text_group_break_positions(content):
+    if (
+        len(content) < INLINE_MATH_TEXT_GROUP_BREAK_THRESHOLD
+        or any(character in content for character in "\\{}")
+    ):
+        return []
+    candidates = [
+        index + 1
+        for index, character in enumerate(content)
+        if (
+            character == " "
+            and 0 < index < len(content) - 1
+            and content[index - 1] != " "
+            and content[index + 1] != " "
+        )
+    ]
+    selected = []
+    line_start = 0
+    while len(content) - line_start >= INLINE_MATH_TEXT_GROUP_BREAK_THRESHOLD:
+        remaining = [
+            position
+            for position in candidates
+            if line_start < position < len(content)
+        ]
+        if not remaining:
+            break
+        target = line_start + INLINE_MATH_TEXT_GROUP_TARGET_WIDTH
+        before_target = [position for position in remaining if position <= target]
+        position = max(before_target) if before_target else min(remaining)
+        selected.append(position)
+        line_start = position
+    return selected
+
+
+def _split_overlong_inline_text_groups(body):
+    output = []
+    cursor = 0
+    brace_depth = 0
+    index = 0
+    while index < len(body):
+        character = body[index]
+        if character == "\\":
+            command_end = index + 1
+            if command_end < len(body) and body[command_end].isalpha():
+                while command_end < len(body) and body[command_end].isalpha():
+                    command_end += 1
+            elif command_end < len(body):
+                command_end += 1
+            command = body[index:command_end]
+            if (
+                command == r"\text"
+                and brace_depth == 0
+                and command_end < len(body)
+                and body[command_end] == "{"
+            ):
+                closing = _matching_closing_brace(body, command_end)
+                if closing is None:
+                    raise GenerationError("inline math contains an unclosed text group")
+                content = body[command_end + 1 : closing]
+                break_positions = _reviewed_text_group_break_positions(content)
+                if break_positions:
+                    output.append(body[cursor:index])
+                    content_cursor = 0
+                    for position in break_positions:
+                        output.append(r"\text{%s}" % content[content_cursor:position])
+                        output.append(INLINE_MATH_LAYOUT_BREAK)
+                        content_cursor = position
+                    output.append(r"\text{%s}" % content[content_cursor:])
+                    cursor = closing + 1
+                index = closing + 1
+                continue
+            index = command_end
+            continue
+        if character == "{":
+            brace_depth += 1
+        elif character == "}":
+            brace_depth = max(0, brace_depth - 1)
+        index += 1
+    output.append(body[cursor:])
+    return "".join(output)
+
+
+PLAIN_SPLIT_TEXT_GROUP_RE = re.compile(
+    r"\\text\{([^{}\\]*)\}"
+    + re.escape(INLINE_MATH_LAYOUT_BREAK)
+    + r"\\text\{([^{}\\]*)\}"
+)
+
+
+def normalize_inline_math_layout(body):
+    """Remove generated inline layout while rejoining split plain text groups."""
+    normalized = body
+    while True:
+        normalized, count = PLAIN_SPLIT_TEXT_GROUP_RE.subn(
+            lambda match: r"\text{%s}" % (match.group(1) + match.group(2)),
+            normalized,
+        )
+        if count == 0:
+            break
+    return remove_inline_math_layout_breaks(normalized)
+
+
+def _render_inline_math(body):
+    if (
+        len(body) < INLINE_MATH_BREAK_THRESHOLD
+        or INLINE_MATH_LAYOUT_BREAK in body
+    ):
+        return body
+    break_positions = reviewed_inline_math_break_positions(body)
+    if not break_positions:
+        return body
+    output = []
+    cursor = 0
+    for position in break_positions:
+        output.append(body[cursor:position])
+        output.append(INLINE_MATH_LAYOUT_BREAK)
+        cursor = position
+    output.append(body[cursor:])
+    layout_body = _split_overlong_inline_text_groups("".join(output))
+    if normalize_inline_math_layout(layout_body) != body:
+        raise GenerationError("inline-math layout changed the source token stream")
+    return layout_body
+
+
+def _render_text(text, math):
+    output = []
+    cursor = 0
+    for match in PLACEHOLDER_RE.finditer(text):
+        output.append(_escape_text(text[cursor : match.start()]))
+        kind, body = math[int(match.group(1))]
+        if kind == "display":
+            output.append(_render_display_math(body))
+        else:
+            output.append("$%s$" % _render_inline_math(body))
+        cursor = match.end()
+    output.append(_escape_text(text[cursor:]))
+    return "".join(output)
+
+
+def _escape_url(url):
+    if "}" in url:
+        raise GenerationError("link target contains an unsupported closing brace")
+    return r"\detokenize{%s}" % url
+
+
+def resolve_publication_link(target, *, source_name, root):
+    """Return a URI that resolves from artifacts/<artifact>.pdf."""
+    target = str(target)
+    parsed = urllib.parse.urlsplit(target)
+    if parsed.scheme in {"http", "https"} and parsed.netloc:
+        return target
+    if parsed.scheme or parsed.netloc:
+        raise GenerationError("unsupported link target scheme: %s" % target)
+    if target.startswith("#") and parsed.path == "":
+        return target
+    if (
+        not parsed.path
+        or "\\" in parsed.path
+        or parsed.path.startswith("/")
+        or re.match(r"^[A-Za-z]:", parsed.path)
+    ):
+        raise GenerationError("absolute or empty local link target: %s" % target)
+    source = pathlib.PurePosixPath(str(source_name).replace("\\", "/"))
+    if source.is_absolute() or ".." in source.parts:
+        raise GenerationError("unsafe publication source path: %s" % source_name)
+    repository_path = posixpath.normpath(
+        posixpath.join(source.parent.as_posix(), parsed.path)
+    )
+    pure = pathlib.PurePosixPath(repository_path)
+    if pure.is_absolute() or ".." in pure.parts:
+        raise GenerationError("local link target escapes repository: %s" % target)
+    owner = pathlib.Path(root).joinpath(*pure.parts)
+    if not owner.is_file():
+        raise GenerationError(
+            "local link target is missing: %s -> %s"
+            % (target, pure.as_posix())
+        )
+    rewritten_path = posixpath.relpath(pure.as_posix(), "artifacts")
+    return urllib.parse.urlunsplit(
+        ("", "", rewritten_path, parsed.query, parsed.fragment)
+    )
+
+
+def _render_inline(tokens, math, *, link_resolver=None):
+    output = []
+    for token in tokens:
+        kind = token.type
+        if kind == "text":
+            output.append(_render_text(token.content, math))
+        elif kind == "code_inline":
+            output.append(r"\texttt{%s}" % _render_inline_code(token.content))
+        elif kind == "strong_open":
+            output.append(r"\textbf{")
+        elif kind == "strong_close":
+            output.append("}")
+        elif kind == "em_open":
+            output.append(r"\emph{")
+        elif kind == "em_close":
+            output.append("}")
+        elif kind == "s_open":
+            output.append(r"\textcolor{gray}{")
+        elif kind == "s_close":
+            output.append("}")
+        elif kind == "link_open":
+            target = token.attrGet("href") or ""
+            if link_resolver is not None:
+                target = link_resolver(target)
+            output.append(r"\href{%s}{" % _escape_url(target))
+        elif kind == "link_close":
+            output.append("}")
+        elif kind == "softbreak":
+            output.append(" ")
+        elif kind == "hardbreak":
+            output.append("\\\\\n")
+        elif kind == "image":
+            raise GenerationError("images are not supported")
+        elif kind == "html_inline":
+            if not PURE_COMMENT_RE.fullmatch(token.content):
+                raise GenerationError("raw inline HTML is not supported")
+            if output:
+                output[-1] = output[-1].rstrip(" \t")
+        else:
+            raise GenerationError("unhandled inline token: %s" % kind)
+    return "".join(output)
+
+
+def _column_spec(count):
+    width = max(0.06, min(0.47, 0.94 / max(count, 1)))
+    return "@{}" + "".join("p{%.3f\\linewidth}" % width for _ in range(count)) + "@{}"
+
+
+def table_requires_breakable_rows(
+    data_rows,
+    total_rendered_characters,
+    max_row_rendered_characters,
+    columns,
+):
+    """Return whether a table needs normal-flow, page-breakable row blocks."""
+    return data_rows > 0 and (
+        data_rows >= LONG_TABLE_ROW_THRESHOLD
+        or total_rendered_characters >= LONG_TABLE_TOTAL_CONTENT_THRESHOLD
+        or max_row_rendered_characters >= LONG_TABLE_MAX_ROW_CONTENT_THRESHOLD
+        or columns >= BREAKABLE_TABLE_COLUMN_THRESHOLD
+    )
+
+
+def _table_shape(table):
+    row_lengths = [len(table["header"])] + [
+        len(row) for row in table["rows"]
+    ]
+    columns = max(row_lengths or [1])
+    rows = [
+        row + [""] * (columns - len(row))
+        for row in table["rows"]
+    ]
+    row_rendered_characters = [
+        sum(len(cell) for cell in row)
+        for row in rows
+    ]
+    total_rendered_characters = sum(
+        len(cell)
+        for row in [table["header"], *rows]
+        for cell in row
+    )
+    return (
+        columns,
+        rows,
+        total_rendered_characters,
+        max(row_rendered_characters, default=0),
+    )
+
+
+def _render_standard_table(table, columns, rows):
+    output = [
+        "\n\\begin{center}\n\\begin{tabular}{%s}\n\\toprule\n"
+        % _column_spec(columns)
+    ]
+    if table["header"]:
+        output.append(
+            " & ".join(r"\textbf{%s}" % cell for cell in table["header"])
+            + " \\\\\n\\midrule\n"
+        )
+    for row in rows:
+        output.append(" & ".join(row) + " \\\\\n")
+    output.append("\\bottomrule\n\\end{tabular}\n\\end{center}\n")
+    return "".join(output)
+
+
+def _normal_flow_header_label(header, column_index):
+    label = header if header else "Column %d" % (column_index + 1)
+    if label.startswith(r"\textbf{") and label.endswith("}"):
+        label = label[len(r"\textbf{") : -1]
+    return r"\textbf{%s}:" % label
+
+
+def _render_breakable_table(
+    table,
+    columns,
+    rows,
+    total_rendered_characters,
+    max_row_rendered_characters,
+):
+    headers = table["header"] + [""] * (columns - len(table["header"]))
+    output = [
+        (
+            "\n%% breakable-row-table: data-rows=%d "
+            "total-rendered-characters=%d max-row-rendered-characters=%d\n"
+        )
+        % (
+            len(rows),
+            total_rendered_characters,
+            max_row_rendered_characters,
+        ),
+        "\\par\\medskip\n",
+        "\\hrule height 0.8pt\n",
+        "\\smallskip\n",
+    ]
+    for row_index, row in enumerate(rows):
+        output.append(
+            "%% breakable-row: %d/%d\n" % (row_index + 1, len(rows))
+        )
+        for column_index, cell in enumerate(row):
+            output.append(
+                "\\noindent%s %s\\par\n"
+                % (
+                    _normal_flow_header_label(
+                        headers[column_index],
+                        column_index,
+                    ),
+                    cell,
+                )
+            )
+        if row_index != len(rows) - 1:
+            output.extend(
+                [
+                    "\\smallskip\n",
+                    "\\hrule height 0.4pt\n",
+                    "\\smallskip\n",
+                ]
+            )
+    output.extend(
+        [
+            "\\smallskip\n",
+            "\\hrule height 0.8pt\n",
+            "\\par\\medskip\n",
+        ]
+    )
+    return "".join(output)
+
+
+def _render_table(table):
+    (
+        columns,
+        rows,
+        total_rendered_characters,
+        max_row_rendered_characters,
+    ) = _table_shape(table)
+    if table_requires_breakable_rows(
+        len(rows),
+        total_rendered_characters,
+        max_row_rendered_characters,
+        columns,
+    ):
+        return _render_breakable_table(
+            table,
+            columns,
+            rows,
+            total_rendered_characters,
+            max_row_rendered_characters,
+        )
+    return _render_standard_table(table, columns, rows)
+
+
+def render_markdown(markdown, source_name="<memory>", root=None):
+    """Render bounded CommonMark, tables, code, links, and canonical math."""
+    try:
+        protected, math = _protect_math(markdown)
+        tokens = MarkdownIt("commonmark").enable("table").enable("strikethrough").parse(
+            protected
+        )
+    except GenerationError:
+        raise
+    except Exception as exc:
+        raise GenerationError("%s: Markdown parse failed: %s" % (source_name, exc)) from exc
+
+    output = []
+    link_resolver = (
+        (
+            lambda target: resolve_publication_link(
+                target,
+                source_name=source_name,
+                root=root,
+            )
+        )
+        if root is not None
+        else None
+    )
+    index = 0
+    list_stack = []
+    table = None
+    technical_appendix_active = False
+    while index < len(tokens):
+        token = tokens[index]
+        kind = token.type
+        if kind == "heading_open":
+            inline = tokens[index + 1]
+            heading_text = inline.content.strip()
+            level = int(token.tag[1])
+            if level == 2 and technical_appendix_active:
+                output.append("\n\\twocolumn\n")
+                technical_appendix_active = False
+            if level == 2 and re.search(r"\bappendix\b", heading_text, re.I):
+                output.append("\n\\onecolumn\n")
+                technical_appendix_active = True
+            command = {
+                1: "part*",
+                2: "section*",
+                3: "subsection*",
+                4: "subsubsection*",
+                5: "paragraph",
+                6: "subparagraph",
+            }[level]
+            rendered_heading = _render_inline(
+                inline.children or [],
+                math,
+                link_resolver=link_resolver,
+            )
+            output.append(
+                "\n\\%s{%s}\n"
+                % (command, rendered_heading)
+            )
+            index += 3
+            continue
+        if kind == "paragraph_open":
+            inline = tokens[index + 1]
+            body = _render_inline(
+                inline.children or [],
+                math,
+                link_resolver=link_resolver,
+            )
+            output.append(body + ("\n" if list_stack else "\n\n"))
+            index += 3
+            continue
+        if kind == "blockquote_open":
+            output.append("\n\\begin{quote}\n")
+            index += 1
+            continue
+        if kind == "blockquote_close":
+            output.append("\\end{quote}\n")
+            index += 1
+            continue
+        if kind in ("bullet_list_open", "ordered_list_open"):
+            environment = "itemize" if kind == "bullet_list_open" else "enumerate"
+            list_stack.append(environment)
+            output.append("\n\\begin{%s}\n" % environment)
+            index += 1
+            continue
+        if kind in ("bullet_list_close", "ordered_list_close"):
+            environment = list_stack.pop()
+            output.append("\\end{%s}\n" % environment)
+            index += 1
+            continue
+        if kind == "list_item_open":
+            output.append("\\item ")
+            index += 1
+            continue
+        if kind == "list_item_close":
+            output.append("\n")
+            index += 1
+            continue
+        if kind in ("fence", "code_block"):
+            info = (getattr(token, "info", "") or "").strip()
+            content = token.content.rstrip("\n")
+            if info == "math":
+                try:
+                    translate_display(content)
+                except MathConvertError as exc:
+                    raise GenerationError(
+                        "%s: math fence translation failed: %s" % (source_name, exc)
+                    ) from exc
+                output.append(_render_display_math(content))
+            else:
+                if r"\end{verbatim}" in content:
+                    raise GenerationError("code block contains an unsafe verbatim terminator")
+                output.append("\n\\begin{verbatim}\n%s\n\\end{verbatim}\n" % content)
+            index += 1
+            continue
+        if kind == "hr":
+            output.append("\n\\bigskip\\hrule\\bigskip\n")
+            index += 1
+            continue
+        if kind == "table_open":
+            table = {"header": [], "rows": []}
+            index += 1
+            continue
+        if kind in ("thead_open", "tbody_open"):
+            index += 1
+            continue
+        if kind == "tr_open":
+            table["current"] = []
+            index += 1
+            continue
+        if kind in ("th_open", "td_open"):
+            inline = tokens[index + 1]
+            cell = (
+                _render_inline(
+                    inline.children or [],
+                    math,
+                    link_resolver=link_resolver,
+                )
+                if inline.type == "inline"
+                else ""
+            )
+            table["current"].append((kind == "th_open", cell))
+            index += 3
+            continue
+        if kind == "tr_close":
+            row = table.pop("current")
+            if row and all(is_header for is_header, _ in row):
+                table["header"] = [cell for _, cell in row]
+            else:
+                table["rows"].append([cell for _, cell in row])
+            index += 1
+            continue
+        if kind in ("thead_close", "tbody_close"):
+            index += 1
+            continue
+        if kind == "table_close":
+            output.append(_render_table(table))
+            table = None
+            index += 1
+            continue
+        if kind == "html_block":
+            if not PURE_COMMENT_RE.fullmatch(token.content):
+                raise GenerationError("raw HTML block is not supported")
+            index += 1
+            continue
+        raise GenerationError("%s: unhandled block token: %s" % (source_name, kind))
+    return "".join(output)
+
+
+def _split_primary_source(markdown):
+    lines = markdown.splitlines(keepends=True)
+    title_index = next(
+        (index for index, line in enumerate(lines) if line.startswith("# ")),
+        None,
+    )
+    if title_index is None:
+        raise GenerationError("publication source lacks a level-one title")
+    title = lines[title_index][2:].strip()
+    remainder = lines[title_index + 1 :]
+    h2_indices = [
+        index for index, line in enumerate(remainder) if line.startswith("## ")
+    ]
+    if not h2_indices:
+        return title, "".join(remainder), ""
+    first_h2 = h2_indices[0]
+    if remainder[first_h2].strip().casefold() == "## abstract":
+        next_h2 = next(
+            (index for index in h2_indices if index > first_h2),
+            len(remainder),
+        )
+        return title, "".join(remainder[:next_h2]), "".join(remainder[next_h2:])
+    return title, "".join(remainder[:first_h2]), "".join(remainder[first_h2:])
+
+
+def _source_comment(path, text):
+    digest = hashlib.sha256(text.encode("utf-8")).hexdigest()
+    return "%% source: %s\n%% source-sha256: %s\n" % (path, digest)
+
+
+EXPECTED_DIRECT_PACKAGES = [
+    "amsmath",
+    "amssymb",
+    "booktabs",
+    "geometry",
+    "hyperref",
+    "microtype",
+    "natbib",
+    "xcolor",
+]
+EXPECTED_SUPPORTED_PACKAGES = EXPECTED_DIRECT_PACKAGES + ["fvextra"]
+
+
+def render_artifact(profile, artifact, source_texts, *, root=None):
+    """Render one profile artifact from its declared Markdown source owners."""
+    source_paths = artifact.get("sources", [])
+    if not source_paths:
+        raise GenerationError("artifact has no source owner")
+    if artifact.get("bibliography_owner") != profile.get("source_ownership", {}).get(
+        "bibliography_owner"
+    ):
+        raise GenerationError("artifact bibliography owner conflicts with profile")
+    missing = [path for path in source_paths if path not in source_texts]
+    if missing:
+        raise GenerationError("missing source owner: %s" % missing)
+    title, front_matter, body = _split_primary_source(source_texts[source_paths[0]])
+    layout = profile.get("layout", {})
+    if layout != {
+        "document_class": "article",
+        "font_size_pt": 10,
+        "paper_size": "us-letter",
+        "body_columns": 2,
+        "references_columns": 2,
+        "front_matter": "full-width-title-and-abstract",
+        "technical_appendices": "single-column",
+    }:
+        raise GenerationError("publication layout diverges from the approved profile")
+
+    comments = ["% GENERATED FILE — DO NOT EDIT; authoritative prose is Markdown.\n"]
+    for path in source_paths:
+        comments.append(_source_comment(path, source_texts[path]))
+    for qualification in artifact.get("source_qualifications", []):
+        comments.append("%% source-qualification: %s\n" % qualification)
+
+    package_policy = profile.get("package_policy", {})
+    packages = package_policy.get("direct_packages")
+    if packages != EXPECTED_DIRECT_PACKAGES:
+        raise GenerationError(
+            "direct package policy must be the exact ordered main set"
+        )
+    if package_policy.get("supported_packages") != EXPECTED_SUPPORTED_PACKAGES:
+        raise GenerationError(
+            "supported package policy must be direct packages plus fvextra"
+        )
+    package_lines = ["\\usepackage{%s}\n" % package for package in packages]
+    preamble = [
+        *comments,
+        "\\documentclass[10pt,letterpaper,twocolumn]{article}\n",
+        *package_lines,
+        "\\geometry{letterpaper,margin=0.75in}\n",
+        "\\hypersetup{colorlinks=true,linkcolor=blue,urlcolor=blue,citecolor=blue}\n",
+        "\\setlength{\\emergencystretch}{3em}\n",
+        "\\title{%s}\n" % _escape_text(title),
+        "\\author{}\n",
+        "\\date{}\n",
+        "\\begin{document}\n",
+        "\\twocolumn[\n",
+        "\\maketitle\n",
+        render_markdown(
+            front_matter,
+            source_name=source_paths[0],
+            root=root,
+        ),
+        "\\vspace{1em}\n",
+        "]\n",
+        render_markdown(
+            body,
+            source_name=source_paths[0],
+            root=root,
+        ),
+    ]
+    for path in source_paths[1:]:
+        preamble.append(
+            render_markdown(
+                source_texts[path],
+                source_name=path,
+                root=root,
+            )
+        )
+
+    bibliography = artifact["bibliography_owner"]
+    if pathlib.PurePosixPath(bibliography).is_absolute() or re.match(
+        r"^[A-Za-z]:", bibliography
+    ):
+        raise GenerationError("absolute bibliography path is prohibited")
+    bibliography_stem = "../../../" + bibliography.removesuffix(".bib")
+    preamble.extend(
+        [
+            "\n\\twocolumn\n",
+            "\\bibliographystyle{plainnat}\n",
+            "\\bibliography{%s}\n" % bibliography_stem,
+            "\\end{document}\n",
+        ]
+    )
+    return "".join(preamble).replace("\r\n", "\n")
+
+
+def expected_latex_tree(root, profile=None, artifacts=None):
+    root = pathlib.Path(root)
+    if (root / ".git").exists():
+        validate_inline_code_path_declarations(root)
+    if profile is None:
+        profile = yaml.safe_load((root / PROFILE_PATH).read_text(encoding="utf-8"))
+    if artifacts is None:
+        artifacts = profile.get("artifacts", [])
+    source_paths = {
+        source
+        for artifact in artifacts
+        for source in artifact.get("sources", [])
+    }
+    source_texts = {
+        source: (root / source).read_text(encoding="utf-8")
+        for source in sorted(source_paths)
+    }
+    tree = {}
+    for artifact in artifacts:
+        artifact_id = artifact["artifact_id"]
+        tree["%s/main.tex" % artifact_id] = render_artifact(
+            profile,
+            artifact,
+            source_texts,
+            root=root,
+        )
+    return tree
+
+
+def write_latex_tree(output, tree):
+    output = pathlib.Path(output)
+    for relative, content in sorted(tree.items()):
+        target = output / pathlib.PurePosixPath(relative)
+        target.parent.mkdir(parents=True, exist_ok=True)
+        target.write_text(content, encoding="utf-8", newline="\n")
+
+
+def tree_drift(output, tree):
+    output = pathlib.Path(output)
+    issues = []
+    expected_paths = set(tree)
+    actual_paths = {
+        path.relative_to(output).as_posix()
+        for path in output.rglob("*")
+        if path.is_file()
+    } if output.is_dir() else set()
+    for relative in sorted(expected_paths - actual_paths):
+        issues.append("missing generated LaTeX: %s" % relative)
+    for relative in sorted(actual_paths - expected_paths):
+        issues.append("unexpected generated file: %s" % relative)
+    for relative in sorted(expected_paths & actual_paths):
+        actual = (output / pathlib.PurePosixPath(relative)).read_text(encoding="utf-8")
+        if actual != tree[relative]:
+            issues.append("generated LaTeX drift: %s" % relative)
+    return issues
+
+
+def main(argv=None):
+    parser = argparse.ArgumentParser()
+    parser.add_argument("--root", type=pathlib.Path, default=ROOT)
+    parser.add_argument("--check", action="store_true")
+    args = parser.parse_args(argv)
+    profile = yaml.safe_load((args.root / PROFILE_PATH).read_text(encoding="utf-8"))
+    tree = expected_latex_tree(args.root, profile)
+    output = args.root / OUTPUT_PATH
+    if args.check:
+        issues = tree_drift(output, tree)
+        for issue in issues:
+            print("[FAIL] %s" % issue)
+        if not issues:
+            print("[PASS] generated LaTeX tree matches authoritative sources")
+        print("TOTAL: %d failures" % len(issues))
+        return 1 if issues else 0
+    write_latex_tree(output, tree)
+    for relative, content in sorted(tree.items()):
+        digest = hashlib.sha256(content.encode("utf-8")).hexdigest()
+        print("[WRITE] %s %s" % (relative, digest))
+    return 0
+
+
+if __name__ == "__main__":
+    sys.exit(main())

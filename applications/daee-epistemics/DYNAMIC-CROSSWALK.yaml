@@ -1,0 +1,73 @@
+schema: orthemology-daee-dynamic-crosswalk-v1
+# R7B, Decision 0025. The represented-standard bearer, carrier roles, the
+# ecology, and the memetic modes. daee statements pinned to the reviewed commit.
+# status: direct (daee says it) / crosswalk (this project's typed reading) /
+# creed-internal (a claim the daee analysis presupposes). No empirical or
+# theological claim; asserts no soul access.
+daee_pinned_commit: c86b3c6673147b8802fe222373a165a37d4d24a8
+bearers:
+- name: mu
+  gloss: repeatable metaortheme type (normative standard)
+  status: crosswalk
+  non_claims: [the type is not any one actor's version and not a case binding]
+- name: mu-tilde_{alpha,t}
+  gloss: actor/institution alpha's represented, adopted, or embodied version of a governing standard at time t
+  status: crosswalk
+  daee_basis: "meta-noetic memetics: governing rules form, stabilize, mutate, reproduce, propagate [direct: README.md; pattern-profiling.md]"
+  non_claims: [a represented standard is not the actor's whole noetic profile, not ground truth, and asserts nothing about motive or soul-state]
+- name: mu-bar_{e,j}
+  gloss: episode-local case-bound metaorthemma (configuration token)
+  status: crosswalk
+  non_claims: [episode-local; does not persist across episodes as itself]
+- name: execution
+  gloss: the application/execution trace in an episode
+  status: crosswalk
+  non_claims: [what was done is not the standard, the represented version, or the case binding]
+distinctness: "mu != mu-tilde_{alpha,t} != mu-bar_{e,j} != execution"
+carrier_roles:
+  note: "one artifact (slogan/passage/proof-packet/norm) may occupy several roles under different analyses, never one object"
+  roles:
+  - concrete-carrier-token (orthemma)
+  - semantic-orthemes
+  - carrier-of-represented-standard (mu-tilde)
+  - metaortheme-instance (mu)
+  - case-bound-metaorthemma (mu-bar)
+  - episode-execution
+three_histories:
+  note: "these are three different histories; conflating them is the core error meta-noetic memetics exposes"
+  histories:
+  - metaortheme-type-mu
+  - represented-versions-mu-tilde
+  - case-bound-tokens-mu-bar
+ecology:
+  symbol: "Gamma^mu_t = (V^mu_t, E^mu_t)"
+  status: crosswalk (application-level extension; NOT a school-neutral primitive)
+  nodes: [actors, institutions, artifacts, represented-standards, metaortheme-types]
+  edges: [transmission, citation-inheritance, compression, mutation, reinforcement, rebuttal, replacement, episode-application]
+memetic_modes:
+  note: "operational modes daee's pattern-profiling names [direct: pattern-profiling.md]; typed here as ecology/carrier operations"
+  modes:
+  - id: MM1
+    name: loaded-label carrier audit
+    fixture: N12
+  - id: MM2
+    name: proof-packet reconstruction
+  - id: MM3
+    name: mutation after challenge
+    fixture: N12
+  - id: MM4
+    name: source-dependency / collapse-radius mapping
+    fixture: N14
+  - id: MM5
+    name: false tawatur / source copying
+    fixture: N14
+  - id: MM6
+    name: criterion capture
+    fixture: N17
+  - id: MM7
+    name: restoration of a misrepresented standard
+    fixture: N15
+non_claims:
+- no memetic mode asserts any actor's motive, culpability, or soul-state
+- the ecology models transmission/mutation of represented standards, not interior states
+- this is an application-level extension; it validates neither daee nor Orthemology

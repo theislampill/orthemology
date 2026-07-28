@@ -1,0 +1,87 @@
+{
+  "record": "AUTONOMOUS-R7B-STATE",
+  "label": "OPUS CANDIDATE — REQUIRES FRESH FABLE REVIEW BEFORE MERGE",
+  "controlling_instruction": "opus-r7b-pr8-deep-noetic-latent-math-candidate-prompt.md",
+  "independent_finding_set": "orthemology-pr8-deep-dynamics-and-typesetting-independent-audit.md",
+  "model_provenance": {
+    "requested_model_for_this_pass": "Opus 4.8",
+    "surfaced_model_at_this_write": "claude-opus-4-8",
+    "substitution_this_pass": false,
+    "note": "R7B was requested AS Opus 4.8; the surfaced identity matches the request. Unlike R7 (Fable requested, Opus substituted), there is no substitution here. This remains a CANDIDATE pass with no self-sign-off and no merge authority."
+  },
+  "authority_boundary": {
+    "may": ["create child branch", "open ONE draft child PR into the PR #8 branch", "commit to the child branch", "run deterministic offline validators and smoke tests"],
+    "must_not": ["merge any PR", "push to main", "mark any PR ready for merge", "force-push", "rewrite shared history", "issue final/independent sign-off", "run an empirical study", "make a live provider call", "adopt terminology", "make theological/soul-state claims"]
+  },
+  "heads": {
+    "live_main": "43fee0f519e2f6984fb143c1e621c83382e71ec7",
+    "pr8_head_verified_live": "b0538601913c8234511a1f1131a58eb23a4a0dc4",
+    "child_branch": "candidate/r7b-deep-noetic-latent-math",
+    "child_branch_base": "b0538601913c8234511a1f1131a58eb23a4a0dc4",
+    "child_head": "TBD-after-first-commit"
+  },
+  "input_archive": {
+    "name": "orthemology-closure-r7-noetic-application-experiment-validity.zip",
+    "expected_sha256": "d2d98f5277dcea46906d84912bd012ddd190cf5d2a11b39b5f7a944af2adc6cb",
+    "note": "archive is a convenience snapshot; the local working tree at b053860 was verified equal to live PR #8 head and is the source of truth for edits"
+  },
+  "pinned_daee_commit": "c86b3c6673147b8802fe222373a165a37d4d24a8",
+  "osm_source": "opendataloader-output/s41586-024-08548-w.md (Sun et al., Nature 2025, OSM/CSCG) — used for reported abstract computational structure only; no biological/wet-lab procedure, no human/metaphysical transfer",
+  "environment": {
+    "python": "3.11.9",
+    "typst_python_package": "0.15.0 (present; drives current PDF build via scripts/md_to_typst.py + build_pdfs.py)",
+    "pandoc_binary": "NOT on PATH at session start (gates audit's leading P2 pipeline until provisioned/pinned)",
+    "typst_binary": "NOT on PATH (current build does not need it; uses the typst PyPI package)"
+  },
+  "phase_log": [
+    {
+      "phase": "0 + A (read-only reproduction)",
+      "status": "complete",
+      "baseline_suite": "40/40 green from clean checkout (validate.yml faithfully mirrored); PDFs byte-identical; manifest matches",
+      "artifacts": [
+        "docs/project-closure/r7b/AUTONOMOUS-R7B-STATE.json",
+        "docs/project-closure/r7b/R7B-PDF-MATH-BASELINE.md",
+        "docs/project-closure/r7b/R7B-READONLY-REPRODUCTION.md"
+      ],
+      "result": "audit A2.1-A2.7 and sections 2-6 reproduced against primary sources (daee pin c86b3c66, OSM Nature source); none refuted; OSM narrowed to 'external exemplification and constraint'."
+    },
+    {
+      "phase": "B + C (math source/typesetting pipeline, Decision 0023)",
+      "status": "complete (pipeline + gallery + validators); corpus in-place migration DEFERRED to reviewed continuation",
+      "suite": "43/43 green (added math_source, math_pipeline_tests, pdf_math); 4 corpus PDFs byte-identical; gallery byte-reproducible",
+      "decision": "P1 adopted (in-repo strict LaTeX-subset -> Typst-math translator, zero new deps); P2 (pinned Pandoc) recorded as merged-CI target — pandoc not deterministically provisionable here",
+      "defect_status": "publication-blocking notdef FIXED and proven: notation gallery renders vec-mu/vec-C and every registry symbol with ZERO notdef; corpus known notdef pinned (core 26, ms 6) and tracked by validate_pdf_math",
+      "child_head_after_phase": "725ca8c",
+      "next_action": "Phase D dynamic-orthing/latent-state learning (Decision 0024)"
+    },
+    {
+      "phase": "D + E + F (dynamic orthing; meta-noetic memetics; descent adjudication)",
+      "status": "complete",
+      "decisions": ["0024 dynamic orthing / representation learning", "0025 meta-noetic memetics + sound corrective dynamics"],
+      "added": "applications/latent-state-orthing/* (DYN-1..DYN-9, validate_dynamic_orthing.py); applications/daee-epistemics/{META-NOETIC-MEMETICS,SOUND-DESCENT,DYNAMIC-CROSSWALK,NOETIC-FIELD-DYNAMICS}; fixtures N11-N20; validate_meta_noetic_memetics.py",
+      "key_results": "mu-tilde represented-standard bearer + carrier roles + Gamma-mu ecology + three histories; four update levels separated; ortheme admission by ablation; OSM = exemplification not validation; gradient adjudicated G0/G1/G2 -> G1 adopted (daee bounds nabla to a ranking functional); anti-gaming lexicographic burden order; fitrah bounded creed-internal. All math via Decision 0023 pipeline (translates + compiles, zero notdef).",
+      "child_head_after_phase": "daaf87b"
+    },
+    {
+      "phase": "G + H (epistemology/metaphysics placement; project layer map)",
+      "status": "complete",
+      "added": "companion/dynamic-orthing-noetic-learning-and-orthability.md (dynamic orthability candidate; 8-rung ladder; anti-reification; Taymiyyan scholarship as SECONDARY only); docs/architecture/ORTHEMOLOGY-LAYER-MAP.{md,yaml} + validate_layer_map.py; bounded cross-refs in manuscript + neutral companion (PDFs rebuilt, notdef pinned 6/0 unchanged)",
+      "child_head_after_phase": "3b41627"
+    },
+    {
+      "phase": "I + J (regression; adversarial)",
+      "status": "complete",
+      "regression": "FCSP-2, ER-2, terminology, schemas, all validators re-ran green; no empirical run; no live provider call",
+      "adversarial": "7 mechanical injection attacks all HELD (combining-accent, soul-state, gradient-G2, false-progress, notdef-pin, firewall, OSM-as-validation); 12/12 audits held; 0 weaknesses this pass; docs/project-closure/r7b/reviews/ADVERSARIAL-REVIEWS.md",
+      "suite": "46/46 green; 5 PDFs byte-identical on rebuild; manifest matches; tree clean"
+    }
+  ],
+  "child_head": "1bd90b7c300efb890a517ea8161d20f6cd89c560",
+  "child_head_note": "head of the substantive R7B work; the state-finalize commit that adds this pointer is +1 and changes nothing else",
+  "child_pr": 9,
+  "child_pr_url": "https://github.com/theislampill/orthemology/pull/9",
+  "child_pr_base": "closure/r7-noetic-application-experiment-validity (the PR #8 branch, NOT main)",
+  "merged": false,
+  "next_action": "AWAIT fresh-Fable / owner review of PR #9 (every hunk + math + boundaries), then the protected merges (child -> PR #8 -> main). This Opus session performs NO merge and NO main push.",
+  "no_merge_statement": "This child branch is an Opus CANDIDATE. It has not been merged into PR #8 or main. A fresh Fable session must review every hunk, verify the mathematics and conceptual boundaries, and perform the protected merges."
+}

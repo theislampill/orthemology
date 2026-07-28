@@ -12,7 +12,7 @@ Every load-bearing related-work or scholarly claim needs a row in the current so
 
 ## No empirical overclaiming
 
-Nothing in this repository reports a run experiment. The three designed studies (manuscript §13) and the terminology packets are READY TO RUN, NOT RUN. Words like "validated", "shown", "demonstrated" are reserved for deterministic consistency results and must say so.
+Nothing in this repository reports a run experiment. The designed studies stand at their canonical [`experiments/experiment-status.yaml`](experiments/experiment-status.yaml) states (FCSP-2/ER-2 `READY_TO_RUN`; terminology Pilot-0 v2 `READY_FOR_HUMAN_MATCHING_REVIEW`; Pilot 1 / confirmatory templates `DRAFT`) — none run, none externally registered, no term adopted. Do not write a scalar "everything is READY TO RUN" claim when the packet states differ. Words like "validated", "shown", "demonstrated" are reserved for bounded conformance results (internally conformance-checked over the declared schemas, examples, fixtures, and adversarial operators) and must say so.
 
 ## Decision-record policy
 

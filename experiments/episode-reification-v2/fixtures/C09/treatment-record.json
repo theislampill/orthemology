@@ -1,0 +1,79 @@
+{
+  "schema": "orthemology-er2-treatment-record-v1",
+  "case": "C09",
+  "note": "structured rendering of the identical fact atoms; links relate records, they do not conclude",
+  "sections": {
+    "identity": [
+      {
+        "fact_id": "F01",
+        "text": "Case subject: valve assembly VA-233, version v1, under acceptance check."
+      },
+      {
+        "fact_id": "F02",
+        "text": "The case was opened on 2026-05-17."
+      }
+    ],
+    "evidence": [
+      {
+        "fact_id": "F04",
+        "text": "Survey E-3 was taken on 2026-05-18 with a calibrated instrument and full step-log compliance."
+      }
+    ],
+    "procedure": [
+      {
+        "fact_id": "F03",
+        "text": "The declared method resolves offsets to 5 cm; its recorded reference-class error rate is within the accepted band."
+      }
+    ],
+    "result": [
+      {
+        "fact_id": "F05",
+        "text": "The review concluded CONFORMS."
+      }
+    ],
+    "obligations": [
+      {
+        "fact_id": "F07",
+        "text": "The draft completion statement closes the review on the method's result."
+      }
+    ],
+    "other": [
+      {
+        "fact_id": "F06",
+        "text": "A later audit at 1 cm resolution, dated 2026-06-17, recorded a 3 cm offset."
+      }
+    ]
+  },
+  "links": [
+    {
+      "from": "F02",
+      "relation": "same-case",
+      "to": "F01"
+    },
+    {
+      "from": "F03",
+      "relation": "same-case",
+      "to": "F01"
+    },
+    {
+      "from": "F04",
+      "relation": "same-case",
+      "to": "F01"
+    },
+    {
+      "from": "F05",
+      "relation": "same-case",
+      "to": "F01"
+    },
+    {
+      "from": "F06",
+      "relation": "same-case",
+      "to": "F01"
+    },
+    {
+      "from": "F07",
+      "relation": "same-case",
+      "to": "F01"
+    }
+  ]
+}

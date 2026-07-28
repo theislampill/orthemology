@@ -31,14 +31,28 @@ exists to replace.
 """
 import argparse
 import copy
+import hashlib
 import json
 import os
+import pathlib
+import subprocess
 import sys
 
+import yaml
+
+ROOT = os.path.dirname(os.path.dirname(os.path.abspath(__file__)))
+if ROOT not in sys.path:
+    sys.path.insert(0, ROOT)
+
+try:
+    from scripts.task14_probe_registry import load_registry
+    from scripts.task14_direct_probes import execute_direct_probe
+except ModuleNotFoundError:
+    from task14_probe_registry import load_registry
+    from task14_direct_probes import execute_direct_probe
 from jsonschema import Draft202012Validator
 from referencing import Registry, Resource
 
-ROOT = os.path.dirname(os.path.dirname(os.path.abspath(__file__)))
 sys.path.insert(0, os.path.join(ROOT, "scripts"))
 from validate_cross_record_semantics import collect_issues, aggregate  # noqa: E402
 
@@ -102,6 +116,701 @@ FAMILIES = [
 ]
 
 MUTANT_MARK = "MUTANT-NO-SUCH-ID"
+TASK14_PLAN = (
+    "docs/superpowers/plans/2026-07-21-r7e-sol-independent-repair.md"
+)
+TASK14_LEDGER = (
+    "docs/project-closure/r7e-sol/AR6_TO_TASKS_10_16_IMPACT_LEDGER.yaml"
+)
+TASK14_REPORT = (
+    "docs/project-closure/r7e-sol/R7E-SOL-ADVERSARIAL-REPORT.md"
+)
+TASK14_PROBE = "scripts/run_task14_probe.py"
+TASK14_OBSERVATION_SCHEMA = "orthemology-task14-observation-v1"
+
+
+def _task14_plan_names(root):
+    plan = pathlib.Path(root) / TASK14_PLAN
+    prefix = "**Step 1:** Make every mandatory attack durable:"
+    lines = plan.read_text(encoding="utf-8").splitlines()
+    matching = [line for line in lines if line.startswith(prefix)]
+    if len(matching) != 1:
+        raise ValueError("authoritative plan must contain one Task 14 Step 1 inventory")
+    names = matching[0].split("durable: ", 1)[1].rstrip(".").split("; ")
+    names[-1] = names[-1].removeprefix("and ")
+    return names
+
+
+def load_task14_ar6_rows(root):
+    ledger_path = pathlib.Path(root) / TASK14_LEDGER
+    ledger = yaml.safe_load(ledger_path.read_text(encoding="utf-8"))
+    entries = ledger.get("entries", []) if isinstance(ledger, dict) else []
+    return [
+        row for row in entries
+        if isinstance(row, dict) and row.get("closest_tracked_task") == "Task 14"
+    ]
+
+
+def load_task14_probe_registry(root):
+    """Load the independently digest-anchored 77-variant registry."""
+    return load_registry(pathlib.Path(root))
+
+
+def expected_task14_observation(binding, role, root):
+    """Return every identity field a direct observation must match exactly."""
+    if role not in {"control", "mutation"}:
+        raise ValueError("Task 14 observation role is invalid")
+    entry_point = pathlib.Path(root) / binding.validator_entry_point
+    return {
+        "attack_id": binding.attack_id,
+        "variant_id": binding.variant_id,
+        "mutation_id": binding.mutation_id,
+        "role": role,
+        "evidence_selector": getattr(binding, role + "_evidence_selector"),
+        "validator_owner": binding.validator_owner,
+        "validator_entry_point": binding.validator_entry_point,
+        "validator_sha256": hashlib.sha256(entry_point.read_bytes()).hexdigest(),
+    }
+
+
+def task14_observation_id(expected, outcome, input_sha256):
+    canonical = json.dumps(
+        {
+            **expected,
+            "observed_validator_outcome": outcome,
+            "input_sha256": input_sha256,
+        },
+        sort_keys=True,
+        separators=(",", ":"),
+    ).encode("utf-8")
+    return hashlib.sha256(canonical).hexdigest()
+
+
+def audit_task14_spec(spec, root):
+    """Return deterministic issues in the authoritative Task 14 inventory."""
+    issues = []
+    attacks = spec.get("mandatory_attacks")
+    if not isinstance(attacks, list):
+        return ["mandatory_attacks must be a list"]
+    try:
+        plan_names = _task14_plan_names(root)
+    except (OSError, ValueError) as exc:
+        return [str(exc)]
+    observed_names = [
+        row.get("name") if isinstance(row, dict) else None for row in attacks
+    ]
+    if observed_names != plan_names:
+        issues.append("plan attack inventory differs from the authoritative Step 1 order")
+
+    try:
+        registry = load_task14_probe_registry(root)
+    except (OSError, ValueError, KeyError, TypeError, json.JSONDecodeError) as exc:
+        return ["Task 14 closed probe registry mismatch: %s" % exc]
+
+    attack_ids = []
+    mutation_ids = []
+    variant_ids = []
+    for index, row in enumerate(attacks, 1):
+        expected_id = "R7E-T14-A%02d" % index
+        if not isinstance(row, dict):
+            issues.append("%s must be an object" % expected_id)
+            continue
+        attack_id = row.get("attack_id")
+        attack_ids.append(attack_id)
+        if attack_id != expected_id:
+            issues.append("attack %d ID must be %s" % (index, expected_id))
+        if "coverage_kind" in row or "coverage" in row or "command" in row:
+            issues.append(
+                "%s must not use an arbitrary coverage label or shared command"
+                % expected_id
+            )
+        for field in ("invariant", "owner"):
+            value = row.get(field)
+            if not isinstance(value, str) or not value.strip():
+                issues.append("%s has no %s" % (expected_id, field))
+        variants = row.get("variants")
+        if not isinstance(variants, list) or not variants:
+            issues.append("%s has no explicit control/mutation variants" % expected_id)
+            continue
+        for variant_index, variant in enumerate(variants, 1):
+            expected_variant_id = "%s-V%02d" % (expected_id, variant_index)
+            expected_mutation_id = "%s-M%02d" % (expected_id, variant_index)
+            if not isinstance(variant, dict):
+                issues.append("%s variant %d must be an object" % (expected_id, variant_index))
+                continue
+            variant_id = variant.get("variant_id")
+            mutation_id = variant.get("mutation_id")
+            variant_ids.append(variant_id)
+            mutation_ids.append(mutation_id)
+            if variant_id != expected_variant_id or mutation_id != expected_mutation_id:
+                issues.append("%s variant command identity mismatch" % expected_id)
+            if variant.get("validator_owner") != row.get("owner"):
+                issues.append(
+                    "%s %s validator owner differs from attack owner"
+                    % (expected_id, variant_id)
+                )
+            binding = registry.get((expected_id, expected_variant_id))
+            if binding is None:
+                issues.append(
+                    "%s %s has no closed probe-registry binding"
+                    % (expected_id, expected_variant_id)
+                )
+            else:
+                expected_registry_fields = {
+                    "mutation_id": binding.mutation_id,
+                    "validator_owner": binding.validator_owner,
+                    "validator_entry_point": binding.validator_entry_point,
+                    "control_evidence_selector": binding.control_evidence_selector,
+                    "mutation_evidence_selector": binding.mutation_evidence_selector,
+                }
+                for field, expected_value in expected_registry_fields.items():
+                    if variant.get(field) != expected_value:
+                        issues.append(
+                            "%s %s %s differs from the closed probe registry"
+                            % (expected_id, expected_variant_id, field)
+                        )
+                if row.get("owner") != binding.owner:
+                    issues.append(
+                        "%s owner differs from the closed probe registry" % expected_id
+                    )
+            for field in (
+                "neutral_concept",
+                "validator_entry_point",
+                "control_evidence_selector",
+                "mutation_evidence_selector",
+            ):
+                value = variant.get(field)
+                if not isinstance(value, str) or not value.strip():
+                    issues.append("%s %s has no %s" % (expected_id, variant_id, field))
+            if (
+                variant.get("control_evidence_selector")
+                == variant.get("mutation_evidence_selector")
+            ):
+                issues.append(
+                    "%s %s reuses one selector for control and mutation"
+                    % (expected_id, variant_id)
+                )
+            for role in ("control", "mutation"):
+                expected_selector = "direct-probe:%s:%s" % (
+                    expected_variant_id,
+                    role,
+                )
+                if variant.get(role + "_evidence_selector") != expected_selector:
+                    issues.append(
+                        "%s %s %s selector is not the exact direct-probe identity"
+                        % (expected_id, expected_variant_id, role)
+                    )
+            entry_point = variant.get("validator_entry_point")
+            if (
+                isinstance(entry_point, str)
+                and entry_point
+                and not (pathlib.Path(root) / entry_point).is_file()
+            ):
+                issues.append("%s %s production validator is missing" % (expected_id, variant_id))
+            for role in ("control", "mutation"):
+                command = variant.get(role + "_command")
+                if command is None:
+                    issues.append("%s %s has no %s command" % (expected_id, variant_id, role))
+                    continue
+                expected_command = [
+                    "python",
+                    TASK14_PROBE,
+                    "--attack-id",
+                    expected_id,
+                    "--variant-id",
+                    expected_variant_id,
+                    "--role",
+                    role,
+                ]
+                if command != expected_command:
+                    issues.append(
+                        "%s %s %s command must invoke the production observation probe; "
+                        "variant command identity mismatch"
+                        % (expected_id, variant_id, role)
+                    )
+
+    for value in sorted({value for value in attack_ids if attack_ids.count(value) > 1}):
+        issues.append("duplicate attack ID %s" % value)
+    for value in sorted({value for value in variant_ids if variant_ids.count(value) > 1}):
+        issues.append("duplicate variant ID %s" % value)
+    for value in sorted(
+        {value for value in mutation_ids if mutation_ids.count(value) > 1}
+    ):
+        issues.append("duplicate mutation ID %s" % value)
+
+    try:
+        ledger_rows = load_task14_ar6_rows(root)
+    except (OSError, yaml.YAMLError) as exc:
+        issues.append("Task 14 AR6 ledger cannot be loaded: %s" % exc)
+        ledger_rows = []
+    expected_ar6 = {
+        row.get("artifact_id") for row in ledger_rows if row.get("artifact_id")
+    }
+    declared_ar6 = spec.get("task14_ar6_artifact_ids")
+    if not isinstance(declared_ar6, list) or set(declared_ar6) != expected_ar6:
+        issues.append("Task 14 AR6 artifact inventory differs from the impact ledger")
+    if isinstance(declared_ar6, list) and len(declared_ar6) != len(set(declared_ar6)):
+        issues.append("Task 14 AR6 artifact inventory contains duplicates")
+    allowed_dispositions = {
+        "INTERRUPTED_UNVERIFIED_RESEARCH",
+        "COUNTERMODEL_OR_NEGATIVE_EVIDENCE",
+    }
+    for row in ledger_rows:
+        if row.get("required_disposition") not in allowed_dispositions:
+            issues.append(
+                "%s has a non-adversarial Task 14 disposition"
+                % row.get("artifact_id", "unknown AR6 artifact")
+            )
+        if row.get("normative_flow_status") != "NO_AUTOMATIC_NORMATIVE_FLOW":
+            issues.append(
+                "%s is not bounded away from automatic normative flow"
+                % row.get("artifact_id", "unknown AR6 artifact")
+            )
+    mappings = spec.get("task14_ar6_mappings")
+    if not isinstance(mappings, list):
+        issues.append("Task 14 AR6 impact mappings must be a list")
+        mappings = []
+    mapping_ids = [
+        row.get("artifact_id") for row in mappings if isinstance(row, dict)
+    ]
+    if set(mapping_ids) != expected_ar6 or len(mapping_ids) != len(set(mapping_ids)):
+        issues.append("Task 14 AR6 impact mappings do not cover each ledger row exactly once")
+    attack_variant_pairs = {
+        (attack.get("attack_id"), variant.get("variant_id"))
+        for attack in attacks
+        if isinstance(attack, dict)
+        for variant in attack.get("variants", [])
+        if isinstance(variant, dict)
+    }
+    ledger_by_id = {
+        row.get("artifact_id"): row for row in ledger_rows if row.get("artifact_id")
+    }
+    for mapping in mappings:
+        if not isinstance(mapping, dict):
+            issues.append("Task 14 AR6 impact mapping must be an object")
+            continue
+        artifact_id = mapping.get("artifact_id", "unknown AR6 artifact")
+        ledger_row = ledger_by_id.get(artifact_id)
+        status = mapping.get("reproduction_status")
+        if not isinstance(mapping.get("neutral_concept"), str) or not mapping[
+            "neutral_concept"
+        ].strip():
+            issues.append("%s AR6 mapping lacks a neutral concept" % artifact_id)
+        if status == "REPRODUCED_AGAINST_INTEGRATED_TREE":
+            pair = (mapping.get("attack_id"), mapping.get("variant_id"))
+            if (
+                pair not in attack_variant_pairs
+                or mapping.get("normative_flow") != "NEGATIVE_EVIDENCE_ONLY"
+            ):
+                issues.append(
+                    "%s reproduced AR6 row lacks exact attack/variant/result mapping"
+                    % artifact_id
+                )
+            if (
+                not isinstance(ledger_row, dict)
+                or ledger_row.get("required_disposition")
+                != "COUNTERMODEL_OR_NEGATIVE_EVIDENCE"
+                or ledger_row.get("current_repository_representation")
+                == "NO_CANONICAL_REPOSITORY_OWNER_IDENTIFIED"
+            ):
+                issues.append(
+                    "%s may not be classified as reproduced against the integrated tree"
+                    % artifact_id
+                )
+        elif status == "NOT_REPRODUCED_RETAINED_PROVENANCE_ONLY":
+            if (
+                mapping.get("attack_id") is not None
+                or mapping.get("variant_id") is not None
+                or mapping.get("normative_flow") != "NO_NORMATIVE_OR_PUBLICATION_FLOW"
+            ):
+                issues.append(
+                    "%s unreproduced AR6 row may not enter normative flow" % artifact_id
+                )
+        else:
+            issues.append("%s has an invalid AR6 reproduction status" % artifact_id)
+    return issues
+
+
+def task14_probe_identity(command):
+    """Parse one exact Task 14 observation-probe command."""
+    tokens = list(command)
+    if len(tokens) != 8 or tokens[1] != TASK14_PROBE:
+        raise ValueError("command is not an exact Task 14 observation probe")
+    if tokens[2] != "--attack-id" or tokens[4] != "--variant-id" or tokens[6] != "--role":
+        raise ValueError("Task 14 observation-probe argument order drifted")
+    if tokens[7] not in {"control", "mutation"}:
+        raise ValueError("Task 14 observation-probe role is invalid")
+    return {
+        "attack_id": tokens[3],
+        "variant_id": tokens[5],
+        "role": tokens[7],
+    }
+
+
+def _parse_task14_observation(
+    completed, expected, seen_observation_ids=None, trusted_direct_result=None
+):
+    if completed.returncode != 0:
+        detail = (completed.stderr or completed.stdout or "").strip()
+        raise ValueError(
+            "observation probe exited %d%s"
+            % (completed.returncode, ": " + detail[-500:] if detail else "")
+        )
+    try:
+        payload = json.loads(completed.stdout)
+    except (TypeError, ValueError) as exc:
+        raise ValueError("missing machine-readable observation: %s" % exc)
+    if not isinstance(payload, dict) or payload.get("schema") != TASK14_OBSERVATION_SCHEMA:
+        raise ValueError("missing machine-readable observation schema")
+    exact_fields = {
+        "schema",
+        *expected.keys(),
+        "observed_validator_outcome",
+        "evidence_process_exit_code",
+        "exit_semantics",
+        "input_sha256",
+        "observation_id",
+    }
+    if set(payload) != exact_fields:
+        raise ValueError(
+            "observation field set mismatch: missing=%s extra=%s"
+            % (
+                sorted(exact_fields - set(payload)),
+                sorted(set(payload) - exact_fields),
+            )
+        )
+    for field, value in expected.items():
+        if payload.get(field) != value:
+            raise ValueError(
+                "observation identity mismatch for %s: expected %r, observed %r"
+                % (field, value, payload.get(field))
+            )
+    expected_outcome = "accepted" if expected["role"] == "control" else "rejected"
+    if payload.get("observed_validator_outcome") != expected_outcome:
+        raise ValueError(
+            "%s direct probe observed %s instead of %s"
+            % (
+                expected["role"],
+                payload.get("observed_validator_outcome", "missing"),
+                expected_outcome,
+            )
+        )
+    if payload.get("evidence_process_exit_code") != 0:
+        raise ValueError(
+            "%s evidence process exit semantics drifted: expected 0, observed %r"
+            % (
+                expected["role"],
+                payload.get("evidence_process_exit_code"),
+            )
+        )
+    semantics = payload.get("exit_semantics")
+    if (
+        not isinstance(semantics, str)
+        or "validator acceptance or rejection is carried only by "
+        "observed_validator_outcome" not in semantics
+    ):
+        raise ValueError("%s evidence exit semantics are missing" % expected["role"])
+    input_sha256 = payload.get("input_sha256")
+    if (
+        not isinstance(input_sha256, str)
+        or len(input_sha256) != 64
+        or any(character not in "0123456789abcdef" for character in input_sha256)
+    ):
+        raise ValueError("%s direct-probe input digest is invalid" % expected["role"])
+    if trusted_direct_result is not None:
+        if payload.get("observed_validator_outcome") != trusted_direct_result.get(
+            "outcome"
+        ):
+            raise ValueError(
+                "%s observation outcome differs from independent direct execution"
+                % expected["role"]
+            )
+        if input_sha256 != trusted_direct_result.get("input_sha256"):
+            raise ValueError(
+                "%s observation input digest differs from independent direct execution"
+                % expected["role"]
+            )
+    observation_id = task14_observation_id(
+        expected, expected_outcome, input_sha256
+    )
+    if payload.get("observation_id") != observation_id:
+        raise ValueError("%s observation ID does not bind its payload" % expected["role"])
+    if seen_observation_ids is not None:
+        if observation_id in seen_observation_ids:
+            raise ValueError("duplicate observation %s" % observation_id)
+        seen_observation_ids.add(observation_id)
+    return payload
+
+
+def run_task14_attacks(
+    spec,
+    root,
+    runner=subprocess.run,
+    python=sys.executable,
+    direct_executor=execute_direct_probe,
+):
+    """Run separate controls and mutations and retain their semantic observations."""
+    issues = audit_task14_spec(spec, root)
+    if issues:
+        return [], issues
+    results = []
+    observation_ids = set()
+    registry = load_task14_probe_registry(root)
+    for attack in spec["mandatory_attacks"]:
+        for variant in attack["variants"]:
+            observations = {}
+            failed = False
+            for role in ("control", "mutation"):
+                command = [python] + list(variant[role + "_command"][1:])
+                try:
+                    completed = runner(
+                        command,
+                        cwd=str(root),
+                        capture_output=True,
+                        text=True,
+                        encoding="utf-8",
+                        timeout=180,
+                    )
+                except (OSError, subprocess.TimeoutExpired) as exc:
+                    completed = type(
+                        "Task14CommandFailure",
+                        (),
+                        {"returncode": 124, "stdout": "", "stderr": str(exc)},
+                    )()
+                binding = registry[(attack["attack_id"], variant["variant_id"])]
+                expected = expected_task14_observation(binding, role, root)
+                try:
+                    trusted_direct_result = direct_executor(binding, role)
+                except (KeyError, OSError, RuntimeError, ValueError) as exc:
+                    issues.append(
+                        "%s %s %s: independent direct execution failed: %s"
+                        % (
+                            attack["attack_id"],
+                            variant["variant_id"],
+                            role,
+                            exc,
+                        )
+                    )
+                    failed = True
+                    continue
+                try:
+                    observations[role] = _parse_task14_observation(
+                        completed,
+                        expected,
+                        observation_ids,
+                        trusted_direct_result,
+                    )
+                except ValueError as exc:
+                    issues.append(
+                        "%s %s %s: %s"
+                        % (
+                            attack["attack_id"],
+                            variant["variant_id"],
+                            role,
+                            exc,
+                        )
+                    )
+                    failed = True
+            if failed:
+                continue
+            results.append(
+                {
+                    "attack_id": attack["attack_id"],
+                    "name": attack["name"],
+                    "variant_id": variant["variant_id"],
+                    "mutation_id": variant["mutation_id"],
+                    "neutral_concept": variant["neutral_concept"],
+                    "invariant": attack["invariant"],
+                    "owner": attack["owner"],
+                    "validator_owner": observations["control"]["validator_owner"],
+                    "validator_entry_point": variant["validator_entry_point"],
+                    "validator_sha256": observations["control"]["validator_sha256"],
+                    "control_command": " ".join(variant["control_command"]),
+                    "mutation_command": " ".join(variant["mutation_command"]),
+                    "control_evidence_selector": observations["control"][
+                        "evidence_selector"
+                    ],
+                    "control_observed_outcome": observations["control"][
+                        "observed_validator_outcome"
+                    ],
+                    "control_evidence_process_exit_code": observations["control"][
+                        "evidence_process_exit_code"
+                    ],
+                    "control_input_sha256": observations["control"]["input_sha256"],
+                    "control_observation_id": observations["control"]["observation_id"],
+                    "mutation_evidence_selector": observations["mutation"][
+                        "evidence_selector"
+                    ],
+                    "mutation_observed_outcome": observations["mutation"][
+                        "observed_validator_outcome"
+                    ],
+                    "mutation_evidence_process_exit_code": observations["mutation"][
+                        "evidence_process_exit_code"
+                    ],
+                    "mutation_input_sha256": observations["mutation"]["input_sha256"],
+                    "mutation_observation_id": observations["mutation"]["observation_id"],
+                }
+            )
+    if issues:
+        return [], issues
+    return results, issues
+
+
+def _cell(value):
+    return str(value).replace("|", "\\|").replace("\n", " ")
+
+
+def render_task14_report(spec, results, root, recursive_totals=None):
+    """Render the byte-stable Task 14 report from current executable results."""
+    recursive_totals = recursive_totals or {}
+    unique_commands = {
+        command
+        for row in results
+        for command in (row["control_command"], row["mutation_command"])
+    }
+    passed = [
+        row
+        for row in results
+        if row["control_observed_outcome"] == "accepted"
+        and row["mutation_observed_outcome"] == "rejected"
+    ]
+    variants = len(results)
+    lines = [
+        "# R7E Sol adversarial and mutation report",
+        "",
+        "This report is derived from the integrated tree. It does not copy historical "
+        "R7C/R7D totals or infer interrupted research outcomes.",
+        "",
+        "## Method and current totals",
+        "",
+        "- Exact approved Task 13 base: `%s`" % spec.get("task14_exact_base", "UNDECLARED"),
+        "- Mandatory attacks: %d" % len(spec.get("mandatory_attacks", [])),
+        "- Structured coverage variants: %d" % variants,
+        "- Executed separate control/mutation commands: %d" % len(unique_commands),
+        "- Passing variants: %d" % len(passed),
+        "- Valid controls observed accepted: %d" % sum(
+            row["control_observed_outcome"] == "accepted" for row in results
+        ),
+        "- Invalid mutations observed rejected: %d" % sum(
+            row["mutation_observed_outcome"] == "rejected" for row in results
+        ),
+    ]
+    if recursive_totals:
+        lines.extend([
+            "- Recursive operator families: %d" % recursive_totals.get("families", 0),
+            "- Recursive mutants generated: %d" % recursive_totals.get("generated", 0),
+            "- Schema-killed: %d" % recursive_totals.get("killed_schema", 0),
+            "- Semantic-killed: %d" % recursive_totals.get("killed_semantic", 0),
+            "- Justified equivalents: %d" % recursive_totals.get("justified", 0),
+            "- Unjustified survivors: %d" % recursive_totals.get("unjustified", 0),
+        ])
+    lines.extend([
+        "",
+        "Every row comes from two distinct processes. Each process emits an exact "
+        "machine-readable observation bound to the attack, variant, role, production "
+        "validator, validator digest, direct-probe selector, concrete-input digest, "
+        "and observation ID. The adapter derives acceptance or rejection only from "
+        "the production API or CLI result; a probe-process exit code is never treated "
+        "as the validator outcome.",
+        "",
+        "## Mandatory attacks",
+        "",
+        "| Attack ID | Attack | Variant | Mutation ID | Neutral concept | Invariant | Production validator | Control command / outcome (probe RC) | Mutation command / outcome (probe RC) | Owner |",
+        "|---|---|---|---|---|---|---|---|---|---|",
+    ])
+    for row in results:
+        lines.append(
+            "| %s | %s | %s | %s | %s | %s | `%s` | `%s` / %s (%d) | `%s` / %s (%d) | %s |"
+            % (
+                _cell(row["attack_id"]),
+                _cell(row["name"]),
+                _cell(row["variant_id"]),
+                _cell(row["mutation_id"]),
+                _cell(row["neutral_concept"]),
+                _cell(row["invariant"]),
+                _cell(row["validator_entry_point"]),
+                _cell(row["control_command"]),
+                _cell(row["control_observed_outcome"]),
+                row["control_evidence_process_exit_code"],
+                _cell(row["mutation_command"]),
+                _cell(row["mutation_observed_outcome"]),
+                row["mutation_evidence_process_exit_code"],
+                _cell(row["owner"]),
+            )
+        )
+    lines.extend([
+        "",
+        "## Exact direct-observation bindings",
+        "",
+        "| Variant | Mutation ID | Validator owner | Validator / SHA-256 | Control selector / input / observation | Mutation selector / input / observation |",
+        "|---|---|---|---|---|---|",
+    ])
+    for row in results:
+        lines.append(
+            "| %s | %s | %s | `%s` / `%s` | `%s` / `%s` / `%s` | `%s` / `%s` / `%s` |"
+            % (
+                _cell(row["variant_id"]),
+                _cell(row["mutation_id"]),
+                _cell(row["validator_owner"]),
+                _cell(row["validator_entry_point"]),
+                _cell(row["validator_sha256"]),
+                _cell(row["control_evidence_selector"]),
+                _cell(row["control_input_sha256"]),
+                _cell(row["control_observation_id"]),
+                _cell(row["mutation_evidence_selector"]),
+                _cell(row["mutation_input_sha256"]),
+                _cell(row["mutation_observation_id"]),
+            )
+        )
+    lines.extend([
+        "",
+        "## AR6 adversarial reconciliation",
+        "",
+        "Interrupted AR6 research is excluded from normative and publication flow. "
+        "Only entries already dispositioned as countermodels or negative evidence "
+        "may inform reproduced attacks; no interrupted claim is promoted.",
+        "",
+        "| Artifact ID | Tranche | Disposition | Neutral concept | Reproduction status | Exact Task 14 mapping | Production command and observed result | Normative flow |",
+        "|---|---|---|---|---|---|---|---|",
+    ])
+    mappings = {
+        row["artifact_id"]: row
+        for row in spec.get("task14_ar6_mappings", [])
+        if isinstance(row, dict) and row.get("artifact_id")
+    }
+    result_by_pair = {
+        (row["attack_id"], row["variant_id"]): row for row in results
+    }
+    for row in load_task14_ar6_rows(root):
+        artifact_id = row.get("artifact_id", "")
+        mapping = mappings.get(artifact_id, {})
+        status = mapping.get("reproduction_status", "UNMAPPED")
+        pair = (mapping.get("attack_id"), mapping.get("variant_id"))
+        observed = result_by_pair.get(pair)
+        if status == "REPRODUCED_AGAINST_INTEGRATED_TREE" and observed:
+            exact_mapping = "%s / %s" % pair
+            command_result = "`%s` -> directly observed %s (probe process rc %d)" % (
+                observed["mutation_command"],
+                observed["mutation_observed_outcome"],
+                observed["mutation_evidence_process_exit_code"],
+            )
+        else:
+            exact_mapping = "none"
+            command_result = "not reproduced; retained as provenance only"
+        lines.append(
+            "| %s | %s | %s | %s | %s | %s | %s | %s |"
+            % (
+                _cell(artifact_id),
+                _cell(row.get("research_tranche", "")),
+                _cell(row.get("required_disposition", "")),
+                _cell(mapping.get("neutral_concept", "")),
+                _cell(status),
+                _cell(exact_mapping),
+                _cell(command_result),
+                _cell(mapping.get("normative_flow", "")),
+            )
+        )
+    return "\n".join(lines) + "\n"
 
 
 # --------------------------------------------------------------- schema loading
@@ -684,6 +1393,11 @@ def main():
     ap = argparse.ArgumentParser()
     ap.add_argument("--verbose", action="store_true",
                     help="list every survivor signature")
+    ap.add_argument(
+        "--write-adversarial-report",
+        action="store_true",
+        help="write the derived Task 14 report after every executable gate passes",
+    )
     args = ap.parse_args()
 
     schemas, registry = load_schemas()
@@ -692,6 +1406,7 @@ def main():
     spec_path = os.path.join(ROOT, "tests", "schema-mutations", "mutation-spec.json")
     spec = json.load(open(spec_path, encoding="utf-8"))
     equivalents = {e["signature"]: e["reason"] for e in spec.get("justified_equivalents", [])}
+    task14_inventory_issues = audit_task14_spec(spec, ROOT)
 
     edir = os.path.join(ROOT, "examples")
     bundles = []
@@ -777,6 +1492,51 @@ def main():
         for s in unjustified:
             print("  - %s" % s)
         fails += 1
+
+    task14_results = []
+    task14_execution_issues = list(task14_inventory_issues)
+    if not task14_inventory_issues:
+        task14_results, task14_execution_issues = run_task14_attacks(spec, ROOT)
+    if task14_execution_issues:
+        print("FAIL: Task 14 mandatory attack program:")
+        for issue in task14_execution_issues:
+            print("  - %s" % issue)
+        fails += 1
+    else:
+        unique_commands = {
+            command
+            for row in task14_results
+            for command in (row["control_command"], row["mutation_command"])
+        }
+        print(
+            "PASS: Task 14 accounted for %d explicit variants through %d separate "
+            "control/mutation command(s)." % (len(task14_results), len(unique_commands))
+        )
+
+    report = render_task14_report(
+        spec,
+        task14_results,
+        ROOT,
+        recursive_totals={
+            "families": len(FAMILIES),
+            "generated": tot["generated"],
+            "killed_schema": tot["killed_schema"],
+            "killed_semantic": tot["killed_semantic"],
+            "justified": len(justified),
+            "unjustified": len(unjustified),
+        },
+    )
+    report_path = pathlib.Path(ROOT) / TASK14_REPORT
+    if args.write_adversarial_report and not fails:
+        report_path.write_text(report, encoding="utf-8", newline="\n")
+        print("WROTE: %s" % TASK14_REPORT)
+    elif not args.write_adversarial_report:
+        if not report_path.exists():
+            print("FAIL: derived Task 14 report is missing: %s" % TASK14_REPORT)
+            fails += 1
+        elif report_path.read_text(encoding="utf-8") != report:
+            print("FAIL: derived Task 14 report has drifted: %s" % TASK14_REPORT)
+            fails += 1
 
     if not fails:
         print("PASS: every generated mutant is killed at a declared layer, or is declared "

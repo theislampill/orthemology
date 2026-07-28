@@ -1,0 +1,33 @@
+{
+  "case": "C12",
+  "facts": [
+    {
+      "id": "F01",
+      "text": "Case subject: sample tray ST-888, version v1, under screening check."
+    },
+    {
+      "id": "F02",
+      "text": "The case was opened on 2026-05-15."
+    },
+    {
+      "id": "F03",
+      "text": "The declared method resolves offsets to 5 cm; its recorded reference-class error rate is within the accepted band."
+    },
+    {
+      "id": "F04",
+      "text": "Survey E-3 was taken on 2026-05-16 with a calibrated instrument and full step-log compliance."
+    },
+    {
+      "id": "F05",
+      "text": "The review concluded CONFORMS."
+    },
+    {
+      "id": "F06",
+      "text": "A later audit at 1 cm resolution, dated 2026-06-15, recorded a 3 cm offset."
+    },
+    {
+      "id": "F07",
+      "text": "The draft completion statement closes the review on the method's result."
+    }
+  ]
+}

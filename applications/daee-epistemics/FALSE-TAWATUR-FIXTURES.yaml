@@ -1,0 +1,67 @@
+schema: orthemology-false-tawatur-fixtures-v1
+warrant_contract: orthemology-tawatur-warrant-v2
+warrant_regression_surface:
+- numeric-or-prevalence-fields-never-supply-warrant
+- hidden-common-cause-conflicts-with-independence
+- transmitter-honesty-and-domain-competence-are-separate
+- subject-conditions-and-assessor-evidence-are-required
+- objective-proposition-truth-is-not-subject-relative
+- malformed-nested-values-reject-without-traceback
+- qualitative-nonnumeric-control-accepts
+# R7C Decision 0028; R7D Decision 0032 (audit B21/B22/B23). The MACHINE conclusion is
+# source-safe and NEVER concludes tawatur warrant: dependence (common source OR
+# copying) => `dependence-detected`; >=2 independent routes => `source-independence-
+# supported` (NOT tawatur-like); unknown origin => `origin-analysis-underdetermined`.
+# Two — or forty — independent routes are source-independence, not tawatur warrant;
+# creed-internal tawatur WARRANT is a separate, school-labeled judgement
+# (TAWATUR-WARRANT.example.yaml). scripts/validate_memetic_ecology.py also enforces
+# independent_routes <= apparent_witnesses. No warrant from number/popularity/degree.
+fixtures:
+- id: TW1
+  distinction: many independent routes -> source-independence (not tawatur warrant)
+  apparent_witnesses: 40
+  independent_routes: 40
+  common_source: false
+  copying_dependence: false
+  mutation_lineage: false
+  expected: source-independence-supported
+- id: TW2
+  distinction: copies of one source -> dependence
+  apparent_witnesses: 40
+  independent_routes: 1
+  common_source: true
+  copying_dependence: true
+  mutation_lineage: false
+  expected: dependence-detected
+- id: TW3
+  distinction: one institutional rule reproduced -> dependence
+  apparent_witnesses: 100
+  independent_routes: 1
+  common_source: true
+  copying_dependence: false
+  mutation_lineage: false
+  expected: dependence-detected
+- id: TW4
+  distinction: mutations of one carrier -> dependence (copying)
+  apparent_witnesses: 12
+  independent_routes: 1
+  common_source: true
+  copying_dependence: true
+  mutation_lineage: true
+  expected: dependence-detected
+- id: TW5
+  distinction: two independent routes -> source-independence (NOT tawatur; the B21 defect)
+  apparent_witnesses: 2
+  independent_routes: 2
+  common_source: false
+  copying_dependence: false
+  mutation_lineage: false
+  expected: source-independence-supported
+- id: TW6
+  distinction: high count but origin unknown -> underdetermined
+  apparent_witnesses: 200
+  independent_routes: 0
+  common_source: false
+  copying_dependence: false
+  mutation_lineage: false
+  expected: origin-analysis-underdetermined

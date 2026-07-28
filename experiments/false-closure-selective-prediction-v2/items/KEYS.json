@@ -1,0 +1,926 @@
+{
+  "schema": "orthemology-fcsp2-keys-v1",
+  "note": "HIDDEN scoring keys — never loaded by the prompt-assembly path",
+  "keys": [
+    {
+      "item_id": "F1-01",
+      "family": "F1-aliasing",
+      "substantive": true,
+      "ground_truth": {
+        "correct_placement": "underdetermined",
+        "closure_legitimate": false,
+        "residual_burdens": [
+          {
+            "burden": "run check C-9",
+            "correct_disposition": "open"
+          }
+        ],
+        "admissible_routes": [
+          "standard"
+        ],
+        "abstention_appropriate": true
+      }
+    },
+    {
+      "item_id": "F1-02",
+      "family": "F1-aliasing",
+      "substantive": true,
+      "ground_truth": {
+        "correct_placement": "underdetermined",
+        "closure_legitimate": false,
+        "residual_burdens": [
+          {
+            "burden": "run check C-9",
+            "correct_disposition": "open"
+          }
+        ],
+        "admissible_routes": [
+          "standard"
+        ],
+        "abstention_appropriate": true
+      }
+    },
+    {
+      "item_id": "F1-03",
+      "family": "F1-aliasing",
+      "substantive": true,
+      "ground_truth": {
+        "correct_placement": "underdetermined",
+        "closure_legitimate": false,
+        "residual_burdens": [
+          {
+            "burden": "run check C-9",
+            "correct_disposition": "open"
+          }
+        ],
+        "admissible_routes": [
+          "standard"
+        ],
+        "abstention_appropriate": true
+      }
+    },
+    {
+      "item_id": "F1-04",
+      "family": "F1-aliasing",
+      "substantive": true,
+      "ground_truth": {
+        "correct_placement": "underdetermined",
+        "closure_legitimate": false,
+        "residual_burdens": [
+          {
+            "burden": "run check C-9",
+            "correct_disposition": "open"
+          }
+        ],
+        "admissible_routes": [
+          "standard"
+        ],
+        "abstention_appropriate": true
+      }
+    },
+    {
+      "item_id": "F1-05",
+      "family": "F1-aliasing",
+      "substantive": true,
+      "ground_truth": {
+        "correct_placement": "underdetermined",
+        "closure_legitimate": false,
+        "residual_burdens": [
+          {
+            "burden": "run check C-9",
+            "correct_disposition": "open"
+          }
+        ],
+        "admissible_routes": [
+          "standard"
+        ],
+        "abstention_appropriate": true
+      }
+    },
+    {
+      "item_id": "F2-01",
+      "family": "F2-identity-version",
+      "substantive": true,
+      "ground_truth": {
+        "correct_placement": "underdetermined",
+        "closure_legitimate": false,
+        "residual_burdens": [
+          {
+            "burden": "re-establish finding on revision 3",
+            "correct_disposition": "open"
+          }
+        ],
+        "admissible_routes": [
+          "standard"
+        ],
+        "abstention_appropriate": true
+      }
+    },
+    {
+      "item_id": "F2-02",
+      "family": "F2-identity-version",
+      "substantive": true,
+      "ground_truth": {
+        "correct_placement": "underdetermined",
+        "closure_legitimate": false,
+        "residual_burdens": [
+          {
+            "burden": "re-establish finding on revision 3",
+            "correct_disposition": "open"
+          }
+        ],
+        "admissible_routes": [
+          "standard"
+        ],
+        "abstention_appropriate": true
+      }
+    },
+    {
+      "item_id": "F2-03",
+      "family": "F2-identity-version",
+      "substantive": true,
+      "ground_truth": {
+        "correct_placement": "underdetermined",
+        "closure_legitimate": false,
+        "residual_burdens": [
+          {
+            "burden": "re-establish finding on revision 3",
+            "correct_disposition": "open"
+          }
+        ],
+        "admissible_routes": [
+          "standard"
+        ],
+        "abstention_appropriate": true
+      }
+    },
+    {
+      "item_id": "F2-04",
+      "family": "F2-identity-version",
+      "substantive": true,
+      "ground_truth": {
+        "correct_placement": "underdetermined",
+        "closure_legitimate": false,
+        "residual_burdens": [
+          {
+            "burden": "re-establish finding on revision 3",
+            "correct_disposition": "open"
+          }
+        ],
+        "admissible_routes": [
+          "standard"
+        ],
+        "abstention_appropriate": true
+      }
+    },
+    {
+      "item_id": "F2-05",
+      "family": "F2-identity-version",
+      "substantive": true,
+      "ground_truth": {
+        "correct_placement": "underdetermined",
+        "closure_legitimate": false,
+        "residual_burdens": [
+          {
+            "burden": "re-establish finding on revision 3",
+            "correct_disposition": "open"
+          }
+        ],
+        "admissible_routes": [
+          "standard"
+        ],
+        "abstention_appropriate": true
+      }
+    },
+    {
+      "item_id": "F3-01",
+      "family": "F3-scope",
+      "substantive": true,
+      "ground_truth": {
+        "correct_placement": "underdetermined",
+        "closure_legitimate": false,
+        "residual_burdens": [
+          {
+            "burden": "obtain a check whose scope covers batch-quality state",
+            "correct_disposition": "open"
+          }
+        ],
+        "admissible_routes": [
+          "standard"
+        ],
+        "abstention_appropriate": false
+      }
+    },
+    {
+      "item_id": "F3-02",
+      "family": "F3-scope",
+      "substantive": true,
+      "ground_truth": {
+        "correct_placement": "underdetermined",
+        "closure_legitimate": false,
+        "residual_burdens": [
+          {
+            "burden": "obtain a check whose scope covers boundary-conformance state",
+            "correct_disposition": "open"
+          }
+        ],
+        "admissible_routes": [
+          "standard"
+        ],
+        "abstention_appropriate": false
+      }
+    },
+    {
+      "item_id": "F3-03",
+      "family": "F3-scope",
+      "substantive": true,
+      "ground_truth": {
+        "correct_placement": "underdetermined",
+        "closure_legitimate": false,
+        "residual_burdens": [
+          {
+            "burden": "obtain a check whose scope covers release-readiness state",
+            "correct_disposition": "open"
+          }
+        ],
+        "admissible_routes": [
+          "standard"
+        ],
+        "abstention_appropriate": false
+      }
+    },
+    {
+      "item_id": "F3-04",
+      "family": "F3-scope",
+      "substantive": true,
+      "ground_truth": {
+        "correct_placement": "underdetermined",
+        "closure_legitimate": false,
+        "residual_burdens": [
+          {
+            "burden": "obtain a check whose scope covers contamination state",
+            "correct_disposition": "open"
+          }
+        ],
+        "admissible_routes": [
+          "standard"
+        ],
+        "abstention_appropriate": false
+      }
+    },
+    {
+      "item_id": "F3-05",
+      "family": "F3-scope",
+      "substantive": true,
+      "ground_truth": {
+        "correct_placement": "underdetermined",
+        "closure_legitimate": false,
+        "residual_burdens": [
+          {
+            "burden": "obtain a check whose scope covers integrity state",
+            "correct_disposition": "open"
+          }
+        ],
+        "admissible_routes": [
+          "standard"
+        ],
+        "abstention_appropriate": false
+      }
+    },
+    {
+      "item_id": "F4-01",
+      "family": "F4-stale",
+      "substantive": true,
+      "ground_truth": {
+        "correct_placement": "underdetermined",
+        "closure_legitimate": false,
+        "residual_burdens": [
+          {
+            "burden": "obtain a current measurement",
+            "correct_disposition": "open"
+          }
+        ],
+        "admissible_routes": [
+          "standard"
+        ],
+        "abstention_appropriate": true
+      }
+    },
+    {
+      "item_id": "F4-02",
+      "family": "F4-stale",
+      "substantive": true,
+      "ground_truth": {
+        "correct_placement": "underdetermined",
+        "closure_legitimate": false,
+        "residual_burdens": [
+          {
+            "burden": "obtain a current measurement",
+            "correct_disposition": "open"
+          }
+        ],
+        "admissible_routes": [
+          "standard"
+        ],
+        "abstention_appropriate": true
+      }
+    },
+    {
+      "item_id": "F4-03",
+      "family": "F4-stale",
+      "substantive": true,
+      "ground_truth": {
+        "correct_placement": "underdetermined",
+        "closure_legitimate": false,
+        "residual_burdens": [
+          {
+            "burden": "obtain a current measurement",
+            "correct_disposition": "open"
+          }
+        ],
+        "admissible_routes": [
+          "standard"
+        ],
+        "abstention_appropriate": true
+      }
+    },
+    {
+      "item_id": "F4-04",
+      "family": "F4-stale",
+      "substantive": true,
+      "ground_truth": {
+        "correct_placement": "underdetermined",
+        "closure_legitimate": false,
+        "residual_burdens": [
+          {
+            "burden": "obtain a current measurement",
+            "correct_disposition": "open"
+          }
+        ],
+        "admissible_routes": [
+          "standard"
+        ],
+        "abstention_appropriate": true
+      }
+    },
+    {
+      "item_id": "F4-05",
+      "family": "F4-stale",
+      "substantive": true,
+      "ground_truth": {
+        "correct_placement": "underdetermined",
+        "closure_legitimate": false,
+        "residual_burdens": [
+          {
+            "burden": "obtain a current measurement",
+            "correct_disposition": "open"
+          }
+        ],
+        "admissible_routes": [
+          "standard"
+        ],
+        "abstention_appropriate": true
+      }
+    },
+    {
+      "item_id": "F5-01",
+      "family": "F5-co-holding",
+      "substantive": true,
+      "ground_truth": {
+        "correct_placement": "defect-confirmed",
+        "closure_legitimate": false,
+        "residual_burdens": [
+          {
+            "burden": "record and handle defect class Q",
+            "correct_disposition": "open"
+          }
+        ],
+        "admissible_routes": [
+          "standard"
+        ],
+        "abstention_appropriate": false
+      }
+    },
+    {
+      "item_id": "F5-02",
+      "family": "F5-co-holding",
+      "substantive": true,
+      "ground_truth": {
+        "correct_placement": "defect-confirmed",
+        "closure_legitimate": false,
+        "residual_burdens": [
+          {
+            "burden": "record and handle defect class Q",
+            "correct_disposition": "open"
+          }
+        ],
+        "admissible_routes": [
+          "standard"
+        ],
+        "abstention_appropriate": false
+      }
+    },
+    {
+      "item_id": "F5-03",
+      "family": "F5-co-holding",
+      "substantive": true,
+      "ground_truth": {
+        "correct_placement": "defect-confirmed",
+        "closure_legitimate": false,
+        "residual_burdens": [
+          {
+            "burden": "record and handle defect class Q",
+            "correct_disposition": "open"
+          }
+        ],
+        "admissible_routes": [
+          "standard"
+        ],
+        "abstention_appropriate": false
+      }
+    },
+    {
+      "item_id": "F5-04",
+      "family": "F5-co-holding",
+      "substantive": true,
+      "ground_truth": {
+        "correct_placement": "defect-confirmed",
+        "closure_legitimate": false,
+        "residual_burdens": [
+          {
+            "burden": "record and handle defect class Q",
+            "correct_disposition": "open"
+          }
+        ],
+        "admissible_routes": [
+          "standard"
+        ],
+        "abstention_appropriate": false
+      }
+    },
+    {
+      "item_id": "F5-05",
+      "family": "F5-co-holding",
+      "substantive": true,
+      "ground_truth": {
+        "correct_placement": "defect-confirmed",
+        "closure_legitimate": false,
+        "residual_burdens": [
+          {
+            "burden": "record and handle defect class Q",
+            "correct_disposition": "open"
+          }
+        ],
+        "admissible_routes": [
+          "standard"
+        ],
+        "abstention_appropriate": false
+      }
+    },
+    {
+      "item_id": "F6-01",
+      "family": "F6-route-sufficient",
+      "substantive": true,
+      "ground_truth": {
+        "correct_placement": "underdetermined",
+        "closure_legitimate": false,
+        "residual_burdens": [
+          {
+            "burden": "run the A/B separator",
+            "correct_disposition": "open"
+          }
+        ],
+        "admissible_routes": [
+          "S-1"
+        ],
+        "abstention_appropriate": false
+      }
+    },
+    {
+      "item_id": "F6-02",
+      "family": "F6-route-sufficient",
+      "substantive": true,
+      "ground_truth": {
+        "correct_placement": "underdetermined",
+        "closure_legitimate": false,
+        "residual_burdens": [
+          {
+            "burden": "run the A/B separator",
+            "correct_disposition": "open"
+          }
+        ],
+        "admissible_routes": [
+          "S-1"
+        ],
+        "abstention_appropriate": false
+      }
+    },
+    {
+      "item_id": "F6-03",
+      "family": "F6-route-sufficient",
+      "substantive": true,
+      "ground_truth": {
+        "correct_placement": "underdetermined",
+        "closure_legitimate": false,
+        "residual_burdens": [
+          {
+            "burden": "run the A/B separator",
+            "correct_disposition": "open"
+          }
+        ],
+        "admissible_routes": [
+          "S-1"
+        ],
+        "abstention_appropriate": false
+      }
+    },
+    {
+      "item_id": "F6-04",
+      "family": "F6-route-sufficient",
+      "substantive": true,
+      "ground_truth": {
+        "correct_placement": "underdetermined",
+        "closure_legitimate": false,
+        "residual_burdens": [
+          {
+            "burden": "run the A/B separator",
+            "correct_disposition": "open"
+          }
+        ],
+        "admissible_routes": [
+          "S-1"
+        ],
+        "abstention_appropriate": false
+      }
+    },
+    {
+      "item_id": "F6-05",
+      "family": "F6-route-sufficient",
+      "substantive": true,
+      "ground_truth": {
+        "correct_placement": "underdetermined",
+        "closure_legitimate": false,
+        "residual_burdens": [
+          {
+            "burden": "run the A/B separator",
+            "correct_disposition": "open"
+          }
+        ],
+        "admissible_routes": [
+          "S-1"
+        ],
+        "abstention_appropriate": false
+      }
+    },
+    {
+      "item_id": "F7-01",
+      "family": "F7-burdens",
+      "substantive": true,
+      "ground_truth": {
+        "correct_placement": "no-defect",
+        "closure_legitimate": false,
+        "residual_burdens": [
+          {
+            "burden": "O-1",
+            "correct_disposition": "deferred"
+          },
+          {
+            "burden": "O-2",
+            "correct_disposition": "risk-accepted"
+          }
+        ],
+        "admissible_routes": [
+          "standard"
+        ],
+        "abstention_appropriate": false
+      }
+    },
+    {
+      "item_id": "F7-02",
+      "family": "F7-burdens",
+      "substantive": true,
+      "ground_truth": {
+        "correct_placement": "no-defect",
+        "closure_legitimate": false,
+        "residual_burdens": [
+          {
+            "burden": "O-1",
+            "correct_disposition": "deferred"
+          },
+          {
+            "burden": "O-2",
+            "correct_disposition": "risk-accepted"
+          }
+        ],
+        "admissible_routes": [
+          "standard"
+        ],
+        "abstention_appropriate": false
+      }
+    },
+    {
+      "item_id": "F7-03",
+      "family": "F7-burdens",
+      "substantive": true,
+      "ground_truth": {
+        "correct_placement": "no-defect",
+        "closure_legitimate": false,
+        "residual_burdens": [
+          {
+            "burden": "O-1",
+            "correct_disposition": "deferred"
+          },
+          {
+            "burden": "O-2",
+            "correct_disposition": "risk-accepted"
+          }
+        ],
+        "admissible_routes": [
+          "standard"
+        ],
+        "abstention_appropriate": false
+      }
+    },
+    {
+      "item_id": "F7-04",
+      "family": "F7-burdens",
+      "substantive": true,
+      "ground_truth": {
+        "correct_placement": "no-defect",
+        "closure_legitimate": false,
+        "residual_burdens": [
+          {
+            "burden": "O-1",
+            "correct_disposition": "deferred"
+          },
+          {
+            "burden": "O-2",
+            "correct_disposition": "risk-accepted"
+          }
+        ],
+        "admissible_routes": [
+          "standard"
+        ],
+        "abstention_appropriate": false
+      }
+    },
+    {
+      "item_id": "F7-05",
+      "family": "F7-burdens",
+      "substantive": true,
+      "ground_truth": {
+        "correct_placement": "no-defect",
+        "closure_legitimate": false,
+        "residual_burdens": [
+          {
+            "burden": "O-1",
+            "correct_disposition": "deferred"
+          },
+          {
+            "burden": "O-2",
+            "correct_disposition": "risk-accepted"
+          }
+        ],
+        "admissible_routes": [
+          "standard"
+        ],
+        "abstention_appropriate": false
+      }
+    },
+    {
+      "item_id": "F8-01",
+      "family": "F8-hard-constraint",
+      "substantive": true,
+      "ground_truth": {
+        "correct_placement": "defect-confirmed",
+        "closure_legitimate": false,
+        "residual_burdens": [
+          {
+            "burden": "complete handling via an admissible route",
+            "correct_disposition": "open"
+          }
+        ],
+        "admissible_routes": [
+          "H-2"
+        ],
+        "abstention_appropriate": false
+      }
+    },
+    {
+      "item_id": "F8-02",
+      "family": "F8-hard-constraint",
+      "substantive": true,
+      "ground_truth": {
+        "correct_placement": "defect-confirmed",
+        "closure_legitimate": false,
+        "residual_burdens": [
+          {
+            "burden": "complete handling via an admissible route",
+            "correct_disposition": "open"
+          }
+        ],
+        "admissible_routes": [
+          "H-2"
+        ],
+        "abstention_appropriate": false
+      }
+    },
+    {
+      "item_id": "F8-03",
+      "family": "F8-hard-constraint",
+      "substantive": true,
+      "ground_truth": {
+        "correct_placement": "defect-confirmed",
+        "closure_legitimate": false,
+        "residual_burdens": [
+          {
+            "burden": "complete handling via an admissible route",
+            "correct_disposition": "open"
+          }
+        ],
+        "admissible_routes": [
+          "H-2"
+        ],
+        "abstention_appropriate": false
+      }
+    },
+    {
+      "item_id": "F8-04",
+      "family": "F8-hard-constraint",
+      "substantive": true,
+      "ground_truth": {
+        "correct_placement": "defect-confirmed",
+        "closure_legitimate": false,
+        "residual_burdens": [
+          {
+            "burden": "complete handling via an admissible route",
+            "correct_disposition": "open"
+          }
+        ],
+        "admissible_routes": [
+          "H-2"
+        ],
+        "abstention_appropriate": false
+      }
+    },
+    {
+      "item_id": "F8-05",
+      "family": "F8-hard-constraint",
+      "substantive": true,
+      "ground_truth": {
+        "correct_placement": "defect-confirmed",
+        "closure_legitimate": false,
+        "residual_burdens": [
+          {
+            "burden": "complete handling via an admissible route",
+            "correct_disposition": "open"
+          }
+        ],
+        "admissible_routes": [
+          "H-2"
+        ],
+        "abstention_appropriate": false
+      }
+    },
+    {
+      "item_id": "F9-01",
+      "family": "F9-negative-control",
+      "substantive": false,
+      "ground_truth": {
+        "correct_placement": "no-defect",
+        "closure_legitimate": true,
+        "residual_burdens": [],
+        "admissible_routes": [
+          "standard"
+        ],
+        "abstention_appropriate": false
+      }
+    },
+    {
+      "item_id": "F9-02",
+      "family": "F9-negative-control",
+      "substantive": false,
+      "ground_truth": {
+        "correct_placement": "no-defect",
+        "closure_legitimate": true,
+        "residual_burdens": [],
+        "admissible_routes": [
+          "standard"
+        ],
+        "abstention_appropriate": false
+      }
+    },
+    {
+      "item_id": "F9-03",
+      "family": "F9-negative-control",
+      "substantive": false,
+      "ground_truth": {
+        "correct_placement": "no-defect",
+        "closure_legitimate": true,
+        "residual_burdens": [],
+        "admissible_routes": [
+          "standard"
+        ],
+        "abstention_appropriate": false
+      }
+    },
+    {
+      "item_id": "F9-04",
+      "family": "F9-negative-control",
+      "substantive": false,
+      "ground_truth": {
+        "correct_placement": "no-defect",
+        "closure_legitimate": true,
+        "residual_burdens": [],
+        "admissible_routes": [
+          "standard"
+        ],
+        "abstention_appropriate": false
+      }
+    },
+    {
+      "item_id": "F9-05",
+      "family": "F9-negative-control",
+      "substantive": false,
+      "ground_truth": {
+        "correct_placement": "no-defect",
+        "closure_legitimate": true,
+        "residual_burdens": [],
+        "admissible_routes": [
+          "standard"
+        ],
+        "abstention_appropriate": false
+      }
+    },
+    {
+      "item_id": "F9-06",
+      "family": "F9-negative-control",
+      "substantive": false,
+      "ground_truth": {
+        "correct_placement": "no-defect",
+        "closure_legitimate": true,
+        "residual_burdens": [],
+        "admissible_routes": [
+          "standard"
+        ],
+        "abstention_appropriate": false
+      }
+    },
+    {
+      "item_id": "F9-07",
+      "family": "F9-negative-control",
+      "substantive": false,
+      "ground_truth": {
+        "correct_placement": "no-defect",
+        "closure_legitimate": true,
+        "residual_burdens": [],
+        "admissible_routes": [
+          "standard"
+        ],
+        "abstention_appropriate": false
+      }
+    },
+    {
+      "item_id": "F9-08",
+      "family": "F9-negative-control",
+      "substantive": false,
+      "ground_truth": {
+        "correct_placement": "no-defect",
+        "closure_legitimate": true,
+        "residual_burdens": [],
+        "admissible_routes": [
+          "standard"
+        ],
+        "abstention_appropriate": false
+      }
+    },
+    {
+      "item_id": "F9-09",
+      "family": "F9-negative-control",
+      "substantive": false,
+      "ground_truth": {
+        "correct_placement": "no-defect",
+        "closure_legitimate": true,
+        "residual_burdens": [],
+        "admissible_routes": [
+          "standard"
+        ],
+        "abstention_appropriate": false
+      }
+    },
+    {
+      "item_id": "F9-10",
+      "family": "F9-negative-control",
+      "substantive": false,
+      "ground_truth": {
+        "correct_placement": "no-defect",
+        "closure_legitimate": true,
+        "residual_burdens": [],
+        "admissible_routes": [
+          "standard"
+        ],
+        "abstention_appropriate": false
+      }
+    }
+  ]
+}

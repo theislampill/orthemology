@@ -1,0 +1,14 @@
+schema: orthemology-experiment-packet-status-v1
+packet_id: FCSP-2
+title: false-closure / selective-prediction benchmark v2 (manuscript 13.1; supersedes historical FCSP-1 per Decision 0020)
+readiness_state: READY_TO_RUN
+registration_state: PREREGISTRATION_READY
+required_pre_run_human_review: none declared
+readiness_evidence:
+  methods_gate: Decision 0022 — scripts/validate_experiment_methods.py (harness, payload isolation, leakage scans, endpoint and decision implementation, unit coherence, synthetic end-to-end)
+  deterministic_validation: tests/test_smoke.py
+  no_run_exists: true
+required_remaining_gates:
+  - owner authorization of execution (model spend, run responsibility)
+  - external preregistration (owner/external act; recommended before any run)
+licensed_now: nothing — no result, no adoption, no empirical claim
