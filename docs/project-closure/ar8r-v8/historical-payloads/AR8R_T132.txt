@@ -1,0 +1,44 @@
+AR8R-T132 — Same-token/same-respect reflection constraint
+Typed predicates
+
+For a target model m, let Prod_T(m) mean:
+
+    one determinate production token, in one fixed explanatory respect, is the total producer of every contrast-fixing condition required for the determinacy of that very production attribution.
+
+For a formal model f, let Forbidden_F(f) be the formal configuration ruled out by a proved nonaugmentation or self-dependence theorem.
+
+Let I : M_T -> M_F preserve the relevant production token, explanatory respect, and dependence incidence.
+Theorem
+
+If:
+
+    Prod_T(m) -> Forbidden_F(I(m)) for every target model m; and
+
+    the formal theorem proves not Forbidden_F(f) for every f in im(I);
+
+then not Prod_T(m) for every target model m.
+Proof
+
+Assume Prod_T(m). Assumption 1 yields Forbidden_F(I(m)), contradicting assumption 2. ∎
+Failure conditions
+
+The theorem licenses no target conclusion if the interpretation:
+
+    maps different production tokens to one formal node;
+
+    changes the explanatory respect;
+
+    replaces constitution with mere observation;
+
+    preserves outcomes while losing dependence direction;
+
+    or omits a target countermodel from the image.
+
+RB remains separately required for a world-directed reading when the formal interpretation could otherwise be merely representational.
+Disposition
+
+FORMAL_RESULT_CAN_BE_METAPHYSICALLY_CONSTRAINING: CONDITIONALLY_ESTABLISHED
+DIRECT_TRANSFER: REJECTED
+UNIVERSAL_STRICT_SEPARATION: REJECTED
+NECESSARY_BEING: NOT_ENTAILED
+

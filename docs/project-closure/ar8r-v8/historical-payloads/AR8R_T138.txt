@@ -1,0 +1,25 @@
+AR8R-T138 — Many-sorted minimal-nonintegration model
+Setting
+
+Let Sigma_M, Sigma_T, and Sigma_N be pairwise disjoint many-sorted signatures, possibly sharing only a fixed neutral interface Sigma_0. Let Theory_M, Theory_T, and Theory_N each have a model whose Sigma_0 reducts agree.
+Theorem T138.1 — conservative combination control
+
+There is a combined many-sorted model satisfying all three component theories and the agreed neutral interface.
+Construction
+
+Take the disjoint union of the nonshared sorts and interpretations, identifying only the fixed Sigma_0 reduct. Since no other symbol or axiom crosses tracks, each component sentence retains its truth value. ∎
+Theorem T138.2 — no integration without a bridge
+
+Suppose a proposed cross-track conclusion C is false in one such compatible combination. Then the union of the component theories does not entail C.
+Proof
+
+The combined structure is a countermodel to the entailment. ∎
+Scope
+
+This is a relative-consistency and nonentailment control, not a theorem that the real domains are disjoint. If current-main objects genuinely share identity, dependence, or truth conditions across tracks, those cross-axioms must be stated and tested. The result shows only that component success plus guarded coexistence does not by itself force an integrated metaphysics.
+Disposition
+
+R5_MINIMAL_NONINTEGRATION: STRENGTHENED_BY_EXPLICIT_MODEL_CONSTRUCTION
+GENERAL_THEOREM_NOVELTY: REJECTED
+INTEGRATED_MENISCUS: NOT_ENTAILED
+

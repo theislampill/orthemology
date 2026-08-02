@@ -1,0 +1,21 @@
+AR8R-T143 — Conservative bridges cannot create old-language conclusions
+Setting
+
+Let T be a theory in language L, and let B be a bridge theory in an expanded language L+. Say B is model-conservative over T when every model of T has an L+-expansion satisfying T+B.
+
+Let C be an L-sentence.
+Theorem
+
+If B is model-conservative over T and T does not entail C, then T+B does not entail C.
+Proof
+
+Since T does not entail C, choose M |= T + not C. Model conservativity gives an expansion M+ |= T+B. Expansion does not change the L-reduct, so M+ |= not C. Thus T+B does not entail C. ∎
+Cross-track consequence
+
+A bridge registry, provenance annotation, definitional extension, or representation-preserving migration that is conservative over the old track cannot by itself upgrade an old-language metaphysical, source-historical, or owner-authority conclusion.
+
+To change an old-track claim, a bridge must be nonconservative relative to that claim. Nonconservativity is necessary but not sufficient for truth: it may exclude countermodels merely by stipulation. T129's warrant/authority coordinate remains separate.
+
+CONSERVATIVE_BRIDGE: NO_OLD_LANGUAGE_STATUS_UPGRADE
+NONCONSERVATIVE_BRIDGE: POTENTIAL_FORCE_REQUIRES_INDEPENDENT_WARRANT
+

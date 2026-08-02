@@ -1,0 +1,103 @@
+
+AR8R-T353 — Self-Sealing Metaortheme and Output-Correction Countermodel
+Status at authorship
+PROVISIONAL_PENDING_FROZEN_INDEPENDENT_AUDIT
+Finite model
+
+Let the relevant evidence sign be z∈{+,−}. The truth target is
+
+y
+∗
+(+)=1,y
+∗
+(−)=0.
+
+A self-sealing governing metaortheme μ
+seal
+	​
+
+ maps both evidence states to confirmation:
+
+μ
+seal
+	​
+
+(+)=1,μ
+seal
+	​
+
+(−)=1.
+
+Its narrative routes are:
+
+supporting evidence  -> direct confirmation
+contrary evidence    -> "opposition/corruption confirms the theory"
+
+Thus the lower-order output is correct on the positive case and wrong on the negative case, while every possible evidence sign is absorbed into the same conclusion.
+
+Gettier-like output-local correction
+
+At the positive case, μ
+seal
+	​
+
+ produces the correct ortheme. Yet the route is not truth-connected across the relevant neighborhood: it gives the same result under the contrary case. Current correctness therefore does not establish proper orthing.
+
+Clamp the target output to 0 for one observed negative instance without changing μ
+seal
+	​
+
+. The current answer is corrected, but the next negative case again yields 1. This is output correction without restoration.
+
+Metaorthemic repair
+
+Define
+
+μ
+disc
+	​
+
+(+)=1,μ
+disc
+	​
+
+(−)=0.
+
+The intervention changes the governing discrimination rule rather than only the current output. Under a matched no-operation case:
+
+operation:     negative evidence -> 0
+no operation:  negative evidence -> 1
+
+The target-relative difference is caused by the metaorthemic repair in this finite model. A whole-field reread must still inspect every dependent conclusion that previously inherited support from μ
+seal
+	​
+
+.
+
+Stronger countermodel: downstream universal decoder
+
+A perfect downstream decoder can also map the self-sealing output plus independently available evidence to the correct target for every case. This restores the target while leaving μ
+seal
+	​
+
+ unchanged, but it intersects every deformation-to-target path with a sound repair. It confirms T351's cutset boundary and refutes the stronger “repair must occur at the original deformation” claim.
+
+What this establishes
+
+same lower-order conclusion can arise under a discriminating or self-sealing governing rule;
+
+a correct actual output can be Gettier-like because the route fails on nearby admissible cases;
+
+causal burden landing requires an operation/no-operation contrast;
+
+stable restoration is a property of the governing route and target field, not merely the current sentence.
+
+What this does not establish
+
+that any person or school instantiates this model;
+
+that disagreement is evidence of corruption;
+
+that the finite binary model captures whole-person fiṭrī restoration;
+
+that changing one inference rule causally restores human cognition.

@@ -1,0 +1,27 @@
+# AR8R-T139 — Reciprocal-power symmetry and orientation boundary
+
+## Setting
+
+Let `V` be a set of bearers and `P subseteq V×V` a reciprocal manifestation-partner relation. Let `Aut(P)` be the automorphism group of `(V,P)`. An intrinsic orientation selector is a function assigning an oriented relation `O(P)` such that:
+
+1. for every linked unordered pair `{x,y}`, exactly one of `(x,y)` and `(y,x)` belongs to `O(P)`; and
+2. the assignment is equivariant: `O(gP)=gO(P)` for every automorphism `g`.
+
+## Theorem
+
+If some automorphism `g` preserves `P` and swaps a linked pair `x,y`, no equivariant selector can orient that pair.
+
+## Proof
+
+Assume `(x,y) in O(P)`. Equivariance under the swap gives `(g(x),g(y))=(y,x) in O(P)`, contradicting exact-one orientation. The other initial orientation is symmetric. ∎
+
+## Consequence
+
+A perfectly reciprocal powers structure can identify a partner-orbit or plural interaction family without internally selecting one direction as metaphysically prior. A grounding orientation requires:
+
+```text
+an asymmetry already present in the target structure;
+an independently justified selector;
+or a richer profile that breaks the automorphism.
+
+The theorem does not show that grounding direction is unreal, nor that no asymmetric powers account exists.

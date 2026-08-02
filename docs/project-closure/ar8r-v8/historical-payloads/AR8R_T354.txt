@@ -1,0 +1,87 @@
+
+AR8R-T354 — Typed Restorative Preorder and Non-Scalar Boundary
+Status at authorship
+PROVISIONAL_PENDING_FROZEN_INDEPENDENT_AUDIT
+Why output accuracy and burden count are insufficient
+
+Consider two states for one target:
+
+s_false_pass:
+  current output correct
+  hidden live deformation
+  burden inventory empty
+  release = PASS
+
+s_truthful_hold:
+  current output withheld
+  deformation exposed
+  one live burden preserved with custody
+  release = HOLD
+
+Any scalar objective strictly increasing in current output accuracy and strictly decreasing in visible burden count ranks s_false_pass above s_truthful_hold. The governance architecture must sometimes prefer the latter because it removes false closure and makes the governing defect available for repair. Therefore neither accuracy nor “fewer burdens” can be the route-gradient objective.
+
+Typed state
+
+A declared restorative state is
+
+q=(TV,SA,TC,BC,DR,CE,HR,CU),
+
+where:
+
+TV: target visibility/faithfulness;
+
+SA: source adequacy;
+
+TC: truth connection;
+
+BC: burden custody and correct placement;
+
+DR: defeater responsiveness;
+
+CE: causal efficacy when intervention credit is claimed;
+
+HR: whole-field reread completeness;
+
+CU: source/version/state custody.
+
+Each coordinate carries its own evidence preorder. No numerical commensurability is assumed.
+
+Restorative dominance
+
+State q
+′
+ restoratively dominates q, written q⪯
+R
+	​
+
+q
+′
+, when:
+
+no coordinate loses an independently certified fact without an explicit supersession or invalidation record;
+
+no live burden disappears except by landing, evidence-based rejection, or complete transfer;
+
+no claim is strengthened beyond its warrant;
+
+every changed coordinate moves weakly upward in its local evidence preorder; and
+
+at least one coordinate strictly improves or a previously hidden burden becomes correctly visible while false closure is removed.
+
+Under reflexive and transitive local coordinate preorders plus transitive custody/supersession, ⪯
+R
+	​
+
+ is a preorder. It is generally partial: two interventions may trade source adequacy against causal power, or current output availability against truthful HOLD.
+
+Consequence for “route-gradient”
+
+Route-gradient is correctly read as a policy selecting among eligible moves under this typed preorder and burden priority—not as a differentiable scalar loss. The policy may rank a burden-revealing move ahead of a superficially accurate release and may leave incomparable moves under HOLD or forced exploration.
+
+Countermodel to scalarization
+
+Suppose move A improves current output accuracy but destroys source custody; move B preserves source custody and exposes a hidden burden but withholds output. Any scalar that ranks A and B must introduce a tradeoff coefficient not supplied by the noetic ontology itself. Varying that coefficient reverses the ranking. Thus a unique scalar route gradient is not identified without an independently warranted aggregation rule.
+
+Scope
+
+This is an order-theoretic architecture, not evidence that daee currently computes the preorder exhaustively. It supplies a falsifier: if the runtime's route choice cannot be reconstructed as preserving these typed constraints, “gradient” is merely decorative language.

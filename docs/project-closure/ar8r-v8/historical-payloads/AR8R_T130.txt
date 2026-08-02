@@ -1,0 +1,59 @@
+# AR8R-T130 — Image-relative reflection soundness and guard independence
+
+## Typed setting
+
+Let `M_T` be a class of target models and `M_F` a class of formal models. Let
+
+```text
+I : M_T -> M_F
+A_T, C_T : M_T -> {0,1}
+A_F, C_F : M_F -> {0,1}.
+
+I is an interpretation map. A_T and C_T are the target antecedent and conclusion; A_F and C_F are their proposed formal counterparts.
+Theorem T130.1 — image-relative reflection
+
+Assume:
+
+    antecedent preservation: for every m in M_T, A_T(m) -> A_F(I(m));
+
+    formal theorem on the image: for every m in M_T, A_F(I(m)) -> C_F(I(m));
+
+    conclusion reflection: for every m in M_T, C_F(I(m)) -> C_T(m).
+
+Then:
+
+for every m in M_T, A_T(m) -> C_T(m).
+
+Proof
+
+Fix m with A_T(m). Assumption 1 gives A_F(I(m)); assumption 2 gives C_F(I(m)); assumption 3 gives C_T(m). No assertion about formal models outside im(I) is required. ∎
+Theorem T130.2 — guard independence
+
+Neither antecedent preservation nor conclusion reflection follows from the other two assumptions.
+Antecedent-preservation countermodel
+
+Take singleton target and formal classes {m} and {f} with I(m)=f. Set
+
+A_T(m)=1, C_T(m)=0,
+A_F(f)=0, C_F(f)=0.
+
+The formal theorem and conclusion reflection are true vacuously, while A_T(m)->C_T(m) is false.
+Conclusion-reflection countermodel
+
+Set
+
+A_T(m)=1, C_T(m)=0,
+A_F(f)=1, C_F(f)=1.
+
+Antecedent preservation and the formal theorem hold, while conclusion reflection and the target implication fail.
+Track-T consequence
+
+A formal nonaugmentation, indistinguishability, or fixed-point theorem can be genuinely load-bearing in a world-directed argument. Its target force is conditional on two separately attackable interpretation claims:
+
+target antecedent -> formal antecedent on the image;
+formal conclusion on the image -> target conclusion.
+
+This does not presuppose strict separation. It also blocks direct transfer.
+Scope and novelty
+
+This is elementary compositional reasoning about an interpretation map. General theorem novelty is rejected. The project-specific contribution is the exact decomposition of the formal-to-metaphysical joint and its two independent failure modes.
