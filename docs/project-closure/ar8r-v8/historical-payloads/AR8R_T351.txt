@@ -1,0 +1,143 @@
+# AR8R-T351 — Load-Bearing Restorative Cutset Necessity
+
+## Status at authorship
+
+```text
+PROVISIONAL_PENDING_FROZEN_INDEPENDENT_AUDIT
+Typed setting
+
+Let a declared noetic dependency system be a tuple
+
+N=(G,X,Act,D,t,ε),
+
+where:
+
+G=(V,E) is a finite directed graph;
+
+X is the declared class of admissible cases;
+
+Act(x)⊆E is the active-edge set for case x;
+
+D⊆V is the set of registered persistent deformation nodes;
+
+t∈V is the target judgment or release node;
+
+ε(v,x)∈{0,1} records whether an error/deformation signal is live at node v for case x.
+
+An active directed path p=d⇝t, with d∈D, is error-effective for x when:
+
+every edge of p lies in Act(x); and
+
+if the local operations on p are left unchanged and ε(d,x)=1, then ε(t,x)=1.
+
+Let P
+x
+	​
+
+(D,t) be the family of all error-effective active paths from a registered deformation to the target in case x.
+
+An intervention I has an effective footprint F
+I
+	​
+
+⊆V∪E: the nodes or edges whose operative semantics or enabled/disabled status it changes. The intervention is strictly output-local at x
+0
+	​
+
+ when it changes only the released target value for x
+0
+	​
+
+, while leaving the generating deformation, routing, and local operations on every path in P
+x
+	​
+
+(D,t) unchanged for other admissible cases.
+
+Stable pathway restoration relative to X requires:
+
+for every x in X:
+  target error is absent;
+  no registered deformation remains connected to t by an
+  unchanged error-effective active path;
+  every removed/changed path is preserved in custody and reread.
+
+This is deliberately narrower than human interior restoration or sound fiṭrah. It is a declared-graph, target-relative pathway claim.
+
+Theorem
+
+For every intervention I, if there are x∈X and p∈P
+x
+	​
+
+(D,t) such that
+
+F
+I
+	​
+
+∩(V(p)∪E(p))=∅,
+
+and the intervention does not change the activation condition of p, then I does not establish stable pathway restoration relative to X.
+
+Equivalently, stable pathway restoration requires the intervention to do at least one of:
+
+alter or neutralize the relevant deformation source;
+
+alter the governing routing/activation rule so the path ceases to be active;
+
+intersect every active error-effective deformation-to-target path with an effective blocker or repair.
+
+Proof
+
+Assume an intervention I leaves some p∈P
+x
+	​
+
+(D,t) wholly outside its effective footprint and does not alter the path's activation. By definition of error-effectiveness, the unchanged local operations on p, together with ε(d,x)=1, entail ε(t,x)=1. Thus an admissible case remains in which the target error survives after the intervention. Stable pathway restoration requires absence of target error and absence of every unchanged error-effective path for every admissible case. The requirement fails. The three-way formulation is the contrapositive: if stable restoration holds, no such untouched path remains. ∎
+
+Dominator corollary
+
+If a deformation node d dominates t in the active flowgraph for every admissible case—every relevant source-to-target route passes through d—then an output-local correction that leaves d and all downstream error-effective routes unchanged cannot certify stable restoration. A repair may occur at d, at the routing rule, or at a downstream cut intersecting all d⇝t paths; the theorem does not require repair at d itself.
+
+SCC corollary
+
+If a self-sealing deformation occupies a strongly connected component K, contract G to its condensation DAG. Any stable pathway restoration must separate the condensation node [K] from the target or change the semantics inside K. This links the theorem to the previously admitted SCC/root-support results without treating SCC quotienting as source truth or restoration by itself.
+
+What this establishes
+
+A current correct output cannot certify stable restoration while a registered, error-effective deformation path remains untouched.
+
+A load-bearing metaorthemic intervention is naturally represented as an effective cut or semantic rewrite over all active deformation-to-error paths.
+
+The noetic draft's claim that downstream sentence correction can leave the governing structure unchanged receives an exact finite graph condition.
+
+What it does not establish
+
+that the registered graph is complete;
+
+that its deformation labels are true;
+
+that its target is sound fiṭrah;
+
+that a path cut is sufficient without sound local repair and no-new-path conditions;
+
+that human interior recognition or divine guidance has occurred;
+
+novelty of graph cuts, dominators, or path hitting.
+
+Countermodel to an overstrong formulation
+
+The stronger claim “stable restoration must alter the deformation node itself” is false. Put a sound decoder c downstream of the deformation and route every deformation-to-target path through c. If c correctly neutralizes every possible deformation signal for all x∈X, stable target behavior can be restored without changing the upstream deformation node. What is necessary is effective path interception or semantic rerouting, not intervention at one privileged location.
+
+Source and implementation anchors
+
+Noetic draft, Chapter 20: deformation is upstream of individual false propositions.
+
+Noetic draft, Chapter 21: load-bearing corrections require recursive reread of dependent claims.
+
+Noetic draft, Chapter 29: local minima may require source reordering or meta-level intervention.
+
+daee recursive-state-transitions.md: Land(B) -> R(H,Δ) and dependency/collapse-radius reread.
+
+daee topology-capacity suite: explicit dependency cycles, LoopBreak, land, reread, and terminal-state custody.

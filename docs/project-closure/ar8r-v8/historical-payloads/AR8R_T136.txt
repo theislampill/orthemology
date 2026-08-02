@@ -1,0 +1,12 @@
+AR8R-T136 — Finite policy stabilization does not establish future completeness
+Theorem
+
+Let X be a fixed finite state set and let P_0 subseteq P_1 subseteq ... be an increasing sequence of registered policy families. Their indistinguishability kernels form a descending chain and can strictly refine at most |X|-1 times.
+
+Even after the chain stabilizes, the current quotient is safe for a later policy p* exactly when the behavior of p* factors through the stabilized quotient. Stabilization alone does not prove that condition.
+Proof
+
+The first claim is T128. For the second, apply the factorization criterion to the stabilized quotient map and p*'s behavior. A counterexample is any pair merged by the quotient but separated by p*. ∎
+Consequence for closure
+
+A finite period with no new registered policy distinction does not authorize the universal claim that no future policy can expose a hidden burden. Closure must be relative to the declared policy family and state domain, or it needs an independent completeness theorem for future admissible policies.

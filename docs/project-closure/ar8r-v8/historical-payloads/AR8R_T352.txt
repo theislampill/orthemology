@@ -1,0 +1,68 @@
+
+AR8R-T352 — Guarded Sufficiency of a Restorative Cutset
+Status at authorship
+PROVISIONAL_PENDING_FROZEN_INDEPENDENT_AUDIT
+Additional guards
+
+Use the setting of T351. Let C⊆V∪E be the effective intervention footprint. Assume:
+
+G1 PATH COMPLETENESS
+For every admissible x, the declared path family contains every
+error-effective deformation-to-target route relevant to the target.
+
+G2 LOCAL EFFECTIVENESS
+Every path intersected by C is actually neutralized, repaired,
+or disabled at the intersected element.
+
+G3 LOCAL SOUNDNESS
+The intervention does not itself generate a target error.
+
+G4 NO NEW ERROR PATH
+The intervention creates no new error-effective path from any
+registered or newly generated deformation to t.
+
+G5 TARGET ADEQUACY
+The target predicate and correctness condition are independently
+fixed and visible to the declared profile.
+
+G6 CUSTODY AND REREAD
+Changed routes, held burdens, newly exposed paths, and downstream
+claims are reread; disappearing burdens require landing or an
+explicit source-preserving invalidation/transfer record.
+Theorem
+
+Under G1–G6, an intervention establishes stable pathway restoration relative to X iff, for every x∈X, its effective footprint intersects every path in P
+x
+	​
+
+(D,t) or changes the deformation/routing semantics so that the path is no longer error-effective.
+
+Proof
+
+Necessity is T351.
+
+Sufficiency. Fix x∈X. By G1 every relevant error-effective path is registered. By the cutset condition each such path is intersected or made non-effective. By G2 every intersected path is neutralized, repaired, or disabled. G3 prevents the repair from generating target error locally, and G4 prevents an alternative new path from restoring the error. Hence no registered deformation can transmit target error. By G5 the resulting target judgment is evaluated against an independently fixed target rather than a runtime-relative substitute. By G6 the claim is scoped to a completed whole-field reread with custody. Since x was arbitrary, stable pathway restoration holds for all x∈X. ∎
+
+Exact boundary
+
+The equivalence is conditional on completeness and soundness guards. A minimum vertex cut in an incomplete or semantically false graph is not a restoration certificate. It is only a cut in the representation.
+
+Hidden-path countermodel
+
+Let the registered graph contain one deformation path d→c→t, and let the intervention neutralize c. If the real operative system also contains an unregistered path d→u→t, the registered cut passes while target error persists. This defeats any unguarded move from graph-cut success to world-directed restoration and isolates G1 as load-bearing.
+
+Repair-created-path countermodel
+
+Let C disable the only old path but add a fallback route whose classifier repeats the same deformation. The old cut condition holds while restoration fails. This isolates G4.
+
+Relation to prior work
+
+The mathematical core is a path-separation/hitting-set characterization. The domain-level contribution, if any, lies in the joint guard structure linking:
+
+path completeness
++ semantic target adequacy
++ causal landing
++ burden custody
++ whole-field reread
+
+No general graph-theoretic novelty is claimed.

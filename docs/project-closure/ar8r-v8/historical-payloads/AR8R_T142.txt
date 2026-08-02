@@ -1,0 +1,29 @@
+AR8R-T142 — Least/greatest fixed-point authorization divergence
+
+Let the authorization lattice be P({a}) and define the monotone operator F(X)=X.
+Theorem
+
+lfp(F)=empty
+gfp(F)={a}.
+
+Proof
+
+Both empty and {a} are fixed points. They are respectively the least and greatest elements of the lattice, hence the least and greatest fixed points. ∎
+Consequence
+
+A purely self-supporting authorization cycle is rejected by least-fixed-point semantics and accepted by greatest-fixed-point semantics. The difference is not a proof defect; it is a substantive semantic choice.
+
+Thus T137 establishes only the registered well-founded/inductive authority boundary. A non-well-founded authority account must independently defend:
+
+    why coinductive support is appropriate for normative authority;
+
+    which circular structures are productive rather than vacuous;
+
+    how false or arbitrary fixed points are excluded;
+
+    and how owner or source authority is preserved.
+
+LFP_AUTHORIZATION: EXCLUDES_UNSEEDED_CYCLE
+GFP_AUTHORIZATION: MAY_INCLUDE_UNSEEDED_CYCLE
+CORRECT_AUTHORITY_SEMANTICS: NOT_DECIDED_BY_FIXED_POINT_MATHEMATICS
+

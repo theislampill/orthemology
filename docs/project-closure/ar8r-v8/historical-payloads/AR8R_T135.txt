@@ -1,0 +1,28 @@
+AR8R-T135 — Terminal-summary factorization
+Setting
+
+Let X be the authoritative campaign-state class, S:X->Y a summary representation, and
+
+E(x)=1 iff the authoritative model-actionable burden set at x is empty.
+
+Theorem
+
+An exact summary-only terminality rule e:Y->{0,1} satisfying
+
+e(S(x)) = E(x)
+
+for every admissible state exists exactly when E is constant on every fibre of S.
+Proof
+
+This is the standard factorization criterion. If E=e∘S, equal summaries have equal E. Conversely, if E is fibre-constant, define e(y) as the common E-value of any state in the fibre. ∎
+False-zero countermodel
+
+Two authoritative states may have the same prose summary while one contains an open burden and the other does not. Then no summary-only validator can be both sound and complete.
+
+Adding E itself as a summary field restores recoverability but is an oracle insertion unless it is derived fail-closed from the authoritative burden sources.
+Status
+
+FALSE_ZERO_INCIDENT: EXACT_FIBRE_NONFACTORIZATION_WITNESS
+GENERAL_MATHEMATICAL_NOVELTY: REJECTED
+GOVERNANCE_APPLICATION: ESTABLISHED
+

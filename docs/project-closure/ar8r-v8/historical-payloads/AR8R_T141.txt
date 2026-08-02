@@ -1,0 +1,29 @@
+AR8R-T141 — Burden-emptiness antitonicity and irreversible terminality boundary
+Setting
+
+Let B range over sets of authoritative model-actionable burdens ordered by inclusion. Define
+
+Terminal(B)=1 iff B is empty.
+
+Theorem T141.1 — antitonicity
+
+If B subseteq B', then Terminal(B') <= Terminal(B).
+Proof
+
+If B' is empty, then B is empty. Equivalently, adding burdens cannot turn a nonterminal state into a terminal one under this predicate. ∎
+Theorem T141.2 — irreversible-terminality boundary
+
+If the system allows a transition from B=empty to a nonempty B', an irrevocable terminal flag cannot remain extensionally equal to Terminal along that transition.
+Proof
+
+At B=empty, exact terminality is true. At nonempty B', it is false. An irrevocable flag remains true and therefore ceases to match the authoritative predicate. ∎
+Repair alternatives
+
+Exact closure requires at least one of:
+
+revocable terminal status;
+a completion barrier excluding future admissible burdens;
+a versioned terminal status scoped to a frozen burden universe;
+or a stronger invariant proving every later state remains burden-empty.
+
+A period of policy stabilization alone supplies none of these.

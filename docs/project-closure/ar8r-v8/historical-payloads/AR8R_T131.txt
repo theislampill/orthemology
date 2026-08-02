@@ -1,0 +1,22 @@
+AR8R-T131 — Off-image surplus boundary
+
+Use the typed setting of T130.
+Theorem
+
+For sound transfer to the target class, it is sufficient that
+
+A_F(f) -> C_F(f)
+
+hold for every f in im(I). A counterexample at f notin im(I) does not refute the target transfer.
+
+Conversely, validity of A_T -> C_T over M_T does not entail the unrestricted formal theorem over all of M_F unless every relevant formal countermodel is represented in the image, or an independent completeness/surjectivity condition is supplied.
+Proof
+
+The first claim is exactly T130.1. For the converse, extend M_F by an off-image point g with A_F(g)=1 and C_F(g)=0. This changes no target model or image fact, so the target implication may remain valid while the unrestricted formal theorem fails. ∎
+Consequence
+
+Formal surplus may be harmless for one target application, while target underrepresentation is dangerous. The relevant completeness question is not whether the formal theory covers every imaginable formal model, but whether its image contains every target-relevant countermodel.
+
+GENERAL_NOVELTY: REJECTED
+STATUS: SCOPED_REPRESENTATION_BOUNDARY
+

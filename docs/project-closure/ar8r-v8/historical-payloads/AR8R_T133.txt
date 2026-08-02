@@ -1,0 +1,26 @@
+AR8R-T133 — Adapted internal-signal nonaugmentation
+Setting
+
+Let X be a finite hidden-input class and let a fixed oracle answer queries. At time t, an algorithm has an oracle transcript H_t. It may also receive an auxiliary signal D_t drawn from a kernel
+
+K_t(- | H_t)
+
+that is independent of the hidden input conditional on the current transcript. The algorithm may use private randomness, the past auxiliary signals, and the transcript when selecting its next query.
+Theorem T133.1 — simulation
+
+Every such algorithm has an exactly transcript-distribution-equivalent algorithm with no external auxiliary channel: the simulator samples D_t internally from K_t(-|H_t).
+Proof
+
+Couple the two runs inductively. At time zero their transcript distributions agree. Conditional on the same H_t, both sample D_t from the same state-independent kernel and therefore choose the next query according to the same conditional law. The oracle response then produces the same distribution on H_{t+1}. Induction gives equality of full transcript, stopping-time, and output laws. ∎
+Theorem T133.2 — finite zero-error consequence
+
+If the original algorithm is zero-error on every x in X and has almost-sure worst-case depth at most d, then a deterministic algorithm of depth at most d exists.
+Proof
+
+By T133.1 all external auxiliary randomness can be treated as internal randomness. For each x, the set of random seeds causing error or depth greater than d has measure zero. Since X is finite, the union of these bad-seed sets has measure zero. Fix a seed outside the union. ∎
+Scope
+
+This does not cover a state-sensitive side channel, a new authenticated source, a changed oracle family, noisy error regimes, expected-cost bounds, or infinite input classes without an additional uniformity argument.
+Prior-art relation
+
+The simulation is an adapted-garbling application; the experiment-order mechanism is standard Blackwell theory. The finite seed-fixing consequence is elementary.

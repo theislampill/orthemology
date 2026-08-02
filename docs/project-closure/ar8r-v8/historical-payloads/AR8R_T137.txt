@@ -1,0 +1,30 @@
+AR8R-T137 — Circular authorization under least-fixed-point semantics
+Setting
+
+Let B be a set of base-authorized claims and R a finite set of monotone inference rules P -> h, where P is a finite premise set. Define the immediate-consequence operator
+
+Gamma(X) = B union { h : some rule P -> h has P subseteq X }.
+
+The well-founded derivable claims are lfp(Gamma).
+Theorem
+
+Let a be an authorization atom. If:
+
+    a notin B; and
+
+    every rule with head a has a among its premises;
+
+then a notin lfp(Gamma).
+Proof
+
+Let X_0=B and X_{n+1}=Gamma(X_n). By induction, a notin X_n: it is absent at stage zero, and any rule that could add it requires it already. Therefore it is absent from the union of all finite stages, which is the least fixed point for this finitary monotone system. ∎
+Boundary
+
+A greatest-fixed-point or explicitly non-well-founded semantics may admit a, but that is a different authority semantics and must be defended independently. A circular rule cannot silently count as a least-fixed-point authorization.
+Application
+
+A bridge cannot acquire authority solely from a conclusion whose migration that bridge is itself required to authorize. Independent base authority or a noncircular derivation is required.
+
+GENERAL_NOVELTY: REJECTED
+STATUS: SCOPED_PROOF_THEORETIC_AUTHORITY_BOUNDARY
+
