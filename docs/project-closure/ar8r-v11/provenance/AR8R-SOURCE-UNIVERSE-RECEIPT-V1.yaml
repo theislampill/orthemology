@@ -1,0 +1,60 @@
+schema: ar8r-v11-source-universe-receipt-v1
+privacy_rule: Row-level maps omit private message IDs, URLs, local paths, filenames,
+  titles, and transcript bodies.
+source_universes:
+- surface: V7_MESSAGE_INDEX
+  sha256: 3d14147ac8c1d83fc36df537dc3f320e66be011d402fe9ef34987339b27d4e1c
+  rows: 95
+- surface: V7_ACTIVITY_INDEX
+  sha256: f7c7b9cdee590a422da7b06dabfc8bc3a75aebf071ac47db9e2696210ae8e762
+  rows: 44
+- surface: V7_ATTACHMENT_INDEX
+  sha256: 671bdfbfe22d95fa806e90577bc3e6a7d9118efb954d31305c3433c07fca2d2c
+  rows: 1127
+- surface: V8_ATTACHMENT_FINAL_CLASSIFICATION
+  sha256: fe55ee62deef37b35ddb0f1c9f4cba352f4a2ee4cfe2b1fea15e19da1855a6b6
+  rows: 1127
+- surface: V8_FIRST_PARTY_ATTACHMENT_UNIVERSE
+  sha256: 8d2aa76355f454461d866524ee350e56b415446b2a34a32f1ef44353cea16cd1
+  rows: 464
+- surface: V8_ACTIVITY_ASSESSMENT
+  sha256: 4aa36d103767bbfd065cb2e138a54f7b482cf7aa09aade1b6183639bca064821
+  rows: 1490
+- surface: V8_ACTIVITY_FILE_REFERENCES
+  sha256: f561114d0c3af1218e6fc144a6fdf35009dd4483d19be2835e5f75d48006a547
+  rows: 17293
+- surface: V8_DOWNLOADED_FILES
+  sha256: 371bc9f43ed844955e8e988262e893fedb3d4d96c5e8b952c035a7e8c3d996aa
+  rows: 65
+- surface: ARCHIVE_INTEGRITY
+  sha256: 8fd3c473e2a9caada904c0c611ca69d20d2f9eae8c54bde8735216561ea85e3e
+  archive_records: 23
+  non_directory_members: 62399
+  unique_member_hashes: 9968
+closure_maps:
+- name: message_closure_map
+  path: AR8R-MESSAGE-CLOSURE-MAP-V1.csv
+  sha256: c4fa2d3e0674524d78edc209e7d0b04d7c8b3d34a62a4b1d6b05c6b54ce308e3
+  rows: 95
+- name: attachment_closure_map
+  path: AR8R-ATTACHMENT-ROW-CLOSURE-MAP-V1.csv
+  sha256: 58a3c84258dff7ad49e9aa1e1a710728213f4cd9be2be84e6682ba0482a48d93
+  rows: 1127
+- name: activity_entry_closure_map
+  path: AR8R-ACTIVITY-ENTRY-CLOSURE-MAP-V1.csv
+  sha256: f53f430cef1862b7f7f86e9d42d8e68e9c736832f687befbf24b94ee633d17ec
+  rows: 1490
+- name: activity_reference_closure_map
+  path: AR8R-ACTIVITY-FILE-REFERENCE-CLOSURE-MAP-V1.csv
+  sha256: 36677b6f747fa5b9e1b0fdd6b80c3504e7b59dbbe7a7cfc0f4f54a97c468a1fe
+  rows: 17293
+- name: archive_member_closure_map
+  path: AR8R-ARCHIVE-MEMBER-HASH-CLOSURE-MAP-V1.csv
+  sha256: a000203472dba8e004ef40a3548dc2cc0c867bc9b77f455b6cd9b65a2aa5c9c4
+  rows: 9968
+terminal_rule: Known public-safe material maps to explicit V11 owners; all other row/hash
+  evidence remains private-local or deferred and cannot silently acquire repository
+  authority.
+completeness_boundary: Structural universe closure is established for the listed immutable
+  ledgers. Semantic adoption remains claim-level and is governed by the V11 evidence
+  catalog, reconciliation ledger, audits, and owner gates.

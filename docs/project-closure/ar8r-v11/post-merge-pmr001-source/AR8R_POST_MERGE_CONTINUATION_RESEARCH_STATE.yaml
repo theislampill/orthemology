@@ -1,0 +1,48 @@
+schema: ar8r-post-merge-continuation-research-state-v1
+campaign: AR8R_POST_MERGE_MENISCUS_PROGRAM_V1
+timing_ledger: POST_MERGE_AR8R_SUBSTANTIVE_RESEARCH_V1
+historical_authority:
+  duration: '09:41:25.405101139'
+  latest_segment: 357
+  theorem_origin: V5
+  natural_closure: NOT_REACHED
+  repository_main: cc91f41fec364ea3910b80d57252bb1e0a050278
+  changed: false
+post_merge_state:
+  latest_closed_wave: PMR-001
+  latest_tranche: PMR-001-TRANCHE-001
+  integrated_champion: NONE
+  meniscus_status: MENISCUS_NOT_REACHED
+  current_wave: PMR-002
+  current_wave_status: READY_NOT_STARTED
+  exact_next_executable_action: Begin the PMR-002 bounded ancestry search for exact T162-T172, T184-T190, T201-T205,
+    and T254-T255 sources; stop at the 15-percent retrieval cap, then freeze PMR-M4-01 qiyas-al-awla guard eligibility
+    and its first guard-deletion countermodel.
+  owner_decision_required: false
+  GitHub_mutation_authorized: false
+  Codex_status: PARKED
+completed_this_tranche:
+- PRE_PMR_CONTINUITY_CORRECTION_APPLIED
+- PMR-M3-01_PROVED_CONDITIONAL_WITH_VALIDATED_COUNTERMODELS
+- PMR-R5-01_VALIDATED_RIVAL_COMPARISON
+- PMR-AGCOM-01_ESTABLISHED_AS_AR2_AR3_SPECIALIZATION
+- PMR-SRC-FITRAH-01_SOURCE_SUPPORT_STRENGTHENED
+- CANDIDATE_1_DOSSIER_CONSOLIDATED
+- T299_T300_NEGATIVE_PILOT_RESTORED_AND_RETIRED
+- FALSE_MENISCUS_CONTROL_ACTIVE
+- ALL_88_SURFACES_INITIALIZED
+- PMR001_SUBGRAPH_44_EDGES_POPULATED
+blocked_but_nonfatal:
+- TENSOR_A_G_PROTOCOL_RETRIEVAL_REQUIRED
+- exact TAC/SAC packet absent
+- exact later daee snapshot absent
+- exact historical T162-T205 and T254-T255 packets not mounted
+- Candidate 1 external review and prior-art review open
+- Arabic-primary verification open
+post_merge_timing:
+  latest_tranche_added_duration: '00:10:35.267741439'
+  latest_tranche_added_seconds: '635.267741439'
+  cumulative_duration: '00:10:35.267741439'
+  cumulative_seconds: '635.267741439'
+  eight_hour_floor_status: NOT_YET_REACHED
+  historical_duration_unchanged: true

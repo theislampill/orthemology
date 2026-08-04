@@ -1,0 +1,44 @@
+schema: ar8r-r5-champion-challenger-matrix-v1
+wave: PMR-001
+champion: NONE
+historical_packet_status: PARTIAL_CONTINUITY_ONLY
+models:
+  R5-BARE:
+    status: HISTORICAL_MODEL_REFERENCE_EXACT_PACKET_REQUIRED
+  R5-SOURCE-ORDER:
+    status: HISTORICAL_MODEL_REFERENCE_EXACT_PACKET_REQUIRED
+  R5-SOURCE-PRESERVING:
+    status: HISTORICAL_MODEL_REFERENCE_EXACT_PACKET_REQUIRED
+  R5-WORLD-ORTHABILITY-FIELD:
+    status: HISTORICAL_MODEL_REFERENCE_EXACT_PACKET_REQUIRED
+  R5-WORLD-IMPERSONAL-RESPONSE:
+    status: HISTORICAL_MODEL_REFERENCE_EXACT_PACKET_REQUIRED
+  PMR-CM-M3-IMPERSONAL-ORIGINATOR:
+    status: VALIDATED_POST_MERGE_COUNTERMODEL
+    satisfies:
+      - necessary existence
+      - external actuality
+      - originated effect
+      - originator relation
+    withholds:
+      - Will guard
+      - Power guard
+      - Knowledge guard
+      - scoped Creator predicate
+    excluded_or_transformed_by:
+      - independently justified G_WPK
+      - independently justified B_creator
+    nonclaims:
+      - not a complete metaphysical world
+      - not source-preserving relative to every Athari premise
+      - no historical R5 identity
+other_live_controls:
+  - concrete impersonal actualizer
+  - plural primitive resources
+  - abstract constraint plus concrete actualizer
+  - powers/dispositional essentialism
+  - necessary impersonal structure
+  - brute necessary modal facts
+  - non-well-founded or circular dependence
+  - infinite regress
+  - grounding irrealism

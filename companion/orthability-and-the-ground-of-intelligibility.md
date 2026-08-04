@@ -152,3 +152,7 @@ Sources actually cited in this paper. Bibliographic records live in [`references
 - Stern, Robert, and Tony Cheng (2023). "Transcendental Arguments." *Stanford Encyclopedia of Philosophy* (archive-pinned edition per the R3 ledger). <!-- ref:sep-transcendental -->
 - Stroud, Barry (1968). "Transcendental Arguments." *Journal of Philosophy* 65(9). <!-- ref:stroud1968transcendental -->
 - Turner, Jamie B. (2022). "Ibn Taymiyya on Theistic Signs and Knowledge of God." *Religious Studies* 58. <!-- ref:turner2022signs -->
+
+## Later V11 authority qualification
+
+The positive underived-ground and Necessary-Being language in this companion is a historical philosophical argument, not the current audit verdict. Current authority is the V11 Track T owner and B0–B16 bridge ledger. They preserve `NECESSARY_BEING_NOT_DEDUCTIVELY_ESTABLISHED`, keep the world-directed bridge conditional, and retain nominalist, conceptualist, plural, powers, and other live rivals. This qualification does not rewrite the historical prose or claim that those rivals are refuted.

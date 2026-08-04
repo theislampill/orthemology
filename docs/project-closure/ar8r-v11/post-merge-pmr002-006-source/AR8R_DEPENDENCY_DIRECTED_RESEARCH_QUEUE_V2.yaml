@@ -1,0 +1,74 @@
+schema: ar8r-dependency-directed-research-queue-v2
+campaign: AR8R_POST_MERGE_MENISCUS_PROGRAM_V1
+current_wave: PMR-007
+natural_closure: NOT_REACHED
+queue:
+  - order: 1
+    task_id: PMR-007-LANG-VERSION-01
+    kind: FORMAL_PROOF_OR_COUNTERMODEL
+    title: same bytes under changed source/target version and applicability contract
+    status: READY
+    prerequisites:
+      - PMR-AGCOM-01
+      - PMR-AGCOM-02
+      - PMR-AGCOM-06
+      - PMR-LANG-01
+      - PMR-LANG-02
+      - AR3 RP-T2 and RP-T40 ancestry comparison
+    output:
+      - one same-bytes/different-version applicability countermodel
+      - one guarded version-transport characterization or exact no-new-theorem adjudication
+      - cold audit, repair, fresh rereview
+    lanes: [S04, S32, S39, S46, S55, S68, S82]
+  - order: 2
+    task_id: TAC-EXACT-PACKET-INTAKE
+    kind: READ_ONLY_RECONSTRUCTION
+    title: exact TAC/SAC theorem, source, and relation-definition intake
+    status: BLOCKED_ON_EXACT_SOURCE
+    nonblocking_for: [PMR-007-LANG-VERSION-01]
+  - order: 3
+    task_id: ARABIC-PRIMARY-ATTRIBUTE-LOCUS
+    kind: SOURCE_VERIFICATION
+    title: Arabic-primary qiyas and Speech-locus verification
+    status: BLOCKED_ON_EXACT_SOURCE_OR_SPECIALIST
+    nonblocking_for: [PMR-007-LANG-VERSION-01]
+  - order: 4
+    task_id: DAEE-FULL-STACK-AUDIT
+    kind: IMPLEMENTATION_AUDIT
+    title: exact later daee snapshot versus partial cross-layer binding
+    status: BLOCKED_ON_EXACT_SOURCE
+  - order: 5
+    task_id: FUSHA-OCCURRENCE-IMPLEMENTATION-AUDIT
+    kind: IMPLEMENTATION_AUDIT
+    title: occurrence projection and qamus transclusion against actual Fusha bytes
+    status: BLOCKED_ON_EXACT_SOURCE
+  - order: 6
+    task_id: C1-EXTERNAL-REVIEW-PACKET
+    kind: EXTERNAL_REVIEW
+    title: Candidate 1 mathematical and prior-art review
+    status: BLOCKED_ON_OWNER_EXTERNAL_TRANSMISSION
+  - order: 7
+    task_id: TENSOR-A-G-EXACT-RETRIEVAL
+    kind: READ_ONLY_RECONSTRUCTION
+    title: verbatim seven-representation protocol
+    status: BLOCKED_ON_EXACT_SOURCE
+  - order: 8
+    task_id: SUCCESSOR-T299-T300-DESIGN
+    kind: EMPIRICAL_EXECUTION
+    title: materially new support-separated and causally identified experiment
+    status: FUTURE_RESEARCH_RESIDUAL_OWNER_GATED
+    prohibition: do not rerun retired P661-P668 configuration
+completed_in_this_block:
+  - PMR-002-RETRIEVAL-BOUND
+  - PMR-M4-01
+  - PMR-LANG-01
+  - PMR-UG-01-V3
+  - PMR-002-CROSSWALK
+  - PMR-M5-01
+  - PMR-M5-02
+  - PMR-M5-03
+  - PMR-AGCOM-02
+  - PMR-FAMILY-01
+  - PMR-LANG-02
+  - PMR-TAC-01
+  - PMR-AGCOM-06

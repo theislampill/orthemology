@@ -26,6 +26,10 @@ jobs:
         run: python scripts/validate_repo.py
       - name: AR8R V8 recovery provenance and payload hashes
         run: python scripts/validate_ar8r_recovery.py
+      - name: AR8R V11 campaign reconciliation and publication boundary
+        run: |
+          python tests/test_ar8r_v11_reconciliation.py
+          python scripts/validate_ar8r_reconciliation.py
       - name: Generated project state — drift check (R4, Decision 0014)
         run: python scripts/generate_current_state.py --check
       - name: State-contract convergence proof (commit boundary + tamper controls)

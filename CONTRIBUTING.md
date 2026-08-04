@@ -12,7 +12,7 @@ Every load-bearing related-work or scholarly claim needs a row in the current so
 
 ## No empirical overclaiming
 
-Nothing in this repository reports a run experiment. The designed studies stand at their canonical [`experiments/experiment-status.yaml`](experiments/experiment-status.yaml) states (FCSP-2/ER-2 `READY_TO_RUN`; terminology Pilot-0 v2 `READY_FOR_HUMAN_MATCHING_REVIEW`; Pilot 1 / confirmatory templates `DRAFT`) — none run, none externally registered, no term adopted. Do not write a scalar "everything is READY TO RUN" claim when the packet states differ. Words like "validated", "shown", "demonstrated" are reserved for bounded conformance results (internally conformance-checked over the declared schemas, examples, fixtures, and adversarial operators) and must say so.
+None of the repository's designed public experiment packets has been run. They stand at their canonical [`experiments/experiment-status.yaml`](experiments/experiment-status.yaml) states (FCSP-2/ER-2 `READY_TO_RUN`; terminology Pilot-0 v2 `READY_FOR_HUMAN_MATCHING_REVIEW`; Pilot 1 / confirmatory templates `DRAFT`) — none externally registered and no term adopted. A separately classified historical internal synthetic AR8R pilot may be summarized only with its exact negative disposition, methodological limits, and zero framework-validation credit; it is not a public packet. Do not write a scalar "everything is READY TO RUN" claim when the packet states differ. Words like "validated", "shown", and "demonstrated" are reserved for explicitly bounded conformance or synthetic results and must name that boundary.
 
 ## Decision-record policy
 

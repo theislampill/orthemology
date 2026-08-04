@@ -1,0 +1,50 @@
+schema: ar8r-post-merge-thread-custody-receipt-v1
+status: COMPLETE_ACCESSIBLE_THREAD_ACCOUNTED_FOR_WITH_PRECISE_BOUNDARIES
+capture_counts:
+  conversation_turn_slots: 30
+  populated_messages: 24
+  user_messages: 15
+  assistant_final_responses: 9
+  interrupted_activity_only_turns: 3
+  empty_interrupted_placeholders: 3
+  worked_for_controls: 9
+  activity_panels_captured: 8
+  activity_panels_unavailable_with_evidence: 1
+  nested_activity_entry_receipts: 58
+  attachment_expansion_surfaces: 8
+  file_card_downloads_hashed: 152
+  response_button_downloads_hashed: 26
+  total_downloads_hashed: 178
+  archive_instances_tested: 10
+  archive_member_rows_hashed: 957
+  historical_link_drift_incidents: 6
+  file_card_vs_companion_archive_byte_conflicts: 8
+  selected_file_cards_absent_by_same_basename_from_companion_archives: 6
+archive_integrity:
+  archives_passing: 10
+  archives_failing: 0
+  unsafe_paths: 0
+  duplicate_member_paths: 0
+  crc_failures: 0
+  exact_duplicate_archive_groups: 0
+version_policy:
+  selected_public_source_surface: VISIBLE_FILE_CARD_BYTES
+  companion_archive_versions_merged_into_selection: false
+  conflict_manifest: AR8R-POST-MERGE-FILE-CARD-ARCHIVE-CONFLICTS-V1.yaml
+access_boundaries:
+  - code: ACTIVITY_FLYOUT_UNAVAILABLE
+    count: 1
+    detail: The final Worked-for control rendered, but no flyout or nested activity body surfaced after scoped DOM and coordinate attempts.
+  - code: HISTORICAL_LINK_UNAVAILABLE
+    count: 2
+    detail: Two user-uploaded files could be viewed only partially or returned Forbidden and exposed no supported download control.
+privacy_boundary:
+  private_transcript_committed: false
+  raw_activity_committed: false
+  browser_dom_or_screenshots_committed: false
+  message_or_session_identifiers_committed: false
+  signed_urls_committed: false
+  bulk_private_archives_committed: false
+conversation_mutated: false
+messages_sent: 0
+github_mutated_by_harvest: false

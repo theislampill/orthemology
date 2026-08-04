@@ -1,0 +1,19 @@
+schema: ar8r-source-formal-crosswalk-receipt-v2
+source_status_delta:
+  sha256: a8173daed449fda622e2077b2fa06b761bc8d7c15d0bcbd8a3b4c0574f6a8062
+  exact_entry_count: 46
+  publication: HASH_BOUND_SUMMARY_NOT_VERBATIM_PRIVATE_SOURCE_IMPORT
+source_formal_daee_lean_crosswalk:
+  sha256: 05b8cc557e897f33a5c6a01b0d6bb1761ebd438d83242d3b08e2f337d14c6f0c
+  exact_row_count: 27
+  publication: HASH_BOUND_SUMMARY
+binding_rule: >-
+  Source bytes, translated meaning, formal predicate, theorem proof, world
+  bridge, daee implementation, Lean source, parse, elaboration, kernel checking,
+  and owner adoption remain separate coordinates.
+forbidden_promotions:
+  - source citation to source truth
+  - translation to Arabic-primary verification
+  - formal correspondence to world truth
+  - Lean source name to parsed, elaborated, or kernel-checked proof
+  - internal rereview to external specialist review

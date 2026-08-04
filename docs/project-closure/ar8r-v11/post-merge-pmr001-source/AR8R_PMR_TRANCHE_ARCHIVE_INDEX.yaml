@@ -1,0 +1,42 @@
+schema: ar8r-pmr-tranche-archive-index-v1
+campaign: AR8R_POST_MERGE_MENISCUS_PROGRAM_V1
+historical_authority:
+  duration: '09:41:25.405101139'
+  latest_segment: 357
+  changed: false
+repository_authority: cc91f41fec364ea3910b80d57252bb1e0a050278
+GitHub_changed: false
+entries:
+  - tranche_id: PMR-001-TRANCHE-001
+    wave_id: PMR-001
+    wave_status: COMPLETE_AT_SELECTED_SCOPE
+    archive:
+      filename: AR8R_PMR001_TRANCHE001_CHECKPOINT.zip
+      sha256: 024698d4bc43d57c54fda813004810f8310917b6eb870590a36b9430d92eb636
+      size_bytes: 117672
+      internal_root: PMR-001_TRANCHE-001/
+      file_count: 55
+      internal_sha256sums_sha256: 079a19d414ccc18d934599d76fb9e40828936ef9d682a3c40f2653b53d6709eb
+      report_included: false
+      report_exclusion_reason: avoid hash self-reference; report is append-only adjacent custody
+    report:
+      path: AR8R_PMR_TRANCHE_REPORTS/PMR-001-TRANCHE-001.md
+      sha256: 5feced3b9a94a03b7a8eee6183bcf6baec03b55802d8d86540a0b20052a10aca
+    verification:
+      status: PASS
+      json: AR8R_PMR001_TRANCHE001_ARCHIVE_VERIFICATION.json
+      json_sha256: 40961f20ed54e9ad844331be3eb71f4556cd172ca85781fbf665ef1a7e2fd666
+      markdown: AR8R_PMR001_TRANCHE001_ARCHIVE_VERIFICATION.md
+      markdown_sha256: 59b9e2b444cf6dfe8acde83dc5d412e47b071a63226131df8d914d929f44ced5
+      unsafe_paths: 0
+      missing_files: 0
+      extra_files: 0
+      byte_mismatches: 0
+    substantive_duration_added: '00:10:35.267741439'
+    cumulative_post_merge_duration: '00:10:35.267741439'
+    owner_decision_required: false
+    exact_next_action: >-
+      Begin PMR-002 bounded ancestry search for T162-T172, T184-T190,
+      T201-T205, and T254-T255; stop at the 15-percent retrieval cap;
+      then freeze PMR-M4-01 qiyas-al-awla guard eligibility and its first
+      guard-deletion countermodel.

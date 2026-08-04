@@ -1,0 +1,34 @@
+schema: PMR007_FORMALIZATION_MAP_V2
+kernel_status: NOT_RUN
+items:
+- id: COB-1
+  suggested_modules:
+  - FiniteGame.Pre
+  - FiniteGame.CoreEntry
+  - FiniteGame.CoBuchi
+  formalization_status: LEAN_READY_STATEMENT_ONLY
+- id: TRC-1
+  suggested_modules:
+  - TemporalCertificate.ModelDigest
+  - TemporalCertificate.Check
+  formalization_status: EXECUTABLE_PYTHON_ONLY
+- id: VCT-1
+  suggested_modules:
+  - ReasonTransport.Path
+  - VersionEligibility.Monotonicity
+  formalization_status: EXECUTABLE_PYTHON_ONLY
+- id: MLT-1/SMRB-1
+  suggested_modules:
+  - TransportBundle.Holonomy
+  - TransportBundle.UniqueRoot
+  formalization_status: LEAN_READY_STATEMENT_ONLY
+generated_at: '2026-08-03T15:50:48.115703+00:00'
+round17_round18_additions:
+- id: PMR-007-RSD-1
+  status: ADMITTED_POST_MERGE_SCOPED_RESULT
+  formalization_opportunity: finite transport bundle, holonomy, quotient, and same-fibre
+    collision criterion
+- id: PMR-007-ORTC-V4
+  status: ADMITTED_POST_MERGE_SCOPED_RESULT
+  formalization_opportunity: finite set cover, compatible partitions, ambiguity intersections,
+    and rank-certificate selector

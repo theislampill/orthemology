@@ -1,0 +1,46 @@
+schema: PMR007_ROUND20_ADMISSION_OVERLAY_V1
+round: PMR-007-FRONTIER-ROUND20
+pmr_identity: PMR-007-PRRC-1
+title: Static pathwise provenance-root robustness by transversal margin
+provenance_class: ADMITTED_POST_MERGE_SCOPED_RESULT
+historical_identity: null
+status: ADMITTED_POST_MERGE_SCOPED_RESULT
+typed_setting: finite static complete fixed-path systems with actual authenticated required-root identities and conjunctive dependency semantics
+statement: portfolio is statically pathwise f-root-robust iff kappa_root exceeds f
+proof_status: HUMAN_PROOF_PLUS_PRIMARY_AND_DISTINCT_EXECUTABLE_REREVIEW
+countermodel_status: COPIED_ROOT_COMMON_BOTTLENECK_INCOMPATIBLE_DYNAMIC_ADAPTIVE_ALIAS_PARTIAL_REGISTRY_REDUNDANT_SUPPORT_CONTROLS_PRESERVED
+cold_audit_status: REPAIR_REQUIRED
+blocking_findings:
+  - R20-F01
+  - R20-F02
+  - R20-F03
+repair_status: ALL_BLOCKING_FINDINGS_REPAIRED_IN_V2
+fresh_rereview_status: PASS_WITH_NONBLOCKING_SCOPE_AND_AUTHORITY_NOTES
+general_mathematical_novelty: ZERO
+historical_origin_credit: ZERO
+theorem_family_relation:
+  - STANDARD_HYPERGRAPH_TRANSVERSAL
+  - COMPOSITIONAL_COROLLARY_OF_AR8R_T351_T352
+  - USEFUL_IMPLEMENTATION_CERTIFICATE
+external_review_status: OPEN
+owner_adoption_status: PENDING
+repository_proposal_status: EXTERNAL_REVIEW_REQUIRED
+nonclaims:
+  - dynamic_or_adaptive_corruption
+  - incomplete_or_rerouting_path_systems
+  - incompatible_or_resource_conflicting_repairs
+  - displayed_label_authentication
+  - evidential_independence
+  - target_truth
+  - causal_landing
+  - whole_field_reread
+  - human_or_fitri_restoration
+  - tawatur_warrant
+candidate_effects:
+  Candidate_A: exact_actual_root_resilience_margin_for_blocker_portfolios
+  Candidate_B: adds_provenance_resilience_coordinate_to_restorative_cutsets
+  Candidate_C: blocks_multiplicity_to_independent_source_support_inference
+integrated_champion: NONE
+meniscus: MENISCUS_NOT_REACHED
+natural_closure: NOT_REACHED
+github_changed: false

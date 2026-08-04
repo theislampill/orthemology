@@ -1,0 +1,28 @@
+schema: ar8r-pmr007-rounds11-20-proposal-receipt-v1
+source_archive:
+  filename: AR8R_PMR007_REPOSITORY_UPDATE_PROPOSAL_CURRENT.zip
+  sha256: d7a44100b72218988b3f6d116048d31fffe3997d278e855542207b5a84769e64
+  bytes: 276763
+  archive_members: 131
+  integrity: PASS
+  internal_sha256sums_entries: 130
+  internal_sha256sums_errors: 0
+  private_data_exclusion: PASS
+repository_copy:
+  path: docs/project-closure/ar8r-v11/post-merge-proposals/pmr007-rounds11-20
+  exact_archive_members: 131
+  source_bytes_modified: false
+proposal_boundary:
+  result_count: 10
+  first_result: PMR-007-MLT-1
+  last_result: PMR-007-PRRC-1
+  historical_identity_assigned: false
+  historical_theorem_origin_credit: false
+  external_review: OPEN
+  owner_adoption: PENDING
+  repository_readiness: EXTERNAL_REVIEW_REQUIRED
+  github_mutation_authorized_by_source: false
+known_internal_staleness:
+  - file: OWNER_DECISIONS_REQUIRED.md
+    defect: The exact source lists only Rounds 17 and 18 as newly added and omits Rounds 19 and 20 even though the same packet is verified through Round 20 V2.
+    correction_owner: docs/project-closure/ar8r-v11/post-merge-proposals/PMR007-ROUNDS11-20-ADOPTION-BOUNDARY-CORRECTION.md

@@ -26,11 +26,17 @@ rules:
 - path: docs/project-closure/r4/R4-UNAVOIDABLE-OWNER-ACTIONS.md
   status: superseded
   note: item 7 discharged 2026-07-20 (fresh-session review + protected merge); current burdens live in docs/current-state.yaml and OPEN-DECISIONS.md
-- prefix: docs/project-closure/ar8r-v8/
+- prefix: docs/project-closure/ar8r-v11/
   status: current-candidate
   note: >-
-    provenance-safe AR8R recovery candidate on codex/ar8r-recovery-integration-v8;
-    exact historical payloads remain distinct from post hoc proposals and unresolved identities
+    unmerged V11 repository-reconciliation candidate; public custody and research-memory
+    records only, with no adoption, empirical-validation, meniscus, or natural-closure claim
+- prefix: docs/project-closure/ar8r-v8/
+  status: current
+  note: >-
+    provenance-safe AR8R recovery packet integrated through PR 15; exact historical
+    payloads remain distinct from post hoc proposals and unresolved identities, and
+    repository integration does not adopt the pending T150 or T366 proposals
 - prefix: docs/project-closure/r4/interruption/
   status: interruption-provenance
 - path: docs/project-closure/r4/MODEL-SUBSTITUTION-INTERRUPTION-PR3.md

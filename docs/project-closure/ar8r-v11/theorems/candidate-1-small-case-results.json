@@ -1,0 +1,20 @@
+{
+  "schema": "ar8r-v11-candidate-1-small-case-results-v1",
+  "historical_results_sha256": "267cc7c06efd844408f3aca9833c3ea56dbe416a0898d065bcaf65f330fc2bfd",
+  "overall_pass": true,
+  "instances": 29,
+  "max_edges": 12,
+  "checked_parameter_triples": [
+    [1, 1, 1], [1, 2, 1], [1, 3, 1], [1, 4, 1], [1, 5, 1],
+    [2, 1, 1], [2, 2, 1], [2, 2, 2], [2, 3, 1], [2, 3, 2],
+    [2, 4, 1], [2, 4, 2], [2, 5, 1], [2, 5, 2],
+    [3, 1, 1], [3, 2, 1], [3, 2, 2], [3, 3, 1], [3, 3, 2], [3, 3, 3],
+    [3, 4, 1], [3, 4, 2], [3, 4, 3],
+    [4, 1, 1], [4, 2, 1], [4, 2, 2], [4, 3, 1], [4, 3, 2], [4, 3, 3]
+  ],
+  "checked_equalities": [
+    "exact_depth = mn - binom(t,2)",
+    "row_scan_worst = mn - binom(t,2)"
+  ],
+  "scope": "bounded exhaustive finite decision-tree computation; not a proof substitute"
+}

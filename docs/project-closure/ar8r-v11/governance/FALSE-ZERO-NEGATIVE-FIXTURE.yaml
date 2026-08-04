@@ -1,0 +1,31 @@
+schema: ar8r-campaign-reconciliation-fixture-v1
+fixture_id: FALSE-ZERO-AR7-INCIDENT
+expected_valid: false
+summary:
+  campaign_status: MENISCUS_REACHED
+  natural_closure: true
+  reported_open_burden_count: 0
+  integrated_champion: Candidate-N
+ledgers:
+  burdens:
+    - id: BURDEN-001
+      status: OPEN_REPAIR_BURDEN
+    - id: BURDEN-002
+      status: CONTRADICTORY_OR_PARTIAL_REQUIRES_RECONCILIATION
+  candidates:
+    - id: Candidate-N
+      status: PROVISIONAL_CHAMPION
+      pending_burdens: [N-P1]
+    - id: Candidate-A
+      status: SIGNIFICANCE_OPEN
+      pending_burdens: [A-SIGNIFICANCE]
+  premises:
+    - id: N-P1
+      status: PENDING_AUDIT
+  rivals:
+    - id: Candidate-E
+      status: ACTIVE_OPEN
+expected_issue_codes:
+  - summary-overrides-open-lower-level-records
+  - open-burden-count-mismatch
+  - champion-has-pending-burdens

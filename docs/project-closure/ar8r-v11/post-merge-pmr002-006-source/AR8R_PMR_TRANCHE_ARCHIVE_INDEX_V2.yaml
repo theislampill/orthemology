@@ -1,0 +1,78 @@
+schema: ar8r-pmr-tranche-archive-index-v2
+campaign: AR8R_POST_MERGE_MENISCUS_PROGRAM_V1
+historical_authority:
+  duration: '09:41:25.405101139'
+  latest_segment: 357
+  changed: false
+repository_authority: cc91f41fec364ea3910b80d57252bb1e0a050278
+GitHub_changed: false
+entries:
+- tranche_id: PMR-001-TRANCHE-001
+  wave_id: PMR-001
+  wave_status: COMPLETE_AT_SELECTED_SCOPE
+  archive:
+    filename: AR8R_PMR001_TRANCHE001_CHECKPOINT.zip
+    sha256: 024698d4bc43d57c54fda813004810f8310917b6eb870590a36b9430d92eb636
+    size_bytes: 117672
+    internal_root: PMR-001_TRANCHE-001/
+    file_count: 55
+    internal_sha256sums_sha256: 079a19d414ccc18d934599d76fb9e40828936ef9d682a3c40f2653b53d6709eb
+    report_included: false
+    report_exclusion_reason: avoid hash self-reference; report is append-only adjacent custody
+  report:
+    path: AR8R_PMR_TRANCHE_REPORTS/PMR-001-TRANCHE-001.md
+    sha256: 5feced3b9a94a03b7a8eee6183bcf6baec03b55802d8d86540a0b20052a10aca
+  verification:
+    status: PASS
+    json: AR8R_PMR001_TRANCHE001_ARCHIVE_VERIFICATION.json
+    json_sha256: 40961f20ed54e9ad844331be3eb71f4556cd172ca85781fbf665ef1a7e2fd666
+    markdown: AR8R_PMR001_TRANCHE001_ARCHIVE_VERIFICATION.md
+    markdown_sha256: 59b9e2b444cf6dfe8acde83dc5d412e47b071a63226131df8d914d929f44ced5
+    unsafe_paths: 0
+    missing_files: 0
+    extra_files: 0
+    byte_mismatches: 0
+  substantive_duration_added: '00:10:35.267741439'
+  cumulative_post_merge_duration: '00:10:35.267741439'
+  owner_decision_required: false
+  exact_next_action: Begin PMR-002 bounded ancestry search for T162-T172, T184-T190, T201-T205, and T254-T255; stop at the
+    15-percent retrieval cap; then freeze PMR-M4-01 qiyas-al-awla guard eligibility and its first guard-deletion countermodel.
+- checkpoint_id: AR8R_PMR002_PMR006_MULTI_WAVE_CHECKPOINT
+  waves:
+  - PMR-002
+  - PMR-003
+  - PMR-004
+  - PMR-005
+  - PMR-006
+  wave_status: COMPLETE_AT_SELECTED_SCOPE
+  tranches:
+  - PMR-002-TRANCHE-001
+  - PMR-003-TRANCHE-001
+  - PMR-004-TRANCHE-001
+  - PMR-005-TRANCHE-001
+  - PMR-006-TRANCHE-001
+  archive:
+    filename: AR8R_PMR002_PMR006_MULTI_WAVE_CHECKPOINT.zip
+    sha256: dfa5dc36aa36b9f362b8cf8cd9df6b09dfa2d972d9de9cc2bdaf93f736029bea
+    size_bytes: 221115
+    internal_root: AR8R_PMR002_PMR006_MULTI_WAVE_CHECKPOINT/
+    file_count: 186
+    internal_sha256sums_sha256: 8986826513f29a6397a63c90caa13c7887b557eaa2d81815157dfb9291d516c6
+  report:
+    path: AR8R_PMR002_PMR006_MULTI_WAVE_CHECKPOINT_REPORT.md
+    sha256: eebbb7f5c3d1bab919b9315ee77088ad76553a9d32e38a9f7b84b646c2a5d0db
+    included_in_archive: true
+  verification:
+    status: PASS
+    json: AR8R_PMR002_PMR006_MULTI_WAVE_CHECKPOINT_VERIFICATION.json
+    json_sha256: fd57afdfb9b4dd9a7cb1ad20600915c8a7125e8c1b5d600e5180607cccf1aa8c
+    markdown: AR8R_PMR002_PMR006_MULTI_WAVE_CHECKPOINT_VERIFICATION.md
+    markdown_sha256: df0b795317a4b3152549a3b6f62be391b7d846199069b2f3ff30f1549de869ea
+    unsafe_paths: 0
+    missing_files: 0
+    extra_files: 0
+    byte_mismatches: 0
+  substantive_duration_added: '00:45:36.000354666'
+  cumulative_post_merge_duration: '00:56:11.268096105'
+  owner_decision_required: false
+  exact_next_action: Freeze PMR-007-LANG-VERSION-01 and construct the first same-bytes/different-version applicability countermodel.

@@ -1,0 +1,70 @@
+schema: ar8r-ontology-and-representation-alternatives-matrix-v11
+authority: CURRENT_PUBLIC_OWNER
+global_disposition: CURRENT_EVIDENCE_UNDERDETERMINES_ALL_LISTED_ALTERNATIVES
+milestone_crosswalk:
+  owner: AR8R-ORTHEMOLOGY-MENISCUS-MILESTONES-V1.yaml
+  milestones: [M10, M11, M13]
+  candidates: [MEN-7, MEN-8]
+  effect: POINTER_ONLY_ALL_RIVALS_REMAIN_LIVE
+row_defaults: &row_defaults
+  compatibility_with_current_evidence: COMPATIBLE_OR_UNTESTED
+  missing_discriminator: An independently validated discriminator that is not defined by the favored ontology.
+  countermodel_role: Preserves the current formal or empirical profile under a rival interpretation.
+  current_owner: AR8R-ONTOLOGY-AND-REPRESENTATION-ALTERNATIVES-MATRIX-V11.yaml
+  adoption_status: LIVE_RIVAL_NOT_ADOPTED
+alternatives:
+  - <<: *row_defaults
+    id: nominalism_class
+    interpretation: Classes and predicate use without reified universals.
+    source_class: CURRENT_PUBLIC_OWNER
+    historical_presence: NONE_AS_HISTORICAL_FINDING_LIVE_CURRENT_RIVAL
+  - <<: *row_defaults
+    id: resemblance_trope
+    interpretation: Particularized qualities and resemblance structures.
+    source_class: NEW_V11
+    historical_presence: CONTEXTUAL_RIVAL_ONLY
+  - <<: *row_defaults
+    id: conceptualism_internal_realism
+    interpretation: Structural unity relative to conceptual schemes or intellect-dependent classification.
+    source_class: CURRENT_PUBLIC_OWNER
+    historical_presence: NONE_AS_HISTORICAL_FINDING_LIVE_CURRENT_RIVAL
+  - <<: *row_defaults
+    id: real_pattern
+    interpretation: Objective compressible pattern without commitment to sparse universals.
+    source_class: LATER_PROGRAM
+    historical_presence: PROGRAM_CONTEXT
+  - <<: *row_defaults
+    id: immanent_sparse_property_realism
+    interpretation: Sparse properties instantiated in concrete bearers.
+    source_class: NEW_V11
+    historical_presence: CONTEXTUAL_RIVAL_ONLY
+  - <<: *row_defaults
+    id: platonism_transcendent
+    interpretation: Transcendent universals or abstract structures.
+    source_class: NEW_V11
+    historical_presence: CONTEXTUAL_RIVAL_ONLY
+  - <<: *row_defaults
+    id: powers_brute
+    interpretation: Brute powers or dispositional essences without further bearer unification.
+    source_class: RECOVERED_CONTEXT
+    historical_presence: CANDIDATE_C_RIVAL
+  - <<: *row_defaults
+    id: property_dualism
+    interpretation: Irreducible mental and physical property families without substance-identity inference.
+    source_class: NEW_V11
+    historical_presence: NONE_FOUND
+  - <<: *row_defaults
+    id: distributed_plural
+    interpretation: Coordinated realization across plural bearers or roles.
+    source_class: LATER_PROGRAM
+    historical_presence: R5_AND_PMR_M5_02
+  - <<: *row_defaults
+    id: fixed_point_coherentist
+    interpretation: Stability through coherent fixed-point structure without an external personal ground.
+    source_class: LATER_PMR_RESULT
+    historical_presence: POST_MERGE_SCOPED_MACHINERY
+  - <<: *row_defaults
+    id: deistic_source_relative
+    interpretation: A source-relative creator or ground with additional attributes left open.
+    source_class: CURRENT_PUBLIC_OWNER
+    historical_presence: TRACK_T_AND_SOURCE_ASCENT_CONTEXT

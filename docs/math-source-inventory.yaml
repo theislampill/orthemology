@@ -8,7 +8,7 @@ classification_method:
   extractor: single-backtick CommonMark code spans after fenced-code masking; multiline spans included
     with exact source text
   review: per-locus contextual classification; text equality is evidence but never the identity
-  manual_context_review_occurrences: 228
+  manual_context_review_occurrences: 229
   method_counts:
     argument-map-id: 14
     authoritative-registry-id: 38
@@ -17,7 +17,7 @@ classification_method:
     explicit-mathematical-signal: 414
     gallery-command-or-path: 13
     gallery-registry-column: 33
-    manual-context-review: 228
+    manual-context-review: 229
     source-id-or-path: 10
     source-path: 24
     source-registry-id: 8
@@ -25,8 +25,8 @@ classification_method:
     verdict-registry-id: 1
 totals:
   sources: 7
-  occurrences: 207
-  literal-code: 113
+  occurrences: 208
+  literal-code: 114
   semantic-registry-id: 94
   mathematics: 0
 sources:
@@ -49,9 +49,9 @@ sources:
     semantic-registry-id: 0
     mathematics: 0
 - file: companion/orthability-and-the-ground-of-intelligibility.md
-  occurrence_count: 16
+  occurrence_count: 17
   classification_counts:
-    literal-code: 15
+    literal-code: 16
     semantic-registry-id: 1
     mathematics: 0
 - file: companion/orthability-divine-attributes-and-speech-athari.md
@@ -75,7 +75,7 @@ sources:
 migration:
   baseline_commit: 66e148f024359cce380bac47ea3d2fb1750c760a
   authoritative_mathematics_occurrences: 673
-  preserved_literal_code_occurrences: 113
+  preserved_literal_code_occurrences: 114
   preserved_semantic_registry_id_occurrences: 94
   mathematics_occurrences_migrated: 673
   mathematics_occurrences_remaining: 0
@@ -7010,6 +7010,13 @@ occurrences:
     column: 210
   occurrence: 16
   text: docs/sourcing/CURRENT-SOURCING-LEDGER.md
+  classification: literal-code
+- file: companion/orthability-and-the-ground-of-intelligibility.md
+  locus:
+    line: 158
+    column: 232
+  occurrence: 17
+  text: NECESSARY_BEING_NOT_DEDUCTIVELY_ESTABLISHED
   classification: literal-code
 - file: companion/orthability-divine-attributes-and-speech-athari.md
   locus:

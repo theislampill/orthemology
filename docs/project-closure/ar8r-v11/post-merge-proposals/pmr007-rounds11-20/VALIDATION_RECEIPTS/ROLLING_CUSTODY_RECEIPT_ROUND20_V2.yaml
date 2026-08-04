@@ -1,0 +1,110 @@
+schema: AR8R_PMR007_ROUND20_CUSTODY_CORRECTION_V2
+generated_at: '2026-08-03T17:59:54.762199+00:00'
+reason: The earlier in-archive Round20 receipt captured pre-final package hashes and
+  a temporary sanitized-scan failure, while the subsequently built external ZIP verification
+  receipts passed. Archive hashes are self-referential and therefore remain authoritative
+  only in external sidecars.
+supersedes_status_assertions_in: ROLLING_CUSTODY_RECEIPT_ROUND20.yaml
+preserves_old_receipt_as_evidence: true
+round19_custody_update: PASS
+round20_disposition: ADMITTED_POST_MERGE_SCOPED_RESULT
+pmr_identity: PMR-007-PRRC-1
+private_checkpoint_content_boundary: ROUND20_V2_PLUS_CUSTODY_CORRECTION
+sanitized_proposal_content_boundary: ROUND20_V2_PLUS_CUSTODY_CORRECTION
+archive_hash_authority: EXTERNAL_SIDECAR_AND_EXTERNAL_VERIFICATION_JSON
+pre_correction_external_zip_hashes:
+  private_checkpoint: 2717c3d119f0f38b26e71eb2e955d39034cf73fb435f0ef26323caaca210b700
+  sanitized_proposal: 143599423ec5031aec0dfd0d14be8e855bdd688798ae6840f5a128680dfa9a78
+round19_evidence:
+- path: PMR-007_FRONTIER_ROUND19_PROVENANCE_ROOT_THRESHOLD_QUERY_COMPLEXITY_V2.md
+  exists: true
+  bytes: 13333
+  sha256: 44e711386ae2fd44a3762b39894b08c2e2e21d86bc3f0dcc2e3714e84f4b2ae2
+- path: models/PMR007_ROUND19_PROVENANCE_ROOT_THRESHOLD_V2.yaml
+  exists: true
+  bytes: 3004
+  sha256: e20c2e1c439f1d54986ff44e958e7eb7f49ee8bd7bb4d843afb3b8fe4692a42f
+- path: audits/PMR-007_FRONTIER_ROUND19_V1_COLD_AUDIT.md
+  exists: true
+  bytes: 5018
+  sha256: 9feec904331204119215ee38eae7442cd04211b54af83cb951be9988b11e8d6e
+- path: repairs/PMR-007_FRONTIER_ROUND19_V2_REPAIR_LOG.md
+  exists: true
+  bytes: 1328
+  sha256: 84940c0ff953d86a75e0e937e6802945e70777e494df5e4a7fb22916c8cb9c22
+- path: checks/pmr007_round19_provenance_root_threshold_primary_check_v2.py
+  exists: true
+  bytes: 7764
+  sha256: fbcd7f57f2df705673b965031e7aa7263c4c8731d871a877eb7affb87599bcc4
+- path: checks/pmr007_round19_provenance_root_threshold_primary_check_v2_results.json
+  exists: true
+  bytes: 2318
+  sha256: 8e26ada4c5c1d352d09e5051765aa489bb94a2c7de2d5fbcb40aea7d31dac110
+- path: rereviews/PMR-007_FRONTIER_ROUND19_V2_DISTINCT_FRESH_REREVIEW.md
+  exists: true
+  bytes: 4062
+  sha256: ac53e6532c2fad19273cb2bbfb91cb61071d16016dd9e005bc986f98f4d96923
+- path: rereviews/PMR-007_FRONTIER_ROUND19_V2_DISTINCT_FRESH_REREVIEW_RESULTS.json
+  exists: true
+  bytes: 1737
+  sha256: 9489c58c297831bb9b8e4e5c238b3535b6650970de8874bc6a3273f0ba4b3b03
+- path: PMR-007_FRONTIER_ROUND19_ADMISSION_OVERLAY.yaml
+  exists: true
+  bytes: 2640
+  sha256: a6eb00842e017877e2b48063832e6776733729174aa5711d3300d72356b6f779
+- path: PMR-007_FRONTIER_ROUND19_ADMISSION_HASHES.sha256
+  exists: true
+  bytes: 1424
+  sha256: c74859a1302182c68156e3f9d060f7611def0ab713775d28a6cb08fffe4383cd
+round20_evidence:
+- path: PMR-007_FRONTIER_ROUND20_PROVENANCE_RESILIENT_RESTORATIVE_CUTSETS_V2.md
+  exists: true
+  bytes: 11654
+  sha256: 7000fdb25ccf3b3de6f14918f2e055ac2aad163a75a068498283af9a4d68c376
+- path: models/PMR007_ROUND20_PROVENANCE_RESILIENT_CUTSETS_V2.yaml
+  exists: true
+  bytes: 2228
+  sha256: 122823460f74ed9f819af767c13ee5903576757260a2fe14c3b58590f9f8a53f
+- path: audits/PMR-007_FRONTIER_ROUND20_V1_COLD_AUDIT.md
+  exists: true
+  bytes: 5062
+  sha256: 2d8c9f7f77d03ea07f12385712dfa1b068a111e84bdf050180681ba055e76589
+- path: repairs/PMR-007_FRONTIER_ROUND20_V2_REPAIR_LOG.md
+  exists: true
+  bytes: 1409
+  sha256: 311818ec2a81897c0f5e76e1fd8a73e7e95b8f5f9bf1b337746996c18e17211a
+- path: checks/pmr007_round20_provenance_resilience_primary_check.py
+  exists: true
+  bytes: 11278
+  sha256: 9b1bdac28f67f862ab8e476e06bb8ab72efea1d2aab340abd2d212906464bafb
+- path: checks/pmr007_round20_provenance_resilience_primary_check_results.json
+  exists: true
+  bytes: 1424
+  sha256: 3e4a4fbc1354e3dbc58ca2d9f807d3d4ce7b335a946ea36b6191acbafb2bc36d
+- path: rereviews/pmr007_round20_distinct_static_semantics_rereview.py
+  exists: true
+  bytes: 9231
+  sha256: 4e98a6833062fd62bca22f3ac89fd82f4003ddc49cda6c7e80c5a1f0d6d62e8e
+- path: rereviews/PMR-007_FRONTIER_ROUND20_V2_DISTINCT_FRESH_REREVIEW.md
+  exists: true
+  bytes: 3765
+  sha256: 4afcab57e7ca020161cad4eea8755135a3e229ce07fd0f6a30c4aa359ec3f8fd
+- path: rereviews/PMR-007_FRONTIER_ROUND20_V2_DISTINCT_FRESH_REREVIEW_RESULTS.json
+  exists: true
+  bytes: 1070
+  sha256: 917f1e5cee2f42fc1d7784a1d038c3dc6ad2b6fa885a3c9100229e2ad0d68bdf
+- path: PMR-007_FRONTIER_ROUND20_ADMISSION_OVERLAY.yaml
+  exists: true
+  bytes: 1936
+  sha256: bc08b1adc1322d9d44a8d9f2305d4c127ac235455cffeaf053ea50bac840ece8
+- path: PMR-007_FRONTIER_ROUND20_ADMISSION_HASHES.sha256
+  exists: true
+  bytes: 2013
+  sha256: 27f9f013860e2ca9c356c7a621ff8f613bb084c5428714bdfb16dbcd554fc75e
+deep_context_gate:
+  filename: AR8R_PMR007_DEEP_MENISCUS_CONTEXT_V1.zip
+  status: BLOCKED_ON_SOURCE_CUSTODY
+  bytes_accessible: false
+  sha256: null
+  research_effect: Deep Round A not selected or formulated from absent bytes.
+github_changed: false

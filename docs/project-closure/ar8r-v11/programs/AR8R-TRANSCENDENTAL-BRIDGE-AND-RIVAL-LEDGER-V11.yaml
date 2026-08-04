@@ -1,0 +1,170 @@
+schema: ar8r-transcendental-bridge-and-rival-ledger-v11
+authority: CURRENT_PUBLIC_OWNER
+hard_premise_rule: Required for the associated bridge but not thereby established.
+soft_consideration_rule: May rank rivals but cannot convert a bridge into a deduction.
+milestone_crosswalk:
+  owner: AR8R-ORTHEMOLOGY-MENISCUS-MILESTONES-V1.yaml
+  milestones: [M10, M11, M12, M13, M17]
+  candidates: [MEN-7, MEN-8]
+  effect: POINTER_ONLY_ALL_EXISTING_BRIDGE_AND_RIVAL_STATUSES_UNCHANGED
+bridge_defaults: &bridge_defaults
+  hard_premise_ids: []
+  soft_consideration_ids: []
+  live_countermodels: [BRUTE_OR_PLURAL_RIVAL]
+  source_class: CURRENT_PUBLIC_OWNER
+  source_locator: track-t-authority-and-bridge-status.md
+  remaining_burden: Establish every hard premise, defeat live rivals, and obtain independent review without source/track migration.
+bridges:
+  - <<: *bridge_defaults
+    id: B0
+    antecedent: Determinate process
+    consequent: No complete same-token, same-respect self-grounding
+    hard_premise_ids: [H0]
+    status: CONDITIONALLY_ESTABLISHED_NEGATIVE_BRIDGE
+  - <<: *bridge_defaults
+    id: B1
+    antecedent: Formal/process result
+    consequent: World-directed non-generation
+    hard_premise_ids: [H1]
+    status: CONDITIONAL_REFLECTION_BRIDGE
+  - <<: *bridge_defaults
+    id: B2
+    antecedent: Non-total-generation
+    consequent: A positive further ground
+    hard_premise_ids: [H2]
+    status: NOT_ENTAILED; CONDITIONAL_WITH_PSR
+  - <<: *bridge_defaults
+    id: B3
+    antecedent: Further ground
+    consequent: An underived terminal ground
+    hard_premise_ids: [H3]
+    status: NOT_ENTAILED; CONDITIONAL_WITH_WELL_FOUNDEDNESS
+  - <<: *bridge_defaults
+    id: B4
+    antecedent: Underived terminal
+    consequent: Necessary
+    hard_premise_ids: [H4]
+    status: NOT_ENTAILED; RIVAL_SURVIVES
+  - <<: *bridge_defaults
+    id: B5
+    antecedent: Necessary ground
+    consequent: Concrete necessary being
+    hard_premise_ids: [H5]
+    status: NOT_ENTAILED; RIVAL_SURVIVES
+  - <<: *bridge_defaults
+    id: B6
+    antecedent: Grounding roles
+    consequent: One common bearer
+    hard_premise_ids: [H6]
+    live_countermodels: [R5_PLURAL_REALIZATION, DERIVATIONAL_PARITY]
+    status: NOT_ENTAILED; DERIVATIONAL_PARITY_AND_R5_SURVIVE
+  - <<: *bridge_defaults
+    id: B7
+    antecedent: Determinate or necessary content
+    consequent: Intellect or knowledge
+    hard_premise_ids: [H7]
+    live_countermodels: [NOMINALIST_PATTERN, CONCEPTUALIST_INTERNAL_REALISM]
+    status: NOT_ENTAILED; CONDITIONAL_CONCEPTUALIST_BRIDGE
+  - <<: *bridge_defaults
+    id: B8
+    antecedent: Intellect
+    consequent: Agency or personality
+    hard_premise_ids: [H8]
+    status: NOT_ENTAILED; RIVAL_SURVIVES
+  - <<: *bridge_defaults
+    id: B9
+    antecedent: Contingent specification or selection
+    consequent: Will
+    hard_premise_ids: [H9]
+    status: NOT_ENTAILED; RIVAL_SURVIVES
+  - <<: *bridge_defaults
+    id: B10
+    antecedent: Will
+    consequent: Power
+    hard_premise_ids: [H10]
+    status: NOT_ENTAILED; RIVAL_SURVIVES
+  - <<: *bridge_defaults
+    id: B11
+    antecedent: Knowledge plus selection plus efficacy
+    consequent: Wisdom
+    hard_premise_ids: [H11]
+    status: CONDITIONAL_ROLE_INTEGRATION_ONLY
+  - <<: *bridge_defaults
+    id: B12
+    antecedent: Revelation
+    consequent: Source-relative divine predicates explicitly asserted in it
+    hard_premise_ids: [H12]
+    source_class: LATER_PROGRAM
+    source_locator: p597-p620-source-ascent-status.md
+    status: REVELATIONAL_CONCLUSION
+  - <<: *bridge_defaults
+    id: B13
+    antecedent: Perfection predicate
+    consequent: Divine predicate by qiyas al-awla
+    hard_premise_ids: [H13]
+    source_class: LATER_PMR_RESULT
+    source_locator: post-merge-pmr002-006-source/AR8R_PMR002_PMR006_MULTI_WAVE_CHECKPOINT_REPORT.md
+    status: SCHOOL_INTERNAL_CONDITIONAL
+  - <<: *bridge_defaults
+    id: B14
+    antecedent: Scriptural plurality argument
+    consequent: Divine unity
+    hard_premise_ids: [H14]
+    source_class: LATER_PROGRAM
+    source_locator: candidate-n-r5-track-t-and-source-ascent.md
+    status: SOURCE_INTERNAL_ARGUMENT; SCOPE_LIMITED
+  - <<: *bridge_defaults
+    id: B15
+    antecedent: Capacity for Speech
+    consequent: Actual Speech
+    hard_premise_ids: [H15]
+    source_class: LATER_PMR_RESULT
+    source_locator: uncreated-grammar-and-articulability.md
+    status: NOT_ENTAILED_BY_NATURAL_THEOLOGY; REVELATIONAL_CONCLUSION
+  - <<: *bridge_defaults
+    id: B16
+    antecedent: Neutral necessary ground
+    consequent: Allah as revealed
+    hard_premise_ids: [H16]
+    source_class: CURRENT_PUBLIC_OWNER
+    source_locator: AR8R_TRANSCENDENTAL_ORTHABILITY_AND_SOURCE_ASCENT_V2.md
+    status: NOT_ENTAILED_BY_NATURAL_THEOLOGY
+hard_premises:
+  - {id: H0, description: Same-token and same-respect typing is exhaustive and non-equivocal, status: REQUIRED_NOT_ESTABLISHED}
+  - {id: H1, description: The formal process accurately reflects the relevant world-directed generation relation, status: REQUIRED_NOT_ESTABLISHED}
+  - {id: H2, description: A restricted principle of sufficient reason licenses a positive ground, status: REQUIRED_NOT_ESTABLISHED}
+  - {id: H3, description: The grounding order is well-founded at the relevant scope, status: REQUIRED_NOT_ESTABLISHED}
+  - {id: H4, description: Underivability entails modal necessity rather than brute termination, status: REQUIRED_NOT_ESTABLISHED}
+  - {id: H5, description: The modal ground is concretely instantiated, status: REQUIRED_NOT_ESTABLISHED}
+  - {id: H6, description: All grounding roles are bearer-indexed and jointly instantiated, status: REQUIRED_NOT_ESTABLISHED}
+  - {id: H7, description: Content determinacy requires an intellect rather than a rival structure, status: REQUIRED_NOT_ESTABLISHED}
+  - {id: H8, description: Intellect entails agency and personality under an explicit bridge, status: REQUIRED_NOT_ESTABLISHED}
+  - {id: H9, description: Contingent specification is attributable to Will rather than a rival selector, status: REQUIRED_NOT_ESTABLISHED}
+  - {id: H10, description: Will is bearer-local with effective Power, status: REQUIRED_NOT_ESTABLISHED}
+  - {id: H11, description: Knowledge selection and efficacy are co-instantiated and normatively integrated, status: REQUIRED_NOT_ESTABLISHED}
+  - {id: H12, description: Revelation and its source-relative predicate attribution are authenticated, status: REQUIRED_NOT_ESTABLISHED}
+  - {id: H13, description: Every qiyas al-awla guard and source relation is satisfied, status: REQUIRED_NOT_ESTABLISHED}
+  - {id: H14, description: The scriptural plurality argument has the declared school-internal scope and premises, status: REQUIRED_NOT_ESTABLISHED}
+  - {id: H15, description: Capacity-to-occurrence and naming/content bridges are separately warranted, status: REQUIRED_NOT_ESTABLISHED}
+  - {id: H16, description: The neutral ground is identified with the authenticated revealed referent, status: REQUIRED_NOT_ESTABLISHED}
+soft_considerations:
+  - {id: S0, description: Explanatory economy, status: NONDEDUCTIVE_ONLY}
+  - {id: S1, description: Unification across declared roles, status: NONDEDUCTIVE_ONLY}
+  - {id: S2, description: Modal robustness, status: NONDEDUCTIVE_ONLY}
+  - {id: S3, description: Source coherence, status: NONDEDUCTIVE_ONLY}
+  - {id: S4, description: Fit with ordinary causal practice, status: NONDEDUCTIVE_ONLY}
+  - {id: S5, description: Rival complexity, status: NONDEDUCTIVE_ONLY}
+  - {id: S6, description: Cross-lane convergence, status: NONDEDUCTIVE_ONLY}
+  - {id: S7, description: Research fruitfulness, status: NONDEDUCTIVE_ONLY}
+public_statuses:
+  same_token_same_respect: SAME_TOKEN_SAME_RESPECT_THEORY_ADEQUACY_NO_GO_ESTABLISHED
+  world_directed_extension: WORLD_DIRECTED_EXTENSION_CONDITIONAL_ON_RB
+  global_underived_modal_order: GLOBAL_UNDERIVED_MODAL_ORDER_NOT_ESTABLISHED
+  necessary_being: NECESSARY_BEING_NOT_DEDUCTIVELY_ESTABLISHED
+  r5: UNDEFEATED
+  candidate_e: DEFERRED_INSUFFICIENT_AUDIT
+  candidate_g: DEFERRED_INSUFFICIENT_AUDIT
+closure_state:
+  integrated_champion: NO_INTEGRATED_CHAMPION
+  meniscus: MENISCUS_NOT_REACHED
+  natural_closure: NATURAL_CLOSURE_NOT_REACHED

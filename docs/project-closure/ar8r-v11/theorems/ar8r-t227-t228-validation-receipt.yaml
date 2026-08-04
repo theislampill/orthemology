@@ -1,0 +1,28 @@
+schema: ar8r-v11-t227-t228-validation-receipt-v1
+payloads:
+  authentication:
+    canonical_identity: AR8R-T227
+    sha256: 61b6b1df5d942ac649abed84ed94efa0458aca30bdf699ef76aa411cb0f99a1c
+    finite_cases: 158550
+    overall_pass: true
+    audit: P208_P214_REPAIR_REREVIEW_87
+    audit_sha256: 8592408636a43a80318e25ac87a4fb56fc9f1d8f6ca4e0c6fe251ab9b034472f
+  strict_progress_pre_renumber:
+    historical_identity_as_written: AR8R-T227
+    sha256: d2a65f07ffdc18cf5eb1613717d9b9dca8d04ff741f55f4da100e63da1867aea
+    disposition: HISTORICAL_CUSTODY_ONLY
+  strict_progress:
+    canonical_identity: AR8R-T228
+    sha256: 25c94b9b0b52f814ea02931a2e1b7370ac8866a32fd7bbd48925671c9f11c9ec
+    exhaustive_cases_n_le_3: 4164
+    random_cases_n_4: 20000
+    overall_pass: true
+    identity_custody_rereview: P215_P221_IDENTITY_CUSTODY_REREVIEW_91
+    identity_custody_rereview_sha256: c94f951b83fb3c87fd32669ecf4f99a84e9b66649a2fec8ada09f14e968f5669
+general_mathematical_novelty: NONE
+external_peer_review: false
+owner_adoption: pending
+claim_ceiling:
+  - bounded finite checks corroborate but do not replace proofs
+  - no authentication or source-truth inference
+  - no rank-legitimacy or metaphysical inference

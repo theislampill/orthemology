@@ -1,0 +1,47 @@
+schema: ar8r-proper-function-typed-matrix-v11
+authority: CURRENT_PUBLIC_OWNER
+global_conclusion: Success or reliability alone does not establish selected history, organizational closure, legitimate design, teleological authority, truth aim, Plantingian warrant, fitrah, an ontological ground, intellect, personality, or Wisdom.
+milestone_crosswalk:
+  owner: AR8R-ORTHEMOLOGY-MENISCUS-MILESTONES-V1.yaml
+  milestones: [M10, M11]
+  candidates: [MEN-3, MEN-7, MEN-8]
+  effect: POINTER_ONLY_NO_FUNCTION_OR_NORM_ADOPTION
+row_defaults: &row_defaults
+  strongest_licensed_interpretation: Account-relative functional description only.
+  evidence_needed: Independent evidence for the account-specific function-fixing relation.
+  countermodel: Equal success with a different function-fixing history or norm.
+  forbidden_promotion: Performance or reliability -> proper function, warrant, metaphysical ground, intellect, personality, or Wisdom.
+  source_class: NEW_V11
+  source_locator: proper-function-and-candidate-e.md
+  adoption_status: RESEARCH_PROGRAM_NOT_ADOPTED
+accounts:
+  - <<: *row_defaults
+    id: frequency
+    function_fixing_relation: Statistical recurrence in the declared population or horizon.
+  - <<: *row_defaults
+    id: causal_role
+    function_fixing_relation: Causal contribution within a declared system decomposition.
+  - <<: *row_defaults
+    id: organizational_autopoietic
+    function_fixing_relation: Contribution to self-maintaining organizational closure.
+  - <<: *row_defaults
+    id: selected_effect
+    function_fixing_relation: Historical selection because of the effect.
+  - <<: *row_defaults
+    id: design
+    function_fixing_relation: Intentionally assigned role under a legitimate designer specification.
+  - <<: *row_defaults
+    id: learned_objective
+    function_fixing_relation: Role induced by an identified training objective and learning history.
+  - <<: *row_defaults
+    id: success_surface
+    function_fixing_relation: Operational success on a frozen task and distribution.
+  - <<: *row_defaults
+    id: teleological_norm
+    function_fixing_relation: Normatively authoritative end rather than observed regularity.
+  - <<: *row_defaults
+    id: plantinga_epistemic_proper_function
+    function_fixing_relation: Cognitive faculties functioning according to a truth-aimed design plan in a suitable environment.
+  - <<: *row_defaults
+    id: fitrah_oriented
+    function_fixing_relation: School-relative fitrah purpose supported by authenticated source and applicability bridges.

@@ -1,0 +1,29 @@
+schema: ar8r-post-merge-pmr001-source-receipt-v1
+companion_archive:
+  filename: AR8R_PMR001_TRANCHE001_CHECKPOINT.zip
+  sha256: 024698d4bc43d57c54fda813004810f8310917b6eb870590a36b9430d92eb636
+  bytes: 117672
+  archive_members: 55
+  integrity: PASS
+repository_selection:
+  path: docs/project-closure/ar8r-v11/post-merge-pmr001-source
+  exact_public_safe_files: 27
+  source_bytes_modified: false
+  source_surface: VISIBLE_FILE_CARD_BYTES
+  selection_manifest: AR8R-POST-MERGE-VISIBLE-FILE-CARD-MANIFEST-V1.yaml
+archive_relation:
+  direct_single_member_matches: 19
+  byte_conflicts: 1
+  selected_files_absent_by_same_basename_from_archive: 3
+  multiple_same_basename_archive_members: 4
+  precedence: VISIBLE_FILE_CARD_VERSION_SELECTED_ARCHIVE_VARIANTS_UNRESOLVED
+  conflict_owner: AR8R-POST-MERGE-FILE-CARD-ARCHIVE-CONFLICTS-V1.yaml
+audit_boundary:
+  cold_audit: REPAIR_REQUIRED
+  repairs_completed: 2
+  fresh_rereview: PASS_WITH_NONBLOCKING_AUTHORITY_NOTES
+  external_independence: NOT_CLAIMED
+campaign_boundary:
+  integrated_champion: NONE
+  meniscus: MENISCUS_NOT_REACHED
+  natural_closure: NOT_REACHED

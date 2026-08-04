@@ -1,0 +1,49 @@
+schema: ar8r-lean-status-reconciliation-v6
+source_registry_sha256: 3c8cea6bc5004c2367ef9ee9cf36b7acff4e3d5613f2a55d677d0bae824f0db7
+scan_kind: STATIC_DECLARATION_INVENTORY_ONLY
+counts:
+  all_declaration_records: 230
+  source_present_declarations: 221
+  theorem_or_lemma_declarations: 122
+  intended_source_absent: 9
+  source_files_scanned: 48
+  mapped_exact_or_component: 29
+  external_ten_advances_principal_declarations: 12
+parse_status: NOT_PERFORMED
+elaboration_status: NOT_PERFORMED
+kernel_status: NOT_PERFORMED
+machine_check_claim: NONE
+allowed_declaration_statuses:
+  - SOURCE_PRESENT_STATIC_SCAN
+  - INTENDED_DECLARATION_SOURCE_ABSENT
+  - PARSER_CHECKED
+  - ELABORATED
+  - KERNEL_CHECKED
+current_global_declaration_status: SOURCE_PRESENT_STATIC_SCAN_OR_SOURCE_ABSENT_ONLY
+v11_theorem_specific_status:
+  AR8R-T299:
+    mapping: ONE_INTENDED_DECLARATION
+    source: ABSENT
+    parse: NOT_PERFORMED
+    elaboration: NOT_PERFORMED
+    kernel: NOT_PERFORMED
+  AR8R-T300:
+    mapping: JOINT_T304_T300_INTENDED_DECLARATION
+    source: ABSENT
+    parse: NOT_PERFORMED
+    elaboration: NOT_PERFORMED
+    kernel: NOT_PERFORMED
+  CANDIDATE-1:
+    mapping: NONE_IN_V5_MAP
+  AR8R-T227:
+    mapping: NONE_IN_V5_MAP
+  AR8R-T228:
+    mapping: NONE_IN_V5_MAP
+external_ten_advances:
+  local_build_status: NOT_PERFORMED
+  general_ar8r_theorem_credit: 0
+forbidden_inferences:
+  - source presence implies parsing
+  - parsing implies elaboration
+  - elaboration implies kernel checking
+  - declaration-name mapping proves theorem identity

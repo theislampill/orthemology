@@ -73,13 +73,45 @@ authored:
     companion_athari: complete, source-verified-to-threshold, explicitly Athari/Taymiyyan school-internal
       draft; comparative positions accurately sourced; not a neutral theological conclusion
     terminology: v2 instrument READY_FOR_HUMAN_MATCHING_REVIEW (Decision 0018), not run; no term adopted
-    empirical: not run / open
+    empirical: designed public experiment packets not run / open; one separately classified historical
+      internal synthetic AR8R pilot is negative at its tested evidential class and supplies no external
+      framework-validation credit
     pdfs: reproducibly built and visually inspected draft artifacts
     legal_publication: open on license, identity, peer review, and external submission
+  ar8r_v11_task7:
+    status: RECONCILIATION_EXPANDED_VALIDATION_AND_INDEPENDENT_REVIEW_REQUIRED
+    exact_deferred_source_files: 24
+    exact_deferred_source_bytes: 84163
+    candidate_e_status: DEFERRED_INSUFFICIENT_AUDIT
+    candidate_g_status: DEFERRED_INSUFFICIENT_AUDIT
+    pmr007_results: 10
+    pmr007_owner_adoption: PENDING
+    t354_status: BLOCKED_FORMAL_DEFECT
+    ten_advances_comparator_count: CONFLICTING_38_42
+    connes_rigidity_status: UNRESOLVED_PENDING_OPERATOR_ALGEBRA_SPECIALIST_REVIEW
+    lean_machine_check_claim: NONE
+    integrated_champion: NO_INTEGRATED_CHAMPION
+    meniscus: MENISCUS_NOT_REACHED
+    natural_closure: NATURAL_CLOSURE_NOT_REACHED
+  ar8r_v11_task7a:
+    status: OWNER_PROGRAM_CHARTER_RECORDED_VALIDATION_AND_REREVIEW_REQUIRED
+    charter_sha256: f4245d44e79e50c9fbef9173ee22e50795a08b02c027059d4abbae2aef15a0c8
+    charter_bytes: 76682
+    milestone_count: 18
+    meniscus_candidate_count: 9
+    completed_milestones: 0
+    adopted_meniscus_candidates: 0
+    daee_main_sha: c86b3c6673147b8802fe222373a165a37d4d24a8
+    daee_pr8_status: OPEN_DRAFT_NOT_MERGED_MAIN
+    daee_pr9_status: OPEN_DRAFT_NOT_MERGED_MAIN
+    fusha_qamus_implementation_status: NOT_ESTABLISHED
+    integrated_champion: NO_INTEGRATED_CHAMPION
+    meniscus: MENISCUS_NOT_REACHED
+    natural_closure: NATURAL_CLOSURE_NOT_REACHED
 derived:
-  source_tree_digest: 9ea6d8919a58d6ed0d0ed00470bc2a2b628279b9f2d6abd1454b6eefc5bd575a
+  source_tree_digest: 13899fbb378fe11b5dee88c1307f426df0fa4646b0eede7fe9bd6cc6772e785c
   source_tree_digest_policy: docs/project-state-inputs.yaml
-  tracked_files: 735
+  tracked_files: 1048
   decision_ids:
   - '0001'
   - '0002'
@@ -155,6 +187,7 @@ derived:
   validator_scripts:
   - audit_terminology_matching.py
   - derive_reqpath.py
+  - validate_ar8r_reconciliation.py
   - validate_ar8r_recovery.py
   - validate_argument_map.py
   - validate_arxiv_source_package.py
@@ -206,7 +239,7 @@ derived:
   - validate_terminology_etymology.py
   - validate_type_token_semantics.py
   - validate_verdict_semantics.py
-  validator_count: 53
+  validator_count: 54
   fixture_counts:
     verdict: 7
     reason: 8

@@ -1,0 +1,73 @@
+schema_version: '1.0'
+generated_at: '2026-07-27T19:45:05.529338Z'
+nodes:
+- id: M
+  name: Mathematical orthemology
+  scope: truth/semantic consequence/derivability/reachability/diagnosability/provenance/collective procedures
+  current_result: SCOPED_RELATIVE_COMPLETENESS_THEOREM; PRIOR_ART_AND_INDEPENDENT_AUDIT_OPEN
+- id: T
+  name: Transcendental grounding
+  scope: conditions of determinate identity, modality, actuality, correction, fittingness, and explanatory stopping points
+  current_result: T01-T03 SCOPED POSITIVE; T04-T15 NOT NEUTRALLY ESTABLISHED
+- id: N
+  name: Taymiyyan source-controlled architecture
+  scope: school-internal distinctions and source roles for evaluation, disclosure, command, lordship, actualization, Wisdom,
+    and Speech
+  current_result: PROVISIONAL INTERNAL ARCHITECTURE; EXTERNAL SPECIALIST CONFIRMATION PENDING
+edge_types:
+- type: M_SUPPORTS_T
+  meaning: A mathematical theorem supplies a precise analogy, countermodel, or discrimination constraint; it does not entail
+    a metaphysical ground.
+- type: M_CONSTRAINS_T
+  meaning: A mathematical impossibility or invariance result rules out one formalized route while leaving other metaphysical
+    realizers open.
+- type: T_REQUIRES_EXTRA_METAPHYSICAL_PREMISE
+  meaning: Movement beyond M or T01-T03 requires PSR, anti-brute, actuality, unity, conceptualist, agency, or teleological
+    premises stated independently.
+- type: N_SUPPLIES_SCHOOL_INTERNAL_PREMISE
+  meaning: A source-verified school premise may support a later T bridge only inside that framework.
+- type: N_SUPPLIES_SOURCE_EVIDENCE
+  meaning: Primary texts and scholarly reconstruction support claims about an author or school, not neutral metaphysical entailment.
+- type: N_ILLUSTRATES_M_DISTINCTION
+  meaning: A theological dispute instantiates a typed distinction from M; the illustration does not mathematically validate
+    the doctrine.
+- type: REVELATION_IDENTIFIES_BEYOND_NEUTRAL_REASON
+  meaning: Actual Speech and revelational identification require historical/revelational evidence beyond M and neutral T.
+edges:
+- from: M
+  to: T
+  type: M_SUPPORTS_T
+  claim: Observational invariance and provenance distinctions show why access, source, warrant, and truth must not be collapsed.
+- from: M
+  to: T
+  type: M_CONSTRAINS_T
+  claim: Structural identifiability does not establish intellect, and functional role integration does not establish one personal
+    bearer.
+- from: T
+  to: T
+  type: T_REQUIRES_EXTRA_METAPHYSICAL_PREMISE
+  claim: T04-T15 each require independently defended premises recorded in the objective map.
+- from: N
+  to: T
+  type: N_SUPPLIES_SCHOOL_INTERNAL_PREMISE
+  claim: Knowledge, Will, Power, Wisdom, rububiyyah, and Speech may support later bridges school-internally.
+- from: N
+  to: T
+  type: N_SUPPLIES_SOURCE_EVIDENCE
+  claim: Source loci constrain faithful Athari/Taymiyyan formulations.
+- from: N
+  to: M
+  type: N_ILLUSTRATES_M_DISTINCTION
+  claim: Evaluation/disclosure/command and Speech/media provide cases of typed noncollapse and provenance.
+- from: N
+  to: N
+  type: REVELATION_IDENTIFIES_BEYOND_NEUTRAL_REASON
+  claim: Revelational identification is not inferred from the typed architecture alone.
+forbidden_migrations:
+- M theorem -> source fidelity
+- M theorem -> divine personality
+- N source claim -> neutral school-independent entailment
+- T scoped anti-bootstrapping -> one Necessary Being
+- functional integration -> one bearer
+- query optimality -> proper function or Wisdom
+current_program_status: THREE_TRACKS_SEPARATELY_MAPPED; FULL_INDEPENDENT_INTEGRATION_REVIEW_PENDING

@@ -1,0 +1,63 @@
+schema: ar8r-lean-status-reconciliation-v7
+prior_snapshot:
+  path: AR8R-LEAN-STATUS-MAP-V6.yaml
+  preservation: UNCHANGED_PRIOR_STATIC_SNAPSHOT
+source_registry_sha256: 3c8cea6bc5004c2367ef9ee9cf36b7acff4e3d5613f2a55d677d0bae824f0db7
+scan_kind: STATIC_DECLARATION_INVENTORY_ONLY
+counts:
+  all_declaration_records: 230
+  source_present_declarations: 221
+  theorem_or_lemma_declarations: 122
+  intended_source_absent: 9
+  source_files_scanned: 48
+  mapped_exact_or_component: 29
+  external_ten_advances_principal_declarations: 12
+parse_status: NOT_PERFORMED
+elaboration_status: NOT_PERFORMED
+kernel_status: NOT_PERFORMED
+machine_check_claim: NONE
+allowed_declaration_statuses:
+  - SOURCE_PRESENT_STATIC_SCAN
+  - INTENDED_DECLARATION_SOURCE_ABSENT
+  - PARSER_CHECKED
+  - ELABORATED
+  - KERNEL_CHECKED
+current_global_declaration_status: SOURCE_PRESENT_STATIC_SCAN_OR_SOURCE_ABSENT_ONLY
+v11_theorem_specific_status:
+  AR8R-T299: {mapping: ONE_INTENDED_DECLARATION, source: ABSENT, parse: NOT_PERFORMED, elaboration: NOT_PERFORMED, kernel: NOT_PERFORMED}
+  AR8R-T300: {mapping: JOINT_T304_T300_INTENDED_DECLARATION, source: ABSENT, parse: NOT_PERFORMED, elaboration: NOT_PERFORMED, kernel: NOT_PERFORMED}
+  CANDIDATE-1: {mapping: NONE_IN_V5_MAP}
+  AR8R-T227: {mapping: NONE_IN_V5_MAP}
+  AR8R-T228: {mapping: NONE_IN_V5_MAP}
+external_ten_advances:
+  local_build_status: NOT_PERFORMED
+  general_ar8r_theorem_credit: 0
+connes_rigidity:
+  exact_source_commit: 94bc0feb6a9ff12c7d31d6de640a725c9d43d2b6
+  exact_source_sha256: 31f6c419f341ee6aa5b03bc15800a9d8ee2c654c344aab90bdef0639353ccc91
+  exact_source_status: SOURCE_PRESENT_EXACT_HASH_VERIFIED
+  static_token_scan: {sorry: 0, admit: 0, axiom: 0, opaque: 0, status: PASS_STATIC_ONLY}
+  build_status: NOT_PERFORMED
+  parse_status: NOT_PERFORMED
+  elaboration_status: NOT_PERFORMED
+  kernel_status: NOT_PERFORMED
+  axiom_report_status: NOT_PERFORMED
+  specification_correspondence: UNRESOLVED
+  independent_operator_algebra_review: NOT_PERFORMED
+  intended_theorem_status: UNRESOLVED_PENDING_OPERATOR_ALGEBRA_SPECIALIST_REVIEW
+forbidden_inferences:
+  - source presence implies parsing
+  - parsing implies elaboration
+  - elaboration implies kernel checking
+  - declaration-name mapping proves theorem identity
+v7_forbidden_inferences:
+  - static token absence implies intended theorem correctness
+  - build or kernel acceptance implies source-object correspondence
+milestone_architecture_projection:
+  owner: ../programs/AR8R-ORTHEMOLOGY-MENISCUS-MILESTONES-V1.yaml
+  role: FORMALIZATION_TARGET_POINTER_ONLY
+  source_inventory_effect: NONE
+  parse_effect: NONE
+  elaboration_effect: NONE
+  kernel_effect: NONE
+  machine_check_claim: NONE

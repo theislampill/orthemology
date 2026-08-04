@@ -1,0 +1,34 @@
+schema: ar8r-campaign-closure-contract-v1
+authority: v11-governance-proposal
+terminal_summary_states: [MENISCUS_REACHED, NATURAL_CLOSURE]
+open_status_tokens:
+  - OPEN
+  - PENDING
+  - PARTIAL
+  - CONTRADICTORY
+  - BLOCKED
+  - UNAUDITED
+  - REPAIR_REQUIRED
+controlling_ledger_families:
+  - theorem
+  - burden
+  - candidate
+  - premise
+  - rival
+  - audit
+  - repair
+  - source
+  - dependency
+  - admission
+required_layers:
+  - MECHANICAL_CONSISTENCY_PASS
+  - SUBSTANTIVE_REVIEW_DISPOSITION
+  - OWNER_TERMINAL_ACCEPTANCE
+prohibitions:
+  - summary_override
+  - unrecorded_burden_relabeling
+  - duplicate_byte_independence_credit
+  - target_substitution
+  - superseded_version_promotion
+  - private_evidence_publication
+claim_ceiling: Mechanical reconciliation cannot establish philosophical validity, originality, source fidelity, external review, empirical validation, adoption, or owner acceptance.

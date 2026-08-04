@@ -1,0 +1,40 @@
+schema: ar8r-pmr001-admission-overlay-v1
+campaign: AR8R_POST_MERGE_MENISCUS_PROGRAM_V1
+wave: PMR-001
+audit:
+  cold_audit: REPAIR_REQUIRED
+  repairs: [PMR001-R01, PMR001-R02]
+  fresh_rereview: PASS_WITH_NONBLOCKING_AUTHORITY_NOTES
+  external_independence: NOT_CLAIMED
+results:
+  - id: PMR-M3-01
+    title: NECESSARY_EXISTENCE_ORIGINATOR_CREATOR_GUARDED_SEPARATION
+    status: PROVED_CONDITIONAL_WITH_VALIDATED_COUNTERMODELS
+    source_status: TRANSLATED_PRIMARY_LOCUS_BOUND
+    world_status: OPEN
+    general_mathematical_novelty: ZERO
+    theorem_origin_credit: NONE
+    historical_identity: NONE
+  - id: PMR-R5-01
+    title: IMPERSONAL_ORIGINATOR_BRIDGE_SENSITIVITY
+    status: VALIDATED_RIVAL_COMPARISON
+    world_status: OPEN
+    general_mathematical_novelty: ZERO
+    theorem_origin_credit: NONE
+    historical_identity: NONE
+  - id: PMR-AGCOM-01
+    title: RECEIPT_PROFILE_INSUFFICIENCY_AND_LOCAL_REORTHING
+    status: ESTABLISHED_AS_AR2_AR3_SPECIALIZATION
+    implementation_status: CURRENT_MAIN_OUTLINE_CORRESPONDENCE_ONLY
+    runtime_status: NOT_IMPLEMENTED
+    general_mathematical_novelty: ZERO
+    theorem_origin_credit: NONE
+    historical_identity: NONE
+source_findings:
+  - id: PMR-SRC-FITRAH-01
+    status: SOURCE_SUPPORT_STRENGTHENED
+    effect: target semantics enriched; whole-stack daee disposition unchanged
+campaign_effect:
+  integrated_champion: NONE
+  meniscus_status: MENISCUS_NOT_REACHED
+  natural_closure: NOT_REACHED

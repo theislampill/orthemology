@@ -1,0 +1,17 @@
+schema: ar8r-p307-p322-renaming-crosswalk-v2-public-receipt
+source_sha256: 4b7f236152aa0e5083f105cbbe576dd0ade72a262dc6b06a502e8de83b1c6f3f
+status: RENUMBERED_PENDING_CUSTODY_REVIEW
+mapping:
+  P307: P315
+  P308: P316
+  P309: P317
+  P310: P318
+  P311: P319
+  P312: P320
+  P313: P321
+  P314: P322
+credit_guards:
+  theorem_credit: 0
+  novelty_credit: 0
+  duplicate_duration_credit: 0
+rule: Historical and canonical labels are aliases under pending custody review, not independent results.

@@ -1,0 +1,49 @@
+schema: ar8r-v11-lean-formalization-queue
+authority: CURRENT_PUBLIC_OWNER
+static_inventory:
+  declaration_records: 230
+  source_present_static_records: 221
+  theorem_or_lemma_records: 122
+  intended_declarations_without_source: 9
+  scanned_files: 48
+status_axes:
+  source_inventory: STATIC_ONLY
+  parse: NOT_PERFORMED
+  elaboration: NOT_PERFORMED
+  kernel: NOT_PERFORMED
+  axiom_report: NOT_PERFORMED
+  machine_check_claim: NONE
+milestone_formalization_crosswalk:
+  owner: ../programs/AR8R-ORTHEMOLOGY-MENISCUS-MILESTONES-V1.yaml
+  milestones: [M1, M2, M3, M4, M5, M6, M7, M8, M9, M10, M11, M12, M13, M14, M18]
+  meniscus_candidates: [MEN-1, MEN-2, MEN-3, MEN-4, MEN-5, MEN-6, MEN-7, MEN-8, MEN-9]
+  status: TARGET_QUEUE_ONLY
+  nonclaim: No parse elaboration kernel axiom or build status follows from roadmap inclusion.
+queue:
+  - {id: Q0, purpose: Lean project/toolchain exact source custody and clean build receipt, prerequisites: [], layers: [CUSTODY, TOOLCHAIN, BUILD]}
+  - {id: Q1a, purpose: finite fibre factorization then T227 T299 exact twin and T300/T304 wrapper, prerequisites: [Q0, CONCRETE_T300_LEMMAS_FOR_WRAPPER], layers: [PURE, APPLICATION]}
+  - {id: Q1b, purpose: graph/fixed-point base then T228 finite-game base pure COB and TRC wrapper, prerequisites: [Q0], layers: [PURE, APPLICATION]}
+  - {id: Q1c, purpose: finite probability/counting base then two concrete T300 constructions, prerequisites: [Q0], layers: [PURE]}
+  - {id: Q1d, purpose: transport/holonomy base then MLT SMRB and RSD, prerequisites: [Q0], layers: [PURE]}
+  - {id: Q1e, purpose: local-view component base then FRLA and optional COB local-action wrapper, prerequisites: [Q0], layers: [PURE, OPTIONAL_WRAPPER]}
+  - {id: Q1f, purpose: guarded reason/version base then VCT and optional TRC wrapper, prerequisites: [Q0], layers: [PURE, OPTIONAL_WRAPPER]}
+  - {id: Q1g, purpose: finite relations set-cover ambiguity base then ORTC-V4, prerequisites: [Q0], layers: [PURE]}
+  - {id: Q1h, purpose: hidden partial-matching base Candidate 1 and PRQT authenticated-label lift, prerequisites: [Q0], layers: [PURE, APPLICATION]}
+  - {id: Q1i, purpose: finite hypergraph-transversal base pure PRRC then AR8R wrapper after T351 T352 and PRQT-interface gates, prerequisites: [Q0], layers: [PURE, APPLICATION]}
+dependency_guards:
+  pure_COB_depends_on_FRLA: false
+  pure_PRRC_depends_on_PRQT: false
+  application_wrappers_may_add_dependencies: true
+blocking_receipts: [EXACT_TOOLCHAIN, CLEAN_BUILD, ELABORATION, KERNEL, AXIOM_REPORT, INDEPENDENT_REVIEW]
+object_faithful_audits:
+  - id: CONNES-RIGIDITY-EXACT-OBJECT
+    prerequisites: [Q0, EXACT_PUBLIC_SOURCE_OBJECT, OSW15_COMPLETE]
+    source_hash_status: PASS
+    static_token_scan: PASS_STATIC_ONLY
+    build: NOT_PERFORMED
+    elaboration: NOT_PERFORMED
+    kernel: NOT_PERFORMED
+    axiom_report: NOT_PERFORMED
+    specification_correspondence: UNRESOLVED
+    mathematical_review: NOT_PERFORMED
+    disposition: UNRESOLVED_PENDING_OPERATOR_ALGEBRA_SPECIALIST_REVIEW

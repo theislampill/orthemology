@@ -1,0 +1,90 @@
+{
+  "review": "PMR-007 Round 14 V2 distinct direct-temporal rereview",
+  "method": "set-valued mu/nu approximants + independently implemented Tarjan SCC semantics + rank-strategy extraction",
+  "frozen_hashes": {
+    "PMR-007_FRONTIER_ROUND14_LOCAL_PROTOCOL_REACH_AND_STAY_FIXED_POINT_V2.md": {
+      "expected": "e3db880891dc6baf7ba48f166951ecd4ef3b66ca5afe57e5a77a00c31919505b",
+      "actual": "e3db880891dc6baf7ba48f166951ecd4ef3b66ca5afe57e5a77a00c31919505b",
+      "pass": true
+    },
+    "checks/pmr007_round14_v2_cobuchi_check.py": {
+      "expected": "b7b72e676f474e3f8dc3f0e870e67454c04612380e658d1fda944f1e9dda2d9d",
+      "actual": "b7b72e676f474e3f8dc3f0e870e67454c04612380e658d1fda944f1e9dda2d9d",
+      "pass": true
+    },
+    "checks/pmr007_round14_v2_cobuchi_check_results.json": {
+      "expected": "9789cf7cc81cd6d5a9d3bf12c8958034743017321bd9db2dfa78993794715905",
+      "actual": "9789cf7cc81cd6d5a9d3bf12c8958034743017321bd9db2dfa78993794715905",
+      "pass": true
+    },
+    "audits/PMR-007_FRONTIER_ROUND14_V2_COLD_AUDIT.md": {
+      "expected": "bd5c08bf7fc65890cac4b06c724a66b2dfaf9f8572e1daf3a40b4bae5291c1a7",
+      "actual": "bd5c08bf7fc65890cac4b06c724a66b2dfaf9f8572e1daf3a40b4bae5291c1a7",
+      "pass": true
+    }
+  },
+  "exhaustive": {
+    "totals": {
+      "labelled_games": 157611,
+      "strategies": 804585,
+      "formula_direct_mismatch": 0,
+      "extracted_strategy_failure": 0,
+      "core_subset_failure": 0,
+      "strict_cases": 300
+    },
+    "per_size": [
+      {
+        "n": 1,
+        "menu_pool": 1,
+        "menu_tuples": 1,
+        "labelled_games": 3,
+        "strategies": 3,
+        "strict_cases": 0
+      },
+      {
+        "n": 2,
+        "menu_pool": 4,
+        "menu_tuples": 16,
+        "labelled_games": 144,
+        "strategies": 225,
+        "strict_cases": 0
+      },
+      {
+        "n": 3,
+        "menu_pool": 18,
+        "menu_tuples": 5832,
+        "labelled_games": 157464,
+        "strategies": 804357,
+        "strict_cases": 300
+      }
+    ],
+    "first_failure": null
+  },
+  "larger_random": {
+    "totals": {
+      "seed": 1414,
+      "cases": 6000,
+      "strategies": 124525,
+      "mismatches": 0,
+      "rank_strategy_failures": 0
+    },
+    "first_failure": null
+  },
+  "r14_f01": {
+    "K": [
+      0
+    ],
+    "W_core": [
+      0,
+      1
+    ],
+    "W_coB": [
+      0,
+      1,
+      2
+    ],
+    "pass": true
+  },
+  "elapsed_seconds": 22.143867612999998,
+  "overall": "PASS"
+}

@@ -1,0 +1,74 @@
+schema: ar8r-post-merge-continuation-research-state-v2
+campaign: AR8R_POST_MERGE_MENISCUS_PROGRAM_V1
+timing_ledger: POST_MERGE_AR8R_SUBSTANTIVE_RESEARCH_V2
+historical_authority:
+  duration: '09:41:25.405101139'
+  seconds: '34885.405101139'
+  latest_segment: 357
+  theorem_origin: V5
+  natural_closure: NOT_REACHED
+  repository_main: cc91f41fec364ea3910b80d57252bb1e0a050278
+  changed: false
+post_merge_state:
+  latest_closed_wave: PMR-006
+  latest_material_checkpoint: PMR-002-THROUGH-PMR-006-MULTI-WAVE-CHECKPOINT
+  latest_tranches:
+  - PMR-002-TRANCHE-001
+  - PMR-003-TRANCHE-001
+  - PMR-004-TRANCHE-001
+  - PMR-005-TRANCHE-001
+  - PMR-006-TRANCHE-001
+  integrated_champion: NONE
+  meniscus_status: MENISCUS_NOT_REACHED
+  current_wave: PMR-007
+  current_wave_status: CONTINUATION_READY_NOT_STARTED
+  exact_next_executable_action: Freeze PMR-007-LANG-VERSION-01 version-custody episode class; construct the first same-bytes/different-version
+    applicability countermodel; compare it against AR3 RP-T2/RP-T40 and PMR-AGCOM-01/02/06 plus PMR-LANG-01/02; then determine
+    whether the guarded version-transport result is new or an application.
+  owner_decision_required: false
+  independent_ready_work_remaining: true
+  GitHub_mutation_authorized: false
+  GitHub_changed: false
+  Codex_status: PARKED
+completed_since_pmr001:
+- PMR-002_BOUNDED_ANCESTRY_SEARCH_COMPLETED_WITHIN_CAP
+- PMR-M4-01_ADMITTED_AT_REPAIRED_SOURCE_RELATIVE_SCOPE
+- PMR-LANG-01_ADMITTED_AT_REPAIRED_SCOPE
+- PMR-UG-01_V3_ADMITTED_AFTER_CUSTODY_REPAIR
+- PMR-002_CROSS_LANE_SYNTHESIS_COMPLETED
+- PMR-M5-01_ADMITTED
+- PMR-M5-02_ADMITTED
+- PMR-M5-03_ADMITTED
+- PMR-AGCOM-02_ADMITTED
+- PMR-FAMILY-01_ADMITTED_AS_FALSE_MULTIPLICITY_CONTROL
+- PMR-LANG-02_ADMITTED
+- PMR-TAC-01_ADMITTED_WITH_HISTORICAL_TERM_FIREWALL
+- PMR-AGCOM-06_ADMITTED
+- ELEVEN_CURRENT_ADMISSION_OWNERS_RECONCILED
+- FORTY_BLOCKING_FINDINGS_REPAIRED
+- WHOLE_FIELD_DEPENDENCY_REREAD_COMPLETED
+blocked_but_nonfatal:
+- TENSOR_A_G_PROTOCOL_RETRIEVAL_REQUIRED
+- exact TAC/SAC packet and orthemologous/paralemologous definitions absent
+- remaining exact T164-T172, T186-T190, and T203-T205 theorem bodies not fully surfaced within bounded retrieval
+- exact later daee snapshot absent
+- exact Fusha/Qamus implementation snapshot absent
+- Candidate 1 external mathematical review and exhaustive prior-art review open
+- Arabic-primary and source-specialist verification open
+audit_reconciliation:
+  current_admission_owners: 11
+  blocking_findings_repaired: 40
+  unexpected_yaml_or_json_parse_errors: 0
+  preserved_invalid_evidence_artifacts:
+  - PMR_UG_01_COUNTERMODELS.yaml
+  invalid_artifact_current_authority: false
+  current_ug_owner: PMR_UG_01_COUNTERMODELS_V3.yaml
+post_merge_timing:
+  latest_block_added_duration: '00:45:36.000354666'
+  latest_block_added_seconds: '2736.000354666'
+  cumulative_duration: '00:56:11.268096105'
+  cumulative_seconds: '3371.268096105'
+  remaining_before_eight_hour_floor_duration: '07:03:48.731903895'
+  remaining_before_eight_hour_floor_seconds: '25428.731903895'
+  eight_hour_floor_status: NOT_YET_REACHED
+  historical_duration_unchanged: true

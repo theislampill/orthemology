@@ -1,0 +1,39 @@
+schema: ar8r-agentic-communication-countermodel-ledger-v1
+wave: PMR-001
+countermodels:
+  - id: PMR-CM-AGCOM-REC-VERSION
+    target: receipt implies adoption
+    model: same received artifact; target version stale
+    disposition: VALIDATED_FINITE_COUNTERMODEL
+  - id: PMR-CM-AGCOM-REC-APPLICABILITY
+    target: receipt implies local applicability
+    model: artifact applies in source domain but not recipient target
+    disposition: VALIDATED_FINITE_COUNTERMODEL
+  - id: PMR-CM-AGCOM-REC-AUTHORITY
+    target: understanding or receipt implies authority
+    model: semantically understood artifact lacks delegation
+    disposition: VALIDATED_FINITE_COUNTERMODEL
+  - id: PMR-CM-AGCOM-REC-EVIDENCE
+    target: receipt carries local warrant automatically
+    model: source evidence unavailable or provenance invalid at recipient
+    disposition: VALIDATED_FINITE_COUNTERMODEL
+  - id: PMR-CM-AGCOM-REC-CAPABILITY
+    target: applicability implies executable adoption
+    model: recipient lacks required capability/resources
+    disposition: VALIDATED_FINITE_COUNTERMODEL
+  - id: PMR-CM-AGCOM-REC-PERMISSION
+    target: semantic agreement implies authorization
+    model: permission false despite agreement
+    disposition: VALIDATED_FINITE_COUNTERMODEL
+  - id: PMR-CM-AGCOM-REC-INVALIDATOR
+    target: prior warrant survives unchanged
+    model: recipient has a live invalidator absent at source
+    disposition: VALIDATED_FINITE_COUNTERMODEL
+  - id: PMR-CM-AGCOM-PROFILE-COLLISION
+    target: receipt profile exactly certifies adoption
+    model: identical receipt profile in good and stale recipient contexts with opposite adoption status
+    disposition: VALIDATED_FINITE_COUNTERMODEL
+validation:
+  executable: AR8R_PROOF_COUNTERMODEL_AUDIT_REPAIR_REREVIEW_PACKETS/finite_model_check.py
+  states_checked: 256
+  result: PASS

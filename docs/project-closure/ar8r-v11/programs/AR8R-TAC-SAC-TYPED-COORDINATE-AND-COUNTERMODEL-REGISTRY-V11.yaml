@@ -1,0 +1,735 @@
+schema: ar8r-tac-sac-typed-coordinate-and-countermodel-registry-v11
+source_class: NEW_V11
+registry_status: BOUNDED_ANALYTIC_COMPARATOR
+historical_packet_status: UNAVAILABLE
+historical_identity_assignment: NONE
+unavailable_exact_terms:
+  - TAC
+  - SAC
+  - orthemologous
+  - paralemologous
+  - SAC-T4
+  - CC-T4
+  - M11-M13
+  - TAC-IDENTITY-FAMILY
+  - exact occurrence-meaning definition
+historical_firewall:
+  coordinate_semantics: NEW_V11_ONLY_NOT_RECOVERED_HISTORICAL_DEFINITIONS
+  acronym_expansion: UNASSIGNED
+  tachikoma_identity_verdict: NOT_ESTABLISHED
+  tac_sac_term_adoption: NOT_AUTHORIZED
+  exact_source_status: EXACT_TAC_SAC_PACKET_UNAVAILABLE
+  registry_rule: Finite witnesses show only that the stated implication is not forced by the declared NEW_V11 coordinates.
+  metaphysical_adequacy: NOT_CLAIMED
+source_status:
+  public_program_owner: tac-sac-identity-and-independence.md
+  compatibility_index: full-program-reentry-v2-source/AR8R_TAC_TACHIKOMA_STATUS_V1.md
+  expanded_owner_names:
+    - AR8R_TAC_TACHIKOMA_SAC_CONTINUITY_V1.md
+    - AR8R_TAC_TACHIKOMA_SAC_CONTINUITY_V1.yaml
+  expanded_owner_custody: PRESERVED_RECOVERY_SOURCE_NOT_REPUBLISHED_HERE
+coordinate_contract:
+  closed_world: true
+  reference_rule: Every coordinate reference in this file must resolve to one coordinate_registry id.
+  projection_rule: Every coordinate declares at least one typed projection with domain, codomain, and rule.
+  collapse_rule: forbidden_collapses names coordinates that cannot be identified without an additional bridge.
+coordinate_registry:
+  - id: registered_type
+    domain: finite model entities
+    value_space: finite registered-type labels
+    equality_criterion: Two entities agree exactly when their declared registered-type labels are equal.
+    relevant_projections: [{id: entity_to_registered_type, domain: finite model entities, codomain: registered_type, rule: Return the declared type label.}]
+    forbidden_collapses: [numerical_identity, episode_occurrence, lineage_root]
+  - id: numerical_identity
+    domain: finite model entities
+    value_space: equivalence classes of entities
+    equality_criterion: Two entity names are numerically identical exactly when they lie in the same declared identity class.
+    relevant_projections: [{id: entity_to_identity_class, domain: finite model entities, codomain: numerical_identity, rule: Return the entity identity class.}]
+    forbidden_collapses: [registered_type, state_profile, function_profile, lineage_root, coherent_lineage_transport]
+  - id: state_profile
+    domain: entity-time or entity-horizon pairs
+    value_space: finite state vectors
+    equality_criterion: Profiles agree exactly when every declared state coordinate has the same value on the declared horizon.
+    relevant_projections: [{id: entity_horizon_to_state_profile, domain: entity-time or entity-horizon pairs, codomain: state_profile, rule: Return the declared state vector.}]
+    forbidden_collapses: [numerical_identity, carrier, episode_occurrence]
+  - id: function_profile
+    domain: entities on a finite input domain
+    value_space: finite input-output maps
+    equality_criterion: Functions agree exactly when their outputs agree on every input in the declared finite domain.
+    relevant_projections: [{id: entity_to_function_profile, domain: entities on a finite input domain, codomain: function_profile, rule: Return the finite input-output graph.}]
+    forbidden_collapses: [numerical_identity, proper_function, mentality]
+  - id: output_value
+    domain: episode-input pairs
+    value_space: finite output symbols
+    equality_criterion: Outputs agree exactly when their declared symbols are equal.
+    relevant_projections: [{id: episode_input_to_output, domain: episode-input pairs, codomain: output_value, rule: Return the emitted symbol.}]
+    forbidden_collapses: [episode_occurrence, carrier, warrant]
+  - id: episode_occurrence
+    domain: finite event tokens
+    value_space: event identity labels
+    equality_criterion: Occurrences agree exactly when they use the same declared event token.
+    relevant_projections: [{id: event_to_episode_token, domain: finite event tokens, codomain: episode_occurrence, rule: Return the event token.}]
+    forbidden_collapses: [carrier, output_value, state_profile]
+  - id: carrier
+    domain: entities or event tokens
+    value_space: finite physical or logical bearer labels
+    equality_criterion: Carriers agree exactly when the bearer label is equal.
+    relevant_projections: [{id: entity_or_event_to_carrier, domain: entities or event tokens, codomain: carrier, rule: Return the declared bearer label or bearer set.}]
+    forbidden_collapses: [episode_occurrence, numerical_identity, common_bearer]
+  - id: lineage_root
+    domain: entities, reports, or artifacts
+    value_space: finite ancestry-root labels
+    equality_criterion: Roots agree exactly when ancestry terminates at the same declared root label.
+    relevant_projections: [{id: item_to_lineage_root, domain: entities reports or artifacts, codomain: lineage_root, rule: Follow the declared ancestry relation to its root.}]
+    forbidden_collapses: [numerical_identity, evidential_independence, provenance_root]
+  - id: coherent_lineage_transport
+    domain: world-indexed fibres with edge maps
+    value_space: finite coherent sections or false
+    equality_criterion: Values agree exactly when the same anchor assignments satisfy every declared edge map.
+    relevant_projections: [{id: bundle_to_coherent_section, domain: world-indexed fibres with edge maps, codomain: coherent_lineage_transport, rule: Return the anchor section when every edge map commutes.}]
+    forbidden_collapses: [numerical_identity, necessary_being]
+  - id: copy_relation
+    domain: ordered pairs of artifacts or reports
+    value_space: [copied, not_copied]
+    equality_criterion: The value is copied exactly when the declared source-to-copy edge exists.
+    relevant_projections: [{id: pair_to_copy_status, domain: ordered artifact or report pairs, codomain: copy_relation, rule: Test membership in the declared copy edges.}]
+    forbidden_collapses: [provenance_root, evidential_independence]
+  - id: provenance_root
+    domain: artifacts, reports, or claims
+    value_space: finite acquisition-root labels
+    equality_criterion: Roots agree exactly when the declared acquisition graph reaches the same root token.
+    relevant_projections: [{id: item_to_provenance_root, domain: artifacts reports or claims, codomain: provenance_root, rule: Follow acquisition edges to the first declared root.}]
+    forbidden_collapses: [copy_count, receipt, path_label]
+  - id: copy_count
+    domain: finite copy families
+    value_space: nonnegative integers
+    equality_criterion: Counts agree exactly when family cardinalities agree.
+    relevant_projections: [{id: copy_family_to_count, domain: finite copy families, codomain: copy_count, rule: Return the number of declared copies.}]
+    forbidden_collapses: [evidential_independence, provenance_root]
+  - id: evidential_independence
+    domain: finite sets of reports or claims
+    value_space: [independent, dependent]
+    equality_criterion: Values agree exactly when the declared root-sharing criterion gives the same dependency result.
+    relevant_projections: [{id: report_family_to_independence, domain: finite report families, codomain: evidential_independence, rule: Return independent only when no two selected reports share a declared acquisition root.}]
+    forbidden_collapses: [copy_count, path_label, visible_profile, lineage_root]
+  - id: path_label
+    domain: reports, routes, or artifacts
+    value_space: finite display labels
+    equality_criterion: Labels agree exactly when their literal declared strings agree.
+    relevant_projections: [{id: item_to_path_label, domain: reports routes or artifacts, codomain: path_label, rule: Return the display or route label.}]
+    forbidden_collapses: [provenance_root, evidential_independence]
+  - id: visible_profile
+    domain: entities, reports, or artifacts
+    value_space: finite observable-feature vectors
+    equality_criterion: Profiles agree exactly when every declared visible feature agrees.
+    relevant_projections: [{id: item_to_visible_profile, domain: entities reports or artifacts, codomain: visible_profile, rule: Restrict the full valuation to declared visible features.}]
+    forbidden_collapses: [lineage_root, evidential_independence, numerical_identity, mentality]
+  - id: independent_convergence
+    domain: finite producer families and a target output
+    value_space: [converged_independently, not_independently_converged]
+    equality_criterion: The value is converged_independently exactly when distinct declared roots produce the same target without copy edges.
+    relevant_projections: [{id: producer_family_to_convergence, domain: producer families and target output, codomain: independent_convergence, rule: Check root distinction copy-edge absence and output equality.}]
+    forbidden_collapses: [numerical_identity, evidential_independence, mentality]
+  - id: receipt
+    domain: message-event pairs
+    value_space: [received, not_received]
+    equality_criterion: Values agree exactly when the declared delivery relation contains the message-event pair.
+    relevant_projections: [{id: message_event_to_receipt, domain: message-event pairs, codomain: receipt, rule: Test declared delivery.}]
+    forbidden_collapses: [proposition_truth, warrant, applicability, adoption, common_knowledge]
+  - id: proposition_truth
+    domain: finite propositions in a valuation
+    value_space: [true, false]
+    equality_criterion: Values agree exactly when the declared valuation assigns the same Boolean value.
+    relevant_projections: [{id: proposition_to_truth, domain: finite propositions, codomain: proposition_truth, rule: Return the declared Boolean valuation.}]
+    forbidden_collapses: [receipt, authorization, warrant]
+  - id: warrant
+    domain: agent-claim pairs
+    value_space: [warranted, unwarranted]
+    equality_criterion: Values agree exactly when the declared evidence and rule set licenses the same claim for the agent.
+    relevant_projections: [{id: agent_claim_to_warrant, domain: agent-claim pairs, codomain: warrant, rule: Apply the declared evidence-license relation.}]
+    forbidden_collapses: [proposition_truth, receipt, authorization, reliable_success, proper_function]
+  - id: applicability
+    domain: artifact-target-version triples
+    value_space: [applicable, inapplicable]
+    equality_criterion: Values agree exactly when every declared target and version guard has the same result.
+    relevant_projections: [{id: artifact_target_version_to_applicability, domain: artifact-target-version triples, codomain: applicability, rule: Evaluate the declared applicability guards.}]
+    forbidden_collapses: [receipt, artifact_bytes, source_provenance]
+  - id: adoption
+    domain: actor-proposal pairs
+    value_space: [adopted, not_adopted]
+    equality_criterion: Values agree exactly when the declared owner-adoption relation has the same membership.
+    relevant_projections: [{id: actor_proposal_to_adoption, domain: actor-proposal pairs, codomain: adoption, rule: Test the declared adoption relation.}]
+    forbidden_collapses: [receipt, authorization, execution, writeback]
+  - id: agreement
+    domain: actor-content pairs
+    value_space: [agrees, does_not_agree]
+    equality_criterion: Values agree exactly when the declared assent relation has the same membership.
+    relevant_projections: [{id: actor_content_to_agreement, domain: actor-content pairs, codomain: agreement, rule: Test declared assent.}]
+    forbidden_collapses: [understanding, authorization, adoption]
+  - id: understanding
+    domain: actor-content pairs
+    value_space: [understands, does_not_understand]
+    equality_criterion: Values agree exactly when the declared comprehension relation has the same membership.
+    relevant_projections: [{id: actor_content_to_understanding, domain: actor-content pairs, codomain: understanding, rule: Test declared comprehension.}]
+    forbidden_collapses: [agreement, authorization, warrant]
+  - id: authorization
+    domain: actor-action-target triples
+    value_space: [authorized, unauthorized]
+    equality_criterion: Values agree exactly when the declared permission relation has the same membership.
+    relevant_projections: [{id: actor_action_target_to_authorization, domain: actor-action-target triples, codomain: authorization, rule: Test declared permission.}]
+    forbidden_collapses: [agreement, understanding, proposition_truth, warrant, execution]
+  - id: execution
+    domain: actor-action-event triples
+    value_space: [executed, not_executed]
+    equality_criterion: Values agree exactly when the declared event log contains the action event.
+    relevant_projections: [{id: actor_action_event_to_execution, domain: actor-action-event triples, codomain: execution, rule: Test declared execution event.}]
+    forbidden_collapses: [authorization, adoption, writeback]
+  - id: writeback
+    domain: action-state pairs
+    value_space: [written_back, not_written_back]
+    equality_criterion: Values agree exactly when the declared durable-state mutation exists.
+    relevant_projections: [{id: action_state_to_writeback, domain: action-state pairs, codomain: writeback, rule: Test declared durable mutation.}]
+    forbidden_collapses: [execution, adoption, receipt]
+  - id: private_acknowledgment
+    domain: ordered actor-message pairs
+    value_space: [acknowledged_privately, not_acknowledged]
+    equality_criterion: Values agree exactly when the declared private acknowledgment edge exists.
+    relevant_projections: [{id: actor_message_to_private_ack, domain: ordered actor-message pairs, codomain: private_acknowledgment, rule: Test the private acknowledgment relation.}]
+    forbidden_collapses: [common_knowledge, receipt]
+  - id: common_knowledge
+    domain: agent-group proposition pairs in a finite epistemic model
+    value_space: [common_knowledge, not_common_knowledge]
+    equality_criterion: The value is common_knowledge exactly when the proposition holds at every state reachable by any finite sequence of group accessibility edges.
+    relevant_projections: [{id: group_proposition_to_common_knowledge, domain: group-proposition pairs in finite epistemic models, codomain: common_knowledge, rule: Evaluate reflexive-transitive group reachability.}]
+    forbidden_collapses: [receipt, private_acknowledgment, agreement]
+  - id: shared_vocabulary
+    domain: pairs of language systems
+    value_space: finite shared token sets
+    equality_criterion: Values agree exactly when the intersections of declared token inventories agree.
+    relevant_projections: [{id: language_pair_to_shared_vocabulary, domain: pairs of language systems, codomain: shared_vocabulary, rule: Return token-set intersection.}]
+    forbidden_collapses: [shared_schema, full_local_grammar, occurrence_meaning]
+  - id: shared_schema
+    domain: pairs of representation systems
+    value_space: finite shared field-and-type signatures
+    equality_criterion: Values agree exactly when the declared common signatures agree.
+    relevant_projections: [{id: system_pair_to_shared_schema, domain: pairs of representation systems, codomain: shared_schema, rule: Return the common declared signature.}]
+    forbidden_collapses: [full_local_grammar, occurrence_meaning, causal_lineage]
+  - id: full_local_grammar
+    domain: language-system and context pairs
+    value_space: finite grammar-rule sets
+    equality_criterion: Grammars agree exactly when every declared local rule agrees.
+    relevant_projections: [{id: system_context_to_full_grammar, domain: language-system and context pairs, codomain: full_local_grammar, rule: Return all declared local rules.}]
+    forbidden_collapses: [grammar_kernel, shared_vocabulary, shared_schema]
+  - id: occurrence_meaning
+    domain: token-occurrence and context pairs
+    value_space: finite semantic labels
+    equality_criterion: Meanings agree exactly when the declared context-sensitive semantic labels agree.
+    relevant_projections: [{id: token_context_to_occurrence_meaning, domain: token-occurrence and context pairs, codomain: occurrence_meaning, rule: Return the declared occurrence label.}]
+    forbidden_collapses: [token_type, shared_vocabulary, translation_query_preservation]
+  - id: causal_lineage
+    domain: artifacts, representations, or systems
+    value_space: finite causal-root labels
+    equality_criterion: Lineages agree exactly when the declared causal graph reaches the same root.
+    relevant_projections: [{id: item_to_causal_lineage, domain: artifacts representations or systems, codomain: causal_lineage, rule: Follow declared causal edges to a root.}]
+    forbidden_collapses: [shared_schema, visible_profile, independent_convergence]
+  - id: grammar_kernel
+    domain: language or representation systems
+    value_space: finite selected grammar-rule subsets
+    equality_criterion: Kernels agree exactly when every selected kernel rule agrees.
+    relevant_projections: [{id: system_to_grammar_kernel, domain: language or representation systems, codomain: grammar_kernel, rule: Restrict the full grammar to registered kernel rules.}]
+    forbidden_collapses: [full_local_grammar, carrier, referent, mentality, agency]
+  - id: referent
+    domain: expression-occurrence pairs
+    value_space: finite object labels plus none
+    equality_criterion: Referents agree exactly when the declared denotation labels agree.
+    relevant_projections: [{id: expression_occurrence_to_referent, domain: expression-occurrence pairs, codomain: referent, rule: Return the declared denotation.}]
+    forbidden_collapses: [occurrence_meaning, grammar_kernel, mentality]
+  - id: mentality
+    domain: entities
+    value_space: [mental, nonmental, unassigned]
+    equality_criterion: Values agree exactly when the declared model valuation agrees.
+    relevant_projections: [{id: entity_to_mentality, domain: entities, codomain: mentality, rule: Return the declared bounded model valuation.}]
+    forbidden_collapses: [function_profile, articulability, convergence, grammar_kernel, speech_capacity]
+  - id: agency
+    domain: entities
+    value_space: [agent, nonagent, unassigned]
+    equality_criterion: Values agree exactly when the declared model valuation agrees.
+    relevant_projections: [{id: entity_to_agency, domain: entities, codomain: agency, rule: Return the declared bounded model valuation.}]
+    forbidden_collapses: [function_profile, grammar_kernel, authorization]
+  - id: translation_query_preservation
+    domain: translation-map and query pairs
+    value_space: [preserved, not_preserved]
+    equality_criterion: The value is preserved exactly when the query value is constant on every attained translation fibre.
+    relevant_projections: [{id: translation_query_to_preservation, domain: translation-map and query pairs, codomain: translation_query_preservation, rule: Compare query values within each attained fibre.}]
+    forbidden_collapses: [full_semantic_preservation, full_grammatical_preservation, occurrence_meaning]
+  - id: full_semantic_preservation
+    domain: translation maps
+    value_space: [fully_preserved, not_fully_preserved]
+    equality_criterion: The value is fully_preserved exactly when every declared semantic feature is invariant and recoverable.
+    relevant_projections: [{id: translation_to_semantic_preservation, domain: translation maps, codomain: full_semantic_preservation, rule: Check all declared semantic features.}]
+    forbidden_collapses: [translation_query_preservation, translation_truth]
+  - id: full_grammatical_preservation
+    domain: translation maps
+    value_space: [fully_preserved, not_fully_preserved]
+    equality_criterion: The value is fully_preserved exactly when every declared grammatical feature is invariant and recoverable.
+    relevant_projections: [{id: translation_to_grammatical_preservation, domain: translation maps, codomain: full_grammatical_preservation, rule: Check all declared grammatical features.}]
+    forbidden_collapses: [translation_query_preservation, full_semantic_preservation]
+  - id: token_type
+    domain: token occurrences
+    value_space: finite lexical type labels
+    equality_criterion: Types agree exactly when their declared lexical labels agree.
+    relevant_projections: [{id: occurrence_to_token_type, domain: token occurrences, codomain: token_type, rule: Return the declared lexical type.}]
+    forbidden_collapses: [occurrence_meaning, referent, full_local_grammar]
+  - id: source_provenance
+    domain: source or artifact tokens
+    value_space: finite source-chain records
+    equality_criterion: Provenance agrees exactly when every declared source-chain edge and root agree.
+    relevant_projections: [{id: item_to_source_provenance, domain: source or artifact tokens, codomain: source_provenance, rule: Return the declared source chain.}]
+    forbidden_collapses: [translation_truth, warrant, applicability]
+  - id: translation_truth
+    domain: translated proposition tokens
+    value_space: [true, false, unassigned]
+    equality_criterion: Values agree exactly when the declared target-language proposition valuation agrees.
+    relevant_projections: [{id: translated_proposition_to_truth, domain: translated proposition tokens, codomain: translation_truth, rule: Return the declared bounded valuation.}]
+    forbidden_collapses: [source_provenance, translation_query_preservation]
+  - id: artifact_bytes
+    domain: artifact-version tokens
+    value_space: finite byte strings
+    equality_criterion: Byte values agree exactly when the byte strings are identical.
+    relevant_projections: [{id: artifact_version_to_bytes, domain: artifact-version tokens, codomain: artifact_bytes, rule: Return the declared byte string.}]
+    forbidden_collapses: [version_eligibility, applicability, source_provenance]
+  - id: version_eligibility
+    domain: artifact-version-target triples
+    value_space: [eligible, ineligible]
+    equality_criterion: Values agree exactly when all declared version, target, authority, and invalidator guards agree.
+    relevant_projections: [{id: artifact_version_target_to_eligibility, domain: artifact-version-target triples, codomain: version_eligibility, rule: Evaluate declared eligibility guards.}]
+    forbidden_collapses: [artifact_bytes, visible_profile, receipt]
+  - id: proof_skeleton
+    domain: theorem-proof records
+    value_space: finite rule-graph isomorphism classes
+    equality_criterion: Skeletons agree exactly when their declared inference-rule graphs are isomorphic under typed renaming.
+    relevant_projections: [{id: proof_to_skeleton, domain: theorem-proof records, codomain: proof_skeleton, rule: Erase theorem labels and retain the typed inference-rule graph.}]
+    forbidden_collapses: [theorem_identity, origin_credit, novelty_credit]
+  - id: theorem_identity
+    domain: theorem records
+    value_space: unique theorem identifiers
+    equality_criterion: Identities agree exactly when the declared theorem identifier is identical.
+    relevant_projections: [{id: theorem_record_to_identity, domain: theorem records, codomain: theorem_identity, rule: Return the declared identifier.}]
+    forbidden_collapses: [proof_skeleton, origin_credit, novelty_credit]
+  - id: origin_credit
+    domain: theorem records
+    value_space: finite origin-owner labels or zero
+    equality_criterion: Credits agree exactly when the declared ancestry owner agrees.
+    relevant_projections: [{id: theorem_to_origin_credit, domain: theorem records, codomain: origin_credit, rule: Return the declared ancestry owner or zero.}]
+    forbidden_collapses: [proof_skeleton, theorem_identity, novelty_credit]
+  - id: novelty_credit
+    domain: theorem records
+    value_space: nonnegative bounded novelty levels
+    equality_criterion: Credits agree exactly when the declared novelty level agrees.
+    relevant_projections: [{id: theorem_to_novelty_credit, domain: theorem records, codomain: novelty_credit, rule: Return the declared bounded novelty level.}]
+    forbidden_collapses: [proof_skeleton, theorem_identity, origin_credit]
+  - id: distributed_realization
+    domain: role-carrier structures
+    value_space: finite assignments from roles to carrier sets
+    equality_criterion: Realizations agree exactly when every role has the same declared carrier set.
+    relevant_projections: [{id: structure_to_distributed_realization, domain: role-carrier structures, codomain: distributed_realization, rule: Return each role carrier set.}]
+    forbidden_collapses: [common_bearer, composite_attribution, numerical_identity]
+  - id: common_bearer
+    domain: finite role sets in a role-carrier structure
+    value_space: carrier labels plus none
+    equality_criterion: Values agree exactly when the intersection of all declared role-carrier sets has the same unique member or is empty.
+    relevant_projections: [{id: role_set_to_common_bearer, domain: finite role sets, codomain: common_bearer, rule: Intersect the declared carrier sets.}]
+    forbidden_collapses: [distributed_realization, coordinated_realization]
+  - id: coordinated_realization
+    domain: role-carrier structures
+    value_space: [coordinated, uncoordinated]
+    equality_criterion: Values agree exactly when the declared coordination relation has the same value.
+    relevant_projections: [{id: structure_to_coordination, domain: role-carrier structures, codomain: coordinated_realization, rule: Test the declared coordination relation.}]
+    forbidden_collapses: [common_bearer, composite_attribution]
+  - id: composite_attribution
+    domain: bearer and role-set pairs
+    value_space: [licensed, unlicensed]
+    equality_criterion: Values agree exactly when one bearer satisfies every declared role and attribution guard.
+    relevant_projections: [{id: bearer_roles_to_composite_attribution, domain: bearer and role-set pairs, codomain: composite_attribution, rule: Check co-instantiation and declared licensing guards.}]
+    forbidden_collapses: [distributed_realization, coordinated_realization]
+  - id: reliable_success
+    domain: system-trial families
+    value_space: rational success rates in the declared finite trial set
+    equality_criterion: Values agree exactly when successful-trial counts and trial counts agree.
+    relevant_projections: [{id: trials_to_success_rate, domain: system-trial families, codomain: reliable_success, rule: Return successes divided by declared trials.}]
+    forbidden_collapses: [proper_function, warrant]
+  - id: proper_function
+    domain: systems under a declared design or norm owner
+    value_space: [properly_functioning, not_properly_functioning, unassigned]
+    equality_criterion: Values agree exactly when the declared design-or-norm relation agrees.
+    relevant_projections: [{id: system_to_proper_function, domain: systems under a design or norm owner, codomain: proper_function, rule: Return the declared design-or-norm status.}]
+    forbidden_collapses: [reliable_success, function_profile, warrant]
+  - id: articulability
+    domain: entity-content pairs
+    value_space: [articulates, does_not_articulate]
+    equality_criterion: Values agree exactly when the declared expression relation agrees.
+    relevant_projections: [{id: entity_content_to_articulability, domain: entity-content pairs, codomain: articulability, rule: Test declared expression.}]
+    forbidden_collapses: [mentality, agency, speech_capacity]
+  - id: convergence
+    domain: producer families and outputs
+    value_space: [same_output, different_output]
+    equality_criterion: Values agree exactly when every selected producer emits the same declared output.
+    relevant_projections: [{id: producer_family_to_output_convergence, domain: producer families and outputs, codomain: convergence, rule: Compare emitted outputs.}]
+    forbidden_collapses: [mentality, numerical_identity, divine_speech]
+  - id: speech_capacity
+    domain: entities
+    value_space: [has_capacity, lacks_capacity, unassigned]
+    equality_criterion: Values agree exactly when the declared capacity valuation agrees.
+    relevant_projections: [{id: entity_to_speech_capacity, domain: entities, codomain: speech_capacity, rule: Return the declared capacity valuation.}]
+    forbidden_collapses: [speech_occurrence, name_authorization, revealed_content, divine_speech]
+  - id: speech_occurrence
+    domain: entity-time pairs
+    value_space: finite speech-event tokens plus none
+    equality_criterion: Values agree exactly when the declared speech-event token agrees.
+    relevant_projections: [{id: entity_time_to_speech_occurrence, domain: entity-time pairs, codomain: speech_occurrence, rule: Return the declared speech event or none.}]
+    forbidden_collapses: [speech_capacity, name_authorization, revealed_content]
+  - id: name_authorization
+    domain: entity-name pairs
+    value_space: [authorized_name, unauthorized_name]
+    equality_criterion: Values agree exactly when the declared naming-authority relation agrees.
+    relevant_projections: [{id: entity_name_to_authorization, domain: entity-name pairs, codomain: name_authorization, rule: Test declared naming authority.}]
+    forbidden_collapses: [speech_capacity, speech_occurrence, revealed_content]
+  - id: revealed_content
+    domain: content tokens
+    value_space: [identified_as_revealed, not_identified_as_revealed, unassigned]
+    equality_criterion: Values agree exactly when the declared source-relative identification agrees.
+    relevant_projections: [{id: content_to_revelation_status, domain: content tokens, codomain: revealed_content, rule: Return the declared source-relative status.}]
+    forbidden_collapses: [speech_capacity, speech_occurrence, name_authorization]
+  - id: underived_order
+    domain: finite dependence structures
+    value_space: sets of minimal or predecessor-free objects
+    equality_criterion: Values agree exactly when the declared dependence relation yields the same underived set.
+    relevant_projections: [{id: dependence_structure_to_underived_set, domain: finite dependence structures, codomain: underived_order, rule: Return objects with no declared predecessor.}]
+    forbidden_collapses: [necessary_being, mentality, speech_capacity]
+  - id: necessary_being
+    domain: entities in a bounded modal valuation
+    value_space: [necessary, not_necessary, unassigned]
+    equality_criterion: Values agree exactly when the declared modal valuation agrees.
+    relevant_projections: [{id: entity_to_necessity_status, domain: entities in a bounded modal valuation, codomain: necessary_being, rule: Return the declared bounded modal status.}]
+    forbidden_collapses: [underived_order, coherent_lineage_transport, mentality, divine_speech]
+  - id: created_linguistic_expression
+    domain: expression tokens
+    value_space: [created_expression, not_declared_created]
+    equality_criterion: Values agree exactly when the declared model valuation agrees.
+    relevant_projections: [{id: expression_to_created_status, domain: expression tokens, codomain: created_linguistic_expression, rule: Return the declared bounded status.}]
+    forbidden_collapses: [uncreated_grammar, divine_speech]
+  - id: uncreated_grammar
+    domain: grammar objects in a bounded valuation
+    value_space: [uncreated, not_uncreated, unassigned]
+    equality_criterion: Values agree exactly when the declared bounded valuation agrees.
+    relevant_projections: [{id: grammar_to_uncreated_status, domain: grammar objects, codomain: uncreated_grammar, rule: Return the declared bounded status.}]
+    forbidden_collapses: [created_linguistic_expression, grammar_kernel, divine_speech]
+  - id: divine_speech
+    domain: speech or content objects in a bounded valuation
+    value_space: [divine_speech, not_divine_speech, unassigned]
+    equality_criterion: Values agree exactly when the declared bounded valuation agrees.
+    relevant_projections: [{id: speech_object_to_divine_status, domain: speech or content objects, codomain: divine_speech, rule: Return the declared bounded status.}]
+    forbidden_collapses: [created_linguistic_expression, uncreated_grammar, articulability, convergence, speech_capacity]
+countermodel_contract:
+  model_class: FINITE_NEW_V11_NONIMPLICATION_WITNESS
+  historical_identity: NONE
+  novelty_credit: 0
+  external_review_status: NOT_ASSIGNED
+  owner_adoption_status: NOT_ASSIGNED
+  interpretation_rule: A witness is a formal valuation or finite relational structure only. It is not an empirical or metaphysical actuality claim.
+countermodels:
+  - id: CM01
+    compared_coordinates: [registered_type, numerical_identity]
+    objects_or_carriers: {objects: [a, b], carriers: {a: c_a, b: c_b}}
+    relations_or_valuations: {registered_type: {a: scout, b: scout}, numerical_identity_classes: [[a], [b]]}
+    coordinates_fixed: {registered_type: 'a = b = scout'}
+    coordinates_varied: {numerical_identity: 'a and b occupy different identity classes'}
+    failed_implication: same registered type -> numerical identity
+    failure_reason: Distinct identity classes carry the same registered-type label.
+    exact_public_locator: tac-sac-identity-and-independence.md
+  - id: CM02
+    compared_coordinates: [state_profile, numerical_identity, copy_relation]
+    objects_or_carriers: {objects: [source, copy], carriers: {source: c_1, copy: c_2}}
+    relations_or_valuations: {copy_edges: [[source, copy]], state_profile: {source: [0, 1, 1], copy: [0, 1, 1]}, numerical_identity_classes: [[source], [copy]]}
+    coordinates_fixed: {state_profile: 'source = copy = [0,1,1]', copy_relation: 'source -> copy'}
+    coordinates_varied: {numerical_identity: source and copy are distinct}
+    failed_implication: copied state -> numerical identity
+    failure_reason: The copy relation preserves the selected state vector without merging entity identity classes.
+    exact_public_locator: tac-sac-identity-and-independence.md
+  - id: CM03
+    compared_coordinates: [function_profile, numerical_identity]
+    objects_or_carriers: {objects: [f_agent, g_agent], carriers: {f_agent: c_f, g_agent: c_g}}
+    relations_or_valuations: {input_domain: [0, 1], function_profile: {f_agent: {0: x, 1: y}, g_agent: {0: x, 1: y}}, numerical_identity_classes: [[f_agent], [g_agent]]}
+    coordinates_fixed: {function_profile: f_agent and g_agent agree on both inputs}
+    coordinates_varied: {numerical_identity: f_agent and g_agent are distinct}
+    failed_implication: same finite function -> numerical identity
+    failure_reason: Extensionally equal finite functions are realized by two declared entities.
+    exact_public_locator: tac-sac-identity-and-independence.md
+  - id: CM04
+    compared_coordinates: [output_value, episode_occurrence]
+    objects_or_carriers: {objects: [e_1, e_2], carriers: {e_1: c, e_2: c}}
+    relations_or_valuations: {output_value: {e_1: ok, e_2: ok}, episode_tokens: {e_1: episode_1, e_2: episode_2}}
+    coordinates_fixed: {output_value: 'e_1 = e_2 = ok'}
+    coordinates_varied: {episode_occurrence: episode_1 differs from episode_2}
+    failed_implication: same output -> same episode occurrence
+    failure_reason: Separate event tokens emit the same output symbol.
+    exact_public_locator: tac-sac-identity-and-independence.md
+  - id: CM05
+    compared_coordinates: [carrier, episode_occurrence]
+    objects_or_carriers: {objects: [e_1, e_2], carriers: {e_1: carrier_c, e_2: carrier_c}}
+    relations_or_valuations: {episode_tokens: {e_1: morning_run, e_2: evening_run}, temporal_order: [[morning_run, evening_run]]}
+    coordinates_fixed: {carrier: carrier_c}
+    coordinates_varied: {episode_occurrence: morning_run differs from evening_run}
+    failed_implication: same carrier -> same episode occurrence
+    failure_reason: One bearer hosts two temporally distinct event tokens.
+    exact_public_locator: tac-sac-identity-and-independence.md
+  - id: CM06
+    compared_coordinates: [episode_occurrence, carrier]
+    objects_or_carriers: {objects: [distributed_episode], carriers: [c_1, c_2]}
+    relations_or_valuations: {episode_token: distributed_episode, realizes: [[c_1, distributed_episode], [c_2, distributed_episode]]}
+    coordinates_fixed: {episode_occurrence: one distributed_episode token}
+    coordinates_varied: {carrier: 'carrier set is [c_1, c_2] rather than one carrier'}
+    failed_implication: one episode occurrence -> one carrier
+    failure_reason: The declared realization relation permits one event token to have two carriers.
+    exact_public_locator: tac-sac-identity-and-independence.md
+  - id: CM07
+    compared_coordinates: [carrier, state_profile]
+    objects_or_carriers: {objects: [c_at_t0, c_at_t1], carriers: {c_at_t0: c, c_at_t1: c}}
+    relations_or_valuations: {times: [t0, t1], state_profile: {c_at_t0: [idle], c_at_t1: [active]}}
+    coordinates_fixed: {carrier: c}
+    coordinates_varied: {state_profile: idle at t0 and active at t1}
+    failed_implication: same carrier -> same state
+    failure_reason: Carrier equality across times does not freeze its state coordinate.
+    exact_public_locator: tac-sac-identity-and-independence.md
+  - id: CM08
+    compared_coordinates: [lineage_root, numerical_identity]
+    objects_or_carriers: {objects: [child_1, child_2, root], carriers: {child_1: c_1, child_2: c_2, root: c_r}}
+    relations_or_valuations: {lineage_edges: [[root, child_1], [root, child_2]], numerical_identity_classes: [[root], [child_1], [child_2]]}
+    coordinates_fixed: {lineage_root: 'root(child_1) = root(child_2) = root'}
+    coordinates_varied: {numerical_identity: child_1 differs from child_2}
+    failed_implication: shared lineage root -> numerical identity
+    failure_reason: Siblings in a finite lineage tree share a root while remaining distinct nodes.
+    exact_public_locator: tac-sac-identity-and-independence.md
+  - id: CM09
+    compared_coordinates: [coherent_lineage_transport, numerical_identity]
+    objects_or_carriers: {objects: [a_w0, a_w1], carriers: {a_w0: c_0, a_w1: c_1}}
+    relations_or_valuations: {worlds: [w0, w1], edge_transport: {'w0->w1': {a_w0: a_w1}}, coherent_section: {w0: a_w0, w1: a_w1}, numerical_identity_classes: [[a_w0], [a_w1]]}
+    coordinates_fixed: {coherent_lineage_transport: section commutes with the only edge map}
+    coordinates_varied: {numerical_identity: a_w0 and a_w1 are different identity-class members}
+    failed_implication: coherent lineage transport -> numerical identity
+    failure_reason: A coherent counterpart section relates distinct fibre elements without an identity bridge.
+    exact_public_locator: tac-sac-identity-and-independence.md
+  - id: CM10
+    compared_coordinates: [copy_relation, provenance_root]
+    objects_or_carriers: {objects: [source, copy_1, copy_2], carriers: {source: c_s, copy_1: c_1, copy_2: c_2}}
+    relations_or_valuations: {copy_edges: [[source, copy_1], [source, copy_2]], provenance_root: {source: root_r, copy_1: root_r, copy_2: root_r}}
+    coordinates_fixed: {copy_relation: two outgoing copy edges from source}
+    coordinates_varied: {provenance_root: no root other than root_r exists}
+    failed_implication: pure copying -> new provenance root
+    failure_reason: Adding copies increases nodes but leaves the acquisition-root map constant.
+    exact_public_locator: tac-sac-identity-and-independence.md
+  - id: CM11
+    compared_coordinates: [copy_count, evidential_independence, provenance_root]
+    objects_or_carriers: {objects: [report_1, report_2, report_3], carriers: {report_1: c_1, report_2: c_2, report_3: c_3}}
+    relations_or_valuations: {copy_count: 3, provenance_root: {report_1: root_r, report_2: root_r, report_3: root_r}, evidential_independence: dependent}
+    coordinates_fixed: {copy_count: 3}
+    coordinates_varied: {evidential_independence: dependent despite three carriers}
+    failed_implication: more copies or carriers -> evidential independence
+    failure_reason: All three reports descend from one declared acquisition root.
+    exact_public_locator: tac-sac-identity-and-independence.md
+  - id: CM12
+    compared_coordinates: [path_label, evidential_independence, provenance_root]
+    objects_or_carriers: {objects: [report_a, report_b], carriers: {report_a: c_a, report_b: c_b}}
+    relations_or_valuations: {path_label: {report_a: path_alpha, report_b: path_beta}, provenance_root: {report_a: root_r, report_b: root_r}, evidential_independence: dependent}
+    coordinates_fixed: {path_label: path_alpha differs from path_beta}
+    coordinates_varied: {evidential_independence: dependent because roots coincide}
+    failed_implication: different labels or paths -> evidential independence
+    failure_reason: Display-path inequality does not alter the shared provenance root.
+    exact_public_locator: tac-sac-identity-and-independence.md
+  - id: CM13
+    compared_coordinates: [visible_profile, lineage_root, evidential_independence]
+    objects_or_carriers: {objects: [x_1, x_2, y_1, y_2], carriers: {x_1: c_1, x_2: c_2, y_1: c_3, y_2: c_4}}
+    relations_or_valuations: {visible_profile: {x_1: p, x_2: p, y_1: p, y_2: p}, lineage_root: {x_1: r_x, x_2: r_x, y_1: r_y1, y_2: r_y2}, pair_independence: {'[x_1,x_2]': dependent, '[y_1,y_2]': independent}}
+    coordinates_fixed: {visible_profile: all four objects expose profile p}
+    coordinates_varied: {lineage_root: x pair shares a root while y pair does not, evidential_independence: x pair dependent and y pair independent}
+    failed_implication: same visible profile -> same lineage or independence status
+    failure_reason: Two pairs share the same visible profile while differing in root structure and independence.
+    exact_public_locator: tac-sac-identity-and-independence.md
+  - id: CM14
+    compared_coordinates: [independent_convergence, numerical_identity]
+    objects_or_carriers: {objects: [producer_a, producer_b], carriers: {producer_a: c_a, producer_b: c_b}}
+    relations_or_valuations: {provenance_root: {producer_a: r_a, producer_b: r_b}, copy_edges: [], output_value: {producer_a: result_z, producer_b: result_z}, numerical_identity_classes: [[producer_a], [producer_b]]}
+    coordinates_fixed: {independent_convergence: distinct roots and equal result_z with no copy edge}
+    coordinates_varied: {numerical_identity: producer_a differs from producer_b}
+    failed_implication: independent convergence -> numerical identity
+    failure_reason: Independently rooted producers can converge on one output while remaining distinct.
+    exact_public_locator: tac-sac-identity-and-independence.md
+  - id: CM15
+    compared_coordinates: [receipt, proposition_truth, warrant, applicability, adoption]
+    objects_or_carriers: {objects: [message_m, proposition_p, recipient_a], carriers: {message_m: channel_c, recipient_a: actor_a}}
+    relations_or_valuations: {receipt: received, proposition_truth: false, warrant: unwarranted, applicability: inapplicable, adoption: not_adopted}
+    coordinates_fixed: {receipt: recipient_a received message_m}
+    coordinates_varied: {proposition_truth: false, warrant: unwarranted, applicability: inapplicable, adoption: not_adopted}
+    failed_implication: receipt -> truth, warrant, applicability, or adoption
+    failure_reason: Delivery is present while every stronger claim-status coordinate is false.
+    exact_public_locator: tac-sac-identity-and-independence.md
+  - id: CM16
+    compared_coordinates: [agreement, understanding, authorization]
+    objects_or_carriers: {objects: [actor_a, plan_p], carriers: {actor_a: account_a}}
+    relations_or_valuations: {agreement: agrees, understanding: understands, authorization: unauthorized}
+    coordinates_fixed: {agreement: actor_a agrees with plan_p, understanding: actor_a understands plan_p}
+    coordinates_varied: {authorization: actor_a lacks permission to execute plan_p}
+    failed_implication: agreement and understanding -> authorization
+    failure_reason: Assent and comprehension are both true while the permission relation is empty.
+    exact_public_locator: tac-sac-identity-and-independence.md
+  - id: CM17
+    compared_coordinates: [authorization, proposition_truth, warrant]
+    objects_or_carriers: {objects: [actor_a, claim_p, publish_action], carriers: {actor_a: account_a}}
+    relations_or_valuations: {authorization: authorized, proposition_truth: false, warrant: unwarranted}
+    coordinates_fixed: {authorization: actor_a may publish claim_p}
+    coordinates_varied: {proposition_truth: false, warrant: unwarranted}
+    failed_implication: authorization -> truth or warrant
+    failure_reason: Permission to perform an action does not constrain the claim valuation or evidence relation.
+    exact_public_locator: tac-sac-identity-and-independence.md
+  - id: CM18
+    compared_coordinates: [adoption, execution, writeback]
+    objects_or_carriers: {objects: [owner_o, proposal_q, action_e], carriers: {owner_o: account_o}}
+    relations_or_valuations: {adoption: adopted, execution: not_executed, writeback: not_written_back}
+    coordinates_fixed: {adoption: owner_o adopts proposal_q}
+    coordinates_varied: {execution: no action event exists, writeback: durable state is unchanged}
+    failed_implication: adoption -> execution or writeback
+    failure_reason: The adoption relation can hold before any execution event or durable mutation.
+    exact_public_locator: tac-sac-identity-and-independence.md
+  - id: CM19
+    compared_coordinates: [receipt, private_acknowledgment, common_knowledge]
+    objects_or_carriers: {objects: [sender_a, recipient_b, observer_c, message_m], carriers: {sender_a: c_a, recipient_b: c_b, observer_c: c_c}}
+    relations_or_valuations: {receipt: recipient_b_received, private_acknowledgment: recipient_b_to_sender_a, epistemic_states: [s0, s1], observer_accessibility: [[s0, s1]], delivered_truth: {s0: true, s1: false}, common_knowledge: not_common_knowledge}
+    coordinates_fixed: {receipt: recipient_b receives message_m, private_acknowledgment: sender_a privately receives acknowledgment}
+    coordinates_varied: {common_knowledge: group accessibility reaches s1 where delivery is false}
+    failed_implication: private receipt and acknowledgment -> common knowledge
+    failure_reason: Observer uncertainty leaves a group-reachable state in which delivery did not occur.
+    exact_public_locator: tac-sac-identity-and-independence.md
+  - id: CM20
+    compared_coordinates: [shared_vocabulary, shared_schema, full_local_grammar, occurrence_meaning, causal_lineage]
+    objects_or_carriers: {objects: [system_a, system_b], carriers: {system_a: c_a, system_b: c_b}}
+    relations_or_valuations: {shared_vocabulary: [bank, run], shared_schema: [token, context], full_local_grammar: {system_a: [bank_as_financial_in_c1], system_b: [bank_as_river_in_c1]}, occurrence_meaning: {system_a_c1: financial, system_b_c1: river}, causal_lineage: {system_a: root_a, system_b: root_b}}
+    coordinates_fixed: {shared_vocabulary: [bank, run], shared_schema: [token, context]}
+    coordinates_varied: {full_local_grammar: local rules differ, occurrence_meaning: financial differs from river, causal_lineage: root_a differs from root_b}
+    failed_implication: shared vocabulary and schema -> shared local grammar, meaning, or cause
+    failure_reason: Common token and field inventories coexist with different local rules, meanings, and roots.
+    exact_public_locator: tac-sac-identity-and-independence.md
+  - id: CM21
+    compared_coordinates: [grammar_kernel, carrier, full_local_grammar, referent, mentality, agency]
+    objects_or_carriers: {objects: [transducer_t, agent_a], carriers: {transducer_t: silicon_c, agent_a: biological_c}}
+    relations_or_valuations: {grammar_kernel: {transducer_t: [subject_before_verb], agent_a: [subject_before_verb]}, full_local_grammar: {transducer_t: [rule_k], agent_a: [rule_k, rule_extra]}, referent: {transducer_t_token: none, agent_a_token: object_r}, mentality: {transducer_t: nonmental, agent_a: mental}, agency: {transducer_t: nonagent, agent_a: agent}}
+    coordinates_fixed: {grammar_kernel: both systems realize rule_k}
+    coordinates_varied: {carrier: silicon_c differs from biological_c, full_local_grammar: rule sets differ, referent: none differs from object_r, mentality: nonmental differs from mental, agency: nonagent differs from agent}
+    failed_implication: shared grammar kernel -> same carrier, full grammar, reference, mentality, or agency
+    failure_reason: Kernel projection equality leaves every listed stronger coordinate free to vary.
+    exact_public_locator: tac-sac-identity-and-independence.md
+  - id: CM22
+    compared_coordinates: [translation_query_preservation, full_semantic_preservation, full_grammatical_preservation]
+    objects_or_carriers: {objects: [s_1, s_2, target_t], carriers: {s_1: source_language, s_2: source_language, target_t: target_language}}
+    relations_or_valuations: {translation_map: {s_1: target_t, s_2: target_t}, query_q: {s_1: true, s_2: true}, semantic_feature_gender: {s_1: masculine, s_2: feminine}, grammatical_feature_case: {s_1: nominative, s_2: accusative}}
+    coordinates_fixed: {translation_query_preservation: query_q is constant on the only attained fibre}
+    coordinates_varied: {full_semantic_preservation: gender distinction is lost, full_grammatical_preservation: case distinction is lost}
+    failed_implication: one-query translation preservation -> total semantic or grammatical preservation
+    failure_reason: The map preserves q while collapsing distinct semantic and grammatical features.
+    exact_public_locator: tac-sac-identity-and-independence.md
+  - id: CM23
+    compared_coordinates: [token_type, occurrence_meaning]
+    objects_or_carriers: {objects: [bank_c1, bank_c2], carriers: {bank_c1: sentence_1, bank_c2: sentence_2}}
+    relations_or_valuations: {token_type: {bank_c1: bank, bank_c2: bank}, context: {bank_c1: finance, bank_c2: river}, occurrence_meaning: {bank_c1: financial_institution, bank_c2: river_edge}}
+    coordinates_fixed: {token_type: bank}
+    coordinates_varied: {occurrence_meaning: financial_institution differs from river_edge}
+    failed_implication: token type -> occurrence meaning
+    failure_reason: One lexical type occurs in two contexts with different declared meanings.
+    exact_public_locator: tac-sac-identity-and-independence.md
+  - id: CM24
+    compared_coordinates: [source_provenance, translation_truth]
+    objects_or_carriers: {objects: [source_s, translation_t], carriers: {source_s: archive_a, translation_t: document_d}}
+    relations_or_valuations: {source_provenance: {translation_t: [archive_a, source_s]}, translation_claim: p, translation_truth: false}
+    coordinates_fixed: {source_provenance: translation_t has a complete declared source chain}
+    coordinates_varied: {translation_truth: proposition p is false in the bounded valuation}
+    failed_implication: source provenance -> translation truth
+    failure_reason: Custody of a source chain does not force the semantic accuracy valuation.
+    exact_public_locator: tac-sac-identity-and-independence.md
+  - id: CM25
+    compared_coordinates: [artifact_bytes, visible_profile, version_eligibility]
+    objects_or_carriers: {objects: [artifact_v1, artifact_v2], carriers: {artifact_v1: store_a, artifact_v2: store_b}}
+    relations_or_valuations: {artifact_bytes: {artifact_v1: '01ff', artifact_v2: '01ff'}, visible_profile: {artifact_v1: profile_p, artifact_v2: profile_p}, target_version: {artifact_v1: v1, artifact_v2: v2}, version_eligibility: {artifact_v1: eligible, artifact_v2: ineligible}}
+    coordinates_fixed: {artifact_bytes: identical byte string 01ff, visible_profile: profile_p}
+    coordinates_varied: {version_eligibility: eligible for v1 and ineligible for v2}
+    failed_implication: equal bytes and profile -> equal version eligibility
+    failure_reason: Version-target guards differ even though the artifact bytes and visible profile agree.
+    exact_public_locator: tac-sac-identity-and-independence.md
+  - id: CM26
+    compared_coordinates: [proof_skeleton, theorem_identity, origin_credit, novelty_credit]
+    objects_or_carriers: {objects: [theorem_a, theorem_b], carriers: {theorem_a: file_a, theorem_b: file_b}}
+    relations_or_valuations: {proof_skeleton: {theorem_a: modus_ponens_graph, theorem_b: modus_ponens_graph}, theorem_identity: {theorem_a: T_A, theorem_b: T_B}, origin_credit: {theorem_a: owner_a, theorem_b: owner_b}, novelty_credit: {theorem_a: 0, theorem_b: 1}}
+    coordinates_fixed: {proof_skeleton: both use modus_ponens_graph}
+    coordinates_varied: {theorem_identity: T_A differs from T_B, origin_credit: owner_a differs from owner_b, novelty_credit: 0 differs from 1}
+    failed_implication: same proof skeleton -> theorem, origin, or novelty identity
+    failure_reason: Typed-rule graph isomorphism erases the identifiers and custody fields that distinguish the records.
+    exact_public_locator: tac-sac-identity-and-independence.md
+  - id: CM27
+    compared_coordinates: [distributed_realization, coordinated_realization, common_bearer, composite_attribution]
+    objects_or_carriers: {objects: [will_role, power_role, knowledge_role], carriers: [w_carrier, p_carrier, k_carrier]}
+    relations_or_valuations: {role_carriers: {will_role: [w_carrier], power_role: [p_carrier], knowledge_role: [k_carrier]}, coordinated_realization: coordinated, common_bearer: none, composite_attribution: unlicensed}
+    coordinates_fixed: {distributed_realization: every role has a carrier, coordinated_realization: coordinated}
+    coordinates_varied: {common_bearer: empty intersection, composite_attribution: unlicensed}
+    failed_implication: distributed coordinated realization -> one bearer or licensed composite attribution
+    failure_reason: Three singleton role-carrier sets are coordinated but have empty total intersection.
+    exact_public_locator: tac-sac-identity-and-independence.md
+  - id: CM28
+    compared_coordinates: [reliable_success, proper_function, warrant]
+    objects_or_carriers: {objects: [device_d, trial_1, trial_2, trial_3], carriers: {device_d: mechanism_m}}
+    relations_or_valuations: {trial_results: {trial_1: success, trial_2: success, trial_3: success}, reliable_success: '3/3', design_relation: absent, proper_function: unassigned, warrant: unwarranted}
+    coordinates_fixed: {reliable_success: '3/3 successes'}
+    coordinates_varied: {proper_function: unassigned because no design or norm owner is declared, warrant: unwarranted}
+    failed_implication: reliable success -> proper function or warrant
+    failure_reason: Finite success frequency is present while the norm-owner and evidence-license relations are absent.
+    exact_public_locator: tac-sac-identity-and-independence.md
+  - id: CM29
+    compared_coordinates: [articulability, convergence, mentality, speech_capacity, divine_speech]
+    objects_or_carriers: {objects: [transducer_a, transducer_b, sentence_s], carriers: {transducer_a: machine_1, transducer_b: machine_2}}
+    relations_or_valuations: {articulability: {transducer_a: articulates, transducer_b: articulates}, output_value: {transducer_a: sentence_s, transducer_b: sentence_s}, convergence: same_output, mentality: {transducer_a: nonmental, transducer_b: nonmental}, speech_capacity: {transducer_a: unassigned, transducer_b: unassigned}, divine_speech: not_divine_speech}
+    coordinates_fixed: {articulability: both emit sentence_s, convergence: same_output}
+    coordinates_varied: {mentality: both nonmental, speech_capacity: unassigned, divine_speech: not_divine_speech}
+    failed_implication: articulability and convergence -> mentality, speech capacity, or divine Speech
+    failure_reason: Two finite string transducers emit the same sentence under a valuation that withholds every stronger predicate.
+    exact_public_locator: tac-sac-identity-and-independence.md
+  - id: CM30
+    compared_coordinates: [speech_capacity, speech_occurrence, name_authorization, revealed_content]
+    objects_or_carriers: {objects: [entity_x, time_t, name_n, content_c], carriers: {entity_x: bearer_x}}
+    relations_or_valuations: {speech_capacity: has_capacity, speech_occurrence: none, name_authorization: unauthorized_name, revealed_content: not_identified_as_revealed}
+    coordinates_fixed: {speech_capacity: entity_x has_capacity}
+    coordinates_varied: {speech_occurrence: no event at time_t, name_authorization: name_n unauthorized, revealed_content: content_c not identified as revealed}
+    failed_implication: speech capacity -> speech occurrence, authorized Name, or revealed content
+    failure_reason: Capacity is true while occurrence, naming authority, and content identification are separately false.
+    exact_public_locator: tac-sac-identity-and-independence.md
+  - id: CM31
+    compared_coordinates: [underived_order, necessary_being, mentality, speech_capacity]
+    objects_or_carriers: {objects: [u, e], carriers: {u: bearer_u, e: bearer_e}}
+    relations_or_valuations: {dependence_edges: [[u, e]], underived_set: [u], necessary_being: {u: not_necessary, e: not_necessary}, mentality: {u: nonmental, e: nonmental}, speech_capacity: {u: lacks_capacity, e: lacks_capacity}}
+    coordinates_fixed: {underived_order: u has no predecessor and e depends on u}
+    coordinates_varied: {necessary_being: u is not_necessary, mentality: u is nonmental, speech_capacity: u lacks_capacity}
+    failed_implication: finite underived order -> one Necessary Being, mentality, or Speech
+    failure_reason: In the bridge-free finite valuation, order-minimality constrains only the dependence relation.
+    exact_public_locator: tac-sac-identity-and-independence.md
+  - id: CM32
+    compared_coordinates: [created_linguistic_expression, grammar_kernel, uncreated_grammar, divine_speech]
+    objects_or_carriers: {objects: [inscription_1, inscription_2, grammar_k], carriers: {inscription_1: tablet_1, inscription_2: tablet_2}}
+    relations_or_valuations: {created_linguistic_expression: {inscription_1: created_expression, inscription_2: created_expression}, grammar_kernel: {inscription_1: [rule_r], inscription_2: [rule_r]}, uncreated_grammar: {grammar_k: not_uncreated}, divine_speech: {inscription_1: not_divine_speech, inscription_2: not_divine_speech}}
+    coordinates_fixed: {created_linguistic_expression: both inscriptions are created_expression, grammar_kernel: both realize rule_r}
+    coordinates_varied: {uncreated_grammar: grammar_k is not_uncreated, divine_speech: both inscriptions are not_divine_speech}
+    failed_implication: created linguistic expression with a shared rule -> one uncreated grammar or divine Speech
+    failure_reason: Created expression and kernel-rule realization leave the uncreated-grammar and divine-Speech valuations false.
+    exact_public_locator: tac-sac-identity-and-independence.md
+no_credit_boundary:
+  historical_theorem_identity: NONE
+  historical_term_reconstruction: BLOCKED_INSUFFICIENT_EVIDENCE
+  historical_definition_reconstruction: NOT_ATTEMPTED
+  general_novelty_credit: 0
+  owner_adoption: NOT_ASSIGNED
+  repository_effect: NEW_V11_TYPED_NONIMPLICATION_REGISTRY_ONLY

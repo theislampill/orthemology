@@ -1,0 +1,31 @@
+schema_version: ar8r-v11-representation-method-source-status-v1
+authority: bounded V11 methodological source receipt
+publication_effect: none
+global_bibliography_effect: none
+sources:
+  - id: AR8R-V11-METHOD-1
+    work: Pauli Miettinen, Boolean Tensor Factorizations
+    venue: 2011 IEEE 11th International Conference on Data Mining
+    pages: 447-456
+    doi: 10.1109/ICDM.2011.28
+    source_type: primary conference-paper bibliographic record
+    verification_date: 2026-08-03
+    wording_directly_checked: false
+    support: >-
+      Establishes Boolean tensor factorization as pre-AR8R prior art. It supplies
+      no AR8R theorem, novelty, empirical, or repository-adoption credit.
+  - id: AR8R-V11-METHOD-2
+    work: Richard S. Sutton, The Bitter Lesson
+    year: 2019
+    url: http://www.incompleteideas.net/IncIdeas/BitterLesson.html
+    source_type: primary author essay
+    verification_date: 2026-08-03
+    wording_directly_checked: true
+    support: >-
+      Supplies a standing methodological challenge to brittle hand-authored
+      representations. It does not prove learned-representation superiority or
+      authorize discarding interpretable structure.
+boundary: >-
+  These sources belong to the V11 research-program receipt. They are deliberately
+  not inserted into the globally pinned publication bibliography or source-status
+  registry because the V11 proposal does not republish the existing PDFs.

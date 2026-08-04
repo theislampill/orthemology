@@ -1,0 +1,95 @@
+{
+  "check": "PMR-007 Round 14 V2 co-Buchi fixed-point verification",
+  "declared_scope": "finite perfect-information controller/adversary games with nonempty finite action menus and successor sets; exhaustive antichain-reduced games through 3 states plus deterministic random samples at 4 and 5 states",
+  "fixed_point": "mu Z. nu X. ((Target & CPre(X)) | ((Safe\\Target) & CPre(Z)))",
+  "r14_f01_regression": {
+    "passed": true,
+    "states": 3,
+    "safe": [
+      0,
+      1,
+      2
+    ],
+    "target": [
+      0,
+      2
+    ],
+    "stable_kernel": [
+      0
+    ],
+    "W_core": [
+      0,
+      1
+    ],
+    "W_coB_fixed_point": [
+      0,
+      1,
+      2
+    ],
+    "W_coB_direct": [
+      0,
+      1,
+      2
+    ],
+    "memoryless_strategies": 1,
+    "expected_W_core": [
+      0,
+      1
+    ],
+    "expected_W_coB": [
+      0,
+      1,
+      2
+    ]
+  },
+  "exhaustive_small": {
+    "totals": {
+      "action_menu_tuples": 5849,
+      "safe_target_labelled_games": 157611,
+      "memoryless_strategies_evaluated": 804585,
+      "strict_W_core_subset_W_coB_cases": 300,
+      "fixed_point_direct_mismatches": 0,
+      "core_subset_failures": 0
+    },
+    "per_size": [
+      {
+        "n": 1,
+        "antichain_action_menus_per_state": 1,
+        "action_menu_tuples": 1,
+        "safe_target_labelled_games": 3,
+        "memoryless_strategies_evaluated": 3,
+        "strict_cases": 0
+      },
+      {
+        "n": 2,
+        "antichain_action_menus_per_state": 4,
+        "action_menu_tuples": 16,
+        "safe_target_labelled_games": 144,
+        "memoryless_strategies_evaluated": 225,
+        "strict_cases": 0
+      },
+      {
+        "n": 3,
+        "antichain_action_menus_per_state": 18,
+        "action_menu_tuples": 5832,
+        "safe_target_labelled_games": 157464,
+        "memoryless_strategies_evaluated": 804357,
+        "strict_cases": 300
+      }
+    ],
+    "first_failure": null
+  },
+  "random_larger": {
+    "totals": {
+      "seed": 1402,
+      "cases_per_n": 5000,
+      "cases": 10000,
+      "strategies": 164165,
+      "mismatches": 0,
+      "core_subset_failures": 0
+    },
+    "first_failure": null
+  },
+  "elapsed_checker_seconds": 7.963149806000047,
+  "overall": "PASS"
+}

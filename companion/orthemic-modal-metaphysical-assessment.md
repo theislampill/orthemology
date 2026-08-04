@@ -352,3 +352,5 @@ philosophical/faith-relative — no operational evidence bears on them.
 integrated body.
 
 Companion-paper conditions: state S1–S10 explicitly; present the constitution argument as internal-coherence transcendental, not neutral proof; include §5's rival table and §9's objections unresolved; flag §7.vii as school-dependent throughout; make no claim that the operational results confirm the metaphysics.
+
+V11 noncrediting cross-reference: conceptualism/internal realism and nominalism/class remain live rivals in the Track T bridge and ontology matrices. Their survival is not a historical theorem finding, and the companion's conditional modal assessment does not establish a neutral Necessary-Being, one-bearer, personality, Wisdom, or Speech conclusion.

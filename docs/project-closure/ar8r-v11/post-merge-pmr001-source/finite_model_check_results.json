@@ -1,0 +1,307 @@
+{
+  "agcom": {
+    "deletion_witnesses": {
+      "App": {
+        "Adopt": false,
+        "App": false,
+        "Auth": true,
+        "Cap": true,
+        "Evid": true,
+        "InvClosed": true,
+        "Perm": true,
+        "Rec": true,
+        "Ver": true
+      },
+      "Auth": {
+        "Adopt": false,
+        "App": true,
+        "Auth": false,
+        "Cap": true,
+        "Evid": true,
+        "InvClosed": true,
+        "Perm": true,
+        "Rec": true,
+        "Ver": true
+      },
+      "Cap": {
+        "Adopt": false,
+        "App": true,
+        "Auth": true,
+        "Cap": false,
+        "Evid": true,
+        "InvClosed": true,
+        "Perm": true,
+        "Rec": true,
+        "Ver": true
+      },
+      "Evid": {
+        "Adopt": false,
+        "App": true,
+        "Auth": true,
+        "Cap": true,
+        "Evid": false,
+        "InvClosed": true,
+        "Perm": true,
+        "Rec": true,
+        "Ver": true
+      },
+      "InvClosed": {
+        "Adopt": false,
+        "App": true,
+        "Auth": true,
+        "Cap": true,
+        "Evid": true,
+        "InvClosed": false,
+        "Perm": true,
+        "Rec": true,
+        "Ver": true
+      },
+      "Perm": {
+        "Adopt": false,
+        "App": true,
+        "Auth": true,
+        "Cap": true,
+        "Evid": true,
+        "InvClosed": true,
+        "Perm": false,
+        "Rec": true,
+        "Ver": true
+      },
+      "Ver": {
+        "Adopt": false,
+        "App": true,
+        "Auth": true,
+        "Cap": true,
+        "Evid": true,
+        "InvClosed": true,
+        "Perm": true,
+        "Rec": true,
+        "Ver": false
+      }
+    },
+    "failures": [],
+    "profile_collision": {
+      "good": {
+        "Adopt": true,
+        "App": true,
+        "Auth": true,
+        "Cap": true,
+        "Evid": true,
+        "InvClosed": true,
+        "Perm": true,
+        "Rec": true,
+        "Ver": true
+      },
+      "stale": {
+        "Adopt": false,
+        "App": true,
+        "Auth": true,
+        "Cap": true,
+        "Evid": true,
+        "InvClosed": true,
+        "Perm": true,
+        "Rec": true,
+        "Ver": false
+      }
+    },
+    "receipt_profile_has_both_outcomes": true,
+    "receipt_true_states": 128,
+    "states_checked": 256,
+    "status": "PASS"
+  },
+  "m3": {
+    "counts": {
+      "full_guarded_models": 663,
+      "ne_models": 196608,
+      "orig_borig_bne_models": 16128,
+      "orig_borig_models": 135168,
+      "structures": 262144
+    },
+    "failures": [],
+    "guard_deletion": {
+      "K": {
+        "model": {
+          "originates_true": [
+            [
+              0,
+              1
+            ]
+          ],
+          "unary_true": {
+            "E": [
+              0
+            ],
+            "N": [
+              0
+            ],
+            "O": [
+              1
+            ],
+            "P": [
+              0
+            ],
+            "W": [
+              0
+            ]
+          }
+        },
+        "valid_near_miss": true
+      },
+      "P": {
+        "model": {
+          "originates_true": [
+            [
+              0,
+              1
+            ]
+          ],
+          "unary_true": {
+            "E": [
+              0
+            ],
+            "K": [
+              0
+            ],
+            "N": [
+              0
+            ],
+            "O": [
+              1
+            ],
+            "W": [
+              0
+            ]
+          }
+        },
+        "valid_near_miss": true
+      },
+      "W": {
+        "model": {
+          "originates_true": [
+            [
+              0,
+              1
+            ]
+          ],
+          "unary_true": {
+            "E": [
+              0
+            ],
+            "K": [
+              0
+            ],
+            "N": [
+              0
+            ],
+            "O": [
+              1
+            ],
+            "P": [
+              0
+            ]
+          }
+        },
+        "valid_near_miss": true
+      }
+    },
+    "named_distinct_impersonal_originator": {
+      "model": {
+        "originates_true": [
+          [
+            0,
+            1
+          ]
+        ],
+        "unary_true": {
+          "E": [
+            0
+          ],
+          "N": [
+            0
+          ],
+          "O": [
+            1
+          ]
+        }
+      },
+      "valid": true
+    },
+    "named_originator_only": {
+      "model": {
+        "originates_true": [
+          [
+            0,
+            1
+          ]
+        ],
+        "unary_true": {
+          "O": [
+            1
+          ]
+        }
+      },
+      "valid": true
+    },
+    "status": "PASS",
+    "witnesses": {
+      "NE_external_not_C": {
+        "originates_true": [],
+        "unary_true": {
+          "E": [
+            1
+          ],
+          "N": [
+            1
+          ]
+        }
+      },
+      "NE_not_C": {
+        "originates_true": [],
+        "unary_true": {
+          "N": [
+            1
+          ]
+        }
+      },
+      "impersonal_originator": {
+        "originates_true": [
+          [
+            1,
+            1
+          ]
+        ],
+        "unary_true": {
+          "E": [
+            1
+          ],
+          "N": [
+            1
+          ],
+          "O": [
+            1
+          ]
+        }
+      },
+      "originator_without_NE": {
+        "originates_true": [
+          [
+            1,
+            1
+          ]
+        ],
+        "unary_true": {
+          "O": [
+            1
+          ]
+        }
+      }
+    }
+  },
+  "overall_status": "PASS",
+  "schema": "ar8r-pmr001-finite-model-check-v1",
+  "scope": [
+    "PMR-M3-01",
+    "PMR-R5-01",
+    "PMR-AGCOM-01"
+  ]
+}

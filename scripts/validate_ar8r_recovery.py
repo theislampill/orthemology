@@ -3,6 +3,7 @@
 from __future__ import annotations
 
 import hashlib
+import re
 import sys
 from pathlib import Path
 
@@ -22,6 +23,10 @@ ALLOWED = {
     "ROLE_PRESERVING_REPLACEMENT",
     "HISTORICAL_IDENTITY_ONLY",
 }
+V11 = ROOT / "docs" / "project-closure" / "ar8r-v11"
+CONNES = V11 / "provenance" / "AR8R-CONNES-RIGIDITY-DISPUTE-RECEIPT-V11.yaml"
+OSW15 = V11 / "governance" / "ORTHEMOLOGICAL-SPECIFICATION-WARRANT-OSW-15.yaml"
+PRIVATE_PDF_NAME = "C2680D5A-8FAE-11F1-A320-F5FC2CA0B584.pdf"
 
 
 def digest(path: Path) -> str:
@@ -70,6 +75,34 @@ def validate() -> list[str]:
         issues.append(f"expected 22 unresolved historical identities, found {len(unresolved)}")
     if data.get("historical_ar8r_duration") != "09:41:25.405101139":
         issues.append("historical AR8R duration changed")
+    if CONNES.is_file() and OSW15.is_file():
+        connes = yaml.safe_load(CONNES.read_text(encoding="utf-8"))
+        expected_dispositions = (
+            "NIELSEN_CHALLENGE_REJECTED__SPECIALIST_SETTLEMENT_OPEN",
+            "DOES_NOT_REFUTE_EXACT_PUBLIC_OPENAI_OBJECT",
+            "REJECTED_AS_PROOF__FATAL_GAPS",
+        )
+        actual_dispositions = (
+            connes.get("openai_result", {}).get("disposition"),
+            connes.get("nielsen_critique", {}).get("disposition"),
+            connes.get("nielsen_positive_proof", {}).get("disposition"),
+        )
+        if actual_dispositions != expected_dispositions:
+            issues.append("V11 Connes dispute dispositions were collapsed or promoted")
+        if connes.get("overall_disposition") != "UNRESOLVED_PENDING_OPERATOR_ALGEBRA_SPECIALIST_REVIEW":
+            issues.append("V11 Connes dispute overall status was promoted")
+        osw = yaml.safe_load(OSW15.read_text(encoding="utf-8"))
+        if len(osw.get("coordinates", [])) != 15:
+            issues.append("V11 OSW-15 coordinate coverage changed")
+        forbidden = re.compile(r"(?:[A-Za-z]:\\|/mnt/data/|sandbox:|file://|data-message-id|screen-threadFlyOut)", re.I)
+        for path in V11.rglob("*"):
+            if not path.is_file():
+                continue
+            text = path.read_text(encoding="utf-8", errors="ignore")
+            if PRIVATE_PDF_NAME.lower() in text.lower():
+                issues.append(f"private PDF filename entered V11 public tree: {path.relative_to(ROOT)}")
+            if forbidden.search(text):
+                issues.append(f"private locator entered V11 public tree: {path.relative_to(ROOT)}")
     return issues
 
 

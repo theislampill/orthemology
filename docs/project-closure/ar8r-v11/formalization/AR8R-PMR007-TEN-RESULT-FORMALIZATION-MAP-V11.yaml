@@ -1,0 +1,131 @@
+schema: ar8r-pmr007-ten-result-formalization-map-v11
+authority: CURRENT_PUBLIC_CORRECTION_OVERLAY
+common_defaults: &common_defaults
+  status: ADMITTED_POST_MERGE_SCOPED_RESULT
+  executable_evidence_paths: NONE_RECORDED
+  source_present: true
+  parse_status: NOT_PERFORMED
+  elaboration_status: NOT_PERFORMED
+  kernel_status: NOT_PERFORMED
+  axiom_status: NOT_PERFORMED
+  external_review_status: OPEN
+  owner_adoption_status: PENDING
+  historical_identity: NONE
+  blockers: [EXACT_LEAN_TOOLCHAIN_AND_BUILD_RECEIPT, EXTERNAL_REVIEW, OWNER_ADOPTION]
+results:
+  - <<: *common_defaults
+    result_id: PMR-007-MLT-1
+    round_version: R11_V1
+    source_path: post-merge-proposals/pmr007-rounds11-20/PROPOSED_THEOREM_FILES/PMR-007_FRONTIER_ROUND11_MODAL_LINEAGE_TRANSPORT_AND_HOLONOMY_V1.md
+    pure_declaration: ModalLineageTransport.holonomy_fixed_anchor_iff_section
+    application_declaration: NONE
+    pure_dependencies: [TRANSPORT_BIJECTIONS, CONNECTED_FINITE_BUNDLE]
+    wrapper_dependencies: []
+    proof_scope: Fixed connected finite transport bundle with inverse edge bijections.
+    countermodel_guards: [NO_NUMERICAL_TRANSWORLD_IDENTITY, NO_MODAL_DOMAIN_COMPLETENESS]
+    novelty_ceiling: 0
+  - <<: *common_defaults
+    result_id: PMR-007-SMRB-1
+    round_version: R12_V1
+    source_path: post-merge-proposals/pmr007-rounds11-20/PROPOSED_THEOREM_FILES/PMR-007_FRONTIER_ROUND12_STRUCTURE_PRESERVING_MODAL_ROOT_BUNDLE_V1.md
+    pure_declaration: StructurePreservingModalRoot.unique_root_section
+    application_declaration: NONE
+    pure_dependencies: [PMR-007-MLT-1]
+    wrapper_dependencies: []
+    proof_scope: Connected bearer/effect bundle with preservation and reflection of actualization and dependence.
+    countermodel_guards: [SINGLETON_ROOT, STRUCTURE_ISOMORPHISM, CONNECTED_COVERAGE]
+    novelty_ceiling: 0
+  - <<: *common_defaults
+    result_id: PMR-007-FRLA-1
+    round_version: R13_V1
+    source_path: post-merge-proposals/pmr007-rounds11-20/PROPOSED_THEOREM_FILES/PMR-007_FRONTIER_ROUND13_FAULT_ROBUST_LOCAL_AGREEMENT_AND_RESTORATION_V1.md
+    pure_declaration: FaultRobustLocalAgreement.component_intersection_iff_protocol
+    application_declaration: NONE
+    pure_dependencies: [FINITE_LOCAL_VIEW_COMPONENTS, COMPLETE_OUTPUT_SETS]
+    wrapper_dependencies: []
+    proof_scope: Finite deterministic local agreement with complete action-certificate output sets.
+    countermodel_guards: [HIDDEN_FAULT_REUSED_VIEW, NO_WARRANT_LAUNDERING]
+    novelty_ceiling: 0
+  - <<: *common_defaults
+    result_id: PMR-007-COB-1
+    round_version: R14_V2
+    source_path: post-merge-proposals/pmr007-rounds11-20/PROPOSED_THEOREM_FILES/PMR-007_FRONTIER_ROUND14_LOCAL_PROTOCOL_REACH_AND_STAY_FIXED_POINT_V2.md
+    pure_declaration: CoBuchiRestoration.nested_fixed_point_characterization
+    application_declaration: CoBuchiRestoration.local_action_wrapper
+    pure_dependencies: [FINITE_PERFECT_INFORMATION_GAME, CONTROLLABLE_PREDECESSOR]
+    wrapper_dependencies: [PMR-007-FRLA-1]
+    proof_scope: Finite perfect-information reach-and-stay/co-Buchi game.
+    countermodel_guards: [CORE_ENTRY_DISTINCT_FROM_GENERAL_COBUCHI, R14_F01_REGRESSION]
+    novelty_ceiling: 0
+  - <<: *common_defaults
+    result_id: PMR-007-TRC-1
+    round_version: R15_V2
+    source_path: post-merge-proposals/pmr007-rounds11-20/PROPOSED_THEOREM_FILES/PMR-007_FRONTIER_ROUND15_DAEE_TEMPORAL_CERTIFICATE_ARCHITECTURE_V2.md
+    pure_declaration: TemporalCertificate.model_bound_certificate
+    application_declaration: TemporalCertificate.daee_event_local_nonimplication
+    pure_dependencies: [PMR-007-COB-1]
+    wrapper_dependencies: [PMR-007-VCT-1, DAEE_CURRENT_VALIDATORS]
+    proof_scope: Model-bound finite temporal certificate architecture and current implementation correspondence.
+    countermodel_guards: [MODEL_DIGEST_BINDING, CORE_STRATEGY_GUARD, EVENT_LOCAL_NOT_TEMPORAL]
+    novelty_ceiling: 0
+  - <<: *common_defaults
+    result_id: PMR-007-VCT-1
+    round_version: R16_V2
+    source_path: post-merge-proposals/pmr007-rounds11-20/PROPOSED_THEOREM_FILES/PMR-007_FRONTIER_ROUND16_VERSION_CUSTODY_TRANSPORT_AND_TEMPORAL_ELIGIBILITY_V2.md
+    pure_declaration: VersionCustodyTransport.guarded_reason_dag_composition
+    application_declaration: VersionCustodyTransport.temporal_eligibility_wrapper
+    pure_dependencies: [FINITE_REASON_DAG, VERSION_INVALIDATORS]
+    wrapper_dependencies: [AR2_AR3_REASON_PRESERVING_TRANSPORT]
+    proof_scope: Finite guarded reason-DAG and fixed state/target/successor semantics.
+    countermodel_guards: [SAME_BYTES_NOT_SAME_APPLICABILITY, EVERY_TRANSPORT_GUARD_LOAD_BEARING]
+    novelty_ceiling: 0
+  - <<: *common_defaults
+    result_id: PMR-007-RSD-1
+    round_version: R17_V2
+    source_path: post-merge-proposals/pmr007-rounds11-20/PROPOSED_THEOREM_FILES/PMR-007_FRONTIER_ROUND17_ROLE_SECTION_DESCENT_COMMON_BEARER_AND_R5_V2.md
+    pure_declaration: RoleSectionDescent.no_same_fibre_collision_iff_descent
+    application_declaration: RoleSectionDescent.r5_common_bearer_control
+    pure_dependencies: [PMR-007-MLT-1, TRANSPORT_ORBIT_RELATION]
+    wrapper_dependencies: [R5_MINIMAL_NONINTEGRATION]
+    proof_scope: Finite connected transport-invariant subbundle and reduced quotient.
+    countermodel_guards: [NO_NUMERICAL_IDENTITY_WITHOUT_B_ID, NO_COMMON_BEARER_FROM_PLURAL_WPK]
+    novelty_ceiling: 0
+  - <<: *common_defaults
+    result_id: PMR-007-ORTC-V4
+    round_version: R18_V4
+    source_path: post-merge-proposals/pmr007-rounds11-20/PROPOSED_THEOREM_FILES/PMR-007_FRONTIER_ROUND18_CERTIFICATE_OBJECT_REFINEMENT_AND_TEMPORAL_SELECTOR_V4.md
+    pure_declaration: ObservationRefinement.certificate_refinement_number
+    application_declaration: ObservationRefinement.temporal_selector_wrapper
+    pure_dependencies: [FINITE_SET_COVER, OBSERVATION_PARTITION]
+    wrapper_dependencies: [PMR-007-COB-1, PMR-007-VCT-1]
+    proof_scope: Deterministic truthful authorized fixed-length selector with original observation available to decoder.
+    countermodel_guards: [EMPTY_GOOD_ACTION_SET, PAIRWISE_OVERLAP_NOT_GLOBAL, NO_HISTORY_OR_RANDOMIZATION_CLAIM]
+    novelty_ceiling: 0
+  - <<: *common_defaults
+    result_id: PMR-007-PRQT-1
+    round_version: R19_V2
+    source_path: post-merge-proposals/pmr007-rounds11-20/PROPOSED_THEOREM_FILES/PMR-007_FRONTIER_ROUND19_PROVENANCE_ROOT_THRESHOLD_QUERY_COMPLEXITY_V2.md
+    pure_declaration: ProvenanceRootThreshold.authenticated_label_query_bound
+    application_declaration: ProvenanceRootThreshold.candidate1_authenticated_lift
+    pure_dependencies: [CANDIDATE_1_HIDDEN_PARTIAL_MATCHING]
+    wrapper_dependencies: [CANDIDATE_1]
+    proof_scope: Finite authenticated-label threshold-query model.
+    countermodel_guards: [NO_PROPER_FUNCTION_FROM_QUERY_OPTIMALITY, NO_WISDOM_FROM_QUERY_OPTIMALITY]
+    novelty_ceiling: NOT_ESTABLISHED
+  - <<: *common_defaults
+    result_id: PMR-007-PRRC-1
+    round_version: R20_V2
+    source_path: post-merge-proposals/pmr007-rounds11-20/PROPOSED_THEOREM_FILES/PMR-007_FRONTIER_ROUND20_PROVENANCE_RESILIENT_RESTORATIVE_CUTSETS_V2.md
+    pure_declaration: ProvenanceResilientRestorativeCutsets.transversal_characterization
+    application_declaration: ProvenanceResilientRestorativeCutsets.ar8r_wrapper
+    pure_dependencies: [FINITE_HYPERGRAPH_TRANSVERSAL]
+    wrapper_dependencies: [AR8R-T351, AR8R-T352, PMR-007-PRQT-1]
+    proof_scope: Finite hypergraph-transversal cutsets; AR8R wrapper separately guarded.
+    countermodel_guards: [PURE_RESULT_INDEPENDENT_OF_PRQT, T351_T352_AND_ROOT_INTERFACE_REQUIRED_ONLY_FOR_WRAPPER]
+    novelty_ceiling: 0
+common_boundary:
+  historical_identity: NONE
+  owner_adoption_status: PENDING
+  external_review_status: OPEN
+  repository_status: PROPOSAL_ONLY
+  machine_checked_claim: NONE

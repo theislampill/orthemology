@@ -1,0 +1,1404 @@
+schema: ar8r-88-surface-status-inventory-v1
+campaign: AR8R_POST_MERGE_MENISCUS_PROGRAM_V1
+wave: PMR-001
+surface_count: 88
+status_vocabulary:
+- ESTABLISHED_AND_ADMITTED
+- ESTABLISHED_BUT_EXTERNAL_REVIEW_OPEN
+- NEGATIVE_RESULT_ADMITTED
+- PROVISIONAL_PENDING_AUDIT
+- OPEN_RESEARCH_BURDEN
+- BLOCKED_ON_EXACT_SOURCE
+- BLOCKED_ON_EXTERNAL_REVIEW
+- HISTORICAL_IDENTITY_ONLY
+- RETIRED_CONFIGURATION
+nodes:
+- surface_id: S01
+  name: Core orthemology objects and candidate terminology
+  pmr_status: ESTABLISHED_AND_ADMITTED
+  base_authority_level: CURRENT_MERGED_REPOSITORY_BYTES
+  base_current_main_status: MERGED_CURRENT; R6 public honesty boundary applies
+  evidence_pointers:
+  - orthemology-main(7).zip
+  - AR8R_ADDITIVE_FULL_PROGRAM_CONTINUITY_REENTRY_AND_FRESH_THREAD_HANDOFF_V2(1).md
+  - manuscript/orthemma-ortheme-systems-revised-draft.md
+  - theory/orthemic-core-formalization.md
+  - docs/notation-registry.yaml
+  next_burden: B031
+  recommended_bounded_next_task: Do not reopen terminology unless the owner authorizes
+    the prepared matching experiment.
+  pmr_001_overlay: []
+  flywheel_edge_population: DEPENDENCY_CLOSED_SUBGRAPH_POPULATED
+  historical_identity_or_payload_claim_changed: false
+- surface_id: S02
+  name: Analysis-relative ground truth, pathway adequacy, and reference-model contract
+  pmr_status: ESTABLISHED_AND_ADMITTED
+  base_authority_level: CURRENT_MERGED_REPOSITORY_BYTES
+  base_current_main_status: MERGED_CURRENT
+  evidence_pointers:
+  - docs/decisions/0001-analysis-relative-ground-truth.md
+  - docs/decisions/0003-result-free-pathway-adequacy.md
+  - docs/decisions/0011-claim-relative-reasoning-path-and-strict-soundness.md
+  next_burden: B039
+  recommended_bounded_next_task: Use these contracts as prerequisites; do not rederive
+    them in a new campaign.
+  pmr_001_overlay: []
+  flywheel_edge_population: INITIALIZED_PENDING_INCREMENTAL_EXPANSION
+  historical_identity_or_payload_claim_changed: false
+- surface_id: S03
+  name: Type/token normalization and soundness bearers
+  pmr_status: ESTABLISHED_AND_ADMITTED
+  base_authority_level: CURRENT_MERGED_REPOSITORY_BYTES
+  base_current_main_status: CORE MERGED; TAC ABSENT
+  evidence_pointers:
+  - docs/decisions/0009-type-token-soundness-and-concrete-reason.md
+  - theory/orthemic-multi-actor-conflict-note.md
+  - docs/decisions/0031-representation-relations-fidelity-and-carrier-stance.md
+  next_burden: B043
+  recommended_bounded_next_task: Recover TAC bytes before assigning any identity theorem
+    to that case.
+  pmr_001_overlay: []
+  flywheel_edge_population: INITIALIZED_PENDING_INCREMENTAL_EXPANSION
+  historical_identity_or_payload_claim_changed: false
+- surface_id: S04
+  name: Source-status, provenance, custody, and closure truthfulness
+  pmr_status: ESTABLISHED_AND_ADMITTED
+  base_authority_level: CURRENT_MERGED_REPOSITORY_BYTES
+  base_current_main_status: MERGED WITH ONE REPRODUCED AR8R STATUS-INDEX DEFECT
+  evidence_pointers:
+  - AR8R_POST_MERGE_VERIFIED_HANDOFF_V9.zip
+  - orthemology-main(7).zip
+  - references/source-status.yaml
+  - docs/sourcing/CURRENT-SOURCING-LEDGER.md
+  - docs/project-closure/HISTORICAL-STATUS-INDEX.yaml
+  next_burden: B021
+  recommended_bounded_next_task: Keep status-index repair in the already authorized
+    T354 branch task; source residuals remain independent.
+  pmr_001_overlay: []
+  flywheel_edge_population: DEPENDENCY_CLOSED_SUBGRAPH_POPULATED
+  historical_identity_or_payload_claim_changed: false
+- surface_id: S05
+  name: Multi-actor, multi-target, represented-metaortheme, and memetic ecology
+  pmr_status: ESTABLISHED_AND_ADMITTED
+  base_authority_level: CURRENT_MERGED_REPOSITORY_BYTES
+  base_current_main_status: MERGED_CURRENT
+  evidence_pointers:
+  - applications/daee-epistemics/MULTI-TARGET-NOETIC-ORTHING.md
+  - applications/daee-epistemics/META-NOETIC-MEMETICS-AND-DYNAMIC-ORTHING.md
+  - applications/daee-epistemics/DYNAMIC-CROSSWALK.yaml
+  next_burden: B003
+  recommended_bounded_next_task: Audit against the supplied exact daee snapshot before
+    extending the correspondence.
+  pmr_001_overlay: []
+  flywheel_edge_population: DEPENDENCY_CLOSED_SUBGRAPH_POPULATED
+  historical_identity_or_payload_claim_changed: false
+- surface_id: S06
+  name: Somnic orthing, activation contracts, and episode identity
+  pmr_status: PROVISIONAL_PENDING_AUDIT
+  base_authority_level: CURRENT_MERGED_REPOSITORY_BYTES
+  base_current_main_status: MERGED BYTES; PROPOSED-CANDIDATE SEMANTIC STATUS
+  evidence_pointers:
+  - applications/agentic-runtime/README.md
+  - applications/agentic-runtime/COLLECTIVE-SOMNUS-TRANSCLUSION-PROFILE.yaml
+  - applications/agentic-runtime/HERMES-WRITEBACK-ADOPTION-PROFILE.yaml
+  next_burden: B043
+  recommended_bounded_next_task: Keep somnic and TAC lanes separate until exact TAC
+    source bytes are supplied.
+  pmr_001_overlay: []
+  flywheel_edge_population: INITIALIZED_PENDING_INCREMENTAL_EXPANSION
+  historical_identity_or_payload_claim_changed: false
+- surface_id: S07
+  name: 'Apprehensional reachability: Orthability-O, Orthability-L, and Orthability-R'
+  pmr_status: BLOCKED_ON_EXACT_SOURCE
+  base_authority_level: HISTORICAL_REFERENCE_WITHOUT_SUPPLIED_PAYLOAD
+  base_current_main_status: PARTIAL REPRESENTATION
+  evidence_pointers:
+  - AR8R_ADDITIVE_FULL_PROGRAM_CONTINUITY_REENTRY_AND_FRESH_THREAD_HANDOFF_V2(1).md
+  - companion/ARGUMENT-MAP-ORTHABILITY.md
+  - companion/orthability-and-the-ground-of-intelligibility.md
+  - theory/orthemic-core-formalization.md
+  next_burden: B002
+  recommended_bounded_next_task: Supply and inventory the pinned apprehensional-reachability
+    archive before choosing formal work.
+  pmr_001_overlay: []
+  flywheel_edge_population: INITIALIZED_PENDING_INCREMENTAL_EXPANSION
+  historical_identity_or_payload_claim_changed: false
+- surface_id: S08
+  name: Profile fibres, factorization, certificates, and T366 reconstruction
+  pmr_status: ESTABLISHED_AND_ADMITTED
+  base_authority_level: EXACT_HISTORICAL_PAYLOAD
+  base_current_main_status: MERGED PROPOSAL; ADOPTION PENDING
+  evidence_pointers:
+  - AR8R_POST_MERGE_VERIFIED_HANDOFF_V9.zip
+  - docs/project-closure/ar8r-v8/historical-payloads/AR8R_T135.txt
+  - docs/project-closure/ar8r-v8/proposals/AR8R_RC_T366_V1_DECLARED_PROFILE_FACTORIZATION.md
+  - docs/project-closure/ar8r-v8/AR8R-V8-IDENTITY-INDEX.yaml
+  next_burden: B013
+  recommended_bounded_next_task: Record adoption only in the authorized T354 repair
+    branch task; do not alter proposal bytes.
+  pmr_001_overlay: []
+  flywheel_edge_population: DEPENDENCY_CLOSED_SUBGRAPH_POPULATED
+  historical_identity_or_payload_claim_changed: false
+- surface_id: S09
+  name: 'Track M Candidate 1: finite profile-and-fibre reachability certificate'
+  pmr_status: ESTABLISHED_BUT_EXTERNAL_REVIEW_OPEN
+  base_authority_level: HISTORICAL_REFERENCE_WITHOUT_SUPPLIED_PAYLOAD
+  base_current_main_status: MINIMAL TRACE ONLY
+  evidence_pointers:
+  - AR8R_ADDITIVE_FULL_PROGRAM_CONTINUITY_REENTRY_AND_FRESH_THREAD_HANDOFF_V2(1).md
+  - docs/project-closure/ar8r-v8/historical-payloads/AR8R_T134.txt
+  - PMR-001_TRANCHE-001 local artifacts
+  next_burden: B010
+  recommended_bounded_next_task: Read-only recover the exact Candidate 1 packet, then
+    external review; do not reconstruct from titles.
+  pmr_001_overlay:
+  - Candidate 1 exact statement/proof architecture and 26-case audit restored; external
+    proof/prior-art review remains.
+  flywheel_edge_population: DEPENDENCY_CLOSED_SUBGRAPH_POPULATED
+  historical_identity_or_payload_claim_changed: false
+- surface_id: S10
+  name: PRR-T1 provenance/reachability limits and M11-M13 collective distinctions
+  pmr_status: BLOCKED_ON_EXACT_SOURCE
+  base_authority_level: HISTORICAL_REFERENCE_WITHOUT_SUPPLIED_PAYLOAD
+  base_current_main_status: ABSENT
+  evidence_pointers:
+  - AR8R_ADDITIVE_FULL_PROGRAM_CONTINUITY_REENTRY_AND_FRESH_THREAD_HANDOFF_V2(1).md
+  next_burden: B010
+  recommended_bounded_next_task: Recover exact bytes; do not infer theorem content
+    from family labels.
+  pmr_001_overlay: []
+  flywheel_edge_population: DEPENDENCY_CLOSED_SUBGRAPH_POPULATED
+  historical_identity_or_payload_claim_changed: false
+- surface_id: S11
+  name: TAC / Tachikoma / Stand Alone Complex identity and lineage
+  pmr_status: BLOCKED_ON_EXACT_SOURCE
+  base_authority_level: HISTORICAL_REFERENCE_WITHOUT_SUPPLIED_PAYLOAD
+  base_current_main_status: ABSENT; nearest current-main analogue is somnic episode
+    identity, not identity
+  evidence_pointers:
+  - AR8R_ADDITIVE_FULL_PROGRAM_CONTINUITY_REENTRY_AND_FRESH_THREAD_HANDOFF_V2(1).md
+  next_burden: B043
+  recommended_bounded_next_task: Read-only inventory the exact TAC packet and produce
+    a relation-by-relation theorem/source map.
+  pmr_001_overlay: []
+  flywheel_edge_population: DEPENDENCY_CLOSED_SUBGRAPH_POPULATED
+  historical_identity_or_payload_claim_changed: false
+- surface_id: S12
+  name: TAC/SAC evidential independence, false tawatur, and lineage dependence
+  pmr_status: BLOCKED_ON_EXACT_SOURCE
+  base_authority_level: READ_ONLY_CONTINUITY_RECONSTRUCTION
+  base_current_main_status: PARTIAL ANALOGUE ONLY
+  evidence_pointers:
+  - applications/daee-epistemics/FALSE-TAWATUR-FIXTURES.yaml
+  - applications/daee-epistemics/TAWATUR-WARRANT.schema.json
+  - applications/daee-epistemics/TAWATUR-WARRANT.example.yaml
+  next_burden: B003
+  recommended_bounded_next_task: Use current false-tawatur machinery only as a typed
+    comparator after exact TAC recovery.
+  pmr_001_overlay: []
+  flywheel_edge_population: DEPENDENCY_CLOSED_SUBGRAPH_POPULATED
+  historical_identity_or_payload_claim_changed: false
+- surface_id: S13
+  name: Track T same-token/same-respect theory-adequacy layer
+  pmr_status: ESTABLISHED_AND_ADMITTED
+  base_authority_level: EXACT_HISTORICAL_PAYLOAD
+  base_current_main_status: MERGED EXACT PAYLOADS
+  evidence_pointers:
+  - docs/project-closure/ar8r-v8/historical-payloads/AR8R_T130.txt
+  - docs/project-closure/ar8r-v8/historical-payloads/AR8R_T131.txt
+  - docs/project-closure/ar8r-v8/historical-payloads/AR8R_T132.txt
+  next_burden: B010
+  recommended_bounded_next_task: Formalize or countermodel one exact Track T bridge
+    only after exact source packet recovery.
+  pmr_001_overlay: []
+  flywheel_edge_population: DEPENDENCY_CLOSED_SUBGRAPH_POPULATED
+  historical_identity_or_payload_claim_changed: false
+- surface_id: S14
+  name: Track T realist bridge, resource/semantic/provenance bridges, and world-directed
+    conclusion
+  pmr_status: OPEN_RESEARCH_BURDEN
+  base_authority_level: READ_ONLY_CONTINUITY_RECONSTRUCTION
+  base_current_main_status: MERGED CONDITIONAL DRAFT
+  evidence_pointers:
+  - companion/orthability-and-the-ground-of-intelligibility.md
+  - companion/orthemic-modal-metaphysical-assessment.md
+  - docs/project-closure/ar8r-v8/historical-payloads/AR8R_T132.txt
+  next_burden: B020
+  recommended_bounded_next_task: Freeze one exact bridge statement and run a proof/countermodel
+    audit; do not combine with source ascent.
+  pmr_001_overlay: []
+  flywheel_edge_population: DEPENDENCY_CLOSED_SUBGRAPH_POPULATED
+  historical_identity_or_payload_claim_changed: false
+- surface_id: S15
+  name: Transcendental orthability ascent, Necessary Being, and source-enriched attribute
+    ascent
+  pmr_status: OPEN_RESEARCH_BURDEN
+  base_authority_level: HISTORICAL_REFERENCE_WITHOUT_SUPPLIED_PAYLOAD
+  base_current_main_status: PARTIAL, HONESTLY BOUNDED
+  evidence_pointers:
+  - A-Commentary-on-the-Creed-of-Asfahani-v2.3(1).md
+  - Ibn Taymiyyah's Epistemology(3).md
+  - The_Incoherence_of_Atheism_by_Sheikh_Abdullah_ibn_Salih_Al-Ujayri(1).md
+  - companion/orthability-and-the-ground-of-intelligibility.md
+  - companion/orthability-divine-attributes-and-speech-athari.md
+  - companion/ARGUMENT-MAP-ORTHABILITY.md
+  - PMR-001_TRANCHE-001 local artifacts
+  next_burden: B005
+  recommended_bounded_next_task: First perform a read-only authority/claim/locus reconstruction
+    of the missing owner packet; do not prove or adopt new conclusions.
+  pmr_001_overlay:
+  - PMR-M3-01 admitted at scoped post-merge source/formal level; complete ascent remains
+    open.
+  flywheel_edge_population: DEPENDENCY_CLOSED_SUBGRAPH_POPULATED
+  historical_identity_or_payload_claim_changed: false
+- surface_id: S16
+  name: R5 rival portfolio, guarded coexistence, and minimal nonintegration
+  pmr_status: ESTABLISHED_AND_ADMITTED
+  base_authority_level: EXACT_HISTORICAL_PAYLOAD
+  base_current_main_status: MERGED PROPOSAL PENDING ADOPTION
+  evidence_pointers:
+  - docs/project-closure/ar8r-v8/historical-payloads/AR8R_T138.txt
+  - docs/project-closure/ar8r-v8/proposals/AR8R_RP_001_V1_COMMON_MODEL_MINIMAL_NONINTEGRATION.md
+  - PMR-001_TRANCHE-001 local artifacts
+  next_burden: B013
+  recommended_bounded_next_task: Record adoption in bounded branch without changing
+    proposal bytes.
+  pmr_001_overlay:
+  - PMR-R5-01 adds an impersonal-originator bridge-sensitivity control without historical
+    R5 identity.
+  flywheel_edge_population: DEPENDENCY_CLOSED_SUBGRAPH_POPULATED
+  historical_identity_or_payload_claim_changed: false
+- surface_id: S17
+  name: Candidate N six-role Taymiyyan source architecture
+  pmr_status: ESTABLISHED_BUT_EXTERNAL_REVIEW_OPEN
+  base_authority_level: HISTORICAL_REFERENCE_WITHOUT_SUPPLIED_PAYLOAD
+  base_current_main_status: PARTIAL AND NOT NAMED AS A LIVE CANONICAL OBJECT
+  evidence_pointers:
+  - A-Commentary-on-the-Creed-of-Asfahani-v2.3(1).md
+  - Ibn Taymiyyah's Epistemology(3).md
+  - The_Incoherence_of_Atheism_by_Sheikh_Abdullah_ibn_Salih_Al-Ujayri(1).md
+  - companion/orthability-divine-attributes-and-speech-athari.md
+  - companion/orthemic-modal-metaphysical-assessment.md
+  - references/source-status.yaml
+  next_burden: B018
+  recommended_bounded_next_task: Freeze the exact six-role claim set and run source-specialist
+    review before payoff claims.
+  pmr_001_overlay: []
+  flywheel_edge_population: DEPENDENCY_CLOSED_SUBGRAPH_POPULATED
+  historical_identity_or_payload_claim_changed: false
+- surface_id: S18
+  name: Candidate N novelty, significance, and interpretive-payoff evaluation
+  pmr_status: BLOCKED_ON_EXTERNAL_REVIEW
+  base_authority_level: HISTORICAL_REFERENCE_WITHOUT_SUPPLIED_PAYLOAD
+  base_current_main_status: ABSENT AS AN EVALUATION PACKET
+  evidence_pointers: []
+  next_burden: B018
+  recommended_bounded_next_task: Run a bounded comparative-yield audit on 3-5 source
+    disputes after specialist source review.
+  pmr_001_overlay: []
+  flywheel_edge_population: INITIALIZED_PENDING_INCREMENTAL_EXPANSION
+  historical_identity_or_payload_claim_changed: false
+- surface_id: S19
+  name: AR8 safe abstraction, semantic migration, and bridge conservativity
+  pmr_status: ESTABLISHED_AND_ADMITTED
+  base_authority_level: EXACT_HISTORICAL_PAYLOAD
+  base_current_main_status: MERGED
+  evidence_pointers:
+  - docs/project-closure/ar8r-v8/historical-payloads/AR8R_T130.txt
+  - docs/project-closure/ar8r-v8/historical-payloads/AR8R_T131.txt
+  - docs/project-closure/ar8r-v8/historical-payloads/AR8R_T137.txt
+  next_burden: B010
+  recommended_bounded_next_task: Use the crosswalk edge vocabulary before any repository
+    integration.
+  pmr_001_overlay: []
+  flywheel_edge_population: INITIALIZED_PENDING_INCREMENTAL_EXPANSION
+  historical_identity_or_payload_claim_changed: false
+- surface_id: S20
+  name: AR8R recursive synthesis, search policy, repair, and saturation
+  pmr_status: OPEN_RESEARCH_BURDEN
+  base_authority_level: VERIFIED_POST_MERGE_HANDOFF
+  base_current_main_status: RECOVERY PACKET MERGED
+  evidence_pointers:
+  - AR8R_POST_MERGE_VERIFIED_HANDOFF_V9.zip
+  - AR8R_ADDITIVE_FULL_PROGRAM_CONTINUITY_REENTRY_AND_FRESH_THREAD_HANDOFF_V2(1).md
+  - docs/project-closure/ar8r-v8/README.md
+  - docs/project-closure/ar8r-v8/audits/EXACT-PAYLOAD-COLD-AUDIT.md
+  - docs/project-closure/ar8r-v8/audits/EXACT-PAYLOAD-REPAIRS.md
+  next_burden: B001
+  recommended_bounded_next_task: Do not restart. Select one dependency-bounded lane
+    only after owner authorization.
+  pmr_001_overlay: []
+  flywheel_edge_population: DEPENDENCY_CLOSED_SUBGRAPH_POPULATED
+  historical_identity_or_payload_claim_changed: false
+- surface_id: S21
+  name: Theorem-origin authority V5 and false-multiplicity control
+  pmr_status: ESTABLISHED_AND_ADMITTED
+  base_authority_level: VERIFIED_POST_MERGE_HANDOFF
+  base_current_main_status: PARTIAL
+  evidence_pointers:
+  - AR8R_POST_MERGE_VERIFIED_HANDOFF_V9.zip
+  - AR8R_ADDITIVE_FULL_PROGRAM_CONTINUITY_REENTRY_AND_FRESH_THREAD_HANDOFF_V2(1).md
+  - docs/project-closure/ar8r-v8/AR8R-V8-IDENTITY-INDEX.yaml
+  - PMR-001_TRANCHE-001 local artifacts
+  next_burden: B001
+  recommended_bounded_next_task: Inventory V5 bytes read-only and regenerate theorem
+    ancestry before any novelty accounting.
+  pmr_001_overlay:
+  - V5 family deduplication reactivated; all PMR candidates receive zero independent
+    general theorem credit.
+  flywheel_edge_population: DEPENDENCY_CLOSED_SUBGRAPH_POPULATED
+  historical_identity_or_payload_claim_changed: false
+- surface_id: S22
+  name: 'AR8R V1-V10 recovery: exact payloads, proposals, unresolved identities'
+  pmr_status: ESTABLISHED_AND_ADMITTED
+  base_authority_level: VERIFIED_POST_MERGE_HANDOFF
+  base_current_main_status: MERGED, though prefix status rule is stale
+  evidence_pointers:
+  - AR8R_POST_MERGE_VERIFIED_HANDOFF_V9.zip
+  - orthemology-main(7).zip
+  - docs/project-closure/ar8r-v8/AR8R-V8-IDENTITY-INDEX.yaml
+  - docs/project-closure/ar8r-v8/AR8R-V8-UNRESOLVED.yaml
+  - docs/project-closure/ar8r-v8/historical-payloads/
+  next_burden: B015
+  recommended_bounded_next_task: No recovery action. Preserve state until theorem-specific
+    evidence arrives.
+  pmr_001_overlay: []
+  flywheel_edge_population: INITIALIZED_PENDING_INCREMENTAL_EXPANSION
+  historical_identity_or_payload_claim_changed: false
+- surface_id: S23
+  name: T150 role-preserving replacement and T366 canonical semantic reconstruction
+  pmr_status: ESTABLISHED_AND_ADMITTED
+  base_authority_level: OWNER_CONTINUITY_OR_EXECUTION_INSTRUCTION
+  base_current_main_status: PENDING ADOPTION METADATA
+  evidence_pointers:
+  - AR8R_FRESH_PRO_POST_MERGE_OWNER_DECISIONS_T354_REPAIR_V1(1).md
+  - AR8R_POST_MERGE_VERIFIED_HANDOFF_V9.zip
+  - docs/project-closure/ar8r-v8/proposals/AR8R_RP_001_V1_COMMON_MODEL_MINIMAL_NONINTEGRATION.md
+  - docs/project-closure/ar8r-v8/proposals/AR8R_RC_T366_V1_DECLARED_PROFILE_FACTORIZATION.md
+  - docs/project-closure/ar8r-v8/AR8R-V8-IDENTITY-INDEX.yaml
+  next_burden: B013
+  recommended_bounded_next_task: Resume only the exact bounded post-merge owner-decision/T354
+    repair operation.
+  pmr_001_overlay: []
+  flywheel_edge_population: INITIALIZED_PENDING_INCREMENTAL_EXPANSION
+  historical_identity_or_payload_claim_changed: false
+- surface_id: S24
+  name: Historical T354 blocked payload and separately identified repair theorem lane
+  pmr_status: PROVISIONAL_PENDING_AUDIT
+  base_authority_level: EXACT_HISTORICAL_PAYLOAD
+  base_current_main_status: BLOCKED; no repair branch/PR
+  evidence_pointers:
+  - AR8R_FRESH_PRO_POST_MERGE_OWNER_DECISIONS_T354_REPAIR_V1(1).md
+  - AR8R_POST_MERGE_VERIFIED_HANDOFF_V9.zip
+  - docs/project-closure/ar8r-v8/historical-payloads/AR8R_T354.txt
+  - docs/project-closure/ar8r-v8/AR8R-V8-IDENTITY-INDEX.yaml
+  - docs/project-closure/HISTORICAL-STATUS-INDEX.yaml
+  next_burden: B013
+  recommended_bounded_next_task: Rerun the exact controlling prompt only in an authenticated
+    write-capable environment; do not broaden scope.
+  pmr_001_overlay: []
+  flywheel_edge_population: INITIALIZED_PENDING_INCREMENTAL_EXPANSION
+  historical_identity_or_payload_claim_changed: false
+- surface_id: S25
+  name: daee target/kernel/source-target and sound-fit-restoration distinction
+  pmr_status: OPEN_RESEARCH_BURDEN
+  base_authority_level: CURRENT_MERGED_REPOSITORY_BYTES
+  base_current_main_status: MERGED BUT POTENTIALLY BEHIND OWNER-EXPECTED SNAPSHOT
+  evidence_pointers:
+  - AR8R_ADDITIVE_FULL_PROGRAM_CONTINUITY_REENTRY_AND_FRESH_THREAD_HANDOFF_V2(1).md
+  - applications/daee-epistemics/DAEE-ORTHEMOLOGY-CROSSWALK.yaml
+  - applications/daee-epistemics/EPISTEMOLOGICAL-AND-METAPHYSICAL-BOUNDARY.md
+  - applications/daee-epistemics/SOURCE-BOUNDARY.md
+  - PMR-001_TRANCHE-001 local artifacts
+  next_burden: B003
+  recommended_bounded_next_task: Supply and inspect the exact daee snapshot; produce
+    a file-level delta before any theory claim.
+  pmr_001_overlay:
+  - Fiṭrah source finding enriches target semantics; whole-stack disposition remains
+    PARTIAL_CROSS_LAYER_BINDING.
+  flywheel_edge_population: DEPENDENCY_CLOSED_SUBGRAPH_POPULATED
+  historical_identity_or_payload_claim_changed: false
+- surface_id: S26
+  name: daee route-gradient, typed restorative order, and non-scalar boundary
+  pmr_status: OPEN_RESEARCH_BURDEN
+  base_authority_level: CURRENT_MERGED_REPOSITORY_BYTES
+  base_current_main_status: PARTIAL/BLOCKED
+  evidence_pointers:
+  - applications/daee-epistemics/SOUND-DESCENT-MODEL-COMPARISON.md
+  - applications/daee-epistemics/CURRENT-RUNTIME-CROSSWALK.yaml
+  - docs/decisions/0025-meta-noetic-memetics-and-sound-corrective-dynamics.md
+  next_burden: B013
+  recommended_bounded_next_task: Execute T354 repair separately; implementation audit
+    must remain a later lane.
+  pmr_001_overlay: []
+  flywheel_edge_population: INITIALIZED_PENDING_INCREMENTAL_EXPANSION
+  historical_identity_or_payload_claim_changed: false
+- surface_id: S27
+  name: Burden landing, recursive rereading, collapse radius, source reordering, and
+    causal efficacy
+  pmr_status: ESTABLISHED_AND_ADMITTED
+  base_authority_level: EXACT_HISTORICAL_PAYLOAD
+  base_current_main_status: MERGED
+  evidence_pointers:
+  - applications/daee-epistemics/CORRECTIVE-TRANSITION.schema.json
+  - applications/daee-epistemics/CORRECTIVE-TRANSITION-FIXTURES.yaml
+  - applications/daee-epistemics/NOETIC-FIELD-DYNAMICS.yaml
+  - PMR-001_TRANCHE-001 local artifacts
+  next_burden: B003
+  recommended_bounded_next_task: After exact daee snapshot, run one bounded path/cutset
+    reconstruction with explicit control case.
+  pmr_001_overlay:
+  - Fiṭrah impairment/reminder finding strengthens interpretation; no causal execution
+    added.
+  flywheel_edge_population: DEPENDENCY_CLOSED_SUBGRAPH_POPULATED
+  historical_identity_or_payload_claim_changed: false
+- surface_id: S28
+  name: Meta-noetic memetics, noetic structure, and restorative-cutset architecture
+  pmr_status: OPEN_RESEARCH_BURDEN
+  base_authority_level: CURRENT_MERGED_REPOSITORY_BYTES
+  base_current_main_status: PARTIAL
+  evidence_pointers:
+  - AR8R_ADDITIVE_FULL_PROGRAM_CONTINUITY_REENTRY_AND_FRESH_THREAD_HANDOFF_V2(1).md
+  - applications/daee-epistemics/META-NOETIC-MEMETICS-AND-DYNAMIC-ORTHING.md
+  - applications/daee-epistemics/MULTI-TARGET-NOETIC-ORTHING.md
+  - applications/daee-epistemics/DYNAMIC-CROSSWALK.yaml
+  next_burden: B004
+  recommended_bounded_next_task: Read-only crosswalk the noetic draft to current main
+    before extending theory.
+  pmr_001_overlay: []
+  flywheel_edge_population: DEPENDENCY_CLOSED_SUBGRAPH_POPULATED
+  historical_identity_or_payload_claim_changed: false
+- surface_id: S29
+  name: Platonic Representation Hypothesis empirical alignment program
+  pmr_status: ESTABLISHED_BUT_EXTERNAL_REVIEW_OPEN
+  base_authority_level: EXTERNAL_EMPIRICAL_OR_THEORETICAL_REFERENCE
+  base_current_main_status: ABSENT
+  evidence_pointers:
+  - 2405.07987v5.pdf
+  next_burden: B022
+  recommended_bounded_next_task: Freeze one narrow PRH-to-AR8R inference and list
+    all extra premises before testing.
+  pmr_001_overlay: []
+  flywheel_edge_population: DEPENDENCY_CLOSED_SUBGRAPH_POPULATED
+  historical_identity_or_payload_claim_changed: false
+- surface_id: S30
+  name: Prior order, proper function, normative output, and owner PRH interpretation
+  pmr_status: OPEN_RESEARCH_BURDEN
+  base_authority_level: READ_ONLY_CONTINUITY_RECONSTRUCTION
+  base_current_main_status: PARTIAL ANALOGUE
+  evidence_pointers:
+  - 2405.07987v5.pdf
+  - AR8R_ADDITIVE_FULL_PROGRAM_CONTINUITY_REENTRY_AND_FRESH_THREAD_HANDOFF_V2(1).md
+  - applications/latent-state-orthing/OSM-CSCG-ORTHEME-CROSSWALK.yaml
+  - companion/dynamic-orthing-noetic-learning-and-orthability.md
+  next_burden: B022
+  recommended_bounded_next_task: Write a bounded hypothesis matrix separating paper
+    claim, reconstruction, owner extension, and testable prediction.
+  pmr_001_overlay: []
+  flywheel_edge_population: DEPENDENCY_CLOSED_SUBGRAPH_POPULATED
+  historical_identity_or_payload_claim_changed: false
+- surface_id: S31
+  name: T299/T300 higher-order profile blindness, same-output cases, and Gettier-style
+    restoration failure
+  pmr_status: ESTABLISHED_AND_ADMITTED
+  base_authority_level: READ_ONLY_CONTINUITY_RECONSTRUCTION
+  base_current_main_status: PARTIAL
+  evidence_pointers:
+  - AR8R_ADDITIVE_FULL_PROGRAM_CONTINUITY_REENTRY_AND_FRESH_THREAD_HANDOFF_V2(1).md
+  - docs/project-closure/ar8r-v8/historical-payloads/AR8R_T135.txt
+  - docs/project-closure/ar8r-v8/historical-payloads/AR8R_T353.txt
+  - applications/daee-epistemics/META-NOETIC-MEMETICS-AND-DYNAMIC-ORTHING.md
+  - PMR-001_TRANCHE-001 local artifacts
+  next_burden: B002
+  recommended_bounded_next_task: Recover exact T299/T300 packet before formal or implementation
+    claims.
+  pmr_001_overlay:
+  - The theoretical T299/T300 family is preserved; the admitted pilot is negative
+    at its tested class.
+  flywheel_edge_population: DEPENDENCY_CLOSED_SUBGRAPH_POPULATED
+  historical_identity_or_payload_claim_changed: false
+- surface_id: S32
+  name: Fusha/Qamus occurrence, transclusion, and meta-transclusive sarf/nahw lattice
+    projection
+  pmr_status: BLOCKED_ON_EXACT_SOURCE
+  base_authority_level: OWNER_CONTINUITY_OR_EXECUTION_INSTRUCTION
+  base_current_main_status: ABSENT
+  evidence_pointers:
+  - AR8R_ADDITIVE_FULL_PROGRAM_CONTINUITY_REENTRY_AND_FRESH_THREAD_HANDOFF_V2(1).md
+  next_burden: B012
+  recommended_bounded_next_task: Supply a pinned Fusha/Qamus archive and run a read-only
+    occurrence/transclusion path inventory.
+  pmr_001_overlay: []
+  flywheel_edge_population: INITIALIZED_PENDING_INCREMENTAL_EXPANSION
+  historical_identity_or_payload_claim_changed: false
+- surface_id: S33
+  name: Ten Advances mathematical manuscript and result portfolio
+  pmr_status: BLOCKED_ON_EXTERNAL_REVIEW
+  base_authority_level: EXTERNAL_MANUSCRIPT_REFERENCE
+  base_current_main_status: ABSENT
+  evidence_pointers:
+  - ten-proofs-oai(1).pdf
+  - ten-proofs-main(1).zip
+  next_burden: B026
+  recommended_bounded_next_task: Kernel-build the external project independently before
+    any formal-authority claim.
+  pmr_001_overlay: []
+  flywheel_edge_population: INITIALIZED_PENDING_INCREMENTAL_EXPANSION
+  historical_identity_or_payload_claim_changed: false
+- surface_id: S34
+  name: Ten Advances Lean, Comparator, dependencies, axioms, and packaging readiness
+  pmr_status: BLOCKED_ON_EXTERNAL_REVIEW
+  base_authority_level: EXTERNAL_FORMAL_SOURCE_STATICALLY_INSPECTED
+  base_current_main_status: NOT PART OF ORTHEMOLOGY
+  evidence_pointers:
+  - ten-proofs-main(1).zip
+  next_burden: B026
+  recommended_bounded_next_task: In an environment with Lean 4.32.0, correct or explain
+    packaging inconsistencies, then run clean build and Comparator.
+  pmr_001_overlay: []
+  flywheel_edge_population: INITIALIZED_PENDING_INCREMENTAL_EXPANSION
+  historical_identity_or_payload_claim_changed: false
+- surface_id: S35
+  name: Reasoning walkthroughs as retrospective discovery narratives
+  pmr_status: ESTABLISHED_AND_ADMITTED
+  base_authority_level: SECONDARY_SCHOLARSHIP_OR_TRANSLATION
+  base_current_main_status: ABSENT
+  evidence_pointers:
+  - reasoning-walkthroughs(1).pdf
+  next_burden: B026
+  recommended_bounded_next_task: Use only to locate questions; verify every substantive
+    claim in the manuscript/Lean/source.
+  pmr_001_overlay: []
+  flywheel_edge_population: INITIALIZED_PENDING_INCREMENTAL_EXPANSION
+  historical_identity_or_payload_claim_changed: false
+- surface_id: S36
+  name: CDC prompt as frontier-search and orchestration precedent
+  pmr_status: ESTABLISHED_AND_ADMITTED
+  base_authority_level: SECONDARY_SCHOLARSHIP_OR_TRANSLATION
+  base_current_main_status: ABSENT
+  evidence_pointers:
+  - cdc_prompt(1).pdf
+  next_burden: B028
+  recommended_bounded_next_task: Extract only neutral search-policy patterns; retain
+    falsification and no-answer permission.
+  pmr_001_overlay: []
+  flywheel_edge_population: INITIALIZED_PENDING_INCREMENTAL_EXPANSION
+  historical_identity_or_payload_claim_changed: false
+- surface_id: S37
+  name: Candidate A-N map and cross-track integration
+  pmr_status: BLOCKED_ON_EXACT_SOURCE
+  base_authority_level: HISTORICAL_REFERENCE_WITHOUT_SUPPLIED_PAYLOAD
+  base_current_main_status: PARTIAL
+  evidence_pointers:
+  - AR8R_ADDITIVE_FULL_PROGRAM_CONTINUITY_REENTRY_AND_FRESH_THREAD_HANDOFF_V2(1).md
+  - docs/project-closure/r7e/ORTHING-CANDIDATE-BACKLOG.md
+  - docs/project-closure/r7e-sol/ORTHING-CANDIDATE-LEDGER.json
+  - docs/project-closure/r7e-sol/CANDIDATE-TOPOLOGY-INPUT.yaml
+  next_burden: B010
+  recommended_bounded_next_task: Reconstruct exact candidate map read-only from archives
+    before selecting a new lane.
+  pmr_001_overlay: []
+  flywheel_edge_population: INITIALIZED_PENDING_INCREMENTAL_EXPANSION
+  historical_identity_or_payload_claim_changed: false
+- surface_id: S38
+  name: AR2-AR8R formalization, Lean, executable artifacts, and proof-authority map
+  pmr_status: OPEN_RESEARCH_BURDEN
+  base_authority_level: READ_ONLY_CONTINUITY_RECONSTRUCTION
+  base_current_main_status: CURRENT REPO VALIDATORS PASS; LEAN ABSENT
+  evidence_pointers:
+  - orthemology-main(7).zip
+  - ten-proofs-main(1).zip
+  - AR8R_POST_MERGE_VERIFIED_HANDOFF_V9.zip
+  - theory/orthemic-core-formalization.md
+  - schemas/
+  - scripts/
+  next_burden: B002
+  recommended_bounded_next_task: Inventory exact modules first; never recreate under
+    historical identity without provenance.
+  pmr_001_overlay: []
+  flywheel_edge_population: INITIALIZED_PENDING_INCREMENTAL_EXPANSION
+  historical_identity_or_payload_claim_changed: false
+- surface_id: S39
+  name: Source authentication, translation, attribution, inference, and release ladder
+  pmr_status: ESTABLISHED_AND_ADMITTED
+  base_authority_level: CURRENT_MERGED_REPOSITORY_BYTES
+  base_current_main_status: MERGED CURRENT
+  evidence_pointers:
+  - A-Commentary-on-the-Creed-of-Asfahani-v2.3(1).md
+  - Ibn Taymiyyah's Epistemology(3).md
+  - The_Incoherence_of_Atheism_by_Sheikh_Abdullah_ibn_Salih_Al-Ujayri(1).md
+  - references/source-status.yaml
+  - docs/sourcing/CLAIM-SOURCE-MATRIX.md
+  - docs/sourcing/CURRENT-SOURCING-LEDGER.md
+  next_burden: B021
+  recommended_bounded_next_task: Build a claim-by-claim translation/attribution/inference
+    table for the chosen source-ascent lane.
+  pmr_001_overlay: []
+  flywheel_edge_population: DEPENDENCY_CLOSED_SUBGRAPH_POPULATED
+  historical_identity_or_payload_claim_changed: false
+- surface_id: S40
+  name: Experiments, terminology matching, empirical validation, license, citation,
+    and publication owner gates
+  pmr_status: OPEN_RESEARCH_BURDEN
+  base_authority_level: CURRENT_MERGED_REPOSITORY_BYTES
+  base_current_main_status: MERGED READY, NOT RUN
+  evidence_pointers:
+  - experiments/
+  - terminology/pilot0/
+  - docs/current-state.yaml
+  next_burden: B031
+  recommended_bounded_next_task: Wait for owner selection; run one frozen experiment
+    lane without changing theory claims.
+  pmr_001_overlay: []
+  flywheel_edge_population: INITIALIZED_PENDING_INCREMENTAL_EXPANSION
+  historical_identity_or_payload_claim_changed: false
+- surface_id: S41
+  name: External-ready packets, review targets, and transmission custody
+  pmr_status: BLOCKED_ON_EXTERNAL_REVIEW
+  base_authority_level: READ_ONLY_CONTINUITY_RECONSTRUCTION
+  base_current_main_status: PARTIAL
+  evidence_pointers:
+  - AR8R_ADDITIVE_FULL_PROGRAM_CONTINUITY_REENTRY_AND_FRESH_THREAD_HANDOFF_V2(1).md
+  - docs/project-closure/r4-fresh-fable-review/
+  - docs/project-closure/r7e-sol/
+  - docs/project-closure/reviews/
+  next_burden: B016
+  recommended_bounded_next_task: After exact packet recovery, prepare one read-only
+    external-review packet and wait for owner authorization to send.
+  pmr_001_overlay: []
+  flywheel_edge_population: INITIALIZED_PENDING_INCREMENTAL_EXPANSION
+  historical_identity_or_payload_claim_changed: false
+- surface_id: S42
+  name: Meniscus, frontier, novelty, significance, and completeness accounting
+  pmr_status: OPEN_RESEARCH_BURDEN
+  base_authority_level: HISTORICAL_REFERENCE_WITHOUT_SUPPLIED_PAYLOAD
+  base_current_main_status: PARTIAL
+  evidence_pointers:
+  - AR8R_POST_MERGE_VERIFIED_HANDOFF_V9.zip
+  - AR8R_ADDITIVE_FULL_PROGRAM_CONTINUITY_REENTRY_AND_FRESH_THREAD_HANDOFF_V2(1).md
+  next_burden: B016
+  recommended_bounded_next_task: Do not run a broad novelty campaign. Resolve one
+    candidate’s missing review prerequisites first.
+  pmr_001_overlay: []
+  flywheel_edge_population: DEPENDENCY_CLOSED_SUBGRAPH_POPULATED
+  historical_identity_or_payload_claim_changed: false
+- surface_id: S43
+  name: Current-main R6 authority and public honesty boundary
+  pmr_status: ESTABLISHED_AND_ADMITTED
+  base_authority_level: CURRENT_MERGED_REPOSITORY_BYTES
+  base_current_main_status: AUTHORITATIVE BASE
+  evidence_pointers:
+  - orthemology-main(7).zip
+  - docs/current-state.yaml
+  - STATUS.md
+  - README.md
+  next_burden: B031
+  recommended_bounded_next_task: Every fresh thread must verify live main and compare
+    it to this authority receipt before selecting work.
+  pmr_001_overlay: []
+  flywheel_edge_population: INITIALIZED_PENDING_INCREMENTAL_EXPANSION
+  historical_identity_or_payload_claim_changed: false
+- surface_id: S44
+  name: Post-merge delta, stale AR8R status rule, and R7E Sol protected-main verification
+  pmr_status: ESTABLISHED_AND_ADMITTED
+  base_authority_level: CURRENT_MERGED_REPOSITORY_BYTES
+  base_current_main_status: MERGED WITH KNOWN STATUS DEFECT
+  evidence_pointers:
+  - AR8R_POST_MERGE_VERIFIED_HANDOFF_V9.zip
+  - orthemology-main(7).zip
+  - docs/project-closure/HISTORICAL-STATUS-INDEX.yaml
+  - docs/current-candidate-state.yaml
+  - docs/project-closure/r7e-sol/R7E-SOL-MERGED-MAIN-VERIFICATION.md
+  next_burden: B013
+  recommended_bounded_next_task: Only repair B035 within the authorized branch task;
+    leave frozen historical overlays intact unless separately authorized.
+  pmr_001_overlay: []
+  flywheel_edge_population: INITIALIZED_PENDING_INCREMENTAL_EXPANSION
+  historical_identity_or_payload_claim_changed: false
+- surface_id: S45
+  name: Latent-state orthing, OSM/CSCG representation learning, and observation boundaries
+  pmr_status: ESTABLISHED_AND_ADMITTED
+  base_authority_level: CURRENT_MERGED_REPOSITORY_BYTES
+  base_current_main_status: MERGED
+  evidence_pointers:
+  - applications/latent-state-orthing/README.md
+  - applications/latent-state-orthing/DYNAMIC-ORTHING-AND-LATENT-STATE-LEARNING.md
+  - applications/latent-state-orthing/OSM-CSCG-ORTHEME-CROSSWALK.yaml
+  next_burden: B022
+  recommended_bounded_next_task: Use as a comparator for PRH prior-order hypotheses
+    only after stating the bridge explicitly.
+  pmr_001_overlay: []
+  flywheel_edge_population: INITIALIZED_PENDING_INCREMENTAL_EXPANSION
+  historical_identity_or_payload_claim_changed: false
+- surface_id: S46
+  name: Agentic runtime transclusion, activation profiles, and writeback adoption
+  pmr_status: PROVISIONAL_PENDING_AUDIT
+  base_authority_level: CURRENT_MERGED_REPOSITORY_BYTES
+  base_current_main_status: MERGED BYTES; CANDIDATE STATUS
+  evidence_pointers:
+  - applications/agentic-runtime/README.md
+  - applications/agentic-runtime/COLLECTIVE-SOMNUS-TRANSCLUSION-PROFILE.yaml
+  - applications/agentic-runtime/HERMES-WRITEBACK-ADOPTION-PROFILE.yaml
+  - PMR-001_TRANCHE-001 local artifacts
+  next_burden: B003
+  recommended_bounded_next_task: Audit only against a pinned runtime snapshot and
+    explicit execution receipt.
+  pmr_001_overlay:
+  - PMR-AGCOM-01 formally crosswalks existing transclusion gates; runtime remains
+    unimplemented.
+  flywheel_edge_population: DEPENDENCY_CLOSED_SUBGRAPH_POPULATED
+  historical_identity_or_payload_claim_changed: false
+- surface_id: S47
+  name: Generated-state, deterministic validation, source packaging, and reproducible
+    draft artifacts
+  pmr_status: ESTABLISHED_AND_ADMITTED
+  base_authority_level: CURRENT_MERGED_REPOSITORY_BYTES
+  base_current_main_status: PASS ON DISPOSABLE COPY
+  evidence_pointers:
+  - scripts/
+  - tests/
+  - .github/workflows/validate.yml
+  next_burden: B013
+  recommended_bounded_next_task: Reuse validators as gates in any future bounded branch;
+    do not infer theory adoption.
+  pmr_001_overlay: []
+  flywheel_edge_population: INITIALIZED_PENDING_INCREMENTAL_EXPANSION
+  historical_identity_or_payload_claim_changed: false
+- surface_id: S48
+  name: Private/public evidence boundary and custody firewall
+  pmr_status: ESTABLISHED_AND_ADMITTED
+  base_authority_level: CURRENT_MERGED_REPOSITORY_BYTES
+  base_current_main_status: MERGED
+  evidence_pointers:
+  - AR8R_POST_MERGE_VERIFIED_HANDOFF_V9.zip
+  - AR8R_FRESH_PRO_POST_MERGE_OWNER_DECISIONS_T354_REPAIR_V1(1).md
+  - docs/decisions/0017-private-design-records-and-public-evidence-boundary.md
+  - applications/daee-epistemics/SOURCE-BOUNDARY.md
+  - docs/project-closure/ar8r-v8/README.md
+  next_burden: B034
+  recommended_bounded_next_task: Run an itemized private-data audit before any external
+    transmission or repo integration.
+  pmr_001_overlay: []
+  flywheel_edge_population: INITIALIZED_PENDING_INCREMENTAL_EXPANSION
+  historical_identity_or_payload_claim_changed: false
+- surface_id: S49
+  name: Exact historical theorem and countermodel family T130-T143 and T351-T354
+  pmr_status: ESTABLISHED_AND_ADMITTED
+  base_authority_level: EXACT_HISTORICAL_PAYLOAD
+  base_current_main_status: MERGED EXACT PAYLOADS
+  evidence_pointers:
+  - docs/project-closure/ar8r-v8/historical-payloads/AR8R_T130.txt
+  - docs/project-closure/ar8r-v8/historical-payloads/AR8R_T131.txt
+  - docs/project-closure/ar8r-v8/historical-payloads/AR8R_T132.txt
+  next_burden: B013
+  recommended_bounded_next_task: Use the exact identity index; do not rewrite or renumber
+    the payloads.
+  pmr_001_overlay: []
+  flywheel_edge_population: INITIALIZED_PENDING_INCREMENTAL_EXPANSION
+  historical_identity_or_payload_claim_changed: false
+- surface_id: S50
+  name: Repository schema, verdict, governance, and decision-dependency machinery
+  pmr_status: ESTABLISHED_AND_ADMITTED
+  base_authority_level: CURRENT_MERGED_REPOSITORY_BYTES
+  base_current_main_status: MERGED; SELECTED VALIDATORS PASS
+  evidence_pointers:
+  - schemas/
+  - docs/verdict-registry.yaml
+  - docs/governance-requirements.yaml
+  next_burden: B031
+  recommended_bounded_next_task: Treat as execution gates for any future bounded change.
+  pmr_001_overlay: []
+  flywheel_edge_population: INITIALIZED_PENDING_INCREMENTAL_EXPANSION
+  historical_identity_or_payload_claim_changed: false
+- surface_id: S51
+  name: Matched intervention, T299 causal burden landing, and T300 higher-order profile
+    blindness
+  pmr_status: ESTABLISHED_AND_ADMITTED
+  base_authority_level: HISTORICAL_REFERENCE_WITHOUT_SUPPLIED_PAYLOAD
+  base_current_main_status: PARTIAL IMPLEMENTATION CORRESPONDENCE
+  evidence_pointers:
+  - AR8R_ADDITIVE_FULL_PROGRAM_CONTINUITY_REENTRY_AND_FRESH_THREAD_HANDOFF_V2(1).md
+  - applications/daee-epistemics/CORRECTIVE-TRANSITION.schema.json
+  - applications/daee-epistemics/NOETIC-FIELD-DYNAMICS.yaml
+  - experiments/episode-reification-v2/README.md
+  - PMR-001_TRANCHE-001 local artifacts
+  next_burden: B002
+  recommended_bounded_next_task: After exact packets are supplied, build a theorem-to-runtime-to-experiment
+    correspondence without promoting proxies.
+  pmr_001_overlay:
+  - T299/T300 pilot receipt restored; empirical configuration retired.
+  flywheel_edge_population: DEPENDENCY_CLOSED_SUBGRAPH_POPULATED
+  historical_identity_or_payload_claim_changed: false
+- surface_id: S52
+  name: 'Certification and restoration ladder: T304-T306 and T308'
+  pmr_status: BLOCKED_ON_EXACT_SOURCE
+  base_authority_level: HISTORICAL_REFERENCE_WITHOUT_SUPPLIED_PAYLOAD
+  base_current_main_status: SUBSTANTIALLY REPRESENTED BUT HISTORICAL ANCESTRY UNVERIFIED
+  evidence_pointers:
+  - AR8R_ADDITIVE_FULL_PROGRAM_CONTINUITY_REENTRY_AND_FRESH_THREAD_HANDOFF_V2(1).md
+  - applications/daee-epistemics/NOETIC-EVIDENCE-REGISTRY.schema.json
+  - applications/daee-epistemics/NOETIC-TARGET-MAP.schema.json
+  - applications/daee-epistemics/CORRECTIVE-TRANSITION.schema.json
+  next_burden: B002
+  recommended_bounded_next_task: Recover ancestry before assigning any new theorem
+    origin.
+  pmr_001_overlay: []
+  flywheel_edge_population: INITIALIZED_PENDING_INCREMENTAL_EXPANSION
+  historical_identity_or_payload_claim_changed: false
+- surface_id: S53
+  name: Proper orthing, Gettier-style separation, and T323-T326 coordinates
+  pmr_status: BLOCKED_ON_EXACT_SOURCE
+  base_authority_level: HISTORICAL_REFERENCE_WITHOUT_SUPPLIED_PAYLOAD
+  base_current_main_status: SUBSTANTIALLY REPRESENTED
+  evidence_pointers:
+  - AR8R_ADDITIVE_FULL_PROGRAM_CONTINUITY_REENTRY_AND_FRESH_THREAD_HANDOFF_V2(1).md
+  - docs/claim-reason-requirements.yaml
+  - schemas/orthing-episode.schema.json
+  - applications/daee-epistemics/NOETIC-CLAIM.schema.json
+  next_burden: B010
+  recommended_bounded_next_task: Read-only reconcile historical coordinate names against
+    current schemas.
+  pmr_001_overlay: []
+  flywheel_edge_population: INITIALIZED_PENDING_INCREMENTAL_EXPANSION
+  historical_identity_or_payload_claim_changed: false
+- surface_id: S54
+  name: Source-bound certification, target-reference contracts, and dynamic fixed-point
+    boundaries
+  pmr_status: BLOCKED_ON_EXACT_SOURCE
+  base_authority_level: HISTORICAL_REFERENCE_WITHOUT_SUPPLIED_PAYLOAD
+  base_current_main_status: SUBSTANTIALLY REPRESENTED
+  evidence_pointers:
+  - AR8R_ADDITIVE_FULL_PROGRAM_CONTINUITY_REENTRY_AND_FRESH_THREAD_HANDOFF_V2(1).md
+  - applications/daee-epistemics/SOURCE-BOUNDARY.md
+  - applications/daee-epistemics/SEMANTIC-OPERATOR-CONTRACT.yaml
+  - applications/daee-epistemics/SEMANTIC-OPERATOR-CONTRACT.schema.json
+  next_burden: B003
+  recommended_bounded_next_task: Supply exact daee snapshot and theorem-origin V5,
+    then audit one source-bound transition end to end.
+  pmr_001_overlay: []
+  flywheel_edge_population: INITIALIZED_PENDING_INCREMENTAL_EXPANSION
+  historical_identity_or_payload_claim_changed: false
+- surface_id: S55
+  name: Fusha particular-occurrence orthemology and morphology-syntax ambiguity lattice
+  pmr_status: BLOCKED_ON_EXACT_SOURCE
+  base_authority_level: OWNER_CONTINUITY_OR_EXECUTION_INSTRUCTION
+  base_current_main_status: NOT REPRESENTED BY PATH
+  evidence_pointers:
+  - AR8R_ADDITIVE_FULL_PROGRAM_CONTINUITY_REENTRY_AND_FRESH_THREAD_HANDOFF_V2(1).md
+  next_burden: B012
+  recommended_bounded_next_task: Inventory exact qamus entries, occurrence IDs, and
+    projector schemas before any conceptual extension.
+  pmr_001_overlay: []
+  flywheel_edge_population: INITIALIZED_PENDING_INCREMENTAL_EXPANSION
+  historical_identity_or_payload_claim_changed: false
+- surface_id: S56
+  name: Qamus transclusion and meta-transclusive ṣarf/naḥw lattice projection
+  pmr_status: BLOCKED_ON_EXACT_SOURCE
+  base_authority_level: OWNER_CONTINUITY_OR_EXECUTION_INSTRUCTION
+  base_current_main_status: ABSENT
+  evidence_pointers:
+  - AR8R_ADDITIVE_FULL_PROGRAM_CONTINUITY_REENTRY_AND_FRESH_THREAD_HANDOFF_V2(1).md
+  next_burden: B012
+  recommended_bounded_next_task: Run a read-only one-occurrence proof across qamus,
+    ṣarf, naḥw, drill, and UI owners.
+  pmr_001_overlay: []
+  flywheel_edge_population: INITIALIZED_PENDING_INCREMENTAL_EXPANSION
+  historical_identity_or_payload_claim_changed: false
+- surface_id: S57
+  name: Fusha/Qamus implementation and custody status
+  pmr_status: BLOCKED_ON_EXACT_SOURCE
+  base_authority_level: READ_ONLY_CONTINUITY_RECONSTRUCTION
+  base_current_main_status: NOT REPRESENTED
+  evidence_pointers:
+  - AR8R_ADDITIVE_FULL_PROGRAM_CONTINUITY_REENTRY_AND_FRESH_THREAD_HANDOFF_V2(1).md
+  - orthemology-main(7).zip
+  next_burden: B012
+  recommended_bounded_next_task: Supply the pinned snapshot and exact commit/hash
+    receipt.
+  pmr_001_overlay: []
+  flywheel_edge_population: INITIALIZED_PENDING_INCREMENTAL_EXPANSION
+  historical_identity_or_payload_claim_changed: false
+- surface_id: S58
+  name: Ten Advances manuscript collection and proof-authority firewall
+  pmr_status: BLOCKED_ON_EXTERNAL_REVIEW
+  base_authority_level: EXTERNAL_MANUSCRIPT_REFERENCE
+  base_current_main_status: ABSENT
+  evidence_pointers:
+  - ten-proofs-oai(1).pdf
+  next_burden: B026
+  recommended_bounded_next_task: Select one theorem only after owner authorization
+    for an independent formal/mathematical audit.
+  pmr_001_overlay: []
+  flywheel_edge_population: INITIALIZED_PENDING_INCREMENTAL_EXPANSION
+  historical_identity_or_payload_claim_changed: false
+- surface_id: S59
+  name: Reasoning walkthroughs and retrospective discovery narratives
+  pmr_status: ESTABLISHED_AND_ADMITTED
+  base_authority_level: EXTERNAL_MANUSCRIPT_REFERENCE
+  base_current_main_status: ABSENT
+  evidence_pointers:
+  - reasoning-walkthroughs(1).pdf
+  next_burden: B026
+  recommended_bounded_next_task: Use only as an audit navigation aid after freezing
+    the proof object.
+  pmr_001_overlay: []
+  flywheel_edge_population: INITIALIZED_PENDING_INCREMENTAL_EXPANSION
+  historical_identity_or_payload_claim_changed: false
+- surface_id: S60
+  name: Ten Advances Lean project, declarations, dependencies, axioms, and packaging
+  pmr_status: BLOCKED_ON_EXTERNAL_REVIEW
+  base_authority_level: EXTERNAL_FORMAL_SOURCE_STATICALLY_INSPECTED
+  base_current_main_status: ABSENT
+  evidence_pointers:
+  - ten-proofs-main(1).zip
+  next_burden: B026
+  recommended_bounded_next_task: Run exact pinned toolchain in an isolated environment
+    and preserve logs; do not edit sources during audit.
+  pmr_001_overlay: []
+  flywheel_edge_population: INITIALIZED_PENDING_INCREMENTAL_EXPANSION
+  historical_identity_or_payload_claim_changed: false
+- surface_id: S61
+  name: Ten Advances sphere packing, binary codes, and spherical codes
+  pmr_status: BLOCKED_ON_EXTERNAL_REVIEW
+  base_authority_level: EXTERNAL_FORMAL_SOURCE_STATICALLY_INSPECTED
+  base_current_main_status: ABSENT
+  evidence_pointers:
+  - ten-proofs-oai(1).pdf
+  - reasoning-walkthroughs(1).pdf
+  - ten-proofs-main(1).zip
+  next_burden: B026
+  recommended_bounded_next_task: Keep any AR8R comparison explicitly analogous unless
+    a typed reduction is proved.
+  pmr_001_overlay: []
+  flywheel_edge_population: INITIALIZED_PENDING_INCREMENTAL_EXPANSION
+  historical_identity_or_payload_claim_changed: false
+- surface_id: S62
+  name: Ten Advances non-soficity and Connes fibre/nonidentifiability comparisons
+  pmr_status: BLOCKED_ON_EXTERNAL_REVIEW
+  base_authority_level: EXTERNAL_FORMAL_SOURCE_STATICALLY_INSPECTED
+  base_current_main_status: ABSENT
+  evidence_pointers:
+  - ten-proofs-oai(1).pdf
+  - reasoning-walkthroughs(1).pdf
+  - ten-proofs-main(1).zip
+  next_burden: B026
+  recommended_bounded_next_task: Require a model-theoretic reduction before changing
+    relation type from ANALOGOUS_ONLY.
+  pmr_001_overlay: []
+  flywheel_edge_population: INITIALIZED_PENDING_INCREMENTAL_EXPANSION
+  historical_identity_or_payload_claim_changed: false
+- surface_id: S63
+  name: Ten Advances permanent lower bounds and multiplicity versus independence
+  pmr_status: BLOCKED_ON_EXTERNAL_REVIEW
+  base_authority_level: EXTERNAL_FORMAL_SOURCE_STATICALLY_INSPECTED
+  base_current_main_status: ABSENT
+  evidence_pointers:
+  - ten-proofs-oai(1).pdf
+  - reasoning-walkthroughs(1).pdf
+  - ten-proofs-main(1).zip
+  next_burden: B026
+  recommended_bounded_next_task: Use only to formulate audit questions, not to certify
+    provenance.
+  pmr_001_overlay: []
+  flywheel_edge_population: INITIALIZED_PENDING_INCREMENTAL_EXPANSION
+  historical_identity_or_payload_claim_changed: false
+- surface_id: S64
+  name: Ten Advances quantum parallel repetition and correlated audit amplification
+  pmr_status: BLOCKED_ON_EXTERNAL_REVIEW
+  base_authority_level: EXTERNAL_FORMAL_SOURCE_STATICALLY_INSPECTED
+  base_current_main_status: ABSENT
+  evidence_pointers:
+  - ten-proofs-oai(1).pdf
+  - reasoning-walkthroughs(1).pdf
+  - ten-proofs-main(1).zip
+  next_burden: B026
+  recommended_bounded_next_task: Require an explicit independence/correlation model
+    before drawing an audit consequence.
+  pmr_001_overlay: []
+  flywheel_edge_population: INITIALIZED_PENDING_INCREMENTAL_EXPANSION
+  historical_identity_or_payload_claim_changed: false
+- surface_id: S65
+  name: Ten Advances GapCVP, Ehrhart, and multicolor Ramsey surfaces
+  pmr_status: BLOCKED_ON_EXTERNAL_REVIEW
+  base_authority_level: EXTERNAL_FORMAL_SOURCE_STATICALLY_INSPECTED
+  base_current_main_status: ABSENT
+  evidence_pointers:
+  - ten-proofs-oai(1).pdf
+  - reasoning-walkthroughs(1).pdf
+  - ten-proofs-main(1).zip
+  next_burden: B026
+  recommended_bounded_next_task: Leave dormant unless a typed dependency emerges.
+  pmr_001_overlay: []
+  flywheel_edge_population: INITIALIZED_PENDING_INCREMENTAL_EXPANSION
+  historical_identity_or_payload_claim_changed: false
+- surface_id: S66
+  name: Ten Advances compactness counterexample and two-degenerate extremal graph
+    result
+  pmr_status: BLOCKED_ON_EXTERNAL_REVIEW
+  base_authority_level: EXTERNAL_FORMAL_SOURCE_STATICALLY_INSPECTED
+  base_current_main_status: ABSENT
+  evidence_pointers:
+  - ten-proofs-oai(1).pdf
+  - reasoning-walkthroughs(1).pdf
+  - ten-proofs-main(1).zip
+  next_burden: B026
+  recommended_bounded_next_task: Use as a quantifier audit checklist only.
+  pmr_001_overlay: []
+  flywheel_edge_population: INITIALIZED_PENDING_INCREMENTAL_EXPANSION
+  historical_identity_or_payload_claim_changed: false
+- surface_id: S67
+  name: CDC meniscus-search and frontier-generation precedent
+  pmr_status: ESTABLISHED_AND_ADMITTED
+  base_authority_level: OWNER_CONTINUITY_OR_EXECUTION_INSTRUCTION
+  base_current_main_status: ABSENT
+  evidence_pointers:
+  - cdc_prompt(1).pdf
+  next_burden: B028
+  recommended_bounded_next_task: Reuse only the independence/blocking/audit principles
+    under a fresh owner-authorized charter.
+  pmr_001_overlay: []
+  flywheel_edge_population: INITIALIZED_PENDING_INCREMENTAL_EXPANSION
+  historical_identity_or_payload_claim_changed: false
+- surface_id: S68
+  name: Source authentication, translation, attribution, inference, and release coordinates
+  pmr_status: ESTABLISHED_AND_ADMITTED
+  base_authority_level: CURRENT_MERGED_REPOSITORY_BYTES
+  base_current_main_status: MERGED_CURRENT
+  evidence_pointers:
+  - A-Commentary-on-the-Creed-of-Asfahani-v2.3(1).md
+  - The_Incoherence_of_Atheism_by_Sheikh_Abdullah_ibn_Salih_Al-Ujayri(1).md
+  - Carl_Sharif_El-Tobgui...md
+  - references/source-status.yaml
+  - docs/sourcing/CURRENT-SOURCING-LEDGER.md
+  - docs/sourcing/SOURCING-STATUS-INDEX.yaml
+  next_burden: B040
+  recommended_bounded_next_task: Discharge one source residual at a time with edition-specific
+    evidence.
+  pmr_001_overlay: []
+  flywheel_edge_population: DEPENDENCY_CLOSED_SUBGRAPH_POPULATED
+  historical_identity_or_payload_claim_changed: false
+- surface_id: S69
+  name: Taymiyyan/Athari source corpus and transcendental-source roles
+  pmr_status: ESTABLISHED_BUT_EXTERNAL_REVIEW_OPEN
+  base_authority_level: SECONDARY_SCHOLARSHIP_OR_TRANSLATION
+  base_current_main_status: PARTIAL COMPANION INTEGRATION
+  evidence_pointers:
+  - A-Commentary-on-the-Creed-of-Asfahani-v2.3(1).md
+  - The_Incoherence_of_Atheism_by_Sheikh_Abdullah_ibn_Salih_Al-Ujayri(1).md
+  - Carl_Sharif_El-TobguiRobert_Wisnovsky_Supervisor2_Wael_Halla_-_Reason_revelation__the_reconstitution_of_rationality__Taqi_al-Din_Ibn_Taymiyyas_d._728_1328_Dar_Ta_arud_al-_Aql_wa-l-Na_2013_McGill_Univ
+    (1)(3).md
+  - companion/orthability-divine-attributes-and-speech-athari.md
+  - companion/sourcing/COMPANION-SOURCING-LEDGER.md
+  - references/source-status.yaml
+  - PMR-001_TRANCHE-001 local artifacts
+  next_burden: B019
+  recommended_bounded_next_task: Build an edition/locus/translation matrix for one
+    ascent claim before formalization.
+  pmr_001_overlay:
+  - Asfahani and fiṭrah loci consumed in PMR-001; Arabic-primary verification remains
+    open.
+  flywheel_edge_population: DEPENDENCY_CLOSED_SUBGRAPH_POPULATED
+  historical_identity_or_payload_claim_changed: false
+- surface_id: S70
+  name: Current main repository authority and post-merge state
+  pmr_status: ESTABLISHED_AND_ADMITTED
+  base_authority_level: CURRENT_MERGED_REPOSITORY_BYTES
+  base_current_main_status: CURRENT MERGED MAIN
+  evidence_pointers:
+  - orthemology-main(7).zip
+  - AR8R_POST_MERGE_VERIFIED_HANDOFF_V9.zip
+  - README.md
+  - STATUS.md
+  - OPEN-DECISIONS.md
+  next_burden: B013
+  recommended_bounded_next_task: Re-verify live topology before any mutation; otherwise
+    treat this archive as the current exact snapshot.
+  pmr_001_overlay: []
+  flywheel_edge_population: INITIALIZED_PENDING_INCREMENTAL_EXPANSION
+  historical_identity_or_payload_claim_changed: false
+- surface_id: S71
+  name: Formal/Lean status across AR2-AR8R and current repository
+  pmr_status: BLOCKED_ON_EXTERNAL_REVIEW
+  base_authority_level: READ_ONLY_CONTINUITY_RECONSTRUCTION
+  base_current_main_status: PARTIAL
+  evidence_pointers:
+  - orthemology-main(7).zip
+  - AR8R_POST_MERGE_VERIFIED_HANDOFF_V9.zip
+  - ten-proofs-main(1).zip
+  - theory/orthemic-core-formalization.md
+  - theory/orthemic-multi-actor-conflict-note.md
+  - scripts/validate_repo.py
+  next_burden: B026
+  recommended_bounded_next_task: Separate exact historical recovery from any fresh
+    re-formalization identity.
+  pmr_001_overlay: []
+  flywheel_edge_population: INITIALIZED_PENDING_INCREMENTAL_EXPANSION
+  historical_identity_or_payload_claim_changed: false
+- surface_id: S72
+  name: 'FCSP and episode-reification experiments: prepared packets versus executed
+    evidence'
+  pmr_status: OPEN_RESEARCH_BURDEN
+  base_authority_level: CURRENT_MERGED_REPOSITORY_BYTES
+  base_current_main_status: MERGED_READY_TO_RUN
+  evidence_pointers:
+  - experiments/experiment-status.yaml
+  - experiments/false-closure-selective-prediction-v2/README.md
+  - experiments/false-closure-selective-prediction-v2/STATUS.yaml
+  next_burden: B031
+  recommended_bounded_next_task: Owner-authorized blinded execution only; freeze model/version
+    and raters before run.
+  pmr_001_overlay: []
+  flywheel_edge_population: INITIALIZED_PENDING_INCREMENTAL_EXPANSION
+  historical_identity_or_payload_claim_changed: false
+- surface_id: S73
+  name: Terminology Pilot-0/Pilot-1 and adoption boundary
+  pmr_status: OPEN_RESEARCH_BURDEN
+  base_authority_level: CURRENT_MERGED_REPOSITORY_BYTES
+  base_current_main_status: MERGED_CANDIDATE_TERMINOLOGY
+  evidence_pointers:
+  - terminology/README.md
+  - terminology/TERMINOLOGY-READINESS-REPORT.md
+  - terminology/pilot0-v2/EXECUTION-SPEC.md
+  next_burden: B031
+  recommended_bounded_next_task: Run only under owner authorization and preserve raw
+    blinded outputs.
+  pmr_001_overlay: []
+  flywheel_edge_population: INITIALIZED_PENDING_INCREMENTAL_EXPANSION
+  historical_identity_or_payload_claim_changed: false
+- surface_id: S74
+  name: Publication readiness, licensing, citation identity, and private-material
+    gates
+  pmr_status: OPEN_RESEARCH_BURDEN
+  base_authority_level: CURRENT_MERGED_REPOSITORY_BYTES
+  base_current_main_status: MERGED_DRAFTS
+  evidence_pointers:
+  - docs/project-closure/PUBLICATION-READINESS-R2.md
+  - docs/project-closure/UNAVOIDABLE-OWNER-ACTIONS.md
+  - publication/toolchain-lock.yaml
+  next_burden: B032
+  recommended_bounded_next_task: Keep all legal/publication acts in a separate owner-authorized
+    lane.
+  pmr_001_overlay: []
+  flywheel_edge_population: INITIALIZED_PENDING_INCREMENTAL_EXPANSION
+  historical_identity_or_payload_claim_changed: false
+- surface_id: S75
+  name: External-ready packets versus actual external validation
+  pmr_status: BLOCKED_ON_EXTERNAL_REVIEW
+  base_authority_level: READ_ONLY_CONTINUITY_RECONSTRUCTION
+  base_current_main_status: PARTIAL
+  evidence_pointers:
+  - AR8R_ADDITIVE_FULL_PROGRAM_CONTINUITY_REENTRY_AND_FRESH_THREAD_HANDOFF_V2(1).md
+  - docs/project-closure/PUBLICATION-READINESS-R2.md
+  - docs/project-closure/UNAVOIDABLE-OWNER-ACTIONS.md
+  next_burden: B016
+  recommended_bounded_next_task: Select exactly one external packet and obtain owner
+    transmission authorization.
+  pmr_001_overlay: []
+  flywheel_edge_population: DEPENDENCY_CLOSED_SUBGRAPH_POPULATED
+  historical_identity_or_payload_claim_changed: false
+- surface_id: S76
+  name: Candidate A-N cross-track portfolio
+  pmr_status: BLOCKED_ON_EXACT_SOURCE
+  base_authority_level: HISTORICAL_REFERENCE_WITHOUT_SUPPLIED_PAYLOAD
+  base_current_main_status: NOT DIRECTLY REPRESENTED
+  evidence_pointers:
+  - AR8R_ADDITIVE_FULL_PROGRAM_CONTINUITY_REENTRY_AND_FRESH_THREAD_HANDOFF_V2(1).md
+  next_burden: B029
+  recommended_bounded_next_task: Recover exact A-N map before any comparative selection.
+  pmr_001_overlay: []
+  flywheel_edge_population: INITIALIZED_PENDING_INCREMENTAL_EXPANSION
+  historical_identity_or_payload_claim_changed: false
+- surface_id: S77
+  name: Meniscus and three-dimensional frontier accounting
+  pmr_status: OPEN_RESEARCH_BURDEN
+  base_authority_level: HISTORICAL_REFERENCE_WITHOUT_SUPPLIED_PAYLOAD
+  base_current_main_status: HONESTY BOUNDARY REPRESENTED
+  evidence_pointers:
+  - cdc_prompt(1).pdf
+  - AR8R_ADDITIVE_FULL_PROGRAM_CONTINUITY_REENTRY_AND_FRESH_THREAD_HANDOFF_V2(1).md
+  - docs/project-closure/PROJECT-CLOSURE-REPORT-R2.md
+  - docs/current-state.yaml
+  - PMR-001_TRANCHE-001 local artifacts
+  next_burden: B028
+  recommended_bounded_next_task: Do not reopen frontier research without a bounded
+    charter, exact packet, and stop rule.
+  pmr_001_overlay:
+  - False-meniscus incident control activated; closure remains NOT_REACHED.
+  flywheel_edge_population: DEPENDENCY_CLOSED_SUBGRAPH_POPULATED
+  historical_identity_or_payload_claim_changed: false
+- surface_id: S78
+  name: Latent-state orthing, update coupling, and representation-learning application
+  pmr_status: ESTABLISHED_AND_ADMITTED
+  base_authority_level: CURRENT_MERGED_REPOSITORY_BYTES
+  base_current_main_status: MERGED_CURRENT
+  evidence_pointers:
+  - applications/latent-state-orthing/README.md
+  - applications/latent-state-orthing/DYNAMIC-ORTHING-AND-LATENT-STATE-LEARNING.md
+  - applications/latent-state-orthing/OSM-CSCG-ORTHEME-CROSSWALK.yaml
+  next_burden: B022
+  recommended_bounded_next_task: Keep correspondence relation explicit and test one
+    coupling fixture before generalization.
+  pmr_001_overlay: []
+  flywheel_edge_population: INITIALIZED_PENDING_INCREMENTAL_EXPANSION
+  historical_identity_or_payload_claim_changed: false
+- surface_id: S79
+  name: Multi-actor conflict, composite attribution, and noncollapse of distributed
+    realization
+  pmr_status: ESTABLISHED_AND_ADMITTED
+  base_authority_level: CURRENT_MERGED_REPOSITORY_BYTES
+  base_current_main_status: MERGED_CURRENT
+  evidence_pointers:
+  - theory/orthemic-multi-actor-conflict-note.md
+  - applications/daee-epistemics/CARRIER-RELATION.schema.json
+  - applications/daee-epistemics/MULTI-TARGET-NOETIC-ORTHING.md
+  next_burden: B043
+  recommended_bounded_next_task: Crosswalk only after exact TAC lineage and duplication
+    claims are supplied.
+  pmr_001_overlay: []
+  flywheel_edge_population: DEPENDENCY_CLOSED_SUBGRAPH_POPULATED
+  historical_identity_or_payload_claim_changed: false
+- surface_id: S80
+  name: Generated-state convergence, repository validation, and private-data exclusion
+  pmr_status: ESTABLISHED_AND_ADMITTED
+  base_authority_level: CURRENT_MERGED_REPOSITORY_BYTES
+  base_current_main_status: CURRENT VALIDATION PASS
+  evidence_pointers:
+  - orthemology-main(7).zip
+  - AR8R_POST_MERGE_VERIFIED_HANDOFF_V9.zip
+  - .github/workflows/validate.yml
+  - scripts/validate_repo.py
+  - scripts/validate_current_state.py
+  next_burden: B013
+  recommended_bounded_next_task: Repeat the exact workflow only after a future authorized
+    branch head exists.
+  pmr_001_overlay: []
+  flywheel_edge_population: INITIALIZED_PENDING_INCREMENTAL_EXPANSION
+  historical_identity_or_payload_claim_changed: false
+- surface_id: S81
+  name: Decision lineage 0001-0036 and current R6 generated state
+  pmr_status: ESTABLISHED_AND_ADMITTED
+  base_authority_level: CURRENT_MERGED_REPOSITORY_BYTES
+  base_current_main_status: MERGED_CURRENT
+  evidence_pointers:
+  - docs/decision-status.yaml
+  - docs/current-state.yaml
+  - docs/current-candidate-state.yaml
+  next_burden: B014
+  recommended_bounded_next_task: Create 0037/0038 only in the authorized bounded mutation
+    task.
+  pmr_001_overlay: []
+  flywheel_edge_population: INITIALIZED_PENDING_INCREMENTAL_EXPANSION
+  historical_identity_or_payload_claim_changed: false
+- surface_id: S82
+  name: Current source residuals, source truth, and objective evaluation
+  pmr_status: OPEN_RESEARCH_BURDEN
+  base_authority_level: CURRENT_MERGED_REPOSITORY_BYTES
+  base_current_main_status: MERGED_WITH_OPEN_RESIDUALS
+  evidence_pointers:
+  - references/source-status.yaml
+  - docs/sourcing/CURRENT-SOURCING-LEDGER.md
+  - docs/project-closure/CLOSURE-BURDEN-LEDGER.md
+  next_burden: B040
+  recommended_bounded_next_task: Discharge one residual with exact bytes and a bounded
+    status-only update.
+  pmr_001_overlay: []
+  flywheel_edge_population: DEPENDENCY_CLOSED_SUBGRAPH_POPULATED
+  historical_identity_or_payload_claim_changed: false
+- surface_id: S83
+  name: T300 experiment history and preregistered negative-pilot boundary
+  pmr_status: NEGATIVE_RESULT_ADMITTED
+  base_authority_level: HISTORICAL_REFERENCE_WITHOUT_SUPPLIED_PAYLOAD
+  base_current_main_status: NOT EXACTLY REPRESENTED
+  evidence_pointers:
+  - AR8R_ADDITIVE_FULL_PROGRAM_CONTINUITY_REENTRY_AND_FRESH_THREAD_HANDOFF_V2(1).md
+  - experiments/episode-reification-v2/README.md
+  - experiments/false-closure-selective-prediction-v2/README.md
+  - PMR-001_TRANCHE-001 local artifacts
+  next_burden: B010
+  recommended_bounded_next_task: Recover exact preregistration and results before
+    any new experiment design.
+  pmr_001_overlay:
+  - Exact pilot values and audit/rereview chain restored; configuration RETIRED.
+  flywheel_edge_population: DEPENDENCY_CLOSED_SUBGRAPH_POPULATED
+  historical_identity_or_payload_claim_changed: false
+- surface_id: S84
+  name: Dependency-directed reread and missed-surface audit
+  pmr_status: OPEN_RESEARCH_BURDEN
+  base_authority_level: READ_ONLY_CONTINUITY_RECONSTRUCTION
+  base_current_main_status: LOCAL HANDOFF ONLY
+  evidence_pointers:
+  - AR8R_ADDITIVE_FULL_PROGRAM_CONTINUITY_REENTRY_AND_FRESH_THREAD_HANDOFF_V2(1).md
+  - AR8R_POST_MERGE_VERIFIED_HANDOFF_V9.zip
+  - orthemology-main(7).zip
+  - docs/current-state.yaml
+  - docs/project-closure/ar8r-v8/AR8R-V8-IDENTITY-INDEX.yaml
+  - references/source-status.yaml
+  - PMR-001_TRANCHE-001 local artifacts
+  next_burden: B001
+  recommended_bounded_next_task: Choose exactly one dependency-closed reread after
+    owner authorization.
+  pmr_001_overlay:
+  - PMR-001 recursive re-entry added source, M3/R5, AGCOM, and negative-pilot feedback
+    edges.
+  flywheel_edge_population: DEPENDENCY_CLOSED_SUBGRAPH_POPULATED
+  historical_identity_or_payload_claim_changed: false
+- surface_id: S85
+  name: AR7, AR8, and AR8R authority and nonintegration relationship
+  pmr_status: ESTABLISHED_AND_ADMITTED
+  base_authority_level: HISTORICAL_REFERENCE_WITHOUT_SUPPLIED_PAYLOAD
+  base_current_main_status: PARTIAL HISTORICAL REPRESENTATION
+  evidence_pointers:
+  - AR8R_ADDITIVE_FULL_PROGRAM_CONTINUITY_REENTRY_AND_FRESH_THREAD_HANDOFF_V2(1).md
+  - AR8R_POST_MERGE_VERIFIED_HANDOFF_V9.zip
+  - docs/project-closure/ar8r-v8/README.md
+  next_burden: B010
+  recommended_bounded_next_task: Read full reentry map, then request owner selection;
+    do not autonomously resume AR8R.
+  pmr_001_overlay: []
+  flywheel_edge_population: INITIALIZED_PENDING_INCREMENTAL_EXPANSION
+  historical_identity_or_payload_claim_changed: false
+- surface_id: S86
+  name: Track-T coherentism, source authentication, and objective orthability boundary
+  pmr_status: OPEN_RESEARCH_BURDEN
+  base_authority_level: READ_ONLY_CONTINUITY_RECONSTRUCTION
+  base_current_main_status: MERGED_CONDITIONAL
+  evidence_pointers:
+  - AR8R_ADDITIVE_FULL_PROGRAM_CONTINUITY_REENTRY_AND_FRESH_THREAD_HANDOFF_V2(1).md
+  - companion/orthability-and-the-ground-of-intelligibility.md
+  - companion/orthability-divine-attributes-and-speech-athari.md
+  - companion/orthemic-modal-metaphysical-assessment.md
+  next_burden: B019
+  recommended_bounded_next_task: Make every bridge and authority type explicit before
+    comparing routes.
+  pmr_001_overlay: []
+  flywheel_edge_population: DEPENDENCY_CLOSED_SUBGRAPH_POPULATED
+  historical_identity_or_payload_claim_changed: false
+- surface_id: S87
+  name: Powers, plural realization, impersonal actualizers, and anti-total-emergence
+    rivals
+  pmr_status: OPEN_RESEARCH_BURDEN
+  base_authority_level: HISTORICAL_REFERENCE_WITHOUT_SUPPLIED_PAYLOAD
+  base_current_main_status: PARTIAL
+  evidence_pointers:
+  - AR8R_ADDITIVE_FULL_PROGRAM_CONTINUITY_REENTRY_AND_FRESH_THREAD_HANDOFF_V2(1).md
+  - companion/orthemic-modal-metaphysical-assessment.md
+  - companion/DYNAMIC-ORTHABILITY-ARGUMENT-MAP.yaml
+  next_burden: B010
+  recommended_bounded_next_task: Recover exact R5 models before any new exclusion
+    theorem.
+  pmr_001_overlay: []
+  flywheel_edge_population: DEPENDENCY_CLOSED_SUBGRAPH_POPULATED
+  historical_identity_or_payload_claim_changed: false
+- surface_id: S88
+  name: Continuity package custody, local-only status, and future-thread authority
+  pmr_status: ESTABLISHED_AND_ADMITTED
+  base_authority_level: READ_ONLY_CONTINUITY_RECONSTRUCTION
+  base_current_main_status: LOCAL ONLY
+  evidence_pointers:
+  - AR8R_ADDITIVE_FULL_PROGRAM_CONTINUITY_REENTRY_AND_FRESH_THREAD_HANDOFF_V2(1).md
+  next_burden: B041
+  recommended_bounded_next_task: Fresh thread verifies hashes and waits for owner
+    authorization.
+  pmr_001_overlay: []
+  flywheel_edge_population: DEPENDENCY_CLOSED_SUBGRAPH_POPULATED
+  historical_identity_or_payload_claim_changed: false

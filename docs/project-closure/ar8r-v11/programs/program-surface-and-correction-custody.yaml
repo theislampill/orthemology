@@ -1,0 +1,47 @@
+schema: ar8r-program-surface-and-correction-custody-v1
+declared_external_registry:
+  name: AR8R_PROGRAM_SURFACE_REGISTRY_V1.yaml
+  declared_surface_count: 88
+  declared_super_lane_count: 18
+  bytes_available: false
+  disposition: UNAVAILABLE_CONTEXT_ONLY_NO_COMPLETE_88_SURFACE_CLAIM
+surface_registry_epochs:
+  - epoch: EARLIER_UNAVAILABLE_EPOCH
+    status: UNAVAILABLE
+    declared_surface_count: 88
+    exact_bytes_selected: false
+    statement: The unavailable state remains true for its historical observation point.
+  - epoch: LATER_VISIBLE_FILE_CARD_SELECTION_EPOCH
+    status: EXACT_88_SURFACE_SELECTION_AVAILABLE
+    declared_surface_count: 88
+    exact_bytes_selected: true
+    visible_file_card_manifest: ../provenance/AR8R-POST-MERGE-VISIBLE-FILE-CARD-MANIFEST-V1.yaml
+    source_receipt: ../provenance/AR8R-FULL-PROGRAM-REENTRY-V2-SOURCE-RECEIPT.yaml
+    archive_conflict_owner: ../provenance/AR8R-POST-MERGE-FILE-CARD-ARCHIVE-CONFLICTS-V1.yaml
+    statement: Later exact selection does not erase the earlier access boundary or resolve archive byte conflicts.
+supplied_corrections:
+  - name: AR8R-ORTHEMOLOGY-MENISCUS-MILESTONE-ARCHITECTURE-V1.md
+    sha256: f4245d44e79e50c9fbef9173ee22e50795a08b02c027059d4abbae2aef15a0c8
+    epoch: V11_TASK7A_OWNER_PROGRAM_CHARTER
+    authority: PROPOSAL_ONLY_UNTIL_REVIEWED
+    projection: AR8R-ORTHEMOLOGY-MENISCUS-MILESTONES-V1.yaml
+    adoption_effect: NONE
+  - name: AR8R_AGENTIC_COMMUNICATION_LANGUAGE_UNCREATED_GRAMMAR_ADDENDUM_V1.md
+    sha256: 1857fed8ed1e7f00255930392d643f734bfb0d9f7fbf21d6b1913892ace856d8
+    epoch: LATER_PMR_CHARTER
+  - name: AR8R_PMR007_INTEGRATED_FRONTIER_RESEARCH_REORIENTATION_V1.md
+    sha256: e64517b2036fc2b5f3c07153a86f6eeee53dfc8b21c2f63a9769f8dcea848991
+    epoch: LATER_PMR_REORIENTATION
+  - name: AR8R_POST_MERGE_MENISCUS_CAMPAIGN_ACTIVATION_V1.md
+    sha256: 1eb9726475b99da97aa710ed318bb1f274e805eb600f0e0e10e90aa59b106633
+    epoch: LATER_PMR_PROGRAM
+  - name: AR8R_POST_MERGE_RESEARCH_SCOPE_CORRECTION_V2.md
+    sha256: 3389322a773d3610ed30590dff941452305612d4f95c05759e230761518a722d
+    epoch: LATER_PMR_SCOPE_CORRECTION
+  - name: AR8R_PRE_PMR_INSTITUTIONAL_MEMORY_CORRECTION_V1.md
+    sha256: 78adca85a7ca206704dc1bf05d9abe1a74047bea65936fedaadb81966b80a8a0
+    epoch: PRE_PMR_CORRECTION
+publication_rule: >-
+  These files route programs and burdens. They do not admit every named theorem,
+  prove that all 88 declared surfaces are recovered, or backdate PMR work into
+  historical AR8R.

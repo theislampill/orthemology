@@ -1,0 +1,41 @@
+schema: ar8r-v11-current-campaign-projection-v1
+summary:
+  campaign_status: MENISCUS_NOT_REACHED
+  natural_closure: false
+  integrated_champion: null
+  reported_open_burden_count: 8
+program_charter_pointer:
+  path: programs/AR8R-ORTHEMOLOGY-MENISCUS-MILESTONES-V1.yaml
+  status: RECORDED_AS_OWNER_PROGRAM_CHARTER
+  counted_open_burden_effect: 0
+  adoption_effect: NONE
+  nonclaim: The roadmap does not alter this projection's eight controlling open-burden records.
+ledgers:
+  candidates:
+    - id: CANDIDATE-N
+      status: PENDING_EXTERNAL_SOURCE_AND_PAYOFF_REVIEW
+      owner_path: programs/candidate-n-authority-status.md
+    - id: CANDIDATE-E
+      status: UNAUDITED_EXACT_PACKET
+      owner_path: programs/proper-function-and-candidate-e.md
+    - id: CANDIDATE-G
+      status: UNAUDITED_EXACT_PACKET
+      owner_path: programs/candidate-g-derivational-unification.md
+  transcendental:
+    - id: TRACK-T
+      status: BLOCKED_POSITIVE_GROUND_AND_WORLD_BRIDGES
+      owner_path: programs/track-t-authority-and-bridge-status.md
+    - id: R5
+      status: OPEN_UNDEFEATED_CONTROL
+      owner_path: programs/ar8r-r5-minimal-nonintegration-control.md
+  historical_payloads:
+    - id: AR8R-T354
+      status: BLOCKED_FORMAL_DEFECT
+      owner_path: provenance/AR8R-CANONICAL-THEOREM-ORIGIN-REGISTRY-V6.yaml
+    - id: UNRESOLVED-22
+      status: BLOCKED_HISTORICAL_BYTES_UNAVAILABLE
+      owner_path: provenance/AR8R-TARGET-IDENTITY-RECOVERY-OVERLAY-V8.yaml
+  post_merge:
+    - id: PMR-007
+      status: OPEN_OWNER_ADOPTION_AND_EXTERNAL_REVIEW
+      owner_path: programs/post-merge-pmr-boundary.md

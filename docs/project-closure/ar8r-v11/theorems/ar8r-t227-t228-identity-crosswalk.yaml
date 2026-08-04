@@ -1,0 +1,16 @@
+schema: ar8r-v11-t227-t228-identity-crosswalk-v1
+authority: AR8R_CANONICAL_THEOREM_ORIGIN_REGISTRY_V5
+canonical:
+  authentication: AR8R-T227
+  strict_progress: AR8R-T228
+historical_collision:
+  authentication_predecessor_as_written: AR8R-T223
+  authentication_predecessor_relation: SUBSTANTIALLY_IDENTICAL_PREDECESSOR_FORMULATION
+  strict_progress_as_written: AR8R-T227
+  strict_progress_repaired_identity: AR8R-T228
+  disposition: HISTORICAL_CUSTODY_ONLY_ZERO_ADDITIONAL_CREDIT
+prohibitions:
+  - do not overwrite the different admitted current AR8R-T223
+  - do not identify strict progress as current AR8R-T227
+  - do not count either predecessor path as an additional theorem
+  - do not infer novelty from rediscovery or identifier repair

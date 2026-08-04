@@ -1,0 +1,59 @@
+schema: post-merge-ar8r-substantive-research-ledger-v1
+campaign: AR8R_POST_MERGE_MENISCUS_PROGRAM_V1
+ledger_id: POST_MERGE_AR8R_SUBSTANTIVE_RESEARCH_V1
+historical_authority:
+  duration: '09:41:25.405101139'
+  seconds: '34885.405101139'
+  latest_segment: 357
+  changed: false
+counting_policy:
+  included:
+    - source and translation research
+    - mathematical formulation and proof
+    - countermodel development
+    - substantive AR2/AR3 and cross-lane synthesis
+    - theorem-family and provenance adjudication
+    - cold audit, repair, and rereview
+  excluded:
+    - inventory construction
+    - 88-node graph bookkeeping and report formatting
+    - routine file movement and hashing
+    - checker runtime without substantive interpretation
+    - Git engineering
+entries:
+  - tranche_id: PMR-001-TRANCHE-001
+    wave_id: PMR-001
+    observed_clock_start_utc: '2026-08-02T23:20:57.044080535Z'
+    observed_substantive_boundary_utc: '2026-08-02T23:35:33.551819258Z'
+    gross_observed_interval_seconds: '876.507738723'
+    excluded_intervals:
+      - start_utc: '2026-08-02T23:28:17.183824171Z'
+        end_utc: '2026-08-02T23:32:15.715821486Z'
+        seconds: '238.531997315'
+        reason: program scaffolding, 88-surface inventory construction, and flywheel graph bookkeeping
+      - start_utc: '2026-08-02T23:34:22.675820056Z'
+        end_utc: '2026-08-02T23:34:24.903820031Z'
+        seconds: '2.227999975'
+        reason: finite checker runtime without substantive interpretation
+      - start_utc: '2026-08-02T23:35:07.315819554Z'
+        end_utc: '2026-08-02T23:35:07.795819548Z'
+        seconds: '0.479999994'
+        reason: rereview checker runtime without substantive interpretation
+    counted_substantive_seconds: '635.267741439'
+    counted_substantive_duration: '00:10:35.267741439'
+    included_work:
+      - Asfahani necessary-existence-versus-Creator source decomposition
+      - al-Ujayri and El-Tobgui fitrah impairment/reminder/restoration source analysis
+      - PMR-M3-01 proof and source-preserving countermodels
+      - PMR-R5-01 rival-premise sensitivity comparison
+      - PMR-AGCOM-01 theorem and AR2/AR3 ancestry reconciliation
+      - Candidate 1 and T299/T300 evidence-status correction
+      - theorem-family adjudication
+      - cold audit, blocking repair, and fresh rereview
+    status: CLOSED_TRANCHE_ACCOUNTING
+cumulative_post_merge_continuation_substantive_seconds: '635.267741439'
+cumulative_post_merge_continuation_substantive_duration: '00:10:35.267741439'
+eight_hour_floor_seconds: 28800
+remaining_before_floor_seconds: '28164.732258561'
+floor_status: NOT_YET_REACHED
+natural_campaign_closure: NOT_REACHED
