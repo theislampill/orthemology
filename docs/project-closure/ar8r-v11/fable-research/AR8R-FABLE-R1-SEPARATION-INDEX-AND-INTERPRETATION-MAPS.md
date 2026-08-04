@@ -3,6 +3,15 @@
 Status: research candidate. Non-adopted. Zero general mathematical novelty is
 claimed; see `AR8R-FABLE-R1-PRIOR-ART-AND-NOVELTY-CEILING.md`.
 
+**Verification status (added after independent review).** No property stated as
+"proved" in this packet is accompanied by a committed derivation, executable
+check, or Lean theorem. Every such property is therefore downgraded to
+`DERIVED_BUT_UNVERIFIED`: recorded as the author's derivation, checked by no one.
+Exceptions, verified independently during review: the Domain 3 embedding's
+transversal arithmetic (triangle and path countermodels, quorum range `n ≤ 7`) via
+`checks/n1_transversal_packing_check.py`. The Domain 1 characterization has a Lean
+receipt. Nothing else in this packet should be cited as established.
+
 This packet answers the research prompt's step 3: whether any quantity survives in
 at least three genuinely typed domains. The answer is a **split verdict**, and the
 split is the finding.
@@ -94,11 +103,12 @@ condition **is** Theorem R, and the program's robustness notion is the invariant
 Domain 3 is what forces the resource-indexed generalization in the first place —
 the private-resource version is the special case where each test owns its resource.
 
-Verdict: **exact instance of the generalized invariant.** But the premises the
-program had been assuming about it are false; see
-`AR8R-FABLE-R1-NEGATIVE-RESULTS.md`, item N1, for the transversal-versus-packing
-gap and the exchange-axiom failure. Both refutations were reached independently
-from the certificate-calculus side as well.
+Verdict: **exact instance of the generalized invariant.** The associated
+transversal-versus-packing gap and exchange-axiom failure are recorded in
+`AR8R-FABLE-R1-NEGATIVE-RESULTS.md`, item N1 — as an interpretation firewall and a
+constraint on future definitions, **not** as refutations of program premises; the
+original "premises the program had been assuming are false" framing, and the claim
+of independent double derivation, were withdrawn after independent review.
 
 ## The convergence-gate verdict — split
 

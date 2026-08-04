@@ -3,6 +3,12 @@
 Status: research finding. Stated deliberately conservatively. The purpose of this
 packet is to prevent the program from claiming novelty it does not have.
 
+**Sourcing.** Every attribution below has a row in
+`AR8R-FABLE-R1-SOURCING.md` recording its identifier, the claim it supports, its
+exact relationship, and its verification status. All rows are `UNVERIFIED`: round
+1 performed no literature search, and the correction pass did not add one. The
+relationship words below are the author's assessment, not verified findings.
+
 ## Headline
 
 **Zero general mathematical novelty is claimed for anything produced in round 1.**
@@ -15,7 +21,8 @@ known object but is the same object under a different name.
 
 | Round-1 object | Classical home | Relation |
 |---|---|---|
-| Fibre-constancy characterization (Core A; T299) | Universal property of the quotient; Myhill–Nerode; partition refinement; functional dependency in relational databases | **Identical**; the Lean proof is the standard factorization argument |
+| Fibre-constancy characterization (Core A; T299) | Universal property of the quotient; partition refinement; functional dependency in relational databases | **Identical**; the Lean proof is the standard factorization argument |
+| Fibre-constancy characterization | Myhill–Nerode | **Adjacent** — shared factorization ancestry; narrowed from "identical" in the post-review correction, since exact equivalence was never demonstrated |
 | Plain separation index | Minimum test collection (Garey–Johnson SP6); separating systems (Rényi, Katona); identifying codes; rough-set reducts | **Identical** |
 | Budgeted refinement cost (Core A invariant) | Set Cover | **Equivalent in both directions**; inherits NP-hardness and logarithmic inapproximability |
 | Robust separation index | Set multicover; `(f+1)`-separating systems; superimposed codes; robust identifying codes | **Identical** |

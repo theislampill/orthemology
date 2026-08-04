@@ -4,6 +4,16 @@ Status: research candidates. Neither core is adopted; there is no integrated
 champion and this round does not create one. Both are strict fragments of the
 program's declared vocabulary.
 
+**Verification status (added after independent review).** Except for Core A's
+central characterization, which has a Lean receipt, no property stated as
+"proved" in this packet is accompanied by a committed derivation, executable
+check, or Lean theorem. Every such property — including the certifier lattice,
+the transport hypotheses, the Set-Cover equivalence, the MIN law, the
+`ν ≤ rad ≤ k·ν` sandwich, and the discriminator scenario's tabulated verdicts —
+is downgraded to `DERIVED_BUT_UNVERIFIED`: recorded as the author's derivation,
+checked by no one. Nothing in this packet beyond the Lean-receipted
+characterization should be cited as established.
+
 The research prompt's step 1 required two materially different candidate cores,
 each attacked with the same countermodel battery, and forbade selecting a core
 for having broader vocabulary coverage. This packet records both, their proved

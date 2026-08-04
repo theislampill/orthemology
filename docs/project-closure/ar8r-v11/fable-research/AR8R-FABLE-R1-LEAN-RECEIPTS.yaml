@@ -2,6 +2,17 @@ receipt_id: AR8R-FABLE-R1-LEAN-RECEIPTS
 round: fable-research-round-1
 status: LEAN_TOOLCHAIN_CUSTODY_AND_KERNEL_CHECK_PERFORMED
 supersedes: nothing
+corrected_by: AR8R-FABLE-R1-CORRECTION-RECEIPT-V1.md
+correction_note: >
+  Updated after the independent BLOCK review of commit f0e386a. Changes: a
+  T299-specific A4 witness pair was added and kernel-checked (14 declarations
+  now); the ambiguous build_jobs field was replaced by reported_total_jobs with
+  exact tool output; the certifiable_of_injective role was corrected; the
+  randomized and rejection-sampled finite-check counts, which no committed
+  artifact can reproduce, are marked UNREPRODUCED_FROM_COMMITTED_ARTIFACTS; the
+  exhaustive count is now reproducible from the committed checker. Scope claim
+  throughout: what is kernel-checked is a repaired, scoped interpretation of the
+  T299 packet, not the historical packet end to end.
 relates_to:
   - docs/project-closure/ar8r-v11/formalization/AR8R-V11-LEAN-FORMALIZATION-QUEUE.yaml
   - docs/project-closure/ar8r-v11/theorems/ar8r-t299-matched-intervention-burden-landing.md
@@ -26,9 +37,15 @@ q0_toolchain_custody:
   mathlib_rev: 905b95818eb3
   mathlib_input_rev: v4.32.2
   clean_build: PASS
-  build_jobs: 635
   build_command: lake build T299
   build_exit_code: 0
+  reported_total_jobs: 636
+  reported_completion_line: "Build completed successfully (636 jobs)."
+  jobs_field_note: >
+    The original receipt recorded build_jobs: 635 without defining the field.
+    That value could not be given unambiguous semantics and was removed. The
+    values above are the exact final line and exit code of the correction
+    rebuild from a clean .lake/build in a short scratch path.
   note: >
     A prior build attempt failed on Windows MAX_PATH limits when the project
     root was a long temporary path. Relocating the project root resolved it.
@@ -37,6 +54,11 @@ q0_toolchain_custody:
 
 q1_t299_formalization:
   status: ELABORATED_AND_KERNEL_CHECKED
+  scope: >
+    A repaired, scoped interpretation of T299's quotient-factorization structure.
+    The original historical T299 packet was not machine-checked end to end;
+    the specification-defects packet records where the interpretation required a
+    choice.
   source: lean/T299/Basic.lean
   receipts_source: lean/T299/Receipts.lean
   target_packet: docs/project-closure/ar8r-v11/theorems/ar8r-t299-matched-intervention-burden-landing.md
@@ -48,26 +70,46 @@ q1_t299_formalization:
   axiom_report:
     standard_axioms_only: true
     axioms_used_across_corpus: [propext, Classical.choice, Quot.sound]
+    declarations_with_no_axioms: 7
+    declarations_with_standard_axioms: 7
     classical_choice_use_site: >
-      Right-to-left direction of certifiable_iff_fibreConst only, to select a
-      representative from each attained fibre.
-  declarations_checked: 12
+      Right-to-left direction of certifiable_iff_fibreConst, to select a
+      representative from each attained fibre; inherited by the declarations
+      that invoke that characterization.
+  declarations_checked: 14
   declarations:
     - name: certifiable_iff_fibreConst
-      role: main characterization
+      role: main characterization, valid for an arbitrary label
       axioms: [propext, Classical.choice, Quot.sound]
     - name: fibreConst_iff_noDisagreeingPair
       role: proves the packet's word "Equivalently"
       axioms: []
     - name: certifiable_of_injective
-      role: the packet's "sufficient by construction" remark, as a consequence
+      role: >
+        injective profile maps certify every label; a general lemma. It does NOT
+        discharge the packet's B* sufficiency remark (B* is not claimed
+        injective); that remark is discharged by certifiable_matchedProfile. The
+        original receipt misassigned this role.
       axioms: [propext, Classical.choice, Quot.sound]
     - name: certifiable_mono
       role: refinement monotonicity
       axioms: [propext, Classical.choice, Quot.sound]
     - name: A4_requires_reading_is_insufficient
-      role: machine-checked demonstration of specification defect A4
+      role: >
+        generic supporting lemma for defect A4 - necessary clauses need not
+        determine an independently selected label. Instantiated at Bool/Unit;
+        does not use the Model/matchedProfile/L machinery, and on its own does
+        not machine-check the T299-specific defect.
       axioms: []
+    - name: A4_matchedProfile_insufficient_under_requires_reading
+      role: >
+        T299-specific A4 witness, added in the post-review correction - an
+        actual Model whose two backgrounds share one matchedProfile while a
+        label satisfying the merely-necessary reading differs across them.
+      axioms: []
+    - name: A4_matchedProfile_not_certifiable_under_requires_reading
+      role: the same witness restated as non-certifiability by B*
+      axioms: [propext, Classical.choice, Quot.sound]
     - name: certifiable_matchedProfile
       role: B* certifies, for every model, with no finiteness hypothesis
       axioms: [propext, Classical.choice, Quot.sound]
@@ -91,34 +133,50 @@ q1_t299_formalization:
       axioms: [propext, Classical.choice, Quot.sound]
 
 executable_finite_check:
-  status: PASS
   scope: independent of the Lean development
   exhaustive_enumeration:
+    status: PASS_REPRODUCIBLE
+    checker: checks/t299_finite_check.py
     cases: 361164
-    bound: all background sets up to size 6, profile spaces up to size 4
+    bound: background sets of size 1..6, profile spaces of size 1..4
+    case_count_derivation: sum over b in 1..6, p in 1..4 of p^b * 2^b = 361164
     method: >
       Certificate existence decided by brute-force search over all functions
       from the profile space to Bool, i.e. from the definition, without
       appealing to the characterization.
     mismatches: 0
+    note: >
+      The original round-1 run committed no checker, so its numbers were
+      unreproducible. The committed checker re-derives the identical case count
+      and result; see the checker header for Python version, enumeration order,
+      output schema, and result digest fields.
   randomized_models:
-    cases: 4000
-    mismatches: 0
+    status: UNREPRODUCED_FROM_COMMITTED_ARTIFACTS
+    note: >
+      The original round reported 4000 randomized cases with 0 mismatches, but
+      committed no sampler, seeds, or result bytes. The numbers are retained
+      only as the original author's report and carry no evidential weight.
   rejection_sampled_models:
-    kept: 2000
-    rejected: 72753
-    reason: >
-      The six-clause conjunction is so restrictive that unconditioned random
-      models almost never produce a non-constant label, making the check nearly
-      vacuous. Rejection sampling on non-constant labels was added so that both
-      directions are genuinely exercised.
-    non_certifiable_before_after_profiles: 285
-    non_certifiable_coarse_profiles: 1744
-    mismatches: 0
-  twin_assertions: 13
-  twin_failures: 0
+    status: UNREPRODUCED_FROM_COMMITTED_ARTIFACTS
+    note: >
+      The original round reported 2000 kept / 72753 rejected rejection-sampled
+      models (285 non-certifiable before/after profiles, 1744 non-certifiable
+      coarse profiles, 0 mismatches), but committed no sampler, seeds, or result
+      bytes. Retained only as the original author's report; no evidential
+      weight. The exhaustive enumeration above independently exercises both
+      directions of the characterization.
+  twin_assertions:
+    status: SUPERSEDED_BY_KERNEL_CHECK
+    note: >
+      The original "13/13 twin assertions" executable claim committed no
+      checker. The twin's properties are kernel-checked directly
+      (twin_before_agree, twin_after_agree, twin_L_differs,
+      beforeAfter_not_certifiable, matched_separates_twin,
+      matched_certifies_twin), which is strictly stronger.
 
 what_this_does_not_establish:
+  - The historical T299 packet is not machine-checked end to end. What is
+    checked is a repaired, scoped interpretation of it.
   - The mathematics is not novel. The characterization is the quotient
     factorization lemma; a kernel check does not create novelty.
   - No other theorem in the program is machine-checked. Q1a through Q1i remain

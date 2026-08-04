@@ -108,12 +108,16 @@ end Finite
 
 The packet states: causal landing `L_b` **requires** all of clauses 1-6.
 
-Read literally that supplies only necessary conditions. Under that reading the
-characterization is FALSE — the theorem below exhibits a profile map whose
-clause-conjunction is fibre-constant while the label is not. The characterization
-holds only if `L_b` is *defined as* the conjunction.
+Read literally that supplies only necessary conditions, leaving `L_b`
+underdetermined. The abstract characterization of §1 is unaffected — it holds for
+an arbitrary label. What is NOT established under the literal reading is the
+packet's separate claim that the matched profile `B*` is sufficient "by
+construction": a merely-necessary clause set does not determine the label, so
+`B*`-fibre-constancy of the clauses does not certify it.
 
-This is a genuine specification defect, not a notational choice. -/
+The generic shape is `A4_requires_reading_is_insufficient` below. The
+T299-specific witness, using the packet's own `Model`/`matchedProfile`/`L`
+machinery, is `A4_matchedProfile_insufficient_under_requires_reading` in §4b. -/
 
 theorem A4_requires_reading_is_insufficient :
     ∃ (Bg Prof : Type) (P : Bg → Prof) (clauses lbl : Bg → Bool),
@@ -135,10 +139,13 @@ comparison. We are forced to fix `Op := Bool`. With three or more values, clause
 2 and 5 become ill-posed (baseline value, or all `a` distinct from 1? —
 inequivalent readings).
 
-DEFECT (A14): the packet's declared setting gives `Q : St -> Bool` with no
-background index, but the twin requires `M_cause` and `M_spont` to disagree on
-`Q(S_term^(0))`. The declared model shape therefore *cannot express its own
-twin*. We are forced to index `Q` by the background.
+A14 (WITHDRAWN as a packet defect): round 1 originally claimed the declared model
+shape "cannot express its own twin" and that a background-indexed `Q` was forced.
+Independent review found the forcing comes from this encoding's own choice of
+`term := fun a _ => ...`, which discards the background argument the packet
+supplies via `term(a,b)`; with distinct per-background terminal states an
+unindexed `Q` suffices. The background index on `Q` below is retained as a
+convenience of this encoding only.
 
 DEFECT (A10): the packet declares only `term(a,b)` — there is no "before" state
 anywhere in the setting — yet the twin asserts that "before/after observations
@@ -155,10 +162,11 @@ insensitivity. -/
 inductive Disp | landed | notLanded | indeterminate
   deriving DecidableEq, Repr, Fintype
 
-/-- The declared model, with the two repairs (A14, A10) forced by the twin. -/
+/-- The declared model. `init` is forced by the twin (A10); the background index
+on `Q` is a convenience of this encoding (A14, withdrawn as a packet defect). -/
 structure Model (Bg St : Type*) where
   term : Op → Bg → St
-  Q    : Bg → St → Bool     -- background-indexed: forced by DEFECT (A14)
+  Q    : Bg → St → Bool     -- background-indexed: encoding convenience (A14 withdrawn)
   D    : Bg → St → Disp
   R    : Bg → St → Bool
   C    : Bg → Bool
@@ -199,6 +207,52 @@ theorem certifiable_matchedProfile {Bg St : Type*} (M : Model Bg St) :
   simp only [matchedProfile, Prod.mk.injEq] at h
   obtain ⟨hC, hQ0, hQ1, hD0, hD1, hR⟩ := h
   simp only [L, hC, hQ0, hQ1, hD0, hD1, hR]
+
+/-! ## §4b. The T299-specific A4 witness
+
+Added in the post-review correction. Unlike `A4_requires_reading_is_insufficient`
+(which proves only the generic truism at `Bool`/`Unit`), this witness instantiates
+the packet's own machinery: an actual model on which every six-clause conjunct
+holds on both backgrounds — so the packet's matched profiles agree — while a label
+satisfying the merely-necessary ("requires") reading still differs across them.
+Hence `B*` does not certify a merely-necessary label, which is exactly the D1
+consequence: the casualty of the literal reading is `B*` sufficiency, not the
+abstract characterization. -/
+
+/-- Two indistinguishable backgrounds, each landing causally: every clause holds
+on both, so `L` is constantly `true` and the matched profiles coincide. States are
+`Bool` (`true` = the operation branch's terminal state). -/
+def constCause : Model Bool Bool where
+  term := fun a _ => a
+  Q := fun _ s => s
+  D := fun _ s => if s then Disp.landed else Disp.notLanded
+  R := fun _ _ => true
+  C := fun _ => true
+  init := fun _ => false
+
+/-- **T299-specific A4 witness.** There is a label satisfying the "requires"
+reading (it implies the six-clause conjunction `L`) that the packet's own matched
+profile `B*` fails to separate. Axiom-free. -/
+theorem A4_matchedProfile_insufficient_under_requires_reading :
+    ∃ lbl : Bool → Bool,
+      (∀ b, lbl b = true → L constCause b = true) ∧   -- the "requires" reading
+      matchedProfile constCause true = matchedProfile constCause false ∧
+      ¬ FibreConst (matchedProfile constCause) lbl := by
+  refine ⟨id, ?_, ?_, ?_⟩
+  · intro b _
+    cases b <;> decide
+  · decide
+  · intro h
+    have hc : id true = id false := h true false (by decide)
+    exact Bool.noConfusion hc
+
+/-- Restated with the packet's own word: such a label is not `B*`-certifiable. -/
+theorem A4_matchedProfile_not_certifiable_under_requires_reading :
+    ∃ lbl : Bool → Bool,
+      (∀ b, lbl b = true → L constCause b = true) ∧
+      ¬ Certifiable (matchedProfile constCause) lbl := by
+  obtain ⟨lbl, hreq, _, hnc⟩ := A4_matchedProfile_insufficient_under_requires_reading
+  exact ⟨lbl, hreq, fun hc => hnc ((certifiable_iff_fibreConst _ _).mp hc)⟩
 
 /-! ## §5. The causal/spontaneous twin
 

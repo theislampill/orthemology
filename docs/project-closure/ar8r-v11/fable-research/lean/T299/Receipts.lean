@@ -9,6 +9,8 @@ open AR8R.T299
 #print axioms certifiable_of_injective
 #print axioms certifiable_mono
 #print axioms A4_requires_reading_is_insufficient
+#print axioms A4_matchedProfile_insufficient_under_requires_reading
+#print axioms A4_matchedProfile_not_certifiable_under_requires_reading
 #print axioms certifiable_matchedProfile
 #print axioms twin_before_agree
 #print axioms twin_after_agree

@@ -9,6 +9,17 @@ Its existing repository treatment — bounded empirical exemplification and
 comparison, never validation of orthemology, proper function, noetic structure, or
 metaphysics — is unchanged and reaffirmed.
 
+**Status: `SOURCE_LEVEL_UNVERIFIED` (added after independent review).** The
+independent review of round 1 excluded the source paper from its boundary, so
+every source-specific statement in this packet is a reading recorded by round 1
+and checked by no reviewer. This packet neither passes nor rejects the source as a
+whole. In particular, the claim that the model's emission structure "admits no
+global section by construction" was corrected in
+`AR8R-FABLE-R1-NEGATIVE-RESULTS.md` (N2): a finite surjection onto its attained
+image always has a set-theoretic section; the supported limitation is the absence
+of a canonical, transition-compatible section and the nonidentifiability of latent
+states from observation symbols.
+
 ## Typed extraction: what the measured object actually is
 
 The paper runs two tracks in parallel — a biological/measured track and a

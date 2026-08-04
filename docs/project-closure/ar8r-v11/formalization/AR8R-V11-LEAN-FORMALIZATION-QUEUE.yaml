@@ -7,12 +7,36 @@ static_inventory:
   intended_declarations_without_source: 9
   scanned_files: 48
 status_axes:
+  scope: >
+    These axes describe the HISTORICAL external Lean corpus inventoried above
+    (230 declaration records over 48 scanned files). They do not describe the
+    separate scoped Fable round-1 development; see scoped_developments below.
   source_inventory: STATIC_ONLY
   parse: NOT_PERFORMED
   elaboration: NOT_PERFORMED
   kernel: NOT_PERFORMED
   axiom_report: NOT_PERFORMED
   machine_check_claim: NONE
+scoped_developments:
+  - id: FABLE-R1-T299-SCOPED
+    receipt: ../fable-research/AR8R-FABLE-R1-LEAN-RECEIPTS.yaml
+    correction_receipt: ../fable-research/AR8R-FABLE-R1-CORRECTION-RECEIPT-V1.md
+    source: ../fable-research/lean/T299/Basic.lean
+    parse: PASS
+    elaboration: PASS
+    kernel: PASS
+    axiom_report: PERFORMED
+    machine_check_claim: SCOPED_INTERPRETATION_ONLY
+    q0_status: PERFORMED
+    relation_to_historical_corpus: >
+      NOT an identification. This is fresh source written in round 1 for a
+      repaired, scoped interpretation of the T299 packet. It is not a recovery
+      of, and must not be identified with, any lost or intended historical Lean
+      declaration. The historical T299 intended declaration remains absent or
+      unresolved exactly as the static inventory records; the historical packet
+      itself was not machine-checked end to end.
+    unblocks: [Q1a, Q1b, Q1c, Q1d, Q1e, Q1f, Q1g, Q1h, Q1i]
+    unblocked_but_not_performed: true
 milestone_formalization_crosswalk:
   owner: ../programs/AR8R-ORTHEMOLOGY-MENISCUS-MILESTONES-V1.yaml
   milestones: [M1, M2, M3, M4, M5, M6, M7, M8, M9, M10, M11, M12, M13, M14, M18]
@@ -20,7 +44,7 @@ milestone_formalization_crosswalk:
   status: TARGET_QUEUE_ONLY
   nonclaim: No parse elaboration kernel axiom or build status follows from roadmap inclusion.
 queue:
-  - {id: Q0, purpose: Lean project/toolchain exact source custody and clean build receipt, prerequisites: [], layers: [CUSTODY, TOOLCHAIN, BUILD]}
+  - {id: Q0, purpose: Lean project/toolchain exact source custody and clean build receipt, prerequisites: [], layers: [CUSTODY, TOOLCHAIN, BUILD], status: PERFORMED_BY_FABLE_R1_T299_SCOPED}
   - {id: Q1a, purpose: finite fibre factorization then T227 T299 exact twin and T300/T304 wrapper, prerequisites: [Q0, CONCRETE_T300_LEMMAS_FOR_WRAPPER], layers: [PURE, APPLICATION]}
   - {id: Q1b, purpose: graph/fixed-point base then T228 finite-game base pure COB and TRC wrapper, prerequisites: [Q0], layers: [PURE, APPLICATION]}
   - {id: Q1c, purpose: finite probability/counting base then two concrete T300 constructions, prerequisites: [Q0], layers: [PURE]}
