@@ -25,7 +25,7 @@ of scientific closure.
 - `post-merge-pmr001-source/` and `post-merge-pmr002-006-source/`: exact public-safe PMR source selections;
 - `post-merge-proposals/`: exact sanitized PMR-007 proposal bytes plus a separate V11 correction overlay;
 - `AR8R-V11-POST-MERGE-EVIDENCE-CATALOG.yaml`: post-merge source and proposal dispositions;
-- `AR8R-V11-DEFERRED-AND-EXCLUDED.md`: private and unsupported material.
+- `AR8R-V11-DEFERRED-AND-EXCLUDED.md`: private, superseded, collision-bound, and unsupported material.
 
 ## Publication boundary
 
@@ -42,6 +42,13 @@ populated messages, 9 Worked-for controls, 178 downloaded artifacts, and 10
 tested archives. Raw conversation and Activity evidence remain private; only
 sanitized source selections, proposal packets, counts, hashes, and access
 boundaries enter this branch.
+
+The V13 source-universe extension preserves the earlier V7/V8 receipt and adds
+terminal public-safe maps for all 1,007 attachment rows, 187 download rows, 10
+archive instances, and 506 distinct archive-member hashes in the later
+authenticated-thread harvest. It also records the earlier P236-P242
+`AR8R-T236` emission under collision-safe recovery identity
+`AR8R-HR-P236P242-T236-v1`; canonical V5 remains unchanged.
 
 ## Task 7 current owners
 

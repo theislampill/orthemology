@@ -4,6 +4,7 @@ from __future__ import annotations
 
 import hashlib
 import importlib.util
+import csv
 import re
 import shutil
 import subprocess
@@ -38,6 +39,9 @@ ORIGIN_V6 = PACKET / "provenance" / "AR8R-CANONICAL-THEOREM-ORIGIN-REGISTRY-V6.y
 ORIGIN_V5 = PACKET / "provenance" / "AR8R-CANONICAL-THEOREM-ORIGIN-REGISTRY-V5-PUBLIC-SANITIZED.yaml"
 RECOVERY_OVERLAY = PACKET / "provenance" / "AR8R-TARGET-IDENTITY-RECOVERY-OVERLAY-V8.yaml"
 SOURCE_UNIVERSE = PACKET / "provenance" / "AR8R-SOURCE-UNIVERSE-RECEIPT-V1.yaml"
+SOURCE_UNIVERSE_V2 = PACKET / "provenance" / "AR8R-SOURCE-UNIVERSE-RECEIPT-V2.yaml"
+HISTORICAL_COLLISION_RECEIPT = PACKET / "provenance" / "AR8R-HISTORICAL-ID-COLLISION-RECEIPT-P236-P242-V1.yaml"
+HISTORICAL_COLLISION_PAYLOAD = PACKET / "theorems" / "historical-collision-recoveries" / "AR8R-HR-P236P242-T236-v1-payload.md"
 FAMILY_V1 = PACKET / "provenance" / "AR8R-THEOREM-FAMILY-REGISTRY-V1.yaml"
 CORE_RECEIPT = PACKET / "provenance" / "AR8R-CANONICAL-CORE-RECEIPT.yaml"
 PAIR_RECEIPT = PACKET / "provenance" / "AR8R-CANONICAL-PAIR-RECEIPT.yaml"
@@ -62,6 +66,7 @@ FLYWHEEL = PROGRAMS / "AR8R-RESEARCH-FLYWHEEL-CROSSWALK-V1.yaml"
 MILESTONE_CHARTER = PROGRAMS / "AR8R-ORTHEMOLOGY-MENISCUS-MILESTONE-ARCHITECTURE-V1.md"
 MILESTONES = PROGRAMS / "AR8R-ORTHEMOLOGY-MENISCUS-MILESTONES-V1.yaml"
 OSM_PROGRAM_CROSSWALK = PROGRAMS / "AR8R-OSM-LEARNING-TRAJECTORY-CONVERGENCE-CROSSWALK-V12.yaml"
+FABLE_INTEGRATED_PROMPT = PROGRAMS / "AR8R-FABLE-INTEGRATED-ORTHEMOLOGY-MENISCUS-RESEARCH-PROMPT-V2.md"
 TWO_THREAD_RECEIPT = PACKET / "provenance" / "AR8R-TWO-THREAD-SYNTHESIS-RECEIPT-V11.yaml"
 POST_MERGE_CATALOG = PACKET / "AR8R-V11-POST-MERGE-EVIDENCE-CATALOG.yaml"
 THREAD_CUSTODY = PACKET / "provenance" / "AR8R-POST-MERGE-THREAD-CUSTODY-RECEIPT-V1.yaml"
@@ -189,6 +194,22 @@ class TestAr8rV11Reconciliation(unittest.TestCase):
         self.assertEqual(ten["Comparator_sorry_count"], "CONFLICTING_38_42")
         self.assertEqual(family["counts"]["focused_exact_relations"], 74)
 
+        candidate_1_family = next(
+            row
+            for row in family["later_label_crosswalk"]
+            if row["later_labels"] == ["Candidate 1", "PMR-007-PRQT-1"]
+        )
+        self.assertIsNone(candidate_1_family["v5_family"])
+        self.assertEqual(
+            candidate_1_family["candidate_v5_families"],
+            ["FAMILY-FIBRE", "FAMILY-HIGHER"],
+        )
+        self.assertEqual(
+            candidate_1_family["classification_status"],
+            "UNRESOLVED_PUBLIC_OWNER_CONFLICT",
+        )
+        self.assertEqual(len(candidate_1_family["basis_locators"]), 3)
+
         t299 = T299_LANDING.read_text(encoding="utf-8")
         for token in (
             "Q(S_term^(a))=a",
@@ -260,6 +281,17 @@ class TestAr8rV11Reconciliation(unittest.TestCase):
         bad_family = yaml.safe_load(yaml.safe_dump(family))
         bad_family["no_new_identity_merges"] = False
         self.assertIn("theorem-family-identity-promoted", validator.validate_formalization_owners(pmr, queue, ten, bad_family))
+
+        misrouted_family = yaml.safe_load(yaml.safe_dump(family))
+        next(
+            row
+            for row in misrouted_family["later_label_crosswalk"]
+            if row["later_labels"] == ["Candidate 1", "PMR-007-PRQT-1"]
+        )["v5_family"] = "FAMILY-RIVAL"
+        self.assertIn(
+            "theorem-family-later-crosswalk-mismatch:Candidate 1|PMR-007-PRQT-1",
+            validator.validate_formalization_owners(pmr, queue, ten, misrouted_family),
+        )
 
         proper = self.load_yaml(PROPER_FUNCTION_MATRIX)
         ontology = self.load_yaml(ONTOLOGY_MATRIX)
@@ -335,6 +367,41 @@ class TestAr8rV11Reconciliation(unittest.TestCase):
         bad_flywheel = yaml.safe_load(yaml.safe_dump(flywheel))
         bad_flywheel["edges"][0]["kind"] = "proves"
         self.assertTrue(any(code.startswith("flywheel-edge-kind-invalid") for code in validator.validate_task7_ledgers_and_crosswalks(catalog, ledger, surface, bad_flywheel, receipt_two)))
+
+        unknown_endpoint = yaml.safe_load(yaml.safe_dump(flywheel))
+        unknown_endpoint["edges"][0]["to"] = "missing_node"
+        self.assertIn(
+            "flywheel-edge-target-unknown:1:missing_node",
+            validator.validate_task7_ledgers_and_crosswalks(catalog, ledger, surface, unknown_endpoint, receipt_two),
+        )
+
+        missing_nontransfer = yaml.safe_load(yaml.safe_dump(flywheel))
+        del missing_nontransfer["edges"][0]["nontransfer"]
+        self.assertIn(
+            "flywheel-edge-nontransfer-missing:1",
+            validator.validate_task7_ledgers_and_crosswalks(catalog, ledger, surface, missing_nontransfer, receipt_two),
+        )
+
+        empty_contribution = yaml.safe_load(yaml.safe_dump(flywheel))
+        empty_contribution["edges"][0]["contribution"] = ""
+        self.assertIn(
+            "flywheel-edge-contribution-missing:1",
+            validator.validate_task7_ledgers_and_crosswalks(catalog, ledger, surface, empty_contribution, receipt_two),
+        )
+
+        duplicate_edge = yaml.safe_load(yaml.safe_dump(flywheel))
+        duplicate_edge["edges"].append(yaml.safe_load(yaml.safe_dump(duplicate_edge["edges"][0])))
+        self.assertIn(
+            "flywheel-edge-duplicate-endpoint:source_custody:language_version",
+            validator.validate_task7_ledgers_and_crosswalks(catalog, ledger, surface, duplicate_edge, receipt_two),
+        )
+
+        missing_owner = yaml.safe_load(yaml.safe_dump(flywheel))
+        missing_owner["nodes"]["source_custody"]["owner"] = "missing-owner.md"
+        self.assertIn(
+            "flywheel-node-owner-missing:source_custody:missing-owner.md",
+            validator.validate_task7_ledgers_and_crosswalks(catalog, ledger, surface, missing_owner, receipt_two),
+        )
 
     def test_task7a_owner_charter_and_milestone_projection_contract(self):
         validator = self.load_validator()
@@ -643,7 +710,12 @@ class TestAr8rV11Reconciliation(unittest.TestCase):
         for row in rows:
             self.assertIn(row["disposition"], ALLOWED_DISPOSITIONS)
             self.assertTrue(row["owner_path"])
-            self.assertIn(row["publication_state"], {"INTEGRATED", "PROPOSED", "DEFERRED", "BLOCKED", "EXCLUDED"})
+            self.assertIn(
+                row["publication_state"],
+                {"INTEGRATED", "MATERIALIZED_PUBLIC_PROPOSAL_NOT_ADOPTED", "DEFERRED", "BLOCKED", "EXCLUDED"},
+            )
+            if row["publication_state"] == "MATERIALIZED_PUBLIC_PROPOSAL_NOT_ADOPTED":
+                self.assertTrue((ROOT / row["owner_path"]).exists())
             self.assertTrue(row["basis"])
             self.assertTrue(row["remaining_burden"] is not None)
 
@@ -1129,6 +1201,198 @@ class TestAr8rV11Reconciliation(unittest.TestCase):
         for row in receipt["closure_maps"]:
             path = PACKET / "provenance" / row["path"]
             self.assertEqual(hashlib.sha256(path.read_bytes()).hexdigest(), row["sha256"])
+
+    def test_v11_source_universe_receipt_closes_every_later_thread_input(self):
+        validator = self.load_validator()
+        receipt = self.load_yaml(SOURCE_UNIVERSE_V2)
+        expected_ledgers = {
+            "V11_ATTACHMENT_INDEX": ("a236e9d40b2ed376953e7fce0d384224509a6567ac2549840b4bb3c764424b57", 1007),
+            "V11_DOWNLOAD_AND_ARCHIVE_LEDGER_CSV": ("d1aa7644474123e2ae54c2cc46ea1bba9e7a40bde42447cd9c51dd75d69ba332", 187),
+            "V11_DOWNLOAD_AND_ARCHIVE_LEDGER_JSONL": ("89caf73dcf7644acd0cd14b71a5b97ce872ac92361a171a5f9f6928ee91e0f06", 161),
+            "V11_ARCHIVE_INTEGRITY_AND_EXTRACTION_LEDGER": ("35f8312da49dd8ab5d198755a17a5b0101543e4cb1a099439458a7f36b6300a7", 10),
+            "V11_ARCHIVE_MEMBER_HASH_LEDGER": ("9c034a9d65a9cb6c6c5a9890ae3fb15eb850372dcca821f88845b65a428769ad", 957),
+        }
+        actual_ledgers = {
+            row["surface"]: (row["sha256"], row["rows"])
+            for row in receipt["immutable_v11_source_ledgers"]
+        }
+        self.assertEqual(actual_ledgers, expected_ledgers)
+
+        expected_maps = {
+            "AR8R-V11-ATTACHMENT-ROW-DISPOSITION-MAP-V1.csv": 1007,
+            "AR8R-V11-DOWNLOAD-ROW-DISPOSITION-MAP-V1.csv": 187,
+            "AR8R-V11-ARCHIVE-INSTANCE-DISPOSITION-MAP-V1.csv": 10,
+            "AR8R-V11-ARCHIVE-MEMBER-HASH-DISPOSITION-MAP-V1.csv": 506,
+        }
+        for row in receipt["terminal_maps"]:
+            path = SOURCE_UNIVERSE_V2.parent / row["path"]
+            self.assertEqual(hashlib.sha256(path.read_bytes()).hexdigest(), row["sha256"])
+            with path.open(encoding="utf-8", newline="") as handle:
+                reader = csv.DictReader(handle)
+                rows = list(reader)
+            self.assertEqual(len(rows), expected_maps[row["path"]])
+            self.assertEqual(
+                validator.validate_v11_terminal_map_rows(row["path"], reader.fieldnames, rows),
+                [],
+            )
+
+        download_path = SOURCE_UNIVERSE_V2.parent / "AR8R-V11-DOWNLOAD-ROW-DISPOSITION-MAP-V1.csv"
+        with download_path.open(encoding="utf-8", newline="") as handle:
+            downloads = list(csv.DictReader(handle))
+        self.assertEqual(len({row["sha256"] for row in downloads if row["sha256"]}), 157)
+        self.assertEqual(sum(not bool(row["sha256"]) for row in downloads), 9)
+        self.assertNotIn(
+            "PRIVATE_OR_DUPLICATE_OR_UNSELECTED_SOURCE_NO_PUBLIC_IMPORT",
+            {row["disposition"] for row in downloads},
+        )
+
+        archive_path = SOURCE_UNIVERSE_V2.parent / "AR8R-V11-ARCHIVE-INSTANCE-DISPOSITION-MAP-V1.csv"
+        with archive_path.open(encoding="utf-8", newline="") as handle:
+            archives = list(csv.DictReader(handle))
+        archive5 = next(row for row in archives if row["archive_sequence"] == "5")
+        self.assertEqual(archive5["sha256"], "141deffc4323225e549149ba35b6d2ae55007242459bfb513957420b189a78e8")
+        self.assertEqual(archive5["disposition"], "SUPERSEDED_BOUNDARY_CHECKPOINT_PRIVATE_NO_PUBLIC_IMPORT")
+
+        relation = receipt["dual_hash_relations"][0]
+        summary_path = (SOURCE_UNIVERSE_V2.parent / relation["public_summary_path"]).resolve()
+        self.assertEqual(hashlib.sha256(summary_path.read_bytes()).hexdigest(), relation["public_summary_sha256"])
+        self.assertNotEqual(relation["source_exact_sha256"], relation["public_summary_sha256"])
+        self.assertEqual(relation["identity_claim"], "SUMMARY_IS_NOT_EXACT_SOURCE_BYTES")
+
+    def test_v11_source_universe_maps_fail_closed_under_authority_mutations(self):
+        validator = self.load_validator()
+        maps: dict[str, tuple[list[str] | None, list[dict[str, str]]]] = {}
+        for name in validator.V11_TERMINAL_MAP_FIELDS:
+            path = SOURCE_UNIVERSE_V2.parent / name
+            with path.open(encoding="utf-8", newline="") as handle:
+                reader = csv.DictReader(handle)
+                maps[name] = (reader.fieldnames, list(reader))
+
+        attachment_name = "AR8R-V11-ATTACHMENT-ROW-DISPOSITION-MAP-V1.csv"
+        attachment_fields, attachments = maps[attachment_name]
+        self.assertIn(
+            "v11-terminal-map-header-mismatch:" + attachment_name,
+            validator.validate_v11_terminal_map_rows(attachment_name, attachment_fields[:-1], attachments),
+        )
+        mutated = yaml.safe_load(yaml.safe_dump(attachments))
+        mutated[0]["row_id"] = "2"
+        self.assertIn(
+            "v11-attachment-row-sequence-mismatch",
+            validator.validate_v11_terminal_map_rows(attachment_name, attachment_fields, mutated),
+        )
+        mutated = yaml.safe_load(yaml.safe_dump(attachments))
+        mutated[0]["disposition"] = "ADOPTED"
+        self.assertIn(
+            "v11-attachment-disposition-mismatch",
+            validator.validate_v11_terminal_map_rows(attachment_name, attachment_fields, mutated),
+        )
+
+        download_name = "AR8R-V11-DOWNLOAD-ROW-DISPOSITION-MAP-V1.csv"
+        download_fields, downloads = maps[download_name]
+        mutated = yaml.safe_load(yaml.safe_dump(downloads))
+        exact_row = next(row for row in mutated if row["disposition"] == "EXACT_PUBLIC_BYTES_PRESENT")
+        exact_row["sha256"] = "a" * 64
+        self.assertTrue(
+            any(
+                issue.startswith("v11-download-public-bytes-absent:")
+                for issue in validator.validate_v11_terminal_map_rows(
+                    download_name,
+                    download_fields,
+                    mutated,
+                    public_exact_hashes=set(),
+                    public_mentioned_hashes=set(),
+                )
+            )
+        )
+        mutated = yaml.safe_load(yaml.safe_dump(downloads))
+        failed_row = next(row for row in mutated if row["source_status"] == "DOWNLOAD_FAILED")
+        failed_row["sha256"] = "b" * 64
+        failed_row["bytes"] = "1"
+        self.assertTrue(
+            any(
+                issue.startswith("v11-download-access-boundary-incoherent:")
+                for issue in validator.validate_v11_terminal_map_rows(download_name, download_fields, mutated)
+            )
+        )
+
+        archive_name = "AR8R-V11-ARCHIVE-INSTANCE-DISPOSITION-MAP-V1.csv"
+        archive_fields, archives = maps[archive_name]
+        mutated = yaml.safe_load(yaml.safe_dump(archives))
+        mutated[0]["member_count"] = "1"
+        self.assertIn(
+            "v11-archive-member-total-mismatch",
+            validator.validate_v11_terminal_map_rows(archive_name, archive_fields, mutated),
+        )
+
+        member_name = "AR8R-V11-ARCHIVE-MEMBER-HASH-DISPOSITION-MAP-V1.csv"
+        member_fields, members = maps[member_name]
+        mutated = yaml.safe_load(yaml.safe_dump(members))
+        mutated[0]["occurrence_count"] = "0"
+        member_issues = validator.validate_v11_terminal_map_rows(member_name, member_fields, mutated)
+        self.assertTrue(any(issue.startswith("v11-archive-member-count-or-size-malformed:") for issue in member_issues))
+        self.assertIn("v11-archive-member-occurrence-total-mismatch", member_issues)
+
+    def test_integrated_fable_prompt_and_local_input_contract_fail_closed(self):
+        validator = self.load_validator()
+        prompt = FABLE_INTEGRATED_PROMPT.read_text(encoding="utf-8")
+        self.assertEqual(validator.validate_integrated_fable_prompt(prompt), [])
+        self.assertIn(
+            "integrated-fable-prompt-hash-mismatch",
+            validator.validate_integrated_fable_prompt(prompt + "\nYou may scan a private transcript.\n"),
+        )
+        ignore_lines = {
+            line.strip()
+            for line in (ROOT / ".gitignore").read_text(encoding="utf-8").splitlines()
+            if line.strip() and not line.lstrip().startswith("#")
+        }
+        self.assertTrue({"FABLE_LOCAL_START.md", "FABLE_LOCAL_SOURCES/"}.issubset(ignore_lines))
+
+    def test_public_hash_evidence_excludes_ignored_local_inputs(self):
+        validator = self.load_validator()
+        local_dir = ROOT / "FABLE_LOCAL_SOURCES"
+        local_path = local_dir / "ignored-public-hash-negative-fixture.txt"
+        marker = "f" * 64
+        payload = f"ignored owner-local input\n{marker}\n".encode("utf-8")
+        local_hash = hashlib.sha256(payload).hexdigest()
+        created_dir = not local_dir.exists()
+        local_dir.mkdir(exist_ok=True)
+        try:
+            local_path.write_bytes(payload)
+            ignored = subprocess.run(
+                ["git", "check-ignore", "--quiet", "--", local_path.relative_to(ROOT).as_posix()],
+                cwd=ROOT,
+            )
+            self.assertEqual(ignored.returncode, 0)
+            exact, mentioned = validator.public_hash_evidence()
+            self.assertNotIn(local_hash, exact)
+            self.assertNotIn(marker, mentioned)
+        finally:
+            local_path.unlink(missing_ok=True)
+            if created_dir:
+                local_dir.rmdir()
+
+    def test_historical_t236_collision_recovery_preserves_v5_authority(self):
+        payload_hash = hashlib.sha256(HISTORICAL_COLLISION_PAYLOAD.read_bytes()).hexdigest()
+        self.assertEqual(HISTORICAL_COLLISION_PAYLOAD.stat().st_size, 1408)
+        self.assertEqual(payload_hash, "6e5f8fde52bd69c4c8e678b0ab7f0e2d5345ff4cf261cf143a7ecbb3c64835c5")
+
+        receipt = self.load_yaml(HISTORICAL_COLLISION_RECEIPT)
+        self.assertFalse(receipt["source_boundary"]["original_historical_file_bytes_recovered"])
+        recovered = next(
+            row for row in receipt["collisions"]
+            if row.get("collision_safe_recovery_identity") == "AR8R-HR-P236P242-T236-v1"
+        )
+        self.assertEqual(recovered["exact_payload_sha256"], payload_hash)
+        self.assertEqual(recovered["owner_adoption"], "PENDING")
+        self.assertEqual(recovered["credit_effect"], "NONE")
+
+        origin = self.load_yaml(ORIGIN_V5)
+        canonical = next(row for row in origin["theorems"] if row.get("id") == "AR8R-T236")
+        self.assertIn("authenticated root support", canonical["statement"])
+        self.assertNotIn(
+            "AR8R-HR-P236P242-T236-v1",
+            {row.get("id") for row in origin["theorems"]},
+        )
 
     def test_transcendental_authority_precedence_and_nonintegration_control(self):
         track = TRACK_T_STATUS.read_text(encoding="utf-8")

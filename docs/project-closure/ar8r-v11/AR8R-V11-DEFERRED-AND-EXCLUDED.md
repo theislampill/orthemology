@@ -4,7 +4,7 @@ Status: V11 repository-reconciliation control surface. This document records why
 
 ## Coverage receipt
 
-The V11 evidence catalog contains 126 claim-level rows, supplemented by
+The public evidence catalog contains 128 claim-level rows, supplemented by
 sanitized structural closure maps:
 
 - 65 individually rehashed V8 downloads: 65 files present, 65 unique SHA-256 values, zero size or hash mismatches;
@@ -15,6 +15,12 @@ sanitized structural closure maps:
   correction packets, and current-main V8 authority;
 - 43 Activity logs structurally assessed from stabilized flyout captures;
 - one Activity control preserved with the exact `ACTIVITY_FLYOUT_UNAVAILABLE` boundary.
+
+The V13 extension also binds the later authenticated-thread source universe to
+five immutable private-ledger hashes and publishes terminal, privacy-safe maps
+for all 1,007 attachment rows, 187 download rows, 10 archive instances, and 506
+distinct archive-member hashes. The maps omit private identifiers, filenames,
+URLs, local paths, UI text, and artifact bodies.
 
 The 65 downloaded files are not treated as 65 repository-ready results. Each has its own terminal recommendation in the catalog and reconciliation ledger.
 
@@ -49,6 +55,17 @@ Exact earlier bytes remain evidence but are not current authority:
 - historical campaign-state snapshots superseded by later segment and merged-main state.
 
 No wording is merged across versions.
+
+## Historical identifier collision
+
+The earlier P236-P242 Activity surface emitted a finite positive-Horn truth
+guard as `AR8R-T236`, but V5 assigns `AR8R-T236` to a different authenticated-
+support truth-factorization theorem. The earlier 1,408-byte payload is therefore
+preserved under `AR8R-HR-P236P242-T236-v1`. It does not replace or renumber V5,
+and it receives no new theorem-origin, novelty, adoption, or meniscus credit.
+The adjacent earlier `AR8R-T235` payload is recorded only as a collision and
+overlap tombstone because it substantially overlaps current `AR8R-T230` while
+V5 assigns `AR8R-T235` to a different complete-lattice theorem.
 
 ## Deferred for incomplete audit
 
@@ -95,6 +112,10 @@ manifests.
 ## Publication rule
 
 A row may enter a public theorem packet only when exact evidence identifies its payload or bounded post hoc status, its audit and repair custody is sufficient, its source and novelty ceilings are explicit, and its repository owner is unambiguous. Otherwise it remains summarized, deferred, blocked, superseded, or private-excluded.
+
+`MATERIALIZED_PUBLIC_PROPOSAL_NOT_ADOPTED` means that the row now has a public
+repository owner. It does not mean that its theorem, proposal, terminology,
+empirical result, metaphysical claim, or research program has been adopted.
 
 ## Task 7 additions
 

@@ -1411,16 +1411,28 @@ items:
   sha256: 4b7f236152aa0e5083f105cbbe576dd0ade72a262dc6b06a502e8de83b1c6f3f
   campaign_epoch: HISTORICAL_AR8R
 - item_id: AR8R-SOURCE-UNIVERSE
-  title: Structural whole-corpus closure receipt
+  title: Structural two-thread source-universe closure receipt
   source_surface: V11_GENERATED_CUSTODY_RECEIPT
   evidence_class: CUSTODY_RECEIPT
   privacy_class: PUBLIC_SAFE
   recommended_disposition: PUBLIC_INTEGRATE
   public_locator: V11 source-universe receipt and sanitized row maps
-  repository_relevance: Maps 95 messages, 1,127 attachments, 1,490 Activity entries, 17,293 references, and 9,968
-    unique archive hashes without private content.
-  owner_path: docs/project-closure/ar8r-v11/provenance/AR8R-SOURCE-UNIVERSE-RECEIPT-V1.yaml
-  campaign_epoch: V11_RECONCILIATION
+  repository_relevance: Preserves the V7/V8 structural maps and additionally accounts for all 1,007 V11 attachment rows,
+    187 V11 download rows, 10 V11 archive instances, and 506 distinct V11 archive-member hashes without private content.
+  owner_path: docs/project-closure/ar8r-v11/provenance/AR8R-SOURCE-UNIVERSE-RECEIPT-V2.yaml
+  campaign_epoch: V13_TWO_THREAD_CLOSURE
+- item_id: AR8R-HR-P236P242-T236-V1
+  title: Collision-safe recovery of the earlier finite positive-Horn coinductive truth residual guard
+  source_surface: V7_VISIBLE_ACTIVITY_HEREDOC
+  evidence_class: EXACT_VERBATIM_TRANSCRIPT
+  privacy_class: PUBLIC_SAFE
+  recommended_disposition: PUBLIC_INTEGRATE
+  public_locator: P236-P242 visible Activity heredoc and collision receipt
+  repository_relevance: Preserves an exact 1,408-byte historical payload under a fresh recovery identity because V5 already
+    assigns AR8R-T236 to a different theorem. Canonical V5 remains unchanged and the recovery receives no new theorem or novelty credit.
+  owner_path: docs/project-closure/ar8r-v11/provenance/AR8R-HISTORICAL-ID-COLLISION-RECEIPT-P236-P242-V1.yaml
+  sha256: 6e5f8fde52bd69c4c8e678b0ab7f0e2d5345ff4cf261cf143a7ecbb3c64835c5
+  campaign_epoch: HISTORICAL_AR8R_COLLISION_RECOVERY_V13
 - item_id: AR8R-FLYWHEEL-CROSSWALK
   title: Typed research-flywheel crosswalk
   source_surface: V11_RECONCILIATION_SYNTHESIS

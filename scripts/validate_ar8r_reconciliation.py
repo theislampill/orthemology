@@ -7,6 +7,7 @@ import sys
 import csv
 import hashlib
 import re
+import subprocess
 from collections import Counter
 from pathlib import Path
 from typing import Any
@@ -24,6 +25,9 @@ ORIGIN_V5 = PACKET / "provenance" / "AR8R-CANONICAL-THEOREM-ORIGIN-REGISTRY-V5-P
 ORIGIN_V6 = PACKET / "provenance" / "AR8R-CANONICAL-THEOREM-ORIGIN-REGISTRY-V6.yaml"
 RECOVERY_OVERLAY = PACKET / "provenance" / "AR8R-TARGET-IDENTITY-RECOVERY-OVERLAY-V8.yaml"
 SOURCE_UNIVERSE = PACKET / "provenance" / "AR8R-SOURCE-UNIVERSE-RECEIPT-V1.yaml"
+SOURCE_UNIVERSE_V2 = PACKET / "provenance" / "AR8R-SOURCE-UNIVERSE-RECEIPT-V2.yaml"
+HISTORICAL_COLLISION_RECEIPT = PACKET / "provenance" / "AR8R-HISTORICAL-ID-COLLISION-RECEIPT-P236-P242-V1.yaml"
+HISTORICAL_COLLISION_PAYLOAD = PACKET / "theorems" / "historical-collision-recoveries" / "AR8R-HR-P236P242-T236-v1-payload.md"
 POST_MERGE_CATALOG = PACKET / "AR8R-V11-POST-MERGE-EVIDENCE-CATALOG.yaml"
 THREAD_CUSTODY = PACKET / "provenance" / "AR8R-POST-MERGE-THREAD-CUSTODY-RECEIPT-V1.yaml"
 LINK_DRIFT = PACKET / "provenance" / "AR8R-POST-MERGE-LINK-DRIFT-SUMMARY-V1.yaml"
@@ -63,10 +67,13 @@ MILESTONES = PROGRAMS / "AR8R-ORTHEMOLOGY-MENISCUS-MILESTONES-V1.yaml"
 OSM_PROGRAM_CROSSWALK = PROGRAMS / "AR8R-OSM-LEARNING-TRAJECTORY-CONVERGENCE-CROSSWALK-V12.yaml"
 OSM_PROGRAM_NOTE = PROGRAMS / "AR8R-OSM-LEARNING-TRAJECTORY-CONVERGENCE-CROSSWALK-V12.md"
 FABLE_OSM_PROMPT = PROGRAMS / "AR8R-FABLE-OSM-CONVERGENCE-RESEARCH-PROMPT-V1.md"
+FABLE_INTEGRATED_PROMPT = PROGRAMS / "AR8R-FABLE-INTEGRATED-ORTHEMOLOGY-MENISCUS-RESEARCH-PROMPT-V2.md"
+FABLE_INTEGRATED_PROMPT_SHA256 = "0588405a041ea825e958089354508f2fe4ee7c4e586afe56cb0f42cded46c8f2"
 COMPATIBILITY_OVERLAY = PROGRAMS / "AR8R-FULL-PROGRAM-REENTRY-COMPATIBILITY-RESOLUTION-V11.yaml"
 ASCENT_V2 = PROGRAMS / "AR8R_TRANSCENDENTAL_ORTHABILITY_AND_SOURCE_ASCENT_V2.yaml"
 TWO_THREAD_RECEIPT = PROVENANCE / "AR8R-TWO-THREAD-SYNTHESIS-RECEIPT-V11.yaml"
 CURRENT_STATE = ROOT / "docs" / "current-state.yaml"
+GITIGNORE = ROOT / ".gitignore"
 
 EXPECTED_DEFERRED_SOURCE: dict[str, tuple[int, str]] = {
     "candidate-e/000045__ar7-reopened-audit-continuation__payload__ar7-complete__CANDIDATES__E-orthability-fittingness__ARGUMENT.md": (7630, "17fcba74e46f016ffe8c4d84c5248f4692e03052ac30dd3df1789f62a94cc14a"),
@@ -152,6 +159,220 @@ TERMINAL_SUMMARY_STATES = {"MENISCUS_REACHED", "NATURAL_CLOSURE"}
 
 def load_yaml(path: Path) -> Any:
     return yaml.safe_load(path.read_text(encoding="utf-8"))
+
+
+V11_TERMINAL_MAP_FIELDS = {
+    "AR8R-V11-ATTACHMENT-ROW-DISPOSITION-MAP-V1.csv": [
+        "row_id", "item_kind", "expansion_status", "has_href", "disposition",
+    ],
+    "AR8R-V11-DOWNLOAD-ROW-DISPOSITION-MAP-V1.csv": [
+        "row_id", "surface", "kind", "sha256", "bytes", "source_status", "disposition",
+    ],
+    "AR8R-V11-ARCHIVE-INSTANCE-DISPOSITION-MAP-V1.csv": [
+        "archive_sequence", "sha256", "bytes", "member_count", "integrity_status", "disposition",
+    ],
+    "AR8R-V11-ARCHIVE-MEMBER-HASH-DISPOSITION-MAP-V1.csv": [
+        "member_sha256", "occurrence_count", "member_bytes", "disposition",
+    ],
+}
+
+V11_GENERATED_SOURCE_UNIVERSE_NAMES = set(V11_TERMINAL_MAP_FIELDS) | {
+    "AR8R-SOURCE-UNIVERSE-RECEIPT-V2.yaml",
+}
+
+
+def _is_lower_sha256(value: Any) -> bool:
+    return isinstance(value, str) and re.fullmatch(r"[0-9a-f]{64}", value) is not None
+
+
+def _is_positive_decimal(value: Any) -> bool:
+    return isinstance(value, str) and value.isdigit() and int(value) > 0
+
+
+def public_hash_evidence() -> tuple[set[str], set[str]]:
+    """Return exact public file hashes and hashes mentioned outside V11 generated maps."""
+    exact: set[str] = set()
+    mentioned: set[str] = set()
+    text_suffixes = {".csv", ".json", ".jsonl", ".md", ".py", ".sha256", ".txt", ".yaml", ".yml"}
+    tracked = subprocess.run(
+        ["git", "ls-files", "-z"],
+        cwd=ROOT,
+        check=True,
+        stdout=subprocess.PIPE,
+    ).stdout.split(b"\0")
+    for raw_path in tracked:
+        if not raw_path:
+            continue
+        path = ROOT / raw_path.decode("utf-8")
+        if not path.is_file() or path.name in V11_GENERATED_SOURCE_UNIVERSE_NAMES:
+            continue
+        data = path.read_bytes()
+        exact.add(hashlib.sha256(data).hexdigest())
+        if path.suffix.lower() in text_suffixes:
+            text = data.decode("utf-8", errors="ignore").lower()
+            mentioned.update(re.findall(r"\b[0-9a-f]{64}\b", text))
+    return exact, mentioned
+
+
+def validate_v11_terminal_map_rows(
+    name: str,
+    fieldnames: list[str] | None,
+    rows: list[dict[str, str]],
+    *,
+    public_exact_hashes: set[str] | None = None,
+    public_mentioned_hashes: set[str] | None = None,
+) -> list[str]:
+    """Validate privacy-safe V11 terminal maps as typed, fail-closed records."""
+    issues: list[str] = []
+    expected_fields = V11_TERMINAL_MAP_FIELDS.get(name)
+    if expected_fields is None:
+        return [f"unexpected-v11-terminal-map:{name}"]
+    if fieldnames != expected_fields:
+        issues.append(f"v11-terminal-map-header-mismatch:{name}")
+
+    if name == "AR8R-V11-ATTACHMENT-ROW-DISPOSITION-MAP-V1.csv":
+        if [row.get("row_id") for row in rows] != [str(index) for index in range(1, 1008)]:
+            issues.append("v11-attachment-row-sequence-mismatch")
+        expected_counts = {"CARD": 152, "LINK": 3, "BUTTON": 852}
+        if Counter(row.get("item_kind") for row in rows) != expected_counts:
+            issues.append("v11-attachment-kind-count-mismatch")
+        if any(row.get("expansion_status") != "EXPANDED" for row in rows):
+            issues.append("v11-attachment-expansion-status-mismatch")
+        if Counter(row.get("has_href") for row in rows) != {"False": 1004, "True": 3}:
+            issues.append("v11-attachment-href-count-mismatch")
+        if any(
+            row.get("disposition") != "PRIVATE_UI_INVENTORY_ROW_ACCOUNTED_NO_PUBLIC_BODY_IMPORT"
+            for row in rows
+        ):
+            issues.append("v11-attachment-disposition-mismatch")
+
+    elif name == "AR8R-V11-DOWNLOAD-ROW-DISPOSITION-MAP-V1.csv":
+        if [row.get("row_id") for row in rows] != [str(index) for index in range(1, 188)]:
+            issues.append("v11-download-row-sequence-mismatch")
+        if Counter(row.get("surface") for row in rows) != {"FILE_CARD": 161, "RESPONSE_LEVEL_BUTTON_CONTROL": 26}:
+            issues.append("v11-download-surface-count-mismatch")
+        if Counter(row.get("kind") for row in rows) != {"DOWNLOAD": 159, "USER_UPLOAD": 2, "BUTTON_CONTROL_DOWNLOAD": 26}:
+            issues.append("v11-download-kind-count-mismatch")
+        expected_status_counts = {
+            "DOWNLOADED_AND_HASHED": 178,
+            "DOWNLOAD_FAILED": 6,
+            "DOWNLOAD_FAILED_RETRY": 1,
+            "HISTORICAL_LINK_UNAVAILABLE": 1,
+            "VIEWER_OPENED_NO_SUPPORTED_DOWNLOAD": 1,
+        }
+        if Counter(row.get("source_status") for row in rows) != expected_status_counts:
+            issues.append("v11-download-source-status-count-mismatch")
+        expected_disposition_counts = {
+            "EXACT_PUBLIC_BYTES_PRESENT": 137,
+            "PRIVATE_CUSTODY_OR_VERIFICATION_RECEIPT_NO_PUBLIC_IMPORT": 9,
+            "SUPERSEDED_FAILED_ATTEMPT_MATCHED_TO_LATER_SUCCESS": 7,
+            "PUBLIC_HASH_RECEIPTED_NO_DUPLICATE_IMPORT": 13,
+            "PUBLIC_SAFE_SOURCE_SUMMARIZED_NOT_IMPORTED": 4,
+            "SUPERSEDED_OR_REJECTED_PROPOSAL_NOT_IMPORTED": 3,
+            "HISTORICAL_LINK_UNAVAILABLE_WITH_PRIVATE_BOUNDARY_EVIDENCE": 1,
+            "VIEWER_OPENED_NO_SUPPORTED_DOWNLOAD": 1,
+            "CHECKSUM_SIDECAR_HASH_ONLY_NO_PUBLIC_IMPORT": 11,
+            "SUPERSEDED_BOUNDARY_CHECKPOINT_PRIVATE_NO_PUBLIC_IMPORT": 1,
+        }
+        if Counter(row.get("disposition") for row in rows) != expected_disposition_counts:
+            issues.append("v11-download-disposition-count-mismatch")
+        no_byte_pairs = {
+            "DOWNLOAD_FAILED": "SUPERSEDED_FAILED_ATTEMPT_MATCHED_TO_LATER_SUCCESS",
+            "DOWNLOAD_FAILED_RETRY": "SUPERSEDED_FAILED_ATTEMPT_MATCHED_TO_LATER_SUCCESS",
+            "HISTORICAL_LINK_UNAVAILABLE": "HISTORICAL_LINK_UNAVAILABLE_WITH_PRIVATE_BOUNDARY_EVIDENCE",
+            "VIEWER_OPENED_NO_SUPPORTED_DOWNLOAD": "VIEWER_OPENED_NO_SUPPORTED_DOWNLOAD",
+        }
+        for index, row in enumerate(rows, 1):
+            status = row.get("source_status")
+            digest = row.get("sha256")
+            size = row.get("bytes")
+            if status == "DOWNLOADED_AND_HASHED":
+                if not _is_lower_sha256(digest) or not _is_positive_decimal(size):
+                    issues.append(f"v11-download-hash-or-size-malformed:{index}")
+            else:
+                if digest or size or row.get("disposition") != no_byte_pairs.get(status):
+                    issues.append(f"v11-download-access-boundary-incoherent:{index}")
+            disposition = row.get("disposition")
+            if disposition == "EXACT_PUBLIC_BYTES_PRESENT" and public_exact_hashes is not None and digest not in public_exact_hashes:
+                issues.append(f"v11-download-public-bytes-absent:{index}")
+            if disposition == "PUBLIC_HASH_RECEIPTED_NO_DUPLICATE_IMPORT" and public_mentioned_hashes is not None and digest not in public_mentioned_hashes:
+                issues.append(f"v11-download-public-receipt-absent:{index}")
+
+    elif name == "AR8R-V11-ARCHIVE-INSTANCE-DISPOSITION-MAP-V1.csv":
+        if [row.get("archive_sequence") for row in rows] != [str(index) for index in range(1, 11)]:
+            issues.append("v11-archive-sequence-mismatch")
+        if Counter(row.get("disposition") for row in rows) != {
+            "PUBLIC_HASH_RECEIPTED_PRIVATE_ARCHIVE_NOT_IMPORTED": 9,
+            "SUPERSEDED_BOUNDARY_CHECKPOINT_PRIVATE_NO_PUBLIC_IMPORT": 1,
+        }:
+            issues.append("v11-archive-disposition-count-mismatch")
+        for index, row in enumerate(rows, 1):
+            if not _is_lower_sha256(row.get("sha256")):
+                issues.append(f"v11-archive-hash-malformed:{index}")
+            if not _is_positive_decimal(row.get("bytes")) or not _is_positive_decimal(row.get("member_count")):
+                issues.append(f"v11-archive-count-or-size-malformed:{index}")
+            if row.get("integrity_status") != "PASS":
+                issues.append(f"v11-archive-integrity-regression:{index}")
+            if (
+                row.get("disposition") == "PUBLIC_HASH_RECEIPTED_PRIVATE_ARCHIVE_NOT_IMPORTED"
+                and public_mentioned_hashes is not None
+                and row.get("sha256") not in public_mentioned_hashes
+            ):
+                issues.append(f"v11-archive-public-receipt-absent:{index}")
+        if sum(int(row["member_count"]) for row in rows if _is_positive_decimal(row.get("member_count"))) != 957:
+            issues.append("v11-archive-member-total-mismatch")
+
+    elif name == "AR8R-V11-ARCHIVE-MEMBER-HASH-DISPOSITION-MAP-V1.csv":
+        hashes = [row.get("member_sha256") for row in rows]
+        if any(not _is_lower_sha256(digest) for digest in hashes):
+            issues.append("v11-archive-member-hash-malformed")
+        if hashes != sorted(set(hashes)):
+            issues.append("v11-archive-member-hash-order-or-uniqueness-mismatch")
+        if Counter(row.get("disposition") for row in rows) != {
+            "EXACT_PUBLIC_BYTES_PRESENT": 173,
+            "PRIVATE_OR_DUPLICATE_OR_UNSELECTED_ARCHIVE_MEMBER_NO_PUBLIC_IMPORT": 284,
+            "PUBLIC_HASH_RECEIPTED_NO_DUPLICATE_IMPORT": 49,
+        }:
+            issues.append("v11-archive-member-disposition-count-mismatch")
+        for index, row in enumerate(rows, 1):
+            if not _is_positive_decimal(row.get("occurrence_count")) or not _is_positive_decimal(row.get("member_bytes")):
+                issues.append(f"v11-archive-member-count-or-size-malformed:{index}")
+            digest = row.get("member_sha256")
+            disposition = row.get("disposition")
+            if disposition == "EXACT_PUBLIC_BYTES_PRESENT" and public_exact_hashes is not None and digest not in public_exact_hashes:
+                issues.append(f"v11-archive-member-public-bytes-absent:{index}")
+            if disposition == "PUBLIC_HASH_RECEIPTED_NO_DUPLICATE_IMPORT" and public_mentioned_hashes is not None and digest not in public_mentioned_hashes:
+                issues.append(f"v11-archive-member-public-receipt-absent:{index}")
+        if sum(int(row["occurrence_count"]) for row in rows if _is_positive_decimal(row.get("occurrence_count"))) != 957:
+            issues.append("v11-archive-member-occurrence-total-mismatch")
+
+    return list(dict.fromkeys(issues))
+
+
+def validate_integrated_fable_prompt(text: str) -> list[str]:
+    issues: list[str] = []
+    required = (
+        "FABLE_LOCAL_START.md",
+        "FABLE_LOCAL_SOURCES/s41586-024-08548-w.md",
+        "git check-ignore",
+        "Never add either path with `git add -f`",
+        "AR8R-HR-P236P242-T236-v1",
+        "two rival candidate cores",
+        "proper functionalism",
+        "nominalism, conceptualism, property dualism",
+        "TAC, SAC, Tachikoma",
+        "uncreated-grammar constraints",
+        "guarded Necessary-Being ascent",
+        "Lean formalization",
+        "fable/ar8r-convergence-research-v1",
+        "Never push to\n`main`",
+        "natural campaign closure: NOT_REACHED",
+    )
+    if any(token not in text for token in required):
+        issues.append("integrated-fable-prompt-guard-missing")
+    if hashlib.sha256(text.encode("utf-8")).hexdigest() != FABLE_INTEGRATED_PROMPT_SHA256:
+        issues.append("integrated-fable-prompt-hash-mismatch")
+    return issues
 
 
 def status_is_open(value: Any) -> bool:
@@ -917,6 +1138,82 @@ def validate_formalization_owners(pmr: Any, queue: Any, ten: Any, family: Any) -
         issues.append("theorem-family-relation-coverage-mismatch")
     elif family.get("no_new_identity_merges") is not True:
         issues.append("theorem-family-identity-promoted")
+    if isinstance(family, dict):
+        broad_families = family.get("broad_families", {})
+        expected_family_ids = {
+            "FAMILY-FIBRE",
+            "FAMILY-HIGHER",
+            "FAMILY-ROUTE",
+            "FAMILY-CAUSAL",
+            "FAMILY-DYNAMIC",
+            "FAMILY-ORIGIN",
+            "FAMILY-GROUND",
+            "FAMILY-SOURCE",
+            "FAMILY-ATTRIBUTE",
+            "FAMILY-RIVAL",
+        }
+        if set(broad_families) != expected_family_ids or any(
+            not isinstance(description, str) or not description.strip()
+            for description in broad_families.values()
+        ):
+            issues.append("theorem-family-broad-family-coverage-mismatch")
+
+        expected_later_rows = {
+            ("AR8R-T227", "AR8R-T299", "PMR-007-FRLA-1", "PMR-007-ORTC-V4", "AR8R-T366"): {
+                "later_labels": ["AR8R-T227", "AR8R-T299", "PMR-007-FRLA-1", "PMR-007-ORTC-V4", "AR8R-T366"],
+                "v5_family": "FAMILY-FIBRE",
+                "relation": "SHARED_FAMILY_NO_PROPOSITION_IDENTITY",
+            },
+            ("AR8R-T228", "PMR-007-COB-1"): {
+                "later_labels": ["AR8R-T228", "PMR-007-COB-1"],
+                "v5_family": "FAMILY-DYNAMIC",
+                "relation": "SHARED_FIXED_POINT_MACHINERY_NO_IDENTITY",
+            },
+            ("PMR-007-MLT-1", "PMR-007-SMRB-1", "PMR-007-RSD-1"): {
+                "later_labels": ["PMR-007-MLT-1", "PMR-007-SMRB-1", "PMR-007-RSD-1"],
+                "v5_family": "FAMILY-ROUTE",
+                "relation": "SHARED_TRANSPORT_INFRASTRUCTURE_DISTINCT_RESULTS",
+            },
+            ("Candidate 1", "PMR-007-PRQT-1"): {
+                "later_labels": ["Candidate 1", "PMR-007-PRQT-1"],
+                "v5_family": None,
+                "candidate_v5_families": ["FAMILY-FIBRE", "FAMILY-HIGHER"],
+                "classification_status": "UNRESOLVED_PUBLIC_OWNER_CONFLICT",
+                "basis_locators": [
+                    "docs/project-closure/ar8r-v11/theorems/candidate-1-hidden-matching-threshold.md#typed-setting",
+                    "docs/project-closure/ar8r-v11/programs/full-program-reentry-v2-source/AR8R_FULL_PROGRAM_REENTRY_MAP_V2.md#S09",
+                    "docs/project-closure/ar8r-v11/post-merge-proposals/pmr007-rounds11-20/PROPOSED_ORIGIN_AND_ANCESTRY_UPDATES/PMR-007_FRONTIER_ROUND19_PRIOR_ART_AND_FAMILY_NOTE.md#exact-internal-ancestor",
+                ],
+                "relation": "REDUCTION_OR_EXTENSION_NOT_IDENTITY",
+            },
+            ("AR8R-T351", "AR8R-T352", "PMR-007-PRRC-1"): {
+                "later_labels": ["AR8R-T351", "AR8R-T352", "PMR-007-PRRC-1"],
+                "v5_family": "FAMILY-ROUTE",
+                "relation": "WRAPPER_OR_DEPENDENCY_NOT_IDENTITY",
+            },
+            ("AR8R-HR-P236P242-T236-v1",): {
+                "later_labels": ["AR8R-HR-P236P242-T236-v1"],
+                "v5_family": None,
+                "candidate_v5_families": ["FAMILY-DYNAMIC", "FAMILY-SOURCE"],
+                "classification_status": "HISTORICAL_IDENTIFIER_COLLISION_NO_CANONICAL_MERGE",
+                "basis_locators": [
+                    "docs/project-closure/ar8r-v11/provenance/AR8R-HISTORICAL-ID-COLLISION-RECEIPT-P236-P242-V1.yaml",
+                    "docs/project-closure/ar8r-v11/theorems/historical-collision-recoveries/AR8R-HR-P236P242-T236-v1-payload.md",
+                ],
+                "relation": "COLLISION_SAFE_RECOVERY_DIRECT_COROLLARY_NO_IDENTITY",
+            },
+        }
+        later_rows = family.get("later_label_crosswalk", [])
+        actual_later_rows = {
+            tuple(row.get("later_labels", [])): row
+            for row in later_rows
+            if isinstance(row, dict)
+        }
+        if len(actual_later_rows) != len(later_rows) or set(actual_later_rows) != set(expected_later_rows):
+            issues.append("theorem-family-later-crosswalk-coverage-mismatch")
+        for labels, expected_row in expected_later_rows.items():
+            if actual_later_rows.get(labels) != expected_row:
+                issues.append(f"theorem-family-later-crosswalk-mismatch:{'|'.join(labels)}")
     return list(dict.fromkeys(issues))
 
 
@@ -1319,13 +1616,53 @@ def validate_task7_ledgers_and_crosswalks(catalog: Any, ledger: Any, surface: An
     else:
         allowed = {"supports", "constrains"}
         default_kind = flywheel.get("edge_kind_default")
-        for index, row in enumerate(flywheel.get("edges", []), 1):
+        nodes = flywheel.get("nodes", {})
+        if not isinstance(nodes, dict) or not nodes:
+            issues.append("flywheel-nodes-malformed")
+            nodes = {}
+        else:
+            for node_id, node in nodes.items():
+                if not isinstance(node, dict) or not isinstance(node.get("owner"), str) or not node["owner"].strip():
+                    issues.append(f"flywheel-node-owner-malformed:{node_id}")
+                    continue
+                owner = Path(node["owner"])
+                owner_path = (PROGRAMS / owner).resolve()
+                try:
+                    owner_path.relative_to(PACKET.resolve())
+                except ValueError:
+                    issues.append(f"flywheel-node-owner-outside-packet:{node_id}:{node['owner']}")
+                    continue
+                if not owner_path.is_file():
+                    issues.append(f"flywheel-node-owner-missing:{node_id}:{node['owner']}")
+        seen_endpoints: set[tuple[str, str]] = set()
+        edges = flywheel.get("edges", [])
+        if not isinstance(edges, list) or not edges:
+            issues.append("flywheel-edges-malformed")
+            edges = []
+        for index, row in enumerate(edges, 1):
             if not isinstance(row, dict):
                 issues.append(f"flywheel-edge-malformed:{index}")
                 continue
             if row.get("kind", default_kind) not in allowed:
                 issues.append(f"flywheel-edge-kind-invalid:{index}")
-            contribution = str(row.get("contribution", "")).lower()
+            source = row.get("from")
+            target = row.get("to")
+            if source not in nodes:
+                issues.append(f"flywheel-edge-source-unknown:{index}:{source}")
+            if target not in nodes:
+                issues.append(f"flywheel-edge-target-unknown:{index}:{target}")
+            if isinstance(source, str) and isinstance(target, str):
+                endpoint = (source, target)
+                if endpoint in seen_endpoints:
+                    issues.append(f"flywheel-edge-duplicate-endpoint:{source}:{target}")
+                seen_endpoints.add(endpoint)
+            contribution_raw = row.get("contribution")
+            nontransfer_raw = row.get("nontransfer")
+            if not isinstance(contribution_raw, str) or not contribution_raw.strip():
+                issues.append(f"flywheel-edge-contribution-missing:{index}")
+            if not isinstance(nontransfer_raw, str) or not nontransfer_raw.strip():
+                issues.append(f"flywheel-edge-nontransfer-missing:{index}")
+            contribution = str(contribution_raw or "").lower()
             if any(re.search(rf"\b{verb}\b", contribution) for verb in ("proves", "adopts", "promotes", "closes")):
                 issues.append(f"flywheel-promotion-verb:{index}")
     if not isinstance(two_thread, dict):
@@ -1741,6 +2078,15 @@ def validate_osm_program_integration(crosswalk: Any, milestones: Any, flywheel: 
     )
     if any(token not in prompt for token in prompt_tokens):
         issues.append("osm-program-fable-prompt-guard-missing")
+    integrated_prompt = FABLE_INTEGRATED_PROMPT.read_text(encoding="utf-8") if FABLE_INTEGRATED_PROMPT.is_file() else ""
+    issues.extend(validate_integrated_fable_prompt(integrated_prompt))
+    ignore_lines = {
+        line.strip()
+        for line in GITIGNORE.read_text(encoding="utf-8").splitlines()
+        if line.strip() and not line.lstrip().startswith("#")
+    }
+    if not {"FABLE_LOCAL_START.md", "FABLE_LOCAL_SOURCES/"}.issubset(ignore_lines):
+        issues.append("integrated-fable-local-input-ignore-contract-missing")
     if not OSM_PROGRAM_NOTE.is_file():
         issues.append("osm-program-human-readable-owner-missing")
     return list(dict.fromkeys(issues))
@@ -1755,7 +2101,7 @@ def validate_task7_public_privacy() -> list[str]:
         TAC_REGISTRY, PMR_MAP, LEAN_QUEUE, TEN_CONFLICT, FAMILY_CROSSWALK, CONNES_RECEIPT,
         LEAN_V7, OSW15, TWO_THREAD_RECEIPT, MILESTONE_CHARTER, MILESTONES,
         COMPATIBILITY_OVERLAY, ASCENT_V2, SURFACE_CUSTODY, FLYWHEEL, PROJECTION,
-        OSM_PROGRAM_CROSSWALK, OSM_PROGRAM_NOTE, FABLE_OSM_PROMPT,
+        OSM_PROGRAM_CROSSWALK, OSM_PROGRAM_NOTE, FABLE_OSM_PROMPT, FABLE_INTEGRATED_PROMPT,
     ]
     paths.extend(path for path in DEFERRED_EXACT.rglob("*") if path.is_file())
     for path in paths:
@@ -1778,6 +2124,9 @@ def validate_packet() -> list[str]:
         ORIGIN_V6,
         RECOVERY_OVERLAY,
         SOURCE_UNIVERSE,
+        SOURCE_UNIVERSE_V2,
+        HISTORICAL_COLLISION_RECEIPT,
+        HISTORICAL_COLLISION_PAYLOAD,
         POST_MERGE_CATALOG,
         THREAD_CUSTODY,
         LINK_DRIFT,
@@ -1803,6 +2152,7 @@ def validate_packet() -> list[str]:
         TWO_THREAD_RECEIPT,
         MILESTONE_CHARTER,
         MILESTONES,
+        FABLE_INTEGRATED_PROMPT,
         COMPATIBILITY_OVERLAY,
         ASCENT_V2,
         CURRENT_STATE,
@@ -1831,7 +2181,7 @@ def validate_packet() -> list[str]:
         issues.append("duplicate-ledger-item-id")
     if set(item_ids) != set(row_ids):
         issues.append("catalog-ledger-coverage-mismatch")
-    if len(item_ids) < 125:
+    if len(item_ids) < 128:
         issues.append("claim-level-catalog-regressed")
 
     downloads = [
@@ -1870,6 +2220,23 @@ def validate_packet() -> list[str]:
     )
     if dispositions.get(None):
         issues.append("missing-terminal-disposition")
+    allowed_publication_states = {
+        "INTEGRATED",
+        "MATERIALIZED_PUBLIC_PROPOSAL_NOT_ADOPTED",
+        "DEFERRED",
+        "BLOCKED",
+        "EXCLUDED",
+    }
+    for row in rows:
+        if not isinstance(row, dict):
+            continue
+        publication_state = row.get("publication_state")
+        if publication_state not in allowed_publication_states:
+            issues.append(f"invalid-publication-state:{row.get('item_id')}:{publication_state}")
+        if publication_state == "MATERIALIZED_PUBLIC_PROPOSAL_NOT_ADOPTED":
+            owner = ROOT / row.get("owner_path", "")
+            if not owner.exists():
+                issues.append(f"materialized-proposal-owner-missing:{row.get('item_id')}")
 
     fixture = load_yaml(FIXTURE)
     fixture_issues = validate_campaign_state(fixture)
@@ -1937,6 +2304,137 @@ def validate_packet() -> list[str]:
             rows = sum(1 for _ in csv.reader(handle)) - 1
         if rows != mapping.get("rows"):
             issues.append(f"closure-map-row-count-mismatch:{mapping.get('path')}")
+
+    universe_v2 = load_yaml(SOURCE_UNIVERSE_V2)
+    expected_v11_ledgers = {
+        "V11_ATTACHMENT_INDEX": ("a236e9d40b2ed376953e7fce0d384224509a6567ac2549840b4bb3c764424b57", 1007),
+        "V11_DOWNLOAD_AND_ARCHIVE_LEDGER_CSV": ("d1aa7644474123e2ae54c2cc46ea1bba9e7a40bde42447cd9c51dd75d69ba332", 187),
+        "V11_DOWNLOAD_AND_ARCHIVE_LEDGER_JSONL": ("89caf73dcf7644acd0cd14b71a5b97ce872ac92361a171a5f9f6928ee91e0f06", 161),
+        "V11_ARCHIVE_INTEGRITY_AND_EXTRACTION_LEDGER": ("35f8312da49dd8ab5d198755a17a5b0101543e4cb1a099439458a7f36b6300a7", 10),
+        "V11_ARCHIVE_MEMBER_HASH_LEDGER": ("9c034a9d65a9cb6c6c5a9890ae3fb15eb850372dcca821f88845b65a428769ad", 957),
+    }
+    actual_v11_ledgers = {
+        row.get("surface"): (row.get("sha256"), row.get("rows"))
+        for row in universe_v2.get("immutable_v11_source_ledgers", [])
+        if isinstance(row, dict)
+    }
+    for surface, expected in expected_v11_ledgers.items():
+        if actual_v11_ledgers.get(surface) != expected:
+            issues.append(f"v11-source-ledger-receipt-mismatch:{surface}")
+
+    expected_v11_maps = {
+        "AR8R-V11-ATTACHMENT-ROW-DISPOSITION-MAP-V1.csv": 1007,
+        "AR8R-V11-DOWNLOAD-ROW-DISPOSITION-MAP-V1.csv": 187,
+        "AR8R-V11-ARCHIVE-INSTANCE-DISPOSITION-MAP-V1.csv": 10,
+        "AR8R-V11-ARCHIVE-MEMBER-HASH-DISPOSITION-MAP-V1.csv": 506,
+    }
+    public_exact_hashes, public_mentioned_hashes = public_hash_evidence()
+    mapped_paths: dict[str, Path] = {}
+    for mapping in universe_v2.get("terminal_maps", []):
+        if not isinstance(mapping, dict):
+            continue
+        name = mapping.get("path", "")
+        path = SOURCE_UNIVERSE_V2.parent / name
+        mapped_paths[name] = path
+        if name not in expected_v11_maps:
+            issues.append(f"unexpected-v11-terminal-map:{name}")
+            continue
+        if not path.is_file():
+            issues.append(f"missing-v11-terminal-map:{name}")
+            continue
+        if hashlib.sha256(path.read_bytes()).hexdigest() != mapping.get("sha256"):
+            issues.append(f"v11-terminal-map-hash-mismatch:{name}")
+        with path.open(encoding="utf-8", newline="") as handle:
+            reader = csv.DictReader(handle)
+            mapped_rows = list(reader)
+            fieldnames = reader.fieldnames
+        if len(mapped_rows) != expected_v11_maps[name] or mapping.get("rows") != len(mapped_rows):
+            issues.append(f"v11-terminal-map-row-count-mismatch:{name}")
+        issues.extend(
+            validate_v11_terminal_map_rows(
+                name,
+                fieldnames,
+                mapped_rows,
+                public_exact_hashes=public_exact_hashes,
+                public_mentioned_hashes=public_mentioned_hashes,
+            )
+        )
+    if set(mapped_paths) != set(expected_v11_maps):
+        issues.append("v11-terminal-map-set-mismatch")
+
+    download_map = mapped_paths.get("AR8R-V11-DOWNLOAD-ROW-DISPOSITION-MAP-V1.csv")
+    if download_map and download_map.is_file():
+        with download_map.open(encoding="utf-8", newline="") as handle:
+            download_map_rows = list(csv.DictReader(handle))
+        distinct_hashes = {row["sha256"] for row in download_map_rows if row.get("sha256")}
+        if len(distinct_hashes) != 157:
+            issues.append("v11-download-distinct-hash-count-mismatch")
+        if sum(not bool(row.get("sha256")) for row in download_map_rows) != 9:
+            issues.append("v11-download-unhashed-boundary-count-mismatch")
+        if any(row.get("disposition") == "PRIVATE_OR_DUPLICATE_OR_UNSELECTED_SOURCE_NO_PUBLIC_IMPORT" for row in download_map_rows):
+            issues.append("v11-download-source-left-generically-unclassified")
+
+    archive_map = mapped_paths.get("AR8R-V11-ARCHIVE-INSTANCE-DISPOSITION-MAP-V1.csv")
+    if archive_map and archive_map.is_file():
+        with archive_map.open(encoding="utf-8", newline="") as handle:
+            archive_rows = list(csv.DictReader(handle))
+        archive5 = [row for row in archive_rows if row.get("archive_sequence") == "5"]
+        if len(archive5) != 1 or archive5[0].get("sha256") != "141deffc4323225e549149ba35b6d2ae55007242459bfb513957420b189a78e8":
+            issues.append("v11-archive5-custody-mismatch")
+        elif archive5[0].get("disposition") != "SUPERSEDED_BOUNDARY_CHECKPOINT_PRIVATE_NO_PUBLIC_IMPORT":
+            issues.append("v11-archive5-disposition-mismatch")
+        if any(row.get("integrity_status") != "PASS" for row in archive_rows):
+            issues.append("v11-archive-integrity-regression")
+
+    dual_relations = universe_v2.get("dual_hash_relations", [])
+    if len(dual_relations) != 1 or not isinstance(dual_relations[0], dict):
+        issues.append("v11-dual-hash-relation-missing")
+    else:
+        relation = dual_relations[0]
+        summary_path = (SOURCE_UNIVERSE_V2.parent / relation.get("public_summary_path", "")).resolve()
+        try:
+            summary_path.relative_to(ROOT.resolve())
+        except ValueError:
+            issues.append("v11-dual-hash-summary-path-escape")
+        if not summary_path.is_file():
+            issues.append("v11-dual-hash-summary-missing")
+        else:
+            if hashlib.sha256(summary_path.read_bytes()).hexdigest() != relation.get("public_summary_sha256"):
+                issues.append("v11-dual-hash-summary-mismatch")
+            if summary_path.stat().st_size != relation.get("public_summary_bytes"):
+                issues.append("v11-dual-hash-summary-size-mismatch")
+        if relation.get("source_exact_sha256") != "31fa5b249ede9a5cd7ee180c175f432fdd29c2d94d43321de95a0ecc40b08d9e":
+            issues.append("v11-dual-hash-source-mismatch")
+        if relation.get("identity_claim") != "SUMMARY_IS_NOT_EXACT_SOURCE_BYTES":
+            issues.append("v11-dual-hash-identity-boundary-missing")
+
+    collision = load_yaml(HISTORICAL_COLLISION_RECEIPT)
+    expected_collision_hash = "6e5f8fde52bd69c4c8e678b0ab7f0e2d5345ff4cf261cf143a7ecbb3c64835c5"
+    if not HISTORICAL_COLLISION_PAYLOAD.is_file():
+        issues.append("historical-collision-payload-missing")
+    else:
+        if HISTORICAL_COLLISION_PAYLOAD.stat().st_size != 1408:
+            issues.append("historical-collision-payload-size-mismatch")
+        if hashlib.sha256(HISTORICAL_COLLISION_PAYLOAD.read_bytes()).hexdigest() != expected_collision_hash:
+            issues.append("historical-collision-payload-hash-mismatch")
+    if hashlib.sha256(ORIGIN_V5.read_bytes()).hexdigest() != "52b1df2961b080bd0c05519883094fc2cd9a93413ca8c1bb1f7935a3a24b0841":
+        issues.append("historical-collision-v5-registry-changed")
+    collision_rows = collision.get("collisions", []) if isinstance(collision, dict) else []
+    recovered = next((row for row in collision_rows if row.get("collision_safe_recovery_identity") == "AR8R-HR-P236P242-T236-v1"), None)
+    if not recovered:
+        issues.append("historical-collision-recovery-row-missing")
+    else:
+        if recovered.get("exact_payload_sha256") != expected_collision_hash or recovered.get("exact_payload_bytes") != 1408:
+            issues.append("historical-collision-receipt-payload-mismatch")
+        if recovered.get("owner_adoption") != "PENDING" or recovered.get("credit_effect") != "NONE":
+            issues.append("historical-collision-recovery-promotion")
+    if collision.get("source_boundary", {}).get("original_historical_file_bytes_recovered") is not False:
+        issues.append("historical-collision-original-byte-overclaim")
+    canonical_t236 = next((row for row in origin_v5.get("theorems", []) if row.get("id") == "AR8R-T236"), {})
+    if "authenticated root support" not in canonical_t236.get("statement", ""):
+        issues.append("canonical-t236-identity-drift")
+    if any(row.get("id") == "AR8R-HR-P236P242-T236-v1" for row in origin_v5.get("theorems", [])):
+        issues.append("collision-recovery-injected-into-v5")
 
     post_merge = load_yaml(POST_MERGE_CATALOG)
     issues.extend(validate_post_merge_catalog(post_merge))

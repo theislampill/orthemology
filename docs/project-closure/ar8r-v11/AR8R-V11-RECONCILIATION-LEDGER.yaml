@@ -4,7 +4,7 @@ terminal_disposition_required: true
 items:
 - item_id: V8DL-001
   disposition: PUBLIC_INTEGRATE
-  publication_state: PROPOSED
+  publication_state: MATERIALIZED_PUBLIC_PROPOSAL_NOT_ADOPTED
   owner_path: docs/project-closure/ar8r-v11/theorems/
   basis: Exact T227 theorem, executable-check, audit, rereview, or identity-custody evidence.
   remaining_burden: Complete the named packet and all V11 validation gates.
@@ -17,67 +17,67 @@ items:
   remaining_burden: Retain for custody only; do not restore over later authority.
 - item_id: V8DL-003
   disposition: PUBLIC_INTEGRATE
-  publication_state: PROPOSED
+  publication_state: MATERIALIZED_PUBLIC_PROPOSAL_NOT_ADOPTED
   owner_path: docs/project-closure/ar8r-v11/theorems/
   basis: Exact T227 theorem, executable-check, audit, rereview, or identity-custody evidence.
   remaining_burden: Complete the named packet and all V11 validation gates.
 - item_id: V8DL-004
   disposition: PUBLIC_INTEGRATE
-  publication_state: PROPOSED
+  publication_state: MATERIALIZED_PUBLIC_PROPOSAL_NOT_ADOPTED
   owner_path: docs/project-closure/ar8r-v11/theorems/
   basis: Exact T227 theorem, executable-check, audit, rereview, or identity-custody evidence.
   remaining_burden: Complete the named packet and all V11 validation gates.
 - item_id: V8DL-005
   disposition: PUBLIC_INTEGRATE
-  publication_state: PROPOSED
+  publication_state: MATERIALIZED_PUBLIC_PROPOSAL_NOT_ADOPTED
   owner_path: docs/project-closure/ar8r-v11/theorems/
   basis: Exact T227 theorem, executable-check, audit, rereview, or identity-custody evidence.
   remaining_burden: Complete the named packet and all V11 validation gates.
 - item_id: V8DL-006
   disposition: PUBLIC_INTEGRATE
-  publication_state: PROPOSED
+  publication_state: MATERIALIZED_PUBLIC_PROPOSAL_NOT_ADOPTED
   owner_path: docs/project-closure/ar8r-v11/theorems/
   basis: Exact T227 theorem, executable-check, audit, rereview, or identity-custody evidence.
   remaining_burden: Complete the named packet and all V11 validation gates.
 - item_id: V8DL-007
   disposition: PUBLIC_INTEGRATE
-  publication_state: PROPOSED
+  publication_state: MATERIALIZED_PUBLIC_PROPOSAL_NOT_ADOPTED
   owner_path: docs/project-closure/ar8r-v11/theorems/
   basis: Exact T227 theorem, executable-check, audit, rereview, or identity-custody evidence.
   remaining_burden: Complete the named packet and all V11 validation gates.
 - item_id: V8DL-008
   disposition: PUBLIC_INTEGRATE
-  publication_state: PROPOSED
+  publication_state: MATERIALIZED_PUBLIC_PROPOSAL_NOT_ADOPTED
   owner_path: docs/project-closure/ar8r-v11/theorems/
   basis: Exact T227 theorem, executable-check, audit, rereview, or identity-custody evidence.
   remaining_burden: Complete the named packet and all V11 validation gates.
 - item_id: V8DL-009
   disposition: PUBLIC_SUMMARY
-  publication_state: PROPOSED
+  publication_state: MATERIALIZED_PUBLIC_PROPOSAL_NOT_ADOPTED
   owner_path: docs/project-closure/ar8r-v11/AR8R-V11-DEFERRED-AND-EXCLUDED.md
   basis: Custody and contrast-audit evidence for identities that remain unresolved; it does not supply a lost payload.
   remaining_burden: Publish only the bounded status summary; retain exact private bytes locally.
 - item_id: V8DL-010
   disposition: PUBLIC_SUMMARY
-  publication_state: PROPOSED
+  publication_state: MATERIALIZED_PUBLIC_PROPOSAL_NOT_ADOPTED
   owner_path: docs/project-closure/ar8r-v11/AR8R-V11-DEFERRED-AND-EXCLUDED.md
   basis: Custody and contrast-audit evidence for identities that remain unresolved; it does not supply a lost payload.
   remaining_burden: Publish only the bounded status summary; retain exact private bytes locally.
 - item_id: V8DL-011
   disposition: PUBLIC_SUMMARY
-  publication_state: PROPOSED
+  publication_state: MATERIALIZED_PUBLIC_PROPOSAL_NOT_ADOPTED
   owner_path: docs/project-closure/ar8r-v11/AR8R-V11-DEFERRED-AND-EXCLUDED.md
   basis: Custody and contrast-audit evidence for identities that remain unresolved; it does not supply a lost payload.
   remaining_burden: Publish only the bounded status summary; retain exact private bytes locally.
 - item_id: V8DL-012
   disposition: PUBLIC_SUMMARY
-  publication_state: PROPOSED
+  publication_state: MATERIALIZED_PUBLIC_PROPOSAL_NOT_ADOPTED
   owner_path: docs/project-closure/ar8r-v11/AR8R-V11-DEFERRED-AND-EXCLUDED.md
   basis: Custody and contrast-audit evidence for identities that remain unresolved; it does not supply a lost payload.
   remaining_burden: Publish only the bounded status summary; retain exact private bytes locally.
 - item_id: V8DL-013
   disposition: PUBLIC_SUMMARY
-  publication_state: PROPOSED
+  publication_state: MATERIALIZED_PUBLIC_PROPOSAL_NOT_ADOPTED
   owner_path: docs/project-closure/ar8r-v11/AR8R-V11-DEFERRED-AND-EXCLUDED.md
   basis: Custody and contrast-audit evidence for identities that remain unresolved; it does not supply a lost payload.
   remaining_burden: Publish only the bounded status summary; retain exact private bytes locally.
@@ -96,70 +96,70 @@ items:
   remaining_burden: Keep local; publish no raw private content or locator.
 - item_id: V8DL-016
   disposition: PUBLIC_SUMMARY
-  publication_state: PROPOSED
+  publication_state: MATERIALIZED_PUBLIC_PROPOSAL_NOT_ADOPTED
   owner_path: docs/project-closure/ar8r-v11/programs/candidate-n-r5-track-t-and-source-ascent.md
   basis: Source/formal/daee/Lean crosswalk or P597-P620 custody evidence; publish only bounded status and non-verbatim
     conclusions.
   remaining_burden: Publish only the bounded status summary; retain exact private bytes locally.
 - item_id: V8DL-017
   disposition: PUBLIC_SUMMARY
-  publication_state: PROPOSED
+  publication_state: MATERIALIZED_PUBLIC_PROPOSAL_NOT_ADOPTED
   owner_path: docs/project-closure/ar8r-v11/programs/candidate-n-r5-track-t-and-source-ascent.md
   basis: Source/formal/daee/Lean crosswalk or P597-P620 custody evidence; publish only bounded status and non-verbatim
     conclusions.
   remaining_burden: Publish only the bounded status summary; retain exact private bytes locally.
 - item_id: V8DL-018
   disposition: PUBLIC_SUMMARY
-  publication_state: PROPOSED
+  publication_state: MATERIALIZED_PUBLIC_PROPOSAL_NOT_ADOPTED
   owner_path: docs/project-closure/ar8r-v11/programs/candidate-n-r5-track-t-and-source-ascent.md
   basis: Source/formal/daee/Lean crosswalk or P597-P620 custody evidence; publish only bounded status and non-verbatim
     conclusions.
   remaining_burden: Publish only the bounded status summary; retain exact private bytes locally.
 - item_id: V8DL-019
   disposition: PUBLIC_SUMMARY
-  publication_state: PROPOSED
+  publication_state: MATERIALIZED_PUBLIC_PROPOSAL_NOT_ADOPTED
   owner_path: docs/project-closure/ar8r-v11/programs/candidate-n-r5-track-t-and-source-ascent.md
   basis: Source/formal/daee/Lean crosswalk or P597-P620 custody evidence; publish only bounded status and non-verbatim
     conclusions.
   remaining_burden: Publish only the bounded status summary; retain exact private bytes locally.
 - item_id: V8DL-020
   disposition: PUBLIC_SUMMARY
-  publication_state: PROPOSED
+  publication_state: MATERIALIZED_PUBLIC_PROPOSAL_NOT_ADOPTED
   owner_path: docs/project-closure/ar8r-v11/programs/candidate-n-r5-track-t-and-source-ascent.md
   basis: Source/formal/daee/Lean crosswalk or P597-P620 custody evidence; publish only bounded status and non-verbatim
     conclusions.
   remaining_burden: Publish only the bounded status summary; retain exact private bytes locally.
 - item_id: V8DL-021
   disposition: PUBLIC_SUMMARY
-  publication_state: PROPOSED
+  publication_state: MATERIALIZED_PUBLIC_PROPOSAL_NOT_ADOPTED
   owner_path: docs/project-closure/ar8r-v11/programs/candidate-n-r5-track-t-and-source-ascent.md
   basis: Source/formal/daee/Lean crosswalk or P597-P620 custody evidence; publish only bounded status and non-verbatim
     conclusions.
   remaining_burden: Publish only the bounded status summary; retain exact private bytes locally.
 - item_id: V8DL-022
   disposition: PUBLIC_SUMMARY
-  publication_state: PROPOSED
+  publication_state: MATERIALIZED_PUBLIC_PROPOSAL_NOT_ADOPTED
   owner_path: docs/project-closure/ar8r-v11/programs/candidate-n-r5-track-t-and-source-ascent.md
   basis: Source/formal/daee/Lean crosswalk or P597-P620 custody evidence; publish only bounded status and non-verbatim
     conclusions.
   remaining_burden: Publish only the bounded status summary; retain exact private bytes locally.
 - item_id: V8DL-023
   disposition: PUBLIC_SUMMARY
-  publication_state: PROPOSED
+  publication_state: MATERIALIZED_PUBLIC_PROPOSAL_NOT_ADOPTED
   owner_path: docs/project-closure/ar8r-v11/programs/candidate-n-r5-track-t-and-source-ascent.md
   basis: Source/formal/daee/Lean crosswalk or P597-P620 custody evidence; publish only bounded status and non-verbatim
     conclusions.
   remaining_burden: Publish only the bounded status summary; retain exact private bytes locally.
 - item_id: V8DL-024
   disposition: PUBLIC_SUMMARY
-  publication_state: PROPOSED
+  publication_state: MATERIALIZED_PUBLIC_PROPOSAL_NOT_ADOPTED
   owner_path: docs/project-closure/ar8r-v11/programs/candidate-n-r5-track-t-and-source-ascent.md
   basis: Source/formal/daee/Lean crosswalk or P597-P620 custody evidence; publish only bounded status and non-verbatim
     conclusions.
   remaining_burden: Publish only the bounded status summary; retain exact private bytes locally.
 - item_id: V8DL-025
   disposition: PUBLIC_SUMMARY
-  publication_state: PROPOSED
+  publication_state: MATERIALIZED_PUBLIC_PROPOSAL_NOT_ADOPTED
   owner_path: docs/project-closure/ar8r-v11/programs/candidate-n-r5-track-t-and-source-ascent.md
   basis: Source/formal/daee/Lean crosswalk or P597-P620 custody evidence; publish only bounded status and non-verbatim
     conclusions.
@@ -185,67 +185,67 @@ items:
   remaining_burden: Retain for custody only; do not restore over later authority.
 - item_id: V8DL-029
   disposition: PUBLIC_SUMMARY
-  publication_state: PROPOSED
+  publication_state: MATERIALIZED_PUBLIC_PROPOSAL_NOT_ADOPTED
   owner_path: docs/project-closure/ar8r-v11/provenance/
   basis: Family, ancestry, false-multiplicity, identity-recovery, or state-reconciliation evidence.
   remaining_burden: Publish only the bounded status summary; retain exact private bytes locally.
 - item_id: V8DL-030
   disposition: PUBLIC_SUMMARY
-  publication_state: PROPOSED
+  publication_state: MATERIALIZED_PUBLIC_PROPOSAL_NOT_ADOPTED
   owner_path: docs/project-closure/ar8r-v11/provenance/
   basis: Family, ancestry, false-multiplicity, identity-recovery, or state-reconciliation evidence.
   remaining_burden: Publish only the bounded status summary; retain exact private bytes locally.
 - item_id: V8DL-031
   disposition: PUBLIC_SUMMARY
-  publication_state: PROPOSED
+  publication_state: MATERIALIZED_PUBLIC_PROPOSAL_NOT_ADOPTED
   owner_path: docs/project-closure/ar8r-v11/provenance/
   basis: Family, ancestry, false-multiplicity, identity-recovery, or state-reconciliation evidence.
   remaining_burden: Publish only the bounded status summary; retain exact private bytes locally.
 - item_id: V8DL-032
   disposition: PUBLIC_INTEGRATE
-  publication_state: PROPOSED
+  publication_state: MATERIALIZED_PUBLIC_PROPOSAL_NOT_ADOPTED
   owner_path: docs/project-closure/ar8r-v11/experiments/
   basis: Exact custody for the negative T299/T300 synthetic pilot and its repaired interpretation.
   remaining_burden: Complete the named packet and all V11 validation gates.
 - item_id: V8DL-033
   disposition: PUBLIC_SUMMARY
-  publication_state: PROPOSED
+  publication_state: MATERIALIZED_PUBLIC_PROPOSAL_NOT_ADOPTED
   owner_path: docs/project-closure/ar8r-v11/provenance/
   basis: Family, ancestry, false-multiplicity, identity-recovery, or state-reconciliation evidence.
   remaining_burden: Publish only the bounded status summary; retain exact private bytes locally.
 - item_id: V8DL-034
   disposition: PUBLIC_SUMMARY
-  publication_state: PROPOSED
+  publication_state: MATERIALIZED_PUBLIC_PROPOSAL_NOT_ADOPTED
   owner_path: docs/project-closure/ar8r-v11/provenance/
   basis: Family, ancestry, false-multiplicity, identity-recovery, or state-reconciliation evidence.
   remaining_burden: Publish only the bounded status summary; retain exact private bytes locally.
 - item_id: V8DL-035
   disposition: PUBLIC_SUMMARY
-  publication_state: PROPOSED
+  publication_state: MATERIALIZED_PUBLIC_PROPOSAL_NOT_ADOPTED
   owner_path: docs/project-closure/ar8r-v11/provenance/
   basis: Family, ancestry, false-multiplicity, identity-recovery, or state-reconciliation evidence.
   remaining_burden: Publish only the bounded status summary; retain exact private bytes locally.
 - item_id: V8DL-036
   disposition: PUBLIC_INTEGRATE
-  publication_state: PROPOSED
+  publication_state: MATERIALIZED_PUBLIC_PROPOSAL_NOT_ADOPTED
   owner_path: docs/project-closure/ar8r-v11/experiments/
   basis: Exact custody for the negative T299/T300 synthetic pilot and its repaired interpretation.
   remaining_burden: Complete the named packet and all V11 validation gates.
 - item_id: V8DL-037
   disposition: PUBLIC_INTEGRATE
-  publication_state: PROPOSED
+  publication_state: MATERIALIZED_PUBLIC_PROPOSAL_NOT_ADOPTED
   owner_path: docs/project-closure/ar8r-v11/experiments/
   basis: Exact custody for the negative T299/T300 synthetic pilot and its repaired interpretation.
   remaining_burden: Complete the named packet and all V11 validation gates.
 - item_id: V8DL-038
   disposition: PUBLIC_INTEGRATE
-  publication_state: PROPOSED
+  publication_state: MATERIALIZED_PUBLIC_PROPOSAL_NOT_ADOPTED
   owner_path: docs/project-closure/ar8r-v11/experiments/
   basis: Exact custody for the negative T299/T300 synthetic pilot and its repaired interpretation.
   remaining_burden: Complete the named packet and all V11 validation gates.
 - item_id: V8DL-039
   disposition: PUBLIC_INTEGRATE
-  publication_state: PROPOSED
+  publication_state: MATERIALIZED_PUBLIC_PROPOSAL_NOT_ADOPTED
   owner_path: docs/project-closure/ar8r-v11/experiments/
   basis: Exact custody for the negative T299/T300 synthetic pilot and its repaired interpretation.
   remaining_burden: Complete the named packet and all V11 validation gates.
@@ -263,13 +263,13 @@ items:
   remaining_burden: Retain for custody only; do not restore over later authority.
 - item_id: V8DL-042
   disposition: PUBLIC_SUMMARY
-  publication_state: PROPOSED
+  publication_state: MATERIALIZED_PUBLIC_PROPOSAL_NOT_ADOPTED
   owner_path: docs/project-closure/ar8r-v11/provenance/
   basis: Checkpoint, segment, portfolio, PRH/SAC, or readiness evidence retained as bounded custody.
   remaining_burden: Publish only the bounded status summary; retain exact private bytes locally.
 - item_id: V8DL-043
   disposition: PUBLIC_SUMMARY
-  publication_state: PROPOSED
+  publication_state: MATERIALIZED_PUBLIC_PROPOSAL_NOT_ADOPTED
   owner_path: docs/project-closure/ar8r-v11/provenance/
   basis: Checkpoint, segment, portfolio, PRH/SAC, or readiness evidence retained as bounded custody.
   remaining_burden: Publish only the bounded status summary; retain exact private bytes locally.
@@ -281,48 +281,48 @@ items:
   remaining_burden: Retain for custody only; do not restore over later authority.
 - item_id: V8DL-045
   disposition: PUBLIC_SUMMARY
-  publication_state: PROPOSED
+  publication_state: MATERIALIZED_PUBLIC_PROPOSAL_NOT_ADOPTED
   owner_path: docs/project-closure/ar8r-v11/programs/ten-advances-and-source-custody.md
   basis: Ten Advances custody, scope, provenance, or packaging evidence; it does not establish external review or
     adoption.
   remaining_burden: Publish only the bounded status summary; retain exact private bytes locally.
 - item_id: V8DL-046
   disposition: PUBLIC_INTEGRATE
-  publication_state: PROPOSED
+  publication_state: MATERIALIZED_PUBLIC_PROPOSAL_NOT_ADOPTED
   owner_path: docs/project-closure/ar8r-v11/provenance/
   basis: Latest pre-V8 origin, canonical-core, pair, piece-count, or Lean custody authority used to derive sanitized
     V11 public receipts.
   remaining_burden: Complete the named packet and all V11 validation gates.
 - item_id: V8DL-047
   disposition: PUBLIC_INTEGRATE
-  publication_state: PROPOSED
+  publication_state: MATERIALIZED_PUBLIC_PROPOSAL_NOT_ADOPTED
   owner_path: docs/project-closure/ar8r-v11/provenance/
   basis: Latest pre-V8 origin, canonical-core, pair, piece-count, or Lean custody authority used to derive sanitized
     V11 public receipts.
   remaining_burden: Complete the named packet and all V11 validation gates.
 - item_id: V8DL-048
   disposition: PUBLIC_INTEGRATE
-  publication_state: PROPOSED
+  publication_state: MATERIALIZED_PUBLIC_PROPOSAL_NOT_ADOPTED
   owner_path: docs/project-closure/ar8r-v11/provenance/
   basis: Latest pre-V8 origin, canonical-core, pair, piece-count, or Lean custody authority used to derive sanitized
     V11 public receipts.
   remaining_burden: Complete the named packet and all V11 validation gates.
 - item_id: V8DL-049
   disposition: PUBLIC_INTEGRATE
-  publication_state: PROPOSED
+  publication_state: MATERIALIZED_PUBLIC_PROPOSAL_NOT_ADOPTED
   owner_path: docs/project-closure/ar8r-v11/provenance/
   basis: Latest pre-V8 origin, canonical-core, pair, piece-count, or Lean custody authority used to derive sanitized
     V11 public receipts.
   remaining_burden: Complete the named packet and all V11 validation gates.
 - item_id: V8DL-050
   disposition: PUBLIC_SUMMARY
-  publication_state: PROPOSED
+  publication_state: MATERIALIZED_PUBLIC_PROPOSAL_NOT_ADOPTED
   owner_path: docs/project-closure/ar8r-v11/provenance/
   basis: Checkpoint, segment, portfolio, PRH/SAC, or readiness evidence retained as bounded custody.
   remaining_burden: Publish only the bounded status summary; retain exact private bytes locally.
 - item_id: V8DL-051
   disposition: PUBLIC_INTEGRATE
-  publication_state: PROPOSED
+  publication_state: MATERIALIZED_PUBLIC_PROPOSAL_NOT_ADOPTED
   owner_path: docs/project-closure/ar8r-v11/provenance/
   basis: Latest pre-V8 origin, canonical-core, pair, piece-count, or Lean custody authority used to derive sanitized
     V11 public receipts.
@@ -335,40 +335,40 @@ items:
   remaining_burden: Retain for custody only; do not restore over later authority.
 - item_id: V8DL-053
   disposition: PUBLIC_SUMMARY
-  publication_state: PROPOSED
+  publication_state: MATERIALIZED_PUBLIC_PROPOSAL_NOT_ADOPTED
   owner_path: docs/project-closure/ar8r-v11/provenance/
   basis: Checkpoint, segment, portfolio, PRH/SAC, or readiness evidence retained as bounded custody.
   remaining_burden: Publish only the bounded status summary; retain exact private bytes locally.
 - item_id: V8DL-054
   disposition: PUBLIC_SUMMARY
-  publication_state: PROPOSED
+  publication_state: MATERIALIZED_PUBLIC_PROPOSAL_NOT_ADOPTED
   owner_path: docs/project-closure/ar8r-v11/provenance/
   basis: Checkpoint, segment, portfolio, PRH/SAC, or readiness evidence retained as bounded custody.
   remaining_burden: Publish only the bounded status summary; retain exact private bytes locally.
 - item_id: V8DL-055
   disposition: PUBLIC_SUMMARY
-  publication_state: PROPOSED
+  publication_state: MATERIALIZED_PUBLIC_PROPOSAL_NOT_ADOPTED
   owner_path: docs/project-closure/ar8r-v11/programs/ten-advances-and-source-custody.md
   basis: Ten Advances custody, scope, provenance, or packaging evidence; it does not establish external review or
     adoption.
   remaining_burden: Publish only the bounded status summary; retain exact private bytes locally.
 - item_id: V8DL-056
   disposition: PUBLIC_SUMMARY
-  publication_state: PROPOSED
+  publication_state: MATERIALIZED_PUBLIC_PROPOSAL_NOT_ADOPTED
   owner_path: docs/project-closure/ar8r-v11/programs/ten-advances-and-source-custody.md
   basis: Ten Advances custody, scope, provenance, or packaging evidence; it does not establish external review or
     adoption.
   remaining_burden: Publish only the bounded status summary; retain exact private bytes locally.
 - item_id: V8DL-057
   disposition: PUBLIC_SUMMARY
-  publication_state: PROPOSED
+  publication_state: MATERIALIZED_PUBLIC_PROPOSAL_NOT_ADOPTED
   owner_path: docs/project-closure/ar8r-v11/programs/ten-advances-and-source-custody.md
   basis: Ten Advances custody, scope, provenance, or packaging evidence; it does not establish external review or
     adoption.
   remaining_burden: Publish only the bounded status summary; retain exact private bytes locally.
 - item_id: V8DL-058
   disposition: PUBLIC_SUMMARY
-  publication_state: PROPOSED
+  publication_state: MATERIALIZED_PUBLIC_PROPOSAL_NOT_ADOPTED
   owner_path: docs/project-closure/ar8r-v11/programs/ten-advances-and-source-custody.md
   basis: Ten Advances custody, scope, provenance, or packaging evidence; it does not establish external review or
     adoption.
@@ -393,7 +393,7 @@ items:
   remaining_burden: Retain for custody only; do not restore over later authority.
 - item_id: V8DL-062
   disposition: PUBLIC_SUMMARY
-  publication_state: PROPOSED
+  publication_state: MATERIALIZED_PUBLIC_PROPOSAL_NOT_ADOPTED
   owner_path: docs/project-closure/ar8r-v11/programs/ten-advances-and-source-custody.md
   basis: Ten Advances custody, scope, provenance, or packaging evidence; it does not establish external review or
     adoption.
@@ -431,27 +431,27 @@ items:
   remaining_burden: Keep local; publish no raw private content or locator.
 - item_id: AR8R-LANE-003
   disposition: PUBLIC_INTEGRATE
-  publication_state: PROPOSED
+  publication_state: MATERIALIZED_PUBLIC_PROPOSAL_NOT_ADOPTED
   owner_path: docs/project-closure/ar8r-v11/governance/INCIDENT-AR7-FALSE-MENISCUS-CLOSURE.md
   basis: Requires a campaign-level fail-closed reconciliation rule in addition to existing episode-level closure
     semantics.
   remaining_burden: Complete the named packet and all V11 validation gates.
 - item_id: AR8R-LANE-004
   disposition: PUBLIC_INTEGRATE
-  publication_state: PROPOSED
+  publication_state: MATERIALIZED_PUBLIC_PROPOSAL_NOT_ADOPTED
   owner_path: docs/project-closure/ar8r-v11/theorems/candidate-1-hidden-matching-threshold.md
   basis: Exact deterministic theorem and proof are recoverable; randomized complexity, exhaustive prior art, external
     review, and adoption remain open.
   remaining_burden: Complete the named packet and all V11 validation gates.
 - item_id: AR8R-LANE-005
   disposition: PUBLIC_INTEGRATE
-  publication_state: PROPOSED
+  publication_state: MATERIALIZED_PUBLIC_PROPOSAL_NOT_ADOPTED
   owner_path: docs/project-closure/ar8r-v11/theorems/ar8r-t299-matched-intervention-burden-landing.md
   basis: Repaired exact theorem authority used with the negative synthetic pilot.
   remaining_burden: Complete the named packet and all V11 validation gates.
 - item_id: AR8R-LANE-006
   disposition: PUBLIC_INTEGRATE
-  publication_state: PROPOSED
+  publication_state: MATERIALIZED_PUBLIC_PROPOSAL_NOT_ADOPTED
   owner_path: docs/project-closure/ar8r-v11/theorems/ar8r-t300-lower-order-alignment-blind-restoration.md
   basis: Repaired exact theorem authority used with the negative synthetic pilot.
   remaining_burden: Complete the named packet and all V11 validation gates.
@@ -482,81 +482,81 @@ items:
   remaining_burden: Supply the missing independent audit and rereview before theorem adoption.
 - item_id: AR8R-LANE-011
   disposition: PUBLIC_SUMMARY
-  publication_state: PROPOSED
+  publication_state: MATERIALIZED_PUBLIC_PROPOSAL_NOT_ADOPTED
   owner_path: docs/project-closure/ar8r-v11/programs/tensor-and-bitter-lesson.md
   basis: Preserve the representation-learning protocol and anti-hand-authored-taxonomy warning without inventing
     the missing seventh A-G definition.
   remaining_burden: Publish only the bounded status summary; retain exact private bytes locally.
 - item_id: AR8R-LANE-012
   disposition: PUBLIC_SUMMARY
-  publication_state: PROPOSED
+  publication_state: MATERIALIZED_PUBLIC_PROPOSAL_NOT_ADOPTED
   owner_path: docs/project-closure/ar8r-v11/programs/agentic-communication.md
   basis: Preserve multi-agent receipt, authorization, provenance, acknowledgment, and common-knowledge burdens as
     a program unless separately audited.
   remaining_burden: Publish only the bounded status summary; retain exact private bytes locally.
 - item_id: AR8R-LANE-013
   disposition: PUBLIC_SUMMARY
-  publication_state: PROPOSED
+  publication_state: MATERIALIZED_PUBLIC_PROPOSAL_NOT_ADOPTED
   owner_path: docs/project-closure/ar8r-v11/programs/language-translation-and-version-custody.md
   basis: Preserve translation-fibre, occurrence-meaning, version-applicability, and authority boundaries.
   remaining_burden: Publish only the bounded status summary; retain exact private bytes locally.
 - item_id: AR8R-LANE-014
   disposition: PUBLIC_SUMMARY
-  publication_state: PROPOSED
+  publication_state: MATERIALIZED_PUBLIC_PROPOSAL_NOT_ADOPTED
   owner_path: docs/project-closure/ar8r-v11/programs/tac-sac-identity-and-independence.md
   basis: Keep identity, state, function, lineage, provenance root, and evidential independence distinct; historical
     terms remain unassigned without exact source.
   remaining_burden: Publish only the bounded status summary; retain exact private bytes locally.
 - item_id: AR8R-LANE-015
   disposition: PUBLIC_SUMMARY
-  publication_state: PROPOSED
+  publication_state: MATERIALIZED_PUBLIC_PROPOSAL_NOT_ADOPTED
   owner_path: docs/project-closure/ar8r-v11/programs/uncreated-grammar-and-articulability.md
   basis: Preserve grammar/articulability questions and nonbridge constraints; do not treat program theorem labels
     as admitted results.
   remaining_burden: Publish only the bounded status summary; retain exact private bytes locally.
 - item_id: AR8R-LANE-016
   disposition: PUBLIC_SUMMARY
-  publication_state: PROPOSED
+  publication_state: MATERIALIZED_PUBLIC_PROPOSAL_NOT_ADOPTED
   owner_path: docs/project-closure/ar8r-v11/programs/candidate-n-r5-track-t-and-source-ascent.md
   basis: Preserve rival architectures, plural realization, common-bearer guards, epistemic unification, and transcendental-ascent
     burdens without claiming a champion.
   remaining_burden: Publish only the bounded status summary; retain exact private bytes locally.
 - item_id: AR8R-LANE-017
   disposition: PUBLIC_SUMMARY
-  publication_state: PROPOSED
+  publication_state: MATERIALIZED_PUBLIC_PROPOSAL_NOT_ADOPTED
   owner_path: docs/project-closure/ar8r-v11/programs/ten-advances-and-source-custody.md
   basis: Preserve exact coverage and scope ceilings; no external review, source specialist confirmation, or adoption.
   remaining_burden: Publish only the bounded status summary; retain exact private bytes locally.
 - item_id: AR8R-LANE-018
   disposition: PUBLIC_INTEGRATE
-  publication_state: PROPOSED
+  publication_state: MATERIALIZED_PUBLIC_PROPOSAL_NOT_ADOPTED
   owner_path: docs/project-closure/ar8r-v11/provenance/AR8R-THEOREM-FAMILY-REGISTRY-V1.yaml
   basis: Prevent repeated formal skeletons from receiving duplicate independent origin or novelty credit.
   remaining_burden: Complete the named packet and all V11 validation gates.
 - item_id: AR8R-LANE-019
   disposition: PUBLIC_INTEGRATE
-  publication_state: PROPOSED
+  publication_state: MATERIALIZED_PUBLIC_PROPOSAL_NOT_ADOPTED
   owner_path: docs/project-closure/ar8r-v11/provenance/AR8R-CANONICAL-THEOREM-ORIGIN-REGISTRY-V6.yaml
   basis: Preserve 18 exact target recoveries, T150 replacement-only, T354 blocked, T366 reconstruction-only, and
     22 unresolved identities.
   remaining_burden: Complete the named packet and all V11 validation gates.
 - item_id: AR8R-LANE-020
   disposition: PUBLIC_SUMMARY
-  publication_state: PROPOSED
+  publication_state: MATERIALIZED_PUBLIC_PROPOSAL_NOT_ADOPTED
   owner_path: docs/project-closure/ar8r-v11/AR8R-V11-DEFERRED-AND-EXCLUDED.md
   basis: Cross-checks Candidate 1, the false-meniscus incident, the T299/T300 pilot, tensor debate, Bitter Lesson,
     and family-registry omissions.
   remaining_burden: Publish only the bounded status summary; retain exact private bytes locally.
 - item_id: AR8R-LANE-021
   disposition: PUBLIC_SUMMARY
-  publication_state: PROPOSED
+  publication_state: MATERIALIZED_PUBLIC_PROPOSAL_NOT_ADOPTED
   owner_path: docs/project-closure/ar8r-v11/programs/proper-function-and-candidate-e.md
   basis: Retain proper-function, defeater, integration, and noncollapse burdens across theological, epistemic, and
     agentic lanes.
   remaining_burden: Publish only the bounded status summary; retain exact private bytes locally.
 - item_id: AR8R-LANE-022
   disposition: PUBLIC_INTEGRATE
-  publication_state: PROPOSED
+  publication_state: MATERIALIZED_PUBLIC_PROPOSAL_NOT_ADOPTED
   owner_path: docs/project-closure/ar8r-v11/provenance/AR8R-CANONICAL-THEOREM-ORIGIN-REGISTRY-V6.yaml
   basis: Exactly 22 historical identities remain without exact payload; none may receive invented wording or repository-ready
     status.
@@ -591,25 +591,25 @@ items:
   remaining_burden: Keep local; publish no raw private content or locator.
 - item_id: AR8R-HIST-T89
   disposition: PUBLIC_SUMMARY
-  publication_state: PROPOSED
+  publication_state: MATERIALIZED_PUBLIC_PROPOSAL_NOT_ADOPTED
   owner_path: docs/project-closure/ar8r-v11/provenance/AR8R-SELECTED-HISTORICAL-BOUNDARY-RECORDS-V1.yaml
   basis: Exact bounded historical ledger statement and audit disposition; proof bytes are not imported by this row.
   remaining_burden: Retain stated scope and owner/adoption boundary.
 - item_id: AR8R-HIST-T99
   disposition: PUBLIC_SUMMARY
-  publication_state: PROPOSED
+  publication_state: MATERIALIZED_PUBLIC_PROPOSAL_NOT_ADOPTED
   owner_path: docs/project-closure/ar8r-v11/provenance/AR8R-SELECTED-HISTORICAL-BOUNDARY-RECORDS-V1.yaml
   basis: Exact bounded historical ledger statement and audit disposition; proof bytes are not imported by this row.
   remaining_burden: Retain stated scope and owner/adoption boundary.
 - item_id: AR8R-HIST-T100
   disposition: PUBLIC_SUMMARY
-  publication_state: PROPOSED
+  publication_state: MATERIALIZED_PUBLIC_PROPOSAL_NOT_ADOPTED
   owner_path: docs/project-closure/ar8r-v11/provenance/AR8R-SELECTED-HISTORICAL-BOUNDARY-RECORDS-V1.yaml
   basis: Exact bounded historical ledger statement and audit disposition; proof bytes are not imported by this row.
   remaining_burden: Retain stated scope and owner/adoption boundary.
 - item_id: AR8R-HIST-T244
   disposition: PUBLIC_SUMMARY
-  publication_state: PROPOSED
+  publication_state: MATERIALIZED_PUBLIC_PROPOSAL_NOT_ADOPTED
   owner_path: docs/project-closure/ar8r-v11/provenance/AR8R-SELECTED-HISTORICAL-BOUNDARY-RECORDS-V1.yaml
   basis: Exact bounded historical ledger statement and audit disposition; proof bytes are not imported by this row.
   remaining_burden: Retain stated scope and owner/adoption boundary.
@@ -675,125 +675,131 @@ items:
   remaining_burden: Retain stated scope and owner/adoption boundary.
 - item_id: AR8R-T228-REREVIEW
   disposition: PUBLIC_SUMMARY
-  publication_state: PROPOSED
+  publication_state: MATERIALIZED_PUBLIC_PROPOSAL_NOT_ADOPTED
   owner_path: docs/project-closure/ar8r-v11/theorems/ar8r-t227-t228-validation-receipt.yaml
   basis: Confirms T228 canonical precedence without duplicate credit.
   remaining_burden: Retain stated scope and owner/adoption boundary.
 - item_id: AR8R-REP-CONTROLLERS
   disposition: PUBLIC_SUMMARY
-  publication_state: PROPOSED
+  publication_state: MATERIALIZED_PUBLIC_PROPOSAL_NOT_ADOPTED
   owner_path: docs/project-closure/ar8r-v11/programs/tensor-and-bitter-lesson.md
   basis: Bounded representation/controller custody with no predictive or tensor promotion.
   remaining_burden: Retain stated scope and owner/adoption boundary.
 - item_id: AR8R-REP-CONTROLLER-RESULT
   disposition: PUBLIC_SUMMARY
-  publication_state: PROPOSED
+  publication_state: MATERIALIZED_PUBLIC_PROPOSAL_NOT_ADOPTED
   owner_path: docs/project-closure/ar8r-v11/programs/tensor-and-bitter-lesson.md
   basis: Bounded representation/controller custody with no predictive or tensor promotion.
   remaining_burden: Retain stated scope and owner/adoption boundary.
 - item_id: AR8R-REP-PREREG
   disposition: PUBLIC_SUMMARY
-  publication_state: PROPOSED
+  publication_state: MATERIALIZED_PUBLIC_PROPOSAL_NOT_ADOPTED
   owner_path: docs/project-closure/ar8r-v11/programs/tensor-and-bitter-lesson.md
   basis: Bounded representation/controller custody with no predictive or tensor promotion.
   remaining_burden: Retain stated scope and owner/adoption boundary.
 - item_id: AR8R-REP-P186
   disposition: PUBLIC_SUMMARY
-  publication_state: PROPOSED
+  publication_state: MATERIALIZED_PUBLIC_PROPOSAL_NOT_ADOPTED
   owner_path: docs/project-closure/ar8r-v11/programs/tensor-and-bitter-lesson.md
   basis: Bounded representation/controller custody with no predictive or tensor promotion.
   remaining_burden: Retain stated scope and owner/adoption boundary.
 - item_id: AR8R-REP-AUDIT77
   disposition: PUBLIC_SUMMARY
-  publication_state: PROPOSED
+  publication_state: MATERIALIZED_PUBLIC_PROPOSAL_NOT_ADOPTED
   owner_path: docs/project-closure/ar8r-v11/programs/tensor-and-bitter-lesson.md
   basis: Bounded representation/controller custody with no predictive or tensor promotion.
   remaining_burden: Retain stated scope and owner/adoption boundary.
 - item_id: AR8R-T296
   disposition: PUBLIC_SUMMARY
-  publication_state: PROPOSED
+  publication_state: MATERIALIZED_PUBLIC_PROPOSAL_NOT_ADOPTED
   owner_path: docs/project-closure/ar8r-v11/programs/prh-higher-order-and-causal-restoration.md
   basis: Audited parity counterexample with zero general novelty and bounded PRH consequence.
   remaining_burden: Retain stated scope and owner/adoption boundary.
 - item_id: AR8R-P478
   disposition: PUBLIC_SUMMARY
-  publication_state: PROPOSED
+  publication_state: MATERIALIZED_PUBLIC_PROPOSAL_NOT_ADOPTED
   owner_path: docs/project-closure/ar8r-v11/programs/prh-higher-order-and-causal-restoration.md
   basis: Protocol ready and unrun; zero empirical-result credit.
   remaining_burden: Retain stated scope and owner/adoption boundary.
 - item_id: AR8R-R5-P480
   disposition: PUBLIC_SUMMARY
-  publication_state: PROPOSED
+  publication_state: MATERIALIZED_PUBLIC_PROPOSAL_NOT_ADOPTED
   owner_path: docs/project-closure/ar8r-v11/programs/ar8r-r5-minimal-nonintegration-control.md
   basis: Exact rival-control custody and defeat conditions; not a universal theorem.
   remaining_burden: Retain stated scope and owner/adoption boundary.
 - item_id: AR8R-CORR-AGCOM
   disposition: PUBLIC_SUMMARY
-  publication_state: PROPOSED
+  publication_state: MATERIALIZED_PUBLIC_PROPOSAL_NOT_ADOPTED
   owner_path: docs/project-closure/ar8r-v11/programs/program-surface-and-correction-custody.yaml
   basis: Program routing and burden authority; not theorem admission.
   remaining_burden: Retain stated scope and owner/adoption boundary.
 - item_id: AR8R-CORR-FRONTIER
   disposition: PUBLIC_SUMMARY
-  publication_state: PROPOSED
+  publication_state: MATERIALIZED_PUBLIC_PROPOSAL_NOT_ADOPTED
   owner_path: docs/project-closure/ar8r-v11/programs/program-surface-and-correction-custody.yaml
   basis: Program routing and burden authority; not theorem admission.
   remaining_burden: Retain stated scope and owner/adoption boundary.
 - item_id: AR8R-CORR-ACTIVATION
   disposition: PUBLIC_SUMMARY
-  publication_state: PROPOSED
+  publication_state: MATERIALIZED_PUBLIC_PROPOSAL_NOT_ADOPTED
   owner_path: docs/project-closure/ar8r-v11/programs/program-surface-and-correction-custody.yaml
   basis: Program routing and burden authority; not theorem admission.
   remaining_burden: Retain stated scope and owner/adoption boundary.
 - item_id: AR8R-CORR-SCOPE
   disposition: PUBLIC_SUMMARY
-  publication_state: PROPOSED
+  publication_state: MATERIALIZED_PUBLIC_PROPOSAL_NOT_ADOPTED
   owner_path: docs/project-closure/ar8r-v11/programs/program-surface-and-correction-custody.yaml
   basis: Program routing and burden authority; not theorem admission.
   remaining_burden: Retain stated scope and owner/adoption boundary.
 - item_id: AR8R-CORR-MEMORY
   disposition: PUBLIC_SUMMARY
-  publication_state: PROPOSED
+  publication_state: MATERIALIZED_PUBLIC_PROPOSAL_NOT_ADOPTED
   owner_path: docs/project-closure/ar8r-v11/programs/program-surface-and-correction-custody.yaml
   basis: Program routing and burden authority; not theorem admission.
   remaining_burden: Retain stated scope and owner/adoption boundary.
 - item_id: AR8R-PMR-BOUNDARY
   disposition: PUBLIC_SUMMARY
-  publication_state: PROPOSED
+  publication_state: MATERIALIZED_PUBLIC_PROPOSAL_NOT_ADOPTED
   owner_path: docs/project-closure/ar8r-v11/programs/post-merge-pmr-boundary.md
   basis: Separates exact PMR-001 through PMR-006 sources and the ten admitted scoped PMR-007 proposals through Round 20 V2 from historical AR8R and adopted theory.
   remaining_burden: Retain stated scope and owner/adoption boundary.
 - item_id: AR8R-SOURCE-DELTA-46
   disposition: PUBLIC_SUMMARY
-  publication_state: PROPOSED
+  publication_state: MATERIALIZED_PUBLIC_PROPOSAL_NOT_ADOPTED
   owner_path: docs/project-closure/ar8r-v11/provenance/AR8R-SOURCE-FORMAL-CROSSWALK-RECEIPT-V2.yaml
   basis: Preserves source-status row count and hash without importing private source text.
   remaining_burden: Retain stated scope and owner/adoption boundary.
 - item_id: AR8R-SOURCE-CROSSWALK-27
   disposition: PUBLIC_SUMMARY
-  publication_state: PROPOSED
+  publication_state: MATERIALIZED_PUBLIC_PROPOSAL_NOT_ADOPTED
   owner_path: docs/project-closure/ar8r-v11/provenance/AR8R-SOURCE-FORMAL-CROSSWALK-RECEIPT-V2.yaml
   basis: Preserves typed crosswalk count and anti-promotion boundaries.
   remaining_burden: Retain stated scope and owner/adoption boundary.
 - item_id: AR8R-PIECE-COUNT
   disposition: PUBLIC_SUMMARY
-  publication_state: PROPOSED
+  publication_state: MATERIALIZED_PUBLIC_PROPOSAL_NOT_ADOPTED
   owner_path: docs/project-closure/ar8r-v11/provenance/AR8R-PIECE-COUNT-DISPOSITION-V5.yaml
   basis: Preserves 914 as a derived scalar, not exact identity recovery.
   remaining_burden: Retain stated scope and owner/adoption boundary.
 - item_id: AR8R-RENUMBER-P307-P322
   disposition: PUBLIC_SUMMARY
-  publication_state: PROPOSED
+  publication_state: MATERIALIZED_PUBLIC_PROPOSAL_NOT_ADOPTED
   owner_path: docs/project-closure/ar8r-v11/provenance/AR8R-P307-P322-RENAMING-CROSSWALK-V2.yaml
   basis: Preserves zero theorem, novelty, and duration credit under pending custody review.
   remaining_burden: Retain stated scope and owner/adoption boundary.
 - item_id: AR8R-SOURCE-UNIVERSE
   disposition: PUBLIC_INTEGRATE
   publication_state: INTEGRATED
-  owner_path: docs/project-closure/ar8r-v11/provenance/AR8R-SOURCE-UNIVERSE-RECEIPT-V1.yaml
-  basis: Maps 95 messages, 1,127 attachments, 1,490 Activity entries, 17,293 references, and 9,968 unique archive
-    hashes without private content.
+  owner_path: docs/project-closure/ar8r-v11/provenance/AR8R-SOURCE-UNIVERSE-RECEIPT-V2.yaml
+  basis: Preserves V7/V8 structural closure and adds terminal public-safe dispositions for 1,007 V11 attachment rows,
+    187 V11 download rows, 10 V11 archive instances, and 506 distinct V11 archive-member hashes.
   remaining_burden: Retain stated scope and owner/adoption boundary.
+- item_id: AR8R-HR-P236P242-T236-V1
+  disposition: PUBLIC_INTEGRATE
+  publication_state: MATERIALIZED_PUBLIC_PROPOSAL_NOT_ADOPTED
+  owner_path: docs/project-closure/ar8r-v11/provenance/AR8R-HISTORICAL-ID-COLLISION-RECEIPT-P236-P242-V1.yaml
+  basis: Preserves an exact visible-Activity payload under a collision-safe recovery identity while leaving canonical V5 AR8R-T236 unchanged.
+  remaining_burden: Owner review of the historical identity collision and any present mathematical revalidation remain open; no current-theory adoption is implied.
 - item_id: AR8R-FLYWHEEL-CROSSWALK
   disposition: PUBLIC_INTEGRATE
   publication_state: INTEGRATED
@@ -891,3 +897,23 @@ v11_task7a_milestone_architecture_decision:
   daee_repository_effect: NONE
   private_corpus_effect: EXCLUDED
   remaining_burden: Independent scientific work, evidence, formalization, prior art, specialist review, audit, repair, rereview, and owner adoption remain milestone-specific.
+v13_two_thread_closure_decision:
+  source_universe_owner: provenance/AR8R-SOURCE-UNIVERSE-RECEIPT-V2.yaml
+  source_ledgers_bound: 5
+  terminal_maps: 4
+  attachment_rows_accounted: 1007
+  download_rows_accounted: 187
+  archive_instances_accounted: 10
+  distinct_archive_member_hashes_accounted: 506
+  historical_collision_receipt: provenance/AR8R-HISTORICAL-ID-COLLISION-RECEIPT-P236-P242-V1.yaml
+  collision_safe_recovery_identity: AR8R-HR-P236P242-T236-v1
+  canonical_v5_modified: false
+  publication_state_migration:
+    prior_label: PROPOSED
+    current_label: MATERIALIZED_PUBLIC_PROPOSAL_NOT_ADOPTED
+    scientific_adoption_effect: NONE
+  theorem_origin_effect: NONE
+  novelty_effect: NONE
+  integrated_champion_effect: NONE
+  meniscus_effect: NONE
+  natural_closure_effect: NONE

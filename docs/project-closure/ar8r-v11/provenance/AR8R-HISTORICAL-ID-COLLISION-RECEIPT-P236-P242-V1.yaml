@@ -1,0 +1,59 @@
+schema: ar8r-historical-id-collision-receipt-p236-p242-v1
+status: COLLISION_RECORDED_WITHOUT_CANONICAL_RENUMBERING
+authority:
+  theorem_origin_authority: V5
+  canonical_registry_path: AR8R-CANONICAL-THEOREM-ORIGIN-REGISTRY-V5-PUBLIC-SANITIZED.yaml
+  canonical_registry_sha256: 52b1df2961b080bd0c05519883094fc2cd9a93413ca8c1bb1f7935a3a24b0841
+  canonical_registry_modified: false
+source_boundary:
+  source_type: EXACT_VERBATIM_PAYLOAD_RECOVERED_FROM_VISIBLE_ACTIVITY
+  source_locator: P236-P242 visible Activity heredoc
+  private_message_or_session_identifiers_published: false
+  original_historical_file_bytes_recovered: false
+  exact_visible_payload_bytes_recovered: true
+collisions:
+  - historical_emitted_identity: AR8R-T235
+    historical_title: finite positive-Horn residual self-support boundary
+    current_v5_identity: AR8R-T235
+    current_v5_statement_class: COMPLETE_LATTICE_MONOTONE_FIXED_POINT_SAFETY_BOUNDARY
+    relation_to_current_v5_identity: DIFFERENT_PROPOSITION_SAME_EMITTED_IDENTIFIER
+    relation_to_other_current_identity:
+      identity: AR8R-T230
+      relation: SUBSTANTIAL_PROPOSITIONAL_OVERLAP_REQUIRING_OWNER_REVIEW
+    public_payload_import: false
+    credit_effect: NONE
+    disposition: COLLISION_TOMBSTONE_ONLY
+  - historical_emitted_identity: AR8R-T236
+    historical_title: finite positive-Horn coinductive truth residual guard
+    current_v5_identity: AR8R-T236
+    current_v5_statement_class: AUTHENTICATED_SUPPORT_TRUTH_FACTORIZATION
+    relation_to_current_v5_identity: DIFFERENT_PROPOSITION_SAME_EMITTED_IDENTIFIER
+    collision_safe_recovery_identity: AR8R-HR-P236P242-T236-v1
+    exact_payload_path: ../theorems/historical-collision-recoveries/AR8R-HR-P236P242-T236-v1-payload.md
+    exact_payload_sha256: 6e5f8fde52bd69c4c8e678b0ab7f0e2d5345ff4cf261cf143a7ecbb3c64835c5
+    exact_payload_bytes: 1408
+    historical_audit_status: PASS_WITH_NARROWING
+    historical_status: VALIDATED_PASS_WITH_NARROWING_RECURSIVE_REENTRY_ACTIVE
+    assumptions:
+      - T235 setting
+      - independently specified truth set
+      - facts true
+      - all Horn rules truth preserving
+    countermodels:
+      - CM-P237-01
+      - CM-P239-01
+    dependency_labels_as_emitted:
+      - AR8R-T235
+      - AR8R-T230
+    prior_art_relation: DIRECT_SOUNDNESS_COROLLARY_OF_T235_AND_STANDARD_HORN_INDUCTION
+    novelty: NO_GENERAL_THEOREM_NOVELTY
+    significance: EXACT_RESIDUAL_TRUTH_BURDEN
+    owner_adoption: PENDING
+    repository_status: HISTORICAL_COLLISION_RECOVERY_NOT_CURRENT_THEORY
+    credit_effect: NONE
+nonclaims:
+  - The collision-safe identity does not replace, renumber, or modify canonical AR8R-T236.
+  - The exact visible payload is not a claim that original historical file bytes were recovered.
+  - Historical validation is not external peer review or present mathematical revalidation.
+  - Residual self-support does not establish truth, warrant, grounding, authority, or explanation.
+  - This receipt gives no theorem-origin, novelty, adoption, champion, meniscus, or closure credit.
