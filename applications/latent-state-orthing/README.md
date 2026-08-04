@@ -2,8 +2,10 @@
 
 Application-level extension (Decision 0024) adding a **learning/update
 architecture** to Decision 0015's static latent-state boundary. Not a school-
-neutral core primitive. OPUS CANDIDATE — REQUIRES FRESH FABLE REVIEW BEFORE
-MERGE. Establishes no empirical, human, or metaphysical claim.
+neutral core primitive. The candidate is present on current public `main`, but
+the recorded fresh Fable review remains outstanding; merge custody does not
+substitute for that review. Establishes no empirical, human, or metaphysical
+claim.
 
 ## Contents
 

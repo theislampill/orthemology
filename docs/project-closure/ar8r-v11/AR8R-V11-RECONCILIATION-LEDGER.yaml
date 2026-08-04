@@ -801,6 +801,12 @@ items:
   basis: Names typed contributions and anti-laundering boundaries across source, language, communication, representation,
     restoration, candidates, Track T, R5, and provenance.
   remaining_burden: Retain stated scope and owner/adoption boundary.
+- item_id: OSM-LEARNING-TRAJECTORY-V12
+  disposition: PUBLIC_INTEGRATE
+  publication_state: INTEGRATED
+  owner_path: docs/project-closure/ar8r-v11/programs/AR8R-OSM-LEARNING-TRAJECTORY-CONVERGENCE-CROSSWALK-V12.yaml
+  basis: Reconnects an already integrated external source to the milestone and flywheel programs under explicit no-transfer gates.
+  remaining_burden: Fresh independent Fable review, exact formal-relation classification, and any separately justified proof or countermodel work remain open.
 v11_task6_and_pdf_addendum_decisions:
   append_only: true
   totals: {INTEGRATE: 26, PROPOSAL_ONLY: 8, DEFERRED: 6, BLOCKED: 9, PRIVATE_EXCLUDED: 4, TOTAL: 53}

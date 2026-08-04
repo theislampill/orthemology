@@ -44,6 +44,27 @@ The Connes-rigidity dispute is a cross-lane specification-warrant case study. Ex
 
 Every new edge either `supports` with bounded evidence or `constrains` a promotion. No edge transfers proof, adoption, historical identity, source fidelity, metaphysical truth, champion status, meniscus, or closure automatically.
 
+## V12 OSM learning-trajectory connection
+
+The Sun et al. hippocampal OSM study was already integrated by Decisions 0015
+and 0024. The V12 crosswalk adds the missing program pointer rather than a
+second source treatment. Its bounded contribution is that endpoint agreement,
+terminal representation geometry, and high task performance can leave the
+learning trajectory and mechanism underdetermined. It also supplies a concrete
+object-separation case for observation, world state, latent state, posterior,
+neural response, model representation, and orthemic profile.
+
+The new node feeds representation comparison, proper-function boundary work,
+path-sensitive restoration methodology, and held-out rival-model design. Each
+edge is anti-laundering: model fit is not mechanism identity; task performance
+is not proper function; representational adaptation is not human restoration;
+and mouse CA1 evidence supplies no transcendental or theological premise.
+
+`AR8R-OSM-LEARNING-TRAJECTORY-CONVERGENCE-CROSSWALK-V12.yaml` requires an exact
+reduction, typed common model, shared invariant, guarded transfer theorem, or
+matched countermodel architecture before a cross-domain relation counts as
+formal convergence. Shared vocabulary and diagrams do not pass that gate.
+
 ## Task 7A milestone architecture
 
 The owner-supplied milestone charter is preserved verbatim and projected into

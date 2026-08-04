@@ -61,6 +61,7 @@ SURFACE_CUSTODY = PROGRAMS / "program-surface-and-correction-custody.yaml"
 FLYWHEEL = PROGRAMS / "AR8R-RESEARCH-FLYWHEEL-CROSSWALK-V1.yaml"
 MILESTONE_CHARTER = PROGRAMS / "AR8R-ORTHEMOLOGY-MENISCUS-MILESTONE-ARCHITECTURE-V1.md"
 MILESTONES = PROGRAMS / "AR8R-ORTHEMOLOGY-MENISCUS-MILESTONES-V1.yaml"
+OSM_PROGRAM_CROSSWALK = PROGRAMS / "AR8R-OSM-LEARNING-TRAJECTORY-CONVERGENCE-CROSSWALK-V12.yaml"
 TWO_THREAD_RECEIPT = PACKET / "provenance" / "AR8R-TWO-THREAD-SYNTHESIS-RECEIPT-V11.yaml"
 POST_MERGE_CATALOG = PACKET / "AR8R-V11-POST-MERGE-EVIDENCE-CATALOG.yaml"
 THREAD_CUSTODY = PACKET / "provenance" / "AR8R-POST-MERGE-THREAD-CUSTODY-RECEIPT-V1.yaml"
@@ -440,6 +441,164 @@ class TestAr8rV11Reconciliation(unittest.TestCase):
             {"INTEGRATE": 26, "PROPOSAL_ONLY": 8, "DEFERRED": 6, "BLOCKED": 9, "PRIVATE_EXCLUDED": 4, "TOTAL": 53},
         )
         self.assertEqual(ledger["v11_task7a_milestone_architecture_decision"]["task7_decision_count_effect"], 0)
+
+    def test_v12_osm_program_crosswalk_contract(self):
+        validator = self.load_validator()
+        crosswalk = self.load_yaml(OSM_PROGRAM_CROSSWALK)
+        milestones = self.load_yaml(MILESTONES)
+        flywheel = self.load_yaml(FLYWHEEL)
+        catalog = self.load_yaml(CATALOG)
+        self.assertEqual(validator.validate_osm_program_integration(crosswalk, milestones, flywheel, catalog), [])
+        self.assertEqual(crosswalk["source"]["source_id"], "LAT-1")
+        self.assertEqual(crosswalk["source"]["access_copy_bytes"], 137824)
+        self.assertEqual(
+            crosswalk["source"]["access_copy_sha256"],
+            "0d097cba7bbb25a949e2bf95af28b5a2259bd8d60b0e5fac5a74cdf7d05aa814",
+        )
+        self.assertEqual(crosswalk["closure_state"]["meniscus"], "MENISCUS_NOT_REACHED")
+
+    def test_v12_osm_program_crosswalk_rejects_promotions(self):
+        validator = self.load_validator()
+        source = self.load_yaml(OSM_PROGRAM_CROSSWALK)
+        milestones = self.load_yaml(MILESTONES)
+        flywheel = self.load_yaml(FLYWHEEL)
+        catalog = self.load_yaml(CATALOG)
+
+        promoted = yaml.safe_load(yaml.safe_dump(source))
+        promoted["authority"]["empirical_validation_effect"] = "VALIDATES_ORTHEMOLOGY"
+        self.assertIn(
+            "osm-program-authority-promoted-or-drifted",
+            validator.validate_osm_program_integration(promoted, milestones, flywheel, catalog),
+        )
+
+        metaphysical = yaml.safe_load(yaml.safe_dump(source))
+        next(row for row in metaphysical["milestone_crosswalk"] if row["milestone_id"] == "M11")["relation"] = "DIRECT_SUPPORT"
+        self.assertIn(
+            "osm-program-milestone-row-drift:M11",
+            validator.validate_osm_program_integration(metaphysical, milestones, flywheel, catalog),
+        )
+
+        closed = yaml.safe_load(yaml.safe_dump(source))
+        closed["closure_state"]["meniscus"] = "MENISCUS_REACHED"
+        self.assertIn(
+            "osm-program-closure-promoted",
+            validator.validate_osm_program_integration(closed, milestones, flywheel, catalog),
+        )
+
+        overattached = yaml.safe_load(yaml.safe_dump(milestones))
+        next(row for row in overattached["milestones"] if row["milestone_id"] == "M11")["artifact_ids"].append("OSM-LEARNING-TRAJECTORY-V12")
+        self.assertIn(
+            "osm-program-artifact-milestone-scope-mismatch",
+            validator.validate_osm_program_integration(source, overattached, flywheel, catalog),
+        )
+
+        source_drift = yaml.safe_load(yaml.safe_dump(source))
+        next(row for row in source_drift["source_reported_constraints"] if row["id"] == "OSM-SRC-01")["claim"] = (
+            "The hippocampus implements CSCG."
+        )
+        self.assertIn(
+            "osm-program-source-constraint-drift:OSM-SRC-01",
+            validator.validate_osm_program_integration(source_drift, milestones, flywheel, catalog),
+        )
+
+        synthesis_drift = yaml.safe_load(yaml.safe_dump(source))
+        next(row for row in synthesis_drift["project_syntheses"] if row["id"] == "OSM-SYN-01")["claim"] = (
+            "Mouse CA1 empirically validates Orthemology and human noetic structure."
+        )
+        self.assertIn(
+            "osm-program-synthesis-drift:OSM-SYN-01",
+            validator.validate_osm_program_integration(synthesis_drift, milestones, flywheel, catalog),
+        )
+
+        for milestone_id, field, replacement in (
+            ("M8", "contribution", "The study establishes human noetic architecture."),
+            ("M10", "nontransfer", "Task efficiency establishes proper function and warrant."),
+            ("M14", "nontransfer", "The paper supplies a Lean kernel proof."),
+        ):
+            milestone_drift = yaml.safe_load(yaml.safe_dump(source))
+            next(row for row in milestone_drift["milestone_crosswalk"] if row["milestone_id"] == milestone_id)[field] = replacement
+            self.assertIn(
+                f"osm-program-milestone-row-drift:{milestone_id}",
+                validator.validate_osm_program_integration(milestone_drift, milestones, flywheel, catalog),
+            )
+
+        crosswalk_edge_drift = yaml.safe_load(yaml.safe_dump(source))
+        next(row for row in crosswalk_edge_drift["flywheel_contributions"] if row["edge_id"] == "OSM-FW-04")["nontransfer"] = (
+            "Task learning is noetic restoration."
+        )
+        self.assertIn(
+            "osm-program-crosswalk-flywheel-drift:OSM-FW-04",
+            validator.validate_osm_program_integration(crosswalk_edge_drift, milestones, flywheel, catalog),
+        )
+
+        main_edge_drift = yaml.safe_load(yaml.safe_dump(flywheel))
+        next(
+            row for row in main_edge_drift["edges"]
+            if row["from"] == "osm_learning_trajectory" and row["to"] == "restoration"
+        )["nontransfer"] = "task learning is noetic restoration"
+        self.assertIn(
+            "osm-program-main-flywheel-edge-drift:osm_learning_trajectory:restoration",
+            validator.validate_osm_program_integration(source, milestones, main_edge_drift, catalog),
+        )
+
+        catalog_drift = yaml.safe_load(yaml.safe_dump(catalog))
+        next(row for row in catalog_drift["items"] if row["item_id"] == "OSM-LEARNING-TRAJECTORY-V12")[
+            "source_access_copy_sha256"
+        ] = "0" * 64
+        self.assertIn(
+            "osm-program-evidence-catalog-mismatch",
+            validator.validate_osm_program_integration(source, milestones, flywheel, catalog_drift),
+        )
+
+        catalog_class_drift = yaml.safe_load(yaml.safe_dump(catalog))
+        next(row for row in catalog_class_drift["items"] if row["item_id"] == "OSM-LEARNING-TRAJECTORY-V12")[
+            "source_surface"
+        ] = "EXTERNAL_MATHEMATICS"
+        self.assertIn(
+            "osm-program-evidence-catalog-mismatch",
+            validator.validate_osm_program_integration(source, milestones, flywheel, catalog_class_drift),
+        )
+
+        duplicate_source = yaml.safe_load(yaml.safe_dump(source))
+        unsafe_source = yaml.safe_load(yaml.safe_dump(duplicate_source["source_reported_constraints"][0]))
+        unsafe_source["claim"] = "The hippocampus implements CSCG."
+        duplicate_source["source_reported_constraints"].insert(0, unsafe_source)
+        duplicate_source_issues = validator.validate_osm_program_integration(duplicate_source, milestones, flywheel, catalog)
+        self.assertIn("osm-program-source-constraint-collection-mismatch", duplicate_source_issues)
+        self.assertIn("osm-program-source-constraint-duplicate-id", duplicate_source_issues)
+
+        duplicate_synthesis = yaml.safe_load(yaml.safe_dump(source))
+        unsafe_synthesis = yaml.safe_load(yaml.safe_dump(duplicate_synthesis["project_syntheses"][0]))
+        unsafe_synthesis["claim"] = "Mouse CA1 empirically validates Orthemology."
+        duplicate_synthesis["project_syntheses"].insert(0, unsafe_synthesis)
+        duplicate_synthesis_issues = validator.validate_osm_program_integration(duplicate_synthesis, milestones, flywheel, catalog)
+        self.assertIn("osm-program-synthesis-collection-mismatch", duplicate_synthesis_issues)
+        self.assertIn("osm-program-synthesis-duplicate-id", duplicate_synthesis_issues)
+
+        duplicate_crosswalk_edge = yaml.safe_load(yaml.safe_dump(source))
+        unsafe_crosswalk_edge = yaml.safe_load(yaml.safe_dump(duplicate_crosswalk_edge["flywheel_contributions"][3]))
+        unsafe_crosswalk_edge["nontransfer"] = "Task learning is noetic restoration."
+        duplicate_crosswalk_edge["flywheel_contributions"].insert(3, unsafe_crosswalk_edge)
+        duplicate_crosswalk_issues = validator.validate_osm_program_integration(
+            duplicate_crosswalk_edge, milestones, flywheel, catalog
+        )
+        self.assertIn("osm-program-crosswalk-flywheel-collection-mismatch", duplicate_crosswalk_issues)
+        self.assertIn("osm-program-crosswalk-flywheel-duplicate-id", duplicate_crosswalk_issues)
+
+        duplicate_main_edge = yaml.safe_load(yaml.safe_dump(flywheel))
+        unsafe_main_edge = yaml.safe_load(yaml.safe_dump(next(
+            row for row in duplicate_main_edge["edges"]
+            if row["from"] == "osm_learning_trajectory" and row["to"] == "restoration"
+        )))
+        unsafe_main_edge["nontransfer"] = "task learning is noetic restoration"
+        insertion_index = next(
+            index for index, row in enumerate(duplicate_main_edge["edges"])
+            if row["from"] == "osm_learning_trajectory" and row["to"] == "restoration"
+        )
+        duplicate_main_edge["edges"].insert(insertion_index, unsafe_main_edge)
+        duplicate_main_issues = validator.validate_osm_program_integration(source, milestones, duplicate_main_edge, catalog)
+        self.assertIn("osm-program-main-flywheel-collection-mismatch", duplicate_main_issues)
+        self.assertIn("osm-program-main-flywheel-duplicate-endpoint", duplicate_main_issues)
 
     def test_evidence_catalog_schema_and_download_coverage(self):
         doc = self.load_yaml(CATALOG)

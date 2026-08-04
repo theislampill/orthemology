@@ -56,6 +56,11 @@ Task 7A navigation:
 - `AR8R-ORTHEMOLOGY-MENISCUS-MILESTONE-ARCHITECTURE-V1.md` — verbatim owner-supplied research-program charter, protected as exact bytes;
 - `AR8R-ORTHEMOLOGY-MENISCUS-MILESTONES-V1.yaml` — non-adoptive projection of M1–M18, MEN-1–MEN-9, six dependency phases, five cross-lane flywheels, the formalization loop, artifact/source classes, burdens, and nonclaims.
 
+V12 OSM program integration:
+
+- `AR8R-OSM-LEARNING-TRAJECTORY-CONVERGENCE-CROSSWALK-V12.md/.yaml` connects the already integrated Sun et al. latent-state and learning-trajectory source to M2, M3, M12, M13, and M15 while preserving strict no-transfer boundaries for human noetics, proper function, restoration, metaphysics, theology, Lean, and meniscus;
+- `AR8R-FABLE-OSM-CONVERGENCE-RESEARCH-PROMPT-V1.md` is a public-safe independent-research steer for testing whether any cross-domain relation is an exact reduction, typed common model, shared invariant, guarded transfer, common countermodel, analogy, or nonidentity.
+
 These files record a roadmap. They do not complete a milestone, adopt a
 meniscus candidate, select an integrated champion, establish a live Fusha/Qamus
 implementation, promote daee draft PR #8/#9 to merged-main authority, or imply

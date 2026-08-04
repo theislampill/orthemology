@@ -60,6 +60,9 @@ SURFACE_CUSTODY = PROGRAMS / "program-surface-and-correction-custody.yaml"
 FLYWHEEL = PROGRAMS / "AR8R-RESEARCH-FLYWHEEL-CROSSWALK-V1.yaml"
 MILESTONE_CHARTER = PROGRAMS / "AR8R-ORTHEMOLOGY-MENISCUS-MILESTONE-ARCHITECTURE-V1.md"
 MILESTONES = PROGRAMS / "AR8R-ORTHEMOLOGY-MENISCUS-MILESTONES-V1.yaml"
+OSM_PROGRAM_CROSSWALK = PROGRAMS / "AR8R-OSM-LEARNING-TRAJECTORY-CONVERGENCE-CROSSWALK-V12.yaml"
+OSM_PROGRAM_NOTE = PROGRAMS / "AR8R-OSM-LEARNING-TRAJECTORY-CONVERGENCE-CROSSWALK-V12.md"
+FABLE_OSM_PROMPT = PROGRAMS / "AR8R-FABLE-OSM-CONVERGENCE-RESEARCH-PROMPT-V1.md"
 COMPATIBILITY_OVERLAY = PROGRAMS / "AR8R-FULL-PROGRAM-REENTRY-COMPATIBILITY-RESOLUTION-V11.yaml"
 ASCENT_V2 = PROGRAMS / "AR8R_TRANSCENDENTAL_ORTHABILITY_AND_SOURCE_ASCENT_V2.yaml"
 TWO_THREAD_RECEIPT = PROVENANCE / "AR8R-TWO-THREAD-SYNTHESIS-RECEIPT-V11.yaml"
@@ -1338,6 +1341,411 @@ def validate_task7_ledgers_and_crosswalks(catalog: Any, ledger: Any, surface: An
     return list(dict.fromkeys(issues))
 
 
+def validate_osm_program_integration(crosswalk: Any, milestones: Any, flywheel: Any, catalog: Any) -> list[str]:
+    """Validate the V12 OSM program crosswalk and its exact anti-transfer gates."""
+    issues: list[str] = []
+    expected_hash = "0d097cba7bbb25a949e2bf95af28b5a2259bd8d60b0e5fac5a74cdf7d05aa814"
+    expected_doi = "10.1038/s41586-024-08548-w"
+    if not isinstance(crosswalk, dict):
+        return ["osm-program-crosswalk-malformed"]
+
+    source = crosswalk.get("source", {})
+    authority = crosswalk.get("authority", {})
+    if source.get("source_id") != "LAT-1" or str(source.get("doi")) != expected_doi:
+        issues.append("osm-program-source-identity-mismatch")
+    if source.get("access_copy_sha256") != expected_hash or source.get("access_copy_bytes") != 137824:
+        issues.append("osm-program-source-custody-mismatch")
+    if source.get("access_copy_role") != "EVIDENCE_CUSTODY_ONLY" or source.get("repository_copy") is not False:
+        issues.append("osm-program-local-copy-boundary-mismatch")
+    if source.get("underlying_experiment_reproduced") is not False or source.get("official_code_reproduced") is not False:
+        issues.append("osm-program-reproduction-overclaim")
+    if authority != {
+        "governing_decisions": [
+            "docs/decisions/0015-latent-state-observation-and-representation-boundary.md",
+            "docs/decisions/0024-dynamic-orthing-and-representation-learning.md",
+        ],
+        "classification": "EXTERNAL_EXEMPLIFICATION_AND_CONSTRAINT",
+        "adoption_effect": "NONE",
+        "theorem_effect": "NONE",
+        "novelty_effect": "NONE",
+        "empirical_validation_effect": "NONE",
+    }:
+        issues.append("osm-program-authority-promoted-or-drifted")
+
+    source_status = load_yaml(ROOT / "references" / "source-status.yaml")
+    lat1 = next((row for row in source_status.get("claims", []) if isinstance(row, dict) and row.get("id") == "LAT-1"), {})
+    custody = lat1.get("task8_custody", {}) if isinstance(lat1, dict) else {}
+    if str(lat1.get("doi")) != expected_doi or str(custody.get("access_copy_sha256", "")).lower() != expected_hash:
+        issues.append("osm-program-lat1-authority-mismatch")
+
+    expected_source_constraints = [
+        {
+            "id": "OSM-SRC-01",
+            "claim_kind": "SOURCE_REPORTED",
+            "claim": "Sequential context can separate latent task states that share an immediate sensory observation.",
+            "scope": "REPORTED_2ACDC_CSCG_AND_CA1_SETTING",
+        },
+        {
+            "id": "OSM-SRC-02",
+            "claim_kind": "SOURCE_REPORTED",
+            "claim": "Several tested models can reach related terminal representational criteria while differing in learning trajectory.",
+            "scope": "AMONG_TESTED_MODELS_UNDER_REPORTED_EVALUATION",
+        },
+        {
+            "id": "OSM-SRC-03",
+            "claim_kind": "SOURCE_REPORTED",
+            "claim": "High next-input prediction performance can occur without the global representation geometry measured in the study.",
+            "scope": "REPORTED_MODEL_SETTINGS_AND_OBJECTIVES",
+        },
+        {
+            "id": "OSM-SRC-04",
+            "claim_kind": "SOURCE_REPORTED",
+            "claim": "Architecture and learning objective influence the terminal representation produced by the tested models.",
+            "scope": "REPORTED_MODEL_SETTINGS_ONLY",
+        },
+        {
+            "id": "OSM-SRC-05",
+            "claim_kind": "SOURCE_REPORTED",
+            "claim": "Novel-cue and stretched-track observations are consistent with bounded reuse, shift, reset, or rebinding alternatives.",
+            "scope": "THREE_MICE_AND_REPORTED_ALTERATION_TESTS",
+        },
+    ]
+    actual_source_constraints = crosswalk.get("source_reported_constraints")
+    if actual_source_constraints != expected_source_constraints:
+        issues.append("osm-program-source-constraint-collection-mismatch")
+        expected_by_id = {row["id"]: row for row in expected_source_constraints}
+        actual_by_id = {
+            row.get("id"): row
+            for row in actual_source_constraints or []
+            if isinstance(row, dict)
+        }
+        drifted = sorted(
+            source_id
+            for source_id in set(expected_by_id) | set(actual_by_id)
+            if actual_by_id.get(source_id) != expected_by_id.get(source_id)
+        )
+        issues.extend(f"osm-program-source-constraint-drift:{source_id}" for source_id in drifted)
+    source_ids = [row.get("id") for row in actual_source_constraints or [] if isinstance(row, dict)]
+    if len(source_ids) != len(set(source_ids)):
+        issues.append("osm-program-source-constraint-duplicate-id")
+
+    expected_syntheses = [
+        {
+            "id": "OSM-SYN-01",
+            "claim_kind": "PROJECT_SYNTHESIS",
+            "claim": "Endpoint agreement and performance agreement do not by themselves determine pathway adequacy, learning trajectory, or mechanism identity.",
+            "status": "BOUNDED_ORTHEMOLOGY_SYNTHESIS",
+        },
+        {
+            "id": "OSM-SYN-02",
+            "claim_kind": "PROJECT_SYNTHESIS",
+            "claim": "Observation, world state, model latent state, posterior, neural response, representation geometry, and orthemic profile require separate typed owners.",
+            "status": "EXISTING_OBJECT_SEPARATION_RESTATED",
+        },
+        {
+            "id": "OSM-SYN-03",
+            "claim_kind": "PROJECT_SYNTHESIS",
+            "claim": "Longitudinal intermediate states can discriminate candidates that a terminal-only comparison leaves open.",
+            "status": "RESEARCH_METHOD_CONSTRAINT",
+        },
+        {
+            "id": "OSM-SYN-04",
+            "claim_kind": "PROJECT_SYNTHESIS",
+            "claim": "A cross-domain convergence claim requires an explicit correspondence stronger than vocabulary or diagrammatic similarity.",
+            "status": "PROGRAM_GOVERNANCE_CONSTRAINT",
+        },
+    ]
+    actual_syntheses = crosswalk.get("project_syntheses")
+    if actual_syntheses != expected_syntheses:
+        issues.append("osm-program-synthesis-collection-mismatch")
+        expected_by_id = {row["id"]: row for row in expected_syntheses}
+        actual_by_id = {
+            row.get("id"): row
+            for row in actual_syntheses or []
+            if isinstance(row, dict)
+        }
+        drifted = sorted(
+            synthesis_id
+            for synthesis_id in set(expected_by_id) | set(actual_by_id)
+            if actual_by_id.get(synthesis_id) != expected_by_id.get(synthesis_id)
+        )
+        issues.extend(f"osm-program-synthesis-drift:{synthesis_id}" for synthesis_id in drifted)
+    synthesis_ids = [row.get("id") for row in actual_syntheses or [] if isinstance(row, dict)]
+    if len(synthesis_ids) != len(set(synthesis_ids)):
+        issues.append("osm-program-synthesis-duplicate-id")
+
+    expected_milestone_rows = [
+        {
+            "milestone_id": "M2",
+            "relation": "EXTERNAL_CASE_CONSTRAINS_METHOD",
+            "contribution": "Endpoint-only verification can miss trajectory and mechanism differences.",
+            "nontransfer": "The study does not establish general specification warrant or theorem-intent fidelity.",
+        },
+        {
+            "milestone_id": "M3",
+            "relation": "DIRECT_BOUNDED_PROGRAM_INPUT",
+            "contribution": "Observation aliasing, latent-state inference, learner updates, geometry, and task alterations instantiate the existing dynamic object distinctions.",
+            "nontransfer": "Model latent states and neural representations do not become orthemes or worldly states.",
+        },
+        {
+            "milestone_id": "M8",
+            "relation": "BOUNDARY_ONLY",
+            "contribution": "Supplies a concrete warning against collapsing observations, latent representations, and carriers.",
+            "nontransfer": "Mouse CA1 findings do not establish a human noetic architecture, soul carrier, deformation, or restoration model.",
+        },
+        {
+            "milestone_id": "M10",
+            "relation": "BOUNDARY_ONLY",
+            "contribution": "Separates operational success and terminal representation from the process that produced them.",
+            "nontransfer": "Task efficiency supplies no normative proper-function, warrant, teleology, or design premise.",
+        },
+        {
+            "milestone_id": "M11",
+            "relation": "NO_EVIDENTIAL_SUPPORT",
+            "contribution": "Defines an explicit empirical-to-metaphysical firewall.",
+            "nontransfer": "The paper supplies no premise for transcendental orthability, Necessary Being, unity, agency, attributes, Speech, or revelation.",
+        },
+        {
+            "milestone_id": "M12",
+            "relation": "DIRECT_BOUNDED_PROGRAM_INPUT",
+            "contribution": "Provides a worked source-to-method-to-model-to-representation crosswalk with distinct authority levels.",
+            "nontransfer": "Article, code, model fit, representation geometry, and world truth are not interchangeable.",
+        },
+        {
+            "milestone_id": "M13",
+            "relation": "METHOD_TRANSFER_TARGET",
+            "contribution": "Supplies a candidate test case for classifying endpoint-trajectory discrimination as reduction, guarded transfer, analogy, or nonidentity.",
+            "nontransfer": "A reused proof pattern or vocabulary earns no new theorem or novelty credit.",
+        },
+        {
+            "milestone_id": "M14",
+            "relation": "FORMALIZATION_TARGET_ONLY",
+            "contribution": "Suggests typed trace, quotient, and candidate-discrimination definitions for later formal work.",
+            "nontransfer": "The paper contains no Lean theorem, proof object, parse, elaboration, kernel, or axiom receipt.",
+        },
+        {
+            "milestone_id": "M15",
+            "relation": "DIRECT_BOUNDED_PROGRAM_INPUT",
+            "contribution": "Motivates longitudinal, intervention-sensitive, and held-out trajectory tests in addition to endpoint metrics.",
+            "nontransfer": "The repository has not run a biological study or validated Orthemology empirically.",
+        },
+    ]
+    expected_milestones = {row["milestone_id"] for row in expected_milestone_rows}
+    rows = crosswalk.get("milestone_crosswalk", [])
+    if not _ids_exact(rows, "milestone_id", expected_milestones):
+        issues.append("osm-program-milestone-coverage-mismatch")
+        rows = rows if isinstance(rows, list) else []
+    by_milestone = {row.get("milestone_id"): row for row in rows if isinstance(row, dict)}
+    expected_by_milestone = {row["milestone_id"]: row for row in expected_milestone_rows}
+    for milestone_id in sorted(expected_milestones):
+        if by_milestone.get(milestone_id) != expected_by_milestone[milestone_id]:
+            issues.append(f"osm-program-milestone-row-drift:{milestone_id}")
+
+    expected_qualifiers = {
+        "EXACT_REDUCTION",
+        "SHARED_FORMAL_MODEL_WITH_TYPED_INTERPRETATION_MAPS",
+        "SHARED_INVARIANT_WITH_DOMAIN_SPECIFIC_SEMANTICS",
+        "GUARDED_TRANSFER_THEOREM",
+        "COMMON_COUNTERMODEL_ARCHITECTURE_UNDER_MATCHED_ASSUMPTIONS",
+    }
+    gate = crosswalk.get("formal_convergence_gate", {})
+    if gate.get("status") != "REQUIRED_NOT_SATISFIED_BY_THIS_SOURCE" or set(gate.get("qualifying_relations", [])) != expected_qualifiers:
+        issues.append("osm-program-convergence-gate-mismatch")
+    if "SHARED_VOCABULARY" not in set(gate.get("rejected_shortcuts", [])):
+        issues.append("osm-program-vocabulary-shortcut-not-rejected")
+
+    required_forbidden = {
+        "LATENT_STATE_EQUALS_ORTHEME",
+        "CSCG_FIT_PROVES_BIOLOGICAL_MECHANISM",
+        "TASK_PERFORMANCE_PROVES_PROPER_FUNCTION_OR_WARRANT",
+        "MOUSE_CA1_PROVES_HUMAN_NOETIC_STRUCTURE",
+        "ADAPTATION_EQUALS_RESTORATION",
+        "NEUROSCIENCE_SUPPORTS_TRANSCENDENTAL_OR_THEOLOGICAL_ASCENT",
+        "PAPER_CONTAINS_LEAN_PROOF",
+        "SOURCE_ESTABLISHES_ORTHEMOLOGY_VALIDATION",
+    }
+    if not required_forbidden.issubset(set(crosswalk.get("forbidden_transfers", []))):
+        issues.append("osm-program-forbidden-transfer-coverage-mismatch")
+    effect = crosswalk.get("repository_effect", {})
+    if effect.get("milestone_status_changed") is not False or effect.get("theorem_added") is not False or effect.get("empirical_result_added") is not False:
+        issues.append("osm-program-repository-effect-promoted")
+    if effect.get("fable_review_status") != "REQUIRED_NOT_YET_PERFORMED":
+        issues.append("osm-program-fable-review-status-mismatch")
+    if crosswalk.get("closure_state") != {
+        "integrated_champion": "NO_INTEGRATED_CHAMPION",
+        "meniscus": "MENISCUS_NOT_REACHED",
+        "natural_closure": "NATURAL_CLOSURE_NOT_REACHED",
+    }:
+        issues.append("osm-program-closure-promoted")
+
+    artifact_id = "OSM-LEARNING-TRAJECTORY-V12"
+    artifact_rows = milestones.get("artifact_crosswalk", []) if isinstance(milestones, dict) else []
+    artifact = next((row for row in artifact_rows if isinstance(row, dict) and row.get("artifact_id") == artifact_id), {})
+    expected_artifact = {
+        "artifact_id": artifact_id,
+        "source_class": "CURRENT_PUBLIC_ORTHEMOLOGY_MAIN",
+        "authority": "EXTERNAL_EXEMPLIFICATION_AND_CONSTRAINT",
+        "path_kind": "REPOSITORY",
+        "path": OSM_PROGRAM_CROSSWALK.relative_to(ROOT).as_posix(),
+        "status": "CURRENT_PROGRAM_CROSSWALK_NO_THEOREM_OR_VALIDATION_CREDIT",
+    }
+    if artifact != expected_artifact:
+        issues.append("osm-program-artifact-owner-mismatch")
+    attached = {
+        row.get("milestone_id")
+        for row in milestones.get("milestones", []) if isinstance(milestones, dict) and isinstance(row, dict)
+        and artifact_id in row.get("artifact_ids", [])
+    }
+    if attached != {"M2", "M3", "M12", "M13", "M15"}:
+        issues.append("osm-program-artifact-milestone-scope-mismatch")
+
+    nodes = flywheel.get("nodes", {}) if isinstance(flywheel, dict) else {}
+    if nodes.get("osm_learning_trajectory", {}).get("owner") != OSM_PROGRAM_CROSSWALK.name:
+        issues.append("osm-program-flywheel-node-missing")
+    expected_crosswalk_edges = [
+        {
+            "edge_id": "OSM-FW-01",
+            "from": "source_custody",
+            "to": "osm_learning_trajectory",
+            "contribution": "Exact article identity, methods, model scope, code provenance, and access-copy custody bound every downstream use.",
+            "nontransfer": "Custody does not reproduce the experiment or prove the interpretation.",
+        },
+        {
+            "edge_id": "OSM-FW-02",
+            "from": "osm_learning_trajectory",
+            "to": "representation_prh",
+            "contribution": "Endpoint and trajectory must remain separate in causal and representation comparisons.",
+            "nontransfer": "Better trajectory fit does not identify a biological mechanism or causal equivalence.",
+        },
+        {
+            "edge_id": "OSM-FW-03",
+            "from": "osm_learning_trajectory",
+            "to": "proper_function_e",
+            "contribution": "Performance and terminal geometry can leave process adequacy underdetermined.",
+            "nontransfer": "Operational success does not establish proper function, objective warrant, or Wisdom.",
+        },
+        {
+            "edge_id": "OSM-FW-04",
+            "from": "osm_learning_trajectory",
+            "to": "restoration",
+            "contribution": "Longitudinal traces and interventions can distinguish pathways hidden by terminal labels.",
+            "nontransfer": "Task learning and representational adaptation are not human or noetic restoration.",
+        },
+        {
+            "edge_id": "OSM-FW-05",
+            "from": "osm_learning_trajectory",
+            "to": "tensor_search",
+            "contribution": "Architecture, objective, and trajectory comparison sharpen held-out rival-model protocols.",
+            "nontransfer": "A winner among tested settings is not a universal mechanism or ontology result.",
+        },
+    ]
+    actual_crosswalk_edges = crosswalk.get("flywheel_contributions")
+    if actual_crosswalk_edges != expected_crosswalk_edges:
+        issues.append("osm-program-crosswalk-flywheel-collection-mismatch")
+        expected_by_id = {row["edge_id"]: row for row in expected_crosswalk_edges}
+        actual_by_id = {
+            row.get("edge_id"): row
+            for row in actual_crosswalk_edges or []
+            if isinstance(row, dict)
+        }
+        drifted = sorted(
+            edge_id
+            for edge_id in set(expected_by_id) | set(actual_by_id)
+            if actual_by_id.get(edge_id) != expected_by_id.get(edge_id)
+        )
+        issues.extend(f"osm-program-crosswalk-flywheel-drift:{edge_id}" for edge_id in drifted)
+    crosswalk_edge_ids = [row.get("edge_id") for row in actual_crosswalk_edges or [] if isinstance(row, dict)]
+    if len(crosswalk_edge_ids) != len(set(crosswalk_edge_ids)):
+        issues.append("osm-program-crosswalk-flywheel-duplicate-id")
+
+    expected_main_edges = [
+        {
+            "kind": "supports",
+            "from": "source_custody",
+            "to": "osm_learning_trajectory",
+            "contribution": "exact article identity methods model scope code provenance and access-copy custody",
+            "nontransfer": "custody does not reproduce the experiment or prove the interpretation",
+        },
+        {
+            "kind": "supports",
+            "from": "osm_learning_trajectory",
+            "to": "representation_prh",
+            "contribution": "endpoint and trajectory remain separate in causal and representation comparisons",
+            "nontransfer": "better trajectory fit does not identify a biological mechanism or causal equivalence",
+        },
+        {
+            "kind": "constrains",
+            "from": "osm_learning_trajectory",
+            "to": "proper_function_e",
+            "contribution": "performance and terminal geometry can leave process adequacy underdetermined",
+            "nontransfer": "operational success does not establish proper function objective warrant or Wisdom",
+        },
+        {
+            "kind": "constrains",
+            "from": "osm_learning_trajectory",
+            "to": "restoration",
+            "contribution": "longitudinal traces and interventions can distinguish pathways hidden by terminal labels",
+            "nontransfer": "task learning and representational adaptation are not human or noetic restoration",
+        },
+        {
+            "kind": "supports",
+            "from": "osm_learning_trajectory",
+            "to": "tensor_search",
+            "contribution": "architecture objective and trajectory comparison sharpen held-out rival-model protocols",
+            "nontransfer": "a winner among tested settings is not a universal mechanism or ontology result",
+        },
+    ]
+    actual_main_edges = [
+        row
+        for row in flywheel.get("edges", []) if isinstance(flywheel, dict) and isinstance(row, dict)
+        and (row.get("from") == "osm_learning_trajectory" or row.get("to") == "osm_learning_trajectory")
+    ]
+    if actual_main_edges != expected_main_edges:
+        issues.append("osm-program-main-flywheel-collection-mismatch")
+    expected_main_by_key = {(row["from"], row["to"]): row for row in expected_main_edges}
+    actual_main_by_key = {(row.get("from"), row.get("to")): row for row in actual_main_edges}
+    actual_main_keys = [(row.get("from"), row.get("to")) for row in actual_main_edges]
+    if len(actual_main_keys) != len(set(actual_main_keys)):
+        issues.append("osm-program-main-flywheel-duplicate-endpoint")
+    for edge_key in sorted(set(expected_main_by_key) | set(actual_main_by_key)):
+        if actual_main_by_key.get(edge_key) != expected_main_by_key.get(edge_key):
+            issues.append(f"osm-program-main-flywheel-edge-drift:{edge_key[0]}:{edge_key[1]}")
+
+    catalog_rows = catalog.get("items", []) if isinstance(catalog, dict) else []
+    catalog_row = next((row for row in catalog_rows if isinstance(row, dict) and row.get("item_id") == artifact_id), {})
+    expected_catalog_row = {
+        "item_id": artifact_id,
+        "title": "OSM learning-trajectory convergence crosswalk",
+        "source_surface": "CURRENT_PUBLIC_ORTHEMOLOGY_MAIN",
+        "evidence_class": "PROGRAM_OR_BURDEN_RECORD",
+        "privacy_class": "PUBLIC_SAFE",
+        "recommended_disposition": "PUBLIC_INTEGRATE",
+        "public_locator": "DOI 10.1038/s41586-024-08548-w and source-status row LAT-1",
+        "repository_relevance": "Reconnects the already integrated endpoint-versus-trajectory and latent-state source to the V11 milestone and flywheel owners without transferring empirical, normative, human, metaphysical, theorem, or meniscus credit.",
+        "owner_path": OSM_PROGRAM_CROSSWALK.relative_to(ROOT).as_posix(),
+        "source_access_copy_sha256": expected_hash,
+        "source_access_copy_bytes": 137824,
+        "campaign_epoch": "V12_PROGRAM_INTEGRATION",
+    }
+    if catalog_row != expected_catalog_row:
+        issues.append("osm-program-evidence-catalog-mismatch")
+
+    prompt = FABLE_OSM_PROMPT.read_text(encoding="utf-8") if FABLE_OSM_PROMPT.is_file() else ""
+    prompt_tokens = (
+        "fable/ar8r-convergence-research-v1",
+        "Never push directly to `main`",
+        "Do not transfer neuroscience evidence into metaphysics or theology",
+        "Never commit it",
+        "git fetch origin --prune",
+        "stop unless its exact head",
+    )
+    if any(token not in prompt for token in prompt_tokens):
+        issues.append("osm-program-fable-prompt-guard-missing")
+    if not OSM_PROGRAM_NOTE.is_file():
+        issues.append("osm-program-human-readable-owner-missing")
+    return list(dict.fromkeys(issues))
+
+
 def validate_task7_public_privacy() -> list[str]:
     issues: list[str] = []
     private_pdf = "C2680D5A-8FAE-11F1-A320-F5FC2CA0B584.pdf"
@@ -1347,6 +1755,7 @@ def validate_task7_public_privacy() -> list[str]:
         TAC_REGISTRY, PMR_MAP, LEAN_QUEUE, TEN_CONFLICT, FAMILY_CROSSWALK, CONNES_RECEIPT,
         LEAN_V7, OSW15, TWO_THREAD_RECEIPT, MILESTONE_CHARTER, MILESTONES,
         COMPATIBILITY_OVERLAY, ASCENT_V2, SURFACE_CUSTODY, FLYWHEEL, PROJECTION,
+        OSM_PROGRAM_CROSSWALK, OSM_PROGRAM_NOTE, FABLE_OSM_PROMPT,
     ]
     paths.extend(path for path in DEFERRED_EXACT.rglob("*") if path.is_file())
     for path in paths:
@@ -1595,6 +2004,7 @@ def validate_packet() -> list[str]:
     issues.extend(validate_task7_ledgers_and_crosswalks(catalog, ledger, load_yaml(SURFACE_CUSTODY), load_yaml(FLYWHEEL), load_yaml(TWO_THREAD_RECEIPT)))
     issues.extend(validate_milestone_architecture(load_yaml(MILESTONES)))
     issues.extend(validate_task7a_owner_integration())
+    issues.extend(validate_osm_program_integration(load_yaml(OSM_PROGRAM_CROSSWALK), load_yaml(MILESTONES), load_yaml(FLYWHEEL), catalog))
     issues.extend(validate_task7_public_privacy())
 
     current_state = load_yaml(CURRENT_STATE)
@@ -1636,6 +2046,7 @@ def main() -> int:
     print("[PASS] Task 7 deferred exact source, A-N/bridge owners, typed matrices, PMR/Lean map, and family crosswalk")
     print("[PASS] Connes dispute dispositions, OSW-15 coordinates, private-source boundary, and static-only Lean V7 status")
     print("[PASS] Task 7A owner charter, 18 milestones, 9 non-adopted meniscus candidates, crosswalks, and anti-promotion controls")
+    print("[PASS] V12 OSM learning-trajectory program crosswalk and anti-transfer gates")
     print("AR8R V11 reconciliation packet: PASS")
     return 0
 

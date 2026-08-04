@@ -82,7 +82,7 @@ milestones:
     purpose: Characterize when a proof object warrants its intended theorem claim under declared source, interpretation, scope, axiom, build, and review custody.
     existing_assets: [OSW_15, T354_DEFECT, TEN_ADVANCES_STATIC_CONFLICT, CONNES_OBJECT_DISPUTE]
     repository_paths: [docs/project-closure/ar8r-v11/governance/ORTHEMOLOGICAL-SPECIFICATION-WARRANT-OSW-15.yaml, docs/project-closure/ar8r-v11/programs/ten-advances-connes-rigidity-dispute.md]
-    artifact_ids: [ORTHEMOLOGY-V11-OSW15, TEN-ADVANCES-CONFLICT, CONNES-DISPUTE, LEAN-V7-STATUS]
+    artifact_ids: [ORTHEMOLOGY-V11-OSW15, TEN-ADVANCES-CONFLICT, CONNES-DISPUTE, LEAN-V7-STATUS, OSM-LEARNING-TRAJECTORY-V12]
     open_burdens: [GENERAL_CERTIFICATION_THEOREM, LOAD_BEARING_COORDINATE_ESSENTIALITY, SPECIALIST_SETTLEMENT, MACHINE_CHECK_RECEIPTS]
     candidate_theorems: [INTENDED_CLAIM_CERTIFICATION_RELATIVE_TO_INTERPRETATION_AND_CUSTODY]
     candidate_invariants: [SPECIFICATION_WARRANT_PROFILE]
@@ -101,7 +101,7 @@ milestones:
     purpose: Separate world transition, observation, belief, representation, repertoire, policy, analysis, and source-version change.
     existing_assets: [DYNAMIC_ORTHING_DECISION, LATENT_STATE_APPLICATION, VERSIONED_EPISODE_AND_ANALYSIS_RECORDS]
     repository_paths: [docs/decisions/0024-dynamic-orthing-and-representation-learning.md, theory/orthemic-core-formalization.md]
-    artifact_ids: [ORTHEMOLOGY-MAIN-CORE, NEW-V11-FLYWHEEL, EXTERNAL-MATHEMATICS-LANES]
+    artifact_ids: [ORTHEMOLOGY-MAIN-CORE, NEW-V11-FLYWHEEL, EXTERNAL-MATHEMATICS-LANES, OSM-LEARNING-TRAJECTORY-V12]
     open_burdens: [LATENT_STATE_IDENTIFIABILITY, ACTIVE_QUERY_COST, ANALYSIS_TRANSPORT, WORLD_VERSUS_LEARNER_CHANGE]
     candidate_theorems: [DYNAMIC_IDENTIFIABILITY_AND_ANALYSIS_TRANSPORT]
     candidate_invariants: [VERSIONED_ANALYSIS_IDENTITY, OBSERVATIONAL_EQUIVALENCE_CLASS]
@@ -265,7 +265,7 @@ milestones:
     purpose: Prevent proposition, source, translation, formal object, runtime, proxy, causal, recipient, world, adoption, and carrier effects from being laundered across layers.
     existing_assets: [SOURCE_STATUS_LEDGERS, OSW_15, AR8R_CROSSWALKS, DAEE_BINDING_CONTRACTS]
     repository_paths: [docs/project-closure/ar8r-v11/governance/ORTHEMOLOGICAL-SPECIFICATION-WARRANT-OSW-15.yaml, docs/project-closure/ar8r-v11/programs/full-program-reentry-v2-source/AR8R_SOURCE_FORMAL_IMPLEMENTATION_WORLD_CROSSWALK_V2.yaml]
-    artifact_ids: [ORTHEMOLOGY-V11-OSW15, AR8R-HISTORICAL-RECOVERY-OVERLAY, DAEE-MAIN, NOETIC-OWNER-DRAFT]
+    artifact_ids: [ORTHEMOLOGY-V11-OSW15, AR8R-HISTORICAL-RECOVERY-OVERLAY, DAEE-MAIN, NOETIC-OWNER-DRAFT, OSM-LEARNING-TRAJECTORY-V12]
     open_burdens: [GENERAL_CROSSWALK_SCHEMA, COMPOSITION_RULES, TRANSPORT_WITNESSES, META_NOETIC_CARRIER_COLUMN]
     candidate_theorems: [CROSS_LAYER_COMPOSITION_AND_CERTIFICATION]
     candidate_invariants: [LAYERED_AUTHORITY_AND_CARRIER_PROFILE]
@@ -283,7 +283,7 @@ milestones:
     purpose: Convert external mathematics into exact reductions, guarded reductions, invariants, proof techniques, or falsifiers rather than analogies.
     existing_assets: [CANDIDATE_1, PRR_T1, AR_T4, TEN_ADVANCES, PRH, TENSOR_A_G, THEOREM_FAMILY_CONTROL]
     repository_paths: [docs/project-closure/ar8r-v11/programs/tensor-and-bitter-lesson.md, docs/project-closure/ar8r-v11/programs/ten-advances-and-source-custody.md]
-    artifact_ids: [EXTERNAL-MATHEMATICS-LANES, CANDIDATE-1-EXACT, TEN-ADVANCES-CONFLICT, CONNES-DISPUTE]
+    artifact_ids: [EXTERNAL-MATHEMATICS-LANES, CANDIDATE-1-EXACT, TEN-ADVANCES-CONFLICT, CONNES-DISPUTE, OSM-LEARNING-TRAJECTORY-V12]
     open_burdens: [REAL_PRIOR_ART_COMPARISON, METHOD_TRANSFER_CLASSIFICATION, MATCHED_LEARNED_VERSUS_HAND_BUILT_TESTS]
     candidate_theorems: [CROSS_DOMAIN_REDUCTION_OR_INVARIANT]
     candidate_invariants: [TRANSFER_CLASS_AND_ANCESTRY_STATUS]
@@ -321,7 +321,7 @@ milestones:
     purpose: Test behavioral, causal, diagnostic, transport, provenance, representation, and restoration claims that formal conformance cannot establish.
     existing_assets: [DESIGNED_PUBLIC_EXPERIMENTS, T299_T300_NEGATIVE_PILOT, TERMINOLOGY_AND_TENSOR_PROTOCOLS]
     repository_paths: [experiments/experiment-status.yaml, docs/project-closure/ar8r-v11/experiments/t299-t300-negative-synthetic-pilot.yaml]
-    artifact_ids: [T299-T300-BOUNDARY, NEW-V11-FLYWHEEL, FUSHA-QAMUS-BOUNDARY]
+    artifact_ids: [T299-T300-BOUNDARY, NEW-V11-FLYWHEEL, FUSHA-QAMUS-BOUNDARY, OSM-LEARNING-TRAJECTORY-V12]
     open_burdens: [PREREGISTRATION, SUPPORT_DISJOINT_EVALUATION, CAUSAL_CONTRASTS, EXTERNAL_EXECUTION, HUMAN_SPECIALIST_REVIEW]
     candidate_theorems: []
     candidate_invariants: [BENCHMARK_COVERAGE_AND_SHORTCUT_RESISTANCE]
@@ -491,6 +491,7 @@ artifact_crosswalk:
   - {artifact_id: CONNES-DISPUTE, source_class: EXTERNAL_MATHEMATICS, authority: UNRESOLVED_SPECIALIST_REVIEW_REQUIRED, path_kind: REPOSITORY, path: docs/project-closure/ar8r-v11/provenance/AR8R-CONNES-RIGIDITY-DISPUTE-RECEIPT-V11.yaml, status: OPENAI_NIELSEN_CONNES_STATUSES_SEPARATE}
   - {artifact_id: T299-T300-BOUNDARY, source_class: EXACT_HISTORICAL_AR8R_EVIDENCE, authority: EXACT_VERSION_AND_NEGATIVE_PILOT_CUSTODY, path_kind: REPOSITORY, path: docs/project-closure/ar8r-v11/experiments/t299-t300-negative-synthetic-pilot.yaml, status: NEGATIVE_BOUNDED_NO_FRAMEWORK_VALIDATION}
   - {artifact_id: TAC-SAC-NEW-V11, source_class: NEW_V11_ANALYSIS, authority: NEW_TYPED_COORDINATES_ONLY, path_kind: REPOSITORY, path: docs/project-closure/ar8r-v11/programs/AR8R-TAC-SAC-TYPED-COORDINATE-AND-COUNTERMODEL-REGISTRY-V11.yaml, status: HISTORICAL_TERMS_UNAVAILABLE}
+  - {artifact_id: OSM-LEARNING-TRAJECTORY-V12, source_class: CURRENT_PUBLIC_ORTHEMOLOGY_MAIN, authority: EXTERNAL_EXEMPLIFICATION_AND_CONSTRAINT, path_kind: REPOSITORY, path: docs/project-closure/ar8r-v11/programs/AR8R-OSM-LEARNING-TRAJECTORY-CONVERGENCE-CROSSWALK-V12.yaml, status: CURRENT_PROGRAM_CROSSWALK_NO_THEOREM_OR_VALIDATION_CREDIT}
 dependency_phases:
   - {phase_id: PHASE-1, title: V11 authority and roadmap integration, milestone_ids: [M1, M2, M12, M14], candidate_ids: [], status: ACTIVE_REPOSITORY_INTEGRATION_NO_SCIENTIFIC_PROMOTION}
   - {phase_id: PHASE-2, title: Core normalization, milestone_ids: [M1, M2, M3, M12, M14], candidate_ids: [MEN-5], status: PROPOSAL_ONLY}

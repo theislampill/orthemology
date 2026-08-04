@@ -1,0 +1,197 @@
+schema: ar8r-osm-learning-trajectory-convergence-crosswalk-v12
+document_id: AR8R-OSM-LEARNING-TRAJECTORY-CONVERGENCE-CROSSWALK-V12
+version: 1.0
+date: '2026-08-04'
+status: CURRENT_PROGRAM_CROSSWALK_NO_THEOREM_OR_VALIDATION_CREDIT
+authority:
+  governing_decisions:
+    - docs/decisions/0015-latent-state-observation-and-representation-boundary.md
+    - docs/decisions/0024-dynamic-orthing-and-representation-learning.md
+  classification: EXTERNAL_EXEMPLIFICATION_AND_CONSTRAINT
+  adoption_effect: NONE
+  theorem_effect: NONE
+  novelty_effect: NONE
+  empirical_validation_effect: NONE
+source:
+  source_id: LAT-1
+  title: Learning produces an orthogonalized state machine in the hippocampus
+  doi: 10.1038/s41586-024-08548-w
+  source_type: PRIMARY_RESEARCH_ARTICLE_IN_ANOTHER_FIELD
+  primary_text_status: PRIMARY_TEXT_EXACT
+  access_copy_sha256: 0d097cba7bbb25a949e2bf95af28b5a2259bd8d60b0e5fac5a74cdf7d05aa814
+  access_copy_bytes: 137824
+  access_copy_role: EVIDENCE_CUSTODY_ONLY
+  repository_copy: false
+  extraction_lines_are_journal_pagination: false
+  underlying_experiment_reproduced: false
+  official_code_reproduced: false
+existing_repository_authority:
+  - references/source-status.yaml#LAT-1
+  - references/orthemology.bib
+  - docs/decisions/0015-latent-state-observation-and-representation-boundary.md
+  - docs/decisions/0024-dynamic-orthing-and-representation-learning.md
+  - docs/related-work/LATENT-STATE-INFERENCE-AND-ORTHEMOLOGY.md
+  - applications/latent-state-orthing/DYNAMIC-ORTHING-AND-LATENT-STATE-LEARNING.md
+  - applications/latent-state-orthing/OSM-CSCG-ORTHEME-CROSSWALK.yaml
+  - applications/latent-state-orthing/OSM-DYNAMICS-DEFINITIONS.yaml
+source_reported_constraints:
+  - id: OSM-SRC-01
+    claim_kind: SOURCE_REPORTED
+    claim: Sequential context can separate latent task states that share an immediate sensory observation.
+    scope: REPORTED_2ACDC_CSCG_AND_CA1_SETTING
+  - id: OSM-SRC-02
+    claim_kind: SOURCE_REPORTED
+    claim: Several tested models can reach related terminal representational criteria while differing in learning trajectory.
+    scope: AMONG_TESTED_MODELS_UNDER_REPORTED_EVALUATION
+  - id: OSM-SRC-03
+    claim_kind: SOURCE_REPORTED
+    claim: High next-input prediction performance can occur without the global representation geometry measured in the study.
+    scope: REPORTED_MODEL_SETTINGS_AND_OBJECTIVES
+  - id: OSM-SRC-04
+    claim_kind: SOURCE_REPORTED
+    claim: Architecture and learning objective influence the terminal representation produced by the tested models.
+    scope: REPORTED_MODEL_SETTINGS_ONLY
+  - id: OSM-SRC-05
+    claim_kind: SOURCE_REPORTED
+    claim: Novel-cue and stretched-track observations are consistent with bounded reuse, shift, reset, or rebinding alternatives.
+    scope: THREE_MICE_AND_REPORTED_ALTERATION_TESTS
+project_syntheses:
+  - id: OSM-SYN-01
+    claim_kind: PROJECT_SYNTHESIS
+    claim: Endpoint agreement and performance agreement do not by themselves determine pathway adequacy, learning trajectory, or mechanism identity.
+    status: BOUNDED_ORTHEMOLOGY_SYNTHESIS
+  - id: OSM-SYN-02
+    claim_kind: PROJECT_SYNTHESIS
+    claim: Observation, world state, model latent state, posterior, neural response, representation geometry, and orthemic profile require separate typed owners.
+    status: EXISTING_OBJECT_SEPARATION_RESTATED
+  - id: OSM-SYN-03
+    claim_kind: PROJECT_SYNTHESIS
+    claim: Longitudinal intermediate states can discriminate candidates that a terminal-only comparison leaves open.
+    status: RESEARCH_METHOD_CONSTRAINT
+  - id: OSM-SYN-04
+    claim_kind: PROJECT_SYNTHESIS
+    claim: A cross-domain convergence claim requires an explicit correspondence stronger than vocabulary or diagrammatic similarity.
+    status: PROGRAM_GOVERNANCE_CONSTRAINT
+formal_convergence_gate:
+  status: REQUIRED_NOT_SATISFIED_BY_THIS_SOURCE
+  qualifying_relations:
+    - EXACT_REDUCTION
+    - SHARED_FORMAL_MODEL_WITH_TYPED_INTERPRETATION_MAPS
+    - SHARED_INVARIANT_WITH_DOMAIN_SPECIFIC_SEMANTICS
+    - GUARDED_TRANSFER_THEOREM
+    - COMMON_COUNTERMODEL_ARCHITECTURE_UNDER_MATCHED_ASSUMPTIONS
+  rejected_shortcuts:
+    - SHARED_VOCABULARY
+    - SIMILAR_DIAGRAMS
+    - COMMON_INTUITIVE_METAPHOR
+    - TERMINAL_PERFORMANCE_MATCH
+    - TERMINAL_GEOMETRY_MATCH
+    - NUMERIC_OR_THEMATIC_ADJACENCY
+milestone_crosswalk:
+  - milestone_id: M2
+    relation: EXTERNAL_CASE_CONSTRAINS_METHOD
+    contribution: Endpoint-only verification can miss trajectory and mechanism differences.
+    nontransfer: The study does not establish general specification warrant or theorem-intent fidelity.
+  - milestone_id: M3
+    relation: DIRECT_BOUNDED_PROGRAM_INPUT
+    contribution: Observation aliasing, latent-state inference, learner updates, geometry, and task alterations instantiate the existing dynamic object distinctions.
+    nontransfer: Model latent states and neural representations do not become orthemes or worldly states.
+  - milestone_id: M8
+    relation: BOUNDARY_ONLY
+    contribution: Supplies a concrete warning against collapsing observations, latent representations, and carriers.
+    nontransfer: Mouse CA1 findings do not establish a human noetic architecture, soul carrier, deformation, or restoration model.
+  - milestone_id: M10
+    relation: BOUNDARY_ONLY
+    contribution: Separates operational success and terminal representation from the process that produced them.
+    nontransfer: Task efficiency supplies no normative proper-function, warrant, teleology, or design premise.
+  - milestone_id: M11
+    relation: NO_EVIDENTIAL_SUPPORT
+    contribution: Defines an explicit empirical-to-metaphysical firewall.
+    nontransfer: The paper supplies no premise for transcendental orthability, Necessary Being, unity, agency, attributes, Speech, or revelation.
+  - milestone_id: M12
+    relation: DIRECT_BOUNDED_PROGRAM_INPUT
+    contribution: Provides a worked source-to-method-to-model-to-representation crosswalk with distinct authority levels.
+    nontransfer: Article, code, model fit, representation geometry, and world truth are not interchangeable.
+  - milestone_id: M13
+    relation: METHOD_TRANSFER_TARGET
+    contribution: Supplies a candidate test case for classifying endpoint-trajectory discrimination as reduction, guarded transfer, analogy, or nonidentity.
+    nontransfer: A reused proof pattern or vocabulary earns no new theorem or novelty credit.
+  - milestone_id: M14
+    relation: FORMALIZATION_TARGET_ONLY
+    contribution: Suggests typed trace, quotient, and candidate-discrimination definitions for later formal work.
+    nontransfer: The paper contains no Lean theorem, proof object, parse, elaboration, kernel, or axiom receipt.
+  - milestone_id: M15
+    relation: DIRECT_BOUNDED_PROGRAM_INPUT
+    contribution: Motivates longitudinal, intervention-sensitive, and held-out trajectory tests in addition to endpoint metrics.
+    nontransfer: The repository has not run a biological study or validated Orthemology empirically.
+unmapped_milestones:
+  milestone_ids: [M1, M4, M5, M6, M7, M9, M16, M17, M18]
+  reason: No direct evidential contribution is established; any later relation requires its own typed correspondence and source review.
+flywheel_contributions:
+  - edge_id: OSM-FW-01
+    from: source_custody
+    to: osm_learning_trajectory
+    contribution: Exact article identity, methods, model scope, code provenance, and access-copy custody bound every downstream use.
+    nontransfer: Custody does not reproduce the experiment or prove the interpretation.
+  - edge_id: OSM-FW-02
+    from: osm_learning_trajectory
+    to: representation_prh
+    contribution: Endpoint and trajectory must remain separate in causal and representation comparisons.
+    nontransfer: Better trajectory fit does not identify a biological mechanism or causal equivalence.
+  - edge_id: OSM-FW-03
+    from: osm_learning_trajectory
+    to: proper_function_e
+    contribution: Performance and terminal geometry can leave process adequacy underdetermined.
+    nontransfer: Operational success does not establish proper function, objective warrant, or Wisdom.
+  - edge_id: OSM-FW-04
+    from: osm_learning_trajectory
+    to: restoration
+    contribution: Longitudinal traces and interventions can distinguish pathways hidden by terminal labels.
+    nontransfer: Task learning and representational adaptation are not human or noetic restoration.
+  - edge_id: OSM-FW-05
+    from: osm_learning_trajectory
+    to: tensor_search
+    contribution: Architecture, objective, and trajectory comparison sharpen held-out rival-model protocols.
+    nontransfer: A winner among tested settings is not a universal mechanism or ontology result.
+research_queue:
+  - id: OSM-RQ-01
+    question: Is endpoint-versus-trajectory discrimination an exact instance of the result-versus-pathway architecture, a guarded specialization, or only an analogy?
+    required_output: FORMAL_CORRESPONDENCE_OR_EXPLICIT_NONIDENTITY
+  - id: OSM-RQ-02
+    question: Which trace quotient preserves the distinctions needed to discriminate candidate update mechanisms without identifying latent labels?
+    required_output: TYPED_DEFINITION_PROOF_OR_COUNTERMODEL
+  - id: OSM-RQ-03
+    question: What intervention or observation sequence minimally separates candidate latent-transition models that agree at the endpoint?
+    required_output: BOUNDED_QUERY_COMPLEXITY_OR_IMPOSSIBILITY_RESULT
+  - id: OSM-RQ-04
+    question: Which guards permit transport across altered cues or track geometry without silently equating states, representations, or applicability?
+    required_output: GUARDED_TRANSPORT_RESULT_WITH_DELETION_MODELS
+  - id: OSM-RQ-05
+    question: Can one trace-sensitive invariant apply to learning, proof audits, reason transport, and restoration without collapsing their distinct success predicates?
+    required_output: CROSS_DOMAIN_REDUCTION_SHARED_INVARIANT_OR_BOUNDARY_THEOREM
+forbidden_transfers:
+  - LATENT_STATE_EQUALS_ORTHEME
+  - OBSERVATION_EQUALS_OCCURRENCE
+  - POSTERIOR_EQUALS_TRUTH
+  - REPRESENTATION_GEOMETRY_EQUALS_WORLD_STATE
+  - CSCG_FIT_PROVES_BIOLOGICAL_MECHANISM
+  - ENDPOINT_MATCH_PROVES_PATHWAY_OR_CAUSAL_ADEQUACY
+  - TASK_PERFORMANCE_PROVES_PROPER_FUNCTION_OR_WARRANT
+  - MOUSE_CA1_PROVES_HUMAN_NOETIC_STRUCTURE
+  - ADAPTATION_EQUALS_RESTORATION
+  - NEUROSCIENCE_SUPPORTS_TRANSCENDENTAL_OR_THEOLOGICAL_ASCENT
+  - SOURCE_OR_CODE_AVAILABILITY_EQUALS_REPRODUCTION
+  - PAPER_CONTAINS_LEAN_PROOF
+  - SOURCE_ESTABLISHES_ORTHEMOLOGY_VALIDATION
+repository_effect:
+  source_records_duplicated: false
+  local_access_copy_committed: false
+  existing_source_authority_reused: true
+  milestone_status_changed: false
+  theorem_added: false
+  empirical_result_added: false
+  fable_review_status: REQUIRED_NOT_YET_PERFORMED
+closure_state:
+  integrated_champion: NO_INTEGRATED_CHAMPION
+  meniscus: MENISCUS_NOT_REACHED
+  natural_closure: NATURAL_CLOSURE_NOT_REACHED
