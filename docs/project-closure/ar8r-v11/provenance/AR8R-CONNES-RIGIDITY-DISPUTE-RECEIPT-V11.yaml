@@ -1,0 +1,68 @@
+schema: ar8r-connes-rigidity-dispute-receipt-v11
+private_source:
+  classification: PRIVATE_EXCLUDED_HASH_ONLY
+  sha256: 748a3483b4e52c930060ebfa921b2bf3f2f0d38a839fb48195a9dd594d62ed5c
+  bytes: 415919
+  pages: 36
+  repository_copy: false
+public_openai_source:
+  commit: 94bc0feb6a9ff12c7d31d6de640a725c9d43d2b6
+  file: ConnesRigidity.lean
+  sha256: 31f6c419f341ee6aa5b03bc15800a9d8ee2c654c344aab90bdef0639353ccc91
+  url: https://github.com/openai/ten-proofs/blob/94bc0feb6a9ff12c7d31d6de640a725c9d43d2b6/ConnesRigidity.lean
+  static_token_scan: {sorry: 0, admit: 0, axiom: 0, opaque: 0}
+  source_object_summary:
+    K: kernel of evaluation/reduction SL4(Z[t]) -> SL4(F3)
+    Lambda: SemidirectProduct (Multiplicative D) K kDAction
+    CarryGroup: AddCommGroup with internal binary-carry law
+    E: Pontryagin dual of CarryGroup
+    Gamma: SemidirectProduct (Multiplicative (E n)) K (kEAction n)
+openai_result:
+  disposition: NIELSEN_CHALLENGE_REJECTED__SPECIALIST_SETTLEMENT_OPEN
+  theorem_status: UNRESOLVED
+nielsen_critique:
+  disposition: DOES_NOT_REFUTE_EXACT_PUBLIC_OPENAI_OBJECT
+  decisive_object_mismatch: The critique audits a different Sp4(Z) split/non-split and cocycle construction; its direct-product theorem does not address the exact public source object.
+nielsen_positive_proof:
+  disposition: REJECTED_AS_PROOF__FATAL_GAPS
+  repository_ready: false
+overall_disposition: UNRESOLVED_PENDING_OPERATOR_ALGEBRA_SPECIALIST_REVIEW
+blocking_defects:
+  - {id: N-01, finding: Ioana Theorem 8.2 is misstated; nonintertwining hypotheses and torsion-general conclusion are omitted.}
+  - {id: N-02, finding: Cases I and II are not eliminated; the declared containment supplies rather than defeats the Case II intertwiner.}
+  - {id: N-03, finding: Coordinate injectivity uses an unestablished normal map and is circular.}
+  - {id: N-04, finding: The finite-index conclusion is unsupported.}
+  - {id: N-05, finding: Tower termination is circular and the property-(T)-implies-finite-depth principle is false in general.}
+  - {id: N-06, finding: Borel density and Margulis superrigidity are overapplied.}
+  - {id: N-07, finding: Extension-cohomology compatibility omits the fibre map.}
+  - {id: N-08, finding: Mutual embeddings are promoted to isomorphism without a valid bridge.}
+  - {id: N-09, finding: The exact OpenAI object is misidentified.}
+  - {id: N-10, finding: The generic direct-product Lean appendix is irrelevant to the exact source object.}
+  - id: N-11
+    finding: "The positive Lean appendix assumes classification, eliminations, injectivity, and surjectivity burdens."
+  - {id: N-12, finding: Torsor and principal-bundle claims are false or category-confused.}
+  - {id: N-13, finding: Property (T) is asserted to pass to arbitrary extensions without needed hypotheses.}
+  - {id: N-14, finding: DHR/QFT and physical conclusions exceed the established objects.}
+validation_axes:
+  exact_source_custody: PASS
+  static_token_scan: PASS
+  build: NOT_PERFORMED
+  elaboration: NOT_PERFORMED
+  kernel: NOT_PERFORMED
+  axiom_report: NOT_PERFORMED
+  specification_correspondence: UNRESOLVED
+  operator_algebra_specialist_review: NOT_PERFORMED
+primary_sources:
+  - https://cdn.openai.com/pdf/ten-proofs-oai.pdf
+  - https://github.com/openai/ten-proofs/blob/94bc0feb6a9ff12c7d31d6de640a725c9d43d2b6/ConnesRigidity.lean
+  - https://arxiv.org/pdf/1002.4595
+  - https://arxiv.org/abs/math/9804056
+  - https://arxiv.org/abs/2508.08194
+zero_credit_boundary:
+  ar8r_theorem_credit: 0
+  origin_credit: 0
+  novelty_credit: 0
+  reduction_credit: 0
+  meniscus_credit: 0
+  closure_credit: 0
+  champion_credit: 0

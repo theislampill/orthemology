@@ -1,0 +1,16 @@
+schema: ar8r-piece-count-disposition-v5-public-receipt
+source_sha256: b31be40f8ca37c1170dac246d6f27634aefe3d50ff0287ec04414893606b1fd7
+mounted_registry_count: 776
+derived_recovery_policy_scalar: 914
+disposition: DERIVED_RECOVERY_POLICY_COUNT_EXACT_IDENTITY_RECOVERY_OPEN
+identity_status:
+  mounted_piece_ids_unique: true
+  all_914_identities_reconstructed_and_frozen: false
+  t371_complete_packet_present: false
+  t372_complete_packet_present: false
+zero_credit_events:
+  P661_P668_negative_pilot: 0
+authority_rule: >-
+  914 is a derived recovery-policy scalar, not an exact identity-by-identity
+  recovered-piece count. Repository admission uses explicit exported identities,
+  never this scalar alone.

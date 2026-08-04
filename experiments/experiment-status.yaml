@@ -98,3 +98,20 @@ packets:
   required_remaining_gates: [instantiation after Pilot 1, external preregistration before any run, adequate power]
   run_exists: false
   licensed: nothing
+
+# This is deliberately outside `packets`: it is historical internal synthetic
+# evidence recovered from AR8R custody, not a public repository experiment packet
+# and not part of the readiness ladder validated above.
+historical_internal_synthetic_evidence:
+- evidence_id: AR8R-P661-P668-T299-T300-PILOT
+  public_owner: docs/project-closure/ar8r-v11/experiments/t299-t300-negative-synthetic-pilot.yaml
+  evidence_class: PREREGISTERED_SYNTHETIC_SUPPORT_OVERLAPPING_DISTRIBUTION_STRESS_PILOT
+  disposition: NEGATIVE_AT_CURRENT_EVIDENTIAL_CLASS
+  public_experiment_packet: false
+  externally_preregistered: false
+  external_empirical_validation: false
+  theorem_credit: false
+  meniscus_credit: false
+  licensed: >-
+    retirement of the exact tested mechanism/configuration at the tested
+    evidential class only; no framework-validation or generalization claim

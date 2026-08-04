@@ -1,0 +1,34 @@
+schema: ar8r-pmr-wave-ledger-v1
+campaign: AR8R_POST_MERGE_MENISCUS_PROGRAM_V1
+waves:
+  - wave_id: PMR-001
+    title: source-bound Creator separation and recipient-side warrant transport
+    status: COMPLETE_AT_SELECTED_SCOPE
+    primary_candidates: [PMR-M3-01, PMR-R5-01, PMR-AGCOM-01]
+    supporting_operations:
+      - PRE_PMR continuity correction
+      - Candidate 1 exact dossier consolidation
+      - T299/T300 negative-pilot receipt restoration
+      - fiṭrah impairment/reminder/restoration source finding
+      - AR2/AR3 ancestry reconciliation
+      - theorem-family adjudication
+      - 88-node flywheel initialization and 44-edge dependency-closed subgraph
+    early_wave_requirements_satisfied:
+      item_1_M3: true
+      item_4_R5_comparison: true
+      item_5_agentic_communication: true
+      AR2_AR3_reconciliation: true
+      theorem_family_or_prior_art_adjudication: true
+    audit:
+      cold: REPAIR_REQUIRED
+      blocking_findings: [PMR001-A-F01]
+      repairs: [PMR001-R01, PMR001-R02]
+      rereview: PASS_WITH_NONBLOCKING_AUTHORITY_NOTES
+    meniscus_effect: NONE
+    integrated_champion: NONE
+    natural_closure: NOT_REACHED
+  - wave_id: PMR-002
+    status: READY_NOT_STARTED
+    selected_lanes: [M4_QIYAS_AL_AWLA, LANGUAGE_TRANSLATION, ARTICULABILITY_PRH]
+    primary_candidate_limit: 3
+    exact_next_action: execute PMR-002 bounded ancestry retrieval, then freeze PMR-M4-01 first

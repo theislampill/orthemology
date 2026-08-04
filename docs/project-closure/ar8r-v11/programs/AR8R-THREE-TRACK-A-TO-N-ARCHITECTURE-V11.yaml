@@ -1,0 +1,598 @@
+schema: ar8r-three-track-a-to-n-architecture-v11
+authority: CURRENT_PUBLIC_OWNER
+earlier_map_locator: deferred-candidate-source/exact/integration/A_TO_N_COMPREHENSIVE_INTEGRATION_MAP.yaml
+source_era_rule: Earlier recovered maps are evidence only; this overlay controls current status.
+milestone_architecture:
+  owner: AR8R-ORTHEMOLOGY-MENISCUS-MILESTONES-V1.yaml
+  related_milestones: [M1, M4, M5, M8, M10, M11, M12, M13]
+  related_meniscus_candidates: [MEN-1, MEN-2, MEN-3, MEN-7, MEN-8]
+  effect: POINTER_ONLY_NO_CANDIDATE_OR_TRACK_PROMOTION
+candidate_defaults: &candidate_defaults
+  live_rival: AT_LEAST_ONE_LIVE_RIVAL
+  remaining_burden: Independent proof, countermodel, source, prior-art, and owner review as applicable.
+  current_adoption: NOT_ADOPTED
+  what_it_does_not_establish: A complete Necessary-Being chain, an M/T substitution by Track N, divine personality, Wisdom, or natural-theology Speech.
+  forbidden_promotions: [EXACT_HISTORICAL_RECOVERY, OWNER_ADOPTION, INTEGRATED_CHAMPION, MENISCUS_REACHED, NATURAL_CLOSURE]
+dependency_policy:
+  exact_evidence_owner: deferred-candidate-source/exact/integration/A_TO_N_COMPREHENSIVE_INTEGRATION_MAP.yaml
+  strict_candidate_graph: ACYCLIC
+  strictness_classes: [STRICT_DEPENDENCY, NON_STRICT_ARCHITECTURE_CROSSWALK, NOT_APPLICABLE]
+  current_effect: Dependency evidence is recorded without adopting a candidate, proof edge, champion, meniscus, or closure claim.
+candidates:
+  - <<: *candidate_defaults
+    candidate: A
+    title: Modal-bootstrapping quadrilemma
+    track: T
+    source_class: RECOVERED_CONTEXT
+    current_public_owner: track-t-authority-and-bridge-status.md
+    truth_status: SCOPED_HISTORICAL_RESULT_RECORDED__CURRENT_ADOPTION_NOT_ESTABLISHED
+    proof_status: HISTORICAL_HUMAN_PROOF_AND_EXECUTABLE_SCOPE_CHECK__CURRENT_INDEPENDENT_REVIEW_OPEN
+    source_status: HISTORICAL_NOT_PRIMARY_SOURCE_DEPENDENT__CURRENT_PROVENANCE_EXPLICIT
+    novelty_status: HISTORICAL_EXACT_FOUR_HORN_NOT_LOCATED__CURRENT_PRIORITY_NOT_ESTABLISHED
+    significance_status: HISTORICAL_SCOPED_PAPER_CANDIDATE__CURRENT_INDEPENDENT_REVIEW_PENDING
+    current_status_boundary: HISTORICAL_EVIDENCE_RECORDED_NO_CURRENT_OWNER_ADOPTION
+    dependencies:
+      - target: NONE
+        target_kind: NONE
+        relation: Explicit absence of another-candidate dependency.
+        edge_type: EXPLICIT_NONE
+        strictness: NOT_APPLICABLE
+        source_locator: deferred-candidate-source/exact/integration/A_TO_N_COMPREHENSIVE_INTEGRATION_MAP.yaml
+        source_class: EXACT_RECOVERED_PREDECESSOR_MAP
+        adoption_boundary: EVIDENCE_ONLY_NO_AUTOMATIC_CURRENT_ADOPTION
+        current_status: NO_CANDIDATE_DEPENDENCY_RECORDED
+    historical_evidence:
+      source_locator: deferred-candidate-source/exact/integration/A_TO_N_COMPREHENSIVE_INTEGRATION_MAP.yaml
+      source_class: EXACT_RECOVERED_PREDECESSOR_MAP
+      authority: AR7_REOPENED_FOR_INDEPENDENT_MENISCUS_AUDIT
+      truth_status: SCOPED_POSITIVE_RESULT
+      proof_status: HUMAN_PROOF_AND_EXECUTABLE_SCOPE_CHECK
+      source_status: NOT_PRIMARY_SOURCE_DEPENDENT_OR_SUPPORTING_ONLY
+      novelty_status: "EXACT_FOUR_HORN_FORMULATION_NOT_LOCATED; TRANSCENDENTAL_MECHANISM_ESTABLISHED"
+      significance_status: SCOPED_PAPER_CANDIDATE_PENDING_INDEPENDENT_REVIEW
+      terminal_or_nonterminal_status: NONTERMINAL_EXTERNAL_REVIEW_PENDING
+      dependency_on_another_candidate: None
+      evidence_effect: EVIDENCE_ONLY_NO_AUTOMATIC_V11_ADOPTION
+  - <<: *candidate_defaults
+    candidate: B
+    title: Brute-order completeness and parity control
+    track: T
+    source_class: RECOVERED_CONTEXT
+    current_public_owner: track-t-authority-and-bridge-status.md
+    truth_status: SCOPED_HISTORICAL_RESULT_RECORDED__CURRENT_RIVAL_CONTROL_ONLY
+    proof_status: HISTORICAL_ARGUMENT_AND_COUNTERMODEL_CLASSIFICATION__CURRENT_SCOPE_ONLY
+    source_status: HISTORICAL_NOT_PRIMARY_SOURCE_DEPENDENT__CURRENT_PROVENANCE_EXPLICIT
+    novelty_status: HISTORICAL_METHODOLOGICAL_SYNTHESIS__NO_STRONG_PRIORITY_CLAIM
+    significance_status: PRINCIPAL_RIVAL_CONTROL__NOT_STANDALONE_MENISCUS
+    current_status_boundary: HISTORICAL_EVIDENCE_RECORDED_NO_CURRENT_OWNER_ADOPTION
+    dependencies:
+      - target: A
+        target_kind: CANDIDATE
+        relation: Scoped underived-order starting point.
+        edge_type: REQUIRES_SCOPED_STARTING_POINT
+        strictness: STRICT_DEPENDENCY
+        source_locator: deferred-candidate-source/exact/integration/A_TO_N_COMPREHENSIVE_INTEGRATION_MAP.yaml
+        source_class: EXACT_RECOVERED_PREDECESSOR_MAP
+        adoption_boundary: EVIDENCE_ONLY_NO_AUTOMATIC_CURRENT_ADOPTION
+        current_status: HISTORICAL_DEPENDENCY_RECORDED__NOT_ADOPTED_AS_CURRENT_PROOF_EDGE
+    historical_evidence:
+      source_locator: deferred-candidate-source/exact/integration/A_TO_N_COMPREHENSIVE_INTEGRATION_MAP.yaml
+      source_class: EXACT_RECOVERED_PREDECESSOR_MAP
+      authority: AR7_REOPENED_FOR_INDEPENDENT_MENISCUS_AUDIT
+      truth_status: SCOPED_POSITIVE_RESULT
+      proof_status: ARGUMENT_AND_COUNTERMODEL_CLASSIFICATION
+      source_status: NOT_PRIMARY_SOURCE_DEPENDENT_OR_SUPPORTING_ONLY
+      novelty_status: "METHODOLOGICAL SYNTHESIS; NO STRONG PRIORITY CLAIM"
+      significance_status: PRINCIPAL_RIVAL_CONTROL_NOT_STANDALONE_MENISCUS
+      terminal_or_nonterminal_status: TERMINAL_SCOPED_COMPONENT
+      dependency_on_another_candidate: A for scoped underived-order starting point
+      evidence_effect: EVIDENCE_ONLY_NO_AUTOMATIC_V11_ADOPTION
+  - <<: *candidate_defaults
+    candidate: C
+    title: Powers and dispositional-essentialist completion test
+    track: T
+    source_class: RECOVERED_CONTEXT
+    current_public_owner: AR8R-ONTOLOGY-AND-REPRESENTATION-ALTERNATIVES-MATRIX-V11.yaml
+    truth_status: SCOPED_HISTORICAL_RESULT_RECORDED__CURRENT_RIVAL_SURVIVES
+    proof_status: HISTORICAL_FINITE_COUNTERMODELS_AND_ARGUMENT__CURRENT_SCOPE_ONLY
+    source_status: HISTORICAL_NOT_PRIMARY_SOURCE_DEPENDENT__CURRENT_PROVENANCE_EXPLICIT
+    novelty_status: HIGH_PRIOR_ART_AND_TRIVIALITY_RISK
+    significance_status: HISTORICAL_BELOW_STANDALONE_MENISCUS__NO_CURRENT_PROMOTION
+    current_status_boundary: HISTORICAL_EVIDENCE_RECORDED_NO_CURRENT_OWNER_ADOPTION
+    dependencies:
+      - target: B
+        target_kind: CANDIDATE
+        relation: Total-explanandum framing.
+        edge_type: REQUIRES_TOTAL_EXPLANANDUM_FRAMING
+        strictness: STRICT_DEPENDENCY
+        source_locator: deferred-candidate-source/exact/integration/A_TO_N_COMPREHENSIVE_INTEGRATION_MAP.yaml
+        source_class: EXACT_RECOVERED_PREDECESSOR_MAP
+        adoption_boundary: EVIDENCE_ONLY_NO_AUTOMATIC_CURRENT_ADOPTION
+        current_status: HISTORICAL_DEPENDENCY_RECORDED__NOT_ADOPTED_AS_CURRENT_PROOF_EDGE
+      - target: D
+        target_kind: CANDIDATE
+        relation: Total-explanandum framing.
+        edge_type: REQUIRES_TOTAL_EXPLANANDUM_FRAMING
+        strictness: STRICT_DEPENDENCY
+        source_locator: deferred-candidate-source/exact/integration/A_TO_N_COMPREHENSIVE_INTEGRATION_MAP.yaml
+        source_class: EXACT_RECOVERED_PREDECESSOR_MAP
+        adoption_boundary: EVIDENCE_ONLY_NO_AUTOMATIC_CURRENT_ADOPTION
+        current_status: HISTORICAL_DEPENDENCY_RECORDED__NOT_ADOPTED_AS_CURRENT_PROOF_EDGE
+    historical_evidence:
+      source_locator: deferred-candidate-source/exact/integration/A_TO_N_COMPREHENSIVE_INTEGRATION_MAP.yaml
+      source_class: EXACT_RECOVERED_PREDECESSOR_MAP
+      authority: AR7_REOPENED_FOR_INDEPENDENT_MENISCUS_AUDIT
+      truth_status: SCOPED_POSITIVE_RESULT
+      proof_status: FINITE_COUNTERMODELS_AND_ARGUMENT
+      source_status: NOT_PRIMARY_SOURCE_DEPENDENT_OR_SUPPORTING_ONLY
+      novelty_status: HIGH_PRIOR_ART_AND_TRIVIALITY_RISK
+      significance_status: TERMINALLY_BELOW_STANDALONE_MENISCUS
+      terminal_or_nonterminal_status: TERMINAL_SCOPED_COMPONENT
+      dependency_on_another_candidate: B/D for total-explanandum framing
+      evidence_effect: EVIDENCE_ONLY_NO_AUTOMATIC_V11_ADOPTION
+  - <<: *candidate_defaults
+    candidate: D
+    title: Modal structure / concrete actuality two-factor no-go
+    track: T
+    source_class: RECOVERED_CONTEXT
+    current_public_owner: track-t-authority-and-bridge-status.md
+    truth_status: SCOPED_HISTORICAL_RESULT_RECORDED__CURRENT_SCOPE_NOT_PROMOTED
+    proof_status: HISTORICAL_CONDITIONAL_MODEL_EXTENSION_ARGUMENT__CURRENT_SCOPE_ONLY
+    source_status: HISTORICAL_NOT_PRIMARY_SOURCE_DEPENDENT__CURRENT_PROVENANCE_EXPLICIT
+    novelty_status: MECHANISM_STANDARD_OR_NEAR_STANDARD
+    significance_status: HISTORICAL_BELOW_STANDALONE_MENISCUS__NO_CURRENT_PROMOTION
+    current_status_boundary: HISTORICAL_EVIDENCE_RECORDED_NO_CURRENT_OWNER_ADOPTION
+    dependencies:
+      - target: B
+        target_kind: CANDIDATE
+        relation: Explanatory-completeness framing.
+        edge_type: REQUIRES_EXPLANATORY_COMPLETENESS_FRAMING
+        strictness: STRICT_DEPENDENCY
+        source_locator: deferred-candidate-source/exact/integration/A_TO_N_COMPREHENSIVE_INTEGRATION_MAP.yaml
+        source_class: EXACT_RECOVERED_PREDECESSOR_MAP
+        adoption_boundary: EVIDENCE_ONLY_NO_AUTOMATIC_CURRENT_ADOPTION
+        current_status: HISTORICAL_DEPENDENCY_RECORDED__NOT_ADOPTED_AS_CURRENT_PROOF_EDGE
+    historical_evidence:
+      source_locator: deferred-candidate-source/exact/integration/A_TO_N_COMPREHENSIVE_INTEGRATION_MAP.yaml
+      source_class: EXACT_RECOVERED_PREDECESSOR_MAP
+      authority: AR7_REOPENED_FOR_INDEPENDENT_MENISCUS_AUDIT
+      truth_status: SCOPED_POSITIVE_RESULT
+      proof_status: CONDITIONAL_MODEL_EXTENSION_ARGUMENT
+      source_status: NOT_PRIMARY_SOURCE_DEPENDENT_OR_SUPPORTING_ONLY
+      novelty_status: MECHANISM_STANDARD_OR_NEAR_STANDARD
+      significance_status: TERMINALLY_BELOW_STANDALONE_MENISCUS
+      terminal_or_nonterminal_status: TERMINAL_SCOPED_COMPONENT
+      dependency_on_another_candidate: B for explanatory completeness framing
+      evidence_effect: EVIDENCE_ONLY_NO_AUTOMATIC_V11_ADOPTION
+  - <<: *candidate_defaults
+    candidate: E
+    title: Recursive objective corrigibility partition
+    track: T/N
+    source_class: RECOVERED_CONTEXT
+    current_public_owner: proper-function-and-candidate-e.md
+    truth_status: HISTORICAL_REPAIRED_COMPONENT__CURRENT_DEFERRED_INSUFFICIENT_AUDIT
+    proof_status: DEFERRED_INSUFFICIENT_AUDIT
+    source_status: EXACT_DEFERRED_SOURCE_PRESENT__CURRENT_AUDIT_INSUFFICIENT
+    novelty_status: HISTORICAL_ESTABLISHED_NEIGHBOR_COLLISION__CURRENT_NOVELTY_NOT_ESTABLISHED
+    significance_status: HISTORICAL_BELOW_STANDALONE_MENISCUS__CURRENT_DEFERRED_INSUFFICIENT_AUDIT
+    current_adoption: DEFERRED_INSUFFICIENT_AUDIT
+    current_status_boundary: DEFERRED_EXACT_SOURCE_NO_ADOPTION_PENDING_SUFFICIENT_AUDIT
+    dependencies:
+      - target: A
+        target_kind: CANDIDATE
+        relation: Horn discipline.
+        edge_type: REQUIRES_HORN_DISCIPLINE
+        strictness: STRICT_DEPENDENCY
+        source_locator: deferred-candidate-source/exact/integration/A_TO_N_COMPREHENSIVE_INTEGRATION_MAP.yaml
+        source_class: EXACT_RECOVERED_PREDECESSOR_MAP
+        adoption_boundary: DEFERRED_CANDIDATE_NO_AUTOMATIC_CURRENT_ADOPTION
+        current_status: HISTORICAL_DEPENDENCY_RECORDED__CURRENT_AUDIT_INSUFFICIENT
+    historical_evidence:
+      source_locator: deferred-candidate-source/exact/integration/A_TO_N_COMPREHENSIVE_INTEGRATION_MAP.yaml
+      source_class: EXACT_RECOVERED_PREDECESSOR_MAP
+      authority: AR7_REOPENED_FOR_INDEPENDENT_MENISCUS_AUDIT
+      truth_status: CORRECT_REPAIRED_COMPONENT
+      proof_status: ARGUMENT_AND_COUNTERMODELS
+      source_status: NOT_PRIMARY_SOURCE_DEPENDENT_OR_SUPPORTING_ONLY
+      novelty_status: NUCLEUS COLLIDES WITH ESTABLISHED NORMATIVE REGRESS / CONSTITUTIVIST NEIGHBORS
+      significance_status: TERMINALLY_BELOW_STANDALONE_MENISCUS
+      terminal_or_nonterminal_status: TERMINAL_COMPONENT
+      dependency_on_another_candidate: A for horn discipline
+      evidence_effect: EXACT_EVIDENCE_PRESERVED__CURRENT_ADOPTION_DEFERRED
+  - <<: *candidate_defaults
+    candidate: F
+    title: Anchor-relative identifiability
+    track: M/T
+    source_class: RECOVERED_CONTEXT
+    current_public_owner: tensor-and-bitter-lesson.md
+    truth_status: HISTORICAL_PROVED_RESULT__CURRENT_CANDIDATE_ADOPTION_NOT_INFERRED
+    proof_status: HISTORICAL_STANDARD_GROUP_ACTION_PROOF__CURRENT_EXTERNAL_REVIEW_OPTIONAL
+    source_status: HISTORICAL_NOT_PRIMARY_SOURCE_DEPENDENT__CURRENT_PROVENANCE_EXPLICIT
+    novelty_status: MATHEMATICAL_SPINE_STANDARD
+    significance_status: HISTORICAL_BELOW_STANDALONE_MENISCUS__NO_CURRENT_PROMOTION
+    current_status_boundary: STANDARD_RESULT_EVIDENCE_RECORDED_NO_PROGRAM_CANDIDATE_ADOPTION
+    dependencies:
+      - target: NONE
+        target_kind: NONE
+        relation: Explicit absence of another-candidate dependency.
+        edge_type: EXPLICIT_NONE
+        strictness: NOT_APPLICABLE
+        source_locator: deferred-candidate-source/exact/integration/A_TO_N_COMPREHENSIVE_INTEGRATION_MAP.yaml
+        source_class: EXACT_RECOVERED_PREDECESSOR_MAP
+        adoption_boundary: EVIDENCE_ONLY_NO_AUTOMATIC_CURRENT_ADOPTION
+        current_status: NO_CANDIDATE_DEPENDENCY_RECORDED
+    historical_evidence:
+      source_locator: deferred-candidate-source/exact/integration/A_TO_N_COMPREHENSIVE_INTEGRATION_MAP.yaml
+      source_class: EXACT_RECOVERED_PREDECESSOR_MAP
+      authority: AR7_REOPENED_FOR_INDEPENDENT_MENISCUS_AUDIT
+      truth_status: PROVED
+      proof_status: STANDARD_GROUP_ACTION_PROOF
+      source_status: NOT_PRIMARY_SOURCE_DEPENDENT_OR_SUPPORTING_ONLY
+      novelty_status: MATHEMATICAL_SPINE_STANDARD
+      significance_status: TERMINALLY_BELOW_STANDALONE_MENISCUS
+      terminal_or_nonterminal_status: TERMINAL_REDUCED_COMPONENT
+      dependency_on_another_candidate: None
+      evidence_effect: EVIDENCE_ONLY_NO_AUTOMATIC_V11_ADOPTION
+  - <<: *candidate_defaults
+    candidate: G
+    title: Derivational-unification parity filter
+    track: T
+    source_class: RECOVERED_CONTEXT
+    current_public_owner: candidate-g-derivational-unification.md
+    truth_status: HISTORICAL_SCOPED_RESULT__CURRENT_DEFERRED_INSUFFICIENT_AUDIT
+    proof_status: DEFERRED_INSUFFICIENT_AUDIT
+    source_status: EXACT_DEFERRED_SOURCE_PRESENT__CURRENT_AUDIT_INSUFFICIENT
+    novelty_status: HISTORICAL_ESTABLISHED_UNIFICATION_SYNTHESIS__CURRENT_NOVELTY_NOT_ESTABLISHED
+    significance_status: HISTORICAL_BELOW_MENISCUS__CURRENT_DEFERRED_INSUFFICIENT_AUDIT
+    current_adoption: DEFERRED_INSUFFICIENT_AUDIT
+    current_status_boundary: DEFERRED_EXACT_SOURCE_NO_ADOPTION_PENDING_SUFFICIENT_AUDIT
+    dependencies:
+      - target: B
+        target_kind: CANDIDATE
+        relation: Rival and explanatory stopping-point control.
+        edge_type: REQUIRES_RIVAL_CONTROL
+        strictness: STRICT_DEPENDENCY
+        source_locator: deferred-candidate-source/exact/integration/A_TO_N_COMPREHENSIVE_INTEGRATION_MAP.yaml
+        source_class: EXACT_RECOVERED_PREDECESSOR_MAP
+        adoption_boundary: DEFERRED_CANDIDATE_NO_AUTOMATIC_CURRENT_ADOPTION
+        current_status: HISTORICAL_DEPENDENCY_RECORDED__CURRENT_AUDIT_INSUFFICIENT
+    historical_evidence:
+      source_locator: deferred-candidate-source/exact/integration/A_TO_N_COMPREHENSIVE_INTEGRATION_MAP.yaml
+      source_class: EXACT_RECOVERED_PREDECESSOR_MAP
+      authority: AR7_REOPENED_FOR_INDEPENDENT_MENISCUS_AUDIT
+      truth_status: SCOPED_POSITIVE_RESULT
+      proof_status: COMPARATIVE_EXPLANATORY_ARGUMENT
+      source_status: NOT_PRIMARY_SOURCE_DEPENDENT_OR_SUPPORTING_ONLY
+      novelty_status: DIRECT SYNTHESIS OF ESTABLISHED UNIFICATION/PARSIMONY MECHANISMS
+      significance_status: TERMINALLY_BELOW_MENISCUS
+      terminal_or_nonterminal_status: TERMINAL_SCOPED_COMPONENT
+      dependency_on_another_candidate: B
+      evidence_effect: EXACT_EVIDENCE_PRESERVED__CURRENT_ADOPTION_DEFERRED
+  - <<: *candidate_defaults
+    candidate: H
+    title: Anchor origin plus symmetry interaction
+    track: M/T
+    source_class: RECOVERED_CONTEXT
+    current_public_owner: tensor-and-bitter-lesson.md
+    truth_status: HISTORICAL_PROVED_RESULT__CURRENT_CANDIDATE_ADOPTION_NOT_INFERRED
+    proof_status: HISTORICAL_STABILIZER_MONOTONICITY__CURRENT_REDUCED_SCOPE
+    source_status: HISTORICAL_NOT_PRIMARY_SOURCE_DEPENDENT__CURRENT_PROVENANCE_EXPLICIT
+    novelty_status: HISTORICAL_EXACT_PRIOR_ART_IDENTITY__APPLICATION_RECONTEXTUALIZATION_ONLY
+    significance_status: STANDALONE_CANDIDACY_WITHDRAWN
+    current_status_boundary: REDUCED_STANDARD_MECHANISM_NO_PROGRAM_CANDIDATE_ADOPTION
+    dependencies:
+      - target: A
+        target_kind: CANDIDATE
+        relation: Origin-side horn and asymmetry discipline.
+        edge_type: REQUIRES_ORIGIN_CONTROL
+        strictness: STRICT_DEPENDENCY
+        source_locator: deferred-candidate-source/exact/integration/A_TO_N_COMPREHENSIVE_INTEGRATION_MAP.yaml
+        source_class: EXACT_RECOVERED_PREDECESSOR_MAP
+        adoption_boundary: EVIDENCE_ONLY_NO_AUTOMATIC_CURRENT_ADOPTION
+        current_status: HISTORICAL_DEPENDENCY_RECORDED__NOT_ADOPTED_AS_CURRENT_PROOF_EDGE
+      - target: F
+        target_kind: CANDIDATE
+        relation: Anchor-relative identifiability spine.
+        edge_type: REQUIRES_IDENTIFIABILITY_SPINE
+        strictness: STRICT_DEPENDENCY
+        source_locator: deferred-candidate-source/exact/integration/A_TO_N_COMPREHENSIVE_INTEGRATION_MAP.yaml
+        source_class: EXACT_RECOVERED_PREDECESSOR_MAP
+        adoption_boundary: EVIDENCE_ONLY_NO_AUTOMATIC_CURRENT_ADOPTION
+        current_status: HISTORICAL_DEPENDENCY_RECORDED__NOT_ADOPTED_AS_CURRENT_PROOF_EDGE
+    historical_evidence:
+      source_locator: deferred-candidate-source/exact/integration/A_TO_N_COMPREHENSIVE_INTEGRATION_MAP.yaml
+      source_class: EXACT_RECOVERED_PREDECESSOR_MAP
+      authority: AR7_REOPENED_FOR_INDEPENDENT_MENISCUS_AUDIT
+      truth_status: PROVED
+      proof_status: STABILIZER_MONOTONICITY
+      source_status: NOT_PRIMARY_SOURCE_DEPENDENT_OR_SUPPORTING_ONLY
+      novelty_status: "EXACT PRIOR_ART IDENTITY; APPLICATION RECONTEXTUALIZATION"
+      significance_status: STANDALONE CANDIDACY WITHDRAWN
+      terminal_or_nonterminal_status: TERMINAL_REDUCED_COMPONENT
+      dependency_on_another_candidate: A and F
+      evidence_effect: EVIDENCE_ONLY_NO_AUTOMATIC_V11_ADOPTION
+  - <<: *candidate_defaults
+    candidate: I
+    title: Truth-linked correction requires separating access
+    track: M
+    source_class: RECOVERED_CONTEXT
+    current_public_owner: prh-higher-order-and-causal-restoration.md
+    truth_status: HISTORICAL_PROVED_RESULT__CURRENT_CANDIDATE_ADOPTION_NOT_INFERRED
+    proof_status: HISTORICAL_OBSERVATIONAL_INVARIANCE__CURRENT_MATHEMATICAL_SYNTHESIS_ONLY
+    source_status: HISTORICAL_NOT_PRIMARY_SOURCE_DEPENDENT__CURRENT_PROVENANCE_EXPLICIT
+    novelty_status: STANDARD
+    significance_status: NOT_STANDALONE_MENISCUS
+    current_status_boundary: STANDARD_RESULT_EVIDENCE_RECORDED_NO_PROGRAM_CANDIDATE_ADOPTION
+    dependencies:
+      - target: NONE
+        target_kind: NONE
+        relation: Explicit absence of another-candidate dependency.
+        edge_type: EXPLICIT_NONE
+        strictness: NOT_APPLICABLE
+        source_locator: deferred-candidate-source/exact/integration/A_TO_N_COMPREHENSIVE_INTEGRATION_MAP.yaml
+        source_class: EXACT_RECOVERED_PREDECESSOR_MAP
+        adoption_boundary: EVIDENCE_ONLY_NO_AUTOMATIC_CURRENT_ADOPTION
+        current_status: NO_CANDIDATE_DEPENDENCY_RECORDED
+    historical_evidence:
+      source_locator: deferred-candidate-source/exact/integration/A_TO_N_COMPREHENSIVE_INTEGRATION_MAP.yaml
+      source_class: EXACT_RECOVERED_PREDECESSOR_MAP
+      authority: AR7_REOPENED_FOR_INDEPENDENT_MENISCUS_AUDIT
+      truth_status: PROVED
+      proof_status: OBSERVATIONAL_INVARIANCE
+      source_status: NOT_PRIMARY_SOURCE_DEPENDENT_OR_SUPPORTING_ONLY
+      novelty_status: STANDARD
+      significance_status: NOT_STANDALONE_MENISCUS
+      terminal_or_nonterminal_status: TERMINAL_REDUCED_COMPONENT
+      dependency_on_another_candidate: None
+      evidence_effect: EVIDENCE_ONLY_NO_AUTOMATIC_V11_ADOPTION
+  - <<: *candidate_defaults
+    candidate: J
+    title: Authority / implementation dual burden
+    track: T/N
+    source_class: RECOVERED_CONTEXT
+    current_public_owner: agentic-communication.md
+    truth_status: SCOPED_HISTORICAL_RESULT_RECORDED__CURRENT_SCOPE_NOT_PROMOTED
+    proof_status: HISTORICAL_TWO_AXIS_COUNTERMODELS__CURRENT_SCOPE_ONLY
+    source_status: HISTORICAL_NOT_PRIMARY_SOURCE_DEPENDENT__CURRENT_PROVENANCE_EXPLICIT
+    novelty_status: HISTORICAL_ESTABLISHED_NORM_ACTION_NEIGHBOR__CURRENT_PRIORITY_NOT_ESTABLISHED
+    significance_status: HISTORICAL_BELOW_STANDALONE_MENISCUS__NO_CURRENT_PROMOTION
+    current_status_boundary: HISTORICAL_EVIDENCE_RECORDED_NO_CURRENT_OWNER_ADOPTION
+    dependencies:
+      - target: E
+        target_kind: CANDIDATE
+        relation: Objective-corrigibility partition precursor.
+        edge_type: REQUIRES_CORRIGIBILITY_PARTITION
+        strictness: STRICT_DEPENDENCY
+        source_locator: deferred-candidate-source/exact/integration/A_TO_N_COMPREHENSIVE_INTEGRATION_MAP.yaml
+        source_class: EXACT_RECOVERED_PREDECESSOR_MAP
+        adoption_boundary: EVIDENCE_ONLY_NO_AUTOMATIC_CURRENT_ADOPTION
+        current_status: HISTORICAL_DEPENDENCY_RECORDED__NOT_ADOPTED_AS_CURRENT_PROOF_EDGE
+      - target: M
+        target_kind: CANDIDATE
+        relation: Mutual architecture relation among authority, responsiveness, and execution roles.
+        edge_type: ROLE_DECOMPOSITION_CROSSWALK
+        strictness: NON_STRICT_ARCHITECTURE_CROSSWALK
+        source_locator: deferred-candidate-source/exact/integration/A_TO_N_COMPREHENSIVE_INTEGRATION_MAP.yaml
+        source_class: EXACT_RECOVERED_PREDECESSOR_MAP
+        adoption_boundary: EVIDENCE_ONLY_NO_AUTOMATIC_CURRENT_ADOPTION
+        current_status: HISTORICAL_RELATION_RECORDED__CURRENT_CROSSWALK_ONLY
+    historical_evidence:
+      source_locator: deferred-candidate-source/exact/integration/A_TO_N_COMPREHENSIVE_INTEGRATION_MAP.yaml
+      source_class: EXACT_RECOVERED_PREDECESSOR_MAP
+      authority: AR7_REOPENED_FOR_INDEPENDENT_MENISCUS_AUDIT
+      truth_status: SCOPED_POSITIVE_RESULT
+      proof_status: TWO_AXIS_COUNTERMODELS
+      source_status: NOT_PRIMARY_SOURCE_DEPENDENT_OR_SUPPORTING_ONLY
+      novelty_status: CLOSE TO ESTABLISHED NORM/ACTION AND CONTROL DISTINCTIONS
+      significance_status: TERMINALLY_BELOW_STANDALONE_MENISCUS
+      terminal_or_nonterminal_status: TERMINAL_SCOPED_COMPONENT
+      dependency_on_another_candidate: E and M
+      evidence_effect: EVIDENCE_ONLY_NO_AUTOMATIC_V11_ADOPTION
+  - <<: *candidate_defaults
+    candidate: K
+    title: Effective-codification boundary
+    track: M
+    source_class: RECOVERED_CONTEXT
+    current_public_owner: language-translation-and-version-custody.md
+    truth_status: HISTORICAL_ESTABLISHED_LOGICAL_BOUNDARY__CURRENT_CANDIDATE_ADOPTION_NOT_INFERRED
+    proof_status: HISTORICAL_STANDARD_INCOMPLETENESS_OR_UNDECIDABILITY_APPLICATION__CURRENT_REDUCED_SCOPE
+    source_status: HISTORICAL_NOT_PRIMARY_SOURCE_DEPENDENT__CURRENT_PROVENANCE_EXPLICIT
+    novelty_status: NO_NOVELTY_CLAIM
+    significance_status: HISTORICAL_BELOW_MENISCUS__NO_CURRENT_PROMOTION
+    current_status_boundary: REDUCED_STANDARD_BOUNDARY_NO_PROGRAM_CANDIDATE_ADOPTION
+    dependencies:
+      - target: NONE
+        target_kind: NONE
+        relation: Explicit absence of another-candidate dependency.
+        edge_type: EXPLICIT_NONE
+        strictness: NOT_APPLICABLE
+        source_locator: deferred-candidate-source/exact/integration/A_TO_N_COMPREHENSIVE_INTEGRATION_MAP.yaml
+        source_class: EXACT_RECOVERED_PREDECESSOR_MAP
+        adoption_boundary: EVIDENCE_ONLY_NO_AUTOMATIC_CURRENT_ADOPTION
+        current_status: NO_CANDIDATE_DEPENDENCY_RECORDED
+    historical_evidence:
+      source_locator: deferred-candidate-source/exact/integration/A_TO_N_COMPREHENSIVE_INTEGRATION_MAP.yaml
+      source_class: EXACT_RECOVERED_PREDECESSOR_MAP
+      authority: AR7_REOPENED_FOR_INDEPENDENT_MENISCUS_AUDIT
+      truth_status: REDUCED_TO_ESTABLISHED_LOGICAL_BOUNDARY
+      proof_status: STANDARD INCOMPLETENESS/UNDECIDABILITY APPLICATION
+      source_status: NOT_PRIMARY_SOURCE_DEPENDENT_OR_SUPPORTING_ONLY
+      novelty_status: "NO"
+      significance_status: TERMINALLY_BELOW_MENISCUS
+      terminal_or_nonterminal_status: TERMINAL_REDUCED_COMPONENT
+      dependency_on_another_candidate: None
+      evidence_effect: EVIDENCE_ONLY_NO_AUTOMATIC_V11_ADOPTION
+  - <<: *candidate_defaults
+    candidate: L
+    title: Reason-responsive actualization
+    track: T
+    source_class: RECOVERED_CONTEXT
+    current_public_owner: AR8R_TRANSCENDENTAL_ORTHABILITY_AND_SOURCE_ASCENT_V2.md
+    truth_status: SCOPED_HISTORICAL_RESULT_RECORDED__CURRENT_SCOPE_NOT_PROMOTED
+    proof_status: HISTORICAL_COUNTERFACTUAL_FUNCTIONAL_CRITERION__CURRENT_SCOPE_ONLY
+    source_status: HISTORICAL_NOT_PRIMARY_SOURCE_DEPENDENT__CURRENT_PROVENANCE_EXPLICIT
+    novelty_status: NEAR_ESTABLISHED_ACTION_OR_CONTROL_ACCOUNTS
+    significance_status: HISTORICAL_BELOW_STANDALONE_MENISCUS__NO_CURRENT_PROMOTION
+    current_status_boundary: HISTORICAL_EVIDENCE_RECORDED_NO_CURRENT_OWNER_ADOPTION
+    dependencies:
+      - target: J
+        target_kind: CANDIDATE
+        relation: Mutual architecture relation between authority and reason-responsive actualization.
+        edge_type: AUTHORITY_ACTUALIZATION_CROSSWALK
+        strictness: NON_STRICT_ARCHITECTURE_CROSSWALK
+        source_locator: deferred-candidate-source/exact/integration/A_TO_N_COMPREHENSIVE_INTEGRATION_MAP.yaml
+        source_class: EXACT_RECOVERED_PREDECESSOR_MAP
+        adoption_boundary: EVIDENCE_ONLY_NO_AUTOMATIC_CURRENT_ADOPTION
+        current_status: HISTORICAL_RELATION_RECORDED__CURRENT_CROSSWALK_ONLY
+      - target: M
+        target_kind: CANDIDATE
+        relation: Mutual architecture relation between responsiveness and modular role decomposition.
+        edge_type: RESPONSIVENESS_DECOMPOSITION_CROSSWALK
+        strictness: NON_STRICT_ARCHITECTURE_CROSSWALK
+        source_locator: deferred-candidate-source/exact/integration/A_TO_N_COMPREHENSIVE_INTEGRATION_MAP.yaml
+        source_class: EXACT_RECOVERED_PREDECESSOR_MAP
+        adoption_boundary: EVIDENCE_ONLY_NO_AUTOMATIC_CURRENT_ADOPTION
+        current_status: HISTORICAL_RELATION_RECORDED__CURRENT_CROSSWALK_ONLY
+    historical_evidence:
+      source_locator: deferred-candidate-source/exact/integration/A_TO_N_COMPREHENSIVE_INTEGRATION_MAP.yaml
+      source_class: EXACT_RECOVERED_PREDECESSOR_MAP
+      authority: AR7_REOPENED_FOR_INDEPENDENT_MENISCUS_AUDIT
+      truth_status: SCOPED_POSITIVE_RESULT
+      proof_status: COUNTERFACTUAL FUNCTIONAL CRITERION
+      source_status: NOT_PRIMARY_SOURCE_DEPENDENT_OR_SUPPORTING_ONLY
+      novelty_status: NEAR ESTABLISHED ACTION/CONTROL ACCOUNTS
+      significance_status: TERMINALLY_BELOW_STANDALONE_MENISCUS
+      terminal_or_nonterminal_status: TERMINAL_SCOPED_COMPONENT
+      dependency_on_another_candidate: J/M
+      evidence_effect: EVIDENCE_ONLY_NO_AUTOMATIC_V11_ADOPTION
+  - <<: *candidate_defaults
+    candidate: M
+    title: Knowledge / ranking / responsiveness / execution decomposition
+    track: T/N
+    source_class: RECOVERED_CONTEXT
+    current_public_owner: candidate-n-r5-track-t-and-source-ascent.md
+    truth_status: HISTORICAL_CONDITIONAL_RESULT_RECORDED__CURRENT_SCOPE_NOT_PROMOTED
+    proof_status: HISTORICAL_FINITE_ALL_BUT_ONE_WITNESSES_AND_COLD_AUDIT__CURRENT_SCOPE_ONLY
+    source_status: HISTORICAL_NOT_PRIMARY_SOURCE_DEPENDENT__CURRENT_PROVENANCE_EXPLICIT
+    novelty_status: HISTORICAL_STANDARD_DECOMPOSITION__EXACT_FINITE_PACKAGE_PRIORITY_NOT_ESTABLISHED
+    significance_status: NOT_STANDALONE_MENISCUS
+    current_status_boundary: HISTORICAL_EVIDENCE_RECORDED_NO_CURRENT_OWNER_ADOPTION
+    dependencies:
+      - target: J
+        target_kind: CANDIDATE
+        relation: Mutual architecture relation between authority and modular role decomposition.
+        edge_type: AUTHORITY_DECOMPOSITION_CROSSWALK
+        strictness: NON_STRICT_ARCHITECTURE_CROSSWALK
+        source_locator: deferred-candidate-source/exact/integration/A_TO_N_COMPREHENSIVE_INTEGRATION_MAP.yaml
+        source_class: EXACT_RECOVERED_PREDECESSOR_MAP
+        adoption_boundary: EVIDENCE_ONLY_NO_AUTOMATIC_CURRENT_ADOPTION
+        current_status: HISTORICAL_RELATION_RECORDED__CURRENT_CROSSWALK_ONLY
+      - target: L
+        target_kind: CANDIDATE
+        relation: Mutual architecture relation between reason responsiveness and modular role decomposition.
+        edge_type: RESPONSIVENESS_DECOMPOSITION_CROSSWALK
+        strictness: NON_STRICT_ARCHITECTURE_CROSSWALK
+        source_locator: deferred-candidate-source/exact/integration/A_TO_N_COMPREHENSIVE_INTEGRATION_MAP.yaml
+        source_class: EXACT_RECOVERED_PREDECESSOR_MAP
+        adoption_boundary: EVIDENCE_ONLY_NO_AUTOMATIC_CURRENT_ADOPTION
+        current_status: HISTORICAL_RELATION_RECORDED__CURRENT_CROSSWALK_ONLY
+    historical_evidence:
+      source_locator: deferred-candidate-source/exact/integration/A_TO_N_COMPREHENSIVE_INTEGRATION_MAP.yaml
+      source_class: EXACT_RECOVERED_PREDECESSOR_MAP
+      authority: AR7_REOPENED_FOR_INDEPENDENT_MENISCUS_AUDIT
+      truth_status: PROVED_CONDITIONALLY
+      proof_status: FINITE ALL_BUT_ONE WITNESSES AND COLD AUDIT
+      source_status: NOT_PRIMARY_SOURCE_DEPENDENT_OR_SUPPORTING_ONLY
+      novelty_status: COMPONENT DECOMPOSITION STANDARD; EXACT FINITE PACKAGE POSSIBLY DISTINCT
+      significance_status: NOT_STANDALONE_MENISCUS
+      terminal_or_nonterminal_status: TERMINAL_SCOPED_COMPONENT
+      dependency_on_another_candidate: J/L
+      evidence_effect: EVIDENCE_ONLY_NO_AUTOMATIC_V11_ADOPTION
+  - <<: *candidate_defaults
+    candidate: N
+    title: Taymiyyan evaluation / disclosure / command / lordship / actualization / Speech architecture
+    track: N
+    source_class: LATER_PROGRAM
+    current_public_owner: candidate-n-authority-status.md
+    truth_status: SCHOOL_INTERNAL_REOPENED_NOT_NEUTRAL_PROOF
+    proof_status: STRONGER_SIGNIFICANCE_NOT_ESTABLISHED
+    source_status: EXTERNAL_SOURCE_SPECIALIST_CONFIRMATION_REQUIRED
+    novelty_status: CHECKED_CORPUS_BOUNDED_SYNTHESIS_ONLY__PRIORITY_NOT_ESTABLISHED
+    significance_status: INDEPENDENT_INTERPRETIVE_PAYOFF_REQUIRED
+    current_adoption: REOPENED_SCHOOL_INTERNAL_ARCHITECTURE
+    current_status_boundary: REOPENED_INTERNAL_ARCHITECTURE_ONLY__NO_MENISCUS_CHAMPION_OR_TRACK_SUBSTITUTION
+    dependencies:
+      - target: E
+        target_kind: CANDIDATE
+        relation: Selected objective-corrigibility distinction.
+        edge_type: SELECTED_DISTINCTION_CROSSWALK
+        strictness: NON_STRICT_ARCHITECTURE_CROSSWALK
+        source_locator: deferred-candidate-source/exact/integration/A_TO_N_COMPREHENSIVE_INTEGRATION_MAP.yaml
+        source_class: EXACT_RECOVERED_PREDECESSOR_MAP
+        adoption_boundary: SCHOOL_INTERNAL_CROSSWALK_NO_NEUTRAL_ENTAILMENT
+        current_status: HISTORICAL_RELATION_RECORDED__CURRENT_CROSSWALK_ONLY
+      - target: J
+        target_kind: CANDIDATE
+        relation: Selected authority and implementation distinction.
+        edge_type: SELECTED_DISTINCTION_CROSSWALK
+        strictness: NON_STRICT_ARCHITECTURE_CROSSWALK
+        source_locator: deferred-candidate-source/exact/integration/A_TO_N_COMPREHENSIVE_INTEGRATION_MAP.yaml
+        source_class: EXACT_RECOVERED_PREDECESSOR_MAP
+        adoption_boundary: SCHOOL_INTERNAL_CROSSWALK_NO_NEUTRAL_ENTAILMENT
+        current_status: HISTORICAL_RELATION_RECORDED__CURRENT_CROSSWALK_ONLY
+      - target: L
+        target_kind: CANDIDATE
+        relation: Selected reason-responsive actualization distinction.
+        edge_type: SELECTED_DISTINCTION_CROSSWALK
+        strictness: NON_STRICT_ARCHITECTURE_CROSSWALK
+        source_locator: deferred-candidate-source/exact/integration/A_TO_N_COMPREHENSIVE_INTEGRATION_MAP.yaml
+        source_class: EXACT_RECOVERED_PREDECESSOR_MAP
+        adoption_boundary: SCHOOL_INTERNAL_CROSSWALK_NO_NEUTRAL_ENTAILMENT
+        current_status: HISTORICAL_RELATION_RECORDED__CURRENT_CROSSWALK_ONLY
+      - target: M
+        target_kind: CANDIDATE
+        relation: Selected knowledge, ranking, responsiveness, and execution distinction.
+        edge_type: SELECTED_DISTINCTION_CROSSWALK
+        strictness: NON_STRICT_ARCHITECTURE_CROSSWALK
+        source_locator: deferred-candidate-source/exact/integration/A_TO_N_COMPREHENSIVE_INTEGRATION_MAP.yaml
+        source_class: EXACT_RECOVERED_PREDECESSOR_MAP
+        adoption_boundary: SCHOOL_INTERNAL_CROSSWALK_NO_NEUTRAL_ENTAILMENT
+        current_status: HISTORICAL_RELATION_RECORDED__CURRENT_CROSSWALK_ONLY
+      - target: PRIMARY_TEXTS_AND_SCHOOL_PREMISES
+        target_kind: SOURCE_REQUIREMENT
+        relation: Primary texts and school premises required for source-controlled Track N claims.
+        edge_type: SOURCE_AUTHORITY_REQUIREMENT
+        strictness: STRICT_DEPENDENCY
+        source_locator: deferred-candidate-source/exact/integration/A_TO_N_COMPREHENSIVE_INTEGRATION_MAP.yaml
+        source_class: EXACT_RECOVERED_PREDECESSOR_MAP
+        adoption_boundary: REQUIREMENT_RECORDED_NO_CLAIM_OF_SATISFACTION
+        current_status: EXTERNAL_SOURCE_SPECIALIST_CONFIRMATION_REQUIRED
+    historical_evidence:
+      source_locator: deferred-candidate-source/exact/integration/A_TO_N_COMPREHENSIVE_INTEGRATION_MAP.yaml
+      source_class: EXACT_RECOVERED_PREDECESSOR_MAP
+      authority: AR7_REOPENED_FOR_INDEPENDENT_MENISCUS_AUDIT
+      truth_status: PROVISIONAL_INTERNAL_ARCHITECTURE
+      proof_status: TYPED REGISTRY, SOURCE CROSSWALK, COMPARATIVE CASES; NO EXTERNAL SPECIALIST CONFIRMATION
+      source_status: SCHOOL_INTERNAL_SOURCE_DEPENDENT
+      novelty_status: PLAUSIBLE CHECKED-CORPUS-BOUNDED SYNTHESIS; PRIORITY NOT ESTABLISHED
+      significance_status: PROVISIONAL MENISCUS CANDIDATE ONLY
+      terminal_or_nonterminal_status: NONTERMINAL_REOPENED
+      dependency_on_another_candidate: Selected distinctions from E/J/L/M; primary texts and school premises
+      evidence_effect: HISTORICAL_PROVISIONAL_STATUS_ONLY__NO_CURRENT_MENISCUS_OR_CHAMPION_CREDIT
+forbidden_directed_edges:
+  - M theorem -> source fidelity
+  - M theorem -> divine personality
+  - N source claim -> neutral school-independent entailment
+  - T scoped anti-bootstrapping -> one Necessary Being
+  - functional integration -> one bearer
+  - query optimality -> proper function or Wisdom
+track_rules:
+  - Track M may support or constrain Track T but cannot establish a metaphysical ground or existence claim.
+  - Track N may supply school-internal premises and source evidence but cannot migrate into neutral school-independent entailment.
+  - Candidate N cannot replace Track M or Track T.
+  - Removing N leaves M, scoped T, Candidate 1, PRR-T1, and neutral mathematical boundaries intact.
+  - Accepting N does not close T05-T15, Track M, Candidate 1 prior art/significance, external review, or source-fidelity burdens.
+closure_state:
+  integrated_champion: NO_INTEGRATED_CHAMPION
+  meniscus: MENISCUS_NOT_REACHED
+  natural_closure: NATURAL_CLOSURE_NOT_REACHED

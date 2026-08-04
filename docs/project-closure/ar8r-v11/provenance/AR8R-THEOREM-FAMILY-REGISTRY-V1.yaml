@@ -1,0 +1,71 @@
+schema: ar8r-theorem-family-and-false-multiplicity-registry-v1
+authority: V5_ORIGIN_REGISTRY_WITH_FALSE_MULTIPLICITY_AUDIT_145_REPAIR
+source_v5_sha256: 843a7b7b238cfccc6b45934644f0568cc84e7826ebeddd9528511bf37111b440
+raw_active_theorem_records: 382
+historically_distinct_active_identifiers: 382
+known_identity_equivalence_classes: 381
+sole_proved_identity_merge: AR8R-T322_TO_AR8R-T319
+v5_snapshot_payload_resolved_active_records: 340
+v5_snapshot_payload_resolved_proposition_origins: 339
+v5_snapshot_canonical_proposition_origin_interval: [339, 381]
+post_v8_payload_counts: DERIVE_FROM_FULL_V5_ROWS_PLUS_V8_OVERLAY_NOT_SCALARIZED_HERE
+independent_discovery_route_count: NOT_SUPPORTED_BY_CURRENT_PROVENANCE
+high_level_indexing_families: 10
+focused_exact_relation_edges: 74
+focused_relation_crosswalk:
+  path: AR8R-THEOREM-FAMILY-RELATION-CROSSWALK-V11.yaml
+  relation_id_range: V5-REL-001..V5-REL-074
+  directly_resolvable_rows: 74
+  row_locator_and_hash_required: true
+  authority: V5_RELATIONS_INDEXED_WITHOUT_NEW_IDENTITY_MERGE
+  broad_family_identity_effect: NONE
+active_records_origin_unresolved: 327
+zero_credit_multiplicity_surfaces:
+  - filename
+  - namespace
+  - formulation
+  - audit_copy
+  - application
+  - serializer_alias
+  - renamed_instance
+  - later_pmr_descendant
+credit_rule: >-
+  A new filename, namespace, wording, audit copy, or application does not create
+  a new mathematical origin. A proved new consequence, countermodel, source
+  application, or architecture-level result may still receive scoped result
+  credit without receiving independent-origin credit.
+candidate_family_links_requiring_proposition_level_review:
+  - family: FIBRE_OR_QUOTIENT_FACTORIZATION
+    reported_surfaces:
+      - observational quotient and profile factorization
+      - policy-consistent frontier factorization
+      - anti-self-authorization applications
+      - unity or role-profile characterizations
+      - AR8R-RC-T366 declared-profile reconstruction
+    status: FAMILY_RELATION_PLAUSIBLE_IDENTITY_MERGE_NOT_ESTABLISHED
+  - family: STRICT_PROGRESS_AND_FIXED_POINT_COLLAPSE
+    reported_surfaces:
+      - AR8R-T228
+      - later reach-and-stay or coinductive applications
+    status: APPLICATIONS_RECEIVE_ZERO_NEW_GENERAL_MECHANISM_CREDIT_UNLESS_STRENGTHENED
+post_merge_scoped_false_multiplicity_controls:
+  - id: PMR-FAMILY-01
+    family: ATTRIBUTE_DEFECT_EXCLUSION_PROPOSITIONAL_SKELETON
+    reported_surfaces:
+      - Speech capacity defect-exclusion argument
+      - hearing defect-exclusion argument
+      - seeing defect-exclusion argument
+    exact_source_status: ADMITTED_AS_FALSE_MULTIPLICITY_CONTROL
+    formal_effect: shared elementary propositional skeleton under typed renaming
+    source_semantic_identity: NOT_ESTABLISHED
+    historical_theorem_identity: NOT_ESTABLISHED
+    duplicate_independent_theorem_credit: 0
+    general_novelty_credit: 0
+    external_review: OPEN
+    owner_adoption: PENDING
+    source_owner: ../post-merge-pmr002-006-source/AR8R_PMR002_PMR006_MULTI_WAVE_CHECKPOINT_REPORT.md
+forbidden_claims:
+  - hundreds of independent theorem discoveries
+  - 245 reusable mechanisms
+  - independent convergence inferred from terminal similarity
+  - typed renaming of Speech hearing and seeing creates three independent mathematical origins

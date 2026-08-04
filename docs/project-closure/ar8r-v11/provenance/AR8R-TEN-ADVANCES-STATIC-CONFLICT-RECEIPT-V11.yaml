@@ -1,0 +1,23 @@
+schema: ar8r-ten-advances-static-conflict-receipt-v11
+source_card:
+  basename: 019-AR8R_TEN_ADVANCES_AND_CDC_STATUS_V2.md
+  bytes: 39449
+  sha256: 84980642f29a4d5afb20e7955e7206476733e7e297630376d66ac5b5227f8a2c
+Comparator_sorry_count: CONFLICTING_38_42
+count_locators:
+  - {reported_count: 42, source_card_lines: 116-117}
+  - {reported_count: 38, source_card_lines: 1007-1009}
+package_defects:
+  missing_declaration: ComparatorChallenges.C_PermanentSuperquadraticStandalone
+  manifest_source_mismatch:
+    manifest_name: MetricCodes/Base.lean
+    reported_declaration_file: MetricCodes.lean
+static_scope:
+  solution_sorry_admit_axiom: NONE_REPORTED_AT_INSPECTED_STATIC_SCOPE
+  local_lean_build: NOT_PERFORMED
+  parse: NOT_PERFORMED
+  elaboration: NOT_PERFORMED
+  kernel: NOT_PERFORMED
+  print_axioms: NOT_PERFORMED
+  comparator_execution: NOT_RUN
+authority_effect: CONFLICT_UNRESOLVED_NO_BUILD_OR_THEOREM_CREDIT

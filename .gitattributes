@@ -3,3 +3,12 @@
 *.patch -text
 *.json text
 *.py text
+
+# Recovered AR8R source packets are hash-custodied evidence. Store their bytes
+# verbatim; V11 overlays and corrections live outside these exact directories.
+docs/project-closure/ar8r-v11/programs/full-program-reentry-v2-source/** -text
+docs/project-closure/ar8r-v11/post-merge-pmr001-source/** -text
+docs/project-closure/ar8r-v11/post-merge-pmr002-006-source/** -text
+docs/project-closure/ar8r-v11/post-merge-proposals/pmr007-rounds11-20/** -text
+docs/project-closure/ar8r-v11/programs/deferred-candidate-source/exact/** -text
+docs/project-closure/ar8r-v11/programs/AR8R-ORTHEMOLOGY-MENISCUS-MILESTONE-ARCHITECTURE-V1.md -text

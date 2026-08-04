@@ -1,0 +1,2691 @@
+schema: ar8r-identity-index-v1
+generated_at: '2026-08-02T16:49:12Z'
+identity_count: 233
+identities:
+- identity_id: AR8R-T130
+  identity_type: AR8R_HISTORICAL_IDENTITY
+  authority_level: EXACT_HISTORICAL_PAYLOAD
+  provenance_class: EXACT_VERBATIM_TRANSCRIPT_RECOVERY
+  status: PASS_V3_EXISTING_AUDIT
+  repository_path: docs/project-closure/ar8r-v8/historical-payloads/AR8R_T130.txt
+  canonical_identity: AR8R-T130
+  surfaces:
+  - S13
+  - S19
+  - S22
+  - S49
+  notes: repository_ready=True; owner_adoption_status=NOT_APPLICABLE
+- identity_id: AR8R-T131
+  identity_type: AR8R_HISTORICAL_IDENTITY
+  authority_level: EXACT_HISTORICAL_PAYLOAD
+  provenance_class: EXACT_VERBATIM_TRANSCRIPT_RECOVERY
+  status: PASS_V3_EXISTING_AUDIT
+  repository_path: docs/project-closure/ar8r-v8/historical-payloads/AR8R_T131.txt
+  canonical_identity: AR8R-T131
+  surfaces:
+  - S13
+  - S19
+  - S22
+  - S49
+  notes: repository_ready=True; owner_adoption_status=NOT_APPLICABLE
+- identity_id: AR8R-T132
+  identity_type: AR8R_HISTORICAL_IDENTITY
+  authority_level: EXACT_HISTORICAL_PAYLOAD
+  provenance_class: EXACT_VERBATIM_TRANSCRIPT_RECOVERY
+  status: PASS_V3_EXISTING_AUDIT
+  repository_path: docs/project-closure/ar8r-v8/historical-payloads/AR8R_T132.txt
+  canonical_identity: AR8R-T132
+  surfaces:
+  - S03
+  - S13
+  - S22
+  - S49
+  notes: repository_ready=True; owner_adoption_status=NOT_APPLICABLE
+- identity_id: AR8R-T133
+  identity_type: AR8R_HISTORICAL_IDENTITY
+  authority_level: EXACT_HISTORICAL_PAYLOAD
+  provenance_class: EXACT_VERBATIM_TRANSCRIPT_RECOVERY
+  status: PASS_V3_EXISTING_AUDIT
+  repository_path: docs/project-closure/ar8r-v8/historical-payloads/AR8R_T133.txt
+  canonical_identity: AR8R-T133
+  surfaces:
+  - S22
+  - S49
+  notes: repository_ready=True; owner_adoption_status=NOT_APPLICABLE
+- identity_id: AR8R-T134
+  identity_type: AR8R_HISTORICAL_IDENTITY
+  authority_level: EXACT_HISTORICAL_PAYLOAD
+  provenance_class: EXACT_VERBATIM_TRANSCRIPT_RECOVERY
+  status: PASS_V3_EXISTING_AUDIT
+  repository_path: docs/project-closure/ar8r-v8/historical-payloads/AR8R_T134.txt
+  canonical_identity: AR8R-T134
+  surfaces:
+  - S09
+  - S22
+  - S49
+  notes: repository_ready=True; owner_adoption_status=NOT_APPLICABLE
+- identity_id: AR8R-T135
+  identity_type: AR8R_HISTORICAL_IDENTITY
+  authority_level: EXACT_HISTORICAL_PAYLOAD
+  provenance_class: EXACT_VERBATIM_TRANSCRIPT_RECOVERY
+  status: PASS_V3_EXISTING_AUDIT
+  repository_path: docs/project-closure/ar8r-v8/historical-payloads/AR8R_T135.txt
+  canonical_identity: AR8R-T135
+  surfaces:
+  - S08
+  - S22
+  - S49
+  notes: repository_ready=True; owner_adoption_status=NOT_APPLICABLE
+- identity_id: AR8R-T136
+  identity_type: AR8R_HISTORICAL_IDENTITY
+  authority_level: EXACT_HISTORICAL_PAYLOAD
+  provenance_class: EXACT_VERBATIM_TRANSCRIPT_RECOVERY
+  status: PASS_V3_EXISTING_AUDIT
+  repository_path: docs/project-closure/ar8r-v8/historical-payloads/AR8R_T136.txt
+  canonical_identity: AR8R-T136
+  surfaces:
+  - S22
+  - S49
+  notes: repository_ready=True; owner_adoption_status=NOT_APPLICABLE
+- identity_id: AR8R-T137
+  identity_type: AR8R_HISTORICAL_IDENTITY
+  authority_level: EXACT_HISTORICAL_PAYLOAD
+  provenance_class: EXACT_VERBATIM_TRANSCRIPT_RECOVERY
+  status: PASS_V3_EXISTING_AUDIT
+  repository_path: docs/project-closure/ar8r-v8/historical-payloads/AR8R_T137.txt
+  canonical_identity: AR8R-T137
+  surfaces:
+  - S19
+  - S22
+  - S49
+  notes: repository_ready=True; owner_adoption_status=NOT_APPLICABLE
+- identity_id: AR8R-T138
+  identity_type: AR8R_HISTORICAL_IDENTITY
+  authority_level: EXACT_HISTORICAL_PAYLOAD
+  provenance_class: EXACT_VERBATIM_TRANSCRIPT_RECOVERY
+  status: PASS_V3_EXISTING_AUDIT
+  repository_path: docs/project-closure/ar8r-v8/historical-payloads/AR8R_T138.txt
+  canonical_identity: AR8R-T138
+  surfaces:
+  - S16
+  - S22
+  - S49
+  notes: repository_ready=True; owner_adoption_status=NOT_APPLICABLE
+- identity_id: AR8R-T139
+  identity_type: AR8R_HISTORICAL_IDENTITY
+  authority_level: EXACT_HISTORICAL_PAYLOAD
+  provenance_class: EXACT_VERBATIM_TRANSCRIPT_RECOVERY
+  status: PASS_V8_COLD_AUDIT_AND_REREVIEW
+  repository_path: docs/project-closure/ar8r-v8/historical-payloads/AR8R_T139.txt
+  canonical_identity: AR8R-T139
+  surfaces:
+  - S22
+  - S49
+  notes: repository_ready=True; owner_adoption_status=NOT_APPLICABLE
+- identity_id: AR8R-T140
+  identity_type: AR8R_HISTORICAL_IDENTITY
+  authority_level: EXACT_HISTORICAL_PAYLOAD
+  provenance_class: EXACT_VERBATIM_TRANSCRIPT_RECOVERY
+  status: PASS_V8_COLD_AUDIT_AND_REREVIEW
+  repository_path: docs/project-closure/ar8r-v8/historical-payloads/AR8R_T140.txt
+  canonical_identity: AR8R-T140
+  surfaces:
+  - S22
+  - S49
+  notes: repository_ready=True; owner_adoption_status=NOT_APPLICABLE
+- identity_id: AR8R-T141
+  identity_type: AR8R_HISTORICAL_IDENTITY
+  authority_level: EXACT_HISTORICAL_PAYLOAD
+  provenance_class: EXACT_VERBATIM_TRANSCRIPT_RECOVERY
+  status: PASS_V8_COLD_AUDIT_AND_REREVIEW
+  repository_path: docs/project-closure/ar8r-v8/historical-payloads/AR8R_T141.txt
+  canonical_identity: AR8R-T141
+  surfaces:
+  - S22
+  - S49
+  notes: repository_ready=True; owner_adoption_status=NOT_APPLICABLE
+- identity_id: AR8R-T142
+  identity_type: AR8R_HISTORICAL_IDENTITY
+  authority_level: EXACT_HISTORICAL_PAYLOAD
+  provenance_class: EXACT_VERBATIM_TRANSCRIPT_RECOVERY
+  status: PASS_V8_COLD_AUDIT_AND_REREVIEW
+  repository_path: docs/project-closure/ar8r-v8/historical-payloads/AR8R_T142.txt
+  canonical_identity: AR8R-T142
+  surfaces:
+  - S22
+  - S49
+  notes: repository_ready=True; owner_adoption_status=NOT_APPLICABLE
+- identity_id: AR8R-T143
+  identity_type: AR8R_HISTORICAL_IDENTITY
+  authority_level: EXACT_HISTORICAL_PAYLOAD
+  provenance_class: EXACT_VERBATIM_TRANSCRIPT_RECOVERY
+  status: PASS_V8_COLD_AUDIT_AND_REREVIEW
+  repository_path: docs/project-closure/ar8r-v8/historical-payloads/AR8R_T143.txt
+  canonical_identity: AR8R-T143
+  surfaces:
+  - S14
+  - S19
+  - S22
+  - S49
+  notes: repository_ready=True; owner_adoption_status=NOT_APPLICABLE
+- identity_id: AR8R-T144
+  identity_type: AR8R_HISTORICAL_IDENTITY
+  authority_level: HISTORICAL_REFERENCE_WITHOUT_SUPPLIED_PAYLOAD
+  provenance_class: HISTORICAL_IDENTITY_ONLY
+  status: INSUFFICIENT_EVIDENCE
+  repository_path: ''
+  canonical_identity: ''
+  surfaces:
+  - S22
+  notes: repository_ready=False; owner_adoption_status=BLOCKED_ON_EVIDENCE
+- identity_id: AR8R-T145
+  identity_type: AR8R_HISTORICAL_IDENTITY
+  authority_level: HISTORICAL_REFERENCE_WITHOUT_SUPPLIED_PAYLOAD
+  provenance_class: HISTORICAL_IDENTITY_ONLY
+  status: INSUFFICIENT_EVIDENCE
+  repository_path: ''
+  canonical_identity: ''
+  surfaces:
+  - S22
+  notes: repository_ready=False; owner_adoption_status=BLOCKED_ON_EVIDENCE
+- identity_id: AR8R-T146
+  identity_type: AR8R_HISTORICAL_IDENTITY
+  authority_level: HISTORICAL_REFERENCE_WITHOUT_SUPPLIED_PAYLOAD
+  provenance_class: HISTORICAL_IDENTITY_ONLY
+  status: INSUFFICIENT_EVIDENCE
+  repository_path: ''
+  canonical_identity: ''
+  surfaces:
+  - S22
+  notes: repository_ready=False; owner_adoption_status=BLOCKED_ON_EVIDENCE
+- identity_id: AR8R-T147
+  identity_type: AR8R_HISTORICAL_IDENTITY
+  authority_level: HISTORICAL_REFERENCE_WITHOUT_SUPPLIED_PAYLOAD
+  provenance_class: HISTORICAL_IDENTITY_ONLY
+  status: INSUFFICIENT_EVIDENCE
+  repository_path: ''
+  canonical_identity: ''
+  surfaces:
+  - S22
+  notes: repository_ready=False; owner_adoption_status=BLOCKED_ON_EVIDENCE
+- identity_id: AR8R-T148
+  identity_type: AR8R_HISTORICAL_IDENTITY
+  authority_level: HISTORICAL_REFERENCE_WITHOUT_SUPPLIED_PAYLOAD
+  provenance_class: HISTORICAL_IDENTITY_ONLY
+  status: INSUFFICIENT_EVIDENCE
+  repository_path: ''
+  canonical_identity: ''
+  surfaces:
+  - S22
+  notes: repository_ready=False; owner_adoption_status=BLOCKED_ON_EVIDENCE
+- identity_id: AR8R-T149
+  identity_type: AR8R_HISTORICAL_IDENTITY
+  authority_level: HISTORICAL_REFERENCE_WITHOUT_SUPPLIED_PAYLOAD
+  provenance_class: HISTORICAL_IDENTITY_ONLY
+  status: INSUFFICIENT_EVIDENCE
+  repository_path: ''
+  canonical_identity: ''
+  surfaces:
+  - S22
+  notes: repository_ready=False; owner_adoption_status=BLOCKED_ON_EVIDENCE
+- identity_id: AR8R-T150
+  identity_type: AR8R_HISTORICAL_IDENTITY
+  authority_level: HISTORICAL_REFERENCE_WITHOUT_SUPPLIED_PAYLOAD
+  provenance_class: ROLE_PRESERVING_REPLACEMENT
+  status: V6_VALIDATION_REHASH_AND_V8_REREVIEW_PASS
+  repository_path: docs/project-closure/ar8r-v8/proposals/AR8R_RP_001_V1_COMMON_MODEL_MINIMAL_NONINTEGRATION.md
+  canonical_identity: AR8R-RP-001-v1
+  surfaces:
+  - S16
+  - S22
+  - S23
+  notes: repository_ready=True; owner_adoption_status=PENDING
+- identity_id: AR8R-T151
+  identity_type: AR8R_HISTORICAL_IDENTITY
+  authority_level: HISTORICAL_REFERENCE_WITHOUT_SUPPLIED_PAYLOAD
+  provenance_class: HISTORICAL_IDENTITY_ONLY
+  status: INSUFFICIENT_EVIDENCE
+  repository_path: ''
+  canonical_identity: ''
+  surfaces:
+  - S22
+  notes: repository_ready=False; owner_adoption_status=BLOCKED_ON_EVIDENCE
+- identity_id: AR8R-T152
+  identity_type: AR8R_HISTORICAL_IDENTITY
+  authority_level: HISTORICAL_REFERENCE_WITHOUT_SUPPLIED_PAYLOAD
+  provenance_class: HISTORICAL_IDENTITY_ONLY
+  status: INSUFFICIENT_EVIDENCE
+  repository_path: ''
+  canonical_identity: ''
+  surfaces:
+  - S22
+  notes: repository_ready=False; owner_adoption_status=BLOCKED_ON_EVIDENCE
+- identity_id: AR8R-T153
+  identity_type: AR8R_HISTORICAL_IDENTITY
+  authority_level: HISTORICAL_REFERENCE_WITHOUT_SUPPLIED_PAYLOAD
+  provenance_class: HISTORICAL_IDENTITY_ONLY
+  status: INSUFFICIENT_EVIDENCE
+  repository_path: ''
+  canonical_identity: ''
+  surfaces:
+  - S22
+  notes: repository_ready=False; owner_adoption_status=BLOCKED_ON_EVIDENCE
+- identity_id: AR8R-T154
+  identity_type: AR8R_HISTORICAL_IDENTITY
+  authority_level: HISTORICAL_REFERENCE_WITHOUT_SUPPLIED_PAYLOAD
+  provenance_class: HISTORICAL_IDENTITY_ONLY
+  status: INSUFFICIENT_EVIDENCE
+  repository_path: ''
+  canonical_identity: ''
+  surfaces:
+  - S22
+  notes: repository_ready=False; owner_adoption_status=BLOCKED_ON_EVIDENCE
+- identity_id: AR8R-T155
+  identity_type: AR8R_HISTORICAL_IDENTITY
+  authority_level: HISTORICAL_REFERENCE_WITHOUT_SUPPLIED_PAYLOAD
+  provenance_class: HISTORICAL_IDENTITY_ONLY
+  status: INSUFFICIENT_EVIDENCE
+  repository_path: ''
+  canonical_identity: ''
+  surfaces:
+  - S22
+  notes: repository_ready=False; owner_adoption_status=BLOCKED_ON_EVIDENCE
+- identity_id: AR8R-T307
+  identity_type: AR8R_HISTORICAL_IDENTITY
+  authority_level: HISTORICAL_REFERENCE_WITHOUT_SUPPLIED_PAYLOAD
+  provenance_class: HISTORICAL_IDENTITY_ONLY
+  status: INSUFFICIENT_EVIDENCE
+  repository_path: ''
+  canonical_identity: ''
+  surfaces:
+  - S22
+  notes: repository_ready=False; owner_adoption_status=BLOCKED_ON_EVIDENCE
+- identity_id: AR8R-T309
+  identity_type: AR8R_HISTORICAL_IDENTITY
+  authority_level: HISTORICAL_REFERENCE_WITHOUT_SUPPLIED_PAYLOAD
+  provenance_class: HISTORICAL_IDENTITY_ONLY
+  status: INSUFFICIENT_EVIDENCE
+  repository_path: ''
+  canonical_identity: ''
+  surfaces:
+  - S22
+  notes: repository_ready=False; owner_adoption_status=BLOCKED_ON_EVIDENCE
+- identity_id: AR8R-T310
+  identity_type: AR8R_HISTORICAL_IDENTITY
+  authority_level: HISTORICAL_REFERENCE_WITHOUT_SUPPLIED_PAYLOAD
+  provenance_class: HISTORICAL_IDENTITY_ONLY
+  status: INSUFFICIENT_EVIDENCE
+  repository_path: ''
+  canonical_identity: ''
+  surfaces:
+  - S22
+  notes: repository_ready=False; owner_adoption_status=BLOCKED_ON_EVIDENCE
+- identity_id: AR8R-T311
+  identity_type: AR8R_HISTORICAL_IDENTITY
+  authority_level: HISTORICAL_REFERENCE_WITHOUT_SUPPLIED_PAYLOAD
+  provenance_class: HISTORICAL_IDENTITY_ONLY
+  status: INSUFFICIENT_EVIDENCE
+  repository_path: ''
+  canonical_identity: ''
+  surfaces:
+  - S22
+  notes: repository_ready=False; owner_adoption_status=BLOCKED_ON_EVIDENCE
+- identity_id: AR8R-T312
+  identity_type: AR8R_HISTORICAL_IDENTITY
+  authority_level: HISTORICAL_REFERENCE_WITHOUT_SUPPLIED_PAYLOAD
+  provenance_class: HISTORICAL_IDENTITY_ONLY
+  status: INSUFFICIENT_EVIDENCE
+  repository_path: ''
+  canonical_identity: ''
+  surfaces:
+  - S22
+  notes: repository_ready=False; owner_adoption_status=BLOCKED_ON_EVIDENCE
+- identity_id: AR8R-T313
+  identity_type: AR8R_HISTORICAL_IDENTITY
+  authority_level: HISTORICAL_REFERENCE_WITHOUT_SUPPLIED_PAYLOAD
+  provenance_class: HISTORICAL_IDENTITY_ONLY
+  status: INSUFFICIENT_EVIDENCE
+  repository_path: ''
+  canonical_identity: ''
+  surfaces:
+  - S22
+  notes: repository_ready=False; owner_adoption_status=BLOCKED_ON_EVIDENCE
+- identity_id: AR8R-T314
+  identity_type: AR8R_HISTORICAL_IDENTITY
+  authority_level: HISTORICAL_REFERENCE_WITHOUT_SUPPLIED_PAYLOAD
+  provenance_class: HISTORICAL_IDENTITY_ONLY
+  status: INSUFFICIENT_EVIDENCE
+  repository_path: ''
+  canonical_identity: ''
+  surfaces:
+  - S22
+  notes: repository_ready=False; owner_adoption_status=BLOCKED_ON_EVIDENCE
+- identity_id: AR8R-T315
+  identity_type: AR8R_HISTORICAL_IDENTITY
+  authority_level: HISTORICAL_REFERENCE_WITHOUT_SUPPLIED_PAYLOAD
+  provenance_class: HISTORICAL_IDENTITY_ONLY
+  status: INSUFFICIENT_EVIDENCE
+  repository_path: ''
+  canonical_identity: ''
+  surfaces:
+  - S22
+  notes: repository_ready=False; owner_adoption_status=BLOCKED_ON_EVIDENCE
+- identity_id: AR8R-T316
+  identity_type: AR8R_HISTORICAL_IDENTITY
+  authority_level: HISTORICAL_REFERENCE_WITHOUT_SUPPLIED_PAYLOAD
+  provenance_class: HISTORICAL_IDENTITY_ONLY
+  status: INSUFFICIENT_EVIDENCE
+  repository_path: ''
+  canonical_identity: ''
+  surfaces:
+  - S22
+  notes: repository_ready=False; owner_adoption_status=BLOCKED_ON_EVIDENCE
+- identity_id: AR8R-T317
+  identity_type: AR8R_HISTORICAL_IDENTITY
+  authority_level: HISTORICAL_REFERENCE_WITHOUT_SUPPLIED_PAYLOAD
+  provenance_class: HISTORICAL_IDENTITY_ONLY
+  status: INSUFFICIENT_EVIDENCE
+  repository_path: ''
+  canonical_identity: ''
+  surfaces:
+  - S22
+  notes: repository_ready=False; owner_adoption_status=BLOCKED_ON_EVIDENCE
+- identity_id: AR8R-T318
+  identity_type: AR8R_HISTORICAL_IDENTITY
+  authority_level: HISTORICAL_REFERENCE_WITHOUT_SUPPLIED_PAYLOAD
+  provenance_class: HISTORICAL_IDENTITY_ONLY
+  status: INSUFFICIENT_EVIDENCE
+  repository_path: ''
+  canonical_identity: ''
+  surfaces:
+  - S22
+  notes: repository_ready=False; owner_adoption_status=BLOCKED_ON_EVIDENCE
+- identity_id: AR8R-T351
+  identity_type: AR8R_HISTORICAL_IDENTITY
+  authority_level: EXACT_HISTORICAL_PAYLOAD
+  provenance_class: EXACT_VERBATIM_TRANSCRIPT_RECOVERY
+  status: PASS_AFTER_BOUNDED_PROOF_REPAIR
+  repository_path: docs/project-closure/ar8r-v8/historical-payloads/AR8R_T351.txt
+  canonical_identity: AR8R-T351
+  surfaces:
+  - S22
+  - S27
+  - S28
+  - S49
+  notes: repository_ready=True; owner_adoption_status=NOT_APPLICABLE
+- identity_id: AR8R-T352
+  identity_type: AR8R_HISTORICAL_IDENTITY
+  authority_level: EXACT_HISTORICAL_PAYLOAD
+  provenance_class: EXACT_VERBATIM_TRANSCRIPT_RECOVERY
+  status: PASS_V8_COLD_AUDIT_AND_REREVIEW
+  repository_path: docs/project-closure/ar8r-v8/historical-payloads/AR8R_T352.txt
+  canonical_identity: AR8R-T352
+  surfaces:
+  - S22
+  - S27
+  - S28
+  - S49
+  notes: repository_ready=True; owner_adoption_status=NOT_APPLICABLE
+- identity_id: AR8R-T353
+  identity_type: AR8R_HISTORICAL_IDENTITY
+  authority_level: EXACT_HISTORICAL_PAYLOAD
+  provenance_class: EXACT_VERBATIM_TRANSCRIPT_RECOVERY
+  status: PASS_V8_COLD_AUDIT_AND_REREVIEW
+  repository_path: docs/project-closure/ar8r-v8/historical-payloads/AR8R_T353.txt
+  canonical_identity: AR8R-T353
+  surfaces:
+  - S22
+  - S27
+  - S28
+  - S31
+  - S49
+  notes: repository_ready=True; owner_adoption_status=NOT_APPLICABLE
+- identity_id: AR8R-T354
+  identity_type: AR8R_HISTORICAL_IDENTITY
+  authority_level: EXACT_HISTORICAL_PAYLOAD
+  provenance_class: EXACT_VERBATIM_TRANSCRIPT_RECOVERY
+  status: BLOCKED_FORMAL_DEFECT
+  repository_path: docs/project-closure/ar8r-v8/historical-payloads/AR8R_T354.txt
+  canonical_identity: ''
+  surfaces:
+  - S22
+  - S24
+  - S26
+  - S49
+  notes: repository_ready=False; owner_adoption_status=NOT_APPLICABLE
+- identity_id: AR8R-T366
+  identity_type: AR8R_HISTORICAL_IDENTITY
+  authority_level: HISTORICAL_REFERENCE_WITHOUT_SUPPLIED_PAYLOAD
+  provenance_class: CANONICAL_SEMANTIC_RECONSTRUCTION
+  status: V6_VALIDATION_REHASH_AND_V8_REREVIEW_PASS
+  repository_path: docs/project-closure/ar8r-v8/proposals/AR8R_RC_T366_V1_DECLARED_PROFILE_FACTORIZATION.md
+  canonical_identity: AR8R-RC-T366-v1
+  surfaces:
+  - S08
+  - S22
+  - S23
+  notes: repository_ready=True; owner_adoption_status=PENDING
+- identity_id: DECISION-0001
+  identity_type: CURRENT_REPOSITORY_DECISION
+  authority_level: CURRENT_MERGED_REPOSITORY_BYTES
+  provenance_class: MERGED_DECISION_RECORD
+  status: PRESENT
+  repository_path: docs/decisions/0001-analysis-relative-ground-truth.md
+  canonical_identity: '0001'
+  surfaces:
+  - S01
+  - S02
+  - S43
+  - S50
+  - S70
+  - S81
+  notes: Current main contains Decisions 0001-0036 only.
+- identity_id: DECISION-0002
+  identity_type: CURRENT_REPOSITORY_DECISION
+  authority_level: CURRENT_MERGED_REPOSITORY_BYTES
+  provenance_class: MERGED_DECISION_RECORD
+  status: PRESENT
+  repository_path: docs/decisions/0002-metaorthemma-configuration-token.md
+  canonical_identity: '0002'
+  surfaces:
+  - S01
+  - S43
+  - S50
+  - S70
+  - S81
+  notes: Current main contains Decisions 0001-0036 only.
+- identity_id: DECISION-0003
+  identity_type: CURRENT_REPOSITORY_DECISION
+  authority_level: CURRENT_MERGED_REPOSITORY_BYTES
+  provenance_class: MERGED_DECISION_RECORD
+  status: PRESENT
+  repository_path: docs/decisions/0003-result-free-pathway-adequacy.md
+  canonical_identity: '0003'
+  surfaces:
+  - S02
+  - S43
+  - S50
+  - S70
+  - S81
+  notes: Current main contains Decisions 0001-0036 only.
+- identity_id: DECISION-0004
+  identity_type: CURRENT_REPOSITORY_DECISION
+  authority_level: CURRENT_MERGED_REPOSITORY_BYTES
+  provenance_class: MERGED_DECISION_RECORD
+  status: PRESENT
+  repository_path: docs/decisions/0004-verdict-registry-normalization.md
+  canonical_identity: '0004'
+  surfaces:
+  - S43
+  - S50
+  - S70
+  - S81
+  notes: Current main contains Decisions 0001-0036 only.
+- identity_id: DECISION-0005
+  identity_type: CURRENT_REPOSITORY_DECISION
+  authority_level: CURRENT_MERGED_REPOSITORY_BYTES
+  provenance_class: MERGED_DECISION_RECORD
+  status: PRESENT
+  repository_path: docs/decisions/0005-symbol-table-normalization.md
+  canonical_identity: '0005'
+  surfaces:
+  - S43
+  - S50
+  - S70
+  - S81
+  notes: Current main contains Decisions 0001-0036 only.
+- identity_id: DECISION-0006
+  identity_type: CURRENT_REPOSITORY_DECISION
+  authority_level: CURRENT_MERGED_REPOSITORY_BYTES
+  provenance_class: MERGED_DECISION_RECORD
+  status: PRESENT
+  repository_path: docs/decisions/0006-compaction-stale-steer-placement.md
+  canonical_identity: '0006'
+  surfaces:
+  - S43
+  - S50
+  - S70
+  - S81
+  notes: Current main contains Decisions 0001-0036 only.
+- identity_id: DECISION-0007
+  identity_type: CURRENT_REPOSITORY_DECISION
+  authority_level: CURRENT_MERGED_REPOSITORY_BYTES
+  provenance_class: MERGED_DECISION_RECORD
+  status: PRESENT
+  repository_path: docs/decisions/0007-profile-space-definition.md
+  canonical_identity: '0007'
+  surfaces:
+  - S01
+  - S43
+  - S50
+  - S70
+  - S81
+  notes: Current main contains Decisions 0001-0036 only.
+- identity_id: DECISION-0008
+  identity_type: CURRENT_REPOSITORY_DECISION
+  authority_level: CURRENT_MERGED_REPOSITORY_BYTES
+  provenance_class: MERGED_DECISION_RECORD
+  status: PRESENT
+  repository_path: docs/decisions/0008-thesis-c-disposition.md
+  canonical_identity: 0008
+  surfaces:
+  - S43
+  - S50
+  - S70
+  - S81
+  notes: Current main contains Decisions 0001-0036 only.
+- identity_id: DECISION-0009
+  identity_type: CURRENT_REPOSITORY_DECISION
+  authority_level: CURRENT_MERGED_REPOSITORY_BYTES
+  provenance_class: MERGED_DECISION_RECORD
+  status: PRESENT
+  repository_path: docs/decisions/0009-type-token-soundness-and-concrete-reason.md
+  canonical_identity: 0009
+  surfaces:
+  - S01
+  - S03
+  - S43
+  - S50
+  - S70
+  - S73
+  - S81
+  notes: Current main contains Decisions 0001-0036 only.
+- identity_id: DECISION-0010
+  identity_type: CURRENT_REPOSITORY_DECISION
+  authority_level: CURRENT_MERGED_REPOSITORY_BYTES
+  provenance_class: MERGED_DECISION_RECORD
+  status: PRESENT
+  repository_path: docs/decisions/0010-orthability-sense-and-argument-boundary.md
+  canonical_identity: '0010'
+  surfaces:
+  - S01
+  - S07
+  - S14
+  - S15
+  - S43
+  - S50
+  - S70
+  - S81
+  notes: Current main contains Decisions 0001-0036 only.
+- identity_id: DECISION-0011
+  identity_type: CURRENT_REPOSITORY_DECISION
+  authority_level: CURRENT_MERGED_REPOSITORY_BYTES
+  provenance_class: MERGED_DECISION_RECORD
+  status: PRESENT
+  repository_path: docs/decisions/0011-claim-relative-reasoning-path-and-strict-soundness.md
+  canonical_identity: '0011'
+  surfaces:
+  - S02
+  - S03
+  - S07
+  - S14
+  - S43
+  - S50
+  - S70
+  - S81
+  notes: Current main contains Decisions 0001-0036 only.
+- identity_id: DECISION-0012
+  identity_type: CURRENT_REPOSITORY_DECISION
+  authority_level: CURRENT_MERGED_REPOSITORY_BYTES
+  provenance_class: MERGED_DECISION_RECORD
+  status: PRESENT
+  repository_path: docs/decisions/0012-reference-model-semantic-contract.md
+  canonical_identity: '0012'
+  surfaces:
+  - S02
+  - S14
+  - S19
+  - S43
+  - S50
+  - S70
+  - S81
+  notes: Current main contains Decisions 0001-0036 only.
+- identity_id: DECISION-0013
+  identity_type: CURRENT_REPOSITORY_DECISION
+  authority_level: CURRENT_MERGED_REPOSITORY_BYTES
+  provenance_class: MERGED_DECISION_RECORD
+  status: PRESENT
+  repository_path: docs/decisions/0013-source-attribution-and-status-normalization.md
+  canonical_identity: '0013'
+  surfaces:
+  - S04
+  - S15
+  - S17
+  - S19
+  - S39
+  - S43
+  - S50
+  - S70
+  - S81
+  notes: Current main contains Decisions 0001-0036 only.
+- identity_id: DECISION-0014
+  identity_type: CURRENT_REPOSITORY_DECISION
+  authority_level: CURRENT_MERGED_REPOSITORY_BYTES
+  provenance_class: MERGED_DECISION_RECORD
+  status: PRESENT
+  repository_path: docs/decisions/0014-generated-project-state-and-whole-state-reread.md
+  canonical_identity: '0014'
+  surfaces:
+  - S04
+  - S19
+  - S43
+  - S47
+  - S50
+  - S70
+  - S81
+  notes: Current main contains Decisions 0001-0036 only.
+- identity_id: DECISION-0015
+  identity_type: CURRENT_REPOSITORY_DECISION
+  authority_level: CURRENT_MERGED_REPOSITORY_BYTES
+  provenance_class: MERGED_DECISION_RECORD
+  status: PRESENT
+  repository_path: docs/decisions/0015-latent-state-observation-and-representation-boundary.md
+  canonical_identity: '0015'
+  surfaces:
+  - S43
+  - S45
+  - S50
+  - S70
+  - S81
+  notes: Current main contains Decisions 0001-0036 only.
+- identity_id: DECISION-0016
+  identity_type: CURRENT_REPOSITORY_DECISION
+  authority_level: CURRENT_MERGED_REPOSITORY_BYTES
+  provenance_class: MERGED_DECISION_RECORD
+  status: PRESENT
+  repository_path: docs/decisions/0016-current-review-state-and-historical-supersession.md
+  canonical_identity: '0016'
+  surfaces:
+  - S04
+  - S43
+  - S50
+  - S70
+  - S81
+  notes: Current main contains Decisions 0001-0036 only.
+- identity_id: DECISION-0017
+  identity_type: CURRENT_REPOSITORY_DECISION
+  authority_level: CURRENT_MERGED_REPOSITORY_BYTES
+  provenance_class: MERGED_DECISION_RECORD
+  status: PRESENT
+  repository_path: docs/decisions/0017-private-design-records-and-public-evidence-boundary.md
+  canonical_identity: '0017'
+  surfaces:
+  - S04
+  - S39
+  - S43
+  - S48
+  - S50
+  - S70
+  - S81
+  notes: Current main contains Decisions 0001-0036 only.
+- identity_id: DECISION-0018
+  identity_type: CURRENT_REPOSITORY_DECISION
+  authority_level: CURRENT_MERGED_REPOSITORY_BYTES
+  provenance_class: MERGED_DECISION_RECORD
+  status: PRESENT
+  repository_path: docs/decisions/0018-experiment-packet-readiness-and-registration-status.md
+  canonical_identity: 0018
+  surfaces:
+  - S40
+  - S43
+  - S50
+  - S70
+  - S81
+  notes: Current main contains Decisions 0001-0036 only.
+- identity_id: DECISION-0019
+  identity_type: CURRENT_REPOSITORY_DECISION
+  authority_level: CURRENT_MERGED_REPOSITORY_BYTES
+  provenance_class: MERGED_DECISION_RECORD
+  status: PRESENT
+  repository_path: docs/decisions/0019-current-sourcing-ledger-and-historical-overlays.md
+  canonical_identity: 0019
+  surfaces:
+  - S04
+  - S15
+  - S17
+  - S39
+  - S43
+  - S50
+  - S70
+  - S81
+  notes: Current main contains Decisions 0001-0036 only.
+- identity_id: DECISION-0020
+  identity_type: CURRENT_REPOSITORY_DECISION
+  authority_level: CURRENT_MERGED_REPOSITORY_BYTES
+  provenance_class: MERGED_DECISION_RECORD
+  status: PRESENT
+  repository_path: docs/decisions/0020-experiment-inferential-readiness-and-packet-versioning.md
+  canonical_identity: '0020'
+  surfaces:
+  - S40
+  - S43
+  - S50
+  - S70
+  - S81
+  notes: Current main contains Decisions 0001-0036 only.
+- identity_id: DECISION-0021
+  identity_type: CURRENT_REPOSITORY_DECISION
+  authority_level: CURRENT_MERGED_REPOSITORY_BYTES
+  provenance_class: MERGED_DECISION_RECORD
+  status: PRESENT
+  repository_path: docs/decisions/0021-daee-epistemics-as-noetic-orthing-application.md
+  canonical_identity: '0021'
+  surfaces:
+  - S17
+  - S25
+  - S43
+  - S50
+  - S70
+  - S81
+  notes: Current main contains Decisions 0001-0036 only.
+- identity_id: DECISION-0022
+  identity_type: CURRENT_REPOSITORY_DECISION
+  authority_level: CURRENT_MERGED_REPOSITORY_BYTES
+  provenance_class: MERGED_DECISION_RECORD
+  status: PRESENT
+  repository_path: docs/decisions/0022-experiment-methods-and-ready-to-run-gate.md
+  canonical_identity: '0022'
+  surfaces:
+  - S40
+  - S43
+  - S50
+  - S70
+  - S81
+  notes: Current main contains Decisions 0001-0036 only.
+- identity_id: DECISION-0023
+  identity_type: CURRENT_REPOSITORY_DECISION
+  authority_level: CURRENT_MERGED_REPOSITORY_BYTES
+  provenance_class: MERGED_DECISION_RECORD
+  status: PRESENT
+  repository_path: docs/decisions/0023-mathematical-source-and-typesetting-pipeline.md
+  canonical_identity: '0023'
+  surfaces:
+  - S38
+  - S43
+  - S47
+  - S50
+  - S70
+  - S81
+  notes: Current main contains Decisions 0001-0036 only.
+- identity_id: DECISION-0024
+  identity_type: CURRENT_REPOSITORY_DECISION
+  authority_level: CURRENT_MERGED_REPOSITORY_BYTES
+  provenance_class: MERGED_DECISION_RECORD
+  status: PRESENT
+  repository_path: docs/decisions/0024-dynamic-orthing-and-representation-learning.md
+  canonical_identity: '0024'
+  surfaces:
+  - S43
+  - S45
+  - S50
+  - S70
+  - S81
+  notes: Current main contains Decisions 0001-0036 only.
+- identity_id: DECISION-0025
+  identity_type: CURRENT_REPOSITORY_DECISION
+  authority_level: CURRENT_MERGED_REPOSITORY_BYTES
+  provenance_class: MERGED_DECISION_RECORD
+  status: PRESENT
+  repository_path: docs/decisions/0025-meta-noetic-memetics-and-sound-corrective-dynamics.md
+  canonical_identity: '0025'
+  surfaces:
+  - S25
+  - S26
+  - S27
+  - S28
+  - S43
+  - S50
+  - S70
+  - S81
+  notes: Current main contains Decisions 0001-0036 only.
+- identity_id: DECISION-0026
+  identity_type: CURRENT_REPOSITORY_DECISION
+  authority_level: CURRENT_MERGED_REPOSITORY_BYTES
+  provenance_class: MERGED_DECISION_RECORD
+  status: PRESENT
+  repository_path: docs/decisions/0026-candidate-state-and-premerge-decision-status.md
+  canonical_identity: '0026'
+  surfaces:
+  - S43
+  - S44
+  - S50
+  - S70
+  - S81
+  notes: Current main contains Decisions 0001-0036 only.
+- identity_id: DECISION-0027
+  identity_type: CURRENT_REPOSITORY_DECISION
+  authority_level: CURRENT_MERGED_REPOSITORY_BYTES
+  provenance_class: MERGED_DECISION_RECORD
+  status: PRESENT
+  repository_path: docs/decisions/0027-multi-target-noetic-orthing-and-claim-bearers.md
+  canonical_identity: '0027'
+  surfaces:
+  - S05
+  - S28
+  - S43
+  - S50
+  - S70
+  - S81
+  notes: Current main contains Decisions 0001-0036 only.
+- identity_id: DECISION-0028
+  identity_type: CURRENT_REPOSITORY_DECISION
+  authority_level: CURRENT_MERGED_REPOSITORY_BYTES
+  provenance_class: MERGED_DECISION_RECORD
+  status: PRESENT
+  repository_path: docs/decisions/0028-represented-metaorthemes-and-memetic-ecology.md
+  canonical_identity: 0028
+  surfaces:
+  - S05
+  - S12
+  - S28
+  - S43
+  - S50
+  - S70
+  - S81
+  notes: Current main contains Decisions 0001-0036 only.
+- identity_id: DECISION-0029
+  identity_type: CURRENT_REPOSITORY_DECISION
+  authority_level: CURRENT_MERGED_REPOSITORY_BYTES
+  provenance_class: MERGED_DECISION_RECORD
+  status: PRESENT
+  repository_path: docs/decisions/0029-live-candidate-state-and-public-status-generation.md
+  canonical_identity: 0029
+  surfaces:
+  - S43
+  - S44
+  - S47
+  - S50
+  - S70
+  - S81
+  notes: Current main contains Decisions 0001-0036 only.
+- identity_id: DECISION-0030
+  identity_type: CURRENT_REPOSITORY_DECISION
+  authority_level: CURRENT_MERGED_REPOSITORY_BYTES
+  provenance_class: MERGED_DECISION_RECORD
+  status: PRESENT
+  repository_path: docs/decisions/0030-evidence-bound-multi-target-noetic-claims.md
+  canonical_identity: '0030'
+  surfaces:
+  - S05
+  - S25
+  - S43
+  - S50
+  - S70
+  - S81
+  notes: Current main contains Decisions 0001-0036 only.
+- identity_id: DECISION-0031
+  identity_type: CURRENT_REPOSITORY_DECISION
+  authority_level: CURRENT_MERGED_REPOSITORY_BYTES
+  provenance_class: MERGED_DECISION_RECORD
+  status: PRESENT
+  repository_path: docs/decisions/0031-representation-relations-fidelity-and-carrier-stance.md
+  canonical_identity: '0031'
+  surfaces:
+  - S03
+  - S43
+  - S50
+  - S70
+  - S81
+  notes: Current main contains Decisions 0001-0036 only.
+- identity_id: DECISION-0032
+  identity_type: CURRENT_REPOSITORY_DECISION
+  authority_level: CURRENT_MERGED_REPOSITORY_BYTES
+  provenance_class: MERGED_DECISION_RECORD
+  status: PRESENT
+  repository_path: docs/decisions/0032-governed-metaorthemic-ecology-and-source-dependence.md
+  canonical_identity: '0032'
+  surfaces:
+  - S05
+  - S12
+  - S28
+  - S43
+  - S50
+  - S70
+  - S81
+  notes: Current main contains Decisions 0001-0036 only.
+- identity_id: DECISION-0033
+  identity_type: CURRENT_REPOSITORY_DECISION
+  authority_level: CURRENT_MERGED_REPOSITORY_BYTES
+  provenance_class: MERGED_DECISION_RECORD
+  status: PRESENT
+  repository_path: docs/decisions/0033-governed-corrective-search-and-transition-witness.md
+  canonical_identity: '0033'
+  surfaces:
+  - S25
+  - S27
+  - S28
+  - S43
+  - S50
+  - S70
+  - S81
+  notes: Current main contains Decisions 0001-0036 only.
+- identity_id: DECISION-0034
+  identity_type: CURRENT_REPOSITORY_DECISION
+  authority_level: CURRENT_MERGED_REPOSITORY_BYTES
+  provenance_class: MERGED_DECISION_RECORD
+  status: PRESENT
+  repository_path: docs/decisions/0034-r7e-sol-independent-repair-contract.md
+  canonical_identity: '0034'
+  surfaces:
+  - S43
+  - S44
+  - S47
+  - S50
+  - S70
+  - S81
+  notes: Current main contains Decisions 0001-0036 only.
+- identity_id: DECISION-0035
+  identity_type: CURRENT_REPOSITORY_DECISION
+  authority_level: CURRENT_MERGED_REPOSITORY_BYTES
+  provenance_class: MERGED_DECISION_RECORD
+  status: PRESENT
+  repository_path: docs/decisions/0035-somnic-orthing-and-activation-contracts.md
+  canonical_identity: '0035'
+  surfaces:
+  - S06
+  - S43
+  - S46
+  - S50
+  - S70
+  - S81
+  notes: Current main contains Decisions 0001-0036 only.
+- identity_id: DECISION-0036
+  identity_type: CURRENT_REPOSITORY_DECISION
+  authority_level: CURRENT_MERGED_REPOSITORY_BYTES
+  provenance_class: MERGED_DECISION_RECORD
+  status: PRESENT
+  repository_path: docs/decisions/0036-somnic-episode-identity-and-intra-inter-somnic-relations.md
+  canonical_identity: '0036'
+  surfaces:
+  - S03
+  - S06
+  - S43
+  - S46
+  - S50
+  - S70
+  - S81
+  notes: Current main contains Decisions 0001-0036 only.
+- identity_id: SOURCE-CIR-1
+  identity_type: CURRENT_SOURCE_CLAIM
+  authority_level: CURRENT_MERGED_REPOSITORY_BYTES
+  provenance_class: secondary scholarship (edited-volume chapter)
+  status: SECONDARY_VERIFIED
+  repository_path: references/source-status.yaml
+  canonical_identity: CIR-1
+  surfaces:
+  - S04
+  - S39
+  notes: 'BIBLIOGRAPHIC ONLY (authorship, title, pages, year, DOI, publisher). The in-chapter application and wording
+    are covered by CIR-1W, NOT by this row''s status. R4 independent review: the single SECONDARY_VERIFIED value
+    previously carried both claims at once.'
+- identity_id: SOURCE-CIR-1W
+  identity_type: CURRENT_SOURCE_CLAIM
+  authority_level: CURRENT_MERGED_REPOSITORY_BYTES
+  provenance_class: secondary scholarship (edited-volume chapter) read via a supplied compilation
+  status: COMPILATION_MEDIATED
+  repository_path: references/source-status.yaml
+  canonical_identity: CIR-1W
+  surfaces:
+  - S04
+  - S39
+  notes: ''
+- identity_id: SOURCE-CIR-2
+  identity_type: CURRENT_SOURCE_CLAIM
+  authority_level: CURRENT_MERGED_REPOSITORY_BYTES
+  provenance_class: primary source for the distinction (modern philosophy)
+  status: SECONDARY_RECONSTRUCTION
+  repository_path: references/source-status.yaml
+  canonical_identity: CIR-2
+  surfaces:
+  - S04
+  - S39
+  notes: ''
+- identity_id: SOURCE-CIR-3
+  identity_type: CURRENT_SOURCE_CLAIM
+  authority_level: CURRENT_MERGED_REPOSITORY_BYTES
+  provenance_class: secondary scholarship (journal article)
+  status: SECONDARY_VERIFIED
+  repository_path: references/source-status.yaml
+  canonical_identity: CIR-3
+  surfaces:
+  - S04
+  - S39
+  notes: ''
+- identity_id: SOURCE-CIR-4
+  identity_type: CURRENT_SOURCE_CLAIM
+  authority_level: CURRENT_MERGED_REPOSITORY_BYTES
+  provenance_class: secondary scholarship (book chapter)
+  status: SECONDARY_VERIFIED
+  repository_path: references/source-status.yaml
+  canonical_identity: CIR-4
+  surfaces:
+  - S04
+  - S39
+  notes: ''
+- identity_id: SOURCE-ELT-1
+  identity_type: CURRENT_SOURCE_CLAIM
+  authority_level: CURRENT_MERGED_REPOSITORY_BYTES
+  provenance_class: secondary scholarship (monograph, open access)
+  status: SECONDARY_RECONSTRUCTION
+  repository_path: references/source-status.yaml
+  canonical_identity: ELT-1
+  surfaces:
+  - S04
+  - S15
+  - S39
+  notes: ''
+- identity_id: SOURCE-ELT-2
+  identity_type: CURRENT_SOURCE_CLAIM
+  authority_level: CURRENT_MERGED_REPOSITORY_BYTES
+  provenance_class: secondary scholarship (dissertation)
+  status: SECONDARY_VERIFIED
+  repository_path: references/source-status.yaml
+  canonical_identity: ELT-2
+  surfaces:
+  - S04
+  - S15
+  - S39
+  notes: ''
+- identity_id: SOURCE-ELT-3
+  identity_type: CURRENT_SOURCE_CLAIM
+  authority_level: CURRENT_MERGED_REPOSITORY_BYTES
+  provenance_class: secondary scholarship (journal article)
+  status: SECONDARY_VERIFIED
+  repository_path: references/source-status.yaml
+  canonical_identity: ELT-3
+  surfaces:
+  - S04
+  - S15
+  - S39
+  notes: ''
+- identity_id: SOURCE-ATH-1
+  identity_type: CURRENT_SOURCE_CLAIM
+  authority_level: CURRENT_MERGED_REPOSITORY_BYTES
+  provenance_class: primary scripture
+  status: PRIMARY_TEXT_EXACT
+  repository_path: references/source-status.yaml
+  canonical_identity: ATH-1
+  surfaces:
+  - S04
+  - S15
+  - S39
+  notes: ''
+- identity_id: SOURCE-ATH-2
+  identity_type: CURRENT_SOURCE_CLAIM
+  authority_level: CURRENT_MERGED_REPOSITORY_BYTES
+  provenance_class: primary hadith collection
+  status: PRIMARY_TEXT_EXACT
+  repository_path: references/source-status.yaml
+  canonical_identity: ATH-2
+  surfaces:
+  - S04
+  - S15
+  - S39
+  notes: ''
+- identity_id: SOURCE-ATH-3
+  identity_type: CURRENT_SOURCE_CLAIM
+  authority_level: CURRENT_MERGED_REPOSITORY_BYTES
+  provenance_class: primary classical text read through the owner-supplied compilation
+  status: COMPILATION_MEDIATED
+  repository_path: references/source-status.yaml
+  canonical_identity: ATH-3
+  surfaces:
+  - S04
+  - S15
+  - S39
+  notes: ''
+- identity_id: SOURCE-ATH-4
+  identity_type: CURRENT_SOURCE_CLAIM
+  authority_level: CURRENT_MERGED_REPOSITORY_BYTES
+  provenance_class: primary classical text
+  status: PRIMARY_WORK_THEME
+  repository_path: references/source-status.yaml
+  canonical_identity: ATH-4
+  surfaces:
+  - S04
+  - S15
+  - S39
+  notes: ''
+- identity_id: SOURCE-ATH-5
+  identity_type: CURRENT_SOURCE_CLAIM
+  authority_level: CURRENT_MERGED_REPOSITORY_BYTES
+  provenance_class: primary classical text + secondary scholarship
+  status: PRIMARY_LOCUS_EDITION_DEPENDENT
+  repository_path: references/source-status.yaml
+  canonical_identity: ATH-5
+  surfaces:
+  - S04
+  - S15
+  - S39
+  notes: ''
+- identity_id: SOURCE-ATH-6
+  identity_type: CURRENT_SOURCE_CLAIM
+  authority_level: CURRENT_MERGED_REPOSITORY_BYTES
+  provenance_class: primary classical text (hagiographically shaped) + secondary source criticism
+  status: PRIMARY_LOCUS_EDITION_DEPENDENT
+  repository_path: references/source-status.yaml
+  canonical_identity: ATH-6
+  surfaces:
+  - S04
+  - S15
+  - S39
+  notes: ''
+- identity_id: SOURCE-ATH-7
+  identity_type: CURRENT_SOURCE_CLAIM
+  authority_level: CURRENT_MERGED_REPOSITORY_BYTES
+  provenance_class: tradition-internal texts (read via surveys/databases)
+  status: SECONDARY_VERIFIED
+  repository_path: references/source-status.yaml
+  canonical_identity: ATH-7
+  surfaces:
+  - S04
+  - S15
+  - S39
+  notes: ''
+- identity_id: SOURCE-LAT-1
+  identity_type: CURRENT_SOURCE_CLAIM
+  authority_level: CURRENT_MERGED_REPOSITORY_BYTES
+  provenance_class: primary research article in another field
+  status: PRIMARY_TEXT_EXACT
+  repository_path: references/source-status.yaml
+  canonical_identity: LAT-1
+  surfaces:
+  - S04
+  - S39
+  notes: ''
+- identity_id: SOURCE-LAT-2
+  identity_type: CURRENT_SOURCE_CLAIM
+  authority_level: CURRENT_MERGED_REPOSITORY_BYTES
+  provenance_class: secondary scholarship (primary research article in another field)
+  status: SECONDARY_VERIFIED
+  repository_path: references/source-status.yaml
+  canonical_identity: LAT-2
+  surfaces:
+  - S04
+  - S39
+  notes: ''
+- identity_id: SOURCE-LAT-3
+  identity_type: CURRENT_SOURCE_CLAIM
+  authority_level: CURRENT_MERGED_REPOSITORY_BYTES
+  provenance_class: secondary scholarship (primary research article in another field)
+  status: SECONDARY_VERIFIED
+  repository_path: references/source-status.yaml
+  canonical_identity: LAT-3
+  surfaces:
+  - S04
+  - S39
+  notes: ''
+- identity_id: SOURCE-ETY-1
+  identity_type: CURRENT_SOURCE_CLAIM
+  authority_level: CURRENT_MERGED_REPOSITORY_BYTES
+  provenance_class: authoritative English dictionary
+  status: SECONDARY_VERIFIED
+  repository_path: references/source-status.yaml
+  canonical_identity: ETY-1
+  surfaces:
+  - S04
+  - S39
+  notes: ''
+- identity_id: SOURCE-ETY-2
+  identity_type: CURRENT_SOURCE_CLAIM
+  authority_level: CURRENT_MERGED_REPOSITORY_BYTES
+  provenance_class: authoritative English dictionary
+  status: SECONDARY_VERIFIED
+  repository_path: references/source-status.yaml
+  canonical_identity: ETY-2
+  surfaces:
+  - S04
+  - S39
+  notes: ''
+- identity_id: SOURCE-ETY-3
+  identity_type: CURRENT_SOURCE_CLAIM
+  authority_level: CURRENT_MERGED_REPOSITORY_BYTES
+  provenance_class: scholarly reference grammar
+  status: SECONDARY_VERIFIED
+  repository_path: references/source-status.yaml
+  canonical_identity: ETY-3
+  surfaces:
+  - S04
+  - S39
+  notes: ''
+- identity_id: SOURCE-ETY-4
+  identity_type: CURRENT_SOURCE_CLAIM
+  authority_level: CURRENT_MERGED_REPOSITORY_BYTES
+  provenance_class: scholarly historical Greek lexicon on the Scaife ATLAS surface
+  status: SECONDARY_VERIFIED
+  repository_path: references/source-status.yaml
+  canonical_identity: ETY-4
+  surfaces:
+  - S04
+  - S39
+  notes: ''
+- identity_id: SOURCE-ETY-5A
+  identity_type: CURRENT_SOURCE_CLAIM
+  authority_level: CURRENT_MERGED_REPOSITORY_BYTES
+  provenance_class: archived primary public message, not scholarship
+  status: PRIMARY_TEXT_EXACT
+  repository_path: references/source-status.yaml
+  canonical_identity: ETY-5A
+  surfaces:
+  - S04
+  - S39
+  notes: ''
+- identity_id: SOURCE-ETY-5B
+  identity_type: CURRENT_SOURCE_CLAIM
+  authority_level: CURRENT_MERGED_REPOSITORY_BYTES
+  provenance_class: peer-reviewed primary research article
+  status: PRIMARY_TEXT_EXACT
+  repository_path: references/source-status.yaml
+  canonical_identity: ETY-5B
+  surfaces:
+  - S04
+  - S39
+  notes: ''
+- identity_id: SOURCE-EXT-1
+  identity_type: CURRENT_SOURCE_CLAIM
+  authority_level: CURRENT_MERGED_REPOSITORY_BYTES
+  provenance_class: original formal work
+  status: ORTHEMOLOGICAL_EXTENSION
+  repository_path: references/source-status.yaml
+  canonical_identity: EXT-1
+  surfaces:
+  - S04
+  - S39
+  notes: ''
+- identity_id: LEAN::PackingBounds.sharpFullCohnElkiesManuscriptConclusions
+  identity_type: EXTERNAL_LEAN_DECLARATION
+  authority_level: EXTERNAL_FORMAL_SOURCE_STATICALLY_INSPECTED
+  provenance_class: EXTERNAL FORMALIZATION MANIFEST
+  status: SOURCE_FILE_PRESENT_STATIC_ONLY
+  repository_path: SpherePacking.lean
+  canonical_identity: PackingBounds.sharpFullCohnElkiesManuscriptConclusions
+  surfaces:
+  - S33
+  - S34
+  - S60
+  - S61
+  notes: Comparator=ComparatorChallenges/A_SpherePacking.json; no local Lean build
+- identity_id: LEAN::MetricCodes.Johnson.binaryRate_lt_mrrw
+  identity_type: EXTERNAL_LEAN_DECLARATION
+  authority_level: EXTERNAL_FORMAL_SOURCE_STATICALLY_INSPECTED
+  provenance_class: EXTERNAL FORMALIZATION MANIFEST
+  status: MANIFEST_FILE_PATH_MISSING
+  repository_path: MetricCodes/Base.lean
+  canonical_identity: MetricCodes.Johnson.binaryRate_lt_mrrw
+  surfaces:
+  - S33
+  - S34
+  - S60
+  - S61
+  notes: Comparator=ComparatorChallenges/B_BinaryCodes.json; no local Lean build
+- identity_id: LEAN::MetricCodes.Spherical.HigherHierarchy.strict_hierarchy
+  identity_type: EXTERNAL_LEAN_DECLARATION
+  authority_level: EXTERNAL_FORMAL_SOURCE_STATICALLY_INSPECTED
+  provenance_class: EXTERNAL FORMALIZATION MANIFEST
+  status: SOURCE_FILE_PRESENT_STATIC_ONLY
+  repository_path: MetricCodes.lean
+  canonical_identity: MetricCodes.Spherical.HigherHierarchy.strict_hierarchy
+  surfaces:
+  - S33
+  - S34
+  - S60
+  - S61
+  notes: Comparator=ComparatorChallenges/B_SphericalCodes.json; no local Lean build
+- identity_id: LEAN::PermanentFormulaLowerBound.permanent_rational_formula_logarithmic_lower_bound
+  identity_type: EXTERNAL_LEAN_DECLARATION
+  authority_level: EXTERNAL_FORMAL_SOURCE_STATICALLY_INSPECTED
+  provenance_class: EXTERNAL FORMALIZATION MANIFEST
+  status: SOURCE_FILE_PRESENT_STATIC_ONLY
+  repository_path: Permanent.lean
+  canonical_identity: PermanentFormulaLowerBound.permanent_rational_formula_logarithmic_lower_bound
+  surfaces:
+  - S33
+  - S34
+  - S60
+  - S63
+  notes: Comparator=ComparatorChallenges/C_PermanentFormulaLowerBound.json; no local Lean build
+- identity_id: LEAN::SoficGroups.SourceTopLevelCompressionFinal.exists_finitelyPresented_nonsofic_group
+  identity_type: EXTERNAL_LEAN_DECLARATION
+  authority_level: EXTERNAL_FORMAL_SOURCE_STATICALLY_INSPECTED
+  provenance_class: EXTERNAL FORMALIZATION MANIFEST
+  status: SOURCE_FILE_PRESENT_STATIC_ONLY
+  repository_path: NonSoficGroup.lean
+  canonical_identity: SoficGroups.SourceTopLevelCompressionFinal.exists_finitelyPresented_nonsofic_group
+  surfaces:
+  - S33
+  - S34
+  - S60
+  - S62
+  notes: Comparator=ComparatorChallenges/D_NonSoficGroup.json; no local Lean build
+- identity_id: LEAN::ConnesRigidity.exists_infinite_pairwise_nonisomorphic_propertyT_icc_groups_with_isomorphic_factors
+  identity_type: EXTERNAL_LEAN_DECLARATION
+  authority_level: EXTERNAL_FORMAL_SOURCE_STATICALLY_INSPECTED
+  provenance_class: EXTERNAL FORMALIZATION MANIFEST
+  status: SOURCE_FILE_PRESENT_STATIC_ONLY
+  repository_path: ConnesRigidity.lean
+  canonical_identity: ConnesRigidity.exists_infinite_pairwise_nonisomorphic_propertyT_icc_groups_with_isomorphic_factors
+  surfaces:
+  - S33
+  - S34
+  - S60
+  - S62
+  notes: Comparator=ComparatorChallenges/E_ConnesRigidity.json; no local Lean build
+- identity_id: LEAN::Ehrhart.Volume.ehrhart_volume_inequality_for_sets
+  identity_type: EXTERNAL_LEAN_DECLARATION
+  authority_level: EXTERNAL_FORMAL_SOURCE_STATICALLY_INSPECTED
+  provenance_class: EXTERNAL FORMALIZATION MANIFEST
+  status: SOURCE_FILE_PRESENT_STATIC_ONLY
+  repository_path: EhrhartVolumeInequality.lean
+  canonical_identity: Ehrhart.Volume.ehrhart_volume_inequality_for_sets
+  surfaces:
+  - S33
+  - S34
+  - S60
+  - S65
+  notes: Comparator=ComparatorChallenges/F_EhrhartVolumeInequality.json; no local Lean build
+- identity_id: LEAN::QuantumParallelRepetition.distributionUniformExponential
+  identity_type: EXTERNAL_LEAN_DECLARATION
+  authority_level: EXTERNAL_FORMAL_SOURCE_STATICALLY_INSPECTED
+  provenance_class: EXTERNAL FORMALIZATION MANIFEST
+  status: SOURCE_FILE_PRESENT_STATIC_ONLY
+  repository_path: QuantumParallelRepetition.lean
+  canonical_identity: QuantumParallelRepetition.distributionUniformExponential
+  surfaces:
+  - S33
+  - S34
+  - S60
+  - S64
+  notes: Comparator=ComparatorChallenges/G_QuantumParallelRepetition.json; no local Lean build
+- identity_id: LEAN::GapCVP.Comparator.gapCVP400IsNPHard
+  identity_type: EXTERNAL_LEAN_DECLARATION
+  authority_level: EXTERNAL_FORMAL_SOURCE_STATICALLY_INSPECTED
+  provenance_class: EXTERNAL FORMALIZATION MANIFEST
+  status: SOURCE_FILE_PRESENT_STATIC_ONLY
+  repository_path: GapCVP.lean
+  canonical_identity: GapCVP.Comparator.gapCVP400IsNPHard
+  surfaces:
+  - S33
+  - S34
+  - S60
+  - S65
+  notes: Comparator=ComparatorChallenges/H_GapCVP.json; no local Lean build
+- identity_id: LEAN::ErdosProblems.MulticolourTriangleRamsey.erdos_problem_183_explicit
+  identity_type: EXTERNAL_LEAN_DECLARATION
+  authority_level: EXTERNAL_FORMAL_SOURCE_STATICALLY_INSPECTED
+  provenance_class: EXTERNAL FORMALIZATION MANIFEST
+  status: SOURCE_FILE_PRESENT_STATIC_ONLY
+  repository_path: MulticolorTriangleRamsey.lean
+  canonical_identity: ErdosProblems.MulticolourTriangleRamsey.erdos_problem_183_explicit
+  surfaces:
+  - S33
+  - S34
+  - S60
+  - S65
+  notes: Comparator=ComparatorChallenges/I_MulticolorTriangleRamsey.json; no local Lean build
+- identity_id: LEAN::CompactnessConjecture.quantitativeCompactnessCounterexample
+  identity_type: EXTERNAL_LEAN_DECLARATION
+  authority_level: EXTERNAL_FORMAL_SOURCE_STATICALLY_INSPECTED
+  provenance_class: EXTERNAL FORMALIZATION MANIFEST
+  status: SOURCE_FILE_PRESENT_STATIC_ONLY
+  repository_path: CompactnessAndDegeneracy.lean
+  canonical_identity: CompactnessConjecture.quantitativeCompactnessCounterexample
+  surfaces:
+  - S33
+  - S34
+  - S60
+  - S66
+  notes: Comparator=ComparatorChallenges/J_CompactnessConjecture.json; no local Lean build
+- identity_id: LEAN::TwoDegenerateGraphs.twoDegenerateExtremalCounterexample
+  identity_type: EXTERNAL_LEAN_DECLARATION
+  authority_level: EXTERNAL_FORMAL_SOURCE_STATICALLY_INSPECTED
+  provenance_class: EXTERNAL FORMALIZATION MANIFEST
+  status: SOURCE_FILE_PRESENT_STATIC_ONLY
+  repository_path: CompactnessAndDegeneracy.lean
+  canonical_identity: TwoDegenerateGraphs.twoDegenerateExtremalCounterexample
+  surfaces:
+  - S33
+  - S34
+  - S60
+  - S66
+  notes: Comparator=ComparatorChallenges/J_TwoDegenerateGraphs.json; no local Lean build
+- identity_id: COUNTERMODEL::CM-AR8R-T130-ANTECEDENT
+  identity_type: COUNTERMODEL_OR_RIVAL_IDENTITY
+  authority_level: HISTORICAL_REFERENCE_WITHOUT_SUPPLIED_PAYLOAD
+  provenance_class: SURFACE-RELATIVE COUNTERMODEL REFERENCE
+  status: MAPPED; exact payload varies
+  repository_path: ''
+  canonical_identity: CM-AR8R-T130-ANTECEDENT
+  surfaces:
+  - S13
+  - S49
+  notes: No world truth inferred from model-theoretic status.
+- identity_id: COUNTERMODEL::CM-AR8R-T130-CONCLUSION
+  identity_type: COUNTERMODEL_OR_RIVAL_IDENTITY
+  authority_level: HISTORICAL_REFERENCE_WITHOUT_SUPPLIED_PAYLOAD
+  provenance_class: SURFACE-RELATIVE COUNTERMODEL REFERENCE
+  status: MAPPED; exact payload varies
+  repository_path: ''
+  canonical_identity: CM-AR8R-T130-CONCLUSION
+  surfaces:
+  - S13
+  - S49
+  notes: No world truth inferred from model-theoretic status.
+- identity_id: COUNTERMODEL::CM-AR8R-T131-OFFIMAGE
+  identity_type: COUNTERMODEL_OR_RIVAL_IDENTITY
+  authority_level: HISTORICAL_REFERENCE_WITHOUT_SUPPLIED_PAYLOAD
+  provenance_class: SURFACE-RELATIVE COUNTERMODEL REFERENCE
+  status: MAPPED; exact payload varies
+  repository_path: ''
+  canonical_identity: CM-AR8R-T131-OFFIMAGE
+  surfaces:
+  - S13
+  - S19
+  - S49
+  notes: No world truth inferred from model-theoretic status.
+- identity_id: COUNTERMODEL::CM-AR8R-T134-TARGET-IRRELEVANCE
+  identity_type: COUNTERMODEL_OR_RIVAL_IDENTITY
+  authority_level: HISTORICAL_REFERENCE_WITHOUT_SUPPLIED_PAYLOAD
+  provenance_class: SURFACE-RELATIVE COUNTERMODEL REFERENCE
+  status: MAPPED; exact payload varies
+  repository_path: ''
+  canonical_identity: CM-AR8R-T134-TARGET-IRRELEVANCE
+  surfaces:
+  - S09
+  - S49
+  notes: No world truth inferred from model-theoretic status.
+- identity_id: COUNTERMODEL::CM-AR8R-T135-FALSE-ZERO
+  identity_type: COUNTERMODEL_OR_RIVAL_IDENTITY
+  authority_level: HISTORICAL_REFERENCE_WITHOUT_SUPPLIED_PAYLOAD
+  provenance_class: SURFACE-RELATIVE COUNTERMODEL REFERENCE
+  status: MAPPED; exact payload varies
+  repository_path: ''
+  canonical_identity: CM-AR8R-T135-FALSE-ZERO
+  surfaces:
+  - S08
+  - S31
+  - S49
+  notes: No world truth inferred from model-theoretic status.
+- identity_id: COUNTERMODEL::CM-AR8R-T140-PROFILE-TWINS
+  identity_type: COUNTERMODEL_OR_RIVAL_IDENTITY
+  authority_level: HISTORICAL_REFERENCE_WITHOUT_SUPPLIED_PAYLOAD
+  provenance_class: SURFACE-RELATIVE COUNTERMODEL REFERENCE
+  status: MAPPED; exact payload varies
+  repository_path: ''
+  canonical_identity: CM-AR8R-T140-PROFILE-TWINS
+  surfaces:
+  - S14
+  - S49
+  notes: No world truth inferred from model-theoretic status.
+- identity_id: COUNTERMODEL::CM-AR8R-T142-LFP-GFP
+  identity_type: COUNTERMODEL_OR_RIVAL_IDENTITY
+  authority_level: HISTORICAL_REFERENCE_WITHOUT_SUPPLIED_PAYLOAD
+  provenance_class: SURFACE-RELATIVE COUNTERMODEL REFERENCE
+  status: MAPPED; exact payload varies
+  repository_path: ''
+  canonical_identity: CM-AR8R-T142-LFP-GFP
+  surfaces:
+  - S19
+  - S49
+  notes: No world truth inferred from model-theoretic status.
+- identity_id: COUNTERMODEL::CM-AR8R-T353-SELF-SEALING
+  identity_type: COUNTERMODEL_OR_RIVAL_IDENTITY
+  authority_level: HISTORICAL_REFERENCE_WITHOUT_SUPPLIED_PAYLOAD
+  provenance_class: SURFACE-RELATIVE COUNTERMODEL REFERENCE
+  status: MAPPED; exact payload varies
+  repository_path: ''
+  canonical_identity: CM-AR8R-T353-SELF-SEALING
+  surfaces:
+  - S27
+  - S31
+  - S49
+  notes: No world truth inferred from model-theoretic status.
+- identity_id: COUNTERMODEL::CM-AR8R-T354-SCALARIZATION
+  identity_type: COUNTERMODEL_OR_RIVAL_IDENTITY
+  authority_level: HISTORICAL_REFERENCE_WITHOUT_SUPPLIED_PAYLOAD
+  provenance_class: SURFACE-RELATIVE COUNTERMODEL REFERENCE
+  status: MAPPED; exact payload varies
+  repository_path: ''
+  canonical_identity: CM-AR8R-T354-SCALARIZATION
+  surfaces:
+  - S24
+  - S26
+  - S49
+  notes: No world truth inferred from model-theoretic status.
+- identity_id: COUNTERMODEL::CM-T300-HIGHER-ORDER-BLINDNESS
+  identity_type: COUNTERMODEL_OR_RIVAL_IDENTITY
+  authority_level: HISTORICAL_REFERENCE_WITHOUT_SUPPLIED_PAYLOAD
+  provenance_class: SURFACE-RELATIVE COUNTERMODEL REFERENCE
+  status: MAPPED; exact payload varies
+  repository_path: ''
+  canonical_identity: CM-T300-HIGHER-ORDER-BLINDNESS
+  surfaces:
+  - S51
+  notes: No world truth inferred from model-theoretic status.
+- identity_id: COUNTERMODEL::R5-BARE
+  identity_type: COUNTERMODEL_OR_RIVAL_IDENTITY
+  authority_level: HISTORICAL_REFERENCE_WITHOUT_SUPPLIED_PAYLOAD
+  provenance_class: SURFACE-RELATIVE COUNTERMODEL REFERENCE
+  status: MAPPED; exact payload varies
+  repository_path: ''
+  canonical_identity: R5-BARE
+  surfaces:
+  - S87
+  notes: No world truth inferred from model-theoretic status.
+- identity_id: COUNTERMODEL::R5-SOURCE-ORDER
+  identity_type: COUNTERMODEL_OR_RIVAL_IDENTITY
+  authority_level: HISTORICAL_REFERENCE_WITHOUT_SUPPLIED_PAYLOAD
+  provenance_class: SURFACE-RELATIVE COUNTERMODEL REFERENCE
+  status: MAPPED; exact payload varies
+  repository_path: ''
+  canonical_identity: R5-SOURCE-ORDER
+  surfaces:
+  - S87
+  notes: No world truth inferred from model-theoretic status.
+- identity_id: COUNTERMODEL::R5-SOURCE-PRESERVING
+  identity_type: COUNTERMODEL_OR_RIVAL_IDENTITY
+  authority_level: HISTORICAL_REFERENCE_WITHOUT_SUPPLIED_PAYLOAD
+  provenance_class: SURFACE-RELATIVE COUNTERMODEL REFERENCE
+  status: MAPPED; exact payload varies
+  repository_path: ''
+  canonical_identity: R5-SOURCE-PRESERVING
+  surfaces:
+  - S87
+  notes: No world truth inferred from model-theoretic status.
+- identity_id: COUNTERMODEL::R5-WORLD-IMPERSONAL-RESPONSE
+  identity_type: COUNTERMODEL_OR_RIVAL_IDENTITY
+  authority_level: HISTORICAL_REFERENCE_WITHOUT_SUPPLIED_PAYLOAD
+  provenance_class: SURFACE-RELATIVE COUNTERMODEL REFERENCE
+  status: MAPPED; exact payload varies
+  repository_path: ''
+  canonical_identity: R5-WORLD-IMPERSONAL-RESPONSE
+  surfaces:
+  - S87
+  notes: No world truth inferred from model-theoretic status.
+- identity_id: COUNTERMODEL::R5-WORLD-ORTHABILITY-FIELD
+  identity_type: COUNTERMODEL_OR_RIVAL_IDENTITY
+  authority_level: HISTORICAL_REFERENCE_WITHOUT_SUPPLIED_PAYLOAD
+  provenance_class: SURFACE-RELATIVE COUNTERMODEL REFERENCE
+  status: MAPPED; exact payload varies
+  repository_path: ''
+  canonical_identity: R5-WORLD-ORTHABILITY-FIELD
+  surfaces:
+  - S87
+  notes: No world truth inferred from model-theoretic status.
+- identity_id: THEOREM::AR8R-RC-T366-v1
+  identity_type: THEOREM_OR_RESULT_REFERENCE
+  authority_level: HISTORICAL_REFERENCE_WITHOUT_SUPPLIED_PAYLOAD
+  provenance_class: SURFACE-RELATIVE THEOREM REFERENCE
+  status: MAPPED; consult surface authority
+  repository_path: ''
+  canonical_identity: AR8R-RC-T366-v1
+  surfaces:
+  - S08
+  - S23
+  notes: Exact payload may be current, historical, external, reconstruction, or unavailable; consult surface record.
+- identity_id: THEOREM::AR8R-RP-001-v1
+  identity_type: THEOREM_OR_RESULT_REFERENCE
+  authority_level: HISTORICAL_REFERENCE_WITHOUT_SUPPLIED_PAYLOAD
+  provenance_class: SURFACE-RELATIVE THEOREM REFERENCE
+  status: MAPPED; consult surface authority
+  repository_path: ''
+  canonical_identity: AR8R-RP-001-v1
+  surfaces:
+  - S16
+  - S23
+  notes: Exact payload may be current, historical, external, reconstruction, or unavailable; consult surface record.
+- identity_id: THEOREM::AR8R-SATURATION
+  identity_type: THEOREM_OR_RESULT_REFERENCE
+  authority_level: HISTORICAL_REFERENCE_WITHOUT_SUPPLIED_PAYLOAD
+  provenance_class: SURFACE-RELATIVE THEOREM REFERENCE
+  status: MAPPED; consult surface authority
+  repository_path: ''
+  canonical_identity: AR8R-SATURATION
+  surfaces:
+  - S42
+  notes: Exact payload may be current, historical, external, reconstruction, or unavailable; consult surface record.
+- identity_id: THEOREM::AR8R-T130 through T143
+  identity_type: THEOREM_OR_RESULT_REFERENCE
+  authority_level: HISTORICAL_REFERENCE_WITHOUT_SUPPLIED_PAYLOAD
+  provenance_class: SURFACE-RELATIVE THEOREM REFERENCE
+  status: MAPPED; consult surface authority
+  repository_path: ''
+  canonical_identity: AR8R-T130 through T143
+  surfaces:
+  - S38
+  notes: Exact payload may be current, historical, external, reconstruction, or unavailable; consult surface record.
+- identity_id: THEOREM::AR8R-T299
+  identity_type: THEOREM_OR_RESULT_REFERENCE
+  authority_level: HISTORICAL_REFERENCE_WITHOUT_SUPPLIED_PAYLOAD
+  provenance_class: SURFACE-RELATIVE THEOREM REFERENCE
+  status: MAPPED; consult surface authority
+  repository_path: ''
+  canonical_identity: AR8R-T299
+  surfaces:
+  - S07
+  - S31
+  - S51
+  notes: Exact payload may be current, historical, external, reconstruction, or unavailable; consult surface record.
+- identity_id: THEOREM::AR8R-T300
+  identity_type: THEOREM_OR_RESULT_REFERENCE
+  authority_level: HISTORICAL_REFERENCE_WITHOUT_SUPPLIED_PAYLOAD
+  provenance_class: SURFACE-RELATIVE THEOREM REFERENCE
+  status: MAPPED; consult surface authority
+  repository_path: ''
+  canonical_identity: AR8R-T300
+  surfaces:
+  - S07
+  - S31
+  - S51
+  - S83
+  notes: Exact payload may be current, historical, external, reconstruction, or unavailable; consult surface record.
+- identity_id: THEOREM::AR8R-T304
+  identity_type: THEOREM_OR_RESULT_REFERENCE
+  authority_level: HISTORICAL_REFERENCE_WITHOUT_SUPPLIED_PAYLOAD
+  provenance_class: SURFACE-RELATIVE THEOREM REFERENCE
+  status: MAPPED; consult surface authority
+  repository_path: ''
+  canonical_identity: AR8R-T304
+  surfaces:
+  - S07
+  - S08
+  - S31
+  - S52
+  notes: Exact payload may be current, historical, external, reconstruction, or unavailable; consult surface record.
+- identity_id: THEOREM::AR8R-T305
+  identity_type: THEOREM_OR_RESULT_REFERENCE
+  authority_level: HISTORICAL_REFERENCE_WITHOUT_SUPPLIED_PAYLOAD
+  provenance_class: SURFACE-RELATIVE THEOREM REFERENCE
+  status: MAPPED; consult surface authority
+  repository_path: ''
+  canonical_identity: AR8R-T305
+  surfaces:
+  - S07
+  - S31
+  - S52
+  notes: Exact payload may be current, historical, external, reconstruction, or unavailable; consult surface record.
+- identity_id: THEOREM::AR8R-T306
+  identity_type: THEOREM_OR_RESULT_REFERENCE
+  authority_level: HISTORICAL_REFERENCE_WITHOUT_SUPPLIED_PAYLOAD
+  provenance_class: SURFACE-RELATIVE THEOREM REFERENCE
+  status: MAPPED; consult surface authority
+  repository_path: ''
+  canonical_identity: AR8R-T306
+  surfaces:
+  - S07
+  - S31
+  - S52
+  notes: Exact payload may be current, historical, external, reconstruction, or unavailable; consult surface record.
+- identity_id: THEOREM::AR8R-T308
+  identity_type: THEOREM_OR_RESULT_REFERENCE
+  authority_level: HISTORICAL_REFERENCE_WITHOUT_SUPPLIED_PAYLOAD
+  provenance_class: SURFACE-RELATIVE THEOREM REFERENCE
+  status: MAPPED; consult surface authority
+  repository_path: ''
+  canonical_identity: AR8R-T308
+  surfaces:
+  - S07
+  - S31
+  - S52
+  notes: Exact payload may be current, historical, external, reconstruction, or unavailable; consult surface record.
+- identity_id: THEOREM::AR8R-T319
+  identity_type: THEOREM_OR_RESULT_REFERENCE
+  authority_level: HISTORICAL_REFERENCE_WITHOUT_SUPPLIED_PAYLOAD
+  provenance_class: SURFACE-RELATIVE THEOREM REFERENCE
+  status: MAPPED; consult surface authority
+  repository_path: ''
+  canonical_identity: AR8R-T319
+  surfaces:
+  - S15
+  notes: Exact payload may be current, historical, external, reconstruction, or unavailable; consult surface record.
+- identity_id: THEOREM::AR8R-T320
+  identity_type: THEOREM_OR_RESULT_REFERENCE
+  authority_level: HISTORICAL_REFERENCE_WITHOUT_SUPPLIED_PAYLOAD
+  provenance_class: SURFACE-RELATIVE THEOREM REFERENCE
+  status: MAPPED; consult surface authority
+  repository_path: ''
+  canonical_identity: AR8R-T320
+  surfaces:
+  - S15
+  notes: Exact payload may be current, historical, external, reconstruction, or unavailable; consult surface record.
+- identity_id: THEOREM::AR8R-T322
+  identity_type: THEOREM_OR_RESULT_REFERENCE
+  authority_level: HISTORICAL_REFERENCE_WITHOUT_SUPPLIED_PAYLOAD
+  provenance_class: SURFACE-RELATIVE THEOREM REFERENCE
+  status: MAPPED; consult surface authority
+  repository_path: ''
+  canonical_identity: AR8R-T322
+  surfaces:
+  - S15
+  notes: Exact payload may be current, historical, external, reconstruction, or unavailable; consult surface record.
+- identity_id: THEOREM::AR8R-T323
+  identity_type: THEOREM_OR_RESULT_REFERENCE
+  authority_level: HISTORICAL_REFERENCE_WITHOUT_SUPPLIED_PAYLOAD
+  provenance_class: SURFACE-RELATIVE THEOREM REFERENCE
+  status: MAPPED; consult surface authority
+  repository_path: ''
+  canonical_identity: AR8R-T323
+  surfaces:
+  - S15
+  - S53
+  notes: Exact payload may be current, historical, external, reconstruction, or unavailable; consult surface record.
+- identity_id: THEOREM::AR8R-T324
+  identity_type: THEOREM_OR_RESULT_REFERENCE
+  authority_level: HISTORICAL_REFERENCE_WITHOUT_SUPPLIED_PAYLOAD
+  provenance_class: SURFACE-RELATIVE THEOREM REFERENCE
+  status: MAPPED; consult surface authority
+  repository_path: ''
+  canonical_identity: AR8R-T324
+  surfaces:
+  - S15
+  - S53
+  notes: Exact payload may be current, historical, external, reconstruction, or unavailable; consult surface record.
+- identity_id: THEOREM::AR8R-T325
+  identity_type: THEOREM_OR_RESULT_REFERENCE
+  authority_level: HISTORICAL_REFERENCE_WITHOUT_SUPPLIED_PAYLOAD
+  provenance_class: SURFACE-RELATIVE THEOREM REFERENCE
+  status: MAPPED; consult surface authority
+  repository_path: ''
+  canonical_identity: AR8R-T325
+  surfaces:
+  - S15
+  - S53
+  notes: Exact payload may be current, historical, external, reconstruction, or unavailable; consult surface record.
+- identity_id: THEOREM::AR8R-T326
+  identity_type: THEOREM_OR_RESULT_REFERENCE
+  authority_level: HISTORICAL_REFERENCE_WITHOUT_SUPPLIED_PAYLOAD
+  provenance_class: SURFACE-RELATIVE THEOREM REFERENCE
+  status: MAPPED; consult surface authority
+  repository_path: ''
+  canonical_identity: AR8R-T326
+  surfaces:
+  - S15
+  - S53
+  notes: Exact payload may be current, historical, external, reconstruction, or unavailable; consult surface record.
+- identity_id: THEOREM::AR8R-T327
+  identity_type: THEOREM_OR_RESULT_REFERENCE
+  authority_level: HISTORICAL_REFERENCE_WITHOUT_SUPPLIED_PAYLOAD
+  provenance_class: SURFACE-RELATIVE THEOREM REFERENCE
+  status: MAPPED; consult surface authority
+  repository_path: ''
+  canonical_identity: AR8R-T327
+  surfaces:
+  - S15
+  notes: Exact payload may be current, historical, external, reconstruction, or unavailable; consult surface record.
+- identity_id: THEOREM::AR8R-T328
+  identity_type: THEOREM_OR_RESULT_REFERENCE
+  authority_level: HISTORICAL_REFERENCE_WITHOUT_SUPPLIED_PAYLOAD
+  provenance_class: SURFACE-RELATIVE THEOREM REFERENCE
+  status: MAPPED; consult surface authority
+  repository_path: ''
+  canonical_identity: AR8R-T328
+  surfaces:
+  - S15
+  - S87
+  notes: Exact payload may be current, historical, external, reconstruction, or unavailable; consult surface record.
+- identity_id: THEOREM::AR8R-T329
+  identity_type: THEOREM_OR_RESULT_REFERENCE
+  authority_level: HISTORICAL_REFERENCE_WITHOUT_SUPPLIED_PAYLOAD
+  provenance_class: SURFACE-RELATIVE THEOREM REFERENCE
+  status: MAPPED; consult surface authority
+  repository_path: ''
+  canonical_identity: AR8R-T329
+  surfaces:
+  - S15
+  notes: Exact payload may be current, historical, external, reconstruction, or unavailable; consult surface record.
+- identity_id: THEOREM::AR8R-T330
+  identity_type: THEOREM_OR_RESULT_REFERENCE
+  authority_level: HISTORICAL_REFERENCE_WITHOUT_SUPPLIED_PAYLOAD
+  provenance_class: SURFACE-RELATIVE THEOREM REFERENCE
+  status: MAPPED; consult surface authority
+  repository_path: ''
+  canonical_identity: AR8R-T330
+  surfaces:
+  - S15
+  - S54
+  notes: Exact payload may be current, historical, external, reconstruction, or unavailable; consult surface record.
+- identity_id: THEOREM::AR8R-T331
+  identity_type: THEOREM_OR_RESULT_REFERENCE
+  authority_level: HISTORICAL_REFERENCE_WITHOUT_SUPPLIED_PAYLOAD
+  provenance_class: SURFACE-RELATIVE THEOREM REFERENCE
+  status: MAPPED; consult surface authority
+  repository_path: ''
+  canonical_identity: AR8R-T331
+  surfaces:
+  - S15
+  - S87
+  notes: Exact payload may be current, historical, external, reconstruction, or unavailable; consult surface record.
+- identity_id: THEOREM::AR8R-T332
+  identity_type: THEOREM_OR_RESULT_REFERENCE
+  authority_level: HISTORICAL_REFERENCE_WITHOUT_SUPPLIED_PAYLOAD
+  provenance_class: SURFACE-RELATIVE THEOREM REFERENCE
+  status: MAPPED; consult surface authority
+  repository_path: ''
+  canonical_identity: AR8R-T332
+  surfaces:
+  - S15
+  - S87
+  notes: Exact payload may be current, historical, external, reconstruction, or unavailable; consult surface record.
+- identity_id: THEOREM::AR8R-T333
+  identity_type: THEOREM_OR_RESULT_REFERENCE
+  authority_level: HISTORICAL_REFERENCE_WITHOUT_SUPPLIED_PAYLOAD
+  provenance_class: SURFACE-RELATIVE THEOREM REFERENCE
+  status: MAPPED; consult surface authority
+  repository_path: ''
+  canonical_identity: AR8R-T333
+  surfaces:
+  - S15
+  notes: Exact payload may be current, historical, external, reconstruction, or unavailable; consult surface record.
+- identity_id: THEOREM::AR8R-T334
+  identity_type: THEOREM_OR_RESULT_REFERENCE
+  authority_level: HISTORICAL_REFERENCE_WITHOUT_SUPPLIED_PAYLOAD
+  provenance_class: SURFACE-RELATIVE THEOREM REFERENCE
+  status: MAPPED; consult surface authority
+  repository_path: ''
+  canonical_identity: AR8R-T334
+  surfaces:
+  - S15
+  - S87
+  notes: Exact payload may be current, historical, external, reconstruction, or unavailable; consult surface record.
+- identity_id: THEOREM::AR8R-T335
+  identity_type: THEOREM_OR_RESULT_REFERENCE
+  authority_level: HISTORICAL_REFERENCE_WITHOUT_SUPPLIED_PAYLOAD
+  provenance_class: SURFACE-RELATIVE THEOREM REFERENCE
+  status: MAPPED; consult surface authority
+  repository_path: ''
+  canonical_identity: AR8R-T335
+  surfaces:
+  - S15
+  - S54
+  notes: Exact payload may be current, historical, external, reconstruction, or unavailable; consult surface record.
+- identity_id: THEOREM::AR8R-T336
+  identity_type: THEOREM_OR_RESULT_REFERENCE
+  authority_level: HISTORICAL_REFERENCE_WITHOUT_SUPPLIED_PAYLOAD
+  provenance_class: SURFACE-RELATIVE THEOREM REFERENCE
+  status: MAPPED; consult surface authority
+  repository_path: ''
+  canonical_identity: AR8R-T336
+  surfaces:
+  - S15
+  notes: Exact payload may be current, historical, external, reconstruction, or unavailable; consult surface record.
+- identity_id: THEOREM::AR8R-T337
+  identity_type: THEOREM_OR_RESULT_REFERENCE
+  authority_level: HISTORICAL_REFERENCE_WITHOUT_SUPPLIED_PAYLOAD
+  provenance_class: SURFACE-RELATIVE THEOREM REFERENCE
+  status: MAPPED; consult surface authority
+  repository_path: ''
+  canonical_identity: AR8R-T337
+  surfaces:
+  - S15
+  notes: Exact payload may be current, historical, external, reconstruction, or unavailable; consult surface record.
+- identity_id: THEOREM::AR8R-T338
+  identity_type: THEOREM_OR_RESULT_REFERENCE
+  authority_level: HISTORICAL_REFERENCE_WITHOUT_SUPPLIED_PAYLOAD
+  provenance_class: SURFACE-RELATIVE THEOREM REFERENCE
+  status: MAPPED; consult surface authority
+  repository_path: ''
+  canonical_identity: AR8R-T338
+  surfaces:
+  - S15
+  notes: Exact payload may be current, historical, external, reconstruction, or unavailable; consult surface record.
+- identity_id: THEOREM::AR8R-T339
+  identity_type: THEOREM_OR_RESULT_REFERENCE
+  authority_level: HISTORICAL_REFERENCE_WITHOUT_SUPPLIED_PAYLOAD
+  provenance_class: SURFACE-RELATIVE THEOREM REFERENCE
+  status: MAPPED; consult surface authority
+  repository_path: ''
+  canonical_identity: AR8R-T339
+  surfaces:
+  - S15
+  notes: Exact payload may be current, historical, external, reconstruction, or unavailable; consult surface record.
+- identity_id: THEOREM::AR8R-T340
+  identity_type: THEOREM_OR_RESULT_REFERENCE
+  authority_level: HISTORICAL_REFERENCE_WITHOUT_SUPPLIED_PAYLOAD
+  provenance_class: SURFACE-RELATIVE THEOREM REFERENCE
+  status: MAPPED; consult surface authority
+  repository_path: ''
+  canonical_identity: AR8R-T340
+  surfaces:
+  - S15
+  notes: Exact payload may be current, historical, external, reconstruction, or unavailable; consult surface record.
+- identity_id: THEOREM::AR8R-T341
+  identity_type: THEOREM_OR_RESULT_REFERENCE
+  authority_level: HISTORICAL_REFERENCE_WITHOUT_SUPPLIED_PAYLOAD
+  provenance_class: SURFACE-RELATIVE THEOREM REFERENCE
+  status: MAPPED; consult surface authority
+  repository_path: ''
+  canonical_identity: AR8R-T341
+  surfaces:
+  - S15
+  notes: Exact payload may be current, historical, external, reconstruction, or unavailable; consult surface record.
+- identity_id: THEOREM::AR8R-T342
+  identity_type: THEOREM_OR_RESULT_REFERENCE
+  authority_level: HISTORICAL_REFERENCE_WITHOUT_SUPPLIED_PAYLOAD
+  provenance_class: SURFACE-RELATIVE THEOREM REFERENCE
+  status: MAPPED; consult surface authority
+  repository_path: ''
+  canonical_identity: AR8R-T342
+  surfaces:
+  - S15
+  notes: Exact payload may be current, historical, external, reconstruction, or unavailable; consult surface record.
+- identity_id: THEOREM::AR8R-T343
+  identity_type: THEOREM_OR_RESULT_REFERENCE
+  authority_level: HISTORICAL_REFERENCE_WITHOUT_SUPPLIED_PAYLOAD
+  provenance_class: SURFACE-RELATIVE THEOREM REFERENCE
+  status: MAPPED; consult surface authority
+  repository_path: ''
+  canonical_identity: AR8R-T343
+  surfaces:
+  - S15
+  notes: Exact payload may be current, historical, external, reconstruction, or unavailable; consult surface record.
+- identity_id: THEOREM::AR8R-T344
+  identity_type: THEOREM_OR_RESULT_REFERENCE
+  authority_level: HISTORICAL_REFERENCE_WITHOUT_SUPPLIED_PAYLOAD
+  provenance_class: SURFACE-RELATIVE THEOREM REFERENCE
+  status: MAPPED; consult surface authority
+  repository_path: ''
+  canonical_identity: AR8R-T344
+  surfaces:
+  - S15
+  notes: Exact payload may be current, historical, external, reconstruction, or unavailable; consult surface record.
+- identity_id: THEOREM::AR8R-T345
+  identity_type: THEOREM_OR_RESULT_REFERENCE
+  authority_level: HISTORICAL_REFERENCE_WITHOUT_SUPPLIED_PAYLOAD
+  provenance_class: SURFACE-RELATIVE THEOREM REFERENCE
+  status: MAPPED; consult surface authority
+  repository_path: ''
+  canonical_identity: AR8R-T345
+  surfaces:
+  - S15
+  notes: Exact payload may be current, historical, external, reconstruction, or unavailable; consult surface record.
+- identity_id: THEOREM::AR8R-T346
+  identity_type: THEOREM_OR_RESULT_REFERENCE
+  authority_level: HISTORICAL_REFERENCE_WITHOUT_SUPPLIED_PAYLOAD
+  provenance_class: SURFACE-RELATIVE THEOREM REFERENCE
+  status: MAPPED; consult surface authority
+  repository_path: ''
+  canonical_identity: AR8R-T346
+  surfaces:
+  - S15
+  notes: Exact payload may be current, historical, external, reconstruction, or unavailable; consult surface record.
+- identity_id: THEOREM::AR8R-T347
+  identity_type: THEOREM_OR_RESULT_REFERENCE
+  authority_level: HISTORICAL_REFERENCE_WITHOUT_SUPPLIED_PAYLOAD
+  provenance_class: SURFACE-RELATIVE THEOREM REFERENCE
+  status: MAPPED; consult surface authority
+  repository_path: ''
+  canonical_identity: AR8R-T347
+  surfaces:
+  - S15
+  notes: Exact payload may be current, historical, external, reconstruction, or unavailable; consult surface record.
+- identity_id: THEOREM::AR8R-T348
+  identity_type: THEOREM_OR_RESULT_REFERENCE
+  authority_level: HISTORICAL_REFERENCE_WITHOUT_SUPPLIED_PAYLOAD
+  provenance_class: SURFACE-RELATIVE THEOREM REFERENCE
+  status: MAPPED; consult surface authority
+  repository_path: ''
+  canonical_identity: AR8R-T348
+  surfaces:
+  - S15
+  notes: Exact payload may be current, historical, external, reconstruction, or unavailable; consult surface record.
+- identity_id: THEOREM::AR8R-T349
+  identity_type: THEOREM_OR_RESULT_REFERENCE
+  authority_level: HISTORICAL_REFERENCE_WITHOUT_SUPPLIED_PAYLOAD
+  provenance_class: SURFACE-RELATIVE THEOREM REFERENCE
+  status: MAPPED; consult surface authority
+  repository_path: ''
+  canonical_identity: AR8R-T349
+  surfaces:
+  - S15
+  - S54
+  notes: Exact payload may be current, historical, external, reconstruction, or unavailable; consult surface record.
+- identity_id: THEOREM::AR8R-T350
+  identity_type: THEOREM_OR_RESULT_REFERENCE
+  authority_level: HISTORICAL_REFERENCE_WITHOUT_SUPPLIED_PAYLOAD
+  provenance_class: SURFACE-RELATIVE THEOREM REFERENCE
+  status: MAPPED; consult surface authority
+  repository_path: ''
+  canonical_identity: AR8R-T350
+  surfaces:
+  - S15
+  notes: Exact payload may be current, historical, external, reconstruction, or unavailable; consult surface record.
+- identity_id: THEOREM::AR8R-T351 through T354
+  identity_type: THEOREM_OR_RESULT_REFERENCE
+  authority_level: HISTORICAL_REFERENCE_WITHOUT_SUPPLIED_PAYLOAD
+  provenance_class: SURFACE-RELATIVE THEOREM REFERENCE
+  status: MAPPED; consult surface authority
+  repository_path: ''
+  canonical_identity: AR8R-T351 through T354
+  surfaces:
+  - S38
+  notes: Exact payload may be current, historical, external, reconstruction, or unavailable; consult surface record.
+- identity_id: THEOREM::AR8R-T355
+  identity_type: THEOREM_OR_RESULT_REFERENCE
+  authority_level: HISTORICAL_REFERENCE_WITHOUT_SUPPLIED_PAYLOAD
+  provenance_class: SURFACE-RELATIVE THEOREM REFERENCE
+  status: MAPPED; consult surface authority
+  repository_path: ''
+  canonical_identity: AR8R-T355
+  surfaces:
+  - S15
+  - S54
+  notes: Exact payload may be current, historical, external, reconstruction, or unavailable; consult surface record.
+- identity_id: THEOREM::AR8R-T356
+  identity_type: THEOREM_OR_RESULT_REFERENCE
+  authority_level: HISTORICAL_REFERENCE_WITHOUT_SUPPLIED_PAYLOAD
+  provenance_class: SURFACE-RELATIVE THEOREM REFERENCE
+  status: MAPPED; consult surface authority
+  repository_path: ''
+  canonical_identity: AR8R-T356
+  surfaces:
+  - S15
+  - S54
+  notes: Exact payload may be current, historical, external, reconstruction, or unavailable; consult surface record.
+- identity_id: THEOREM::AR8R-T357
+  identity_type: THEOREM_OR_RESULT_REFERENCE
+  authority_level: HISTORICAL_REFERENCE_WITHOUT_SUPPLIED_PAYLOAD
+  provenance_class: SURFACE-RELATIVE THEOREM REFERENCE
+  status: MAPPED; consult surface authority
+  repository_path: ''
+  canonical_identity: AR8R-T357
+  surfaces:
+  - S15
+  - S54
+  notes: Exact payload may be current, historical, external, reconstruction, or unavailable; consult surface record.
+- identity_id: THEOREM::AR8R-T358
+  identity_type: THEOREM_OR_RESULT_REFERENCE
+  authority_level: HISTORICAL_REFERENCE_WITHOUT_SUPPLIED_PAYLOAD
+  provenance_class: SURFACE-RELATIVE THEOREM REFERENCE
+  status: MAPPED; consult surface authority
+  repository_path: ''
+  canonical_identity: AR8R-T358
+  surfaces:
+  - S15
+  - S54
+  notes: Exact payload may be current, historical, external, reconstruction, or unavailable; consult surface record.
+- identity_id: THEOREM::AR8R-T359
+  identity_type: THEOREM_OR_RESULT_REFERENCE
+  authority_level: HISTORICAL_REFERENCE_WITHOUT_SUPPLIED_PAYLOAD
+  provenance_class: SURFACE-RELATIVE THEOREM REFERENCE
+  status: MAPPED; consult surface authority
+  repository_path: ''
+  canonical_identity: AR8R-T359
+  surfaces:
+  - S15
+  - S54
+  notes: Exact payload may be current, historical, external, reconstruction, or unavailable; consult surface record.
+- identity_id: THEOREM::AR8R-T360
+  identity_type: THEOREM_OR_RESULT_REFERENCE
+  authority_level: HISTORICAL_REFERENCE_WITHOUT_SUPPLIED_PAYLOAD
+  provenance_class: SURFACE-RELATIVE THEOREM REFERENCE
+  status: MAPPED; consult surface authority
+  repository_path: ''
+  canonical_identity: AR8R-T360
+  surfaces:
+  - S15
+  - S54
+  notes: Exact payload may be current, historical, external, reconstruction, or unavailable; consult surface record.
+- identity_id: THEOREM::AR8R-T361
+  identity_type: THEOREM_OR_RESULT_REFERENCE
+  authority_level: HISTORICAL_REFERENCE_WITHOUT_SUPPLIED_PAYLOAD
+  provenance_class: SURFACE-RELATIVE THEOREM REFERENCE
+  status: MAPPED; consult surface authority
+  repository_path: ''
+  canonical_identity: AR8R-T361
+  surfaces:
+  - S15
+  - S54
+  notes: Exact payload may be current, historical, external, reconstruction, or unavailable; consult surface record.
+- identity_id: THEOREM::AR8R-T362
+  identity_type: THEOREM_OR_RESULT_REFERENCE
+  authority_level: HISTORICAL_REFERENCE_WITHOUT_SUPPLIED_PAYLOAD
+  provenance_class: SURFACE-RELATIVE THEOREM REFERENCE
+  status: MAPPED; consult surface authority
+  repository_path: ''
+  canonical_identity: AR8R-T362
+  surfaces:
+  - S15
+  - S54
+  notes: Exact payload may be current, historical, external, reconstruction, or unavailable; consult surface record.
+- identity_id: THEOREM::AR8R-T363
+  identity_type: THEOREM_OR_RESULT_REFERENCE
+  authority_level: HISTORICAL_REFERENCE_WITHOUT_SUPPLIED_PAYLOAD
+  provenance_class: SURFACE-RELATIVE THEOREM REFERENCE
+  status: MAPPED; consult surface authority
+  repository_path: ''
+  canonical_identity: AR8R-T363
+  surfaces:
+  - S15
+  notes: Exact payload may be current, historical, external, reconstruction, or unavailable; consult surface record.
+- identity_id: THEOREM::AR8R-T364
+  identity_type: THEOREM_OR_RESULT_REFERENCE
+  authority_level: HISTORICAL_REFERENCE_WITHOUT_SUPPLIED_PAYLOAD
+  provenance_class: SURFACE-RELATIVE THEOREM REFERENCE
+  status: MAPPED; consult surface authority
+  repository_path: ''
+  canonical_identity: AR8R-T364
+  surfaces:
+  - S15
+  notes: Exact payload may be current, historical, external, reconstruction, or unavailable; consult surface record.
+- identity_id: THEOREM::AR8R-T365
+  identity_type: THEOREM_OR_RESULT_REFERENCE
+  authority_level: HISTORICAL_REFERENCE_WITHOUT_SUPPLIED_PAYLOAD
+  provenance_class: SURFACE-RELATIVE THEOREM REFERENCE
+  status: MAPPED; consult surface authority
+  repository_path: ''
+  canonical_identity: AR8R-T365
+  surfaces:
+  - S15
+  notes: Exact payload may be current, historical, external, reconstruction, or unavailable; consult surface record.
+- identity_id: THEOREM::AR8R-T367
+  identity_type: THEOREM_OR_RESULT_REFERENCE
+  authority_level: HISTORICAL_REFERENCE_WITHOUT_SUPPLIED_PAYLOAD
+  provenance_class: SURFACE-RELATIVE THEOREM REFERENCE
+  status: MAPPED; consult surface authority
+  repository_path: ''
+  canonical_identity: AR8R-T367
+  surfaces:
+  - S15
+  notes: Exact payload may be current, historical, external, reconstruction, or unavailable; consult surface record.
+- identity_id: THEOREM::AR8R-T368
+  identity_type: THEOREM_OR_RESULT_REFERENCE
+  authority_level: HISTORICAL_REFERENCE_WITHOUT_SUPPLIED_PAYLOAD
+  provenance_class: SURFACE-RELATIVE THEOREM REFERENCE
+  status: MAPPED; consult surface authority
+  repository_path: ''
+  canonical_identity: AR8R-T368
+  surfaces:
+  - S15
+  notes: Exact payload may be current, historical, external, reconstruction, or unavailable; consult surface record.
+- identity_id: THEOREM::AR8R-T369
+  identity_type: THEOREM_OR_RESULT_REFERENCE
+  authority_level: HISTORICAL_REFERENCE_WITHOUT_SUPPLIED_PAYLOAD
+  provenance_class: SURFACE-RELATIVE THEOREM REFERENCE
+  status: MAPPED; consult surface authority
+  repository_path: ''
+  canonical_identity: AR8R-T369
+  surfaces:
+  - S15
+  notes: Exact payload may be current, historical, external, reconstruction, or unavailable; consult surface record.
+- identity_id: THEOREM::AR8R-T370
+  identity_type: THEOREM_OR_RESULT_REFERENCE
+  authority_level: HISTORICAL_REFERENCE_WITHOUT_SUPPLIED_PAYLOAD
+  provenance_class: SURFACE-RELATIVE THEOREM REFERENCE
+  status: MAPPED; consult surface authority
+  repository_path: ''
+  canonical_identity: AR8R-T370
+  surfaces:
+  - S15
+  notes: Exact payload may be current, historical, external, reconstruction, or unavailable; consult surface record.
+- identity_id: THEOREM::CC-T4
+  identity_type: THEOREM_OR_RESULT_REFERENCE
+  authority_level: HISTORICAL_REFERENCE_WITHOUT_SUPPLIED_PAYLOAD
+  provenance_class: SURFACE-RELATIVE THEOREM REFERENCE
+  status: MAPPED; consult surface authority
+  repository_path: ''
+  canonical_identity: CC-T4
+  surfaces:
+  - S10
+  - S12
+  notes: Exact payload may be current, historical, external, reconstruction, or unavailable; consult surface record.
+- identity_id: THEOREM::CDC-PROMPT-PRECEDENT
+  identity_type: THEOREM_OR_RESULT_REFERENCE
+  authority_level: HISTORICAL_REFERENCE_WITHOUT_SUPPLIED_PAYLOAD
+  provenance_class: SURFACE-RELATIVE THEOREM REFERENCE
+  status: MAPPED; consult surface authority
+  repository_path: ''
+  canonical_identity: CDC-PROMPT-PRECEDENT
+  surfaces:
+  - S36
+  notes: Exact payload may be current, historical, external, reconstruction, or unavailable; consult surface record.
+- identity_id: THEOREM::Candidate-1
+  identity_type: THEOREM_OR_RESULT_REFERENCE
+  authority_level: HISTORICAL_REFERENCE_WITHOUT_SUPPLIED_PAYLOAD
+  provenance_class: SURFACE-RELATIVE THEOREM REFERENCE
+  status: MAPPED; consult surface authority
+  repository_path: ''
+  canonical_identity: Candidate-1
+  surfaces:
+  - S09
+  notes: Exact payload may be current, historical, external, reconstruction, or unavailable; consult surface record.
+- identity_id: THEOREM::Candidate-N
+  identity_type: THEOREM_OR_RESULT_REFERENCE
+  authority_level: HISTORICAL_REFERENCE_WITHOUT_SUPPLIED_PAYLOAD
+  provenance_class: SURFACE-RELATIVE THEOREM REFERENCE
+  status: MAPPED; consult surface authority
+  repository_path: ''
+  canonical_identity: Candidate-N
+  surfaces:
+  - S17
+  notes: Exact payload may be current, historical, external, reconstruction, or unavailable; consult surface record.
+- identity_id: THEOREM::Candidate-N-NOVELTY
+  identity_type: THEOREM_OR_RESULT_REFERENCE
+  authority_level: HISTORICAL_REFERENCE_WITHOUT_SUPPLIED_PAYLOAD
+  provenance_class: SURFACE-RELATIVE THEOREM REFERENCE
+  status: MAPPED; consult surface authority
+  repository_path: ''
+  canonical_identity: Candidate-N-NOVELTY
+  surfaces:
+  - S18
+  notes: Exact payload may be current, historical, external, reconstruction, or unavailable; consult surface record.
+- identity_id: THEOREM::Candidate-N-PAYOFF
+  identity_type: THEOREM_OR_RESULT_REFERENCE
+  authority_level: HISTORICAL_REFERENCE_WITHOUT_SUPPLIED_PAYLOAD
+  provenance_class: SURFACE-RELATIVE THEOREM REFERENCE
+  status: MAPPED; consult surface authority
+  repository_path: ''
+  canonical_identity: Candidate-N-PAYOFF
+  surfaces:
+  - S18
+  notes: Exact payload may be current, historical, external, reconstruction, or unavailable; consult surface record.
+- identity_id: THEOREM::Candidates-A-through-N
+  identity_type: THEOREM_OR_RESULT_REFERENCE
+  authority_level: HISTORICAL_REFERENCE_WITHOUT_SUPPLIED_PAYLOAD
+  provenance_class: SURFACE-RELATIVE THEOREM REFERENCE
+  status: MAPPED; consult surface authority
+  repository_path: ''
+  canonical_identity: Candidates-A-through-N
+  surfaces:
+  - S37
+  notes: Exact payload may be current, historical, external, reconstruction, or unavailable; consult surface record.
+- identity_id: THEOREM::FUSHA-OCCURRENCE-ORTHING
+  identity_type: THEOREM_OR_RESULT_REFERENCE
+  authority_level: HISTORICAL_REFERENCE_WITHOUT_SUPPLIED_PAYLOAD
+  provenance_class: SURFACE-RELATIVE THEOREM REFERENCE
+  status: MAPPED; consult surface authority
+  repository_path: ''
+  canonical_identity: FUSHA-OCCURRENCE-ORTHING
+  surfaces:
+  - S32
+  notes: Exact payload may be current, historical, external, reconstruction, or unavailable; consult surface record.
+- identity_id: THEOREM::M-T1
+  identity_type: THEOREM_OR_RESULT_REFERENCE
+  authority_level: HISTORICAL_REFERENCE_WITHOUT_SUPPLIED_PAYLOAD
+  provenance_class: SURFACE-RELATIVE THEOREM REFERENCE
+  status: MAPPED; consult surface authority
+  repository_path: ''
+  canonical_identity: M-T1
+  surfaces:
+  - S13
+  notes: Exact payload may be current, historical, external, reconstruction, or unavailable; consult surface record.
+- identity_id: THEOREM::M-T2
+  identity_type: THEOREM_OR_RESULT_REFERENCE
+  authority_level: HISTORICAL_REFERENCE_WITHOUT_SUPPLIED_PAYLOAD
+  provenance_class: SURFACE-RELATIVE THEOREM REFERENCE
+  status: MAPPED; consult surface authority
+  repository_path: ''
+  canonical_identity: M-T2
+  surfaces:
+  - S13
+  - S14
+  notes: Exact payload may be current, historical, external, reconstruction, or unavailable; consult surface record.
+- identity_id: THEOREM::M-T3
+  identity_type: THEOREM_OR_RESULT_REFERENCE
+  authority_level: HISTORICAL_REFERENCE_WITHOUT_SUPPLIED_PAYLOAD
+  provenance_class: SURFACE-RELATIVE THEOREM REFERENCE
+  status: MAPPED; consult surface authority
+  repository_path: ''
+  canonical_identity: M-T3
+  surfaces:
+  - S13
+  - S14
+  notes: Exact payload may be current, historical, external, reconstruction, or unavailable; consult surface record.
+- identity_id: THEOREM::M-T4
+  identity_type: THEOREM_OR_RESULT_REFERENCE
+  authority_level: HISTORICAL_REFERENCE_WITHOUT_SUPPLIED_PAYLOAD
+  provenance_class: SURFACE-RELATIVE THEOREM REFERENCE
+  status: MAPPED; consult surface authority
+  repository_path: ''
+  canonical_identity: M-T4
+  surfaces:
+  - S13
+  - S14
+  notes: Exact payload may be current, historical, external, reconstruction, or unavailable; consult surface record.
+- identity_id: THEOREM::M11
+  identity_type: THEOREM_OR_RESULT_REFERENCE
+  authority_level: HISTORICAL_REFERENCE_WITHOUT_SUPPLIED_PAYLOAD
+  provenance_class: SURFACE-RELATIVE THEOREM REFERENCE
+  status: MAPPED; consult surface authority
+  repository_path: ''
+  canonical_identity: M11
+  surfaces:
+  - S09
+  - S10
+  - S12
+  notes: Exact payload may be current, historical, external, reconstruction, or unavailable; consult surface record.
+- identity_id: THEOREM::M12
+  identity_type: THEOREM_OR_RESULT_REFERENCE
+  authority_level: HISTORICAL_REFERENCE_WITHOUT_SUPPLIED_PAYLOAD
+  provenance_class: SURFACE-RELATIVE THEOREM REFERENCE
+  status: MAPPED; consult surface authority
+  repository_path: ''
+  canonical_identity: M12
+  surfaces:
+  - S09
+  - S10
+  - S12
+  notes: Exact payload may be current, historical, external, reconstruction, or unavailable; consult surface record.
+- identity_id: THEOREM::M13
+  identity_type: THEOREM_OR_RESULT_REFERENCE
+  authority_level: HISTORICAL_REFERENCE_WITHOUT_SUPPLIED_PAYLOAD
+  provenance_class: SURFACE-RELATIVE THEOREM REFERENCE
+  status: MAPPED; consult surface authority
+  repository_path: ''
+  canonical_identity: M13
+  surfaces:
+  - S09
+  - S10
+  - S12
+  notes: Exact payload may be current, historical, external, reconstruction, or unavailable; consult surface record.
+- identity_id: THEOREM::MENISCUS-CRITERIA
+  identity_type: THEOREM_OR_RESULT_REFERENCE
+  authority_level: HISTORICAL_REFERENCE_WITHOUT_SUPPLIED_PAYLOAD
+  provenance_class: SURFACE-RELATIVE THEOREM REFERENCE
+  status: MAPPED; consult surface authority
+  repository_path: ''
+  canonical_identity: MENISCUS-CRITERIA
+  surfaces:
+  - S42
+  notes: Exact payload may be current, historical, external, reconstruction, or unavailable; consult surface record.
+- identity_id: THEOREM::N1
+  identity_type: THEOREM_OR_RESULT_REFERENCE
+  authority_level: HISTORICAL_REFERENCE_WITHOUT_SUPPLIED_PAYLOAD
+  provenance_class: SURFACE-RELATIVE THEOREM REFERENCE
+  status: MAPPED; consult surface authority
+  repository_path: ''
+  canonical_identity: N1
+  surfaces:
+  - S17
+  notes: Exact payload may be current, historical, external, reconstruction, or unavailable; consult surface record.
+- identity_id: THEOREM::N2
+  identity_type: THEOREM_OR_RESULT_REFERENCE
+  authority_level: HISTORICAL_REFERENCE_WITHOUT_SUPPLIED_PAYLOAD
+  provenance_class: SURFACE-RELATIVE THEOREM REFERENCE
+  status: MAPPED; consult surface authority
+  repository_path: ''
+  canonical_identity: N2
+  surfaces:
+  - S17
+  notes: Exact payload may be current, historical, external, reconstruction, or unavailable; consult surface record.
+- identity_id: THEOREM::N3
+  identity_type: THEOREM_OR_RESULT_REFERENCE
+  authority_level: HISTORICAL_REFERENCE_WITHOUT_SUPPLIED_PAYLOAD
+  provenance_class: SURFACE-RELATIVE THEOREM REFERENCE
+  status: MAPPED; consult surface authority
+  repository_path: ''
+  canonical_identity: N3
+  surfaces:
+  - S17
+  notes: Exact payload may be current, historical, external, reconstruction, or unavailable; consult surface record.
+- identity_id: THEOREM::N4
+  identity_type: THEOREM_OR_RESULT_REFERENCE
+  authority_level: HISTORICAL_REFERENCE_WITHOUT_SUPPLIED_PAYLOAD
+  provenance_class: SURFACE-RELATIVE THEOREM REFERENCE
+  status: MAPPED; consult surface authority
+  repository_path: ''
+  canonical_identity: N4
+  surfaces:
+  - S17
+  notes: Exact payload may be current, historical, external, reconstruction, or unavailable; consult surface record.
+- identity_id: THEOREM::N5
+  identity_type: THEOREM_OR_RESULT_REFERENCE
+  authority_level: HISTORICAL_REFERENCE_WITHOUT_SUPPLIED_PAYLOAD
+  provenance_class: SURFACE-RELATIVE THEOREM REFERENCE
+  status: MAPPED; consult surface authority
+  repository_path: ''
+  canonical_identity: N5
+  surfaces:
+  - S17
+  notes: Exact payload may be current, historical, external, reconstruction, or unavailable; consult surface record.
+- identity_id: THEOREM::N6
+  identity_type: THEOREM_OR_RESULT_REFERENCE
+  authority_level: HISTORICAL_REFERENCE_WITHOUT_SUPPLIED_PAYLOAD
+  provenance_class: SURFACE-RELATIVE THEOREM REFERENCE
+  status: MAPPED; consult surface authority
+  repository_path: ''
+  canonical_identity: N6
+  surfaces:
+  - S17
+  notes: Exact payload may be current, historical, external, reconstruction, or unavailable; consult surface record.
+- identity_id: THEOREM::PRH-PMI-KERNEL-IDEALIZED
+  identity_type: THEOREM_OR_RESULT_REFERENCE
+  authority_level: HISTORICAL_REFERENCE_WITHOUT_SUPPLIED_PAYLOAD
+  provenance_class: SURFACE-RELATIVE THEOREM REFERENCE
+  status: MAPPED; consult surface authority
+  repository_path: ''
+  canonical_identity: PRH-PMI-KERNEL-IDEALIZED
+  surfaces:
+  - S29
+  notes: Exact payload may be current, historical, external, reconstruction, or unavailable; consult surface record.
+- identity_id: THEOREM::PRIOR-ORDER/PROPER-FUNCTION-OWNER-EXTENSION
+  identity_type: THEOREM_OR_RESULT_REFERENCE
+  authority_level: HISTORICAL_REFERENCE_WITHOUT_SUPPLIED_PAYLOAD
+  provenance_class: SURFACE-RELATIVE THEOREM REFERENCE
+  status: MAPPED; consult surface authority
+  repository_path: ''
+  canonical_identity: PRIOR-ORDER/PROPER-FUNCTION-OWNER-EXTENSION
+  surfaces:
+  - S30
+  notes: Exact payload may be current, historical, external, reconstruction, or unavailable; consult surface record.
+- identity_id: THEOREM::PRR-T1
+  identity_type: THEOREM_OR_RESULT_REFERENCE
+  authority_level: HISTORICAL_REFERENCE_WITHOUT_SUPPLIED_PAYLOAD
+  provenance_class: SURFACE-RELATIVE THEOREM REFERENCE
+  status: MAPPED; consult surface authority
+  repository_path: ''
+  canonical_identity: PRR-T1
+  surfaces:
+  - S09
+  - S10
+  notes: Exact payload may be current, historical, external, reconstruction, or unavailable; consult surface record.
+- identity_id: THEOREM::QAMUS-TRANSCLUSION
+  identity_type: THEOREM_OR_RESULT_REFERENCE
+  authority_level: HISTORICAL_REFERENCE_WITHOUT_SUPPLIED_PAYLOAD
+  provenance_class: SURFACE-RELATIVE THEOREM REFERENCE
+  status: MAPPED; consult surface authority
+  repository_path: ''
+  canonical_identity: QAMUS-TRANSCLUSION
+  surfaces:
+  - S32
+  notes: Exact payload may be current, historical, external, reconstruction, or unavailable; consult surface record.
+- identity_id: THEOREM::RB
+  identity_type: THEOREM_OR_RESULT_REFERENCE
+  authority_level: HISTORICAL_REFERENCE_WITHOUT_SUPPLIED_PAYLOAD
+  provenance_class: SURFACE-RELATIVE THEOREM REFERENCE
+  status: MAPPED; consult surface authority
+  repository_path: ''
+  canonical_identity: RB
+  surfaces:
+  - S14
+  notes: Exact payload may be current, historical, external, reconstruction, or unavailable; consult surface record.
+- identity_id: THEOREM::SAC-T4
+  identity_type: THEOREM_OR_RESULT_REFERENCE
+  authority_level: HISTORICAL_REFERENCE_WITHOUT_SUPPLIED_PAYLOAD
+  provenance_class: SURFACE-RELATIVE THEOREM REFERENCE
+  status: MAPPED; consult surface authority
+  repository_path: ''
+  canonical_identity: SAC-T4
+  surfaces:
+  - S10
+  - S11
+  - S12
+  notes: Exact payload may be current, historical, external, reconstruction, or unavailable; consult surface record.
+- identity_id: THEOREM::SARF-NAHW-LATTICE-PROJECTION
+  identity_type: THEOREM_OR_RESULT_REFERENCE
+  authority_level: HISTORICAL_REFERENCE_WITHOUT_SUPPLIED_PAYLOAD
+  provenance_class: SURFACE-RELATIVE THEOREM REFERENCE
+  status: MAPPED; consult surface authority
+  repository_path: ''
+  canonical_identity: SARF-NAHW-LATTICE-PROJECTION
+  surfaces:
+  - S32
+  notes: Exact payload may be current, historical, external, reconstruction, or unavailable; consult surface record.
+- identity_id: THEOREM::T354-REPAIR (fresh identity not allocated)
+  identity_type: THEOREM_OR_RESULT_REFERENCE
+  authority_level: HISTORICAL_REFERENCE_WITHOUT_SUPPLIED_PAYLOAD
+  provenance_class: SURFACE-RELATIVE THEOREM REFERENCE
+  status: MAPPED; consult surface authority
+  repository_path: ''
+  canonical_identity: T354-REPAIR (fresh identity not allocated)
+  surfaces:
+  - S24
+  notes: Exact payload may be current, historical, external, reconstruction, or unavailable; consult surface record.
+- identity_id: THEOREM::TAC-IDENTITY-FAMILY
+  identity_type: THEOREM_OR_RESULT_REFERENCE
+  authority_level: HISTORICAL_REFERENCE_WITHOUT_SUPPLIED_PAYLOAD
+  provenance_class: SURFACE-RELATIVE THEOREM REFERENCE
+  status: MAPPED; consult surface authority
+  repository_path: ''
+  canonical_identity: TAC-IDENTITY-FAMILY
+  surfaces:
+  - S11
+  notes: Exact payload may be current, historical, external, reconstruction, or unavailable; consult surface record.
+- identity_id: THEOREM::TEN-CODES
+  identity_type: THEOREM_OR_RESULT_REFERENCE
+  authority_level: HISTORICAL_REFERENCE_WITHOUT_SUPPLIED_PAYLOAD
+  provenance_class: SURFACE-RELATIVE THEOREM REFERENCE
+  status: MAPPED; consult surface authority
+  repository_path: ''
+  canonical_identity: TEN-CODES
+  surfaces:
+  - S58
+  notes: Exact payload may be current, historical, external, reconstruction, or unavailable; consult surface record.
+- identity_id: THEOREM::TEN-COMPACTNESS
+  identity_type: THEOREM_OR_RESULT_REFERENCE
+  authority_level: HISTORICAL_REFERENCE_WITHOUT_SUPPLIED_PAYLOAD
+  provenance_class: SURFACE-RELATIVE THEOREM REFERENCE
+  status: MAPPED; consult surface authority
+  repository_path: ''
+  canonical_identity: TEN-COMPACTNESS
+  surfaces:
+  - S58
+  notes: Exact payload may be current, historical, external, reconstruction, or unavailable; consult surface record.
+- identity_id: THEOREM::TEN-CONNES
+  identity_type: THEOREM_OR_RESULT_REFERENCE
+  authority_level: HISTORICAL_REFERENCE_WITHOUT_SUPPLIED_PAYLOAD
+  provenance_class: SURFACE-RELATIVE THEOREM REFERENCE
+  status: MAPPED; consult surface authority
+  repository_path: ''
+  canonical_identity: TEN-CONNES
+  surfaces:
+  - S58
+  notes: Exact payload may be current, historical, external, reconstruction, or unavailable; consult surface record.
+- identity_id: THEOREM::TEN-DEGENERACY
+  identity_type: THEOREM_OR_RESULT_REFERENCE
+  authority_level: HISTORICAL_REFERENCE_WITHOUT_SUPPLIED_PAYLOAD
+  provenance_class: SURFACE-RELATIVE THEOREM REFERENCE
+  status: MAPPED; consult surface authority
+  repository_path: ''
+  canonical_identity: TEN-DEGENERACY
+  surfaces:
+  - S58
+  notes: Exact payload may be current, historical, external, reconstruction, or unavailable; consult surface record.
+- identity_id: THEOREM::TEN-EHRHART
+  identity_type: THEOREM_OR_RESULT_REFERENCE
+  authority_level: HISTORICAL_REFERENCE_WITHOUT_SUPPLIED_PAYLOAD
+  provenance_class: SURFACE-RELATIVE THEOREM REFERENCE
+  status: MAPPED; consult surface authority
+  repository_path: ''
+  canonical_identity: TEN-EHRHART
+  surfaces:
+  - S58
+  notes: Exact payload may be current, historical, external, reconstruction, or unavailable; consult surface record.
+- identity_id: THEOREM::TEN-GAPCVP
+  identity_type: THEOREM_OR_RESULT_REFERENCE
+  authority_level: HISTORICAL_REFERENCE_WITHOUT_SUPPLIED_PAYLOAD
+  provenance_class: SURFACE-RELATIVE THEOREM REFERENCE
+  status: MAPPED; consult surface authority
+  repository_path: ''
+  canonical_identity: TEN-GAPCVP
+  surfaces:
+  - S58
+  notes: Exact payload may be current, historical, external, reconstruction, or unavailable; consult surface record.
+- identity_id: THEOREM::TEN-NONSOFIC
+  identity_type: THEOREM_OR_RESULT_REFERENCE
+  authority_level: HISTORICAL_REFERENCE_WITHOUT_SUPPLIED_PAYLOAD
+  provenance_class: SURFACE-RELATIVE THEOREM REFERENCE
+  status: MAPPED; consult surface authority
+  repository_path: ''
+  canonical_identity: TEN-NONSOFIC
+  surfaces:
+  - S58
+  notes: Exact payload may be current, historical, external, reconstruction, or unavailable; consult surface record.
+- identity_id: THEOREM::TEN-PERM-CIRCUIT
+  identity_type: THEOREM_OR_RESULT_REFERENCE
+  authority_level: HISTORICAL_REFERENCE_WITHOUT_SUPPLIED_PAYLOAD
+  provenance_class: SURFACE-RELATIVE THEOREM REFERENCE
+  status: MAPPED; consult surface authority
+  repository_path: ''
+  canonical_identity: TEN-PERM-CIRCUIT
+  surfaces:
+  - S58
+  notes: Exact payload may be current, historical, external, reconstruction, or unavailable; consult surface record.
+- identity_id: THEOREM::TEN-PERM-FORMULA
+  identity_type: THEOREM_OR_RESULT_REFERENCE
+  authority_level: HISTORICAL_REFERENCE_WITHOUT_SUPPLIED_PAYLOAD
+  provenance_class: SURFACE-RELATIVE THEOREM REFERENCE
+  status: MAPPED; consult surface authority
+  repository_path: ''
+  canonical_identity: TEN-PERM-FORMULA
+  surfaces:
+  - S58
+  notes: Exact payload may be current, historical, external, reconstruction, or unavailable; consult surface record.
+- identity_id: THEOREM::TEN-QPR
+  identity_type: THEOREM_OR_RESULT_REFERENCE
+  authority_level: HISTORICAL_REFERENCE_WITHOUT_SUPPLIED_PAYLOAD
+  provenance_class: SURFACE-RELATIVE THEOREM REFERENCE
+  status: MAPPED; consult surface authority
+  repository_path: ''
+  canonical_identity: TEN-QPR
+  surfaces:
+  - S58
+  notes: Exact payload may be current, historical, external, reconstruction, or unavailable; consult surface record.
+- identity_id: THEOREM::TEN-RAMSEY
+  identity_type: THEOREM_OR_RESULT_REFERENCE
+  authority_level: HISTORICAL_REFERENCE_WITHOUT_SUPPLIED_PAYLOAD
+  provenance_class: SURFACE-RELATIVE THEOREM REFERENCE
+  status: MAPPED; consult surface authority
+  repository_path: ''
+  canonical_identity: TEN-RAMSEY
+  surfaces:
+  - S58
+  notes: Exact payload may be current, historical, external, reconstruction, or unavailable; consult surface record.
+- identity_id: THEOREM::TEN-SPHERE
+  identity_type: THEOREM_OR_RESULT_REFERENCE
+  authority_level: HISTORICAL_REFERENCE_WITHOUT_SUPPLIED_PAYLOAD
+  provenance_class: SURFACE-RELATIVE THEOREM REFERENCE
+  status: MAPPED; consult surface authority
+  repository_path: ''
+  canonical_identity: TEN-SPHERE
+  surfaces:
+  - S58
+  notes: Exact payload may be current, historical, external, reconstruction, or unavailable; consult surface record.
+- identity_id: THEOREM::THEOREM-ORIGIN-V5
+  identity_type: THEOREM_OR_RESULT_REFERENCE
+  authority_level: HISTORICAL_REFERENCE_WITHOUT_SUPPLIED_PAYLOAD
+  provenance_class: SURFACE-RELATIVE THEOREM REFERENCE
+  status: MAPPED; consult surface authority
+  repository_path: ''
+  canonical_identity: THEOREM-ORIGIN-V5
+  surfaces:
+  - S21
+  notes: Exact payload may be current, historical, external, reconstruction, or unavailable; consult surface record.
+- identity_id: THEOREM::Ten-Advances principal declarations
+  identity_type: THEOREM_OR_RESULT_REFERENCE
+  authority_level: HISTORICAL_REFERENCE_WITHOUT_SUPPLIED_PAYLOAD
+  provenance_class: SURFACE-RELATIVE THEOREM REFERENCE
+  status: MAPPED; consult surface authority
+  repository_path: ''
+  canonical_identity: Ten-Advances principal declarations
+  surfaces:
+  - S38
+  notes: Exact payload may be current, historical, external, reconstruction, or unavailable; consult surface record.
+- identity_id: THEOREM::WALKTHROUGH-CHAPTERS-1-12
+  identity_type: THEOREM_OR_RESULT_REFERENCE
+  authority_level: HISTORICAL_REFERENCE_WITHOUT_SUPPLIED_PAYLOAD
+  provenance_class: SURFACE-RELATIVE THEOREM REFERENCE
+  status: MAPPED; consult surface authority
+  repository_path: ''
+  canonical_identity: WALKTHROUGH-CHAPTERS-1-12
+  surfaces:
+  - S35
+  notes: Exact payload may be current, historical, external, reconstruction, or unavailable; consult surface record.

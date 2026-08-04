@@ -1,0 +1,72 @@
+schema: PMR007_DEPENDENCY_DELTA_V2
+edges:
+- from: FRLA-1
+  to: COB-1
+  type: SUPPLIES_LOCAL_ACTION_ELIGIBILITY
+  not_transferred: common-state availability or temporal completeness
+- from: COB-1
+  to: TRC-1
+  type: FORMALIZES_TEMPORAL_OBJECTIVE
+  not_transferred: real runtime model truth
+- from: VCT-1
+  to: TRC-1
+  type: SUPPLIES_VERSIONED_ACTION_CUSTODY
+  not_transferred: source truth or distributed discovery
+- from: MLT-1
+  to: SMRB-1
+  type: SUPPLIES_TRANSPORT_INVARIANT
+  not_transferred: numerical identity or world bridge
+- from: R14-F01
+  to: Candidate B
+  type: REPAIRS
+  not_transferred: general partial-observation result
+- source: Candidate_1
+  target: PMR-007-PRQT-1
+  relation: SUPPLIES_EXACT_LOWER_BOUND_AND_FORMULA
+  transfers: binary cardinality-threshold depth
+  does_not_transfer: root authentication or independence
+- source: PMR-007-PRQT-1
+  target: Candidate_A
+  relation: NARROWS_QUERY_BURDEN
+  transfers: exact canonical-root threshold edge-query cost
+  does_not_transfer: distributed/common-knowledge cost
+- source: PMR-007-PRQT-1
+  target: Candidate_B
+  relation: BLOCKS_SUPPORT_ONLY_CERTIFICATION
+  transfers: support observations cannot certify root multiplicity
+  does_not_transfer: restoration truth
+- source: PMR-007-PRQT-1
+  target: Candidate_C
+  relation: LIMITS_MULTIPLICITY_INFERENCE
+  transfers: route count and root-label count are distinct
+  does_not_transfer: source truth or metaphysical independence
+- source: AR8R-T351/T352
+  target: PMR-007-PRRC-1
+  relation: SUPPLIES_FIXED_PATH_CUTSET_ARCHITECTURE
+  transfers: path interception and guarded sufficiency
+  does_not_transfer: provenance resilience or dynamic completeness
+- source: PMR-007-PRQT-1
+  target: PMR-007-PRRC-1
+  relation: SUPPLIES_ACTUAL_ROOT_MULTIPLICITY_INTERFACE
+  transfers: canonical root distinction
+  does_not_transfer: authentication or independence
+- source: PMR-007-PRRC-1
+  target: Candidate_B
+  relation: SUPPLIES_PROVENANCE_RESILIENCE_MARGIN
+  transfers: static pathwise corruption threshold
+  does_not_transfer: dynamic or causal restoration
+- source: PMR-007-PRRC-1
+  target: Candidate_C
+  relation: COUNTERMODELS_COPY_MULTIPLICITY
+  transfers: actual-root bottleneck test
+  does_not_transfer: source truth or world conclusion
+generated_at: '2026-08-03T17:53:37.602930+00:00'
+round17_round18_additions:
+- id: PMR-007-RSD-1
+  status: ADMITTED_POST_MERGE_SCOPED_RESULT
+  formalization_opportunity: finite transport bundle, holonomy, quotient, and same-fibre
+    collision criterion
+- id: PMR-007-ORTC-V4
+  status: ADMITTED_POST_MERGE_SCOPED_RESULT
+  formalization_opportunity: finite set cover, compatible partitions, ambiguity intersections,
+    and rank-certificate selector

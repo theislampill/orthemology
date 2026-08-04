@@ -1,0 +1,77 @@
+{
+  "check": "PMR-007 Round 16 version-custody and temporal-eligibility integration",
+  "same_bytes_contexts": {
+    "current-v1": {
+      "computed": true,
+      "expected": true
+    },
+    "stale-v2": {
+      "computed": false,
+      "expected": false
+    }
+  },
+  "positive_transport_path": {
+    "valid": true,
+    "reason": null
+  },
+  "countermodels": {
+    "VCT-CM-NONTRANSITIVE-COMPATIBILITY": {
+      "computed_path_valid": false,
+      "expected_path_valid": false,
+      "pass": true
+    },
+    "VCT-CM-DROPPED-INVALIDATOR": {
+      "computed_path_valid": false,
+      "expected_path_valid": false,
+      "pass": true
+    },
+    "VCT-CM-NONREDELEGABLE-AUTHORITY": {
+      "computed_path_valid": false,
+      "expected_path_valid": false,
+      "pass": true
+    },
+    "VCT-CM-SEMANTIC-NONCOMMUTATION": {
+      "computed_path_valid": false,
+      "expected_path_valid": false,
+      "pass": true
+    }
+  },
+  "action_menu_monotonicity": {
+    "exhaustive": {
+      "games": 444,
+      "restricted_pairs": 3252,
+      "failures": 0
+    },
+    "first_failure": null,
+    "random": {
+      "seed": 1607,
+      "cases": 20000,
+      "failures": 0
+    },
+    "random_first_failure": null
+  },
+  "temporal_eligibility_witness": {
+    "v1": {
+      "W_core": [
+        "q0",
+        "q1"
+      ],
+      "W_coB": [
+        "q0",
+        "q1"
+      ]
+    },
+    "v2": {
+      "W_core": [
+        "q0"
+      ],
+      "W_coB": [
+        "q0"
+      ]
+    },
+    "pass": true
+  },
+  "authority_ceiling": "finite typed transport and fixed-model action-menu monotonicity; no source truth, full AR3 novelty, real runtime completeness, or owner adoption",
+  "elapsed_seconds": 1.8310359550000612,
+  "overall": "PASS"
+}

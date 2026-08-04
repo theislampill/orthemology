@@ -1,0 +1,1478 @@
+schema_version: 1
+authority:
+  repository_base: cc91f41fec364ea3910b80d57252bb1e0a050278
+  historical_duration: '09:41:25.405101139'
+  latest_historical_segment: 357
+  theorem_origin_authority: V5
+downloaded_file_count: 65
+activity_controls_captured: 44
+activity_logs_structurally_assessed: 43
+activity_access_boundaries: 1
+items:
+- item_id: V8DL-001
+  title: AR8R_T227_GRAPH_ONLY_ROOT_AUTHENTICATION_FACTORIZATION.md
+  source_surface: V8_DOWNLOADED_FILE
+  evidence_class: EXACT_HISTORICAL_BYTES
+  privacy_class: PUBLIC_SAFE
+  recommended_disposition: PUBLIC_INTEGRATE
+  public_locator: 'V8 downloaded-file inventory row 1: AR8R_T227_GRAPH_ONLY_ROOT_AUTHENTICATION_FACTORIZATION.md'
+  repository_relevance: Exact T227 theorem, executable-check, audit, rereview, or identity-custody evidence.
+  owner_path: docs/project-closure/ar8r-v11/theorems/
+  sha256: 61b6b1df5d942ac649abed84ed94efa0458aca30bdf699ef76aa411cb0f99a1c
+  bytes: 4471
+- item_id: V8DL-002
+  title: AR8R_T227_STRICT_PROGRESS_COINDUCTIVE_COLLAPSE.md
+  source_surface: V8_DOWNLOADED_FILE
+  evidence_class: EXACT_HISTORICAL_BYTES
+  privacy_class: PUBLIC_HASH_ONLY
+  recommended_disposition: SUPERSEDED_EXACT_VERSION
+  public_locator: 'V8 downloaded-file inventory row 2: AR8R_T227_STRICT_PROGRESS_COINDUCTIVE_COLLAPSE.md'
+  repository_relevance: Exact pre-renumbering strict-progress payload; canonical authority is AR8R-T228 and this
+    T227-labeled file receives zero additional credit.
+  owner_path: docs/project-closure/ar8r-v11/theorems/ar8r-t228-strict-progress-coinductive-collapse.md
+  sha256: d2a65f07ffdc18cf5eb1613717d9b9dca8d04ff741f55f4da100e63da1867aea
+  bytes: 3330
+- item_id: V8DL-003
+  title: p208_p214_authentication_results.json
+  source_surface: V8_DOWNLOADED_FILE
+  evidence_class: EXACT_HISTORICAL_BYTES
+  privacy_class: PUBLIC_SAFE
+  recommended_disposition: PUBLIC_INTEGRATE
+  public_locator: 'V8 downloaded-file inventory row 3: p208_p214_authentication_results.json'
+  repository_relevance: Exact T227 theorem, executable-check, audit, rereview, or identity-custody evidence.
+  owner_path: docs/project-closure/ar8r-v11/theorems/
+  sha256: c085818fe4ea20e219de2d0a96ff02e385427ec37b5dcdac832ca25c9aca459b
+  bytes: 1187
+- item_id: V8DL-004
+  title: P208_P214_COLD_AUDIT_86.md
+  source_surface: V8_DOWNLOADED_FILE
+  evidence_class: EXACT_HISTORICAL_BYTES
+  privacy_class: PUBLIC_SAFE
+  recommended_disposition: PUBLIC_INTEGRATE
+  public_locator: 'V8 downloaded-file inventory row 4: P208_P214_COLD_AUDIT_86.md'
+  repository_relevance: Exact T227 theorem, executable-check, audit, rereview, or identity-custody evidence.
+  owner_path: docs/project-closure/ar8r-v11/theorems/
+  sha256: d609b43e003e0f91c180a5f1a7b78512b92ac7d6dd43ced195551b713616556d
+  bytes: 4528
+- item_id: V8DL-005
+  title: P208_P214_IDENTITY_REPAIR_REREVIEW_87.md
+  source_surface: V8_DOWNLOADED_FILE
+  evidence_class: EXACT_HISTORICAL_BYTES
+  privacy_class: PUBLIC_SAFE
+  recommended_disposition: PUBLIC_INTEGRATE
+  public_locator: 'V8 downloaded-file inventory row 5: P208_P214_IDENTITY_REPAIR_REREVIEW_87.md'
+  repository_relevance: Exact T227 theorem, executable-check, audit, rereview, or identity-custody evidence.
+  owner_path: docs/project-closure/ar8r-v11/theorems/
+  sha256: a707b15238d79c150cf1635d1dbe7366eafbd710f5a6d895e6749e28dc0281ef
+  bytes: 3382
+- item_id: V8DL-006
+  title: P208_P214_REPAIR_REREVIEW_87.md
+  source_surface: V8_DOWNLOADED_FILE
+  evidence_class: EXACT_HISTORICAL_BYTES
+  privacy_class: PUBLIC_SAFE
+  recommended_disposition: PUBLIC_INTEGRATE
+  public_locator: 'V8 downloaded-file inventory row 6: P208_P214_REPAIR_REREVIEW_87.md'
+  repository_relevance: Exact T227 theorem, executable-check, audit, rereview, or identity-custody evidence.
+  owner_path: docs/project-closure/ar8r-v11/theorems/
+  sha256: 8592408636a43a80318e25ac87a4fb56fc9f1d8f6ca4e0c6fe251ab9b034472f
+  bytes: 2277
+- item_id: V8DL-007
+  title: p208_p214_strict_progress_results.json
+  source_surface: V8_DOWNLOADED_FILE
+  evidence_class: EXACT_HISTORICAL_BYTES
+  privacy_class: PUBLIC_SAFE
+  recommended_disposition: PUBLIC_INTEGRATE
+  public_locator: 'V8 downloaded-file inventory row 7: p208_p214_strict_progress_results.json'
+  repository_relevance: Exact T227 theorem, executable-check, audit, rereview, or identity-custody evidence.
+  owner_path: docs/project-closure/ar8r-v11/theorems/
+  sha256: d3f0433d02c433ea91f559e7229ada6ae174177d1b8d291ba39e0b07d66f2915
+  bytes: 678
+- item_id: V8DL-008
+  title: P208_P214_THEOREM_IDENTITY_CROSSWALK.yaml
+  source_surface: V8_DOWNLOADED_FILE
+  evidence_class: EXACT_HISTORICAL_BYTES
+  privacy_class: PUBLIC_SAFE
+  recommended_disposition: PUBLIC_INTEGRATE
+  public_locator: 'V8 downloaded-file inventory row 8: P208_P214_THEOREM_IDENTITY_CROSSWALK.yaml'
+  repository_relevance: Exact T227 theorem, executable-check, audit, rereview, or identity-custody evidence.
+  owner_path: docs/project-closure/ar8r-v11/theorems/
+  sha256: 5725c6786cac3e1a41546e9666c9ce44cf895e440348400d436780067e152f0c
+  bytes: 826
+- item_id: V8DL-009
+  title: CYCLE_53_P307_P314_AUDIT_CUSTODY_REPAIR.md
+  source_surface: V8_DOWNLOADED_FILE
+  evidence_class: EXACT_AUDIT_OR_LEDGER
+  privacy_class: PUBLIC_HASH_ONLY
+  recommended_disposition: PUBLIC_SUMMARY
+  public_locator: 'V8 downloaded-file inventory row 9: CYCLE_53_P307_P314_AUDIT_CUSTODY_REPAIR.md'
+  repository_relevance: Custody and contrast-audit evidence for identities that remain unresolved; it does not supply
+    a lost payload.
+  owner_path: docs/project-closure/ar8r-v11/AR8R-V11-DEFERRED-AND-EXCLUDED.md
+  sha256: 43d4bab012203d8c6f17cb91561bc53a43d63b25f595990f5835ecad747b2e35
+  bytes: 986
+- item_id: V8DL-010
+  title: IDENTITY_AND_CUSTODY_DISPOSITION.yaml
+  source_surface: V8_DOWNLOADED_FILE
+  evidence_class: EXACT_AUDIT_OR_LEDGER
+  privacy_class: PUBLIC_HASH_ONLY
+  recommended_disposition: PUBLIC_SUMMARY
+  public_locator: 'V8 downloaded-file inventory row 10: IDENTITY_AND_CUSTODY_DISPOSITION.yaml'
+  repository_relevance: Custody and contrast-audit evidence for identities that remain unresolved; it does not supply
+    a lost payload.
+  owner_path: docs/project-closure/ar8r-v11/AR8R-V11-DEFERRED-AND-EXCLUDED.md
+  sha256: c4ee019508508c22067c6ced50a49a99e9a62f0de02291c4a3e8c82e5e721016
+  bytes: 784
+- item_id: V8DL-011
+  title: P307_P314_CONTRAST_COLD_AUDIT_113.md
+  source_surface: V8_DOWNLOADED_FILE
+  evidence_class: EXACT_AUDIT_OR_LEDGER
+  privacy_class: PUBLIC_HASH_ONLY
+  recommended_disposition: PUBLIC_SUMMARY
+  public_locator: 'V8 downloaded-file inventory row 11: P307_P314_CONTRAST_COLD_AUDIT_113.md'
+  repository_relevance: Custody and contrast-audit evidence for identities that remain unresolved; it does not supply
+    a lost payload.
+  owner_path: docs/project-closure/ar8r-v11/AR8R-V11-DEFERRED-AND-EXCLUDED.md
+  sha256: edacb2e4a147a86f32861db8dc850cf077eeefc08247fee555ed7c58d4fdc0d0
+  bytes: 6029
+- item_id: V8DL-012
+  title: P307_P314_CONTRAST_CUSTODY_REREVIEW_114.md
+  source_surface: V8_DOWNLOADED_FILE
+  evidence_class: EXACT_AUDIT_OR_LEDGER
+  privacy_class: PUBLIC_HASH_ONLY
+  recommended_disposition: PUBLIC_SUMMARY
+  public_locator: 'V8 downloaded-file inventory row 12: P307_P314_CONTRAST_CUSTODY_REREVIEW_114.md'
+  repository_relevance: Custody and contrast-audit evidence for identities that remain unresolved; it does not supply
+    a lost payload.
+  owner_path: docs/project-closure/ar8r-v11/AR8R-V11-DEFERRED-AND-EXCLUDED.md
+  sha256: 1f026c7d4dd924f4fa15532540d766c7809adc7b2b8a896963de3ce0275dfb8a
+  bytes: 2386
+- item_id: V8DL-013
+  title: RENAMING_CROSSWALK.yaml
+  source_surface: V8_DOWNLOADED_FILE
+  evidence_class: EXACT_AUDIT_OR_LEDGER
+  privacy_class: PUBLIC_HASH_ONLY
+  recommended_disposition: PUBLIC_SUMMARY
+  public_locator: 'V8 downloaded-file inventory row 13: RENAMING_CROSSWALK.yaml'
+  repository_relevance: Custody and contrast-audit evidence for identities that remain unresolved; it does not supply
+    a lost payload.
+  owner_path: docs/project-closure/ar8r-v11/AR8R-V11-DEFERRED-AND-EXCLUDED.md
+  sha256: 4b7f236152aa0e5083f105cbbe576dd0ade72a262dc6b06a502e8de83b1c6f3f
+  bytes: 1193
+- item_id: V8DL-014
+  title: AR8R_CURRENT_STATE.yaml
+  source_surface: V8_DOWNLOADED_FILE
+  evidence_class: CUSTODY_RECEIPT
+  privacy_class: PUBLIC_HASH_ONLY
+  recommended_disposition: SUPERSEDED_EXACT_VERSION
+  public_locator: 'V8 downloaded-file inventory row 14: AR8R_CURRENT_STATE.yaml'
+  repository_relevance: Historical campaign-state snapshot superseded by later segment and V8 authority.
+  owner_path: docs/project-closure/ar8r-v11/AR8R-V11-DEFERRED-AND-EXCLUDED.md
+  sha256: 25dc8cad6bcafeb89e68b3f092672558e09ab871b07393daac3370de1f66319c
+  bytes: 1581
+- item_id: V8DL-015
+  title: ASFAHANI_FULL_ARGUMENT_AND_SOURCE_DOSSIER.md
+  source_surface: V8_DOWNLOADED_FILE
+  evidence_class: EXACT_AUDIT_OR_LEDGER
+  privacy_class: PRIVATE_EXCLUDED
+  recommended_disposition: PRIVATE_LOCAL_EVIDENCE
+  public_locator: 'V8 downloaded-file inventory row 15: ASFAHANI_FULL_ARGUMENT_AND_SOURCE_DOSSIER.md'
+  repository_relevance: Source dossier depends on supplied private source material; only bounded non-verbatim findings
+    may be summarized publicly.
+  owner_path: docs/project-closure/ar8r-v11/programs/candidate-n-r5-track-t-and-source-ascent.md
+  sha256: 697144922acaa3fc94da14b40611c8fd1add99867aacaf3e3a2eda405e9e897f
+  bytes: 20507
+- item_id: V8DL-016
+  title: CANONICAL_SOURCE_FORMAL_DAEE_LEAN_CROSSWALK_V1.md
+  source_surface: V8_DOWNLOADED_FILE
+  evidence_class: EXACT_AUDIT_OR_LEDGER
+  privacy_class: PUBLIC_HASH_ONLY
+  recommended_disposition: PUBLIC_SUMMARY
+  public_locator: 'V8 downloaded-file inventory row 16: CANONICAL_SOURCE_FORMAL_DAEE_LEAN_CROSSWALK_V1.md'
+  repository_relevance: Source/formal/daee/Lean crosswalk or P597-P620 custody evidence; publish only bounded status
+    and non-verbatim conclusions.
+  owner_path: docs/project-closure/ar8r-v11/programs/candidate-n-r5-track-t-and-source-ascent.md
+  sha256: ec17af8ae2c3b1c5a60a6b1d784e0f5386dbebe9944fa4c0fbcafd2dc2da5c78
+  bytes: 25814
+- item_id: V8DL-017
+  title: CANONICAL_SOURCE_FORMAL_DAEE_LEAN_CROSSWALK_V1.yaml
+  source_surface: V8_DOWNLOADED_FILE
+  evidence_class: EXACT_AUDIT_OR_LEDGER
+  privacy_class: PUBLIC_HASH_ONLY
+  recommended_disposition: PUBLIC_SUMMARY
+  public_locator: 'V8 downloaded-file inventory row 17: CANONICAL_SOURCE_FORMAL_DAEE_LEAN_CROSSWALK_V1.yaml'
+  repository_relevance: Source/formal/daee/Lean crosswalk or P597-P620 custody evidence; publish only bounded status
+    and non-verbatim conclusions.
+  owner_path: docs/project-closure/ar8r-v11/programs/candidate-n-r5-track-t-and-source-ascent.md
+  sha256: 05b8cc557e897f33a5c6a01b0d6bb1761ebd438d83242d3b08e2f337d14c6f0c
+  bytes: 42740
+- item_id: V8DL-018
+  title: NEW_SOURCE_STATUS_DELTA_LEDGER_V1.yaml
+  source_surface: V8_DOWNLOADED_FILE
+  evidence_class: EXACT_AUDIT_OR_LEDGER
+  privacy_class: PUBLIC_HASH_ONLY
+  recommended_disposition: PUBLIC_SUMMARY
+  public_locator: 'V8 downloaded-file inventory row 18: NEW_SOURCE_STATUS_DELTA_LEDGER_V1.yaml'
+  repository_relevance: Source/formal/daee/Lean crosswalk or P597-P620 custody evidence; publish only bounded status
+    and non-verbatim conclusions.
+  owner_path: docs/project-closure/ar8r-v11/programs/candidate-n-r5-track-t-and-source-ascent.md
+  sha256: a8173daed449fda622e2077b2fa06b761bc8d7c15d0bcbd8a3b4c0574f6a8062
+  bytes: 23421
+- item_id: V8DL-019
+  title: NEW_SOURCES_PRIOR_CORPUS_CROSSWALK_V1.md
+  source_surface: V8_DOWNLOADED_FILE
+  evidence_class: EXACT_AUDIT_OR_LEDGER
+  privacy_class: PUBLIC_HASH_ONLY
+  recommended_disposition: PUBLIC_SUMMARY
+  public_locator: 'V8 downloaded-file inventory row 19: NEW_SOURCES_PRIOR_CORPUS_CROSSWALK_V1.md'
+  repository_relevance: Source/formal/daee/Lean crosswalk or P597-P620 custody evidence; publish only bounded status
+    and non-verbatim conclusions.
+  owner_path: docs/project-closure/ar8r-v11/programs/candidate-n-r5-track-t-and-source-ascent.md
+  sha256: 3d69d0a2d336a0e179b423bbef0a546ba2b7467d787d937bc16a183547a8e231
+  bytes: 11543
+- item_id: V8DL-020
+  title: p597_p620_admission_validation.json
+  source_surface: V8_DOWNLOADED_FILE
+  evidence_class: EXACT_AUDIT_OR_LEDGER
+  privacy_class: PUBLIC_HASH_ONLY
+  recommended_disposition: PUBLIC_SUMMARY
+  public_locator: 'V8 downloaded-file inventory row 20: p597_p620_admission_validation.json'
+  repository_relevance: Source/formal/daee/Lean crosswalk or P597-P620 custody evidence; publish only bounded status
+    and non-verbatim conclusions.
+  owner_path: docs/project-closure/ar8r-v11/programs/candidate-n-r5-track-t-and-source-ascent.md
+  sha256: 69bacd69913c0fc3a9face918bb070702398c5823405a3f3f502954897d31ed6
+  bytes: 4804
+- item_id: V8DL-021
+  title: P597_P620_BURDEN_DERIVATION.yaml
+  source_surface: V8_DOWNLOADED_FILE
+  evidence_class: EXACT_AUDIT_OR_LEDGER
+  privacy_class: PUBLIC_HASH_ONLY
+  recommended_disposition: PUBLIC_SUMMARY
+  public_locator: 'V8 downloaded-file inventory row 21: P597_P620_BURDEN_DERIVATION.yaml'
+  repository_relevance: Source/formal/daee/Lean crosswalk or P597-P620 custody evidence; publish only bounded status
+    and non-verbatim conclusions.
+  owner_path: docs/project-closure/ar8r-v11/programs/candidate-n-r5-track-t-and-source-ascent.md
+  sha256: 41921b2352ed22533954c2c0d551295ec729afaa7cff2698704e541bf8d93c71
+  bytes: 6692
+- item_id: V8DL-022
+  title: P597_P620_COUNTER_DERIVATION.yaml
+  source_surface: V8_DOWNLOADED_FILE
+  evidence_class: EXACT_AUDIT_OR_LEDGER
+  privacy_class: PUBLIC_HASH_ONLY
+  recommended_disposition: PUBLIC_SUMMARY
+  public_locator: 'V8 downloaded-file inventory row 22: P597_P620_COUNTER_DERIVATION.yaml'
+  repository_relevance: Source/formal/daee/Lean crosswalk or P597-P620 custody evidence; publish only bounded status
+    and non-verbatim conclusions.
+  owner_path: docs/project-closure/ar8r-v11/programs/candidate-n-r5-track-t-and-source-ascent.md
+  sha256: 0df6f792f4980f44ca5da4aefba3ef0b9eec9d3cd7994343406351ab0eb5130e
+  bytes: 1598
+- item_id: V8DL-023
+  title: P597_P620_TIMING_RECONCILIATION.yaml
+  source_surface: V8_DOWNLOADED_FILE
+  evidence_class: EXACT_AUDIT_OR_LEDGER
+  privacy_class: PUBLIC_HASH_ONLY
+  recommended_disposition: PUBLIC_SUMMARY
+  public_locator: 'V8 downloaded-file inventory row 23: P597_P620_TIMING_RECONCILIATION.yaml'
+  repository_relevance: Source/formal/daee/Lean crosswalk or P597-P620 custody evidence; publish only bounded status
+    and non-verbatim conclusions.
+  owner_path: docs/project-closure/ar8r-v11/programs/candidate-n-r5-track-t-and-source-ascent.md
+  sha256: 6757a32cf4fb966fd138e83a0b139ba603414994703710e81cfe12da06637770
+  bytes: 1952
+- item_id: V8DL-024
+  title: SUPPLIED_SUBSTANTIVE_CORPUS_COVERAGE_MATRIX_V1.md
+  source_surface: V8_DOWNLOADED_FILE
+  evidence_class: EXACT_AUDIT_OR_LEDGER
+  privacy_class: PUBLIC_HASH_ONLY
+  recommended_disposition: PUBLIC_SUMMARY
+  public_locator: 'V8 downloaded-file inventory row 24: SUPPLIED_SUBSTANTIVE_CORPUS_COVERAGE_MATRIX_V1.md'
+  repository_relevance: Source/formal/daee/Lean crosswalk or P597-P620 custody evidence; publish only bounded status
+    and non-verbatim conclusions.
+  owner_path: docs/project-closure/ar8r-v11/programs/candidate-n-r5-track-t-and-source-ascent.md
+  sha256: ad13ea134adff90174c7b6e15c754834a4c86c1b3b57f65711cb193790d1ddc8
+  bytes: 6049
+- item_id: V8DL-025
+  title: SUPPLIED_SUBSTANTIVE_CORPUS_COVERAGE_MATRIX_V1.yaml
+  source_surface: V8_DOWNLOADED_FILE
+  evidence_class: EXACT_AUDIT_OR_LEDGER
+  privacy_class: PUBLIC_HASH_ONLY
+  recommended_disposition: PUBLIC_SUMMARY
+  public_locator: 'V8 downloaded-file inventory row 25: SUPPLIED_SUBSTANTIVE_CORPUS_COVERAGE_MATRIX_V1.yaml'
+  repository_relevance: Source/formal/daee/Lean crosswalk or P597-P620 custody evidence; publish only bounded status
+    and non-verbatim conclusions.
+  owner_path: docs/project-closure/ar8r-v11/programs/candidate-n-r5-track-t-and-source-ascent.md
+  sha256: a22cc1e67f4f11eabeed8404e82d598a61c0ee89f0eb13d51eb02c8e3181b4b8
+  bytes: 26962
+- item_id: V8DL-026
+  title: UJAYRI_FULL_ARGUMENT_AND_SOURCE_DOSSIER.md
+  source_surface: V8_DOWNLOADED_FILE
+  evidence_class: EXACT_AUDIT_OR_LEDGER
+  privacy_class: PRIVATE_EXCLUDED
+  recommended_disposition: PRIVATE_LOCAL_EVIDENCE
+  public_locator: 'V8 downloaded-file inventory row 26: UJAYRI_FULL_ARGUMENT_AND_SOURCE_DOSSIER.md'
+  repository_relevance: Source dossier depends on supplied private source material; only bounded non-verbatim findings
+    may be summarized publicly.
+  owner_path: docs/project-closure/ar8r-v11/programs/candidate-n-r5-track-t-and-source-ascent.md
+  sha256: 57a8641f6ef80678e2d88d4b0284c15a9627a77d0fdb7f77d8c7c01d80322745
+  bytes: 31755
+- item_id: V8DL-027
+  title: AR8R_CANONICAL_THEOREM_ORIGIN_REGISTRY_V3.yaml
+  source_surface: V8_DOWNLOADED_FILE
+  evidence_class: EXACT_AUDIT_OR_LEDGER
+  privacy_class: PUBLIC_HASH_ONLY
+  recommended_disposition: SUPERSEDED_EXACT_VERSION
+  public_locator: 'V8 downloaded-file inventory row 27: AR8R_CANONICAL_THEOREM_ORIGIN_REGISTRY_V3.yaml'
+  repository_relevance: Earlier origin or identity authority superseded by the admitted V5 registry and V8 recovery
+    state.
+  owner_path: docs/project-closure/ar8r-v11/provenance/
+  sha256: cf0a816e5bb1ed5f878264ab32f81b6bb9a84116594f533695ccd9fec855054a
+  bytes: 2338885
+- item_id: V8DL-028
+  title: AR8R_EXACT_ACTIVE_IDENTITY_REGISTRY_V2.json
+  source_surface: V8_DOWNLOADED_FILE
+  evidence_class: EXACT_AUDIT_OR_LEDGER
+  privacy_class: PUBLIC_HASH_ONLY
+  recommended_disposition: SUPERSEDED_EXACT_VERSION
+  public_locator: 'V8 downloaded-file inventory row 28: AR8R_EXACT_ACTIVE_IDENTITY_REGISTRY_V2.json'
+  repository_relevance: Earlier origin or identity authority superseded by the admitted V5 registry and V8 recovery
+    state.
+  owner_path: docs/project-closure/ar8r-v11/provenance/
+  sha256: 8d007daf6b105bb2a37d2c24317075daf9e4521eb32cdcd2dfde8ece8601dbee
+  bytes: 11388
+- item_id: V8DL-029
+  title: AR8R_FALSE_MULTIPLICITY_AUDIT_V3.md
+  source_surface: V8_DOWNLOADED_FILE
+  evidence_class: EXACT_AUDIT_OR_LEDGER
+  privacy_class: PUBLIC_HASH_ONLY
+  recommended_disposition: PUBLIC_SUMMARY
+  public_locator: 'V8 downloaded-file inventory row 29: AR8R_FALSE_MULTIPLICITY_AUDIT_V3.md'
+  repository_relevance: Family, ancestry, false-multiplicity, identity-recovery, or state-reconciliation evidence.
+  owner_path: docs/project-closure/ar8r-v11/provenance/
+  sha256: 0273ed8cc16ff4f5ea514ce6eeefdf3c8cb820458ced132dd00b5d69a153a3c8
+  bytes: 2780
+- item_id: V8DL-030
+  title: AR8R_PRH_SAC_THEOREM_CORPUS_ANALYSIS_V2.md
+  source_surface: V8_DOWNLOADED_FILE
+  evidence_class: EXACT_AUDIT_OR_LEDGER
+  privacy_class: PUBLIC_HASH_ONLY
+  recommended_disposition: PUBLIC_SUMMARY
+  public_locator: 'V8 downloaded-file inventory row 30: AR8R_PRH_SAC_THEOREM_CORPUS_ANALYSIS_V2.md'
+  repository_relevance: Family, ancestry, false-multiplicity, identity-recovery, or state-reconciliation evidence.
+  owner_path: docs/project-closure/ar8r-v11/provenance/
+  sha256: fb239fda0f045d2418d534811073cfabe228aabcb41a368efada36be3346fbef
+  bytes: 2235
+- item_id: V8DL-031
+  title: AR8R_THEOREM_FAMILY_AND_ANCESTRY_GRAPH_V3.yaml
+  source_surface: V8_DOWNLOADED_FILE
+  evidence_class: EXACT_AUDIT_OR_LEDGER
+  privacy_class: PUBLIC_HASH_ONLY
+  recommended_disposition: PUBLIC_SUMMARY
+  public_locator: 'V8 downloaded-file inventory row 31: AR8R_THEOREM_FAMILY_AND_ANCESTRY_GRAPH_V3.yaml'
+  repository_relevance: Family, ancestry, false-multiplicity, identity-recovery, or state-reconciliation evidence.
+  owner_path: docs/project-closure/ar8r-v11/provenance/
+  sha256: 3d6e9d6a071944d7ec3701369cf02d0ccbe2ba7eae8de2bcf5e8b352b92f26d0
+  bytes: 189933
+- item_id: V8DL-032
+  title: INTERPRETATION_REPAIRED_V2.md
+  source_surface: V8_DOWNLOADED_FILE
+  evidence_class: EXACT_AUDIT_OR_LEDGER
+  privacy_class: PUBLIC_SAFE
+  recommended_disposition: PUBLIC_INTEGRATE
+  public_locator: 'V8 downloaded-file inventory row 32: INTERPRETATION_REPAIRED_V2.md'
+  repository_relevance: Exact custody for the negative T299/T300 synthetic pilot and its repaired interpretation.
+  owner_path: docs/project-closure/ar8r-v11/experiments/
+  sha256: 49745ad7cedc7bc5f6909826e96e56f47143f15d196254897adc44ad529d0283
+  bytes: 2423
+- item_id: V8DL-033
+  title: LEAN_THEOREM_ANCESTRY_AND_DEDUPLICATION_MAP_V2.yaml
+  source_surface: V8_DOWNLOADED_FILE
+  evidence_class: EXACT_AUDIT_OR_LEDGER
+  privacy_class: PUBLIC_HASH_ONLY
+  recommended_disposition: PUBLIC_SUMMARY
+  public_locator: 'V8 downloaded-file inventory row 33: LEAN_THEOREM_ANCESTRY_AND_DEDUPLICATION_MAP_V2.yaml'
+  repository_relevance: Family, ancestry, false-multiplicity, identity-recovery, or state-reconciliation evidence.
+  owner_path: docs/project-closure/ar8r-v11/provenance/
+  sha256: 1a936961da1ec5f45121af2cc3f1a0aea77e8f417c8a484e4c2e19d7d4175bad
+  bytes: 6444
+- item_id: V8DL-034
+  title: P597_P620_STATE_REGRESSION_RECONCILIATION_V6.yaml
+  source_surface: V8_DOWNLOADED_FILE
+  evidence_class: EXACT_AUDIT_OR_LEDGER
+  privacy_class: PUBLIC_HASH_ONLY
+  recommended_disposition: PUBLIC_SUMMARY
+  public_locator: 'V8 downloaded-file inventory row 34: P597_P620_STATE_REGRESSION_RECONCILIATION_V6.yaml'
+  repository_relevance: Family, ancestry, false-multiplicity, identity-recovery, or state-reconciliation evidence.
+  owner_path: docs/project-closure/ar8r-v11/provenance/
+  sha256: 6719131083732156df5d5ae4beada629c98ef560fcade499cc0e29153947ce71
+  bytes: 3567
+- item_id: V8DL-035
+  title: P597_P620_THEOREM_IDENTITY_RECOVERY_CATALOG.yaml
+  source_surface: V8_DOWNLOADED_FILE
+  evidence_class: EXACT_AUDIT_OR_LEDGER
+  privacy_class: PUBLIC_HASH_ONLY
+  recommended_disposition: PUBLIC_SUMMARY
+  public_locator: 'V8 downloaded-file inventory row 35: P597_P620_THEOREM_IDENTITY_RECOVERY_CATALOG.yaml'
+  repository_relevance: Family, ancestry, false-multiplicity, identity-recovery, or state-reconciliation evidence.
+  owner_path: docs/project-closure/ar8r-v11/provenance/
+  sha256: 02dd0bf8bc27f49836bbbb01ddc638cdfff7b05a448f9318d50fb13ec4553e53
+  bytes: 13717
+- item_id: V8DL-036
+  title: p661_p668_admission_validation.json
+  source_surface: V8_DOWNLOADED_FILE
+  evidence_class: EXACT_AUDIT_OR_LEDGER
+  privacy_class: PUBLIC_SAFE
+  recommended_disposition: PUBLIC_INTEGRATE
+  public_locator: 'V8 downloaded-file inventory row 36: p661_p668_admission_validation.json'
+  repository_relevance: Exact custody for the negative T299/T300 synthetic pilot and its repaired interpretation.
+  owner_path: docs/project-closure/ar8r-v11/experiments/
+  sha256: 758e198266341ac0a5df39f3e8b3c1919dbc5f227eadabd89745160e3a9c8bd5
+  bytes: 558
+- item_id: V8DL-037
+  title: P661_P668_COLD_AUDIT_143.md
+  source_surface: V8_DOWNLOADED_FILE
+  evidence_class: EXACT_AUDIT_OR_LEDGER
+  privacy_class: PUBLIC_SAFE
+  recommended_disposition: PUBLIC_INTEGRATE
+  public_locator: 'V8 downloaded-file inventory row 37: P661_P668_COLD_AUDIT_143.md'
+  repository_relevance: Exact custody for the negative T299/T300 synthetic pilot and its repaired interpretation.
+  owner_path: docs/project-closure/ar8r-v11/experiments/
+  sha256: e732dfd7e41db913d9c65ccc859cc5144b970096fc2ff45639ae16f391413ef8
+  bytes: 4518
+- item_id: V8DL-038
+  title: P661_P668_REPAIR_REREVIEW_144.md
+  source_surface: V8_DOWNLOADED_FILE
+  evidence_class: EXACT_AUDIT_OR_LEDGER
+  privacy_class: PUBLIC_SAFE
+  recommended_disposition: PUBLIC_INTEGRATE
+  public_locator: 'V8 downloaded-file inventory row 38: P661_P668_REPAIR_REREVIEW_144.md'
+  repository_relevance: Exact custody for the negative T299/T300 synthetic pilot and its repaired interpretation.
+  owner_path: docs/project-closure/ar8r-v11/experiments/
+  sha256: 8bba4b041a2b1b2d4d4f032b2859cd8a1c5a203d66c4c70ccb24ec3ce7c35370
+  bytes: 2209
+- item_id: V8DL-039
+  title: SEGMENT_355_RECORD.yaml
+  source_surface: V8_DOWNLOADED_FILE
+  evidence_class: EXACT_AUDIT_OR_LEDGER
+  privacy_class: PUBLIC_SAFE
+  recommended_disposition: PUBLIC_INTEGRATE
+  public_locator: 'V8 downloaded-file inventory row 39: SEGMENT_355_RECORD.yaml'
+  repository_relevance: Exact custody for the negative T299/T300 synthetic pilot and its repaired interpretation.
+  owner_path: docs/project-closure/ar8r-v11/experiments/
+  sha256: c346aeb8564d5590fcaeaad51a3bf5049d63a52d9eac1bd06bd41c098aefac0b
+  bytes: 1690
+- item_id: V8DL-040
+  title: THEOREM_ORIGIN_V3_COLD_AUDIT_147.md
+  source_surface: V8_DOWNLOADED_FILE
+  evidence_class: EXACT_AUDIT_OR_LEDGER
+  privacy_class: PUBLIC_HASH_ONLY
+  recommended_disposition: SUPERSEDED_EXACT_VERSION
+  public_locator: 'V8 downloaded-file inventory row 40: THEOREM_ORIGIN_V3_COLD_AUDIT_147.md'
+  repository_relevance: Earlier origin or identity authority superseded by the admitted V5 registry and V8 recovery
+    state.
+  owner_path: docs/project-closure/ar8r-v11/provenance/
+  sha256: 3694f37f45f50b26599f7fba29759d03c11f9850bbf1aeb6c85007eea6bfc38e
+  bytes: 2657
+- item_id: V8DL-041
+  title: THEOREM_ORIGIN_V3_COLD_AUDIT_147_EVIDENCE.json
+  source_surface: V8_DOWNLOADED_FILE
+  evidence_class: EXACT_AUDIT_OR_LEDGER
+  privacy_class: PUBLIC_HASH_ONLY
+  recommended_disposition: SUPERSEDED_EXACT_VERSION
+  public_locator: 'V8 downloaded-file inventory row 41: THEOREM_ORIGIN_V3_COLD_AUDIT_147_EVIDENCE.json'
+  repository_relevance: Earlier origin or identity authority superseded by the admitted V5 registry and V8 recovery
+    state.
+  owner_path: docs/project-closure/ar8r-v11/provenance/
+  sha256: d71ff6e14c8f794bf0a24d56e84ba09390f334da2a30bd3b119eabecdd775ce1
+  bytes: 5894
+- item_id: V8DL-042
+  title: ar8r-pre-codex-owner-review-checkpoint-20260801.outer-receipt.json
+  source_surface: V8_DOWNLOADED_FILE
+  evidence_class: CUSTODY_RECEIPT
+  privacy_class: PUBLIC_HASH_ONLY
+  recommended_disposition: PUBLIC_SUMMARY
+  public_locator: 'V8 downloaded-file inventory row 42: ar8r-pre-codex-owner-review-checkpoint-20260801.outer-receipt.json'
+  repository_relevance: Checkpoint, segment, portfolio, PRH/SAC, or readiness evidence retained as bounded custody.
+  owner_path: docs/project-closure/ar8r-v11/provenance/
+  sha256: 143116245aebf0de60b89f654933a4b8715b79383d0830735c3ee894c241732a
+  bytes: 870
+- item_id: V8DL-043
+  title: ar8r-pre-codex-owner-review-checkpoint-20260801.verification.json
+  source_surface: V8_DOWNLOADED_FILE
+  evidence_class: CUSTODY_RECEIPT
+  privacy_class: PUBLIC_HASH_ONLY
+  recommended_disposition: PUBLIC_SUMMARY
+  public_locator: 'V8 downloaded-file inventory row 43: ar8r-pre-codex-owner-review-checkpoint-20260801.verification.json'
+  repository_relevance: Checkpoint, segment, portfolio, PRH/SAC, or readiness evidence retained as bounded custody.
+  owner_path: docs/project-closure/ar8r-v11/provenance/
+  sha256: 85364cb0c0d75a6b1fa390c5cb898554b106d31ed8dc038a3296a88ae3516355
+  bytes: 1644
+- item_id: V8DL-044
+  title: AR8R_42_PAYLOAD_RECOVERY_AUDIT_V1.yaml
+  source_surface: V8_DOWNLOADED_FILE
+  evidence_class: EXACT_AUDIT_OR_LEDGER
+  privacy_class: PUBLIC_HASH_ONLY
+  recommended_disposition: SUPERSEDED_EXACT_VERSION
+  public_locator: 'V8 downloaded-file inventory row 44: AR8R_42_PAYLOAD_RECOVERY_AUDIT_V1.yaml'
+  repository_relevance: Historical custody remains useful, but later V5/V8 authority supersedes its current-state
+    conclusion.
+  owner_path: docs/project-closure/ar8r-v11/provenance/
+  sha256: 3d17afd8176252c2343c81b8cdbc183125236314f8cb8eb690ca81ddcd086a73
+  bytes: 37420
+- item_id: V8DL-045
+  title: AR8R_CAMPAIGN_ACCOMPLISHMENT_STATEMENT_TEN_ADVANCES_V1.md
+  source_surface: V8_DOWNLOADED_FILE
+  evidence_class: PROGRAM_OR_BURDEN_RECORD
+  privacy_class: PUBLIC_HASH_ONLY
+  recommended_disposition: PUBLIC_SUMMARY
+  public_locator: 'V8 downloaded-file inventory row 45: AR8R_CAMPAIGN_ACCOMPLISHMENT_STATEMENT_TEN_ADVANCES_V1.md'
+  repository_relevance: Ten Advances custody, scope, provenance, or packaging evidence; it does not establish external
+    review or adoption.
+  owner_path: docs/project-closure/ar8r-v11/programs/ten-advances-and-source-custody.md
+  sha256: bbb0bb9c9f54ac7a3988ab359a5e407b7b67cd98fe897f435e25777dd1561ec1
+  bytes: 539
+- item_id: V8DL-046
+  title: AR8R_CANONICAL_THEOREM_ORIGIN_REGISTRY_V5.yaml
+  source_surface: V8_DOWNLOADED_FILE
+  evidence_class: EXACT_AUDIT_OR_LEDGER
+  privacy_class: PUBLIC_HASH_ONLY
+  recommended_disposition: PUBLIC_INTEGRATE
+  public_locator: 'V8 downloaded-file inventory row 46: AR8R_CANONICAL_THEOREM_ORIGIN_REGISTRY_V5.yaml'
+  repository_relevance: Latest pre-V8 origin, canonical-core, pair, piece-count, or Lean custody authority used
+    to derive sanitized V11 public receipts.
+  owner_path: docs/project-closure/ar8r-v11/provenance/
+  sha256: 843a7b7b238cfccc6b45934644f0568cc84e7826ebeddd9528511bf37111b440
+  bytes: 2477481
+- item_id: V8DL-047
+  title: AR8R_EXACT_489_MEMBER_CANONICAL_CORE.yaml
+  source_surface: V8_DOWNLOADED_FILE
+  evidence_class: EXACT_AUDIT_OR_LEDGER
+  privacy_class: PUBLIC_HASH_ONLY
+  recommended_disposition: PUBLIC_INTEGRATE
+  public_locator: 'V8 downloaded-file inventory row 47: AR8R_EXACT_489_MEMBER_CANONICAL_CORE.yaml'
+  repository_relevance: Latest pre-V8 origin, canonical-core, pair, piece-count, or Lean custody authority used
+    to derive sanitized V11 public receipts.
+  owner_path: docs/project-closure/ar8r-v11/provenance/
+  sha256: 0d3bf50dc84e9bed824410d6b7418978ae9a5cf33fbdd1687c3adf7c5b1aa576
+  bytes: 7859
+- item_id: V8DL-048
+  title: AR8R_EXACT_PAIR_VALIDATION.json
+  source_surface: V8_DOWNLOADED_FILE
+  evidence_class: EXACT_AUDIT_OR_LEDGER
+  privacy_class: PUBLIC_HASH_ONLY
+  recommended_disposition: PUBLIC_INTEGRATE
+  public_locator: 'V8 downloaded-file inventory row 48: AR8R_EXACT_PAIR_VALIDATION.json'
+  repository_relevance: Latest pre-V8 origin, canonical-core, pair, piece-count, or Lean custody authority used
+    to derive sanitized V11 public receipts.
+  owner_path: docs/project-closure/ar8r-v11/provenance/
+  sha256: b83460e4fc57261b3f12671c75abd39cf152afb61d66f5df24a9693045ee61b1
+  bytes: 286
+- item_id: V8DL-049
+  title: AR8R_PIECE_COUNT_DISPOSITION_V4.yaml
+  source_surface: V8_DOWNLOADED_FILE
+  evidence_class: EXACT_AUDIT_OR_LEDGER
+  privacy_class: PUBLIC_HASH_ONLY
+  recommended_disposition: PUBLIC_INTEGRATE
+  public_locator: 'V8 downloaded-file inventory row 49: AR8R_PIECE_COUNT_DISPOSITION_V4.yaml'
+  repository_relevance: Latest pre-V8 origin, canonical-core, pair, piece-count, or Lean custody authority used
+    to derive sanitized V11 public receipts.
+  owner_path: docs/project-closure/ar8r-v11/provenance/
+  sha256: b31be40f8ca37c1170dac246d6f27634aefe3d50ff0287ec04414893606b1fd7
+  bytes: 3716
+- item_id: V8DL-050
+  title: AR8R_PRH_SAC_THEOREM_CORPUS_ANALYSIS_V3.md
+  source_surface: V8_DOWNLOADED_FILE
+  evidence_class: CUSTODY_RECEIPT
+  privacy_class: PUBLIC_HASH_ONLY
+  recommended_disposition: PUBLIC_SUMMARY
+  public_locator: 'V8 downloaded-file inventory row 50: AR8R_PRH_SAC_THEOREM_CORPUS_ANALYSIS_V3.md'
+  repository_relevance: Checkpoint, segment, portfolio, PRH/SAC, or readiness evidence retained as bounded custody.
+  owner_path: docs/project-closure/ar8r-v11/provenance/
+  sha256: 888eff8f1ff1e3966e088a9bc1cae91abbd25ac0673ff9759e46b26fd6819681
+  bytes: 3070
+- item_id: V8DL-051
+  title: LEAN_THEOREM_ANCESTRY_AND_DEDUPLICATION_MAP_V5.yaml
+  source_surface: V8_DOWNLOADED_FILE
+  evidence_class: EXACT_AUDIT_OR_LEDGER
+  privacy_class: PUBLIC_HASH_ONLY
+  recommended_disposition: PUBLIC_INTEGRATE
+  public_locator: 'V8 downloaded-file inventory row 51: LEAN_THEOREM_ANCESTRY_AND_DEDUPLICATION_MAP_V5.yaml'
+  repository_relevance: Latest pre-V8 origin, canonical-core, pair, piece-count, or Lean custody authority used
+    to derive sanitized V11 public receipts.
+  owner_path: docs/project-closure/ar8r-v11/provenance/
+  sha256: 3c8cea6bc5004c2367ef9ee9cf36b7acff4e3d5613f2a55d677d0bae824f0db7
+  bytes: 203413
+- item_id: V8DL-052
+  title: PRE_CODEX_INTEGRATION_READINESS_V1.yaml
+  source_surface: V8_DOWNLOADED_FILE
+  evidence_class: EXACT_AUDIT_OR_LEDGER
+  privacy_class: PUBLIC_HASH_ONLY
+  recommended_disposition: SUPERSEDED_EXACT_VERSION
+  public_locator: 'V8 downloaded-file inventory row 52: PRE_CODEX_INTEGRATION_READINESS_V1.yaml'
+  repository_relevance: Historical custody remains useful, but later V5/V8 authority supersedes its current-state
+    conclusion.
+  owner_path: docs/project-closure/ar8r-v11/provenance/
+  sha256: a51d236e17d37da5b52a4a6870fc31d357554d1ed7cc04ca7107b66dd2b702e5
+  bytes: 5062
+- item_id: V8DL-053
+  title: SEGMENT_356_RECORD.yaml
+  source_surface: V8_DOWNLOADED_FILE
+  evidence_class: CUSTODY_RECEIPT
+  privacy_class: PUBLIC_HASH_ONLY
+  recommended_disposition: PUBLIC_SUMMARY
+  public_locator: 'V8 downloaded-file inventory row 53: SEGMENT_356_RECORD.yaml'
+  repository_relevance: Checkpoint, segment, portfolio, PRH/SAC, or readiness evidence retained as bounded custody.
+  owner_path: docs/project-closure/ar8r-v11/provenance/
+  sha256: 1990e46731db04f67ce9636d4ecdd839c6f8cb396878d4633226a941f79daf74
+  bytes: 2968
+- item_id: V8DL-054
+  title: SEGMENT_357_RECORD.yaml
+  source_surface: V8_DOWNLOADED_FILE
+  evidence_class: CUSTODY_RECEIPT
+  privacy_class: PUBLIC_HASH_ONLY
+  recommended_disposition: PUBLIC_SUMMARY
+  public_locator: 'V8 downloaded-file inventory row 54: SEGMENT_357_RECORD.yaml'
+  repository_relevance: Checkpoint, segment, portfolio, PRH/SAC, or readiness evidence retained as bounded custody.
+  owner_path: docs/project-closure/ar8r-v11/provenance/
+  sha256: 392eedd2da9cdb8020ede45be3536a4eed74200058f486dc6399b5acc9da9cb6
+  bytes: 1215
+- item_id: V8DL-055
+  title: TEN_ADVANCES_CUSTODY_AND_COVERAGE_MATRIX_V2.yaml
+  source_surface: V8_DOWNLOADED_FILE
+  evidence_class: PROGRAM_OR_BURDEN_RECORD
+  privacy_class: PUBLIC_HASH_ONLY
+  recommended_disposition: PUBLIC_SUMMARY
+  public_locator: 'V8 downloaded-file inventory row 55: TEN_ADVANCES_CUSTODY_AND_COVERAGE_MATRIX_V2.yaml'
+  repository_relevance: Ten Advances custody, scope, provenance, or packaging evidence; it does not establish external
+    review or adoption.
+  owner_path: docs/project-closure/ar8r-v11/programs/ten-advances-and-source-custody.md
+  sha256: d54c69090cf517ff8fbbbc7f9f6c6f289dde4750b0a0b7a2a40d53008611c200
+  bytes: 20091
+- item_id: V8DL-056
+  title: TEN_ADVANCES_FORMALIZATION_SCOPE_AUDIT_V2.yaml
+  source_surface: V8_DOWNLOADED_FILE
+  evidence_class: PROGRAM_OR_BURDEN_RECORD
+  privacy_class: PUBLIC_HASH_ONLY
+  recommended_disposition: PUBLIC_SUMMARY
+  public_locator: 'V8 downloaded-file inventory row 56: TEN_ADVANCES_FORMALIZATION_SCOPE_AUDIT_V2.yaml'
+  repository_relevance: Ten Advances custody, scope, provenance, or packaging evidence; it does not establish external
+    review or adoption.
+  owner_path: docs/project-closure/ar8r-v11/programs/ten-advances-and-source-custody.md
+  sha256: 87ae701083e63bdd09a6a0c5fac028f91d26fbbe34f95b2b04f694e1c6629b03
+  bytes: 27214
+- item_id: V8DL-057
+  title: TEN_ADVANCES_REASONING_PROVENANCE_AUDIT_V1.yaml
+  source_surface: V8_DOWNLOADED_FILE
+  evidence_class: PROGRAM_OR_BURDEN_RECORD
+  privacy_class: PUBLIC_HASH_ONLY
+  recommended_disposition: PUBLIC_SUMMARY
+  public_locator: 'V8 downloaded-file inventory row 57: TEN_ADVANCES_REASONING_PROVENANCE_AUDIT_V1.yaml'
+  repository_relevance: Ten Advances custody, scope, provenance, or packaging evidence; it does not establish external
+    review or adoption.
+  owner_path: docs/project-closure/ar8r-v11/programs/ten-advances-and-source-custody.md
+  sha256: 5a3e866339418b79398f20f74d3a78009aad36ceacdfe2c1405339cb4b7c9004
+  bytes: 4607
+- item_id: V8DL-058
+  title: TEN_ADVANCES_TO_ORTHEMOLOGY_PACKAGING_BENCHMARK_V2.yaml
+  source_surface: V8_DOWNLOADED_FILE
+  evidence_class: PROGRAM_OR_BURDEN_RECORD
+  privacy_class: PUBLIC_HASH_ONLY
+  recommended_disposition: PUBLIC_SUMMARY
+  public_locator: 'V8 downloaded-file inventory row 58: TEN_ADVANCES_TO_ORTHEMOLOGY_PACKAGING_BENCHMARK_V2.yaml'
+  repository_relevance: Ten Advances custody, scope, provenance, or packaging evidence; it does not establish external
+    review or adoption.
+  owner_path: docs/project-closure/ar8r-v11/programs/ten-advances-and-source-custody.md
+  sha256: e0a324c272b2fc97507cdafc123a6b331f05b0f63048a95cc8e9ae94eff7d401
+  bytes: 2463
+- item_id: V8DL-059
+  title: THEOREM_ORIGIN_V4_ADMISSION.yaml
+  source_surface: V8_DOWNLOADED_FILE
+  evidence_class: EXACT_AUDIT_OR_LEDGER
+  privacy_class: PUBLIC_HASH_ONLY
+  recommended_disposition: SUPERSEDED_EXACT_VERSION
+  public_locator: 'V8 downloaded-file inventory row 59: THEOREM_ORIGIN_V4_ADMISSION.yaml'
+  repository_relevance: Historical custody remains useful, but later V5/V8 authority supersedes its current-state
+    conclusion.
+  owner_path: docs/project-closure/ar8r-v11/provenance/
+  sha256: 1fa35706b025f4aa42447a03599787aef38b5e9ac8087c4edf39b31a3e386175
+  bytes: 3629
+- item_id: V8DL-060
+  title: THEOREM_ORIGIN_V4_COLD_AUDIT_148.md
+  source_surface: V8_DOWNLOADED_FILE
+  evidence_class: EXACT_AUDIT_OR_LEDGER
+  privacy_class: PUBLIC_HASH_ONLY
+  recommended_disposition: SUPERSEDED_EXACT_VERSION
+  public_locator: 'V8 downloaded-file inventory row 60: THEOREM_ORIGIN_V4_COLD_AUDIT_148.md'
+  repository_relevance: Historical custody remains useful, but later V5/V8 authority supersedes its current-state
+    conclusion.
+  owner_path: docs/project-closure/ar8r-v11/provenance/
+  sha256: 78d550de10d36cf7ad0c41abf42d83ea9dca30d42eb00d2fefe4d0923e09b131
+  bytes: 3394
+- item_id: V8DL-061
+  title: THEOREM_ORIGIN_V4_REPAIR_REREVIEW_149.md
+  source_surface: V8_DOWNLOADED_FILE
+  evidence_class: EXACT_AUDIT_OR_LEDGER
+  privacy_class: PUBLIC_HASH_ONLY
+  recommended_disposition: SUPERSEDED_EXACT_VERSION
+  public_locator: 'V8 downloaded-file inventory row 61: THEOREM_ORIGIN_V4_REPAIR_REREVIEW_149.md'
+  repository_relevance: Historical custody remains useful, but later V5/V8 authority supersedes its current-state
+    conclusion.
+  owner_path: docs/project-closure/ar8r-v11/provenance/
+  sha256: f425cb01b0f3f60484e22f2722dbb44aac6c13dbf6fa3e87562da4a276c1c450
+  bytes: 1631
+- item_id: V8DL-062
+  title: UPDATED_SOURCE_PRESERVING_R5_PORTFOLIO_TEN_ADVANCES_V2.yaml
+  source_surface: V8_DOWNLOADED_FILE
+  evidence_class: PROGRAM_OR_BURDEN_RECORD
+  privacy_class: PUBLIC_HASH_ONLY
+  recommended_disposition: PUBLIC_SUMMARY
+  public_locator: 'V8 downloaded-file inventory row 62: UPDATED_SOURCE_PRESERVING_R5_PORTFOLIO_TEN_ADVANCES_V2.yaml'
+  repository_relevance: Ten Advances custody, scope, provenance, or packaging evidence; it does not establish external
+    review or adoption.
+  owner_path: docs/project-closure/ar8r-v11/programs/ten-advances-and-source-custody.md
+  sha256: 569b24604dff224d24e18a1cffb731f80c70b35ced96e5e8740bef75d6a5cda1
+  bytes: 2808
+- item_id: V8DL-063
+  title: AR8R_CONVERSATION_ARTIFACT_REFERENCE_CATALOG_V1.yaml
+  source_surface: V8_DOWNLOADED_FILE
+  evidence_class: EXACT_VERBATIM_TRANSCRIPT
+  privacy_class: PRIVATE_EXCLUDED
+  recommended_disposition: PRIVATE_LOCAL_EVIDENCE
+  public_locator: 'V8 downloaded-file inventory row 63: AR8R_CONVERSATION_ARTIFACT_REFERENCE_CATALOG_V1.yaml'
+  repository_relevance: Conversation-native recovery artifact; raw transcript-derived content remains local and
+    private.
+  owner_path: docs/project-closure/ar8r-v11/AR8R-V11-DEFERRED-AND-EXCLUDED.md
+  sha256: cec1e9f0a7e16cc53726612aab2dd32aff464f0eb8e429efb2f438d7315ed28f
+  bytes: 15823
+- item_id: V8DL-064
+  title: AR8R_CONVERSATION_NATIVE_PAYLOAD_RECOVERY_V1.md
+  source_surface: V8_DOWNLOADED_FILE
+  evidence_class: EXACT_VERBATIM_TRANSCRIPT
+  privacy_class: PRIVATE_EXCLUDED
+  recommended_disposition: PRIVATE_LOCAL_EVIDENCE
+  public_locator: 'V8 downloaded-file inventory row 64: AR8R_CONVERSATION_NATIVE_PAYLOAD_RECOVERY_V1.md'
+  repository_relevance: Conversation-native recovery artifact; raw transcript-derived content remains local and
+    private.
+  owner_path: docs/project-closure/ar8r-v11/AR8R-V11-DEFERRED-AND-EXCLUDED.md
+  sha256: 90fa284e3d0413d0740fbfae5315ca1133b2cc3168c53f669f275fcede2ad493
+  bytes: 13304
+- item_id: V8DL-065
+  title: AR8R_CONVERSATION_NATIVE_PAYLOAD_RECOVERY_V1.yaml
+  source_surface: V8_DOWNLOADED_FILE
+  evidence_class: EXACT_VERBATIM_TRANSCRIPT
+  privacy_class: PRIVATE_EXCLUDED
+  recommended_disposition: PRIVATE_LOCAL_EVIDENCE
+  public_locator: 'V8 downloaded-file inventory row 65: AR8R_CONVERSATION_NATIVE_PAYLOAD_RECOVERY_V1.yaml'
+  repository_relevance: Conversation-native recovery artifact; raw transcript-derived content remains local and
+    private.
+  owner_path: docs/project-closure/ar8r-v11/AR8R-V11-DEFERRED-AND-EXCLUDED.md
+  sha256: d4e684dee280121ce533c3c283bfe63e89d59df3e26358880d5eee6348ca7b2e
+  bytes: 82468
+- item_id: AR8R-LANE-001
+  title: V7 canonical conversation corpus
+  source_surface: V7_FULL_THREAD
+  evidence_class: EXACT_VERBATIM_TRANSCRIPT
+  privacy_class: PRIVATE_EXCLUDED
+  recommended_disposition: PRIVATE_LOCAL_EVIDENCE
+  public_locator: V7 canonical transcript custody receipt
+  repository_relevance: Ninety-five-message private corpus used for cross-checking; bytes cannot enter the public
+    repository.
+  owner_path: docs/project-closure/ar8r-v11/AR8R-V11-DEFERRED-AND-EXCLUDED.md
+  sha256: 276de89622784766d20f1943fd4ab79f7af3dd05d81e1d71feee9f7d6f01c989
+- item_id: AR8R-LANE-002
+  title: V7 Activity corpus
+  source_surface: V7_ACTIVITY_INDEX
+  evidence_class: EXACT_ACTIVITY_RENDERING
+  privacy_class: PRIVATE_EXCLUDED
+  recommended_disposition: PRIVATE_LOCAL_EVIDENCE
+  public_locator: 'V7 Activity index: 44 controls, 43 assessed logs and one exact unavailable boundary'
+  repository_relevance: Visible command/output history used to recover exact research artifacts; raw logs and browser
+    identifiers remain private.
+  owner_path: docs/project-closure/ar8r-v11/AR8R-V11-DEFERRED-AND-EXCLUDED.md
+  sha256: f7c7b9cdee590a422da7b06dabfc8bc3a75aebf071ac47db9e2696210ae8e762
+- item_id: AR8R-LANE-003
+  title: False zero-burden and premature meniscus incident
+  source_surface: RECOVERED_ARCHIVE_MEMBER
+  evidence_class: EXACT_HISTORICAL_BYTES
+  privacy_class: PUBLIC_SAFE
+  recommended_disposition: PUBLIC_INTEGRATE
+  public_locator: Recovered incident packet; exact SHA-256
+  repository_relevance: Requires a campaign-level fail-closed reconciliation rule in addition to existing episode-level
+    closure semantics.
+  owner_path: docs/project-closure/ar8r-v11/governance/INCIDENT-AR7-FALSE-MENISCUS-CLOSURE.md
+  sha256: 56e723ba35ec29098079e6f4d75841a7793382d00b9da12d90849d35ac338d3a
+- item_id: AR8R-LANE-004
+  title: Candidate 1 hidden-matching threshold theorem
+  source_surface: RECOVERED_ARCHIVE_MEMBER
+  evidence_class: EXACT_HISTORICAL_BYTES
+  privacy_class: PUBLIC_SAFE
+  recommended_disposition: PUBLIC_INTEGRATE
+  public_locator: Recovered Candidate 1 proof and audit packet; exact SHA-256
+  repository_relevance: Exact deterministic theorem and proof are recoverable; randomized complexity, exhaustive
+    prior art, external review, and adoption remain open.
+  owner_path: docs/project-closure/ar8r-v11/theorems/candidate-1-hidden-matching-threshold.md
+  sha256: 558061bf28fc4ead94f8b3b2aa0d67826fc1180500190ab3c17a5128fe349088
+- item_id: AR8R-LANE-005
+  title: AR8R-T299 repaired theorem payload
+  source_surface: RECOVERED_ARCHIVE_MEMBER
+  evidence_class: EXACT_HISTORICAL_BYTES
+  privacy_class: PUBLIC_SAFE
+  recommended_disposition: PUBLIC_INTEGRATE
+  public_locator: Later repaired frozen packet and proof location
+  repository_relevance: Repaired exact theorem authority used with the negative synthetic pilot.
+  owner_path: docs/project-closure/ar8r-v11/theorems/ar8r-t299-matched-intervention-burden-landing.md
+  sha256: c2b70f73a3b490ae12311802615c788df07fd1734d725686fc8b912faea304c7
+- item_id: AR8R-LANE-006
+  title: AR8R-T300 repaired theorem payload
+  source_surface: RECOVERED_ARCHIVE_MEMBER
+  evidence_class: EXACT_HISTORICAL_BYTES
+  privacy_class: PUBLIC_SAFE
+  recommended_disposition: PUBLIC_INTEGRATE
+  public_locator: Later repaired frozen packet and proof location
+  repository_relevance: Repaired exact theorem authority used with the negative synthetic pilot.
+  owner_path: docs/project-closure/ar8r-v11/theorems/ar8r-t300-lower-order-alignment-blind-restoration.md
+  sha256: c06e384f57ecfc289df9c221cbdb696d312a9187de14794882c8c9fb7e62d3e7
+- item_id: AR8R-LANE-007
+  title: AR8R-T299 pre-repair payload
+  source_surface: RECOVERED_ARCHIVE_MEMBER
+  evidence_class: EXACT_HISTORICAL_BYTES
+  privacy_class: PUBLIC_HASH_ONLY
+  recommended_disposition: SUPERSEDED_EXACT_VERSION
+  public_locator: Cold-audit frozen input preceding repair
+  repository_relevance: Preserved for version custody; must not be merged with repaired wording.
+  owner_path: docs/project-closure/ar8r-v11/theorems/ar8r-t299-matched-intervention-burden-landing.md
+  sha256: 4b64280cbf8fe51324cb2d55836eca396f47f4adbd757f648f40448bdf0ce12d
+- item_id: AR8R-LANE-008
+  title: AR8R-T300 pre-repair payload
+  source_surface: RECOVERED_ARCHIVE_MEMBER
+  evidence_class: EXACT_HISTORICAL_BYTES
+  privacy_class: PUBLIC_HASH_ONLY
+  recommended_disposition: SUPERSEDED_EXACT_VERSION
+  public_locator: Cold-audit frozen input preceding repair
+  repository_relevance: Preserved for version custody; must not be merged with repaired wording.
+  owner_path: docs/project-closure/ar8r-v11/theorems/ar8r-t300-lower-order-alignment-blind-restoration.md
+  sha256: e115e04782125f6ad0e23b28bb96da7fbc1820ae7bb090fe048652271c9f8892
+- item_id: AR8R-LANE-009
+  title: Candidate E proper-function partition
+  source_surface: RECOVERED_ARCHIVE_AND_ACTIVITY
+  evidence_class: PROGRAM_OR_BURDEN_RECORD
+  privacy_class: PUBLIC_HASH_ONLY
+  recommended_disposition: DEFERRED_INSUFFICIENT_AUDIT
+  public_locator: Candidate E exact packet and independent-audit finding
+  repository_relevance: Historical packet explicitly lacked a counted cold audit; retain as a research program,
+    not an admitted theorem.
+  owner_path: docs/project-closure/ar8r-v11/programs/proper-function-and-candidate-e.md
+- item_id: AR8R-LANE-010
+  title: Candidate G derivational unification
+  source_surface: RECOVERED_ARCHIVE_MEMBER
+  evidence_class: EXACT_HISTORICAL_BYTES
+  privacy_class: PUBLIC_HASH_ONLY
+  recommended_disposition: DEFERRED_INSUFFICIENT_AUDIT
+  public_locator: Candidate G theorem packet and audit boundary
+  repository_relevance: Exact theorem packet exists, but the historical independent-audit record reports no counted
+    cold audit.
+  owner_path: docs/project-closure/ar8r-v11/programs/candidate-g-derivational-unification.md
+  sha256: 781eb3cba34cc9c79b077d417abb9eb0c83c5274e234922ff895560521c637e6
+- item_id: AR8R-LANE-011
+  title: Tensor representations and Bitter Lesson discipline
+  source_surface: V7_TRANSCRIPT_AND_ACTIVITY
+  evidence_class: PROGRAM_OR_BURDEN_RECORD
+  privacy_class: PUBLIC_HASH_ONLY
+  recommended_disposition: PUBLIC_SUMMARY
+  public_locator: 'V7 transcript topic receipt: tensor, permutation checks, missingness, kill conditions'
+  repository_relevance: Preserve the representation-learning protocol and anti-hand-authored-taxonomy warning without
+    inventing the missing seventh A-G definition.
+  owner_path: docs/project-closure/ar8r-v11/programs/tensor-and-bitter-lesson.md
+  campaign_epoch: CROSS_EPOCH_NAVIGATION_ONLY
+- item_id: AR8R-LANE-012
+  title: Agentic communication program
+  source_surface: SUPPLIED_LATER_PMR_ADDENDUM
+  evidence_class: PROGRAM_OR_BURDEN_RECORD
+  privacy_class: PUBLIC_HASH_ONLY
+  recommended_disposition: PUBLIC_SUMMARY
+  public_locator: Agentic communication and language addendum; exact SHA-256
+  repository_relevance: Preserve multi-agent receipt, authorization, provenance, acknowledgment, and common-knowledge
+    burdens as a program unless separately audited.
+  owner_path: docs/project-closure/ar8r-v11/programs/agentic-communication.md
+  sha256: 1857fed8ed1e7f00255930392d643f734bfb0d9f7fbf21d6b1913892ace856d8
+  campaign_epoch: LATER_PMR_CHARTER
+- item_id: AR8R-LANE-013
+  title: Language, translation, occurrence, and version custody
+  source_surface: SUPPLIED_LATER_PMR_ADDENDUM
+  evidence_class: PROGRAM_OR_BURDEN_RECORD
+  privacy_class: PUBLIC_HASH_ONLY
+  recommended_disposition: PUBLIC_SUMMARY
+  public_locator: Agentic communication and language addendum; exact SHA-256
+  repository_relevance: Preserve translation-fibre, occurrence-meaning, version-applicability, and authority boundaries.
+  owner_path: docs/project-closure/ar8r-v11/programs/language-translation-and-version-custody.md
+  sha256: 1857fed8ed1e7f00255930392d643f734bfb0d9f7fbf21d6b1913892ace856d8
+  campaign_epoch: LATER_PMR_CHARTER
+- item_id: AR8R-LANE-014
+  title: TAC/SAC identity, lineage, duplication, and independence
+  source_surface: V7_TRANSCRIPT_ACTIVITY_AND_LEDGERS
+  evidence_class: PROGRAM_OR_BURDEN_RECORD
+  privacy_class: PUBLIC_HASH_ONLY
+  recommended_disposition: PUBLIC_SUMMARY
+  public_locator: V7 topic receipt and downloaded PRH/SAC custody analyses
+  repository_relevance: Keep identity, state, function, lineage, provenance root, and evidential independence distinct;
+    historical terms remain unassigned without exact source.
+  owner_path: docs/project-closure/ar8r-v11/programs/tac-sac-identity-and-independence.md
+  campaign_epoch: CROSS_EPOCH_NAVIGATION_ONLY
+- item_id: AR8R-LANE-015
+  title: Uncreated grammar and articulability
+  source_surface: SUPPLIED_LATER_PMR_ADDENDUM
+  evidence_class: PROGRAM_OR_BURDEN_RECORD
+  privacy_class: PUBLIC_HASH_ONLY
+  recommended_disposition: PUBLIC_SUMMARY
+  public_locator: Uncreated-grammar addendum; exact SHA-256
+  repository_relevance: Preserve grammar/articulability questions and nonbridge constraints; do not treat program
+    theorem labels as admitted results.
+  owner_path: docs/project-closure/ar8r-v11/programs/uncreated-grammar-and-articulability.md
+  sha256: 1857fed8ed1e7f00255930392d643f734bfb0d9f7fbf21d6b1913892ace856d8
+  campaign_epoch: LATER_PMR_CHARTER
+- item_id: AR8R-LANE-016
+  title: Candidate N, R5, Track T, and source-ascent portfolio
+  source_surface: V7_TRANSCRIPT_ACTIVITY_AND_SOURCE_DOSSIERS
+  evidence_class: PROGRAM_OR_BURDEN_RECORD
+  privacy_class: PUBLIC_HASH_ONLY
+  recommended_disposition: PUBLIC_SUMMARY
+  public_locator: Portfolio and source-ascent custody receipt
+  repository_relevance: Preserve rival architectures, plural realization, common-bearer guards, epistemic unification,
+    and transcendental-ascent burdens without claiming a champion.
+  owner_path: docs/project-closure/ar8r-v11/programs/candidate-n-r5-track-t-and-source-ascent.md
+  campaign_epoch: CROSS_EPOCH_NAVIGATION_ONLY
+- item_id: AR8R-LANE-017
+  title: Ten Advances custody and formalization scope
+  source_surface: V8_DOWNLOADED_AND_V7
+  evidence_class: EXACT_AUDIT_OR_LEDGER
+  privacy_class: PUBLIC_HASH_ONLY
+  recommended_disposition: PUBLIC_SUMMARY
+  public_locator: Ten Advances custody matrices in V8 download inventory
+  repository_relevance: Preserve exact coverage and scope ceilings; no external review, source specialist confirmation,
+    or adoption.
+  owner_path: docs/project-closure/ar8r-v11/programs/ten-advances-and-source-custody.md
+- item_id: AR8R-LANE-018
+  title: Theorem-family deduplication and false multiplicity
+  source_surface: V8_DOWNLOADED_AND_V7
+  evidence_class: EXACT_AUDIT_OR_LEDGER
+  privacy_class: PUBLIC_HASH_ONLY
+  recommended_disposition: PUBLIC_INTEGRATE
+  public_locator: V8 family/ancestry and false-multiplicity records
+  repository_relevance: Prevent repeated formal skeletons from receiving duplicate independent origin or novelty
+    credit.
+  owner_path: docs/project-closure/ar8r-v11/provenance/AR8R-THEOREM-FAMILY-REGISTRY-V1.yaml
+- item_id: AR8R-LANE-019
+  title: V8 exact/reconstruction/replacement identity authority
+  source_surface: CURRENT_MAIN_V8_PACKET
+  evidence_class: EXACT_AUDIT_OR_LEDGER
+  privacy_class: PUBLIC_SAFE
+  recommended_disposition: PUBLIC_INTEGRATE
+  public_locator: Current main AR8R V8 identity index
+  repository_relevance: Preserve 18 exact target recoveries, T150 replacement-only, T354 blocked, T366 reconstruction-only,
+    and 22 unresolved identities.
+  owner_path: docs/project-closure/ar8r-v11/provenance/AR8R-CANONICAL-THEOREM-ORIGIN-REGISTRY-V6.yaml
+- item_id: AR8R-LANE-020
+  title: Institutional-memory correction
+  source_surface: SUPPLIED_CORRECTION_PACKET
+  evidence_class: PROGRAM_OR_BURDEN_RECORD
+  privacy_class: PUBLIC_HASH_ONLY
+  recommended_disposition: PUBLIC_SUMMARY
+  public_locator: Pre-PMR institutional-memory correction; exact SHA-256
+  repository_relevance: Cross-checks Candidate 1, the false-meniscus incident, the T299/T300 pilot, tensor debate,
+    Bitter Lesson, and family-registry omissions.
+  owner_path: docs/project-closure/ar8r-v11/AR8R-V11-DEFERRED-AND-EXCLUDED.md
+  sha256: 78adca85a7ca206704dc1bf05d9abe1a74047bea65936fedaadb81966b80a8a0
+- item_id: AR8R-LANE-021
+  title: Proper functionalism and epistemic unification
+  source_surface: V7_TRANSCRIPT_AND_ACTIVITY
+  evidence_class: PROGRAM_OR_BURDEN_RECORD
+  privacy_class: PUBLIC_HASH_ONLY
+  recommended_disposition: PUBLIC_SUMMARY
+  public_locator: 'V7 topic receipt: proper function and distributed epistemic integration'
+  repository_relevance: Retain proper-function, defeater, integration, and noncollapse burdens across theological,
+    epistemic, and agentic lanes.
+  owner_path: docs/project-closure/ar8r-v11/programs/proper-function-and-candidate-e.md
+- item_id: AR8R-LANE-022
+  title: Historical unresolved identity set
+  source_surface: CURRENT_MAIN_V8_PACKET
+  evidence_class: CUSTODY_RECEIPT
+  privacy_class: PUBLIC_SAFE
+  recommended_disposition: PUBLIC_INTEGRATE
+  public_locator: Current main V8 unresolved ledger
+  repository_relevance: Exactly 22 historical identities remain without exact payload; none may receive invented
+    wording or repository-ready status.
+  owner_path: docs/project-closure/ar8r-v11/provenance/AR8R-CANONICAL-THEOREM-ORIGIN-REGISTRY-V6.yaml
+- item_id: AR8R-LANE-023
+  title: Whole-thread attachment surface
+  source_surface: V7_ATTACHMENT_INDEX
+  evidence_class: CUSTODY_RECEIPT
+  privacy_class: PRIVATE_EXCLUDED
+  recommended_disposition: PRIVATE_LOCAL_EVIDENCE
+  public_locator: 'V7 attachment index: 1,127 visible rows; exact SHA-256'
+  repository_relevance: The full locator-bearing index remains private; V8 classified 464 mandatory first-party
+    appearances and recovered 65 exact downloaded files.
+  owner_path: docs/project-closure/ar8r-v11/AR8R-V11-DEFERRED-AND-EXCLUDED.md
+  sha256: 671bdfbfe22d95fa806e90577bc3e6a7d9118efb954d31305c3433c07fca2d2c
+- item_id: AR8R-LANE-024
+  title: First-party attachment custody closure
+  source_surface: V8_FIRST_PARTY_LEDGER
+  evidence_class: CUSTODY_RECEIPT
+  privacy_class: PRIVATE_EXCLUDED
+  recommended_disposition: PRIVATE_LOCAL_EVIDENCE
+  public_locator: 'V8 first-party custody ledger: 464 rows; exact SHA-256'
+  repository_relevance: Sixty-five files were recovered and rehashed; 399 appearances ended in exact unavailable
+    or boundary dispositions rather than inferred absence.
+  owner_path: docs/project-closure/ar8r-v11/AR8R-V11-DEFERRED-AND-EXCLUDED.md
+  sha256: fb1a1df318ad7a1e235891ed739fe4b7bff9c997c79430d27c9cfee108ac82d9
+- item_id: AR8R-LANE-025
+  title: Activity file-reference universe
+  source_surface: V8_ACTIVITY_FILE_REFERENCE_LEDGER
+  evidence_class: CUSTODY_RECEIPT
+  privacy_class: PRIVATE_EXCLUDED
+  recommended_disposition: PRIVATE_LOCAL_EVIDENCE
+  public_locator: 'V8 Activity file-reference ledger: 17,293 appearances; exact SHA-256'
+  repository_relevance: The private locator ledger establishes the breadth of referenced artifacts; filename absence
+    from current main is a search lead, not automatic publication authority.
+  owner_path: docs/project-closure/ar8r-v11/AR8R-V11-DEFERRED-AND-EXCLUDED.md
+  sha256: f561114d0c3af1218e6fc144a6fdf35009dd4483d19be2835e5f75d48006a547
+- item_id: AR8R-LANE-026
+  title: Structured Activity assessment
+  source_surface: V8_ACTIVITY_ASSESSMENT_LEDGER
+  evidence_class: EXACT_ACTIVITY_RENDERING
+  privacy_class: PRIVATE_EXCLUDED
+  recommended_disposition: PRIVATE_LOCAL_EVIDENCE
+  public_locator: 'V8 Activity assessment ledger: 1,490 rows across 43 structurally parsed flyouts; exact SHA-256'
+  repository_relevance: Commands, outputs, heredocs, writes, audits, repairs, errors, and artifact references were
+    searched; raw bodies remain private.
+  owner_path: docs/project-closure/ar8r-v11/AR8R-V11-DEFERRED-AND-EXCLUDED.md
+  sha256: 4aa36d103767bbfd065cb2e138a54f7b482cf7aa09aade1b6183639bca064821
+- item_id: AR8R-HIST-T89
+  title: 'AR8R-T89: Source provenance does not entail translation truth'
+  source_surface: V5_EXACT_LEDGER_RECORD
+  evidence_class: EXACT_AUDIT_OR_LEDGER
+  privacy_class: PUBLIC_SAFE
+  recommended_disposition: PUBLIC_SUMMARY
+  public_locator: V5 theorem-origin registry record AR8R-T89
+  repository_relevance: Exact bounded historical ledger statement and audit disposition; proof bytes are not imported
+    by this row.
+  owner_path: docs/project-closure/ar8r-v11/provenance/AR8R-SELECTED-HISTORICAL-BOUNDARY-RECORDS-V1.yaml
+  sha256: 843a7b7b238cfccc6b45934644f0568cc84e7826ebeddd9528511bf37111b440
+  campaign_epoch: HISTORICAL_AR8R
+- item_id: AR8R-HIST-T99
+  title: 'AR8R-T99: Transcript-augmentation access-model dichotomy'
+  source_surface: V5_EXACT_LEDGER_RECORD
+  evidence_class: EXACT_AUDIT_OR_LEDGER
+  privacy_class: PUBLIC_SAFE
+  recommended_disposition: PUBLIC_SUMMARY
+  public_locator: V5 theorem-origin registry record AR8R-T99
+  repository_relevance: Exact bounded historical ledger statement and audit disposition; proof bytes are not imported
+    by this row.
+  owner_path: docs/project-closure/ar8r-v11/provenance/AR8R-SELECTED-HISTORICAL-BOUNDARY-RECORDS-V1.yaml
+  sha256: 843a7b7b238cfccc6b45934644f0568cc84e7826ebeddd9528511bf37111b440
+  campaign_epoch: HISTORICAL_AR8R
+- item_id: AR8R-HIST-T100
+  title: 'AR8R-T100: Pure-copy provenance-root quotient invariance'
+  source_surface: V5_EXACT_LEDGER_RECORD
+  evidence_class: EXACT_AUDIT_OR_LEDGER
+  privacy_class: PUBLIC_SAFE
+  recommended_disposition: PUBLIC_SUMMARY
+  public_locator: V5 theorem-origin registry record AR8R-T100
+  repository_relevance: Exact bounded historical ledger statement and audit disposition; proof bytes are not imported
+    by this row.
+  owner_path: docs/project-closure/ar8r-v11/provenance/AR8R-SELECTED-HISTORICAL-BOUNDARY-RECORDS-V1.yaml
+  sha256: 843a7b7b238cfccc6b45934644f0568cc84e7826ebeddd9528511bf37111b440
+  campaign_epoch: HISTORICAL_AR8R
+- item_id: AR8R-HIST-T244
+  title: 'AR8R-T244: Base-language novelty requires a nonconservative bridge'
+  source_surface: V5_EXACT_LEDGER_RECORD
+  evidence_class: EXACT_AUDIT_OR_LEDGER
+  privacy_class: PUBLIC_SAFE
+  recommended_disposition: PUBLIC_SUMMARY
+  public_locator: V5 theorem-origin registry record AR8R-T244
+  repository_relevance: Exact bounded historical ledger statement and audit disposition; proof bytes are not imported
+    by this row.
+  owner_path: docs/project-closure/ar8r-v11/provenance/AR8R-SELECTED-HISTORICAL-BOUNDARY-RECORDS-V1.yaml
+  sha256: 843a7b7b238cfccc6b45934644f0568cc84e7826ebeddd9528511bf37111b440
+  campaign_epoch: HISTORICAL_AR8R
+- item_id: AR8R-CAND-E-ARGUMENT
+  title: Candidate E argument custody
+  source_surface: RECOVERED_ARCHIVE_MEMBER
+  evidence_class: EXACT_HISTORICAL_BYTES
+  privacy_class: PUBLIC_HASH_ONLY
+  recommended_disposition: DEFERRED_INSUFFICIENT_AUDIT
+  public_locator: Candidate E argument SHA-256 receipt
+  repository_relevance: Exact Candidate E member custody; no counted cold audit.
+  owner_path: docs/project-closure/ar8r-v11/programs/proper-function-and-candidate-e.md
+  sha256: 17fcba74e46f016ffe8c4d84c5248f4692e03052ac30dd3df1789f62a94cc14a
+  campaign_epoch: HISTORICAL_AR8R
+- item_id: AR8R-CAND-E-FORMAL
+  title: Candidate E formal custody
+  source_surface: RECOVERED_ARCHIVE_MEMBER
+  evidence_class: EXACT_HISTORICAL_BYTES
+  privacy_class: PUBLIC_HASH_ONLY
+  recommended_disposition: DEFERRED_INSUFFICIENT_AUDIT
+  public_locator: Candidate E formal SHA-256 receipt
+  repository_relevance: Exact Candidate E member custody; no counted cold audit.
+  owner_path: docs/project-closure/ar8r-v11/programs/proper-function-and-candidate-e.md
+  sha256: 774d241695b4e8df5865008918d4e601a2e26f6d9c31bea034b3351c14b810c3
+  campaign_epoch: HISTORICAL_AR8R
+- item_id: AR8R-CAND-E-AUDIT
+  title: Candidate E audit custody
+  source_surface: RECOVERED_ARCHIVE_MEMBER
+  evidence_class: EXACT_HISTORICAL_BYTES
+  privacy_class: PUBLIC_HASH_ONLY
+  recommended_disposition: DEFERRED_INSUFFICIENT_AUDIT
+  public_locator: Candidate E audit SHA-256 receipt
+  repository_relevance: Exact Candidate E member custody; no counted cold audit.
+  owner_path: docs/project-closure/ar8r-v11/programs/proper-function-and-candidate-e.md
+  sha256: 895b1d65c37af6661c8fe8b3f8a020053e12c7b40d34750b7b3544001c06d19b
+  campaign_epoch: HISTORICAL_AR8R
+- item_id: AR8R-CAND-E-NOVELTY
+  title: Candidate E novelty custody
+  source_surface: RECOVERED_ARCHIVE_MEMBER
+  evidence_class: EXACT_HISTORICAL_BYTES
+  privacy_class: PUBLIC_HASH_ONLY
+  recommended_disposition: DEFERRED_INSUFFICIENT_AUDIT
+  public_locator: Candidate E novelty SHA-256 receipt
+  repository_relevance: Exact Candidate E member custody; no counted cold audit.
+  owner_path: docs/project-closure/ar8r-v11/programs/proper-function-and-candidate-e.md
+  sha256: 34be7fd80c8f97ab348859291b412a7fc0a59e6fce418b1de289b2a9014c468e
+  campaign_epoch: HISTORICAL_AR8R
+- item_id: AR8R-CAND-G-ARGUMENT
+  title: Candidate G argument custody
+  source_surface: RECOVERED_ARCHIVE_MEMBER
+  evidence_class: EXACT_HISTORICAL_BYTES
+  privacy_class: PUBLIC_HASH_ONLY
+  recommended_disposition: DEFERRED_INSUFFICIENT_AUDIT
+  public_locator: Candidate G argument SHA-256 receipt
+  repository_relevance: Exact Candidate G member custody; no counted cold audit.
+  owner_path: docs/project-closure/ar8r-v11/programs/candidate-g-derivational-unification.md
+  sha256: cb6021b4a7a1363ba77ece8e1c8e9d6d9a1b923ec9a27ed6bd14fccb2f822f7f
+  campaign_epoch: HISTORICAL_AR8R
+- item_id: AR8R-CAND-G-THEOREM
+  title: Candidate G theorem custody
+  source_surface: RECOVERED_ARCHIVE_MEMBER
+  evidence_class: EXACT_HISTORICAL_BYTES
+  privacy_class: PUBLIC_HASH_ONLY
+  recommended_disposition: DEFERRED_INSUFFICIENT_AUDIT
+  public_locator: Candidate G theorem SHA-256 receipt
+  repository_relevance: Exact Candidate G member custody; no counted cold audit.
+  owner_path: docs/project-closure/ar8r-v11/programs/candidate-g-derivational-unification.md
+  sha256: 781eb3cba34cc9c79b077d417abb9eb0c83c5274e234922ff895560521c637e6
+  campaign_epoch: HISTORICAL_AR8R
+- item_id: AR8R-CAND-G-FORMAL
+  title: Candidate G formal custody
+  source_surface: RECOVERED_ARCHIVE_MEMBER
+  evidence_class: EXACT_HISTORICAL_BYTES
+  privacy_class: PUBLIC_HASH_ONLY
+  recommended_disposition: DEFERRED_INSUFFICIENT_AUDIT
+  public_locator: Candidate G formal SHA-256 receipt
+  repository_relevance: Exact Candidate G member custody; no counted cold audit.
+  owner_path: docs/project-closure/ar8r-v11/programs/candidate-g-derivational-unification.md
+  sha256: 6b3828ec336a3c2ce442232b4b1fc4c8a00920b481485f82573a569a59c50930
+  campaign_epoch: HISTORICAL_AR8R
+- item_id: AR8R-CAND-G-AUDIT
+  title: Candidate G audit custody
+  source_surface: RECOVERED_ARCHIVE_MEMBER
+  evidence_class: EXACT_HISTORICAL_BYTES
+  privacy_class: PUBLIC_HASH_ONLY
+  recommended_disposition: DEFERRED_INSUFFICIENT_AUDIT
+  public_locator: Candidate G audit SHA-256 receipt
+  repository_relevance: Exact Candidate G member custody; no counted cold audit.
+  owner_path: docs/project-closure/ar8r-v11/programs/candidate-g-derivational-unification.md
+  sha256: 910e43e7547caf7988080201b652350c03cb8144bbc9566758e08cd708385326
+  campaign_epoch: HISTORICAL_AR8R
+- item_id: AR8R-CAND-G-NOVELTY
+  title: Candidate G novelty custody
+  source_surface: RECOVERED_ARCHIVE_MEMBER
+  evidence_class: EXACT_HISTORICAL_BYTES
+  privacy_class: PUBLIC_HASH_ONLY
+  recommended_disposition: DEFERRED_INSUFFICIENT_AUDIT
+  public_locator: Candidate G novelty SHA-256 receipt
+  repository_relevance: Exact Candidate G member custody; no counted cold audit.
+  owner_path: docs/project-closure/ar8r-v11/programs/candidate-g-derivational-unification.md
+  sha256: 1cb9a1b6b745835fb82e475e4e58367040a61891418a40658f828523f5f95754
+  campaign_epoch: HISTORICAL_AR8R
+- item_id: AR8R-T228-CANONICAL
+  title: AR8R-T228 canonical strict-progress theorem
+  source_surface: RECOVERED_ARCHIVE_MEMBER
+  evidence_class: EXACT_HISTORICAL_BYTES
+  privacy_class: PUBLIC_HASH_ONLY
+  recommended_disposition: PUBLIC_INTEGRATE
+  public_locator: Canonical T228 repaired payload hash
+  repository_relevance: Canonical T228 bytes; supersedes the pre-renumber T227-labelled copy.
+  owner_path: docs/project-closure/ar8r-v11/theorems/ar8r-t228-strict-progress-coinductive-collapse.md
+  sha256: 25c94b9b0b52f814ea02931a2e1b7370ac8866a32fd7bbd48925671c9f11c9ec
+  campaign_epoch: HISTORICAL_AR8R
+- item_id: AR8R-T228-REREVIEW
+  title: AR8R-T228 identity-custody rereview
+  source_surface: RECOVERED_ARCHIVE_MEMBER
+  evidence_class: EXACT_AUDIT_OR_LEDGER
+  privacy_class: PUBLIC_HASH_ONLY
+  recommended_disposition: PUBLIC_SUMMARY
+  public_locator: T228 identity-custody rereview hash
+  repository_relevance: Confirms T228 canonical precedence without duplicate credit.
+  owner_path: docs/project-closure/ar8r-v11/theorems/ar8r-t227-t228-validation-receipt.yaml
+  sha256: c94f951b83fb3c87fd32669ecf4f99a84e9b66649a2fec8ada09f14e968f5669
+  campaign_epoch: HISTORICAL_AR8R
+- item_id: AR8R-REP-CONTROLLERS
+  title: Search-controller registry A-G
+  source_surface: RECOVERED_ARCHIVE_MEMBER
+  evidence_class: EXACT_AUDIT_OR_LEDGER
+  privacy_class: PUBLIC_HASH_ONLY
+  recommended_disposition: PUBLIC_SUMMARY
+  public_locator: Search-controller registry A-G hash receipt
+  repository_relevance: Bounded representation/controller custody with no predictive or tensor promotion.
+  owner_path: docs/project-closure/ar8r-v11/programs/tensor-and-bitter-lesson.md
+  sha256: a433c729296f55191308ef9adb1cedae123a8c03c73d07c990de18154bb2aafc
+  campaign_epoch: HISTORICAL_AR8R
+- item_id: AR8R-REP-CONTROLLER-RESULT
+  title: Historical controller evaluation
+  source_surface: RECOVERED_ARCHIVE_MEMBER
+  evidence_class: EXACT_AUDIT_OR_LEDGER
+  privacy_class: PUBLIC_HASH_ONLY
+  recommended_disposition: PUBLIC_SUMMARY
+  public_locator: Historical controller evaluation hash receipt
+  repository_relevance: Bounded representation/controller custody with no predictive or tensor promotion.
+  owner_path: docs/project-closure/ar8r-v11/programs/tensor-and-bitter-lesson.md
+  sha256: a4386a97bf5f0a43f95737286a6812766602f77e3a5080daa2ddddfd6da5ac39
+  campaign_epoch: HISTORICAL_AR8R
+- item_id: AR8R-REP-PREREG
+  title: Representation diagnostic preregistration A-F
+  source_surface: RECOVERED_ARCHIVE_MEMBER
+  evidence_class: EXACT_AUDIT_OR_LEDGER
+  privacy_class: PUBLIC_HASH_ONLY
+  recommended_disposition: PUBLIC_SUMMARY
+  public_locator: Representation diagnostic preregistration A-F hash receipt
+  repository_relevance: Bounded representation/controller custody with no predictive or tensor promotion.
+  owner_path: docs/project-closure/ar8r-v11/programs/tensor-and-bitter-lesson.md
+  sha256: 037ca6517428a18f2b5397815cd8cfa3faac32e659a69b70260089a6836e5bc9
+  campaign_epoch: HISTORICAL_AR8R
+- item_id: AR8R-REP-P186
+  title: P186 underpowered representation diagnostic
+  source_surface: RECOVERED_ARCHIVE_MEMBER
+  evidence_class: EXACT_AUDIT_OR_LEDGER
+  privacy_class: PUBLIC_HASH_ONLY
+  recommended_disposition: PUBLIC_SUMMARY
+  public_locator: P186 underpowered representation diagnostic hash receipt
+  repository_relevance: Bounded representation/controller custody with no predictive or tensor promotion.
+  owner_path: docs/project-closure/ar8r-v11/programs/tensor-and-bitter-lesson.md
+  sha256: 9f70ce3e8d9f9b85107cf06e1cbe5b5cd08bd8dfcd6df037ecac99ec64f98979
+  campaign_epoch: HISTORICAL_AR8R
+- item_id: AR8R-REP-AUDIT77
+  title: P186 representation diagnostic audit 77
+  source_surface: RECOVERED_ARCHIVE_MEMBER
+  evidence_class: EXACT_AUDIT_OR_LEDGER
+  privacy_class: PUBLIC_HASH_ONLY
+  recommended_disposition: PUBLIC_SUMMARY
+  public_locator: P186 representation diagnostic audit 77 hash receipt
+  repository_relevance: Bounded representation/controller custody with no predictive or tensor promotion.
+  owner_path: docs/project-closure/ar8r-v11/programs/tensor-and-bitter-lesson.md
+  sha256: 41a7a2cfe93f593132da5d5e8d3a8238907901ccc3d44b79cca284014f908672
+  campaign_epoch: HISTORICAL_AR8R
+- item_id: AR8R-T296
+  title: AR8R-T296 pairwise-PMI higher-order underdetermination
+  source_surface: RECOVERED_ARCHIVE_MEMBER
+  evidence_class: EXACT_HISTORICAL_BYTES
+  privacy_class: PUBLIC_HASH_ONLY
+  recommended_disposition: PUBLIC_SUMMARY
+  public_locator: T296 exact theorem hash
+  repository_relevance: Audited parity counterexample with zero general novelty and bounded PRH consequence.
+  owner_path: docs/project-closure/ar8r-v11/programs/prh-higher-order-and-causal-restoration.md
+  sha256: 39f604bceaa31eede474226ebdec642cfe1d683188fe9a2a012101d0d16ec9a9
+  campaign_epoch: HISTORICAL_AR8R
+- item_id: AR8R-P478
+  title: P478 PRH higher-order restoration protocol
+  source_surface: RECOVERED_ARCHIVE_MEMBER
+  evidence_class: PROGRAM_OR_BURDEN_RECORD
+  privacy_class: PUBLIC_HASH_ONLY
+  recommended_disposition: PUBLIC_SUMMARY
+  public_locator: P478 protocol hash
+  repository_relevance: Protocol ready and unrun; zero empirical-result credit.
+  owner_path: docs/project-closure/ar8r-v11/programs/prh-higher-order-and-causal-restoration.md
+  sha256: 35b4305a1d24462755dcc89cb790ef8d046a71fbab042d08f3326ec4f8a54d74
+  campaign_epoch: HISTORICAL_AR8R
+- item_id: AR8R-R5-P480
+  title: P480 R5 minimal-nonintegration control
+  source_surface: RECOVERED_ARCHIVE_MEMBER
+  evidence_class: EXACT_AUDIT_OR_LEDGER
+  privacy_class: PUBLIC_HASH_ONLY
+  recommended_disposition: PUBLIC_SUMMARY
+  public_locator: P480 R5 control hash
+  repository_relevance: Exact rival-control custody and defeat conditions; not a universal theorem.
+  owner_path: docs/project-closure/ar8r-v11/programs/ar8r-r5-minimal-nonintegration-control.md
+  sha256: 19251d19bf7187defc47667895c011bf9007127c745aa8ababad21edec7b0fa4
+  campaign_epoch: HISTORICAL_AR8R
+- item_id: AR8R-CORR-AGCOM
+  title: Agentic communication/language/uncreated-grammar addendum
+  source_surface: SUPPLIED_CORRECTION_PACKET
+  evidence_class: PROGRAM_OR_BURDEN_RECORD
+  privacy_class: PUBLIC_HASH_ONLY
+  recommended_disposition: PUBLIC_SUMMARY
+  public_locator: 'Supplied correction hash: 1857fed8ed1e7f00255930392d643f734bfb0d9f7fbf21d6b1913892ace856d8'
+  repository_relevance: Program routing and burden authority; not theorem admission.
+  owner_path: docs/project-closure/ar8r-v11/programs/program-surface-and-correction-custody.yaml
+  sha256: 1857fed8ed1e7f00255930392d643f734bfb0d9f7fbf21d6b1913892ace856d8
+  campaign_epoch: LATER_PMR_OR_CORRECTION
+- item_id: AR8R-CORR-FRONTIER
+  title: PMR-007 integrated-frontier reorientation
+  source_surface: SUPPLIED_CORRECTION_PACKET
+  evidence_class: PROGRAM_OR_BURDEN_RECORD
+  privacy_class: PUBLIC_HASH_ONLY
+  recommended_disposition: PUBLIC_SUMMARY
+  public_locator: 'Supplied correction hash: e64517b2036fc2b5f3c07153a86f6eeee53dfc8b21c2f63a9769f8dcea848991'
+  repository_relevance: Program routing and burden authority; not theorem admission.
+  owner_path: docs/project-closure/ar8r-v11/programs/program-surface-and-correction-custody.yaml
+  sha256: e64517b2036fc2b5f3c07153a86f6eeee53dfc8b21c2f63a9769f8dcea848991
+  campaign_epoch: LATER_PMR_OR_CORRECTION
+- item_id: AR8R-CORR-ACTIVATION
+  title: Post-merge meniscus campaign activation
+  source_surface: SUPPLIED_CORRECTION_PACKET
+  evidence_class: PROGRAM_OR_BURDEN_RECORD
+  privacy_class: PUBLIC_HASH_ONLY
+  recommended_disposition: PUBLIC_SUMMARY
+  public_locator: 'Supplied correction hash: 1eb9726475b99da97aa710ed318bb1f274e805eb600f0e0e10e90aa59b106633'
+  repository_relevance: Program routing and burden authority; not theorem admission.
+  owner_path: docs/project-closure/ar8r-v11/programs/program-surface-and-correction-custody.yaml
+  sha256: 1eb9726475b99da97aa710ed318bb1f274e805eb600f0e0e10e90aa59b106633
+  campaign_epoch: LATER_PMR_OR_CORRECTION
+- item_id: AR8R-CORR-SCOPE
+  title: Post-merge research scope correction
+  source_surface: SUPPLIED_CORRECTION_PACKET
+  evidence_class: PROGRAM_OR_BURDEN_RECORD
+  privacy_class: PUBLIC_HASH_ONLY
+  recommended_disposition: PUBLIC_SUMMARY
+  public_locator: 'Supplied correction hash: 3389322a773d3610ed30590dff941452305612d4f95c05759e230761518a722d'
+  repository_relevance: Program routing and burden authority; not theorem admission.
+  owner_path: docs/project-closure/ar8r-v11/programs/program-surface-and-correction-custody.yaml
+  sha256: 3389322a773d3610ed30590dff941452305612d4f95c05759e230761518a722d
+  campaign_epoch: LATER_PMR_OR_CORRECTION
+- item_id: AR8R-CORR-MEMORY
+  title: Pre-PMR institutional-memory correction
+  source_surface: SUPPLIED_CORRECTION_PACKET
+  evidence_class: PROGRAM_OR_BURDEN_RECORD
+  privacy_class: PUBLIC_HASH_ONLY
+  recommended_disposition: PUBLIC_SUMMARY
+  public_locator: 'Supplied correction hash: 78adca85a7ca206704dc1bf05d9abe1a74047bea65936fedaadb81966b80a8a0'
+  repository_relevance: Program routing and burden authority; not theorem admission.
+  owner_path: docs/project-closure/ar8r-v11/programs/program-surface-and-correction-custody.yaml
+  sha256: 78adca85a7ca206704dc1bf05d9abe1a74047bea65936fedaadb81966b80a8a0
+  campaign_epoch: LATER_PMR_OR_CORRECTION
+- item_id: AR8R-PMR-BOUNDARY
+  title: PMR source and proposal boundary receipt
+  source_surface: SUPPLIED_LATER_PMR_RECEIPT
+  evidence_class: PROGRAM_OR_BURDEN_RECORD
+  privacy_class: PUBLIC_HASH_ONLY
+  recommended_disposition: PUBLIC_SUMMARY
+  public_locator: Current PMR boundary receipt hash
+  repository_relevance: Separates exact PMR-001 through PMR-006 sources and the ten admitted scoped PMR-007 proposals through Round 20 V2 from historical AR8R and adopted theory; later exact packets are indexed by the companion post-merge catalog.
+  owner_path: docs/project-closure/ar8r-v11/programs/post-merge-pmr-boundary.md
+  sha256: bae107b932c7a9bfd410163b8890c6a94dff048e4a81b0935ebc9a93a0257887
+  campaign_epoch: LATER_PMR
+- item_id: AR8R-SOURCE-DELTA-46
+  title: Source-status delta ledger (46 rows)
+  source_surface: V8_DOWNLOADED_FILE_SUMMARY
+  evidence_class: EXACT_AUDIT_OR_LEDGER
+  privacy_class: PUBLIC_HASH_ONLY
+  recommended_disposition: PUBLIC_SUMMARY
+  public_locator: 46-row source-status delta receipt
+  repository_relevance: Preserves source-status row count and hash without importing private source text.
+  owner_path: docs/project-closure/ar8r-v11/provenance/AR8R-SOURCE-FORMAL-CROSSWALK-RECEIPT-V2.yaml
+  sha256: a8173daed449fda622e2077b2fa06b761bc8d7c15d0bcbd8a3b4c0574f6a8062
+  campaign_epoch: HISTORICAL_AR8R
+- item_id: AR8R-SOURCE-CROSSWALK-27
+  title: Source/formal/daee/Lean crosswalk (27 rows)
+  source_surface: V8_DOWNLOADED_FILE_SUMMARY
+  evidence_class: EXACT_AUDIT_OR_LEDGER
+  privacy_class: PUBLIC_HASH_ONLY
+  recommended_disposition: PUBLIC_SUMMARY
+  public_locator: 27-row source/formal crosswalk receipt
+  repository_relevance: Preserves typed crosswalk count and anti-promotion boundaries.
+  owner_path: docs/project-closure/ar8r-v11/provenance/AR8R-SOURCE-FORMAL-CROSSWALK-RECEIPT-V2.yaml
+  sha256: 05b8cc557e897f33a5c6a01b0d6bb1761ebd438d83242d3b08e2f337d14c6f0c
+  campaign_epoch: HISTORICAL_AR8R
+- item_id: AR8R-PIECE-COUNT
+  title: Derived 914-piece recovery-policy scalar
+  source_surface: V8_DOWNLOADED_FILE_SUMMARY
+  evidence_class: EXACT_AUDIT_OR_LEDGER
+  privacy_class: PUBLIC_HASH_ONLY
+  recommended_disposition: PUBLIC_SUMMARY
+  public_locator: Piece-count disposition hash
+  repository_relevance: Preserves 914 as a derived scalar, not exact identity recovery.
+  owner_path: docs/project-closure/ar8r-v11/provenance/AR8R-PIECE-COUNT-DISPOSITION-V5.yaml
+  sha256: b31be40f8ca37c1170dac246d6f27634aefe3d50ff0287ec04414893606b1fd7
+  campaign_epoch: HISTORICAL_AR8R
+- item_id: AR8R-RENUMBER-P307-P322
+  title: P307-P314 to P315-P322 renaming custody
+  source_surface: V8_DOWNLOADED_FILE_SUMMARY
+  evidence_class: EXACT_AUDIT_OR_LEDGER
+  privacy_class: PUBLIC_HASH_ONLY
+  recommended_disposition: PUBLIC_SUMMARY
+  public_locator: Renaming-crosswalk hash
+  repository_relevance: Preserves zero theorem, novelty, and duration credit under pending custody review.
+  owner_path: docs/project-closure/ar8r-v11/provenance/AR8R-P307-P322-RENAMING-CROSSWALK-V2.yaml
+  sha256: 4b7f236152aa0e5083f105cbbe576dd0ade72a262dc6b06a502e8de83b1c6f3f
+  campaign_epoch: HISTORICAL_AR8R
+- item_id: AR8R-SOURCE-UNIVERSE
+  title: Structural whole-corpus closure receipt
+  source_surface: V11_GENERATED_CUSTODY_RECEIPT
+  evidence_class: CUSTODY_RECEIPT
+  privacy_class: PUBLIC_SAFE
+  recommended_disposition: PUBLIC_INTEGRATE
+  public_locator: V11 source-universe receipt and sanitized row maps
+  repository_relevance: Maps 95 messages, 1,127 attachments, 1,490 Activity entries, 17,293 references, and 9,968
+    unique archive hashes without private content.
+  owner_path: docs/project-closure/ar8r-v11/provenance/AR8R-SOURCE-UNIVERSE-RECEIPT-V1.yaml
+  campaign_epoch: V11_RECONCILIATION
+- item_id: AR8R-FLYWHEEL-CROSSWALK
+  title: Typed research-flywheel crosswalk
+  source_surface: V11_RECONCILIATION_SYNTHESIS
+  evidence_class: PROGRAM_OR_BURDEN_RECORD
+  privacy_class: PUBLIC_SAFE
+  recommended_disposition: PUBLIC_INTEGRATE
+  public_locator: V11 program flywheel crosswalk
+  repository_relevance: Names typed contributions and anti-laundering boundaries across source, language, communication,
+    representation, restoration, candidates, Track T, R5, and provenance.
+  owner_path: docs/project-closure/ar8r-v11/programs/AR8R-RESEARCH-FLYWHEEL-CROSSWALK-V1.yaml
+  campaign_epoch: V11_RECONCILIATION
+v11_task7_public_owners:
+  hash_policy: INCLUDED_IN_FINAL_V11_SHA256SUMS_AND_RELEASE_MANIFEST
+  owners:
+    - {path: programs/deferred-candidate-source/README.md, source_class: CURRENT_PUBLIC_OWNER, authority: CUSTODY_WRAPPER_ONLY, adoption_effect: NONE}
+    - {path: provenance/AR8R-DEEP-CONTEXT-SOURCE-RECEIPT-V11.yaml, source_class: RECOVERED_CONTEXT, authority: BYTE_CUSTODY, adoption_effect: NONE}
+    - {path: programs/AR8R-THREE-TRACK-A-TO-N-ARCHITECTURE-V11.md, source_class: CURRENT_PUBLIC_OWNER, authority: HUMAN_READABLE_STATUS_OVERLAY, adoption_effect: NONE}
+    - {path: programs/AR8R-THREE-TRACK-A-TO-N-ARCHITECTURE-V11.yaml, source_class: CURRENT_PUBLIC_OWNER, authority: CURRENT_STATUS_OVERLAY, adoption_effect: NONE}
+    - {path: programs/AR8R-TRANSCENDENTAL-BRIDGE-AND-RIVAL-LEDGER-V11.yaml, source_class: CURRENT_PUBLIC_OWNER, authority: BRIDGE_STATUS_OWNER, adoption_effect: NONE}
+    - {path: programs/AR8R_TRANSCENDENTAL_ORTHABILITY_AND_SOURCE_ASCENT_V2.md, source_class: CURRENT_PUBLIC_OWNER, authority: HUMAN_READABLE_COMPATIBILITY_OWNER, adoption_effect: NONE}
+    - {path: programs/AR8R_TRANSCENDENTAL_ORTHABILITY_AND_SOURCE_ASCENT_V2.yaml, source_class: CURRENT_PUBLIC_OWNER, authority: COMPATIBILITY_OWNER, adoption_effect: NONE}
+    - {path: programs/AR8R-PROPER-FUNCTION-TYPED-MATRIX-V11.yaml, source_class: NEW_V11, authority: TYPED_RESEARCH_MATRIX, adoption_effect: NONE}
+    - {path: programs/AR8R-ONTOLOGY-AND-REPRESENTATION-ALTERNATIVES-MATRIX-V11.yaml, source_class: NEW_V11, authority: LIVE_RIVAL_MATRIX, adoption_effect: NONE}
+    - {path: programs/AR8R-TAC-SAC-TYPED-COORDINATE-AND-COUNTERMODEL-REGISTRY-V11.yaml, source_class: NEW_V11, authority: NONCOLLAPSE_REGISTRY, adoption_effect: NONE}
+    - {path: programs/AR8R-FULL-PROGRAM-REENTRY-COMPATIBILITY-RESOLUTION-V11.yaml, source_class: CURRENT_PUBLIC_OWNER, authority: COMPATIBILITY_CORRECTION, adoption_effect: NONE}
+    - {path: formalization/AR8R-V11-LEAN-FORMALIZATION-QUEUE.md, source_class: NEW_V11, authority: HUMAN_READABLE_QUEUE_ONLY, adoption_effect: NONE}
+    - {path: formalization/AR8R-V11-LEAN-FORMALIZATION-QUEUE.yaml, source_class: NEW_V11, authority: QUEUE_ONLY, adoption_effect: NONE}
+    - {path: formalization/AR8R-PMR007-TEN-RESULT-FORMALIZATION-MAP-V11.yaml, source_class: LATER_PMR_RESULT, authority: PROPOSAL_FORMALIZATION_MAP, adoption_effect: PENDING}
+    - {path: provenance/AR8R-TWO-THREAD-SYNTHESIS-RECEIPT-V11.yaml, source_class: CUSTODY_RECEIPT, authority: HASH_COUNT_ONLY, adoption_effect: NONE}
+    - {path: provenance/AR8R-TEN-ADVANCES-STATIC-CONFLICT-RECEIPT-V11.yaml, source_class: RECOVERED_CONTEXT, authority: CONFLICT_RECEIPT, adoption_effect: NONE}
+    - {path: provenance/AR8R-THEOREM-FAMILY-RELATION-CROSSWALK-V11.yaml, source_class: CURRENT_PUBLIC_OWNER, authority: V5_RELATION_INDEX, adoption_effect: NONE}
+    - {path: programs/ten-advances-connes-rigidity-dispute.md, source_class: NEW_V11, authority: UNRESOLVED_DISPUTE_OWNER, adoption_effect: NONE}
+    - {path: provenance/AR8R-CONNES-RIGIDITY-DISPUTE-RECEIPT-V11.yaml, source_class: CUSTODY_RECEIPT, authority: PUBLIC_SAFE_DISPUTE_RECEIPT, adoption_effect: NONE}
+    - {path: provenance/AR8R-LEAN-STATUS-MAP-V7.yaml, source_class: CURRENT_PUBLIC_OWNER, authority: STATIC_STATUS_PLUS_OPEN_AUDIT, adoption_effect: NONE}
+    - {path: governance/ORTHEMOLOGICAL-SPECIFICATION-WARRANT-OSW-15.md, source_class: NEW_V11, authority: HUMAN_READABLE_GOVERNANCE_GATE, adoption_effect: NONE}
+    - {path: governance/ORTHEMOLOGICAL-SPECIFICATION-WARRANT-OSW-15.yaml, source_class: NEW_V11, authority: GOVERNANCE_GATE, adoption_effect: NONE}
+v11_task7a_owner_program_charter:
+  source_class: OWNER_SUPPLIED_RESEARCH_PROGRAM_CHARTER
+  authority: PROPOSAL_ONLY_UNTIL_REVIEWED
+  charter:
+    path: programs/AR8R-ORTHEMOLOGY-MENISCUS-MILESTONE-ARCHITECTURE-V1.md
+    sha256: f4245d44e79e50c9fbef9173ee22e50795a08b02c027059d4abbae2aef15a0c8
+    bytes: 76682
+    preservation: VERBATIM_MINUS_TEXT_GIT_ATTRIBUTE
+  projection:
+    path: programs/AR8R-ORTHEMOLOGY-MENISCUS-MILESTONES-V1.yaml
+    milestone_count: 18
+    meniscus_candidate_count: 9
+    dependency_phase_count: 6
+    cross_lane_flywheel_count: 5
+    formalization_loop_count: 1
+  public_safety: PUBLIC_SAFE_SUBJECT_TO_FAIL_CLOSED_PRIVACY_SCAN
+  adoption_effect: NONE
+  scientific_effect: NO_THEOREM_SOURCE_NOVELTY_CHAMPION_MENISCUS_OR_CLOSURE_CREDIT
+  task7_public_owner_count_effect: 0

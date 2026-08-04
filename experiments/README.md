@@ -1,11 +1,15 @@
-# Experiments — NONE RUN
+# Public experiment packets — none run
 
-No empirical experiment has been executed. The **canonical machine-readable
-state of every experiment packet** is
+No public experiment packet has been executed. A separate historical internal
+eight-seed synthetic T299/T300 stress pilot ran and was negative at its exact
+support-overlapping, non-case-paired evidential class. It is not external
+empirical validation, and its exact tested configuration is retired. The
+**canonical machine-readable state of every public experiment packet** is
 [`experiment-status.yaml`](experiment-status.yaml) (Decisions 0018/0020),
 validated in CI by `scripts/validate_experiment_readiness.py` and, for the
 benchmark packets, the methods gate `scripts/validate_experiment_methods.py`
-(Decision 0022). This README defers to it.
+(Decision 0022). This README defers to it; the historical pilot has a separate
+owner under `docs/project-closure/ar8r-v11/experiments/`.
 
 | Packet | Purpose | Status | Where |
 |---|---|---|---|

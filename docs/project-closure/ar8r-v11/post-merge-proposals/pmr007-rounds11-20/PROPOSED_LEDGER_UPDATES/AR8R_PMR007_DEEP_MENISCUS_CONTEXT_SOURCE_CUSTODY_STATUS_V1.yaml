@@ -1,0 +1,22 @@
+schema: AR8R_PMR007_DEEP_MENISCUS_CONTEXT_ACCESS_STATUS_V1
+generated_at: '2026-08-03T17:59:54.762199+00:00'
+expected_filename: AR8R_PMR007_DEEP_MENISCUS_CONTEXT_V1.zip
+attachment_claimed_by_owner: true
+active_runtime_bytes_found: false
+sha256_computed: false
+file_search_result: ATTACHMENT_BYTES_NOT_SURFACED_TO_ACTIVE_RUNTIME
+filesystem_search_result: NO_MATCH_UNDER_ACTIVE_DATA_ROOT
+authority_ceiling: OWNER_INSTRUCTION_PRESENT_EXACT_PACKET_BYTES_UNAVAILABLE
+permitted_work_completed_without_packet:
+- verified Round19 custody state
+- verified Round20 V2 theorem/audit/repair/rereview/admission files
+- corrected archive-receipt authority and rebuilt packages
+work_not_performed_without_packet:
+- Deep Round A candidate formulation
+- Candidate E horn adjudication
+- Candidate G parity/unification adjudication
+- deep transcendental or uncreated-grammar theorem selection
+owner_decision_required: false
+independent_ready_work_remaining: true
+continuation_status: CONTINUATION_READY_BLOCKED_ON_REQUIRED_SOURCE_CUSTODY
+github_changed: false

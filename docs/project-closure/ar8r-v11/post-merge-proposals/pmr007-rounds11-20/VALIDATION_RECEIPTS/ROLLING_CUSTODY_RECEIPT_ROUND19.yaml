@@ -1,0 +1,72 @@
+schema: AR8R_PMR007_ROUND19_ROLLING_CUSTODY_RECEIPT_V1
+generated_at: '2026-08-03T17:38:13.734728+00:00'
+private_live_boundary: ROUND19_V2
+sanitized_live_boundary: ROUND19_V2
+full_zip_boundary_before_update: ROUND18_V4
+full_zip_rebuild_required_after: ROUND20_TERMINAL_DISPOSITION_OR_EARLIER_HARD_BOUNDARY
+round19_additions:
+  theorem:
+    private_path: CANDIDATE_A/PMR-007_FRONTIER_ROUND19_PROVENANCE_ROOT_THRESHOLD_QUERY_COMPLEXITY_V2.md
+    sanitized_path: PROPOSED_THEOREM_FILES/PMR-007_FRONTIER_ROUND19_PROVENANCE_ROOT_THRESHOLD_QUERY_COMPLEXITY_V2.md
+    sha256: 44e711386ae2fd44a3762b39894b08c2e2e21d86bc3f0dcc2e3714e84f4b2ae2
+    bytes: 13333
+  model:
+    private_path: COUNTERMODELS/PMR007_ROUND19_PROVENANCE_ROOT_THRESHOLD_V2.yaml
+    sanitized_path: PROPOSED_COUNTERMODEL_FILES/PMR007_ROUND19_PROVENANCE_ROOT_THRESHOLD_V2.yaml
+    sha256: e20c2e1c439f1d54986ff44e958e7eb7f49ee8bd7bb4d843afb3b8fe4692a42f
+    bytes: 3004
+  audit:
+    private_path: COLD_AUDITS/PMR-007_FRONTIER_ROUND19_V1_COLD_AUDIT.md
+    sanitized_path: VALIDATION_RECEIPTS/PMR-007_FRONTIER_ROUND19_V1_COLD_AUDIT.md
+    sha256: 9feec904331204119215ee38eae7442cd04211b54af83cb951be9988b11e8d6e
+    bytes: 5018
+  repair:
+    private_path: REPAIRS/PMR-007_FRONTIER_ROUND19_V2_REPAIR_LOG.md
+    sanitized_path: VALIDATION_RECEIPTS/PMR-007_FRONTIER_ROUND19_V2_REPAIR_LOG.md
+    sha256: 84940c0ff953d86a75e0e937e6802945e70777e494df5e4a7fb22916c8cb9c22
+    bytes: 1328
+  check:
+    private_path: EXECUTABLE_CHECKS/pmr007_round19_provenance_root_threshold_primary_check_v2.py
+    sanitized_path: VALIDATION_RECEIPTS/pmr007_round19_provenance_root_threshold_primary_check_v2.py
+    sha256: fbcd7f57f2df705673b965031e7aa7263c4c8731d871a877eb7affb87599bcc4
+    bytes: 7764
+  check_result:
+    private_path: EXECUTABLE_CHECKS/pmr007_round19_provenance_root_threshold_primary_check_v2_results.json
+    sanitized_path: VALIDATION_RECEIPTS/pmr007_round19_provenance_root_threshold_primary_check_v2_results.json
+    sha256: 8e26ada4c5c1d352d09e5051765aa489bb94a2c7de2d5fbcb40aea7d31dac110
+    bytes: 2318
+  rereview:
+    private_path: FRESH_REREVIEWS/PMR-007_FRONTIER_ROUND19_V2_DISTINCT_FRESH_REREVIEW.md
+    sanitized_path: VALIDATION_RECEIPTS/PMR-007_FRONTIER_ROUND19_V2_DISTINCT_FRESH_REREVIEW.md
+    sha256: ac53e6532c2fad19273cb2bbfb91cb61071d16016dd9e005bc986f98f4d96923
+    bytes: 4062
+  rereview_result:
+    private_path: FRESH_REREVIEWS/PMR-007_FRONTIER_ROUND19_V2_DISTINCT_FRESH_REREVIEW_RESULTS.json
+    sanitized_path: VALIDATION_RECEIPTS/PMR-007_FRONTIER_ROUND19_V2_DISTINCT_FRESH_REREVIEW_RESULTS.json
+    sha256: 9489c58c297831bb9b8e4e5c238b3535b6650970de8874bc6a3273f0ba4b3b03
+    bytes: 1737
+  prior_art:
+    private_path: SOURCE_AND_PRIOR_ART_NOTES/PMR-007_FRONTIER_ROUND19_PRIOR_ART_AND_FAMILY_NOTE.md
+    sanitized_path: PROPOSED_ORIGIN_AND_ANCESTRY_UPDATES/PMR-007_FRONTIER_ROUND19_PRIOR_ART_AND_FAMILY_NOTE.md
+    sha256: 3a71ffa0146f447fcd7539ebf0a167a46228bd227799cfd4eefd62a8851b6b40
+    bytes: 3422
+  overlay:
+    private_path: CANDIDATE_A/PMR-007_FRONTIER_ROUND19_ADMISSION_OVERLAY.yaml
+    sanitized_path: VALIDATION_RECEIPTS/PMR-007_FRONTIER_ROUND19_ADMISSION_OVERLAY.yaml
+    sha256: a6eb00842e017877e2b48063832e6776733729174aa5711d3300d72356b6f779
+    bytes: 2640
+  admission_hashes:
+    private_path: CANDIDATE_A/PMR-007_FRONTIER_ROUND19_ADMISSION_HASHES.sha256
+    sanitized_path: VALIDATION_RECEIPTS/PMR-007_FRONTIER_ROUND19_ADMISSION_HASHES.sha256
+    sha256: c74859a1302182c68156e3f9d060f7611def0ab713775d28a6cb08fffe4383cd
+    bytes: 1424
+yaml_json_validation: PASS
+private_data_exclusion: PASS
+github_changed: false
+validation_counts:
+  private_yaml: 19
+  private_json: 19
+  proposal_yaml: 15
+  proposal_json: 19
+  errors: []
+private_data_findings: []

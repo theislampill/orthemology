@@ -1,0 +1,666 @@
+schema: ar8r-open-burden-dependency-order-v2
+generated_at: '2026-08-02T16:49:12Z'
+category_order:
+- OWNER DECISION REQUIRED
+- READ-ONLY RECONSTRUCTION
+- SOURCE VERIFICATION
+- FORMAL PROOF OR COUNTERMODEL
+- IMPLEMENTATION AUDIT
+- EXTERNAL REVIEW
+- EMPIRICAL EXECUTION
+- REPOSITORY ENGINEERING
+- PUBLICATION/LEGAL OWNER ACT
+- FUTURE RESEARCH RESIDUAL
+burden_count: 45
+burdens:
+- burden_id: B001
+  category: READ-ONLY RECONSTRUCTION
+  name: Supply verified pre-Codex historical checkpoint
+  prerequisites: []
+  blockers:
+  - missing archive bytes
+  independent_lanes:
+  - B002
+  - B003
+  - B004
+  - B005
+  - B012
+  must_not_combine:
+  - T354 repository repair
+  status: OPEN_NEW_BYTES_REQUIRED
+  evidence_needed: ar8r-pre-codex-owner-review-checkpoint-20260801.zip at expected SHA-256
+  owner_action: true
+- burden_id: B002
+  category: READ-ONLY RECONSTRUCTION
+  name: Supply apprehensional-reachability archive
+  prerequisites: []
+  blockers:
+  - missing archive bytes
+  independent_lanes:
+  - B001
+  - B003
+  must_not_combine:
+  - substantive theorem adoption
+  status: OPEN_NEW_BYTES_REQUIRED
+  evidence_needed: orthemology-apprehensional-reachability.zip at expected SHA-256
+  owner_action: true
+- burden_id: B003
+  category: IMPLEMENTATION AUDIT
+  name: Supply exact daee-epistemics implementation snapshot
+  prerequisites: []
+  blockers:
+  - missing archive bytes
+  independent_lanes:
+  - B002
+  - B004
+  must_not_combine:
+  - school-neutral theorem promotion
+  status: OPEN_NEW_BYTES_REQUIRED
+  evidence_needed: daee-epistemics-codex-v0.4.6.0-orthemology-check.zip at expected SHA-256
+  owner_action: true
+- burden_id: B004
+  category: READ-ONLY RECONSTRUCTION
+  name: Supply noetic-structure draft archive
+  prerequisites: []
+  blockers:
+  - missing archive bytes
+  independent_lanes:
+  - B003
+  - B005
+  must_not_combine:
+  - empirical validation claims
+  status: OPEN_NEW_BYTES_REQUIRED
+  evidence_needed: noetic_structure_draft_v1.zip at expected SHA-256
+  owner_action: true
+- burden_id: B005
+  category: READ-ONLY RECONSTRUCTION
+  name: Supply transcendental-ascent owner packet
+  prerequisites: []
+  blockers:
+  - missing archive bytes
+  independent_lanes:
+  - B006
+  - B007
+  - B008
+  - B009
+  must_not_combine:
+  - world-directed adoption
+  status: OPEN_NEW_BYTES_REQUIRED
+  evidence_needed: orthemology-transcendental-ascent-owner-packet.zip at expected SHA-256
+  owner_action: true
+- burden_id: B006
+  category: READ-ONLY RECONSTRUCTION
+  name: Supply transcendental visual packet
+  prerequisites: []
+  blockers:
+  - missing PDF bytes
+  independent_lanes:
+  - B005
+  must_not_combine:
+  - proof authority
+  status: OPEN_NEW_BYTES_REQUIRED
+  evidence_needed: orthemology-transcendental-ascent-visual-packet.pdf at expected SHA-256
+  owner_action: true
+- burden_id: B007
+  category: READ-ONLY RECONSTRUCTION
+  name: Supply transcendental-ascent steer
+  prerequisites: []
+  blockers:
+  - missing Markdown bytes
+  independent_lanes:
+  - B005
+  must_not_combine:
+  - source authority
+  status: OPEN_NEW_BYTES_REQUIRED
+  evidence_needed: AR8R-orthemological-transcendental-ascent-steer.md at expected SHA-256
+  owner_action: true
+- burden_id: B008
+  category: READ-ONLY RECONSTRUCTION
+  name: Supply verbatim owner argument
+  prerequisites: []
+  blockers:
+  - missing Markdown bytes
+  independent_lanes:
+  - B005
+  must_not_combine:
+  - formal theorem identity
+  status: OPEN_NEW_BYTES_REQUIRED
+  evidence_needed: orthemology-owner-argument-verbatim.md at expected SHA-256
+  owner_action: true
+- burden_id: B009
+  category: READ-ONLY RECONSTRUCTION
+  name: Supply historical message(94)
+  prerequisites: []
+  blockers:
+  - missing text bytes
+  independent_lanes:
+  - B005
+  must_not_combine:
+  - proof authority
+  status: OPEN_NEW_BYTES_REQUIRED
+  evidence_needed: message(94).txt at expected SHA-256
+  owner_action: true
+- burden_id: B010
+  category: READ-ONLY RECONSTRUCTION
+  name: Supply AR2-AR8 historical archives
+  prerequisites: []
+  blockers:
+  - exact filenames/hashes not supplied
+  independent_lanes:
+  - B001
+  must_not_combine:
+  - new theorem adoption
+  status: OPEN_NEW_BYTES_REQUIRED
+  evidence_needed: exact historical archives and custody receipts
+  owner_action: true
+- burden_id: B011
+  category: READ-ONLY RECONSTRUCTION
+  name: Supply AR7 owner overlay and AR8 provisional archive
+  prerequisites: []
+  blockers:
+  - exact bytes unavailable
+  independent_lanes:
+  - B010
+  must_not_combine:
+  - current-main authority
+  status: OPEN_NEW_BYTES_REQUIRED
+  evidence_needed: owner overlay/provisional archive with hashes
+  owner_action: true
+- burden_id: B012
+  category: IMPLEMENTATION AUDIT
+  name: Supply Fusha/Qamus repository snapshot
+  prerequisites: []
+  blockers:
+  - no Fusha bytes in current repository or attachments
+  independent_lanes:
+  - B003
+  must_not_combine:
+  - claim that transclusion is implemented
+  status: OPEN_NEW_BYTES_REQUIRED
+  evidence_needed: pinned /fusha/ tree, qamus dataset, validators, and commit/hash receipt
+  owner_action: true
+- burden_id: B013
+  category: OWNER DECISION REQUIRED
+  name: Authorize a fresh execution environment for the bounded T354 repair operation
+  prerequisites:
+  - verify live main remains required SHA
+  blockers:
+  - no write-capable GitHub mutation channel in completed attempt
+  independent_lanes:
+  - continuity mapping
+  must_not_combine:
+  - open-ended AR8R research
+  - merge
+  status: BLOCKED_FOR_OWNER
+  evidence_needed: explicit rerun authorization plus authenticated write-capable GitHub channel
+  owner_action: true
+- burden_id: B014
+  category: REPOSITORY ENGINEERING
+  name: Record owner adoption of T150 replacement and T366 reconstruction
+  prerequisites:
+  - B013
+  blockers:
+  - Decisions 0037/0038 and adoption record absent
+  independent_lanes: []
+  must_not_combine:
+  - proposal byte edits
+  - historical identity promotion
+  status: AUTHORIZED_BUT_NOT_EXECUTED
+  evidence_needed: bounded branch/PR exact-head CI
+  owner_action: false
+- burden_id: B015
+  category: FUTURE RESEARCH RESIDUAL
+  name: Reopen any of the 22 unresolved identities only on new Tier A/B evidence
+  prerequisites:
+  - new exact source bytes or theorem-specific constraints
+  blockers:
+  - current evidence insufficient
+  independent_lanes:
+  - all implementation work
+  must_not_combine:
+  - title/neighbor/family-based reconstruction
+  status: STOPPED_BY_OWNER_PENDING_NEW_EVIDENCE
+  evidence_needed: theorem-specific typed setting, assumptions, conclusion, scope, provenance
+  owner_action: false
+- burden_id: B016
+  category: EXTERNAL REVIEW
+  name: Obtain independent mathematical review of Track M Candidate 1
+  prerequisites:
+  - exact Candidate 1 packet supplied
+  blockers:
+  - packet unavailable here
+  - no external review receipt
+  independent_lanes:
+  - Candidate N source review
+  must_not_combine:
+  - owner self-review
+  status: OPEN
+  evidence_needed: named external reviewer report with objections and proof audit
+  owner_action: true
+- burden_id: B017
+  category: SOURCE VERIFICATION
+  name: Complete Candidate 1 prior-art search
+  prerequisites:
+  - exact statement and proof packet
+  blockers:
+  - statement bytes unavailable
+  independent_lanes:
+  - B016
+  must_not_combine:
+  - novelty credit before search
+  status: OPEN
+  evidence_needed: search protocol, sources, overlap map, novelty conclusion
+  owner_action: false
+- burden_id: B018
+  category: EXTERNAL REVIEW
+  name: Obtain specialist source review of Candidate N
+  prerequisites:
+  - exact Candidate N packet and loci
+  blockers:
+  - source packet unavailable
+  independent_lanes:
+  - B016
+  must_not_combine:
+  - mathematical novelty review
+  status: OPEN
+  evidence_needed: specialist review of Arabic/source attribution and six-role reconstruction
+  owner_action: true
+- burden_id: B019
+  category: FUTURE RESEARCH RESIDUAL
+  name: Demonstrate Candidate N interpretive payoff beyond taxonomy
+  prerequisites:
+  - B018
+  blockers:
+  - no source-backed case analysis in supplied packet
+  independent_lanes:
+  - Track M
+  must_not_combine:
+  - source authenticity as payoff proof
+  status: OPEN
+  evidence_needed: comparative cases where six-role architecture changes warranted interpretation
+  owner_action: false
+- burden_id: B020
+  category: FORMAL PROOF OR COUNTERMODEL
+  name: Track T realist-bridge and Necessary-Being burdens
+  prerequisites:
+  - exact Track T source packet
+  - same-token/same-respect interpretation guards
+  blockers:
+  - world bridge premises not established
+  independent_lanes:
+  - Track M
+  - Track N
+  must_not_combine:
+  - school-internal source premise with school-neutral theorem
+  status: OPEN
+  evidence_needed: RB/resource/semantic/provenance bridges and rival countermodels
+  owner_action: false
+- burden_id: B021
+  category: SOURCE VERIFICATION
+  name: Verify Arabic loci, editions, translations, and attribution for source ascent
+  prerequisites:
+  - source packets and editions
+  blockers:
+  - attachments are translations/secondary scholarship, not complete Arabic edition audit
+  independent_lanes:
+  - formal proof
+  must_not_combine:
+  - translation adequacy with inference validity
+  status: OPEN
+  evidence_needed: Arabic locus, edition, translator check, attribution receipt per claim
+  owner_action: false
+- burden_id: B022
+  category: EMPIRICAL EXECUTION
+  name: Test PRH-inspired prior-order/proper-function hypotheses causally
+  prerequisites:
+  - preregistered operational definitions
+  - held-out data
+  blockers:
+  - current PRH paper is correlational/alignment-focused
+  independent_lanes:
+  - formal theorem work
+  must_not_combine:
+  - representation alignment with causal proper function
+  status: OPEN_RESEARCH
+  evidence_needed: interventions, counterfactuals, held-out predictions, negative controls
+  owner_action: true
+- burden_id: B023
+  category: IMPLEMENTATION AUDIT
+  name: Audit current daee runtime against typed crosswalk
+  prerequisites:
+  - B003
+  blockers:
+  - current-main pin c86b... differs from unavailable expected snapshot
+  independent_lanes:
+  - source review
+  must_not_combine:
+  - runtime correspondence with philosophical truth
+  status: OPEN
+  evidence_needed: file-by-file pinned audit, fixtures, validator results, version custody
+  owner_action: false
+- burden_id: B024
+  category: EMPIRICAL EXECUTION
+  name: Certify daee proxies, intervention contrast, and causal efficacy
+  prerequisites:
+  - B023
+  - target soundness specification
+  blockers:
+  - proxy validity and causal contrast not executed
+  independent_lanes:
+  - repository engineering
+  must_not_combine:
+  - output correctness with restoration
+  status: OPEN_RESEARCH
+  evidence_needed: proxy validation, intervention/control contrast, burden landing receipts, reread outcomes
+  owner_action: true
+- burden_id: B025
+  category: IMPLEMENTATION AUDIT
+  name: Map Fusha occurrence/transclusion implementation
+  prerequisites:
+  - B012
+  blockers:
+  - no repository bytes
+  independent_lanes:
+  - T354 repair
+  must_not_combine:
+  - lexical type with occurrence token
+  status: OPEN
+  evidence_needed: path-by-path implementation crosswalk and dogfood results
+  owner_action: false
+- burden_id: B026
+  category: EXTERNAL REVIEW
+  name: Kernel-build and Comparator-check Ten Advances Lean project
+  prerequisites:
+  - Lean 4.32.0
+  - mathlib cache
+  - Comparator tools
+  blockers:
+  - lake/lean unavailable in this runtime
+  - archive packaging defects
+  independent_lanes:
+  - AR8R theorem review
+  must_not_combine:
+  - static scan with kernel verification
+  status: OPEN_EXTERNAL_EXECUTION
+  evidence_needed: 'clean build logs, #print axioms or Comparator receipts, exact commit/archive pin'
+  owner_action: false
+- burden_id: B027
+  category: REPOSITORY ENGINEERING
+  name: Resolve Ten Advances archive metadata/package inconsistencies
+  prerequisites:
+  - external project owner authorization
+  blockers:
+  - missing lake root; stale formalization path
+  independent_lanes:
+  - B026
+  must_not_combine:
+  - orthemology repository mutation
+  status: OPEN_EXTERNAL_PROJECT
+  evidence_needed: corrected archive or authoritative explanation
+  owner_action: true
+- burden_id: B028
+  category: FUTURE RESEARCH RESIDUAL
+  name: Run further bounded AR8R saturation/no-change wave only if owner opens research
+  prerequisites:
+  - owner authorization
+  - full reentry map read
+  blockers:
+  - natural campaign closure NOT_REACHED but current task is read-only
+  independent_lanes:
+  - T354 repo repair
+  must_not_combine:
+  - historical duration extension without clock ledger
+  status: NOT_AUTHORIZED
+  evidence_needed: bounded research charter and stop rule
+  owner_action: true
+- burden_id: B029
+  category: READ-ONLY RECONSTRUCTION
+  name: Recover exact Candidate A-N map
+  prerequisites:
+  - B010
+  - B011
+  blockers:
+  - historical archives unavailable
+  independent_lanes:
+  - current-main audit
+  must_not_combine:
+  - infer candidates from summaries
+  status: OPEN_NEW_BYTES_REQUIRED
+  evidence_needed: candidate ledgers, source matrices, theorem-origin records
+  owner_action: true
+- burden_id: B030
+  category: OWNER DECISION REQUIRED
+  name: Authorize external transmission of Candidate 1 or Candidate N packets
+  prerequisites:
+  - packet completeness
+  - privacy review
+  blockers:
+  - no owner transmission authorization in this continuity operation
+  independent_lanes:
+  - B031
+  - B032
+  must_not_combine:
+  - publication
+  status: OPEN_OWNER_ACTION
+  evidence_needed: recipient/scope/bytes authorization
+  owner_action: true
+- burden_id: B031
+  category: EMPIRICAL EXECUTION
+  name: Execute prepared FCSP/ER experiments with human raters
+  prerequisites:
+  - READY_TO_RUN gate
+  - model budget
+  - at least three raters
+  blockers:
+  - owner-only spend and recruitment
+  independent_lanes:
+  - source verification
+  must_not_combine:
+  - packet readiness with completed evidence
+  status: OPEN_OWNER_ACTION
+  evidence_needed: registered run, blinded ratings, frozen outputs, analysis receipt
+  owner_action: true
+- burden_id: B032
+  category: PUBLICATION/LEGAL OWNER ACT
+  name: Choose repository license
+  prerequisites: []
+  blockers:
+  - owner legal choice
+  independent_lanes:
+  - B033
+  - B037
+  must_not_combine:
+  - technical validation
+  status: OPEN_OWNER_ACTION
+  evidence_needed: owner-selected license text
+  owner_action: true
+- burden_id: B033
+  category: PUBLICATION/LEGAL OWNER ACT
+  name: Choose citation identity and metadata
+  prerequisites: []
+  blockers:
+  - owner identity choice
+  independent_lanes:
+  - B032
+  must_not_combine:
+  - model attribution guess
+  status: OPEN_OWNER_ACTION
+  evidence_needed: author name/affiliation/ORCID/preferred citation
+  owner_action: true
+- burden_id: B034
+  category: PUBLICATION/LEGAL OWNER ACT
+  name: Decide whether any private design/recovery material may be published
+  prerequisites:
+  - privacy review
+  blockers:
+  - owner-only consent
+  independent_lanes:
+  - public repository validation
+  must_not_combine:
+  - private evidence with public proof authority
+  status: OPEN_OWNER_ACTION
+  evidence_needed: explicit itemized permission
+  owner_action: true
+- burden_id: B035
+  category: REPOSITORY ENGINEERING
+  name: Repair stale AR8R historical-status classification
+  prerequisites:
+  - B013
+  blockers:
+  - authorized branch not created
+  independent_lanes:
+  - continuity map
+  must_not_combine:
+  - historical payload edits
+  status: AUTHORIZED_BUT_NOT_EXECUTED
+  evidence_needed: minimal diff + validator + exact-head CI
+  owner_action: false
+- burden_id: B036
+  category: REPOSITORY ENGINEERING
+  name: Reconcile frozen candidate-overlay public wording only through a separately bounded task
+  prerequisites:
+  - fresh live topology observation
+  - owner authorization
+  blockers:
+  - overlay is intentionally frozen historical observation
+  independent_lanes:
+  - B035
+  must_not_combine:
+  - rewrite provenance history
+  status: FUTURE_OPTIONAL
+  evidence_needed: decision whether a new live overlay is desired
+  owner_action: true
+- burden_id: B037
+  category: PUBLICATION/LEGAL OWNER ACT
+  name: Authorize external publication/DOI/submission
+  prerequisites:
+  - B032
+  - B033
+  - external review as applicable
+  blockers:
+  - owner submission decision
+  independent_lanes:
+  - internal validation
+  must_not_combine:
+  - draft artifact with peer-reviewed status
+  status: OPEN_OWNER_ACTION
+  evidence_needed: venue, final bytes, owner approval
+  owner_action: true
+- burden_id: B038
+  category: EXTERNAL REVIEW
+  name: Validate any meniscus/frontier claim independently
+  prerequisites:
+  - exact result packet
+  - prior-art search
+  - specialist review
+  blockers:
+  - no result presently meets all dimensions
+  independent_lanes:
+  - internal campaign integration
+  must_not_combine:
+  - campaign novelty with human-knowledge novelty
+  status: OPEN
+  evidence_needed: independent prior-art and correctness review
+  owner_action: true
+- burden_id: B039
+  category: FORMAL PROOF OR COUNTERMODEL
+  name: Recover or recreate source-absent intended Lean modules without identity laundering
+  prerequisites:
+  - B010
+  - B002
+  blockers:
+  - intended module sources absent
+  independent_lanes:
+  - Ten Advances external build
+  must_not_combine:
+  - recreated module with historical exact source
+  status: OPEN
+  evidence_needed: source bytes or fresh canonical identity and provenance
+  owner_action: false
+- burden_id: B040
+  category: SOURCE VERIFICATION
+  name: Discharge current repository research residuals RR-1 to RR-3
+  prerequisites:
+  - edition/full-text access
+  blockers:
+  - edition and publisher access
+  independent_lanes:
+  - license/citation
+  must_not_combine:
+  - bibliographic existence with wording verification
+  status: OPEN_TRIGGERED_RESIDUAL
+  evidence_needed: edition pagination, Evans locus, primary Taymiyyan loci
+  owner_action: false
+- burden_id: B041
+  category: OWNER DECISION REQUIRED
+  name: Decide whether continuity package should ever enter the public repository
+  prerequisites:
+  - review package
+  - private-data audit
+  blockers:
+  - current instruction says local handoff only
+  independent_lanes:
+  - all research
+  must_not_combine:
+  - automatic repository integration
+  status: NOT_AUTHORIZED
+  evidence_needed: separate bounded integration authorization
+  owner_action: true
+- burden_id: B042
+  category: READ-ONLY RECONSTRUCTION
+  name: Build exact Orthemology-Fusha crosswalk after snapshot supply
+  prerequisites:
+  - B012
+  - B025
+  blockers:
+  - no Fusha bytes
+  independent_lanes:
+  - daee crosswalk
+  must_not_combine:
+  - analogy with implementation correspondence
+  status: OPEN
+  evidence_needed: occurrence IDs, qamus pages, sarf/nahw lattices, canonical projection schemas
+  owner_action: false
+- burden_id: B043
+  category: READ-ONLY RECONSTRUCTION
+  name: Recover exact TAC/Tachikoma/SAC theorem/source packet
+  prerequisites:
+  - B010 or separate packet
+  blockers:
+  - zero Tachikoma/SAC byte hits in current repository
+  independent_lanes:
+  - somnic runtime
+  must_not_combine:
+  - anime analogy with formal identity theorem
+  status: OPEN_NEW_BYTES_REQUIRED
+  evidence_needed: exact analysis, theorem/countermodel IDs, source citations, implementation owner
+  owner_action: true
+- burden_id: B044
+  category: READ-ONLY RECONSTRUCTION
+  name: Supply theorem-origin V5 registry and false-multiplicity audit bytes
+  prerequisites:
+  - B001 or B010
+  blockers:
+  - only authority label preserved in V9
+  independent_lanes:
+  - current exact-recovery index
+  must_not_combine:
+  - current reconstructed family map with historical registry
+  status: OPEN_NEW_BYTES_REQUIRED
+  evidence_needed: V5 registry, ancestry map, audit receipts
+  owner_action: true
+- burden_id: B045
+  category: FUTURE RESEARCH RESIDUAL
+  name: Evaluate Ten Advances relevance without importing theorem credit
+  prerequisites:
+  - B026
+  - AR8R exact statement per application
+  blockers:
+  - current links are analogical/comparative only
+  independent_lanes:
+  - external project build
+  must_not_combine:
+  - external theorem novelty with AR8R novelty
+  status: OPEN_BOUNDED_COMPARISON
+  evidence_needed: typed application bridge and non-identity receipt
+  owner_action: false

@@ -1,0 +1,189 @@
+schema: ar8r-pmr-approach-family-registry-v2
+campaign: AR8R_POST_MERGE_MENISCUS_PROGRAM_V1
+supersedes: PMR-002_TRANCHE-001/AR8R_PMR_APPROACH_FAMILY_REGISTRY.yaml
+families:
+- approach_family_id: PMR2-M4-SOURCE-CRITICAL
+  target_burden: qiyas al-awla source eligibility and authority ceiling
+  mechanism: translated-primary locus decomposition and source-coordinate firewall
+  exact_inputs:
+  - Asfahani translated-primary commentary
+  - AR8R-T369 V5 status
+  concrete_output_sought: source-relative guard registry without world-truth promotion
+  current_strongest_result: PMR-M4-01 admitted after six guard deletions, audit, repair, and rereview
+  exact_gap_or_failure: Arabic-primary and source-specialist verification absent
+  status: COMPLETE_AT_DECLARED_SCOPE
+  related_families:
+  - PMR3-M5-CAPACITY
+  - PMR3-M5-QUALIFICATION
+  reopening_condition: new Arabic-primary evidence or a materially different attribute route
+- approach_family_id: PMR2-LANG-FIBRE
+  target_burden: translation preservation versus completeness
+  mechanism: image-relative factorization and coordinate-loss countermodels
+  exact_inputs:
+  - PMR-LANG-01
+  - T162/T163 constraints
+  - El-Tobgui reconstruction
+  concrete_output_sought: guarded translation preservation and noncompleteness
+  current_strongest_result: PMR-LANG-01 admitted; PMR-LANG-02 adds token-occurrence context boundary
+  exact_gap_or_failure: exact Arabic occurrence and Fusha implementation bytes absent
+  status: COMPLETE_AT_SELECTED_SCOPE
+  related_families:
+  - PMR4-LANG-CONTEXT
+  - PMR2-UG-PRH
+  reopening_condition: exact occurrence corpus, translation challenge, or richer target query
+- approach_family_id: PMR2-UG-PRH
+  target_burden: convergence/local-grammar nonbridge
+  mechanism: kernel-profile twins, residual information, and reference permutations
+  exact_inputs:
+  - PRH paper
+  - T254/T255
+  - PMR-LANG-01
+  concrete_output_sought: countermodels to identity, reference, mentality, agency, and Speech overreads
+  current_strongest_result: PMR-UG-01 V3 admitted at custody-repaired scope
+  exact_gap_or_failure: richer semantic/causal/source bridges and empirical tests remain open
+  status: COMPLETE_AT_SELECTED_SCOPE
+  related_families:
+  - PMR5-TAC-TYPED
+  - PMR4-LANG-CONTEXT
+  reopening_condition: new PRH evidence or a frozen richer bridge
+- approach_family_id: PMR3-M5-CAPACITY
+  target_burden: Life-to-Speech source route
+  mechanism: typed capacity/incapacity/defect exclusion
+  exact_inputs:
+  - Asfahani rational Speech locus
+  - PMR-M4-01
+  concrete_output_sought: premise-minimal conditional capacity result
+  current_strongest_result: PMR-M5-01 admitted after four blocking repairs
+  exact_gap_or_failure: world truth, Arabic-primary wording, and mode of Speech remain open
+  status: COMPLETE_AT_DECLARED_SCOPE
+  related_families:
+  - PMR3-M5-PLURAL
+  - PMR3-M5-QUALIFICATION
+  - PMR4-FAMILY-DEDUP
+  reopening_condition: new source bridge or competing capacity ontology
+- approach_family_id: PMR3-M5-PLURAL
+  target_burden: global W/P/K availability versus one-originator co-instantiation
+  mechanism: five-object first-order plural-resource countermodel
+  exact_inputs:
+  - PMR-M3-01
+  - T368/R5 plural-resource control
+  concrete_output_sought: exact quantifier/bearer guard interpretation
+  current_strongest_result: PMR-M5-02 admitted; M3 G_WPK preserved intact
+  exact_gap_or_failure: plural-resource world adequacy and explanatory unity not assessed
+  status: COMPLETE_AT_DECLARED_SCOPE
+  related_families:
+  - PMR2-M4-OVERREAD
+  - PMR5-TAC-TYPED
+  reopening_condition: new unity bridge or source-preserving plural model
+- approach_family_id: PMR3-M5-QUALIFICATION
+  target_burden: capacity versus occurrence, qualification, Name, and content
+  mechanism: four typed formal nonentailments with source-contract indices
+  exact_inputs:
+  - Asfahani speech/name/qualification passages
+  - PMR-M5-01
+  concrete_output_sought: prevent attribute-to-name/content leakage
+  current_strongest_result: PMR-M5-03 admitted after four repairs
+  exact_gap_or_failure: source authentication, Name authorization, and revelational identification remain open
+  status: COMPLETE_AT_DECLARED_SCOPE
+  related_families:
+  - PMR3-M5-CAPACITY
+  - PMR4-FAMILY-DEDUP
+  reopening_condition: exact source/name packet or content bridge
+- approach_family_id: PMR4-AGCOM-ATTRIBUTION
+  target_burden: bearer attribution, provenance root, and authority from surface receipt
+  mechanism: indexed same-profile fibre collision
+  exact_inputs:
+  - Asfahani bearer distinction
+  - AR2/AR3
+  - PMR-AGCOM-01
+  concrete_output_sought: exact profile-relative nonfactorization
+  current_strongest_result: PMR-AGCOM-02 admitted after four typing repairs
+  exact_gap_or_failure: richer deciding profiles and actual provenance evidence remain open
+  status: COMPLETE_AT_SELECTED_SCOPE
+  related_families:
+  - PMR5-TAC-TYPED
+  - PMR4-LANG-CONTEXT
+  reopening_condition: frozen causal/provenance/delegation profile
+- approach_family_id: PMR4-FAMILY-DEDUP
+  target_burden: false multiplicity among Speech/hearing/seeing arguments
+  mechanism: typed predicate-renaming equivalence of proof skeletons
+  exact_inputs:
+  - Asfahani rational attribute locus
+  - PMR-M5-01
+  concrete_output_sought: one mechanism record without source-semantic collapse
+  current_strongest_result: PMR-FAMILY-01 admitted as formal dependency and false-multiplicity control
+  exact_gap_or_failure: historical theorem identities unavailable and not merged
+  status: COMPLETE_AT_DECLARED_SCOPE
+  related_families:
+  - PMR3-M5-CAPACITY
+  - theorem-origin V5
+  reopening_condition: exact historical packet shows materially different assumptions or conclusion
+- approach_family_id: PMR4-LANG-CONTEXT
+  target_burden: lexical type versus occurrence meaning
+  mechanism: frozen semantic query and token-fibre collision
+  exact_inputs:
+  - El-Tobgui secondary reconstruction
+  - PMR-LANG-01
+  concrete_output_sought: occurrence-level context boundary
+  current_strongest_result: PMR-LANG-02 admitted after four source/authority repairs
+  exact_gap_or_failure: Arabic-primary and global rich-profile completeness absent
+  status: COMPLETE_AT_SELECTED_SCOPE
+  related_families:
+  - PMR2-LANG-FIBRE
+  - Fusha/Qamus occurrence lane
+  reopening_condition: exact Arabic occurrence or semantic challenge set
+- approach_family_id: PMR5-TAC-TYPED
+  target_burden: numerical identity, episode identity, similarity, lineage, and independence
+  mechanism: copied, convergent, and temporal typed model matrix
+  exact_inputs:
+  - PMR-UG-01
+  - PMR-AGCOM-02
+  - AR2/AR3
+  - somnic distinctions
+  concrete_output_sought: explicit noncollapse matrix without historical-term invention
+  current_strongest_result: PMR-TAC-01 admitted after five typing/custody repairs
+  exact_gap_or_failure: exact TAC/SAC packet and real independence evidence absent
+  status: COMPLETE_AT_SELECTED_SCOPE
+  related_families:
+  - PMR4-AGCOM-ATTRIBUTION
+  - PMR2-UG-PRH
+  reopening_condition: exact TAC source packet or a concrete system lineage graph
+- approach_family_id: PMR6-AGCOM-COMMON-KNOWLEDGE
+  target_burden: delivery, acknowledgment, mutual acknowledgment, distributed knowledge, and common knowledge
+  mechanism: finite protocol/event-model separations and guard-deletion countermodels
+  exact_inputs:
+  - AR2/AR3 communication baseline
+  - PMR-AGCOM-01
+  - PMR-AGCOM-02
+  concrete_output_sought: protocol-relative implication/nonimplication matrix
+  current_strongest_result: 'PMR-AGCOM-06 admitted: private delivery, one private acknowledgment, finite higher-order knowledge,
+    and common knowledge are separated in finite S5 models; guarded finite unreliable private protocols cannot first create
+    common knowledge by a last private delivery'
+  exact_gap_or_failure: message truth/warrant, reliable public announcement models, implemented networks, and general novelty
+    remain outside scope
+  status: COMPLETE_AT_SELECTED_SCOPE
+  related_families:
+  - PMR5-TAC-TYPED
+  - PMR4-AGCOM-ATTRIBUTION
+  reopening_condition: a materially different public-event, reliability, fault, or dynamic-membership model
+- approach_family_id: PMR7-LANG-VERSION-CUSTODY
+  target_burden: same bytes under changed source/target version and applicability contract
+  mechanism: version-indexed recipient contract, same-byte profile collision, and reason-transport ancestry adjudication
+  exact_inputs:
+  - PMR-AGCOM-01
+  - PMR-AGCOM-02
+  - PMR-AGCOM-06
+  - PMR-LANG-01
+  - PMR-LANG-02
+  - AR3 RP-T2
+  - AR3 RP-T40
+  concrete_output_sought: same-bytes/different-version applicability countermodel plus guarded transport characterization
+    or no-new-theorem adjudication
+  current_strongest_result: READY_NOT_STARTED
+  exact_gap_or_failure: version-custody episode class and frozen applicability query are not yet instantiated
+  status: READY
+  related_families:
+  - PMR2-LANG-FIBRE
+  - PMR4-AGCOM-ATTRIBUTION
+  - PMR6-AGCOM-COMMON-KNOWLEDGE
+  reopening_condition: N/A; exact next dependency-ready operation

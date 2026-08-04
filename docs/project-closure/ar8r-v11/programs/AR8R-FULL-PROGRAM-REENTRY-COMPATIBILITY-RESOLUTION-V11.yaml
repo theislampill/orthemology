@@ -1,0 +1,31 @@
+schema: ar8r-full-program-reentry-compatibility-resolution-v11
+authority: CURRENT_PUBLIC_CORRECTION_OVERLAY
+exact_source_index: deferred-candidate-source/exact/integration/A_TO_N_COMPREHENSIVE_INTEGRATION_MAP.yaml
+resolutions:
+  - target_family: ORTHEMOLOGY_MENISCUS_MILESTONE_ARCHITECTURE
+    exact_target_status: RESOLVED_TO_OWNER_PROGRAM_CHARTER_AND_NONADOPTIVE_PROJECTION
+    current_targets:
+      - AR8R-ORTHEMOLOGY-MENISCUS-MILESTONE-ARCHITECTURE-V1.md
+      - AR8R-ORTHEMOLOGY-MENISCUS-MILESTONES-V1.yaml
+    immutable_source_files_modified: false
+    migration_effect: NONE
+  - target_family: TRANSCENDENTAL_ORTHABILITY_AND_SOURCE_ASCENT
+    exact_target_status: RESOLVED_TO_CURRENT_V2_OWNER
+    current_targets:
+      - AR8R_TRANSCENDENTAL_ORTHABILITY_AND_SOURCE_ASCENT_V2.md
+      - AR8R_TRANSCENDENTAL_ORTHABILITY_AND_SOURCE_ASCENT_V2.yaml
+    migration_effect: NONE
+  - target_family: TAC_SAC_HISTORICAL_CONTINUITY
+    exact_target_status: UNAVAILABLE_EXACT_HISTORICAL_TARGET
+    current_bounded_targets:
+      - tac-sac-identity-and-independence.md
+      - AR8R-TAC-SAC-TYPED-COORDINATE-AND-COUNTERMODEL-REGISTRY-V11.yaml
+    historical_identity: NONE
+    migration_effect: NONE
+forbidden_actions:
+  - CREATE_NAMED_TAC_HISTORICAL_FILES
+  - INFER_ACRONYM_EXPANSION
+  - ASSIGN_ORTHEMOLOGOUS_OR_PARALEMOLOGOUS_DEFINITIONS
+  - BACKDATE_NEW_V11_TYPED_REGISTRY
+  - EDIT_IMMUTABLE_FULL_PROGRAM_REENTRY_V2_SOURCE
+  - PROMOTE_ROADMAP_TO_THEOREM_MENISCUS_OR_CLOSURE

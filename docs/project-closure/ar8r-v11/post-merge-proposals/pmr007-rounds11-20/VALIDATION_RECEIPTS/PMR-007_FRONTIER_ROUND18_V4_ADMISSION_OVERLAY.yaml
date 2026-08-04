@@ -1,0 +1,51 @@
+schema: PMR007_ROUND18_V4_ADMISSION_OVERLAY
+round: PMR-007-FRONTIER-ROUND18
+canonical_identity: PMR-007-ORTC-V4
+canonical_packet: PMR-007_FRONTIER_ROUND18_CERTIFICATE_OBJECT_REFINEMENT_AND_TEMPORAL_SELECTOR_V4.md
+status: ADMITTED_POST_MERGE_SCOPED_RESULT
+historical_identity: null
+repair_lineage:
+  - version: V1
+    status: PRESERVED_SUPERSEDED_RESEARCH_CANDIDATE
+    blocking_findings: 6
+  - version: V3
+    status: BLOCKED_FORMAL_DEFECT
+    blocking_finding: R18-V3-F01
+  - version: V4
+    status: ADMITTED_POST_MERGE_SCOPED_RESULT
+admitted_results:
+  - ORTC-EXACT
+  - ORTC-INFO
+  - ORTC-FIXED-BITS
+  - ORTC-PROJECTION
+  - ORTC-ROBUST-COMPLETION
+  - ORTC-ZERO-RANDOM
+  - ORTC-ERROR-RELATION
+  - ORTC-COMPLEXITY
+  - finite rank-certified temporal sufficiency
+preserved_countermodels:
+  - R18-CM-OBJECT-PROJECTION
+  - R18-CM-PAIRWISE
+  - R18-CM-EMPTY
+  - R18-CM-VERSION
+  - R18-RELATION-BEATS-LABEL
+  - R18-CM-HISTORY
+  - R18-CM-STALE-COMPLETION
+proof_status: PROVED_AT_DECLARED_FINITE_SCOPE
+primary_executable_check: PASS
+cold_audit: PASS_WITH_NONBLOCKING_AUTHORITY_NOTES
+blocking_repairs: COMPLETE
+fresh_rereview: PASS_WITH_NONBLOCKING_SCOPE_NOTES
+general_mathematical_novelty: 0
+family_relation:
+  ar2_ar3: STRICT_SPECIALIZATION_AND_APPLICATION
+  frla_1: ZERO_MESSAGE_SPECIAL_CASE_AND_EXTENSION
+  witsenhausen_zero_error_side_information: ESTABLISHED_ANCESTRY
+  orlitsky_roche_coding_for_computing: ESTABLISHED_ANCESTRY
+  set_cover: IDENTITY_REDUCTION
+external_review: OPEN
+owner_adoption: PENDING
+repository_proposal_status: EXTERNAL_REVIEW_AND_OWNER_ADOPTION_REQUIRED
+integrated_champion: NONE
+meniscus: MENISCUS_NOT_REACHED
+natural_closure: NOT_REACHED

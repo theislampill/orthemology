@@ -1,0 +1,665 @@
+schema: ar8r-lane-contribution-edge-ledger-v1
+edge_count: 44
+edges:
+- edge_id: E001
+  source_surface: S69
+  source_artifact: M3_NECESSARY_EXISTENCE_VERSUS_CREATOR_PMR001.md
+  target_surface: S15
+  target_burden: necessary-existence/Creator distinction
+  contribution_type: SUPPLIES_SOURCE_LOCUS
+  what_is_transferred: translated-primary locus distinguishing necessity, originator, and Creator
+  what_is_not_transferred: Arabic verification or world truth
+  required_bridge_assumptions:
+  - translation adequacy within attached edition
+  supporting_evidence:
+  - Asfahani lines 331–350
+  confidence: HIGH
+  current_status: ACTIVE
+  reverse_feedback: failure of the formalization reopens source decomposition
+- edge_id: E002
+  source_surface: S15
+  source_artifact: PMR_M3_01_CANDIDATE.md
+  target_surface: S16
+  target_burden: impersonal-originator rival
+  contribution_type: CHALLENGES
+  what_is_transferred: guarded ascent coordinates
+  what_is_not_transferred: exclusion of every impersonal or plural rival
+  required_bridge_assumptions:
+  - B_origin
+  - B_creator
+  - G_WPK
+  supporting_evidence:
+  - finite model checker
+  confidence: HIGH
+  current_status: VALIDATED
+  reverse_feedback: surviving rival reopens exact ascent guard
+- edge_id: E003
+  source_surface: S16
+  source_artifact: PMR_R5_01_CANDIDATE.md
+  target_surface: S15
+  target_burden: Creator implication
+  contribution_type: COUNTERMODELS
+  what_is_transferred: impersonal necessary external originator model
+  what_is_not_transferred: complete metaphysical adequacy
+  required_bridge_assumptions:
+  - weak source-locus scope
+  supporting_evidence:
+  - PMR-CM-M3-IMPERSONAL-ORIGINATOR
+  confidence: HIGH
+  current_status: VALIDATED
+  reverse_feedback: new source premise may transform rather than eliminate rival
+- edge_id: E004
+  source_surface: S39
+  source_artifact: AR8R_SOURCE_ENRICHED_ARGUMENT_DOSSIERS/M3_NECESSARY_EXISTENCE_VERSUS_CREATOR_PMR001.md
+  target_surface: S15
+  target_burden: source/formal/world separation
+  contribution_type: AUDITS
+  what_is_transferred: authority-coordinate decomposition
+  what_is_not_transferred: proof of any coordinate
+  required_bridge_assumptions:
+  - source ladder
+  supporting_evidence:
+  - source dossier
+  confidence: HIGH
+  current_status: ACTIVE
+  reverse_feedback: source defect reopens formal predicate
+- edge_id: E005
+  source_surface: S68
+  source_artifact: AR8R_SOURCE_ENRICHED_ARGUMENT_DOSSIERS/M3_NECESSARY_EXISTENCE_VERSUS_CREATOR_PMR001.md
+  target_surface: S15
+  target_burden: world-directed ascent
+  contribution_type: NARROWS_SCOPE
+  what_is_transferred: translation and source roles
+  what_is_not_transferred: world-directed conclusion
+  required_bridge_assumptions:
+  - realist and metaphysical bridges
+  supporting_evidence:
+  - source-coordinate decomposition
+  confidence: HIGH
+  current_status: ACTIVE
+  reverse_feedback: world proof cannot repair untranslated locus
+- edge_id: E006
+  source_surface: S69
+  source_artifact: FITRAH_REMINDER_RESTORATION_SOURCE_FINDING_PMR001.md
+  target_surface: S25
+  target_burden: sound-fiṭrah target typing
+  contribution_type: SUPPLIES_TARGET
+  what_is_transferred: latent disposition/impairment/reminder/rehabilitation distinctions
+  what_is_not_transferred: observable proxy or causal effect
+  required_bridge_assumptions:
+  - source-role fidelity
+  supporting_evidence:
+  - al-Ujayri and El-Tobgui loci
+  confidence: HIGH
+  current_status: ACTIVE
+  reverse_feedback: runtime mismatch reopens source-to-formal binding
+- edge_id: E007
+  source_surface: S25
+  source_artifact: FITRAH_REMINDER_RESTORATION_SOURCE_FINDING_PMR001.md
+  target_surface: S27
+  target_burden: restoration semantics
+  contribution_type: SUPPLIES_TARGET
+  what_is_transferred: state-sensitive target rather than output-only target
+  what_is_not_transferred: causal landing
+  required_bridge_assumptions:
+  - target contract
+  supporting_evidence:
+  - current-main daee boundaries
+  confidence: HIGH
+  current_status: ACTIVE
+  reverse_feedback: causal failure may narrow target operationalization
+- edge_id: E008
+  source_surface: S27
+  source_artifact: current-main corrective-transition and T299/T300 correspondence
+  target_surface: S31
+  target_burden: matched intervention/profile blindness test
+  contribution_type: OPERATIONALIZES
+  what_is_transferred: matched intervention and lower-order profile as an experimental test surface
+  what_is_not_transferred: source truth or target adequacy
+  required_bridge_assumptions:
+  - proxy contract
+  supporting_evidence:
+  - V2 map and pilot receipt
+  confidence: MEDIUM_HIGH
+  current_status: ACTIVE
+  reverse_feedback: negative experiment reopens intervention design
+- edge_id: E009
+  source_surface: S83
+  source_artifact: AR8R_T299_T300_NEGATIVE_PILOT_RECEIPT.md
+  target_surface: S27
+  target_burden: causal design
+  contribution_type: REOPENS
+  what_is_transferred: support separation and paired contrast burden
+  what_is_not_transferred: refutation of causal landing theory
+  required_bridge_assumptions:
+  - new experimental design
+  supporting_evidence:
+  - audit 143 / rereview 144
+  confidence: HIGH
+  current_status: ACTIVE
+  reverse_feedback: new design must not rerun retired configuration
+- edge_id: E010
+  source_surface: S83
+  source_artifact: AR8R_T299_T300_NEGATIVE_PILOT_RECEIPT.md
+  target_surface: S29
+  target_burden: alignment-as-restoration inference
+  contribution_type: CHALLENGES
+  what_is_transferred: high CKA with no demonstrated landing
+  what_is_not_transferred: PRH empirical claims in their own scope
+  required_bridge_assumptions:
+  - metric/target bridge
+  supporting_evidence:
+  - median CKA 0.997137
+  confidence: HIGH
+  current_status: ACTIVE
+  reverse_feedback: better higher-order metric may reopen experiment
+- edge_id: E011
+  source_surface: S31
+  source_artifact: T300 theoretical family continuity
+  target_surface: S29
+  target_burden: pairwise/lower-order sufficiency
+  contribution_type: COUNTERMODELS
+  what_is_transferred: higher-order target certification boundary
+  what_is_not_transferred: universal PRH falsity
+  required_bridge_assumptions:
+  - target-relative profile map
+  supporting_evidence:
+  - V5 and theorem-origin registry
+  confidence: MEDIUM_HIGH
+  current_status: ACTIVE
+  reverse_feedback: new PRH metric requires exact target comparison
+- edge_id: E012
+  source_surface: S29
+  source_artifact: 2405.07987v5.pdf
+  target_surface: S30
+  target_burden: prior-order hypothesis
+  contribution_type: MEASURES
+  what_is_transferred: partial representational alignment
+  what_is_not_transferred: teleology or proper function
+  required_bridge_assumptions:
+  - abductive bridge
+  supporting_evidence:
+  - PRH experiments/theory
+  confidence: HIGH
+  current_status: ACTIVE
+  reverse_feedback: shared-pressure countermodels weaken owner extension
+- edge_id: E013
+  source_surface: S30
+  source_artifact: owner prior-order extension
+  target_surface: S15
+  target_burden: intelligibility/ground hypothesis
+  contribution_type: SUPPLIES_PREMISE
+  what_is_transferred: candidate prior-order premise
+  what_is_not_transferred: Necessary Being or Creator
+  required_bridge_assumptions:
+  - teleological/metaphysical bridge
+  supporting_evidence:
+  - V5 crosswalk
+  confidence: LOW_MEDIUM
+  current_status: PROVISIONAL
+  reverse_feedback: M3 countermodels constrain ascent
+- edge_id: E014
+  source_surface: S09
+  source_artifact: AR8R_CANDIDATE_1_EXACT_DOSSIER_CURRENT.md
+  target_surface: S10
+  target_burden: Track M access questions
+  contribution_type: SHARES_MECHANISM
+  what_is_transferred: finite non-oracular query framework
+  what_is_not_transferred: provenance independence
+  required_bridge_assumptions:
+  - exact identity comparison
+  supporting_evidence:
+  - Candidate1 proof audit
+  confidence: HIGH
+  current_status: ACTIVE
+  reverse_feedback: PRR variants may change oracle model, not Candidate1
+- edge_id: E015
+  source_surface: S10
+  source_artifact: AR2/AR3 provenance families
+  target_surface: S12
+  target_burden: evidential independence
+  contribution_type: SUPPLIES_PREMISE
+  what_is_transferred: provenance-root and copying distinctions
+  what_is_not_transferred: TAC numerical identity
+  required_bridge_assumptions:
+  - exact SAC/TAC packet
+  supporting_evidence:
+  - AR2/AR3 ledgers
+  confidence: MEDIUM_HIGH
+  current_status: ACTIVE
+  reverse_feedback: TAC cases may refine provenance signature
+- edge_id: E016
+  source_surface: S12
+  source_artifact: false-tawatur/provenance family
+  target_surface: S21
+  target_burden: theorem-origin multiplicity
+  contribution_type: LIMITS_NOVELTY
+  what_is_transferred: copying does not create independent origin
+  what_is_not_transferred: logical equivalence adjudication
+  required_bridge_assumptions:
+  - ancestry evidence
+  supporting_evidence:
+  - V5 theorem-origin rule
+  confidence: HIGH
+  current_status: ACTIVE
+  reverse_feedback: new independent route requires evidence
+- edge_id: E017
+  source_surface: S21
+  source_artifact: AR8R_THEOREM_FAMILY_REGISTRY_CURRENT.yaml
+  target_surface: S09
+  target_burden: Candidate1 credit
+  contribution_type: REQUIRES_PRIOR_ART
+  what_is_transferred: exact theorem-family and external prior-art comparison
+  what_is_not_transferred: correctness status
+  required_bridge_assumptions:
+  - neutral statement
+  supporting_evidence:
+  - Candidate1 dossier
+  confidence: HIGH
+  current_status: ACTIVE
+  reverse_feedback: prior-art result changes significance not proof
+- edge_id: E018
+  source_surface: S10
+  source_artifact: AR8R_AR2_AR3_COLLECTIVE_BACKBONE_RECONCILIATION.md
+  target_surface: S46
+  target_burden: local re-orthing
+  contribution_type: FORMALIZES
+  what_is_transferred: reason-certificate target closure
+  what_is_not_transferred: implemented runtime
+  required_bridge_assumptions:
+  - source/target contract
+  supporting_evidence:
+  - RP-T2 family
+  confidence: HIGH
+  current_status: ACTIVE
+  reverse_feedback: runtime cases may expose missing guards
+- edge_id: E019
+  source_surface: S46
+  source_artifact: current-main Somnus profiles
+  target_surface: S10
+  target_burden: agentic communication cases
+  contribution_type: INSTANTIATES
+  what_is_transferred: concrete transclusion and writeback test cases
+  what_is_not_transferred: theorem novelty
+  required_bridge_assumptions:
+  - runtime fields
+  supporting_evidence:
+  - COLLECTIVE-SOMNUS-TRANSCLUSION-PROFILE.yaml
+  confidence: HIGH
+  current_status: ACTIVE
+  reverse_feedback: unimplemented fields do not validate theorem
+- edge_id: E020
+  source_surface: S46
+  source_artifact: PMR_AGCOM_01_CANDIDATE.md
+  target_surface: S12
+  target_burden: copy versus independent acquisition
+  contribution_type: CHALLENGES
+  what_is_transferred: receipt is availability only
+  what_is_not_transferred: full TAC mechanism identity
+  required_bridge_assumptions:
+  - provenance route
+  supporting_evidence:
+  - finite profile collision
+  confidence: HIGH
+  current_status: ACTIVE
+  reverse_feedback: TAC packet may add identity coordinates
+- edge_id: E021
+  source_surface: S12
+  source_artifact: AR2/AR3 false multiplicity
+  target_surface: S46
+  target_burden: independent-corroboration claim
+  contribution_type: BLOCKS
+  what_is_transferred: copy count as evidence rank
+  what_is_not_transferred: availability
+  required_bridge_assumptions:
+  - independent root evidence
+  supporting_evidence:
+  - AR2/AR3 ledgers
+  confidence: HIGH
+  current_status: ACTIVE
+  reverse_feedback: new independent route can reopen
+- edge_id: E022
+  source_surface: S79
+  source_artifact: current-main multi-actor ontology
+  target_surface: S11
+  target_burden: TAC identity problem
+  contribution_type: SUPPLIES_TARGET
+  what_is_transferred: carrier/episode/composite distinctions
+  what_is_not_transferred: Tachikoma verdict
+  required_bridge_assumptions:
+  - exact TAC source scenes
+  supporting_evidence:
+  - multi-actor schemas
+  confidence: MEDIUM
+  current_status: ACTIVE
+  reverse_feedback: TAC result may narrow composite attribution
+- edge_id: E023
+  source_surface: S11
+  source_artifact: TAC continuity burden
+  target_surface: S79
+  target_burden: distributed realization
+  contribution_type: NARROWS_SCOPE
+  what_is_transferred: identity and lineage guards
+  what_is_not_transferred: current implementation correctness
+  required_bridge_assumptions:
+  - exact definitions
+  supporting_evidence:
+  - V2 TAC status
+  confidence: LOW
+  current_status: BLOCKED_ON_EXACT_SOURCE
+  reverse_feedback: packet recovery reopens edge
+- edge_id: E024
+  source_surface: S27
+  source_artifact: PMR_AGCOM_01_CANDIDATE.md
+  target_surface: S46
+  target_burden: recipient-side re-orthing
+  contribution_type: SUPPLIES_TARGET
+  what_is_transferred: burden closure before adoption
+  what_is_not_transferred: causal efficacy
+  required_bridge_assumptions:
+  - local target contract
+  supporting_evidence:
+  - AGCOM finite checker
+  confidence: HIGH
+  current_status: ACTIVE
+  reverse_feedback: communication failures add burdens
+- edge_id: E025
+  source_surface: S46
+  source_artifact: current-main transclusion profile
+  target_surface: S27
+  target_burden: availability-to-local-assessment transition
+  contribution_type: IMPLEMENTS
+  what_is_transferred: outline-level local assessment gates
+  what_is_not_transferred: actual causal restoration
+  required_bridge_assumptions:
+  - runtime implementation
+  supporting_evidence:
+  - outline-only profile
+  confidence: MEDIUM
+  current_status: PROVISIONAL
+  reverse_feedback: implementation audit may change status
+- edge_id: E026
+  source_surface: S09
+  source_artifact: AR8R_CANDIDATE_1_EXACT_DOSSIER_CURRENT.md
+  target_surface: S75
+  target_burden: external math review packet
+  contribution_type: ENABLES
+  what_is_transferred: exact statement/proof/checker obligations
+  what_is_not_transferred: review receipt
+  required_bridge_assumptions:
+  - owner transmission
+  supporting_evidence:
+  - Candidate1 dossier
+  confidence: HIGH
+  current_status: ACTIVE
+  reverse_feedback: external review changes significance/prior-art status
+- edge_id: E027
+  source_surface: S75
+  source_artifact: future external review
+  target_surface: S09
+  target_burden: Candidate1 correctness/novelty
+  contribution_type: AUDITS
+  what_is_transferred: independent verdict
+  what_is_not_transferred: historical theorem identity
+  required_bridge_assumptions:
+  - reviewer competence
+  supporting_evidence:
+  - not yet received
+  confidence: LOW
+  current_status: BLOCKED_ON_EXTERNAL_REVIEW
+  reverse_feedback: review findings reopen proof/prior art
+- edge_id: E028
+  source_surface: S77
+  source_artifact: AR8R_FALSE_MENISCUS_INCIDENT_AND_CONTROL.md
+  target_surface: S20
+  target_burden: campaign closure
+  contribution_type: BLOCKS
+  what_is_transferred: self-issued meniscus/closure
+  what_is_not_transferred: continued scoped research
+  required_bridge_assumptions:
+  - ledger reconciliation
+  supporting_evidence:
+  - incident control
+  confidence: HIGH
+  current_status: ACTIVE
+  reverse_feedback: independent reconciliation can later lift block
+- edge_id: E029
+  source_surface: S20
+  source_artifact: V5 flywheel steer
+  target_surface: S84
+  target_burden: dependency-directed reread
+  contribution_type: ENABLES
+  what_is_transferred: typed feedback graph
+  what_is_not_transferred: closure
+  required_bridge_assumptions:
+  - wave state
+  supporting_evidence:
+  - V5
+  confidence: HIGH
+  current_status: ACTIVE
+  reverse_feedback: reread results modify next wave
+- edge_id: E030
+  source_surface: S84
+  source_artifact: PMR-001 edge ledger
+  target_surface: S15
+  target_burden: M4/M5 ascent burdens
+  contribution_type: REOPENS
+  what_is_transferred: exact failed bridge
+  what_is_not_transferred: world conclusion
+  required_bridge_assumptions:
+  - new source/formal evidence
+  supporting_evidence:
+  - M3/R5 results
+  confidence: HIGH
+  current_status: ACTIVE
+  reverse_feedback: new ascent result feeds R5
+- edge_id: E031
+  source_surface: S84
+  source_artifact: PMR-001 edge ledger
+  target_surface: S25
+  target_burden: stable restoration formalization
+  contribution_type: REOPENS
+  what_is_transferred: source-enriched target coordinates
+  what_is_not_transferred: causal success
+  required_bridge_assumptions:
+  - full-stack audit
+  supporting_evidence:
+  - fiṭrah source finding
+  confidence: HIGH
+  current_status: ACTIVE
+  reverse_feedback: formal failure refines source crosswalk
+- edge_id: E032
+  source_surface: S84
+  source_artifact: PMR-001 edge ledger
+  target_surface: S09
+  target_burden: external review preparation
+  contribution_type: REOPENS
+  what_is_transferred: exact dossier consolidation
+  what_is_not_transferred: new theorem
+  required_bridge_assumptions:
+  - owner transmission
+  supporting_evidence:
+  - Candidate1 dossier
+  confidence: HIGH
+  current_status: ACTIVE
+  reverse_feedback: review changes family registry
+- edge_id: E033
+  source_surface: S69
+  source_artifact: Taymiyyan/Athari corpus
+  target_surface: S17
+  target_burden: Candidate N roles
+  contribution_type: SUPPLIES_SOURCE_LOCUS
+  what_is_transferred: integrated graph novelty
+  what_is_not_transferred: single-source authorship
+  required_bridge_assumptions:
+  - exact role/locus audit
+  supporting_evidence:
+  - source files
+  confidence: MEDIUM_HIGH
+  current_status: ACTIVE
+  reverse_feedback: specialist review may narrow architecture
+- edge_id: E034
+  source_surface: S17
+  source_artifact: Candidate N role architecture
+  target_surface: S25
+  target_burden: daee source order and restoration target
+  contribution_type: SUPPLIES_TARGET
+  what_is_transferred: source-role constraints
+  what_is_not_transferred: causal binding
+  required_bridge_assumptions:
+  - role fidelity
+  supporting_evidence:
+  - V2 Candidate N status
+  confidence: MEDIUM
+  current_status: PROVISIONAL
+  reverse_feedback: runtime audit may challenge role mapping
+- edge_id: E035
+  source_surface: S13
+  source_artifact: T130-T132/T143 exact family
+  target_surface: S15
+  target_burden: same-token/same-respect ascent
+  contribution_type: NARROWS_SCOPE
+  what_is_transferred: formal no-go and conservative bridge boundary
+  what_is_not_transferred: world-directed Creator claim
+  required_bridge_assumptions:
+  - realist bridge
+  supporting_evidence:
+  - merged exact payloads
+  confidence: HIGH
+  current_status: ACTIVE
+  reverse_feedback: new bridge does not alter exact theorem
+- edge_id: E036
+  source_surface: S14
+  source_artifact: current conditional companions
+  target_surface: S15
+  target_burden: world-directed ascent
+  contribution_type: SUPPLIES_PREMISE
+  what_is_transferred: realist/semantic/resource bridges
+  what_is_not_transferred: source truth
+  required_bridge_assumptions:
+  - bridge adequacy
+  supporting_evidence:
+  - current main companions
+  confidence: MEDIUM
+  current_status: PROVISIONAL
+  reverse_feedback: rival model failure reopens bridge
+- edge_id: E037
+  source_surface: S16
+  source_artifact: PMR_R5_01_CANDIDATE.md
+  target_surface: S14
+  target_burden: world bridge
+  contribution_type: COUNTERMODELS
+  what_is_transferred: impersonal originator survival
+  what_is_not_transferred: formal source claim
+  required_bridge_assumptions:
+  - world premise
+  supporting_evidence:
+  - finite countermodel
+  confidence: HIGH
+  current_status: ACTIVE
+  reverse_feedback: stronger bridge may transform rival
+- edge_id: E038
+  source_surface: S08
+  source_artifact: T135/T366 profile factorization
+  target_surface: S31
+  target_burden: higher-order blindness
+  contribution_type: SHARES_MECHANISM
+  what_is_transferred: fibre nonconstancy test
+  what_is_not_transferred: causal interpretation
+  required_bridge_assumptions:
+  - declared profile
+  supporting_evidence:
+  - V2 map
+  confidence: HIGH
+  current_status: ACTIVE
+  reverse_feedback: new target profile can alter blindness
+- edge_id: E039
+  source_surface: S31
+  source_artifact: T300 family
+  target_surface: S08
+  target_burden: profile-factorization boundary
+  contribution_type: INSTANTIATES
+  what_is_transferred: higher-order counterexample pattern
+  what_is_not_transferred: historical T366 wording
+  required_bridge_assumptions:
+  - exact profile map
+  supporting_evidence:
+  - theorem-origin registry
+  confidence: MEDIUM_HIGH
+  current_status: ACTIVE
+  reverse_feedback: T366 exact packet may refine ancestry
+- edge_id: E040
+  source_surface: S04
+  source_artifact: source/provenance custody doctrine
+  target_surface: S46
+  target_burden: warranted adoption
+  contribution_type: BLOCKS
+  what_is_transferred: receipt without valid source/version
+  what_is_not_transferred: availability
+  required_bridge_assumptions:
+  - custody contract
+  supporting_evidence:
+  - current main source schemas
+  confidence: HIGH
+  current_status: ACTIVE
+  reverse_feedback: valid custody enables local assessment, not automatic adoption
+- edge_id: E041
+  source_surface: S39
+  source_artifact: source authority ladder
+  target_surface: S46
+  target_burden: local adoption contract
+  contribution_type: SUPPLIES_PREMISE
+  what_is_transferred: authenticity/translation/authority coordinates
+  what_is_not_transferred: truth
+  required_bridge_assumptions:
+  - artifact-specific evidence
+  supporting_evidence:
+  - PMR-AGCOM-01
+  confidence: HIGH
+  current_status: ACTIVE
+  reverse_feedback: communication failure reopens source verification
+- edge_id: E042
+  source_surface: S82
+  source_artifact: open source residuals
+  target_surface: S15
+  target_burden: transcendental source claims
+  contribution_type: REOPENS
+  what_is_transferred: unresolved locus/translation status
+  what_is_not_transferred: formal nonentailment
+  required_bridge_assumptions:
+  - trigger evidence
+  supporting_evidence:
+  - current source registry
+  confidence: HIGH
+  current_status: ACTIVE
+  reverse_feedback: source resolution changes only affected edge
+- edge_id: E043
+  source_surface: S83
+  source_artifact: negative pilot receipt
+  target_surface: S31
+  target_burden: T299/T300 empirical application
+  contribution_type: NARROWS_SCOPE
+  what_is_transferred: tested configuration failed
+  what_is_not_transferred: general theorem family
+  required_bridge_assumptions:
+  - same design only
+  supporting_evidence:
+  - rereview 144
+  confidence: HIGH
+  current_status: ACTIVE
+  reverse_feedback: materially new design may reopen empirical lane
+- edge_id: E044
+  source_surface: S88
+  source_artifact: V2 continuity package + V5 steer
+  target_surface: S20
+  target_burden: research continuity
+  contribution_type: SUPPLIES_PREMISE
+  what_is_transferred: authority and 88-surface map
+  what_is_not_transferred: scientific result
+  required_bridge_assumptions:
+  - custody verification
+  supporting_evidence:
+  - local hashes
+  confidence: HIGH
+  current_status: ACTIVE
+  reverse_feedback: new exact packet may update nodes

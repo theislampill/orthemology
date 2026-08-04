@@ -1,0 +1,39 @@
+schema: ar8r-pmr-wave-ledger-v2
+campaign: AR8R_POST_MERGE_MENISCUS_PROGRAM_V1
+historical_authority:
+  duration: '09:41:25.405101139'
+  latest_segment: 357
+  changed: false
+repository_authority: cc91f41fec364ea3910b80d57252bb1e0a050278
+GitHub_changed: false
+waves:
+  - wave_id: PMR-001
+    status: COMPLETE_AT_SELECTED_SCOPE
+    tranche: PMR-001-TRANCHE-001
+  - wave_id: PMR-002
+    status: COMPLETE_AT_SELECTED_SCOPE
+    tranche: PMR-002-TRANCHE-001
+    outputs: [PMR-M4-01, PMR-LANG-01, PMR-UG-01-V3, PMR-002-CROSSWALK]
+    custody_repairs: [PMR2-UG-CUSTODY-F01]
+  - wave_id: PMR-003
+    status: COMPLETE_AT_SELECTED_SCOPE
+    tranche: PMR-003-TRANCHE-001
+    outputs: [PMR-M5-01, PMR-M5-02, PMR-M5-03]
+  - wave_id: PMR-004
+    status: COMPLETE_AT_SELECTED_SCOPE
+    tranche: PMR-004-TRANCHE-001
+    outputs: [PMR-AGCOM-02, PMR-FAMILY-01, PMR-LANG-02]
+  - wave_id: PMR-005
+    status: COMPLETE_AT_SELECTED_SCOPE
+    tranche: PMR-005-TRANCHE-001
+    outputs: [PMR-TAC-01]
+  - wave_id: PMR-006
+    status: COMPLETE_AT_SELECTED_SCOPE
+    tranche: PMR-006-TRANCHE-001
+    outputs: [PMR-AGCOM-06]
+  - wave_id: PMR-007
+    status: CONTINUATION_READY_NOT_STARTED
+    exact_next_action: freeze version-custody class and construct same-bytes/different-version applicability countermodel
+integrated_champion: NONE
+meniscus_status: MENISCUS_NOT_REACHED
+natural_closure: NOT_REACHED

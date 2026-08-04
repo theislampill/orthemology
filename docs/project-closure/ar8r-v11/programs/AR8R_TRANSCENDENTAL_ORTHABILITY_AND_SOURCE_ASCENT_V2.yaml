@@ -1,0 +1,33 @@
+schema: ar8r-transcendental-orthability-and-source-ascent-v2
+authority: CURRENT_PUBLIC_COMPATIBILITY_OWNER
+authority_order:
+  - CURRENT_V11_GOVERNANCE_AND_PROVENANCE
+  - CURRENT_TRACK_T_AND_BRIDGE_LEDGER
+  - LATER_PROGRAM_AND_PMR_SCOPED_RESULTS
+  - RECOVERED_CONTEXT
+  - HISTORICAL_EXACT_WHERE_AVAILABLE
+linked_owners:
+  milestone_architecture: AR8R-ORTHEMOLOGY-MENISCUS-MILESTONES-V1.yaml
+  track_t: track-t-authority-and-bridge-status.md
+  r5: ar8r-r5-minimal-nonintegration-control.md
+  architecture: AR8R-THREE-TRACK-A-TO-N-ARCHITECTURE-V11.yaml
+  bridge_ledger: AR8R-TRANSCENDENTAL-BRIDGE-AND-RIVAL-LEDGER-V11.yaml
+  source_ascent: p597-p620-source-ascent-status.md
+  ontology_rivals: AR8R-ONTOLOGY-AND-REPRESENTATION-ALTERNATIVES-MATRIX-V11.yaml
+nonmigration_edges:
+  - M theorem -/-> source fidelity
+  - M theorem -/-> divine personality
+  - N source claim -/-> neutral school-independent entailment
+  - T scoped anti-bootstrapping -/-> one Necessary Being
+  - functional integration -/-> one bearer
+  - query optimality -/-> proper function or Wisdom
+current_results:
+  same_token_same_respect: SAME_TOKEN_SAME_RESPECT_THEORY_ADEQUACY_NO_GO_ESTABLISHED
+  world_directed_extension: WORLD_DIRECTED_EXTENSION_CONDITIONAL_ON_RB
+  global_underived_modal_order: GLOBAL_UNDERIVED_MODAL_ORDER_NOT_ESTABLISHED
+  necessary_being: NECESSARY_BEING_NOT_DEDUCTIVELY_ESTABLISHED
+  r5: UNDEFEATED
+closure_state:
+  integrated_champion: NO_INTEGRATED_CHAMPION
+  meniscus: MENISCUS_NOT_REACHED
+  natural_closure: NATURAL_CLOSURE_NOT_REACHED

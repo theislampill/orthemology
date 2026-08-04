@@ -1,0 +1,26 @@
+schema: ar8r-v11-candidate-1-provenance-v1
+candidate: Candidate-1
+title: Exact hidden-matching threshold complexity
+historical_payload_status: EXACT_HISTORICAL_BYTES
+historical_payload_sha256: 558061bf28fc4ead94f8b3b2aa0d67826fc1180500190ab3c17a5128fe349088
+small_instance_results_sha256: 267cc7c06efd844408f3aca9833c3ea56dbe416a0898d065bcaf65f330fc2bfd
+repository_status: NON_ADOPTED_RESEARCH_THEOREM
+proof_custody:
+  candidate_specific_cold_reconstructions: 2
+  historical_disposition: globally_consistent
+  external_review_completed: false
+prior_art_disposition: STRENGTHENED_RECTANGULAR_THRESHOLD_VARIANT
+prior_art_confidence: moderate
+originality_established: false
+external_review_completed: false
+owner_adoption: pending
+open_burdens:
+  - exact randomized decision-tree complexity
+  - exhaustive prior-art search in the exact promise and query model
+  - independent external mathematical proof review
+  - owner adoption
+claim_ceiling:
+  - no empirical validation
+  - no general orthemology theorem
+  - no meniscus credit
+  - no originality claim

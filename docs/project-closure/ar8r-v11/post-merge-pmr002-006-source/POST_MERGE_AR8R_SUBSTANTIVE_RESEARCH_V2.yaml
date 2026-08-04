@@ -1,0 +1,109 @@
+schema: post-merge-ar8r-substantive-research-ledger-v2
+campaign: AR8R_POST_MERGE_MENISCUS_PROGRAM_V1
+ledger_id: POST_MERGE_AR8R_SUBSTANTIVE_RESEARCH_V2
+supersedes: POST_MERGE_AR8R_SUBSTANTIVE_RESEARCH_V1
+historical_authority:
+  duration: '09:41:25.405101139'
+  seconds: '34885.405101139'
+  latest_segment: 357
+  theorem_origin: V5
+  changed: false
+counting_policy:
+  included:
+  - source and translation research
+  - mathematical formulation and proof
+  - countermodel development
+  - substantive AR2/AR3 and cross-lane synthesis
+  - theorem-family and provenance adjudication
+  - cold audit, repair, and rereview
+  excluded:
+  - inventory construction
+  - 88-node graph bookkeeping and report formatting
+  - routine file movement and hashing
+  - checker runtime without substantive interpretation
+  - Git engineering
+entries:
+- tranche_id: PMR-001-TRANCHE-001
+  wave_id: PMR-001
+  observed_clock_start_utc: '2026-08-02T23:20:57.044080535Z'
+  observed_substantive_boundary_utc: '2026-08-02T23:35:33.551819258Z'
+  gross_observed_interval_seconds: '876.507738723'
+  excluded_intervals:
+  - start_utc: '2026-08-02T23:28:17.183824171Z'
+    end_utc: '2026-08-02T23:32:15.715821486Z'
+    seconds: '238.531997315'
+    reason: program scaffolding, 88-surface inventory construction, and flywheel graph bookkeeping
+  - start_utc: '2026-08-02T23:34:22.675820056Z'
+    end_utc: '2026-08-02T23:34:24.903820031Z'
+    seconds: '2.227999975'
+    reason: finite checker runtime without substantive interpretation
+  - start_utc: '2026-08-02T23:35:07.315819554Z'
+    end_utc: '2026-08-02T23:35:07.795819548Z'
+    seconds: '0.479999994'
+    reason: rereview checker runtime without substantive interpretation
+  counted_substantive_seconds: '635.267741439'
+  counted_substantive_duration: '00:10:35.267741439'
+  included_work:
+  - Asfahani necessary-existence-versus-Creator source decomposition
+  - al-Ujayri and El-Tobgui fitrah impairment/reminder/restoration source analysis
+  - PMR-M3-01 proof and source-preserving countermodels
+  - PMR-R5-01 rival-premise sensitivity comparison
+  - PMR-AGCOM-01 theorem and AR2/AR3 ancestry reconciliation
+  - Candidate 1 and T299/T300 evidence-status correction
+  - theorem-family adjudication
+  - cold audit, blocking repair, and fresh rereview
+  status: CLOSED_TRANCHE_ACCOUNTING
+- block_id: PMR-002-THROUGH-PMR-006-MULTI-WAVE-BLOCK
+  waves:
+  - PMR-002
+  - PMR-003
+  - PMR-004
+  - PMR-005
+  - PMR-006
+  tranches:
+  - PMR-002-TRANCHE-001
+  - PMR-003-TRANCHE-001
+  - PMR-004-TRANCHE-001
+  - PMR-005-TRANCHE-001
+  - PMR-006-TRANCHE-001
+  observed_clock_start_utc: '2026-08-03T01:08:54.591455879Z'
+  observed_substantive_start_utc: '2026-08-03T01:11:42.067071852Z'
+  observed_substantive_boundary_utc: '2026-08-03T01:57:18.067426518Z'
+  gross_observed_interval_seconds: '2903.475970639'
+  excluded_intervals:
+  - start_utc: '2026-08-03T01:08:54.591455879Z'
+    end_utc: '2026-08-03T01:11:42.067071852Z'
+    seconds: '167.475615973'
+    reason: continuity navigation, checkpoint-state inspection, and retrieval setup before the first substantive operation
+  excluded_uninterpreted_checker_runtime_seconds: '0'
+  checker_runtime_note: Checker results were interpreted inside the proof, audit, repair, custody, and rereview work; no uninterpreted
+    runtime was counted separately.
+  excluded_packaging_hashing_formatting_seconds: ALL_POST_BOUNDARY
+  counted_substantive_seconds: '2736.000354666'
+  counted_substantive_duration: '00:45:36.000354666'
+  per_wave_duration_allocation: NOT_CLAIMED; ONE OBSERVED MULTI-WAVE SUBSTANTIVE BLOCK
+  included_work:
+  - bounded ancestry and authority search for T162-T172, T184-T190, T201-T205, and T254-T255 under the retrieval cap
+  - PMR-M4-01 source-critical qiyas al-awla guard eligibility, six deletion models, overread controls, audit, repair, and
+    rereview
+  - PMR-LANG-01 translation fibre characterization, noncompleteness controls, audit, repair, and rereview
+  - PMR-UG-01 convergence/local-grammar nonbridge models, semantic review, custody defect discovery, V3 repair, and custody
+    rereview
+  - PMR-M5-01 Speech-capacity conditional and guard deletion analysis
+  - PMR-M5-02 plural W/P/K common-bearer countermodel
+  - PMR-M5-03 capacity/occurrence/qualification/Name/content separation
+  - PMR-AGCOM-02 bearer/root/authority profile nonfactorization
+  - PMR-FAMILY-01 theorem-family and false-multiplicity adjudication
+  - PMR-LANG-02 token-type versus occurrence-context fibre result
+  - PMR-TAC-01 carrier/episode/type/state/function/lineage/independence noncollapse matrix
+  - PMR-AGCOM-06 delivery/acknowledgment/common-knowledge separation and guarded last-message impossibility
+  - cross-lane dependency synthesis and whole-field reread
+  - eleven cold-audit/repair/rereview chains closing forty blocking findings
+  status: CLOSED_MATERIAL_MULTI_WAVE_ACCOUNTING
+cumulative_post_merge_continuation_substantive_seconds: '3371.268096105'
+cumulative_post_merge_continuation_substantive_duration: '00:56:11.268096105'
+eight_hour_floor_seconds: 28800
+remaining_before_floor_seconds: '25428.731903895'
+remaining_before_floor_duration: '07:03:48.731903895'
+floor_status: NOT_YET_REACHED
+natural_campaign_closure: NOT_REACHED

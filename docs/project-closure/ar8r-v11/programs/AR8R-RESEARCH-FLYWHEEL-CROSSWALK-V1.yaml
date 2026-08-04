@@ -1,0 +1,234 @@
+schema: ar8r-research-flywheel-crosswalk-v1
+status: PROGRAM_CROSSWALK_NO_THEOREM_OR_CHAMPION_CREDIT
+edge_kind_default: supports
+nodes:
+  source_custody: {owner: ten-advances-and-source-custody.md}
+  language_version: {owner: language-translation-and-version-custody.md}
+  agentic_communication: {owner: agentic-communication.md}
+  representation_prh: {owner: prh-higher-order-and-causal-restoration.md}
+  tensor_search: {owner: tensor-and-bitter-lesson.md}
+  candidate_n: {owner: candidate-n-authority-status.md}
+  proper_function_e: {owner: proper-function-and-candidate-e.md}
+  derivational_unification_g: {owner: candidate-g-derivational-unification.md}
+  track_t: {owner: track-t-authority-and-bridge-status.md}
+  uncreated_grammar: {owner: uncreated-grammar-and-articulability.md}
+  r5: {owner: ar8r-r5-minimal-nonintegration-control.md}
+  candidate_1: {owner: ../theorems/candidate-1-hidden-matching-threshold.md}
+  tac_sac: {owner: tac-sac-identity-and-independence.md}
+  restoration: {owner: ../theorems/ar8r-t299-matched-intervention-burden-landing.md}
+  daee_temporal: {owner: daee-temporal-restoration-and-provenance.md}
+  provenance_family: {owner: ../provenance/AR8R-THEOREM-FAMILY-REGISTRY-V1.yaml}
+  a_to_n_architecture: {owner: AR8R-THREE-TRACK-A-TO-N-ARCHITECTURE-V11.yaml}
+  deferred_candidate_e_g: {owner: deferred-candidate-source/README.md}
+  transcendental_bridges: {owner: AR8R-TRANSCENDENTAL-BRIDGE-AND-RIVAL-LEDGER-V11.yaml}
+  ontology_rivals: {owner: AR8R-ONTOLOGY-AND-REPRESENTATION-ALTERNATIVES-MATRIX-V11.yaml}
+  proper_function_matrix: {owner: AR8R-PROPER-FUNCTION-TYPED-MATRIX-V11.yaml}
+  tac_sac_registry: {owner: AR8R-TAC-SAC-TYPED-COORDINATE-AND-COUNTERMODEL-REGISTRY-V11.yaml}
+  theorem_family_crosswalk: {owner: ../provenance/AR8R-THEOREM-FAMILY-RELATION-CROSSWALK-V11.yaml}
+  lean_queue: {owner: ../formalization/AR8R-V11-LEAN-FORMALIZATION-QUEUE.yaml}
+  pmr_formalization_map: {owner: ../formalization/AR8R-PMR007-TEN-RESULT-FORMALIZATION-MAP-V11.yaml}
+  ten_conflict: {owner: ../provenance/AR8R-TEN-ADVANCES-STATIC-CONFLICT-RECEIPT-V11.yaml}
+  t299_exact_twin: {owner: ../theorems/ar8r-t299-matched-intervention-burden-landing.md}
+  two_thread_receipt: {owner: ../provenance/AR8R-TWO-THREAD-SYNTHESIS-RECEIPT-V11.yaml}
+  connes_dispute: {owner: ten-advances-connes-rigidity-dispute.md}
+  osw15: {owner: ../governance/ORTHEMOLOGICAL-SPECIFICATION-WARRANT-OSW-15.yaml}
+  milestone_architecture: {owner: AR8R-ORTHEMOLOGY-MENISCUS-MILESTONES-V1.yaml, authority: OWNER_PROGRAM_CHARTER_NO_THEOREM_CREDIT}
+edges:
+  - from: source_custody
+    to: language_version
+    contribution: exact source identity and version eligibility
+    nontransfer: source custody does not entail translation truth
+  - from: source_custody
+    to: daee_temporal
+    contribution: fiṭrah reminder and rehabilitation loci type a state-sensitive restoration target
+    nontransfer: source-relative target semantics do not supply an observable proxy or causal landing
+  - from: language_version
+    to: agentic_communication
+    contribution: occurrence-sensitive content and applicability guards
+    nontransfer: receipt does not entail understanding, warrant, or authorization
+  - from: agentic_communication
+    to: provenance_family
+    contribution: acquisition-root and pure-copy distinctions
+    nontransfer: copied multiplicity receives zero independent-origin credit
+  - from: candidate_1
+    to: provenance_family
+    contribution: supplies the exact finite query framework that later provenance-root oracle extensions must reduce to or distinguish
+    nontransfer: a changed oracle or returned root label receives no second historical origin
+  - from: provenance_family
+    to: candidate_1
+    contribution: requires theorem-family and prior-art adjudication before significance or novelty credit
+    nontransfer: ancestry affects credit and scope but does not replace the proof audit
+  - from: provenance_family
+    to: tac_sac
+    contribution: supplies acquisition-root and pure-copy constraints for claim-relative evidential independence
+    nontransfer: lineage or root equality does not decide numerical carrier or episode identity
+  - from: tac_sac
+    to: agentic_communication
+    contribution: supplies carrier episode lineage and independence questions for copied or synchronized messages
+    nontransfer: synchronized availability does not establish one mind one episode or independent corroboration
+  - from: tensor_search
+    to: representation_prh
+    contribution: candidate routing, missingness controls, and equivariance tests
+    nontransfer: benchmark performance does not establish ontology or identity
+  - from: representation_prh
+    to: restoration
+    contribution: higher-order blindness and matched-intervention diagnostic burdens
+    nontransfer: similarity movement neither proves nor is required for restoration
+  - from: restoration
+    to: proper_function_e
+    contribution: separates achieved output from causal/pathway adequacy
+    nontransfer: causal landing does not establish proper function or warrant
+  - from: language_version
+    to: daee_temporal
+    contribution: version eligibility constrains which actions and certificates remain available
+    nontransfer: same bytes or a valid historical certificate do not entail current applicability
+  - from: agentic_communication
+    to: daee_temporal
+    contribution: complete warranted-output and certificate-object obligations constrain local protocols
+    nontransfer: agreement on an action does not copy its warrant or provenance root
+  - from: daee_temporal
+    to: restoration
+    contribution: separates event-local closure, invariant-core entry, and general eventual target persistence
+    nontransfer: model-relative temporal success does not establish causal or human restoration
+  - from: provenance_family
+    to: daee_temporal
+    contribution: root multiplicity and static transversal margins pressure-test restorative portfolios
+    nontransfer: static path redundancy does not establish independent roots or adaptive robustness
+  - from: proper_function_e
+    to: candidate_n
+    contribution: asks whether source-role architecture changes warranted inference
+    nontransfer: thematic fit does not establish Candidate N payoff or uniqueness
+  - from: candidate_n
+    to: track_t
+    contribution: typed source-role premises and source-relative noncollapse checks
+    nontransfer: source taxonomy does not establish world truth or Necessary Being
+  - from: uncreated_grammar
+    to: track_t
+    contribution: exposes articulability, distinction, and local-grammar bridge burdens
+    nontransfer: symmetry or articulability does not establish mentality, agency, or Speech
+  - from: derivational_unification_g
+    to: track_t
+    contribution: tests whether common-bearer packaging supplies explanatory compression
+    nontransfer: one carrier does not establish derivational or metaphysical unity
+  - from: r5
+    to: track_t
+    contribution: maintains plural, brute, relational, regress, and nonintegration rivals
+    nontransfer: shared vocabulary or interoperability does not defeat a rival
+  - from: track_t
+    to: source_custody
+    contribution: returns exact bridge premises for primary-source and specialist audit
+    nontransfer: conditional formal success does not upgrade source verification
+  - from: provenance_family
+    to: tensor_search
+    contribution: prevents duplicate examples and applications from training false novelty labels
+    nontransfer: family membership does not merge theorem identity
+  - kind: supports
+    from: deferred_candidate_e_g
+    to: proper_function_e
+    contribution: exact Candidate E source custody
+    nontransfer: exact bytes do not supply the missing counted cold audit or adoption
+  - kind: supports
+    from: deferred_candidate_e_g
+    to: derivational_unification_g
+    contribution: exact Candidate G source custody
+    nontransfer: exact bytes do not supply the missing counted cold audit or adoption
+  - kind: constrains
+    from: a_to_n_architecture
+    to: track_t
+    contribution: six M/T/N nonmigration rules
+    nontransfer: track adjacency cannot transfer proof or source authority
+  - kind: constrains
+    from: r5
+    to: transcendental_bridges
+    contribution: plural realization and common-bearer countermodel pressure against B6
+    nontransfer: integration vocabulary does not establish one bearer
+  - kind: constrains
+    from: ontology_rivals
+    to: transcendental_bridges
+    contribution: live nominalist conceptualist powers plural and fixed-point rivals constrain B5-B11
+    nontransfer: current evidence does not select an ontology
+  - kind: constrains
+    from: proper_function_matrix
+    to: proper_function_e
+    contribution: account-specific function-fixing relations
+    nontransfer: success cannot supply proper function warrant or Wisdom
+  - kind: constrains
+    from: tac_sac_registry
+    to: tac_sac
+    contribution: 32 typed noncollapse witnesses
+    nontransfer: NEW_V11 coordinates do not reconstruct unavailable historical TAC/SAC terms
+  - kind: constrains
+    from: lean_queue
+    to: pmr_formalization_map
+    contribution: static inventory is kept separate from parse elaboration kernel and axiom receipts
+    nontransfer: source presence does not create a machine-checked theorem claim
+  - kind: constrains
+    from: two_thread_receipt
+    to: source_custody
+    contribution: hash/count-only evidence coverage
+    nontransfer: later corpus availability is not backdated into historical theorem custody
+  - kind: supports
+    from: connes_dispute
+    to: source_custody
+    contribution: exact public source-object custody and explicit object mismatch
+    nontransfer: refuting the presented critique does not settle the OpenAI theorem
+  - kind: supports
+    from: connes_dispute
+    to: osw15
+    contribution: worked source/formal object-correspondence case study
+    nontransfer: a case study is not a theorem-identity relation
+  - kind: supports
+    from: osw15
+    to: theorem_family_crosswalk
+    contribution: specification and identity coordinates for family adjudication
+    nontransfer: shared family or declaration names do not establish proposition identity
+  - kind: supports
+    from: osw15
+    to: agentic_communication
+    contribution: separates receipt authorization adoption execution and mathematical warrant
+    nontransfer: communication or tool acceptance does not establish truth
+  - kind: constrains
+    from: osw15
+    to: ten_conflict
+    contribution: missing build kernel custody and correspondence gates remain explicit
+    nontransfer: static counts cannot become formal authority
+  - kind: constrains
+    from: osw15
+    to: connes_dispute
+    contribution: unresolved build kernel correspondence and specialist-review coordinates block theorem-intent transfer
+    nontransfer: static token absence and source presence carry no intended-theorem correctness credit
+  - kind: supports
+    from: milestone_architecture
+    to: a_to_n_architecture
+    contribution: dependency-ordered milestone and portfolio routing
+    nontransfer: roadmap adjacency does not adopt a candidate or transfer proof
+  - kind: constrains
+    from: milestone_architecture
+    to: transcendental_bridges
+    contribution: M11 and MEN-7 retain arrow-by-arrow source rival and world burdens
+    nontransfer: a named milestone is not a positive metaphysical bridge
+  - kind: constrains
+    from: milestone_architecture
+    to: lean_queue
+    contribution: M14 retains the full source parse elaboration kernel axiom and review ladder
+    nontransfer: formalization targeting is not machine-check evidence
+  - kind: constrains
+    from: milestone_architecture
+    to: daee_temporal
+    contribution: M7 M9 and M16 separate current daee main from draft PR evidence
+    nontransfer: draft runtime architecture is not merged-main authority or semantic correctness
+  - kind: supports
+    from: milestone_architecture
+    to: language_version
+    contribution: M18 routes occurrence grammar translation provenance and version burdens
+    nontransfer: application relevance does not establish a live Fusha or Qamus implementation
+selection_rule: Choose the next lane by unresolved load-bearing dependency and expected cross-lane yield, not by vocabulary overlap.
+closure_rule: No cycle in this graph establishes meniscus, natural closure, or an integrated champion.
+milestone_projection:
+  owner: AR8R-ORTHEMOLOGY-MENISCUS-MILESTONES-V1.yaml
+  milestone_count: 18
+  meniscus_candidate_count: 9
+  dependency_phase_count: 6
+  cross_lane_flywheel_count: 5
+  formalization_loop_count: 1
+  adoption_effect: NONE

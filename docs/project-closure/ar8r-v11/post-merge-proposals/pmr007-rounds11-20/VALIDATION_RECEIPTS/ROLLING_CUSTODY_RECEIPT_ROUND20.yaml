@@ -1,0 +1,11 @@
+schema: AR8R_PMR007_ROUND20_FULL_CUSTODY_RECEIPT_V1
+generated_at: '2026-08-03T17:53:37.602930+00:00'
+round19_custody_update: PASS
+private_checkpoint_verified_through: ROUND20_V2
+private_checkpoint_sha256: 72fd0c7d7515d4b0812181bf111af52b64dc4489852bf6ffddb457c8b1fe5290
+private_checkpoint_verification: PASS
+sanitized_proposal_verified_through: ROUND20_V2
+sanitized_proposal_sha256: a9de3f045a85a2b69b0b29275128988231b6aff986fbdb0c6fad85f856eacc6b
+sanitized_proposal_verification: FAIL
+private_data_exclusion: FAIL
+github_changed: false

@@ -1,0 +1,16 @@
+schema: ar8r-canonical-pair-universe-custody-receipt-v1
+canonical_unordered_nonself_pair_count: 119316
+endpoint_count: 489
+validation_source_sha256: b83460e4fc57261b3f12671c75abd39cf152afb61d66f5df24a9693045ee61b1
+formula: 489*488/2
+validation:
+  expected_pairs_match_actual: true
+  all_pairs_unique: true
+  unordered: true
+  nonself: true
+  unknown_endpoints: 0
+status: HISTORICAL_CUSTODY_RECEIPT_NOT_CURRENT_REPOSITORY_PAIR_GRAPH
+note: >-
+  The pair universe was independently reproduced against the repaired exact
+  489-member owner. It does not imply that every pair is scientifically useful
+  or that every associated theorem payload is resolved.

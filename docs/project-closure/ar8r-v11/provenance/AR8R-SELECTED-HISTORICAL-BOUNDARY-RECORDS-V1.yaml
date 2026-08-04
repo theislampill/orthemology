@@ -1,0 +1,39 @@
+schema: ar8r-selected-historical-boundary-records-v1
+source_registry:
+  name: AR8R_CANONICAL_THEOREM_ORIGIN_REGISTRY_V5.yaml
+  sha256: 843a7b7b238cfccc6b45934644f0568cc84e7826ebeddd9528511bf37111b440
+  evidence_class: EXACT_LEDGER_RECORD_NOT_EXACT_PROOF_BYTES
+records:
+  - identity: AR8R-T89
+    statement: >-
+      Exact source-object provenance, and even a fully recorded but semantically
+      defective interpretation workflow, do not by themselves entail
+      translation truth.
+    status: VALIDATED_AT_NARROWED_SCOPE_RECURSIVE_REENTRY_ACTIVE
+    scope: No unguarded provenance-to-truth transfer.
+    program_owners: [language_translation, source_custody]
+  - identity: AR8R-T99
+    statement: >-
+      A deterministic augmentation computable from the current transcript can
+      be simulated query-for-query in the unchanged oracle, promise, cost, and
+      side-information model; non-transcript augmentation changes the model.
+    status: VALIDATED_AT_REVIEWED_SCOPE_RECURSIVE_REENTRY_ACTIVE
+    scope: Unchanged deterministic oracle and cost model only.
+    program_owners: [agentic_communication, candidate_1]
+  - identity: AR8R-T100
+    statement: >-
+      Pure copying with unchanged content and ultimate-root set leaves the
+      set-valued content-plus-root quotient, and verdicts factoring through it,
+      unchanged.
+    status: VALIDATED_AT_REVIEWED_SCOPE_RECURSIVE_REENTRY_ACTIVE
+    scope: Pure-copy set quotient only; no multiplicity-sensitive policy claim.
+    program_owners: [agentic_communication, tac_sac]
+  - identity: AR8R-T244
+    statement: >-
+      If an extended theory entails a base-language sentence not entailed by
+      the base theory, the extension is nonconservative for that sentence;
+      finite acyclic explicit definitional extensions cannot alone generate it.
+    status: VALIDATED_DIRECT_CONSERVATIVITY_BOUNDARY_RECURSIVE_REENTRY_ACTIVE
+    scope: No truth, warrant, target-faithfulness, world-direction, or ontology claim.
+    program_owners: [language_translation, source_custody]
+credit_rule: One canonical row may serve multiple programs without duplicate theorem or origin credit.

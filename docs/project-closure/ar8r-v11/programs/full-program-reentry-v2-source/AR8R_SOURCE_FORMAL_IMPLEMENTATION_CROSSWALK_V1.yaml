@@ -1,0 +1,1433 @@
+schema: compatibility-crosswalk-v1
+canonical_owner: AR8R_SOURCE_FORMAL_IMPLEMENTATION_WORLD_CROSSWALK_V2.yaml
+rows:
+- concept_id: CW001
+  concept: orthemma / analyzed particular
+  owner_claim: particular under analysis
+  primary_source: ''
+  arabic_locus: ''
+  translation: ''
+  secondary_reconstruction: ''
+  modern_comparison: ''
+  formal_theorem: current formal core definitions
+  countermodel: ''
+  source_relative_implication: ''
+  world_directed_premise: ''
+  daee_concept_module: NOETIC-CLAIM target occurrence
+  runtime_field: ''
+  executable_enforcement: ''
+  observable_proxy: ''
+  causal_contrast: ''
+  apprehensional_relation: ''
+  lean_declaration: ''
+  current_main_owner: manuscript + theory core
+  post_merge_decision_status: ''
+  repository_inclusion_status: MERGED_CURRENT
+  external_review_status: ''
+  open_burden: ''
+  relation_type: DEFINITIONALLY_EQUIVALENT
+  edge_types:
+  - definition
+  authority_note: candidate terminology, not community adoption
+- concept_id: CW002
+  concept: ortheme / correct placement
+  owner_claim: determinate right placing relative to analysis
+  primary_source: ''
+  arabic_locus: ''
+  translation: ''
+  secondary_reconstruction: ''
+  modern_comparison: ''
+  formal_theorem: analysis-relative correctness contract
+  countermodel: ''
+  source_relative_implication: ''
+  world_directed_premise: ''
+  daee_concept_module: ''
+  runtime_field: ''
+  executable_enforcement: ''
+  observable_proxy: ''
+  causal_contrast: ''
+  apprehensional_relation: ''
+  lean_declaration: ''
+  current_main_owner: manuscript/orthemic core
+  post_merge_decision_status: ''
+  repository_inclusion_status: MERGED_CURRENT
+  external_review_status: ''
+  open_burden: ''
+  relation_type: DEFINITIONALLY_EQUIVALENT
+  edge_types:
+  - definition
+  - semantic entailment
+  authority_note: analysis relative; not absolute bare label
+- concept_id: CW003
+  concept: metaortheme / governing standard
+  owner_claim: governing placement standard
+  primary_source: ''
+  arabic_locus: ''
+  translation: ''
+  secondary_reconstruction: ''
+  modern_comparison: ''
+  formal_theorem: ''
+  countermodel: ''
+  source_relative_implication: ''
+  world_directed_premise: ''
+  daee_concept_module: REPRESENTED-STANDARD and semantic operator
+  runtime_field: ''
+  executable_enforcement: ''
+  observable_proxy: ''
+  causal_contrast: ''
+  apprehensional_relation: ''
+  lean_declaration: ''
+  current_main_owner: core + daee
+  post_merge_decision_status: ''
+  repository_inclusion_status: MERGED_CURRENT
+  external_review_status: ''
+  open_burden: terminology collision with metaorthemma/meta-orthemma
+  relation_type: SAME_WORD_DIFFERENT_TYPE
+  edge_types:
+  - definition
+  authority_note: keep collisions explicit
+- concept_id: CW004
+  concept: orthing / placement operation
+  owner_claim: operation/event of placing
+  primary_source: ''
+  arabic_locus: ''
+  translation: ''
+  secondary_reconstruction: ''
+  modern_comparison: ''
+  formal_theorem: ''
+  countermodel: ''
+  source_relative_implication: ''
+  world_directed_premise: ''
+  daee_concept_module: CORRECTIVE-TRANSITION
+  runtime_field: transition/evidence/custody record
+  executable_enforcement: schemas and fixtures
+  observable_proxy: ''
+  causal_contrast: ''
+  apprehensional_relation: ''
+  lean_declaration: ''
+  current_main_owner: core + daee
+  post_merge_decision_status: ''
+  repository_inclusion_status: MERGED_CURRENT
+  external_review_status: ''
+  open_burden: ''
+  relation_type: REDUCIBLE_WITH_GUARDS
+  edge_types:
+  - definition
+  - operational assumption
+  authority_note: operation not identical to result
+- concept_id: CW005
+  concept: proper orthing
+  owner_claim: correct result by adequate route with warrant/custody/target binding
+  primary_source: ''
+  arabic_locus: ''
+  translation: ''
+  secondary_reconstruction: ''
+  modern_comparison: ''
+  formal_theorem: AR8R-T323-T326 historical family
+  countermodel: ''
+  source_relative_implication: ''
+  world_directed_premise: ''
+  daee_concept_module: NOETIC-EVIDENCE-REGISTRY
+  runtime_field: ''
+  executable_enforcement: ''
+  observable_proxy: claim/path/source records
+  causal_contrast: ''
+  apprehensional_relation: ''
+  lean_declaration: ''
+  current_main_owner: ''
+  post_merge_decision_status: ''
+  repository_inclusion_status: ''
+  external_review_status: ''
+  open_burden: exact theorem bytes unavailable
+  relation_type: REDUCIBLE_WITH_GUARDS
+  edge_types:
+  - formal derivation
+  - epistemic bridge
+  authority_note: correct output is insufficient
+- concept_id: CW006
+  concept: Orthability-O / objective orthability
+  owner_claim: objective possibility/availability of correct determination
+  primary_source: ''
+  arabic_locus: ''
+  translation: ''
+  secondary_reconstruction: ''
+  modern_comparison: ''
+  formal_theorem: AR6/AR7 historical family
+  countermodel: ''
+  source_relative_implication: ''
+  world_directed_premise: ''
+  daee_concept_module: ''
+  runtime_field: ''
+  executable_enforcement: ''
+  observable_proxy: ''
+  causal_contrast: ''
+  apprehensional_relation: objective layer
+  lean_declaration: ''
+  current_main_owner: orthability companion
+  post_merge_decision_status: ''
+  repository_inclusion_status: PARTIAL
+  external_review_status: ''
+  open_burden: apprehensional archive missing
+  relation_type: SAME_WORD_DIFFERENT_TYPE
+  edge_types:
+  - definition
+  authority_note: not universal agent accessibility
+- concept_id: CW007
+  concept: Orthability-L / local or agent-relative orthability
+  owner_claim: reachable for an actor/access/resource state
+  primary_source: ''
+  arabic_locus: ''
+  translation: ''
+  secondary_reconstruction: ''
+  modern_comparison: ''
+  formal_theorem: AR-T family unavailable
+  countermodel: ''
+  source_relative_implication: ''
+  world_directed_premise: ''
+  daee_concept_module: ''
+  runtime_field: ''
+  executable_enforcement: ''
+  observable_proxy: ''
+  causal_contrast: ''
+  apprehensional_relation: local/agent layer
+  lean_declaration: ''
+  current_main_owner: argument map exits
+  post_merge_decision_status: ''
+  repository_inclusion_status: PARTIAL
+  external_review_status: ''
+  open_burden: ''
+  relation_type: SAME_WORD_DIFFERENT_TYPE
+  edge_types:
+  - definition
+  - operational assumption
+  authority_note: does not define objective truth
+- concept_id: CW008
+  concept: Orthability-R / route-relative orthability
+  owner_claim: reachable by a route/strategy under guards
+  primary_source: ''
+  arabic_locus: ''
+  translation: ''
+  secondary_reconstruction: ''
+  modern_comparison: ''
+  formal_theorem: ''
+  countermodel: ''
+  source_relative_implication: ''
+  world_directed_premise: ''
+  daee_concept_module: route-gradient policy
+  runtime_field: ''
+  executable_enforcement: ''
+  observable_proxy: ''
+  causal_contrast: ''
+  apprehensional_relation: route/strategy layer
+  lean_declaration: ''
+  current_main_owner: ''
+  post_merge_decision_status: ''
+  repository_inclusion_status: PARTIAL
+  external_review_status: ''
+  open_burden: ''
+  relation_type: SAME_WORD_DIFFERENT_TYPE
+  edge_types:
+  - definition
+  - operational assumption
+  authority_note: not literal gradient descent
+- concept_id: CW009
+  concept: profile fibre / exact certifiability
+  owner_claim: ''
+  primary_source: ''
+  arabic_locus: ''
+  translation: ''
+  secondary_reconstruction: ''
+  modern_comparison: ''
+  formal_theorem: AR8R-T135 and AR8R-RC-T366-v1
+  countermodel: fibre with mixed target truth
+  source_relative_implication: ''
+  world_directed_premise: ''
+  daee_concept_module: ''
+  runtime_field: ''
+  executable_enforcement: ''
+  observable_proxy: ''
+  causal_contrast: ''
+  apprehensional_relation: observational equivalence and factorization
+  lean_declaration: ''
+  current_main_owner: ''
+  post_merge_decision_status: T366 intended ADOPT; repository PENDING
+  repository_inclusion_status: MERGED_PROPOSAL
+  external_review_status: ''
+  open_burden: B014
+  relation_type: DEFINITIONALLY_EQUIVALENT
+  edge_types:
+  - model-theoretic reduction
+  authority_note: reconstruction, not exact T366 recovery
+- concept_id: CW010
+  concept: Candidate 1 finite reachability certificate
+  owner_claim: ''
+  primary_source: ''
+  arabic_locus: ''
+  translation: ''
+  secondary_reconstruction: ''
+  modern_comparison: ''
+  formal_theorem: Candidate 1 / PRR-T1 / M11-M13
+  countermodel: ''
+  source_relative_implication: ''
+  world_directed_premise: ''
+  daee_concept_module: ''
+  runtime_field: ''
+  executable_enforcement: ''
+  observable_proxy: ''
+  causal_contrast: ''
+  apprehensional_relation: finite profile-and-fibre reachability
+  lean_declaration: ''
+  current_main_owner: ''
+  post_merge_decision_status: ''
+  repository_inclusion_status: HISTORICAL_PACKET_UNAVAILABLE
+  external_review_status: required, not received
+  open_burden: B016,B017
+  relation_type: UNRESOLVED
+  edge_types:
+  - formal derivation
+  authority_note: accepted internal component; general novelty not located
+- concept_id: CW011
+  concept: TAC numerical identity versus type identity
+  owner_claim: Tachikoma/SAC identity, lineage, duplication and function must be separated
+  primary_source: ''
+  arabic_locus: ''
+  translation: ''
+  secondary_reconstruction: ''
+  modern_comparison: ''
+  formal_theorem: ''
+  countermodel: copied memory/function without numerical identity
+  source_relative_implication: ''
+  world_directed_premise: ''
+  daee_concept_module: carrier relations and somnic episodes
+  runtime_field: ''
+  executable_enforcement: ''
+  observable_proxy: ''
+  causal_contrast: ''
+  apprehensional_relation: ''
+  lean_declaration: ''
+  current_main_owner: generic schemas only
+  post_merge_decision_status: ''
+  repository_inclusion_status: TAC BYTES ABSENT
+  external_review_status: ''
+  open_burden: B043
+  relation_type: UNRESOLVED
+  edge_types:
+  - comparison
+  - source-historical attribution
+  authority_note: do not infer from anime memory
+- concept_id: CW012
+  concept: TAC evidential independence / false tawatur
+  owner_claim: copied availability is not independent distinction
+  primary_source: ''
+  arabic_locus: ''
+  translation: ''
+  secondary_reconstruction: ''
+  modern_comparison: ''
+  formal_theorem: SAC-T4/CC-T4 historical references
+  countermodel: common ancestor copied into many carriers
+  source_relative_implication: ''
+  world_directed_premise: ''
+  daee_concept_module: FALSE-TAWATUR-FIXTURES
+  runtime_field: ''
+  executable_enforcement: lineage/provenance fixtures
+  observable_proxy: ''
+  causal_contrast: ''
+  apprehensional_relation: ''
+  lean_declaration: ''
+  current_main_owner: ''
+  post_merge_decision_status: ''
+  repository_inclusion_status: GENERIC CURRENT SUPPORT
+  external_review_status: ''
+  open_burden: B043,B044
+  relation_type: REDUCIBLE_WITH_GUARDS
+  edge_types:
+  - epistemic bridge
+  authority_note: generic implementation does not recover TAC theorem
+- concept_id: CW013
+  concept: same-token/same-respect theory adequacy no-go
+  owner_claim: ''
+  primary_source: ''
+  arabic_locus: ''
+  translation: ''
+  secondary_reconstruction: ''
+  modern_comparison: ''
+  formal_theorem: Track T accepted scoped no-go
+  countermodel: ''
+  source_relative_implication: ''
+  world_directed_premise: realist bridge RB plus semantic/resource adequacy
+  daee_concept_module: ''
+  runtime_field: ''
+  executable_enforcement: ''
+  observable_proxy: ''
+  causal_contrast: ''
+  apprehensional_relation: ''
+  lean_declaration: ''
+  current_main_owner: orthability companion
+  post_merge_decision_status: ''
+  repository_inclusion_status: CONDITIONAL
+  external_review_status: ''
+  open_burden: ''
+  relation_type: PARTIAL_OVERLAP
+  edge_types:
+  - formal derivation
+  - metaphysical bridge
+  authority_note: world extension remains conditional
+- concept_id: CW014
+  concept: anti-total-emergence
+  owner_claim: not every ortheme/metaortheme/orthing can be totally emergent from the same inadequate order
+  primary_source: ''
+  arabic_locus: ''
+  translation: ''
+  secondary_reconstruction: ''
+  modern_comparison: ''
+  formal_theorem: T328 historical reference
+  countermodel: impersonal/plural actualizer portfolio
+  source_relative_implication: ''
+  world_directed_premise: exclusion of live rivals
+  daee_concept_module: ''
+  runtime_field: ''
+  executable_enforcement: ''
+  observable_proxy: ''
+  causal_contrast: ''
+  apprehensional_relation: ''
+  lean_declaration: ''
+  current_main_owner: ''
+  post_merge_decision_status: ''
+  repository_inclusion_status: PARTIAL
+  external_review_status: ''
+  open_burden: B005,B021
+  relation_type: PARTIAL_OVERLAP
+  edge_types:
+  - metaphysical bridge
+  authority_note: does not uniquely entail Necessary Being
+- concept_id: CW015
+  concept: Necessary existence versus Creator
+  owner_claim: ''
+  primary_source: Asfahani translated commentary
+  arabic_locus: ''
+  translation: necessary-being proof discussion
+  secondary_reconstruction: Ibn Taymiyyah critiques a proof yielding only some necessary existence unless origination/creator
+    work is supplied
+  modern_comparison: ''
+  formal_theorem: Taymiyyan source ascent
+  countermodel: necessary impersonal structure
+  source_relative_implication: ''
+  world_directed_premise: contingency/origination + creator bridge
+  daee_concept_module: ''
+  runtime_field: ''
+  executable_enforcement: ''
+  observable_proxy: ''
+  causal_contrast: ''
+  apprehensional_relation: ''
+  lean_declaration: ''
+  current_main_owner: Athari companion
+  post_merge_decision_status: ''
+  repository_inclusion_status: SOURCE-RELATIVE/CONDITIONAL
+  external_review_status: no Arabic specialist receipt
+  open_burden: ''
+  relation_type: INCOMPATIBLE
+  edge_types:
+  - semantic entailment
+  - metaphysical bridge
+  authority_note: do not identify necessary existence with Creator without bridge
+- concept_id: CW016
+  concept: qiyas al-awla attribute ascent
+  owner_claim: ''
+  primary_source: Asfahani translated commentary and Taymiyyan corpus
+  arabic_locus: ''
+  translation: a fortiori attribution of perfections
+  secondary_reconstruction: source-enriched attribute ascent
+  modern_comparison: ''
+  formal_theorem: T370 historical reference
+  countermodel: ''
+  source_relative_implication: ''
+  world_directed_premise: source truth + translation + nondefective perfection predicate
+  daee_concept_module: ''
+  runtime_field: ''
+  executable_enforcement: ''
+  observable_proxy: ''
+  causal_contrast: ''
+  apprehensional_relation: ''
+  lean_declaration: ''
+  current_main_owner: ''
+  post_merge_decision_status: ''
+  repository_inclusion_status: COMPANION ONLY
+  external_review_status: ''
+  open_burden: B019,B040
+  relation_type: REDUCIBLE_WITH_GUARDS
+  edge_types:
+  - school-internal premise
+  - revelational identification
+  authority_note: source-relative and school-internal unless further bridges
+- concept_id: CW017
+  concept: Candidate N six-role architecture
+  owner_claim: ''
+  primary_source: Taymiyyan corpus
+  arabic_locus: ''
+  translation: component source claims
+  secondary_reconstruction: modern integrated six-role graph O/D/C/R/A/S
+  modern_comparison: ''
+  formal_theorem: Candidate N architecture
+  countermodel: generic method prior art and alternate role decompositions
+  source_relative_implication: ''
+  world_directed_premise: ''
+  daee_concept_module: ''
+  runtime_field: ''
+  executable_enforcement: ''
+  observable_proxy: ''
+  causal_contrast: ''
+  apprehensional_relation: ''
+  lean_declaration: ''
+  current_main_owner: ''
+  post_merge_decision_status: ''
+  repository_inclusion_status: PARTIAL
+  external_review_status: source specialist/payoff review pending
+  open_burden: B018,B019,B020
+  relation_type: REPRESENTATION_DEPENDENT
+  edge_types:
+  - source-historical attribution
+  - comparison
+  authority_note: modern synthesis, not a single primary-source doctrine
+- concept_id: CW018
+  concept: safe abstraction G
+  owner_claim: ''
+  primary_source: ''
+  arabic_locus: ''
+  translation: ''
+  secondary_reconstruction: ''
+  modern_comparison: ''
+  formal_theorem: AR8 provisional safe quotient
+  countermodel: hidden query / contract expansion
+  source_relative_implication: preserve QUERY × WARRANT × STATUS × BRIDGE behavior
+  world_directed_premise: ''
+  daee_concept_module: ''
+  runtime_field: ''
+  executable_enforcement: ''
+  observable_proxy: ''
+  causal_contrast: ''
+  apprehensional_relation: ''
+  lean_declaration: ''
+  current_main_owner: ''
+  post_merge_decision_status: ''
+  repository_inclusion_status: HISTORICAL_PROVISIONAL
+  external_review_status: ''
+  open_burden: B010,B011
+  relation_type: REDUCIBLE_WITH_GUARDS
+  edge_types:
+  - model-theoretic reduction
+  - operational assumption
+  authority_note: AR8 not terminal authority
+- concept_id: CW019
+  concept: safe migration H
+  owner_claim: ''
+  primary_source: ''
+  arabic_locus: ''
+  translation: ''
+  secondary_reconstruction: ''
+  modern_comparison: ''
+  formal_theorem: AR8 reflection-qualified translation
+  countermodel: circular authorization / metaphysical reflection failure
+  source_relative_implication: explicit authorized bridge and satisfied guard
+  world_directed_premise: ''
+  daee_concept_module: ''
+  runtime_field: ''
+  executable_enforcement: ''
+  observable_proxy: ''
+  causal_contrast: ''
+  apprehensional_relation: ''
+  lean_declaration: ''
+  current_main_owner: ''
+  post_merge_decision_status: ''
+  repository_inclusion_status: HISTORICAL_PROVISIONAL
+  external_review_status: ''
+  open_burden: ''
+  relation_type: REDUCIBLE_WITH_GUARDS
+  edge_types:
+  - epistemic bridge
+  - metaphysical bridge
+  - normative bridge
+  authority_note: translation is not identity
+- concept_id: CW020
+  concept: AR8R search-controller/Bitter Lesson correction
+  owner_claim: forced exploration and independent families over bureaucracy maximization
+  primary_source: ''
+  arabic_locus: ''
+  translation: ''
+  secondary_reconstruction: ''
+  modern_comparison: CDC orchestration precedent
+  formal_theorem: search-policy ledger
+  countermodel: ''
+  source_relative_implication: ''
+  world_directed_premise: ''
+  daee_concept_module: ''
+  runtime_field: ''
+  executable_enforcement: ''
+  observable_proxy: ''
+  causal_contrast: ''
+  apprehensional_relation: ''
+  lean_declaration: ''
+  current_main_owner: ''
+  post_merge_decision_status: ''
+  repository_inclusion_status: HISTORICAL
+  external_review_status: ''
+  open_burden: B001,B028
+  relation_type: ANALOGOUS_ONLY
+  edge_types:
+  - operational assumption
+  - comparison
+  authority_note: not a theorem of truth
+- concept_id: CW021
+  concept: theorem-origin V5 / false multiplicity
+  owner_claim: ''
+  primary_source: ''
+  arabic_locus: ''
+  translation: ''
+  secondary_reconstruction: ''
+  modern_comparison: permanent multiplicity and shared-model outputs
+  formal_theorem: V5 canonical origins + CC-T4/SAC-T4
+  countermodel: many records from one ancestry
+  source_relative_implication: ''
+  world_directed_premise: ''
+  daee_concept_module: ''
+  runtime_field: ''
+  executable_enforcement: ''
+  observable_proxy: ''
+  causal_contrast: ''
+  apprehensional_relation: ''
+  lean_declaration: ''
+  current_main_owner: ''
+  post_merge_decision_status: ''
+  repository_inclusion_status: PARTIAL V8 RECOVERY ONLY
+  external_review_status: ''
+  open_burden: B044
+  relation_type: DEFINITIONALLY_EQUIVALENT
+  edge_types:
+  - source-historical attribution
+  authority_note: raw record count is not independent origin count
+- concept_id: CW022
+  concept: T150 common-model nonintegration control
+  owner_claim: ''
+  primary_source: ''
+  arabic_locus: ''
+  translation: ''
+  secondary_reconstruction: ''
+  modern_comparison: ''
+  formal_theorem: AR8R-RP-001-v1
+  countermodel: common model of premise union with conclusion false
+  source_relative_implication: ''
+  world_directed_premise: ''
+  daee_concept_module: ''
+  runtime_field: ''
+  executable_enforcement: ''
+  observable_proxy: ''
+  causal_contrast: ''
+  apprehensional_relation: ''
+  lean_declaration: ''
+  current_main_owner: ''
+  post_merge_decision_status: owner ADOPT intended; repository PENDING
+  repository_inclusion_status: MERGED_PROPOSAL
+  external_review_status: ''
+  open_burden: B014
+  relation_type: REPRESENTATION_DEPENDENT
+  edge_types:
+  - model-theoretic reduction
+  authority_note: role-preserving replacement; zero transferred historical novelty
+- concept_id: CW023
+  concept: T354 weak restorative order
+  owner_claim: ''
+  primary_source: ''
+  arabic_locus: ''
+  translation: ''
+  secondary_reconstruction: ''
+  modern_comparison: ''
+  formal_theorem: historical AR8R-T354 blocked
+  countermodel: mandatory strict change defeats reflexivity
+  source_relative_implication: ''
+  world_directed_premise: ''
+  daee_concept_module: typed restorative policy order
+  runtime_field: ''
+  executable_enforcement: ''
+  observable_proxy: ''
+  causal_contrast: ''
+  apprehensional_relation: ''
+  lean_declaration: ''
+  current_main_owner: ''
+  post_merge_decision_status: separate repair authorized but not executed
+  repository_inclusion_status: EXACT BLOCKED PAYLOAD
+  external_review_status: ''
+  open_burden: B013,B035
+  relation_type: UNRESOLVED
+  edge_types:
+  - formal derivation
+  authority_note: historical bytes remain blocked and unchanged
+- concept_id: CW024
+  concept: route-gradient
+  owner_claim: ranked restorative pressure / typed policy ordering
+  primary_source: ''
+  arabic_locus: ''
+  translation: ''
+  secondary_reconstruction: ''
+  modern_comparison: ''
+  formal_theorem: T354 repair target
+  countermodel: no unique scalar aggregation
+  source_relative_implication: ''
+  world_directed_premise: ''
+  daee_concept_module: routing precedence
+  runtime_field: route selection/STOP-HOLD-RECURSE-PARTIAL-RESTORE
+  executable_enforcement: ''
+  observable_proxy: ''
+  causal_contrast: ''
+  apprehensional_relation: ''
+  lean_declaration: ''
+  current_main_owner: ''
+  post_merge_decision_status: ''
+  repository_inclusion_status: PARTIAL
+  external_review_status: ''
+  open_burden: ''
+  relation_type: SAME_WORD_DIFFERENT_TYPE
+  edge_types:
+  - analogy
+  - operational assumption
+  authority_note: not literal differentiable gradient or scalar objective
+- concept_id: CW025
+  concept: burden landing and restorative cutset
+  owner_claim: ''
+  primary_source: ''
+  arabic_locus: ''
+  translation: ''
+  secondary_reconstruction: ''
+  modern_comparison: ''
+  formal_theorem: AR8R-T351/T352
+  countermodel: T353 self-sealing output-local correction
+  source_relative_implication: ''
+  world_directed_premise: ''
+  daee_concept_module: CORRECTIVE-TRANSITION/NOETIC-FIELD-DYNAMICS
+  runtime_field: ''
+  executable_enforcement: fixtures and schema guards
+  observable_proxy: burden transition/custody/reread records
+  causal_contrast: matched intervention required for causal credit
+  apprehensional_relation: ''
+  lean_declaration: ''
+  current_main_owner: ''
+  post_merge_decision_status: ''
+  repository_inclusion_status: EXACT PAYLOAD + APPLICATION SCHEMA
+  external_review_status: ''
+  open_burden: ''
+  relation_type: REDUCIBLE_WITH_GUARDS
+  edge_types:
+  - formal derivation
+  - operational assumption
+  authority_note: declared path model may be incomplete
+- concept_id: CW026
+  concept: sound fitrah normative target
+  owner_claim: ''
+  primary_source: Taymiyyan/Athari corpus
+  arabic_locus: ''
+  translation: original uncorrupted normative disposition
+  secondary_reconstruction: truth-directed proper order of faculties in concordance with sound reason and authentic
+    revelation
+  modern_comparison: ''
+  formal_theorem: ''
+  countermodel: ''
+  source_relative_implication: ''
+  world_directed_premise: ''
+  daee_concept_module: target/kernel thesis
+  runtime_field: ''
+  executable_enforcement: ''
+  observable_proxy: source-bound target map
+  causal_contrast: proxy-to-target validation required
+  apprehensional_relation: ''
+  lean_declaration: ''
+  current_main_owner: ''
+  post_merge_decision_status: ''
+  repository_inclusion_status: APPLICATION TARGET
+  external_review_status: ''
+  open_burden: B003,B019
+  relation_type: REPRESENTATION_DEPENDENT
+  edge_types:
+  - source-historical attribution
+  - normative bridge
+  authority_note: normative target ≠ runtime proxy ≠ causal certification
+- concept_id: CW027
+  concept: source-semantic operator binding
+  owner_claim: ''
+  primary_source: registered source identity/locus
+  arabic_locus: ''
+  translation: versioned translation layer
+  secondary_reconstruction: source proposition
+  modern_comparison: ''
+  formal_theorem: T349/T355-T362 references
+  countermodel: ''
+  source_relative_implication: ''
+  world_directed_premise: ''
+  daee_concept_module: SEMANTIC-OPERATOR-CONTRACT
+  runtime_field: ''
+  executable_enforcement: schema and fixtures
+  observable_proxy: ''
+  causal_contrast: ''
+  apprehensional_relation: ''
+  lean_declaration: ''
+  current_main_owner: ''
+  post_merge_decision_status: ''
+  repository_inclusion_status: MERGED_CURRENT
+  external_review_status: ''
+  open_burden: B003,B040
+  relation_type: REDUCIBLE_WITH_GUARDS
+  edge_types:
+  - source-historical attribution
+  - operational assumption
+  authority_note: source bytes do not establish operator fidelity automatically
+- concept_id: CW028
+  concept: PRH representational convergence
+  owner_claim: ''
+  primary_source: The Platonic Representation Hypothesis PDF
+  arabic_locus: ''
+  translation: ''
+  secondary_reconstruction: ''
+  modern_comparison: cross-model/cross-modal kernel alignment
+  formal_theorem: idealized PMI-kernel result
+  countermodel: lossy/stochastic views, metric sensitivity, shared shortcuts
+  source_relative_implication: ''
+  world_directed_premise: ''
+  daee_concept_module: ''
+  runtime_field: ''
+  executable_enforcement: ''
+  observable_proxy: mutual-nearest-neighbor/kernel alignment
+  causal_contrast: common data/objective/architecture pressures
+  apprehensional_relation: ''
+  lean_declaration: ''
+  current_main_owner: ''
+  post_merge_decision_status: ''
+  repository_inclusion_status: EXTERNAL ONLY
+  external_review_status: ''
+  open_burden: ''
+  relation_type: PARTIAL_OVERLAP
+  edge_types:
+  - comparison
+  authority_note: alignment ≠ numerical identity or truth
+- concept_id: CW029
+  concept: prior order and proper function from PRH
+  owner_claim: convergence under prior intelligible order may disclose proper function
+  primary_source: PRH as empirical comparator only
+  arabic_locus: ''
+  translation: ''
+  secondary_reconstruction: ''
+  modern_comparison: proper-function/noetic order hypothesis
+  formal_theorem: ''
+  countermodel: shared deformation/shortcut convergence
+  source_relative_implication: ''
+  world_directed_premise: truth-directed prior order and target adequacy
+  daee_concept_module: ''
+  runtime_field: ''
+  executable_enforcement: ''
+  observable_proxy: ''
+  causal_contrast: ''
+  apprehensional_relation: ''
+  lean_declaration: ''
+  current_main_owner: ''
+  post_merge_decision_status: ''
+  repository_inclusion_status: PARTIAL ANALOGUE
+  external_review_status: ''
+  open_burden: B022,B045
+  relation_type: PARTIAL_OVERLAP
+  edge_types:
+  - teleological bridge
+  - normative bridge
+  authority_note: not claimed by PRH paper
+- concept_id: CW030
+  concept: Fusha particular occurrence
+  owner_claim: word occurrence as particular orthemma with morphology/syntax/discourse lattice
+  primary_source: ''
+  arabic_locus: ''
+  translation: ''
+  secondary_reconstruction: ''
+  modern_comparison: ''
+  formal_theorem: ''
+  countermodel: ''
+  source_relative_implication: ''
+  world_directed_premise: ''
+  daee_concept_module: ''
+  runtime_field: ''
+  executable_enforcement: ''
+  observable_proxy: ''
+  causal_contrast: ''
+  apprehensional_relation: ''
+  lean_declaration: ''
+  current_main_owner: none
+  post_merge_decision_status: ''
+  repository_inclusion_status: FUSHA BYTES UNAVAILABLE
+  external_review_status: ''
+  open_burden: B012,B042
+  relation_type: ANALOGOUS_ONLY
+  edge_types:
+  - operational assumption
+  - definition
+  authority_note: application not assessed
+- concept_id: CW031
+  concept: Qamus transclusion
+  owner_claim: canonical occurrence and v/p/n entry transclusion into sarf/nahw/drills/UI
+  primary_source: ''
+  arabic_locus: ''
+  translation: ''
+  secondary_reconstruction: ''
+  modern_comparison: ''
+  formal_theorem: ''
+  countermodel: ''
+  source_relative_implication: ''
+  world_directed_premise: ''
+  daee_concept_module: ''
+  runtime_field: entry/projector/hover owners
+  executable_enforcement: unavailable
+  observable_proxy: ''
+  causal_contrast: ''
+  apprehensional_relation: ''
+  lean_declaration: ''
+  current_main_owner: ''
+  post_merge_decision_status: ''
+  repository_inclusion_status: ABSENT FROM ORTHEMOLOGY SNAPSHOT
+  external_review_status: ''
+  open_burden: B012
+  relation_type: REPRESENTATION_DEPENDENT
+  edge_types:
+  - operational assumption
+  authority_note: owner requirement, not verified implementation
+- concept_id: CW032
+  concept: Ten Advances Connes fibre comparison
+  owner_claim: ''
+  primary_source: ''
+  arabic_locus: ''
+  translation: ''
+  secondary_reconstruction: ''
+  modern_comparison: same factor, nonisomorphic groups
+  formal_theorem: ConnesRigidity.exists_infinite_pairwise_nonisomorphic_propertyT_icc_groups_with_isomorphic_factors
+  countermodel: ''
+  source_relative_implication: ''
+  world_directed_premise: ''
+  daee_concept_module: ''
+  runtime_field: ''
+  executable_enforcement: ''
+  observable_proxy: ''
+  causal_contrast: ''
+  apprehensional_relation: many preimages under invariant/profile
+  lean_declaration: same
+  current_main_owner: ''
+  post_merge_decision_status: ''
+  repository_inclusion_status: EXTERNAL ONLY
+  external_review_status: ''
+  open_burden: B026,B045
+  relation_type: ANALOGOUS_ONLY
+  edge_types:
+  - comparison
+  authority_note: no reduction proved
+- concept_id: CW033
+  concept: Ten Advances non-sofic finite-approximation boundary
+  owner_claim: ''
+  primary_source: ''
+  arabic_locus: ''
+  translation: ''
+  secondary_reconstruction: ''
+  modern_comparison: failure of finite permutation approximations
+  formal_theorem: SoficGroups.SourceTopLevelCompressionFinal.exists_finitelyPresented_nonsofic_group
+  countermodel: ''
+  source_relative_implication: ''
+  world_directed_premise: ''
+  daee_concept_module: ''
+  runtime_field: ''
+  executable_enforcement: ''
+  observable_proxy: ''
+  causal_contrast: ''
+  apprehensional_relation: finite model reachability limit
+  lean_declaration: ''
+  current_main_owner: ''
+  post_merge_decision_status: ''
+  repository_inclusion_status: EXTERNAL ONLY
+  external_review_status: ''
+  open_burden: ''
+  relation_type: ANALOGOUS_ONLY
+  edge_types:
+  - comparison
+  authority_note: not AR8R theorem
+- concept_id: CW034
+  concept: quantum repetition / independent audit amplification
+  owner_claim: ''
+  primary_source: ''
+  arabic_locus: ''
+  translation: ''
+  secondary_reconstruction: ''
+  modern_comparison: ''
+  formal_theorem: QuantumParallelRepetition.distributionUniformExponential
+  countermodel: correlated repeated audits
+  source_relative_implication: ''
+  world_directed_premise: ''
+  daee_concept_module: ''
+  runtime_field: ''
+  executable_enforcement: ''
+  observable_proxy: ''
+  causal_contrast: independence model required
+  apprehensional_relation: ''
+  lean_declaration: ''
+  current_main_owner: ''
+  post_merge_decision_status: ''
+  repository_inclusion_status: EXTERNAL ONLY
+  external_review_status: ''
+  open_burden: B045
+  relation_type: ANALOGOUS_ONLY
+  edge_types:
+  - comparison
+  authority_note: repetition does not create independence
+- concept_id: CW035
+  concept: compactness family/singleton quantifiers
+  owner_claim: ''
+  primary_source: ''
+  arabic_locus: ''
+  translation: ''
+  secondary_reconstruction: ''
+  modern_comparison: ''
+  formal_theorem: CompactnessConjecture.quantitativeCompactnessCounterexample
+  countermodel: different family members require different witnesses
+  source_relative_implication: ''
+  world_directed_premise: ''
+  daee_concept_module: ''
+  runtime_field: ''
+  executable_enforcement: ''
+  observable_proxy: ''
+  causal_contrast: ''
+  apprehensional_relation: closure/saturation quantifier audit
+  lean_declaration: ''
+  current_main_owner: ''
+  post_merge_decision_status: ''
+  repository_inclusion_status: EXTERNAL ONLY
+  external_review_status: ''
+  open_burden: ''
+  relation_type: ANALOGOUS_ONLY
+  edge_types:
+  - comparison
+  authority_note: comparison only
+- concept_id: CW036
+  concept: CDC independent-route search governance
+  owner_claim: ''
+  primary_source: CDC prompt
+  arabic_locus: ''
+  translation: ''
+  secondary_reconstruction: ''
+  modern_comparison: approach-family registry, blocked routes, adversarial audit
+  formal_theorem: ''
+  countermodel: ''
+  source_relative_implication: ''
+  world_directed_premise: ''
+  daee_concept_module: ''
+  runtime_field: ''
+  executable_enforcement: ''
+  observable_proxy: ''
+  causal_contrast: ''
+  apprehensional_relation: ''
+  lean_declaration: ''
+  current_main_owner: AR8R search policy historical lane
+  post_merge_decision_status: ''
+  repository_inclusion_status: EXTERNAL PROMPT
+  external_review_status: ''
+  open_burden: B028
+  relation_type: ANALOGOUS_ONLY
+  edge_types:
+  - comparison
+  - operational assumption
+  authority_note: benchmark truth assumption excluded
+- concept_id: CW037
+  concept: source bytes authentic
+  owner_claim: ''
+  primary_source: ''
+  arabic_locus: ''
+  translation: ''
+  secondary_reconstruction: ''
+  modern_comparison: ''
+  formal_theorem: ''
+  countermodel: ''
+  source_relative_implication: ''
+  world_directed_premise: ''
+  daee_concept_module: ''
+  runtime_field: ''
+  executable_enforcement: ''
+  observable_proxy: ''
+  causal_contrast: ''
+  apprehensional_relation: ''
+  lean_declaration: ''
+  current_main_owner: references/source-status.yaml
+  post_merge_decision_status: ''
+  repository_inclusion_status: MERGED COORDINATE
+  external_review_status: ''
+  open_burden: ''
+  relation_type: SAME_WORD_DIFFERENT_TYPE
+  edge_types:
+  - source-historical attribution
+  authority_note: independent of translation/inference
+- concept_id: CW038
+  concept: translation adequate
+  owner_claim: ''
+  primary_source: source bytes/locus
+  arabic_locus: ''
+  translation: candidate contextual translation
+  secondary_reconstruction: ''
+  modern_comparison: ''
+  formal_theorem: ''
+  countermodel: ''
+  source_relative_implication: ''
+  world_directed_premise: ''
+  daee_concept_module: ''
+  runtime_field: ''
+  executable_enforcement: ''
+  observable_proxy: ''
+  causal_contrast: ''
+  apprehensional_relation: ''
+  lean_declaration: ''
+  current_main_owner: source status registry
+  post_merge_decision_status: ''
+  repository_inclusion_status: MERGED COORDINATE
+  external_review_status: varies
+  open_burden: ''
+  relation_type: SAME_WORD_DIFFERENT_TYPE
+  edge_types:
+  - epistemic bridge
+  authority_note: not Arabic identity
+- concept_id: CW039
+  concept: formal predicate faithful to source proposition
+  owner_claim: ''
+  primary_source: verified source proposition
+  arabic_locus: ''
+  translation: ''
+  secondary_reconstruction: ''
+  modern_comparison: ''
+  formal_theorem: formalization
+  countermodel: predicate drops context/qualifier
+  source_relative_implication: ''
+  world_directed_premise: ''
+  daee_concept_module: ''
+  runtime_field: ''
+  executable_enforcement: ''
+  observable_proxy: ''
+  causal_contrast: ''
+  apprehensional_relation: ''
+  lean_declaration: ''
+  current_main_owner: ''
+  post_merge_decision_status: ''
+  repository_inclusion_status: PARTIAL
+  external_review_status: ''
+  open_burden: B019,B040
+  relation_type: REDUCIBLE_WITH_GUARDS
+  edge_types:
+  - epistemic bridge
+  - formal derivation
+  authority_note: requires a separate fidelity audit
+- concept_id: CW040
+  concept: world-directed conclusion
+  owner_claim: ''
+  primary_source: ''
+  arabic_locus: ''
+  translation: ''
+  secondary_reconstruction: ''
+  modern_comparison: ''
+  formal_theorem: ''
+  countermodel: R5 rivals
+  source_relative_implication: may be valid within declared source/world model
+  world_directed_premise: independently adequate semantics, realism, actualization, target-world bridge
+  daee_concept_module: ''
+  runtime_field: ''
+  executable_enforcement: ''
+  observable_proxy: ''
+  causal_contrast: ''
+  apprehensional_relation: ''
+  lean_declaration: ''
+  current_main_owner: ''
+  post_merge_decision_status: ''
+  repository_inclusion_status: CONDITIONAL ONLY
+  external_review_status: ''
+  open_burden: B021
+  relation_type: UNRESOLVED
+  edge_types:
+  - metaphysical bridge
+  - teleological bridge
+  authority_note: formal nonentailment does not establish world falsity
+- concept_id: CW041
+  concept: current repository implementation
+  owner_claim: ''
+  primary_source: ''
+  arabic_locus: ''
+  translation: ''
+  secondary_reconstruction: ''
+  modern_comparison: ''
+  formal_theorem: schemas/validators/fixtures
+  countermodel: ''
+  source_relative_implication: ''
+  world_directed_premise: ''
+  daee_concept_module: ''
+  runtime_field: repository-enforced fields and gates
+  executable_enforcement: validation workflow
+  observable_proxy: ''
+  causal_contrast: ''
+  apprehensional_relation: ''
+  lean_declaration: ''
+  current_main_owner: ''
+  post_merge_decision_status: ''
+  repository_inclusion_status: MERGED_CURRENT
+  external_review_status: ''
+  open_burden: ''
+  relation_type: REPRESENTATION_DEPENDENT
+  edge_types:
+  - operational assumption
+  authority_note: implementation correspondence ≠ theory truth or source truth
+- concept_id: CW042
+  concept: external Lean declaration
+  owner_claim: ''
+  primary_source: ten-proofs-main archive
+  arabic_locus: ''
+  translation: ''
+  secondary_reconstruction: ''
+  modern_comparison: ''
+  formal_theorem: twelve principal declarations
+  countermodel: ''
+  source_relative_implication: ''
+  world_directed_premise: ''
+  daee_concept_module: ''
+  runtime_field: ''
+  executable_enforcement: ''
+  observable_proxy: ''
+  causal_contrast: ''
+  apprehensional_relation: ''
+  lean_declaration: see formalization.yaml
+  current_main_owner: ''
+  post_merge_decision_status: ''
+  repository_inclusion_status: EXTERNAL ONLY
+  external_review_status: static inspection; no kernel build
+  open_burden: B026
+  relation_type: ANALOGOUS_ONLY
+  edge_types:
+  - formal derivation
+  authority_note: not AR8R proof authority
+- concept_id: CW043
+  concept: somnic episode identity
+  owner_claim: distinguish intra-somnic continuation, inter-somnic lineage, and resemblance
+  primary_source: ''
+  arabic_locus: ''
+  translation: ''
+  secondary_reconstruction: ''
+  modern_comparison: ''
+  formal_theorem: ''
+  countermodel: shared checkpoint/function without same episode
+  source_relative_implication: ''
+  world_directed_premise: ''
+  daee_concept_module: carrier relations
+  runtime_field: ''
+  executable_enforcement: ''
+  observable_proxy: ''
+  causal_contrast: ''
+  apprehensional_relation: ''
+  lean_declaration: ''
+  current_main_owner: agentic-runtime decisions 0035-0036
+  post_merge_decision_status: ''
+  repository_inclusion_status: MERGED CANDIDATE
+  external_review_status: ''
+  open_burden: B043 for TAC comparison
+  relation_type: REDUCIBLE_WITH_GUARDS
+  edge_types:
+  - definition
+  - source-historical attribution
+  authority_note: not automatically Tachikoma identity
+- concept_id: CW044
+  concept: FCSP/ER packet readiness
+  owner_claim: ''
+  primary_source: ''
+  arabic_locus: ''
+  translation: ''
+  secondary_reconstruction: ''
+  modern_comparison: ''
+  formal_theorem: ''
+  countermodel: ''
+  source_relative_implication: ''
+  world_directed_premise: ''
+  daee_concept_module: ''
+  runtime_field: frozen designs/harnesses/fixtures
+  executable_enforcement: smoke tests
+  observable_proxy: blinded ratings/output schemas
+  causal_contrast: actual run required
+  apprehensional_relation: ''
+  lean_declaration: ''
+  current_main_owner: experiments/
+  post_merge_decision_status: ''
+  repository_inclusion_status: MERGED_READY_TO_RUN
+  external_review_status: ''
+  open_burden: B031
+  relation_type: REPRESENTATION_DEPENDENT
+  edge_types:
+  - operational assumption
+  authority_note: prepared packet ≠ empirical result
+- concept_id: CW045
+  concept: terminology adoption
+  owner_claim: candidate terminology subject to blind evaluation
+  primary_source: ''
+  arabic_locus: ''
+  translation: ''
+  secondary_reconstruction: ''
+  modern_comparison: ''
+  formal_theorem: ''
+  countermodel: ''
+  source_relative_implication: ''
+  world_directed_premise: ''
+  daee_concept_module: ''
+  runtime_field: ''
+  executable_enforcement: ''
+  observable_proxy: pilot matching/ratings
+  causal_contrast: ''
+  apprehensional_relation: ''
+  lean_declaration: ''
+  current_main_owner: terminology/
+  post_merge_decision_status: ''
+  repository_inclusion_status: CANDIDATE ONLY
+  external_review_status: ''
+  open_burden: B031
+  relation_type: UNRESOLVED
+  edge_types:
+  - comparison
+  - normative bridge
+  authority_note: repository use ≠ community adoption
+- concept_id: CW046
+  concept: publication readiness
+  owner_claim: ''
+  primary_source: ''
+  arabic_locus: ''
+  translation: ''
+  secondary_reconstruction: ''
+  modern_comparison: ''
+  formal_theorem: ''
+  countermodel: ''
+  source_relative_implication: ''
+  world_directed_premise: ''
+  daee_concept_module: ''
+  runtime_field: PDF/source manifests/toolchain
+  executable_enforcement: ''
+  observable_proxy: ''
+  causal_contrast: ''
+  apprehensional_relation: ''
+  lean_declaration: ''
+  current_main_owner: publication/ + artifacts/
+  post_merge_decision_status: ''
+  repository_inclusion_status: MERGED DRAFTS
+  external_review_status: none external
+  open_burden: B032,B033,B037
+  relation_type: SAME_WORD_DIFFERENT_TYPE
+  edge_types:
+  - operational assumption
+  authority_note: engineering readiness ≠ peer review or authorization
+- concept_id: CW047
+  concept: meniscus claim
+  owner_claim: present boundary of humanity acquired knowledge
+  primary_source: ''
+  arabic_locus: ''
+  translation: ''
+  secondary_reconstruction: ''
+  modern_comparison: ''
+  formal_theorem: candidate result plus prior-art/correctness review
+  countermodel: known prior art or internal-only novelty
+  source_relative_implication: ''
+  world_directed_premise: ''
+  daee_concept_module: ''
+  runtime_field: ''
+  executable_enforcement: ''
+  observable_proxy: ''
+  causal_contrast: ''
+  apprehensional_relation: ''
+  lean_declaration: ''
+  current_main_owner: ''
+  post_merge_decision_status: ''
+  repository_inclusion_status: ''
+  external_review_status: required
+  open_burden: B038
+  relation_type: UNRESOLVED
+  edge_types:
+  - abductive preference
+  - source-historical attribution
+  authority_note: 'three dimensions: frontier, validation, campaign integration'
+- concept_id: CW048
+  concept: 22 unresolved identities
+  owner_claim: ''
+  primary_source: ''
+  arabic_locus: ''
+  translation: ''
+  secondary_reconstruction: ''
+  modern_comparison: ''
+  formal_theorem: AR8R-T144, AR8R-T145, AR8R-T146, AR8R-T147, AR8R-T148, AR8R-T149, AR8R-T151, AR8R-T152, AR8R-T153,
+    AR8R-T154, AR8R-T155, AR8R-T307, AR8R-T309, AR8R-T310, AR8R-T311, AR8R-T312, AR8R-T313, AR8R-T314, AR8R-T315,
+    AR8R-T316, AR8R-T317, AR8R-T318
+  countermodel: ''
+  source_relative_implication: ''
+  world_directed_premise: ''
+  daee_concept_module: ''
+  runtime_field: ''
+  executable_enforcement: ''
+  observable_proxy: ''
+  causal_contrast: ''
+  apprehensional_relation: ''
+  lean_declaration: ''
+  current_main_owner: ''
+  post_merge_decision_status: PRESERVE_AS_INSUFFICIENT_EVIDENCE; STOP_ACTIVE_RECOVERY
+  repository_inclusion_status: IDENTITY ONLY / BLOCKED
+  external_review_status: ''
+  open_burden: B015
+  relation_type: UNRESOLVED
+  edge_types:
+  - source-historical attribution
+  authority_note: no reconstruction from title/neighbors/family/memory
+- concept_id: CW049
+  concept: T150 proposal adoption
+  owner_claim: ''
+  primary_source: ''
+  arabic_locus: ''
+  translation: ''
+  secondary_reconstruction: ''
+  modern_comparison: ''
+  formal_theorem: AR8R-RP-001-v1
+  countermodel: ''
+  source_relative_implication: ''
+  world_directed_premise: ''
+  daee_concept_module: ''
+  runtime_field: ''
+  executable_enforcement: ''
+  observable_proxy: ''
+  causal_contrast: ''
+  apprehensional_relation: ''
+  lean_declaration: ''
+  current_main_owner: ''
+  post_merge_decision_status: ADOPT instructed but unrecorded
+  repository_inclusion_status: PENDING
+  external_review_status: ''
+  open_burden: B014
+  relation_type: REPRESENTATION_DEPENDENT
+  edge_types:
+  - normative bridge
+  authority_note: proposal bytes remain unchanged
+- concept_id: CW050
+  concept: T366 proposal adoption
+  owner_claim: ''
+  primary_source: ''
+  arabic_locus: ''
+  translation: ''
+  secondary_reconstruction: ''
+  modern_comparison: ''
+  formal_theorem: AR8R-RC-T366-v1
+  countermodel: ''
+  source_relative_implication: ''
+  world_directed_premise: ''
+  daee_concept_module: ''
+  runtime_field: ''
+  executable_enforcement: ''
+  observable_proxy: ''
+  causal_contrast: ''
+  apprehensional_relation: ''
+  lean_declaration: ''
+  current_main_owner: ''
+  post_merge_decision_status: ADOPT instructed but unrecorded
+  repository_inclusion_status: PENDING
+  external_review_status: ''
+  open_burden: B014
+  relation_type: REPRESENTATION_DEPENDENT
+  edge_types:
+  - normative bridge
+  authority_note: canonical reconstruction, not historical identity

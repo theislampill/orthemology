@@ -1,0 +1,36 @@
+schema: ar8r-canonical-theorem-origin-composed-view-v6
+status: HASH_BOUND_V5_AUTHORITY_WITH_V8_TARGET_RECOVERY_OVERLAY
+composition_rule: >-
+  The complete V5 registry remains controlling for all 514 theorem and ancestor
+  rows. The V8 overlay changes only exact-payload recovery and special-case
+  custody fields for its 42 named target identities. Unmentioned V5 rows and
+  fields are preserved without modification.
+base_registry:
+  path: AR8R-CANONICAL-THEOREM-ORIGIN-REGISTRY-V5-PUBLIC-SANITIZED.yaml
+  sha256: 843a7b7b238cfccc6b45934644f0568cc84e7826ebeddd9528511bf37111b440
+  public_sanitized_view_sha256: 52b1df2961b080bd0c05519883094fc2cd9a93413ca8c1bb1f7935a3a24b0841
+  redacted_absolute_path_occurrences: 2
+  all_registry_records: 514
+  active_ar8r_records: 382
+  historically_distinct_active_ar8r_identifiers: 382
+  known_identity_equivalence_classes: 381
+  focused_exact_relation_edges: 74
+  high_level_family_count: 10
+overlay:
+  path: AR8R-TARGET-IDENTITY-RECOVERY-OVERLAY-V8.yaml
+  target_identities: 42
+  exact_historical_payloads: 18
+  unresolved_historical_identities: 22
+  semantic_reconstructions: 1
+  role_preserving_replacements: 1
+special_case_firewalls:
+  AR8R-T150: ROLE_PRESERVING_REPLACEMENT_ORIGINAL_BYTES_UNAVAILABLE
+  AR8R-T354: EXACT_PAYLOAD_BLOCKED_FORMAL_DEFECT_NOT_REPOSITORY_READY
+  AR8R-T366: CANONICAL_SEMANTIC_RECONSTRUCTION_ORIGINAL_BYTES_UNAVAILABLE
+post_v8_scalar_rule: >-
+  V5 payload-resolved and proposition-origin counts are historical snapshot
+  fields. Current counts must be derived row by row from the complete V5 base
+  plus this overlay; they are not inferred from 42-target summary arithmetic.
+independent_discovery_count: NOT_SUPPORTED_BY_CURRENT_PROVENANCE
+natural_campaign_closure_claimed: false
+meniscus_claimed: false

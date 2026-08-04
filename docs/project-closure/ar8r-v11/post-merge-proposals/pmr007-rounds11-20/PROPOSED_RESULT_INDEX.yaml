@@ -1,0 +1,353 @@
+schema: AR8R_PMR007_PROPOSED_RESULT_INDEX_V2
+generated_at: '2026-08-03T17:53:37.602930+00:00'
+repository_authority: cc91f41fec364ea3910b80d57252bb1e0a050278
+results:
+- pmr_identity: PMR-007-MLT-1
+  title: Modal lineage transport and holonomy
+  round: ROUND11
+  provenance_class: ADMITTED_POST_MERGE_SCOPED_RESULT
+  typed_setting: connected inverse-bijection bundles
+  assumptions: See frozen proposed theorem file; all guards are explicit and scope-bound.
+  statement_and_conclusion: based closed-walk holonomy fixes anchor iff coherent anchored
+    section exists; section unique
+  proof_status: HUMAN_PROOF_PLUS_EXECUTABLE_SCOPED_CHECK
+  countermodel_status: EXPLICIT_POSITIVE_AND_NEGATIVE_CONTROLS_PRESENT
+  scope_and_nonclaims: No numerical transworld identity or modal completeness
+  source_and_evidence_owners:
+  - stable evidence identifiers and hashes in validation receipts; private source
+    bytes excluded
+  theorem_family_and_prior_art_disposition: SCOPED_APPLICATION_OR_SPECIALIZATION;
+    GENERAL_NOVELTY_ZERO; EXTERNAL_REVIEW_OPEN
+  cold_audit_status: PASS or PASS_WITH_NONBLOCKING_NOTES after recorded repairs where
+    applicable
+  repair_status: See validation receipts; Round14 V2 repairs blocked V1; R15/R16 V2
+    repair frozen V1 candidates.
+  fresh_rereview_status: PASS at same-model procedural scope; not external independence
+  external_review_status: OPEN
+  historical_identity_relation: NONE
+  origin_and_novelty_ceiling: NEW_POST_MERGE_SCOPED_RESULT; ZERO_HISTORICAL_AND_GENERAL_NOVELTY_CREDIT
+  dependency_graph:
+  - ROUND11
+  - V5 provenance policy
+  - relevant prior PMR/AR2/AR3 controls
+  repository_readiness_status: EXTERNAL_REVIEW_REQUIRED
+  owner_adoption_status: OWNER_ADOPTION_PENDING
+  exact_blocking_burden: External review, owner identity/adoption decision, bounded
+    repository design and validation.
+- pmr_identity: PMR-007-SMRB-1
+  title: Structure-preserving modal root bundle
+  round: ROUND12
+  provenance_class: ADMITTED_POST_MERGE_SCOPED_RESULT
+  typed_setting: connected bearer/effect bundles with structure isomorphisms and unique
+    underived root role
+  assumptions: See frozen proposed theorem file; all guards are explicit and scope-bound.
+  statement_and_conclusion: unique root role transports to a coherent role section
+  proof_status: HUMAN_PROOF_PLUS_EXECUTABLE_SCOPED_CHECK
+  countermodel_status: EXPLICIT_POSITIVE_AND_NEGATIVE_CONTROLS_PRESENT
+  scope_and_nonclaims: No bearer identity, agency, attributes, or world bridge
+  source_and_evidence_owners:
+  - stable evidence identifiers and hashes in validation receipts; private source
+    bytes excluded
+  theorem_family_and_prior_art_disposition: SCOPED_APPLICATION_OR_SPECIALIZATION;
+    GENERAL_NOVELTY_ZERO; EXTERNAL_REVIEW_OPEN
+  cold_audit_status: PASS or PASS_WITH_NONBLOCKING_NOTES after recorded repairs where
+    applicable
+  repair_status: See validation receipts; Round14 V2 repairs blocked V1; R15/R16 V2
+    repair frozen V1 candidates.
+  fresh_rereview_status: PASS at same-model procedural scope; not external independence
+  external_review_status: OPEN
+  historical_identity_relation: NONE
+  origin_and_novelty_ceiling: NEW_POST_MERGE_SCOPED_RESULT; ZERO_HISTORICAL_AND_GENERAL_NOVELTY_CREDIT
+  dependency_graph:
+  - ROUND12
+  - V5 provenance policy
+  - relevant prior PMR/AR2/AR3 controls
+  repository_readiness_status: EXTERNAL_REVIEW_REQUIRED
+  owner_adoption_status: OWNER_ADOPTION_PENDING
+  exact_blocking_burden: External review, owner identity/adoption decision, bounded
+    repository design and validation.
+- pmr_identity: PMR-007-FRLA-1
+  title: Fault-robust local agreement and warranted output intersection
+  round: ROUND13
+  provenance_class: ADMITTED_POST_MERGE_SCOPED_RESULT
+  typed_setting: finite one-step deterministic local-view scenarios
+  assumptions: See frozen proposed theorem file; all guards are explicit and scope-bound.
+  statement_and_conclusion: local protocol exists iff each joined correct-view component
+    has nonempty complete-output intersection
+  proof_status: HUMAN_PROOF_PLUS_EXECUTABLE_SCOPED_CHECK
+  countermodel_status: EXPLICIT_POSITIVE_AND_NEGATIVE_CONTROLS_PRESENT
+  scope_and_nonclaims: No general Byzantine agreement or repeated/asynchronous result
+  source_and_evidence_owners:
+  - stable evidence identifiers and hashes in validation receipts; private source
+    bytes excluded
+  theorem_family_and_prior_art_disposition: SCOPED_APPLICATION_OR_SPECIALIZATION;
+    GENERAL_NOVELTY_ZERO; EXTERNAL_REVIEW_OPEN
+  cold_audit_status: PASS or PASS_WITH_NONBLOCKING_NOTES after recorded repairs where
+    applicable
+  repair_status: See validation receipts; Round14 V2 repairs blocked V1; R15/R16 V2
+    repair frozen V1 candidates.
+  fresh_rereview_status: PASS at same-model procedural scope; not external independence
+  external_review_status: OPEN
+  historical_identity_relation: NONE
+  origin_and_novelty_ceiling: NEW_POST_MERGE_SCOPED_RESULT; ZERO_HISTORICAL_AND_GENERAL_NOVELTY_CREDIT
+  dependency_graph:
+  - ROUND13
+  - V5 provenance policy
+  - relevant prior PMR/AR2/AR3 controls
+  repository_readiness_status: EXTERNAL_REVIEW_REQUIRED
+  owner_adoption_status: OWNER_ADOPTION_PENDING
+  exact_blocking_burden: External review, owner identity/adoption decision, bounded
+    repository design and validation.
+- pmr_identity: PMR-007-COB-1
+  title: Invariant-core entry versus general co-Büchi restoration
+  round: ROUND14_V2
+  provenance_class: ADMITTED_POST_MERGE_SCOPED_RESULT
+  typed_setting: finite perfect-information common-state controller/adversary games
+  assumptions: See frozen proposed theorem file; all guards are explicit and scope-bound.
+  statement_and_conclusion: nested mu-nu fixed point exactly characterizes safe eventual
+    target persistence; W_core subset W_coB can be strict
+  proof_status: HUMAN_PROOF_PLUS_EXECUTABLE_SCOPED_CHECK
+  countermodel_status: EXPLICIT_POSITIVE_AND_NEGATIVE_CONTROLS_PRESENT
+  scope_and_nonclaims: No partial-observation, causal, source, target, or runtime
+    completeness
+  source_and_evidence_owners:
+  - stable evidence identifiers and hashes in validation receipts; private source
+    bytes excluded
+  theorem_family_and_prior_art_disposition: SCOPED_APPLICATION_OR_SPECIALIZATION;
+    GENERAL_NOVELTY_ZERO; EXTERNAL_REVIEW_OPEN
+  cold_audit_status: PASS or PASS_WITH_NONBLOCKING_NOTES after recorded repairs where
+    applicable
+  repair_status: See validation receipts; Round14 V2 repairs blocked V1; R15/R16 V2
+    repair frozen V1 candidates.
+  fresh_rereview_status: PASS at same-model procedural scope; not external independence
+  external_review_status: OPEN
+  historical_identity_relation: NONE
+  origin_and_novelty_ceiling: NEW_POST_MERGE_SCOPED_RESULT; ZERO_HISTORICAL_AND_GENERAL_NOVELTY_CREDIT
+  dependency_graph:
+  - ROUND14_V2
+  - V5 provenance policy
+  - relevant prior PMR/AR2/AR3 controls
+  repository_readiness_status: EXTERNAL_REVIEW_REQUIRED
+  owner_adoption_status: OWNER_ADOPTION_PENDING
+  exact_blocking_burden: External review, owner identity/adoption decision, bounded
+    repository design and validation.
+- pmr_identity: PMR-007-TRC-1
+  title: DAEE temporal certificate architecture
+  round: ROUND15_V2
+  provenance_class: ADMITTED_POST_MERGE_SCOPED_RESULT
+  typed_setting: finite declared temporal model with canonical digest and complete
+    successors
+  assumptions: See frozen proposed theorem file; all guards are explicit and scope-bound.
+  statement_and_conclusion: model-bound certificates verify core-entry/co-Büchi relative
+    to declared model; current local closure does not identify temporal stability
+  proof_status: HUMAN_PROOF_PLUS_EXECUTABLE_SCOPED_CHECK
+  countermodel_status: EXPLICIT_POSITIVE_AND_NEGATIVE_CONTROLS_PRESENT
+  scope_and_nonclaims: No actual runtime model completeness or causal restoration
+  source_and_evidence_owners:
+  - stable evidence identifiers and hashes in validation receipts; private source
+    bytes excluded
+  theorem_family_and_prior_art_disposition: SCOPED_APPLICATION_OR_SPECIALIZATION;
+    GENERAL_NOVELTY_ZERO; EXTERNAL_REVIEW_OPEN
+  cold_audit_status: PASS or PASS_WITH_NONBLOCKING_NOTES after recorded repairs where
+    applicable
+  repair_status: See validation receipts; Round14 V2 repairs blocked V1; R15/R16 V2
+    repair frozen V1 candidates.
+  fresh_rereview_status: PASS at same-model procedural scope; not external independence
+  external_review_status: OPEN
+  historical_identity_relation: NONE
+  origin_and_novelty_ceiling: NEW_POST_MERGE_SCOPED_RESULT; ZERO_HISTORICAL_AND_GENERAL_NOVELTY_CREDIT
+  dependency_graph:
+  - ROUND15_V2
+  - V5 provenance policy
+  - relevant prior PMR/AR2/AR3 controls
+  repository_readiness_status: EXTERNAL_REVIEW_REQUIRED
+  owner_adoption_status: OWNER_ADOPTION_PENDING
+  exact_blocking_burden: External review, owner identity/adoption decision, bounded
+    repository design and validation.
+- pmr_identity: PMR-007-VCT-1
+  title: Version-custody transport and temporal eligibility
+  round: ROUND16_V2
+  provenance_class: ADMITTED_POST_MERGE_SCOPED_RESULT
+  typed_setting: finite reason-DAG transport paths and finite action-menu games
+  assumptions: See frozen proposed theorem file; all guards are explicit and scope-bound.
+  statement_and_conclusion: guarded reason/version transport composes; action-menu
+    restriction shrinks temporal winning regions
+  proof_status: HUMAN_PROOF_PLUS_EXECUTABLE_SCOPED_CHECK
+  countermodel_status: EXPLICIT_POSITIVE_AND_NEGATIVE_CONTROLS_PRESENT
+  scope_and_nonclaims: No distributed path discovery, common knowledge, or general
+    novelty
+  source_and_evidence_owners:
+  - stable evidence identifiers and hashes in validation receipts; private source
+    bytes excluded
+  theorem_family_and_prior_art_disposition: SCOPED_APPLICATION_OR_SPECIALIZATION;
+    GENERAL_NOVELTY_ZERO; EXTERNAL_REVIEW_OPEN
+  cold_audit_status: PASS or PASS_WITH_NONBLOCKING_NOTES after recorded repairs where
+    applicable
+  repair_status: See validation receipts; Round14 V2 repairs blocked V1; R15/R16 V2
+    repair frozen V1 candidates.
+  fresh_rereview_status: PASS at same-model procedural scope; not external independence
+  external_review_status: OPEN
+  historical_identity_relation: NONE
+  origin_and_novelty_ceiling: NEW_POST_MERGE_SCOPED_RESULT; ZERO_HISTORICAL_AND_GENERAL_NOVELTY_CREDIT
+  dependency_graph:
+  - ROUND16_V2
+  - V5 provenance policy
+  - relevant prior PMR/AR2/AR3 controls
+  repository_readiness_status: EXTERNAL_REVIEW_REQUIRED
+  owner_adoption_status: OWNER_ADOPTION_PENDING
+  exact_blocking_burden: External review, owner identity/adoption decision, bounded
+    repository design and validation.
+- pmr_identity: PMR-007-RSD-1
+  title: Role-section descent, common-bearer semantics, and R5 plural-realization
+    boundary
+  round: ROUND17
+  provenance_class: ADMITTED_POST_MERGE_SCOPED_RESULT
+  typed_setting: finite connected transport-invariant bearer subbundles with inverse-bijection
+    transport
+  assumptions: See frozen proposed theorem file; holonomy, no-same-fibre-collapse,
+    and structure guards are explicit.
+  statement_and_conclusion: admissible cross-fibre descent exists iff selected-element
+    holonomy is trivial; canonical lineage quotient does not imply numerical identity
+  proof_status: HUMAN_PROOF_PLUS_SCOPED_EXECUTABLE_CHECKS_REPORTED
+  countermodel_status: PLURAL_COMMON_MODEL_AND_NONIDENTITY_CONTROLS_PRESENT
+  scope_and_nonclaims: No numerical transworld identity, world bridge, unity, mentality,
+    or attributes
+  source_and_evidence_owners:
+  - frozen packet, audit, repair, rereview, admission overlay
+  theorem_family_and_prior_art_disposition: STANDARD_FLAT_BUNDLE_DESCENT_APPLICATION;
+    GENERAL_NOVELTY_ZERO; EXTERNAL_REVIEW_OPEN
+  cold_audit_status: REPAIR_REQUIRED
+  repair_status: BLOCKING_REPAIRS_COMPLETE
+  fresh_rereview_status: PASS_WITH_NONBLOCKING_AUTHORITY_AND_NOVELTY_NOTES
+  external_review_status: OPEN
+  historical_identity_relation: NONE
+  origin_and_novelty_ceiling: NEW_POST_MERGE_SCOPED_RESULT; ZERO_HISTORICAL_AND_GENERAL_NOVELTY_CREDIT
+  dependency_graph:
+  - ROUND11
+  - ROUND12
+  - PMR-M3-01
+  - PMR-M5-02
+  - PMR-R5-01
+  repository_readiness_status: EXTERNAL_REVIEW_REQUIRED
+  owner_adoption_status: OWNER_ADOPTION_PENDING
+  exact_blocking_burden: External review, owner adoption, and repository design/validation.
+- pmr_identity: PMR-007-ORTC-V4
+  title: Complete certificate-object refinement and robust temporal selector
+  round: ROUND18_V4
+  provenance_class: ADMITTED_POST_MERGE_SCOPED_RESULT
+  typed_setting: finite complete-object admissibility relations, encoder/decoder observations,
+    zero-error and fixed adversarial Hamming channels
+  assumptions: Exact finite state/object data; truthful authorized encoding; decoder
+    side observation; model-bound temporal certificate where used.
+  statement_and_conclusion: exact-state selector alphabet equals complete-object support
+    cover; general encoder protocols equal compatible partitions; robust noisy relation
+    selection equals ambiguity-set intersection
+  proof_status: HUMAN_PROOF_PLUS_PRIMARY_AND_DISTINCT_EXECUTABLE_REREVIEW
+  countermodel_status: SURFACE_ACTION_LAUNDERING, LABEL_RECOVERY_OVERSTRENGTH, HISTORY,
+    AND STALE_COMPLETION CONTROLS PRESENT
+  scope_and_nonclaims: No bounded-error/interactive communication, source truth, common
+    knowledge, causal restoration, or historical identity
+  source_and_evidence_owners:
+  - frozen V4 packet, V1/V3 rejected evidence, audits, repair, fresh rereview, prior-art
+    note
+  theorem_family_and_prior_art_disposition: AR2/AR3 STRICT_SPECIALIZATION; WITSENHAUSEN/ORLITSKY-ROCHE
+    ANCESTRY; SET-COVER IDENTITY; GENERAL_NOVELTY_ZERO
+  cold_audit_status: PASS_WITH_NONBLOCKING_AUTHORITY_NOTES
+  repair_status: V1/V3 BLOCKING REPAIRS COMPLETE
+  fresh_rereview_status: PASS_WITH_NONBLOCKING_SCOPE_NOTES
+  external_review_status: OPEN
+  historical_identity_relation: NONE
+  origin_and_novelty_ceiling: NEW_POST_MERGE_SCOPED_RESULT; ZERO_HISTORICAL_AND_GENERAL_NOVELTY_CREDIT
+  dependency_graph:
+  - ROUND13
+  - ROUND14_V2
+  - ROUND15_V2
+  - ROUND16_V2
+  - AR2/AR3
+  repository_readiness_status: EXTERNAL_REVIEW_REQUIRED
+  owner_adoption_status: OWNER_ADOPTION_PENDING
+  exact_blocking_burden: External review, owner adoption, bounded-error/dynamic extensions,
+    and repository design/validation.
+- pmr_identity: PMR-007-PRQT-1
+  title: Provenance-root threshold query complexity
+  round: ROUND19_V2
+  provenance_class: ADMITTED_POST_MERGE_SCOPED_RESULT
+  typed_setting: finite arbitrary labelled partial matchings; deterministic adaptive
+    zero-error edge queries returning canonical root labels on positive edges
+  assumptions:
+  - canonical authenticated labels
+  - label return has no extra query cost
+  - 1 <= t <= min(m,n)
+  - root alphabet size at least t
+  statement_and_conclusion: exact depth mn - binom(t,2) for deciding at least t distinct
+    canonical labels
+  proof_status: HUMAN_PROOF_PLUS_PRIMARY_AND_DISTINCT_EXECUTABLE_REREVIEW
+  countermodel_status: membership-only, alias/merge, nonindependence, verification-cost,
+    and recipient-contract controls present
+  scope_and_nonclaims: No root-authentication, independence, randomized/quantum/distributed,
+    common-knowledge, recipient-warrant, or world result
+  source_and_evidence_owners:
+  - Candidate 1 preserved theorem
+  - Round19 V2 packet/model/check/audit/repair/rereview
+  theorem_family_and_prior_art_disposition: TIGHT_ORACLE_ENRICHED_EXTENSION_AND_REDUCTION;
+    bounded external search found no exact ancestor; exhaustive review open
+  cold_audit_status: REPAIR_REQUIRED
+  repair_status: FOUR_BLOCKING_FINDINGS_REPAIRED
+  fresh_rereview_status: PASS_WITH_NONBLOCKING_AUTHORITY_AND_NOVELTY_NOTES
+  external_review_status: OPEN
+  historical_identity_relation: NONE
+  origin_and_novelty_ceiling: NEW_POST_MERGE_SCOPED_RESULT; GENERAL_NOVELTY_NOT_ESTABLISHED;
+    NO_HISTORICAL_CREDIT
+  dependency_graph:
+  - Candidate 1
+  - AR2/AR3 interface
+  - TAC/SAC application interface
+  - V5 provenance policy
+  repository_readiness_status: EXTERNAL_REVIEW_REQUIRED
+  owner_adoption_status: OWNER_ADOPTION_PENDING
+  exact_blocking_burden: External mathematical/prior-art review, owner adoption, and
+    bounded repository design/validation.
+- pmr_identity: PMR-007-PRRC-1
+  title: Static pathwise provenance-root robustness by transversal margin
+  round: ROUND20_V2
+  provenance_class: ADMITTED_POST_MERGE_SCOPED_RESULT
+  typed_setting: finite static complete fixed-path systems; actual authenticated required-root
+    identities; conjunctive dependency semantics
+  assumptions:
+  - portfolio fixed before one static corruption set
+  - any corrupted required root disables action
+  - pathwise availability
+  - complete fixed path registry
+  statement_and_conclusion: statically pathwise f-root-robust iff kappa_root=min_p
+    tau(H_p) exceeds f
+  proof_status: HUMAN_PROOF_PLUS_PRIMARY_AND_DISTINCT_EXECUTABLE_REREVIEW
+  countermodel_status: copied root, common bottleneck, incompatibility, dynamic rerouting,
+    adaptive one-shot, alias, partial registry, and redundant-support controls preserved
+  scope_and_nonclaims: No dynamic/adaptive execution, root authentication proof, target
+    truth, causal landing, human restoration, or tawatur warrant
+  source_and_evidence_owners:
+  - AR8R-T351
+  - AR8R-T352
+  - AR8R-T353
+  - Round15
+  - Round19
+  - current daee false-tawatur/memetic objects
+  theorem_family_and_prior_art_disposition: STANDARD_HYPERGRAPH_TRANSVERSAL; COMPOSITIONAL_COROLLARY/APPLICATION;
+    GENERAL_NOVELTY_ZERO
+  cold_audit_status: REPAIR_REQUIRED
+  repair_status: THREE_BLOCKING_FINDINGS_REPAIRED
+  fresh_rereview_status: PASS_WITH_NONBLOCKING_SCOPE_AND_AUTHORITY_NOTES
+  external_review_status: OPEN
+  historical_identity_relation: NONE
+  origin_and_novelty_ceiling: NEW_POST_MERGE_SCOPED_RESULT; ZERO_GENERAL_AND_HISTORICAL_CREDIT
+  dependency_graph:
+  - AR8R-T351
+  - AR8R-T352
+  - AR8R-T353
+  - PMR-007-TRC-1
+  - PMR-007-PRQT-1
+  - AR2/AR3 provenance controls
+  repository_readiness_status: EXTERNAL_REVIEW_REQUIRED
+  owner_adoption_status: OWNER_ADOPTION_PENDING
+  exact_blocking_burden: External review, owner adoption, and any dynamic/runtime
+    extension.

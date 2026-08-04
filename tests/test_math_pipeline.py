@@ -347,14 +347,14 @@ for heading_path in [
         heading_sources[heading_path] = heading_stream.read()
 all_source_headings = markdown_headings(heading_sources)
 eq(
-    "authoritative H2 through H4 inventory has exact ordered 162-heading digest",
+    "authoritative H2 through H4 inventory has exact ordered 163-heading digest",
     (
         len(all_source_headings),
         hashlib.sha256("\n".join(all_source_headings).encode("utf-8")).hexdigest(),
     ),
     (
-        162,
-        "624cfd2a6d166ba73b432a54bbfc9179ede988fe24c9c3fde6f5ef830e655dd3",
+        163,
+        "cf0ac56bd806c839e391e7340800f4d104efc41b1a7b15b688dd60317db1a532",
     ),
 )
 eq(

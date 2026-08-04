@@ -1,0 +1,18 @@
+schema: ar8r-canonical-search-core-custody-receipt-v1
+canonical_member_count: 489
+members_unique: true
+source_sha256: 0d3bf50dc84e9bed824410d6b7418978ae9a5cf33fbdd1687c3adf7c5b1aa576
+source_authority: V4_REPAIRED_EXACT_CORE_RETAINED_BY_V5
+status: HISTORICAL_CUSTODY_RECEIPT_NOT_REPOSITORY_THEOREM_COUNT
+excluded_noncore_targeted_interactions:
+  - AR8R-T363
+  - AR8R-T364
+  - AR8R-T365
+  - AR8R-T366
+  - AR8R-T367
+  - AR8R-T368
+  - AR8R-T369
+note: >-
+  The rejected 496-member core incorrectly added seven P597-era targeted
+  interactions despite the validated declaration that the canonical pair
+  universe was unchanged.

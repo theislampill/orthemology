@@ -1,0 +1,25 @@
+schema: ar8r-full-program-reentry-v2-source-receipt-v1
+companion_archive:
+  filename: AR8R_FULL_PROGRAM_REENTRY_HANDOFF_V2.zip
+  sha256: ff9e5452670ae5b895ac4093341c172ed91077e5595005e1537ee3d80bc44974
+  bytes: 494283
+  archive_members: 56
+  integrity: PASS
+repository_selection:
+  path: docs/project-closure/ar8r-v11/programs/full-program-reentry-v2-source
+  exact_public_safe_files: 22
+  source_bytes_modified: false
+  source_surface: VISIBLE_FILE_CARD_BYTES
+  selection_manifest: AR8R-POST-MERGE-VISIBLE-FILE-CARD-MANIFEST-V1.yaml
+  selection_basis: exact bytes returned by 22 individual visible file cards, independently hashed and screened for private recovery data
+archive_relation:
+  direct_single_member_matches: 14
+  byte_conflicts: 7
+  selected_files_absent_by_same_basename_from_archive: 1
+  precedence: VISIBLE_FILE_CARD_VERSION_SELECTED_ARCHIVE_VARIANTS_UNRESOLVED
+  conflict_owner: AR8R-POST-MERGE-FILE-CARD-ARCHIVE-CONFLICTS-V1.yaml
+authority:
+  status: VALID_PROGRAM_CONTINUITY_SOURCE
+  theorem_adoption_effect: NONE
+  historical_payload_effect: NONE
+  owner_adoption_effect: NONE

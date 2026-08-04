@@ -1,0 +1,66 @@
+schema: ar8r-dependency-directed-research-queue-v1
+campaign: AR8R_POST_MERGE_MENISCUS_PROGRAM_V1
+current_wave: PMR-001
+natural_closure: NOT_REACHED
+queue:
+  - order: 1
+    task_id: PMR-002-RETRIEVAL-BOUND
+    kind: READ_ONLY_RECONSTRUCTION
+    title: bounded exact-source search for T162-T172, T184-T190, T201-T205, and T254-T255
+    cap: no more than 15 percent of PMR-002 substantive duration
+    success: exact source pointers and authority classes
+    failure: OWNER_ASSERTED_EXACT_SOURCE_NOT_YET_LOCATED, then proceed with unaffected post-merge research
+    must_not_combine: [general V1-V10 recovery, tensor A-G reconstruction]
+  - order: 2
+    task_id: PMR-M4-01
+    kind: SOURCE_VERIFICATION_AND_FORMAL_COUNTERMODEL
+    title: qiyas al-awla guard-deletion matrix
+    prerequisites: [Asfahani attribute loci, source-role firewall, theorem-family registry]
+    output: one guarded eligibility result plus a countermodel for every deleted guard
+    lanes: [S15, S17, S39, S68, S69, S87]
+  - order: 3
+    task_id: PMR-LANG-01
+    kind: FORMAL_PROOF_OR_COUNTERMODEL
+    title: translation guarded preservation and noncompleteness
+    prerequisites: [PMR-002-RETRIEVAL-BOUND, current source-coordinate decomposition]
+    output: exact source/message/translation/target contract, deletion countermodels, ancestry adjudication
+    lanes: [S04, S32, S39, S55, S56, S68, S69, S82]
+  - order: 4
+    task_id: PMR-UG-01
+    kind: FORMAL_PROOF_OR_COUNTERMODEL
+    title: convergence and local-grammar nonbridge
+    prerequisites: [PRH exact paper, PMR-002-RETRIEVAL-BOUND]
+    output: explicit plural/local-grammar countermodel to uniqueness, mentality, agency, or divine Speech
+    lanes: [S01, S07, S13, S15, S29, S30, S86, S87]
+  - order: 5
+    task_id: PMR-002-CROSSWALK
+    kind: SUBSTANTIVE_CROSS_LANE_SYNTHESIS
+    title: communication-language-articulability re-entry across at least three lanes
+    prerequisites: [PMR-LANG-01, PMR-UG-01]
+    output: typed edges and reverse feedback affecting AR2/AR3, daee, PRH, source binding, R5, or transcendental ascent
+  - order: 6
+    task_id: C1-EXTERNAL-REVIEW-PACKET
+    kind: EXTERNAL_REVIEW
+    title: Candidate 1 mathematical and prior-art packet
+    prerequisites: [owner transmission authorization]
+    status: BLOCKED_ON_OWNER_EXTERNAL_TRANSMISSION
+    lanes: [S09, S41, S75]
+  - order: 7
+    task_id: TENSOR-A-G-EXACT-RETRIEVAL
+    kind: READ_ONLY_RECONSTRUCTION
+    title: locate verbatim seven-representation protocol
+    status: BLOCKED_ON_EXACT_SOURCE
+    nonblocking_for: [PMR-M4-01, PMR-LANG-01, PMR-UG-01]
+  - order: 8
+    task_id: DAEE-FULL-STACK-AUDIT
+    kind: IMPLEMENTATION_AUDIT
+    title: compare exact later daee snapshot against current-main partial binding
+    prerequisites: [exact daee snapshot]
+    status: BLOCKED_ON_EXACT_SOURCE
+  - order: 9
+    task_id: SUCCESSOR-T299-T300-DESIGN
+    kind: EMPIRICAL_EXECUTION
+    title: materially new support-separated and causally identified experiment
+    prerequisites: [new design, owner authorization, frozen proxy/target contract]
+    status: FUTURE_RESEARCH_RESIDUAL
+    prohibition: do not rerun retired P661-P668 configuration

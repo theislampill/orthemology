@@ -1,0 +1,35 @@
+{
+  "exhaustive_action_systems_checked": 13985,
+  "exhaustive_mismatches": [],
+  "failures": [],
+  "frozen_hash_failures": [],
+  "method": "direct minimum failing corruption size versus independent recursive transversal solver over action systems",
+  "overall": "PASS",
+  "random_action_systems": {
+    "checked": 120000,
+    "mismatches": [],
+    "monotonicity_failures": []
+  },
+  "schema": "PMR007_ROUND20_DISTINCT_FRESH_REREVIEW_RESULTS_V1",
+  "scope_controls": {
+    "alias_contraction": {
+      "actual_failure_budget": 1,
+      "displayed_failure_budget": 2
+    },
+    "dynamic_rerouting": {
+      "dynamic_actual_restoration": false,
+      "fixed_registered_certificate": true,
+      "scope_difference_observed": true
+    },
+    "incompatible_actions": {
+      "joint_executable": false,
+      "pathwise_zero_corruption_certificate": true,
+      "scope_difference_observed": true
+    },
+    "redundant_support": {
+      "redundant_semantics_survives_one_corruption": true,
+      "scope_difference_observed": true,
+      "static_conjunctive_kappa": 1
+    }
+  }
+}

@@ -1,0 +1,29 @@
+schema: orthemological-specification-warrant-osw-15
+status: CURRENT_PUBLIC_GOVERNANCE_OWNER
+relationship_to_osw11: REFINEMENT_PRESERVING_ALL_PRIOR_BURDENS
+coordinates:
+  - {id: source_claim, question: "What exact source claim is being audited?"}
+  - {id: source_object, question: "What exact source object carries that claim?"}
+  - {id: formal_claim, question: "What exact formal proposition is encoded?"}
+  - {id: formal_object, question: "What exact formal object is constructed?"}
+  - {id: interpretation_map, question: "How are source terms mapped into the formalization?"}
+  - {id: hypothesis_correspondence, question: "Do formal hypotheses match every load-bearing source hypothesis?"}
+  - {id: conclusion_correspondence, question: "Does the formal conclusion match the intended source conclusion?"}
+  - {id: scope_boundary, question: "Are domain version and nonclaim boundaries explicit?"}
+  - {id: transport_witness, question: "What validates transport between source formal implementation and world layers?"}
+  - {id: falsifiers, question: "Which counterexamples or observations would defeat the intended reading?"}
+  - {id: axiom_inventory, question: "What axioms declarations and trust assumptions are used?"}
+  - {id: build_receipt, question: "Did the exact declared toolchain accept the exact source?"}
+  - {id: kernel_receipt, question: "Did the trusted kernel accept the exact proposition under the exact axiom inventory?"}
+  - {id: mathematical_review, question: "Did an appropriately independent domain expert review the object-level mathematics?"}
+  - {id: custody, question: "Are exact versions hashes conflicts and provenance preserved?"}
+load_bearing_failure_tokens: [FAIL, UNKNOWN, NOT_RUN, NOT_PERFORMED]
+promotion_rule: Every load-bearing coordinate must pass before theorem-intent promotion.
+authority_rules:
+  BUILD_PASS: Exact declared toolchain acceptance only.
+  KERNEL_PASS: Exact formal proposition under its exact axiom inventory and trust boundary only.
+  STATIC_TOKEN_ABSENCE: No proof or intended-theorem credit.
+  SOURCE_PRESENCE: No parse elaboration kernel correspondence or truth credit.
+  DECLARATION_NAME_SIMILARITY: No theorem identity or correspondence credit.
+  MODEL_GENERATED_REVIEW: No substitute for object-level mathematical review.
+generalization_not_identity_merge: [FALSE_MENISCUS_INCIDENT, AR8R-T354_FORMAL_DEFECT, AR8R-T299_T300_PROXY_FAILURE, TEN_ADVANCES_38_42_CONFLICT, CONNES_RIGIDITY_DISPUTE]

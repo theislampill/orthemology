@@ -1,0 +1,30 @@
+schema: ar8r-post-merge-pmr002-006-source-receipt-v1
+companion_archive:
+  filename: AR8R_PMR002_PMR006_MULTI_WAVE_CHECKPOINT.zip
+  sha256: dfa5dc36aa36b9f362b8cf8cd9df6b09dfa2d972d9de9cc2bdaf93f736029bea
+  bytes: 221115
+  archive_members: 186
+  integrity: PASS
+repository_selection:
+  path: docs/project-closure/ar8r-v11/post-merge-pmr002-006-source
+  exact_public_safe_files: 12
+  source_bytes_modified: false
+  source_surface: VISIBLE_FILE_CARD_BYTES
+  selection_manifest: AR8R-POST-MERGE-VISIBLE-FILE-CARD-MANIFEST-V1.yaml
+archive_relation:
+  direct_single_member_matches: 10
+  byte_conflicts: 0
+  selected_files_absent_by_same_basename_from_archive: 2
+  precedence: VISIBLE_FILE_CARD_VERSION_SELECTED_ARCHIVE_VARIANTS_UNRESOLVED
+  conflict_owner: AR8R-POST-MERGE-FILE-CARD-ARCHIVE-CONFLICTS-V1.yaml
+audit_boundary:
+  current_admission_owners: 11
+  blocking_findings_repaired: 40
+  reconciliation: PASS
+  external_independence: NOT_CLAIMED
+campaign_boundary:
+  latest_closed_wave: PMR-006
+  next_wave_at_source_boundary: PMR-007
+  integrated_champion: NONE
+  meniscus: MENISCUS_NOT_REACHED
+  natural_closure: NOT_REACHED

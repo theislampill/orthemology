@@ -1,0 +1,44 @@
+schema: ar8r-post-merge-link-drift-summary-v1
+classification: HISTORICAL_LINK_CONTENT_DRIFT
+incident_count: 6
+incidents:
+  - id: HLCD-V11-001
+    response_turn: 20
+    control: private_checkpoint_verification
+    expected_archive_sha256: 8eb163780876117acfc155f4ef111db27b0c32e7ea92684d58eb326789aae0c0
+    returned_verifier_archive_sha256: 0e9561dc1dd4c2cd25af5a8b7fdc822b242b57f633d1aca5bc095cbb76a71445
+    returned_boundary: ROUND16
+  - id: HLCD-V11-002
+    response_turn: 20
+    control: sanitized_proposal_verification
+    expected_archive_sha256: 329300d65e4dc9da735d2f8976a4ff30ba40f82a12ac07e0b097e80a2153961d
+    returned_verifier_archive_sha256: 37fcb3c4e965243e42be337cefdee5b49e037140d54dcb4716fc5a7bf264748b
+    returned_boundary: ROUND16
+  - id: HLCD-V11-003
+    response_turn: 30
+    control: private_checkpoint_sha256_sidecar
+    expected_archive_sha256: ec18d0e80adc907ab11da9a21de8816833cbbdc1df389a99efef7fa415fb65c2
+    returned_sidecar_archive_sha256: 8eb163780876117acfc155f4ef111db27b0c32e7ea92684d58eb326789aae0c0
+    returned_boundary: ROUND18
+  - id: HLCD-V11-004
+    response_turn: 30
+    control: sanitized_proposal_sha256_sidecar
+    expected_archive_sha256: d7a44100b72218988b3f6d116048d31fffe3997d278e855542207b5a84769e64
+    returned_sidecar_archive_sha256: 329300d65e4dc9da735d2f8976a4ff30ba40f82a12ac07e0b097e80a2153961d
+    returned_boundary: ROUND18
+  - id: HLCD-V11-005
+    response_turn: 30
+    control: private_checkpoint_verification
+    expected_archive_sha256: ec18d0e80adc907ab11da9a21de8816833cbbdc1df389a99efef7fa415fb65c2
+    returned_verifier_archive_sha256: 0e9561dc1dd4c2cd25af5a8b7fdc822b242b57f633d1aca5bc095cbb76a71445
+    returned_boundary: ROUND16
+  - id: HLCD-V11-006
+    response_turn: 30
+    control: sanitized_proposal_verification
+    expected_archive_sha256: d7a44100b72218988b3f6d116048d31fffe3997d278e855542207b5a84769e64
+    returned_verifier_archive_sha256: 37fcb3c4e965243e42be337cefdee5b49e037140d54dcb4716fc5a7bf264748b
+    returned_boundary: ROUND16
+interpretation:
+  archive_controls_resolved_to_reported_historical_boundaries: true
+  drift_invalidates_downloaded_archive_bytes: false
+  mutable_link_labels_are_hash_authority: false

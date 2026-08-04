@@ -1,0 +1,56 @@
+schema: PMR007_RESULT_STATUS_DELTA_V2
+results: &id001
+- id: PMR-007-MLT-1
+  status: ADMITTED_POST_MERGE_SCOPED_RESULT
+  external_review: OPEN
+  owner_adoption: PENDING
+- id: PMR-007-SMRB-1
+  status: ADMITTED_POST_MERGE_SCOPED_RESULT
+  external_review: OPEN
+  owner_adoption: PENDING
+- id: PMR-007-FRLA-1
+  status: ADMITTED_POST_MERGE_SCOPED_RESULT
+  external_review: OPEN
+  owner_adoption: PENDING
+- id: PMR-007-COB-1
+  status: ADMITTED_POST_MERGE_SCOPED_RESULT
+  external_review: OPEN
+  owner_adoption: PENDING
+- id: PMR-007-TRC-1
+  status: ADMITTED_POST_MERGE_SCOPED_RESULT
+  external_review: OPEN
+  owner_adoption: PENDING
+- id: PMR-007-VCT-1
+  status: ADMITTED_POST_MERGE_SCOPED_RESULT
+  external_review: OPEN
+  owner_adoption: PENDING
+- identity: PMR-007-PRQT-1
+  round: ROUND19_V2
+  status: ADMITTED_POST_MERGE_SCOPED_RESULT
+  external_review: OPEN
+  owner_adoption: PENDING
+  historical_identity: null
+  general_novelty: NOT_ESTABLISHED
+- identity: PMR-007-PRRC-1
+  round: ROUND20_V2
+  status: ADMITTED_POST_MERGE_SCOPED_RESULT
+  external_review: OPEN
+  owner_adoption: PENDING
+  historical_identity: null
+  general_novelty: ZERO
+blocked:
+- id: PMR-007-ROUND14-V1
+  status: BLOCKED_FORMAL_DEFECT
+  repository_ready: false
+github_changed: false
+generated_at: '2026-08-03T17:53:37.602930+00:00'
+round17_round18_additions:
+- id: PMR-007-RSD-1
+  status: ADMITTED_POST_MERGE_SCOPED_RESULT
+  formalization_opportunity: finite transport bundle, holonomy, quotient, and same-fibre
+    collision criterion
+- id: PMR-007-ORTC-V4
+  status: ADMITTED_POST_MERGE_SCOPED_RESULT
+  formalization_opportunity: finite set cover, compatible partitions, ambiguity intersections,
+    and rank-certificate selector
+deltas: *id001

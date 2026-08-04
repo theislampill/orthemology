@@ -1,0 +1,103 @@
+schema: PMR007_ROUND19_PROVENANCE_ROOT_THRESHOLD_V2
+round: PMR-007-FRONTIER-ROUND19
+candidate_identity: PMR-007-PRQT-1
+setting:
+  hidden_object: arbitrary labelled partial matching in K_mn
+  query:
+    input: one edge
+    absent_response: BOTTOM
+    present_response: canonical_root_label
+  cost: number of edge queries
+  algorithm: deterministic adaptive zero-error
+  target: at_least_t_distinct_root_labels
+  required_guards:
+  - finite_positive_m_n
+  - canonical_authenticated_labels
+  - returned_label_has_no_extra_query_cost
+  - root_alphabet_size_at_least_t
+  - 1_le_t_le_min_m_n
+statement:
+  depth: mn_minus_binom_t_2
+  boundary_cases:
+    t_nonpositive: constant_true_depth_0
+    t_above_matching_rank: constant_false_depth_0
+    alphabet_smaller_than_t: constant_false_depth_0
+upper_bound:
+  state:
+  - residual_rows_m
+  - residual_columns_n
+  - seen_label_set_S
+  - remaining_root_demand_k
+  branches:
+    no_positive:
+      residual:
+      - m_minus_1
+      - n
+      - k
+      feasible_residual_slack: 0
+      infeasible_residual: immediate_false_with_cost_n_le_B
+    new_label_positive:
+      residual:
+      - m_minus_1
+      - n_minus_1
+      - k_minus_1
+      slack: m_minus_k
+    old_label_positive:
+      residual:
+      - m_minus_1
+      - n_minus_1
+      - k
+      feasible_residual_slack: m_minus_1
+      infeasible_residual: immediate_false_with_cost_n_le_B
+  piecewise_budget: zero_when_demand_nonpositive_or_exceeds_residual_matching_rank
+lower_bound:
+  source: Candidate_1_exact_matching_cardinality_threshold
+  method: online_oracle_lifting
+  labels: alpha_1_through_alpha_t
+  consistency:
+    queried_positives: assigned_in_discovery_order
+    unqueried_positives: completed_after_transcript
+    yes_input: at_least_t_distinct_labels
+    no_input: fewer_than_t_edges_hence_fewer_than_t_labels
+  repeated_query_rule: return_cached_label_and_do_not_advance_fresh_counter
+countermodels:
+- id: R19-CM-MEMBERSHIP-ONLY
+  support: two_disjoint_edges
+  input_1_labels:
+  - a
+  - a
+  input_2_labels:
+  - a
+  - b
+  binary_transcript: identical
+  t: 2
+  verdicts:
+  - false
+  - true
+- id: R19-CM-SYMBOL-ALIAS
+  claim: distinct_strings_need_not_be_distinct_actual_roots
+- id: R19-CM-SYMBOL-MERGE
+  claim: one_string_may_conflate_distinct_actual_roots
+- id: R19-CM-ROOT-NONINDEPENDENCE
+  claim: distinct_roots_need_not_be_evidentially_independent
+- id: R19-CM-VERIFICATION-COST
+  claim: label_authentication_cost_is_outside_the_oracle_model
+- id: R19-CM-RECIPIENT-CONTRACT
+  claim: root_threshold_does_not_close_AR3_recipient_warrant_guards
+ancestry:
+  Candidate_1: TIGHT_ORACLE_ENRICHED_EXTENSION_AND_REDUCTION
+  AR2_AR3: FORMAL_QUERY_COMPLEXITY_INTERFACE
+  PRR_T1: UNRESOLVED_EXACT_IDENTITY
+  TAC_SAC: APPLICATION_INTERFACE_ONLY
+novelty:
+  general: NOT_ESTABLISHED
+  historical_identity: null
+status: REPAIRED_FROZEN_PENDING_FRESH_REREVIEW
+repair_lineage:
+  V1: PRESERVED_REPAIR_REQUIRED
+  V2: CURRENT_REPAIRED_CANDIDATE
+  closed_findings:
+  - R19-F01
+  - R19-F02
+  - R19-F03
+  - R19-F04

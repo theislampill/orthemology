@@ -1,0 +1,30 @@
+schema: ar8r-t299-t300-historical-synthetic-pilot-v1
+evidence_class: PREREGISTERED_SYNTHETIC_SUPPORT_OVERLAPPING_DISTRIBUTION_STRESS_PILOT
+externally_preregistered: false
+seed_count: 8
+causal_landing_count: 0
+tested_t300_support_count: 0
+baseline_anti_shortcut_accuracy: 1.0
+operation_anti_shortcut_accuracy: 1.0
+control_anti_shortcut_accuracy: 1.0
+operation_whole_field_accuracy: 1.0
+control_whole_field_accuracy: 1.0
+median_hidden_cka: 0.9971370697021484
+support_relation: SUPPORT_OVERLAPPING_NOT_SUPPORT_DISJOINT
+sampling_relation: COMMON_START_MATCHED_COMPUTE_INDEPENDENTLY_SAMPLED_NOT_CASE_PAIRED
+disposition: NEGATIVE_AT_CURRENT_EVIDENTIAL_CLASS
+rereview: PASS_WITH_NONBLOCKING_SCOPE_NOTES
+theorem_credit: false
+meniscus_credit: false
+external_empirical_validation: false
+exact_mechanism_configuration_retired: true
+source_hashes:
+  interpretation_repaired_v2: 49745ad7cedc7bc5f6909826e96e56f47143f15d196254897adc44ad529d0283
+  admission_validation: 758e198266341ac0a5df39f3e8b3c1919dbc5f227eadabd89745160e3a9c8bd5
+  cold_audit_143: e732dfd7e41db913d9c65ccc859cc5144b970096fc2ff45639ae16f391413ef8
+  repair_rereview_144: 8bba4b041a2b1b2d4d4f032b2859cd8a1c5a203d66c4c70ccb24ec3ce7c35370
+  segment_355_record: c346aeb8564d5590fcaeaad51a3bf5049d63a52d9eac1bd06bd41c098aefac0b
+remaining_burdens:
+  - support-disjoint design, if a future owner authorizes one
+  - paired or otherwise causally identified sampling design
+  - external protocol, registration, and independent review before empirical claims

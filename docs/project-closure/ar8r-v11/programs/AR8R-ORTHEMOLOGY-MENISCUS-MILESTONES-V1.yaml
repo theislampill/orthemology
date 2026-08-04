@@ -1,0 +1,539 @@
+schema: ar8r-orthemology-meniscus-milestones-v1
+document_id: AR8R-ORTHEMOLOGY-MENISCUS-MILESTONES-V1
+version: 1.0
+date: '2026-08-04'
+authority:
+  classification: OWNER_SUPPLIED_RESEARCH_PROGRAM_CHARTER
+  adoption: PROPOSAL_ONLY_UNTIL_REVIEWED
+  source_path: docs/project-closure/ar8r-v11/programs/AR8R-ORTHEMOLOGY-MENISCUS-MILESTONE-ARCHITECTURE-V1.md
+  source_sha256: f4245d44e79e50c9fbef9173ee22e50795a08b02c027059d4abbae2aef15a0c8
+  source_bytes: 76682
+  repository_base: cc91f41fec364ea3910b80d57252bb1e0a050278
+  authority_effect: NON_ADOPTIVE_UNTIL_SEPARATELY_REVIEWED_AND_RECORDED
+source_classes:
+  - CURRENT_PUBLIC_ORTHEMOLOGY_MAIN
+  - EXACT_HISTORICAL_AR8R_EVIDENCE
+  - POST_MERGE_PMR_PROPOSAL
+  - NEW_V11_ANALYSIS
+  - OWNER_SYNTHETIC_NOETIC_DRAFT
+  - DAEE_CURRENT_MAIN
+  - DAEE_DRAFT_PR_8
+  - DAEE_DRAFT_PR_9
+  - EXTERNAL_MATHEMATICS
+  - UNRESOLVED_OR_MISSING_EVIDENCE
+external_authority:
+  daee_epistemics:
+    repository: theislampill/daee-epistemics
+    main_sha: c86b3c6673147b8802fe222373a165a37d4d24a8
+    pr_8: {state: OPEN_DRAFT, head_sha: 56d023e910810e94f36b1e5e2623d568852bf28b, base: main, authority: DRAFT_EXTERNAL_IMPLEMENTATION_EVIDENCE}
+    pr_9: {state: OPEN_DRAFT, head_sha: 6987c9ebf1de45af700b1fa74b1ed25ec0beeb7c, base: PR_8, authority: DRAFT_EXTERNAL_IMPLEMENTATION_EVIDENCE}
+    nonclaim: Draft PR #8 and PR #9 material is not merged-main authority.
+  fusha_qamus:
+    role: EXTERNAL_APPLIED_LANGUAGE_BOUNDARY
+    implementation_status: NOT_ESTABLISHED
+    pinned_snapshot: NONE
+    bulk_data_copied: false
+    required_before_implementation_claims: [PINNED_REPOSITORY_OR_SNAPSHOT, OCCURRENCE_DATASET, VALIDATION_RECEIPTS, SOURCE_VERSION_CROSSWALK, SEPARATE_OWNER_AUTHORIZATION]
+milestone_defaults: &milestone_defaults
+  status: ACTIVE_RESEARCH_PROGRAM
+  authority_class: OWNER_SUPPLIED_RESEARCH_PROGRAM_CHARTER
+  adoption_status: PROPOSAL_ONLY_UNTIL_REVIEWED
+  existing_assets: []
+  repository_paths: []
+  artifact_ids: []
+  open_burdens: []
+  candidate_theorems: []
+  candidate_invariants: []
+  candidate_impossibility_results: []
+  formalization_targets: []
+  empirical_targets: []
+  source_requirements: []
+  specialist_review_requirements: []
+  dependencies: []
+  downstream_consumers: []
+  meniscus_candidates: []
+  nonclaims:
+    - ROADMAP_DESCRIPTION_IS_NOT_COMPLETION
+    - NO_THEOREM_OR_NOVELTY_CREDIT
+    - NO_MENISCUS_OR_NATURAL_CLOSURE_CREDIT
+milestones:
+  - <<: *milestone_defaults
+    milestone_id: M1
+    title: Foundational three-level orthemological calculus
+    status: PARTIALLY_IMPLEMENTED
+    purpose: One typed calculus for first-order, structural, and meta-noetic orthing without erasing their distinct bearers and authority levels.
+    existing_assets: [CANONICAL_EPISODE_RECORD, FORMAL_CORE, MULTI_ACTOR_EXTENSION, SCHEMAS_AND_VALIDATORS]
+    repository_paths: [theory/orthemic-core-formalization.md, theory/orthemic-multi-actor-conflict-note.md]
+    artifact_ids: [ORTHEMOLOGY-MAIN-CORE, NEW-V11-A-TO-N, NEW-V11-FLYWHEEL]
+    open_burdens: [TYPED_SIGNATURE_AND_SEMANTICS, MINIMAL_AXIOM_SET, CROSS_LEVEL_NONIDENTITY_LAWS, NOTATION_AND_ROLE_REGISTRY]
+    candidate_theorems: [THREE_LEVEL_REPRESENTATION_AND_UNIFICATION_CHARACTERIZATION]
+    candidate_invariants: [ORTHEMIC_LEVEL_AND_BEARER_TYPE]
+    candidate_impossibility_results: [NO_UNTYPED_LEVEL_COLLAPSE_WITH_AUTHORITY_PRESERVATION]
+    formalization_targets: [LEAN_READY_BASE_DEFINITIONS, CROSS_LEVEL_EMBEDDINGS]
+    empirical_targets: [USABILITY_ACROSS_FORMAL_AGENTIC_AND_NOETIC_CASES]
+    source_requirements: [CURRENT_PUBLIC_FORMAL_CORE, EXACT_DECISION_AND_SCHEMA_CUSTODY]
+    specialist_review_requirements: [FORMAL_EPISTEMOLOGY, LOGIC, FORMAL_METHODS]
+    downstream_consumers: [M2, M3, M4, M7, M10, M11, M12, M13, M14, M18]
+    meniscus_candidates: [MEN-1, MEN-4, MEN-7, MEN-9]
+  - <<: *milestone_defaults
+    milestone_id: M2
+    title: Specification-warrant and theorem-intent fidelity
+    status: PARTIALLY_IMPLEMENTED
+    purpose: Characterize when a proof object warrants its intended theorem claim under declared source, interpretation, scope, axiom, build, and review custody.
+    existing_assets: [OSW_15, T354_DEFECT, TEN_ADVANCES_STATIC_CONFLICT, CONNES_OBJECT_DISPUTE]
+    repository_paths: [docs/project-closure/ar8r-v11/governance/ORTHEMOLOGICAL-SPECIFICATION-WARRANT-OSW-15.yaml, docs/project-closure/ar8r-v11/programs/ten-advances-connes-rigidity-dispute.md]
+    artifact_ids: [ORTHEMOLOGY-V11-OSW15, TEN-ADVANCES-CONFLICT, CONNES-DISPUTE, LEAN-V7-STATUS]
+    open_burdens: [GENERAL_CERTIFICATION_THEOREM, LOAD_BEARING_COORDINATE_ESSENTIALITY, SPECIALIST_SETTLEMENT, MACHINE_CHECK_RECEIPTS]
+    candidate_theorems: [INTENDED_CLAIM_CERTIFICATION_RELATIVE_TO_INTERPRETATION_AND_CUSTODY]
+    candidate_invariants: [SPECIFICATION_WARRANT_PROFILE]
+    candidate_impossibility_results: [KERNEL_SUCCESS_WITH_WRONG_OBJECT_OR_SCOPE]
+    formalization_targets: [OSW_SCHEMA, WRONG_OBJECT_FIXTURES, AXIOM_LAUNDERING_CHECKS]
+    empirical_targets: [MULTI_CASE_FORMALIZATION_FAILURE_BENCHMARK]
+    source_requirements: [EXACT_SOURCE_OBJECTS, INTERPRETATION_MAPS, BUILD_AND_AXIOM_RECEIPTS]
+    specialist_review_requirements: [LEAN, FORMAL_MATHEMATICS, OPERATOR_ALGEBRAS_AS_APPLICABLE]
+    dependencies: [M1]
+    downstream_consumers: [M3, M11, M12, M13, M14, M17]
+    meniscus_candidates: [MEN-5, MEN-7]
+  - <<: *milestone_defaults
+    milestone_id: M3
+    title: Dynamic orthing and latent-state identifiability
+    status: PARTIALLY_IMPLEMENTED
+    purpose: Separate world transition, observation, belief, representation, repertoire, policy, analysis, and source-version change.
+    existing_assets: [DYNAMIC_ORTHING_DECISION, LATENT_STATE_APPLICATION, VERSIONED_EPISODE_AND_ANALYSIS_RECORDS]
+    repository_paths: [docs/decisions/0024-dynamic-orthing-and-representation-learning.md, theory/orthemic-core-formalization.md]
+    artifact_ids: [ORTHEMOLOGY-MAIN-CORE, NEW-V11-FLYWHEEL, EXTERNAL-MATHEMATICS-LANES]
+    open_burdens: [LATENT_STATE_IDENTIFIABILITY, ACTIVE_QUERY_COST, ANALYSIS_TRANSPORT, WORLD_VERSUS_LEARNER_CHANGE]
+    candidate_theorems: [DYNAMIC_IDENTIFIABILITY_AND_ANALYSIS_TRANSPORT]
+    candidate_invariants: [VERSIONED_ANALYSIS_IDENTITY, OBSERVATIONAL_EQUIVALENCE_CLASS]
+    candidate_impossibility_results: [WORLD_CHANGE_LEARNER_CHANGE_NONIDENTIFIABILITY]
+    formalization_targets: [DYNAMIC_STATE_AND_UPDATE_TYPES, ANALYSIS_TRANSPORT_CONTRACT]
+    empirical_targets: [ACTIVE_DIFFERENTIATOR_SELECTION, HELD_OUT_DYNAMIC_STRUCTURE]
+    source_requirements: [VERSIONED_OBSERVATION_AND_ANALYSIS_CUSTODY]
+    specialist_review_requirements: [LEARNING_THEORY, DIAGNOSABILITY, DYNAMIC_EPISTEMIC_LOGIC]
+    dependencies: [M1, M2]
+    downstream_consumers: [M4, M5, M8, M9, M13, M15, M18]
+    meniscus_candidates: [MEN-1, MEN-3, MEN-9]
+  - <<: *milestone_defaults
+    milestone_id: M4
+    title: Local and distributed orthemic reachability
+    purpose: Unify diagnosability, active querying, distributed knowledge, reason certificates, provenance, recipient applicability, and authorization.
+    existing_assets: [CANDIDATE_1, AR_T4, PRR_T1, AR2_AR3, AGENTIC_COMMUNICATION_RESULTS]
+    repository_paths: [docs/project-closure/ar8r-v11/theorems/candidate-1-hidden-matching-threshold.md, docs/project-closure/ar8r-v11/programs/agentic-communication.md]
+    artifact_ids: [CANDIDATE-1-EXACT, PMR001-EXACT-SOURCE, PMR007-PROPOSAL, NEW-V11-FLYWHEEL]
+    open_burdens: [COLLECTIVE_WARRANTED_DIAGNOSABILITY, PRIVACY_SYNCHRONIZATION_TRADEOFF, PROTOCOL_AND_AUTHORIZATION_CHARACTERIZATION]
+    candidate_theorems: [COLLECTIVE_ORTHEMIC_DIAGNOSABILITY_CHARACTERIZATION]
+    candidate_invariants: [WARRANTED_REACHABILITY_PROFILE]
+    candidate_impossibility_results: [BOUNDED_PROTOCOL_PRIVACY_PROVENANCE_COMMON_KNOWLEDGE_NO_GO]
+    formalization_targets: [DISTRIBUTED_KNOWLEDGE_AND_PROTOCOL_SEMANTICS, QUERY_COMPLEXITY_BASE]
+    empirical_targets: [COLLECTIVE_DIAGNOSIS_AND_REASON_TRANSPORT_FIXTURES]
+    source_requirements: [EXACT_CANDIDATE_1_AND_AR2_AR3_CUSTODY]
+    specialist_review_requirements: [DISTRIBUTED_EPISTEMIC_LOGIC, ACTIVE_LEARNING, DISTRIBUTED_SYSTEMS]
+    dependencies: [M1, M3]
+    downstream_consumers: [M5, M6, M8, M13, M14, M15, M16]
+    meniscus_candidates: [MEN-1, MEN-2, MEN-8]
+  - <<: *milestone_defaults
+    milestone_id: M5
+    title: Identity, lineage, and provenance under synchronization
+    purpose: Type carrier, episode, token, function, state, lineage, acquisition root, provenance, independence, and warranted-knower relations.
+    existing_assets: [MULTI_ACTOR_TYPE_TOKEN_SEMANTICS, MODAL_LINEAGE_AND_HOLONOMY, TAC_NONCOLLAPSE_MODELS, FALSE_MULTIPLICITY_CONTROLS]
+    repository_paths: [docs/project-closure/ar8r-v11/programs/AR8R-TAC-SAC-TYPED-COORDINATE-AND-COUNTERMODEL-REGISTRY-V11.yaml, docs/project-closure/ar8r-v11/programs/tac-sac-identity-and-independence.md]
+    artifact_ids: [TAC-SAC-NEW-V11, PMR007-PROPOSAL, AR8R-HISTORICAL-RECOVERY-OVERLAY]
+    open_burdens: [HISTORICAL_TAC_SAC_TERMS_UNAVAILABLE, IDENTITY_AND_PROVENANCE_LATTICE, EVIDENTIAL_INDEPENDENCE_RANK]
+    candidate_theorems: [SYNCHRONIZATION_WARRANT_INHERITANCE]
+    candidate_invariants: [PROVENANCE_INDEPENDENCE_RANK, SYNCHRONIZATION_DIVERSITY_DEFICIT]
+    candidate_impossibility_results: [COPIED_MULTIPLICITY_WITHOUT_INDEPENDENT_EVIDENCE]
+    formalization_targets: [EPISODE_FORK_MERGE_TRANSPORT_GRAPH, IDENTITY_NONCOLLAPSE_FIXTURES]
+    empirical_targets: [PROVENANCE_UNDER_SYNCHRONIZATION]
+    source_requirements: [FRESH_IDENTITIES_FOR_POST_MERGE_WORK, NO_HISTORICAL_TERM_INVENTION]
+    specialist_review_requirements: [METAPHYSICS_OF_IDENTITY, DISTRIBUTED_SYSTEMS, FORMAL_EPISTEMOLOGY]
+    dependencies: [M3, M4]
+    downstream_consumers: [M6, M8, M9, M13, M14, M15, M16]
+    meniscus_candidates: [MEN-1, MEN-2, MEN-6, MEN-8]
+  - <<: *milestone_defaults
+    milestone_id: M6
+    title: Formal agentic epistemics
+    purpose: Formalize delivery through writeback and common knowledge while preserving reason, version, authority, capability, and permission.
+    existing_assets: [AR2_AR3_REASON_TRANSPORT, PMR_AGCOM, COMMON_KNOWLEDGE_CONTROLS, DAEE_DIAGNOSTIC_IR]
+    repository_paths: [docs/project-closure/ar8r-v11/programs/agentic-communication.md, docs/project-closure/ar8r-v11/programs/daee-temporal-restoration-and-provenance.md]
+    artifact_ids: [PMR001-EXACT-SOURCE, PMR002-006-EXACT-SOURCE, DAEE-MAIN, DAEE-DRAFT-PR9]
+    open_burdens: [RECIPIENT_LOCAL_WARRANT, AUTHORIZATION_SAFE_EXECUTION, STATE_CAPSULE_SEMANTICS, COMMON_KNOWLEDGE_BOUNDARIES]
+    candidate_theorems: [REASON_PACKET_SAFE_TRANSPORT_CHARACTERIZATION]
+    candidate_invariants: [REASON_AND_AUTHORITY_CUSTODY_PROFILE]
+    candidate_impossibility_results: [RECEIPT_WITHOUT_WARRANT_OR_AUTHORIZATION]
+    formalization_targets: [REASON_CARRYING_MESSAGE_FORMAT, PROTOCOL_SEMANTICS, VERSION_AWARE_TRANSPORT]
+    empirical_targets: [AGENTIC_REASON_TRANSPORT, VERSION_STALE_ADOPTION]
+    source_requirements: [DAEE_MAIN_AND_DRAFT_SEPARATION, EXACT_REASON_SOURCE_CUSTODY]
+    specialist_review_requirements: [FORMAL_EPISTEMOLOGY, AGENTIC_AI, DISTRIBUTED_PROTOCOLS]
+    dependencies: [M4, M5, M12]
+    downstream_consumers: [M8, M9, M15, M16, M18]
+    meniscus_candidates: [MEN-1, MEN-2, MEN-8, MEN-9]
+  - <<: *milestone_defaults
+    milestone_id: M7
+    title: Restorative field calculus for daee
+    status: PARTIALLY_IMPLEMENTED
+    purpose: Give nondecorative operational semantics to route ranking, event transition, dependency update, residual pressure, circularity, reread, and closure.
+    existing_assets: [T354_BLOCKED_DEFECT, RESTORATIVE_DOMINANCE, SAFETY_GAMES, COBUCHI_REPAIR, DAEE_FIELD_OPERATORS]
+    repository_paths: [docs/project-closure/ar8r-v11/programs/daee-temporal-restoration-and-provenance.md, docs/project-closure/ar8r-v11/provenance/AR8R-TARGET-IDENTITY-RECOVERY-OVERLAY-V8.yaml]
+    artifact_ids: [AR8R-HISTORICAL-RECOVERY-OVERLAY, PMR007-PROPOSAL, DAEE-MAIN, DAEE-DRAFT-PR8]
+    open_burdens: [RESTORATIVE_PREORDER_SCALARIZATION, CYCLING_AND_TERMINATION, PARTIAL_OBSERVATION, IMPLEMENTATION_CORRESPONDENCE]
+    candidate_theorems: [RESTORATIVE_SCALARIZATION_CHARACTERIZATION, PROVENANCE_SENSITIVE_CONVERGENCE]
+    candidate_invariants: [RESTORATIVE_RANK, TEMPORAL_TARGET_REGION]
+    candidate_impossibility_results: [LOCAL_IMPROVEMENT_CYCLING, NONSCALARIZABLE_PREORDER]
+    formalization_targets: [SMALL_STEP_FIELD_SEMANTICS, WEAK_PREORDER_AND_STRICT_RELATION, GAME_DEFINITIONS]
+    empirical_targets: [ROUTE_GRADIENT_REPRODUCIBILITY, FIELD_WITNESS_VERSUS_EXECUTION]
+    source_requirements: [T354_DEFECT_PRESERVATION, DAEE_OPERATOR_CONTRACT_CUSTODY]
+    specialist_review_requirements: [ORDER_THEORY, TEMPORAL_GAMES, CONTROL, DAEE_DOMAIN_REVIEW]
+    dependencies: [M1, M3]
+    downstream_consumers: [M8, M9, M13, M14, M15, M16]
+    meniscus_candidates: [MEN-3, MEN-4, MEN-6, MEN-8]
+  - <<: *milestone_defaults
+    milestone_id: M8
+    title: Meta-noetic carriers and unknown-structure diagnosis
+    purpose: Model whole noetic structures, carriers, deformation, candidate uncertainty, robust intervention, and restoration without claiming soul access.
+    existing_assets: [OWNER_SYNTHETIC_NOETIC_ARCHITECTURE, ORTHEMOLOGY_NOETIC_DECISIONS, DAEE_CANDIDATE_FRAME_AND_MRP]
+    repository_paths: [docs/project-closure/ar8r-v11/programs/program-surface-and-correction-custody.yaml, docs/project-closure/ar8r-v11/programs/AR8R-RESEARCH-FLYWHEEL-CROSSWALK-V1.yaml]
+    artifact_ids: [NOETIC-OWNER-DRAFT, ORTHEMOLOGY-MAIN-CORE, DAEE-MAIN, NEW-V11-FLYWHEEL]
+    open_burdens: [UNKNOWN_STRUCTURE_IDENTIFIABILITY, ROBUST_RESTORATION, CARRIER_INVARIANCE, SELF_SEALING_AND_LOOP_BREAKING]
+    candidate_theorems: [ROBUST_RESTORATION_ACROSS_SURVIVING_NOETIC_STRUCTURES]
+    candidate_invariants: [CARRIER_INVARIANT, COLLAPSE_RADIUS, PROVENANCE_INDEPENDENCE_RANK]
+    candidate_impossibility_results: [SELF_SEALING_STRUCTURE_NO_GO, DIAGNOSTIC_UNDERDETERMINATION]
+    formalization_targets: [NOETIC_STRUCTURE_SPACE, CARRIER_TYPES, DEFORMATION_AND_RESTORATION_OPERATORS]
+    empirical_targets: [UNKNOWN_STRUCTURE_DIAGNOSIS, ACTIVE_DIFFERENTIATOR_SELECTION, ROBUST_INTERVENTION]
+    source_requirements: [OWNER_DRAFT_HASH_ONLY, CURRENT_PUBLIC_DECISIONS, NO_PRIVATE_CORPUS_PUBLICATION]
+    specialist_review_requirements: [FORMAL_EPISTEMOLOGY, COGNITIVE_SCIENCE, ISLAMIC_EPISTEMOLOGY, AGENTIC_AI]
+    dependencies: [M3, M5, M6, M7, M12]
+    downstream_consumers: [M9, M10, M11, M13, M14, M15, M16, M18]
+    meniscus_candidates: [MEN-2, MEN-3, MEN-4, MEN-6, MEN-8, MEN-9]
+  - <<: *milestone_defaults
+    milestone_id: M9
+    title: Provenance-resilient temporal restoration
+    purpose: Unify cutsets, independent roots, corruption, rerouting, safety, co-Buchi persistence, and version-aware certificate survival.
+    existing_assets: [T351_T353, T360_T364, T372, PMR_ROUNDS_13_14_16_20]
+    repository_paths: [docs/project-closure/ar8r-v11/programs/daee-temporal-restoration-and-provenance.md, docs/project-closure/ar8r-v11/post-merge-proposals/pmr007-rounds11-20/PROPOSED_RESULT_INDEX.yaml]
+    artifact_ids: [PMR007-PROPOSAL, DAEE-MAIN, NEW-V11-FLYWHEEL]
+    open_burdens: [ADAPTIVE_CORRUPTION, DYNAMIC_REROUTING, EXACT_BOUNDS, STRATEGY_SYNTHESIS]
+    candidate_theorems: [RECOVERABLE_AND_MAINTAINABLE_TARGET_CHARACTERIZATION]
+    candidate_invariants: [RESTORATIVE_ROOT_CONNECTIVITY, BURDEN_PRESERVING_CUT_NUMBER, CERTIFICATE_SURVIVAL_RADIUS]
+    candidate_impossibility_results: [CORRELATED_ROOT_FAILURE_NO_GO, DYNAMIC_BYPASS_BOUNDARY]
+    formalization_targets: [PROVENANCE_CUTSET_MODEL, COBUCHI_AND_SAFETY_GAME_LIBRARY]
+    empirical_targets: [ADVERSARIAL_REROUTING, PROVENANCE_CORRUPTION, VERSION_DRIFT]
+    source_requirements: [EXACT_POST_MERGE_PROPOSAL_CUSTODY, NO_OWNER_ADOPTION_PROMOTION]
+    specialist_review_requirements: [GRAPH_THEORY, TEMPORAL_GAMES, DISTRIBUTED_SYSTEMS]
+    dependencies: [M5, M7, M8]
+    downstream_consumers: [M13, M14, M15, M16]
+    meniscus_candidates: [MEN-2, MEN-3, MEN-4, MEN-6, MEN-8]
+  - <<: *milestone_defaults
+    milestone_id: M10
+    title: Proper function, norm-fixing, and objective evaluability
+    purpose: Identify noncircular target and norm conditions while separating names, source characterizations, formal predicates, proxies, causes, and world truth.
+    existing_assets: [PROPER_FUNCTION_TYPED_MATRIX, T299_T300, FITRAH_SOURCE_DOSSIERS, PROFILE_FIBRE_CERTIFICATION]
+    repository_paths: [docs/project-closure/ar8r-v11/programs/AR8R-PROPER-FUNCTION-TYPED-MATRIX-V11.yaml, docs/project-closure/ar8r-v11/theorems/ar8r-t299-matched-intervention-burden-landing.md]
+    artifact_ids: [NEW-V11-PROPER-FUNCTION, T299-T300-BOUNDARY, PMR001-EXACT-SOURCE]
+    open_burdens: [FUNCTION_FIXING_RELATION, OBJECTIVE_EVALUABILITY, NONCIRCULAR_SOURCE_AUTHENTICATION, MATCHED_CAUSAL_TESTS]
+    candidate_theorems: [NORM_FIXING_CHARACTERIZATION, SOURCE_RELATIVE_TARGET_CERTIFICATION]
+    candidate_invariants: [TARGET_AUTHORITY_PROFILE]
+    candidate_impossibility_results: [SELF_AUTHORIZATION_AND_PROXY_LAUNDERING_NO_GO]
+    formalization_targets: [TYPED_FUNCTION_FIXING_RELATIONS, TARGET_SOURCE_PROXY_CAUSE_SEPARATION]
+    empirical_targets: [MATCHED_CAUSAL_RESTORATION_TESTS, T299_T300_REPAIRED_DESIGN]
+    source_requirements: [AUTHENTICATED_SOURCE_LOCUS, EXACT_VERSION_AND_CAUSAL_CUSTODY]
+    specialist_review_requirements: [EPISTEMOLOGY, PHILOSOPHY_OF_BIOLOGY, CAUSAL_INFERENCE, SOURCE_SPECIALISTS]
+    dependencies: [M1, M8, M12]
+    downstream_consumers: [M8, M11, M15, M16]
+    meniscus_candidates: [MEN-3, MEN-7, MEN-8]
+  - <<: *milestone_defaults
+    milestone_id: M11
+    title: Transcendental orthability and metaphysical ascent
+    purpose: Test every bridge from orthability and proper function through underived ground, necessity, Creatorhood, unity, mentality, attributes, Speech, and revelation.
+    existing_assets: [BRIDGE_AND_RIVAL_LEDGER, SOURCE_ASCENT, R5, ATTRIBUTE_GUARD_RESULTS, PROPER_FUNCTION_AND_ONTOLOGY_MATRICES]
+    repository_paths: [docs/project-closure/ar8r-v11/programs/AR8R-TRANSCENDENTAL-BRIDGE-AND-RIVAL-LEDGER-V11.yaml, companion/orthability-and-the-ground-of-intelligibility.md]
+    artifact_ids: [NEW-V11-BRIDGE-RIVAL, NEW-V11-PROPER-FUNCTION, NEW-V11-ONTOLOGY, PMR002-006-EXACT-SOURCE]
+    open_burdens: [NONQUESTION_BEGGING_BRIDGES, SOURCE_WORLD_LAYER_SEPARATION, STRONGEST_RIVALS, ARABIC_PRIMARY_VERIFICATION]
+    candidate_theorems: [DEPENDENCY_MINIMAL_TRANSCENDENTAL_BRIDGE, INTEGRATED_R5_COMMON_MODEL]
+    candidate_invariants: [BRIDGE_PREMISE_MINIMALITY_PROFILE]
+    candidate_impossibility_results: [ASPECT_BY_ASPECT_NONINTEGRATION, PLURAL_AND_IMPERSONAL_WITHHOLDING_MODELS]
+    formalization_targets: [ARROW_BY_ARROW_BRIDGE_PROGRAM, DELETION_COUNTERMODELS]
+    empirical_targets: [NONE_WITHOUT_SEPARATE_CAUSAL_OR_SOURCE_DESIGN]
+    source_requirements: [SOURCE_LOCUS, TRANSLATION, ARABIC_PRIMARY_OR_EXPLICITLY_SECONDARY_STATUS, SCHOOL_SCOPE]
+    specialist_review_requirements: [METAPHYSICS, MODAL_LOGIC, ARABIC_PRIMARY_SOURCES, ISLAMIC_THEOLOGY, INTELLECTUAL_HISTORY]
+    dependencies: [M1, M2, M10, M12]
+    downstream_consumers: [M13, M14, M17]
+    meniscus_candidates: [MEN-7, MEN-8]
+  - <<: *milestone_defaults
+    milestone_id: M12
+    title: Source-formal-implementation-world-carrier crosswalk
+    status: PARTIALLY_IMPLEMENTED
+    purpose: Prevent proposition, source, translation, formal object, runtime, proxy, causal, recipient, world, adoption, and carrier effects from being laundered across layers.
+    existing_assets: [SOURCE_STATUS_LEDGERS, OSW_15, AR8R_CROSSWALKS, DAEE_BINDING_CONTRACTS]
+    repository_paths: [docs/project-closure/ar8r-v11/governance/ORTHEMOLOGICAL-SPECIFICATION-WARRANT-OSW-15.yaml, docs/project-closure/ar8r-v11/programs/full-program-reentry-v2-source/AR8R_SOURCE_FORMAL_IMPLEMENTATION_WORLD_CROSSWALK_V2.yaml]
+    artifact_ids: [ORTHEMOLOGY-V11-OSW15, AR8R-HISTORICAL-RECOVERY-OVERLAY, DAEE-MAIN, NOETIC-OWNER-DRAFT]
+    open_burdens: [GENERAL_CROSSWALK_SCHEMA, COMPOSITION_RULES, TRANSPORT_WITNESSES, META_NOETIC_CARRIER_COLUMN]
+    candidate_theorems: [CROSS_LAYER_COMPOSITION_AND_CERTIFICATION]
+    candidate_invariants: [LAYERED_AUTHORITY_AND_CARRIER_PROFILE]
+    candidate_impossibility_results: [SOURCE_FORMAL_RUNTIME_WORLD_LAUNDERING_COUNTERMODELS]
+    formalization_targets: [MACHINE_READABLE_CROSSWALK, VERSION_HASH_AND_AUTHORITY_CUSTODY]
+    empirical_targets: [SOURCE_BOUND_RUNTIME_AND_RECIPIENT_APPLICABILITY]
+    source_requirements: [EXACT_BYTES_CONTEXT_TRANSLATION_VERSION_AND_ADOPTION_STATUS]
+    specialist_review_requirements: [FORMAL_METHODS, SOURCE_SCHOLARSHIP, SOFTWARE_VERIFICATION]
+    dependencies: [M1, M2]
+    downstream_consumers: [M6, M8, M10, M11, M13, M14, M15, M16, M18]
+    meniscus_candidates: [MEN-1, MEN-5, MEN-7, MEN-8, MEN-9]
+  - <<: *milestone_defaults
+    milestone_id: M13
+    title: Mathematical method-transfer and discovery laboratory
+    purpose: Convert external mathematics into exact reductions, guarded reductions, invariants, proof techniques, or falsifiers rather than analogies.
+    existing_assets: [CANDIDATE_1, PRR_T1, AR_T4, TEN_ADVANCES, PRH, TENSOR_A_G, THEOREM_FAMILY_CONTROL]
+    repository_paths: [docs/project-closure/ar8r-v11/programs/tensor-and-bitter-lesson.md, docs/project-closure/ar8r-v11/programs/ten-advances-and-source-custody.md]
+    artifact_ids: [EXTERNAL-MATHEMATICS-LANES, CANDIDATE-1-EXACT, TEN-ADVANCES-CONFLICT, CONNES-DISPUTE]
+    open_burdens: [REAL_PRIOR_ART_COMPARISON, METHOD_TRANSFER_CLASSIFICATION, MATCHED_LEARNED_VERSUS_HAND_BUILT_TESTS]
+    candidate_theorems: [CROSS_DOMAIN_REDUCTION_OR_INVARIANT]
+    candidate_invariants: [TRANSFER_CLASS_AND_ANCESTRY_STATUS]
+    candidate_impossibility_results: [FINITE_APPROXIMATION_AND_DISTRIBUTED_SYNTHESIS_BOUNDARIES]
+    formalization_targets: [REDUCTION_RECEIPTS, PRIOR_ART_AND_FAMILY_METADATA]
+    empirical_targets: [TENSOR_A_G, BITTER_LESSON_CHALLENGER, HELD_OUT_METHOD_TRANSFER]
+    source_requirements: [PRIMARY_MATHEMATICAL_SOURCES, EXACT_OBJECT_AND_VERSION_CUSTODY]
+    specialist_review_requirements: [DOMAIN_SPECIFIC_MATHEMATICS, LEARNING_THEORY, DISTRIBUTED_SYNTHESIS]
+    dependencies: [M2, M3, M4, M5, M7, M8, M9, M11, M12]
+    downstream_consumers: [M14, M17]
+    meniscus_candidates: [MEN-2, MEN-4, MEN-5, MEN-7]
+  - <<: *milestone_defaults
+    milestone_id: M14
+    title: Verified formal and executable library
+    status: PARTIALLY_IMPLEMENTED
+    purpose: Build a coherent Lean, checker, countermodel, ancestry, axiom, dependency, and nonclaim library without overstating static source inventory.
+    existing_assets: [LEAN_V7_STATIC_MAP, FORMALIZATION_QUEUE, SMALL_MODEL_CHECKERS, THEOREM_FAMILY_REGISTRY]
+    repository_paths: [docs/project-closure/ar8r-v11/formalization/AR8R-V11-LEAN-FORMALIZATION-QUEUE.yaml, docs/project-closure/ar8r-v11/provenance/AR8R-LEAN-STATUS-MAP-V7.yaml]
+    artifact_ids: [LEAN-V7-STATUS, TEN-ADVANCES-CONFLICT, PMR007-PROPOSAL, CANDIDATE-1-EXACT]
+    open_burdens: [EXACT_TOOLCHAIN, PARSE, ELABORATION, KERNEL, AXIOM_REPORT, SEMANTIC_CROSSWALK, INDEPENDENT_REVIEW]
+    candidate_theorems: [FORMALIZED_SELECTED_MILESTONE_RESULTS]
+    candidate_invariants: [FORMALIZATION_AUTHORITY_LADDER]
+    candidate_impossibility_results: [FORMAL_OBJECT_WITHOUT_INTENDED_OBJECT_WARRANT]
+    formalization_targets: [M1_BASE, M2_OSW, M4_REACHABILITY, M5_PROVENANCE, M7_GAMES, M9_CUTSETS, M11_BRIDGES, M18_OCCURRENCE]
+    empirical_targets: [EXECUTABLE_COUNTERMODEL_AND_REGRESSION_FIXTURES]
+    source_requirements: [SOURCE_PRESENT, TOOLCHAIN_PIN, AXIOM_AND_DEPENDENCY_REPORT]
+    specialist_review_requirements: [LEAN, FORMAL_MATHEMATICS, DOMAIN_SPECIALISTS]
+    dependencies: [M1, M2, M3, M4, M5, M6, M7, M8, M9, M10, M11, M12, M13]
+    downstream_consumers: [M15, M16, M17]
+    meniscus_candidates: [MEN-1, MEN-4, MEN-5, MEN-6, MEN-8]
+  - <<: *milestone_defaults
+    milestone_id: M15
+    title: Empirical and adversarial benchmark program
+    status: BLOCKED_ON_EMPIRICAL_EVIDENCE
+    purpose: Test behavioral, causal, diagnostic, transport, provenance, representation, and restoration claims that formal conformance cannot establish.
+    existing_assets: [DESIGNED_PUBLIC_EXPERIMENTS, T299_T300_NEGATIVE_PILOT, TERMINOLOGY_AND_TENSOR_PROTOCOLS]
+    repository_paths: [experiments/experiment-status.yaml, docs/project-closure/ar8r-v11/experiments/t299-t300-negative-synthetic-pilot.yaml]
+    artifact_ids: [T299-T300-BOUNDARY, NEW-V11-FLYWHEEL, FUSHA-QAMUS-BOUNDARY]
+    open_burdens: [PREREGISTRATION, SUPPORT_DISJOINT_EVALUATION, CAUSAL_CONTRASTS, EXTERNAL_EXECUTION, HUMAN_SPECIALIST_REVIEW]
+    candidate_theorems: []
+    candidate_invariants: [BENCHMARK_COVERAGE_AND_SHORTCUT_RESISTANCE]
+    candidate_impossibility_results: [NEGATIVE_CAUSAL_OR_REPRESENTATION_FINDINGS]
+    formalization_targets: [BENCHMARK_SCHEMAS_AND_INFERENTIAL_STATUS]
+    empirical_targets: [TERMINOLOGY, UNKNOWN_STRUCTURE, AGENTIC_TRANSPORT, SYNCHRONIZATION, ROUTE_GRADIENT, CAUSAL_LANDING, LEARNED_VERSUS_HAND_BUILT]
+    source_requirements: [FROZEN_PACKETS, DATASET_AND_VERSION_CUSTODY]
+    specialist_review_requirements: [CAUSAL_INFERENCE, EXPERIMENTAL_DESIGN, HUMAN_DOMAIN_REVIEW]
+    dependencies: [M3, M4, M5, M6, M7, M8, M9, M12]
+    downstream_consumers: [M16, M17]
+    meniscus_candidates: [MEN-3, MEN-9]
+  - <<: *milestone_defaults
+    milestone_id: M16
+    title: Integrated cross-repository reference systems
+    status: PARTIALLY_IMPLEMENTED
+    purpose: Bind formal orthemology to daee runtime semantics, witnesses, transitions, closure, and natural-language reconstruction while keeping repository authorities separate.
+    existing_assets: [ORTHEMOLOGY_FORMAL_OWNER, DAEE_MAIN_DIAGNOSTIC_RUNTIME, DAEE_DRAFT_SCALABILITY_ARCHITECTURE]
+    repository_paths: [integrations/daee-epistemics/README.md, docs/project-closure/ar8r-v11/programs/daee-temporal-restoration-and-provenance.md]
+    artifact_ids: [ORTHEMOLOGY-MAIN-CORE, DAEE-MAIN, DAEE-DRAFT-PR8, DAEE-DRAFT-PR9, FUSHA-QAMUS-BOUNDARY]
+    open_burdens: [SEMANTIC_BINDING, ACTUAL_MODEL_BEHAVIOR, ENCODE_DECODE_EQUIVALENCE, DRAFT_PR_REVERIFICATION_AFTER_MERGE]
+    candidate_theorems: [FORMAL_RUNTIME_BINDING_AND_RECONSTRUCTION_CHARACTERIZATION]
+    candidate_invariants: [CROSS_REPOSITORY_SEMANTIC_CUSTODY_PROFILE]
+    candidate_impossibility_results: [SCHEMA_CONFORMANCE_WITHOUT_SEMANTIC_EQUIVALENCE]
+    formalization_targets: [DIAGNOSTIC_IR_BINDING, FIELD_WITNESS_BINDING, RELEASE_AND_CLOSURE_BINDING]
+    empirical_targets: [REFERENCE_RUNTIME, MODEL_BEHAVIOR, SEMANTIC_ENCODE_DECODE]
+    source_requirements: [PINNED_ORTHEMOLOGY_AND_DAEE_SHAS, DRAFT_MAIN_DISTINCTION]
+    specialist_review_requirements: [SOFTWARE_VERIFICATION, AGENTIC_AI, FORMAL_METHODS]
+    dependencies: [M1, M4, M5, M6, M7, M8, M9, M10, M12, M14, M15, M18]
+    downstream_consumers: [M15, M17]
+    meniscus_candidates: [MEN-1, MEN-3, MEN-5, MEN-9]
+  - <<: *milestone_defaults
+    milestone_id: M17
+    title: Specialist review, publication, and field formation
+    status: BLOCKED_ON_SPECIALIST_REVIEW
+    purpose: Convert bounded internal candidates into reproducible, externally reviewable research products and an open-problem map.
+    existing_assets: [PUBLIC_PROVENANCE_PACKET, REVIEW_AND_AUDIT_DISCIPLINE, PROPOSED_PUBLICATION_ARCHITECTURE]
+    repository_paths: [docs/project-closure/ar8r-v11/README.md, docs/project-closure/ar8r-v11/AR8R-V11-DEFERRED-AND-EXCLUDED.md]
+    artifact_ids: [NEW-V11-FLYWHEEL, UNRESOLVED-MISSING-EVIDENCE]
+    open_burdens: [EXTERNAL_SPECIALIST_REVIEW, PUBLICATION_PACKETS, REPLICATION, OPEN_PROBLEM_MAP]
+    candidate_theorems: []
+    candidate_invariants: [EXTERNAL_REVIEW_AND_REPLICATION_STATUS]
+    candidate_impossibility_results: []
+    formalization_targets: [PUBLIC_THEOREM_AND_NONCLAIM_METADATA]
+    empirical_targets: [REPLICATION_PACKAGES]
+    source_requirements: [PUBLIC_SAFE_PROVENANCE, NO_PRIVATE_CORPUS]
+    specialist_review_requirements: [ALL_DOMAIN_SPECIFIC_LANES]
+    dependencies: [M2, M11, M13, M14, M15, M16]
+    downstream_consumers: []
+    meniscus_candidates: [MEN-5, MEN-7]
+  - <<: *milestone_defaults
+    milestone_id: M18
+    title: Occurrence-sensitive language, translation, and transclusion
+    purpose: Type token, lexeme, morphology, syntax, occurrence context, semantic reading, source, translation, version, and transclusion without assuming type-level meaning decides occurrences.
+    existing_assets: [OCCURRENCE_CENTERED_ORTHOLOGY, PMR_LANG, VERSION_CUSTODY_TRANSPORT, FUSHA_QAMUS_BOUNDARY]
+    repository_paths: [docs/project-closure/ar8r-v11/programs/language-translation-and-version-custody.md, docs/project-closure/ar8r-v11/programs/uncreated-grammar-and-articulability.md]
+    artifact_ids: [PMR002-006-EXACT-SOURCE, FUSHA-QAMUS-BOUNDARY, NEW-V11-FLYWHEEL]
+    open_burdens: [OCCURRENCE_PROJECTION_CALCULUS, AMBIGUITY_BOUNDS, GRAMMAR_AND_VERSION_COMPOSITION, PINNED_FUSHA_QAMUS_SNAPSHOT]
+    candidate_theorems: [OCCURRENCE_SENSITIVE_SEMANTIC_TRANSPORT_AND_TRANSCLUSION]
+    candidate_invariants: [AMBIGUITY_LATTICE, OCCURRENCE_CERTIFICATION_PROFILE]
+    candidate_impossibility_results: [TYPE_OR_TRANSLATION_FIBRE_INSUFFICIENCY]
+    formalization_targets: [OCCURRENCE_PROJECTION_TYPES, SOURCE_VERSION_TRANSPORT_CONTRACT]
+    empirical_targets: [FUSHA_QAMUS_OCCURRENCE_FIXTURES_AFTER_PINNED_AUTHORITY]
+    source_requirements: [PINNED_SOURCE_CORPUS, MORPHOLOGY_SYNTAX_CONTEXT, VERSION_AND_TRANSLATION_CUSTODY]
+    specialist_review_requirements: [LINGUISTICS, ARABIC, TRANSLATION_STUDIES, SOURCE_SCHOLARSHIP]
+    dependencies: [M1, M3, M12]
+    downstream_consumers: [M6, M8, M11, M15, M16]
+    meniscus_candidates: [MEN-9]
+meniscus_candidate_defaults: &meniscus_candidate_defaults
+  status: PROPOSAL_ONLY
+  authority_class: OWNER_SUPPLIED_RESEARCH_PROGRAM_CHARTER
+  adoption_status: NOT_ADOPTED
+  evidence_classes: [OWNER_PROGRAM_CHARTER, UNRESOLVED_OR_MISSING_EVIDENCE]
+  roadmap_only_credit: 0
+  open_burdens: [PROOF_OR_VALIDATED_IMPOSSIBILITY_OR_SUBSTANTIAL_EMPIRICAL_EVIDENCE, PRIOR_ART, RIVAL_SURVIVAL, FROZEN_PACKET, COLD_AUDIT, REPAIR, DISTINCT_REREVIEW, SPECIALIST_REVIEW]
+  nonclaims: [NOT_A_THEOREM, NOT_NOVELTY_ESTABLISHED, NOT_MENISCUS_REACHED, NOT_NATURAL_CLOSURE]
+meniscus_candidates:
+  - <<: *meniscus_candidate_defaults
+    candidate_id: MEN-1
+    title: Warranted collective diagnosability
+    proposed_target: Characterize when a collective can reconstruct, warrant, transport, adopt, and safely act on a target.
+    required_milestones: [M1, M3, M4, M5, M6, M12, M14]
+    break_condition: Combine distinguishability, protocol reachability, provenance sufficiency, recipient compatibility, and authorization in a genuinely new theorem.
+  - <<: *meniscus_candidate_defaults
+    candidate_id: MEN-2
+    title: Provenance independence rank
+    proposed_target: Define an independent-acquisition rank under copying, synchronization, common training, and merged evidence.
+    required_milestones: [M4, M5, M6, M8, M9, M13]
+    break_condition: Yield nontrivial bounds or impossibility results in at least three distinct domains.
+  - <<: *meniscus_candidate_defaults
+    candidate_id: MEN-3
+    title: Robust restoration under unknown noetic structure
+    proposed_target: Characterize safe load-bearing intervention across every surviving candidate noetic structure.
+    required_milestones: [M3, M7, M8, M9, M10, M15]
+    break_condition: Account for partial observability, custody, rerouting, hidden burdens, and intervention effects beyond profile constancy.
+  - <<: *meniscus_candidate_defaults
+    candidate_id: MEN-4
+    title: Restorative scalarization boundary
+    proposed_target: Characterize faithful scalar potentials for typed restorative preorders and prove the failure boundary.
+    required_milestones: [M1, M7, M8, M9, M13, M14]
+    break_condition: Govern nontrivial route selection or convergence without merely renaming a generic utility representation theorem.
+  - <<: *meniscus_candidate_defaults
+    candidate_id: MEN-5
+    title: Orthemological specification-warrant theorem
+    proposed_target: Characterize joint warrant from source, formal object, proof, interpretation, scope, axioms, and review custody.
+    required_milestones: [M2, M12, M13, M14, M17]
+    break_condition: Detect failures missed by kernel checking and establish essentiality or impossibility across independent cases.
+  - <<: *meniscus_candidate_defaults
+    candidate_id: MEN-6
+    title: Provenance-resilient restorative connectivity
+    proposed_target: Define restoration survival under correlated root failure, dynamic rerouting, and version drift.
+    required_milestones: [M5, M7, M8, M9, M14]
+    break_condition: Supply exact bounds, strategy synthesis, or a sharp impossibility theorem.
+  - <<: *meniscus_candidate_defaults
+    candidate_id: MEN-7
+    title: Dependency-minimal transcendental bridge
+    proposed_target: Establish one non-question-begging orthability-ascent arrow surviving the strongest live rivals.
+    required_milestones: [M1, M2, M10, M11, M12, M13, M17]
+    break_condition: Be source- and layer-explicit, deletion-minimal, prior-art reviewed, and resistant to impersonal, plural, powers, brute, regress, and non-well-founded controls.
+  - <<: *meniscus_candidate_defaults
+    candidate_id: MEN-8
+    title: Integrated R5 common-model theorem
+    proposed_target: Construct one serious integrated withholding model or prove no such model exists under minimal independently warranted premises.
+    required_milestones: [M4, M5, M6, M7, M8, M9, M10, M11, M12, M14]
+    break_condition: Integrate lane premises without encoding the conclusion or merely juxtaposing separate countermodels.
+  - <<: *meniscus_candidate_defaults
+    candidate_id: MEN-9
+    title: Occurrence-sensitive semantic transport and transclusion
+    proposed_target: Characterize joint lexical, grammatical, source, translation, provenance, and version preservation of an occurrence target.
+    required_milestones: [M1, M3, M6, M8, M12, M15, M18]
+    break_condition: Supply a new compositional condition, ambiguity-sensitive bound, or transport impossibility with consequences in at least three named domains.
+artifact_crosswalk:
+  - {artifact_id: ORTHEMOLOGY-MAIN-CORE, source_class: CURRENT_PUBLIC_ORTHEMOLOGY_MAIN, authority: CURRENT_PUBLIC_REPOSITORY_AUTHORITY, path_kind: REPOSITORY, path: theory/orthemic-core-formalization.md, status: CURRENT_PUBLIC_OWNER}
+  - {artifact_id: CANDIDATE-1-EXACT, source_class: EXACT_HISTORICAL_AR8R_EVIDENCE, authority: EXACT_STATEMENT_AND_PROOF_PACKET_WITH_BOUNDED_STATUS, path_kind: REPOSITORY, path: docs/project-closure/ar8r-v11/theorems/candidate-1-hidden-matching-threshold.md, status: EXACT_PUBLIC_PACKET_PRIOR_ART_AND_SIGNIFICANCE_OPEN}
+  - {artifact_id: ORTHEMOLOGY-V11-OSW15, source_class: NEW_V11_ANALYSIS, authority: UNMERGED_V11_PROPOSAL_OWNER, path_kind: REPOSITORY, path: docs/project-closure/ar8r-v11/governance/ORTHEMOLOGICAL-SPECIFICATION-WARRANT-OSW-15.yaml, status: CURRENT_V11_OWNER_NOT_THEOREM}
+  - {artifact_id: AR8R-HISTORICAL-RECOVERY-OVERLAY, source_class: EXACT_HISTORICAL_AR8R_EVIDENCE, authority: EXACT_CUSTODY_WITH_SEPARATE_FORMAL_STATUS, path_kind: REPOSITORY, path: docs/project-closure/ar8r-v11/provenance/AR8R-TARGET-IDENTITY-RECOVERY-OVERLAY-V8.yaml, status: EXACT_RECOVERY_OVERLAY}
+  - {artifact_id: PMR001-EXACT-SOURCE, source_class: POST_MERGE_PMR_PROPOSAL, authority: POST_MERGE_SCOPED_RESULT_CUSTODY, path_kind: REPOSITORY, path: docs/project-closure/ar8r-v11/post-merge-pmr001-source/README.md, status: PUBLIC_SAFE_EXACT_SOURCE_SELECTION}
+  - {artifact_id: PMR002-006-EXACT-SOURCE, source_class: POST_MERGE_PMR_PROPOSAL, authority: POST_MERGE_SCOPED_RESULT_CUSTODY, path_kind: REPOSITORY, path: docs/project-closure/ar8r-v11/post-merge-pmr002-006-source/AR8R_PMR002_PMR006_MULTI_WAVE_CHECKPOINT_REPORT.md, status: PUBLIC_SAFE_EXACT_SOURCE_SELECTION}
+  - {artifact_id: PMR007-PROPOSAL, source_class: POST_MERGE_PMR_PROPOSAL, authority: OWNER_ADOPTION_PENDING, path_kind: REPOSITORY, path: docs/project-closure/ar8r-v11/post-merge-proposals/pmr007-rounds11-20/PROPOSED_RESULT_INDEX.yaml, status: PROPOSAL_ONLY}
+  - {artifact_id: NEW-V11-A-TO-N, source_class: NEW_V11_ANALYSIS, authority: CURRENT_V11_OWNER, path_kind: REPOSITORY, path: docs/project-closure/ar8r-v11/programs/AR8R-THREE-TRACK-A-TO-N-ARCHITECTURE-V11.yaml, status: CURRENT_CROSSWALK_NO_ADOPTION}
+  - {artifact_id: NEW-V11-BRIDGE-RIVAL, source_class: NEW_V11_ANALYSIS, authority: CURRENT_V11_OWNER, path_kind: REPOSITORY, path: docs/project-closure/ar8r-v11/programs/AR8R-TRANSCENDENTAL-BRIDGE-AND-RIVAL-LEDGER-V11.yaml, status: CURRENT_BOUNDED_BRIDGE_OWNER}
+  - {artifact_id: NEW-V11-PROPER-FUNCTION, source_class: NEW_V11_ANALYSIS, authority: CURRENT_V11_OWNER, path_kind: REPOSITORY, path: docs/project-closure/ar8r-v11/programs/AR8R-PROPER-FUNCTION-TYPED-MATRIX-V11.yaml, status: ACTIVE_RIVALS_NO_ADOPTION}
+  - {artifact_id: NEW-V11-ONTOLOGY, source_class: NEW_V11_ANALYSIS, authority: CURRENT_V11_OWNER, path_kind: REPOSITORY, path: docs/project-closure/ar8r-v11/programs/AR8R-ONTOLOGY-AND-REPRESENTATION-ALTERNATIVES-MATRIX-V11.yaml, status: ACTIVE_RIVALS_NO_ADOPTION}
+  - {artifact_id: NEW-V11-FLYWHEEL, source_class: NEW_V11_ANALYSIS, authority: CURRENT_V11_OWNER, path_kind: REPOSITORY, path: docs/project-closure/ar8r-v11/programs/AR8R-RESEARCH-FLYWHEEL-CROSSWALK-V1.yaml, status: PROGRAM_CROSSWALK_ONLY}
+  - artifact_id: NOETIC-OWNER-DRAFT
+    source_class: OWNER_SYNTHETIC_NOETIC_DRAFT
+    authority: OWNER_SYNTHETIC_ARCHITECTURE_AND_SOURCE_LOCATOR_ONLY
+    path_kind: PRIVATE_EXCLUDED_HASH_ONLY
+    path: null
+    sha256: f7b5baf1752c1917c4dabcde38842dd64d67ad97fb3baaff5f15a2400409a758
+    status: NOT_INDEPENDENT_VALIDATION_OR_PRIMARY_SOURCE
+  - {artifact_id: DAEE-MAIN, source_class: DAEE_CURRENT_MAIN, authority: MERGED_MAIN_AUTHORITY, path_kind: EXTERNAL_REFERENCE, path: 'theislampill/daee-epistemics@c86b3c6673147b8802fe222373a165a37d4d24a8', status: CURRENT_EXTERNAL_MAIN}
+  - {artifact_id: DAEE-DRAFT-PR8, source_class: DAEE_DRAFT_PR_8, authority: DRAFT_EXTERNAL_IMPLEMENTATION_EVIDENCE, path_kind: EXTERNAL_REFERENCE, path: 'theislampill/daee-epistemics#8@56d023e910810e94f36b1e5e2623d568852bf28b', status: OPEN_DRAFT_NOT_MERGED_MAIN}
+  - {artifact_id: DAEE-DRAFT-PR9, source_class: DAEE_DRAFT_PR_9, authority: DRAFT_EXTERNAL_IMPLEMENTATION_EVIDENCE, path_kind: EXTERNAL_REFERENCE, path: 'theislampill/daee-epistemics#9@6987c9ebf1de45af700b1fa74b1ed25ec0beeb7c', status: OPEN_DRAFT_STACKED_ON_PR8_NOT_MERGED_MAIN}
+  - {artifact_id: EXTERNAL-MATHEMATICS-LANES, source_class: EXTERNAL_MATHEMATICS, authority: SOURCE_BY_SOURCE_REVIEW_REQUIRED, path_kind: EXTERNAL_REFERENCE, path: PRIMARY_SOURCES_AND_SPECIALIST_LANES, status: MIXED_VERIFICATION_NO_AGGREGATE_AUTHORITY}
+  - {artifact_id: UNRESOLVED-MISSING-EVIDENCE, source_class: UNRESOLVED_OR_MISSING_EVIDENCE, authority: NONE, path_kind: UNAVAILABLE, path: null, status: EXPLICIT_OPEN_BURDEN}
+  - artifact_id: FUSHA-QAMUS-BOUNDARY
+    source_class: UNRESOLVED_OR_MISSING_EVIDENCE
+    authority: EXTERNAL_APPLIED_LANGUAGE_BOUNDARY
+    path_kind: EXTERNAL_REFERENCE
+    path: PINNED_SNAPSHOT_NOT_SUPPLIED
+    status: APPLICATION_RELEVANCE_ONLY
+    implementation_status: NOT_ESTABLISHED
+    pinned_snapshot: NONE
+    bulk_data_copied: false
+  - {artifact_id: LEAN-V7-STATUS, source_class: NEW_V11_ANALYSIS, authority: STATIC_INVENTORY_ONLY, path_kind: REPOSITORY, path: docs/project-closure/ar8r-v11/provenance/AR8R-LEAN-STATUS-MAP-V7.yaml, status: NO_PARSE_ELABORATION_KERNEL_OR_BUILD_CLAIM}
+  - {artifact_id: TEN-ADVANCES-CONFLICT, source_class: EXACT_HISTORICAL_AR8R_EVIDENCE, authority: STATIC_CONFLICT_RECEIPT, path_kind: REPOSITORY, path: docs/project-closure/ar8r-v11/provenance/AR8R-TEN-ADVANCES-STATIC-CONFLICT-RECEIPT-V11.yaml, status: CONFLICTING_38_42}
+  - {artifact_id: CONNES-DISPUTE, source_class: EXTERNAL_MATHEMATICS, authority: UNRESOLVED_SPECIALIST_REVIEW_REQUIRED, path_kind: REPOSITORY, path: docs/project-closure/ar8r-v11/provenance/AR8R-CONNES-RIGIDITY-DISPUTE-RECEIPT-V11.yaml, status: OPENAI_NIELSEN_CONNES_STATUSES_SEPARATE}
+  - {artifact_id: T299-T300-BOUNDARY, source_class: EXACT_HISTORICAL_AR8R_EVIDENCE, authority: EXACT_VERSION_AND_NEGATIVE_PILOT_CUSTODY, path_kind: REPOSITORY, path: docs/project-closure/ar8r-v11/experiments/t299-t300-negative-synthetic-pilot.yaml, status: NEGATIVE_BOUNDED_NO_FRAMEWORK_VALIDATION}
+  - {artifact_id: TAC-SAC-NEW-V11, source_class: NEW_V11_ANALYSIS, authority: NEW_TYPED_COORDINATES_ONLY, path_kind: REPOSITORY, path: docs/project-closure/ar8r-v11/programs/AR8R-TAC-SAC-TYPED-COORDINATE-AND-COUNTERMODEL-REGISTRY-V11.yaml, status: HISTORICAL_TERMS_UNAVAILABLE}
+dependency_phases:
+  - {phase_id: PHASE-1, title: V11 authority and roadmap integration, milestone_ids: [M1, M2, M12, M14], candidate_ids: [], status: ACTIVE_REPOSITORY_INTEGRATION_NO_SCIENTIFIC_PROMOTION}
+  - {phase_id: PHASE-2, title: Core normalization, milestone_ids: [M1, M2, M3, M12, M14], candidate_ids: [MEN-5], status: PROPOSAL_ONLY}
+  - {phase_id: PHASE-3, title: Integrated frontier clusters, milestone_ids: [M4, M5, M6, M7, M8, M9, M18], candidate_ids: [MEN-1, MEN-2, MEN-3, MEN-4, MEN-6, MEN-9], status: PROPOSAL_ONLY}
+  - {phase_id: PHASE-4, title: Normative and transcendental cluster, milestone_ids: [M10, M11], candidate_ids: [MEN-7, MEN-8], status: PROPOSAL_ONLY}
+  - {phase_id: PHASE-5, title: Method transfer formalization and empirical red team, milestone_ids: [M13, M14, M15], candidate_ids: [MEN-1, MEN-2, MEN-3, MEN-4, MEN-5, MEN-6, MEN-7, MEN-8, MEN-9], status: PROPOSAL_ONLY}
+  - {phase_id: PHASE-6, title: Integrated runtime and external review, milestone_ids: [M16, M17], candidate_ids: [MEN-1, MEN-3, MEN-5, MEN-7, MEN-9], status: PROPOSAL_ONLY}
+flywheels:
+  - {flywheel_id: DISTRIBUTED-AGENTIC, milestone_ids: [M3, M4, M5, M6, M12, M15, M16], sequence: [query_and_diagnosis, provenance_and_identity, reason_transport, version_and_authorization, runtime_failure, revised_bounds], nonclaim: The cycle transfers typed burdens only and does not prove collective warrant.}
+  - {flywheel_id: RESTORATIVE-META-NOETIC, milestone_ids: [M7, M8, M9, M10, M15, M16], sequence: [candidate_noetic_structures, carriers_and_deformation, load_bearing_node, temporal_strategy, provenance_resilient_intervention, reread, causal_test], nonclaim: A route or restored label does not establish target truth or human uptake.}
+  - {flywheel_id: METAPHYSICAL-SOURCE, milestone_ids: [M2, M10, M11, M12, M16], sequence: [source_locus, formal_predicate, norm_fixing, transcendental_bridge, rival_model, world_boundary, renewed_audit], nonclaim: Source or formal success does not establish the world-directed conclusion.}
+  - {flywheel_id: OCCURRENCE-LANGUAGE, milestone_ids: [M3, M6, M8, M12, M15, M16, M18], sequence: [source_and_lexical_entries, ambiguity_lattice, grammar_and_context, version_custody, transclusion, observed_failure, revised_model], nonclaim: No live Fusha/Qamus implementation is claimed.}
+  - {flywheel_id: SYNCHRONIZATION, milestone_ids: [M4, M5, M6, M8, M9, M15], sequence: [tac_sac_case, identity_and_lineage, provenance_independence, false_multiplicity, distributed_knowledge, diversity_tradeoff], nonclaim: Synchronization does not establish numerical identity or independent evidence.}
+formalization_loop:
+  loop_id: FORMALIZATION-FLYWHEEL
+  milestone_ids: [M2, M13, M14, M17]
+  sequence: [candidate_theorem, specification_warrant, formalization, axiom_and_dependency_report, countermodel_or_elaboration_failure, repair, prior_art_reclassification, refreshed_candidate]
+  nonclaim: Source presence or a roadmap target does not establish parse, elaboration, kernel checking, theorem intent, or novelty.
+control_invariants:
+  t354: {formal_status: BLOCKED_FORMAL_DEFECT, repository_ready: false, repair_in_place: false}
+  t299: {exact_version_custody: PRESERVED, proxy_and_causal_design_boundary: EXPLICIT}
+  ten_advances: {comparator_count: CONFLICTING_38_42, normalized: false}
+  lean: {parse: NOT_PERFORMED, elaboration: NOT_PERFORMED, kernel: NOT_PERFORMED, build_claim: NONE}
+  tac_sac: {historical_packet_status: UNAVAILABLE, historical_term_assignment: NONE}
+  candidate_e: {status: DEFERRED_INSUFFICIENT_AUDIT, adopted: false}
+  candidate_g: {status: DEFERRED_INSUFFICIENT_AUDIT, adopted: false}
+  property_dualism: {source_class: NEW_V11_ANALYSIS, historical_finding: false, adopted: false}
+  nominalism: {status: LIVE_RIVAL_NOT_ADOPTED}
+  conceptualism: {status: LIVE_RIVAL_NOT_ADOPTED}
+  dispute: {openai: NIELSEN_CHALLENGE_REJECTED__SPECIALIST_SETTLEMENT_OPEN, nielsen_critique: DOES_NOT_REFUTE_EXACT_PUBLIC_OPENAI_OBJECT, nielsen_positive_proof: REJECTED_AS_PROOF__FATAL_GAPS, connes_overall: UNRESOLVED_PENDING_OPERATOR_ALGEBRA_SPECIALIST_REVIEW}
+  specification_warrant: {controller: OSW_15, status: REQUIRED_NOT_COMPLETE}
+  private_corpus: {repository_effect: EXCLUDED}
+closure_state:
+  milestone_architecture: RECORDED_AS_OWNER_PROGRAM_CHARTER
+  integrated_champion: NO_INTEGRATED_CHAMPION
+  meniscus: MENISCUS_NOT_REACHED
+  natural_closure: NATURAL_CLOSURE_NOT_REACHED
+global_nonclaims:
+  - THIS_PROJECTION_IS_NOT_A_THEOREM_OR_SOURCE_AUTHORITY
+  - NO_MILESTONE_IS_COMPLETE_BY_DESCRIPTION
+  - NO_MENISCUS_CANDIDATE_IS_ADOPTED
+  - NO_DAEE_DRAFT_PR_MATERIAL_IS_MERGED_MAIN_AUTHORITY
+  - NO_FUSHA_QAMUS_LIVE_IMPLEMENTATION_STATE_IS_ESTABLISHED
+  - NO_PRIVATE_RECOVERY_CORPUS_IS_PUBLISHED
+  - NO_LEAN_PARSE_ELABORATION_KERNEL_OR_BUILD_RESULT_IS_CLAIMED
+  - NATURAL_CLOSURE_IS_NOT_IMPLIED

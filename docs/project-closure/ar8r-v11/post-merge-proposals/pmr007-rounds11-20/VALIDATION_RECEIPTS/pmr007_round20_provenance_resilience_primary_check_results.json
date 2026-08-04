@@ -1,0 +1,54 @@
+{
+  "declared_semantics": "finite static fixed complete path registry; any corrupted required root disables descendant action; pathwise availability",
+  "exhaustive_single_path": {
+    "checked": 13293,
+    "contraction_failures": [],
+    "deletion_failures": [],
+    "duplicate_failures": [],
+    "enlargement_failures": [],
+    "mismatches": []
+  },
+  "failures": [],
+  "overall": "PASS",
+  "random_multi_path": {
+    "f_cases": 449924,
+    "mismatches": [],
+    "trials": 100000
+  },
+  "required_witnesses": {
+    "common_bottleneck": {
+      "f1_robust": false,
+      "kappa": 1
+    },
+    "copied_root": {
+      "actions": 8,
+      "f1_robust": false,
+      "kappa": 1
+    },
+    "displayed_aliases": {
+      "actual_kappa": 1,
+      "displayed_kappa": 2
+    },
+    "dynamic_rerouting": {
+      "actual_dynamic_restoration": false,
+      "expected_scope_mismatch": true,
+      "registered_fixed_path_certificate": true
+    },
+    "incompatible_repairs": {
+      "expected_scope_mismatch": true,
+      "joint_execution": false,
+      "pathwise_certificate": true
+    },
+    "positive_independent_roots": {
+      "f1_robust": true,
+      "f2_robust": false,
+      "kappa": 2
+    },
+    "redundant_support_semantics": {
+      "actual_redundant_support_f1_robust": true,
+      "expected_scope_mismatch": true,
+      "transversal_predicts_f1_robust": false
+    }
+  },
+  "schema": "PMR007_ROUND20_PRIMARY_CHECK_RESULTS_V1"
+}

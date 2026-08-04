@@ -1,0 +1,110 @@
+schema: ar8r-post-merge-file-card-archive-conflicts-v1
+policy: PRESERVE_ALL_HASHES_SELECT_VISIBLE_FILE_CARD_VERSION_NO_SILENT_MERGE
+groups:
+- id: FULL_PROGRAM_REENTRY_V2
+  companion_archive_sha256: ff9e5452670ae5b895ac4093341c172ed91077e5595005e1537ee3d80bc44974
+  direct_single_member_matches: 14
+  byte_conflicts:
+  - filename: AR8R_CONTINUITY_GAP_AND_REDISCOVERY_REPORT_V1.md
+    selected_sha256: 150450b862f4ce4be65f4f4d75125143582781798a7780e9bdfb7686ea7302ae
+    archive_member_sha256: 9aceeb97ddc043b89440a4572d882c6938bc6e28972c370877097bc9fc88cf10
+    archive_member_path: AR8R_FULL_PROGRAM_REENTRY_HANDOFF_V2/AR8R_CONTINUITY_GAP_AND_REDISCOVERY_REPORT_V1.md
+  - filename: AR8R_DAEE_ROUTE_GRADIENT_STATUS_V1.md
+    selected_sha256: b706655e536764315dea33da9f9922d13afc581188155d1b0f0e7792da8efdef
+    archive_member_sha256: 0377b84a8c2a62b7ed07850579495d9fc86c4dc781bf173d652265eb3a1eed3b
+    archive_member_path: AR8R_FULL_PROGRAM_REENTRY_HANDOFF_V2/AR8R_DAEE_ROUTE_GRADIENT_STATUS_V1.md
+  - filename: AR8R_FRESH_PRO_MASTER_CONTINUATION_PROMPT_V2.md
+    selected_sha256: 7da005d001ae97acc6324011ae363193d801a34055365e7218a84680ec17896b
+    archive_member_sha256: 9c636882c40510d79920b716011b62aa9e6790e3ca6df6fa3b29ebbe11b1359d
+    archive_member_path: AR8R_FULL_PROGRAM_REENTRY_HANDOFF_V2/AR8R_FRESH_PRO_MASTER_CONTINUATION_PROMPT_V2.md
+  - filename: AR8R_FULL_PROGRAM_REENTRY_MAP_V1.md
+    selected_sha256: c5b1ab8906687deac9ed4172721ec273ab5e083805e74b7ccbbb7d9b19128546
+    archive_member_sha256: b1ff0ae90c0a804f5a7807da624aac0d3d7d2e139fa7aba6879c2ba55a097b42
+    archive_member_path: AR8R_FULL_PROGRAM_REENTRY_HANDOFF_V2/AR8R_FULL_PROGRAM_REENTRY_MAP_V1.md
+  - filename: AR8R_MATHEMATICS_AND_TEN_PROOFS_STATUS_V1.md
+    selected_sha256: e40ac70d8433a09cfd5ee392c29391b42d1cff9dc854c9fa13cec1819fae3e5f
+    archive_member_sha256: d92b15c8704805ee29c895f4196f9bfa5ccffd08da903fea558a4cdd87b173ae
+    archive_member_path: AR8R_FULL_PROGRAM_REENTRY_HANDOFF_V2/AR8R_MATHEMATICS_AND_TEN_PROOFS_STATUS_V1.md
+  - filename: AR8R_TAC_TACHIKOMA_STATUS_V1.md
+    selected_sha256: dc95de0625bbbbd013e28735842468a7db6b6b042623b46b2976f4da5ef8c785
+    archive_member_sha256: bcd7bef9e67edf554eb79614514d2a10a706c256a2a03ebc4169e6c365cfafd2
+    archive_member_path: AR8R_FULL_PROGRAM_REENTRY_HANDOFF_V2/AR8R_TAC_TACHIKOMA_STATUS_V1.md
+  - filename: AR8R_TRANSCENDENTAL_ORTHABILITY_STATUS_V1.md
+    selected_sha256: 9ed388c4d67e5e435073b3efca88478d2bf6416f18d11e8f1b3ecb39ed0aa611
+    archive_member_sha256: c078d0c88706d8577c532514f8902e8d1340bd4b78d6dfcc5e39a6d91e876c07
+    archive_member_path: AR8R_FULL_PROGRAM_REENTRY_HANDOFF_V2/AR8R_TRANSCENDENTAL_ORTHABILITY_STATUS_V1.md
+  selected_files_absent_by_same_basename_from_archive:
+  - filename: AR8R_FULL_PROGRAM_REENTRY_HANDOFF_V2_INDEPENDENT_VERIFICATION.md
+    selected_sha256: 765522b4f67db991126c621f4626500bb59939beaeb7da633bb40cdb4bf546d9
+  multiple_same_basename_archive_members: []
+- id: PMR001
+  companion_archive_sha256: 024698d4bc43d57c54fda813004810f8310917b6eb870590a36b9430d92eb636
+  direct_single_member_matches: 19
+  byte_conflicts:
+  - filename: README.md
+    selected_sha256: a881d3020091dcb18c7e9d4ff8a285cbe920fbe189f6c1ae57a9d83408bc4bf1
+    archive_member_sha256: 4019ad68d95c116780f3a8d7f4b167adbd1b29565ff9ca93f62c36a59a784ff9
+    archive_member_path: PMR-001_TRANCHE-001/README.md
+  selected_files_absent_by_same_basename_from_archive:
+  - filename: AR8R_PMR001_TRANCHE001_ARCHIVE_VERIFICATION.md
+    selected_sha256: 59b9e2b444cf6dfe8acde83dc5d412e47b071a63226131df8d914d929f44ced5
+  - filename: AR8R_PMR_TRANCHE_ARCHIVE_INDEX.yaml
+    selected_sha256: d6faf89fee286bcc2fd52e7727e9dca40d07bab30d1ba5e4681406e411b1aa8c
+  - filename: PMR-001-TRANCHE-001.md
+    selected_sha256: 5feced3b9a94a03b7a8eee6183bcf6baec03b55802d8d86540a0b20052a10aca
+  multiple_same_basename_archive_members:
+  - filename: finite_model_check_results.json
+    selected_sha256: 3b4bd9956eea02737440d8789ff3ac1b989488fb0f4a2ad46eb17f5e9fa82a8a
+    at_least_one_archive_member_matches_selected: true
+    archive_members:
+    - sha256: 3b4bd9956eea02737440d8789ff3ac1b989488fb0f4a2ad46eb17f5e9fa82a8a
+      archive_member_path: PMR-001_TRANCHE-001/AR8R_PROOF_COUNTERMODEL_AUDIT_REPAIR_REREVIEW_PACKETS/finite_model_check_results.json
+      matches_selected: true
+    - sha256: 7253e67599b218d7c99f472232628ecdcb77aeb8f25433a021f41dac1e02e742
+      archive_member_path: PMR-001_TRANCHE-001/AR8R_PROOF_COUNTERMODEL_AUDIT_REPAIR_REREVIEW_PACKETS/FROZEN_EPOCH_A_PRE_REPAIR/finite_model_check_results.json
+      matches_selected: false
+  - filename: PMR_AGCOM_01_CANDIDATE.md
+    selected_sha256: d2a4d6a7a20cf32546da0b683266e7c3497aaecaa320f301b934018c3fd907a7
+    at_least_one_archive_member_matches_selected: true
+    archive_members:
+    - sha256: d2a4d6a7a20cf32546da0b683266e7c3497aaecaa320f301b934018c3fd907a7
+      archive_member_path: PMR-001_TRANCHE-001/AR8R_PROOF_COUNTERMODEL_AUDIT_REPAIR_REREVIEW_PACKETS/FROZEN_EPOCH_A_PRE_REPAIR/PMR_AGCOM_01_CANDIDATE.md
+      matches_selected: true
+    - sha256: d2a4d6a7a20cf32546da0b683266e7c3497aaecaa320f301b934018c3fd907a7
+      archive_member_path: PMR-001_TRANCHE-001/AR8R_PROOF_COUNTERMODEL_AUDIT_REPAIR_REREVIEW_PACKETS/PMR_AGCOM_01_CANDIDATE.md
+      matches_selected: true
+  - filename: PMR_M3_01_CANDIDATE.md
+    selected_sha256: abae17ed6e22ef0e16c480cf9165b3798ab16c03ffebb4e81872e15a9f4e3bde
+    at_least_one_archive_member_matches_selected: true
+    archive_members:
+    - sha256: edc96157c1044f29d205553739c478cd657f1a3357ffe0b122f0989dd5fb5840
+      archive_member_path: PMR-001_TRANCHE-001/AR8R_PROOF_COUNTERMODEL_AUDIT_REPAIR_REREVIEW_PACKETS/FROZEN_EPOCH_A_PRE_REPAIR/PMR_M3_01_CANDIDATE.md
+      matches_selected: false
+    - sha256: abae17ed6e22ef0e16c480cf9165b3798ab16c03ffebb4e81872e15a9f4e3bde
+      archive_member_path: PMR-001_TRANCHE-001/AR8R_PROOF_COUNTERMODEL_AUDIT_REPAIR_REREVIEW_PACKETS/PMR_M3_01_CANDIDATE.md
+      matches_selected: true
+  - filename: PMR_R5_01_CANDIDATE.md
+    selected_sha256: a8659d4265db0463916a9e364d976adcf9a3c40f77235cf7266ef1d82ec3e60d
+    at_least_one_archive_member_matches_selected: true
+    archive_members:
+    - sha256: bc5f344c464ab33defd9301cf3115d98eff3ed1fd7bb83a1c6d1f7f2c07fe6de
+      archive_member_path: PMR-001_TRANCHE-001/AR8R_PROOF_COUNTERMODEL_AUDIT_REPAIR_REREVIEW_PACKETS/FROZEN_EPOCH_A_PRE_REPAIR/PMR_R5_01_CANDIDATE.md
+      matches_selected: false
+    - sha256: a8659d4265db0463916a9e364d976adcf9a3c40f77235cf7266ef1d82ec3e60d
+      archive_member_path: PMR-001_TRANCHE-001/AR8R_PROOF_COUNTERMODEL_AUDIT_REPAIR_REREVIEW_PACKETS/PMR_R5_01_CANDIDATE.md
+      matches_selected: true
+- id: PMR002_THROUGH_PMR006
+  companion_archive_sha256: dfa5dc36aa36b9f362b8cf8cd9df6b09dfa2d972d9de9cc2bdaf93f736029bea
+  direct_single_member_matches: 10
+  byte_conflicts: []
+  selected_files_absent_by_same_basename_from_archive:
+  - filename: AR8R_PMR002_PMR006_MULTI_WAVE_CHECKPOINT_VERIFICATION.md
+    selected_sha256: df0b795317a4b3152549a3b6f62be391b7d846199069b2f3ff30f1549de869ea
+  - filename: AR8R_PMR_TRANCHE_ARCHIVE_INDEX_V2.yaml
+    selected_sha256: ebaefbfd30245d40a050ac3fbe226988cf3d8a2bcc9a95830d17a6fcb8ac2bdd
+  multiple_same_basename_archive_members: []
+summary:
+  byte_conflict_rows: 8
+  archive_absence_rows: 6
+  multiple_basename_rows: 4
+  authority_resolution: VISIBLE_FILE_CARD_BYTES_SELECTED_ARCHIVE_VARIANTS_UNRESOLVED

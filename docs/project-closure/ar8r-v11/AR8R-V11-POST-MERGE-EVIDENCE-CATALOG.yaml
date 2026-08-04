@@ -1,0 +1,75 @@
+schema: ar8r-v11-post-merge-evidence-catalog-v1
+source_packets:
+  - id: FULL_PROGRAM_REENTRY_V2
+    exact_public_safe_files: 22
+    disposition: PROGRAM_CONTINUITY_SOURCE
+    source_surface: VISIBLE_FILE_CARD_BYTES
+  - id: PMR001
+    exact_public_safe_files: 27
+    disposition: POST_MERGE_SCOPED_SOURCE_WITH_REPAIRED_AUDIT
+    source_surface: VISIBLE_FILE_CARD_BYTES
+  - id: PMR002_THROUGH_PMR006
+    exact_public_safe_files: 12
+    disposition: POST_MERGE_SCOPED_SOURCE_WITH_RECONCILED_ADMISSION_OWNERS
+    source_surface: VISIBLE_FILE_CARD_BYTES
+  - id: PMR007_ROUNDS11_THROUGH_20
+    exact_archive_members: 131
+    disposition: SANITIZED_PROPOSAL_EXTERNAL_REVIEW_AND_OWNER_ADOPTION_REQUIRED
+pmr001_results:
+  - {id: PMR-M3-01, status: PROVED_CONDITIONAL_WITH_VALIDATED_COUNTERMODELS, repository_effect: SOURCE_ONLY}
+  - {id: PMR-R5-01, status: VALIDATED_RIVAL_COMPARISON, repository_effect: SOURCE_ONLY}
+  - {id: PMR-AGCOM-01, status: ESTABLISHED_AS_AR2_AR3_SPECIALIZATION, repository_effect: SOURCE_ONLY}
+  - {id: PMR-SRC-FITRAH-01, status: SOURCE_SUPPORT_STRENGTHENED, repository_effect: SOURCE_ONLY}
+pmr002_through_pmr006_results:
+  - {id: PMR-M4-01, status: ADMISSION_OWNER_RECONCILED, repository_effect: SOURCE_ONLY}
+  - {id: PMR-LANG-01, status: ADMISSION_OWNER_RECONCILED, repository_effect: SOURCE_ONLY}
+  - {id: PMR-UG-01, status: V3_ADMITTED_AFTER_CUSTODY_REPAIR, repository_effect: SOURCE_ONLY}
+  - {id: PMR-M5-01, status: ADMISSION_OWNER_RECONCILED, repository_effect: SOURCE_ONLY}
+  - {id: PMR-M5-02, status: ADMISSION_OWNER_RECONCILED, repository_effect: SOURCE_ONLY}
+  - {id: PMR-M5-03, status: ADMISSION_OWNER_RECONCILED, repository_effect: SOURCE_ONLY}
+  - {id: PMR-AGCOM-02, status: ADMISSION_OWNER_RECONCILED, repository_effect: SOURCE_ONLY}
+  - {id: PMR-FAMILY-01, status: FALSE_MULTIPLICITY_CONTROL, repository_effect: SOURCE_ONLY}
+  - {id: PMR-LANG-02, status: ADMISSION_OWNER_RECONCILED, repository_effect: SOURCE_ONLY}
+  - {id: PMR-TAC-01, status: HISTORICAL_TERM_FIREWALL_PRESERVED, repository_effect: SOURCE_ONLY}
+  - {id: PMR-AGCOM-06, status: ADMISSION_OWNER_RECONCILED, repository_effect: SOURCE_ONLY}
+pmr007_proposals:
+  - {id: PMR-007-MLT-1, round: ROUND11, status: ADMITTED_POST_MERGE_SCOPED_RESULT}
+  - {id: PMR-007-SMRB-1, round: ROUND12, status: ADMITTED_POST_MERGE_SCOPED_RESULT}
+  - {id: PMR-007-FRLA-1, round: ROUND13, status: ADMITTED_POST_MERGE_SCOPED_RESULT}
+  - {id: PMR-007-COB-1, round: ROUND14_V2, status: ADMITTED_POST_MERGE_SCOPED_RESULT}
+  - {id: PMR-007-TRC-1, round: ROUND15_V2, status: ADMITTED_POST_MERGE_SCOPED_RESULT}
+  - {id: PMR-007-VCT-1, round: ROUND16_V2, status: ADMITTED_POST_MERGE_SCOPED_RESULT}
+  - {id: PMR-007-RSD-1, round: ROUND17, status: ADMITTED_POST_MERGE_SCOPED_RESULT}
+  - {id: PMR-007-ORTC-V4, round: ROUND18_V4, status: ADMITTED_POST_MERGE_SCOPED_RESULT}
+  - {id: PMR-007-PRQT-1, round: ROUND19_V2, status: ADMITTED_POST_MERGE_SCOPED_RESULT}
+  - {id: PMR-007-PRRC-1, round: ROUND20_V2, status: ADMITTED_POST_MERGE_SCOPED_RESULT}
+pmr007_common_boundary:
+  provenance_class: NEW_POST_MERGE_SCOPED_RESULT
+  historical_identity: NONE
+  owner_adoption: PENDING
+  external_review: OPEN
+  repository_readiness: EXTERNAL_REVIEW_REQUIRED
+  general_novelty_credit: NOT_GRANTED
+  historical_theorem_origin_credit: NONE
+campaign_state:
+  integrated_champion: NONE
+  meniscus: MENISCUS_NOT_REACHED
+  natural_closure: NOT_REACHED
+version_conflicts:
+  visible_file_card_manifest: provenance/AR8R-POST-MERGE-VISIBLE-FILE-CARD-MANIFEST-V1.yaml
+  file_card_vs_archive_conflict_manifest: provenance/AR8R-POST-MERGE-FILE-CARD-ARCHIVE-CONFLICTS-V1.yaml
+  byte_conflict_rows: 8
+  archive_absence_rows: 6
+  authority_resolution: VISIBLE_FILE_CARD_BYTES_SELECTED_ARCHIVE_VARIANTS_UNRESOLVED
+v11_current_analysis:
+  complete_formalization_map: formalization/AR8R-PMR007-TEN-RESULT-FORMALIZATION-MAP-V11.yaml
+  pmr_result_count: 10
+  pmr_status: LATER_PMR_RESULT_PROPOSAL_ONLY
+  owner_adoption: PENDING
+  external_review: OPEN
+  historical_identity: NONE
+  connes_rigidity_dispute:
+    source_class: NEW_V11_LATER_ANALYSIS
+    status: UNRESOLVED_PENDING_OPERATOR_ALGEBRA_SPECIALIST_REVIEW
+    historical_evidence_effect: NONE
+    theorem_credit: 0

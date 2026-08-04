@@ -1,0 +1,21 @@
+{
+  "frozen_hashes": {
+    "checked": 3,
+    "mismatches": [],
+    "pass": true
+  },
+  "overall": "PASS",
+  "renamed_isomorphic_world_pairs": {
+    "cases_checked": 20736,
+    "failures": [],
+    "pass": true
+  },
+  "root_coordinate_nonflat_example": {
+    "nonroot_anchor_not_coherent": true,
+    "nonroots_moved": true,
+    "root_section_coherent": true,
+    "structure_preserved": true,
+    "transport_is_nonidentity": true,
+    "unique_root_fixed": true
+  }
+}

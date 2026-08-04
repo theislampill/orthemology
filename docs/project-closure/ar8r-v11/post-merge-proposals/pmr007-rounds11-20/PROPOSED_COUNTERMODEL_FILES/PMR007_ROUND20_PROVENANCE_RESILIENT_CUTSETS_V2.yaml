@@ -1,0 +1,68 @@
+schema: PMR007_ROUND20_PROVENANCE_RESILIENT_CUTSETS_V2
+round: PMR-007-FRONTIER-ROUND20
+canonical_identity: PMR-007-PRRC-1
+status: REPAIRED_FROZEN_PENDING_DISTINCT_FRESH_REREVIEW
+provenance: NEW_POST_MERGE_RESEARCH
+historical_identity: null
+typed_setting:
+  roots: finite_actual_authenticated_identities_or_validated_quotient
+  paths: finite_nonempty_fixed_complete_for_declared_model
+  portfolio: fixed_before_corruption
+  corruption: one_static_set_after_portfolio_visible
+  required_root_semantics: any_corrupted_required_root_disables_action
+  survival_target: every_declared_path_has_available_blocker
+  execution: not_implied_without_compatibility_and_no_interaction_guards
+invariant:
+  family: H_p(I) = {R_req(a) | a blocks p}
+  tau:
+    empty_family: 0
+    family_with_empty_edge: infinity
+  kappa_root: min_p tau(H_p(I))
+  theorem: static_pathwise_f_root_robust_iff_kappa_root_gt_f
+executable_corollary_guards:
+  - joint_action_compatibility
+  - no_action_interaction_or_new_path
+  - simultaneous_root_status
+  - local_effectiveness
+  - local_soundness
+  - path_completeness
+  - target_adequacy
+  - custody_and_reread
+positive_witness:
+  roots: [r1, r2, r3]
+  paths: [p1, p2]
+  f: 1
+  actions:
+    - {id: a1, blocks: [p1], required_roots: [r1]}
+    - {id: a2, blocks: [p1], required_roots: [r2]}
+    - {id: a3, blocks: [p2], required_roots: [r2]}
+    - {id: a4, blocks: [p2], required_roots: [r3]}
+  expected_kappa_root: 2
+  expected_static_pathwise_f_robust: true
+countermodels:
+  - R20-CM-COPIED-ROOT
+  - R20-CM-COMMON-BOTTLENECK
+  - R20-CM-INCOMPATIBLE-REPAIRS
+  - R20-CM-DYNAMIC-REROUTING
+  - R20-CM-ADAPTIVE-ONE-SHOT
+  - R20-CM-UNAUTHENTICATED-ROOTS
+  - R20-CM-PARTIAL-PATH-REGISTRY
+  - R20-CM-REDUNDANT-SUPPORT-SEMANTICS
+  - R20-CM-ADAPTIVE-PATH-AND-ROOT-COUPLING
+ancestry:
+  mathematical: standard_finite_hypergraph_transversal
+  historical:
+    - AR8R-T351
+    - AR8R-T352
+    - AR8R-T353
+  post_merge:
+    - PMR-007-TRC-1
+    - PMR-007-PRQT-1
+  implementation:
+    - daee_memetic_ecology
+    - false_tawatur_fixtures
+    - tawatur_warrant_separate_assessment
+novelty:
+  general_mathematics: zero
+  historical_identity_credit: zero
+  classification: compositional_corollary_and_useful_implementation_certificate

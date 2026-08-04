@@ -1,0 +1,32 @@
+schema: ar8r-two-thread-synthesis-receipt-v11
+privacy_contract: HASH_COUNT_ACCESSIBILITY_AND_LANE_COVERAGE_ONLY
+artifacts:
+  - {id: V7_TRANSCRIPT, sha256: 276de89622784766d20f1943fd4ab79f7af3dd05d81e1d71feee9f7d6f01c989, physical_lines: 193851, bytes: 9458653}
+  - {id: V7_MESSAGE_INDEX, sha256: 3d14147ac8c1d83fc36df537dc3f320e66be011d402fe9ef34987339b27d4e1c, rows: 95, bytes: 115253}
+  - {id: V7_ACTIVITY_CSV, sha256: f7c7b9cdee590a422da7b06dabfc8bc3a75aebf071ac47db9e2696210ae8e762, data_rows: 44, bytes: 22201}
+  - {id: V11_TRANSCRIPT, sha256: 645763a53fa621369009a8cb4cdb5a1d4bada12ff27097f7dba2f1ee31ed1f9d, physical_lines: 16145, bytes: 693429}
+  - {id: V11_MESSAGE_INDEX, sha256: 0ceb73dac667ac031766c00c05173c9dd8c7afd520cf44adb1decc1d9e0c2dba, physical_rows: 25, populated_messages: 24, bytes: 66578}
+  - {id: V11_ACTIVITY_CSV, sha256: 6f674ec614ed315f389fd7c5c69dc0cabb4b0f53e92b94aafa6ee24f21203229, data_rows: 58, bytes: 17665}
+  - {id: V11_ACTIVITY_JSONL, sha256: 72cf0d7ff9bea9ac91c79921a5e349ac5549769fab4cfaa7f921bdbb2ce13a33, rows: 58, bytes: 154864}
+  - {id: V11_TARGET_LANE_CSV, sha256: c045ecd390d63efd20378d52bf4623ffb6201d42d6b91f80bd172487dc795ba4, data_rows: 5288, bytes: 1153626}
+capture_counts:
+  turn_slots: 30
+  populated_messages: 24
+  worked_controls: 9
+  panels_captured: 8
+  unavailable_panels: 1
+  nested_receipts: 58
+  downloads: 178
+  archives: 10
+  archive_rows: 957
+  drift_incidents: 6
+lane_evidence_usable:
+  a_to_n_and_three_track: true
+  transcendental_and_source_ascent: true
+  proper_function: true
+  ontology_rivals: true
+  tac_sac_typed_distinctions: true
+  theorem_family_and_formalization: true
+  exact_unresolved_historical_payloads: false
+forbidden_fields: [transcript_text, message_ids, activity_text, urls, absolute_paths, screenshots, uploaded_files, owner_or_browser_session_details]
+historical_availability_effect: NONE_NO_BACKDATING

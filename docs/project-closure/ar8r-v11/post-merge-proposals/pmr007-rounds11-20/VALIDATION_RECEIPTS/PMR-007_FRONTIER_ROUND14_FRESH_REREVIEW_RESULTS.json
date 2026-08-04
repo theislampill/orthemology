@@ -1,0 +1,77 @@
+{
+  "direct_temporal_rereview": {
+    "failures": [
+      {
+        "actions": [
+          [
+            [
+              0
+            ],
+            [
+              0,
+              1,
+              2
+            ],
+            [
+              2
+            ]
+          ],
+          [
+            [
+              0,
+              1,
+              2
+            ],
+            [
+              0,
+              1
+            ],
+            [
+              0
+            ]
+          ],
+          [
+            [
+              0,
+              1,
+              2
+            ]
+          ]
+        ],
+        "fixed": [
+          0,
+          1
+        ],
+        "n": 3,
+        "safe": [
+          0,
+          1,
+          2
+        ],
+        "target": [
+          0,
+          2
+        ],
+        "temporal": [
+          0,
+          1,
+          2
+        ]
+      }
+    ],
+    "games_checked": 506,
+    "memoryless_strategies_checked": 3984,
+    "pass": false
+  },
+  "frozen_hashes": {
+    "checked": 3,
+    "mismatches": [],
+    "pass": true
+  },
+  "noncommon_state_control": {
+    "globally_indexed_actions_exist": true,
+    "locally_factorable_strategy_exists": false,
+    "same_correct_local_view_requires_two_actions": true
+  },
+  "overall": "FAIL"
+}

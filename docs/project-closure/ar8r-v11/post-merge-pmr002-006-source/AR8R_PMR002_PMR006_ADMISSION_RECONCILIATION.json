@@ -1,0 +1,121 @@
+{
+  "current_admission_owners": [
+    {
+      "admission": null,
+      "candidate": "PMR-M4-01",
+      "credit_firewall_pass": true,
+      "fresh_rereview": "PASS_WITH_NONBLOCKING_AUTHORITY_NOTES",
+      "path": "PMR-002_TRANCHE-001/AR8R_PROOF_COUNTERMODEL_AUDIT_REPAIR_REREVIEW_PACKETS/PMR_M4_01_ADMISSION_OVERLAY.yaml",
+      "sha256": "61eb8c26567585ce427b2acd934e8b39d565e49a4e9daa0f9d73e3c8b43724e3"
+    },
+    {
+      "admission": null,
+      "candidate": "PMR-LANG-01",
+      "credit_firewall_pass": true,
+      "fresh_rereview": "PASS_WITH_NONBLOCKING_SOURCE_NOTES",
+      "path": "PMR-002_TRANCHE-001/AR8R_PROOF_COUNTERMODEL_AUDIT_REPAIR_REREVIEW_PACKETS/PMR_LANG_01_ADMISSION_OVERLAY.yaml",
+      "sha256": "dbd719a7570c8d9f787f2d81fc95c8689a9af4a9bfbb0d694e8307b2a7f44b37"
+    },
+    {
+      "admission": "VALIDATED_COUNTERMODEL",
+      "candidate": "PMR-UG-01",
+      "credit_firewall_pass": true,
+      "fresh_rereview": "PASS_WITH_NONBLOCKING_CUSTODY_NOTE",
+      "path": "PMR-002_TRANCHE-001/AR8R_PROOF_COUNTERMODEL_AUDIT_REPAIR_REREVIEW_PACKETS/PMR_UG_01_ADMISSION_OVERLAY_V2.yaml",
+      "sha256": "b9e1cf458a4a050205adb596505ba8b7c271ccb0841b832f6c68df0fe096dea6"
+    },
+    {
+      "admission": [
+        "PROVED_CONDITIONAL_RESULT",
+        "VALIDATED_COUNTERMODEL"
+      ],
+      "candidate": "PMR-M5-01",
+      "credit_firewall_pass": true,
+      "fresh_rereview": "PASS_WITH_NONBLOCKING_AUTHORITY_NOTES",
+      "path": "PMR-003_TRANCHE-001/AR8R_PROOF_COUNTERMODEL_AUDIT_REPAIR_REREVIEW_PACKETS/PMR_M5_01_ADMISSION_OVERLAY.yaml",
+      "sha256": "7855dc284e798fddc032df3368b518a9f3ef0a1c2c45822ac58c1ff6458b88cb"
+    },
+    {
+      "admission": [
+        "VALIDATED_COUNTERMODEL",
+        "GUARD_INTERPRETATION_CONTROL"
+      ],
+      "candidate": "PMR-M5-02",
+      "credit_firewall_pass": true,
+      "fresh_rereview": "PASS_WITH_NONBLOCKING_SCOPE_NOTES",
+      "path": "PMR-003_TRANCHE-001/AR8R_PROOF_COUNTERMODEL_AUDIT_REPAIR_REREVIEW_PACKETS/PMR_M5_02_ADMISSION_OVERLAY.yaml",
+      "sha256": "f9eec0c6aa84ee8547bc1b87027fa7fc93aea3c46fe160c37a4830ea719f0f3b"
+    },
+    {
+      "admission": [
+        "VALIDATED_COUNTERMODEL",
+        "SOURCE_GUARD_SEPARATION"
+      ],
+      "candidate": "PMR-M5-03",
+      "credit_firewall_pass": true,
+      "fresh_rereview": "PASS_WITH_NONBLOCKING_AUTHORITY_NOTES",
+      "path": "PMR-003_TRANCHE-001/AR8R_PROOF_COUNTERMODEL_AUDIT_REPAIR_REREVIEW_PACKETS/PMR_M5_03_ADMISSION_OVERLAY.yaml",
+      "sha256": "b9a5a7608a7498768ad27083b24229a84781bef0b4623fd1419a4af16a77024a"
+    },
+    {
+      "admission": [
+        "PROVED_CONDITIONAL_RESULT",
+        "VALIDATED_COUNTERMODEL"
+      ],
+      "candidate": "PMR-AGCOM-02",
+      "credit_firewall_pass": true,
+      "fresh_rereview": "PASS_WITH_NONBLOCKING_SCOPE_NOTES",
+      "path": "PMR-004_TRANCHE-001/AR8R_PROOF_COUNTERMODEL_AUDIT_REPAIR_REREVIEW_PACKETS/PMR_AGCOM_02_ADMISSION_OVERLAY.yaml",
+      "sha256": "67b9cabd1715264e47eecbec0e6884a395ac44e0d7e0f1cbd679e94c5109123c"
+    },
+    {
+      "admission": [
+        "FORMAL_DEPENDENCY_RESULT",
+        "FALSE_MULTIPLICITY_CONTROL"
+      ],
+      "candidate": "PMR-FAMILY-01",
+      "credit_firewall_pass": true,
+      "fresh_rereview": "PASS_WITH_NONBLOCKING_PROVENANCE_NOTES",
+      "path": "PMR-004_TRANCHE-001/AR8R_PROOF_COUNTERMODEL_AUDIT_REPAIR_REREVIEW_PACKETS/PMR_FAMILY_01_ADMISSION_OVERLAY.yaml",
+      "sha256": "1a6ec5d247f8902d89fc92249af7187dc6b67d1b595006b2bfaae0129fe6b434"
+    },
+    {
+      "admission": [
+        "PROVED_CONDITIONAL_RESULT",
+        "VALIDATED_COUNTERMODEL"
+      ],
+      "candidate": "PMR-LANG-02",
+      "credit_firewall_pass": true,
+      "fresh_rereview": "PASS_WITH_NONBLOCKING_SOURCE_NOTES",
+      "path": "PMR-004_TRANCHE-001/AR8R_PROOF_COUNTERMODEL_AUDIT_REPAIR_REREVIEW_PACKETS/PMR_LANG_02_ADMISSION_OVERLAY.yaml",
+      "sha256": "6ed53fe1e8d146d7d26bd5cddc77e69ae38ebc1e6351a5f7dd25882b0c3a434d"
+    },
+    {
+      "admission": [
+        "PROVED_CONDITIONAL_RESULT",
+        "VALIDATED_COUNTERMODEL"
+      ],
+      "candidate": "PMR-TAC-01",
+      "credit_firewall_pass": true,
+      "fresh_rereview": "PASS_WITH_NONBLOCKING_CUSTODY_NOTES",
+      "path": "PMR-005_TRANCHE-001/AR8R_PROOF_COUNTERMODEL_AUDIT_REPAIR_REREVIEW_PACKETS/PMR_TAC_01_ADMISSION_OVERLAY.yaml",
+      "sha256": "415137bcb1b8f2738f00ff48aba92e424180d761a047ae29736226559442e8b6"
+    },
+    {
+      "admission": [
+        "PROVED_CONDITIONAL_RESULT",
+        "VALIDATED_COUNTERMODEL"
+      ],
+      "candidate": "PMR-AGCOM-06",
+      "credit_firewall_pass": true,
+      "fresh_rereview": "PASS_WITH_NONBLOCKING_PRIOR_ART_NOTE",
+      "path": "PMR-006_TRANCHE-001/AR8R_PROOF_COUNTERMODEL_AUDIT_REPAIR_REREVIEW_PACKETS/PMR_AGCOM_06_ADMISSION_OVERLAY.yaml",
+      "sha256": "4cf6a1f1cb256cea3014e6162f576bb50ca25c79bd1bd9cdc9d860a7e8dca230"
+    }
+  ],
+  "errors": [],
+  "owner_count": 11,
+  "pass": true,
+  "schema": "ar8r-pmr002-pmr006-admission-reconciliation-v1",
+  "superseded_owner": "PMR-002.../PMR_UG_01_ADMISSION_OVERLAY.yaml"
+}

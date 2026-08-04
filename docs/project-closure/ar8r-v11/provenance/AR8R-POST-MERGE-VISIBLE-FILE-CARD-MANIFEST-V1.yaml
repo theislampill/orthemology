@@ -1,0 +1,201 @@
+schema: ar8r-post-merge-visible-file-card-manifest-v1
+source_surface: VISIBLE_FILE_CARD_BYTES
+selection_authority: EXACT_BYTES_RETURNED_BY_INDIVIDUAL_VISIBLE_FILE_CARDS
+external_private_harvest_comparison: 61_OF_61_BYTE_IDENTICAL
+companion_archive_precedence: NONE_WHEN_BYTES_CONFLICT
+groups:
+- id: FULL_PROGRAM_REENTRY_V2
+  directory: programs/full-program-reentry-v2-source
+  file_count: 22
+  files:
+  - path: programs/full-program-reentry-v2-source/00_AUTHORITY_AND_CUSTODY_RECEIPT.md
+    sha256: 225cffba4ddc79b1a466bca704d7b1323dca94cf6ea2f615b3409bf74daffdf0
+    bytes: 4745
+  - path: programs/full-program-reentry-v2-source/AR8R_CONTINUITY_GAP_AND_REDISCOVERY_REPORT_V1.md
+    sha256: 150450b862f4ce4be65f4f4d75125143582781798a7780e9bdfb7686ea7302ae
+    bytes: 4292
+  - path: programs/full-program-reentry-v2-source/AR8R_DAEE_ROUTE_GRADIENT_STATUS_V1.md
+    sha256: b706655e536764315dea33da9f9922d13afc581188155d1b0f0e7792da8efdef
+    bytes: 147
+  - path: programs/full-program-reentry-v2-source/AR8R_FRESH_PRO_MASTER_CONTINUATION_PROMPT_V2.md
+    sha256: 7da005d001ae97acc6324011ae363193d801a34055365e7218a84680ec17896b
+    bytes: 10668
+  - path: programs/full-program-reentry-v2-source/AR8R_FULL_PROGRAM_REENTRY_HANDOFF_V2_INDEPENDENT_VERIFICATION.md
+    sha256: 765522b4f67db991126c621f4626500bb59939beaeb7da633bb40cdb4bf546d9
+    bytes: 1231
+  - path: programs/full-program-reentry-v2-source/AR8R_FULL_PROGRAM_REENTRY_MAP_V1.md
+    sha256: c5b1ab8906687deac9ed4172721ec273ab5e083805e74b7ccbbb7d9b19128546
+    bytes: 174
+  - path: programs/full-program-reentry-v2-source/AR8R_FULL_PROGRAM_REENTRY_MAP_V1.yaml
+    sha256: 73a6cf8528fd79e46c8e2b01b99c4f1839ab1431f4cf73b78ac3d95e9874cd23
+    bytes: 151
+  - path: programs/full-program-reentry-v2-source/AR8R_FULL_PROGRAM_REENTRY_MAP_V2.md
+    sha256: a0ec4f114c5892715bc1277020cdfab8e1e8b2462d50f2831a1bd5995da463b0
+    bytes: 243839
+  - path: programs/full-program-reentry-v2-source/AR8R_FULL_PROGRAM_REENTRY_MAP_V2.yaml
+    sha256: cc498ad8ffd4b571850a727f409b3f500192bac50de7d0e04c51609d757a61cb
+    bytes: 220137
+  - path: programs/full-program-reentry-v2-source/AR8R_MATHEMATICS_AND_TEN_PROOFS_STATUS_V1.md
+    sha256: e40ac70d8433a09cfd5ee392c29391b42d1cff9dc854c9fa13cec1819fae3e5f
+    bytes: 234
+  - path: programs/full-program-reentry-v2-source/AR8R_NEXT_PHASE_DEPENDENCY_ORDER_V1.yaml
+    sha256: 6094bac56ddfcf916cc39374fbf31c6def134981308e0c1e4dbeabb870836b65
+    bytes: 20128
+  - path: programs/full-program-reentry-v2-source/AR8R_OPEN_BURDEN_AND_DEPENDENCY_ORDER_V2.yaml
+    sha256: 81f36961dfcb4479bd0bcc996520e5c04f32c8a91e4cd82260939bc68880f543
+    bytes: 20122
+  - path: programs/full-program-reentry-v2-source/AR8R_PROGRAM_SURFACE_REGISTRY_V1.md
+    sha256: 7d527546a89e5774bd45d59eb60ce3eb3c79c8c6136d712fecc544b9ace77672
+    bytes: 17293
+  - path: programs/full-program-reentry-v2-source/AR8R_PROGRAM_SURFACE_REGISTRY_V1.yaml
+    sha256: ab5b352b63ea8d3f5dcc9d0b7baa22ccda9e84155bbec78b6eb73d0504d4b144
+    bytes: 220168
+  - path: programs/full-program-reentry-v2-source/AR8R_SOURCE_FORMAL_IMPLEMENTATION_CROSSWALK_V1.yaml
+    sha256: adb6e19efa744b081f04130e9903a55f418c9c45c6b7734702f60c254e454023
+    bytes: 45157
+  - path: programs/full-program-reentry-v2-source/AR8R_SOURCE_FORMAL_IMPLEMENTATION_WORLD_CROSSWALK_V2.yaml
+    sha256: 59006ddcb0c899432d9af8a628de2a9798b68832cc79c05e5ec6141f945acf2c
+    bytes: 45342
+  - path: programs/full-program-reentry-v2-source/AR8R_TAC_TACHIKOMA_STATUS_V1.md
+    sha256: dc95de0625bbbbd013e28735842468a7db6b6b042623b46b2976f4da5ef8c785
+    bytes: 134
+  - path: programs/full-program-reentry-v2-source/AR8R_TRANSCENDENTAL_ORTHABILITY_STATUS_V1.md
+    sha256: 9ed388c4d67e5e435073b3efca88478d2bf6416f18d11e8f1b3ecb39ed0aa611
+    bytes: 163
+  - path: programs/full-program-reentry-v2-source/ATTACHMENT_AND_ARCHIVE_ASSESSMENT.csv
+    sha256: 21013759c470a0b82ba248d04641926699e32767f2b6a2b8d52fe9898c2f7ea5
+    bytes: 8942
+  - path: programs/full-program-reentry-v2-source/CURRENT_MAIN_PATH_INVENTORY.csv
+    sha256: 70fe469239241b1a4fbcb12f8f8328145e51641aca0d8521b861250fb6a78174
+    bytes: 112347
+  - path: programs/full-program-reentry-v2-source/README.md
+    sha256: 960f3a037a2a87613f2d847211056f306d3031cfd5dd1351c5766994ffdd8078
+    bytes: 678
+  - path: programs/full-program-reentry-v2-source/THEOREM_COUNTERMODEL_SOURCE_DECISION_IDENTITY_INDEX.yaml
+    sha256: afb0ae8e72676efe0ad0a8205a24527cdc8cf1c7e2dfe302bd33f333806fa2ca
+    bytes: 98302
+- id: PMR001
+  directory: post-merge-pmr001-source
+  file_count: 27
+  files:
+  - path: post-merge-pmr001-source/AR8R_88_SURFACE_STATUS_INVENTORY.yaml
+    sha256: f56f5f047745b64c96827ab3e1c1fabd0519721693d8cb2e0dc5a5408f769f07
+    bytes: 65908
+  - path: post-merge-pmr001-source/AR8R_AGENTIC_COMMUNICATION_COUNTERMODEL_LEDGER.yaml
+    sha256: 4974a29bf6f530601c2513c56bd0a057c3ecb408f1df129c0ded1a6b568617db
+    bytes: 1823
+  - path: post-merge-pmr001-source/AR8R_AR2_AR3_COLLECTIVE_BACKBONE_RECONCILIATION.md
+    sha256: fb22d822c53259cac6045df41ede3addcfd6089e5196dae885394ece49e0d7d7
+    bytes: 4603
+  - path: post-merge-pmr001-source/AR8R_CANDIDATE_1_EXACT_DOSSIER_CURRENT.md
+    sha256: 69fac21900078887406d78594d9b093d1166ba357e413bf0f12d6a156fc5da77
+    bytes: 3988
+  - path: post-merge-pmr001-source/AR8R_DEPENDENCY_DIRECTED_RESEARCH_QUEUE.yaml
+    sha256: 452376b65677bf5306ecdaa6f7dc7209c0c25e219d90203cd645929db0f69e16
+    bytes: 3149
+  - path: post-merge-pmr001-source/AR8R_FALSE_MENISCUS_INCIDENT_AND_CONTROL.md
+    sha256: f251211f86634876f9d9b07c544557885881d6260ee4586aaf0c55238973f777
+    bytes: 1461
+  - path: post-merge-pmr001-source/AR8R_LANE_CONTRIBUTION_EDGE_LEDGER_V1.yaml
+    sha256: 4d06f220788120a529124f93f04ea80145f1a5d8a939ddc6f6566b3416f66556
+    bytes: 22721
+  - path: post-merge-pmr001-source/AR8R_LANE_CONTRIBUTION_FLYWHEEL_V1.yaml
+    sha256: 39dcd5458d2f31ae47176487fc7b59de1a04848c0802bf84ec54d392bed12f2e
+    bytes: 88165
+  - path: post-merge-pmr001-source/AR8R_PMR001_TRANCHE001_ARCHIVE_VERIFICATION.md
+    sha256: 59b9e2b444cf6dfe8acde83dc5d412e47b071a63226131df8d914d929f44ced5
+    bytes: 919
+  - path: post-merge-pmr001-source/AR8R_PMR_TRANCHE_ARCHIVE_INDEX.yaml
+    sha256: d6faf89fee286bcc2fd52e7727e9dca40d07bab30d1ba5e4681406e411b1aa8c
+    bytes: 1831
+  - path: post-merge-pmr001-source/AR8R_PMR_WAVE_LEDGER.yaml
+    sha256: 51129272d13e498d3cfd3bfb9c960dac0ac228fdf4b218e01c188b3bb581eae2
+    bytes: 1414
+  - path: post-merge-pmr001-source/AR8R_POST_MERGE_CONTINUATION_RESEARCH_STATE.yaml
+    sha256: 09b69eeb3f38713b239d7445e632d9d2215f2d1a3ed86bf3c6f48b45226a7162
+    bytes: 1968
+  - path: post-merge-pmr001-source/AR8R_R5_CHAMPION_CHALLENGER_MATRIX.yaml
+    sha256: 7a00fba06e2b73062fbd11f3cd1b816ea676361bf64bb001a0f8d72267f7a686
+    bytes: 1466
+  - path: post-merge-pmr001-source/AR8R_T299_T300_NEGATIVE_PILOT_RECEIPT.md
+    sha256: 69d9312807713b555e3473089b8d79ae9b0fea88ec0b373c2e352812d831ad66
+    bytes: 2435
+  - path: post-merge-pmr001-source/COLD_AUDIT_PMR001.md
+    sha256: 24454daa2d6665452b433a7407be1af81fdb8587eaa4463a567b708d8947a672
+    bytes: 3963
+  - path: post-merge-pmr001-source/finite_model_check_results.json
+    sha256: 3b4bd9956eea02737440d8789ff3ac1b989488fb0f4a2ad46eb17f5e9fa82a8a
+    bytes: 5591
+  - path: post-merge-pmr001-source/FITRAH_REMINDER_RESTORATION_SOURCE_FINDING_PMR001.md
+    sha256: f5ffa1387012cc95d28e185262d18d4160b652b22e5e518d31488a418deb6d71
+    bytes: 5339
+  - path: post-merge-pmr001-source/FRESH_REREVIEW_PMR001.md
+    sha256: e86e5bc13327ccbb39bddac26e1d356a5d1e00b1dcf9242438e37860d3ea6517
+    bytes: 3032
+  - path: post-merge-pmr001-source/M3_NECESSARY_EXISTENCE_VERSUS_CREATOR_PMR001.md
+    sha256: 25d8cff74cc11fbbad992fe212f364ac4941d3245a52c890030103cc627f1812
+    bytes: 2166
+  - path: post-merge-pmr001-source/PMR-001-TRANCHE-001.md
+    sha256: 5feced3b9a94a03b7a8eee6183bcf6baec03b55802d8d86540a0b20052a10aca
+    bytes: 8787
+  - path: post-merge-pmr001-source/PMR001_ADMISSION_OVERLAY.yaml
+    sha256: de2867d65b9a098be89edabf0cd37068232f7759ee670ddbaa0772d42425a606
+    bytes: 1444
+  - path: post-merge-pmr001-source/PMR_AGCOM_01_CANDIDATE.md
+    sha256: d2a4d6a7a20cf32546da0b683266e7c3497aaecaa320f301b934018c3fd907a7
+    bytes: 5276
+  - path: post-merge-pmr001-source/PMR_M3_01_CANDIDATE.md
+    sha256: abae17ed6e22ef0e16c480cf9165b3798ab16c03ffebb4e81872e15a9f4e3bde
+    bytes: 7473
+  - path: post-merge-pmr001-source/PMR_R5_01_CANDIDATE.md
+    sha256: a8659d4265db0463916a9e364d976adcf9a3c40f77235cf7266ef1d82ec3e60d
+    bytes: 2723
+  - path: post-merge-pmr001-source/POST_MERGE_AR8R_SUBSTANTIVE_RESEARCH_V1.yaml
+    sha256: 079c5e29230ea392bd2030367619871727c14e9f8759ad9af221e9b0edcdf48b
+    bytes: 2653
+  - path: post-merge-pmr001-source/README.md
+    sha256: a881d3020091dcb18c7e9d4ff8a285cbe920fbe189f6c1ae57a9d83408bc4bf1
+    bytes: 834
+  - path: post-merge-pmr001-source/REPAIR_LOG_PMR001.md
+    sha256: add8cdf4f4b4e26213d7773800a346c8646704b225e7da39984c1b8ba6b00460
+    bytes: 1395
+- id: PMR002_THROUGH_PMR006
+  directory: post-merge-pmr002-006-source
+  file_count: 12
+  files:
+  - path: post-merge-pmr002-006-source/AR8R_DEPENDENCY_DIRECTED_RESEARCH_QUEUE_V2.yaml
+    sha256: 263a2f54118bf4a271ff5118c09140cc7e99abd7643027e07085676edea9dac5
+    bytes: 2548
+  - path: post-merge-pmr002-006-source/AR8R_PMR002_BOUNDED_ANCESTRY_RECEIPT.md
+    sha256: f02b29497fef5ce401b02c6e09478417d79fbb93584fbc372ab116c58c67649e
+    bytes: 5838
+  - path: post-merge-pmr002-006-source/AR8R_PMR002_PMR006_ADMISSION_RECONCILIATION.json
+    sha256: b64e35a8d4d1aadce4173a3f481c3e4c2d50fe8cacb9d2c66334284e00bd3e25
+    bytes: 5019
+  - path: post-merge-pmr002-006-source/AR8R_PMR002_PMR006_CONTENT_VALIDATION.md
+    sha256: 9e520b987e9f45edeb67c9934156f43cac26436d2529e54cda45bed674f5aea2
+    bytes: 516
+  - path: post-merge-pmr002-006-source/AR8R_PMR002_PMR006_MULTI_WAVE_CHECKPOINT_REPORT.md
+    sha256: eebbb7f5c3d1bab919b9315ee77088ad76553a9d32e38a9f7b84b646c2a5d0db
+    bytes: 8062
+  - path: post-merge-pmr002-006-source/AR8R_PMR002_PMR006_MULTI_WAVE_CHECKPOINT_VERIFICATION.md
+    sha256: df0b795317a4b3152549a3b6f62be391b7d846199069b2f3ff30f1549de869ea
+    bytes: 372
+  - path: post-merge-pmr002-006-source/AR8R_PMR002_PMR006_WHOLE_FIELD_REREAD.md
+    sha256: a245d020efc4762aa8023fc98a43f3acbf5a16bd2aab4cd5c3012e024fd8df2f
+    bytes: 6376
+  - path: post-merge-pmr002-006-source/AR8R_PMR_APPROACH_FAMILY_REGISTRY_V2.yaml
+    sha256: 54259d8eba0d11385674935a817983a5a78ce355c069efd1231c9b2073bb79c7
+    bytes: 8972
+  - path: post-merge-pmr002-006-source/AR8R_PMR_TRANCHE_ARCHIVE_INDEX_V2.yaml
+    sha256: ebaefbfd30245d40a050ac3fbe226988cf3d8a2bcc9a95830d17a6fcb8ac2bdd
+    bytes: 3273
+  - path: post-merge-pmr002-006-source/AR8R_PMR_WAVE_LEDGER_V2.yaml
+    sha256: 5658f895e86014dbb339c82f9f2e2219fd596b9fa665cf36f50cdb7bc7d8e89b
+    bytes: 1372
+  - path: post-merge-pmr002-006-source/AR8R_POST_MERGE_CONTINUATION_RESEARCH_STATE_V2.yaml
+    sha256: 77611220b530c34e38a79791b74b918bba4caa2b02eb330848099f38dae95729
+    bytes: 3109
+  - path: post-merge-pmr002-006-source/POST_MERGE_AR8R_SUBSTANTIVE_RESEARCH_V2.yaml
+    sha256: 96410f402f48498b9f6129e0bfa1832e8dbe79f2db8c6f96426313547331fb11
+    bytes: 5201

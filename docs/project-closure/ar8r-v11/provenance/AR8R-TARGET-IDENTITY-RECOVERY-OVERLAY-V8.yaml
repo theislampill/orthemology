@@ -1,0 +1,86 @@
+schema: ar8r-canonical-theorem-origin-reconciliation-v6
+authority_basis:
+  - V5_ORIGIN_AUTHORITY
+  - V8_TARGET_IDENTITY_AUDIT
+historical_authority:
+  substantive_duration: '09:41:25.405101139'
+  substantive_seconds: '34885.405101139'
+  latest_closed_segment: 357
+  verified_checkpoint_sha256: 660231b1d5a60f41ac1b5e6d0e2d9f79717e26bd79d6352bb92de0ad7f5b33e5
+counts:
+  target_identities: 42
+  exact_historical_payloads: 18
+  canonical_semantic_reconstructions: 1
+  role_preserving_replacements: 1
+  unresolved_historical_identities: 22
+exact_historical_identities:
+  - AR8R-T130
+  - AR8R-T131
+  - AR8R-T132
+  - AR8R-T133
+  - AR8R-T134
+  - AR8R-T135
+  - AR8R-T136
+  - AR8R-T137
+  - AR8R-T138
+  - AR8R-T139
+  - AR8R-T140
+  - AR8R-T141
+  - AR8R-T142
+  - AR8R-T143
+  - AR8R-T351
+  - AR8R-T352
+  - AR8R-T353
+  - AR8R-T354
+unresolved_historical_identities:
+  - AR8R-T144
+  - AR8R-T145
+  - AR8R-T146
+  - AR8R-T147
+  - AR8R-T148
+  - AR8R-T149
+  - AR8R-T151
+  - AR8R-T152
+  - AR8R-T153
+  - AR8R-T154
+  - AR8R-T155
+  - AR8R-T307
+  - AR8R-T309
+  - AR8R-T310
+  - AR8R-T311
+  - AR8R-T312
+  - AR8R-T313
+  - AR8R-T314
+  - AR8R-T315
+  - AR8R-T316
+  - AR8R-T317
+  - AR8R-T318
+special_cases:
+  AR8R-T150:
+    provenance_class: ROLE_PRESERVING_REPLACEMENT
+    canonical_proposal: AR8R-RP-001-v1
+    original_historical_payload_status: UNAVAILABLE
+    original_historical_bytes_recovered: false
+    owner_adoption_status: PENDING
+    repository_packet_status: READY_FOR_OWNER_REVIEW_NOT_ADOPTED
+  AR8R-T354:
+    provenance_class: EXACT_VERBATIM_TRANSCRIPT_RECOVERY
+    original_historical_bytes_recovered: true
+    payload_sha256: 4ae7fe4807de3b961dc8fbec464d23738dc4fb58b94ca4af4f758aed316fd264
+    formal_status: BLOCKED_FORMAL_DEFECT
+    repository_ready: false
+    repair_in_place_authorized: false
+  AR8R-T366:
+    provenance_class: CANONICAL_SEMANTIC_RECONSTRUCTION
+    canonical_proposal: AR8R-RC-T366-v1
+    original_historical_payload_status: UNAVAILABLE
+    original_historical_bytes_recovered: false
+    owner_adoption_status: PENDING
+    repository_packet_status: READY_FOR_OWNER_REVIEW_NOT_ADOPTED
+natural_campaign_closure_claimed: false
+meniscus_claimed: false
+independent_discovery_count: NOT_SUPPORTED_BY_CURRENT_PROVENANCE
+publication_rule: >-
+  Historical identity, exact payload, semantic reconstruction, role-preserving
+  replacement, audit sufficiency, and owner adoption are independent fields.
+  No later packet may collapse them.
