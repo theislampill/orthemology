@@ -1,0 +1,147 @@
+receipt_id: AR8R-FABLE-R1-LEAN-RECEIPTS
+round: fable-research-round-1
+status: LEAN_TOOLCHAIN_CUSTODY_AND_KERNEL_CHECK_PERFORMED
+supersedes: nothing
+relates_to:
+  - docs/project-closure/ar8r-v11/formalization/AR8R-V11-LEAN-FORMALIZATION-QUEUE.yaml
+  - docs/project-closure/ar8r-v11/theorems/ar8r-t299-matched-intervention-burden-landing.md
+
+purpose: >
+  Record the first executed Lean toolchain custody and kernel check in this
+  program. The formalization queue previously recorded parse, elaboration,
+  kernel, and axiom_report as NOT_PERFORMED and machine_check_claim as NONE,
+  gated on Q0 (toolchain custody and clean build). Q0 was executed. This
+  receipt records exactly what was checked and what was not.
+
+q0_toolchain_custody:
+  status: PERFORMED
+  elan_version: 4.2.3
+  lean_version: 4.32.2
+  lean_commit: f3b06c705e6c85f5314019d5d3baab0fec5b580c
+  lake_version: 5.0.0-src+f3b06c7
+  platform: x86_64-w64-windows-gnu
+  toolchain_pin_file: lean/lean-toolchain
+  toolchain_pin_value: leanprover/lean4:v4.32.2
+  dependency_manifest: lean/lake-manifest.json
+  mathlib_rev: 905b95818eb3
+  mathlib_input_rev: v4.32.2
+  clean_build: PASS
+  build_jobs: 635
+  build_command: lake build T299
+  build_exit_code: 0
+  note: >
+    A prior build attempt failed on Windows MAX_PATH limits when the project
+    root was a long temporary path. Relocating the project root resolved it.
+    This is an environment constraint, not a defect in the formalization, and
+    is recorded because it will recur for any future Lean work on Windows.
+
+q1_t299_formalization:
+  status: ELABORATED_AND_KERNEL_CHECKED
+  source: lean/T299/Basic.lean
+  receipts_source: lean/T299/Receipts.lean
+  target_packet: docs/project-closure/ar8r-v11/theorems/ar8r-t299-matched-intervention-burden-landing.md
+  parse: PASS
+  elaboration: PASS
+  kernel: PASS
+  sorry_count: 0
+  custom_axioms_introduced: 0
+  axiom_report:
+    standard_axioms_only: true
+    axioms_used_across_corpus: [propext, Classical.choice, Quot.sound]
+    classical_choice_use_site: >
+      Right-to-left direction of certifiable_iff_fibreConst only, to select a
+      representative from each attained fibre.
+  declarations_checked: 12
+  declarations:
+    - name: certifiable_iff_fibreConst
+      role: main characterization
+      axioms: [propext, Classical.choice, Quot.sound]
+    - name: fibreConst_iff_noDisagreeingPair
+      role: proves the packet's word "Equivalently"
+      axioms: []
+    - name: certifiable_of_injective
+      role: the packet's "sufficient by construction" remark, as a consequence
+      axioms: [propext, Classical.choice, Quot.sound]
+    - name: certifiable_mono
+      role: refinement monotonicity
+      axioms: [propext, Classical.choice, Quot.sound]
+    - name: A4_requires_reading_is_insufficient
+      role: machine-checked demonstration of specification defect A4
+      axioms: []
+    - name: certifiable_matchedProfile
+      role: B* certifies, for every model, with no finiteness hypothesis
+      axioms: [propext, Classical.choice, Quot.sound]
+    - name: twin_before_agree
+      role: causal/spontaneous twin, before-observation agreement
+      axioms: []
+    - name: twin_after_agree
+      role: causal/spontaneous twin, after-observation agreement
+      axioms: []
+    - name: twin_L_differs
+      role: twin labels differ
+      axioms: []
+    - name: beforeAfter_not_certifiable
+      role: the packet's scope-firewall claim, machine-checked
+      axioms: [propext, Classical.choice, Quot.sound]
+    - name: matched_separates_twin
+      role: B* separates the twin
+      axioms: []
+    - name: matched_certifies_twin
+      role: B* certifies the twin
+      axioms: [propext, Classical.choice, Quot.sound]
+
+executable_finite_check:
+  status: PASS
+  scope: independent of the Lean development
+  exhaustive_enumeration:
+    cases: 361164
+    bound: all background sets up to size 6, profile spaces up to size 4
+    method: >
+      Certificate existence decided by brute-force search over all functions
+      from the profile space to Bool, i.e. from the definition, without
+      appealing to the characterization.
+    mismatches: 0
+  randomized_models:
+    cases: 4000
+    mismatches: 0
+  rejection_sampled_models:
+    kept: 2000
+    rejected: 72753
+    reason: >
+      The six-clause conjunction is so restrictive that unconditioned random
+      models almost never produce a non-constant label, making the check nearly
+      vacuous. Rejection sampling on non-constant labels was added so that both
+      directions are genuinely exercised.
+    non_certifiable_before_after_profiles: 285
+    non_certifiable_coarse_profiles: 1744
+    mismatches: 0
+  twin_assertions: 13
+  twin_failures: 0
+
+what_this_does_not_establish:
+  - The mathematics is not novel. The characterization is the quotient
+    factorization lemma; a kernel check does not create novelty.
+  - No other theorem in the program is machine-checked. Q1a through Q1i remain
+    unperformed.
+  - The external Lean corpus referenced by the formalization queue
+    (230 declaration records over 48 scanned files) is still STATIC_ONLY. It was
+    not parsed, elaborated, or kernel-checked here, and this receipt makes no
+    claim about it.
+  - Machine checking establishes only that the formalized statements follow from
+    Lean's axioms. It does not establish that the formalization faithfully
+    renders the informal packet; the specification defects recorded in
+    AR8R-FABLE-R1-T299-SPECIFICATION-DEFECTS.md are precisely the places where
+    faithfulness required a choice.
+  - No empirical, metaphysical, theological, adoption, champion, meniscus, or
+    closure status changes.
+
+ci_decision_required:
+  id: FABLE-R1-CI-01
+  status: OPEN_OWNER_OR_MAINTAINER_DECISION
+  statement: >
+    The repository CI installs from a pinned lockfile and advertises no live web
+    checks. A mathlib build requires a multi-gigabyte network fetch. Adding a
+    Lean job to CI therefore conflicts with the current CI contract. Options:
+    (a) leave Lean out of CI and treat these receipts as local-only evidence;
+    (b) add a cached, pinned Lean job and amend the CI contract explicitly;
+    (c) vendor nothing and re-verify on demand. No option is taken here.

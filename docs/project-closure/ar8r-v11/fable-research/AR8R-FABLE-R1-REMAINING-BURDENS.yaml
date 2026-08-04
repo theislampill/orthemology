@@ -1,0 +1,104 @@
+ledger_id: AR8R-FABLE-R1-REMAINING-BURDENS
+round: fable-research-round-1
+status: OPEN_BURDENS_RECORDED_NONE_DISCHARGED_BY_THIS_ROUND
+
+authority_unchanged:
+  historical_substantive_duration: 09:41:25.405101139
+  latest_segment: 357
+  theorem_origin_authority: V5
+  integrated_champion: NONE
+  meniscus: NOT_REACHED
+  natural_campaign_closure: NOT_REACHED
+  candidate_1_owner_adoption: PENDING
+  t354_status: BLOCKED_FORMAL_DEFECT
+  ten_advances_count: CONFLICTING_38_42
+
+discharged_by_this_round:
+  - id: LEAN-Q0
+    was: NOT_PERFORMED
+    now: PERFORMED
+    evidence: AR8R-FABLE-R1-LEAN-RECEIPTS.yaml
+    note: >
+      Toolchain custody and clean build executed. This unblocks the queue items
+      that were gated on it, but does not perform them.
+  - id: LEAN-T299-MACHINE-CHECK
+    was: machine_check_claim NONE
+    now: ELABORATED_AND_KERNEL_CHECKED
+    scope: T299 only; no other theorem in the program is machine-checked.
+
+newly_opened_burdens:
+  - id: FABLE-R1-B01
+    statement: >
+      MEN-2 is stated as a "provenance-independence rank". Round 1 refuted the
+      matroid premise, so the milestone text is unsound as written and needs
+      restatement in terms of the transversal number.
+    closable_by: MAINTAINER
+    blocking: MEN-2, and any flywheel edge that assumes independent-route counting
+  - id: FABLE-R1-B02
+    statement: >
+      The restorative-cutset result should be re-expressed with its correct
+      condition and, ideally, formalized. Its existing positive witness lives in
+      the single-root regime where the wrong and right conditions coincide.
+    closable_by: RESEARCH_AGENT
+  - id: FABLE-R1-B03
+    statement: >
+      The T299 packet should record that its six clauses are definitional, not
+      merely necessary, and should declare the observation channel its twin
+      depends on. The historical payload must not be edited; a superseding note
+      is the correct instrument.
+    closable_by: MAINTAINER
+  - id: FABLE-R1-CI-01
+    statement: >
+      Adding a Lean job to CI conflicts with the current no-live-web-checks CI
+      contract, because a mathlib build requires a large network fetch. Decide
+      between leaving Lean out of CI, amending the contract with a pinned cached
+      job, or re-verifying on demand.
+    closable_by: OWNER_OR_MAINTAINER
+  - id: FABLE-R1-B05
+    statement: >
+      Candidate 1's exact prior-art status in the promise/query model remains
+      unadjudicated. Round 1 explicitly did not perform this search.
+    closable_by: EXTERNAL_SPECIALIST_OR_DEDICATED_SEARCH
+    note: >
+      Nearest targets: evasiveness (Aanderaa-Karp-Rosenberg line), hidden
+      matching in communication complexity, certificate complexity of threshold
+      functions.
+  - id: FABLE-R1-B06
+    statement: >
+      The two rival cores answer different questions (class uniformity vs
+      warrant-chain integrity) and neither refines the other. Whether a common
+      core answering both exists is open, and no champion may be selected until
+      it is settled.
+    closable_by: RESEARCH_AGENT
+
+pre_existing_burdens_reaffirmed:
+  - id: OWNER-EMPIRICAL-EXECUTION
+    statement: >
+      No designed public experiment packet has ever been run. This remains the
+      single largest blocker on any empirical claim, and no amount of formal or
+      custody work touches it.
+    closable_by: OWNER
+  - id: OWNER-EXTERNAL-PUBLICATION
+    closable_by: OWNER
+  - id: OWNER-LICENSE
+    closable_by: OWNER
+  - id: OWNER-CITATION-IDENTITY
+    closable_by: OWNER
+  - id: SPECIALIST-CONNES-RIGIDITY
+    statement: Unresolved pending operator-algebra specialist review.
+    closable_by: EXTERNAL_SPECIALIST
+  - id: LEAN-Q1a-THROUGH-Q1i
+    statement: >
+      Unblocked by Q0 but not performed. The external Lean corpus referenced by
+      the queue remains STATIC_ONLY and unverified.
+    closable_by: RESEARCH_AGENT
+
+nonclaims:
+  - No milestone is completed and completed_milestones remains 0.
+  - No meniscus candidate is adopted.
+  - No theorem gains adoption, novelty, or empirical credit from this round.
+  - Machine checking establishes derivability from Lean's axioms only; it does not
+    establish that a formalization faithfully renders its informal packet.
+  - The refutations recorded in round 1 concern the program's stated premises, not
+    the internal correctness of the historical theorems.
+  - Zero general mathematical novelty is claimed for any round-1 object.
