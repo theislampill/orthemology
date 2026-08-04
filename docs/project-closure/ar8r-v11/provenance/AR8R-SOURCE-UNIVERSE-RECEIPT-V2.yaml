@@ -1,0 +1,53 @@
+schema: ar8r-v11-source-universe-receipt-v2
+supersedes_for_v11_thread_surface: AR8R-SOURCE-UNIVERSE-RECEIPT-V1.yaml
+v7_v8_receipt_preserved: AR8R-SOURCE-UNIVERSE-RECEIPT-V1.yaml
+privacy_rule: Row maps omit private message IDs, URLs, local paths, filenames, titles,
+  UI text, raw JSON, and artifact bodies.
+immutable_v11_source_ledgers:
+- surface: V11_ATTACHMENT_INDEX
+  sha256: a236e9d40b2ed376953e7fce0d384224509a6567ac2549840b4bb3c764424b57
+  rows: 1007
+- surface: V11_DOWNLOAD_AND_ARCHIVE_LEDGER_CSV
+  sha256: d1aa7644474123e2ae54c2cc46ea1bba9e7a40bde42447cd9c51dd75d69ba332
+  rows: 187
+- surface: V11_DOWNLOAD_AND_ARCHIVE_LEDGER_JSONL
+  sha256: 89caf73dcf7644acd0cd14b71a5b97ce872ac92361a171a5f9f6928ee91e0f06
+  rows: 161
+- surface: V11_ARCHIVE_INTEGRITY_AND_EXTRACTION_LEDGER
+  sha256: 35f8312da49dd8ab5d198755a17a5b0101543e4cb1a099439458a7f36b6300a7
+  rows: 10
+- surface: V11_ARCHIVE_MEMBER_HASH_LEDGER
+  sha256: 9c034a9d65a9cb6c6c5a9890ae3fb15eb850372dcca821f88845b65a428769ad
+  rows: 957
+terminal_maps:
+- name: v11_attachment_row_map
+  path: AR8R-V11-ATTACHMENT-ROW-DISPOSITION-MAP-V1.csv
+  sha256: 1d9a7b2d7039c9f7028a2d7bd62c819765b074b70fbef5bcc13271c8f53103b8
+  rows: 1007
+- name: v11_download_row_map
+  path: AR8R-V11-DOWNLOAD-ROW-DISPOSITION-MAP-V1.csv
+  sha256: 54e2d57ceb58ad12e77c03780dd228b18ae84e69e19ed9f4f732930fe985ca94
+  rows: 187
+- name: v11_archive_instance_map
+  path: AR8R-V11-ARCHIVE-INSTANCE-DISPOSITION-MAP-V1.csv
+  sha256: 0a4eafaa052109ea08266f0857f8c99d5d2581901f22b05d827e1fa49f883ca4
+  rows: 10
+- name: v11_archive_member_map
+  path: AR8R-V11-ARCHIVE-MEMBER-HASH-DISPOSITION-MAP-V1.csv
+  sha256: 309aa2db1dadb8aa6330410b67b476c0ddac5c8ed344f9518de60791f53f1438
+  rows: 506
+dual_hash_relations:
+- relation: SOURCE_EXACT_BYTES_TO_MUTABLE_SUMMARY
+  source_exact_sha256: 31fa5b249ede9a5cd7ee180c175f432fdd29c2d94d43321de95a0ecc40b08d9e
+  source_exact_bytes: 39767
+  public_summary_path: ../programs/AR8R_TRANSCENDENTAL_ORTHABILITY_AND_SOURCE_ASCENT_V2.md
+  public_summary_sha256: cfd2b05ff638df6c8905fd4d4f54c2bdeb8e6740b555793273e5921270dea5e4
+  public_summary_bytes: 1448
+  identity_claim: SUMMARY_IS_NOT_EXACT_SOURCE_BYTES
+  adoption_effect: NONE
+terminal_rule: Byte equality, hash receipt, public summary, supersession, private
+  custody, and access boundaries remain separate dispositions. No row or member gains
+  theorem, novelty, source-authentication, adoption, or closure credit from this receipt.
+completeness_boundary: The immutable V11 attachment, download, archive, and member
+  ledgers are structurally accounted for. Semantic adoption remains governed by public
+  claim owners and reviews.

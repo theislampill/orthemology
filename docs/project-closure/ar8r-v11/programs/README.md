@@ -61,6 +61,10 @@ V12 OSM program integration:
 - `AR8R-OSM-LEARNING-TRAJECTORY-CONVERGENCE-CROSSWALK-V12.md/.yaml` connects the already integrated Sun et al. latent-state and learning-trajectory source to M2, M3, M12, M13, and M15 while preserving strict no-transfer boundaries for human noetics, proper function, restoration, metaphysics, theology, Lean, and meniscus;
 - `AR8R-FABLE-OSM-CONVERGENCE-RESEARCH-PROMPT-V1.md` is a public-safe independent-research steer for testing whether any cross-domain relation is an exact reduction, typed common model, shared invariant, guarded transfer, common countermodel, analogy, or nonidentity.
 
+V13 Fable continuation:
+
+- `AR8R-FABLE-INTEGRATED-ORTHEMOLOGY-MENISCUS-RESEARCH-PROMPT-V2.md` supersedes the OSM-only execution scope for new Fable work. It preserves OSM as a focal source while reopening the complete typed convergence challenge across proper function, ontology rivals, TAC/SAC, language and uncreated grammar, agentic communication, restoration, Candidate 1, source custody, the guarded transcendental ascent, and Lean. It does not promote a champion, meniscus, or closure.
+
 These files record a roadmap. They do not complete a milestone, adopt a
 meniscus candidate, select an integrated champion, establish a live Fusha/Qamus
 implementation, promote daee draft PR #8/#9 to merged-main authority, or imply

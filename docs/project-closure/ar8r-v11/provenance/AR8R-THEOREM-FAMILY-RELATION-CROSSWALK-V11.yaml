@@ -648,7 +648,15 @@ later_label_crosswalk:
 - later_labels:
   - Candidate 1
   - PMR-007-PRQT-1
-  v5_family: FAMILY-HIGHER
+  v5_family: null
+  candidate_v5_families:
+  - FAMILY-FIBRE
+  - FAMILY-HIGHER
+  classification_status: UNRESOLVED_PUBLIC_OWNER_CONFLICT
+  basis_locators:
+  - docs/project-closure/ar8r-v11/theorems/candidate-1-hidden-matching-threshold.md#typed-setting
+  - docs/project-closure/ar8r-v11/programs/full-program-reentry-v2-source/AR8R_FULL_PROGRAM_REENTRY_MAP_V2.md#S09
+  - docs/project-closure/ar8r-v11/post-merge-proposals/pmr007-rounds11-20/PROPOSED_ORIGIN_AND_ANCESTRY_UPDATES/PMR-007_FRONTIER_ROUND19_PRIOR_ART_AND_FAMILY_NOTE.md#exact-internal-ancestor
   relation: REDUCTION_OR_EXTENSION_NOT_IDENTITY
 - later_labels:
   - AR8R-T351
@@ -656,6 +664,17 @@ later_label_crosswalk:
   - PMR-007-PRRC-1
   v5_family: FAMILY-ROUTE
   relation: WRAPPER_OR_DEPENDENCY_NOT_IDENTITY
+- later_labels:
+  - AR8R-HR-P236P242-T236-v1
+  v5_family: null
+  candidate_v5_families:
+  - FAMILY-DYNAMIC
+  - FAMILY-SOURCE
+  classification_status: HISTORICAL_IDENTIFIER_COLLISION_NO_CANONICAL_MERGE
+  basis_locators:
+  - docs/project-closure/ar8r-v11/provenance/AR8R-HISTORICAL-ID-COLLISION-RECEIPT-P236-P242-V1.yaml
+  - docs/project-closure/ar8r-v11/theorems/historical-collision-recoveries/AR8R-HR-P236P242-T236-v1-payload.md
+  relation: COLLISION_SAFE_RECOVERY_DIRECT_COROLLARY_NO_IDENTITY
 identity_guard: Broad families are search/index categories. Relation kinds are not
   equivalence unless the exact row says so.
 no_new_identity_merges: true
