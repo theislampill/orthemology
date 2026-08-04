@@ -1432,6 +1432,18 @@ items:
     representation, restoration, candidates, Track T, R5, and provenance.
   owner_path: docs/project-closure/ar8r-v11/programs/AR8R-RESEARCH-FLYWHEEL-CROSSWALK-V1.yaml
   campaign_epoch: V11_RECONCILIATION
+- item_id: OSM-LEARNING-TRAJECTORY-V12
+  title: OSM learning-trajectory convergence crosswalk
+  source_surface: CURRENT_PUBLIC_ORTHEMOLOGY_MAIN
+  evidence_class: PROGRAM_OR_BURDEN_RECORD
+  privacy_class: PUBLIC_SAFE
+  recommended_disposition: PUBLIC_INTEGRATE
+  public_locator: DOI 10.1038/s41586-024-08548-w and source-status row LAT-1
+  repository_relevance: Reconnects the already integrated endpoint-versus-trajectory and latent-state source to the V11 milestone and flywheel owners without transferring empirical, normative, human, metaphysical, theorem, or meniscus credit.
+  owner_path: docs/project-closure/ar8r-v11/programs/AR8R-OSM-LEARNING-TRAJECTORY-CONVERGENCE-CROSSWALK-V12.yaml
+  source_access_copy_sha256: 0d097cba7bbb25a949e2bf95af28b5a2259bd8d60b0e5fac5a74cdf7d05aa814
+  source_access_copy_bytes: 137824
+  campaign_epoch: V12_PROGRAM_INTEGRATION
 v11_task7_public_owners:
   hash_policy: INCLUDED_IN_FINAL_V11_SHA256SUMS_AND_RELEASE_MANIFEST
   owners:

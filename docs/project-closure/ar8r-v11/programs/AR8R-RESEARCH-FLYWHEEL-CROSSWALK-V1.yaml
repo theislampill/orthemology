@@ -6,6 +6,7 @@ nodes:
   language_version: {owner: language-translation-and-version-custody.md}
   agentic_communication: {owner: agentic-communication.md}
   representation_prh: {owner: prh-higher-order-and-causal-restoration.md}
+  osm_learning_trajectory: {owner: AR8R-OSM-LEARNING-TRAJECTORY-CONVERGENCE-CROSSWALK-V12.yaml, authority: EXTERNAL_EXEMPLIFICATION_AND_CONSTRAINT}
   tensor_search: {owner: tensor-and-bitter-lesson.md}
   candidate_n: {owner: candidate-n-authority-status.md}
   proper_function_e: {owner: proper-function-and-candidate-e.md}
@@ -70,6 +71,31 @@ edges:
     to: representation_prh
     contribution: candidate routing, missingness controls, and equivariance tests
     nontransfer: benchmark performance does not establish ontology or identity
+  - kind: supports
+    from: source_custody
+    to: osm_learning_trajectory
+    contribution: exact article identity methods model scope code provenance and access-copy custody
+    nontransfer: custody does not reproduce the experiment or prove the interpretation
+  - kind: supports
+    from: osm_learning_trajectory
+    to: representation_prh
+    contribution: endpoint and trajectory remain separate in causal and representation comparisons
+    nontransfer: better trajectory fit does not identify a biological mechanism or causal equivalence
+  - kind: constrains
+    from: osm_learning_trajectory
+    to: proper_function_e
+    contribution: performance and terminal geometry can leave process adequacy underdetermined
+    nontransfer: operational success does not establish proper function objective warrant or Wisdom
+  - kind: constrains
+    from: osm_learning_trajectory
+    to: restoration
+    contribution: longitudinal traces and interventions can distinguish pathways hidden by terminal labels
+    nontransfer: task learning and representational adaptation are not human or noetic restoration
+  - kind: supports
+    from: osm_learning_trajectory
+    to: tensor_search
+    contribution: architecture objective and trajectory comparison sharpen held-out rival-model protocols
+    nontransfer: a winner among tested settings is not a universal mechanism or ontology result
   - from: representation_prh
     to: restoration
     contribution: higher-order blindness and matched-intervention diagnostic burdens

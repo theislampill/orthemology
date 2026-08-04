@@ -67,3 +67,13 @@ records Fusha/Qamus only as an external applied-language boundary.
 
 The milestone architecture has no theorem, novelty, source-authentication,
 owner-adoption, integrated-champion, meniscus, or natural-closure effect.
+
+## V12 OSM learning-trajectory crosswalk
+
+The Sun et al. OSM study was already present in the current source, decision,
+related-work, manuscript, and latent-state application owners. The V12
+crosswalk reconnects that existing authority to the later milestone and
+flywheel program so the endpoint-versus-trajectory and object-separation work
+is not rediscovered as a missing source. It changes no milestone status and
+adds no theorem, empirical validation, human-noetic inference, proper-function
+premise, metaphysical bridge, Lean claim, champion, meniscus, or closure.
