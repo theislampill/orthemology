@@ -1,21 +1,21 @@
 {
   "schema": "orthemology-source-manifest-v1",
   "artifact_id": "orthemic-core-reference-draft",
-  "source_commit": "aee5c7389b57ec7c3150d8fee3b3e398195d1395",
-  "source_tree": "766a3cfd57058d56538a0571fcff176ca44288b3",
-  "independently_reviewed_equivalent_source_commit": "aee5c7389b57ec7c3150d8fee3b3e398195d1395",
-  "independently_reviewed_equivalent_source_tree": "766a3cfd57058d56538a0571fcff176ca44288b3",
+  "source_commit": "e2ac7c45a34c95c56fe2dc5dd90668a1177260df",
+  "source_tree": "d2fa9670517c3a15eebd4a45f620fd0e111f2e76",
+  "independently_reviewed_equivalent_source_commit": "e2ac7c45a34c95c56fe2dc5dd90668a1177260df",
+  "independently_reviewed_equivalent_source_tree": "d2fa9670517c3a15eebd4a45f620fd0e111f2e76",
   "source_tree_equivalence": "verified-identical",
-  "source_date_epoch": 1785167892,
+  "source_date_epoch": 1785827842,
   "archive": {
     "path": "artifacts/orthemic-core-reference-draft.source.tar.gz",
-    "sha256": "daf01421420553ce243bf44802979862407d4df7d6cc1089f4b3bd2333dafdb3",
+    "sha256": "ee8c4b63b59265b3c0990912f6ecefa0d701f2e738cdbcbe6dc56eb57b7ad825",
     "format": "tar-gzip-ustar"
   },
   "entry_point": "publication/latex/orthemic-core-reference-draft/main.tex",
   "build_workdir": "publication/latex/orthemic-core-reference-draft",
-  "publication_profile_sha256": "176e78534db91ad9c3c6f441676fa6a506470e344b5acba7060262a0d0b973a6",
-  "toolchain_lock_sha256": "25eba4659e5817f1d90d1511facff15afadcaa463be3b6aea491bc145a8dc4d4",
+  "publication_profile_sha256": "a29f4eb7af74f2e13843b5db8386fe7dd4c837def4c5c199fbae2c30a7acb774",
+  "toolchain_lock_sha256": "d9b1ecbba2e34e34ec06bb4eeac383e90d8f8ed55e8c32dde1f4b5bc7daac263",
   "tex_live_dependencies": {
     "fvextra": {
       "tex_live_package": "fvextra",

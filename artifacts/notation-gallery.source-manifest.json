@@ -1,21 +1,21 @@
 {
   "schema": "orthemology-source-manifest-v1",
   "artifact_id": "notation-gallery",
-  "source_commit": "aee5c7389b57ec7c3150d8fee3b3e398195d1395",
-  "source_tree": "766a3cfd57058d56538a0571fcff176ca44288b3",
-  "independently_reviewed_equivalent_source_commit": "aee5c7389b57ec7c3150d8fee3b3e398195d1395",
-  "independently_reviewed_equivalent_source_tree": "766a3cfd57058d56538a0571fcff176ca44288b3",
+  "source_commit": "e2ac7c45a34c95c56fe2dc5dd90668a1177260df",
+  "source_tree": "d2fa9670517c3a15eebd4a45f620fd0e111f2e76",
+  "independently_reviewed_equivalent_source_commit": "e2ac7c45a34c95c56fe2dc5dd90668a1177260df",
+  "independently_reviewed_equivalent_source_tree": "d2fa9670517c3a15eebd4a45f620fd0e111f2e76",
   "source_tree_equivalence": "verified-identical",
-  "source_date_epoch": 1785167892,
+  "source_date_epoch": 1785827842,
   "archive": {
     "path": "artifacts/notation-gallery.source.tar.gz",
-    "sha256": "f0faa65a739dc4767c0b803c53db1306a60e13a92df517f66c81fa1071a527f3",
+    "sha256": "c585c05cffa5344e4381e8a88c846bdbe6681549ea5286f23b14245fe34b4c66",
     "format": "tar-gzip-ustar"
   },
   "entry_point": "publication/latex/notation-gallery/main.tex",
   "build_workdir": "publication/latex/notation-gallery",
-  "publication_profile_sha256": "176e78534db91ad9c3c6f441676fa6a506470e344b5acba7060262a0d0b973a6",
-  "toolchain_lock_sha256": "25eba4659e5817f1d90d1511facff15afadcaa463be3b6aea491bc145a8dc4d4",
+  "publication_profile_sha256": "a29f4eb7af74f2e13843b5db8386fe7dd4c837def4c5c199fbae2c30a7acb774",
+  "toolchain_lock_sha256": "d9b1ecbba2e34e34ec06bb4eeac383e90d8f8ed55e8c32dde1f4b5bc7daac263",
   "tex_live_dependencies": {
     "fvextra": {
       "tex_live_package": "fvextra",
