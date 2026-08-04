@@ -245,7 +245,7 @@ class MigrationLedgerTests(unittest.TestCase):
         )
         migration = inventory["migration"]
         self.assertEqual(migration["authoritative_mathematics_occurrences"], 673)
-        self.assertEqual(migration["preserved_literal_code_occurrences"], 113)
+        self.assertEqual(migration["preserved_literal_code_occurrences"], 114)
         self.assertEqual(
             migration["preserved_semantic_registry_id_occurrences"],
             94,
@@ -256,8 +256,8 @@ class MigrationLedgerTests(unittest.TestCase):
             inventory["totals"],
             {
                 "sources": 7,
-                "occurrences": 207,
-                "literal-code": 113,
+                "occurrences": 208,
+                "literal-code": 114,
                 "semantic-registry-id": 94,
                 "mathematics": 0,
             },
@@ -493,7 +493,7 @@ class MarkdownRenderingTests(unittest.TestCase):
             )
             total += len(expected)
 
-        self.assertEqual(total, 162)
+        self.assertEqual(total, 163)
         self.assertTrue(all(r"\appendix" not in content for content in tree.values()))
 
     def test_source_heading_labels_are_preserved_in_starred_latex_commands(self):
