@@ -2,21 +2,21 @@
   "schema": "orthemology-pdf-sources-v2",
   "artifact_id": "notation-gallery",
   "pdf": "notation-gallery.pdf",
-  "pdf_sha256": "3afc21e00ae807d18d1c5158e82f698c5a90a179b08d77c501ed1480051ea8f4",
+  "pdf_sha256": "576d4ee578484aff4b1d72dc554a66c711ced3c74b90ff5a7197a6f8f0e842b0",
   "page_count": 2,
-  "source_commit": "f35047bd50e2f20c6bac586fbffef71cd6976457",
-  "source_tree": "3264be719ef87985cb39809ee7a8954c26fb6d08",
-  "independently_reviewed_equivalent_source_commit": "f35047bd50e2f20c6bac586fbffef71cd6976457",
-  "independently_reviewed_equivalent_source_tree": "3264be719ef87985cb39809ee7a8954c26fb6d08",
+  "source_commit": "cbcbe81959a9b757b2831bb1431adc9bd8d9ab51",
+  "source_tree": "785ff9bd7d59fa6168e7fa836fa95092d84a3f8f",
+  "independently_reviewed_equivalent_source_commit": "cbcbe81959a9b757b2831bb1431adc9bd8d9ab51",
+  "independently_reviewed_equivalent_source_tree": "785ff9bd7d59fa6168e7fa836fa95092d84a3f8f",
   "source_tree_equivalence": "verified-identical",
-  "source_date_epoch": 1785893136,
-  "build_time_utc": "2026-08-05T01:25:36Z",
+  "source_date_epoch": 1785893690,
+  "build_time_utc": "2026-08-05T01:34:50Z",
   "source_hashes": {
     "markdown": {
       "docs/notation-gallery.md": "449ead6c2f13ae066cf0ae20d3b08f76e498bf58c3c8b18da34e70a8d2863b49"
     },
     "latex": {
-      "publication/latex/notation-gallery/main.tex": "05a80596c5f039646a7a3a55d4d350a8a705986897e1092a05078e231cea36b4"
+      "publication/latex/notation-gallery/main.tex": "486ce38150cddba6b445cdeb98f3f21d70cedde95150859bfbe33930e2c27b5c"
     },
     "bibliography": {
       "path": "references/orthemology.bib",
@@ -29,11 +29,11 @@
   },
   "publication_profile": {
     "path": "docs/publication-profile.yaml",
-    "sha256": "9eec622814fe362a3c9d0f2d7b2c00268cb2d83bbf6723dd3abb84d446e461d0"
+    "sha256": "6f395919ac23520d6abee0e920322d093b27be6beff67d9ea6c51a0fca49e8c2"
   },
   "toolchain_lock": {
     "path": "publication/toolchain-lock.yaml",
-    "sha256": "417f48599ae3bc4bcc4e187491f5b3300280c969b48d74bb2490742d1a1c72ea"
+    "sha256": "c3134feb68df89c341a033969d24bf5959e138f3dcf07a8e9f0cef807a8c5a2b"
   },
   "candidate_status": {
     "source": "docs/current-candidate-state.yaml",
@@ -59,11 +59,11 @@
   "build_command": "/usr/local/texlive/2025/bin/x86_64-linux/latexmk main.tex",
   "source_package": {
     "path": "artifacts/notation-gallery.source.tar.gz",
-    "sha256": "fdfe18c6f193ae9e5e655611995a5c286a5fbd08dd79880871a869e816e3730a"
+    "sha256": "223a13dafbb31fbf4b2e2430b7ece572a09d019ccd4fb045b07fd5a8f06d5ecf"
   },
   "source_manifest": {
     "path": "artifacts/notation-gallery.source-manifest.json",
-    "sha256": "160c5e47098ef23336223b93d2ad8fb733d21c219bf82fa2555181d469671946"
+    "sha256": "23a49a0395961fbbe58441da1bd0b05515b85d7e183075e5c7eacb88f7770c77"
   },
   "tools": {
     "bibtex": "0.99d",

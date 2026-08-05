@@ -42,14 +42,14 @@ required byte parity with the repository artifacts. Both invocations returned
 
 | Artifact | Pages | PDF SHA-256 | Source archive SHA-256 | Source manifest SHA-256 |
 |---|---:|---|---|---|
-| `orthemma-ortheme-systems-draft` | 25 | `f6ec5827674e97614f5040134e8e6bc65407c9b76cbb1e4c14d461f60876c29b` | `84d1736e78486ecc1c91c64aa5a5cc4f98e1414a581ecbe684eba3ad09be8608` | `d9dd0d6f8889ea1db75eeda8c80c24ba68091ae24e0647795561a58973c3ffe6` |
-| `orthemic-core-reference-draft` | 14 | `caaa008ce2f7fc26f060a291fdc4f2e0102445b37fb5204e0bef0d3271eadaec` | `e1eb737006855ab9e26bf71d1f21051c61ee244bb827adb1616a24ddfdf18fce` | `360fea9d56f46782725f8d738e7e259bbddbd5cd9ae5a054ea8f841161770f81` |
-| `orthability-ground-of-intelligibility-draft` | 8 | `73f258620e52e72f4eec2c220cbae1f6b51d6ed7c1ee950753ca2f42a9dff9e3` | `a9f32faf4b7f5a09aa7ddbb60dca63461eb268e4b0221e2c7a65cda3093fda29` | `4e33495b8c1430be00f73e95d1be79cff48fa00442a8335fa551384284f62082` |
-| `orthability-divine-speech-athari-draft` | 6 | `b52c20c2a56f894196ad8f3c96a2d09dcda1a9bb4484dbc9d59894d3c6786be9` | `0e6644ca794761be2ccf215c0f6dc89f417e77a7806fe18c00c1e0828f49ea2e` | `ed640c8431186bcb4049c169b44946071ebd01edc93946399a89c6abb78cf1f0` |
-| `dynamic-orthing-noetic-learning-orthability-draft` | 5 | `d751b33900cfdee6c6de97df3fcec6f0704bd2a2ff707e59efa2da343b93c403` | `9134851ff363fe4a29120458092260b20cda3074e54245899c0c04b445ddc791` | `60ef089a6d5ff816e927e8a71c4aded7c22bd9a0862c44d36501c3fd8bba5421` |
-| `notation-gallery` | 2 | `3afc21e00ae807d18d1c5158e82f698c5a90a179b08d77c501ed1480051ea8f4` | `fdfe18c6f193ae9e5e655611995a5c286a5fbd08dd79880871a869e816e3730a` | `160c5e47098ef23336223b93d2ad8fb733d21c219bf82fa2555181d469671946` |
+| `orthemma-ortheme-systems-draft` | 25 | `60b96b6ef13e2350d5f4b671829784c9b04a86f5f457a626d8730dad11bc12db` | `30dcd4dfb647d9f0c5a47262edb82a3047440385ceca11026fb78bdf16e394ab` | `f1033337a942df285ff475a824f17c9b21cf7a127f266d8a341b28a4413a1b1d` |
+| `orthemic-core-reference-draft` | 15 | `d6154668d5cb084f1e43c098656a8546335e7fc64bea9c0f3a0cb665d9abb663` | `88fa3aacac7c032fe9e55cc261a4620b3b52623564dfa89caae3e3d4597cc345` | `ff7c1c810d73da3d67e93c1991c4335a41855c28e642fec1f4753ab502745bf5` |
+| `orthability-ground-of-intelligibility-draft` | 8 | `0852d5ef0a4f86720613a9964261f5c7e0c3c992230f8fd6d1440ab35136dfb8` | `ef0fcaf1d2b6256318554e69c2f6501d1d28357f10ef0ce0849c96e01bfd3600` | `8c4429d16d9054daca9b71a7771aa71deb0a41187e105e60f633c97a46272c80` |
+| `orthability-divine-speech-athari-draft` | 6 | `93a860a95687f2be5fc74e57c389902e60e7e7fc0c1035c2caae31bbdeacc5e7` | `95749bd1e83dde73f230b275403e88f0748a8b9abe9fc7ea6016112cbf3c79c6` | `11fdc4df53e9c660f2ac2a673492a5a8d7c04c76dee44ecdc431a5b77f65efd7` |
+| `dynamic-orthing-noetic-learning-orthability-draft` | 5 | `074b00e16ad47583c396e81722ca3b7d187f048a2358ac7a3e9c9222b784a588` | `3adc903262f5a34270cda28e8db4ed307e96bc5d3d9ada18f4b307b934c64970` | `e38d11fd718d67d5ba8629bf37f93956d0139cc1d1e9b2cd0ded1b2267f2720d` |
+| `notation-gallery` | 2 | `576d4ee578484aff4b1d72dc554a66c711ced3c74b90ff5a7197a6f8f0e842b0` | `223a13dafbb31fbf4b2e2430b7ece572a09d019ccd4fb045b07fd5a8f06d5ecf` | `23a49a0395961fbbe58441da1bd0b05515b85d7e183075e5c7eacb88f7770c77` |
 
-Total final page count: `60`.
+Total final page count: `61`.
 
 ## Verified gates
 

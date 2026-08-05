@@ -1,21 +1,21 @@
 {
   "schema": "orthemology-source-manifest-v1",
   "artifact_id": "notation-gallery",
-  "source_commit": "f35047bd50e2f20c6bac586fbffef71cd6976457",
-  "source_tree": "3264be719ef87985cb39809ee7a8954c26fb6d08",
-  "independently_reviewed_equivalent_source_commit": "f35047bd50e2f20c6bac586fbffef71cd6976457",
-  "independently_reviewed_equivalent_source_tree": "3264be719ef87985cb39809ee7a8954c26fb6d08",
+  "source_commit": "cbcbe81959a9b757b2831bb1431adc9bd8d9ab51",
+  "source_tree": "785ff9bd7d59fa6168e7fa836fa95092d84a3f8f",
+  "independently_reviewed_equivalent_source_commit": "cbcbe81959a9b757b2831bb1431adc9bd8d9ab51",
+  "independently_reviewed_equivalent_source_tree": "785ff9bd7d59fa6168e7fa836fa95092d84a3f8f",
   "source_tree_equivalence": "verified-identical",
-  "source_date_epoch": 1785893136,
+  "source_date_epoch": 1785893690,
   "archive": {
     "path": "artifacts/notation-gallery.source.tar.gz",
-    "sha256": "fdfe18c6f193ae9e5e655611995a5c286a5fbd08dd79880871a869e816e3730a",
+    "sha256": "223a13dafbb31fbf4b2e2430b7ece572a09d019ccd4fb045b07fd5a8f06d5ecf",
     "format": "tar-gzip-ustar"
   },
   "entry_point": "publication/latex/notation-gallery/main.tex",
   "build_workdir": "publication/latex/notation-gallery",
-  "publication_profile_sha256": "9eec622814fe362a3c9d0f2d7b2c00268cb2d83bbf6723dd3abb84d446e461d0",
-  "toolchain_lock_sha256": "417f48599ae3bc4bcc4e187491f5b3300280c969b48d74bb2490742d1a1c72ea",
+  "publication_profile_sha256": "6f395919ac23520d6abee0e920322d093b27be6beff67d9ea6c51a0fca49e8c2",
+  "toolchain_lock_sha256": "c3134feb68df89c341a033969d24bf5959e138f3dcf07a8e9f0cef807a8c5a2b",
   "tex_live_dependencies": {
     "fvextra": {
       "tex_live_package": "fvextra",
@@ -81,8 +81,8 @@
     },
     {
       "path": "publication/latex/notation-gallery/main.tex",
-      "sha256": "05a80596c5f039646a7a3a55d4d350a8a705986897e1092a05078e231cea36b4",
-      "bytes": 13499,
+      "sha256": "486ce38150cddba6b445cdeb98f3f21d70cedde95150859bfbe33930e2c27b5c",
+      "bytes": 13948,
       "mode": "0644",
       "role": "entry-point"
     },

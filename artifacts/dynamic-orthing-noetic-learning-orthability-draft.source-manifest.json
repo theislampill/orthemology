@@ -1,21 +1,21 @@
 {
   "schema": "orthemology-source-manifest-v1",
   "artifact_id": "dynamic-orthing-noetic-learning-orthability-draft",
-  "source_commit": "f35047bd50e2f20c6bac586fbffef71cd6976457",
-  "source_tree": "3264be719ef87985cb39809ee7a8954c26fb6d08",
-  "independently_reviewed_equivalent_source_commit": "f35047bd50e2f20c6bac586fbffef71cd6976457",
-  "independently_reviewed_equivalent_source_tree": "3264be719ef87985cb39809ee7a8954c26fb6d08",
+  "source_commit": "cbcbe81959a9b757b2831bb1431adc9bd8d9ab51",
+  "source_tree": "785ff9bd7d59fa6168e7fa836fa95092d84a3f8f",
+  "independently_reviewed_equivalent_source_commit": "cbcbe81959a9b757b2831bb1431adc9bd8d9ab51",
+  "independently_reviewed_equivalent_source_tree": "785ff9bd7d59fa6168e7fa836fa95092d84a3f8f",
   "source_tree_equivalence": "verified-identical",
-  "source_date_epoch": 1785893136,
+  "source_date_epoch": 1785893690,
   "archive": {
     "path": "artifacts/dynamic-orthing-noetic-learning-orthability-draft.source.tar.gz",
-    "sha256": "9134851ff363fe4a29120458092260b20cda3074e54245899c0c04b445ddc791",
+    "sha256": "3adc903262f5a34270cda28e8db4ed307e96bc5d3d9ada18f4b307b934c64970",
     "format": "tar-gzip-ustar"
   },
   "entry_point": "publication/latex/dynamic-orthing-noetic-learning-orthability-draft/main.tex",
   "build_workdir": "publication/latex/dynamic-orthing-noetic-learning-orthability-draft",
-  "publication_profile_sha256": "9eec622814fe362a3c9d0f2d7b2c00268cb2d83bbf6723dd3abb84d446e461d0",
-  "toolchain_lock_sha256": "417f48599ae3bc4bcc4e187491f5b3300280c969b48d74bb2490742d1a1c72ea",
+  "publication_profile_sha256": "6f395919ac23520d6abee0e920322d093b27be6beff67d9ea6c51a0fca49e8c2",
+  "toolchain_lock_sha256": "c3134feb68df89c341a033969d24bf5959e138f3dcf07a8e9f0cef807a8c5a2b",
   "tex_live_dependencies": {
     "fvextra": {
       "tex_live_package": "fvextra",
@@ -81,8 +81,8 @@
     },
     {
       "path": "publication/latex/dynamic-orthing-noetic-learning-orthability-draft/main.tex",
-      "sha256": "d77021704e0790c5128164dc7de3c62eff516761c67c58b79b4ff043b1d866fb",
-      "bytes": 25391,
+      "sha256": "4a32bb0d66b69710f55eae3fedbb2337c1c7c84b8798818e97b5f58da0fd3af4",
+      "bytes": 26083,
       "mode": "0644",
       "role": "entry-point"
     },
