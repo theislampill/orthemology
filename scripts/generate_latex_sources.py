@@ -1134,7 +1134,11 @@ def render_markdown(markdown, source_name="<memory>", root=None):
             if command == "part*":
                 guard = "\\clearpage\n"
             elif command in ("section*", "subsection*", "subsubsection*"):
-                guard = "\\needspace{4\\baselineskip}\n"
+                # a column-mode switch already forces fresh placement, and
+                # the arxiv validator requires onecolumn/heading adjacency
+                prev = output[-1] if output else ""
+                if not prev.rstrip().endswith(("\\onecolumn", "\\twocolumn")):
+                    guard = "\\needspace{4\\baselineskip}\n"
             output.append(
                 "\n%s\\%s{%s}\n"
                 % (guard, command, rendered_heading)
