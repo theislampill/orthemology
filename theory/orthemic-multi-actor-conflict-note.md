@@ -108,29 +108,13 @@ actor/analysis-indexed; the episode graph couples episodes
 over one lineage. **New derived definitions worth adding (clarification,
 NOT a new formal addition — the six-addition count is unchanged):**
 
-```text
-x_α = Ω_α(m)         actor-α's OBSERVATION of the shared occurrence m
-                     (imperfect information: Ω_α(m) ≠ Ω_β(m) over ONE m)
-p̂(e, α, T_α)        the current inferred profile of actor α's episode e
-                     under its analysis A_α, task T_α = task(A_α)
-                     (inferred FROM x_α, never from m directly)
-GoalSchema(·)   a PARAMETRIC ortheme schema — the shared
-                     goal-form under role substitution ("win for α")
-𝒢_{α,A_α} ⊆ Π_{A_α}  actor-α's grounded TARGET PROFILE SET: the profiles
-                     T_α declares appropriate as outcomes — the schema's
-                     instantiation at α. NORMATIVE TYPING: a SET of
-                     profiles; each member is one complete profile
-φ(α→β)               a role/perspective isomorphism between Π_{A_α} and
-                     Π_{A_β}, when one exists
-                     (schema invariance: 𝒢_{β,A_β} = φ(𝒢_{α,A_α}))
-Compat_m(𝒢_α, 𝒢_β)    ∃ m′ ∈ Reach(m): O*(m′; A_α) ∈ 𝒢_α ∧ O*(m′; A_β) ∈ 𝒢_β
-                     (well-typed: one shared occurrence, each analysis
-                     evaluating in its own profile space — never bare
-                     intersection of sets from different spaces)
-Conflict_m(𝒢_α, 𝒢_β)  no such reachable m′ exists
-                     (cooperation: shared analysis + shared target set,
-                     or an explicit alignment map φ(α→β))
-```
+- $x_\alpha = \Omega_\alpha(m)$ — actor-$\alpha$'s **observation** of the shared occurrence $m$ (imperfect information: $\Omega_\alpha(m) \neq \Omega_\beta(m)$ over one $m$);
+- $\hat{p}(e, \alpha, T_\alpha)$ — the current inferred profile of actor $\alpha$'s episode $e$ under its analysis $A_\alpha$, task $T_\alpha = \operatorname{task}(A_\alpha)$ (inferred from $x_\alpha$, never from $m$ directly);
+- $\operatorname{GoalSchema}(\cdot)$ — a **parametric** ortheme schema, the shared goal-form under role substitution (win-for-$\alpha$);
+- $\mathcal{G}_{\alpha,A_\alpha} \subseteq \Pi_{A_\alpha}$ — actor-$\alpha$'s grounded **target profile set**: the profiles $T_\alpha$ declares appropriate as outcomes — the schema's instantiation at $\alpha$. Normative typing: a *set* of profiles, each member one complete profile;
+- $\phi(\alpha \to \beta)$ — a role/perspective isomorphism between $\Pi_{A_\alpha}$ and $\Pi_{A_\beta}$, when one exists (schema invariance: $\mathcal{G}_{\beta,A_\beta} = \phi(\mathcal{G}_{\alpha,A_\alpha})$);
+- $\operatorname{Compat}_m(\mathcal{G}_\alpha, \mathcal{G}_\beta)$ — $\exists\, m' \in \operatorname{Reach}(m):\ O^*(m'; A_\alpha) \in \mathcal{G}_\alpha \wedge O^*(m'; A_\beta) \in \mathcal{G}_\beta$ (well-typed: one shared occurrence, each analysis evaluating in its own profile space — never bare intersection of sets from different spaces);
+- $\operatorname{Conflict}_m(\mathcal{G}_\alpha, \mathcal{G}_\beta)$ — no such reachable $m'$ exists (cooperation: shared analysis $+$ shared target set, or an explicit alignment map $\phi(\alpha \to \beta)$).
 
 **Three distinct relations the parametric schema untangles:**
 (i) SCHEMA identity — players A and B run the same parametric form $\operatorname{GoalSchema}(\cdot)$; this is

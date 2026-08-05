@@ -23,7 +23,7 @@ OUTPUT_PATH = pathlib.Path("publication/latex")
 LONG_TABLE_ROW_THRESHOLD = 10
 LONG_TABLE_TOTAL_CONTENT_THRESHOLD = 1500
 LONG_TABLE_MAX_ROW_CONTENT_THRESHOLD = 800
-BREAKABLE_TABLE_COLUMN_THRESHOLD = 5
+BREAKABLE_TABLE_COLUMN_THRESHOLD = 3
 DISPLAY_MATH_MULTLINE_THRESHOLD = 120
 DISPLAY_MATH_TARGET_WIDTH = 72
 DISPLAY_MATH_LAYOUT_BREAK = "\\\\\n"
@@ -992,7 +992,11 @@ def _render_standard_table(table, columns, rows):
 
 
 def _normal_flow_header_label(header, column_index):
-    label = header if header else "Column %d" % (column_index + 1)
+    # An empty header yields no label: the cell itself leads the line in
+    # bold (PR #21 repair: no 'Column N' placeholder labels in output).
+    if not header:
+        return None
+    label = header
     if label.startswith(r"\textbf{") and label.endswith("}"):
         label = label[len(r"\textbf{") : -1]
     return r"\textbf{%s}:" % label
@@ -1025,16 +1029,20 @@ def _render_breakable_table(
             "%% breakable-row: %d/%d\n" % (row_index + 1, len(rows))
         )
         for column_index, cell in enumerate(row):
-            output.append(
-                "\\noindent%s %s\\par\n"
-                % (
-                    _normal_flow_header_label(
-                        headers[column_index],
-                        column_index,
-                    ),
-                    cell,
-                )
+            label = _normal_flow_header_label(
+                headers[column_index],
+                column_index,
             )
+            if label is None:
+                if not cell:
+                    continue
+                output.append(
+                    "\\noindent\\textbf{%s}\\par\n" % cell
+                )
+            else:
+                output.append(
+                    "\\noindent%s %s\\par\n" % (label, cell)
+                )
         if row_index != len(rows) - 1:
             output.extend(
                 [
@@ -1130,9 +1138,18 @@ def render_markdown(markdown, source_name="<memory>", root=None):
                 math,
                 link_resolver=link_resolver,
             )
+            guard = ""
+            if command == "part*":
+                guard = "\\clearpage\n"
+            elif command in ("section*", "subsection*", "subsubsection*"):
+                # a column-mode switch already forces fresh placement, and
+                # the arxiv validator requires onecolumn/heading adjacency
+                prev = output[-1] if output else ""
+                if not prev.rstrip().endswith(("\\onecolumn", "\\twocolumn")):
+                    guard = "\\needspace{4\\baselineskip}\n"
             output.append(
-                "\n\\%s{%s}\n"
-                % (command, rendered_heading)
+                "\n%s\\%s{%s}\n"
+                % (guard, command, rendered_heading)
             )
             index += 3
             continue
@@ -1187,7 +1204,11 @@ def render_markdown(markdown, source_name="<memory>", root=None):
             else:
                 if r"\end{verbatim}" in content:
                     raise GenerationError("code block contains an unsafe verbatim terminator")
-                output.append("\n\\begin{verbatim}\n%s\n\\end{verbatim}\n" % content)
+                output.append(
+                    "\n\\needspace{3\\baselineskip}\n"
+                    "\\begingroup\\small\n\\begin{verbatim}\n%s\n\\end{verbatim}\n\\endgroup\n"
+                    % content
+                )
             index += 1
             continue
         if kind == "hr":
@@ -1282,6 +1303,7 @@ EXPECTED_DIRECT_PACKAGES = [
     "hyperref",
     "microtype",
     "natbib",
+    "needspace",
     "xcolor",
 ]
 EXPECTED_SUPPORTED_PACKAGES = EXPECTED_DIRECT_PACKAGES + ["fvextra"]
@@ -1336,6 +1358,13 @@ def render_artifact(profile, artifact, source_texts, *, root=None):
         "\\geometry{letterpaper,margin=0.75in}\n",
         "\\hypersetup{colorlinks=true,linkcolor=blue,urlcolor=blue,citecolor=blue}\n",
         "\\setlength{\\emergencystretch}{3em}\n",
+        "% visual-QA guards (PR #21 repair): no orphan/widow lines; headings\n",
+        "% keep following content; companion parts start on fresh pages.\n",
+        "\\clubpenalty=10000\n",
+        "\\widowpenalty=10000\n",
+        "\\displaywidowpenalty=10000\n",
+        "\\brokenpenalty=10000\n",
+        "\\raggedbottom\n",
         "\\title{%s}\n" % _escape_text(title),
         "\\author{}\n",
         "\\date{}\n",

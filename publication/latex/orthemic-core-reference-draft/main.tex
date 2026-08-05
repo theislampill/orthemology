@@ -2,7 +2,7 @@
 % source: theory/orthemic-core-formalization.md
 % source-sha256: f55d98aa2dcaad231c769aa94e42fd0cec416361269c7d957b203669ca62dd72
 % source: theory/orthemic-multi-actor-conflict-note.md
-% source-sha256: f56a56a428504e990096af1d0f9394d3f99250d488509ff182f10ca5113971c5
+% source-sha256: aa7b1378b1f1983c3ec406fb2533a68c6242881c2d04bf34470632b37359d7b9
 % source-qualification: research-stage-draft
 % source-qualification: not-peer-reviewed
 % source-qualification: not-externally-peer-reviewed
@@ -16,10 +16,18 @@
 \usepackage{hyperref}
 \usepackage{microtype}
 \usepackage{natbib}
+\usepackage{needspace}
 \usepackage{xcolor}
 \geometry{letterpaper,margin=0.75in}
 \hypersetup{colorlinks=true,linkcolor=blue,urlcolor=blue,citecolor=blue}
 \setlength{\emergencystretch}{3em}
+% visual-QA guards (PR #21 repair): no orphan/widow lines; headings
+% keep following content; companion parts start on fresh pages.
+\clubpenalty=10000
+\widowpenalty=10000
+\displaywidowpenalty=10000
+\brokenpenalty=10000
+\raggedbottom
 \title{Orthemic Core Formalization — Orthing, Episodes, Metaorthemes, Pathway Adequacy}
 \author{}
 \date{}
@@ -40,16 +48,20 @@
 \vspace{1em}
 ]
 
+\needspace{4\baselineskip}
 \section*{1. Type/token resolution (2A)}
 \textbf{Orthing} (gloss: the doing of apprehension-and-handling) is a process TYPE: the rule-governed, evidence-updating operation kind by which an orthemma is individuated, observed, assigned a candidate and then inferred profile of orthemes, routed, validated, dispositioned, and revised under governing metaorthemes. It stands to its runs as "compilation" stands to "the 14:32 build of commit \texttt{abc123}." \textbf{An orthing episode} $e$ (gloss: one dated, situated run of that operation) is a concrete TOKEN: it has an actor, a time, an input occurrence, and a result, and two episodes are distinct occurrences even when inputs and outputs agree.
 
 \textbf{Level-indexing.} Let $M^{(0)}$ be the base domain of orthemmata and $E^{(0)}$ the class of episodes placing members of $M^{(0)}$. When a higher audit asks "was this placement made correctly, on adequate evidence, under an adequate rule?", the episode is itself apprehended. This is an explicit \textbf{reification embedding}, not literal set inclusion — an episode is a different kind of thing from a jar of powder, and becomes a base occurrence of the higher audit only by being cast as one: for each level $n$,
 
 
+\needspace{3\baselineskip}
+\begingroup\small
 \begin{verbatim}
 ι_n : E^(n) ↪ M^(n+1)   (injective; ι_n(e) is "the episode e, considered
                          as a case to be audited")
 \end{verbatim}
+\endgroup
 (gloss: yesterday's classification act, re-cast as today's case). Writing $\supseteq$ here would falsely assert episodes are already members of the base domain; the embedding records that a modeling step turns one into the other. The audit's orthemes at level $n+1$ are pathway state-types — \emph{evidence-sufficient placement}, \emph{stale-rule placement}, \emph{false closure} — precisely the §4 verdicts. This applies the manuscript's own licensed move ("metaorthemes can become first-order orthemes for a higher audit," §6) to the token side; the regress stops, as there, at a declared governance boundary.
 
 \textbf{Why no separate "meta-orthemma" term.} The originating project notes float the noun "meta-orthemma" for the concrete operation. It is not adopted. Against the manuscript's own anti-vacuity standard, a new noun class must change at least one of representation, evidence, routing, or prediction; it changes none. \emph{Representation:} the embedding $\iota_n : E^{(n)} \hookrightarrow M^{(n+1)}$ already types the reified episode as an orthemma of the higher domain. \emph{Evidence:} what audits an episode is its signature record (§2) — a property of the domain, not of a new noun. \emph{Routing:} audits route episodes through the same lifecycle as any orthemma. \emph{Prediction:} nothing sayable with "meta-orthemma" is unsayable with "the reified episode $\iota_n(e) \in M^{(n+1)}$."
@@ -61,8 +73,10 @@
 
 \bigskip\hrule\bigskip
 
+\needspace{4\baselineskip}
 \section*{2. Episode signature (2B)}
 
+\needspace{4\baselineskip}
 \subsection*{2.1 Candidate formulations compared}
 \textbf{Candidate F (function style).} $e_\mu(m) = \hat o$: an episode governed by metaortheme $\mu$ maps orthemma $m$ to one ortheme; correct when $\hat o = o^*$. Virtues: minimal, mnemonic, correctness in one equation. Defects, each fatal for the paper's own commitments: (i) singleton output contradicts plural profiles (Def. 3) and route-sufficient apprehension (Def. 7); (ii) the episode is identified with its output — the function's \emph{value} — leaving no object to audit when the answer is right but the pathway defective; (iii) evidence, actor, time, route, residuals, and the successor occurrence have no slot; (iv) $\mu$ is one subscript, but real episodes run under several governing rules at once (§3.4).
 
@@ -71,6 +85,7 @@
 \textbf{Resolution:} adopt R as the definition; retain F as \emph{derived} notation for one placement inside an episode (2.3).
 
 
+\needspace{4\baselineskip}
 \subsection*{2.2 Recommended signature (formal)}
 An \textbf{orthing episode} is a record
 
@@ -256,18 +271,23 @@ $\Pi_A$ — with $\Pi_T$ its licensed shorthand under the standing convention �
 \textbf{Plain-language key for governed-component letters used below:} $O$ = the ortheme repertoire (which state-types exist); $I$ = individuation/identity (what counts as the same case, versioning); $E$ = evidence procedure (what evidence counts, at what grade); $D$ = disclosure/uncertainty handling (what may be left open and how it is declared); $R$ = routing (where cases are sent); $V$ = validation/closure (what may be called done, at what standard); $W$ = warrant/authorization-state classification (which warrant states exist — authorized vs factually established — and what each licenses).
 
 
+\needspace{4\baselineskip}
 \subsection*{2.2a Endpoint plus bounded trace}
 The record above is the REQUIRED endpoint. Because orthing is defined as evidence-updating, an endpoint alone cannot always adjudicate pathway verdicts; where those verdicts (V2b-P truth-conduciveness, V3d executor fidelity, V6 robustness — §4) must be adjudicated from the episode's own record, an ordered \textbf{trace} is also required:
 
 
+\needspace{3\baselineskip}
+\begingroup\small
 \begin{verbatim}
 Trace_e = (s_0, u_1, s_1, …, u_k, s_k)
 \end{verbatim}
+\endgroup
 where each state $s_i$ snapshots the current evidence, candidate families, inferred placement, route, and open residuals, and each update $u_i$ records an evidence acquisition, selection, routing, action, or revision step (with the rule edition $\operatorname{ver}(\mu)$ in force). \textbf{Governance declares the trace granularity}; trivial cases carry no trace, and maximal per-event logging is never a blanket requirement.
 
 \textbf{Partial applicability.} Not every episode has a route, a mutation, a closure claim, or open residuals. Components are defined \textbf{where applicable}: a read-only classification episode has $a = \bot$ (no action), $\operatorname{Succ} = \emptyset$ (no successor created), possibly $r = \bot$ (no downstream route), and an empty $\delta$. Where a component is $\bot$, the verdicts that quantify over it (V4a route, V5 closure — §4) are \textbf{not asserted of that episode} rather than counted as failures; formally, pathway adequacy conjoins over the governance-DERIVED required set $\operatorname{ReqPath}(e)$ (§4.1, Decision 0003) — applicability is derived from the declared analysis, episode shape, risk class, claims, and governance, never a discretionary post-hoc list, and every verdict excluded from $\operatorname{ReqPath}(e)$ carries a recorded \texttt{not-applicable} reason on the episode record. So "no route" (deliberately none, with reason) is distinguished from "route omitted" (a defect), and "not tested" is never "not applicable".
 
 
+\needspace{4\baselineskip}
 \subsection*{2.3 Three separations, stated once}
 
 \begin{enumerate}
@@ -290,10 +310,12 @@ e \models_{\mu} (m : \hat{o}) \iff\\
 
 \bigskip\hrule\bigskip
 
+\needspace{4\baselineskip}
 \section*{3. Metaortheme semantics (2C)}
 \textbf{Type vs token (Decision 0002).} This section describes the REPEATABLE side: the metaortheme type $\mu$ and its paired meta-policy $\pi_\mu$. Their concrete, case-bound instantiation inside an episode is the \textbf{metaorthemma} $\bar{\mu}$ (§2.2), typed by the internal relation $\operatorname{MetaInst}(\bar{\mu}, \mu)$ — a typing of tokens, not a second ground-truth primitive — and subordinated to the episode's analysis by $\operatorname{Compatible}(\bar{\mu}, A(e))$. Four layers stay separate: type $\mu$; policy $\pi_\mu$; token $\bar{\mu}$ (binding); execution of the token (episode trace, judged by V3d). The corresponding adequacy questions are independent: adequate type, adequate policy, correctly bound token, faithful execution.
 
 
+\needspace{4\baselineskip}
 \subsection*{3.1 Three models}
 
 \begin{itemize}
@@ -306,6 +328,7 @@ e \models_{\mu} (m : \hat{o}) \iff\\
 
 \end{itemize}
 
+\needspace{4\baselineskip}
 \subsection*{3.2 Minimum-specificity test against the five worked examples}
 
 % breakable-row-table: data-rows=5 total-rendered-characters=1363 max-row-rendered-characters=287
@@ -365,12 +388,14 @@ e \models_{\mu} (m : \hat{o}) \iff\\
 Verdict per model: \textbf{A} captures competing states but has no slot for the last column — a state with no conduct attached governs nothing. \textbf{B} captures conduct but fails the manuscript's anti-vacuity clause (iv) — a rule renamed as a noun — and cannot say what two rules consulting the \emph{same} distinction (quarantine vs re-derive on staleness) have in common. \textbf{C} fills every cell of every row; the state/policy split is load-bearing exactly where B collapses (same $S_\mu$, different $\pi_\mu$).
 
 
+\needspace{4\baselineskip}
 \subsection*{3.3 Recommendation}
 \textbf{Adopt (C).} It is the only model under which all five worked examples pass minimum specificity; it matches Definition 9's prose; it makes rule-adequacy (§4, V3a) a predicate on $\mu$ separable from executor error in $\pi_\mu$; and it gives lesson-lift a target (revise $S_\mu$ or $\operatorname{select}_\mu$) distinct from retraining conduct (revise $\pi_\mu$).
 
 \textbf{Preserved downsides of (C):} two objects per rule is real bookkeeping; most working systems will implement (B) and only reconstruct the split when audited — (C) is the audit-grade description, not a claim about how practitioners write rules; boundary cases blur state and policy (a numeric threshold is at once a state boundary and a conduct trigger); and the split invites proliferation — every \texttt{if}-statement can be dressed as configuration-plus-policy — which the safeguards below must block.
 
 
+\needspace{4\baselineskip}
 \subsection*{3.4 Plurality, conflict, precedence, provenance, revision, safeguards}
 
 \begin{itemize}
@@ -390,8 +415,10 @@ Verdict per model: \textbf{A} captures competing states but has no slot for the 
 
 \bigskip\hrule\bigskip
 
+\needspace{4\baselineskip}
 \section*{4. Pathway adequacy (2D)}
 
+\needspace{4\baselineskip}
 \subsection*{4.1 Separate verdicts}
 All verdicts are predicates on an episode $e$ (some claim-indexed). \textbf{The verdicts diagnose distinct dimensions and are not identified with one another; they are NOT assumed pairwise logically independent.} Every definitional or logical implication is declared explicitly in the implication table at the end of this section; no implication may be inferred merely from proximity in the verdict numbering (Decision 0003; this supersedes the earlier "none entails another"). Verdict labels follow the normative registry (\href{\detokenize{../docs/verdict-registry.yaml}}{\texttt{docs/\allowbreak{}verdict-\allowbreak{}registry.\allowbreak{}yaml}}, Decision 0004): semantic IDs are authoritative in machine-readable records, and the display aliases below are the prose forms. \textbf{Compact core (main text):} result correctness; evidential support; procedure truth-conduciveness; rule adequacy; executor fidelity; route safety; closure truthfulness; robustness. \textbf{Full vector (this table)} — the finer splits matter to audits; ordinary discussion may use the compact core:
 
@@ -429,18 +456,24 @@ All verdicts are predicates on an episode $e$ (some claim-indexed). \textbf{The 
 \textbf{Result-free pathway core (Decision 0003).}
 
 
+\needspace{3\baselineskip}
+\begingroup\small
 \begin{verbatim}
 CorePath = { V2a, V2b-P, V2c, V3a, V3b, V3c, V3d, V3e, V4a, V5, V6 }
 \end{verbatim}
+\endgroup
 Excluded by construction: \textbf{V1} (result correctness), \textbf{V2b-T} (factive token-level truth linkage — entails claim truth), and \textbf{V4b} (route near-optimality — an advisory/quality verdict recorded separately; a route can be safe and adequate without being optimal).
 
 \textbf{Governed applicability.} Pathway applicability is DERIVED, never a discretionary post-hoc list — an executor cannot exempt a failing or untested verdict by omitting it:
 
 
+\needspace{3\baselineskip}
+\begingroup\small
 \begin{verbatim}
 ReqPath(e) = CorePath ∩ RequiredBy( A(e), episode-shape(e),
                risk-class(e), claims(e), governance(e) )
 \end{verbatim}
+\endgroup
 Minimum derivation rules: \textbf{V3c} is required exactly when $\operatorname{MetaTok}(e) \neq \emptyset$ (the M1 zero-burden rule is preserved: $\operatorname{MetaTok}(e) = \emptyset \Rightarrow \operatorname{V3c} \notin \operatorname{ReqPath}(e)$); \textbf{V4a} is required when the episode selects or authorizes a route; \textbf{V5} is required when the episode makes a closure/completion claim or dispositions residuals; \textbf{V6} is required when $A(e)$ or the risk class predeclares a robustness obligation. \textbf{"Not tested" is not "not applicable":} every verdict excluded from $\operatorname{ReqPath}(e)$ carries a recorded applicability reason on the episode record. ($\operatorname{ReqPath}(e)$ is the sole pathway requirement function; the earlier separately recorded applicability set $\operatorname{App}(\cdot)$ is retired by Decision 0005 — nothing it expressed is lost, since exclusions now live in the per-verdict \texttt{not-applicable} statuses and reasons.)
 
 \textbf{Machine-readable derivation and honest status (R3).} The repository ships $\operatorname{RequiredBy}$ as a machine-readable governance rule table (\texttt{docs/\allowbreak{}governance-\allowbreak{}requirements.\allowbreak{}yaml}) over a typed episode-shape input contract (\texttt{has\_meta\_tokens}, \texttt{selects\_route}, \texttt{makes\_closure\_claim}, \texttt{robustness\_obligation}, \texttt{risk\_class}), and \texttt{scripts/\allowbreak{}derive\_\allowbreak{}reqpath.\allowbreak{}py} derives $\operatorname{ReqPath}(e)$ from it with a per-verdict derivation trace (required / not-required, governing rule, rationale); fixtures in \texttt{tests/\allowbreak{}reqpath-\allowbreak{}fixtures.\allowbreak{}json} pin the derivation, including an omission-attack case in which a declared path missing a derivable requirement is detected rather than tolerated. Honest scope: the shipped table is \emph{one} complete, deterministic governance instance. $\operatorname{RequiredBy}$ in general remains a \textbf{governance-supplied parameterized interface} — the theory does not claim a closed universal calculus over every conceivable governance regime, and this part of the formalism is accordingly an open parameter, not "closed."
@@ -448,6 +481,8 @@ Minimum derivation rules: \textbf{V3c} is required exactly when $\operatorname{M
 \textbf{Verdict status is not Boolean.}
 
 
+\needspace{3\baselineskip}
+\begingroup\small
 \begin{verbatim}
 Status_i(e) ∈ { pass, fail, undetermined, not-applicable }
 
@@ -456,6 +491,7 @@ PathwayDefective(e)     iff some  V_i ∈ ReqPath(e) has status fail
 PathwayUndetermined(e)  iff no required verdict fails and at least
                         one required verdict is undetermined
 \end{verbatim}
+\endgroup
 A missing assessment is \texttt{undetermined} — never silently counted as pass, never silently removed as not-applicable.
 
 \textbf{Declared implication/dependency table} (complete; nothing else is asserted, and pairwise independence is NOT claimed where unproven):
@@ -479,6 +515,7 @@ All other pairs & No definitional implication introduced by these definitions; e
 \end{tabular}
 \end{center}
 
+\needspace{4\baselineskip}
 \subsection*{4.2 Result × pathway matrix}
 The matrix applies only AFTER the pathway status is resolved as adequate or defective; $\operatorname{PathwayUndetermined}$ episodes remain outside the four resolved cells until audited. (Decision 0003: this supersedes the earlier parenthetical that committed the token-level truth-connection verdict to the conjunction — the incorrect-result/adequate-pathway cell is genuinely representable.)
 
@@ -488,14 +525,14 @@ The matrix applies only AFTER the pathway status is resolved as adequate or defe
 \hrule height 0.8pt
 \smallskip
 % breakable-row: 1/2
-\noindent\textbf{Column 1}: \textbf{Result correct (V1)}\par
+\noindent\textbf{\textbf{Result correct (V1)}}\par
 \noindent\textbf{PathwayAdequate}: \emph{Nominal.} A current behavioral validator, correctly bound to the current artifact (V3c pass where applicable), under a sufficiently reliable configured procedure, returns the correct result. Nothing to fix.\par
 \noindent\textbf{PathwayDefective}: \emph{Correct + defective (stopped-clock, compensating error, or governing-side luck).} Possible failure loci: V2b-P, V3a, V3b, V3c, V3d, or V6 — the marker validator that happens to be right today; the mis-bound metaorthemma whose wrong reference plane locally coincides with the right one. Remedy targets the procedure, rule, or binding — not the verdict.\par
 \smallskip
 \hrule height 0.4pt
 \smallskip
 % breakable-row: 2/2
-\noindent\textbf{Column 1}: \textbf{Result incorrect (¬V1)}\par
+\noindent\textbf{\textbf{Result incorrect (¬V1)}}\par
 \noindent\textbf{PathwayAdequate}: $\operatorname{AdequatePathError}(e) := \neg \operatorname{V1}(e) \wedge \operatorname{PathwayAdequate}(e)$ — the justified rare miss of a non-perfect but sufficiently reliable process used correctly: a genuine, representable cell, expected whenever such a process runs. Where V3e ∈ ReqPath(e), $\operatorname{JustifiedMiss}(e) := \operatorname{AdequatePathError}(e)$ — V3e's pass is already inside PathwayAdequate, so no redundant conjunct is added. Remedy, if any: a new discriminating evidence source; no rule or executor blame. \textbf{Note:} orthemic adequacy does not establish moral, legal, institutional, or theological blamelessness — "blameless" is not a formal predicate here.\par
 \noindent\textbf{PathwayDefective}: \emph{Compound failure.} Wrong placement via a defective pathway — e.g., a deploy gate reads a cached test result from the previous commit and approves the current one (¬V1 with V2c and V3a failures). Remedy: both the placement and the rulebook/lineage machinery.\par
 \smallskip
@@ -558,18 +595,22 @@ The matrix applies only AFTER the pathway status is resolved as adequate or defe
 \hrule height 0.8pt
 \par\medskip
 
+\needspace{4\baselineskip}
 \subsection*{4.3 Epistemic constraint and nearest neighbors}
 The defensible novelty claim is exactly this and no more: \textbf{the prior manuscript, and the operational discipline it describes, did not explicitly represent the concrete classification/handling episode as an auditable occurrence distinct from its result.} It is \emph{not} claimed that no established field can represent episodes. Nearest neighbors, honestly: \textbf{process reliabilism} (epistemology) names precisely the correct-result-through-unreliable- process structure and the truth-connection idea — for \emph{beliefs}; it offers no operational record schema (no typed evidence, route, residual disposition, successor occurrence, or perturbation estimator for agent/validator episodes). \textbf{Audit trails / provenance records} (W3C PROV, audit logs, ML lineage systems) are operational and token-level — who did what to which artifact when — but typically carry no candidate set, plural inferred profile, per-claim evidence status, residual-disposition ledger, or verdict layer separating result correctness from pathway adequacy and robustness. \textbf{Assurance practice} (control-effectiveness vs outcome testing) and \textbf{metamorphic testing} each contain one verdict (V3a-like, V6-like) without the joint object. What the episode signature adds is the \emph{joint} auditable object on which V1–V6 are simultaneously definable; whether that pays for itself over "audit the validator when suspicious" is an open empirical question (fixture E5), not a settled fact.
 
 
 \bigskip\hrule\bigskip
 
+\needspace{4\baselineskip}
 \section*{5. Mechanical and distributed orthing (2E)}
 
+\needspace{4\baselineskip}
 \subsection*{5.1 Mechanical executors}
 Nothing in the episode signature or the verdicts quantifies over awareness. Any rule-governed, evidence-updating executor — a predictive-text decoder resolving an ambiguous keypress sequence, a CI validator, a review chain — executes orthing, and its episodes bear \textbf{all applicable verdicts} ($\operatorname{ReqPath}(e)$ plus recorded not-applicable reasons, §4.1; the earlier "all six verdicts" contradicted partial applicability and is corrected). Stopped-clock analogs arise mechanically (a decoder emits the right word from a frequency prior that would misfire on the neighboring input), so V6 is meaningful without any conscious subject. \textbf{Consciousness is not required.} The actor field $\alpha$ is populated with the mechanical executor — never left empty — and executor identity is distinct from any authority index.
 
 
+\needspace{4\baselineskip}
 \subsection*{5.2 Distributed episodes: graph and composition}
 Consider one case handled across sensors, validators, agents, routers, a human sign-off, and downstream consumers. Model it twice, at two levels:
 
@@ -595,6 +636,7 @@ Then $e_\Gamma$ is a token in its own right, and each $e_i$ becomes an orthemma 
 Composite verdicts do not reduce to conjunctions: $\operatorname{correct}(e_\Gamma)$ can hold while some $\operatorname{correct}(e_i)$ fails (a downstream validator caught it), and every $\operatorname{correct}(e_i)$ can hold while $\operatorname{correct}(e_\Gamma)$ fails (each verdict true in scope, the composition transporting one out of scope). Hence the composite level must be audited separately.
 
 
+\needspace{4\baselineskip}
 \subsection*{5.3 Multi-actor episodes over one occurrence lineage (derived)}
 Several actors' episodes can address ONE shared occurrence lineage with analysis-indexed, possibly opposed evaluations (competitive games are the clean case; the full stress test and category corrections live in \texttt{orthemic-\allowbreak{}multi-\allowbreak{}actor-\allowbreak{}conflict-\allowbreak{}note.\allowbreak{}md}). This is a \textbf{multi-analysis context}: each actor $\alpha$ evaluates under its own declared analysis $A_\alpha$ (shared frame components, diverging at least in task $T_\alpha = \operatorname{task}(A_\alpha)$), the task-relative abbreviation is forbidden, and ground truth is written in full, $O^*(m; A_\alpha)$. Actor indices are written $\alpha, \beta$ here — the letter $A$ is reserved for the analysis. Derived definitions — clarifying extensions of the existing actor/analysis indices, \textbf{not a new formal addition}:
 
@@ -612,17 +654,21 @@ Several actors' episodes can address ONE shared occurrence lineage with analysis
 
 \item $\operatorname{Conflict}_m(\mathcal{G}_\alpha, \mathcal{G}_\beta)$ / $\operatorname{Compat}_m(\mathcal{G}_\alpha, \mathcal{G}_\beta)$ — WELL-TYPED across profile spaces: the two target sets live in different spaces ($\mathcal{G}_\alpha \subseteq \Pi_{A_\alpha}$, $\mathcal{G}_\beta \subseteq \Pi_{A_\beta}$), so they are never compared by bare set intersection. With $\operatorname{Reach}(m)$ the occurrences reachable from $m$ in the successor structure,
 
+\needspace{3\baselineskip}
+\begingroup\small
 \begin{verbatim}
 Compat_m(𝒢_α, 𝒢_β)   iff  ∃ m′ ∈ Reach(m):
                             O*(m′; A_α) ∈ 𝒢_α  ∧  O*(m′; A_β) ∈ 𝒢_β
 Conflict_m(𝒢_α, 𝒢_β) iff  no such reachable m′ exists
 \end{verbatim}
+\endgroup
 — one shared occurrence, evaluated under each analysis separately. Cooperation is joint realizability with a shared analysis and shared target set ($A_\alpha = A_\beta$, $\mathcal{G}_\alpha = \mathcal{G}_\beta$), or an explicit alignment map $\phi(\alpha \to \beta)$ identifying targets across spaces — never bare equality of sets inhabiting different profile spaces. Zero-sum games also admit draw successors realizing neither target set.
 
 \end{itemize}
 Coupled episodes are the §5.2 graph over the shared lineage: each actor's action creates the successor occurrence the other's episode consumes. Game transition rules are DOMAIN structure, utility is the TASK, minimax is a POLICY — none is a metaortheme. The LIMITED sense in which competitors share a metaorthemic configuration: both may consult the same governing distinctions (terminality, evidence-validity about the opponent's information state, analysis-sufficiency) while holding opposed targets — configurations govern HOW placements are made, never WHOSE target wins. Occurrence identity in games includes position, history, and player-to-move — worldly facts (\#4 applied); a player's INFORMATION SET is NOT identity but that player's OBSERVATION $x_\alpha = \Omega_\alpha(m)$ (a correction adopted after external review — filing it into $\kappa$ would invert the occurrence/observation line). Not all orthemes are actor-relative — actor-relativity enters exactly where the task does.
 
 
+\needspace{4\baselineskip}
 \subsection*{5.4 Semantic depth as an orthogonal axis}
 Define, informally, $\operatorname{depth}(e)$ as the executor's grasp of the governing distinctions: hard-coded check < model-based inference over declared alternatives < reflective capacity to propose revisions $\rho(\mu, \mathrm{lesson})$ itself. Depth is orthogonal to every §4 verdict — shallow executors can run adequate pathways and deep ones defective pathways. Depth matters operationally in one place only: which revisions the executor may perform locally versus must escalate across the governance boundary. It is an axis of the executor, not of the episode's correctness or adequacy.
 
@@ -631,10 +677,12 @@ Define, informally, $\operatorname{depth}(e)$ as the executor's grasp of the gov
 \textbf{Optional latent-variable extension (Decision 0015).} A declared analysis $A$ may optionally carry sequential latent-variable apparatus ($Z_A$, transitions $P_A$, latent candidate sets/posteriors, and concrete internal representations $y$). That apparatus is \textbf{non-primitive and optional}: it adds nothing to the settled ontology of this formalization, a latent state is not an ortheme, a posterior is not $O^*(m; A)$, and representational geometry is neither necessary nor sufficient for orthemic distinctness or for pathway adequacy. The bridge $\operatorname{ProfileOf}_A \subseteq Z_A \times \Pi_A$ is partial and must be exhibited, never assumed; latent labels are non-identifiable up to relabelling absent declared anchoring or a validated alignment map. \textbf{Every core claim of this formalization remains statable without the latent layer.} Declaring it is a version event on $A$. See \texttt{docs/\allowbreak{}decisions/\allowbreak{}0015-\allowbreak{}latent-\allowbreak{}state-\allowbreak{}observation-\allowbreak{}and-\allowbreak{}representation-\allowbreak{}boundary.\allowbreak{}md} and \texttt{docs/\allowbreak{}related-\allowbreak{}work/\allowbreak{}LATENT-\allowbreak{}STATE-\allowbreak{}INFERENCE-\allowbreak{}AND-\allowbreak{}ORTHEMOLOGY.\allowbreak{}md}.
 
 
+\needspace{4\baselineskip}
 \section*{Status ledger}
 \textbf{Accepted (analytic/definitional):} level-indexing via $\iota_n$ with no episode-referent "meta-orthemma" noun (§1, counterargument recorded; per the §1 qualification, the Decision-0002 configuration token $\bar{\mu}$ is a different object, carried in §2.2/§3/§4.1 V3c); the record-style episode signature with typed candidate families, claim ledger, handoffs, warrant, and labeled successors (§2.2); endpoint-plus-bounded-trace with governance-declared granularity (§2.2a); split model (C) with the $\{\mathrm{O}, \mathrm{I}, \mathrm{E}, \mathrm{D}, \mathrm{R}, \mathrm{V}, \mathrm{W}\}$ boundary (§3, downsides preserved); verdict separability with governance-derived $\operatorname{ReqPath}(e)$ (§4.1); token-level DAG with typed edges (§5.2). \textbf{Rejected:} literal set inclusion for episodes; forced single successor; blanket edition-wide revision reopening; safeguard (v) word-utility test inside concept admission. \textbf{Unresolved alternatives:} safety/reliabilist/calibration variants of V2b-P remain admissible declared criteria; single-object metaortheme presentation (C1) remains permitted as user-facing shorthand. \textbf{Experimental gates:} episode reification's practical delta over "audit the validator when suspicious" — fixture E5; vocabulary utility of every coined term — the Arm A/B/C benchmark (designed, NOT run). \textbf{Evidence tier:} machine-checked internal agreement over the declared definitions, schemas, examples, and adversarial fixtures — not a proof of mathematical consistency or completeness; no public observational dataset exists; operational usefulness is untested; nothing here is experimentally validated. \textbf{Provenance:} \texttt{docs/\allowbreak{}provenance/\allowbreak{}document-\allowbreak{}history.\allowbreak{}md}; this file is the canonical integrated body.
 
 
+\clearpage
 \part*{Multi-Actor / Zero-Sum Orthemic Note — stress test, corrections, and formal residue}
 \textbf{Status (revision R6, 2026-07-20; fresh-session repository review completed; not external human peer review; not empirically validated):} derived multi-actor extension of the formal core; typing follows decisions 0009–0015; nothing here is experimentally validated.
 
@@ -644,6 +692,7 @@ Define, informally, $\operatorname{depth}(e)$ as the executor's grasp of the gov
 
 \end{quote}
 
+\needspace{4\baselineskip}
 \section*{1. What the source notes get right (preserved)}
 
 \begin{enumerate}
@@ -659,6 +708,7 @@ Define, informally, $\operatorname{depth}(e)$ as the executor's grasp of the gov
 
 \end{enumerate}
 
+\needspace{4\baselineskip}
 \section*{2. Category conflations corrected}
 \textbf{C1 — "Player A's ortheme: the state where my utility is maximized."} That is not an ortheme; it is an OBJECTIVE rendered as a state description. An ortheme is a repeatable state-type of the occurrence ("White checkmates Black" IS one). The repair: player A's \emph{target profile set} $\mathcal{G}_{\alpha,A_\alpha} \subseteq \Pi_{A_\alpha}$ is the set of terminal profiles that satisfy that player's task — the states are orthemes; "maximize my utility" is the task that SELECTS them. Utility/objective/loss are external parameters (core-formalization §3), never orthemes and never metaorthemes.
 
@@ -682,33 +732,27 @@ Define, informally, $\operatorname{depth}(e)$ as the executor's grasp of the gov
 \textbf{C6 — "reflexively selfish" is task language, not psychology or ethics.} Under T\_α = "win for the player labeled A," correctness is α-indexed by construction; that is a property of the DECLARED task, not a discovery about agents. And not all orthemes are actor-relative: "the file hash matches," "the parse is grammatical" are actor-independent placements; actor-relativity enters exactly where the task does.
 
 
+\needspace{4\baselineskip}
 \section*{3. Formal residue (assessed against the existing core)}
 Already expressible with existing machinery: episodes carry actor α and declared analysis A\_α (task T\_α = task(A\_α)); placements are actor/analysis-indexed; the episode graph couples episodes over one lineage. \textbf{New derived definitions worth adding (clarification, NOT a new formal addition — the six-addition count is unchanged):}
 
 
-\begin{verbatim}
-x_α = Ω_α(m)         actor-α's OBSERVATION of the shared occurrence m
-                     (imperfect information: Ω_α(m) ≠ Ω_β(m) over ONE m)
-p̂(e, α, T_α)        the current inferred profile of actor α's episode e
-                     under its analysis A_α, task T_α = task(A_α)
-                     (inferred FROM x_α, never from m directly)
-GoalSchema(·)   a PARAMETRIC ortheme schema — the shared
-                     goal-form under role substitution ("win for α")
-𝒢_{α,A_α} ⊆ Π_{A_α}  actor-α's grounded TARGET PROFILE SET: the profiles
-                     T_α declares appropriate as outcomes — the schema's
-                     instantiation at α. NORMATIVE TYPING: a SET of
-                     profiles; each member is one complete profile
-φ(α→β)               a role/perspective isomorphism between Π_{A_α} and
-                     Π_{A_β}, when one exists
-                     (schema invariance: 𝒢_{β,A_β} = φ(𝒢_{α,A_α}))
-Compat_m(𝒢_α, 𝒢_β)    ∃ m′ ∈ Reach(m): O*(m′; A_α) ∈ 𝒢_α ∧ O*(m′; A_β) ∈ 𝒢_β
-                     (well-typed: one shared occurrence, each analysis
-                     evaluating in its own profile space — never bare
-                     intersection of sets from different spaces)
-Conflict_m(𝒢_α, 𝒢_β)  no such reachable m′ exists
-                     (cooperation: shared analysis + shared target set,
-                     or an explicit alignment map φ(α→β))
-\end{verbatim}
+\begin{itemize}
+\item $x_\alpha = \Omega_\alpha(m)$ — actor-$\alpha$'s \textbf{observation} of the shared occurrence $m$ (imperfect information: $\Omega_\alpha(m) \neq \Omega_\beta(m)$ over one $m$);
+
+\item $\hat{p}(e, \alpha, T_\alpha)$ — the current inferred profile of actor $\alpha$'s episode $e$ under its analysis $A_\alpha$, task $T_\alpha = \operatorname{task}(A_\alpha)$ (inferred from $x_\alpha$, never from $m$ directly);
+
+\item $\operatorname{GoalSchema}(\cdot)$ — a \textbf{parametric} ortheme schema, the shared goal-form under role substitution (win-for-$\alpha$);
+
+\item $\mathcal{G}_{\alpha,A_\alpha} \subseteq \Pi_{A_\alpha}$ — actor-$\alpha$'s grounded \textbf{target profile set}: the profiles $T_\alpha$ declares appropriate as outcomes — the schema's instantiation at $\alpha$. Normative typing: a \emph{set} of profiles, each member one complete profile;
+
+\item $\phi(\alpha \to \beta)$ — a role/perspective isomorphism between $\Pi_{A_\alpha}$ and $\Pi_{A_\beta}$, when one exists (schema invariance: $\mathcal{G}_{\beta,A_\beta} = \phi(\mathcal{G}_{\alpha,A_\alpha})$);
+
+\item $\operatorname{Compat}_m(\mathcal{G}_\alpha, \mathcal{G}_\beta)$ — $\exists\, m' \in\allowbreak{} \operatorname{Reach}(m):\ O^*(m'; A_\alpha) \in\allowbreak{} \mathcal{G}_\alpha \wedge\allowbreak{} O^*(m'; A_\beta) \in\allowbreak{} \mathcal{G}_\beta$ (well-typed: one shared occurrence, each analysis evaluating in its own profile space — never bare intersection of sets from different spaces);
+
+\item $\operatorname{Conflict}_m(\mathcal{G}_\alpha, \mathcal{G}_\beta)$ — no such reachable $m'$ exists (cooperation: shared analysis $+$ shared target set, or an explicit alignment map $\phi(\alpha \to \beta)$).
+
+\end{itemize}
 \textbf{Three distinct relations the parametric schema untangles:} (i) SCHEMA identity — players A and B run the same parametric form $\operatorname{GoalSchema}(\cdot)$; this is the true content of the source notes' "locally identical" intuition; (ii) GROUNDED-ORTHEME identity — $\operatorname{GoalSchema}(\alpha)$ and $\operatorname{GoalSchema}(\beta)$ are DISTINCT grounded targets, never identical in a strictly competitive task; (iii) TARGET-PROFILE overlap — $\mathcal{G}_\alpha \cap \mathcal{G}_\beta$ may be empty (zero-sum win-sets), partial, or total (cooperation). Local similarity is (i); material exclusivity is emptiness at (iii); no level asserts identity of the players' orthemes.
 
 \textbf{The limited sense in which competitors DO share a metaorthemic configuration:} both players may consult the SAME governing distinctions — terminality (decided vs live position), evidence-validity for reading the opponent's information state, analysis-sufficiency before moving. Sharing those configurations while holding opposed targets is exactly the configuration-vs-task separation: metaorthemes govern HOW placements are made and validated, never WHOSE target wins.
@@ -716,6 +760,7 @@ Conflict_m(𝒢_α, 𝒢_β)  no such reachable m′ exists
 Joint-episode picture: A's and B's orthing episodes alternate on one occurrence lineage; each actor's action creates the successor the other's episode consumes (typed handoff edges); under Conflict, each episode's route choice is also an attempt to steer the lineage away from the other's target set. Draw states are successors in neither target set.
 
 
+\needspace{4\baselineskip}
 \section*{4. Destinations}
 
 \begin{itemize}
@@ -729,6 +774,7 @@ Joint-episode picture: A's and B's orthing episodes alternate on one occurrence 
 
 \end{itemize}
 
+\needspace{4\baselineskip}
 \section*{5. Status}
 Analytic note; no empirical claim. The multi-actor fixture is part of the UNRUN terminology benchmark. Nothing here alters the six formal additions, the verdict vector, or any product issue.
 

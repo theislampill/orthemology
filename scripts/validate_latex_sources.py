@@ -37,6 +37,7 @@ EXPECTED_DIRECT_PACKAGES = [
     "hyperref",
     "microtype",
     "natbib",
+    "needspace",
     "xcolor",
 ]
 

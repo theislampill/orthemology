@@ -4,10 +4,20 @@ Status: research candidates. Neither core is adopted; there is no integrated
 champion and this round does not create one. Both are strict fragments of the
 program's declared vocabulary.
 
+**Verification status (added after independent review).** Except for Core A's
+central characterization, which has a Lean receipt, no property stated as
+"proved" in this packet is accompanied by a committed derivation, executable
+check, or Lean theorem. Every such property — including the certifier lattice,
+the transport hypotheses, the Set-Cover equivalence, the MIN law, the
+`ν ≤ rad ≤ k·ν` sandwich, and the discriminator scenario's tabulated verdicts —
+is downgraded to `DERIVED_BUT_UNVERIFIED`: recorded as the author's derivation,
+checked by no one. Nothing in this packet is citable as settled except the
+characterization backed by the Lean receipt.
+
 The research prompt's step 1 required two materially different candidate cores,
 each attacked with the same countermodel battery, and forbade selecting a core
-for having broader vocabulary coverage. This packet records both, their proved
-properties, where each fails, and — the main output — a concrete finite scenario
+for having broader vocabulary coverage. This packet records both, their derived
+properties (each carrying a local status), where each fails, and — the main output — a concrete finite scenario
 where they disagree.
 
 ## Core A — profile / fibre / transport (model-theoretic)
@@ -17,21 +27,24 @@ backgrounds, `Λ` labels, `L : W → Λ` the target, `Π` a profile space, and
 `P : W → Π` the profile map. A morphism `(f,u) : S → S'` is a pair with
 `P' ∘ f = u ∘ P` and `L' ∘ f = L`. These compose, giving a category.
 
-**Proved.**
+**Derived properties.** Local status per item; `DERIVED_BUT_UNVERIFIED` means
+recorded as the author's derivation, checked by no one, and never citable as
+settled.
 
-- **Fibre-constancy characterization.** `L` is certifiable by `P` iff `ker P ⊆ ker L`.
+- **Fibre-constancy characterization** (`LEAN_FORMALIZED_SCOPED_RESULT`). `L` is certifiable by `P` iff `ker P ⊆ ker L`.
   The certificate is unique on the attained image. This is machine-checked in Lean
   (see `AR8R-FABLE-R1-LEAN-RECEIPTS.yaml`); AR8R-T299 is an exact instance of it.
-- **Certifier lattice.** Certifying kernels form a principal down-set closed under
+- **Certifier lattice** (`DERIVED_BUT_UNVERIFIED`). Certifying kernels form a principal down-set closed under
   both meets and joins — so two independent certifying audits can be coarsened to
   their agreement and still certify.
-- **Refinement.** Refining the profile preserves certifiability; the converse
+- **Refinement** (`DERIVED_BUT_UNVERIFIED`). Refining the profile preserves certifiability; the converse
   fails, with a two-world countermodel.
-- **Transport.** Certificates travel *backwards* along morphisms using only the
-  two structural equations. Pushforward needs exactly surjectivity of `f` and
-  injectivity of `u` on the attained image, and separate countermodels prove each
-  hypothesis necessary.
-- **Invariant.** A budgeted refinement cost: the minimum cost of instruments whose
+- **Transport** (`DERIVED_BUT_UNVERIFIED`). Certificates travel *backwards* along
+  morphisms using only the two structural equations. Pushforward is derived to
+  need surjectivity of `f` and injectivity of `u` on the attained image, with
+  countermodels recorded for each hypothesis; none of this is checked.
+- **Invariant** (`DERIVED_BUT_UNVERIFIED`, including the Set-Cover equivalence
+  and its complexity consequences). A budgeted refinement cost: the minimum cost of instruments whose
   joint refinement makes `L` certifiable. It is 0 iff already certifiable, `+∞` iff
   the entire declared instrument suite fails (the formal version of "no evidence
   could resolve this"), monotone, kernel-invariant, and **Set-Cover-equivalent in
@@ -42,11 +55,11 @@ backgrounds, `Λ` labels, `L : W → Λ` the target, `Π` a profile space, and
 confusion, partial observation, and target mismatch: **failed**, with the failures
 characterized rather than patched. Two are worth naming:
 
-- *Partial observation.* The certificate type is scope-blind: a certificate can be
-  green but mis-scoped, and scoped certificates provably do not compose across
-  scopes.
-- *Target mismatch.* Undetectable by construction, but boundedly so: a proved tight
-  bound shows a single mislabelled world can take a system from perfectly
+- *Partial observation* (`DERIVED_BUT_UNVERIFIED`). The certificate type is
+  scope-blind: a certificate can be green but mis-scoped, and scoped
+  certificates are derived not to compose across scopes.
+- *Target mismatch.* Undetectable by construction, but boundedly so: a derived, unverified
+  bound (`DERIVED_BUT_UNVERIFIED`) suggests a single mislabelled world can take a system from perfectly
   certifiable to maximally defective.
 
 A by-product worth recording: robustness can be defined as certifiability of the
@@ -61,8 +74,9 @@ a serious limitation, not a footnote.
 
 ## Core B — certificate / provenance calculus (proof-theoretic)
 
-**Signature.** Judgments `Γ ⊢_S c : est(a,t)` — a certificate `c` establishes that
-item `a` stands in the target-directed relation to target `t` — with every context
+**Signature.** Judgments `Γ ⊢_S c : est(a,t)` — read: certificate `c` is
+recorded as establishing that item `a` stands in the target-directed relation
+to target `t` (object-language reading of the judgment, not a claim status) — with every context
 entry annotated by a provenance root. Rules: assumption, axiom instance,
 composition along declared target combinations, weakening, transport along a
 morphism of settings, and repair. Items form an idempotent monoid, so
@@ -72,7 +86,8 @@ The load-bearing rule is transport, whose side condition requires every root in
 the derivation to lie in the domain of a **partial** root map. Uncarried roots are
 *dropped*, not relabelled.
 
-**Proved.**
+**Derived properties** (every item `DERIVED_BUT_UNVERIFIED`; nothing in this
+list is checked by any committed artifact).
 
 - Survival under damage holds iff some derivation's support avoids the damage; the
   survival radius is the minimum transversal of the minimal-support hypergraph.
@@ -98,8 +113,10 @@ the root-tracking cut. Core B is a rival core, not a finished one.
 
 ## The discriminator — where the two cores disagree
 
-This is the round's main step-1 output. A finite scenario, fully tabulated, in
-which Core A certifies and Core B does not.
+This is the round's main step-1 output (`DERIVED_BUT_UNVERIFIED`, including
+every tabulated verdict below: the tabulation was not committed and no checker
+reproduces it). A finite scenario in which, per the author's derivation, Core A
+certifies and Core B does not.
 
 **Setup.** Three provenance roots (observation, calibration, custody), three
 context entries, two composition rules mirroring T299's landing conditions, and
@@ -131,7 +148,8 @@ unchanged — Core B's verdict never mentions the domain.
 
 Core B is repairable to reconverge with Core A here, at the permanent cost of a
 fourth root. That cost is the point: the disagreement is not a bug in either core,
-it is a real distinction between two notions of "established".
+it is a real distinction between two notions of what it takes to establish
+(`DERIVED_BUT_UNVERIFIED`, like the scenario it closes).
 
 ## Selection
 

@@ -24,21 +24,36 @@ discharged_by_this_round:
   - id: LEAN-T299-MACHINE-CHECK
     was: machine_check_claim NONE
     now: ELABORATED_AND_KERNEL_CHECKED
-    scope: T299 only; no other theorem in the program is machine-checked.
+    scope: >
+      A repaired, scoped interpretation of T299's quotient-factorization structure
+      only. The historical packet was not machine-checked end to end, and no other
+      theorem in the program is machine-checked.
 
 newly_opened_burdens:
   - id: FABLE-R1-B01
+    status: REWRITTEN_AFTER_INDEPENDENT_REVIEW
     statement: >
-      MEN-2 is stated as a "provenance-independence rank". Round 1 refuted the
-      matroid premise, so the milestone text is unsound as written and needs
-      restatement in terms of the transversal number.
+      Original round-1 statement withdrawn: it said round 1 "refuted the matroid
+      premise" of MEN-2, making the milestone text "unsound as written". No such
+      premise exists: MEN-2 is NOT_ADOPTED, proposes defining a rank, and asserts
+      no matroid axioms; Round 20 V1 and V2 both already use the transversal
+      condition. The surviving burden is definitional only: any future MEN-2
+      definition must state whether the proposed quantity is a transversal
+      quantity, packing quantity, matroid rank, polymatroid quantity, or another
+      invariant, and if a rank, must establish exchange for its structure. The
+      exchange-axiom countermodel recorded in N1 is a constraint on that future
+      definition, not a defect in existing text.
     closable_by: MAINTAINER
-    blocking: MEN-2, and any flywheel edge that assumes independent-route counting
+    blocking: nothing currently adopted; constrains future MEN-2 drafting only
   - id: FABLE-R1-B02
+    status: REWRITTEN_AFTER_INDEPENDENT_REVIEW
     statement: >
-      The restorative-cutset result should be re-expressed with its correct
-      condition and, ideally, formalized. Its existing positive witness lives in
-      the single-root regime where the wrong and right conditions coincide.
+      Original round-1 statement withdrawn: it implied the restorative-cutset
+      result needed re-expression "with its correct condition". Round 20 already
+      states the correct transversal condition. The surviving burden: if the
+      tau-versus-nu interpretation firewall is worth formalizing, formalize it as
+      a standalone lemma about hypergraph transversals, not as a correction to
+      PRRC-1.
     closable_by: RESEARCH_AGENT
   - id: FABLE-R1-B03
     statement: >
@@ -71,12 +86,34 @@ newly_opened_burdens:
       it is settled.
     closable_by: RESEARCH_AGENT
 
+  - id: FABLE-R1-B07
+    statement: >
+      Verify each prior-art attribution in AR8R-FABLE-R1-SOURCING.md against an
+      exact accessible text, recording identifier, location, and proposition
+      context, or retire the row. Until then every relationship stays
+      AUTHOR_ASSESSED_UNVERIFIED / POSSIBLE_ANALOGUE under the fail-closed gate
+      in scripts/validate_fable_r1_claim_language.py.
+    closable_by: EXTERNAL_SPECIALIST_OR_DEDICATED_SEARCH
+  - id: FABLE-R1-B08
+    statement: >
+      Verify or retire the quarantined OSM typed-extraction notes against exact
+      source locations, in a stable recorded review context. Until then those
+      notes are not current research authority.
+    closable_by: EXTERNAL_SPECIALIST_OR_DEDICATED_SEARCH
+
 pre_existing_burdens_reaffirmed:
   - id: OWNER-EMPIRICAL-EXECUTION
     statement: >
-      No designed public experiment packet has ever been run. This remains the
-      single largest blocker on any empirical claim, and no amount of formal or
-      custody work touches it.
+      No public FCSP-2 or ER-2 empirical run has occurred, and no designed public
+      experiment packet has been run at its packet state. A separate historical
+      internal eight-seed synthetic T299/T300 stress pilot ran and was negative at
+      its recorded evidential class (see
+      docs/project-closure/ar8r-v11/experiments/t299-t300-negative-synthetic-pilot.md
+      and the historical_internal_synthetic_evidence entry in
+      experiments/experiment-status.yaml); it is not a public packet, carries no
+      framework-validation credit, and is not erased by this boundary. The absence
+      of public empirical execution remains the single largest blocker on any
+      empirical claim, and no amount of formal or custody work touches it.
     closable_by: OWNER
   - id: OWNER-EXTERNAL-PUBLICATION
     closable_by: OWNER
@@ -99,6 +136,8 @@ nonclaims:
   - No theorem gains adoption, novelty, or empirical credit from this round.
   - Machine checking establishes derivability from Lean's axioms only; it does not
     establish that a formalization faithfully renders its informal packet.
-  - The refutations recorded in round 1 concern the program's stated premises, not
-    the internal correctness of the historical theorems.
+  - Round 1's negative results, as corrected, refute no adopted or proposed
+    program statement; they stand as interpretation firewalls and constraints on
+    future definitions. The internal correctness of the historical theorems was
+    never at issue.
   - Zero general mathematical novelty is claimed for any round-1 object.

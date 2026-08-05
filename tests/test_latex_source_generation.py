@@ -717,7 +717,7 @@ $$
         self.assertEqual(generator.LONG_TABLE_ROW_THRESHOLD, 10)
         self.assertEqual(generator.LONG_TABLE_TOTAL_CONTENT_THRESHOLD, 1500)
         self.assertEqual(generator.LONG_TABLE_MAX_ROW_CONTENT_THRESHOLD, 800)
-        self.assertEqual(generator.BREAKABLE_TABLE_COLUMN_THRESHOLD, 5)
+        self.assertEqual(generator.BREAKABLE_TABLE_COLUMN_THRESHOLD, 3)
         self.assertFalse(
             generator.table_requires_breakable_rows(
                 data_rows=generator.LONG_TABLE_ROW_THRESHOLD - 1,
@@ -903,22 +903,24 @@ $$
         positions = [rendered.index(label) for label in row_labels]
         self.assertEqual(positions, sorted(positions))
 
-    def test_short_four_column_table_retains_exact_standard_rendering(self):
+    def test_short_two_column_table_retains_exact_standard_rendering(self):
+        # PR #21 repair: tables with >= BREAKABLE_TABLE_COLUMN_THRESHOLD (3)
+        # columns render as breakable row blocks; only narrower tables keep
+        # the standard tabular rendering.
         generator = load_generator()
         self.assertIsNotNone(generator, "Task 12 LaTeX generator is missing")
         markdown = (
-            "| A | B | C | D |\n"
-            "|---|---|---|---|\n"
-            "| a | b | c | d |\n"
+            "| A | B |\n"
+            "|---|---|\n"
+            "| a | b |\n"
         )
         expected = (
             "\n\\begin{center}\n"
-            "\\begin{tabular}{@{}p{0.235\\linewidth}p{0.235\\linewidth}"
-            "p{0.235\\linewidth}p{0.235\\linewidth}@{}}\n"
+            "\\begin{tabular}{@{}p{0.470\\linewidth}p{0.470\\linewidth}@{}}\n"
             "\\toprule\n"
-            "\\textbf{A} & \\textbf{B} & \\textbf{C} & \\textbf{D} \\\\\n"
+            "\\textbf{A} & \\textbf{B} \\\\\n"
             "\\midrule\n"
-            "a & b & c & d \\\\\n"
+            "a & b \\\\\n"
             "\\bottomrule\n"
             "\\end{tabular}\n"
             "\\end{center}\n"
@@ -926,7 +928,7 @@ $$
 
         rendered = generator.render_markdown(
             markdown,
-            source_name="short-four-column-table.md",
+            source_name="short-two-column-table.md",
         )
 
         self.assertEqual(rendered, expected)
@@ -979,9 +981,8 @@ $$
         ).read_text(encoding="utf-8")
         _, math = generator._protect_math(source)
         displays = [body.strip() for kind, body in math if kind == "display"]
-        self.assertEqual(len(displays), 1)
-        signature = displays[0]
-        self.assertEqual(len(signature), 257)
+        self.assertEqual(len(displays), 12)
+        signature = next(body for body in displays if len(body) == 257)
         markdown = "$$\n%s\n$$\n" % signature
 
         first = generator.render_markdown(
@@ -1785,7 +1786,7 @@ $$
                 )
         self.assertEqual(
             total_marker_count - path_marker_count - basename_marker_count,
-            44,
+            48,
         )
         for path, content in tree.items():
             with self.subTest(generated_path=path):
@@ -1895,6 +1896,7 @@ class ArtifactGenerationTests(unittest.TestCase):
                     "hyperref",
                     "microtype",
                     "natbib",
+                    "needspace",
                     "xcolor",
                 ],
                 "supported_packages": [
@@ -1905,6 +1907,7 @@ class ArtifactGenerationTests(unittest.TestCase):
                     "hyperref",
                     "microtype",
                     "natbib",
+                    "needspace",
                     "xcolor",
                     "fvextra",
                 ],

@@ -547,6 +547,7 @@ def validate_source_package_bytes(
         "hyperref",
         "microtype",
         "natbib",
+        "needspace",
         "xcolor",
     ]
     expected_supported = expected_direct + ["fvextra"]

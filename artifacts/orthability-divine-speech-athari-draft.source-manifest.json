@@ -1,21 +1,21 @@
 {
   "schema": "orthemology-source-manifest-v1",
   "artifact_id": "orthability-divine-speech-athari-draft",
-  "source_commit": "e2ac7c45a34c95c56fe2dc5dd90668a1177260df",
-  "source_tree": "d2fa9670517c3a15eebd4a45f620fd0e111f2e76",
-  "independently_reviewed_equivalent_source_commit": "e2ac7c45a34c95c56fe2dc5dd90668a1177260df",
-  "independently_reviewed_equivalent_source_tree": "d2fa9670517c3a15eebd4a45f620fd0e111f2e76",
+  "source_commit": "43c4a07c54c61cec89c77ac8c5b4e75433caf3a4",
+  "source_tree": "b49f408f7c7500fb87bbafb73323b6ceece18c5c",
+  "independently_reviewed_equivalent_source_commit": "43c4a07c54c61cec89c77ac8c5b4e75433caf3a4",
+  "independently_reviewed_equivalent_source_tree": "b49f408f7c7500fb87bbafb73323b6ceece18c5c",
   "source_tree_equivalence": "verified-identical",
-  "source_date_epoch": 1785827842,
+  "source_date_epoch": 1785895767,
   "archive": {
     "path": "artifacts/orthability-divine-speech-athari-draft.source.tar.gz",
-    "sha256": "d54ded998bd6d56ca10a80cf59730db7e88b8af9d0edd65db9cd5c11b72d63d2",
+    "sha256": "0d23e66f2fcb846d567302eed5ea24edd1f1b37192cd32ff747d0a4d16050b91",
     "format": "tar-gzip-ustar"
   },
   "entry_point": "publication/latex/orthability-divine-speech-athari-draft/main.tex",
   "build_workdir": "publication/latex/orthability-divine-speech-athari-draft",
-  "publication_profile_sha256": "a29f4eb7af74f2e13843b5db8386fe7dd4c837def4c5c199fbae2c30a7acb774",
-  "toolchain_lock_sha256": "d9b1ecbba2e34e34ec06bb4eeac383e90d8f8ed55e8c32dde1f4b5bc7daac263",
+  "publication_profile_sha256": "beb4a3a2ca8305475d4b4140186f2a14d94e31870a625078368f3cd9bc85237c",
+  "toolchain_lock_sha256": "76b420108fa0e807559ecdc0778a78b840238487614871d28bd2e7fc6231d727",
   "tex_live_dependencies": {
     "fvextra": {
       "tex_live_package": "fvextra",
@@ -81,8 +81,8 @@
     },
     {
       "path": "publication/latex/orthability-divine-speech-athari-draft/main.tex",
-      "sha256": "536f121d32b8f68aced0fcc5263afa1664e8a7d009342f7f51c4b167b91f5718",
-      "bytes": 29544,
+      "sha256": "f2326a3c0fe28c6e2a830daa5a93398b2efbff8587ddf0bce98102e3db2ed7a7",
+      "bytes": 30232,
       "mode": "0644",
       "role": "entry-point"
     },
