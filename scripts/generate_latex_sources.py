@@ -1130,9 +1130,14 @@ def render_markdown(markdown, source_name="<memory>", root=None):
                 math,
                 link_resolver=link_resolver,
             )
+            guard = ""
+            if command == "part*":
+                guard = "\\clearpage\n"
+            elif command in ("section*", "subsection*", "subsubsection*"):
+                guard = "\\needspace{4\\baselineskip}\n"
             output.append(
-                "\n\\%s{%s}\n"
-                % (command, rendered_heading)
+                "\n%s\\%s{%s}\n"
+                % (guard, command, rendered_heading)
             )
             index += 3
             continue
@@ -1187,7 +1192,11 @@ def render_markdown(markdown, source_name="<memory>", root=None):
             else:
                 if r"\end{verbatim}" in content:
                     raise GenerationError("code block contains an unsafe verbatim terminator")
-                output.append("\n\\begin{verbatim}\n%s\n\\end{verbatim}\n" % content)
+                output.append(
+                    "\n\\needspace{3\\baselineskip}\n"
+                    "\\begingroup\\small\n\\begin{verbatim}\n%s\n\\end{verbatim}\n\\endgroup\n"
+                    % content
+                )
             index += 1
             continue
         if kind == "hr":
@@ -1337,6 +1346,13 @@ def render_artifact(profile, artifact, source_texts, *, root=None):
         "\\geometry{letterpaper,margin=0.75in}\n",
         "\\hypersetup{colorlinks=true,linkcolor=blue,urlcolor=blue,citecolor=blue}\n",
         "\\setlength{\\emergencystretch}{3em}\n",
+        "% visual-QA guards (PR #21 repair): no orphan/widow lines; headings\n",
+        "% keep following content; companion parts start on fresh pages.\n",
+        "\\clubpenalty=10000\n",
+        "\\widowpenalty=10000\n",
+        "\\displaywidowpenalty=10000\n",
+        "\\brokenpenalty=10000\n",
+        "\\raggedbottom\n",
         "\\title{%s}\n" % _escape_text(title),
         "\\author{}\n",
         "\\date{}\n",

@@ -2,15 +2,15 @@
   "schema": "orthemology-pdf-sources-v2",
   "artifact_id": "orthability-ground-of-intelligibility-draft",
   "pdf": "orthability-ground-of-intelligibility-draft.pdf",
-  "pdf_sha256": "ba7cb6752e879836c9badca373e831d10c32e708dee47146caed45ecba3e4da1",
+  "pdf_sha256": "73f258620e52e72f4eec2c220cbae1f6b51d6ed7c1ee950753ca2f42a9dff9e3",
   "page_count": 8,
-  "source_commit": "9a548178623f344a3bbea3638549927bd2c97568",
-  "source_tree": "06d24cf03da76be69b0d140510dd00cba51806e6",
-  "independently_reviewed_equivalent_source_commit": "9a548178623f344a3bbea3638549927bd2c97568",
-  "independently_reviewed_equivalent_source_tree": "06d24cf03da76be69b0d140510dd00cba51806e6",
+  "source_commit": "f35047bd50e2f20c6bac586fbffef71cd6976457",
+  "source_tree": "3264be719ef87985cb39809ee7a8954c26fb6d08",
+  "independently_reviewed_equivalent_source_commit": "f35047bd50e2f20c6bac586fbffef71cd6976457",
+  "independently_reviewed_equivalent_source_tree": "3264be719ef87985cb39809ee7a8954c26fb6d08",
   "source_tree_equivalence": "verified-identical",
-  "source_date_epoch": 1785892954,
-  "build_time_utc": "2026-08-05T01:22:34Z",
+  "source_date_epoch": 1785893136,
+  "build_time_utc": "2026-08-05T01:25:36Z",
   "source_hashes": {
     "markdown": {
       "companion/orthability-and-the-ground-of-intelligibility.md": "fd7ed7a1aa6d9893bb9da304ebffc0ebc90839e0eccbe18ee6f387aacd3c9d41"
@@ -29,11 +29,11 @@
   },
   "publication_profile": {
     "path": "docs/publication-profile.yaml",
-    "sha256": "42138d60a87e60a12482e1cf0640461ac628abca082a92393a0d828e5ab0c30f"
+    "sha256": "9eec622814fe362a3c9d0f2d7b2c00268cb2d83bbf6723dd3abb84d446e461d0"
   },
   "toolchain_lock": {
     "path": "publication/toolchain-lock.yaml",
-    "sha256": "a84e98cab1d179f8ce987382b75b59242e4926ed655a9a12d214955e98764774"
+    "sha256": "417f48599ae3bc4bcc4e187491f5b3300280c969b48d74bb2490742d1a1c72ea"
   },
   "candidate_status": {
     "source": "docs/current-candidate-state.yaml",
@@ -59,11 +59,11 @@
   "build_command": "/usr/local/texlive/2025/bin/x86_64-linux/latexmk main.tex",
   "source_package": {
     "path": "artifacts/orthability-ground-of-intelligibility-draft.source.tar.gz",
-    "sha256": "940139d8c3df5fbc25dbdddd7cbb6227996f10d2f7514566fd85c7c0b8612ef7"
+    "sha256": "a9f32faf4b7f5a09aa7ddbb60dca63461eb268e4b0221e2c7a65cda3093fda29"
   },
   "source_manifest": {
     "path": "artifacts/orthability-ground-of-intelligibility-draft.source-manifest.json",
-    "sha256": "2a5272a84a95164d5247a76f5f393e6e846a8ce28e456cc5e2c7f483f6f02017"
+    "sha256": "4e33495b8c1430be00f73e95d1be79cff48fa00442a8335fa551384284f62082"
   },
   "tools": {
     "bibtex": "0.99d",

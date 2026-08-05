@@ -1,21 +1,21 @@
 {
   "schema": "orthemology-source-manifest-v1",
   "artifact_id": "dynamic-orthing-noetic-learning-orthability-draft",
-  "source_commit": "9a548178623f344a3bbea3638549927bd2c97568",
-  "source_tree": "06d24cf03da76be69b0d140510dd00cba51806e6",
-  "independently_reviewed_equivalent_source_commit": "9a548178623f344a3bbea3638549927bd2c97568",
-  "independently_reviewed_equivalent_source_tree": "06d24cf03da76be69b0d140510dd00cba51806e6",
+  "source_commit": "f35047bd50e2f20c6bac586fbffef71cd6976457",
+  "source_tree": "3264be719ef87985cb39809ee7a8954c26fb6d08",
+  "independently_reviewed_equivalent_source_commit": "f35047bd50e2f20c6bac586fbffef71cd6976457",
+  "independently_reviewed_equivalent_source_tree": "3264be719ef87985cb39809ee7a8954c26fb6d08",
   "source_tree_equivalence": "verified-identical",
-  "source_date_epoch": 1785892954,
+  "source_date_epoch": 1785893136,
   "archive": {
     "path": "artifacts/dynamic-orthing-noetic-learning-orthability-draft.source.tar.gz",
-    "sha256": "3b6842709a44c3f97b13288d967499066a8cf3d4fdbb4017a3154188a21f4180",
+    "sha256": "9134851ff363fe4a29120458092260b20cda3074e54245899c0c04b445ddc791",
     "format": "tar-gzip-ustar"
   },
   "entry_point": "publication/latex/dynamic-orthing-noetic-learning-orthability-draft/main.tex",
   "build_workdir": "publication/latex/dynamic-orthing-noetic-learning-orthability-draft",
-  "publication_profile_sha256": "42138d60a87e60a12482e1cf0640461ac628abca082a92393a0d828e5ab0c30f",
-  "toolchain_lock_sha256": "a84e98cab1d179f8ce987382b75b59242e4926ed655a9a12d214955e98764774",
+  "publication_profile_sha256": "9eec622814fe362a3c9d0f2d7b2c00268cb2d83bbf6723dd3abb84d446e461d0",
+  "toolchain_lock_sha256": "417f48599ae3bc4bcc4e187491f5b3300280c969b48d74bb2490742d1a1c72ea",
   "tex_live_dependencies": {
     "fvextra": {
       "tex_live_package": "fvextra",

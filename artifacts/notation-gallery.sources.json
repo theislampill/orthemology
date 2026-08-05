@@ -2,15 +2,15 @@
   "schema": "orthemology-pdf-sources-v2",
   "artifact_id": "notation-gallery",
   "pdf": "notation-gallery.pdf",
-  "pdf_sha256": "8bfa4e4dd966fa16e910a1adb0c8e8cbf4bd5bb2fc22b0b493557f8cc62fedad",
+  "pdf_sha256": "3afc21e00ae807d18d1c5158e82f698c5a90a179b08d77c501ed1480051ea8f4",
   "page_count": 2,
-  "source_commit": "9a548178623f344a3bbea3638549927bd2c97568",
-  "source_tree": "06d24cf03da76be69b0d140510dd00cba51806e6",
-  "independently_reviewed_equivalent_source_commit": "9a548178623f344a3bbea3638549927bd2c97568",
-  "independently_reviewed_equivalent_source_tree": "06d24cf03da76be69b0d140510dd00cba51806e6",
+  "source_commit": "f35047bd50e2f20c6bac586fbffef71cd6976457",
+  "source_tree": "3264be719ef87985cb39809ee7a8954c26fb6d08",
+  "independently_reviewed_equivalent_source_commit": "f35047bd50e2f20c6bac586fbffef71cd6976457",
+  "independently_reviewed_equivalent_source_tree": "3264be719ef87985cb39809ee7a8954c26fb6d08",
   "source_tree_equivalence": "verified-identical",
-  "source_date_epoch": 1785892954,
-  "build_time_utc": "2026-08-05T01:22:34Z",
+  "source_date_epoch": 1785893136,
+  "build_time_utc": "2026-08-05T01:25:36Z",
   "source_hashes": {
     "markdown": {
       "docs/notation-gallery.md": "449ead6c2f13ae066cf0ae20d3b08f76e498bf58c3c8b18da34e70a8d2863b49"
@@ -29,11 +29,11 @@
   },
   "publication_profile": {
     "path": "docs/publication-profile.yaml",
-    "sha256": "42138d60a87e60a12482e1cf0640461ac628abca082a92393a0d828e5ab0c30f"
+    "sha256": "9eec622814fe362a3c9d0f2d7b2c00268cb2d83bbf6723dd3abb84d446e461d0"
   },
   "toolchain_lock": {
     "path": "publication/toolchain-lock.yaml",
-    "sha256": "a84e98cab1d179f8ce987382b75b59242e4926ed655a9a12d214955e98764774"
+    "sha256": "417f48599ae3bc4bcc4e187491f5b3300280c969b48d74bb2490742d1a1c72ea"
   },
   "candidate_status": {
     "source": "docs/current-candidate-state.yaml",
@@ -59,11 +59,11 @@
   "build_command": "/usr/local/texlive/2025/bin/x86_64-linux/latexmk main.tex",
   "source_package": {
     "path": "artifacts/notation-gallery.source.tar.gz",
-    "sha256": "d4011b632320a33d432d17af51187d9dd506c9ca40d6d7e38df2d784503ca9d3"
+    "sha256": "fdfe18c6f193ae9e5e655611995a5c286a5fbd08dd79880871a869e816e3730a"
   },
   "source_manifest": {
     "path": "artifacts/notation-gallery.source-manifest.json",
-    "sha256": "0b68ad49791fdaa8561e49cd4505433bc0fc8fd4dabbbf02b6496bc270788814"
+    "sha256": "160c5e47098ef23336223b93d2ad8fb733d21c219bf82fa2555181d469671946"
   },
   "tools": {
     "bibtex": "0.99d",
