@@ -131,7 +131,7 @@ provenance-currency type. An orthemma is not assigned to one mutually exclusive 
 The occurrence and the signal it presents are different objects. Let $\Omega : M \rightharpoonup X$ be the (partial, typed) observation map and $x = \Omega(m)$ the presently available observation of $m$.
 The observation may be impoverished, aliased, or misleading; the orthemma is the concrete event that produced or occasioned it. Apprehension runs
 
-$$m \;\xrightarrow{\;\Omega\;}\; x \;\xrightarrow{\;\text{evidence } H_t\;}\; \hat{p}_t(m) \;\xrightarrow{\;\text{placement}\;}\; a_t \;\xrightarrow{\;\text{creates}\;}\; \operatorname{Succ} \subseteq M,$$
+$$\begin{aligned} m \;&\xrightarrow{\;\Omega\;}\; x \;\xrightarrow{\;\text{evidence } H_t\;}\; \hat{p}_t(m) \ &\xrightarrow{\;\text{placement}\;}\; a_t \;\xrightarrow{\;\text{creates}\;}\; \operatorname{Succ} \subseteq M, \end{aligned}$$
 
 with the feedback edge $\operatorname{Succ} \to M$ closing the loop: successors re-enter the occurrence domain.
 
@@ -143,7 +143,7 @@ and the occurrence $m$.
 
 A system may know that an orthemma occurred while not knowing its orthemic identity: $m$ is encountered, yet $\hat{p}_t(m)$ remains open. The right description is
 
-$$m \text{ is encountered; } \hat{p}_t(m) \text{ remains unresolved,}$$
+$$m \text{ is encountered;}\quad \hat{p}_t(m) \text{ remains unresolved,}$$
 
 not "an unknown ortheme floats free." Types do not hover independently of occurrences; what is unresolved is the placement of a present, concrete case. This also separates the four
 things "the hidden distinction" can mean, as facets of one relation: the actual profile $O^*_T(m)$ (ground truth), the evidence and candidate structure (Section 5), the inferred
@@ -166,7 +166,9 @@ reused storage slot occupied by a new file).
 
 **Definition 6 (Labeled successor edges).** An action $a$ performed in the handling of $m$ creates a labeled successor set
 
-$$\operatorname{Succ}_a(m) \subseteq M, \quad \text{each element reached by an edge labeled with the action that produced it,}$$
+$$\operatorname{Succ}_a(m) \subseteq M,$$
+
+each element reached by an edge labeled with the action that produced it,
 
 of size **zero, one, or many**. (A read-only classification creates none; an edit creates one; a split, broadcast, or build creates many. An earlier formulation forcing a single
 successor $m' = \operatorname{succ}(m, a)$ is corrected.)
@@ -263,7 +265,7 @@ object — which is precisely how verdicts transport across mutations undetected
 The prior manuscript's single observation map $\Omega$ is replaced by a family of **typed evidence channels** $\{\Omega_k\}$, each partial (not every channel applies to every occurrence) and
 each carrying declared metadata. An evidence item obtained through channel $k$ is a record
 
-$$h = \langle\, \text{channel } k;\ \text{property class } \tau;\ \text{scope } \sigma;\ \text{provenance};\ \text{validity/expiry} \,\rangle$$
+$$\begin{aligned} h = \langle\, &\text{channel } k;\ \text{property class } \tau;\ \text{scope } \sigma; \ &\text{provenance};\ \text{validity/expiry} \,\rangle \end{aligned}$$
 
 with components glossed:
 
@@ -455,7 +457,8 @@ be decisive under a confident placement.
 
 **Definition 12 (Residual disposition).** Every burden of an episode carries, at closure time, exactly one disposition from
 
-$$\{\, \text{unresolved, deferred, transferred, owner-assigned, risk-accepted, validated-resolved} \,\}$$
+*unresolved*, *deferred*, *transferred*, *owner-assigned*, *risk-accepted*, or
+*validated-resolved*,
 
 glossed: still open with no plan (unresolved); open with a declared later trigger (deferred); moved to another party with traceable ownership (transferred); waiting on a named
 owner's decision (owner-assigned); consciously left open under an accepted, recorded risk (risk-accepted); or closed on in-scope, current, sufficient evidence (validated-resolved).
@@ -501,7 +504,9 @@ The loop ends when residual obligations in the ledger have been reread — not w
 
 The prior draft's "revise" was one word. The record shows it needs its own machinery. A **revision operator**
 
-$$\rho : (\mu, \text{lesson}) \mapsto \mu' \qquad (\text{and analogously for repertoire revisions } \rho : (O, \text{lesson}) \mapsto O')$$
+$$\rho : (\mu, \text{lesson}) \mapsto \mu'$$
+
+(and analogously for repertoire revisions $\rho : (O, \text{lesson}) \mapsto O'$)
 
 is governed by:
 
