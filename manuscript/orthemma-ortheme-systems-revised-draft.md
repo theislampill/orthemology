@@ -131,7 +131,9 @@ provenance-currency type. An orthemma is not assigned to one mutually exclusive 
 The occurrence and the signal it presents are different objects. Let $\Omega : M \rightharpoonup X$ be the (partial, typed) observation map and $x = \Omega(m)$ the presently available observation of $m$.
 The observation may be impoverished, aliased, or misleading; the orthemma is the concrete event that produced or occasioned it. Apprehension runs
 
-$$\begin{aligned} m \;&\xrightarrow{\;\Omega\;}\; x \;\xrightarrow{\;\text{evidence } H_t\;}\; \hat{p}_t(m) \ &\xrightarrow{\;\text{placement}\;}\; a_t \;\xrightarrow{\;\text{creates}\;}\; \operatorname{Succ} \subseteq M, \end{aligned}$$
+$$m \;\xrightarrow{\;\Omega\;}\; x \;\xrightarrow{\;\text{evidence } H_t\;}\; \hat{p}_t(m)$$
+
+$$\hat{p}_t(m) \;\xrightarrow{\;\text{placement}\;}\; a_t \;\xrightarrow{\;\text{creates}\;}\; \operatorname{Succ} \subseteq M,$$
 
 with the feedback edge $\operatorname{Succ} \to M$ closing the loop: successors re-enter the occurrence domain.
 
@@ -265,7 +267,9 @@ object — which is precisely how verdicts transport across mutations undetected
 The prior manuscript's single observation map $\Omega$ is replaced by a family of **typed evidence channels** $\{\Omega_k\}$, each partial (not every channel applies to every occurrence) and
 each carrying declared metadata. An evidence item obtained through channel $k$ is a record
 
-$$\begin{aligned} h = \langle\, &\text{channel } k;\ \text{property class } \tau;\ \text{scope } \sigma; \ &\text{provenance};\ \text{validity/expiry} \,\rangle \end{aligned}$$
+$$h = \langle\, \text{channel } k;\ \text{property class } \tau;\ \text{scope } \sigma;$$
+
+$$\text{provenance};\ \text{validity/expiry} \,\rangle$$
 
 with components glossed:
 
