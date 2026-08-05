@@ -111,7 +111,7 @@ d1af3906062076648a2df3681c372b0e43d4e0322739821a2ccf83329a130587  companion/sour
 2b783e74bfdfe892a7a45830d143579939fb1ec0c6715bdec619a8604dee202d  docs/architecture/ORTHEMOLOGY-LAYER-MAP.yaml
 aa95d6e44f81041e7755f3ac22d9b3100529d452151f8e54a97495ac435a6a29  docs/claim-reason-requirements.yaml
 7311b9d973761648f8b02ee47c222e64b8a752df57e86bcc74e47c34edc34fce  docs/current-candidate-state.yaml
-438dd10c157655d367f31a53bab2f0c9628d0cd2a23db9ce59ee134c1d294e3a  docs/current-state.yaml
+60a094acef1561ab71bd00f2ee7e4efdd88e5212257c2f094bebad5efaf11c26  docs/current-state.yaml
 53d15c2fba0185fdbb3bccdd5b586fd67e7f78824a2fd1e8860860ce36560dad  docs/decision-status.yaml
 f014c45f78df78b6de99ff3e968c45332a7d18aedd4085fb36c6a57c65b536e4  docs/decisions/0001-analysis-relative-ground-truth.md
 d819e97e623fa8e20447ec9496cb2e932071b3fc54604df77c4c24396ecafe07  docs/decisions/0002-metaorthemma-configuration-token.md
@@ -169,7 +169,7 @@ b869c0aae4b47179c588f68015c4c7fa702c3492f0f746b0c0f4b5fb73e00306  docs/project-c
 953ad0fac62e31d9826ad918159c5e2c510cf2505c0a01280a7d77aca2f6dfd8  docs/project-closure/ar8r-v11/AR8R-V11-POST-MERGE-EVIDENCE-CATALOG.yaml
 da4b9d38b5df3185e2c48d5e5e68c0f3c6fde825576f693021c16d693cdcefbf  docs/project-closure/ar8r-v11/AR8R-V11-RECONCILIATION-LEDGER.yaml
 080cdce2923c151b742389f708134b65e67bb867d2f95a0e73e7d3d1f4947d68  docs/project-closure/ar8r-v11/README.md
-cd718c3d49244a69149e2ceeca609c1cab8a8116f6d4cbc428a31e926568c2f6  docs/project-closure/ar8r-v11/SHA256SUMS
+07bafea7b6a066768bcb3b6c155dbfcbfd2a9443a937a04292340c289b020916  docs/project-closure/ar8r-v11/SHA256SUMS
 fea957c4c0ee508743d3b5f8bee591b6a4231ec630ae4675c63417a1465e8c91  docs/project-closure/ar8r-v11/experiments/t299-t300-negative-synthetic-pilot.md
 6c5be92e2baddcf64c4333d8847366cfc8eff50b78f5a8df386daae95886b8ad  docs/project-closure/ar8r-v11/experiments/t299-t300-negative-synthetic-pilot.yaml
 2980299bd5d47599e3c3dbf5e48659aa0c082362252da5f2766b99c5c1142bbd  docs/project-closure/ar8r-v11/fable-research/AR8R-FABLE-R1-CORRECTION-RECEIPT-V1.md
@@ -178,6 +178,7 @@ fea957c4c0ee508743d3b5f8bee591b6a4231ec630ae4675c63417a1465e8c91  docs/project-c
 8ced43f5dbb51ffd4a88e80f58b79779a01d53eaeb0fe34e939b39a34562e9a6  docs/project-closure/ar8r-v11/fable-research/AR8R-FABLE-R1-OSM-TYPED-EXTRACTION.md
 3f4567eb1b4a6690299ac9c2d9d999c98fab38bff1eab172dc45902d9cefb5a8  docs/project-closure/ar8r-v11/fable-research/AR8R-FABLE-R1-PDF-LAYOUT-REPAIR-REPORT-V1.md
 34920e7408b7c14f7ead43db6c854fc04c464d34f243dcd7c3f94d0bcc5b27e1  docs/project-closure/ar8r-v11/fable-research/AR8R-FABLE-R1-PDF-PAGE-BY-PAGE-VISUAL-QA-V1.csv
+7ed09a5e0b4fd083d7ebbc6901dc702d14033337e13fdf487e988f33317eb08d  docs/project-closure/ar8r-v11/fable-research/AR8R-FABLE-R1-PR21-FINAL-REREVIEW-V2.md
 c1f343f2536326dd1129d75b05f96fb33b5fe865cdaa8130f1b7a52c9060e49d  docs/project-closure/ar8r-v11/fable-research/AR8R-FABLE-R1-PR21-INDEPENDENT-AUDIT-V2.md
 ff94dfc270e56932085aefea40a6eb36bf06b66e1f4f569deff7d6e95734416c  docs/project-closure/ar8r-v11/fable-research/AR8R-FABLE-R1-PR21-SEMANTIC-STATUS-REPAIR-RECEIPT-V2.md
 7ccd7e1e0019b893dc9af5fd0fb838c74c3769a8cc17469b8cd4d6e9c4465336  docs/project-closure/ar8r-v11/fable-research/AR8R-FABLE-R1-PR21-SOURCE-VERIFICATION-RECEIPT-V2.md
