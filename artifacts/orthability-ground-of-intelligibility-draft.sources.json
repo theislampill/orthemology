@@ -2,21 +2,21 @@
   "schema": "orthemology-pdf-sources-v2",
   "artifact_id": "orthability-ground-of-intelligibility-draft",
   "pdf": "orthability-ground-of-intelligibility-draft.pdf",
-  "pdf_sha256": "12b22767ff6be7aab84cfa1e2fd6e5c39b1c802fd69ca70c55009211d99e0387",
+  "pdf_sha256": "ba7cb6752e879836c9badca373e831d10c32e708dee47146caed45ecba3e4da1",
   "page_count": 8,
-  "source_commit": "e2ac7c45a34c95c56fe2dc5dd90668a1177260df",
-  "source_tree": "d2fa9670517c3a15eebd4a45f620fd0e111f2e76",
-  "independently_reviewed_equivalent_source_commit": "e2ac7c45a34c95c56fe2dc5dd90668a1177260df",
-  "independently_reviewed_equivalent_source_tree": "d2fa9670517c3a15eebd4a45f620fd0e111f2e76",
+  "source_commit": "9a548178623f344a3bbea3638549927bd2c97568",
+  "source_tree": "06d24cf03da76be69b0d140510dd00cba51806e6",
+  "independently_reviewed_equivalent_source_commit": "9a548178623f344a3bbea3638549927bd2c97568",
+  "independently_reviewed_equivalent_source_tree": "06d24cf03da76be69b0d140510dd00cba51806e6",
   "source_tree_equivalence": "verified-identical",
-  "source_date_epoch": 1785827842,
-  "build_time_utc": "2026-08-04T07:17:22Z",
+  "source_date_epoch": 1785892954,
+  "build_time_utc": "2026-08-05T01:22:34Z",
   "source_hashes": {
     "markdown": {
       "companion/orthability-and-the-ground-of-intelligibility.md": "fd7ed7a1aa6d9893bb9da304ebffc0ebc90839e0eccbe18ee6f387aacd3c9d41"
     },
     "latex": {
-      "publication/latex/orthability-ground-of-intelligibility-draft/main.tex": "fdf862755878de209240d6464fbfeb4d73f9fe7d88f557550d60d6024c6f65c0"
+      "publication/latex/orthability-ground-of-intelligibility-draft/main.tex": "b3ca44eb33a881eec84ca384c3115678068e3a90973e53d6b6f7986b7dbe3b24"
     },
     "bibliography": {
       "path": "references/orthemology.bib",
@@ -29,11 +29,11 @@
   },
   "publication_profile": {
     "path": "docs/publication-profile.yaml",
-    "sha256": "a29f4eb7af74f2e13843b5db8386fe7dd4c837def4c5c199fbae2c30a7acb774"
+    "sha256": "42138d60a87e60a12482e1cf0640461ac628abca082a92393a0d828e5ab0c30f"
   },
   "toolchain_lock": {
     "path": "publication/toolchain-lock.yaml",
-    "sha256": "d9b1ecbba2e34e34ec06bb4eeac383e90d8f8ed55e8c32dde1f4b5bc7daac263"
+    "sha256": "a84e98cab1d179f8ce987382b75b59242e4926ed655a9a12d214955e98764774"
   },
   "candidate_status": {
     "source": "docs/current-candidate-state.yaml",
@@ -59,11 +59,11 @@
   "build_command": "/usr/local/texlive/2025/bin/x86_64-linux/latexmk main.tex",
   "source_package": {
     "path": "artifacts/orthability-ground-of-intelligibility-draft.source.tar.gz",
-    "sha256": "9c8927ec710163c8c803fad3d2613c647f4bb034992aa4464a9c423aa53c5f4b"
+    "sha256": "940139d8c3df5fbc25dbdddd7cbb6227996f10d2f7514566fd85c7c0b8612ef7"
   },
   "source_manifest": {
     "path": "artifacts/orthability-ground-of-intelligibility-draft.source-manifest.json",
-    "sha256": "4e98b2f634636befc2a3d4266e3be7284203fa8dd1335b317980bc83cfbb311b"
+    "sha256": "2a5272a84a95164d5247a76f5f393e6e846a8ce28e456cc5e2c7f483f6f02017"
   },
   "tools": {
     "bibtex": "0.99d",

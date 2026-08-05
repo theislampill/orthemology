@@ -2,21 +2,21 @@
   "schema": "orthemology-pdf-sources-v2",
   "artifact_id": "orthemma-ortheme-systems-draft",
   "pdf": "orthemma-ortheme-systems-draft.pdf",
-  "pdf_sha256": "062137cfd8c80b874822517b85cbe35aaa713abf73e9900cf4bb415f795ddf7a",
-  "page_count": 26,
-  "source_commit": "e2ac7c45a34c95c56fe2dc5dd90668a1177260df",
-  "source_tree": "d2fa9670517c3a15eebd4a45f620fd0e111f2e76",
-  "independently_reviewed_equivalent_source_commit": "e2ac7c45a34c95c56fe2dc5dd90668a1177260df",
-  "independently_reviewed_equivalent_source_tree": "d2fa9670517c3a15eebd4a45f620fd0e111f2e76",
+  "pdf_sha256": "95544b575504eb3afff26b32feac501eac22b72d9f563b4bf32c170bee1c5139",
+  "page_count": 25,
+  "source_commit": "9a548178623f344a3bbea3638549927bd2c97568",
+  "source_tree": "06d24cf03da76be69b0d140510dd00cba51806e6",
+  "independently_reviewed_equivalent_source_commit": "9a548178623f344a3bbea3638549927bd2c97568",
+  "independently_reviewed_equivalent_source_tree": "06d24cf03da76be69b0d140510dd00cba51806e6",
   "source_tree_equivalence": "verified-identical",
-  "source_date_epoch": 1785827842,
-  "build_time_utc": "2026-08-04T07:17:22Z",
+  "source_date_epoch": 1785892954,
+  "build_time_utc": "2026-08-05T01:22:34Z",
   "source_hashes": {
     "markdown": {
-      "manuscript/orthemma-ortheme-systems-revised-draft.md": "35ed98f779bf6e6881b24ab100f70336d43e55ca6ebdd1a5128895b08d285a02"
+      "manuscript/orthemma-ortheme-systems-revised-draft.md": "e31cbe26b016e2020e1106108afa25d4b2a1eff88e912864112ded9829b4689e"
     },
     "latex": {
-      "publication/latex/orthemma-ortheme-systems-draft/main.tex": "1e23f6e8173ddba78bef8b960ef4e142bdfc59a7bce62910862e567195abe4a3"
+      "publication/latex/orthemma-ortheme-systems-draft/main.tex": "690b987f1cda447c231ff46d3ebce9c7a8605d131c6154697a89d5f9b2a5bd99"
     },
     "bibliography": {
       "path": "references/orthemology.bib",
@@ -29,11 +29,11 @@
   },
   "publication_profile": {
     "path": "docs/publication-profile.yaml",
-    "sha256": "a29f4eb7af74f2e13843b5db8386fe7dd4c837def4c5c199fbae2c30a7acb774"
+    "sha256": "42138d60a87e60a12482e1cf0640461ac628abca082a92393a0d828e5ab0c30f"
   },
   "toolchain_lock": {
     "path": "publication/toolchain-lock.yaml",
-    "sha256": "d9b1ecbba2e34e34ec06bb4eeac383e90d8f8ed55e8c32dde1f4b5bc7daac263"
+    "sha256": "a84e98cab1d179f8ce987382b75b59242e4926ed655a9a12d214955e98764774"
   },
   "candidate_status": {
     "source": "docs/current-candidate-state.yaml",
@@ -59,11 +59,11 @@
   "build_command": "/usr/local/texlive/2025/bin/x86_64-linux/latexmk main.tex",
   "source_package": {
     "path": "artifacts/orthemma-ortheme-systems-draft.source.tar.gz",
-    "sha256": "1284192f10605a8377826e02c625d53a6e745e7db28e54778b45bd517dc94711"
+    "sha256": "ef200aaa1fc278fb11aebebc2adb2d3cba74086a6c6e37864c6eb6f79c63864f"
   },
   "source_manifest": {
     "path": "artifacts/orthemma-ortheme-systems-draft.source-manifest.json",
-    "sha256": "1a3ae3c4ebab98c0157aec30a47eb2d2b03886e4f0278e46e131a3847a51c936"
+    "sha256": "746ec21ab037db1e668200a4c870758f3ef37fcb0284c27a203f96f135a815f4"
   },
   "tools": {
     "bibtex": "0.99d",

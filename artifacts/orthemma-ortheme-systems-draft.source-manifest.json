@@ -1,21 +1,21 @@
 {
   "schema": "orthemology-source-manifest-v1",
   "artifact_id": "orthemma-ortheme-systems-draft",
-  "source_commit": "e2ac7c45a34c95c56fe2dc5dd90668a1177260df",
-  "source_tree": "d2fa9670517c3a15eebd4a45f620fd0e111f2e76",
-  "independently_reviewed_equivalent_source_commit": "e2ac7c45a34c95c56fe2dc5dd90668a1177260df",
-  "independently_reviewed_equivalent_source_tree": "d2fa9670517c3a15eebd4a45f620fd0e111f2e76",
+  "source_commit": "9a548178623f344a3bbea3638549927bd2c97568",
+  "source_tree": "06d24cf03da76be69b0d140510dd00cba51806e6",
+  "independently_reviewed_equivalent_source_commit": "9a548178623f344a3bbea3638549927bd2c97568",
+  "independently_reviewed_equivalent_source_tree": "06d24cf03da76be69b0d140510dd00cba51806e6",
   "source_tree_equivalence": "verified-identical",
-  "source_date_epoch": 1785827842,
+  "source_date_epoch": 1785892954,
   "archive": {
     "path": "artifacts/orthemma-ortheme-systems-draft.source.tar.gz",
-    "sha256": "1284192f10605a8377826e02c625d53a6e745e7db28e54778b45bd517dc94711",
+    "sha256": "ef200aaa1fc278fb11aebebc2adb2d3cba74086a6c6e37864c6eb6f79c63864f",
     "format": "tar-gzip-ustar"
   },
   "entry_point": "publication/latex/orthemma-ortheme-systems-draft/main.tex",
   "build_workdir": "publication/latex/orthemma-ortheme-systems-draft",
-  "publication_profile_sha256": "a29f4eb7af74f2e13843b5db8386fe7dd4c837def4c5c199fbae2c30a7acb774",
-  "toolchain_lock_sha256": "d9b1ecbba2e34e34ec06bb4eeac383e90d8f8ed55e8c32dde1f4b5bc7daac263",
+  "publication_profile_sha256": "42138d60a87e60a12482e1cf0640461ac628abca082a92393a0d828e5ab0c30f",
+  "toolchain_lock_sha256": "a84e98cab1d179f8ce987382b75b59242e4926ed655a9a12d214955e98764774",
   "tex_live_dependencies": {
     "fvextra": {
       "tex_live_package": "fvextra",
@@ -81,8 +81,8 @@
     },
     {
       "path": "publication/latex/orthemma-ortheme-systems-draft/main.tex",
-      "sha256": "1e23f6e8173ddba78bef8b960ef4e142bdfc59a7bce62910862e567195abe4a3",
-      "bytes": 139379,
+      "sha256": "690b987f1cda447c231ff46d3ebce9c7a8605d131c6154697a89d5f9b2a5bd99",
+      "bytes": 142384,
       "mode": "0644",
       "role": "entry-point"
     },
