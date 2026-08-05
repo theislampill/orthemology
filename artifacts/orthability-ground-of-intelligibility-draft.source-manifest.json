@@ -1,21 +1,21 @@
 {
   "schema": "orthemology-source-manifest-v1",
   "artifact_id": "orthability-ground-of-intelligibility-draft",
-  "source_commit": "cbcbe81959a9b757b2831bb1431adc9bd8d9ab51",
-  "source_tree": "785ff9bd7d59fa6168e7fa836fa95092d84a3f8f",
-  "independently_reviewed_equivalent_source_commit": "cbcbe81959a9b757b2831bb1431adc9bd8d9ab51",
-  "independently_reviewed_equivalent_source_tree": "785ff9bd7d59fa6168e7fa836fa95092d84a3f8f",
+  "source_commit": "43c4a07c54c61cec89c77ac8c5b4e75433caf3a4",
+  "source_tree": "b49f408f7c7500fb87bbafb73323b6ceece18c5c",
+  "independently_reviewed_equivalent_source_commit": "43c4a07c54c61cec89c77ac8c5b4e75433caf3a4",
+  "independently_reviewed_equivalent_source_tree": "b49f408f7c7500fb87bbafb73323b6ceece18c5c",
   "source_tree_equivalence": "verified-identical",
-  "source_date_epoch": 1785893690,
+  "source_date_epoch": 1785895767,
   "archive": {
     "path": "artifacts/orthability-ground-of-intelligibility-draft.source.tar.gz",
-    "sha256": "ef0fcaf1d2b6256318554e69c2f6501d1d28357f10ef0ce0849c96e01bfd3600",
+    "sha256": "ed9b4f46c4fefa1d6e00eae2c6ca3b5ef52eb26c11a24010e1119bcc821e7b0a",
     "format": "tar-gzip-ustar"
   },
   "entry_point": "publication/latex/orthability-ground-of-intelligibility-draft/main.tex",
   "build_workdir": "publication/latex/orthability-ground-of-intelligibility-draft",
-  "publication_profile_sha256": "6f395919ac23520d6abee0e920322d093b27be6beff67d9ea6c51a0fca49e8c2",
-  "toolchain_lock_sha256": "c3134feb68df89c341a033969d24bf5959e138f3dcf07a8e9f0cef807a8c5a2b",
+  "publication_profile_sha256": "beb4a3a2ca8305475d4b4140186f2a14d94e31870a625078368f3cd9bc85237c",
+  "toolchain_lock_sha256": "76b420108fa0e807559ecdc0778a78b840238487614871d28bd2e7fc6231d727",
   "tex_live_dependencies": {
     "fvextra": {
       "tex_live_package": "fvextra",

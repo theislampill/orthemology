@@ -2,15 +2,15 @@
   "schema": "orthemology-pdf-sources-v2",
   "artifact_id": "orthability-divine-speech-athari-draft",
   "pdf": "orthability-divine-speech-athari-draft.pdf",
-  "pdf_sha256": "93a860a95687f2be5fc74e57c389902e60e7e7fc0c1035c2caae31bbdeacc5e7",
+  "pdf_sha256": "2c47c8bde898e097056af42d0eed1d6332dc3a9ce784d2febe19bb30c5deb9c6",
   "page_count": 6,
-  "source_commit": "cbcbe81959a9b757b2831bb1431adc9bd8d9ab51",
-  "source_tree": "785ff9bd7d59fa6168e7fa836fa95092d84a3f8f",
-  "independently_reviewed_equivalent_source_commit": "cbcbe81959a9b757b2831bb1431adc9bd8d9ab51",
-  "independently_reviewed_equivalent_source_tree": "785ff9bd7d59fa6168e7fa836fa95092d84a3f8f",
+  "source_commit": "43c4a07c54c61cec89c77ac8c5b4e75433caf3a4",
+  "source_tree": "b49f408f7c7500fb87bbafb73323b6ceece18c5c",
+  "independently_reviewed_equivalent_source_commit": "43c4a07c54c61cec89c77ac8c5b4e75433caf3a4",
+  "independently_reviewed_equivalent_source_tree": "b49f408f7c7500fb87bbafb73323b6ceece18c5c",
   "source_tree_equivalence": "verified-identical",
-  "source_date_epoch": 1785893690,
-  "build_time_utc": "2026-08-05T01:34:50Z",
+  "source_date_epoch": 1785895767,
+  "build_time_utc": "2026-08-05T02:09:27Z",
   "source_hashes": {
     "markdown": {
       "companion/orthability-divine-attributes-and-speech-athari.md": "64cd7d4b07bd905ee97b16dbffaa046ea51489521e6f06ff47e768b30fe77b53"
@@ -29,11 +29,11 @@
   },
   "publication_profile": {
     "path": "docs/publication-profile.yaml",
-    "sha256": "6f395919ac23520d6abee0e920322d093b27be6beff67d9ea6c51a0fca49e8c2"
+    "sha256": "beb4a3a2ca8305475d4b4140186f2a14d94e31870a625078368f3cd9bc85237c"
   },
   "toolchain_lock": {
     "path": "publication/toolchain-lock.yaml",
-    "sha256": "c3134feb68df89c341a033969d24bf5959e138f3dcf07a8e9f0cef807a8c5a2b"
+    "sha256": "76b420108fa0e807559ecdc0778a78b840238487614871d28bd2e7fc6231d727"
   },
   "candidate_status": {
     "source": "docs/current-candidate-state.yaml",
@@ -59,11 +59,11 @@
   "build_command": "/usr/local/texlive/2025/bin/x86_64-linux/latexmk main.tex",
   "source_package": {
     "path": "artifacts/orthability-divine-speech-athari-draft.source.tar.gz",
-    "sha256": "95749bd1e83dde73f230b275403e88f0748a8b9abe9fc7ea6016112cbf3c79c6"
+    "sha256": "0d23e66f2fcb846d567302eed5ea24edd1f1b37192cd32ff747d0a4d16050b91"
   },
   "source_manifest": {
     "path": "artifacts/orthability-divine-speech-athari-draft.source-manifest.json",
-    "sha256": "11fdc4df53e9c660f2ac2a673492a5a8d7c04c76dee44ecdc431a5b77f65efd7"
+    "sha256": "87c7998b6e8537a638eca682ef4f23ceecff0eb27f928ec6078a2ff7853cedc2"
   },
   "tools": {
     "bibtex": "0.99d",

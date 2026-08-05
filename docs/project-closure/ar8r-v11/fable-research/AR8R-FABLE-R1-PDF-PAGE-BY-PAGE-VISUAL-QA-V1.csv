@@ -4,7 +4,7 @@ orthemma-ortheme-systems-draft.pdf,2,claude-fable-5,PASS,"prior isolated 1.5 hea
 orthemma-ortheme-systems-draft.pdf,3,claude-fable-5,PASS,"prior fragmented 3-col table now breakable row blocks; fibre formula now display math"
 orthemma-ortheme-systems-draft.pdf,4,claude-fable-5,PASS,"prior ASCII flow diagram now two display-math chains; Succ display math"
 orthemma-ortheme-systems-draft.pdf,5,claude-fable-5,PASS,"prior raw profile-notation block now itemized math; merger-gap now display math"
-orthemma-ortheme-systems-draft.pdf,6,claude-fable-5,PASS,"prior shattered 4-col uncertainty table now row blocks; h-record stacked displays"
+orthemma-ortheme-systems-draft.pdf,6,claude-fable-5,PASS,"prior shattered 4-col uncertainty table now row blocks with bold row leads (distinct rereview caught, then fixed, an intermediate Column-1 placeholder-label regression); h-record stacked displays"
 orthemma-ortheme-systems-draft.pdf,7,claude-fable-5,PASS,"prior fragmented families table now row blocks; mis-scoped pass now math"
 orthemma-ortheme-systems-draft.pdf,8,claude-fable-5,PASS,"mu record now display math"
 orthemma-ortheme-systems-draft.pdf,9,claude-fable-5,PASS,
@@ -12,7 +12,7 @@ orthemma-ortheme-systems-draft.pdf,10,claude-fable-5,PASS,"dispositions now inli
 orthemma-ortheme-systems-draft.pdf,11,claude-fable-5,PASS,"revision operator now display math"
 orthemma-ortheme-systems-draft.pdf,12,claude-fable-5,PASS,"machine-managed somnus YAML projection retained as contained small verbatim (machine-readable form)"
 orthemma-ortheme-systems-draft.pdf,13,claude-fable-5,PASS,
-orthemma-ortheme-systems-draft.pdf,14,claude-fable-5,PASS,
+orthemma-ortheme-systems-draft.pdf,14,claude-fable-5,PASS,"result-by-pathway matrix blocks now lead with bold cell titles; pre-existing Column-1 placeholders removed"
 orthemma-ortheme-systems-draft.pdf,15,claude-fable-5,PASS,
 orthemma-ortheme-systems-draft.pdf,16,claude-fable-5,PASS,
 orthemma-ortheme-systems-draft.pdf,17,claude-fable-5,PASS,
@@ -59,4 +59,4 @@ dynamic-orthing-noetic-learning-orthability-draft.pdf,3,claude-fable-5,PASS,
 dynamic-orthing-noetic-learning-orthability-draft.pdf,4,claude-fable-5,PASS,
 dynamic-orthing-noetic-learning-orthability-draft.pdf,5,claude-fable-5,PASS,
 notation-gallery.pdf,1,claude-fable-5,PASS,
-notation-gallery.pdf,2,claude-fable-5,PASS_WITH_NOTE,"episode-signature display's final line ragged far right; cosmetic accepted residual"
+notation-gallery.pdf,2,claude-fable-5,PASS_WITH_NOTE,"episode-signature display renders as a multi-line right-drifting staircase ending with Succ-rangle alone at the right margin; cosmetic accepted residual"
