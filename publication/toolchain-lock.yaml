@@ -56,11 +56,11 @@ tex_packages:
     path: /usr/local/texlive/2025/texmf-dist/tex/latex/graphics/keyval.sty
     role: fancyvrb-required
 source_provenance:
-  source_commit: d873cae6968b92b8350a5a9ee3d138e4973ec9c9
-  source_tree: 3638999b495c38d8628479d5537a52e610aafa49
-  source_date_epoch: 1785892757
-  independently_reviewed_equivalent_source_commit: d873cae6968b92b8350a5a9ee3d138e4973ec9c9
-  independently_reviewed_equivalent_source_tree: 3638999b495c38d8628479d5537a52e610aafa49
+  source_commit: 9a548178623f344a3bbea3638549927bd2c97568
+  source_tree: 06d24cf03da76be69b0d140510dd00cba51806e6
+  source_date_epoch: 1785892954
+  independently_reviewed_equivalent_source_commit: 9a548178623f344a3bbea3638549927bd2c97568
+  independently_reviewed_equivalent_source_tree: 06d24cf03da76be69b0d140510dd00cba51806e6
   source_tree_equivalence: verified-identical
 build:
   driver: latexmk
