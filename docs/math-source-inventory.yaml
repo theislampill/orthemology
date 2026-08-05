@@ -6173,455 +6173,455 @@ occurrences:
   classification: literal-code
 - file: manuscript/orthemma-ortheme-systems-revised-draft.md
   locus:
-    line: 325
+    line: 331
     column: 521
   occurrence: 3
   text: not-applicable
   classification: semantic-registry-id
 - file: manuscript/orthemma-ortheme-systems-revised-draft.md
   locus:
-    line: 325
+    line: 331
     column: 1253
   occurrence: 4
   text: not-applicable
   classification: semantic-registry-id
 - file: manuscript/orthemma-ortheme-systems-revised-draft.md
   locus:
-    line: 527
+    line: 536
     column: 38
   occurrence: 5
   text: abc123
   classification: literal-code
 - file: manuscript/orthemma-ortheme-systems-revised-draft.md
   locus:
-    line: 549
+    line: 558
     column: 1
   occurrence: 6
   text: not-applicable
   classification: semantic-registry-id
 - file: manuscript/orthemma-ortheme-systems-revised-draft.md
   locus:
-    line: 577
+    line: 586
     column: 704
   occurrence: 7
   text: schemas/
   classification: literal-code
 - file: manuscript/orthemma-ortheme-systems-revised-draft.md
   locus:
-    line: 577
+    line: 586
     column: 719
   occurrence: 8
   text: examples/somnus/
   classification: literal-code
 - file: manuscript/orthemma-ortheme-systems-revised-draft.md
   locus:
-    line: 581
+    line: 590
     column: 465
   occurrence: 9
   text: docs/verdict-registry.yaml
   classification: literal-code
 - file: manuscript/orthemma-ortheme-systems-revised-draft.md
   locus:
-    line: 581
+    line: 590
     column: 526
   occurrence: 10
   text: RESULT_CORRECT
   classification: semantic-registry-id
 - file: manuscript/orthemma-ortheme-systems-revised-draft.md
   locus:
-    line: 581
+    line: 590
     column: 544
   occurrence: 11
   text: EVIDENCE_SUPPORT
   classification: semantic-registry-id
 - file: manuscript/orthemma-ortheme-systems-revised-draft.md
   locus:
-    line: 581
+    line: 590
     column: 564
   occurrence: 12
   text: PROCEDURE_RELIABLE
   classification: semantic-registry-id
 - file: manuscript/orthemma-ortheme-systems-revised-draft.md
   locus:
-    line: 581
+    line: 590
     column: 586
   occurrence: 13
   text: TOKEN_TRUTH_LINKED
   classification: semantic-registry-id
 - file: manuscript/orthemma-ortheme-systems-revised-draft.md
   locus:
-    line: 581
+    line: 590
     column: 608
   occurrence: 14
   text: EVIDENCE_CURRENT
   classification: semantic-registry-id
 - file: manuscript/orthemma-ortheme-systems-revised-draft.md
   locus:
-    line: 581
+    line: 590
     column: 628
   occurrence: 15
   text: GOV_CONFIG_ADEQUATE
   classification: semantic-registry-id
 - file: manuscript/orthemma-ortheme-systems-revised-draft.md
   locus:
-    line: 581
+    line: 590
     column: 651
   occurrence: 16
   text: GOV_POLICY_ADEQUATE
   classification: semantic-registry-id
 - file: manuscript/orthemma-ortheme-systems-revised-draft.md
   locus:
-    line: 581
+    line: 590
     column: 674
   occurrence: 17
   text: GOV_TOKEN_ADEQUATE
   classification: semantic-registry-id
 - file: manuscript/orthemma-ortheme-systems-revised-draft.md
   locus:
-    line: 581
+    line: 590
     column: 696
   occurrence: 18
   text: EXECUTION_FAITHFUL
   classification: semantic-registry-id
 - file: manuscript/orthemma-ortheme-systems-revised-draft.md
   locus:
-    line: 581
+    line: 590
     column: 718
   occurrence: 19
   text: EX_ANTE_JUSTIFIED
   classification: semantic-registry-id
 - file: manuscript/orthemma-ortheme-systems-revised-draft.md
   locus:
-    line: 581
+    line: 590
     column: 739
   occurrence: 20
   text: ROUTE_ADMISSIBLE
   classification: semantic-registry-id
 - file: manuscript/orthemma-ortheme-systems-revised-draft.md
   locus:
-    line: 581
+    line: 590
     column: 759
   occurrence: 21
   text: ROUTE_QUALITY
   classification: semantic-registry-id
 - file: manuscript/orthemma-ortheme-systems-revised-draft.md
   locus:
-    line: 581
+    line: 590
     column: 776
   occurrence: 22
   text: CLOSURE_TRUTHFUL
   classification: semantic-registry-id
 - file: manuscript/orthemma-ortheme-systems-revised-draft.md
   locus:
-    line: 581
+    line: 590
     column: 796
   occurrence: 23
   text: ROBUST_NEIGHBORHOOD
   classification: semantic-registry-id
 - file: manuscript/orthemma-ortheme-systems-revised-draft.md
   locus:
-    line: 581
+    line: 590
     column: 2072
   occurrence: 24
   text: docs/governance-requirements.yaml
   classification: literal-code
 - file: manuscript/orthemma-ortheme-systems-revised-draft.md
   locus:
-    line: 581
+    line: 590
     column: 2109
   occurrence: 25
   text: scripts/derive_reqpath.py
   classification: literal-code
 - file: manuscript/orthemma-ortheme-systems-revised-draft.md
   locus:
-    line: 606
+    line: 615
     column: 510
   occurrence: 26
   text: V2b-T
   classification: semantic-registry-id
 - file: manuscript/orthemma-ortheme-systems-revised-draft.md
   locus:
-    line: 608
+    line: 617
     column: 235
   occurrence: 27
   text: tests/verdict-fixtures.json
   classification: literal-code
 - file: manuscript/orthemma-ortheme-systems-revised-draft.md
   locus:
-    line: 612
+    line: 621
     column: 82
   occurrence: 28
   text: SCAN-CLEAN
   classification: literal-code
 - file: manuscript/orthemma-ortheme-systems-revised-draft.md
   locus:
-    line: 795
+    line: 804
     column: 925
   occurrence: 29
   text: examples/compaction-stale-steer.md
   classification: literal-code
 - file: manuscript/orthemma-ortheme-systems-revised-draft.md
   locus:
-    line: 850
+    line: 859
     column: 38
   occurrence: 30
   text: theislampill/daee-epistemics
   classification: literal-code
 - file: manuscript/orthemma-ortheme-systems-revised-draft.md
   locus:
-    line: 854
+    line: 863
     column: 60
   occurrence: 31
   text: applications/daee-epistemics/
   classification: literal-code
 - file: manuscript/orthemma-ortheme-systems-revised-draft.md
   locus:
-    line: 867
+    line: 876
     column: 128
   occurrence: 32
   text: experiments/
   classification: literal-code
 - file: manuscript/orthemma-ortheme-systems-revised-draft.md
   locus:
-    line: 867
+    line: 876
     column: 172
   occurrence: 33
   text: experiments/experiment-status.yaml
   classification: literal-code
 - file: manuscript/orthemma-ortheme-systems-revised-draft.md
   locus:
-    line: 869
+    line: 878
     column: 79
   occurrence: 34
   text: FCSP-2
   classification: semantic-registry-id
 - file: manuscript/orthemma-ortheme-systems-revised-draft.md
   locus:
-    line: 873
+    line: 882
     column: 196
   occurrence: 35
   text: experiments/false-closure-selective-prediction-v2/
   classification: literal-code
 - file: manuscript/orthemma-ortheme-systems-revised-draft.md
   locus:
-    line: 873
+    line: 882
     column: 257
   occurrence: 36
   text: FCSP-2
   classification: semantic-registry-id
 - file: manuscript/orthemma-ortheme-systems-revised-draft.md
   locus:
-    line: 873
+    line: 882
     column: 565
   occurrence: 37
   text: READY_TO_RUN
   classification: semantic-registry-id
 - file: manuscript/orthemma-ortheme-systems-revised-draft.md
   locus:
-    line: 873
+    line: 882
     column: 582
   occurrence: 38
   text: PREREGISTRATION_READY
   classification: semantic-registry-id
 - file: manuscript/orthemma-ortheme-systems-revised-draft.md
   locus:
-    line: 873
+    line: 882
     column: 689
   occurrence: 39
   text: FCSP-1
   classification: semantic-registry-id
 - file: manuscript/orthemma-ortheme-systems-revised-draft.md
   locus:
-    line: 875
+    line: 884
     column: 58
   occurrence: 40
   text: DECISION-RULES.yaml
   classification: literal-code
 - file: manuscript/orthemma-ortheme-systems-revised-draft.md
   locus:
-    line: 887
+    line: 896
     column: 30
   occurrence: 41
   text: experiments/episode-reification-v2/
   classification: literal-code
 - file: manuscript/orthemma-ortheme-systems-revised-draft.md
   locus:
-    line: 887
+    line: 896
     column: 76
   occurrence: 42
   text: ER-2
   classification: semantic-registry-id
 - file: manuscript/orthemma-ortheme-systems-revised-draft.md
   locus:
-    line: 887
+    line: 896
     column: 362
   occurrence: 43
   text: READY_TO_RUN
   classification: semantic-registry-id
 - file: manuscript/orthemma-ortheme-systems-revised-draft.md
   locus:
-    line: 887
+    line: 896
     column: 379
   occurrence: 44
   text: PREREGISTRATION_READY
   classification: semantic-registry-id
 - file: manuscript/orthemma-ortheme-systems-revised-draft.md
   locus:
-    line: 887
+    line: 896
     column: 486
   occurrence: 45
   text: ER-1
   classification: semantic-registry-id
 - file: manuscript/orthemma-ortheme-systems-revised-draft.md
   locus:
-    line: 919
+    line: 928
     column: 22
   occurrence: 46
   text: orth-
   classification: literal-code
 - file: manuscript/orthemma-ortheme-systems-revised-draft.md
   locus:
-    line: 920
+    line: 929
     column: 20
   occurrence: 47
   text: -eme
   classification: literal-code
 - file: manuscript/orthemma-ortheme-systems-revised-draft.md
   locus:
-    line: 922
+    line: 931
     column: 16
   occurrence: 48
   text: -ma
   classification: literal-code
 - file: manuscript/orthemma-ortheme-systems-revised-draft.md
   locus:
-    line: 922
+    line: 931
     column: 32
   occurrence: 49
   text: -mat-
   classification: literal-code
 - file: manuscript/orthemma-ortheme-systems-revised-draft.md
   locus:
-    line: 924
+    line: 933
     column: 20
   occurrence: 50
   text: ἐμός
   classification: literal-code
 - file: manuscript/orthemma-ortheme-systems-revised-draft.md
   locus:
-    line: 924
+    line: 933
     column: 42
   occurrence: 51
   text: ἐμά
   classification: literal-code
 - file: manuscript/orthemma-ortheme-systems-revised-draft.md
   locus:
-    line: 925
+    line: 934
     column: 51
   occurrence: 52
   text: -ma
   classification: literal-code
 - file: manuscript/orthemma-ortheme-systems-revised-draft.md
   locus:
-    line: 925
+    line: 934
     column: 58
   occurrence: 53
   text: -emma
   classification: literal-code
 - file: manuscript/orthemma-ortheme-systems-revised-draft.md
   locus:
-    line: 928
+    line: 937
     column: 19
   occurrence: 54
   text: ortheme
   classification: literal-code
 - file: manuscript/orthemma-ortheme-systems-revised-draft.md
   locus:
-    line: 987
+    line: 996
     column: 577
   occurrence: 55
   text: theislampill/orthemology
   classification: literal-code
 - file: manuscript/orthemma-ortheme-systems-revised-draft.md
   locus:
-    line: 987
+    line: 996
     column: 654
   occurrence: 56
   text: docs/provenance/
   classification: literal-code
 - file: manuscript/orthemma-ortheme-systems-revised-draft.md
   locus:
-    line: 987
+    line: 996
     column: 712
   occurrence: 57
   text: artifacts/
   classification: literal-code
 - file: manuscript/orthemma-ortheme-systems-revised-draft.md
   locus:
-    line: 1014
+    line: 1023
     column: 77
   occurrence: 58
   text: ἐμός
   classification: literal-code
 - file: manuscript/orthemma-ortheme-systems-revised-draft.md
   locus:
-    line: 1025
+    line: 1034
     column: 63
   occurrence: 59
   text: references/orthemology.bib
   classification: literal-code
 - file: manuscript/orthemma-ortheme-systems-revised-draft.md
   locus:
-    line: 1025
+    line: 1034
     column: 126
   occurrence: 60
   text: docs/sourcing/CURRENT-SOURCING-LEDGER.md
   classification: literal-code
 - file: manuscript/orthemma-ortheme-systems-revised-draft.md
   locus:
-    line: 1045
+    line: 1054
     column: 384
   occurrence: 61
   text: docs/verdict-registry.yaml
   classification: literal-code
 - file: manuscript/orthemma-ortheme-systems-revised-draft.md
   locus:
-    line: 1050
+    line: 1059
     column: 68
   occurrence: 62
   text: docs/provenance/document-history.md
   classification: literal-code
 - file: manuscript/orthemma-ortheme-systems-revised-draft.md
   locus:
-    line: 1050
+    line: 1059
     column: 131
   occurrence: 63
   text: theory/orthemic-core-formalization.md
   classification: literal-code
 - file: manuscript/orthemma-ortheme-systems-revised-draft.md
   locus:
-    line: 1050
+    line: 1059
     column: 205
   occurrence: 64
   text: terminology/
   classification: literal-code
 - file: manuscript/orthemma-ortheme-systems-revised-draft.md
   locus:
-    line: 1052
+    line: 1061
     column: 289
   occurrence: 65
   text: applications/latent-state-orthing/
   classification: literal-code
 - file: manuscript/orthemma-ortheme-systems-revised-draft.md
   locus:
-    line: 1052
+    line: 1061
     column: 502
   occurrence: 66
   text: applications/daee-epistemics/
   classification: literal-code
 - file: manuscript/orthemma-ortheme-systems-revised-draft.md
   locus:
-    line: 1052
+    line: 1061
     column: 713
   occurrence: 67
   text: docs/architecture/ORTHEMOLOGY-LAYER-MAP.md
@@ -6894,7 +6894,7 @@ occurrences:
   classification: literal-code
 - file: theory/orthemic-multi-actor-conflict-note.md
   locus:
-    line: 172
+    line: 156
     column: 16
   occurrence: 2
   text: orthemma-ortheme-systems-revised-draft.md

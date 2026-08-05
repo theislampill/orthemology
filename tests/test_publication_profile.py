@@ -131,14 +131,14 @@ def valid_profile():
             "bibliography_owner": "references/orthemology.bib",
         },
         "source_provenance": {
-            "source_commit": "e2ac7c45a34c95c56fe2dc5dd90668a1177260df",
-            "source_tree": "d2fa9670517c3a15eebd4a45f620fd0e111f2e76",
-            "source_date_epoch": 1785827842,
+            "source_commit": "43c4a07c54c61cec89c77ac8c5b4e75433caf3a4",
+            "source_tree": "b49f408f7c7500fb87bbafb73323b6ceece18c5c",
+            "source_date_epoch": 1785895767,
             "independently_reviewed_equivalent_source_commit": (
-                "e2ac7c45a34c95c56fe2dc5dd90668a1177260df"
+                "43c4a07c54c61cec89c77ac8c5b4e75433caf3a4"
             ),
             "independently_reviewed_equivalent_source_tree": (
-                "d2fa9670517c3a15eebd4a45f620fd0e111f2e76"
+                "b49f408f7c7500fb87bbafb73323b6ceece18c5c"
             ),
             "source_tree_equivalence": "verified-identical",
         },
@@ -172,6 +172,7 @@ def valid_profile():
                 "hyperref",
                 "microtype",
                 "natbib",
+                "needspace",
                 "xcolor",
             ],
             "supported_packages": [
@@ -182,6 +183,7 @@ def valid_profile():
                 "hyperref",
                 "microtype",
                 "natbib",
+                "needspace",
                 "xcolor",
                 "fvextra",
             ],

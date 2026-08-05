@@ -74,6 +74,7 @@ EXPECTED_DIRECT_PACKAGES = [
     "hyperref",
     "microtype",
     "natbib",
+    "needspace",
     "xcolor",
 ]
 EXPECTED_SUPPORTED_PACKAGES = EXPECTED_DIRECT_PACKAGES + ["fvextra"]

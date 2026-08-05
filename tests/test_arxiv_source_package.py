@@ -48,6 +48,7 @@ BASE_MAIN = r"""\documentclass[10pt,letterpaper,twocolumn]{article}
 \usepackage{hyperref}
 \usepackage{microtype}
 \usepackage{natbib}
+\usepackage{needspace}
 \usepackage{xcolor}
 \begin{document}
 Body.
@@ -267,6 +268,7 @@ class SourcePackageContractTests(unittest.TestCase):
             "hyperref",
             "microtype",
             "natbib",
+            "needspace",
             "xcolor",
         ]
         profile["package_policy"]["supported_packages"] = (

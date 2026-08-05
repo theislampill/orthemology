@@ -109,19 +109,19 @@
       ],
       "properties": {
         "source_commit": {
-          "const": "e2ac7c45a34c95c56fe2dc5dd90668a1177260df"
+          "const": "43c4a07c54c61cec89c77ac8c5b4e75433caf3a4"
         },
         "source_tree": {
-          "const": "d2fa9670517c3a15eebd4a45f620fd0e111f2e76"
+          "const": "b49f408f7c7500fb87bbafb73323b6ceece18c5c"
         },
         "source_date_epoch": {
-          "const": 1785827842
+          "const": 1785895767
         },
         "independently_reviewed_equivalent_source_commit": {
-          "const": "e2ac7c45a34c95c56fe2dc5dd90668a1177260df"
+          "const": "43c4a07c54c61cec89c77ac8c5b4e75433caf3a4"
         },
         "independently_reviewed_equivalent_source_tree": {
-          "const": "d2fa9670517c3a15eebd4a45f620fd0e111f2e76"
+          "const": "b49f408f7c7500fb87bbafb73323b6ceece18c5c"
         },
         "source_tree_equivalence": {
           "const": "verified-identical"
@@ -208,6 +208,7 @@
             "hyperref",
             "microtype",
             "natbib",
+            "needspace",
             "xcolor"
           ]
         },
@@ -220,6 +221,7 @@
             "hyperref",
             "microtype",
             "natbib",
+            "needspace",
             "xcolor",
             "fvextra"
           ]
