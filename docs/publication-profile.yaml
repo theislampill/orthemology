@@ -49,6 +49,7 @@ package_policy:
   - hyperref
   - microtype
   - natbib
+  - needspace
   - xcolor
   supported_packages:
   - amsmath
@@ -58,6 +59,7 @@ package_policy:
   - hyperref
   - microtype
   - natbib
+  - needspace
   - xcolor
   - fvextra
   conversion_steps: prohibited

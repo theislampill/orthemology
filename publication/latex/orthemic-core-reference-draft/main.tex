@@ -2,7 +2,7 @@
 % source: theory/orthemic-core-formalization.md
 % source-sha256: f55d98aa2dcaad231c769aa94e42fd0cec416361269c7d957b203669ca62dd72
 % source: theory/orthemic-multi-actor-conflict-note.md
-% source-sha256: f56a56a428504e990096af1d0f9394d3f99250d488509ff182f10ca5113971c5
+% source-sha256: aa7b1378b1f1983c3ec406fb2533a68c6242881c2d04bf34470632b37359d7b9
 % source-qualification: research-stage-draft
 % source-qualification: not-peer-reviewed
 % source-qualification: not-externally-peer-reviewed
@@ -16,6 +16,7 @@
 \usepackage{hyperref}
 \usepackage{microtype}
 \usepackage{natbib}
+\usepackage{needspace}
 \usepackage{xcolor}
 \geometry{letterpaper,margin=0.75in}
 \hypersetup{colorlinks=true,linkcolor=blue,urlcolor=blue,citecolor=blue}
@@ -686,29 +687,22 @@ Define, informally, $\operatorname{depth}(e)$ as the executor's grasp of the gov
 Already expressible with existing machinery: episodes carry actor α and declared analysis A\_α (task T\_α = task(A\_α)); placements are actor/analysis-indexed; the episode graph couples episodes over one lineage. \textbf{New derived definitions worth adding (clarification, NOT a new formal addition — the six-addition count is unchanged):}
 
 
-\begin{verbatim}
-x_α = Ω_α(m)         actor-α's OBSERVATION of the shared occurrence m
-                     (imperfect information: Ω_α(m) ≠ Ω_β(m) over ONE m)
-p̂(e, α, T_α)        the current inferred profile of actor α's episode e
-                     under its analysis A_α, task T_α = task(A_α)
-                     (inferred FROM x_α, never from m directly)
-GoalSchema(·)   a PARAMETRIC ortheme schema — the shared
-                     goal-form under role substitution ("win for α")
-𝒢_{α,A_α} ⊆ Π_{A_α}  actor-α's grounded TARGET PROFILE SET: the profiles
-                     T_α declares appropriate as outcomes — the schema's
-                     instantiation at α. NORMATIVE TYPING: a SET of
-                     profiles; each member is one complete profile
-φ(α→β)               a role/perspective isomorphism between Π_{A_α} and
-                     Π_{A_β}, when one exists
-                     (schema invariance: 𝒢_{β,A_β} = φ(𝒢_{α,A_α}))
-Compat_m(𝒢_α, 𝒢_β)    ∃ m′ ∈ Reach(m): O*(m′; A_α) ∈ 𝒢_α ∧ O*(m′; A_β) ∈ 𝒢_β
-                     (well-typed: one shared occurrence, each analysis
-                     evaluating in its own profile space — never bare
-                     intersection of sets from different spaces)
-Conflict_m(𝒢_α, 𝒢_β)  no such reachable m′ exists
-                     (cooperation: shared analysis + shared target set,
-                     or an explicit alignment map φ(α→β))
-\end{verbatim}
+\begin{itemize}
+\item $x_\alpha = \Omega_\alpha(m)$ — actor-$\alpha$'s \textbf{observation} of the shared occurrence $m$ (imperfect information: $\Omega_\alpha(m) \neq \Omega_\beta(m)$ over one $m$);
+
+\item $\hat{p}(e, \alpha, T_\alpha)$ — the current inferred profile of actor $\alpha$'s episode $e$ under its analysis $A_\alpha$, task $T_\alpha = \operatorname{task}(A_\alpha)$ (inferred from $x_\alpha$, never from $m$ directly);
+
+\item $\operatorname{GoalSchema}(\cdot)$ — a \textbf{parametric} ortheme schema, the shared goal-form under role substitution (win-for-$\alpha$);
+
+\item $\mathcal{G}_{\alpha,A_\alpha} \subseteq \Pi_{A_\alpha}$ — actor-$\alpha$'s grounded \textbf{target profile set}: the profiles $T_\alpha$ declares appropriate as outcomes — the schema's instantiation at $\alpha$. Normative typing: a \emph{set} of profiles, each member one complete profile;
+
+\item $\phi(\alpha \to \beta)$ — a role/perspective isomorphism between $\Pi_{A_\alpha}$ and $\Pi_{A_\beta}$, when one exists (schema invariance: $\mathcal{G}_{\beta,A_\beta} = \phi(\mathcal{G}_{\alpha,A_\alpha})$);
+
+\item $\operatorname{Compat}_m(\mathcal{G}_\alpha, \mathcal{G}_\beta)$ — $\exists\, m' \in\allowbreak{} \operatorname{Reach}(m):\ O^*(m'; A_\alpha) \in\allowbreak{} \mathcal{G}_\alpha \wedge\allowbreak{} O^*(m'; A_\beta) \in\allowbreak{} \mathcal{G}_\beta$ (well-typed: one shared occurrence, each analysis evaluating in its own profile space — never bare intersection of sets from different spaces);
+
+\item $\operatorname{Conflict}_m(\mathcal{G}_\alpha, \mathcal{G}_\beta)$ — no such reachable $m'$ exists (cooperation: shared analysis $+$ shared target set, or an explicit alignment map $\phi(\alpha \to \beta)$).
+
+\end{itemize}
 \textbf{Three distinct relations the parametric schema untangles:} (i) SCHEMA identity — players A and B run the same parametric form $\operatorname{GoalSchema}(\cdot)$; this is the true content of the source notes' "locally identical" intuition; (ii) GROUNDED-ORTHEME identity — $\operatorname{GoalSchema}(\alpha)$ and $\operatorname{GoalSchema}(\beta)$ are DISTINCT grounded targets, never identical in a strictly competitive task; (iii) TARGET-PROFILE overlap — $\mathcal{G}_\alpha \cap \mathcal{G}_\beta$ may be empty (zero-sum win-sets), partial, or total (cooperation). Local similarity is (i); material exclusivity is emptiness at (iii); no level asserts identity of the players' orthemes.
 
 \textbf{The limited sense in which competitors DO share a metaorthemic configuration:} both players may consult the SAME governing distinctions — terminality (decided vs live position), evidence-validity for reading the opponent's information state, analysis-sufficiency before moving. Sharing those configurations while holding opposed targets is exactly the configuration-vs-task separation: metaorthemes govern HOW placements are made and validated, never WHOSE target wins.

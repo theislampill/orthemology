@@ -24,6 +24,8 @@ jobs:
           python scripts/validate_dependency_lock.py
       - name: Repository hygiene + honesty checks
         run: python scripts/validate_repo.py
+      - name: Fable R1 claim-language and source-relation gates
+        run: python scripts/validate_fable_r1_claim_language.py
       - name: AR8R V8 recovery provenance and payload hashes
         run: python scripts/validate_ar8r_recovery.py
       - name: AR8R V11 campaign reconciliation and publication boundary

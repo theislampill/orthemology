@@ -86,6 +86,21 @@ newly_opened_burdens:
       it is settled.
     closable_by: RESEARCH_AGENT
 
+  - id: FABLE-R1-B07
+    statement: >
+      Verify each prior-art attribution in AR8R-FABLE-R1-SOURCING.md against an
+      exact accessible text, recording identifier, location, and proposition
+      context, or retire the row. Until then every relationship stays
+      AUTHOR_ASSESSED_UNVERIFIED / POSSIBLE_ANALOGUE under the fail-closed gate
+      in scripts/validate_fable_r1_claim_language.py.
+    closable_by: EXTERNAL_SPECIALIST_OR_DEDICATED_SEARCH
+  - id: FABLE-R1-B08
+    statement: >
+      Verify or retire the quarantined OSM typed-extraction notes against exact
+      source locations, in a stable recorded review context. Until then those
+      notes are not current research authority.
+    closable_by: EXTERNAL_SPECIALIST_OR_DEDICATED_SEARCH
+
 pre_existing_burdens_reaffirmed:
   - id: OWNER-EMPIRICAL-EXECUTION
     statement: >

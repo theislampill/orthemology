@@ -1,6 +1,6 @@
 % GENERATED FILE — DO NOT EDIT; authoritative prose is Markdown.
 % source: manuscript/orthemma-ortheme-systems-revised-draft.md
-% source-sha256: 35ed98f779bf6e6881b24ab100f70336d43e55ca6ebdd1a5128895b08d285a02
+% source-sha256: 1f0139907fa54f02e431f95e854089443e2952afb7291dd939a2ef4f2a705fd0
 % source-qualification: research-stage-draft
 % source-qualification: not-peer-reviewed
 % source-qualification: not-externally-peer-reviewed
@@ -14,6 +14,7 @@
 \usepackage{hyperref}
 \usepackage{microtype}
 \usepackage{natbib}
+\usepackage{needspace}
 \usepackage{xcolor}
 \geometry{letterpaper,margin=0.75in}
 \hypersetup{colorlinks=true,linkcolor=blue,urlcolor=blue,citecolor=blue}
@@ -88,20 +89,52 @@ The strongest objection is the redundancy critique: \emph{a composite of POMDP b
 Relative to the prior manuscript, this revision makes six formal additions:
 
 
-\begin{center}
-\begin{tabular}{@{}p{0.313\linewidth}p{0.313\linewidth}p{0.313\linewidth}@{}}
-\toprule
-\textbf{\#} & \textbf{Formal addition} & \textbf{What it closes} \\
-\midrule
-1 & Versioned identity and labeled lineage on the occurrence domain & "right finding, wrong copy"; verdicts silently transported across mutations \\
-2 & Analysis / actor / time indices on profiles and candidate sets & ground truth only relative to a declared analysis; cross-actor divergence as a stop signal \\
-3 & Typed, scoped, expiring evidence channels & green-but-mis-scoped validators; stale evidence treated as current \\
-4 & Factorized candidate structure with route composition & one occurrence, several independent defects, each with its own route \\
-5 & Per-burden closure status with residual dispositions & false closure as a type error; scalar "percent complete" banned \\
-6 & Episode reification with a joint verdict vector & correct-by-luck placements; pathway adequacy separable from result correctness \\
-\bottomrule
-\end{tabular}
-\end{center}
+% breakable-row-table: data-rows=6 total-rendered-characters=795 max-row-rendered-characters=153
+\par\medskip
+\hrule height 0.8pt
+\smallskip
+% breakable-row: 1/6
+\noindent\textbf{\#}: 1\par
+\noindent\textbf{Formal addition}: Versioned identity and labeled lineage on the occurrence domain\par
+\noindent\textbf{What it closes}: "right finding, wrong copy"; verdicts silently transported across mutations\par
+\smallskip
+\hrule height 0.4pt
+\smallskip
+% breakable-row: 2/6
+\noindent\textbf{\#}: 2\par
+\noindent\textbf{Formal addition}: Analysis / actor / time indices on profiles and candidate sets\par
+\noindent\textbf{What it closes}: ground truth only relative to a declared analysis; cross-actor divergence as a stop signal\par
+\smallskip
+\hrule height 0.4pt
+\smallskip
+% breakable-row: 3/6
+\noindent\textbf{\#}: 3\par
+\noindent\textbf{Formal addition}: Typed, scoped, expiring evidence channels\par
+\noindent\textbf{What it closes}: green-but-mis-scoped validators; stale evidence treated as current\par
+\smallskip
+\hrule height 0.4pt
+\smallskip
+% breakable-row: 4/6
+\noindent\textbf{\#}: 4\par
+\noindent\textbf{Formal addition}: Factorized candidate structure with route composition\par
+\noindent\textbf{What it closes}: one occurrence, several independent defects, each with its own route\par
+\smallskip
+\hrule height 0.4pt
+\smallskip
+% breakable-row: 5/6
+\noindent\textbf{\#}: 5\par
+\noindent\textbf{Formal addition}: Per-burden closure status with residual dispositions\par
+\noindent\textbf{What it closes}: false closure as a type error; scalar "percent complete" banned\par
+\smallskip
+\hrule height 0.4pt
+\smallskip
+% breakable-row: 6/6
+\noindent\textbf{\#}: 6\par
+\noindent\textbf{Formal addition}: Episode reification with a joint verdict vector\par
+\noindent\textbf{What it closes}: correct-by-luck placements; pathway adequacy separable from result correctness\par
+\smallskip
+\hrule height 0.8pt
+\par\medskip
 Five kinds of claim stay separate throughout — conceptual framework, formal definition, empirical hypothesis, metaphysical thesis, and design vocabulary. We defend the first two (the framework's coherence and the formal definitions); the design vocabulary is \emph{proposed but not defended} — every coined term is benchmark-gated (Section 14) and the paper's content survives its removal; the empirical hypotheses are stated with their tests and none has been run (Section 13); and no metaphysical thesis is defended here (the modal and metaphysical material is split to companion papers, with only the ordinary-words relational property — analysis-relative resolvability under perturbation — retained where it motivates the robustness fixtures).
 
 
@@ -117,9 +150,11 @@ Five kinds of claim stay separate throughout — conceptual framework, formal de
 \textbf{Definition 3 (Analysis-relative instantiation).} Let $M$ be a domain of concrete orthemmata (plain gloss: the concrete cases) and $O$ a repertoire of repeatable orthemes (the state-types in play). The primitive instantiation relation is analysis-relative: $\operatorname{Inst}_A \subseteq M \times O$, where $(m, o) \in \operatorname{Inst}_A$ reads: the orthemma $m$ instantiates the ortheme $o$, relative to the declared analysis $A$ — the explicit, versionable index defined in Section 2.6, whose components include the task $T = \operatorname{task}(A)$. (Notation note: the prior manuscript used a task-indexed primitive, now retired — see the notation registry's \texttt{retired\_symbols}; the letter $I$ is reserved for the individuation component of the governed-component key, Section 6. The task-subscripted $\operatorname{Inst}_T$ survives only under the abbreviation convention below.) The \textbf{orthemic profile} of $m$ is its fibre,
 
 
-\begin{verbatim}
-O*(m; A) = { o ∈ O : (m, o) ∈ Inst_A }.
-\end{verbatim}
+\[
+O^*(m; A) \;=\; \{\, o \in O : (m, o) \in \operatorname{Inst}_A \,\}.
+\]
+
+
 The occurrence $m$ and its worldly facts are not created by the analysis. What is analysis-relative is which profile of consequence-bearing operational state-types truly describes $m$ in the declared repertoire; the actual profile $O^*(m; A)$ remains distinct from the observation of $m$, from the system's inferred profile, from the evidence available, and from any actor's belief.
 
 \textbf{Abbreviation convention (task-relative shorthand).} $O^*_T(m)$ is permitted only as local scoped shorthand: after the text has explicitly fixed one analysis $A$ with $\operatorname{task}(A) = T$, and within that scope only, $O^*_T(m) := O^*(m; A)$ — likewise $\operatorname{Inst}_T$, $\Pi_T$, $\mathcal{K}_T$, $\mathcal{R}_T$, and $\mathcal{W}_T$ for their $A$-indexed counterparts ($\Pi_A$, $\mathcal{K}_A$, $\mathcal{R}_A$, $\mathcal{W}_A$), and the unsubscripted $M$, $O$ for the analysis-active domain $\mathcal{M}_A \subseteq \mathcal{M}$ and repertoire $\mathcal{O}_A \subseteq \mathcal{O}$. The shorthand must not be presented as a globally well-defined function of $T$ alone: two analyses can share one task while differing in tolerance, representation, boundaries, or merger family. It is \textbf{forbidden wherever more than one analysis is live} — higher-order audits, multi-actor evaluation (Section 10), cross-version comparisons, differing tolerances or governance boundaries, and comparisons between base execution and reviewer analysis — where the full $O^*(m; A)$ form is required. \textbf{Standing scope for this paper:} except where a passage explicitly introduces a second analysis, one declared analysis $A$ is fixed with $T = \operatorname{task}(A)$, and task-subscripted notation below is that licensed shorthand, not a second primitive. No separate task-to-analysis bridging law is introduced: there is one ground-truth primitive, and the task-relative form is abbreviation only.
@@ -131,11 +166,13 @@ The profile is generally not a singleton. One orthemma instantiates several orth
 The occurrence and the signal it presents are different objects. Let $\Omega : M \rightharpoonup X$ be the (partial, typed) observation map and $x = \Omega(m)$ the presently available observation of $m$. The observation may be impoverished, aliased, or misleading; the orthemma is the concrete event that produced or occasioned it. Apprehension runs
 
 
-\begin{verbatim}
-m --Ω--> x --evidence H_t--> p̂_t(m) --placement--> a_t --creates--> Succ ⊆ M
-                                                      |______________________|
-                                                    (feedback: successors re-enter M)
-\end{verbatim}
+\[
+m \;\xrightarrow{\;\Omega\;}\; x \;\xrightarrow{\;\text{evidence } H_t\;}\; \hat{p}_t(m) \;\xrightarrow{\;\text{placement}\;}\; a_t \;\xrightarrow{\;\text{creates}\;}\; \operatorname{Succ} \subseteq M,
+\]
+
+
+with the feedback edge $\operatorname{Succ} \to M$ closing the loop: successors re-enter the occurrence domain.
+
 where $\hat{p}_t(m)$ is the system's current inferred profile (belief), $a_t$ is the resulting interpretation, investigation, route, or action, and — new in this revision — the action's \textbf{successor set} $\operatorname{Succ}$ closes the loop back into the occurrence domain (Section 2.5). The ground truth $O^*_T(m)$ and the belief $\hat{p}_t(m)$ are distinct; so are the observation $x$ and the occurrence $m$.
 
 
@@ -143,9 +180,11 @@ where $\hat{p}_t(m)$ is the system's current inferred profile (belief), $a_t$ is
 A system may know that an orthemma occurred while not knowing its orthemic identity: $m$ is encountered, yet $\hat{p}_t(m)$ remains open. The right description is
 
 
-\begin{verbatim}
-m is encountered; p̂_t(m) remains unresolved,
-\end{verbatim}
+\[
+m \text{ is encountered; } \hat{p}_t(m) \text{ remains unresolved,}
+\]
+
+
 not "an unknown ortheme floats free." Types do not hover independently of occurrences; what is unresolved is the placement of a present, concrete case. This also separates the four things "the hidden distinction" can mean, as facets of one relation: the actual profile $O^*_T(m)$ (ground truth), the evidence and candidate structure (Section 5), the inferred profile $\hat{p}_t(m)$ (belief), and the way the belief is encoded (representation). None entails the others.
 
 
@@ -161,9 +200,12 @@ The prior manuscript said "this build report \emph{for this commit}" and warned 
 \textbf{Definition 6 (Labeled successor edges).} An action $a$ performed in the handling of $m$ creates a labeled successor set
 
 
-\begin{verbatim}
-Succ_a(m) ⊆ M,   each element reached by an edge labeled with the action that produced it,
-\end{verbatim}
+\begin{multline*}
+\operatorname{Succ}_a(m) \subseteq M,\\
+ \quad \text{each element reached by an edge labeled with the action that produced it,}
+\end{multline*}
+
+
 of size \textbf{zero, one, or many}. (A read-only classification creates none; an edit creates one; a split, broadcast, or build creates many. An earlier formulation forcing a single successor $m' = \operatorname{succ}(m, a)$ is corrected.)
 
 \textbf{Transport principle.} Placement validity is bound to $(\kappa, v)$. A placement or validation established for $(\kappa, v)$ does \textbf{not} transport across a successor edge to $(\kappa, v')$ — or to a different $\kappa$ behind the same observation — without a lineage argument and, where the edge could have changed the placed property, fresh evidence. This makes "right finding, wrong copy" a well-formed, detectable error rather than an invisible one: the finding was valid, and it is attached to an occurrence that no longer exists in the relevant version. Illustrative failure modes of this class — of the kind that motivated the design, stated here generically — include a reused storage slot treated as the same file, verdicts silently carried across a tree substitution, ordinal position mistaken for identity, and a stale checkout evaluated as the current one.
@@ -173,11 +215,14 @@ of size \textbf{zero, one, or many}. (A read-only classification creates none; a
 Ground truth is only defined relative to a \textbf{declared analysis} $A$: the system and governance boundary, task, evidence and action repertoire, policy class, loss, hard constraints, horizon, tolerance, representation family, and permitted-merger family. This section is the definition site of the index Definition 3 takes as primitive: $A$ must be \textbf{explicit and versionable} — it carries an identifier and version $\operatorname{ver}(A)$, and a change to any component above yields a new analysis version. Profiles and beliefs are therefore indexed:
 
 
-\begin{verbatim}
-O*(m; A)       — actual profile under analysis A (ground truth relative to A);
-p̂_{A,α,t}(m)   — the profile actor α infers at time t under A;
-C_{A,α,t}(m)   — the candidate structure actor α maintains at time t.
-\end{verbatim}
+\begin{itemize}
+\item $O^*(m; A)$ — actual profile under analysis $A$ (ground truth relative to $A$);
+
+\item $\hat{p}_{A,\alpha,t}(m)$ — the profile actor $\alpha$ infers at time $t$ under $A$;
+
+\item $C_{A,\alpha,t}(m)$ — the candidate structure actor $\alpha$ maintains at time $t$.
+
+\end{itemize}
 There is no second, task-only ground truth alongside this one: $O^*_T(m)$ is Definition 3's scoped abbreviation, licensed only while a single fixed $A$ with $\operatorname{task}(A) = T$ is in force.
 
 Two clarifications guard the index. \textbf{Analysis relativity is not actor relativism:} the analysis is a \emph{declared, versioned, public} index, not anyone's belief state — once $A$ is fixed, $O^*(m; A)$ is an objective matter that every actor can be wrong about, and disagreement between actors is disagreement about one analysis-relative fact, not the coexistence of private truths. \textbf{Analysis-version transport:} a change to any component of $A$ yields $\operatorname{ver}(A)+1$, and placements, validations, and verdicts established under one analysis version do \textbf{not} transport to another without a declared transport argument (which components changed, and why the placed claims are invariant under that change) — the exact discipline Section 2.5 imposes on occurrence versions, applied to the analysis index itself.
@@ -193,9 +238,11 @@ The contrast is a relation on types. It explains why two orthemes must remain di
 Formally, for candidate types realised by evidence histories $h_i, h_j$ with mixture weights $\lambda, 1-\lambda$, let $\operatorname{Rep}_A^{i=j}$ be the family of representations that place the two histories identically (plain gloss: all the ways of treating them as one), and $\operatorname{Rep}_A$ the unrestricted family. The \textbf{merger gap} is
 
 
-\begin{verbatim}
-Δ_A(o_i, o_j) = inf_{χ ∈ Rep_A^{i=j}} L_A*(χ)  −  inf_{χ ∈ Rep_A} L_A*(χ),
-\end{verbatim}
+\[
+\Delta_A(o_i, o_j) \;=\; \inf_{\chi \in \operatorname{Rep}_A^{i=j}} L_A^*(\chi) \;-\; \inf_{\chi \in \operatorname{Rep}_A} L_A^*(\chi),
+\]
+
+
 with $L_A^*(\chi)$ the best attainable risk under representation $\chi$ and hard-constraint violations counted as infinite risk. Then $o_i ≢_A o_j$ at tolerance $\epsilon_A$ iff $\Delta_A(o_i, o_j) > \epsilon_A$. The individuation is relative to the representation and merger families — components of $A$, which is why the contrast subscript follows the analysis (under Definition 3's convention, $≢_T$ may abbreviate $≢_A$ once a single $A$ is fixed). Another architecture can make the same type distinction feasible or unnecessary.
 
 Three inherited results, kept and presented as inherited (none is a new theorem):
@@ -224,18 +271,42 @@ Threshold closeness is non-transitive ($h_1 \approx_{\epsilon_A} h_2$, $h_2 \app
 The type–token framing exposes three related but distinct uncertainty patterns. The prior manuscript distinguished the first two; this revision adds the third as its own column, because it is a distinct pattern in kind — conflatable with, but reducible to, neither of the others.
 
 
-\begin{center}
-\begin{tabular}{@{}p{0.235\linewidth}p{0.235\linewidth}p{0.235\linewidth}p{0.235\linewidth}@{}}
-\toprule
-\textbf{} & \textbf{Inter-orthemma aliasing} & \textbf{Intra-orthemma uncertainty} & \textbf{Identity uncertainty} \\
-\midrule
-\textbf{Pattern} & Distinct occurrences produce the same or confusable observation while instantiating operationally different types & One encountered occurrence remains compatible with several candidate types & It is unresolved \emph{which occurrence} (which $\kappa$, or which version $v$) is actually in hand \\
-\textbf{Formally} & $\Omega(m_1) = \Omega(m_2)$, $O^*(m_1; A) \neq O^*(m_2; A)$ & $C^{\mathrm{profile}} \supseteq \{p_1, \dots, p_k\}$, several profiles licensing non-equivalent routes & $C^{\mathrm{id}}(m) \subseteq M$ non-singleton: candidates for the case's own identity/version \\
-\textbf{Example} & Two jars of white powder look identical; one is flour, one is cornstarch & One acoustic stream compatible with "olive juice" and "I love you" & The log line may describe this commit's build or the previous one's; the file at this path may be the original or a reused slot \\
-\textbf{Wrong reduction} & Treating it as one case with an open profile & Treating it as two cases & Treating it as profile uncertainty about a known case \\
-\bottomrule
-\end{tabular}
-\end{center}
+% breakable-row-table: data-rows=4 total-rendered-characters=1069 max-row-rendered-characters=302
+\par\medskip
+\hrule height 0.8pt
+\smallskip
+% breakable-row: 1/4
+\noindent\textbf{Column 1}: \textbf{Pattern}\par
+\noindent\textbf{Inter-orthemma aliasing}: Distinct occurrences produce the same or confusable observation while instantiating operationally different types\par
+\noindent\textbf{Intra-orthemma uncertainty}: One encountered occurrence remains compatible with several candidate types\par
+\noindent\textbf{Identity uncertainty}: It is unresolved \emph{which occurrence} (which $\kappa$, or which version $v$) is actually in hand\par
+\smallskip
+\hrule height 0.4pt
+\smallskip
+% breakable-row: 2/4
+\noindent\textbf{Column 1}: \textbf{Formally}\par
+\noindent\textbf{Inter-orthemma aliasing}: $\Omega(m_1) = \Omega(m_2)$, $O^*(m_1; A) \neq O^*(m_2; A)$\par
+\noindent\textbf{Intra-orthemma uncertainty}: $C^{\mathrm{profile}} \supseteq \{p_1, \dots, p_k\}$, several profiles licensing non-equivalent routes\par
+\noindent\textbf{Identity uncertainty}: $C^{\mathrm{id}}(m) \subseteq M$ non-singleton: candidates for the case's own identity/version\par
+\smallskip
+\hrule height 0.4pt
+\smallskip
+% breakable-row: 3/4
+\noindent\textbf{Column 1}: \textbf{Example}\par
+\noindent\textbf{Inter-orthemma aliasing}: Two jars of white powder look identical; one is flour, one is cornstarch\par
+\noindent\textbf{Intra-orthemma uncertainty}: One acoustic stream compatible with "olive juice" and "I love you"\par
+\noindent\textbf{Identity uncertainty}: The log line may describe this commit's build or the previous one's; the file at this path may be the original or a reused slot\par
+\smallskip
+\hrule height 0.4pt
+\smallskip
+% breakable-row: 4/4
+\noindent\textbf{Column 1}: \textbf{Wrong reduction}\par
+\noindent\textbf{Inter-orthemma aliasing}: Treating it as one case with an open profile\par
+\noindent\textbf{Intra-orthemma uncertainty}: Treating it as two cases\par
+\noindent\textbf{Identity uncertainty}: Treating it as profile uncertainty about a known case\par
+\smallskip
+\hrule height 0.8pt
+\par\medskip
 The first concerns observational equivalence across concrete cases; the second concerns unresolved placement of a present case; the third concerns unresolved \emph{reference} — the case's own identity key or version is among the open questions. Identity uncertainty is the pattern behind "right finding, wrong copy": there is nothing wrong with the placement as a placement; what is open is which $(\kappa, v)$ it is a placement \emph{of}. A system that maintains only profile uncertainty will misfile identity uncertainty as confidence about the wrong object — which is precisely how verdicts transport across mutations undetected. The typed candidate families of Section 5 give each pattern its own slot.
 
 
@@ -245,9 +316,13 @@ The first concerns observational equivalence across concrete cases; the second c
 The prior manuscript's single observation map $\Omega$ is replaced by a family of \textbf{typed evidence channels} $\{\Omega_k\}$, each partial (not every channel applies to every occurrence) and each carrying declared metadata. An evidence item obtained through channel $k$ is a record
 
 
-\begin{verbatim}
-h = ⟨ channel k;  property class τ;  scope σ;  provenance;  validity/expiry ⟩
-\end{verbatim}
+\begin{multline*}
+h = \langle\, \text{channel } k;\ \text{property class } \tau;\\
+\ \text{scope } \sigma;\ \text{provenance};\\
+\ \text{validity/expiry} \,\rangle
+\end{multline*}
+
+
 with components glossed:
 
 
@@ -264,9 +339,11 @@ with components glossed:
 \textbf{Green-but-mis-scoped.} A validator can pass while supporting nothing:
 
 
-\begin{verbatim}
-mis-scoped pass  ≡  pass ∧ (σ(h) ∩ claim = ∅).
-\end{verbatim}
+\[
+\text{mis-scoped pass} \;\equiv\; \text{pass} \;\wedge\; (\sigma(h) \cap \text{claim} = \varnothing).
+\]
+
+
 The check is green, and its scope does not intersect the claim being closed. Observed instances: a hash validator that establishes integrity being read as establishing semantic validity; a stage validator whose scope was the previous stage's output being read as covering the current stage. A mis-scoped pass is not weak evidence — it is \emph{no} evidence for that claim, and under Section 7 it cannot contribute to closure. Symmetrically, stale evidence (valid in its day, expired by lineage) is not weak evidence for the current version; it is evidence about a different occurrence.
 
 Validation discipline follows from the typing: a structural check does not validate a behavioral claim; symptom relief does not establish a cure; a fluent gloss does not establish a correct source-linked parse. Each placed claim declares the property class and scope of evidence that could support it, and an evidence-status map records, per claim: validated, provisional, stale, or absent.
@@ -280,19 +357,45 @@ Validation discipline follows from the typing: a structural check does not valid
 The prior manuscript's single candidate set $C_t(m)$ is split by uncertainty axis into \textbf{typed candidate families}, indexed like everything else by analysis, actor, time, and descriptive level:
 
 
-\begin{center}
-\begin{tabular}{@{}p{0.313\linewidth}p{0.313\linewidth}p{0.313\linewidth}@{}}
-\toprule
-\textbf{Family} & \textbf{Ranges over} & \textbf{Open question} \\
-\midrule
-$C^{\mathrm{id}}$ & $M$ & \emph{which occurrence} (identity/version) is in hand — Section 3's third column \\
-$C^{\mathrm{profile}}$ & $\Pi_A$ (profile space) & \emph{which profile} the case instantiates — competing hypotheses may themselves be whole profiles, never coerced into single orthemes \\
-$C^{\mathrm{cause}}$ & $\mathcal{K}_A$ (cause repertoire) & \emph{which cause} produced the state \\
-$C^{\mathrm{route}}$ & $\mathcal{R}_A$ (route repertoire) & \emph{which operation/owner} should receive the case \\
-$C^{\mathrm{warrant}}$ & $\mathcal{W}_A$ (warrant states) & \emph{which warrant state} obtains — authorized, established, both, neither \\
-\bottomrule
-\end{tabular}
-\end{center}
+% breakable-row-table: data-rows=5 total-rendered-characters=635 max-row-rendered-characters=179
+\par\medskip
+\hrule height 0.8pt
+\smallskip
+% breakable-row: 1/5
+\noindent\textbf{Family}: $C^{\mathrm{id}}$\par
+\noindent\textbf{Ranges over}: $M$\par
+\noindent\textbf{Open question}: \emph{which occurrence} (identity/version) is in hand — Section 3's third column\par
+\smallskip
+\hrule height 0.4pt
+\smallskip
+% breakable-row: 2/5
+\noindent\textbf{Family}: $C^{\mathrm{profile}}$\par
+\noindent\textbf{Ranges over}: $\Pi_A$ (profile space)\par
+\noindent\textbf{Open question}: \emph{which profile} the case instantiates — competing hypotheses may themselves be whole profiles, never coerced into single orthemes\par
+\smallskip
+\hrule height 0.4pt
+\smallskip
+% breakable-row: 3/5
+\noindent\textbf{Family}: $C^{\mathrm{cause}}$\par
+\noindent\textbf{Ranges over}: $\mathcal{K}_A$ (cause repertoire)\par
+\noindent\textbf{Open question}: \emph{which cause} produced the state\par
+\smallskip
+\hrule height 0.4pt
+\smallskip
+% breakable-row: 4/5
+\noindent\textbf{Family}: $C^{\mathrm{route}}$\par
+\noindent\textbf{Ranges over}: $\mathcal{R}_A$ (route repertoire)\par
+\noindent\textbf{Open question}: \emph{which operation/owner} should receive the case\par
+\smallskip
+\hrule height 0.4pt
+\smallskip
+% breakable-row: 5/5
+\noindent\textbf{Family}: $C^{\mathrm{warrant}}$\par
+\noindent\textbf{Ranges over}: $\mathcal{W}_A$ (warrant states)\par
+\noindent\textbf{Open question}: \emph{which warrant state} obtains — authorized, established, both, neither\par
+\smallskip
+\hrule height 0.8pt
+\par\medskip
 Each family carries an \textbf{exclusivity marking}: elements are flagged as \emph{alternatives} (at most one obtains — this powder is flour or cornstarch, not both) or as \emph{co-holding components} (several may obtain together — this one occurrence has an identity defect \emph{and} a quantity defect). Collapsing co-holding components into alternatives forces a false choice; the reverse collapse hides a disjunction. Optional weights over alternatives are permitted but never required; a family is consequentially open when it contains more than one element whose members would license non-equivalent routes. An open family must carry its \textbf{evidence-to-resolve clause}: which channel, in scope, would discriminate the alternatives. (A list of possibilities with no path to adjudication is treated as a definitional defect here — the norm this definition adopts.)
 
 
@@ -351,9 +454,11 @@ The prior draft defined a metaortheme as a higher-order distinction "acting on" 
 \textbf{Definition 11 (Metaortheme, split normal form).} A metaortheme is a \textbf{metaorthemic configuration}
 
 
-\begin{verbatim}
-μ = ⟨ g;  S_μ;  select_μ;  prov(μ);  ver(μ) ⟩
-\end{verbatim}
+\[
+\mu = \langle\, g;\ S_\mu;\ \operatorname{select}_\mu;\ \operatorname{prov}(\mu);\ \operatorname{ver}(\mu) \,\rangle
+\]
+
+
 paired with a separable \textbf{meta-policy} $\pi_\mu$, where:
 
 
@@ -500,9 +605,11 @@ Each has a distinct remedy; they need not share a cause. Low confidence is not t
 \textbf{Definition 12 (Residual disposition).} Every burden of an episode carries, at closure time, exactly one disposition from
 
 
-\begin{verbatim}
-{ unresolved, deferred, transferred, owner-assigned, risk-accepted, validated-resolved }
-\end{verbatim}
+\[
+\{\, \text{unresolved, deferred, transferred, owner-assigned, risk-accepted, validated-resolved} \,\}
+\]
+
+
 glossed: still open with no plan (unresolved); open with a declared later trigger (deferred); moved to another party with traceable ownership (transferred); waiting on a named owner's decision (owner-assigned); consciously left open under an accepted, recorded risk (risk-accepted); or closed on in-scope, current, sufficient evidence (validated-resolved). The six dispositions are \textbf{mutually exclusive by fiat} — each burden carries exactly one — with a precedence rule for the one genuinely overlapping pair: a burden that has been handed to a named decision-maker whose \emph{choice} is what is awaited is \textbf{owner-assigned}; a burden whose \emph{work} has been handed to another party is \textbf{transferred}. When both descriptions apply (work moved to a party who must also decide something), owner-assigned takes precedence, because the blocking condition is the decision. A disposition change is an event on the ledger, never a reinterpretation of the old record.
 
 \textbf{Definition 13 (False closure, retained and typed).} False closure is a completion claim that collapses distinct dispositions — unresolved, deferred, transferred, owner-assigned, or risk-accepted — into "validated-resolved." In this revision it is a \textbf{type error in the record/schema sense} (no type-theoretic machinery is invoked): the completion claim quantifies over the burden ledger, and it is well-formed only when every burden's disposition admits it — a checkable well-formedness condition on the closure record, violated exactly when the claim and its own ledger disagree. "Done" uttered over a ledger containing a deferred burden is not an optimistic judgment; it is a claim whose type its own ledger refutes. Closure is legitimate exactly when every required burden is validated-resolved, or explicitly deferred/transferred/ owner-assigned/risk-accepted under an admissible policy, and the evidence supports the declared level of completion. Safe closure is reopenable by record; false closure accrues silent exposure.
@@ -528,9 +635,11 @@ The loop ends when residual obligations in the ledger have been reread — not w
 The prior draft's "revise" was one word. The record shows it needs its own machinery. A \textbf{revision operator}
 
 
-\begin{verbatim}
-ρ : (μ, lesson) ↦ μ′        (and analogously for repertoire revisions ρ : (O, lesson) ↦ O′)
-\end{verbatim}
+\[
+\rho : (\mu, \text{lesson}) \mapsto \mu' \qquad (\text{and analogously for repertoire revisions } \rho : (O, \text{lesson}) \mapsto O')
+\]
+
+
 is governed by:
 
 
@@ -1018,17 +1127,31 @@ The decision-theoretic core is inherited, and the terminology may add load rathe
 
 \subsection*{15.2 Evidence tiers}
 
-\begin{center}
-\begin{tabular}{@{}p{0.313\linewidth}p{0.313\linewidth}p{0.313\linewidth}@{}}
-\toprule
-\textbf{Tier} & \textbf{Content} & \textbf{Status} \\
-\midrule
-\textbf{Conceptual/definitional} & The proposed distinctions and typed relationships of Sections 2–10; the split metaortheme normal form; verdict separability; the DAG/composition conditions; the derived multi-actor extensions & Machine-checked internal agreement over the declared definitions, schemas, examples, and adversarial fixtures (deterministic); \textbf{not} a proof of mathematical consistency or completeness; establishes no empirical claim \\
-\textbf{Public observational} & — & \textbf{None currently supplied.} The private records that motivated the design are non-evidential design provenance (Section 17) \\
-\textbf{Experimental} & Machinery benefit (13.1); episode-reification delta (13.2); vocabulary utility (13.3) & \textbf{None.} All three designed, none run \\
-\bottomrule
-\end{tabular}
-\end{center}
+% breakable-row-table: data-rows=3 total-rendered-characters=771 max-row-rendered-characters=446
+\par\medskip
+\hrule height 0.8pt
+\smallskip
+% breakable-row: 1/3
+\noindent\textbf{Tier}: \textbf{Conceptual/definitional}\par
+\noindent\textbf{Content}: The proposed distinctions and typed relationships of Sections 2–10; the split metaortheme normal form; verdict separability; the DAG/composition conditions; the derived multi-actor extensions\par
+\noindent\textbf{Status}: Machine-checked internal agreement over the declared definitions, schemas, examples, and adversarial fixtures (deterministic); \textbf{not} a proof of mathematical consistency or completeness; establishes no empirical claim\par
+\smallskip
+\hrule height 0.4pt
+\smallskip
+% breakable-row: 2/3
+\noindent\textbf{Tier}: \textbf{Public observational}\par
+\noindent\textbf{Content}: —\par
+\noindent\textbf{Status}: \textbf{None currently supplied.} The private records that motivated the design are non-evidential design provenance (Section 17)\par
+\smallskip
+\hrule height 0.4pt
+\smallskip
+% breakable-row: 3/3
+\noindent\textbf{Tier}: \textbf{Experimental}\par
+\noindent\textbf{Content}: Machinery benefit (13.1); episode-reification delta (13.2); vocabulary utility (13.3)\par
+\noindent\textbf{Status}: \textbf{None.} All three designed, none run\par
+\smallskip
+\hrule height 0.8pt
+\par\medskip
 Three honesty notes close the paper. \emph{No public observational dataset exists:} the design-history materials are private and not independently auditable, and they carry no evidential weight here — the existence, recurrence, and base rates of the motivating failure patterns are all publicly unestablished. \emph{Deterministic fixtures are not proofs:} they demonstrate conformance over the declared cases only. \emph{Nothing has been independently replicated:} no external party has yet examined any tier beyond this public repository itself.
 
 

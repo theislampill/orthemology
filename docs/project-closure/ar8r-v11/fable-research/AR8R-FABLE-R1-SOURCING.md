@@ -13,24 +13,28 @@ did not add one. Bibliographic metadata is deliberately minimal — author, work
 and year only where those were already named in the round-1 text — because
 inventing identifiers would be worse than leaving them absent.
 
-Relationship vocabulary: `identical`, `specialization`, `application`,
-`adjacent`, `analogy only`.
+Relationship vocabulary (fail-closed): while a row's verification status is
+`UNVERIFIED`, only `AUTHOR_ASSESSED_UNVERIFIED`, `SEARCH_LEAD`, and
+`POSSIBLE_ANALOGUE` are admissible relationships. Factual `identical`,
+`equivalent`, `inherits`, or already-exists-in-the-literature relations require
+a verified row (exact identifier, location, and proposition context).
+`scripts/validate_fable_r1_claim_language.py` enforces this.
 
 | Round-1 object | Cited work as named in round 1 | Stable identifier | Claim supported | Relationship | Verification |
 |---|---|---|---|---|---|
-| Fibre-constancy characterization (Core A; T299) | universal property of the quotient | none supplied | the characterization is standard, not novel | `identical` | `UNVERIFIED` |
-| Fibre-constancy characterization | Myhill–Nerode theorem | none supplied | ancestry of the fibre/partition argument | `adjacent` — **narrowed from round 1's "identical"** | `UNVERIFIED` |
-| Fibre-constancy characterization | partition refinement; functional dependency in relational databases | none supplied | same argument in other settings | `adjacent` | `UNVERIFIED` |
-| Plain separation index | minimum test collection, Garey–Johnson problem SP6 | Garey & Johnson, *Computers and Intractability*, 1979 — problem SP6 | the index is a known problem | `identical` | `UNVERIFIED` |
-| Plain separation index | separating systems (Rényi; Katona); identifying codes; rough-set reducts | none supplied | same index under other names | `adjacent` | `UNVERIFIED` |
-| Budgeted refinement cost (Core A invariant) | Set Cover | none supplied | NP-hardness and log-inapproximability inherited | `identical` | `UNVERIFIED` |
-| Robust separation index | set multicover; `(f+1)`-separating systems; superimposed codes | none supplied | the robust index is a known problem | `adjacent` | `UNVERIFIED` |
-| Resource-indexed robust version | bulk-robust combinatorial optimization, Adjiashvili–Stiller–Zenklusen | Adjiashvili, Stiller & Zenklusen, 2015 | the resource-dependency model already exists | `identical` model as described | `UNVERIFIED` |
-| Certificate survival radius (Core B) | minimum hypergraph transversal (Berge) | Berge, *Hypergraphs* | the radius is a transversal number | `identical` | `UNVERIFIED` |
-| Transversal-versus-packing gap (N1) | König/Lovász duality conditions; set packing hardness | none supplied | `τ = ν` needs hypotheses | `application` of standard results | `UNVERIFIED` |
-| Adaptive separation index | decision-tree complexity; certificate complexity (Nisan); evasiveness | none supplied | the adaptive index is a known measure | `adjacent` | `UNVERIFIED` |
-| Robust adaptive variant | Rényi–Ulam searching with lies | none supplied | robust adaptive search is classical | `adjacent` | `UNVERIFIED` |
-| Core B's judgment structure | substructural sequent calculi with resource annotation | none supplied | the calculus is familiar in kind | `adjacent` | `UNVERIFIED` |
+| Fibre-constancy characterization (Core A; T299) | universal property of the quotient | none supplied | the characterization is standard, not novel | `AUTHOR_ASSESSED_UNVERIFIED` (assessed identical; not verified against any text) | `UNVERIFIED` |
+| Fibre-constancy characterization | Myhill–Nerode theorem | none supplied | ancestry of the fibre/partition argument | `POSSIBLE_ANALOGUE` — narrowed from round 1's original stronger wording | `UNVERIFIED` |
+| Fibre-constancy characterization | partition refinement; functional dependency in relational databases | none supplied | same argument in other settings | `POSSIBLE_ANALOGUE` | `UNVERIFIED` |
+| Plain separation index | minimum test collection, Garey–Johnson problem SP6 | Garey & Johnson, *Computers and Intractability*, 1979 — problem SP6 | the index is a known problem | `AUTHOR_ASSESSED_UNVERIFIED` (assessed identical; not verified against any text) | `UNVERIFIED` |
+| Plain separation index | separating systems (Rényi; Katona); identifying codes; rough-set reducts | none supplied | same index under other names | `POSSIBLE_ANALOGUE` | `UNVERIFIED` |
+| Budgeted refinement cost (Core A invariant) | Set Cover | none supplied | NP-hardness and log-inapproximability inherited | `AUTHOR_ASSESSED_UNVERIFIED` (assessed identical; not verified against any text) | `UNVERIFIED` |
+| Robust separation index | set multicover; `(f+1)`-separating systems; superimposed codes | none supplied | the robust index is a known problem | `POSSIBLE_ANALOGUE` | `UNVERIFIED` |
+| Resource-indexed robust version | bulk-robust combinatorial optimization, Adjiashvili–Stiller–Zenklusen | Adjiashvili, Stiller & Zenklusen, 2015 | the resource-dependency model already exists | `AUTHOR_ASSESSED_UNVERIFIED` (assessed same model; not verified against the text) | `UNVERIFIED` |
+| Certificate survival radius (Core B) | minimum hypergraph transversal (Berge) | Berge, *Hypergraphs* | the radius is a transversal number | `AUTHOR_ASSESSED_UNVERIFIED` (assessed identical; not verified against any text) | `UNVERIFIED` |
+| Transversal-versus-packing gap (N1) | König/Lovász duality conditions; set packing hardness | none supplied | `τ = ν` needs hypotheses | `AUTHOR_ASSESSED_UNVERIFIED` (assessed application of standard results) | `UNVERIFIED` |
+| Adaptive separation index | decision-tree complexity; certificate complexity (Nisan); evasiveness | none supplied | the adaptive index is a known measure | `POSSIBLE_ANALOGUE` | `UNVERIFIED` |
+| Robust adaptive variant | Rényi–Ulam searching with lies | none supplied | robust adaptive search is classical | `POSSIBLE_ANALOGUE` | `UNVERIFIED` |
+| Core B's judgment structure | substructural sequent calculi with resource annotation | none supplied | the calculus is familiar in kind | `POSSIBLE_ANALOGUE` | `UNVERIFIED` |
 
 ## Why every row is UNVERIFIED, and what that costs
 
@@ -39,10 +43,10 @@ unverified row is conservative in the direction that matters: it cannot inflate
 the program's credit. What it cannot do is establish that any correspondence is
 exact. Two consequences:
 
-1. The word `identical` in the round-1 table is the author's assessment, not a
-   verified finding. Where the correction pass judged the evidence weaker than
-   `identical`, the row above says so — Myhill–Nerode is the one case where the
-   original wording was narrowed.
+1. Every relationship above is the author's assessment, marked as such
+   (`AUTHOR_ASSESSED_UNVERIFIED` / `POSSIBLE_ANALOGUE`); none is a verified
+   finding, and none may be quoted as a factual identity. Myhill–Nerode was
+   additionally narrowed on content grounds.
 2. `AR8R-FABLE-R1-PRIOR-ART-AND-NOVELTY-CEILING.md` remains correct in its own
    headline (zero novelty claimed) regardless of these rows, because that
    headline is a *refusal* to claim, which no citation is needed to support.

@@ -13,6 +13,7 @@
 \usepackage{hyperref}
 \usepackage{microtype}
 \usepackage{natbib}
+\usepackage{needspace}
 \usepackage{xcolor}
 \geometry{letterpaper,margin=0.75in}
 \hypersetup{colorlinks=true,linkcolor=blue,urlcolor=blue,citecolor=blue}
@@ -308,17 +309,31 @@ $m_t \xrightarrow{a_t} m_{t+1}$ (occurrence lineage) is not $\theta_t \xrightarr
 
 \subsection*{2.6 Table containing inline math}
 
-\begin{center}
-\begin{tabular}{@{}p{0.313\linewidth}p{0.313\linewidth}p{0.313\linewidth}@{}}
-\toprule
-\textbf{Object} & \textbf{Symbol} & \textbf{Non-claim} \\
-\midrule
-observation map & $\Omega_{A,\alpha,t}$ & not the occurrence \\
-inferred profile & $\hat p_{A,\alpha,t}(m)$ & not $O^*(m; A)$ \\
-metaorthemma & $\bar\mu_{e,j}$ & not the metaortheme type $\mu$ \\
-\bottomrule
-\end{tabular}
-\end{center}
+% breakable-row-table: data-rows=3 total-rendered-characters=187 max-row-rendered-characters=57
+\par\medskip
+\hrule height 0.8pt
+\smallskip
+% breakable-row: 1/3
+\noindent\textbf{Object}: observation map\par
+\noindent\textbf{Symbol}: $\Omega_{A,\alpha,t}$\par
+\noindent\textbf{Non-claim}: not the occurrence\par
+\smallskip
+\hrule height 0.4pt
+\smallskip
+% breakable-row: 2/3
+\noindent\textbf{Object}: inferred profile\par
+\noindent\textbf{Symbol}: $\hat p_{A,\alpha,t}(m)$\par
+\noindent\textbf{Non-claim}: not $O^*(m; A)$\par
+\smallskip
+\hrule height 0.4pt
+\smallskip
+% breakable-row: 3/3
+\noindent\textbf{Object}: metaorthemma\par
+\noindent\textbf{Symbol}: $\bar\mu_{e,j}$\par
+\noindent\textbf{Non-claim}: not the metaortheme type $\mu$\par
+\smallskip
+\hrule height 0.8pt
+\par\medskip
 All notation meanings are those of \texttt{docs/\allowbreak{}notation-\allowbreak{}registry.\allowbreak{}yaml}; nothing here introduces a new symbol or claim.
 
 

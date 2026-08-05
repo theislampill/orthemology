@@ -115,7 +115,7 @@ state-types in play). The primitive instantiation relation is analysis-relative:
 declared analysis $A$ — the explicit, versionable index defined in Section 2.6, whose components include the task $T = \operatorname{task}(A)$. (Notation note: the prior manuscript used a task-indexed primitive, now retired — see the notation registry's `retired_symbols`; the letter $I$ is reserved for the individuation component of the governed-component key,
 Section 6. The task-subscripted $\operatorname{Inst}_T$ survives only under the abbreviation convention below.) The **orthemic profile** of $m$ is its fibre,
 
-    O*(m; A) = { o ∈ O : (m, o) ∈ Inst_A }.
+$$O^*(m; A) \;=\; \{\, o \in O : (m, o) \in \operatorname{Inst}_A \,\}.$$
 
 The occurrence $m$ and its worldly facts are not created by the analysis. What is analysis-relative is which profile of consequence-bearing operational state-types truly describes $m$ in the declared repertoire; the actual profile $O^*(m; A)$ remains distinct from the observation of $m$, from the system's inferred profile, from the evidence available, and from any actor's belief.
 
@@ -131,9 +131,9 @@ provenance-currency type. An orthemma is not assigned to one mutually exclusive 
 The occurrence and the signal it presents are different objects. Let $\Omega : M \rightharpoonup X$ be the (partial, typed) observation map and $x = \Omega(m)$ the presently available observation of $m$.
 The observation may be impoverished, aliased, or misleading; the orthemma is the concrete event that produced or occasioned it. Apprehension runs
 
-    m --Ω--> x --evidence H_t--> p̂_t(m) --placement--> a_t --creates--> Succ ⊆ M
-                                                          |______________________|
-                                                        (feedback: successors re-enter M)
+$$m \;\xrightarrow{\;\Omega\;}\; x \;\xrightarrow{\;\text{evidence } H_t\;}\; \hat{p}_t(m) \;\xrightarrow{\;\text{placement}\;}\; a_t \;\xrightarrow{\;\text{creates}\;}\; \operatorname{Succ} \subseteq M,$$
+
+with the feedback edge $\operatorname{Succ} \to M$ closing the loop: successors re-enter the occurrence domain.
 
 where $\hat{p}_t(m)$ is the system's current inferred profile (belief), $a_t$ is the resulting interpretation, investigation, route, or action, and — new in this revision — the action's
 **successor set** $\operatorname{Succ}$ closes the loop back into the occurrence domain (Section 2.5). The ground truth $O^*_T(m)$ and the belief $\hat{p}_t(m)$ are distinct; so are the observation $x$
@@ -143,7 +143,7 @@ and the occurrence $m$.
 
 A system may know that an orthemma occurred while not knowing its orthemic identity: $m$ is encountered, yet $\hat{p}_t(m)$ remains open. The right description is
 
-    m is encountered; p̂_t(m) remains unresolved,
+$$m \text{ is encountered; } \hat{p}_t(m) \text{ remains unresolved,}$$
 
 not "an unknown ortheme floats free." Types do not hover independently of occurrences; what is unresolved is the placement of a present, concrete case. This also separates the four
 things "the hidden distinction" can mean, as facets of one relation: the actual profile $O^*_T(m)$ (ground truth), the evidence and candidate structure (Section 5), the inferred
@@ -166,7 +166,7 @@ reused storage slot occupied by a new file).
 
 **Definition 6 (Labeled successor edges).** An action $a$ performed in the handling of $m$ creates a labeled successor set
 
-    Succ_a(m) ⊆ M,   each element reached by an edge labeled with the action that produced it,
+$$\operatorname{Succ}_a(m) \subseteq M, \quad \text{each element reached by an edge labeled with the action that produced it,}$$
 
 of size **zero, one, or many**. (A read-only classification creates none; an edit creates one; a split, broadcast, or build creates many. An earlier formulation forcing a single
 successor $m' = \operatorname{succ}(m, a)$ is corrected.)
@@ -182,9 +182,9 @@ verdicts silently carried across a tree substitution, ordinal position mistaken 
 Ground truth is only defined relative to a **declared analysis** $A$: the system and governance boundary, task, evidence and action repertoire, policy class, loss, hard
 constraints, horizon, tolerance, representation family, and permitted-merger family. This section is the definition site of the index Definition 3 takes as primitive: $A$ must be **explicit and versionable** — it carries an identifier and version $\operatorname{ver}(A)$, and a change to any component above yields a new analysis version. Profiles and beliefs are therefore indexed:
 
-    O*(m; A)       — actual profile under analysis A (ground truth relative to A);
-    p̂_{A,α,t}(m)   — the profile actor α infers at time t under A;
-    C_{A,α,t}(m)   — the candidate structure actor α maintains at time t.
+- $O^*(m; A)$ — actual profile under analysis $A$ (ground truth relative to $A$);
+- $\hat{p}_{A,\alpha,t}(m)$ — the profile actor $\alpha$ infers at time $t$ under $A$;
+- $C_{A,\alpha,t}(m)$ — the candidate structure actor $\alpha$ maintains at time $t$.
 
 There is no second, task-only ground truth alongside this one: $O^*_T(m)$ is Definition 3's scoped abbreviation, licensed only while a single fixed $A$ with $\operatorname{task}(A) = T$ is in force.
 
@@ -207,7 +207,7 @@ individuates the types; instantiation constitutes the system.
 Formally, for candidate types realised by evidence histories $h_i, h_j$ with mixture weights $\lambda, 1-\lambda$, let $\operatorname{Rep}_A^{i=j}$ be the family of representations that place the two histories
 identically (plain gloss: all the ways of treating them as one), and $\operatorname{Rep}_A$ the unrestricted family. The **merger gap** is
 
-    Δ_A(o_i, o_j) = inf_{χ ∈ Rep_A^{i=j}} L_A*(χ)  −  inf_{χ ∈ Rep_A} L_A*(χ),
+$$\Delta_A(o_i, o_j) \;=\; \inf_{\chi \in \operatorname{Rep}_A^{i=j}} L_A^*(\chi) \;-\; \inf_{\chi \in \operatorname{Rep}_A} L_A^*(\chi),$$
 
 with $L_A^*(\chi)$ the best attainable risk under representation $\chi$ and hard-constraint violations counted as infinite risk. Then $o_i ≢_A o_j$ at tolerance $\epsilon_A$ iff
 $\Delta_A(o_i, o_j) > \epsilon_A$. The individuation is relative to the representation and merger families — components of $A$, which is why the contrast subscript follows the analysis (under Definition 3's convention, $≢_T$ may abbreviate $≢_A$ once a single $A$ is fixed). Another architecture can make the same type distinction feasible or unnecessary.
@@ -263,7 +263,7 @@ object — which is precisely how verdicts transport across mutations undetected
 The prior manuscript's single observation map $\Omega$ is replaced by a family of **typed evidence channels** $\{\Omega_k\}$, each partial (not every channel applies to every occurrence) and
 each carrying declared metadata. An evidence item obtained through channel $k$ is a record
 
-    h = ⟨ channel k;  property class τ;  scope σ;  provenance;  validity/expiry ⟩
+$$h = \langle\, \text{channel } k;\ \text{property class } \tau;\ \text{scope } \sigma;\ \text{provenance};\ \text{validity/expiry} \,\rangle$$
 
 with components glossed:
 
@@ -280,7 +280,7 @@ with components glossed:
 
 **Green-but-mis-scoped.** A validator can pass while supporting nothing:
 
-    mis-scoped pass  ≡  pass ∧ (σ(h) ∩ claim = ∅).
+$$\text{mis-scoped pass} \;\equiv\; \text{pass} \;\wedge\; (\sigma(h) \cap \text{claim} = \varnothing).$$
 
 The check is green, and its scope does not intersect the claim being closed. Observed instances: a hash validator that establishes integrity being read as establishing semantic
 validity; a stage validator whose scope was the previous stage's output being read as covering the current stage. A mis-scoped pass is not weak evidence — it is *no* evidence for
@@ -358,7 +358,7 @@ formalization.
 
 **Definition 11 (Metaortheme, split normal form).** A metaortheme is a **metaorthemic configuration**
 
-    μ = ⟨ g;  S_μ;  select_μ;  prov(μ);  ver(μ) ⟩
+$$\mu = \langle\, g;\ S_\mu;\ \operatorname{select}_\mu;\ \operatorname{prov}(\mu);\ \operatorname{ver}(\mu) \,\rangle$$
 
 paired with a separable **meta-policy** $\pi_\mu$, where:
 
@@ -455,7 +455,7 @@ be decisive under a confident placement.
 
 **Definition 12 (Residual disposition).** Every burden of an episode carries, at closure time, exactly one disposition from
 
-    { unresolved, deferred, transferred, owner-assigned, risk-accepted, validated-resolved }
+$$\{\, \text{unresolved, deferred, transferred, owner-assigned, risk-accepted, validated-resolved} \,\}$$
 
 glossed: still open with no plan (unresolved); open with a declared later trigger (deferred); moved to another party with traceable ownership (transferred); waiting on a named
 owner's decision (owner-assigned); consciously left open under an accepted, recorded risk (risk-accepted); or closed on in-scope, current, sufficient evidence (validated-resolved).
@@ -501,7 +501,7 @@ The loop ends when residual obligations in the ledger have been reread — not w
 
 The prior draft's "revise" was one word. The record shows it needs its own machinery. A **revision operator**
 
-    ρ : (μ, lesson) ↦ μ′        (and analogously for repertoire revisions ρ : (O, lesson) ↦ O′)
+$$\rho : (\mu, \text{lesson}) \mapsto \mu' \qquad (\text{and analogously for repertoire revisions } \rho : (O, \text{lesson}) \mapsto O')$$
 
 is governed by:
 

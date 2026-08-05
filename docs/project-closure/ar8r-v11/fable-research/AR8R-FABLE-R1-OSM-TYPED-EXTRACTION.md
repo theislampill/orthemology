@@ -20,7 +20,20 @@ image always has a set-theoretic section; the supported limitation is the absenc
 of a canonical, transition-compatible section and the nonidentifiability of latent
 states from observation symbols.
 
-## Typed extraction: what the measured object actually is
+## Quarantined unverified notes — typed extraction as recorded by round 1
+
+**Quarantine (added in the PR #21 repair).** Every bullet in this section, and
+every row of the classification table below, is a round-1 description of what
+the source reports. None has been verified against the source bytes in a
+stable, recorded review context; no exact source locations were recorded; and
+the reviewing context of round 1 included silent model fallbacks, which do not
+count as review (see `AR8R-FABLE-R1-PR21-INDEPENDENT-AUDIT-V2.md`, reviewer
+identity section). These notes are therefore **not current research authority**:
+they are retained as leads for a future source-verification pass that must cite
+exact source locations for any claim it keeps. Mathematical deductions made by
+round 1 from its own reading (recorded in `AR8R-FABLE-R1-NEGATIVE-RESULTS.md`
+N3) are claims about the reading, not about the source, and are marked there
+separately.
 
 The paper runs two tracks in parallel — a biological/measured track and a
 model/simulated track — and the repository's prior crosswalk did not separate their
@@ -48,7 +61,7 @@ types sharply. Doing so changes what may be inferred.
 - **There is no causal intervention on the nervous system.** All biological results
   are observational; the only ablations are on models.
 
-## Per-result classification
+## Per-result classification — quarantined with the notes above
 
 | Source result | Classification relative to repository owners |
 |---|---|
@@ -62,7 +75,9 @@ types sharply. Doing so changes what may be inferred.
 
 ## Four countermodel classes
 
-Each is finite and explicit enough to instantiate in simulation.
+These are round-1 mathematical constructions, independent of the source's
+actual content (`DERIVED_BUT_UNVERIFIED`; none is committed as an executable
+model). Each is finite and explicit enough to instantiate in simulation.
 
 1. **Same endpoint, different trajectory.** Two learners differing only in a
    per-position rate vector reach bit-identical endpoints by opposite crossing
