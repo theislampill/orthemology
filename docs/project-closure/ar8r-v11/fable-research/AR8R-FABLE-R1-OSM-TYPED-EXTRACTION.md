@@ -57,7 +57,9 @@ types sharply. Doing so changes what may be inferred.
   No transition matrix is estimated from the neural data. The topological reading is
   qualitative, with no topological statistic computed.
 - **The trajectory is a three-element order statistic** with at most thirteen
-  possible values — a maximum discriminative capacity of roughly 3.7 bits.
+  possible values — and, as a round-1 *deduction from that reading* rather than a
+  source description (`DERIVED_BUT_UNVERIFIED`), a maximum discriminative
+  capacity of roughly 3.7 bits.
 - **There is no causal intervention on the nervous system.** All biological results
   are observational; the only ablations are on models.
 

@@ -8,9 +8,10 @@ claimed; see `AR8R-FABLE-R1-PRIOR-ART-AND-NOVELTY-CEILING.md`.
 check, or Lean theorem. Every such property is therefore downgraded to
 `DERIVED_BUT_UNVERIFIED`: recorded as the author's derivation, checked by no one.
 Exceptions, verified independently during review: the Domain 3 embedding's
-transversal arithmetic (triangle and path countermodels, quorum range `n ≤ 7`) via
-`checks/n1_transversal_packing_check.py`. The Domain 1 characterization has a Lean
-receipt. Nothing else in this packet should be cited as established.
+transversal arithmetic (triangle and path countermodels, quorum range `n ≤ 7`)
+via `checks/n1_transversal_packing_check.py`; and the Domain 1
+characterization, which carries a Lean receipt. Nothing else in this packet is
+citable as settled.
 
 This packet answers the research prompt's step 3: whether any quantity survives in
 at least three genuinely typed domains. The answer is a **split verdict**, and the
@@ -102,13 +103,16 @@ interest — is invisible to the invariant.
 
 ### Domain 3 — exact instance of the generalized form, with its firewall recorded
 
-An explicit faithful embedding sends portfolio items to worlds, blockers to tests,
-and required-root sets to resource dependencies. Under it, the program's cutset
-condition **is** Theorem R, and the program's robustness notion is the invariant's.
+An explicit faithful embedding (`DERIVED_BUT_UNVERIFIED`, except its transversal
+arithmetic, which `checks/n1_transversal_packing_check.py` reproduces) sends
+portfolio items to worlds, blockers to tests, and required-root sets to resource
+dependencies. Under it, the program's cutset condition matches Theorem R, and
+the program's robustness notion matches the invariant's.
 Domain 3 is what forces the resource-indexed generalization in the first place —
 the private-resource version is the special case where each test owns its resource.
 
-Verdict: **exact instance of the generalized invariant.** The associated
+Verdict: **exact instance of the generalized invariant** (`DERIVED_BUT_UNVERIFIED`
+as above). The associated
 transversal-versus-packing gap and exchange-axiom failure are recorded in
 `AR8R-FABLE-R1-NEGATIVE-RESULTS.md`, item N1 — as an interpretation firewall and a
 constraint on future definitions, **not** as refutations of program premises; the
@@ -142,6 +146,7 @@ to prevent.
 - It has zero general mathematical novelty.
 - Candidate 1's value `mn − C(t,2)` is **not** adjudicated for novelty here; that
   still requires a real literature search, and its packet status is unchanged.
-- Nothing here is machine-checked. Only the Domain 1 characterization has a Lean
-  receipt, and it is the degenerate case.
+- Nothing here is kernel-checked except the Domain 1 characterization's Lean
+  receipt (the degenerate case); the only executable check is the Domain 3
+  transversal arithmetic via `checks/n1_transversal_packing_check.py`.
 - No empirical, metaphysical, or theological content is touched.

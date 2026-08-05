@@ -525,14 +525,14 @@ The matrix applies only AFTER the pathway status is resolved as adequate or defe
 \hrule height 0.8pt
 \smallskip
 % breakable-row: 1/2
-\noindent\textbf{Column 1}: \textbf{Result correct (V1)}\par
+\noindent\textbf{\textbf{Result correct (V1)}}\par
 \noindent\textbf{PathwayAdequate}: \emph{Nominal.} A current behavioral validator, correctly bound to the current artifact (V3c pass where applicable), under a sufficiently reliable configured procedure, returns the correct result. Nothing to fix.\par
 \noindent\textbf{PathwayDefective}: \emph{Correct + defective (stopped-clock, compensating error, or governing-side luck).} Possible failure loci: V2b-P, V3a, V3b, V3c, V3d, or V6 — the marker validator that happens to be right today; the mis-bound metaorthemma whose wrong reference plane locally coincides with the right one. Remedy targets the procedure, rule, or binding — not the verdict.\par
 \smallskip
 \hrule height 0.4pt
 \smallskip
 % breakable-row: 2/2
-\noindent\textbf{Column 1}: \textbf{Result incorrect (¬V1)}\par
+\noindent\textbf{\textbf{Result incorrect (¬V1)}}\par
 \noindent\textbf{PathwayAdequate}: $\operatorname{AdequatePathError}(e) := \neg \operatorname{V1}(e) \wedge \operatorname{PathwayAdequate}(e)$ — the justified rare miss of a non-perfect but sufficiently reliable process used correctly: a genuine, representable cell, expected whenever such a process runs. Where V3e ∈ ReqPath(e), $\operatorname{JustifiedMiss}(e) := \operatorname{AdequatePathError}(e)$ — V3e's pass is already inside PathwayAdequate, so no redundant conjunct is added. Remedy, if any: a new discriminating evidence source; no rule or executor blame. \textbf{Note:} orthemic adequacy does not establish moral, legal, institutional, or theological blamelessness — "blameless" is not a formal predicate here.\par
 \noindent\textbf{PathwayDefective}: \emph{Compound failure.} Wrong placement via a defective pathway — e.g., a deploy gate reads a cached test result from the previous commit and approves the current one (¬V1 with V2c and V3a failures). Remedy: both the placement and the rulebook/lineage machinery.\par
 \smallskip

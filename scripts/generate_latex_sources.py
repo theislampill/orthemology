@@ -992,7 +992,11 @@ def _render_standard_table(table, columns, rows):
 
 
 def _normal_flow_header_label(header, column_index):
-    label = header if header else "Column %d" % (column_index + 1)
+    # An empty header yields no label: the cell itself leads the line in
+    # bold (PR #21 repair: no 'Column N' placeholder labels in output).
+    if not header:
+        return None
+    label = header
     if label.startswith(r"\textbf{") and label.endswith("}"):
         label = label[len(r"\textbf{") : -1]
     return r"\textbf{%s}:" % label
@@ -1025,16 +1029,20 @@ def _render_breakable_table(
             "%% breakable-row: %d/%d\n" % (row_index + 1, len(rows))
         )
         for column_index, cell in enumerate(row):
-            output.append(
-                "\\noindent%s %s\\par\n"
-                % (
-                    _normal_flow_header_label(
-                        headers[column_index],
-                        column_index,
-                    ),
-                    cell,
-                )
+            label = _normal_flow_header_label(
+                headers[column_index],
+                column_index,
             )
+            if label is None:
+                if not cell:
+                    continue
+                output.append(
+                    "\\noindent\\textbf{%s}\\par\n" % cell
+                )
+            else:
+                output.append(
+                    "\\noindent%s %s\\par\n" % (label, cell)
+                )
         if row_index != len(rows) - 1:
             output.extend(
                 [

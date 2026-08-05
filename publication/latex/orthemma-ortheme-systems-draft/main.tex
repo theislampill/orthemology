@@ -306,7 +306,7 @@ The type–token framing exposes three related but distinct uncertainty patterns
 \hrule height 0.8pt
 \smallskip
 % breakable-row: 1/4
-\noindent\textbf{Column 1}: \textbf{Pattern}\par
+\noindent\textbf{\textbf{Pattern}}\par
 \noindent\textbf{Inter-orthemma aliasing}: Distinct occurrences produce the same or confusable observation while instantiating operationally different types\par
 \noindent\textbf{Intra-orthemma uncertainty}: One encountered occurrence remains compatible with several candidate types\par
 \noindent\textbf{Identity uncertainty}: It is unresolved \emph{which occurrence} (which $\kappa$, or which version $v$) is actually in hand\par
@@ -314,7 +314,7 @@ The type–token framing exposes three related but distinct uncertainty patterns
 \hrule height 0.4pt
 \smallskip
 % breakable-row: 2/4
-\noindent\textbf{Column 1}: \textbf{Formally}\par
+\noindent\textbf{\textbf{Formally}}\par
 \noindent\textbf{Inter-orthemma aliasing}: $\Omega(m_1) = \Omega(m_2)$, $O^*(m_1; A) \neq O^*(m_2; A)$\par
 \noindent\textbf{Intra-orthemma uncertainty}: $C^{\mathrm{profile}} \supseteq \{p_1, \dots, p_k\}$, several profiles licensing non-equivalent routes\par
 \noindent\textbf{Identity uncertainty}: $C^{\mathrm{id}}(m) \subseteq M$ non-singleton: candidates for the case's own identity/version\par
@@ -322,7 +322,7 @@ The type–token framing exposes three related but distinct uncertainty patterns
 \hrule height 0.4pt
 \smallskip
 % breakable-row: 3/4
-\noindent\textbf{Column 1}: \textbf{Example}\par
+\noindent\textbf{\textbf{Example}}\par
 \noindent\textbf{Inter-orthemma aliasing}: Two jars of white powder look identical; one is flour, one is cornstarch\par
 \noindent\textbf{Intra-orthemma uncertainty}: One acoustic stream compatible with "olive juice" and "I love you"\par
 \noindent\textbf{Identity uncertainty}: The log line may describe this commit's build or the previous one's; the file at this path may be the original or a reused slot\par
@@ -330,7 +330,7 @@ The type–token framing exposes three related but distinct uncertainty patterns
 \hrule height 0.4pt
 \smallskip
 % breakable-row: 4/4
-\noindent\textbf{Column 1}: \textbf{Wrong reduction}\par
+\noindent\textbf{\textbf{Wrong reduction}}\par
 \noindent\textbf{Inter-orthemma aliasing}: Treating it as one case with an open profile\par
 \noindent\textbf{Intra-orthemma uncertainty}: Treating it as two cases\par
 \noindent\textbf{Identity uncertainty}: Treating it as profile uncertainty about a known case\par
@@ -858,14 +858,14 @@ The matrix applies only after the pathway status resolves as adequate or defecti
 \hrule height 0.8pt
 \smallskip
 % breakable-row: 1/2
-\noindent\textbf{Column 1}: \textbf{Result correct (V1)}\par
+\noindent\textbf{\textbf{Result correct (V1)}}\par
 \noindent\textbf{PathwayAdequate}: \textbf{Nominal.} A release gate runs the behavioural suite against the exact commit it gates, on current artifacts, correctly bound (V3c where applicable), under a reliable configured procedure; it passes; the build is in fact good. Nothing to fix.\par
 \noindent\textbf{PathwayDefective}: \textbf{Correct + defective (stopped clock / compensating error / governing-side luck).} The answer is right; the failure locus is V2b-P, V3a, V3b, V3c, V3d, or V6. The remedy targets the procedure, rule, or binding — not the verdict. Worked example below.\par
 \smallskip
 \hrule height 0.4pt
 \smallskip
 % breakable-row: 2/2
-\noindent\textbf{Column 1}: \textbf{Result incorrect (¬V1)}\par
+\noindent\textbf{\textbf{Result incorrect (¬V1)}}\par
 \noindent\textbf{PathwayAdequate}: \textbf{$\operatorname{AdequatePathError}(e) := \neg \operatorname{V1}(e) \wedge \operatorname{PathwayAdequate}(e)$} — the justified rare miss of a non-perfect but sufficiently reliable process used correctly. A triage router places a failing test under "infrastructure flake" because every available signal points there; the true cause is a rare race in new code: V3e holds, the procedure met its declared reference-class reliability (V2b-P), and the pathway IS certified adequate; \texttt{V2b-T} fails for the claim (it is false). Where V3e ∈ ReqPath(e), $\operatorname{JustifiedMiss}(e) := \operatorname{AdequatePathError}(e)$ (V3e's pass is already inside PathwayAdequate). Remedy: a new discriminating evidence source; no rule or executor blame. Orthemic adequacy does not establish moral, legal, institutional, or theological blamelessness.\par
 \noindent\textbf{PathwayDefective}: \textbf{Compound failure.} A deploy gate reads a cached test result from the previous commit and approves the current one: wrong placement via a defective pathway (¬V1; V2c, V3a fail). Remedy: both the placement and the lineage machinery.\par
 \smallskip

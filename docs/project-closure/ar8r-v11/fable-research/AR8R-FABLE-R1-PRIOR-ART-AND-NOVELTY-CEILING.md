@@ -17,8 +17,8 @@ Every construction in this round is author-assessed to have a classical home.
 Every such assessment is `AUTHOR_ASSESSED_UNVERIFIED` or `POSSIBLE_ANALOGUE`
 (see `AR8R-FABLE-R1-SOURCING.md`): no source was verified, so no relation below
 is a factual identity claim. The assessments exist to *suppress* novelty claims,
-which they do regardless of verification; they must not be quoted in the other
-direction as established equivalences to specific literature.
+which they do regardless of verification; they may never be quoted in the
+reverse direction as settled equivalences to specific literature.
 
 ## Correspondence table
 

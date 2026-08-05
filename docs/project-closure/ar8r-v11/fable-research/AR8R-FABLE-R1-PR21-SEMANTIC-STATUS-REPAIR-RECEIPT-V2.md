@@ -26,9 +26,11 @@ CONJECTURE                      not even derived; a lead
 `AR8R-FABLE-R1-TYPED-CORE-CANDIDATES.md`:
 
 - both "**Proved.**" headings replaced by "**Derived properties**" with an
-  explicit per-item status; every Core A and Core B property now carries
+  explicit per-item status; every Core A and Core B property, and the battery
+  bullets that state theorem-like consequences, now carry
   `DERIVED_BUT_UNVERIFIED` locally except the fibre-constancy characterization,
-  which carries `LEAN_FORMALIZED_SCOPED_RESULT`;
+  which carries `LEAN_FORMALIZED_SCOPED_RESULT` (a residual "provably" in the
+  partial-observation bullet was caught by the distinct rereview and fixed);
 - "a proved tight bound" is now "a derived, unverified bound
   (`DERIVED_BUT_UNVERIFIED`) suggests";
 - the transport hypotheses no longer claim countermodels "prove" necessity;
@@ -62,4 +64,10 @@ Top-level banners were not weakened; local wording was brought down to them.
   status, negation/withdrawal context, or evidence owner on the same line;
 - the candidate-packet set is explicit; receipts and audit records, whose
   "verified" words report performed checks, are documented as out of scope;
+- after the distinct rereview: also gates the prior-art correspondence table's
+  Relation column, the zero-novelty ceiling headline's presence, and the
+  sourcing table's claim-supported column; token set extended
+  (provably/prove(s)/established) and exemptions narrowed. The gate remains a
+  lexical tripwire, not a prover — adversarial paraphrase can evade it, and
+  human review stays the outer gate;
 - exit 1 on any failure; current state: PASS with 0 failures.

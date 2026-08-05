@@ -11,8 +11,8 @@ check, or Lean theorem. Every such property — including the certifier lattice,
 the transport hypotheses, the Set-Cover equivalence, the MIN law, the
 `ν ≤ rad ≤ k·ν` sandwich, and the discriminator scenario's tabulated verdicts —
 is downgraded to `DERIVED_BUT_UNVERIFIED`: recorded as the author's derivation,
-checked by no one. Nothing in this packet beyond the Lean-receipted
-characterization should be cited as established.
+checked by no one. Nothing in this packet is citable as settled except the
+characterization backed by the Lean receipt.
 
 The research prompt's step 1 required two materially different candidate cores,
 each attacked with the same countermodel battery, and forbade selecting a core
@@ -28,8 +28,8 @@ backgrounds, `Λ` labels, `L : W → Λ` the target, `Π` a profile space, and
 `P' ∘ f = u ∘ P` and `L' ∘ f = L`. These compose, giving a category.
 
 **Derived properties.** Local status per item; `DERIVED_BUT_UNVERIFIED` means
-recorded as the author's derivation, checked by no one, and not citable as
-established.
+recorded as the author's derivation, checked by no one, and never citable as
+settled.
 
 - **Fibre-constancy characterization** (`LEAN_FORMALIZED_SCOPED_RESULT`). `L` is certifiable by `P` iff `ker P ⊆ ker L`.
   The certificate is unique on the attained image. This is machine-checked in Lean
@@ -55,9 +55,9 @@ established.
 confusion, partial observation, and target mismatch: **failed**, with the failures
 characterized rather than patched. Two are worth naming:
 
-- *Partial observation.* The certificate type is scope-blind: a certificate can be
-  green but mis-scoped, and scoped certificates provably do not compose across
-  scopes.
+- *Partial observation* (`DERIVED_BUT_UNVERIFIED`). The certificate type is
+  scope-blind: a certificate can be green but mis-scoped, and scoped
+  certificates are derived not to compose across scopes.
 - *Target mismatch.* Undetectable by construction, but boundedly so: a derived, unverified
   bound (`DERIVED_BUT_UNVERIFIED`) suggests a single mislabelled world can take a system from perfectly
   certifiable to maximally defective.
@@ -148,7 +148,8 @@ unchanged — Core B's verdict never mentions the domain.
 
 Core B is repairable to reconverge with Core A here, at the permanent cost of a
 fourth root. That cost is the point: the disagreement is not a bug in either core,
-it is a real distinction between two notions of "established".
+it is a real distinction between two notions of what it takes to establish
+(`DERIVED_BUT_UNVERIFIED`, like the scenario it closes).
 
 ## Selection
 

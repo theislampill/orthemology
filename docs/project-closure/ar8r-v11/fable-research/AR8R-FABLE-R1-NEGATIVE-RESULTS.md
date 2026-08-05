@@ -19,7 +19,7 @@ MEN-2. That attribution was false and is withdrawn:
 - The proposed Round-20 result
   (`../post-merge-proposals/pmr007-rounds11-20/PROPOSED_THEOREM_FILES/PMR-007_FRONTIER_ROUND20_PROVENANCE_RESILIENT_RESTORATIVE_CUTSETS_V2.md`)
   defines the minimum transversal number `τ(H)` and `κ_root(I) = min_p τ(H_p(I))`,
-  and proves `f`-root-robust ⟺ `κ_root(I) > f`. It cites standard hypergraph
+  and carries a proof that `f`-root-robust ⟺ `κ_root(I) > f`. It cites standard hypergraph
   transversal theory as its exact mechanism.
 - The rejected V1
   (`../post-merge-proposals/pmr007-rounds11-20/REJECTED_AND_BLOCKED_EVIDENCE/PMR-007_FRONTIER_ROUND20_PROVENANCE_RESILIENT_RESTORATIVE_CUTSETS_V1.md`)
@@ -104,7 +104,7 @@ classes — structurally what the typed core asks for. It fails at three nameabl
    map "admits no global section by construction". That is false as stated: the
    emission map is a finite surjection onto its attained image, so a set-theoretic
    section exists by selecting one preimage from each attained fibre. The
-   established limitation is nonidentifiability and the absence of a *canonical*
+   supported limitation is nonidentifiability and the absence of a *canonical*
    or *transition-compatible* choice — not the nonexistence of every section.
    Distinctions collapsed inside a fibre are not recoverable from the observation
    symbol alone; that is the actual obstruction, and it is weaker than what the
