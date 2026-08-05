@@ -28,7 +28,7 @@ known object but is the same object under a different name.
 | Robust separation index | Set multicover; `(f+1)`-separating systems; superimposed codes; robust identifying codes | **Identical** |
 | Resource-indexed robust version | Bulk-robust combinatorial optimization (Adjiashvili–Stiller–Zenklusen, 2015) | **Identical model**, including the resource-dependency map |
 | Certificate survival radius (Core B) | Minimum hypergraph transversal (Berge) | **Identical** |
-| Transversal-versus-packing gap (N1) | König/Lovász duality conditions; set packing hardness | Standard; the program's error was assuming duality without checking its hypotheses |
+| Transversal-versus-packing gap (N1) | König/Lovász duality conditions; set packing hardness | Standard application — `τ = ν` needs hypotheses that conjunctive root-sets do not supply. Recorded as an interpretation firewall; no program document assumed the duality (the original "the program's error" wording was withdrawn) |
 | Adaptive separation index | Decision-tree complexity; certificate complexity (Nisan); evasiveness | **Identical** |
 | Robust adaptive variant | Rényi–Ulam searching with lies | Standard |
 | Core B's judgment structure | Substructural sequent calculi with resource annotation | Familiar in kind; the specific rule set is assembled, not novel |
@@ -38,16 +38,17 @@ known object but is the same object under a different name.
 These are corrections and classifications, not theorems. They are new to this
 repository and not new to mathematics:
 
-1. the transversal-versus-packing refutation of the cutset reading (N1);
-2. the exchange-axiom counterexample showing provenance independence is not a
-   matroid rank (N1);
+1. the transversal-versus-packing interpretation firewall (N1) — a misreading
+   forbidden in advance, not a correction to any existing statement;
+2. the exchange-axiom counterexample constraining any future matroid-rank
+   definition of provenance independence (N1);
 3. the identification of the program's robustness model as bulk-robust
    optimization, which supplies an existing literature to draw on;
 4. the exact derivation that the hidden-matching model's non-adaptive separation
    index is `mn` with no fault tolerance;
 5. the index mismatch showing Candidate 1's `C(t,2)` saving is invisible to the
    separation invariant;
-6. the five T299 specification defects;
+6. the T299 specification findings (four defects beyond notation; D4 withdrawn);
 7. the observation that the OSM source's trajectory-order result is
    encoding-convention-relative.
 

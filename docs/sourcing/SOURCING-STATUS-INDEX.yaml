@@ -17,6 +17,11 @@ surfaces:
 - path: references/quran-loci.yaml
   classification: current-authoritative
   scope: Qur'anic loci (primary-verified registry with its own validator)
+- path: docs/project-closure/ar8r-v11/fable-research/AR8R-FABLE-R1-SOURCING.md
+  classification: current-authoritative
+  scope: >
+    Fable round-1 prior-art correspondence attributions only (all rows
+    UNVERIFIED; classification and relationship, never source truth)
 - path: docs/sourcing/R3-SOURCING-LEDGER.md
   classification: overlay
   base: docs/sourcing/SOURCING-LEDGER.md

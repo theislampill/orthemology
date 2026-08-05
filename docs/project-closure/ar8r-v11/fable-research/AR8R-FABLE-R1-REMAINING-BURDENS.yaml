@@ -121,6 +121,8 @@ nonclaims:
   - No theorem gains adoption, novelty, or empirical credit from this round.
   - Machine checking establishes derivability from Lean's axioms only; it does not
     establish that a formalization faithfully renders its informal packet.
-  - The refutations recorded in round 1 concern the program's stated premises, not
-    the internal correctness of the historical theorems.
+  - Round 1's negative results, as corrected, refute no adopted or proposed
+    program statement; they stand as interpretation firewalls and constraints on
+    future definitions. The internal correctness of the historical theorems was
+    never at issue.
   - Zero general mathematical novelty is claimed for any round-1 object.

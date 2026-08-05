@@ -17,6 +17,7 @@ establishes classification and internal agreement, never source truth.
 | Project's own formal extension | registry rows `EXT-*` | no external source claimed |
 | Qurʾānic loci | [`references/quran-loci.yaml`](../../references/quran-loci.yaml) | 29 loci, primary-verified (R3), own CI validator |
 | Academic corpus (manuscript related work etc.) | [`R3-SOURCING-LEDGER.md`](R3-SOURCING-LEDGER.md) | R3 regrading overlay over the R2 baseline; where R3 names a row, R3's status is current |
+| Fable round-1 prior-art correspondences | [`AR8R-FABLE-R1-SOURCING.md`](../project-closure/ar8r-v11/fable-research/AR8R-FABLE-R1-SOURCING.md) | all rows UNVERIFIED; added by the post-review correction; relationships, never source truth |
 | Companion philosophical + classical layer | [`companion/sourcing/R3-COMPANION-SOURCING-LEDGER.md`](../../companion/sourcing/R3-COMPANION-SOURCING-LEDGER.md) | same overlay rule; inference-boundary labels retained there |
 
 **Historical baselines (statuses superseded where regraded):**

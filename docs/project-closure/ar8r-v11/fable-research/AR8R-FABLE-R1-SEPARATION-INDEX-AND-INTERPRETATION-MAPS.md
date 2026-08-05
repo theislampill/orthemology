@@ -95,7 +95,7 @@ Verdict: **guarded transfer with a proven-necessary hypothesis, plus a principle
 partial nonidentity.** The `C(t,2)` saving — all of Candidate 1's mathematical
 interest — is invisible to the invariant.
 
-### Domain 3 — exact instance of the generalized form, with its risky premise refuted
+### Domain 3 — exact instance of the generalized form, with its firewall recorded
 
 An explicit faithful embedding sends portfolio items to worlds, blockers to tests,
 and required-root sets to resource dependencies. Under it, the program's cutset
