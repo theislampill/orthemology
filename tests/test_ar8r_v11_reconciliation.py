@@ -1001,6 +1001,12 @@ class TestAr8rV11Reconciliation(unittest.TestCase):
         self.assertIsNotNone(locator, "recovery validator must expose its private-locator pattern")
         if locator is not None:
             self.assertIsNone(locator.search(r"f_j:\{0,1\}^{V}\to\mathbb R"))
+            self.assertIsNone(locator.search(r"E:\operatorname{Int}(S,C)\to Z"))
+            self.assertIsNone(
+                locator.search(
+                    r"\mathcal R_{r_0}=\{P:\operatorname{LRC}_{\mathbb R}(P)\le r_0\}"
+                )
+            )
             windows_path = "C:" + "\\" + "workspace\\private\\evidence.md"
             self.assertIsNotNone(locator.search(windows_path))
 

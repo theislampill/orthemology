@@ -28,7 +28,7 @@ CONNES = V11 / "provenance" / "AR8R-CONNES-RIGIDITY-DISPUTE-RECEIPT-V11.yaml"
 OSW15 = V11 / "governance" / "ORTHEMOLOGICAL-SPECIFICATION-WARRANT-OSW-15.yaml"
 PRIVATE_PDF_NAME = "C2680D5A-8FAE-11F1-A320-F5FC2CA0B584.pdf"
 PRIVATE_LOCATOR_RE = re.compile(
-    r"(?:(?<![A-Za-z0-9_])[A-Za-z]:\\(?![{}()\[\]])|/mnt/data/|sandbox:|file://|data-message-id|screen-threadFlyOut)",
+    r"(?:(?<![A-Za-z0-9_])[A-Za-z]:\\(?!operatorname\{)(?![{}()\[\]])|/mnt/data/|sandbox:|file://|data-message-id|screen-threadFlyOut)",
     re.I,
 )
 
