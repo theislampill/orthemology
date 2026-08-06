@@ -1,0 +1,71 @@
+schema: ar8r-pmr007-deep-a-ap-execution-receipt-v1
+scope:
+  source: exact sanitized Deep A-AP proposal snapshot
+  execution_copy: DISPOSABLE_LOCAL_COPY
+  exact_repository_snapshot_modified_by_execution: false
+verification_class: INTEGRATOR_REPORTED_NOT_INDEPENDENTLY_REPRODUCED
+broad_disposable_run:
+  scripts_discovered: 73
+  exit_zero: 52
+  exit_nonzero: 21
+  structurally_equal_json_outputs_ignoring_line_endings: 43
+  evidence_status: INTEGRATOR_REPORTED_NOT_INDEPENDENTLY_REPRODUCED
+  public_per_script_ledger_present: false
+  deterministic_compatibility_layout_recipe_present: false
+  note: Primary and rereview scripts were intentionally run from a disposable compatibility layout; nonzero exits include missing source placeholders, omitted frozen sidecars, and rejected-version checks.
+isolated_rereview_run:
+  procedure: Restore all 831 exact snapshot members before running rereviews so primary-check output rewriting cannot invalidate frozen hashes.
+  scripts_discovered: 34
+  exit_zero: 15
+  exit_nonzero: 19
+  evidence_status: INTEGRATOR_REPORTED_NOT_INDEPENDENTLY_REPRODUCED
+  public_per_script_ledger_present: false
+  deterministic_compatibility_layout_recipe_present: false
+canonical_deep_x_through_ap_checks:
+  - identity: PMR-007-CGIP-1
+    round: DEEP_AA_V3
+    status: INTEGRATOR_REPORTED_PRIMARY_AND_DISTINCT_REREVIEW_REPRODUCED
+  - identity: PMR-007-ABPD-1
+    round: DEEP_AN
+    status: INTEGRATOR_REPORTED_PRIMARY_AND_DISTINCT_REREVIEW_REPRODUCED
+  - identity: PMR-007-RPDS-1
+    round: DEEP_AO_V2
+    status: INTEGRATOR_REPORTED_PRIMARY_REPRODUCED_DISTINCT_REREVIEW_SOURCE_BOUND
+    boundary: The distinct rereview requires the exact PRH PDF in addition to the available OSM source; the sanitized proposal does not carry that private source byte stream.
+  - identity: PMR-007-SWRI-1
+    round: DEEP_AP
+    status: INTEGRATOR_REPORTED_PRIMARY_AND_DISTINCT_REREVIEW_REPRODUCED
+execution_boundary:
+  sanitized_snapshot_self_contained_executable: false
+  omitted_frozen_sidecars:
+    - DEEP_A_V1
+    - DEEP_B_V1
+    - DEEP_C_V2
+    - DEEP_D_V2
+    - DEEP_F_V3
+    - DEEP_G_V3
+    - DEEP_H_V1
+    - DEEP_I_V2
+    - DEEP_J_V2
+    - ROUND18_V4
+  source_bound_rereviews:
+    - DEEP_AI_EL_TOBGUI_SOURCE
+    - DEEP_AO_PRH_SOURCE
+    - DEEP_P_OSM_EVIDENCE_PLACEHOLDER
+    - DEEP_Q_ASFAHANI_EVIDENCE_PLACEHOLDER
+    - DEEP_R_REPOSITORY_RELATIVE_PLACEHOLDER
+  prior_round_dependencies_missing_from_snapshot:
+    - ROUND14_CHECKER
+    - ROUND15_CHECKER
+    - ROUND16_CHECKER
+    - ROUND20_V1_COLD_AUDIT
+interpretation:
+  archive_integrity: PASS
+  mathematical_reproduction: INTEGRATOR_REPORTED_PARTIAL_NOT_INDEPENDENTLY_REPRODUCED
+  independent_reproduction_from_public_snapshot: NOT_ESTABLISHED
+  reason: The public packet has no per-script execution ledger or deterministic compatibility-layout recipe; aggregate counts are retained as integrator observations, not independent receipts.
+  missing_input_is_not_a_mathematical_failure: true
+  recorded_result_files_remain_exact_custody_evidence: true
+  external_review_status: OPEN
+  owner_adoption_status: PENDING
+authority_effect: NONE

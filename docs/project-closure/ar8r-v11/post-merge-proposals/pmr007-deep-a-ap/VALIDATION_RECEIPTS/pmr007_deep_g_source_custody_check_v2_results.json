@@ -1,0 +1,59 @@
+{
+  "arabic_primary_verified": false,
+  "dependency_records": [
+    {
+      "artifact": "PMR_M4_01_CANDIDATE_V2.md",
+      "hash_match": true,
+      "match_count": 1,
+      "sha256": "d2fceef53144ceeec8679fe254e6a62b3d9572443fafb586dbd980b356e54eee"
+    },
+    {
+      "artifact": "PMR_M5_01_CANDIDATE_V2.md",
+      "hash_match": true,
+      "match_count": 1,
+      "sha256": "10d18e9ac2421fb390d94be93000d5b8d001fb823b662273edad94ccc12f26fd"
+    },
+    {
+      "artifact": "PMR_M5_02_CANDIDATE_V2.md",
+      "hash_match": true,
+      "match_count": 1,
+      "sha256": "f03b52ffa0a46980787e91bca36195b07ccf37a60827173f1123170c3703d0a1"
+    },
+    {
+      "artifact": "PMR_M5_03_CANDIDATE_V2.md",
+      "hash_match": true,
+      "match_count": 1,
+      "sha256": "c7f64e383552f61509368e18c0eb4cfd22d10f3c9458e26e42bba99a2de28a0a"
+    }
+  ],
+  "pass": true,
+  "schema": "PMR007_DEEP_G_SOURCE_CUSTODY_RESULTS_V2",
+  "source": {
+    "hash_match": true,
+    "locator_count": 5,
+    "locators": [
+      {
+        "index": 1,
+        "present": true
+      },
+      {
+        "index": 2,
+        "present": true
+      },
+      {
+        "index": 3,
+        "present": true
+      },
+      {
+        "index": 4,
+        "present": true
+      },
+      {
+        "index": 5,
+        "present": true
+      }
+    ],
+    "sha256": "932abd7e2d7b3702d5d6d77d2a4a95ecfb3a9ccbcfbbce7ae750b2bcf55bef7c"
+  },
+  "source_truth_established": false
+}

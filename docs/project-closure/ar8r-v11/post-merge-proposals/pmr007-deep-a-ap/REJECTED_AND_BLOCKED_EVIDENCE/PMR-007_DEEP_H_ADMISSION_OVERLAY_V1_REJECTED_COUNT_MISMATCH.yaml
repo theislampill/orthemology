@@ -1,0 +1,46 @@
+schema: PMR007_DEEP_H_ADMISSION_OVERLAY_V1
+identity: PMR-007-UAP-1
+round: PMR-007-DEEP-H
+title: Derivational unification, abductive parity, and truth-conduciveness
+provenance_class: ADMITTED_POST_MERGE_SCOPED_FORMAL_RESULT
+historical_identity: NONE
+admitted_results:
+  - equal likelihood on the registered evidence leaves posterior odds equal to prior odds
+  - equal fit and equal declared complexity cost produce a score tie
+  - derivational unity does not discriminate personal, impersonal, or distributed realizers under Deep-B matched evidence
+  - parity can be broken only by realization-sensitive likelihoods, interventions, independent priors/costs, mentality evidence, or authority-typed source evidence
+proof_status: STANDARD_BAYES_AND_SCORE_IDENTITY_PLUS_EXACT_RATIONAL_AND_DISTINCT_NORMALIZED_CHECKS
+primary_check:
+  exact_rational_parity_cases: 810
+  likelihood_asymmetry_cases: 7290
+  score_cases: 210
+  failures: 0
+cold_audit:
+  disposition: PASS_WITH_NONBLOCKING_ABDUCTIVE_AND_AUTHORITY_NOTES
+  blocking_findings: []
+repair:
+  required: false
+fresh_rereview:
+  disposition: PASS_WITH_NONBLOCKING_ABDUCTIVE_SCOPE_NOTES
+  normalized_posterior_cases: 36864
+  failures: 0
+theorem_family:
+  relation: STANDARD_BAYESIAN_OBSERVATIONAL_EQUIVALENCE_AND_MATCHED_SCORE_APPLICATION
+  general_mathematical_novelty: ZERO
+central_meniscus_effect:
+  candidate_g_functional_unification: ESTABLISHED_AT_DEEP_B_SCOPE
+  personal_realizer_discrimination: UNESTABLISHED
+  truth_conduciveness_of_unity: REQUIRES_INDEPENDENT_LIKELIHOOD_OR_PRIOR_ARGUMENT
+  strongest_surviving_rival: IMPERSONAL_INTEGRATED_FIELD_WITH_MATCHED_EVIDENCE
+  integrated_champion: NONE
+  rival_parity: UNBROKEN
+external_review_status: OPEN
+owner_adoption_status: PENDING
+repository_proposal_status: ELIGIBLE_FOR_SANITIZED_OWNER_REVIEW_NOT_INTEGRATION_AUTHORIZED
+meniscus: MENISCUS_NOT_REACHED
+natural_closure: NOT_REACHED
+nonclaims:
+  - no requirement of equal priors
+  - no denial of all simplicity or unification arguments
+  - no proof that any realizer is world-true
+  - no neutral migration of Track-N source evidence

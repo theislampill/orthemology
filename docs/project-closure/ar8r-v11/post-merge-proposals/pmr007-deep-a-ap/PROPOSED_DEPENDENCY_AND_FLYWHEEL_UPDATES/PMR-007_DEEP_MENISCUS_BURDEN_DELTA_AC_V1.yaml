@@ -1,0 +1,46 @@
+schema: PMR007_DEEP_MENISCUS_BURDEN_DELTA_AC_V1
+round: DEEP_AC
+identity: PMR-007-SRVN-1
+closed_or_sharply_narrowed:
+  - burden: invariant_resource_unique_selection
+    disposition: CLOSED_BY_T254_SPECIALIZATION
+    result: G_fixed_resource_cannot_equivariantly_select_when_A_has_no_G_fixed_point
+  - burden: specification_to_volition_neutral_entailment
+    disposition: NEGATIVE_RESULT_ADMITTED
+    result: complete_asymmetry_resource_accounting_does_not_entail_personal_volition_in_declared_model_class
+narrowed:
+  - burden: underived_articulability_to_agency
+    change: prior_asymmetry_requirement_now_explicitly_separated_from_mental_or_willing_source
+  - burden: originator_actualizer_to_Will
+    change: determinate_actualization_requires_accounted_asymmetry_but_not_an_intentional_selector
+opened_or_reopened:
+  - ultimate_asymmetry_source_grounding
+  - subject_and_alternative_representation
+  - intention_and_because_of_reason
+  - overdetermination_and_plural_source_controls
+  - stochastic_or_equilibrium_selection_formalization
+  - T255_world_correspondence_resource_completeness_truth_and_warrant
+strongest_surviving_rival:
+  name: ABSTRACT_ORDER_IMPERSONAL_ACTUALIZER_WITH_ASYMMETRIC_RESOURCE
+  satisfies:
+    - necessary_or_primitive_modal_order
+    - externally_actual_impersonal_efficacy
+    - complete_asymmetry_resource
+    - equivariant_or_lawlike_selection
+    - truth_linked_fittingness_policy_as_carried_guards
+  withholds:
+    - alternative_representation
+    - intention
+    - personal_volition
+    - stable_Wisdom
+    - Speech
+candidate_effects:
+  Candidate_A: source_and_history_resources_must_be_complete_before_identity_or_provenance_inferences
+  Candidate_B: route_selection_asymmetry_does_not_by_itself_establish_agentive_restoration
+  Candidate_C: specification_to_Will_bridge_remains_open_and_now_has_exact_T254_T255_firewalls
+repository_proposal_status: PUBLIC_SAFE_POST_MERGE_PROPOSAL_PENDING_REPOSITORY_AUDIT
+owner_adoption: PENDING
+external_review: OPEN
+integrated_champion: NONE
+meniscus: MENISCUS_NOT_REACHED
+natural_closure: NOT_REACHED

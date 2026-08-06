@@ -1,0 +1,108 @@
+schema: PMR007_DEEP_E_TRACK_AND_ARCHITECTURE_MATRIX_V1
+identity: PMR-007-TNAC-1
+status: FROZEN_PENDING_COLD_AUDIT
+tracks:
+  M: mathematical_orthemology
+  T: neutral_transcendental_grounding
+  N: school_internal_source_controlled_architecture
+source_entries:
+  N-S1:
+    claim: necessary_existence_alone_does_not_establish_creator
+    authority: TRANSLATED_PRIMARY_ACCESS_SCHOOL_INTERNAL
+    arabic_primary_verified: false
+    neutral_transfer: false
+    locator: Asfahani_translation_lines_333_338
+  N-S2:
+    claim: necessary_existent_must_not_be_merely_mental
+    authority: TRANSLATED_PRIMARY_ACCESS_SCHOOL_INTERNAL_ARGUMENT
+    arabic_primary_verified: false
+    neutral_transfer: false
+    locator: Asfahani_translation_line_1103
+  N-S3:
+    claim: qiyas_al_awla_attribute_rule
+    authority: TRANSLATED_PRIMARY_ACCESS_SCHOOL_INTERNAL
+    arabic_primary_verified: false
+    neutral_transfer: false
+    locator: Asfahani_translation_lines_508_516_and_1072
+  N-S4:
+    claim: one_generic_unity_proof_rejected
+    authority: TRANSLATED_PRIMARY_ACCESS_SCHOOL_INTERNAL_CRITIQUE
+    arabic_primary_verified: false
+    neutral_transfer: false
+    locator: Asfahani_translation_lines_387_forward
+  N-S5:
+    claim: divine_speech_subsists_in_Allah_and_Quran_uncreated
+    authority: DIRECT_SCHOOL_INTERNAL_REVELATIONAL_PREDICATION_VIA_TRANSLATION
+    arabic_primary_verified: false
+    neutral_transfer: false
+    locator: Asfahani_translation_lines_126_forward
+  N-S6:
+    claim: healthy_fitrah_conditions_cognitive_and_moral_function
+    authority: SECONDARY_SCHOLARLY_RECONSTRUCTION
+    arabic_primary_verified: false
+    neutral_transfer: false
+    locator: El_Tobgui_lines_4417_4523
+  N-S7:
+    claim: innate_recognition_of_Allah_and_occlusion
+    authority: CONTEMPORARY_ATHARI_SYNTHESIS
+    arabic_primary_verified: false
+    neutral_transfer: false
+    locator: Al_Ujayri_lines_50_76
+  N-S8:
+    claim: six_role_candidate_N_architecture
+    authority: PROVISIONAL_MODERN_SOURCE_CONTROLLED_RECONSTRUCTION
+    arabic_primary_verified: false
+    neutral_transfer: false
+    locator: A_TO_N_map_Candidate_N
+architectures:
+  A_UNIFIED_PERSONAL:
+    neutral_coverage: [underived_order, truth_link_pressure, cross_domain_unification, prior_asymmetry]
+    n_conditional_coverage: [creator, unity, intellect, agency, knowledge, will, power, life, wisdom, speech, revelation]
+    primitive_burdens: [personal_ground, common_bearer, teleology, source_truth, attribute_applicability]
+    source_premises: [N-S1, N-S2, N-S3, N-S4, N-S5, N-S6, N-S7, N-S8]
+    live_countermodels: [ICR-1, UG7-CM1, B-CM2, B-CM3]
+    neutral_status: PROMISING_BUT_BRIDGE_INCOMPLETE
+    n_conditional_status: SOURCE_INTERNAL_BEST_FIT
+  B_POWERS_PLURAL:
+    neutral_coverage: [underived_order, concrete_actuality, cross_domain_unification, efficacy, articulability]
+    n_conditional_coverage: []
+    primitive_burdens: [truth_norm, teleology, plural_coordination, common_applicability]
+    source_premises: []
+    live_countermodels: [harmful_powers_target, source_incompatibility_if_N_true]
+    neutral_status: STRONG_R5_RIVAL
+    n_conditional_status: SOURCE_INCOMPATIBLE_AT_PERSONAL_CREATOR_SPEECH_NODES
+  C_ABSTRACT_ORDER_ACTUALIZER:
+    neutral_coverage: [underived_order, necessary_order, concrete_actuality, cross_domain_unification, articulability]
+    n_conditional_coverage: []
+    primitive_burdens: [order_actuality_coupling, truth_norm, applicability, no_common_bearer]
+    source_premises: []
+    live_countermodels: [causal_abstracta_problem, source_incompatibility_if_N_true]
+    neutral_status: STRONG_R5_RIVAL
+    n_conditional_status: SOURCE_INCOMPATIBLE_AT_PERSONAL_CREATOR_SPEECH_NODES
+  D_COHERENT_FIXED_POINT:
+    neutral_coverage: [holistic_order, internal_coherence, local_articulability]
+    n_conditional_coverage: []
+    primitive_burdens: [anti_circularity_denial, truth_correspondence, actuality]
+    source_premises: []
+    live_countermodels: [coherent_false_system, no_external_actualizer]
+    neutral_status: LIVE_VARIANT
+    n_conditional_status: SOURCE_COMPATIBILITY_UNESTABLISHED
+dominance_rule:
+  requires:
+    - coverage_superset
+    - primitive_burdens_subset
+    - source_premises_no_stronger_for_authority_class
+    - live_countermodels_subset
+    - at_least_one_strict_gain
+expected_comparison:
+  neutral_champion: NONE
+  n_conditional_best_fit: A_UNIFIED_PERSONAL
+  integrated_champion: NONE
+  strongest_neutral_rival: B_C_HYBRID_IMPERSONAL_ORDER_POWERS_ACTUALIZER
+central_blockers:
+  - proper_function_ground_unestablished
+  - personal_realization_not_discriminated
+  - necessary_order_to_concrete_actuality_unestablished
+  - articulability_to_mentality_unestablished
+  - articulability_to_speech_unestablished
+  - source_truth_and_arabic_primary_verification_open

@@ -1,0 +1,52 @@
+schema: PMR007_DEEP_AN_ABDUCTIVE_DISCRIMINATION_MODELS_V2
+identity: PMR-007-ABPD-1
+version: V2
+objects:
+  omega: finite_registered_evidence_space
+  architectures: [A_unified_personal, R_matched_impersonal]
+  likelihoods: [P_A, P_R]
+  prior_odds: O0
+  evidence: D
+  coding_policy: independently_frozen_or_open
+results:
+  ABPD_1A: equal_positive_likelihood_preserves_prior_odds
+  ABPD_1B: finite_models_distinguishable_iff_total_variation_positive
+  ABPD_1C: raw_two_hypothesis_code_length_ranking_is_reversible
+  ABPD_1D: Candidate_G_P6_requires_independent_predictive_surplus_or_prior_defense
+models:
+- id: AN-CM1-LIKELIHOOD-PARITY
+  P_A: [1/2, 1/2, 0, 0]
+  P_R: [1/2, 1/2, 0, 0]
+  evidence_update: none
+- id: AN-POS1-PREDICTIVE-SURPLUS
+  omega: [w0, w1, w2, w3]
+  independently_fixed_support_A: [w0, w1]
+  P_A: [1/2, 1/2, 0, 0]
+  P_R: [1/4, 1/4, 1/4, 1/4]
+  one_observation_bayes_factor: 2
+  guards: [support_fixed_before_test, iid_model, exact_registry]
+- id: AN-CM2-CODE-REVERSAL
+  code_favoring_A: {A: '0', R: '10'}
+  code_favoring_R: {A: '10', R: '0'}
+- id: AN-CM3-SIMPLE-FALSE
+  syntactic_simplicity: favors_A
+  held_out_truth: favors_R
+- id: AN-CM4-AD-HOC-SUPPORT
+  restriction_selected_after_data: true
+  predictive_credit: false
+- id: AN-CM5-SOURCE-PRIOR-MIGRATION
+  source_relative_prior_for_A: true
+  neutral_likelihood_change: false
+- id: AN-CM6-MISSPECIFIED-ZERO
+  omitted_state_observed: true
+  frozen_model_refuted: true
+  correct_metaphysics_identified: false
+- id: AN-CM7-SHARED-REPRESENTATION-BIAS
+  hand_authored_profile_shared: true
+  apparent_convergence: possible
+  world_validation: absent
+nonclaims:
+- no_canonical_prior_or_code
+- no_global_observational_equivalence
+- no_world_truth_or_personal_ground
+- no_integrated_champion

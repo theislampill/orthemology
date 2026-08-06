@@ -1,0 +1,84 @@
+{
+  "architecture_class_exhaustive": false,
+  "attained_profile_fibres": 1,
+  "best_world_accuracy_denominator": 3,
+  "best_world_accuracy_numerator": 2,
+  "binary_profile_classifiers_enumerated": 2,
+  "conflicting_target_fibres": [
+    {
+      "profile": [
+        "ADDITIVE_NORM_FIELD",
+        "CONCRETE_REALIZATION",
+        "FINITE_EXACT_ARTICULABILITY",
+        "FORMAL_COUPLING",
+        "GLOBAL_WPK_ROLE_AVAILABILITY",
+        "TOKEN_RESPONSIVENESS",
+        "UNDERIVED_ORDER"
+      ],
+      "target_values": [
+        "NONPERSONAL",
+        "PERSONAL"
+      ],
+      "worlds": [
+        "A_UNIFIED_PERSONAL_SOURCE_GROUND",
+        "B_IMPERSONAL_POWERS_PLURAL_REALIZATION",
+        "C_ABSTRACT_ORDER_PLUS_CONCRETE_ACTUALIZER"
+      ]
+    }
+  ],
+  "exact_profile_classifiers": 0,
+  "external_review_performed": false,
+  "frozen_hash_mismatches": [],
+  "frozen_hash_rows": 6,
+  "general_mathematical_novelty_credit": 0,
+  "identity": "PMR-007-MACC-1",
+  "refined_profile_fibres": 2,
+  "refined_profile_retains_target_conflict": false,
+  "relevant_bridge_hard_premise_status_failures": [],
+  "required_scope_phrases_missing": [
+    "not claimed to contain every current or possible neutral discriminator",
+    "not neutral explanatory dominance"
+  ],
+  "result": "FAIL",
+  "source_authority_cases": [
+    {
+      "H12": false,
+      "H16": false,
+      "active": false,
+      "allowed": [
+        "A_UNIFIED_PERSONAL_SOURCE_GROUND",
+        "B_IMPERSONAL_POWERS_PLURAL_REALIZATION",
+        "C_ABSTRACT_ORDER_PLUS_CONCRETE_ACTUALIZER"
+      ]
+    },
+    {
+      "H12": false,
+      "H16": true,
+      "active": false,
+      "allowed": [
+        "A_UNIFIED_PERSONAL_SOURCE_GROUND",
+        "B_IMPERSONAL_POWERS_PLURAL_REALIZATION",
+        "C_ABSTRACT_ORDER_PLUS_CONCRETE_ACTUALIZER"
+      ]
+    },
+    {
+      "H12": true,
+      "H16": false,
+      "active": false,
+      "allowed": [
+        "A_UNIFIED_PERSONAL_SOURCE_GROUND",
+        "B_IMPERSONAL_POWERS_PLURAL_REALIZATION",
+        "C_ABSTRACT_ORDER_PLUS_CONCRETE_ACTUALIZER"
+      ]
+    },
+    {
+      "H12": true,
+      "H16": true,
+      "active": true,
+      "allowed": [
+        "A_UNIFIED_PERSONAL_SOURCE_GROUND"
+      ]
+    }
+  ],
+  "source_compatibility_not_neutral_dominance": true
+}

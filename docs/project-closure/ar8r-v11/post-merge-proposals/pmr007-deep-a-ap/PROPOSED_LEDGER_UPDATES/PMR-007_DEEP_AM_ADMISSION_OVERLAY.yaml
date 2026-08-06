@@ -1,0 +1,39 @@
+schema: PMR007_DEEP_AM_ADMISSION_OVERLAY_V1
+identity: PMR-007-SRIN-1
+round: PMR-007-DEEP-AM
+canonical_version: V2
+status: ADMITTED_POST_MERGE_SCOPED_CENTRAL_H7A_INTERPRETATION_RIGIDITY_RESULT
+historical_identity: NONE
+repository_authority: 428187cebf7644ff8bf9522455a560eb82d35964
+proof_status: HUMAN_PROOF_PLUS_EXECUTABLE_FINITE_CHECKS
+countermodel_status: COMPLETE_AT_DECLARED_SCOPE
+cold_audit:
+  disposition: REPAIR_REQUIRED
+  blocking_findings: 9
+  repaired: 9
+fresh_rereview:
+  disposition: PASS_WITH_NONBLOCKING_INTRINSICNESS_AND_WORLD_SCOPE_NOTES
+  external_independence: false
+  failed_custody_attempts_preserved: 2
+admitted_results:
+- natural_selector_exists_iff_admissible_automorphism_fixed_interpretation_exists
+- interpretation_rigidity_equals_unique_fixed_interpretation_relative_to_declared_family
+- H7a1_structural_canonizability_does_not_entail_H7a2_constitutive_semanticity
+- H7a1_does_not_entail_H7a3_mental_realization
+- equality_or_similarity_kernel_does_not_determine_literal_reference
+nonclaims:
+- no_intrinsic_notionality
+- no_mental_or_personal_ground
+- no_proper_function_or_Wisdom
+- no_unique_ultimate_grammar
+- no_PRH_or_OSM_metaphysical_transfer
+- no_Necessary_Being_Creator_Speech_or_revelational_identification
+theorem_family:
+  relation: STANDARD_GROUP_ACTION_FIXED_POINT_APPLICATION
+  general_mathematical_novelty: 0
+external_review: OPEN
+owner_adoption: PENDING
+repository_proposal_status: PUBLIC_SAFE_POST_MERGE_PROPOSAL_PENDING_REPOSITORY_AUDIT
+integrated_champion: NONE
+meniscus: MENISCUS_NOT_REACHED
+natural_closure: NOT_REACHED

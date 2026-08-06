@@ -1,0 +1,32 @@
+{
+  "schema": "PMR007_DEEP_AC_DISTINCT_ORBIT_STABILIZER_REREVIEW_V2",
+  "frozen_hash_rows_checked": 6,
+  "frozen_hash_failures": [],
+  "cyclic_equivariant_shift_maps_checked": 77,
+  "cyclic_shift_failures": 0,
+  "cyclic_fixed_resource_equivariant_total_maps_found": 0,
+  "cyclic_fixed_resource_failures": 0,
+  "random_orbit_construction_trials": 30000,
+  "well_defined_orbit_maps_constructed": 30000,
+  "stabilizer_inclusions_checked": 195343,
+  "orbit_construction_failures": 0,
+  "multivalued_relation_nonunique_control": true,
+  "overdetermination_control": {
+    "r1": 1,
+    "r2": 1,
+    "output": 1,
+    "r1_suffices": true,
+    "r2_suffices": true
+  },
+  "personal_impersonal_neutral_reduct_parity": true,
+  "non_equivariant_constant_selector_control": true,
+  "result": "PASS",
+  "nonclaims": [
+    "T255 world guards",
+    "resource completeness",
+    "metaphysical actuality",
+    "volition",
+    "personality",
+    "Wisdom"
+  ]
+}

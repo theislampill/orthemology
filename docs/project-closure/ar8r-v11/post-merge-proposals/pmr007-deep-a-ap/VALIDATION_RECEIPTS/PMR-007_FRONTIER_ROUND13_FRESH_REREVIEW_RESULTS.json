@@ -1,0 +1,19 @@
+{
+  "frozen_hashes": {
+    "checked": 3,
+    "mismatches": [],
+    "pass": true
+  },
+  "full_three_scenario_exhaustion": {
+    "expected_total": 76076,
+    "failures": [],
+    "families_checked": 76076,
+    "pass": true
+  },
+  "overall": "PASS",
+  "warrant_laundering_control": {
+    "full_typed_objects_feasible": false,
+    "surface_action_projection_agrees": true,
+    "surface_agreement_hides_warrant_failure": true
+  }
+}

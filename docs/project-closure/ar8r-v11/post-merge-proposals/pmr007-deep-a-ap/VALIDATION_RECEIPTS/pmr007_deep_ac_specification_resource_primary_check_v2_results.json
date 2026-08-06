@@ -1,0 +1,65 @@
+{
+  "schema": "PMR007_DEEP_AC_SPECIFICATION_RESOURCE_PRIMARY_CHECK_V2",
+  "n_range": [
+    2,
+    5
+  ],
+  "counts": {
+    "2": {
+      "natural_maps": 4,
+      "equivariant_natural_maps": 2,
+      "fixed_resource_total_selectors": 0,
+      "multivalued_invariant_relation": true,
+      "multivalued_unique": false
+    },
+    "3": {
+      "natural_maps": 27,
+      "equivariant_natural_maps": 1,
+      "fixed_resource_total_selectors": 0,
+      "multivalued_invariant_relation": true,
+      "multivalued_unique": false
+    },
+    "4": {
+      "natural_maps": 256,
+      "equivariant_natural_maps": 1,
+      "fixed_resource_total_selectors": 0,
+      "multivalued_invariant_relation": true,
+      "multivalued_unique": false
+    },
+    "5": {
+      "natural_maps": 3125,
+      "equivariant_natural_maps": 1,
+      "fixed_resource_total_selectors": 0,
+      "multivalued_invariant_relation": true,
+      "multivalued_unique": false
+    }
+  },
+  "deterministic_maps_checked": 3412,
+  "equivariant_maps_found": 5,
+  "stabilizer_inclusions_checked": 16,
+  "extended_fixed_resource_maps_checked": 16738,
+  "equivariant_total_selectors_with_fixed_resource": 0,
+  "personal_impersonal_reduct_failures": 0,
+  "overdetermination_control": {
+    "resource_1": "r",
+    "resource_2": "r",
+    "each_suffices_for_output": "a",
+    "unique_output": "a"
+  },
+  "represented_seed_control": {
+    "seed": 2,
+    "selector": "identity",
+    "output": 2,
+    "volition": false
+  },
+  "failures": [],
+  "result": "PASS",
+  "nonclaims": [
+    "world process correspondence",
+    "resource completeness",
+    "volition",
+    "personality",
+    "Wisdom",
+    "equal metaphysical plausibility"
+  ]
+}

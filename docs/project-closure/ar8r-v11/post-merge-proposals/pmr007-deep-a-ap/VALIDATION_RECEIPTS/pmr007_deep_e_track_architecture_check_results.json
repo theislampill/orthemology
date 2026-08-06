@@ -1,0 +1,26 @@
+{
+  "central_blocker_count": 6,
+  "central_blockers": [
+    "proper_function_ground_unestablished",
+    "personal_realization_not_discriminated",
+    "necessary_order_to_concrete_actuality_unestablished",
+    "articulability_to_mentality_unestablished",
+    "articulability_to_speech_unestablished",
+    "source_truth_and_arabic_primary_verification_open"
+  ],
+  "n_conditional_dominance_edges_under_declared_set_rule": [],
+  "neutral_champion_none": true,
+  "neutral_dominance_edges": [],
+  "neutral_full_dominators": [],
+  "overall": "PASS",
+  "schema": "PMR007_DEEP_E_TRACK_ARCHITECTURE_CHECK_RESULTS_V1",
+  "source_controls": {
+    "all_labeled": true,
+    "no_arabic_primary_claimed": true,
+    "no_neutral_migration": true
+  },
+  "source_entries_checked": 8,
+  "source_internal_best_fit_recorded": true,
+  "source_internal_preference_not_neutral_champion": true,
+  "strongest_rival_recorded": "B_C_HYBRID_IMPERSONAL_ORDER_POWERS_ACTUALIZER"
+}

@@ -1,0 +1,70 @@
+{
+  "claims": {
+    "common_stochastic_channel_contracts_tv": true,
+    "equal_experiment_stays_equal_under_common_channel": true,
+    "exact_bf_matches_conditional_and_ratio_criteria": true,
+    "frozen_hashes_match": true,
+    "source_scope_anchors_match": true,
+    "support_relative_lr_partition_is_minimal": true
+  },
+  "counts": {
+    "conditional_characterization_failures": 0,
+    "deterministic_cases": 1800,
+    "distributions": 15,
+    "equal_experiment_channel_failures": 0,
+    "exact_ratio_characterization_failures": 0,
+    "minimality_failures": 0,
+    "model_pairs": 225,
+    "stochastic_channel_cases": 14400,
+    "stochastic_tv_failures": 0
+  },
+  "frozen_hashes": {
+    "failures": [],
+    "rows": 10,
+    "status": "PASS"
+  },
+  "method_relation": "independent_conditional_distribution_and_stochastic_channel_implementation",
+  "overall": "PASS",
+  "schema": "PMR007_DEEP_AO_DISTINCT_CHANNEL_SUFFICIENCY_REREVIEW_RESULTS_V1",
+  "scope_notes": [
+    "finite binary experiments",
+    "deterministic exact sufficiency on union support",
+    "common finite stochastic channels for TV only",
+    "same-program procedural rereview; not external review",
+    "no PRH or OSM metaphysical transfer"
+  ],
+  "source_anchor_check": {
+    "checks": [
+      {
+        "anchor": "shared statistical model of reality",
+        "found": true,
+        "source": "PRH"
+      },
+      {
+        "anchor": "different sensors and views",
+        "found": true,
+        "source": "PRH"
+      },
+      {
+        "anchor": "progressive decorrelations",
+        "found": true,
+        "source": "OSM"
+      },
+      {
+        "anchor": "uniquely reproduced both the final orthogonalized states and the learning trajectory",
+        "found": true,
+        "source": "OSM"
+      },
+      {
+        "anchor": "perfect task performance only requires",
+        "found": true,
+        "source": "OSM"
+      }
+    ],
+    "hashes": {
+      "OSM": "0d097cba7bbb25a949e2bf95af28b5a2259bd8d60b0e5fac5a74cdf7d05aa814",
+      "PRH": "fa9b7cc99c1e852960733b2ac89069bf448b2451bd198b4fc2d93aedb533e858"
+    },
+    "status": "PASS"
+  }
+}

@@ -1,0 +1,30 @@
+{
+  "claims": {
+    "distinct_finite_models_have_a_discriminating_event": true,
+    "likelihood_parity_preserves_prior_odds": true,
+    "prefix_codes_can_reverse_description_length_ranking": true,
+    "support_restriction_yields_declared_bayes_factor": true
+  },
+  "code_controls": {
+    "favor_A": {
+      "A": "0",
+      "R": "10"
+    },
+    "favor_R": {
+      "A": "10",
+      "R": "0"
+    }
+  },
+  "counts": {
+    "different_models_without_event": 0,
+    "distributions": 35,
+    "evidence_sequences": 104125,
+    "likelihood_parity_cases": 4297,
+    "model_pairs": 1225,
+    "parity_failures": 0,
+    "support_bayes_failures": 0,
+    "support_restriction_cases": 28
+  },
+  "overall": "PASS",
+  "schema": "PMR007_DEEP_AN_PRIMARY_RESULTS_V1"
+}

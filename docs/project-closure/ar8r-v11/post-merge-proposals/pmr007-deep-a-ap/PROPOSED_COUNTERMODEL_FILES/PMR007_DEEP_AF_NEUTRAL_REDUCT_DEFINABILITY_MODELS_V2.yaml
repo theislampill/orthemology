@@ -1,0 +1,57 @@
+schema: PMR007_DEEP_AF_NEUTRAL_REDUCT_DEFINABILITY_MODELS_V2
+identity: PMR-007-NRID-1
+languages:
+  neutral: L0
+  expanded: L0 plus P
+models:
+- id: AF-CM1-SAME-REDUCT-TWINS
+  neutral_reduct: R*
+  expansions:
+  - P: false
+    role: impersonal
+  - P: true
+    role: personal
+  effect: implicit_definability_fails
+- id: AF-CM2-IDLE-CARRIER
+  neutral_reduct: one carrier plus freely recombinable features
+  P: false
+  effect: carrier_count_does_not_define_personality
+- id: AF-CM3-SOURCE-EXPANSION
+  neutral_reduct: R*
+  source_expansions:
+  - source_contract: false
+    P: false
+  - source_contract: true
+    P: true
+  effect: source_class_can_restrict_without_neutral_migration
+- id: AF-CM4-SMUGGLED-PROXY
+  neutral_vocabulary_addition: Q iff P
+  effect: apparent_definition_imports_target
+- id: AF-CM5-OBSERVATIONAL-REDUCT
+  same_observations: true
+  different_causal_structure: true
+  effect: language_must_include_load_bearing_causal_coordinates
+- id: AF-CM6-PROBABILISTIC
+  same_neutral_reduct: false
+  posterior_preference: true
+  effect: abductive_update_is_not_exact_entailment
+- id: AF-CM7-FINITE-BETH
+  finite_fibre_constant: true
+  first_order_all_model_definability: NOT_INFERRED_WITHOUT_THEORY_GUARDS
+- id: AF-CM8-MODAL-INTENSIONAL
+  extensional_reduct_same: true
+  de_se_or_modal_target_varies: true
+  effect: classical_extensional_result_not_automatically_transferred
+nonclaims:
+- metaphysical possibility of every expansion
+- probability parity
+- finite Beth property
+- source truth
+- personal architecture falsity
+guards:
+- VOCABULARY_INDEPENDENTLY_ELIGIBLE
+- INTENDED_CLASS_DECLARED
+- REDUCT_SCOPE_COMPLETE_FOR_CLAIM
+- EXACT_ENTAILMENT_NOT_ABDUCTION
+- SOURCE_TRACK_SEPARATED
+- LOGIC_SCOPE_STATED

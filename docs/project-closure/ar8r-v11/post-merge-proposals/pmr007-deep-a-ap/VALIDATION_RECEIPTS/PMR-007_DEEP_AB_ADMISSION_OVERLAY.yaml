@@ -1,0 +1,38 @@
+schema: PMR007_DEEP_AB_ADMISSION_OVERLAY_V1
+identity: PMR-007-FSPW-1
+title: Fittingness-sensitive policy, because-of selection, and Wisdom parity
+status: ADMITTED_POST_MERGE_SCOPED_CENTRAL_WISDOM_BRIDGE_NEGATIVE_RESULT
+canonical_packet: PMR-007_DEEP_ROUND_AB_FITTINGNESS_SENSITIVE_POLICY_AND_WISDOM_PARITY_V2.md
+historical_identity: NONE
+historical_origin_credit: 0
+general_mathematical_novelty: 0
+proof_status:
+  selector_characterization: PROVED
+  profile_blind_intersection_criterion: PROVED
+  frozen_scm_profile_intervention: PROVED_AT_DECLARED_SCOPE
+  personal_impersonal_reduct_parity: PROVED_RELATIVE_TO_INTENDED_MODEL_CLASS
+countermodel_status: VALIDATED
+cold_audit:
+  disposition: REPAIR_REQUIRED
+  blocking_findings: 8
+  repaired: 8
+repair_status: PASS
+fresh_rereview:
+  disposition: PASS_WITH_NONBLOCKING_FITTINGNESS_AUTHORITY_AND_PERSONALITY_SCOPE_NOTES
+  independent_implementation: true
+  external_independence: false
+source_status:
+  asfahani: TRANSLATED_PRIMARY_TEXT_ACCESS
+  arabic_primary_verified_by_project: false
+authority_ceiling:
+  - no_objective_fittingness_authentication
+  - no_intentional_because_of_entailment
+  - no_personality_or_Wisdom_entailment
+  - no_world_directed_attribute_result
+  - no_integrated_champion_or_meniscus_credit
+repository_proposal_status: PUBLIC_SAFE_POST_MERGE_PROPOSAL_PENDING_REPOSITORY_AUDIT
+external_review: OPEN
+owner_adoption: PENDING
+integrated_champion: NONE
+meniscus: MENISCUS_NOT_REACHED
+natural_closure: NOT_REACHED

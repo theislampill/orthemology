@@ -1,0 +1,130 @@
+{
+  "claims": {
+    "NM_HOST_entailment_independently_unsat": true,
+    "full_bridge_exactly_one_underived_constitutive_host_unsat_failure": true,
+    "full_bridge_no_personality_countermodel_sat": true,
+    "notional_underived_no_ground_countermodel_sat": true,
+    "structure_underived_no_host_countermodel_sat": true,
+    "underivability_nontransfer_countermodel_sat": true,
+    "unique_constitutive_host_allows_multiple_downstream_representers": true
+  },
+  "frozen_hash_mismatches": 0,
+  "frozen_hash_rows": 8,
+  "host_count": 3,
+  "method": "SYMPY_SAT_THREE_HOST_SYMBOLIC",
+  "notes": [
+    "The positive conditional proves only what H7a-H7d explicitly specify.",
+    "The source ontology is not Arabic-primary verified in this round.",
+    "No metaphysical possibility, personality, or world-truth conclusion is drawn."
+  ],
+  "overall": "PASS",
+  "queries": {
+    "base_notional_underived_without_ground": {
+      "model": {
+        "G0": false,
+        "G1": false,
+        "G2": false,
+        "M0": true,
+        "M1": true,
+        "M2": true,
+        "N": true,
+        "R0": true,
+        "R1": true,
+        "R2": true,
+        "U": true
+      },
+      "satisfiable": true
+    },
+    "base_notional_without_host": {
+      "model": null,
+      "satisfiable": false
+    },
+    "base_structure_underived_without_host": {
+      "model": {
+        "G0": false,
+        "G1": false,
+        "G2": false,
+        "M0": false,
+        "M1": false,
+        "M2": false,
+        "N": false,
+        "R0": true,
+        "R1": true,
+        "R2": true,
+        "S": true,
+        "U": true
+      },
+      "satisfiable": true
+    },
+    "full_bridge_failure_exactly_one_underived_constitutive_host": {
+      "model": null,
+      "satisfiable": false
+    },
+    "full_bridge_multiple_downstream_minds": {
+      "model": {
+        "G0": false,
+        "G1": true,
+        "G2": false,
+        "H0": true,
+        "H1": true,
+        "H2": true,
+        "M0": true,
+        "M1": true,
+        "M2": true,
+        "N": true,
+        "R0": true,
+        "R1": true,
+        "R2": true,
+        "S": true,
+        "U": true
+      },
+      "satisfiable": true
+    },
+    "full_bridge_without_personality": {
+      "model": {
+        "G0": false,
+        "G1": true,
+        "G2": false,
+        "H0": true,
+        "H1": true,
+        "H2": true,
+        "M0": true,
+        "M1": true,
+        "M2": true,
+        "N": true,
+        "P0": false,
+        "P1": false,
+        "P2": false,
+        "R0": true,
+        "R1": true,
+        "R2": true,
+        "S": true,
+        "U": true
+      },
+      "satisfiable": true
+    },
+    "h7a_b_d_without_transfer_no_underived_host": {
+      "model": {
+        "G0": false,
+        "G1": true,
+        "G2": false,
+        "H0": false,
+        "H1": false,
+        "H2": false,
+        "M0": true,
+        "M1": true,
+        "M2": true,
+        "N": true,
+        "R0": true,
+        "R1": true,
+        "R2": true,
+        "S": true,
+        "U": true
+      },
+      "satisfiable": true
+    }
+  },
+  "schema": "PMR007_DEEP_AI_DISTINCT_THREE_HOST_SAT_REREVIEW_RESULTS_V1",
+  "source_anchor_checks": 9,
+  "source_anchor_failures": 0
+}

@@ -1,0 +1,52 @@
+{
+  "architecture_intersections": {
+    "A": [
+      0
+    ],
+    "B0": [],
+    "B1": [
+      0
+    ],
+    "C1": [
+      0
+    ]
+  },
+  "bearers": 3,
+  "claims": {
+    "architecture_A_source_compatible": true,
+    "architecture_B0_source_incompatible": true,
+    "architecture_B1_source_compatible_role_extension": true,
+    "architecture_C1_source_extendable": true,
+    "common_bearer_iff_total_role_intersection_nonempty": true,
+    "role_existence_alone_allows_empty_common_intersection": true,
+    "source_bundle_allows_personal_false_and_true_expansions": true
+  },
+  "empty_intersection_assignments": 105552,
+  "failures": [],
+  "minimal_empty_intersection_witness": {
+    "ABLE": [
+      0
+    ],
+    "CREATOR": [
+      0
+    ],
+    "KNOWING": [
+      0
+    ],
+    "LIVING": [
+      0
+    ],
+    "SPEAKING": [
+      1
+    ],
+    "VOLITIONAL": [
+      0
+    ]
+  },
+  "overall": "PASS",
+  "personality_expansions_over_source_compatible_assignments": 24194,
+  "role_assignments_checked": 117649,
+  "roles": 6,
+  "schema": "PMR007_DEEP_AK_PRIMARY_SOURCE_BUNDLE_CHECK_RESULTS_V2",
+  "source_common_bearer_assignments": 12097
+}

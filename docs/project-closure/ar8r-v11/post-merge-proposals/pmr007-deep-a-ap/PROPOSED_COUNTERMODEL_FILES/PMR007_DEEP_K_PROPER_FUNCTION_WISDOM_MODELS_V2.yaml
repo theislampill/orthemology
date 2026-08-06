@@ -1,0 +1,66 @@
+schema: PMR007_DEEP_K_PROPER_FUNCTION_WISDOM_MODELS_V2
+status: REPAIRED_POST_MERGE_RESEARCH_CANDIDATE
+coordinates: [PF_T, REP, REL, AG, K, F, W_F, M, C, X, OWN, STAB]
+role_contracts:
+  wise_directed_choice: [AG, K, F, W_F, M, OWN]
+  effectively_executed_wise_episode: [AG, K, F, W_F, M, OWN, C, X]
+  stable_wisdom_eligibility: [AG, K, F, W_F, M, OWN, STAB]
+models:
+  - id: K-PW1-WISE-DIRECTION
+    true: [AG, K, F, W_F, M, OWN]
+    wise_directed_choice: true
+    effective_execution: false
+  - id: K-PW2-EFFECTIVE-WISE-EPISODE
+    true: [AG, K, F, W_F, M, OWN, C, X]
+    wise_directed_choice: true
+    effective_execution: true
+    stable_wisdom: unestablished
+  - id: K-CM1-HARMFUL-CORRIGIBILITY
+    true: [AG, K, W_F, M, C, X, OWN, REL]
+    false: [F]
+    installed_target_success: true
+  - id: K-CM2-IMPERSONAL-TRUTH-TRACKER
+    true: [PF_T, REP, REL, F]
+    false: [AG, K, W_F, OWN]
+    selected_effect_or_powers_truth_tracking: true
+  - id: K-CM3-ACCIDENTAL-BENEFICENCE
+    true: [F, X]
+    false: [AG, K, W_F, OWN]
+  - id: K-CM4-KNOWLEDGEABLE-VICIOUS-AGENT
+    true: [AG, K, W_F, M, C, X, OWN]
+    false: [F]
+    knowledge_will_power: true
+  - id: K-CM5-WISE-DIRECTION-BLOCKED
+    true: [AG, K, F, W_F, M, OWN, C]
+    false: [X]
+    external_obstacle: true
+    wise_directed_choice: true
+    effective_execution: false
+  - id: K-CM6-BENEVOLENT-INCOMPETENCE
+    true: [AG, F, W_F, C, OWN]
+    false: [K, M, X]
+  - id: K-CM7-SELECTED-DECEPTION
+    true: [PF_T, REL, X]
+    false: [F]
+    selected_effect: deception
+  - id: K-CM8-DISTRIBUTED-ROLES
+    bearer_coordinates:
+      b_epistemic: [REP, REL, K]
+      b_normative: [F, W_F]
+      b_executive: [M, C, X]
+    global_guard_availability: true
+    common_bearer_intersection: []
+  - id: K-CM9-UNSTABLE-SINGLE-EPISODE
+    true_current_episode: [AG, K, F, W_F, M, OWN, C, X]
+    counterfactual_relevant_episodes:
+      - {F: false, W_F: false}
+    stable_wisdom: false
+  - id: K-CM10-IMPERSONAL-LINEAGE-ROOT
+    true: [C, X]
+    unique_underived_lineage_root: true
+    false: [AG, K, W_F, STAB]
+  - id: K-CM11-SOURCE-PREDICATED-WISE
+    track_n_predicates: [Wise]
+    neutral_role_contract_evidence: incomplete
+    source_conditioned_conclusion: true
+    neutral_entailment: false

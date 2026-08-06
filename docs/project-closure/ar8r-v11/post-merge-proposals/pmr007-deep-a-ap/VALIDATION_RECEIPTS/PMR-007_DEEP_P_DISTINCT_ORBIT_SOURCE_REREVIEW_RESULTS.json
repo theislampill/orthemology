@@ -1,0 +1,22 @@
+{
+  "identity": "PMR-007-TRPF-1",
+  "method": "neutral-orbit relational check plus direct source-string custody check",
+  "neutral_invariant_projection_failures": 0,
+  "neutral_profile_orbits": 256,
+  "orbit_size_failures": 0,
+  "overall": "PASS",
+  "pf_epi_variation_failures": 0,
+  "scope_notes": [
+    "Orbit check proves only model-relative nonidentification under closure.",
+    "Source check verifies wording in the accessible paper copy; it does not reproduce the neuroscience study.",
+    "No external philosophical review or world-level proper-function conclusion is supplied."
+  ],
+  "source_checks": {
+    "actual_hash": "0d097cba7bbb25a949e2bf95af28b5a2259bd8d60b0e5fac5a74cdf7d05aa814",
+    "contains_cscg_trajectory_discriminator": true,
+    "contains_further_research_caveat": true,
+    "contains_multiple_models_final_state_language": true,
+    "expected_hash": "0d097cba7bbb25a949e2bf95af28b5a2259bd8d60b0e5fac5a74cdf7d05aa814",
+    "hash_match": true
+  }
+}

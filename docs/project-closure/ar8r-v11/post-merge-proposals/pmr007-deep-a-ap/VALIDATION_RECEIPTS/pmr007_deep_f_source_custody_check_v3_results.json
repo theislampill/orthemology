@@ -1,0 +1,51 @@
+{
+  "arabic_primary_verified": false,
+  "locator_count": 7,
+  "pass": true,
+  "records": [
+    {
+      "hash_match": true,
+      "locators": [
+        {
+          "locator_index": 1,
+          "present": true
+        },
+        {
+          "locator_index": 2,
+          "present": true
+        },
+        {
+          "locator_index": 3,
+          "present": true
+        },
+        {
+          "locator_index": 4,
+          "present": true
+        }
+      ],
+      "sha256": "657454ff7a1c43b895e7a378d12993295368a97c3f35df5a76edfaa32f67a177",
+      "source_id": "SRC_ET"
+    },
+    {
+      "hash_match": true,
+      "locators": [
+        {
+          "locator_index": 1,
+          "present": true
+        },
+        {
+          "locator_index": 2,
+          "present": true
+        },
+        {
+          "locator_index": 3,
+          "present": true
+        }
+      ],
+      "sha256": "4aea9b66f178e3454015cd0082c3adb0dda5ae80593f7e37d26b73a96028a2d1",
+      "source_id": "SRC_UJ"
+    }
+  ],
+  "schema": "PMR007_DEEP_F_SOURCE_CUSTODY_RESULTS_V3",
+  "source_truth_established": false
+}

@@ -1,0 +1,21 @@
+{
+  "claims": {
+    "equal_similarity_kernel_does_not_fix_content_labels": true,
+    "nonfixed_interpretations_have_symmetry_witness": true,
+    "selector_iff_automorphism_fixed": true
+  },
+  "counts": {
+    "canonical_copy_equivalence_failures": 0,
+    "fixed_interpretations": 1296,
+    "interpretations_checked": 6208,
+    "kernel_reference_swap_witnesses": 5888,
+    "n3_families_with_selector": 384,
+    "n3_graphs": 8,
+    "n3_invariant_families": 416,
+    "n3_selector_criterion_failures": 0,
+    "n4_graphs": 64,
+    "nonfixed_with_moving_automorphism": 4912
+  },
+  "overall": "PASS",
+  "schema": "PMR007_DEEP_AM_PRIMARY_CHECK_RESULTS_V1"
+}

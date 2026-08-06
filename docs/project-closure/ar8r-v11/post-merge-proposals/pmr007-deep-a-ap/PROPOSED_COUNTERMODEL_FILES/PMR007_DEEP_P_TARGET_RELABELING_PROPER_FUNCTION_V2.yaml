@@ -1,0 +1,71 @@
+schema: pmr007-deep-p-target-relabeling-v2
+identity: PMR-007-TRPF-1
+status: REPAIRED_POST_MERGE_RESEARCH_CANDIDATE
+hard_model_class_assumption:
+  description: The intended class contains aligned and misaligned interpretation expansions of one complete neutral reduct.
+  metaphysical_possibility_established: false
+proper_function_predicates:
+  PF_FREQ: statistical_frequency
+  PF_ROLE: causal_or_organizational_role
+  PF_SEL: selected_effect
+  PF_DES_ANY: generic_design_intention
+  PF_TARGET: installed_target_success
+  PF_EPI: truth_directed_epistemic_proper_function
+  PF_PLANTINGA: truth_aimed_design_plus_proper_operation_plus_suitable_environment_plus_success
+  PF_FITRAH_N: authenticated_reconstructed_applicable_track_n_fitrah_purpose
+neutral_reduct:
+  permits:
+    - internal_structure
+    - environment_facing_structural_relations
+    - causal_role
+    - organizational_role
+    - target_relative_selection_history
+    - arbitrary_design_history
+    - installed_target
+    - exact_additive_potential
+    - formal_derivational_coupling
+    - complete_declared_trace
+  omits:
+    - independently_warranted_truth_link
+    - objective_fittingness
+    - truth_specific_selection_relation
+    - truth_directed_design_relation
+    - source_authentication
+    - source_reconstruction
+    - source_applicability
+    - intentional_selection_because_fitting
+    - personality
+    - wisdom
+source_evidence:
+  osm:
+    evidence_id: SUN_ET_AL_OSM_ACCESS_COPY
+    sha256: 0d097cba7bbb25a949e2bf95af28b5a2259bd8d60b0e5fac5a74cdf7d05aa814
+    supports:
+      - final_state_fit_can_underdetermine_learning_mechanism_in_tested_class
+      - measured_learning_trajectory_can_discriminate_tested_models
+    does_not_support:
+      - objective_fittingness
+      - epistemic_proper_function
+      - unique_unrestricted_mechanism
+      - divine_design
+      - fitrah
+      - wisdom
+track_n_firewall:
+  required:
+    - source_authentication
+    - source_proposition_reconstruction
+    - recipient_scope_applicability
+    - school_internal_bridge
+  neutral_transfer: forbidden_without_independent_bridge
+family_relation:
+  relation: APPLICATION_AND_COMPOSITIONAL_CONSEQUENCE
+  ancestors:
+    - AR8R-T31
+    - AR8R-T55
+    - CANDIDATE_E
+    - PMR-007-ETRP-1
+    - PMR-007-ANH-1
+    - PMR-007-GUPP-1
+novelty:
+  general_mathematics: 0
+  world_directed_advance: 0

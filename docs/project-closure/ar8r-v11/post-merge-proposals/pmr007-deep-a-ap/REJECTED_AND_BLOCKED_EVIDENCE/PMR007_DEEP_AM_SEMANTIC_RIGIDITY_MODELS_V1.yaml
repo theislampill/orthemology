@@ -1,0 +1,42 @@
+schema: PMR007_DEEP_AM_SEMANTIC_RIGIDITY_MODELS_V1
+identity: PMR-007-SRIN-1
+version: V1
+objects:
+  structure: finite_relational_structure_S_on_X
+  content_set: finite_C
+  interpretation: function_i_from_X_to_C
+  admissible_family: I_of_S
+  natural_selector: isomorphism_commuting_choice_over_copies_of_S
+models:
+- id: AM-CM1-SYMMETRIC-NONCONSTANT
+  carrier: [x0, x1]
+  structural_relation: symmetric_pair
+  admissible_interpretations:
+  - {x0: c0, x1: c1}
+  - {x0: c1, x1: c0}
+  automorphism: swap_x0_x1
+  fixed_interpretation: false
+- id: AM-POS1-DISTINGUISHED-ROLE
+  carrier: [x0, x1]
+  structural_relation: x0_is_uniquely_designated
+  admissible_interpretations:
+  - {x0: c1, x1: c0}
+  fixed_interpretation: true
+- id: AM-CM2-IMPERSONAL-RIGID-LAW
+  structural_semantics_rigid: true
+  semantic_law: impersonal
+  mental_host: false
+  personal_subject: false
+- id: AM-CM3-KERNEL-REFERENCE-SWAP
+  representations: [r0, r1]
+  equality_kernel_preserved: true
+  reference_assignment_swapped: true
+- id: AM-CM4-DOWNSTREAM-MINDS
+  underived_structural_order: true
+  intrinsic_notionality: false
+  downstream_mental_representations: [m0, m1]
+nonclaims:
+- no_world_truth
+- no_H7b_H7c_H7d
+- no_personality_or_Speech
+- no_integrated_champion

@@ -1,0 +1,228 @@
+schema: PMR007_DEEP_T_MATCHED_ARCHITECTURE_AUTHORITY_REGIMES_V1
+identity: PMR-007-MACC-1
+title: Matched architecture comparison and authority-relative champion nonselection
+provenance: POST_MERGE_RESEARCH_CANDIDATE
+repository_authority: 428187cebf7644ff8bf9522455a560eb82d35964
+historical_authority:
+  duration: '09:41:25.405101139'
+  latest_segment: 357
+  theorem_origin: V5
+evidence_owners:
+  candidate_g_parity:
+    path: candidate-g/DERIVATIONAL_UNIFICATION_PARITY_THEOREM.md
+    sha256: 781eb3cba34cc9c79b077d417abb9eb0c83c5274e234922ff895560521c637e6
+    authority: EXACT_HISTORICAL_AR7_EVIDENCE
+  bridge_ledger:
+    path: docs/project-closure/ar8r-v11/programs/AR8R-TRANSCENDENTAL-BRIDGE-AND-RIVAL-LEDGER-V11.yaml
+    sha256: 747b886b41fc2fe152e2b4b78d4445a82a0b4f15a681b8c98e970685a63cb27d
+    authority: CURRENT_MERGED_MAIN_PROGRAM_LEDGER
+  milestone_ledger:
+    path: docs/project-closure/ar8r-v11/programs/AR8R-ORTHEMOLOGY-MENISCUS-MILESTONES-V1.yaml
+    sha256: cc0df6a5a312f51c6bba75724a33b83b0d1a3a3eed9df198f62708fadace2a50
+    authority: OWNER_SUPPLIED_PROGRAM_CHARTER_PROPOSAL_ONLY
+  deep_o: 1aed11f7713a13191cc4100fab3a227a096f057b0a0ab9d7e6d2f70c25397cb8
+  deep_p: 4bfcbae7d4371604b7c72eee6344997817868912182b1da7cbad200662dda351
+  deep_q: f5cab0f18f0dde287e6de0a85179ec381d865e373411683a298f19480cb0310d
+  deep_r: c4592a6fd5e519dad049e087cac9937c93a11938a70764f5c1ecdbfe1304a3c0
+  deep_s: 0a9208ae145bb209f5d24c1aec6d8192a1c06f56ad5982c720051a1cd3fbf027
+languages:
+  neutral_track_t:
+  - UNDERIVED_ORDER
+  - FORMAL_COUPLING
+  - ADDITIVE_NORM_FIELD
+  - FINITE_EXACT_ARTICULABILITY
+  - TOKEN_RESPONSIVENESS
+  - CONCRETE_REALIZATION
+  - GLOBAL_WPK_ROLE_AVAILABILITY
+  integrated_targets:
+  - NECESSARY_CONCRETE_GROUND
+  - COMMON_BEARER
+  - EPISTEMIC_PROPER_FUNCTION
+  - INTELLECT
+  - PERSONALITY
+  - WISDOM
+  - SPEECH
+  - REVELATIONAL_IDENTIFICATION
+  source_track_n:
+  - CREATOR
+  - ONE
+  - KNOWING
+  - ABLE
+  - LIVING
+  - VOLITION_ATTRIBUTE
+  - SPEAKING_ATTRIBUTE
+  - HEARING
+  - SEEING
+  - ACTUAL_SPEECH
+  - UNCREATED_SPEECH
+  - SAME_REFERENT_COPREDICATION
+current_authority_profile:
+  verified_neutral_true:
+  - UNDERIVED_ORDER
+  - FORMAL_COUPLING
+  - ADDITIVE_NORM_FIELD
+  - FINITE_EXACT_ARTICULABILITY
+  - TOKEN_RESPONSIVENESS
+  - CONCRETE_REALIZATION
+  - GLOBAL_WPK_ROLE_AVAILABILITY
+  integrated_targets_certified: []
+  source_guards:
+    H12_SOURCE_AUTHENTICATION: false
+    H16_REFERENT_IDENTIFICATION: false
+  bridge_status_scope: B4_THROUGH_B16_REMAIN_NOT_ENTAILED_CONDITIONAL_OR_SOURCE_INTERNAL
+architectures:
+  A_UNIFIED_PERSONAL_SOURCE_GROUND:
+    current_visible_profile:
+    - UNDERIVED_ORDER
+    - FORMAL_COUPLING
+    - ADDITIVE_NORM_FIELD
+    - FINITE_EXACT_ARTICULABILITY
+    - TOKEN_RESPONSIVENESS
+    - CONCRETE_REALIZATION
+    - GLOBAL_WPK_ROLE_AVAILABILITY
+    intended_hidden_targets:
+    - NECESSARY_CONCRETE_GROUND
+    - COMMON_BEARER
+    - EPISTEMIC_PROPER_FUNCTION
+    - INTELLECT
+    - PERSONALITY
+    - WISDOM
+    - SPEECH
+    - REVELATIONAL_IDENTIFICATION
+    unresolved_hard_premises:
+    - H4
+    - H5
+    - H6
+    - H7
+    - H8
+    - H9
+    - H10
+    - H11
+    - H12
+    - H15
+    - H16
+    brute_or_unexplained_stops:
+    - PERSONAL_REALIZATION_BRIDGE
+    - TRUTH_LINKED_NORM_AUTHORITY
+    - SOURCE_AUTHENTICATION
+    - REFERENT_IDENTIFICATION
+    source_defects: []
+    track_n_compatible_if_guards: true
+  B_IMPERSONAL_POWERS_PLURAL_REALIZATION:
+    current_visible_profile:
+    - UNDERIVED_ORDER
+    - FORMAL_COUPLING
+    - ADDITIVE_NORM_FIELD
+    - FINITE_EXACT_ARTICULABILITY
+    - TOKEN_RESPONSIVENESS
+    - CONCRETE_REALIZATION
+    - GLOBAL_WPK_ROLE_AVAILABILITY
+    intended_hidden_targets: []
+    unresolved_hard_premises:
+    - PRIMITIVE_NECESSARY_ORDER
+    - IMPERSONAL_POWERS_REALIZER
+    - PRIMITIVE_NORM_FIELD
+    - PLURAL_COORDINATION
+    - PRIMITIVE_APPLICABILITY_LINK
+    brute_or_unexplained_stops:
+    - ORDER
+    - APPLICABILITY
+    - NORM_AUTHORITY
+    - ROLE_COORDINATION
+    - NO_COMMON_BEARER
+    - NO_PERSONALITY
+    - NO_WISDOM
+    - NO_SPEECH
+    source_defects:
+    - ONE
+    - SAME_REFERENT_COPREDICATION
+    - UNCREATED_SPEECH
+    track_n_compatible_if_guards: false
+  C_ABSTRACT_ORDER_PLUS_CONCRETE_ACTUALIZER:
+    current_visible_profile:
+    - UNDERIVED_ORDER
+    - FORMAL_COUPLING
+    - ADDITIVE_NORM_FIELD
+    - FINITE_EXACT_ARTICULABILITY
+    - TOKEN_RESPONSIVENESS
+    - CONCRETE_REALIZATION
+    - GLOBAL_WPK_ROLE_AVAILABILITY
+    intended_hidden_targets: []
+    unresolved_hard_premises:
+    - NECESSARY_ABSTRACT_ORDER
+    - BRUTE_CONCRETE_ACTUALIZER
+    - PRIMITIVE_APPLICABILITY_LINK
+    - PRIMITIVE_NORM_FIELD
+    - PLURAL_ROLE_COORDINATION
+    brute_or_unexplained_stops:
+    - ABSTRACT_TO_CONCRETE_APPLICABILITY
+    - CAUSAL_EFFICACY
+    - NORM_AUTHORITY
+    - UNITY
+    - MENTALITY
+    - PERSONALITY
+    - WISDOM
+    - SPEECH
+    source_defects:
+    - CREATOR
+    - KNOWING
+    - LIVING
+    - VOLITION_ATTRIBUTE
+    - SPEAKING_ATTRIBUTE
+    - ACTUAL_SPEECH
+    - UNCREATED_SPEECH
+    track_n_compatible_if_guards: false
+comparison_regimes:
+  NEUTRAL_CURRENT_AUTHORITY:
+    background:
+    - CURRENT_ADMITTED_NEUTRAL_RESULTS
+    source_filter_active: false
+    selector_inputs: current_visible_profile_only
+  TRACK_N_CONDITIONAL:
+    background:
+    - CURRENT_ADMITTED_NEUTRAL_RESULTS
+    - H12_SOURCE_AUTHENTICATION
+    - H16_REFERENT_IDENTIFICATION
+    - AUTHENTICATED_SOURCE_PREDICATE_BUNDLE
+    source_filter_active: true
+    selector_inputs: neutral_profile_plus_source_expansion
+  CURRENT_INTEGRATED_PUBLIC_AUTHORITY:
+    background:
+    - CURRENT_ADMITTED_NEUTRAL_RESULTS
+    - TRANSLATED_PRIMARY_ACCESS_WITH_H12_H16_OPEN
+    source_filter_active: false
+    selector_inputs: authority_compliant_current_evidence
+declared_dominance_diagnostic:
+  description: A finite, authority-relative Pareto diagnostic, not a universal measure of truth or explanation.
+  coordinates:
+  - unabsorbed_premise_set_inclusion
+  - target_consequence_set_inclusion
+  - brute_stop_set_inclusion
+  - live_countermodel_survival
+  warning: No scalar aggregation or cross-kind cost order is warranted.
+bridge_requirements:
+  B4: H4
+  B5: H5
+  B6: H6
+  B7: H7
+  B8: H8
+  B9: H9
+  B10: H10
+  B11: H11
+  B12: H12
+  B15: H15
+  B16: H16
+candidate_claims:
+  T1_PROFILE_NONSELECTION: If two intended architectures share the complete current visible neutral profile while differing
+    on an integrated target, no certifier factoring through that profile decides the target.
+  T2_SOURCE_CONDITIONAL_ADMISSIBILITY: H12 and H16 plus the authenticated source bundle may exclude source-incompatible rivals
+    in the Track-N expansion.
+  T3_NONMIGRATION: Track-N exclusion does not become a neutral Track-T entailment when neutral reducts remain identical.
+  T4_CURRENT_CHAMPION_STATUS: No unique integrated champion is warranted at current authority.
+authority_ceiling:
+  general_mathematical_novelty: ZERO_APPLICATION_OF_FIBRE_AND_CONSERVATIVE_REDUCT_MECHANISMS
+  world_directed_truth: NOT_ESTABLISHED
+  source_relative: CONDITIONAL_ON_H12_H16
+  integrated_champion: NONE
+  meniscus: MENISCUS_NOT_REACHED
+  natural_closure: NOT_REACHED

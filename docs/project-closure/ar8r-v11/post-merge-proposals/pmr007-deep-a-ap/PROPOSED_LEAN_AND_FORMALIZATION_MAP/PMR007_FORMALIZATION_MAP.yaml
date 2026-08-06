@@ -1,0 +1,91 @@
+schema: PMR007_FORMALIZATION_MAP_V2
+kernel_status: NOT_RUN
+items:
+- id: COB-1
+  suggested_modules:
+  - FiniteGame.Pre
+  - FiniteGame.CoreEntry
+  - FiniteGame.CoBuchi
+  formalization_status: LEAN_READY_STATEMENT_ONLY
+- id: TRC-1
+  suggested_modules:
+  - TemporalCertificate.ModelDigest
+  - TemporalCertificate.Check
+  formalization_status: EXECUTABLE_PYTHON_ONLY
+- id: VCT-1
+  suggested_modules:
+  - ReasonTransport.Path
+  - VersionEligibility.Monotonicity
+  formalization_status: EXECUTABLE_PYTHON_ONLY
+- id: MLT-1/SMRB-1
+  suggested_modules:
+  - TransportBundle.Holonomy
+  - TransportBundle.UniqueRoot
+  formalization_status: LEAN_READY_STATEMENT_ONLY
+- identity: PMR-007-FSPW-1
+  formalization_status: LEAN_READY_FINITE_SELECTION_AND_CONSERVATIVE_EXPANSION_SPECIFICATION
+  novelty: ZERO_GENERAL_NOVELTY
+- identity: PMR-007-SRVN-1
+  formalization_status: LEAN_READY_AS_DIRECT_T254_APPLICATION_IF_ANCESTOR_MODULE_IS_AVAILABLE
+  novelty: ZERO_GENERAL_NOVELTY
+- identity: PMR-007-RSMF-1
+  formalization_status: LEAN_READY_FINITE_FIBRE_AND_SCM_STATEMENT_ONLY
+  novelty: ZERO_GENERAL_NOVELTY
+- identity: PMR-007-IHDU-1
+  formalization_status: LEAN_READY_FINITE_MOBIUS_SUPPORT_AND_COMPONENT_DECOMPOSITION
+  novelty: ZERO_GENERAL_NOVELTY
+- identity: PMR-007-NRID-1
+  formalization_status: LEAN_READY_FINITE_REDUCT_FIBRE_STATEMENT; CLASSICAL_BETH_EXTERNAL_THEOREM_DEPENDENCY
+  novelty: ZERO_GENERAL_NOVELTY
+- identity: PMR-007-R5NR-1
+  formalization_status: EXECUTABLE_FINITE_COMMON_MODEL_ONLY
+  novelty: ZERO_GENERAL_NOVELTY
+- identity: PMR-007-SDIG-1
+  formalization_status: LEAN_READY_FINITE_HYPERGRAPH_AND_BEARER_PARTITION_STATEMENT
+  novelty: ZERO_GENERAL_NOVELTY
+- identity: PMR-007-NMIB-1
+  formalization_status: LEAN_READY_FINITE_H7_PREMISE_DECOMPOSITION_AND_COUNTERMODELS
+  novelty: ZERO_GENERAL_NOVELTY
+- identity: PMR-007-CIOB-1
+  formalization_status: LEAN_READY_FINITE_GROUP_ACTION_ORBIT_INVARIANCE_AND_COUNTERMODELS
+  novelty: ZERO_GENERAL_NOVELTY
+- identity: PMR-007-SAMC-1
+  formalization_status: LEAN_READY_FINITE_ROLE_SET_INTERSECTION_AND_SOURCE_GUARD_MODEL
+  novelty: ZERO_GENERAL_NOVELTY
+- identity: PMR-007-EGAC-1
+  formalization_status: LEAN_READY_FINITE_PARTIAL_ORDER_AND_COMPLETION_AUDIT
+  novelty: ZERO_GENERAL_NOVELTY
+- identity: PMR-007-SRIN-1
+  formalization_status: LEAN_READY_FINITE_GROUP_ACTION_NATURAL_SELECTOR_FIXED_POINT_CHARACTERIZATION
+  novelty: ZERO_GENERAL_NOVELTY
+generated_at: '2026-08-05T17:50:10.424067+00:00'
+round17_round18_additions:
+- id: PMR-007-RSD-1
+  status: ADMITTED_POST_MERGE_SCOPED_RESULT
+  formalization_opportunity: finite transport bundle, holonomy, quotient, and same-fibre collision criterion
+- id: PMR-007-ORTC-V4
+  status: ADMITTED_POST_MERGE_SCOPED_RESULT
+  formalization_opportunity: finite set cover, compatible partitions, ambiguity intersections, and rank-certificate selector
+deep_x_aa_additions:
+- id: PMR-007-TKAA-1
+  formalization_status: LEAN_READY_STATEMENT_ONLY
+  opportunity: finite authority-source partition and anti-self-authorization implication
+- id: PMR-007-PFSA-1
+  formalization_status: LEAN_READY_STATEMENT_ONLY
+  opportunity: finite group action, orbit invariance, and exact classifier existence
+- id: PMR-007-COWC-1
+  formalization_status: EXECUTABLE_FINITE_MODEL_ONLY
+  opportunity: typed pullback/product object and finite diagnostic lower bound
+- id: PMR-007-CGIP-1
+  formalization_status: EXECUTABLE_PYTHON_ONLY
+  opportunity: finite SCM intervention tables and reduct-expansion nonentailment
+deep_an_ap_additions:
+- identity: PMR-007-ABPD-1
+  formalization_status: LEAN_READY_FINITE_PROBABILITY_AND_PREFIX_CODE_STATEMENT
+  novelty: ZERO_GENERAL_NOVELTY
+- identity: PMR-007-RPDS-1
+  formalization_status: LEAN_READY_FINITE_DATA_PROCESSING_AND_LIKELIHOOD_RATIO_FIBRE_STATEMENT
+  novelty: ZERO_GENERAL_NOVELTY
+- identity: PMR-007-SWRI-1
+  formalization_status: LEAN_READY_FINITE_TWO_SORTED_INTERPRETATION_IMAGE_FIBRE_STATEMENT
+  novelty: ZERO_GENERAL_NOVELTY

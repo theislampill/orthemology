@@ -1,0 +1,54 @@
+{
+  "schema": "PMR007_DEEP_AD_DISTINCT_PARTITION_SCM_REREVIEW_V2",
+  "frozen_hash_rows_checked": 6,
+  "frozen_hash_failures": [],
+  "random_larger_policy_tables": 60000,
+  "factorable_random_tables": 29998,
+  "partition_factorization_mismatches": 0,
+  "proxy_reindexing_failures": 0,
+  "exhaustive_small_policy_tables": 16,
+  "direct_intervention_rows_checked": 34,
+  "direct_intervention_failures": 0,
+  "registered_mediation_cases": 16,
+  "controls": {
+    "proxy_shortcut": {
+      "R": 0,
+      "P0_action": 0,
+      "P1_action": 1,
+      "P_invariant": false
+    },
+    "evidence_bearing_proxy": {
+      "P": "authenticated-source-version",
+      "nuisance": false
+    },
+    "hidden_history": {
+      "current": [
+        0,
+        0,
+        0
+      ],
+      "histories": [
+        "h0",
+        "h1"
+      ],
+      "required_actions": [
+        0,
+        1
+      ]
+    },
+    "hidden_confounder": {
+      "observational_table_equal": true,
+      "do_R_table_equal": false
+    },
+    "personal_impersonal_neutral_reduct_parity": true
+  },
+  "result": "PASS",
+  "nonclaims": [
+    "semantic truth",
+    "intervention validity in an actual world",
+    "subject-level uptake",
+    "personality",
+    "Wisdom",
+    "implementation compliance"
+  ]
+}

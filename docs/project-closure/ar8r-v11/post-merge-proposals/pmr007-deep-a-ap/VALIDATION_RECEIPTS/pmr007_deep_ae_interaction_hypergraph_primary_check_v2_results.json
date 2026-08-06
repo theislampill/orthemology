@@ -1,0 +1,45 @@
+{
+  "schema": "PMR007_DEEP_AE_INTERACTION_HYPERGRAPH_PRIMARY_CHECK_V2",
+  "exhaustive_boolean_functions_n4": 65536,
+  "connected_single_function_interaction_graphs": 64594,
+  "single_function_component_failures": 0,
+  "random_vector_function_families_n5_m3": 40000,
+  "component_count_histogram": {
+    "1": 40000
+  },
+  "family_reconstruction_failures": 0,
+  "component_minimality_failures": 0,
+  "personal_impersonal_neutral_reduct_failures": 0,
+  "controls": {
+    "coordinate_gerrymandering": {
+      "original_coordinates": "x1,x2",
+      "function": "xor",
+      "recoded_coordinate": "y=x1 xor x2",
+      "interaction_support_representation_dependent": true
+    },
+    "hidden_latent": {
+      "observed_interaction": true,
+      "omitted_latent_common_cause": true,
+      "resource_complete": false
+    },
+    "impersonal_connected_law": {
+      "function": "x0*x1 + x1*x2 + x2*x3",
+      "interaction_connected": true,
+      "personal": false
+    },
+    "one_carrier_product": {
+      "function": "x0+x1+x2+x3",
+      "one_carrier_label": true,
+      "additive_components": 4
+    }
+  },
+  "result": "PASS",
+  "nonclaims": [
+    "coordinate validity",
+    "function-family completeness",
+    "causal direction",
+    "one bearer",
+    "personality",
+    "Wisdom"
+  ]
+}

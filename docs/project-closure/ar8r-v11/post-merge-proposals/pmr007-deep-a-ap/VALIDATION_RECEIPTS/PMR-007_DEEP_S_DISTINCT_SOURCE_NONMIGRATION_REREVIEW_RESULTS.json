@@ -1,0 +1,48 @@
+{
+  "Arabic_primary_verified": false,
+  "deletion_cases": 38,
+  "deletion_failures": [],
+  "external_review": false,
+  "method": "independent bitmask transversal solver, guard deletion, exact source-string custody, and reduct invariance check",
+  "minimal_counts": {
+    "FULL_SOURCE_RELATIVE": 2,
+    "PRE_SPEECH_STRUCTURAL": 16
+  },
+  "minimal_sizes": {
+    "FULL_SOURCE_RELATIVE": 3,
+    "PRE_SPEECH_STRUCTURAL": 2
+  },
+  "neutral_nonmigration": "PASS",
+  "overall": "PASS_WITH_NONBLOCKING_SOURCE_AND_SCOPE_NOTES",
+  "rival_portfolio_exhaustive": false,
+  "source_checks": {
+    "actual_uncreated_speech": true,
+    "core_bundle": true,
+    "hash": "932abd7e2d7b3702d5d6d77d2a4a95ecfb3a9ccbcfbbce7ae750b2bcf55bef7c",
+    "necessary_only": true,
+    "title_attribute": true,
+    "translator_preface": true
+  },
+  "source_guard_truth_table": [
+    [
+      false,
+      false,
+      false
+    ],
+    [
+      false,
+      true,
+      false
+    ],
+    [
+      true,
+      false,
+      false
+    ],
+    [
+      true,
+      true,
+      true
+    ]
+  ]
+}

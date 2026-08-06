@@ -1,0 +1,70 @@
+{
+  "schema": "orthemology-corrective-transition-v2",
+  "note": "One governed corrective transition. Hard constraints filter admissibility BEFORE ranking; delta is a control-state change (not correctness); reread is performed; runtime closure is not human restoration; strict soundness is not claimed.",
+  "transitions": [
+    {
+      "transition_id": "PMR007-R15-shared-closure-record",
+      "state_before": "declared local burden has been addressed",
+      "live_burdens": [],
+      "hard_constraints": [
+        "no burden deletion",
+        "preserve provenance/uncertainty",
+        "runtime closure is not human restoration"
+      ],
+      "eligible_routes": [
+        "route-close-declared-local-episode"
+      ],
+      "ranking_witness": "the sole eligible route satisfies the declared local closure guards; no scalar or global stability claim",
+      "selected_route": "route-close-declared-local-episode",
+      "governing_types": [
+        "mu-type-temporal-control"
+      ],
+      "represented_standards": [
+        "mutilde-temporal-control-v1"
+      ],
+      "metaorthemmata": [
+        "mubar-declared-local-closure"
+      ],
+      "executor_operation": "record local runtime closure for the declared episode",
+      "evidence": [
+        "ev-local-burden-accounting",
+        "ev-whole-state-reread-at-declared-episode"
+      ],
+      "delta": "event-local control-state transition into q_closed",
+      "state_after": "q_closed",
+      "field_diagnostics": "no live burden remains in the declared local record; future transition system not encoded",
+      "operator_trace": [
+        "route-pressure",
+        "event-transition",
+        "whole-state-reread",
+        "runtime-closure"
+      ],
+      "burden_accounting": {
+        "addressed": [],
+        "carried_forward": []
+      },
+      "global_revision": {
+        "requested": false,
+        "authorized": false,
+        "authorization_ref": null
+      },
+      "reread": {
+        "performed": true,
+        "outcome": "no live burden remains in the declared local record; temporal persistence not assessed"
+      },
+      "terminal_posture": "CLOSURE",
+      "verdicts": {
+        "admissible": true,
+        "pathway_adequate": true,
+        "strictly_sound": "not-claimed",
+        "runtime_closure": true,
+        "human_uptake": "unobserved"
+      },
+      "non_claims": [
+        "delta is a runtime control-state change, not result correctness",
+        "runtime closure is not human restoration",
+        "this record does not encode future successors, an invariant core, or a co-Buchi persistence certificate"
+      ]
+    }
+  ]
+}

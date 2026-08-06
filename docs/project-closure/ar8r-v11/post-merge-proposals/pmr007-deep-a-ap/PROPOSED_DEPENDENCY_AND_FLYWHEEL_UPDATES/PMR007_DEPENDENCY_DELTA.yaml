@@ -1,0 +1,32 @@
+schema: PMR007_DEPENDENCY_DELTA_V2
+edges:
+- from: FRLA-1
+  to: COB-1
+  type: SUPPLIES_LOCAL_ACTION_ELIGIBILITY
+  not_transferred: common-state availability or temporal completeness
+- from: COB-1
+  to: TRC-1
+  type: FORMALIZES_TEMPORAL_OBJECTIVE
+  not_transferred: real runtime model truth
+- from: VCT-1
+  to: TRC-1
+  type: SUPPLIES_VERSIONED_ACTION_CUSTODY
+  not_transferred: source truth or distributed discovery
+- from: MLT-1
+  to: SMRB-1
+  type: SUPPLIES_TRANSPORT_INVARIANT
+  not_transferred: numerical identity or world bridge
+- from: R14-F01
+  to: Candidate B
+  type: REPAIRS
+  not_transferred: general partial-observation result
+generated_at: '2026-08-03T15:50:48.115703+00:00'
+round17_round18_additions:
+- id: PMR-007-RSD-1
+  status: ADMITTED_POST_MERGE_SCOPED_RESULT
+  formalization_opportunity: finite transport bundle, holonomy, quotient, and same-fibre
+    collision criterion
+- id: PMR-007-ORTC-V4
+  status: ADMITTED_POST_MERGE_SCOPED_RESULT
+  formalization_opportunity: finite set cover, compatible partitions, ambiguity intersections,
+    and rank-certificate selector

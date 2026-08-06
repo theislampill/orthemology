@@ -1,0 +1,21 @@
+{
+  "schema": "PMR007_DEEP_AB_FITTINGNESS_POLICY_PRIMARY_CHECK_V2",
+  "contexts": 2,
+  "actions": 3,
+  "profiles": 3,
+  "systems_checked": 117649,
+  "profile_aware_selector_failures": 0,
+  "profile_blind_intersection_criterion_true": 28561,
+  "profile_blind_criterion_mismatches": 0,
+  "singleton_functional_responsiveness_failures": 0,
+  "singleton_frozen_scm_intervention_failures": 0,
+  "personal_impersonal_neutral_reduct_failures": 0,
+  "minimal_failures": {},
+  "result": "PASS",
+  "nonclaims": [
+    "H truth authority world adequacy or source validity",
+    "causal claims outside the frozen SCM",
+    "intentional because-of relation or first-person ownership",
+    "personality Wisdom or world realization"
+  ]
+}

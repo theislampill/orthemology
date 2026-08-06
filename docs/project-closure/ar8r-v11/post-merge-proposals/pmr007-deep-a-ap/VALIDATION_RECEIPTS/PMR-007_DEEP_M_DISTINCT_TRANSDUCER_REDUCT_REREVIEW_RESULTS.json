@@ -1,0 +1,20 @@
+{
+  "boundary_equivalence_words_checked": 1023,
+  "boundary_trace_differences": 0,
+  "expanded_semantic_normative_personal_models": 4096,
+  "failures": [],
+  "frozen_hash_rows_checked": 6,
+  "hash_mismatches": [],
+  "hidden_architecture_differences": 682,
+  "neutral_profiles_checked": 256,
+  "profile_fibres_with_personality_variation": 256,
+  "random_long_traces_checked": 100000,
+  "random_three_state_systems": 5000,
+  "result": "PASS",
+  "schema": "PMR007_DEEP_M_DISTINCT_TRANSDUCER_REDUCT_REREVIEW_RESULTS_V1",
+  "scope_notes": [
+    "boundary_profile_only",
+    "no_concrete_realization_claim",
+    "no_metaphysical_or_bayesian_parity_claim"
+  ]
+}

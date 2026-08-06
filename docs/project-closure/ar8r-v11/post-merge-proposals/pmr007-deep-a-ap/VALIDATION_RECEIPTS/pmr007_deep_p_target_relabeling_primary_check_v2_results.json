@@ -1,0 +1,59 @@
+{
+  "account_rows": {
+    "COMPLETE_TRACE": {
+      "invariant_pairs": 256,
+      "varying_pairs": 0
+    },
+    "EXACT_POTENTIAL": {
+      "invariant_pairs": 256,
+      "varying_pairs": 0
+    },
+    "FORMAL_COUPLING": {
+      "invariant_pairs": 256,
+      "varying_pairs": 0
+    },
+    "PF_DES_ANY": {
+      "invariant_pairs": 256,
+      "varying_pairs": 0
+    },
+    "PF_DES_TRUTH": {
+      "invariant_pairs": 0,
+      "varying_pairs": 256
+    },
+    "PF_FITRAH_N": {
+      "invariant_pairs": 0,
+      "varying_pairs": 256
+    },
+    "PF_FREQ": {
+      "invariant_pairs": 256,
+      "varying_pairs": 0
+    },
+    "PF_PLANTINGA": {
+      "invariant_pairs": 0,
+      "varying_pairs": 256
+    },
+    "PF_ROLE": {
+      "invariant_pairs": 256,
+      "varying_pairs": 0
+    },
+    "PF_SEL_REWARD": {
+      "invariant_pairs": 256,
+      "varying_pairs": 0
+    },
+    "PF_SEL_TRUTH": {
+      "invariant_pairs": 0,
+      "varying_pairs": 256
+    },
+    "PF_TARGET": {
+      "invariant_pairs": 256,
+      "varying_pairs": 0
+    }
+  },
+  "authority_note": "Regression evidence for the declared finite model class only; no philosophical account is empirically validated.",
+  "identity": "PMR-007-TRPF-1",
+  "interpretation_expansions": 512,
+  "neutral_invariance_failures": 0,
+  "neutral_systems": 256,
+  "overall": "PASS",
+  "pf_epi_variation_failures": 0
+}

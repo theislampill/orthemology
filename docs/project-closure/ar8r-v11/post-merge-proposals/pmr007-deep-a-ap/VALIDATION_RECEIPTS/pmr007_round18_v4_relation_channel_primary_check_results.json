@@ -1,0 +1,67 @@
+{
+  "adversarial_relation_channel_cases": 8192,
+  "adversarial_relation_channel_mismatches": 0,
+  "binary_code_capacity_min_distance_3": {
+    "1": 1,
+    "2": 1,
+    "3": 2,
+    "4": 2,
+    "5": 4
+  },
+  "direct_temporal_failures": 0,
+  "exact_four_state_label_minimum_bits_under_one_flip": 5,
+  "exact_nonconstant_binary_label_minimum_bits_under_one_flip": 3,
+  "exact_state_relation_mismatches": 0,
+  "exact_state_relations_checked": 37448,
+  "examples": [
+    {
+      "action_rho": 1,
+      "id": "R18-CM-OBJECT-PROJECTION",
+      "object_rho": 2
+    },
+    {
+      "id": "R18-CM-PAIRWISE",
+      "object_rho": 2
+    },
+    {
+      "id": "R18-CM-EMPTY",
+      "object_rho": "infinity"
+    },
+    {
+      "action_rho": 2,
+      "id": "R18-CM-VERSION",
+      "object_rho": 2
+    }
+  ],
+  "failures": [],
+  "general_encoder_information_cases": 1600,
+  "general_encoder_information_mismatches": 0,
+  "history_current_rho": 1,
+  "history_future_rho": 2,
+  "history_witness_pass": true,
+  "projection_strict_witness_pass": true,
+  "rank_admissible_policies_checked": 1,
+  "robust_completion_intersection_pass": true,
+  "schema": "PMR007_ROUND18_V4_PRIMARY_CHECK",
+  "scope": [
+    "finite complete certificate-object relations",
+    "finite deterministic encoder and decoder information",
+    "pointwise zero-error relation selection",
+    "fixed binary adversarial Hamming channel",
+    "fixed finite perfect-information rank certificate"
+  ],
+  "status": "PASS",
+  "strict_relation_selector_possible_with_2_bits": true,
+  "temporal_rank_admissible": {
+    "g": [
+      "k_stay"
+    ],
+    "x": [
+      "k_execute"
+    ],
+    "y": [
+      "k_hold"
+    ]
+  },
+  "temporal_rank_match": true
+}

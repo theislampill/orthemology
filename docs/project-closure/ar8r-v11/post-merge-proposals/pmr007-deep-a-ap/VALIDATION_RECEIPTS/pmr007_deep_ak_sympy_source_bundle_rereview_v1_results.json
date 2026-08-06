@@ -1,0 +1,127 @@
+{
+  "claims": {
+    "accepted_common_bundle_is_consistent_and_direct": true,
+    "common_bundle_does_not_entail_personality": true,
+    "existential_roles_do_not_entail_common_bearer": true,
+    "personality_follows_only_with_explicit_mapping": true,
+    "source_bundle_does_not_entail_world_transfer": true,
+    "world_identity_bridge_transfers_bundle_when_explicit": true
+  },
+  "frozen_hash_mismatches": 0,
+  "frozen_hash_rows": 7,
+  "method": "SYMPY_SAT_THREE_BEARER_SOURCE_ACTUAL_LAYER",
+  "notes": [
+    "Source co-reference filters the Track-N class but is not a neutral H6/H8 theorem.",
+    "Formal role-bundle models do not decide the intended philosophical semantics of source predicates.",
+    "World transfer requires explicit identity and adequacy bridges."
+  ],
+  "overall": "PASS",
+  "queries": {
+    "accepted_common_bundle_failure": {
+      "model": null,
+      "satisfiable": false
+    },
+    "common_bundle_without_personality": {
+      "model": {
+        "A0": true,
+        "A1": true,
+        "A2": true,
+        "C0": true,
+        "C1": true,
+        "C2": true,
+        "K0": true,
+        "K1": true,
+        "K2": true,
+        "L0": true,
+        "L1": true,
+        "L2": true,
+        "P0": false,
+        "P1": false,
+        "P2": false,
+        "S0": true,
+        "S1": true,
+        "S2": true,
+        "V0": true,
+        "V1": true,
+        "V2": true
+      },
+      "satisfiable": true
+    },
+    "explicit_H8_mapping_blocks_no_personality": {
+      "model": null,
+      "satisfiable": false
+    },
+    "role_existence_without_common_bearer": {
+      "model": {
+        "A0": false,
+        "A1": false,
+        "A2": true,
+        "C0": false,
+        "C1": false,
+        "C2": true,
+        "K0": false,
+        "K1": false,
+        "K2": true,
+        "L0": true,
+        "L1": false,
+        "L2": false,
+        "S0": false,
+        "S1": false,
+        "S2": true,
+        "V0": false,
+        "V1": false,
+        "V2": true
+      },
+      "satisfiable": true
+    },
+    "source_bundle_without_world_transfer": {
+      "model": {
+        "A0": true,
+        "A1": true,
+        "A2": true,
+        "C0": true,
+        "C1": true,
+        "C2": true,
+        "K0": true,
+        "K1": true,
+        "K2": true,
+        "L0": true,
+        "L1": true,
+        "L2": true,
+        "QA0": false,
+        "QA1": false,
+        "QA2": false,
+        "QC0": false,
+        "QC1": false,
+        "QC2": false,
+        "QK0": false,
+        "QK1": false,
+        "QK2": false,
+        "QL0": false,
+        "QL1": false,
+        "QL2": false,
+        "QS0": false,
+        "QS1": false,
+        "QS2": false,
+        "QV0": false,
+        "QV1": false,
+        "QV2": false,
+        "S0": true,
+        "S1": true,
+        "S2": true,
+        "V0": true,
+        "V1": true,
+        "V2": true,
+        "WORLD": false
+      },
+      "satisfiable": true
+    },
+    "world_and_identity_transfer_failure": {
+      "model": null,
+      "satisfiable": false
+    }
+  },
+  "schema": "PMR007_DEEP_AK_DISTINCT_THREE_BEARER_SAT_REREVIEW_RESULTS_V1",
+  "source_anchor_checks": 11,
+  "source_anchor_failures": 0
+}

@@ -1,0 +1,64 @@
+schema: PMR007_DEEP_F_ADMISSION_OVERLAY_V1
+identity: PMR-007-FPF-1
+round: PMR-007-DEEP-F
+canonical_version: V3
+title: Fitrah proper-function closure and neutral realization parity
+provenance_class: ADMITTED_POST_MERGE_SCOPED_SOURCE_FORMAL_ADJUDICATION
+historical_identity: NONE
+admitted_results:
+  - Track-N proper functional operation, episode accuracy, and undefeated warrant are three distinct conditional levels
+  - each level is conditionally closed only after its declared source-relative premises are accepted
+  - none of the three levels factors through the declared neutral operational profile
+  - selected-effect and dispositional truth trackers preserve neutral realization parity without a personal designer
+  - proper function does not entail episode accuracy, warrant, personal design, Wisdom, or a Necessary Being
+proof_status: CONTRACT_DECOMPOSITION_PLUS_PROFILE_FIBRE_NONENTAILMENT_PLUS_EXECUTABLE_CHECKS
+primary_check:
+  worlds_checked: 2048
+  neutral_fibres: 16
+  collision_fibres: {NFunc_T: 16, NAcc_T: 8, NWarr_T: 8}
+  failures: 0
+source_custody:
+  source_hashes_checked: 2
+  locators_checked: 7
+  failures: 0
+  arabic_primary_verified: false
+  source_truth_established: false
+cold_audit:
+  disposition: REPAIR_REQUIRED
+  blocking_findings:
+    - FPF-F01 proper-function episode-success and warrant conflation
+    - FPF-F02 exact source-locator custody mismatch
+repair:
+  disposition: ALL_BLOCKING_FINDINGS_REPAIRED_IN_V3
+fresh_rereview:
+  disposition: PASS_WITH_NONBLOCKING_SOURCE_AND_THEORY_SCOPE_NOTES
+  worlds_checked: 2048
+  frozen_hash_mismatches: 0
+  failures: 0
+theorem_family:
+  relation: SOURCE_RELATIVE_CONTRACT_DECOMPOSITION_PLUS_DIRECT_PROFILE_FIBRE_APPLICATION
+  general_mathematical_novelty: ZERO
+central_meniscus_effect:
+  proper_function_status: SOURCE_RELATIVE_CONDITIONAL_CLOSURE_NEUTRAL_GROUND_UNESTABLISHED
+  candidate_e_horn: TRACK_N_HORN_EXPLICIT_BUT_NOT_NEUTRALLY_SELECTED
+  candidate_g_realization: PERSONAL_IMPERSONAL_PARITY_UNBROKEN
+  transcendental_to_proper_function: NOT_ENTAILED
+  proper_function_to_wisdom: NOT_ENTAILED
+  strongest_surviving_rivals:
+    - selected_effect_truth_tracker
+    - dispositional_truth_tracker
+    - primitive_truth_norm_plus_reliable_mechanism
+source_authority:
+  El_Tobgui: SECONDARY_SCHOLARLY_RECONSTRUCTION
+  Al_Ujayri: CONTEMPORARY_ATHARI_SYNTHESIS
+  arabic_primary_verified: false
+external_review_status: OPEN
+owner_adoption_status: PENDING
+repository_proposal_status: ELIGIBLE_FOR_SANITIZED_OWNER_REVIEW_NOT_INTEGRATION_AUTHORIZED
+meniscus: MENISCUS_NOT_REACHED
+natural_closure: NOT_REACHED
+nonclaims:
+  - no source truth or Arabic-primary wording established
+  - no neutral proper-function account selected
+  - no empirical fitrah proxy or causal restoration
+  - no personal designer, Wisdom, or Necessary Being conclusion

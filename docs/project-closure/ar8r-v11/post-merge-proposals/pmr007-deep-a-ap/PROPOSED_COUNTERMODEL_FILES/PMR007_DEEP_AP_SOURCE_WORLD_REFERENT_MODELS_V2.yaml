@@ -1,0 +1,56 @@
+schema: PMR007_DEEP_AP_SOURCE_WORLD_REFERENT_MODELS_V2
+identity: PMR-007-SWRI-1
+version: V2
+sorts: [source_or_discourse_object, world_object]
+objects:
+  source_structure: S
+  unique_source_role_bearer: g
+  candidate_world_structure: W
+  translated_role_bundle: U_W
+  admissible_interpretations: H
+  candidate_denotation_fibre: F_H_g
+bridge_guards:
+- SRC_BYTES
+- LOCUS
+- TRANSLATION
+- ATTRIBUTION
+- PROPOSITION_RECONSTRUCTION
+- TRACK_N_ACCEPTANCE
+- MAP_ADMISSIBILITY
+- ROLE_PRESERVATION
+- REFERENT_ELIGIBILITY
+- WORLD_ADEQUACY
+- VERSION_CUSTODY
+results:
+  SWRI_1A: nonempty_world_adequate_role_preserving_H_implies_conditional_world_role_realizer
+  SWRI_1B: unique_relative_referent_iff_candidate_denotation_fibre_singleton
+  SWRI_1C: under_role_completeness_denotation_fibre_equals_world_role_bearers
+controls:
+- id: AP-CM1-EMPTY-H
+  H: []
+  unconditional_world_existence: false
+- id: AP-CM2-TWO-ROLE-BEARERS
+  world_role_bearers: [w0,w1]
+  candidate_denotation_fibre: [w0,w1]
+- id: AP-CM3-HIDDEN-ANCHOR
+  world_role_bearers: [w0,w1]
+  H_images_g: [w0]
+  source_role_derived_uniqueness: false
+- id: AP-CM4-PRESERVATION-NONREFLECTION
+  complete_world_profile_transferred: false
+- id: AP-CM5-VERSION-DRIFT
+  old_denotation_certificate_transports: false
+- id: AP-CM6-SOURCE_COMPATIBLE_IMPERSONAL
+  selected_role_bundle: true
+  de_se_ownership: false
+  personality: false
+  Wisdom: false
+- id: AP-CM7-MULTIPLE-WORLDS
+  unique_bearer_per_candidate_world: true
+  actual_world_selected: false
+nonclaims:
+- no_cross_sort_numerical_identity
+- no_Arabic_primary_verification
+- no_actual_world_or_unique_world
+- no_personal_ground_or_Wisdom
+- no_integrated_champion

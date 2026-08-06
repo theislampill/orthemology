@@ -1,0 +1,216 @@
+schema: pmr007-round16-version-custody-and-eligibility-v2
+round: PMR-007-FRONTIER-ROUND16
+provenance: NEW_POST_MERGE_RESEARCH
+historical_identity: null
+artifact:
+  artifact_id: repair-instruction-A
+  bytes_sha256: bbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbb
+  source_root: ROOT-A
+same_bytes_contexts:
+- context_id: current-v1
+  source_version: source-v1
+  target_version: runtime-v1
+  guards:
+    applicability: true
+    authority: true
+    version_current: true
+    evidence_provenance: true
+    capability: true
+    permission: true
+    invalidators_closed: true
+  expected_applicable: true
+- context_id: stale-v2
+  source_version: source-v1
+  target_version: runtime-v2
+  guards:
+    applicability: true
+    authority: true
+    version_current: false
+    evidence_provenance: true
+    capability: true
+    permission: true
+    invalidators_closed: true
+  expected_applicable: false
+positive_transport_path:
+  path_id: PATH-V1-V2-V3
+  initial_certificate:
+    version: v1
+    claim: claim-v1
+    root: ROOT-A
+    nodes:
+    - n_source
+    - n_reason
+    dependency_edges:
+    - - n_source
+      - n_reason
+    discharged_obligations:
+    - source-authentic
+    - reason-valid
+  edges:
+  - edge_id: e12
+    input_version: v1
+    output_version: v2
+    input_claim: claim-v1
+    output_claim: claim-v2
+    input_root: ROOT-A
+    output_root: ROOT-A
+    node_map:
+      n_source: n_source_v2
+      n_reason: n_reason_v2
+    input_dependency_edges:
+    - - n_source
+      - n_reason
+    output_dependency_edges:
+    - - n_source_v2
+      - n_reason_v2
+    preserved_obligations:
+    - source-authentic
+    - reason-valid
+    revalidated_obligations:
+    - version-current-v2
+    - authority-v2
+    target_required_obligations:
+    - source-authentic
+    - reason-valid
+    - version-current-v2
+    - authority-v2
+    semantic_square_commutes: true
+    authority_delegation_valid: true
+    delegation_redelegable: true
+    invalidators_open: []
+  - edge_id: e23
+    input_version: v2
+    output_version: v3
+    input_claim: claim-v2
+    output_claim: claim-v3
+    input_root: ROOT-A
+    output_root: ROOT-A
+    node_map:
+      n_source_v2: n_source_v3
+      n_reason_v2: n_reason_v3
+    input_dependency_edges:
+    - - n_source_v2
+      - n_reason_v2
+    output_dependency_edges:
+    - - n_source_v3
+      - n_reason_v3
+    preserved_obligations:
+    - source-authentic
+    - reason-valid
+    revalidated_obligations:
+    - version-current-v3
+    - authority-v3
+    - capability-v3
+    - permission-v3
+    target_required_obligations:
+    - source-authentic
+    - reason-valid
+    - version-current-v3
+    - authority-v3
+    - capability-v3
+    - permission-v3
+    semantic_square_commutes: true
+    authority_delegation_valid: true
+    delegation_redelegable: false
+    invalidators_open: []
+  expected_final:
+    version: v3
+    claim: claim-v3
+    root: ROOT-A
+    applicable: true
+    required_obligations:
+    - source-authentic
+    - reason-valid
+    - version-current-v3
+    - authority-v3
+    - capability-v3
+    - permission-v3
+transport_countermodels:
+- model_id: VCT-CM-NONTRANSITIVE-COMPATIBILITY
+  mechanism: pairwise compatibility labels without composable migration maps
+  edge1_locally_accepted: true
+  edge2_locally_accepted: true
+  composed_semantic_map_exists: false
+  expected_path_valid: false
+- model_id: VCT-CM-DROPPED-INVALIDATOR
+  mechanism: middle context opens a revocation invalidator omitted by the next edge contract
+  edge1_locally_accepted: true
+  edge2_locally_accepted_under_incomplete_contract: true
+  invalidators_open:
+  - revoked-source
+  expected_path_valid: false
+- model_id: VCT-CM-NONREDELEGABLE-AUTHORITY
+  mechanism: A delegates to B without re-delegation power, but B purports to delegate to C
+  edge1_locally_accepted: true
+  edge2_local_signature_present: true
+  first_delegation_redelegable: false
+  expected_path_valid: false
+- model_id: VCT-CM-SEMANTIC-NONCOMMUTATION
+  mechanism: v1-to-v2 and v2-to-v3 maps exist but their composition does not preserve the frozen target
+    claim
+  edge1_locally_accepted: true
+  edge2_locally_accepted: true
+  semantic_square_commutes: false
+  expected_path_valid: false
+temporal_eligibility_witness:
+  states:
+  - q0
+  - q1
+  safe_states:
+  - q0
+  - q1
+  target_states:
+  - q0
+  common_actions:
+    q0:
+    - action_id: hold0
+      successors:
+      - q0
+  version_v1_actions:
+    q1:
+    - action_id: repair
+      artifact_sha256: bbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbb
+      eligibility_context: current-v1
+      successors:
+      - q0
+    - action_id: linger
+      successors:
+      - q1
+  version_v2_actions:
+    q1:
+    - action_id: linger
+      successors:
+      - q1
+  expected:
+    v1:
+      W_core:
+      - q0
+      - q1
+      W_coB:
+      - q0
+      - q1
+    v2:
+      W_core:
+      - q0
+      W_coB:
+      - q0
+    same_artifact_bytes: true
+    stale_certificate_overclaims_q1: true
+nonclaims:
+- same bytes do not identify applicability, semantics, authority, or temporal eligibility
+- pairwise local acceptance is insufficient without typed compositional custody
+- model-relative action-menu monotonicity does not prove real-world model completeness
+- no general mathematical novelty, historical identity, GitHub mutation, or owner adoption
+repair_of: PMR007_ROUND16_VERSION_CUSTODY_AND_ELIGIBILITY.yaml
+transport_path_negative_fixtures:
+- fixture_id: VCT-F01-PRESERVED-OBLIGATION-LAUNDERING
+  mutation:
+    positive_transport_path.initial_certificate.discharged_obligations:
+    - source-authentic
+  expected_error: preserved-obligation-not-discharged
+- fixture_id: VCT-F02-REASON-DAG-BOUNDARY-DRIFT
+  mutation:
+    positive_transport_path.edges.1.node_map:
+      alien_source_v2: n_source_v3
+      n_reason_v2: n_reason_v3
+  expected_error: reason-dag-boundary-mismatch

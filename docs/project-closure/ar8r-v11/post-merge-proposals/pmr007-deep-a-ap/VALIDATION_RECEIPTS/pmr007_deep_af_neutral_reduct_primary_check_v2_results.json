@@ -1,0 +1,37 @@
+{
+  "schema": "PMR007_DEEP_AF_PRIMARY_CHECK_V2",
+  "five_fibre_four_target_classes": 759375,
+  "implicitly_defined_classes": 1024,
+  "exact_classifier_classes": 1024,
+  "criterion_mismatches": 0,
+  "isomorphism_label_permutation_failures": 0,
+  "controls": {
+    "same_reduct_twins": {
+      "allowed_targets": [
+        0,
+        1
+      ],
+      "implicit": false,
+      "exact_classifier": false
+    },
+    "source_restricted_singleton": {
+      "neutral_allowed_targets": [
+        0,
+        1
+      ],
+      "source_expanded_allowed_targets": [
+        1
+      ],
+      "neutral_implicit": false,
+      "source_relative_implicit": true
+    },
+    "smuggled_proxy": {
+      "Q_equals_target": true,
+      "counts_as_independent_neutral_bridge": false
+    },
+    "probabilistic_preference": {
+      "exact_entailment": false
+    }
+  },
+  "result": "PASS"
+}

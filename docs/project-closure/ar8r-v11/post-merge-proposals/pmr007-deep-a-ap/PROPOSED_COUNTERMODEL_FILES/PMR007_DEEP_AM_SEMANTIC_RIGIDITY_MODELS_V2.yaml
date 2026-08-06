@@ -1,0 +1,70 @@
+schema: PMR007_DEEP_AM_SEMANTIC_RIGIDITY_MODELS_V2
+identity: PMR-007-SRIN-1
+version: V2
+sources:
+- file: 2405.07987v5.pdf
+  sha256: fa9b7cc99c1e852960733b2ac89069bf448b2451bd198b4fc2d93aedb533e858
+  authority: EXTERNAL_EMPIRICAL_AND_THEORETICAL_PAPER
+- file: s41586-024-08548-w(3).md
+  sha256: 0d097cba7bbb25a949e2bf95af28b5a2259bd8d60b0e5fac5a74cdf7d05aa814
+  authority: EXTERNAL_EMPIRICAL_PAPER_MARKDOWN_SNAPSHOT
+- file: Carl_Sharif_El-TobguiRobert_Wisnovsky_Supervisor2_Wael_Halla_-_Reason_revelation__the_reconstitution_of_rationality__Taqi_al-Din_Ibn_Taymiyyas_d._728_1328_Dar_Ta_arud_al-_Aql_wa-l-Na_2013_McGill_Univ (1)(3).md
+  sha256: 657454ff7a1c43b895e7a378d12993295368a97c3f35df5a76edfaa32f67a177
+  authority: SECONDARY_SCHOLARLY_RECONSTRUCTION
+objects:
+  structure: finite_relational_structure_S
+  automorphism_group: Aut_S
+  content_set: finite_C
+  admissible_family: isomorphism_stable_I_of_S
+  fixed_family: Fix_I_of_S
+  natural_selector: isomorphism_natural_interpretation_family
+status_coordinates:
+  H7a1: structural_canonizability
+  H7a2: constitutive_semanticity
+  H7a3: mental_realization
+models:
+- id: AM-CM1-SYMMETRIC-NONCONSTANT
+  carrier: [x0, x1]
+  automorphisms: [identity, swap]
+  admissible_family:
+  - [c0, c1]
+  - [c1, c0]
+  fixed_family_size: 0
+  natural_selector: false
+- id: AM-CM2-RIGID-IMPERSONAL-LAW
+  carrier: [root, leaf]
+  signature: root_is_distinguished
+  admissible_family:
+  - [truth_anchor, derivative]
+  fixed_family_size: 1
+  impersonal_semantic_law: true
+  intrinsic_notionality: false
+  mental_host: false
+- id: AM-CM3-SIGNATURE-RELATIVE
+  expanded_signature_fixed_family_size: 1
+  reduct_fixed_family_size: 2
+  lesson: rigidity_depends_on_declared_resources
+- id: AM-CM4-KERNEL-REFERENCE-SWAP
+  equality_kernel: identical
+  interpretation_1: [c0, c1]
+  interpretation_2: [c1, c0]
+  literal_reference_equal: false
+- id: AM-CM5-DOWNSTREAM-ABSTRACTION
+  external_order: underived_impersonal
+  downstream_minds: [m0, m1]
+  universal_notions_in_minds: true
+  order_intrinsically_notional: false
+- id: AM-CM6-DISTRIBUTED-INTERPRETATION
+  subsystems: [d0, d1]
+  joint_semantic_recovery: true
+  one_subject: false
+- id: AM-CM7-LOCAL-GRAMMAR-CONVERGENCE
+  local_grammars: [g0, g1, g2]
+  shared_structural_kernel: true
+  unique_reference_assignment: false
+nonclaims:
+- no_H7a2_or_H7a3
+- no_personality_Wisdom_Speech
+- no_PRH_or_OSM_metaphysical_transfer
+- no_source_world_identity
+- no_integrated_champion

@@ -1,0 +1,61 @@
+schema: PMR007_DEEP_AK_ADMISSION_OVERLAY_V1
+identity: PMR-007-SAMC-1
+title: Source-predicated agency bundle, common-bearer filtering, and matched architecture
+  comparison
+status: ADMITTED_POST_MERGE_SCOPED_SOURCE_FORMAL_ARCHITECTURE_ADJUDICATION_RESULT
+canonical_packet: PMR-007_DEEP_ROUND_AK_SOURCE_AGENTIVE_BUNDLE_AND_ARCHITECTURE_COMPARISON_V2.md
+historical_identity: NONE
+historical_origin_credit: 0
+general_mathematical_novelty: 0
+source_status:
+  Asfahani_translation: TRANSLATED_PRIMARY_ACCESS
+  Arabic_primary_verification: OPEN
+  external_source_specialist_review: OPEN
+proof_status:
+  accepted_source_coreference_to_common_role_bearer: PROVED_AT_SOURCE_PROPOSITION_SCOPE
+  role_existence_without_coreference_to_common_bearer: NOT_ENTAILED
+  common_source_role_bearer_to_philosophical_personality: NOT_ENTAILED_IN_NEUTRAL_CLASS
+  source_bundle_to_actual_world: REQUIRES_REFERENT_IDENTITY_AND_WORLD_ADEQUACY
+  functional_source_agency: CONDITIONAL_CLASSIFICATION
+architecture_status:
+  A_unified_source_relative: LIVE_SOURCE_COMPATIBILITY_LEADER_BRIDGES_OPEN
+  B0_distributed_empty_intersection: SOURCE_INCOMPATIBLE_IF_COREFERENCE_ACCEPTED
+  B1_shared_powers_role_bearer: LIVE_SOURCE_ROLE_EXTENSION_RIVAL
+  C0_bare_actualizer: SOURCE_INCOMPATIBLE_IF_WORLD_IDENTIFIED
+  C1_source_extended_actualizer: LIVE_WITH_ADDITIONAL_PRIMITIVE_AND_BRIDGE_BURDENS
+countermodel_status:
+  existential_roles_without_coreference: VALIDATED
+  common_bearer_without_personality: VALIDATED
+  translation_deletion: PRESERVED
+  proposition_deletion: PRESERVED
+  world_deletion: VALIDATED
+  source_compatible_nonpersonal_role_bearer: VALIDATED
+  source_extended_architecture_C: VALIDATED
+  name_attribute_overread: PRESERVED
+cold_audit:
+  disposition: REPAIR_REQUIRED
+  blocking_findings: 12
+  repaired: 12
+repair_status: PASS
+fresh_rereview:
+  disposition: PASS_WITH_NONBLOCKING_SOURCE_SEMANTIC_AND_WORLD_BRIDGE_NOTES
+  method: SYMPY_SAT_THREE_BEARER_SOURCE_ACTUAL_LAYER
+  frozen_hash_mismatches: 0
+  source_anchor_failures: 0
+  external_independence: false
+authority_ceiling:
+- source_role_bundle_is_not_neutral_H6_H8_proof
+- functional_source_agency_is_not_first_person_personality
+- no_Arabic_primary_or_world_verification
+- no_scalar_architecture_ranking
+- no_integrated_champion_meniscus_or_natural_closure_credit
+theorem_family:
+  common_bearer_intersection: ELEMENTARY_SOURCE_FORMAL_APPLICATION
+  Deep_AH_AI_AJ: DIRECT_ANCESTRY
+  Candidate_G: MATCHED_ARCHITECTURE_COMPARISON
+repository_proposal_status: PUBLIC_SAFE_POST_MERGE_PROPOSAL_PENDING_REPOSITORY_AUDIT
+external_review: OPEN
+owner_adoption: PENDING
+integrated_champion: NONE
+meniscus: MENISCUS_NOT_REACHED
+natural_closure: NOT_REACHED

@@ -1,0 +1,52 @@
+schema: PMR007_DEEP_MENISCUS_BURDEN_DELTA_AJ_V1
+round: DEEP_AJ
+identity: PMR-007-CIOB-1
+closed_or_sharply_narrowed:
+- burden: neutral_intellectual_structure_to_unique_center
+  disposition: EXACT_SYMMETRY_BOUNDARY_ESTABLISHED
+  result: invariant_center_sets_are_unions_of_neutral_automorphism_orbits
+- burden: fixed_structural_host_to_first_person_subject
+  disposition: NEGATIVE_RESULT_ADMITTED
+  result: fixedness_is_necessary_for_neutral_singleton_but_not_sufficient_for_de_se_ownership_or_personality
+- burden: H8_intellect_to_personality_agency
+  disposition: SHARPLY_DECOMPOSED
+  result: requires_H8a_de_se_H8b_uptake_H8c_ownership_H8d_agency_H8e_stability_H8f_authority_world
+narrowed:
+- burden: Candidate_G_common_bearer
+  change: one_fixed_carrier_or_controller_remains_carrier_boxing_without_centered_ownership
+- burden: TAC_episode_subject_identity
+  change: carrier_episode_lineage_and_first_person_owner_are_explicitly_nonidentical
+- burden: Track_N_personal_source_filter
+  change: source_coreference_can_restrict_source_expanded_models_but_does_not_define_neutral_center
+opened_or_reopened:
+- H8a_de_se_indexicality
+- H8b_intentional_uptake
+- H8c_episode_ownership
+- H8d_counterfactual_agency
+- H8e_center_lineage_stability
+- H8f_authority_world_guards
+- matched_personal_impersonal_centered_architecture_comparison
+strongest_surviving_rival:
+  name: UNIQUE_IMPERSONAL_INTELLECT_CONTROL_ROLE_WITH_REFLEXIVE_SELF_MODEL
+  accepts:
+  - unique_structural_host
+  - intellectual_role
+  - reason_token_uptake
+  - causal_control
+  - self_model_token
+  withholds:
+  - de_se_indexicality
+  - intentional_ownership
+  - personal_subject
+  - Wisdom
+  - Speech
+candidate_effects:
+  Candidate_A: carrier_episode_lineage_and_subject_identity_firewall_strengthened
+  Candidate_B: runtime_self_model_and_central_control_do_not_establish_personality
+  Candidate_C: H8_bridge_decomposed_and_impersonal_rival_strengthened
+repository_proposal_status: PUBLIC_SAFE_POST_MERGE_PROPOSAL_PENDING_REPOSITORY_AUDIT
+owner_adoption: PENDING
+external_review: OPEN
+integrated_champion: NONE
+meniscus: MENISCUS_NOT_REACHED
+natural_closure: NOT_REACHED

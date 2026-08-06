@@ -1,0 +1,92 @@
+schema: PMR007_DEEP_MENISCUS_CROSSWALK_V1
+repository_authority: cc91f41fec364ea3910b80d57252bb1e0a050278
+historical_duration: '09:41:25.405101139'
+historical_segment: 357
+integrated_champion: NONE
+meniscus: MENISCUS_NOT_REACHED
+natural_closure: NOT_REACHED
+rounds:
+  DEEP_A:
+    identity: PMR-007-NFG-1
+    status: ADMITTED_POST_MERGE_SCOPED_RESULT
+    central_change: truth-linked norm factorization established; proper-function ground remains open
+  DEEP_B:
+    identity: PMR-007-DURP-1
+    status: ADMITTED_POST_MERGE_SCOPED_RESULT
+    central_change: genuine functional derivational unity constructed; personal realization parity unbroken
+  DEEP_C:
+    identity: PMR-007-ICR-1
+    status: ADMITTED_POST_MERGE_SCOPED_NEGATIVE_RESULT
+    central_change: strongest impersonal composite rival satisfies joint admitted package while withholding personal Necessary-Being conclusions
+  DEEP_D:
+    identity: PMR-007-UGEN-1
+    status: ADMITTED_POST_MERGE_SCOPED_RESULT
+    central_change: symmetry-relative prior-distinction theorem established; mentality and Speech bridges fail
+  DEEP_E:
+    identity: PMR-007-TNAC-1
+    status: ADMITTED_POST_MERGE_SCOPED_SOURCE_FORMAL_ADJUDICATION
+    central_change: Track-N compatibility separated from neutral entailment; no architecture dominates
+edges:
+  - id: E_TO_G_01
+    from: Candidate_E
+    to: Candidate_G
+    relation: CONTRIBUTES_CONSTRAINT_WITH_OPEN_GROUND
+    result: independently fixed truth targets constrain profile fibres, but the norm source remains primitive unless proper-function grounds are supplied
+    owner: PMR-007-NFG-1
+  - id: G_TO_T_01
+    from: Candidate_G
+    to: transcendental_ascent
+    relation: STRENGTHENS_AND_BLOCKS
+    result: genuine cross-domain unity can be constructed, but matched impersonal and distributed realizations block personality
+    owner: PMR-007-DURP-1
+  - id: T_TO_PF_01
+    from: transcendental_ascent
+    to: proper_function
+    relation: DOES_NOT_ESTABLISH
+    result: underived or necessary order does not by itself supply truth-linked teleology, proper operation, or Wisdom
+    owner: PMR-007-ICR-1
+  - id: UG_TO_G_01
+    from: uncreated_grammar
+    to: Candidate_G
+    relation: SUPPLIES_PRIOR_ASYMMETRY_BURDEN
+    result: determinate assignment requires prior distinguishing structure under equivariance, but this does not establish one derivational bearer
+    owner: PMR-007-UGEN-1
+  - id: UG_TO_T_01
+    from: uncreated_grammar
+    to: transcendental_ascent
+    relation: STRENGTHENS_ATE_WITH_SURVIVING_RIVAL
+    result: symmetry-relative nonemergence reinforces anti-total-emergence while impersonal abstract and powers structures remain models
+    owner: PMR-007-UGEN-1
+  - id: N_TO_UG_ATTR_01
+    from: Track_N
+    to: [uncreated_grammar, attribute_ascent]
+    relation: SOURCE_RELATIVE_PREMISE_SUPPLY
+    result: source premises can predicate mentality, attributes, and Speech school-internally but do not migrate into neutral T entailment
+    owner: PMR-007-TNAC-1
+  - id: R5_TO_G_T_01
+    from: R5_plural_and_impersonal_rivals
+    to: [Candidate_G, transcendental_ascent]
+    relation: COUNTERMODEL_AND_RIVAL_STRENGTHENING
+    result: the strongest rival now has genuine derivational laws, abstract order, concrete efficacy, primitive norm, and articulability
+    owner: PMR-007-ICR-1
+  - id: PMR_SUPPORT_TO_CENTRAL_01
+    from: transport_certificate_provenance_results
+    to: [Candidate_E, Candidate_G, transcendental_ascent, Track_N]
+    relation: APPLICABILITY_GUARD_ONLY
+    result: source, version, authority, provenance, and temporal guards constrain premise use but do not establish premise truth
+    owners: [PMR-007-VCT-1, PMR-007-ORTC-V4, PMR-007-PRQT-1, PMR-007-PRRC-1]
+central_status:
+  proper_function: GROUND_UNESTABLISHED
+  epistemic_unification: FUNCTIONAL_UNITY_ESTABLISHED_REALIZATION_UNDECIDED
+  uncreated_grammar: PRIOR_STRUCTURE_ESTABLISHED_MENTALITY_AND_SPEECH_UNESTABLISHED
+  necessary_existence_to_creator: BRIDGE_INCOMPLETE
+  unity_common_bearer: BRIDGE_INCOMPLETE
+  attribute_ascent: SOURCE_RELATIVE_ONLY_AT_CURRENT_AUTHORITY
+  strongest_rival: IMPERSONAL_ABSTRACT_ORDER_PLUS_CONCRETE_POWERS_ACTUALIZER
+  source_authority: NO_ARABIC_PRIMARY_VERIFICATION_AND_NO_NEUTRAL_MIGRATION
+next_central_burdens:
+  - source-relative_fitrah_proper_function_closure_and_neutral_parity
+  - qiyas_al_awla_attribute_guard_minimality_and_plural_bearer_pressure
+  - truth_conduciveness_of_derivational_unification
+  - order_actuality_applicability_bridge
+  - common_bearer_or_unity_without_carrier_boxing

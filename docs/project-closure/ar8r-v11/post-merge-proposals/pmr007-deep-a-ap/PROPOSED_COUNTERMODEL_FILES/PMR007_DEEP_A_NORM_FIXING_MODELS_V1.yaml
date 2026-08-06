@@ -1,0 +1,50 @@
+schema: PMR007_DEEP_A_NORM_FIXING_MODELS_V1
+identity: PMR-007-NFG-1
+status: FROZEN_PENDING_COLD_AUDIT
+formal_scope:
+  worlds: finite
+  target: binary_independently_fixed
+  profile: deterministic_horn_data
+  standard: deterministic_profile_function
+  theorem: target_factors_through_profile_iff_constant_on_profile_fibres
+levels:
+  L0: descriptive_regularity
+  L1: account_relative_function_fixation
+  L2: truth_linked_epistemic_function
+  L3: proper_operation_and_warrant_custody
+horns:
+  retained_meta:
+    strongest_model: authorized_recursive_revision
+    fixed: procedural_authorization
+    missing: [truth_link, objective_fittingness, teleology]
+  trans_state:
+    subtypes:
+      constitutive_truth: {L2_target_fixing: true, L3_warrant: false}
+      selected_effect: {L1: true, L2: not_entailed}
+      causal_or_organizational: {L1: true, L2: not_entailed}
+      design: {L1: true, normative_propriety: not_entailed}
+      practice: {token_transcendence: true, global_objectivity: not_entailed}
+      fitrah: {school_internal_L1_L2: conditional, neutral_world_claim: not_entailed}
+  holistic_fixed_point:
+    strongest_model: unique_or_multiple_global_equilibria
+    fixed: coherence_relative_standard
+    missing: [truth_correspondence, objective_fittingness]
+  primitive_norm:
+    strongest_model: primitive_truth_linked_fact
+    truth_link: can_be_stipulated
+    missing: [explanation, teleology, bearer, wisdom]
+  error_or_relative:
+    objective_correction: denied_or_relativized
+countermodels:
+  - {id: A-CM1, name: harmful_retained_meta_rule, defeats: correction_implies_fittingness}
+  - {id: A-CM2, name: selected_deception, defeats: selected_effect_implies_truth_aim}
+  - {id: A-CM3, name: malicious_design, defeats: design_implies_normative_propriety}
+  - {id: A-CM4, name: stable_harmful_organization, defeats: organizational_function_implies_good_end}
+  - {id: A-CM5, name: truth_opposed_coherent_equilibria, defeats: coherence_implies_truth}
+  - {id: A-CM6, name: primitive_truth_linked_norm, defeats: truth_link_implies_teleology_or_wisdom}
+  - {id: A-CM7, name: constitutive_truth_unreliable_mechanism, defeats: truth_target_implies_warrant}
+  - {id: A-CM8, name: fitrah_source_relative_positive, defeats: school_internal_premises_imply_neutral_world_conclusion}
+terminal_disposition:
+  proper_function_ground: UNESTABLISHED
+  wisdom_bridge: UNESTABLISHED
+  strongest_surviving_horns: [constitutive_truth, selected_effect, holistic_fixed_point, primitive_norm, fitrah_school_internal, error_theory]

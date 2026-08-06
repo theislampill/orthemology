@@ -1,0 +1,47 @@
+{
+  "schema": "PMR007_DEEP_AE_DISTINCT_RECTANGULAR_ANOVA_REREVIEW_V2",
+  "frozen_hash_rows_checked": 6,
+  "frozen_hash_failures": [],
+  "random_vector_families_n6_m2": 12000,
+  "partition_cases_checked": 58987,
+  "mobius_vs_rectangular_identity_mismatches": 0,
+  "connected_families": 5970,
+  "component_containment_failures": 0,
+  "coordinate_permutation_component_count_failures": 0,
+  "controls": {
+    "impersonal_connected_family": {
+      "functions": [
+        "x0*x1+x1*x2",
+        "x2*x3+x3*x4+x4*x5"
+      ],
+      "b_add": 1,
+      "personal": false
+    },
+    "one_carrier_additive_family": {
+      "functions": [
+        "x0+x1",
+        "x2+x3",
+        "x4+x5"
+      ],
+      "one_carrier": true,
+      "b_add": 3
+    },
+    "hidden_latent": {
+      "observed_b_add": 1,
+      "latent_registry_complete": false
+    },
+    "arbitrary_coupling": {
+      "b_add": 1,
+      "explanatory_motivation": false
+    }
+  },
+  "result": "PASS",
+  "nonclaims": [
+    "semantic coordinate validity",
+    "family completeness",
+    "causal direction",
+    "common bearer",
+    "personality",
+    "Wisdom"
+  ]
+}

@@ -1,0 +1,51 @@
+schema: PMR007_DEEP_K_PROPER_FUNCTION_WISDOM_MODELS_V1
+status: POST_MERGE_RESEARCH_CANDIDATE
+guards: [AG, K, F, W, M, C, X]
+role_contract:
+  WisdomEpisode: [AG, K, F, W, M, C, X]
+models:
+  - id: K-PW1-SCOPED-WISDOM-EPISODE
+    true_guards: [AG, K, F, W, M, C, X]
+    role_contract_satisfied: true
+  - id: K-CM1-HARMFUL-CORRIGIBILITY
+    true_guards: [AG, K, W, M, C, X]
+    false_guards: [F]
+    computational_success: true
+    objective_fittingness: false
+  - id: K-CM2-IMPERSONAL-TRUTH-TRACKER
+    true_guards: [K, F, M, C, X]
+    false_guards: [AG, W]
+    selected_effect_truth_tracking: true
+    personal_wisdom: false
+  - id: K-CM3-ACCIDENTAL-BENEFICENCE
+    true_guards: [F, X]
+    false_guards: [AG, K, W, M]
+    beneficial_outcome: true
+  - id: K-CM4-KNOWLEDGEABLE-VICIOUS-AGENT
+    true_guards: [AG, K, W, M, C, X]
+    false_guards: [F]
+    knowledge_will_power: true
+    wisdom: false
+  - id: K-CM5-BENEVOLENT-INCOMPETENCE
+    true_guards: [AG, F, W, C]
+    false_guards: [K, M, X]
+  - id: K-CM6-SELECTED-DECEPTION
+    proper_function: selected_effect_deception
+    success: true
+    truth_directed_fittingness: false
+  - id: K-CM7-BRUTE-FITTINGNESS
+    true_guards: [F]
+    bearers: []
+    purposive_ground: false
+  - id: K-CM8-DISTRIBUTED-ROLES
+    bearers:
+      epistemic: [AG, K]
+      normative: [F, W]
+      executive: [M, C, X]
+    global_guard_availability: true
+    common_bearer: false
+  - id: K-CM9-SOURCE-PREDICATED-WISE
+    track_n_predicates: [Wise]
+    neutral_guard_evidence: incomplete
+    source_conditioned_conclusion: true
+    neutral_entailment: false

@@ -1,0 +1,42 @@
+schema: PMR007_DEEP_MENISCUS_BURDEN_DELTA_I_J_V1
+closed_at_scoped_level:
+- id: BIJ-01
+  burden: neutral unique-realizer selection under declared symmetry
+  result: PMR-007-OAS-1
+  status: fixed-point characterization admitted
+- id: BIJ-02
+  burden: one underived efficacy-lineage root
+  result: PMR-007-UCA-1
+  status: finite complete homogeneous upstream-directed characterization admitted
+narrowed:
+- id: BIJ-03
+  burden: order_to_actuality
+  status: split into applicability, efficacy, and invariant-selection bridges
+- id: BIJ-04
+  burden: plural_actualizer_unity
+  status: plural roots excluded only under complete upstream-directed lineage; one impersonal root survives
+- id: BIJ-05
+  burden: actualizer_to_creator
+  status: declared-domain sufficient actualizer still lacks complete origination and personal/agentic predicates
+opened_or_sharpened:
+- id: BIJ-06
+  burden: world_level_applicability_relation
+  reason: abstract order existence does not provide application or efficacy
+- id: BIJ-07
+  burden: nonidle_symmetry_breaker
+  reason: haecceity or source tag can select without explaining
+- id: BIJ-08
+  burden: lineage_relation_completeness
+  reason: hidden edges or external contributors defeat root certification
+- id: BIJ-09
+  burden: node_granularity
+  reason: one root node may denote a distributed or composite system
+- id: BIJ-10
+  burden: proper_function_to_wisdom
+  reason: one actualizer root supplies no truth-linked praiseworthy teleology
+strongest_surviving_rival: ABSTRACT_ORDER_PLUS_IMPERSONAL_POWERS_FIELD_WITH_OPTIONAL_UNIQUE_LINEAGE_ROOT
+blocked_external:
+- world_level_dependency_evidence
+- source_truth_and_Arabic_primary_verification
+- external_philosophical_review
+- owner_adoption

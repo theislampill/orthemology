@@ -1,0 +1,56 @@
+{
+  "schema": "PMR007_DEEP_AA_CAUSAL_GUIDANCE_PRIMARY_CHECK_V3",
+  "boolean_neutral_SCMs": 1024,
+  "causal_guidance_SCMs": 512,
+  "all_true_carried_guard_guidance_instances": 512,
+  "characterization_failures": 0,
+  "personal_impersonal_neutral_reduct_failures": 0,
+  "guard_independence_failures": 0,
+  "guard_assignments_per_neutral_SCM": 16,
+  "controls": {
+    "AA-CM1-causal-false-semantic-anchor": {
+      "fa": [
+        0,
+        1
+      ],
+      "causal_guidance": true,
+      "SemanticAnchor": false
+    },
+    "AA-CM2-semantic-anchor-true-no-guidance": {
+      "fa": [
+        0,
+        0
+      ],
+      "causal_guidance": false,
+      "SemanticAnchor": true
+    },
+    "AA-CM3-impersonal-guidance": {
+      "fa": [
+        0,
+        1
+      ],
+      "all_carried_neutral_guards": true,
+      "IntentionalUptake": false,
+      "FirstPersonOwnership": false,
+      "SelectionBecauseFitting": false,
+      "Personality": false,
+      "Wisdom": false
+    },
+    "AA-CM4-personal-twin": {
+      "same_neutral_signature_as_CM3": true,
+      "IntentionalUptake": true,
+      "FirstPersonOwnership": true,
+      "SelectionBecauseFitting": true,
+      "Personality": true,
+      "Wisdom": "candidate_only"
+    }
+  },
+  "nonclaims": [
+    "world causal model correctness",
+    "metaphysical possibility or equal probability of the twins",
+    "normative authority from encoded Score",
+    "intentional uptake, first-person ownership, personality, or Wisdom",
+    "source-relative predicates migrate into a neutral theorem"
+  ],
+  "result": "PASS"
+}

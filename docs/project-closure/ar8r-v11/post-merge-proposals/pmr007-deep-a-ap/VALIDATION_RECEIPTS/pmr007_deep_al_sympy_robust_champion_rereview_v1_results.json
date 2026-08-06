@@ -1,0 +1,124 @@
+{
+  "candidate_G_anchor_checks": 7,
+  "candidate_G_anchor_failures": 0,
+  "claims": {
+    "A_is_completion_sensitive": true,
+    "B_is_completion_sensitive": true,
+    "C_is_completion_sensitive": true,
+    "candidate_G_custody_anchors_pass": true,
+    "current_evidence_does_not_make_any_winner_tautological": true,
+    "multiple_or_tie_completions_exist": true,
+    "no_winner_completion_exists": true
+  },
+  "frozen_hash_mismatches": 0,
+  "frozen_hash_rows": 7,
+  "method": "SYMPY_SYMBOLIC_OPEN_BURDEN_COMPLETION",
+  "notes": [
+    "Satisfiable winner completions do not establish present evidence or probabilities.",
+    "The comparison is regime-typed and no scalar score is treated as canonical.",
+    "No architecture is admitted as champion."
+  ],
+  "overall": "PASS",
+  "queries": {
+    "A_not_necessary": {
+      "model": {
+        "u1": false,
+        "u2": false,
+        "u3": false,
+        "u4": true,
+        "u5": true,
+        "u6": false
+      },
+      "satisfiable": true
+    },
+    "A_possible": {
+      "model": {
+        "u1": true,
+        "u2": true,
+        "u3": true,
+        "u4": false,
+        "u5": false,
+        "u6": true
+      },
+      "satisfiable": true
+    },
+    "B_not_necessary": {
+      "model": {
+        "u1": true,
+        "u2": true,
+        "u3": true,
+        "u4": false,
+        "u5": true,
+        "u6": true
+      },
+      "satisfiable": true
+    },
+    "B_possible": {
+      "model": {
+        "u1": false,
+        "u2": false,
+        "u3": false,
+        "u4": true,
+        "u5": false,
+        "u6": false
+      },
+      "satisfiable": true
+    },
+    "C_not_necessary": {
+      "model": {
+        "u1": true,
+        "u2": true,
+        "u3": true,
+        "u4": true,
+        "u5": false,
+        "u6": true
+      },
+      "satisfiable": true
+    },
+    "C_possible": {
+      "model": {
+        "u1": false,
+        "u2": false,
+        "u3": false,
+        "u4": false,
+        "u5": true,
+        "u6": false
+      },
+      "satisfiable": true
+    },
+    "multiple_possible": {
+      "model": {
+        "u1": true,
+        "u2": true,
+        "u3": true,
+        "u4": true,
+        "u5": true,
+        "u6": true
+      },
+      "satisfiable": true
+    },
+    "no_winner_possible": {
+      "model": {
+        "u1": false,
+        "u2": false,
+        "u3": false,
+        "u4": false,
+        "u5": false,
+        "u6": false
+      },
+      "satisfiable": true
+    },
+    "one_architecture_robustly_wins": {
+      "model": {
+        "u1": false,
+        "u2": false,
+        "u3": false,
+        "u4": true,
+        "u5": false,
+        "u6": false
+      },
+      "satisfiable": true
+    }
+  },
+  "schema": "PMR007_DEEP_AL_DISTINCT_ROBUST_CHAMPION_REREVIEW_RESULTS_V1"
+}

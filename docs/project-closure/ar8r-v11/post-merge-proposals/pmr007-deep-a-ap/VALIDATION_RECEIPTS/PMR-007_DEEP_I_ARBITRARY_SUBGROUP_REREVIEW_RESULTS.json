@@ -1,0 +1,24 @@
+{
+  "exact_invariant_fibre_cases": 131,
+  "exact_subgroups_n_le_4": 39,
+  "exact_transitive_group_fibre_cases": 12,
+  "failure_count": 0,
+  "failures": [],
+  "frozen_hash_mismatches": [],
+  "largest_random_group_order": 5040,
+  "model_assertions": {
+    "I-CM1_order_without_application": true,
+    "I-CM2_application_without_efficacy": true,
+    "I-CM3_nonempty_effective_fibre_without_fixed_output": true,
+    "I-PW1_unique_fixed_output": true
+  },
+  "random_generated_subgroup_cases_n_5_to_7": 750,
+  "result": "PASS",
+  "schema": "PMR007_DEEP_I_ARBITRARY_SUBGROUP_REREVIEW_RESULTS_V1",
+  "subgroup_counts_generated_by_at_most_two_generators_n_le_4": {
+    "1": 1,
+    "2": 2,
+    "3": 6,
+    "4": 30
+  }
+}

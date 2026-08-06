@@ -1,0 +1,42 @@
+schema: PMR007_DEEP_AP_SOURCE_WORLD_REFERENT_MODELS_V1
+identity: PMR-007-SWRI-1
+version: V1
+objects:
+  source_structure: S
+  unique_source_role_bearer: g
+  world_structure: W
+  translated_role_bundle: U_W
+  admissible_interpretations: H
+  image_fibre: F_H_g
+results:
+  SWRI_1A: nonempty_role_preserving_H_implies_world_role_realizer
+  SWRI_1B: unique_world_identification_iff_image_fibre_singleton
+  SWRI_1C: under_role_completeness_image_fibre_equals_world_role_bearers
+models:
+- id: AP-CM1-EMPTY-H
+  H: []
+  world_existence_from_source: false
+- id: AP-CM2-TWO-ROLE-BEARERS
+  world_role_bearers: [w0,w1]
+  image_fibre: [w0,w1]
+  unique_referent: false
+- id: AP-CM3-HIDDEN-ANCHOR
+  world_role_bearers: [w0,w1]
+  H_images_g: [w0]
+  source_role_derived_uniqueness: false
+- id: AP-CM4-PRESERVATION-NONREFLECTION
+  source_roles: [creator, knowing]
+  world_image_roles: [creator, knowing, impersonal]
+  complete_profile_transferred: false
+- id: AP-CM5-VERSION-DRIFT
+  role_translation_changes: true
+  old_referent_certificate_valid: false
+- id: AP-CM6-SOURCE_COMPATIBLE_IMPERSONAL
+  selected_role_bundle: true
+  personality: false
+  Wisdom: false
+nonclaims:
+- no_Arabic_primary_verification
+- no_actual_world_realization
+- no_personal_ground_or_Wisdom
+- no_integrated_champion

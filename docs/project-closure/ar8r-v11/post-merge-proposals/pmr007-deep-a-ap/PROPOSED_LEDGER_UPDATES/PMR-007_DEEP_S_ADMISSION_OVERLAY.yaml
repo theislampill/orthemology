@@ -1,0 +1,33 @@
+schema: PMR007_DEEP_S_ADMISSION_OVERLAY_V1
+identity: PMR-007-SCRF-1
+title: Source-conditioned rival filter and nonmigration
+status: ADMITTED_POST_MERGE_SCOPED_SOURCE_FORMAL_ADJUDICATION
+provenance: NEW_POST_MERGE_SCOPED_RESULT
+historical_identity: NONE
+accepted_results:
+  - finite source-rival filtering is exactly a defect-hypergraph transversal condition
+  - H12 and H16 are both necessary for source-conditioned exclusion of the neutral rival
+  - bearer-local source co-predication cannot be replaced by global plural role availability
+  - source-expanded discrimination does not migrate into the neutral reduct
+central_bridge_effects:
+  B12: NARROWED_H12_EXPLICIT
+  B14: SOURCE_INTERNAL_ONLY
+  B15: ACTUAL_AND_UNCREATED_SPEECH_REMAIN_SOURCE_CONDITIONED
+  B16: NARROWED_H16_EXPLICIT
+  R5: NEUTRAL_RIVAL_UNDEFEATED_SOURCE_RELATIVE_FILTER_AVAILABLE
+nonclaims:
+  - no Arabic-primary verification
+  - no source authentication proof
+  - no referent identification proof
+  - no neutral divine-attribute entailment
+  - no exhaustive rival elimination
+  - no general mathematical novelty
+cold_audit: REPAIR_REQUIRED
+repairs: ALL_BLOCKING_FINDINGS_REPAIRED
+fresh_rereview: PASS_WITH_NONBLOCKING_SOURCE_AND_SCOPE_NOTES
+external_review: OPEN
+owner_adoption: PENDING
+repository_proposal_status: EXTERNAL_REVIEW_AND_OWNER_ADOPTION_REQUIRED
+integrated_champion: NONE
+meniscus: MENISCUS_NOT_REACHED
+natural_closure: NOT_REACHED

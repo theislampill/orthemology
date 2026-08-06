@@ -1,0 +1,122 @@
+{
+  "review": "PMR-007 Round 16 V2 distinct direct-semantic rereview",
+  "review_relation": "same-model procedural rereview with separate implementation; not external human or independent model-lineage review",
+  "frozen_hashes": {
+    "PMR-007_FRONTIER_ROUND16_VERSION_CUSTODY_TRANSPORT_AND_TEMPORAL_ELIGIBILITY_V2.md": {
+      "expected": "599e9dd9595e26ae857a9a1e7c8a07306a2ec13f25c0c5a0500da544bc45f3ba",
+      "actual": "599e9dd9595e26ae857a9a1e7c8a07306a2ec13f25c0c5a0500da544bc45f3ba",
+      "pass": true
+    },
+    "models/PMR007_ROUND16_VERSION_CUSTODY_AND_ELIGIBILITY_V2.yaml": {
+      "expected": "0f29fc7d081898901fd78af1ba1aaf379264988bd844b6cf13258551cfd13eef",
+      "actual": "0f29fc7d081898901fd78af1ba1aaf379264988bd844b6cf13258551cfd13eef",
+      "pass": true
+    },
+    "checks/pmr007_round16_version_custody_check_v2.py": {
+      "expected": "739e8a918b403161249375b2159ce9a858676e9fda6df024252a0671abc4fd0f",
+      "actual": "739e8a918b403161249375b2159ce9a858676e9fda6df024252a0671abc4fd0f",
+      "pass": true
+    },
+    "checks/pmr007_round16_version_custody_check_v2_results.json": {
+      "expected": "3e2c5c67bf6d81ff9df2239a1e78629e2b820ff4aaa50ddb4986063ba6c5b96a",
+      "actual": "3e2c5c67bf6d81ff9df2239a1e78629e2b820ff4aaa50ddb4986063ba6c5b96a",
+      "pass": true
+    },
+    "audits/PMR-007_FRONTIER_ROUND16_V1_COLD_AUDIT.md": {
+      "expected": "575d1199348bbf1d774be2a255f73cade458733100c5f8e4a2c7d85814d611e2",
+      "actual": "575d1199348bbf1d774be2a255f73cade458733100c5f8e4a2c7d85814d611e2",
+      "pass": true
+    },
+    "repairs/PMR-007_FRONTIER_ROUND16_REPAIR_LOG.md": {
+      "expected": "7e3b6c2de058a44f36001bb0c485dc2541eb4c332184d7fe01706a758f9f677e",
+      "actual": "7e3b6c2de058a44f36001bb0c485dc2541eb4c332184d7fe01706a758f9f677e",
+      "pass": true
+    }
+  },
+  "evidence_hashes": {
+    "PRIVATE_EVIDENCE_REFERENCE:AR8R_AR2_AR3_COLLECTIVE_BACKBONE_RECONCILIATION.md": {
+      "expected": "fb22d822c53259cac6045df41ede3addcfd6089e5196dae885394ece49e0d7d7",
+      "actual": "fb22d822c53259cac6045df41ede3addcfd6089e5196dae885394ece49e0d7d7",
+      "pass": true
+    },
+    "PRIVATE_EVIDENCE_REFERENCE:PMR_AGCOM_01_CANDIDATE.md": {
+      "expected": "d2a4d6a7a20cf32546da0b683266e7c3497aaecaa320f301b934018c3fd907a7",
+      "actual": "d2a4d6a7a20cf32546da0b683266e7c3497aaecaa320f301b934018c3fd907a7",
+      "pass": true
+    },
+    "PRIVATE_EVIDENCE_REFERENCE:PMR_AGCOM_02_CANDIDATE_V2.md": {
+      "expected": "98b451468eaa225b1f23427c70007bd7a92ceab4fa1440afce0637248d833a9e",
+      "actual": "98b451468eaa225b1f23427c70007bd7a92ceab4fa1440afce0637248d833a9e",
+      "pass": true
+    },
+    "PRIVATE_EVIDENCE_REFERENCE:PMR_AGCOM_06_CANDIDATE_V2.md": {
+      "expected": "5b8d1b411c7a5aea03e0bd0f836d0d68f9f698f3429125cd5e82fd01c8163a7c",
+      "actual": "5b8d1b411c7a5aea03e0bd0f836d0d68f9f698f3429125cd5e82fd01c8163a7c",
+      "pass": true
+    },
+    "PRIVATE_EVIDENCE_REFERENCE:PMR_LANG_01_CANDIDATE_V2.md": {
+      "expected": "f9d6820ef93ef276a45dc3d8176fae70b659063b6f8e8d6d9021ee2917984232",
+      "actual": "f9d6820ef93ef276a45dc3d8176fae70b659063b6f8e8d6d9021ee2917984232",
+      "pass": true
+    },
+    "PRIVATE_EVIDENCE_REFERENCE:PMR_LANG_02_CANDIDATE_V2.md": {
+      "expected": "236d570a5bc1a149008cd20ae8493d53afd609a8585e01ffb46ae4df863b3af2",
+      "actual": "236d570a5bc1a149008cd20ae8493d53afd609a8585e01ffb46ae4df863b3af2",
+      "pass": true
+    }
+  },
+  "positive_path": {
+    "valid": true,
+    "reason": null,
+    "edge_trace": [
+      "e12",
+      "e23"
+    ]
+  },
+  "repair_regressions": {
+    "VCT-F01-PRESERVED-OBLIGATION-LAUNDERING": {
+      "reason": "preserved-obligation-not-discharged",
+      "expected": "preserved-obligation-not-discharged",
+      "pass": true
+    },
+    "VCT-F02-REASON-DAG-BOUNDARY-DRIFT": {
+      "reason": "reason-dag-boundary-mismatch",
+      "expected": "reason-dag-boundary-mismatch",
+      "pass": true
+    }
+  },
+  "direct_strategy_monotonicity": {
+    "totals": {
+      "games": 444,
+      "pairs": 3252,
+      "strategy_enumerations": 7863,
+      "failures": 0
+    },
+    "first_failure": null
+  },
+  "temporal_reopening": {
+    "v1": {
+      "W_core": [
+        "q0",
+        "q1"
+      ],
+      "W_coB": [
+        "q0",
+        "q1"
+      ]
+    },
+    "v2": {
+      "W_core": [
+        "q0"
+      ],
+      "W_coB": [
+        "q0"
+      ]
+    },
+    "pass": true
+  },
+  "primary_frozen_result": "PASS",
+  "authority_ceiling": "post-merge scoped integration/application; original RP-T2/RP-T40 bytes unavailable here; no source truth, runtime completeness, general novelty, or adoption",
+  "elapsed_seconds": 0.25243546299998343,
+  "overall": "PASS"
+}

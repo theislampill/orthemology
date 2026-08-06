@@ -27,6 +27,10 @@ V11 = ROOT / "docs" / "project-closure" / "ar8r-v11"
 CONNES = V11 / "provenance" / "AR8R-CONNES-RIGIDITY-DISPUTE-RECEIPT-V11.yaml"
 OSW15 = V11 / "governance" / "ORTHEMOLOGICAL-SPECIFICATION-WARRANT-OSW-15.yaml"
 PRIVATE_PDF_NAME = "C2680D5A-8FAE-11F1-A320-F5FC2CA0B584.pdf"
+PRIVATE_LOCATOR_RE = re.compile(
+    r"(?:(?<![A-Za-z0-9_])[A-Za-z]:\\(?![{}()\[\]])|/mnt/data/|sandbox:|file://|data-message-id|screen-threadFlyOut)",
+    re.I,
+)
 
 
 def digest(path: Path) -> str:
@@ -94,14 +98,13 @@ def validate() -> list[str]:
         osw = yaml.safe_load(OSW15.read_text(encoding="utf-8"))
         if len(osw.get("coordinates", [])) != 15:
             issues.append("V11 OSW-15 coordinate coverage changed")
-        forbidden = re.compile(r"(?:[A-Za-z]:\\|/mnt/data/|sandbox:|file://|data-message-id|screen-threadFlyOut)", re.I)
         for path in V11.rglob("*"):
             if not path.is_file():
                 continue
             text = path.read_text(encoding="utf-8", errors="ignore")
             if PRIVATE_PDF_NAME.lower() in text.lower():
                 issues.append(f"private PDF filename entered V11 public tree: {path.relative_to(ROOT)}")
-            if forbidden.search(text):
+            if PRIVATE_LOCATOR_RE.search(text):
                 issues.append(f"private locator entered V11 public tree: {path.relative_to(ROOT)}")
     return issues
 

@@ -1,0 +1,35 @@
+schema: PMR007_DEEP_D_UNCREATED_GRAMMAR_MODELS_V2
+identity: PMR-007-UGEN-1
+status: REPAIRED_V2_PENDING_FRESH_REREVIEW
+equivariant_theorem:
+  assumptions:
+    - finite_or_arbitrary_group_action
+    - source_point_fixed_by_group
+    - operation_equivariant
+  conclusion: output_is_group_fixed
+  novelty: STANDARD_GROUP_ACTION_FACT
+sharp_controls:
+  - {id: D-CM1, source_asymmetry: true, operation_equivariant: true, determinate_output: true}
+  - {id: D-CM2, source_fixed: true, operation_equivariant: false, determinate_output: true}
+  - {id: D-CM3, external_selector_parameter: true, determinate_output: true}
+  - {id: D-CM4, invariant_distribution: true, realized_sample_noninvariant: true}
+  - {id: D-CM5, target_group_fixed: true, equivariant_constant_map: true}
+articulability_nonmental_models:
+  - {id: UG7-CM1, kind: necessary_abstract_grammar, articulability: true, mentality: false}
+  - {id: UG7-CM2, kind: modal_primitivism, articulability: true, mentality: false}
+  - {id: UG7-CM3, kind: powers_and_dispositions, articulability: true, mentality: false}
+  - {id: UG7-CM4, kind: distributed_architecture, articulability: true, mentality: false, one_subject: false}
+  - {id: UG7-CM5, kind: holistic_fixed_point, articulability: true, mentality: false}
+  - {id: UG7-CM6, kind: brute_semantic_order, articulability: true, mentality: false}
+  - {id: UG7-CM7, kind: plural_local_grammars, articulability: true, mentality: false, unique_grammar: false}
+speech_nonimplications:
+  - {id: UG8-CM1, knowledge: true, agency: false, speech: false}
+  - {id: UG8-CM2, agency: true, communicative_capacity: false, speech: false}
+  - {id: UG8-CM3, communicative_capacity: true, actual_speech: false}
+  - {id: UG8-CM4, actual_speech: true, revelational_identification: false}
+created_expression_contract:
+  token_identity_implies_content_identity: false
+  content_identity_implies_token_identity: false
+  translation_implies_complete_preservation: false
+  repeated_bytes_imply_uncreated_content: false
+  source_theological_bridge_required: true

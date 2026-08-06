@@ -1,0 +1,14 @@
+{
+  "external_selector_cases": 27,
+  "fixed_point_extension_cases": 33,
+  "overall": "PASS",
+  "schema": "PMR007_DEEP_D_EQUIVARIANCE_CHECK_RESULTS_V2",
+  "source_asymmetry_cases": 27,
+  "symmetric_target_cases": 27,
+  "theorem_or_sharp_control_failures": [],
+  "ug7_models_checked": 7,
+  "ug7_nonbridge_pass": true,
+  "ug8_models_checked": 4,
+  "ug8_nonbridge_pass": true,
+  "ug9_contract_pass": true
+}

@@ -1,0 +1,40 @@
+{
+  "all_prior_driven_examples_unchanged": true,
+  "bayes_identity_failures": 0,
+  "coding_reversal": {
+    "language_L1": {
+      "C_impersonal": 4,
+      "C_personal": 1,
+      "preferred": "personal"
+    },
+    "language_L2": {
+      "C_impersonal": 1,
+      "C_personal": 4,
+      "preferred": "impersonal"
+    }
+  },
+  "exact_rational_parity_cases": 810,
+  "likelihood_asymmetry_cases": 7290,
+  "matched_score_cases": 210,
+  "matched_score_tie_failures": 0,
+  "parity_failures": 0,
+  "pass": true,
+  "prior_driven_examples": [
+    {
+      "posterior_odds": "9",
+      "prior_odds": "9",
+      "unchanged": true
+    },
+    {
+      "posterior_odds": "1/9",
+      "prior_odds": "1/9",
+      "unchanged": true
+    },
+    {
+      "posterior_odds": "3/2",
+      "prior_odds": "3/2",
+      "unchanged": true
+    }
+  ],
+  "schema": "PMR007_DEEP_H_ABDUCTIVE_PARITY_RESULTS_V1"
+}

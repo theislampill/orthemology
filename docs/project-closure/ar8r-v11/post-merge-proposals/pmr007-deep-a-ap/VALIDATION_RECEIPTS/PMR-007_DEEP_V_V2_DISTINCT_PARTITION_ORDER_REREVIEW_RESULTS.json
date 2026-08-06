@@ -1,0 +1,20 @@
+{
+  "axis_recomputation_mismatches": 0,
+  "axis_swap_invariant_linear_extensions": 0,
+  "coarsest_joint_partition_blocks": 4,
+  "coarsest_profile_only_partition_blocks": 2,
+  "coarsest_release_partition_blocks": 2,
+  "coarsest_triple_partition_blocks": 8,
+  "coarsest_warrant_only_partition_blocks": 2,
+  "evaluation_episodes_recomputed": 8,
+  "frozen_hash_mismatches": 0,
+  "frozen_hash_rows": 7,
+  "pair_exact_joint_partitions": 1,
+  "pair_set_partitions_enumerated": 15,
+  "product_order_linear_extensions": 2,
+  "result": "PASS",
+  "schema": "PMR007_DEEP_V_DISTINCT_REREVIEW_RESULTS_V1",
+  "triple_exact_joint_partitions": 1,
+  "triple_set_partitions_enumerated": 4140,
+  "world_axis_independence_pairs": 4
+}
