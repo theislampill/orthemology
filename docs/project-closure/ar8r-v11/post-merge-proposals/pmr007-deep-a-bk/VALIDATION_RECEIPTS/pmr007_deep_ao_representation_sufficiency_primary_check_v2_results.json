@@ -1,0 +1,22 @@
+{
+  "claims": {
+    "every_exact_support_representation_refines_lr_partition": true,
+    "exact_bf_iff_ratio_constant_on_support_fibres": true,
+    "null_support_repair_exercised": true,
+    "strict_coarsening_loss_exercised": true,
+    "tv_data_processing": true
+  },
+  "counts": {
+    "bf_characterization_failures": 0,
+    "distributions": 20,
+    "minimality_failures": 0,
+    "model_pairs": 400,
+    "null_point_cases_removed": 308,
+    "partitions": 15,
+    "strict_loss_witnesses": 1484,
+    "support_partition_cases": 2652,
+    "tv_failures": 0
+  },
+  "overall": "PASS",
+  "schema": "PMR007_DEEP_AO_PRIMARY_RESULTS_V2"
+}

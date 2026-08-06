@@ -1,0 +1,13 @@
+{
+  "content_structures": 8,
+  "content_structures_rigid_after_designating_0": 4,
+  "interpretations": 216,
+  "nontrivial_interpretation_orbits": 210,
+  "orbit_profile_failures": 0,
+  "overall": "PASS",
+  "schema": "pmr007-deep-ay-semantic-gauge-primary-check-v1-results",
+  "singleton_interpretation_orbits": 6,
+  "structural_rigid_content_gauge_control": true,
+  "structures_where_designated_anchor_reduced_group": 6,
+  "truth_swap_control": true
+}

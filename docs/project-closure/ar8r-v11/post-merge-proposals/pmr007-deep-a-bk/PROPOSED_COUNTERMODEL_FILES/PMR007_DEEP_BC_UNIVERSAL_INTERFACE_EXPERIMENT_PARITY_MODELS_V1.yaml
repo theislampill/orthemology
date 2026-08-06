@@ -1,0 +1,18 @@
+schema: PMR007_DEEP_BC_MODELS_V1
+identity: PMR-007-UIEP-1
+setting:
+  hypotheses: [A_PERSONAL, R_IMPERSONAL]
+  experiment: finite Markov kernel from hypothesis to signal
+  downstream: common Markov kernel or finite decision rule
+  value: optimal expected bounded payoff under one common prior and decision problem
+controls:
+  BC-CM1: SIGNAL_PERMUTATION
+  BC-CM2: LOSS_DEPENDENT_ADVANTAGE
+  BC-CM3: DIFFERENT_INITIAL_DISTRIBUTION
+  BC-CM4: INTERVENTION_EXPANSION
+  BC-CM5: CANDIDATE_DEPENDENT_QUERY
+  BC-CM6: SOURCE_LABEL_LEAKAGE
+  BC-CM7: PRIOR_REVERSAL
+  BC-CM8: MUTUAL_GARBLING_NONIDENTITY
+  BC-CM9: PERSONAL_IMPERSONAL_TWIN
+  BC-CM10: SOURCE_RELATIVE_FILTER

@@ -1,0 +1,49 @@
+schema: PMR007_DEEP_MENISCUS_BURDEN_DELTA_AK_V1
+round: DEEP_AK
+identity: PMR-007-SAMC-1
+closed_or_sharply_narrowed:
+- burden: Track_N_selected_attribute_common_bearer
+  disposition: CONDITIONALLY_CLOSED_UNDER_ACCEPTED_COREFERENCE
+  result: source_role_sets_have_nonempty_total_intersection
+- burden: source_bundle_to_neutral_personality
+  disposition: NEGATIVE_RESULT_ADMITTED
+  result: common_role_bearer_does_not_neutrally_entail_de_se_or_philosophical_personality
+- burden: architecture_A_B_C_source_filtering
+  disposition: SHARPLY_ADJUDICATED
+  result: B0_C0_filtered_at_source_scope_B1_C1_survive
+narrowed:
+- burden: H6_common_bearer
+  change: source_relative_filtering_strengthened_neutral_derivation_open
+- burden: H8_personality
+  change: source_agentive_bundle_remains_semantically_short_of_neutral_first_person_personality
+- burden: R5_impersonal_rival
+  change: no_choice_no_speech_actualizer_narrowed_to_source_compatible_role_bearer_or_source_extended_actualizer
+opened_or_reopened:
+- Arabic_primary_verification
+- source_proposition_and_coreference_review
+- source_to_world_referent_identity
+- semantic_mapping_from_doer_with_choice_to_personality
+- matched_primitive_burden_A_vs_B1_vs_C1
+- H8_centered_ownership
+strongest_surviving_rival:
+  name: SOURCE_COMPATIBLE_COMMON_ROLE_BEARER_WITHOUT_INDEPENDENT_FIRST_PERSON_PERSONALITY
+  accepts:
+  - selected_source_role_bundle
+  - one_formal_role_bearer
+  - functional_choice_volition_ability_speech_roles
+  withholds:
+  - neutral_de_se_uptake
+  - first_person_ownership
+  - philosophical_personality
+  - world_identification
+  - Wisdom_as_neutral_consequence
+candidate_effects:
+  Candidate_A: source_and_role_provenance_constraints_explicit
+  Candidate_B: source_role_bundle_can_be_runtime_target_but_not_world_verified
+  Candidate_C: source_filtering_narrows_rivals_without_neutral_champion
+repository_proposal_status: PUBLIC_SAFE_POST_MERGE_PROPOSAL_PENDING_REPOSITORY_AUDIT
+owner_adoption: PENDING
+external_review: OPEN
+integrated_champion: NONE
+meniscus: MENISCUS_NOT_REACHED
+natural_closure: NOT_REACHED

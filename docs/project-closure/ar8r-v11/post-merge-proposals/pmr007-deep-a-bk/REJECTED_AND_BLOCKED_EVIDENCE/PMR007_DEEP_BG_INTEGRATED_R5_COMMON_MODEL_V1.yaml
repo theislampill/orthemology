@@ -1,0 +1,70 @@
+schema: pmr007-deep-bg-integrated-r5-common-model-v1
+identity: PMR-007-IR5CM-1
+version: V1
+sorts:
+  worlds: [w0, w1]
+  bearers: [g]
+  contents: [c0, c1]
+  actions: [a0, a1]
+  effects: [e0, e1]
+  tokens: [t0, t1]
+  latent_states: [h0, h1]
+neutral_model:
+  exists_in_world: {w0: [g], w1: [g]}
+  underived: {w0: [g], w1: [g]}
+  external_actual: {w0: [g], w1: [g]}
+  actualizes: {g: [e0, e1]}
+  roles_on_g: [modal_order, semantic_register, norm, selector, efficacy, expression]
+  truth: {c0: false, c1: true}
+  target_key: c1
+  target_authority_source: primitive_nonself_authorized_in_model
+  norm_value: {c0: 0, c1: 1}
+  selected_action: {0: a0, 1: a1}
+  effect_of: {a0: e0, a1: e1}
+  fitting_actions: [a1]
+  expression: {c0: t0, c1: t1}
+  faithful_expression: true
+  joint_law: [[0.5, 0.0], [0.0, 0.5]]
+  latent_product_width: 2
+  source_functional_role_bearer: g
+conclusion_predicates:
+- Intellect
+- Personal
+- Agentic
+- IntentionalUptake
+- BecauseFitting
+- Wisdom
+- SpeechCapacity
+- ActualSpeech
+- CreatorClass
+impersonal_expansion:
+  Intellect: false
+  Personal: false
+  Agentic: false
+  IntentionalUptake: false
+  BecauseFitting: false
+  Wisdom: false
+  SpeechCapacity: false
+  ActualSpeech: false
+  CreatorClass: false
+personal_twin_expansion:
+  Intellect: true
+  Personal: true
+  Agentic: true
+  IntentionalUptake: true
+  BecauseFitting: true
+  Wisdom: true
+  SpeechCapacity: true
+  ActualSpeech: true
+  CreatorClass: true
+scope:
+  necessity: across_declared_two_world_frame_only
+  concreteness: external_actuality_plus_declared_causal_efficacy
+  source_role: candidate_interpretation_functional_only
+nonclaims:
+- absolute_metaphysical_necessity
+- physical_or_metaphysical_possibility
+- explanatory_equality_of_rivals
+- source_authentication_or_actual_world_selection
+- personal_ground_falsity
+- general_mathematical_novelty

@@ -1,0 +1,29 @@
+{
+  "algebras_checked": 24,
+  "anti_unification_controls": {
+    "algebraic_realization_not_mentality_or_Speech": true,
+    "semantic_content_not_world_reference": true,
+    "source_authority_not_recipient_warrant": true,
+    "token_form_not_occurrence_context": true,
+    "version_applicability_not_semantic_equivalence": true,
+    "world_reference_not_source_authority": true
+  },
+  "bad_translation_cases": 252,
+  "bad_translation_undetected": 0,
+  "checker": "DISTINCT_QUOTIENT_TRANSLATION_REREVIEW_V2",
+  "congruence_failures": 0,
+  "frozen_hash_mismatches": [],
+  "frozen_hash_rows": 5,
+  "good_translation_cases": 252,
+  "good_translation_failures": 0,
+  "homomorphism_failures": 0,
+  "identity": "PMR-007-FTASA-1",
+  "operation_samples": 184824,
+  "personal_impersonal_twins": 2,
+  "quotient_failures": 0,
+  "result": "PASS",
+  "source_authority_twins": 2,
+  "tokens_checked": 1260,
+  "version_twins": 2,
+  "world_anchor_variants": 33
+}

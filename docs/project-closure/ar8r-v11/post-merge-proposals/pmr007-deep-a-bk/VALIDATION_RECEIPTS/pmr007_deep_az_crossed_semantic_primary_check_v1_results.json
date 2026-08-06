@@ -1,0 +1,78 @@
+{
+  "boolean_response_functions": 16,
+  "classification_counts": {
+    "constant": 2,
+    "content_mediated": 2,
+    "form_mediated": 2,
+    "interaction_or_mixed": 10
+  },
+  "deletion_witnesses": [
+    {
+      "a": [
+        0,
+        0,
+        1,
+        0
+      ],
+      "b": [
+        1,
+        0,
+        1,
+        0
+      ],
+      "missing_cell": 0
+    },
+    {
+      "a": [
+        0,
+        0,
+        0,
+        1
+      ],
+      "b": [
+        0,
+        1,
+        0,
+        1
+      ],
+      "missing_cell": 1
+    },
+    {
+      "a": [
+        0,
+        1,
+        0,
+        1
+      ],
+      "b": [
+        0,
+        1,
+        1,
+        1
+      ],
+      "missing_cell": 2
+    },
+    {
+      "a": [
+        0,
+        1,
+        0,
+        0
+      ],
+      "b": [
+        0,
+        1,
+        0,
+        1
+      ],
+      "missing_cell": 3
+    }
+  ],
+  "diagonal_cross_class_collision_pairs": 6,
+  "diagonal_profiles": 4,
+  "full_table_collisions": 0,
+  "overall": "PASS",
+  "schema": "pmr007-deep-az-crossed-semantic-primary-check-v1-results",
+  "semantic_form_diagonal_collision": true,
+  "single_cell_deletion_failures": 0
+}

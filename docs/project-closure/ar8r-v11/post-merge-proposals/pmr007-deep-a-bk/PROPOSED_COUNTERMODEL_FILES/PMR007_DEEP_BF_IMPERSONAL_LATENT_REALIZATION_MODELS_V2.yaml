@@ -1,0 +1,59 @@
+schema: pmr007-deep-bf-ilrc-models-v2
+identity: PMR-007-ILRC-1
+version: V2
+setting:
+  observed_blocks: [X, Y]
+  law_type: one_frozen_finite_bivariate_observational_probability_matrix
+  factorization_field: nonnegative_reals
+  latent_product_width:
+    positive_weights_only: true
+    zero_terms_deleted: true
+  markov_channel_convention:
+    equation: P_prime = K_X * P * transpose(K_Y)
+    kernels: column_stochastic
+positive_witnesses:
+  product:
+    matrix: [[0.12, 0.28], [0.18, 0.42]]
+    exact_width: 1
+  binary_equality:
+    matrix: [[0.5, 0.0], [0.0, 0.5]]
+    exact_width: 2
+    lower_bounds: [ordinary_rank, support_rectangle_cover]
+  ternary_equality:
+    matrix:
+    - [0.3333333333333333, 0.0, 0.0]
+    - [0.0, 0.3333333333333333, 0.0]
+    - [0.0, 0.0, 0.3333333333333333]
+    exact_width: 3
+    lower_bounds: [ordinary_rank, support_rectangle_cover]
+  strict_common_channel_contraction:
+    source: normalized_identity_3
+    operation: merge_all_X_states
+    source_width: 3
+    output_width: 1
+controls:
+  unrestricted_saturation:
+    construction: H_equals_X_or_H_equals_Y
+  width_not_bearer_count:
+    witness: one_impersonal_n_state_randomizer_realizes_I_n_over_n
+  rank_one_not_causal_unity:
+    witness: same_product_law_has_multiple_causal_and_ontological_realizations
+  nonunique_factorization:
+    conclusion: P_does_not_identify_factors_or_label_orientation
+  candidate_specific_recoding:
+    conclusion: comparison_requires_common_channel_or_modelled_selection
+  observational_interventional:
+    conclusion: one_P_does_not_determine_shared_latent_intervention_family
+  tensor_scope:
+    conclusion: no_multiway_tensor_characterization
+  real_rational:
+    conclusion: rational_checker_does_not_identify_rank_plus_Q_with_rank_plus_R
+nonclaims:
+- generic_minimum_nonnegative_rank_algorithm
+- unique_latent_semantics
+- causal_or_interventional_identification
+- generic_tensor_rank_characterization
+- metaphysical_actuality
+- bearer_subject_agent_or_provenance_root_count
+- personality_agency_Wisdom_or_divine_unity
+- general_mathematical_novelty

@@ -1,0 +1,30 @@
+{
+  "checker": "primary deterministic trace enumeration plus random rational weighted systems",
+  "counts": {
+    "bound_long_horizon_cases": 16384,
+    "delayed_length3_witnesses": 0,
+    "deterministic_models": 128,
+    "deterministic_pairs": 16384,
+    "failures": 1,
+    "hidden_tag_controls": 1,
+    "probabilistic_bound_cases": 300,
+    "random_probabilistic_pairs": 300,
+    "representation_erasure_controls": 1
+  },
+  "declared_class": {
+    "actions": 2,
+    "combined_dimension_bound": 3,
+    "deterministic_states": 2,
+    "observations": 2,
+    "random_long_horizon": 6,
+    "random_weighted_states": 2
+  },
+  "delayed_witness": null,
+  "failures": [
+    {
+      "kind": "no_delayed_witness"
+    }
+  ],
+  "identity": "PMR-007-NIBE-1",
+  "result": "FAIL"
+}

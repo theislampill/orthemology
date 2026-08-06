@@ -1,0 +1,39 @@
+schema: ar8r-pmr007-deep-bf-bk-public-reproduction-crosswalk-v1
+snapshot_root: docs/project-closure/ar8r-v11/post-merge-proposals/pmr007-deep-a-bk
+mutation_policy: READ_ONLY_SOURCE_NONMUTATING_VALIDATION
+historical_script_policy: EXECUTE_ONLY_IN_DISPOSABLE_COPY
+path_classes:
+  theorem: PROPOSED_THEOREM_FILES
+  model: PROPOSED_COUNTERMODELS
+  audit_repair_rereview_and_results: VALIDATION_RECEIPTS
+  admission_and_frozen_hashes: PROPOSED_LEDGER_UPDATES
+  source_and_ancestry_notes: PROPOSED_ORIGIN_AND_ANCESTRY_UPDATES
+rounds:
+  DEEP_BF:
+    public_static_custody: COMPLETE_FOR_INCLUDED_BYTES
+    public_execution: UNAVAILABLE_PRIVATE_SOURCE_PDFS
+  DEEP_BG:
+    public_static_custody: COMPLETE_FOR_INCLUDED_BYTES
+    public_execution: PARTIAL_ORIGINAL_SOURCE_SIDECAR_EXCLUDED
+  DEEP_BH:
+    public_static_custody: COMPLETE_FOR_INCLUDED_BYTES
+    public_execution: PARTIAL_PRIVATE_RENDERINGS_AND_ORIGINAL_SOURCE_SIDECAR_EXCLUDED
+  DEEP_BI:
+    public_static_custody: COMPLETE_FOR_INCLUDED_BYTES
+    public_execution: PARTIAL_ORIGINAL_SOURCE_SIDECAR_EXCLUDED
+  DEEP_BJ:
+    public_static_custody: COMPLETE_FOR_INCLUDED_BYTES
+    public_execution: PARTIAL_V2_PRIMARY_GENERATOR_ABSENT
+  DEEP_BK:
+    public_static_custody: COMPLETE_FOR_INCLUDED_BYTES
+    public_execution: DISPOSABLE_COPY_REQUIRED_WRITES_RESULTS
+public_validator: scripts/validate_pmr007_deep_bk_public_snapshot.py
+public_validator_result: PASS_WITH_PARTIAL_REPRODUCTION_CEILING
+forbidden_claims:
+  - SELF_CONTAINED_PUBLIC_REREVIEW_REPRODUCTION
+  - COMPLETE_PUBLIC_SAFE_AUDIT_CUSTODY
+  - EXTERNAL_MATHEMATICAL_REVIEW
+  - OWNER_ADOPTION
+  - GENERAL_NOVELTY
+  - MENISCUS
+  - NATURAL_CLOSURE

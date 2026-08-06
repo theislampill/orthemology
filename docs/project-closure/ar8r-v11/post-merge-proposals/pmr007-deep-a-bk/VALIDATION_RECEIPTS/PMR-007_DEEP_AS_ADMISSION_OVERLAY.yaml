@@ -1,0 +1,35 @@
+schema: pmr007-post-merge-admission-overlay-v1
+identity: PMR-007-PFIT-1
+title: Proper-function intervention basis and norm-source diagnosability
+canonical_version: V2
+status: ADMITTED_POST_MERGE_SCOPED_CENTRAL_PROPER_FUNCTION_EXPERIMENT_DESIGN_RESULT
+historical_identity: NONE
+theorem_origin:
+  class: POST_MERGE_SCOPED_RESULT
+  independent_general_origin_credit: false
+  general_mathematical_novelty: 0
+proof_status: PROVED_AT_DECLARED_FINITE_DETERMINISTIC_STATIC_SCOPE
+countermodel_status: ALIGNED_HARMFUL_DESIGN_SELECTION_SOURCE_PROJECTION_LEAKAGE_AND_STATE_CHANGE_CONTROLS_PRESERVED
+primary_check: PASS
+cold_audit: REPAIR_REQUIRED
+blocking_findings: 8
+repair: COMPLETE_V2
+fresh_rereview: PASS_WITH_NONBLOCKING_EMPIRICAL_AND_ACCOUNT_COMPLETENESS_NOTES
+external_review: OPEN
+owner_adoption: PENDING
+repository_status: PUBLIC_SAFE_POST_MERGE_PROPOSAL_PENDING_REPOSITORY_AUDIT
+central_disposition:
+  nonadaptive_basis: EXACT_TEST_COVER_CHARACTERIZATION
+  adaptive_depth: EXACT_FINITE_DECISION_TREE_RECURRENCE
+  adaptive_nonadaptive_gap: ESTABLISHED_BY_EXPLICIT_WITNESS
+  proper_function_truth: NOT_ESTABLISHED
+  deep_aq_gate_e: OPERATIONALIZED_FOR_DECLARED_DETERMINISTIC_ACCOUNT_FAMILY
+  integrated_champion: NONE
+  meniscus: MENISCUS_NOT_REACHED
+  natural_closure: NOT_REACHED
+nonclaims:
+  - no_account_truth_or_catalogue_completeness
+  - no_stochastic_or_bounded_error_optimum
+  - no_history_dependent_or_state_changing_characterization
+  - no_source_authentication_or_personal_designer
+  - no_wisdom_necessary_being_or_repository_adoption

@@ -1,0 +1,14 @@
+{
+  "boolean_SCMs": 64,
+  "causal_guidance_SCMs": 32,
+  "controls": {
+    "AA-CM1-score-causal-false-anchor": true,
+    "AA-CM2-anchor-true-score-irrelevant": true,
+    "AA-CM3-impersonal-full-neutral": true,
+    "AA-CM4-personal-twin-same-interventions": true
+  },
+  "personal_impersonal_twin_construction_failures": 0,
+  "result": "PASS",
+  "schema": "PMR007_DEEP_AA_CAUSAL_GUIDANCE_PRIMARY_CHECK_V1",
+  "truth_anchor_norm_tracking_and_guidance_SCMs": 2
+}

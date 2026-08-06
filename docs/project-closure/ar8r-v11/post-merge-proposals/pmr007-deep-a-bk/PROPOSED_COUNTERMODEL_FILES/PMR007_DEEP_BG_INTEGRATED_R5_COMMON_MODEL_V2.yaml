@@ -1,0 +1,59 @@
+schema: pmr007-deep-bg-integrated-r5-common-model-v2
+identity: PMR-007-IR5CM-1
+version: V2
+scope:
+  modality: declared_two_world_frame_only
+  external_actuality: participation_in_declared_nontrivial_effect_relation
+  common_bearer: numerical_co_location_in_signature_not_derivational_unity
+  source_role: candidate_interpretation_functional_only
+sorts:
+  worlds: [w0, w1]
+  bearers: [g]
+  contents: [c0, c1]
+  actions: [a0, a1]
+  effects: [e0, e1]
+  tokens: [t0, t1]
+  latent_states: [h0, h1]
+neutral_model:
+  present: {w0: [g], w1: [g]}
+  predecessor_relation: []
+  actualizes: [[g, a0, e0], [g, a1, e1]]
+  structural_roles_on_g: [modal_order, truth_register, target_key, norm, selector, efficacy, expression]
+  truth_label: {c0: false, c1: true}
+  target_key: c1
+  target_authority: primitive_nonself_authorized_in_declared_model
+  norm: {c0: 0, c1: 1}
+  selection: {0: a0, 1: a1}
+  fitting_actions: [a1]
+  expression: {c0: t0, c1: t1}
+  faithful_token_assignment: true
+  joint_law: [[0.5, 0.0], [0.0, 0.5]]
+  latent_product_width: 2
+  source_functional_role_image: g
+target_predicates:
+- Intellect
+- Personal
+- Agentic
+- IntentionalUptake
+- BecauseFitting
+- Wisdom
+- SpeechCapacity
+- ActualSpeech
+- CreatorClass
+creator_class_definition:
+  requires: [Agentic, IntentionalUptake, effective_origination]
+controls:
+  all_false_impersonal_expansion: true
+  all_true_personal_twin: true
+  single_deletion_twins: all_nine
+  same_bearer_structural_profiles: 32
+  fully_aligned_profiles: 2
+nonclaims:
+- absolute_necessity
+- general_concreteness_theory
+- metaphysical_or_physical_possibility
+- equal_prior_or_likelihood
+- proper_function_or_teleology
+- source_authentication_or_actual_world_selection
+- personality_Wisdom_Speech_or_Creatorhood
+- general_mathematical_novelty

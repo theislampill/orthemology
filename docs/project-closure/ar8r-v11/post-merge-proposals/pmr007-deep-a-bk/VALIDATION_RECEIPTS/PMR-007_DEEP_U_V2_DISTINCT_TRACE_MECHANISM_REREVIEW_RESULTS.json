@@ -1,0 +1,53 @@
+{
+  "animal_matching_endpoint_instances": [
+    "CSCG_DEFAULT"
+  ],
+  "canonical_phrase_results": {
+    "MENISCUS_NOT_REACHED": true,
+    "No transition matrix estimated directly from neural recordings is reported": true,
+    "among-tested source result": true,
+    "global orthogonalization": true,
+    "unique mechanism identity": true,
+    "zero general mathematical novelty credit": true
+  },
+  "endpoint_family_partition": {
+    "best_accuracy_denominator": 7,
+    "best_accuracy_numerator": 6,
+    "exact_binary_classifiers": 0,
+    "groups": 5,
+    "target_conflict": true
+  },
+  "endpoint_partition": {
+    "best_accuracy_denominator": 7,
+    "best_accuracy_numerator": 6,
+    "exact_binary_classifiers": 0,
+    "groups": 2,
+    "target_conflict": true
+  },
+  "endpoint_trajectory_partition": {
+    "best_accuracy_denominator": 7,
+    "best_accuracy_numerator": 7,
+    "exact_binary_classifiers": 1,
+    "groups": 5,
+    "target_conflict": false
+  },
+  "external_experiment_reproduction": false,
+  "external_review": "OPEN",
+  "formal_mechanism_twins_have_distinct_mechanisms": true,
+  "formal_mechanism_twins_share_observable_profile": true,
+  "frozen_hash_mismatches": [],
+  "frozen_hash_rows": 7,
+  "general_mathematical_novelty": "ZERO",
+  "identity": "PMR-007-TRPD-1",
+  "mechanism_identified_by_endpoint_and_trajectory": false,
+  "registered_instances": 7,
+  "result": "PASS",
+  "source_anchor_results": {
+    "encoding_sensitivity": true,
+    "endpoint_and_trajectory": true,
+    "fixed_emission_clones": true,
+    "hebbian_order_difference": true,
+    "task_performance_nonnecessity": true
+  },
+  "source_hash_ok": true
+}

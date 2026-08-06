@@ -1,0 +1,18 @@
+{
+  "schema": "PMR007_DEEP_AG_PRIMARY_CHECK_V2",
+  "states_checked": 8,
+  "equation_failures": [],
+  "admissibility_table_failures": 0,
+  "reason_guidance_contexts": 4,
+  "nuisance_invariance_failures": 0,
+  "asymmetry_sensitivity_failures": 0,
+  "square_holonomy_failures": 0,
+  "interaction_graph_connected": true,
+  "role_allocations": 4096,
+  "globally_available_WPK_allocations": 3375,
+  "common_WPK_allocations": 1695,
+  "no_common_WPK_allocations": 1680,
+  "personal_impersonal_neutral_digest": "f2fa437dea127abc45e5b44852ba098fe247f2f052a52da341ac3788492aeb5a",
+  "personal_impersonal_targets_differ": true,
+  "result": "PASS"
+}

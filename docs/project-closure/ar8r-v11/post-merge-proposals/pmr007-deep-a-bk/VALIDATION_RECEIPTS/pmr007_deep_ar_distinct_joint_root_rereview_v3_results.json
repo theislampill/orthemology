@@ -1,0 +1,24 @@
+{
+  "counts": {
+    "binary_distributions": 4,
+    "common_cause_cases": 6,
+    "copy_bundle_cases": 160,
+    "failures": 0,
+    "frozen_files": 6,
+    "hash_mismatches": 0,
+    "root_alias_cases": 3,
+    "root_channel_cases": 144,
+    "stochastic_channels": 9,
+    "two_root_factor_cases": 1024
+  },
+  "failures": [],
+  "identity": "PMR-007-PREC-1",
+  "rereview": "distinct joint-root, support-classification, and channel semantics V3",
+  "result": "PASS",
+  "scope_notes": [
+    "authenticated roots assumed",
+    "conditional independence explicit",
+    "finite binary observations",
+    "warrant and tawatur not inferred"
+  ]
+}

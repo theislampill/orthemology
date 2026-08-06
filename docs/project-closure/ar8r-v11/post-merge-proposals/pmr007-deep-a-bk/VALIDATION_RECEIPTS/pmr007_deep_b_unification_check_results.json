@@ -1,0 +1,87 @@
+{
+  "carrier_box_profile_count": 32,
+  "controls": {
+    "carrier_box_not_restricted": true,
+    "distributed_matches_personal": true,
+    "idle_personal_tag_no_change": true,
+    "impersonal_matches_personal": true,
+    "positive_is_proper_subset": true,
+    "single_32_state_code_not_two_bit_compression": true
+  },
+  "cross_domain_laws_hold": true,
+  "excluded_profiles": 28,
+  "gerrymandered_information_bits": 5,
+  "image_count": 4,
+  "intervention_signatures": {
+    "(0, 0)": {
+      "flip_e": [
+        0,
+        1,
+        0,
+        0,
+        0
+      ],
+      "flip_t": [
+        1,
+        0,
+        1,
+        1,
+        0
+      ]
+    },
+    "(0, 1)": {
+      "flip_e": [
+        0,
+        1,
+        0,
+        0,
+        0
+      ],
+      "flip_t": [
+        1,
+        0,
+        1,
+        1,
+        1
+      ]
+    },
+    "(1, 0)": {
+      "flip_e": [
+        0,
+        1,
+        0,
+        0,
+        1
+      ],
+      "flip_t": [
+        1,
+        0,
+        1,
+        1,
+        0
+      ]
+    },
+    "(1, 1)": {
+      "flip_e": [
+        0,
+        1,
+        0,
+        0,
+        1
+      ],
+      "flip_t": [
+        1,
+        0,
+        1,
+        1,
+        1
+      ]
+    }
+  },
+  "marginal_product_count": 32,
+  "overall": "PASS",
+  "positive_information_bits": 2,
+  "realization_parity": true,
+  "schema": "PMR007_DEEP_B_CHECK_RESULTS_V1",
+  "theta_count": 4
+}

@@ -1,0 +1,28 @@
+{
+  "checker": "DISTINCT_COMPONENT_LINEAR_REREVIEW_V2",
+  "component_constant_cases": 144014,
+  "dynamic_extension_witness": {
+    "base_calibrated": true,
+    "extended_calibrated": false,
+    "new_edge_creates_holonomy": true
+  },
+  "exhaustive_equivalence_failures": 0,
+  "exhaustive_three_vertex_cases": 1728,
+  "frozen_hash_mismatches": [],
+  "frozen_hash_rows": 6,
+  "identity": "PMR-007-TCRPF-1",
+  "ordinal_additive_controls": {
+    "acyclic_chain_has_topological_rank": true,
+    "exact_anti_truth_field_can_be_path_independent": true,
+    "topological_rank_need_not_match_declared_increments": true
+  },
+  "proper_function_account_expansions": 1024,
+  "random_component_cases": 60000,
+  "random_equivalence_failures": 0,
+  "result": "PASS",
+  "source_scope_checks": {
+    "El_Tobgui_secondary": true,
+    "fitrah_track_N_only": true,
+    "general_novelty_zero": true
+  }
+}

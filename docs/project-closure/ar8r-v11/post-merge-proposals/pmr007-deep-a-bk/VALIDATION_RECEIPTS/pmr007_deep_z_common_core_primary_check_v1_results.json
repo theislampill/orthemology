@@ -1,0 +1,148 @@
+{
+  "all_coordinates_load_bearing": true,
+  "attained_states": 64,
+  "coordinate_deletion_controls": {
+    "A_target_authority": {
+      "example": [
+        [
+          0,
+          0,
+          0,
+          0,
+          0,
+          0
+        ],
+        [
+          0,
+          0,
+          0,
+          1,
+          0,
+          0
+        ]
+      ],
+      "projection_collisions": 32
+    },
+    "C_contract_compatibility": {
+      "example": [
+        [
+          0,
+          0,
+          0,
+          0,
+          0,
+          0
+        ],
+        [
+          0,
+          0,
+          1,
+          0,
+          0,
+          0
+        ]
+      ],
+      "projection_collisions": 32
+    },
+    "R_world_adequacy": {
+      "example": [
+        [
+          0,
+          0,
+          0,
+          0,
+          0,
+          0
+        ],
+        [
+          0,
+          0,
+          0,
+          0,
+          0,
+          1
+        ]
+      ],
+      "projection_collisions": 32
+    },
+    "T_truth_linkage": {
+      "example": [
+        [
+          0,
+          0,
+          0,
+          0,
+          0,
+          0
+        ],
+        [
+          0,
+          0,
+          0,
+          0,
+          1,
+          0
+        ]
+      ],
+      "projection_collisions": 32
+    },
+    "U_profile_uniformity": {
+      "example": [
+        [
+          0,
+          0,
+          0,
+          0,
+          0,
+          0
+        ],
+        [
+          1,
+          0,
+          0,
+          0,
+          0,
+          0
+        ]
+      ],
+      "projection_collisions": 32
+    },
+    "W_warrant_integrity": {
+      "example": [
+        [
+          0,
+          0,
+          0,
+          0,
+          0,
+          0
+        ],
+        [
+          0,
+          1,
+          0,
+          0,
+          0,
+          0
+        ]
+      ],
+      "projection_collisions": 32
+    }
+  },
+  "coordinate_names": [
+    "U_profile_uniformity",
+    "W_warrant_integrity",
+    "C_contract_compatibility",
+    "A_target_authority",
+    "T_truth_linkage",
+    "R_world_adequacy"
+  ],
+  "core_A_B_all_quadrants": true,
+  "failure_states_conflated_by_binary_release": 63,
+  "full_diagnostic_labels": 64,
+  "minimum_fixed_length_bits": 6,
+  "release_false_states": 63,
+  "release_true_states": 1,
+  "result": "PASS",
+  "schema": "PMR007_DEEP_Z_COMMON_ORTHING_CORE_PRIMARY_CHECK_V1"
+}

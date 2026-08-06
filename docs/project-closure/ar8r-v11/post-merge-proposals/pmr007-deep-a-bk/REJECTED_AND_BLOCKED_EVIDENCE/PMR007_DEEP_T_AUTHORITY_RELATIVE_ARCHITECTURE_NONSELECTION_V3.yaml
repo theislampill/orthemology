@@ -1,0 +1,262 @@
+schema: PMR007_DEEP_T_AUTHORITY_RELATIVE_ARCHITECTURE_NONSELECTION_V3
+identity: PMR-007-MACC-1
+title: Authority-relative architecture nonselection and source-class admissibility
+provenance: POST_MERGE_RESEARCH_CANDIDATE_AFTER_SCOPE_GUARD_REPAIR
+repository_authority: 428187cebf7644ff8bf9522455a560eb82d35964
+historical_authority:
+  duration: '09:41:25.405101139'
+  latest_segment: 357
+  theorem_origin: V5
+evidence_owners:
+  candidate_g_parity:
+    path: candidate-g/DERIVATIONAL_UNIFICATION_PARITY_THEOREM.md
+    sha256: 781eb3cba34cc9c79b077d417abb9eb0c83c5274e234922ff895560521c637e6
+    authority: EXACT_HISTORICAL_AR7_EVIDENCE
+  bridge_ledger:
+    path: docs/project-closure/ar8r-v11/programs/AR8R-TRANSCENDENTAL-BRIDGE-AND-RIVAL-LEDGER-V11.yaml
+    sha256: 747b886b41fc2fe152e2b4b78d4445a82a0b4f15a681b8c98e970685a63cb27d
+    authority: CURRENT_MERGED_MAIN_PROGRAM_LEDGER
+  milestone_ledger:
+    path: docs/project-closure/ar8r-v11/programs/AR8R-ORTHEMOLOGY-MENISCUS-MILESTONES-V1.yaml
+    sha256: cc0df6a5a312f51c6bba75724a33b83b0d1a3a3eed9df198f62708fadace2a50
+    authority: OWNER_SUPPLIED_PROGRAM_CHARTER_PROPOSAL_ONLY
+  deep_o: 1aed11f7713a13191cc4100fab3a227a096f057b0a0ab9d7e6d2f70c25397cb8
+  deep_p: 4bfcbae7d4371604b7c72eee6344997817868912182b1da7cbad200662dda351
+  deep_q: f5cab0f18f0dde287e6de0a85179ec381d865e373411683a298f19480cb0310d
+  deep_r: c4592a6fd5e519dad049e087cac9937c93a11938a70764f5c1ecdbfe1304a3c0
+  deep_s: 0a9208ae145bb209f5d24c1aec6d8192a1c06f56ad5982c720051a1cd3fbf027
+languages:
+  neutral_track_t:
+  - UNDERIVED_ORDER
+  - FORMAL_COUPLING
+  - ADDITIVE_NORM_FIELD
+  - FINITE_EXACT_ARTICULABILITY
+  - TOKEN_RESPONSIVENESS
+  - CONCRETE_REALIZATION
+  - GLOBAL_WPK_ROLE_AVAILABILITY
+  integrated_targets:
+  - NECESSARY_CONCRETE_GROUND
+  - COMMON_BEARER
+  - EPISTEMIC_PROPER_FUNCTION
+  - INTELLECT
+  - PERSONALITY
+  - WISDOM
+  - SPEECH
+  - REVELATIONAL_IDENTIFICATION
+  source_track_n:
+  - CREATOR
+  - ONE
+  - KNOWING
+  - ABLE
+  - LIVING
+  - VOLITION_ATTRIBUTE
+  - SPEAKING_ATTRIBUTE
+  - HEARING
+  - SEEING
+  - ACTUAL_SPEECH
+  - UNCREATED_SPEECH
+  - SAME_REFERENT_COPREDICATION
+current_authority_profile:
+  integrated_targets_certified: []
+  source_guards:
+    H12_SOURCE_AUTHENTICATION: false
+    H16_REFERENT_IDENTIFICATION: false
+  bridge_status_scope: B4_THROUGH_B16_REMAIN_NOT_ENTAILED_CONDITIONAL_OR_SOURCE_INTERNAL
+  verified_neutral_true:
+  - UNDERIVED_ORDER
+  - FORMAL_COUPLING
+  - ADDITIVE_NORM_FIELD
+  - FINITE_EXACT_ARTICULABILITY
+  - TOKEN_RESPONSIVENESS
+  - CONCRETE_REALIZATION
+  - GLOBAL_WPK_ROLE_AVAILABILITY
+  profile_status: REGISTERED_SELECTED_SCOPE_NOT_COMPLETE_CURRENT_EVIDENCE
+architectures:
+  A_UNIFIED_PERSONAL_SOURCE_GROUND:
+    current_visible_profile:
+    - UNDERIVED_ORDER
+    - FORMAL_COUPLING
+    - ADDITIVE_NORM_FIELD
+    - FINITE_EXACT_ARTICULABILITY
+    - TOKEN_RESPONSIVENESS
+    - CONCRETE_REALIZATION
+    - GLOBAL_WPK_ROLE_AVAILABILITY
+    unresolved_hard_premises:
+    - H4
+    - H5
+    - H6
+    - H7
+    - H8
+    - H9
+    - H10
+    - H11
+    - H12
+    - H15
+    - H16
+    brute_or_unexplained_stops:
+    - PERSONAL_REALIZATION_BRIDGE
+    - TRUTH_LINKED_NORM_AUTHORITY
+    - SOURCE_AUTHENTICATION
+    - REFERENT_IDENTIFICATION
+    source_defects: []
+    track_n_compatible_if_guards: true
+    intended_target_commitments:
+    - NECESSARY_CONCRETE_GROUND
+    - COMMON_BEARER
+    - EPISTEMIC_PROPER_FUNCTION
+    - INTELLECT
+    - PERSONALITY
+    - WISDOM
+    - SPEECH
+    - REVELATIONAL_IDENTIFICATION
+  B_IMPERSONAL_POWERS_PLURAL_REALIZATION:
+    current_visible_profile:
+    - UNDERIVED_ORDER
+    - FORMAL_COUPLING
+    - ADDITIVE_NORM_FIELD
+    - FINITE_EXACT_ARTICULABILITY
+    - TOKEN_RESPONSIVENESS
+    - CONCRETE_REALIZATION
+    - GLOBAL_WPK_ROLE_AVAILABILITY
+    unresolved_hard_premises:
+    - PRIMITIVE_NECESSARY_ORDER
+    - IMPERSONAL_POWERS_REALIZER
+    - PRIMITIVE_NORM_FIELD
+    - PLURAL_COORDINATION
+    - PRIMITIVE_APPLICABILITY_LINK
+    brute_or_unexplained_stops:
+    - ORDER
+    - APPLICABILITY
+    - NORM_AUTHORITY
+    - ROLE_COORDINATION
+    - NO_COMMON_BEARER
+    - NO_PERSONALITY
+    - NO_WISDOM
+    - NO_SPEECH
+    source_defects:
+    - ONE
+    - SAME_REFERENT_COPREDICATION
+    - UNCREATED_SPEECH
+    track_n_compatible_if_guards: false
+    intended_target_commitments: []
+  C_ABSTRACT_ORDER_PLUS_CONCRETE_ACTUALIZER:
+    current_visible_profile:
+    - UNDERIVED_ORDER
+    - FORMAL_COUPLING
+    - ADDITIVE_NORM_FIELD
+    - FINITE_EXACT_ARTICULABILITY
+    - TOKEN_RESPONSIVENESS
+    - CONCRETE_REALIZATION
+    - GLOBAL_WPK_ROLE_AVAILABILITY
+    unresolved_hard_premises:
+    - NECESSARY_ABSTRACT_ORDER
+    - BRUTE_CONCRETE_ACTUALIZER
+    - PRIMITIVE_APPLICABILITY_LINK
+    - PRIMITIVE_NORM_FIELD
+    - PLURAL_ROLE_COORDINATION
+    brute_or_unexplained_stops:
+    - ABSTRACT_TO_CONCRETE_APPLICABILITY
+    - CAUSAL_EFFICACY
+    - NORM_AUTHORITY
+    - UNITY
+    - MENTALITY
+    - PERSONALITY
+    - WISDOM
+    - SPEECH
+    source_defects:
+    - CREATOR
+    - KNOWING
+    - LIVING
+    - VOLITION_ATTRIBUTE
+    - SPEAKING_ATTRIBUTE
+    - ACTUAL_SPEECH
+    - UNCREATED_SPEECH
+    track_n_compatible_if_guards: false
+    intended_target_commitments: []
+comparison_regimes:
+  NEUTRAL_CURRENT_AUTHORITY:
+    background:
+    - CURRENT_ADMITTED_NEUTRAL_RESULTS
+    source_filter_active: false
+    selector_inputs: current_visible_profile_only
+  TRACK_N_CONDITIONAL:
+    background:
+    - CURRENT_ADMITTED_NEUTRAL_RESULTS
+    - H12_SOURCE_AUTHENTICATION
+    - H16_REFERENT_IDENTIFICATION
+    - AUTHENTICATED_SOURCE_PREDICATE_BUNDLE
+    source_filter_active: true
+    selector_inputs: neutral_profile_plus_source_expansion
+  CURRENT_INTEGRATED_PUBLIC_AUTHORITY:
+    background:
+    - CURRENT_ADMITTED_NEUTRAL_RESULTS
+    - TRANSLATED_PRIMARY_ACCESS_WITH_H12_H16_OPEN
+    source_filter_active: false
+    selector_inputs: authority_compliant_current_evidence
+declared_dominance_diagnostic:
+  description: A finite, authority-relative Pareto diagnostic, not a universal measure of truth or explanation.
+  coordinates:
+  - unabsorbed_premise_set_inclusion
+  - target_consequence_set_inclusion
+  - brute_stop_set_inclusion
+  - live_countermodel_survival
+  warning: No scalar aggregation or cross-kind cost order is warranted.
+  status: NONAUTHORITATIVE_DESCRIPTIVE_LEDGER_ONLY
+  nonclaims:
+  - NO_OBJECTIVE_PREMISE_COST_ORDER
+  - NO_SCALAR_EXPLANATORY_SCORE
+  - NO_BAYESIAN_OR_METAPHYSICAL_PROBABILITY
+  - NO_TRUTH_CONDUCIVENESS_RESULT
+bridge_requirements:
+  B4: H4
+  B5: H5
+  B6: H6
+  B7: H7
+  B8: H8
+  B9: H9
+  B10: H10
+  B11: H11
+  B12: H12
+  B15: H15
+  B16: H16
+candidate_claims:
+  T1_REGISTERED_PROFILE_NONSELECTION: If two expansions share P_REG_O_TO_S while differing on a target, no deterministic certifier
+    factoring through P_REG_O_TO_S decides that target.
+  T2_REFINEMENT_REOPENING: An independently warranted coordinate that differs across the expansions can split the fibre; the
+    nonselection result is profile-relative, not permanent.
+  T3_SOURCE_CONDITIONAL_ADMISSIBILITY: H12 and H16 plus the authenticated source bundle exclude source-incompatible rivals
+    only in the declared Track-N expansion.
+  T4_NONMIGRATION: Track-N incompatibility does not become a neutral Track-T entailment when the neutral reduct remains unchanged.
+  T5_CURRENT_STATUS: The current bridge/source/audit/adoption ledgers do not warrant a unique integrated champion.
+authority_ceiling:
+  general_mathematical_novelty: ZERO_APPLICATION_OF_FIBRE_AND_CONSERVATIVE_REDUCT_MECHANISMS
+  world_directed_truth: NOT_ESTABLISHED
+  source_relative: DECLARED_CLASS_COMPATIBILITY_CONDITIONAL_ON_H12_H16
+  integrated_champion: NONE_AT_CURRENT_AUTHORITY_NOT_PERMANENT_IMPOSSIBILITY
+  meniscus: MENISCUS_NOT_REACHED
+  natural_closure: NOT_REACHED
+  external_review: OPEN
+  owner_adoption: PENDING
+declared_comparison_scope:
+  profile_name: P_REG_O_TO_S
+  profile_status: FROZEN_REGISTERED_NEUTRAL_COMPARISON_PROFILE_NOT_COMPLETE_EVIDENCE
+  architecture_class: DECLARED_NONEXHAUSTIVE_A_B_C_PORTFOLIO
+  certifier_scope: DETERMINISTIC_CERTIFIERS_FACTORING_THROUGH_P_REG_O_TO_S
+  reopening_condition: NEW_INDEPENDENTLY_WARRANTED_PROFILE_COORDINATE_OR_BRIDGE_SPLITS_THE_FIBRE
+profile_refinement_control:
+  new_coordinate: INDEPENDENT_INTENTIONAL_OWNERSHIP_EVIDENCE
+  values:
+    A_UNIFIED_PERSONAL_SOURCE_GROUND: true
+    B_IMPERSONAL_POWERS_PLURAL_REALIZATION: false
+    C_ABSTRACT_ORDER_PLUS_CONCRETE_ACTUALIZER: false
+  effect: SPLITS_THE_FROZEN_PROFILE_FIBRE_IF_INDEPENDENTLY_WARRANTED
+  authority: HYPOTHETICAL_REOPENING_CONTROL_NOT_CURRENT_EVIDENCE
+source_class_result:
+  claim: Within the frozen nonexhaustive A/B/C class, H12 and H16 plus the authenticated source bundle make A source-compatible
+    and B/C source-incompatible.
+  classification: CONDITIONAL_TRACK_N_ADMISSIBILITY_NOT_NEUTRAL_DOMINANCE
+  global_uniqueness: NOT_CLAIMED
+  neutral_entailment: DOES_NOT_MIGRATE
+repair_relation:
+  repairs_version: V2
+  repair_scope: EXPLICIT_AUTHORITY_FIREWALL_WORDING_ONLY

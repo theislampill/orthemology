@@ -1,0 +1,61 @@
+schema: PMR007_DEEP_G_ADMISSION_OVERLAY_V1
+identity: PMR-007-CBA-1
+round: PMR-007-DEEP-G
+canonical_version: V3
+title: Attribute ascent and common-bearer integration burden
+provenance_class: ADMITTED_POST_MERGE_SCOPED_SOURCE_FORMAL_RESULT
+historical_identity: NONE
+admitted_results:
+  - integrated common bearer exists exactly when all attribute-eligible bearer sets have nonempty total intersection
+  - local attribute availability does not entail common bearer
+  - pairwise common-bearer realization does not entail one bearer of the full package
+  - using one pre-fixed interpreted target d is sufficient but imports the common-bearer identity guard
+  - qiyas al-awla local guards do not themselves supply common-bearer unity
+  - common bearer still does not establish derivational unity or the later Speech and revelation bridges
+proof_status: ELEMENTARY_SET_INTERSECTION_PROOF_PLUS_PRIMARY_AND_DISTINCT_EXECUTABLE_REREVIEW
+primary_check:
+  relation_matrices: 74954
+  local_without_common: 39374
+  pairwise_without_common: 3174
+  fixed_d_failures: 0
+  failures: 0
+source_custody:
+  pmr_dependency_hashes_checked: 4
+  translation_hashes_checked: 1
+  translation_locators_checked: 5
+  failures: 0
+  arabic_primary_verified: false
+  source_truth_established: false
+cold_audit:
+  disposition: REPAIR_REQUIRED_THEN_PASS
+  blocking_findings:
+    - V1 source-custody locator mismatch and incorrect PASS statement
+    - V2 model owner invalid YAML and rereview blocked before semantics
+repair:
+  disposition: ALL_BLOCKING_CUSTODY_AND_STRUCTURED_DATA_FINDINGS_REPAIRED_IN_V3
+fresh_rereview:
+  disposition: PASS_WITH_NONBLOCKING_SCOPE_SOURCE_AND_UNITY_NOTES
+  exhaustive_systems: 74954
+  random_larger_systems: 25000
+  failures: 0
+theorem_family:
+  relation: ELEMENTARY_FINITE_SET_INTERSECTION_APPLICATION_OF_M4_M5_AND_CANDIDATE_G_FIREWALL
+  general_mathematical_novelty: ZERO
+central_meniscus_effect:
+  unity_and_common_bearer: COMMON_BEARER_REQUIRES_TOTAL_INTERSECTION_OR_INDEPENDENT_FIXED_BEARER
+  qiyas_attribute_ascent: LOCAL_CONFORMANCE_PRESERVED_GLOBAL_UNITY_NOT_ENTAILED
+  candidate_g: COMMON_BEARER_AND_DERIVATIONAL_UNITY_REMAIN_DISTINCT
+  track_n: SOURCE_FIXED_BEARER_CONDITIONAL_ONLY
+  strongest_surviving_rival: PLURAL_COORDINATED_ATTRIBUTE_REALIZATION
+  speech_and_revelation: MULTIPLE_FURTHER_BRIDGES_REMAIN_OPEN
+external_review_status: OPEN
+owner_adoption_status: PENDING
+repository_proposal_status: ELIGIBLE_FOR_SANITIZED_OWNER_REVIEW_NOT_INTEGRATION_AUTHORIZED
+meniscus: MENISCUS_NOT_REACHED
+natural_closure: NOT_REACHED
+nonclaims:
+  - no neutral unity proof
+  - no Arabic-primary source verification
+  - no complete attribute ascent
+  - no derivational unity from one carrier
+  - no actual Speech or revelation from capacity

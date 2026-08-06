@@ -1,0 +1,61 @@
+schema: PMR007_DEEP_MENISCUS_BURDEN_DELTA_AQ_AZ_V1
+repository_authority: 4c3dc103e8c753690fa5de560ab82157392ced4c
+rounds: [DEEP_AQ, DEEP_AR, DEEP_AS, DEEP_AT, DEEP_AU, DEEP_AV, DEEP_AW, DEEP_AX, DEEP_AY, DEEP_AZ]
+closed_or_exactly_characterized:
+  - burden: source_experiment_prior_gate_decomposition
+    result: THREE_GATES_EXPLICIT
+  - burden: neutral_trace_adaptive_discrimination
+    result: EXACT_FINITE_TRACE_EQUIVALENCE_BOUNDARY
+  - burden: synchronization_rank_balance
+    result: EXACT_OLD_FRESH_INNOVATION_DECOMPOSITION
+  - burden: neutral_bridge_semantic_interval
+    result: EXACT_INTERPOLANT_EXISTENCE_AND_MULTIPLICITY
+  - burden: static_provenance_root_robust_diagnosis
+    result: EXACT_ERROR_ERASURE_HAMMING_THRESHOLDS
+  - burden: source_likelihood_update_contract
+    result: EXACT_JOINT_LIKELIHOOD_AND_GUARDED_ROOT_FACTORIZATION
+  - burden: residual_content_gauge_identification
+    result: EXACT_SINGLETON_ORBIT_CONDITION
+  - burden: frozen_form_content_mediation_experiment
+    result: EXACT_FULL_CROSSED_TABLE_CHARACTERIZATION
+narrowed:
+  - burden: independently_enlarged_A_R_experiment
+    change: token-versus-declared-content mediation can be tested; personal-versus-impersonal discrimination remains open
+  - burden: source_world_selection
+    change: exact reliability and mapping contract defined; current source corpus does not close it
+  - burden: H7a_constitutive_semanticity
+    change: formal recoding ambiguity separated and characterized; intrinsic constitutivity remains open
+  - burden: provenance_independence
+    change: rank, likelihood factorization, and Hamming distance separated as complementary invariants
+  - burden: proper_function_horn_discrimination
+    change: exact finite intervention-basis problem solved; truth and fittingness remain external
+opened_or_reopened:
+  - actual_root_authentication
+  - conditional_source_independence
+  - source_reliability_and_tawatur_bridge
+  - semantic_intervention_feasibility
+  - literal_content_anchor
+  - H7a2_intrinsic_semanticity
+  - H7a3_mental_realization
+  - personal_impersonal_semantic_processor_discriminator
+  - dynamic_versioned_robust_diagnosis
+  - proper_function_Wisdom
+strongest_surviving_rival:
+  name: SOURCE_COMPATIBLE_ABSTRACT_OR_MODAL_ORDER_PLUS_IMPERSONAL_OR_POWERS_REALIZER_PLUS_RIGID_SEMANTIC_LAW_AND_DOWNSTREAM_MINDS
+  survives:
+    - source compatibility parity
+    - neutral trace equivalence
+    - content-gauge rigidity
+    - crossed content mediation
+    - provenance-root evidence controls
+    - causal guidance
+  withholds:
+    - one intentional subject
+    - first-person ownership
+    - selection because of fittingness
+    - stable Wisdom
+    - source-conditioned divine Speech
+    - actual-world revelational identification
+integrated_champion: NONE
+meniscus: MENISCUS_NOT_REACHED
+natural_closure: NOT_REACHED

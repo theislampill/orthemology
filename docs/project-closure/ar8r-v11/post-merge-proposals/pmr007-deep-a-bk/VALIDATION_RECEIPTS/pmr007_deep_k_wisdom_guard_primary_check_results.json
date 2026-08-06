@@ -1,0 +1,46 @@
+{
+  "boolean_guard_worlds": 128,
+  "deletion_witnesses": {
+    "AG": true,
+    "C": true,
+    "F": true,
+    "K": true,
+    "M": true,
+    "W": true,
+    "X": true
+  },
+  "distributed_no_common_bearer": true,
+  "failure_count": 0,
+  "failures": [],
+  "full_guard_worlds": 1,
+  "nonentailment_witnesses": {
+    "KWP_without_fitting_end": {
+      "AG": true,
+      "C": true,
+      "F": false,
+      "K": true,
+      "W": true,
+      "X": true,
+      "eligible": false
+    },
+    "fitting_outcome_without_intention": {
+      "AG": false,
+      "F": true,
+      "W": false,
+      "X": true,
+      "eligible": false
+    },
+    "proper_function_without_agent": {
+      "AG": false,
+      "eligible": false,
+      "proper_function": true
+    },
+    "unique_root_without_wisdom": {
+      "AG": false,
+      "eligible": false,
+      "unique_lineage_root": true
+    }
+  },
+  "result": "PASS",
+  "schema": "PMR007_DEEP_K_WISDOM_GUARD_RESULTS_V1"
+}

@@ -1,0 +1,30 @@
+schema: pmr007-deep-aw-provenance-root-robust-diagnosis-models-v1
+identity: PMR-007-PRAD-1-CANDIDATE-V1
+setting:
+  hypotheses: finite
+  provenance_roots: independently authenticated finite corruption units
+  root_symbol: complete certificate symbol returned by one root
+  copies: grouped under their actual root
+  corruption_budget: at most f roots
+candidate_thresholds:
+  erasure: minimum_root_distance > f
+  adversarial_substitution_v1: minimum_root_distance > f
+controls:
+  copied_root:
+    apparent_messages: 40
+    actual_roots: 1
+    distance_contribution: at_most_1
+  common_bottleneck:
+    many tests share one corruptible root
+  independent_roots:
+    each root supplies a separate coordinate
+  aliasing:
+    displayed roots may contract after authentication
+  erasure_vs_error:
+    identified failure differs from unmarked adversarial replacement
+nonclaims:
+  - no_root_authentication
+  - no_truth_or_tawatur_warrant
+  - no_recipient_authority_or_adoption
+  - no_adaptive_protocol_theorem
+  - no_dynamic_membership_or_version_drift

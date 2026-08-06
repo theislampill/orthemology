@@ -1,0 +1,53 @@
+schema: pmr007-deep-au-synchronization-innovation-rank-models-v2
+identity: PMR-007-SIER-1
+provenance: POST_MERGE_RESEARCH_CANDIDATE
+setting:
+  field: arbitrary field in theorem; GF(2) primary checks; GF(3) distinct rereview
+  root_authentication: independent prerequisite
+  claim_relevance: independently fixed quotient or declared relevant root space
+  evidence_objects: rows of A
+  synchronization: left multiplication B*A
+  root_contraction: right multiplication A*R
+  later_acquisition: C=[C_old|C_fresh] in V direct-sum W
+invariants:
+  rho_before: dim(row(A))
+  rho_sync: dim(row(B*A))
+  delta_sync: rho_before-rho_sync
+  U: row([B*A|0]) + row(C)
+  gamma_total: dim(U)-rho_sync
+  gamma_fresh: dim(proj_W(U))
+  gamma_old: dim(U intersect (V direct-sum 0))-rho_sync
+  exact_balance: rho_after=rho_before-delta_sync+gamma_old+gamma_fresh
+controls:
+  old_root_recovery:
+    status: V1_BLOCKING_COUNTERMODEL
+    A: [[1,0],[0,1]]
+    B: [[1,0]]
+    C_old: [[0,1]]
+    C_fresh: [[0]]
+  copied_root_false_multiplicity:
+    apparent_count: 40
+    root_rows: forty identical copies of [1,0]
+    root_span_rank: 1
+  common_summary_loss:
+    A: [[1,0],[0,1]]
+    B: [[1,1],[1,1]]
+    delta_sync: 1
+  independent_convergence:
+    root_rows: [[1,0],[0,1]]
+    same_output_projection: one lossy common output
+    root_span_rank: 2
+  unauthenticated_alias:
+    displayed_rank: 2
+    actual_contracted_rank: 1
+  claim_irrelevant_inflation:
+    rule: raw independent coordinate may increase rank but is removed by the frozen relevance quotient
+nonclaims:
+  - no_tawatur_warrant
+  - no_truth_or_honesty
+  - no_probabilistic_or_causal_independence
+  - no_common_knowledge
+  - no_numerical_or_episode_identity
+  - no_historical_tac_sac_term_assignment
+  - no_general_nonlinear_or_adaptive_synchronization
+  - no_operational_repair_capacity_without_bridge

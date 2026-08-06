@@ -1,0 +1,43 @@
+schema: pmr007-admission-overlay-v1
+identity: PMR-007-CJID-1
+round: DEEP_BE
+canonical_file: PMR-007_DEEP_ROUND_BE_CROSS_LANE_INTERACTION_DISCRIMINATION_AND_ANTI_UNIFICATION_V2.md
+status: ADMITTED_POST_MERGE_SCOPED_CENTRAL_CROSS_LANE_INTERACTION_RESULT
+historical_identity: NONE
+historical_theorem_origin_credit: NONE
+general_mathematical_novelty: 0
+proof_status: PROVED_AT_DECLARED_FINITE_BINARY_SCOPE
+primary_check:
+  result: PASS
+  two_binary_ordered_pairs: 27225
+  three_binary_unordered_pairs: 54615
+  failures: 0
+cold_audit:
+  result: REPAIR_REQUIRED
+  findings: [BE-F01, BE-F02, BE-F03, BE-F04, BE-F05, BE-F06, BE-F07, BE-F08]
+repair:
+  version: V2
+  status: COMPLETE
+fresh_rereview:
+  result: PASS_WITH_NONBLOCKING_EVIDENCE_AND_ANTI_UNIFICATION_NOTES
+  exact_rank_arities: [2,3,4,5,6,7,8,9]
+  higher_arity_trials: 1000
+  two_binary_trials: 5000
+  failures: 0
+admitted_scope:
+  - equal coordinate marginals need not imply equal joint law
+  - under equal binary X and Y marginals TV equals twice the absolute 11-cell or covariance difference
+  - under equality of every proper binary marginal the signed difference is the top parity character
+  - proper-subset additive tests are blind to that top-order interaction
+  - a frozen joint interaction is eligible architecture-discrimination evidence but not explanatory or personal unity
+nonclaims:
+  - no causal or derivational unity from dependence
+  - no canonical experiment or representation
+  - no personal-ground, subjecthood, Wisdom, or Speech conclusion
+  - no metaphysical use of OSM or PRH
+  - no source or actual-world truth
+external_review: OPEN
+owner_adoption: PENDING
+repository_proposal_status: PUBLIC_SAFE_POST_MERGE_PROPOSAL_PENDING_REPOSITORY_AUDIT
+integrated_champion_credit: NONE
+meniscus_credit: NONE

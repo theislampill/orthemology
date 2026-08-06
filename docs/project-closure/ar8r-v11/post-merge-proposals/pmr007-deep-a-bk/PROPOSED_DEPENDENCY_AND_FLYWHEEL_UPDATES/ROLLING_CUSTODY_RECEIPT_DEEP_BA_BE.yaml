@@ -1,0 +1,16 @@
+schema: pmr007-rolling-custody-v1
+boundary: DEEP_BA_THROUGH_DEEP_BE
+repository_authority: 4c3dc103e8c753690fa5de560ab82157392ced4c
+admitted:
+  PMR-007-IRCQ-1: DEEP_BA
+  PMR-007-JCIQ-1: DEEP_BB
+  PMR-007-UIEP-1: DEEP_BC
+  PMR-007-LSRO-1: DEEP_BD
+  PMR-007-CJID-1: DEEP_BE
+failed_rereview_harnesses_preserved:
+  - rereviews/pmr007_deep_be_distinct_walsh_rereview_v2.py
+  - rereviews/pmr007_deep_be_distinct_modular_walsh_rereview_v3.py
+  - rereviews/pmr007_deep_be_distinct_bitset_walsh_rereview_v4.py
+last_full_package_boundary: DEEP_AZ
+full_package_refresh_required: true
+GitHub_changed: false

@@ -1,0 +1,49 @@
+{
+  "authority_ceiling": {
+    "ASF": "supplied_English_translation_not_independent_Arabic_primary_verification",
+    "UJ": "contemporary_synthesis_not_direct_Ibn_Taymiyyan_primary_text_or_neutral_proof"
+  },
+  "failure_count": 0,
+  "failures": [],
+  "records": [
+    {
+      "bytes": 596386,
+      "id": "ASF",
+      "locators": {
+        "entail praise and extolment in and of themselves": [
+          112
+        ],
+        "only characterised with what is praiseworthy, never what is blameworthy": [
+          114
+        ],
+        "speech and volition\u2014their nature is categorised into that which is praiseworthy": [
+          114
+        ],
+        "the Wise (al-\u1e24ak\u012bm)": [
+          114
+        ]
+      },
+      "role": "TRANSLATED_PRIMARY_ACCESS",
+      "sha256": "932abd7e2d7b3702d5d6d77d2a4a95ecfb3a9ccbcfbbce7ae750b2bcf55bef7c"
+    },
+    {
+      "bytes": 582329,
+      "id": "UJ",
+      "locators": {
+        "Fourth level: Teleological tendency": [
+          834
+        ],
+        "creation and guidance are known to exist, so there must be a Creator and Guide": [
+          832
+        ],
+        "guided them to what is in their interests": [
+          819
+        ]
+      },
+      "role": "CONTEMPORARY_ATHARI_SYNTHESIS",
+      "sha256": "4aea9b66f178e3454015cd0082c3adb0dda5ae80593f7e37d26b73a96028a2d1"
+    }
+  ],
+  "result": "PASS",
+  "schema": "PMR007_DEEP_K_SOURCE_CUSTODY_RESULTS_V2"
+}

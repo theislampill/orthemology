@@ -1,0 +1,45 @@
+schema: PMR007_DEEP_B_DERIVATIONAL_UNIFICATION_MODELS_V1
+identity: PMR-007-DURP-1
+status: FROZEN_PENDING_COLD_AUDIT
+primitive_space:
+  coordinates: [t, e]
+  values: [0, 1]
+positive_architecture:
+  outputs:
+    M: t
+    A: e
+    S: t
+    N: t
+    R: t_and_e
+  laws:
+    - M_equals_S_equals_N
+    - R_equals_A_and_N
+  primitive_information_bits: 2
+  image_profile_count: 4
+  product_of_marginals_count: 32
+  excluded_joint_profiles: 28
+realizations:
+  H_PER:
+    realization: personal_single_bearer
+    functional_structure: positive_architecture
+  H_IMP:
+    realization: impersonal_integrated_field
+    functional_structure: positive_architecture
+  H_DIST:
+    realization: distributed_two_subsystem_coupling
+    functional_structure: positive_architecture
+countermodels:
+  - {id: B-CM1, name: carrier_boxed_full_product, defeats: one_bearer_implies_unification}
+  - {id: B-CM2, name: impersonal_integrated_field, defeats: derivational_unity_implies_personality}
+  - {id: B-CM3, name: distributed_exact_computation, defeats: integrated_output_implies_one_subject}
+  - {id: B-CM4, name: gerrymandered_single_primitive, defeats: coordinate_count_implies_compression}
+  - {id: B-CM5, name: reversed_explanatory_direction, defeats: fit_and_compression_imply_explanation}
+  - {id: B-CM6, name: thick_brute_totality, defeats: full_coverage_implies_derivation}
+  - {id: B-CM7, name: holistic_powers_monism, defeats: genuine_unification_implies_intellect}
+  - {id: B-CM8, name: idle_personal_tag, defeats: label_implies_explanatory_gain}
+terminal_disposition:
+  genuine_functional_unification: ESTABLISHED_FOR_CONSTRUCTION
+  personal_discrimination: UNESTABLISHED
+  distributed_exclusion: UNESTABLISHED
+  rival_parity: UNBROKEN
+  strongest_rival: IMPERSONAL_INTEGRATED_POWERS_OR_CONTROL_FIELD

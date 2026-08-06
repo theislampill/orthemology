@@ -1,0 +1,27 @@
+schema: pmr007-deep-az-crossed-semantic-intervention-models-v2
+identity: PMR-007-CSII-1
+guards: [SEM, FEAS, POSITIVITY, CONSISTENCY, NO_INTERFERENCE, COMMON_DESIGN, STABLE_CONTRACT]
+results:
+  deterministic:
+    content_mediated: form_invariant and content_sensitive
+    identified_by: complete do(F,C) response table
+  stochastic:
+    content_mediated: distributionally_form_invariant and distributionally_content_sensitive
+    identified_by: complete interventional response-distribution family
+  unrestricted_missing_cell:
+    consequence: exact classification can fail after deleting any one cell
+controls:
+  diagonal_support_collision: OBSERVATIONAL_NONIDENTIFIABILITY
+  semantic_anchor_deletion: LABEL_MEDIATION_ONLY
+  impersonal_semantic_processor: PERSONALITY_NONTRANSFER
+  candidate_dependent_coding: INVALID_COMPARISON
+  version_drift: STALE_SEMANTIC_CONTRACT
+  history_dependence: STATIC_TABLE_INCOMPLETE
+  source_nonmigration: TRACK_N_ONLY_WITH_SOURCE_GUARDS
+nonclaims:
+  - intervention feasibility in actual language or cognition
+  - intrinsic semanticity
+  - intentional uptake
+  - proper function
+  - Wisdom
+  - personal-ground proof

@@ -1,0 +1,18 @@
+schema: PMR007_FORMALIZATION_MAP_AQ_AZ_V1
+repository_authority: 4c3dc103e8c753690fa5de560ab82157392ced4c
+lean_source_created: false
+lean_parse: NOT_RUN
+lean_elaboration: NOT_RUN
+kernel_check: NOT_RUN
+candidates:
+  PMR-007-SCAP-1: {formalization: finite probability and candidate-swap invariance, status: LEAN_READY_STATEMENT_DESIGN}
+  PMR-007-PREC-1: {formalization: finite likelihood factorization and common-channel copying, status: LEAN_READY_STATEMENT_DESIGN}
+  PMR-007-PFIT-1: {formalization: finite Test Cover and adaptive decision recurrence, status: LEAN_READY_STATEMENT_DESIGN}
+  PMR-007-NIBE-1: {formalization: finite weighted controlled-system trace equivalence, status: LEAN_READY_BUT_NONTRIVIAL}
+  PMR-007-SIER-1: {formalization: finite-dimensional subspace/rank decomposition, status: LEAN_READY_STATEMENT_DESIGN}
+  PMR-007-NBIF-1: {formalization: finite propositional interpolation interval, status: LEAN_READY_STATEMENT_DESIGN}
+  PMR-007-PRAD-1: {formalization: finite Hamming error/erasure and pair multicover, status: LEAN_READY_STATEMENT_DESIGN}
+  PMR-007-STWG-1: {formalization: finite Bayes and conditional factorization, status: LEAN_READY_STATEMENT_DESIGN}
+  PMR-007-SGCI-1: {formalization: finite group action and invariant-evidence nonidentifiability, status: LEAN_READY_STATEMENT_DESIGN}
+  PMR-007-CSII-1: {formalization: finite crossed-table characterization and missing-cell witness, status: LEAN_READY_STATEMENT_DESIGN}
+nonclaim: Python or human proof packets do not imply Lean parse, elaboration, or kernel authority.

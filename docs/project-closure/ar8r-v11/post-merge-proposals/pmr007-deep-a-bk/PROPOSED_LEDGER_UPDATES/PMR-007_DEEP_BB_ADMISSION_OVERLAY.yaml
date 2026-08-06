@@ -1,0 +1,45 @@
+schema: PMR007_DEEP_BB_ADMISSION_OVERLAY_V1
+identity: PMR-007-JCIQ-1
+round: DEEP_BB
+canonical_version: V2
+status: ADMITTED_POST_MERGE_SCOPED_CENTRAL_DYNAMIC_NONPRODUCT_RESULT
+historical_identity: NONE
+repository_authority: 4c3dc103e8c753690fa5de560ab82157392ced4c
+proof_status: HUMAN_PROOF_PLUS_PRIMARY_AND_DISTINCT_FINITE_EXECUTABLE_CHECKS
+primary_check:
+  result: PASS
+  exhaustive_systems: 46656
+  full_product_systems: 20412
+  proper_subdirect_systems: 26244
+  duplicate_interface_overread_controls: 4374
+fresh_rereview:
+  result: PASS_WITH_NONBLOCKING_NULL_MODEL_AND_EXPLANATION_NOTES
+  exhaustive_systems: 46656
+  random_larger_systems: 4000
+cold_audit: REPAIR_REQUIRED_THEN_REPAIRED
+blocking_findings_repaired: 7
+accepted_scope:
+  - joint trace equivalence is intersection of individual trace equivalences
+  - joint minimal quotient embeds as action-invariant subdirect product
+  - full-product realization iff every tuple of quotient classes intersects
+  - raw product-support deficit is exact inside one frozen registry
+central_effect:
+  Candidate_G_dynamic_nonproduct: ESTABLISHED_AT_DECLARED_SCOPE
+  full_product_carrier_box: EXCLUDED_WHEN_TYPED_NULL_GUARDS_HOLD
+  reductive_or_explanatory_unity: OPEN
+  personal_realizer: NOT_DISCRIMINATED
+authority_guards:
+  - INTERFACE_REGISTRY_FIXED
+  - NULL_PRODUCT_WARRANTED
+  - STATE_SUPPORT_COMPLETE
+  - ACTION_SCOPE_COMPLETE
+  - NO_OMITTED_LOAD_BEARING_COORDINATE
+novelty:
+  general_mathematical: 0
+  theorem_family: SUBDIRECT_PRODUCT_AND_CONGRUENCE_APPLICATION
+external_review: OPEN
+owner_adoption: PENDING
+repository_adoption: NONE
+integrated_champion: NONE
+meniscus: MENISCUS_NOT_REACHED
+natural_closure: NOT_REACHED

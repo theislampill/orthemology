@@ -1,0 +1,24 @@
+schema: PMR007_DEEP_AK_SOURCE_AGENTIVE_ARCHITECTURES_V1
+identity: PMR-007-SAMC-1
+version: V1
+roles:
+- Creator
+- Knowledge
+- Ability
+- Life
+- Volition
+- Speech
+architectures:
+  A_UNIFIED_PERSONAL:
+    one_bearer: true
+    source_bundle: true
+    personal: true
+  B_PLURAL_POWERS:
+    one_bearer: false
+    source_bundle: false
+    personal: false
+  C_ABSTRACT_ORDER_ACTUALIZER:
+    one_bearer: false
+    source_bundle: false
+    personal: false
+initial_overclaim: source_bundle_entails_personal_agent_and_neutral_architecture_A_dominance

@@ -1,0 +1,68 @@
+schema: ar8r-fable-r1-osm-source-verification-v2
+identity: AR8R-FABLE-R1-OSM-SOURCE-VERIFICATION-V2
+repository_authority: 428187cebf7644ff8bf9522455a560eb82d35964
+source:
+  title: Learning produces an orthogonalized state machine in the hippocampus
+  doi: 10.1038/s41586-024-08548-w
+  access_copy: s41586-024-08548-w(3).md
+  sha256: 0d097cba7bbb25a949e2bf95af28b5a2259bd8d60b0e5fac5a74cdf7d05aa814
+  lines: 1959
+  bytes: 137824
+  experiment_reproduced: false
+  official_code_reproduced: false
+claims:
+  - id: OSM-Q1
+    subject: imposed world state and fixed-speed Markov idealization
+    status: VERIFIED_WITH_NARROWING
+    source_locations: [1805, 1807, 1817]
+    retained: position plus trial type is the modelled world state; Markov only under fixed-speed assumption
+    nontransfer: not a proof that the biological process is finite-state Markov at every resolution
+  - id: OSM-Q2
+    subject: model-alphabet serialization and trajectory sensitivity
+    status: VERIFIED_AS_MODEL_CONVENTION_WITH_SOURCE_REPORTED_SENSITIVITY
+    source_locations: [1801, 1807, 1938]
+    retained: alternative visual/reward encodings preserve reported final learned transition graph while altering decorrelation order
+    nontransfer: does not identify the default encoding as biologically true or the algorithm as the neural mechanism
+  - id: OSM-Q3
+    subject: orthogonalization measurement
+    status: PARTIALLY_VERIFIED
+    source_locations: [206, 1789, 1915, 1929]
+    retained: Pearson PV correlations and separately reported PV angles; no subspace-principal-angle analysis reported in access copy
+    retired:
+      - exact monotone reparameterization claim absent exact formula/code
+      - raw-overlap claim as source finding
+  - id: OSM-Q4
+    subject: neural state-machine interpretation and transition matrix
+    status: VERIFIED_WITH_ABSENCE_SCOPE
+    source_locations: [186, 1419, 1423, 1805, 1809, 1929]
+    retained: no neural transition-matrix estimator reported; CSCG transition graph is computational-model object
+    nontransfer: does not refute dynamical interpretation
+  - id: OSM-Q5
+    subject: three-element order statistic and 3.7-bit capacity
+    status: RETIRED_AS_UNSUPPORTED_OVERREDUCTION
+    source_locations: [1414, 1938]
+    retained: paper reports threshold-crossing ordering and continuous longitudinal matrices
+    retired:
+      - at-most-13-values claim
+      - 3.7-bit capacity claim
+  - id: OSM-Q6
+    subject: intervention and causal scope
+    status: VERIFIED_WITH_SCOPE
+    source_locations: [1419, 1423, 1545, 1609, 1761, 1771, 1801]
+    retained: no direct neural causal intervention reported; task/environment manipulations and model-side interventions are present
+    nontransfer: not a claim that data have no causal relevance
+burden_effect:
+  fable_r1_b08: DISCHARGED_FOR_QUARANTINED_NOTES_AT_ACCESS_COPY_SCOPE
+  remaining:
+    - exact PV-angle formula or code location
+    - official code and analysis reproduction
+    - biological or model result reproduction
+    - external specialist review
+status:
+  provenance: POST_MERGE_SOURCE_VERIFICATION_FINDING
+  external_review: OPEN
+  owner_adoption: PENDING
+  milestone_completed: false
+  integrated_champion: NONE
+  meniscus: MENISCUS_NOT_REACHED
+  natural_closure: NOT_REACHED

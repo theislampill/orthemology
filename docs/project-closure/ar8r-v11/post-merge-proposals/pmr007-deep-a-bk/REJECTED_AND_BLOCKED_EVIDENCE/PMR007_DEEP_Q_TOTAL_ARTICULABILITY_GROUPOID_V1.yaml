@@ -1,0 +1,42 @@
+schema: pmr007-deep-q-articulability-groupoid-v1
+identity: PMR-007-TAGI-V1
+status: POST_MERGE_RESEARCH_CANDIDATE
+formal_objects:
+  content_set: finite_nontrivial
+  language_index: finite_nonempty
+  encodings: bijections_from_content_to_language_tokens
+  translations: tau_ij_equals_e_j_compose_inverse_e_i
+claimed_laws:
+  - identities
+  - inverses
+  - composition
+  - exact_predicate_transport
+candidate_g_features:
+  - shared_derivation
+  - cross_profile_restriction
+  - cross_system_counterfactual_dependence
+  - primitive_reduction_relative_to_independent_translation_tables
+  - excluded_incoherent_translation_configurations
+impersonal_expansion:
+  mentality: false
+  agency: false
+  expression_capacity: false
+  utterance: false
+  track_n_speech: false
+  track_n_uncreated: false
+source_use:
+  asfahani_translation:
+    sha256: 932abd7e2d7b3702d5d6d77d2a4a95ecfb3a9ccbcfbbce7ae750b2bcf55bef7c
+    authority: TRANSLATED_PRIMARY_ACCESS
+    supplies_track_n_only:
+      - speech_subsists_in_divine_bearer
+      - divine_speech_uncreated
+nonclaims:
+  - absolute_totality_of_all_possible_content
+  - metaphysical_necessity
+  - ultimate_concrete_actuality
+  - mentality
+  - agency
+  - divine_speech
+  - revelational_identification
+  - general_mathematical_novelty

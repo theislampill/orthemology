@@ -1,0 +1,46 @@
+{
+  "authority_ceiling_pass": true,
+  "bridge_ledger_sha256": "747b886b41fc2fe152e2b4b78d4445a82a0b4f15a681b8c98e970685a63cb27d",
+  "bridge_status_checks": {
+    "B11": true,
+    "B15": true,
+    "B16": true,
+    "B4": true,
+    "B5": true,
+    "B6": true,
+    "B7": true,
+    "B8": true
+  },
+  "first_no_common_witness": {
+    "K_role": [
+      "b"
+    ],
+    "P_role": [
+      "a"
+    ],
+    "W_role": [
+      "a"
+    ]
+  },
+  "identity": "PMR-007-R5CU-1",
+  "link_reachability": {
+    "content_to_realizer": true,
+    "norm_to_revision": true,
+    "order_to_modal_profiles": true,
+    "response_to_state": true,
+    "selection_to_effect": true,
+    "translation_to_content": true
+  },
+  "method": "nonempty-role-subset constraint enumeration plus YAML link reachability and live bridge-ledger status check",
+  "overall": "PASS",
+  "role_set_triples": 3375,
+  "scope_notes": [
+    "Constraint satisfiability is not a metaphysical possibility proof.",
+    "Role proxies are not Divine attribute predications.",
+    "Bridge ledger remains current repository authority; no source premise migrated."
+  ],
+  "source_firewall_pass": true,
+  "with_common_bearer": 1695,
+  "withheld_conclusions_pass": true,
+  "without_common_bearer": 1680
+}

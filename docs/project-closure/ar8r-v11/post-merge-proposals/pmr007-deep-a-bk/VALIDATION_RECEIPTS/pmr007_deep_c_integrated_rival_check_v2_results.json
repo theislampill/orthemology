@@ -1,0 +1,88 @@
+{
+  "all_premises_hold": true,
+  "all_target_conclusions_false": true,
+  "bridge_controls_pass": true,
+  "bridge_model_controls": [
+    {
+      "has_false_withheld": true,
+      "has_true_antecedent": true,
+      "id": "C-CM1",
+      "typed": true
+    },
+    {
+      "has_false_withheld": true,
+      "has_true_antecedent": true,
+      "id": "C-CM2",
+      "typed": true
+    },
+    {
+      "has_false_withheld": true,
+      "has_true_antecedent": true,
+      "id": "C-CM3",
+      "typed": true
+    },
+    {
+      "has_false_withheld": true,
+      "has_true_antecedent": true,
+      "id": "C-CM4",
+      "typed": true
+    },
+    {
+      "has_false_withheld": true,
+      "has_true_antecedent": true,
+      "id": "C-CM5",
+      "typed": true
+    },
+    {
+      "has_false_withheld": true,
+      "has_true_antecedent": true,
+      "id": "C-CM6",
+      "typed": true
+    },
+    {
+      "has_false_withheld": true,
+      "has_true_antecedent": true,
+      "id": "C-CM7",
+      "typed": true
+    },
+    {
+      "has_false_withheld": true,
+      "has_true_antecedent": true,
+      "id": "C-CM8",
+      "typed": true
+    },
+    {
+      "has_false_withheld": true,
+      "has_true_antecedent": true,
+      "id": "C-CM9",
+      "typed": true
+    }
+  ],
+  "common_bearers": [],
+  "conclusions": {
+    "actual_speech": false,
+    "agency": false,
+    "creatorhood": false,
+    "intellect": false,
+    "one_common_bearer": false,
+    "personality": false,
+    "revelational_identification": false,
+    "speech_capacity": false,
+    "wisdom": false
+  },
+  "creator_candidates": [],
+  "functional_excluded_count": 28,
+  "functional_image_count": 4,
+  "functional_product_count": 32,
+  "overall": "PASS",
+  "premises": {
+    "ART": true,
+    "ATE": true,
+    "DURP": true,
+    "EFF": true,
+    "EXT": true,
+    "NEO": true,
+    "NFG": true
+  },
+  "schema": "PMR007_DEEP_C_CHECK_RESULTS_V2"
+}

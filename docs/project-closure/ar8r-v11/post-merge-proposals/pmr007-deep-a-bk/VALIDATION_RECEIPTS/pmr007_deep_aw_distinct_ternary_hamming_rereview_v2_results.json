@@ -1,0 +1,28 @@
+{
+  "controls": {
+    "distance2": {
+      "erasure_f1": true,
+      "error_f1": false
+    },
+    "distance3": {
+      "error_f1": true
+    },
+    "same_root_tuple": {
+      "rule": "many within-root test outputs form one alphabet symbol and one Hamming coordinate"
+    }
+  },
+  "exhaustive_codebooks": 19683,
+  "exhaustive_erasure_failures": 0,
+  "exhaustive_error_failures": 0,
+  "hash_check": {
+    "checked": 6,
+    "mismatches": 0
+  },
+  "overall": "PASS",
+  "random_codebooks": 15000,
+  "random_erasure_failures": 0,
+  "random_error_failures": 0,
+  "schema": "pmr007-deep-aw-distinct-ternary-rereview-v2-results",
+  "subset_failures": 0,
+  "subset_multicover_cases": 45000
+}

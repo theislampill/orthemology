@@ -1,0 +1,78 @@
+schema: PMR007_DEEP_F_FITRAH_PROPER_FUNCTION_MODELS_V3
+identity: PMR-007-FPF-1
+status: CUSTODY_REPAIRED_V3_PENDING_FRESH_REREVIEW
+formal_scope:
+  worlds: finite
+  neutral_profile:
+    - output_accuracy
+    - stable_reliability
+    - corrigibility
+    - internal_coherence
+  hidden_source_coordinates:
+    - authentic_source
+    - source_is_personal_designer
+    - truth_directed_end
+    - healthy_fitrah
+    - proper_faculty_operation
+    - suitable_environment
+    - undefeated_warrant
+levels:
+  NFunc_T:
+    description: source_relative_truth_directed_proper_function_operation
+    guards: [authentic_source, source_is_personal_designer, truth_directed_end, healthy_fitrah, proper_faculty_operation, suitable_environment]
+  NAcc_T:
+    description: episode_level_accurate_operation_under_NFunc_T
+    guards: [NFunc_T, output_accuracy]
+  NWarr_T:
+    description: undefeated_source_relative_warrant_at_the_episode
+    guards: [NAcc_T, undefeated_warrant]
+authority:
+  source_relative_bridge: SCHOOL_INTERNAL_CONDITIONAL_FORMALIZATION
+  neutral_transfer: false
+  arabic_primary_verified: false
+horns:
+  retained_meta_standard: {fixes: procedural_revision, misses: [truth_link, fittingness, teleology]}
+  trans_state_truth_standard: {fixes: truth_target, misses: [etiology, proper_operation, warrant, teleology]}
+  holistic_fixed_point: {fixes: coherence, misses: [truth_correspondence, praiseworthy_end]}
+  primitive_normative_fact: {fixes: norm_if_stipulated, misses: [explanation, teleology, designer, wisdom]}
+  error_or_relativization: {fixes: contract_success, misses: [objective_correction]}
+  fitrah_source_relative: {fixes_conditionally: [NFunc_T, NAcc_T, NWarr_T], source_truth_required: true, neutral_identification: false}
+strongest_rivals:
+  selected_effect_truth_tracker:
+    proper_function_account: CONDITIONAL_ON_SELECTED_EFFECT_THEORY_AND_HISTORY
+    personal_designer: false
+    track_n_NFunc_T: false
+  dispositional_truth_tracker:
+    proper_function_account: CONDITIONAL_ON_DISPOSITIONAL_NORMATIVITY
+    personal_designer: false
+    track_n_NFunc_T: false
+  primitive_truth_norm:
+    truth_target: true
+    proper_operation: ungrounded
+    teleology: false
+countermodels:
+  - {id: FPF-CM1, name: selected_effect_truth_tracker, blocks: neutral_proper_function_implies_personal_designer}
+  - {id: FPF-CM2, name: designed_deception, blocks: design_implies_truth_directed_function}
+  - {id: FPF-CM3, name: lucky_accurate_malfunction, blocks: accuracy_implies_proper_function}
+  - {id: FPF-CM4, name: proper_function_episode_error, blocks: proper_function_implies_episode_accuracy}
+  - {id: FPF-CM5, name: accurate_proper_but_defeated, blocks: proper_function_and_accuracy_imply_undefeated_warrant}
+  - {id: FPF-CM6, name: neutral_profile_twins, blocks: neutral_profile_identifies_track_n_realization}
+  - {id: FPF-CM7, name: coherent_false_fixed_point, blocks: coherence_implies_truth_link}
+source_custody:
+  SRC_ET:
+    sha256: 657454ff7a1c43b895e7a378d12993295368a97c3f35df5a76edfaa32f67a177
+    authority: SECONDARY_SCHOLARLY_RECONSTRUCTION
+    locators: [lines_4400_4455_original_normative_disposition, lines_4456_4523_truth_recognition_and_deformation]
+    arabic_primary_verified: false
+  SRC_UJ:
+    sha256: 4aea9b66f178e3454015cd0082c3adb0dda5ae80593f7e37d26b73a96028a2d1
+    authority: CONTEMPORARY_ATHARI_SYNTHESIS
+    locators: [lines_50_76_innate_recognition_and_corruption, lines_2025_forward_treatment_and_prerequisites]
+    arabic_primary_verified: false
+terminal_candidates:
+  source_relative_fitrah_proper_function: CONDITIONAL_AT_NFunc_T_LEVEL
+  source_relative_episode_success: CONDITIONAL_AT_NAcc_T_LEVEL
+  source_relative_warrant: CONDITIONAL_AT_NWarr_T_LEVEL
+  neutral_proper_function_ground: UNESTABLISHED
+  personal_designer_from_neutral_profile: NOT_ENTAILED
+  wisdom_from_proper_function: NOT_ENTAILED

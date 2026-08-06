@@ -32,6 +32,8 @@ jobs:
         run: |
           python tests/test_ar8r_v11_reconciliation.py
           python scripts/validate_ar8r_reconciliation.py
+          python tests/test_pmr007_deep_bk_public_snapshot.py
+          python scripts/validate_pmr007_deep_bk_public_snapshot.py
       - name: Generated project state — drift check (R4, Decision 0014)
         run: python scripts/generate_current_state.py --check
       - name: State-contract convergence proof (commit boundary + tamper controls)

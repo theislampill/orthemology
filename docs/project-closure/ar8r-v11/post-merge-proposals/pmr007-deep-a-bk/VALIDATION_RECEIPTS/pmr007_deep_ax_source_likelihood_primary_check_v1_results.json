@@ -1,0 +1,176 @@
+{
+  "correlated_joint_table_pairs": 6561,
+  "duplicate_cases": 32,
+  "duplicate_failures": 0,
+  "independent_cases": 1024,
+  "independent_failures": 0,
+  "minimal_naive_product_mismatches": [
+    {
+      "PA": [
+        "1/4",
+        "1/4",
+        "1/4",
+        "1/4"
+      ],
+      "PR": [
+        "1/5",
+        "1/5",
+        "1/5",
+        "2/5"
+      ],
+      "exact": "5/4",
+      "naive": "25/16",
+      "outcome": [
+        0,
+        0
+      ]
+    },
+    {
+      "PA": [
+        "1/4",
+        "1/4",
+        "1/4",
+        "1/4"
+      ],
+      "PR": [
+        "1/5",
+        "1/5",
+        "1/5",
+        "2/5"
+      ],
+      "exact": "5/4",
+      "naive": "25/24",
+      "outcome": [
+        0,
+        1
+      ]
+    },
+    {
+      "PA": [
+        "1/4",
+        "1/4",
+        "1/4",
+        "1/4"
+      ],
+      "PR": [
+        "1/5",
+        "1/5",
+        "1/5",
+        "2/5"
+      ],
+      "exact": "5/4",
+      "naive": "25/24",
+      "outcome": [
+        1,
+        0
+      ]
+    },
+    {
+      "PA": [
+        "1/4",
+        "1/4",
+        "1/4",
+        "1/4"
+      ],
+      "PR": [
+        "1/5",
+        "1/5",
+        "1/5",
+        "2/5"
+      ],
+      "exact": "5/8",
+      "naive": "25/36",
+      "outcome": [
+        1,
+        1
+      ]
+    },
+    {
+      "PA": [
+        "1/4",
+        "1/4",
+        "1/4",
+        "1/4"
+      ],
+      "PR": [
+        "1/6",
+        "1/6",
+        "1/6",
+        "1/2"
+      ],
+      "exact": "3/2",
+      "naive": "9/4",
+      "outcome": [
+        0,
+        0
+      ]
+    },
+    {
+      "PA": [
+        "1/4",
+        "1/4",
+        "1/4",
+        "1/4"
+      ],
+      "PR": [
+        "1/6",
+        "1/6",
+        "1/6",
+        "1/2"
+      ],
+      "exact": "3/2",
+      "naive": "9/8",
+      "outcome": [
+        0,
+        1
+      ]
+    },
+    {
+      "PA": [
+        "1/4",
+        "1/4",
+        "1/4",
+        "1/4"
+      ],
+      "PR": [
+        "1/6",
+        "1/6",
+        "1/6",
+        "1/2"
+      ],
+      "exact": "3/2",
+      "naive": "9/8",
+      "outcome": [
+        1,
+        0
+      ]
+    },
+    {
+      "PA": [
+        "1/4",
+        "1/4",
+        "1/4",
+        "1/4"
+      ],
+      "PR": [
+        "1/6",
+        "1/6",
+        "1/6",
+        "1/2"
+      ],
+      "exact": "1/2",
+      "naive": "9/16",
+      "outcome": [
+        1,
+        1
+      ]
+    }
+  ],
+  "naive_product_mismatches": 24608,
+  "overall": "PASS_WITH_EXPECTED_CORRELATION_COUNTEREXAMPLES",
+  "posterior_parity_cases": 64,
+  "posterior_parity_failures": 0,
+  "schema": "pmr007-deep-ax-source-likelihood-primary-check-v1-results",
+  "translation_channel_cases": 256,
+  "translation_channel_failures": 0
+}

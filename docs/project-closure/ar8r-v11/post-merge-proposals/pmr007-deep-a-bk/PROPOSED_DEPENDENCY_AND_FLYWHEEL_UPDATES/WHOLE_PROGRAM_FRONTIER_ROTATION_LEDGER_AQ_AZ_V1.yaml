@@ -1,0 +1,82 @@
+schema: PMR007_WHOLE_PROGRAM_FRONTIER_ROTATION_LEDGER_AQ_AZ_V1
+repository_authority: 4c3dc103e8c753690fa5de560ab82157392ced4c
+rotation_block: DEEP_AQ_THROUGH_DEEP_AZ
+lanes:
+  architecture_comparison:
+    last_object: PMR-007-SCAP-1
+    positive: exact source/experiment/prior gate decomposition
+    rival: source-compatible impersonal architecture
+    burden: no gate currently satisfied strongly enough to select A
+    candidates: [A, C]
+    next: seek candidate-independent personal-versus-impersonal discriminator
+  provenance_and_distributed_epistemics:
+    last_object: PMR-007-PRAD-1
+    positive: exact static root-level error/erasure diagnosis
+    rival: copied/common-cause and dynamic/mobile corruption
+    burden: root authentication, dynamic protocols, common knowledge
+    candidates: [A, B]
+    next: dynamic versioned robust diagnosis only if it changes central restoration or collective-warrant burden
+  proper_function:
+    last_object: PMR-007-PFIT-1
+    positive: exact finite intervention-basis/Test-Cover characterization
+    rival: truth-reversed and impersonal response models
+    burden: truth-linked target authority and Wisdom
+    candidates: [B, C]
+    next: non-question-begging truth/fittingness source or experiment
+  source_formal_world:
+    last_object: PMR-007-STWG-1
+    positive: exact joint source-likelihood contract
+    rival: source compatibility parity and hidden referent anchor
+    burden: reliability, source-world map, actual-world selection
+    candidates: [C]
+    next: source reliability or world-anchor evidence; otherwise preserve open
+  semanticity_and_uncreated_grammar:
+    last_object: PMR-007-SGCI-1
+    positive: residual content-gauge nonidentifiability and anchor condition
+    rival: rigid impersonal semantic law/downstream interpreter
+    burden: H7a2 and H7a3
+    candidates: [C]
+    next: constitutive-semanticity bridge not reducible to gauge rigidity
+  empirical_representation_and_language:
+    last_object: PMR-007-CSII-1
+    positive: crossed form/content intervention design
+    rival: impersonal semantic processor and infeasible semantic interventions
+    burden: actual experiment and personal-realizer discrimination
+    candidates: [A, B, C]
+    next: preregistered implementation or empirical instantiation if evidence available
+  TAC_SAC_identity:
+    last_object: PMR-007-SIER-1
+    positive: synchronization/evidential-rank balance
+    rival: copied/aliased/common-cause roots
+    burden: exact historical TAC/SAC source terminology unavailable
+    candidates: [A]
+    next: exact source-to-formal test only when source custody permits
+  restoration_and_daee:
+    last_object: PMR-007-PRAD-1
+    positive: root-aware robust diagnosis available as prerequisite
+    rival: diagnosis without causal landing or stable restoration
+    burden: dynamic bypass and target/source truth
+    candidates: [B]
+    next: no auxiliary round unless it discharges a named central stability burden
+  formalization:
+    last_object: AQ_AZ_LEAN_READY_MAP_PENDING
+    positive: finite statements have explicit definitions and exhaustive checks
+    rival: Python checks are not Lean/kernel authority
+    burden: declaration design and repository toolchain execution
+    candidates: [A, B, C]
+    next: formalize only after owner/repository review selects results
+  theorem_origin_and_novelty:
+    last_object: AQ_AZ_FAMILY_CLASSIFICATIONS
+    positive: every result classified as application/specialization or central integration
+    rival: false multiplicity from repeated Hamming/fibre/Bayes mechanisms
+    burden: external prior-art review
+    candidates: [A, B, C]
+    next: preserve zero general novelty unless independent review changes it
+rotation_disposition:
+  neglected_lane_selected_after_AW: source_world_and_constitutive_semanticity
+  central_rounds_after_rotation: [DEEP_AX, DEEP_AY, DEEP_AZ]
+  auxiliary_rounds: [DEEP_AW]
+  anti_drift_rule: PASS
+integrated_champion: NONE
+meniscus: MENISCUS_NOT_REACHED
+natural_closure: NOT_REACHED

@@ -1,0 +1,55 @@
+schema: PMR007_DEEP_AC_SPECIFICATION_RESOURCE_MODELS_V2
+identity: PMR-007-SRVN-1
+status: REPAIRED_POST_MERGE_RESEARCH_CANDIDATE
+formal_setting:
+  group: finite
+  alternatives: finite_G_set
+  resources: finite_G_set
+  selector: deterministic_G_equivariant_map_E_to_A
+  exact_fixed_point_guard: G_fixed_resource_and_no_G_fixed_alternative
+formal_results:
+  stabilizer_inclusion: Stab_e_subseteq_Stab_F_e
+  invariant_resource_nonselection: proved
+  ancestry: AR8R-T254_direct_specialization
+world_application_firewall:
+  ancestor: AR8R-T255
+  guards:
+    - process_correspondence
+    - contrast_reflection
+    - resource_completeness
+    - target_world_equivariance
+    - truth
+    - warrant
+stochastic_scope:
+  pointwise_seed_model: eligible_when_seed_or_noise_is_represented_in_E
+  probability_kernel_or_multivalued_relation: outside_deterministic_theorem_without_further_model
+volition_coordinates:
+  - ULT
+  - SUBJECT
+  - ALT_REP
+  - CONTROL
+  - INTEND
+  - BECAUSE_REASON
+  - OWN
+  - AUTH
+  - FIT
+  - STAB
+countermodels:
+  - AC-CM1-BRUTE-PARAMETER
+  - AC-CM2-IMPERSONAL-LAW-BOUNDARY
+  - AC-CM3-POWERS-DISPOSITION
+  - AC-CM4-REPRESENTED-STOCHASTIC-SEED
+  - AC-CM5-MULTIVALUED-EQUILIBRIUM-RELATION
+  - AC-CM6-PLURAL-COORDINATION
+  - AC-CM7-BUILT-IN-NONEQUIVARIANCE
+  - AC-CM8-INCOMPLETE-RESOURCE-REGISTRY
+  - AC-CM9-OVERDETERMINATION
+  - AC-CM10-PERSONAL-WILL-POSITIVE
+source_owner:
+  file: A-Commentary-on-the-Creed-of-Asfahani-v2.3(1).md
+  sha256: 932abd7e2d7b3702d5d6d77d2a4a95ecfb3a9ccbcfbbce7ae750b2bcf55bef7c
+  authority: TRANSLATED_PRIMARY_TEXT_ACCESS
+  creed_and_commentary_distinguished: true
+novelty:
+  general_mathematical: 0
+  historical_identity: NONE

@@ -1,0 +1,41 @@
+schema: pmr007-deep-bh-truth-calibrated-correction-models-v2
+identity: PMR-007-TCRPF-1
+version: V2
+setting:
+  registry: finite_static_declared_scope_complete
+  graph: finite_undirected_possibly_disconnected
+  increments: integer_antisymmetric
+  truth_loss: independently_supplied_integer_coordinate
+  certificate: spanning_forest_plus_fundamental_cycle_basis
+results:
+  exact_calibration: forest_calibration_plus_zero_fundamental_holonomy
+  uniqueness: one_additive_constant_per_component
+  ordinal_boundary: acyclic_relation_rankable_but_not_cardinally_calibrated
+countermodels:
+- exact_anti_truth
+- forest_aligned_cycle_broken
+- zero_holonomy_truth_unrelated
+- accidental_truth_success
+- selected_false_end
+- unauthorized_design
+- source_relative_fitrah_only
+- dynamic_registry_extension
+function_fixing_accounts:
+  frequency: recurrence_evidence
+  causal_role: system_decomposition_and_role_evidence
+  organizational_autopoietic: closure_and_normative_relevance
+  selected_effect: selection_because_of_truth_conducive_effect
+  design: legitimate_truth_aimed_plan_and_intention
+  learned_objective: training_history_and_target_authority
+  success_surface: no_proper_function_promotion
+  teleological_norm: independently_authoritative_end
+  plantinga_epistemic_proper_function: truth_aimed_design_plan_plus_suitable_environment
+  fitrah_oriented: authenticated_source_purpose_plus_applicability_and_world_bridge
+nonclaims:
+- truth_or_scope_completeness_of_L
+- dynamic_future_certificate
+- objective_teleology
+- proper_function_from_calibration_or_success
+- personal_designer_or_Wisdom
+- neutral_fitrah_world_truth
+- general_mathematical_novelty

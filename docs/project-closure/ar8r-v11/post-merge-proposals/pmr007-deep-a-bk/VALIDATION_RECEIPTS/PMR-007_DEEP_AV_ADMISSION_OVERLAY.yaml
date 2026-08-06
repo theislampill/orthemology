@@ -1,0 +1,38 @@
+schema: pmr007-deep-av-admission-overlay-v1
+identity: PMR-007-NBIF-1
+title: Neutral bridge interval and source-to-world interpolation firewall
+status: ADMITTED_POST_MERGE_SCOPED_CENTRAL_SOURCE_FORMAL_BRIDGE_RESULT
+historical_identity: NONE
+historical_theorem_origin_credit: NONE
+general_mathematical_novelty: 0
+owner_adoption: PENDING
+external_review: OPEN
+proof_status: PROVED_FINITE_PROPOSITIONAL_SCOPE
+countermodel_status:
+  v1_unique_bridge: BLOCKED_FORMAL_DEFECT_PRESERVED
+  inconsistent_source_vacuity: VALIDATED
+  tautological_target_noninformation: VALIDATED
+  hidden_target_import: VALIDATED_AS_VOCABULARY_CONTROL
+  no_shared_contingent_target: VALIDATED
+cold_audit: REPAIR_REQUIRED_THEN_REPAIRED
+fresh_rereview: PASS_WITH_NONBLOCKING_LOGIC_AND_VOCABULARY_NOTES
+admitted_claims:
+  - A_entails_C_iff_existsX_A_entails_forallY_C
+  - complete_neutral_interpolant_interval
+  - interpolant_count_equals_2_power_bridge_slack
+  - unique_semantic_bridge_iff_source_projection_equals_target_core
+  - source_predication_neutral_bridge_target_import_and_no_entailment_are_distinct
+nonclaims:
+  - first_order_Craig_reproof
+  - finite_model_Beth_or_interpolation_property
+  - modal_higher_order_intensional_or_probabilistic_transfer
+  - neutrality_of_shared_vocabulary
+  - source_truth_translation_or_actual_world
+  - natural_or_explanatory_interpolant
+  - personal_ground_or_divine_attribute
+candidate_effects:
+  Candidate_C: every_ascent_arrow_gets_shared_vocabulary_bridge_audit
+  Candidate_N: source_predication_cannot_silently_migrate_to_neutral_track
+  Candidate_G: common_bearer_label_must_entail_target_not_merely_name_it
+  source_formal_world: installs_constructive_finite_bridge_interval
+repository_proposal_status: PUBLIC_SAFE_POST_MERGE_PROPOSAL_PENDING_REPOSITORY_AUDIT

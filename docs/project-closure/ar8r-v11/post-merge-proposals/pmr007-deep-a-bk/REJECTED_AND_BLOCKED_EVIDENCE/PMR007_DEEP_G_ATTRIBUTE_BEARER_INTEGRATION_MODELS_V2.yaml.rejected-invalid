@@ -1,0 +1,72 @@
+schema: PMR007_DEEP_G_ATTRIBUTE_BEARER_INTEGRATION_MODELS_V2
+identity: PMR-007-CBA-1
+status: CUSTODY_REPAIRED_V2_PENDING_AUDIT_AND_REREVIEW
+formal_scope:
+  attribute_set: finite_nonempty
+  bearer_set: finite_nonempty
+  realization_relation: Real(attribute,bearer)
+  local_attribute_availability: forall_attribute_exists_bearer
+  integrated_common_bearer: exists_bearer_forall_attribute
+  pairwise_common_bearer: every_pair_of_attributes_has_some_common_bearer
+  source_local_rule: qiyas_al_awla_guarded_at_fixed_target_bearer
+results:
+  CBA_1A:
+    statement: local_attribute_availability_does_not_entail_integrated_common_bearer
+    minimal_witness: {attributes: [K,W], bearers: [u,v], edges: [[K,u],[W,v]]}
+  CBA_1B:
+    statement: pairwise_common_bearer_does_not_entail_global_common_bearer_for_three_or_more_attributes
+    witness:
+      attributes: [K,W,P]
+      bearers: [u,v,w]
+      eligible_sets: {K: [u,v], W: [v,w], P: [u,w]}
+  CBA_1C:
+    statement: shared_fixed_target_makes_common_bearer_a_background_identity_guard
+    guard: all_attribute_rules_instantiated_at_same_pre_fixed_d
+  CBA_1D:
+    statement: integrated_common_bearer_exists_iff_intersection_of_attribute_eligible_bearer_sets_is_nonempty
+    theorem_family: elementary_finite_set_intersection
+source_rule_coordinates:
+  inherited_M4_guards: [IP,DA,NCL,SRC,NC,NEQ]
+  new_integration_guard:
+    id: CB
+    meaning: same_target_bearer_or_independently_proved_identity_across_attribute_rules
+    inherited_from_qiyas_rule: false
+speech_chain_coordinates:
+  - speech_capacity
+  - speech_occurrence
+  - praiseworthy_qualification
+  - authorized_name
+  - revealed_content
+  - uncreated_speech_source_predication
+  implication_status: pairwise_nonidentical_without_further_guards
+countermodels:
+  - {id: CBA-CM1, name: distributed_K_W, blocks: each_attribute_exists_implies_common_bearer}
+  - {id: CBA-CM2, name: pairwise_without_global_K_W_P, blocks: pairwise_coinstantiation_implies_global_bearer}
+  - {id: CBA-CM3, name: shared_symbol_alias, blocks: same_printed_target_name_implies_numerical_identity}
+  - {id: CBA-CM4, name: plural_coordinated_W_P_K, blocks: coordination_implies_bearer_identity}
+  - {id: CBA-CM5, name: bearer_box_with_free_attributes, blocks: one_carrier_implies_derivational_unity}
+  - {id: CBA-CM6, name: speech_capacity_without_occurrence_or_content, blocks: capacity_implies_revelation}
+source_custody:
+  asfahani_translation:
+    sha256: 932abd7e2d7b3702d5d6d77d2a4a95ecfb3a9ccbcfbbce7ae750b2bcf55bef7c
+    authority: TRANSLATED_PRIMARY_ACCESS
+    uses:
+      - qiyas_al_awla_and_nonequalizing_attribution
+      - generic_unity_proof_critique
+      - knowledge_volition_power_life_and_speech_routes
+    arabic_primary_verified: false
+  PMR_M4_01_V2:
+    sha256: d2fceef53144ceeec8679fe254e6a62b3d9572443fafb586dbd980b356e54eee
+  PMR_M5_01_V2:
+    sha256: 10d18e9ac2421fb390d94be93000d5b8d001fb823b662273edad94ccc12f26fd
+  PMR_M5_02_V2:
+    sha256: f03b52ffa0a46980787e91bca36195b07ccf37a60827173f1123170c3703d0a1
+  PMR_M5_03_V2:
+    sha256: c7f64e383552f61509368e18c0eb4cfd22d10f3c9458e26e42bba99a2de28a0a
+terminal_candidates:
+  qiyas_attribute_local_conformance: PRESERVED
+  common_bearer_from_local_rules: NOT_ENTAILED
+  common_bearer_if_one_d_is_pre_fixed: CONDITIONAL_BUT_IMPORTED_AS_BACKGROUND_GUARD
+  neutral_unity: UNESTABLISHED
+  source_internal_unified_bearer: CONDITIONAL_ON_INDEPENDENT_SOURCE_PREDICATION
+  complete_attribute_ascent: UNESTABLISHED

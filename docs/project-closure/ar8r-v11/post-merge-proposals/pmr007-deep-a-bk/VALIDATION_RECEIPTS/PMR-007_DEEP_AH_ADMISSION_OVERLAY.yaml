@@ -1,0 +1,57 @@
+schema: PMR007_DEEP_AH_ADMISSION_OVERLAY_V1
+identity: PMR-007-SDIG-1
+title: Source-derivation integration, textual co-reference, and common-bearer nontransfer
+status: ADMITTED_POST_MERGE_SCOPED_SOURCE_FORMAL_ADJUDICATION_RESULT
+canonical_packet: PMR-007_DEEP_ROUND_AH_SOURCE_DERIVATION_INTEGRATION_AND_COMMON_BEARER_V2.md
+historical_identity: NONE
+historical_origin_credit: 0
+general_mathematical_novelty: 0
+source_status:
+  file_sha256: 932abd7e2d7b3702d5d6d77d2a4a95ecfb3a9ccbcfbbce7ae750b2bcf55bef7c
+  authority: TRANSLATED_PRIMARY_ACCESS
+  arabic_primary_verification: OPEN
+  source_specialist_review: OPEN
+proof_status:
+  selected_support_connectedness: PROVED_AT_DECLARED_REPRESENTATION
+  every_nontrivial_partition_crossed: EXHAUSTIVELY_VERIFIED
+  connectedness_to_common_bearer: NONENTAILMENT_PROVED_IN_DECLARED_ROLE_GRAPH_SEMANTICS
+  textual_coreference: SOURCE_PROPOSITION_NOT_NEUTRAL_THEOREM
+  source_relative_plural_exclusion: CONDITIONAL_ON_PROP_ACCEPT_IDENT
+  world_common_bearer: NOT_ESTABLISHED
+countermodel_status:
+  distributed_source_shape: VALIDATED
+  carrier_boxing: VALIDATED
+  impersonal_graph_realizer: VALIDATED_AT_FORMAL_SCOPE
+  source_coordinate_deletions: VALIDATED
+  exact_generic_unity_failure: SOURCE_ANCHORED_CONTROL
+  speech_nontransfer: VALIDATED_AT_FORMAL_SCOPE
+  qiyas_guard_deletion: VALIDATED_IN_DECLARED_CONTRACT
+cold_audit:
+  disposition: REPAIR_REQUIRED
+  blocking_findings: 12
+  repaired: 12
+repair_status: PASS
+fresh_rereview:
+  initial_custody_attempt: FAILED_LITERAL_ANCHOR_INDEX_AND_CASE_PROBES
+  custody_repair: PASS
+  disposition: PASS_WITH_NONBLOCKING_SOURCE_AUTHORITY_AND_REPRESENTATION_SCOPE_NOTES
+  frozen_hash_mismatches: 0
+  set_partitions_checked: 115975
+  external_independence: false
+authority_ceiling:
+- selected_graph_not_complete_or_uniquely_minimal_Candidate_N_architecture
+- textual_coreference_not_neutral_or_world_common_bearer_proof
+- no_Arabic_primary_or_external_source_specialist_confirmation
+- no_metaphysical_possibility_or_explanatory_parity
+- no_Necessary_Being_Creator_personality_Wisdom_divine_Speech_or_revelation_neutral_entailment
+- no_integrated_champion_meniscus_or_natural_closure_credit
+theorem_family:
+  Candidate_N: SOURCE_RELATIVE_APPLICATION_AND_ADJUDICATION
+  Deep_AE: SHARED_CONNECTED_SUPPORT_MECHANISM_ONLY
+  Deep_AG: CHAMPION_CHALLENGER_INPUT
+repository_proposal_status: PUBLIC_SAFE_POST_MERGE_PROPOSAL_PENDING_REPOSITORY_AUDIT
+external_review: OPEN
+owner_adoption: PENDING
+integrated_champion: NONE
+meniscus: MENISCUS_NOT_REACHED
+natural_closure: NOT_REACHED

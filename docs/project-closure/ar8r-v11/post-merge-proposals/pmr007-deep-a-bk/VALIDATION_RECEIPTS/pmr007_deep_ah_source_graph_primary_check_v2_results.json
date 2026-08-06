@@ -1,0 +1,228 @@
+{
+  "all_equal_assignments": 3,
+  "bearer_roles": 9,
+  "bipartitions_checked": 511,
+  "claims": {
+    "all_source_world_guards_jointly_required_in_declared_contract": true,
+    "connected_graph_allows_plural_bearers_without_binder": true,
+    "every_nontrivial_bipartition_crossed": true,
+    "qiyas_guard_bundle_is_conjunctive_in_declared_contract": true,
+    "selected_graph_connected": true,
+    "textual_binder_is_extra_equality_constraint": true
+  },
+  "components": [
+    [
+      "ABILITY",
+      "CHOICE",
+      "COMMAND",
+      "CREATION",
+      "KNOWLEDGE",
+      "LIFE",
+      "PURE_PERFECTION_GUARD",
+      "SPECIFICATION",
+      "SPEECH",
+      "VOLITION"
+    ]
+  ],
+  "method_guards": 1,
+  "nodes": 10,
+  "overall": "PASS",
+  "plural_assignments": 19680,
+  "qiyas_guard_cases": 16,
+  "qiyas_licensed_cases": 1,
+  "schema": "PMR007_DEEP_AH_PRIMARY_CHECK_RESULTS_V2",
+  "single_qiyas_guard_deletion_witnesses": 4,
+  "source_guard_cases": 64,
+  "source_world_licensed_cases": 1,
+  "support_deletions": [
+    {
+      "component_count": 2,
+      "components": [
+        [
+          "COMMAND",
+          "CREATION",
+          "PURE_PERFECTION_GUARD",
+          "SPEECH"
+        ],
+        [
+          "ABILITY",
+          "CHOICE",
+          "KNOWLEDGE",
+          "LIFE",
+          "SPECIFICATION",
+          "VOLITION"
+        ]
+      ],
+      "deleted": [
+        "CREATION",
+        "VOLITION"
+      ]
+    },
+    {
+      "component_count": 2,
+      "components": [
+        [
+          "COMMAND",
+          "CREATION",
+          "PURE_PERFECTION_GUARD",
+          "SPECIFICATION",
+          "SPEECH",
+          "VOLITION"
+        ],
+        [
+          "ABILITY",
+          "CHOICE",
+          "KNOWLEDGE",
+          "LIFE"
+        ]
+      ],
+      "deleted": [
+        "VOLITION",
+        "KNOWLEDGE"
+      ]
+    },
+    {
+      "component_count": 2,
+      "components": [
+        [
+          "ABILITY",
+          "CHOICE",
+          "COMMAND",
+          "CREATION",
+          "KNOWLEDGE",
+          "LIFE",
+          "PURE_PERFECTION_GUARD",
+          "SPEECH",
+          "VOLITION"
+        ],
+        [
+          "SPECIFICATION"
+        ]
+      ],
+      "deleted": [
+        "SPECIFICATION",
+        "VOLITION"
+      ]
+    },
+    {
+      "component_count": 2,
+      "components": [
+        [
+          "ABILITY",
+          "COMMAND",
+          "CREATION",
+          "KNOWLEDGE",
+          "LIFE",
+          "PURE_PERFECTION_GUARD",
+          "SPECIFICATION",
+          "SPEECH",
+          "VOLITION"
+        ],
+        [
+          "CHOICE"
+        ]
+      ],
+      "deleted": [
+        "CHOICE",
+        "ABILITY"
+      ]
+    },
+    {
+      "component_count": 3,
+      "components": [
+        [
+          "COMMAND",
+          "CREATION",
+          "KNOWLEDGE",
+          "PURE_PERFECTION_GUARD",
+          "SPECIFICATION",
+          "SPEECH",
+          "VOLITION"
+        ],
+        [
+          "ABILITY",
+          "CHOICE"
+        ],
+        [
+          "LIFE"
+        ]
+      ],
+      "deleted": [
+        "KNOWLEDGE",
+        "ABILITY",
+        "LIFE"
+      ]
+    },
+    {
+      "component_count": 2,
+      "components": [
+        [
+          "ABILITY",
+          "CHOICE",
+          "CREATION",
+          "KNOWLEDGE",
+          "LIFE",
+          "PURE_PERFECTION_GUARD",
+          "SPECIFICATION",
+          "SPEECH",
+          "VOLITION"
+        ],
+        [
+          "COMMAND"
+        ]
+      ],
+      "deleted": [
+        "COMMAND",
+        "SPEECH"
+      ]
+    },
+    {
+      "component_count": 1,
+      "components": [
+        [
+          "ABILITY",
+          "CHOICE",
+          "COMMAND",
+          "CREATION",
+          "KNOWLEDGE",
+          "LIFE",
+          "PURE_PERFECTION_GUARD",
+          "SPECIFICATION",
+          "SPEECH",
+          "VOLITION"
+        ]
+      ],
+      "deleted": [
+        "CREATION",
+        "SPEECH"
+      ]
+    },
+    {
+      "component_count": 2,
+      "components": [
+        [
+          "ABILITY",
+          "CHOICE",
+          "COMMAND",
+          "CREATION",
+          "KNOWLEDGE",
+          "LIFE",
+          "SPECIFICATION",
+          "SPEECH",
+          "VOLITION"
+        ],
+        [
+          "PURE_PERFECTION_GUARD"
+        ]
+      ],
+      "deleted": [
+        "CREATION",
+        "PURE_PERFECTION_GUARD",
+        "SPEECH"
+      ]
+    }
+  ],
+  "supports": 8,
+  "three_bearer_assignments_checked": 19683,
+  "uncrossed_bipartitions": 0
+}

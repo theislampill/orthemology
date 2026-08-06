@@ -1,0 +1,33 @@
+schema: PMR007_DEEP_AE_INTERACTION_HYPERGRAPH_MODELS_V2
+identity: PMR-007-IHDU-1
+status: REPAIRED_POST_MERGE_RESEARCH_CANDIDATE
+formal_setting:
+  coordinates: finite_fixed_semantic_registry_V
+  functions: finite_declared_family_F_on_boolean_cube
+  expansion: unique_multilinear_Mobius_per_function
+  interaction_hypergraph: union_of_nonzero_supports_size_at_least_two
+results:
+  family_block_separability: iff_every_support_is_block_contained
+  additive_components: connected_components_of_primal_interaction_graph
+  additive_component_count: b_add_equals_number_of_components
+  b_add_one: no_nontrivial_additive_block_decomposition
+application_guards:
+  - COORD_VALID
+  - FAMILY_COMPLETE
+  - RESOURCE_COMPLETE
+  - TABLE_IDENTIFIED
+  - SCOPE_FIXED
+controls:
+  - AE-CM1-ONE-CARRIER-PRODUCT
+  - AE-CM2-IMPERSONAL-CONNECTED-LAW
+  - AE-CM3-DISTRIBUTED-NONSEPARABLE-IMPLEMENTATION
+  - AE-CM4-HIDDEN-LATENT-DECOMPOSITION
+  - AE-CM5-COORDINATE-GERRYMANDERING
+  - AE-CM6-ARBITRARY-COUPLING
+  - AE-CM7-OBSERVATIONAL-UNDERDETERMINATION
+  - AE-CM8-SHARED-OUTPUT-BOTTLENECK
+  - AE-CM9-MULTIPLE-FUNCTION-FAMILIES
+  - AE-CM10-SOURCE-CONDITIONAL-PERSONAL-UNITY
+novelty:
+  general_mathematical: 0
+  historical_identity: NONE

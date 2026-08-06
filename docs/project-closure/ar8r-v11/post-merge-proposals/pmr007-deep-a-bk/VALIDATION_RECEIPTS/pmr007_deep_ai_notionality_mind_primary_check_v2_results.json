@@ -1,0 +1,103 @@
+{
+  "base_models": 2624,
+  "claims": {
+    "H7a_b_c_d_entail_exactly_one_underived_constitutive_host": true,
+    "NM_HOST_entails_some_mental_host": true,
+    "full_bridge_does_not_entail_personality": true,
+    "notional_hosting_does_not_entail_constitutive_ground": true,
+    "structure_underived_does_not_entail_mental_host": true,
+    "underivability_does_not_transfer_without_H7c": true
+  },
+  "full_bridge_models": 1424,
+  "overall": "PASS",
+  "queries": {
+    "constitutive_host_underived_without_transfer": {
+      "countermodels": 32,
+      "eligible_models": 128,
+      "first_countermodel": {
+        "G0": false,
+        "G1": true,
+        "H0": false,
+        "H1": false,
+        "M0": false,
+        "M1": true,
+        "N": true,
+        "P0": false,
+        "P1": false,
+        "R0": false,
+        "R1": true,
+        "S": true,
+        "U": true
+      }
+    },
+    "full_bridge_to_exactly_one_underived_constitutive_host": {
+      "countermodels": 0,
+      "eligible_models": 64,
+      "first_countermodel": null
+    },
+    "full_bridge_to_personal_subject": {
+      "countermodels": 16,
+      "eligible_models": 64,
+      "first_countermodel": {
+        "G0": false,
+        "G1": true,
+        "H0": false,
+        "H1": true,
+        "M0": false,
+        "M1": true,
+        "N": true,
+        "P0": false,
+        "P1": false,
+        "R0": false,
+        "R1": true,
+        "S": true,
+        "U": true
+      }
+    },
+    "notional_to_mental_host": {
+      "countermodels": 0,
+      "eligible_models": 1024,
+      "first_countermodel": null
+    },
+    "notional_underived_to_constitutive_host": {
+      "countermodels": 224,
+      "eligible_models": 512,
+      "first_countermodel": {
+        "G0": false,
+        "G1": false,
+        "H0": false,
+        "H1": false,
+        "M0": false,
+        "M1": true,
+        "N": true,
+        "P0": false,
+        "P1": false,
+        "R0": false,
+        "R1": true,
+        "S": false,
+        "U": true
+      }
+    },
+    "structural_underived_to_mental_host": {
+      "countermodels": 64,
+      "eligible_models": 656,
+      "first_countermodel": {
+        "G0": false,
+        "G1": false,
+        "H0": false,
+        "H1": false,
+        "M0": false,
+        "M1": false,
+        "N": false,
+        "P0": false,
+        "P1": false,
+        "R0": false,
+        "R1": false,
+        "S": true,
+        "U": true
+      }
+    }
+  },
+  "schema": "PMR007_DEEP_AI_PRIMARY_CHECK_RESULTS_V2",
+  "valuations_per_class": 8192
+}

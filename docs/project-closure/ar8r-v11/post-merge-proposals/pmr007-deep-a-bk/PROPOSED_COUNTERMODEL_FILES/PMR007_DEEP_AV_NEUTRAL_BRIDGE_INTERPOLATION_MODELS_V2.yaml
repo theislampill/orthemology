@@ -1,0 +1,33 @@
+schema: pmr007-deep-av-neutral-bridge-interpolation-models-v2
+identity: PMR-007-NBIF-1
+provenance: POST_MERGE_RESEARCH_CANDIDATE
+setting:
+  logic: finite propositional truth-table semantics
+  X: source_or_architecture_exclusive
+  N: independently_defended_neutral_shared_vocabulary
+  Y: target_or_world_exclusive
+definitions:
+  S_A: exists X A(X,N)
+  T_C: forall Y C(N,Y)
+  interpolant: S_A entails I and I entails T_C
+  bridge_slack: number of N-valuations where T_C is true and S_A is false
+theorems:
+  entailment: A entails C iff S_A entails T_C
+  interval: all interpolants form the interval [S_A,T_C]
+  count: number_of_interpolants=2^bridge_slack
+  uniqueness: unique_semantic_interpolant iff S_A=T_C
+controls:
+  inconsistent_source: vacuous_entailment_not_evidence
+  tautological_target: non-discriminating_entailment
+  no_shared_vocabulary: satisfiable_source_cannot_entail_contingent_target
+  hidden_target_import: target_or_equivalent_proxy_in_N
+  direct_source_predication: source_relative_not_neutral_derivation
+  translation_world_deletion: logical_bridge_does_not_verify_source_world_chain
+  nonunique_bridge: A=N_and_C=true
+scope_firewalls:
+  - finite_propositional_not_full_first_order_proof
+  - classical_first_order_relation_is_Craig_prior_art
+  - no_transfer_to_modal_higher_order_fixed_point_probabilistic_or_intensional_logics
+  - vocabulary_neutrality_not_certified
+  - premise_truth_and_model_completeness_not_certified
+  - interpolant_not_necessarily_natural_explanatory_or_computable

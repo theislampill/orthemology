@@ -1,0 +1,84 @@
+schema: PMR007_DEEP_C_INTEGRATED_COMPOSITE_RIVAL_V2
+identity: PMR-007-ICR-1
+status: REPAIRED_V2_PENDING_FRESH_REREVIEW
+modal_model:
+  worlds: [w0, w1]
+  accessibility:
+    w0: [w0, w1]
+    w1: [w0, w1]
+  constant_domain: [o, x, p0, p1, e0, e1, q0, q1]
+  exists_at:
+    w0: [o, x, p0, e0, q0]
+    w1: [o, x, p1, e1, q1]
+predicate_extensions:
+  necessary: [o, x]
+  underived_relative_to_process: [o]
+  abstract: [o]
+  concrete: [x, p0, p1, e0, e1, q0, q1]
+  externally_real: [x]
+  actual: [x, p0, p1, e0, e1, q0, q1]
+  modal_order: [o]
+  semantic_order: [o]
+  primitive_truth_norm: [o]
+  articulability_ground: [o]
+  concrete_actualizer: [x]
+  nonborrowed_efficacy: [x]
+  impersonal: [x]
+  personal: []
+  intellectual: []
+  agentic: []
+  wise: []
+  speech_capable: []
+  speaks: []
+  revelation_identified: []
+  creator: []
+  unified_common_bearer: []
+  determinate_process: [p0, p1]
+relations:
+  constitutive_condition:
+    - [o, p0, w0]
+    - [o, p1, w1]
+  complete_ground:
+    - [o, p0, w0]
+    - [o, p1, w1]
+  forbidden_complete_ground:
+    - [p0, o, w0]
+    - [p1, o, w1]
+  actualizes:
+    - [x, e0, w0]
+    - [x, e1, w1]
+  originates:
+    - [x, e0, w0]
+    - [x, e1, w1]
+  coordinates_with:
+    - [o, x, w0]
+    - [o, x, w1]
+contingent_particulars:
+  w0: [p0, e0, q0]
+  w1: [p1, e1, q1]
+scoped_creator_definition:
+  requires:
+    - agentic
+    - nonborrowed_efficacy
+    - originates_every_declared_contingent_particular_at_each_world
+functional_architecture:
+  primitive_sources:
+    t: o
+    e: x
+  profile_table:
+    - {t: 0, e: 0, M: 0, A: 0, S: 0, N: 0, R: 0}
+    - {t: 0, e: 1, M: 0, A: 1, S: 0, N: 0, R: 0}
+    - {t: 1, e: 0, M: 1, A: 0, S: 1, N: 1, R: 0}
+    - {t: 1, e: 1, M: 1, A: 1, S: 1, N: 1, R: 1}
+  product_of_marginals_count: 32
+  admitted_profile_count: 4
+bridge_models:
+  C-CM1: {underived: true, necessary: false}
+  C-CM2: {necessary_abstract_order: true, concrete_actuality: false}
+  C-CM3: {concrete_actualizer: true, originates_all_contingents: false, creator: false}
+  C-CM4: {plural_necessary_actualizers: true, unified_common_bearer: false}
+  C-CM5: {unified_functional_field: true, intellectual: false, personal: false}
+  C-CM6: {intellectual: true, agentic: false, efficacious: false}
+  C-CM7: {knowledge: true, will: true, power: true, fitting_ends: false, wisdom: false}
+  C-CM8: {speech_capacity: true, actual_speech: false}
+  C-CM9: {personal_necessary_creator: true, revelation_identified: false}

@@ -1,0 +1,59 @@
+schema: PMR007_DEEP_E_ADMISSION_OVERLAY_V1
+identity: PMR-007-TNAC-1
+round: PMR-007-DEEP-E
+canonical_version: V2
+title: Track-N source nonmigration and integrated architecture comparison
+provenance_class: ADMITTED_POST_MERGE_SCOPED_SOURCE_FORMAL_ADJUDICATION
+historical_identity: NONE
+admitted_results:
+  - a source-dependent derivation remains source-relative while a neutral countermodel survives
+  - exact source uses are bound to verified local hashes and locators with no Arabic-primary claim
+  - Architecture A is the conditional N-track predicate-compatibility leader
+  - no architecture strictly dominates in the declared neutral non-scalar comparison
+  - the strongest neutral rival is an impersonal powers/abstract-order/concrete-actualizer composite
+proof_status: ELEMENTARY_CONSEQUENCE_PROOF_PLUS_TYPED_SOURCE_CUSTODY_AND_ARCHITECTURE_CHECKS
+cold_audit:
+  disposition: REPAIR_REQUIRED
+  blocking_findings:
+    - incorrect Candidate-N map hash
+    - source locators not executably bound
+    - source best-fit status hard-coded
+repair:
+  disposition: ALL_BLOCKING_FINDINGS_REPAIRED_IN_V2
+fresh_rereview:
+  disposition: PASS_WITH_NONBLOCKING_SOURCE_AND_COMPARISON_SCOPE_NOTES
+  hash_failures: 0
+  source_locators_checked: 13
+  source_failures: 0
+  neutral_full_dominators: 0
+  n_track_compatibility_leader: A_UNIFIED_PERSONAL
+theorem_family:
+  relation: ELEMENTARY_MODEL_THEORETIC_NONENTAILMENT_AND_DECLARED_PARTIAL_ORDER_COMPARISON
+  general_mathematical_novelty: ZERO
+source_authority:
+  translated_primary_access: PRESENT
+  secondary_scholarly_reconstruction: PRESENT
+  contemporary_athari_synthesis: PRESENT
+  arabic_primary_verified: false
+  external_source_specialist_review: OPEN
+central_meniscus_disposition:
+  neutral_integrated_champion: NONE
+  architecture_a: PROMISING_BUT_BRIDGE_INCOMPLETE_AND_SOURCE_INTERNAL_COMPATIBILITY_LEADER
+  architecture_b: IMPERSONAL_OR_PLURAL_RIVAL_SURVIVES
+  architecture_c: IMPERSONAL_COMPOSITE_RIVAL_SURVIVES
+  proper_function_ground: UNESTABLISHED_NEUTRALLY
+  articulability_to_mentality: UNESTABLISHED
+  articulability_to_speech: UNESTABLISHED
+  rival_parity: UNBROKEN
+  meniscus: MENISCUS_NOT_REACHED
+  natural_closure: NOT_REACHED
+external_review_status: OPEN
+owner_adoption_status: PENDING
+repository_proposal_status: ELIGIBLE_FOR_SANITIZED_OWNER_REVIEW_NOT_INTEGRATION_AUTHORIZED
+nonclaims:
+  - no source truth established
+  - no neutral migration of Track N premises
+  - no Arabic-primary verification
+  - no exhaustive architecture space or canonical scalar comparison
+  - no proof that the strongest rival is true
+  - no final integrated champion

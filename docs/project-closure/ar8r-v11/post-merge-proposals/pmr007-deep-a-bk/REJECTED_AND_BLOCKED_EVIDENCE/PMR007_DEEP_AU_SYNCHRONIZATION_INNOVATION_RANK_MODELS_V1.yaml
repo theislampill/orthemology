@@ -1,0 +1,46 @@
+schema: pmr007-deep-au-synchronization-innovation-rank-models-v1
+identity: PMR-007-SIER-1-CANDIDATE-V1
+field_scope: finite fields in executable checks; theorem stated over a field
+semantics:
+  old_root_space: authenticated mutually independent claim-relevant root coordinates
+  evidence_matrix: rows are declared linear root-signatures
+  synchronization: deterministic left multiplication B*A
+  fresh_acquisition: rows C=[C_old|C_fresh] in old-plus-fresh root space
+  rank_status: scoped linear root-span invariant only
+v1_candidate:
+  synchronization_monotonicity: rank(B*A) <= rank(A)
+  copied_row_nonincrease: duplicate rows do not increase rank
+  proposed_balance: rank(after) = rank(before) - synchronization_loss + rank(C_fresh)
+  contraction_monotonicity: rank(A*Q) <= rank(A)
+mandatory_controls:
+  copied_root_false_multiplicity:
+    A: [[1, 0], [1, 0], [1, 0]]
+    expected_rank: 1
+  independent_convergence:
+    root_rows: [[1, 0], [0, 1]]
+    current_output_projection: [[1, 1]]
+    note: equal projected output can coexist with rank two root ancestry
+  total_synchronization:
+    A: [[1, 0], [0, 1]]
+    B: [[1, 1], [1, 1]]
+    expected_rank_before: 2
+    expected_rank_after: 1
+  v1_old_root_recovery_countermodel:
+    A: [[1, 0], [0, 1]]
+    B: [[1, 0]]
+    C_old: [[0, 1]]
+    C_fresh: [[0]]
+    actual_rank_after: 2
+    v1_predicted_rank_after: 1
+    diagnosis: a later acquisition can recover an old root direction erased by synchronization without introducing a fresh root
+  unauthenticated_label_alias:
+    displayed_rows: [[1, 0], [0, 1]]
+    actual_root_map: [[1], [1]]
+    note: displayed rank two contracts to actual rank one if labels alias one root
+nonclaims:
+  - not_tawatur_warrant
+  - not_truth
+  - not_claim_relevance_without_declared_scope
+  - not_numerical_or_episode_identity
+  - not_general_nonlinear_information_rank
+  - not_independence_without_root_authentication

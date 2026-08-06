@@ -1,0 +1,23 @@
+{
+  "frozen_files_checked": 7,
+  "hash_mismatches": [],
+  "independent_stronger_reading_controls": {
+    "adaptive_defeats_every_commitment": true,
+    "alias_collapses_two_to_one": true,
+    "dynamic_new_path_survives": true,
+    "incompatible_cover_absent": true,
+    "omitted_path_has_no_blocker": true,
+    "positive_margin": true
+  },
+  "overall": "PASS",
+  "random_multi_path_cases": 50000,
+  "random_multi_path_failures": 0,
+  "root_contraction_cases": 1662078,
+  "root_contraction_failures": 0,
+  "schema": "PMR007_ROUND20_DISTINCT_REREVIEW_RESULTS_V1",
+  "single_path_cases": 32906,
+  "single_path_failures": 0,
+  "single_path_families": 32906,
+  "two_path_failures": 0,
+  "two_path_three_root_systems": 16384
+}

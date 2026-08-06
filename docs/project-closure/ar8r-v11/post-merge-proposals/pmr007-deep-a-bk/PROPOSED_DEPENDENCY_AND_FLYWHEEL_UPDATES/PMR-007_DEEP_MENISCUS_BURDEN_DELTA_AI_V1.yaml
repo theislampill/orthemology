@@ -1,0 +1,50 @@
+schema: PMR007_DEEP_MENISCUS_BURDEN_DELTA_AI_V1
+round: DEEP_AI
+identity: PMR-007-NMIB-1
+closed_or_sharply_narrowed:
+- burden: notional_content_to_mental_host
+  disposition: CONDITIONALLY_CLOSED_UNDER_NM_HOST
+  result: source_reconstructed_notionality_entails_some_mental_host
+- burden: structural_order_to_intellect
+  disposition: SHARPLY_DECOMPOSED
+  result: requires_H7a_intrinsic_notionality_H7b_constitutive_hosting_H7c_underivability_transfer_H7d_unique_constitutive_host
+- burden: mental_host_to_personality
+  disposition: NEGATIVE_RESULT_ADMITTED
+  result: personal_subject_agency_and_Wisdom_remain_independent_even_under_full_H7a_d_specification
+narrowed:
+- burden: uncreated_grammar_to_mentality
+  change: prior_structure_or_articulability_is_not_enough; intrinsic_notionality_and_constitutive_hosting_are_explicit_missing_bridges
+- burden: source_mental_external_ontology
+  change: universals_as_mental_abstractions_can_be_preserved_by_an_impersonal_order_plus_derived_minds_rival
+- burden: Candidate_G_explanatory_unity
+  change: one_intellectual_ground_requires_more_than_mental_representation_of_shared_order
+opened_or_reopened:
+- H7a_intrinsic_notionality
+- H7b_constitutive_mental_grounding
+- H7c_underivability_transfer
+- H7d_unique_constitutive_host
+- H8_intellect_to_personality_agency
+- source_world_verification_of_mental_external_ontology
+- matched_explanation_personal_ground_vs_impersonal_order_plus_derived_minds
+strongest_surviving_rival:
+  name: IMPERSONAL_UNDERIVED_ORDER_PLUS_DERIVED_LOCAL_MENTAL_ABSTRACTIONS
+  accepts:
+  - external_particulars_and_order
+  - universals_as_mental_abstractions
+  - multiple_local_minds_and_representations
+  withholds:
+  - intrinsic_notionality_of_the_order
+  - constitutive_mental_ground
+  - underived_intellect
+  - one_personal_subject
+  - agency_Wisdom_Speech
+candidate_effects:
+  Candidate_A: report_and_provenance_can_supply_source_predicates_but_not_neutral_H7
+  Candidate_B: runtime representations_are_downstream_controls_not_grounds
+  Candidate_C: H7_bridge_sharply_decomposed_and_impersonal_rival_strengthened
+repository_proposal_status: PUBLIC_SAFE_POST_MERGE_PROPOSAL_PENDING_REPOSITORY_AUDIT
+owner_adoption: PENDING
+external_review: OPEN
+integrated_champion: NONE
+meniscus: MENISCUS_NOT_REACHED
+natural_closure: NOT_REACHED

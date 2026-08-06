@@ -1,0 +1,42 @@
+schema: PMR007_DEEP_AB_FITTINGNESS_POLICY_MODELS_V2
+identity: PMR-007-FSPW-1
+status: REPAIRED_POST_MERGE_RESEARCH_CANDIDATE
+formal_reduct:
+  contexts: finite_nonempty
+  actions: finite_nonempty
+  profiles: finite_nonempty
+  H: supplied_nonempty_certificate_admissibility_sets
+  aware_policy: C_times_Theta_to_A
+  blind_policy: C_to_A
+authority_coordinates:
+  FIT_AUTH: independently_authorized_target_key
+  FIT_TRUTH: independently_truth_linked_relation
+  FIT_WORLD: independently_world_adequate
+  FIT_SRC: source_version_provenance_valid
+  FIT_SCOPE: profile_registry_complete_for_claimed_scope
+  FIT_HIST: current_information_sufficient_for_history_sensitive_choice
+frozen_scm:
+  exogenous: [C, Theta]
+  equation: Act_equals_pi_C_Theta
+  intervention_scope: surgical_profile_input_only
+  nonclaim: no_causal_claim_outside_frozen_equations
+personal_bridge:
+  required_coordinates: [SUBJ, UPTAKE, BFIT, KNOW, MEANS, POWER, OWN, STAB, NDEF]
+controls:
+  - AB-CM1-IMPERSONAL-ARGMAX
+  - AB-CM2-FALSE-OR-UNAUTHORIZED-H
+  - AB-CM3-PROFILE-BLIND-COLLISION
+  - AB-CM4-REGISTRY-LIMITED-LOOKUP
+  - AB-CM5-HISTORY-COLLISION
+  - AB-CM6-DISTRIBUTED-PIPELINE
+  - AB-CM7-ONE-EPISODE-CONFORMITY
+  - AB-CM8-SOURCE-CONDITIONAL-WISDOM
+  - AB-CM9-HIDDEN-MODEL-CHANGE
+source_owner:
+  file: A-Commentary-on-the-Creed-of-Asfahani-v2.3(1).md
+  sha256: 932abd7e2d7b3702d5d6d77d2a4a95ecfb3a9ccbcfbbce7ae750b2bcf55bef7c
+  authority: TRANSLATED_PRIMARY_TEXT_ACCESS
+  nonauthority: ARABIC_PRIMARY_VERIFICATION
+novelty:
+  general_mathematical: 0
+  historical_identity: NONE

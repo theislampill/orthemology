@@ -1,0 +1,59 @@
+{
+  "aligned_structural_profiles": 2,
+  "all_false_witnesses": 1,
+  "all_true_twins": 1,
+  "carrier_boxing_structural_profiles": 32,
+  "checker": "PRIMARY_V1",
+  "expansions_checked": 512,
+  "identity": "PMR-007-IR5CM-1",
+  "neutral_model_pass": true,
+  "neutral_reduct_failures": 0,
+  "result": "PASS",
+  "single_deletion_models": {
+    "ActualSpeech": {
+      "all_other_conclusions_true": true,
+      "neutral_model_pass": true,
+      "target_false": true
+    },
+    "Agentic": {
+      "all_other_conclusions_true": true,
+      "neutral_model_pass": true,
+      "target_false": true
+    },
+    "BecauseFitting": {
+      "all_other_conclusions_true": true,
+      "neutral_model_pass": true,
+      "target_false": true
+    },
+    "CreatorClass": {
+      "all_other_conclusions_true": true,
+      "neutral_model_pass": true,
+      "target_false": true
+    },
+    "Intellect": {
+      "all_other_conclusions_true": true,
+      "neutral_model_pass": true,
+      "target_false": true
+    },
+    "IntentionalUptake": {
+      "all_other_conclusions_true": true,
+      "neutral_model_pass": true,
+      "target_false": true
+    },
+    "Personal": {
+      "all_other_conclusions_true": true,
+      "neutral_model_pass": true,
+      "target_false": true
+    },
+    "SpeechCapacity": {
+      "all_other_conclusions_true": true,
+      "neutral_model_pass": true,
+      "target_false": true
+    },
+    "Wisdom": {
+      "all_other_conclusions_true": true,
+      "neutral_model_pass": true,
+      "target_false": true
+    }
+  }
+}

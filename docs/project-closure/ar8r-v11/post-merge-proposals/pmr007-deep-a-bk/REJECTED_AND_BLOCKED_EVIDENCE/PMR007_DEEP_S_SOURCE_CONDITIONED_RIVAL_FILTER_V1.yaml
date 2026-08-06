@@ -1,0 +1,68 @@
+schema: PMR007_DEEP_S_SOURCE_CONDITIONED_RIVAL_FILTER_V1
+identity: PMR-007-SCRF-1
+source_authority: TRANSLATED_PRIMARY_ACCESS_NOT_ARABIC_PRIMARY_VERIFICATION
+source_sha256: 932abd7e2d7b3702d5d6d77d2a4a95ecfb3a9ccbcfbbce7ae750b2bcf55bef7c
+track_t_neutral_predicates:
+  - UNDERIVED_ORDER
+  - NECESSARY_ORDER
+  - EXTERNALLY_ACTUAL_REALIZER
+  - ORIGINATOR_ROLE
+  - FORMAL_COUPLING
+  - NORM_FIELD
+  - ARTICULABILITY
+source_predicates:
+  - CREATOR
+  - ONE
+  - KNOWING
+  - ABLE
+  - LIVING
+  - VOLITION
+  - SPEAKING
+  - HEARING
+  - SEEING
+  - ACTUAL_SPEECH
+  - UNCREATED_SPEECH
+  - SAME_BEARER_BINDING
+identification_bridge:
+  - REVEALED_REFERENT_IDENTIFIED_WITH_NEUTRAL_GROUND
+source_contract:
+  designated_bearer: g
+  bearer_local_predicates:
+    - CREATOR
+    - ONE
+    - KNOWING
+    - ABLE
+    - LIVING
+    - VOLITION
+    - SPEAKING
+    - HEARING
+    - SEEING
+    - ACTUAL_SPEECH
+    - UNCREATED_SPEECH
+  guards:
+    H12_SOURCE_AUTHENTICATION: required_not_established
+    H16_REFERENT_IDENTIFICATION: required_not_established
+rivals:
+  ABSTRACT_NECESSARY_ORDER:
+    defects: [CREATOR, KNOWING, ABLE, LIVING, VOLITION, SPEAKING, HEARING, SEEING, ACTUAL_SPEECH, UNCREATED_SPEECH, SAME_BEARER_BINDING]
+  IMPERSONAL_ORIGINATOR:
+    defects: [KNOWING, LIVING, VOLITION, SPEAKING, HEARING, SEEING, ACTUAL_SPEECH, UNCREATED_SPEECH]
+  PLURAL_ATTRIBUTE_REALIZATION:
+    defects: [ONE, SAME_BEARER_BINDING]
+  SILENT_PERSONAL_GROUND:
+    defects: [SPEAKING, ACTUAL_SPEECH, UNCREATED_SPEECH]
+  CREATED_SPEECH_ONLY:
+    defects: [UNCREATED_SPEECH]
+  DEISTIC_PERSONAL_CREATOR:
+    defects: [REVEALED_REFERENT_IDENTIFIED_WITH_NEUTRAL_GROUND]
+portfolios:
+  PRE_SPEECH_STRUCTURAL:
+    rivals: [ABSTRACT_NECESSARY_ORDER, IMPERSONAL_ORIGINATOR, PLURAL_ATTRIBUTE_REALIZATION]
+  FULL_SOURCE_RELATIVE:
+    rivals: [ABSTRACT_NECESSARY_ORDER, IMPERSONAL_ORIGINATOR, PLURAL_ATTRIBUTE_REALIZATION, SILENT_PERSONAL_GROUND, CREATED_SPEECH_ONLY, DEISTIC_PERSONAL_CREATOR]
+nonclaims:
+  - source predicates are not neutral Track-T consequences
+  - source authentication and referent identification are not proved
+  - same-bearer grammar is not an independent neutral unity theorem
+  - rival portfolio is not exhaustive
+  - finite hitting-set equivalence has no general mathematical novelty

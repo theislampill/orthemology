@@ -38,6 +38,10 @@ PMR007_DEEP_RECEIPT = PACKET / "provenance" / "AR8R-PMR007-DEEP-A-AP-PROPOSAL-RE
 PMR007_DEEP_EXECUTION = PACKET / "provenance" / "AR8R-PMR007-DEEP-A-AP-EXECUTION-RECEIPT-V1.yaml"
 PMR007_DEEP_PROPOSAL = PACKET / "post-merge-proposals" / "pmr007-deep-a-ap"
 PMR007_DEEP_CORRECTION = PACKET / "post-merge-proposals" / "PMR007-DEEP-A-AP-ADOPTION-BOUNDARY-CORRECTION.md"
+PMR007_DEEP_BK_RECEIPT = PACKET / "provenance" / "AR8R-PMR007-DEEP-A-BK-PROPOSAL-RECEIPT-V1.yaml"
+PMR007_DEEP_BK_EXECUTION = PACKET / "provenance" / "AR8R-PMR007-DEEP-BF-BK-EXECUTION-RECEIPT-V1.yaml"
+PMR007_DEEP_BK_PROPOSAL = PACKET / "post-merge-proposals" / "pmr007-deep-a-bk"
+PMR007_DEEP_BK_CORRECTION = PACKET / "post-merge-proposals" / "PMR007-DEEP-A-BK-ADOPTION-BOUNDARY-CORRECTION.md"
 VISIBLE_SOURCE_MANIFEST = PACKET / "provenance" / "AR8R-POST-MERGE-VISIBLE-FILE-CARD-MANIFEST-V1.yaml"
 FILE_CARD_ARCHIVE_CONFLICTS = PACKET / "provenance" / "AR8R-POST-MERGE-FILE-CARD-ARCHIVE-CONFLICTS-V1.yaml"
 SOURCE_RECEIPTS = (
@@ -132,6 +136,16 @@ EXPECTED_PMR007_DEEP = {
     "PMR-007-SAMC-1", "PMR-007-EGAC-1", "PMR-007-SRIN-1", "PMR-007-ABPD-1",
     "PMR-007-RPDS-1", "PMR-007-SWRI-1",
 }
+
+EXPECTED_PMR007_DEEP_AQ_BK = {
+    "PMR-007-SCAP-1", "PMR-007-PREC-1", "PMR-007-PFIT-1", "PMR-007-NIBE-1",
+    "PMR-007-SIER-1", "PMR-007-NBIF-1", "PMR-007-PRAD-1", "PMR-007-STWG-1",
+    "PMR-007-SGCI-1", "PMR-007-CSII-1", "PMR-007-IRCQ-1", "PMR-007-JCIQ-1",
+    "PMR-007-UIEP-1", "PMR-007-LSRO-1", "PMR-007-CJID-1", "PMR-007-ILRC-1",
+    "PMR-007-IR5CM-1", "PMR-007-TCRPF-1", "PMR-007-FTASA-1", "PMR-007-TQDC-1",
+    "PMR-007-NCBD-1",
+}
+EXPECTED_PMR007_DEEP_A_BK = EXPECTED_PMR007_DEEP | EXPECTED_PMR007_DEEP_AQ_BK
 
 EXPECTED_MILESTONE_STATUSES = {
     **{f"M{i}": "ACTIVE_RESEARCH_PROGRAM" for i in (4, 5, 6, 8, 9, 10, 11, 13, 18)},
@@ -513,6 +527,28 @@ def validate_post_merge_catalog(document: Any) -> list[str]:
             if deep_source.get(key) != expected:
                 issues.append(f"pmr007-deep-catalog-source-mismatch:{key}")
 
+    deep_bk_source = next(
+        (
+            row for row in source_packets
+            if isinstance(row, dict) and row.get("id") == "PMR007_DEEP_A_THROUGH_BK"
+        ),
+        None,
+    ) if isinstance(source_packets, list) else None
+    expected_bk_source = {
+        "exact_archive_members": 1187,
+        "indexed_results": 73,
+        "deep_results": 63,
+        "disposition": "EXACT_SANITIZED_PROPOSAL_SNAPSHOT_EXTERNAL_REVIEW_AND_OWNER_ADOPTION_REQUIRED",
+        "receipt": "provenance/AR8R-PMR007-DEEP-A-BK-PROPOSAL-RECEIPT-V1.yaml",
+        "execution_receipt": "provenance/AR8R-PMR007-DEEP-BF-BK-EXECUTION-RECEIPT-V1.yaml",
+    }
+    if not isinstance(deep_bk_source, dict):
+        issues.append("pmr007-deep-bk-catalog-source-missing")
+    else:
+        for key, expected in expected_bk_source.items():
+            if deep_bk_source.get(key) != expected:
+                issues.append(f"pmr007-deep-bk-catalog-source-mismatch:{key}")
+
     deep_boundary = document.get("pmr007_deep_a_through_ap_snapshot", {})
     expected_deep_boundary = {
         "path": "post-merge-proposals/pmr007-deep-a-ap",
@@ -537,6 +573,31 @@ def validate_post_merge_catalog(document: Any) -> list[str]:
         for key, expected in expected_deep_boundary.items():
             if deep_boundary.get(key) != expected:
                 issues.append(f"pmr007-deep-catalog-boundary-mismatch:{key}")
+
+    deep_bk_boundary = document.get("pmr007_deep_a_through_bk_snapshot", {})
+    expected_deep_bk_boundary = {
+        "path": "post-merge-proposals/pmr007-deep-a-bk",
+        "result_index": "post-merge-proposals/pmr007-deep-a-bk/PROPOSED_RESULT_INDEX.yaml",
+        "indexed_results": 73,
+        "deep_a_through_bk_results": 63,
+        "exact_archive_members": 1187,
+        "historical_identity": "NONE",
+        "owner_adoption": "PENDING",
+        "external_review": "OPEN",
+        "repository_readiness": "EXTERNAL_REVIEW_REQUIRED",
+        "general_novelty_credit": "NOT_GRANTED",
+        "duplicate_credit_effect": "NONE",
+        "integrated_champion": "NONE",
+        "meniscus": "MENISCUS_NOT_REACHED",
+        "natural_closure": "NOT_REACHED",
+        "executable_reproduction": "INDEPENDENTLY_REPRODUCED_FROM_PRIVATE_CUSTODY_COMPANION_WITH_PUBLIC_LAYOUT_BOUNDARY",
+    }
+    if not isinstance(deep_bk_boundary, dict):
+        issues.append("malformed-pmr007-deep-bk-catalog-boundary")
+    else:
+        for key, expected in expected_deep_bk_boundary.items():
+            if deep_bk_boundary.get(key) != expected:
+                issues.append(f"pmr007-deep-bk-catalog-boundary-mismatch:{key}")
     return issues
 
 
@@ -763,6 +824,105 @@ def validate_pmr007_deep_execution(document: Any) -> list[str]:
     if not isinstance(interpretation, dict) or interpretation.get("independent_reproduction_from_public_snapshot") != "NOT_ESTABLISHED":
         issues.append("pmr007-deep-independent-reproduction-overclaim")
     return issues
+
+
+def validate_pmr007_deep_bk_proposal(
+    index: Any,
+    receipt: Any,
+    execution: Any,
+    correction: str,
+) -> list[str]:
+    """Keep the exact Deep A-BK snapshot proposal-only and its reproduction bounded."""
+    issues: list[str] = []
+    if not isinstance(index, dict) or not isinstance(receipt, dict) or not isinstance(execution, dict):
+        return ["malformed-pmr007-deep-bk-owner"]
+
+    results = index.get("results", [])
+    items = index.get("items", [])
+    if not isinstance(results, list) or not isinstance(items, list):
+        return ["malformed-pmr007-deep-bk-result-index"]
+    rows = results + items
+    identities = [row.get("pmr_identity") for row in rows if isinstance(row, dict)]
+    if len(rows) != 73 or len(identities) != 73 or len(set(identities)) != 73:
+        issues.append("pmr007-deep-bk-result-index-count-mismatch")
+
+    deep_rows = [row for row in rows if isinstance(row, dict) and str(row.get("round", "")).startswith("DEEP_")]
+    deep_ids = {row.get("pmr_identity") for row in deep_rows}
+    if len(deep_rows) != 63 or deep_ids != EXPECTED_PMR007_DEEP_A_BK:
+        issues.append("pmr007-deep-bk-result-coverage-mismatch")
+    for row in deep_rows:
+        identity = row.get("pmr_identity", "?")
+        if row.get("historical_identity_relation") != "NONE":
+            issues.append(f"pmr007-deep-bk-historical-identity-promoted:{identity}")
+        if row.get("external_review_status") != "OPEN":
+            issues.append(f"pmr007-deep-bk-external-review-closed:{identity}")
+        if "PENDING" not in str(row.get("owner_adoption_status", "")):
+            issues.append(f"pmr007-deep-bk-owner-adoption-promoted:{identity}")
+        novelty = str(row.get("origin_and_novelty_ceiling", ""))
+        if "ZERO" not in novelty and "NOVELTY_0" not in novelty:
+            issues.append(f"pmr007-deep-bk-novelty-promoted:{identity}")
+
+    source = receipt.get("source_archive", {})
+    repository_copy = receipt.get("repository_copy", {})
+    overlap = receipt.get("overlap_with_base_main", {})
+    expected_source = {
+        "sha256": "a7271391bbc7294128597a0798b0dd644bd79bdf4d9d57b3b918b2fa912a32b5",
+        "archive_members": 1187,
+        "internal_sha256sums_entries": 1186,
+        "integrity": "PASS",
+        "private_data_exclusion": "PASS",
+        "round_trip_restoration": "PASS",
+    }
+    if not isinstance(source, dict) or any(source.get(key) != value for key, value in expected_source.items()):
+        issues.append("pmr007-deep-bk-source-archive-receipt-mismatch")
+    if (
+        not isinstance(repository_copy, dict)
+        or repository_copy.get("exact_archive_members") != 1187
+        or repository_copy.get("source_bytes_modified") is not False
+    ):
+        issues.append("pmr007-deep-bk-repository-copy-boundary-mismatch")
+    if (
+        not isinstance(overlap, dict)
+        or overlap.get("byte_duplicate_members") != 825
+        or overlap.get("duplicate_credit_effect") != "NONE"
+    ):
+        issues.append("pmr007-deep-bk-overlap-credit-boundary-mismatch")
+
+    checks = execution.get("bf_through_bk_checks", {})
+    boundary = execution.get("execution_boundary", {})
+    if (
+        execution.get("verification_class") != "INDEPENDENTLY_REPRODUCED_FROM_PRIVATE_CUSTODY_COMPANION"
+        or not isinstance(checks, dict)
+        or checks.get("scripts_executed") != 13
+        or checks.get("exit_zero") != 13
+        or checks.get("structurally_equal_outputs") != 13
+        or checks.get("result") != "PASS"
+    ):
+        issues.append("pmr007-deep-bk-execution-receipt-mismatch")
+    if not isinstance(boundary, dict) or boundary.get("public_snapshot_self_contained_executable") is not False:
+        issues.append("pmr007-deep-bk-public-self-contained-overclaim")
+    if execution.get("authority_effect") != "NONE":
+        issues.append("pmr007-deep-bk-execution-authority-promoted")
+
+    required_correction = (
+        "No proposal in this snapshot is adopted repository theory.",
+        "No historical identity is assigned.",
+        "No general novelty credit is granted.",
+        "No integrated champion, meniscus, or natural closure is established.",
+        "No Lean source, build, or kernel check is claimed by this repository import.",
+        "825 byte-identical members",
+        "public snapshot is not independently executable as packaged",
+    )
+    if not all(phrase in correction for phrase in required_correction):
+        issues.append("pmr007-deep-bk-correction-boundary-missing")
+    forbidden = (
+        r"owner[_ ]adoption\s*:\s*(?:adopted|complete|pass)",
+        r"external[_ ]review\s*:\s*(?:closed|complete|pass)",
+        r"(?:meniscus|natural[_ ]closure)\s*:\s*(?:reached|complete|pass)",
+    )
+    if any(re.search(pattern, correction, flags=re.IGNORECASE) for pattern in forbidden):
+        issues.append("pmr007-deep-bk-correction-contradictory-promotion")
+    return list(dict.fromkeys(issues))
 
 
 def validate_visible_source_manifest(document: Any) -> list[str]:
@@ -2701,6 +2861,41 @@ def validate_packet() -> list[str]:
         }
         if len(deep_listed) != 830 or deep_listed != deep_actual:
             issues.append("pmr007-deep-internal-sha256sums-coverage-mismatch")
+
+    deep_bk_receipt = load_yaml(PMR007_DEEP_BK_RECEIPT)
+    deep_bk_execution = load_yaml(PMR007_DEEP_BK_EXECUTION)
+    deep_bk_index = load_yaml(PMR007_DEEP_BK_PROPOSAL / "PROPOSED_RESULT_INDEX.yaml")
+    issues.extend(
+        validate_pmr007_deep_bk_proposal(
+            deep_bk_index,
+            deep_bk_receipt,
+            deep_bk_execution,
+            PMR007_DEEP_BK_CORRECTION.read_text(encoding="utf-8"),
+        )
+    )
+    deep_bk_sums = PMR007_DEEP_BK_PROPOSAL / "SHA256SUMS"
+    deep_bk_listed: set[str] = set()
+    if not deep_bk_sums.is_file():
+        issues.append("pmr007-deep-bk-missing-internal-sha256sums")
+    else:
+        for line in deep_bk_sums.read_text(encoding="utf-8").splitlines():
+            if not line.strip():
+                continue
+            digest, relative = line.split(maxsplit=1)
+            relative = relative.lstrip("*").replace("\\", "/")
+            target = PMR007_DEEP_BK_PROPOSAL / relative
+            deep_bk_listed.add(relative)
+            if not target.is_file():
+                issues.append(f"pmr007-deep-bk-missing-checksummed-member:{relative}")
+            elif hashlib.sha256(target.read_bytes()).hexdigest() != digest:
+                issues.append(f"pmr007-deep-bk-member-hash-mismatch:{relative}")
+        deep_bk_actual = {
+            path.relative_to(PMR007_DEEP_BK_PROPOSAL).as_posix()
+            for path in PMR007_DEEP_BK_PROPOSAL.rglob("*")
+            if path.is_file() and path.name != "SHA256SUMS"
+        }
+        if len(deep_bk_listed) != 1186 or deep_bk_listed != deep_bk_actual:
+            issues.append("pmr007-deep-bk-internal-sha256sums-coverage-mismatch")
 
     issues.extend(validate_visible_source_manifest(load_yaml(VISIBLE_SOURCE_MANIFEST)))
     issues.extend(validate_file_card_archive_conflicts(load_yaml(FILE_CARD_ARCHIVE_CONFLICTS)))

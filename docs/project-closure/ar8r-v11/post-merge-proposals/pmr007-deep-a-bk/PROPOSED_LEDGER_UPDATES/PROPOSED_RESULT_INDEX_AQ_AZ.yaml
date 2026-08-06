@@ -1,0 +1,21 @@
+schema: PMR007_PROPOSED_RESULT_INDEX_AQ_AZ_V1
+repository_authority: 4c3dc103e8c753690fa5de560ab82157392ced4c
+results:
+  - {pmr_identity: PMR-007-SCAP-1, round: DEEP_AQ, status: ADMITTED_POST_MERGE_SCOPED_CENTRAL_ARCHITECTURE_RESULT, novelty: 0, historical_identity: NONE, owner_adoption: PENDING, external_review: OPEN}
+  - {pmr_identity: PMR-007-PREC-1, round: DEEP_AR, status: ADMITTED_POST_MERGE_SCOPED_CROSS_LANE_EVIDENCE_RESULT, novelty: 0, historical_identity: NONE, owner_adoption: PENDING, external_review: OPEN}
+  - {pmr_identity: PMR-007-PFIT-1, round: DEEP_AS, status: ADMITTED_POST_MERGE_SCOPED_CENTRAL_PROPER_FUNCTION_EXPERIMENT_DESIGN_RESULT, novelty: 0, historical_identity: NONE, owner_adoption: PENDING, external_review: OPEN}
+  - {pmr_identity: PMR-007-NIBE-1, round: DEEP_AT, status: ADMITTED_POST_MERGE_SCOPED_CENTRAL_ADAPTIVE_EXPERIMENT_RESULT, novelty: 0, historical_identity: NONE, owner_adoption: PENDING, external_review: OPEN}
+  - {pmr_identity: PMR-007-SIER-1, round: DEEP_AU, status: ADMITTED_POST_MERGE_SCOPED_CROSS_LANE_INVARIANT_RESULT, novelty: 0, historical_identity: NONE, owner_adoption: PENDING, external_review: OPEN}
+  - {pmr_identity: PMR-007-NBIF-1, round: DEEP_AV, status: ADMITTED_POST_MERGE_SCOPED_CENTRAL_SOURCE_FORMAL_BRIDGE_RESULT, novelty: 0, historical_identity: NONE, owner_adoption: PENDING, external_review: OPEN}
+  - {pmr_identity: PMR-007-PRAD-1, round: DEEP_AW, status: ADMITTED_POST_MERGE_SCOPED_CROSS_LANE_ROBUST_DIAGNOSIS_RESULT, novelty: 0, historical_identity: NONE, owner_adoption: PENDING, external_review: OPEN}
+  - {pmr_identity: PMR-007-STWG-1, round: DEEP_AX, status: ADMITTED_POST_MERGE_SCOPED_CENTRAL_SOURCE_EVIDENCE_RESULT, novelty: 0, historical_identity: NONE, owner_adoption: PENDING, external_review: OPEN}
+  - {pmr_identity: PMR-007-SGCI-1, round: DEEP_AY, status: ADMITTED_POST_MERGE_SCOPED_CENTRAL_SEMANTIC_NONIDENTIFIABILITY_RESULT, novelty: 0, historical_identity: NONE, owner_adoption: PENDING, external_review: OPEN}
+  - {pmr_identity: PMR-007-CSII-1, round: DEEP_AZ, status: ADMITTED_POST_MERGE_SCOPED_CENTRAL_SEMANTIC_EXPERIMENT_DESIGN_RESULT, novelty: 0, historical_identity: NONE, owner_adoption: PENDING, external_review: OPEN}
+proposal_boundary:
+  repository_adoption: NOT_AUTHORIZED
+  historical_credit: NONE
+  general_novelty_credit: NONE
+  external_review: OPEN
+  owner_adoption: PENDING
+  integrated_champion: NONE
+  meniscus: MENISCUS_NOT_REACHED

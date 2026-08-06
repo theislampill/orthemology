@@ -1,0 +1,35 @@
+schema: pmr007-deep-av-neutral-bridge-interpolation-models-v1
+identity: PMR-007-NBIF-1-CANDIDATE-V1
+finite_partition:
+  X: source_or_architecture_exclusive_variables
+  N: declared_neutral_shared_variables
+  Y: target_or_world_exclusive_variables
+definitions:
+  source_projection: S_A(N)=exists X A(X,N)
+  target_core: T_C(N)=forall Y C(N,Y)
+v1_claims:
+  entailment_criterion: A entails C iff S_A entails T_C
+  proposed_unique_bridge: S_A is the unique neutral interpolant
+controls:
+  no_shared_vocabulary:
+    A: satisfiable source claim
+    C: contingent target claim
+    expected: no entailment
+  inconsistent_source:
+    A: contradiction
+    expected: vacuous entailment; not evidential support
+  tautological_target:
+    C: tautology
+    expected: many possible interpolants
+  hidden_target_import:
+    rule: placing the target predicate in N can make the interpolant target-laden
+  direct_source_predication:
+    rule: source use of the target predicate is source-relative predication, not neutral migration
+  translation_bridge:
+    rule: translation and source-to-world maps require independent authority
+nonclaims:
+  - no_source_truth
+  - no_translation_adequacy
+  - no_actual_world_selection
+  - no_neutrality_of_declared_shared_vocabulary
+  - no_modal_or_higher_order_interpolation

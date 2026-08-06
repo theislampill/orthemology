@@ -1,0 +1,224 @@
+{
+  "review": "PMR-007 Round 15 V2 distinct direct-semantic fresh rereview",
+  "review_relation": "same-model procedural rereview; separate implementation; not external human or independent model-lineage review",
+  "methods": [
+    "independent canonical model serialization and SHA-256",
+    "complete memoryless-strategy enumeration for each supplied finite model",
+    "Tarjan SCC and direct temporal graph semantics",
+    "minimax worst-case core-entry steps",
+    "minimax worst-case bad-state occurrence counts",
+    "independent negative-fixture guard assessment",
+    "actual current-main validator rerun"
+  ],
+  "frozen_hashes": {
+    "PMR-007_FRONTIER_ROUND15_DAEE_TEMPORAL_CERTIFICATE_ARCHITECTURE_V2.md": {
+      "expected": "879681edd0f28a35ba9bd87f049ad60c10ea5369474fb8bf2d092de88251299c",
+      "actual": "879681edd0f28a35ba9bd87f049ad60c10ea5369474fb8bf2d092de88251299c",
+      "pass": true
+    },
+    "models/PMR007_ROUND15_SHARED_CURRENT_TRANSITION_RECORD.json": {
+      "expected": "da0b58ac75391c8ba4387332e5c7be3bdda578a4363f23c626d1f08e102d799f",
+      "actual": "da0b58ac75391c8ba4387332e5c7be3bdda578a4363f23c626d1f08e102d799f",
+      "pass": true
+    },
+    "models/PMR007_ROUND15_TEMPORAL_RESTORATION_CERTIFICATES_V2.yaml": {
+      "expected": "1fbd97bd04fc4ab09bc8c259ff045723128da831cfacfbe18ea0ebc8cdc3ebda",
+      "actual": "1fbd97bd04fc4ab09bc8c259ff045723128da831cfacfbe18ea0ebc8cdc3ebda",
+      "pass": true
+    },
+    "checks/pmr007_round15_temporal_certificate_check_v2.py": {
+      "expected": "a281b947794c0977a217fabbdbfafb79b2d7f8854ec1e3f39e586ea73e6fbf52",
+      "actual": "a281b947794c0977a217fabbdbfafb79b2d7f8854ec1e3f39e586ea73e6fbf52",
+      "pass": true
+    },
+    "checks/pmr007_round15_temporal_certificate_check_v2_results.json": {
+      "expected": "a92dcf7af41c0893d4b4996d6a54d38ee43b59867861c8675179dc920f8c9fb1",
+      "actual": "a92dcf7af41c0893d4b4996d6a54d38ee43b59867861c8675179dc920f8c9fb1",
+      "pass": true
+    },
+    "audits/PMR-007_FRONTIER_ROUND15_V1_COLD_AUDIT.md": {
+      "expected": "a52fcc7e858db20eeae966d656efc84aa58f5bf63ba7f132f002a174a3838533",
+      "actual": "a52fcc7e858db20eeae966d656efc84aa58f5bf63ba7f132f002a174a3838533",
+      "pass": true
+    },
+    "repairs/PMR-007_FRONTIER_ROUND15_REPAIR_LOG.md": {
+      "expected": "2c62f902709a00ef3b832ae20f07ba44df9f0ec9d7b287a7290e893c56444bb3",
+      "actual": "2c62f902709a00ef3b832ae20f07ba44df9f0ec9d7b287a7290e893c56444bb3",
+      "pass": true
+    }
+  },
+  "certificate_results": {
+    "TRC-CORE-CONTROL-1": {
+      "certificate_id": "TRC-CORE-CONTROL-1",
+      "model_digest_match": true,
+      "epoch_consistent": true,
+      "successor_relation_declared_complete": true,
+      "direct": {
+        "strategy_count": 1,
+        "K": [
+          "q_closed"
+        ],
+        "W_core": [
+          "q_closed"
+        ],
+        "W_coB": [
+          "q_closed"
+        ],
+        "core_rank": {
+          "q_closed": 0
+        },
+        "cob_outer_rank": {
+          "q_closed": 1
+        }
+      },
+      "region_match": true,
+      "rank_match": true,
+      "selected_strategy_semantics": true,
+      "pass": true
+    },
+    "TRC-COB-R14-F01-1": {
+      "certificate_id": "TRC-COB-R14-F01-1",
+      "model_digest_match": true,
+      "epoch_consistent": true,
+      "successor_relation_declared_complete": true,
+      "direct": {
+        "strategy_count": 1,
+        "K": [
+          "q0"
+        ],
+        "W_core": [
+          "q0",
+          "q1"
+        ],
+        "W_coB": [
+          "q0",
+          "q1",
+          "q2"
+        ],
+        "core_rank": {
+          "q1": 1,
+          "q0": 0
+        },
+        "cob_outer_rank": {
+          "q1": 2,
+          "q0": 1,
+          "q2": 2
+        }
+      },
+      "region_match": true,
+      "rank_match": true,
+      "selected_strategy_semantics": true,
+      "pass": true
+    },
+    "TRC-CORE-ATTRACTOR-2": {
+      "certificate_id": "TRC-CORE-ATTRACTOR-2",
+      "model_digest_match": true,
+      "epoch_consistent": true,
+      "successor_relation_declared_complete": true,
+      "direct": {
+        "strategy_count": 2,
+        "K": [
+          "q0"
+        ],
+        "W_core": [
+          "q0",
+          "q1"
+        ],
+        "W_coB": [
+          "q0",
+          "q1"
+        ],
+        "core_rank": {
+          "q1": 1,
+          "q0": 0
+        },
+        "cob_outer_rank": {
+          "q1": 2,
+          "q0": 1
+        }
+      },
+      "region_match": true,
+      "rank_match": true,
+      "selected_strategy_semantics": true,
+      "pass": true
+    }
+  },
+  "negative_fixture_results": {
+    "TRC-F01-FALSE-CORE": {
+      "fixture_id": "TRC-F01-FALSE-CORE",
+      "expected_error": "winning-region-mismatch",
+      "independent_observed_guard": "winning-region-mismatch",
+      "pass": true
+    },
+    "TRC-F02-STALE-EPOCH": {
+      "fixture_id": "TRC-F02-STALE-EPOCH",
+      "expected_error": "eligibility-epoch-mismatch",
+      "independent_observed_guard": "eligibility-epoch-mismatch",
+      "pass": true
+    },
+    "TRC-F03-INCOMPLETE-SUCCESSOR-CLAIM": {
+      "fixture_id": "TRC-F03-INCOMPLETE-SUCCESSOR-CLAIM",
+      "expected_error": "successor-relation-not-declared-complete",
+      "independent_observed_guard": "successor-relation-not-declared-complete",
+      "pass": true
+    },
+    "TRC-F04-BAD-STRATEGY": {
+      "fixture_id": "TRC-F04-BAD-STRATEGY",
+      "expected_error": "strategy-action-not-eligible",
+      "independent_observed_guard": "strategy-action-not-eligible",
+      "pass": true
+    },
+    "TRC-F05-BAD-RANK": {
+      "fixture_id": "TRC-F05-BAD-RANK",
+      "expected_error": "rank-mismatch",
+      "independent_observed_guard": "rank-mismatch",
+      "pass": true
+    },
+    "TRC-F06-MODEL-DIGEST-DRIFT": {
+      "fixture_id": "TRC-F06-MODEL-DIGEST-DRIFT",
+      "expected_error": "model-digest-mismatch",
+      "independent_observed_guard": "model-digest-mismatch",
+      "pass": true
+    },
+    "TRC-F07-NONFORCING-CORE-STRATEGY": {
+      "fixture_id": "TRC-F07-NONFORCING-CORE-STRATEGY",
+      "expected_error": "strategy-rank-not-decreasing",
+      "independent_observed_guard": "strategy-rank-not-decreasing",
+      "pass": true
+    }
+  },
+  "shared_current_transition_record": {
+    "sha256": "da0b58ac75391c8ba4387332e5c7be3bdda578a4363f23c626d1f08e102d799f",
+    "current_validator_status": "PASS",
+    "reason": null
+  },
+  "current_repository_validators": {
+    "scripts/validate_corrective_transition.py": {
+      "returncode": 0,
+      "status": "PASS",
+      "last_line": "TOTAL: 0 failures"
+    },
+    "scripts/validate_semantic_operator_contract.py": {
+      "returncode": 0,
+      "status": "PASS",
+      "last_line": "TOTAL: 0 failures"
+    },
+    "scripts/validate_daee_current_crosswalk.py": {
+      "returncode": 0,
+      "status": "PASS",
+      "last_line": "TOTAL: 0 failures"
+    },
+    "scripts/validate_meta_noetic_memetics.py": {
+      "returncode": 0,
+      "status": "PASS",
+      "last_line": "TOTAL: 0 failures"
+    }
+  },
+  "primary_checker_regression": {
+    "frozen_result_hash_verified": true,
+    "overall": "PASS"
+  },
+  "authority_ceiling": "finite declared-model exactness only; external review, model completeness, source truth, target adequacy, causality, human restoration, and owner adoption remain open",
+  "elapsed_seconds": 15.64092060899975,
+  "overall": "PASS"
+}

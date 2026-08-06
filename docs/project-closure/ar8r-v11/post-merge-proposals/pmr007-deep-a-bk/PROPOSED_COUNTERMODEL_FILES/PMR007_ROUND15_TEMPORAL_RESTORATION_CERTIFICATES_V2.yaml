@@ -1,0 +1,255 @@
+schema: pmr007-temporal-restoration-certificate-v2
+repository_snapshot:
+  repository: theislampill/orthemology
+  main_sha: cc91f41fec364ea3910b80d57252bb1e0a050278
+  archive_sha256: ec5314442cc6212cad0cd5cd9fcdfb835567f4847830445c8f7529ea8422a04e
+  current_transition_contract: applications/daee-epistemics/CORRECTIVE-TRANSITION.schema.json
+  current_transition_validator: scripts/validate_corrective_transition.py
+shared_current_transition_record:
+  path: models/PMR007_ROUND15_SHARED_CURRENT_TRANSITION_RECORD.json
+  sha256: da0b58ac75391c8ba4387332e5c7be3bdda578a4363f23c626d1f08e102d799f
+  expected_current_validator_status: PASS
+  authority: current-main-compatible local transition record; not repository content
+extension_twins:
+  stable_extension:
+    states:
+    - q_closed
+    safe_states:
+    - q_closed
+    target_states:
+    - q_closed
+    actions:
+      q_closed:
+      - action_id: hold
+        successors:
+        - q_closed
+    expected_W_core:
+    - q_closed
+    expected_W_coB:
+    - q_closed
+  bypass_extension:
+    states:
+    - q_closed
+    - q_bad
+    safe_states:
+    - q_closed
+    - q_bad
+    target_states:
+    - q_closed
+    actions:
+      q_closed:
+      - action_id: reopen
+        successors:
+        - q_bad
+      q_bad:
+      - action_id: persist_bad
+        successors:
+        - q_bad
+    expected_W_core: []
+    expected_W_coB: []
+  conclusion: identical current corrective-transition record is compatible with stable and dynamically
+    bypassed future systems
+certificates:
+- certificate_id: TRC-CORE-CONTROL-1
+  certificate_kind: CORE_ENTRY
+  model_id: stable-extension
+  source_version_epoch: epoch-v1
+  transition_record_sha256: da0b58ac75391c8ba4387332e5c7be3bdda578a4363f23c626d1f08e102d799f
+  model_completeness:
+    declared_successor_relation_complete_for_scope: true
+    external_world_completeness_verified: false
+    causal_adequacy_verified: false
+  states:
+  - q_closed
+  safe_states:
+  - q_closed
+  target_states:
+  - q_closed
+  actions:
+    q_closed:
+    - action_id: hold
+      successors:
+      - q_closed
+      eligibility_ref: PMR007-R15-shared-closure-record
+      eligibility_epoch: epoch-v1
+  declared:
+    stable_kernel:
+    - q_closed
+    winning_region:
+    - q_closed
+    strategy:
+      q_closed: hold
+    rank:
+      q_closed: 0
+  non_claims:
+  - model-relative certificate only
+  - no source truth, causal restoration, human uptake, or soul access
+  model_digest: 4b8b1ebf7959b47c4192f64c8cfe3b312b6ca29387a963e3cd9f800654e9221a
+- certificate_id: TRC-COB-R14-F01-1
+  certificate_kind: CO_BUCHI_PERSISTENCE
+  model_id: r14-f01-regression
+  source_version_epoch: epoch-v1
+  transition_record_sha256: da0b58ac75391c8ba4387332e5c7be3bdda578a4363f23c626d1f08e102d799f
+  model_completeness:
+    declared_successor_relation_complete_for_scope: true
+    external_world_completeness_verified: false
+    causal_adequacy_verified: false
+  states:
+  - q0
+  - q1
+  - q2
+  safe_states:
+  - q0
+  - q1
+  - q2
+  target_states:
+  - q0
+  - q2
+  actions:
+    q0:
+    - action_id: hold0
+      successors:
+      - q0
+      eligibility_ref: local-fragment-q0
+      eligibility_epoch: epoch-v1
+    q1:
+    - action_id: settle0
+      successors:
+      - q0
+      eligibility_ref: local-fragment-q1
+      eligibility_epoch: epoch-v1
+    q2:
+    - action_id: branch
+      successors:
+      - q0
+      - q1
+      - q2
+      eligibility_ref: local-fragment-q2
+      eligibility_epoch: epoch-v1
+  declared:
+    winning_region:
+    - q0
+    - q1
+    - q2
+    strategy:
+      q0: hold0
+      q1: settle0
+      q2: branch
+    rank:
+      q0: 1
+      q1: 2
+      q2: 2
+  non_claims:
+  - no common invariant-core certificate for q2
+  - no source truth, causal restoration, human uptake, or soul access
+  model_digest: 1fc1d879fae4e8fbf2a4e98e4bf6d511d4b783a6e1dd9c8b34ab8d45e0b9b0cb
+- certificate_id: TRC-CORE-ATTRACTOR-2
+  certificate_kind: CORE_ENTRY
+  model_id: two-state-core-attractor
+  source_version_epoch: epoch-v1
+  transition_record_sha256: da0b58ac75391c8ba4387332e5c7be3bdda578a4363f23c626d1f08e102d799f
+  model_completeness:
+    declared_successor_relation_complete_for_scope: true
+    external_world_completeness_verified: false
+    causal_adequacy_verified: false
+  states:
+  - q0
+  - q1
+  safe_states:
+  - q0
+  - q1
+  target_states:
+  - q0
+  actions:
+    q0:
+    - action_id: hold0
+      successors:
+      - q0
+      eligibility_ref: local-fragment-core-q0
+      eligibility_epoch: epoch-v1
+    q1:
+    - action_id: reach0
+      successors:
+      - q0
+      eligibility_ref: local-fragment-core-q1-reach
+      eligibility_epoch: epoch-v1
+    - action_id: linger
+      successors:
+      - q0
+      - q1
+      eligibility_ref: local-fragment-core-q1-linger
+      eligibility_epoch: epoch-v1
+  declared:
+    stable_kernel:
+    - q0
+    winning_region:
+    - q0
+    - q1
+    strategy:
+      q0: hold0
+      q1: reach0
+    rank:
+      q0: 0
+      q1: 1
+  non_claims:
+  - model-relative certificate only
+  - no source truth, causal restoration, human uptake, or soul access
+  model_digest: 3e0526ba0db9e1fc6e9a7c517e1c9273e9cb6ebf6d0d2b861a2ccadb24c2062f
+invalid_fixtures:
+- fixture_id: TRC-F01-FALSE-CORE
+  base_certificate_id: TRC-COB-R14-F01-1
+  mutation:
+    certificate_kind: CORE_ENTRY
+    declared:
+      stable_kernel:
+      - q0
+      winning_region:
+      - q0
+      - q1
+      - q2
+      strategy:
+        q0: hold0
+        q1: settle0
+        q2: branch
+      rank:
+        q0: 0
+        q1: 1
+        q2: 2
+  expected_error: winning-region-mismatch
+- fixture_id: TRC-F02-STALE-EPOCH
+  base_certificate_id: TRC-CORE-CONTROL-1
+  mutation:
+    actions.q_closed.0.eligibility_epoch: epoch-old
+  expected_error: eligibility-epoch-mismatch
+  recompute_model_digest_after_mutation: true
+- fixture_id: TRC-F03-INCOMPLETE-SUCCESSOR-CLAIM
+  base_certificate_id: TRC-CORE-CONTROL-1
+  mutation:
+    model_completeness.declared_successor_relation_complete_for_scope: false
+  expected_error: successor-relation-not-declared-complete
+  recompute_model_digest_after_mutation: true
+- fixture_id: TRC-F04-BAD-STRATEGY
+  base_certificate_id: TRC-COB-R14-F01-1
+  mutation:
+    declared.strategy.q1: nonexistent
+  expected_error: strategy-action-not-eligible
+- fixture_id: TRC-F05-BAD-RANK
+  base_certificate_id: TRC-COB-R14-F01-1
+  mutation:
+    declared.rank.q1: 1
+  expected_error: rank-mismatch
+- fixture_id: TRC-F06-MODEL-DIGEST-DRIFT
+  base_certificate_id: TRC-CORE-CONTROL-1
+  mutation:
+    model_digest: '0000000000000000000000000000000000000000000000000000000000000000'
+  expected_error: model-digest-mismatch
+- fixture_id: TRC-F07-NONFORCING-CORE-STRATEGY
+  base_certificate_id: TRC-CORE-ATTRACTOR-2
+  mutation:
+    declared.strategy.q1: linger
+  expected_error: strategy-rank-not-decreasing
+non_claims:
+- acceptance proves only exactness relative to the declared finite transition model
+- model completeness, source truth, target adequacy, causal landing, and actual restoration remain separate
+  burdens
+- this is a post-merge research architecture, not a repository mutation or historical theorem

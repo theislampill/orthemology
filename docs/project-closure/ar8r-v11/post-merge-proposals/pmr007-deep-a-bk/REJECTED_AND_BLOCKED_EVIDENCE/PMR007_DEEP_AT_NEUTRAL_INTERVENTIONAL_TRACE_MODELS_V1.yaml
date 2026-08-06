@@ -1,0 +1,48 @@
+schema: pmr007-deep-at-neutral-interventional-trace-models-v1
+identity: PMR-007-NIBE-1
+status: POST_MERGE_RESEARCH_CANDIDATE
+weighted_system:
+  state_space: finite_hidden_states
+  action_space: finite_common_admissible_interventions
+  observation_space: finite_neutral_observations
+  initial_distribution: model_specific_row_vector
+  action_observation_matrix: sub_stochastic_matrix_M_u_o
+  transcript_probability: alpha_M_u1_o1_times_dotdotdot_times_M_uk_ok_times_one
+comparison:
+  A: unified_personal_candidate_reduct
+  R: source_compatible_impersonal_candidate_reduct
+  common_requirements:
+    - same_action_vocabulary
+    - same_observation_vocabulary
+    - candidate_independent_policy
+    - fixed_source_version_and_target_contract
+    - no_hidden_target_label
+combined_difference_automaton:
+  initial_row: [alpha_A, negative_alpha_R]
+  matrices: block_diagonal_M_A_and_M_R
+  terminal_column: concatenated_ones
+  state_dimension: n_A_plus_n_R
+candidate_claims:
+  trace_equivalence: all_finite_action_observation_word_probabilities_equal
+  adaptive_equivalence: every_common_adaptive_policy_has_equal_transcript_law
+  finite_horizon_test: words_up_to_reachable_row_space_dimension_minus_one_suffice
+controls:
+  - id: AT-CM-HIDDEN-PERSONAL-TAG
+    description: personal and impersonal expansions share the complete neutral weighted system and differ only outside the observation/intervention algebra.
+  - id: AT-CM-ENDPOINT-SAME-TRAJECTORY-DIFFERENT
+    description: equal endpoint performance with a finite learning-trajectory word of unequal probability.
+  - id: AT-CM-REPRESENTATION-ERASURE
+    description: a common observation channel merges the only distinguishing symbols.
+  - id: AT-CM-CANDIDATE-DEPENDENT-POLICY
+    description: action selection directly reads the candidate label and defines a changed experiment.
+  - id: AT-CM-VERSION-DRIFT
+    description: same bytes under a changed version contract induce different admissible matrices.
+  - id: AT-CM-INCOMPLETE-INTERVENTION-ALGEBRA
+    description: models are equivalent on the registered actions but differ under an unregistered intervention.
+nonclaims:
+  - no_architecture_truth_from_trace_equivalence
+  - no_personality_or_wisdom_from_behavioral_difference
+  - no_canonical_intervention_or_observation_vocabulary
+  - no_unknown_parameter_learning_result
+  - no_infinite_state_result
+  - no_general_novelty

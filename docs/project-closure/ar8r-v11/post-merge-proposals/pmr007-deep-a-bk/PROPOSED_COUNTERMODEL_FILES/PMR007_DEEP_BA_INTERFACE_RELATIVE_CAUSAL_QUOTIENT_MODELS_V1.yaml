@@ -1,0 +1,46 @@
+schema: PMR007_DEEP_BA_MODELS_V1
+identity: PMR-007-IRCQ-1
+setting:
+  class: finite deterministic controlled Moore systems
+  state_set: finite nonempty X
+  action_set: finite declared A
+  transition: delta:XxA->X
+  label: lambda:X->L
+  trace: initial and successor labels for every finite action word
+controls:
+  BA-CM1:
+    name: TARGET_DELETION
+    role: target-relative quotient
+  BA-CM2:
+    name: ACTION_DELETION
+    role: intervention-relative quotient
+  BA-CM3:
+    name: LABEL_PERMUTATION
+    role: literal-reference firewall
+  BA-CM4:
+    name: IMPERSONAL_MINIMAL_REALIZER
+    role: personality nontransfer
+  BA-CM5:
+    name: PERSONAL_IMPERSONAL_TWINS
+    role: intentionality and Wisdom nontransfer
+  BA-CM6:
+    name: INCOMPLETE_EXPERIMENT
+    role: sampled-trace incompleteness
+  BA-CM7:
+    name: VERSION_DRIFT
+    role: target and version custody
+  BA-CM8:
+    name: STOCHASTIC_NONTRANSFER
+    role: deterministic scope boundary
+positive_witness:
+  states: [x0, x1, x2]
+  actions: [a, b]
+  labels:
+    x0: [0, 0]
+    x1: [0, 0]
+    x2: [1, 0]
+  transitions:
+    x0: {a: x2, b: x0}
+    x1: {a: x1, b: x0}
+    x2: {a: x2, b: x2}
+  note: x0 and x1 share the initial label but action a distinguishes them

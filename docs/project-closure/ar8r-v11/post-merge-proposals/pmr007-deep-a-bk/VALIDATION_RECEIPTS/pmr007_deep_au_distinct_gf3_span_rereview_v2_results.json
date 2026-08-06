@@ -1,0 +1,44 @@
+{
+  "claim_relevance_failures": 0,
+  "claim_relevance_projection_cases": 10000,
+  "contraction_failures": 0,
+  "contraction_random_cases": 15000,
+  "controls": {
+    "alias_contraction": {
+      "contracted_rank": 1,
+      "displayed_rank": 2
+    },
+    "copied_root": {
+      "apparent_count": 40,
+      "rank": 1
+    },
+    "independent_convergence": {
+      "root_span_rank": 2,
+      "same_output_possible": true
+    },
+    "old_root_recovery": {
+      "fresh_projection_rank": 0,
+      "rank_after": 2,
+      "rank_before_visible": 1
+    },
+    "total_sync": {
+      "after": 1,
+      "before": 2
+    }
+  },
+  "decomposition_failures": 0,
+  "decomposition_random_cases": 15000,
+  "duplicate_failures": 0,
+  "duplicate_random_cases": 5000,
+  "field": "GF(3)",
+  "hash_check": {
+    "checked": 6,
+    "mismatches": 0
+  },
+  "overall": "PASS",
+  "schema": "pmr007-deep-au-distinct-gf3-span-rereview-v2-results",
+  "seed": 2026080601,
+  "strict_losses": 6380,
+  "sync_failures": 0,
+  "sync_random_cases": 20000
+}

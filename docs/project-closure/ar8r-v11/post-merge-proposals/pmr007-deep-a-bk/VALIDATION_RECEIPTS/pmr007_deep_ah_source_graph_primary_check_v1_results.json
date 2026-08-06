@@ -1,0 +1,83 @@
+{
+  "claims": {
+    "connected_graph_allows_plural_bearer_realization_without_binder": true,
+    "every_nontrivial_partition_crossed": true,
+    "selected_support_graph_connected": true,
+    "source_binder_selects_one_bearer_partition": true
+  },
+  "components": [
+    [
+      "ABILITY",
+      "CHOICE",
+      "CREATION",
+      "KNOWLEDGE",
+      "LIFE",
+      "PERFECTION",
+      "SPECIFICATION",
+      "SPEECH",
+      "VOLITION"
+    ]
+  ],
+  "injective_plural_realizations": 1,
+  "local_role_graph_realizations": 21147,
+  "nontrivial_partitions_checked": 21146,
+  "nontrivial_partitions_not_crossed": 0,
+  "overall": "PASS",
+  "roles": 9,
+  "schema": "PMR007_DEEP_AH_PRIMARY_CHECK_RESULTS_V1",
+  "set_partitions_checked": 21147,
+  "source_binder_realizations": 1,
+  "support_deletion_component_counts": [
+    {
+      "components": 2,
+      "deleted_support": [
+        "CREATION",
+        "VOLITION"
+      ]
+    },
+    {
+      "components": 2,
+      "deleted_support": [
+        "VOLITION",
+        "KNOWLEDGE"
+      ]
+    },
+    {
+      "components": 2,
+      "deleted_support": [
+        "SPECIFICATION",
+        "VOLITION"
+      ]
+    },
+    {
+      "components": 2,
+      "deleted_support": [
+        "CHOICE",
+        "ABILITY"
+      ]
+    },
+    {
+      "components": 3,
+      "deleted_support": [
+        "KNOWLEDGE",
+        "ABILITY",
+        "LIFE"
+      ]
+    },
+    {
+      "components": 2,
+      "deleted_support": [
+        "CREATION",
+        "SPEECH"
+      ]
+    },
+    {
+      "components": 2,
+      "deleted_support": [
+        "SPEECH",
+        "PERFECTION"
+      ]
+    }
+  ],
+  "supports": 7
+}

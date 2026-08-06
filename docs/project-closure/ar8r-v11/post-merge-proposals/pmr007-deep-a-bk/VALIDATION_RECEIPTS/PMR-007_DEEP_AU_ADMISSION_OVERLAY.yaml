@@ -1,0 +1,43 @@
+schema: pmr007-deep-au-admission-overlay-v1
+identity: PMR-007-SIER-1
+title: Synchronization deficit and provenance-innovation rank balance
+status: ADMITTED_POST_MERGE_SCOPED_CROSS_LANE_INVARIANT_RESULT
+historical_identity: NONE
+historical_theorem_origin_credit: NONE
+general_mathematical_novelty: 0
+owner_adoption: PENDING
+external_review: OPEN
+proof_status: PROVED_AT_DECLARED_FINITE_DIMENSIONAL_LINEAR_SCOPE
+countermodel_status:
+  v1_fresh_only_balance: BLOCKED_FORMAL_DEFECT_PRESERVED
+  old_root_recovery: VALIDATED
+  copied_root_false_multiplicity: VALIDATED
+  unauthenticated_label_alias: VALIDATED
+  independent_convergence_same_output: VALIDATED
+  total_synchronization_loss: VALIDATED
+cold_audit: REPAIR_REQUIRED_THEN_REPAIRED
+fresh_rereview: PASS_WITH_NONBLOCKING_SCOPE_AND_AUTHENTICATION_NOTES
+admitted_claims:
+  - rank_BA_le_rank_A
+  - copied_rows_do_not_increase_declared_root_span_rank
+  - exact_balance_rho_after_eq_rho_before_minus_delta_plus_gamma_old_plus_gamma_fresh
+  - gamma_total_eq_gamma_old_plus_gamma_fresh
+  - root_contraction_does_not_increase_rank
+  - fresh_projection_rank_is_lower_bound_on_total_innovation
+nonclaims:
+  - root_authentication
+  - claim_relevance_without_independent_contract
+  - testimonial_or_causal_independence
+  - truth_or_tawatur_warrant
+  - common_knowledge_or_authorization
+  - numerical_carrier_episode_or_lineage_identity
+  - historical_tac_sac_term_assignment
+  - general_nonlinear_stochastic_or_adaptive_synchronization
+  - operational_future_repair_capacity
+candidate_effects:
+  Candidate_A: supplies_PROVENANCE_INDEPENDENCE_RANK_linear_component
+  Candidate_B: exposes_synchronization_loss_and_old_vs_fresh_repair_inputs
+  Candidate_C: blocks_copy_count_as_independent_source_support
+meniscus_candidate_effect:
+  MEN-2: MATERIAL_COMPONENT_NOT_YET_ELIGIBLE
+repository_proposal_status: PUBLIC_SAFE_POST_MERGE_PROPOSAL_PENDING_REPOSITORY_AUDIT

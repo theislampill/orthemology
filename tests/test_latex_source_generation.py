@@ -170,14 +170,29 @@ class MigrationLedgerTests(unittest.TestCase):
             )
             with self.subTest(source=relative, occurrence=record["original_occurrence"]):
                 self.assertEqual(record.get("state"), "migrated")
-                translate_inline(record["replacement"])
+                if record.get("form") == "display":
+                    translate_display(record["replacement"])
+                else:
+                    translate_inline(record["replacement"])
                 expected_replacements[(relative, record["replacement"])] += 1
         for (relative, replacement), expected_count in expected_replacements.items():
             with self.subTest(source=relative, replacement=replacement):
-                self.assertGreaterEqual(
-                    sources[relative].count("$%s$" % replacement),
-                    expected_count,
+                record_forms = {
+                    record.get("form", "inline")
+                    for record in records
+                    if record["file"] == relative
+                    and record["replacement"] == replacement
+                }
+                delimiters = (
+                    [("$$\n", "\n$$")]
+                    if record_forms == {"display"}
+                    else [("$", "$")]
                 )
+                count = sum(
+                    sources[relative].count(opening + replacement + closing)
+                    for opening, closing in delimiters
+                )
+                self.assertGreaterEqual(count, expected_count)
 
     def test_reviewed_replacements_do_not_nest_math_style_commands(self):
         inventory = yaml.safe_load(
@@ -320,7 +335,7 @@ MULTILINE_COVERAGE_MIGRATIONS = (
             r"\wedge \operatorname{Provenanced}(\bar{\mu}) "
             r"\wedge \operatorname{AuthorizedBinding}(\bar{\mu})"
         ),
-        "inline",
+        "display",
     ),
     (
         (
@@ -614,6 +629,46 @@ class MarkdownRenderingTests(unittest.TestCase):
         self.assertIn(r"\texttt{cost \char36{}5}", rendered)
         self.assertIn(r"currency \$7", rendered)
         self.assertIn(r"$\operatorname{Orthable}(m; A)$", rendered)
+
+    def test_prose_double_quotes_render_with_distinct_opening_and_closing_forms(self):
+        generator = load_generator()
+        self.assertIsNotNone(generator, "Task 12 LaTeX generator is missing")
+
+        rendered = generator.render_markdown(
+            'He said "alpha" and called it "the beta case."\n',
+            source_name="typographic-quotes.md",
+        )
+
+        self.assertIn("He said ``alpha''", rendered)
+        self.assertIn("called it ``the beta case.''", rendered)
+        self.assertNotIn('He said "alpha"', rendered)
+
+    def test_inline_code_preserves_literal_straight_double_quotes(self):
+        generator = load_generator()
+        self.assertIsNotNone(generator, "Task 12 LaTeX generator is missing")
+
+        rendered = generator.render_markdown(
+            'Prose "quoted" and code `print("alpha")`.\n',
+            source_name="quote-code-boundary.md",
+        )
+
+        self.assertIn("Prose ``quoted''", rendered)
+        self.assertIn(r'\texttt{print("alpha")}', rendered)
+
+    def test_short_list_items_are_kept_out_of_column_boundary_fragments(self):
+        generator = load_generator()
+        self.assertIsNotNone(generator, "Task 12 LaTeX generator is missing")
+
+        rendered = generator.render_markdown(
+            "- A complete short item with its cause.\n"
+            "- Another complete short item.\n",
+            source_name="list-flow.md",
+        )
+
+        self.assertEqual(
+            rendered.count(r"\needspace{3\baselineskip}\item"),
+            2,
+        )
 
     def test_table_link_and_multiline_aligned_math_are_rendered(self):
         generator = load_generator()
@@ -972,6 +1027,29 @@ $$
         ]
         positions = [first.index(cell) for cell in expected_cells]
         self.assertEqual(positions, sorted(positions))
+
+    def test_breakable_table_rows_are_individually_kept_with_their_first_content(self):
+        generator = load_generator()
+        self.assertIsNotNone(generator, "Task 12 LaTeX generator is missing")
+        rows = [("R%d" % number, "Meaning %d" % number) for number in range(1, 11)]
+        markdown = (
+            "| Label | Meaning |\n"
+            "|---|---|\n"
+            + "".join("| %s | %s |\n" % row for row in rows)
+        )
+
+        rendered = generator.render_markdown(
+            markdown,
+            source_name="breakable-row-flow.md",
+        )
+
+        self.assertEqual(
+            rendered.count(r"\needspace{5\baselineskip}"),
+            len(rows),
+        )
+        for row_number in range(1, len(rows) + 1):
+            marker = "%% breakable-row: %d/%d\n" % (row_number, len(rows))
+            self.assertIn(marker + r"\needspace{5\baselineskip}" + "\n", rendered)
 
     def test_exact_episode_signature_uses_reconstructable_multline_layout(self):
         generator = load_generator()
@@ -1786,7 +1864,7 @@ $$
                 )
         self.assertEqual(
             total_marker_count - path_marker_count - basename_marker_count,
-            48,
+            40,
         )
         for path, content in tree.items():
             with self.subTest(generated_path=path):

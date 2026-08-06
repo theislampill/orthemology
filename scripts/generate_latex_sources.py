@@ -269,12 +269,34 @@ TEXT_ESCAPES = {
 }
 
 
-def _escape_text(text):
+OPENING_DOUBLE_QUOTE_PREDECESSORS = frozenset("([{<\u2013\u2014")
+
+
+def _typographic_double_quotes(text):
+    """Translate prose ASCII quotes to deterministic TeX opening/closing pairs."""
+    output = []
+    for index, character in enumerate(text):
+        if character != '"':
+            output.append(character)
+            continue
+        previous = text[index - 1] if index else ""
+        opening = (
+            not previous
+            or previous.isspace()
+            or previous in OPENING_DOUBLE_QUOTE_PREDECESSORS
+        )
+        output.append("``" if opening else "''")
+    return "".join(output)
+
+
+def _escape_text(text, *, typographic_quotes=True):
+    if typographic_quotes:
+        text = _typographic_double_quotes(text)
     return "".join(TEXT_ESCAPES.get(char, char) for char in text)
 
 
 def _escape_code(text):
-    escaped = _escape_text(text)
+    escaped = _escape_text(text, typographic_quotes=False)
     return escaped.replace(r"\$", r"\char36{}")
 
 
@@ -1028,6 +1050,7 @@ def _render_breakable_table(
         output.append(
             "%% breakable-row: %d/%d\n" % (row_index + 1, len(rows))
         )
+        output.append("\\needspace{5\\baselineskip}\n")
         for column_index, cell in enumerate(row):
             label = _normal_flow_header_label(
                 headers[column_index],
@@ -1183,7 +1206,7 @@ def render_markdown(markdown, source_name="<memory>", root=None):
             index += 1
             continue
         if kind == "list_item_open":
-            output.append("\\item ")
+            output.append("\\needspace{3\\baselineskip}\\item ")
             index += 1
             continue
         if kind == "list_item_close":

@@ -1,0 +1,81 @@
+schema: PMR007_DEEP_MENISCUS_CROSSWALK_A_H_V2
+repository_authority: cc91f41fec364ea3910b80d57252bb1e0a050278
+historical_duration: '09:41:25.405101139'
+historical_segment: 357
+rounds:
+  DEEP_A: {identity: PMR-007-NFG-1, central_change: token-autonomous authority excluded; neutral proper-function ground unestablished}
+  DEEP_B: {identity: PMR-007-DURP-1, central_change: genuine cross-profile restriction constructed; personal/impersonal/distributed realization parity}
+  DEEP_C: {identity: PMR-007-ICR-1, central_change: abstract necessary order plus concrete impersonal actualizer survives the integrated neutral package}
+  DEEP_D: {identity: PMR-007-UGEN-1, central_change: prior asymmetry required under equivariance; articulability does not entail mentality or Speech}
+  DEEP_E: {identity: PMR-007-TNAC-1, central_change: Track-N source compatibility distinguished from neutral dominance; no neutral champion}
+  DEEP_F: {identity: PMR-007-FPF-1, central_change: source-relative proper function split into function, accuracy, warrant; neutral realization parity survives}
+  DEEP_G: {identity: PMR-007-CBA-1, central_change: common bearer is total intersection or independently fixed identity; local/pairwise attributes do not yield unity}
+  DEEP_H: {identity: PMR-007-UAP-1, central_change: matched structural evidence has Bayes factor one; personal-realizer preference requires independent evidence or priors}
+edges:
+  - id: AH-E-G
+    from: Candidate_E
+    to: Candidate_G
+    update: Track-N norm predicates restrict profiles only conditionally; neutral personal/impersonal parity remains.
+    evidence: [PMR-007-NFG-1, PMR-007-FPF-1]
+  - id: AH-G-T
+    from: Candidate_G
+    to: transcendental_ascent
+    update: Genuine functional integration does not entail personal realization; matched evidence gives no Bayesian update.
+    evidence: [PMR-007-DURP-1, PMR-007-UAP-1]
+  - id: AH-T-PF
+    from: transcendental_ascent
+    to: proper_function
+    update: Underived order supplies neither design, healthy operation, environment, warrant, nor praiseworthy teleology.
+    evidence: [PMR-007-ICR-1, PMR-007-FPF-1]
+  - id: AH-UG-G
+    from: uncreated_grammar
+    to: Candidate_G
+    update: Symmetry breaking requires prior asymmetry but does not identify one bearer or personal realizer.
+    evidence: [PMR-007-UGEN-1, PMR-007-UAP-1]
+  - id: AH-UG-T
+    from: uncreated_grammar
+    to: transcendental_ascent
+    update: Impersonal abstract, powers, distributed, and brute-semantic articulability models remain live.
+    evidence: [PMR-007-UGEN-1, PMR-007-ICR-1]
+  - id: AH-N-ATTR
+    from: Track_N
+    to: attribute_ascent
+    update: A source-fixed bearer can conditionally close the common-bearer coordinate; qiyas local rules do not derive it neutrally.
+    evidence: [PMR-007-TNAC-1, PMR-007-CBA-1]
+  - id: AH-R5-G
+    from: R5_plural_impersonal_rivals
+    to: Candidate_G_and_ascent
+    update: An impersonal integrated field plus plural attribute realization matches current neutral structure and evidence.
+    evidence: [PMR-007-ICR-1, PMR-007-CBA-1, PMR-007-UAP-1]
+  - id: AH-PMR-GUARDS
+    from: PMR_transport_certificate_results
+    to: central_lanes
+    update: Source, identity, version, authority, environment, defeater, and bearer custody remain explicit eligibility guards.
+    evidence: [PMR-007-FPF-1, PMR-007-CBA-1]
+architecture_status:
+  A_UNIFIED_PERSONAL:
+    neutral_status: PROMISING_BUT_BRIDGE_INCOMPLETE
+    source_status: TRACK_N_COMPATIBILITY_LEADER
+    blockers: [neutral_proper_function, order_actuality_coupling, personal_realizer_discrimination, common_bearer_derivation, mentality, speech]
+  B_POWERS_PLURAL:
+    neutral_status: STRONG_SURVIVING_RIVAL
+    strengths: [truth_tracking_powers, concrete_efficacy, integrated_or_coordinated_realization]
+    blockers: [objective_fittingness, source_compatibility, explanatory_stopping_points]
+  C_ABSTRACT_ORDER_ACTUALIZER:
+    neutral_status: STRONG_SURVIVING_RIVAL
+    strengths: [necessary_order, concrete_actuality, articulability, matched_structural_evidence]
+    blockers: [order_actuality_coupling, applicability, brute_relation]
+  D_COHERENT_FIXED_POINT:
+    neutral_status: LIVE_BUT_WEAKER
+    blockers: [truth_correspondence, external_actuality, anti_circularity]
+current_disposition:
+  integrated_champion: NONE
+  meniscus: MENISCUS_NOT_REACHED
+  natural_closure: NOT_REACHED
+  strongest_composite_rival: ABSTRACT_NECESSARY_ORDER_PLUS_IMPERSONAL_ACTUALIZER_PLUS_POWERS_OR_SELECTED_EFFECT_TRUTH_TRACKER_PLUS_PLURAL_ATTRIBUTE_REALIZATION
+next_central_burdens:
+  - order_actuality_applicability_and_unique_realizer_selection
+  - mentality_and_agency_discriminator
+  - praiseworthy_teleology_to_Wisdom
+  - source_truth_and_Arabic_primary_confirmation
+  - common_bearer_plus_derivational_unity_without_importing_identity

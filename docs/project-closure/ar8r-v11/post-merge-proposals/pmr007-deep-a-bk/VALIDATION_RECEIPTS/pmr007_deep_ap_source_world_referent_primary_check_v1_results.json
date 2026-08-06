@@ -1,0 +1,23 @@
+{
+  "claims": {
+    "hidden_anchor_countermodels_exercised": true,
+    "image_singleton_criterion_exact": true,
+    "multiple_role_bearer_countermodels_exercised": true,
+    "nonempty_role_preserving_H_has_world_role_realizer": true,
+    "role_complete_image_equals_role_bearers": true,
+    "role_complete_unique_iff_unique_role_bearer": true
+  },
+  "counts": {
+    "existence_failures": 0,
+    "hidden_anchor_witnesses": 22,
+    "image_singleton_definition_failures": 0,
+    "nonempty_interpretation_families": 169,
+    "role_complete_cases": 169,
+    "role_complete_equality_failures": 0,
+    "role_complete_uniqueness_failures": 0,
+    "two_bearer_witnesses": 22,
+    "world_signatures": 512
+  },
+  "overall": "PASS",
+  "schema": "PMR007_DEEP_AP_PRIMARY_RESULTS_V1"
+}

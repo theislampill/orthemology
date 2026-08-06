@@ -1,0 +1,65 @@
+schema: PMR007_DEEP_AA_CAUSAL_GUIDANCE_AND_INTENTIONAL_PURPOSE_MODELS_V3
+identity: PMR-007-CGIP-1
+status: REPAIRED_POST_MERGE_RESEARCH_CANDIDATE_PENDING_DISTINCT_REREVIEW
+neutral_scm:
+  variables: [W, S, Score, A, O]
+  equations:
+    S: f_S(W)
+    Score: f_score(S)
+    A: f_A(Score)
+    O: f_O(W,A)
+  causal_guidance_definition: "do(Score=0) and do(Score=1) assign different A values"
+carried_guards:
+  KeyAuthority: independently_warranted_target_key_authority
+  SemanticAnchor: independently_validated_truth_separating_semantic_relation
+  WorldAdeq: independently_warranted_world_target_adequacy
+  NormAuthority: independently_warranted_normative_authority_for_score_semantics
+expansion_coordinates:
+  - IntentionalUptake
+  - SelectionBecauseFitting
+  - FirstPersonOwnership
+  - Personality
+  - Wisdom
+intended_model_class_guard: >-
+  contains personal and impersonal expansions of the same complete neutral
+  reduct, with expansion coordinates causally inert relative to that reduct
+controls:
+  - id: AA-CM1-CAUSAL-FALSE-TARGET
+    causal_guidance: true
+    SemanticAnchor: false
+  - id: AA-CM2-TRUE-ANCHOR-NO-GUIDANCE
+    SemanticAnchor: true
+    causal_guidance: false
+  - id: AA-CM3-IMPERSONAL-FULL-NEUTRAL-GUIDANCE
+    all_carried_guards: true
+    causal_guidance: true
+    IntentionalUptake: false
+    SelectionBecauseFitting: false
+    FirstPersonOwnership: false
+    Personality: false
+    Wisdom: false
+  - id: AA-CM4-PERSONAL-TWIN
+    same_complete_neutral_reduct_as: AA-CM3-IMPERSONAL-FULL-NEUTRAL-GUIDANCE
+    personal_coordinates_may_be_true: true
+  - id: AA-CM5-OBSERVATIONAL-CAUSAL-AMBIGUITY
+    observational_equivalence: true
+    intervention_equivalence: false
+    scope: outside_the_frozen_SCM
+  - id: AA-CM6-SOURCE-CONDITIONAL-WISDOM
+    track: N
+    source_predication: possible_under_source_guards
+    neutral_entailment: false
+wisdom_bridge_specification:
+  - eligible_knowledge
+  - objectively_fitting_end
+  - intentional_selection_because_of_fittingness
+  - effective_power
+  - nondefective_coordination
+  - stable_bearer_and_source_conditions
+nonclaims:
+  - empirical_causal_certification
+  - metaphysical_possibility_or_equal_probability_of_twins
+  - Score_is_a_norm_or_reason_without_independent_bridges
+  - intentional_purpose_personality_or_Wisdom_is_proved
+  - Track_N_predication_migrates_to_neutral_entailment
+  - daee_OSM_human_fitrah_or_divine_validation

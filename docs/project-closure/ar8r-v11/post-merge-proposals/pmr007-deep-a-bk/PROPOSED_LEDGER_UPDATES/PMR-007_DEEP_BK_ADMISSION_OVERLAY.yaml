@@ -1,0 +1,43 @@
+schema: PMR007_DEEP_BK_ADMISSION_OVERLAY_V1
+identity: PMR-007-NCBD-1
+round: PMR-007-DEEP-BK
+canonical_version: V2
+status: ADMITTED_POST_MERGE_SCOPED_CENTRAL_MODAL_BRIDGE_RECONCILIATION_RESULT
+historical_identity: NONE
+repository_authority: 4c3dc103e8c753690fa5de560ab82157392ced4c
+proof_status: HUMAN_PROOF_PLUS_EXECUTABLE_FINITE_CHECKS
+countermodel_status: COMPLETE_AT_DECLARED_SCOPE
+cold_audit:
+  disposition: REPAIR_REQUIRED
+  blocking_findings: 10
+  repaired: 10
+fresh_rereview:
+  disposition: PASS_WITH_NONBLOCKING_MODAL_SEMANTICS_AND_IDENTITY_NOTES
+  local_models: 11664
+  coherent_lineage_without_B_ID: 3456
+  B_ID_without_concreteness: 1296
+  full_guard_models: 432
+  full_guard_failures: 0
+  external_independence: false
+admitted_results:
+- actual_world_underived_root_does_not_entail_declared_frame_persistence
+- worldwise_unique_roots_do_not_entail_one_global_bearer
+- coherent_role_lineage_does_not_entail_numerical_identity
+- necessary_abstract_order_does_not_entail_concrete_bearer
+- coverage_plus_B_ID_plus_concrete_exemplification_is_sufficient_for_declared_frame_persistent_concrete_root
+- B4_and_B5_remain_conditional_on_unestablished_modal_identity_and_concreteness_bridges
+nonclaims:
+- no_actual_modal_semantics_or_frame_completeness
+- no_transworld_identity_or_self_subsistence
+- no_Necessary_Being_Creator_unity_intellect_personality_Wisdom_or_Speech
+- no_integrated_champion_meniscus_or_closure
+theorem_family:
+  relation: COMPOSITIONAL_RECONCILIATION_OF_ROUNDS_11_12_17_AND_B4_B5_LEDGER
+  general_mathematical_novelty: 0
+  independent_general_theorem_origin: false
+external_review: OPEN
+owner_adoption: PENDING
+repository_proposal_status: PUBLIC_SAFE_POST_MERGE_PROPOSAL_PENDING_REPOSITORY_AUDIT
+integrated_champion: NONE
+meniscus: MENISCUS_NOT_REACHED
+natural_closure: NOT_REACHED

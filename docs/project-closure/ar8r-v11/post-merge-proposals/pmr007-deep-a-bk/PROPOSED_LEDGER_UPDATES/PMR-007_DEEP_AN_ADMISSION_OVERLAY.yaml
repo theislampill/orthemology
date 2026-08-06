@@ -1,0 +1,41 @@
+schema: PMR007_DEEP_AN_ADMISSION_OVERLAY_V1
+identity: PMR-007-ABPD-1
+round: PMR-007-DEEP-AN
+canonical_version: V2
+status: ADMITTED_POST_MERGE_SCOPED_CENTRAL_META_ABDUCTIVE_DISCRIMINATION_RESULT
+historical_identity: NONE
+repository_authority: 428187cebf7644ff8bf9522455a560eb82d35964
+proof_status: HUMAN_PROOF_PLUS_EXECUTABLE_FINITE_CHECKS
+countermodel_status: COMPLETE_AT_DECLARED_SCOPE
+cold_audit:
+  disposition: REPAIR_REQUIRED
+  blocking_findings: 10
+  repaired: 10
+fresh_rereview:
+  disposition: PASS_WITH_NONBLOCKING_META_ABDUCTIVE_AND_MODEL_SCOPE_NOTES
+  external_independence: false
+admitted_results:
+- equal_positive_likelihood_preserves_prior_odds
+- finite_predictive_discriminator_iff_total_variation_positive
+- raw_description_length_ranking_is_representation_and_code_relative
+- Candidate_G_P6_requires_independent_predictive_surplus_or_prior_coding_defense
+- zero_probability_refutes_only_the_frozen_model_without_identifying_a_unique_rival
+nonclaims:
+- no_canonical_prior_likelihood_language_or_code
+- no_global_observational_equivalence
+- no_predictive_to_metaphysical_transfer
+- no_personal_ground_Necessary_Being_Creator_Wisdom_or_Speech
+- no_source_to_world_identity
+- no_integrated_champion_or_meniscus
+candidate_g:
+  P5: UNESTABLISHED_STRONGEST_RIVAL_BURDEN
+  P6: NARROWED_TO_PREDICTIVE_OR_INDEPENDENT_PRIOR_CODING_ROUTE
+theorem_family:
+  relation: STANDARD_BAYESIAN_TV_AND_PREFIX_CODE_APPLICATION_TO_CANDIDATE_G
+  general_mathematical_novelty: 0
+external_review: OPEN
+owner_adoption: PENDING
+repository_proposal_status: PUBLIC_SAFE_POST_MERGE_PROPOSAL_PENDING_REPOSITORY_AUDIT
+integrated_champion: NONE
+meniscus: MENISCUS_NOT_REACHED
+natural_closure: NOT_REACHED

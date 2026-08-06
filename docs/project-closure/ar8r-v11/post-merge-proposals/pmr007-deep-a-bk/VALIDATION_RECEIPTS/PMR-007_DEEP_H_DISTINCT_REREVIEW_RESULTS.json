@@ -1,0 +1,14 @@
+{
+  "frozen_hash_mismatches": [],
+  "normalized_posterior_cases": 12288,
+  "pass": true,
+  "posterior_parity_failures": 0,
+  "realization_sensitive_witness": {
+    "posterior_odds": "3",
+    "prior_odds": "1",
+    "updated": true
+  },
+  "schema": "PMR007_DEEP_H_DISTINCT_REREVIEW_RESULTS_V1",
+  "source_evidence_typed_not_neutralized": true,
+  "total_variation_failures": 0
+}

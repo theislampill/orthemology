@@ -1,0 +1,16 @@
+{
+  "identity": "PMR-007-NCBD-1",
+  "checker": "DISTINCT_LOCAL_OCCURRENCE_V2",
+  "frozen_hash_rows": 6,
+  "hash_mismatches": 0,
+  "local_models": 11664,
+  "coverage_models": 5184,
+  "coherent_lineage_without_B_ID": 3456,
+  "B_ID_without_concreteness": 1296,
+  "full_guard_models": 432,
+  "full_guard_failures": 0,
+  "actual_only_countermodels": 2592,
+  "abstract_order_without_bearer": "PASS",
+  "frame_extension_control": "PASS",
+  "result": "PASS"
+}

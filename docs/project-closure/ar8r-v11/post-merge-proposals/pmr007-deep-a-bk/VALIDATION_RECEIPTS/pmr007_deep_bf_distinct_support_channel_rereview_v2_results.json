@@ -1,0 +1,83 @@
+{
+  "canonical_saturation_failures": 0,
+  "canonical_saturation_trials": 20000,
+  "checker": "DISTINCT_SUPPORT_CHANNEL_REREVIEW_V2",
+  "exact_latent_mixture_failures": 0,
+  "exact_latent_mixture_trials": 30000,
+  "field_scope_checks": {
+    "irrationality_source_pinned": true,
+    "rational_field_separate": true,
+    "theorem_explicit_over_reals": true
+  },
+  "frozen_hash_mismatches": [],
+  "frozen_hash_rows": 7,
+  "identity": "PMR-007-ILRC-1",
+  "identity_rectangle_witnesses": {
+    "2": {
+      "canonical_width": 2,
+      "max_contained_rectangle_cells": 1,
+      "ordinary_rank": 2,
+      "pass": true,
+      "rectangle_cover": 2
+    },
+    "3": {
+      "canonical_width": 3,
+      "max_contained_rectangle_cells": 1,
+      "ordinary_rank": 3,
+      "pass": true,
+      "rectangle_cover": 3
+    },
+    "4": {
+      "canonical_width": 4,
+      "max_contained_rectangle_cells": 1,
+      "ordinary_rank": 4,
+      "pass": true,
+      "rectangle_cover": 4
+    },
+    "5": {
+      "canonical_width": 5,
+      "max_contained_rectangle_cells": 1,
+      "ordinary_rank": 5,
+      "pass": true,
+      "rectangle_cover": 5
+    },
+    "6": {
+      "canonical_width": 6,
+      "max_contained_rectangle_cells": 1,
+      "ordinary_rank": 6,
+      "pass": true,
+      "rectangle_cover": 6
+    }
+  },
+  "independent_of_primary_import": true,
+  "result": "PASS",
+  "stochastic_channel_pushforward_failures": 0,
+  "stochastic_channel_trials": 30000,
+  "strict_contraction_witness": {
+    "output": [
+      [
+        "1/3",
+        "1/3",
+        "1/3"
+      ]
+    ],
+    "output_ordinary_rank": 1,
+    "pass": true,
+    "source_ordinary_rank": 3
+  },
+  "stronger_reading_controls": {
+    "candidate_specific_recoding_not_common_evidence": true,
+    "formal_impersonal_not_metaphysical_actuality": true,
+    "matrix_not_tensor": true,
+    "observational_not_interventional": true,
+    "rank_one_not_causal_unity": true,
+    "width_bound_requires_independent_warrant": true,
+    "width_not_subject_count": true
+  },
+  "three_by_three_rectangle_solver_failures": 0,
+  "three_by_three_support_patterns": 511,
+  "two_by_two_rank1": 796,
+  "two_by_two_rank2": 6518,
+  "two_by_two_rectangle_bound_failures": 0,
+  "two_by_two_tables": 7314
+}

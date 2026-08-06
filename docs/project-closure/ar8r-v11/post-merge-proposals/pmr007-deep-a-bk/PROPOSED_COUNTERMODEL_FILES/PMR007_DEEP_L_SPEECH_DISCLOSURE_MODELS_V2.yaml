@@ -1,0 +1,58 @@
+schema: PMR007_DEEP_L_SPEECH_DISCLOSURE_MODELS_V2
+status: REPAIRED_POST_MERGE_RESEARCH_CANDIDATE
+sorts: [content, bearer, speech_attribute, episode, token, context]
+neutral_guards: [MENT, CAP, UTTER, EXPR, RELAY, CREATED_TOK, FID_T, SID, PROV, VER, AUTHZ, APP]
+track_n_guards: [ATTR_N, UNCR_N]
+models:
+  - id: L-PW1-SOURCE-CONDITIONED-DISCLOSURE
+    true: [MENT, CAP, UTTER, ATTR_N, EXPR, RELAY, CREATED_TOK, FID_T, SID, PROV, VER, AUTHZ, APP, UNCR_N]
+    guarded_disclosure_eligible: true
+    token_speech_identity: false
+    neutral_source_truth: unestablished
+  - id: L-CM1-IMPERSONAL-ARTICULABILITY-NONEMPTY-BEARER-SORT
+    bearers: [z_nonmental]
+    ART: true
+    MENT: false
+  - id: L-CM2-SPECTATOR
+    true: [MENT]
+    false: [CAP, UTTER]
+  - id: L-CM3-SILENT-CAPACITY
+    true: [MENT, CAP]
+    false: [UTTER]
+  - id: L-CM4-QUOTATION-RELAY
+    true: [MENT, CAP, UTTER, EXPR, RELAY, CREATED_TOK, FID_T]
+    AUTHOR: false
+  - id: L-CM5-ORDINARY-AUTHORSHIP
+    true: [MENT, CAP, UTTER, AUTHOR, EXPR, RELAY, CREATED_TOK, FID_T, SID, PROV, VER, AUTHZ, APP]
+    false: [ATTR_N, UNCR_N]
+  - id: L-CM6-TARGET-FAITHFUL-FORGERY
+    true: [EXPR, CREATED_TOK, FID_T, VER, APP]
+    false: [SID, PROV, AUTHZ]
+  - id: L-CM7-STALE-REPLAY
+    same_token_bytes: true
+    selected_content_preserved: true
+    true: [EXPR, CREATED_TOK, FID_T, SID, PROV]
+    false: [VER, APP]
+  - id: L-CM8-UNAUTHORIZED-AUTHENTIC
+    true: [SID, PROV, EXPR, CREATED_TOK, FID_T, VER, APP]
+    false: [AUTHZ]
+  - id: L-CM9-TARGET-PRESERVING-TRANSLATION
+    true: [EXPR, CREATED_TOK, FID_T]
+    selected_target: proposition_p
+    full_content_identity: false
+    authority_preservation: false
+  - id: L-CM10-TRACK-N-PREDICATION
+    true: [ATTR_N, UNCR_N]
+    neutral_bridge_evidence: incomplete
+  - id: L-CM11-CREATED-CONTENT
+    true: [MENT, CAP, UTTER, AUTHOR, EXPR, RELAY, CREATED_TOK, FID_T, SID, PROV, VER, AUTHZ, APP]
+    content_created: true
+    false: [UNCR_N]
+  - id: L-CM12-ONTOLOGY-UNSPECIFIED
+    true: [EXPR, FID_T]
+    CREATED_TOK: unspecified
+relation_controls:
+  many_tokens_one_content:
+    expressions: [[t0, c, k0], [t1, c, k1]]
+  one_token_context_sensitive_contents:
+    expressions: [[t, c0, k0], [t, c1, k1]]

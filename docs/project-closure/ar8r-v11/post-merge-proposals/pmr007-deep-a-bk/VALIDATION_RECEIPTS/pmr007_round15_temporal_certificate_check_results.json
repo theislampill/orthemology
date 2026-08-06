@@ -1,0 +1,110 @@
+{
+  "check": "PMR-007 Round 15 daee temporal-certificate architecture",
+  "repository_main": "cc91f41fec364ea3910b80d57252bb1e0a050278",
+  "repository_archive_sha256": "ec5314442cc6212cad0cd5cd9fcdfb835567f4847830445c8f7529ea8422a04e",
+  "shared_current_transition_record": {
+    "sha256": "da0b58ac75391c8ba4387332e5c7be3bdda578a4363f23c626d1f08e102d799f",
+    "current_validator_status": "PASS",
+    "reason": null
+  },
+  "current_repository_validators": {
+    "scripts/validate_corrective_transition.py": {
+      "returncode": 0,
+      "status": "PASS",
+      "last_line": "TOTAL: 0 failures"
+    },
+    "scripts/validate_semantic_operator_contract.py": {
+      "returncode": 0,
+      "status": "PASS",
+      "last_line": "TOTAL: 0 failures"
+    },
+    "scripts/validate_daee_current_crosswalk.py": {
+      "returncode": 0,
+      "status": "PASS",
+      "last_line": "TOTAL: 0 failures"
+    },
+    "scripts/validate_meta_noetic_memetics.py": {
+      "returncode": 0,
+      "status": "PASS",
+      "last_line": "TOTAL: 0 failures"
+    }
+  },
+  "current_transition_contract_temporal_fields_absent": [
+    "actions",
+    "certificate_kind",
+    "model_completeness",
+    "rank",
+    "safe_states",
+    "source_version_epoch",
+    "stable_kernel",
+    "states",
+    "strategy",
+    "successors",
+    "target_states",
+    "winning_region"
+  ],
+  "extension_twins": {
+    "stable_extension": {
+      "stable_kernel": [
+        "q_closed"
+      ],
+      "W_core": [
+        "q_closed"
+      ],
+      "W_coB": [
+        "q_closed"
+      ]
+    },
+    "bypass_extension": {
+      "stable_kernel": [],
+      "W_core": [],
+      "W_coB": []
+    }
+  },
+  "same_record_temporal_collision": true,
+  "certificate_results": {
+    "TRC-CORE-CONTROL-1": {
+      "valid": true,
+      "reason": null
+    },
+    "TRC-COB-R14-F01-1": {
+      "valid": true,
+      "reason": null
+    }
+  },
+  "negative_fixture_results": {
+    "TRC-F01-FALSE-CORE": {
+      "valid": false,
+      "reason": "winning-region-mismatch",
+      "expected_error": "winning-region-mismatch",
+      "pass": true
+    },
+    "TRC-F02-STALE-EPOCH": {
+      "valid": false,
+      "reason": "eligibility-epoch-mismatch",
+      "expected_error": "eligibility-epoch-mismatch",
+      "pass": true
+    },
+    "TRC-F03-INCOMPLETE-SUCCESSOR-CLAIM": {
+      "valid": false,
+      "reason": "successor-relation-not-declared-complete",
+      "expected_error": "successor-relation-not-declared-complete",
+      "pass": true
+    },
+    "TRC-F04-BAD-STRATEGY": {
+      "valid": false,
+      "reason": "strategy-action-not-eligible",
+      "expected_error": "strategy-action-not-eligible",
+      "pass": true
+    },
+    "TRC-F05-BAD-RANK": {
+      "valid": false,
+      "reason": "rank-mismatch",
+      "expected_error": "rank-mismatch",
+      "pass": true
+    }
+  },
+  "authority_ceiling": "model-relative finite certificate; no model-completeness, source-truth, causal-restoration, human-uptake, or world-truth certification",
+  "elapsed_seconds": 14.798658134999869,
+  "overall": "PASS"
+}

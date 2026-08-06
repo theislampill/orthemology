@@ -1,0 +1,40 @@
+schema: pmr007-deep-ax-source-testimony-world-gate-models-v2
+identity: PMR-007-STWG-1
+architectures: [A_UNIFIED_PERSONAL, R_IMPERSONAL_SOURCE_COMPATIBLE]
+contracts: [SRC, TR, ROOT, MAP, REF, REL, VER, PRIOR, WORLD]
+model_classes:
+  exact_joint:
+    rule: posterior update uses P_A(y)/P_R(y) on the complete root observation vector
+  conditionally_independent_roots:
+    guard: P_H(y) factors over authenticated roots for H in {A,R}
+    consequence: joint likelihood ratio factors over roots
+  copied_lineage:
+    rule: deterministic descendants of one root remain one evidential coordinate
+  common_translation_channel:
+    rule: same stochastic channel K is applied under A and R
+    consequence: total variation cannot increase
+controls:
+  correlated_roots:
+    status: PRODUCT_OF_MARGINALS_INVALID
+  source_compatibility_parity:
+    status: NO_POSTERIOR_UPDATE
+  hidden_referent_anchor:
+    status: TARGET_IMPORT
+  version_drift:
+    status: STALE_CONTRACT
+  candidate_dependent_channel:
+    status: INVALID_COMPARISON
+  incomplete_candidate_class:
+    status: POSTERIOR_NOT_WORLD_TRUTH
+source_authority:
+  asfahani_translation: TRANSLATED_PRIMARY_ACCESS
+  eltobgui: SECONDARY_SCHOLARLY_RECONSTRUCTION
+  epistemology_collection: SECONDARY_AND_CONTEMPORARY_COMPARATIVE_COLLECTION
+nonclaims:
+  - Arabic-primary verification
+  - source truth
+  - tawatur reconstruction
+  - actual-world selection
+  - personal-ground proof
+  - proper function
+  - owner adoption

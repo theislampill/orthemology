@@ -1,0 +1,74 @@
+schema: PMR007_DEEP_AL_ARCHITECTURE_COMPARISON_V2
+identity: PMR-007-EGAC-1
+version: V2
+status_values:
+- ESTABLISHED
+- SOURCE_CONDITIONAL
+- OPEN
+- COUNTERMODELED_AT_DECLARED_SCOPE
+- WITHHELD
+- NOT_APPLICABLE
+architectures:
+  A_UNIFIED_PERSONAL:
+    neutral_benefits:
+    - shared_neutral_core
+    - connected_derivational_structure
+    source_benefits:
+    - selected_role_bundle
+    - source_internal_coreference
+    open_benefits:
+    - H7_intellectual_ground
+    - H8_de_se_personality
+    - proper_function_Wisdom
+    - source_world_identity
+    costs:
+    - H7_bridge_set
+    - H8_bridge_set
+    - source_world_bridge_set
+    target_imports:
+    - personal_subject_if_stipulated
+    - Wisdom_if_stipulated
+  B1_POWERS_SHARED_ROLE_BEARER:
+    neutral_benefits:
+    - shared_neutral_core
+    - connected_derivational_structure
+    source_benefits:
+    - selected_role_bundle_after_source_extension
+    open_benefits:
+    - impersonal_realization_adequacy
+    - proper_function_account
+    costs:
+    - powers_primitive_or_law
+    - source_extension_bridge
+    - brute_stopping_point
+    target_imports: []
+  C1_ABSTRACT_ORDER_ACTUALIZER:
+    neutral_benefits:
+    - shared_neutral_core
+    - connected_derivational_structure
+    - underived_order_plus_actualizer_role
+    source_benefits:
+    - selected_role_bundle_after_source_extension
+    open_benefits:
+    - applicability_exemplification
+    - actualizer_adequacy
+    - source_world_identity
+    costs:
+    - abstract_concrete_bridge
+    - source_extension_bridge
+    - brute_actuality_stopping_point
+    target_imports: []
+unresolved_discriminators:
+- A_derives_de_se
+- A_derives_proper_function_Wisdom
+- A_source_world_identity
+- B1_equal_economy
+- C1_equal_economy
+- unification_truth_conducive
+current_disposition: RIVAL_PARITY_UNBROKEN_NO_INTEGRATED_CHAMPION
+nonclaims:
+- no_equal_probability
+- no_metaphysical_possibility_proof
+- no_scalar_ranking
+- no_owner_adoption
+- no_meniscus_or_closure

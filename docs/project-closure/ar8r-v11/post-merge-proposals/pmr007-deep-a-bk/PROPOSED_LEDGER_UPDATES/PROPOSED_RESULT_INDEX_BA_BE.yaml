@@ -1,0 +1,38 @@
+schema: PMR007_RESULT_INDEX_DELTA_BA_BE_V1
+repository_authority: 4c3dc103e8c753690fa5de560ab82157392ced4c
+results:
+- identity: PMR-007-IRCQ-1
+  round: BA
+  status: ADMITTED_POST_MERGE_SCOPED_CENTRAL_OPERATIONAL_QUOTIENT_RESULT
+  owner_adoption: PENDING
+  external_review: OPEN
+  historical_identity: NONE
+  general_novelty: 0
+- identity: PMR-007-JCIQ-1
+  round: BB
+  status: ADMITTED_POST_MERGE_SCOPED_CENTRAL_DYNAMIC_NONPRODUCT_RESULT
+  owner_adoption: PENDING
+  external_review: OPEN
+  historical_identity: NONE
+  general_novelty: 0
+- identity: PMR-007-UIEP-1
+  round: BC
+  status: ADMITTED_POST_MERGE_SCOPED_CENTRAL_ARCHITECTURE_NONIDENTIFIABILITY_RESULT
+  owner_adoption: PENDING
+  external_review: OPEN
+  historical_identity: NONE
+  general_novelty: 0
+- identity: PMR-007-LSRO-1
+  round: BD
+  status: ADMITTED_POST_MERGE_SCOPED_CENTRAL_SOURCE_ORIENTATION_RESULT
+  owner_adoption: PENDING
+  external_review: OPEN
+  historical_identity: NONE
+  general_novelty: 0
+- identity: PMR-007-CJID-1
+  round: BE
+  status: ADMITTED_POST_MERGE_SCOPED_CENTRAL_CROSS_LANE_INTERACTION_RESULT
+  owner_adoption: PENDING
+  external_review: OPEN
+  historical_identity: NONE
+  general_novelty: 0

@@ -62,8 +62,12 @@ an adequate rule?", the episode is itself apprehended. This is an explicit
 different kind of thing from a jar of powder, and becomes a base occurrence
 of the higher audit only by being cast as one: for each level $n$,
 
-    ι_n : E^(n) ↪ M^(n+1)   (injective; ι_n(e) is "the episode e, considered
-                             as a case to be audited")
+```math
+\iota_n : E^{(n)} \hookrightarrow M^{(n+1)}
+```
+
+Here $\iota_n$ is injective, and $\iota_n(e)$ is "the episode $e$, considered
+as a case to be audited."
 
 (gloss: yesterday's classification act, re-cast as today's case). Writing
 $\supseteq$ here would falsely assert episodes are already members of the base
@@ -202,7 +206,9 @@ verdicts; where those verdicts (V2b-P truth-conduciveness, V3d executor
 fidelity, V6 robustness — §4) must be adjudicated from the episode's own
 record, an ordered **trace** is also required:
 
-    Trace_e = (s_0, u_1, s_1, …, u_k, s_k)
+```math
+\operatorname{Trace}_e = (s_0, u_1, s_1, \ldots, u_k, s_k)
+```
 
 where each state $s_i$ snapshots the current evidence, candidate families,
 inferred placement, route, and open residuals, and each update $u_i$
@@ -468,8 +474,18 @@ compact core:
   well-formed for the configuration it runs under (a sound rulebook can
   carry an ill-formed procedure).
 - **V3c — governing-token adequacy (Decision 0002).**
-  $\operatorname{V3c}(e) \Leftrightarrow \wedge_{\bar{\mu} \in \operatorname{MetaTok}(e)} \operatorname{TokenAdequate}(\bar{\mu}, e)$, where
-  $\operatorname{TokenAdequate}(\bar{\mu}, e) \Leftrightarrow \operatorname{MetaInst}(\bar{\mu}, \mu) \wedge \operatorname{Compatible}(\bar{\mu}, A(e)) \wedge \operatorname{Anchored}(\bar{\mu}, \kappa(e), v(e)) \wedge \operatorname{ScopeCorrect}(\bar{\mu}, \mathcal{Q}(e)) \wedge \operatorname{Current}(\bar{\mu}, t(e)) \wedge \operatorname{Provenanced}(\bar{\mu}) \wedge \operatorname{AuthorizedBinding}(\bar{\mu})$ — every applicable concrete
+
+$$
+\operatorname{V3c}(e) \Leftrightarrow \wedge_{\bar{\mu} \in \operatorname{MetaTok}(e)} \operatorname{TokenAdequate}(\bar{\mu}, e)
+$$
+
+Here:
+
+$$
+\operatorname{TokenAdequate}(\bar{\mu}, e) \Leftrightarrow \operatorname{MetaInst}(\bar{\mu}, \mu) \wedge \operatorname{Compatible}(\bar{\mu}, A(e)) \wedge \operatorname{Anchored}(\bar{\mu}, \kappa(e), v(e)) \wedge \operatorname{ScopeCorrect}(\bar{\mu}, \mathcal{Q}(e)) \wedge \operatorname{Current}(\bar{\mu}, t(e)) \wedge \operatorname{Provenanced}(\bar{\mu}) \wedge \operatorname{AuthorizedBinding}(\bar{\mu})
+$$
+
+Thus every applicable concrete
   metaorthemma was correctly instantiated, analysis-compatible,
   occurrence-anchored, correctly scoped to the claims it served, current,
   provenanced, and bound under authority. PER-TOKEN statuses are preserved
@@ -536,7 +552,12 @@ compact core:
 
 **Result-free pathway core (Decision 0003).**
 
-    CorePath = { V2a, V2b-P, V2c, V3a, V3b, V3c, V3d, V3e, V4a, V5, V6 }
+```math
+\operatorname{CorePath}
+= \{\mathrm{V2a},\mathrm{V2bP},\mathrm{V2c},\mathrm{V3a},
+\mathrm{V3b},\mathrm{V3c},\mathrm{V3d},\mathrm{V3e},\mathrm{V4a},
+\mathrm{V5},\mathrm{V6}\}
+```
 
 Excluded by construction: **V1** (result correctness), **V2b-T**
 (factive token-level truth linkage — entails claim truth), and **V4b**
@@ -547,8 +568,17 @@ a route can be safe and adequate without being optimal).
 discretionary post-hoc list — an executor cannot exempt a failing or
 untested verdict by omitting it:
 
-    ReqPath(e) = CorePath ∩ RequiredBy( A(e), episode-shape(e),
-                   risk-class(e), claims(e), governance(e) )
+```math
+\begin{aligned}
+\operatorname{ReqPath}(e)
+&= \operatorname{CorePath} \cap
+\operatorname{RequiredBy}(
+A(e),\operatorname{episodeShape}(e),\\
+&\qquad \operatorname{riskClass}(e),
+\operatorname{claims}(e),\operatorname{governance}(e)
+).
+\end{aligned}
+```
 
 Minimum derivation rules: **V3c** is required exactly when
 $\operatorname{MetaTok}(e) \neq \emptyset$ (the M1 zero-burden rule is preserved:
@@ -581,12 +611,24 @@ accordingly an open parameter, not "closed."
 
 **Verdict status is not Boolean.**
 
-    Status_i(e) ∈ { pass, fail, undetermined, not-applicable }
+```math
+\operatorname{Status}_i(e) \in
+\{\mathrm{pass},\mathrm{fail},\mathrm{undetermined},
+\mathrm{notApplicable}\}.
+```
 
-    PathwayAdequate(e)      iff every V_i ∈ ReqPath(e) has status pass
-    PathwayDefective(e)     iff some  V_i ∈ ReqPath(e) has status fail
-    PathwayUndetermined(e)  iff no required verdict fails and at least
-                            one required verdict is undetermined
+```math
+\begin{aligned}
+\operatorname{PathwayAdequate}(e)
+&\iff \forall V_i \in \operatorname{ReqPath}(e),
+\ \operatorname{Status}_i(e)=\mathrm{pass},\\
+\operatorname{PathwayDefective}(e)
+&\iff \exists V_i \in \operatorname{ReqPath}(e),
+\ \operatorname{Status}_i(e)=\mathrm{fail},\\
+\operatorname{PathwayUndetermined}(e)
+&\iff \text{no required verdict fails and at least one is undetermined}.
+\end{aligned}
+```
 
 A missing assessment is `undetermined` — never silently counted as pass,
 never silently removed as not-applicable.
@@ -787,9 +829,16 @@ indices, **not a new formal addition**:
   set intersection. With $\operatorname{Reach}(m)$ the occurrences reachable from $m$
   in the successor structure,
 
-      Compat_m(𝒢_α, 𝒢_β)   iff  ∃ m′ ∈ Reach(m):
-                                  O*(m′; A_α) ∈ 𝒢_α  ∧  O*(m′; A_β) ∈ 𝒢_β
-      Conflict_m(𝒢_α, 𝒢_β) iff  no such reachable m′ exists
+```math
+\begin{aligned}
+\operatorname{Compat}_m(\mathcal{G}_\alpha,\mathcal{G}_\beta)
+&\iff \exists m' \in \operatorname{Reach}(m):
+O^*(m';A_\alpha)\in\mathcal{G}_\alpha
+\wedge O^*(m';A_\beta)\in\mathcal{G}_\beta,\\
+\operatorname{Conflict}_m(\mathcal{G}_\alpha,\mathcal{G}_\beta)
+&\iff \text{no such reachable }m'\text{ exists}.
+\end{aligned}
+```
 
   — one shared occurrence, evaluated under each analysis separately.
   Cooperation is joint realizability with a shared analysis and shared

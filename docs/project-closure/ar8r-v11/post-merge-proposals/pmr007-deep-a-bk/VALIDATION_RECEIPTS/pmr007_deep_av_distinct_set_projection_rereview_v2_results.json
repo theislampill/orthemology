@@ -1,0 +1,26 @@
+{
+  "controls": {
+    "no_shared": {
+      "rule": "if N has one valuation, satisfiable A and nonuniversal C make SA not subset TC"
+    },
+    "source_inconsistency": {
+      "rule": "empty A makes SA empty and entailment vacuous"
+    },
+    "target_import": {
+      "rule": "moving target symbol into shared vocabulary changes the partition, not the theorem"
+    }
+  },
+  "criterion_failures": 0,
+  "entailed_pairs": 2401,
+  "exhaustive_pairs": 65536,
+  "hash_check": {
+    "checked": 6,
+    "mismatches": 0
+  },
+  "interval_count_failures": 0,
+  "overall": "PASS",
+  "random_large_cases": 20000,
+  "random_large_failures": 0,
+  "schema": "pmr007-deep-av-distinct-set-projection-rereview-v2-results",
+  "unique_failures": 0
+}

@@ -1,0 +1,69 @@
+schema: PMR007_DEEP_MENISCUS_BURDEN_DELTA_V_W_V1
+repository_authority: 428187cebf7644ff8bf9522455a560eb82d35964
+closed_at_scoped_level:
+- id: BVW-01
+  burden: whether_profile_certification_and_frozen_root_warrant_completeness_have_a_coarsest_exact_joint_diagnostic
+  result: PMR-007-SWPC-1
+  status: yes; the attained pair map is the coarsest exact four-state diagnostic
+- id: BVW-02
+  burden: whether_release_success_is_diagnostically_complete
+  result: PMR-007-SWPC-1
+  status: no; conjunction release merges three distinct failure modes
+- id: BVW-03
+  burden: whether_profile_and_warrant_success_entail_independently_supplied_world_target_adequacy
+  result: PMR-007-SWPC-1
+  status: no; all eight three-axis states are realized
+- id: BVW-04
+  burden: whether_valid_profile_and_warrant_objects_can_be_aligned_by_one_finite_target_contract_interface
+  result: PMR-007-TIPC-1
+  status: yes; the declared full-key pullback has the standard universal property
+- id: BVW-05
+  burden: whether_each_declared_contract_key_coordinate_is_independently_load_bearing_in_the_frozen
+    witness class
+  result: PMR-007-TIPC-1
+  status: yes; erasing any of six fields admits a false compatible pair
+narrowed:
+- id: BVW-06
+  burden: FABLE_R1_B06_common_core
+  status: 'narrowed: a common diagnostic product and target-indexed compatibility
+    interface exist, but no common explanatory or generative calculus is established'
+- id: BVW-07
+  burden: route_order_over_mixed_failures
+  status: product order supplies incomparability; any strict priority or scalar loss
+    requires an independently declared policy
+- id: BVW-08
+  burden: target_local_transport
+  status: alignment is exact only relative to the declared full key and independently
+    valid component objects
+opened_or_sharpened:
+- id: BVW-09
+  burden: target_key_authority
+  reason: the pullback presupposes the target, referent, semantic contract, scope,
+    and analysis-version key rather than authorizing it
+- id: BVW-10
+  burden: anti_self_authorization
+  reason: a system could validate components and compatibility relative to a self-installed
+    or false target key; an external or independently constrained authority relation
+    remains necessary
+- id: BVW-11
+  burden: derivational_unification
+  reason: product and pullback assemble compatible records but do not derive one coordinate
+    from another or explain their coordination
+- id: BVW-12
+  burden: common_bearer_and_subject
+  reason: compatibility does not entail numerical identity, intentional ownership,
+    one subject, or common-bearer co-instantiation
+- id: BVW-13
+  burden: world_and_source_truth
+  reason: component validity and key agreement remain compatible with a false world
+    target or unauthenticated source/referent
+strongest_surviving_rival: ABSTRACT_NECESSARY_ORDER_PLUS_IMPERSONAL_POWERS_REALIZER_PLUS_EXACT_NORM_FIELD_PLUS_FORMAL_COUPLING_PLUS_FINITE_ARTICULABILITY_PLUS_TARGET_INDEXED_PROFILE_WARRANT_ALIGNMENT
+blocked_external:
+- independent_target_and_world_authority
+- Arabic_primary_verification_and_source_specialist_review
+- independent_philosophical_and_formal_review
+- empirical_or_causal_execution
+- owner_adoption
+integrated_champion: NONE
+meniscus: MENISCUS_NOT_REACHED
+natural_closure: NOT_REACHED

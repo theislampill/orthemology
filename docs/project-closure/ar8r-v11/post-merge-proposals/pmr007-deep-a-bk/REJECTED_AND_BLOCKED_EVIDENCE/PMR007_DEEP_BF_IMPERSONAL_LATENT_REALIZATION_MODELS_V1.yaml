@@ -1,0 +1,38 @@
+schema: pmr007-deep-bf-ilrc-models-v1
+identity: PMR-007-ILRC-1
+version: V1
+setting:
+  observed_blocks: [X, Y]
+  joint_law: finite_probability_matrix
+  latent_product_realization:
+    equation: P(x,y) = sum_h lambda[h] * a[h](x) * b[h](y)
+    width: number_of_nonzero_latent_components
+  factorization_field: nonnegative_reals
+positive_witnesses:
+  product:
+    matrix: [[0.12, 0.28], [0.18, 0.42]]
+    claimed_width: 1
+  binary_equality:
+    matrix: [[0.5, 0.0], [0.0, 0.5]]
+    exact_width: 2
+  ternary_equality:
+    matrix: [[0.3333333333333333, 0.0, 0.0], [0.0, 0.3333333333333333, 0.0], [0.0, 0.0, 0.3333333333333333]]
+    exact_width: 3
+controls:
+  saturated_X_latent:
+    claim: every finite P is realized with H=X
+  copy_count:
+    claim: copied descendants do not automatically increase causal or provenance independence
+  factorization_nonuniqueness:
+    claim: latent labels and decompositions need not be identified by P
+  common_coarse_graining:
+    claim: common stochastic maps cannot increase supplied factorization width
+  personal_overread:
+    claim: latent width is not subject, bearer, personality, or Wisdom count
+nonclaims:
+  - generic causal identification
+  - generic tensor-rank characterization
+  - unique latent semantics
+  - metaphysical actuality of an impersonal rival
+  - source truth or source-world reference
+  - general mathematical novelty

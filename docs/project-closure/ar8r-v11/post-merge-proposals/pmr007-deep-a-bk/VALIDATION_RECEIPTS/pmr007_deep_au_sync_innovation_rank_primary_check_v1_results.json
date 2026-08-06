@@ -1,0 +1,365 @@
+{
+  "contraction_cases": 256,
+  "contraction_failures": 0,
+  "controls": {
+    "copied_root": {
+      "apparent_count": 3,
+      "rank": 1
+    },
+    "independent_convergence": {
+      "projected_current_output_count": 1,
+      "root_rank": 2
+    },
+    "old_root_recovery": {
+      "rank_P": 1,
+      "rank_after": 2,
+      "rank_fresh": 0
+    },
+    "total_sync": {
+      "after": 1,
+      "before": 2
+    },
+    "unauthenticated_alias": {
+      "contracted_rank": 1,
+      "displayed_rank": 2
+    }
+  },
+  "duplicate_cases": 1536,
+  "duplicate_failures": 0,
+  "field": "GF(2)",
+  "fresh_rank_lower_bound_failures": 0,
+  "innovation_cases": 1024,
+  "overall": "PASS_WITH_V1_COUNTEREXAMPLE",
+  "repaired_decomposition_failures": 0,
+  "schema": "pmr007-deep-au-primary-check-v1-results",
+  "strict_sync_losses": 112672,
+  "sync_cases": 262144,
+  "sync_rank_failures": 0,
+  "v1_balance_failures": 375,
+  "v1_minimal_mismatches": [
+    {
+      "C": [
+        [
+          0,
+          0,
+          0
+        ],
+        [
+          0,
+          1,
+          0
+        ]
+      ],
+      "P": [
+        [
+          0,
+          0
+        ],
+        [
+          0,
+          0
+        ]
+      ],
+      "rank_P": 0,
+      "rank_after": 1,
+      "rank_fresh": 0
+    },
+    {
+      "C": [
+        [
+          0,
+          0,
+          0
+        ],
+        [
+          1,
+          0,
+          0
+        ]
+      ],
+      "P": [
+        [
+          0,
+          0
+        ],
+        [
+          0,
+          0
+        ]
+      ],
+      "rank_P": 0,
+      "rank_after": 1,
+      "rank_fresh": 0
+    },
+    {
+      "C": [
+        [
+          0,
+          0,
+          0
+        ],
+        [
+          1,
+          1,
+          0
+        ]
+      ],
+      "P": [
+        [
+          0,
+          0
+        ],
+        [
+          0,
+          0
+        ]
+      ],
+      "rank_P": 0,
+      "rank_after": 1,
+      "rank_fresh": 0
+    },
+    {
+      "C": [
+        [
+          0,
+          0,
+          1
+        ],
+        [
+          0,
+          1,
+          0
+        ]
+      ],
+      "P": [
+        [
+          0,
+          0
+        ],
+        [
+          0,
+          0
+        ]
+      ],
+      "rank_P": 0,
+      "rank_after": 2,
+      "rank_fresh": 1
+    },
+    {
+      "C": [
+        [
+          0,
+          0,
+          1
+        ],
+        [
+          0,
+          1,
+          1
+        ]
+      ],
+      "P": [
+        [
+          0,
+          0
+        ],
+        [
+          0,
+          0
+        ]
+      ],
+      "rank_P": 0,
+      "rank_after": 2,
+      "rank_fresh": 1
+    },
+    {
+      "C": [
+        [
+          0,
+          0,
+          1
+        ],
+        [
+          1,
+          0,
+          0
+        ]
+      ],
+      "P": [
+        [
+          0,
+          0
+        ],
+        [
+          0,
+          0
+        ]
+      ],
+      "rank_P": 0,
+      "rank_after": 2,
+      "rank_fresh": 1
+    },
+    {
+      "C": [
+        [
+          0,
+          0,
+          1
+        ],
+        [
+          1,
+          0,
+          1
+        ]
+      ],
+      "P": [
+        [
+          0,
+          0
+        ],
+        [
+          0,
+          0
+        ]
+      ],
+      "rank_P": 0,
+      "rank_after": 2,
+      "rank_fresh": 1
+    },
+    {
+      "C": [
+        [
+          0,
+          0,
+          1
+        ],
+        [
+          1,
+          1,
+          0
+        ]
+      ],
+      "P": [
+        [
+          0,
+          0
+        ],
+        [
+          0,
+          0
+        ]
+      ],
+      "rank_P": 0,
+      "rank_after": 2,
+      "rank_fresh": 1
+    },
+    {
+      "C": [
+        [
+          0,
+          0,
+          1
+        ],
+        [
+          1,
+          1,
+          1
+        ]
+      ],
+      "P": [
+        [
+          0,
+          0
+        ],
+        [
+          0,
+          0
+        ]
+      ],
+      "rank_P": 0,
+      "rank_after": 2,
+      "rank_fresh": 1
+    },
+    {
+      "C": [
+        [
+          0,
+          1,
+          0
+        ],
+        [
+          0,
+          0,
+          0
+        ]
+      ],
+      "P": [
+        [
+          0,
+          0
+        ],
+        [
+          0,
+          0
+        ]
+      ],
+      "rank_P": 0,
+      "rank_after": 1,
+      "rank_fresh": 0
+    },
+    {
+      "C": [
+        [
+          0,
+          1,
+          0
+        ],
+        [
+          0,
+          0,
+          1
+        ]
+      ],
+      "P": [
+        [
+          0,
+          0
+        ],
+        [
+          0,
+          0
+        ]
+      ],
+      "rank_P": 0,
+      "rank_after": 2,
+      "rank_fresh": 1
+    },
+    {
+      "C": [
+        [
+          0,
+          1,
+          0
+        ],
+        [
+          0,
+          1,
+          0
+        ]
+      ],
+      "P": [
+        [
+          0,
+          0
+        ],
+        [
+          0,
+          0
+        ]
+      ],
+      "rank_P": 0,
+      "rank_after": 1,
+      "rank_fresh": 0
+    }
+  ]
+}

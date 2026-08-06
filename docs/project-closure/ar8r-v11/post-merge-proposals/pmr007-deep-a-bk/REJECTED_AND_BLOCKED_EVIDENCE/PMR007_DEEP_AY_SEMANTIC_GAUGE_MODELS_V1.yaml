@@ -1,0 +1,31 @@
+schema: pmr007-deep-ay-semantic-gauge-models-v1
+identity: PMR-007-SGCI-1
+objects:
+  structural_system: finite neutral carrier X with declared relations
+  content_algebra: finite C with independently admitted signature Lambda
+  interpretation: mu from X to C
+  gauge_group: Aut(C,Lambda)
+controls:
+  truth_label_swap:
+    content_signature: equality_only
+    gauge: swap two labels
+    conclusion: literal truth label not identified
+  structural_rigidity_content_gauge:
+    structural_automorphisms: trivial
+    content_automorphisms: nontrivial
+    conclusion: H7a1 does not close H7a2
+  designated_anchor:
+    status: positive_control_if_independently_warranted
+  hidden_anchor:
+    status: TARGET_IMPORT
+  rigid_impersonal_semantics:
+    content_automorphisms: trivial
+    mentality: false
+    conclusion: content rigidity does not entail H7a3
+nonclaims:
+  - semantic conventionalism
+  - source falsity
+  - mentality
+  - personality
+  - Speech
+  - world truth

@@ -1,0 +1,51 @@
+{
+  "codebooks": 4096,
+  "controls": {
+    "copied_root": {
+      "apparent_copies": 40,
+      "max_distance_contribution": 1,
+      "root_coordinates": 1
+    },
+    "distance_three_one_error": {
+      "code": [
+        [
+          0,
+          0,
+          0
+        ],
+        [
+          1,
+          1,
+          1
+        ]
+      ],
+      "distance": 3,
+      "one_error_decodable": true
+    },
+    "distance_two_one_error": {
+      "code": [
+        [
+          0,
+          0
+        ],
+        [
+          1,
+          1
+        ]
+      ],
+      "distance": 2,
+      "one_error_decodable": false,
+      "v1_predicts": true
+    },
+    "one_erasure": {
+      "distance_two_survives": true
+    }
+  },
+  "erasure_cases": 8192,
+  "erasure_distance_failures": 0,
+  "error_cases": 8192,
+  "error_distance_failures": 0,
+  "overall": "PASS_WITH_V1_ERROR_THRESHOLD_COUNTEREXAMPLES",
+  "schema": "pmr007-deep-aw-primary-check-v1-results",
+  "v1_error_threshold_failures": 1248
+}

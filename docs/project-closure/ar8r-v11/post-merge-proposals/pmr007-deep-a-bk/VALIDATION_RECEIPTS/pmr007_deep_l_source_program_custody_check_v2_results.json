@@ -1,0 +1,56 @@
+{
+  "authority_ceiling": {
+    "ASF": "supplied_English_translation_not_independent_Arabic_primary_verification",
+    "UG_PROGRAM": "owner_research_target_not_source_or_theorem_authority"
+  },
+  "failure_count": 0,
+  "failures": [],
+  "records": [
+    {
+      "bytes": 596386,
+      "id": "ASF",
+      "locators": {
+        "Composition includes command": [
+          124
+        ],
+        "He is the one who spoke it and that He did not create it in other than Him": [
+          141
+        ],
+        "His speech is uncreated": [
+          139,
+          1504
+        ],
+        "Informative speech may be true or false": [
+          124
+        ],
+        "Speech, like other attributes, cannot be held separate from the one it is attributed to": [
+          141
+        ],
+        "The speech of Allah is from Allah, not distinct from Him": [
+          141
+        ]
+      },
+      "role": "TRANSLATED_PRIMARY_ACCESS",
+      "sha256": "932abd7e2d7b3702d5d6d77d2a4a95ecfb3a9ccbcfbbce7ae750b2bcf55bef7c"
+    },
+    {
+      "bytes": 13571,
+      "id": "UG_PROGRAM",
+      "locators": {
+        "UG-T7 \u2014 ARTICULABILITY_TO_MENTALITY_BRIDGE": [
+          314
+        ],
+        "UG-T8 \u2014 ARTICULABILITY_TO_SPEECH_BRIDGE": [
+          318
+        ],
+        "UG-T9 \u2014 CREATED_EXPRESSION_UNCREATED_CONTENT_DISTINCTION": [
+          322
+        ]
+      },
+      "role": "OWNER_PROGRAM_TARGET",
+      "sha256": "1857fed8ed1e7f00255930392d643f734bfb0d9f7fbf21d6b1913892ace856d8"
+    }
+  ],
+  "result": "PASS",
+  "schema": "PMR007_DEEP_L_SOURCE_PROGRAM_CUSTODY_RESULTS_V2"
+}

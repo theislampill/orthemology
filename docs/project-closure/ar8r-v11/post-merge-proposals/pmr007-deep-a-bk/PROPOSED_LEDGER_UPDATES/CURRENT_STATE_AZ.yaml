@@ -1,0 +1,23 @@
+schema: PMR007_CURRENT_STATE_AZ_V1
+campaign: AR8R_POST_MERGE_MENISCUS_PROGRAM_V1
+wave: PMR-007
+repository_authority: 4c3dc103e8c753690fa5de560ab82157392ced4c
+merged_pull_request: 22
+historical_duration: 09:41:25.405101139
+historical_segment: 357
+last_reconciled_post_merge_duration: 00:56:11.268096105
+later_duration: NOT_YET_RECONCILED
+completed_in_block: [DEEP_AQ, DEEP_AR, DEEP_AS, DEEP_AT, DEEP_AU, DEEP_AV, DEEP_AW, DEEP_AX, DEEP_AY, DEEP_AZ]
+last_completed_identity: PMR-007-CSII-1
+current_operation: PACKAGE_AND_PORTFOLIO_RECONCILIATION_THROUGH_DEEP_AZ
+integrated_champion: NONE
+meniscus: MENISCUS_NOT_REACHED
+natural_closure: NOT_REACHED
+owner_decision_required: false
+independent_ready_work_remaining: true
+GitHub_changed: false
+next_central_candidates:
+  - H7a2 constitutive-semanticity bridge beyond gauge rigidity
+  - proper-function/Wisdom discriminator
+  - personal versus impersonal candidate-independent experiment
+  - source reliability and actual-world selection

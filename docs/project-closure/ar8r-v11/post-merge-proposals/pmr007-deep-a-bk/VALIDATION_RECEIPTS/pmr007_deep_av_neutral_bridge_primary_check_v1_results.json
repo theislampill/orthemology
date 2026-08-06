@@ -1,0 +1,71 @@
+{
+  "criterion_failures": 0,
+  "entailed_pairs": 49,
+  "examples": {
+    "inconsistent_source": {
+      "A_table": 0,
+      "C_table": 0,
+      "entails": true,
+      "interpolants": [
+        [
+          0,
+          0
+        ]
+      ]
+    },
+    "multiple_interpolants": {
+      "A_table": 0,
+      "C_table": 3,
+      "S_A": [
+        0,
+        0
+      ],
+      "T_C": [
+        1,
+        0
+      ],
+      "interpolants": [
+        [
+          0,
+          0
+        ],
+        [
+          1,
+          0
+        ]
+      ]
+    },
+    "no_shared_contingent": {
+      "entails": false
+    },
+    "satisfiable_nonunique": {
+      "A_table": 10,
+      "C_table": 15,
+      "S_A": [
+        0,
+        1
+      ],
+      "T_C": [
+        1,
+        1
+      ],
+      "interpolants": [
+        [
+          0,
+          1
+        ],
+        [
+          1,
+          1
+        ]
+      ]
+    }
+  },
+  "multiple_bridge_pairs": 13,
+  "nonentailed_pairs": 207,
+  "overall": "PASS_WITH_V1_NONUNIQUENESS_COUNTEREXAMPLE",
+  "schema": "pmr007-deep-av-primary-check-v1-results",
+  "table_pairs": 256,
+  "unique_bridge_pairs": 36,
+  "v1_uniqueness_failures": 13
+}

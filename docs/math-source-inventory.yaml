@@ -87,7 +87,7 @@ migration:
     original_occurrence: 2
     original_text: M
     replacement: M
-    form: inline
+    form: display
     state: migrated
   - file: manuscript/orthemma-ortheme-systems-revised-draft.md
     original_locus:
@@ -96,7 +96,7 @@ migration:
     original_occurrence: 3
     original_text: O
     replacement: O
-    form: inline
+    form: display
     state: migrated
   - file: manuscript/orthemma-ortheme-systems-revised-draft.md
     original_locus:
@@ -5035,7 +5035,7 @@ migration:
     original_text: V3c(e) ⟺ ∧_{μ̄ ∈ MetaTok(e)} TokenAdequate(μ̄, e)
     replacement: \operatorname{V3c}(e) \Leftrightarrow \wedge_{\bar{\mu} \in \operatorname{MetaTok}(e)}
       \operatorname{TokenAdequate}(\bar{\mu}, e)
-    form: inline
+    form: display
     state: migrated
   - file: theory/orthemic-core-formalization.md
     original_locus:
@@ -5360,7 +5360,7 @@ migration:
       \mu) \wedge \operatorname{Compatible}(\bar{\mu}, A(e)) \wedge \operatorname{Anchored}(\bar{\mu},
       \kappa(e), v(e)) \wedge \operatorname{ScopeCorrect}(\bar{\mu}, \mathcal{Q}(e)) \wedge \operatorname{Current}(\bar{\mu},
       t(e)) \wedge \operatorname{Provenanced}(\bar{\mu}) \wedge \operatorname{AuthorizedBinding}(\bar{\mu})
-    form: inline
+    form: display
     state: migrated
   - file: theory/orthemic-core-formalization.md
     original_locus:

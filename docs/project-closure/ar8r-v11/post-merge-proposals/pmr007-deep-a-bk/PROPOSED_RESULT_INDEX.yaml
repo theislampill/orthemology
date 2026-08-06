@@ -1,0 +1,2090 @@
+schema: AR8R_PMR007_PROPOSED_RESULT_INDEX_V4
+generated_at: '2026-08-06T09:34:01.027086+00:00'
+repository_authority: 4c3dc103e8c753690fa5de560ab82157392ced4c
+results:
+- pmr_identity: PMR-007-MLT-1
+  title: Modal lineage transport and holonomy
+  round: ROUND11
+  provenance_class: ADMITTED_POST_MERGE_SCOPED_RESULT
+  typed_setting: connected inverse-bijection bundles
+  assumptions: See frozen proposed theorem file; all guards are explicit and scope-bound.
+  statement_and_conclusion: based closed-walk holonomy fixes anchor iff coherent anchored section exists; section unique
+  proof_status: HUMAN_PROOF_PLUS_EXECUTABLE_SCOPED_CHECK
+  countermodel_status: EXPLICIT_POSITIVE_AND_NEGATIVE_CONTROLS_PRESENT
+  scope_and_nonclaims: No numerical transworld identity or modal completeness
+  source_and_evidence_owners:
+  - stable evidence identifiers and hashes in validation receipts; private source bytes excluded
+  theorem_family_and_prior_art_disposition: SCOPED_APPLICATION_OR_SPECIALIZATION; GENERAL_NOVELTY_ZERO; EXTERNAL_REVIEW_OPEN
+  cold_audit_status: PASS or PASS_WITH_NONBLOCKING_NOTES after recorded repairs where applicable
+  repair_status: See validation receipts; Round14 V2 repairs blocked V1; R15/R16 V2 repair frozen V1 candidates.
+  fresh_rereview_status: PASS at same-model procedural scope; not external independence
+  external_review_status: OPEN
+  historical_identity_relation: NONE
+  origin_and_novelty_ceiling: NEW_POST_MERGE_SCOPED_RESULT; ZERO_HISTORICAL_AND_GENERAL_NOVELTY_CREDIT
+  dependency_graph:
+  - ROUND11
+  - V5 provenance policy
+  - relevant prior PMR/AR2/AR3 controls
+  repository_readiness_status: EXTERNAL_REVIEW_REQUIRED
+  owner_adoption_status: OWNER_ADOPTION_PENDING
+  exact_blocking_burden: External review, owner identity/adoption decision, bounded repository design and validation.
+- pmr_identity: PMR-007-SMRB-1
+  title: Structure-preserving modal root bundle
+  round: ROUND12
+  provenance_class: ADMITTED_POST_MERGE_SCOPED_RESULT
+  typed_setting: connected bearer/effect bundles with structure isomorphisms and unique underived root role
+  assumptions: See frozen proposed theorem file; all guards are explicit and scope-bound.
+  statement_and_conclusion: unique root role transports to a coherent role section
+  proof_status: HUMAN_PROOF_PLUS_EXECUTABLE_SCOPED_CHECK
+  countermodel_status: EXPLICIT_POSITIVE_AND_NEGATIVE_CONTROLS_PRESENT
+  scope_and_nonclaims: No bearer identity, agency, attributes, or world bridge
+  source_and_evidence_owners:
+  - stable evidence identifiers and hashes in validation receipts; private source bytes excluded
+  theorem_family_and_prior_art_disposition: SCOPED_APPLICATION_OR_SPECIALIZATION; GENERAL_NOVELTY_ZERO; EXTERNAL_REVIEW_OPEN
+  cold_audit_status: PASS or PASS_WITH_NONBLOCKING_NOTES after recorded repairs where applicable
+  repair_status: See validation receipts; Round14 V2 repairs blocked V1; R15/R16 V2 repair frozen V1 candidates.
+  fresh_rereview_status: PASS at same-model procedural scope; not external independence
+  external_review_status: OPEN
+  historical_identity_relation: NONE
+  origin_and_novelty_ceiling: NEW_POST_MERGE_SCOPED_RESULT; ZERO_HISTORICAL_AND_GENERAL_NOVELTY_CREDIT
+  dependency_graph:
+  - ROUND12
+  - V5 provenance policy
+  - relevant prior PMR/AR2/AR3 controls
+  repository_readiness_status: EXTERNAL_REVIEW_REQUIRED
+  owner_adoption_status: OWNER_ADOPTION_PENDING
+  exact_blocking_burden: External review, owner identity/adoption decision, bounded repository design and validation.
+- pmr_identity: PMR-007-FRLA-1
+  title: Fault-robust local agreement and warranted output intersection
+  round: ROUND13
+  provenance_class: ADMITTED_POST_MERGE_SCOPED_RESULT
+  typed_setting: finite one-step deterministic local-view scenarios
+  assumptions: See frozen proposed theorem file; all guards are explicit and scope-bound.
+  statement_and_conclusion: local protocol exists iff each joined correct-view component has nonempty complete-output intersection
+  proof_status: HUMAN_PROOF_PLUS_EXECUTABLE_SCOPED_CHECK
+  countermodel_status: EXPLICIT_POSITIVE_AND_NEGATIVE_CONTROLS_PRESENT
+  scope_and_nonclaims: No general Byzantine agreement or repeated/asynchronous result
+  source_and_evidence_owners:
+  - stable evidence identifiers and hashes in validation receipts; private source bytes excluded
+  theorem_family_and_prior_art_disposition: SCOPED_APPLICATION_OR_SPECIALIZATION; GENERAL_NOVELTY_ZERO; EXTERNAL_REVIEW_OPEN
+  cold_audit_status: PASS or PASS_WITH_NONBLOCKING_NOTES after recorded repairs where applicable
+  repair_status: See validation receipts; Round14 V2 repairs blocked V1; R15/R16 V2 repair frozen V1 candidates.
+  fresh_rereview_status: PASS at same-model procedural scope; not external independence
+  external_review_status: OPEN
+  historical_identity_relation: NONE
+  origin_and_novelty_ceiling: NEW_POST_MERGE_SCOPED_RESULT; ZERO_HISTORICAL_AND_GENERAL_NOVELTY_CREDIT
+  dependency_graph:
+  - ROUND13
+  - V5 provenance policy
+  - relevant prior PMR/AR2/AR3 controls
+  repository_readiness_status: EXTERNAL_REVIEW_REQUIRED
+  owner_adoption_status: OWNER_ADOPTION_PENDING
+  exact_blocking_burden: External review, owner identity/adoption decision, bounded repository design and validation.
+- pmr_identity: PMR-007-COB-1
+  title: Invariant-core entry versus general co-Büchi restoration
+  round: ROUND14_V2
+  provenance_class: ADMITTED_POST_MERGE_SCOPED_RESULT
+  typed_setting: finite perfect-information common-state controller/adversary games
+  assumptions: See frozen proposed theorem file; all guards are explicit and scope-bound.
+  statement_and_conclusion: nested mu-nu fixed point exactly characterizes safe eventual target persistence; W_core subset W_coB can be strict
+  proof_status: HUMAN_PROOF_PLUS_EXECUTABLE_SCOPED_CHECK
+  countermodel_status: EXPLICIT_POSITIVE_AND_NEGATIVE_CONTROLS_PRESENT
+  scope_and_nonclaims: No partial-observation, causal, source, target, or runtime completeness
+  source_and_evidence_owners:
+  - stable evidence identifiers and hashes in validation receipts; private source bytes excluded
+  theorem_family_and_prior_art_disposition: SCOPED_APPLICATION_OR_SPECIALIZATION; GENERAL_NOVELTY_ZERO; EXTERNAL_REVIEW_OPEN
+  cold_audit_status: PASS or PASS_WITH_NONBLOCKING_NOTES after recorded repairs where applicable
+  repair_status: See validation receipts; Round14 V2 repairs blocked V1; R15/R16 V2 repair frozen V1 candidates.
+  fresh_rereview_status: PASS at same-model procedural scope; not external independence
+  external_review_status: OPEN
+  historical_identity_relation: NONE
+  origin_and_novelty_ceiling: NEW_POST_MERGE_SCOPED_RESULT; ZERO_HISTORICAL_AND_GENERAL_NOVELTY_CREDIT
+  dependency_graph:
+  - ROUND14_V2
+  - V5 provenance policy
+  - relevant prior PMR/AR2/AR3 controls
+  repository_readiness_status: EXTERNAL_REVIEW_REQUIRED
+  owner_adoption_status: OWNER_ADOPTION_PENDING
+  exact_blocking_burden: External review, owner identity/adoption decision, bounded repository design and validation.
+- pmr_identity: PMR-007-TRC-1
+  title: DAEE temporal certificate architecture
+  round: ROUND15_V2
+  provenance_class: ADMITTED_POST_MERGE_SCOPED_RESULT
+  typed_setting: finite declared temporal model with canonical digest and complete successors
+  assumptions: See frozen proposed theorem file; all guards are explicit and scope-bound.
+  statement_and_conclusion: model-bound certificates verify core-entry/co-Büchi relative to declared model; current local closure does not identify temporal stability
+  proof_status: HUMAN_PROOF_PLUS_EXECUTABLE_SCOPED_CHECK
+  countermodel_status: EXPLICIT_POSITIVE_AND_NEGATIVE_CONTROLS_PRESENT
+  scope_and_nonclaims: No actual runtime model completeness or causal restoration
+  source_and_evidence_owners:
+  - stable evidence identifiers and hashes in validation receipts; private source bytes excluded
+  theorem_family_and_prior_art_disposition: SCOPED_APPLICATION_OR_SPECIALIZATION; GENERAL_NOVELTY_ZERO; EXTERNAL_REVIEW_OPEN
+  cold_audit_status: PASS or PASS_WITH_NONBLOCKING_NOTES after recorded repairs where applicable
+  repair_status: See validation receipts; Round14 V2 repairs blocked V1; R15/R16 V2 repair frozen V1 candidates.
+  fresh_rereview_status: PASS at same-model procedural scope; not external independence
+  external_review_status: OPEN
+  historical_identity_relation: NONE
+  origin_and_novelty_ceiling: NEW_POST_MERGE_SCOPED_RESULT; ZERO_HISTORICAL_AND_GENERAL_NOVELTY_CREDIT
+  dependency_graph:
+  - ROUND15_V2
+  - V5 provenance policy
+  - relevant prior PMR/AR2/AR3 controls
+  repository_readiness_status: EXTERNAL_REVIEW_REQUIRED
+  owner_adoption_status: OWNER_ADOPTION_PENDING
+  exact_blocking_burden: External review, owner identity/adoption decision, bounded repository design and validation.
+- pmr_identity: PMR-007-VCT-1
+  title: Version-custody transport and temporal eligibility
+  round: ROUND16_V2
+  provenance_class: ADMITTED_POST_MERGE_SCOPED_RESULT
+  typed_setting: finite reason-DAG transport paths and finite action-menu games
+  assumptions: See frozen proposed theorem file; all guards are explicit and scope-bound.
+  statement_and_conclusion: guarded reason/version transport composes; action-menu restriction shrinks temporal winning regions
+  proof_status: HUMAN_PROOF_PLUS_EXECUTABLE_SCOPED_CHECK
+  countermodel_status: EXPLICIT_POSITIVE_AND_NEGATIVE_CONTROLS_PRESENT
+  scope_and_nonclaims: No distributed path discovery, common knowledge, or general novelty
+  source_and_evidence_owners:
+  - stable evidence identifiers and hashes in validation receipts; private source bytes excluded
+  theorem_family_and_prior_art_disposition: SCOPED_APPLICATION_OR_SPECIALIZATION; GENERAL_NOVELTY_ZERO; EXTERNAL_REVIEW_OPEN
+  cold_audit_status: PASS or PASS_WITH_NONBLOCKING_NOTES after recorded repairs where applicable
+  repair_status: See validation receipts; Round14 V2 repairs blocked V1; R15/R16 V2 repair frozen V1 candidates.
+  fresh_rereview_status: PASS at same-model procedural scope; not external independence
+  external_review_status: OPEN
+  historical_identity_relation: NONE
+  origin_and_novelty_ceiling: NEW_POST_MERGE_SCOPED_RESULT; ZERO_HISTORICAL_AND_GENERAL_NOVELTY_CREDIT
+  dependency_graph:
+  - ROUND16_V2
+  - V5 provenance policy
+  - relevant prior PMR/AR2/AR3 controls
+  repository_readiness_status: EXTERNAL_REVIEW_REQUIRED
+  owner_adoption_status: OWNER_ADOPTION_PENDING
+  exact_blocking_burden: External review, owner identity/adoption decision, bounded repository design and validation.
+- pmr_identity: PMR-007-RSD-1
+  title: Role-section descent, common-bearer semantics, and R5 plural-realization boundary
+  round: ROUND17
+  provenance_class: ADMITTED_POST_MERGE_SCOPED_RESULT
+  typed_setting: finite connected transport-invariant bearer subbundles with inverse-bijection transport
+  assumptions: See frozen proposed theorem file; holonomy, no-same-fibre-collapse, and structure guards are explicit.
+  statement_and_conclusion: admissible cross-fibre descent exists iff selected-element holonomy is trivial; canonical lineage quotient does not imply numerical identity
+  proof_status: HUMAN_PROOF_PLUS_SCOPED_EXECUTABLE_CHECKS_REPORTED
+  countermodel_status: PLURAL_COMMON_MODEL_AND_NONIDENTITY_CONTROLS_PRESENT
+  scope_and_nonclaims: No numerical transworld identity, world bridge, unity, mentality, or attributes
+  source_and_evidence_owners:
+  - frozen packet, audit, repair, rereview, admission overlay
+  theorem_family_and_prior_art_disposition: STANDARD_FLAT_BUNDLE_DESCENT_APPLICATION; GENERAL_NOVELTY_ZERO; EXTERNAL_REVIEW_OPEN
+  cold_audit_status: REPAIR_REQUIRED
+  repair_status: BLOCKING_REPAIRS_COMPLETE
+  fresh_rereview_status: PASS_WITH_NONBLOCKING_AUTHORITY_AND_NOVELTY_NOTES
+  external_review_status: OPEN
+  historical_identity_relation: NONE
+  origin_and_novelty_ceiling: NEW_POST_MERGE_SCOPED_RESULT; ZERO_HISTORICAL_AND_GENERAL_NOVELTY_CREDIT
+  dependency_graph:
+  - ROUND11
+  - ROUND12
+  - PMR-M3-01
+  - PMR-M5-02
+  - PMR-R5-01
+  repository_readiness_status: EXTERNAL_REVIEW_REQUIRED
+  owner_adoption_status: OWNER_ADOPTION_PENDING
+  exact_blocking_burden: External review, owner adoption, and repository design/validation.
+- pmr_identity: PMR-007-ORTC-V4
+  title: Complete certificate-object refinement and robust temporal selector
+  round: ROUND18_V4
+  provenance_class: ADMITTED_POST_MERGE_SCOPED_RESULT
+  typed_setting: finite complete-object admissibility relations, encoder/decoder observations, zero-error and fixed adversarial Hamming channels
+  assumptions: Exact finite state/object data; truthful authorized encoding; decoder side observation; model-bound temporal certificate where used.
+  statement_and_conclusion: exact-state selector alphabet equals complete-object support cover; general encoder protocols equal compatible partitions; robust noisy relation selection equals ambiguity-set intersection
+  proof_status: HUMAN_PROOF_PLUS_PRIMARY_AND_DISTINCT_EXECUTABLE_REREVIEW
+  countermodel_status: SURFACE_ACTION_LAUNDERING, LABEL_RECOVERY_OVERSTRENGTH, HISTORY, AND STALE_COMPLETION CONTROLS PRESENT
+  scope_and_nonclaims: No bounded-error/interactive communication, source truth, common knowledge, causal restoration, or historical identity
+  source_and_evidence_owners:
+  - frozen V4 packet, V1/V3 rejected evidence, audits, repair, fresh rereview, prior-art note
+  theorem_family_and_prior_art_disposition: AR2/AR3 STRICT_SPECIALIZATION; WITSENHAUSEN/ORLITSKY-ROCHE ANCESTRY; SET-COVER IDENTITY; GENERAL_NOVELTY_ZERO
+  cold_audit_status: PASS_WITH_NONBLOCKING_AUTHORITY_NOTES
+  repair_status: V1/V3 BLOCKING REPAIRS COMPLETE
+  fresh_rereview_status: PASS_WITH_NONBLOCKING_SCOPE_NOTES
+  external_review_status: OPEN
+  historical_identity_relation: NONE
+  origin_and_novelty_ceiling: NEW_POST_MERGE_SCOPED_RESULT; ZERO_HISTORICAL_AND_GENERAL_NOVELTY_CREDIT
+  dependency_graph:
+  - ROUND13
+  - ROUND14_V2
+  - ROUND15_V2
+  - ROUND16_V2
+  - AR2/AR3
+  repository_readiness_status: EXTERNAL_REVIEW_REQUIRED
+  owner_adoption_status: OWNER_ADOPTION_PENDING
+  exact_blocking_burden: External review, owner adoption, bounded-error/dynamic extensions, and repository design/validation.
+- pmr_identity: PMR-007-PRQT-1
+  title: Provenance-root threshold query complexity
+  round: ROUND19_V2
+  provenance_class: ADMITTED_POST_MERGE_SCOPED_RESULT
+  typed_setting: finite arbitrary canonically labelled partial matchings with deterministic adaptive zero-error edge queries
+  assumptions: Canonical labels are authenticated by assumption and returned at no extra query cost; 1 <= t <= min(m,n); |Lambda| >= t.
+  statement_and_conclusion: D_root(m,n,t;Lambda)=mn-binomial(t,2), with explicit constant boundary cases.
+  proof_status: HUMAN_PROOF_RELATIVE_TO_PRESERVED_CANDIDATE_1_PLUS_PRIMARY_AND_DISTINCT_EXECUTABLE_REREVIEW
+  countermodel_status: SUPPORT_ONLY, SYMBOL_ALIAS/MERGE, ROOT_NONINDEPENDENCE, VERIFICATION_COST, AND RECIPIENT_CONTRACT CONTROLS PRESENT
+  scope_and_nonclaims: No root-authentication, evidential-independence, randomized/quantum/distributed, recipient-warrant, or world-directed theorem.
+  source_and_evidence_owners:
+  - canonical packet, model YAML, V1 audit, V2 repair, primary checks, bounded prior-art note, distinct rereview, overlay and hashes
+  theorem_family_and_prior_art_disposition: TIGHT_ORACLE_ENRICHED_EXTENSION_AND_REDUCTION_OF_CANDIDATE_1; GENERAL_NOVELTY_NOT_ESTABLISHED; EXTERNAL_REVIEW_OPEN
+  cold_audit_status: REPAIR_REQUIRED
+  repair_status: FOUR_BLOCKING_FINDINGS_CLOSED_IN_V2
+  fresh_rereview_status: PASS_WITH_NONBLOCKING_AUTHORITY_AND_NOVELTY_NOTES
+  external_review_status: OPEN
+  historical_identity_relation: NONE
+  origin_and_novelty_ceiling: NEW_POST_MERGE_SCOPED_RESULT; NO_HISTORICAL_IDENTITY; GENERAL_NOVELTY_NOT_ESTABLISHED
+  dependency_graph:
+  - Candidate 1
+  - AR2/AR3 provenance controls
+  - V5 provenance policy
+  repository_readiness_status: EXTERNAL_REVIEW_REQUIRED
+  owner_adoption_status: OWNER_ADOPTION_PENDING
+  exact_blocking_burden: External mathematical/prior-art review, owner adoption, and repository design/validation.
+- pmr_identity: PMR-007-PRRC-1
+  title: Provenance-resilient restorative cutsets
+  round: ROUND20_V2
+  provenance_class: ADMITTED_POST_MERGE_SCOPED_RESULT
+  typed_setting: finite static fixed-path portfolio with authenticated canonical roots and conjunctive dependency semantics
+  assumptions: Complete declared path registry; static one-shot corruption; any corrupted required root disables action; pathwise support rather than joint execution.
+  statement_and_conclusion: Static support robustness through f holds iff the minimum pathwise root-support transversal number kappa exceeds f.
+  proof_status: HUMAN_PROOF_PLUS_PRIMARY_AND_DISTINCT_EXECUTABLE_REREVIEW
+  countermodel_status: COPIED_ROOT, COMMON_BOTTLENECK, INCOMPATIBLE_REPAIR, DYNAMIC_REROUTING, ADAPTIVE_COMMITMENT, ROOT_ALIAS, PARTIAL_REGISTRY, AND POSITIVE CONTROLS PRESENT
+  scope_and_nonclaims: No adaptive/dynamic/joint-execution/root-authentication/path-completeness/source-truth/causal-restoration theorem.
+  source_and_evidence_owners:
+  - T351-T353
+  - daee false-tawatur and warrant objects
+  - Round15
+  - Round19
+  - V2 packet, model, audit, repair, checks, rereview
+  theorem_family_and_prior_art_disposition: STANDARD_HYPERGRAPH_TRANSVERSAL_CHARACTERIZATION; STRICT_SPECIALIZATION_AND_COMPOSITIONAL_COROLLARY; GENERAL_NOVELTY_ZERO
+  cold_audit_status: REPAIR_REQUIRED
+  repair_status: FOUR_BLOCKING_CUSTODY_AND_EXECUTABLE_FINDINGS_CLOSED
+  fresh_rereview_status: PASS_WITH_NONBLOCKING_SCOPE_AND_ANCESTRY_NOTES
+  external_review_status: OPEN
+  historical_identity_relation: NONE
+  origin_and_novelty_ceiling: NEW_POST_MERGE_SCOPED_RESULT; ZERO_GENERAL_MATHEMATICAL_NOVELTY
+  dependency_graph:
+  - AR8R-T351
+  - AR8R-T352
+  - AR8R-T353
+  - Round15
+  - Round19
+  - AR2/AR3
+  - V5 provenance policy
+  repository_readiness_status: EXTERNAL_REVIEW_REQUIRED
+  owner_adoption_status: OWNER_ADOPTION_PENDING
+  exact_blocking_burden: External review, owner adoption, and repository design/validation.
+- pmr_identity: PMR-007-NFG-1
+  title: Norm fixing and proper-function factorization boundary
+  round: DEEP_A
+  provenance_class: ADMITTED_POST_MERGE_SCOPED_RESULT
+  typed_setting: finite deterministic profiles, truth targets, and typed proper-function levels
+  assumptions: Independent truth target; explicit profile; proper-function schema guards separated.
+  statement_and_conclusion: truth-linked correctness factors through a profile iff target is fibre-constant; computational success and corrigibility do not establish proper function or Wisdom
+  proof_status: HUMAN_PROOF_PLUS_PRIMARY_AND_DISTINCT_EXECUTABLE_REREVIEW
+  countermodel_status: HARMFUL_TARGET, SELECTED_DECEPTION, MALICIOUS_DESIGN, FALSE_EQUILIBRIUM, PRIMITIVE_NORM, AND SOURCE-RELATIVE CONTROLS
+  scope_and_nonclaims: No neutral proper-function ground, teleology, Wisdom, designer, or Necessary Being
+  source_and_evidence_owners:
+  - Candidate E exact packet
+  - proper-function baseline
+  - Deep-A packet and checks
+  theorem_family_and_prior_art_disposition: STANDARD_PROFILE_FACTORIZATION_APPLICATION; GENERAL_NOVELTY_ZERO
+  cold_audit_status: PASS_WITH_NONBLOCKING_SCOPE_AND_AUTHORITY_NOTES
+  repair_status: NO_BLOCKING_REPAIR_REQUIRED
+  fresh_rereview_status: PASS
+  external_review_status: OPEN
+  historical_identity_relation: NONE
+  origin_and_novelty_ceiling: NEW_POST_MERGE_SCOPED_RESULT; ZERO_GENERAL_NOVELTY
+  dependency_graph:
+  - Candidate E
+  - AR-T profile/fibre family
+  - Track N source firewall
+  repository_readiness_status: EXTERNAL_REVIEW_REQUIRED
+  owner_adoption_status: OWNER_ADOPTION_PENDING
+  exact_blocking_burden: Neutral norm ground, source truth, teleology, and external review.
+- pmr_identity: PMR-007-DURP-1
+  title: Derivational unification and realization parity
+  round: DEEP_B
+  provenance_class: ADMITTED_POST_MERGE_SCOPED_RESULT
+  typed_setting: finite M/A/S/N/R profile architectures with interventions and matched realization costs
+  assumptions: Declared primitive map, output map, interventions, and matched evidence/cost metrics.
+  statement_and_conclusion: genuine cross-profile restrictions can reduce product-space freedom while personal, impersonal, and distributed realizers remain evidentially isomorphic
+  proof_status: HUMAN_PROOF_PLUS_PRIMARY_AND_DISTINCT_EXECUTABLE_REREVIEW
+  countermodel_status: CARRIER_BOX, IMPERSONAL_FIELD, DISTRIBUTED_COMPUTATION, GERRYMANDERED_UNIFIER, THICK_BRUTE_TOTALITY, AND IDLE_PERSONAL_TAG
+  scope_and_nonclaims: No proof that derivational unity is truth-conducive or that one personal bearer realizes it
+  source_and_evidence_owners:
+  - Candidate G parity theorem
+  - Deep-B packet and checks
+  theorem_family_and_prior_art_disposition: FINITE_FUNCTIONAL_REPRESENTATION_RESULT; GENERAL_NOVELTY_ZERO
+  cold_audit_status: PASS_WITH_NONBLOCKING_NOTES
+  repair_status: NO_BLOCKING_REPAIR_REQUIRED
+  fresh_rereview_status: PASS
+  external_review_status: OPEN
+  historical_identity_relation: NONE
+  origin_and_novelty_ceiling: NEW_POST_MERGE_SCOPED_RESULT; ZERO_GENERAL_NOVELTY
+  dependency_graph:
+  - Candidate G
+  - Deep A
+  - R5 plural realization
+  repository_readiness_status: EXTERNAL_REVIEW_REQUIRED
+  owner_adoption_status: OWNER_ADOPTION_PENDING
+  exact_blocking_burden: Realizer-sensitive evidence, truth-conduciveness, and external review.
+- pmr_identity: PMR-007-ICR-1
+  title: Integrated composite rival and transcendental ascent boundary
+  round: DEEP_C_V2
+  provenance_class: ADMITTED_POST_MERGE_SCOPED_NEGATIVE_RESULT
+  typed_setting: two-world typed model with abstract necessary order and concrete impersonal actualizer
+  assumptions: Explicit ATE, order, actuality, efficacy, norm, unification and articulability predicates; rich personal predicates withheld.
+  statement_and_conclusion: the admitted anti-total-emergence/order/function/unification/articulability package does not entail Creator, unity, mentality, agency, Wisdom, Speech, or revelation
+  proof_status: EXPLICIT_FINITE_COUNTERMODEL_PLUS_DISTINCT_EXECUTABLE_REREVIEW
+  countermodel_status: ONE_STRONG_COMPOSITE_IMPERSONAL_RIVAL
+  scope_and_nonclaims: No claim that the rival is world-true; only formal nonentailment under declared signatures
+  source_and_evidence_owners:
+  - transcendental baseline
+  - Deep A/B
+  - R5
+  - Deep-C V2 model
+  theorem_family_and_prior_art_disposition: MODEL-THEORETIC NONENTAILMENT CONTROL; GENERAL_NOVELTY_ZERO
+  cold_audit_status: REPAIR_REQUIRED
+  repair_status: THREE_BLOCKING_TYPING/EXECUTABLE_FINDINGS_CLOSED_IN_V2
+  fresh_rereview_status: PASS
+  external_review_status: OPEN
+  historical_identity_relation: NONE
+  origin_and_novelty_ceiling: NEW_POST_MERGE SCOPED NEGATIVE; ZERO_GENERAL_NOVELTY
+  dependency_graph:
+  - anti-total-emergence
+  - Deep A
+  - Deep B
+  - R5
+  repository_readiness_status: EXTERNAL_REVIEW_REQUIRED
+  owner_adoption_status: OWNER_ADOPTION_PENDING
+  exact_blocking_burden: Bridges to actuality, Creatorhood, unity, mentality and source truth remain independent.
+- pmr_identity: PMR-007-UGEN-1
+  title: Equivariant articulability nonorigination and mentality/Speech nonbridges
+  round: DEEP_D_V2
+  provenance_class: ADMITTED_POST_MERGE_SCOPED_RESULT
+  typed_setting: finite group actions and typed articulability/mentality/Speech models
+  assumptions: Fully symmetric fixed source and equivariant internal operation for UG-T4 scope.
+  statement_and_conclusion: an equivariant internal operation cannot select a non-fixed output from a fixed symmetric source; articulability does not entail mentality or Speech
+  proof_status: STANDARD_GROUP-ACTION_PROOF_PLUS_PRIMARY_AND_DISTINCT_EXECUTABLE_REREVIEW
+  countermodel_status: ABSTRACT_GRAMMAR, MODAL_PRIMITIVISM, POWERS, DISTRIBUTED, FIXED-POINT, BRUTE_SEMANTIC, KNOWLEDGE-NONAGENCY, AND SPEECH-NONREVELATION CONTROLS
+  scope_and_nonclaims: No total uncreated grammar, one bearer, mentality, divine Speech, or revealed-content theorem
+  source_and_evidence_owners:
+  - uncreated-grammar addendum
+  - Deep-D V2 packet and checks
+  theorem_family_and_prior_art_disposition: STANDARD_EQUIVARIANCE FACT; GENERAL_NOVELTY_ZERO
+  cold_audit_status: REPAIR_REQUIRED
+  repair_status: HARDCODED/NONINDEPENDENT CHECKS REPAIRED IN V2
+  fresh_rereview_status: PASS
+  external_review_status: OPEN
+  historical_identity_relation: NONE
+  origin_and_novelty_ceiling: NEW_POST_MERGE SCOPED RESULT; ZERO_GENERAL_NOVELTY
+  dependency_graph:
+  - UG-T4
+  - UG-T7
+  - UG-T8
+  - UG-T9
+  - Deep B/C
+  repository_readiness_status: EXTERNAL_REVIEW_REQUIRED
+  owner_adoption_status: OWNER_ADOPTION_PENDING
+  exact_blocking_burden: Prior asymmetry source, totality, mentality and Speech bridges.
+- pmr_identity: PMR-007-TNAC-1
+  title: Three-track nonmigration and architecture comparison
+  round: DEEP_E_V2
+  provenance_class: ADMITTED_POST_MERGE_SCOPED_SOURCE_FORMAL_ADJUDICATION
+  typed_setting: M/T/N authority labels and four finite architecture profiles
+  assumptions: Exact translated/secondary source locators; no Arabic-primary promotion; neutral premises held fixed.
+  statement_and_conclusion: Track-N source premises cannot migrate into neutral Track-T entailment without an independent bridge; unified personal architecture is source-compatibility leader but no neutral dominator exists
+  proof_status: FORMAL NONMIGRATION ARGUMENT_PLUS_SOURCE LOCATOR CHECK_PLUS_DISTINCT_REREVIEW
+  countermodel_status: ARCHITECTURES B/C/D SURVIVE NEUTRAL PACKAGE
+  scope_and_nonclaims: No Arabic-primary verification, source-specialist confirmation, neutral champion, or world-directed proof
+  source_and_evidence_owners:
+  - Asfahani translation
+  - El-Tobgui
+  - al-Ujayri
+  - Candidate N map
+  - Deep-E V2 custody files
+  theorem_family_and_prior_art_disposition: AUTHORITY-TYPING AND MODEL-NONENTAILMENT APPLICATION; GENERAL_NOVELTY_ZERO
+  cold_audit_status: REPAIR_REQUIRED
+  repair_status: HASH/LOCATOR/HARDCODING FINDINGS CLOSED IN V2
+  fresh_rereview_status: PASS_WITH_AUTHORITY_CEILING
+  external_review_status: OPEN
+  historical_identity_relation: NONE
+  origin_and_novelty_ceiling: NEW_POST_MERGE SCOPED SOURCE-FORMAL ADJUDICATION; ZERO_GENERAL_NOVELTY
+  dependency_graph:
+  - Track M/T/N
+  - Candidate N
+  - Deep A-D
+  - source-status firewall
+  repository_readiness_status: EXTERNAL_REVIEW_REQUIRED
+  owner_adoption_status: OWNER_ADOPTION_PENDING
+  exact_blocking_burden: Arabic-primary/source-specialist review and independent neutral bridges.
+- pmr_identity: PMR-007-FPF-1
+  title: Fitrah proper-function closure and neutral realization parity
+  round: DEEP_F_V3
+  provenance_class: ADMITTED_POST_MERGE_SCOPED_SOURCE_FORMAL_ADJUDICATION
+  typed_setting: finite operational profiles plus typed Track-N source/design/function/accuracy/warrant coordinates
+  assumptions: source-relative contracts and exact authority ceiling
+  statement_and_conclusion: NFunc, NAcc and NWarr are distinct conditional levels; none factors through the neutral profile; impersonal selected-effect/dispositional realizers survive
+  proof_status: CONTRACT_DECOMPOSITION_PLUS_PROFILE_FIBRE_CHECKS
+  countermodel_status: SEVEN EXPLICIT CONTROLS
+  scope_and_nonclaims: No neutral proper-function ground, source truth, personal designer, Wisdom or Necessary Being
+  source_and_evidence_owners:
+  - El-Tobgui supplied English reconstruction
+  - al-Ujayri supplied English synthesis
+  - Deep-F packet
+  theorem_family_and_prior_art_disposition: DIRECT_PROFILE_FIBRE_APPLICATION; GENERAL_NOVELTY_ZERO
+  cold_audit_status: TWO_BLOCKING_FINDINGS REPAIRED
+  repair_status: V3 CANONICAL
+  fresh_rereview_status: PASS
+  external_review_status: OPEN
+  historical_identity_relation: NONE
+  origin_and_novelty_ceiling: ZERO GENERAL/HISTORICAL CREDIT
+  dependency_graph:
+  - Candidate E
+  - Deep A
+  - Track N
+  repository_readiness_status: EXTERNAL_REVIEW_REQUIRED
+  owner_adoption_status: OWNER_ADOPTION_PENDING
+  exact_blocking_burden: Neutral norm ground, source truth and teleology.
+- pmr_identity: PMR-007-CBA-1
+  title: Attribute ascent and common-bearer integration burden
+  round: DEEP_G_V3
+  provenance_class: ADMITTED_POST_MERGE_SCOPED_SOURCE_FORMAL_RESULT
+  typed_setting: finite attribute/bearer relation systems
+  assumptions: complete eligible-bearer sets; one interpreted target when fixed
+  statement_and_conclusion: common bearer iff total intersection nonempty; local and pairwise realization insufficient; shared d imports unity guard
+  proof_status: ELEMENTARY_SET_INTERSECTION_PLUS_EXHAUSTIVE_CHECKS
+  countermodel_status: DISTRIBUTED, PAIRWISE-NONGLOBAL, ALIAS, CARRIER-BOX AND SPEECH CONTROLS
+  scope_and_nonclaims: No neutral unity, derivational unity, complete attribute or Speech ascent
+  source_and_evidence_owners:
+  - Asfahani translation
+  - PMR-M4/M5 exact packets
+  - Deep-G V3
+  theorem_family_and_prior_art_disposition: ELEMENTARY SET APPLICATION; GENERAL_NOVELTY_ZERO
+  cold_audit_status: CUSTODY_AND_YAML DEFECTS REPAIRED
+  repair_status: V3 CANONICAL
+  fresh_rereview_status: PASS
+  external_review_status: OPEN
+  historical_identity_relation: NONE
+  origin_and_novelty_ceiling: ZERO GENERAL/HISTORICAL CREDIT
+  dependency_graph:
+  - PMR-M4-01
+  - PMR-M5-01/02/03
+  - Candidate G
+  - Track N
+  repository_readiness_status: EXTERNAL_REVIEW_REQUIRED
+  owner_adoption_status: OWNER_ADOPTION_PENDING
+  exact_blocking_burden: Independent unity/identity and derivational-unity bridge.
+- pmr_identity: PMR-007-UAP-1
+  title: Derivational unification, abductive parity, and truth-conduciveness
+  round: DEEP_H
+  provenance_class: ADMITTED_POST_MERGE_SCOPED_FORMAL_RESULT
+  typed_setting: Bayesian rival comparison and matched fit/cost scoring
+  assumptions: positive priors/evidence and equal registered-evidence likelihoods
+  statement_and_conclusion: equal likelihood leaves prior odds unchanged; matched fit/cost ties; personal-realizer preference needs independent discriminator
+  proof_status: STANDARD_BAYES/SCORE IDENTITIES PLUS EXACT CHECKS
+  countermodel_status: IDLE TAG, IMPERSONAL FIELD, DISTRIBUTED COMPILATION, CODING REVERSAL, PRIOR-DRIVEN POSTERIOR
+  scope_and_nonclaims: No required equal priors and no denial of realization-sensitive evidence or invariant complexity
+  source_and_evidence_owners:
+  - Candidate G
+  - Deep B/C/E
+  - Deep-H packet
+  theorem_family_and_prior_art_disposition: STANDARD OBSERVATIONAL EQUIVALENCE; GENERAL_NOVELTY_ZERO
+  cold_audit_status: PASS; ADMISSION METADATA COUNT REPAIRED
+  repair_status: CORRECTED OVERLAY V2
+  fresh_rereview_status: PASS
+  external_review_status: OPEN
+  historical_identity_relation: NONE
+  origin_and_novelty_ceiling: ZERO GENERAL/HISTORICAL CREDIT
+  dependency_graph:
+  - Deep B
+  - Deep C
+  - Deep E
+  - R5
+  repository_readiness_status: EXTERNAL_REVIEW_REQUIRED
+  owner_adoption_status: OWNER_ADOPTION_PENDING
+  exact_blocking_burden: Realization-sensitive evidence or independently defended prior/cost.
+- pmr_identity: PMR-007-OAS-1
+  title: Order–actuality applicability and neutral realizer selection under symmetry
+  round: DEEP_I_V2
+  provenance_class: ADMITTED_POST_MERGE_SCOPED_CENTRAL_BRIDGE_RESULT
+  typed_setting: finite many-sorted structures with applicability, efficacy, and automorphism groups
+  assumptions: declared neutral signature and finite effective-realizer fibre
+  statement_and_conclusion: order does not entail application; application does not entail efficacy; equivariant selection on an isomorphism class exists iff the effective fibre has an automorphism-fixed point
+  proof_status: GROUP_ACTION_PROOF_PLUS_PRIMARY_AND_ARBITRARY_SUBGROUP_CHECKS
+  countermodel_status: SEVEN NEGATIVE CONTROLS AND ONE POSITIVE INVARIANT-RANK WITNESS
+  scope_and_nonclaims: No metaphysical multiplicity, uniform definability, or personal/divine realizer
+  source_and_evidence_owners:
+  - transcendental baseline
+  - Candidate G parity theorem
+  - Deep I V2 packet
+  theorem_family_and_prior_art_disposition: STANDARD GROUP-ACTION APPLICATION; GENERAL NOVELTY ZERO
+  cold_audit_status: REPAIR_REQUIRED; FOUR FINDINGS REPAIRED
+  repair_status: V2 CANONICAL
+  fresh_rereview_status: PASS_WITH_NONBLOCKING_SCOPE_NOTES
+  external_review_status: OPEN
+  historical_identity_relation: NONE
+  origin_and_novelty_ceiling: ZERO GENERAL/HISTORICAL CREDIT
+  dependency_graph:
+  - Deep C
+  - Deep H
+  - Candidate G
+  - Track N
+  repository_readiness_status: EXTERNAL_REVIEW_REQUIRED
+  owner_adoption_status: OWNER_ADOPTION_PENDING
+  exact_blocking_burden: World-level applicability/efficacy and non-idle symmetry breaker.
+- pmr_identity: PMR-007-UCA-1
+  title: Common ancestry and one underived actualizer-lineage root
+  round: DEEP_J_V2
+  provenance_class: ADMITTED_POST_MERGE_SCOPED_CENTRAL_BRIDGE_RESULT
+  typed_setting: finite complete homogeneous actualizer-lineage DAGs
+  assumptions: acyclicity, vertex and relation completeness, same-respect composability
+  statement_and_conclusion: upstream directedness iff exactly one root iff one root reaches every vertex; sufficient actualizer requires additional closure guards
+  proof_status: FINITE_DAG_PROOF_PLUS_ALL_DIGRAPH_AND_RANDOM_DAG_CHECKS
+  countermodel_status: CYCLE, PLURAL ROOT, MERGER, HIDDEN EDGE, EXTERNAL CONTRIBUTOR, DISTRIBUTED ROOT, SEPARATE ORDER, INCOMPLETE CREATOR, IMPERSONAL ROOT
+  scope_and_nonclaims: No complete world graph, simple subject, common order/actuality bearer, Creatorhood, or mentality
+  source_and_evidence_owners:
+  - Candidate G
+  - Deep I
+  - transcendental baseline
+  - Deep J V2 packet
+  theorem_family_and_prior_art_disposition: STANDARD FINITE DAG/DIRECTED POSET APPLICATION; GENERAL NOVELTY ZERO
+  cold_audit_status: REPAIR_REQUIRED; FOUR FINDINGS REPAIRED
+  repair_status: V2 CANONICAL
+  fresh_rereview_status: PASS_WITH_NONBLOCKING_WORLD_APPLICATION_NOTES
+  external_review_status: OPEN
+  historical_identity_relation: NONE
+  origin_and_novelty_ceiling: ZERO GENERAL/HISTORICAL CREDIT
+  dependency_graph:
+  - Deep I
+  - Candidate G
+  - R5
+  repository_readiness_status: EXTERNAL_REVIEW_REQUIRED
+  owner_adoption_status: OWNER_ADOPTION_PENDING
+  exact_blocking_burden: Complete world-level same-respect lineage and sufficient-efficacy guards.
+- pmr_identity: PMR-007-WFB-1
+  title: Proper function, praiseworthy teleology, and Wisdom bridge
+  round: DEEP_K_V2
+  provenance_class: ADMITTED_POST_MERGE_SCOPED_SOURCE_FORMAL_CENTRAL_BRIDGE_RESULT
+  typed_setting: finite guard and bearer systems separating function, truth tracking, fittingness, wise-directed choice, execution, and stable disposition
+  assumptions: declared neutral and Track-N coordinates; bearer attribution and source authority explicit
+  statement_and_conclusion: proper function, reliability, K/W/P availability, and one successful episode do not entail objectively fitting wise-directed choice, one common wise bearer, or stable Wisdom
+  proof_status: TYPED NONENTAILMENT PLUS FINITE COMMON-BEARER CHECKS AND SOURCE CUSTODY
+  countermodel_status: IMPERSONAL TRUTH TRACKER, HARMFUL CORRIGIBILITY, ACCIDENTAL BENEFICENCE, VICIOUS KNOWLEDGEABLE AGENT, DISTRIBUTED GUARDS
+  scope_and_nonclaims: No neutral Wise personal ground, Arabic-primary verification, or reduction of theological Wisdom to the role contract
+  source_and_evidence_owners:
+  - Asfahani translated-primary access
+  - al-Ujayri contemporary Athari synthesis
+  - Deep K V2 packet
+  theorem_family_and_prior_art_disposition: TYPED ROLE-CONTRACT AND COMMON-BEARER APPLICATION; GENERAL NOVELTY ZERO
+  cold_audit_status: REPAIR_REQUIRED; FIVE FINDINGS REPAIRED
+  repair_status: V2 CANONICAL
+  fresh_rereview_status: PASS_WITH_NONBLOCKING_CONCEPT_AND_SOURCE_NOTES
+  external_review_status: OPEN
+  historical_identity_relation: NONE
+  origin_and_novelty_ceiling: ZERO GENERAL/HISTORICAL CREDIT
+  dependency_graph:
+  - Deep F
+  - Deep G
+  - Deep J
+  - Track N
+  repository_readiness_status: EXTERNAL_REVIEW_REQUIRED
+  owner_adoption_status: OWNER_ADOPTION_PENDING
+  exact_blocking_burden: Objective fittingness, stable Wisdom, personal bearer, and source/world truth.
+- pmr_identity: PMR-007-SDL-1
+  title: Articulability, mentality, Speech, created expression, and source-conditioned disclosure
+  round: DEEP_L_V2
+  provenance_class: ADMITTED_POST_MERGE_SCOPED_SOURCE_FORMAL_CENTRAL_BRIDGE_RESULT
+  typed_setting: finite typed bearer/content/episode/token/context relations plus source and custody guards
+  assumptions: created token and source predicates typed separately; Track-N authority ceiling explicit
+  statement_and_conclusion: articulability does not entail mentality; mentality, capacity, occurrence, authorship, source attribute, expression, and revelation are distinct; created-expression/uncreated-speech relation is guarded relay rather than identity
+  proof_status: TYPED NONENTAILMENT PLUS EXHAUSTIVE RELATION/CUSTODY CHECKS
+  countermodel_status: IMPERSONAL ARTICULABILITY, SILENT CAPACITY, QUOTATION, FORGERY, STALE REPLAY, UNAUTHORIZED TOKEN, CREATED CONTENT
+  scope_and_nonclaims: No neutral mentality/Speech bridge, Arabic-primary verification, personal speaking ground, or revelational identification without custody guards
+  source_and_evidence_owners:
+  - Asfahani translated-primary access
+  - UG-T7/UG-T8/UG-T9 owner program
+  - Deep L V2 packet
+  theorem_family_and_prior_art_disposition: TYPE/TOKEN, TRANSLATION, AND REASON-TRANSPORT APPLICATION; GENERAL NOVELTY ZERO
+  cold_audit_status: REPAIR_REQUIRED; SIX FINDINGS REPAIRED
+  repair_status: V2 CANONICAL
+  fresh_rereview_status: PASS_WITH_NONBLOCKING_SOURCE_AND_CONCEPTUALIST_NOTES
+  external_review_status: OPEN
+  historical_identity_relation: NONE
+  origin_and_novelty_ceiling: ZERO GENERAL/HISTORICAL CREDIT
+  dependency_graph:
+  - Deep D
+  - Deep E
+  - PMR-VCT
+  - PMR-ORTC
+  repository_readiness_status: EXTERNAL_REVIEW_REQUIRED
+  owner_adoption_status: OWNER_ADOPTION_PENDING
+  exact_blocking_burden: Articulability-to-mentality, mentality-to-Speech, source truth, and revelational identity.
+- pmr_identity: PMR-007-ETRP-1
+  title: Extensional token responsiveness and personal-realizer parity
+  round: DEEP_M_V2
+  provenance_class: ADMITTED_POST_MERGE_SCOPED_CENTRAL_BRIDGE_NEGATIVE_RESULT
+  typed_setting: finite deterministic boundary transducers and personal/impersonal expansions
+  assumptions: See frozen proposed theorem and model; all scope guards are explicit.
+  statement_and_conclusion: complete frozen boundary profile does not identify personality when intended class admits both
+  proof_status: HUMAN_PROOF_PLUS_EXECUTABLE_SCOPED_CHECKS
+  countermodel_status: EXPLICIT_STRONGEST_READING_AND_GUARD_CONTROLS_PRESENT
+  scope_and_nonclaims: No metaphysical actuality, Bayesian parity, or external review
+  source_and_evidence_owners:
+  - stable evidence identifiers and hashes; private source bytes excluded
+  theorem_family_and_prior_art_disposition: POST_MERGE_SCOPED_RESULT; GENERAL_NOVELTY_ZERO_OR_NOT_ESTABLISHED; EXTERNAL_REVIEW_OPEN
+  cold_audit_status: REPAIR_REQUIRED_THEN_REPAIRED
+  repair_status: BLOCKING_REPAIRS_COMPLETE
+  fresh_rereview_status: PASS_WITH_NONBLOCKING_SCOPE_AND_AUTHORITY_NOTES
+  external_review_status: OPEN
+  historical_identity_relation: NONE
+  origin_and_novelty_ceiling: NEW_POST_MERGE_SCOPED_RESULT; ZERO_HISTORICAL_CREDIT
+  dependency_graph:
+  - Deep A-N
+  - current V11 bridge and rival ledgers
+  - V5 provenance policy
+  repository_readiness_status: EXTERNAL_REVIEW_REQUIRED
+  owner_adoption_status: OWNER_ADOPTION_PENDING
+  exact_blocking_burden: External review, owner adoption, repository design/validation, and world/source bridge truth where applicable.
+- pmr_identity: PMR-007-ANH-1
+  title: Additive norm holonomy and radical correction
+  round: DEEP_N_V2
+  provenance_class: ADMITTED_POST_MERGE_SCOPED_CENTRAL_BRIDGE_RESULT
+  typed_setting: finite static revision graphs with integer edge increments
+  assumptions: See frozen proposed theorem and model; all scope guards are explicit.
+  statement_and_conclusion: zero closed-walk holonomy iff one componentwise additive potential exists
+  proof_status: HUMAN_PROOF_PLUS_EXECUTABLE_SCOPED_CHECKS
+  countermodel_status: EXPLICIT_STRONGEST_READING_AND_GUARD_CONTROLS_PRESENT
+  scope_and_nonclaims: No truth linkage, proper function, fittingness, teleology, or personal norm source
+  source_and_evidence_owners:
+  - stable evidence identifiers and hashes; private source bytes excluded
+  theorem_family_and_prior_art_disposition: POST_MERGE_SCOPED_RESULT; GENERAL_NOVELTY_ZERO_OR_NOT_ESTABLISHED; EXTERNAL_REVIEW_OPEN
+  cold_audit_status: REPAIR_REQUIRED_THEN_REPAIRED
+  repair_status: BLOCKING_REPAIRS_COMPLETE
+  fresh_rereview_status: PASS_WITH_NONBLOCKING_SCOPE_AND_AUTHORITY_NOTES
+  external_review_status: OPEN
+  historical_identity_relation: NONE
+  origin_and_novelty_ceiling: NEW_POST_MERGE_SCOPED_RESULT; ZERO_HISTORICAL_CREDIT
+  dependency_graph:
+  - Deep A-N
+  - current V11 bridge and rival ledgers
+  - V5 provenance policy
+  repository_readiness_status: EXTERNAL_REVIEW_REQUIRED
+  owner_adoption_status: OWNER_ADOPTION_PENDING
+  exact_blocking_burden: External review, owner adoption, repository design/validation, and world/source bridge truth where applicable.
+- pmr_identity: PMR-007-GUPP-1
+  title: Formal derivational coupling and personality parity
+  round: DEEP_O_V2
+  provenance_class: ADMITTED_POST_MERGE_SCOPED_CENTRAL_BRIDGE_RESULT
+  typed_setting: finite nonproduct cross-domain derivation with complete neutral reduct expansions
+  assumptions: See frozen proposed theorem and model; all scope guards are explicit.
+  statement_and_conclusion: formal coupling excludes product profiles but does not entail personality or genuine explanatory unity
+  proof_status: HUMAN_PROOF_PLUS_EXECUTABLE_SCOPED_CHECKS
+  countermodel_status: EXPLICIT_STRONGEST_READING_AND_GUARD_CONTROLS_PRESENT
+  scope_and_nonclaims: No world semantics, source truth, or general novelty
+  source_and_evidence_owners:
+  - stable evidence identifiers and hashes; private source bytes excluded
+  theorem_family_and_prior_art_disposition: POST_MERGE_SCOPED_RESULT; GENERAL_NOVELTY_ZERO_OR_NOT_ESTABLISHED; EXTERNAL_REVIEW_OPEN
+  cold_audit_status: REPAIR_REQUIRED_THEN_REPAIRED
+  repair_status: BLOCKING_REPAIRS_COMPLETE
+  fresh_rereview_status: PASS_WITH_NONBLOCKING_SCOPE_AND_AUTHORITY_NOTES
+  external_review_status: OPEN
+  historical_identity_relation: NONE
+  origin_and_novelty_ceiling: NEW_POST_MERGE_SCOPED_RESULT; ZERO_HISTORICAL_CREDIT
+  dependency_graph:
+  - Deep A-N
+  - current V11 bridge and rival ledgers
+  - V5 provenance policy
+  repository_readiness_status: EXTERNAL_REVIEW_REQUIRED
+  owner_adoption_status: OWNER_ADOPTION_PENDING
+  exact_blocking_burden: External review, owner adoption, repository design/validation, and world/source bridge truth where applicable.
+- pmr_identity: PMR-007-TRPF-1
+  title: Target relabeling and epistemic proper function
+  round: DEEP_P_V2
+  provenance_class: ADMITTED_POST_MERGE_SCOPED_CENTRAL_BRIDGE_NEGATIVE_RESULT
+  typed_setting: finite neutral transducers with aligned/misaligned interpretation expansions
+  assumptions: See frozen proposed theorem and model; all scope guards are explicit.
+  statement_and_conclusion: neutral profile predicates do not identify truth-linked epistemic proper function
+  proof_status: HUMAN_PROOF_PLUS_EXECUTABLE_SCOPED_CHECKS
+  countermodel_status: EXPLICIT_STRONGEST_READING_AND_GUARD_CONTROLS_PRESENT
+  scope_and_nonclaims: No complete proper-function theory or world-level conclusion
+  source_and_evidence_owners:
+  - stable evidence identifiers and hashes; private source bytes excluded
+  theorem_family_and_prior_art_disposition: POST_MERGE_SCOPED_RESULT; GENERAL_NOVELTY_ZERO_OR_NOT_ESTABLISHED; EXTERNAL_REVIEW_OPEN
+  cold_audit_status: REPAIR_REQUIRED_THEN_REPAIRED
+  repair_status: BLOCKING_REPAIRS_COMPLETE
+  fresh_rereview_status: PASS_WITH_NONBLOCKING_SCOPE_AND_AUTHORITY_NOTES
+  external_review_status: OPEN
+  historical_identity_relation: NONE
+  origin_and_novelty_ceiling: NEW_POST_MERGE_SCOPED_RESULT; ZERO_HISTORICAL_CREDIT
+  dependency_graph:
+  - Deep A-N
+  - current V11 bridge and rival ledgers
+  - V5 provenance policy
+  repository_readiness_status: EXTERNAL_REVIEW_REQUIRED
+  owner_adoption_status: OWNER_ADOPTION_PENDING
+  exact_blocking_burden: External review, owner adoption, repository design/validation, and world/source bridge truth where applicable.
+- pmr_identity: PMR-007-FEAG-1
+  title: Finite exact articulability groupoid and impersonal rival
+  round: DEEP_Q_V2
+  provenance_class: ADMITTED_POST_MERGE_SCOPED_CENTRAL_RIVAL_STRENGTHENING_RESULT
+  typed_setting: finite content set with bijective language encodings and exact translations
+  assumptions: See frozen proposed theorem and model; all scope guards are explicit.
+  statement_and_conclusion: translations form a groupoid and transport predicates exactly, without entailing mentality or Speech
+  proof_status: HUMAN_PROOF_PLUS_EXECUTABLE_SCOPED_CHECKS
+  countermodel_status: EXPLICIT_STRONGEST_READING_AND_GUARD_CONTROLS_PRESENT
+  scope_and_nonclaims: No absolute articulability, ultimate ground, or source authority
+  source_and_evidence_owners:
+  - stable evidence identifiers and hashes; private source bytes excluded
+  theorem_family_and_prior_art_disposition: POST_MERGE_SCOPED_RESULT; GENERAL_NOVELTY_ZERO_OR_NOT_ESTABLISHED; EXTERNAL_REVIEW_OPEN
+  cold_audit_status: REPAIR_REQUIRED_THEN_REPAIRED
+  repair_status: BLOCKING_REPAIRS_COMPLETE
+  fresh_rereview_status: PASS_WITH_NONBLOCKING_SCOPE_AND_AUTHORITY_NOTES
+  external_review_status: OPEN
+  historical_identity_relation: NONE
+  origin_and_novelty_ceiling: NEW_POST_MERGE_SCOPED_RESULT; ZERO_HISTORICAL_CREDIT
+  dependency_graph:
+  - Deep A-N
+  - current V11 bridge and rival ledgers
+  - V5 provenance policy
+  repository_readiness_status: EXTERNAL_REVIEW_REQUIRED
+  owner_adoption_status: OWNER_ADOPTION_PENDING
+  exact_blocking_burden: External review, owner adoption, repository design/validation, and world/source bridge truth where applicable.
+- pmr_identity: PMR-007-R5CU-1
+  title: R5 common-model integration control
+  round: DEEP_R_V2
+  provenance_class: ADMITTED_POST_MERGE_SCOPED_CENTRAL_RIVAL_COMMON_MODEL_RESULT
+  typed_setting: finite union model combining current neutral structures and role proxies
+  assumptions: See frozen proposed theorem and model; all scope guards are explicit.
+  statement_and_conclusion: one model satisfies the registered neutral package while withholding personal/source-conditioned conclusions
+  proof_status: HUMAN_PROOF_PLUS_EXECUTABLE_SCOPED_CHECKS
+  countermodel_status: EXPLICIT_STRONGEST_READING_AND_GUARD_CONTROLS_PRESENT
+  scope_and_nonclaims: Finite satisfiability is not metaphysical possibility or actual world truth
+  source_and_evidence_owners:
+  - stable evidence identifiers and hashes; private source bytes excluded
+  theorem_family_and_prior_art_disposition: POST_MERGE_SCOPED_RESULT; GENERAL_NOVELTY_ZERO_OR_NOT_ESTABLISHED; EXTERNAL_REVIEW_OPEN
+  cold_audit_status: REPAIR_REQUIRED_THEN_REPAIRED
+  repair_status: BLOCKING_REPAIRS_COMPLETE
+  fresh_rereview_status: PASS_WITH_NONBLOCKING_SCOPE_AND_AUTHORITY_NOTES
+  external_review_status: OPEN
+  historical_identity_relation: NONE
+  origin_and_novelty_ceiling: NEW_POST_MERGE_SCOPED_RESULT; ZERO_HISTORICAL_CREDIT
+  dependency_graph:
+  - Deep A-N
+  - current V11 bridge and rival ledgers
+  - V5 provenance policy
+  repository_readiness_status: EXTERNAL_REVIEW_REQUIRED
+  owner_adoption_status: OWNER_ADOPTION_PENDING
+  exact_blocking_burden: External review, owner adoption, repository design/validation, and world/source bridge truth where applicable.
+- pmr_identity: PMR-007-SCRF-1
+  title: Source-conditioned rival filter and Track-N nonmigration
+  round: DEEP_S_V2
+  provenance_class: ADMITTED_POST_MERGE_SCOPED_RESULT
+  typed_setting: finite source-expanded architecture class with explicit H12 source-authentication and H16 referent-identification predicates
+  assumptions: Frozen source predicates and rival class; source truth and Arabic-primary verification are not supplied by the theorem.
+  statement_and_conclusion: The source-conditioned filter excludes declared source-incompatible rivals only when H12 and H16 hold; the predicates do not migrate into neutral Track T.
+  proof_status: HUMAN_PROOF_PLUS_EXECUTABLE_SCOPED_CHECK
+  countermodel_status: SOURCE_DELETION_AND_NONMIGRATION_CONTROLS_PRESENT
+  scope_and_nonclaims: No source authentication, Arabic-primary verification, neutral attribute derivation, or world truth.
+  source_and_evidence_owners:
+  - source note and frozen hash-bound packet
+  theorem_family_and_prior_art_disposition: SOURCE_RELATIVE_SPECIALIZATION; GENERAL_NOVELTY_ZERO
+  cold_audit_status: REPAIR_REQUIRED_THEN_REPAIRED
+  repair_status: BLOCKING_REPAIRS_COMPLETE
+  fresh_rereview_status: PASS_WITH_NONBLOCKING_SOURCE_NOTES
+  external_review_status: OPEN
+  historical_identity_relation: NONE
+  origin_and_novelty_ceiling: NEW_POST_MERGE_SCOPED_RESULT; ZERO_GENERAL_NOVELTY
+  dependency_graph:
+  - Deep E
+  - Track N
+  - Asfahani translated-primary access
+  repository_readiness_status: EXTERNAL_REVIEW_REQUIRED
+  owner_adoption_status: OWNER_ADOPTION_PENDING
+  exact_blocking_burden: Arabic-primary/source-specialist review and owner adoption.
+- pmr_identity: PMR-007-MACC-1
+  title: Current-authority architecture reconciliation and nonselection
+  round: DEEP_T_V4
+  provenance_class: INFRASTRUCTURE_OR_CONTROL
+  typed_setting: current merged-main plus Deep O-S authority profile
+  assumptions: Only already admitted coordinates and their provenance ceilings.
+  statement_and_conclusion: Current evidence selects no integrated architecture; the result is a theorem-family reconciliation and audited no-change finding, not a new theorem origin.
+  proof_status: FAMILY_RECONCILIATION_PLUS_EXECUTABLE_PROFILE_CHECK
+  countermodel_status: PERSONAL_IMPERSONAL_PROFILE_PARITY_RETAINED
+  scope_and_nonclaims: No new theorem, neutral source migration, champion, or world verdict.
+  source_and_evidence_owners:
+  - authority and family note
+  - Deep E/S owners
+  theorem_family_and_prior_art_disposition: APPLICATION_OF_DEEP_E_S_AND_FIBRE_FAMILY; NO_NEW_ORIGIN
+  cold_audit_status: REPAIR_REQUIRED
+  repair_status: SCOPE_AND_FAMILY_RECLASSIFICATION_COMPLETE
+  fresh_rereview_status: PASS_WITH_NONBLOCKING_AUTHORITY_NOTES
+  external_review_status: OPEN
+  historical_identity_relation: NONE
+  origin_and_novelty_ceiling: AUDITED_NO_CHANGE; ZERO_NOVELTY
+  dependency_graph:
+  - Deep E
+  - Deep S
+  - FAMILY-FIBRE
+  repository_readiness_status: REPOSITORY_PROPOSAL_READY_AS_RECONCILIATION_ONLY
+  owner_adoption_status: OWNER_ADOPTION_PENDING
+  exact_blocking_burden: Independent review and owner adoption; no champion may be inferred.
+- pmr_identity: PMR-007-TRPD-1
+  title: OSM endpoint, trajectory, and mechanism discrimination
+  round: DEEP_U_V2
+  provenance_class: ADMITTED_POST_MERGE_SCOPED_RESULT
+  typed_setting: bounded seven-instance source-verified OSM/model extraction plus formal mechanism twins
+  assumptions: Source-reported endpoint and ordered trajectory signatures; declared encoding and model family.
+  statement_and_conclusion: Endpoint structure does not decide registered trajectory; endpoint plus trajectory separates the frozen cases but still does not identify a unique mechanism.
+  proof_status: SOURCE_VERIFICATION_PLUS_EXECUTABLE_SCOPED_CHECK
+  countermodel_status: ENDPOINT_TWINS_ENCODING_CONTROLS_AND_MECHANISM_TWINS_PRESENT
+  scope_and_nonclaims: No unique biological mechanism, proper function, mentality, or metaphysical ground.
+  source_and_evidence_owners:
+  - Sun et al. accessible source
+  - OSM verification V2
+  theorem_family_and_prior_art_disposition: PROFILE_REFINEMENT_APPLICATION; GENERAL_NOVELTY_ZERO
+  cold_audit_status: REPAIR_REQUIRED_THEN_REPAIRED
+  repair_status: BLOCKING_REPAIRS_COMPLETE
+  fresh_rereview_status: PASS_WITH_NONBLOCKING_SOURCE_NOTES
+  external_review_status: OPEN
+  historical_identity_relation: NONE
+  origin_and_novelty_ceiling: NEW_POST_MERGE_SCOPED_SOURCE_FORMAL_RESULT; ZERO_GENERAL_NOVELTY
+  dependency_graph:
+  - OSM source verification
+  - Fable B08
+  - profile/fibre family
+  repository_readiness_status: EXTERNAL_REVIEW_REQUIRED
+  owner_adoption_status: OWNER_ADOPTION_PENDING
+  exact_blocking_burden: Raw-data/code reproduction, independent neuroscience review, causal mechanism evidence.
+- pmr_identity: PMR-007-SWPC-1
+  title: Profile/warrant diagnostic product and world firewall
+  round: DEEP_V_V2
+  provenance_class: ADMITTED_POST_MERGE_SCOPED_RESULT
+  typed_setting: finite paired evaluation episodes with profile, root-warrant, and independently supplied world-target coordinates
+  assumptions: Frozen target/profile maps, required and transported roots, explicit authority/version/invalidator guards, supplied world target.
+  statement_and_conclusion: The profile/warrant pair is the coarsest exact joint diagnostic; release is strictly coarser; mixed failures are incomparable; world-target adequacy remains independent.
+  proof_status: HUMAN_PROOF_PLUS_PRIMARY_AND_DISTINCT_EXECUTABLE_CHECKS
+  countermodel_status: ALL_PAIR_AND_TRIPLE_COORDINATE_QUADRANTS_REALIZED
+  scope_and_nonclaims: No full Core B verification, target authority, source truth, world truth, or explanatory common core.
+  source_and_evidence_owners:
+  - Fable typed cores
+  - Deep U
+  - frozen model/check/audit/rereview
+  theorem_family_and_prior_art_disposition: UNIVERSAL_PRODUCT_AND_FIBRE_APPLICATION; SHARED_BILATTICE_MECHANISM_ONLY; NOVELTY_ZERO
+  cold_audit_status: REPAIR_REQUIRED
+  repair_status: TEN_SCOPE_AND_TYPING_REPAIRS_COMPLETE
+  fresh_rereview_status: PASS_WITH_NONBLOCKING_SCOPE_NOTES
+  external_review_status: OPEN
+  historical_identity_relation: NONE
+  origin_and_novelty_ceiling: NEW_POST_MERGE_SCOPED_RESULT; ZERO_GENERAL_NOVELTY
+  dependency_graph:
+  - Core A
+  - Core B
+  - Deep U
+  - FABLE-R1-B06
+  repository_readiness_status: EXTERNAL_REVIEW_REQUIRED
+  owner_adoption_status: OWNER_ADOPTION_PENDING
+  exact_blocking_burden: Common explanatory/generative calculus, target authority, world/source validation, external review.
+- pmr_identity: PMR-007-TIPC-1
+  title: Contract-aligned pullback and target-identity firewall
+  round: DEEP_W_V3
+  provenance_class: ADMITTED_POST_MERGE_SCOPED_RESULT
+  typed_setting: finite valid profile, warrant, and world-bridge objects mapped to one six-field target contract key
+  assumptions: Independently valid component objects and declared target/version/scope/analysis/referent/semantic-contract key.
+  statement_and_conclusion: The full-key pullback is the standard universal compatibility object; every key field is independently load-bearing in the frozen witness class.
+  proof_status: HUMAN_PROOF_PLUS_PRIMARY_AND_DISTINCT_EXECUTABLE_CHECKS
+  countermodel_status: SIX_SINGLE_FIELD_ERASURE_WITNESSES_AND_INVALID_COMPONENT_CONTROLS_PRESENT
+  scope_and_nonclaims: No component validation, key authority, source or world truth, common bearer, subject, or derivational unity.
+  source_and_evidence_owners:
+  - AR3/Version custody
+  - Deep S/T/V
+  - frozen model/check/audit/repair/rereview
+  theorem_family_and_prior_art_disposition: STANDARD_PULLBACK_APPLICATION; GENERAL_NOVELTY_ZERO
+  cold_audit_status: REPAIR_REQUIRED
+  repair_status: V2_REPAIRED_THEN_V3_WITNESS_COMPLETENESS_REPAIR
+  fresh_rereview_status: PASS_WITH_NONBLOCKING_SCOPE_NOTES
+  external_review_status: OPEN
+  historical_identity_relation: NONE
+  origin_and_novelty_ceiling: NEW_POST_MERGE_SCOPED_INTEGRATION_INTERFACE; ZERO_GENERAL_NOVELTY
+  dependency_graph:
+  - AR3 reason transport
+  - PMR-007-VCT-1
+  - Deep S
+  - Deep T
+  - Deep V
+  repository_readiness_status: EXTERNAL_REVIEW_REQUIRED
+  owner_adoption_status: OWNER_ADOPTION_PENDING
+  exact_blocking_burden: Independent target-key authority, source/world verification, common calculus, external review and owner adoption.
+- pmr_identity: PMR-007-TKAA-1
+  title: Target-key authority and radical correction
+  round: DEEP_X
+  provenance_class: ADMITTED_POST_MERGE_SCOPED_RESULT
+  typed_setting: Candidate E authority-source partition under anti-self-authorization and closure guards
+  assumptions: Explicit AA, closure, and authority-source partition assumptions in canonical file
+  statement_and_conclusion: A defeated token closure cannot fully self-authorize its radical correction; authority remains trans-state/type-level, holistic, primitive, or exits objective correction
+  proof_status: HUMAN_PROOF_PLUS_EXECUTABLE_SCOPED_CHECK
+  countermodel_status: PRIMITIVE_IMPERSONAL_NORM_AND_SOURCE-CONDITIONAL_CONTROLS
+  scope_and_nonclaims: No truth linkage, teleology, personality, Wisdom, source truth, or world truth
+  source_and_evidence_owners:
+  - canonical packet, cold audit, repair, rereview, admission overlay
+  theorem_family_and_prior_art_disposition: ANTI_SELF_AUTHORIZATION_APPLICATION; GENERAL_NOVELTY_ZERO
+  cold_audit_status: REPAIR_REQUIRED_THEN_REPAIRED
+  repair_status: BLOCKING_REPAIRS_COMPLETE
+  fresh_rereview_status: PASS_WITH_NONBLOCKING_AUTHORITY_AND_SCOPE_NOTES
+  external_review_status: OPEN
+  historical_identity_relation: NONE
+  origin_and_novelty_ceiling: NEW_POST_MERGE_SCOPED_RESULT; ZERO_GENERAL_NOVELTY
+  dependency_graph:
+  - Candidate E
+  - Deep W
+  - AR4 anti-self-authorization
+  repository_readiness_status: PUBLIC_SAFE_POST_MERGE_PROPOSAL_PENDING_REPOSITORY_AUDIT
+  owner_adoption_status: PENDING
+  exact_blocking_burden: External review, owner adoption, source/world validation.
+- pmr_identity: PMR-007-PFSA-1
+  title: Truth-linked function and semantic-anchor symmetry
+  round: DEEP_Y
+  provenance_class: ADMITTED_POST_MERGE_SCOPED_RESULT
+  typed_setting: finite account-relative reduct and automorphism action on candidate roles
+  assumptions: finite declared reduct; exact truth-linked coordinate supplied externally
+  statement_and_conclusion: Exact truth-linked classification from the reduct exists iff truth linkage is constant on every automorphism orbit
+  proof_status: HUMAN_PROOF_PLUS_EXECUTABLE_SCOPED_CHECK
+  countermodel_status: TRUTH-REVERSING_SYMMETRY_AND_IMPERSONAL_SEMANTIC_ANCHOR_CONTROLS
+  scope_and_nonclaims: No actual semantic anchor, complete proper function, personality, or Wisdom
+  source_and_evidence_owners:
+  - canonical packet, model, check, audit, repair, rereview, source note
+  theorem_family_and_prior_art_disposition: FINITE_INVARIANT_DEFINABILITY_SPECIALIZATION; GENERAL_NOVELTY_ZERO
+  cold_audit_status: REPAIR_REQUIRED_THEN_REPAIRED
+  repair_status: BLOCKING_REPAIRS_COMPLETE
+  fresh_rereview_status: PASS_WITH_NONBLOCKING_AUTHORITY_AND_PROPER_FUNCTION_SCOPE_NOTES
+  external_review_status: OPEN
+  historical_identity_relation: NONE
+  origin_and_novelty_ceiling: NEW_POST_MERGE_SCOPED_RESULT; ZERO_GENERAL_NOVELTY
+  dependency_graph:
+  - Candidate E
+  - Deep X
+  - OSM boundary
+  repository_readiness_status: PUBLIC_SAFE_POST_MERGE_PROPOSAL_PENDING_REPOSITORY_AUDIT
+  owner_adoption_status: PENDING
+  exact_blocking_burden: Independent semantic/world anchor and proper-function bridge.
+- pmr_identity: PMR-007-COWC-1
+  title: Common orthing core and nonreduction
+  round: DEEP_Z
+  provenance_class: ADMITTED_POST_MERGE_SCOPED_RESULT
+  typed_setting: joint fibre of six independently valid typed coordinates
+  assumptions: nonempty joint fibre over one full target key
+  statement_and_conclusion: A common typed product/pullback object exists; complete six-coordinate diagnosis needs 64 labels under full attainment, while binary release is diagnostically lossy
+  proof_status: HUMAN_PROOF_PLUS_EXECUTABLE_SCOPED_CHECK
+  countermodel_status: COORDINATE_DELETION_AND_BINARY_RELEASE_COLLISION_CONTROLS
+  scope_and_nonclaims: Structural composition only; no reductive or explanatory common calculus, bearer, subject, proper function, or Wisdom
+  source_and_evidence_owners:
+  - canonical packet, model, check, audit, repair, rereview, ancestry note
+  theorem_family_and_prior_art_disposition: PRODUCT_PULLBACK_COMPOSITION; GENERAL_NOVELTY_ZERO
+  cold_audit_status: REPAIR_REQUIRED_THEN_REPAIRED
+  repair_status: BLOCKING_REPAIRS_COMPLETE
+  fresh_rereview_status: PASS_WITH_NONBLOCKING_COMPOSITIONALITY_AND_SCOPE_NOTES
+  external_review_status: OPEN
+  historical_identity_relation: NONE
+  origin_and_novelty_ceiling: NEW_POST_MERGE_SCOPED_RESULT; ZERO_GENERAL_NOVELTY
+  dependency_graph:
+  - Fable Core A
+  - Fable Core B
+  - Deep X
+  - Deep Y
+  repository_readiness_status: PUBLIC_SAFE_POST_MERGE_PROPOSAL_PENDING_REPOSITORY_AUDIT
+  owner_adoption_status: PENDING
+  exact_blocking_burden: Reductive/explanatory common-calculus burden remains open.
+- pmr_identity: PMR-007-CGIP-1
+  title: Causal score guidance and intentional-purpose parity
+  round: DEEP_AA
+  provenance_class: ADMITTED_POST_MERGE_SCOPED_RESULT
+  typed_setting: finite deterministic Boolean SCM with complete neutral observation/intervention reduct and intended personal/impersonal expansions
+  assumptions: frozen SCM correctness; carried authority/semantic/world/norm guards; intended class contains both inert expansions
+  statement_and_conclusion: Score guides action iff f_A is nonconstant; complete neutral causal evidence does not entail intentional uptake, first-person ownership, personality, because-of-fittingness, or Wisdom; observational fit does not certify the causal edge outside the SCM
+  proof_status: HUMAN_PROOF_PLUS_COMPLETE_PRIMARY_ENUMERATION_AND_DISTINCT_RELATIONAL_REREVIEW
+  countermodel_status: FALSE_TARGET, NO_GUIDANCE, IMPERSONAL_TWIN, HIDDEN_CONFOUNDER, SOURCE-CONDITIONAL_CONTROLS
+  scope_and_nonclaims: No empirical causal certification, metaphysical/Bayesian parity, source transfer, personality, Wisdom, Necessary Being, Creator, or meniscus
+  source_and_evidence_owners:
+  - V3 theorem, typed model, primary checker, distinct checker, audits, repair, rereview, OSM/source note
+  theorem_family_and_prior_art_disposition: STANDARD_SCM_FACT_PLUS_STRENGTHENED_CENTRAL_PARITY_APPLICATION; GENERAL_NOVELTY_ZERO
+  cold_audit_status: REPAIR_REQUIRED_THEN_REPAIRED
+  repair_status: ALL_SCOPE_AND_CUSTODY_BLOCKERS_REPAIRED_IN_V3
+  fresh_rereview_status: PASS_WITH_NONBLOCKING_CAUSAL_MODEL_AND_PERSONALITY_SCOPE_NOTES
+  external_review_status: OPEN
+  historical_identity_relation: NONE
+  origin_and_novelty_ceiling: NEW_POST_MERGE_SCOPED_RESULT; ZERO_GENERAL_NOVELTY
+  dependency_graph:
+  - Deep M
+  - Deep X
+  - Deep Y
+  - Deep Z
+  - OSM crosswalk
+  repository_readiness_status: PUBLIC_SAFE_POST_MERGE_PROPOSAL_PENDING_REPOSITORY_AUDIT
+  owner_adoption_status: PENDING
+  exact_blocking_burden: Independent evidence for intentional uptake, first-person ownership, selection because of fittingness, or source-relative personality/Wisdom.
+- pmr_identity: PMR-007-FSPW-1
+  title: Fittingness-sensitive policy, because-of selection, and Wisdom parity
+  round: DEEP_AB
+  provenance_class: ADMITTED_POST_MERGE_SCOPED_RESULT
+  typed_setting: finite registered fittingness/admissibility relations and deterministic profile-aware/blind policies
+  assumptions: finite declared classes; exact H relation; frozen SCM for profile interventions; intended class contains personal and impersonal expansions
+  statement_and_conclusion: Aware and blind selector criteria are exact; complete fittingness conformity and profile-input sensitivity do not entail intentional because-of, first-person ownership, personality, or Wisdom
+  proof_status: HUMAN_PROOF_PLUS_EXHAUSTIVE_PRIMARY_AND_DISTINCT_ALL_SELECTOR_CONSTRAINT_REREVIEW
+  countermodel_status: IMPERSONAL_ARGMAX, FALSE_AUTHORITY, REGISTRY, HISTORY, DISTRIBUTED, SOURCE_CONDITIONAL CONTROLS
+  scope_and_nonclaims: No objective fittingness authentication, source/world truth, personality, Wisdom, Necessary Being, Creator, champion, or meniscus
+  source_and_evidence_owners:
+  - V2 theorem/model/checks/audit/repair/rereview/source note
+  theorem_family_and_prior_art_disposition: ELEMENTARY_SELECTOR_FACT_PLUS_DEEP_K_AA_APPLICATION; GENERAL_NOVELTY_ZERO
+  cold_audit_status: REPAIR_REQUIRED_THEN_REPAIRED
+  repair_status: ALL_8_BLOCKERS_REPAIRED
+  fresh_rereview_status: PASS_WITH_NONBLOCKING_FITTINGNESS_AUTHORITY_AND_PERSONALITY_SCOPE_NOTES
+  external_review_status: OPEN
+  historical_identity_relation: NONE
+  origin_and_novelty_ceiling: NEW_POST_MERGE_SCOPED_RESULT; ZERO_GENERAL_NOVELTY
+  dependency_graph:
+  - Deep K
+  - Deep AA
+  - Candidate G
+  - Round 18
+  repository_readiness_status: PUBLIC_SAFE_POST_MERGE_PROPOSAL_PENDING_REPOSITORY_AUDIT
+  owner_adoption_status: PENDING
+  exact_blocking_burden: Independent evidence for intentional uptake, because-of fittingness, one subject, and stable Wisdom.
+- pmr_identity: PMR-007-SRVN-1
+  title: Equivariant specification resources and the volition nonbridge
+  round: DEEP_AC
+  provenance_class: ADMITTED_POST_MERGE_SCOPED_RESULT
+  typed_setting: finite deterministic G-equivariant resource-to-alternative selectors
+  assumptions: finite G-sets; deterministic equivariance; fixed-point guard; T255 world guards excluded from formal checker
+  statement_and_conclusion: A globally invariant resource cannot equivariantly select a nonfixed alternative; specification requires accounted asymmetry but accounted asymmetry does not entail personal volition
+  proof_status: DIRECT_T254_SPECIALIZATION_PLUS_PRIMARY_SYMMETRIC_GROUP_AND_DISTINCT_ORBIT_STABILIZER_REREVIEW
+  countermodel_status: BRUTE_PARAMETER, BOUNDARY, POWERS, SEED, MULTIVALUED, PLURAL, NONEQUIVARIANT, INCOMPLETE_RESOURCE, OVERDETERMINATION CONTROLS
+  scope_and_nonclaims: No world correspondence, resource completeness, volition, personality, Wisdom, Necessary Being, Creator, champion, or meniscus
+  source_and_evidence_owners:
+  - T254/T255 V5 registry
+  - bounded ancestry receipt
+  - Asfahani translated-primary access
+  - V2 theorem/model/checks/audit/repair/rereview
+  theorem_family_and_prior_art_disposition: DIRECT_APPLICATION_OF_AR8R_T254_T255; ZERO_NEW_GENERAL_NOVELTY
+  cold_audit_status: REPAIR_REQUIRED_THEN_REPAIRED
+  repair_status: ALL_10_BLOCKERS_REPAIRED
+  fresh_rereview_status: PASS_WITH_NONBLOCKING_T254_ANCESTRY_AND_WORLD_BRIDGE_NOTES
+  external_review_status: OPEN
+  historical_identity_relation: NONE
+  origin_and_novelty_ceiling: POST_MERGE_SOURCE_FORMAL_APPLICATION; ZERO_GENERAL_NOVELTY
+  dependency_graph:
+  - AR8R-T254
+  - AR8R-T255
+  - Candidate G
+  - Track N
+  repository_readiness_status: PUBLIC_SAFE_POST_MERGE_PROPOSAL_PENDING_REPOSITORY_AUDIT
+  owner_adoption_status: PENDING
+  exact_blocking_burden: Independent bridge from ultimate asymmetry source to subject, alternative representation, intention, and volition.
+- pmr_identity: PMR-007-RSMF-1
+  title: Registered reason-variable mediation and the subjecthood firewall
+  round: DEEP_AD
+  provenance_class: ADMITTED_POST_MERGE_SCOPED_RESULT
+  typed_setting: finite registered semantic reason variables, nuisance proxies, admissibility relation, deterministic policy, and frozen interventions
+  assumptions: finite complete tables; fixed policy and history scope; semantic, authority, truth, world, and source guards carried separately; intended class contains personal and impersonal expansions
+  statement_and_conclusion: Proxy invariance is exact fibre factorization; guarded reason-variable mediation is a system-level operational criterion; the complete neutral mediation reduct does not entail subjective uptake, because-of fittingness, first-person ownership, personality, or Wisdom
+  proof_status: HUMAN_PROOF_PLUS_PRIMARY_FINITE_ENUMERATION_AND_DISTINCT_PARTITION_SCM_REREVIEW
+  countermodel_status: PROXY_FAILURE, FALSE_SEMANTICS, CONFOUNDED_INTERVENTION, HISTORY, POLICY, PERSONAL_IMPERSONAL_TWIN, SOURCE_CONDITIONAL CONTROLS
+  scope_and_nonclaims: No actual semantic anchor, observational causal identification, subjective uptake, OSM/PRH/daee transfer, personality, Wisdom, Creator, champion, or meniscus
+  source_and_evidence_owners:
+  - V2 theorem/model/checks/audit/repair/rereview and implementation note
+  theorem_family_and_prior_art_disposition: DIRECT_T366_FIBRE_APPLICATION_PLUS_CENTRAL_COMPOSITION; GENERAL_NOVELTY_ZERO
+  cold_audit_status: REPAIR_REQUIRED_THEN_REPAIRED
+  repair_status: ALL_10_BLOCKERS_REPAIRED
+  fresh_rereview_status: PASS_WITH_NONBLOCKING_SEMANTIC_AND_CAUSAL_CORRESPONDENCE_NOTES
+  external_review_status: OPEN
+  historical_identity_relation: NONE
+  origin_and_novelty_ceiling: NEW_POST_MERGE_SCOPED_RESULT; ZERO_GENERAL_NOVELTY
+  dependency_graph:
+  - T366 fibre family
+  - Deep Y
+  - Deep AA
+  - Deep AB
+  repository_readiness_status: PUBLIC_SAFE_POST_MERGE_PROPOSAL_PENDING_REPOSITORY_AUDIT
+  owner_adoption_status: PENDING
+  exact_blocking_burden: Subject-level motivating uptake and actual semantic/intervention correspondence.
+- pmr_identity: PMR-007-IHDU-1
+  title: Interaction hypergraphs and additive derivational unity
+  round: DEEP_AE
+  provenance_class: ADMITTED_POST_MERGE_SCOPED_RESULT
+  typed_setting: finite independently typed Boolean coordinate registry and finite complete family of real-valued functions with multilinear Mobius expansions
+  assumptions: COORD_VALID; FAMILY_COMPLETE; RESOURCE_COMPLETE; TABLE_IDENTIFIED; SCOPE_FIXED
+  statement_and_conclusion: A function family is additive over a partition exactly when every nonzero Mobius support is block-contained; interaction-graph components are the finest additive modules; b_add=1 excludes fully independent additive plural models but not impersonal connected, coupled-plural, distributed, latent, or personal realizers
+  proof_status: HUMAN_PROOF_PLUS_PRIMARY_MOBIUS_ENUMERATION_AND_DISTINCT_RECTANGULAR_IDENTITY_REREVIEW
+  countermodel_status: ONE_CARRIER_PRODUCT, IMPERSONAL_CONNECTED_LAW, DISTRIBUTED_NONSEPARABLE, HIDDEN_LATENT, COORDINATE_GERRYMANDERING, ARBITRARY_COUPLING, OBSERVATIONAL, FAMILY_INCOMPLETE, SOURCE_CONDITIONAL CONTROLS
+  scope_and_nonclaims: No semantic or causal coordinate validation, complete explanatory unity, one bearer, one subject, personality, Wisdom, Creator, source/world truth, champion, or meniscus
+  source_and_evidence_owners:
+  - Candidate G exact merged source
+  - V2 theorem/model/checks/audit/repair/rereview/ancestry note
+  theorem_family_and_prior_art_disposition: STRICT_SCOPED_APPLICATION_OF_CANDIDATE_G; STANDARD_MOBIUS_ANOVA_APPLICATION; GENERAL_NOVELTY_ZERO
+  cold_audit_status: REPAIR_REQUIRED_THEN_REPAIRED
+  repair_status: ALL_10_BLOCKERS_REPAIRED
+  fresh_rereview_status: PASS_WITH_NONBLOCKING_COORDINATE_AND_EXPLANATORY_SCOPE_NOTES
+  external_review_status: OPEN
+  historical_identity_relation: NONE
+  origin_and_novelty_ceiling: POST_MERGE_CENTRAL_APPLICATION; ZERO_GENERAL_NOVELTY
+  dependency_graph:
+  - Candidate G
+  - Candidate E
+  - R5 rivals
+  - Deep AD
+  repository_readiness_status: PUBLIC_SAFE_POST_MERGE_PROPOSAL_PENDING_REPOSITORY_AUDIT
+  owner_adoption_status: PENDING
+  exact_blocking_burden: Matched-cost discriminator between personal, impersonal-connected, coupled-plural, and latent realizers.
+- pmr_identity: PMR-007-NRID-1
+  title: Neutral-reduct implicit definability and the personal-ground frontier
+  round: DEEP_AF
+  provenance_class: ADMITTED_POST_MERGE_SCOPED_RESULT
+  typed_setting: declared neutral vocabulary L0, expanded predicate P, and intended class of expansions
+  assumptions: complete independently eligible reduct; intended class stated; exact entailment distinct from abduction; logic and source scope typed
+  statement_and_conclusion: Same-reduct target variation blocks every exact reduct-only classifier; finite attained recovery is fibre constancy; ordinary first-order implicit definition connects to explicit definition only under classical Beth scope
+  proof_status: HUMAN_PROOF_PLUS_EXHAUSTIVE_FIBRE_CHECK_AND_DISTINCT_RELATIONAL_ISOMORPHISM_REREVIEW
+  countermodel_status: SAME-REDUCT TWIN, IDLE CARRIER, SOURCE EXPANSION, SMUGGLED PROXY, OBSERVATIONAL, PROBABILISTIC, FINITE-BETH, MODAL CONTROLS
+  scope_and_nonclaims: No finite/modal Beth transfer, metaphysical possibility, probability parity, source truth, personal architecture refutation, Creator, champion, or meniscus
+  source_and_evidence_owners:
+  - V2 theorem/model/checks/audit/repair/rereview/family note
+  theorem_family_and_prior_art_disposition: DIRECT_FIBRE_APPLICATION_PLUS_GUARDED_CLASSICAL_BETH_FRONTIER; CONSOLIDATES_DEEP_M_O_T_AA_AB_AD_AE; GENERAL_NOVELTY_ZERO
+  cold_audit_status: REPAIR_REQUIRED_THEN_REPAIRED
+  repair_status: ALL_10_BLOCKERS_REPAIRED
+  fresh_rereview_status: PASS_WITH_NONBLOCKING_LOGIC_CLASS_AND_METAPHYSICAL_SCOPE_NOTES
+  external_review_status: OPEN
+  historical_identity_relation: NONE
+  origin_and_novelty_ceiling: POST_MERGE_THEOREM_FAMILY_CONSOLIDATION; ZERO_GENERAL_NOVELTY
+  dependency_graph:
+  - T366/fibre family
+  - Candidate G
+  - Deep M/O/T/AA/AB/AD/AE
+  repository_readiness_status: PUBLIC_SAFE_POST_MERGE_PROPOSAL_PENDING_REPOSITORY_AUDIT
+  owner_adoption_status: PENDING
+  exact_blocking_burden: Independently eligible subject-level evidence or non-question-begging intended-class restriction.
+- pmr_identity: PMR-007-R5NR-1
+  title: Strengthened R5 neutral common model through Deep AE
+  round: DEEP_AG
+  provenance_class: ADMITTED_POST_MERGE_SCOPED_RESULT
+  typed_setting: finite selected neutral union U_AE* with state cube, registered admissibility table, norm potential, nonseparable interaction law, role proxies, and conservative expansions
+  assumptions: carried order/actuality/authority/semantic/world premises; fixed complete tables; Deep AE guards; source track separated
+  statement_and_conclusion: All latest selected neutral coordinates are jointly satisfiable in an impersonal connected-law model with plural W/P/K proxies and a personal conservative twin; personal/Wisdom/Speech conclusions are not entailed at the declared formal scope
+  proof_status: EXPLICIT_FINITE_MODEL_PLUS_PRIMARY_TABLE_CHECK_AND_DISTINCT_EXHAUSTIVE_CONSTRAINT_SEARCH
+  countermodel_status: CARRIED-PREMISE, FALSE-SEMANTIC, ADDITIVE-DELETION, HIDDEN-LATENT, ROLE-DISTRIBUTION, SOURCE-EXPANSION, IMPLEMENTATION CONTROLS
+  scope_and_nonclaims: No derivation of carried premises, metaphysical possibility, genuine reasons, Divine attributes, personal architecture falsity, Creator, champion, or meniscus
+  source_and_evidence_owners:
+  - V2 theorem/model/checks/audit/repair/rereview/ancestry note
+  theorem_family_and_prior_art_disposition: STRICT_STRENGTHENING_OF_DEEP_R_COMMON_MODEL; COMPOSITIONAL_APPLICATION; GENERAL_NOVELTY_ZERO
+  cold_audit_status: REPAIR_REQUIRED_THEN_REPAIRED
+  repair_status: ALL_12_BLOCKERS_REPAIRED
+  fresh_rereview_status: PASS_WITH_NONBLOCKING_CARRIED_PREMISE_AND_METAPHYSICAL_SCOPE_NOTES
+  external_review_status: OPEN
+  historical_identity_relation: NONE
+  origin_and_novelty_ceiling: POST_MERGE_CENTRAL_RIVAL_STRENGTHENING; ZERO_GENERAL_NOVELTY
+  dependency_graph:
+  - Deep R
+  - Deep X-AE
+  - Deep AF
+  repository_readiness_status: PUBLIC_SAFE_POST_MERGE_PROPOSAL_PENDING_REPOSITORY_AUDIT
+  owner_adoption_status: PENDING
+  exact_blocking_burden: New target-separating evidence or source/world bridge not shared by U_AE* twins.
+- pmr_identity: PMR-007-SDIG-1
+  title: Source-derivation integration, textual co-reference, and common-bearer nontransfer
+  round: DEEP_AH
+  provenance_class: ADMITTED_POST_MERGE_SCOPED_RESULT
+  typed_setting: selected translated-source dependency graph with separately typed source/formal/world coordinates and bearer assignments
+  assumptions: selected node/support registry; predicate-level relation semantics; source co-reference treated separately; translation/source/world guards explicit
+  statement_and_conclusion: The selected Track-N support graph is connected and nonflat, but connectedness does not entail one bearer. Accepted textual co-reference excludes plural assignments only source-relatively and does not migrate into neutral Track T.
+  proof_status: HUMAN_SOURCE_FORMAL_PROOF_PLUS_EXHAUSTIVE_PARTITION_AND_DISTINCT_INCIDENCE_REREVIEW
+  countermodel_status: DISTRIBUTED SOURCE SHAPE, CARRIER BOXING, IMPERSONAL GRAPH REALIZER, SOURCE-COORDINATE DELETIONS, EXACT UNITY-PROOF FAILURE, SPEECH NONTRANSFER, QIYAS DELETION
+  scope_and_nonclaims: No Arabic-primary verification, neutral unity theorem, world truth, personality, Wisdom, divine Speech, Creator, champion, or meniscus
+  source_and_evidence_owners:
+  - Asfahani translation hash
+  - V2 theorem/model/checks/audit/repair/rereview/source note
+  theorem_family_and_prior_art_disposition: SOURCE_RELATIVE_APPLICATION; SHARED_CONNECTED_SUPPORT_MECHANISM; GENERAL_NOVELTY_ZERO
+  cold_audit_status: REPAIR_REQUIRED_THEN_REPAIRED
+  repair_status: ALL_12_BLOCKERS_REPAIRED_PLUS_REREVIEW_CUSTODY_REPAIR
+  fresh_rereview_status: PASS_WITH_NONBLOCKING_SOURCE_AUTHORITY_AND_REPRESENTATION_SCOPE_NOTES
+  external_review_status: OPEN
+  historical_identity_relation: NONE
+  origin_and_novelty_ceiling: POST_MERGE_SOURCE_FORMAL_ADJUDICATION; ZERO_GENERAL_NOVELTY
+  dependency_graph:
+  - Candidate N
+  - Candidate G
+  - Deep AE
+  - Deep AG
+  - source custody family
+  repository_readiness_status: PUBLIC_SAFE_POST_MERGE_PROPOSAL_PENDING_REPOSITORY_AUDIT
+  owner_adoption_status: PENDING
+  exact_blocking_burden: Arabic/source verification and independent neutral source-to-world/common-bearer bridge.
+- pmr_identity: PMR-007-NMIB-1
+  title: Notional representation, mental hosting, and the intellect-ground bridge
+  round: DEEP_AI
+  provenance_class: ADMITTED_POST_MERGE_SCOPED_RESULT
+  typed_setting: structural order, notional representation, mental host, constitutive ground, underivability, uniqueness, and personal-subject predicates
+  assumptions: source-reconstructed NM-HOST plus optional H7a intrinsic notionality, H7b constitutive hosting, H7c underivability transfer, H7d unique constitutive host
+  statement_and_conclusion: NM-HOST yields some mental host for a notional representation. Underived structural order does not yield an intellectual ground without H7a-H7d; even the full conditional does not entail personality, agency, or Wisdom.
+  proof_status: HUMAN_BRIDGE_DECOMPOSITION_PLUS_TWO_HOST_EXHAUSTIVE_CHECK_AND_THREE_HOST_SYMBOLIC_SAT_REREVIEW
+  countermodel_status: IMPERSONAL STRUCTURE, DOWNSTREAM ABSTRACTION, UNDERIVABILITY NONTRANSFER, MULTIPLE HOSTS/REPRESENTERS, IMPERSONAL INTELLECT ROLE, SOURCE NONMIGRATION
+  scope_and_nonclaims: No proof of H7a-H7d, source/world truth, unique mind simpliciter, personality, agency, Wisdom, Speech, Creator, champion, or meniscus
+  source_and_evidence_owners:
+  - Asfahani translation hash
+  - El-Tobgui secondary snapshot hash
+  - V2 theorem/model/checks/audit/repair/rereview/source note
+  theorem_family_and_prior_art_disposition: DIRECT H7 BRIDGE DECOMPOSITION; SOURCE-FORMAL APPLICATION; GENERAL_NOVELTY_ZERO
+  cold_audit_status: REPAIR_REQUIRED_THEN_REPAIRED
+  repair_status: ALL_12_BLOCKERS_REPAIRED
+  fresh_rereview_status: PASS_WITH_NONBLOCKING_SOURCE_RECONSTRUCTION_AND_H7_PREMISE_NOTES
+  external_review_status: OPEN
+  historical_identity_relation: NONE
+  origin_and_novelty_ceiling: POST_MERGE_CENTRAL_BRIDGE_DECOMPOSITION; ZERO_GENERAL_NOVELTY
+  dependency_graph:
+  - B7/H7
+  - Deep D/L/M/AF/AG/AH
+  - mental/external source ontology
+  repository_readiness_status: PUBLIC_SAFE_POST_MERGE_PROPOSAL_PENDING_REPOSITORY_AUDIT
+  owner_adoption_status: PENDING
+  exact_blocking_burden: Establish or refute H7a-H7d independently and then test H8 personality/agency.
+- pmr_identity: PMR-007-CIOB-1
+  title: Centered ownership, de se symmetry, and the intellect-to-personality bridge
+  round: DEEP_AJ
+  provenance_class: ADMITTED_POST_MERGE_SCOPED_RESULT
+  typed_setting: finite neutral episode reduct, automorphism group, candidate centers, de se/ownership/personality targets
+  assumptions: complete declared neutral reduct; isomorphism-invariant selector; H8a-H8f separated and not assumed proved
+  statement_and_conclusion: Invariant center sets are unions of neutral automorphism orbits. Transitive symmetry blocks a unique neutral center; a fixed structural host does not entail de se ownership or personality.
+  proof_status: HUMAN_PROOF_PLUS_16,384_STRUCTURE_PRIMARY_ENUMERATION_AND_DISTINCT_NETWORKX_AUTOMORPHISM_REREVIEW
+  countermodel_status: SYMMETRIC TWINS, UNIQUE IMPERSONAL CONTROLLER, THIRD-PERSON SELF MODEL, DISTRIBUTED EPISODE, TOKEN-RESPONSIVE NONAGENT, EPISODE SWAP, SOURCE NONMIGRATION
+  scope_and_nonclaims: No H8a-H8f proof, consciousness, metaphysical personal identity, agency, Wisdom, Speech, source/world truth, champion, or meniscus
+  source_and_evidence_owners:
+  - Asfahani translated-primary source hash
+  - V2 theorem/model/checks/audit/repair/rereview/source note
+  theorem_family_and_prior_art_disposition: STANDARD AUTOMORPHISM INVARIANCE; FIBRE/FACTORIZATION APPLICATION; GENERAL NOVELTY ZERO
+  cold_audit_status: REPAIR_REQUIRED_THEN_REPAIRED
+  repair_status: ALL_12_BLOCKERS_REPAIRED
+  fresh_rereview_status: PASS_WITH_NONBLOCKING_CENTEREDNESS_AND_METAPHYSICAL_SCOPE_NOTES
+  external_review_status: OPEN
+  historical_identity_relation: NONE
+  origin_and_novelty_ceiling: POST_MERGE_CENTRAL_H8_DECOMPOSITION; ZERO_GENERAL_NOVELTY
+  dependency_graph:
+  - B8/H8
+  - Deep M/AA/AB/AD/AF/AG/AI
+  - Candidate G
+  - TAC/SAC identity
+  repository_readiness_status: PUBLIC_SAFE_POST_MERGE_PROPOSAL_PENDING_REPOSITORY_AUDIT
+  owner_adoption_status: PENDING
+  exact_blocking_burden: Independently establish de se, uptake, ownership, agency, stability, and authority/world bridges.
+- pmr_identity: PMR-007-SAMC-1
+  title: Source-predicated agency bundle, common-bearer filtering, and matched architecture comparison
+  round: DEEP_AK
+  provenance_class: ADMITTED_POST_MERGE_SCOPED_RESULT
+  typed_setting: Track-N translated source-role sets, co-reference intersection, neutral/source/world model layers, architectures A/B/C
+  assumptions: source bytes/locus/translation/attribution/proposition/acceptance/coreference/referent/world guards remain separate
+  statement_and_conclusion: Accepted source co-reference forces a common bearer for the selected role bundle and filters empty-intersection rivals at Track-N scope. The common bundle does not neutrally entail philosophical personality; source-compatible B/C rivals remain.
+  proof_status: SOURCE-FORMAL PROOF_PLUS_117,649_ROLE_ASSIGNMENT_ENUMERATION_AND_DISTINCT_THREE_BEARER_SAT_REREVIEW
+  countermodel_status: EXISTENTIAL ROLES WITHOUT COREFERENCE, COMMON BEARER WITHOUT PERSONALITY, TRANSLATION/PROPOSITION/WORLD DELETIONS, SOURCE-COMPATIBLE ROLE BEARER, SOURCE-EXTENDED ARCHITECTURE C
+  scope_and_nonclaims: No Arabic-primary verification, neutral H6/H8/H9/H11 theorem, world truth, scalar architecture ranking, champion, or meniscus
+  source_and_evidence_owners:
+  - Asfahani translated-primary source hash
+  - V2 theorem/model/checks/audit/repair/rereview/source note
+  theorem_family_and_prior_art_disposition: ELEMENTARY COMMON-BEARER INTERSECTION; SOURCE-FORMAL ARCHITECTURE ADJUDICATION; GENERAL NOVELTY ZERO
+  cold_audit_status: REPAIR_REQUIRED_THEN_REPAIRED
+  repair_status: ALL_12_BLOCKERS_REPAIRED
+  fresh_rereview_status: PASS_WITH_NONBLOCKING_SOURCE_SEMANTIC_AND_WORLD_BRIDGE_NOTES
+  external_review_status: OPEN
+  historical_identity_relation: NONE
+  origin_and_novelty_ceiling: POST_MERGE_SOURCE-FORMAL ARCHITECTURE RESULT; ZERO_GENERAL_NOVELTY
+  dependency_graph:
+  - Track N
+  - B6/H6
+  - B8/H8
+  - B9/H9
+  - B11/H11
+  - Candidate G
+  - R5
+  repository_readiness_status: PUBLIC_SAFE_POST_MERGE_PROPOSAL_PENDING_REPOSITORY_AUDIT
+  owner_adoption_status: PENDING
+  exact_blocking_burden: Arabic/source review, source-to-world identity, H8 personality semantics, and matched A/B1/C1 explanatory comparison.
+- pmr_identity: PMR-007-ABPD-1
+  title: Predictive surplus, representation-relative simplicity, and Candidate G P6
+  round: DEEP_AN
+  provenance_class: ADMITTED_POST_MERGE_SCOPED_RESULT
+  typed_setting: finite binary architecture comparison with explicit likelihoods, priors, evidence registry, and coding policy
+  assumptions: Frozen finite evidence space; declared likelihood/sampling model; independent prior or code when used
+  statement_and_conclusion: Equal likelihood preserves prior odds; finite discrimination is equivalent to positive total variation; code-length ranking is representation relative; Candidate G P6 needs predictive surplus or independent prior/coding defense.
+  proof_status: HUMAN_PROOF_PLUS_PRIMARY_AND_DISTINCT_EXECUTABLE_CHECKS
+  countermodel_status: LIKELIHOOD_PARITY, CODE REVERSAL, AD-HOC SUPPORT, MISSPECIFIED ZERO, SOURCE-PRIOR MIGRATION
+  scope_and_nonclaims: No canonical prior/code, metaphysical truth, personal ground, Wisdom, champion, or meniscus
+  source_and_evidence_owners:
+  - Candidate G exact P5/P6 packet
+  - Deep AN V2 evidence and hashes
+  theorem_family_and_prior_art_disposition: STANDARD BAYESIAN/TV/CODING APPLICATION; GENERAL_NOVELTY_ZERO
+  cold_audit_status: REPAIR_REQUIRED_THEN_REPAIRED
+  repair_status: ALL_10_BLOCKERS_REPAIRED
+  fresh_rereview_status: PASS_WITH_NONBLOCKING_META_ABDUCTIVE_AND_MODEL_SCOPE_NOTES
+  external_review_status: OPEN
+  historical_identity_relation: NONE
+  origin_and_novelty_ceiling: POST_MERGE_SCOPED META-ABDUCTIVE RESULT; ZERO GENERAL NOVELTY
+  dependency_graph:
+  - Candidate G
+  - Deep AL
+  - Bitter Lesson
+  repository_readiness_status: PUBLIC_SAFE_POST_MERGE_PROPOSAL_PENDING_REPOSITORY_AUDIT
+  owner_adoption_status: PENDING
+  exact_blocking_burden: Independent A-only held-out likelihood/intervention or defended prior/coding policy.
+- pmr_identity: PMR-007-RPDS-1
+  title: Representation-preserving predictive discrimination
+  round: DEEP_AO
+  provenance_class: ADMITTED_POST_MERGE_SCOPED_RESULT
+  typed_setting: finite binary experiment, deterministic representations, and common stochastic channels
+  assumptions: Frozen P/Q experiment; union support; common preregistered channel; exact likelihood-ratio semantics
+  statement_and_conclusion: Common channels contract total variation; exact pointwise Bayes factors are preserved iff likelihood ratio is constant on support fibres; LR partition is coarsest pairwise exact discriminator.
+  proof_status: HUMAN_PROOF_PLUS_REPAIRED_PRIMARY_AND_DISTINCT_EXECUTABLE_CHECKS
+  countermodel_status: DESTRUCTIVE COARSENING, EQUAL EXPERIMENT, TARGET LEAKAGE, NEW-EVIDENCE NONRECODING, PRH/OSM NONTRANSFER
+  scope_and_nonclaims: No canonical experiment/representation, empirical metaphysical likelihood, proper function, mentality, Wisdom, champion, or meniscus
+  source_and_evidence_owners:
+  - PRH
+  - Sun et al. OSM
+  - Deep AN
+  - Deep AO V2 evidence
+  theorem_family_and_prior_art_disposition: STATISTICAL SUFFICIENCY/DATA PROCESSING SPECIALIZATION; GENERAL_NOVELTY_ZERO
+  cold_audit_status: REPAIR_REQUIRED_THEN_REPAIRED
+  repair_status: ALL_10_BLOCKERS_REPAIRED; 1580 IMPOSSIBLE-POINT FAILURES PRESERVED
+  fresh_rereview_status: PASS_WITH_NONBLOCKING_EXPERIMENT_AND_WORLD_SCOPE_NOTES
+  external_review_status: OPEN
+  historical_identity_relation: NONE
+  origin_and_novelty_ceiling: POST_MERGE SCOPED REPRESENTATION RESULT; ZERO GENERAL NOVELTY
+  dependency_graph:
+  - Deep AN
+  - PRH
+  - OSM
+  - Bitter Lesson
+  - fibre family
+  repository_readiness_status: PUBLIC_SAFE_POST_MERGE_PROPOSAL_PENDING_REPOSITORY_AUDIT
+  owner_adoption_status: PENDING
+  exact_blocking_burden: Frozen raw/intervention likelihood for personal versus impersonal architectures.
+- pmr_identity: PMR-007-SWRI-1
+  title: Source-world referent identification
+  round: DEEP_AP
+  provenance_class: ADMITTED_POST_MERGE_SCOPED_RESULT
+  typed_setting: two-sorted finite source/world structures with admissible interpretation-map family
+  assumptions: Unique source role bearer; explicit source/translation/map/world guards; role preservation; optional role completeness
+  statement_and_conclusion: Relative world referent is unique iff the source bearers image fibre is singleton; under role completeness the fibre equals translated world-role bearers.
+  proof_status: HUMAN_PROOF_PLUS_PRIMARY_AND DISTINCT EXECUTABLE CHECKS
+  countermodel_status: EMPTY H, TWO ROLE BEARERS, HIDDEN ANCHOR, PRESERVATION NONREFLECTION, VERSION DRIFT, SOURCE-COMPATIBLE IMPERSONAL, MULTIPLE WORLDS
+  scope_and_nonclaims: No Arabic-primary verification, actual-world selection, cross-sort identity, neutral personality/Wisdom, champion, or meniscus
+  source_and_evidence_owners:
+  - Asfahani translated-primary access
+  - Deep AK
+  - Deep AM
+  - Deep AP V2 evidence
+  theorem_family_and_prior_art_disposition: CENTRAL SOURCE-WORLD INTERPRETATION/FIBRE SPECIALIZATION; GENERAL_NOVELTY_ZERO
+  cold_audit_status: REPAIR_REQUIRED_THEN_REPAIRED
+  repair_status: ALL_10_BLOCKERS_REPAIRED
+  fresh_rereview_status: PASS_WITH_NONBLOCKING_WORLD_AND_SOURCE_AUTHORITY_NOTES
+  external_review_status: OPEN
+  historical_identity_relation: NONE
+  origin_and_novelty_ceiling: POST_MERGE SCOPED SOURCE-WORLD RESULT; ZERO GENERAL NOVELTY
+  dependency_graph:
+  - Track N
+  - Deep AK
+  - Deep AM
+  - source/world bridge
+  repository_readiness_status: PUBLIC_SAFE_POST_MERGE_PROPOSAL_PENDING_REPOSITORY_AUDIT
+  owner_adoption_status: PENDING
+  exact_blocking_burden: Independent source-world anchor, actual-world selection, and neutral H7/H8/Wisdom bridge.
+- pmr_identity: PMR-007-SCAP-1
+  title: Source-compatible architecture discrimination and the three-gate frontier
+  round: DEEP_AQ
+  provenance_class: ADMITTED_POST_MERGE_SCOPED_RESULT
+  typed_setting: See canonical theorem and model owner; finite scope and guards explicit.
+  assumptions: See canonical theorem file and admission overlay.
+  statement_and_conclusion: See canonical theorem file; only admitted scoped conclusion transfers.
+  proof_status: PROVED_AT_DECLARED_FINITE_TYPED_SCOPE
+  countermodel_status: MATCHED_RIVAL_RELABEL_HIDDEN_ANCHOR_PRIOR_VERSION_AND_TARGET_CONTROLS_PRESERVED
+  scope_and_nonclaims:
+  - no_actual_world_selection
+  - no_source_authentication
+  - no_neutral_personality_or_wisdom_entailment
+  - no_equal_metaphysical_probability_claim
+  - no_repository_or_owner_adoption
+  source_and_evidence_owners:
+  - canonical theorem/model/check/audit/repair/rereview/hash packet in this proposal
+  theorem_family_and_prior_art_disposition: {}
+  cold_audit_status: REPAIR_REQUIRED
+  repair_status: COMPLETE_V2
+  fresh_rereview_status: PASS_WITH_NONBLOCKING_SOURCE_AND_PRIOR_NOTES
+  external_review_status: OPEN
+  historical_identity_relation: NONE
+  origin_and_novelty_ceiling: NEW_POST_MERGE_SCOPED_RESULT; GENERAL_NOVELTY_0; NO_HISTORICAL_CREDIT
+  dependency_graph: []
+  repository_readiness_status: PUBLIC_SAFE_POST_MERGE_PROPOSAL_PENDING_REPOSITORY_AUDIT
+  owner_adoption_status: PENDING
+  exact_blocking_burden: External review, owner adoption, and independent repository audit remain open.
+- pmr_identity: PMR-007-PREC-1
+  title: Provenance-root evidence conservation under retransmission
+  round: DEEP_AR
+  provenance_class: ADMITTED_POST_MERGE_SCOPED_RESULT
+  typed_setting: See canonical theorem and model owner; finite scope and guards explicit.
+  assumptions: See canonical theorem file and admission overlay.
+  statement_and_conclusion: See canonical theorem file; only admitted scoped conclusion transfers.
+  proof_status: PROVED_AT_DECLARED_FINITE_PROBABILISTIC_SCOPE
+  countermodel_status: COPY_ALIAS_MERGE_DEPENDENT_ROOT_CANDIDATE_CHANNEL_AND_WARRANT_CONTROLS_PRESERVED
+  scope_and_nonclaims:
+  - no_root_authentication_from_labels
+  - no_truth_or_warrant_from_root_count
+  - no_tawatur_or_common_knowledge_entailment
+  - no_repository_or_owner_adoption
+  source_and_evidence_owners:
+  - canonical theorem/model/check/audit/repair/rereview/hash packet in this proposal
+  theorem_family_and_prior_art_disposition: {}
+  cold_audit_status: REPAIR_REQUIRED
+  repair_status: COMPLETE_V2
+  fresh_rereview_status: PASS_WITH_NONBLOCKING_AUTHENTICATION_AND_WARRANT_NOTES
+  external_review_status: OPEN
+  historical_identity_relation: NONE
+  origin_and_novelty_ceiling: NEW_POST_MERGE_SCOPED_RESULT; GENERAL_NOVELTY_0; NO_HISTORICAL_CREDIT
+  dependency_graph: []
+  repository_readiness_status: PUBLIC_SAFE_POST_MERGE_PROPOSAL_PENDING_REPOSITORY_AUDIT
+  owner_adoption_status: PENDING
+  exact_blocking_burden: External review, owner adoption, and independent repository audit remain open.
+- pmr_identity: PMR-007-PFIT-1
+  title: Proper-function intervention basis and norm-source diagnosability
+  round: DEEP_AS
+  provenance_class: ADMITTED_POST_MERGE_SCOPED_RESULT
+  typed_setting: See canonical theorem and model owner; finite scope and guards explicit.
+  assumptions: See canonical theorem file and admission overlay.
+  statement_and_conclusion: See canonical theorem file; only admitted scoped conclusion transfers.
+  proof_status: PROVED_AT_DECLARED_FINITE_DETERMINISTIC_STATIC_SCOPE
+  countermodel_status: ALIGNED_HARMFUL_DESIGN_SELECTION_SOURCE_PROJECTION_LEAKAGE_AND_STATE_CHANGE_CONTROLS_PRESERVED
+  scope_and_nonclaims:
+  - no_account_truth_or_catalogue_completeness
+  - no_stochastic_or_bounded_error_optimum
+  - no_history_dependent_or_state_changing_characterization
+  - no_source_authentication_or_personal_designer
+  - no_wisdom_necessary_being_or_repository_adoption
+  source_and_evidence_owners:
+  - canonical theorem/model/check/audit/repair/rereview/hash packet in this proposal
+  theorem_family_and_prior_art_disposition: {}
+  cold_audit_status: REPAIR_REQUIRED
+  repair_status: COMPLETE_V2
+  fresh_rereview_status: PASS_WITH_NONBLOCKING_EMPIRICAL_AND_ACCOUNT_COMPLETENESS_NOTES
+  external_review_status: OPEN
+  historical_identity_relation: NONE
+  origin_and_novelty_ceiling: NEW_POST_MERGE_SCOPED_RESULT; GENERAL_NOVELTY_0; NO_HISTORICAL_CREDIT
+  dependency_graph: []
+  repository_readiness_status: PUBLIC_SAFE_POST_MERGE_PROPOSAL_PENDING_REPOSITORY_AUDIT
+  owner_adoption_status: PENDING
+  exact_blocking_burden: External review, owner adoption, and independent repository audit remain open.
+- pmr_identity: PMR-007-NIBE-1
+  title: Neutral interventional trace equivalence and adaptive nonidentifiability
+  round: DEEP_AT
+  provenance_class: ADMITTED_POST_MERGE_SCOPED_RESULT
+  typed_setting: See canonical theorem and model owner; finite scope and guards explicit.
+  assumptions: See canonical theorem file and admission overlay.
+  statement_and_conclusion: See canonical theorem file; only admitted scoped conclusion transfers.
+  proof_status: PROVED_AT_DECLARED_FINITE_CONTROLLED_WEIGHTED_SYSTEM_SCOPE
+  countermodel_status: HIDDEN_TAG_TRAJECTORY_REPRESENTATION_POLICY_VERSION_AND_INCOMPLETE_ALGEBRA_CONTROLS_PRESERVED
+  scope_and_nonclaims:
+  - no_hidden_state_or_numerical_identity
+  - no_architecture_truth_from_trace_difference
+  - no_canonical_experiment_algebra
+  - no_source_personality_wisdom_or_necessary_being
+  - no_repository_or_owner_adoption
+  source_and_evidence_owners:
+  - canonical theorem/model/check/audit/repair/rereview/hash packet in this proposal
+  theorem_family_and_prior_art_disposition: {}
+  cold_audit_status: REPAIR_REQUIRED
+  repair_status: COMPLETE_V2
+  fresh_rereview_status: PASS_WITH_NONBLOCKING_EXPERIMENT_ALGEBRA_AND_ONTOLOGY_NOTES
+  external_review_status: OPEN
+  historical_identity_relation: NONE
+  origin_and_novelty_ceiling: NEW_POST_MERGE_SCOPED_RESULT; GENERAL_NOVELTY_0; NO_HISTORICAL_CREDIT
+  dependency_graph: []
+  repository_readiness_status: PUBLIC_SAFE_POST_MERGE_PROPOSAL_PENDING_REPOSITORY_AUDIT
+  owner_adoption_status: PENDING
+  exact_blocking_burden: External review, owner adoption, and independent repository audit remain open.
+- pmr_identity: PMR-007-SIER-1
+  title: Synchronization deficit and provenance-innovation rank balance
+  round: DEEP_AU
+  provenance_class: ADMITTED_POST_MERGE_SCOPED_RESULT
+  typed_setting: See canonical theorem and model owner; finite scope and guards explicit.
+  assumptions: See canonical theorem file and admission overlay.
+  statement_and_conclusion: See canonical theorem file; only admitted scoped conclusion transfers.
+  proof_status: PROVED_AT_DECLARED_FINITE_DIMENSIONAL_LINEAR_SCOPE
+  countermodel_status:
+    v1_fresh_only_balance: BLOCKED_FORMAL_DEFECT_PRESERVED
+    old_root_recovery: VALIDATED
+    copied_root_false_multiplicity: VALIDATED
+    unauthenticated_label_alias: VALIDATED
+    independent_convergence_same_output: VALIDATED
+    total_synchronization_loss: VALIDATED
+  scope_and_nonclaims:
+  - root_authentication
+  - claim_relevance_without_independent_contract
+  - testimonial_or_causal_independence
+  - truth_or_tawatur_warrant
+  - common_knowledge_or_authorization
+  - numerical_carrier_episode_or_lineage_identity
+  - historical_tac_sac_term_assignment
+  - general_nonlinear_stochastic_or_adaptive_synchronization
+  - operational_future_repair_capacity
+  source_and_evidence_owners:
+  - canonical theorem/model/check/audit/repair/rereview/hash packet in this proposal
+  theorem_family_and_prior_art_disposition: {}
+  cold_audit_status: REPAIR_REQUIRED_THEN_REPAIRED
+  repair_status: COMPLETE
+  fresh_rereview_status: PASS_WITH_NONBLOCKING_SCOPE_AND_AUTHENTICATION_NOTES
+  external_review_status: OPEN
+  historical_identity_relation: NONE
+  origin_and_novelty_ceiling: NEW_POST_MERGE_SCOPED_RESULT; GENERAL_NOVELTY_0; NO_HISTORICAL_CREDIT
+  dependency_graph: []
+  repository_readiness_status: PUBLIC_SAFE_POST_MERGE_PROPOSAL_PENDING_REPOSITORY_AUDIT
+  owner_adoption_status: PENDING
+  exact_blocking_burden: External review, owner adoption, and independent repository audit remain open.
+- pmr_identity: PMR-007-NBIF-1
+  title: Neutral bridge interval and source-to-world interpolation firewall
+  round: DEEP_AV
+  provenance_class: ADMITTED_POST_MERGE_SCOPED_RESULT
+  typed_setting: See canonical theorem and model owner; finite scope and guards explicit.
+  assumptions: See canonical theorem file and admission overlay.
+  statement_and_conclusion: See canonical theorem file; only admitted scoped conclusion transfers.
+  proof_status: PROVED_FINITE_PROPOSITIONAL_SCOPE
+  countermodel_status:
+    v1_unique_bridge: BLOCKED_FORMAL_DEFECT_PRESERVED
+    inconsistent_source_vacuity: VALIDATED
+    tautological_target_noninformation: VALIDATED
+    hidden_target_import: VALIDATED_AS_VOCABULARY_CONTROL
+    no_shared_contingent_target: VALIDATED
+  scope_and_nonclaims:
+  - first_order_Craig_reproof
+  - finite_model_Beth_or_interpolation_property
+  - modal_higher_order_intensional_or_probabilistic_transfer
+  - neutrality_of_shared_vocabulary
+  - source_truth_translation_or_actual_world
+  - natural_or_explanatory_interpolant
+  - personal_ground_or_divine_attribute
+  source_and_evidence_owners:
+  - canonical theorem/model/check/audit/repair/rereview/hash packet in this proposal
+  theorem_family_and_prior_art_disposition: {}
+  cold_audit_status: REPAIR_REQUIRED_THEN_REPAIRED
+  repair_status: COMPLETE
+  fresh_rereview_status: PASS_WITH_NONBLOCKING_LOGIC_AND_VOCABULARY_NOTES
+  external_review_status: OPEN
+  historical_identity_relation: NONE
+  origin_and_novelty_ceiling: NEW_POST_MERGE_SCOPED_RESULT; GENERAL_NOVELTY_0; NO_HISTORICAL_CREDIT
+  dependency_graph: []
+  repository_readiness_status: PUBLIC_SAFE_POST_MERGE_PROPOSAL_PENDING_REPOSITORY_AUDIT
+  owner_adoption_status: PENDING
+  exact_blocking_burden: External review, owner adoption, and independent repository audit remain open.
+- pmr_identity: PMR-007-PRAD-1
+  title: Provenance-root robust exact diagnosis
+  round: DEEP_AW
+  provenance_class: ADMITTED_POST_MERGE_SCOPED_RESULT
+  typed_setting: See canonical theorem and model owner; finite scope and guards explicit.
+  assumptions: See canonical theorem file and admission overlay.
+  statement_and_conclusion: See canonical theorem file; only admitted scoped conclusion transfers.
+  proof_status: HUMAN_PROOF_PLUS_PRIMARY_AND_DISTINCT_EXECUTABLE_CHECKS
+  countermodel_status: EXPLICIT_COPIED_ROOT_ALIAS_PROJECTION_AND_DYNAMIC_SCOPE_CONTROLS
+  scope_and_nonclaims:
+  - root authentication or real independence
+  - source truth or tawatur warrant
+  - recipient authority, applicability, adoption, or execution
+  - common knowledge
+  - stochastic or adaptive protocols
+  - dynamic membership or version drift
+  - mobile corruption or collusion
+  - stable restoration
+  source_and_evidence_owners:
+  - canonical theorem/model/check/audit/repair/rereview/hash packet in this proposal
+  theorem_family_and_prior_art_disposition:
+    hamming: APPLICATION_ONLY
+    test_cover: ROBUST_PAIR_MULTICOVER_EXTENSION_AT_APPLICATION_SCOPE
+    deep_ar: OPERATIONALIZES_ROOT_LEVEL_EVIDENCE_CONSERVATION
+    deep_au: COMPLEMENTARY_DISTANCE_NOT_RANK_INVARIANT
+    ar2_ar3: PROVENANCE_BEARING_DIAGNOSIS_INTERFACE
+  cold_audit_status: REPAIR_REQUIRED
+  repair_status: ALL_BLOCKING_FINDINGS_REPAIRED_IN_V2
+  fresh_rereview_status: PASS_WITH_NONBLOCKING_AUTHORITY_AND_DYNAMIC_SCOPE_NOTES
+  external_review_status: OPEN
+  historical_identity_relation: NONE
+  origin_and_novelty_ceiling: NEW_POST_MERGE_SCOPED_RESULT; GENERAL_NOVELTY_0; NO_HISTORICAL_CREDIT
+  dependency_graph:
+  - hamming
+  - test_cover
+  - deep_ar
+  - deep_au
+  - ar2_ar3
+  repository_readiness_status: PUBLIC_SAFE_POST_MERGE_PROPOSAL_PENDING_REPOSITORY_AUDIT
+  owner_adoption_status: PENDING
+  exact_blocking_burden: External review, owner adoption, and independent repository audit remain open.
+- pmr_identity: PMR-007-STWG-1
+  title: Source testimony likelihood, provenance custody, and the world-selection gate
+  round: DEEP_AX
+  provenance_class: ADMITTED_POST_MERGE_SCOPED_RESULT
+  typed_setting: See canonical theorem and model owner; finite scope and guards explicit.
+  assumptions: See canonical theorem file and admission overlay.
+  statement_and_conclusion: See canonical theorem file; only admitted scoped conclusion transfers.
+  proof_status: HUMAN_PROOF_PLUS_PRIMARY_AND_DISTINCT_EXECUTABLE_CHECKS
+  countermodel_status: EXPLICIT_CORRELATION_COPY_HIDDEN_ANCHOR_VERSION_AND_CHANNEL_CONTROLS
+  scope_and_nonclaims:
+  - actual source reliability
+  - actual root independence
+  - Arabic-primary verification
+  - exact Taymiyyan tawatur formalization
+  - actual-world selection
+  - candidate-class completeness
+  - personal-ground proof
+  - proper function or Wisdom
+  source_and_evidence_owners:
+  - canonical theorem/model/check/audit/repair/rereview/hash packet in this proposal
+  theorem_family_and_prior_art_disposition:
+    bayes: APPLICATION_ONLY
+    deep_an: SOURCE_EVIDENCE_SPECIALIZATION
+    deep_ao: COMMON_CHANNEL_APPLICATION
+    deep_ar: ROOT_FACTOR_CUSTODY_EXTENSION
+    deep_ap: RELATIVE_REFERENT_PLUS_LIKELIHOOD_SEPARATION
+    deep_av: SOURCE_NEUTRAL_WORLD_FIREWALL_APPLICATION
+  cold_audit_status: REPAIR_REQUIRED
+  repair_status: ALL_BLOCKING_FINDINGS_REPAIRED_IN_V2
+  fresh_rereview_status: PASS_WITH_NONBLOCKING_SOURCE_RELIABILITY_AND_WORLD_SCOPE_NOTES
+  external_review_status: OPEN
+  historical_identity_relation: NONE
+  origin_and_novelty_ceiling: NEW_POST_MERGE_SCOPED_RESULT; GENERAL_NOVELTY_0; NO_HISTORICAL_CREDIT
+  dependency_graph:
+  - bayes
+  - deep_an
+  - deep_ao
+  - deep_ar
+  - deep_ap
+  - deep_av
+  repository_readiness_status: PUBLIC_SAFE_POST_MERGE_PROPOSAL_PENDING_REPOSITORY_AUDIT
+  owner_adoption_status: PENDING
+  exact_blocking_burden: External review, owner adoption, and independent repository audit remain open.
+- pmr_identity: PMR-007-SGCI-1
+  title: Semantic gauge, literal reference, and the constitutive-semanticity frontier
+  round: DEEP_AY
+  provenance_class: ADMITTED_POST_MERGE_SCOPED_RESULT
+  typed_setting: See canonical theorem and model owner; finite scope and guards explicit.
+  assumptions: See canonical theorem file and admission overlay.
+  statement_and_conclusion: See canonical theorem file; only admitted scoped conclusion transfers.
+  proof_status: HUMAN_PROOF_PLUS_PRIMARY_AND_DISTINCT_EXECUTABLE_CHECKS
+  countermodel_status: EXPLICIT_LABEL_SWAP_HIDDEN_ANCHOR_RIGID_IMPERSONAL_AND_DOWNSTREAM_INTERPRETER_CONTROLS
+  scope_and_nonclaims:
+  - metaphysical semantic indeterminacy
+  - semantic conventionalism
+  - source falsity
+  - constitutive semanticity H7a2
+  - mental realization H7a3
+  - personality or Wisdom
+  - divine Speech or revelational identification
+  source_and_evidence_owners:
+  - canonical theorem/model/check/audit/repair/rereview/hash packet in this proposal
+  theorem_family_and_prior_art_disposition:
+    deep_am: CONTENT_SIDE_COMPLEMENT
+    deep_af: REDUCT_DEFINABILITY_APPLICATION
+    deep_y: SEMANTIC_ORBIT_APPLICATION
+    deep_ao: COMMON_REPRESENTATION_FIREWALL
+    deep_ap_ax: SOURCE_WORLD_ANCHOR_CUSTODY_DEPENDENCY
+  cold_audit_status: REPAIR_REQUIRED
+  repair_status: ALL_BLOCKING_FINDINGS_REPAIRED_IN_V2
+  fresh_rereview_status: PASS_WITH_NONBLOCKING_CONSTITUTIVITY_AND_WORLD_REFERENCE_NOTES
+  external_review_status: OPEN
+  historical_identity_relation: NONE
+  origin_and_novelty_ceiling: NEW_POST_MERGE_SCOPED_RESULT; GENERAL_NOVELTY_0; NO_HISTORICAL_CREDIT
+  dependency_graph:
+  - deep_am
+  - deep_af
+  - deep_y
+  - deep_ao
+  - deep_ap_ax
+  repository_readiness_status: PUBLIC_SAFE_POST_MERGE_PROPOSAL_PENDING_REPOSITORY_AUDIT
+  owner_adoption_status: PENDING
+  exact_blocking_burden: External review, owner adoption, and independent repository audit remain open.
+- pmr_identity: PMR-007-CSII-1
+  title: Crossed semantic intervention and mediation identifiability
+  round: DEEP_AZ
+  provenance_class: ADMITTED_POST_MERGE_SCOPED_RESULT
+  typed_setting: See canonical theorem and model owner; finite scope and guards explicit.
+  assumptions: See canonical theorem file and admission overlay.
+  statement_and_conclusion: See canonical theorem file; only admitted scoped conclusion transfers.
+  proof_status: HUMAN_PROOF_PLUS_PRIMARY_AND_DISTINCT_EXECUTABLE_CHECKS
+  countermodel_status: EXPLICIT_DIAGONAL_SUPPORT_MISSING_CELL_ANCHOR_IMPERSONAL_VERSION_AND_HISTORY_CONTROLS
+  scope_and_nonclaims:
+  - feasibility of actual semantic interventions
+  - intrinsic or constitutive semanticity
+  - intentional uptake
+  - personality
+  - proper function
+  - Wisdom
+  - personal-ground proof
+  source_and_evidence_owners:
+  - canonical theorem/model/check/audit/repair/rereview/hash packet in this proposal
+  theorem_family_and_prior_art_disposition:
+    causal_factorial_design: APPLICATION_ONLY
+    deep_m_ad_aa: ENLARGED_EXPERIMENT_INTERFACE
+    deep_ao: COMMON_EXPERIMENT_GUARD
+    deep_ay: DOES_NOT_CLOSE_CONSTITUTIVE_SEMANTICITY
+    osm_prh: EMPIRICAL_DESIGN_INTERFACE_ONLY
+  cold_audit_status: REPAIR_REQUIRED
+  repair_status: ALL_BLOCKING_FINDINGS_REPAIRED_IN_V2
+  fresh_rereview_status: PASS_WITH_NONBLOCKING_INTERVENTION_FEASIBILITY_AND_PERSONALITY_NOTES
+  external_review_status: OPEN
+  historical_identity_relation: NONE
+  origin_and_novelty_ceiling: NEW_POST_MERGE_SCOPED_RESULT; GENERAL_NOVELTY_0; NO_HISTORICAL_CREDIT
+  dependency_graph:
+  - causal_factorial_design
+  - deep_m_ad_aa
+  - deep_ao
+  - deep_ay
+  - osm_prh
+  repository_readiness_status: PUBLIC_SAFE_POST_MERGE_PROPOSAL_PENDING_REPOSITORY_AUDIT
+  owner_adoption_status: PENDING
+  exact_blocking_burden: External review, owner adoption, and independent repository audit remain open.
+- pmr_identity: PMR-007-IRCQ-1
+  title: Interface-relative causal quotients and canonical operational content
+  round: DEEP_BA
+  provenance_class: ADMITTED_POST_MERGE_SCOPED_CENTRAL_OPERATIONAL_QUOTIENT_RESULT
+  typed_setting: finite deterministic controlled Moore systems
+  assumptions: See the frozen canonical theorem and model owner; all guards are explicit and scope-bound.
+  statement_and_conclusion: trace equivalence is the unique minimal quotient for the frozen action/output interface; sufficient deterministic representations factor to it
+  proof_status: HUMAN_PROOF_PLUS_EXECUTABLE_SCOPED_CHECK
+  countermodel_status: EXPLICIT_POSITIVE_AND_NEGATIVE_CONTROLS_PRESENT
+  scope_and_nonclaims: Canonical operational state is interface-relative; no semantics, mentality, or metaphysical identity.
+  source_and_evidence_owners:
+  - stable public proposal artifacts and hashes; private source bytes excluded
+  theorem_family_and_prior_art_disposition: Myhill-Nerode/Moore/bisimulation application; novelty zero
+  cold_audit_status: REPAIR_REQUIRED_THEN_REPAIRED
+  repair_status: V2 repair complete
+  fresh_rereview_status: PASS at distinct same-model procedural scope; not external independence
+  external_review_status: OPEN
+  historical_identity_relation: NONE
+  origin_and_novelty_ceiling: NEW_POST_MERGE_SCOPED_RESULT; ZERO_HISTORICAL_AND_GENERAL_NOVELTY_CREDIT
+  dependency_graph:
+  - DEEP_BA
+  - V5 provenance policy
+  - Deep A-AP and Deep AQ-AZ proposal boundaries
+  repository_readiness_status: PUBLIC_SAFE_POST_MERGE_PROPOSAL_PENDING_REPOSITORY_AUDIT
+  owner_adoption_status: OWNER_ADOPTION_PENDING
+  exact_blocking_burden: External review, independent repository audit, owner adoption, and scoped formalization remain open.
+- pmr_identity: PMR-007-JCIQ-1
+  title: Joint causal-interface quotients and typed nonproduct constraints
+  round: DEEP_BB
+  provenance_class: ADMITTED_POST_MERGE_SCOPED_CENTRAL_DYNAMIC_NONPRODUCT_RESULT
+  typed_setting: finite controlled systems with several typed observation interfaces
+  assumptions: See the frozen canonical theorem and model owner; all guards are explicit and scope-bound.
+  statement_and_conclusion: joint trace quotient embeds as an action-invariant subdirect product; full product iff every tuple of interface classes intersects
+  proof_status: HUMAN_PROOF_PLUS_EXECUTABLE_SCOPED_CHECK
+  countermodel_status: EXPLICIT_POSITIVE_AND_NEGATIVE_CONTROLS_PRESENT
+  scope_and_nonclaims: Raw nonproduct support is not derivational or personal unity.
+  source_and_evidence_owners:
+  - stable public proposal artifacts and hashes; private source bytes excluded
+  theorem_family_and_prior_art_disposition: subdirect-product and automata application; novelty zero
+  cold_audit_status: REPAIR_REQUIRED_THEN_REPAIRED
+  repair_status: V2 repair complete
+  fresh_rereview_status: PASS at distinct same-model procedural scope; not external independence
+  external_review_status: OPEN
+  historical_identity_relation: NONE
+  origin_and_novelty_ceiling: NEW_POST_MERGE_SCOPED_RESULT; ZERO_HISTORICAL_AND_GENERAL_NOVELTY_CREDIT
+  dependency_graph:
+  - DEEP_BB
+  - V5 provenance policy
+  - Deep A-AP and Deep AQ-AZ proposal boundaries
+  repository_readiness_status: PUBLIC_SAFE_POST_MERGE_PROPOSAL_PENDING_REPOSITORY_AUDIT
+  owner_adoption_status: OWNER_ADOPTION_PENDING
+  exact_blocking_burden: External review, independent repository audit, owner adoption, and scoped formalization remain open.
+- pmr_identity: PMR-007-UIEP-1
+  title: Universal interface-experiment parity and new-evidence boundary
+  round: DEEP_BC
+  provenance_class: ADMITTED_POST_MERGE_SCOPED_CENTRAL_ARCHITECTURE_NONIDENTIFIABILITY_RESULT
+  typed_setting: finite statistical experiments and finite common-prior decision problems
+  assumptions: See the frozen canonical theorem and model owner; all guards are explicit and scope-bound.
+  statement_and_conclusion: garbling gives universal decision dominance; mutual garbling gives parity; new discrimination requires a changed experiment or justified restriction
+  proof_status: HUMAN_PROOF_PLUS_EXECUTABLE_SCOPED_CHECK
+  countermodel_status: EXPLICIT_POSITIVE_AND_NEGATIVE_CONTROLS_PRESENT
+  scope_and_nonclaims: No metaphysical truth or personal architecture follows from decision parity.
+  source_and_evidence_owners:
+  - stable public proposal artifacts and hashes; private source bytes excluded
+  theorem_family_and_prior_art_disposition: Blackwell comparison application; novelty zero
+  cold_audit_status: REPAIR_REQUIRED_THEN_REPAIRED
+  repair_status: V2 repair complete
+  fresh_rereview_status: PASS at distinct same-model procedural scope; not external independence
+  external_review_status: OPEN
+  historical_identity_relation: NONE
+  origin_and_novelty_ceiling: NEW_POST_MERGE_SCOPED_RESULT; ZERO_HISTORICAL_AND_GENERAL_NOVELTY_CREDIT
+  dependency_graph:
+  - DEEP_BC
+  - V5 provenance policy
+  - Deep A-AP and Deep AQ-AZ proposal boundaries
+  repository_readiness_status: PUBLIC_SAFE_POST_MERGE_PROPOSAL_PENDING_REPOSITORY_AUDIT
+  owner_adoption_status: OWNER_ADOPTION_PENDING
+  exact_blocking_burden: External review, independent repository audit, owner adoption, and scoped formalization remain open.
+- pmr_identity: PMR-007-LSRO-1
+  title: Latent source orientation and source-world anchor firewall
+  round: DEEP_BD
+  provenance_class: ADMITTED_POST_MERGE_SCOPED_CENTRAL_SOURCE_ORIENTATION_RESULT
+  typed_setting: finite binary latent-source models with explicit orientation contracts
+  assumptions: See the frozen canonical theorem and model owner; all guards are explicit and scope-bound.
+  statement_and_conclusion: unlabeled report law is invariant under latent-label swap; a non-swap-invariant anchor is required and current truth-labeled calibration is conditionally sufficient
+  proof_status: HUMAN_PROOF_PLUS_EXECUTABLE_SCOPED_CHECK
+  countermodel_status: EXPLICIT_POSITIVE_AND_NEGATIVE_CONTROLS_PRESENT
+  scope_and_nonclaims: No generic identifiability, tawatur reduction, source truth, or actual-world selection.
+  source_and_evidence_owners:
+  - stable public proposal artifacts and hashes; private source bytes excluded
+  theorem_family_and_prior_art_disposition: latent-class label-switching application; novelty zero
+  cold_audit_status: REPAIR_REQUIRED_THEN_REPAIRED
+  repair_status: V2 repair complete
+  fresh_rereview_status: PASS at distinct same-model procedural scope; not external independence
+  external_review_status: OPEN
+  historical_identity_relation: NONE
+  origin_and_novelty_ceiling: NEW_POST_MERGE_SCOPED_RESULT; ZERO_HISTORICAL_AND_GENERAL_NOVELTY_CREDIT
+  dependency_graph:
+  - DEEP_BD
+  - V5 provenance policy
+  - Deep A-AP and Deep AQ-AZ proposal boundaries
+  repository_readiness_status: PUBLIC_SAFE_POST_MERGE_PROPOSAL_PENDING_REPOSITORY_AUDIT
+  owner_adoption_status: OWNER_ADOPTION_PENDING
+  exact_blocking_burden: External review, independent repository audit, owner adoption, and scoped formalization remain open.
+- pmr_identity: PMR-007-CJID-1
+  title: Cross-lane interaction discrimination and anti-unification firewall
+  round: DEEP_BE
+  provenance_class: ADMITTED_POST_MERGE_SCOPED_CENTRAL_CROSS_LANE_INTERACTION_RESULT
+  typed_setting: finite jointly sampled binary cross-lane experiments
+  assumptions: See the frozen canonical theorem and model owner; all guards are explicit and scope-bound.
+  statement_and_conclusion: marginal parity may hide joint discrimination; equal all proper marginals leaves only top parity interaction
+  proof_status: HUMAN_PROOF_PLUS_EXECUTABLE_SCOPED_CHECK
+  countermodel_status: EXPLICIT_POSITIVE_AND_NEGATIVE_CONTROLS_PRESENT
+  scope_and_nonclaims: Interaction is predictive discrimination, not causal, explanatory, or personal unity.
+  source_and_evidence_owners:
+  - stable public proposal artifacts and hashes; private source bytes excluded
+  theorem_family_and_prior_art_disposition: finite contingency/Walsh interaction application; novelty zero
+  cold_audit_status: REPAIR_REQUIRED_THEN_REPAIRED
+  repair_status: V2 repair complete
+  fresh_rereview_status: PASS at distinct same-model procedural scope; not external independence
+  external_review_status: OPEN
+  historical_identity_relation: NONE
+  origin_and_novelty_ceiling: NEW_POST_MERGE_SCOPED_RESULT; ZERO_HISTORICAL_AND_GENERAL_NOVELTY_CREDIT
+  dependency_graph:
+  - DEEP_BE
+  - V5 provenance policy
+  - Deep A-AP and Deep AQ-AZ proposal boundaries
+  repository_readiness_status: PUBLIC_SAFE_POST_MERGE_PROPOSAL_PENDING_REPOSITORY_AUDIT
+  owner_adoption_status: OWNER_ADOPTION_PENDING
+  exact_blocking_burden: External review, independent repository audit, owner adoption, and scoped formalization remain open.
+- pmr_identity: PMR-007-ILRC-1
+  title: Real nonnegative latent-product complexity and rival-width boundary
+  round: DEEP_BF
+  provenance_class: ADMITTED_POST_MERGE_SCOPED_CENTRAL_RIVAL_COMPLEXITY_RESULT
+  typed_setting: finite bivariate observational probability laws over nonnegative reals
+  statement_and_conclusion: product-mixture width equals real nonnegative rank; unrestricted finite latent-product rival is saturated; width exclusion requires independent bound
+  theorem_family_and_prior_art_disposition: STANDARD_NONNEGATIVE_RANK_APPLICATION; GENERAL_NOVELTY_ZERO
+  cold_audit_status: REPAIR_REQUIRED_THEN_REPAIRED
+  repair_status: V2 repair complete
+  fresh_rereview_status: PASS at distinct same-model procedural scope; not external independence
+  assumptions: See frozen canonical theorem and model owner; all guards are explicit and scope-bound.
+  proof_status: HUMAN_PROOF_PLUS_EXECUTABLE_SCOPED_CHECK
+  countermodel_status: EXPLICIT_POSITIVE_AND_NEGATIVE_CONTROLS_PRESENT
+  scope_and_nonclaims: No historical identity, metaphysical world truth, personal-ground entailment, integrated champion, meniscus, or closure.
+  source_and_evidence_owners:
+  - stable public proposal artifacts and hashes; private source bytes excluded
+  external_review_status: OPEN
+  historical_identity_relation: NONE
+  origin_and_novelty_ceiling: NEW_POST_MERGE_SCOPED_RESULT; ZERO_HISTORICAL_AND_GENERAL_NOVELTY_CREDIT
+  dependency_graph:
+  - DEEP_BF
+  - V5 provenance policy
+  - Deep A-BE proposal boundary
+  repository_readiness_status: PUBLIC_SAFE_POST_MERGE_PROPOSAL_PENDING_REPOSITORY_AUDIT
+  owner_adoption_status: OWNER_ADOPTION_PENDING
+  exact_blocking_burden: External review, independent repository audit, owner adoption, and scoped formalization remain open.
+- pmr_identity: PMR-007-IR5CM-1
+  title: Integrated R5 one-bearer impersonal common model
+  round: DEEP_BG
+  provenance_class: ADMITTED_POST_MERGE_SCOPED_CENTRAL_R5_COMMON_MODEL_RESULT
+  typed_setting: finite signature-relative structural common model and conservative target expansions
+  statement_and_conclusion: one structural bearer can carry all admitted neutral roles while intellect, personality, intentional uptake, Wisdom, Speech, and CreatorClass remain false
+  theorem_family_and_prior_art_disposition: SCOPED_COMMON_MODEL_NONENTAILMENT; GENERAL_NOVELTY_ZERO
+  cold_audit_status: REPAIR_REQUIRED_THEN_REPAIRED
+  repair_status: V2 repair complete
+  fresh_rereview_status: PASS at distinct same-model procedural scope; not external independence
+  assumptions: See frozen canonical theorem and model owner; all guards are explicit and scope-bound.
+  proof_status: HUMAN_PROOF_PLUS_EXECUTABLE_SCOPED_CHECK
+  countermodel_status: EXPLICIT_POSITIVE_AND_NEGATIVE_CONTROLS_PRESENT
+  scope_and_nonclaims: No historical identity, metaphysical world truth, personal-ground entailment, integrated champion, meniscus, or closure.
+  source_and_evidence_owners:
+  - stable public proposal artifacts and hashes; private source bytes excluded
+  external_review_status: OPEN
+  historical_identity_relation: NONE
+  origin_and_novelty_ceiling: NEW_POST_MERGE_SCOPED_RESULT; ZERO_HISTORICAL_AND_GENERAL_NOVELTY_CREDIT
+  dependency_graph:
+  - DEEP_BG
+  - V5 provenance policy
+  - Deep A-BE proposal boundary
+  repository_readiness_status: PUBLIC_SAFE_POST_MERGE_PROPOSAL_PENDING_REPOSITORY_AUDIT
+  owner_adoption_status: OWNER_ADOPTION_PENDING
+  exact_blocking_burden: External review, independent repository audit, owner adoption, and scoped formalization remain open.
+- pmr_identity: PMR-007-TCRPF-1
+  title: Truth-calibrated radical correction and proper-function boundary
+  round: DEEP_BH
+  provenance_class: ADMITTED_POST_MERGE_SCOPED_CENTRAL_TRUTH_CALIBRATION_RESULT
+  typed_setting: finite revision graph with independently supplied antisymmetric truth-loss increments
+  statement_and_conclusion: truth calibration is equivalent to forest calibration plus zero fundamental-cycle holonomy; proper function and teleology do not transfer
+  theorem_family_and_prior_art_disposition: FINITE_POTENTIAL_AND_HOLONOMY_APPLICATION; GENERAL_NOVELTY_ZERO
+  cold_audit_status: REPAIR_REQUIRED_THEN_REPAIRED
+  repair_status: V2 repair complete
+  fresh_rereview_status: PASS at distinct same-model procedural scope; not external independence
+  assumptions: See frozen canonical theorem and model owner; all guards are explicit and scope-bound.
+  proof_status: HUMAN_PROOF_PLUS_EXECUTABLE_SCOPED_CHECK
+  countermodel_status: EXPLICIT_POSITIVE_AND_NEGATIVE_CONTROLS_PRESENT
+  scope_and_nonclaims: No historical identity, metaphysical world truth, personal-ground entailment, integrated champion, meniscus, or closure.
+  source_and_evidence_owners:
+  - stable public proposal artifacts and hashes; private source bytes excluded
+  external_review_status: OPEN
+  historical_identity_relation: NONE
+  origin_and_novelty_ceiling: NEW_POST_MERGE_SCOPED_RESULT; ZERO_HISTORICAL_AND_GENERAL_NOVELTY_CREDIT
+  dependency_graph:
+  - DEEP_BH
+  - V5 provenance policy
+  - Deep A-BE proposal boundary
+  repository_readiness_status: PUBLIC_SAFE_POST_MERGE_PROPOSAL_PENDING_REPOSITORY_AUDIT
+  owner_adoption_status: OWNER_ADOPTION_PENDING
+  exact_blocking_burden: External review, independent repository audit, owner adoption, and scoped formalization remain open.
+- pmr_identity: PMR-007-FTASA-1
+  title: Finite content-relative articulability and impersonal semantic algebra
+  round: DEEP_BI
+  provenance_class: ADMITTED_POST_MERGE_SCOPED_CENTRAL_ARTICULABILITY_NONBRIDGE_RESULT
+  typed_setting: finite Boolean content algebra with prior semantic homomorphism and guarded translations
+  statement_and_conclusion: finite created token presentation and semantic quotient exist; finite articulability does not entail mentality or Speech
+  theorem_family_and_prior_art_disposition: STANDARD_QUOTIENT_ALGEBRA_APPLICATION; GENERAL_NOVELTY_ZERO
+  cold_audit_status: REPAIR_REQUIRED_THEN_REPAIRED
+  repair_status: V2 repair complete
+  fresh_rereview_status: PASS at distinct same-model procedural scope; not external independence
+  assumptions: See frozen canonical theorem and model owner; all guards are explicit and scope-bound.
+  proof_status: HUMAN_PROOF_PLUS_EXECUTABLE_SCOPED_CHECK
+  countermodel_status: EXPLICIT_POSITIVE_AND_NEGATIVE_CONTROLS_PRESENT
+  scope_and_nonclaims: No historical identity, metaphysical world truth, personal-ground entailment, integrated champion, meniscus, or closure.
+  source_and_evidence_owners:
+  - stable public proposal artifacts and hashes; private source bytes excluded
+  external_review_status: OPEN
+  historical_identity_relation: NONE
+  origin_and_novelty_ceiling: NEW_POST_MERGE_SCOPED_RESULT; ZERO_HISTORICAL_AND_GENERAL_NOVELTY_CREDIT
+  dependency_graph:
+  - DEEP_BI
+  - V5 provenance policy
+  - Deep A-BE proposal boundary
+  repository_readiness_status: PUBLIC_SAFE_POST_MERGE_PROPOSAL_PENDING_REPOSITORY_AUDIT
+  owner_adoption_status: OWNER_ADOPTION_PENDING
+  exact_blocking_burden: External review, independent repository audit, owner adoption, and scoped formalization remain open.
+- pmr_identity: PMR-007-TQDC-1
+  title: Deterministic typed-descent layer and anti-unification boundary
+  round: DEEP_BJ
+  provenance_class: ADMITTED_POST_MERGE_SCOPED_CENTRAL_COMMON_LAYER_AND_ANTI_UNIFICATION_RESULT
+  typed_setting: finite deterministic representation-target maps and independently typed target families
+  statement_and_conclusion: exact recovery iff representation kernel refines target kernel; BA-BI share only a deterministic extensional layer while native probability, symmetry, convexity, holonomy, dynamics, and algebra remain extra
+  theorem_family_and_prior_art_disposition: STANDARD_QUOTIENT_PROFILE_FIBRE_AND_SUBDIRECT_APPLICATION; GENERAL_NOVELTY_ZERO
+  cold_audit_status: REPAIR_REQUIRED_THEN_REPAIRED
+  repair_status: V2 repair complete
+  fresh_rereview_status: PASS at distinct same-model procedural scope; not external independence
+  assumptions: See frozen canonical theorem and model owner; all guards are explicit and scope-bound.
+  proof_status: HUMAN_PROOF_PLUS_EXECUTABLE_SCOPED_CHECK
+  countermodel_status: EXPLICIT_POSITIVE_AND_NEGATIVE_CONTROLS_PRESENT
+  scope_and_nonclaims: No historical identity, metaphysical world truth, personal-ground entailment, integrated champion, meniscus, or closure.
+  source_and_evidence_owners:
+  - stable public proposal artifacts and hashes; private source bytes excluded
+  external_review_status: OPEN
+  historical_identity_relation: NONE
+  origin_and_novelty_ceiling: NEW_POST_MERGE_SCOPED_RESULT; ZERO_HISTORICAL_AND_GENERAL_NOVELTY_CREDIT
+  dependency_graph:
+  - DEEP_BJ
+  - V5 provenance policy
+  - Deep A-BE proposal boundary
+  repository_readiness_status: PUBLIC_SAFE_POST_MERGE_PROPOSAL_PENDING_REPOSITORY_AUDIT
+  owner_adoption_status: OWNER_ADOPTION_PENDING
+  exact_blocking_burden: External review, independent repository audit, owner adoption, and scoped formalization remain open.
+- pmr_identity: PMR-007-NCBD-1
+  title: Modal-role persistence, global-bearer identity, and concreteness bridge
+  round: DEEP_BK
+  provenance_class: ADMITTED_POST_MERGE_SCOPED_CENTRAL_MODAL_BRIDGE_RECONCILIATION_RESULT
+  typed_setting: finite local-occurrence modal bundle with separately supplied global-bearer map
+  assumptions: Declared finite frame, local occurrence domains, independently supplied B_ID map, role, underivability, concreteness, and optional transport guards.
+  statement_and_conclusion: actual underivability, worldwise unique roots, and coherent lineage do not entail one necessary concrete bearer; coverage plus B_ID plus concreteness suffices only for declared-frame persistence
+  proof_status: HUMAN_PROOF_PLUS_EXECUTABLE_SCOPED_CHECK
+  countermodel_status: EXPLICIT_GUARD_DELETION_AND_LOCAL_OCCURRENCE_CONTROLS_PRESENT
+  scope_and_nonclaims: No modal semantics, frame completeness, transworld identity, self-subsistence, Necessary Being, Creatorhood, intellect, personality, Wisdom, or Speech.
+  source_and_evidence_owners:
+  - Rounds 11, 12, 17 and current B4/B5 bridge ledger hashes recorded in ancestry note
+  theorem_family_and_prior_art_disposition: COMPOSITIONAL_BRIDGE_RECONCILIATION; GENERAL_NOVELTY_ZERO
+  cold_audit_status: REPAIR_REQUIRED_THEN_REPAIRED
+  repair_status: V2 repair complete
+  fresh_rereview_status: PASS at distinct same-model procedural scope; not external independence
+  external_review_status: OPEN
+  historical_identity_relation: NONE
+  origin_and_novelty_ceiling: NO_INDEPENDENT_GENERAL_THEOREM_ORIGIN; ZERO_GENERAL_NOVELTY
+  dependency_graph:
+  - ROUND11
+  - ROUND12
+  - ROUND17
+  - B4
+  - B5
+  - V5 provenance policy
+  repository_readiness_status: PUBLIC_SAFE_POST_MERGE_PROPOSAL_PENDING_REPOSITORY_AUDIT
+  owner_adoption_status: OWNER_ADOPTION_PENDING
+  exact_blocking_burden: Modal semantics, B_ID, frame completeness, concreteness, self-subsistence, external review, and owner adoption remain open.
+items:
+- pmr_identity: PMR-007-EGAC-1
+  title: Evidence-grounded architecture comparison and robust champion audit
+  round: DEEP_AL_V2
+  provenance_class: ADMITTED_POST_MERGE_SCOPED_RESULT
+  typed_setting: partial-order comparison of unified-personal A, source-compatible powers/plural B1, and source-extended abstract-order/actualizer C1 architectures
+  assumptions: Frozen neutral/source/world evidence coordinates; no scalar aggregation; open burdens remain unknown
+  statement_and_conclusion: No architecture robustly evidence-dominates both rivals under current evidence; Architecture A is source-intended compatibility leader but rival parity is unbroken
+  proof_status: HUMAN_ARGUMENT_PLUS_FINITE_COMPLETION_CHECK
+  countermodel_status: MATCHED_B1_C1_AND_TARGET_IMPORT_CONTROLS_PRESENT
+  scope_and_nonclaims: No equal posterior, metaphysical possibility, source-world identity, champion, or meniscus claim
+  source_and_evidence_owners:
+  - Candidate G exact parity packet
+  - Deep AF-AK admitted proposals
+  theorem_family_and_prior_art_disposition: CANDIDATE_G_APPLICATION; GENERAL_NOVELTY_ZERO
+  cold_audit_status: REPAIR_REQUIRED_THEN_REPAIRED
+  repair_status: BLOCKING_REPAIRS_COMPLETE
+  fresh_rereview_status: PASS_WITH_NONBLOCKING_EVIDENCE_AND_WORLD_SCOPE_NOTES
+  external_review_status: OPEN
+  historical_identity_relation: NONE
+  origin_and_novelty_ceiling: NEW_POST_MERGE_SCOPED_RESULT; ZERO_GENERAL_NOVELTY
+  dependency_graph:
+  - Candidate G
+  - Deep AF
+  - Deep AG
+  - Deep AK
+  repository_readiness_status: EXTERNAL_REVIEW_REQUIRED
+  owner_adoption_status: OWNER_ADOPTION_PENDING
+  exact_blocking_burden: A-only discriminator, H7/H8, source-world identity, proper-function/Wisdom, and calibrated P6 remain open.
+- pmr_identity: PMR-007-SRIN-1
+  title: Isomorphism-natural semantics, interpretation rigidity, and the H7a boundary
+  round: DEEP_AM_V2
+  provenance_class: ADMITTED_POST_MERGE_SCOPED_RESULT
+  typed_setting: finite relational structures with isomorphism-stable admissible interpretation families
+  assumptions: Finite one-isomorphism-class groupoid, literal content identity, explicit interpretation transport
+  statement_and_conclusion: Natural selector exists iff an admissible interpretation is automorphism-fixed; unique fixedness is relative rigidity and does not entail constitutive semanticity or mentality
+  proof_status: HUMAN_PROOF_PLUS_PRIMARY_AND_DISTINCT_EXECUTABLE_CHECKS
+  countermodel_status: SYMMETRIC_NONCONSTANT, RIGID_IMPERSONAL, KERNEL_REFERENCE_SWAP, DOWNSTREAM_MIND_CONTROLS
+  scope_and_nonclaims: No intrinsic notionality, mentality, proper function, ultimate grammar, source-world, or metaphysical conclusion
+  source_and_evidence_owners:
+  - PRH
+  - Sun et al. OSM
+  - El-Tobgui secondary reconstruction
+  - Deep AI H7 decomposition
+  theorem_family_and_prior_art_disposition: STANDARD_GROUP_ACTION_FIXED_POINT_APPLICATION; GENERAL_NOVELTY_ZERO
+  cold_audit_status: REPAIR_REQUIRED_THEN_REPAIRED
+  repair_status: NINE_BLOCKERS_AND_TWO_SOURCE_CUSTODY_FAILURES_REPAIRED
+  fresh_rereview_status: PASS_WITH_NONBLOCKING_INTRINSICNESS_AND_WORLD_SCOPE_NOTES
+  external_review_status: OPEN
+  historical_identity_relation: NONE
+  origin_and_novelty_ceiling: NEW_POST_MERGE_SCOPED_RESULT; ZERO_GENERAL_NOVELTY
+  dependency_graph:
+  - Deep AI
+  - Candidate G
+  - UG-T4
+  - PRH
+  - OSM
+  repository_readiness_status: EXTERNAL_REVIEW_REQUIRED
+  owner_adoption_status: OWNER_ADOPTION_PENDING
+  exact_blocking_burden: H7a2 constitutive semanticity and H7a3 mental realization remain open.

@@ -1,0 +1,61 @@
+schema: pmr007-deep-bd-lsro-models-v1
+identity: PMR-007-LSRO-1
+status: POST_MERGE_RESEARCH_CANDIDATE
+setting:
+  latent_states: [0, 1]
+  report_symbols: [0, 1]
+  declared_guards:
+    - finite binary latent state
+    - finite binary report roots
+    - conditionally independent reports given latent state
+    - exact observable distribution for the formal identifiability claim
+    - world-level truth orientation not encoded in latent labels
+claims:
+  label_swap_invariance:
+    transform:
+      prior_one: "pi -> 1-pi"
+      source_rows: "Q_i(x|t) -> Q_i(x|1-t)"
+    conclusion: identical observable joint report distribution
+  symmetric_specialization:
+    transform: "(pi,p_i) -> (1-pi,1-p_i)"
+  orientation_anchor:
+    precondition: model identified to exactly one latent-label swap orbit
+    guard: "Q_j(1|1) > Q_j(1|0) from independent current-version evidence"
+    conclusion: exactly one member of the swap orbit survives
+countermodels:
+  - id: BD-CM1
+    name: unanimous anti-reliability
+    parameters:
+      pi: 1/2
+      p: [1/4, 1/4, 1/4]
+    observation: [1, 1, 1]
+    expected_posterior_truth_one: 1/28
+  - id: BD-CM2
+    name: copied-root majority
+    description: one binary root copied into three visible reports
+    exact_likelihood_ratio_when_report_one: 3
+    naive_independent_ratio: 27
+  - id: BD-CM3
+    name: common-cause agreement
+    description: multiple reports deterministic from one hidden root
+  - id: BD-CM4
+    name: stale directional anchor
+    description: positive reliability at version v1 does not orient version v2
+  - id: BD-CM5
+    name: source-world map swap
+    description: two admissible maps exchange latent truth orientation
+  - id: BD-CM6
+    name: additional mixture nonidentifiability
+    description: orientation anchor is conditional on prior component identification up to swap
+  - id: BD-CM7
+    name: displayed-root alias
+    description: displayed source identifiers do not establish acquisition-root independence
+positive_control:
+  id: BD-POS1
+  name: independent calibration anchor
+  description: current-version authenticated calibration data establish one root as strictly positively oriented
+nonclaims:
+  - no actual-world selection
+  - no generic latent-class identifiability theorem
+  - no source authentication or tawatur warrant
+  - no personal-ground or metaphysical conclusion

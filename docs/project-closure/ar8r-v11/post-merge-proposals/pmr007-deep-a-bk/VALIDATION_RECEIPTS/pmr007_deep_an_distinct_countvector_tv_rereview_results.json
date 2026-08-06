@@ -1,0 +1,72 @@
+{
+  "claims": {
+    "candidate_g_p5_p6_source_anchors_match": true,
+    "distinct_finite_distributions_have_event_witness": true,
+    "equal_positive_likelihood_preserves_prior_odds": true,
+    "finite_total_variation_equals_max_event_gap": true,
+    "fixed_support_restriction_has_declared_bayes_factor": true,
+    "misspecified_zero_does_not_identify_unique_rival": true,
+    "prefix_code_ranking_is_reversible_under_valid_codes": true
+  },
+  "counts": {
+    "distinct_pairs_without_event_witness": 0,
+    "likelihood_parity_failures": 0,
+    "likelihood_parity_prior_instances": 7032,
+    "nonunit_likelihood_instances": 43872,
+    "support_restriction_cases": 75,
+    "support_restriction_failures": 0,
+    "tv_event_mismatches": 0,
+    "zero_denominator_cases_skipped_as_undefined_odds": 11970
+  },
+  "finite_universe": {
+    "count_vectors": 56,
+    "distribution_denominator": 5,
+    "distributions": 21,
+    "maximum_sample_length": 5,
+    "model_pairs": 441,
+    "outcomes": 3,
+    "priors": [
+      "1/4",
+      "2/3",
+      "1",
+      "7/3"
+    ]
+  },
+  "method_relation": "independent_count_vector_and_event_subset_implementation",
+  "overall": "PASS",
+  "prefix_code_controls": {
+    "checks": {
+      "A_shorter_in_first": true,
+      "R_shorter_in_second": true,
+      "favor_A_kraft_at_most_one": true,
+      "favor_A_prefix_free": true,
+      "favor_R_kraft_at_most_one": true,
+      "favor_R_prefix_free": true
+    },
+    "favor_A": {
+      "A": "0",
+      "R": "10"
+    },
+    "favor_R": {
+      "A": "10",
+      "R": "0"
+    },
+    "kraft_favor_A": "3/4",
+    "kraft_favor_R": "3/4"
+  },
+  "schema": "PMR007_DEEP_AN_DISTINCT_COUNTVECTOR_TV_REREVIEW_RESULTS_V1",
+  "scope_notes": [
+    "iid count-vector likelihood only",
+    "finite registered evidence spaces only",
+    "no canonical prior or coding policy supplied",
+    "no predictive-to-metaphysical transfer",
+    "same-program procedural rereview; not external review"
+  ],
+  "source_anchor_check": {
+    "anchors_checked": 5,
+    "anchors_missing": [],
+    "relative_file": "candidate-g/000069__ar7-reopened-audit-continuation__payload__ar7-complete__CANDIDATES__G-unity-agency-wisdom__FORMAL_RECONSTRUCTION.md",
+    "sha256": "6b3828ec336a3c2ce442232b4b1fc4c8a00920b481485f82573a569a59c50930",
+    "status": "PASS"
+  }
+}

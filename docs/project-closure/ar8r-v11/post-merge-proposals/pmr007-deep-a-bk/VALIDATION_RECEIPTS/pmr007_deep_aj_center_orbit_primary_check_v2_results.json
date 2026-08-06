@@ -1,0 +1,31 @@
+{
+  "claims": {
+    "added_center_marker_changes_reduct_and_can_create_singleton_orbit": true,
+    "fixedness_does_not_logically_force_personality": true,
+    "invariant_subsets_exactly_orbit_unions": true,
+    "symmetric_transitive_reduct_blocks_unique_center": true,
+    "unique_structural_controller_can_be_fixed": true
+  },
+  "explicit_controls": {
+    "center_enriched_orbits": [
+      [
+        0
+      ],
+      [
+        1,
+        2,
+        3
+      ]
+    ],
+    "symmetric_singleton_invariant": false,
+    "unique_controller_fixed": true
+  },
+  "failures": [],
+  "host_count": 4,
+  "overall": "PASS",
+  "schema": "PMR007_DEEP_AJ_PRIMARY_ORBIT_CHECK_RESULTS_V2",
+  "structures_checked": 16384,
+  "structures_with_at_least_one_fixed_point": 15680,
+  "target_subsets_checked": 262144,
+  "transitive_structures": 32
+}

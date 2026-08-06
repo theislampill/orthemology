@@ -1,0 +1,52 @@
+schema: pmr007-deep-p-admission-overlay-v1
+identity: PMR-007-TRPF-1
+title: Target relabeling and epistemic proper-function authority
+status: ADMITTED_POST_MERGE_SCOPED_CENTRAL_BRIDGE_NEGATIVE_RESULT
+historical_identity: NONE
+proof_status: HUMAN_PROOF_PLUS_FINITE_REGRESSION_PLUS_RELATIONAL_REREVIEW
+countermodel_status: EXPLICIT_CONTROLS_RETAINED
+cold_audit:
+  disposition: REPAIR_REQUIRED
+  blocking_findings: 8
+  repaired: 8
+fresh_rereview:
+  disposition: PASS_WITH_NONBLOCKING_MODEL_CLASS_SOURCE_AND_LITERATURE_NOTES
+  external_independence: false
+admitted_scope:
+  - neutral_reduct_invariant_predicates_do_not_identify_truth_linked_epistemic_proper_function_under_declared_pair_closure
+  - complete_neutral_trajectory_does_not_break_target_relabeling_symmetry
+  - truth_specific_selection_design_plantinga_and_fitrah_accounts_require_their_declared_extra_relations
+nonclaims:
+  - biological_or_organizational_function_does_not_exist
+  - selected_effect_cannot_be_truth_directed
+  - both_interpretation_expansions_are_metaphysically_realizable
+  - personal_designer_or_wisdom_is_established_or_refuted
+  - fitrah_account_is_neutral_or_arabic_primary_verified_here
+  - general_mathematical_novelty
+family_relation:
+  relation: APPLICATION_AND_COMPOSITIONAL_CONSEQUENCE
+  ancestors:
+    - AR8R-T31
+    - AR8R-T55
+    - CANDIDATE_E
+    - PMR-007-ETRP-1
+    - PMR-007-ANH-1
+    - PMR-007-GUPP-1
+novelty:
+  general_mathematics: 0
+  application_or_architecture_significance: CENTRAL_BRIDGE_NARROWING
+world_directed_advance: NONE
+source_status:
+  osm_use: VERIFIED_BOUNDED_TESTED_CLASS_MECHANISM_DISCRIMINATION
+  fitrah_use: TRACK_N_CONDITIONAL_ONLY
+external_review: OPEN
+owner_adoption: PENDING
+repository_proposal_status: PROPOSAL_ELIGIBLE_AFTER_OWNER_REVIEW
+candidate_effects:
+  candidate_e: HORN_DISCRIMINATION_SHARPENED
+  candidate_g: NORM_SOURCE_DOES_NOT_BREAK_PERSONALITY_PARITY_WITHOUT_EXTRA_EVIDENCE
+  transcendental_ascent: PROPER_FUNCTION_AND_WISDOM_BRIDGE_REMAINS_OPEN
+strongest_surviving_rival: FORMALLY_COUPLED_IMPERSONAL_ORDER_POWERS_ARCHITECTURE_WITH_PRIMITIVE_OR_NATURALIZED_NORM
+integrated_champion: NONE
+meniscus: MENISCUS_NOT_REACHED
+natural_closure: NOT_REACHED

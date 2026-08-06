@@ -22,6 +22,13 @@ source_packets:
     disposition: EXACT_SANITIZED_PROPOSAL_SNAPSHOT_EXTERNAL_REVIEW_AND_OWNER_ADOPTION_REQUIRED
     receipt: provenance/AR8R-PMR007-DEEP-A-AP-PROPOSAL-RECEIPT-V1.yaml
     execution_receipt: provenance/AR8R-PMR007-DEEP-A-AP-EXECUTION-RECEIPT-V1.yaml
+  - id: PMR007_DEEP_A_THROUGH_BK
+    exact_archive_members: 1187
+    indexed_results: 73
+    deep_results: 63
+    disposition: EXACT_SANITIZED_PROPOSAL_SNAPSHOT_EXTERNAL_REVIEW_AND_OWNER_ADOPTION_REQUIRED
+    receipt: provenance/AR8R-PMR007-DEEP-A-BK-PROPOSAL-RECEIPT-V1.yaml
+    execution_receipt: provenance/AR8R-PMR007-DEEP-BF-BK-EXECUTION-RECEIPT-V1.yaml
 pmr001_results:
   - {id: PMR-M3-01, status: PROVED_CONDITIONAL_WITH_VALIDATED_COUNTERMODELS, repository_effect: SOURCE_ONLY}
   - {id: PMR-R5-01, status: VALIDATED_RIVAL_COMPARISON, repository_effect: SOURCE_ONLY}
@@ -74,6 +81,22 @@ pmr007_deep_a_through_ap_snapshot:
   meniscus: MENISCUS_NOT_REACHED
   natural_closure: NOT_REACHED
   executable_reproduction: PARTIAL_WITH_PRECISE_SOURCE_AND_SIDECAR_BOUNDARIES
+pmr007_deep_a_through_bk_snapshot:
+  path: post-merge-proposals/pmr007-deep-a-bk
+  result_index: post-merge-proposals/pmr007-deep-a-bk/PROPOSED_RESULT_INDEX.yaml
+  indexed_results: 73
+  deep_a_through_bk_results: 63
+  exact_archive_members: 1187
+  historical_identity: NONE
+  owner_adoption: PENDING
+  external_review: OPEN
+  repository_readiness: EXTERNAL_REVIEW_REQUIRED
+  general_novelty_credit: NOT_GRANTED
+  duplicate_credit_effect: NONE
+  integrated_champion: NONE
+  meniscus: MENISCUS_NOT_REACHED
+  natural_closure: NOT_REACHED
+  executable_reproduction: INDEPENDENTLY_REPRODUCED_FROM_PRIVATE_CUSTODY_COMPANION_WITH_PUBLIC_LAYOUT_BOUNDARY
 campaign_state:
   integrated_champion: NONE
   meniscus: MENISCUS_NOT_REACHED

@@ -1,0 +1,38 @@
+schema: PMR007_DEEP_AP_ADMISSION_OVERLAY_V1
+identity: PMR-007-SWRI-1
+round: PMR-007-DEEP-AP
+canonical_version: V2
+status: ADMITTED_POST_MERGE_SCOPED_CENTRAL_SOURCE_WORLD_REFERENT_RESULT
+historical_identity: NONE
+repository_authority: 428187cebf7644ff8bf9522455a560eb82d35964
+proof_status: HUMAN_PROOF_PLUS_EXECUTABLE_FINITE_CHECKS
+countermodel_status: COMPLETE_AT_DECLARED_SCOPE
+cold_audit:
+  disposition: REPAIR_REQUIRED
+  blocking_findings: 10
+  repaired: 10
+fresh_rereview:
+  disposition: PASS_WITH_NONBLOCKING_WORLD_AND_SOURCE_AUTHORITY_NOTES
+  external_independence: false
+admitted_results:
+- nonempty_world_adequate_role_preserving_interpretation_family_implies_conditional_world_role_realizer
+- unique_relative_referent_iff_candidate_denotation_fibre_singleton
+- under_role_completeness_denotation_fibre_equals_world_role_bearers
+- hidden_map_restriction_can_import_apparent_referent_uniqueness
+- within_world_unique_role_bearer_does_not_select_actual_candidate_world
+nonclaims:
+- no_cross_sort_numerical_identity
+- no_Arabic_primary_or_source_specialist_confirmation
+- no_actual_world_or_unique_actual_world
+- no_complete_profile_reflection
+- no_neutral_Necessary_Being_Creator_personality_Wisdom_or_Speech
+- no_integrated_champion_or_meniscus
+theorem_family:
+  relation: CENTRAL_SOURCE_WORLD_SPECIALIZATION_OF_INTERPRETATION_AND_FIBRE_FAMILIES
+  general_mathematical_novelty: 0
+external_review: OPEN
+owner_adoption: PENDING
+repository_proposal_status: PUBLIC_SAFE_POST_MERGE_PROPOSAL_PENDING_REPOSITORY_AUDIT
+integrated_champion: NONE
+meniscus: MENISCUS_NOT_REACHED
+natural_closure: NOT_REACHED

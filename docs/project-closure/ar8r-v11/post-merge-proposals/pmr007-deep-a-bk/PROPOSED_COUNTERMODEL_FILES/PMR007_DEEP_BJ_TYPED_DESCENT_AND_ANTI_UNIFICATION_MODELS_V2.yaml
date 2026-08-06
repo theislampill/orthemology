@@ -1,0 +1,40 @@
+schema: pmr007-deep-bj-typed-descent-models-v2
+identity: PMR-007-TQDC-1
+version: V2
+scope:
+  finite: true
+  deterministic: true
+  attained_image_only: true
+  target_independently_supplied: true
+core:
+  exact_descent: ker_r_subset_ker_f
+  canonical_target_quotient: X_mod_ker_f
+  target_family: intersection_of_kernels_and_attained_subdirect_image
+  deterministic_coarsening: cannot_create_exact_recoverability
+substantive_reduction_guards:
+- preserve_native_typed_objects
+- preserve_admissible_maps
+- preserve_load_bearing_invariant
+- preserve_failure_class
+- no_answer_oracle_target_encoding
+native_extra_structure:
+  BA: transition_congruence
+  BB: dynamic_invariance_and_typed_null_model
+  BC_AO: probability_kernel_prior_loss_and_decision_semantics
+  BD: latent_group_action_and_anchor_eligibility
+  BE: full_joint_probability_interaction
+  BF: nonnegative_cone_factorization_geometry
+  BH: edge_cocycle_and_cycle_holonomy
+  BI: algebraic_congruence
+anti_unification_witnesses:
+  same_support_different_nonnegative_rank: true
+  equal_marginals_different_joint: true
+  same_vertex_partition_different_cycle_holonomy: true
+  set_equivalence_not_algebra_congruence: true
+nonclaims:
+- reductive_common_calculus_for_BA_through_BI
+- stochastic_or_causal_sufficiency
+- source_truth_norm_authority_or_world_adequacy
+- explanatory_or_derivational_unity
+- bearer_subject_personality_or_Wisdom
+- general_mathematical_novelty

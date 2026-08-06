@@ -1,0 +1,37 @@
+schema: pmr007-deep-ar-provenance-root-evidence-models-v2
+identity: PMR-007-PREC-1
+status: REPAIRED_POST_MERGE_RESEARCH_CANDIDATE
+root_semantics:
+  root: authenticated_acquisition_event_or_dependency_root
+  displayed_label: nonauthoritative_until_root_authentication
+  root_partition: independently_supplied_equivalence_relation
+  candidate_distributions: finite_probability_laws_for_A_and_R
+message_semantics:
+  retransmission: common_candidate_independent_markov_channel_from_root_observation
+  exact_copy: faithful_likelihood_ratio_sufficient_channel
+  paraphrase_or_format_conversion: common_channel_with_possible_information_loss
+  candidate_dependent_transmitter: changed_experiment_not_covered
+independence_semantics:
+  condition: conditional_independence_given_candidate
+  joint_likelihood_ratio: product_of_root_likelihood_ratios
+  finite_positive_log_evidence: sum_of_root_log_likelihood_ratios
+  common_cause_copies: one_root_not_multiple_independent_roots
+controls:
+  - id: AR-CM-COPY-COUNT
+    description: N exact copies of one root observation preserve one likelihood ratio; naive exponentiation produces an unsupported ratio.
+  - id: AR-CM-ROOT-ALIAS
+    description: distinct displayed labels denote one actual root.
+  - id: AR-CM-ROOT-MERGE
+    description: one displayed label conflates multiple actual roots.
+  - id: AR-CM-CANDIDATE-CHANNEL
+    description: candidate-dependent retransmission can manufacture discrimination and defines a changed experiment.
+  - id: AR-CM-DEPENDENT-ROOTS
+    description: correlated roots do not justify product likelihood without the declared conditional-independence factorization.
+  - id: AR-CM-WARRANT-NONTRANSFER
+    description: source independence does not entail truth, tawatur warrant, recipient authority, applicability, or common knowledge.
+nonclaims:
+  - no_root_authentication_from_labels
+  - no_truth_from_root_multiplicity
+  - no_tawatur_warrant_from_graph_independence
+  - no_recipient_adoption_or_authorization
+  - no_general_novelty

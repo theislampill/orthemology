@@ -1,0 +1,41 @@
+schema: pmr007-deep-bi-finite-articulability-models-v2
+identity: PMR-007-FTASA-1
+version: V2
+scope:
+  content_domain: previously_supplied_finite_boolean_algebra
+  semantics: previously_supplied_homomorphism
+  articulability: surjectivity_relative_to_content_domain
+  translation: exact_only_under_commuting_semantic_guard
+result:
+  semantic_equivalence: kernel_congruence
+  quotient: isomorphic_to_semantic_image
+  surjective_case: quotient_isomorphic_to_B
+controls:
+- finite_B_articulability_without_mentality
+- finite_B_articulability_without_Speech
+- same_algebra_different_world_interpretation
+- same_content_different_created_expression
+- same_token_type_different_occurrence_context
+- same_algebra_different_source_authority
+- same_bytes_different_version_applicability
+- compositional_syntax_with_primitive_semantic_map
+anti_unification:
+  distinct_coordinates:
+  - token_form
+  - occurrence_context
+  - semantic_content
+  - translation
+  - world_reference
+  - source_authority
+  - provenance
+  - version_applicability
+  - intentional_authorship
+  - Speech
+nonclaims:
+- absolute_or_infinite_articulability
+- natural_language_completeness
+- derivation_of_semantics_from_syntax
+- uncreated_or_divine_content
+- mentality_personality_agency_Wisdom_or_Speech
+- source_truth_or_actual_world_selection
+- general_mathematical_novelty

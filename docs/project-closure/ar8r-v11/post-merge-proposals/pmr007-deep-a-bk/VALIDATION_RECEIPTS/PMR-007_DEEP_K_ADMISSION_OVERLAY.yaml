@@ -1,0 +1,50 @@
+schema: PMR007_DEEP_K_ADMISSION_OVERLAY_V1
+identity: PMR-007-WFB-1
+round: PMR-007-DEEP-K
+version: V2
+status: ADMITTED_POST_MERGE_SCOPED_SOURCE_FORMAL_CENTRAL_BRIDGE_RESULT
+historical_identity: NONE
+repository_mutation: false
+accepted_results:
+  - proper_function_representation_and_reliability_do_not_entail_wise_directed_choice
+  - knowledge_will_and_power_do_not_entail_objective_fittingness_or_wisdom
+  - wise_directed_choice_does_not_entail_effective_execution
+  - one_effective_episode_does_not_entail_stable_wisdom_attribute
+  - distributed_guard_availability_does_not_entail_one_common_wise_bearer
+  - translated_source_predication_and_neutral_role_derivation_remain_distinct
+role_contracts:
+  wise_directed_choice: [AG, K, F, W_F, M, OWN]
+  effective_wise_episode: [AG, K, F, W_F, M, OWN, C, X]
+  stable_wisdom_eligibility: [AG, K, F, W_F, M, OWN, STAB]
+nonclaims:
+  - existence_of_any_neutral_bearer_satisfying_the_role_contract
+  - reduction_of_theological_Wisdom_to_the_contract
+  - Arabic_primary_verification
+  - neutral_personal_or_necessary_ground
+central_bridge_changes:
+  proper_function_to_wisdom: SHOWN_INDEPENDENT
+  KWP_to_wisdom: SHOWN_INDEPENDENT
+  wise_choice_to_execution: SHOWN_INDEPENDENT
+  episode_to_stable_attribute: SHOWN_INDEPENDENT
+  Track_N_wise_predication: SOURCE_CONDITIONAL_ONLY
+cold_audit:
+  disposition: REPAIR_REQUIRED
+  blocking_findings: [DK-F01, DK-F02, DK-F03, DK-F04, DK-F05]
+  repaired: true
+fresh_rereview:
+  disposition: PASS_WITH_NONBLOCKING_CONCEPT_AND_SOURCE_NOTES
+  exact_two_bearer_systems: 4096
+  global_without_common_bearer: 602
+  random_bearer_systems: 60000
+  failures: 0
+source_custody:
+  result: PASS
+  Asfahani_role: TRANSLATED_PRIMARY_ACCESS
+  Ujayri_role: CONTEMPORARY_ATHARI_SYNTHESIS
+strongest_surviving_rival: IMPERSONAL_TRUTH_TRACKING_POWERS_FIELD_WITH_OBJECTIVE_OR_PRIMITIVE_FITTINGNESS
+theorem_family: TYPED_ROLE_CONTRACT_AND_COMMON_BEARER_APPLICATION
+general_mathematical_novelty_credit: 0
+historical_theorem_credit: 0
+external_review: OPEN
+owner_adoption: PENDING
+repository_proposal_status: ELIGIBLE_AFTER_SANITIZATION_AND_OWNER_REVIEW
