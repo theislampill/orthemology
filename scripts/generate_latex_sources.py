@@ -25,6 +25,7 @@ LONG_TABLE_TOTAL_CONTENT_THRESHOLD = 1500
 LONG_TABLE_MAX_ROW_CONTENT_THRESHOLD = 800
 BREAKABLE_TABLE_COLUMN_THRESHOLD = 3
 VERBATIM_SCRIPTSIZE_LINE_THRESHOLD = 88
+VERBATIM_TINY_LINE_THRESHOLD = 96
 DISPLAY_MATH_MULTLINE_THRESHOLD = 120
 DISPLAY_MATH_TARGET_WIDTH = 72
 DISPLAY_MATH_LAYOUT_BREAK = "\\\\\n"
@@ -1274,11 +1275,12 @@ def render_markdown(markdown, source_name="<memory>", root=None):
                     (len(line) for line in content.splitlines()),
                     default=0,
                 )
-                font_size = (
-                    "scriptsize"
-                    if longest_line > VERBATIM_SCRIPTSIZE_LINE_THRESHOLD
-                    else "small"
-                )
+                if longest_line > VERBATIM_TINY_LINE_THRESHOLD:
+                    font_size = "fontsize{6}{7}\\selectfont"
+                elif longest_line > VERBATIM_SCRIPTSIZE_LINE_THRESHOLD:
+                    font_size = "scriptsize"
+                else:
+                    font_size = "small"
                 output.append(
                     "\n\\needspace{3\\baselineskip}\n"
                     "\\begingroup\\%s\n\\begin{verbatim}\n%s\n\\end{verbatim}\n\\endgroup\n"

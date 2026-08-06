@@ -681,7 +681,7 @@ class MarkdownRenderingTests(unittest.TestCase):
             source_name="long-verbatim.md",
         )
 
-        self.assertIn(r"\begingroup\scriptsize", rendered)
+        self.assertIn(r"\begingroup\fontsize{6}{7}\selectfont", rendered)
 
     def test_references_switch_to_ragged_right_for_narrow_columns(self):
         generator = load_generator()
