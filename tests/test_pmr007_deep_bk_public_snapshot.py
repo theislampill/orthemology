@@ -1,7 +1,10 @@
 import hashlib
 import importlib.util
+import json
 import pathlib
 import shutil
+import subprocess
+import sys
 import tempfile
 import unittest
 
@@ -247,6 +250,32 @@ class Pmr007DeepBkPublicSnapshotTests(unittest.TestCase):
         self.assertFalse(crosswalk_receipt["crosswalk_values_exact"])
         self.assertEqual(authority_receipt["result"], "FAIL")
         self.assertFalse(authority_receipt["authority_ceiling_exact"])
+
+    def test_non_utf8_root_manifest_returns_structured_fail_without_traceback(self):
+        validator = load_validator()
+        with tempfile.TemporaryDirectory() as temporary:
+            copied = self.copy_repo(temporary)
+            manifest = copied / validator.SNAPSHOT_REL / "SHA256SUMS"
+            manifest.write_bytes(b"\xff\xfe\xfd")
+
+            completed = subprocess.run(
+                [
+                    sys.executable,
+                    str(copied / "scripts/validate_pmr007_deep_bk_public_snapshot.py"),
+                    "--root",
+                    str(copied),
+                ],
+                text=True,
+                encoding="utf-8",
+                capture_output=True,
+                check=False,
+            )
+
+        receipt = json.loads(completed.stdout)
+        self.assertEqual(completed.returncode, 1)
+        self.assertEqual(completed.stderr, "")
+        self.assertEqual(receipt["result"], "FAIL")
+        self.assertGreater(receipt["snapshot_manifest_read_errors"], 0)
 
 
 if __name__ == "__main__":

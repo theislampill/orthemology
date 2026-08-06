@@ -211,6 +211,7 @@ def validate(root=ROOT):
     snapshot_manifest_malformed_rows = 0
     snapshot_manifest_unsafe_paths = 0
     snapshot_manifest_duplicate_paths = 0
+    snapshot_manifest_read_errors = 0
     manifest_path = snapshot / "SHA256SUMS"
     if not manifest_path.is_file():
         issues.append("snapshot SHA256SUMS is missing")
@@ -218,14 +219,22 @@ def validate(root=ROOT):
         manifest_row_count = 0
         listed_paths = set()
     else:
-        manifest = _manifest_rows(manifest_path)
-        manifest_rows = manifest["rows"]
-        manifest_row_count = manifest["row_count"]
-        listed_paths = manifest["listed_paths"]
-        snapshot_manifest_malformed_rows = manifest["malformed_rows"]
-        snapshot_manifest_unsafe_paths = manifest["unsafe_paths"]
-        snapshot_manifest_duplicate_paths = manifest["duplicate_paths"]
-        issues.extend(manifest["issues"])
+        try:
+            manifest = _manifest_rows(manifest_path)
+        except (OSError, UnicodeDecodeError):
+            snapshot_manifest_read_errors = 1
+            issues.append("snapshot SHA256SUMS is not readable UTF-8 text")
+            manifest_rows = []
+            manifest_row_count = 0
+            listed_paths = set()
+        else:
+            manifest_rows = manifest["rows"]
+            manifest_row_count = manifest["row_count"]
+            listed_paths = manifest["listed_paths"]
+            snapshot_manifest_malformed_rows = manifest["malformed_rows"]
+            snapshot_manifest_unsafe_paths = manifest["unsafe_paths"]
+            snapshot_manifest_duplicate_paths = manifest["duplicate_paths"]
+            issues.extend(manifest["issues"])
 
     actual_paths = set()
     for path in snapshot.rglob("*"):
@@ -239,6 +248,7 @@ def validate(root=ROOT):
         and snapshot_manifest_malformed_rows == 0
         and snapshot_manifest_unsafe_paths == 0
         and snapshot_manifest_duplicate_paths == 0
+        and snapshot_manifest_read_errors == 0
     )
     if not snapshot_manifest_coverage_exact:
         issues.append("snapshot SHA256SUMS coverage mismatch")
@@ -433,6 +443,7 @@ def validate(root=ROOT):
         "snapshot_manifest_duplicate_paths": snapshot_manifest_duplicate_paths,
         "snapshot_manifest_unsafe_paths": snapshot_manifest_unsafe_paths,
         "snapshot_manifest_malformed_rows": snapshot_manifest_malformed_rows,
+        "snapshot_manifest_read_errors": snapshot_manifest_read_errors,
         "snapshot_hash_mismatches": snapshot_hash_mismatches,
         "snapshot_non_utf8_files": snapshot_non_utf8_files,
         "repository_source_rows": len(repository_sources),
