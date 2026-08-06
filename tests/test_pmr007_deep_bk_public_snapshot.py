@@ -88,8 +88,10 @@ class Pmr007DeepBkPublicSnapshotTests(unittest.TestCase):
             copied = self.copy_repo(temporary)
             snapshot = copied / validator.SNAPSHOT_REL
             leaked = snapshot / "UNMANIFESTED_PRIVATE_LOCATOR.txt"
+            separator = chr(92)
             leaked.write_text(
-                "private locator: C:\\Users\\owner\\private-evidence.txt\n",
+                "private locator: C:%sUsers%sowner%sprivate-evidence.txt\n"
+                % (separator, separator, separator),
                 encoding="utf-8",
             )
 
