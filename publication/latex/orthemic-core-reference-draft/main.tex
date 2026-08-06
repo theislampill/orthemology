@@ -1,6 +1,6 @@
 % GENERATED FILE — DO NOT EDIT; authoritative prose is Markdown.
 % source: theory/orthemic-core-formalization.md
-% source-sha256: 3ce0ab7f5a5d02f448b75e7a01067a94548c4fb5656a46813eddca8cbf5c011e
+% source-sha256: 53d800477d0fbe328a6a460b11f92e704b124bd25518fa00acc2093297954d70
 % source: theory/orthemic-multi-actor-conflict-note.md
 % source-sha256: aa7b1378b1f1983c3ec406fb2533a68c6242881c2d04bf34470632b37359d7b9
 % source-qualification: research-stage-draft
@@ -522,12 +522,9 @@ Excluded by construction: \textbf{V1} (result correctness), \textbf{V2b-T} (fact
 \[
 \begin{aligned}
 \operatorname{ReqPath}(e)
-&= \operatorname{CorePath} \cap
-\operatorname{RequiredBy}(
-A(e),\operatorname{episodeShape}(e),\\
-&\qquad \operatorname{riskClass}(e),
-\operatorname{claims}(e),\operatorname{governance}(e)
-).
+&= \operatorname{CorePath}\cap \operatorname{RequiredBy}(\\
+&\qquad A(e),\operatorname{episodeShape}(e),\operatorname{riskClass}(e),\\
+&\qquad \operatorname{claims}(e),\operatorname{governance}(e)).
 \end{aligned}
 \]
 Minimum derivation rules: \textbf{V3c} is required exactly when $\operatorname{MetaTok}(e) \neq \emptyset$ (the M1 zero-burden rule is preserved: $\operatorname{MetaTok}(e) = \emptyset \Rightarrow \operatorname{V3c} \notin \operatorname{ReqPath}(e)$); \textbf{V4a} is required when the episode selects or authorizes a route; \textbf{V5} is required when the episode makes a closure/completion claim or dispositions residuals; \textbf{V6} is required when $A(e)$ or the risk class predeclares a robustness obligation. \textbf{``Not tested'' is not ``not applicable'':} every verdict excluded from $\operatorname{ReqPath}(e)$ carries a recorded applicability reason on the episode record. ($\operatorname{ReqPath}(e)$ is the sole pathway requirement function; the earlier separately recorded applicability set $\operatorname{App}(\cdot)$ is retired by Decision 0005 — nothing it expressed is lost, since exclusions now live in the per-verdict \texttt{not-applicable} statuses and reasons.)
@@ -542,17 +539,21 @@ Minimum derivation rules: \textbf{V3c} is required exactly when $\operatorname{M
 \{\mathrm{pass},\mathrm{fail},\mathrm{undetermined},
 \mathrm{notApplicable}\}.
 \]
+For the compact display below only, write $R_e := \operatorname{ReqPath}(e)$ and $S_i(e):=\operatorname{Status}_i(e)$.
+
 
 \[
 \begin{aligned}
-\operatorname{PathwayAdequate}(e)
-&\iff \forall V_i \in \operatorname{ReqPath}(e),
-\ \operatorname{Status}_i(e)=\mathrm{pass},\\
-\operatorname{PathwayDefective}(e)
-&\iff \exists V_i \in \operatorname{ReqPath}(e),
-\ \operatorname{Status}_i(e)=\mathrm{fail},\\
-\operatorname{PathwayUndetermined}(e)
-&\iff \text{no required verdict fails and at least one is undetermined}.
+&\operatorname{PathwayAdequate}(e)\\
+&\qquad\iff \forall V_i \in R_e,
+S_i(e)=\mathrm{pass},\\
+&\operatorname{PathwayDefective}(e)\\
+&\qquad\iff \exists V_i \in R_e,
+S_i(e)=\mathrm{fail},\\
+&\operatorname{PathwayUndetermined}(e)\\
+&\qquad\iff \neg\operatorname{PathwayDefective}(e)\\
+&\qquad \wedge\exists V_i \in R_e:
+S_i(e)=\mathrm{undetermined}.
 \end{aligned}
 \]
 A missing assessment is \texttt{undetermined} — never silently counted as pass, never silently removed as not-applicable.
@@ -727,14 +728,16 @@ Several actors' episodes can address ONE shared occurrence lineage with analysis
 \needspace{3\baselineskip}\item $\operatorname{Conflict}_m(\mathcal{G}_\alpha, \mathcal{G}_\beta)$ / $\operatorname{Compat}_m(\mathcal{G}_\alpha, \mathcal{G}_\beta)$ — WELL-TYPED across profile spaces: the two target sets live in different spaces ($\mathcal{G}_\alpha \subseteq \Pi_{A_\alpha}$, $\mathcal{G}_\beta \subseteq \Pi_{A_\beta}$), so they are never compared by bare set intersection. With $\operatorname{Reach}(m)$ the occurrences reachable from $m$ in the successor structure,
 
 \end{itemize}
+For this display only, write $G_\alpha:=\mathcal{G}_\alpha$ and $G_\beta:=\mathcal{G}_\beta$.
+
 
 \[
 \begin{aligned}
-\operatorname{Compat}_m(\mathcal{G}_\alpha,\mathcal{G}_\beta)
-&\iff \exists m' \in \operatorname{Reach}(m):
-O^*(m';A_\alpha)\in\mathcal{G}_\alpha
-\wedge O^*(m';A_\beta)\in\mathcal{G}_\beta,\\
-\operatorname{Conflict}_m(\mathcal{G}_\alpha,\mathcal{G}_\beta)
+\operatorname{Compat}_m(G_\alpha,G_\beta)
+&\iff \exists m' \in \operatorname{Reach}(m):\\
+&\qquad O^*(m';A_\alpha)\in G_\alpha\\
+&\qquad \wedge O^*(m';A_\beta)\in G_\beta,\\
+\operatorname{Conflict}_m(G_\alpha,G_\beta)
 &\iff \text{no such reachable }m'\text{ exists}.
 \end{aligned}
 \]

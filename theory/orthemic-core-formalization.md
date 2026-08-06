@@ -571,12 +571,9 @@ untested verdict by omitting it:
 ```math
 \begin{aligned}
 \operatorname{ReqPath}(e)
-&= \operatorname{CorePath} \cap
-\operatorname{RequiredBy}(
-A(e),\operatorname{episodeShape}(e),\\
-&\qquad \operatorname{riskClass}(e),
-\operatorname{claims}(e),\operatorname{governance}(e)
-).
+&= \operatorname{CorePath}\cap \operatorname{RequiredBy}(\\
+&\qquad A(e),\operatorname{episodeShape}(e),\operatorname{riskClass}(e),\\
+&\qquad \operatorname{claims}(e),\operatorname{governance}(e)).
 \end{aligned}
 ```
 
@@ -617,16 +614,22 @@ accordingly an open parameter, not "closed."
 \mathrm{notApplicable}\}.
 ```
 
+For the compact display below only, write
+$R_e := \operatorname{ReqPath}(e)$ and
+$S_i(e):=\operatorname{Status}_i(e)$.
+
 ```math
 \begin{aligned}
-\operatorname{PathwayAdequate}(e)
-&\iff \forall V_i \in \operatorname{ReqPath}(e),
-\ \operatorname{Status}_i(e)=\mathrm{pass},\\
-\operatorname{PathwayDefective}(e)
-&\iff \exists V_i \in \operatorname{ReqPath}(e),
-\ \operatorname{Status}_i(e)=\mathrm{fail},\\
-\operatorname{PathwayUndetermined}(e)
-&\iff \text{no required verdict fails and at least one is undetermined}.
+&\operatorname{PathwayAdequate}(e)\\
+&\qquad\iff \forall V_i \in R_e,
+S_i(e)=\mathrm{pass},\\
+&\operatorname{PathwayDefective}(e)\\
+&\qquad\iff \exists V_i \in R_e,
+S_i(e)=\mathrm{fail},\\
+&\operatorname{PathwayUndetermined}(e)\\
+&\qquad\iff \neg\operatorname{PathwayDefective}(e)\\
+&\qquad \wedge\exists V_i \in R_e:
+S_i(e)=\mathrm{undetermined}.
 \end{aligned}
 ```
 
@@ -829,13 +832,16 @@ indices, **not a new formal addition**:
   set intersection. With $\operatorname{Reach}(m)$ the occurrences reachable from $m$
   in the successor structure,
 
+For this display only, write
+$G_\alpha:=\mathcal{G}_\alpha$ and $G_\beta:=\mathcal{G}_\beta$.
+
 ```math
 \begin{aligned}
-\operatorname{Compat}_m(\mathcal{G}_\alpha,\mathcal{G}_\beta)
-&\iff \exists m' \in \operatorname{Reach}(m):
-O^*(m';A_\alpha)\in\mathcal{G}_\alpha
-\wedge O^*(m';A_\beta)\in\mathcal{G}_\beta,\\
-\operatorname{Conflict}_m(\mathcal{G}_\alpha,\mathcal{G}_\beta)
+\operatorname{Compat}_m(G_\alpha,G_\beta)
+&\iff \exists m' \in \operatorname{Reach}(m):\\
+&\qquad O^*(m';A_\alpha)\in G_\alpha\\
+&\qquad \wedge O^*(m';A_\beta)\in G_\beta,\\
+\operatorname{Conflict}_m(G_\alpha,G_\beta)
 &\iff \text{no such reachable }m'\text{ exists}.
 \end{aligned}
 ```
