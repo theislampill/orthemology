@@ -34,22 +34,72 @@ EQUATION_REL = (
     / "post-merge-proposals/PMR007-DEEP-BE-EQUATION-PRESENTATION-CORRECTION.md"
 )
 PRIVATE_PATTERN = re.compile(
-    r"(?:[A-Za-z]:[\\/](?:Users|workspace)[\\/]|/mnt/data/|sandbox:/|chatgpt\.com/c/)"
+    r"(?:[A-Za-z]:[\\/](?:Users|workspace)[\\/]|/mnt/data/|sandbox:/|file://|"
+    r"chatgpt\.com/(?:c|g)/|data-message-id|screen-threadFlyOut)"
 )
+SHA256_PATTERN = re.compile(r"[0-9a-f]{64}")
+EXPECTED_SNAPSHOT_FILES = 1186
 
 
 def sha256(path):
     return hashlib.sha256(path.read_bytes()).hexdigest()
 
 
+def _safe_manifest_path(raw):
+    relative = raw.strip()
+    if relative.startswith("*"):
+        relative = relative[1:]
+    if not relative or "\\" in relative or re.match(r"^[A-Za-z]:", relative):
+        return None
+    candidate = pathlib.PurePosixPath(relative)
+    if (
+        candidate.is_absolute()
+        or relative != candidate.as_posix()
+        or any(part in {"", ".", ".."} for part in candidate.parts)
+        or candidate == pathlib.PurePosixPath("SHA256SUMS")
+    ):
+        return None
+    return candidate.as_posix()
+
+
 def _manifest_rows(path):
     rows = []
+    row_count = 0
+    malformed_rows = 0
+    unsafe_paths = 0
+    duplicate_paths = 0
+    listed_paths = set()
+    parse_issues = []
     for line_number, line in enumerate(path.read_text(encoding="utf-8").splitlines(), 1):
         if not line.strip():
             continue
-        digest, relative = line.split(None, 1)
-        rows.append((line_number, digest, relative.strip()))
-    return rows
+        row_count += 1
+        parts = line.split(None, 1)
+        if len(parts) != 2 or not SHA256_PATTERN.fullmatch(parts[0]):
+            malformed_rows += 1
+            parse_issues.append("malformed snapshot SHA256SUMS row %d" % line_number)
+            continue
+        digest, raw_relative = parts
+        relative = _safe_manifest_path(raw_relative)
+        if relative is None:
+            unsafe_paths += 1
+            parse_issues.append("unsafe snapshot SHA256SUMS path at line %d" % line_number)
+            continue
+        if relative in listed_paths:
+            duplicate_paths += 1
+            parse_issues.append("duplicate snapshot SHA256SUMS path at line %d" % line_number)
+            continue
+        listed_paths.add(relative)
+        rows.append((line_number, digest, relative))
+    return {
+        "rows": rows,
+        "row_count": row_count,
+        "listed_paths": listed_paths,
+        "malformed_rows": malformed_rows,
+        "unsafe_paths": unsafe_paths,
+        "duplicate_paths": duplicate_paths,
+        "issues": parse_issues,
+    }
 
 
 def validate(root=ROOT):
@@ -64,17 +114,69 @@ def validate(root=ROOT):
     ]
     issues = []
     snapshot_hash_mismatches = 0
+    snapshot_manifest_malformed_rows = 0
+    snapshot_manifest_unsafe_paths = 0
+    snapshot_manifest_duplicate_paths = 0
     manifest_path = snapshot / "SHA256SUMS"
     if not manifest_path.is_file():
         issues.append("snapshot SHA256SUMS is missing")
         manifest_rows = []
+        manifest_row_count = 0
+        listed_paths = set()
     else:
-        manifest_rows = _manifest_rows(manifest_path)
+        manifest = _manifest_rows(manifest_path)
+        manifest_rows = manifest["rows"]
+        manifest_row_count = manifest["row_count"]
+        listed_paths = manifest["listed_paths"]
+        snapshot_manifest_malformed_rows = manifest["malformed_rows"]
+        snapshot_manifest_unsafe_paths = manifest["unsafe_paths"]
+        snapshot_manifest_duplicate_paths = manifest["duplicate_paths"]
+        issues.extend(manifest["issues"])
+
+    actual_paths = {
+        path.relative_to(snapshot).as_posix()
+        for path in snapshot.rglob("*")
+        if (path.is_file() or path.is_symlink()) and path.name != "SHA256SUMS"
+    }
+    snapshot_manifest_coverage_exact = (
+        manifest_row_count == EXPECTED_SNAPSHOT_FILES
+        and len(listed_paths) == EXPECTED_SNAPSHOT_FILES
+        and listed_paths == actual_paths
+        and snapshot_manifest_malformed_rows == 0
+        and snapshot_manifest_unsafe_paths == 0
+        and snapshot_manifest_duplicate_paths == 0
+    )
+    if not snapshot_manifest_coverage_exact:
+        issues.append("snapshot SHA256SUMS coverage mismatch")
+
+    snapshot_root = snapshot.resolve()
     for line_number, expected, relative in manifest_rows:
         target = snapshot / pathlib.PurePosixPath(relative)
-        if not target.is_file() or sha256(target) != expected:
+        target_is_safe_file = (
+            target.is_file()
+            and not target.is_symlink()
+            and target.resolve().is_relative_to(snapshot_root)
+        )
+        if not target_is_safe_file or sha256(target) != expected:
             snapshot_hash_mismatches += 1
             issues.append("snapshot hash mismatch at SHA256SUMS line %d" % line_number)
+
+    private_paths_in_snapshot = 0
+    snapshot_non_utf8_files = 0
+    for relative in sorted(actual_paths):
+        target = snapshot / pathlib.PurePosixPath(relative)
+        if target.is_symlink():
+            issues.append("snapshot symlink is forbidden: %s" % relative)
+            continue
+        try:
+            text = target.read_text(encoding="utf-8")
+        except UnicodeDecodeError:
+            snapshot_non_utf8_files += 1
+            issues.append("snapshot member is not UTF-8 text: %s" % relative)
+            text = target.read_bytes().decode("utf-8", errors="replace")
+        private_paths_in_snapshot += len(PRIVATE_PATTERN.findall(text))
+    if private_paths_in_snapshot:
+        issues.append("private path or browser locator leaked into public snapshot")
 
     repository_source_hash_mismatches = 0
     if not correction_path.is_file():
@@ -142,11 +244,19 @@ def validate(root=ROOT):
     return {
         "schema": "ar8r-pmr007-deep-bk-public-validation-receipt-v1",
         "result": "FAIL" if issues else "PASS_WITH_PARTIAL_REPRODUCTION_CEILING",
-        "snapshot_manifest_rows": len(manifest_rows),
+        "snapshot_manifest_rows": manifest_row_count,
+        "snapshot_manifest_distinct_paths": len(listed_paths),
+        "snapshot_actual_files": len(actual_paths),
+        "snapshot_manifest_coverage_exact": snapshot_manifest_coverage_exact,
+        "snapshot_manifest_duplicate_paths": snapshot_manifest_duplicate_paths,
+        "snapshot_manifest_unsafe_paths": snapshot_manifest_unsafe_paths,
+        "snapshot_manifest_malformed_rows": snapshot_manifest_malformed_rows,
         "snapshot_hash_mismatches": snapshot_hash_mismatches,
+        "snapshot_non_utf8_files": snapshot_non_utf8_files,
         "repository_source_rows": len(correction.get("repository_sources", [])),
         "repository_source_hash_mismatches": repository_source_hash_mismatches,
         "private_exclusion_rows": len(private_exclusions),
+        "private_paths_in_public_snapshot": private_paths_in_snapshot,
         "private_paths_in_public_corrections": private_paths,
         "self_contained_public_rereview_reproduction": False,
         "issues": issues,
