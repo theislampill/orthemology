@@ -1,6 +1,6 @@
 % GENERATED FILE — DO NOT EDIT; authoritative prose is Markdown.
 % source: theory/orthemic-core-formalization.md
-% source-sha256: 2da270603cd889009aaf9b6093013b6a48ae6c85f8b33b32c957a51294a08acf
+% source-sha256: cf8787bf81b5ebc8590af270529a77495666925ef1d8ef351526a6bfdc462b41
 % source: theory/orthemic-multi-actor-conflict-note.md
 % source-sha256: aa7b1378b1f1983c3ec406fb2533a68c6242881c2d04bf34470632b37359d7b9
 % source-qualification: research-stage-draft
@@ -99,7 +99,7 @@ e = \langle\, \mathrm{id};\ m, \kappa, v;\ x, H;\ \alpha, w, A, T, t;\\
 with components (each glossed in ordinary language):
 
 
-% breakable-row-table: data-rows=23 total-rendered-characters=5184 max-row-rendered-characters=1651
+% breakable-row-table: data-rows=23 total-rendered-characters=5199 max-row-rendered-characters=1651
 \par\medskip
 \hrule height 0.8pt
 \smallskip
@@ -195,7 +195,7 @@ with components (each glossed in ordinary language):
 \needspace{5\baselineskip}
 \noindent\textbf{Component}: $\vec{\mu} = (\mu_1, \dots, \mu_k; \preceq)$\par
 \noindent\textbf{Type}: metaorthemic configuration\par
-\noindent\textbf{Gloss}: the governing rules in force, with precedence order $\preceq$\par
+\noindent\textbf{Gloss}: the governing rules in force, with $\preceq$ their declared precedence order\par
 \smallskip
 \hrule height 0.4pt
 \smallskip
@@ -323,7 +323,7 @@ e \models_{\mu} (m : \hat{o}) \iff\\
 \end{multline*}
 
 
-(gloss: ``in episode $e$, under rule $\mu$, the case was placed under $\hat o$``). One placement is correct iff $\hat o \in O^*(m; A(e))$; the placed profile is correct at the governed level iff $\hat{p}(e)$ agrees with $O^*(m; A(e))$ restricted to that level, or the weaker route-sufficient variant (§4) — $A(e)$ being the analysis recorded in the episode (§2.2).
+(gloss: ``in episode $e$, under rule $\mu$, the case was placed under $\hat o$''). One placement is correct iff $\hat o \in O^*(m; A(e))$; the placed profile is correct at the governed level iff $\hat{p}(e)$ agrees with $O^*(m; A(e))$ restricted to that level, or the weaker route-sufficient variant (§4) — $A(e)$ being the analysis recorded in the episode (§2.2).
 
 
 \bigskip\hrule\bigskip
@@ -561,23 +561,73 @@ A missing assessment is \texttt{undetermined} — never silently counted as pass
 \textbf{Declared implication/dependency table} (complete; nothing else is asserted, and pairwise independence is NOT claimed where unproven):
 
 
-\begin{center}
-\begin{tabular}{@{}p{0.470\linewidth}p{0.470\linewidth}@{}}
-\toprule
-\textbf{Relation} & \textbf{Status} \\
-\midrule
-$\operatorname{V2b-T}_q(e) \to \operatorname{V1}_q(e)$ & \textbf{Definitional entailment} (factive, claim-wise) \\
-$\operatorname{V2b-P}(e) \to \operatorname{V1}(e)$ & \textbf{No} — non-factive by construction \\
-$\operatorname{V3e}(e) \to \operatorname{V1}(e)$ & \textbf{No} — decision-time reasonableness is result-free \\
-$\operatorname{PathwayAdequate}(e) \to \operatorname{V1}(e)$ & \textbf{No} — the core excludes V1 and V2b-T \\
-$\operatorname{V1}(e) \to \operatorname{PathwayAdequate}(e)$ & \textbf{No} — stopped-clock and defective-binding cases \\
-$\operatorname{V1}(e)$ at the governed level vs claim-wise $\operatorname{V1}_q(e)$ & Definitional: profile-level V1 aggregates the placed claims per the declared level \\
-$\operatorname{PathwayAdequate}(e) \leftrightarrow \neg \operatorname{PathwayDefective}(e)$ & \textbf{Not asserted} — \texttt{undetermined} is a third state \\
-V6 vs V2b-P & \textbf{No entailment either way} (distinct questions; shared evidence possible) \\
-All other pairs & No definitional implication introduced by these definitions; empirical correlation is never entailment \\
-\bottomrule
-\end{tabular}
-\end{center}
+% breakable-row-table: data-rows=9 total-rendered-characters=1063 max-row-rendered-characters=165
+\par\medskip
+\hrule height 0.8pt
+\smallskip
+% breakable-row: 1/9
+\needspace{5\baselineskip}
+\noindent\textbf{Relation}: $\operatorname{V2b-T}_q(e) \to \operatorname{V1}_q(e)$\par
+\noindent\textbf{Status}: \textbf{Definitional entailment} (factive, claim-wise)\par
+\smallskip
+\hrule height 0.4pt
+\smallskip
+% breakable-row: 2/9
+\needspace{5\baselineskip}
+\noindent\textbf{Relation}: $\operatorname{V2b-P}(e) \to \operatorname{V1}(e)$\par
+\noindent\textbf{Status}: \textbf{No} — non-factive by construction\par
+\smallskip
+\hrule height 0.4pt
+\smallskip
+% breakable-row: 3/9
+\needspace{5\baselineskip}
+\noindent\textbf{Relation}: $\operatorname{V3e}(e) \to \operatorname{V1}(e)$\par
+\noindent\textbf{Status}: \textbf{No} — decision-time reasonableness is result-free\par
+\smallskip
+\hrule height 0.4pt
+\smallskip
+% breakable-row: 4/9
+\needspace{5\baselineskip}
+\noindent\textbf{Relation}: $\operatorname{PathwayAdequate}(e) \to \operatorname{V1}(e)$\par
+\noindent\textbf{Status}: \textbf{No} — the core excludes V1 and V2b-T\par
+\smallskip
+\hrule height 0.4pt
+\smallskip
+% breakable-row: 5/9
+\needspace{5\baselineskip}
+\noindent\textbf{Relation}: $\operatorname{V1}(e) \to \operatorname{PathwayAdequate}(e)$\par
+\noindent\textbf{Status}: \textbf{No} — stopped-clock and defective-binding cases\par
+\smallskip
+\hrule height 0.4pt
+\smallskip
+% breakable-row: 6/9
+\needspace{5\baselineskip}
+\noindent\textbf{Relation}: $\operatorname{V1}(e)$ at the governed level vs claim-wise $\operatorname{V1}_q(e)$\par
+\noindent\textbf{Status}: Definitional: profile-level V1 aggregates the placed claims per the declared level\par
+\smallskip
+\hrule height 0.4pt
+\smallskip
+% breakable-row: 7/9
+\needspace{5\baselineskip}
+\noindent\textbf{Relation}: $\operatorname{PathwayAdequate}(e) \leftrightarrow \neg \operatorname{PathwayDefective}(e)$\par
+\noindent\textbf{Status}: \textbf{Not asserted} — \texttt{undetermined} is a third state\par
+\smallskip
+\hrule height 0.4pt
+\smallskip
+% breakable-row: 8/9
+\needspace{5\baselineskip}
+\noindent\textbf{Relation}: V6 vs V2b-P\par
+\noindent\textbf{Status}: \textbf{No entailment either way} (distinct questions; shared evidence possible)\par
+\smallskip
+\hrule height 0.4pt
+\smallskip
+% breakable-row: 9/9
+\needspace{5\baselineskip}
+\noindent\textbf{Relation}: All other pairs\par
+\noindent\textbf{Status}: No definitional implication introduced by these definitions; empirical correlation is never entailment\par
+\smallskip
+\hrule height 0.8pt
+\par\medskip
 
 \needspace{4\baselineskip}
 \subsection*{4.2 Result × pathway matrix}
@@ -748,7 +798,7 @@ Coupled episodes are the §5.2 graph over the shared lineage: each actor's actio
 
 \needspace{4\baselineskip}
 \subsection*{5.4 Semantic depth as an orthogonal axis}
-Define, informally, $\operatorname{depth}(e)$ as the executor's grasp of the governing distinctions: hard-coded check < model-based inference over declared alternatives < reflective capacity to propose revisions $\rho(\mu, \mathrm{lesson})$ itself. Depth is orthogonal to every §4 verdict — shallow executors can run adequate pathways and deep ones defective pathways. Depth matters operationally in one place only: which revisions the executor may perform locally versus must escalate across the governance boundary. It is an axis of the executor, not of the episode's correctness or adequacy.
+Define, informally, $\operatorname{depth}(e)$ as the executor's grasp of the governing distinctions, ordered from hard-coded check, through model-based inference over declared alternatives, to reflective capacity to propose revisions $\rho(\mu, \mathrm{lesson})$ itself. Depth is orthogonal to every §4 verdict — shallow executors can run adequate pathways and deep ones defective pathways. Depth matters operationally in one place only: which revisions the executor may perform locally versus must escalate across the governance boundary. It is an axis of the executor, not of the episode's correctness or adequacy.
 
 
 \bigskip\hrule\bigskip
