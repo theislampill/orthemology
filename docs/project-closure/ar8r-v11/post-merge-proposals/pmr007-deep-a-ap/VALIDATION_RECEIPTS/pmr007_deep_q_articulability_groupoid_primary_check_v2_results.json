@@ -1,0 +1,36 @@
+{
+  "by_content_size": {
+    "2": {
+      "encoding_systems": 4,
+      "permutations": 2
+    },
+    "3": {
+      "encoding_systems": 36,
+      "permutations": 6
+    },
+    "4": {
+      "encoding_systems": 576,
+      "permutations": 24
+    },
+    "5": {
+      "encoding_systems": 14400,
+      "permutations": 120
+    }
+  },
+  "content_sizes": [
+    2,
+    3,
+    4,
+    5
+  ],
+  "identity": "PMR-007-FEAG-1",
+  "language_count": 3,
+  "law_checks": 585624,
+  "law_failures": 0,
+  "overall": "PASS",
+  "personal_impersonal_expansions_per_system": 2,
+  "predicate_transport_checks": 4232880,
+  "predicate_transport_failures": 0,
+  "scope_note": "Finite lossless encoding groupoids only; no absolute articulability, mentality, or world-truth claim.",
+  "systems_checked": 15016
+}

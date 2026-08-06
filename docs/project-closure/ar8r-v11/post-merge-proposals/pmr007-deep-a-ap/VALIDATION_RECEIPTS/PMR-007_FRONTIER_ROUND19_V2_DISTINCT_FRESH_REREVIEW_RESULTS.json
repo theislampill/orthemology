@@ -1,0 +1,103 @@
+{
+  "frozen_hashes": {
+    "checked": 7,
+    "failures": []
+  },
+  "independent_exact_minimax": [
+    {
+      "alphabet": 1,
+      "depth": 1,
+      "formula": 1,
+      "m": 1,
+      "memo_states": 4,
+      "n": 1,
+      "pass": true,
+      "t": 1,
+      "worlds": 2
+    },
+    {
+      "alphabet": 1,
+      "depth": 4,
+      "formula": 4,
+      "m": 2,
+      "memo_states": 41,
+      "n": 2,
+      "pass": true,
+      "t": 1,
+      "worlds": 7
+    },
+    {
+      "alphabet": 2,
+      "depth": 3,
+      "formula": 3,
+      "m": 2,
+      "memo_states": 44,
+      "n": 2,
+      "pass": true,
+      "t": 2,
+      "worlds": 17
+    },
+    {
+      "alphabet": 2,
+      "depth": 5,
+      "formula": 5,
+      "m": 2,
+      "memo_states": 217,
+      "n": 3,
+      "pass": true,
+      "t": 2,
+      "worlds": 37
+    },
+    {
+      "alphabet": 2,
+      "depth": 5,
+      "formula": 5,
+      "m": 3,
+      "memo_states": 220,
+      "n": 2,
+      "pass": true,
+      "t": 2,
+      "worlds": 37
+    },
+    {
+      "alphabet": 2,
+      "depth": 8,
+      "formula": 8,
+      "m": 3,
+      "memo_states": 2136,
+      "n": 3,
+      "pass": true,
+      "t": 2,
+      "worlds": 139
+    },
+    {
+      "alphabet": 3,
+      "depth": 6,
+      "formula": 6,
+      "m": 3,
+      "memo_states": 2089,
+      "n": 3,
+      "pass": true,
+      "t": 3,
+      "worlds": 352
+    }
+  ],
+  "overall_pass": true,
+  "piecewise_branch_inequalities": {
+    "cases": 338350,
+    "failures": []
+  },
+  "repeated_query_online_lifting": {
+    "failures": [],
+    "trials": 50000
+  },
+  "schema": "PMR007_ROUND19_V2_DISTINCT_FRESH_REREVIEW_V1",
+  "support_only_collision": {
+    "binary_equal": true,
+    "pass": true,
+    "root_verdicts_t2": [
+      false,
+      true
+    ]
+  }
+}

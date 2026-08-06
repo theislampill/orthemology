@@ -1,0 +1,125 @@
+{
+  "account_controls": {
+    "harmful_optimizer": {
+      "exact_invariant_classifier_exists": false,
+      "expected": "NONDEFINABLE",
+      "extensional_orbits": [
+        [
+          0,
+          1
+        ]
+      ],
+      "truth": [
+        1,
+        0
+      ]
+    },
+    "impersonal_anchor_law": {
+      "exact_invariant_classifier_exists": true,
+      "expected": "TRUTH_LINKAGE_WITHOUT_PERSONALITY",
+      "extensional_orbits": [
+        [
+          0
+        ],
+        [
+          1
+        ]
+      ],
+      "personal": false,
+      "truth": [
+        1,
+        0
+      ]
+    },
+    "label_swap": {
+      "exact_invariant_classifier_exists": false,
+      "expected": "NONDEFINABLE",
+      "extensional_orbits": [
+        [
+          0,
+          1
+        ]
+      ],
+      "truth": [
+        1,
+        0
+      ]
+    },
+    "malicious_design": {
+      "exact_invariant_classifier_exists": false,
+      "expected": "DESIGN_SIMPLICITER_INSUFFICIENT",
+      "extensional_orbits": [
+        [
+          0,
+          1
+        ]
+      ],
+      "truth": [
+        1,
+        0
+      ]
+    },
+    "selected_effect_survival": {
+      "exact_invariant_classifier_exists": false,
+      "expected": "NONDEFINABLE_UNLESS_SELECTION_BECAUSE_TRUTH_ADDED",
+      "extensional_orbits": [
+        [
+          0,
+          1
+        ]
+      ],
+      "truth": [
+        1,
+        0
+      ]
+    },
+    "semantic_anchor": {
+      "exact_invariant_classifier_exists": true,
+      "expected": "DEFINABLE_RELATIVE_TO_ANCHOR",
+      "extensional_orbits": [
+        [
+          0
+        ],
+        [
+          1
+        ]
+      ],
+      "truth": [
+        1,
+        0
+      ]
+    },
+    "track_n_source_anchor": {
+      "exact_invariant_classifier_exists": true,
+      "expected": "SOURCE_CONDITIONAL_NO_NEUTRAL_MIGRATION",
+      "extensional_orbits": [
+        [
+          0
+        ],
+        [
+          1
+        ]
+      ],
+      "track": "N",
+      "truth": [
+        1,
+        0
+      ]
+    }
+  },
+  "constant_truth_without_invariant_classifier_failures": 0,
+  "exact_classifier_exists_cases": 3008,
+  "method": "exhaustive set-partition/orbit-constant classifier enumeration",
+  "n_range": [
+    1,
+    6
+  ],
+  "nonconstant_truth_with_invariant_classifier_failures": 0,
+  "orbit_constant_truth_cases": 3008,
+  "orbit_nonconstant_truth_cases": 11938,
+  "partition_cases": 278,
+  "result": "PASS",
+  "schema": "PMR007_DEEP_Y_SEMANTIC_ANCHOR_PRIMARY_CHECK_V1",
+  "truth_assignments": 14946,
+  "truth_refinement_failures": 0
+}

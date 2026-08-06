@@ -1,0 +1,51 @@
+schema: PMR007_DEEP_W_ADMISSION_OVERLAY_V1
+identity: PMR-007-TIPC-1
+title: Contract-aligned pullback and target-identity firewall
+canonical_version: V3
+status: ADMITTED_POST_MERGE_SCOPED_FORMAL_INTEGRATION_INTERFACE_RESULT
+provenance: NEW_POST_MERGE_SCOPED_FORMAL_RESULT
+historical_identity: NONE
+independent_theorem_origin: false
+general_mathematical_novelty: ZERO
+accepted_results:
+  - valid profile and warrant objects are contract-compatible exactly when their full six-field target-contract keys agree
+  - every tested finite compatible cone factors uniquely through the valid pullback
+  - a three-way valid pullback aligns profile, warrant, and world-bridge objects to one declared target contract
+  - Cartesian pairing permits version, scope, analysis, referent, and contract mismatch
+  - removing any one declared contract-key field admits a finite false-pairing witness
+  - same bytes, carrier, or storage do not replace authorized exact contract transport
+  - raw pullback membership does not validate components; restriction to independently valid subobjects is load-bearing
+  - contract alignment does not entail source authentication, target truth, common bearer, numerical identity, or causal realization
+family_relations:
+  mathematical_mechanism: STANDARD_PULLBACK_IN_FINITE_SETS
+  AR2_AR3: TARGET_LOCAL_REASON_TRANSPORT_APPLICATION_INTERFACE
+  Deep_V: DEPENDENT_TARGET_ALIGNMENT_REPAIR_OF_BARE_DIAGNOSTIC_PRODUCT
+  version_custody: APPLICATION_OF_SAME_BYTES_DIFFERENT_CONTRACT_BOUNDARY
+  Deep_S_T: SOURCE_AND_REFERENT_FIELDS_REMAIN_CONDITIONAL_AND_NONMIGRATORY
+central_effects:
+  FABLE_R1_B06: ADVANCED_TO_TARGET_INDEXED_COMMON_INTEGRATION_INTERFACE_COMMON_CALCULUS_OPEN
+  source_formal_world_crosswalk: CONTRACT_ALIGNMENT_COMPONENT_VALIDITY_AND_WORLD_TRUTH_SEPARATED
+  agentic_transport: SILENT_CROSS_VERSION_SCOPE_ANALYSIS_OR_REFERENT_PAIRING_BLOCKED
+  OSM_dynamic_orthing: TASK_MODEL_ENCODING_ANALYSIS_AND_EVALUATION_CONTRACTS_MUST_BE_INDEXED
+  Candidate_G_common_bearer: COMPATIBLE_PAIR_DOES_NOT_ESTABLISH_ONE_BEARER
+  transcendental_ascent: NO_NEW_SOURCE_WORLD_OR_PERSONAL_BRIDGE
+nonclaims:
+  - no verification of the full Fable Core B calculus
+  - no universal completeness of the six-field contract key
+  - no source authentication or referent identity proof
+  - no component, target, or world truth proof
+  - no common numerical or metaphysical bearer
+  - no explanatory or causal unification
+  - no metaphysical, attribute, Speech, or revelational conclusion
+cold_audit: REPAIR_REQUIRED_THEN_REPAIRED
+blocking_findings_repaired: 10
+fresh_rereview_blocking_repair:
+  finding: missing independent witnesses for target_id version and semantic_contract_digest
+  repair: V3 added three single-coordinate warrant objects
+fresh_rereview: PASS_WITH_NONBLOCKING_CONTRACT_AUTHORITY_NOTES
+external_review: OPEN
+owner_adoption: PENDING
+repository_proposal_status: REPOSITORY_PROPOSAL_READY_SUBJECT_TO_EXTERNAL_REVIEW_AND_OWNER_ADOPTION
+integrated_champion: NONE
+meniscus: MENISCUS_NOT_REACHED
+natural_closure: NOT_REACHED

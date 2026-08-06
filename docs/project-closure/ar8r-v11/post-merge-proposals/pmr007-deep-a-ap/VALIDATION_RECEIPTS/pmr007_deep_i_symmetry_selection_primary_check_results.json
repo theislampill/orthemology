@@ -1,0 +1,16 @@
+{
+  "failure_count": 0,
+  "failures": [],
+  "invariant_candidate_fibres_checked": 16067,
+  "partition_structures": 1155,
+  "positive_fixed_point_cases": 12161,
+  "regressions": {
+    "no_application": true,
+    "symmetric_pair_fixed_points": true,
+    "three_cycle_fixed_points": true,
+    "unique_fixed_candidate": true
+  },
+  "result": "PASS",
+  "schema": "PMR007_DEEP_I_PRIMARY_CHECK_RESULTS_V1",
+  "transitive_nonselection_cases": 2302
+}

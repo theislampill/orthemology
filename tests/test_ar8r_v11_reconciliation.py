@@ -23,6 +23,7 @@ LEDGER = PACKET / "AR8R-V11-RECONCILIATION-LEDGER.yaml"
 FALSE_ZERO_FIXTURE = PACKET / "governance" / "FALSE-ZERO-NEGATIVE-FIXTURE.yaml"
 CURRENT_PROJECTION = PACKET / "governance" / "CURRENT-CAMPAIGN-PROJECTION.yaml"
 RECONCILIATION_VALIDATOR = ROOT / "scripts" / "validate_ar8r_reconciliation.py"
+RECOVERY_VALIDATOR = ROOT / "scripts" / "validate_ar8r_recovery.py"
 CANDIDATE_1 = PACKET / "theorems" / "candidate-1-hidden-matching-threshold.md"
 CANDIDATE_1_PROVENANCE = PACKET / "theorems" / "candidate-1-provenance.yaml"
 CANDIDATE_1_RESULTS = PACKET / "theorems" / "candidate-1-small-case-results.json"
@@ -79,6 +80,10 @@ SOURCE_RECEIPTS = (
     PACKET / "provenance" / "AR8R-POST-MERGE-PMR002-006-SOURCE-RECEIPT.yaml",
 )
 PMR007_PROPOSAL = PACKET / "post-merge-proposals" / "pmr007-rounds11-20"
+PMR007_DEEP_PROPOSAL = PACKET / "post-merge-proposals" / "pmr007-deep-a-ap"
+PMR007_DEEP_RECEIPT = PACKET / "provenance" / "AR8R-PMR007-DEEP-A-AP-PROPOSAL-RECEIPT-V1.yaml"
+PMR007_DEEP_EXECUTION = PACKET / "provenance" / "AR8R-PMR007-DEEP-A-AP-EXECUTION-RECEIPT-V1.yaml"
+PMR007_DEEP_CORRECTION = PACKET / "post-merge-proposals" / "PMR007-DEEP-A-AP-ADOPTION-BOUNDARY-CORRECTION.md"
 PROGRAM_FILES = (
     "tensor-and-bitter-lesson.md",
     "proper-function-and-candidate-e.md",
@@ -770,6 +775,133 @@ class TestAr8rV11Reconciliation(unittest.TestCase):
         }
         self.assertEqual(len(listed), 130)
         self.assertEqual(listed, actual)
+
+    def test_pmr007_deep_a_ap_snapshot_is_exact_and_fail_closed(self):
+        self.assertTrue(PMR007_DEEP_PROPOSAL.is_dir(), "missing Deep A-AP proposal snapshot")
+        receipt = self.load_yaml(PMR007_DEEP_RECEIPT)
+        self.assertEqual(
+            receipt["source_archive"]["sha256"],
+            "80c1679744374f20740dbb9817bb333fb9ae7f399d166afb39d28d23c3fc9d59",
+        )
+        self.assertEqual(receipt["source_archive"]["archive_members"], 831)
+        self.assertEqual(receipt["source_archive"]["internal_sha256sums_entries"], 830)
+        self.assertEqual(receipt["repository_copy"]["exact_archive_members"], 831)
+        self.assertEqual(receipt["overlap_with_existing_main"]["byte_duplicate_members"], 99)
+        self.assertEqual(receipt["overlap_with_existing_main"]["duplicate_credit_effect"], "NONE")
+
+        index = self.load_yaml(PMR007_DEEP_PROPOSAL / "PROPOSED_RESULT_INDEX.yaml")
+        rows = index["results"] + index["items"]
+        self.assertEqual(len(rows), 52)
+        self.assertEqual(len({row["pmr_identity"] for row in rows}), 52)
+        deep_rows = [row for row in rows if row["round"].startswith("DEEP_")]
+        self.assertEqual(len(deep_rows), 42)
+        expected_deep_ids = {
+            "PMR-007-NFG-1", "PMR-007-DURP-1", "PMR-007-ICR-1", "PMR-007-UGEN-1",
+            "PMR-007-TNAC-1", "PMR-007-FPF-1", "PMR-007-CBA-1", "PMR-007-UAP-1",
+            "PMR-007-OAS-1", "PMR-007-UCA-1", "PMR-007-WFB-1", "PMR-007-SDL-1",
+            "PMR-007-ETRP-1", "PMR-007-ANH-1", "PMR-007-GUPP-1", "PMR-007-TRPF-1",
+            "PMR-007-FEAG-1", "PMR-007-R5CU-1", "PMR-007-SCRF-1", "PMR-007-MACC-1",
+            "PMR-007-TRPD-1", "PMR-007-SWPC-1", "PMR-007-TIPC-1", "PMR-007-TKAA-1",
+            "PMR-007-PFSA-1", "PMR-007-COWC-1", "PMR-007-CGIP-1", "PMR-007-FSPW-1",
+            "PMR-007-SRVN-1", "PMR-007-RSMF-1", "PMR-007-IHDU-1", "PMR-007-NRID-1",
+            "PMR-007-R5NR-1", "PMR-007-SDIG-1", "PMR-007-NMIB-1", "PMR-007-CIOB-1",
+            "PMR-007-SAMC-1", "PMR-007-EGAC-1", "PMR-007-SRIN-1", "PMR-007-ABPD-1",
+            "PMR-007-RPDS-1", "PMR-007-SWRI-1",
+        }
+        self.assertEqual({row["pmr_identity"] for row in deep_rows}, expected_deep_ids)
+        self.assertTrue(all(row["historical_identity_relation"] == "NONE" for row in deep_rows))
+        self.assertTrue(all(row["external_review_status"] == "OPEN" for row in deep_rows))
+        self.assertTrue(all("PENDING" in row["owner_adoption_status"] for row in deep_rows))
+        self.assertTrue(all("ZERO" in row["origin_and_novelty_ceiling"] for row in deep_rows))
+
+        listed = set()
+        for line in (PMR007_DEEP_PROPOSAL / "SHA256SUMS").read_text(encoding="utf-8").splitlines():
+            digest, relative = line.split(maxsplit=1)
+            relative = relative.lstrip("*").replace("\\", "/")
+            target = PMR007_DEEP_PROPOSAL / relative
+            self.assertTrue(target.is_file(), relative)
+            self.assertEqual(hashlib.sha256(target.read_bytes()).hexdigest(), digest, relative)
+            listed.add(relative)
+        actual = {
+            path.relative_to(PMR007_DEEP_PROPOSAL).as_posix()
+            for path in PMR007_DEEP_PROPOSAL.rglob("*")
+            if path.is_file() and path.name != "SHA256SUMS"
+        }
+        self.assertEqual(len(listed), 830)
+        self.assertEqual(listed, actual)
+
+        validator = self.load_validator()
+        validate_deep = getattr(validator, "validate_pmr007_deep_proposal", None)
+        self.assertIsNotNone(validate_deep, "missing Deep A-AP fail-closed validator")
+        if validate_deep is not None:
+            self.assertEqual(validate_deep(index, receipt, PMR007_DEEP_CORRECTION.read_text(encoding="utf-8")), [])
+            promoted = yaml.safe_load(yaml.safe_dump(index))
+            promoted["results"][10]["owner_adoption_status"] = "OWNER_ADOPTED"
+            self.assertIn(
+                "pmr007-deep-owner-adoption-promoted:PMR-007-NFG-1",
+                validate_deep(promoted, receipt, PMR007_DEEP_CORRECTION.read_text(encoding="utf-8")),
+            )
+
+        catalog = self.load_yaml(POST_MERGE_CATALOG)
+        self.assertEqual(validator.validate_post_merge_catalog(catalog), [])
+        promoted_catalog = yaml.safe_load(yaml.safe_dump(catalog))
+        promoted_catalog["pmr007_deep_a_through_ap_snapshot"]["meniscus"] = "MENISCUS_REACHED"
+        self.assertIn(
+            "pmr007-deep-catalog-boundary-mismatch:meniscus",
+            validator.validate_post_merge_catalog(promoted_catalog),
+        )
+
+        execution = self.load_yaml(PMR007_DEEP_EXECUTION)
+        self.assertEqual(execution["broad_disposable_run"]["scripts_discovered"], 73)
+        self.assertEqual(execution["broad_disposable_run"]["exit_zero"], 52)
+        self.assertEqual(execution["broad_disposable_run"]["exit_nonzero"], 21)
+        self.assertEqual(execution["isolated_rereview_run"]["scripts_discovered"], 34)
+        self.assertEqual(execution["isolated_rereview_run"]["exit_zero"], 15)
+        self.assertEqual(execution["isolated_rereview_run"]["exit_nonzero"], 19)
+        self.assertEqual(
+            execution["verification_class"],
+            "INTEGRATOR_REPORTED_NOT_INDEPENDENTLY_REPRODUCED",
+        )
+        for run_name in ("broad_disposable_run", "isolated_rereview_run"):
+            run = execution[run_name]
+            self.assertEqual(
+                run["evidence_status"],
+                "INTEGRATOR_REPORTED_NOT_INDEPENDENTLY_REPRODUCED",
+            )
+            self.assertIs(run["public_per_script_ledger_present"], False)
+            self.assertIs(run["deterministic_compatibility_layout_recipe_present"], False)
+        self.assertIs(execution["execution_boundary"]["sanitized_snapshot_self_contained_executable"], False)
+        self.assertEqual(
+            execution["interpretation"]["independent_reproduction_from_public_snapshot"],
+            "NOT_ESTABLISHED",
+        )
+        self.assertEqual(execution["authority_effect"], "NONE")
+        validate_execution = getattr(validator, "validate_pmr007_deep_execution", None)
+        self.assertIsNotNone(validate_execution, "missing Deep A-AP execution-boundary validator")
+        if validate_execution is not None:
+            self.assertEqual(validate_execution(execution), [])
+            overclaim = yaml.safe_load(yaml.safe_dump(execution))
+            overclaim["execution_boundary"]["sanitized_snapshot_self_contained_executable"] = True
+            self.assertIn("pmr007-deep-execution-self-contained-overclaim", validate_execution(overclaim))
+            aggregate_overclaim = yaml.safe_load(yaml.safe_dump(execution))
+            aggregate_overclaim["verification_class"] = "INDEPENDENTLY_REPRODUCED"
+            aggregate_overclaim["broad_disposable_run"]["public_per_script_ledger_present"] = True
+            aggregate_issues = validate_execution(aggregate_overclaim)
+            self.assertIn("pmr007-deep-execution-verification-class-overclaim", aggregate_issues)
+            self.assertIn("pmr007-deep-broad-ledger-boundary-mismatch", aggregate_issues)
+
+    def test_private_locator_regex_does_not_misclassify_tex_type_annotations(self):
+        spec = importlib.util.spec_from_file_location("ar8r_recovery_validator", RECOVERY_VALIDATOR)
+        self.assertIsNotNone(spec)
+        assert spec is not None and spec.loader is not None
+        module = importlib.util.module_from_spec(spec)
+        spec.loader.exec_module(module)
+        locator = getattr(module, "PRIVATE_LOCATOR_RE", None)
+        self.assertIsNotNone(locator, "recovery validator must expose its private-locator pattern")
+        if locator is not None:
+            self.assertIsNone(locator.search(r"f_j:\{0,1\}^{V}\to\mathbb R"))
+            windows_path = "C:" + "\\" + "workspace\\private\\evidence.md"
+            self.assertIsNotNone(locator.search(windows_path))
 
     def test_new_thread_custody_and_drift_are_fail_closed(self):
         custody = self.load_yaml(THREAD_CUSTODY)

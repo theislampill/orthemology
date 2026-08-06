@@ -34,6 +34,10 @@ LINK_DRIFT = PACKET / "provenance" / "AR8R-POST-MERGE-LINK-DRIFT-SUMMARY-V1.yaml
 PMR007_RECEIPT = PACKET / "provenance" / "AR8R-PMR007-ROUNDS11-20-PROPOSAL-RECEIPT.yaml"
 PMR007_PROPOSAL = PACKET / "post-merge-proposals" / "pmr007-rounds11-20"
 PMR007_CORRECTION = PACKET / "post-merge-proposals" / "PMR007-ROUNDS11-20-ADOPTION-BOUNDARY-CORRECTION.md"
+PMR007_DEEP_RECEIPT = PACKET / "provenance" / "AR8R-PMR007-DEEP-A-AP-PROPOSAL-RECEIPT-V1.yaml"
+PMR007_DEEP_EXECUTION = PACKET / "provenance" / "AR8R-PMR007-DEEP-A-AP-EXECUTION-RECEIPT-V1.yaml"
+PMR007_DEEP_PROPOSAL = PACKET / "post-merge-proposals" / "pmr007-deep-a-ap"
+PMR007_DEEP_CORRECTION = PACKET / "post-merge-proposals" / "PMR007-DEEP-A-AP-ADOPTION-BOUNDARY-CORRECTION.md"
 VISIBLE_SOURCE_MANIFEST = PACKET / "provenance" / "AR8R-POST-MERGE-VISIBLE-FILE-CARD-MANIFEST-V1.yaml"
 FILE_CARD_ARCHIVE_CONFLICTS = PACKET / "provenance" / "AR8R-POST-MERGE-FILE-CARD-ARCHIVE-CONFLICTS-V1.yaml"
 SOURCE_RECEIPTS = (
@@ -113,6 +117,20 @@ EXPECTED_PMR007 = {
     "PMR-007-ORTC-V4",
     "PMR-007-PRQT-1",
     "PMR-007-PRRC-1",
+}
+
+EXPECTED_PMR007_DEEP = {
+    "PMR-007-NFG-1", "PMR-007-DURP-1", "PMR-007-ICR-1", "PMR-007-UGEN-1",
+    "PMR-007-TNAC-1", "PMR-007-FPF-1", "PMR-007-CBA-1", "PMR-007-UAP-1",
+    "PMR-007-OAS-1", "PMR-007-UCA-1", "PMR-007-WFB-1", "PMR-007-SDL-1",
+    "PMR-007-ETRP-1", "PMR-007-ANH-1", "PMR-007-GUPP-1", "PMR-007-TRPF-1",
+    "PMR-007-FEAG-1", "PMR-007-R5CU-1", "PMR-007-SCRF-1", "PMR-007-MACC-1",
+    "PMR-007-TRPD-1", "PMR-007-SWPC-1", "PMR-007-TIPC-1", "PMR-007-TKAA-1",
+    "PMR-007-PFSA-1", "PMR-007-COWC-1", "PMR-007-CGIP-1", "PMR-007-FSPW-1",
+    "PMR-007-SRVN-1", "PMR-007-RSMF-1", "PMR-007-IHDU-1", "PMR-007-NRID-1",
+    "PMR-007-R5NR-1", "PMR-007-SDIG-1", "PMR-007-NMIB-1", "PMR-007-CIOB-1",
+    "PMR-007-SAMC-1", "PMR-007-EGAC-1", "PMR-007-SRIN-1", "PMR-007-ABPD-1",
+    "PMR-007-RPDS-1", "PMR-007-SWRI-1",
 }
 
 EXPECTED_MILESTONE_STATUSES = {
@@ -471,6 +489,54 @@ def validate_post_merge_catalog(document: Any) -> list[str]:
         for key, expected in expected_boundary.items():
             if boundary.get(key) != expected:
                 issues.append(f"pmr007-boundary-mismatch:{key}")
+
+    source_packets = document.get("source_packets", [])
+    deep_source = next(
+        (
+            row for row in source_packets
+            if isinstance(row, dict) and row.get("id") == "PMR007_DEEP_A_THROUGH_AP"
+        ),
+        None,
+    ) if isinstance(source_packets, list) else None
+    expected_source = {
+        "exact_archive_members": 831,
+        "indexed_results": 52,
+        "deep_results": 42,
+        "disposition": "EXACT_SANITIZED_PROPOSAL_SNAPSHOT_EXTERNAL_REVIEW_AND_OWNER_ADOPTION_REQUIRED",
+        "receipt": "provenance/AR8R-PMR007-DEEP-A-AP-PROPOSAL-RECEIPT-V1.yaml",
+        "execution_receipt": "provenance/AR8R-PMR007-DEEP-A-AP-EXECUTION-RECEIPT-V1.yaml",
+    }
+    if not isinstance(deep_source, dict):
+        issues.append("pmr007-deep-catalog-source-missing")
+    else:
+        for key, expected in expected_source.items():
+            if deep_source.get(key) != expected:
+                issues.append(f"pmr007-deep-catalog-source-mismatch:{key}")
+
+    deep_boundary = document.get("pmr007_deep_a_through_ap_snapshot", {})
+    expected_deep_boundary = {
+        "path": "post-merge-proposals/pmr007-deep-a-ap",
+        "result_index": "post-merge-proposals/pmr007-deep-a-ap/PROPOSED_RESULT_INDEX.yaml",
+        "indexed_results": 52,
+        "deep_a_through_ap_results": 42,
+        "exact_archive_members": 831,
+        "historical_identity": "NONE",
+        "owner_adoption": "PENDING",
+        "external_review": "OPEN",
+        "repository_readiness": "EXTERNAL_REVIEW_REQUIRED",
+        "general_novelty_credit": "NOT_GRANTED",
+        "duplicate_credit_effect": "NONE",
+        "integrated_champion": "NONE",
+        "meniscus": "MENISCUS_NOT_REACHED",
+        "natural_closure": "NOT_REACHED",
+        "executable_reproduction": "PARTIAL_WITH_PRECISE_SOURCE_AND_SIDECAR_BOUNDARIES",
+    }
+    if not isinstance(deep_boundary, dict):
+        issues.append("malformed-pmr007-deep-catalog-boundary")
+    else:
+        for key, expected in expected_deep_boundary.items():
+            if deep_boundary.get(key) != expected:
+                issues.append(f"pmr007-deep-catalog-boundary-mismatch:{key}")
     return issues
 
 
@@ -580,6 +646,122 @@ def validate_pmr007_correction(text: str) -> list[str]:
     )
     if any(re.search(pattern, text, flags=re.IGNORECASE) for pattern in forbidden):
         issues.append("pmr007-correction-contradictory-promotion")
+    return issues
+
+
+def validate_pmr007_deep_proposal(index: Any, receipt: Any, correction: str) -> list[str]:
+    """Keep the Deep A-AP snapshot exact and proposal-only."""
+    issues: list[str] = []
+    if not isinstance(index, dict) or not isinstance(receipt, dict):
+        return ["malformed-pmr007-deep-proposal-owner"]
+
+    results = index.get("results", [])
+    items = index.get("items", [])
+    if not isinstance(results, list) or not isinstance(items, list):
+        return ["malformed-pmr007-deep-result-index"]
+    rows = results + items
+    identities = [row.get("pmr_identity") for row in rows if isinstance(row, dict)]
+    if len(rows) != 52 or len(identities) != 52 or len(set(identities)) != 52:
+        issues.append("pmr007-deep-result-index-count-mismatch")
+
+    deep_rows = [row for row in rows if isinstance(row, dict) and str(row.get("round", "")).startswith("DEEP_")]
+    deep_ids = {row.get("pmr_identity") for row in deep_rows}
+    if len(deep_rows) != 42 or deep_ids != EXPECTED_PMR007_DEEP:
+        issues.append("pmr007-deep-result-coverage-mismatch")
+    for row in deep_rows:
+        identity = row.get("pmr_identity", "?")
+        if row.get("historical_identity_relation") != "NONE":
+            issues.append(f"pmr007-deep-historical-identity-promoted:{identity}")
+        if row.get("external_review_status") != "OPEN":
+            issues.append(f"pmr007-deep-external-review-closed:{identity}")
+        if "PENDING" not in str(row.get("owner_adoption_status", "")):
+            issues.append(f"pmr007-deep-owner-adoption-promoted:{identity}")
+        if "ZERO" not in str(row.get("origin_and_novelty_ceiling", "")):
+            issues.append(f"pmr007-deep-novelty-promoted:{identity}")
+
+    source = receipt.get("source_archive", {})
+    repository_copy = receipt.get("repository_copy", {})
+    overlap = receipt.get("overlap_with_existing_main", {})
+    expected_source = {
+        "sha256": "80c1679744374f20740dbb9817bb333fb9ae7f399d166afb39d28d23c3fc9d59",
+        "archive_members": 831,
+        "internal_sha256sums_entries": 830,
+        "integrity": "PASS",
+        "private_data_exclusion": "PASS",
+    }
+    if not isinstance(source, dict) or any(source.get(key) != value for key, value in expected_source.items()):
+        issues.append("pmr007-deep-source-archive-receipt-mismatch")
+    if not isinstance(repository_copy, dict) or repository_copy.get("exact_archive_members") != 831 or repository_copy.get("source_bytes_modified") is not False:
+        issues.append("pmr007-deep-repository-copy-boundary-mismatch")
+    if not isinstance(overlap, dict) or overlap.get("byte_duplicate_members") != 99 or overlap.get("duplicate_credit_effect") != "NONE":
+        issues.append("pmr007-deep-overlap-credit-boundary-mismatch")
+
+    required_correction = (
+        "No proposal in this snapshot is adopted repository theory.",
+        "No historical identity is assigned.",
+        "No general novelty credit is granted.",
+        "No integrated champion, meniscus, or natural closure is established.",
+        "No Lean source, build, or kernel check is claimed by this repository import.",
+        "99 byte-identical members",
+    )
+    if not all(phrase in correction for phrase in required_correction):
+        issues.append("pmr007-deep-correction-boundary-missing")
+    forbidden = (
+        r"owner[_ ]adoption\s*:\s*(?:adopted|complete|pass)",
+        r"external[_ ]review\s*:\s*(?:closed|complete|pass)",
+        r"(?:meniscus|natural[_ ]closure)\s*:\s*(?:reached|complete|pass)",
+    )
+    if any(re.search(pattern, correction, flags=re.IGNORECASE) for pattern in forbidden):
+        issues.append("pmr007-deep-correction-contradictory-promotion")
+    return list(dict.fromkeys(issues))
+
+
+def validate_pmr007_deep_execution(document: Any) -> list[str]:
+    if not isinstance(document, dict):
+        return ["malformed-pmr007-deep-execution-receipt"]
+    issues: list[str] = []
+    broad = document.get("broad_disposable_run", {})
+    isolated = document.get("isolated_rereview_run", {})
+    expected_broad = {"scripts_discovered": 73, "exit_zero": 52, "exit_nonzero": 21}
+    expected_isolated = {"scripts_discovered": 34, "exit_zero": 15, "exit_nonzero": 19}
+    if not isinstance(broad, dict) or any(broad.get(key) != value for key, value in expected_broad.items()):
+        issues.append("pmr007-deep-broad-execution-count-mismatch")
+    if not isinstance(isolated, dict) or any(isolated.get(key) != value for key, value in expected_isolated.items()):
+        issues.append("pmr007-deep-rereview-execution-count-mismatch")
+    expected_evidence_status = "INTEGRATOR_REPORTED_NOT_INDEPENDENTLY_REPRODUCED"
+    if document.get("verification_class") != expected_evidence_status:
+        issues.append("pmr007-deep-execution-verification-class-overclaim")
+    for label, run in (("broad", broad), ("rereview", isolated)):
+        if not isinstance(run, dict):
+            continue
+        if run.get("evidence_status") != expected_evidence_status:
+            issues.append(f"pmr007-deep-{label}-execution-evidence-overclaim")
+        if run.get("public_per_script_ledger_present") is not False:
+            issues.append(f"pmr007-deep-{label}-ledger-boundary-mismatch")
+        if run.get("deterministic_compatibility_layout_recipe_present") is not False:
+            issues.append(f"pmr007-deep-{label}-recipe-boundary-mismatch")
+    boundary = document.get("execution_boundary", {})
+    if not isinstance(boundary, dict) or boundary.get("sanitized_snapshot_self_contained_executable") is not False:
+        issues.append("pmr007-deep-execution-self-contained-overclaim")
+    if document.get("authority_effect") != "NONE":
+        issues.append("pmr007-deep-execution-authority-promoted")
+    canonical = document.get("canonical_deep_x_through_ap_checks", [])
+    expected_statuses = {
+        "PMR-007-CGIP-1": "INTEGRATOR_REPORTED_PRIMARY_AND_DISTINCT_REREVIEW_REPRODUCED",
+        "PMR-007-ABPD-1": "INTEGRATOR_REPORTED_PRIMARY_AND_DISTINCT_REREVIEW_REPRODUCED",
+        "PMR-007-RPDS-1": "INTEGRATOR_REPORTED_PRIMARY_REPRODUCED_DISTINCT_REREVIEW_SOURCE_BOUND",
+        "PMR-007-SWRI-1": "INTEGRATOR_REPORTED_PRIMARY_AND_DISTINCT_REREVIEW_REPRODUCED",
+    }
+    actual_statuses = {
+        row.get("identity"): row.get("status")
+        for row in canonical
+        if isinstance(row, dict)
+    } if isinstance(canonical, list) else {}
+    if actual_statuses != expected_statuses:
+        issues.append("pmr007-deep-canonical-execution-status-mismatch")
+    interpretation = document.get("interpretation", {})
+    if not isinstance(interpretation, dict) or interpretation.get("independent_reproduction_from_public_snapshot") != "NOT_ESTABLISHED":
+        issues.append("pmr007-deep-independent-reproduction-overclaim")
     return issues
 
 
@@ -2132,6 +2314,9 @@ def validate_packet() -> list[str]:
         LINK_DRIFT,
         PMR007_RECEIPT,
         PMR007_CORRECTION,
+        PMR007_DEEP_RECEIPT,
+        PMR007_DEEP_EXECUTION,
+        PMR007_DEEP_CORRECTION,
         VISIBLE_SOURCE_MANIFEST,
         FILE_CARD_ARCHIVE_CONFLICTS,
         DEEP_CONTEXT_RECEIPT,
@@ -2482,6 +2667,41 @@ def validate_packet() -> list[str]:
     issues.extend(validate_post_merge_thread_custody(load_yaml(THREAD_CUSTODY)))
     issues.extend(validate_link_drift(load_yaml(LINK_DRIFT)))
     issues.extend(validate_pmr007_correction(PMR007_CORRECTION.read_text(encoding="utf-8")))
+
+    deep_receipt_owner = load_yaml(PMR007_DEEP_RECEIPT)
+    issues.extend(validate_pmr007_deep_execution(load_yaml(PMR007_DEEP_EXECUTION)))
+    deep_index = load_yaml(PMR007_DEEP_PROPOSAL / "PROPOSED_RESULT_INDEX.yaml")
+    issues.extend(
+        validate_pmr007_deep_proposal(
+            deep_index,
+            deep_receipt_owner,
+            PMR007_DEEP_CORRECTION.read_text(encoding="utf-8"),
+        )
+    )
+    deep_sums = PMR007_DEEP_PROPOSAL / "SHA256SUMS"
+    deep_listed: set[str] = set()
+    if not deep_sums.is_file():
+        issues.append("pmr007-deep-missing-internal-sha256sums")
+    else:
+        for line in deep_sums.read_text(encoding="utf-8").splitlines():
+            if not line.strip():
+                continue
+            digest, relative = line.split(maxsplit=1)
+            relative = relative.lstrip("*").replace("\\", "/")
+            target = PMR007_DEEP_PROPOSAL / relative
+            deep_listed.add(relative)
+            if not target.is_file():
+                issues.append(f"pmr007-deep-missing-checksummed-member:{relative}")
+            elif hashlib.sha256(target.read_bytes()).hexdigest() != digest:
+                issues.append(f"pmr007-deep-member-hash-mismatch:{relative}")
+        deep_actual = {
+            path.relative_to(PMR007_DEEP_PROPOSAL).as_posix()
+            for path in PMR007_DEEP_PROPOSAL.rglob("*")
+            if path.is_file() and path.name != "SHA256SUMS"
+        }
+        if len(deep_listed) != 830 or deep_listed != deep_actual:
+            issues.append("pmr007-deep-internal-sha256sums-coverage-mismatch")
+
     issues.extend(validate_visible_source_manifest(load_yaml(VISIBLE_SOURCE_MANIFEST)))
     issues.extend(validate_file_card_archive_conflicts(load_yaml(FILE_CARD_ARCHIVE_CONFLICTS)))
     for source_receipt in SOURCE_RECEIPTS:
@@ -2539,7 +2759,7 @@ def main() -> int:
     print("[PASS] complete 514-row V5 authority and 42-target V8 overlay remain separate")
     print("[PASS] structural closure maps cover messages, attachments, Activity, references, and archive hashes")
     print("[PASS] post-merge full-program and PMR source packets retain exact public-safe custody")
-    print("[PASS] PMR-007 Rounds 11-20 remain external-review proposals with all internal hashes verified")
+    print("[PASS] PMR-007 Rounds 11-20 and Deep A-AP remain external-review proposals with all internal hashes verified")
     print("[PASS] new-thread custody and six historical-link drift incidents are explicitly reconciled")
     print("[PASS] Task 7 deferred exact source, A-N/bridge owners, typed matrices, PMR/Lean map, and family crosswalk")
     print("[PASS] Connes dispute dispositions, OSW-15 coordinates, private-source boundary, and static-only Lean V7 status")

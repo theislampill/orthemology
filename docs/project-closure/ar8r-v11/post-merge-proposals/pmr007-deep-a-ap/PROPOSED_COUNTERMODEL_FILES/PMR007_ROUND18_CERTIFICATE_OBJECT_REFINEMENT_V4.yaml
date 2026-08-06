@@ -1,0 +1,114 @@
+schema: PMR007_ROUND18_CERTIFICATE_OBJECT_REFINEMENT_V4
+round: PMR-007_FRONTIER-ROUND18
+version: V4
+status: FROZEN_PENDING_DISTINCT_FRESH_REREVIEW
+objects:
+  complete_object_fields:
+    - surface_action
+    - source_id
+    - version_or_model_digest
+    - authority
+    - provenance_root
+    - invalidator_status
+    - target_contract
+    - temporal_certificate
+examples:
+  - id: R18-CM-OBJECT-PROJECTION
+    states: [q0, q1]
+    observation: {q0: o, q1: o}
+    objects: [k0, k1]
+    action_projection: {k0: EXECUTE, k1: EXECUTE}
+    admissible: {q0: [k0], q1: [k1]}
+    expected_object_rho: 2
+    expected_action_rho: 1
+  - id: R18-CM-PAIRWISE
+    states: [q0, q1, q2]
+    observation: {q0: o, q1: o, q2: o}
+    objects: [a, b, c]
+    admissible:
+      q0: [a, b]
+      q1: [b, c]
+      q2: [a, c]
+    expected_object_rho: 2
+    expected_total_intersection: []
+  - id: R18-CM-EMPTY
+    states: [q0, q1]
+    observation: {q0: o, q1: o}
+    objects: [a]
+    admissible: {q0: [a], q1: []}
+    expected_object_rho: infinity
+  - id: R18-CM-VERSION
+    states: [q_v1, q_v2]
+    observation: {q_v1: same_bytes, q_v2: same_bytes}
+    objects: [execute_v1, hold_revalidate_v2]
+    action_projection:
+      execute_v1: EXECUTE
+      hold_revalidate_v2: HOLD_REVALIDATE
+    admissible:
+      q_v1: [execute_v1]
+      q_v2: [hold_revalidate_v2]
+    expected_object_rho: 2
+    expected_fixed_bits: 1
+adversarial_relation_witness:
+  id: R18-RELATION-BEATS-LABEL
+  states: [q0, q1, q2, q3]
+  objects: [k0, k1, k2, k3]
+  observation: {q0: o, q1: o, q2: o, q3: o}
+  admissible:
+    q0: [k1, k2, k3]
+    q1: [k0, k2, k3]
+    q2: [k0, k1, k3]
+    q3: [k0, k1, k2]
+  binary_code: {q0: '00', q1: '01', q2: '10', q3: '11'}
+  adversarial_hamming_radius: 1
+  expected_relation_selector_bits: 2
+  expected_exact_nonconstant_binary_label_bits: 3
+  expected_exact_four_state_label_bits: 5
+robust_completion_witness:
+  state: q
+  objects: [k0, k1]
+  completion_admissible:
+    theta0: [k0]
+    theta1: [k1]
+  expected_union: [k0, k1]
+  expected_intersection: []
+temporal_witness:
+  states: [x, y, g]
+  safe: [x, y, g]
+  target: [g]
+  rank: {x: 1, y: 1, g: 0}
+  observation: {x: same_bytes, y: same_bytes, g: target}
+  objects:
+    k_execute:
+      action: EXECUTE
+      model_digest: M
+    k_hold:
+      action: HOLD_REVALIDATE
+      model_digest: M
+    k_stay:
+      action: STAY
+      model_digest: M
+  transitions:
+    x: {EXECUTE: [g], HOLD_REVALIDATE: [x]}
+    y: {EXECUTE: [y], HOLD_REVALIDATE: [g]}
+    g: {STAY: [g]}
+  expected_admissible:
+    x: [k_execute]
+    y: [k_hold]
+    g: [k_stay]
+history_witness:
+  current_states: [s0, s1]
+  current_observation: same_now
+  current_common_object: k_wait
+  hidden_successors: {s0: x, s1: y}
+  future_observation: same_later
+  future_admissible: {x: [k_execute], y: [k_hold]}
+  expected_current_rho: 1
+  expected_future_rho: 2
+authority:
+  provenance: NEW_POST_MERGE_RESEARCH
+  historical_identity: null
+  general_mathematical_novelty: 0
+  external_review: OPEN
+  owner_adoption: PENDING
+  repository_proposal: EXTERNAL_REVIEW_AND_OWNER_ADOPTION_REQUIRED

@@ -1,0 +1,218 @@
+schema: PMR007_ROUND20_PRRC_MODEL_V2
+round: PMR-007-FRONTIER-ROUND20
+identity: PMR-007-PRRC-1
+status: REPAIRED_FROZEN_PENDING_FRESH_REREVIEW
+semantics:
+  root_set: finite_authenticated_canonical
+  path_registry: finite_nonempty_complete_for_declared_scope
+  corruption: static_set_chosen_once
+  action_dependency: conjunctive_all_declared_roots_required
+  disabled: dep_intersects_corruption
+  path_blocked: exists_surviving_portfolio_action
+  theorem_quantifiers: forall_corruption_exists_surviving_blocker_per_path
+  compatibility: not_implied
+  rerouting: forbidden_in_theorem_model
+  authentication: assumed_not_proved
+  theorem_concerns: support_existence_and_model_relative_certificate
+invariant:
+  path_hypergraph: H_p_equal_action_dependency_sets_for_blockers_of_p
+  empty_hypergraph_transversal_number: 0
+  kappa: minimum_path_transversal_number
+  criterion: static_support_robust_through_f_iff_kappa_gt_f
+countermodels:
+- id: R20-CM1
+  name: copied_root_false_multiplicity
+  roots:
+  - r0
+  paths:
+  - p0
+  blockers:
+  - id: a1
+    path: p0
+    dep:
+    - r0
+  - id: a2
+    path: p0
+    dep:
+    - r0
+  - id: a3
+    path: p0
+    dep:
+    - r0
+  expected_kappa: 1
+  stronger_reading_defeated: many_actions_entail_resilience
+- id: R20-CM2
+  name: common_bottleneck
+  roots:
+  - r0
+  - r1
+  - r2
+  - r3
+  paths:
+  - p0
+  blockers:
+  - id: a1
+    path: p0
+    dep:
+    - r0
+    - r1
+  - id: a2
+    path: p0
+    dep:
+    - r0
+    - r2
+  - id: a3
+    path: p0
+    dep:
+    - r0
+    - r3
+  expected_kappa: 1
+  stronger_reading_defeated: distinct_secondary_roots_entail_resilience
+- id: R20-CM3
+  name: incompatible_repairs
+  roots:
+  - r1
+  - r2
+  paths:
+  - p1
+  - p2
+  blockers:
+  - id: a
+    path: p1
+    dep:
+    - r1
+  - id: b
+    path: p2
+    dep:
+    - r2
+  incompatibilities:
+  - - a
+    - b
+  expected_kappa: 1
+  support_robust_f: 0
+  executable_robust: false
+- id: R20-CM4
+  name: dynamic_rerouting
+  roots:
+  - r1
+  registered_paths:
+  - p0
+  omitted_created_paths:
+  - p1
+  blockers:
+  - id: a
+    path: p0
+    dep:
+    - r1
+    creates_path: p1
+  expected_registered_kappa: 1
+  operative_restoration: false
+- id: R20-CM5
+  name: adaptive_after_commitment
+  roots:
+  - r1
+  - r2
+  paths:
+  - p0
+  blockers:
+  - id: a1
+    path: p0
+    dep:
+    - r1
+  - id: a2
+    path: p0
+    dep:
+    - r2
+  expected_kappa: 2
+  static_robust_f: 1
+  commit_then_adversary_robust_f: false
+- id: R20-CM6
+  name: unauthenticated_root_alias
+  displayed_roots:
+  - x
+  - y
+  actual_roots:
+  - r
+  display_to_actual:
+    x: r
+    y: r
+  paths:
+  - p0
+  displayed_supports:
+  - - x
+  - - y
+  expected_apparent_kappa: 2
+  expected_actual_kappa: 1
+- id: R20-CM7
+  name: partial_path_registry
+  roots:
+  - r1
+  - r2
+  registered_paths:
+  - p0
+  omitted_paths:
+  - p1
+  blockers:
+  - id: a1
+    path: p0
+    dep:
+    - r1
+  - id: a2
+    path: p0
+    dep:
+    - r2
+  expected_registered_kappa: 2
+  operative_restoration: false
+- id: R20-CM8
+  name: positive_independent_roots
+  corruption_budget: 2
+  roots:
+  - r10
+  - r11
+  - r12
+  - r20
+  - r21
+  - r22
+  paths:
+  - p1
+  - p2
+  blockers:
+  - id: a10
+    path: p1
+    dep:
+    - r10
+  - id: a11
+    path: p1
+    dep:
+    - r11
+  - id: a12
+    path: p1
+    dep:
+    - r12
+  - id: a20
+    path: p2
+    dep:
+    - r20
+  - id: a21
+    path: p2
+    dep:
+    - r21
+  - id: a22
+    path: p2
+    dep:
+    - r22
+  expected_kappa: 3
+  expected_static_robust: true
+nonclaims:
+- adaptive_corruption
+- dynamic_rerouting
+- repair_compatibility
+- root_authentication
+- path_completeness
+- source_truth
+- evidential_independence
+- causal_or_human_restoration
+- general_hypergraph_novelty
+repair_lineage:
+  V1: PRESERVED_REPAIR_REQUIRED
+  V2: EXECUTABLE_AND_CUSTODY_REPAIR

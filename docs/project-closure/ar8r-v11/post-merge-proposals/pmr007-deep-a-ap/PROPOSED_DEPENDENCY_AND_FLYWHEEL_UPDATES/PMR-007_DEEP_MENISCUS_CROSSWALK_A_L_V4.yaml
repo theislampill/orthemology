@@ -1,0 +1,309 @@
+schema: PMR007_DEEP_MENISCUS_CROSSWALK_A_L_V4
+repository_authority: cc91f41fec364ea3910b80d57252bb1e0a050278
+historical_duration: '09:41:25.405101139'
+historical_segment: 357
+rounds:
+  DEEP_A:
+    identity: PMR-007-NFG-1
+    central_change: token-autonomous authority excluded; neutral proper-function ground
+      unestablished
+  DEEP_B:
+    identity: PMR-007-DURP-1
+    central_change: genuine cross-profile restriction constructed; personal/impersonal/distributed
+      realization parity
+  DEEP_C:
+    identity: PMR-007-ICR-1
+    central_change: abstract necessary order plus concrete impersonal actualizer survives
+      the integrated neutral package
+  DEEP_D:
+    identity: PMR-007-UGEN-1
+    central_change: prior asymmetry required under equivariance; articulability does
+      not entail mentality or Speech
+  DEEP_E:
+    identity: PMR-007-TNAC-1
+    central_change: Track-N source compatibility distinguished from neutral dominance;
+      no neutral champion
+  DEEP_F:
+    identity: PMR-007-FPF-1
+    central_change: Source-relative proper function split into function, accuracy,
+      and warrant; neutral realization parity survives.
+  DEEP_G:
+    identity: PMR-007-CBA-1
+    central_change: common bearer is total intersection or independently fixed identity;
+      local/pairwise attributes do not yield unity
+  DEEP_H:
+    identity: PMR-007-UAP-1
+    central_change: matched structural evidence has Bayes factor one; personal-realizer
+      preference requires independent evidence or priors
+  DEEP_I:
+    identity: PMR-007-OAS-1
+    central_change: Order-to-application and application-to-efficacy are independent;
+      neutral unique selection requires an automorphism-fixed effective realizer.
+  DEEP_J:
+    identity: PMR-007-UCA-1
+    central_change: Complete homogeneous upstream-directed finite lineage yields one
+      underived root; sufficient actualizer requires additional closure and composition
+      guards.
+  DEEP_K:
+    identity: PMR-007-WFB-1
+    central_change: Proper function, truth tracking, K/W/P, and successful execution
+      do not entail objectively fitting wise-directed choice, common wise bearer,
+      or stable Wisdom; Track-N predication remains source-conditional.
+  DEEP_L:
+    identity: PMR-007-SDL-1
+    central_change: Articulability, mentality, expression capacity, utterance, authorship,
+      source attribute, created token, and revelational disclosure are separate; UG-T7
+      and UG-T8 remain unproved neutrally, while UG-T9 is repaired as a guarded expression/relay
+      relation.
+edges:
+- id: AH-E-G
+  from: Candidate_E
+  to: Candidate_G
+  update: Track-N norm predicates restrict profiles only conditionally; neutral personal/impersonal
+    parity remains.
+  evidence:
+  - PMR-007-NFG-1
+  - PMR-007-FPF-1
+- id: AH-G-T
+  from: Candidate_G
+  to: transcendental_ascent
+  update: Genuine functional integration does not entail personal realization; matched
+    evidence gives no Bayesian update.
+  evidence:
+  - PMR-007-DURP-1
+  - PMR-007-UAP-1
+- id: AH-T-PF
+  from: transcendental_ascent
+  to: proper_function
+  update: Underived order supplies neither design, healthy operation, environment,
+    warrant, nor praiseworthy teleology.
+  evidence:
+  - PMR-007-ICR-1
+  - PMR-007-FPF-1
+- id: AH-UG-G
+  from: uncreated_grammar
+  to: Candidate_G
+  update: Symmetry breaking requires prior asymmetry but does not identify one bearer
+    or personal realizer.
+  evidence:
+  - PMR-007-UGEN-1
+  - PMR-007-UAP-1
+- id: AH-UG-T
+  from: uncreated_grammar
+  to: transcendental_ascent
+  update: Impersonal abstract, powers, distributed, and brute-semantic articulability
+    models remain live.
+  evidence:
+  - PMR-007-UGEN-1
+  - PMR-007-ICR-1
+- id: AH-N-ATTR
+  from: Track_N
+  to: attribute_ascent
+  update: A source-fixed bearer can conditionally close the common-bearer coordinate;
+    qiyas local rules do not derive it neutrally.
+  evidence:
+  - PMR-007-TNAC-1
+  - PMR-007-CBA-1
+- id: AH-R5-G
+  from: R5_plural_impersonal_rivals
+  to: Candidate_G_and_ascent
+  update: An impersonal integrated field plus plural attribute realization matches
+    current neutral structure and evidence.
+  evidence:
+  - PMR-007-ICR-1
+  - PMR-007-CBA-1
+  - PMR-007-UAP-1
+- id: AH-PMR-GUARDS
+  from: PMR_transport_certificate_results
+  to: central_lanes
+  update: Source, identity, version, authority, environment, defeater, and bearer
+    custody remain explicit eligibility guards.
+  evidence:
+  - PMR-007-FPF-1
+  - PMR-007-CBA-1
+- id: AJ-E-G-I
+  from: Candidate_E
+  to: Candidate_G_and_realizer_selection
+  update: A norm source breaks realization symmetry only when it supplies an independently
+    warranted non-idle asymmetric relation; an idle value tag does not.
+  evidence:
+  - PMR-007-FPF-1
+  - PMR-007-OAS-1
+- id: AJ-G-T-IJ
+  from: Candidate_G
+  to: transcendental_ascent
+  update: One neutral-selected realizer needs an automorphism-fixed point; one underived
+    efficacy lineage needs complete upstream-directed dependence. Neither yields personality.
+  evidence:
+  - PMR-007-OAS-1
+  - PMR-007-UCA-1
+- id: AJ-T-PF-J
+  from: transcendental_ascent
+  to: proper_function
+  update: A unique lineage root or sufficient actualizer does not fix truth-linked
+    teleology, healthy operation, praiseworthy ends, or Wisdom.
+  evidence:
+  - PMR-007-UCA-1
+  - PMR-007-FPF-1
+- id: AJ-UG-I
+  from: uncreated_grammar
+  to: realizer_selection
+  update: Prior asymmetry required for determinate expression does not itself select
+    one concrete realizer; automorphism-fixed selection remains an additional bridge.
+  evidence:
+  - PMR-007-UGEN-1
+  - PMR-007-OAS-1
+- id: AJ-N-I
+  from: Track_N
+  to: realizer_and_attribute_selection
+  update: Authenticated source predication can break symmetry in the expanded Track-N
+    signature, but remains source-conditioned and nonmigratory.
+  evidence:
+  - PMR-007-TNAC-1
+  - PMR-007-OAS-1
+- id: AJ-R5-IJ
+  from: R5_plural_impersonal_rivals
+  to: unity_and_ascent
+  update: Plural roots survive absent complete upstream directedness; even if one
+    lineage root is established, an impersonal powers field plus separate abstract
+    order survives.
+  evidence:
+  - PMR-007-OAS-1
+  - PMR-007-UCA-1
+- id: AJ-PMR-CUSTODY-IJ
+  from: PMR_transport_certificate_results
+  to: central_lanes
+  update: Applicability, relation completeness, same-respect edge typing, effect coverage,
+    source authority, and model/version custody are now explicit world-application
+    guards.
+  evidence:
+  - PMR-007-VCT-1
+  - PMR-007-PRRC-1
+  - PMR-007-OAS-1
+  - PMR-007-UCA-1
+- id: AL-T-PF-K
+  from: transcendental_ascent
+  to: proper_function_and_Wisdom
+  update: Underived order, one actualizer root, truth-correlated representation, and
+    even K/W/P availability do not supply an objectively fitting end, selection because
+    fitting, common bearer, successful execution, or stable Wisdom.
+  evidence:
+  - PMR-007-UCA-1
+  - PMR-007-FPF-1
+  - PMR-007-WFB-1
+- id: AL-G-WISDOM-K
+  from: Candidate_G
+  to: Wisdom_and_common_bearer
+  update: Distributed availability of agency, understanding, fitting end, means, capacity,
+    and execution is insufficient for one wise bearer; the bearer intersection or
+    independently fixed identity remains load-bearing.
+  evidence:
+  - PMR-007-CBA-1
+  - PMR-007-WFB-1
+- id: AL-UG-MENT-L
+  from: uncreated_grammar
+  to: mentality_and_Speech
+  update: Determinate articulability does not entail an understanding bearer; mentality
+    does not entail expressive capacity or occurrence; source-conditioned uncreated
+    Speech remains behind Track-N predicates and custody guards.
+  evidence:
+  - PMR-007-UGEN-1
+  - PMR-007-SDL-1
+- id: AL-N-SPEECH-L
+  from: Track_N
+  to: Speech_and_revelational_identification
+  update: Translated-primary source predicates can conditionally license a created-token/uncreated-speech
+    disclosure classification, but do not migrate into a neutral mentality or Speech
+    proof and do not identify a token with the speech attribute.
+  evidence:
+  - PMR-007-TNAC-1
+  - PMR-007-SDL-1
+- id: AL-PMR-CUSTODY-L
+  from: PMR_transport_certificate_results
+  to: source_disclosure_and_revelation
+  update: Expression and target fidelity leave source identity, provenance, version,
+    authorization, and applicability independently open; all remain mandatory guards
+    for revelational identification.
+  evidence:
+  - PMR-007-VCT-1
+  - PMR-007-ORTC-V4
+  - PMR-007-SDL-1
+- id: AL-R5-KL
+  from: R5_plural_impersonal_rivals
+  to: Wisdom_Speech_and_ascent
+  update: An impersonal truth-tracking powers field can retain abstract articulability,
+    concrete efficacy, and objective or primitive fittingness without intrinsic mentality,
+    common wise bearer, or neutral Speech; the rival survives both rounds.
+  evidence:
+  - PMR-007-WFB-1
+  - PMR-007-SDL-1
+architecture_status:
+  A_UNIFIED_PERSONAL:
+    neutral_status: PROMISING_BUT_BRIDGE_INCOMPLETE
+    source_status: TRACK_N_COMPATIBILITY_LEADER_WITH_SOURCE_CONDITIONED_WISDOM_AND_SPEECH_ONLY
+    blockers:
+    - neutral_proper_function
+    - order_to_applicability
+    - applicability_to_efficacy
+    - neutral_realizer_selection
+    - lineage_completeness
+    - personal_realizer_discrimination
+    - common_bearer_derivation
+    - mentality
+    - speech
+    - objective_fitting_end
+    - selection_because_fitting
+    - stable_wisdom
+    - articulability_to_mentality
+    - mentality_to_expression_capacity
+    - actual_speech
+    - revelational_identification
+  B_POWERS_PLURAL:
+    neutral_status: STRONG_SURVIVING_RIVAL; PLURAL_ROOT VERSION CONDITIONALLY NARROWED
+      BY UCA-1
+    strengths:
+    - truth_tracking_powers
+    - concrete_efficacy
+    - symmetric_or_upstream_directed_realizer_architectures
+    - impersonal_unique_root_option
+    - impersonal_truth_tracking_without_intrinsic_mentality
+    - primitive_or_external_fittingness
+    blockers:
+    - objective_fittingness
+    - source_compatibility
+    - explanatory_stopping_points
+    - intrinsic_wisdom
+    - source_conditioned_speech
+  C_ABSTRACT_ORDER_ACTUALIZER:
+    neutral_status: STRONG_SURVIVING_RIVAL
+    strengths:
+    - necessary_order
+    - concrete_actuality
+    - articulability
+    - matched_structural_evidence
+    - articulability_without_mentality
+    - created_expression_without_uncreated_content
+    blockers:
+    - order_actuality_applicability
+    - brute_coupling
+    - realizer_selection_if_plural
+    - source_and_world_truth
+  D_COHERENT_FIXED_POINT:
+    neutral_status: LIVE_BUT_WEAKER
+    blockers:
+    - truth_correspondence
+    - external_actuality
+    - anti_circularity
+current_disposition:
+  integrated_champion: NONE
+  meniscus: MENISCUS_NOT_REACHED
+  natural_closure: NOT_REACHED
+  strongest_composite_rival: ABSTRACT_NECESSARY_ORDER_PLUS_IMPERSONAL_TRUTH_TRACKING_POWERS_ACTUALIZER_WITH_OBJECTIVE_OR_PRIMITIVE_FITTINGNESS_AND_NO_INTRINSIC_MENTALITY
+next_central_burdens:
+- noncircular_personal_and_reason_sensitive_agency_discriminator
+- common_order_actuality_normativity_bearer
+- objective_fittingness_and_teleology_ground
+- articulability_to_intrinsic_mentality
+- mentality_to_agentive_expression_and_actual_speech
+- source_truth_Arabic_primary_and_revelational_identification
+- integrated_architecture_champion_challenger_under_matched_primitives

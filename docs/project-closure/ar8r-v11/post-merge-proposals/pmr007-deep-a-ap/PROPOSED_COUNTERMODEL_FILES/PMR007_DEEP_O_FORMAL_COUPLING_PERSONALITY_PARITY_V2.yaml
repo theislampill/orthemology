@@ -1,0 +1,88 @@
+schema: pmr007-deep-o-formal-coupling-personality-parity-v2
+identity: PMR-007-GUPP-1
+version: V2
+formal_setting:
+  primitive_space:
+    elements: ['00', '01', '10', '11']
+    coordinates: [x, y]
+  target_placeholders:
+    M: modal_or_identity_coordinate
+    A: actuality_or_efficacy_coordinate
+    S: semantic_or_content_coordinate
+    N: declared_additive_evaluation_coordinate
+    R: selection_or_realization_coordinate
+  interpretation_firewall: >-
+    Coordinate names do not establish domain semantics. A world-directed use
+    requires independently warranted interpretation and correspondence maps.
+  profile_map:
+    '00': {M: 0, A: 0, S: 0, N: 0, R: 0}
+    '01': {M: 0, A: 1, S: 1, N: 1, R: 1}
+    '10': {M: 1, A: 0, S: 1, N: 1, R: 1}
+    '11': {M: 1, A: 1, S: 0, N: 2, R: 1}
+  equations:
+    - M = x
+    - A = y
+    - S = x XOR y
+    - N = x + y
+    - R = 1 iff N > 0
+  interventions: [flip_x, flip_y]
+  revision_graph:
+    edges:
+      - ['00', '01']
+      - ['00', '10']
+      - ['01', '11']
+      - ['10', '11']
+    declared_potential: N
+formal_coupling_tests:
+  shared_map: true
+  image_is_proper_subset_of_product_marginals: true
+  connected_cross_coordinate_influence: true
+  compression_against_declared_five_coordinate_product_rival: true
+  excluded_joint_profiles: true
+  explanatory_or_metaphysical_unification_established: false
+expansions:
+  impersonal:
+    PERS: false
+    MENT: false
+    IOWN: false
+    BECAUSE_F: false
+  personal:
+    PERS: true
+    MENT: true
+    IOWN: true
+    BECAUSE_F: true
+  common_neutral_reduct:
+    - primitive_space
+    - profile_map
+    - equations
+    - interventions
+    - revision_graph
+comparison_scope:
+  strict_tie_holds_only_for: >-
+    comparison rules that factor through isomorphism classes of the common
+    neutral reduct and use the same declared primitive-cost convention
+  possible_parity_breakers:
+    - intentional_evidence
+    - phenomenological_evidence
+    - mechanism_specific_evidence
+    - independently_warranted_fittingness_because_relation
+    - source_conditioned_predication
+    - further_primitive_reduction
+track_n_firewall:
+  parity_breaking_requires:
+    - source_bytes_authenticated
+    - textual_locus_delimited
+    - translation_adequate
+    - attribution_verified
+    - source_proposition_reconstructed
+    - formal_application_faithful
+    - source_framework_accepted
+  does_not_supply:
+    - neutral_T_track_entailment
+    - world_truth_without_further_bridge
+scope:
+  finite_formal_countermodel_schema: true
+  metaphysical_possibility_claimed: false
+  objective_normativity_claimed: false
+  proper_function_claimed: false
+  source_truth_claimed: false

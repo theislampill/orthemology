@@ -1,0 +1,55 @@
+schema: PMR007_DEEP_U_ADMISSION_OVERLAY_V1
+identity: PMR-007-TRPD-1
+title: OSM endpoint/trajectory refinement and mechanism nontransfer
+canonical_version: V2
+status: ADMITTED_POST_MERGE_SCOPED_SOURCE_FORMAL_EMPIRICAL_NEIGHBOR_RESULT
+provenance: NEW_POST_MERGE_SCOPED_SOURCE_FORMAL_RESULT
+historical_identity: NONE
+independent_theorem_origin: false
+general_mathematical_novelty: ZERO
+accepted_results:
+  - endpoint OSM-like status does not decide the registered trajectory-match relation
+  - an independently specified endpoint-plus-trajectory-signature profile decides the registered match relation
+  - model-family identity does not decide trajectory match because CSCG encoding controls differ
+  - the default CSCG comparison is retained only within the bounded registered extraction
+  - endpoint-plus-trajectory equivalence does not identify a unique computational or biological mechanism
+  - global orthogonalization and task fit do not establish strict soundness, truth linkage, or proper function
+source_authority:
+  class: PRIMARY_EMPIRICAL_AND_COMPUTATIONAL_ARTICLE_ACCESS_COPY
+  experiment_reproduced: false
+  official_code_reproduced: false
+  raw_data_reanalysis: false
+  source_claim_status: SOURCE_REPORTED_NOT_REPRODUCED
+family_relations:
+  endpoint_nonselection: APPLICATION_OF_PROFILE_FIBRE_FAMILY
+  trajectory_refinement: APPLICATION_OF_PROFILE_EXTENSION_AND_FACTORIZATION_FAMILY
+  mechanism_nontransfer: APPLICATION_OF_REPRESENTATION_NONIDENTIFICATION_FAMILY
+  latent_state_boundary: APPLICATION_OF_CURRENT_OSM_TYPED_BOUNDARY
+central_effects:
+  Candidate_G_and_Deep_T: PROCESS_TRACE_CAN_SPLIT_AN_ENDPOINT_FIBRE_BUT_DOES_NOT_SUPPLY_INTENTIONAL_OWNERSHIP
+  Candidate_E_and_Deep_P: TASK_RELATIVE_TRAJECTORY_FIT_DOES_NOT_FIX_TRUTH_LINKED_NORM_OR_PROPER_FUNCTION
+  PRH_and_representation_convergence: ENDPOINT_OR_KERNEL_ALIGNMENT_DOES_NOT_IDENTIFY_LEARNING_MECHANISM
+  dynamic_orthing: REQUIRES_SEPARATE_WORLD_EPISODE_MODEL_AND_ANALYSIS_UPDATE_LEVELS
+  transcendental_ascent: NO_CHANGE
+nonclaims:
+  - no unique biological mechanism
+  - no causal identification
+  - no complete model comparison
+  - no strict soundness or pathway adequacy
+  - no truth-linked proper function
+  - no mentality, personality, or intentional subject
+  - no metaphysical, Necessary-Being, attribute, Speech, or revelational result
+  - no framework validation
+cold_audit: PASS_WITH_NONBLOCKING_SOURCE_AND_MECHANISM_NOTES
+repairs:
+  - target label replaced by independently specified trajectory signature
+  - among-tested and source-extraction scope made explicit
+  - encoding entered into model identity
+  - mechanism, soundness, and metaphysical nontransfer firewalls added
+fresh_rereview: PASS_WITH_NONBLOCKING_SOURCE_REPRODUCTION_AND_SCOPE_NOTES
+external_review: OPEN
+owner_adoption: PENDING
+repository_proposal_status: REPOSITORY_PROPOSAL_READY_SUBJECT_TO_EXTERNAL_REVIEW_AND_OWNER_ADOPTION
+integrated_champion: NONE
+meniscus: MENISCUS_NOT_REACHED
+natural_closure: NOT_REACHED

@@ -1,0 +1,14 @@
+schema: PMR007_MISSING_EXACT_ARTIFACTS_THROUGH_DEEP_R_V1
+generated_at: '2026-08-05T05:02:56.920017+00:00'
+missing:
+- checks/pmr007_deep_m_profile_fibre_primary_check_v2.py
+- checks/pmr007_deep_m_profile_fibre_primary_check_v2_results.json
+- checks/pmr007_deep_n_norm_potential_primary_check.py
+- checks/pmr007_deep_n_norm_potential_primary_check_results.json
+- models/PMR007_DEEP_M_EXTENSIONAL_TOKEN_RESPONSIVENESS_MODELS_V2.yaml
+- models/PMR007_DEEP_N_ADDITIVE_NORM_HOLONOMY_MODELS_V2.yaml
+- rereviews/pmr007_deep_m_distinct_transducer_reduct_rereview.py
+- rereviews/pmr007_deep_n_spanning_tree_holonomy_rereview.py
+authority_rule: Items referenced by admission hashes but absent from the active runtime
+  are not reconstructed; available reports and results retain their recorded scope,
+  while exact executable custody remains incomplete.

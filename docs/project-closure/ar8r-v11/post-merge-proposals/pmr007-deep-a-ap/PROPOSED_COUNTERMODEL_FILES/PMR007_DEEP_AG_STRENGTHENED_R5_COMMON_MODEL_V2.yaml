@@ -1,0 +1,190 @@
+schema: PMR007_DEEP_AG_STRENGTHENED_R5_COMMON_MODEL_V2
+identity: PMR-007-R5NR-1
+domain:
+  abstract_order_bearer: o
+  impersonal_actualizer: a
+  additional_role_bearers:
+  - b
+  - c
+  states:
+  - m: 0
+    r: 0
+    nuisance: 0
+    theta: 0
+    truth: 0
+    score: 0
+    action: 0
+    outcome: 1
+    potential: 0
+    coupling: 0
+    fitting_action: 0
+  - m: 0
+    r: 0
+    nuisance: 1
+    theta: 0
+    truth: 0
+    score: 0
+    action: 0
+    outcome: 1
+    potential: 1
+    coupling: 0
+    fitting_action: 0
+  - m: 0
+    r: 1
+    nuisance: 0
+    theta: 0
+    truth: 1
+    score: 1
+    action: 1
+    outcome: 1
+    potential: 1
+    coupling: 0
+    fitting_action: 1
+  - m: 0
+    r: 1
+    nuisance: 1
+    theta: 0
+    truth: 1
+    score: 1
+    action: 1
+    outcome: 1
+    potential: 2
+    coupling: 1
+    fitting_action: 1
+  - m: 1
+    r: 0
+    nuisance: 0
+    theta: 1
+    truth: 0
+    score: 0
+    action: 1
+    outcome: 1
+    potential: 1
+    coupling: 0
+    fitting_action: 1
+  - m: 1
+    r: 0
+    nuisance: 1
+    theta: 1
+    truth: 0
+    score: 0
+    action: 1
+    outcome: 1
+    potential: 2
+    coupling: 0
+    fitting_action: 1
+  - m: 1
+    r: 1
+    nuisance: 0
+    theta: 1
+    truth: 1
+    score: 1
+    action: 0
+    outcome: 1
+    potential: 2
+    coupling: 1
+    fitting_action: 0
+  - m: 1
+    r: 1
+    nuisance: 1
+    theta: 1
+    truth: 1
+    score: 1
+    action: 0
+    outcome: 1
+    potential: 3
+    coupling: 2
+    fitting_action: 0
+neutral_coordinates:
+  ORDER_UNDERIVED_PLACEHOLDER: true
+  EXTERNALLY_ACTUAL_REALIZER: true
+  TARGET_KEY_AUTHORITY: true
+  WORLD_ADEQUACY_GUARD: true
+  SEMANTIC_TRUTH_LINK: true
+  COMMON_ORTHING_SIX_COORDINATES: true
+  CAUSAL_GUIDANCE: true
+  FITTINGNESS_POLICY: true
+  ASYMMETRY_RESOURCE: true
+  REASON_MEDIATION: true
+  ADDITIVE_NORM_POTENTIAL: true
+  NONSEPARABLE_INTERACTION_LAW: true
+role_allocation:
+  Knowledge_role_proxy:
+  - a
+  Power_role_proxy:
+  - a
+  Will_role_proxy:
+  - b
+  common_WPK_proxy_bearer: false
+personal_expansion:
+  PERSONAL: true
+  INTENTIONAL_UPTAKE: true
+  FIRST_PERSON_OWNERSHIP: true
+  BECAUSE_F: true
+  WISDOM: true
+  SPEECH: true
+impersonal_expansion:
+  PERSONAL: false
+  INTENTIONAL_UPTAKE: false
+  FIRST_PERSON_OWNERSHIP: false
+  BECAUSE_F: false
+  WISDOM: false
+  SPEECH: false
+source_contract_accepted: false
+guards:
+- FINITE_DECLARED_SCOPE
+- TABLE_COMPLETE
+- COORDINATES_FIXED
+- NEUTRAL_PREMISES_ONLY
+- SOURCE_TRACK_SEPARATED
+- FORMAL_SATISFIABILITY_NOT_METAPHYSICAL_POSSIBILITY
+nonclaims:
+- derivation of carried premises
+- metaphysical possibility or actuality
+- genuine semantic or motivating reason uptake
+- objective fittingness
+- Divine Knowledge Will or Power
+- necessary being
+- Creatorhood
+- one bearer
+- intellect
+- personality
+- Wisdom
+- Speech
+- revelation
+- champion
+- meniscus
+selected_union: U_AE_STAR
+carried_not_derived:
+- ORDER_UNDERIVED_PLACEHOLDER
+- EXTERNALLY_ACTUAL_REALIZER
+- TARGET_KEY_AUTHORITY
+- WORLD_ADEQUACY_GUARD
+- SEMANTIC_TRUTH_LINK
+registered_admissibility_table:
+- theta: 0
+  reason: 0
+  allowed_actions:
+  - 0
+- theta: 0
+  reason: 1
+  allowed_actions:
+  - 1
+- theta: 1
+  reason: 0
+  allowed_actions:
+  - 1
+- theta: 1
+  reason: 1
+  allowed_actions:
+  - 0
+interaction_guards:
+- COORD_VALID
+- FAMILY_COMPLETE
+- RESOURCE_COMPLETE
+- TABLE_IDENTIFIED
+- SCOPE_FIXED
+source_expansion:
+  source_contract_accepted: true
+  personal_and_attribute_predicates_may_be_fixed_source_relatively: true
+  neutral_migration: false

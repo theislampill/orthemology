@@ -1,0 +1,36 @@
+{
+  "claims": {
+    "fixed_point_is_structural_only": true,
+    "independent_orbit_union_characterization": true,
+    "same_neutral_reduct_allows_personal_false_and_true_expansions": true,
+    "source_anchor_custody_pass": true,
+    "third_person_self_model_not_semantically_promoted": true
+  },
+  "exhaustive_n3_structures": 4096,
+  "explicit_unique_fixed_orbits": [
+    [
+      0
+    ],
+    [
+      1,
+      2
+    ]
+  ],
+  "failures": [],
+  "frozen_hash_mismatches": 0,
+  "frozen_hash_rows": 7,
+  "method": "NETWORKX_GRAPH_MATCHER_AUTOMORPHISM_ORBITS",
+  "notes": [
+    "Automorphism fixedness is necessary for an invariant singleton but is not first-person semantics.",
+    "The two personal expansions are logical controls, not metaphysical possibility claims.",
+    "Track-N source co-predication remains source-relative and is not a neutral H8 proof."
+  ],
+  "overall": "PASS",
+  "random_n5_structures": 5000,
+  "random_structures_with_fixed_point": 5000,
+  "random_transitive_structures": 0,
+  "schema": "PMR007_DEEP_AJ_DISTINCT_NETWORKX_CENTER_REREVIEW_RESULTS_V1",
+  "source_anchor_checks": 8,
+  "source_anchor_failures": 0,
+  "target_subsets_checked": 192768
+}

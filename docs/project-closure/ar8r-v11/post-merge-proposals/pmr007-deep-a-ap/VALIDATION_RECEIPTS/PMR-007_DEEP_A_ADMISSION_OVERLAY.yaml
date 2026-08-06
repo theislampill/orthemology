@@ -1,0 +1,58 @@
+schema: PMR007_DEEP_A_ADMISSION_OVERLAY_V1
+identity: PMR-007-NFG-1
+round: PMR-007-DEEP-A
+title: Candidate E norm-fixer adequacy and proper-function horn discrimination
+provenance_class: ADMITTED_POST_MERGE_SCOPED_RESULT
+historical_identity: NONE
+canonical_statement:
+  - a finite deterministic profile fixes an independently specified binary truth target iff the target is constant on every profile fibre
+  - Candidate E excludes complete token-autonomous authority but does not rank or discharge the surviving norm-source horns
+  - truth-linked target fixation, function fixation, proper operation, warrant, teleology, and Wisdom remain noninterchangeable
+proof_status: HUMAN_PROOF_PLUS_PRIMARY_AND_DISTINCT_EXECUTABLE_CHECKS
+primary_check:
+  partitions_checked: 5295
+  target_assignments_checked: 1187042
+  failures: 0
+cold_audit:
+  disposition: PASS_WITH_NONBLOCKING_SCOPE_AND_AUTHORITY_NOTES
+  blocking_findings: 0
+repair:
+  required: false
+fresh_rereview:
+  disposition: PASS_WITH_NONBLOCKING_SCOPE_AND_AUTHORITY_NOTES
+  exhaustive_cases: 361086
+  random_cases: 18000
+  failures: 0
+theorem_family:
+  relation: DIRECT_APPLICATION_OF_PROFILE_FIBRE_FACTORIZATION
+  general_mathematical_novelty: ZERO
+central_meniscus_effect:
+  candidate_e_to_candidate_g: a norm source constrains the product profile only when its target is independently fixed rather than a free primitive coordinate
+  transcendental_to_proper_function: NOT_ENTAILED
+  proper_function_to_wisdom: NOT_ENTAILED
+terminal_status:
+  token_autonomous_authority: EXCLUDED_AT_CANDIDATE_E_SCOPE
+  truth_link_factorization: ESTABLISHED
+  proper_function_ground: UNESTABLISHED
+  wisdom_bridge: UNESTABLISHED
+  strongest_surviving_rivals:
+    - constitutive truth norm
+    - selected effect
+    - holistic fixed point
+    - primitive norm
+    - fitrah school-internal account
+    - error theory or relativization
+source_status:
+  exact_candidate_e_packet: VERIFIED_LOCAL_COPY
+  exact_proper_function_baseline: VERIFIED_LOCAL_COPY
+  fitrah_route: SCHOOL_INTERNAL_OR_SOURCE_RELATIVE_WITH_NEUTRAL_BRIDGE_OPEN
+external_review_status: OPEN
+owner_adoption_status: PENDING
+repository_proposal_status: ELIGIBLE_FOR_SANITIZED_OWNER_REVIEW_NOT_INTEGRATION_AUTHORIZED
+nonclaims:
+  - no designer or personal ground
+  - no truth of any source premise
+  - no empirical proper-function validation
+  - no warrant simpliciter
+  - no teleology or Wisdom
+  - no Necessary Being

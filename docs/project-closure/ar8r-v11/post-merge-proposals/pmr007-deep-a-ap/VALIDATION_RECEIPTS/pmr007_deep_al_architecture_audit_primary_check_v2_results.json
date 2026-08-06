@@ -1,0 +1,118 @@
+{
+  "architectures": [
+    "A",
+    "B1",
+    "C1"
+  ],
+  "benefits": {
+    "A": [
+      "connected_derivation",
+      "neutral_core",
+      "source_bundle"
+    ],
+    "B1": [
+      "connected_derivation",
+      "neutral_core",
+      "source_bundle"
+    ],
+    "C1": [
+      "connected_derivation",
+      "neutral_core",
+      "order_actualizer_role",
+      "source_bundle"
+    ]
+  },
+  "claims": {
+    "A_can_win_only_under_favorable_open_completion": true,
+    "B1_can_remain_live_under_some_completion": true,
+    "C1_can_remain_live_under_some_completion": true,
+    "incomparable_completions_exist": true,
+    "no_current_pairwise_dominance_under_frozen_sets": true,
+    "no_robust_champion_across_all_open_completions": true
+  },
+  "completion_dispositions": {
+    "A": 1,
+    "B1": 15,
+    "C1": 15,
+    "INCOMPARABLE": 15,
+    "MULTIPLE": 18
+  },
+  "completion_examples": {
+    "A": [
+      true,
+      true,
+      true,
+      false,
+      false,
+      true
+    ],
+    "B1": [
+      false,
+      false,
+      false,
+      true,
+      false,
+      false
+    ],
+    "C1": [
+      false,
+      false,
+      false,
+      false,
+      true,
+      false
+    ],
+    "INCOMPARABLE": [
+      false,
+      false,
+      false,
+      false,
+      false,
+      false
+    ],
+    "MULTIPLE": [
+      false,
+      false,
+      false,
+      true,
+      true,
+      false
+    ]
+  },
+  "costs": {
+    "A": [
+      "H7",
+      "H8",
+      "source_world"
+    ],
+    "B1": [
+      "brute_stop",
+      "powers_law",
+      "source_extension"
+    ],
+    "C1": [
+      "abstract_concrete_bridge",
+      "brute_actuality",
+      "source_extension"
+    ]
+  },
+  "open_completions_checked": 64,
+  "overall": "PASS",
+  "pairwise_dominance": {
+    "A>B1": false,
+    "A>C1": false,
+    "B1>A": false,
+    "B1>C1": false,
+    "C1>A": false,
+    "C1>B1": false
+  },
+  "schema": "PMR007_DEEP_AL_PRIMARY_ARCHITECTURE_AUDIT_RESULTS_V2",
+  "target_imports": {
+    "A": [
+      "Wisdom",
+      "personal"
+    ],
+    "B1": [],
+    "C1": []
+  }
+}

@@ -1,0 +1,37 @@
+{
+  "schema": "PMR007_DEEP_AG_DISTINCT_CONSTRAINT_SEARCH_REREVIEW_V2",
+  "frozen_hash_rows_checked": 6,
+  "frozen_hash_failures": [],
+  "all_boolean_action_tables_checked": 256,
+  "eligible_action_tables": 1,
+  "eligible_action_table_masks": [
+    60
+  ],
+  "mixed_difference_edges": [
+    [
+      0,
+      1
+    ],
+    [
+      1,
+      2
+    ]
+  ],
+  "interaction_connected": true,
+  "personal_target_conservative_expansions": 64,
+  "coordinate_permutation_trials": 20000,
+  "component_count_failures": 0,
+  "role_proxy_control": {
+    "global": 3375,
+    "common": 1695,
+    "no_common": 1680
+  },
+  "result": "PASS",
+  "nonclaims": [
+    "truth of carried premises",
+    "metaphysical possibility",
+    "genuine reasons",
+    "Divine attributes",
+    "personal architecture falsity"
+  ]
+}

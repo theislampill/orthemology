@@ -1,0 +1,64 @@
+{
+  "all_deletions_block_declared_conclusion": true,
+  "deletion_witnesses": [
+    {
+      "conclusion_after_deletion": 0,
+      "guard": "authentic_source"
+    },
+    {
+      "conclusion_after_deletion": 0,
+      "guard": "personal_designer"
+    },
+    {
+      "conclusion_after_deletion": 0,
+      "guard": "truth_directed_end"
+    },
+    {
+      "conclusion_after_deletion": 0,
+      "guard": "healthy_fitrah"
+    },
+    {
+      "conclusion_after_deletion": 0,
+      "guard": "proper_operation"
+    },
+    {
+      "conclusion_after_deletion": 0,
+      "guard": "suitable_environment"
+    },
+    {
+      "conclusion_after_deletion": 0,
+      "guard": "undefeated_warrant"
+    },
+    {
+      "conclusion_after_deletion": 0,
+      "guard": "output_accuracy"
+    }
+  ],
+  "enriched_factorization_failures": 0,
+  "expected_only_full_track_n_package_satisfies_declared_contract": true,
+  "horn_results": {
+    "error_or_relative": 0,
+    "holistic_fixed_point": 0,
+    "primitive_norm": 0,
+    "retained_meta": 0,
+    "selected_effect_tracker": 0,
+    "track_n_full_package": 1,
+    "trans_state_truth": 0
+  },
+  "neutral_collision_fibres": 8,
+  "neutral_factorization_fails": true,
+  "neutral_fibres_checked": 16,
+  "pass": true,
+  "profile_twins": {
+    "impersonal_target": 0,
+    "same_neutral_profile": [
+      1,
+      1,
+      1,
+      1
+    ],
+    "track_n_target": 1
+  },
+  "schema": "PMR007_DEEP_F_PRIMARY_CHECK_RESULTS_V1",
+  "worlds_checked": 2048
+}

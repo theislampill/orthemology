@@ -1,0 +1,69 @@
+schema: PMR007_DEEP_I_ORDER_ACTUALITY_SYMMETRY_MODELS_V1
+status: POST_MERGE_RESEARCH_CANDIDATE
+signature:
+  sorts: [order, realizer]
+  relations: [applies, actualizes]
+  optional_predicates: [necessary, underived, named_by_authenticated_source, hidden_haecceity]
+models:
+  - id: I-CM1-NO-APPLICATION
+    orders: [o]
+    realizers: []
+    necessary: [o]
+    underived: [o]
+    applies: []
+    actualizes: []
+    defeats: necessary_or_underived_order_implies_concrete_application
+  - id: I-CM2-SYMMETRIC-PLURAL
+    orders: [o]
+    realizers: [x0, x1]
+    necessary: [o]
+    underived: [o]
+    applies: [[o, x0], [o, x1]]
+    actualizes: [[o, x0], [o, x1]]
+    automorphism_generators:
+      - {x0: x1, x1: x0}
+    defeats: nonempty_realizer_fibre_implies_unique_neutral_realizer
+  - id: I-CM3-POWERS-LOCI
+    orders: [o]
+    realizers: [l0, l1, l2]
+    applies: [[o, l0], [o, l1], [o, l2]]
+    actualizes: [[o, l0], [o, l1], [o, l2]]
+    automorphism_generators:
+      - {l0: l1, l1: l2, l2: l0}
+    defeats: concrete_powers_field_implies_one_bearer
+  - id: I-CM4-PRIMITIVE-COUPLING
+    orders: [o]
+    realizers: [a, b]
+    applies: [[o, a], [o, b]]
+    actualizes: [[o, a], [o, b]]
+    primitive_coupling: [[o, a], [o, b]]
+    automorphism_generators:
+      - {a: b, b: a}
+    defeats: genuine_coordination_implies_numerical_unity
+  - id: I-CM5-SOURCE-ASYMMETRY
+    orders: [o]
+    realizers: [x0, x1]
+    applies: [[o, x0], [o, x1]]
+    actualizes: [[o, x0], [o, x1]]
+    named_by_authenticated_source: [x0]
+    neutral_selector_exists: false
+    track_n_conditioned_selector_exists: true
+  - id: I-CM6-HIDDEN-HAECCEITY
+    orders: [o]
+    realizers: [x0, x1]
+    applies: [[o, x0], [o, x1]]
+    actualizes: [[o, x0], [o, x1]]
+    hidden_haecceity: [x0]
+    selector_exists: true
+    explanatory_difference: false
+positive_witness:
+  id: I-PW1-UNIQUE-NEUTRAL-FIXED-POINT
+  orders: [o]
+  realizers: [u, y0, y1]
+  applies: [[o, u], [o, y0], [o, y1]]
+  actualizes: [[o, u], [o, y0], [o, y1]]
+  neutral_rank: {u: 0, y0: 1, y1: 1}
+  automorphism_generators:
+    - {u: u, y0: y1, y1: y0}
+  globally_fixed_candidates: [u]
+  unique_invariant_candidate: u

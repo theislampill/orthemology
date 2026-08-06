@@ -1,0 +1,28 @@
+{
+  "all_premises_hold": true,
+  "bridge_controls": {
+    "actualizer_not_creator": true,
+    "capacity_not_occurrence": true,
+    "creator_not_revelation": true,
+    "functional_unity_not_personality": true,
+    "intellect_not_agency": true,
+    "kwp_not_wisdom": true,
+    "necessary_abstract_not_concrete": true,
+    "plural_actualizers_not_unity": true,
+    "underived_not_necessary": true
+  },
+  "conclusions_withheld": true,
+  "objects_checked": 8,
+  "overall": "PASS",
+  "premises": {
+    "ART": true,
+    "ATE": true,
+    "DURP": true,
+    "EFF": true,
+    "EXT": true,
+    "NEO": true,
+    "NFG": true
+  },
+  "schema": "PMR007_DEEP_C_CHECK_RESULTS_V1",
+  "worlds_checked": 2
+}

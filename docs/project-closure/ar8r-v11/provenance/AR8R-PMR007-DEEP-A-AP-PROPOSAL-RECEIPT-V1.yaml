@@ -1,0 +1,47 @@
+schema: ar8r-pmr007-deep-a-ap-proposal-receipt-v1
+source_archive:
+  filename: AR8R_PMR007_REPOSITORY_UPDATE_PROPOSAL_THROUGH_DEEP_AP.zip
+  sha256: 80c1679744374f20740dbb9817bb333fb9ae7f399d166afb39d28d23c3fc9d59
+  bytes: 1609706
+  archive_members: 831
+  integrity: PASS
+  unsafe_member_paths: 0
+  duplicate_member_paths: 0
+  decompression_errors: 0
+  internal_sha256sums_entries: 830
+  internal_sha256sums_errors: 0
+  yaml_files_parsed: 183
+  json_files_parsed: 119
+  structured_parse_errors: 0
+  private_data_exclusion: PASS
+repository_copy:
+  path: docs/project-closure/ar8r-v11/post-merge-proposals/pmr007-deep-a-ap
+  exact_archive_members: 831
+  source_bytes_modified: false
+  role: EXACT_SANITIZED_POST_MERGE_PROPOSAL_SNAPSHOT
+proposal_boundary:
+  indexed_results: 52
+  existing_round_11_through_20_results: 10
+  deep_a_through_ap_results: 42
+  first_deep_result: PMR-007-NFG-1
+  last_deep_result: PMR-007-SWRI-1
+  historical_identity_assigned: false
+  historical_theorem_origin_credit: false
+  external_review: OPEN
+  owner_adoption: PENDING
+  repository_readiness: EXTERNAL_REVIEW_REQUIRED
+  general_novelty_credit: NOT_GRANTED
+  lean_source_or_kernel_claim: NONE
+  integrated_champion: NONE
+  meniscus: MENISCUS_NOT_REACHED
+  natural_closure: NOT_REACHED
+overlap_with_existing_main:
+  byte_duplicate_members: 99
+  unique_duplicate_hashes: 94
+  explanation: Exact snapshot custody repeats Round 11-20 material already present on main.
+  duplicate_credit_effect: NONE
+private_companions_excluded:
+  files:
+    - AR8R_PMR007_PRIVATE_RESEARCH_CHECKPOINT_THROUGH_DEEP_AP.zip
+    - AR8R_PMR007_DEEP_X_AA_BOUNDARY_RESCUE_V1.zip
+  disposition: LOCAL_PRIVATE_EVIDENCE_ONLY

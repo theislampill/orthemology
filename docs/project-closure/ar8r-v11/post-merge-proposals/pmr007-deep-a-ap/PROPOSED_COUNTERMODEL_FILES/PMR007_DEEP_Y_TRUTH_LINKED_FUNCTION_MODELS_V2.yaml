@@ -1,0 +1,60 @@
+schema: PMR007_DEEP_Y_TRUTH_LINKED_FUNCTION_MODELS_V2
+identity: PMR-007-PFSA-1
+status: REPAIRED_POST_MERGE_RESEARCH_CANDIDATE
+setting:
+  Y: finite response_or_function_role_set
+  E: declared_account_relative_reduct_with_all_registered_evidence_relations
+  G: automorphisms_preserving_every_relation_of_E
+  orbit_partition: Y_mod_G
+  T: semantic_truth_or_world_fit_predicate_on_Y
+  F: E_reduct_definable_function_classification
+predicates:
+  TL: truth_linked_coordinate_of_epistemic_function
+  reduct_definable: classifier_is_constant_on_AutE_orbits
+  truth_separating_enrichment: additional_information_refines_each_TL_nonconstant_orbit
+  semantic_anchor: an_interpreted_truth_separating_enrichment_with_independently_validated_referent_semantic_and_world_guards
+  KeyAuthority: independently_warranted_scoped_authority_for_the_target_key
+  WorldAdeq: independently_warranted_world_target_adequacy
+controls:
+- id: Y-CM1-LABEL-SWAP
+  extensional_orbits:
+  - - truth_aligned_role
+    - false_aligned_role
+  truth_values:
+  - true
+  - false
+  result: extensional_classification_cannot_be_exactly_truth_linked
+- id: Y-CM2-HARMFUL-OPTIMIZER
+  extensional_structure: exact_success_under_installed_destructive_target
+  truth_linked_proper_function: false
+  result: success_and_corrigibility_do_not_fix_epistemic_function
+- id: Y-CM3-SELECTED-EFFECT-SURVIVAL
+  selected_because_of: survival_or_reproduction
+  truth_linkage: not_supplied
+  result: selected_effect_function_does_not_by_itself_fix_epistemic_truth_function
+- id: Y-CM4-MALICIOUS-DESIGN
+  design_role: deception
+  designer_intention: malicious
+  result: design_simpliciter_does_not_fix_praiseworthy_or_truth_directed_function
+- id: Y-CM5-SEMANTIC-ANCHOR
+  anchor: validated_referent_and_truth_relation
+  result: truth_linked_classification_becomes_definable_relative_to_anchor
+- id: Y-CM6-IMPERSONAL-ANCHOR-LAW
+  anchor: impersonal_world_semantic_law
+  truth_linkage: true
+  personality: false
+  wisdom: false
+  result: semantic_anchor_does_not_entail_personality_or_wisdom
+- id: Y-CM7-TRACK-N-SOURCE-ANCHOR
+  authority: authenticated_and_referent_identified_source_premise
+  track: N
+  result: source_relative_anchor_without_neutral_migration
+nonclaims:
+- semantic_anchor_is_metaphysically_necessary_in_every_function_theory
+- truth_linkage_is_the_whole_of_proper_function
+- any_actual_anchor_has_been_verified
+- personality_or_wisdom_follows
+- Track_N_source_truth_is_neutrally_established
+- truth_separating_enrichment_is_unique
+- definability_establishes_anchor_validity_or_target_authority
+- the_result_characterizes_all_coordinates_of_proper_function

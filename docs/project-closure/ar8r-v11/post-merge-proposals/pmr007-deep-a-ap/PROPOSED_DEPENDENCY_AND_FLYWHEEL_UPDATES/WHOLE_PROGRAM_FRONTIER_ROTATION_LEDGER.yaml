@@ -1,0 +1,967 @@
+schema: AR8R_WHOLE_PROGRAM_FRONTIER_ROTATION_LEDGER_V1
+generated_at: '2026-08-03T15:50:48.115703+00:00'
+campaign: AR8R_POST_MERGE_MENISCUS_PROGRAM_V1
+current_wave: PMR-007
+surface_coverage:
+  registered: 88
+  covered: 88
+  missing: []
+update_rule: Update only when substantive research changes a lane; not a breadth quota.
+lanes:
+- lane_id: L01
+  name: core orthemology and proper orthing
+  surfaces:
+  - surface_id: S01
+    name: Core orthemology objects and candidate terminology
+  - surface_id: S02
+    name: Analysis-relative ground truth, pathway adequacy, and reference-model contract
+  - surface_id: S03
+    name: Type/token normalization and soundness bearers
+  - surface_id: S43
+    name: Current-main R6 authority and public honesty boundary
+  - surface_id: S53
+    name: Proper orthing, Gettier-style separation, and T323-T326 coordinates
+  last_substantive_object_produced: PMR-007 Round 15 V2 model-bound temporal certificate
+    architecture
+  current_strongest_positive_claim: Event-local correctness/closure can be mechanically
+    honest while temporal proper-orthing status is certified only relative to an explicit
+    model, objective, strategy, custody digest, and rank witness.
+  current_strongest_live_countermodel_or_rival: One exact current-valid CLOSURE record
+    is compatible with both stable persistence and a later dynamic-bypass system.
+  central_unresolved_burden: Define and justify complete source/target/successor abstractions;
+    connect model-bound certification to actual proper orthing rather than runtime
+    closure alone.
+  exact_evidence_owner:
+  - Round15 V2 packet
+  - current-main corrective-transition schema and validators
+  relationship_to_primary_candidates:
+  - Candidate B
+  - Candidate A
+  downstream_surfaces_affected:
+  - S25
+  - S27
+  - S31
+  - S47
+  - S54
+  next_dependency_ready_operation: Audit one real daee episode against a declared
+    temporal abstraction when exact runtime bytes/logs become available.
+  deferral_reason: Exact later daee runtime and causal evidence unavailable.
+  repository_proposal_status: EXTERNAL_REVIEW_REQUIRED
+- lane_id: L02
+  name: Orthability, reachability, certification, Candidate 1, and Track M
+  surfaces:
+  - surface_id: S07
+    name: 'Apprehensional reachability: Orthability-O, Orthability-L, and Orthability-R'
+  - surface_id: S08
+    name: Profile fibres, factorization, certificates, and T366 reconstruction
+  - surface_id: S09
+    name: 'Track M Candidate 1: finite profile-and-fibre reachability certificate'
+  - surface_id: S10
+    name: PRR-T1 provenance/reachability limits and M11-M13 collective distinctions
+  - surface_id: S52
+    name: 'Certification and restoration ladder: T304-T306 and T308'
+  last_substantive_object_produced: PMR-007 Round 18 ORTC-V4 complete-certificate
+    relation-selection theorem
+  current_strongest_positive_claim: Exact finite selector cost is controlled by complete-object
+    support covers or compatible encoder partitions; robust noisy selection is characterized
+    by ambiguity-set intersections.
+  current_strongest_live_countermodel_or_rival: Exact label recovery can be strictly
+    more expensive than relation selection; visible labels may still fail provenance
+    authenticity or independence.
+  central_unresolved_burden: Integrate Candidate 1 exact minimax query complexity
+    with authenticated distinct provenance-root discovery and distributed pooling.
+  exact_evidence_owner:
+  - Round14 V2
+  - Round16 V2
+  - Candidate 1 exact dossier
+  relationship_to_primary_candidates:
+  - Candidate A
+  - Candidate B
+  downstream_surfaces_affected:
+  - S11
+  - S19
+  - S25
+  - S27
+  - S51
+  next_dependency_ready_operation: Round 19 Candidate-1 provenance-root threshold
+    query theorem and hidden-root impossibility controls.
+  deferral_reason: Standalone PRR-T1/M11-M13 bytes and external Candidate 1 review
+    remain open.
+  repository_proposal_status: EXTERNAL_REVIEW_REQUIRED
+- lane_id: L03
+  name: TAC, Tachikoma, SAC, identity, lineage, and evidential independence
+  surfaces:
+  - surface_id: S11
+    name: TAC / Tachikoma / Stand Alone Complex identity and lineage
+  - surface_id: S12
+    name: TAC/SAC evidential independence, false tawatur, and lineage dependence
+  - surface_id: S79
+    name: Multi-actor conflict, composite attribution, and noncollapse of distributed
+      realization
+  last_substantive_object_produced: PMR-007 Rounds 11–12 transport controls plus PMR-TAC-01
+    noncollapse matrix
+  current_strongest_positive_claim: Holonomy-fixed anchor extension and structure-preserving
+    role transport provide exact lineage controls without collapsing type, state,
+    function, carrier, episode, or evidence-root identity.
+  current_strongest_live_countermodel_or_rival: Copied synchronization and shared
+    provenance can multiply availability while preserving one acquisition root and
+    no increase in evidential independence.
+  central_unresolved_burden: Recover exact TAC/SAC scene and theorem packet; define
+    orthemologous/paralemologous relations from exact bytes rather than inference.
+  exact_evidence_owner:
+  - Round11
+  - Round12
+  - PMR-TAC-01 custody in PMR002-006 archive
+  relationship_to_primary_candidates:
+  - Candidate A
+  - Candidate C
+  downstream_surfaces_affected:
+  - S05
+  - S06
+  - S21
+  - S46
+  - S76
+  next_dependency_ready_operation: Upon exact TAC custody, bind one scene/source claim
+    to the typed identity/lineage coordinates and test it.
+  deferral_reason: Exact historical TAC/SAC packet unavailable.
+  repository_proposal_status: BLOCKED_ON_SOURCE_CUSTODY
+- lane_id: L04
+  name: transcendental orthability and metaphysical ascent
+  surfaces:
+  - surface_id: S13
+    name: Track T same-token/same-respect theory-adequacy layer
+  - surface_id: S14
+    name: Track T realist bridge, resource/semantic/provenance bridges, and world-directed
+      conclusion
+  - surface_id: S15
+    name: Transcendental orthability ascent, Necessary Being, and source-enriched
+      attribute ascent
+  - surface_id: S86
+    name: Track-T coherentism, source authentication, and objective orthability boundary
+  last_substantive_object_produced: PMR-007 Round 17 RSD-1 role-section descent and
+    R5-RSD-1 common-model control
+  current_strongest_positive_claim: Holonomy-fixed transport yields one canonical
+    lineage/descent quotient; it does not by itself yield numerical transworld identity
+    or one common-bearer Creator.
+  current_strongest_live_countermodel_or_rival: One coherent root section plus global
+    plural W/P/K availability can coexist with no root-local W/P/K co-instantiation
+    and no Creator predicate.
+  central_unresolved_burden: Justify B_ID and common-bearer/unity/mentality/source-world
+    bridges or preserve their strongest rivals.
+  exact_evidence_owner:
+  - Round12
+  - PMR-M3-01
+  - Asfahani translated-primary access
+  relationship_to_primary_candidates:
+  - Candidate C
+  downstream_surfaces_affected:
+  - S16
+  - S17
+  - S69
+  - S87
+  next_dependency_ready_operation: A later Candidate C round must attack B_ID or a
+    source-faithful unity bridge with a common-model R5 test.
+  deferral_reason: Arabic-primary verification and complete owner ascent packet unavailable.
+  repository_proposal_status: EXTERNAL_REVIEW_REQUIRED
+- lane_id: L05
+  name: Candidate N and Taymiyyan/Athari source architecture
+  surfaces:
+  - surface_id: S17
+    name: Candidate N six-role Taymiyyan source architecture
+  - surface_id: S18
+    name: Candidate N novelty, significance, and interpretive-payoff evaluation
+  - surface_id: S69
+    name: Taymiyyan/Athari source corpus and transcendental-source roles
+  last_substantive_object_produced: PMR-M4 qiyās al-awlā guard registry and PMR source-role
+    dossiers
+  current_strongest_positive_claim: Candidate N remains a checked-corpus modern six-role
+    source architecture useful for diagnosis; qiyās al-awlā is admissible only under
+    typed source and eligibility guards.
+  current_strongest_live_countermodel_or_rival: Role taxonomy can be source-compatible
+    yet incomplete, nonunique, or without comparative payoff; it does not complete
+    the Necessary-Being chain.
+  central_unresolved_burden: Exact role definitions/loci, source-specialist review,
+    and bounded comparative-yield cases.
+  exact_evidence_owner:
+  - PMR-M4-01
+  - El-Tobgui
+  - Asfahani
+  - al-Ujayri
+  relationship_to_primary_candidates:
+  - Candidate C
+  - Candidate B
+  downstream_surfaces_affected:
+  - S15
+  - S25
+  - S28
+  - S39
+  next_dependency_ready_operation: Freeze one exact role/locus dispute and compare
+    Candidate N against a reduced or learned architecture.
+  deferral_reason: External source-specialist review and exact owner packet open.
+  repository_proposal_status: EXTERNAL_REVIEW_REQUIRED
+- lane_id: L06
+  name: R5 rivals, powers, plural realization, and nonintegration
+  surfaces:
+  - surface_id: S16
+    name: R5 rival portfolio, guarded coexistence, and minimal nonintegration
+  - surface_id: S87
+    name: Powers, plural realization, impersonal actualizers, and anti-total-emergence
+      rivals
+  last_substantive_object_produced: PMR-007 Round 17 integrated R5 role-section/common-bearer
+    model
+  current_strongest_positive_claim: Canonical role lineage is compatible with plural
+    coordinated realization until common-bearer guards are independently warranted.
+  current_strongest_live_countermodel_or_rival: Plural coordinated W/P/K bearers and
+    impersonal necessary originator models survive weaker ascent stages.
+  central_unresolved_burden: Find a source-neutral or source-relative premise that
+    excludes the integrated plural model without circularity.
+  exact_evidence_owner:
+  - PMR-R5-01
+  - PMR-M5-02
+  - Round12
+  relationship_to_primary_candidates:
+  - Candidate C
+  downstream_surfaces_affected:
+  - S14
+  - S15
+  - S30
+  - S42
+  next_dependency_ready_operation: Round 17 common-bearer/role-section integration
+    test.
+  deferral_reason: Exact historical R5 packet is partial; current post-merge controls
+    are sufficient for fresh scoped work.
+  repository_proposal_status: POST_MERGE_RESEARCH_CANDIDATE
+- lane_id: L07
+  name: daee, meta-noetic restoration, and route ordering
+  surfaces:
+  - surface_id: S25
+    name: daee target/kernel/source-target and sound-fit-restoration distinction
+  - surface_id: S26
+    name: daee route-gradient, typed restorative order, and non-scalar boundary
+  - surface_id: S27
+    name: Burden landing, recursive rereading, collapse radius, source reordering,
+      and causal efficacy
+  - surface_id: S31
+    name: T299/T300 higher-order profile blindness, same-output cases, and Gettier-style
+      restoration failure
+  - surface_id: S51
+    name: Matched intervention, T299 causal burden landing, and T300 higher-order
+      profile blindness
+  - surface_id: S54
+    name: Source-bound certification, target-reference contracts, and dynamic fixed-point
+      boundaries
+  last_substantive_object_produced: 'PMR-007 Rounds 14–16: co-Büchi restoration, model-bound
+    certificates, and version-custody eligibility'
+  current_strongest_positive_claim: A nondecorative discrete restoration architecture
+    now has explicit states, actions, adversarial successors, temporal objectives,
+    certificate custody, and version-sensitive eligibility.
+  current_strongest_live_countermodel_or_rival: Dynamic bypass and hidden future successors
+    make a local CLOSURE record temporally nonidentifying; stale source/version contracts
+    shrink winning regions.
+  central_unresolved_burden: Establish actual daee model extraction, partial-observation
+    semantics, causal landing, and relation to typed non-scalar route ordering.
+  exact_evidence_owner:
+  - Round14 V2
+  - Round15 V2
+  - Round16 V2
+  - current-main daee files
+  relationship_to_primary_candidates:
+  - Candidate B
+  - Candidate A
+  downstream_surfaces_affected:
+  - S28
+  - S47
+  - S50
+  - S80
+  next_dependency_ready_operation: Build a model-extraction contract from an exact
+    runtime snapshot and test whether current fields suffice to populate it.
+  deferral_reason: Later daee snapshot/runtime evidence unavailable; current main
+    only inspected.
+  repository_proposal_status: EXTERNAL_REVIEW_REQUIRED
+- lane_id: L08
+  name: noetic structure, memetics, Gettier, and deformation
+  surfaces:
+  - surface_id: S28
+    name: Meta-noetic memetics, noetic structure, and restorative-cutset architecture
+  - surface_id: S53
+    name: Proper orthing, Gettier-style separation, and T323-T326 coordinates
+  last_substantive_object_produced: Round 15 local-closure/temporal nonidentifiability
+    and T353 self-sealing control
+  current_strongest_positive_claim: Correct output or closed local burden records
+    do not certify repaired governance; stable restoration requires no reachable adversarial
+    deformation cycle under the declared model.
+  current_strongest_live_countermodel_or_rival: Self-sealing metaortheme and dynamic
+    rerouting can retain or reopen error paths after apparent correction.
+  central_unresolved_burden: Represent burden creation/landing/transfer, recursive
+    reread, and collapse-radius updates in the temporal model without laundering hidden
+    burdens.
+  exact_evidence_owner:
+  - Round15 V2
+  - historical T351-T353
+  relationship_to_primary_candidates:
+  - Candidate B
+  downstream_surfaces_affected:
+  - S01
+  - S25
+  - S27
+  - S31
+  next_dependency_ready_operation: Construct an adversarial dynamic burden-reappearance
+    game with explicit custody and reread semantics.
+  deferral_reason: Exact noetic_structure_draft_v1 bytes unavailable.
+  repository_proposal_status: POST_MERGE_RESEARCH_CANDIDATE
+- lane_id: L09
+  name: source authentication and authority decomposition
+  surfaces:
+  - surface_id: S04
+    name: Source-status, provenance, custody, and closure truthfulness
+  - surface_id: S39
+    name: Source authentication, translation, attribution, inference, and release
+      ladder
+  - surface_id: S68
+    name: Source authentication, translation, attribution, inference, and release
+      coordinates
+  - surface_id: S69
+    name: Taymiyyan/Athari source corpus and transcendental-source roles
+  - surface_id: S82
+    name: Current source residuals, source truth, and objective evaluation
+  last_substantive_object_produced: Round 16 version-custody transport and PMR source-to-formal
+    authority audits
+  current_strongest_positive_claim: Source bytes, locus, translation, proposition,
+    formal predicate, applicability, version, authority, and invalidator discharge
+    remain separate compositional coordinates.
+  current_strongest_live_countermodel_or_rival: Identical bytes across target versions
+    can differ in applicability; semantic noncommutation and dropped invalidators
+    defeat transport.
+  central_unresolved_burden: Arabic-primary verification and exact edition/locus binding
+    for selected ascent edges.
+  exact_evidence_owner:
+  - Round16 V2
+  - source-status registry
+  - Asfahani translation
+  - El-Tobgui
+  relationship_to_primary_candidates:
+  - Candidate A
+  - Candidate C
+  downstream_surfaces_affected:
+  - S14
+  - S15
+  - S25
+  - S54
+  next_dependency_ready_operation: Audit one exact translated-primary ascent edge
+    against source metadata and formal bridge coordinates.
+  deferral_reason: Arabic editions not supplied; translated-primary authority only.
+  repository_proposal_status: BLOCKED_ON_SOURCE_CUSTODY
+- lane_id: L10
+  name: source-formal-implementation-world crosswalking
+  surfaces:
+  - surface_id: S19
+    name: AR8 safe abstraction, semantic migration, and bridge conservativity
+  - surface_id: S84
+    name: Dependency-directed reread and missed-surface audit
+  - surface_id: S85
+    name: AR7, AR8, and AR8R authority and nonintegration relationship
+  last_substantive_object_produced: Round 16 reason-DAG/version transport to temporal
+    action eligibility
+  current_strongest_positive_claim: A source/reason transport contract can operationally
+    determine action eligibility, and eligibility changes can alter temporal restoration
+    regions without any change to artifact bytes.
+  current_strongest_live_countermodel_or_rival: Crosswalk vocabulary compatibility
+    alone does not bind source truth, world truth, causal adequacy, or successor completeness.
+  central_unresolved_burden: Create explicit proof obligations for source→formal→action→temporal
+    certificate→world/restoration edges.
+  exact_evidence_owner:
+  - Round16 V2
+  - V2 canonical crosswalk
+  relationship_to_primary_candidates:
+  - Candidate A
+  - Candidate B
+  - Candidate C
+  downstream_surfaces_affected:
+  - S04
+  - S14
+  - S25
+  - S39
+  - S47
+  next_dependency_ready_operation: Add a typed end-to-end edge audit for one proposed
+    repository result.
+  deferral_reason: World and causal bridges remain open.
+  repository_proposal_status: OWNER_ADOPTION_REQUIRED
+- lane_id: L11
+  name: formal mathematics, Lean, and executable authority
+  surfaces:
+  - surface_id: S38
+    name: AR2-AR8R formalization, Lean, executable artifacts, and proof-authority
+      map
+  - surface_id: S49
+    name: Exact historical theorem and countermodel family T130-T143 and T351-T354
+  - surface_id: S71
+    name: Formal/Lean status across AR2-AR8R and current repository
+  last_substantive_object_produced: Round 14 V2 proof plus exhaustive/direct temporal
+    check; Round15/16 independent rereviews
+  current_strongest_positive_claim: The μν co-Büchi characterization and finite certificate/transport
+    specializations are human-proved and executable at declared finite scope.
+  current_strongest_live_countermodel_or_rival: Round14 V1 is preserved as a formal
+    defect; checker agreement is not Lean/kernel or external proof authority.
+  central_unresolved_burden: Lean-ready formalization, external proof audit, and exact
+    ancestry against historical theorem families.
+  exact_evidence_owner:
+  - Round14 V2 packet/checks
+  - Round15/16 checks
+  - historical T130-T143/T351-T354
+  relationship_to_primary_candidates:
+  - Candidate A
+  - Candidate B
+  - Candidate C
+  downstream_surfaces_affected:
+  - S21
+  - S34
+  - S47
+  - S60
+  next_dependency_ready_operation: Write a formalization map for COB-1/TRC-1/VCT-1
+    without claiming kernel verification.
+  deferral_reason: No Lean toolchain/external review executed.
+  repository_proposal_status: EXTERNAL_REVIEW_REQUIRED
+- lane_id: L12
+  name: external mathematics interfaces
+  surfaces:
+  - surface_id: S33
+    name: Ten Advances mathematical manuscript and result portfolio
+  - surface_id: S34
+    name: Ten Advances Lean, Comparator, dependencies, axioms, and packaging readiness
+  - surface_id: S35
+    name: Reasoning walkthroughs as retrospective discovery narratives
+  - surface_id: S36
+    name: CDC prompt as frontier-search and orchestration precedent
+  - surface_id: S58
+    name: Ten Advances manuscript collection and proof-authority firewall
+  - surface_id: S59
+    name: Reasoning walkthroughs and retrospective discovery narratives
+  - surface_id: S60
+    name: Ten Advances Lean project, declarations, dependencies, axioms, and packaging
+  - surface_id: S61
+    name: Ten Advances sphere packing, binary codes, and spherical codes
+  - surface_id: S62
+    name: Ten Advances non-soficity and Connes fibre/nonidentifiability comparisons
+  - surface_id: S63
+    name: Ten Advances permanent lower bounds and multiplicity versus independence
+  - surface_id: S64
+    name: Ten Advances quantum parallel repetition and correlated audit amplification
+  - surface_id: S65
+    name: Ten Advances GapCVP, Ehrhart, and multicolor Ramsey surfaces
+  - surface_id: S66
+    name: Ten Advances compactness counterexample and two-degenerate extremal graph
+      result
+  - surface_id: S67
+    name: CDC meniscus-search and frontier-generation precedent
+  last_substantive_object_produced: No new exact reduction admitted after the Ten
+    Advances authority audit
+  current_strongest_positive_claim: External mathematical objects are available as
+    proof-technique, countermodel, and reduction candidates only when a typed map
+    preserves assumptions and conclusions.
+  current_strongest_live_countermodel_or_rival: Connes fibres, non-sofic approximation,
+    permanent multiplicity, quantum repetition, and compactness analogies currently
+    fail to transfer theorem credit without exact reductions.
+  central_unresolved_burden: Find one exact guarded reduction that changes a central
+    A/B/C burden, or classify it IRRELEVANT/ANALOGY_ONLY.
+  exact_evidence_owner:
+  - Ten Advances manuscript
+  - Lean archive
+  - reasoning walkthroughs
+  - CDC prompt
+  relationship_to_primary_candidates:
+  - Candidate A
+  - Candidate B
+  - Candidate C
+  downstream_surfaces_affected:
+  - S09
+  - S20
+  - S21
+  - S29
+  next_dependency_ready_operation: After Round17, test whether modal holonomy or temporal
+    persistence admits a genuine technique transfer from an exact external declaration.
+  deferral_reason: Lean build and external mathematical validation not run; packaging
+    defects remain.
+  repository_proposal_status: EXTERNAL_REVIEW_REQUIRED
+- lane_id: L13
+  name: PRH, latent state, prior order, and proper function
+  surfaces:
+  - surface_id: S29
+    name: Platonic Representation Hypothesis empirical alignment program
+  - surface_id: S30
+    name: Prior order, proper function, normative output, and owner PRH interpretation
+  - surface_id: S45
+    name: Latent-state orthing, OSM/CSCG representation learning, and observation
+      boundaries
+  - surface_id: S78
+    name: Latent-state orthing, update coupling, and representation-learning application
+  - surface_id: S83
+    name: T300 experiment history and preregistered negative-pilot boundary
+  last_substantive_object_produced: PMR-UG-01 V3 perfect-alignment nonbridges and
+    T299/T300 negative-pilot receipt
+  current_strongest_positive_claim: Kernel alignment can support a declared representational
+    similarity while failing to identify carrier, full latent state, natural reference,
+    agency, target adequacy, or metaphysical ground.
+  current_strongest_live_countermodel_or_rival: Perfect registered-kernel equality
+    under shared deformation and the negative pilot block causal/proper-function overreads.
+  central_unresolved_burden: Retrieve Tensor A–G exactly and design a matched learned/hand-built/raw
+    representation comparison with held-out causal criteria.
+  exact_evidence_owner:
+  - PRH paper
+  - PMR-UG-01 V3
+  - T299/T300 receipt
+  relationship_to_primary_candidates:
+  - Candidate B
+  - Candidate C
+  downstream_surfaces_affected:
+  - S25
+  - S31
+  - S45
+  - S82
+  next_dependency_ready_operation: Exact Tensor A–G retrieval or bounded replacement
+    protocol with explicit nonidentity to history.
+  deferral_reason: Tensor A–G exact bytes unavailable; prior pilot configuration retired.
+  repository_proposal_status: BLOCKED_ON_SOURCE_CUSTODY
+- lane_id: L14
+  name: multi-agent, somnic, transclusion, and writeback
+  surfaces:
+  - surface_id: S05
+    name: Multi-actor, multi-target, represented-metaortheme, and memetic ecology
+  - surface_id: S06
+    name: Somnic orthing, activation contracts, and episode identity
+  - surface_id: S46
+    name: Agentic runtime transclusion, activation profiles, and writeback adoption
+  - surface_id: S79
+    name: Multi-actor conflict, composite attribution, and noncollapse of distributed
+      realization
+  last_substantive_object_produced: FRLA-1 one-step local agreement and VCT-1 reason-preserving
+    version transport
+  current_strongest_positive_claim: Local agreement is characterized by nonempty complete-output
+    intersection on joined correct-view components; warranted transport requires recipient-side
+    dependency and contract validation.
+  current_strongest_live_countermodel_or_rival: Private delivery/acknowledgment does
+    not create common knowledge; same carrier or profile does not fix episode, lineage,
+    warrant, or authorization.
+  central_unresolved_burden: Extend to repeated/asynchronous/private-view protocols
+    with faults and dynamic membership; distinguish adoption, execution, and writeback.
+  exact_evidence_owner:
+  - Round13
+  - Round16
+  - PMR-AGCOM-06
+  relationship_to_primary_candidates:
+  - Candidate A
+  - Candidate B
+  downstream_surfaces_affected:
+  - S07
+  - S11
+  - S25
+  - S27
+  next_dependency_ready_operation: Construct a distributed information-state version
+    of temporal eligibility with one impossibility boundary.
+  deferral_reason: No implemented multi-agent/Somnus runtime supplied.
+  repository_proposal_status: POST_MERGE_RESEARCH_CANDIDATE
+- lane_id: L15
+  name: Fusha and Qamus particular-occurrence research
+  surfaces:
+  - surface_id: S32
+    name: Fusha/Qamus occurrence, transclusion, and meta-transclusive sarf/nahw lattice
+      projection
+  - surface_id: S55
+    name: Fusha particular-occurrence orthemology and morphology-syntax ambiguity
+      lattice
+  - surface_id: S56
+    name: Qamus transclusion and meta-transclusive ṣarf/naḥw lattice projection
+  - surface_id: S57
+    name: Fusha/Qamus implementation and custody status
+  last_substantive_object_produced: PMR-LANG-02 token-type/context collision and Round16
+    version-applicability specialization
+  current_strongest_positive_claim: Lexical/token availability and unchanged bytes
+    do not determine occurrence meaning or version-valid applicability; occurrence
+    context and source custody are load-bearing.
+  current_strongest_live_countermodel_or_rival: Same token type across occurrences
+    or versions can have different target meaning, government, authority, or applicability.
+  central_unresolved_burden: Inspect actual Fusha/Qamus snapshot and prove one occurrence-level
+    transclusion/projection path end to end.
+  exact_evidence_owner:
+  - PMR-LANG-02
+  - Round16
+  - owner Fusha program description
+  relationship_to_primary_candidates:
+  - Candidate A
+  - Candidate B
+  downstream_surfaces_affected:
+  - S04
+  - S21
+  - S39
+  - S46
+  next_dependency_ready_operation: Snapshot intake, path inventory, one-occurrence
+    proof.
+  deferral_reason: Pinned Fusha/Qamus bytes not supplied.
+  repository_proposal_status: BLOCKED_ON_SOURCE_CUSTODY
+- lane_id: L16
+  name: theorem origin, false multiplicity, and Candidate A-N portfolio
+  surfaces:
+  - surface_id: S20
+    name: AR8R recursive synthesis, search policy, repair, and saturation
+  - surface_id: S21
+    name: Theorem-origin authority V5 and false-multiplicity control
+  - surface_id: S37
+    name: Candidate A-N map and cross-track integration
+  - surface_id: S42
+    name: Meniscus, frontier, novelty, significance, and completeness accounting
+  - surface_id: S76
+    name: Candidate A-N cross-track portfolio
+  - surface_id: S77
+    name: Meniscus and three-dimensional frontier accounting
+  last_substantive_object_produced: PMR-FAMILY-01 proof-skeleton deduplication and
+    post-merge provenance policy
+  current_strongest_positive_claim: Shared formal skeleton under typed renaming does
+    not create independent theorem origins; all R11-R16 results carry fresh post-merge
+    scoped provenance and zero historical credit.
+  current_strongest_live_countermodel_or_rival: Renaming, multiple model views, and
+    application-specific wrappers can create false multiplicity.
+  central_unresolved_burden: Classify Round17 against MLT/SMRB/M3/M5/R5 families and
+    recover exact historical Candidate A–N bytes when available.
+  exact_evidence_owner:
+  - PMR-FAMILY-01
+  - V5 theorem-origin policy
+  - R11-R16 admission overlays
+  relationship_to_primary_candidates:
+  - Candidate A
+  - Candidate B
+  - Candidate C
+  downstream_surfaces_affected:
+  - S22
+  - S23
+  - S24
+  - S49
+  next_dependency_ready_operation: Run theorem-family and prior-art adjudication on
+    Round17 before admission.
+  deferral_reason: Full V5 ancestry registry bytes remain unavailable in current runtime.
+  repository_proposal_status: OWNER_ADOPTION_REQUIRED
+- lane_id: L17
+  name: empirical, external-review, terminology, and meniscus gates
+  surfaces:
+  - surface_id: S40
+    name: Experiments, terminology matching, empirical validation, license, citation,
+      and publication owner gates
+  - surface_id: S41
+    name: External-ready packets, review targets, and transmission custody
+  - surface_id: S72
+    name: 'FCSP and episode-reification experiments: prepared packets versus executed
+      evidence'
+  - surface_id: S73
+    name: Terminology Pilot-0/Pilot-1 and adoption boundary
+  - surface_id: S74
+    name: Publication readiness, licensing, citation identity, and private-material
+      gates
+  - surface_id: S75
+    name: External-ready packets versus actual external validation
+  last_substantive_object_produced: Same-model procedural rereviews and current executable
+    checks for Rounds 14–16
+  current_strongest_positive_claim: Internal frozen-hash audit and executable confirmation
+    establish scoped local confidence, not external human/model-lineage review or
+    empirical/world validation.
+  current_strongest_live_countermodel_or_rival: False-meniscus incident shows top-line
+    self-certification can contradict lower-level burdens; T299/T300 pilot is negative
+    at its evidential class.
+  central_unresolved_burden: Obtain external mathematical/source/implementation review
+    and execute only preregistered materially changed empirical designs.
+  exact_evidence_owner:
+  - false-meniscus control
+  - R14-R16 audits/rereviews
+  - T299/T300 receipt
+  relationship_to_primary_candidates:
+  - Candidate A
+  - Candidate B
+  - Candidate C
+  downstream_surfaces_affected:
+  - S34
+  - S39
+  - S42
+  - S77
+  next_dependency_ready_operation: Prepare one review-ready packet after owner selection;
+    do not transmit automatically.
+  deferral_reason: Owner transmission/adoption and external reviewers required.
+  repository_proposal_status: OWNER_ADOPTION_REQUIRED
+- lane_id: L18
+  name: program governance and dependency-directed reread
+  surfaces:
+  - surface_id: S22
+    name: 'AR8R V1-V10 recovery: exact payloads, proposals, unresolved identities'
+  - surface_id: S23
+    name: T150 role-preserving replacement and T366 canonical semantic reconstruction
+  - surface_id: S24
+    name: Historical T354 blocked payload and separately identified repair theorem
+      lane
+  - surface_id: S44
+    name: Post-merge delta, stale AR8R status rule, and R7E Sol protected-main verification
+  - surface_id: S47
+    name: Generated-state, deterministic validation, source packaging, and reproducible
+      draft artifacts
+  - surface_id: S48
+    name: Private/public evidence boundary and custody firewall
+  - surface_id: S50
+    name: Repository schema, verdict, governance, and decision-dependency machinery
+  - surface_id: S70
+    name: Current main repository authority and post-merge state
+  - surface_id: S80
+    name: Generated-state convergence, repository validation, and private-data exclusion
+  - surface_id: S81
+    name: Decision lineage 0001-0036 and current R6 generated state
+  - surface_id: S84
+    name: Dependency-directed reread and missed-surface audit
+  - surface_id: S88
+    name: Continuity package custody, local-only status, and future-thread authority
+  last_substantive_object_produced: Rounds11–14 boundary rescue plus rolling private
+    and sanitized proposal packages
+  current_strongest_positive_claim: Authority/provenance/custody can be preserved
+    without Git mutation; blocked V1 artifacts remain rejected evidence and admitted
+    V2s remain owner-pending proposals.
+  current_strongest_live_countermodel_or_rival: Archive success does not establish
+    research closure, adoption, theorem truth, or meniscus.
+  central_unresolved_burden: Maintain rolling state, hashes, private/public firewall,
+    and dependency-directed rereads after each substantive round.
+  exact_evidence_owner:
+  - controlling steer
+  - boundary checkpoint
+  - current proposal
+  relationship_to_primary_candidates:
+  - Candidate A
+  - Candidate B
+  - Candidate C
+  downstream_surfaces_affected:
+  - S20
+  - S21
+  - S40
+  - S42
+  next_dependency_ready_operation: Refresh packages after Round17 and continue research.
+  deferral_reason: No GitHub mutation or owner adoption authorized.
+  repository_proposal_status: INFRASTRUCTURE_OR_CONTROL
+- lane_id: L19
+  name: collective governed resolution and reason-aware synchronization
+  surfaces:
+  - surface_id: S09
+    name: 'Track M Candidate 1: finite profile-and-fibre reachability certificate'
+  - surface_id: S10
+    name: PRR-T1 provenance/reachability limits and M11-M13 collective distinctions
+  - surface_id: S12
+    name: TAC/SAC evidential independence, false tawatur, and lineage dependence
+  - surface_id: S19
+    name: AR8 safe abstraction, semantic migration, and bridge conservativity
+  - surface_id: S52
+    name: 'Certification and restoration ladder: T304-T306 and T308'
+  last_substantive_object_produced: FRLA-1 and VCT-1/VAM-1
+  current_strongest_positive_claim: Finite one-step warranted agreement and reason-preserving
+    transport are exact specializations; valid action eligibility is monotone with
+    respect to action restriction.
+  current_strongest_live_countermodel_or_rival: Hidden central chooser, inaccessible
+    distributed evidence, reused local views, common-source multiplicity, and stale
+    target contracts defeat local implementability.
+  central_unresolved_burden: Characterize multi-step distributed reachability with
+    provenance-bearing information states and bounded query access.
+  exact_evidence_owner:
+  - Round13
+  - Round16
+  - AR2/AR3 reconciliation
+  - Candidate1 dossier
+  relationship_to_primary_candidates:
+  - Candidate A
+  - Candidate B
+  downstream_surfaces_affected:
+  - S07
+  - S11
+  - S25
+  - S46
+  next_dependency_ready_operation: Build the next partial-observation information-state
+    theorem or impossibility.
+  deferral_reason: Standalone AR2/AR3 formal core and PRR packets only partially surfaced.
+  repository_proposal_status: POST_MERGE_RESEARCH_CANDIDATE
+- lane_id: L20
+  name: agentic communication and authorization
+  surfaces:
+  - surface_id: S05
+    name: Multi-actor, multi-target, represented-metaortheme, and memetic ecology
+  - surface_id: S46
+    name: Agentic runtime transclusion, activation profiles, and writeback adoption
+  - surface_id: S79
+    name: Multi-actor conflict, composite attribution, and noncollapse of distributed
+      realization
+  last_substantive_object_produced: PMR-AGCOM-01/02/06 and Round16 VCT-1
+  current_strongest_positive_claim: Receipt, bearer attribution, independent acquisition,
+    applicability, adoption, authorization, execution, and writeback are distinct
+    transitions; path composition requires exact dependency and contract custody.
+  current_strongest_live_countermodel_or_rival: Same bytes, shared schema, or acknowledgment
+    can coexist with stale version, missing authority, common provenance root, or
+    absent common knowledge.
+  central_unresolved_burden: Distributed path discovery and authorization under private
+    views, faults, and redelegation.
+  exact_evidence_owner:
+  - PMR-AGCOM-01/02/06
+  - Round16
+  relationship_to_primary_candidates:
+  - Candidate A
+  - Candidate B
+  downstream_surfaces_affected:
+  - S04
+  - S06
+  - S25
+  - S27
+  next_dependency_ready_operation: Integrate VCT-1 with repeated communication and
+    common-knowledge limits.
+  deferral_reason: No network implementation or private-view protocol packet supplied.
+  repository_proposal_status: POST_MERGE_RESEARCH_CANDIDATE
+- lane_id: L21
+  name: language, meaning, translation, and communicative orthing
+  surfaces:
+  - surface_id: S32
+    name: Fusha/Qamus occurrence, transclusion, and meta-transclusive sarf/nahw lattice
+      projection
+  - surface_id: S55
+    name: Fusha particular-occurrence orthemology and morphology-syntax ambiguity
+      lattice
+  - surface_id: S56
+    name: Qamus transclusion and meta-transclusive ṣarf/naḥw lattice projection
+  - surface_id: S68
+    name: Source authentication, translation, attribution, inference, and release
+      coordinates
+  last_substantive_object_produced: PMR-LANG-01/02 and Round16 LANG-VERSION-01/VST-1
+  current_strongest_positive_claim: Query-relative translation preservation is fibre
+    constancy; proposition preservation is not total linguistic/source preservation;
+    semantic or protocol version drift can invalidate inherited applicability.
+  current_strongest_live_countermodel_or_rival: Same surface/token/bytes can differ
+    in occurrence meaning, reference, authority, implicature, evidence, or target
+    contract.
+  central_unresolved_burden: Formalize versioned semantic drift over occurrence graphs
+    and connect to Fusha/Qamus and agent protocols.
+  exact_evidence_owner:
+  - PMR-LANG-01/02
+  - Round16
+  - El-Tobgui language/context analysis
+  relationship_to_primary_candidates:
+  - Candidate A
+  - Candidate C
+  downstream_surfaces_affected:
+  - S04
+  - S39
+  - S46
+  - S82
+  next_dependency_ready_operation: Construct one nontrivial semantic-version transport
+    theorem using actual occurrence/source data when bytes arrive.
+  deferral_reason: Fusha snapshot and Arabic-primary source bytes absent.
+  repository_proposal_status: BLOCKED_ON_SOURCE_CUSTODY
+- lane_id: L22
+  name: uncreated ground of articulability
+  surfaces:
+  - surface_id: S15
+    name: Transcendental orthability ascent, Necessary Being, and source-enriched
+      attribute ascent
+  - surface_id: S69
+    name: Taymiyyan/Athari source corpus and transcendental-source roles
+  - surface_id: S86
+    name: Track-T coherentism, source authentication, and objective orthability boundary
+  - surface_id: S87
+    name: Powers, plural realization, impersonal actualizers, and anti-total-emergence
+      rivals
+  last_substantive_object_produced: MLT-1/SMRB-1 modal transport controls and PMR-UG-01
+    convergence nonbridge
+  current_strongest_positive_claim: A coherent transported structural role can be
+    formalized, but neither convergence nor role-section uniqueness establishes one
+    numerical, mental, personal, divine, or speaking ground.
+  current_strongest_live_countermodel_or_rival: Abstract, plural, relational, dispositional,
+    brute, and impersonal structures remain live controls.
+  central_unresolved_burden: Identify the exact move from unique role/explanatory
+    function to bearer identity, mentality, and source-faithful divine Speech.
+  exact_evidence_owner:
+  - Round11
+  - Round12
+  - PMR-UG-01
+  - source corpus
+  relationship_to_primary_candidates:
+  - Candidate C
+  downstream_surfaces_affected:
+  - S14
+  - S16
+  - S30
+  - S87
+  next_dependency_ready_operation: Round17 common-bearer and identity bridge audit.
+  deferral_reason: World/source premises remain unverified.
+  repository_proposal_status: POST_MERGE_RESEARCH_CANDIDATE
+- lane_id: L23
+  name: realism, powers, structural correspondence, and bearer realization
+  surfaces:
+  - surface_id: S14
+    name: Track T realist bridge, resource/semantic/provenance bridges, and world-directed
+      conclusion
+  - surface_id: S16
+    name: R5 rival portfolio, guarded coexistence, and minimal nonintegration
+  - surface_id: S30
+    name: Prior order, proper function, normative output, and owner PRH interpretation
+  - surface_id: S62
+    name: Ten Advances non-soficity and Connes fibre/nonidentifiability comparisons
+  - surface_id: S87
+    name: Powers, plural realization, impersonal actualizers, and anti-total-emergence
+      rivals
+  last_substantive_object_produced: SMRB-1 structure-preserving root-role section
+    plus M5-02 plural W/P/K control
+  current_strongest_positive_claim: Structural transport preserves a unique role under
+    declared isomorphisms, but realization and numerical bearer identity require additional
+    equivalence, rigidity, or cross-world criteria.
+  current_strongest_live_countermodel_or_rival: Multiple coordinated bearers and impersonal
+    realization preserve formal role structure while withholding one bearer or agency.
+  central_unresolved_burden: Find the minimal independently warranted common-bearer
+    condition and test whether it excludes plural realization without circularity.
+  exact_evidence_owner:
+  - Round12
+  - PMR-M5-02
+  - R5 matrix
+  relationship_to_primary_candidates:
+  - Candidate C
+  downstream_surfaces_affected:
+  - S13
+  - S15
+  - S29
+  - S37
+  next_dependency_ready_operation: Round17 exact role-section/common-bearer theorem
+    and countermodel.
+  deferral_reason: No accepted metaphysical identity criterion supplied.
+  repository_proposal_status: POST_MERGE_RESEARCH_CANDIDATE
+- lane_id: L24
+  name: query, source-truth, and natural-vocabulary boundaries
+  surfaces:
+  - surface_id: S02
+    name: Analysis-relative ground truth, pathway adequacy, and reference-model contract
+  - surface_id: S07
+    name: 'Apprehensional reachability: Orthability-O, Orthability-L, and Orthability-R'
+  - surface_id: S39
+    name: Source authentication, translation, attribution, inference, and release
+      ladder
+  - surface_id: S68
+    name: Source authentication, translation, attribution, inference, and release
+      coordinates
+  - surface_id: S82
+    name: Current source residuals, source truth, and objective evaluation
+  last_substantive_object_produced: Round16 path transport, PMR-LANG-01 query-relative
+    preservation, and current source-status firewall
+  current_strongest_positive_claim: Target/query decisions factor through a representation
+    only relative to declared fibres, source contracts, and version epochs; successful
+    runtime behavior does not verify source truth or natural vocabulary.
+  current_strongest_live_countermodel_or_rival: Different source truths or meanings
+    can share the same registered profile, bytes, or output.
+  central_unresolved_burden: Bind one target query to exact source truth and test
+    natural-vocabulary and translation dependence.
+  exact_evidence_owner:
+  - PMR-LANG-01
+  - Round16
+  - source-status registry
+  relationship_to_primary_candidates:
+  - Candidate A
+  - Candidate C
+  downstream_surfaces_affected:
+  - S04
+  - S15
+  - S25
+  - S32
+  next_dependency_ready_operation: One exact source/target query audit after source
+    bytes are available.
+  deferral_reason: Arabic-primary/source-ground truth unavailable.
+  repository_proposal_status: BLOCKED_ON_SOURCE_CUSTODY

@@ -1,0 +1,57 @@
+{
+  "all_five_nonconstant": 537824,
+  "boolean_coordinate_function_tuples_enumerated": 1048576,
+  "closed_walk_potential_sum": 0,
+  "excluded_marginal_combinations": 44,
+  "explicit_profiles": [
+    {
+      "A": 0,
+      "M": 0,
+      "N": 0,
+      "R": 0,
+      "S": 0,
+      "q": "00"
+    },
+    {
+      "A": 1,
+      "M": 0,
+      "N": 1,
+      "R": 1,
+      "S": 1,
+      "q": "01"
+    },
+    {
+      "A": 0,
+      "M": 1,
+      "N": 1,
+      "R": 1,
+      "S": 1,
+      "q": "10"
+    },
+    {
+      "A": 1,
+      "M": 1,
+      "N": 2,
+      "R": 1,
+      "S": 0,
+      "q": "11"
+    }
+  ],
+  "injective_joint_maps": 491520,
+  "intervention_cases": 8,
+  "joint_image_count": 4,
+  "marginal_sizes": {
+    "A": 2,
+    "M": 2,
+    "N": 3,
+    "R": 2,
+    "S": 2
+  },
+  "minimum_coordinates_changed_by_one_bit_flip": 3,
+  "neutral_reduct_equal": true,
+  "personality_varies_over_neutral_reduct": true,
+  "product_marginal_profile_count": 48,
+  "semantic_or_explanatory_unification_certified_by_count": false,
+  "status": "PASS",
+  "structurally_coupled_maps_under_frozen_filter": 490240
+}

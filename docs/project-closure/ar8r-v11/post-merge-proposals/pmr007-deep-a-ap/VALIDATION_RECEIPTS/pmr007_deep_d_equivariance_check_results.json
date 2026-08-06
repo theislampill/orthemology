@@ -1,0 +1,25 @@
+{
+  "controls": {
+    "articulability_not_mentality": true,
+    "created_token_not_uncreated_content": true,
+    "external_parameter_carries_selector": true,
+    "fixed_target_permitted": true,
+    "mentality_not_speech": true,
+    "non_equivariant_constant_can_select": true,
+    "realized_random_seed_carries_asymmetry": true,
+    "source_asymmetry_carries_distinction": true
+  },
+  "fixed_point_extension_cases": 33,
+  "fixed_target_counts_full_symmetric_action": {
+    "2": 0,
+    "3": 0,
+    "4": 0,
+    "5": 0,
+    "6": 0,
+    "7": 0
+  },
+  "overall": "PASS",
+  "schema": "PMR007_DEEP_D_EQUIVARIANCE_CHECK_RESULTS_V1",
+  "symmetric_target_cases": 27,
+  "theorem_failures": []
+}

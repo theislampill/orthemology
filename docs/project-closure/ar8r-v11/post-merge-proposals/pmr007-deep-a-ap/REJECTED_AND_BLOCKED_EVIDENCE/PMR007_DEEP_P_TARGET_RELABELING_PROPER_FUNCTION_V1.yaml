@@ -1,0 +1,61 @@
+schema: pmr007-deep-p-target-relabeling-v1
+identity: PMR-007-TRPF-V1
+status: POST_MERGE_RESEARCH_CANDIDATE
+neutral_base:
+  state_count: 2
+  input_count: 2
+  output_count: 2
+  includes:
+    - deterministic_transition_table
+    - deterministic_output_table
+    - complete_trace_function_at_declared_scope
+    - installed_target_success
+    - target_relative_selection_history
+    - exact_additive_potential_coordinate
+    - formal_cross_domain_coupling_coordinate
+  excludes:
+    - independently_warranted_truth_link
+    - objective_fittingness
+    - truth_directed_design
+    - truth_specific_selected_effect
+    - authenticated_applicable_source_contract
+    - intentional_selection_because_fitting
+    - personality
+    - wisdom
+interpretation_pair:
+  aligned:
+    truth_linked: true
+  inverted:
+    truth_linked: false
+  same_neutral_base: true
+account_classes:
+  neutral_factor_accounts:
+    - frequency
+    - causal_role
+    - organizational_role
+    - selected_effect_for_installed_reward
+    - learned_objective
+    - success_surface
+    - exact_additive_potential
+    - formal_derivational_coupling
+    - complete_neutral_trace
+  symmetry_breaking_only_with_extra_relation:
+    - truth_specific_selected_effect
+    - truth_directed_design
+    - objective_teleological_fittingness
+    - plantinga_truth_aimed_design_plan
+    - fitrah_source_contract
+source_use:
+  osm:
+    role: empirical_mechanism_trajectory_discriminator
+    does_not_supply:
+      - objective_fittingness
+      - epistemic_proper_function
+      - personal_designer
+      - fitrah
+      - wisdom
+nonclaims:
+  - no_world_truth_conclusion
+  - no_metaphysical_possibility_claim_for_every_model_expansion
+  - no_personal_ground_entailment
+  - no_general_mathematical_novelty

@@ -1,0 +1,86 @@
+schema: PMR007_DEEP_U_OSM_TRAJECTORY_REFINEMENT_V1
+identity: PMR-007-TRPD-1
+title: Endpoint/trajectory refinement and mechanism nontransfer
+provenance: POST_MERGE_RESEARCH_CANDIDATE
+source:
+  title: Learning produces an orthogonalized state machine in the hippocampus
+  doi: 10.1038/s41586-024-08548-w
+  access_copy_sha256: 0d097cba7bbb25a949e2bf95af28b5a2259bd8d60b0e5fac5a74cdf7d05aa814
+  authority: PRIMARY_EMPIRICAL_AND_COMPUTATIONAL_ARTICLE_ACCESS_COPY
+  experiment_reproduced: false
+  official_code_reproduced: false
+source_reported_claims:
+  multiple_model_families_can_reach_selected_final_orthogonalized_structure: true
+  cscg_default_comparison_matches_reported_endpoint_and_ordered_learning_trajectory: true
+  some_rnn_endpoint_matches_have_different_decorrelation_order: true
+  sequence_encoding_variants_can_preserve_final_graph_while_changing_learning_order: true
+  unique_biological_mechanism_established: false
+  direct_neural_causal_intervention_reported: false
+registered_comparison_instances:
+  CSCG_DEFAULT:
+    model_family: CSCG
+    endpoint_osm_like: true
+    trajectory_matches_reported_order: true
+    encoding: DEFAULT_VISUAL_REWARD_SERIALIZATION
+  CSCG_ALT_SERIALIZATION_1:
+    model_family: CSCG
+    endpoint_osm_like: true
+    trajectory_matches_reported_order: false
+    encoding: ALTERNATIVE_SERIALIZATION
+  CSCG_ALT_SERIALIZATION_2:
+    model_family: CSCG
+    endpoint_osm_like: true
+    trajectory_matches_reported_order: false
+    encoding: COMBINED_OR_REORDERED_SERIALIZATION
+  HEBBIAN_RNN:
+    model_family: HEBBIAN_RNN
+    endpoint_osm_like: true
+    trajectory_matches_reported_order: false
+    encoding: REPORTED_MODEL_ENCODING
+  S_WTA_RNN:
+    model_family: S_WTA_RNN
+    endpoint_osm_like: true
+    trajectory_matches_reported_order: false
+    encoding: REPORTED_MODEL_ENCODING
+  LSTM:
+    model_family: LSTM
+    endpoint_osm_like: false
+    trajectory_matches_reported_order: false
+    encoding: REPORTED_MODEL_ENCODING
+  TRANSFORMER:
+    model_family: TRANSFORMER
+    endpoint_osm_like: false
+    trajectory_matches_reported_order: false
+    encoding: REPORTED_MODEL_ENCODING
+profiles:
+  P_END:
+  - endpoint_osm_like
+  P_END_TRAJ:
+  - endpoint_osm_like
+  - trajectory_matches_reported_order
+  P_FAMILY:
+  - model_family
+  P_FULL_REGISTERED:
+  - model_family
+  - encoding
+  - endpoint_osm_like
+  - trajectory_matches_reported_order
+target: trajectory_matches_reported_order
+scope:
+  model_class: FINITE_SOURCE_REGISTERED_COMPARISON_INSTANCES
+  source_relation: SOURCE_REPORTED_CATEGORICAL_EXTRACTION_NOT_RAW_DATA_REANALYSIS
+  biological_mechanism_target: NOT_CERTIFIED
+  metaphysical_transfer: FORBIDDEN
+candidate_claims:
+  U1_ENDPOINT_NONSUFFICIENCY: Endpoint OSM-like status does not decide trajectory match in the registered class.
+  U2_TRAJECTORY_REFINEMENT: Adding the trajectory-match coordinate splits the endpoint fibre and certifies the registered
+    trajectory label.
+  U3_ENCODING_LOAD_BEARING: Model family alone does not decide trajectory match because CSCG encoding variants differ.
+  U4_MECHANISM_NONTRANSFER: Endpoint plus trajectory comparison does not establish a unique biological mechanism, causal equivalence,
+    proper function, mentality, or metaphysical ground.
+authority_ceiling:
+  general_mathematical_novelty: ZERO_STANDARD_PROFILE_REFINEMENT_APPLICATION
+  empirical_claim: SOURCE_REPORTED_NOT_REPRODUCED
+  orthemology_validation: NONE
+  integrated_champion: NONE
+  meniscus: MENISCUS_NOT_REACHED

@@ -1,0 +1,198 @@
+schema: PMR007_DEEP_W_TARGET_INDEXED_PULLBACK_CORE_V1
+identity: PMR-007-TIPC-1
+repository_authority: 428187cebf7644ff8bf9522455a560eb82d35964
+key_versions:
+  V1_COARSE:
+  - target_id
+  - version
+  - recipient_scope
+  V2_FULL:
+  - target_id
+  - version
+  - recipient_scope
+  - analysis_version
+  - referent_id
+  - semantic_contract_digest
+component_classes:
+  A_profile_certificates:
+  - id: A_OK
+    kind: profile
+    target_id: T
+    version: v1
+    recipient_scope: S
+    analysis_version: A1
+    referent_id: R1
+    semantic_contract_digest: D1
+    valid: true
+    bytes_id: BYTES-X
+    carrier: CARRIER-1
+  - id: A_V2
+    kind: profile
+    target_id: T
+    version: v2
+    recipient_scope: S
+    analysis_version: A1
+    referent_id: R1
+    semantic_contract_digest: D2
+    valid: true
+    bytes_id: BYTES-X
+    carrier: CARRIER-1
+  - id: A_SCOPE2
+    kind: profile
+    target_id: T
+    version: v1
+    recipient_scope: S2
+    analysis_version: A1
+    referent_id: R1
+    semantic_contract_digest: D1
+    valid: true
+    bytes_id: A_SCOPE2
+    carrier: profile-carrier
+  - id: A_REF2
+    kind: profile
+    target_id: T
+    version: v1
+    recipient_scope: S
+    analysis_version: A1
+    referent_id: R2
+    semantic_contract_digest: D1
+    valid: true
+    bytes_id: A_REF2
+    carrier: profile-carrier
+  - id: A_INVALID
+    kind: profile
+    target_id: T
+    version: v1
+    recipient_scope: S
+    analysis_version: A1
+    referent_id: R1
+    semantic_contract_digest: D1
+    valid: false
+    bytes_id: A_INVALID
+    carrier: profile-carrier
+  B_warrant_certificates:
+  - id: B_OK
+    kind: warrant
+    target_id: T
+    version: v1
+    recipient_scope: S
+    analysis_version: A1
+    referent_id: R1
+    semantic_contract_digest: D1
+    valid: true
+    bytes_id: BYTES-X
+    carrier: CARRIER-1
+  - id: B_V2
+    kind: warrant
+    target_id: T
+    version: v2
+    recipient_scope: S
+    analysis_version: A1
+    referent_id: R1
+    semantic_contract_digest: D2
+    valid: true
+    bytes_id: BYTES-X
+    carrier: CARRIER-1
+  - id: B_SCOPE2
+    kind: warrant
+    target_id: T
+    version: v1
+    recipient_scope: S2
+    analysis_version: A1
+    referent_id: R1
+    semantic_contract_digest: D1
+    valid: true
+    bytes_id: B_SCOPE2
+    carrier: warrant-carrier
+  - id: B_ANALYSIS2
+    kind: warrant
+    target_id: T
+    version: v1
+    recipient_scope: S
+    analysis_version: A2
+    referent_id: R1
+    semantic_contract_digest: D1
+    valid: true
+    bytes_id: B_ANALYSIS2
+    carrier: warrant-carrier
+  - id: B_REF2
+    kind: warrant
+    target_id: T
+    version: v1
+    recipient_scope: S
+    analysis_version: A1
+    referent_id: R2
+    semantic_contract_digest: D1
+    valid: true
+    bytes_id: B_REF2
+    carrier: warrant-carrier
+  - id: B_INVALID
+    kind: warrant
+    target_id: T
+    version: v1
+    recipient_scope: S
+    analysis_version: A1
+    referent_id: R1
+    semantic_contract_digest: D1
+    valid: false
+    bytes_id: B_INVALID
+    carrier: warrant-carrier
+  C_world_bridge_certificates:
+  - id: C_OK
+    kind: world
+    target_id: T
+    version: v1
+    recipient_scope: S
+    analysis_version: A1
+    referent_id: R1
+    semantic_contract_digest: D1
+    valid: true
+    bytes_id: C_OK
+    carrier: world-carrier
+  - id: C_V2
+    kind: world
+    target_id: T
+    version: v2
+    recipient_scope: S
+    analysis_version: A1
+    referent_id: R1
+    semantic_contract_digest: D2
+    valid: true
+    bytes_id: C_V2
+    carrier: world-carrier
+  - id: C_REF2
+    kind: world
+    target_id: T
+    version: v1
+    recipient_scope: S
+    analysis_version: A1
+    referent_id: R2
+    semantic_contract_digest: D1
+    valid: true
+    bytes_id: C_REF2
+    carrier: world-carrier
+  - id: C_INVALID
+    kind: world
+    target_id: T
+    version: v1
+    recipient_scope: S
+    analysis_version: A1
+    referent_id: R1
+    semantic_contract_digest: D1
+    valid: false
+    bytes_id: C_INVALID
+    carrier: world-carrier
+candidate_claims:
+  TIPC_1: the pullback is the universal target-compatible pairing
+  TIPC_2: cartesian pairing permits mismatched target contracts
+  TIPC_3: an iterated pullback aligns profile, warrant, and world bridge objects
+scope:
+  finite_sets: true
+  component_validity_proved_by_pullback: false
+  target_key_authority_proved: false
+  common_bearer_identity_proved: false
+authority_ceiling:
+  general_mathematical_novelty: ZERO
+  owner_adoption: PENDING
+  integrated_champion: NONE
+  meniscus: MENISCUS_NOT_REACHED

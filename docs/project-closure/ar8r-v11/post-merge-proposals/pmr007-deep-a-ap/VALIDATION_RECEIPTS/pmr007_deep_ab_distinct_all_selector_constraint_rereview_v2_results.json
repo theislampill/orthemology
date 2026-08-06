@@ -1,0 +1,24 @@
+{
+  "schema": "PMR007_DEEP_AB_DISTINCT_ALL_SELECTOR_CONSTRAINT_REREVIEW_V2",
+  "frozen_hash_rows_checked": 6,
+  "frozen_hash_failures": [],
+  "exhaustive_one_context_systems": 343,
+  "all_valid_profile_aware_selectors_checked": 1728,
+  "aware_existence_failures": 0,
+  "all_selector_singleton_responsiveness_failures": 0,
+  "random_larger_blind_constraint_systems": 50000,
+  "constraint_search_mismatches": 0,
+  "personal_impersonal_neutral_reduct_trials": 20000,
+  "neutral_reduct_failures": 0,
+  "history_collision_witness": true,
+  "distributed_no_common_bearer_witness": true,
+  "hidden_model_change_scope_control": true,
+  "result": "PASS",
+  "nonclaims": [
+    "external review",
+    "metaphysical actuality of an impersonal realizer",
+    "objective truth of H",
+    "intentional because-of relation",
+    "Wisdom"
+  ]
+}

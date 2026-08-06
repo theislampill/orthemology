@@ -1,0 +1,56 @@
+schema: PMR007_DEEP_J_COMMON_ANCESTRY_ACTUALIZER_MODELS_V1
+status: POST_MERGE_RESEARCH_CANDIDATE
+edge_semantics: upstream_source_to_downstream_borrower
+models:
+  - id: J-PW1-UNIQUE-ROOT
+    vertices: [r, a, b, e]
+    edges: [[r, a], [r, b], [a, e], [b, e]]
+    roots: [r]
+    upstream_directed: true
+    result: one_declared_domain_underived_actualizer
+  - id: J-CM1-PLURAL-ROOTS
+    vertices: [r0, r1, e0, e1]
+    edges: [[r0, e0], [r1, e1]]
+    roots: [r0, r1]
+    upstream_directed: false
+  - id: J-CM2-DOWNSTREAM-MERGER
+    vertices: [r0, r1, m, e0, e1]
+    edges: [[r0, m], [r1, m], [m, e0], [m, e1]]
+    roots: [r0, r1]
+    observed_effects: [e0, e1]
+    observed_effects_have_common_ancestor: true
+    full_graph_upstream_directed: false
+  - id: J-CM3-CYCLE
+    vertices: [a, b, c]
+    edges: [[a, b], [b, c], [c, a]]
+    roots: []
+    upstream_directed: true
+    violates: acyclicity_or_well_foundedness
+  - id: J-CM5-INCOMPLETE-REGISTRY
+    registered_vertices: [r0, e0]
+    registered_edges: [[r0, e0]]
+    omitted_vertices: [r1, e1]
+    omitted_edges: [[r1, e1]]
+    registered_roots: [r0]
+    full_roots: [r0, r1]
+  - id: J-CM6-SEPARATE-ORDER
+    concrete_vertices: [r, e]
+    concrete_edges: [[r, e]]
+    concrete_roots: [r]
+    abstract_order_bearers: [o]
+    identity_equalities: []
+    defeats: unique_efficacy_root_implies_common_order_actuality_bearer
+  - id: J-CM7-INCOMPLETE-CREATORHOOD
+    vertices: [r, e]
+    edges: [[r, e]]
+    contingent_particulars: [e, q]
+    originated_by_r: [e]
+    unoriginated: [q]
+  - id: J-CM8-IMPERSONAL-ROOT
+    vertices: [field, e0, e1]
+    edges: [[field, e0], [field, e1]]
+    roots: [field]
+    personal: []
+    agentic: []
+    wise: []
+    speaking: []

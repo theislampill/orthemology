@@ -1,0 +1,83 @@
+schema: PMR007_DEEP_C_INTEGRATED_COMPOSITE_RIVAL_V1
+identity: PMR-007-ICR-1
+status: FROZEN_PENDING_COLD_AUDIT
+modal_model:
+  worlds: [w0, w1]
+  accessibility:
+    w0: [w0, w1]
+    w1: [w0, w1]
+  constant_domain: [o, x, p0, p1, e0, e1, q0, q1]
+  exists_at:
+    w0: [o, x, p0, e0, q0]
+    w1: [o, x, p1, e1, q1]
+objects:
+  o:
+    type: abstract_order
+    necessary: true
+    underived_relative_to_process: true
+    modal_order: true
+    semantic_order: true
+    primitive_truth_norm: true
+    articulability_ground: true
+    concrete: false
+    personal: false
+  x:
+    type: concrete_impersonal_actualizer
+    necessary: true
+    externally_real: true
+    actual: true
+    concrete: true
+    impersonal: true
+    personal: false
+    agentic: false
+    intellectual: false
+    wise: false
+    speaking_capacity: false
+relations:
+  constitutive_condition:
+    - [o, p0, w0]
+    - [o, p1, w1]
+  complete_ground:
+    - [o, p0, w0]
+    - [o, p1, w1]
+  forbidden_complete_ground:
+    - [p0, o, w0]
+    - [p1, o, w1]
+  actualizes:
+    - [x, e0, w0]
+    - [x, e1, w1]
+  does_not_originate:
+    - [x, q0, w0]
+    - [x, q1, w1]
+  coordinates_with:
+    - [o, x, w0]
+    - [o, x, w1]
+functional_architecture:
+  primitive_coordinates: [t_from_o, e_from_x]
+  outputs:
+    M: t
+    A: e
+    S: t
+    N: t
+    R: t_and_e
+  genuine_cross_profile_restriction: true
+withheld_conclusions:
+  one_common_bearer: true
+  creatorhood: true
+  intellect: true
+  personality: true
+  agency: true
+  wisdom: true
+  speech_capacity: true
+  actual_speech: true
+  revelation_identification: true
+bridge_countermodels:
+  - {id: C-CM1, antecedent: underived, withheld: necessary}
+  - {id: C-CM2, antecedent: necessary_abstract_order, withheld: concrete_actuality}
+  - {id: C-CM3, antecedent: concrete_actualizer, withheld: creatorhood}
+  - {id: C-CM4, antecedent: plural_necessary_actualizers, withheld: unity}
+  - {id: C-CM5, antecedent: unified_functional_field, withheld: intellect_and_personality}
+  - {id: C-CM6, antecedent: intellect, withheld: agency_and_efficacy}
+  - {id: C-CM7, antecedent: knowledge_will_power, withheld: wisdom}
+  - {id: C-CM8, antecedent: speech_capacity, withheld: actual_speech}
+  - {id: C-CM9, antecedent: personal_necessary_creator, withheld: revelational_identification}

@@ -1,0 +1,39 @@
+schema: PMR007_DEEP_E_SOURCE_CUSTODY_V1
+sources:
+  SRC-A:
+    path_label: A-Commentary-on-the-Creed-of-Asfahani-v2.3(1).md
+    sha256: 932abd7e2d7b3702d5d6d77d2a4a95ecfb3a9ccbcfbbce7ae750b2bcf55bef7c
+    authority: TRANSLATED_PRIMARY_ACCESS
+    locators:
+      - {line: 333, expected_fragment: conclusion solely yields the existence of the necessary}
+      - {line: 333, expected_fragment: does not have within it affirmation of the creator}
+      - {line: 338, expected_fragment: simply affirming a necessary existence}
+      - {line: 387, expected_fragment: It is a fallacious argument}
+      - {line: 516, expected_fragment: the Creator has more right to it}
+      - {line: 1072, expected_fragment: has a better claim to it}
+      - {line: 1103, expected_fragment: becomes naught but a mental construct}
+      - {line: 128, expected_fragment: speaks speech that subsists in Him}
+  SRC-E:
+    path_label: El-Tobgui-dissertation.md
+    sha256: 657454ff7a1c43b895e7a378d12993295368a97c3f35df5a76edfaa32f67a177
+    authority: SECONDARY_SCHOLARLY_RECONSTRUCTION
+    locators:
+      - {line: 4417, expected_fragment: healthy and functioning intuitive capacity}
+      - {line: 4513, expected_fragment: proper functioning of allour epistemic faculties}
+  SRC-U:
+    path_label: The-Incoherence-of-Atheism.md
+    sha256: 4aea9b66f178e3454015cd0082c3adb0dda5ae80593f7e37d26b73a96028a2d1
+    authority: CONTEMPORARY_ATHARI_SYNTHESIS
+    locators:
+      - {line: 56, expected_fragment: deeply innate and natural human dispositions}
+      - {line: 72, expected_fragment: predisposed for this}
+  SRC-N:
+    path_label: A_TO_N_COMPREHENSIVE_INTEGRATION_MAP.yaml
+    sha256: 03c50c0e3ee895bed7ac688b665dc143a9bd80fb3e91649695f379c0b918a4ec
+    authority: PROVISIONAL_MODERN_SOURCE_CONTROLLED_RECONSTRUCTION
+    locators:
+      - {key: candidate_N_target_substitution_disposition, expected_fragment: N IS TRACK_N_ONLY}
+firewall:
+  arabic_primary_verified: false
+  neutral_migration_authorized: false
+  source_truth_established: false

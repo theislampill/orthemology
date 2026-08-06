@@ -1,0 +1,96 @@
+schema: PMR007_DEEP_AJ_CENTERED_OWNERSHIP_MODELS_V2
+identity: PMR-007-CIOB-1
+version: V2
+typed_coordinates:
+  neutral:
+  - intellectual_host
+  - represented_content
+  - registered_reason_uptake
+  - causal_control
+  - fittingness_conformity
+  - episode_transition
+  - memory_or_lineage
+  - neutral_adjacency
+  targets:
+  - formal_center
+  - de_se_uptake
+  - intentional_uptake
+  - episode_ownership
+  - personal_subject
+  - agentic
+  - wise
+  - conscious
+  - speaks
+hard_premises:
+  H8a: de_se_indexicality
+  H8b: intentional_uptake
+  H8c: episode_ownership
+  H8d: counterfactual_agency
+  H8e: center_and_lineage_stability
+  H8f: authority_and_world_guards
+models:
+- id: AJ-CM1-SYMMETRIC-INTELLECTUAL-TWINS
+  hosts:
+  - h0
+  - h1
+  same_neutral_orbit: true
+  personal_expansion_centers:
+  - - h0
+  - - h1
+- id: AJ-CM2-UNIQUE-IMPERSONAL-CONTROLLER
+  hosts:
+  - h0
+  - h1
+  neutral_fixed_point: h0
+  intellectual_host:
+  - h0
+  controller:
+  - h0
+  formal_center: []
+  personal_subject: false
+- id: AJ-CM3-THIRD-PERSON-SELF-MODEL
+  hosts:
+  - h0
+  self_model_token: true
+  de_se_uptake: false
+  intentional_uptake: false
+- id: AJ-CM4-DISTRIBUTED-EPISODE
+  hosts:
+  - h0
+  - h1
+  - h2
+  - h3
+  uptake: h0
+  evaluation: h1
+  selection: h2
+  execution: h3
+  episode_owner: null
+- id: AJ-CM5-TOKEN-RESPONSIVE-NONAGENT
+  reason_intervention_changes_action: true
+  selects_because_of_reason: false
+  owner: null
+- id: AJ-CM6-EPISODE-SWAP
+  carrier: h0
+  episodes:
+  - e0
+  - e1
+  owner_assignment_permutable: true
+  stable_subject: false
+- id: AJ-CM7-SOURCE-CONDITIONED-REFERENT
+  track: N
+  one_source_referent: true
+  neutral_H8_entailment: false
+- id: AJ-CM9-CENTER-WITHOUT-CONSCIOUSNESS
+  formal_center:
+  - h0
+  episode_ownership:
+  - h0
+  conscious: false
+  wise: false
+  speaks: false
+nonclaims:
+- no_H8a_H8f_proof
+- no_first_person_semantics_from_fixed_point
+- no_consciousness_personality_Wisdom_or_Speech
+- no_source_or_world_truth
+- no_integrated_champion_or_meniscus

@@ -1,0 +1,51 @@
+{
+  "claims": {
+    "H7a1_does_not_entail_H7a2_or_H7a3": true,
+    "fixed_interpretation_iff_vertex_orbit_constant": true,
+    "frozen_hashes_match": true,
+    "kernel_does_not_fix_literal_reference": true,
+    "natural_selector_criterion_reconfirmed": true,
+    "source_anchors_match": false,
+    "source_hashes_match": true
+  },
+  "controls": {
+    "equal_kernel_with_reference_swap_exists": true,
+    "rigid_impersonal_law_is_consistent": true,
+    "rigid_semantics_without_mental_host_is_consistent": true,
+    "source_reconstruction_allows_downstream_abstraction_rival": true,
+    "symmetric_nonconstant_has_no_fixed_interpretation": true
+  },
+  "counts": {
+    "kernel_reference_swap_controls": 4992,
+    "n3_invariant_families": 416,
+    "n3_selector_criterion_mismatches": 0,
+    "n4_fixed_orbit_mismatches": 0,
+    "n4_graphs": 64,
+    "n4_interpretations": 5184,
+    "random_n5_cases": 20000,
+    "random_n5_mismatches": 0
+  },
+  "frozen_hash_mismatches": [],
+  "frozen_hash_rows": 8,
+  "method": "NETWORKX_AUTOMORPHISM_ORBITS_PLUS_SOURCE_ANCHORS",
+  "notes": [
+    "Automorphism-orbit constancy is an independent implementation of fixedness.",
+    "Interpretation rigidity is relative to a frozen admissible family and content identity.",
+    "No mentality, intrinsicness, source-world, or metaphysical possibility conclusion is inferred."
+  ],
+  "overall": "FAIL",
+  "schema": "PMR007_DEEP_AM_DISTINCT_NETWORKX_REREVIEW_RESULTS_V2",
+  "source_anchor_checks": 14,
+  "source_anchor_failures": [
+    {
+      "needle": "different sensors and views might capture different information",
+      "source": "PRH"
+    }
+  ],
+  "source_hash_failures": [],
+  "source_hashes": {
+    "el_tobgui": "657454ff7a1c43b895e7a378d12993295368a97c3f35df5a76edfaa32f67a177",
+    "osm": "0d097cba7bbb25a949e2bf95af28b5a2259bd8d60b0e5fac5a74cdf7d05aa814",
+    "prh": "fa9b7cc99c1e852960733b2ac89069bf448b2451bd198b4fc2d93aedb533e858"
+  }
+}

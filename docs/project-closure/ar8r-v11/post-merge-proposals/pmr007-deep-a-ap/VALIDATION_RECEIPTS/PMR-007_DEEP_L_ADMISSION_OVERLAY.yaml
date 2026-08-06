@@ -1,0 +1,52 @@
+schema: PMR007_DEEP_L_ADMISSION_OVERLAY_V1
+identity: PMR-007-SDL-1
+round: PMR-007-DEEP-L
+version: V2
+status: ADMITTED_POST_MERGE_SCOPED_SOURCE_FORMAL_CENTRAL_BRIDGE_RESULT
+historical_identity: NONE
+repository_mutation: false
+accepted_results:
+  - articulability_does_not_entail_mentality
+  - mentality_does_not_entail_agentive_expression_capacity
+  - agentive_expression_capacity_does_not_entail_utterance_occurrence
+  - utterance_does_not_entail_authorship_or_source_attribute
+  - target_faithful_expression_does_not_entail_source_provenance_version_authorization_or_applicability
+  - created_expression_and_uncreated_speech_are_distinct_sorts
+  - source_conditioned_disclosure_requires_the_full_guarded_contract_and_accepted_Track_N_predicates
+source_conditioned_guard_contract:
+  GD_N: [MENT, CAP, UTTER, ATTR_N, EXPR, RELAY, CREATED_TOK, FID_T, SID, PROV, VER, AUTHZ, APP, UNCR_N]
+nonclaims:
+  - Arabic_primary_verification
+  - neutral_proof_of_uncreated_speech
+  - articulability_to_mentality_entailment
+  - mentality_to_Speech_entailment
+  - token_speech_identity
+  - personal_speaking_ground
+  - revelational_identification_without_source_and_custody_guards
+central_bridge_changes:
+  UG_T7: SHOWN_INDEPENDENT_UNDER_LIVE_IMPERSONAL_RIVALS
+  UG_T8: DECOMPOSED_INTO_MENTALITY_CAPACITY_OCCURRENCE_AUTHORSHIP_AND_SOURCE_ATTRIBUTE
+  UG_T9: REPAIRED_AS_GUARDED_EXPRESSION_RELAY_NOT_IDENTITY
+  Track_N_to_world: SOURCE_CONDITIONAL_ONLY
+cold_audit:
+  disposition: REPAIR_REQUIRED
+  blocking_findings: [DL-F01, DL-F02, DL-F03, DL-F04, DL-F05, DL-F06]
+  repaired: true
+fresh_rereview:
+  disposition: PASS_WITH_NONBLOCKING_SOURCE_AND_CONCEPTUALIST_NOTES
+  frozen_hash_rows: 8
+  guard_worlds: 16384
+  expression_relations: 256
+  failures: 0
+source_custody:
+  result: PASS
+  Asfahani_role: TRANSLATED_PRIMARY_ACCESS
+  uncreated_grammar_program_role: OWNER_PROGRAM_TARGET
+strongest_surviving_rival: IMPERSONAL_ABSTRACT_OR_POWERS_BASED_ARTICULABILITY_WITHOUT_INTRINSIC_MENTALITY
+source_preserving_rival: CREATED_TOKEN_RELAY_UNDER_ACCEPTED_SOURCE_PREDICATION_WITHOUT_NEUTRAL_BRIDGE
+theorem_family: TYPED_SOURCE_DISCLOSURE_AND_CUSTODY_APPLICATION
+general_mathematical_novelty_credit: 0
+historical_theorem_credit: 0
+external_review: OPEN
+owner_adoption: PENDING
+repository_proposal_status: ELIGIBLE_AFTER_SANITIZATION_AND_OWNER_REVIEW

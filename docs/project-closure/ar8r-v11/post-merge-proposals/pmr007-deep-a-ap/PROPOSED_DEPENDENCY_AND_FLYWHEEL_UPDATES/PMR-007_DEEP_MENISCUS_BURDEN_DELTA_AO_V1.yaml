@@ -1,0 +1,39 @@
+schema: PMR007_DEEP_MENISCUS_BURDEN_DELTA_AO_V1
+round: DEEP_AO
+identity: PMR-007-RPDS-1
+closed_or_sharply_narrowed:
+- burden: representation_preservation_of_architecture_evidence
+  disposition: EXACTLY_CHARACTERIZED_AT_FINITE_BINARY_EXPERIMENT_SCOPE
+  result: exact_preservation_iff_likelihood_ratio_constant_on_union_support_fibres
+- burden: representation_creates_predictive_surplus
+  disposition: COUNTERMODELED
+  result: common_channels_contract_total_variation_and_equal_experiments_remain_equal
+narrowed:
+- burden: Candidate_G_P6_empirical_route
+  change: predictive_surplus_must_survive_or_be_measured_before_common_representation_coarsening
+- burden: PRH_OSM_to_architecture_discrimination
+  change: requires_explicit_A_R_likelihood_or_intervention_model_not_kernel_or_trajectory_alignment_alone
+- burden: Bitter_Lesson_representation_comparison
+  change: sufficient_representation_and_leakage_controls_are_now_formal_requirements
+opened_or_reopened:
+- independently_enlarged_intervention_experiment_for_A_vs_R
+- representation_selection_and_held_out_leakage_audit
+- multi_candidate_or_dynamic_experiment_sufficiency
+- source_world_likelihood_model
+strongest_surviving_rival:
+  name: MATCHED_IMPERSONAL_ARCHITECTURE_WITH_EQUAL_RAW_EXPERIMENT
+  matches:
+  - all_current_registered_raw_evidence
+  - all_common_representation_pushforwards
+  - semantic_and_causal_structures
+  withholds:
+  - personality
+  - intentional_subjecthood
+  - Wisdom
+  - Speech
+repository_proposal_status: PUBLIC_SAFE_POST_MERGE_PROPOSAL_PENDING_REPOSITORY_AUDIT
+owner_adoption: PENDING
+external_review: OPEN
+integrated_champion: NONE
+meniscus: MENISCUS_NOT_REACHED
+natural_closure: NOT_REACHED

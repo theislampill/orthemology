@@ -1,0 +1,11 @@
+{
+  "counts": {
+    "graphs": 64,
+    "interpretations": 5184,
+    "mismatches": 0,
+    "random_cases": 20000,
+    "random_mismatches": 0
+  },
+  "overall": "PASS",
+  "schema": "PMR007_DEEP_AM_REPOSITORY_SAFE_REREVIEW"
+}

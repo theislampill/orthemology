@@ -1,0 +1,44 @@
+{
+  "criterion_failures": 0,
+  "declared_local_witness_pass": true,
+  "declared_pairwise_witness_pass": true,
+  "first_local_without_common": {
+    "attributes": 2,
+    "bearers": 2,
+    "sets": [
+      [
+        1
+      ],
+      [
+        0
+      ]
+    ]
+  },
+  "first_pairwise_without_common": {
+    "attributes": 3,
+    "bearers": 3,
+    "sets": [
+      [
+        1,
+        2
+      ],
+      [
+        0,
+        2
+      ],
+      [
+        0,
+        1
+      ]
+    ]
+  },
+  "fixed_d_cases": 19804,
+  "fixed_d_failures": 0,
+  "local": 57164,
+  "local_without_common": 39374,
+  "matrices": 74954,
+  "pairwise": 20938,
+  "pairwise_without_common": 3174,
+  "pass": true,
+  "schema": "PMR007_DEEP_G_COMMON_BEARER_CHECK_RESULTS_V1"
+}

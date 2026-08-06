@@ -1,0 +1,47 @@
+{
+  "claims": {
+    "frozen_hashes_match": true,
+    "hidden_anchor_countermodels_exercised": true,
+    "multiple_world_nonselection_control": true,
+    "nonempty_role_preserving_embeddings_have_candidate_role_bearer": true,
+    "role_complete_embedding_fibre_equals_role_bearers": true,
+    "role_complete_unique_iff_unique_role_bearer": true,
+    "singleton_fibre_criterion_exact_for_restricted_H": true,
+    "translated_source_anchors_match": true
+  },
+  "counts": {
+    "conditional_existence_failures": 0,
+    "hidden_anchor_witnesses": 300,
+    "multiple_candidate_world_witnesses": 67,
+    "nonempty_embedding_families": 143,
+    "random_restricted_H_cases": 1144,
+    "role_complete_embedding_cases": 143,
+    "role_complete_fibre_failures": 0,
+    "role_complete_uniqueness_failures": 0,
+    "singleton_definition_failures": 0,
+    "world_signatures": 256
+  },
+  "frozen_hashes": {
+    "failures": [],
+    "rows": 8,
+    "status": "PASS"
+  },
+  "method_relation": "injective_embedding_and_random_map_family_implementation",
+  "multiple_world_control": true,
+  "overall": "PASS",
+  "schema": "PMR007_DEEP_AP_DISTINCT_EMBEDDING_FIBRE_REREVIEW_RESULTS_V1",
+  "scope_notes": [
+    "finite candidate source/world structures",
+    "relative denotation only",
+    "role preservation not full reflection",
+    "translated-primary access only",
+    "same-program procedural rereview; not external review"
+  ],
+  "source_anchor_check": {
+    "anchors_checked": 9,
+    "anchors_missing": [],
+    "authority": "TRANSLATED_PRIMARY_ACCESS_NOT_ARABIC_PRIMARY_VERIFICATION",
+    "sha256": "932abd7e2d7b3702d5d6d77d2a4a95ecfb3a9ccbcfbbce7ae750b2bcf55bef7c",
+    "status": "PASS"
+  }
+}

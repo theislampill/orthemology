@@ -1,0 +1,36 @@
+schema: PMR007_DEEP_MENISCUS_BURDEN_DELTA_F_H_V2
+closed_at_scoped_level:
+  - id: BFH-01
+    burden: distinguish source-relative proper function, episode success, and warrant
+    result: PMR-007-FPF-1
+  - id: BFH-02
+    burden: state exact common-bearer integration criterion
+    result: PMR-007-CBA-1
+  - id: BFH-03
+    burden: adjudicate what matched structural evidence contributes to personal-realizer inference
+    result: PMR-007-UAP-1
+narrowed:
+  - id: BFH-04
+    burden: proper_function_ground
+    status: Track-N conditional closure available; neutral realization parity remains
+  - id: BFH-05
+    burden: unity
+    status: source-fixed or independently proved total intersection required; local/pairwise ascent insufficient
+  - id: BFH-06
+    burden: abductive_unification
+    status: realization-sensitive likelihood or defended prior/cost required
+opened_or_sharpened:
+  - id: BFH-07
+    burden: order_actuality_applicability
+    reason: strongest composite rival still relies on an abstract-order/concrete-actualizer coupling
+  - id: BFH-08
+    burden: invariant_complexity_or_prior
+    reason: raw simplicity and primitive counts are coding-sensitive
+  - id: BFH-09
+    burden: common_bearer_derivational_unity
+    reason: one carrier can still box freely recombinable attributes
+blocked_external:
+  - Arabic_primary_source_verification
+  - external_source_specialist_review
+  - external_mathematical_and_philosophical_review
+  - owner_adoption
