@@ -554,9 +554,10 @@ Thus every applicable concrete
 
 ```math
 \operatorname{CorePath}
-= \{\mathrm{V2a},\mathrm{V2bP},\mathrm{V2c},\mathrm{V3a},
-\mathrm{V3b},\mathrm{V3c},\mathrm{V3d},\mathrm{V3e},\mathrm{V4a},
-\mathrm{V5},\mathrm{V6}\}
+= \{\operatorname{V2a},\operatorname{V2b-P},\operatorname{V2c},
+\operatorname{V3a},\operatorname{V3b},\operatorname{V3c},
+\operatorname{V3d},\operatorname{V3e},\operatorname{V4a},
+\operatorname{V5},\operatorname{V6}\}
 ```
 
 Excluded by construction: **V1** (result correctness), **V2b-T**
