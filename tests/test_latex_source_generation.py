@@ -655,6 +655,46 @@ class MarkdownRenderingTests(unittest.TestCase):
         self.assertIn("Prose ``quoted''", rendered)
         self.assertIn(r'\texttt{print("alpha")}', rendered)
 
+    def test_quote_pair_spanning_emphasis_keeps_closing_direction(self):
+        generator = load_generator()
+        self.assertIsNotNone(generator, "Task 12 LaTeX generator is missing")
+
+        rendered = generator.render_markdown(
+            'The record said "this build report *for this commit*" and stopped.\n',
+            source_name="quote-emphasis-boundary.md",
+        )
+
+        self.assertIn(
+            "The record said ``this build report \\emph{for this commit}''",
+            rendered,
+        )
+        self.assertNotIn(r"\emph{for this commit}``", rendered)
+
+    def test_long_verbatim_lines_use_readable_compact_font(self):
+        generator = load_generator()
+        self.assertIsNotNone(generator, "Task 12 LaTeX generator is missing")
+
+        rendered = generator.render_markdown(
+            "```yaml\n"
+            "claim_status_ref: docs/decisions/0035-somnic-orthing-and-activation-contracts.md#somnus-claim-status\n"
+            "```\n",
+            source_name="long-verbatim.md",
+        )
+
+        self.assertIn(r"\begingroup\scriptsize", rendered)
+
+    def test_references_switch_to_ragged_right_for_narrow_columns(self):
+        generator = load_generator()
+        self.assertIsNotNone(generator, "Task 12 LaTeX generator is missing")
+
+        rendered = generator.render_markdown(
+            "## References\n\n- A deliberately long bibliographic entry.\n",
+            source_name="references-flow.md",
+        )
+
+        self.assertIn(r"\raggedright", rendered)
+        self.assertLess(rendered.index(r"\raggedright"), rendered.index("References"))
+
     def test_short_list_items_are_kept_out_of_column_boundary_fragments(self):
         generator = load_generator()
         self.assertIsNotNone(generator, "Task 12 LaTeX generator is missing")
@@ -769,7 +809,7 @@ $$
         generator = load_generator()
         self.assertIsNotNone(generator, "Task 12 LaTeX generator is missing")
 
-        self.assertEqual(generator.LONG_TABLE_ROW_THRESHOLD, 10)
+        self.assertEqual(generator.LONG_TABLE_ROW_THRESHOLD, 7)
         self.assertEqual(generator.LONG_TABLE_TOTAL_CONTENT_THRESHOLD, 1500)
         self.assertEqual(generator.LONG_TABLE_MAX_ROW_CONTENT_THRESHOLD, 800)
         self.assertEqual(generator.BREAKABLE_TABLE_COLUMN_THRESHOLD, 3)

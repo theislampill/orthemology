@@ -155,7 +155,7 @@ with components (each glossed in ordinary language):
 | $A$ | declared analysis (identifier + version) | the analysis the placement is relative to (manuscript §2.6); result correctness (V1) is judged against $O^*(m; A)$; within the episode's scope the task-subscripted spaces below abbreviate their $A$-indexed forms |
 | $T = \operatorname{task}(A)$ | task | the task component of $A$, retained as a separate readable component |
 | $t$ | time interval | when the episode ran |
-| $\vec{\mu} = (\mu_1, \dots, \mu_k; \preceq)$ | metaorthemic configuration | the governing rules in force, with precedence order $\preceq$ |
+| $\vec{\mu} = (\mu_1, \dots, \mu_k; \preceq)$ | metaorthemic configuration | the governing rules in force, with $\preceq$ their declared precedence order |
 | $\operatorname{MetaTok}(e) = \{\bar\mu_1, \dots, \bar\mu_j\}$ | concrete metaorthemmata (Decision 0002) | the case-bound CONFIGURATION TOKENS of governing types actually applied. Each $\bar{\mu}$ records/references: its own identity and lineage; $(\mu, \operatorname{ver}(\mu))$ via the internal typing $\operatorname{MetaInst}(\bar{\mu}, \mu)$; $(A(e), \operatorname{ver}(A(e)))$ with $\operatorname{Compatible}(\bar{\mu}, A(e))$ — the token binds case-specific values WITHIN the declared analysis, references any value $A$ fixes uniquely, and never overrides $A$ without an explicit new analysis version; the target $(\kappa, v)$; governed component $g$; the case-specific binding map $B$ (reference frame, tolerance value, fixture, success surface, …); scope $\sigma$ incl. the claims in $\mathcal{Q}$ that depend on it; references to policy, evidence selector, instrument/tool and calibration provenance; the **binder** (actor/process that made the binding) with binding warrant $w_{\mathrm{bind}}$, kept DISTINCT from the designated executor; binding time $t_{\mathrm{bind}}$; validity/expiry/supersession. The token REFERENCES the episode's evidence $H$, trace, and output — it never absorbs them (the application-event view $\operatorname{ApplyEvent}(\bar{\mu}, e) = \langle\bar{\mu}, \operatorname{Trace}_e |_{\bar{\mu}}\rangle$ is derived, not primitive). **Zero-burden rule:** a configuration with no material case-specific binding, non-default scope, instrument/calibration, or independent validity condition gets no explicit token, and $\operatorname{V3c} \notin \operatorname{ReqPath}(e)$ (status recorded not-applicable, with reason) |
 | $\pi$ | policy | the concrete procedure executed under $\vec{\mu}$ |
 | $\vec{C}$ | typed candidate families | open alternatives per uncertainty axis: $C^{\mathrm{id}} \subseteq M$ (which occurrence), $C^{\mathrm{profile}} \subseteq \Pi_A$ (which profile), $C^{\mathrm{cause}} \subseteq \mathcal{K}_A$ (which cause), $C^{\mathrm{route}} \subseteq \mathcal{R}_A$ (which route), $C^{\mathrm{warrant}} \subseteq \mathcal{W}_A$ (which warrant state) — competing hypotheses may themselves be PROFILES, so candidates are not forced into single orthemes |
@@ -870,8 +870,8 @@ actor-relativity enters exactly where the task does.
 ### 5.4 Semantic depth as an orthogonal axis
 
 Define, informally, $\operatorname{depth}(e)$ as the executor's grasp of the governing
-distinctions: hard-coded check < model-based inference over declared
-alternatives < reflective capacity to propose revisions $\rho(\mu, \mathrm{lesson})$
+distinctions, ordered from hard-coded check, through model-based inference over declared
+alternatives, to reflective capacity to propose revisions $\rho(\mu, \mathrm{lesson})$
 itself. Depth is orthogonal to every §4 verdict — shallow executors can
 run adequate pathways and deep ones defective pathways. Depth matters
 operationally in one place only: which revisions the executor may perform
