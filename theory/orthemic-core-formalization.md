@@ -830,13 +830,12 @@ indices, **not a new formal addition**:
   profile spaces: the two target sets live in different spaces
   ($\mathcal{G}_\alpha \subseteq \Pi_{A_\alpha}$, $\mathcal{G}_\beta \subseteq \Pi_{A_\beta}$), so they are never compared by bare
   set intersection. With $\operatorname{Reach}(m)$ the occurrences reachable from $m$
-  in the successor structure,
-
-For this display only, write
-$G_\alpha:=\mathcal{G}_\alpha$ and $G_\beta:=\mathcal{G}_\beta$.
+  in the successor structure:
 
 ```math
 \begin{aligned}
+&G_\alpha:=\mathcal{G}_\alpha,
+\qquad G_\beta:=\mathcal{G}_\beta,\\
 \operatorname{Compat}_m(G_\alpha,G_\beta)
 &\iff \exists m' \in \operatorname{Reach}(m):\\
 &\qquad O^*(m';A_\alpha)\in G_\alpha\\

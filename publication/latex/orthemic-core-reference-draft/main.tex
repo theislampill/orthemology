@@ -1,6 +1,6 @@
 % GENERATED FILE — DO NOT EDIT; authoritative prose is Markdown.
 % source: theory/orthemic-core-formalization.md
-% source-sha256: 53d800477d0fbe328a6a460b11f92e704b124bd25518fa00acc2093297954d70
+% source-sha256: 2da270603cd889009aaf9b6093013b6a48ae6c85f8b33b32c957a51294a08acf
 % source: theory/orthemic-multi-actor-conflict-note.md
 % source-sha256: aa7b1378b1f1983c3ec406fb2533a68c6242881c2d04bf34470632b37359d7b9
 % source-qualification: research-stage-draft
@@ -725,14 +725,14 @@ Several actors' episodes can address ONE shared occurrence lineage with analysis
 
 \needspace{3\baselineskip}\item $\phi(\alpha \to \beta)$ — a role/perspective isomorphism between $\Pi_{A_\alpha}$ and $\Pi_{A_\beta}$ where one exists (goal-schema invariance with disjoint extensions: $\mathcal{G}_{\beta,A_\beta} = \phi(\mathcal{G}_{\alpha,A_\alpha})$, possibly $\mathcal{G}_\alpha \cap \mathcal{G}_\beta = \emptyset$);
 
-\needspace{3\baselineskip}\item $\operatorname{Conflict}_m(\mathcal{G}_\alpha, \mathcal{G}_\beta)$ / $\operatorname{Compat}_m(\mathcal{G}_\alpha, \mathcal{G}_\beta)$ — WELL-TYPED across profile spaces: the two target sets live in different spaces ($\mathcal{G}_\alpha \subseteq \Pi_{A_\alpha}$, $\mathcal{G}_\beta \subseteq \Pi_{A_\beta}$), so they are never compared by bare set intersection. With $\operatorname{Reach}(m)$ the occurrences reachable from $m$ in the successor structure,
+\needspace{3\baselineskip}\item $\operatorname{Conflict}_m(\mathcal{G}_\alpha, \mathcal{G}_\beta)$ / $\operatorname{Compat}_m(\mathcal{G}_\alpha, \mathcal{G}_\beta)$ — WELL-TYPED across profile spaces: the two target sets live in different spaces ($\mathcal{G}_\alpha \subseteq \Pi_{A_\alpha}$, $\mathcal{G}_\beta \subseteq \Pi_{A_\beta}$), so they are never compared by bare set intersection. With $\operatorname{Reach}(m)$ the occurrences reachable from $m$ in the successor structure:
 
 \end{itemize}
-For this display only, write $G_\alpha:=\mathcal{G}_\alpha$ and $G_\beta:=\mathcal{G}_\beta$.
-
 
 \[
 \begin{aligned}
+&G_\alpha:=\mathcal{G}_\alpha,
+\qquad G_\beta:=\mathcal{G}_\beta,\\
 \operatorname{Compat}_m(G_\alpha,G_\beta)
 &\iff \exists m' \in \operatorname{Reach}(m):\\
 &\qquad O^*(m';A_\alpha)\in G_\alpha\\
