@@ -16,7 +16,7 @@ VALIDATOR = importlib.util.module_from_spec(SPEC)
 SPEC.loader.exec_module(VALIDATOR)
 
 APPROVED_DIAGNOSTIC_PATH = "theory/orthemic-core-formalization.md"
-APPROVED_DIAGNOSTIC_LOCUS = {"line": 477, "column": 38}
+APPROVED_DIAGNOSTIC_LOCUS = {"line": 493, "column": 38}
 APPROVED_DIAGNOSTIC_OCCURRENCE = 13
 APPROVED_DIAGNOSTIC_TEXT = (
     "μ̄_2: stale calibration; μ̄_3: wrong\n  claim scope"
@@ -94,7 +94,9 @@ def diagnostic_inventory(
 ):
     """Build a source whose diagnostic has the exact reviewed locus/ordinal."""
     lines = ["`token_%d`" % index for index in range(1, 13)]
-    lines.extend([""] * (476 - len(lines)))
+    lines.extend(
+        [""] * (APPROVED_DIAGNOSTIC_LOCUS["line"] - 1 - len(lines))
+    )
     lines.append(" " * 37 + "`%s`" % status)
     if copied_status is not None:
         lines.append(" " * 37 + "`%s`" % copied_status)

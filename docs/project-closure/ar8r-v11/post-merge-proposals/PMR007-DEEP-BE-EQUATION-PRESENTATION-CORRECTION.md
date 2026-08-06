@@ -7,9 +7,9 @@ The corrected presentation is:
 ```math
 \begin{aligned}
 \Sigma_{\mathrm{source}}(x)
-&= \bigl(T(x),S(x),A(x),V(x),P(x)\bigr),\\
+&= (T(x),S(x),A(x),V(x),P(x)),\\
 \Sigma_{\mathrm{formal}}(x)
-&= \bigl(D(x),R(x),G(x),C(x)\bigr).
+&= (D(x),R(x),G(x),C(x)).
 \end{aligned}
 ```
 

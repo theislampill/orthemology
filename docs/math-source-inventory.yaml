@@ -6663,224 +6663,224 @@ occurrences:
   classification: literal-code
 - file: theory/orthemic-core-formalization.md
   locus:
-    line: 143
+    line: 147
     column: 3
   occurrence: 6
   text: id
   classification: literal-code
 - file: theory/orthemic-core-formalization.md
   locus:
-    line: 173
+    line: 177
     column: 47
   occurrence: 7
   text: not-applicable
   classification: semantic-registry-id
 - file: theory/orthemic-core-formalization.md
   locus:
-    line: 225
+    line: 231
     column: 1
   occurrence: 8
   text: not-applicable
   classification: semantic-registry-id
 - file: theory/orthemic-core-formalization.md
   locus:
-    line: 327
+    line: 333
     column: 37
   occurrence: 9
   text: if
   classification: literal-code
 - file: theory/orthemic-core-formalization.md
   locus:
-    line: 350
+    line: 356
     column: 3
   occurrence: 10
   text: examples/compaction-stale-steer.md
   classification: literal-code
 - file: theory/orthemic-core-formalization.md
   locus:
-    line: 382
+    line: 388
     column: 46
   occurrence: 11
   text: terminology/
   classification: literal-code
 - file: theory/orthemic-core-formalization.md
   locus:
-    line: 400
+    line: 406
     column: 3
   occurrence: 12
   text: docs/verdict-registry.yaml
   classification: literal-code
 - file: theory/orthemic-core-formalization.md
   locus:
-    line: 477
+    line: 493
     column: 38
   occurrence: 13
   text: "μ̄_2: stale calibration; μ̄_3: wrong\n  claim scope"
   classification: literal-code
 - file: theory/orthemic-core-formalization.md
   locus:
-    line: 564
+    line: 592
     column: 20
   occurrence: 14
   text: not-applicable
   classification: semantic-registry-id
 - file: theory/orthemic-core-formalization.md
   locus:
-    line: 568
+    line: 596
     column: 2
   occurrence: 15
   text: docs/governance-requirements.yaml
   classification: literal-code
 - file: theory/orthemic-core-formalization.md
   locus:
-    line: 569
+    line: 597
     column: 11
   occurrence: 16
   text: has_meta_tokens
   classification: literal-code
 - file: theory/orthemic-core-formalization.md
   locus:
-    line: 569
+    line: 597
     column: 30
   occurrence: 17
   text: selects_route
   classification: literal-code
 - file: theory/orthemic-core-formalization.md
   locus:
-    line: 569
+    line: 597
     column: 47
   occurrence: 18
   text: makes_closure_claim
   classification: literal-code
 - file: theory/orthemic-core-formalization.md
   locus:
-    line: 570
+    line: 598
     column: 1
   occurrence: 19
   text: robustness_obligation
   classification: literal-code
 - file: theory/orthemic-core-formalization.md
   locus:
-    line: 570
+    line: 598
     column: 26
   occurrence: 20
   text: risk_class
   classification: literal-code
 - file: theory/orthemic-core-formalization.md
   locus:
-    line: 570
+    line: 598
     column: 45
   occurrence: 21
   text: scripts/derive_reqpath.py
   classification: literal-code
 - file: theory/orthemic-core-formalization.md
   locus:
-    line: 573
+    line: 601
     column: 1
   occurrence: 22
   text: tests/reqpath-fixtures.json
   classification: literal-code
 - file: theory/orthemic-core-formalization.md
   locus:
-    line: 591
+    line: 637
     column: 25
   occurrence: 23
   text: undetermined
   classification: semantic-registry-id
 - file: theory/orthemic-core-formalization.md
   locus:
-    line: 605
+    line: 651
     column: 116
   occurrence: 24
   text: undetermined
   classification: semantic-registry-id
 - file: theory/orthemic-core-formalization.md
   locus:
-    line: 625
+    line: 671
     column: 1
   occurrence: 25
   text: tests/verdict-fixtures.json
   classification: literal-code
 - file: theory/orthemic-core-formalization.md
   locus:
-    line: 626
+    line: 672
     column: 1
   occurrence: 26
   text: scripts/validate_verdict_semantics.py
   classification: literal-code
 - file: theory/orthemic-core-formalization.md
   locus:
-    line: 634
+    line: 680
     column: 149
   occurrence: 27
   text: undetermined
   classification: semantic-registry-id
 - file: theory/orthemic-core-formalization.md
   locus:
-    line: 635
+    line: 681
     column: 59
   occurrence: 28
   text: examples/compaction-stale-steer.md
   classification: literal-code
 - file: theory/orthemic-core-formalization.md
   locus:
-    line: 700
+    line: 746
     column: 3
   occurrence: 29
   text: handoff
   classification: semantic-registry-id
 - file: theory/orthemic-core-formalization.md
   locus:
-    line: 701
+    line: 747
     column: 30
   occurrence: 30
   text: supersession
   classification: semantic-registry-id
 - file: theory/orthemic-core-formalization.md
   locus:
-    line: 702
+    line: 748
     column: 24
   occurrence: 31
   text: retry-of
   classification: semantic-registry-id
 - file: theory/orthemic-core-formalization.md
   locus:
-    line: 711
+    line: 757
     column: 19
   occurrence: 32
   text: retry-of
   classification: semantic-registry-id
 - file: theory/orthemic-core-formalization.md
   locus:
-    line: 711
+    line: 757
     column: 33
   occurrence: 33
   text: supersession
   classification: semantic-registry-id
 - file: theory/orthemic-core-formalization.md
   locus:
-    line: 755
+    line: 801
     column: 1
   occurrence: 34
   text: orthemic-multi-actor-conflict-note.md
   classification: literal-code
 - file: theory/orthemic-core-formalization.md
   locus:
-    line: 839
+    line: 894
     column: 1
   occurrence: 35
   text: docs/decisions/0015-latent-state-observation-and-representation-boundary.md
   classification: literal-code
 - file: theory/orthemic-core-formalization.md
   locus:
-    line: 840
+    line: 895
     column: 1
   occurrence: 36
   text: docs/related-work/LATENT-STATE-INFERENCE-AND-ORTHEMOLOGY.md
   classification: literal-code
 - file: theory/orthemic-core-formalization.md
   locus:
-    line: 865
+    line: 920
     column: 1
   occurrence: 37
   text: docs/provenance/document-history.md
