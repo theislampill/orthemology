@@ -1,0 +1,116 @@
+schema: PMR007_DEEP_AH_SOURCE_DERIVATION_INTEGRATION_MODELS_V2
+identity: PMR-007-SDIG-1
+version: V2
+source_owner:
+  file: A-Commentary-on-the-Creed-of-Asfahani-v2.3(1).md
+  sha256: 932abd7e2d7b3702d5d6d77d2a4a95ecfb3a9ccbcfbbce7ae750b2bcf55bef7c
+  authority: TRANSLATED_PRIMARY_ACCESS
+  arabic_primary_verified: false
+source_coordinates:
+- SBYTE
+- LOCUS
+- TRANS
+- ATTRIB
+- PROP
+- ACCEPT
+- IDENT
+- WORLD
+nodes:
+  ground_action: [CREATION, SPECIFICATION, CHOICE, COMMAND]
+  attributes: [VOLITION, KNOWLEDGE, ABILITY, LIFE, SPEECH]
+  method_guards: [PURE_PERFECTION_GUARD]
+supports:
+- id: AH-E1
+  roles: [CREATION, VOLITION]
+  source_stratum: COMMENTARY
+  source_lines: [124, 500, 502]
+- id: AH-E2
+  roles: [VOLITION, KNOWLEDGE]
+  source_stratum: COMMENTARY
+  source_lines: [500, 503]
+- id: AH-E3
+  roles: [SPECIFICATION, VOLITION]
+  source_stratum: COMMENTARY
+  source_lines: [538, 548]
+- id: AH-E4
+  roles: [CHOICE, ABILITY]
+  source_stratum: COMMENTARY_REPAIR_OF_CREED_PROOF
+  source_lines: [523, 530]
+- id: AH-E5
+  roles: [KNOWLEDGE, ABILITY, LIFE]
+  source_stratum: COMMENTARY
+  source_lines: [534, 536]
+- id: AH-E6A
+  roles: [COMMAND, SPEECH]
+  source_stratum: COMMENTARY_LEGISLATIVE_ROUTE
+  source_lines: [124, 124]
+- id: AH-E6B
+  roles: [CREATION, SPEECH]
+  source_stratum: COMMENTARY_TRADITION_RELATIVE_MAJORITY_AFFIRMATION_FOLK
+  source_lines: [124, 128]
+- id: AH-E7
+  roles: [CREATION, PURE_PERFECTION_GUARD, SPEECH]
+  source_stratum: COMMENTARY_QIYAS_GUARDED_ROUTE
+  source_lines: [1761, 1816]
+models:
+- id: AH-POS-TRACK-N
+  bearer_assignment: all_source_referent_g
+  supports_instantiated: true
+  source_coordinates:
+    SBYTE: true
+    LOCUS: true
+    TRANS: open
+    ATTRIB: provisionally_delimited
+    PROP: candidate_reconstruction
+    ACCEPT: track_N_conditional
+    IDENT: track_N_conditional
+    WORLD: not_established
+- id: AH-CM1-DISTRIBUTED
+  bearer_assignment: injective_role_bearers
+  supports_instantiated: true
+  textual_coreference: false
+  neutral_formal_consistency: true
+- id: AH-CM2-CARRIER-BOXING
+  bearer_assignment: all_g
+  supports_instantiated: false
+  one_bearer: true
+  derivational_unity: false
+- id: AH-CM3-IMPERSONAL
+  bearer_assignment: all_machine
+  supports_instantiated: true
+  source_identity: false
+  personal: false
+  first_person_ownership: false
+  because_of_fittingness: false
+  wisdom: false
+  divine_speech_source_predication: false
+- id: AH-CM4-SOURCE-COORDINATE-DELETION
+  connected_graph: true
+  deleted_coordinates: [TRANS, ATTRIB, PROP, ACCEPT, IDENT, WORLD]
+  world_conclusion: blocked
+- id: AH-CM5-EXACT-UNITY-FAILURE
+  bearers: [n1, n2]
+  shared_abstract_predicate: NECESSARY_ROLE
+  numerically_identical: false
+  source_lines: [481, 495]
+- id: AH-CM6-SPEECH-NONTRANSFER
+  formal_articulability: true
+  command_response: true
+  mentality: false
+  source_predicated_uncreated_speech: false
+  revelation: false
+- id: AH-CM7-QIYAS-DELETION
+  creaturely_property: true
+  pure_perfection_guard: false
+  no_defect_guard: false
+  creator_relation_guard: false
+  source_transfer_licensed: false
+nonclaims:
+- no_representation_invariant_or_minimal_source_graph
+- no_Arabic_primary_verification
+- no_neutral_common_bearer_theorem
+- no_metaphysical_possibility_parity
+- no_world_truth
+- no_Necessary_Being_or_Creator_proof
+- no_personality_Wisdom_Speech_or_revelation_neutral_entailment
+- no_integrated_champion_or_meniscus

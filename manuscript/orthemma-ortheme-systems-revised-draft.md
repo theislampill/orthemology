@@ -653,7 +653,7 @@ Nothing in the episode signature or the verdicts quantifies over awareness. Any 
 keypress sequence, a CI validator, a triage pipeline, a review chain, an institution — executes orthing, and its episodes bear all *applicable* verdicts. Stopped-clock analogues
 arise mechanically: a decoder emits the right word from a frequency prior that would misfire on the neighboring input — correct message, defective pathway, no conscious subject
 anywhere. The actor field $\alpha$ is therefore populated with the mechanical executor — never left empty — and executor identity is distinct from any warrant or authority index.
-Semantic depth (hard-coded check < model-based inference over declared alternatives < reflective capacity to propose rule revisions) is a real axis of the *executor*, orthogonal to
+Semantic depth — ordered from hard-coded check, through model-based inference over declared alternatives, to reflective capacity to propose rule revisions — is a real axis of the *executor*, orthogonal to
 every verdict on the *episode*: shallow executors can run adequate pathways and deep ones defective pathways. Depth matters operationally in one place only: which revisions the
 executor may perform locally versus must escalate across the governance boundary.
 

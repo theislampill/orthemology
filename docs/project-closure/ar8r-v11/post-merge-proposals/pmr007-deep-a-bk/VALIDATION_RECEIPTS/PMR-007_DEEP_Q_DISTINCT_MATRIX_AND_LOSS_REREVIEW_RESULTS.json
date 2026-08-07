@@ -1,0 +1,29 @@
+{
+  "identity": "PMR-007-FEAG-1",
+  "lossy_control": {
+    "predicate_collision": true
+  },
+  "matrix_failures": 0,
+  "matrix_law_checks": 720000,
+  "method": "random permutation-matrix groupoid verification plus lossy/partial controls and direct source custody",
+  "overall": "PASS",
+  "partial_control": {
+    "missing_content": true
+  },
+  "predicate_transport_checks": 1728000,
+  "predicate_transport_failures": 0,
+  "random_systems": 9000,
+  "scope_notes": [
+    "Finite exact bijective encodings only.",
+    "Random matrix rereview does not prove absolute articulability or metaphysical possibility.",
+    "Source wording remains translated-primary access and Track-N conditional."
+  ],
+  "source_checks": {
+    "actual_hash": "932abd7e2d7b3702d5d6d77d2a4a95ecfb3a9ccbcfbbce7ae750b2bcf55bef7c",
+    "expected_hash": "932abd7e2d7b3702d5d6d77d2a4a95ecfb3a9ccbcfbbce7ae750b2bcf55bef7c",
+    "hash_match": true,
+    "subsists_in_him_found": true,
+    "translator_preface_found": true,
+    "uncreated_speech_found": true
+  }
+}

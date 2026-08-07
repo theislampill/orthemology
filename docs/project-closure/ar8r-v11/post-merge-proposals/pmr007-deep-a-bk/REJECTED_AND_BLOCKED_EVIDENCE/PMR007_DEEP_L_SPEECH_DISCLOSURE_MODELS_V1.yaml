@@ -1,0 +1,55 @@
+schema: PMR007_DEEP_L_SPEECH_DISCLOSURE_MODELS_V1
+status: POST_MERGE_RESEARCH_CANDIDATE
+sorts: [content, bearer, episode, token, context]
+guards: [MENT, CAP, ACT, OWN, EXPR, PROV, FID, AUTH, UNCR_N]
+models:
+  - id: L-PW1-SOURCE-CONDITIONED-DISCLOSURE
+    true_guards: [MENT, CAP, ACT, OWN, EXPR, PROV, FID, AUTH, UNCR_N]
+    DISC_N: true
+    token_content_identity: false
+    neutral_source_truth: unestablished
+  - id: L-CM1-ABSTRACT-ARTICULABILITY
+    ART: true
+    bearers: []
+    MENT: false
+  - id: L-CM2-OMNISCIENT-SPECTATOR
+    true_guards: [MENT]
+    false_guards: [CAP, ACT]
+  - id: L-CM3-CAPABLE-SILENT
+    true_guards: [MENT, CAP]
+    false_guards: [ACT]
+  - id: L-CM4-QUOTATION-RELAY
+    true_guards: [MENT, CAP, ACT, EXPR, PROV, FID]
+    false_guards: [OWN]
+  - id: L-CM5-FORGERY
+    true_guards: [EXPR, FID]
+    false_guards: [AUTH, PROV]
+  - id: L-CM6-REPLAY
+    same_token_bytes: true
+    same_selected_content: true
+    correct_source_episode: false
+    AUTH: false
+  - id: L-CM7-TARGET-PRESERVING-TRANSLATION
+    selected_target_fidelity: true
+    full_content_identity: false
+    authority_preservation: false
+  - id: L-CM8-ORDINARY-SPEECH
+    true_guards: [MENT, CAP, ACT, OWN, EXPR, PROV, FID, AUTH]
+    false_guards: [UNCR_N]
+    revelation: false
+  - id: L-CM9-TRACK-N-PREDICATION
+    source_predicates: [OWN, UNCR_N]
+    neutral_bridge_evidence: incomplete
+  - id: L-CM10-CREATED-CONTENT
+    true_guards: [MENT, CAP, ACT, OWN, EXPR, PROV, FID, AUTH]
+    content_created: true
+    UNCR_N: false
+relation_controls:
+  many_tokens_one_content:
+    tokens: [t0, t1]
+    content: c
+    contexts: [k0, k1]
+  one_token_context_sensitive_contents:
+    token: t
+    contents: [c0, c1]
+    contexts: [k0, k1]

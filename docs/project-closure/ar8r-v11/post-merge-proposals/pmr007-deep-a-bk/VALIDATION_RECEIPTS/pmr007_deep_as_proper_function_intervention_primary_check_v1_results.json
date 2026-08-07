@@ -1,0 +1,54 @@
+{
+  "checker": "primary exhaustive binary response-matrix semantics",
+  "counts": {
+    "adaptive_le_nonadaptive_cases": 43680,
+    "adaptive_recurrence_cases": 65536,
+    "binary_response_matrices": 65536,
+    "failures": 0,
+    "fully_identifiable": 43680,
+    "hitting_characterization_cases": 65536,
+    "intervention_deletion_monotonicity_cases": 262144,
+    "nonidentifiable": 21856,
+    "strict_adaptive_gap_cases": 16128
+  },
+  "declared_class": {
+    "accounts": 4,
+    "interventions": 4,
+    "matrices": 65536,
+    "response_alphabet": 2
+  },
+  "failures": [],
+  "identity": "PMR-007-PFIT-1",
+  "result": "PASS",
+  "strict_gap_witness": {
+    "basis": [
+      0,
+      1,
+      2
+    ],
+    "delta_AD": 2,
+    "delta_NA": 3,
+    "rows": [
+      [
+        0,
+        0,
+        0
+      ],
+      [
+        0,
+        0,
+        1
+      ],
+      [
+        0,
+        1,
+        0
+      ],
+      [
+        1,
+        0,
+        1
+      ]
+    ]
+  }
+}

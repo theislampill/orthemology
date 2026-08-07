@@ -22,6 +22,12 @@ surfaces:
   scope: >
     Fable round-1 prior-art correspondence attributions only (all rows
     UNVERIFIED; classification and relationship, never source truth)
+- path: docs/project-closure/ar8r-v11/post-merge-proposals/PMR007-DEEP-BF-BK-SOURCING-CORRECTION.md
+  classification: current-authoritative
+  scope: >
+    PMR-007 Deep BF-BK proposal-only scholarly attributions and repository
+    ancestry; classification and relationship only, never theorem truth,
+    source-world truth, novelty, adoption, or meniscus credit
 - path: docs/sourcing/R3-SOURCING-LEDGER.md
   classification: overlay
   base: docs/sourcing/SOURCING-LEDGER.md
@@ -48,6 +54,7 @@ current_status_by_claim_area:
   project_extension: references/source-status.yaml rows EXT-*
   quranic_loci: references/quran-loci.yaml (29 loci, primary-verified R3)
   academic_corpus: docs/sourcing/R3-SOURCING-LEDGER.md regraded rows over the R2 baseline
+  pmr007_deep_bf_bk_proposal: docs/project-closure/ar8r-v11/post-merge-proposals/PMR007-DEEP-BF-BK-SOURCING-CORRECTION.md
   companion_philosophical_and_classical: companion/sourcing/R3-COMPANION-SOURCING-LEDGER.md over the R2 companion baseline
 standing_research_triggers:
   - CIR-1W promotion — direct publisher full-text access (registry row)

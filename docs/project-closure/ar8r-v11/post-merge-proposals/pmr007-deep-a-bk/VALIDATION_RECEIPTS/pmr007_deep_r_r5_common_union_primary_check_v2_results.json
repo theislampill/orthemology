@@ -1,0 +1,85 @@
+{
+  "articulability_groupoid_pass": true,
+  "authority_note": "Finite common-model satisfiability only; stipulated necessity/externality and role proxies do not prove metaphysical or theological predicates.",
+  "first_no_common_bearer_witness": {
+    "a": [
+      "P_role",
+      "K_role"
+    ],
+    "b": [
+      "W_role"
+    ],
+    "c": [],
+    "d": []
+  },
+  "formal_coupling": {
+    "excluded": 44,
+    "joint_profiles": 4,
+    "marginal_product": 48,
+    "pass": true
+  },
+  "identity": "PMR-007-R5CU-1",
+  "neutral_source_flag": false,
+  "norm_cycle": {
+    "increments": [
+      1,
+      1,
+      -1,
+      -1
+    ],
+    "pass": true
+  },
+  "overall": "PASS",
+  "role_allocation_stats": {
+    "all": 4096,
+    "common": 1695,
+    "global": 3375,
+    "no_common": 1680
+  },
+  "token_responsiveness_pass": true,
+  "typed_link_graph_pass": true,
+  "typed_links": [
+    [
+      "a",
+      "REALIZES",
+      "e"
+    ],
+    [
+      "exact_norm_potential_N",
+      "EVALUATES",
+      "revision_and_selection_states"
+    ],
+    [
+      "feag_translation",
+      "TRANSPORTS",
+      "selected_finite_content"
+    ],
+    [
+      "finite_content_class",
+      "INFORMS",
+      "selection_coordinate_S"
+    ],
+    [
+      "o",
+      "CONSTRAINS",
+      "modal_transition_profiles"
+    ],
+    [
+      "response_transducer",
+      "UPDATES",
+      "selected_finite_state"
+    ],
+    [
+      "selection_coordinate_S",
+      "DIRECTS",
+      "a"
+    ]
+  ],
+  "withheld_conclusions": {
+    "IOWN": false,
+    "PERS": false,
+    "REVELATION": false,
+    "SPEECH": false,
+    "WIS": false
+  }
+}

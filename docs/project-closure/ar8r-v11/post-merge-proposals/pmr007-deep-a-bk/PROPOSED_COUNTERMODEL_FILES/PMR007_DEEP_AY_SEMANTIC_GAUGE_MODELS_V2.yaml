@@ -1,0 +1,33 @@
+schema: pmr007-deep-ay-semantic-gauge-models-v2
+identity: PMR-007-SGCI-1
+layers:
+  structural_group: Aut(S)
+  content_group: Aut(C,Lambda union B)
+  eligible_evidence: candidate-independent E invariant under residual content group
+  target: literal reference or stronger semantic/mental predicate
+results:
+  nonidentifiability:
+    guard: target varies on a residual gauge orbit
+    consequence: no exact E-only decoder
+  anchor_condition:
+    guard: residual orbit of mu is singleton
+    consequence: formal literal recoding ambiguity removed relative to B
+  constitutive_firewall:
+    consequence: singleton orbit does not entail intrinsic or mental semantics
+controls:
+  truth_label_swap: NONIDENTIFIED
+  source_role_relabeling: SOURCE_RELATIVE_ONLY
+  structural_rigidity_content_gauge: H7A1_NOT_H7A1C
+  independent_anchor: POSITIVE_RELATIVE_CONTROL
+  hidden_anchor: TARGET_IMPORT
+  rigid_impersonal_law: H7A1C_WITHOUT_H7A2_OR_H7A3
+  downstream_interpreter: EXTERNAL_ORDER_NOT_INTRINSICALLY_NOTIONAL
+  candidate_dependent_experiment: INVALID_NEUTRAL_COMPARISON
+nonclaims:
+  - metaphysical indeterminacy
+  - semantic conventionalism
+  - source falsity
+  - constitutive semanticity
+  - mentality
+  - personality
+  - Speech

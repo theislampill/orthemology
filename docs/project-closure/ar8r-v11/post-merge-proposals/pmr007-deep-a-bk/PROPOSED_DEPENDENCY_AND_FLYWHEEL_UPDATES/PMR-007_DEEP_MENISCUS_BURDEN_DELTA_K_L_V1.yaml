@@ -1,0 +1,42 @@
+schema: PMR007_DEEP_MENISCUS_BURDEN_DELTA_K_L_V1
+closed_at_scoped_level:
+  - id: BKL-01
+    burden: whether proper_function_or_KWP_availability_by_itself_entails_Wisdom
+    result: PMR-007-WFB-1
+    status: exact nonentailment and common-bearer separation admitted
+  - id: BKL-02
+    burden: whether created_expression_is_identical_to_uncreated_speech
+    result: PMR-007-SDL-1
+    status: rejected as ill-typed; guarded expression/relay reconstruction admitted
+narrowed:
+  - id: BKL-03
+    burden: proper_function_to_Wisdom
+    status: decomposed into objective fittingness, selection because fitting, appropriate means, common bearer, execution, and stability
+  - id: BKL-04
+    burden: articulability_to_Speech
+    status: decomposed into articulability, mentality, capacity, occurrence, authorship, source attribute, token relation, and revelational identification
+  - id: BKL-05
+    burden: source_conditioned_attribute_ascent
+    status: Track-N predication can supply conditional predicates but cannot migrate into a neutral entailment
+opened_or_sharpened:
+  - id: BKL-06
+    burden: objective_fittingness_ground
+    reason: truth tracking and proper function do not establish a praiseworthy end
+  - id: BKL-07
+    burden: stable_wisdom_disposition
+    reason: one effective wise-directed episode does not establish stable attribute possession
+  - id: BKL-08
+    burden: articulability_to_intrinsic_intentionality
+    reason: impersonal abstract, modal, powers-based, distributed, teleosemantic, and brute-semantic rivals survive
+  - id: BKL-09
+    burden: mentality_to_agentive_speech
+    reason: understanding, expressive capacity, and occurrence are independent
+  - id: BKL-10
+    burden: revelational_identity_and_applicability
+    reason: source identity, provenance, version, authorization, fidelity, and applicability remain independently required
+strongest_surviving_rival: ABSTRACT_ORDER_PLUS_IMPERSONAL_TRUTH_TRACKING_POWERS_ACTUALIZER_WITH_PRIMITIVE_OR_EXTERNAL_FITTINGNESS_AND_CREATED_EXPRESSION
+blocked_external:
+  - Arabic_primary_source_verification
+  - external_philosophical_review_of_conceptualism_and_teleology
+  - world_level_evidence_for_intrinsic_mentality
+  - owner_adoption

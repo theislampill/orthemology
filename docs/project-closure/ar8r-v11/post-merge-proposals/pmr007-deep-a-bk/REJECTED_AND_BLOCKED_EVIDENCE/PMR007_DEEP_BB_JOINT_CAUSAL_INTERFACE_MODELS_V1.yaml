@@ -1,0 +1,22 @@
+schema: PMR007_DEEP_BB_MODELS_V1
+identity: PMR-007-JCIQ-1
+setting:
+  base: finite deterministic controlled system
+  interfaces: independently declared label maps on one action set
+  individual_quotient: all-word trace quotient per interface
+  joint_quotient: all-word trace quotient for product label
+invariants:
+  joint_equivalence: intersection of individual equivalences
+  joint_embedding: action-invariant subdirect image in product quotients
+  raw_product_deficit: product_of_quotient_sizes_minus_joint_quotient_size
+controls:
+  BB-CM1: FULL_PRODUCT_CARRIER_BOX
+  BB-CM2: DIAGONAL_COUPLING
+  BB-CM3: DUPLICATED_INTERFACE
+  BB-CM4: DEFINABLE_INTERFACE
+  BB-CM5: IMPERSONAL_SUBDIRECT_REALIZER
+  BB-CM6: DISTRIBUTED_COUPLED_REALIZER
+  BB-CM7: HIDDEN_LATENT_PRODUCT
+  BB-CM8: VERSION_TARGET_SHIFT
+  BB-CM9: PAIRWISE_FULL_GLOBAL_PARITY_CONSTRAINT
+  BB-CM10: LABEL_RELABELING

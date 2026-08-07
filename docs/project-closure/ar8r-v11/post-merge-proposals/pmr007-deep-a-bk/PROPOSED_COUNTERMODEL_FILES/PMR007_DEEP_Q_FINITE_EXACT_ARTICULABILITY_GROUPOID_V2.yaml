@@ -1,0 +1,41 @@
+schema: pmr007-deep-q-feag-v2
+identity: PMR-007-FEAG-1
+status: REPAIRED_POST_MERGE_RESEARCH_CANDIDATE
+hard_scope:
+  content_class: finite_nontrivial_declared
+  language_family: finite_nonempty
+  encoding: lossless_bijection
+  excluded:
+    - lossy_translation
+    - partial_expression
+    - ambiguity_without_context
+    - pragmatic_force
+    - absolute_all_content_claim
+positive_results:
+  - canonical_translation_groupoid
+  - exact_content_predicate_transport
+  - derivation_of_pairwise_translations_from_encodings
+  - finite_deterministic_realizability
+unification_class: FORMAL_TRANSLATION_UNIFICATION
+primitive_or_open:
+  - content_class
+  - each_encoding
+  - world_applicability
+  - why_the_structure_obtains
+  - ultimate_causal_realization
+model_class_closure:
+  impersonal_and_personal_expansions_assumed: true
+  metaphysical_possibility_established: false
+source_firewall:
+  source: ASFAHANI_ENGLISH_TRANSLATION
+  sha256: 932abd7e2d7b3702d5d6d77d2a4a95ecfb3a9ccbcfbbce7ae750b2bcf55bef7c
+  authority: TRANSLATED_PRIMARY_ACCESS
+  supplies_track_n:
+    - divine_speech_uncreated
+    - divine_speech_subsists_in_divine_bearer
+  neutral_transfer: false
+rival_effect:
+  strengthened_architecture: ABSTRACT_ARTICULABILITY_ORDER_PLUS_IMPERSONAL_OR_PLURAL_FINITE_REALIZERS
+novelty:
+  general_mathematics: 0
+  world_directed_advance: 0

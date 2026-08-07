@@ -1,0 +1,28 @@
+{
+  "common_bearers": [],
+  "creator_candidates": [],
+  "excluded_count": 28,
+  "formal_satisfiability_not_world_truth": true,
+  "frozen_hash_failures": [],
+  "image_count": 4,
+  "model_relative_necessity_only": true,
+  "necessary_o": true,
+  "necessary_x": true,
+  "overall": "PASS",
+  "product_count": 32,
+  "profile_table_errors": [],
+  "schema": "PMR007_DEEP_C_DISTINCT_REREVIEW_RESULTS_V1",
+  "source_claim_not_made": true,
+  "target_extensions_empty": {
+    "agentic": true,
+    "creator": true,
+    "intellectual": true,
+    "personal": true,
+    "revelation_identified": true,
+    "speaks": true,
+    "speech_capable": true,
+    "unified_common_bearer": true,
+    "wise": true
+  },
+  "universal_accessibility": true
+}

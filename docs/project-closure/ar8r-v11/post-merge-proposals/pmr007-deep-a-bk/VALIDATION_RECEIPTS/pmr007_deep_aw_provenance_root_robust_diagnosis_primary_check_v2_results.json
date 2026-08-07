@@ -1,0 +1,36 @@
+{
+  "codebooks": 4096,
+  "controls": {
+    "alias_contraction": {
+      "after_joint_root_distance": 1,
+      "before_distance": 2
+    },
+    "copies_one_root": {
+      "apparent_messages": 40,
+      "distance_contribution_max": 1,
+      "root_coordinates": 1
+    },
+    "distance_three": {
+      "error_f1": true
+    },
+    "distance_two": {
+      "erasure_f1": true,
+      "error_f1": false
+    }
+  },
+  "erasure_cases": 8192,
+  "erasure_failures": 0,
+  "error_cases": 8192,
+  "error_failures": 0,
+  "minimal_erasure_root_histogram": {
+    "3": 960,
+    "4": 288
+  },
+  "minimal_error_root_histogram": {
+    "2": 3360
+  },
+  "multicover_failures": 0,
+  "overall": "PASS",
+  "schema": "pmr007-deep-aw-primary-check-v2-results",
+  "subset_cases": 184320
+}

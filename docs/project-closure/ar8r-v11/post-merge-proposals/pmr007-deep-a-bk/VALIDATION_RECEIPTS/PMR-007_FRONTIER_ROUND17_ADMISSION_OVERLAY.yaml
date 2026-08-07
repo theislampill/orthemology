@@ -1,0 +1,44 @@
+schema: PMR007_ROUND17_ADMISSION_OVERLAY_V1
+round: PMR-007_FRONTIER_ROUND17
+admitted_version: V2
+results:
+  - id: RSD-1
+    status: ADMITTED_POST_MERGE_SCOPED_RESULT
+    provenance: NEW_POST_MERGE_RESEARCH
+    historical_identity: null
+    general_mathematical_novelty: 0
+    external_review: OPEN
+    owner_adoption: PENDING
+  - id: RSD-2
+    status: ADMITTED_POST_MERGE_SCOPED_COROLLARY
+    ancestor: [MLT-1, SMRB-1, RSD-1]
+    historical_identity: null
+    general_mathematical_novelty: 0
+  - id: RSD-3
+    status: ADMITTED_POST_MERGE_SCOPED_COROLLARY
+    family: STANDARD_FLAT_BUNDLE_DESCENT
+    historical_identity: null
+    general_mathematical_novelty: 0
+  - id: R5-RSD-1
+    status: ADMITTED_POST_MERGE_SCOPED_COMMON_MODEL_CONTROL
+    integrates: [SMRB-1, PMR-M3-01, PMR-M5-02, PMR-R5-01]
+    historical_identity: null
+    general_mathematical_novelty: 0
+  - id: SRC-R17-ASFAHANI-LOCUS-UNITY
+    status: ADMITTED_SOURCE_RELATIVE_CONSTRAINT
+    authority: TRANSLATED_PRIMARY_TEXT_ACCESS
+    arabic_primary_verification: false
+    transworld_relation: PARTIAL_OVERLAP
+blocked_or_superseded:
+  - id: PMR-007-ROUND17-V1
+    status: PRESERVED_UNADMITTED_REPAIRED_CANDIDATE
+blocking_repairs:
+  R17-F01: CLOSED
+  R17-F02: CLOSED
+  R17-F03: CLOSED
+  R17-F04: CLOSED
+fresh_rereview: PASS_WITH_NONBLOCKING_AUTHORITY_AND_NOVELTY_NOTES
+repository_mutation: false
+integrated_champion: NONE
+meniscus: MENISCUS_NOT_REACHED
+natural_closure: NOT_REACHED

@@ -1,0 +1,53 @@
+schema: pmr007-deep-r-r5-common-union-v1
+identity: PMR-007-R5CU-V1
+status: POST_MERGE_RESEARCH_CANDIDATE
+domain:
+  objects: [o, a, b, c, d, e]
+  order_object: o
+  originator_realizer: a
+  role_bearers: [a, b, c, d]
+  effect: e
+base_facts:
+  necessary: [o]
+  underived: [o]
+  abstract: [o]
+  externally_actual: [a]
+  impersonal: [a, b, c, d]
+  originator: [a]
+  realizes:
+    - [a, e]
+formal_coupling:
+  primitives: [x, y]
+  derived:
+    M: x
+    A: y
+    S: x_xor_y
+    N: x_plus_y
+    R: n_positive
+norm_potential:
+  states: ['00','10','11','01']
+  values: {'00': 0, '10': 1, '11': 2, '01': 1}
+articulability:
+  content: [c0, c1, c2]
+  encodings:
+    L0: [0, 1, 2]
+    L1: [1, 2, 0]
+    L2: [2, 0, 1]
+role_constraints:
+  roles: [W_role, P_role, K_role]
+  each_globally_available: true
+  common_bearer_required: false
+withheld_conclusions:
+  personality: true
+  intentional_ownership: true
+  wisdom: true
+  speech: true
+  revelational_identification: true
+source_firewall:
+  track_n_in_neutral_union: false
+nonclaims:
+  - necessity_or_external_actuality_derived
+  - metaphysical_possibility
+  - role_proxies_are_divine_attributes
+  - full_explanatory_integration
+  - general_mathematical_novelty

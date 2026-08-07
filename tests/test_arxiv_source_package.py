@@ -1521,16 +1521,16 @@ class SourcePackageContractTests(unittest.TestCase):
     def test_compatibility_report_rewrite_rejects_noncanonical_total_numbers(self):
         rewrite = self.api(BUILD, "rewrite_compatibility_artifact_table")
         validate = self.api(BUILD, "compatibility_report_table_issues")
-        canonical = "Total final page count: `61`."
+        canonical = "Total final page count: `62`."
         variants = (
-            "Total final page count: `061`.",
-            "Total final page count: `+61`.",
-            "Total final page count: `61.0`.",
-            "Total final page count: `٦١`.",
-            "Total final page count: `６１`.",
+            "Total final page count: `062`.",
+            "Total final page count: `+62`.",
+            "Total final page count: `62.0`.",
+            "Total final page count: `٦٢`.",
+            "Total final page count: `６２`.",
             "Total final page count: `%s`." % ("9" * 5000),
-            "Tot\u0301al final page count: `61`.",
-            "Tótal final page count: `61`.",
+            "Tot\u0301al final page count: `62`.",
+            "Tótal final page count: `62`.",
         )
         report = (
             ROOT
@@ -1567,7 +1567,7 @@ class SourcePackageContractTests(unittest.TestCase):
 
     def test_compatibility_report_rejects_moved_total_record(self):
         validate = self.api(BUILD, "compatibility_report_table_issues")
-        total = "Total final page count: `61`."
+        total = "Total final page count: `62`."
         report = (
             ROOT
             / "docs"

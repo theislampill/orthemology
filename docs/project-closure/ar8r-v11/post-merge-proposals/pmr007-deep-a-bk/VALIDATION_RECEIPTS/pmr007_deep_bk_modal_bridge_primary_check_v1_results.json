@@ -1,0 +1,40 @@
+{
+  "identity": "PMR-007-NCBD-1",
+  "checker": "PRIMARY_V1",
+  "assignments": 4096,
+  "actual_underived_models": 1792,
+  "actual_to_necessary_countermodels": 1296,
+  "unique_each_models": 576,
+  "unique_each_to_constant_bearer_countermodels": 288,
+  "full_guard_models": 72,
+  "full_guard_failures": 0,
+  "deletion_witnesses": {
+    "coverage": {
+      "actual_root": true,
+      "world1_root": false,
+      "conclusion": false
+    },
+    "B_ID": {
+      "world_roots": [
+        "r0",
+        "r1"
+      ],
+      "coherent_counterpart": true,
+      "same_bearer": false,
+      "conclusion": false
+    },
+    "concreteness": {
+      "same_root_all_worlds": true,
+      "concrete_worlds": [
+        "w0"
+      ],
+      "conclusion": false
+    },
+    "abstract_to_concrete": {
+      "abstract_order_all_worlds": true,
+      "concrete_bearer": false,
+      "conclusion": false
+    }
+  },
+  "result": "PASS"
+}

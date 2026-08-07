@@ -569,7 +569,25 @@ if hasattr(build_pdfs, "compatibility_input_bytes"):
         and b"breaklines=true" in compatibility[
             "publication/pdftex-unicode-compat.tex"
         ]
-        and b"breakanywhere" not in compatibility[
+        and b"breakanywhere=true" not in compatibility[
+            "publication/pdftex-unicode-compat.tex"
+        ]
+        and b"breakanywheresymbolpre={}" in compatibility[
+            "publication/pdftex-unicode-compat.tex"
+        ]
+        and b"breakanywheresymbolpost={}" in compatibility[
+            "publication/pdftex-unicode-compat.tex"
+        ]
+        and b"breakbeforesymbolpre={}" in compatibility[
+            "publication/pdftex-unicode-compat.tex"
+        ]
+        and b"breakbeforesymbolpost={}" in compatibility[
+            "publication/pdftex-unicode-compat.tex"
+        ]
+        and b"breakaftersymbolpre={}" in compatibility[
+            "publication/pdftex-unicode-compat.tex"
+        ]
+        and b"breakaftersymbolpost={}" in compatibility[
             "publication/pdftex-unicode-compat.tex"
         ]
         and b"breakafter={/-.:}" in compatibility[

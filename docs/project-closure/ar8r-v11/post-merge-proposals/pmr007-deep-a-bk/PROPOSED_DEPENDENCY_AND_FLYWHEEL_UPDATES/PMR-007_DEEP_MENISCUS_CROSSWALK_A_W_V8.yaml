@@ -1,0 +1,636 @@
+schema: PMR007_DEEP_MENISCUS_CROSSWALK_A_W_V8
+repository_authority: 428187cebf7644ff8bf9522455a560eb82d35964
+historical_duration: '09:41:25.405101139'
+historical_segment: 357
+rounds:
+  DEEP_A:
+    identity: PMR-007-NFG-1
+    central_change: token-autonomous authority excluded; neutral proper-function ground
+      unestablished
+  DEEP_B:
+    identity: PMR-007-DURP-1
+    central_change: genuine cross-profile restriction constructed; personal/impersonal/distributed
+      realization parity
+  DEEP_C:
+    identity: PMR-007-ICR-1
+    central_change: abstract necessary order plus concrete impersonal actualizer survives
+      the integrated neutral package
+  DEEP_D:
+    identity: PMR-007-UGEN-1
+    central_change: prior asymmetry required under equivariance; articulability does
+      not entail mentality or Speech
+  DEEP_E:
+    identity: PMR-007-TNAC-1
+    central_change: Track-N source compatibility distinguished from neutral dominance;
+      no neutral champion
+  DEEP_F:
+    identity: PMR-007-FPF-1
+    central_change: Source-relative proper function split into function, accuracy,
+      and warrant; neutral realization parity survives.
+  DEEP_G:
+    identity: PMR-007-CBA-1
+    central_change: common bearer is total intersection or independently fixed identity;
+      local/pairwise attributes do not yield unity
+  DEEP_H:
+    identity: PMR-007-UAP-1
+    central_change: matched structural evidence has Bayes factor one; personal-realizer
+      preference requires independent evidence or priors
+  DEEP_I:
+    identity: PMR-007-OAS-1
+    central_change: Order-to-application and application-to-efficacy are independent;
+      neutral unique selection requires an automorphism-fixed effective realizer.
+  DEEP_J:
+    identity: PMR-007-UCA-1
+    central_change: Complete homogeneous upstream-directed finite lineage yields one
+      underived root; sufficient actualizer requires additional closure and composition
+      guards.
+  DEEP_K:
+    identity: PMR-007-WFB-1
+    central_change: Proper function, truth tracking, K/W/P, and successful execution
+      do not entail objectively fitting wise-directed choice, common wise bearer,
+      or stable Wisdom; Track-N predication remains source-conditional.
+  DEEP_L:
+    identity: PMR-007-SDL-1
+    central_change: Articulability, mentality, expression capacity, utterance, authorship,
+      source attribute, created token, and revelational disclosure are separate; UG-T7
+      and UG-T8 remain unproved neutrally, while UG-T9 is repaired as a guarded expression/relay
+      relation.
+  DEEP_M:
+    identity: PMR-007-ETRP-1
+    central_change: Every frozen finite boundary reason-token profile remains compatible
+      with personal and impersonal expansions when the intended class admits both;
+      token responsiveness and weak common-carrier structure do not entail intentional
+      subjecthood.
+  DEEP_N:
+    identity: PMR-007-ANH-1
+    central_change: Zero registered correction holonomy exactly characterizes one
+      componentwise additive potential, while truth linkage, proper function, fittingness,
+      and personal norm source remain independent.
+  DEEP_O:
+    identity: PMR-007-GUPP-1
+    central_change: A nonproduct cross-domain derivation and exact shared potential
+      can exclude most marginal profile combinations, but formal coupling alone remains
+      compatible with personal and impersonal expansions of the same neutral reduct;
+      genuine explanatory unity and personality remain unestablished.
+  DEEP_P:
+    identity: PMR-007-TRPF-1
+    central_change: Truth-linked epistemic proper function does not factor through
+      a complete neutral success/trajectory profile when aligned and misaligned interpretation
+      expansions remain admissible; target-relative success, frequency, causal role,
+      or generic design do not fix PF_EPI.
+  DEEP_Q:
+    identity: PMR-007-FEAG-1
+    central_change: A finite exact translation groupoid yields genuine formal unification
+      and exact predicate transport relative to a primitive content set and bijective
+      encodings, while mentality, Speech, source authority, and an ultimate ground
+      remain independent; lossy and partial systems delimit the scope.
+  DEEP_R:
+    identity: PMR-007-R5CU-1
+    central_change: One common finite model composes underived-order placeholders,
+      a stipulated necessary abstract order, an externally actual impersonal realizer,
+      formal coupling, exact norm potential, articulability, token responsiveness,
+      and plural W/P/K role availability while withholding personality, Wisdom, Speech,
+      source truth, and a common-bearer Creator.
+  DEEP_S:
+    identity: PMR-007-SCRF-1
+    central_change: H12/H16 source predicates conditionally filter the frozen Track-N
+      rival class, but the filter neither authenticates the source nor migrates into
+      neutral Track T.
+  DEEP_T:
+    identity: PMR-007-MACC-1
+    central_change: Current merged-main and Deep O-S evidence still do not select
+      a unique integrated architecture; this is an authority reconciliation and application
+      of Deep E/S and the fibre family, not a new theorem origin.
+  DEEP_U:
+    identity: PMR-007-TRPD-1
+    central_change: Longitudinal trajectory signatures can split an endpoint-equivalent
+      model fibre and encoding can be load-bearing, but endpoint-plus-trajectory evidence
+      still does not identify one mechanism, subject, proper function, or metaphysical
+      ground.
+  DEEP_V:
+    identity: PMR-007-SWPC-1
+    central_change: Profile certifiability, frozen-root warrant completeness, and
+      independently supplied world-target adequacy form three separately variable
+      coordinates. The profile/warrant pair has a coarsest exact four-state diagnostic,
+      but the mixed failures are Pareto-incomparable and no axis-neutral strict priority
+      follows.
+  DEEP_W:
+    identity: PMR-007-TIPC-1
+    central_change: A finite target-indexed pullback aligns independently valid profile,
+      warrant, and world-bridge objects only when their full declared target/version/scope/analysis/referent/semantic-contract
+      key agrees. Compatibility does not validate any component, authorize the key,
+      establish source or world truth, or create one bearer.
+edges:
+- id: AH-E-G
+  from: Candidate_E
+  to: Candidate_G
+  update: Track-N norm predicates restrict profiles only conditionally; neutral personal/impersonal
+    parity remains.
+  evidence:
+  - PMR-007-NFG-1
+  - PMR-007-FPF-1
+- id: AH-G-T
+  from: Candidate_G
+  to: transcendental_ascent
+  update: Genuine functional integration does not entail personal realization; matched
+    evidence gives no Bayesian update.
+  evidence:
+  - PMR-007-DURP-1
+  - PMR-007-UAP-1
+- id: AH-T-PF
+  from: transcendental_ascent
+  to: proper_function
+  update: Underived order supplies neither design, healthy operation, environment,
+    warrant, nor praiseworthy teleology.
+  evidence:
+  - PMR-007-ICR-1
+  - PMR-007-FPF-1
+- id: AH-UG-G
+  from: uncreated_grammar
+  to: Candidate_G
+  update: Symmetry breaking requires prior asymmetry but does not identify one bearer
+    or personal realizer.
+  evidence:
+  - PMR-007-UGEN-1
+  - PMR-007-UAP-1
+- id: AH-UG-T
+  from: uncreated_grammar
+  to: transcendental_ascent
+  update: Impersonal abstract, powers, distributed, and brute-semantic articulability
+    models remain live.
+  evidence:
+  - PMR-007-UGEN-1
+  - PMR-007-ICR-1
+- id: AH-N-ATTR
+  from: Track_N
+  to: attribute_ascent
+  update: A source-fixed bearer can conditionally close the common-bearer coordinate;
+    qiyas local rules do not derive it neutrally.
+  evidence:
+  - PMR-007-TNAC-1
+  - PMR-007-CBA-1
+- id: AH-R5-G
+  from: R5_plural_impersonal_rivals
+  to: Candidate_G_and_ascent
+  update: An impersonal integrated field plus plural attribute realization matches
+    current neutral structure and evidence.
+  evidence:
+  - PMR-007-ICR-1
+  - PMR-007-CBA-1
+  - PMR-007-UAP-1
+- id: AH-PMR-GUARDS
+  from: PMR_transport_certificate_results
+  to: central_lanes
+  update: Source, identity, version, authority, environment, defeater, and bearer
+    custody remain explicit eligibility guards.
+  evidence:
+  - PMR-007-FPF-1
+  - PMR-007-CBA-1
+- id: AJ-E-G-I
+  from: Candidate_E
+  to: Candidate_G_and_realizer_selection
+  update: A norm source breaks realization symmetry only when it supplies an independently
+    warranted non-idle asymmetric relation; an idle value tag does not.
+  evidence:
+  - PMR-007-FPF-1
+  - PMR-007-OAS-1
+- id: AJ-G-T-IJ
+  from: Candidate_G
+  to: transcendental_ascent
+  update: One neutral-selected realizer needs an automorphism-fixed point; one underived
+    efficacy lineage needs complete upstream-directed dependence. Neither yields personality.
+  evidence:
+  - PMR-007-OAS-1
+  - PMR-007-UCA-1
+- id: AJ-T-PF-J
+  from: transcendental_ascent
+  to: proper_function
+  update: A unique lineage root or sufficient actualizer does not fix truth-linked
+    teleology, healthy operation, praiseworthy ends, or Wisdom.
+  evidence:
+  - PMR-007-UCA-1
+  - PMR-007-FPF-1
+- id: AJ-UG-I
+  from: uncreated_grammar
+  to: realizer_selection
+  update: Prior asymmetry required for determinate expression does not itself select
+    one concrete realizer; automorphism-fixed selection remains an additional bridge.
+  evidence:
+  - PMR-007-UGEN-1
+  - PMR-007-OAS-1
+- id: AJ-N-I
+  from: Track_N
+  to: realizer_and_attribute_selection
+  update: Authenticated source predication can break symmetry in the expanded Track-N
+    signature, but remains source-conditioned and nonmigratory.
+  evidence:
+  - PMR-007-TNAC-1
+  - PMR-007-OAS-1
+- id: AJ-R5-IJ
+  from: R5_plural_impersonal_rivals
+  to: unity_and_ascent
+  update: Plural roots survive absent complete upstream directedness; even if one
+    lineage root is established, an impersonal powers field plus separate abstract
+    order survives.
+  evidence:
+  - PMR-007-OAS-1
+  - PMR-007-UCA-1
+- id: AJ-PMR-CUSTODY-IJ
+  from: PMR_transport_certificate_results
+  to: central_lanes
+  update: Applicability, relation completeness, same-respect edge typing, effect coverage,
+    source authority, and model/version custody are now explicit world-application
+    guards.
+  evidence:
+  - PMR-007-VCT-1
+  - PMR-007-PRRC-1
+  - PMR-007-OAS-1
+  - PMR-007-UCA-1
+- id: AL-T-PF-K
+  from: transcendental_ascent
+  to: proper_function_and_Wisdom
+  update: Underived order, one actualizer root, truth-correlated representation, and
+    even K/W/P availability do not supply an objectively fitting end, selection because
+    fitting, common bearer, successful execution, or stable Wisdom.
+  evidence:
+  - PMR-007-UCA-1
+  - PMR-007-FPF-1
+  - PMR-007-WFB-1
+- id: AL-G-WISDOM-K
+  from: Candidate_G
+  to: Wisdom_and_common_bearer
+  update: Distributed availability of agency, understanding, fitting end, means, capacity,
+    and execution is insufficient for one wise bearer; the bearer intersection or
+    independently fixed identity remains load-bearing.
+  evidence:
+  - PMR-007-CBA-1
+  - PMR-007-WFB-1
+- id: AL-UG-MENT-L
+  from: uncreated_grammar
+  to: mentality_and_Speech
+  update: Determinate articulability does not entail an understanding bearer; mentality
+    does not entail expressive capacity or occurrence; source-conditioned uncreated
+    Speech remains behind Track-N predicates and custody guards.
+  evidence:
+  - PMR-007-UGEN-1
+  - PMR-007-SDL-1
+- id: AL-N-SPEECH-L
+  from: Track_N
+  to: Speech_and_revelational_identification
+  update: Translated-primary source predicates can conditionally license a created-token/uncreated-speech
+    disclosure classification, but do not migrate into a neutral mentality or Speech
+    proof and do not identify a token with the speech attribute.
+  evidence:
+  - PMR-007-TNAC-1
+  - PMR-007-SDL-1
+- id: AL-PMR-CUSTODY-L
+  from: PMR_transport_certificate_results
+  to: source_disclosure_and_revelation
+  update: Expression and target fidelity leave source identity, provenance, version,
+    authorization, and applicability independently open; all remain mandatory guards
+    for revelational identification.
+  evidence:
+  - PMR-007-VCT-1
+  - PMR-007-ORTC-V4
+  - PMR-007-SDL-1
+- id: AL-R5-KL
+  from: R5_plural_impersonal_rivals
+  to: Wisdom_Speech_and_ascent
+  update: An impersonal truth-tracking powers field can retain abstract articulability,
+    concrete efficacy, and objective or primitive fittingness without intrinsic mentality,
+    common wise bearer, or neutral Speech; the rival survives both rounds.
+  evidence:
+  - PMR-007-WFB-1
+  - PMR-007-SDL-1
+- id: AN-G-M
+  from: Candidate_G
+  to: mentality_and_personal_realizer
+  update: Cross-profile and one-carrier functional integration remains compatible
+    with an impersonal transducer having the same complete boundary table; personal
+    realization requires evidence outside that profile.
+  evidence:
+  - PMR-007-DURP-1
+  - PMR-007-UAP-1
+  - PMR-007-ETRP-1
+- id: AN-E-N
+  from: Candidate_E
+  to: trans_state_norm
+  update: A frozen additive correction field supports one trans-state potential exactly
+    when its cycle holonomy vanishes; this narrows but does not choose the authority-source
+    horn.
+  evidence:
+  - PMR-007-NFG-1
+  - PMR-007-FPF-1
+  - PMR-007-ANH-1
+- id: AN-T-PF-N
+  from: transcendental_ascent
+  to: proper_function
+  update: Even a path-independent underived norm potential supplies no truth linkage,
+    teleology, proper function, fittingness, or Wisdom without additional premises.
+  evidence:
+  - PMR-007-ICR-1
+  - PMR-007-WFB-1
+  - PMR-007-ANH-1
+- id: AN-K-M
+  from: proper_function_and_Wisdom
+  to: personal_agency
+  update: BECAUSE_F and intentional ownership can break extensional parity only if
+    independently warranted; target-relative token sensitivity and success cannot
+    generate them.
+  evidence:
+  - PMR-007-WFB-1
+  - PMR-007-ETRP-1
+- id: AN-UG-M
+  from: uncreated_grammar
+  to: mentality
+  update: A deterministic or distributed impersonal transducer can realize the same
+    registered articulability and response profile; UG-T7 requires evidence not reducible
+    to the boundary profile.
+  evidence:
+  - PMR-007-UGEN-1
+  - PMR-007-SDL-1
+  - PMR-007-ETRP-1
+- id: AN-R5-MN
+  from: R5_plural_impersonal_rivals
+  to: personal_ground_and_norm_source
+  update: The strongest rival now combines an impersonal boundary-equivalent powers
+    controller with an exact additive norm field; neither personal subjecthood nor
+    objective authority is forced.
+  evidence:
+  - PMR-007-ETRP-1
+  - PMR-007-ANH-1
+- id: AN-PMR-CUSTODY-MN
+  from: PMR_transport_certificate_results
+  to: central_lanes
+  update: A realization-sensitive personal or norm discriminator must carry exact
+    profile scope, model-class eligibility, source, version, authority, route completeness,
+    and label calibration; otherwise it cannot break the admitted fibres.
+  evidence:
+  - PMR-007-ORTC-V4
+  - PMR-007-VCT-1
+  - PMR-007-ETRP-1
+  - PMR-007-ANH-1
+- id: AR-E-G-P
+  from: Candidate_E
+  to: Candidate_G
+  update: A truth-linked proper-function discriminator must use semantic/environmental
+    or source relations outside the neutral transducer; otherwise it adds another
+    freely relabelable primitive rather than a cross-profile restriction.
+  evidence:
+  - PMR-007-TRPF-1
+  - PMR-007-GUPP-1
+- id: AR-G-T-O
+  from: Candidate_G
+  to: transcendental_ascent
+  update: Formal derivational coupling supplies real nonproduct structure but does
+    not favor a personal ground over an impersonal realizer when both are expansions
+    of the same complete neutral reduct.
+  evidence:
+  - PMR-007-GUPP-1
+  - PMR-007-ETRP-1
+- id: AR-T-PF-P
+  from: transcendental_ascent
+  to: proper_function
+  update: Even an underived or necessary formal order and a complete successful controller
+    leave truth-linked epistemic proper function open unless the interpretation/environment
+    relation is independently warranted.
+  evidence:
+  - PMR-007-TRPF-1
+  - PMR-007-ANH-1
+- id: AR-UG-G-Q
+  from: uncreated_grammar
+  to: Candidate_G
+  update: Exact inter-language transport can be derived from one content object and
+    encoding family, giving genuine formal unification, but the content object and
+    encodings remain primitive and the construction does not identify a mental or
+    personal ground.
+  evidence:
+  - PMR-007-FEAG-1
+  - PMR-007-SDL-1
+- id: AR-UG-T-Q
+  from: uncreated_grammar
+  to: transcendental_ascent
+  update: A finite impersonal abstract articulability structure with deterministic
+    realizers satisfies exact cross-system expression and translation while withholding
+    mentality and Speech; UG-T7 and UG-T8 remain unproved neutrally.
+  evidence:
+  - PMR-007-FEAG-1
+  - PMR-007-SDL-1
+- id: AR-R5-GR
+  from: R5_plural_impersonal_rivals
+  to: Candidate_G_and_ascent
+  update: The strongest common model now combines formal derivational coupling, exact
+    norm holonomy, abstract articulability, an impersonal actualizer, and plural W/P/K
+    availability; B6, B7, B8, B11, B15, and B16 remain open or countermodeled.
+  evidence:
+  - PMR-007-R5CU-1
+  - PMR-007-GUPP-1
+  - PMR-007-FEAG-1
+  - PMR-007-TRPF-1
+- id: AR-OSM-PF
+  from: OSM_empirical_source
+  to: proper_function_and_representation
+  update: The hippocampal OSM paper supports sensory aliasing, longitudinal representational
+    differentiation, and trajectory-level model discrimination, but does not supply
+    truth-linked norm authority, proper function, or a personal-realizer bridge.
+  evidence:
+  - AR8R_FABLE_R1_OSM_SOURCE_VERIFICATION_V2
+  - PMR-007-TRPF-1
+- id: AR-PMR-CUSTODY-OPQR
+  from: PMR_transport_certificate_results
+  to: central_lanes
+  update: Any central premise transported across source, language, version, representation,
+    or repository surfaces remains guarded by identity, provenance, authorization,
+    applicability, model completeness, and temporal validity; none of these guards
+    supplies metaphysical truth.
+  evidence:
+  - PMR-007-VCT-1
+  - PMR-007-ORTC-V4
+  - PMR-007-FEAG-1
+  - PMR-007-R5CU-1
+- id: AU-N-R5-S
+  from: Track_N
+  to: R5_plural_impersonal_rivals
+  update: Authenticated referent-linked source predicates could conditionally exclude
+    the frozen source-incompatible rivals, but H12/H16 remain open and no neutral
+    exclusion follows.
+  evidence:
+  - PMR-007-SCRF-1
+  - PMR-007-TNAC-1
+- id: AU-E-G-T
+  from: Candidate_E_and_Candidate_G
+  to: integrated_architecture_selection
+  update: Norm-source and derivational-unity work has not supplied an independently
+    warranted intentional-ownership coordinate; the registered A/B/C profile remains
+    nonselective.
+  evidence:
+  - PMR-007-TRPF-1
+  - PMR-007-GUPP-1
+  - PMR-007-MACC-1
+- id: AU-OSM-G-U
+  from: OSM_empirical_source
+  to: Candidate_G_and_architecture_selection
+  update: A longitudinal process trace can refine endpoint-equivalent candidates,
+    but the tested trajectory does not identify an intentional subject, personality,
+    or one biological mechanism.
+  evidence:
+  - AR8R_FABLE_R1_OSM_SOURCE_VERIFICATION_V2
+  - PMR-007-TRPD-1
+- id: AU-OSM-PF-U
+  from: OSM_empirical_source
+  to: proper_function
+  update: Trajectory agreement is a task-relative discriminator; it does not fix truth
+    linkage, objective fittingness, teleology, or proper function.
+  evidence:
+  - PMR-007-TRPD-1
+  - PMR-007-TRPF-1
+- id: AU-OSM-PRH-U
+  from: OSM_empirical_source
+  to: PRH_and_representation_convergence
+  update: Endpoint or kernel alignment underdetermines learning mechanism; longitudinal
+    trajectory and encoding sensitivity supply additional model-comparison coordinates
+    without proving realism or one shared representation.
+  evidence:
+  - PMR-007-TRPD-1
+  - AR8R_FABLE_R1_OSM_SOURCE_VERIFICATION_V2
+- id: AU-OSM-DYN-U
+  from: OSM_empirical_source
+  to: dynamic_orthing_and_daee
+  update: The source supports separating world transition, episode inference, representation
+    learning, and analysis-version change; it does not validate the normative target
+    or restoration semantics.
+  evidence:
+  - PMR-007-TRPD-1
+- id: AU-T-FAMILY
+  from: theorem_family_and_origin_controls
+  to: Deep_T
+  update: 'Deep T is reclassified as an updated authority reconciliation: its nonmigration
+    and A/B/C comparison are already owned by Deep E, with the source filter specialized
+    by Deep S.'
+  evidence:
+  - PMR-007-MACC-1
+  - PMR-007-TNAC-1
+  - PMR-007-SCRF-1
+- id: AV-COREA-PF-V
+  from: Core_A_profile_fibre
+  to: proper_orthing
+  update: Profile certification supplies exact declared-target recoverability only;
+    it does not supply warrant-chain integrity, target authority, or world adequacy.
+  evidence:
+  - PMR-007-SWPC-1
+- id: AV-COREB-PF-V
+  from: Core_B_reason_transport
+  to: proper_orthing
+  update: Frozen-root completeness supplies one bounded warrant coordinate only; it
+    does not establish semantic adequacy, profile integrity, source truth, or objective
+    target correctness.
+  evidence:
+  - PMR-007-SWPC-1
+- id: AV-V-SFIW
+  from: profile_warrant_product
+  to: source_formal_implementation_world_crosswalk
+  update: Profile certifiability, warrant completeness, and world-target adequacy
+    are jointly independent in the frozen finite witness class and require a three-coordinate
+    diagnostic.
+  evidence:
+  - PMR-007-SWPC-1
+- id: AV-V-ROUTE
+  from: profile_warrant_product
+  to: route_gradient_and_restoration
+  update: The profile-only and warrant-only failure states are incomparable in the
+    product order; ranking them requires an extra policy or loss assignment, and a
+    one-bit release gate erases the failed burden.
+  evidence:
+  - PMR-007-SWPC-1
+- id: AV-U-V
+  from: OSM_trajectory_evidence
+  to: profile_warrant_product
+  update: Longitudinal process evidence may refine the profile-certification coordinate,
+    but it does not supply warrant provenance or world-target authority.
+  evidence:
+  - PMR-007-TRPD-1
+  - PMR-007-SWPC-1
+- id: AW-V-W
+  from: profile_warrant_product
+  to: contract_aligned_pullback
+  update: A bare Cartesian product becomes a target-local integration interface only
+    after valid component objects map to the same full declared contract key; this
+    repairs arbitrary side-by-side pairing without creating a reductive common core.
+  evidence:
+  - PMR-007-SWPC-1
+  - PMR-007-TIPC-1
+- id: AW-AR3-W
+  from: AR3_reason_transport_and_version_custody
+  to: contract_aligned_pullback
+  update: Target identity, version, recipient scope, analysis version, referent identity,
+    and semantic-contract digest are jointly load-bearing compatibility coordinates
+    in the declared finite interface.
+  evidence:
+  - PMR-007-VCT-1
+  - PMR-007-TIPC-1
+- id: AW-S-T-W
+  from: Track_N_source_filter_and_authority_reconciliation
+  to: contract_aligned_pullback
+  update: Source and referent predicates may enter a Track-N object before pullback,
+    but compatibility cannot authenticate the source, identify the referent, or migrate
+    those predicates into neutral Track T.
+  evidence:
+  - PMR-007-SCRF-1
+  - PMR-007-MACC-1
+  - PMR-007-TIPC-1
+- id: AW-W-G
+  from: contract_aligned_pullback
+  to: Candidate_G_unity_and_common_bearer
+  update: A compatible pair or triple of profile, warrant, and world-bridge objects
+    remains a family of aligned records; it does not entail numerical identity, one
+    intentional subject, common-bearer co-instantiation, or derivational unity.
+  evidence:
+  - PMR-007-TIPC-1
+  - PMR-007-GUPP-1
+- id: AW-W-TARGETAUTH
+  from: contract_aligned_pullback
+  to: target_authority_and_anti_self_authorization
+  update: The universal property presupposes a supplied key and valid component maps.
+    It leaves open who or what warrants the key, target, referent, semantic contract,
+    and world bridge without circular self-authorization.
+  evidence:
+  - PMR-007-TIPC-1
+architecture_status:
+  A_UNIFIED_PERSONAL:
+    status: PROMISING_BUT_BRIDGE_INCOMPLETE
+    reason: Track-N compatibility and desired integration remain, but neutral realizer
+      parity, target relabeling, impersonal articulability, R5 common-model controls,
+      and the absence of independent target-key authority block dominance. Contract
+      alignment does not create one subject or bearer.
+  B_POWERS_PLURAL_REALIZATION:
+    status: LIVE_STRONG_RIVAL
+    reason: Can realize formal coupling, efficacy, token responsiveness, exact norm
+      fields, profile/warrant compatibility, and plural W/P/K roles without one intentional
+      subject or common bearer; it survives the new product and pullback interfaces.
+  C_ABSTRACT_ORDER_PLUS_CONCRETE_ACTUALIZER:
+    status: LIVE_STRONGEST_NEUTRAL_RIVAL
+    reason: The composite rival realizes the current neutral package, including finite
+      profile/warrant/world coordinates and contract alignment, using abstract order
+      plus an externally actual impersonal powers realizer and primitive or naturalized
+      norm.
+current_disposition:
+  integrated_champion: NONE
+  meniscus: MENISCUS_NOT_REACHED
+  natural_closure: NOT_REACHED
+  strongest_composite_rival: ABSTRACT_NECESSARY_ORDER_PLUS_EXTERNALLY_ACTUAL_IMPERSONAL_POWERS_REALIZER_PLUS_EXACT_NORM_FIELD_PLUS_FORMAL_COUPLING_PLUS_FINITE_ARTICULABILITY_PLUS_TOKEN_RESPONSIVE_CONTROL_PLUS_TARGET_INDEXED_PROFILE_WARRANT_ALIGNMENT
+next_central_burdens:
+- independent_authority_for_the_full_target_contract_key_without_self_authorization_or_source_laundering
+- a_non_product_non_carrier_boxing_derivation_that_explains_profile_warrant_world_coordination
+- independent_intentional_ownership_or_first_person_evidence_not_reducible_to_endpoint_trajectory_or_contract_profile
+- truth_linked_proper_function_and_objective_fittingness_not_fixed_by_installed_target_or_valid_transport
+- world_level_source_and_referent_truth_with_explicit_Track_N_to_Track_T_nonmigration
+- common_bearer_or_derivational_unity_that_excludes_the_live_impersonal_plural_composite_rival
+- articulability_to_mentality_and_Speech_bridges_beyond_formal_or_source_conditional_compatibility
+repository_authority_note: Live main verified identical to 428187cebf7644ff8bf9522455a560eb82d35964.
+  Deep V-W are post-merge research/proposal artifacts, not adopted repository theory.
+  Deep V supplies a finite diagnostic product; Deep W supplies a standard target-indexed
+  pullback interface. Neither validates targets, sources, worlds, bearers, or an integrated
+  champion.
+integrated_champion: NONE
+meniscus: MENISCUS_NOT_REACHED
+natural_closure: NOT_REACHED

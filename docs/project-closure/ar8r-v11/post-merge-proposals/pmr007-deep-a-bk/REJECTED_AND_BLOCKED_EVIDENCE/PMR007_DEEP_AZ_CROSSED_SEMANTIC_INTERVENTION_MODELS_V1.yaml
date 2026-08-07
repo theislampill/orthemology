@@ -1,0 +1,28 @@
+schema: pmr007-deep-az-crossed-semantic-intervention-models-v1
+identity: PMR-007-CSII-1
+variables:
+  F: form or presentation
+  C: interpreted content under frozen semantic contract
+  Y: response
+controls:
+  diagonal_support_collision:
+    semantic_model: Y equals C
+    form_model: Y equals F
+    observed_support: F equals C
+    consequence: observational equivalence
+  full_factorial:
+    support: all F cross C
+    consequence: deterministic response table identified
+  semantic_anchor_deletion:
+    consequence: C is an uninterpreted experimental label rather than literal content
+  impersonal_semantic_processor:
+    consequence: content mediation without personality or Wisdom
+  version_drift:
+    consequence: same form-content assignment not stable across contracts
+nonclaims:
+  - feasible physical intervention on content independent of form
+  - no confounding
+  - intrinsic semanticity
+  - intentional uptake
+  - personality
+  - proper function

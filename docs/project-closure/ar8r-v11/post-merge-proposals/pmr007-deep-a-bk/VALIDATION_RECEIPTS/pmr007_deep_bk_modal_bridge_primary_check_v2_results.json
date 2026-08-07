@@ -1,0 +1,13 @@
+{
+  "identity": "PMR-007-NCBD-1",
+  "checker": "PRIMARY_V2_CONSTANT_DOMAIN_REGRESSION",
+  "semantic_scope": "constant global bearer domain is a regression special case, not authority for local occurrence B_ID",
+  "assignments": 65536,
+  "actual_models": 15360,
+  "actual_nonpersistence_countermodels": 13328,
+  "unique_each_models": 3136,
+  "unique_each_distinct_bearer_countermodels": 1568,
+  "guarded_models": 392,
+  "guarded_failures": 0,
+  "result": "PASS"
+}

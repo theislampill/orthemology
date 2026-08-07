@@ -1,0 +1,35 @@
+{
+  "controls": {
+    "cycle": {
+      "roots": [],
+      "upstream_directed": true
+    },
+    "downstream_merger": {
+      "roots": [
+        "r0",
+        "r1"
+      ],
+      "upstream_directed": false
+    },
+    "plural_roots": {
+      "roots": [
+        "r0",
+        "r1"
+      ],
+      "upstream_directed": false
+    },
+    "positive": {
+      "roots": [
+        "r"
+      ],
+      "upstream_directed": true
+    }
+  },
+  "failures": [],
+  "result": "PASS",
+  "schema": "PMR007_DEEP_J_PRIMARY_RESULTS_V1",
+  "theorem_failures": 0,
+  "topologically_ordered_dags_checked": 33867,
+  "unique_universal_root_dags": 10106,
+  "upstream_directed_dags": 10106
+}

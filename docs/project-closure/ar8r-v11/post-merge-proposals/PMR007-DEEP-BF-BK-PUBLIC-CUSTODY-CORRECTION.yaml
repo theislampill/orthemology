@@ -1,0 +1,68 @@
+schema: ar8r-pmr007-deep-bf-bk-public-custody-correction-v1
+preserved_snapshot: post-merge-proposals/pmr007-deep-a-bk
+snapshot_bytes_modified: false
+historical_private_sidecars_committed: false
+public_reproduction_status: PARTIAL_REPRODUCTION_ONLY
+repository_sources:
+  - round: DEEP_BG
+    path: docs/project-closure/ar8r-v11/programs/AR8R-TRANSCENDENTAL-BRIDGE-AND-RIVAL-LEDGER-V11.yaml
+    sha256: 747b886b41fc2fe152e2b4b78d4445a82a0b4f15a681b8c98e970685a63cb27d
+  - round: DEEP_BG
+    path: docs/project-closure/ar8r-v11/programs/ar8r-r5-minimal-nonintegration-control.md
+    sha256: 6ab18cc79fc80408943d2d19998bf49a775bf4b1789663877f9c2872b9a94d6b
+  - round: DEEP_BG
+    path: docs/project-closure/ar8r-v11/programs/AR8R-PROPER-FUNCTION-TYPED-MATRIX-V11.yaml
+    sha256: 71f07a2a117a1688109ae027b2e720fe18628eb418e6b6ddb14cacd3cea72558
+  - round: DEEP_BG
+    path: docs/project-closure/ar8r-v11/programs/proper-function-and-candidate-e.md
+    sha256: e4ae2e2751535e625f245a1bb2f2e4f2f4c447a55c859e1b1c94dbbf48adf359
+  - round: DEEP_BG
+    path: docs/project-closure/ar8r-v11/programs/candidate-g-derivational-unification.md
+    sha256: adc4d5c6c20ca00723df3638fdbbd5dcb92eac62ea5d7c09e57398fc86ac9c37
+  - round: DEEP_BG
+    path: docs/project-closure/ar8r-v11/programs/uncreated-grammar-and-articulability.md
+    sha256: f2155ab2813b59095b8513f891802a38b3691b0ee6a78ffdfd438267c7fff058
+  - round: DEEP_BG
+    path: docs/project-closure/ar8r-v11/programs/track-t-authority-and-bridge-status.md
+    sha256: a0eab8374712fc402fcc1bce7b5ad4fcc0a1f8d137b250477494d285659b0a6e
+  - round: DEEP_BH
+    path: docs/project-closure/ar8r-v11/programs/AR8R-PROPER-FUNCTION-TYPED-MATRIX-V11.yaml
+    sha256: 71f07a2a117a1688109ae027b2e720fe18628eb418e6b6ddb14cacd3cea72558
+  - round: DEEP_BH
+    path: docs/project-closure/ar8r-v11/programs/proper-function-and-candidate-e.md
+    sha256: e4ae2e2751535e625f245a1bb2f2e4f2f4c447a55c859e1b1c94dbbf48adf359
+  - round: DEEP_BI
+    path: docs/project-closure/ar8r-v11/programs/uncreated-grammar-and-articulability.md
+    sha256: f2155ab2813b59095b8513f891802a38b3691b0ee6a78ffdfd438267c7fff058
+  - round: DEEP_BI
+    path: docs/project-closure/ar8r-v11/programs/language-translation-and-version-custody.md
+    sha256: 5b8322a86c817987855e5faa0c374c96994bb9c445547c81482f05adfea3d66f
+  - round: DEEP_BI
+    path: docs/project-closure/ar8r-v11/programs/AR8R_TRANSCENDENTAL_ORTHABILITY_AND_SOURCE_ASCENT_V2.yaml
+    sha256: 134dba46444b48ee5b97394cbe75d22983b4f628d9d2843194cef3f489958a8b
+private_exclusions:
+  - round: DEEP_BF
+    role: source PDF
+    historical_sha256: 8151e9a43bedd714290f3bd3d51916c8854d3985d4fd3d588ccec783eb85195b
+    public_path: null
+    disposition: PRIVATE_SOURCE_BYTES_EXCLUDED
+  - round: DEEP_BF
+    role: source PDF
+    historical_sha256: 5c382caf391de7904cd1af16723481b6090ed261281c4bd7c5cb96b1becaed9a
+    public_path: null
+    disposition: PRIVATE_SOURCE_BYTES_EXCLUDED
+  - round: DEEP_BH
+    role: owner-supplied al-Ujayri Markdown rendering
+    historical_sha256: 4aea9b66f178e3454015cd0082c3adb0dda5ae80593f7e37d26b73a96028a2d1
+    public_path: null
+    disposition: PRIVATE_SOURCE_RENDERING_EXCLUDED
+  - round: DEEP_BH
+    role: owner-supplied El-Tobgui dissertation rendering
+    historical_sha256: 657454ff7a1c43b895e7a378d12993295368a97c3f35df5a76edfaa32f67a177
+    public_path: null
+    disposition: PRIVATE_SOURCE_RENDERING_EXCLUDED
+limitations:
+  - Historical BG-BI frozen manifests cannot be reproduced byte-for-byte from public bytes because the original source sidecars were correctly excluded for private absolute paths.
+  - Deep BF source-dependent rereview cannot run from public bytes because its two PDF inputs remain private.
+  - Deep BJ's repaired V2 result is preserved, but the packet contains no V2 primary-result generator.
+  - Public custody validation is not mathematical, source-truth, novelty, adoption, meniscus, or closure validation.

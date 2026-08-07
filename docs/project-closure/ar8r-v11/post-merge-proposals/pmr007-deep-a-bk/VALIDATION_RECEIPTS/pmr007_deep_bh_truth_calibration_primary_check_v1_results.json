@@ -1,0 +1,22 @@
+{
+  "checker": "PRIMARY_V1",
+  "countermodel_regressions": {
+    "accidental_truth_success": true,
+    "anti_truth_exact": true,
+    "design_without_legitimate_truth_aim": true,
+    "fitrah_source_relative_only": true,
+    "selected_effect_false_end": true,
+    "tree_calibrated_bad_cycle": true,
+    "zero_holonomy_truth_unrelated": true
+  },
+  "equivalence_failures": 0,
+  "exact_constructed_cases": 30000,
+  "exact_constructed_failures": 0,
+  "identity": "PMR-007-TCRPF-1",
+  "perturbed_detection_failures": 0,
+  "perturbed_off_tree_cases": 16419,
+  "proper_function_expansions": 1024,
+  "proper_function_variation_failures": 0,
+  "random_equivalence_cases": 50000,
+  "result": "PASS"
+}

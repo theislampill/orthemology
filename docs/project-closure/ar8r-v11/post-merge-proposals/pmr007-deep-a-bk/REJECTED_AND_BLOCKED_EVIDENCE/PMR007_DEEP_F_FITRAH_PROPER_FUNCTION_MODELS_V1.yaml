@@ -1,0 +1,118 @@
+schema: PMR007_DEEP_F_FITRAH_PROPER_FUNCTION_MODELS_V1
+identity: PMR-007-FPF-1
+status: FROZEN_CANDIDATE_PENDING_CHECK_AND_AUDIT
+formal_scope:
+  worlds: finite
+  neutral_profile:
+    - output_accuracy
+    - stable_reliability
+    - corrigibility
+    - internal_coherence
+  source_relative_hidden_coordinates:
+    - authentic_source
+    - source_is_personal_designer
+    - truth_directed_end
+    - healthy_fitrah
+    - proper_faculty_operation
+    - suitable_environment
+    - undefeated_source_warrant
+  n_track_proper_function_success: conjunction_of_all_source_relative_hidden_coordinates_and_output_accuracy
+source_relative_bridge:
+  id: NPF-BRIDGE
+  authority: SCHOOL_INTERNAL_CONDITIONAL_FORMALIZATION
+  antecedent:
+    - authentic_source
+    - source_is_personal_designer
+    - truth_directed_end
+    - healthy_fitrah
+    - proper_faculty_operation
+    - suitable_environment
+    - undefeated_source_warrant
+    - output_accuracy
+  consequent: N_TRACK_PROPER_FUNCTION_SUCCESS
+  neutral_transfer: false
+horns:
+  retained_meta_standard:
+    fixes: procedural_revision_authorization
+    does_not_fix: [truth_link, objective_fittingness, teleology]
+  trans_state_truth_standard:
+    fixes: independently_specified_truth_target
+    does_not_fix: [etiology, proper_operation, warrant, teleology]
+  holistic_fixed_point:
+    fixes: global_coherence_or_equilibrium
+    does_not_fix: [truth_correspondence, praiseworthy_end]
+  primitive_normative_fact:
+    fixes: norm_if_stipulated
+    does_not_fix: [explanation, teleology, designer, wisdom]
+  error_or_relativization:
+    fixes: contract_or_practice_relative_success
+    does_not_fix: objective_correction
+  fitrah_source_relative:
+    fixes_conditionally: [truth_directed_function, source_relative_proper_operation]
+    requires_source_truth: true
+    neutral_profile_identification: false
+countermodels:
+  - id: FPF-CM1
+    name: selected_effect_truth_tracker
+    neutral_profile: [1,1,1,1]
+    personal_designer: false
+    source_relative_npf: false
+    blocks: proper_function_implies_personal_designer
+  - id: FPF-CM2
+    name: designed_deception
+    neutral_profile: [0,1,1,1]
+    personal_designer: true
+    truth_directed_end: false
+    source_relative_npf: false
+    blocks: design_implies_truth_directed_proper_function
+  - id: FPF-CM3
+    name: lucky_malfunction
+    neutral_profile: [1,0,1,1]
+    proper_faculty_operation: false
+    source_relative_npf: false
+    blocks: correct_output_implies_proper_operation
+  - id: FPF-CM4
+    name: hostile_environment
+    neutral_profile: [0,0,1,1]
+    suitable_environment: false
+    source_relative_npf: false
+    blocks: design_and_proper_operation_imply_success_in_any_environment
+  - id: FPF-CM5
+    name: undefeatedness_deleted
+    neutral_profile: [1,1,1,1]
+    undefeated_source_warrant: false
+    source_relative_npf: false
+    blocks: proper_function_success_implies_undefeated_warrant
+  - id: FPF-CM6
+    name: neutral_profile_twins
+    shared_neutral_profile: [1,1,1,1]
+    world_source_relative_positive: true
+    world_selected_effect_impersonal: false
+    blocks: neutral_profile_identifies_source_relative_proper_function
+  - id: FPF-CM7
+    name: coherent_false_fixed_point
+    neutral_profile: [0,1,1,1]
+    holistic_coherence: true
+    truth_link: false
+    blocks: coherence_implies_truth_link
+source_custody:
+  SRC_ET:
+    sha256: 657454ff7a1c43b895e7a378d12993295368a97c3f35df5a76edfaa32f67a177
+    authority: SECONDARY_SCHOLARLY_RECONSTRUCTION
+    locators:
+      - lines_4400_4455_original_normative_disposition
+      - lines_4456_4523_truth_recognition_and_deformation
+    arabic_primary_verified: false
+  SRC_UJ:
+    sha256: 4aea9b66f178e3454015cd0082c3adb0dda5ae80593f7e37d26b73a96028a2d1
+    authority: CONTEMPORARY_ATHARI_SYNTHESIS
+    locators:
+      - lines_50_76_innate_recognition_and_corruption
+      - lines_2025_forward_treatment_and_prerequisites_of_knowledge
+    arabic_primary_verified: false
+terminal_candidates:
+  source_relative_fitrah_proper_function: CONDITIONAL_IF_SOURCE_PACKAGE_TRUE
+  neutral_proper_function_ground: UNESTABLISHED
+  personal_designer_from_neutral_profile: NOT_ENTAILED
+  wisdom_from_proper_function: NOT_ENTAILED
+  neutral_realizer_parity: LIVE

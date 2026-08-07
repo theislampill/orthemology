@@ -1,0 +1,74 @@
+schema: PMR007_DEEP_AJ_CENTERED_OWNERSHIP_MODELS_V1
+identity: PMR-007-CIOB-1
+version: V1
+neutral_signature:
+- intellectual_host
+- registered_uptake
+- controller
+- episode_relation
+- neutral_adjacency
+target: SELF_e
+candidate_claims:
+- same_orbit_blocks_unique_invariant_center
+- unique_fixed_uptaking_controller_suffices_for_personal_agent
+models:
+- id: AJ-CM1-SYMMETRIC-TWO-HOST
+  hosts:
+  - h0
+  - h1
+  neutral_roles:
+    h0:
+    - intellect
+    - uptake
+    - control
+    h1:
+    - intellect
+    - uptake
+    - control
+  automorphism: swap_h0_h1
+  self_expansions:
+  - - h0
+  - - h1
+- id: AJ-CM2-UNIQUE-CONTROLLER
+  hosts:
+  - h0
+  - h1
+  neutral_roles:
+    h0:
+    - intellect
+    - uptake
+    - control
+    h1:
+    - intellect
+  self: []
+  personal: false
+- id: AJ-CM3-REFLEXIVE-IMPERSONAL
+  hosts:
+  - h0
+  neutral_roles:
+    h0:
+    - intellect
+    - uptake
+    - control
+    - self_model_token
+  self: []
+  personal: false
+- id: AJ-CM4-DISTRIBUTED-EPISODE
+  hosts:
+  - h0
+  - h1
+  - h2
+  neutral_roles:
+    h0:
+    - uptake
+    h1:
+    - selection
+    h2:
+    - execution
+  self: []
+  personal: false
+nonclaims:
+- no_consciousness
+- no_Wisdom
+- no_Speech
+- no_source_or_world_truth

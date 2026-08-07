@@ -1,0 +1,53 @@
+schema: PMR007_DEEP_AD_REASON_SEMANTIC_MEDIATION_MODELS_V2
+identity: PMR-007-RSMF-1
+status: REPAIRED_POST_MERGE_RESEARCH_CANDIDATE
+finite_setting:
+  contexts: C
+  registered_reason_variables: R
+  declared_nuisance_proxies: P
+  actions: A
+  admissibility_relation: H_R_C_nonempty
+  policy: pi_C_R_P_to_A
+formal_predicates:
+  P_INV: policy_constant_on_projection_fibres_C_R
+  R_CONFORM: selected_action_in_H_R_C
+  R_CONTRAST: disjoint_singleton_H_contrast_forces_action_change
+  R_MED_SYS: registered_reason_variable_mediation
+application_guards:
+  - SEM_VALID
+  - TRUTH_LINK
+  - TARGET_AUTHORITY
+  - WORLD_ADEQUACY
+  - R_INTERVENTION_VALID
+  - P_NUISANCE
+  - HIST_COMPLETE
+  - POLICY_FIXED
+  - REGISTRY_COMPLETE
+subject_predicates:
+  - SUBJECT
+  - CONTENT_ACCESS
+  - SEMANTIC_UPTAKE
+  - RECOGNIZES_AS_REASON
+  - MOTIVATING_CAUSAL_ROLE
+  - FIRST_PERSON_OWNERSHIP
+  - COMMON_BEARER
+  - DEFEATER_CLOSURE
+  - STABLE_COUNTERFACTUAL_INTEGRATION
+countermodels:
+  - AD-CM1-PROXY-SHORTCUT
+  - AD-CM2-MISIDENTIFIED-R
+  - AD-CM3-EVIDENCE-BEARING-P
+  - AD-CM4-IMPERSONAL-SEMANTIC-TRANSDUCER
+  - AD-CM5-ACCIDENTAL-PERSONAL-CONFORMITY
+  - AD-CM6-DISTRIBUTED-REASON-PIPELINE
+  - AD-CM7-HIDDEN-CONFOUNDER-OR-MODEL-CHANGE
+  - AD-CM8-HISTORY-COLLISION
+  - AD-CM9-PARTIAL-REGISTRY
+  - AD-CM10-IMPLEMENTATION-NONTRANSFER
+  - AD-CM11-TRACK-N-SOURCE-EXPANSION
+ancestry:
+  T366_fibre_family: DIRECT_APPLICATION
+  Deep_Y_AA_AB: COMPOSITIONAL_CENTRAL_BRIDGE_SYNTHESIS
+novelty:
+  general_mathematical: 0
+  historical_identity: NONE

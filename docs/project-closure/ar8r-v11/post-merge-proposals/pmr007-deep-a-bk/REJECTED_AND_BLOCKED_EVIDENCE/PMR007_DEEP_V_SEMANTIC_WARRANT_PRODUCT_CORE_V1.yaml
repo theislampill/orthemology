@@ -1,0 +1,285 @@
+schema: PMR007_DEEP_V_SEMANTIC_WARRANT_PRODUCT_CORE_V1
+identity: PMR-007-SWPC-1
+title: Semantic/profile certification and warrant-chain product diagnostic
+provenance: NEW_POST_MERGE_SCOPED_FORMAL_RESULT_CANDIDATE
+historical_identity: NONE
+repository_authority: 428187cebf7644ff8bf9522455a560eb82d35964
+source_owners:
+- path: docs/project-closure/ar8r-v11/fable-research/AR8R-FABLE-R1-TYPED-CORE-CANDIDATES.md
+  sha256: 19f1ee22e51db677f2b79e3a1db10923db35189a1cb7bc86bb710164dbd15f4a
+  authority: MERGED_PROPOSAL_AND_BURDEN_OWNER
+- path: docs/project-closure/ar8r-v11/fable-research/AR8R-FABLE-R1-LEAN-RECEIPTS.yaml
+  sha256: 1d6b1e9beb6ad1ead6efc28c43cd30c5d91cbb54c0e88465e381dfd457773a85
+  authority: LEAN_RECEIPT_FOR_CORE_A_ONLY
+axis_definitions:
+  semantic_certifiable: declared target is constant on each attained profile fibre
+  warrant_complete: every required root is transported and authority/version/invalidator
+    guards pass
+  world_adequate: declared target equals the independently fixed world target on every
+    background
+joint_diagnostic:
+  J2:
+  - semantic_certifiable
+  - warrant_complete
+  J3:
+  - semantic_certifiable
+  - warrant_complete
+  - world_adequate
+episodes:
+- id: E_S0_W0_T0
+  expected_axes:
+    semantic_certifiable: false
+    warrant_complete: false
+    world_adequate: false
+  classification_system:
+    worlds:
+    - w0
+    - w1
+    profile:
+      w0: p0
+      w1: p0
+    declared_target:
+      w0: A
+      w1: B
+    independent_world_target:
+      w0: B
+      w1: B
+  warrant_object:
+    required_roots:
+    - observation
+    - calibration
+    - custody
+    transported_roots:
+    - observation
+    - custody
+    authority_valid: true
+    version_valid: true
+    invalidators_closed: true
+- id: E_S0_W0_T1
+  expected_axes:
+    semantic_certifiable: false
+    warrant_complete: false
+    world_adequate: true
+  classification_system:
+    worlds:
+    - w0
+    - w1
+    profile:
+      w0: p0
+      w1: p0
+    declared_target:
+      w0: A
+      w1: B
+    independent_world_target:
+      w0: A
+      w1: B
+  warrant_object:
+    required_roots:
+    - observation
+    - calibration
+    - custody
+    transported_roots:
+    - observation
+    - custody
+    authority_valid: true
+    version_valid: true
+    invalidators_closed: true
+- id: E_S0_W1_T0
+  expected_axes:
+    semantic_certifiable: false
+    warrant_complete: true
+    world_adequate: false
+  classification_system:
+    worlds:
+    - w0
+    - w1
+    profile:
+      w0: p0
+      w1: p0
+    declared_target:
+      w0: A
+      w1: B
+    independent_world_target:
+      w0: B
+      w1: B
+  warrant_object:
+    required_roots:
+    - observation
+    - calibration
+    - custody
+    transported_roots:
+    - observation
+    - calibration
+    - custody
+    authority_valid: true
+    version_valid: true
+    invalidators_closed: true
+- id: E_S0_W1_T1
+  expected_axes:
+    semantic_certifiable: false
+    warrant_complete: true
+    world_adequate: true
+  classification_system:
+    worlds:
+    - w0
+    - w1
+    profile:
+      w0: p0
+      w1: p0
+    declared_target:
+      w0: A
+      w1: B
+    independent_world_target:
+      w0: A
+      w1: B
+  warrant_object:
+    required_roots:
+    - observation
+    - calibration
+    - custody
+    transported_roots:
+    - observation
+    - calibration
+    - custody
+    authority_valid: true
+    version_valid: true
+    invalidators_closed: true
+- id: E_S1_W0_T0
+  expected_axes:
+    semantic_certifiable: true
+    warrant_complete: false
+    world_adequate: false
+  classification_system:
+    worlds:
+    - w0
+    - w1
+    profile:
+      w0: p0
+      w1: p0
+    declared_target:
+      w0: A
+      w1: A
+    independent_world_target:
+      w0: B
+      w1: A
+  warrant_object:
+    required_roots:
+    - observation
+    - calibration
+    - custody
+    transported_roots:
+    - observation
+    - custody
+    authority_valid: true
+    version_valid: true
+    invalidators_closed: true
+- id: E_S1_W0_T1
+  expected_axes:
+    semantic_certifiable: true
+    warrant_complete: false
+    world_adequate: true
+  classification_system:
+    worlds:
+    - w0
+    - w1
+    profile:
+      w0: p0
+      w1: p0
+    declared_target:
+      w0: A
+      w1: A
+    independent_world_target:
+      w0: A
+      w1: A
+  warrant_object:
+    required_roots:
+    - observation
+    - calibration
+    - custody
+    transported_roots:
+    - observation
+    - custody
+    authority_valid: true
+    version_valid: true
+    invalidators_closed: true
+- id: E_S1_W1_T0
+  expected_axes:
+    semantic_certifiable: true
+    warrant_complete: true
+    world_adequate: false
+  classification_system:
+    worlds:
+    - w0
+    - w1
+    profile:
+      w0: p0
+      w1: p0
+    declared_target:
+      w0: A
+      w1: A
+    independent_world_target:
+      w0: B
+      w1: A
+  warrant_object:
+    required_roots:
+    - observation
+    - calibration
+    - custody
+    transported_roots:
+    - observation
+    - calibration
+    - custody
+    authority_valid: true
+    version_valid: true
+    invalidators_closed: true
+- id: E_S1_W1_T1
+  expected_axes:
+    semantic_certifiable: true
+    warrant_complete: true
+    world_adequate: true
+  classification_system:
+    worlds:
+    - w0
+    - w1
+    profile:
+      w0: p0
+      w1: p0
+    declared_target:
+      w0: A
+      w1: A
+    independent_world_target:
+      w0: A
+      w1: A
+  warrant_object:
+    required_roots:
+    - observation
+    - calibration
+    - custody
+    transported_roots:
+    - observation
+    - calibration
+    - custody
+    authority_valid: true
+    version_valid: true
+    invalidators_closed: true
+product_order:
+  definition: coordinatewise false <= true
+  mixed_states:
+  - SEMANTIC_ONLY
+  - WARRANT_ONLY
+  mixed_relation: INCOMPARABLE
+release_predicate: semantic_certifiable AND warrant_complete
+scope:
+  finite: true
+  paired_evaluation_episode: true
+  full_core_b_calculus_verified: false
+  core_a_false_closure_solved: false
+  world_truth_entailed: false
+  causal_or_metaphysical_unification: false
+authority_ceiling:
+  general_mathematical_novelty: ZERO
+  repository_status: PROPOSAL_ONLY
+  external_review: OPEN
+  owner_adoption: PENDING
+  integrated_champion: NONE
+  meniscus: MENISCUS_NOT_REACHED

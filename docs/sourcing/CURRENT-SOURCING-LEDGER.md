@@ -18,6 +18,7 @@ establishes classification and internal agreement, never source truth.
 | Qurʾānic loci | [`references/quran-loci.yaml`](../../references/quran-loci.yaml) | 29 loci, primary-verified (R3), own CI validator |
 | Academic corpus (manuscript related work etc.) | [`R3-SOURCING-LEDGER.md`](R3-SOURCING-LEDGER.md) | R3 regrading overlay over the R2 baseline; where R3 names a row, R3's status is current |
 | Fable round-1 prior-art correspondences | [`AR8R-FABLE-R1-SOURCING.md`](../project-closure/ar8r-v11/fable-research/AR8R-FABLE-R1-SOURCING.md) | all rows UNVERIFIED; added by the post-review correction; relationships, never source truth |
+| PMR-007 Deep BF–BK proposal sourcing | [`PMR007-DEEP-BF-BK-SOURCING-CORRECTION.md`](../project-closure/ar8r-v11/post-merge-proposals/PMR007-DEEP-BF-BK-SOURCING-CORRECTION.md) | proposal-only source classification; al-ʿUjayrī row remains UNVERIFIED; no theorem, source-world, novelty, adoption, or meniscus credit |
 | Companion philosophical + classical layer | [`companion/sourcing/R3-COMPANION-SOURCING-LEDGER.md`](../../companion/sourcing/R3-COMPANION-SOURCING-LEDGER.md) | same overlay rule; inference-boundary labels retained there |
 
 **Historical baselines (statuses superseded where regraded):**

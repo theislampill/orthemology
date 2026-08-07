@@ -1,0 +1,35 @@
+schema: pmr007-post-bf-whole-frontier-selection-gate-v1
+repository_authority: 4c3dc103e8c753690fa5de560ab82157392ced4c
+input_boundary: DEEP_BF_ADMITTED_AT_PRO_THREAD_SCOPED_LEVEL
+selection_criteria:
+- strongest_impersonal_rival_discrimination
+- necessary_being_ascent_effect
+- proper_function_effect
+- uncreated_grammar_source_world_effect
+- cross_lane_reduction
+- formalizability
+- countermodel_leverage
+- multi_milestone_state_change
+candidates:
+- id: INTEGRATED_R5_COMMON_MODEL
+  milestones: [M10, M11, M12, M13]
+  scores: {rival_discrimination: 5, ascent: 5, proper_function: 4, uncreated_grammar: 4, cross_lane: 5, formalizability: 5, countermodel: 5, multi_milestone: 5}
+  dependency_ready: true
+- id: PROPER_FUNCTION_TRUTH_ORIENTATION
+  milestones: [M10, M11]
+  scores: {rival_discrimination: 4, ascent: 4, proper_function: 5, uncreated_grammar: 2, cross_lane: 4, formalizability: 4, countermodel: 5, multi_milestone: 4}
+  dependency_ready: true
+- id: UNCREATED_GRAMMAR_SOURCE_WORLD
+  milestones: [M11, M12]
+  scores: {rival_discrimination: 4, ascent: 5, proper_function: 2, uncreated_grammar: 5, cross_lane: 4, formalizability: 3, countermodel: 5, multi_milestone: 4}
+  dependency_ready: true
+- id: COMMON_CORE_ABSTRACTION
+  milestones: [M12, M13]
+  scores: {rival_discrimination: 2, ascent: 2, proper_function: 2, uncreated_grammar: 2, cross_lane: 5, formalizability: 5, countermodel: 3, multi_milestone: 3}
+  dependency_ready: true
+selected:
+  id: INTEGRATED_R5_COMMON_MODEL
+  reason: Directly tests the current integrated architecture against the strongest one-bearer impersonal rival while consuming the bridge ledger, proper-function boundaries, articulability nonbridges, source-world firewall, and Candidate-G carrier-boxing control.
+anti_drift:
+  auxiliary_round_selected: false
+  central_bridge_or_rival_changed_required: true

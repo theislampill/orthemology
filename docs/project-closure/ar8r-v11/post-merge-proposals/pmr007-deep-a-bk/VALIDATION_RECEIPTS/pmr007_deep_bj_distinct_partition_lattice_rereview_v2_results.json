@@ -1,0 +1,43 @@
+{
+  "identity": "PMR-007-TQDC-1",
+  "checker": "DISTINCT_PARTITION_LATTICE_V2",
+  "frozen_hash_rows": 5,
+  "frozen_hash_mismatches": 0,
+  "partition_pairs": 2959,
+  "descent_refinement_failures": 0,
+  "joint_partition_pairs": 2959,
+  "meet_failures": 0,
+  "subdirect_failures": 0,
+  "full_product_failures": 0,
+  "coarsening_triples": 19583,
+  "coarsening_failures": 0,
+  "anti_unification": {
+    "full_support_convex_geometry": {
+      "same_support": true,
+      "rank1": true,
+      "rank2": true,
+      "pass": true
+    },
+    "cycle_holonomy": {
+      "same_vertex_partition": true,
+      "exact_sum": 0,
+      "obstructed_sum": 3,
+      "pass": true
+    },
+    "algebra_congruence": {
+      "witness": [
+        0,
+        1,
+        0,
+        1
+      ],
+      "pass": true
+    },
+    "joint_probability": {
+      "marginals_equal": true,
+      "joint_different": true,
+      "pass": true
+    }
+  },
+  "result": "PASS"
+}

@@ -1,0 +1,81 @@
+schema: PMR007_ROUND20_ADMISSION_OVERLAY_V1
+round: PMR-007-FRONTIER-ROUND20
+canonical_identity: PMR-007-PRRC-1
+canonical_packet: PMR-007_FRONTIER_ROUND20_PROVENANCE_RESILIENT_RESTORATIVE_CUTSETS_V2.md
+status: ADMITTED_POST_MERGE_SCOPED_RESULT
+provenance: NEW_POST_MERGE_RESEARCH
+historical_identity: null
+statement:
+  setting: finite_static_fixed_path_authenticated_conjunctive_root_support
+  invariant: minimum_pathwise_hypergraph_transversal_number
+  result: static_support_robust_through_f_iff_kappa_gt_f
+  scope:
+    - finite
+    - path_registry_complete_for_declared_model
+    - corruption_static_and_chosen_once
+    - corruption_of_any_required_root_disables_action
+    - pathwise_support_not_joint_execution
+    - root_identity_authenticated_by_assumption
+repair_lineage:
+  V1:
+    status: PRESERVED_REPAIR_REQUIRED
+    blocking_findings: [R20-F01, R20-F02, R20-F03, R20-F04]
+  V2:
+    status: ADMITTED_POST_MERGE_SCOPED_RESULT
+    repairs: COMPLETE
+proof_status: PROVED_BY_HYPERGRAPH_TRANSVERSAL_EQUIVALENCE
+primary_executable_check:
+  status: PASS
+  exhaustive_single_path_hypergraphs: 32906
+  exhaustive_criterion_cases: 164380
+  random_multi_path_systems: 40000
+  random_multi_path_criterion_cases: 200207
+  monotonicity_cases_each: 35549
+cold_audit: REPAIR_REQUIRED_THEN_REPAIRED
+fresh_rereview:
+  status: PASS_WITH_NONBLOCKING_SCOPE_AND_ANCESTRY_NOTES
+  frozen_hash_failures: 0
+  single_path_families: 32906
+  two_path_three_root_systems: 16384
+  random_multi_path_systems: 50000
+  root_contraction_cases: 1662078
+  failures: 0
+preserved_countermodels:
+  - R20-CM1-COPIED-ROOT-FALSE-MULTIPLICITY
+  - R20-CM2-COMMON-BOTTLENECK
+  - R20-CM3-INCOMPATIBLE-REPAIRS
+  - R20-CM4-DYNAMIC-REROUTING
+  - R20-CM5-ADAPTIVE-AFTER-COMMITMENT
+  - R20-CM6-UNAUTHENTICATED-ROOT-ALIAS
+  - R20-CM7-PARTIAL-PATH-REGISTRY
+  - R20-CM8-POSITIVE-INDEPENDENT-ROOTS
+family_relation:
+  AR8R_T351_T352: STRICT_SPECIALIZATION_AND_COMPOSITIONAL_COROLLARY
+  AR8R_T353: SELF_SEALING_NONRESTORATION_CONTROL_PRESERVED
+  daee: MODEL_RELATIVE_IMPLEMENTATION_CERTIFICATE
+  Round_19: AUTHENTICATED_ROOT_ACCESS_INTERFACE_ONLY
+  general_hypergraph_theory: STANDARD_TRANSVERSAL_CHARACTERIZATION
+prior_art:
+  exact_mechanism: STANDARD
+  external_review: OPEN
+general_mathematical_novelty: ZERO
+external_review: OPEN
+owner_adoption: PENDING
+repository_proposal_status: EXTERNAL_REVIEW_AND_OWNER_ADOPTION_REQUIRED
+candidate_effects:
+  A: copied_or_aliased_root_multiplicity_no_longer_counts_as_resilience
+  B: restorative_cutset_support_margin_is_exact_but_execution_and_causality_remain_guarded
+  C: multiple_argument_routes_do_not_supply_independent_grounding_support_without_root_independence
+central_meniscus_effect: SUPPORTING_MACHINERY_ONLY
+nonclaims:
+  - no_adaptive_or_mobile_adversary_theorem
+  - no_dynamic_rerouting_theorem
+  - no_joint_execution_or_compatibility_theorem
+  - no_root_authentication_or_path_completeness_theorem
+  - no_source_truth_or_evidential_independence
+  - no_causal_or_human_restoration
+  - no_general_mathematical_novelty
+integrated_champion: NONE
+meniscus: MENISCUS_NOT_REACHED
+natural_closure: NOT_REACHED
+repository_mutation: false

@@ -1,0 +1,66 @@
+schema: PMR007_DEEP_AA_CAUSAL_GUIDANCE_AND_INTENTIONAL_PURPOSE_MODELS_V2
+identity: PMR-007-CGIP-1
+status: REPAIRED_POST_MERGE_RESEARCH_CANDIDATE
+scm:
+  variables:
+  - W
+  - S
+  - Score
+  - A
+  - O
+  equations:
+    S: f_S(W)
+    Score: f_score(S)
+    A: f_A(Score)
+    O: f_O(W,A)
+  causal_guidance: do_Score_changes_A_inside_the_frozen_SCM
+neutral_guards:
+  KeyAuthority: independently_warranted_target_key_authority
+  SemanticAnchor: independently_validated_truth_separating_semantic_relation
+  WorldAdeq: independently_warranted_world_target_adequacy
+  NormAuthority: independently_warranted_normative_authority_for_the_score_semantics
+expansions:
+  impersonal:
+    IntentionalUptake: false
+    SelectionBecauseFitting: false
+    Personality: false
+    Wisdom: false
+  personal:
+    IntentionalUptake: true
+    SelectionBecauseFitting: true
+    Personality: true
+    Wisdom: candidate_only
+controls:
+- id: AA-CM1-CAUSAL-FALSE-TARGET
+  causal_guidance: true
+  semantic_anchor: false
+- id: AA-CM2-TRUE-ANCHOR-NO-GUIDANCE
+  semantic_anchor: true
+  causal_guidance: false
+- id: AA-CM3-IMPERSONAL-GUIDANCE
+  semantic_anchor: true
+  target_authority: true
+  causal_guidance: true
+  personality: false
+- id: AA-CM4-PERSONAL-TWIN
+  same_neutral_SCM_as_AA_CM3: true
+  personality: true
+- id: AA-CM5-SOURCE-CONDITIONAL-WISDOM
+  track: N
+  source_predication: true
+  neutral_entailment: false
+intended_model_class_guard: contains_personal_and_impersonal_expansions_of_the_same_complete_neutral_SCM
+wisdom_bridge_specification:
+- eligible_knowledge
+- objectively_fitting_end
+- intentional_selection_because_of_fittingness
+- effective_power
+- nondefective_coordination
+- stable_bearer_and_source_conditions
+nonclaims:
+- empirical_causal_certification
+- metaphysical_possibility_or_equal_probability_of_twins
+- Score_is_a_genuine_reason_without_an_authority_and_semantic_bridge
+- intentional_purpose_or_Wisdom_is_proved
+- Track_N_source_predication_migrates_neutrally
+- daee_OSM_human_or_divine_validation

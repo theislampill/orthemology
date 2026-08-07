@@ -1,0 +1,130 @@
+{
+  "boundary_cases": {
+    "cases": 147,
+    "failures": []
+  },
+  "candidate": "PMR-007-PRQT-1",
+  "countermodel_controls": {
+    "alias_control": {
+      "actual_roots": [
+        "r",
+        "r"
+      ],
+      "distinct_symbols": [
+        "a",
+        "b"
+      ],
+      "pass": true,
+      "root_count": 1,
+      "symbol_count": 2
+    },
+    "membership_only": {
+      "binary_transcripts_equal": true,
+      "distinct_label_verdict_t2": true,
+      "pass": true,
+      "same_label_verdict_t2": false
+    },
+    "merge_control": {
+      "actual_roots": [
+        "r1",
+        "r2"
+      ],
+      "pass": true,
+      "root_count": 2,
+      "symbol_count": 1,
+      "symbols": [
+        "a",
+        "a"
+      ]
+    }
+  },
+  "exact_minimax": [
+    {
+      "alphabet_size": 1,
+      "cache_states": 3,
+      "exact_depth": 1,
+      "formula": 1,
+      "m": 1,
+      "n": 1,
+      "pass": true,
+      "t": 1,
+      "worlds": 2
+    },
+    {
+      "alphabet_size": 1,
+      "cache_states": 48,
+      "exact_depth": 4,
+      "formula": 4,
+      "m": 2,
+      "n": 2,
+      "pass": true,
+      "t": 1,
+      "worlds": 7
+    },
+    {
+      "alphabet_size": 2,
+      "cache_states": 111,
+      "exact_depth": 3,
+      "formula": 3,
+      "m": 2,
+      "n": 2,
+      "pass": true,
+      "t": 2,
+      "worlds": 17
+    },
+    {
+      "alphabet_size": 2,
+      "cache_states": 831,
+      "exact_depth": 5,
+      "formula": 5,
+      "m": 2,
+      "n": 3,
+      "pass": true,
+      "t": 2,
+      "worlds": 37
+    },
+    {
+      "alphabet_size": 2,
+      "cache_states": 831,
+      "exact_depth": 5,
+      "formula": 5,
+      "m": 3,
+      "n": 2,
+      "pass": true,
+      "t": 2,
+      "worlds": 37
+    },
+    {
+      "alphabet_size": 2,
+      "cache_states": 17407,
+      "exact_depth": 8,
+      "formula": 8,
+      "m": 3,
+      "n": 3,
+      "pass": true,
+      "t": 2,
+      "worlds": 139
+    },
+    {
+      "alphabet_size": 3,
+      "cache_states": 34966,
+      "exact_depth": 6,
+      "formula": 6,
+      "m": 3,
+      "n": 3,
+      "pass": true,
+      "t": 3,
+      "worlds": 352
+    }
+  ],
+  "online_lifting": {
+    "cases": 211094,
+    "failures": []
+  },
+  "overall_pass": true,
+  "recurrence": {
+    "cases": 9455,
+    "failures": []
+  },
+  "schema": "PMR007_ROUND19_PROVENANCE_ROOT_THRESHOLD_PRIMARY_CHECK_V2"
+}

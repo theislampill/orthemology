@@ -1,0 +1,47 @@
+schema: PMR007_DEEP_AO_REPRESENTATION_SUFFICIENCY_MODELS_V2
+identity: PMR-007-RPDS-1
+version: V2
+objects:
+  raw_evidence_space: Omega
+  union_support: S
+  candidate_distributions: [P_A, P_R]
+  deterministic_representation: T
+  common_stochastic_channel: K
+  pushforwards: [P_T, Q_T]
+  extended_likelihood_ratio: L_on_S
+results:
+  RPDS_1A: total_variation_cannot_increase_under_common_deterministic_or_stochastic_channel
+  RPDS_1B: exact_bayes_factor_preservation_iff_likelihood_ratio_constant_on_support_fibres
+  RPDS_1C: likelihood_ratio_partition_is_coarsest_pairwise_exact_discriminator_on_union_support
+controls:
+- id: AO-POS1-LIKELIHOOD-RATIO-PARTITION
+  union_support: [0,1,2,3]
+  P: [1/2, 1/4, 1/4, 0]
+  Q: [1/4, 1/8, 1/8, 1/2]
+  ratio_classes: [[0,1,2],[3]]
+  exact_preservation: true
+- id: AO-CM1-DESTRUCTIVE-COARSENING
+  P: [3/4, 1/4]
+  Q: [1/4, 3/4]
+  representation: [same, same]
+  raw_total_variation: 1/2
+  represented_total_variation: 0
+- id: AO-CM2-EQUAL-RAW-EXPERIMENT
+  P: [1/3, 1/3, 1/3]
+  Q: [1/3, 1/3, 1/3]
+  discrimination_after_common_channel: false
+- id: AO-CM3-TARGET-LEAKAGE
+  held_out_outcome_used_to_construct_T: true
+  admissible_preregistered_representation: false
+- id: AO-CM4-NEW-EVIDENCE
+  intervention_enlarges_experiment: true
+  classified_as_recoding: false
+- id: AO-CM5-STRUCTURE-NONTRANSFER
+  kernel_or_state_fit: high
+  metaphysical_A_R_likelihood: unspecified
+  metaphysical_discrimination: not_established
+nonclaims:
+- no_canonical_evidence_likelihood_or_representation
+- no_universal_natural_vocabulary
+- no_PRH_OSM_metaphysical_transfer
+- no_personal_ground_or_integrated_champion

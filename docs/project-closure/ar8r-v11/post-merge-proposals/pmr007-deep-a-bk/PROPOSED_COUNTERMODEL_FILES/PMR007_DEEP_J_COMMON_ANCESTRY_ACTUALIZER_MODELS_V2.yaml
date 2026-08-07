@@ -1,0 +1,83 @@
+schema: PMR007_DEEP_J_COMMON_ANCESTRY_ACTUALIZER_MODELS_V2
+status: REPAIRED_POST_MERGE_RESEARCH_CANDIDATE
+edge_semantics:
+  direction: upstream_source_to_downstream_borrower
+  homogeneous_same_respect: required
+  relation_complete: required_for_world_application
+models:
+  - id: J-PW1-UNIQUE-LINEAGE-ROOT
+    vertices: [r, a, b, e]
+    edges: [[r, a], [r, b], [a, e], [b, e]]
+    roots: [r]
+    upstream_directed: true
+    admitted_result: unique_underived_lineage_root
+  - id: J-PW2-GUARDED-SUFFICIENT-ROOT
+    vertices: [r, a, b, e]
+    edges: [[r, a], [r, b], [a, e], [b, e]]
+    roots: [r]
+    upstream_directed: true
+    compositional_sufficiency: true
+    external_input_closure: true
+    effect_coverage: [e]
+    root_concrete: true
+    guarded_result: sufficient_nonborrowed_actualizer_for_declared_effect_domain
+  - id: J-CM1-PLURAL-ROOTS
+    vertices: [r0, r1, e0, e1]
+    edges: [[r0, e0], [r1, e1]]
+    roots: [r0, r1]
+    upstream_directed: false
+  - id: J-CM2-DOWNSTREAM-MERGER
+    vertices: [r0, r1, m, e0, e1]
+    edges: [[r0, m], [r1, m], [m, e0], [m, e1]]
+    roots: [r0, r1]
+    observed_effects: [e0, e1]
+    observed_effects_share_upstream_node: true
+    full_graph_upstream_directed: false
+  - id: J-CM3-CYCLE
+    vertices: [a, b, c]
+    edges: [[a, b], [b, c], [c, a]]
+    roots: []
+    upstream_directed: true
+    violates: acyclicity
+  - id: J-CM5-HIDDEN-DEPENDENCY
+    registered_vertices: [r0, e]
+    registered_edges: [[r0, e]]
+    omitted_vertex: h
+    omitted_edges: [[h, r0]]
+    registered_roots: [r0]
+    full_roots: [h]
+    violates: relation_completeness
+  - id: J-CM6-CONJUNCTIVE-OUTSIDE-CONTRIBUTOR
+    registered_vertices: [r, e]
+    registered_edges: [[r, e]]
+    registered_roots: [r]
+    unregistered_required_contributor: c
+    efficacy_condition_for_e: [r, c]
+    lineage_root_exists: true
+    sufficient_actualizer_root: false
+  - id: J-CM7-DISTRIBUTED-ROOT-NODE
+    vertices: [network, e]
+    edges: [[network, e]]
+    roots: [network]
+    network_members: [n0, n1, n2]
+    one_graph_root: true
+    one_simple_subject: false
+  - id: J-CM8-SEPARATE-ORDER
+    concrete_vertices: [r, e]
+    concrete_edges: [[r, e]]
+    abstract_order_bearers: [o]
+    identity_equalities: []
+  - id: J-CM9-INCOMPLETE-CREATOR-DOMAIN
+    vertices: [r, e]
+    edges: [[r, e]]
+    contingent_particulars: [e, q]
+    effect_coverage: [e]
+    unoriginated: [q]
+  - id: J-CM10-IMPERSONAL-ROOT
+    vertices: [field, e0, e1]
+    edges: [[field, e0], [field, e1]]
+    roots: [field]
+    personal: []
+    agentic: []
+    wise: []
+    speaking: []

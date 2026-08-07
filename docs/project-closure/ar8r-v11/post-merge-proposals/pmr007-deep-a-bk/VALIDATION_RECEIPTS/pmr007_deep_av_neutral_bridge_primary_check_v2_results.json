@@ -1,0 +1,58 @@
+{
+  "bridge_slack_histogram": {
+    "0": 36,
+    "1": 12,
+    "2": 1
+  },
+  "controls": {
+    "inconsistent_source": {
+      "S_A": [
+        0,
+        0
+      ],
+      "entails_false_target": true,
+      "interpolants": [
+        [
+          0,
+          0
+        ]
+      ]
+    },
+    "no_shared_contingent": {
+      "description": "constant shared projection; satisfiable A and target varying with Y",
+      "entails": false
+    },
+    "nonunique_satisfiable": {
+      "S_A": [
+        0,
+        1
+      ],
+      "T_C": [
+        1,
+        1
+      ],
+      "interpolants": [
+        [
+          0,
+          1
+        ],
+        [
+          1,
+          1
+        ]
+      ],
+      "slack": 1
+    },
+    "tautological_target": {
+      "entailed_by_all_A": true
+    }
+  },
+  "count_formula_failures": 0,
+  "criterion_failures": 0,
+  "entailed_pairs": 49,
+  "interval_failures": 0,
+  "overall": "PASS",
+  "schema": "pmr007-deep-av-primary-check-v2-results",
+  "table_pairs": 256,
+  "uniqueness_failures": 0
+}

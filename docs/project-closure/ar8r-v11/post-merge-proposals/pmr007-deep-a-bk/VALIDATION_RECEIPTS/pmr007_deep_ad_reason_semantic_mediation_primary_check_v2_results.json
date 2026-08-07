@@ -1,0 +1,42 @@
+{
+  "schema": "PMR007_DEEP_AD_REASON_SEMANTIC_MEDIATION_PRIMARY_CHECK_V2",
+  "policy_tables_checked": 256,
+  "policy_H_systems_checked": 20736,
+  "P_invariant_policies": 16,
+  "R_conforming_systems": 1296,
+  "registered_mediation_systems": 256,
+  "factorization_failures": 0,
+  "singleton_reason_contrast_failures": 0,
+  "personal_impersonal_neutral_reduct_failures": 0,
+  "controls": {
+    "proxy_shortcut": {
+      "pi_depends_on_P": true,
+      "P_INV": false
+    },
+    "evidence_bearing_proxy": {
+      "P_contains_source_authority": true,
+      "P_NUISANCE": false
+    },
+    "history_collision": {
+      "same_current_C_R_P": true,
+      "different_required_actions": true,
+      "HIST_COMPLETE": false
+    },
+    "hidden_model_change": {
+      "R_label_changes_with_policy_equation": true,
+      "R_INTERVENTION_VALID": false
+    },
+    "impersonal_semantic_transducer": {
+      "R_MED_SYS": true,
+      "subject_predicates": false
+    }
+  },
+  "result": "PASS",
+  "nonclaims": [
+    "semantic application guards",
+    "observational causal identification",
+    "subjective reason uptake",
+    "personality",
+    "Wisdom"
+  ]
+}

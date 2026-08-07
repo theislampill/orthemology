@@ -1,0 +1,59 @@
+schema: pmr007-deep-bd-lsro-models-v2
+identity: PMR-007-LSRO-1
+status: REPAIRED_POST_MERGE_RESEARCH_CANDIDATE
+setting:
+  latent_states: [0, 1]
+  report_symbols: [0, 1]
+  positive_mixture_weights: true
+  declared_guards:
+    - finite binary latent state
+    - finite binary reports
+    - conditional independence only for the displayed product model
+    - exact observation law for identifiability claims
+    - latent label is not definitionally world truth
+coordinates:
+  LATENT: unlabeled component
+  REPORT: emitted symbol
+  ROOT: authenticated acquisition lineage
+  CHANNEL: conditional report behavior
+  SEM: report proposition semantics
+  MAP: latent/source to world interpretation
+  ORIENT: independent non-swap-invariant orientation evidence
+  VER: current applicability
+  WORLD: actual-world adequacy
+  WARRANT: subject-relative warrant
+claims:
+  label_swap_invariance:
+    transform:
+      prior_one: "pi -> 1-pi"
+      source_rows: "Q_i(x|t) -> Q_i(x|1-t)"
+    conclusion: identical observable law
+  orientation_breaker:
+    necessity: any successful selector must use a non-swap-invariant input
+  calibrated_root_orientation:
+    preconditions:
+      - component model identified to exactly one swap orbit
+      - report semantics independently fixed
+      - latent/world map independently fixed
+      - current truth-labeled source calibration
+      - authenticated root and current version
+      - calibration not inferred solely from the unlabeled report law
+    conclusion: exactly one orientation in the swap orbit survives
+countermodels:
+  - BD-CM1 unanimous anti-reliability
+  - BD-CM2 copied-root majority
+  - BD-CM3 common-cause agreement
+  - BD-CM4 stale or domain-shifted anchor
+  - BD-CM5 source/world map swap
+  - BD-CM6 additional mixture nonidentifiability
+  - BD-CM7 displayed-root alias
+  - BD-CM8 prior or coding label
+positive_control:
+  id: BD-POS1
+  name: current truth-labeled calibration
+nonclaims:
+  - no generic latent-class identifiability theorem
+  - no source authentication or conditional-independence proof
+  - no tawatur or fiṭrah reduction
+  - no actual-world or metaphysical conclusion
+  - no repository adoption

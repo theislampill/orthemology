@@ -1,0 +1,34 @@
+schema: PMR007_DEEP_AN_ABDUCTIVE_DISCRIMINATION_MODELS_V1
+identity: PMR-007-ABPD-1
+version: V1
+objects:
+  omega: finite_profile_space
+  A: unified_personal_architecture
+  R: matched_impersonal_or_plural_rival
+  likelihoods: [P_A, P_R]
+  priors: [pi_A, pi_R]
+  code_lengths: [L_A, L_R]
+models:
+- id: AN-CM1-LIKELIHOOD-PARITY
+  P_A: [1/2, 1/2, 0, 0]
+  P_R: [1/2, 1/2, 0, 0]
+  evidence_update: none
+- id: AN-POS1-PREDICTIVE-SURPLUS
+  P_A: [1/2, 1/2, 0, 0]
+  P_R: [1/4, 1/4, 1/4, 1/4]
+  evidence_in_A_support: favors_A_under_iid_model
+- id: AN-CM2-CODE-REVERSAL
+  code_1: {A: '0', R: '10'}
+  code_2: {A: '10', R: '0'}
+  lesson: raw_description_length_ranking_requires_language_warrant
+- id: AN-CM3-SIMPLE-FALSE
+  simpler_model: false_on_held_out_event
+  more_complex_model: correct
+- id: AN-CM4-SOURCE-PRIOR-MIGRATION
+  Track_N_source_preference: true
+  neutral_likelihood_advantage: false
+nonclaims:
+- no_canonical_prior
+- no_canonical_description_language
+- no_world_truth
+- no_personal_architecture_champion

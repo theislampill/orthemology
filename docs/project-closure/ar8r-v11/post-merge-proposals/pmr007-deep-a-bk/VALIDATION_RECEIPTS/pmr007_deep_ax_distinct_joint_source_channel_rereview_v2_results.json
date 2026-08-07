@@ -1,0 +1,20 @@
+{
+  "bayes_failures": 0,
+  "common_channel_cases": 15000,
+  "common_channel_tv_failures": 0,
+  "duplicate_cases": 27,
+  "duplicate_failures": 0,
+  "hash_check": {
+    "checked": 6,
+    "details": [],
+    "mismatches": 0
+  },
+  "marginal_product_mismatches_exercised": 24969,
+  "overall": "PASS",
+  "random_joint_cases": 25000,
+  "schema": "pmr007-deep-ax-distinct-joint-source-channel-rereview-v2-results",
+  "source_parity_cases": 1000,
+  "source_parity_failures": 0,
+  "ternary_independent_cases": 729,
+  "ternary_independent_failures": 0
+}

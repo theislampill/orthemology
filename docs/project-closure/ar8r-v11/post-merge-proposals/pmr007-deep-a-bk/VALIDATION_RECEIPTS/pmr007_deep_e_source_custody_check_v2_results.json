@@ -1,0 +1,126 @@
+{
+  "all_hashes_and_locators_pass": true,
+  "arabic_primary_verified": false,
+  "failures": [],
+  "neutral_migration_authorized": false,
+  "overall": "PASS",
+  "records": [
+    {
+      "hash_ok": true,
+      "locators": [
+        {
+          "locator": {
+            "expected_fragment": "conclusion solely yields the existence of the necessary",
+            "line": 333
+          },
+          "ok": true
+        },
+        {
+          "locator": {
+            "expected_fragment": "does not have within it affirmation of the creator",
+            "line": 333
+          },
+          "ok": true
+        },
+        {
+          "locator": {
+            "expected_fragment": "simply affirming a necessary existence",
+            "line": 338
+          },
+          "ok": true
+        },
+        {
+          "locator": {
+            "expected_fragment": "It is a fallacious argument",
+            "line": 387
+          },
+          "ok": true
+        },
+        {
+          "locator": {
+            "expected_fragment": "the Creator has more right to it",
+            "line": 516
+          },
+          "ok": true
+        },
+        {
+          "locator": {
+            "expected_fragment": "has a better claim to it",
+            "line": 1072
+          },
+          "ok": true
+        },
+        {
+          "locator": {
+            "expected_fragment": "becomes naught but a mental construct",
+            "line": 1103
+          },
+          "ok": true
+        },
+        {
+          "locator": {
+            "expected_fragment": "speaks speech that subsists in Him",
+            "line": 128
+          },
+          "ok": true
+        }
+      ],
+      "source": "SRC-A"
+    },
+    {
+      "hash_ok": true,
+      "locators": [
+        {
+          "locator": {
+            "expected_fragment": "healthy and functioning intuitive capacity",
+            "line": 4417
+          },
+          "ok": true
+        },
+        {
+          "locator": {
+            "expected_fragment": "proper functioning of allour epistemic faculties",
+            "line": 4513
+          },
+          "ok": true
+        }
+      ],
+      "source": "SRC-E"
+    },
+    {
+      "hash_ok": true,
+      "locators": [
+        {
+          "locator": {
+            "expected_fragment": "deeply innate and natural human dispositions",
+            "line": 56
+          },
+          "ok": true
+        },
+        {
+          "locator": {
+            "expected_fragment": "predisposed for this",
+            "line": 72
+          },
+          "ok": true
+        }
+      ],
+      "source": "SRC-U"
+    },
+    {
+      "hash_ok": true,
+      "locators": [
+        {
+          "locator": {
+            "expected_fragment": "N IS TRACK_N_ONLY",
+            "key": "candidate_N_target_substitution_disposition"
+          },
+          "ok": true
+        }
+      ],
+      "source": "SRC-N"
+    }
+  ],
+  "schema": "PMR007_DEEP_E_SOURCE_CUSTODY_CHECK_RESULTS_V2",
+  "source_truth_established": false
+}

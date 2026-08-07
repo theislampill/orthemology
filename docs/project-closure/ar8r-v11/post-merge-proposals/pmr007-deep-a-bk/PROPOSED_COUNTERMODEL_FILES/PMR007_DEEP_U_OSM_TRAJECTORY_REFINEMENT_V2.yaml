@@ -1,0 +1,124 @@
+schema: PMR007_DEEP_U_OSM_TRAJECTORY_REFINEMENT_V2
+identity: PMR-007-TRPD-1
+title: OSM endpoint/trajectory refinement and mechanism nontransfer
+provenance: NEW_POST_MERGE_SCOPED_SOURCE_FORMAL_RESULT
+historical_identity: NONE
+source:
+  title: Learning produces an orthogonalized state machine in the hippocampus
+  doi: 10.1038/s41586-024-08548-w
+  access_copy_sha256: 0d097cba7bbb25a949e2bf95af28b5a2259bd8d60b0e5fac5a74cdf7d05aa814
+  authority: PRIMARY_EMPIRICAL_AND_COMPUTATIONAL_ARTICLE_ACCESS_COPY
+  experiment_reproduced: false
+  official_code_reproduced: false
+  source_relation: BOUNDED_CATEGORICAL_EXTRACTION_NOT_RAW_DATA_REANALYSIS
+animal_reported_signature:
+  off_diagonal_stage: FIRST
+  pre_r2_relative_to_pre_r1: PRE_R2_BEFORE_PRE_R1
+  signature_id: OFFDIAGONAL_THEN_PRE_R2_THEN_PRE_R1
+registered_comparison_instances:
+  CSCG_DEFAULT:
+    model_family: CSCG
+    encoding: VISUAL_THEN_SAME_REWARD_DEFAULT
+    endpoint_osm_like: true
+    trajectory_signature: OFFDIAGONAL_THEN_PRE_R2_THEN_PRE_R1
+    source_status: SOURCE_REPORTED_DEFAULT_COMPARISON
+  CSCG_ALT_VISUAL_THEN_DIFFERENT_REWARD:
+    model_family: CSCG
+    encoding: VISUAL_THEN_DIFFERENT_REWARD
+    endpoint_osm_like: true
+    trajectory_signature: PRE_R1_NOT_LATER_THAN_PRE_R2
+    source_status: SOURCE_REPORTED_ENCODING_CONTROL
+  CSCG_ALT_REWARD_THEN_VISUAL:
+    model_family: CSCG
+    encoding: REWARD_THEN_VISUAL
+    endpoint_osm_like: true
+    trajectory_signature: PRE_R1_BEFORE_PRE_R2
+    source_status: SOURCE_REPORTED_ENCODING_CONTROL
+  HEBBIAN_RNN:
+    model_family: HEBBIAN_RNN
+    encoding: REPORTED_MODEL_ENCODING
+    endpoint_osm_like: true
+    trajectory_signature: PRE_R1_BEFORE_PRE_R2
+    source_status: SOURCE_REPORTED_MODEL_COMPARISON
+  SOFTMAX_RNN:
+    model_family: SOFTMAX_RNN
+    encoding: REPORTED_MODEL_ENCODING
+    endpoint_osm_like: true
+    trajectory_signature: DIFFERENT_FROM_REPORTED_ANIMAL_ORDER
+    source_status: SOURCE_REPORTED_MODEL_COMPARISON
+  LSTM:
+    model_family: LSTM
+    encoding: REPORTED_MODEL_ENCODING
+    endpoint_osm_like: false
+    trajectory_signature: NO_COMPARABLE_OSM_ORDER
+    source_status: SOURCE_REPORTED_MODEL_COMPARISON
+  TRANSFORMER:
+    model_family: TRANSFORMER
+    encoding: REPORTED_MODEL_ENCODING
+    endpoint_osm_like: false
+    trajectory_signature: NO_COMPARABLE_OSM_ORDER
+    source_status: SOURCE_REPORTED_MODEL_COMPARISON
+profiles:
+  P_ENDPOINT:
+    - endpoint_osm_like
+  P_ENDPOINT_FAMILY:
+    - endpoint_osm_like
+    - model_family
+  P_ENDPOINT_TRAJECTORY:
+    - endpoint_osm_like
+    - trajectory_signature
+  P_FULL_REGISTERED:
+    - model_family
+    - encoding
+    - endpoint_osm_like
+    - trajectory_signature
+target_definition:
+  name: reported_trajectory_match
+  rule: trajectory_signature == animal_reported_signature.signature_id
+formal_mechanism_twin_control:
+  shared_observable_profile:
+    endpoint_osm_like: true
+    trajectory_signature: OFFDIAGONAL_THEN_PRE_R2_THEN_PRE_R1
+  expansion_1:
+    mechanism_identity: CSCG_BAUM_WELCH_EM
+    biological_identity: false
+  expansion_2:
+    mechanism_identity: DISTINCT_LATENT_SEQUENCE_REALIZER
+    biological_identity: false
+  purpose: endpoint_and_trajectory_equivalence_does_not_identify_mechanism
+object_type_firewall:
+  - biological_population_activity
+  - individual_neural_response
+  - computational_latent_clone
+  - computational_transition_graph
+  - model_posterior_or_occupancy_probability
+  - representation_geometry
+  - inferred_orthemic_profile
+  - concrete_world_or_task_state
+  - sensory_observation
+candidate_claims:
+  TRPD_1_ENDPOINT_NONSufficiency: Endpoint OSM-like status does not decide the reported trajectory-match relation on the registered class.
+  TRPD_2_TRACE_REFINEMENT: The independently declared endpoint-plus-trajectory-signature profile decides the registered match relation.
+  TRPD_3_FAMILY_NONSufficiency: Model-family identity does not decide the registered trajectory-match relation because CSCG encoding controls differ.
+  TRPD_4_AMONG_TESTED_NARROWING: In the bounded registered extraction, the animal-matching signature narrows the endpoint-matched computational instances to the default CSCG comparison.
+  TRPD_5_MECHANISM_NONTRANSFER: Endpoint and trajectory equivalence do not identify a unique computational or biological mechanism.
+  TRPD_6_SOUNDNESS_NONTRANSFER: Orthogonalized geometry and task trajectory do not establish strict soundness, truth linkage, or proper function.
+scope:
+  finite_registered_instance_class: true
+  among_tested_model_scope_only: true
+  source_report_reproduced: false
+  raw_data_reanalysis: false
+  model_code_reproduction: false
+  neural_transition_matrix_estimated: false
+  universal_algorithmic_uniqueness: false
+  biological_mechanism_identification: false
+  framework_validation: false
+authority_ceiling:
+  mathematical_relation: APPLICATION_OF_PROFILE_REFINEMENT_AND_NONIDENTIFICATION_FAMILY
+  general_mathematical_novelty: ZERO
+  empirical_authority: SOURCE_REPORTED_NOT_REPRODUCED
+  external_review: OPEN
+  owner_adoption: PENDING
+  integrated_champion: NONE
+  meniscus: MENISCUS_NOT_REACHED
+  natural_closure: NOT_REACHED

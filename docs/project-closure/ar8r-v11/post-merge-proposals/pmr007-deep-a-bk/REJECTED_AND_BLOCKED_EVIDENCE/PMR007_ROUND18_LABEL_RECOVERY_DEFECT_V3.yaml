@@ -1,0 +1,22 @@
+schema: PMR007_ROUND18_LABEL_RECOVERY_DEFECT_V3
+status: FROZEN_BLOCKED_FORMAL_DEFECT
+states: [q0, q1, q2, q3]
+objects: [k0, k1, k2, k3]
+admissible:
+  q0: [k1, k2, k3]
+  q1: [k0, k2, k3]
+  q2: [k0, k1, k3]
+  q3: [k0, k1, k2]
+channel:
+  alphabet: binary
+  code:
+    q0: '00'
+    q1: '01'
+    q2: '10'
+    q3: '11'
+  adversarial_hamming_radius: 1
+expected:
+  robust_relation_selection_possible: true
+  exact_four_state_label_recovery_possible_with_length_2: false
+  exact_nonconstant_binary_label_recovery_minimum_length: 3
+  exact_four_label_recovery_minimum_length: 5

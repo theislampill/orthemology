@@ -1,0 +1,40 @@
+schema: PMR007_DEEP_BC_ADMISSION_OVERLAY_V1
+identity: PMR-007-UIEP-1
+round: DEEP_BC
+canonical_version: V2
+status: ADMITTED_POST_MERGE_SCOPED_CENTRAL_ARCHITECTURE_NONIDENTIFIABILITY_RESULT
+historical_identity: NONE
+repository_authority: 4c3dc103e8c753690fa5de560ab82157392ced4c
+proof_status: HUMAN_PROOF_PLUS_PRIMARY_AND_DISTINCT_EXACT_RATIONAL_CHECKS
+primary_check:
+  result: PASS
+  decision_problem_cases: 30000
+  noncommuting_postprocessing_counterexample: true
+fresh_rereview:
+  result: PASS_WITH_NONBLOCKING_DECISION_THEORY_AND_EXPERIMENT_COMPLETENESS_NOTES
+  garbling_experiments: 20000
+  decision_problems: 400000
+cold_audit: REPAIR_REQUIRED_THEN_REPAIRED
+blocking_findings_repaired: 6
+accepted_scope:
+  - garbling weakly lowers value for every common-prior finite expected-reward decision problem
+  - mutual garbling gives equal pre-postprocessing decision value
+  - identical aligned experiments remain equal under common downstream processing
+  - equal canonical controlled transcript experiments yield universal finite downstream parity
+  - discriminator burden relocates to a new experiment, source-world link, prior/coding defense, or model restriction
+rejected_V1_claim:
+  - arbitrary same-named postprocessing preserves mutual Blackwell equivalence
+authority_ceiling:
+  metaphysical_equal_possibility: NOT_ESTABLISHED
+  source_truth: NOT_ESTABLISHED
+  experiment_completeness: NOT_ESTABLISHED
+  non_expected_utility_extension: NOT_ESTABLISHED
+novelty:
+  general_mathematical: 0
+  theorem_family: BLACKWELL_GARBLING_AND_DATA_PROCESSING_APPLICATION
+external_review: OPEN
+owner_adoption: PENDING
+repository_adoption: NONE
+integrated_champion: NONE
+meniscus: MENISCUS_NOT_REACHED
+natural_closure: NOT_REACHED

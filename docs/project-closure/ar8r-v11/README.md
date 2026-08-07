@@ -23,7 +23,7 @@ of scientific closure.
 - `provenance/`: origin, family, core, pair, and Lean custody receipts;
 - `programs/`: active and deferred research lanes not adopted as theorem packets;
 - `post-merge-pmr001-source/` and `post-merge-pmr002-006-source/`: exact public-safe PMR source selections;
-- `post-merge-proposals/`: exact sanitized PMR-007 proposal snapshots through Round 20 and Deep AP, each with a separate fail-closed correction overlay;
+- `post-merge-proposals/`: exact sanitized PMR-007 proposal snapshots through Round 20, Deep AP, and Deep BK, each with a separate fail-closed correction overlay;
 - `AR8R-V11-POST-MERGE-EVIDENCE-CATALOG.yaml`: post-merge source and proposal dispositions;
 - `AR8R-V11-DEFERRED-AND-EXCLUDED.md`: private, superseded, collision-bound, and unsupported material.
 

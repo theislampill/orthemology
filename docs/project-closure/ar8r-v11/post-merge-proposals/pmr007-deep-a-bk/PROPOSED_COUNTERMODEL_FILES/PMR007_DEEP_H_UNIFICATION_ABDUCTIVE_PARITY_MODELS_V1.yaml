@@ -1,0 +1,49 @@
+schema: PMR007_DEEP_H_UNIFICATION_ABDUCTIVE_PARITY_MODELS_V1
+identity: PMR-007-UAP-1
+status: FROZEN_CANDIDATE_PENDING_CHECK_AND_AUDIT
+hypotheses:
+  P_PERSONAL_UNIFIER:
+    realization: one_personal_intellectual_agentic_bearer
+    neutral_profile: DURP_1_SHARED_PROFILE
+    neutral_interventions: DURP_1_SHARED_INTERVENTIONS
+  I_IMPERSONAL_FIELD:
+    realization: impersonal_integrated_control_or_powers_field
+    neutral_profile: DURP_1_SHARED_PROFILE
+    neutral_interventions: DURP_1_SHARED_INTERVENTIONS
+  D_DISTRIBUTED_ARCHITECTURE:
+    realization: distributed_coordinated_primitives
+    neutral_profile: DURP_1_SHARED_PROFILE
+    neutral_interventions: DURP_1_SHARED_INTERVENTIONS
+formal_results:
+  UAP_1A:
+    assumptions:
+      - positive_hypothesis_priors
+      - same_likelihood_for_registered_evidence_across_hypotheses
+      - positive_evidence_probability
+    conclusion: posterior_odds_equal_prior_odds
+  UAP_1B:
+    assumptions:
+      - equal_fit_on_registered_evidence
+      - equal_declared_complexity_cost
+    conclusion: fit_minus_complexity_scores_tie
+  UAP_1C:
+    conclusion: realization_discrimination_requires_likelihood_difference_or_independently_defended_prior_or_cost_asymmetry
+  UAP_1D:
+    conclusion: source_premises_may_break_parity_only_at_their_recorded_authority_class
+countermodels:
+  - {id: UAP-CM1, name: idle_personal_tag, blocks: personal_label_improves_explanation}
+  - {id: UAP-CM2, name: impersonal_same_structure, blocks: derivational_unity_implies_personal_realizer}
+  - {id: UAP-CM3, name: distributed_compilation, blocks: one_functional_profile_implies_one_subject}
+  - {id: UAP-CM4, name: coding_reversal, blocks: raw_description_length_uniquely_favors_one_realizer}
+  - {id: UAP-CM5, name: prior_driven_posterior, blocks: posterior_preference_is_evidence_driven_when_likelihoods_equal}
+positive_routes:
+  - realization_sensitive_intervention
+  - independent_source_evidence
+  - invariant_complexity_or_prior_theory
+  - causal_or_counterfactual_prediction_unique_to_one_realizer
+  - independent_mentality_or_agency_marker
+central_status:
+  candidate_g_real_unification: FUNCTIONAL_STRUCTURE_ESTABLISHED
+  truth_conduciveness_of_personal_realization: UNESTABLISHED
+  neutral_personal_champion: NONE
+  strongest_rivals: [impersonal_integrated_field, distributed_architecture]

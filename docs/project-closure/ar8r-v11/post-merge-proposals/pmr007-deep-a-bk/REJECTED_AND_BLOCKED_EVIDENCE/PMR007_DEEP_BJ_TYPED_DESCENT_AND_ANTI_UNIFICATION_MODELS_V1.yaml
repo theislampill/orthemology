@@ -1,0 +1,35 @@
+schema: pmr007-deep-bj-typed-descent-models-v1
+identity: PMR-007-TQDC-1
+version: V1
+core:
+  state_set: finite_nonempty
+  representation: r:X_to_R
+  target: f:X_to_Y
+  exact_recovery: exists_unique_decoder_on_attained_image
+  criterion: ker_r_subset_ker_f
+family_reductions:
+  BA: complete_trace_target
+  BB: joint_target_common_refinement_and_subdirect_image
+  BI: semantic_map_plus_congruence_guard
+  BG: neutral_reduct_target_nonfactorization
+anti_unification:
+  stochastic_experiment:
+    witness: equal_deterministic_support_different_likelihood_structure
+  latent_orientation:
+    witness: label_swap_preserves_observation_reverses_orientation
+  joint_interaction:
+    witness: equal_proper_marginals_different_full_joint_law
+  latent_complexity:
+    witness: full_support_rank1_and_rank2_probability_matrices
+  norm_holonomy:
+    witness: identical_vertex_partition_with_zero_and_nonzero_cycle_sum
+  algebraic_congruence:
+    witness: set_fibre_equivalence_not_preserved_by_operation
+nonclaims:
+- probability_kernel_or_decision_sufficiency
+- causal_identification
+- source_truth_or_world_reference
+- proper_function
+- bearer_subject_personality_or_Wisdom
+- metaphysical_unification
+- general_mathematical_novelty

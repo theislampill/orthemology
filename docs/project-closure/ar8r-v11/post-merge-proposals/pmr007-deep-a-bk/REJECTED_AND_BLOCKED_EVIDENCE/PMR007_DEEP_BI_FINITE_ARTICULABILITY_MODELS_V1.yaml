@@ -1,0 +1,27 @@
+schema: pmr007-deep-bi-finite-articulability-models-v1
+identity: PMR-007-FTASA-1
+version: V1
+content_algebra: finite_boolean_algebra
+created_token_algebra:
+  redundant_tokens_per_content: 2
+  operations: [and_T, or_T, not_T]
+  semantics: surjective_boolean_homomorphism
+semantic_equivalence:
+  definition: same_semantic_content
+  property: congruence
+  quotient: isomorphic_to_semantic_image
+controls:
+- total_finite_articulability_without_mentality
+- total_finite_articulability_without_Speech
+- same_grammar_different_world_anchor
+- same_content_different_created_expression
+- same_token_type_contextual_occurrence
+- source_authority_independence
+- version_applicability_independence
+nonclaims:
+- absolute_or_infinite_articulability
+- natural_language_completeness
+- world_reference_or_source_truth
+- mentality_personality_agency_Wisdom_or_Speech
+- uncreated_or_divine_content
+- general_mathematical_novelty

@@ -1,0 +1,41 @@
+schema: PMR007_DEEP_BA_ADMISSION_OVERLAY_V1
+identity: PMR-007-IRCQ-1
+round: DEEP_BA
+canonical_version: V2
+status: ADMITTED_POST_MERGE_SCOPED_CENTRAL_OPERATIONAL_QUOTIENT_RESULT
+historical_identity: NONE
+repository_authority: 4c3dc103e8c753690fa5de560ab82157392ced4c
+proof_status: HUMAN_PROOF_PLUS_PRIMARY_AND_DISTINCT_FINITE_EXECUTABLE_CHECKS
+primary_check:
+  result: PASS
+  exhaustive_systems: 46656
+  candidate_representation_cases: 233280
+  preserved_V1_failure_count: 6048
+fresh_rereview:
+  result: PASS_WITH_NONBLOCKING_INTERFACE_AND_AUTHORITY_NOTES
+  exhaustive_systems: 46656
+  random_larger_systems: 40000
+cold_audit: REPAIR_REQUIRED_THEN_REPAIRED
+blocking_findings_repaired: 7
+accepted_scope:
+  - exact all-word trace equivalence by finite partition refinement
+  - unique minimal deterministic interface quotient up to isomorphism
+  - one-way factorization of every deterministic interface-sufficient representation
+  - finite distinguishing-word bound
+  - fixed-system label/action interface monotonicity
+central_effect:
+  H7a2_operational_precursor: CANONICAL_INTERFACE_STATE_ESTABLISHED
+  metaphysical_constitutive_semanticity: NOT_ESTABLISHED
+  personal_realizer: NOT_DISCRIMINATED
+source_status:
+  OSM: SOURCE_REPORTED_NOT_REPRODUCED
+  PRH: EXTERNAL_REPRESENTATION_HYPOTHESIS_NOT_VALIDATED
+novelty:
+  general_mathematical: 0
+  theorem_family: MYHILL_NERODE_MOORE_BISIMULATION_APPLICATION
+external_review: OPEN
+owner_adoption: PENDING
+repository_adoption: NONE
+integrated_champion: NONE
+meniscus: MENISCUS_NOT_REACHED
+natural_closure: NOT_REACHED

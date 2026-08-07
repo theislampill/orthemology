@@ -1,0 +1,39 @@
+schema: PMR007_DEEP_J_ADMISSION_OVERLAY_V1
+identity: PMR-007-UCA-1
+round: PMR-007-DEEP-J
+version: V2
+status: ADMITTED_POST_MERGE_SCOPED_CENTRAL_BRIDGE_RESULT
+historical_identity: NONE
+repository_mutation: false
+accepted_results:
+  - finite_dag_upstream_directed_iff_unique_root_iff_one_root_reaches_every_vertex
+  - unique_lineage_root_is_automorphism_fixed
+  - sufficient_nonborrowed_declared_domain_actualizer_requires_additional_compositional_and_closure_guards
+nonclaims:
+  - complete_world_dependency_graph
+  - one_simple_subject_or_bearer
+  - common_order_actuality_bearer
+  - complete_creatorhood
+  - mentality_personality_agency_wisdom_or_speech
+central_bridge_changes:
+  plural_actualizers_to_lineage_unity: EXACT_SUFFICIENT_STRUCTURE_IDENTIFIED
+  lineage_unity_to_sufficient_actualizer: GUARDED_COROLLARY_ONLY
+  sufficient_actualizer_to_creator: OPEN
+  one_root_to_personal_ground: NOT_ENTAILED
+cold_audit:
+  disposition: REPAIR_REQUIRED
+  blocking_findings: [DJ-F01, DJ-F02, DJ-F03, DJ-F04]
+  repaired: true
+fresh_rereview:
+  disposition: PASS_WITH_NONBLOCKING_WORLD_APPLICATION_NOTES
+  all_digraphs_n_le_4: 4165
+  acyclic_digraphs_n_le_4: 572
+  random_dags_n_5_to_9: 50000
+  failures: 0
+strongest_surviving_rival: ONE_IMPERSONAL_POWERS_FIELD_ROOT_PLUS_SEPARATE_ABSTRACT_ORDER
+theorem_family: STANDARD_FINITE_DAG_AND_DIRECTED_POSET_APPLICATION
+general_mathematical_novelty_credit: 0
+historical_theorem_credit: 0
+external_review: OPEN
+owner_adoption: PENDING
+repository_proposal_status: ELIGIBLE_AFTER_SANITIZATION_AND_OWNER_REVIEW

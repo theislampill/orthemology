@@ -1,0 +1,76 @@
+schema: ar8r-pmr007-deep-bf-bk-execution-receipt-v1
+scope:
+  identities:
+    - PMR-007-ILRC-1
+    - PMR-007-IR5CM-1
+    - PMR-007-TCRPF-1
+    - PMR-007-FTASA-1
+    - PMR-007-TQDC-1
+    - PMR-007-NCBD-1
+  public_snapshot: exact sanitized Deep A-BK proposal
+  execution_source: restored exact private custody companion
+  execution_copy: DISPOSABLE_LOCAL_COPY
+  repository_snapshot_modified_by_execution: false
+verification_class: INDEPENDENTLY_REPRODUCED_FROM_PRIVATE_CUSTODY_COMPANION
+bf_through_bk_checks:
+  scripts_executed: 13
+  primary_scripts: 7
+  distinct_rereview_scripts: 6
+  exit_zero: 13
+  structurally_equal_outputs: 13
+  byte_identical_outputs: 0
+  byte_difference_cause: Windows newline serialization; parsed JSON values were equal
+  explicit_python_mode: -X utf8
+  restore_before_rereview: true
+  result: PASS
+per_identity:
+  - identity: PMR-007-ILRC-1
+    round: DEEP_BF
+    primary: PASS_STRUCTURALLY_EQUAL
+    distinct_rereview: PASS_STRUCTURALLY_EQUAL
+  - identity: PMR-007-IR5CM-1
+    round: DEEP_BG
+    primary: PASS_STRUCTURALLY_EQUAL
+    distinct_rereview: PASS_STRUCTURALLY_EQUAL
+  - identity: PMR-007-TCRPF-1
+    round: DEEP_BH
+    primary: PASS_STRUCTURALLY_EQUAL
+    distinct_rereview: PASS_STRUCTURALLY_EQUAL
+  - identity: PMR-007-FTASA-1
+    round: DEEP_BI
+    primary: PASS_STRUCTURALLY_EQUAL
+    distinct_rereview: PASS_STRUCTURALLY_EQUAL
+  - identity: PMR-007-TQDC-1
+    round: DEEP_BJ
+    primary: PASS_STRUCTURALLY_EQUAL
+    distinct_rereview: PASS_STRUCTURALLY_EQUAL
+  - identity: PMR-007-NCBD-1
+    round: DEEP_BK
+    primary_v1: PASS_STRUCTURALLY_EQUAL
+    primary_v2: PASS_STRUCTURALLY_EQUAL
+    distinct_rereview: PASS_STRUCTURALLY_EQUAL_AFTER_FRESH_RESTORE
+execution_boundary:
+  public_snapshot_self_contained_executable: false
+  public_layout_retains_private_relative_paths: true
+  private_source_bytes_required_by_bf_rereview: true
+  private_companion_committed: false
+  independent_reproduction_from_public_snapshot: NOT_ESTABLISHED
+  independent_reproduction_from_restored_private_companion: ESTABLISHED_FOR_BF_THROUGH_BK
+failed_attempts_preserved:
+  - code: PUBLIC_LAYOUT_MANIFEST_NOT_AT_EXPECTED_ROOT
+    effect: execution boundary only; no theorem failure
+  - code: WINDOWS_DEFAULT_CP1252_DECODE_FAILURE
+    repair: explicit Python UTF-8 mode
+    effect: execution precondition only; no theorem failure
+  - code: BK_PRIMARY_WRITER_INVALIDATED_FROZEN_RESULT_BYTES_BEFORE_REREVIEW
+    repair: fresh restore followed by rereview-before-writer order
+    effect: custody-ordering control; final rereview passed
+interpretation:
+  archive_integrity: PASS
+  mathematical_reproduction_bf_through_bk: ESTABLISHED_AT_RECORDED_FINITE_CHECK_SCOPE
+  external_mathematical_review: OPEN
+  owner_adoption: PENDING
+  source_world_or_metaphysical_truth_effect: NONE
+  general_novelty_effect: NONE
+  meniscus_effect: NONE
+authority_effect: NONE

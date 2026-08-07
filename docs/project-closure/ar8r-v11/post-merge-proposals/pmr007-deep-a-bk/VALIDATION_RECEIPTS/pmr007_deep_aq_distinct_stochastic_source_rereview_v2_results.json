@@ -1,0 +1,25 @@
+{
+  "counts": {
+    "data_processing_cases": 144,
+    "equal_event_parity_cases": 104,
+    "failures": 0,
+    "frozen_files": 6,
+    "hash_mismatches": 0,
+    "pair_channel_cases": 144,
+    "raw_distributions": 4,
+    "source_version_cases": 64,
+    "stochastic_channels": 9,
+    "swap_symmetry_cases": 104,
+    "unequal_event_cases": 144
+  },
+  "failures": [],
+  "identity": "PMR-007-SCAP-1",
+  "rereview": "distinct stochastic-channel and source-contract semantics",
+  "result": "PASS",
+  "scope_notes": [
+    "finite binary raw evidence",
+    "common candidate-independent stochastic channels",
+    "positive-probability event guard",
+    "source/world truth not certified"
+  ]
+}

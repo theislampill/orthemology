@@ -1,0 +1,144 @@
+schema: PMR007_DEEP_MENISCUS_CROSSWALK_A_AZ_V27
+repository_authority: 4c3dc103e8c753690fa5de560ab82157392ced4c
+merged_pull_request: 22
+historical_duration: 09:41:25.405101139
+historical_segment: 357
+theorem_origin_authority: V5
+proposal_authority: POST_MERGE_PROPOSAL_EVIDENCE_ONLY
+rounds:
+  DEEP_AQ:
+    identity: PMR-007-SCAP-1
+    status: ADMITTED_POST_MERGE_SCOPED_CENTRAL_ARCHITECTURE_RESULT
+    central_change: The personal/impersonal architecture comparison is separated into source, experiment, and prior/coding gates. No current gate breaks parity without an independently warranted source-world anchor, predictive/interventional surplus, or prior/coding policy.
+  DEEP_AR:
+    identity: PMR-007-PREC-1
+    status: ADMITTED_POST_MERGE_SCOPED_CROSS_LANE_EVIDENCE_RESULT
+    central_change: Copying, paraphrase, retransmission, and format conversion cannot multiply one provenance-root likelihood as if independent; conditionally independent roots compose evidence, while common causes require the joint model.
+  DEEP_AS:
+    identity: PMR-007-PFIT-1
+    status: ADMITTED_POST_MERGE_SCOPED_CENTRAL_PROPER_FUNCTION_EXPERIMENT_DESIGN_RESULT
+    central_change: Minimum nonadaptive norm-source discrimination is Test Cover; adaptive worst-case depth is exactly characterized by the finite decision recurrence. This identifies response models, not truth or proper function.
+  DEEP_AT:
+    identity: PMR-007-NIBE-1
+    status: ADMITTED_POST_MERGE_SCOPED_CENTRAL_ADAPTIVE_EXPERIMENT_RESULT
+    central_change: Full neutral trace equivalence exactly blocks every candidate-independent adaptive policy in the frozen finite controlled system; predictive surplus requires an enlarged experiment.
+  DEEP_AU:
+    identity: PMR-007-SIER-1
+    status: ADMITTED_POST_MERGE_SCOPED_CROSS_LANE_INVARIANT_RESULT
+    central_change: Synchronization rank loss, recovered old-root innovation, and fresh-root innovation satisfy an exact dimension balance. Copies do not increase rank; displayed root multiplicity is not evidential independence.
+  DEEP_AV:
+    identity: PMR-007-NBIF-1
+    status: ADMITTED_POST_MERGE_SCOPED_CENTRAL_SOURCE_FORMAL_BRIDGE_RESULT
+    central_change: A source-to-target implication admits a neutral interpolant exactly when the source projection implies the target core. Interpolant multiplicity is measured by bridge slack; direct source predication and target import remain separate.
+  DEEP_AW:
+    identity: PMR-007-PRAD-1
+    status: ADMITTED_POST_MERGE_SCOPED_CROSS_LANE_ROBUST_DIAGNOSIS_RESULT
+    central_change: Provenance-root exact diagnosis under f substitutions requires root Hamming distance at least 2f+1; f marked erasures require f+1. Root selection is pair-separation multicover, and copies remain one corruption coordinate.
+  DEEP_AX:
+    identity: PMR-007-STWG-1
+    status: ADMITTED_POST_MERGE_SCOPED_CENTRAL_SOURCE_EVIDENCE_RESULT
+    central_change: Source evidence updates architecture odds by the exact joint source likelihood; root factorization is valid only under conditional independence. Current source compatibility does not supply the missing reliability, mapping, or world-selection guards.
+  DEEP_AY:
+    identity: PMR-007-SGCI-1
+    status: ADMITTED_POST_MERGE_SCOPED_CENTRAL_SEMANTIC_NONIDENTIFIABILITY_RESULT
+    central_change: An eligible evidence map invariant under a residual content automorphism group cannot identify a target that varies on a residual orbit. Singleton residual orbit removes formal recoding ambiguity but does not establish constitutive semanticity or mentality.
+  DEEP_AZ:
+    identity: PMR-007-CSII-1
+    status: ADMITTED_POST_MERGE_SCOPED_CENTRAL_SEMANTIC_EXPERIMENT_DESIGN_RESULT
+    central_change: A complete candidate-independent crossed form/content intervention table exactly identifies frozen content mediation; diagonal observation and any missing cell fail over the unrestricted class. Passing the design remains compatible with an impersonal semantic processor.
+edges:
+  - id: AQ-AN-AO-ARCHITECTURE-GATES
+    from: Candidate_G_architecture_comparison
+    to: source_experiment_prior_discrimination
+    relation: NARROWS_SCOPE
+    transfer: three independently typed parity-breaking gates
+    not_transferred: no current gate satisfaction or architecture truth
+    evidence: [PMR-007-SCAP-1, PMR-007-ABPD-1, PMR-007-RPDS-1]
+  - id: AR-AU-AW-PROVENANCE
+    from: provenance_root_custody
+    to: evidence_rank_and_robust_diagnosis
+    relation: FORMALIZES
+    transfer: copies remain one root; rank and Hamming distance are complementary invariants
+    not_transferred: root authenticity, conditional independence, or warrant
+    evidence: [PMR-007-PREC-1, PMR-007-SIER-1, PMR-007-PRAD-1]
+  - id: AS-AZ-PROPER-FUNCTION-EXPERIMENT
+    from: proper_function_horn_discrimination
+    to: crossed_semantic_intervention
+    relation: OPERATIONALIZES
+    transfer: finite intervention selection and exact form/content mediation test
+    not_transferred: truth, fittingness, teleology, or Wisdom
+    evidence: [PMR-007-PFIT-1, PMR-007-CSII-1]
+  - id: AT-AQ-EXPERIMENT-GATE
+    from: neutral_trace_equivalence
+    to: architecture_experiment_gate
+    relation: BLOCKS
+    transfer: no adaptive candidate-independent discriminator exists inside the frozen trace-equivalent experiment
+    not_transferred: metaphysical equivalence outside the experiment
+    evidence: [PMR-007-NIBE-1, PMR-007-SCAP-1]
+  - id: AV-AX-SOURCE-GATE
+    from: source_neutral_interpolation
+    to: source_likelihood_world_selection
+    relation: SUPPLIES_PREMISE
+    transfer: source, neutral bridge, target, map, and likelihood coordinates are separated
+    not_transferred: source reliability or actual-world truth
+    evidence: [PMR-007-NBIF-1, PMR-007-STWG-1]
+  - id: AY-AM-H7A
+    from: semantic_gauge
+    to: constitutive_semanticity_H7a
+    relation: NARROWS_SCOPE
+    transfer: residual content-gauge identification H7a1c is separated from H7a2 and H7a3
+    not_transferred: intrinsic notionality or mental realization
+    evidence: [PMR-007-SGCI-1, PMR-007-SRIN-1]
+  - id: AZ-AY-SEMANTICITY
+    from: crossed_semantic_intervention
+    to: constitutive_semanticity
+    relation: CAUSALLY_TESTS
+    transfer: one empirical route to declared content mediation
+    not_transferred: literal semantic anchor, intrinsic semanticity, or personality
+    evidence: [PMR-007-CSII-1, PMR-007-SGCI-1]
+  - id: AX-TRACKN-SOURCE
+    from: Track_N_source_bundle
+    to: neutral_architecture_evidence
+    relation: NARROWS_SCOPE
+    transfer: source proposition becomes neutral evidence only through independently specified joint reliability and source-world mapping
+    not_transferred: tawatur warrant or neutral theorem status
+    evidence: [PMR-007-STWG-1, PMR-007-SAMC-1]
+  - id: OSM-PRH-AZ
+    from: representation_learning_sources
+    to: semantic_intervention_design
+    relation: SUPPLIES_EXPERIMENTAL_MOTIVATION
+    transfer: latent-state versus sensory-form distinction and cross-modal form candidates
+    not_transferred: full crossed intervention, intrinsic semantics, or proper function
+    evidence: [SUN-OSM-2025, PRH-2405.07987v5, PMR-007-CSII-1]
+architecture_status:
+  A_UNIFIED_PERSONAL:
+    status: PROMISING_SOURCE_RELATIVE_BUT_NEUTRAL_BRIDGE_INCOMPLETE
+    reason: Source-intended role and agency bundle remains strongest Track-N interpretation, but no independently warranted source likelihood, constitutive semanticity, personal-realizer experiment, or Wisdom discriminator excludes the matched impersonal rival.
+  B_POWERS_PLURAL_REALIZATION:
+    status: LIVE_STRONG_RIVAL
+    reason: Can preserve distributed provenance, semantic mediation, causal guidance, and source-compatible role realization while withholding one intentional subject.
+  C_ABSTRACT_ORDER_PLUS_CONCRETE_ACTUALIZER:
+    status: LIVE_STRONGEST_NEUTRAL_RIVAL
+    reason: Can add a rigid impersonal semantic law, source-compatible actualizer, downstream minds, and current neutral evidence without contradiction.
+current_disposition:
+  integrated_champion: NONE
+  meniscus: MENISCUS_NOT_REACHED
+  natural_closure: NOT_REACHED
+  strongest_composite_rival: SOURCE_COMPATIBLE_ABSTRACT_OR_MODAL_ORDER_PLUS_IMPERSONAL_OR_POWERS_REALIZER_PLUS_RIGID_SEMANTIC_LAW_AND_DOWNSTREAM_MINDS
+  source_gate: EXACT_CONTRACT_DEFINED_CURRENT_EVIDENCE_INSUFFICIENT
+  H7a1c: EXACTLY_CHARACTERIZED
+  H7a2: OPEN
+  H7a3: OPEN
+  semantic_experiment: SPECIFIED_AT_FINITE_FROZEN_SCOPE
+next_central_burdens:
+  - independently_warranted_source_reliability_and_actual_world_selection
+  - non_question_begging_constitutive_semanticity_H7a2
+  - mental_realization_H7a3_and_personal_subject_bridge
+  - proper_function_Wisdom_discriminator
+  - Candidate_G_P5_matched_rival_dominance
+  - candidate_independent_personal_vs_impersonal_experiment
+  - root_authentication_and_tawatur_warrant
+  - dynamic_adaptive_provenance_diagnosis_and_common_knowledge
+integrated_champion: NONE
+meniscus: MENISCUS_NOT_REACHED
+natural_closure: NOT_REACHED

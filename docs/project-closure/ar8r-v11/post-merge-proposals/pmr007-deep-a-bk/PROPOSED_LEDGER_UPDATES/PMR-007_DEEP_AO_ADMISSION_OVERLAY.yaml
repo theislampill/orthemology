@@ -1,0 +1,40 @@
+schema: PMR007_DEEP_AO_ADMISSION_OVERLAY_V1
+identity: PMR-007-RPDS-1
+round: PMR-007-DEEP-AO
+canonical_version: V2
+status: ADMITTED_POST_MERGE_SCOPED_CENTRAL_REPRESENTATION_SUFFICIENCY_RESULT
+historical_identity: NONE
+repository_authority: 428187cebf7644ff8bf9522455a560eb82d35964
+proof_status: HUMAN_PROOF_PLUS_EXECUTABLE_FINITE_CHECKS
+countermodel_status: COMPLETE_AT_DECLARED_SCOPE
+cold_audit:
+  disposition: REPAIR_REQUIRED
+  blocking_findings: 10
+  repaired: 10
+  primary_triggering_failure:
+    impossible_point_minimality_failures: 1580
+fresh_rereview:
+  disposition: PASS_WITH_NONBLOCKING_EXPERIMENT_AND_WORLD_SCOPE_NOTES
+  external_independence: false
+admitted_results:
+- total_variation_contracts_under_common_deterministic_or_stochastic_channel
+- exact_pointwise_bayes_factor_preservation_iff_likelihood_ratio_constant_on_union_support_fibres
+- likelihood_ratio_partition_is_coarsest_pairwise_exact_discriminator_on_union_support
+- common_representation_cannot_create_discrimination_absent_from_frozen_experiment
+- PRH_OSM_structure_does_not_supply_personal_impersonal_metaphysical_likelihood
+nonclaims:
+- no_canonical_raw_experiment_likelihood_representation_or_score
+- no_universal_natural_vocabulary
+- no_learned_or_hand_authored_representation_superiority
+- no_PRH_OSM_metaphysical_transfer
+- no_proper_function_mentality_personality_Wisdom_or_Speech
+- no_integrated_champion_or_meniscus
+theorem_family:
+  relation: GUARDED_LIKELIHOOD_RATIO_SPECIALIZATION_OF_FIBRE_AND_STATISTICAL_SUFFICIENCY_FAMILIES
+  general_mathematical_novelty: 0
+external_review: OPEN
+owner_adoption: PENDING
+repository_proposal_status: PUBLIC_SAFE_POST_MERGE_PROPOSAL_PENDING_REPOSITORY_AUDIT
+integrated_champion: NONE
+meniscus: MENISCUS_NOT_REACHED
+natural_closure: NOT_REACHED

@@ -1,0 +1,57 @@
+schema: PMR007_DEEP_BH_ADMISSION_OVERLAY_V1
+identity: PMR-007-TCRPF-1
+round: PMR-007-DEEP-BH
+canonical_version: V2
+status: ADMITTED_POST_MERGE_SCOPED_CENTRAL_TRUTH_CALIBRATION_RESULT
+historical_identity: NONE
+repository_authority: 4c3dc103e8c753690fa5de560ab82157392ced4c
+proof_status: HUMAN_PROOF_PLUS_EXECUTABLE_FINITE_CHECKS
+countermodel_status: COMPLETE_AT_DECLARED_SCOPE
+cold_audit:
+  disposition: REPAIR_REQUIRED
+  blocking_findings: 10
+  repaired: 10
+fresh_rereview:
+  disposition: PASS_WITH_NONBLOCKING_TRUTH_AUTHORITY_AND_FUNCTION_SCOPE_NOTES
+  external_independence: false
+admitted_results:
+- componentwise_truth_calibration_iff_forest_calibration_plus_zero_fundamental_holonomy
+- truth_calibrated_potential_unique_up_to_one_constant_per_component
+- additive_truth_calibration_stronger_than_ordinal_corrigibility
+- truth_calibrated_success_does_not_select_a_proper_function_account
+proper_function_effects:
+  frequency: independent_fixing_evidence_required
+  causal_role: independent_system_decomposition_required
+  organizational_autopoietic: closure_and_normative_relevance_required
+  selected_effect: selection_because_of_truth_effect_required
+  design: legitimate_truth_aimed_plan_required
+  learned_objective: training_history_and_target_authority_required
+  success_surface: insufficient_for_proper_function
+  teleological_norm: independently_authoritative_end_required
+  plantinga: truth_aimed_design_plan_and_suitable_environment_required
+  fitrah: authenticated_Track_N_source_applicability_and_world_bridge_required
+transcendental_effect:
+  underived_order_plus_exact_truth_calibration: DOES_NOT_ENTAIL_TELEOLOGY_PERSONALITY_OR_WISDOM
+r5:
+  status: ONE_BEARER_IMPERSONAL_MODEL_CAN_BE_ENRICHED_WITH_TRUTH_CALIBRATION
+nonclaims:
+- no_truth_or_completeness_of_L
+- no_dynamic_future_certificate
+- no_objective_teleology_or_proper_function
+- no_personal_designer_or_Wisdom
+- no_neutral_fitrah_world_truth
+- no_integrated_champion_or_meniscus
+origin_and_novelty:
+  relation: STANDARD_GRAPH_POTENTIAL_APPLICATION_WITH_PROPER_FUNCTION_BOUNDARY
+  general_mathematical_novelty: 0
+formalization:
+  lean_status: PLAN_ONLY
+  parse: NOT_RUN
+  elaboration: NOT_RUN
+  kernel: NOT_RUN
+external_review: OPEN
+owner_adoption: PENDING
+repository_proposal_status: PUBLIC_SAFE_POST_MERGE_PROPOSAL_PENDING_REPOSITORY_AUDIT
+integrated_champion: NONE
+meniscus: MENISCUS_NOT_REACHED
+natural_closure: NOT_REACHED

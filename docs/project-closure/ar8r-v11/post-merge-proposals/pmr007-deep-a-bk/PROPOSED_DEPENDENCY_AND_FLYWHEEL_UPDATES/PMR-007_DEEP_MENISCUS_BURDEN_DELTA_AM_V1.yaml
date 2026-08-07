@@ -1,0 +1,38 @@
+schema: PMR007_DEEP_MENISCUS_BURDEN_DELTA_AM_V1
+round: DEEP_AM
+identity: PMR-007-SRIN-1
+closed_or_sharply_narrowed:
+- burden: H7a_structural_semantic_canonizability
+  disposition: EXACTLY_CHARACTERIZED_AT_FINITE_ISOMORPHISM_CLASS_SCOPE
+  result: natural_selector_iff_automorphism_fixed_admissible_interpretation
+- burden: PRH_OSM_to_unique_semantics
+  disposition: COUNTERMODELED
+  result: kernel_or_state_structure_does_not_determine_literal_reference
+narrowed:
+- burden: H7a_intrinsic_notionality
+  change: split_into_H7a1_canonizability_H7a2_constitutive_semanticity_H7a3_mental_realization
+- burden: Candidate_G_semantic_unification
+  change: rigidity_counts_only_when_admissible_family_and_semantic_identity_are_independently_motivated
+opened_or_reopened:
+- non_question_begging_H7a2_constitutive_semanticity
+- H7a3_mental_realization_after_rigidity
+- source_world_semantic_identity
+- empirical_reference_validation_beyond_kernel_alignment
+strongest_surviving_rival:
+  name: RIGID_IMPERSONAL_INTERPRETATION_LAW_WITH_DOWNSTREAM_MINDS
+  matches:
+  - structural_canonizability
+  - unique_relative_interpretation
+  - shared_representation_kernel
+  - local_grammar_coordination
+  withholds:
+  - intrinsic_notionality
+  - constitutive_mental_host
+  - personal_subject
+  - Wisdom
+repository_proposal_status: PUBLIC_SAFE_POST_MERGE_PROPOSAL_PENDING_REPOSITORY_AUDIT
+owner_adoption: PENDING
+external_review: OPEN
+integrated_champion: NONE
+meniscus: MENISCUS_NOT_REACHED
+natural_closure: NOT_REACHED

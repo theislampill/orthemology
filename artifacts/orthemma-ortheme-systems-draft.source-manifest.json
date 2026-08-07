@@ -1,21 +1,21 @@
 {
   "schema": "orthemology-source-manifest-v1",
   "artifact_id": "orthemma-ortheme-systems-draft",
-  "source_commit": "43c4a07c54c61cec89c77ac8c5b4e75433caf3a4",
-  "source_tree": "b49f408f7c7500fb87bbafb73323b6ceece18c5c",
-  "independently_reviewed_equivalent_source_commit": "43c4a07c54c61cec89c77ac8c5b4e75433caf3a4",
-  "independently_reviewed_equivalent_source_tree": "b49f408f7c7500fb87bbafb73323b6ceece18c5c",
+  "source_commit": "d7309d30612ff85ed8f94b93d4a5a610c18b3ea9",
+  "source_tree": "cded0130b092d2d13e288d6829298ec3f651e982",
+  "independently_reviewed_equivalent_source_commit": "d7309d30612ff85ed8f94b93d4a5a610c18b3ea9",
+  "independently_reviewed_equivalent_source_tree": "cded0130b092d2d13e288d6829298ec3f651e982",
   "source_tree_equivalence": "verified-identical",
-  "source_date_epoch": 1785895767,
+  "source_date_epoch": 1786022580,
   "archive": {
     "path": "artifacts/orthemma-ortheme-systems-draft.source.tar.gz",
-    "sha256": "0809a0ba1be85ff15689e49ad5ae40a0db45ce690795c70375ef1bd3cf43fd69",
+    "sha256": "3fdcffc3f1aa799070a696791781986421f2b7a268c1f889cbee198682ec0937",
     "format": "tar-gzip-ustar"
   },
   "entry_point": "publication/latex/orthemma-ortheme-systems-draft/main.tex",
   "build_workdir": "publication/latex/orthemma-ortheme-systems-draft",
-  "publication_profile_sha256": "beb4a3a2ca8305475d4b4140186f2a14d94e31870a625078368f3cd9bc85237c",
-  "toolchain_lock_sha256": "76b420108fa0e807559ecdc0778a78b840238487614871d28bd2e7fc6231d727",
+  "publication_profile_sha256": "6db92d9e5a0032a584685fc6861e74e2bf5097d7308753c8532c954bca7db51e",
+  "toolchain_lock_sha256": "aff832790731254ed6771e3f41ee4e902df4b513b9f1af8e94d9cb7b1f25d258",
   "tex_live_dependencies": {
     "fvextra": {
       "tex_live_package": "fvextra",
@@ -69,7 +69,7 @@
   },
   "compatibility_inputs": {
     "publication/latexmkrc": "8fab079b47dda579db9b75aef4f25a4b3c78bc19089957e7076a95f1dc717979",
-    "publication/pdftex-unicode-compat.tex": "3d3eb3d8ecd1619a67fa3575866de56c38390f4c28f2ea95a76a70aacbba4771"
+    "publication/pdftex-unicode-compat.tex": "0f6c63d94e461c097437e78dcc371453cedff18e6aef43725609a2a3ddef94a4"
   },
   "members": [
     {
@@ -81,15 +81,15 @@
     },
     {
       "path": "publication/latex/orthemma-ortheme-systems-draft/main.tex",
-      "sha256": "f6e064e456c289deb5d993ca03397343079ca120cfaac80a81dfbe9da388fbfd",
-      "bytes": 144556,
+      "sha256": "b78c99340a451c3481699b47d8cfd53f7206aec0ab12205a4462e17c1c8aa626",
+      "bytes": 149280,
       "mode": "0644",
       "role": "entry-point"
     },
     {
       "path": "publication/latex/orthemma-ortheme-systems-draft/pdftex-unicode-compat.tex",
-      "sha256": "3d3eb3d8ecd1619a67fa3575866de56c38390f4c28f2ea95a76a70aacbba4771",
-      "bytes": 5255,
+      "sha256": "0f6c63d94e461c097437e78dcc371453cedff18e6aef43725609a2a3ddef94a4",
+      "bytes": 5422,
       "mode": "0644",
       "role": "compatibility-input"
     },

@@ -1,0 +1,41 @@
+{
+  "cycle_increments": [
+    1,
+    1,
+    -1,
+    -1
+  ],
+  "cycle_sum": 0,
+  "each_personal_predicate_varies_on_one_neutral_reduct": true,
+  "equation_failures": [],
+  "excluded_product_profiles": 44,
+  "frozen_hashes": {
+    "PMR-007_DEEP_ROUND_O_FORMAL_DERIVATIONAL_COUPLING_AND_PERSONALITY_PARITY_V2.md": "1aed11f7713a13191cc4100fab3a227a096f057b0a0ab9d7e6d2f70c25397cb8",
+    "PMR007_DEEP_O_FORMAL_COUPLING_PERSONALITY_PARITY_V2.yaml": "eade678027baa31a05828a650067e31cc6011a88db5a950e2f5c4fc3a2fce755",
+    "pmr007_deep_o_formal_coupling_primary_check_v2_results.json": "f67eb0e47044615734ccc7d9921f130e4310f069e0257d2032e409e9a487e652"
+  },
+  "functional_dependency_x_to_all": false,
+  "functional_dependency_xy_to_all": true,
+  "functional_dependency_y_to_all": false,
+  "joint_image_count": 4,
+  "personal_predicate_expansions_checked": 16,
+  "primitive_influence": {
+    "x": [
+      "M",
+      "N",
+      "R",
+      "S"
+    ],
+    "y": [
+      "A",
+      "N",
+      "R",
+      "S"
+    ]
+  },
+  "product_marginal_count": 48,
+  "relational_rows": 4,
+  "source_bridge_required_to_exclude_impersonal_expansions": true,
+  "status": "PASS_WITH_NONBLOCKING_SCOPE_NOTES",
+  "world_semantics_or_metaphysical_possibility_checked": false
+}

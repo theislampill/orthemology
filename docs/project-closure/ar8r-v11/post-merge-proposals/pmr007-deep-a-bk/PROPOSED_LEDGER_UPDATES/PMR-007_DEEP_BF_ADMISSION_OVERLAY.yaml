@@ -1,0 +1,61 @@
+schema: PMR007_DEEP_BF_ADMISSION_OVERLAY_V1
+identity: PMR-007-ILRC-1
+round: PMR-007-DEEP-BF
+canonical_version: V2
+status: ADMITTED_POST_MERGE_SCOPED_CENTRAL_RIVAL_COMPLEXITY_RESULT
+historical_identity: NONE
+repository_authority: 4c3dc103e8c753690fa5de560ab82157392ced4c
+proof_status: HUMAN_PROOF_PLUS_EXECUTABLE_FINITE_CHECKS
+countermodel_status: COMPLETE_AT_DECLARED_SCOPE
+cold_audit:
+  disposition: REPAIR_REQUIRED
+  blocking_findings: 11
+  repaired: 11
+fresh_rereview:
+  disposition: PASS_WITH_NONBLOCKING_FIELD_CAUSAL_AND_ONTOLOGY_NOTES
+  external_independence: false
+  checker_imported_primary: false
+admitted_results:
+- real_product_mixture_width_equals_real_nonnegative_rank
+- ordinary_rank_and_finite_saturation_bounds
+- common_markov_channels_do_not_increase_product_mixture_width
+- real_nonnegative_rank_exactly_excludes_independently_width_bounded_rivals
+- unrestricted_finite_bivariate_latent_product_class_is_saturated
+- support_rectangle_cover_lower_bounds_real_nonnegative_rank
+central_disposition:
+  candidate_g: joint_interaction_does_not_force_personal_unifier_without_independent_rival_restriction
+  r5: strengthened_unrestricted_impersonal_latent_rival_survives
+  burden_relocation:
+  - independently_warranted_width_or_modularity_bound
+  - shared_latent_interventional_constraint
+  - causal_mechanism_restriction
+  - source_world_applicability_restriction
+  - constitutive_intentional_bridge
+nonclaims:
+- no_generic_nonnegative_rank_algorithm
+- no_real_rational_field_identity
+- no_unique_latent_semantics
+- no_causal_or_interventional_identification
+- no_multiway_tensor_characterization
+- no_metaphysical_actuality
+- no_bearer_subject_agent_or_provenance_root_count
+- no_personality_agency_Wisdom_or_divine_unity
+- no_integrated_champion_or_meniscus
+source_status:
+  cohen_rothblum_1993: PRIMARY_MATHEMATICAL_ANCESTRY_PINNED
+  chistikov_et_al_2017: PRIMARY_FIELD_BOUNDARY_PINNED
+  osm: SEPARATE_EMPIRICAL_SOURCE_NOT_NONNEGATIVE_RANK_AUTHORITY
+theorem_family:
+  relation: STANDARD_NONNEGATIVE_RANK_APPLICATION_AND_R5_BURDEN_RELOCATION
+  general_mathematical_novelty: 0
+formalization:
+  lean_status: PLAN_ONLY
+  parse: NOT_RUN
+  elaboration: NOT_RUN
+  kernel: NOT_RUN
+external_review: OPEN
+owner_adoption: PENDING
+repository_proposal_status: PUBLIC_SAFE_POST_MERGE_PROPOSAL_PENDING_REPOSITORY_AUDIT
+integrated_champion: NONE
+meniscus: MENISCUS_NOT_REACHED
+natural_closure: NOT_REACHED

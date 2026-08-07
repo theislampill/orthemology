@@ -1,0 +1,42 @@
+{
+  "schema": "PMR007_DEEP_AF_DISTINCT_RELATIONAL_ISOMORPHISM_REREVIEW_V2",
+  "frozen_hash_rows_checked": 6,
+  "frozen_hash_failures": [],
+  "three_node_neutral_isomorphism_classes": 104,
+  "random_intended_classes": 50000,
+  "implicitly_defined_classes": 1992,
+  "criterion_mismatches": 0,
+  "canonical_isomorphism_failures": 0,
+  "controls": {
+    "current_personal_impersonal_twin": {
+      "same_complete_neutral_reduct": true,
+      "personal_target_differs": true,
+      "implicit": false
+    },
+    "source_restricted_class": {
+      "neutral_implicit": false,
+      "source_relative_implicit": true,
+      "neutral_migration": false
+    },
+    "smuggled_proxy": {
+      "definition_available": true,
+      "independent_eligibility": false
+    },
+    "abductive_metric": {
+      "may_prefer_one_expansion": true,
+      "exact_entailment": false
+    },
+    "beth_scope": {
+      "ordinary_first_order_all_models_only": true,
+      "finite_or_modal_transfer_automatic": false
+    }
+  },
+  "result": "PASS",
+  "nonclaims": [
+    "metaphysical possibility",
+    "probability parity",
+    "finite Beth theorem",
+    "source truth",
+    "modal or phenomenal reduction"
+  ]
+}

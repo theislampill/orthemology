@@ -1,0 +1,52 @@
+schema: PMR007_DEEP_BG_ADMISSION_OVERLAY_V1
+identity: PMR-007-IR5CM-1
+round: PMR-007-DEEP-BG
+canonical_version: V2
+status: ADMITTED_POST_MERGE_SCOPED_CENTRAL_R5_COMMON_MODEL_RESULT
+historical_identity: NONE
+repository_authority: 4c3dc103e8c753690fa5de560ab82157392ced4c
+proof_status: EXPLICIT_FINITE_MODEL_PLUS_REDUCT_EXPANSION_ENUMERATION
+countermodel_status: COMPLETE_AT_DECLARED_SCOPE
+cold_audit:
+  disposition: REPAIR_REQUIRED
+  blocking_findings: 11
+  repaired: 11
+fresh_rereview:
+  disposition: PASS_WITH_NONBLOCKING_MODEL_CLASS_AND_METAPHYSICAL_NOTES
+  external_independence: false
+admitted_results:
+- one_bearer_impersonal_common_model_satisfies_complete_declared_neutral_reduct
+- target_personal_intentional_Wisdom_Speech_and_CreatorClass_predicates_do_not_factor_through_neutral_reduct
+- common_carrier_is_weaker_than_derivational_or_intentional_unity
+- aligned_structural_roles_can_be_realized_by_an_impersonal_law
+bridge_effects:
+  B6: ENDPOINT_GRANTED_IN_WITNESS_NOT_DERIVATION
+  B7: NOT_ENTAILED_BY_DECLARED_NEUTRAL_REDUCT
+  B8: NOT_ENTAILED_BY_DECLARED_NEUTRAL_REDUCT
+  B11: NOT_ENTAILED_BY_STRUCTURAL_ANALOGUES
+  B15: NOT_ENTAILED_BY_TOKEN_EXPRESSION
+  actualizer_to_CreatorClass: NOT_ENTAILED
+r5:
+  status: STRENGTHENED_ONE_BEARER_IMPERSONAL_COMMON_MODEL_SURVIVES
+proper_function:
+  status: TRUTH_TARGET_ALIGNMENT_STILL_NOT_TELEOLOGY_OR_WISDOM
+uncreated_grammar:
+  status: FAITHFUL_EXPRESSION_STILL_NOT_MENTALITY_OR_SPEECH
+source_world:
+  status: FUNCTIONAL_ROLE_IMAGE_STILL_NOT_AUTHENTICATION_OR_ACTUAL_WORLD_SELECTION
+nonclaims:
+- no_absolute_necessity_or_general_concreteness
+- no_physical_or_metaphysical_possibility
+- no_equal_probability_or_explanatory_parity
+- no_source_authentication_or_track_migration
+- no_personal_ground_falsity
+- no_integrated_champion_or_meniscus
+origin_and_novelty:
+  relation: STRENGTHENED_R5_COMMON_MODEL_AND_REDUCT_EXPANSION_APPLICATION
+  general_mathematical_novelty: 0
+external_review: OPEN
+owner_adoption: PENDING
+repository_proposal_status: PUBLIC_SAFE_POST_MERGE_PROPOSAL_PENDING_REPOSITORY_AUDIT
+integrated_champion: NONE
+meniscus: MENISCUS_NOT_REACHED
+natural_closure: NOT_REACHED

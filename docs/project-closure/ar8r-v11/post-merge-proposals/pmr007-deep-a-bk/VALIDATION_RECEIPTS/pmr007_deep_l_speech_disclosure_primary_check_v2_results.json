@@ -1,0 +1,62 @@
+{
+  "deletion_witnesses": {
+    "APP": true,
+    "ATTR_N": true,
+    "AUTHZ": true,
+    "CAP": true,
+    "CREATED_TOK": true,
+    "EXPR": true,
+    "FID_T": true,
+    "MENT": true,
+    "PROV": true,
+    "RELAY": true,
+    "SID": true,
+    "UNCR_N": true,
+    "UTTER": true,
+    "VER": true
+  },
+  "failure_count": 0,
+  "failures": [],
+  "full_guard_worlds": 1,
+  "guard_worlds": 16384,
+  "many_tokens_one_content": true,
+  "one_token_context_sensitive_contents": true,
+  "result": "PASS",
+  "schema": "PMR007_DEEP_L_PRIMARY_RESULTS_V2",
+  "stage_separations": {
+    "ART_without_MENT": {
+      "ART": true,
+      "MENT": false
+    },
+    "CAP_without_UTTER": {
+      "CAP": true,
+      "UTTER": false
+    },
+    "FID_without_SID_PROV": {
+      "FID_T": true,
+      "PROV": false,
+      "SID": false
+    },
+    "MENT_without_CAP": {
+      "CAP": false,
+      "MENT": true
+    },
+    "UTTER_without_AUTHOR": {
+      "AUTHOR": false,
+      "UTTER": true
+    },
+    "authentic_but_unauthorized": {
+      "AUTHZ": false,
+      "PROV": true,
+      "SID": true
+    },
+    "source_custody_without_UNCR_N": {
+      "APP": true,
+      "AUTHZ": true,
+      "PROV": true,
+      "SID": true,
+      "UNCR_N": false,
+      "VER": true
+    }
+  }
+}

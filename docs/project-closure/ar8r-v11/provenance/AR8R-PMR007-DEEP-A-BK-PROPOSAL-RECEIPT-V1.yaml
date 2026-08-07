@@ -1,0 +1,54 @@
+schema: ar8r-pmr007-deep-a-bk-proposal-receipt-v1
+source_archive:
+  filename: AR8R_PMR007_REPOSITORY_UPDATE_PROPOSAL_THROUGH_DEEP_BK.zip
+  sha256: a7271391bbc7294128597a0798b0dd644bd79bdf4d9d57b3b918b2fa912a32b5
+  bytes: 2183290
+  archive_members: 1187
+  integrity: PASS
+  unsafe_member_paths: 0
+  duplicate_member_paths: 0
+  decompression_errors: 0
+  internal_sha256sums_entries: 1186
+  internal_sha256sums_errors: 0
+  yaml_files_parsed: 260
+  json_files_parsed: 157
+  structured_parse_errors: 0
+  private_data_exclusion: PASS
+  round_trip_restoration: PASS
+repository_copy:
+  path: docs/project-closure/ar8r-v11/post-merge-proposals/pmr007-deep-a-bk
+  exact_archive_members: 1187
+  source_bytes_modified: false
+  role: EXACT_SANITIZED_POST_MERGE_PROPOSAL_SNAPSHOT
+proposal_boundary:
+  indexed_results: 73
+  existing_round_11_through_20_results: 10
+  deep_a_through_bk_results: 63
+  first_deep_result: PMR-007-NFG-1
+  latest_boundary_result: PMR-007-NCBD-1
+  historical_identity_assigned: false
+  historical_theorem_origin_credit: false
+  external_review: OPEN
+  owner_adoption: PENDING
+  repository_readiness: EXTERNAL_REVIEW_REQUIRED
+  general_novelty_credit: NOT_GRANTED
+  lean_source_or_kernel_claim: NONE
+  integrated_champion: NONE
+  meniscus: MENISCUS_NOT_REACHED
+  natural_closure: NOT_REACHED
+source_package_documentation_defects:
+  stale_root_readme_title: true
+  incomplete_root_proposed_diff_narrative: true
+  correction_overlay: post-merge-proposals/PMR007-DEEP-A-BK-ADOPTION-BOUNDARY-CORRECTION.md
+  exact_snapshot_files_modified: false
+overlap_with_base_main:
+  base_sha: 4c3dc103e8c753690fa5de560ab82157392ced4c
+  byte_duplicate_members: 825
+  unique_duplicate_hashes: 806
+  duplicate_credit_effect: NONE
+private_companions_excluded:
+  files:
+    - AR8R_PMR007_PRIVATE_RESEARCH_CHECKPOINT_THROUGH_DEEP_BK.zip
+    - Cohen_Rothblum_1993_Nonnegative_Ranks.pdf
+    - Chistikov_et_al_2017_NMF_Requires_Irrationality.pdf
+  disposition: LOCAL_PRIVATE_EVIDENCE_ONLY

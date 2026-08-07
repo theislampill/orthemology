@@ -20,10 +20,12 @@ from latex_to_typst_math import MathConvertError, translate_display, translate_i
 ROOT = pathlib.Path(__file__).resolve().parents[1]
 PROFILE_PATH = pathlib.Path("docs/publication-profile.yaml")
 OUTPUT_PATH = pathlib.Path("publication/latex")
-LONG_TABLE_ROW_THRESHOLD = 10
+LONG_TABLE_ROW_THRESHOLD = 7
 LONG_TABLE_TOTAL_CONTENT_THRESHOLD = 1500
 LONG_TABLE_MAX_ROW_CONTENT_THRESHOLD = 800
 BREAKABLE_TABLE_COLUMN_THRESHOLD = 3
+VERBATIM_SCRIPTSIZE_LINE_THRESHOLD = 88
+VERBATIM_TINY_LINE_THRESHOLD = 96
 DISPLAY_MATH_MULTLINE_THRESHOLD = 120
 DISPLAY_MATH_TARGET_WIDTH = 72
 DISPLAY_MATH_LAYOUT_BREAK = "\\\\\n"
@@ -269,12 +271,42 @@ TEXT_ESCAPES = {
 }
 
 
-def _escape_text(text):
+OPENING_DOUBLE_QUOTE_PREDECESSORS = frozenset("([{<\u2013\u2014")
+
+
+def _typographic_double_quotes(text, *, previous_character=""):
+    """Translate prose ASCII quotes to deterministic TeX opening/closing pairs."""
+    output = []
+    for index, character in enumerate(text):
+        if character != '"':
+            output.append(character)
+            continue
+        previous = text[index - 1] if index else previous_character
+        opening = (
+            not previous
+            or previous.isspace()
+            or previous in OPENING_DOUBLE_QUOTE_PREDECESSORS
+        )
+        output.append("``" if opening else "''")
+    return "".join(output)
+
+
+def _escape_text(
+    text,
+    *,
+    typographic_quotes=True,
+    previous_character="",
+):
+    if typographic_quotes:
+        text = _typographic_double_quotes(
+            text,
+            previous_character=previous_character,
+        )
     return "".join(TEXT_ESCAPES.get(char, char) for char in text)
 
 
 def _escape_code(text):
-    escaped = _escape_text(text)
+    escaped = _escape_text(text, typographic_quotes=False)
     return escaped.replace(r"\$", r"\char36{}")
 
 
@@ -827,19 +859,41 @@ def _render_inline_math(body):
     return layout_body
 
 
-def _render_text(text, math):
+def _render_text_with_context(text, math, *, previous_character=""):
     output = []
     cursor = 0
     for match in PLACEHOLDER_RE.finditer(text):
-        output.append(_escape_text(text[cursor : match.start()]))
+        segment = text[cursor : match.start()]
+        output.append(
+            _escape_text(
+                segment,
+                previous_character=previous_character,
+            )
+        )
+        if segment:
+            previous_character = segment[-1]
         kind, body = math[int(match.group(1))]
         if kind == "display":
             output.append(_render_display_math(body))
         else:
             output.append("$%s$" % _render_inline_math(body))
+        previous_character = "x"
         cursor = match.end()
-    output.append(_escape_text(text[cursor:]))
-    return "".join(output)
+    segment = text[cursor:]
+    output.append(
+        _escape_text(
+            segment,
+            previous_character=previous_character,
+        )
+    )
+    if segment:
+        previous_character = segment[-1]
+    return "".join(output), previous_character
+
+
+def _render_text(text, math):
+    rendered, _ = _render_text_with_context(text, math)
+    return rendered
 
 
 def _escape_url(url):
@@ -888,12 +942,20 @@ def resolve_publication_link(target, *, source_name, root):
 
 def _render_inline(tokens, math, *, link_resolver=None):
     output = []
+    previous_character = ""
     for token in tokens:
         kind = token.type
         if kind == "text":
-            output.append(_render_text(token.content, math))
+            rendered, previous_character = _render_text_with_context(
+                token.content,
+                math,
+                previous_character=previous_character,
+            )
+            output.append(rendered)
         elif kind == "code_inline":
             output.append(r"\texttt{%s}" % _render_inline_code(token.content))
+            if token.content:
+                previous_character = token.content[-1]
         elif kind == "strong_open":
             output.append(r"\textbf{")
         elif kind == "strong_close":
@@ -915,8 +977,10 @@ def _render_inline(tokens, math, *, link_resolver=None):
             output.append("}")
         elif kind == "softbreak":
             output.append(" ")
+            previous_character = " "
         elif kind == "hardbreak":
             output.append("\\\\\n")
+            previous_character = " "
         elif kind == "image":
             raise GenerationError("images are not supported")
         elif kind == "html_inline":
@@ -1028,6 +1092,7 @@ def _render_breakable_table(
         output.append(
             "%% breakable-row: %d/%d\n" % (row_index + 1, len(rows))
         )
+        output.append("\\needspace{5\\baselineskip}\n")
         for column_index, cell in enumerate(row):
             label = _normal_flow_header_label(
                 headers[column_index],
@@ -1147,6 +1212,8 @@ def render_markdown(markdown, source_name="<memory>", root=None):
                 prev = output[-1] if output else ""
                 if not prev.rstrip().endswith(("\\onecolumn", "\\twocolumn")):
                     guard = "\\needspace{4\\baselineskip}\n"
+            if heading_text.strip().casefold() == "references":
+                guard = "\\raggedright\n" + guard
             output.append(
                 "\n%s\\%s{%s}\n"
                 % (guard, command, rendered_heading)
@@ -1183,7 +1250,7 @@ def render_markdown(markdown, source_name="<memory>", root=None):
             index += 1
             continue
         if kind == "list_item_open":
-            output.append("\\item ")
+            output.append("\\needspace{3\\baselineskip}\\item ")
             index += 1
             continue
         if kind == "list_item_close":
@@ -1204,10 +1271,20 @@ def render_markdown(markdown, source_name="<memory>", root=None):
             else:
                 if r"\end{verbatim}" in content:
                     raise GenerationError("code block contains an unsafe verbatim terminator")
+                longest_line = max(
+                    (len(line) for line in content.splitlines()),
+                    default=0,
+                )
+                if longest_line > VERBATIM_TINY_LINE_THRESHOLD:
+                    font_size = "fontsize{6}{7}\\selectfont"
+                elif longest_line > VERBATIM_SCRIPTSIZE_LINE_THRESHOLD:
+                    font_size = "scriptsize"
+                else:
+                    font_size = "small"
                 output.append(
                     "\n\\needspace{3\\baselineskip}\n"
-                    "\\begingroup\\small\n\\begin{verbatim}\n%s\n\\end{verbatim}\n\\endgroup\n"
-                    % content
+                    "\\begingroup\\%s\n\\begin{verbatim}\n%s\n\\end{verbatim}\n\\endgroup\n"
+                    % (font_size, content)
                 )
             index += 1
             continue

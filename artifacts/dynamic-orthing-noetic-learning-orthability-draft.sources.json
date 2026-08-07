@@ -2,21 +2,21 @@
   "schema": "orthemology-pdf-sources-v2",
   "artifact_id": "dynamic-orthing-noetic-learning-orthability-draft",
   "pdf": "dynamic-orthing-noetic-learning-orthability-draft.pdf",
-  "pdf_sha256": "5defa82f7618920a0952967f28a83cabc0f9d151b91ebf5af1e5af34264382ac",
+  "pdf_sha256": "644c5fc2c5e5efc552bff6502a29b06772cccdf23503919448c85abe7dadf258",
   "page_count": 5,
-  "source_commit": "43c4a07c54c61cec89c77ac8c5b4e75433caf3a4",
-  "source_tree": "b49f408f7c7500fb87bbafb73323b6ceece18c5c",
-  "independently_reviewed_equivalent_source_commit": "43c4a07c54c61cec89c77ac8c5b4e75433caf3a4",
-  "independently_reviewed_equivalent_source_tree": "b49f408f7c7500fb87bbafb73323b6ceece18c5c",
+  "source_commit": "d7309d30612ff85ed8f94b93d4a5a610c18b3ea9",
+  "source_tree": "cded0130b092d2d13e288d6829298ec3f651e982",
+  "independently_reviewed_equivalent_source_commit": "d7309d30612ff85ed8f94b93d4a5a610c18b3ea9",
+  "independently_reviewed_equivalent_source_tree": "cded0130b092d2d13e288d6829298ec3f651e982",
   "source_tree_equivalence": "verified-identical",
-  "source_date_epoch": 1785895767,
-  "build_time_utc": "2026-08-05T02:09:27Z",
+  "source_date_epoch": 1786022580,
+  "build_time_utc": "2026-08-06T13:23:00Z",
   "source_hashes": {
     "markdown": {
       "companion/dynamic-orthing-noetic-learning-and-orthability.md": "e626ad00c5eb947a2295f653538266f3b87c8b7732a7070a50273780fdd31f0b"
     },
     "latex": {
-      "publication/latex/dynamic-orthing-noetic-learning-orthability-draft/main.tex": "4a32bb0d66b69710f55eae3fedbb2337c1c7c84b8798818e97b5f58da0fd3af4"
+      "publication/latex/dynamic-orthing-noetic-learning-orthability-draft/main.tex": "8793d4214d2577429a33e745b95fc33568f575d9ea6d8e52659b1da389f268c2"
     },
     "bibliography": {
       "path": "references/orthemology.bib",
@@ -24,16 +24,16 @@
     },
     "compatibility": {
       "publication/latexmkrc": "8fab079b47dda579db9b75aef4f25a4b3c78bc19089957e7076a95f1dc717979",
-      "publication/pdftex-unicode-compat.tex": "3d3eb3d8ecd1619a67fa3575866de56c38390f4c28f2ea95a76a70aacbba4771"
+      "publication/pdftex-unicode-compat.tex": "0f6c63d94e461c097437e78dcc371453cedff18e6aef43725609a2a3ddef94a4"
     }
   },
   "publication_profile": {
     "path": "docs/publication-profile.yaml",
-    "sha256": "beb4a3a2ca8305475d4b4140186f2a14d94e31870a625078368f3cd9bc85237c"
+    "sha256": "6db92d9e5a0032a584685fc6861e74e2bf5097d7308753c8532c954bca7db51e"
   },
   "toolchain_lock": {
     "path": "publication/toolchain-lock.yaml",
-    "sha256": "76b420108fa0e807559ecdc0778a78b840238487614871d28bd2e7fc6231d727"
+    "sha256": "aff832790731254ed6771e3f41ee4e902df4b513b9f1af8e94d9cb7b1f25d258"
   },
   "candidate_status": {
     "source": "docs/current-candidate-state.yaml",
@@ -59,11 +59,11 @@
   "build_command": "/usr/local/texlive/2025/bin/x86_64-linux/latexmk main.tex",
   "source_package": {
     "path": "artifacts/dynamic-orthing-noetic-learning-orthability-draft.source.tar.gz",
-    "sha256": "d353a74c7f72df941372cb51a11db2809933a6c6346965cd4a0733a384b75144"
+    "sha256": "f9b2b77f2b2686e007835950909477675d72929ca8406626a1252f1df0fb9006"
   },
   "source_manifest": {
     "path": "artifacts/dynamic-orthing-noetic-learning-orthability-draft.source-manifest.json",
-    "sha256": "e009f73ef8631c0a0d9ea2a9eb71a4dcfe62686ac9164d8fd55d95e8e34cd8af"
+    "sha256": "74b48d52644835d5da5e9b8d835d6e8df3ae42d3e6c2c842af0f43e1e8d47f2c"
   },
   "tools": {
     "bibtex": "0.99d",

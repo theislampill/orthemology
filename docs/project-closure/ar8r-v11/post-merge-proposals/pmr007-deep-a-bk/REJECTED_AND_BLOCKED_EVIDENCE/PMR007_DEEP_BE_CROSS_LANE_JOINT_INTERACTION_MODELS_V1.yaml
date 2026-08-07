@@ -1,0 +1,34 @@
+schema: pmr007-deep-be-cjid-models-v1
+identity: PMR-007-CJID-1
+status: POST_MERGE_RESEARCH_CANDIDATE
+setting:
+  candidate_architectures: [A_unified_personal, R_impersonal_powers]
+  evidence: one finite jointly sampled typed experiment
+claims:
+  marginal_parity_nonimplication: equal coordinate marginals need not imply equal joint law
+  two_binary_coupling:
+    guards: [binary_X, binary_Y, equal_X_marginal, equal_Y_marginal]
+    formula: "TV(P_A,P_R)=2*abs(P_A(1,1)-P_R(1,1))"
+  top_order_parity:
+    guards: [binary_coordinates, equal_marginals_on_every_proper_subset]
+    conclusion: signed difference is a scalar multiple of parity sign
+  separable_test_boundary:
+    conclusion: proper-subset additive statistics have equal expectations under equal proper marginals
+positive_controls:
+  - id: BE-POS1
+    name: even versus odd parity
+  - id: BE-POS2
+    name: equal-marginal different-coupling binary pair
+countermodels:
+  - BE-CM1 product-of-marginals blindness
+  - BE-CM2 post-hoc interaction
+  - BE-CM3 unit/provenance mismatch
+  - BE-CM4 common representation loss
+  - BE-CM5 impersonal coupling realizer
+  - BE-CM6 source-compatible joint parity
+  - BE-CM7 selected-subset overread
+nonclaims:
+  - no causal or derivational unity from dependence alone
+  - no canonical experiment selection
+  - no personal-ground inference
+  - no source or world truth

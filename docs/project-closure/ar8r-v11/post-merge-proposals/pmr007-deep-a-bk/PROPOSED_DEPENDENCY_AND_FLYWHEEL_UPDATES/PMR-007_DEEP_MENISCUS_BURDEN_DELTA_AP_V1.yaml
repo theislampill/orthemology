@@ -1,0 +1,39 @@
+schema: PMR007_DEEP_MENISCUS_BURDEN_DELTA_AP_V1
+round: DEEP_AP
+identity: PMR-007-SWRI-1
+closed_or_sharply_narrowed:
+- burden: source_level_coreference_to_relative_world_referent
+  disposition: EXACTLY_CHARACTERIZED_AT_FINITE_INTERPRETATION_FAMILY_SCOPE
+  result: unique_relative_referent_iff_candidate_denotation_fibre_singleton
+- burden: source_role_bundle_to_unique_world_role_realizer
+  disposition: CONDITIONAL_CHARACTERIZATION
+  result: equivalence_requires_nonempty_role_preserving_role_complete_interpretation_family
+narrowed:
+- burden: Track_N_source_world_bridge
+  change: source_co_reference_map_admissibility_world_adequacy_actual_world_selection_and_neutral_personality_are_separate
+- burden: Architecture_A_source_advantage
+  change: source_intended_role_bundle_filters_source_models_but_does_not_exclude_source_compatible_impersonal_realizers
+opened_or_reopened:
+- independently_warranted_source_world_anchor
+- actual_world_selection_among_candidate_worlds
+- reflection_or_complete_profile_transfer
+- Arabic_primary_and_source_specialist_confirmation
+- neutral_H7_H8_and_Wisdom_after_relative_denotation
+strongest_surviving_rival:
+  name: SOURCE_COMPATIBLE_SHARED_ROLE_BEARER_WITH_IMPERSONAL_NEUTRAL_REALIZATION
+  matches:
+  - selected_Track_N_role_bundle
+  - source_level_coreference
+  - singleton_relative_denotation_under_one_admissible_anchor
+  withholds:
+  - Arabic_primary_confirmation
+  - actual_world_selection
+  - de_se_subjecthood
+  - neutral_personality
+  - Wisdom
+repository_proposal_status: PUBLIC_SAFE_POST_MERGE_PROPOSAL_PENDING_REPOSITORY_AUDIT
+owner_adoption: PENDING
+external_review: OPEN
+integrated_champion: NONE
+meniscus: MENISCUS_NOT_REACHED
+natural_closure: NOT_REACHED

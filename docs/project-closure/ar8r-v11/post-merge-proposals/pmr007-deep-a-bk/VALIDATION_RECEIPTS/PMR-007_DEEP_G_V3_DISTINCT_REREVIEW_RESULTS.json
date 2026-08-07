@@ -1,0 +1,21 @@
+{
+  "arabic_primary_verified": false,
+  "cb_inherited_from_qiyas": false,
+  "criterion_failures": 0,
+  "exhaustive_systems": 74954,
+  "fixed_witness_failures": 0,
+  "frozen_hash_mismatches": [],
+  "local_without_common": 39374,
+  "pairwise_only_witness": {
+    "global_intersection_nonempty": false,
+    "pairwise": true
+  },
+  "pairwise_without_common": 3174,
+  "pass": true,
+  "random_failures": 0,
+  "random_larger_systems": 25000,
+  "schema": "PMR007_DEEP_G_V3_DISTINCT_REREVIEW_RESULTS",
+  "source_custody_pass": true,
+  "source_locator_count": 5,
+  "source_truth_established": false
+}

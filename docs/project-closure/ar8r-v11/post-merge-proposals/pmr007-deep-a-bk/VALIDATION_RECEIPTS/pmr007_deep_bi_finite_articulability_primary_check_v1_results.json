@@ -1,0 +1,55 @@
+{
+  "atom_sizes": {
+    "1": {
+      "congruence_failures": 0,
+      "contents": 2,
+      "homomorphism_failures": 0,
+      "quotient_pass": true,
+      "surjective": true,
+      "tokens": 4
+    },
+    "2": {
+      "congruence_failures": 0,
+      "contents": 4,
+      "homomorphism_failures": 0,
+      "quotient_pass": true,
+      "surjective": true,
+      "tokens": 8
+    },
+    "3": {
+      "congruence_failures": 0,
+      "contents": 8,
+      "homomorphism_failures": 0,
+      "quotient_pass": true,
+      "surjective": true,
+      "tokens": 16
+    },
+    "4": {
+      "congruence_failures": 0,
+      "contents": 16,
+      "homomorphism_failures": 0,
+      "quotient_pass": true,
+      "surjective": true,
+      "tokens": 32
+    },
+    "5": {
+      "congruence_failures": 0,
+      "contents": 32,
+      "homomorphism_failures": 0,
+      "quotient_pass": true,
+      "surjective": true,
+      "tokens": 64
+    }
+  },
+  "checker": "PRIMARY_V1",
+  "congruence_failures": 0,
+  "homomorphism_failures": 0,
+  "identity": "PMR-007-FTASA-1",
+  "personal_expansions": 16,
+  "quotient_failures": 0,
+  "result": "PASS",
+  "source_authority_expansions": 4,
+  "surjectivity_failures": 0,
+  "version_expansions": 4,
+  "world_anchor_twins": 10
+}

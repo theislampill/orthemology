@@ -1,0 +1,58 @@
+schema: pmr007-deep-r-r5-common-union-v2
+identity: PMR-007-R5CU-1
+status: REPAIRED_POST_MERGE_RESEARCH_CANDIDATE
+domain:
+  objects: [o, a, b, c, d, e]
+  order_placeholder: o
+  finite_realizer: a
+  role_bearers: [a, b, c, d]
+  originated_effect: e
+stipulated_rival_strengthening_predicates:
+  necessary: [o]
+  underived_placeholder: [o]
+  abstract: [o]
+  externally_actual: [a]
+  originator_proxy: [a]
+  impersonal: [a, b, c, d]
+links:
+  - {from: o, relation: CONSTRAINS, to: modal_transition_profiles}
+  - {from: finite_content_class, relation: INFORMS, to: selection_coordinate_S}
+  - {from: exact_norm_potential_N, relation: EVALUATES, to: revision_and_selection_states}
+  - {from: selection_coordinate_S, relation: DIRECTS, to: a}
+  - {from: a, relation: REALIZES, to: e}
+  - {from: feag_translation, relation: TRANSPORTS, to: selected_finite_content}
+  - {from: response_transducer, relation: UPDATES, to: selected_finite_state}
+components:
+  exact_norm_potential: PMR-007-ANH-1
+  formal_coupling: PMR-007-GUPP-1
+  token_responsiveness: PMR-007-ETRP-1
+  epistemic_proper_function_boundary: PMR-007-TRPF-1
+  finite_articulability_groupoid: PMR-007-FEAG-1
+role_proxies:
+  names: [W_role, P_role, K_role]
+  globally_available: true
+  common_bearer: false
+  divine_attribute_predication: false
+withheld:
+  personality: true
+  intentional_ownership: true
+  wisdom: true
+  speech: true
+  revelation: true
+source_firewall:
+  neutral_model:
+    track_n_source_accepted: false
+  source_conditioned_expansion:
+    separate: true
+    neutral_entailment: false
+authority_ceiling:
+  finite_model_consistency_only: true
+  metaphysical_possibility: NOT_ESTABLISHED
+  world_actuality: NOT_ESTABLISHED
+  explanatory_unification: NOT_ESTABLISHED
+architecture_disposition:
+  integrated_champion: NONE
+  rival_parity: UNBROKEN
+novelty:
+  general_mathematics: 0
+  world_directed_advance: 0

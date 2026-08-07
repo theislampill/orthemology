@@ -1,0 +1,85 @@
+{
+  "exhaustive_criterion_cases": 164380,
+  "exhaustive_failures": 0,
+  "exhaustive_single_path_hypergraphs": 32906,
+  "model": "PMR007_ROUND20_PROVENANCE_RESILIENT_RESTORATIVE_CUTSETS_V2.yaml",
+  "monotonicity_cases": {
+    "add": 35549,
+    "contract": 35549,
+    "delete": 35549,
+    "duplicate": 35549
+  },
+  "overall": "PASS",
+  "random_multi_path_criterion_cases": 200207,
+  "random_multi_path_systems": 40000,
+  "random_or_monotonicity_failures": [],
+  "schema": "PMR007_ROUND20_PRRC_PRIMARY_CHECK_RESULTS_V2",
+  "stronger_reading_controls": {
+    "R20-CM1": {
+      "expected": 1,
+      "got": 1,
+      "pass": true
+    },
+    "R20-CM2": {
+      "expected": 1,
+      "got": 1,
+      "pass": true
+    },
+    "R20-CM3": {
+      "expected": 1,
+      "got": 1,
+      "pass": true
+    },
+    "R20-CM4": {
+      "expected": 1,
+      "got": 1,
+      "pass": true
+    },
+    "R20-CM5": {
+      "expected": 2,
+      "got": 2,
+      "pass": true
+    },
+    "R20-CM7": {
+      "expected": 2,
+      "got": 2,
+      "pass": true
+    },
+    "R20-CM8": {
+      "expected": 3,
+      "got": 3,
+      "pass": true
+    },
+    "adaptive_after_commitment": {
+      "commit_robust": false,
+      "pass": true,
+      "static": true
+    },
+    "dynamic_rerouting": {
+      "pass": true,
+      "remaining_paths": [
+        "p1"
+      ]
+    },
+    "incompatible_execution": {
+      "compatible_cover": false,
+      "pass": true,
+      "support_robust": true
+    },
+    "partial_registry": {
+      "operative": false,
+      "pass": true,
+      "registered": true
+    },
+    "positive_construction": {
+      "kappa": 3,
+      "pass": true,
+      "robust": true
+    },
+    "unauthenticated_alias": {
+      "actual": 1,
+      "apparent": 2,
+      "pass": true
+    }
+  }
+}

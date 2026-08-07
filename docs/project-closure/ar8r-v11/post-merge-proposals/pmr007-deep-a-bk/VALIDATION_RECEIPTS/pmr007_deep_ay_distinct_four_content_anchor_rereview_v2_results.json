@@ -1,0 +1,18 @@
+{
+  "anchor_reductions": 272,
+  "content_rigid_structural_nonrigid_control": true,
+  "hash_check": {
+    "checked": 6,
+    "details": [],
+    "mismatches": 0
+  },
+  "interpretations_checked": 48000,
+  "nontrivial_residual_orbits": 3399,
+  "orbit_profile_failures": 0,
+  "overall": "PASS",
+  "random_content_structures": 6000,
+  "rigid_impersonal_control": true,
+  "schema": "pmr007-deep-ay-distinct-four-content-anchor-rereview-v2-results",
+  "singleton_residual_orbits": 44601,
+  "structural_rigid_content_nonrigid_control": true
+}

@@ -1,0 +1,23 @@
+{
+  "counts": {
+    "adaptive_policies_checked": 128,
+    "bound_comparison_cases": 200,
+    "delayed_witness_controls": 1,
+    "distinct_trace_equivalent_pair_controls": 1,
+    "failures": 0,
+    "frozen_files": 8,
+    "hash_mismatches": 0,
+    "random_model_pairs": 200,
+    "reachable_space_cases": 200
+  },
+  "failures": [],
+  "identity": "PMR-007-NIBE-1",
+  "rereview": "distinct reachable-row-space linear algebra and adaptive-policy semantics",
+  "result": "PASS",
+  "scope_notes": [
+    "finite controlled weighted systems",
+    "common candidate-independent policies",
+    "registered trace algebra only",
+    "ontology and source truth not inferred"
+  ]
+}

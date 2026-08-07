@@ -113,7 +113,7 @@ UNICODE_INDEXED_IDENTIFIER_RE = re.compile(
 )
 APPROVED_DIAGNOSTIC_OCCURRENCE_KEY = (
     "theory/orthemic-core-formalization.md",
-    477,
+    493,
     38,
     13,
 )

@@ -1,0 +1,47 @@
+{
+  "all_equal_trials": 5,
+  "bearer_assignment_trials": 50000,
+  "claims": {
+    "full_partition_characterization_passes": true,
+    "hashes_match": true,
+    "plural_bearer_realizations_exercised": true,
+    "relabeling_invariance_passes": true,
+    "selected_incidence_graph_connected": true,
+    "source_anchors_match": true,
+    "textual_binder_not_derived_by_topology": true
+  },
+  "coordinate_relabeling_failures": 0,
+  "coordinate_relabeling_trials": 20000,
+  "frozen_hash_mismatches": 0,
+  "frozen_hash_rows": 7,
+  "incidence_components": [
+    [
+      "ABILITY",
+      "CHOICE",
+      "COMMAND",
+      "CREATION",
+      "KNOWLEDGE",
+      "LIFE",
+      "PURE_PERFECTION_GUARD",
+      "SPECIFICATION",
+      "SPEECH",
+      "VOLITION"
+    ]
+  ],
+  "nontrivial_uncrossed_partitions": 0,
+  "notes": [
+    "The source graph is selected and representation-relative.",
+    "Textual co-reference is a source proposition, not a neutral world theorem.",
+    "The rereview establishes formal graph and custody claims only."
+  ],
+  "one_block_partitions": 1,
+  "overall": "PASS",
+  "plural_bearer_trials": 49995,
+  "qiyas_single_guard_deletion_witnesses": 4,
+  "schema": "PMR007_DEEP_AH_DISTINCT_REREVIEW_RESULTS_V2",
+  "set_partitions_checked": 115975,
+  "source_anchor_checks": 17,
+  "source_anchor_failures": 0,
+  "source_coordinate_deletion_witnesses": 6,
+  "source_sha256": "932abd7e2d7b3702d5d6d77d2a4a95ecfb3a9ccbcfbbce7ae750b2bcf55bef7c"
+}

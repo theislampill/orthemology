@@ -1,0 +1,47 @@
+{
+  "identity": "PMR-007-ILRC-1",
+  "checker": "PRIMARY_V1",
+  "field": "exact_rationals_for_executable_witnesses; theorem_candidate_over_nonnegative_reals",
+  "two_by_two_tables": 3059,
+  "two_by_two_rank1": 471,
+  "two_by_two_rank2": 2588,
+  "canonical_factorization_failures": 0,
+  "factor_normalization_trials": 49832,
+  "factor_normalization_failures": 0,
+  "coarsening_trials": 50000,
+  "coarsening_factorization_failures": 0,
+  "explicit_rank_witnesses": {
+    "identity_2": {
+      "ordinary_rank": 2,
+      "canonical_width": 2,
+      "factorization_pass": true,
+      "interpretation": "ordinary rank lower bound and H=X upper bound force nonnegative rank n"
+    },
+    "identity_3": {
+      "ordinary_rank": 3,
+      "canonical_width": 3,
+      "factorization_pass": true,
+      "interpretation": "ordinary rank lower bound and H=X upper bound force nonnegative rank n"
+    },
+    "identity_4": {
+      "ordinary_rank": 4,
+      "canonical_width": 4,
+      "factorization_pass": true,
+      "interpretation": "ordinary rank lower bound and H=X upper bound force nonnegative rank n"
+    },
+    "identity_5": {
+      "ordinary_rank": 5,
+      "canonical_width": 5,
+      "factorization_pass": true,
+      "interpretation": "ordinary rank lower bound and H=X upper bound force nonnegative rank n"
+    },
+    "identity_6": {
+      "ordinary_rank": 6,
+      "canonical_width": 6,
+      "factorization_pass": true,
+      "interpretation": "ordinary rank lower bound and H=X upper bound force nonnegative rank n"
+    }
+  },
+  "zero_term_handling": "NOT_EXPLICITLY_ATTACKED_IN_V1",
+  "result": "PASS"
+}

@@ -1,0 +1,24 @@
+{
+  "counts": {
+    "exhaustive_ternary_matrices": 19683,
+    "failures": 0,
+    "frozen_files": 6,
+    "hash_mismatches": 0,
+    "identifiable": 53693,
+    "matrices_checked": 69683,
+    "nonidentifiable": 15990,
+    "random_binary_matrices": 50000,
+    "strict_adaptive_gaps": 3070,
+    "surface_projection_controls": 1
+  },
+  "failures": [],
+  "identity": "PMR-007-PFIT-1",
+  "rereview": "distinct partition-refinement and bitmask decision-tree DP",
+  "result": "PASS",
+  "scope_notes": [
+    "deterministic static response maps",
+    "complete certificate objects",
+    "intervention feasibility assumed",
+    "identification is not truth"
+  ]
+}

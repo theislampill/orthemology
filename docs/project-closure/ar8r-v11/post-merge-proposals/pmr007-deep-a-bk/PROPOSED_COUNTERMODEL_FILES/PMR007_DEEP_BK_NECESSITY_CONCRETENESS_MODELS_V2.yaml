@@ -1,0 +1,41 @@
+schema: pmr007-deep-bk-necessity-concreteness-models-v2
+identity: PMR-007-NCBD-1
+version: V2
+sorts:
+  W: finite_declared_modal_indices
+  O_w: local_bearer_occurrences
+  G: global_bearers
+  A: abstract_order_objects
+maps:
+  iota_w: local_occurrence_to_global_bearer
+  transport_wv: optional_local_occurrence_transport
+predicates:
+- EXISTS
+- ROOT_ROLE
+- UNDERIVED_IN_GRAPH
+- CONCRETE
+- ABSTRACT_ORDER
+conclusion:
+  name: DECLARED_FRAME_PERSISTENT_CONCRETE_ROOT
+  guards:
+  - COVERAGE
+  - B_ID
+  - CONCRETE_EXEMPLIFICATION
+  - FRAME_SCOPE
+  transport_certification:
+  - COHERENCE
+  - transport_preserves_iota
+countermodels:
+- actual_root_without_world1_root
+- unique_world_roots_with_distinct_global_labels
+- coherent_counterparts_without_numerical_identity
+- abstract_order_without_concrete_occurrence
+- one_global_root_with_nonconcrete_occurrence
+- frame_extension_without_new_occurrence
+nonclaims:
+- metaphysical_necessity
+- cross_world_identity_truth
+- self_subsistence_or_aseity
+- Necessary_Being_or_Creator
+- intellect_personality_Wisdom_or_Speech
+- general_mathematical_novelty

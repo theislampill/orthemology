@@ -1,0 +1,47 @@
+schema: pmr007-deep-bh-truth-calibrated-correction-models-v1
+identity: PMR-007-TCRPF-1
+version: V1
+setting:
+  graph: finite_connected_undirected
+  increments: integer_antisymmetric
+  truth_loss: independently_supplied_integer_vertex_coordinate
+  certificate: spanning_tree_plus_fundamental_cycle_basis
+positive_witness:
+  vertices: [0, 1, 2, 3]
+  edges: [[0,1],[1,2],[2,3],[0,3],[0,2]]
+  truth_loss: {0: 3, 1: 2, 2: 1, 3: 0}
+  increment_rule: d_u_v_equals_L_u_minus_L_v
+countermodels:
+  anti_truth_exact:
+    property: zero_holonomy_but_wrong_orientation
+  tree_only:
+    property: tree_calibration_with_bad_off_tree_edge
+  unrelated_potential:
+    property: exact_increment_field_not_calibrated_to_truth_loss
+  accidental_success:
+    property: truth_reduction_without_function_fixing_relation
+  selected_false_end:
+    property: selected_effect_without_truth_link
+  unauthorized_design:
+    property: assigned_role_without_legitimate_truth_aim
+  fitrah_source_relative:
+    property: school_internal_purpose_without_neutral_source_world_bridge
+proper_function_coordinates:
+- frequency
+- causal_role
+- organizational_autopoietic
+- selected_effect
+- design
+- learned_objective
+- success_surface
+- teleological_norm
+- plantinga_epistemic_proper_function
+- fitrah_oriented
+nonclaims:
+- truth_or_completeness_of_L
+- objective_teleology
+- proper_function_from_success
+- designer_or_personal_ground
+- fitrah_world_truth
+- Wisdom
+- general_mathematical_novelty

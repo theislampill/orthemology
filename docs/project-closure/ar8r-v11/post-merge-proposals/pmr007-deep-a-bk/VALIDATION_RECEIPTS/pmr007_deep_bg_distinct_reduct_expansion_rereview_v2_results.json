@@ -1,0 +1,66 @@
+{
+  "bridge_controls": {
+    "B11_wisdom_false_expansion_exists": true,
+    "B15_speech_false_expansion_exists": true,
+    "B6_endpoint_granted_structurally": true,
+    "B7_intellect_false_expansion_exists": true,
+    "B8_personal_false_expansion_exists": true,
+    "creator_false_expansion_exists": true,
+    "source_role_does_not_encode_personality": true
+  },
+  "checker": "DISTINCT_REDUCT_EXPANSION_REREVIEW_V2",
+  "expansions_checked": 512,
+  "false_witnesses_by_target": {
+    "ActualSpeech": 256,
+    "Agentic": 256,
+    "BecauseFitting": 256,
+    "CreatorClass": 256,
+    "Intellect": 256,
+    "IntentionalUptake": 256,
+    "Personal": 256,
+    "SpeechCapacity": 256,
+    "Wisdom": 256
+  },
+  "frozen_hash_mismatches": [],
+  "frozen_hash_rows": 5,
+  "fully_aligned_profiles": 2,
+  "identity": "PMR-007-IR5CM-1",
+  "neutral_digest_variations": 0,
+  "one_bearer_role_checks": {
+    "all_required_roles": true,
+    "faithful_expression": true,
+    "fitting_alignment": true,
+    "latent_width_two": true,
+    "nontrivial_effect_relation": true,
+    "norm_selection_alignment": true,
+    "one_bearer": true,
+    "present_all_declared_worlds": true,
+    "truth_target_alignment": true,
+    "underived_in_declared_graph": true
+  },
+  "result": "PASS",
+  "single_deletion_pass": {
+    "ActualSpeech": true,
+    "Agentic": true,
+    "BecauseFitting": true,
+    "CreatorClass": true,
+    "Intellect": true,
+    "IntentionalUptake": true,
+    "Personal": true,
+    "SpeechCapacity": true,
+    "Wisdom": true
+  },
+  "structural_profiles": 32,
+  "target_predicates": 9,
+  "true_witnesses_by_target": {
+    "ActualSpeech": 256,
+    "Agentic": 256,
+    "BecauseFitting": 256,
+    "CreatorClass": 256,
+    "Intellect": 256,
+    "IntentionalUptake": 256,
+    "Personal": 256,
+    "SpeechCapacity": 256,
+    "Wisdom": 256
+  }
+}

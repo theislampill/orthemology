@@ -1,0 +1,37 @@
+{
+  "acyclic_digraphs_n_le_4": 572,
+  "all_loopless_digraphs_n_le_4": 4165,
+  "controls": {
+    "cycle_is_upstream_directed_without_root": {
+      "acyclic": false,
+      "roots": [],
+      "unique_universal_root": false,
+      "upstream_directed": true
+    },
+    "downstream_merger_has_two_roots": {
+      "acyclic": true,
+      "roots": [
+        0,
+        1
+      ],
+      "unique_universal_root": false,
+      "upstream_directed": false
+    },
+    "unique_root_positive": {
+      "acyclic": true,
+      "roots": [
+        0
+      ],
+      "unique_universal_root": true,
+      "upstream_directed": true
+    }
+  },
+  "cyclic_digraphs_n_le_4": 3593,
+  "cyclic_upstream_directed_rootless_controls": 2426,
+  "failure_count": 0,
+  "failures": [],
+  "frozen_hash_mismatches": [],
+  "random_dags_n_5_to_9": 50000,
+  "result": "PASS",
+  "schema": "PMR007_DEEP_J_ALL_DIGRAPH_REREVIEW_RESULTS_V1"
+}

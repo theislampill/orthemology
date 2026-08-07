@@ -1,0 +1,34 @@
+schema: pmr007-deep-ax-source-testimony-world-gate-models-v1
+identity: PMR-007-STWG-1
+architectures: [A_UNIFIED_PERSONAL, R_IMPERSONAL_SOURCE_COMPATIBLE]
+coordinates:
+  source_root: authenticated actual acquisition or transmission root
+  observation: complete root-level source observation
+  translation_channel: candidate-independent map or stochastic channel from source observation
+  referent_map: source bearer to candidate-world object map
+  reliability_model: architecture-conditioned distribution of source observations
+models:
+  copied_translations:
+    roots: [g0]
+    displayed_items: [translation_1, translation_2, paraphrase]
+    rule: all displayed items descend from g0 and constitute one likelihood coordinate
+  correlated_roots:
+    roots: [g0, g1]
+    rule: joint distribution is not assumed to factor into marginals
+  source_compatibility_parity:
+    rule: P_A equals P_R on the complete source observation space
+    consequence: source likelihood ratio is one
+  hidden_referent_anchor:
+    rule: admissible interpretation family is restricted by preferred-world identity
+    consequence: target selection has been imported into the source-world map
+  version_drift:
+    rule: applicability changes while source bytes remain fixed
+  positive_independent_roots:
+    rule: roots are authenticated and conditionally independent given architecture; each has nonunit likelihood ratio
+nonclaims:
+  - source truth
+  - Arabic-primary verification
+  - actual-world selection
+  - personal-ground proof
+  - tawatur warrant
+  - owner adoption

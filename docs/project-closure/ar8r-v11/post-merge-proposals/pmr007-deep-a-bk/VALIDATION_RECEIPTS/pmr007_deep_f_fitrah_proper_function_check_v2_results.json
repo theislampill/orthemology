@@ -1,0 +1,75 @@
+{
+  "accurate_but_defeated": {
+    "accuracy": 1,
+    "nacc": 1,
+    "nfunc": 1,
+    "nwarr": 0,
+    "undefeated": 0
+  },
+  "all_nfunc_deletions_block": true,
+  "all_three_fail_neutral_factorization": true,
+  "collision_fibres": {
+    "nacc": 8,
+    "nfunc": 16,
+    "nwarr": 8
+  },
+  "enriched_factorization_failures": 0,
+  "lucky_accuracy": {
+    "accuracy": 1,
+    "nacc": 0,
+    "nfunc": 0
+  },
+  "neutral_fibres": 16,
+  "nfunc_guard_deletions": [
+    {
+      "guard": "source",
+      "nfunc": 0
+    },
+    {
+      "guard": "designer",
+      "nfunc": 0
+    },
+    {
+      "guard": "truth_aim",
+      "nfunc": 0
+    },
+    {
+      "guard": "fitrah_health",
+      "nfunc": 0
+    },
+    {
+      "guard": "proper_operation",
+      "nfunc": 0
+    },
+    {
+      "guard": "suitable_environment",
+      "nfunc": 0
+    }
+  ],
+  "pass": true,
+  "profile_twins": {
+    "impersonal": [
+      0,
+      0,
+      0
+    ],
+    "q": [
+      1,
+      1,
+      1,
+      1
+    ],
+    "track_n": [
+      1,
+      1,
+      1
+    ]
+  },
+  "proper_function_episode_error": {
+    "accuracy": 0,
+    "nacc": 0,
+    "nfunc": 1
+  },
+  "schema": "PMR007_DEEP_F_PRIMARY_CHECK_RESULTS_V2",
+  "worlds_checked": 2048
+}

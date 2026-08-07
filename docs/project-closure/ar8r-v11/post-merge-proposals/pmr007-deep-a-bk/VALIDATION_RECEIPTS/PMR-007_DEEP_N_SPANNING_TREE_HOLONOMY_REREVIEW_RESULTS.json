@@ -1,0 +1,15 @@
+{
+  "disconnected_components_verified": 2,
+  "exact_labelings": 1040,
+  "exhaustive_n4_labelings": 4096,
+  "failures": [],
+  "frozen_hash_rows": 6,
+  "hash_mismatches": [],
+  "independent_method_mismatches": 0,
+  "positive_three_cycle_rejected": true,
+  "random_exact_systems": 30000,
+  "random_generation_failures": 0,
+  "random_perturbed_systems": 30000,
+  "result": "PASS",
+  "schema": "PMR007_DEEP_N_SPANNING_TREE_HOLONOMY_REREVIEW_RESULTS_V1"
+}

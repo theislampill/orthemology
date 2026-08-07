@@ -1,0 +1,58 @@
+schema: PMR007_DEEP_BI_ADMISSION_OVERLAY_V1
+identity: PMR-007-FTASA-1
+round: PMR-007-DEEP-BI
+canonical_version: V2
+status: ADMITTED_POST_MERGE_SCOPED_CENTRAL_ARTICULABILITY_NONBRIDGE_RESULT
+historical_identity: NONE
+repository_authority: 4c3dc103e8c753690fa5de560ab82157392ced4c
+proof_status: HUMAN_PROOF_PLUS_EXECUTABLE_FINITE_CHECKS
+countermodel_status: COMPLETE_AT_DECLARED_SCOPE
+cold_audit:
+  disposition: REPAIR_REQUIRED
+  blocking_findings: 10
+  repaired: 10
+fresh_rereview:
+  disposition: PASS_WITH_NONBLOCKING_ABSOLUTE_SCOPE_AND_SEMANTIC_GROUND_NOTES
+  external_independence: false
+admitted_results:
+- every_finite_boolean_content_algebra_has_a_finite_impersonal_created_token_realization
+- semantic_kernel_is_a_congruence_and_quotient_is_semantic_image
+- exact_translation_requires_commuting_semantic_guard
+- finite_complete_algebraic_articulability_does_not_entail_mentality_or_Speech
+- grammar_and_semantic_quotient_do_not_determine_world_reference_source_authority_or_version_applicability
+ug_effects:
+  UG_T4: ABSOLUTE_TOTAL_ORTHABILITY_NONEMERGENCE_STILL_OPEN
+  UG_T7: NOT_ENTAILED_BY_COMPLETE_FINITE_ALGEBRAIC_REDUCT
+  UG_T8: NOT_ENTAILED_BY_COMPLETE_FINITE_ALGEBRAIC_REDUCT
+  UG_T9: CREATED_EXPRESSION_CONTENT_DISTINCTION_FORMALIZED_WITHOUT_UNCREATED_CONTENT_PROMOTION
+anti_unification:
+- token_not_occurrence
+- syntax_not_semantics
+- semantics_not_world_reference
+- world_reference_not_source_authority
+- source_authority_not_recipient_warrant
+- version_applicability_not_semantic_equivalence
+r5:
+  status: STRENGTHENED_IMPERSONAL_SEMANTIC_ALGEBRA_REALIZER_SURVIVES
+nonclaims:
+- no_absolute_or_infinite_articulability
+- no_natural_language_completeness
+- no_derivation_of_semantics_from_syntax
+- no_uncreated_or_divine_content
+- no_mentality_personality_Wisdom_or_Speech
+- no_source_truth_or_actual_world_selection
+- no_integrated_champion_or_meniscus
+origin_and_novelty:
+  relation: FIRST_ISOMORPHISM_APPLICATION_AND_UG_SOURCE_WORLD_NONBRIDGE
+  general_mathematical_novelty: 0
+formalization:
+  lean_status: PLAN_ONLY
+  parse: NOT_RUN
+  elaboration: NOT_RUN
+  kernel: NOT_RUN
+external_review: OPEN
+owner_adoption: PENDING
+repository_proposal_status: PUBLIC_SAFE_POST_MERGE_PROPOSAL_PENDING_REPOSITORY_AUDIT
+integrated_champion: NONE
+meniscus: MENISCUS_NOT_REACHED
+natural_closure: NOT_REACHED

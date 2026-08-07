@@ -48,14 +48,27 @@ def main():
     fixtures = json.loads(read("tests/verdict-fixtures.json"))
 
     # 1. CorePath equation appears identically in core and manuscript, matching the registry
-    expected = "{ " + ", ".join(core_aliases) + " }"
+    corepath_block = re.search(
+        r"```math\s*\\operatorname\{CorePath\}(.*?)```",
+        core,
+        re.S,
+    )
+    corepath_aliases = (
+        re.findall(r"\\operatorname\{(V\d+[a-e]?(?:-[PT])?)\}", corepath_block.group(1))
+        if corepath_block
+        else []
+    )
     expected_ms = (
         latex_operator("CorePath")
         + r" = \{"
         + ", ".join(latex_operator(alias) for alias in core_aliases)
         + r"\}"
     )
-    check("core states the registry CorePath", expected in core, expected)
+    check(
+        "core states the registry CorePath",
+        corepath_aliases == core_aliases,
+        repr(corepath_aliases),
+    )
     check(
         "manuscript states the registry CorePath",
         contains_inline_math(ms, expected_ms),

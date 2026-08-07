@@ -1,0 +1,17 @@
+{
+  "boolean_3x3_functions": 512,
+  "content_mediated_functions": 6,
+  "diagonal_profiles_with_cross_class_collision": 6,
+  "hash_check": {
+    "checked": 6,
+    "details": [],
+    "mismatches": 0
+  },
+  "impersonal_semantic_processor_control": true,
+  "overall": "PASS",
+  "schema": "pmr007-deep-az-distinct-three-by-three-rereview-v2-results",
+  "semantic_anchor_deletion_control": true,
+  "single_cell_deletion_failures": 0,
+  "stochastic_classifier_failures": 0,
+  "stochastic_tables": 30000
+}

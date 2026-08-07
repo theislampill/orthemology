@@ -1,0 +1,8 @@
+schema: PMR007_ORIGIN_POLICY_V2
+theorem_origin_authority: V5
+post_merge_results_have_historical_identity: false
+general_novelty_credit: 0
+rules:
+- No renamed/specialized/application result creates an independent origin.
+- Round14 V2 is a repair of a post-merge V1, not a historical recovery.
+- Round15/16 are scoped implementation/formal specializations.

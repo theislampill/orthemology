@@ -1,0 +1,88 @@
+{
+  "base_models": 2624,
+  "claims": {
+    "H7a_b_c_plus_unique_entails_one_underived_intellect_role": true,
+    "NM_HOST_entails_mind": true,
+    "full_bridge_does_not_entail_personality": true,
+    "representation_hosting_does_not_entail_ground": true,
+    "structure_underived_does_not_entail_mind": true
+  },
+  "full_bridge_models": 1424,
+  "overall": "PASS",
+  "queries": {
+    "full_bridge_to_personality": {
+      "countermodels": 16,
+      "eligible_models": 64,
+      "first_countermodel": {
+        "G0": false,
+        "G1": true,
+        "H0": false,
+        "H1": true,
+        "M0": false,
+        "M1": true,
+        "N": true,
+        "P0": false,
+        "P1": false,
+        "R0": false,
+        "R1": true,
+        "S": true,
+        "U": true
+      }
+    },
+    "full_bridge_to_underived_intellect": {
+      "countermodels": 0,
+      "eligible_models": 64,
+      "first_countermodel": null
+    },
+    "full_bridge_to_unique_ground": {
+      "countermodels": 0,
+      "eligible_models": 64,
+      "first_countermodel": null
+    },
+    "notional_to_mind": {
+      "countermodels": 0,
+      "eligible_models": 1024,
+      "first_countermodel": null
+    },
+    "notional_underived_to_ground": {
+      "countermodels": 224,
+      "eligible_models": 512,
+      "first_countermodel": {
+        "G0": false,
+        "G1": false,
+        "H0": false,
+        "H1": false,
+        "M0": false,
+        "M1": true,
+        "N": true,
+        "P0": false,
+        "P1": false,
+        "R0": false,
+        "R1": true,
+        "S": false,
+        "U": true
+      }
+    },
+    "structural_underived_to_mind": {
+      "countermodels": 64,
+      "eligible_models": 656,
+      "first_countermodel": {
+        "G0": false,
+        "G1": false,
+        "H0": false,
+        "H1": false,
+        "M0": false,
+        "M1": false,
+        "N": false,
+        "P0": false,
+        "P1": false,
+        "R0": false,
+        "R1": false,
+        "S": true,
+        "U": true
+      }
+    }
+  },
+  "schema": "PMR007_DEEP_AI_PRIMARY_CHECK_RESULTS_V1",
+  "valuations_checked_per_class": 8192
+}

@@ -1,0 +1,63 @@
+{
+  "counts": {
+    "EW": 16,
+    "SW": 32,
+    "WD": 64,
+    "worlds": 4096
+  },
+  "deletion_witnesses": {
+    "EW": {
+      "AG": true,
+      "C": true,
+      "F": true,
+      "K": true,
+      "M": true,
+      "OWN": true,
+      "W_F": true,
+      "X": true
+    },
+    "SW": {
+      "AG": true,
+      "F": true,
+      "K": true,
+      "M": true,
+      "OWN": true,
+      "STAB": true,
+      "W_F": true
+    },
+    "WD": {
+      "AG": true,
+      "F": true,
+      "K": true,
+      "M": true,
+      "OWN": true,
+      "W_F": true
+    }
+  },
+  "distributed_control": true,
+  "failure_count": 0,
+  "failures": [],
+  "guard_coordinates": [
+    "PF_T",
+    "REP",
+    "REL",
+    "AG",
+    "K",
+    "F",
+    "W_F",
+    "M",
+    "OWN",
+    "C",
+    "X",
+    "STAB"
+  ],
+  "result": "PASS",
+  "schema": "PMR007_DEEP_K_WISDOM_GUARD_RESULTS_V2",
+  "stage_separations": {
+    "EW_without_SW": true,
+    "KWP_without_F": true,
+    "PF_REP_REL_without_WD": true,
+    "WD_without_EW": true,
+    "unique_root_without_WD": true
+  }
+}

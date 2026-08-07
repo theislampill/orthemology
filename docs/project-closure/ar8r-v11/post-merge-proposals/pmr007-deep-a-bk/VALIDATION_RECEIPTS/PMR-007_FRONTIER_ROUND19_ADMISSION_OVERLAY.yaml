@@ -1,0 +1,76 @@
+schema: PMR007_ROUND19_ADMISSION_OVERLAY_V1
+round: PMR-007-FRONTIER-ROUND19
+canonical_identity: PMR-007-PRQT-1
+canonical_packet: PMR-007_FRONTIER_ROUND19_PROVENANCE_ROOT_THRESHOLD_QUERY_COMPLEXITY_V2.md
+status: ADMITTED_POST_MERGE_SCOPED_RESULT
+provenance: NEW_POST_MERGE_RESEARCH
+historical_identity: null
+statement:
+  setting: finite arbitrary labelled partial matching in K_mn
+  oracle: edge membership plus exact canonical root label on positive replies
+  target: at least t distinct canonical labels
+  scope:
+    - deterministic
+    - adaptive
+    - zero_error
+    - labels_authenticated_by_assumption
+    - label_return_has_no_extra_query_cost
+  exact_depth: mn_minus_binom_t_2
+  parameter_guard: 1_le_t_le_min_m_n_and_alphabet_size_at_least_t
+repair_lineage:
+  V1:
+    status: PRESERVED_REPAIR_REQUIRED
+    blocking_findings: [R19-F01, R19-F02, R19-F03, R19-F04]
+  V2:
+    status: ADMITTED_POST_MERGE_SCOPED_RESULT
+    repairs: COMPLETE
+proof_status: PROVED_RELATIVE_TO_PRESERVED_CANDIDATE_1_AUTHORITY
+primary_executable_check:
+  status: PASS
+  recurrence_cases: 9455
+  exact_minimax_instances: 7
+  online_lifting_cases: 211094
+  boundary_cases: 147
+cold_audit: REPAIR_REQUIRED_THEN_REPAIRED
+fresh_rereview:
+  status: PASS_WITH_NONBLOCKING_AUTHORITY_AND_NOVELTY_NOTES
+  frozen_hash_failures: 0
+  independent_minimax_instances: 7
+  branch_cases: 338350
+  repeated_query_trials: 50000
+  failures: 0
+preserved_countermodels:
+  - R19-CM-MEMBERSHIP-ONLY
+  - R19-CM-SYMBOL-ALIAS
+  - R19-CM-SYMBOL-MERGE
+  - R19-CM-ROOT-NONINDEPENDENCE
+  - R19-CM-VERIFICATION-COST
+  - R19-CM-RECIPIENT-CONTRACT
+family_relation:
+  Candidate_1: TIGHT_ORACLE_ENRICHED_EXTENSION_AND_REDUCTION
+  AR2_AR3: FORMAL_QUERY_COMPLEXITY_INTERFACE
+  PRR_T1: UNRESOLVED_EXACT_IDENTITY
+  TAC_SAC: APPLICATION_INTERFACE_ONLY
+prior_art:
+  bounded_search: COMPLETE
+  exact_external_ancestor: NOT_LOCATED
+  exhaustive_review: OPEN
+general_mathematical_novelty: NOT_ESTABLISHED
+external_review: OPEN
+owner_adoption: PENDING
+repository_proposal_status: EXTERNAL_REVIEW_AND_OWNER_ADOPTION_REQUIRED
+candidate_effects:
+  A: exact_authenticated_root_threshold_query_cost_established
+  B: support_only_restoration_runtime_cannot_certify_root_threshold
+  C: route_multiplicity_does_not_establish_independent_metaphysical_support
+nonclaims:
+  - no_root_authentication_theorem
+  - no_evidential_independence_theorem
+  - no_randomized_or_quantum_bound
+  - no_distributed_or_common_knowledge_bound
+  - no_recipient_warrant_or_adoption_result
+  - no_world_directed_conclusion
+integrated_champion: NONE
+meniscus: MENISCUS_NOT_REACHED
+natural_closure: NOT_REACHED
+repository_mutation: false

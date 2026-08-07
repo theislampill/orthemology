@@ -1,0 +1,39 @@
+schema: pmr007-deep-aw-provenance-root-robust-diagnosis-models-v2
+identity: PMR-007-PRAD-1
+provenance: POST_MERGE_RESEARCH_CANDIDATE
+setting:
+  hypotheses: finite
+  roots: independently_authenticated_static_versioned_corruption_units
+  root_symbols: deterministic_complete_certificate_symbols
+  copies: bundled_with_actual_root
+  substitution_adversary: arbitrary_unmarked_replacement_at_at_most_f_roots
+  erasure_adversary: marked_failure_at_at_most_f_roots
+invariants:
+  root_codeword: tuple_of_selected_root_symbols
+  root_distance: minimum_Hamming_distance_between_hypotheses
+characterizations:
+  substitutions: root_distance >= 2*f+1
+  erasures: root_distance >= f+1
+  robust_root_selection: pair_separation_multicover
+controls:
+  distance_two:
+    erasure_f1: succeeds
+    substitution_f1: fails
+  distance_three:
+    substitution_f1: succeeds
+  copied_root:
+    apparent_messages: 40
+    corruption_coordinates: 1
+  common_bottleneck:
+    many_tests_one_root: jointly_corruptible
+  displayed_alias:
+    authentication_can_contract_coordinates_and_lower_distance
+  surface_projection:
+    action_only_projection_can_erase_certificate_distance
+nonclaims:
+  - no_root_authentication_or_independence_proof
+  - no_truth_honesty_competence_or_tawatur
+  - no_recipient_warrant_authority_adoption_or_execution
+  - no_common_knowledge
+  - no_adaptive_stochastic_asynchronous_or_dynamic_protocol
+  - no_version_drift_mobile_adversary_or_collusion

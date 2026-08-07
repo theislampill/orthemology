@@ -1,0 +1,91 @@
+schema: pmr007-deep-aq-source-compatible-architecture-models-v2
+identity: PMR-007-SCAP-1
+status: REPAIRED_POST_MERGE_RESEARCH_CANDIDATE
+architectures:
+  A:
+    label: unified_personal_ground
+    source_compatibility: conditional_on_track_n_source_and_world_bridges
+    neutral_profile:
+      - underived_order
+      - external_actuality
+      - semantic_anchor
+      - target_authority
+      - exact_norm_field
+      - causal_guidance
+      - finite_articulability
+      - source_role_compatibility
+    additional_coordinates:
+      - intentional_subjecthood
+      - personality
+      - selection_because_of_fittingness
+      - wisdom
+  R:
+    label: source_compatible_impersonal_powers_rival
+    source_compatibility: role_compatible_without_personal_predication
+    neutral_profile:
+      - underived_order
+      - external_actuality
+      - semantic_anchor
+      - target_authority
+      - exact_norm_field
+      - causal_guidance
+      - finite_articulability
+      - source_role_compatibility
+    withheld_coordinates:
+      - intentional_subjecthood
+      - personality
+      - selection_because_of_fittingness
+      - wisdom
+comparison_surface:
+  neutral_evidence:
+    type: finite_experiment_distributions
+    requirement: candidate_independent_experiment
+  representation:
+    type: common_markov_channel
+    requirement: frozen_before_candidate_scoring
+  source_contract:
+    type: versioned_source_world_admissibility_relation
+    coordinates:
+      - source_authentication
+      - translation_fidelity
+      - role_reconstruction
+      - version
+      - scope_applicability
+      - world_link
+  prior_policy:
+    type: separately_declared_prior_or_code
+three_gates:
+  GATE_S:
+    name: source_conditioned_exclusion
+    passes_when: independently_warranted_source_and_world_contract_excludes_R
+  GATE_E:
+    name: predictive_or_interventional_surplus
+    passes_when: represented_evidence_distributions_differ
+  GATE_P:
+    name: defended_prior_or_code
+    passes_when: prior_or_coding_policy_is_independently_justified
+controls:
+  - id: AQ-CM-MATCHED-RIVAL
+    description: A and R have equal source compatibility and identical represented distributions.
+    consequence: invariant neutral scores tie under equal priors.
+  - id: AQ-CM-RELABEL
+    description: swapping architecture labels leaves all neutral evidence fixed.
+    consequence: label-sensitive preference is not neutral evidence.
+  - id: AQ-CM-HIDDEN-ANCHOR
+    description: admissible interpretation family is restricted to the preferred referent without independent warrant.
+    consequence: singleton source-world fibre is imported rather than discovered.
+  - id: AQ-CM-PRIOR-REVERSAL
+    description: equal likelihood with reversed priors reverses posterior preference.
+    consequence: preference is prior-driven.
+  - id: AQ-CM-VERSION-DRIFT
+    description: same source bytes under a changed version contract alter applicability.
+    consequence: source compatibility is version-indexed.
+  - id: AQ-CM-TARGET-LABEL
+    description: a representation contains the preferred architecture label or target verdict.
+    consequence: apparent discrimination is target leakage.
+nonclaims:
+  - no_actual_world_selection
+  - no_neutral_personality_entailment
+  - no_wisdom_entailment
+  - no_source_authentication
+  - no_general_novelty

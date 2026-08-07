@@ -1,0 +1,23 @@
+{
+  "checker": "primary root/channel/copy/factorization semantics",
+  "counts": {
+    "data_processing_cases": 225,
+    "failures": 0,
+    "faithful_copy_ratio_cases": 200,
+    "independent_root_joint_cases": 2500,
+    "naive_copy_overcount_witnesses": 72,
+    "root_alias_cases": 1,
+    "root_channel_cases": 225,
+    "root_distribution_pairs": 25,
+    "root_merge_cases": 1
+  },
+  "declared_class": {
+    "binary_root_observations": true,
+    "common_channels": "2x2 stochastic grid {0,1/2,1}",
+    "independent_roots": 2,
+    "probability_denominator": 4
+  },
+  "failures": [],
+  "identity": "PMR-007-PREC-1",
+  "result": "PASS"
+}

@@ -1,0 +1,57 @@
+schema: PMR007_DEEP_AK_SOURCE_AGENTIVE_ARCHITECTURES_V2
+identity: PMR-007-SAMC-1
+version: V2
+source:
+  file: A-Commentary-on-the-Creed-of-Asfahani-v2.3(1).md
+  sha256: 932abd7e2d7b3702d5d6d77d2a4a95ecfb3a9ccbcfbbce7ae750b2bcf55bef7c
+  authority: TRANSLATED_PRIMARY_ACCESS
+roles:
+- CREATOR
+- KNOWING
+- ABLE
+- LIVING
+- VOLITIONAL
+- SPEAKING
+guards:
+- SRC_BYTES
+- LOCUS
+- TRANSLATION
+- ATTRIBUTION
+- PROPOSITION_RECONSTRUCTION
+- TRACK_N_ACCEPTANCE
+- COREFERENCE
+- REFERENT_IDENTITY
+- WORLD_ADEQUACY
+architectures:
+  A_UNIFIED_SOURCE_RELATIVE:
+    common_role_bearer: true
+    personal_target: REQUIRES_H8
+    source_commitment: true
+  B0_DISTRIBUTED_EMPTY_INTERSECTION:
+    common_role_bearer: false
+    source_compatible: false
+  B1_COUPLED_POWERS_SHARED_BEARER:
+    common_role_bearer: true
+    personal_target: false
+    source_compatibility: ROLE_EXTENSION_ONLY
+  C0_ABSTRACT_ORDER_BARE_ACTUALIZER:
+    common_role_bearer: false
+    source_compatible: false
+  C1_SOURCE_EXTENDED_ACTUALIZER:
+    common_role_bearer: true
+    personal_target: false
+    additional_primitive_burden: true
+countermodels:
+- existential_roles_without_coreference
+- common_bearer_without_personality
+- translation_deletion
+- proposition_deletion
+- world_deletion
+- source_compatible_nonpersonal_role_bearer
+- source_extended_architecture_C
+- name_attribute_overread
+nonclaims:
+- no_neutral_H6_H8_H9_H11_proof
+- no_Arabic_primary_verification
+- no_world_truth
+- no_integrated_champion_or_meniscus

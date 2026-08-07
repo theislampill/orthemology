@@ -1,0 +1,39 @@
+schema: pmr007-deep-ba-be-central-delta-v1
+changes:
+- from: BA
+  to:
+  - Candidate B
+  - OSM
+  - TAC
+  relation: FORMALIZES
+  effect: canonical operational state becomes interface-relative
+- from: BB
+  to:
+  - Candidate G
+  - Fable B06
+  relation: NARROWS_SCOPE
+  effect: typed nonproduct constraints do not establish derivational unity
+- from: BC
+  to:
+  - Candidate G
+  - Deep AN
+  - Deep AO
+  relation: BLOCKS
+  effect: same complete experiment yields universal decision parity
+- from: BD
+  to:
+  - Candidate A
+  - Candidate B
+  - Candidate C
+  - Track N
+  relation: REQUIRES_PREMISE
+  effect: source-world orientation needs non-swap-invariant anchor
+- from: BE
+  to:
+  - Candidate G
+  - OSM
+  - PRH
+  - R5
+  relation: ENABLES
+  effect: preregistered joint interactions can discriminate marginally identical models
+    but do not establish personal unity

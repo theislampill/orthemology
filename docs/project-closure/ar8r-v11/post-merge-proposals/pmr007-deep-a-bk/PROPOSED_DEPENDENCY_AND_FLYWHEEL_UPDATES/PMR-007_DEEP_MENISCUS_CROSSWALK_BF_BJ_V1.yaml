@@ -1,0 +1,66 @@
+schema: PMR007_DEEP_MENISCUS_CROSSWALK_BF_BJ_V1
+repository_authority: 4c3dc103e8c753690fa5de560ab82157392ced4c
+scope: admitted_post_merge_proposals_only
+nodes:
+  BF:
+    identity: PMR-007-ILRC-1
+    contribution: exact_real_nonnegative_latent_product_width_boundary
+    central_effect: joint_interaction_excludes_only_independently_width_restricted_impersonal_rivals
+  BG:
+    identity: PMR-007-IR5CM-1
+    contribution: one_bearer_impersonal_common_model
+    central_effect: one_structural_bearer_and_aligned_neutral_roles_do_not_entail_intellect_personality_Wisdom_or_Speech
+  BH:
+    identity: PMR-007-TCRPF-1
+    contribution: finite_truth_calibration_and_proper_function_boundary
+    central_effect: exact_trans_state_truth_calibration_does_not_select_proper_function_or_teleology
+  BI:
+    identity: PMR-007-FTASA-1
+    contribution: finite_content_relative_articulability_and_impersonal_semantic_algebra
+    central_effect: finite_articulability_does_not_entail_mentality_or_Speech
+  BJ:
+    identity: PMR-007-TQDC-1
+    contribution: deterministic_typed_descent_common_layer_and_anti_unification
+    central_effect: common_quotient_vocabulary_does_not_merge_native_theorem_structures_or_supply_explanatory_unity
+edges:
+- from: BE
+  to: BF
+  type: BURDEN_RELOCATION
+  contribution: joint_predictive_interaction_requires_independently_warranted_rival_width_or_structure_to_exclude_impersonal_latent_realization
+  not_transferred: personality_subjecthood_or_metaphysical_actuality
+- from: BF
+  to: BG
+  type: RIVAL_STRENGTHENING
+  contribution: unrestricted_latent_saturation_motivates_explicit_one_bearer_impersonal_common_model
+  not_transferred: physical_or_metaphysical_possibility
+- from: BG
+  to: BH
+  type: PROPER_FUNCTION_PRESSURE
+  contribution: common_bearer_can_carry_truth_target_norm_and_selection_roles_while_proper_function_remains_open
+  not_transferred: fittingness_teleology_or_Wisdom
+- from: BH
+  to: BI
+  type: NORM_SEMANTIC_INTERFACE
+  contribution: truth_calibration_and_semantic_quotient_can_coexist_under_an_impersonal_formal_architecture
+  not_transferred: source_truth_world_adequacy_mentality_or_Speech
+- from: BI
+  to: BJ
+  type: COMMON_LAYER_AND_ANTI_UNIFICATION
+  contribution: semantic_kernel_descent_shares_finite_fibre_factorization_but_requires_algebraic_congruence_beyond_set_descent
+  not_transferred: reductive_common_calculus
+- from: BJ
+  to: Candidate_G
+  type: ANTI_CARRIER_BOXING
+  contribution: substantive_unification_must_preserve_native_typed_objects_transformations_invariant_and_failure_class
+  not_transferred: explanatory_or_derivational_unity
+reverse_pressure:
+- impersonal_latent_saturation_reopens_width_and_intervention_burdens
+- one_bearer_impersonal_model_reopens_intellect_personality_Wisdom_and_Speech_bridges
+- truth_calibration_reopens_authority_truth_linkage_and_teleology
+- finite_articulability_reopens_absolute_UG_T4_and_UG_T7_UG_T8
+- common_descent_layer_reopens_native_structure_and_anti_answer_encoding_requirements
+central_status:
+  integrated_champion: NONE
+  strongest_rival: ONE_BEARER_IMPERSONAL_COMMON_MODEL_WITH_TRUTH_CALIBRATION_AND_FINITE_ARTICULABILITY
+  meniscus: MENISCUS_NOT_REACHED
+  natural_closure: NOT_REACHED

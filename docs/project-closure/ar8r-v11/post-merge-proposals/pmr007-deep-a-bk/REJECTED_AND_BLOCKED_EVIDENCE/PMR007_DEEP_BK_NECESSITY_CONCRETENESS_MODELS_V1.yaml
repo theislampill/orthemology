@@ -1,0 +1,47 @@
+schema: pmr007-deep-bk-necessity-concreteness-models-v1
+identity: PMR-007-NCBD-1
+version: V1
+modal_scope:
+  finite_worlds: true
+  local_domains: true
+  actual_world: w0
+predicates:
+- ROOT
+- UNDERIVED
+- CONCRETE
+bridges:
+- COVERAGE
+- COHERENCE
+- B_ID
+- CONCRETE_EXEMPLIFICATION
+- FRAME_SCOPE
+countermodels:
+  actual_only_root:
+    worlds: [w0, w1]
+    roots: {w0: r0, w1: null}
+  distinct_world_roots:
+    worlds: [w0, w1]
+    roots: {w0: r0, w1: r1}
+    numerical_identity: false
+  coherent_counterparts:
+    transport: r0_to_r1
+    numerical_identity: false
+  abstract_order_without_bearer:
+    abstract_order: [w0, w1]
+    concrete_roots: []
+  same_bearer_not_concrete_everywhere:
+    bearer: g
+    root_worlds: [w0, w1]
+    concrete_worlds: [w0]
+positive:
+  full_guarded:
+    bearer: g
+    root_worlds: [w0, w1]
+    concrete_worlds: [w0, w1]
+    B_ID: true
+nonclaims:
+- actual_modal_semantics
+- counterpart_or_transworld_identity_theory
+- metaphysical_necessity_or_concreteness
+- Necessary_Being_or_Creator
+- general_mathematical_novelty

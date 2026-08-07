@@ -1,0 +1,94 @@
+{
+  "asfahani_locators": {
+    "He is the one who spoke it and that He did not create it in other than Him": [
+      141
+    ],
+    "His speech is uncreated": [
+      139,
+      1504
+    ],
+    "Informative speech may be true or false": [
+      124
+    ],
+    "Speech, like other attributes, cannot be held separate from the one it is attributed to": [
+      141
+    ],
+    "The speech of Allah is from Allah, not distinct from Him": [
+      141
+    ]
+  },
+  "author_without_matching_utterer_models": 4,
+  "authority_ceiling": {
+    "ASF": "TRANSLATED_PRIMARY_ACCESS_NOT_ARABIC_PRIMARY_VERIFICATION",
+    "UG": "OWNER_PROGRAM_TARGET_NOT_THEOREM_OR_SOURCE_AUTHORITY"
+  },
+  "custody_coordinate_variation": {
+    "APP": [
+      false,
+      true
+    ],
+    "AUTHZ": [
+      false,
+      true
+    ],
+    "PROV": [
+      false,
+      true
+    ],
+    "SID": [
+      false,
+      true
+    ],
+    "VER": [
+      false,
+      true
+    ]
+  },
+  "eligible_guard_worlds": 1,
+  "expression_fidelity_custody_worlds_checked": 32,
+  "expression_relations_checked": 256,
+  "failure_count": 0,
+  "failures": [],
+  "frozen_hash_mismatches": [],
+  "frozen_hash_rows_checked": 8,
+  "functional_token_context_relations": 81,
+  "guard_deletion_witnesses": {
+    "APP": true,
+    "ATTR_N": true,
+    "AUTHZ": true,
+    "CAP": true,
+    "CREATED_TOK": true,
+    "EXPR": true,
+    "FID_T": true,
+    "MENT": true,
+    "PROV": true,
+    "RELAY": true,
+    "SID": true,
+    "UNCR_N": true,
+    "UTTER": true,
+    "VER": true
+  },
+  "guard_worlds_checked": 16384,
+  "many_tokens_one_content_relations": 207,
+  "one_token_context_sensitive_relations": 207,
+  "result": "PASS",
+  "same_utterer_author_models": 2,
+  "schema": "PMR007_DEEP_L_DISTINCT_RELATION_CUSTODY_REREVIEW_RESULTS_V1",
+  "source_hashes": {
+    "ASF": "932abd7e2d7b3702d5d6d77d2a4a95ecfb3a9ccbcfbbce7ae750b2bcf55bef7c",
+    "UG": "1857fed8ed1e7f00255930392d643f734bfb0d9f7fbf21d6b1913892ace856d8"
+  },
+  "ug_program_locators": {
+    "UG-T7 \u2014 ARTICULABILITY_TO_MENTALITY_BRIDGE": [
+      314
+    ],
+    "UG-T8 \u2014 ARTICULABILITY_TO_SPEECH_BRIDGE": [
+      318
+    ],
+    "UG-T9 \u2014 CREATED_EXPRESSION_UNCREATED_CONTENT_DISTINCTION": [
+      322
+    ]
+  },
+  "utter_author_models_checked": 9,
+  "utter_without_matching_author_models": 4
+}

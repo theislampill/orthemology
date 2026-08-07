@@ -1,0 +1,71 @@
+schema: pmr007-deep-as-proper-function-intervention-basis-models-v1
+identity: PMR-007-PFIT-1
+status: POST_MERGE_RESEARCH_CANDIDATE
+formal_setting:
+  accounts: finite_declared_hypothesis_set
+  interventions: finite_declared_feasible_intervention_set
+  responses: finite_complete_account_relative_response_objects
+  response_map: deterministic_and_static_over_the_declared_episode
+  hidden_account: fixed_during_testing
+quantities:
+  disagreement_set:
+    notation: D(h,h_prime)
+    definition: interventions_on_which_the_two_accounts_predict_different_complete_responses
+  nonadaptive_basis_number:
+    notation: delta_NA
+    definition: minimum_size_intervention_set_hitting_every_nonempty_pairwise_disagreement_set
+  adaptive_depth:
+    notation: delta_AD
+    definition: minimum_worst_case_depth_of_a_response_branching_decision_tree
+proper_function_accounts:
+  - target_relative
+  - truth_linked_epistemic
+  - design_intent
+  - selected_effect
+  - plantinga_style
+  - fitrah_source_relative
+intervention_classes:
+  target_truth_divergence:
+    distinguishes: [target_relative, truth_linked_epistemic]
+    guard: truth_coordinate_independently_available
+  design_truth_divergence:
+    distinguishes: [design_intent, truth_linked_epistemic]
+    guard: design_plan_and_truth_target_independently_typed
+  selection_truth_divergence:
+    distinguishes: [selected_effect, truth_linked_epistemic]
+    guard: actual_selection_history_available
+  operation_environment_divergence:
+    distinguishes: [plantinga_style, generic_design]
+    guard: proper_operation_and_environment_independently_classified
+  fitrah_impairment_reminder:
+    distinguishes: [fitrah_source_relative, neutral_accounts]
+    guard: authenticated_source_reconstruction_applicability_and_state_classification
+controls:
+  - id: AS-CM-ALIGNED-REGIME
+    description: all feasible interventions keep installed target, truth, design, selection, and source verdict aligned; several accounts have identical response rows.
+    result: no finite declared test identifies them.
+  - id: AS-CM-HARMFUL-CORRIGIBILITY
+    description: target-relative controller succeeds on a false or destructive target while truth-linked account rejects.
+  - id: AS-CM-MALICIOUS-DESIGN
+    description: design-intent account follows a deliberately deceptive plan while truth-linked account rejects.
+  - id: AS-CM-SELECTED-DECEPTION
+    description: selected-effect account preserves a trait selected for deception.
+  - id: AS-CM-SOURCE-VERSION
+    description: fitrah/source-relative verdict changes with authenticated source version or applicability while neutral response profile is unchanged.
+  - id: AS-CM-TARGET-LEAKAGE
+    description: intervention label or response object encodes the correct account identity.
+    result: invalid experiment.
+  - id: AS-CM-ADAPTIVE-GAP
+    response_rows:
+      h0: [0,0,0]
+      h1: [0,0,1]
+      h2: [0,1,0]
+      h3: [1,0,1]
+    result: delta_NA_3_delta_AD_2
+nonclaims:
+  - no_account_truth_from_identification
+  - no_catalogue_completeness
+  - no_stochastic_or_bounded_error_optimum
+  - no_history_dependent_or_state_changing_characterization
+  - no_source_authentication
+  - no_general_novelty

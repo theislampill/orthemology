@@ -1,0 +1,133 @@
+{
+  "check": "PMR-007 Round 16 V2 version-custody and temporal-eligibility integration",
+  "same_bytes_contexts": {
+    "current-v1": {
+      "computed": true,
+      "expected": true
+    },
+    "stale-v2": {
+      "computed": false,
+      "expected": false
+    }
+  },
+  "positive_transport_path": {
+    "valid": true,
+    "reason": null,
+    "trace": [
+      {
+        "edge_id": "e12",
+        "discharged": [
+          "authority-v2",
+          "reason-valid",
+          "source-authentic",
+          "version-current-v2"
+        ],
+        "nodes": [
+          "n_reason_v2",
+          "n_source_v2"
+        ],
+        "dependency_edges": [
+          [
+            "n_source_v2",
+            "n_reason_v2"
+          ]
+        ]
+      },
+      {
+        "edge_id": "e23",
+        "discharged": [
+          "authority-v3",
+          "capability-v3",
+          "permission-v3",
+          "reason-valid",
+          "source-authentic",
+          "version-current-v3"
+        ],
+        "nodes": [
+          "n_reason_v3",
+          "n_source_v3"
+        ],
+        "dependency_edges": [
+          [
+            "n_source_v3",
+            "n_reason_v3"
+          ]
+        ]
+      }
+    ]
+  },
+  "transport_path_negative_fixtures": {
+    "VCT-F01-PRESERVED-OBLIGATION-LAUNDERING": {
+      "valid": false,
+      "reason": "preserved-obligation-not-discharged",
+      "expected_error": "preserved-obligation-not-discharged",
+      "pass": true
+    },
+    "VCT-F02-REASON-DAG-BOUNDARY-DRIFT": {
+      "valid": false,
+      "reason": "reason-dag-boundary-mismatch",
+      "expected_error": "reason-dag-boundary-mismatch",
+      "pass": true
+    }
+  },
+  "countermodels": {
+    "VCT-CM-NONTRANSITIVE-COMPATIBILITY": {
+      "computed_path_valid": false,
+      "expected_path_valid": false,
+      "pass": true
+    },
+    "VCT-CM-DROPPED-INVALIDATOR": {
+      "computed_path_valid": false,
+      "expected_path_valid": false,
+      "pass": true
+    },
+    "VCT-CM-NONREDELEGABLE-AUTHORITY": {
+      "computed_path_valid": false,
+      "expected_path_valid": false,
+      "pass": true
+    },
+    "VCT-CM-SEMANTIC-NONCOMMUTATION": {
+      "computed_path_valid": false,
+      "expected_path_valid": false,
+      "pass": true
+    }
+  },
+  "action_menu_monotonicity": {
+    "exhaustive": {
+      "games": 444,
+      "restricted_pairs": 3252,
+      "failures": 0
+    },
+    "first_failure": null,
+    "random": {
+      "seed": 1607,
+      "cases": 20000,
+      "failures": 0
+    },
+    "random_first_failure": null
+  },
+  "temporal_eligibility_witness": {
+    "v1": {
+      "W_core": [
+        "q0",
+        "q1"
+      ],
+      "W_coB": [
+        "q0",
+        "q1"
+      ]
+    },
+    "v2": {
+      "W_core": [
+        "q0"
+      ],
+      "W_coB": [
+        "q0"
+      ]
+    },
+    "pass": true
+  },
+  "authority_ceiling": "finite typed transport and fixed-model action-menu monotonicity; no source truth, standalone AR3 theorem recovery, real runtime completeness, or owner adoption",
+  "checker_runtime": "excluded from substantive-time authority; not serialized as variable duration",
+  "overall": "PASS"
+}

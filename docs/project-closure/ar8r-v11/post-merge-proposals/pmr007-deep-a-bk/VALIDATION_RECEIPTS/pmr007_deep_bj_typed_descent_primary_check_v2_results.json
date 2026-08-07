@@ -1,0 +1,37 @@
+{
+  "identity": "PMR-007-TQDC-1",
+  "checker": "PRIMARY_V2_METADATA_RECONCILIATION",
+  "map_target_cases": 11132,
+  "descent_mismatches": 0,
+  "canonical_size_failures": 0,
+  "joint_family_cases": 404,
+  "kernel_intersection_failures": 0,
+  "subdirect_failures": 0,
+  "full_product_characterization_failures": 0,
+  "coarsening_cases": 17018,
+  "coarsening_noncreation_failures": 0,
+  "anti_unification": {
+    "same_full_support_different_ordinary_and_nonnegative_rank": {
+      "same_support": true,
+      "rank1_det": "0",
+      "rank2_det": "3/20",
+      "pass": true
+    },
+    "equal_marginals_different_joint": {
+      "marginals_equal": true,
+      "joint_different": true,
+      "pass": true
+    },
+    "state_partition_does_not_test_edge_holonomy": {
+      "same_vertex_profile": true,
+      "zero_cycle_sum": true,
+      "nonzero_cycle_sum": true,
+      "pass": true
+    },
+    "set_equivalence_not_automatically_congruence": {
+      "congruence": false,
+      "pass": true
+    }
+  },
+  "result": "PASS"
+}

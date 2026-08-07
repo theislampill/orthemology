@@ -1,0 +1,35 @@
+schema: pmr007-post-merge-admission-overlay-v1
+identity: PMR-007-PREC-1
+title: Provenance-root evidence conservation under retransmission
+canonical_version: V2
+status: ADMITTED_POST_MERGE_SCOPED_CROSS_LANE_EVIDENCE_RESULT
+historical_identity: NONE
+theorem_origin:
+  class: POST_MERGE_SCOPED_RESULT
+  independent_general_origin_credit: false
+  general_mathematical_novelty: 0
+proof_status: PROVED_AT_DECLARED_FINITE_PROBABILISTIC_SCOPE
+countermodel_status: COPY_ALIAS_MERGE_DEPENDENT_ROOT_CANDIDATE_CHANNEL_AND_WARRANT_CONTROLS_PRESERVED
+primary_check: PASS
+cold_audit: REPAIR_REQUIRED
+blocking_findings: 8
+repair: COMPLETE_V2
+first_distinct_rereview: FAIL_HARNESS_DEFECT_PRESERVED
+harness_repair: COMPLETE
+fresh_rereview: PASS_WITH_NONBLOCKING_AUTHENTICATION_AND_WARRANT_NOTES
+external_review: OPEN
+owner_adoption: PENDING
+repository_status: PUBLIC_SAFE_POST_MERGE_PROPOSAL_PENDING_REPOSITORY_AUDIT
+central_disposition:
+  copied_message_multiplicity: DOES_NOT_RAISE_ROOT_EVIDENCE
+  independent_root_factorization: CONDITIONAL_ON_AUTHENTICATION_AND_INDEPENDENCE
+  deep_aq_gate_e: COUNTS_INDEPENDENT_EXPERIMENTS_OR_ROOTS_NOT_COPIES
+  tawatur_warrant: NOT_ESTABLISHED
+  integrated_champion: NONE
+  meniscus: MENISCUS_NOT_REACHED
+  natural_closure: NOT_REACHED
+nonclaims:
+  - no_root_authentication_from_labels
+  - no_truth_or_warrant_from_root_count
+  - no_tawatur_or_common_knowledge_entailment
+  - no_repository_or_owner_adoption

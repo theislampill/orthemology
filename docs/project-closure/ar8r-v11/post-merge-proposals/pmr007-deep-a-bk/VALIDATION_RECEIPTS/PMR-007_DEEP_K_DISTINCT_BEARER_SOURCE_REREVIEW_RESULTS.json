@@ -1,0 +1,44 @@
+{
+  "exact_common_bearer_cases": 127,
+  "exact_global_availability_without_common_bearer": 602,
+  "exact_two_bearer_guard_systems": 4096,
+  "failure_count": 0,
+  "failures": [],
+  "frozen_hash_mismatches": [],
+  "random_bearer_systems": 60000,
+  "result": "PASS",
+  "schema": "PMR007_DEEP_K_DISTINCT_REREVIEW_RESULTS_V1",
+  "source_hash_mismatches": [],
+  "stage_separation_models": {
+    "KWP_without_fittingness": {
+      "AG": true,
+      "C": true,
+      "F": false,
+      "K": true,
+      "WD": false,
+      "W_F": true,
+      "X": true
+    },
+    "effective_episode_without_stability": {
+      "C": true,
+      "EW": true,
+      "STAB": false,
+      "SW": false,
+      "WD": true,
+      "X": true
+    },
+    "impersonal_representation_without_knowledge": {
+      "AG": false,
+      "K": false,
+      "REL": true,
+      "REP": true,
+      "WD": false
+    },
+    "wise_direction_without_execution": {
+      "C": false,
+      "EW": false,
+      "WD": true,
+      "X": false
+    }
+  }
+}

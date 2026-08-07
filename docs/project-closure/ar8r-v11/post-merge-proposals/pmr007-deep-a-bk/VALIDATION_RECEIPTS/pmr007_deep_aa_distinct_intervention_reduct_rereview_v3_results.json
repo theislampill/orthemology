@@ -1,0 +1,86 @@
+{
+  "schema": "PMR007_DEEP_AA_DISTINCT_INTERVENTION_REDUCT_REREVIEW_V3",
+  "method": "relational-table graph surgery; independent of primary checker",
+  "frozen_hashes_computed": {
+    "PMR-007_DEEP_ROUND_AA_SCORE_GUIDANCE_AND_INTENTIONAL_PURPOSE_V3.md": "61334e5a1e147c5bd039cf0321518b7b962e9d0e71b4017152f8119f4de7dc7c",
+    "models/PMR007_DEEP_AA_CAUSAL_GUIDANCE_AND_INTENTIONAL_PURPOSE_MODELS_V3.yaml": "74cb83054fc25d278c299475f5de91264887a8a0e19cbbb23b2679d132b624dc",
+    "checks/pmr007_deep_aa_causal_guidance_primary_check_v3.py": "944328bd0a4c6c70c9e3dac1c62b466113d3e5160bb2f7a1c39d2dbe56a4a161",
+    "checks/pmr007_deep_aa_causal_guidance_primary_check_v3_results.json": "24c5188c25c1f0710c6d013910fa8c7b9fa2cf4a1d830557fc595a3a82ca79b9",
+    "audits/PMR-007_DEEP_AA_V2_CUSTODY_AND_SCOPE_AUDIT.md": "dfb20f61ea5721c8a11e1b4939d19d05b8ded79194be1adc00d2534a1a7273ae",
+    "repairs/PMR-007_DEEP_AA_V3_CUSTODY_AND_SCOPE_REPAIR_LOG.md": "2fadb87e0d93438479ba038104e27947920bd5ae1c443d30da86e28e94201bed"
+  },
+  "frozen_files_missing": [],
+  "frozen_hash_mismatches": [],
+  "boolean_SCMs": 1024,
+  "neutral_observation_and_intervention_rows_checked": 22528,
+  "causal_guidance_characterization_failures": 0,
+  "personal_impersonal_neutral_reduct_failures": 0,
+  "intentional_label_variation_failures": 0,
+  "hidden_confounder_scope_control": {
+    "observational_tables_equal": true,
+    "interventional_difference_witness": {
+      "exogenous_H": 0,
+      "do_Score": 1,
+      "A_causal_model": 1,
+      "A_hidden_confounder_model": 0
+    },
+    "scope_conclusion": "observational fit does not certify the frozen Score->A causal edge outside the declared SCM"
+  },
+  "boundary_witnesses": {
+    "Score_vs_NormAuthority": {
+      "same_neutral_reduct": true,
+      "NormAuthority_values": [
+        false,
+        true
+      ]
+    },
+    "CausalGuidance_vs_TruthLinkage": {
+      "same_guided_reduct": true,
+      "SemanticAnchor_values": [
+        false,
+        true
+      ]
+    },
+    "CausalGuidance_vs_IntentionalUptake": {
+      "same_guided_reduct": true,
+      "IntentionalUptake_values": [
+        false,
+        true
+      ]
+    },
+    "CausalGuidance_vs_SelectionBecauseFitting": {
+      "same_guided_reduct": true,
+      "SelectionBecauseFitting_values": [
+        false,
+        true
+      ]
+    },
+    "CausalGuidance_vs_FirstPersonOwnership": {
+      "same_guided_reduct": true,
+      "FirstPersonOwnership_values": [
+        false,
+        true
+      ]
+    },
+    "CausalGuidance_vs_Personality": {
+      "same_guided_reduct": true,
+      "Personality_values": [
+        false,
+        true
+      ]
+    },
+    "IntentionalPurpose_vs_Wisdom": {
+      "same_intentional_coordinates": true,
+      "Wisdom_values": [
+        false,
+        true
+      ]
+    }
+  },
+  "source_and_implementation_nontransfer": {
+    "OSM": "reported representation dynamics do not establish normative authority, intentional uptake, first-person ownership, personality, or Wisdom",
+    "Track_N": "source predication remains source-relative and requires authentication, referent, translation, and applicability guards",
+    "daee": "no runtime causal or human-restoration certification is supplied by this finite SCM"
+  },
+  "result": "PASS"
+}

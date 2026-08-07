@@ -1,0 +1,25 @@
+{
+  "dependency_sets": {
+    "e": [
+      "A",
+      "R"
+    ],
+    "t": [
+      "M",
+      "N",
+      "R",
+      "S"
+    ]
+  },
+  "excluded_count": 28,
+  "frozen_hash_failures": [],
+  "functional_unity_not_personality": true,
+  "image_count": 4,
+  "meta_abductive_truth_conduciveness_open": true,
+  "overall": "PASS",
+  "personal_label_absent_from_signature": true,
+  "product_count": 32,
+  "proper_function_not_grounded": true,
+  "realization_signatures_equal": true,
+  "schema": "PMR007_DEEP_B_DISTINCT_REREVIEW_RESULTS_V1"
+}

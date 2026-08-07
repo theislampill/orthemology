@@ -1,0 +1,37 @@
+{
+  "direct_temporal_failures": 0,
+  "exact_state_mismatches": 0,
+  "exact_state_relations_checked": 1161388,
+  "failures": [],
+  "frozen_hash_failures": [],
+  "general_encoder_information_cases": 1600,
+  "general_encoder_information_mismatches": 0,
+  "history_current_rho": 1,
+  "history_future_rho": 2,
+  "history_witness_pass": true,
+  "projection_cases": 20000,
+  "projection_failures": 0,
+  "random_relation_channel_cases": 30000,
+  "random_relation_channel_mismatches": 0,
+  "rank_guard_eligible_structures": 2655,
+  "robust_completion_cases": 20000,
+  "robust_completion_failures": 0,
+  "schema": "PMR007_ROUND18_V4_DISTINCT_FRESH_REREVIEW",
+  "status": "PASS",
+  "strict_relation_intersections": {
+    "00": [
+      3
+    ],
+    "01": [
+      2
+    ],
+    "10": [
+      1
+    ],
+    "11": [
+      0
+    ]
+  },
+  "strict_relation_selector_possible": true,
+  "temporal_structures_checked": 74088
+}

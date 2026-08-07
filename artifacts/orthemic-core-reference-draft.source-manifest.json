@@ -1,21 +1,21 @@
 {
   "schema": "orthemology-source-manifest-v1",
   "artifact_id": "orthemic-core-reference-draft",
-  "source_commit": "43c4a07c54c61cec89c77ac8c5b4e75433caf3a4",
-  "source_tree": "b49f408f7c7500fb87bbafb73323b6ceece18c5c",
-  "independently_reviewed_equivalent_source_commit": "43c4a07c54c61cec89c77ac8c5b4e75433caf3a4",
-  "independently_reviewed_equivalent_source_tree": "b49f408f7c7500fb87bbafb73323b6ceece18c5c",
+  "source_commit": "d7309d30612ff85ed8f94b93d4a5a610c18b3ea9",
+  "source_tree": "cded0130b092d2d13e288d6829298ec3f651e982",
+  "independently_reviewed_equivalent_source_commit": "d7309d30612ff85ed8f94b93d4a5a610c18b3ea9",
+  "independently_reviewed_equivalent_source_tree": "cded0130b092d2d13e288d6829298ec3f651e982",
   "source_tree_equivalence": "verified-identical",
-  "source_date_epoch": 1785895767,
+  "source_date_epoch": 1786022580,
   "archive": {
     "path": "artifacts/orthemic-core-reference-draft.source.tar.gz",
-    "sha256": "a0c35d9b7716570c811d9ae4ac831445217bd39ba7cf1256c6fa40c13092e310",
+    "sha256": "27699db523b307c3284bc92255604ba966ad65fa33dc448b95679fc02c21ddcd",
     "format": "tar-gzip-ustar"
   },
   "entry_point": "publication/latex/orthemic-core-reference-draft/main.tex",
   "build_workdir": "publication/latex/orthemic-core-reference-draft",
-  "publication_profile_sha256": "beb4a3a2ca8305475d4b4140186f2a14d94e31870a625078368f3cd9bc85237c",
-  "toolchain_lock_sha256": "76b420108fa0e807559ecdc0778a78b840238487614871d28bd2e7fc6231d727",
+  "publication_profile_sha256": "6db92d9e5a0032a584685fc6861e74e2bf5097d7308753c8532c954bca7db51e",
+  "toolchain_lock_sha256": "aff832790731254ed6771e3f41ee4e902df4b513b9f1af8e94d9cb7b1f25d258",
   "tex_live_dependencies": {
     "fvextra": {
       "tex_live_package": "fvextra",
@@ -69,7 +69,7 @@
   },
   "compatibility_inputs": {
     "publication/latexmkrc": "8fab079b47dda579db9b75aef4f25a4b3c78bc19089957e7076a95f1dc717979",
-    "publication/pdftex-unicode-compat.tex": "3d3eb3d8ecd1619a67fa3575866de56c38390f4c28f2ea95a76a70aacbba4771"
+    "publication/pdftex-unicode-compat.tex": "0f6c63d94e461c097437e78dcc371453cedff18e6aef43725609a2a3ddef94a4"
   },
   "members": [
     {
@@ -81,15 +81,15 @@
     },
     {
       "path": "publication/latex/orthemic-core-reference-draft/main.tex",
-      "sha256": "b4c4432cd7af03d620aa4500da1406960e66d21a04fe5ffd843b2cbb2f89b061",
-      "bytes": 86947,
+      "sha256": "fa4b196b75ab9a026bbb36938ea943afbedb1703a1d843110922adf04d16dfdb",
+      "bytes": 91167,
       "mode": "0644",
       "role": "entry-point"
     },
     {
       "path": "publication/latex/orthemic-core-reference-draft/pdftex-unicode-compat.tex",
-      "sha256": "3d3eb3d8ecd1619a67fa3575866de56c38390f4c28f2ea95a76a70aacbba4771",
-      "bytes": 5255,
+      "sha256": "0f6c63d94e461c097437e78dcc371453cedff18e6aef43725609a2a3ddef94a4",
+      "bytes": 5422,
       "mode": "0644",
       "role": "compatibility-input"
     },

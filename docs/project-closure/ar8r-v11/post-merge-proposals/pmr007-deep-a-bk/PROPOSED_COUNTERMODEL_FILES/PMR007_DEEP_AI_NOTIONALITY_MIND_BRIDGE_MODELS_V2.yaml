@@ -1,0 +1,74 @@
+schema: PMR007_DEEP_AI_NOTIONALITY_MIND_BRIDGE_MODELS_V2
+identity: PMR-007-NMIB-1
+version: V2
+sources:
+- file: A-Commentary-on-the-Creed-of-Asfahani-v2.3(1).md
+  sha256: 932abd7e2d7b3702d5d6d77d2a4a95ecfb3a9ccbcfbbce7ae750b2bcf55bef7c
+  authority: TRANSLATED_PRIMARY_ACCESS
+- file: Carl_Sharif_El-TobguiRobert_Wisnovsky_Supervisor2_Wael_Halla_-_Reason_revelation__the_reconstitution_of_rationality__Taqi_al-Din_Ibn_Taymiyyas_d._728_1328_Dar_Ta_arud_al-_Aql_wa-l-Na_2013_McGill_Univ (1)(3).md
+  sha256: 657454ff7a1c43b895e7a378d12993295368a97c3f35df5a76edfaa32f67a177
+  authority: SECONDARY_SCHOLARLY_RECONSTRUCTION
+objects:
+- structural_order_o
+- notional_representation_n
+- mental_hosts_m0_m1
+hard_premises:
+  NM_HOST: notional_representation_implies_some_mental_host
+  H7a: structural_order_is_intrinsically_notional
+  H7b: some_mental_host_constitutively_grounds_order
+  H7c: underived_order_transfers_to_constitutive_host
+  H7d: at_most_one_constitutive_host
+models:
+- id: AI-POS-H7
+  structural_order: true
+  underived_order: true
+  intrinsic_notional_representation: true
+  mental_hosts: [m0]
+  constitutive_hosts: [m0]
+  underived_constitutive_hosts: [m0]
+  personal_subject: false
+  agentic: false
+  wise: false
+- id: AI-CM1-IMPERSONAL-STRUCTURE
+  structural_order: true
+  underived_order: true
+  intrinsic_notional_representation: false
+  mental_hosts: []
+- id: AI-CM2-DOWNSTREAM-ABSTRACTION
+  structural_order: true
+  underived_order: true
+  intrinsic_notional_representation: false
+  downstream_notional_representation: true
+  mental_hosts: [m0]
+  constitutive_hosts: []
+- id: AI-CM3-UNDERIVABILITY-NONTRANSFER
+  structural_order: true
+  underived_order: true
+  intrinsic_notional_representation: true
+  mental_hosts: [m0]
+  constitutive_hosts: [m0]
+  underived_constitutive_hosts: []
+- id: AI-CM4-MULTIPLE-CONSTITUTIVE-HOSTS
+  structural_order: true
+  intrinsic_notional_representation: true
+  mental_hosts: [m0, m1]
+  constitutive_hosts: [m0, m1]
+- id: AI-CM5-MULTIPLE-DOWNSTREAM-REPRESENTERS
+  structural_order: true
+  mental_hosts: [m0, m1]
+  downstream_represents: [[m0, o], [m1, o]]
+  constitutive_hosts: []
+- id: AI-CM6-IMPERSONAL-INTELLECT-ROLE
+  structural_order: true
+  intrinsic_notional_representation: true
+  mental_hosts: [m0]
+  constitutive_hosts: [m0]
+  personal_subject: false
+  agentic: false
+  wise: false
+nonclaims:
+- no_H7a_H7b_H7c_H7d_proof
+- no_unique_mind_simpliciter
+- no_personality_agency_Wisdom_or_Speech
+- no_source_authentication_or_world_truth
+- no_integrated_champion_or_meniscus

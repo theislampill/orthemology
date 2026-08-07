@@ -1,0 +1,46 @@
+schema: PMR007_DEEP_BJ_ADMISSION_OVERLAY_V1
+identity: PMR-007-TQDC-1
+round: PMR-007-DEEP-BJ
+canonical_version: V2
+status: ADMITTED_POST_MERGE_SCOPED_CENTRAL_COMMON_LAYER_AND_ANTI_UNIFICATION_RESULT
+historical_identity: NONE
+repository_authority: 4c3dc103e8c753690fa5de560ab82157392ced4c
+proof_status: HUMAN_PROOF_PLUS_EXECUTABLE_FINITE_CHECKS
+countermodel_status: COMPLETE_AT_DECLARED_SCOPE
+cold_audit:
+  disposition: REPAIR_REQUIRED
+  blocking_findings: 10
+  repaired: 10
+fresh_rereview:
+  disposition: PASS_WITH_NONBLOCKING_REDUCTION_AND_AUTHORITY_NOTES
+  frozen_hash_rows: 5
+  frozen_hash_mismatches: 0
+  partition_pairs: 2959
+  joint_partition_pairs: 2959
+  coarsening_triples: 19583
+  failures: 0
+  external_independence: false
+admitted_results:
+- exact_deterministic_descent_iff_representation_kernel_refines_target_kernel
+- canonical_finite_target_quotient_and_attained_minimality
+- finite_target_family_intersection_and_attained_subdirect_image
+- deterministic_coarsening_cannot_create_exact_target_recoverability
+- BA_BB_BI_BG_share_a_deterministic_extensional_layer_under_extra_native_guards
+- BC_AO_BD_BE_BF_BH_and_full_BI_require_native_structures_not_reduced_by_set_descent
+- answer_oracle_target_encoding_does_not_count_as_substantive_unification
+nonclaims:
+- no_reductive_common_calculus_for_BA_through_BI
+- no_probability_causal_algebra_source_normative_or_world_validation
+- no_explanatory_or_derivational_unity
+- no_bearer_subject_personality_Wisdom_Necessary_Being_or_Speech
+- no_integrated_champion_meniscus_or_closure
+theorem_family:
+  relation: STANDARD_QUOTIENT_PROFILE_FIBRE_AND_SUBDIRECT_APPLICATION_WITH_ANTI_UNIFICATION_REGISTRY
+  general_mathematical_novelty: 0
+  native_theorem_origins_merged: false
+external_review: OPEN
+owner_adoption: PENDING
+repository_proposal_status: PUBLIC_SAFE_POST_MERGE_PROPOSAL_PENDING_REPOSITORY_AUDIT
+integrated_champion: NONE
+meniscus: MENISCUS_NOT_REACHED
+natural_closure: NOT_REACHED

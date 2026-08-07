@@ -1,0 +1,47 @@
+{
+  "counts": {
+    "common_cause_cases": 6,
+    "failures": 6
+  },
+  "failures": [
+    {
+      "L": "0",
+      "case": 0,
+      "defect": "harness treated L=0 as requiring L^2 != L",
+      "kind": "common_cause_no_overcount"
+    },
+    {
+      "L": "0",
+      "case": 1,
+      "defect": "harness treated L=0 as requiring L^2 != L",
+      "kind": "common_cause_no_overcount"
+    },
+    {
+      "L": "0",
+      "case": 2,
+      "defect": "harness treated L=0 as requiring L^2 != L",
+      "kind": "common_cause_no_overcount"
+    },
+    {
+      "L": "0",
+      "case": 3,
+      "defect": "harness treated L=0 as requiring L^2 != L",
+      "kind": "common_cause_no_overcount"
+    },
+    {
+      "L": "0",
+      "case": 4,
+      "defect": "harness treated L=0 as requiring L^2 != L",
+      "kind": "common_cause_no_overcount"
+    },
+    {
+      "L": "0",
+      "case": 5,
+      "defect": "harness treated L=0 as requiring L^2 != L",
+      "kind": "common_cause_no_overcount"
+    }
+  ],
+  "identity": "PMR-007-PREC-1",
+  "rereview_version": "V2_PRESERVED_FAILED_HARNESS",
+  "result": "FAIL"
+}

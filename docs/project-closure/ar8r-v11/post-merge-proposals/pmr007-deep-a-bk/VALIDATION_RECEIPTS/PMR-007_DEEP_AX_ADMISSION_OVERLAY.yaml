@@ -1,0 +1,48 @@
+schema: pmr007-deep-ax-admission-overlay-v1
+pmr_identity: PMR-007-STWG-1
+title: Source testimony likelihood, provenance custody, and the world-selection gate
+round: DEEP_AX
+canonical_candidate: PMR-007_DEEP_ROUND_AX_SOURCE_TESTIMONY_LIKELIHOOD_AND_WORLD_GATE_V2.md
+status: ADMITTED_POST_MERGE_SCOPED_CENTRAL_SOURCE_EVIDENCE_RESULT
+provenance_class: ADMITTED_POST_MERGE_SCOPED_RESULT
+historical_identity: NONE
+general_mathematical_novelty: 0
+proof_status: HUMAN_PROOF_PLUS_PRIMARY_AND_DISTINCT_EXECUTABLE_CHECKS
+countermodel_status: EXPLICIT_CORRELATION_COPY_HIDDEN_ANCHOR_VERSION_AND_CHANNEL_CONTROLS
+cold_audit_status: REPAIR_REQUIRED
+repair_status: ALL_BLOCKING_FINDINGS_REPAIRED_IN_V2
+fresh_rereview_status: PASS_WITH_NONBLOCKING_SOURCE_RELIABILITY_AND_WORLD_SCOPE_NOTES
+external_review_status: OPEN
+owner_adoption_status: PENDING
+repository_adoption_status: NOT_AUTHORIZED
+admitted_scope:
+  - finite two-architecture candidate set
+  - finite complete joint source observation space
+  - exact Bayes likelihood update
+  - conditional root factorization under explicit conditional independence
+  - deterministic copy nonmultiplication
+  - common-channel total-variation contraction
+  - source-gate authority decomposition
+nonclaims:
+  - actual source reliability
+  - actual root independence
+  - Arabic-primary verification
+  - exact Taymiyyan tawatur formalization
+  - actual-world selection
+  - candidate-class completeness
+  - personal-ground proof
+  - proper function or Wisdom
+family_relation:
+  bayes: APPLICATION_ONLY
+  deep_an: SOURCE_EVIDENCE_SPECIALIZATION
+  deep_ao: COMMON_CHANNEL_APPLICATION
+  deep_ar: ROOT_FACTOR_CUSTODY_EXTENSION
+  deep_ap: RELATIVE_REFERENT_PLUS_LIKELIHOOD_SEPARATION
+  deep_av: SOURCE_NEUTRAL_WORLD_FIREWALL_APPLICATION
+central_burden_effect:
+  source_world_anchor: NARROWED_TO_EXPLICIT_JOINT_RELIABILITY_AND_MAPPING_GUARDS
+  actual_world_selection: OPEN
+  personal_impersonal_parity: UNBROKEN_ON_CURRENT_SOURCE_EVIDENCE
+integrated_champion: NONE
+meniscus: MENISCUS_NOT_REACHED
+natural_closure: NOT_REACHED

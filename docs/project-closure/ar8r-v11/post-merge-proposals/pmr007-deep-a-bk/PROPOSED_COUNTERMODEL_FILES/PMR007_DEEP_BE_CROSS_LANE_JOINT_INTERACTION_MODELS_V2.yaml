@@ -1,0 +1,40 @@
+schema: pmr007-deep-be-cjid-models-v2
+identity: PMR-007-CJID-1
+status: REPAIRED_POST_MERGE_RESEARCH_CANDIDATE
+common_experiment_guards:
+  UNIT: same declared subject episode world or matched unit
+  VER: aligned versions and memberships
+  INT: common observational or intervention regime
+  ROOT: provenance and acquisition lineage retained
+  MAP: common coordinate semantics and world reference
+  PRED: frozen prediction or genuinely held-out enlarged experiment
+  REP: common representation channel
+claims:
+  coordinate_marginal_parity:
+    conclusion: does not imply equal joint law
+  two_binary_coupling:
+    guards: [binary_0_1_coding, equal_X_marginal, equal_Y_marginal]
+    formula: "TV(P_A,P_R)=2*abs(delta)=2*abs(cov_A-cov_R)"
+  top_order_parity:
+    guards: [binary_coordinates, equal_marginals_on_every_proper_subset]
+    conclusion: difference is scalar parity character
+  proper_subset_blindness:
+    conclusion: additive proper-subset tests have equal expectation
+positive_controls:
+  - BE-POS1 even versus odd parity
+  - BE-POS2 equal-marginal different-coupling pair
+countermodels:
+  - BE-CM1 product-of-marginals blindness
+  - BE-CM2 post-selection
+  - BE-CM3 unit/provenance mismatch
+  - BE-CM4 representation loss
+  - BE-CM5 impersonal coupling realizer
+  - BE-CM6 source-compatible joint parity
+  - BE-CM7 lower-order overread
+  - BE-CM8 common-cause nonderivation
+nonclaims:
+  - no causal or derivational unity from dependence alone
+  - no canonical experiment selection
+  - no personal-ground inference
+  - no metaphysical use of OSM or PRH results
+  - no source or actual-world truth
