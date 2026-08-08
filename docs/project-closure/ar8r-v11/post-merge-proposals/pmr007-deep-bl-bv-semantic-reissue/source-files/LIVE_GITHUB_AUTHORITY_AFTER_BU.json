@@ -1,0 +1,13 @@
+{
+  "schema": "AR8R_PMR007_LIVE_GITHUB_AUTHORITY_SEMANTIC_REISSUE_V1",
+  "custody_class": "SEMANTIC_REISSUE_OR_REGENERATED_CUSTODY_COPY",
+  "original_bytes_proven_preserved": false,
+  "regenerated": true,
+  "generated_at_utc": "2026-08-07T17:30:15.612098Z",
+  "expected_origin_main_from_controlling_prompt": "ca504400ea7e241d57ddf6db1beadc01d1e77f3b",
+  "observed_origin_main_in_original_receipt": null,
+  "observed_origin_main_status": "NOT_RECOVERABLE_FROM_VISIBLE_BOUNDARY_RESPONSE",
+  "historical_response_claim": "A local authority receipt was produced before Deep BL; its original bytes are unavailable.",
+  "github_changed_in_pro_thread": false,
+  "scientific_status_effect": "NONE"
+}

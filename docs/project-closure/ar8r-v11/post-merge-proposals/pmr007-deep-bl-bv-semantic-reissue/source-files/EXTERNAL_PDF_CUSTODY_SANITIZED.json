@@ -1,0 +1,31 @@
+{
+  "authority": "EXTERNAL_MATHEMATICS_SOURCE_NOT_AR8R_THEOREM_AUTHORITY",
+  "text_similarity_first_200k": 0.003670519572304676,
+  "sources": [
+    {
+      "file": "balanced-ef1-fpo(1).pdf",
+      "sha256": "5cbd62b16ceb58302a0ec2235a73876a9c23a94d9f2cf296425e024f462ac033",
+      "characters": 145592,
+      "title_candidate": "Fair and Efficient Balanced Allocations for Additive Valuations | Benjamin Cookson                             Nisarg Shah | University of Toronto                     University of Toronto",
+      "doi_candidates": [],
+      "arxiv_candidates": [
+        "2509.18673",
+        "2607.17811",
+        "2607.18220"
+      ]
+    },
+    {
+      "file": "2301.12987v4(1).pdf",
+      "sha256": "b664a4074578629b6343b9c3a14e465199a74ea660409b488b1299da16a38e4a",
+      "characters": 29860,
+      "title_candidate": "The Optimal Choice of Hypothesis | Is the Weakest, Not the Shortest | Michael Timothy Bennett1",
+      "doi_candidates": [
+        "10.5281/zenodo.7641742.",
+        "10.7717/peerj-cs.103."
+      ],
+      "arxiv_candidates": [
+        "2301.12987"
+      ]
+    }
+  ]
+}

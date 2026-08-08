@@ -1,0 +1,58 @@
+schema: ar8r-pmr007-deep-bl-bv-custody-reissue-v1
+source_reissue:
+  filename: AR8R_PMR007_DEEP_BL_BV_CUSTODY_REISSUE_V1.zip
+  sha256: 6ed381f16d2bbd46dd31a987bdc2b9552aa2ae083874dde650e75ff0794f27d3
+  bytes: 21618877
+  archive_members: 2666
+  manifest_members: 2666
+  unsafe_paths: 0
+  duplicate_paths: 0
+  decompression_errors: 0
+  manifest_hash_mismatches: 0
+  yaml_files_parsed: 574
+  json_files_parsed: 368
+  structured_parse_errors: 0
+  round_trip_restoration: PASS
+response_linked_custody:
+  total: 28
+  exact_original_files: 2
+  exact_original_filenames:
+    - EXTERNAL_PDF_CUSTODY_AND_METHOD_NOTE.md
+    - EXTERNAL_PDF_CUSTODY_SANITIZED.json
+  regenerated_custody_copies: 26
+  original_byte_sequences_still_unavailable: 26
+repository_copy:
+  path: docs/project-closure/ar8r-v11/post-merge-proposals/pmr007-deep-bl-bv-semantic-reissue/source-files
+  source_files: 22
+  source_files_copied_byte_exact_from_reissue: true
+  original_deep_bl_bv_bytes_claimed_for_all_source_files: false
+  role: PUBLIC_SAFE_SEMANTIC_REISSUE_PROPOSAL_CUSTODY
+exact_baseline_preserved:
+  path: docs/project-closure/ar8r-v11/post-merge-proposals/pmr007-deep-a-bk
+  source_archive_sha256: a7271391bbc7294128597a0798b0dd644bd79bdf4d9d57b3b918b2fa912a32b5
+  modified_by_this_import: false
+proposal_boundary:
+  deep_rounds_summarized: 11
+  range: Deep BL through Deep BV
+  only_printed_identity: PMR-007-CIID-1
+  deep_bl_through_bu_individual_original_packets: UNAVAILABLE
+  deep_bv_original_theorem_model_checker_audit_repair_rereview_bytes: UNAVAILABLE
+  deep_bv_reported_counts: CUSTODY_TRANSCRIPTION_NOT_EXECUTABLE_REPRODUCTION
+  independently_rerun_from_reissue: false
+  historical_identity_assigned: false
+  historical_theorem_origin_credit: false
+  owner_adoption: PENDING
+  external_review: OPEN
+  repository_scientific_adoption: NONE
+  general_novelty_credit: NOT_GRANTED
+  lean_source_or_kernel_claim: NONE
+  integrated_champion: NONE
+  meniscus: MENISCUS_NOT_REACHED
+  natural_closure: NOT_REACHED
+  historical_duration_effect: NONE
+  theorem_origin_authority_effect: NONE
+integration:
+  base_sha: ca504400ea7e241d57ddf6db1beadc01d1e77f3b
+  private_archive_committed: false
+  source_pdf_bytes_committed: false
+  raw_chat_or_activity_committed: false

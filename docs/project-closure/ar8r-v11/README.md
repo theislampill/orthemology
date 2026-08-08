@@ -23,7 +23,7 @@ of scientific closure.
 - `provenance/`: origin, family, core, pair, and Lean custody receipts;
 - `programs/`: active and deferred research lanes not adopted as theorem packets;
 - `post-merge-pmr001-source/` and `post-merge-pmr002-006-source/`: exact public-safe PMR source selections;
-- `post-merge-proposals/`: exact sanitized PMR-007 proposal snapshots through Round 20, Deep AP, and Deep BK, each with a separate fail-closed correction overlay;
+- `post-merge-proposals/`: exact sanitized PMR-007 proposal snapshots through Round 20, Deep AP, and Deep BK, plus a separately labeled Deep BL–BV semantic custody reissue whose unavailable originals are not promoted to exact recovery;
 - `AR8R-V11-POST-MERGE-EVIDENCE-CATALOG.yaml`: post-merge source and proposal dispositions;
 - `AR8R-V11-DEFERRED-AND-EXCLUDED.md`: private, superseded, collision-bound, and unsupported material.
 
@@ -74,6 +74,17 @@ records Fusha/Qamus only as an external applied-language boundary.
 
 The milestone architecture has no theorem, novelty, source-authentication,
 owner-adoption, integrated-champion, meniscus, or natural-closure effect.
+
+## Deep BL–BV semantic custody extension
+
+`post-merge-proposals/pmr007-deep-bl-bv-semantic-reissue/` preserves a verified
+public-safe reissue without overwriting the exact Deep A–BK snapshot. Of 28
+response-linked files, two survive as original bytes and 26 remain regenerated
+custody copies. Deep BL–BU have summary-level custody only. Deep BV's
+`PMR-007-CIID-1` factorization criterion is recorded as a reported scoped
+proposal; its experiment counts were not reproducibly rerun from the reissue.
+External review and owner adoption remain open, and no historical identity,
+novelty, Lean, champion, meniscus, closure, or historical-duration effect follows.
 
 ## V12 OSM learning-trajectory crosswalk
 

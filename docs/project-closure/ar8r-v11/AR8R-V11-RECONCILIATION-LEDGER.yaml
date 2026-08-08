@@ -813,6 +813,12 @@ items:
   owner_path: docs/project-closure/ar8r-v11/programs/AR8R-OSM-LEARNING-TRAJECTORY-CONVERGENCE-CROSSWALK-V12.yaml
   basis: Reconnects an already integrated external source to the milestone and flywheel programs under explicit no-transfer gates.
   remaining_burden: Fresh independent Fable review, exact formal-relation classification, and any separately justified proof or countermodel work remain open.
+- item_id: PMR007-DEEP-BL-BV-SEMANTIC-REISSUE
+  disposition: PUBLIC_INTEGRATE
+  publication_state: MATERIALIZED_PUBLIC_PROPOSAL_NOT_ADOPTED
+  owner_path: docs/project-closure/ar8r-v11/provenance/AR8R-PMR007-DEEP-BL-BV-CUSTODY-REISSUE-V1.yaml
+  basis: Preserves 22 public-safe reissue files while recording that only 2 of 28 response-linked originals survive and that the other 26 are regenerated custody copies.
+  remaining_burden: Original BL-BV bytes, individual BL-BU packets, executable BV reproduction, external review, and owner adoption remain open; no historical identity, novelty, champion, meniscus, or closure follows.
 v11_task6_and_pdf_addendum_decisions:
   append_only: true
   totals: {INTEGRATE: 26, PROPOSAL_ONLY: 8, DEFERRED: 6, BLOCKED: 9, PRIVATE_EXCLUDED: 4, TOTAL: 53}

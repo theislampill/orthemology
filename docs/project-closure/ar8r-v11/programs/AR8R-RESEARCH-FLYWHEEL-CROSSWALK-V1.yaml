@@ -34,6 +34,7 @@ nodes:
   connes_dispute: {owner: ten-advances-connes-rigidity-dispute.md}
   osw15: {owner: ../governance/ORTHEMOLOGICAL-SPECIFICATION-WARRANT-OSW-15.yaml}
   milestone_architecture: {owner: AR8R-ORTHEMOLOGY-MENISCUS-MILESTONES-V1.yaml, authority: OWNER_PROGRAM_CHARTER_NO_THEOREM_CREDIT}
+  common_intervention_identifiability: {owner: ../post-merge-proposals/pmr007-deep-bl-bv-semantic-reissue/source-files/PMR-007_DEEP_ROUND_BV_COMMON_INTERVENTION_IDENTIFIABILITY_V2.md, authority: SEMANTIC_REISSUE_PROPOSAL_NO_EXECUTABLE_REPRODUCTION}
 edges:
   - from: source_custody
     to: language_version
@@ -248,6 +249,26 @@ edges:
     to: language_version
     contribution: M18 routes occurrence grammar translation provenance and version burdens
     nontransfer: application relevance does not establish a live Fusha or Qamus implementation
+  - kind: supports
+    from: source_custody
+    to: common_intervention_identifiability
+    contribution: exact intervention identity version authorization and semantics-preserving implementation are eligibility guards
+    nontransfer: source custody does not establish that a cross-architecture intervention exists or is target independent
+  - kind: constrains
+    from: common_intervention_identifiability
+    to: ontology_rivals
+    contribution: architecture identification requires the target coordinate to be constant on every complete common-experiment profile fibre
+    nontransfer: pairwise separation or positive total variation does not select an actual ontology
+  - kind: constrains
+    from: common_intervention_identifiability
+    to: transcendental_bridges
+    contribution: the Deep BL-BV semantic reissue reports that no current eligible common intervention splits every unified-personal impersonal-powers and plural architecture fibre
+    nontransfer: a source-relative predicate cannot be imported as a neutral intervention or actual-world bridge
+  - kind: supports
+    from: common_intervention_identifiability
+    to: tensor_search
+    contribution: candidate experiments should maximize class-wide partition refinement under one independently typed common intervention
+    nontransfer: discriminative value does not establish implementation eligibility causal interpretation or metaphysical truth
 selection_rule: Choose the next lane by unresolved load-bearing dependency and expected cross-lane yield, not by vocabulary overlap.
 closure_rule: No cycle in this graph establishes meniscus, natural closure, or an integrated champion.
 milestone_projection:
