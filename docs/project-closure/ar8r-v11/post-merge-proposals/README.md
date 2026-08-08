@@ -9,3 +9,11 @@ V11 corrections to stale internal summary text are recorded in `PMR007-ROUNDS11-
 The `pmr007-deep-a-ap` directory is a later exact sanitized snapshot containing 52 indexed proposals: the ten Round 11–20 rows and 42 Deep A–AP rows. It remains proposal evidence only. Its separate fail-closed overlay is `PMR007-DEEP-A-AP-ADOPTION-BOUNDARY-CORRECTION.md`, its archive-custody owner is `../provenance/AR8R-PMR007-DEEP-A-AP-PROPOSAL-RECEIPT-V1.yaml`, and its bounded executable-reproduction owner is `../provenance/AR8R-PMR007-DEEP-A-AP-EXECUTION-RECEIPT-V1.yaml`.
 
 The `pmr007-deep-a-bk` directory is the next exact sanitized snapshot, containing 73 indexed proposals: the ten Round 11–20 rows and 63 Deep A–BK rows. Its source bytes remain unchanged despite stale root README/diff wording documented by `PMR007-DEEP-A-BK-ADOPTION-BOUNDARY-CORRECTION.md`. Archive custody is recorded in `../provenance/AR8R-PMR007-DEEP-A-BK-PROPOSAL-RECEIPT-V1.yaml`; independent BF–BK checker reproduction and the public-layout limitation are recorded in `../provenance/AR8R-PMR007-DEEP-BF-BK-EXECUTION-RECEIPT-V1.yaml`.
+
+The `pmr007-deep-bl-bv-semantic-reissue` directory is deliberately separate
+from that exact snapshot. It preserves 22 public-safe files copied exactly from
+the verified reissue archive, while recording that 26 of 28 response-linked
+Deep BL–BV originals remain unavailable. Deep BL–BU survive only as bounded
+semantic summaries; the reported Deep BV experiment counts were not
+independently rerun. The surface is proposal custody only, with no historical
+identity, adoption, novelty, champion, meniscus, or closure effect.

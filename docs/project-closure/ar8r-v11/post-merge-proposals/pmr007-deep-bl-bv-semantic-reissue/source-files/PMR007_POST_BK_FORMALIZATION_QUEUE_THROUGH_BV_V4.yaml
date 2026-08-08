@@ -1,0 +1,15 @@
+schema: PMR007_POST_BK_FORMALIZATION_QUEUE_THROUGH_BV_V4_SEMANTIC_REISSUE
+custody_class: SEMANTIC_REISSUE_OR_REGENERATED_CUSTODY_COPY
+items:
+- identity: PMR-007-CIID-1
+  formalization_opportunity: finite factorization/partition theorem for Q through E_J
+  declaration_plan_only: true
+  lean_source_created: false
+  lean_parse: NOT_RUN
+  lean_elaboration: NOT_RUN
+  lean_kernel: NOT_RUN
+  axiom_firewall: Source/world/personal bridges may not be imported as axioms merely to prove the desired conclusion.
+- round: Deep BU
+  formalization_opportunity: Cantor no-surjection and finite cardinality lower bound
+  declaration_plan_only: true
+  lean_source_created: false

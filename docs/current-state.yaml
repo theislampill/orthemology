@@ -109,9 +109,9 @@ authored:
     meniscus: MENISCUS_NOT_REACHED
     natural_closure: NATURAL_CLOSURE_NOT_REACHED
 derived:
-  source_tree_digest: 24d5a180459f696a80d3f6c7f5f77fd70d23bd5b660332bafee345ec17a33dd1
+  source_tree_digest: f76a8d546f791c4dd06a699348104aa09732da8cdcb73ead30540d6660679753
   source_tree_digest_policy: docs/project-state-inputs.yaml
-  tracked_files: 3116
+  tracked_files: 3143
   decision_ids:
   - '0001'
   - '0002'
@@ -224,6 +224,7 @@ derived:
   - validate_notation.py
   - validate_pdf_math.py
   - validate_pmr007_deep_bk_public_snapshot.py
+  - validate_pmr007_deep_bv_semantic_reissue.py
   - validate_public_readiness.py
   - validate_publication_profile.py
   - validate_quran_loci.py
@@ -241,7 +242,7 @@ derived:
   - validate_terminology_etymology.py
   - validate_type_token_semantics.py
   - validate_verdict_semantics.py
-  validator_count: 56
+  validator_count: 57
   fixture_counts:
     verdict: 7
     reason: 8

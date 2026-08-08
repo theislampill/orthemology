@@ -1,0 +1,18 @@
+{
+  "schema": "PMR007_DEEP_BV_DISTINCT_PARTITION_EXPERIMENT_REREVIEW_RESULTS_SEMANTIC_REISSUE",
+  "custody_class": "SEMANTIC_REISSUE_OR_REGENERATED_CUSTODY_COPY",
+  "original_bytes_proven_preserved": false,
+  "independently_rerun_in_custody_repair": false,
+  "counts_transcribed_from_owner_visible_boundary_response": {
+    "primary_deterministic_models": 8,
+    "primary_stochastic_models": 250,
+    "primary_random_tv_trials": 100000,
+    "distinct_exact_profiles": 125,
+    "distinct_exact_models": 250,
+    "distinct_random_tv_trials": 150000,
+    "distinct_random_intended_model_classes": 50000,
+    "frozen_hash_mismatches": 0
+  },
+  "fresh_rereview": "PASS_WITH_NONBLOCKING_MODEL_CLASS_AND_OPERATIONALIZATION_NOTES",
+  "authority_ceiling": "CUSTODY_TRANSCRIPTION_NOT_EXECUTABLE_REPRODUCTION"
+}

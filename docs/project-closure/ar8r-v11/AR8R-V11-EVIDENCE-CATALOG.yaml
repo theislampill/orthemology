@@ -1456,6 +1456,17 @@ items:
   source_access_copy_sha256: 0d097cba7bbb25a949e2bf95af28b5a2259bd8d60b0e5fac5a74cdf7d05aa814
   source_access_copy_bytes: 137824
   campaign_epoch: V12_PROGRAM_INTEGRATION
+- item_id: PMR007-DEEP-BL-BV-SEMANTIC-REISSUE
+  title: Deep BL-BV public-safe semantic custody reissue
+  source_surface: VERIFIED_OWNER_SUPPLIED_CUSTODY_REISSUE
+  evidence_class: CUSTODY_RECEIPT
+  privacy_class: PUBLIC_SAFE
+  recommended_disposition: PUBLIC_INTEGRATE
+  public_locator: Deep BL-BV semantic reissue receipt and 22-file public source surface
+  repository_relevance: Preserves the visible Deep BL-BV dispositions while keeping 26 regenerated response-linked files separate from the two exact originals and from the exact Deep A-BK snapshot.
+  owner_path: docs/project-closure/ar8r-v11/provenance/AR8R-PMR007-DEEP-BL-BV-CUSTODY-REISSUE-V1.yaml
+  sha256: 41548bcf31610e77b8cee2cd4a2b4687fda2bd100ba0a0298fe5eeca7bca944d
+  campaign_epoch: POST_MERGE_PMR007_SEMANTIC_REISSUE
 v11_task7_public_owners:
   hash_policy: INCLUDED_IN_FINAL_V11_SHA256SUMS_AND_RELEASE_MANIFEST
   owners:

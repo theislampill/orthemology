@@ -1,0 +1,38 @@
+schema: PMR007_DEEP_MENISCUS_CROSSWALK_A_BV_V4_SEMANTIC_REISSUE
+custody_class: SEMANTIC_REISSUE_OR_REGENERATED_CUSTODY_COPY
+edges:
+- id: BV-ARCH-IDENT
+  from: typed_common_intervention_experiment
+  to: architecture_coordinate_identifiability
+  relation: CHARACTERIZES
+  update: Architecture coordinate identification is possible exactly when it is constant on complete experiment-profile fibres over the declared model class.
+  not_transferred:
+  - actual-world truth
+  - personality
+  - source authority
+  - canonical prior
+  evidence:
+  - PMR-007-CIID-1
+- id: BV-R5-SURVIVAL
+  from: current_registered_common_experiments
+  to: strongest_impersonal_rival
+  relation: FAILS_TO_EXCLUDE
+  update: No eligible common intervention was supplied that splits every personal/impersonal/plural experiment fibre.
+  evidence:
+  - PMR-007-CIID-1
+- id: BV-SOURCE-FIREWALL
+  from: source_relative_personality_or_wisdom_predication
+  to: neutral_intervention_semantics
+  relation: DOES_NOT_MIGRATE
+  update: Source-intended predicates cannot define a neutral intervention without an independently warranted type-preserving implementation map.
+  evidence:
+  - PMR-007-CIID-1
+- id: BV-AO-AP
+  from: Deep_AO_and_Deep_AP_firewalls
+  to: Deep_BV
+  relation: SUPPLIES_GUARDS
+  update: Common representations cannot manufacture discrimination, and source-role compatibility does not select the actual world; both constrain intervention interpretation.
+  evidence:
+  - PMR-007-RPDS-1
+  - PMR-007-SWRI-1
+  - PMR-007-CIID-1

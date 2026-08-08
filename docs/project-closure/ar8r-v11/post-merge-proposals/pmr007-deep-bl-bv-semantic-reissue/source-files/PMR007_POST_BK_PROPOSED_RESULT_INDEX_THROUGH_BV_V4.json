@@ -1,0 +1,95 @@
+{
+  "schema": "PMR007_POST_BK_PROPOSED_RESULT_INDEX_THROUGH_BV_V4_SEMANTIC_REISSUE",
+  "custody_class": "SEMANTIC_REISSUE_OR_REGENERATED_CUSTODY_COPY",
+  "original_bytes_proven_preserved": false,
+  "generated_at_utc": "2026-08-07T17:30:15.612098Z",
+  "authority": {
+    "historical_identity_assigned": "NONE",
+    "owner_adoption": "PENDING",
+    "external_review": "OPEN",
+    "general_mathematical_novelty_granted": 0,
+    "integrated_champion": "NONE",
+    "meniscus": "MENISCUS_NOT_REACHED",
+    "natural_closure": "NOT_REACHED"
+  },
+  "results": [
+    {
+      "round": "Deep BL",
+      "identity": null,
+      "title": "Source, formal predicate, and world transfer",
+      "status": "ADMITTED_POST_MERGE_SCOPED_RESULT",
+      "summary": "Unique source-role bearing and source co-reference do not identify one actual-world intentional bearer. Transfer requires an interpretation-fibre condition and separate source-authority, translation, predicate-preservation, actual-interpretation, and world-adequacy guards."
+    },
+    {
+      "round": "Deep BM",
+      "identity": null,
+      "title": "Minimal support sets for the ascent",
+      "status": "ADMITTED_POST_MERGE_SCOPED_RESULT",
+      "summary": "The ascent is represented as a finite positive-Horn support problem. Minimal premise supports do not establish the premises; neutral and source-relative routes remain separate."
+    },
+    {
+      "round": "Deep BN",
+      "identity": null,
+      "title": "Coextension and intentional uptake",
+      "status": "ADMITTED_POST_MERGE_SCOPED_RESULT",
+      "summary": "A policy factors through an extensional representation iff it is constant on extension fibres. Mode sensitivity requires finer information but remains compatible with impersonal lookup, syntactic control, version logic, or distributed implementation."
+    },
+    {
+      "round": "Deep BO",
+      "identity": null,
+      "title": "Architecture champion gate",
+      "status": "ADMITTED_POST_MERGE_SCOPED_RESULT",
+      "summary": "Strict coordinatewise dominance is robust under positive weights; incomparable burden vectors permit weighting reversals. No champion follows from an ungrounded scalar score."
+    },
+    {
+      "round": "Deep BP",
+      "identity": null,
+      "title": "Proper-function ontology",
+      "status": "ADMITTED_POST_MERGE_SCOPED_RESULT",
+      "summary": "The declared neutral proper-function profile does not identify nominalist, conceptualist, realist, powers, property-dualist, impersonal-teleological, or personal-agentive ontology."
+    },
+    {
+      "round": "Deep BQ",
+      "identity": null,
+      "title": "Source-predicate strength and rival re-entry",
+      "status": "ADMITTED_POST_MERGE_SCOPED_RESULT",
+      "summary": "Weakening intensional source predicates to functional roles expands the compatible model class and can re-admit the impersonal rival. Stronger exclusion remains source-relative and custody-guarded."
+    },
+    {
+      "round": "Deep BR",
+      "identity": null,
+      "title": "Fitting selection and Wisdom",
+      "status": "ADMITTED_POST_MERGE_SCOPED_RESULT",
+      "summary": "Objective fittingness, apprehension, intentional uptake, because-of-fittingness selection, reliable realization, and bearer applicability are independently load-bearing; deletion of any guard leaves Wisdom false."
+    },
+    {
+      "round": "Deep BS",
+      "identity": null,
+      "title": "Three-architecture adjudication",
+      "status": "ADMITTED_POST_MERGE_PROGRAM_RECONCILIATION",
+      "summary": "Unified personal ground is a source-relative compatibility leader conditionally; powers/plural realization and abstract order plus concrete actualizer survive; neutral champion remains NONE."
+    },
+    {
+      "round": "Deep BT",
+      "identity": null,
+      "title": "Finite interactive-history realization",
+      "status": "ADMITTED_POST_MERGE_SCOPED_RESULT",
+      "summary": "Every finite-horizon finite-alphabet causal interface kernel has an impersonal complete-history-state realization reproducing all frozen observational and adaptive interventional distributions. Resource and infinite-horizon burdens remain open."
+    },
+    {
+      "round": "Deep BU",
+      "identity": null,
+      "title": "Cantorian local articulability bound",
+      "status": "ADMITTED_POST_MERGE_SCOPED_RESULT",
+      "summary": "For set-sized L no same-level map L→P(L) is surjective; finite n requires at least 2^n semantic equivalence classes for all unary properties. This is local same-level nonultimacy, not mentality, Speech, or a unique ground."
+    },
+    {
+      "round": "Deep BV",
+      "identity": "PMR-007-CIID-1",
+      "title": "Common-intervention identifiability",
+      "status": "ADMITTED_POST_MERGE_SCOPED_CENTRAL_INTERVENTION_IDENTIFIABILITY_RESULT",
+      "summary": "For a finite declared model class, a target coordinate is exactly identifiable from a frozen typed common-intervention experiment profile iff it is constant on every complete experiment-profile fibre."
+    }
+  ],
+  "identity_note": "Only the Deep BV identity was printed in the owner-visible boundary response. Deep BL–BU identities are deliberately left null rather than reconstructed."
+}

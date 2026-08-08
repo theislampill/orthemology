@@ -35,6 +35,7 @@ Exact public-safe continuity sources are preserved separately:
 - `../post-merge-pmr001-source/` preserves PMR-001 candidates, controls, audits, repairs, and rereview;
 - `../post-merge-pmr002-006-source/` preserves the multi-wave reconciliation and its eleven admission owners;
 - `../post-merge-proposals/pmr007-rounds11-20/` preserves the sanitized ten-result proposal without adopting it.
+- `../post-merge-proposals/pmr007-deep-bl-bv-semantic-reissue/` preserves the later public-safe semantic delta without presenting its 26 regenerated response-linked files as original bytes or its reported experiment counts as rerun evidence.
 
 `daee-temporal-restoration-and-provenance.md` routes the Round 14–20 temporal,
 version, certificate, and restorative-cutset proposals into their implementation

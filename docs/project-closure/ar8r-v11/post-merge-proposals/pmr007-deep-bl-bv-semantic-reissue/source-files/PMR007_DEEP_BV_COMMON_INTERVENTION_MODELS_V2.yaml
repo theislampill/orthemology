@@ -1,0 +1,27 @@
+schema: PMR007_DEEP_BV_COMMON_INTERVENTION_MODELS_V2_SEMANTIC_REISSUE
+custody_class: SEMANTIC_REISSUE_OR_REGENERATED_CUSTODY_COPY
+original_bytes_proven_preserved: false
+regenerated: true
+typed_objects:
+  model_class: finite declared model class M
+  target_coordinate: 'Q : M -> QVal'
+  common_intervention_family: typed J with model-specific semantics-preserving implementations
+  experiment_profile: E_J(m), complete output-law profile for frozen J
+mandatory_controls:
+- pairwise distinction without class-wide identification
+- target-dependent intervention implementation as hidden anchor
+- semantically mismatched operationalizations
+- source/world nontransfer
+- resource and implementability omission
+- one-shot versus adaptive intervention scope
+recorded_primary_counts_from_visible_receipt:
+  deterministic_models: 8
+  stochastic_models: 250
+  random_total_variation_trials: 100000
+recorded_distinct_rereview_counts_from_visible_receipt:
+  exact_profiles: 125
+  exact_models: 250
+  random_total_variation_trials: 150000
+  random_intended_model_classes: 50000
+executable_model_bytes_recovered: false
+note: Counts are custody transcriptions from the prior visible boundary response; the original model owner and checker sources are unavailable and are not reconstructed here.
