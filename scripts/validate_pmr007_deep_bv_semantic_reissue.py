@@ -164,20 +164,59 @@ def validate(root=ROOT):
         issues.append("semantic-reissue SOURCE_SHA256SUMS mismatch")
 
     provenance = load_mapping(root / PROVENANCE_RECEIPT_REL, "custody reissue receipt", issues)
+    reissue = provenance.get("source_reissue", {})
     linked = provenance.get("response_linked_custody", {})
+    repository_copy = provenance.get("repository_copy", {})
+    baseline = provenance.get("exact_baseline_preserved", {})
     boundary = provenance.get("proposal_boundary", {})
     exact_original_response_linked_files = linked.get("exact_original_files")
     regenerated_response_linked_files = linked.get("regenerated_custody_copies")
     unavailable = linked.get("original_byte_sequences_still_unavailable")
     authority_ceiling_exact = (
         provenance.get("schema") == "ar8r-pmr007-deep-bl-bv-custody-reissue-v1"
-        and provenance.get("source_reissue", {}).get("sha256")
+        and reissue.get("filename") == "AR8R_PMR007_DEEP_BL_BV_CUSTODY_REISSUE_V1.zip"
+        and reissue.get("sha256")
         == "6ed381f16d2bbd46dd31a987bdc2b9552aa2ae083874dde650e75ff0794f27d3"
-        and provenance.get("repository_copy", {}).get("source_files") == 22
-        and provenance.get("repository_copy", {}).get("original_deep_bl_bv_bytes_claimed_for_all_source_files") is False
+        and reissue.get("bytes") == 21618877
+        and reissue.get("archive_members") == 2666
+        and reissue.get("manifest_members") == 2666
+        and reissue.get("unsafe_paths") == 0
+        and reissue.get("duplicate_paths") == 0
+        and reissue.get("decompression_errors") == 0
+        and reissue.get("manifest_hash_mismatches") == 0
+        and reissue.get("yaml_files_parsed") == 574
+        and reissue.get("json_files_parsed") == 368
+        and reissue.get("structured_parse_errors") == 0
+        and reissue.get("round_trip_restoration") == "PASS"
+        and linked.get("total") == 28
         and exact_original_response_linked_files == 2
+        and linked.get("exact_original_filenames") == [
+            "EXTERNAL_PDF_CUSTODY_AND_METHOD_NOTE.md",
+            "EXTERNAL_PDF_CUSTODY_SANITIZED.json",
+        ]
         and regenerated_response_linked_files == 26
         and unavailable == 26
+        and linked.get("total")
+        == exact_original_response_linked_files + regenerated_response_linked_files
+        and unavailable == regenerated_response_linked_files
+        and repository_copy.get("path")
+        == "docs/project-closure/ar8r-v11/post-merge-proposals/pmr007-deep-bl-bv-semantic-reissue/source-files"
+        and repository_copy.get("source_files") == 22
+        and repository_copy.get("source_files_copied_byte_exact_from_reissue") is True
+        and repository_copy.get("original_deep_bl_bv_bytes_claimed_for_all_source_files") is False
+        and repository_copy.get("role") == "PUBLIC_SAFE_SEMANTIC_REISSUE_PROPOSAL_CUSTODY"
+        and baseline.get("path")
+        == "docs/project-closure/ar8r-v11/post-merge-proposals/pmr007-deep-a-bk"
+        and baseline.get("source_archive_sha256")
+        == "a7271391bbc7294128597a0798b0dd644bd79bdf4d9d57b3b918b2fa912a32b5"
+        and baseline.get("modified_by_this_import") is False
+        and boundary.get("deep_rounds_summarized") == 11
+        and boundary.get("range") == "Deep BL through Deep BV"
+        and boundary.get("only_printed_identity") == "PMR-007-CIID-1"
+        and boundary.get("deep_bl_through_bu_individual_original_packets") == "UNAVAILABLE"
+        and boundary.get("deep_bv_original_theorem_model_checker_audit_repair_rereview_bytes") == "UNAVAILABLE"
+        and boundary.get("deep_bv_reported_counts")
+        == "CUSTODY_TRANSCRIPTION_NOT_EXECUTABLE_REPRODUCTION"
         and boundary.get("independently_rerun_from_reissue") is False
         and boundary.get("historical_identity_assigned") is False
         and boundary.get("historical_theorem_origin_credit") is False
@@ -189,6 +228,10 @@ def validate(root=ROOT):
         and boundary.get("integrated_champion") == "NONE"
         and boundary.get("meniscus") == "MENISCUS_NOT_REACHED"
         and boundary.get("natural_closure") == "NOT_REACHED"
+        and boundary.get("historical_duration_effect") == "NONE"
+        and boundary.get("theorem_origin_authority_effect") == "NONE"
+        and provenance.get("integration", {}).get("base_sha")
+        == "ca504400ea7e241d57ddf6db1beadc01d1e77f3b"
         and provenance.get("integration", {}).get("private_archive_committed") is False
         and provenance.get("integration", {}).get("source_pdf_bytes_committed") is False
         and provenance.get("integration", {}).get("raw_chat_or_activity_committed") is False
@@ -201,12 +244,14 @@ def validate(root=ROOT):
         result_document = json.loads(result_path.read_text(encoding="utf-8"))
     except (OSError, UnicodeDecodeError, json.JSONDecodeError):
         result_document = {}
+    executable_reproduction_claimed = (
+        boundary.get("independently_rerun_from_reissue") is True
+        or result_document.get("independently_rerun_in_custody_repair") is True
+    )
     if result_document.get("independently_rerun_in_custody_repair") is not False:
         issues.append("transcribed Deep BV counts were promoted to executable reproduction")
     if result_document.get("authority_ceiling") != "CUSTODY_TRANSCRIPTION_NOT_EXECUTABLE_REPRODUCTION":
         issues.append("Deep BV experiment authority ceiling mismatch")
-    executable_reproduction_established = False
-
     index = load_mapping(
         source / "PMR007_POST_BK_PROPOSED_RESULT_INDEX_THROUGH_BV_V4.yaml",
         "Deep BL-BV result index",
@@ -241,6 +286,10 @@ def validate(root=ROOT):
     if not deep_bk_exact_snapshot_unchanged:
         issues.append("exact Deep A-BK snapshot changed or failed validation")
 
+    executable_reproduction_established = (
+        executable_reproduction_claimed and not issues
+    )
+
     return {
         "schema": "ar8r-pmr007-deep-bv-semantic-reissue-validation-v1",
         "result": "FAIL" if issues else "PASS_WITH_SEMANTIC_REISSUE_CEILING",
@@ -256,6 +305,7 @@ def validate(root=ROOT):
         "authority_ceiling_exact": authority_ceiling_exact,
         "result_index_exact": result_index_exact,
         "deep_bk_exact_snapshot_unchanged": deep_bk_exact_snapshot_unchanged,
+        "executable_reproduction_claimed": executable_reproduction_claimed,
         "executable_reproduction_established": executable_reproduction_established,
         "issues": issues,
     }
