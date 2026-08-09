@@ -1,0 +1,13 @@
+{
+  "schema": "AR8R_LIVE_REPOSITORY_AUTHORITY_RECEIPT_V1",
+  "repository": "theislampill/orthemology",
+  "verified_origin_main": "a8142c3caf103ee46a2cd759c3d319b1e29b40da",
+  "pull_request": 24,
+  "pull_request_state": "MERGED",
+  "merge_parents": [
+    "ca504400ea7e241d57ddf6db1beadc01d1e77f3b",
+    "f2f749cdbd870c85a82b0028982c9f7140349899"
+  ],
+  "github_changed_by_research_run": false,
+  "verified_via": "live GitHub commit and pull-request pages"
+}

@@ -1,0 +1,124 @@
+schema: bounded-challenger-b-deep-bv-formal-ancestry-source-firewall-proposal-v1
+status: NON_AUTHORITATIVE_READ_ONLY_PROPOSAL
+repository:
+  owner: theislampill
+  name: orthemology
+  reviewed_main_sha: a8142c3caf103ee46a2cd759c3d319b1e29b40da
+  verification_method: LIVE_GITHUB_MAIN_COMMIT_AND_BRANCH_HISTORY
+  local_git_transport: UNAVAILABLE_DNS_RESOLUTION_FAILURE
+  mutation: NONE
+classification:
+  mathematical_core:
+    primary_disposition: DUPLICATED_RESULT_REQUIRING_FAMILY_REGISTRATION_ONLY
+    exact_existing_owner: AR8R-T294
+    relation_to_existing_owner: IDENTICAL_UP_TO_RENAMING
+    relation_to_AR_T1: STRICT_SPECIALIZATION
+    proof_kind: ELEMENTARY_QUOTIENT_FIBRE_FACTORIZATION
+    definition_case: IDENTIFIABILITY_IS_DEFINITIONAL_ONLY_IF_DEFINED_AS_FIBRE_CONSTANCY
+    new_general_theorem: false
+    general_mathematical_novelty: 0
+  common_intervention_guards:
+    disposition: GUARDED_APPLICATION_SPECIFICATION
+    current_form: PROSE_REQUIREMENTS_NOT_FULLY_TYPED
+    possible_new_repository_object: CommonInterventionCertificate
+    object_kind: SPECIFICATION_OR_CERTIFICATE_NOT_THEOREM
+  source_world_transfer:
+    disposition: FAIL_CLOSED_WITHOUT_INDEPENDENT_BRIDGES
+    neutral_authority_semantics: FORBIDDEN
+    factorization_supplies_bridge: false
+core_statement:
+  types:
+    model: M
+    profile: Profile
+    target: QVal
+  maps:
+    experiment_profile: 'E : M -> Profile'
+    target_coordinate: 'Q : M -> QVal'
+  fibre_constant: 'forall m m\x27, E m = E m\x27 -> Q m = Q m\x27'
+  quotient_factorization: 'exists d : Quotient(kernel E) -> QVal, Q = d o quotientMap'
+  equivalence: true
+  finiteness_logically_required: false
+  full_profile_codom_warning: FACTOR_THROUGH_ATTAINED_IMAGE_OR_ADD_OFF_RANGE_EXTENSION_ASSUMPTION
+proof_status:
+  human_proof: COMPLETE_IN_PROPOSAL
+  independent_finite_corroboration:
+    map_pairs_checked: 87317
+    decoder_enumeration_vs_partition_mismatches: 0
+  historical_deep_bv_checker_reproduced: false
+  reason: ORIGINAL_EXECUTABLE_BYTES_UNAVAILABLE
+lean_status:
+  challenger_source_drafted: true
+  parser: NOT_RUN
+  elaboration: NOT_RUN
+  kernel: NOT_RUN
+  axiom_report: NOT_RUN
+  toolchain_available: false
+  static_declaration_scan:
+    sorry: 0
+    admit: 0
+    axiom_declarations: 0
+    opaque_declarations: 0
+  specification_correspondence: HUMAN_REVIEWED_NOT_MACHINE_ESTABLISHED
+source_world_coordinates:
+  - source_text_or_bytes
+  - translation
+  - morphology
+  - syntax
+  - occurrence_meaning
+  - formal_predicate
+  - world_truth
+  - bearer_applicability
+  - recipient_warrant
+  - authority
+  - revelation
+noncircularity_guards:
+  - ABSTRACT_INTERVENTION_TYPED_BEFORE_MODEL_SPECIFIC_IMPLEMENTATION
+  - IMPLEMENTATION_DOES_NOT_READ_OR_REENCODE_Q_OF_THE_MODEL
+  - IMPLEMENTATION_AND_OUTPUT_SEMANTICS_FROZEN_AND_INDEPENDENTLY_AUDITED
+  - MODEL_CLASS_AND_RIVAL_CLOSURE_DECLARED
+  - PROTOCOL_KIND_ONE_SHOT_OR_ADAPTIVE_TYPED
+  - OUTPUT_LAW_EQUALITY_NOT_REPLACED_BY_UNDECLARED_TOLERANCE
+  - SOURCE_VERSION_AUTHORIZATION_RESOURCE_AND_REALIZABILITY_GUARDS_SEPARATE
+  - SOURCE_RELATIVE_COORDINATES_DO_NOT_MIGRATE_TO_NEUTRAL_SEMANTICS
+  - COMPLETE_PROFILE_CLAIM_RELATIVE_TO_DECLARED_J_AND_PROTOCOL_ONLY
+recommended_family_action:
+  allocate_new_theorem_id: false
+  canonical_theorem_owner: AR8R-T294
+  primary_family: FAMILY-FIBRE
+  secondary_family: FAMILY-CAUSAL
+  relation_edge:
+    left: AR8R-T294
+    right: Deep_BV_common_intervention_identifiability_core
+    relation: IDENTICAL_UP_TO_RENAMING
+  application_crosslinks:
+    - AR8R-T272
+    - AR8R-T279
+    - AR8R-T289
+    - AR8R-T297
+    - AR8R-T299
+    - AR8R-T304
+    - AR-T1
+    - GW-T12A
+    - GW-T12B
+    - Deep_AO_representation_firewall
+    - Deep_AP_source_world_firewall
+    - Deep_AS_proper_function_intervention_basis
+  preserve_as: PROPOSAL_ALIAS_PLUS_COMMON_INTERVENTION_CERTIFICATE_SPEC
+fresh_rereview:
+  formal_core: PASS_AFTER_QUOTIENT_RANGE_REPAIR
+  ancestry: PASS_ONLY_IF_T294_DUPLICATE_RELATION_IS_RECORDED
+  common_intervention_certificate: DRAFTED_NOT_INSTANTIATED
+  actual_architecture_splitting_experiment: NOT_SUPPLIED
+  source_world_transfer: FAIL_CLOSED
+  metaphysical_or_theological_ascent: NOT_LICENSED
+  overall: RETURN_TO_AUTHORITATIVE_THREAD_AS_PROPOSAL
+forbidden_conclusions:
+  - PERSONALITY
+  - MENTALITY
+  - WISDOM
+  - SPEECH
+  - REVELATION
+  - NECESSARY_BEING
+  - ACTUAL_WORLD_SELECTION
+  - SOURCE_AUTHORITY
+  - UNIQUE_BEARER

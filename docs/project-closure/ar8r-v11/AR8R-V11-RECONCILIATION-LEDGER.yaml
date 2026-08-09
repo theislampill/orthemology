@@ -819,6 +819,18 @@ items:
   owner_path: docs/project-closure/ar8r-v11/provenance/AR8R-PMR007-DEEP-BL-BV-CUSTODY-REISSUE-V1.yaml
   basis: Preserves 22 public-safe reissue files while recording that only 2 of 28 response-linked originals survive and that the other 26 are regenerated custody copies.
   remaining_burden: Original BL-BV bytes, individual BL-BU packets, executable BV reproduction, external review, and owner adoption remain open; no historical identity, novelty, champion, meniscus, or closure follows.
+- item_id: PMR007-DEEP-BW-CJ-SEMANTIC-REISSUE
+  disposition: PUBLIC_INTEGRATE
+  publication_state: MATERIALIZED_PUBLIC_PROPOSAL_NOT_ADOPTED
+  owner_path: docs/project-closure/ar8r-v11/provenance/AR8R-PMR007-DEEP-BW-CJ-CUSTODY-REISSUE-V1.yaml
+  basis: Preserves 40 byte-exact public reissue files and fourteen proposal identities while rejecting the V1 CI/CJ false-pass, rejecting V2's tautological repetition, and recording bounded V3 finite-signature witnesses with mutation controls.
+  remaining_burden: Original ephemeral bytes, per-result independent audit, architecture implementations, source/world bridges, external review, and owner adoption remain open; no historical identity, novelty, champion, meniscus, or closure follows.
+- item_id: AR8R-EXTERNAL-CHALLENGERS-A-B
+  disposition: PUBLIC_INTEGRATE
+  publication_state: MATERIALIZED_PUBLIC_PROPOSAL_NOT_ADOPTED
+  owner_path: docs/project-closure/ar8r-v11/post-merge-proposals/external-challenges/README.md
+  basis: Preserves bounded challenge evidence, exact source hashes, independent defects, finite corroboration, and a separately labeled standalone Lean repair without promoting any challenged claim.
+  remaining_burden: Factorial implementation, family coverage, independent per-result review, generalized-theorem ancestry, source/world transfer, and owner adoption remain open.
 v11_task6_and_pdf_addendum_decisions:
   append_only: true
   totals: {INTEGRATE: 26, PROPOSAL_ONLY: 8, DEFERRED: 6, BLOCKED: 9, PRIVATE_EXCLUDED: 4, TOTAL: 53}

@@ -36,6 +36,20 @@ source_packets:
     regenerated_response_linked_files: 26
     disposition: PUBLIC_SAFE_SEMANTIC_REISSUE_PROPOSAL_CUSTODY_NO_ADOPTION
     receipt: provenance/AR8R-PMR007-DEEP-BL-BV-CUSTODY-REISSUE-V1.yaml
+  - id: PMR007_DEEP_BW_THROUGH_CJ_SEMANTIC_REISSUE
+    source_files: 40
+    indexed_results: 14
+    original_ephemeral_files: UNAVAILABLE
+    v1_checker: REJECTED_FALSE_PASS_CI_CJ
+    v2_finite_checker: REJECTED_TAUTOLOGICAL_REPETITION_NOT_INDEPENDENT_EVIDENCE
+    v3_finite_checker: EXHAUSTIVE_DECLARED_SIGNATURE_WITNESS_WITH_MUTANT_CONTROLS
+    disposition: PUBLIC_SAFE_SEMANTIC_REISSUE_PROPOSAL_CUSTODY_NO_ADOPTION
+    receipt: provenance/AR8R-PMR007-DEEP-BW-CJ-CUSTODY-REISSUE-V1.yaml
+  - id: EXTERNAL_CHALLENGERS_A_AND_B
+    source_files: 13
+    disposition: NONAUTHORITATIVE_PUBLIC_CHALLENGE_CUSTODY
+    finite_checker_effect: BOUNDED_CORROBORATION_ONLY
+    lean_effect: STANDALONE_REPAIRED_DRAFT_NOT_PROJECT_ADOPTION
 pmr001_results:
   - {id: PMR-M3-01, status: PROVED_CONDITIONAL_WITH_VALIDATED_COUNTERMODELS, repository_effect: SOURCE_ONLY}
   - {id: PMR-R5-01, status: VALIDATED_RIVAL_COMPARISON, repository_effect: SOURCE_ONLY}
@@ -121,6 +135,34 @@ pmr007_deep_bl_through_bv_semantic_reissue:
   integrated_champion: NONE
   meniscus: MENISCUS_NOT_REACHED
   natural_closure: NOT_REACHED
+pmr007_deep_bw_through_cj_semantic_reissue:
+  path: post-merge-proposals/pmr007-deep-bw-cj-semantic-reissue
+  source_files: 40
+  indexed_results: 14
+  original_ephemeral_files: UNAVAILABLE
+  custody: SEMANTIC_REISSUE_OR_REGENERATED_CUSTODY_COPY
+  v1_checker: REJECTED_FALSE_PASS_CI_CJ
+  v2_checker: REJECTED_TAUTOLOGICAL_REPETITION_NOT_INDEPENDENT_EVIDENCE
+  v3_checker: CONSTRUCTED_FINITE_SIGNATURE_WITNESSES_ONLY
+  BW_through_CH: GAP_PENDING_PER_RESULT_INDEPENDENT_REVIEW
+  CI: GAP_CONDITIONAL_COUNTERMODEL_ARCHITECTURE_IMPLEMENTATION_UNVERIFIED
+  CJ: GAP_CONDITIONAL_COUNTERMODEL_ARCHITECTURE_IMPLEMENTATION_UNVERIFIED
+  historical_identity: NONE
+  owner_adoption: PENDING
+  external_review: OPEN
+  repository_readiness: EXTERNAL_REVIEW_REQUIRED
+  general_novelty_credit: NOT_GRANTED
+  integrated_champion: NONE
+  meniscus: MENISCUS_NOT_REACHED
+  natural_closure: NOT_REACHED
+external_challenge_custody:
+  path: post-merge-proposals/external-challenges
+  challenger_A: GAP_WITH_SOUND_BOUNDED_CORE
+  challenger_B: BOUNDED_CORE_CORROBORATED_GENERALIZED_DRAFT_REPAIRED_NOT_ADOPTED
+  theorem_identity_effect: NONE
+  novelty_effect: NONE
+  owner_adoption: PENDING
+  repository_scientific_adoption: NONE
 campaign_state:
   integrated_champion: NONE
   meniscus: MENISCUS_NOT_REACHED

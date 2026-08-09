@@ -1,0 +1,143 @@
+schema: AR8R_PMR007_POST_BV_RESULT_INDEX_REISSUE_V1
+custody_class: SEMANTIC_REISSUE_OR_REGENERATED_CUSTODY_COPY
+results:
+- round: BW
+  identity: PMR-007-TCIS-1
+  title: Target-blind common-intervention saturation
+  status: ADMITTED_POST_MERGE_SCOPED_CENTRAL_COMMON_INTERVENTION_SATURATION_RESULT
+  historical_identity: NONE
+  general_mathematical_novelty: 0
+  owner_adoption: PENDING
+  external_review: OPEN
+  repository_adoption: NONE
+  custody_exact_original_bytes: false
+- round: BX
+  identity: PMR-007-MBAC-1
+  title: Feasible minimal bridge-anchor cover
+  status: ADMITTED_POST_MERGE_SCOPED_CENTRAL_RESIDUAL_ANCHOR_COVER_RESULT
+  historical_identity: NONE
+  general_mathematical_novelty: 0
+  owner_adoption: PENDING
+  external_review: OPEN
+  repository_adoption: NONE
+  custody_exact_original_bytes: false
+- round: BY
+  identity: PMR-007-SWAC-1
+  title: Source-world anchor chain and attribute-locus firewall
+  status: ADMITTED_POST_MERGE_SCOPED_SOURCE_FORMAL_WORLD_ANCHOR_RESULT
+  historical_identity: NONE
+  general_mathematical_novelty: 0
+  owner_adoption: PENDING
+  external_review: OPEN
+  repository_adoption: NONE
+  custody_exact_original_bytes: false
+- round: BZ
+  identity: PMR-007-BAXE-1
+  title: Bridge-anchor exhaustion in the exact current neutral expansion class
+  status: ADMITTED_POST_MERGE_SCOPED_CENTRAL_BRIDGE_ANCHOR_EXHAUSTION_RESULT
+  historical_identity: NONE
+  general_mathematical_novelty: 0
+  owner_adoption: PENDING
+  external_review: OPEN
+  repository_adoption: NONE
+  custody_exact_original_bytes: false
+- round: CA
+  identity: PMR-007-RCIG-1
+  title: Resource-cost identifiability gate
+  status: ADMITTED_POST_MERGE_SCOPED_CENTRAL_RESOURCE_IDENTIFIABILITY_GATE_RESULT
+  historical_identity: NONE
+  general_mathematical_novelty: 0
+  owner_adoption: PENDING
+  external_review: OPEN
+  repository_adoption: NONE
+  custody_exact_original_bytes: false
+- round: CB
+  identity: PMR-007-CRFW-1
+  title: Class-restriction firewall
+  status: ADMITTED_POST_MERGE_SCOPED_CENTRAL_CLASS_RESTRICTION_FIREWALL_RESULT
+  historical_identity: NONE
+  general_mathematical_novelty: 0
+  owner_adoption: PENDING
+  external_review: OPEN
+  repository_adoption: NONE
+  custody_exact_original_bytes: false
+- round: CC
+  identity: PMR-007-CSQF-1
+  title: Constitutive-semanticity quantifier firewall
+  status: ADMITTED_POST_MERGE_SCOPED_CENTRAL_CONSTITUTIVE_SEMANTICITY_QUANTIFIER_FIREWALL_RESULT
+  historical_identity: NONE
+  general_mathematical_novelty: 0
+  owner_adoption: PENDING
+  external_review: OPEN
+  repository_adoption: NONE
+  custody_exact_original_bytes: false
+- round: CD
+  identity: PMR-007-NOPF-1
+  title: Norm-orientation symmetry and proper-function firewall
+  status: ADMITTED_POST_MERGE_SCOPED_CENTRAL_NORM_ORIENTATION_AND_PROPER_FUNCTION_FIREWALL_RESULT
+  historical_identity: NONE
+  general_mathematical_novelty: 0
+  owner_adoption: PENDING
+  external_review: OPEN
+  repository_adoption: NONE
+  custody_exact_original_bytes: false
+- round: CE
+  identity: PMR-007-CDPS-1
+  title: Cross-domain intervention and plural-separability firewall
+  status: ADMITTED_POST_MERGE_SCOPED_CENTRAL_CROSS_DOMAIN_INTERVENTION_RESULT
+  historical_identity: NONE
+  general_mathematical_novelty: 0
+  owner_adoption: PENDING
+  external_review: OPEN
+  repository_adoption: NONE
+  custody_exact_original_bytes: false
+- round: CF
+  identity: PMR-007-ABIC-1
+  title: Attribute-bearer intersection and distributed realization
+  status: ADMITTED_POST_MERGE_SCOPED_CENTRAL_COMMON_BEARER_AND_DISTRIBUTED_REALIZATION_RESULT
+  historical_identity: NONE
+  general_mathematical_novelty: 0
+  owner_adoption: PENDING
+  external_review: OPEN
+  repository_adoption: NONE
+  custody_exact_original_bytes: false
+- round: CG
+  identity: PMR-007-SICM-1
+  title: Strengthened one-intellect nonpersonal common model
+  status: ADMITTED_POST_MERGE_SCOPED_CENTRAL_STRENGTHENED_R5_COMMON_MODEL_RESULT
+  historical_identity: NONE
+  general_mathematical_novelty: 0
+  owner_adoption: PENDING
+  external_review: OPEN
+  repository_adoption: NONE
+  custody_exact_original_bytes: false
+- round: CH
+  identity: PMR-007-OIOT-1
+  title: Constitution-sensitive ownership-intervention firewall
+  status: ADMITTED_POST_MERGE_SCOPED_CENTRAL_CONSTITUTION_SENSITIVE_INTERVENTION_FIREWALL_RESULT
+  historical_identity: NONE
+  general_mathematical_novelty: 0
+  owner_adoption: PENDING
+  external_review: OPEN
+  repository_adoption: NONE
+  custody_exact_original_bytes: false
+- round: CI
+  identity: PMR-007-SCSI-1
+  title: Semantic-content swap and intentional-uptake firewall
+  status: ADMITTED_POST_MERGE_SCOPED_CENTRAL_SEMANTIC_CONTENT_PROXY_RESULT
+  historical_identity: NONE
+  general_mathematical_novelty: 0
+  owner_adoption: PENDING
+  external_review: OPEN
+  repository_adoption: NONE
+  custody_exact_original_bytes: false
+- round: CJ
+  identity: PMR-007-FSGW-1
+  title: Fittingness-status guidance and the Wisdom firewall
+  status: ADMITTED_POST_MERGE_SCOPED_CENTRAL_FITTINGNESS_SIGNAL_AND_WISDOM_FIREWALL_RESULT
+  historical_identity: NONE
+  general_mathematical_novelty: 0
+  owner_adoption: PENDING
+  external_review: OPEN
+  repository_adoption: NONE
+  custody_exact_original_bytes: false

@@ -61,6 +61,28 @@ semantic_reissue_opportunities:
       elaboration: NOT_RUN
       kernel: NOT_RUN
   nonclaim: Semantic custody and a declaration target do not establish original bytes, historical identity, proof completeness, or machine checking.
+post_bv_semantic_reissue_opportunities:
+  source: ../post-merge-proposals/pmr007-deep-bw-cj-semantic-reissue
+  custody: SEMANTIC_REISSUE_OR_REGENERATED_CUSTODY_COPY
+  result_count: 14
+  v1_checker: REJECTED_FALSE_PASS_CI_CJ
+  v2_checker: REJECTED_TAUTOLOGICAL_REPETITION_NOT_INDEPENDENT_EVIDENCE
+  v3_checker: CONSTRUCTED_FINITE_SIGNATURE_WITNESSES_ONLY
+  lean_sources_created: false
+  parse: NOT_RUN
+  elaboration: NOT_RUN
+  kernel: NOT_RUN
+  nonclaim: V3 finite-signature witnesses do not establish theorem formalization, architecture implementation, source-world truth, or adoption.
+external_challenger_b_lean:
+  source: ../post-merge-proposals/external-challenges/challenger-b-formal-ancestry
+  supplied_draft: PARSE_ELABORATION_FAILED
+  repaired_draft: STANDALONE_LEAN_4_32_2_PASS
+  project_build: NOT_RUN_NOT_APPLICABLE_TO_EXTERNAL_CHALLENGE
+  identity_relation:
+    finite_proposition_to_AR8R_T294: IDENTICAL_UP_TO_RENAMING
+    generalized_quotient_theorem_to_AR8R_T294: NOT_IDENTIFIED
+  novelty_credit: 0
+  adoption_effect: NONE
 queue:
   - {id: Q0, purpose: Lean project/toolchain exact source custody and clean build receipt, prerequisites: [], layers: [CUSTODY, TOOLCHAIN, BUILD], status: PERFORMED_BY_FABLE_R1_T299_SCOPED}
   - {id: Q1a, purpose: finite fibre factorization then T227 T299 exact twin and T300/T304 wrapper, prerequisites: [Q0, CONCRETE_T300_LEMMAS_FOR_WRAPPER], layers: [PURE, APPLICATION]}

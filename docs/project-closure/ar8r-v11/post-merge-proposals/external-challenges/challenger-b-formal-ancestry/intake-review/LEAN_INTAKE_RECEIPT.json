@@ -1,0 +1,23 @@
+{
+  "schema": "ar8r-challenger-b-lean-intake-receipt-v1",
+  "source_draft_sha256": "62663384281c23ff599d0e4bef14c81b9e6f29a4732ed609760b71520adedfe4",
+  "source_draft_status": "PARSE_ELABORATION_FAILED",
+  "source_draft_failures": [
+    "COMMON_INTERVENTION_SPEC_IMPLEMENTATION_UNIVERSE_UNDERCONSTRAINED",
+    "RESERVED_SYNTAX_FIELD_NAME"
+  ],
+  "repaired_draft_sha256": "7b666912629790cb01cbfe8bfcde829238ade5f31bf776728e2f1d911b9fedd3",
+  "lean_version": "4.32.2",
+  "lean_commit": "f3b06c705e6c85f5314019d5d3baab0fec5b580c",
+  "standalone_parse_elaboration_kernel": "PASS",
+  "project_build": "NOT_RUN_NOT_APPLICABLE_TO_EXTERNAL_CHALLENGE",
+  "axiom_report": {
+    "factorsThroughProfileQuotient_iff_fiberConstant": ["Quot.sound"],
+    "profileQuotient_decoder_unique": ["Quot.sound"],
+    "fullProfileFactor_implies_fiberConstant": []
+  },
+  "historical_identity": "NONE",
+  "owner_adoption": "PENDING",
+  "repository_scientific_adoption": "NONE",
+  "general_novelty": 0
+}

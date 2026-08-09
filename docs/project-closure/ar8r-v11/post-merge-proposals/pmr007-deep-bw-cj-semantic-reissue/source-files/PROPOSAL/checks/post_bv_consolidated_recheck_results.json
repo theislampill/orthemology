@@ -1,0 +1,142 @@
+{
+  "overall_pass": true,
+  "results": {
+    "BW": {
+      "adaptive": 8192,
+      "hidden_anchor": 512,
+      "hidden_anchor_failures": 0,
+      "mismatches": 0,
+      "open_loop": 15360,
+      "pass": true,
+      "transducers": 256
+    },
+    "BX": {
+      "criterion_mismatches": 0,
+      "feasible_subsets": 412507,
+      "instances": 20000,
+      "minimum_cost_mismatches": 0,
+      "pass": true,
+      "unresolved_cores": 1471,
+      "weighted_cardinality_divergence": 371
+    },
+    "BY": {
+      "false_transfers": 0,
+      "guard_rows": 512,
+      "locus_assignments": 8,
+      "locus_misattributions": 0,
+      "pass": true,
+      "single_guard_deletions": 9,
+      "valid_transfers": 1
+    },
+    "BZ": {
+      "all_targets_vary": true,
+      "bit_conflicts": [
+        65536,
+        65536,
+        65536,
+        65536,
+        65536,
+        65536,
+        65536,
+        65536,
+        65536
+      ],
+      "expansions": 512,
+      "full_vector_pairs": 130816,
+      "pass": true,
+      "target_bits": 9
+    },
+    "CA": {
+      "budget_tests": 200000,
+      "conservative_twins": 471,
+      "instances": 20000,
+      "mismatches": 0,
+      "pareto_incomparable": 62088,
+      "pass": true
+    },
+    "CB": {
+      "determined_split_failures": 0,
+      "external_split_controls": 128232,
+      "instances": 50000,
+      "pass": true,
+      "same_fibre_pairs": 256818
+    },
+    "CC": {
+      "COMMON": 14911,
+      "LOCAL": 50625,
+      "LOCAL_not_COMMON": 35714,
+      "UNIQUE_LOCAL": 256,
+      "UNIQUE_LOCAL_not_COMMON": 252,
+      "equivalence_failures": 0,
+      "pass": true,
+      "relations": 65536
+    },
+    "CD": {
+      "factorization_failures": 0,
+      "instances": 20000,
+      "joint_anchor_tests": 20000,
+      "joint_mismatches": 0,
+      "orbit_noninvariant": 17270,
+      "pass": true
+    },
+    "CE": {
+      "count_vectors": 3432,
+      "nonconstant_cancellation": 106,
+      "pass": true,
+      "profile_invariant": 114,
+      "strict_failures": 0,
+      "strict_separable": 8
+    },
+    "CF": {
+      "beta_infinity": 1695,
+      "equivalence_failures": 0,
+      "multiple_common": 46,
+      "pairwise_no_global": 60,
+      "pass": true,
+      "systems": 4096
+    },
+    "CG": {
+      "admissible": 16,
+      "all_expansions": 32,
+      "impersonal_twin": true,
+      "pass": true,
+      "personal_twin": true,
+      "target_variation": [
+        true,
+        true,
+        true,
+        true,
+        true
+      ]
+    },
+    "CH": {
+      "partial_capability": 189,
+      "pass": true,
+      "proxy_collisions": 15482,
+      "proxy_mismatches": 0,
+      "proxy_trials": 20000,
+      "tables": 216,
+      "total_semantic_invalid": 26,
+      "total_valid": 1
+    },
+    "CI": {
+      "content_insensitive": 25,
+      "content_sensitive": 15600,
+      "matched_twins": 20000,
+      "pass": true,
+      "profiles": 15625,
+      "twin_failures": 0
+    },
+    "CJ": {
+      "both": 72,
+      "fittingness_sensitive": 6480,
+      "pass": true,
+      "payoff_independent": 81,
+      "personal_impersonal_twins": 20000,
+      "profiles": 6561,
+      "twin_failures": 0
+    }
+  },
+  "schema": "AR8R_PMR007_POST_BV_CONSOLIDATED_RECHECK_V1",
+  "seed": 2026080909
+}

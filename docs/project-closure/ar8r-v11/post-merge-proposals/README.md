@@ -17,3 +17,16 @@ Deep BL–BV originals remain unavailable. Deep BL–BU survive only as bounded
 semantic summaries; the reported Deep BV experiment counts were not
 independently rerun. The surface is proposal custody only, with no historical
 identity, adoption, novelty, champion, meniscus, or closure effect.
+
+The `pmr007-deep-bw-cj-semantic-reissue` directory preserves the next 40-file
+public-safe semantic reissue. Its fourteen identities remain proposal-only.
+Independent intake review rejected the V1 CI/CJ checker PASS because its twin
+counters were prefilled without executing the twin bodies. V2 executed those
+loops but was rejected as tautological repetition. V3 performs exhaustive
+declared-signature checks and mutation controls, while per-result external
+review, source/world bridges, architecture implementations, adoption, novelty,
+champion, meniscus, and closure remain open or absent.
+
+The `external-challenges` directory preserves bounded public challenge packets
+and their independent correction overlays. It is nonauthoritative challenge
+custody, not repository theory or external-review PASS.
