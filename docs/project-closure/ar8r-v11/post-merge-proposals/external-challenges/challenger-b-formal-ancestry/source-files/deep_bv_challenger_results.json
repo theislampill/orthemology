@@ -1,0 +1,440 @@
+{
+  "authority": {
+    "historical_checker_reproduction": false,
+    "repository": "theislampill/orthemology",
+    "reviewed_commit": "a8142c3caf103ee46a2cd759c3d319b1e29b40da",
+    "status": "NON_AUTHORITATIVE_READ_ONLY_PROPOSAL_EVIDENCE"
+  },
+  "core_theorem": {
+    "finite_assumption_logically_required": false,
+    "full_profile_codom_warning": "Use the quotient/attained image; otherwise add Nonempty QVal or an equivalent off-image extension assumption.",
+    "statement": "Q factors through the E-profile quotient iff Q is constant on every E-fibre."
+  },
+  "countermodels": [
+    {
+      "failure": "P and I are separated, but P and R share one profile value while Q differs.",
+      "firewall_consequence": "Require class-wide fibre constancy, not a selected pair or positive pairwise distance.",
+      "id": "CM-BVB-01-PAIRWISE-NOT-CLASSWIDE",
+      "model": {
+        "models": [
+          "personal_P",
+          "impersonal_I",
+          "plural_R"
+        ],
+        "profile": {
+          "impersonal_I": 1,
+          "personal_P": 0,
+          "plural_R": 0
+        },
+        "target_Q": {
+          "impersonal_I": 0,
+          "personal_P": 1,
+          "plural_R": 0
+        }
+      },
+      "stronger_reading_refuted": "One selected personal/impersonal separation identifies Q over the declared class."
+    },
+    {
+      "failure": "The experiment re-encodes the answer; the implementation map is not target-blind.",
+      "firewall_consequence": "Freeze implementation before target labels and require invariance under target relabelling.",
+      "id": "CM-BVB-02-TARGET-LEAKAGE",
+      "model": {
+        "base_profile": {
+          "m0": 0,
+          "m1": 0
+        },
+        "implementation_policy": "choose intervention i_Q(m) after consulting Q(m)",
+        "reported_output": "Q(m)",
+        "target_Q": {
+          "m0": 0,
+          "m1": 1
+        }
+      },
+      "stronger_reading_refuted": "A perfectly discriminating operationalization is automatically evidential."
+    },
+    {
+      "failure": "Equal labels/codes do not establish equal intervention or output semantics.",
+      "firewall_consequence": "Require an abstract type, architecture-specific implementation map, and semantics-preservation proof.",
+      "id": "CM-BVB-03-SEMANTIC-MISMATCH",
+      "model": {
+        "impersonal_implementation": "append a token sequence tagged REASON",
+        "label": "request-a-reason",
+        "personal_implementation": "solicit intentional justificatory uptake",
+        "shared_numeric_code": 1
+      },
+      "stronger_reading_refuted": "One shared intervention string is a common intervention type."
+    },
+    {
+      "failure": "History-sensitive response appears only after the first intervention.",
+      "firewall_consequence": "Type protocol kind and define E_J over complete adaptive transcripts when adaptivity is claimed.",
+      "id": "CM-BVB-04-ONE-SHOT-NOT-ADAPTIVE",
+      "model": {
+        "adaptive_sequence_i0_then_i1": {
+          "model_A": [
+            0,
+            0
+          ],
+          "model_B": [
+            0,
+            1
+          ]
+        },
+        "isolated": {
+          "model_A": {
+            "i0": 0,
+            "i1": 0
+          },
+          "model_B": {
+            "i0": 0,
+            "i1": 0
+          }
+        }
+      },
+      "stronger_reading_refuted": "Equality of all isolated one-shot responses entails equality under adaptive protocols."
+    },
+    {
+      "failure": "Behavioural fibres contain different selection/design/norm histories.",
+      "firewall_consequence": "Supply independent function-fixing evidence or record nonidentifiability; do not infer function from success.",
+      "id": "CM-BVB-05-PROPER-FUNCTION-TWINS",
+      "model": {
+        "current_behaviour_profile": {
+          "accidental_duplicate": "b",
+          "selected_system": "b"
+        },
+        "proper_function_Q": {
+          "accidental_duplicate": false,
+          "selected_system": true
+        },
+        "selected_history": {
+          "accidental_duplicate": false,
+          "selected_system": true
+        }
+      },
+      "stronger_reading_refuted": "Complete current behaviour identifies history-sensitive proper function."
+    },
+    {
+      "failure": "The source/formal profile is identical while world truth and bearer application differ.",
+      "firewall_consequence": "Add independently warranted interpretation, world-adequacy, truth, and bearer-applicability bridges.",
+      "id": "CM-BVB-06-SOURCE-WORLD-TWINS",
+      "model": {
+        "shared": [
+          "source_bytes",
+          "translation",
+          "morphology",
+          "syntax",
+          "occurrence_meaning",
+          "formal_predicate"
+        ],
+        "world_0": {
+          "bearer": "w0",
+          "predicate_true": true
+        },
+        "world_1": {
+          "bearer": null,
+          "predicate_true": false
+        }
+      },
+      "stronger_reading_refuted": "Agreement through formal source predicate determines actual-world truth and bearer."
+    },
+    {
+      "failure": "The metaphysical coordinates vary inside the linguistic profile fibre.",
+      "firewall_consequence": "Articulability-to-ground, ground-to-mentality, and mentality-to-Speech remain separate bridges.",
+      "id": "CM-BVB-07-UNCREATED-GRAMMAR-TWINS",
+      "model": {
+        "model_created": {
+          "ground_status": "created/nomological",
+          "mental_bearer": false,
+          "speech": false
+        },
+        "model_uncreated": {
+          "ground_status": "underived",
+          "mental_bearer": true,
+          "speech": true
+        },
+        "shared_linguistic_profile": "all frozen token, syntax, morphology, composition, and response tests agree"
+      },
+      "stronger_reading_refuted": "Complete linguistic/articulability behaviour identifies uncreatedness, mentality, or Speech."
+    },
+    {
+      "failure": "The negative formal result is compatible with rival positive grounds.",
+      "firewall_consequence": "Require each positive ground, necessity, concreteness, unity, intellect, and personality bridge separately.",
+      "id": "CM-BVB-08-TRANSCENDENTAL-NOGO-TWINS",
+      "model": {
+        "shared_formal_no_go_profile": "same-token/same-respect non-generation result",
+        "world_A": {
+          "ground": "plural brute modal order",
+          "necessary_being": false,
+          "personal": false
+        },
+        "world_B": {
+          "ground": "one necessary personal being",
+          "necessary_being": true,
+          "personal": true
+        }
+      },
+      "stronger_reading_refuted": "A formal non-generation/no-go result identifies a Necessary Being or personal ground."
+    },
+    {
+      "failure": "A finite extensional profile can be table-realized without the disputed constitution.",
+      "firewall_consequence": "Either enlarge the profile with independently eligible evidence or retain the impersonal rival in the fibre.",
+      "id": "CM-BVB-09-FINITE-HISTORY-IMPERSONAL-REALIZER",
+      "model": {
+        "frozen_protocol_set": "finite J with bounded transcripts",
+        "impersonal_model": "finite lookup table reproducing every registered transcript law",
+        "personal_model": "personal controller",
+        "personality_Q_differs": true,
+        "profile_equality": true
+      },
+      "stronger_reading_refuted": "Matching all frozen finite intervention histories establishes personality or intentional uptake."
+    },
+    {
+      "failure": "The intervention is a mathematical label without an eligible implementation.",
+      "firewall_consequence": "Type resource, authorization, version, and physical-realizability guards outside the factorization proof.",
+      "id": "CM-BVB-10-RESOURCE-AUTHORIZATION",
+      "model": {
+        "authorization": false,
+        "budget": 1000000,
+        "cost": 1000000000000000000000000000000,
+        "formal_intervention": "reset-and-reinstantiate complete architecture state",
+        "physical_realizability": "not established"
+      },
+      "stronger_reading_refuted": "Formal definability of an intervention establishes operational availability."
+    },
+    {
+      "failure": "Fibre constancy is vacuous, but no function singleton→empty exists.",
+      "firewall_consequence": "Factor through the quotient/attained image, or add Nonempty QVal / nonempty M for a full-codomain decoder.",
+      "id": "CM-BVB-11-FULL-CODOMAIN-EMPTY-EDGE",
+      "model": {
+        "E": "unique empty-domain map",
+        "M": "empty",
+        "Profile": "singleton",
+        "Q": "unique empty-domain map",
+        "QVal": "empty"
+      },
+      "stronger_reading_refuted": "Fibre constancy always implies a decoder on the entire declared profile codomain."
+    },
+    {
+      "failure": "Every registered lower-order profile agrees while the parity target differs.",
+      "firewall_consequence": "The experiment profile must contain the interaction order on which Q depends.",
+      "id": "CM-BVB-12-HIGHER-ORDER-PARITY",
+      "model": {
+        "all_one_and_two_bit_marginals": "uniform and equal",
+        "even_parity_law": [
+          "000",
+          "011",
+          "101",
+          "110"
+        ],
+        "odd_parity_law": [
+          "001",
+          "010",
+          "100",
+          "111"
+        ],
+        "target_Q": {
+          "even": 0,
+          "odd": 1
+        }
+      },
+      "stronger_reading_refuted": "All lower-order or pairwise response profiles identify a higher-order architecture coordinate."
+    },
+    {
+      "failure": "A source-relative status does not migrate into a neutral experiment by relabelling it as an output.",
+      "firewall_consequence": "Keep source-relative coordinates explicit and condition conclusions on independently accepted authority/revelation bridges.",
+      "id": "CM-BVB-13-SOURCE-AUTHORITY-NOT-SEMANTICS",
+      "model": {
+        "neutral_track": {
+          "authority": "not independently established",
+          "revelation": "not independently established"
+        },
+        "same_text_and_translation": true,
+        "source_relative_track": {
+          "authority": true,
+          "revelation": true
+        }
+      },
+      "stronger_reading_refuted": "Source authority can be used as neutral output semantics across architectures."
+    },
+    {
+      "failure": "Verdict equality survives while numerical/justificatory reason identity fails.",
+      "firewall_consequence": "Apply full transport-complete obligation mapping; otherwise classify only a successor reason.",
+      "id": "CM-BVB-14-REASON-TRANSPORT-DELETION",
+      "model": {
+        "deleted_obligation": "authority",
+        "remaining_obligations": [
+          "evidence",
+          "identity",
+          "lineage"
+        ],
+        "source_reason_obligations": [
+          "evidence",
+          "authority",
+          "identity",
+          "lineage"
+        ],
+        "target_result": "same verdict"
+      },
+      "stronger_reading_refuted": "Matching final verdicts preserves the same reason across architecture or contract change."
+    }
+  ],
+  "exhaustive_check": {
+    "attained_range_equivalence_mismatches": [],
+    "attained_range_equivalence_pass": true,
+    "domain_sizes": [
+      0,
+      1,
+      2,
+      3,
+      4,
+      5
+    ],
+    "empty_edge_countermodel_checked_symbolically": {
+      "M": 0,
+      "Profile": 1,
+      "QVal": 0,
+      "fibre_constancy": true,
+      "full_codom_decoder_exists": false
+    },
+    "full_codom_equivalence_mismatches_with_nonempty_target": [],
+    "full_codom_equivalence_pass_under_nonempty_target": true,
+    "map_pairs_by_domain_size": {
+      "0": 9,
+      "1": 36,
+      "2": 196,
+      "3": 1296,
+      "4": 9604,
+      "5": 76176
+    },
+    "profile_alphabet_sizes": [
+      1,
+      2,
+      3
+    ],
+    "target_alphabet_sizes": [
+      1,
+      2,
+      3
+    ],
+    "total_map_pairs_checked": 87317
+  },
+  "pre_hash_sha256": "9068badc68e0d98af134693827a11edf076cda5747bfa374479491a06855ec5d",
+  "schema": "bounded-challenger-b-deep-bv-independent-finite-corroboration-v1",
+  "self_hash_note": "Hash below covers this object before insertion of the hash fields.",
+  "source_world_firewall": {
+    "bridge_obligations": [
+      {
+        "deletion_countermodel": "same bytes admit two materially different translations",
+        "from": "source_text_or_bytes",
+        "required": [
+          "locus/version custody",
+          "translation adequacy"
+        ],
+        "to": "translation"
+      },
+      {
+        "deletion_countermodel": "one translation suppresses an old-language morphological ambiguity",
+        "from": "translation",
+        "required": [
+          "vocalization/tokenization",
+          "morphological parse"
+        ],
+        "to": "morphology"
+      },
+      {
+        "deletion_countermodel": "same forms support two syntactic attachments",
+        "from": "morphology",
+        "required": [
+          "valency",
+          "attachment",
+          "case/role constraints"
+        ],
+        "to": "syntax"
+      },
+      {
+        "deletion_countermodel": "same parse supports distinct occurrence senses or pragmatic force",
+        "from": "syntax",
+        "required": [
+          "composition",
+          "context",
+          "discourse/pragmatics",
+          "sense selection"
+        ],
+        "to": "occurrence_meaning"
+      },
+      {
+        "deletion_countermodel": "formal predicate loses a modality, restriction, relation, or index",
+        "from": "occurrence_meaning",
+        "required": [
+          "formalization adequacy",
+          "scope/quantifier fidelity"
+        ],
+        "to": "formal_predicate"
+      },
+      {
+        "deletion_countermodel": "two candidate worlds satisfy the same source profile but disagree on predicate truth",
+        "from": "formal_predicate",
+        "required": [
+          "interpretation map",
+          "world adequacy",
+          "actual-world selection"
+        ],
+        "to": "world_truth"
+      },
+      {
+        "deletion_countermodel": "predicate is true somewhere in the world but not of the proposed bearer",
+        "from": "world_truth",
+        "required": [
+          "co-reference",
+          "referent eligibility",
+          "role/bearer instantiation"
+        ],
+        "to": "bearer_applicability"
+      },
+      {
+        "deletion_countermodel": "claim is true of the bearer while recipient lacks warrant or has an undefeated defeater",
+        "from": "bearer_applicability",
+        "required": [
+          "evidence access",
+          "defeater control",
+          "independence/reliability"
+        ],
+        "to": "recipient_warrant"
+      },
+      {
+        "deletion_countermodel": "identical wording occurs in authoritative and nonauthoritative documents",
+        "from": "source_package",
+        "required": [
+          "attribution/authentication",
+          "jurisdiction/competence",
+          "authority bridge"
+        ],
+        "to": "authority"
+      },
+      {
+        "deletion_countermodel": "a truthful or authoritative text need not be revelation",
+        "from": "source_package",
+        "required": [
+          "revelation premise",
+          "authenticated transmission",
+          "school-internal or neutral scope declaration"
+        ],
+        "to": "revelation"
+      }
+    ],
+    "layers_kept_separate": [
+      "source_text_or_bytes",
+      "translation",
+      "morphology",
+      "syntax",
+      "occurrence_meaning",
+      "formal_predicate",
+      "world_truth",
+      "bearer_applicability",
+      "recipient_warrant",
+      "authority",
+      "revelation"
+    ],
+    "neutrality_rule": "Authority and revelation may be experiment inputs only as explicitly source-relative coordinates unless independently established at the target scope.",
+    "structure_note": "These coordinates form a typed product/partial dependency graph, not an automatic linear ascent."
+  }
+}

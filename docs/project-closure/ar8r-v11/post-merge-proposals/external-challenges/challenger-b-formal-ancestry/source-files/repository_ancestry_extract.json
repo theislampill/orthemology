@@ -1,0 +1,1821 @@
+{
+  "deep_bv_to_t294_comparison": {
+    "deep_bv_normalized": "for a finite declared model class m target q is identifiable from the complete registered common intervention profile e j iff q is constant on every e j profile fibre",
+    "manual_typed_mapping": {
+      "Deep_BV.J_and_E_J": "T294 fixed intervention family and registered intervention-response profile",
+      "Deep_BV.M": "T294 finite model class",
+      "Deep_BV.Q": "T294 fixed target classification",
+      "Deep_BV.fibre_constancy": "T294 constancy on every profile fibre"
+    },
+    "qualification": "The prose eligibility guards are a separate application certificate and do not strengthen the quotient theorem itself.",
+    "recommended_relation": "IDENTICAL_UP_TO_RENAMING",
+    "t294_normalized": "for a finite model class a target classification is identifiable from a registered intervention response profile iff it is constant on every profile fibre"
+  },
+  "existing_records": {
+    "AR-T1": {
+      "active": true,
+      "admitted_novelty": "standard theorem applied to the orthemological evidence/profile distinction",
+      "application_credit_status": "NOT_RULE_CLASSIFIED_AS_APPLICATION",
+      "application_novelty_credit": 0,
+      "architecture_novelty_credit": "POSSIBLE_OR_SCOPED",
+      "assumption_text": "nonempty world class; total observation map; total Boolean target claim",
+      "assumptions": [
+        "nonempty world class",
+        "total observation map",
+        "total Boolean target claim"
+      ],
+      "canonical_identifier": "AR-T1",
+      "canonical_origin_id": "AR-T1",
+      "canonical_proposition_origin_id": "AR-T1",
+      "causal_or_grounding_operators": [],
+      "central_orthemological_significance": "SCOPED",
+      "claimed_novelty": "standard theorem applied to the orthemological evidence/profile distinction",
+      "conclusion_text": "A Boolean claim has an observation-based decider iff it is invariant on observation fibers; equivalently it factors through the observational quotient.",
+      "countermodel_class": [
+        "CM-01"
+      ],
+      "countermodels": [
+        "CM-01"
+      ],
+      "credit_dimensions": {
+        "application_novelty": "SEPARATE_FROM_GENERAL_THEOREM_NOVELTY",
+        "architecture_novelty": "UNRESOLVED",
+        "central_orthemological_significance": "UNRESOLVED",
+        "duplicate_independent_credit": "NOT_A_SCALAR_INDEPENDENCE_CLAIM",
+        "formal_strengthening": "EARNED_ONLY_IF_EXACT_RELATION_TABLE_SAYS_STRICT_STRENGTHENING",
+        "general_mathematical_novelty": "UNRESOLVED_OR_SOURCE_FIELD_ONLY",
+        "new_consequence": "EARNED_ONLY_IF_EXACT_RELATION_TABLE_SAYS_NEW_CONSEQUENCE",
+        "new_countermodel": "EARNED_ONLY_IF_EXACT_RELATION_TABLE_SAYS_NEW_COUNTERMODEL",
+        "source_novelty": "UNRESOLVED_OR_NOT_APPLICABLE",
+        "transcendental_significance": "NONE_UNLESS_SEPARATELY_ESTABLISHED",
+        "world_directed_advance": "NONE_UNLESS_SEPARATELY_ESTABLISHED"
+      },
+      "direct_derivation_parents": [
+        "AR-T4",
+        "PRIOR-ART::FIBRE_FACTORIZATION"
+      ],
+      "direct_derivation_root_status": "PARTIALLY_AUDITED",
+      "duplicate_independent_credit": "NOT_MERGED_AS_DUPLICATE",
+      "earliest_internal_ancestor": "AR-T1",
+      "evidence": [
+        "F_PROOF_APPENDIX.md#ar-t1--static-observational-quotient-characterization"
+      ],
+      "family_ids": [
+        "FAMILY-FIBRE",
+        "FAMILY-DYNAMIC"
+      ],
+      "formal_strengthening_credit": 1,
+      "frontier_status": "NOT_SEPARATELY_REGISTERED",
+      "general_mathematical_novelty_credit": "REQUIRES_RECORD_SPECIFIC_REVIEW",
+      "general_mechanism_families": [
+        "FAMILY-DYNAMIC",
+        "FAMILY-FIBRE"
+      ],
+      "historical_identifiers_and_aliases": [
+        "AR-T1"
+      ],
+      "id": "AR-T1",
+      "identity_equivalence_class": "AR-T1",
+      "identity_relation_status": "NO_EQUIVALENCE_MERGE_ESTABLISHED",
+      "independent_discovery_route_status": "EXTERNAL_OR_HISTORICAL_RECORD_NOT_ASSESSED_AS_AR8R_DISCOVERY",
+      "mechanism_ancestor_ids": [],
+      "mechanism_ancestry_status": "FOCUSED_RELATION_AUDITED",
+      "modal_operators": [],
+      "namespace": "AR-T",
+      "new_consequence_credit": 1,
+      "normalized_statement": "a boolean claim has an observation based decider if and only if it is invariant on observation fibers equivalently it factors through the observational quotient",
+      "novelty": "standard theorem applied to the orthemological evidence/profile distinction",
+      "operator_signature": [
+        "iff",
+        "equivalent",
+        "factor"
+      ],
+      "origin_relation_status": "FOCUSED_EXACT_RELATION_AUDITED",
+      "payload_resolution_status": "PAYLOAD_RESOLVED_FOR_CURRENT_ORIGIN_AUDIT",
+      "payload_status": "MOUNTED_AUTHORITATIVE_ANCESTOR",
+      "prior_art_relation": [
+        "factorization through equivalence-class quotient",
+        "deterministic sufficient statistic"
+      ],
+      "prompt_and_source_ancestry": "explicit dependencies/evidence only; prompt-level independence not presumed",
+      "proof_dependencies": [],
+      "provenance_common_pressures": [],
+      "provenance_signature": {
+        "available_ancestors_in_current_context": [
+          "AR-T4",
+          "PRIOR-ART::FIBRE_FACTORIZATION"
+        ],
+        "earliest_authoritative_identity": "AR-T1",
+        "earliest_authoritative_timestamp": "UNRESOLVED_NOT_INFERRED_FROM_FILE_MTIME",
+        "evidence_files": [
+          "F_PROOF_APPENDIX.md#ar-t1--static-observational-quotient-characterization"
+        ],
+        "independent_rediscovery_supported": "UNRESOLVED",
+        "proof_dependencies": [],
+        "same_id_proof_file_count": 0,
+        "same_id_proof_files": []
+      },
+      "quantifier_order": "NOT_EXPLICITLY_RECOVERED",
+      "scope_signature": [],
+      "source_novelty_credit": "NONE",
+      "source_relative_assumptions": "NONE_DECLARED_OR_NOT_APPLICABLE",
+      "statement": "A Boolean claim has an observation-based decider iff it is invariant on observation fibers; equivalently it factors through the observational quotient.",
+      "status": [
+        "proved",
+        "verified_finite",
+        "unverified_formalization"
+      ],
+      "title": "Static observational quotient characterization",
+      "transcendental_significance": "NONE",
+      "typed_variables_and_domains": "NATURAL_LANGUAGE_TYPED_OR_UNRESOLVED",
+      "world_directed_advance": "NONE",
+      "world_directed_assumptions": "NOT_EXPLICIT"
+    },
+    "AR8R-T15": {
+      "active": true,
+      "admitted_novelty": "TRUE_BUT_ALREADY_KNOWN_GENERAL_MECHANISM",
+      "application_credit_status": "NOT_RULE_CLASSIFIED_AS_APPLICATION",
+      "application_novelty_credit": 0,
+      "architecture_novelty_credit": "NONE_OR_UNASSESSED",
+      "assumption_text": "Fixed target model class, analysis profile, typed dependence predicate.",
+      "assumptions": "Fixed target model class, analysis profile, typed dependence predicate.",
+      "canonical_identifier": "AR8R-T15",
+      "canonical_origin_id": "AR8R-T15",
+      "canonical_proposition_origin_id": "AR8R-T15",
+      "causal_or_grounding_operators": [
+        "dependence"
+      ],
+      "central_orthemological_significance": "NONE_OR_INDIRECT",
+      "claimed_novelty": "TRUE_BUT_ALREADY_KNOWN_GENERAL_MECHANISM",
+      "conclusion_text": "Dependence-identifiability factorization",
+      "countermodel_class": [
+        "CM-P4-01"
+      ],
+      "countermodels": [
+        "CM-P4-01"
+      ],
+      "credit_dimensions": {
+        "application_novelty": "SEPARATE_FROM_GENERAL_THEOREM_NOVELTY",
+        "architecture_novelty": "UNRESOLVED",
+        "central_orthemological_significance": "UNRESOLVED",
+        "duplicate_independent_credit": "NOT_A_SCALAR_INDEPENDENCE_CLAIM",
+        "formal_strengthening": "EARNED_ONLY_IF_EXACT_RELATION_TABLE_SAYS_STRICT_STRENGTHENING",
+        "general_mathematical_novelty": "UNRESOLVED_OR_SOURCE_FIELD_ONLY",
+        "new_consequence": "EARNED_ONLY_IF_EXACT_RELATION_TABLE_SAYS_NEW_CONSEQUENCE",
+        "new_countermodel": "EARNED_ONLY_IF_EXACT_RELATION_TABLE_SAYS_NEW_COUNTERMODEL",
+        "source_novelty": "UNRESOLVED_OR_NOT_APPLICABLE",
+        "transcendental_significance": "NONE_UNLESS_SEPARATELY_ESTABLISHED",
+        "world_directed_advance": "NONE_UNLESS_SEPARATELY_ESTABLISHED"
+      },
+      "dependencies": [
+        "H",
+        "RB",
+        "MMS::ALL_ADEQUATE_EQ"
+      ],
+      "direct_derivation_parents": [
+        "AR-T1"
+      ],
+      "direct_derivation_root_status": "PARTIALLY_AUDITED",
+      "duplicate_independent_credit": "NOT_MERGED_AS_DUPLICATE",
+      "earliest_internal_ancestor": "AR-T1",
+      "evidence": [
+        "PROOFS/AR8R_T15_DEPENDENCE_IDENTIFIABILITY_FACTORIZATION.md",
+        "VALIDATION_EVIDENCE/p4_dependence_reflection_results.json"
+      ],
+      "family_ids": [
+        "FAMILY-FIBRE"
+      ],
+      "formal_strengthening_credit": 0,
+      "formalization_status": "HUMAN_PROOF_AND_FINITE_CHECK",
+      "frontier_status": "NOT_SEPARATELY_REGISTERED",
+      "general_mathematical_novelty_credit": "ZERO_OR_PRIOR_ART_APPLICATION",
+      "general_mechanism_families": [
+        "FAMILY-FIBRE"
+      ],
+      "historical_identifiers_and_aliases": [
+        "AR8R-T15"
+      ],
+      "id": "AR8R-T15",
+      "identity_equivalence_class": "AR8R-T15",
+      "identity_relation_status": "NO_EQUIVALENCE_MERGE_ESTABLISHED",
+      "independent_discovery_route_status": "NOT_ESTABLISHED_BY_CURRENT_PROVENANCE",
+      "mechanism_ancestor_ids": [
+        "AR-T1"
+      ],
+      "mechanism_ancestry_status": "FOCUSED_RELATION_AUDITED",
+      "modal_operators": [],
+      "namespace": "AR8R",
+      "new_consequence_credit": 0,
+      "normalized_statement": "dependence identifiability factorization",
+      "novelty": "TRUE_BUT_ALREADY_KNOWN_GENERAL_MECHANISM",
+      "operator_signature": [
+        "factor"
+      ],
+      "origin_relation_status": "FOCUSED_EXACT_RELATION_AUDITED",
+      "payload_resolution_status": "PAYLOAD_RESOLVED_FOR_CURRENT_ORIGIN_AUDIT",
+      "payload_status": "MOUNTED_LEDGER_RECORD",
+      "prior_art_relation": "standard fibre factorization / identifiability",
+      "prompt_and_source_ancestry": "explicit dependencies/evidence only; prompt-level independence not presumed",
+      "proof_dependencies": [
+        "H",
+        "RB",
+        "MMS::ALL_ADEQUATE_EQ"
+      ],
+      "provenance_common_pressures": [
+        "shared campaign prompts",
+        "shared model family",
+        "shared source corpus",
+        "shared terminology",
+        "shared ledgers",
+        "shared proof templates"
+      ],
+      "provenance_signature": {
+        "available_ancestors_in_current_context": [
+          "AR-T1",
+          "H",
+          "MMS::ALL_ADEQUATE_EQ",
+          "RB"
+        ],
+        "earliest_authoritative_identity": "AR8R-T15",
+        "earliest_authoritative_timestamp": "UNRESOLVED_NOT_INFERRED_FROM_FILE_MTIME",
+        "evidence_files": [
+          "PROOFS/AR8R_T15_DEPENDENCE_IDENTIFIABILITY_FACTORIZATION.md",
+          "VALIDATION_EVIDENCE/p4_dependence_reflection_results.json"
+        ],
+        "independent_rediscovery_supported": false,
+        "proof_dependencies": [
+          "H",
+          "RB",
+          "MMS::ALL_ADEQUATE_EQ"
+        ],
+        "same_id_proof_file_count": 1,
+        "same_id_proof_files": [
+          "PROOFS/AR8R_T15_DEPENDENCE_IDENTIFIABILITY_FACTORIZATION.md"
+        ]
+      },
+      "quantifier_order": "NOT_EXPLICITLY_RECOVERED",
+      "scope": "Any typed target predicate relative to a declared profile",
+      "scope_signature": [],
+      "significance": "EXACT_RB_D_CHARACTERIZATION",
+      "source_novelty_credit": "NONE",
+      "source_relative_assumptions": "NONE_DECLARED_OR_NOT_APPLICABLE",
+      "statement": "Dependence-identifiability factorization",
+      "status": "PROVED_EXACT_FACTORIZATION_AND_IMPOSSIBILITY_CHARACTERIZATION",
+      "status_change_caused": "RB-D becomes an exact dependence-identifiability condition rather than an opaque bridge.",
+      "transcendental_significance": "NONE",
+      "typed_variables_and_domains": "NATURAL_LANGUAGE_TYPED_OR_UNRESOLVED",
+      "world_directed_advance": "NONE",
+      "world_directed_assumptions": "NOT_EXPLICIT"
+    },
+    "AR8R-T272": {
+      "active": true,
+      "admitted_novelty": "NONE",
+      "application_credit_status": "RULE_CLASSIFIED_PROVISIONAL",
+      "application_novelty_credit": 0,
+      "architecture_novelty_credit": "NONE_OR_UNASSESSED",
+      "assumption_text": "finite typed target/formal choice problems",
+      "assumptions": [
+        "finite typed target/formal choice problems"
+      ],
+      "audit_status": "REREVIEW_PASS_AFTER_REPAIR",
+      "canonical_identifier": "AR8R-T272",
+      "canonical_origin_id": "AR8R-T272",
+      "canonical_proposition_origin_id": "AR8R-T272",
+      "causal_or_grounding_operators": [],
+      "central_orthemological_significance": "NONE_OR_INDIRECT",
+      "claimed_novelty": "NONE",
+      "conclusion_text": "Order preservation, order reflection, coverage, and admissible-set fidelity perform distinct independently necessary safety roles in reflected maximality transfer; dropping each permits a corresponding finite countermodel.",
+      "countermodel_class": [
+        "CM-P379-01",
+        "CM-P379-02",
+        "CM-P379-03",
+        "CM-P379-04"
+      ],
+      "countermodels": [
+        "CM-P379-01",
+        "CM-P379-02",
+        "CM-P379-03",
+        "CM-P379-04"
+      ],
+      "credit_dimensions": {
+        "application_novelty": "SEPARATE_FROM_GENERAL_THEOREM_NOVELTY",
+        "architecture_novelty": "UNRESOLVED",
+        "central_orthemological_significance": "UNRESOLVED",
+        "duplicate_independent_credit": "NOT_A_SCALAR_INDEPENDENCE_CLAIM",
+        "formal_strengthening": "EARNED_ONLY_IF_EXACT_RELATION_TABLE_SAYS_STRICT_STRENGTHENING",
+        "general_mathematical_novelty": "UNRESOLVED_OR_SOURCE_FIELD_ONLY",
+        "new_consequence": "EARNED_ONLY_IF_EXACT_RELATION_TABLE_SAYS_NEW_CONSEQUENCE",
+        "new_countermodel": "EARNED_ONLY_IF_EXACT_RELATION_TABLE_SAYS_NEW_COUNTERMODEL",
+        "source_novelty": "UNRESOLVED_OR_NOT_APPLICABLE",
+        "transcendental_significance": "NONE_UNLESS_SEPARATELY_ESTABLISHED",
+        "world_directed_advance": "NONE_UNLESS_SEPARATELY_ESTABLISHED"
+      },
+      "dependencies": [
+        "AR8R-T271"
+      ],
+      "direct_derivation_parents": [
+        "AR-T1"
+      ],
+      "direct_derivation_root_status": "PARTIALLY_AUDITED",
+      "duplicate_independent_credit": "NOT_MERGED_AS_DUPLICATE",
+      "earliest_internal_ancestor": "AR8R-T272",
+      "evidence": [
+        "PROOFS/P379_P386_REFLECTED_SELECTION/AR8R_T272_CORRESPONDENCE_GUARD_INDEPENDENCE.md",
+        "INDEPENDENT_AUDITS/P379_P386_COLD_AUDIT_129.md",
+        "COUNTERMODEL_REPAIRS/CYCLE_60_P379_P386_GUARD_CONSEQUENCE_REPAIR.md",
+        "INDEPENDENT_AUDITS/P379_P386_REPAIR_REREVIEW_130.md"
+      ],
+      "family_ids": [
+        "UNCLASSIFIED"
+      ],
+      "formal_strengthening_credit": 0,
+      "formalization_status": "EXPLICIT_COUNTERMODELS",
+      "frontier_status": "NOT_SEPARATELY_REGISTERED",
+      "general_mathematical_novelty_credit": "REQUIRES_RECORD_SPECIFIC_REVIEW",
+      "general_mechanism_families": [
+        "UNCLASSIFIED"
+      ],
+      "historical_identifiers_and_aliases": [
+        "AR8R-T272"
+      ],
+      "id": "AR8R-T272",
+      "identity_equivalence_class": "AR8R-T272",
+      "identity_relation_status": "NO_EQUIVALENCE_MERGE_ESTABLISHED",
+      "independent_discovery_route_status": "NOT_ESTABLISHED_BY_CURRENT_PROVENANCE",
+      "mechanism_ancestor_ids": [
+        "AR-T1"
+      ],
+      "mechanism_ancestry_status": "FOCUSED_RELATION_AUDITED",
+      "modal_operators": [
+        "necessary"
+      ],
+      "namespace": "AR8R",
+      "new_consequence_credit": 0,
+      "normalized_statement": "order preservation order reflection coverage and admissible set fidelity perform distinct independently necessary safety roles in reflected maximality transfer dropping each permits a corresponding finite countermodel",
+      "novelty": "NONE",
+      "operator_signature": [
+        "necessary"
+      ],
+      "origin_relation_status": "FOCUSED_EXACT_RELATION_AUDITED",
+      "payload_resolution_status": "PAYLOAD_RESOLVED_FOR_CURRENT_ORIGIN_AUDIT",
+      "payload_status": "MOUNTED_LEDGER_RECORD",
+      "prior_art_relation": "STANDARD_ABSTRACTION_SOUNDNESS_COMPLETENESS_APPLICATION",
+      "prompt_and_source_ancestry": "explicit dependencies/evidence only; prompt-level independence not presumed",
+      "proof_dependencies": [
+        "AR8R-T271"
+      ],
+      "provenance_common_pressures": [
+        "shared campaign prompts",
+        "shared model family",
+        "shared source corpus",
+        "shared terminology",
+        "shared ledgers",
+        "shared proof templates"
+      ],
+      "provenance_signature": {
+        "available_ancestors_in_current_context": [
+          "AR-T1",
+          "AR8R-T271"
+        ],
+        "earliest_authoritative_identity": "AR8R-T272",
+        "earliest_authoritative_timestamp": "UNRESOLVED_NOT_INFERRED_FROM_FILE_MTIME",
+        "evidence_files": [
+          "PROOFS/P379_P386_REFLECTED_SELECTION/AR8R_T272_CORRESPONDENCE_GUARD_INDEPENDENCE.md",
+          "INDEPENDENT_AUDITS/P379_P386_COLD_AUDIT_129.md",
+          "COUNTERMODEL_REPAIRS/CYCLE_60_P379_P386_GUARD_CONSEQUENCE_REPAIR.md",
+          "INDEPENDENT_AUDITS/P379_P386_REPAIR_REREVIEW_130.md"
+        ],
+        "independent_rediscovery_supported": false,
+        "proof_dependencies": [
+          "AR8R-T271"
+        ],
+        "same_id_proof_file_count": 1,
+        "same_id_proof_files": [
+          "PROOFS/P379_P386_REFLECTED_SELECTION/AR8R_T272_CORRESPONDENCE_GUARD_INDEPENDENCE.md"
+        ]
+      },
+      "quantifier_order": "NOT_EXPLICITLY_RECOVERED",
+      "scope": "guard-specific finite failures; no metaphysical adequacy theorem",
+      "scope_signature": [
+        "finite"
+      ],
+      "significance": "EXACT_CORRESPONDENCE_FAILURE_TAXONOMY",
+      "source_novelty_credit": "NONE",
+      "source_relative_assumptions": "NONE_DECLARED_OR_NOT_APPLICABLE",
+      "statement": "Order preservation, order reflection, coverage, and admissible-set fidelity perform distinct independently necessary safety roles in reflected maximality transfer; dropping each permits a corresponding finite countermodel.",
+      "status": "VALIDATED_REPAIRED_CORRESPONDENCE_GUARD_INDEPENDENCE_RECURSIVE_REENTRY_ACTIVE",
+      "status_change_caused": "POSITIVE_CORRESPONDENCE_BURDEN_DECOMPOSED_INTO_FOUR_GUARDS",
+      "transcendental_significance": "NONE",
+      "typed_variables_and_domains": "EXPLICIT_IN_PAYLOAD",
+      "world_directed_advance": "NONE",
+      "world_directed_assumptions": "NOT_EXPLICIT"
+    },
+    "AR8R-T279": {
+      "active": true,
+      "admitted_novelty": "NONE",
+      "application_credit_status": "NOT_RULE_CLASSIFIED_AS_APPLICATION",
+      "application_novelty_credit": 0,
+      "architecture_novelty_credit": "POSSIBLE_OR_SCOPED",
+      "assumption_text": "finite independently fixed intervention set; finite output set; exact conditional-distribution access; stationary stochastic kernel",
+      "assumptions": [
+        "finite independently fixed intervention set",
+        "finite output set",
+        "exact conditional-distribution access",
+        "stationary stochastic kernel"
+      ],
+      "audit_status": "PASS_WITH_NONBLOCKING_SCOPE_NOTES",
+      "canonical_identifier": "AR8R-T279",
+      "canonical_origin_id": "AR8R-T279",
+      "canonical_proposition_origin_id": "AR8R-T279",
+      "causal_or_grounding_operators": [
+        "intervention"
+      ],
+      "central_orthemological_significance": "SCOPED",
+      "claimed_novelty": "NONE",
+      "conclusion_text": "For finite stochastic kernels K,L:X→Δ(Y), equality of the complete intervention profiles on every x∈X is equivalent to pointwise equality K=L; restricted profiles identify exactly the coordinate-restriction kernel class.",
+      "countermodel_class": [
+        "CM-P411-01",
+        "CM-P411-02"
+      ],
+      "countermodels": [
+        "CM-P411-01",
+        "CM-P411-02"
+      ],
+      "credit_dimensions": {
+        "application_novelty": "SEPARATE_FROM_GENERAL_THEOREM_NOVELTY",
+        "architecture_novelty": "UNRESOLVED",
+        "central_orthemological_significance": "UNRESOLVED",
+        "duplicate_independent_credit": "NOT_A_SCALAR_INDEPENDENCE_CLAIM",
+        "formal_strengthening": "EARNED_ONLY_IF_EXACT_RELATION_TABLE_SAYS_STRICT_STRENGTHENING",
+        "general_mathematical_novelty": "UNRESOLVED_OR_SOURCE_FIELD_ONLY",
+        "new_consequence": "EARNED_ONLY_IF_EXACT_RELATION_TABLE_SAYS_NEW_CONSEQUENCE",
+        "new_countermodel": "EARNED_ONLY_IF_EXACT_RELATION_TABLE_SAYS_NEW_COUNTERMODEL",
+        "source_novelty": "UNRESOLVED_OR_NOT_APPLICABLE",
+        "transcendental_significance": "NONE_UNLESS_SEPARATELY_ESTABLISHED",
+        "world_directed_advance": "NONE_UNLESS_SEPARATELY_ESTABLISHED"
+      },
+      "dependencies": [
+        "AR8R-T275",
+        "AR8R-T125"
+      ],
+      "direct_derivation_parents": [],
+      "direct_derivation_root_status": "NO_PARENT_ESTABLISHED_NOT_INDEPENDENCE_PROOF",
+      "duplicate_independent_credit": "NOT_MERGED_AS_DUPLICATE",
+      "earliest_internal_ancestor": "AR8R-T279",
+      "evidence": [
+        "PROOFS/P411_P418_STOCHASTIC_POWERS/AR8R_T279_COMPLETE_STOCHASTIC_INTERVENTION_PROFILE_IDENTIFICATION.md",
+        "INDEPENDENT_AUDITS/P411_P418_COLD_AUDIT_134.md"
+      ],
+      "family_ids": [
+        "FAMILY-FIBRE",
+        "FAMILY-CAUSAL",
+        "FAMILY-ATTRIBUTE"
+      ],
+      "formal_strengthening_credit": 0,
+      "formalization_status": "HUMAN_PROOF_PLUS_FINITE_CHECKER",
+      "frontier_status": "NOT_SEPARATELY_REGISTERED",
+      "general_mathematical_novelty_credit": "REQUIRES_RECORD_SPECIFIC_REVIEW",
+      "general_mechanism_families": [
+        "FAMILY-ATTRIBUTE",
+        "FAMILY-CAUSAL",
+        "FAMILY-FIBRE"
+      ],
+      "historical_identifiers_and_aliases": [
+        "AR8R-T279"
+      ],
+      "id": "AR8R-T279",
+      "identity_equivalence_class": "AR8R-T279",
+      "identity_relation_status": "NO_EQUIVALENCE_MERGE_ESTABLISHED",
+      "independent_discovery_route_status": "NOT_ESTABLISHED_BY_CURRENT_PROVENANCE",
+      "mechanism_ancestor_ids": [],
+      "mechanism_ancestry_status": "UNRESOLVED",
+      "modal_operators": [],
+      "namespace": "AR8R",
+      "new_consequence_credit": 0,
+      "normalized_statement": "for finite stochastic kernels k l x→ y equality of the complete intervention profiles on every x x is equivalent to pointwise equality k=l restricted profiles identify exactly the coordinate restriction kernel class",
+      "novelty": "NONE",
+      "operator_signature": [
+        "equivalent"
+      ],
+      "origin_relation_status": "UNRESOLVED",
+      "payload_resolution_status": "PAYLOAD_RESOLVED_FOR_CURRENT_ORIGIN_AUDIT",
+      "payload_status": "MOUNTED_LEDGER_RECORD",
+      "prior_art_relation": "DIRECT_FINITE_STOCHASTIC_KERNEL_EXTENSIONALITY",
+      "prompt_and_source_ancestry": "explicit dependencies/evidence only; prompt-level independence not presumed",
+      "proof_dependencies": [
+        "AR8R-T275",
+        "AR8R-T125"
+      ],
+      "provenance_common_pressures": [
+        "shared campaign prompts",
+        "shared model family",
+        "shared source corpus",
+        "shared terminology",
+        "shared ledgers",
+        "shared proof templates"
+      ],
+      "provenance_signature": {
+        "available_ancestors_in_current_context": [
+          "AR8R-T125",
+          "AR8R-T275"
+        ],
+        "earliest_authoritative_identity": "AR8R-T279",
+        "earliest_authoritative_timestamp": "UNRESOLVED_NOT_INFERRED_FROM_FILE_MTIME",
+        "evidence_files": [
+          "PROOFS/P411_P418_STOCHASTIC_POWERS/AR8R_T279_COMPLETE_STOCHASTIC_INTERVENTION_PROFILE_IDENTIFICATION.md",
+          "INDEPENDENT_AUDITS/P411_P418_COLD_AUDIT_134.md"
+        ],
+        "independent_rediscovery_supported": false,
+        "proof_dependencies": [
+          "AR8R-T275",
+          "AR8R-T125"
+        ],
+        "same_id_proof_file_count": 1,
+        "same_id_proof_files": [
+          "PROOFS/P411_P418_STOCHASTIC_POWERS/AR8R_T279_COMPLETE_STOCHASTIC_INTERVENTION_PROFILE_IDENTIFICATION.md"
+        ]
+      },
+      "quantifier_order": "NOT_EXPLICITLY_RECOVERED",
+      "scope": "extensional stochastic response role only; no sampling or metaphysical power identity",
+      "scope_signature": [
+        "finite",
+        "pointwise"
+      ],
+      "significance": "POSITIVE_STOCHASTIC_ROLE_IDENTIFICATION",
+      "source_novelty_credit": "NONE",
+      "source_relative_assumptions": "NONE_DECLARED_OR_NOT_APPLICABLE",
+      "statement": "For finite stochastic kernels K,L:X→Δ(Y), equality of the complete intervention profiles on every x∈X is equivalent to pointwise equality K=L; restricted profiles identify exactly the coordinate-restriction kernel class.",
+      "status": "VALIDATED_COMPLETE_STOCHASTIC_INTERVENTION_PROFILE_IDENTIFICATION_RECURSIVE_REENTRY_ACTIVE",
+      "status_change_caused": "STOCHASTIC_CONTEXT_SENSITIVE_RESPONSE_ROLE_NOW_EXACTLY_IDENTIFIABLE_UNDER_COMPLETE_ACCESS",
+      "transcendental_significance": "CONDITIONAL_OR_OPEN",
+      "typed_variables_and_domains": "EXPLICIT_IN_PAYLOAD",
+      "world_directed_advance": "NONE",
+      "world_directed_assumptions": "NOT_EXPLICIT"
+    },
+    "AR8R-T289": {
+      "active": true,
+      "admitted_novelty": "NONE",
+      "application_credit_status": "NOT_RULE_CLASSIFIED_AS_APPLICATION",
+      "application_novelty_credit": 0,
+      "architecture_novelty_credit": "NONE_OR_UNASSESSED",
+      "assumption_text": "declared history class; complete registered current-behavior profile; function status partly history-sensitive",
+      "assumptions": [
+        "declared history class",
+        "complete registered current-behavior profile",
+        "function status partly history-sensitive"
+      ],
+      "audit_status": "PASS",
+      "canonical_identifier": "AR8R-T289",
+      "canonical_origin_id": "AR8R-T289",
+      "canonical_proposition_origin_id": "AR8R-T289",
+      "causal_or_grounding_operators": [],
+      "central_orthemological_significance": "NONE_OR_INDIRECT",
+      "claimed_novelty": "NONE",
+      "conclusion_text": "If a history-sensitive function status varies inside a fibre of the complete registered current-behavior profile, no behavior-only classifier recovers that function status.",
+      "countermodel_class": [
+        "CM-P435-04"
+      ],
+      "countermodels": [
+        "CM-P435-04"
+      ],
+      "credit_dimensions": {
+        "application_novelty": "SEPARATE_FROM_GENERAL_THEOREM_NOVELTY",
+        "architecture_novelty": "UNRESOLVED",
+        "central_orthemological_significance": "UNRESOLVED",
+        "duplicate_independent_credit": "NOT_A_SCALAR_INDEPENDENCE_CLAIM",
+        "formal_strengthening": "EARNED_ONLY_IF_EXACT_RELATION_TABLE_SAYS_STRICT_STRENGTHENING",
+        "general_mathematical_novelty": "UNRESOLVED_OR_SOURCE_FIELD_ONLY",
+        "new_consequence": "EARNED_ONLY_IF_EXACT_RELATION_TABLE_SAYS_NEW_CONSEQUENCE",
+        "new_countermodel": "EARNED_ONLY_IF_EXACT_RELATION_TABLE_SAYS_NEW_COUNTERMODEL",
+        "source_novelty": "UNRESOLVED_OR_NOT_APPLICABLE",
+        "transcendental_significance": "NONE_UNLESS_SEPARATELY_ESTABLISHED",
+        "world_directed_advance": "NONE_UNLESS_SEPARATELY_ESTABLISHED"
+      },
+      "dependencies": [
+        "AR8R-T265",
+        "AR8R-T273"
+      ],
+      "direct_derivation_parents": [],
+      "direct_derivation_root_status": "NO_PARENT_ESTABLISHED_NOT_INDEPENDENCE_PROOF",
+      "duplicate_independent_credit": "NOT_MERGED_AS_DUPLICATE",
+      "earliest_internal_ancestor": "AR8R-T289",
+      "evidence": [
+        "PROOFS/P435_P442_CORRESPONDENCE_FUNCTION/AR8R_T289_BEHAVIORAL_PROPER_FUNCTION_NONIDENTIFICATION.md",
+        "INDEPENDENT_AUDITS/P435_P442_COLD_AUDIT_138.md",
+        "INDEPENDENT_AUDITS/P435_P442_REPAIR_REREVIEW_139.md"
+      ],
+      "family_ids": [
+        "FAMILY-FIBRE"
+      ],
+      "formal_strengthening_credit": 0,
+      "formalization_status": "HUMAN_FACTORIZATION_PROOF",
+      "frontier_status": "NOT_SEPARATELY_REGISTERED",
+      "general_mathematical_novelty_credit": "REQUIRES_RECORD_SPECIFIC_REVIEW",
+      "general_mechanism_families": [
+        "FAMILY-FIBRE"
+      ],
+      "historical_identifiers_and_aliases": [
+        "AR8R-T289"
+      ],
+      "id": "AR8R-T289",
+      "identity_equivalence_class": "AR8R-T289",
+      "identity_relation_status": "NO_EQUIVALENCE_MERGE_ESTABLISHED",
+      "independent_discovery_route_status": "NOT_ESTABLISHED_BY_CURRENT_PROVENANCE",
+      "mechanism_ancestor_ids": [],
+      "mechanism_ancestry_status": "UNRESOLVED",
+      "modal_operators": [],
+      "namespace": "AR8R",
+      "new_consequence_credit": 0,
+      "normalized_statement": "if a history sensitive function status varies inside a fibre of the complete registered current behavior profile no behavior only classifier recovers that function status",
+      "novelty": "NONE",
+      "operator_signature": [],
+      "origin_relation_status": "UNRESOLVED",
+      "payload_resolution_status": "PAYLOAD_RESOLVED_FOR_CURRENT_ORIGIN_AUDIT",
+      "payload_status": "MOUNTED_LEDGER_RECORD",
+      "prior_art_relation": "DIRECT_FIBRE_FACTORIZATION_NONIDENTIFICATION",
+      "prompt_and_source_ancestry": "explicit dependencies/evidence only; prompt-level independence not presumed",
+      "proof_dependencies": [
+        "AR8R-T265",
+        "AR8R-T273"
+      ],
+      "provenance_common_pressures": [
+        "shared campaign prompts",
+        "shared model family",
+        "shared source corpus",
+        "shared terminology",
+        "shared ledgers",
+        "shared proof templates"
+      ],
+      "provenance_signature": {
+        "available_ancestors_in_current_context": [
+          "AR8R-T265",
+          "AR8R-T273"
+        ],
+        "earliest_authoritative_identity": "AR8R-T289",
+        "earliest_authoritative_timestamp": "UNRESOLVED_NOT_INFERRED_FROM_FILE_MTIME",
+        "evidence_files": [
+          "PROOFS/P435_P442_CORRESPONDENCE_FUNCTION/AR8R_T289_BEHAVIORAL_PROPER_FUNCTION_NONIDENTIFICATION.md",
+          "INDEPENDENT_AUDITS/P435_P442_COLD_AUDIT_138.md",
+          "INDEPENDENT_AUDITS/P435_P442_REPAIR_REREVIEW_139.md"
+        ],
+        "independent_rediscovery_supported": false,
+        "proof_dependencies": [
+          "AR8R-T265",
+          "AR8R-T273"
+        ],
+        "same_id_proof_file_count": 1,
+        "same_id_proof_files": [
+          "PROOFS/P435_P442_CORRESPONDENCE_FUNCTION/AR8R_T289_BEHAVIORAL_PROPER_FUNCTION_NONIDENTIFICATION.md"
+        ]
+      },
+      "quantifier_order": "NOT_EXPLICITLY_RECOVERED",
+      "scope": "history-sensitive designed, selected-effect, institutional, or epistemic function accounts",
+      "scope_signature": [],
+      "significance": "BEHAVIOR_ALONE_DOES_NOT_IDENTIFY_PROPER_FUNCTION",
+      "source_novelty_credit": "NONE",
+      "source_relative_assumptions": "NONE_DECLARED_OR_NOT_APPLICABLE",
+      "statement": "If a history-sensitive function status varies inside a fibre of the complete registered current-behavior profile, no behavior-only classifier recovers that function status.",
+      "status": "VALIDATED_BEHAVIORAL_PROPER_FUNCTION_NONIDENTIFICATION_RECURSIVE_REENTRY_ACTIVE",
+      "status_change_caused": "Current successful behavior is separated from design history, selection history, authority, congenial environment, and epistemic proper function.",
+      "transcendental_significance": "NONE",
+      "typed_variables_and_domains": "NATURAL_LANGUAGE_TYPED_OR_UNRESOLVED",
+      "world_directed_advance": "NONE",
+      "world_directed_assumptions": "NOT_EXPLICIT"
+    },
+    "AR8R-T294": {
+      "active": true,
+      "admitted_novelty": "NONE",
+      "application_credit_status": "NOT_RULE_CLASSIFIED_AS_APPLICATION",
+      "application_novelty_credit": 0,
+      "architecture_novelty_credit": "POSSIBLE_OR_SCOPED",
+      "assumption_text": "finite model class; fixed intervention family and response language; fixed target classification",
+      "assumptions": [
+        "finite model class",
+        "fixed intervention family and response language",
+        "fixed target classification"
+      ],
+      "audit_status": "PASS_WITH_NONBLOCKING_SCOPE_NOTES",
+      "canonical_identifier": "AR8R-T294",
+      "canonical_origin_id": "AR8R-T294",
+      "canonical_proposition_origin_id": "AR8R-T294",
+      "causal_or_grounding_operators": [
+        "intervention"
+      ],
+      "central_orthemological_significance": "SCOPED",
+      "claimed_novelty": "NONE",
+      "conclusion_text": "For a finite model class, a target classification is identifiable from a registered intervention-response profile iff it is constant on every profile fibre.",
+      "countermodel_class": [
+        "CM-P451-04",
+        "CM-P451-05"
+      ],
+      "countermodels": [
+        "CM-P451-04",
+        "CM-P451-05"
+      ],
+      "credit_dimensions": {
+        "application_novelty": "SEPARATE_FROM_GENERAL_THEOREM_NOVELTY",
+        "architecture_novelty": "UNRESOLVED",
+        "central_orthemological_significance": "UNRESOLVED",
+        "duplicate_independent_credit": "NOT_A_SCALAR_INDEPENDENCE_CLAIM",
+        "formal_strengthening": "EARNED_ONLY_IF_EXACT_RELATION_TABLE_SAYS_STRICT_STRENGTHENING",
+        "general_mathematical_novelty": "UNRESOLVED_OR_SOURCE_FIELD_ONLY",
+        "new_consequence": "EARNED_ONLY_IF_EXACT_RELATION_TABLE_SAYS_NEW_CONSEQUENCE",
+        "new_countermodel": "EARNED_ONLY_IF_EXACT_RELATION_TABLE_SAYS_NEW_COUNTERMODEL",
+        "source_novelty": "UNRESOLVED_OR_NOT_APPLICABLE",
+        "transcendental_significance": "NONE_UNLESS_SEPARATELY_ESTABLISHED",
+        "world_directed_advance": "NONE_UNLESS_SEPARATELY_ESTABLISHED"
+      },
+      "dependencies": [
+        "AR8R-T272"
+      ],
+      "direct_derivation_parents": [
+        "AR-T1"
+      ],
+      "direct_derivation_root_status": "PARTIALLY_AUDITED",
+      "duplicate_independent_credit": "NOT_MERGED_AS_DUPLICATE",
+      "earliest_internal_ancestor": "AR8R-T294",
+      "evidence": [
+        "PROOFS/P451_P458_INFORMATION_COMPLEMENTARITY/AR8R_T294_FINITE_INTERVENTION_PROFILE_IDENTIFIABILITY.md",
+        "INDEPENDENT_AUDITS/P451_P458_CUSTODY_COLD_AUDIT_143.md"
+      ],
+      "family_ids": [
+        "FAMILY-FIBRE",
+        "FAMILY-CAUSAL"
+      ],
+      "formal_strengthening_credit": 0,
+      "formalization_status": "HUMAN_PROOF_WITH_EXPLICIT_FINITE_COUNTERMODELS",
+      "frontier_status": "NOT_SEPARATELY_REGISTERED",
+      "general_mathematical_novelty_credit": "REQUIRES_RECORD_SPECIFIC_REVIEW",
+      "general_mechanism_families": [
+        "FAMILY-CAUSAL",
+        "FAMILY-FIBRE"
+      ],
+      "historical_identifiers_and_aliases": [
+        "AR8R-T294"
+      ],
+      "id": "AR8R-T294",
+      "identity_equivalence_class": "AR8R-T294",
+      "identity_relation_status": "NO_EQUIVALENCE_MERGE_ESTABLISHED",
+      "independent_discovery_route_status": "NOT_ESTABLISHED_BY_CURRENT_PROVENANCE",
+      "mechanism_ancestor_ids": [],
+      "mechanism_ancestry_status": "FOCUSED_RELATION_AUDITED",
+      "modal_operators": [],
+      "namespace": "AR8R",
+      "new_consequence_credit": 0,
+      "normalized_statement": "for a finite model class a target classification is identifiable from a registered intervention response profile if and only if it is constant on every profile fibre",
+      "novelty": "NONE",
+      "operator_signature": [
+        "iff",
+        "constant on"
+      ],
+      "origin_relation_status": "FOCUSED_EXACT_RELATION_AUDITED",
+      "payload_resolution_status": "PAYLOAD_RESOLVED_FOR_CURRENT_ORIGIN_AUDIT",
+      "payload_status": "MOUNTED_LEDGER_RECORD",
+      "prior_art_relation": "STANDARD_FINITE_IDENTIFIABILITY_FACTORIZATION",
+      "prompt_and_source_ancestry": "explicit dependencies/evidence only; prompt-level independence not presumed",
+      "proof_dependencies": [
+        "AR8R-T272"
+      ],
+      "provenance_common_pressures": [
+        "shared campaign prompts",
+        "shared model family",
+        "shared source corpus",
+        "shared terminology",
+        "shared ledgers",
+        "shared proof templates"
+      ],
+      "provenance_signature": {
+        "available_ancestors_in_current_context": [
+          "AR-T1",
+          "AR8R-T272"
+        ],
+        "earliest_authoritative_identity": "AR8R-T294",
+        "earliest_authoritative_timestamp": "UNRESOLVED_NOT_INFERRED_FROM_FILE_MTIME",
+        "evidence_files": [
+          "PROOFS/P451_P458_INFORMATION_COMPLEMENTARITY/AR8R_T294_FINITE_INTERVENTION_PROFILE_IDENTIFIABILITY.md",
+          "INDEPENDENT_AUDITS/P451_P458_CUSTODY_COLD_AUDIT_143.md"
+        ],
+        "independent_rediscovery_supported": false,
+        "proof_dependencies": [
+          "AR8R-T272"
+        ],
+        "same_id_proof_file_count": 1,
+        "same_id_proof_files": [
+          "PROOFS/P451_P458_INFORMATION_COMPLEMENTARITY/AR8R_T294_FINITE_INTERVENTION_PROFILE_IDENTIFIABILITY.md"
+        ]
+      },
+      "quantifier_order": "NOT_EXPLICITLY_RECOVERED",
+      "scope": "relative to registered intervention family; no target adequacy",
+      "scope_signature": [
+        "finite"
+      ],
+      "significance": "INTERVENTION_PROFILE_IDENTIFIABILITY_BOUNDARY",
+      "source_novelty_credit": "NONE",
+      "source_relative_assumptions": "NONE_DECLARED_OR_NOT_APPLICABLE",
+      "statement": "For a finite model class, a target classification is identifiable from a registered intervention-response profile iff it is constant on every profile fibre.",
+      "status": "VALIDATED_FINITE_INTERVENTION_PROFILE_FACTORIZATION_RECURSIVE_REENTRY_ACTIVE",
+      "status_change_caused": "intervention completeness exposed as independent burden",
+      "transcendental_significance": "NONE",
+      "typed_variables_and_domains": "EXPLICIT_IN_PAYLOAD",
+      "world_directed_advance": "NONE",
+      "world_directed_assumptions": "NOT_EXPLICIT"
+    },
+    "AR8R-T297": {
+      "active": true,
+      "admitted_novelty": "NONE",
+      "application_credit_status": "NOT_RULE_CLASSIFIED_AS_APPLICATION",
+      "application_novelty_credit": 0,
+      "architecture_novelty_credit": "NONE_OR_UNASSESSED",
+      "assumption_text": "fixed function-status coordinates; fixed observation profile",
+      "assumptions": [
+        "fixed function-status coordinates",
+        "fixed observation profile"
+      ],
+      "audit_status": "PASS_WITH_NONBLOCKING_SCOPE_NOTES",
+      "canonical_identifier": "AR8R-T297",
+      "canonical_origin_id": "AR8R-T297",
+      "canonical_proposition_origin_id": "AR8R-T297",
+      "causal_or_grounding_operators": [],
+      "central_orthemological_significance": "NONE_OR_INDIRECT",
+      "claimed_novelty": "NONE",
+      "conclusion_text": "A product of registered function-status coordinates factors through an observation profile iff each coordinate factors through that profile.",
+      "countermodel_class": [
+        "CM-P459-05"
+      ],
+      "countermodels": [
+        "CM-P459-05"
+      ],
+      "credit_dimensions": {
+        "application_novelty": "SEPARATE_FROM_GENERAL_THEOREM_NOVELTY",
+        "architecture_novelty": "UNRESOLVED",
+        "central_orthemological_significance": "UNRESOLVED",
+        "duplicate_independent_credit": "NOT_A_SCALAR_INDEPENDENCE_CLAIM",
+        "formal_strengthening": "EARNED_ONLY_IF_EXACT_RELATION_TABLE_SAYS_STRICT_STRENGTHENING",
+        "general_mathematical_novelty": "UNRESOLVED_OR_SOURCE_FIELD_ONLY",
+        "new_consequence": "EARNED_ONLY_IF_EXACT_RELATION_TABLE_SAYS_NEW_CONSEQUENCE",
+        "new_countermodel": "EARNED_ONLY_IF_EXACT_RELATION_TABLE_SAYS_NEW_COUNTERMODEL",
+        "source_novelty": "UNRESOLVED_OR_NOT_APPLICABLE",
+        "transcendental_significance": "NONE_UNLESS_SEPARATELY_ESTABLISHED",
+        "world_directed_advance": "NONE_UNLESS_SEPARATELY_ESTABLISHED"
+      },
+      "dependencies": [
+        "AR8R-T289"
+      ],
+      "direct_derivation_parents": [
+        "AR-T1"
+      ],
+      "direct_derivation_root_status": "PARTIALLY_AUDITED",
+      "duplicate_independent_credit": "NOT_MERGED_AS_DUPLICATE",
+      "earliest_internal_ancestor": "AR8R-T297",
+      "evidence": [
+        "PROOFS/P459_P466_CORRESPONDENCE_PRH_FUNCTION/AR8R_T297_FUNCTION_ACCOUNT_PRODUCT_FACTORIZATION.md",
+        "INDEPENDENT_AUDITS/P459_P466_CUSTODY_COLD_AUDIT_144.md"
+      ],
+      "family_ids": [
+        "FAMILY-FIBRE"
+      ],
+      "formal_strengthening_credit": 0,
+      "formalization_status": "HUMAN_PROOF_WITH_EXPLICIT_FINITE_COUNTERMODELS",
+      "frontier_status": "NOT_SEPARATELY_REGISTERED",
+      "general_mathematical_novelty_credit": "REQUIRES_RECORD_SPECIFIC_REVIEW",
+      "general_mechanism_families": [
+        "FAMILY-FIBRE"
+      ],
+      "historical_identifiers_and_aliases": [
+        "AR8R-T297"
+      ],
+      "id": "AR8R-T297",
+      "identity_equivalence_class": "AR8R-T297",
+      "identity_relation_status": "NO_EQUIVALENCE_MERGE_ESTABLISHED",
+      "independent_discovery_route_status": "NOT_ESTABLISHED_BY_CURRENT_PROVENANCE",
+      "mechanism_ancestor_ids": [],
+      "mechanism_ancestry_status": "FOCUSED_RELATION_AUDITED",
+      "modal_operators": [],
+      "namespace": "AR8R",
+      "new_consequence_credit": 0,
+      "normalized_statement": "a product of registered function status coordinates factors through an observation profile if and only if each coordinate factors through that profile",
+      "novelty": "NONE",
+      "operator_signature": [
+        "iff",
+        "factor"
+      ],
+      "origin_relation_status": "FOCUSED_EXACT_RELATION_AUDITED",
+      "payload_resolution_status": "PAYLOAD_RESOLVED_FOR_CURRENT_ORIGIN_AUDIT",
+      "payload_status": "MOUNTED_LEDGER_RECORD",
+      "prior_art_relation": "DIRECT_PRODUCT_FACTORIZATION",
+      "prompt_and_source_ancestry": "explicit dependencies/evidence only; prompt-level independence not presumed",
+      "proof_dependencies": [
+        "AR8R-T289"
+      ],
+      "provenance_common_pressures": [
+        "shared campaign prompts",
+        "shared model family",
+        "shared source corpus",
+        "shared terminology",
+        "shared ledgers",
+        "shared proof templates"
+      ],
+      "provenance_signature": {
+        "available_ancestors_in_current_context": [
+          "AR-T1",
+          "AR8R-T289"
+        ],
+        "earliest_authoritative_identity": "AR8R-T297",
+        "earliest_authoritative_timestamp": "UNRESOLVED_NOT_INFERRED_FROM_FILE_MTIME",
+        "evidence_files": [
+          "PROOFS/P459_P466_CORRESPONDENCE_PRH_FUNCTION/AR8R_T297_FUNCTION_ACCOUNT_PRODUCT_FACTORIZATION.md",
+          "INDEPENDENT_AUDITS/P459_P466_CUSTODY_COLD_AUDIT_144.md"
+        ],
+        "independent_rediscovery_supported": false,
+        "proof_dependencies": [
+          "AR8R-T289"
+        ],
+        "same_id_proof_file_count": 1,
+        "same_id_proof_files": [
+          "PROOFS/P459_P466_CORRESPONDENCE_PRH_FUNCTION/AR8R_T297_FUNCTION_ACCOUNT_PRODUCT_FACTORIZATION.md"
+        ]
+      },
+      "quantifier_order": "NOT_EXPLICITLY_RECOVERED",
+      "scope": "does not select or exhaust function theories",
+      "scope_signature": [],
+      "significance": "FUNCTION_ACCOUNT_IDENTIFIABILITY_TAXONOMY",
+      "source_novelty_credit": "NONE",
+      "source_relative_assumptions": "NONE_DECLARED_OR_NOT_APPLICABLE",
+      "statement": "A product of registered function-status coordinates factors through an observation profile iff each coordinate factors through that profile.",
+      "status": "VALIDATED_FUNCTION_ACCOUNT_PRODUCT_FACTORIZATION_RECURSIVE_REENTRY_ACTIVE",
+      "status_change_caused": "function evidence coordinates kept independently auditable",
+      "transcendental_significance": "NONE",
+      "typed_variables_and_domains": "NATURAL_LANGUAGE_TYPED_OR_UNRESOLVED",
+      "world_directed_advance": "NONE",
+      "world_directed_assumptions": "NOT_EXPLICIT"
+    },
+    "AR8R-T299": {
+      "active": true,
+      "admitted_novelty": "MENISCUS_PRESSURE_FRONTIER_NOT_SECURELY_LOCATED",
+      "application_credit_status": "RULE_CLASSIFIED_PROVISIONAL",
+      "application_novelty_credit": 0,
+      "architecture_novelty_credit": "POSSIBLE_OR_SCOPED",
+      "assumption_text": "finite deterministic model class; binary matched intervention/no-op; independently fixed target predicate; typed burden disposition; declared reread and custody profile",
+      "assumptions": [
+        "finite deterministic model class",
+        "binary matched intervention/no-op",
+        "independently fixed target predicate",
+        "typed burden disposition",
+        "declared reread and custody profile"
+      ],
+      "audit_status": "REREVIEW_PASS_WITH_NONBLOCKING_PRIORITY_NOTE",
+      "canonical_identifier": "AR8R-T299",
+      "canonical_origin_id": "AR8R-T299",
+      "canonical_proposition_origin_id": "AR8R-T299",
+      "causal_or_grounding_operators": [
+        "causal"
+      ],
+      "central_orthemological_significance": "SCOPED",
+      "claimed_novelty": "MENISCUS_PRESSURE_FRONTIER_NOT_SECURELY_LOCATED",
+      "conclusion_text": "For a finite declared class of deterministic episode-transition models, a registered profile exactly certifies conjunctive but-for burden landing iff the landing predicate is constant on every profile fibre; actual before/after delta, operation logging, burden status, and reread alone are insufficient on a class containing the causal/spontaneous twins.",
+      "countermodel_class": [
+        "CM-P475-01",
+        "CM-P475-04",
+        "CM-P475-05",
+        "CM-P475-06"
+      ],
+      "countermodels": [
+        "CM-P475-01",
+        "CM-P475-04",
+        "CM-P475-05",
+        "CM-P475-06"
+      ],
+      "credit_dimensions": {
+        "application_novelty": "SCOPED_CAUSAL_BURDEN_LANDING_APPLICATION",
+        "architecture_novelty": "POSSIBLE_COMBINED_CHARACTERIZATION",
+        "central_orthemological_significance": "UNRESOLVED",
+        "duplicate_independent_credit": "NOT_A_SCALAR_INDEPENDENCE_CLAIM",
+        "formal_strengthening": "EARNED_ONLY_IF_EXACT_RELATION_TABLE_SAYS_STRICT_STRENGTHENING",
+        "general_mathematical_novelty": "ZERO_STANDARD_FACTORIZATION_AND_BUT_FOR_MODEL",
+        "new_consequence": "EARNED_ONLY_IF_EXACT_RELATION_TABLE_SAYS_NEW_CONSEQUENCE",
+        "new_countermodel": "EARNED_ONLY_IF_EXACT_RELATION_TABLE_SAYS_NEW_COUNTERMODEL",
+        "source_novelty": "UNRESOLVED_OR_NOT_APPLICABLE",
+        "transcendental_significance": "NONE_UNLESS_SEPARATELY_ESTABLISHED",
+        "world_directed_advance": "NONE"
+      },
+      "dependencies": [
+        "AR8R-T256",
+        "AR8R-T263",
+        "AR8R-T241"
+      ],
+      "direct_derivation_parents": [
+        "AR-T1",
+        "AR-T3",
+        "AR8R-T256"
+      ],
+      "direct_derivation_root_status": "PARTIALLY_AUDITED",
+      "duplicate_independent_credit": "NOT_MERGED_AS_DUPLICATE",
+      "earliest_internal_ancestor": "AR8R-T299",
+      "evidence": [
+        "PROOFS/P475_P482_CAUSAL_RESTORATION/AR8R_T299_MATCHED_INTERVENTION_BURDEN_LANDING_CERTIFICATION.md",
+        "INDEPENDENT_AUDITS/P475_P482_COLD_AUDIT_146.md",
+        "COUNTERMODEL_REPAIRS/CYCLE_62_P475_P482_CAUSAL_LANDING_SCOPE_REPAIR.md",
+        "INDEPENDENT_AUDITS/P475_P482_REPAIR_REREVIEW_147.md",
+        "VALIDATION_EVIDENCE/p475_p482_causal_restoration_results.json"
+      ],
+      "family_ids": [
+        "FAMILY-FIBRE",
+        "FAMILY-CAUSAL",
+        "FAMILY-DYNAMIC",
+        "FAMILY-SOURCE"
+      ],
+      "formal_strengthening_credit": 1,
+      "formalization_status": "COMPLETE_HUMAN_PROOF_PLUS_FINITE_COUNTERMODEL_CHECKER",
+      "frontier_status": "MENISCUS_PRESSURE",
+      "general_mathematical_novelty_credit": "REQUIRES_RECORD_SPECIFIC_REVIEW",
+      "general_mechanism_families": [
+        "FAMILY-CAUSAL",
+        "FAMILY-DYNAMIC",
+        "FAMILY-FIBRE",
+        "FAMILY-SOURCE"
+      ],
+      "historical_identifiers_and_aliases": [
+        "AR8R-T299"
+      ],
+      "id": "AR8R-T299",
+      "identity_equivalence_class": "AR8R-T299",
+      "identity_relation_status": "NO_EQUIVALENCE_MERGE_ESTABLISHED",
+      "independent_discovery_route_status": "NOT_ESTABLISHED_BY_CURRENT_PROVENANCE",
+      "mechanism_ancestor_ids": [
+        "AR-T3"
+      ],
+      "mechanism_ancestry_status": "FOCUSED_RELATION_AUDITED",
+      "modal_operators": [],
+      "namespace": "AR8R",
+      "new_consequence_credit": 1,
+      "normalized_statement": "for a finite declared class of deterministic episode transition models a registered profile exactly certifies conjunctive but for burden landing if and only if the landing predicate is constant on every profile fibre actual before after delta operation logging burden status and reread alone are insufficient on a class containing the causal spontaneous twins",
+      "novelty": "MENISCUS_PRESSURE_FRONTIER_NOT_SECURELY_LOCATED",
+      "operator_signature": [
+        "iff",
+        "constant on",
+        "sufficient"
+      ],
+      "origin_relation_status": "FOCUSED_EXACT_RELATION_AUDITED",
+      "payload_resolution_status": "PAYLOAD_RESOLVED_FOR_CURRENT_ORIGIN_AUDIT",
+      "payload_status": "MOUNTED_LEDGER_RECORD",
+      "prior_art_relation": "STANDARD_PROFILE_FACTORIZATION_PLUS_COUNTERFACTUAL_DEPENDENCE; EXACT BURDEN-LANDING APPLICATION NOT LOCATED",
+      "prompt_and_source_ancestry": "explicit dependencies/evidence only; prompt-level independence not presumed",
+      "proof_dependencies": [
+        "AR8R-T256",
+        "AR8R-T263",
+        "AR8R-T241"
+      ],
+      "provenance_common_pressures": [
+        "shared campaign prompts",
+        "shared model family",
+        "shared source corpus",
+        "shared terminology",
+        "shared ledgers",
+        "shared proof templates"
+      ],
+      "provenance_signature": {
+        "available_ancestors_in_current_context": [
+          "AR-T1",
+          "AR-T3",
+          "AR8R-T241",
+          "AR8R-T256",
+          "AR8R-T263"
+        ],
+        "earliest_authoritative_identity": "AR8R-T299",
+        "earliest_authoritative_timestamp": "UNRESOLVED_NOT_INFERRED_FROM_FILE_MTIME",
+        "evidence_files": [
+          "PROOFS/P475_P482_CAUSAL_RESTORATION/AR8R_T299_MATCHED_INTERVENTION_BURDEN_LANDING_CERTIFICATION.md",
+          "INDEPENDENT_AUDITS/P475_P482_COLD_AUDIT_146.md",
+          "COUNTERMODEL_REPAIRS/CYCLE_62_P475_P482_CAUSAL_LANDING_SCOPE_REPAIR.md",
+          "INDEPENDENT_AUDITS/P475_P482_REPAIR_REREVIEW_147.md",
+          "VALIDATION_EVIDENCE/p475_p482_causal_restoration_results.json"
+        ],
+        "independent_rediscovery_supported": false,
+        "proof_dependencies": [
+          "AR8R-T256",
+          "AR8R-T263",
+          "AR8R-T241"
+        ],
+        "same_id_proof_file_count": 1,
+        "same_id_proof_files": [
+          "PROOFS/P475_P482_CAUSAL_RESTORATION/AR8R_T299_MATCHED_INTERVENTION_BURDEN_LANDING_CERTIFICATION.md"
+        ]
+      },
+      "quantifier_order": "NOT_EXPLICITLY_RECOVERED",
+      "scope": "conjunctive but-for certificate relative to declared model and target; no complete actual-causation, human-restoration, proper-function, or metaphysical theorem",
+      "scope_signature": [
+        "finite",
+        "causal",
+        "deterministic"
+      ],
+      "significance": "CENTRAL_ORTHEMOLOGICAL_EVIDENCE_POLICY_CHARACTERIZATION",
+      "source_novelty_credit": "SOURCE_RELATIVE_ONLY",
+      "source_relative_assumptions": "SOURCE_RELATIVE",
+      "statement": "For a finite declared class of deterministic episode-transition models, a registered profile exactly certifies conjunctive but-for burden landing iff the landing predicate is constant on every profile fibre; actual before/after delta, operation logging, burden status, and reread alone are insufficient on a class containing the causal/spontaneous twins.",
+      "status": "VALIDATED_SCOPED_MATCHED_INTERVENTION_BURDEN_LANDING_CHARACTERIZATION_RECURSIVE_REENTRY_ACTIVE",
+      "status_change_caused": "witnessed landing separated from causally attributed landing",
+      "transcendental_significance": "NONE",
+      "typed_variables_and_domains": "EXPLICIT_IN_PAYLOAD",
+      "world_directed_advance": "NONE",
+      "world_directed_assumptions": "NOT_EXPLICIT"
+    },
+    "AR8R-T304": {
+      "active": true,
+      "admitted_novelty": "MENISCUS_PRESSURE_AT_APPLICATION_INTERFACE; NO GENERAL THEOREM NOVELTY",
+      "application_credit_status": "RULE_CLASSIFIED_PROVISIONAL",
+      "application_novelty_credit": 1,
+      "architecture_novelty_credit": "POSSIBLE_OR_SCOPED",
+      "assumption_text": "independently declared target candidate; declared finite state/episode class; complete observable profile as typed; binary target or stated generalization",
+      "assumptions": [
+        "independently declared target candidate",
+        "declared finite state/episode class",
+        "complete observable profile as typed",
+        "binary target or stated generalization"
+      ],
+      "audit_status": "COLD_AUDIT_152_PASS_WITH_NONBLOCKING_SCOPE_NOTES",
+      "canonical_identifier": "AR8R-T304",
+      "canonical_origin_id": "AR8R-T304",
+      "canonical_proposition_origin_id": "AR8R-T304",
+      "causal_or_grounding_operators": [
+        "causal",
+        "ground"
+      ],
+      "central_orthemological_significance": "SCOPED",
+      "claimed_novelty": "MENISCUS_PRESSURE_AT_APPLICATION_INTERFACE; NO GENERAL THEOREM NOVELTY",
+      "conclusion_text": "For a finite declared noetic-state class X, a source-grounded target predicate F and observable profile O admit an exact proxy-only detector d with F=d∘O iff F is constant on every fibre of O; the same criterion applies to a matched causal-landing predicate over operation/no-operation episodes.",
+      "countermodel_class": [
+        "CM-P499-06",
+        "CM-P499-07"
+      ],
+      "countermodels": [
+        "CM-P499-06",
+        "CM-P499-07"
+      ],
+      "credit_dimensions": {
+        "application_novelty": "SCOPED_PROPER_ORTHING_TARGET_APPLICATION",
+        "architecture_novelty": "INTEGRATION_ONLY",
+        "central_orthemological_significance": "UNRESOLVED",
+        "duplicate_independent_credit": "NOT_A_SCALAR_INDEPENDENCE_CLAIM",
+        "formal_strengthening": "EARNED_ONLY_IF_EXACT_RELATION_TABLE_SAYS_STRICT_STRENGTHENING",
+        "general_mathematical_novelty": "ZERO_AR_T1_SPECIALIZATION",
+        "new_consequence": "EARNED_ONLY_IF_EXACT_RELATION_TABLE_SAYS_NEW_CONSEQUENCE",
+        "new_countermodel": "EARNED_ONLY_IF_EXACT_RELATION_TABLE_SAYS_NEW_COUNTERMODEL",
+        "source_novelty": "UNRESOLVED_OR_NOT_APPLICABLE",
+        "transcendental_significance": "NONE_UNLESS_SEPARATELY_ESTABLISHED",
+        "world_directed_advance": "NONE"
+      },
+      "dependencies": [
+        "AR8R-T272",
+        "AR8R-T299",
+        "AR8R-T300"
+      ],
+      "direct_derivation_parents": [
+        "AR-T1",
+        "AR8R-T272"
+      ],
+      "direct_derivation_root_status": "PARTIALLY_AUDITED",
+      "duplicate_independent_credit": "NOT_MERGED_AS_DUPLICATE",
+      "earliest_internal_ancestor": "AR-T1",
+      "evidence": [
+        "PROOFS/P499_P506_FITRI_RESTORATION/AR8R_T304_FITRI_TARGET_PROXY_FACTORIZATION.md",
+        "INDEPENDENT_AUDITS/P499_P506_COLD_AUDIT_152.md",
+        "VALIDATION_EVIDENCE/p499_p506_fitri_target_results.json"
+      ],
+      "family_ids": [
+        "FAMILY-FIBRE",
+        "FAMILY-CAUSAL",
+        "FAMILY-GROUND",
+        "FAMILY-SOURCE"
+      ],
+      "formal_strengthening_credit": 0,
+      "formalization_status": "COMPLETE PROOF PLUS 104330-CASE FINITE CHECKER",
+      "frontier_status": "MENISCUS_PRESSURE",
+      "general_mathematical_novelty_credit": "ZERO_OR_PRIOR_ART_APPLICATION",
+      "general_mechanism_families": [
+        "FAMILY-CAUSAL",
+        "FAMILY-FIBRE",
+        "FAMILY-GROUND",
+        "FAMILY-SOURCE"
+      ],
+      "historical_identifiers_and_aliases": [
+        "AR8R-T304"
+      ],
+      "id": "AR8R-T304",
+      "identity_equivalence_class": "AR8R-T304",
+      "identity_relation_status": "NO_EQUIVALENCE_MERGE_ESTABLISHED",
+      "independent_discovery_route_status": "NOT_ESTABLISHED_BY_CURRENT_PROVENANCE",
+      "mechanism_ancestor_ids": [
+        "AR-T1",
+        "AR8R-T272"
+      ],
+      "mechanism_ancestry_status": "FOCUSED_RELATION_AUDITED",
+      "modal_operators": [],
+      "namespace": "AR8R",
+      "new_consequence_credit": 0,
+      "normalized_statement": "for a finite declared noetic state class x a source grounded target predicate f and observable profile o admit an exact proxy only detector d with f=d o if and only if f is constant on every fibre of o the same criterion applies to a matched causal landing predicate over operation no operation episodes",
+      "novelty": "MENISCUS_PRESSURE_AT_APPLICATION_INTERFACE; NO GENERAL THEOREM NOVELTY",
+      "operator_signature": [
+        "iff",
+        "constant on"
+      ],
+      "origin_relation_status": "FOCUSED_EXACT_RELATION_AUDITED",
+      "payload_resolution_status": "PAYLOAD_RESOLVED_FOR_CURRENT_ORIGIN_AUDIT",
+      "payload_status": "MOUNTED_LEDGER_RECORD",
+      "prior_art_relation": "DIRECT QUOTIENT/FACTORIZATION CONSEQUENCE; T272 APPLICATION",
+      "prompt_and_source_ancestry": "explicit dependencies/evidence only; prompt-level independence not presumed",
+      "proof_dependencies": [
+        "AR8R-T272",
+        "AR8R-T299",
+        "AR8R-T300"
+      ],
+      "provenance_common_pressures": [
+        "shared campaign prompts",
+        "shared model family",
+        "shared source corpus",
+        "shared terminology",
+        "shared ledgers",
+        "shared proof templates"
+      ],
+      "provenance_signature": {
+        "available_ancestors_in_current_context": [
+          "AR-T1",
+          "AR8R-T272",
+          "AR8R-T299",
+          "AR8R-T300"
+        ],
+        "earliest_authoritative_identity": "AR8R-T304",
+        "earliest_authoritative_timestamp": "UNRESOLVED_NOT_INFERRED_FROM_FILE_MTIME",
+        "evidence_files": [
+          "PROOFS/P499_P506_FITRI_RESTORATION/AR8R_T304_FITRI_TARGET_PROXY_FACTORIZATION.md",
+          "INDEPENDENT_AUDITS/P499_P506_COLD_AUDIT_152.md",
+          "VALIDATION_EVIDENCE/p499_p506_fitri_target_results.json"
+        ],
+        "independent_rediscovery_supported": false,
+        "proof_dependencies": [
+          "AR8R-T272",
+          "AR8R-T299",
+          "AR8R-T300"
+        ],
+        "same_id_proof_file_count": 1,
+        "same_id_proof_files": [
+          "PROOFS/P499_P506_FITRI_RESTORATION/AR8R_T304_FITRI_TARGET_PROXY_FACTORIZATION.md"
+        ]
+      },
+      "quantifier_order": "NOT_EXPLICITLY_RECOVERED",
+      "scope": "exact detector criterion only; does not establish target truth, proxy completeness, or causation",
+      "scope_signature": [
+        "finite",
+        "general",
+        "causal"
+      ],
+      "significance": "CENTRAL ORTHEMOLOGICAL TARGET-PROXY FALSIFIER",
+      "source_novelty_credit": "SOURCE_RELATIVE_ONLY",
+      "source_relative_assumptions": "SOURCE_RELATIVE",
+      "statement": "For a finite declared noetic-state class X, a source-grounded target predicate F and observable profile O admit an exact proxy-only detector d with F=d∘O iff F is constant on every fibre of O; the same criterion applies to a matched causal-landing predicate over operation/no-operation episodes.",
+      "status": "VALIDATED_FITRI_TARGET_PROXY_FACTORIZATION_INTERFACE_RECURSIVE_REENTRY_ACTIVE",
+      "status_change_caused": "T299/T300 target burden refocused from arbitrary target selection to exact proxy faithfulness for supplied sound-fiṭrah target candidate",
+      "transcendental_significance": "CONDITIONAL_OR_OPEN",
+      "typed_variables_and_domains": "EXPLICIT_IN_PAYLOAD",
+      "world_directed_advance": "CONDITIONAL_OR_OPEN",
+      "world_directed_assumptions": "EXPLICIT_OR_APPLICATION_DEPENDENT"
+    },
+    "GW-T12A": {
+      "active": false,
+      "assumptions": [
+        "source reason valid",
+        "contract translation typed",
+        "primitive target checkers sound and extensionally complete"
+      ],
+      "canonical_identifier": "GW-T12A",
+      "canonical_origin_id": "GW-T12A",
+      "canonical_proposition_origin_id": "GW-T12A",
+      "conclusion_text": "Exact finite characterization of same-reason transport across a changed contract.",
+      "duplicate_independent_credit": "HISTORICAL_RECORD_NOT_ACTIVE_AR8R_DISCOVERY",
+      "evidence": [
+        "inputs/theorem-origin/LEAN_HISTORY/AR4/H_THEOREM_LEDGER.yaml"
+      ],
+      "family_ids": [
+        "UNCLASSIFIED_HISTORICAL"
+      ],
+      "frontier_status": "HISTORICAL_NOT_REASSESSED_BY_AR8R_V4",
+      "general_mathematical_novelty_credit": "HISTORICAL_LEDGER_CLASSIFICATION_ONLY",
+      "historical_record": true,
+      "id": "GW-T12A",
+      "namespace": "AR4",
+      "novelty": "new typed synthesis extending AR3; novelty not established",
+      "payload_resolution_status": "PAYLOAD_RECOVERED_EXACT",
+      "payload_status": "PAYLOAD_RECOVERED_FROM_VERIFIED_HISTORICAL_AUTHORITY",
+      "prior_art_relation": "new typed synthesis extending AR3; novelty not established",
+      "proof_dependencies": [
+        "GW-T2B",
+        "GW-T3B"
+      ],
+      "scope": "historical AR4 declared scope",
+      "source_hash": "ae6f6842da42e7dcfc584c1fe1f3f62110178ef330ff2bc7f6fe350f952b328e",
+      "statement": "In a finite transport-complete signature, the same source reason survives G→G′ iff every load-bearing source obligation is mapped, preserved or revalidated; no load-bearing source obligation is deleted; every added target obligation is closed; and authority, invalidator, resource, identity, and lineage changes are closed.",
+      "status": "CHARACTERIZED_NECESSARY_AND_SUFFICIENTLY",
+      "title": "Strong reason preservation across contract change"
+    },
+    "GW-T12B": {
+      "active": false,
+      "assumptions": [
+        "deletion authorized by procedurally valid revision",
+        "target reason independently valid"
+      ],
+      "canonical_identifier": "GW-T12B",
+      "canonical_origin_id": "GW-T12B",
+      "canonical_proposition_origin_id": "GW-T12B",
+      "conclusion_text": "Target validity is weaker than same-reason preservation; deletion remains in lineage and audit.",
+      "duplicate_independent_credit": "HISTORICAL_RECORD_NOT_ACTIVE_AR8R_DISCOVERY",
+      "evidence": [
+        "inputs/theorem-origin/LEAN_HISTORY/AR4/H_THEOREM_LEDGER.yaml"
+      ],
+      "family_ids": [
+        "UNCLASSIFIED_HISTORICAL"
+      ],
+      "frontier_status": "HISTORICAL_NOT_REASSESSED_BY_AR8R_V4",
+      "general_mathematical_novelty_credit": "HISTORICAL_LEDGER_CLASSIFICATION_ONLY",
+      "historical_record": true,
+      "id": "GW-T12B",
+      "namespace": "AR4",
+      "novelty": "typed distinction; no novelty claim",
+      "payload_resolution_status": "PAYLOAD_RECOVERED_EXACT",
+      "payload_status": "PAYLOAD_RECOVERED_FROM_VERIFIED_HISTORICAL_AUTHORITY",
+      "prior_art_relation": "typed distinction; no novelty claim",
+      "proof_dependencies": [
+        "GW-T12A"
+      ],
+      "scope": "historical AR4 declared scope",
+      "source_hash": "ae6f6842da42e7dcfc584c1fe1f3f62110178ef330ff2bc7f6fe350f952b328e",
+      "statement": "An explicitly authorized deletion may yield a target-valid successor reason when remaining and added obligations close, but it does not preserve numerical or justificatory identity with the original reason.",
+      "status": "PROVED",
+      "title": "Revision-relative successor reason"
+    }
+  },
+  "relevant_registered_relations": [
+    {
+      "assumption_comparison": "AR-T1 assumes a fixed observation map and exact Boolean target; the later theorem adds the displayed domain/source/causal restrictions.",
+      "conclusion_comparison": "Both use constancy on fibres/factorization as the exact recoverability condition; later theorem may add product or countermodel consequences.",
+      "credit_consequence": "distinct scoped proposition; zero new general factorization credit",
+      "evidence": [
+        "I_PROOF_ASSISTANT/ApprehensionalReachability.lean",
+        "THEOREM_ORIGIN/AR8R_CANONICAL_THEOREM_ORIGIN_REGISTRY_V2.yaml"
+      ],
+      "left": "AR-T1",
+      "proof_dependency_comparison": "Later proof is a direct specialization/application of observational quotient factorization unless explicitly marked unresolved.",
+      "reason": "Statement-level comparison of the displayed theorem payloads.",
+      "relation": "STRICT_SPECIALIZATION",
+      "right": "AR8R-T15",
+      "variable_predicate_mapping": "AR-T1 observation map O corresponds to registered behavior/status profile; Boolean claim q corresponds to finite bridge/status behavior."
+    },
+    {
+      "assumption_comparison": "AR-T1 assumes a fixed observation map and exact Boolean target; the later theorem adds the displayed domain/source/causal restrictions.",
+      "conclusion_comparison": "Both use constancy on fibres/factorization as the exact recoverability condition; later theorem may add product or countermodel consequences.",
+      "credit_consequence": "distinct scoped proposition; zero new general factorization credit",
+      "evidence": [
+        "I_PROOF_ASSISTANT/ApprehensionalReachability.lean",
+        "THEOREM_ORIGIN/AR8R_CANONICAL_THEOREM_ORIGIN_REGISTRY_V2.yaml"
+      ],
+      "left": "AR-T1",
+      "proof_dependency_comparison": "Later proof is a direct specialization/application of observational quotient factorization unless explicitly marked unresolved.",
+      "reason": "Statement-level comparison of the displayed theorem payloads.",
+      "relation": "STRICT_SPECIALIZATION",
+      "right": "AR8R-T19",
+      "variable_predicate_mapping": "AR-T1 observation map O corresponds to declared observation profile; Boolean claim q corresponds to finite target classification."
+    },
+    {
+      "assumption_comparison": "AR-T1 assumes a fixed observation map and exact Boolean target; the later theorem adds the displayed domain/source/causal restrictions.",
+      "conclusion_comparison": "Both use constancy on fibres/factorization as the exact recoverability condition; later theorem may add product or countermodel consequences.",
+      "credit_consequence": "distinct scoped proposition; zero new general factorization credit",
+      "evidence": [
+        "I_PROOF_ASSISTANT/ApprehensionalReachability.lean",
+        "THEOREM_ORIGIN/AR8R_CANONICAL_THEOREM_ORIGIN_REGISTRY_V2.yaml"
+      ],
+      "left": "AR-T1",
+      "proof_dependency_comparison": "Later proof is a direct specialization/application of observational quotient factorization unless explicitly marked unresolved.",
+      "reason": "Statement-level comparison of the displayed theorem payloads.",
+      "relation": "STRICT_SPECIALIZATION",
+      "right": "AR8R-T29",
+      "variable_predicate_mapping": "AR-T1 observation map O corresponds to source/role profile; Boolean claim q corresponds to source-sensitive verdict."
+    },
+    {
+      "assumption_comparison": "AR-T1 assumes a fixed observation map and exact Boolean target; the later theorem adds the displayed domain/source/causal restrictions.",
+      "conclusion_comparison": "Both use constancy on fibres/factorization as the exact recoverability condition; later theorem may add product or countermodel consequences.",
+      "credit_consequence": "distinct factorization application; zero new general credit",
+      "evidence": [
+        "I_PROOF_ASSISTANT/ApprehensionalReachability.lean",
+        "THEOREM_ORIGIN/AR8R_CANONICAL_THEOREM_ORIGIN_REGISTRY_V2.yaml"
+      ],
+      "left": "AR-T1",
+      "proof_dependency_comparison": "Later proof is a direct specialization/application of observational quotient factorization unless explicitly marked unresolved.",
+      "reason": "Statement-level comparison of the displayed theorem payloads.",
+      "relation": "STRICT_SPECIALIZATION",
+      "right": "AR8R-T52",
+      "variable_predicate_mapping": "AR-T1 observation map O corresponds to behavior profile B; Boolean claim q corresponds to realism predicate R."
+    },
+    {
+      "assumption_comparison": "AR-T1 assumes a fixed observation map and exact Boolean target; the later theorem adds the displayed domain/source/causal restrictions.",
+      "conclusion_comparison": "Both use constancy on fibres/factorization as the exact recoverability condition; later theorem may add product or countermodel consequences.",
+      "credit_consequence": "distinct context application; zero new general credit",
+      "evidence": [
+        "I_PROOF_ASSISTANT/ApprehensionalReachability.lean",
+        "THEOREM_ORIGIN/AR8R_CANONICAL_THEOREM_ORIGIN_REGISTRY_V2.yaml"
+      ],
+      "left": "AR-T1",
+      "proof_dependency_comparison": "Later proof is a direct specialization/application of observational quotient factorization unless explicitly marked unresolved.",
+      "reason": "Statement-level comparison of the displayed theorem payloads.",
+      "relation": "STRICT_SPECIALIZATION",
+      "right": "AR8R-T72",
+      "variable_predicate_mapping": "AR-T1 observation map O corresponds to fixed context profile; Boolean claim q corresponds to context-indexed target direction."
+    },
+    {
+      "assumption_comparison": "AR-T1 assumes a fixed observation map and exact Boolean target; the later theorem adds the displayed domain/source/causal restrictions.",
+      "conclusion_comparison": "Both use constancy on fibres/factorization as the exact recoverability condition; later theorem may add product or countermodel consequences.",
+      "credit_consequence": "distinct provenance application; zero new general credit",
+      "evidence": [
+        "I_PROOF_ASSISTANT/ApprehensionalReachability.lean",
+        "THEOREM_ORIGIN/AR8R_CANONICAL_THEOREM_ORIGIN_REGISTRY_V2.yaml"
+      ],
+      "left": "AR-T1",
+      "proof_dependency_comparison": "Later proof is a direct specialization/application of observational quotient factorization unless explicitly marked unresolved.",
+      "reason": "Statement-level comparison of the displayed theorem payloads.",
+      "relation": "STRICT_SPECIALIZATION",
+      "right": "AR8R-T86",
+      "variable_predicate_mapping": "AR-T1 observation map O corresponds to content-plus-ancestry profile; Boolean claim q corresponds to independence-sensitive verdict."
+    },
+    {
+      "assumption_comparison": "AR-T1 assumes a fixed observation map and exact Boolean target; the later theorem adds the displayed domain/source/causal restrictions.",
+      "conclusion_comparison": "Both use constancy on fibres/factorization as the exact recoverability condition; later theorem may add product or countermodel consequences.",
+      "credit_consequence": "new product/noninterderivability consequence; elementary mechanism",
+      "evidence": [
+        "I_PROOF_ASSISTANT/ApprehensionalReachability.lean",
+        "THEOREM_ORIGIN/AR8R_CANONICAL_THEOREM_ORIGIN_REGISTRY_V2.yaml"
+      ],
+      "left": "AR-T1",
+      "proof_dependency_comparison": "Later proof is a direct specialization/application of observational quotient factorization unless explicitly marked unresolved.",
+      "reason": "Statement-level comparison of the displayed theorem payloads.",
+      "relation": "SAME_GENERAL_MECHANISM_NEW_CONSEQUENCE",
+      "right": "AR8R-T101",
+      "variable_predicate_mapping": "AR-T1 observation map O corresponds to source profile; Boolean claim q corresponds to two-coordinate attribution/truth product target."
+    },
+    {
+      "assumption_comparison": "AR-T1 assumes a fixed observation map and exact Boolean target; the later theorem adds the displayed domain/source/causal restrictions.",
+      "conclusion_comparison": "Both use constancy on fibres/factorization as the exact recoverability condition; later theorem may add product or countermodel consequences.",
+      "credit_consequence": "new n-coordinate product consequence; zero new general factorization credit",
+      "evidence": [
+        "I_PROOF_ASSISTANT/ApprehensionalReachability.lean",
+        "THEOREM_ORIGIN/AR8R_CANONICAL_THEOREM_ORIGIN_REGISTRY_V2.yaml"
+      ],
+      "left": "AR-T1",
+      "proof_dependency_comparison": "Later proof is a direct specialization/application of observational quotient factorization unless explicitly marked unresolved.",
+      "reason": "Statement-level comparison of the displayed theorem payloads.",
+      "relation": "SAME_GENERAL_MECHANISM_NEW_CONSEQUENCE",
+      "right": "AR8R-T107",
+      "variable_predicate_mapping": "AR-T1 observation map O corresponds to source profile; Boolean claim q corresponds to five-coordinate source-evaluation product."
+    },
+    {
+      "assumption_comparison": "AR-T1 assumes a fixed observation map and exact Boolean target; the later theorem adds the displayed domain/source/causal restrictions.",
+      "conclusion_comparison": "Both use constancy on fibres/factorization as the exact recoverability condition; later theorem may add product or countermodel consequences.",
+      "credit_consequence": "new status-preservation insufficiency consequence",
+      "evidence": [
+        "I_PROOF_ASSISTANT/ApprehensionalReachability.lean",
+        "THEOREM_ORIGIN/AR8R_CANONICAL_THEOREM_ORIGIN_REGISTRY_V2.yaml"
+      ],
+      "left": "AR-T1",
+      "proof_dependency_comparison": "Later proof is a direct specialization/application of observational quotient factorization unless explicitly marked unresolved.",
+      "reason": "Statement-level comparison of the displayed theorem payloads.",
+      "relation": "SAME_GENERAL_MECHANISM_NEW_CONSEQUENCE",
+      "right": "AR8R-T113",
+      "variable_predicate_mapping": "AR-T1 observation map O corresponds to source quotient; Boolean claim q corresponds to attribution/translation/support/graph/payoff product."
+    },
+    {
+      "assumption_comparison": "AR-T1 assumes a fixed observation map and exact Boolean target; the later theorem adds the displayed domain/source/causal restrictions.",
+      "conclusion_comparison": "Both use constancy on fibres/factorization as the exact recoverability condition; later theorem may add product or countermodel consequences.",
+      "credit_consequence": "distinct adequacy-twin application; zero new general credit",
+      "evidence": [
+        "I_PROOF_ASSISTANT/ApprehensionalReachability.lean",
+        "THEOREM_ORIGIN/AR8R_CANONICAL_THEOREM_ORIGIN_REGISTRY_V2.yaml"
+      ],
+      "left": "AR-T1",
+      "proof_dependency_comparison": "Later proof is a direct specialization/application of observational quotient factorization unless explicitly marked unresolved.",
+      "reason": "Statement-level comparison of the displayed theorem payloads.",
+      "relation": "STRICT_SPECIALIZATION",
+      "right": "AR8R-T115",
+      "variable_predicate_mapping": "AR-T1 observation map O corresponds to formal profile plus realization label; Boolean claim q corresponds to target adequacy."
+    },
+    {
+      "assumption_comparison": "AR-T1 assumes a fixed observation map and exact Boolean target; the later theorem adds the displayed domain/source/causal restrictions.",
+      "conclusion_comparison": "Both use constancy on fibres/factorization as the exact recoverability condition; later theorem may add product or countermodel consequences.",
+      "credit_consequence": "new contract-expansion loss boundary",
+      "evidence": [
+        "I_PROOF_ASSISTANT/ApprehensionalReachability.lean",
+        "THEOREM_ORIGIN/AR8R_CANONICAL_THEOREM_ORIGIN_REGISTRY_V2.yaml"
+      ],
+      "left": "AR-T1",
+      "proof_dependency_comparison": "Later proof is a direct specialization/application of observational quotient factorization unless explicitly marked unresolved.",
+      "reason": "Statement-level comparison of the displayed theorem payloads.",
+      "relation": "SAME_GENERAL_MECHANISM_NEW_CONSEQUENCE",
+      "right": "AR8R-T120",
+      "variable_predicate_mapping": "AR-T1 observation map O corresponds to old-policy quotient; Boolean claim q corresponds to expanded-policy behavior."
+    },
+    {
+      "assumption_comparison": "AR-T1 assumes a fixed observation map and exact Boolean target; the later theorem adds the displayed domain/source/causal restrictions.",
+      "conclusion_comparison": "Both use constancy on fibres/factorization as the exact recoverability condition; later theorem may add product or countermodel consequences.",
+      "credit_consequence": "distinct payoff application; zero new general credit",
+      "evidence": [
+        "I_PROOF_ASSISTANT/ApprehensionalReachability.lean",
+        "THEOREM_ORIGIN/AR8R_CANONICAL_THEOREM_ORIGIN_REGISTRY_V2.yaml"
+      ],
+      "left": "AR-T1",
+      "proof_dependency_comparison": "Later proof is a direct specialization/application of observational quotient factorization unless explicitly marked unresolved.",
+      "reason": "Statement-level comparison of the displayed theorem payloads.",
+      "relation": "STRICT_SPECIALIZATION",
+      "right": "AR8R-T121",
+      "variable_predicate_mapping": "AR-T1 observation map O corresponds to source profile; Boolean claim q corresponds to interpretive payoff."
+    },
+    {
+      "assumption_comparison": "AR-T1 assumes a fixed observation map and exact Boolean target; the later theorem adds the displayed domain/source/causal restrictions.",
+      "conclusion_comparison": "Both use constancy on fibres/factorization as the exact recoverability condition; later theorem may add product or countermodel consequences.",
+      "credit_consequence": "distinct scoped application",
+      "evidence": [
+        "I_PROOF_ASSISTANT/ApprehensionalReachability.lean",
+        "THEOREM_ORIGIN/AR8R_CANONICAL_THEOREM_ORIGIN_REGISTRY_V2.yaml"
+      ],
+      "left": "AR-T1",
+      "proof_dependency_comparison": "Later proof is a direct specialization/application of observational quotient factorization unless explicitly marked unresolved.",
+      "reason": "Statement-level comparison of the displayed theorem payloads.",
+      "relation": "STRICT_SPECIALIZATION",
+      "right": "AR8R-T167",
+      "variable_predicate_mapping": "AR-T1 observation map O corresponds to registered analysis profile; Boolean claim q corresponds to target realist/adequacy predicate."
+    },
+    {
+      "assumption_comparison": "AR-T1 assumes a fixed observation map and exact Boolean target; the later theorem adds the displayed domain/source/causal restrictions.",
+      "conclusion_comparison": "Both use constancy on fibres/factorization as the exact recoverability condition; later theorem may add product or countermodel consequences.",
+      "credit_consequence": "finite-product closure consequence; standard universal property",
+      "evidence": [
+        "I_PROOF_ASSISTANT/ApprehensionalReachability.lean",
+        "THEOREM_ORIGIN/AR8R_CANONICAL_THEOREM_ORIGIN_REGISTRY_V2.yaml"
+      ],
+      "left": "AR-T1",
+      "proof_dependency_comparison": "Later proof is a direct specialization/application of observational quotient factorization unless explicitly marked unresolved.",
+      "reason": "Statement-level comparison of the displayed theorem payloads.",
+      "relation": "SAME_GENERAL_MECHANISM_NEW_CONSEQUENCE",
+      "right": "AR8R-T237",
+      "variable_predicate_mapping": "AR-T1 observation map O corresponds to registered profile; Boolean claim q corresponds to finite product of typed source coordinates."
+    },
+    {
+      "assumption_comparison": "AR-T1 assumes a fixed observation map and exact Boolean target; the later theorem adds the displayed domain/source/causal restrictions.",
+      "conclusion_comparison": "Both use constancy on fibres/factorization as the exact recoverability condition; later theorem may add product or countermodel consequences.",
+      "credit_consequence": "query-relative factorization specialization",
+      "evidence": [
+        "I_PROOF_ASSISTANT/ApprehensionalReachability.lean",
+        "THEOREM_ORIGIN/AR8R_CANONICAL_THEOREM_ORIGIN_REGISTRY_V2.yaml"
+      ],
+      "left": "AR-T1",
+      "proof_dependency_comparison": "Later proof is a direct specialization/application of observational quotient factorization unless explicitly marked unresolved.",
+      "reason": "Statement-level comparison of the displayed theorem payloads.",
+      "relation": "STRICT_SPECIALIZATION",
+      "right": "AR8R-T241",
+      "variable_predicate_mapping": "AR-T1 observation map O corresponds to attained profile image; Boolean claim q corresponds to frozen downstream query answer."
+    },
+    {
+      "assumption_comparison": "AR-T1 assumes a fixed observation map and exact Boolean target; the later theorem adds the displayed domain/source/causal restrictions.",
+      "conclusion_comparison": "Both use constancy on fibres/factorization as the exact recoverability condition; later theorem may add product or countermodel consequences.",
+      "credit_consequence": "fibre twins supply an explicit profile-inadequacy countermodel",
+      "evidence": [
+        "I_PROOF_ASSISTANT/ApprehensionalReachability.lean",
+        "THEOREM_ORIGIN/AR8R_CANONICAL_THEOREM_ORIGIN_REGISTRY_V2.yaml"
+      ],
+      "left": "AR-T1",
+      "proof_dependency_comparison": "Later proof is a direct specialization/application of observational quotient factorization unless explicitly marked unresolved.",
+      "reason": "Statement-level comparison of the displayed theorem payloads.",
+      "relation": "SAME_GENERAL_MECHANISM_NEW_COUNTERMODEL",
+      "right": "AR8R-T272",
+      "variable_predicate_mapping": "AR-T1 observation map O corresponds to registered diagnostic profile; Boolean claim q corresponds to target property."
+    },
+    {
+      "assumption_comparison": "AR-T1 assumes a fixed observation map and exact Boolean target; the later theorem adds the displayed domain/source/causal restrictions.",
+      "conclusion_comparison": "Both use constancy on fibres/factorization as the exact recoverability condition; later theorem may add product or countermodel consequences.",
+      "credit_consequence": "extensional-decision versus adequacy boundary",
+      "evidence": [
+        "I_PROOF_ASSISTANT/ApprehensionalReachability.lean",
+        "THEOREM_ORIGIN/AR8R_CANONICAL_THEOREM_ORIGIN_REGISTRY_V2.yaml"
+      ],
+      "left": "AR-T1",
+      "proof_dependency_comparison": "Later proof is a direct specialization/application of observational quotient factorization unless explicitly marked unresolved.",
+      "reason": "Statement-level comparison of the displayed theorem payloads.",
+      "relation": "SAME_GENERAL_MECHANISM_NEW_CONSEQUENCE",
+      "right": "AR8R-T278",
+      "variable_predicate_mapping": "AR-T1 observation map O corresponds to decision profile; Boolean claim q corresponds to warrant/source/adequacy coordinate."
+    },
+    {
+      "assumption_comparison": "AR-T1 assumes a fixed observation map and exact Boolean target; the later theorem adds the displayed domain/source/causal restrictions.",
+      "conclusion_comparison": "Both use constancy on fibres/factorization as the exact recoverability condition; later theorem may add product or countermodel consequences.",
+      "credit_consequence": "decoder-fibre specialization",
+      "evidence": [
+        "I_PROOF_ASSISTANT/ApprehensionalReachability.lean",
+        "THEOREM_ORIGIN/AR8R_CANONICAL_THEOREM_ORIGIN_REGISTRY_V2.yaml"
+      ],
+      "left": "AR-T1",
+      "proof_dependency_comparison": "Later proof is a direct specialization/application of observational quotient factorization unless explicitly marked unresolved.",
+      "reason": "Statement-level comparison of the displayed theorem payloads.",
+      "relation": "STRICT_SPECIALIZATION",
+      "right": "AR8R-T286",
+      "variable_predicate_mapping": "AR-T1 observation map O corresponds to decoder map; Boolean claim q corresponds to expected score / latent truth target."
+    },
+    {
+      "assumption_comparison": "AR-T1 assumes a fixed observation map and exact Boolean target; the later theorem adds the displayed domain/source/causal restrictions.",
+      "conclusion_comparison": "Both use constancy on fibres/factorization as the exact recoverability condition; later theorem may add product or countermodel consequences.",
+      "credit_consequence": "intervention-profile specialization",
+      "evidence": [
+        "I_PROOF_ASSISTANT/ApprehensionalReachability.lean",
+        "THEOREM_ORIGIN/AR8R_CANONICAL_THEOREM_ORIGIN_REGISTRY_V2.yaml"
+      ],
+      "left": "AR-T1",
+      "proof_dependency_comparison": "Later proof is a direct specialization/application of observational quotient factorization unless explicitly marked unresolved.",
+      "reason": "Statement-level comparison of the displayed theorem payloads.",
+      "relation": "STRICT_SPECIALIZATION",
+      "right": "AR8R-T294",
+      "variable_predicate_mapping": "AR-T1 observation map O corresponds to finite intervention-response profile; Boolean claim q corresponds to target classification."
+    },
+    {
+      "assumption_comparison": "AR-T1 assumes a fixed observation map and exact Boolean target; the later theorem adds the displayed domain/source/causal restrictions.",
+      "conclusion_comparison": "Both use constancy on fibres/factorization as the exact recoverability condition; later theorem may add product or countermodel consequences.",
+      "credit_consequence": "product-coordinate consequence",
+      "evidence": [
+        "I_PROOF_ASSISTANT/ApprehensionalReachability.lean",
+        "THEOREM_ORIGIN/AR8R_CANONICAL_THEOREM_ORIGIN_REGISTRY_V2.yaml"
+      ],
+      "left": "AR-T1",
+      "proof_dependency_comparison": "Later proof is a direct specialization/application of observational quotient factorization unless explicitly marked unresolved.",
+      "reason": "Statement-level comparison of the displayed theorem payloads.",
+      "relation": "SAME_GENERAL_MECHANISM_NEW_CONSEQUENCE",
+      "right": "AR8R-T297",
+      "variable_predicate_mapping": "AR-T1 observation map O corresponds to observation profile; Boolean claim q corresponds to product of function/status coordinates."
+    },
+    {
+      "assumption_comparison": "AR-T1 assumes a fixed observation map and exact Boolean target; the later theorem adds the displayed domain/source/causal restrictions.",
+      "conclusion_comparison": "Both use constancy on fibres/factorization as the exact recoverability condition; later theorem may add product or countermodel consequences.",
+      "credit_consequence": "causal-landing application; no new general factorization theorem",
+      "evidence": [
+        "I_PROOF_ASSISTANT/ApprehensionalReachability.lean",
+        "THEOREM_ORIGIN/AR8R_CANONICAL_THEOREM_ORIGIN_REGISTRY_V2.yaml"
+      ],
+      "left": "AR-T1",
+      "proof_dependency_comparison": "Later proof is a direct specialization/application of observational quotient factorization unless explicitly marked unresolved.",
+      "reason": "Statement-level comparison of the displayed theorem payloads.",
+      "relation": "SAME_GENERAL_MECHANISM_NEW_CONSEQUENCE",
+      "right": "AR8R-T299",
+      "variable_predicate_mapping": "AR-T1 observation map O corresponds to episode-transition profile; Boolean claim q corresponds to conjunctive but-for landing predicate."
+    },
+    {
+      "assumption_comparison": "AR-T1 assumes a fixed observation map and exact Boolean target; the later theorem adds the displayed domain/source/causal restrictions.",
+      "conclusion_comparison": "Both use constancy on fibres/factorization as the exact recoverability condition; later theorem may add product or countermodel consequences.",
+      "credit_consequence": "exact certifier application; mathematical ancestry AR-T1",
+      "evidence": [
+        "I_PROOF_ASSISTANT/ApprehensionalReachability.lean",
+        "THEOREM_ORIGIN/AR8R_CANONICAL_THEOREM_ORIGIN_REGISTRY_V2.yaml"
+      ],
+      "left": "AR-T1",
+      "proof_dependency_comparison": "Later proof is a direct specialization/application of observational quotient factorization unless explicitly marked unresolved.",
+      "reason": "Statement-level comparison of the displayed theorem payloads.",
+      "relation": "STRICT_SPECIALIZATION",
+      "right": "AR8R-T304",
+      "variable_predicate_mapping": "AR-T1 observation map O corresponds to registered sound-fitra profile; Boolean claim q corresponds to declared substantive target predicate."
+    },
+    {
+      "assumption_comparison": "AR-T1 assumes a fixed observation map and exact Boolean target; the later theorem adds the displayed domain/source/causal restrictions.",
+      "conclusion_comparison": "Both use constancy on fibres/factorization as the exact recoverability condition; later theorem may add product or countermodel consequences.",
+      "credit_consequence": "source truth/profile completeness firewall consequence",
+      "evidence": [
+        "I_PROOF_ASSISTANT/ApprehensionalReachability.lean",
+        "THEOREM_ORIGIN/AR8R_CANONICAL_THEOREM_ORIGIN_REGISTRY_V2.yaml"
+      ],
+      "left": "AR-T1",
+      "proof_dependency_comparison": "Later proof is a direct specialization/application of observational quotient factorization unless explicitly marked unresolved.",
+      "reason": "Statement-level comparison of the displayed theorem payloads.",
+      "relation": "SAME_GENERAL_MECHANISM_NEW_CONSEQUENCE",
+      "right": "AR8R-T330",
+      "variable_predicate_mapping": "AR-T1 observation map O corresponds to source-bound profile; Boolean claim q corresponds to source-grounded proper-orthing target."
+    },
+    {
+      "assumption_comparison": "AR-T1 assumes a fixed observation map and exact Boolean target; the later theorem adds the displayed domain/source/causal restrictions.",
+      "conclusion_comparison": "Both use constancy on fibres/factorization as the exact recoverability condition; later theorem may add product or countermodel consequences.",
+      "credit_consequence": "relation cannot be finalized without payload",
+      "evidence": [
+        "I_PROOF_ASSISTANT/ApprehensionalReachability.lean",
+        "THEOREM_ORIGIN/AR8R_CANONICAL_THEOREM_ORIGIN_REGISTRY_V2.yaml"
+      ],
+      "left": "AR-T1",
+      "proof_dependency_comparison": "Later proof is a direct specialization/application of observational quotient factorization unless explicitly marked unresolved.",
+      "reason": "Statement-level comparison of the displayed theorem payloads.",
+      "relation": "UNRESOLVED",
+      "right": "AR8R-T366",
+      "variable_predicate_mapping": "AR-T1 observation map O corresponds to source-enriched profile; Boolean claim q corresponds to exact payload unavailable."
+    },
+    {
+      "assumption_comparison": "T304 adds the source/normative target interpretation.",
+      "conclusion_comparison": "No stronger general factorization theorem follows.",
+      "credit_consequence": "zero new general theorem credit; scoped architecture/application credit remains separately reviewable",
+      "evidence": [
+        "PROOFS/P475_P482_CAUSAL_RESTORATION/AR8R_T300_LOWER_ORDER_ALIGNMENT_BLIND_CAUSAL_RESTORATION.md"
+      ],
+      "left": "AR8R-T272",
+      "proof_dependency_comparison": "T304 reuses the T272/AR-T1 fibre proof pattern.",
+      "reason": "Direct application ancestry.",
+      "relation": "APPLICATION_ONLY",
+      "right": "AR8R-T304",
+      "variable_predicate_mapping": "T272 diagnostic profile and target twins instantiate T304 sound-fitra target/profile language."
+    },
+    {
+      "assumption_comparison": "AR-T4 adds a finite separating-test family; AR-T1 needs only an observation quotient.",
+      "conclusion_comparison": "AR-T4 supplies a constructive finite-test condition stronger than bare quotient invariance.",
+      "credit_consequence": "distinct strengthening, not independent mechanism discovery without provenance evidence",
+      "evidence": [
+        "inputs/theorem-origin/appreach/F_THEOREM_LEDGER.yaml"
+      ],
+      "left": "AR-T4",
+      "proof_dependency_comparison": "AR-T4 implies the quotient criterion on its finite declared class.",
+      "reason": "Adjacent static test-separation result.",
+      "relation": "STRICT_STRENGTHENING",
+      "right": "AR-T1",
+      "variable_predicate_mapping": "AR-T4 finite test separation maps to AR-T1 observation fibres."
+    },
+    {
+      "assumption_comparison": "T299 adds conjunctive but-for landing and episode-transition semantics.",
+      "conclusion_comparison": "T299 is a causal-credit application of collision-based nonidentifiability.",
+      "credit_consequence": "new scoped causal application; no new general decider theorem",
+      "evidence": [
+        "PROOFS/P475_P482_CAUSAL_RESTORATION/AR8R_T299_CAUSAL_BURDEN_LANDING.md"
+      ],
+      "left": "AR-T3",
+      "proof_dependency_comparison": "Generic collision proof plus matched-contrast witness.",
+      "reason": "Exact focused statement/assumption/proof comparison.",
+      "relation": "SAME_GENERAL_MECHANISM_NEW_CONSEQUENCE",
+      "right": "AR8R-T299",
+      "variable_predicate_mapping": "AR-T3 observational collision becomes operation/no-operation causal twins."
+    },
+    {
+      "assumption_comparison": "T299 adds exact fibre criterion and registered burden/reread coordinates.",
+      "conclusion_comparison": "T299 gives a stronger exact certification boundary.",
+      "credit_consequence": "distinct strengthening/application",
+      "evidence": [
+        "PROOFS/P475_P482_CAUSAL_RESTORATION/AR8R_T299_CAUSAL_BURDEN_LANDING.md"
+      ],
+      "left": "AR8R-T256",
+      "proof_dependency_comparison": "T299 cites/uses T256 mechanism.",
+      "reason": "Exact focused statement/assumption/proof comparison.",
+      "relation": "STRICT_STRENGTHENING",
+      "right": "AR8R-T299",
+      "variable_predicate_mapping": "T256 causal profile/contrast is refined to conjunctive but-for landing."
+    },
+    {
+      "assumption_comparison": "Causal attribution and invariant maintainability have independent premises.",
+      "conclusion_comparison": "Neither entails the other; a safe state may be spontaneous, a causally landed state may be unstable.",
+      "credit_consequence": "two distinct coordinates; no duplicate credit",
+      "evidence": [
+        "RECOVERY_OVERLAYS/P653_P660_T372/P653_P660_T372_ADMISSION_OVERLAY.yaml"
+      ],
+      "left": "AR8R-T299",
+      "proof_dependency_comparison": "Independent countermodels registered in T372 scope audit.",
+      "reason": "Exact focused statement/assumption/proof comparison.",
+      "relation": "INCOMPARABLE",
+      "right": "AR8R-T372",
+      "variable_predicate_mapping": "T299 but-for causal landing versus T372 safety maintainability."
+    },
+    {
+      "assumption_comparison": "Boolean target and fixed observation map.",
+      "conclusion_comparison": "Exact decider iff target factors through quotient.",
+      "credit_consequence": "AR-T1 is project formalization of established mechanism; no general novelty",
+      "evidence": [
+        "inputs/theorem-origin/appreach/F_PROOF_APPENDIX.md"
+      ],
+      "left": "PRIOR-ART::FIBRE_FACTORIZATION",
+      "proof_dependency_comparison": "Standard quotient proof.",
+      "reason": "Exact focused statement/assumption/proof comparison.",
+      "relation": "MUTUALLY_DERIVABLE_UNDER_THE_SAME_THEORY",
+      "right": "AR-T1",
+      "variable_predicate_mapping": "equivalence classes/fibres correspond to quotient factorization."
+    },
+    {
+      "assumption_comparison": "GW-T1A adds candidate-control and independent-warrant interpretation to AR-T1 fibre invariance",
+      "conclusion_comparison": "same factorization iff fibre constancy, with anti-self-authorization consequence",
+      "countermodel_evidence": [],
+      "credit_consequence": "GW-T1A receives application/new-consequence credit, not a new general factorization mechanism.",
+      "evidence": [
+        "inputs/theorem-origin/LEAN_HISTORY/APPREHENSIONAL_REACHABILITY/E_THEOREM_LEDGER.yaml",
+        "inputs/theorem-origin/LEAN_HISTORY/AR4/H_THEOREM_LEDGER.yaml"
+      ],
+      "left": "AR-T1",
+      "proof_dependency_comparison": "GW-T1A uses the same quotient/fibre proof mechanism; new domain consequence only",
+      "reason": "GW-T1A instantiates AR-T1’s fibre/factorization criterion with a candidate-controlled observation map and an independently interpreted warrant predicate; the extra anti-self-authorization reading narrows the domain without changing the general equivalence.",
+      "relation": "STRICT_SPECIALIZATION",
+      "relation_id": "REL-V4-071",
+      "right": "GW-T1A",
+      "variable_predicate_mapping": "observe/claim maps to candidate-controlled observation/independent warrant predicate"
+    }
+  ],
+  "schema": "bounded-challenger-b-repository-ancestry-extract-v1",
+  "source_file": "AR8R-CANONICAL-THEOREM-ORIGIN-REGISTRY-V5-PUBLIC-SANITIZED.yaml",
+  "source_sha256": "52b1df2961b080bd0c05519883094fc2cd9a93413ca8c1bb1f7935a3a24b0841"
+}

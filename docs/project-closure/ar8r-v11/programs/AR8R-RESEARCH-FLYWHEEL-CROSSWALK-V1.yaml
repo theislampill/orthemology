@@ -34,7 +34,9 @@ nodes:
   connes_dispute: {owner: ten-advances-connes-rigidity-dispute.md}
   osw15: {owner: ../governance/ORTHEMOLOGICAL-SPECIFICATION-WARRANT-OSW-15.yaml}
   milestone_architecture: {owner: AR8R-ORTHEMOLOGY-MENISCUS-MILESTONES-V1.yaml, authority: OWNER_PROGRAM_CHARTER_NO_THEOREM_CREDIT}
-  common_intervention_identifiability: {owner: ../post-merge-proposals/pmr007-deep-bl-bv-semantic-reissue/source-files/PMR-007_DEEP_ROUND_BV_COMMON_INTERVENTION_IDENTIFIABILITY_V2.md, authority: SEMANTIC_REISSUE_PROPOSAL_NO_EXECUTABLE_REPRODUCTION}
+  common_intervention_identifiability: {owner: ../post-merge-proposals/pmr007-deep-bl-bv-semantic-reissue/source-files/PMR-007_DEEP_ROUND_BV_COMMON_INTERVENTION_IDENTIFIABILITY_V2.md, authority: SEMANTIC_REISSUE_PROPOSAL_WITH_EXTERNAL_FINITE_CORROBORATION_NO_ARCHITECTURE_IMPLEMENTATION}
+  post_bv_frontier: {owner: ../post-merge-proposals/pmr007-deep-bw-cj-semantic-reissue/README.md, authority: SEMANTIC_REISSUE_PROPOSAL_V1_FALSE_PASS_V2_TAUTOLOGY_REPAIRED_TO_BOUNDED_V3_GAP}
+  external_challenges: {owner: ../post-merge-proposals/external-challenges/README.md, authority: NONAUTHORITATIVE_CHALLENGE_CUSTODY}
 edges:
   - from: source_custody
     to: language_version
@@ -269,6 +271,26 @@ edges:
     to: tensor_search
     contribution: candidate experiments should maximize class-wide partition refinement under one independently typed common intervention
     nontransfer: discriminative value does not establish implementation eligibility causal interpretation or metaphysical truth
+  - kind: constrains
+    from: external_challenges
+    to: common_intervention_identifiability
+    contribution: finite quotient factorization and target-fibre collisions are corroborated while factorial completeness and generalized ancestry are narrowed
+    nontransfer: a finite checker or standalone Lean repair does not implement a common cross-architecture intervention
+  - kind: constrains
+    from: common_intervention_identifiability
+    to: post_bv_frontier
+    contribution: every BW-CJ architecture discriminator remains conditional on complete eligible target-blind profile fibres
+    nontransfer: a profile property does not establish source truth world truth personality Wisdom or adoption
+  - kind: supports
+    from: post_bv_frontier
+    to: proper_function_matrix
+    contribution: CD and CJ separate declared norm or fittingness sensitivity from objective proper function and Wisdom
+    nontransfer: sensitivity to a registered signal does not establish its truth fittingness or correct function
+  - kind: constrains
+    from: post_bv_frontier
+    to: transcendental_bridges
+    contribution: BY through CG preserve source-world bearer and plural-realization rivals at each declared bridge
+    nontransfer: a surviving rival or bridge firewall is not a positive Necessary-Being personal-ground or revelation proof
 selection_rule: Choose the next lane by unresolved load-bearing dependency and expected cross-lane yield, not by vocabulary overlap.
 closure_rule: No cycle in this graph establishes meniscus, natural closure, or an integrated champion.
 milestone_projection:

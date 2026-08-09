@@ -1,0 +1,9 @@
+schema: AR8R_PMR007_POST_BV_TIMING_CUSTODY_REISSUE_V1
+last_reconciled_post_merge_duration: '00:56:11.268096105'
+later_pmr007_increments: NOT_YET_RECONCILED
+current_reissue_counted_increment: NOT_YET_RECONCILED
+reason: Original phase-level exclusion ledger was lost at runtime reset; gross wall-clock
+  and packaging activity are not converted into substantive time.
+historical_duration: '09:41:25.405101139'
+historical_latest_segment: 357
+historical_duration_changed: false

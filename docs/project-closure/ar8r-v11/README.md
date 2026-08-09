@@ -86,6 +86,26 @@ proposal; its experiment counts were not reproducibly rerun from the reissue.
 External review and owner adoption remain open, and no historical identity,
 novelty, Lean, champion, meniscus, closure, or historical-duration effect follows.
 
+## Deep BW–CJ semantic custody and challenge extension
+
+`post-merge-proposals/pmr007-deep-bw-cj-semantic-reissue/` preserves all 40
+public-safe V1 reissue files without identifying them with the lost ephemeral
+originals. Fourteen proposal identities are indexed. Repository intake found
+and froze the V1 CI/CJ checker false-pass. A first V2 attempt executed the
+missing loops but was rejected as tautological repetition. V3 exhausts the
+declared finite CI/CJ signatures, rechecks eligibility, and kills three
+predicate mutants; it remains constructed finite-signature evidence only. All
+fourteen identities remain unadopted, external-review-open proposals with zero
+novelty credit.
+
+`post-merge-proposals/external-challenges/` records two nonauthoritative
+challenge packets. Challenger A retains a sound conditional finite-interface
+collision core but lacks an implemented or exhaustive factorial. Challenger B
+corroborates the finite fibre criterion, records that its supplied Lean draft
+failed, and preserves a separately labeled standalone Lean repair. Neither
+challenge changes theorem identity, theory, source-world truth, a champion, a
+meniscus, or natural closure.
+
 ## V12 OSM learning-trajectory crosswalk
 
 The Sun et al. OSM study was already present in the current source, decision,

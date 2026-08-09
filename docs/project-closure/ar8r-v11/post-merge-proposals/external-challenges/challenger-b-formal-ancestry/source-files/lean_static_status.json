@@ -1,0 +1,19 @@
+{
+  "file": "DeepBVCommonInterventionCriterion.lean",
+  "toolchain": {
+    "lean": false,
+    "lake": false,
+    "elan": false
+  },
+  "parser": "NOT_RUN",
+  "elaboration": "NOT_RUN",
+  "kernel": "NOT_RUN",
+  "axiom_report": "NOT_RUN",
+  "static_scan": {
+    "sorry_tokens": 0,
+    "admit_tokens": 0,
+    "axiom_declarations": 0,
+    "opaque_declarations": 0
+  },
+  "warning": "Static text scanning is not parsing, elaboration, kernel checking, or an axiom dependency report."
+}

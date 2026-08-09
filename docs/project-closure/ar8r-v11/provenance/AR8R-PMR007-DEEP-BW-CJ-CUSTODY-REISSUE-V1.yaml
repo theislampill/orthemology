@@ -1,0 +1,90 @@
+schema: ar8r-pmr007-deep-bw-cj-custody-reissue-v1
+source_reissue:
+  filename: AR8R_PMR007_REPOSITORY_UPDATE_PROPOSAL_THROUGH_DEEP_CJ_REISSUE_V1.zip
+  sha256: 215be89bdca4a33d4272182b2eb21d956290691ac148b1c8df92db9fde96a4af
+  bytes: 61145
+  archive_members: 40
+  unsafe_paths: 0
+  duplicate_paths: 0
+  crc_failures: 0
+  byte_mismatches: 0
+  yaml_files_parsed: 9
+  json_files_parsed: 5
+  structured_parse_errors: 0
+  round_trip_restoration: PASS
+repository_copy:
+  path: docs/project-closure/ar8r-v11/post-merge-proposals/pmr007-deep-bw-cj-semantic-reissue/source-files
+  source_files: 40
+  source_files_copied_byte_exact_from_reissue: true
+  original_ephemeral_deep_bw_cj_bytes_claimed: false
+  role: PUBLIC_SAFE_SEMANTIC_REISSUE_PROPOSAL_CUSTODY
+proposal_boundary:
+  result_count: 14
+  range: Deep BW through Deep CJ
+  identities:
+    - PMR-007-TCIS-1
+    - PMR-007-MBAC-1
+    - PMR-007-SWAC-1
+    - PMR-007-BAXE-1
+    - PMR-007-RCIG-1
+    - PMR-007-CRFW-1
+    - PMR-007-CSQF-1
+    - PMR-007-NOPF-1
+    - PMR-007-CDPS-1
+    - PMR-007-ABIC-1
+    - PMR-007-SICM-1
+    - PMR-007-OIOT-1
+    - PMR-007-SCSI-1
+    - PMR-007-FSGW-1
+  original_ephemeral_files: UNAVAILABLE
+  semantic_reissue_only: true
+  historical_identity: NONE
+  owner_adoption: PENDING
+  external_review: OPEN
+  repository_scientific_adoption: NONE
+  general_mathematical_novelty: 0
+  lean_parse_elaboration_kernel: NOT_RUN
+  integrated_champion: NONE
+  meniscus: MENISCUS_NOT_REACHED
+  natural_closure: NOT_REACHED
+  historical_duration_effect: NONE
+  theorem_origin_authority_effect: NONE
+independent_intake_recheck:
+  v1_checker: source-files/PROPOSAL/checks/post_bv_consolidated_recheck.py
+  v1_supplied_result: source-files/PROPOSAL/checks/post_bv_consolidated_recheck_results.json
+  v1_parsed_result_reproduced: true
+  v1_disposition: REJECTED_FALSE_PASS_CI_CJ
+  v1_defects:
+    - CI_TWIN_COUNTER_PREFILLED_BODY_NOT_EXECUTED
+    - CJ_TWIN_COUNTER_PREFILLED_BODY_NOT_EXECUTED
+    - PLATFORM_NATIVE_NEWLINE_OUTPUT_DRIFT
+  v2_checker: intake-review/checks/post_bv_consolidated_recheck_v2.py
+  v2_checker_sha256: 0d83924960c9710e16834e4d382979ba655f93e9a7f475d378eb0c6ba948a68e
+  v2_result: intake-review/checks/post_bv_consolidated_recheck_v2_results.json
+  v2_result_sha256: c370d5a3eefa3bb557cde0cf620522a19f87387653dc24efb0c3b8a454072e0a
+  v2_executed_on_intake: true
+  v2_parsed_result_reproduces_exactly: true
+  v2_disposition: REJECTED_TAUTOLOGICAL_REPETITION_NOT_INDEPENDENT_EVIDENCE
+  v3_checker: intake-review/checks/post_bv_consolidated_recheck_v3.py
+  v3_checker_sha256: 28def256cce9031cab7b86d2208eacd911a4625278db3db7638066c1ab8c5252
+  v3_result: intake-review/checks/post_bv_consolidated_recheck_v3_results.json
+  v3_result_sha256: e92dd6dcd1b221a016bc53419e2e10582265e48ab7d1328d34ed6b9a679c1090
+  v3_executed_on_intake: true
+  v3_parsed_result_reproduces_exactly: true
+  declared_finite_checks: 14
+  finite_checks_passed: 14
+  ci_exhaustive_signature_witnesses: 15625
+  ci_negative_controls_executed: 46875
+  cj_eligible_signature_witnesses: 72
+  cj_negative_controls_executed: 216
+  predicate_mutant_families_killed_per_round: 3
+  authority_ceiling: CONSTRUCTED_FINITE_SIGNATURE_WITNESSES_ONLY
+  scientific_disposition:
+    BW_THROUGH_CH: GAP_PENDING_PER_RESULT_INDEPENDENT_REVIEW
+    CI: GAP_CONDITIONAL_COUNTERMODEL_ARCHITECTURE_IMPLEMENTATION_UNVERIFIED
+    CJ: GAP_CONDITIONAL_COUNTERMODEL_ARCHITECTURE_IMPLEMENTATION_UNVERIFIED
+integration:
+  base_sha: a8142c3caf103ee46a2cd759c3d319b1e29b40da
+  private_archive_committed: false
+  source_pdf_bytes_committed: false
+  raw_chat_or_activity_committed: false

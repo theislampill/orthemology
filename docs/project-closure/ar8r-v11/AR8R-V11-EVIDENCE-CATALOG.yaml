@@ -1467,6 +1467,26 @@ items:
   owner_path: docs/project-closure/ar8r-v11/provenance/AR8R-PMR007-DEEP-BL-BV-CUSTODY-REISSUE-V1.yaml
   sha256: 41548bcf31610e77b8cee2cd4a2b4687fda2bd100ba0a0298fe5eeca7bca944d
   campaign_epoch: POST_MERGE_PMR007_SEMANTIC_REISSUE
+- item_id: PMR007-DEEP-BW-CJ-SEMANTIC-REISSUE
+  title: Deep BW-CJ public-safe semantic custody reissue
+  source_surface: VERIFIED_OWNER_SUPPLIED_CUSTODY_REISSUE_WITH_INTAKE_REPAIR
+  evidence_class: CUSTODY_RECEIPT
+  privacy_class: PUBLIC_SAFE
+  recommended_disposition: PUBLIC_INTEGRATE
+  public_locator: Deep BW-CJ semantic reissue receipt, 40-file public source surface, rejected V2 attempt, and bounded V3 intake checker
+  repository_relevance: Preserves fourteen proposal identities, rejects the V1 false-pass and V2 tautological repetition, and records only constructed V3 finite-signature witnesses without adoption or source-world transfer.
+  owner_path: docs/project-closure/ar8r-v11/provenance/AR8R-PMR007-DEEP-BW-CJ-CUSTODY-REISSUE-V1.yaml
+  campaign_epoch: POST_MERGE_PMR007_SEMANTIC_REISSUE
+- item_id: AR8R-EXTERNAL-CHALLENGERS-A-B
+  title: Bounded common-intervention external challenge custody
+  source_surface: OWNER_SUPPLIED_PUBLIC_CHALLENGE_PACKETS
+  evidence_class: PROGRAM_OR_BURDEN_RECORD
+  privacy_class: PUBLIC_SAFE
+  recommended_disposition: PUBLIC_INTEGRATE
+  public_locator: post-merge-proposals/external-challenges
+  repository_relevance: Preserves a sound bounded collision core, explicit coverage gaps, finite ancestry corroboration, the original Lean failure, and a standalone repaired draft without theory promotion.
+  owner_path: docs/project-closure/ar8r-v11/post-merge-proposals/external-challenges/README.md
+  campaign_epoch: POST_MERGE_EXTERNAL_CHALLENGE_REVIEW
 v11_task7_public_owners:
   hash_policy: INCLUDED_IN_FINAL_V11_SHA256SUMS_AND_RELEASE_MANIFEST
   owners:

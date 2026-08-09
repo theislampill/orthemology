@@ -1,0 +1,36 @@
+schema: AR8R_PMR007_POST_BV_SOURCE_USE_REGISTER_V1
+sources:
+- file: A-Commentary-on-the-Creed-of-Asfahani-v2.3(1).md
+  sha256: 932abd7e2d7b3702d5d6d77d2a4a95ecfb3a9ccbcfbbce7ae750b2bcf55bef7c
+  authority: TRANSLATED_PRIMARY_ACCESS
+  uses:
+  - source-relative creator and attribute bundle
+  - attribute-locus and Speech conduit firewall
+  nontransfers:
+  - Arabic-primary verification
+  - neutral theorem premise
+  - actual-world reference
+- file: El-Tobgui dissertation Markdown
+  sha256: 657454ff7a1c43b895e7a378d12993295368a97c3f35df5a76edfaa32f67a177
+  authority: SECONDARY_SCHOLARLY_RECONSTRUCTION
+  uses:
+  - fiṭrah and reason/revelation architecture classification
+  nontransfers:
+  - direct primary-source predication
+  - neutral proper-function proof
+- file: The Incoherence of Atheism by al-Ujayri Markdown
+  sha256: 4aea9b66f178e3454015cd0082c3adb0dda5ae80593f7e37d26b73a96028a2d1
+  authority: CONTEMPORARY_ATHARI_SYNTHESIS
+  uses:
+  - contemporary fiṭrah-oriented proper-function comparison
+  nontransfers:
+  - formal theorem authority
+  - school-neutral world conclusion
+- file: AR8R_PMR007_DEEP_BL_BV_CUSTODY_REISSUE_V1.zip
+  sha256: 6ed381f16d2bbd46dd31a987bdc2b9552aa2ae083874dde650e75ff0794f27d3
+  authority: SEMANTIC_CUSTODY_REISSUE
+  uses:
+  - Deep BV reported finite experiment-fibre criterion
+  nontransfers:
+  - exact Deep BL-BU packet bytes
+  - independent Deep-BV executable reproduction

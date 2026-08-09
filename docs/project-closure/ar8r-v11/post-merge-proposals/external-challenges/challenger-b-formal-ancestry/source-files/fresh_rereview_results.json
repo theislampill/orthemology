@@ -1,0 +1,181 @@
+{
+  "checks": [
+    {
+      "check": "reviewed SHA exact in proposal",
+      "detail": "",
+      "pass": true
+    },
+    {
+      "check": "reviewed SHA exact in finite results",
+      "detail": "",
+      "pass": true
+    },
+    {
+      "check": "read-only status",
+      "detail": "",
+      "pass": true
+    },
+    {
+      "check": "no new theorem ID recommended",
+      "detail": "",
+      "pass": true
+    },
+    {
+      "check": "canonical owner T294",
+      "detail": "",
+      "pass": true
+    },
+    {
+      "check": "exact duplicate relation",
+      "detail": "",
+      "pass": true
+    },
+    {
+      "check": "AR-T1 relation classified strict specialization",
+      "detail": "",
+      "pass": true
+    },
+    {
+      "check": "primary family fibre",
+      "detail": "",
+      "pass": true
+    },
+    {
+      "check": "secondary family causal",
+      "detail": "",
+      "pass": true
+    },
+    {
+      "check": "finite checker zero mismatches",
+      "detail": "",
+      "pass": true
+    },
+    {
+      "check": "full codomain guarded check zero mismatches",
+      "detail": "",
+      "pass": true
+    },
+    {
+      "check": "finite case count fixed",
+      "detail": "",
+      "pass": true
+    },
+    {
+      "check": "stronger-reading countermodels present",
+      "detail": "14",
+      "pass": true
+    },
+    {
+      "check": "source-world coordinates all present",
+      "detail": "",
+      "pass": true
+    },
+    {
+      "check": "Lean parser not overclaimed",
+      "detail": "",
+      "pass": true
+    },
+    {
+      "check": "Lean elaborator not overclaimed",
+      "detail": "",
+      "pass": true
+    },
+    {
+      "check": "Lean kernel not overclaimed",
+      "detail": "",
+      "pass": true
+    },
+    {
+      "check": "no sorry/admit/axiom/opaque declarations in static scan",
+      "detail": "{\"sorry_tokens\": 0, \"admit_tokens\": 0, \"axiom_declarations\": 0, \"opaque_declarations\": 0}",
+      "pass": true
+    },
+    {
+      "check": "ancestry registry source hash recorded",
+      "detail": "",
+      "pass": true
+    },
+    {
+      "check": "ancestry recommendation exact",
+      "detail": "",
+      "pass": true
+    },
+    {
+      "check": "report heading: ## 2. Typed repaired statement",
+      "detail": "",
+      "pass": true
+    },
+    {
+      "check": "report heading: ## 4. Interpretation map by intended lane",
+      "detail": "",
+      "pass": true
+    },
+    {
+      "check": "report heading: ## 5. Formal ancestry and prior-art audit",
+      "detail": "",
+      "pass": true
+    },
+    {
+      "check": "report heading: ## 6. Countermodels to stronger readings",
+      "detail": "",
+      "pass": true
+    },
+    {
+      "check": "report heading: ## 7. Dependency and noncircularity audit",
+      "detail": "",
+      "pass": true
+    },
+    {
+      "check": "report heading: ## 8. Source-world firewall",
+      "detail": "",
+      "pass": true
+    },
+    {
+      "check": "report heading: ## 10. Lean-oriented signature and formal status",
+      "detail": "",
+      "pass": true
+    },
+    {
+      "check": "report heading: ## 11. Specification-fidelity audit",
+      "detail": "",
+      "pass": true
+    },
+    {
+      "check": "report heading: ## 12. Cold audit, repair, and fresh rereview",
+      "detail": "",
+      "pass": true
+    },
+    {
+      "check": "report heading: ## 13. Exact theorem-family recommendation",
+      "detail": "",
+      "pass": true
+    },
+    {
+      "check": "explicit no Necessary Being inference",
+      "detail": "",
+      "pass": true
+    },
+    {
+      "check": "explicit no source authority neutrality",
+      "detail": "",
+      "pass": true
+    },
+    {
+      "check": "explicit no controlling archive",
+      "detail": "",
+      "pass": true
+    }
+  ],
+  "external_not_run_gates": [
+    "independent git transport verification",
+    "historical Deep BV checker reproduction",
+    "Lean parsing",
+    "Lean elaboration",
+    "Lean kernel checking",
+    "Lean axiom dependency report",
+    "owner adoption or authoritative theorem-family registration",
+    "actual common-intervention experiment"
+  ],
+  "schema": "bounded-challenger-b-fresh-packet-rereview-v1",
+  "status": "PASS_WITH_EXPLICIT_EXTERNAL_NOT_RUN_GATES"
+}
