@@ -1468,6 +1468,95 @@ class SourcePackageContractTests(unittest.TestCase):
             issues,
         )
 
+    def test_compatibility_report_rejects_duplicate_provenance_record(self):
+        validate = self.api(BUILD, "compatibility_report_table_issues")
+        with tempfile.TemporaryDirectory() as temporary:
+            root = pathlib.Path(temporary)
+            report_target = (
+                root
+                / "docs"
+                / "project-closure"
+                / "r7e-sol"
+                / "R7E-SOL-ARXIV-COMPATIBILITY.md"
+            )
+            report_target.parent.mkdir(parents=True)
+            report = (
+                ROOT
+                / "docs"
+                / "project-closure"
+                / "r7e-sol"
+                / "R7E-SOL-ARXIV-COMPATIBILITY.md"
+            ).read_text(encoding="utf-8")
+            provenance = yaml.safe_load(
+                (ROOT / "docs" / "publication-profile.yaml").read_text(
+                    encoding="utf-8"
+                )
+            )["source_provenance"]
+            record = (
+                "- Authoritative source commit:\n  `"
+                + provenance["source_commit"]
+                + "`"
+            )
+            report_target.write_text(
+                report.replace(record, record + "\n" + record, 1),
+                encoding="utf-8",
+                newline="\n",
+            )
+            shutil.copy2(
+                ROOT / "docs" / "publication-profile.yaml",
+                root / "docs" / "publication-profile.yaml",
+            )
+            shutil.copytree(ROOT / "artifacts", root / "artifacts")
+            issues = validate(root)
+        self.assertTrue(
+            any("source provenance" in issue for issue in issues),
+            issues,
+        )
+
+    def test_compatibility_report_rejects_duplicate_build_command(self):
+        validate = self.api(BUILD, "compatibility_report_table_issues")
+        with tempfile.TemporaryDirectory() as temporary:
+            root = pathlib.Path(temporary)
+            report_target = (
+                root
+                / "docs"
+                / "project-closure"
+                / "r7e-sol"
+                / "R7E-SOL-ARXIV-COMPATIBILITY.md"
+            )
+            report_target.parent.mkdir(parents=True)
+            report = (
+                ROOT
+                / "docs"
+                / "project-closure"
+                / "r7e-sol"
+                / "R7E-SOL-ARXIV-COMPATIBILITY.md"
+            ).read_text(encoding="utf-8")
+            provenance = yaml.safe_load(
+                (ROOT / "docs" / "publication-profile.yaml").read_text(
+                    encoding="utf-8"
+                )
+            )["source_provenance"]
+            command = (
+                "python scripts/build_pdfs.py --source-commit "
+                + provenance["source_commit"]
+            )
+            report_target.write_text(
+                report.replace(command, command + "\n" + command, 1),
+                encoding="utf-8",
+                newline="\n",
+            )
+            shutil.copy2(
+                ROOT / "docs" / "publication-profile.yaml",
+                root / "docs" / "publication-profile.yaml",
+            )
+            shutil.copytree(ROOT / "artifacts", root / "artifacts")
+            issues = validate(root)
+        self.assertTrue(
+            any("source provenance" in issue for issue in issues),
+            issues,
+        )
+
     def test_compatibility_report_rewrite_updates_source_provenance(self):
         rewrite = self.api(BUILD, "rewrite_compatibility_artifact_table")
         validate = self.api(BUILD, "compatibility_report_table_issues")
