@@ -129,3 +129,19 @@ flywheel program so the endpoint-versus-trajectory and object-separation work
 is not rediscovered as a missing source. It changes no milestone status and
 adds no theorem, empirical validation, human-noetic inference, proper-function
 premise, metaphysical bridge, Lean claim, champion, meniscus, or closure.
+
+## V14 independent Codex corpus synthesis
+
+`post-merge-proposals/codex-corpus-synthesis-v14/` records an independent,
+public-safe synthesis over the six-lane intake. It formalizes the existing
+AR-T1 fibre-factorization family, repairs the full-codomain decoder guard,
+proves coordinatewise guard and joint-refinement lemmas, and records twelve
+typed lane instances plus eleven stronger-reading countermodels.
+
+The common result is extensional only. Provenance, authorization, version
+applicability, temporal stability, causal identification, proper function,
+identity, intentional hosting, and source-world truth retain their native
+owners. B3 reaches a preregistration-ready-for-review draft; B1, B2, and B4
+remain blocked, and no experiment has run. The synthesis creates no historical
+identity, novelty, adoption, source-world bridge, champion, meniscus, closure,
+or historical-duration effect.

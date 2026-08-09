@@ -38,6 +38,7 @@ nodes:
   post_bv_frontier: {owner: ../post-merge-proposals/pmr007-deep-bw-cj-semantic-reissue/README.md, authority: SEMANTIC_REISSUE_PROPOSAL_V1_FALSE_PASS_V2_TAUTOLOGY_REPAIRED_TO_BOUNDED_V3_GAP}
   external_challenges: {owner: ../post-merge-proposals/external-challenges/README.md, authority: NONAUTHORITATIVE_CHALLENGE_CUSTODY}
   six_lane_v14_intake: {owner: ../post-merge-proposals/six-lane-v14-intake/README.md, authority: PROPOSAL_CUSTODY_AND_BOUNDED_SOURCE_INTAKE_NO_ADOPTION}
+  codex_corpus_synthesis_v14: {owner: ../post-merge-proposals/codex-corpus-synthesis-v14/README.md, authority: NEW_V14_BOUNDED_SYNTHESIS_EXISTING_COMMON_CORE_NO_ADOPTION}
 edges:
   - from: source_custody
     to: language_version
@@ -312,6 +313,31 @@ edges:
     to: tensor_search
     contribution: Deep Research 22 exposes the unresolved six-representation versus five-arm design and requires trajectory higher-order provenance leakage power custody and identification controls; it does not answer the requested B1-B4 protocols
     nontransfer: a corrected protocol is not an experiment result and representation performance cannot select ontology or metaphysics
+  - kind: supports
+    from: six_lane_v14_intake
+    to: codex_corpus_synthesis_v14
+    contribution: supplies bounded mathematical source noetic empirical and adversarial inputs for typed cross-lane adjudication
+    nontransfer: agreement among lanes is not scientific evidence or owner adoption
+  - kind: supports
+    from: theorem_family_crosswalk
+    to: codex_corpus_synthesis_v14
+    contribution: fixes prior-art fibre factorization as the common invariant AR-T1 as its Boolean nonempty internal specialization and AR8R-T294 as a strict causal specialization
+    nontransfer: shared factorization does not identify native provenance temporal causal proper-function or metaphysical mechanisms
+  - kind: constrains
+    from: codex_corpus_synthesis_v14
+    to: transcendental_bridges
+    contribution: preserves formal actuality mentality personality unity Wisdom Speech revelation and source-world coordinates as separate bridge burdens
+    nontransfer: an extensional common core cannot establish a Necessary Being or revealed identification
+  - kind: supports
+    from: codex_corpus_synthesis_v14
+    to: lean_queue
+    contribution: supplies standalone Lean proofs for attained-image full-codomain pair-guard and joint-refinement obligations
+    nontransfer: standalone elaboration is not historical Lean recovery project integration novelty or adoption
+  - kind: constrains
+    from: codex_corpus_synthesis_v14
+    to: tensor_search
+    contribution: only B3 reaches a preregistration-ready-for-review draft while B1 B2 and B4 remain blocked on construct or implementation maps
+    nontransfer: a protocol draft is not READY_TO_RUN and no experiment has run
 selection_rule: Choose the next lane by unresolved load-bearing dependency and expected cross-lane yield, not by vocabulary overlap.
 closure_rule: No cycle in this graph establishes meniscus, natural closure, or an integrated champion.
 milestone_projection:

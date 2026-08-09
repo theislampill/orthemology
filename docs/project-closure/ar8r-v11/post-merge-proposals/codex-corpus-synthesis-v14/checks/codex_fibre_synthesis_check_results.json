@@ -1,0 +1,25 @@
+{
+  "schema": "ar8r-codex-fibre-synthesis-check-v14",
+  "scope": "FINITE_EXHAUSTIVE_REGRESSION_NOT_GENERAL_PROOF",
+  "full_codomain_cases": 1544,
+  "full_codomain_failures": 0,
+  "pair_guard_cases": 179,
+  "pair_guard_failures": 0,
+  "joint_refinement_cases": 179,
+  "joint_refinement_failures": 0,
+  "empty_off_range_countermodel": {
+    "domain_size": 0,
+    "observation_codomain_size": 1,
+    "target_codomain_size": 0,
+    "fibre_constant": true,
+    "surjective": false,
+    "target_inhabited": false,
+    "full_decoder_exists": false
+  },
+  "status": "PASS",
+  "failure_examples": {
+    "full_codomain": [],
+    "pair_guard": [],
+    "joint_refinement": []
+  }
+}

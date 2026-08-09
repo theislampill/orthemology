@@ -188,6 +188,26 @@ six_lane_v14_intake:
   integrated_champion: NONE
   meniscus: MENISCUS_NOT_REACHED
   natural_closure: NOT_REACHED
+codex_corpus_synthesis_v14:
+  path: post-merge-proposals/codex-corpus-synthesis-v14
+  source_class: NEW_V14_PUBLIC_SAFE_CORPUS_SYNTHESIS
+  typed_instances: 12
+  candidates: 5
+  countermodels: 11
+  empirical_protocol_drafts: 4
+  ready_to_run_count: 0
+  experiments_run: 0
+  common_prior_art_family: PRIOR-ART::FIBRE_FACTORIZATION
+  internal_boolean_nonempty_specialization: AR-T1
+  causal_specialization: AR8R-T294
+  historical_identity: NONE
+  owner_adoption: PENDING
+  repository_scientific_adoption: NONE
+  general_novelty_credit: NOT_GRANTED
+  source_world_bridge_established: false
+  integrated_champion: NONE
+  meniscus: MENISCUS_NOT_REACHED
+  natural_closure: NOT_REACHED
 campaign_state:
   integrated_champion: NONE
   meniscus: MENISCUS_NOT_REACHED

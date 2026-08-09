@@ -1,0 +1,48 @@
+schema: ar8r-codex-residual-guided-hypothesis-ledger-v14
+hypotheses:
+  - id: RGH-01
+    repeated_residual: equal content with unequal applicability
+    weak_hypothesis: a version-recipient-authority coordinate is missing
+    discriminates: [content-only transport, guarded reason transport]
+    test: hold content fixed and vary one applicability coordinate
+    information_gain: partitions semantic preservation from warranted adoption
+    status: TESTABLE_PROPOSAL
+  - id: RGH-02
+    repeated_residual: many reports but no increase in independent support
+    weak_hypothesis: provenance-root rank is the missing invariant
+    discriminates: [independent convergence, copying, data incest]
+    test: compare visible multiplicity under one versus several root DAGs
+    information_gain: distinguishes multiplicity from independence
+    status: GUARDED_APPLICATION_SUPPORTED
+  - id: RGH-03
+    repeated_residual: locally correct closure with later bypass or recurrence
+    weak_hypothesis: model-bound temporal rank is the missing certificate
+    discriminates: [event-local closure, invariant-core entry, general persistence]
+    test: pair identical local records with different successor systems
+    information_gain: isolates temporal structure from event disposition
+    status: GUARDED_APPLICATION_SUPPORTED
+  - id: RGH-04
+    repeated_residual: plural attribute availability without one qualified bearer
+    weak_hypothesis: bearer indexing is load-bearing
+    discriminates: [plural realization, common-bearer model, personal-ground proposal]
+    test: preserve global role availability while separating witnesses
+    information_gain: partitions unity and personality bridges
+    status: COUNTERMODEL_SUPPORTED
+  - id: RGH-05
+    repeated_residual: reliable success without because-of or proper-function support
+    weak_hypothesis: a function-fixing and causal-mediator coordinate is missing
+    discriminates: [accidental success, proper function, truth-connected uptake]
+    test: equalize outcome rates while intervening on reason-sensitive mediation
+    information_gain: separates outcome reliability from normative mechanism
+    status: PREREGISTRATION_DRAFT_ONLY
+  - id: RGH-06
+    repeated_residual: several lanes use fibres but retain incompatible native failure modes
+    weak_hypothesis: the common core is extensional while native mechanisms form an orthogonal guard product
+    discriminates: [genuine reduction, guarded application, vocabulary resemblance]
+    test: vary warrant, provenance, time, causality, or identity while holding the extensional target fixed
+    information_gain: prevents false unification and identifies bridge obligations
+    status: ANTI_UNIFICATION_BOUNDARY_ESTABLISHED
+authority_ceiling:
+  hypotheses_are_historical_evidence: false
+  general_novelty: 0
+  owner_adoption: PENDING

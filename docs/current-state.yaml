@@ -109,9 +109,9 @@ authored:
     meniscus: MENISCUS_NOT_REACHED
     natural_closure: NATURAL_CLOSURE_NOT_REACHED
 derived:
-  source_tree_digest: a6cc30d635552f64bcc3be33d1eb4b5c7b8f67862eaa51b9795b4217e58af041
+  source_tree_digest: ff01c750721b0a734d0847902168301de3d4ae3ff91dc8294bd34fdc0aa4eb83
   source_tree_digest_policy: docs/project-state-inputs.yaml
-  tracked_files: 3515
+  tracked_files: 3538
   decision_ids:
   - '0001'
   - '0002'
@@ -187,6 +187,7 @@ derived:
   validator_scripts:
   - audit_terminology_matching.py
   - derive_reqpath.py
+  - validate_ar8r_codex_corpus_synthesis_v14.py
   - validate_ar8r_external_challenges.py
   - validate_ar8r_reconciliation.py
   - validate_ar8r_recovery.py
@@ -245,7 +246,7 @@ derived:
   - validate_terminology_etymology.py
   - validate_type_token_semantics.py
   - validate_verdict_semantics.py
-  validator_count: 60
+  validator_count: 61
   fixture_counts:
     verdict: 7
     reason: 8

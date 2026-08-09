@@ -1,0 +1,30 @@
+schema: ar8r-codex-meniscus-candidate-verdict-v14
+authority:
+  historical_identity: NONE
+  general_novelty: 0
+  owner_adoption: PENDING
+  repository_scientific_adoption: NONE
+  source_world_bridge_established: false
+  empirical_program_run: false
+verdicts:
+  common_theorem: COMMON_THEOREM_ESTABLISHED
+  common_theorem_identity: PRIOR-ART::FIBRE_FACTORIZATION
+  internal_boolean_nonempty_specialization: AR-T1
+  causal_specialization: AR8R-T294
+  guarded_multi_lane_application: GUARDED_MULTI_LANE_APPLICATION_ESTABLISHED
+  anti_unification: ANTI_UNIFICATION_BOUNDARY_ESTABLISHED
+  new_native_cross_lane_invariant: INSUFFICIENT_EVIDENCE
+  transcendental_ascent: INSUFFICIENT_EVIDENCE
+program_status:
+  integrated_champion: NONE
+  meniscus: MENISCUS_NOT_REACHED
+  natural_closure: NOT_REACHED
+preserved_controls:
+  AR8R-T354: BLOCKED_FORMAL_DEFECT
+  TAC_SAC_HISTORICAL_DEFINITIONS: UNAVAILABLE_UNDEFINED
+remaining_burdens:
+  - establish native, not merely encoded, cross-lane invariants
+  - complete exact theorem ancestry and relation maps
+  - independently review the four empirical preregistration drafts
+  - preserve all formal-to-world and source-to-world bridge obligations
+  - distinguish personal, impersonal, plural-realizer, nominalist, conceptualist, and property-theoretic rivals

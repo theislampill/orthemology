@@ -1,0 +1,27 @@
+{
+  "schema": "ar8r-codex-corpus-synthesis-v14-lean-receipt-v1",
+  "source": "lean/CodexFibreSynthesis.lean",
+  "source_sha256": "73aef790f787ce11c65f4bb080d33b147d210d718862985299b14ce27c4e9efc",
+  "lean_version": "Lean 4.32.2, x86_64-w64-windows-gnu, commit f3b06c705e6c85f5314019d5d3baab0fec5b580c, Release",
+  "command": "lean CodexFibreSynthesis.lean",
+  "standalone_parse_elaboration_kernel": "PASS",
+  "theorems": {
+    "attainedImageFactor_iff_fiberConstant": {
+      "axioms": ["Classical.choice"]
+    },
+    "fullFactor_iff_fiberConstant_and_extension_guard": {
+      "axioms": ["propext", "Classical.choice", "Quot.sound"]
+    },
+    "pairFiberConstant_iff": {
+      "axioms": []
+    },
+    "jointRefinement_fiberConstant_iff": {
+      "axioms": []
+    }
+  },
+  "project_build_run": false,
+  "historical_identity": "NONE",
+  "general_novelty": 0,
+  "repository_scientific_adoption": "NONE",
+  "owner_adoption": "PENDING"
+}

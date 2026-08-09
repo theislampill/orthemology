@@ -39,3 +39,11 @@ source/signature/checker defects, narrowed prior-art relations, corrected
 classical loci, and a blocked tensor arm specification. Nothing in that intake
 is adopted theory, source-world truth, empirical validation, a champion, a
 meniscus, or closure.
+
+The `codex-corpus-synthesis-v14` directory is a repository-authored,
+public-safe analytic proposal over that intake. It records the existing
+fibre-factorization common core, exact off-range and refinement guards,
+theorem-family ancestry, residual-guided hypotheses, four protocol drafts,
+and anti-unification controls. It is not a historical recovery, adopted
+theory, empirical result, source-world bridge, novelty claim, champion,
+meniscus, or closure result.

@@ -1,0 +1,17 @@
+schema: ar8r-codex-countermodels-v14
+countermodels:
+  - {id: CM-01, target: content implies warrant, witness: correct decoded content paired with a false authorization bit, conclusion: extensional correctness does not entail warrant}
+  - {id: CM-02, target: content transport implies applicability, witness: byte-identical reason delivered under an invalidated later version, conclusion: version eligibility is independent}
+  - {id: CM-03, target: multiplicity implies independence, witness: arbitrarily many copied certificates descending from one root, conclusion: copy count does not increase provenance roots}
+  - {id: CM-04, target: synchronization implies identity, witness: two carriers with identical registered profiles and different identity keys, conclusion: profile equality is not numerical identity}
+  - {id: CM-05, target: event closure implies temporal persistence, witness: equal closure records with stable and bypass successor systems, conclusion: local bytes do not determine future stability}
+  - {id: CM-06, target: common intervention implies identification, witness: one intervention available in all models but equal responses across target classes, conclusion: availability is not separation}
+  - {id: CM-07, target: reliable success implies proper function, witness: a broken mechanism succeeds through an environmental bypass, conclusion: success is not because-of success}
+  - {id: CM-08, target: coherent modal role implies numerical identity, witness: isomorphic world fibres with counterpart transport and distinct carriers, conclusion: role coherence is not transworld identity}
+  - {id: CM-09, target: underived role implies one personal bearer, witness: an impersonal abstract order or plural realizers satisfy the thin role profile, conclusion: personality and unity require bridges}
+  - {id: CM-10, target: source record implies world truth, witness: an exact author-relative doctrinal record interpreted in rival worlds, conclusion: source custody is not source-world truth}
+  - {id: CM-11, target: articulability implies mentality or Speech, witness: a finite impersonal semantic algebra realizes all declared tokens, conclusion: formal articulability is not intentional hosting}
+authority:
+  scope: DECLARED_MODELS_ONLY
+  general_novelty: 0
+  owner_adoption: PENDING
