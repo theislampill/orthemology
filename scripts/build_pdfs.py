@@ -372,17 +372,17 @@ def compatibility_report_table_issues(root):
             fields = (
                 (
                     "Authoritative source commit",
-                    r"- Authoritative source commit:\n  `([0-9a-f]{40})`",
+                    r"^- Authoritative source commit:\n  `([0-9a-f]{40})`$",
                     str(provenance["source_commit"]),
                 ),
                 (
                     "Authoritative source tree",
-                    r"- Authoritative source tree:\n  `([0-9a-f]{40})`",
+                    r"^- Authoritative source tree:\n  `([0-9a-f]{40})`$",
                     str(provenance["source_tree"]),
                 ),
                 (
                     "Independently reviewed equivalent source commit",
-                    r"- Independently reviewed equivalent source commit:\n  `([0-9a-f]{40})`",
+                    r"^- Independently reviewed equivalent source commit:\n  `([0-9a-f]{40})`$",
                     str(
                         provenance[
                             "independently_reviewed_equivalent_source_commit"
@@ -391,7 +391,7 @@ def compatibility_report_table_issues(root):
                 ),
                 (
                     "Equivalent source tree",
-                    r"- Equivalent source tree:\n  `([0-9a-f]{40})`",
+                    r"^- Equivalent source tree:\n  `([0-9a-f]{40})`$",
                     str(
                         provenance[
                             "independently_reviewed_equivalent_source_tree"
@@ -400,21 +400,21 @@ def compatibility_report_table_issues(root):
                 ),
                 (
                     "Source epoch",
-                    r"- Source epoch: `([0-9]+)`",
+                    r"^- Source epoch: `([0-9]+)`$",
                     str(provenance["source_date_epoch"]),
                 ),
             )
             for label, pattern, expected in fields:
-                if re.findall(pattern, text) != [expected]:
+                if re.findall(pattern, text, flags=re.M) != [expected]:
                     issues.append(
                         "compatibility report source provenance differs: %s"
                         % label
                     )
             command_pattern = (
-                r"python scripts/build_pdfs[.]py --source-commit "
-                r"([0-9a-f]{40})"
+                r"^python scripts/build_pdfs[.]py --source-commit "
+                r"([0-9a-f]{40})$"
             )
-            if re.findall(command_pattern, text) != [
+            if re.findall(command_pattern, text, flags=re.M) != [
                 str(provenance["source_commit"])
             ]:
                 issues.append(
@@ -489,28 +489,28 @@ def rewrite_compatibility_artifact_table(root):
     )["source_provenance"]
     replacements = (
         (
-            r"(- Authoritative source commit:\n  `)[0-9a-f]{40}(`)",
+            r"^(- Authoritative source commit:\n  `)[0-9a-f]{40}(`)$",
             str(provenance["source_commit"]),
         ),
         (
-            r"(- Authoritative source tree:\n  `)[0-9a-f]{40}(`)",
+            r"^(- Authoritative source tree:\n  `)[0-9a-f]{40}(`)$",
             str(provenance["source_tree"]),
         ),
         (
-            r"(- Independently reviewed equivalent source commit:\n  `)"
-            r"[0-9a-f]{40}(`)",
+            r"^(- Independently reviewed equivalent source commit:\n  `)"
+            r"[0-9a-f]{40}(`)$",
             str(provenance["independently_reviewed_equivalent_source_commit"]),
         ),
         (
-            r"(- Equivalent source tree:\n  `)[0-9a-f]{40}(`)",
+            r"^(- Equivalent source tree:\n  `)[0-9a-f]{40}(`)$",
             str(provenance["independently_reviewed_equivalent_source_tree"]),
         ),
         (
-            r"(- Source epoch: `)[0-9]+(`)",
+            r"^(- Source epoch: `)[0-9]+(`)$",
             str(provenance["source_date_epoch"]),
         ),
         (
-            r"(python scripts/build_pdfs[.]py --source-commit )[0-9a-f]{40}",
+            r"^(python scripts/build_pdfs[.]py --source-commit )[0-9a-f]{40}$",
             str(provenance["source_commit"]),
         ),
     )
@@ -522,6 +522,7 @@ def rewrite_compatibility_artifact_table(root):
             + (match.group(2) if match.lastindex == 2 else ""),
             updated,
             count=1,
+            flags=re.M,
         )
         if replacement_count != 1:
             raise PipelineError(

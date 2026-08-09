@@ -1390,6 +1390,53 @@ class SourcePackageContractTests(unittest.TestCase):
             issues,
         )
 
+    def test_compatibility_report_rejects_prefixed_or_suffixed_provenance(self):
+        validate = self.api(BUILD, "compatibility_report_table_issues")
+        with tempfile.TemporaryDirectory() as temporary:
+            root = pathlib.Path(temporary)
+            report_target = (
+                root
+                / "docs"
+                / "project-closure"
+                / "r7e-sol"
+                / "R7E-SOL-ARXIV-COMPATIBILITY.md"
+            )
+            report_target.parent.mkdir(parents=True)
+            report = (
+                ROOT
+                / "docs"
+                / "project-closure"
+                / "r7e-sol"
+                / "R7E-SOL-ARXIV-COMPATIBILITY.md"
+            ).read_text(encoding="utf-8")
+            report_target.write_text(
+                report.replace(
+                    "- Authoritative source commit:",
+                    "prefix - Authoritative source commit:",
+                    1,
+                ).replace(
+                    "python scripts/build_pdfs.py --source-commit ",
+                    "python scripts/build_pdfs.py --source-commit ",
+                    1,
+                ).replace(
+                    "\n```\n\nThe command builds",
+                    " suffix\n```\n\nThe command builds",
+                    1,
+                ),
+                encoding="utf-8",
+                newline="\n",
+            )
+            shutil.copy2(
+                ROOT / "docs" / "publication-profile.yaml",
+                root / "docs" / "publication-profile.yaml",
+            )
+            shutil.copytree(ROOT / "artifacts", root / "artifacts")
+            issues = validate(root)
+        self.assertTrue(
+            any("source provenance" in issue for issue in issues),
+            issues,
+        )
+
     def test_compatibility_report_rewrite_updates_source_provenance(self):
         rewrite = self.api(BUILD, "rewrite_compatibility_artifact_table")
         validate = self.api(BUILD, "compatibility_report_table_issues")
@@ -1410,6 +1457,19 @@ class SourcePackageContractTests(unittest.TestCase):
                 / "r7e-sol"
                 / "R7E-SOL-ARXIV-COMPATIBILITY.md",
                 report_target,
+            )
+            provenance = yaml.safe_load(
+                (ROOT / "docs" / "publication-profile.yaml").read_text(
+                    encoding="utf-8"
+                )
+            )["source_provenance"]
+            report_target.write_text(
+                report_target.read_text(encoding="utf-8")
+                .replace(provenance["source_commit"], "1" * 40)
+                .replace(provenance["source_tree"], "2" * 40)
+                .replace(str(provenance["source_date_epoch"]), "1234567890"),
+                encoding="utf-8",
+                newline="\n",
             )
             shutil.copy2(
                 ROOT / "docs" / "publication-profile.yaml",
