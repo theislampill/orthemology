@@ -1,0 +1,176 @@
+{
+  "exhaustive_n2_systems": 186624,
+  "minimal_countermodels": {
+    "common_target_action_conflict": {
+      "elig": [
+        [
+          [
+            1
+          ],
+          [
+            0
+          ]
+        ],
+        [
+          [
+            0
+          ],
+          [
+            0
+          ]
+        ]
+      ],
+      "targets": [
+        [
+          0
+        ],
+        [
+          0
+        ]
+      ],
+      "trans": [
+        [
+          [
+            0,
+            0
+          ],
+          [
+            0,
+            0
+          ]
+        ],
+        [
+          [
+            0,
+            0
+          ],
+          [
+            0,
+            0
+          ]
+        ]
+      ]
+    },
+    "fixed_unknown_switching_gap": {
+      "elig": [
+        [
+          [
+            1
+          ],
+          [
+            0
+          ]
+        ],
+        [
+          [
+            0
+          ],
+          [
+            0
+          ]
+        ]
+      ],
+      "policy": [
+        -1,
+        0
+      ],
+      "targets": [
+        [
+          0
+        ],
+        [
+          0
+        ]
+      ],
+      "trans": [
+        [
+          [
+            0,
+            0
+          ],
+          [
+            0,
+            0
+          ]
+        ],
+        [
+          [
+            0,
+            0
+          ],
+          [
+            0,
+            0
+          ]
+        ]
+      ]
+    },
+    "individual_but_not_robust": {
+      "elig": [
+        [
+          [
+            1
+          ],
+          [
+            0
+          ]
+        ],
+        [
+          [
+            0
+          ],
+          [
+            0
+          ]
+        ]
+      ],
+      "robust_W": [],
+      "singleton_W": [
+        [
+          0,
+          1
+        ],
+        [
+          0,
+          1
+        ]
+      ],
+      "targets": [
+        [
+          0
+        ],
+        [
+          0
+        ]
+      ],
+      "trans": [
+        [
+          [
+            0,
+            0
+          ],
+          [
+            0,
+            0
+          ]
+        ],
+        [
+          [
+            0,
+            0
+          ],
+          [
+            0,
+            0
+          ]
+        ]
+      ]
+    }
+  },
+  "pass": true,
+  "positive_witness_pass": true,
+  "reach_and_stay_mismatches": 0,
+  "schema": "pmr007-deep-cq-norm-uncertain-restoration-primary-check-v1-results",
+  "standard_family_narrowing_monotonicity_failures": 0,
+  "viability_mismatches": 0
+}

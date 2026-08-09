@@ -1,0 +1,55 @@
+{
+  "ancestry_disposition": "the decoder criterion is the existing T294/Deep BV fibre-factorization family up to representation vocabulary; no new theorem identity or novelty",
+  "claim_ceiling": "finite exact-target representation sufficiency; no learned-mechanism, tensor-rank, or factor uniqueness result",
+  "countermodel_digest": "929518850dea38e16a8883bebebaab9f8047b2f98e4b51ac8b570a16c0278138",
+  "decoder_cases_exhausted": 9306,
+  "decoder_mismatch_count": 0,
+  "errors": [],
+  "joint_monotonic_failure_count": 0,
+  "joint_representation_cases": 271364,
+  "joint_residual_repairs_found": 61652,
+  "mutants_killed": 7,
+  "mutants_total": 7,
+  "mutations": [
+    {
+      "killed": true,
+      "killer": "fixed-target high-cardinality collision",
+      "mutant": "higher_representation_cardinality_implies_sufficiency"
+    },
+    {
+      "killed": true,
+      "killer": "crossed two-by-two partitions",
+      "mutant": "same_label_histogram_implies_same_information_partition"
+    },
+    {
+      "killed": true,
+      "killer": "exact decoder requires zero cross-target fibre collisions",
+      "mutant": "majority_decoder_counts_as_exact_factorization"
+    },
+    {
+      "killed": true,
+      "killer": "common refinement only splits fibres",
+      "mutant": "adding_a_representation_can_increase_exact_collision_defect"
+    },
+    {
+      "killed": true,
+      "killer": "identical maps with different provenance tags",
+      "mutant": "learned_tag_is_formally_more_informative_than_hand_authored_tag"
+    },
+    {
+      "killed": true,
+      "killer": "separate theorem-family firewall",
+      "mutant": "fibre_factorization_proves_tensor_uniqueness"
+    },
+    {
+      "killed": true,
+      "killer": "fresh brute-force decoder enumeration and joint-refinement checks",
+      "mutant": "prefilled_decoder_count_without_bruteforce"
+    }
+  ],
+  "same_partition_cases": 8890,
+  "same_partition_failure_count": 0,
+  "schema": "spa-r7-check-results-v1",
+  "specialist_local_result": "SPA-R7",
+  "status": "PASS"
+}

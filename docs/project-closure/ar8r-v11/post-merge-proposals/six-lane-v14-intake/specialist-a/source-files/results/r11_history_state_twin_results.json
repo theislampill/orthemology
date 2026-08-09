@@ -1,0 +1,66 @@
+{
+  "adaptive_policies": 32,
+  "adaptive_profile_fibres": 64,
+  "ancestry_disposition": "standard finite history-state/behavioral realization construction and experiment-profile equivalence; no novelty; exact durable ancestry remains a Deep Research 20 burden",
+  "baseline_collision_pairs": 130560,
+  "baseline_counterexample": [
+    0,
+    2
+  ],
+  "baseline_hidden_complete_profile_pairs": 122880,
+  "canonical_active_history_state_bound": 5,
+  "claim_ceiling": "finite horizon-two deterministic interface and conditional model-class closure only; no actual architecture implementation, resource lower bound, infinite-horizon result, or metaphysical truth",
+  "complete_open_loop_profile_fibres": 64,
+  "constant_output_realizer_state_upper_bound_with_external_clock": 1,
+  "constant_profile_digest": "31a664cb69333be0cae1d224384e418e4f032f49d437760d5d8ee953304cebda",
+  "endpoint_groups_with_hidden_complete_profiles": 2,
+  "errors": [],
+  "history_twin_mismatch_count": 0,
+  "history_twin_trace_checks": 32768,
+  "kernel_tables": 1024,
+  "model_digest": "9440d7098dd190f813b1da588642f96eedaea71d7ec7d3c0a70a50b0759859a4",
+  "mutants_killed": 7,
+  "mutants_total": 7,
+  "mutations": [
+    {
+      "killed": true,
+      "killer": "same output history and next intervention require different outputs after different prior interventions",
+      "mutant": "history_state_may_omit_prior_interventions"
+    },
+    {
+      "killed": true,
+      "killer": "selected-policy collision with different complete adaptive profiles",
+      "mutant": "one_selected_nonadaptive_policy_is_complete"
+    },
+    {
+      "killed": true,
+      "killer": "complete open-loop and all adaptive profiles induce the same partition for the frozen causal deterministic contract",
+      "mutant": "complete_open_loop_trajectory_laws_are_weaker_than_adaptive_profiles_in_this_deterministic_contract"
+    },
+    {
+      "killed": true,
+      "killer": "constant-output behavior has a strictly smaller realization",
+      "mutant": "canonical_history_state_bound_is_a_minimum_state_lower_bound"
+    },
+    {
+      "killed": true,
+      "killer": "horizon two is frozen in type and conclusion ceiling",
+      "mutant": "finite_horizon_twin_establishes_infinite_horizon_equivalence"
+    },
+    {
+      "killed": true,
+      "killer": "architecture-class closure is an explicit external premise",
+      "mutant": "constructed_history_state_twin_is_automatically_an_impersonal_architecture_implementation"
+    },
+    {
+      "killed": true,
+      "killer": "fresh table-by-policy trace construction",
+      "mutant": "prefilled_twin_success_count"
+    }
+  ],
+  "open_loop_adaptive_partition_equal": true,
+  "output_only_state_nonrepresentable_tables": 960,
+  "schema": "spa-r11-check-results-v1",
+  "specialist_local_result": "SPA-R11",
+  "status": "PASS"
+}

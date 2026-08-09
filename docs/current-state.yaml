@@ -109,7 +109,7 @@ authored:
     meniscus: MENISCUS_NOT_REACHED
     natural_closure: NATURAL_CLOSURE_NOT_REACHED
 derived:
-  source_tree_digest: f2cfdb24dfea8f44804d5f97129048540b0c86473bd9b76c2a0209e2b580be4a
+  source_tree_digest: de47fe32e4dd90790072d421547f71d73556b6bfde574e0ac39fb110cefeb923
   source_tree_digest_policy: docs/project-state-inputs.yaml
   tracked_files: 3217
   decision_ids:
@@ -190,6 +190,7 @@ derived:
   - validate_ar8r_external_challenges.py
   - validate_ar8r_reconciliation.py
   - validate_ar8r_recovery.py
+  - validate_ar8r_six_lane_v14_intake.py
   - validate_argument_map.py
   - validate_arxiv_source_package.py
   - validate_candidate_provenance.py
@@ -244,7 +245,7 @@ derived:
   - validate_terminology_etymology.py
   - validate_type_token_semantics.py
   - validate_verdict_semantics.py
-  validator_count: 59
+  validator_count: 60
   fixture_counts:
     verdict: 7
     reason: 8
@@ -283,9 +284,9 @@ derived:
     pilot0_v2: e5e65b2f1b38d5767d79103c57afee76a02e09e9fec2fd150a3a680b0fe19c3d
   source_status_summary:
     SECONDARY_VERIFIED: 12
-    COMPILATION_MEDIATED: 2
+    COMPILATION_MEDIATED: 1
     SECONDARY_RECONSTRUCTION: 2
-    PRIMARY_TEXT_EXACT: 5
+    PRIMARY_TEXT_EXACT: 6
     PRIMARY_WORK_THEME: 1
     PRIMARY_LOCUS_EDITION_DEPENDENT: 2
     ORTHEMOLOGICAL_EXTENSION: 1

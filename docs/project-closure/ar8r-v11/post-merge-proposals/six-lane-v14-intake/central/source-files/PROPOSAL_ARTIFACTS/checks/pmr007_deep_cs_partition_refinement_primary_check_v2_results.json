@@ -1,0 +1,17 @@
+{
+  "cases": 3375,
+  "coarsest_floor_failures": 0,
+  "criterion_failures": 0,
+  "empty_discriminator_cases": 0,
+  "nonunique_minimum_cases": 210,
+  "overall": "PASS",
+  "partitions_n4": 15,
+  "postprocessing_barrier_failures": 0,
+  "ui": {
+    "bearer": false,
+    "bearer_plus_uptake": true,
+    "constant": false,
+    "target_oracle": true,
+    "uptake": false
+  }
+}

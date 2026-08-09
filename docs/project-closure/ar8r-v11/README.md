@@ -106,6 +106,20 @@ failed, and preserves a separately labeled standalone Lean repair. Neither
 challenge changes theorem identity, theory, source-world truth, a champion, a
 meniscus, or natural closure.
 
+## V14 six-lane proposal and source intake
+
+`post-merge-proposals/six-lane-v14-intake/` preserves exact public-safe source
+trees for Central Pro Deep CK–CT, Specialist Pro A, and Specialist Pro B. It
+also records bounded independent intake of Deep Research 20–22 without copying
+their unstable report prose. The correction overlays preserve incomplete
+central replay, failed original Lean files, mathematical/signature defects,
+source-locator repairs, prior-art relation narrowing, and the blocked
+six-representation/five-arm protocol. It also records that Deep Research 22
+answered none of Specialist B's requested B1–B4 protocols and that no proposed
+experiment is ready to run. No proposal is adopted and no theorem,
+source-world, empirical, champion, meniscus, closure, or historical-duration
+effect follows.
+
 ## V12 OSM learning-trajectory crosswalk
 
 The Sun et al. OSM study was already present in the current source, decision,

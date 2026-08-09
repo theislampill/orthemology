@@ -1,0 +1,35 @@
+{
+  "availability_vectors": 16,
+  "evidence_partitions": 15,
+  "model_count": 4,
+  "nonconstant_binary_targets": 14,
+  "outcome_vectors": 16,
+  "overall": "PASS",
+  "postprocessing_barrier_failures": 0,
+  "postprocessing_cases": 15652,
+  "proper_domain_totalizations_identifying_target": 32064,
+  "proper_domains_with_underdetermination_witness": 14,
+  "restricted_domain_underdetermination_failures": 0,
+  "schema": "PMR007_DEEP_CT_V2_PRIMARY_CHECK_RESULTS",
+  "successful_refinements_of_conflicted_profiles": 18572,
+  "successful_refinements_with_old_profile_measurable_signal": 0,
+  "target_or_complement_availability_totalizations": 6720,
+  "uip_controls": {
+    "common_bearer": {
+      "identifies_personal_target": false,
+      "signal_is_old_profile_measurable": false
+    },
+    "common_proxy": {
+      "identifies_personal_target": false,
+      "signal_is_old_profile_measurable": true
+    },
+    "target_laden_availability": {
+      "identifies_personal_target": true,
+      "signal_is_old_profile_measurable": false
+    },
+    "target_oracle_outcome": {
+      "identifies_personal_target": true,
+      "signal_is_old_profile_measurable": false
+    }
+  }
+}

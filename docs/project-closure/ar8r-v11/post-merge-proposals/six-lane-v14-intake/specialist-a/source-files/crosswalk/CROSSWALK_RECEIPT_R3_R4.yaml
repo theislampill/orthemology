@@ -1,0 +1,83 @@
+schema: spa-two-round-crosswalk-receipt-v1
+receipt: R3_R4
+authority: PRIVATE_SPECIALIST_RESEARCH_NO_REPOSITORY_ADOPTION
+repository_sha: 9b80f2dfdf73a768ccad6a6ea2f2998c70ebdcf3
+results:
+- id: SPA-R3
+  note_path: rounds/SPA-R3_RESOURCE_QUOTIENT.md
+  note_sha256: cc204f3cc55cb3a4a4a4a0cb9c020ccb2a8d021156bbd265b00d21700a86c850
+  result_path: results/r3_resource_quotient_results.json
+  result_sha256: 36474872dc2ab71b02f7c505c07b6c14ce7efa501e2a00d513acbf3264eb84d5
+  checker_status: PASS
+  mutants_killed: 6
+  mutants_total: 6
+  claim_ceiling: finite registered realizers; no lower bound over unregistered or
+    unrestricted implementation classes
+  ancestry_disposition: quotient normalization and Pareto feasibility are standard
+    constructions; no novelty credit
+- id: SPA-R4
+  note_path: rounds/SPA-R4_OBSERVATION_COBUCHI.md
+  note_sha256: c2b2618d473dd175c7da9ff9af7e6a6db222e20d1f86df423d79fcee897db575
+  result_path: results/r4_observation_cobuchi_results.json
+  result_sha256: 997c598389652e70f39d02ac6cea4e93eead814b987048845f8cdce1bb96ba3d
+  checker_status: PASS
+  mutants_killed: 6
+  mutants_total: 6
+  claim_ceiling: bounded exhaustive evidence for n=2,3 deterministic games plus explicit
+    n=4 countermodel; no adversarial, randomized, or infinite-state extension
+  ancestry_disposition: specialization of the existing finite co-Buchi/game family;
+    no new general fixed-point mechanism or novelty
+formal_status: both executable finite checkers PASS; R4 observation-uniform Lean interface
+  source-only
+assumptions:
+- finite registered realization set
+- common units/compiler/decoder/meter/budget
+- finite deterministic games
+- two common actions
+- stationary strategies
+- frozen observation map
+conclusion_ceiling: registered feasibility and deterministic partial-observation control
+  only; no unregistered lower bound or architecture truth
+ancestry_novelty_disposition: standard quotient normalization/Pareto feasibility;
+  R4 specialization of existing T228/COB dynamic family; novelty 0
+countermodels:
+- state-splitting raw cost noninvariance
+- unattained coordinatewise infimum
+- hidden low-cost realizer
+- shared-observation conflicting actions
+combined_mutation_status:
+  killed: 12
+  total: 12
+lean_checker_status: ObservationUniformity.lean source present; parse/elaboration/kernel/build/axioms
+  NOT_RUN
+dependencies_closed:
+- raw representative cost as invariant
+- coordinatewise-minimum feasibility shortcut
+- statewise perfect-information sufficiency under partial observation
+dependencies_opened: &id001
+- representation-invariant architecture-class lower bounds
+- complete realization registries
+- nondeterministic/adversarial partial-observation extension
+- memoryful strategy extension
+input_requested_from_specialist_b: State any independently defended reason a personal,
+  impersonal, or plural class must satisfy a specific locality/resource/noncopyability
+  lower bound; absent that, no discrimination transfer is available.
+input_requested_from_deep_research: 'DR20: exact ancestry for partial-observation
+  co-Buchi and resource/experiment comparison. DR22: common resource-unit and architecture
+  implementation protocol.'
+central_flywheel_effects:
+- resource comparison node now requires Pareto/feasibility object
+- restoration/dynamic node gains observation-uniformity guard
+- common intervention node cannot use statewise victories as architecture evidence
+remaining_burdens: *id001
+exact_next_atomic_action: derive finite common-knowledge correction radius and provenance-root
+  copy invariant
+firewalls:
+  owner_adoption: NOT_CLAIMED
+  repository_scientific_adoption: NONE
+  historical_identity: NONE
+  novelty: 0
+  source_world_transfer: NOT_ESTABLISHED
+  metaphysical_conclusion: NONE
+  meniscus: NOT_REACHED
+  closure: NOT_REACHED

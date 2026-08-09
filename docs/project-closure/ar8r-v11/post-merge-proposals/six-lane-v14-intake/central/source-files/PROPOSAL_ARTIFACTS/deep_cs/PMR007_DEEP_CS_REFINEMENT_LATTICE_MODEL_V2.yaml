@@ -1,0 +1,28 @@
+schema: PMR007_DEEP_CS_REFINEMENT_LATTICE_MODEL_V2
+identity: PMR-007-WADF-1
+version: V2
+setting:
+  M: finite model set
+  E: frozen current evidence profile
+  Q: target coordinate
+  C: finite independently eligible candidate refinement family
+partition_order:
+  weaker: coarser joint partition with E
+  equivalent: same joint partition with E
+  target_sufficient: joint partition refines the Q partition
+results:
+  discriminator_set: "D = {r in C : ker(E,r) subseteq ker(Q)}"
+  minimal_existence: D nonempty implies at least one partition-minimal element
+  unique_minimum: NOT_GUARANTEED
+  unrestricted_floor: joint partition of E and Q is coarsest target-sufficient refinement
+  target_leakage_warning: unrestricted floor directly uses Q unless independently measured
+  postprocessing_barrier: any r factoring through E leaves the E partition unchanged
+current_ui_surface:
+  neutral_evidence: insufficient
+  common_bearer: does not split U/I
+  intentional_uptake: target coordinate, not an eligible common measurement
+  track_n_source_package: conditional source/world anchor, not neutral evidence
+  eligible_neutral_discriminator_set: EMPTY_AT_CURRENT_REGISTRY
+external_source_relations:
+  Bennett_2301_12987v4: PROOF_SEARCH_HEURISTIC_ONLY
+  balanced_EF1_fPO: PROOF_SEARCH_HEURISTIC_ONLY_AND_COUNTERMODEL_PATTERN_ONLY

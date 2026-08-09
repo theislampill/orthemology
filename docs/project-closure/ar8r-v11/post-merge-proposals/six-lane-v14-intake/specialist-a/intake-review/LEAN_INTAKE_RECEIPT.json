@@ -1,0 +1,47 @@
+{
+  "schema": "ar8r-specialist-a-lean-intake-receipt-v1",
+  "lean_version": "4.32.2",
+  "lake_version": "5.0.0",
+  "mathlib_environment": "existing pinned fable-research Lean project",
+  "originals": [
+    {
+      "path": "source-files/lean/DeletionCriterion.lean",
+      "sha256": "1140cc3f56d743000ebf94ee3c84ecc6727d2a5fa7e4dbc352d0af98675b2caa",
+      "status": "PARSE_FAILED",
+      "error": "line 9: invalid import command; import must be used at the beginning of the file"
+    },
+    {
+      "path": "source-files/lean/ObservationUniformity.lean",
+      "sha256": "555e88086b3c6345331ff5801928940217606bbb02cb0866db56b5b05645f70e",
+      "status": "PARSE_FAILED",
+      "error": "line 10: invalid import command; import must be used at the beginning of the file"
+    }
+  ],
+  "repairs": [
+    {
+      "path": "intake-review/lean/DeletionCriterion.repaired.lean",
+      "sha256": "8825df59e9ba945d61ec5db752087bf677f1d0fdd1f82cdb556b84732c8b2873",
+      "repair": "move import before module documentation; preserve theorem statement and proof",
+      "standalone_parse_elaboration_kernel": "PASS",
+      "axioms": ["propext", "Classical.choice", "Quot.sound"]
+    },
+    {
+      "path": "intake-review/lean/ObservationUniformity.repaired.lean",
+      "sha256": "b46453b7f11f4593e3caf4e96cd2f48ad02af9df345586b720a7e9cf70f73324",
+      "repair": "move import before module documentation and replace unavailable choose tactic with explicit Classical.choose",
+      "standalone_parse_elaboration_kernel": "PASS",
+      "axioms_by_declaration": {
+        "observationStrategy_is_uniform": [],
+        "uniformStrategy_factors_through_observation": ["Classical.choice"]
+      }
+    }
+  ],
+  "scope": "standalone checking only; ObservationUniformity formalizes strategy factorization, not the R4 co-Buchi winning theorem",
+  "project_build": "NOT_RUN_FOR_INTAKE_REPAIRS",
+  "downstream_integration": "NOT_RUN",
+  "repository_scientific_adoption": "NONE",
+  "owner_adoption": "PENDING",
+  "external_review": "OPEN",
+  "general_novelty": 0
+}
+

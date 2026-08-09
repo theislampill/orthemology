@@ -56,6 +56,7 @@ Task 7A navigation:
 
 - `AR8R-ORTHEMOLOGY-MENISCUS-MILESTONE-ARCHITECTURE-V1.md` — verbatim owner-supplied research-program charter, protected as exact bytes;
 - `AR8R-ORTHEMOLOGY-MENISCUS-MILESTONES-V1.yaml` — non-adoptive projection of M1–M18, MEN-1–MEN-9, six dependency phases, five cross-lane flywheels, the formalization loop, artifact/source classes, burdens, and nonclaims.
+- `../post-merge-proposals/six-lane-v14-intake/` — exact custody and fail-closed synchronization for Central Pro, Specialist Pro A/B, and Deep Research 20–22; proposal/source/protocol deltas only, with no adoption or meniscus effect.
 
 V12 OSM program integration:
 

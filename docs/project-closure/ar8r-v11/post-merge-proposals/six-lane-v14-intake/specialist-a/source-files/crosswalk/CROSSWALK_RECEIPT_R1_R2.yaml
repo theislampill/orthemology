@@ -1,0 +1,83 @@
+schema: spa-two-round-crosswalk-receipt-v1
+receipt: R1_R2
+authority: PRIVATE_SPECIALIST_RESEARCH_NO_REPOSITORY_ADOPTION
+repository_sha: 9b80f2dfdf73a768ccad6a6ea2f2998c70ebdcf3
+results:
+- id: SPA-R1
+  note_path: rounds/SPA-R1_COMMON_FACTOR_REGISTRY.md
+  note_sha256: cf0f41c006100f96fde3ad969e81fa480f3fce6fd8e2078e2219a3ee2d4cabce
+  result_path: results/r1_common_factor_registry_results.json
+  result_sha256: 454b03d9fd88e65720ea1ee8eba52678ee12d52feb5e82d1ab3f12a17a5f4095
+  checker_status: PASS
+  mutants_killed: 7
+  mutants_total: 7
+  claim_ceiling: typed finite registry and exhaustive declared-signature fixture;
+    no real architecture implementation; measurable contract unverified
+  ancestry_disposition: registry and coverage synthesis only; no theorem origin or
+    novelty; Deep BV finite factorization remains T294 up to renaming
+- id: SPA-R2
+  note_path: rounds/SPA-R2_DELETION_CLASS_CRITERION.md
+  note_sha256: 862bb52ea810b1a3e9049f11a64ad08ec0561c802376a6373b9230af54527150
+  result_path: results/r2_deletion_criterion_results.json
+  result_sha256: 1a194c0ac6ec65d81d55c66df986c3c7dcf7610a15248442697490536f177259
+  checker_status: PASS
+  mutants_killed: 5
+  mutants_total: 5
+  claim_ceiling: finite exhaustive verification for binary X sizes 1-3 plus general
+    paper proof; not whole architecture identification
+  ancestry_disposition: elementary restriction-injectivity/fibre criterion; no novelty;
+    Deep BV finite factorization remains T294 up to renaming
+formal_status: R1 executable finite fixture PASS; R2 executable exhaustive finite
+  checker PASS; one Lean draft source-only
+assumptions:
+- declared 22-family manifest
+- three constructed architecture signature witnesses
+- eight binary factors
+- finite horizon two
+- R2 finite X/Y and declared hypothesis class H
+conclusion_ceiling: no real architecture implementation; deletion conclusion relative
+  to H; no source/world or metaphysical transfer
+ancestry_novelty_disposition: R1 synthesis/registry only; R2 elementary restriction
+  injectivity and existing fibre family; novelty 0
+countermodels:
+- unrestricted one-cell deletion collision
+- even-parity structural recovery
+- constant-profile structural recovery
+combined_mutation_status:
+  killed: 12
+  total: 12
+lean_checker_status: DeletionCriterion.lean source present; parse/elaboration/kernel/build/axioms
+  NOT_RUN
+dependencies_closed:
+- machine-readable factor registry for declared fixture
+- total coverage over exact declared manifest
+- finite/measurable contract separation
+- unrestricted deletion overclaim
+dependencies_opened: &id001
+- actual architecture implementation maps
+- measurable proof receipts
+- hypothesis-class richness criteria for deletion
+- independent external rereview
+input_requested_from_specialist_b: Supply only independently warranted, target-blind
+  formal predicates for truth/fittingness/source applicability; do not decide them
+  in this lane.
+input_requested_from_deep_research: 'DR20: durable ancestry for restriction/injectivity
+  and common-experiment comparison. DR22: actual intervention-map and measurement
+  protocols.'
+central_flywheel_effects:
+- 'common_intervention_identifiability: fixture infrastructure strengthened, architecture
+  implementation still open'
+- 'post_bv_frontier: Challenger A gaps 1-4 narrowed'
+- 'lean_queue: one source-only stable draft added privately'
+remaining_burdens: *id001
+exact_next_atomic_action: normalize resource comparison on profile quotients and preserve
+  vector Pareto feasibility
+firewalls:
+  owner_adoption: NOT_CLAIMED
+  repository_scientific_adoption: NONE
+  historical_identity: NONE
+  novelty: 0
+  source_world_transfer: NOT_ESTABLISHED
+  metaphysical_conclusion: NONE
+  meniscus: NOT_REACHED
+  closure: NOT_REACHED

@@ -1,0 +1,147 @@
+{
+  "conclusion_ceiling": "rival-partition power within the declared finite manifest only",
+  "guards": [
+    "finite declared model manifest",
+    "target labels used only for evaluation, not intervention/decoder construction",
+    "candidate factors independently operationalized",
+    "pair coverage deduplicated",
+    "class-wide claim limited to manifest"
+  ],
+  "models": {
+    "high_cardinality_zero_gain": {
+      "base_profile": [
+        0,
+        0,
+        1,
+        1
+      ],
+      "candidate_factor": [
+        10,
+        10,
+        20,
+        20
+      ],
+      "collision_gain": 0,
+      "factor_cardinality": 2,
+      "reason": "factor is a relabelling of the base profile and cannot split a base fibre",
+      "target": [
+        0,
+        1,
+        0,
+        1
+      ]
+    },
+    "overlap_requires_deduplication": {
+      "base_profile": [
+        0,
+        0,
+        0,
+        0
+      ],
+      "factor_1": [
+        0,
+        0,
+        0,
+        1
+      ],
+      "factor_1_gain": 2,
+      "factor_2": [
+        0,
+        0,
+        1,
+        1
+      ],
+      "factor_2_gain": 4,
+      "joint_gain": 4,
+      "lesson": "overlapping separated pairs must be counted once",
+      "target": [
+        0,
+        0,
+        1,
+        1
+      ]
+    },
+    "profile_derived_restriction": {
+      "base_profile": [
+        0,
+        0,
+        1,
+        1
+      ],
+      "derived_factor": [
+        0,
+        0,
+        1,
+        1
+      ],
+      "gain": 0,
+      "lesson": "a factor determined by the current profile cannot refine its fibres",
+      "target": [
+        0,
+        1,
+        0,
+        1
+      ]
+    },
+    "target_leak_full_gain_but_ineligible": {
+      "base_collision_count": 4,
+      "base_profile": [
+        0,
+        0,
+        0,
+        0
+      ],
+      "candidate_factor": [
+        0,
+        1,
+        0,
+        1
+      ],
+      "collision_gain": 4,
+      "neutral_eligibility": false,
+      "reason": "candidate is the disputed target coordinate itself",
+      "target": [
+        0,
+        1,
+        0,
+        1
+      ]
+    },
+    "two_weak_factors_jointly_complete": {
+      "base_collision_count": 4,
+      "base_profile": [
+        0,
+        0,
+        0,
+        0
+      ],
+      "factor_1": [
+        0,
+        0,
+        0,
+        1
+      ],
+      "factor_1_gain": 2,
+      "factor_2": [
+        0,
+        0,
+        1,
+        0
+      ],
+      "factor_2_gain": 2,
+      "joint_gain": 4,
+      "joint_residual": 0,
+      "lesson": "weak factors can cover complementary residual collision pairs",
+      "target": [
+        0,
+        0,
+        1,
+        1
+      ]
+    }
+  },
+  "narrow_statement": "candidate-factor gain is the number of current cross-target fibre collisions it separates; residual collisions equal initial collisions minus covered pairs, and set gain is monotone submodular",
+  "schema": "spa-r8-collision-gain-models-v1",
+  "selection_rule": "among eligible target-blind candidates, rank by marginal residual-collision reduction under the frozen manifest and guards; retain negative results that zero out a repair family",
+  "specialist_local_result": "SPA-R8"
+}

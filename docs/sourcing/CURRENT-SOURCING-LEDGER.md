@@ -12,13 +12,14 @@ establishes classification and internal agreement, never source truth.
 |---|---|---|
 | Concrete/ideal-reason attribution chain | [`references/source-status.yaml`](../../references/source-status.yaml) rows `CIR-*` | CIR-1 bibliographic vs CIR-1W wording split; CIR-1W promotion trigger: publisher full-text access |
 | El-Tobgui records | registry rows `ELT-*` | three distinct works |
-| Atharī companion per-claim rows | registry rows `ATH-*` | ATH-3 = `COMPILATION_MEDIATED` (promotion trigger: direct edition access; doctrine unchanged) |
+| Atharī companion per-claim rows | registry rows `ATH-*` | ATH-3 = `PRIMARY_TEXT_EXACT` for the directly checked vol. 12 digital rendering at pp. 98 and 409; printed-edition mapping remains open |
 | Sequential latent-variable related work | registry rows `LAT-*` | bounded by Decision 0015 |
 | Project's own formal extension | registry rows `EXT-*` | no external source claimed |
 | Qurʾānic loci | [`references/quran-loci.yaml`](../../references/quran-loci.yaml) | 29 loci, primary-verified (R3), own CI validator |
 | Academic corpus (manuscript related work etc.) | [`R3-SOURCING-LEDGER.md`](R3-SOURCING-LEDGER.md) | R3 regrading overlay over the R2 baseline; where R3 names a row, R3's status is current |
 | Fable round-1 prior-art correspondences | [`AR8R-FABLE-R1-SOURCING.md`](../project-closure/ar8r-v11/fable-research/AR8R-FABLE-R1-SOURCING.md) | all rows UNVERIFIED; added by the post-review correction; relationships, never source truth |
 | PMR-007 Deep BF–BK proposal sourcing | [`PMR007-DEEP-BF-BK-SOURCING-CORRECTION.md`](../project-closure/ar8r-v11/post-merge-proposals/PMR007-DEEP-BF-BK-SOURCING-CORRECTION.md) | proposal-only source classification; al-ʿUjayrī row remains UNVERIFIED; no theorem, source-world, novelty, adoption, or meniscus credit |
+| Six-lane V14 intake sourcing | [`AR8R-SIX-LANE-V14-SOURCING-CORRECTION.md`](../project-closure/ar8r-v11/post-merge-proposals/six-lane-v14-intake/external-evidence/AR8R-SIX-LANE-V14-SOURCING-CORRECTION.md) | bounded primary-locus and prior-art relation corrections; no theorem, source-world, novelty, adoption, empirical, or meniscus credit |
 | Companion philosophical + classical layer | [`companion/sourcing/R3-COMPANION-SOURCING-LEDGER.md`](../../companion/sourcing/R3-COMPANION-SOURCING-LEDGER.md) | same overlay rule; inference-boundary labels retained there |
 
 **Historical baselines (statuses superseded where regraded):**
@@ -30,6 +31,7 @@ The main ledger's later additive rows 31–38 remain readable there; rows
 36–38 are additionally governed by registry family `LAT-*`.
 
 **Standing research triggers (open, ordinary research — not owner-only):**
-CIR-1W publisher full-text access; ATH-3 direct edition access (RR-1
-pagination residual); RR-2 Evans 1998 p. 94; RR-3 Taymiyyan *Darʾ*
+CIR-1W publisher full-text access; ATH-3 printed-edition pagination mapping
+after direct digital-text verification at vol. 12 pp. 98 and 409 (RR-1 residual);
+RR-2 Evans 1998 p. 94; RR-3 Taymiyyan *Darʾ*
 primary-locus queue.

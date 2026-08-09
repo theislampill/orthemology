@@ -1,0 +1,18 @@
+{
+  "deletion_witness_counts": {
+    "because": 256,
+    "de_se": 256,
+    "fit": 256,
+    "truth": 240,
+    "uptake": 256
+  },
+  "intervention_checks": 48,
+  "intervention_failures": 0,
+  "pass": true,
+  "perfect_installed_success_on_false_targets": 240,
+  "personal_impersonal_twin_rows": 256,
+  "schema": "pmr007-deep-cm-objective-fitted-function-primary-check-v1-results",
+  "scope": "finite_deterministic_external_truth_and_fit_relations",
+  "truth_fit_conformance_rows": 256,
+  "truth_installed_policy_triples": 4096
+}

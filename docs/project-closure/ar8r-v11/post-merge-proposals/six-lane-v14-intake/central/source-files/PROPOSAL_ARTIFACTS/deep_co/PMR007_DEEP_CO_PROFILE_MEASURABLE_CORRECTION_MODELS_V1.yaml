@@ -1,0 +1,41 @@
+schema: pmr007-deep-co-profile-measurable-correction-models-v1
+identity: PMR-007-PMCI-1
+status: POST_MERGE_RESEARCH_CANDIDATE
+frozen_architecture_pair:
+  models: [U_unified_personal, I_impersonal_powers]
+  complete_neutral_profile_law: E0
+  target: {U_unified_personal: PERSONAL, I_impersonal_powers: IMPERSONAL}
+correction_family:
+  deterministic:
+    - scalar_summary
+    - vector_summary
+    - quotient
+    - normalization
+    - correction_parameter
+    - deterministic_representation
+  stochastic:
+    - common_randomized_postprocessing
+    - common_markov_channel
+  eligibility_guards:
+    - same_input_profile_space
+    - same_kernel_or_function
+    - target_independent
+    - semantics_preserving_output_comparison
+    - no_architecture_specific_side_channel
+excluded_from_family:
+  - genuinely_new_intervention
+  - additional_sensor
+  - independently_warranted_source_world_anchor
+  - independently_defended_model_class_restriction
+  - target_oracle
+controls:
+  target_leaking_function: can_split_but_ineligible
+  architecture_specific_channel: can_split_but_not_common
+  common_bearer_anchor: splits_plural_not_UI
+  track_n_anchor: conditional_nonprofile_evidence
+  new_internal_intervention: changed_experiment_not_postprocessing
+nonclaims:
+  - no claim that all future evidence factors through E0
+  - no claim of metaphysical equivalence
+  - no infinite_experiment theorem
+  - no bar on independently justified new measurements

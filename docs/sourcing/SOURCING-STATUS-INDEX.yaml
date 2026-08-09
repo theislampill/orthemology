@@ -28,6 +28,12 @@ surfaces:
     PMR-007 Deep BF-BK proposal-only scholarly attributions and repository
     ancestry; classification and relationship only, never theorem truth,
     source-world truth, novelty, adoption, or meniscus credit
+- path: docs/project-closure/ar8r-v11/post-merge-proposals/six-lane-v14-intake/external-evidence/AR8R-SIX-LANE-V14-SOURCING-CORRECTION.md
+  classification: current-authoritative
+  scope: >
+    Six-lane V14 bounded source-locator and prior-art relations only; never
+    theorem truth, source-world truth, empirical validation, novelty,
+    adoption, champion, meniscus, or closure credit
 - path: docs/sourcing/R3-SOURCING-LEDGER.md
   classification: overlay
   base: docs/sourcing/SOURCING-LEDGER.md
@@ -55,10 +61,11 @@ current_status_by_claim_area:
   quranic_loci: references/quran-loci.yaml (29 loci, primary-verified R3)
   academic_corpus: docs/sourcing/R3-SOURCING-LEDGER.md regraded rows over the R2 baseline
   pmr007_deep_bf_bk_proposal: docs/project-closure/ar8r-v11/post-merge-proposals/PMR007-DEEP-BF-BK-SOURCING-CORRECTION.md
+  six_lane_v14_intake: docs/project-closure/ar8r-v11/post-merge-proposals/six-lane-v14-intake/external-evidence/AR8R-SIX-LANE-V14-SOURCING-CORRECTION.md
   companion_philosophical_and_classical: companion/sourcing/R3-COMPANION-SOURCING-LEDGER.md over the R2 companion baseline
 standing_research_triggers:
   - CIR-1W promotion — direct publisher full-text access (registry row)
-  - ATH-3 promotion — direct edition or authoritative full-text access (registry row; RR-1 pagination residual)
+  - ATH-3 printed-edition pagination mapping after direct digital-text verification at vol. 12 pp. 98 and 409 (RR-1 residual)
   - RR-1 classical edition-level paginations (six loci)
   - RR-2 Evans 1998 p.94 direct verification
   - RR-3 Taymiyyan Dar' primary-locus queue

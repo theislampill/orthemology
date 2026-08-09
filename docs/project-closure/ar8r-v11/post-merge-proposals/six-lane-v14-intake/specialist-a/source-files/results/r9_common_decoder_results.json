@@ -1,0 +1,54 @@
+{
+  "ancestry_disposition": "exact specialization of the existing finite fibre-factorization criterion on a tagged disjoint union; no new theorem identity or novelty",
+  "architecture_permutation_checks": 24576,
+  "architecture_permutation_failure_count": 0,
+  "claim_ceiling": "finite common decoder for the frozen target; no actual architecture implementation, source-world transfer, or metaphysical identification",
+  "criterion_mismatch_count": 0,
+  "declared_signature_cases": 4096,
+  "errors": [],
+  "local_decoder_but_no_common_decoder_count": 1476,
+  "model_digest": "3da05d9ccb5a8eb2616fec16d83937dbe55521349ded524f6318eec8a9d735be",
+  "mutants_killed": 7,
+  "mutants_total": 7,
+  "mutations": [
+    {
+      "killed": true,
+      "killer": "cross-architecture same-observation conflicting-target witness",
+      "mutant": "architecture_specific_decoders_imply_one_common_decoder"
+    },
+    {
+      "killed": true,
+      "killer": "histograms discard observation-target alignment",
+      "mutant": "same_target_histograms_imply_common_decoder"
+    },
+    {
+      "killed": true,
+      "killer": "decoder signature is d(observation), not d(architecture, observation)",
+      "mutant": "decoder_may_read_architecture_tag"
+    },
+    {
+      "killed": true,
+      "killer": "coproduct-domain fibre crosses architecture tags",
+      "mutant": "within_architecture_fibre_constancy_is_enough"
+    },
+    {
+      "killed": true,
+      "killer": "exhaustive architecture-order permutations",
+      "mutant": "architecture_order_changes_common_decodability"
+    },
+    {
+      "killed": true,
+      "killer": "fresh enumeration of all three-architecture two-point binary maps",
+      "mutant": "prefilled_common_decoder_counter"
+    },
+    {
+      "killed": true,
+      "killer": "the decoder reconstructs only the frozen target, not metaphysical architecture or source truth",
+      "mutant": "common_decoder_proves_architecture_coordinate"
+    }
+  ],
+  "same_target_histogram_but_no_common_decoder_count": 496,
+  "schema": "spa-r9-check-results-v1",
+  "specialist_local_result": "SPA-R9",
+  "status": "PASS"
+}

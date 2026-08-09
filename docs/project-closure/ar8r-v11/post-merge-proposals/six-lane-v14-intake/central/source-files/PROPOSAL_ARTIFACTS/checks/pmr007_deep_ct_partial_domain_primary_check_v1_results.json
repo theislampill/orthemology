@@ -1,0 +1,314 @@
+{
+  "counterexamples_found": 8,
+  "disposition": "FAIL_COUNTEREXAMPLE_FOUND",
+  "first_counterexamples": [
+    {
+      "availability": [
+        0,
+        0,
+        0,
+        1
+      ],
+      "target": [
+        0,
+        0,
+        0,
+        1
+      ],
+      "totalized": [
+        [
+          0,
+          -1
+        ],
+        [
+          0,
+          -1
+        ],
+        [
+          0,
+          -1
+        ],
+        [
+          1,
+          0
+        ]
+      ],
+      "values": [
+        0,
+        0,
+        0,
+        0
+      ]
+    },
+    {
+      "availability": [
+        0,
+        0,
+        0,
+        1
+      ],
+      "target": [
+        0,
+        0,
+        0,
+        1
+      ],
+      "totalized": [
+        [
+          0,
+          -1
+        ],
+        [
+          0,
+          -1
+        ],
+        [
+          0,
+          -1
+        ],
+        [
+          1,
+          1
+        ]
+      ],
+      "values": [
+        0,
+        0,
+        0,
+        1
+      ]
+    },
+    {
+      "availability": [
+        0,
+        0,
+        0,
+        1
+      ],
+      "target": [
+        0,
+        0,
+        0,
+        1
+      ],
+      "totalized": [
+        [
+          0,
+          -1
+        ],
+        [
+          0,
+          -1
+        ],
+        [
+          0,
+          -1
+        ],
+        [
+          1,
+          0
+        ]
+      ],
+      "values": [
+        0,
+        0,
+        1,
+        0
+      ]
+    },
+    {
+      "availability": [
+        0,
+        0,
+        0,
+        1
+      ],
+      "target": [
+        0,
+        0,
+        0,
+        1
+      ],
+      "totalized": [
+        [
+          0,
+          -1
+        ],
+        [
+          0,
+          -1
+        ],
+        [
+          0,
+          -1
+        ],
+        [
+          1,
+          1
+        ]
+      ],
+      "values": [
+        0,
+        0,
+        1,
+        1
+      ]
+    },
+    {
+      "availability": [
+        0,
+        0,
+        0,
+        1
+      ],
+      "target": [
+        0,
+        0,
+        0,
+        1
+      ],
+      "totalized": [
+        [
+          0,
+          -1
+        ],
+        [
+          0,
+          -1
+        ],
+        [
+          0,
+          -1
+        ],
+        [
+          1,
+          0
+        ]
+      ],
+      "values": [
+        0,
+        1,
+        0,
+        0
+      ]
+    },
+    {
+      "availability": [
+        0,
+        0,
+        0,
+        1
+      ],
+      "target": [
+        0,
+        0,
+        0,
+        1
+      ],
+      "totalized": [
+        [
+          0,
+          -1
+        ],
+        [
+          0,
+          -1
+        ],
+        [
+          0,
+          -1
+        ],
+        [
+          1,
+          1
+        ]
+      ],
+      "values": [
+        0,
+        1,
+        0,
+        1
+      ]
+    },
+    {
+      "availability": [
+        0,
+        0,
+        0,
+        1
+      ],
+      "target": [
+        0,
+        0,
+        0,
+        1
+      ],
+      "totalized": [
+        [
+          0,
+          -1
+        ],
+        [
+          0,
+          -1
+        ],
+        [
+          0,
+          -1
+        ],
+        [
+          1,
+          0
+        ]
+      ],
+      "values": [
+        0,
+        1,
+        1,
+        0
+      ]
+    },
+    {
+      "availability": [
+        0,
+        0,
+        0,
+        1
+      ],
+      "target": [
+        0,
+        0,
+        0,
+        1
+      ],
+      "totalized": [
+        [
+          0,
+          -1
+        ],
+        [
+          0,
+          -1
+        ],
+        [
+          0,
+          -1
+        ],
+        [
+          1,
+          1
+        ]
+      ],
+      "values": [
+        0,
+        1,
+        1,
+        1
+      ]
+    }
+  ],
+  "models": 4,
+  "proper_domain_assignments_examined_lower_bound": 1,
+  "schema": "PMR007_DEEP_CT_V1_PRIMARY_CHECK_RESULTS",
+  "v1_claim": "proper partial domain cannot identify target even after bottom totalization"
+}

@@ -1,0 +1,10 @@
+{
+  "exhaustive_two_state_systems": 4096,
+  "first_monotonicity_failure": [],
+  "fully_guarded_rows": 1,
+  "guard_rows": 1024,
+  "monotonicity_failures": 0,
+  "neutral_profile_source_parity_collision": true,
+  "overall": "PASS",
+  "single_guard_deletion_witnesses": 10
+}

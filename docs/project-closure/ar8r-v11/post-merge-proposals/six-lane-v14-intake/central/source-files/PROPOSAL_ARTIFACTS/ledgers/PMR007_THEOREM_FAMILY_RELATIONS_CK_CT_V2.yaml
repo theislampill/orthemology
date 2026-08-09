@@ -1,0 +1,52 @@
+schema: pmr007-theorem-family-relations-ck-ct-v2
+repository_authority: 9b80f2dfdf73a768ccad6a6ea2f2998c70ebdcf3
+relations:
+- identity: PMR-007-SFWA-1
+  family: SOURCE_FORMAL_WORLD_GUARD_CONJUNCTION
+  relation: APPLICATION_AND_TYPED_CROSSWALK
+  novelty: 0
+- identity: PMR-007-MABF-1
+  family: FINITE_PARTITION_REFINEMENT_AND_SET_COVER
+  relation: APPLICATION
+  novelty: 0
+- identity: PMR-007-OFFI-1
+  family: PROPER_FUNCTION_COUNTERMODEL_TAXONOMY
+  relation: SCOPED_COUNTERMODEL_ARCHITECTURE
+  novelty: 0
+- identity: PMR-007-AIAC-1
+  family: FINITE_SET_COVER_WITH_CONTEXT_ELIGIBILITY
+  relation: APPLICATION
+  novelty: 0
+- identity: PMR-007-PMCI-1
+  family: COMMON_PUSHFORWARD_DATA_PROCESSING
+  relation: STANDARD_SPECIALIZATION
+  novelty: 0
+- identity: PMR-007-CUIE-1
+  family: FINITE_CONTROLLED_EXPERIMENT_PROFILE_EQUIVALENCE
+  relation: SCOPED_APPLICATION; SPECIALIST_A_R11_CORROBORATION
+  novelty: 0
+- identity: PMR-007-NURV-1
+  family: FINITE_PERFECT_INFORMATION_COBUCHI_FIXED_POINT
+  relation: STANDARD_CORE_WITH_TARGET_FAMILY_APPLICATION
+  novelty: 0
+- identity: PMR-007-FSRA-1
+  family: SOURCE_GUARDED_TARGET_FAMILY_RESTRICTION
+  relation: TRACK_N_APPLICATION
+  novelty: 0
+- identity: PMR-007-WADF-1
+  family: FINITE_PARTITION_LATTICE_MINIMAL_DISCRIMINATORS
+  relation: STANDARD_CORE_WITH_ELIGIBILITY_APPLICATION
+  novelty: 0
+- identity: PMR-007-PCDF-1
+  family: PARTIAL_MAP_TOTALIZATION_AND_FIBRE_REFINEMENT
+  relation: STANDARD_CORE_WITH_CAPABILITY_ELIGIBILITY_APPLICATION
+  novelty: 0
+deduplication_imports:
+  Specialist_A_new_origins: 0
+  Specialist_B_new_origins: 0
+  Deep_Research_new_origins: 0
+unresolved_exact_ancestry:
+- measurable common-intervention application layer
+- partial-observation robust switching restoration
+- finite graph holonomy fixed-section locator
+- authenticated provenance-root synthesis

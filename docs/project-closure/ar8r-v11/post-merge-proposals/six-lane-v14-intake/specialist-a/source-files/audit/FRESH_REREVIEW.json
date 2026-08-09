@@ -1,0 +1,147 @@
+{
+  "checks": [
+    {
+      "check": "r1_typed_totality_and_target_blind_surface",
+      "detail": {
+        "architecture_maps_total": true,
+        "factor_count": 8,
+        "manifest_count": 22,
+        "product_size": 256
+      },
+      "pass": true
+    },
+    {
+      "check": "r2_restriction_injectivity_and_structural_exception",
+      "detail": {
+        "cases": 2106,
+        "mismatches": 0,
+        "parity_two_cell_identifiable": true,
+        "unrestricted_proper_deletions_noninjective": 11
+      },
+      "pass": true
+    },
+    {
+      "check": "r3_resource_quotient_and_pareto_correction",
+      "detail": {
+        "pareto_budget_checks": 1485,
+        "scalar_permutation_checks": 93,
+        "unattained_coordinatewise_infimum": [
+          1,
+          1
+        ]
+      },
+      "pass": true
+    },
+    {
+      "check": "r4_observation_uniformity_and_statewise_countermodel",
+      "detail": {
+        "explicit_individual_win": true,
+        "explicit_uniform_loss": true,
+        "small_game_cases": 384,
+        "statewise_false_sufficiency_cases": 8
+      },
+      "pass": true
+    },
+    {
+      "check": "r5_common_knowledge_union_radius",
+      "detail": {
+        "cases": 15034,
+        "first_order_not_common_knowledge": 588,
+        "max_radius": 3,
+        "radius_failures": 0
+      },
+      "pass": true
+    },
+    {
+      "check": "r6_provenance_root_nonmultiplicity",
+      "detail": {
+        "acquisition_delta": [
+          "r2"
+        ],
+        "episodes": 101,
+        "global_roots_after_100_copies": 1,
+        "sync_roots": [
+          "r0",
+          "r1"
+        ]
+      },
+      "pass": true
+    },
+    {
+      "check": "r7_representation_fibre_defect",
+      "detail": {
+        "decoder_cases": 340,
+        "decoder_failures": 0,
+        "joint_cases": 4680,
+        "joint_monotonicity_failures": 0
+      },
+      "pass": true
+    },
+    {
+      "check": "r8_residual_collision_coverage",
+      "detail": {
+        "failures": 0,
+        "identity_checks": 262144,
+        "signatures": 32768,
+        "submodularity_checks": 884736
+      },
+      "pass": true
+    },
+    {
+      "check": "r9_cross_architecture_common_decoder",
+      "detail": {
+        "cases": 4096,
+        "criterion_mismatches": 0,
+        "local_decoders_without_common": 1476
+      },
+      "pass": true
+    },
+    {
+      "check": "r10_minimum_collision_cover",
+      "detail": {
+        "deletion_mismatches": 0,
+        "greedy": 3,
+        "minimum_mismatches": 0,
+        "no_cover_mismatches": 0,
+        "optimum": 2,
+        "set_systems": 74954
+      },
+      "pass": true
+    },
+    {
+      "check": "r11_finite_history_state_twin",
+      "detail": {
+        "adaptive_fibres": 64,
+        "mismatches": 0,
+        "open_loop_fibres": 64,
+        "output_only_failures": 960,
+        "trace_checks": 32768
+      },
+      "pass": true
+    },
+    {
+      "check": "r12_predictive_history_quotient",
+      "detail": {
+        "compressible": 256,
+        "deletion_merges": 256,
+        "minimality_mismatches": 0,
+        "profile_invariance_failures": 0,
+        "tables": 1024
+      },
+      "pass": true
+    },
+    {
+      "check": "result_status_and_novelty_ceiling",
+      "detail": {
+        "result_files": 12
+      },
+      "pass": true
+    }
+  ],
+  "claim_ceiling": "procedurally distinct local rereview; bounded mathematical/executable evidence only, not external review, architecture implementation, Lean verification, adoption, novelty, or metaphysical truth",
+  "errors": [],
+  "generation_checker_imports": false,
+  "review_method": "independent implementations and small exhaustive spaces; no imports from checks/check_r*.py and no trust in prefilled counters",
+  "schema": "spa-fresh-rereview-v1",
+  "status": "PASS"
+}

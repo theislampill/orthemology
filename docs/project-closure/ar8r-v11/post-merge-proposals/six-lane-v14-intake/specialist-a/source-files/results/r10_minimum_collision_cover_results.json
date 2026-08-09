@@ -1,0 +1,57 @@
+{
+  "ancestry_disposition": "standard finite set-cover/coverage-function specialization over target-collision pairs; no new theorem identity or novelty",
+  "claim_ceiling": "minimum eligible factor cover or bounded no-cover on the frozen manifest only; no empirical implementation or metaphysical impossibility",
+  "cover_cases": 57164,
+  "deletion_private_witness_checks": 1022608,
+  "deletion_private_witness_mismatch_count": 0,
+  "errors": [],
+  "expected_set_system_cases": 74954,
+  "impossibility_mismatch_count": 0,
+  "minimum_cover_mismatch_count": 0,
+  "model_digest": "0b181af9c8e2e9ff40db1ce7ff09184448ec153424ad4eed29487041099f307e",
+  "mutants_killed": 7,
+  "mutants_total": 7,
+  "mutations": [
+    {
+      "killed": true,
+      "killer": "six-element deterministic greedy countermodel",
+      "mutant": "greedy_max_gain_is_always_minimum_cover"
+    },
+    {
+      "killed": true,
+      "killer": "exhaustive redundant positive-gain factors",
+      "mutant": "positive_individual_gain_makes_factor_indispensable"
+    },
+    {
+      "killed": true,
+      "killer": "each weak factor leaves residual architecture collisions",
+      "mutant": "one_pairwise_separation_identifies_three_way_class"
+    },
+    {
+      "killed": true,
+      "killer": "eligibility is frozen before gain optimization",
+      "mutant": "target_leak_may_enter_optimization_because_it_covers_all"
+    },
+    {
+      "killed": true,
+      "killer": "exhaustive cover-removal/private-witness equivalence",
+      "mutant": "factor_deletion_requires_no_private_collision_witness"
+    },
+    {
+      "killed": true,
+      "killer": "no-cover conclusion is relative to the frozen eligible factor family and model manifest",
+      "mutant": "failure_of_declared_factor_cover_proves_metaphysical_impossibility"
+    },
+    {
+      "killed": true,
+      "killer": "fresh exhaustive set-system enumeration and independent dynamic program",
+      "mutant": "prefilled_minimum_cover_counts"
+    }
+  ],
+  "no_cover_cases": 17790,
+  "positive_gain_redundant_cases": 55770,
+  "schema": "spa-r10-check-results-v1",
+  "set_system_cases": 74954,
+  "specialist_local_result": "SPA-R10",
+  "status": "PASS"
+}

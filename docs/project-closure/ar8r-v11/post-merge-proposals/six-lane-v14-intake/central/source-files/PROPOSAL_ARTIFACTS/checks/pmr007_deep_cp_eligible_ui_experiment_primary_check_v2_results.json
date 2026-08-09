@@ -1,0 +1,18 @@
+{
+  "eligible_profile_mismatches": 0,
+  "equal_profile_target_variation_rows": 74880,
+  "future_operationalization_not_declared_impossible": true,
+  "ineligible_candidate_operations": 5,
+  "ineligible_operations_currently_blocked": 5,
+  "interventions": 8,
+  "model_schema": "pmr007-deep-cp-eligible-ui-experiment-registry-v2",
+  "one_step_rows": 1024,
+  "one_step_table_sha256": "e2ad9e9834dd4f969618f14c56e35f5d476328d78414e01c7b970b4696846f9c",
+  "open_loop_words": 585,
+  "pass": true,
+  "profile_rows_per_architecture": 74880,
+  "schema": "pmr007-deep-cp-eligible-ui-experiment-primary-check-v2-results",
+  "scope": "formal_common_kernel_plus_finite_regression",
+  "states": 128,
+  "structural_all_finite_policy_claim_present": true
+}

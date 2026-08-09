@@ -1,0 +1,69 @@
+schema: pmr007-evidence-use-register-ck-ct-v2
+repository_authority: 9b80f2dfdf73a768ccad6a6ea2f2998c70ebdcf3
+local_exact_inputs:
+- artifact: current repository ZIP
+  sha256: 78d049d4711d2b0cffe7cb8071d01d22b99a00126196caa5e2c4be4826eb100c
+  use: repository authority/custody
+- artifact: coordination README
+  sha256: de4c6466335f2623f761da162b62030a0d2d247887d697bfa8157240bf86e8b0
+  use: six-lane contract
+central_executable_evidence:
+- round: CK
+  theorem_sha256: 7f9a396c688925f134427ee3d6cf10acb1528f79293eb77d39fe3bf6ba12bcdd
+  status: ADMITTED_POST_MERGE_SCOPED_RESULT
+- round: CL
+  theorem_sha256: cf4f9cbd8eee325bf61b7806bd0bbb62a924abd628519b139882b6b88b82e3eb
+  status: ADMITTED_POST_MERGE_SCOPED_RESULT
+- round: CM
+  theorem_sha256: 869f8f5606c92f0a3697863af3886163372571a3f01c3c9a0954b31e2385a984
+  status: ADMITTED_POST_MERGE_SCOPED_RESULT
+- round: CN
+  theorem_sha256: 8ff04974e7c92d5db2293b111f924ca9676ff9dac8cf9e04215bb2bae4655057
+  status: ADMITTED_POST_MERGE_SCOPED_RESULT
+- round: CO
+  theorem_sha256: ac6a657e8da2baf3c18b6c40e37ddb6e0bdfcb94756b89b64c423956737dc1c3
+  status: ADMITTED_POST_MERGE_SCOPED_RESULT
+- round: CP
+  theorem_sha256: 1328301e0bbe0d8483c701a239c428a4ea2e49bad89f0b3592364b5b66a2b8b5
+  status: ADMITTED_POST_MERGE_SCOPED_CENTRAL_EXPERIMENT_REGISTRY_NEGATIVE_RESULT
+- round: CQ
+  theorem_sha256: f028dec8aec01a9f548e42daec343f487c35d024e3ea4a76970502dc8d8504b6
+  status: ADMITTED_POST_MERGE_SCOPED_CENTRAL_PROPER_FUNCTION_RESTORATION_RESULT
+- round: CR
+  theorem_sha256: e6ea1537ad042e498bf74bed188f7baaf7dce02eb140d94e338a151a62e801e2
+  status: ADMITTED_POST_MERGE_SCOPED_CENTRAL_SOURCE_RESTORATION_RESULT
+- round: CS
+  theorem_sha256: 6377e19aba199aa17a3458cbe02d8c8b576ccf734949f4253d3a02394528568c
+  status: ADMITTED_POST_MERGE_SCOPED_CENTRAL_RESIDUAL_SELECTION_RESULT
+- round: CT
+  theorem_sha256: 057451541f01369e501ee18470dc11780383819ea8efce03e276f3ad70d8b26e
+  status: ADMITTED_POST_MERGE_SCOPED_CENTRAL_EXPERIMENT_DOMAIN_RESULT
+external_semantic_imports:
+- lane: Specialist Pro A formal/computational
+  artifact: AR8R_SPECIALIST_A_PRIVATE_CHECKPOINT_9b80f2d.zip
+  hash_status: c05ce4ce5762bb025e9436632963a7adf63137a62330be60d19afb4f2f40801b
+  use: CORROBORATION_BURDENS_AND_ANCESTRY_ONLY_NO_NEW_THEOREM_MULTIPLICITY
+- lane: Specialist Pro B transcendental/noetic
+  artifact: 15_AR8R_SPECIALIST_B_SUSTAINED_RESEARCH_REPORT.md
+  hash_status: NOT_SURFACED_TO_CENTRAL_RUNTIME
+  use: SEMANTIC_NEGATIVE_AND_BURDEN_IMPORT_ONLY_PENDING_BYTE_CUSTODY
+- lane: Deep Research 20 theorem ancestry
+  artifact: AR8R Deep Research rerun — theorem ancestry and exact prior art
+  hash_status: NOT_SURFACED_TO_CENTRAL_RUNTIME
+  use: ANCESTRY_CEILING_AND_LOCATOR_QUEUE_ONLY
+- lane: Deep Research 21 primary/metaphysical/proper-function
+  artifact: AR8R Deep Research rerun — Primary-source and metaphysical custody
+  hash_status: NOT_SURFACED_TO_CENTRAL_RUNTIME
+  use: SOURCE_STATUS_AND_RIVAL_CEILINGS_ONLY_NO_WORLD_TRANSFER
+- lane: Deep Research 22 empirical/protocol
+  artifact: AR8R Deep Research Rerun — Empirical and Representation Protocols
+  hash_status: NOT_SURFACED_TO_CENTRAL_RUNTIME
+  use: PROTOCOL_REQUIREMENTS_AND_KILL_CONDITIONS_ONLY
+forbidden_promotions:
+- file_library semantic access -> active runtime bytes
+- reported checker pass -> central rerun
+- source statement -> world truth
+- translated source -> Arabic-primary bytes
+- specialist local result -> authoritative AR8R theorem
+- prior art analogy -> formal identity
+- protocol design -> empirical result

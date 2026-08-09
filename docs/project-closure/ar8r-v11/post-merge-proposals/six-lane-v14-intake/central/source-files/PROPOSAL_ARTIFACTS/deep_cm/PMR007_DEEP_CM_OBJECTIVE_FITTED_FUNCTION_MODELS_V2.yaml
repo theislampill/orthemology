@@ -1,0 +1,69 @@
+schema: pmr007-deep-cm-objective-fitted-function-models-v2
+identity: PMR-007-OFFI-1
+status: REPAIRED_POST_MERGE_RESEARCH_CANDIDATE
+reduct:
+  class: FINITE_DETERMINISTIC_EXTERNAL_TRUTH_AND_FIT_REDUCT
+  states: [s0, s1, s2, s3]
+  actions: [a0, a1]
+  structural_bearer: b
+  carried_truth_target: {s0: a0, s1: a1, s2: a0, s3: a1}
+  carried_objective_fitting_relation: action_equals_truth_target
+  policy: {s0: a0, s1: a1, s2: a0, s3: a1}
+  reliable_realization: true
+  causal_guidance: true
+  neutral_package_name: OBJECTIVE_TRUTH_LINKED_FUNCTIONAL_FIT
+accounts:
+  causal_role:
+    may_be_impersonal: true
+    truth_linked_without_extra_guard: false
+  selected_effect:
+    may_be_impersonal: true
+    requires: selection_history
+    objective_fitting_without_extra_guard: false
+  designed_function:
+    may_involve_personal_designer: true
+    makes_designed_system_personal: false
+    requires: independently_truth_aimed_and_normatively_eligible_design_plan
+  learned_objective:
+    may_be_impersonal: true
+    truth_linked_without_external_target_guard: false
+  system_relative_success:
+    may_be_impersonal: true
+    harmful_or_false_target_control: true
+  objective_truth_linked_functional_fit:
+    may_be_impersonal: true
+    carried_guards: [truth_target, objective_fitting_relation, reliable_realization]
+  intentional_proper_function:
+    requires: [intentional_uptake, selection_because_fitting, de_se_ownership]
+    reducible_to_neutral_reduct: false
+  fitrah_oriented_function:
+    class: TRACK_N_SOURCE_RELATIVE
+    requires: [source_custody, translation, source_proposition, referent, applicability, world_adequacy]
+expansions:
+  U_personal:
+    reduct: CM_R0
+    intentional_uptake: true
+    selection_because_fitting: true
+    de_se_ownership: true
+    personality: true
+    wisdom_role_package: true
+  I_impersonal:
+    reduct: CM_R0
+    intentional_uptake: false
+    selection_because_fitting: false
+    de_se_ownership: false
+    personality: false
+    wisdom_role_package: false
+controls:
+  false_installed_target: perfect_system_relative_success_without_truth_link
+  no_fit_interpretation: reliable_truth_matching_without_objective_fitting_classification
+  no_uptake: objective_truth_linked_functional_fit_without_intentional_uptake
+  no_because: fitting_action_without_selection_because_fitting
+  one_bearer_no_subject: structural_locus_without_de_se_subject
+  source_nonmigration: Track_N_function_predication_without_neutral_or_actual_world_transfer
+scope_nonclaims:
+  - no derivation of the truth target or fittingness relation
+  - no complete theory of proper function
+  - no exhaustive intervention class
+  - no metaphysical actuality or equal prior for I
+  - no theorem that the U target package is sufficient for divine Wisdom

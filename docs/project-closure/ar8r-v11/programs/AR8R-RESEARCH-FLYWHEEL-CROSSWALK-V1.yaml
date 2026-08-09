@@ -37,6 +37,7 @@ nodes:
   common_intervention_identifiability: {owner: ../post-merge-proposals/pmr007-deep-bl-bv-semantic-reissue/source-files/PMR-007_DEEP_ROUND_BV_COMMON_INTERVENTION_IDENTIFIABILITY_V2.md, authority: SEMANTIC_REISSUE_PROPOSAL_WITH_EXTERNAL_FINITE_CORROBORATION_NO_ARCHITECTURE_IMPLEMENTATION}
   post_bv_frontier: {owner: ../post-merge-proposals/pmr007-deep-bw-cj-semantic-reissue/README.md, authority: SEMANTIC_REISSUE_PROPOSAL_V1_FALSE_PASS_V2_TAUTOLOGY_REPAIRED_TO_BOUNDED_V3_GAP}
   external_challenges: {owner: ../post-merge-proposals/external-challenges/README.md, authority: NONAUTHORITATIVE_CHALLENGE_CUSTODY}
+  six_lane_v14_intake: {owner: ../post-merge-proposals/six-lane-v14-intake/README.md, authority: PROPOSAL_CUSTODY_AND_BOUNDED_SOURCE_INTAKE_NO_ADOPTION}
 edges:
   - from: source_custody
     to: language_version
@@ -291,6 +292,26 @@ edges:
     to: transcendental_bridges
     contribution: BY through CG preserve source-world bearer and plural-realization rivals at each declared bridge
     nontransfer: a surviving rival or bridge firewall is not a positive Necessary-Being personal-ground or revelation proof
+  - kind: constrains
+    from: six_lane_v14_intake
+    to: post_bv_frontier
+    contribution: Deep CK-CT narrows the next central operation to actual target-blind implementation-map eligibility and records incomplete replay custody
+    nontransfer: central-thread proposal admission and finite schema checks do not establish an implementation source truth world truth or external review
+  - kind: constrains
+    from: six_lane_v14_intake
+    to: lean_queue
+    contribution: Specialist A and B source drafts failed while separately labeled intake repairs passed standalone checking
+    nontransfer: standalone repaired files do not repair the mathematical R7/R9 guard defect formalize all narrative contracts or establish project integration
+  - kind: constrains
+    from: six_lane_v14_intake
+    to: transcendental_bridges
+    contribution: Specialist B preserves predicate account bearer recipient time standard and source-locator burdens while Deep Research 21 verifies bounded qiyas Speech-layer and fitrah loci
+    nontransfer: source text and finite countermodels do not prove a Necessary Being personal ground Wisdom Speech revelation or a source-world bridge
+  - kind: constrains
+    from: six_lane_v14_intake
+    to: tensor_search
+    contribution: Deep Research 22 exposes the unresolved six-representation versus five-arm design and requires trajectory higher-order provenance leakage power custody and identification controls; it does not answer the requested B1-B4 protocols
+    nontransfer: a corrected protocol is not an experiment result and representation performance cannot select ontology or metaphysics
 selection_rule: Choose the next lane by unresolved load-bearing dependency and expected cross-lane yield, not by vocabulary overlap.
 closure_rule: No cycle in this graph establishes meniscus, natural closure, or an integrated champion.
 milestone_projection:

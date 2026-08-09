@@ -83,6 +83,22 @@ external_challenger_b_lean:
     generalized_quotient_theorem_to_AR8R_T294: NOT_IDENTIFIED
   novelty_credit: 0
   adoption_effect: NONE
+six_lane_v14_intake_lean:
+  source: ../post-merge-proposals/six-lane-v14-intake
+  specialist_a:
+    original_drafts: PARSE_FAILED_IMPORT_ORDER
+    repaired_drafts: STANDALONE_LEAN_4_32_2_PASS
+    mathematical_guard_status: R7_R9_OFF_RANGE_EXTENSION_CORRECTION_REQUIRED
+    observation_scope: STRATEGY_FACTORIZATION_ONLY_NOT_COBUCHI_THEOREM
+    project_build: NOT_RUN_FOR_INTAKE_REPAIRS
+  specialist_b:
+    original_draft: PARSE_ELABORATION_FAILED_RESERVED_FIELD_NAME
+    repaired_draft: STANDALONE_LEAN_4_32_2_PASS
+    signature_fidelity: PREDICATE_ACCOUNT_THEORY_BEARER_RECIPIENT_TIME_STANDARD_INDICES_INCOMPLETE
+    checker_reproduction: BLOCKED_CHECKER_SOURCE_ABSENT
+    project_build: NOT_RUN_NOT_A_PROJECT_INTEGRATION
+  novelty_credit: 0
+  adoption_effect: NONE
 queue:
   - {id: Q0, purpose: Lean project/toolchain exact source custody and clean build receipt, prerequisites: [], layers: [CUSTODY, TOOLCHAIN, BUILD], status: PERFORMED_BY_FABLE_R1_T299_SCOPED}
   - {id: Q1a, purpose: finite fibre factorization then T227 T299 exact twin and T300/T304 wrapper, prerequisites: [Q0, CONCRETE_T300_LEMMAS_FOR_WRAPPER], layers: [PURE, APPLICATION]}

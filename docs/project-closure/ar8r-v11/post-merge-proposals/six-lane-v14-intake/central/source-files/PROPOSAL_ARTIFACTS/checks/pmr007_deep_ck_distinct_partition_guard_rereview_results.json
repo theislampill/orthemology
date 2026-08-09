@@ -1,0 +1,236 @@
+{
+  "all_architecture_neutral_tables_equal": true,
+  "architecture_table_digests": {
+    "I_impersonal_powers": "e08d7f97e745f82fe341de415a5fe67318fbc520b5e8d2d7d40f956917f7a202",
+    "P_plural_coordinated": "e08d7f97e745f82fe341de415a5fe67318fbc520b5e8d2d7d40f956917f7a202",
+    "U_unified_personal": "e08d7f97e745f82fe341de415a5fe67318fbc520b5e8d2d7d40f956917f7a202"
+  },
+  "canonical_neutral_table_sha256": "e08d7f97e745f82fe341de415a5fe67318fbc520b5e8d2d7d40f956917f7a202",
+  "common_bearer_partition": [
+    [
+      "P_plural_coordinated"
+    ],
+    [
+      "I_impersonal_powers",
+      "U_unified_personal"
+    ]
+  ],
+  "countermodel_rows": 10,
+  "countermodel_schema_errors": [],
+  "external_human_review": false,
+  "full_guard_row_licensed": true,
+  "guard_count": 19,
+  "hash_mismatches": [],
+  "hash_rows_checked": 8,
+  "intentional_uptake_partition": [
+    [
+      "U_unified_personal"
+    ],
+    [
+      "I_impersonal_powers",
+      "P_plural_coordinated"
+    ]
+  ],
+  "interventions": 7,
+  "meet_common_bearer_and_uptake": [
+    [
+      "I_impersonal_powers"
+    ],
+    [
+      "P_plural_coordinated"
+    ],
+    [
+      "U_unified_personal"
+    ]
+  ],
+  "meet_identifies_all_three_architectures": true,
+  "missing_hash_paths": [],
+  "neutral_states": 64,
+  "one_step_rows": 448,
+  "overall": "PASS",
+  "profile_partition": [
+    [
+      "I_impersonal_powers",
+      "P_plural_coordinated",
+      "U_unified_personal"
+    ]
+  ],
+  "profile_target_collisions": {
+    "architecture_class": true,
+    "common_bearer": true,
+    "intentional_uptake": true,
+    "selection_because_fitting": true,
+    "wisdom": true
+  },
+  "review_relation": "same_model_lineage_distinct_algorithm_frozen_bytes",
+  "schema": "pmr007-deep-ck-distinct-partition-guard-rereview-results-v1",
+  "scope_notes": [
+    "Canonical table equality follows from the frozen common-neutral implementation, not from a claim about all possible architectures.",
+    "The 19-guard license is a Track-N conditional role-package definition; the symbolic check is not evidence that the guards hold in the actual world.",
+    "The common-bearer and uptake partitions reveal the exact residual cross-cut but do not operationalize an eligible neutral uptake measurement."
+  ],
+  "single_guard_deletion_licenses": 0,
+  "single_guard_deletions": [
+    {
+      "deleted": "source_regime_accepted",
+      "licensed": false
+    },
+    {
+      "deleted": "exact_source_custody",
+      "licensed": false
+    },
+    {
+      "deleted": "source_version_identity",
+      "licensed": false
+    },
+    {
+      "deleted": "translation_adequacy",
+      "licensed": false
+    },
+    {
+      "deleted": "source_bearer_identified",
+      "licensed": false
+    },
+    {
+      "deleted": "admissible_interpretation_family",
+      "licensed": false
+    },
+    {
+      "deleted": "singleton_candidate_denotation",
+      "licensed": false
+    },
+    {
+      "deleted": "actual_world_selection",
+      "licensed": false
+    },
+    {
+      "deleted": "intensional_predicate_preservation",
+      "licensed": false
+    },
+    {
+      "deleted": "source_predicate_strength_preserved",
+      "licensed": false
+    },
+    {
+      "deleted": "source_referent_equals_target_bearer",
+      "licensed": false
+    },
+    {
+      "deleted": "world_adequacy",
+      "licensed": false
+    },
+    {
+      "deleted": "target_applicability",
+      "licensed": false
+    },
+    {
+      "deleted": "objective_fittingness_not_signal_only",
+      "licensed": false
+    },
+    {
+      "deleted": "knowledge_or_apprehension",
+      "licensed": false
+    },
+    {
+      "deleted": "intentional_uptake",
+      "licensed": false
+    },
+    {
+      "deleted": "selection_because_fitting",
+      "licensed": false
+    },
+    {
+      "deleted": "reliable_realization",
+      "licensed": false
+    },
+    {
+      "deleted": "one_bearer_coinstantiation",
+      "licensed": false
+    }
+  ],
+  "target_partitions": {
+    "architecture_class": {
+      "partition": [
+        [
+          "I_impersonal_powers"
+        ],
+        [
+          "P_plural_coordinated"
+        ],
+        [
+          "U_unified_personal"
+        ]
+      ],
+      "values": {
+        "I_impersonal_powers": "I",
+        "P_plural_coordinated": "P",
+        "U_unified_personal": "U"
+      }
+    },
+    "common_bearer": {
+      "partition": [
+        [
+          "P_plural_coordinated"
+        ],
+        [
+          "I_impersonal_powers",
+          "U_unified_personal"
+        ]
+      ],
+      "values": {
+        "I_impersonal_powers": true,
+        "P_plural_coordinated": false,
+        "U_unified_personal": true
+      }
+    },
+    "intentional_uptake": {
+      "partition": [
+        [
+          "U_unified_personal"
+        ],
+        [
+          "I_impersonal_powers",
+          "P_plural_coordinated"
+        ]
+      ],
+      "values": {
+        "I_impersonal_powers": false,
+        "P_plural_coordinated": false,
+        "U_unified_personal": true
+      }
+    },
+    "selection_because_fitting": {
+      "partition": [
+        [
+          "U_unified_personal"
+        ],
+        [
+          "I_impersonal_powers",
+          "P_plural_coordinated"
+        ]
+      ],
+      "values": {
+        "I_impersonal_powers": false,
+        "P_plural_coordinated": false,
+        "U_unified_personal": true
+      }
+    },
+    "wisdom": {
+      "partition": [
+        [
+          "U_unified_personal"
+        ],
+        [
+          "I_impersonal_powers",
+          "P_plural_coordinated"
+        ]
+      ],
+      "values": {
+        "I_impersonal_powers": false,
+        "P_plural_coordinated": false,
+        "U_unified_personal": true
+      }
+    }
+  },
+  "v1_checker_defect_preserved": true
+}

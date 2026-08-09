@@ -1,0 +1,42 @@
+{
+  "conclusion_ceiling": "finite interface profile equivalence and conditional class-closure nonidentifiability only",
+  "guards": [
+    "causal kernel depends only on admitted history and next intervention",
+    "complete trajectory semantics",
+    "same intervention policy and alphabets",
+    "finite frozen horizon",
+    "class closure separately warranted",
+    "resource bounds not inferred from canonical state count"
+  ],
+  "models": {
+    "canonical_history_state": {
+      "finite_horizon_two_active_history_bound": 5,
+      "interpretation": "universal upper-bound construction, not a minimality or resource lower-bound theorem",
+      "state": "complete admitted intervention-output transcript",
+      "transition": "append next intervention and sampled/emitted output"
+    },
+    "class_closure_countermodel_schema": {
+      "consequence": "the target coordinate is not identifiable from any policy profile over that interface",
+      "not_established_here": "membership of the constructed realizer in any metaphysical architecture class",
+      "premise": "a target-different rival class contains a guard-satisfying history-state realizer for every admitted finite causal kernel"
+    },
+    "output_only_state_failure": {
+      "next_intervention": 0,
+      "output_after_prior_intervention_0": 0,
+      "output_after_prior_intervention_1": 1,
+      "same_output_history": [
+        0
+      ],
+      "table": 64
+    },
+    "selected_policy_collision_pair": [
+      0,
+      2
+    ]
+  },
+  "proof": "induction on the finite horizon; both systems use the same conditional kernel at the same admitted history",
+  "schema": "spa-r11-history-state-twin-models-v1",
+  "specialist_local_result": "SPA-R11",
+  "theorem_schema": "for any finite causal kernel, the state equal to complete admitted history and transition by appending the next intervention/output reproduces every candidate-independent adaptive-policy law",
+  "typed_object": "binary finite-horizon-two deterministic causal interface with complete trajectories"
+}

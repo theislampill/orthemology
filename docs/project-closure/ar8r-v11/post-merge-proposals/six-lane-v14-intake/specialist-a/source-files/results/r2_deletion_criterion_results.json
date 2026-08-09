@@ -1,0 +1,42 @@
+{
+  "ancestry_disposition": "elementary restriction-injectivity/fibre criterion; no novelty; Deep BV finite factorization remains T294 up to renaming",
+  "claim_ceiling": "finite exhaustive verification for binary X sizes 1-3 plus general paper proof; not whole architecture identification",
+  "criterion_cases_exhausted": 2106,
+  "criterion_mismatch_count": 0,
+  "derived_witness_digest": "22ea0a51dde782369d5ca6257ca14469ac78ced4238baca851ab0772e32be615",
+  "errors": [],
+  "mutants_killed": 5,
+  "mutants_total": 5,
+  "mutations": [
+    {
+      "killed": true,
+      "killer": "even_parity_recovers_deleted_cell_2",
+      "mutant": "all_proper_deletions_fatal"
+    },
+    {
+      "killed": true,
+      "killer": "unrestricted response tables",
+      "mutant": "n_minus_one_cells_always_sufficient"
+    },
+    {
+      "killed": true,
+      "killer": "collision witness requires distinct profiles",
+      "mutant": "repeated_constructed_twin_counts_as_collision"
+    },
+    {
+      "killed": true,
+      "killer": "audit requires derived witness digest and reruns enumeration",
+      "mutant": "prefilled_counter_false_pass"
+    },
+    {
+      "killed": true,
+      "killer": "same two-cell observation set size, opposite injectivity by hypothesis class",
+      "mutant": "cell_count_only_criterion"
+    }
+  ],
+  "schema": "spa-r2-check-results-v1",
+  "specialist_local_result": "SPA-R2",
+  "status": "PASS",
+  "unrestricted_failure_count": 0,
+  "unrestricted_proper_deletion_cases": 11
+}

@@ -1,0 +1,66 @@
+{
+  "conclusion_ceiling": "common reconstruction of the frozen finite target only",
+  "construction": "map each observed y to its unique consistent target; choose any default on unobserved y",
+  "criterion": "one target-blind decoder d:Y->Q exists iff equal observations anywhere in the tagged union always carry equal targets",
+  "guards": [
+    "common observation semantics",
+    "one frozen decoder signature",
+    "architecture tag unavailable to decoder",
+    "target used for evaluation only",
+    "finite alphabets in executable checker"
+  ],
+  "models": {
+    "architecture_tag_leak": {
+      "description": "a decoder permitted to inspect the architecture tag can return conflicting targets at the same observation; that is not a common decoder",
+      "forbidden_decoder": "d(architecture, observation)",
+      "required_decoder": "d(observation)"
+    },
+    "local_decoders_without_common": [
+      [
+        [
+          0,
+          0
+        ]
+      ],
+      [
+        [
+          0,
+          1
+        ]
+      ],
+      [
+        [
+          1,
+          0
+        ]
+      ]
+    ],
+    "positive_common_decoder": [
+      [
+        [
+          0,
+          0
+        ],
+        [
+          1,
+          1
+        ]
+      ],
+      [
+        [
+          0,
+          0
+        ]
+      ],
+      [
+        [
+          1,
+          1
+        ]
+      ]
+    ]
+  },
+  "schema": "spa-r9-common-decoder-models-v1",
+  "specialist_local_result": "SPA-R9",
+  "typed_object": "finite tagged disjoint union of architecture-specific domains with a shared observation alphabet and target alphabet"
+}

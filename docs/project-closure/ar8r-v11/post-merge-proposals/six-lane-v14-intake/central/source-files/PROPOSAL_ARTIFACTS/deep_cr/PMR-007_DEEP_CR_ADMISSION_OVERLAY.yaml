@@ -1,0 +1,24 @@
+schema: PMR007_DEEP_CR_ADMISSION_OVERLAY_V1
+identity: PMR-007-FSRA-1
+canonical_version: V2
+status: ADMITTED_POST_MERGE_SCOPED_CENTRAL_SOURCE_RESTORATION_RESULT
+historical_identity: NONE
+general_mathematical_novelty: 0
+owner_adoption: PENDING
+external_review: OPEN
+proof_status: HUMAN_PROOF_PLUS_FINITE_EXECUTABLE_CORROBORATION
+cold_audit: REPAIR_REQUIRED_THEN_REPAIRED
+fresh_rereview: PASS_WITH_NONBLOCKING_SOURCE_AND_WORLD_STATUS_NOTES
+source_status:
+  arabic_primary: NOT_VERIFIED_IN_THIS_ROUND
+  translated_or_secondary_support: PRESENT
+  guard_package: PROJECT_SYNTHESIS_NOT_SOURCE_TEXT
+theorem_family_relation:
+  PMR-007-NURV-1: GUARDED_SOURCE_APPLICATION
+  PMR-007-FPF-1: SOURCE_TARGET_RESTRICTION_EXTENSION
+  Deep_BY_CK: SOURCE_WORLD_GUARD_REUSE
+central_effect:
+  - Track-N restriction can conditionally narrow a norm-source family
+  - world-directed target use remains separately guarded
+  - impersonal and plural proper-function rivals remain live
+repository_status: PUBLIC_SAFE_POST_MERGE_PROPOSAL_PENDING_REPOSITORY_AUDIT

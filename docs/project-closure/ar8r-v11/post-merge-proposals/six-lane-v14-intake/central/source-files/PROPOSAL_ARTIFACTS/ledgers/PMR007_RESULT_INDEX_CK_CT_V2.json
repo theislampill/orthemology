@@ -1,0 +1,268 @@
+{
+  "external_review": "OPEN",
+  "general_novelty_granted": 0,
+  "historical_identity_assigned": false,
+  "integrated_champion": "NONE",
+  "meniscus": "MENISCUS_NOT_REACHED",
+  "natural_closure": "NOT_REACHED",
+  "owner_adoption": "PENDING",
+  "repository_authority": "9b80f2dfdf73a768ccad6a6ea2f2998c70ebdcf3",
+  "rounds": [
+    {
+      "admission_hashes": "deep_ck/PMR-007_DEEP_CK_ADMISSION_HASHES.sha256",
+      "admission_hashes_sha256": "02716579c365c5c3a231589524cae584e0218f7532e01e35f85863d4e59e9670",
+      "admission_overlay": "deep_ck/PMR-007_DEEP_CK_ADMISSION_OVERLAY.yaml",
+      "admission_overlay_sha256": "8b5772002d1c311e332de6d915e4a23ef47462574f34d9148fb9d9f3efb66110",
+      "canonical_theorem": "deep_ck/PMR-007_DEEP_ROUND_CK_SOURCE_FORMAL_WORLD_WISDOM_ADJUDICATION_V2.md",
+      "central_effects": {
+        "common_bearer_partition": "{U,I}|{P}",
+        "exact_residual": "independent_eligibility_of_an_U_vs_I_cross_cut",
+        "intentional_uptake_partition": "{U}|{I,P}",
+        "meet_partition": "{U}|{I}|{P}"
+      },
+      "external_review": "OPEN",
+      "fresh_rereview": "PASS_WITH_NONBLOCKING_SOURCE_WORLD_AND_OPERATIONALIZATION_NOTES",
+      "general_mathematical_novelty": 0,
+      "historical_identity": "NONE",
+      "identity": "PMR-007-SFWA-1",
+      "owner_adoption": "PENDING",
+      "round": "CK",
+      "status": "ADMITTED_POST_MERGE_SCOPED_RESULT",
+      "theorem_sha256": "7f9a396c688925f134427ee3d6cf10acb1528f79293eb77d39fe3bf6ba12bcdd",
+      "title": "Source-formal-world Wisdom adjudication over a concrete U/I/P map"
+    },
+    {
+      "admission_hashes": "deep_cl/PMR-007_DEEP_CL_ADMISSION_HASHES.sha256",
+      "admission_hashes_sha256": "63fe14de78a0a0b1d7c1441e854f179fc98d9c19d21e376bb3f08def51d5fa6d",
+      "admission_overlay": "deep_cl/PMR-007_DEEP_CL_ADMISSION_OVERLAY.yaml",
+      "admission_overlay_sha256": "ef987bf8670007688841e9ddaa2fc6e85455a67644751b010223801a3a926908",
+      "canonical_theorem": "deep_cl/PMR-007_DEEP_ROUND_CL_MINIMAL_ARCHITECTURE_BRIDGE_FACTORIZATION_V2.md",
+      "central_effects": {
+        "common_bearer_resolves": [
+          "UP",
+          "IP"
+        ],
+        "current_neutral_resolves": [],
+        "intentional_uptake_resolves": [
+          "UI",
+          "UP"
+        ],
+        "required_next_evidence": "independently_warranted_target_blind_UI_cross_cut",
+        "surviving_residual": "UI"
+      },
+      "external_review": "OPEN",
+      "fresh_rereview": "PASS_WITH_NONBLOCKING_REGISTRY_AND_EVIDENCE_ELIGIBILITY_NOTES",
+      "general_mathematical_novelty": 0,
+      "historical_identity": "NONE",
+      "identity": "PMR-007-MABF-1",
+      "owner_adoption": "PENDING",
+      "round": "CL",
+      "status": "ADMITTED_POST_MERGE_SCOPED_RESULT",
+      "theorem_sha256": "cf4f9cbd8eee325bf61b7806bd0bbb62a924abd628519b139882b6b88b82e3eb",
+      "title": "Registry-relative architecture bridge factorization and the surviving U-I residual"
+    },
+    {
+      "admission_hashes": "deep_cm/PMR-007_DEEP_CM_ADMISSION_HASHES.sha256",
+      "admission_hashes_sha256": "a075afda9d57471234a48d2f6c8a99ec561f55a00a5763ef03900fa301be886f",
+      "admission_overlay": "deep_cm/PMR-007_DEEP_CM_ADMISSION_OVERLAY.yaml",
+      "admission_overlay_sha256": "67f7b3d658ea5ace55558ab590fd0c6cfffef95f15bf295f3fc7443bfe49120d",
+      "canonical_theorem": "deep_cm/PMR-007_DEEP_ROUND_CM_OBJECTIVE_FITTED_FUNCTION_AND_PERSONALITY_V2.md",
+      "central_effects": {
+        "UI_residual": "SURVIVES",
+        "carried_objective_truth_linked_fit": "compatible_with_one_bearer_impersonal_realizer",
+        "proper_function_bridge": "NARROWED_TO_INTENTIONAL_OR_SOURCE_WORLD_ADDITION"
+      },
+      "external_review": "OPEN",
+      "fresh_rereview": "PASS_WITH_NONBLOCKING_FUNCTION_TAXONOMY_AND_WORLD_SCOPE_NOTES",
+      "general_mathematical_novelty": 0,
+      "historical_identity": "NONE",
+      "identity": "PMR-007-OFFI-1",
+      "owner_adoption": "PENDING",
+      "round": "CM",
+      "status": "ADMITTED_POST_MERGE_SCOPED_RESULT",
+      "theorem_sha256": "869f8f5606c92f0a3697863af3886163372571a3f01c3c9a0954b31e2385a984",
+      "title": "Objective truth-linked functional fit and the surviving personal-realizer gap"
+    },
+    {
+      "admission_hashes": "deep_cn/PMR-007_DEEP_CN_ADMISSION_HASHES.sha256",
+      "admission_hashes_sha256": "307e2a656acff360c2e06218bc9ffba0a1abfdb0e5e84322fd79bc98168014d1",
+      "admission_overlay": "deep_cn/PMR-007_DEEP_CN_ADMISSION_OVERLAY.yaml",
+      "admission_overlay_sha256": "4964c5c38a109deb4f680a526deb9b80c9169ed485d6e3e6ec3f8c3524b5c916",
+      "canonical_theorem": "deep_cn/PMR-007_DEEP_ROUND_CN_AUTHORITY_INDEXED_ANCHOR_COVERS_V2.md",
+      "central_effects": {
+        "missing_item": "independently_eligible_UI_cross_cut_in_the_declared_context",
+        "neutral_architecture_kappa": "INFINITY",
+        "recipient_version_boundary": "receipt_only_infinite_version_aware_one",
+        "shared_typed_layer": "finite_context_indexed_conflict_cover",
+        "source_world_boundary": "translated_roles_infinite_guarded_one",
+        "track_n_conditional_kappa": 2
+      },
+      "external_review": "OPEN",
+      "fresh_rereview": "PASS_WITH_NONBLOCKING_AUTHORITY_AND_STATISTICAL_SCOPE_NOTES",
+      "general_mathematical_novelty": 0,
+      "historical_identity": "NONE",
+      "identity": "PMR-007-AIAC-1",
+      "owner_adoption": "PENDING",
+      "round": "CN",
+      "status": "ADMITTED_POST_MERGE_SCOPED_RESULT",
+      "theorem_sha256": "8ff04974e7c92d5db2293b111f924ca9676ff9dac8cf9e04215bb2bae4655057",
+      "title": "Authority-indexed anchor covers and guarded context migration"
+    },
+    {
+      "admission_hashes": "deep_co/PMR-007_DEEP_CO_ADMISSION_HASHES.sha256",
+      "admission_hashes_sha256": "adcacf1281c4ae0bd3a644f59fbbe93bfcc126efddb2db2dd4fe3ac156b94c77",
+      "admission_overlay": "deep_co/PMR-007_DEEP_CO_ADMISSION_OVERLAY.yaml",
+      "admission_overlay_sha256": "561bd97f52d5b076668e0b643215fc64378499d44c8fd3f3f491d1b9935858ef",
+      "canonical_theorem": "deep_co/PMR-007_DEEP_ROUND_CO_PROFILE_MEASURABLE_CORRECTION_IMPOSSIBILITY_V2.md",
+      "central_effects": {
+        "permissible_next_moves": [
+          "enlarged_common_experiment",
+          "independent_source_world_anchor",
+          "independent_nonprofile_model_restriction",
+          "new_data_or_prior_not_measurable_from_E0"
+        ],
+        "profile_measurable_UI_correction": "IMPOSSIBLE_AT_FROZEN_E0_SCOPE",
+        "strongest_one_bearer_impersonal_rival": "SURVIVES"
+      },
+      "external_review": "OPEN",
+      "fresh_rereview": "PASS_WITH_NONBLOCKING_EXPERIMENT_COMPLETENESS_NOTES",
+      "general_mathematical_novelty": 0,
+      "historical_identity": "NONE",
+      "identity": "PMR-007-PMCI-1",
+      "owner_adoption": "PENDING",
+      "round": "CO",
+      "status": "ADMITTED_POST_MERGE_SCOPED_RESULT",
+      "theorem_sha256": "ac6a657e8da2baf3c18b6c40e37ddb6e0bdfcb94756b89b64c423956737dc1c3",
+      "title": "Profile-measurable correction impossibility at the surviving U-I fibre"
+    },
+    {
+      "admission_overlay": "deep_cp/PMR-007_DEEP_CP_ADMISSION_OVERLAY.yaml",
+      "admission_overlay_sha256": "87c4d60944526bcbe32ea002d913fbd374e8633270aa11c5aeede226424c76c5",
+      "canonical_theorem": "deep_cp/PMR-007_DEEP_ROUND_CP_NO_CURRENT_ELIGIBLE_UI_EXPERIMENT_V2.md",
+      "central_effects": {
+        "all_finite_common_history_profiles": "EQUAL_UNDER_DECLARED_KERNEL",
+        "current_neutral_UI_discriminator": "NONE_IN_FROZEN_REGISTRY",
+        "future_operationalization": "NOT_DENIED",
+        "strongest_impersonal_rival": "SURVIVES"
+      },
+      "external_review": "OPEN",
+      "fresh_rereview": "PASS_WITH_NONBLOCKING_FORMAL_REGISTRY_AND_FUTURE_EXPERIMENT_NOTES",
+      "general_mathematical_novelty": 0,
+      "historical_identity": "NONE",
+      "identity": "PMR-007-CUIE-1",
+      "owner_adoption": "PENDING",
+      "provenance": "POST_MERGE_RESEARCH_PROPOSAL",
+      "round": "CP",
+      "status": "ADMITTED_POST_MERGE_SCOPED_CENTRAL_EXPERIMENT_REGISTRY_NEGATIVE_RESULT",
+      "theorem_sha256": "1328301e0bbe0d8483c701a239c428a4ea2e49bad89f0b3592364b5b66a2b8b5",
+      "title": "No current eligible U-I experiment in the frozen formal registry"
+    },
+    {
+      "admission_overlay": "deep_cq/PMR-007_DEEP_CQ_ADMISSION_OVERLAY.yaml",
+      "admission_overlay_sha256": "70609844141c6fe0f177ea9f0c0078c1f204f0f49e81975dde97940d94403183",
+      "canonical_theorem": "deep_cq/PMR-007_DEEP_ROUND_CQ_NORM_UNCERTAIN_ROBUST_RESTORATION_V2.md",
+      "central_effects": {
+        "individual_restorability": "DOES_NOT_ENTAIL_COMMON_SWITCHING_ROBUSTNESS",
+        "robust_reach_and_stay": "LEAST_FIXED_POINT_OVER_VIABILITY",
+        "robust_viability": "GREATEST_FIXED_POINT",
+        "target_family_authority": "EXTERNAL_TO_FIXED_POINT"
+      },
+      "external_review": "OPEN",
+      "fresh_rereview": "PASS_WITH_NONBLOCKING_TARGET_AUTHORITY_AND_FIXED_STANDARD_NOTES",
+      "general_mathematical_novelty": 0,
+      "historical_identity": "NONE",
+      "identity": "PMR-007-NURV-1",
+      "owner_adoption": "PENDING",
+      "provenance": "POST_MERGE_RESEARCH_PROPOSAL",
+      "round": "CQ",
+      "status": "ADMITTED_POST_MERGE_SCOPED_CENTRAL_PROPER_FUNCTION_RESTORATION_RESULT",
+      "theorem_sha256": "f028dec8aec01a9f548e42daec343f487c35d024e3ea4a76970502dc8d8504b6",
+      "title": "Switching-standard robust viability under norm-source uncertainty"
+    },
+    {
+      "admission_overlay": "deep_cr/PMR-007_DEEP_CR_ADMISSION_OVERLAY.yaml",
+      "admission_overlay_sha256": "5c90c8fbbc9591081949b241017d8211d4563d6788126d0271fc7a51eac5871f",
+      "canonical_theorem": "deep_cr/PMR-007_DEEP_ROUND_CR_FITRAH_SOURCE_RESTRICTION_AND_RESTORATION_V2.md",
+      "central_effects": {
+        "neutral_proper_function_promotion": "NONE",
+        "restricted_family_shape": "MAY_BE_EMPTY_SINGLETON_OR_PLURAL",
+        "track_n_restriction": "CONDITIONAL_ON_NINE_SOURCE_GUARDS",
+        "world_use": "REQUIRES_TWO_ADDITIONAL_WORLD_GUARDS"
+      },
+      "external_review": "OPEN",
+      "fresh_rereview": "PASS_WITH_NONBLOCKING_SOURCE_AND_WORLD_STATUS_NOTES",
+      "general_mathematical_novelty": 0,
+      "historical_identity": "NONE",
+      "identity": "PMR-007-FSRA-1",
+      "owner_adoption": "PENDING",
+      "provenance": "POST_MERGE_RESEARCH_PROPOSAL",
+      "rejected_or_defective_predecessor": {
+        "defect": "collapsed source-relative and world-directed guard rows; overstrong singleton-selection implication",
+        "disposition": "REPAIRED_NOT_ADMITTED",
+        "version": "V1"
+      },
+      "round": "CR",
+      "status": "ADMITTED_POST_MERGE_SCOPED_CENTRAL_SOURCE_RESTORATION_RESULT",
+      "theorem_sha256": "e6ea1537ad042e498bf74bed188f7baaf7dce02eb140d94e338a151a62e801e2",
+      "title": "Fiṭrah source restriction and robust restoration applicability"
+    },
+    {
+      "admission_overlay": "deep_cs/PMR-007_DEEP_CS_ADMISSION_OVERLAY.yaml",
+      "admission_overlay_sha256": "fc35f95ca8d802f6191898806961ec1e4dcac0ba9d535253387bc564b8e86ffa",
+      "canonical_theorem": "deep_cs/PMR-007_DEEP_ROUND_CS_WEAKEST_ADMISSIBLE_DISCRIMINATOR_V2.md",
+      "central_effects": {
+        "current_UI_eligible_family": "EMPTY",
+        "discriminator_family": "FIBRE_REFINEMENTS_SUFFICIENT_FOR_TARGET",
+        "minimal_elements": "EXIST_FINITE_IF_NONEMPTY_NOT_NECESSARILY_UNIQUE",
+        "profile_postprocessing": "ZERO_GAIN_ON_OLD_COLLISION"
+      },
+      "external_review": "OPEN",
+      "fresh_rereview": "PASS_WITH_NONBLOCKING_ANCESTRY_AND_SELECTION_POLICY_NOTES",
+      "general_mathematical_novelty": 0,
+      "historical_identity": "NONE",
+      "identity": "PMR-007-WADF-1",
+      "owner_adoption": "PENDING",
+      "provenance": "POST_MERGE_RESEARCH_PROPOSAL",
+      "rejected_or_defective_predecessor": {
+        "defect": "overclaimed unique weakest discriminator and transferred Bennett beyond its theorem scope",
+        "disposition": "REPAIRED_NOT_ADMITTED",
+        "version": "V1"
+      },
+      "round": "CS",
+      "status": "ADMITTED_POST_MERGE_SCOPED_CENTRAL_RESIDUAL_SELECTION_RESULT",
+      "theorem_sha256": "6377e19aba199aa17a3458cbe02d8c8b576ccf734949f4253d3a02394528568c",
+      "title": "Minimal-commitment admissible discriminator selection"
+    },
+    {
+      "admission_overlay": "deep_ct/PMR-007_DEEP_CT_ADMISSION_OVERLAY.yaml",
+      "admission_overlay_sha256": "412593543dd7a13ddf77da5c780125b3b9d47b480176949d5ddc63672050da51",
+      "canonical_theorem": "deep_ct/PMR-007_DEEP_ROUND_CT_PARTIAL_COMMON_INTERVENTION_DOMAIN_V2.md",
+      "central_effects": {
+        "current_partial_uptake_operation": "NOT_NEUTRAL_UI_DISCRIMINATOR",
+        "observed_nonimplementation": "NEW_SIGNAL_REQUIRING_ELIGIBILITY_AUDIT",
+        "old_profile_measurable_totalization": "CANNOT_SPLIT_OLD_COLLISION",
+        "restricted_domain_evidence": "IDENTIFIES_AT_MOST_TARGET_RESTRICTION",
+        "target_defined_capability": "TARGET_LEAKAGE"
+      },
+      "external_review": "OPEN",
+      "fresh_rereview": "PASS_WITH_NONBLOCKING_IMPLEMENTATION_AND_ANCESTRY_NOTES",
+      "general_mathematical_novelty": 0,
+      "historical_identity": "NONE",
+      "identity": "PMR-007-PCDF-1",
+      "owner_adoption": "PENDING",
+      "provenance": "POST_MERGE_RESEARCH_PROPOSAL",
+      "rejected_or_defective_predecessor": {
+        "checker_counterexamples": 8,
+        "defect": "false universal claim that proper partial domains cannot identify after totalization",
+        "disposition": "REJECTED_FALSE_CLAIM_PRESERVED",
+        "version": "V1"
+      },
+      "round": "CT",
+      "status": "ADMITTED_POST_MERGE_SCOPED_CENTRAL_EXPERIMENT_DOMAIN_RESULT",
+      "theorem_sha256": "057451541f01369e501ee18470dc11780383819ea8efce03e276f3ad70d8b26e",
+      "title": "Partial common-intervention domains and the noncircular capability fork"
+    }
+  ],
+  "schema": "pmr007-result-index-ck-ct-v2",
+  "scientific_authority": "CENTRAL_PRO_THREAD_SCOPED_PROPOSALS_ONLY"
+}

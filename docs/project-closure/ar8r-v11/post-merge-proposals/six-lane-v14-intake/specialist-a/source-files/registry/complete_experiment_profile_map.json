@@ -1,0 +1,3357 @@
+{
+  "actual_cell_count": 256,
+  "cells": [
+    {
+      "assignment": {
+        "authority_version": "current_authorized",
+        "causal_mode": "baseline",
+        "challenge_nonce": "fixed",
+        "content": "alpha",
+        "form": "plain",
+        "provenance_operation": "independent_acquisition",
+        "resource_band": "within_budget",
+        "target_truth_relation": "aligned"
+      },
+      "cell_id": "22bfc6098ac58b058798"
+    },
+    {
+      "assignment": {
+        "authority_version": "current_authorized",
+        "causal_mode": "baseline",
+        "challenge_nonce": "fresh",
+        "content": "alpha",
+        "form": "plain",
+        "provenance_operation": "independent_acquisition",
+        "resource_band": "within_budget",
+        "target_truth_relation": "aligned"
+      },
+      "cell_id": "cb5f42d1c39ace73eb6f"
+    },
+    {
+      "assignment": {
+        "authority_version": "current_authorized",
+        "causal_mode": "baseline",
+        "challenge_nonce": "fixed",
+        "content": "alpha",
+        "form": "plain",
+        "provenance_operation": "independent_acquisition",
+        "resource_band": "over_budget",
+        "target_truth_relation": "aligned"
+      },
+      "cell_id": "fa23779bda2f76ccbeb7"
+    },
+    {
+      "assignment": {
+        "authority_version": "current_authorized",
+        "causal_mode": "baseline",
+        "challenge_nonce": "fresh",
+        "content": "alpha",
+        "form": "plain",
+        "provenance_operation": "independent_acquisition",
+        "resource_band": "over_budget",
+        "target_truth_relation": "aligned"
+      },
+      "cell_id": "fdee089fc378c985a5e0"
+    },
+    {
+      "assignment": {
+        "authority_version": "current_authorized",
+        "causal_mode": "baseline",
+        "challenge_nonce": "fixed",
+        "content": "alpha",
+        "form": "plain",
+        "provenance_operation": "pure_copy",
+        "resource_band": "within_budget",
+        "target_truth_relation": "aligned"
+      },
+      "cell_id": "51930c636b3e74074564"
+    },
+    {
+      "assignment": {
+        "authority_version": "current_authorized",
+        "causal_mode": "baseline",
+        "challenge_nonce": "fresh",
+        "content": "alpha",
+        "form": "plain",
+        "provenance_operation": "pure_copy",
+        "resource_band": "within_budget",
+        "target_truth_relation": "aligned"
+      },
+      "cell_id": "6e96c01589fb72465f9c"
+    },
+    {
+      "assignment": {
+        "authority_version": "current_authorized",
+        "causal_mode": "baseline",
+        "challenge_nonce": "fixed",
+        "content": "alpha",
+        "form": "plain",
+        "provenance_operation": "pure_copy",
+        "resource_band": "over_budget",
+        "target_truth_relation": "aligned"
+      },
+      "cell_id": "a106046025437e5250d5"
+    },
+    {
+      "assignment": {
+        "authority_version": "current_authorized",
+        "causal_mode": "baseline",
+        "challenge_nonce": "fresh",
+        "content": "alpha",
+        "form": "plain",
+        "provenance_operation": "pure_copy",
+        "resource_band": "over_budget",
+        "target_truth_relation": "aligned"
+      },
+      "cell_id": "df683062f798718aee5a"
+    },
+    {
+      "assignment": {
+        "authority_version": "revoked_or_stale",
+        "causal_mode": "baseline",
+        "challenge_nonce": "fixed",
+        "content": "alpha",
+        "form": "plain",
+        "provenance_operation": "independent_acquisition",
+        "resource_band": "within_budget",
+        "target_truth_relation": "aligned"
+      },
+      "cell_id": "19fc8f8543a065f251fc"
+    },
+    {
+      "assignment": {
+        "authority_version": "revoked_or_stale",
+        "causal_mode": "baseline",
+        "challenge_nonce": "fresh",
+        "content": "alpha",
+        "form": "plain",
+        "provenance_operation": "independent_acquisition",
+        "resource_band": "within_budget",
+        "target_truth_relation": "aligned"
+      },
+      "cell_id": "72af5772ac8e4a8202ce"
+    },
+    {
+      "assignment": {
+        "authority_version": "revoked_or_stale",
+        "causal_mode": "baseline",
+        "challenge_nonce": "fixed",
+        "content": "alpha",
+        "form": "plain",
+        "provenance_operation": "independent_acquisition",
+        "resource_band": "over_budget",
+        "target_truth_relation": "aligned"
+      },
+      "cell_id": "bf40dbcfb59038346475"
+    },
+    {
+      "assignment": {
+        "authority_version": "revoked_or_stale",
+        "causal_mode": "baseline",
+        "challenge_nonce": "fresh",
+        "content": "alpha",
+        "form": "plain",
+        "provenance_operation": "independent_acquisition",
+        "resource_band": "over_budget",
+        "target_truth_relation": "aligned"
+      },
+      "cell_id": "8f479d3874eaf3b13dbe"
+    },
+    {
+      "assignment": {
+        "authority_version": "revoked_or_stale",
+        "causal_mode": "baseline",
+        "challenge_nonce": "fixed",
+        "content": "alpha",
+        "form": "plain",
+        "provenance_operation": "pure_copy",
+        "resource_band": "within_budget",
+        "target_truth_relation": "aligned"
+      },
+      "cell_id": "3f3879c59bd359d372a6"
+    },
+    {
+      "assignment": {
+        "authority_version": "revoked_or_stale",
+        "causal_mode": "baseline",
+        "challenge_nonce": "fresh",
+        "content": "alpha",
+        "form": "plain",
+        "provenance_operation": "pure_copy",
+        "resource_band": "within_budget",
+        "target_truth_relation": "aligned"
+      },
+      "cell_id": "b316b1f25ec4fa6c6448"
+    },
+    {
+      "assignment": {
+        "authority_version": "revoked_or_stale",
+        "causal_mode": "baseline",
+        "challenge_nonce": "fixed",
+        "content": "alpha",
+        "form": "plain",
+        "provenance_operation": "pure_copy",
+        "resource_band": "over_budget",
+        "target_truth_relation": "aligned"
+      },
+      "cell_id": "c0a6be989690be6f8af3"
+    },
+    {
+      "assignment": {
+        "authority_version": "revoked_or_stale",
+        "causal_mode": "baseline",
+        "challenge_nonce": "fresh",
+        "content": "alpha",
+        "form": "plain",
+        "provenance_operation": "pure_copy",
+        "resource_band": "over_budget",
+        "target_truth_relation": "aligned"
+      },
+      "cell_id": "1055735e654aad2e1773"
+    },
+    {
+      "assignment": {
+        "authority_version": "current_authorized",
+        "causal_mode": "baseline",
+        "challenge_nonce": "fixed",
+        "content": "beta",
+        "form": "plain",
+        "provenance_operation": "independent_acquisition",
+        "resource_band": "within_budget",
+        "target_truth_relation": "aligned"
+      },
+      "cell_id": "946f58d419b30a30014b"
+    },
+    {
+      "assignment": {
+        "authority_version": "current_authorized",
+        "causal_mode": "baseline",
+        "challenge_nonce": "fresh",
+        "content": "beta",
+        "form": "plain",
+        "provenance_operation": "independent_acquisition",
+        "resource_band": "within_budget",
+        "target_truth_relation": "aligned"
+      },
+      "cell_id": "83125b66182322792c5e"
+    },
+    {
+      "assignment": {
+        "authority_version": "current_authorized",
+        "causal_mode": "baseline",
+        "challenge_nonce": "fixed",
+        "content": "beta",
+        "form": "plain",
+        "provenance_operation": "independent_acquisition",
+        "resource_band": "over_budget",
+        "target_truth_relation": "aligned"
+      },
+      "cell_id": "df99b40ee61c5a321723"
+    },
+    {
+      "assignment": {
+        "authority_version": "current_authorized",
+        "causal_mode": "baseline",
+        "challenge_nonce": "fresh",
+        "content": "beta",
+        "form": "plain",
+        "provenance_operation": "independent_acquisition",
+        "resource_band": "over_budget",
+        "target_truth_relation": "aligned"
+      },
+      "cell_id": "78ae664bce1f98acbd4e"
+    },
+    {
+      "assignment": {
+        "authority_version": "current_authorized",
+        "causal_mode": "baseline",
+        "challenge_nonce": "fixed",
+        "content": "beta",
+        "form": "plain",
+        "provenance_operation": "pure_copy",
+        "resource_band": "within_budget",
+        "target_truth_relation": "aligned"
+      },
+      "cell_id": "85e9c39ae55ada456c27"
+    },
+    {
+      "assignment": {
+        "authority_version": "current_authorized",
+        "causal_mode": "baseline",
+        "challenge_nonce": "fresh",
+        "content": "beta",
+        "form": "plain",
+        "provenance_operation": "pure_copy",
+        "resource_band": "within_budget",
+        "target_truth_relation": "aligned"
+      },
+      "cell_id": "9edfb2f7350a1f8a4282"
+    },
+    {
+      "assignment": {
+        "authority_version": "current_authorized",
+        "causal_mode": "baseline",
+        "challenge_nonce": "fixed",
+        "content": "beta",
+        "form": "plain",
+        "provenance_operation": "pure_copy",
+        "resource_band": "over_budget",
+        "target_truth_relation": "aligned"
+      },
+      "cell_id": "a29111ff51aa82c989cc"
+    },
+    {
+      "assignment": {
+        "authority_version": "current_authorized",
+        "causal_mode": "baseline",
+        "challenge_nonce": "fresh",
+        "content": "beta",
+        "form": "plain",
+        "provenance_operation": "pure_copy",
+        "resource_band": "over_budget",
+        "target_truth_relation": "aligned"
+      },
+      "cell_id": "687dfb31fc7e5d0a4b4b"
+    },
+    {
+      "assignment": {
+        "authority_version": "revoked_or_stale",
+        "causal_mode": "baseline",
+        "challenge_nonce": "fixed",
+        "content": "beta",
+        "form": "plain",
+        "provenance_operation": "independent_acquisition",
+        "resource_band": "within_budget",
+        "target_truth_relation": "aligned"
+      },
+      "cell_id": "795fa5110d1407b15196"
+    },
+    {
+      "assignment": {
+        "authority_version": "revoked_or_stale",
+        "causal_mode": "baseline",
+        "challenge_nonce": "fresh",
+        "content": "beta",
+        "form": "plain",
+        "provenance_operation": "independent_acquisition",
+        "resource_band": "within_budget",
+        "target_truth_relation": "aligned"
+      },
+      "cell_id": "bf3e6a4863f53965318a"
+    },
+    {
+      "assignment": {
+        "authority_version": "revoked_or_stale",
+        "causal_mode": "baseline",
+        "challenge_nonce": "fixed",
+        "content": "beta",
+        "form": "plain",
+        "provenance_operation": "independent_acquisition",
+        "resource_band": "over_budget",
+        "target_truth_relation": "aligned"
+      },
+      "cell_id": "0a52117479f2e2bb3139"
+    },
+    {
+      "assignment": {
+        "authority_version": "revoked_or_stale",
+        "causal_mode": "baseline",
+        "challenge_nonce": "fresh",
+        "content": "beta",
+        "form": "plain",
+        "provenance_operation": "independent_acquisition",
+        "resource_band": "over_budget",
+        "target_truth_relation": "aligned"
+      },
+      "cell_id": "4b7b2f371ac4632c21e7"
+    },
+    {
+      "assignment": {
+        "authority_version": "revoked_or_stale",
+        "causal_mode": "baseline",
+        "challenge_nonce": "fixed",
+        "content": "beta",
+        "form": "plain",
+        "provenance_operation": "pure_copy",
+        "resource_band": "within_budget",
+        "target_truth_relation": "aligned"
+      },
+      "cell_id": "607aa85e8808dce5645f"
+    },
+    {
+      "assignment": {
+        "authority_version": "revoked_or_stale",
+        "causal_mode": "baseline",
+        "challenge_nonce": "fresh",
+        "content": "beta",
+        "form": "plain",
+        "provenance_operation": "pure_copy",
+        "resource_band": "within_budget",
+        "target_truth_relation": "aligned"
+      },
+      "cell_id": "ec2c44bae121b76e8106"
+    },
+    {
+      "assignment": {
+        "authority_version": "revoked_or_stale",
+        "causal_mode": "baseline",
+        "challenge_nonce": "fixed",
+        "content": "beta",
+        "form": "plain",
+        "provenance_operation": "pure_copy",
+        "resource_band": "over_budget",
+        "target_truth_relation": "aligned"
+      },
+      "cell_id": "053dfc0582abadcf2967"
+    },
+    {
+      "assignment": {
+        "authority_version": "revoked_or_stale",
+        "causal_mode": "baseline",
+        "challenge_nonce": "fresh",
+        "content": "beta",
+        "form": "plain",
+        "provenance_operation": "pure_copy",
+        "resource_band": "over_budget",
+        "target_truth_relation": "aligned"
+      },
+      "cell_id": "5ef202d0bffb526690d6"
+    },
+    {
+      "assignment": {
+        "authority_version": "current_authorized",
+        "causal_mode": "baseline",
+        "challenge_nonce": "fixed",
+        "content": "alpha",
+        "form": "encoded",
+        "provenance_operation": "independent_acquisition",
+        "resource_band": "within_budget",
+        "target_truth_relation": "aligned"
+      },
+      "cell_id": "ab482079c8b048e02353"
+    },
+    {
+      "assignment": {
+        "authority_version": "current_authorized",
+        "causal_mode": "baseline",
+        "challenge_nonce": "fresh",
+        "content": "alpha",
+        "form": "encoded",
+        "provenance_operation": "independent_acquisition",
+        "resource_band": "within_budget",
+        "target_truth_relation": "aligned"
+      },
+      "cell_id": "0143785512982bb45cb7"
+    },
+    {
+      "assignment": {
+        "authority_version": "current_authorized",
+        "causal_mode": "baseline",
+        "challenge_nonce": "fixed",
+        "content": "alpha",
+        "form": "encoded",
+        "provenance_operation": "independent_acquisition",
+        "resource_band": "over_budget",
+        "target_truth_relation": "aligned"
+      },
+      "cell_id": "0a8e4afa02e1301f2502"
+    },
+    {
+      "assignment": {
+        "authority_version": "current_authorized",
+        "causal_mode": "baseline",
+        "challenge_nonce": "fresh",
+        "content": "alpha",
+        "form": "encoded",
+        "provenance_operation": "independent_acquisition",
+        "resource_band": "over_budget",
+        "target_truth_relation": "aligned"
+      },
+      "cell_id": "2bd33eb210b9186c59df"
+    },
+    {
+      "assignment": {
+        "authority_version": "current_authorized",
+        "causal_mode": "baseline",
+        "challenge_nonce": "fixed",
+        "content": "alpha",
+        "form": "encoded",
+        "provenance_operation": "pure_copy",
+        "resource_band": "within_budget",
+        "target_truth_relation": "aligned"
+      },
+      "cell_id": "7891af9b852350fe6c8c"
+    },
+    {
+      "assignment": {
+        "authority_version": "current_authorized",
+        "causal_mode": "baseline",
+        "challenge_nonce": "fresh",
+        "content": "alpha",
+        "form": "encoded",
+        "provenance_operation": "pure_copy",
+        "resource_band": "within_budget",
+        "target_truth_relation": "aligned"
+      },
+      "cell_id": "02622183db75b1e53368"
+    },
+    {
+      "assignment": {
+        "authority_version": "current_authorized",
+        "causal_mode": "baseline",
+        "challenge_nonce": "fixed",
+        "content": "alpha",
+        "form": "encoded",
+        "provenance_operation": "pure_copy",
+        "resource_band": "over_budget",
+        "target_truth_relation": "aligned"
+      },
+      "cell_id": "91f97ead80e72f418ec3"
+    },
+    {
+      "assignment": {
+        "authority_version": "current_authorized",
+        "causal_mode": "baseline",
+        "challenge_nonce": "fresh",
+        "content": "alpha",
+        "form": "encoded",
+        "provenance_operation": "pure_copy",
+        "resource_band": "over_budget",
+        "target_truth_relation": "aligned"
+      },
+      "cell_id": "013403d4a12f129b2659"
+    },
+    {
+      "assignment": {
+        "authority_version": "revoked_or_stale",
+        "causal_mode": "baseline",
+        "challenge_nonce": "fixed",
+        "content": "alpha",
+        "form": "encoded",
+        "provenance_operation": "independent_acquisition",
+        "resource_band": "within_budget",
+        "target_truth_relation": "aligned"
+      },
+      "cell_id": "754ed25f1cdaede66115"
+    },
+    {
+      "assignment": {
+        "authority_version": "revoked_or_stale",
+        "causal_mode": "baseline",
+        "challenge_nonce": "fresh",
+        "content": "alpha",
+        "form": "encoded",
+        "provenance_operation": "independent_acquisition",
+        "resource_band": "within_budget",
+        "target_truth_relation": "aligned"
+      },
+      "cell_id": "5be08c2060a420dc85d7"
+    },
+    {
+      "assignment": {
+        "authority_version": "revoked_or_stale",
+        "causal_mode": "baseline",
+        "challenge_nonce": "fixed",
+        "content": "alpha",
+        "form": "encoded",
+        "provenance_operation": "independent_acquisition",
+        "resource_band": "over_budget",
+        "target_truth_relation": "aligned"
+      },
+      "cell_id": "224c95a770900bd3dd6c"
+    },
+    {
+      "assignment": {
+        "authority_version": "revoked_or_stale",
+        "causal_mode": "baseline",
+        "challenge_nonce": "fresh",
+        "content": "alpha",
+        "form": "encoded",
+        "provenance_operation": "independent_acquisition",
+        "resource_band": "over_budget",
+        "target_truth_relation": "aligned"
+      },
+      "cell_id": "2d7efc84763871a6a7f9"
+    },
+    {
+      "assignment": {
+        "authority_version": "revoked_or_stale",
+        "causal_mode": "baseline",
+        "challenge_nonce": "fixed",
+        "content": "alpha",
+        "form": "encoded",
+        "provenance_operation": "pure_copy",
+        "resource_band": "within_budget",
+        "target_truth_relation": "aligned"
+      },
+      "cell_id": "176ed9b8f0e0b177d930"
+    },
+    {
+      "assignment": {
+        "authority_version": "revoked_or_stale",
+        "causal_mode": "baseline",
+        "challenge_nonce": "fresh",
+        "content": "alpha",
+        "form": "encoded",
+        "provenance_operation": "pure_copy",
+        "resource_band": "within_budget",
+        "target_truth_relation": "aligned"
+      },
+      "cell_id": "965d42c96baba2fb0a2b"
+    },
+    {
+      "assignment": {
+        "authority_version": "revoked_or_stale",
+        "causal_mode": "baseline",
+        "challenge_nonce": "fixed",
+        "content": "alpha",
+        "form": "encoded",
+        "provenance_operation": "pure_copy",
+        "resource_band": "over_budget",
+        "target_truth_relation": "aligned"
+      },
+      "cell_id": "08f4de1001b03488919b"
+    },
+    {
+      "assignment": {
+        "authority_version": "revoked_or_stale",
+        "causal_mode": "baseline",
+        "challenge_nonce": "fresh",
+        "content": "alpha",
+        "form": "encoded",
+        "provenance_operation": "pure_copy",
+        "resource_band": "over_budget",
+        "target_truth_relation": "aligned"
+      },
+      "cell_id": "c19402ea734e3d2424a1"
+    },
+    {
+      "assignment": {
+        "authority_version": "current_authorized",
+        "causal_mode": "baseline",
+        "challenge_nonce": "fixed",
+        "content": "beta",
+        "form": "encoded",
+        "provenance_operation": "independent_acquisition",
+        "resource_band": "within_budget",
+        "target_truth_relation": "aligned"
+      },
+      "cell_id": "be6c4677b304274c4e80"
+    },
+    {
+      "assignment": {
+        "authority_version": "current_authorized",
+        "causal_mode": "baseline",
+        "challenge_nonce": "fresh",
+        "content": "beta",
+        "form": "encoded",
+        "provenance_operation": "independent_acquisition",
+        "resource_band": "within_budget",
+        "target_truth_relation": "aligned"
+      },
+      "cell_id": "f244e9ebc409196fe99e"
+    },
+    {
+      "assignment": {
+        "authority_version": "current_authorized",
+        "causal_mode": "baseline",
+        "challenge_nonce": "fixed",
+        "content": "beta",
+        "form": "encoded",
+        "provenance_operation": "independent_acquisition",
+        "resource_band": "over_budget",
+        "target_truth_relation": "aligned"
+      },
+      "cell_id": "d3d2a4a0d22deb1bacf9"
+    },
+    {
+      "assignment": {
+        "authority_version": "current_authorized",
+        "causal_mode": "baseline",
+        "challenge_nonce": "fresh",
+        "content": "beta",
+        "form": "encoded",
+        "provenance_operation": "independent_acquisition",
+        "resource_band": "over_budget",
+        "target_truth_relation": "aligned"
+      },
+      "cell_id": "fd446750521e244d7db3"
+    },
+    {
+      "assignment": {
+        "authority_version": "current_authorized",
+        "causal_mode": "baseline",
+        "challenge_nonce": "fixed",
+        "content": "beta",
+        "form": "encoded",
+        "provenance_operation": "pure_copy",
+        "resource_band": "within_budget",
+        "target_truth_relation": "aligned"
+      },
+      "cell_id": "a5e422d07df460763966"
+    },
+    {
+      "assignment": {
+        "authority_version": "current_authorized",
+        "causal_mode": "baseline",
+        "challenge_nonce": "fresh",
+        "content": "beta",
+        "form": "encoded",
+        "provenance_operation": "pure_copy",
+        "resource_band": "within_budget",
+        "target_truth_relation": "aligned"
+      },
+      "cell_id": "d63b3bb4adac9871b16e"
+    },
+    {
+      "assignment": {
+        "authority_version": "current_authorized",
+        "causal_mode": "baseline",
+        "challenge_nonce": "fixed",
+        "content": "beta",
+        "form": "encoded",
+        "provenance_operation": "pure_copy",
+        "resource_band": "over_budget",
+        "target_truth_relation": "aligned"
+      },
+      "cell_id": "dd44c4331aa8c9b76191"
+    },
+    {
+      "assignment": {
+        "authority_version": "current_authorized",
+        "causal_mode": "baseline",
+        "challenge_nonce": "fresh",
+        "content": "beta",
+        "form": "encoded",
+        "provenance_operation": "pure_copy",
+        "resource_band": "over_budget",
+        "target_truth_relation": "aligned"
+      },
+      "cell_id": "50f6b54ea10e3c6711ca"
+    },
+    {
+      "assignment": {
+        "authority_version": "revoked_or_stale",
+        "causal_mode": "baseline",
+        "challenge_nonce": "fixed",
+        "content": "beta",
+        "form": "encoded",
+        "provenance_operation": "independent_acquisition",
+        "resource_band": "within_budget",
+        "target_truth_relation": "aligned"
+      },
+      "cell_id": "25da86ecc655b54aff7c"
+    },
+    {
+      "assignment": {
+        "authority_version": "revoked_or_stale",
+        "causal_mode": "baseline",
+        "challenge_nonce": "fresh",
+        "content": "beta",
+        "form": "encoded",
+        "provenance_operation": "independent_acquisition",
+        "resource_band": "within_budget",
+        "target_truth_relation": "aligned"
+      },
+      "cell_id": "b9cbd6447665e12edec5"
+    },
+    {
+      "assignment": {
+        "authority_version": "revoked_or_stale",
+        "causal_mode": "baseline",
+        "challenge_nonce": "fixed",
+        "content": "beta",
+        "form": "encoded",
+        "provenance_operation": "independent_acquisition",
+        "resource_band": "over_budget",
+        "target_truth_relation": "aligned"
+      },
+      "cell_id": "95c8dcc8a31c6b32417b"
+    },
+    {
+      "assignment": {
+        "authority_version": "revoked_or_stale",
+        "causal_mode": "baseline",
+        "challenge_nonce": "fresh",
+        "content": "beta",
+        "form": "encoded",
+        "provenance_operation": "independent_acquisition",
+        "resource_band": "over_budget",
+        "target_truth_relation": "aligned"
+      },
+      "cell_id": "ee5777475b0a3e3262bf"
+    },
+    {
+      "assignment": {
+        "authority_version": "revoked_or_stale",
+        "causal_mode": "baseline",
+        "challenge_nonce": "fixed",
+        "content": "beta",
+        "form": "encoded",
+        "provenance_operation": "pure_copy",
+        "resource_band": "within_budget",
+        "target_truth_relation": "aligned"
+      },
+      "cell_id": "9fc3cb5da852200136ee"
+    },
+    {
+      "assignment": {
+        "authority_version": "revoked_or_stale",
+        "causal_mode": "baseline",
+        "challenge_nonce": "fresh",
+        "content": "beta",
+        "form": "encoded",
+        "provenance_operation": "pure_copy",
+        "resource_band": "within_budget",
+        "target_truth_relation": "aligned"
+      },
+      "cell_id": "b6dc852078b8bf3775f9"
+    },
+    {
+      "assignment": {
+        "authority_version": "revoked_or_stale",
+        "causal_mode": "baseline",
+        "challenge_nonce": "fixed",
+        "content": "beta",
+        "form": "encoded",
+        "provenance_operation": "pure_copy",
+        "resource_band": "over_budget",
+        "target_truth_relation": "aligned"
+      },
+      "cell_id": "66e0d13f957e84328d7c"
+    },
+    {
+      "assignment": {
+        "authority_version": "revoked_or_stale",
+        "causal_mode": "baseline",
+        "challenge_nonce": "fresh",
+        "content": "beta",
+        "form": "encoded",
+        "provenance_operation": "pure_copy",
+        "resource_band": "over_budget",
+        "target_truth_relation": "aligned"
+      },
+      "cell_id": "95f92147536f30f9980b"
+    },
+    {
+      "assignment": {
+        "authority_version": "current_authorized",
+        "causal_mode": "baseline",
+        "challenge_nonce": "fixed",
+        "content": "alpha",
+        "form": "plain",
+        "provenance_operation": "independent_acquisition",
+        "resource_band": "within_budget",
+        "target_truth_relation": "conflict"
+      },
+      "cell_id": "de52e04807c36012b759"
+    },
+    {
+      "assignment": {
+        "authority_version": "current_authorized",
+        "causal_mode": "baseline",
+        "challenge_nonce": "fresh",
+        "content": "alpha",
+        "form": "plain",
+        "provenance_operation": "independent_acquisition",
+        "resource_band": "within_budget",
+        "target_truth_relation": "conflict"
+      },
+      "cell_id": "54d1ccfe442dfb0eb23e"
+    },
+    {
+      "assignment": {
+        "authority_version": "current_authorized",
+        "causal_mode": "baseline",
+        "challenge_nonce": "fixed",
+        "content": "alpha",
+        "form": "plain",
+        "provenance_operation": "independent_acquisition",
+        "resource_band": "over_budget",
+        "target_truth_relation": "conflict"
+      },
+      "cell_id": "ad5a86cf9b78045fcb3a"
+    },
+    {
+      "assignment": {
+        "authority_version": "current_authorized",
+        "causal_mode": "baseline",
+        "challenge_nonce": "fresh",
+        "content": "alpha",
+        "form": "plain",
+        "provenance_operation": "independent_acquisition",
+        "resource_band": "over_budget",
+        "target_truth_relation": "conflict"
+      },
+      "cell_id": "baf175db969bb3a9b3f6"
+    },
+    {
+      "assignment": {
+        "authority_version": "current_authorized",
+        "causal_mode": "baseline",
+        "challenge_nonce": "fixed",
+        "content": "alpha",
+        "form": "plain",
+        "provenance_operation": "pure_copy",
+        "resource_band": "within_budget",
+        "target_truth_relation": "conflict"
+      },
+      "cell_id": "d611a72c721c42788d36"
+    },
+    {
+      "assignment": {
+        "authority_version": "current_authorized",
+        "causal_mode": "baseline",
+        "challenge_nonce": "fresh",
+        "content": "alpha",
+        "form": "plain",
+        "provenance_operation": "pure_copy",
+        "resource_band": "within_budget",
+        "target_truth_relation": "conflict"
+      },
+      "cell_id": "a7946709dbb4c969e304"
+    },
+    {
+      "assignment": {
+        "authority_version": "current_authorized",
+        "causal_mode": "baseline",
+        "challenge_nonce": "fixed",
+        "content": "alpha",
+        "form": "plain",
+        "provenance_operation": "pure_copy",
+        "resource_band": "over_budget",
+        "target_truth_relation": "conflict"
+      },
+      "cell_id": "47d5b3cbb69038bfc23f"
+    },
+    {
+      "assignment": {
+        "authority_version": "current_authorized",
+        "causal_mode": "baseline",
+        "challenge_nonce": "fresh",
+        "content": "alpha",
+        "form": "plain",
+        "provenance_operation": "pure_copy",
+        "resource_band": "over_budget",
+        "target_truth_relation": "conflict"
+      },
+      "cell_id": "643905bf8d6e5017a998"
+    },
+    {
+      "assignment": {
+        "authority_version": "revoked_or_stale",
+        "causal_mode": "baseline",
+        "challenge_nonce": "fixed",
+        "content": "alpha",
+        "form": "plain",
+        "provenance_operation": "independent_acquisition",
+        "resource_band": "within_budget",
+        "target_truth_relation": "conflict"
+      },
+      "cell_id": "5366d79ce9c8089ee138"
+    },
+    {
+      "assignment": {
+        "authority_version": "revoked_or_stale",
+        "causal_mode": "baseline",
+        "challenge_nonce": "fresh",
+        "content": "alpha",
+        "form": "plain",
+        "provenance_operation": "independent_acquisition",
+        "resource_band": "within_budget",
+        "target_truth_relation": "conflict"
+      },
+      "cell_id": "a64220039f7559fc49df"
+    },
+    {
+      "assignment": {
+        "authority_version": "revoked_or_stale",
+        "causal_mode": "baseline",
+        "challenge_nonce": "fixed",
+        "content": "alpha",
+        "form": "plain",
+        "provenance_operation": "independent_acquisition",
+        "resource_band": "over_budget",
+        "target_truth_relation": "conflict"
+      },
+      "cell_id": "69638bd97725913e5fff"
+    },
+    {
+      "assignment": {
+        "authority_version": "revoked_or_stale",
+        "causal_mode": "baseline",
+        "challenge_nonce": "fresh",
+        "content": "alpha",
+        "form": "plain",
+        "provenance_operation": "independent_acquisition",
+        "resource_band": "over_budget",
+        "target_truth_relation": "conflict"
+      },
+      "cell_id": "4d7fae6779af3546f8e7"
+    },
+    {
+      "assignment": {
+        "authority_version": "revoked_or_stale",
+        "causal_mode": "baseline",
+        "challenge_nonce": "fixed",
+        "content": "alpha",
+        "form": "plain",
+        "provenance_operation": "pure_copy",
+        "resource_band": "within_budget",
+        "target_truth_relation": "conflict"
+      },
+      "cell_id": "24507fbed3f085159a84"
+    },
+    {
+      "assignment": {
+        "authority_version": "revoked_or_stale",
+        "causal_mode": "baseline",
+        "challenge_nonce": "fresh",
+        "content": "alpha",
+        "form": "plain",
+        "provenance_operation": "pure_copy",
+        "resource_band": "within_budget",
+        "target_truth_relation": "conflict"
+      },
+      "cell_id": "e9efa219c5551a0b2f6b"
+    },
+    {
+      "assignment": {
+        "authority_version": "revoked_or_stale",
+        "causal_mode": "baseline",
+        "challenge_nonce": "fixed",
+        "content": "alpha",
+        "form": "plain",
+        "provenance_operation": "pure_copy",
+        "resource_band": "over_budget",
+        "target_truth_relation": "conflict"
+      },
+      "cell_id": "d20dbf715e201cc39b85"
+    },
+    {
+      "assignment": {
+        "authority_version": "revoked_or_stale",
+        "causal_mode": "baseline",
+        "challenge_nonce": "fresh",
+        "content": "alpha",
+        "form": "plain",
+        "provenance_operation": "pure_copy",
+        "resource_band": "over_budget",
+        "target_truth_relation": "conflict"
+      },
+      "cell_id": "239f892adcad9bb6c86b"
+    },
+    {
+      "assignment": {
+        "authority_version": "current_authorized",
+        "causal_mode": "baseline",
+        "challenge_nonce": "fixed",
+        "content": "beta",
+        "form": "plain",
+        "provenance_operation": "independent_acquisition",
+        "resource_band": "within_budget",
+        "target_truth_relation": "conflict"
+      },
+      "cell_id": "bca54772f27aabb979e4"
+    },
+    {
+      "assignment": {
+        "authority_version": "current_authorized",
+        "causal_mode": "baseline",
+        "challenge_nonce": "fresh",
+        "content": "beta",
+        "form": "plain",
+        "provenance_operation": "independent_acquisition",
+        "resource_band": "within_budget",
+        "target_truth_relation": "conflict"
+      },
+      "cell_id": "564a7247ea228cc2b8d5"
+    },
+    {
+      "assignment": {
+        "authority_version": "current_authorized",
+        "causal_mode": "baseline",
+        "challenge_nonce": "fixed",
+        "content": "beta",
+        "form": "plain",
+        "provenance_operation": "independent_acquisition",
+        "resource_band": "over_budget",
+        "target_truth_relation": "conflict"
+      },
+      "cell_id": "f1f81d9534ea6cac983d"
+    },
+    {
+      "assignment": {
+        "authority_version": "current_authorized",
+        "causal_mode": "baseline",
+        "challenge_nonce": "fresh",
+        "content": "beta",
+        "form": "plain",
+        "provenance_operation": "independent_acquisition",
+        "resource_band": "over_budget",
+        "target_truth_relation": "conflict"
+      },
+      "cell_id": "0c65ecca13a36dfb6d38"
+    },
+    {
+      "assignment": {
+        "authority_version": "current_authorized",
+        "causal_mode": "baseline",
+        "challenge_nonce": "fixed",
+        "content": "beta",
+        "form": "plain",
+        "provenance_operation": "pure_copy",
+        "resource_band": "within_budget",
+        "target_truth_relation": "conflict"
+      },
+      "cell_id": "c217e39021d5a27ee089"
+    },
+    {
+      "assignment": {
+        "authority_version": "current_authorized",
+        "causal_mode": "baseline",
+        "challenge_nonce": "fresh",
+        "content": "beta",
+        "form": "plain",
+        "provenance_operation": "pure_copy",
+        "resource_band": "within_budget",
+        "target_truth_relation": "conflict"
+      },
+      "cell_id": "02f93e6cc5e49b2a2694"
+    },
+    {
+      "assignment": {
+        "authority_version": "current_authorized",
+        "causal_mode": "baseline",
+        "challenge_nonce": "fixed",
+        "content": "beta",
+        "form": "plain",
+        "provenance_operation": "pure_copy",
+        "resource_band": "over_budget",
+        "target_truth_relation": "conflict"
+      },
+      "cell_id": "31a16d33f1c5758f8e0c"
+    },
+    {
+      "assignment": {
+        "authority_version": "current_authorized",
+        "causal_mode": "baseline",
+        "challenge_nonce": "fresh",
+        "content": "beta",
+        "form": "plain",
+        "provenance_operation": "pure_copy",
+        "resource_band": "over_budget",
+        "target_truth_relation": "conflict"
+      },
+      "cell_id": "5d2735d509b8c47625f4"
+    },
+    {
+      "assignment": {
+        "authority_version": "revoked_or_stale",
+        "causal_mode": "baseline",
+        "challenge_nonce": "fixed",
+        "content": "beta",
+        "form": "plain",
+        "provenance_operation": "independent_acquisition",
+        "resource_band": "within_budget",
+        "target_truth_relation": "conflict"
+      },
+      "cell_id": "4c6ee5433b7f53a67a6c"
+    },
+    {
+      "assignment": {
+        "authority_version": "revoked_or_stale",
+        "causal_mode": "baseline",
+        "challenge_nonce": "fresh",
+        "content": "beta",
+        "form": "plain",
+        "provenance_operation": "independent_acquisition",
+        "resource_band": "within_budget",
+        "target_truth_relation": "conflict"
+      },
+      "cell_id": "05b32321045c534d4743"
+    },
+    {
+      "assignment": {
+        "authority_version": "revoked_or_stale",
+        "causal_mode": "baseline",
+        "challenge_nonce": "fixed",
+        "content": "beta",
+        "form": "plain",
+        "provenance_operation": "independent_acquisition",
+        "resource_band": "over_budget",
+        "target_truth_relation": "conflict"
+      },
+      "cell_id": "fe5f046d0aede6a76a67"
+    },
+    {
+      "assignment": {
+        "authority_version": "revoked_or_stale",
+        "causal_mode": "baseline",
+        "challenge_nonce": "fresh",
+        "content": "beta",
+        "form": "plain",
+        "provenance_operation": "independent_acquisition",
+        "resource_band": "over_budget",
+        "target_truth_relation": "conflict"
+      },
+      "cell_id": "2c146e2d3e5cbeb7ea52"
+    },
+    {
+      "assignment": {
+        "authority_version": "revoked_or_stale",
+        "causal_mode": "baseline",
+        "challenge_nonce": "fixed",
+        "content": "beta",
+        "form": "plain",
+        "provenance_operation": "pure_copy",
+        "resource_band": "within_budget",
+        "target_truth_relation": "conflict"
+      },
+      "cell_id": "cf546d64a2fe69ca87b5"
+    },
+    {
+      "assignment": {
+        "authority_version": "revoked_or_stale",
+        "causal_mode": "baseline",
+        "challenge_nonce": "fresh",
+        "content": "beta",
+        "form": "plain",
+        "provenance_operation": "pure_copy",
+        "resource_band": "within_budget",
+        "target_truth_relation": "conflict"
+      },
+      "cell_id": "17a4477e4360aacdea6b"
+    },
+    {
+      "assignment": {
+        "authority_version": "revoked_or_stale",
+        "causal_mode": "baseline",
+        "challenge_nonce": "fixed",
+        "content": "beta",
+        "form": "plain",
+        "provenance_operation": "pure_copy",
+        "resource_band": "over_budget",
+        "target_truth_relation": "conflict"
+      },
+      "cell_id": "cb405cedf54dfeb3fffc"
+    },
+    {
+      "assignment": {
+        "authority_version": "revoked_or_stale",
+        "causal_mode": "baseline",
+        "challenge_nonce": "fresh",
+        "content": "beta",
+        "form": "plain",
+        "provenance_operation": "pure_copy",
+        "resource_band": "over_budget",
+        "target_truth_relation": "conflict"
+      },
+      "cell_id": "08cb3c394eb049341b93"
+    },
+    {
+      "assignment": {
+        "authority_version": "current_authorized",
+        "causal_mode": "baseline",
+        "challenge_nonce": "fixed",
+        "content": "alpha",
+        "form": "encoded",
+        "provenance_operation": "independent_acquisition",
+        "resource_band": "within_budget",
+        "target_truth_relation": "conflict"
+      },
+      "cell_id": "aa28200e44ae5fecbe22"
+    },
+    {
+      "assignment": {
+        "authority_version": "current_authorized",
+        "causal_mode": "baseline",
+        "challenge_nonce": "fresh",
+        "content": "alpha",
+        "form": "encoded",
+        "provenance_operation": "independent_acquisition",
+        "resource_band": "within_budget",
+        "target_truth_relation": "conflict"
+      },
+      "cell_id": "2612de5dbae660ea90f4"
+    },
+    {
+      "assignment": {
+        "authority_version": "current_authorized",
+        "causal_mode": "baseline",
+        "challenge_nonce": "fixed",
+        "content": "alpha",
+        "form": "encoded",
+        "provenance_operation": "independent_acquisition",
+        "resource_band": "over_budget",
+        "target_truth_relation": "conflict"
+      },
+      "cell_id": "96b698c1f246b6fd1107"
+    },
+    {
+      "assignment": {
+        "authority_version": "current_authorized",
+        "causal_mode": "baseline",
+        "challenge_nonce": "fresh",
+        "content": "alpha",
+        "form": "encoded",
+        "provenance_operation": "independent_acquisition",
+        "resource_band": "over_budget",
+        "target_truth_relation": "conflict"
+      },
+      "cell_id": "44d5dd1815f1c7a7ec9e"
+    },
+    {
+      "assignment": {
+        "authority_version": "current_authorized",
+        "causal_mode": "baseline",
+        "challenge_nonce": "fixed",
+        "content": "alpha",
+        "form": "encoded",
+        "provenance_operation": "pure_copy",
+        "resource_band": "within_budget",
+        "target_truth_relation": "conflict"
+      },
+      "cell_id": "381fd4dd0a1ed9c1f9b6"
+    },
+    {
+      "assignment": {
+        "authority_version": "current_authorized",
+        "causal_mode": "baseline",
+        "challenge_nonce": "fresh",
+        "content": "alpha",
+        "form": "encoded",
+        "provenance_operation": "pure_copy",
+        "resource_band": "within_budget",
+        "target_truth_relation": "conflict"
+      },
+      "cell_id": "028df2d51fbc340c64fb"
+    },
+    {
+      "assignment": {
+        "authority_version": "current_authorized",
+        "causal_mode": "baseline",
+        "challenge_nonce": "fixed",
+        "content": "alpha",
+        "form": "encoded",
+        "provenance_operation": "pure_copy",
+        "resource_band": "over_budget",
+        "target_truth_relation": "conflict"
+      },
+      "cell_id": "90974f15abd9d17888b9"
+    },
+    {
+      "assignment": {
+        "authority_version": "current_authorized",
+        "causal_mode": "baseline",
+        "challenge_nonce": "fresh",
+        "content": "alpha",
+        "form": "encoded",
+        "provenance_operation": "pure_copy",
+        "resource_band": "over_budget",
+        "target_truth_relation": "conflict"
+      },
+      "cell_id": "6e89e66ef24a7952b1d6"
+    },
+    {
+      "assignment": {
+        "authority_version": "revoked_or_stale",
+        "causal_mode": "baseline",
+        "challenge_nonce": "fixed",
+        "content": "alpha",
+        "form": "encoded",
+        "provenance_operation": "independent_acquisition",
+        "resource_band": "within_budget",
+        "target_truth_relation": "conflict"
+      },
+      "cell_id": "d02dd45776faebe5697c"
+    },
+    {
+      "assignment": {
+        "authority_version": "revoked_or_stale",
+        "causal_mode": "baseline",
+        "challenge_nonce": "fresh",
+        "content": "alpha",
+        "form": "encoded",
+        "provenance_operation": "independent_acquisition",
+        "resource_band": "within_budget",
+        "target_truth_relation": "conflict"
+      },
+      "cell_id": "7bc8d304a3a5248b727b"
+    },
+    {
+      "assignment": {
+        "authority_version": "revoked_or_stale",
+        "causal_mode": "baseline",
+        "challenge_nonce": "fixed",
+        "content": "alpha",
+        "form": "encoded",
+        "provenance_operation": "independent_acquisition",
+        "resource_band": "over_budget",
+        "target_truth_relation": "conflict"
+      },
+      "cell_id": "f84f5498f0ec92d6baec"
+    },
+    {
+      "assignment": {
+        "authority_version": "revoked_or_stale",
+        "causal_mode": "baseline",
+        "challenge_nonce": "fresh",
+        "content": "alpha",
+        "form": "encoded",
+        "provenance_operation": "independent_acquisition",
+        "resource_band": "over_budget",
+        "target_truth_relation": "conflict"
+      },
+      "cell_id": "b56662e9ff466704f8ba"
+    },
+    {
+      "assignment": {
+        "authority_version": "revoked_or_stale",
+        "causal_mode": "baseline",
+        "challenge_nonce": "fixed",
+        "content": "alpha",
+        "form": "encoded",
+        "provenance_operation": "pure_copy",
+        "resource_band": "within_budget",
+        "target_truth_relation": "conflict"
+      },
+      "cell_id": "5124a330c56adf3f7ffd"
+    },
+    {
+      "assignment": {
+        "authority_version": "revoked_or_stale",
+        "causal_mode": "baseline",
+        "challenge_nonce": "fresh",
+        "content": "alpha",
+        "form": "encoded",
+        "provenance_operation": "pure_copy",
+        "resource_band": "within_budget",
+        "target_truth_relation": "conflict"
+      },
+      "cell_id": "115e8282e93a59433d7d"
+    },
+    {
+      "assignment": {
+        "authority_version": "revoked_or_stale",
+        "causal_mode": "baseline",
+        "challenge_nonce": "fixed",
+        "content": "alpha",
+        "form": "encoded",
+        "provenance_operation": "pure_copy",
+        "resource_band": "over_budget",
+        "target_truth_relation": "conflict"
+      },
+      "cell_id": "8d3bafeb4ea328267600"
+    },
+    {
+      "assignment": {
+        "authority_version": "revoked_or_stale",
+        "causal_mode": "baseline",
+        "challenge_nonce": "fresh",
+        "content": "alpha",
+        "form": "encoded",
+        "provenance_operation": "pure_copy",
+        "resource_band": "over_budget",
+        "target_truth_relation": "conflict"
+      },
+      "cell_id": "8dad8530d0298cc55c4e"
+    },
+    {
+      "assignment": {
+        "authority_version": "current_authorized",
+        "causal_mode": "baseline",
+        "challenge_nonce": "fixed",
+        "content": "beta",
+        "form": "encoded",
+        "provenance_operation": "independent_acquisition",
+        "resource_band": "within_budget",
+        "target_truth_relation": "conflict"
+      },
+      "cell_id": "db803f98ab7968a62b2c"
+    },
+    {
+      "assignment": {
+        "authority_version": "current_authorized",
+        "causal_mode": "baseline",
+        "challenge_nonce": "fresh",
+        "content": "beta",
+        "form": "encoded",
+        "provenance_operation": "independent_acquisition",
+        "resource_band": "within_budget",
+        "target_truth_relation": "conflict"
+      },
+      "cell_id": "51d18e9b689b8ab93e33"
+    },
+    {
+      "assignment": {
+        "authority_version": "current_authorized",
+        "causal_mode": "baseline",
+        "challenge_nonce": "fixed",
+        "content": "beta",
+        "form": "encoded",
+        "provenance_operation": "independent_acquisition",
+        "resource_band": "over_budget",
+        "target_truth_relation": "conflict"
+      },
+      "cell_id": "0cafcbab7b2ff194bc2d"
+    },
+    {
+      "assignment": {
+        "authority_version": "current_authorized",
+        "causal_mode": "baseline",
+        "challenge_nonce": "fresh",
+        "content": "beta",
+        "form": "encoded",
+        "provenance_operation": "independent_acquisition",
+        "resource_band": "over_budget",
+        "target_truth_relation": "conflict"
+      },
+      "cell_id": "8d4bccfe9c587d732794"
+    },
+    {
+      "assignment": {
+        "authority_version": "current_authorized",
+        "causal_mode": "baseline",
+        "challenge_nonce": "fixed",
+        "content": "beta",
+        "form": "encoded",
+        "provenance_operation": "pure_copy",
+        "resource_band": "within_budget",
+        "target_truth_relation": "conflict"
+      },
+      "cell_id": "a507c3ae0062029ff567"
+    },
+    {
+      "assignment": {
+        "authority_version": "current_authorized",
+        "causal_mode": "baseline",
+        "challenge_nonce": "fresh",
+        "content": "beta",
+        "form": "encoded",
+        "provenance_operation": "pure_copy",
+        "resource_band": "within_budget",
+        "target_truth_relation": "conflict"
+      },
+      "cell_id": "f42c9b4036900933b72f"
+    },
+    {
+      "assignment": {
+        "authority_version": "current_authorized",
+        "causal_mode": "baseline",
+        "challenge_nonce": "fixed",
+        "content": "beta",
+        "form": "encoded",
+        "provenance_operation": "pure_copy",
+        "resource_band": "over_budget",
+        "target_truth_relation": "conflict"
+      },
+      "cell_id": "188435d223265856fb2d"
+    },
+    {
+      "assignment": {
+        "authority_version": "current_authorized",
+        "causal_mode": "baseline",
+        "challenge_nonce": "fresh",
+        "content": "beta",
+        "form": "encoded",
+        "provenance_operation": "pure_copy",
+        "resource_band": "over_budget",
+        "target_truth_relation": "conflict"
+      },
+      "cell_id": "d35c877b9d28e4d4127c"
+    },
+    {
+      "assignment": {
+        "authority_version": "revoked_or_stale",
+        "causal_mode": "baseline",
+        "challenge_nonce": "fixed",
+        "content": "beta",
+        "form": "encoded",
+        "provenance_operation": "independent_acquisition",
+        "resource_band": "within_budget",
+        "target_truth_relation": "conflict"
+      },
+      "cell_id": "996e647eed7f452d8c43"
+    },
+    {
+      "assignment": {
+        "authority_version": "revoked_or_stale",
+        "causal_mode": "baseline",
+        "challenge_nonce": "fresh",
+        "content": "beta",
+        "form": "encoded",
+        "provenance_operation": "independent_acquisition",
+        "resource_band": "within_budget",
+        "target_truth_relation": "conflict"
+      },
+      "cell_id": "d9f6c23dbf4747472545"
+    },
+    {
+      "assignment": {
+        "authority_version": "revoked_or_stale",
+        "causal_mode": "baseline",
+        "challenge_nonce": "fixed",
+        "content": "beta",
+        "form": "encoded",
+        "provenance_operation": "independent_acquisition",
+        "resource_band": "over_budget",
+        "target_truth_relation": "conflict"
+      },
+      "cell_id": "76356833dfb544f59c9b"
+    },
+    {
+      "assignment": {
+        "authority_version": "revoked_or_stale",
+        "causal_mode": "baseline",
+        "challenge_nonce": "fresh",
+        "content": "beta",
+        "form": "encoded",
+        "provenance_operation": "independent_acquisition",
+        "resource_band": "over_budget",
+        "target_truth_relation": "conflict"
+      },
+      "cell_id": "a666fc244b8ae6b06c64"
+    },
+    {
+      "assignment": {
+        "authority_version": "revoked_or_stale",
+        "causal_mode": "baseline",
+        "challenge_nonce": "fixed",
+        "content": "beta",
+        "form": "encoded",
+        "provenance_operation": "pure_copy",
+        "resource_band": "within_budget",
+        "target_truth_relation": "conflict"
+      },
+      "cell_id": "41ba8c854629f220463d"
+    },
+    {
+      "assignment": {
+        "authority_version": "revoked_or_stale",
+        "causal_mode": "baseline",
+        "challenge_nonce": "fresh",
+        "content": "beta",
+        "form": "encoded",
+        "provenance_operation": "pure_copy",
+        "resource_band": "within_budget",
+        "target_truth_relation": "conflict"
+      },
+      "cell_id": "de3ab9c4099d0cc09dd3"
+    },
+    {
+      "assignment": {
+        "authority_version": "revoked_or_stale",
+        "causal_mode": "baseline",
+        "challenge_nonce": "fixed",
+        "content": "beta",
+        "form": "encoded",
+        "provenance_operation": "pure_copy",
+        "resource_band": "over_budget",
+        "target_truth_relation": "conflict"
+      },
+      "cell_id": "5d6d11fa22626dcc93cd"
+    },
+    {
+      "assignment": {
+        "authority_version": "revoked_or_stale",
+        "causal_mode": "baseline",
+        "challenge_nonce": "fresh",
+        "content": "beta",
+        "form": "encoded",
+        "provenance_operation": "pure_copy",
+        "resource_band": "over_budget",
+        "target_truth_relation": "conflict"
+      },
+      "cell_id": "3231aa679b897306d976"
+    },
+    {
+      "assignment": {
+        "authority_version": "current_authorized",
+        "causal_mode": "cut",
+        "challenge_nonce": "fixed",
+        "content": "alpha",
+        "form": "plain",
+        "provenance_operation": "independent_acquisition",
+        "resource_band": "within_budget",
+        "target_truth_relation": "aligned"
+      },
+      "cell_id": "5c21f1d423033424b715"
+    },
+    {
+      "assignment": {
+        "authority_version": "current_authorized",
+        "causal_mode": "cut",
+        "challenge_nonce": "fresh",
+        "content": "alpha",
+        "form": "plain",
+        "provenance_operation": "independent_acquisition",
+        "resource_band": "within_budget",
+        "target_truth_relation": "aligned"
+      },
+      "cell_id": "92a1c969bef998506262"
+    },
+    {
+      "assignment": {
+        "authority_version": "current_authorized",
+        "causal_mode": "cut",
+        "challenge_nonce": "fixed",
+        "content": "alpha",
+        "form": "plain",
+        "provenance_operation": "independent_acquisition",
+        "resource_band": "over_budget",
+        "target_truth_relation": "aligned"
+      },
+      "cell_id": "28ae03ac2210ce4aca04"
+    },
+    {
+      "assignment": {
+        "authority_version": "current_authorized",
+        "causal_mode": "cut",
+        "challenge_nonce": "fresh",
+        "content": "alpha",
+        "form": "plain",
+        "provenance_operation": "independent_acquisition",
+        "resource_band": "over_budget",
+        "target_truth_relation": "aligned"
+      },
+      "cell_id": "5627f70ced80cf1ec6a8"
+    },
+    {
+      "assignment": {
+        "authority_version": "current_authorized",
+        "causal_mode": "cut",
+        "challenge_nonce": "fixed",
+        "content": "alpha",
+        "form": "plain",
+        "provenance_operation": "pure_copy",
+        "resource_band": "within_budget",
+        "target_truth_relation": "aligned"
+      },
+      "cell_id": "3d954a8fe8b25874ffcd"
+    },
+    {
+      "assignment": {
+        "authority_version": "current_authorized",
+        "causal_mode": "cut",
+        "challenge_nonce": "fresh",
+        "content": "alpha",
+        "form": "plain",
+        "provenance_operation": "pure_copy",
+        "resource_band": "within_budget",
+        "target_truth_relation": "aligned"
+      },
+      "cell_id": "96c39808f37dc4edef46"
+    },
+    {
+      "assignment": {
+        "authority_version": "current_authorized",
+        "causal_mode": "cut",
+        "challenge_nonce": "fixed",
+        "content": "alpha",
+        "form": "plain",
+        "provenance_operation": "pure_copy",
+        "resource_band": "over_budget",
+        "target_truth_relation": "aligned"
+      },
+      "cell_id": "64757435a54e6b72f0cb"
+    },
+    {
+      "assignment": {
+        "authority_version": "current_authorized",
+        "causal_mode": "cut",
+        "challenge_nonce": "fresh",
+        "content": "alpha",
+        "form": "plain",
+        "provenance_operation": "pure_copy",
+        "resource_band": "over_budget",
+        "target_truth_relation": "aligned"
+      },
+      "cell_id": "6bcc5a1d63f0d7898997"
+    },
+    {
+      "assignment": {
+        "authority_version": "revoked_or_stale",
+        "causal_mode": "cut",
+        "challenge_nonce": "fixed",
+        "content": "alpha",
+        "form": "plain",
+        "provenance_operation": "independent_acquisition",
+        "resource_band": "within_budget",
+        "target_truth_relation": "aligned"
+      },
+      "cell_id": "8ecb1cc3b57d3690effb"
+    },
+    {
+      "assignment": {
+        "authority_version": "revoked_or_stale",
+        "causal_mode": "cut",
+        "challenge_nonce": "fresh",
+        "content": "alpha",
+        "form": "plain",
+        "provenance_operation": "independent_acquisition",
+        "resource_band": "within_budget",
+        "target_truth_relation": "aligned"
+      },
+      "cell_id": "a592c1df5f55c3c8b356"
+    },
+    {
+      "assignment": {
+        "authority_version": "revoked_or_stale",
+        "causal_mode": "cut",
+        "challenge_nonce": "fixed",
+        "content": "alpha",
+        "form": "plain",
+        "provenance_operation": "independent_acquisition",
+        "resource_band": "over_budget",
+        "target_truth_relation": "aligned"
+      },
+      "cell_id": "eb5105c2dd75d4a8a8a3"
+    },
+    {
+      "assignment": {
+        "authority_version": "revoked_or_stale",
+        "causal_mode": "cut",
+        "challenge_nonce": "fresh",
+        "content": "alpha",
+        "form": "plain",
+        "provenance_operation": "independent_acquisition",
+        "resource_band": "over_budget",
+        "target_truth_relation": "aligned"
+      },
+      "cell_id": "6089b026062e69caa37e"
+    },
+    {
+      "assignment": {
+        "authority_version": "revoked_or_stale",
+        "causal_mode": "cut",
+        "challenge_nonce": "fixed",
+        "content": "alpha",
+        "form": "plain",
+        "provenance_operation": "pure_copy",
+        "resource_band": "within_budget",
+        "target_truth_relation": "aligned"
+      },
+      "cell_id": "2dd25d9d10bd9f3c7e3f"
+    },
+    {
+      "assignment": {
+        "authority_version": "revoked_or_stale",
+        "causal_mode": "cut",
+        "challenge_nonce": "fresh",
+        "content": "alpha",
+        "form": "plain",
+        "provenance_operation": "pure_copy",
+        "resource_band": "within_budget",
+        "target_truth_relation": "aligned"
+      },
+      "cell_id": "eacb41d91226ed6620f0"
+    },
+    {
+      "assignment": {
+        "authority_version": "revoked_or_stale",
+        "causal_mode": "cut",
+        "challenge_nonce": "fixed",
+        "content": "alpha",
+        "form": "plain",
+        "provenance_operation": "pure_copy",
+        "resource_band": "over_budget",
+        "target_truth_relation": "aligned"
+      },
+      "cell_id": "b2852d5d3085559172ae"
+    },
+    {
+      "assignment": {
+        "authority_version": "revoked_or_stale",
+        "causal_mode": "cut",
+        "challenge_nonce": "fresh",
+        "content": "alpha",
+        "form": "plain",
+        "provenance_operation": "pure_copy",
+        "resource_band": "over_budget",
+        "target_truth_relation": "aligned"
+      },
+      "cell_id": "67da4c291a4ce8a8f38d"
+    },
+    {
+      "assignment": {
+        "authority_version": "current_authorized",
+        "causal_mode": "cut",
+        "challenge_nonce": "fixed",
+        "content": "beta",
+        "form": "plain",
+        "provenance_operation": "independent_acquisition",
+        "resource_band": "within_budget",
+        "target_truth_relation": "aligned"
+      },
+      "cell_id": "f50787fff097a137790f"
+    },
+    {
+      "assignment": {
+        "authority_version": "current_authorized",
+        "causal_mode": "cut",
+        "challenge_nonce": "fresh",
+        "content": "beta",
+        "form": "plain",
+        "provenance_operation": "independent_acquisition",
+        "resource_band": "within_budget",
+        "target_truth_relation": "aligned"
+      },
+      "cell_id": "4b35e47cf2ccd179878c"
+    },
+    {
+      "assignment": {
+        "authority_version": "current_authorized",
+        "causal_mode": "cut",
+        "challenge_nonce": "fixed",
+        "content": "beta",
+        "form": "plain",
+        "provenance_operation": "independent_acquisition",
+        "resource_band": "over_budget",
+        "target_truth_relation": "aligned"
+      },
+      "cell_id": "5377c175b379a9390dbd"
+    },
+    {
+      "assignment": {
+        "authority_version": "current_authorized",
+        "causal_mode": "cut",
+        "challenge_nonce": "fresh",
+        "content": "beta",
+        "form": "plain",
+        "provenance_operation": "independent_acquisition",
+        "resource_band": "over_budget",
+        "target_truth_relation": "aligned"
+      },
+      "cell_id": "fe185c1b5095c17a0a7f"
+    },
+    {
+      "assignment": {
+        "authority_version": "current_authorized",
+        "causal_mode": "cut",
+        "challenge_nonce": "fixed",
+        "content": "beta",
+        "form": "plain",
+        "provenance_operation": "pure_copy",
+        "resource_band": "within_budget",
+        "target_truth_relation": "aligned"
+      },
+      "cell_id": "c914781b3f968309d5d4"
+    },
+    {
+      "assignment": {
+        "authority_version": "current_authorized",
+        "causal_mode": "cut",
+        "challenge_nonce": "fresh",
+        "content": "beta",
+        "form": "plain",
+        "provenance_operation": "pure_copy",
+        "resource_band": "within_budget",
+        "target_truth_relation": "aligned"
+      },
+      "cell_id": "e9b7c381e52e7844df39"
+    },
+    {
+      "assignment": {
+        "authority_version": "current_authorized",
+        "causal_mode": "cut",
+        "challenge_nonce": "fixed",
+        "content": "beta",
+        "form": "plain",
+        "provenance_operation": "pure_copy",
+        "resource_band": "over_budget",
+        "target_truth_relation": "aligned"
+      },
+      "cell_id": "177b961bd0f18a8e447e"
+    },
+    {
+      "assignment": {
+        "authority_version": "current_authorized",
+        "causal_mode": "cut",
+        "challenge_nonce": "fresh",
+        "content": "beta",
+        "form": "plain",
+        "provenance_operation": "pure_copy",
+        "resource_band": "over_budget",
+        "target_truth_relation": "aligned"
+      },
+      "cell_id": "1e60dba1142ea5ac4ca4"
+    },
+    {
+      "assignment": {
+        "authority_version": "revoked_or_stale",
+        "causal_mode": "cut",
+        "challenge_nonce": "fixed",
+        "content": "beta",
+        "form": "plain",
+        "provenance_operation": "independent_acquisition",
+        "resource_band": "within_budget",
+        "target_truth_relation": "aligned"
+      },
+      "cell_id": "3dc9f3b2022ae4bb6f7a"
+    },
+    {
+      "assignment": {
+        "authority_version": "revoked_or_stale",
+        "causal_mode": "cut",
+        "challenge_nonce": "fresh",
+        "content": "beta",
+        "form": "plain",
+        "provenance_operation": "independent_acquisition",
+        "resource_band": "within_budget",
+        "target_truth_relation": "aligned"
+      },
+      "cell_id": "560dc7dc58cb64a43e06"
+    },
+    {
+      "assignment": {
+        "authority_version": "revoked_or_stale",
+        "causal_mode": "cut",
+        "challenge_nonce": "fixed",
+        "content": "beta",
+        "form": "plain",
+        "provenance_operation": "independent_acquisition",
+        "resource_band": "over_budget",
+        "target_truth_relation": "aligned"
+      },
+      "cell_id": "dcb083c53656869a36f5"
+    },
+    {
+      "assignment": {
+        "authority_version": "revoked_or_stale",
+        "causal_mode": "cut",
+        "challenge_nonce": "fresh",
+        "content": "beta",
+        "form": "plain",
+        "provenance_operation": "independent_acquisition",
+        "resource_band": "over_budget",
+        "target_truth_relation": "aligned"
+      },
+      "cell_id": "dae0c6274d4439b5799c"
+    },
+    {
+      "assignment": {
+        "authority_version": "revoked_or_stale",
+        "causal_mode": "cut",
+        "challenge_nonce": "fixed",
+        "content": "beta",
+        "form": "plain",
+        "provenance_operation": "pure_copy",
+        "resource_band": "within_budget",
+        "target_truth_relation": "aligned"
+      },
+      "cell_id": "2dd0cb9bd8f2f7e2c583"
+    },
+    {
+      "assignment": {
+        "authority_version": "revoked_or_stale",
+        "causal_mode": "cut",
+        "challenge_nonce": "fresh",
+        "content": "beta",
+        "form": "plain",
+        "provenance_operation": "pure_copy",
+        "resource_band": "within_budget",
+        "target_truth_relation": "aligned"
+      },
+      "cell_id": "261d9f4224f4b5f58f1e"
+    },
+    {
+      "assignment": {
+        "authority_version": "revoked_or_stale",
+        "causal_mode": "cut",
+        "challenge_nonce": "fixed",
+        "content": "beta",
+        "form": "plain",
+        "provenance_operation": "pure_copy",
+        "resource_band": "over_budget",
+        "target_truth_relation": "aligned"
+      },
+      "cell_id": "11bda740e64d8f3fffbd"
+    },
+    {
+      "assignment": {
+        "authority_version": "revoked_or_stale",
+        "causal_mode": "cut",
+        "challenge_nonce": "fresh",
+        "content": "beta",
+        "form": "plain",
+        "provenance_operation": "pure_copy",
+        "resource_band": "over_budget",
+        "target_truth_relation": "aligned"
+      },
+      "cell_id": "a2d8765d13221dabdf83"
+    },
+    {
+      "assignment": {
+        "authority_version": "current_authorized",
+        "causal_mode": "cut",
+        "challenge_nonce": "fixed",
+        "content": "alpha",
+        "form": "encoded",
+        "provenance_operation": "independent_acquisition",
+        "resource_band": "within_budget",
+        "target_truth_relation": "aligned"
+      },
+      "cell_id": "6bcc9451f3270f249d02"
+    },
+    {
+      "assignment": {
+        "authority_version": "current_authorized",
+        "causal_mode": "cut",
+        "challenge_nonce": "fresh",
+        "content": "alpha",
+        "form": "encoded",
+        "provenance_operation": "independent_acquisition",
+        "resource_band": "within_budget",
+        "target_truth_relation": "aligned"
+      },
+      "cell_id": "22f112df9e7800a920f2"
+    },
+    {
+      "assignment": {
+        "authority_version": "current_authorized",
+        "causal_mode": "cut",
+        "challenge_nonce": "fixed",
+        "content": "alpha",
+        "form": "encoded",
+        "provenance_operation": "independent_acquisition",
+        "resource_band": "over_budget",
+        "target_truth_relation": "aligned"
+      },
+      "cell_id": "0e4eee45f0d78a6d6fc5"
+    },
+    {
+      "assignment": {
+        "authority_version": "current_authorized",
+        "causal_mode": "cut",
+        "challenge_nonce": "fresh",
+        "content": "alpha",
+        "form": "encoded",
+        "provenance_operation": "independent_acquisition",
+        "resource_band": "over_budget",
+        "target_truth_relation": "aligned"
+      },
+      "cell_id": "73bf77fe3535b1f14c08"
+    },
+    {
+      "assignment": {
+        "authority_version": "current_authorized",
+        "causal_mode": "cut",
+        "challenge_nonce": "fixed",
+        "content": "alpha",
+        "form": "encoded",
+        "provenance_operation": "pure_copy",
+        "resource_band": "within_budget",
+        "target_truth_relation": "aligned"
+      },
+      "cell_id": "570aaf511d5a5aaf73ad"
+    },
+    {
+      "assignment": {
+        "authority_version": "current_authorized",
+        "causal_mode": "cut",
+        "challenge_nonce": "fresh",
+        "content": "alpha",
+        "form": "encoded",
+        "provenance_operation": "pure_copy",
+        "resource_band": "within_budget",
+        "target_truth_relation": "aligned"
+      },
+      "cell_id": "ea309708ebbad4265cbc"
+    },
+    {
+      "assignment": {
+        "authority_version": "current_authorized",
+        "causal_mode": "cut",
+        "challenge_nonce": "fixed",
+        "content": "alpha",
+        "form": "encoded",
+        "provenance_operation": "pure_copy",
+        "resource_band": "over_budget",
+        "target_truth_relation": "aligned"
+      },
+      "cell_id": "db4739aa880cfd598a23"
+    },
+    {
+      "assignment": {
+        "authority_version": "current_authorized",
+        "causal_mode": "cut",
+        "challenge_nonce": "fresh",
+        "content": "alpha",
+        "form": "encoded",
+        "provenance_operation": "pure_copy",
+        "resource_band": "over_budget",
+        "target_truth_relation": "aligned"
+      },
+      "cell_id": "e4c5e5f87531de7ad6e1"
+    },
+    {
+      "assignment": {
+        "authority_version": "revoked_or_stale",
+        "causal_mode": "cut",
+        "challenge_nonce": "fixed",
+        "content": "alpha",
+        "form": "encoded",
+        "provenance_operation": "independent_acquisition",
+        "resource_band": "within_budget",
+        "target_truth_relation": "aligned"
+      },
+      "cell_id": "3476c3159fcb60244f96"
+    },
+    {
+      "assignment": {
+        "authority_version": "revoked_or_stale",
+        "causal_mode": "cut",
+        "challenge_nonce": "fresh",
+        "content": "alpha",
+        "form": "encoded",
+        "provenance_operation": "independent_acquisition",
+        "resource_band": "within_budget",
+        "target_truth_relation": "aligned"
+      },
+      "cell_id": "7586bd7058d67bd6e067"
+    },
+    {
+      "assignment": {
+        "authority_version": "revoked_or_stale",
+        "causal_mode": "cut",
+        "challenge_nonce": "fixed",
+        "content": "alpha",
+        "form": "encoded",
+        "provenance_operation": "independent_acquisition",
+        "resource_band": "over_budget",
+        "target_truth_relation": "aligned"
+      },
+      "cell_id": "1103d23638b7e5427198"
+    },
+    {
+      "assignment": {
+        "authority_version": "revoked_or_stale",
+        "causal_mode": "cut",
+        "challenge_nonce": "fresh",
+        "content": "alpha",
+        "form": "encoded",
+        "provenance_operation": "independent_acquisition",
+        "resource_band": "over_budget",
+        "target_truth_relation": "aligned"
+      },
+      "cell_id": "8192267edbe04bd49d97"
+    },
+    {
+      "assignment": {
+        "authority_version": "revoked_or_stale",
+        "causal_mode": "cut",
+        "challenge_nonce": "fixed",
+        "content": "alpha",
+        "form": "encoded",
+        "provenance_operation": "pure_copy",
+        "resource_band": "within_budget",
+        "target_truth_relation": "aligned"
+      },
+      "cell_id": "38c9fbfdb222b49c62dd"
+    },
+    {
+      "assignment": {
+        "authority_version": "revoked_or_stale",
+        "causal_mode": "cut",
+        "challenge_nonce": "fresh",
+        "content": "alpha",
+        "form": "encoded",
+        "provenance_operation": "pure_copy",
+        "resource_band": "within_budget",
+        "target_truth_relation": "aligned"
+      },
+      "cell_id": "d27ae06e211b6acfdb1c"
+    },
+    {
+      "assignment": {
+        "authority_version": "revoked_or_stale",
+        "causal_mode": "cut",
+        "challenge_nonce": "fixed",
+        "content": "alpha",
+        "form": "encoded",
+        "provenance_operation": "pure_copy",
+        "resource_band": "over_budget",
+        "target_truth_relation": "aligned"
+      },
+      "cell_id": "5fdb8e98ec803170e15d"
+    },
+    {
+      "assignment": {
+        "authority_version": "revoked_or_stale",
+        "causal_mode": "cut",
+        "challenge_nonce": "fresh",
+        "content": "alpha",
+        "form": "encoded",
+        "provenance_operation": "pure_copy",
+        "resource_band": "over_budget",
+        "target_truth_relation": "aligned"
+      },
+      "cell_id": "4da0037d354b094fd549"
+    },
+    {
+      "assignment": {
+        "authority_version": "current_authorized",
+        "causal_mode": "cut",
+        "challenge_nonce": "fixed",
+        "content": "beta",
+        "form": "encoded",
+        "provenance_operation": "independent_acquisition",
+        "resource_band": "within_budget",
+        "target_truth_relation": "aligned"
+      },
+      "cell_id": "531204ba4dbd9f465f5f"
+    },
+    {
+      "assignment": {
+        "authority_version": "current_authorized",
+        "causal_mode": "cut",
+        "challenge_nonce": "fresh",
+        "content": "beta",
+        "form": "encoded",
+        "provenance_operation": "independent_acquisition",
+        "resource_band": "within_budget",
+        "target_truth_relation": "aligned"
+      },
+      "cell_id": "d2a57b09a73efc5cb022"
+    },
+    {
+      "assignment": {
+        "authority_version": "current_authorized",
+        "causal_mode": "cut",
+        "challenge_nonce": "fixed",
+        "content": "beta",
+        "form": "encoded",
+        "provenance_operation": "independent_acquisition",
+        "resource_band": "over_budget",
+        "target_truth_relation": "aligned"
+      },
+      "cell_id": "22798cef10f4d6501b7a"
+    },
+    {
+      "assignment": {
+        "authority_version": "current_authorized",
+        "causal_mode": "cut",
+        "challenge_nonce": "fresh",
+        "content": "beta",
+        "form": "encoded",
+        "provenance_operation": "independent_acquisition",
+        "resource_band": "over_budget",
+        "target_truth_relation": "aligned"
+      },
+      "cell_id": "7bf691534f17b19f4092"
+    },
+    {
+      "assignment": {
+        "authority_version": "current_authorized",
+        "causal_mode": "cut",
+        "challenge_nonce": "fixed",
+        "content": "beta",
+        "form": "encoded",
+        "provenance_operation": "pure_copy",
+        "resource_band": "within_budget",
+        "target_truth_relation": "aligned"
+      },
+      "cell_id": "44d7b64057b35569a7c0"
+    },
+    {
+      "assignment": {
+        "authority_version": "current_authorized",
+        "causal_mode": "cut",
+        "challenge_nonce": "fresh",
+        "content": "beta",
+        "form": "encoded",
+        "provenance_operation": "pure_copy",
+        "resource_band": "within_budget",
+        "target_truth_relation": "aligned"
+      },
+      "cell_id": "81264ac147910524d448"
+    },
+    {
+      "assignment": {
+        "authority_version": "current_authorized",
+        "causal_mode": "cut",
+        "challenge_nonce": "fixed",
+        "content": "beta",
+        "form": "encoded",
+        "provenance_operation": "pure_copy",
+        "resource_band": "over_budget",
+        "target_truth_relation": "aligned"
+      },
+      "cell_id": "87e75f67cd026c6ac4f1"
+    },
+    {
+      "assignment": {
+        "authority_version": "current_authorized",
+        "causal_mode": "cut",
+        "challenge_nonce": "fresh",
+        "content": "beta",
+        "form": "encoded",
+        "provenance_operation": "pure_copy",
+        "resource_band": "over_budget",
+        "target_truth_relation": "aligned"
+      },
+      "cell_id": "f6600711c59d5195216c"
+    },
+    {
+      "assignment": {
+        "authority_version": "revoked_or_stale",
+        "causal_mode": "cut",
+        "challenge_nonce": "fixed",
+        "content": "beta",
+        "form": "encoded",
+        "provenance_operation": "independent_acquisition",
+        "resource_band": "within_budget",
+        "target_truth_relation": "aligned"
+      },
+      "cell_id": "990f8510383f5ecb354d"
+    },
+    {
+      "assignment": {
+        "authority_version": "revoked_or_stale",
+        "causal_mode": "cut",
+        "challenge_nonce": "fresh",
+        "content": "beta",
+        "form": "encoded",
+        "provenance_operation": "independent_acquisition",
+        "resource_band": "within_budget",
+        "target_truth_relation": "aligned"
+      },
+      "cell_id": "6003753bbd00e8fd4d2d"
+    },
+    {
+      "assignment": {
+        "authority_version": "revoked_or_stale",
+        "causal_mode": "cut",
+        "challenge_nonce": "fixed",
+        "content": "beta",
+        "form": "encoded",
+        "provenance_operation": "independent_acquisition",
+        "resource_band": "over_budget",
+        "target_truth_relation": "aligned"
+      },
+      "cell_id": "3e8ef5c1e296a0c570a1"
+    },
+    {
+      "assignment": {
+        "authority_version": "revoked_or_stale",
+        "causal_mode": "cut",
+        "challenge_nonce": "fresh",
+        "content": "beta",
+        "form": "encoded",
+        "provenance_operation": "independent_acquisition",
+        "resource_band": "over_budget",
+        "target_truth_relation": "aligned"
+      },
+      "cell_id": "d40674a155110c5dbba9"
+    },
+    {
+      "assignment": {
+        "authority_version": "revoked_or_stale",
+        "causal_mode": "cut",
+        "challenge_nonce": "fixed",
+        "content": "beta",
+        "form": "encoded",
+        "provenance_operation": "pure_copy",
+        "resource_band": "within_budget",
+        "target_truth_relation": "aligned"
+      },
+      "cell_id": "cd5b9d9bb7ca4262a6d8"
+    },
+    {
+      "assignment": {
+        "authority_version": "revoked_or_stale",
+        "causal_mode": "cut",
+        "challenge_nonce": "fresh",
+        "content": "beta",
+        "form": "encoded",
+        "provenance_operation": "pure_copy",
+        "resource_band": "within_budget",
+        "target_truth_relation": "aligned"
+      },
+      "cell_id": "e3a670ccb1f701c30330"
+    },
+    {
+      "assignment": {
+        "authority_version": "revoked_or_stale",
+        "causal_mode": "cut",
+        "challenge_nonce": "fixed",
+        "content": "beta",
+        "form": "encoded",
+        "provenance_operation": "pure_copy",
+        "resource_band": "over_budget",
+        "target_truth_relation": "aligned"
+      },
+      "cell_id": "37a0047ce25be3daa9f6"
+    },
+    {
+      "assignment": {
+        "authority_version": "revoked_or_stale",
+        "causal_mode": "cut",
+        "challenge_nonce": "fresh",
+        "content": "beta",
+        "form": "encoded",
+        "provenance_operation": "pure_copy",
+        "resource_band": "over_budget",
+        "target_truth_relation": "aligned"
+      },
+      "cell_id": "a22aff83fed8a18d5251"
+    },
+    {
+      "assignment": {
+        "authority_version": "current_authorized",
+        "causal_mode": "cut",
+        "challenge_nonce": "fixed",
+        "content": "alpha",
+        "form": "plain",
+        "provenance_operation": "independent_acquisition",
+        "resource_band": "within_budget",
+        "target_truth_relation": "conflict"
+      },
+      "cell_id": "6338652f0be78a33c41e"
+    },
+    {
+      "assignment": {
+        "authority_version": "current_authorized",
+        "causal_mode": "cut",
+        "challenge_nonce": "fresh",
+        "content": "alpha",
+        "form": "plain",
+        "provenance_operation": "independent_acquisition",
+        "resource_band": "within_budget",
+        "target_truth_relation": "conflict"
+      },
+      "cell_id": "0455d5e5ad3525df0929"
+    },
+    {
+      "assignment": {
+        "authority_version": "current_authorized",
+        "causal_mode": "cut",
+        "challenge_nonce": "fixed",
+        "content": "alpha",
+        "form": "plain",
+        "provenance_operation": "independent_acquisition",
+        "resource_band": "over_budget",
+        "target_truth_relation": "conflict"
+      },
+      "cell_id": "6a5d8f92322fbcb9e48f"
+    },
+    {
+      "assignment": {
+        "authority_version": "current_authorized",
+        "causal_mode": "cut",
+        "challenge_nonce": "fresh",
+        "content": "alpha",
+        "form": "plain",
+        "provenance_operation": "independent_acquisition",
+        "resource_band": "over_budget",
+        "target_truth_relation": "conflict"
+      },
+      "cell_id": "7e1b35a40ca8e10c856c"
+    },
+    {
+      "assignment": {
+        "authority_version": "current_authorized",
+        "causal_mode": "cut",
+        "challenge_nonce": "fixed",
+        "content": "alpha",
+        "form": "plain",
+        "provenance_operation": "pure_copy",
+        "resource_band": "within_budget",
+        "target_truth_relation": "conflict"
+      },
+      "cell_id": "00bb576e0d48a562f0a1"
+    },
+    {
+      "assignment": {
+        "authority_version": "current_authorized",
+        "causal_mode": "cut",
+        "challenge_nonce": "fresh",
+        "content": "alpha",
+        "form": "plain",
+        "provenance_operation": "pure_copy",
+        "resource_band": "within_budget",
+        "target_truth_relation": "conflict"
+      },
+      "cell_id": "f89d3e17cddd19e92b47"
+    },
+    {
+      "assignment": {
+        "authority_version": "current_authorized",
+        "causal_mode": "cut",
+        "challenge_nonce": "fixed",
+        "content": "alpha",
+        "form": "plain",
+        "provenance_operation": "pure_copy",
+        "resource_band": "over_budget",
+        "target_truth_relation": "conflict"
+      },
+      "cell_id": "ba2324aaed8e5f389e8a"
+    },
+    {
+      "assignment": {
+        "authority_version": "current_authorized",
+        "causal_mode": "cut",
+        "challenge_nonce": "fresh",
+        "content": "alpha",
+        "form": "plain",
+        "provenance_operation": "pure_copy",
+        "resource_band": "over_budget",
+        "target_truth_relation": "conflict"
+      },
+      "cell_id": "ece443411e1281223b06"
+    },
+    {
+      "assignment": {
+        "authority_version": "revoked_or_stale",
+        "causal_mode": "cut",
+        "challenge_nonce": "fixed",
+        "content": "alpha",
+        "form": "plain",
+        "provenance_operation": "independent_acquisition",
+        "resource_band": "within_budget",
+        "target_truth_relation": "conflict"
+      },
+      "cell_id": "2de01301022f1c13646a"
+    },
+    {
+      "assignment": {
+        "authority_version": "revoked_or_stale",
+        "causal_mode": "cut",
+        "challenge_nonce": "fresh",
+        "content": "alpha",
+        "form": "plain",
+        "provenance_operation": "independent_acquisition",
+        "resource_band": "within_budget",
+        "target_truth_relation": "conflict"
+      },
+      "cell_id": "2d87346015675e9a8f08"
+    },
+    {
+      "assignment": {
+        "authority_version": "revoked_or_stale",
+        "causal_mode": "cut",
+        "challenge_nonce": "fixed",
+        "content": "alpha",
+        "form": "plain",
+        "provenance_operation": "independent_acquisition",
+        "resource_band": "over_budget",
+        "target_truth_relation": "conflict"
+      },
+      "cell_id": "f44de656a361882d9ce9"
+    },
+    {
+      "assignment": {
+        "authority_version": "revoked_or_stale",
+        "causal_mode": "cut",
+        "challenge_nonce": "fresh",
+        "content": "alpha",
+        "form": "plain",
+        "provenance_operation": "independent_acquisition",
+        "resource_band": "over_budget",
+        "target_truth_relation": "conflict"
+      },
+      "cell_id": "70575902313191e30cd7"
+    },
+    {
+      "assignment": {
+        "authority_version": "revoked_or_stale",
+        "causal_mode": "cut",
+        "challenge_nonce": "fixed",
+        "content": "alpha",
+        "form": "plain",
+        "provenance_operation": "pure_copy",
+        "resource_band": "within_budget",
+        "target_truth_relation": "conflict"
+      },
+      "cell_id": "2b8c86fbcdd7bd875b9e"
+    },
+    {
+      "assignment": {
+        "authority_version": "revoked_or_stale",
+        "causal_mode": "cut",
+        "challenge_nonce": "fresh",
+        "content": "alpha",
+        "form": "plain",
+        "provenance_operation": "pure_copy",
+        "resource_band": "within_budget",
+        "target_truth_relation": "conflict"
+      },
+      "cell_id": "60dd31ea4c54b6b5f3b4"
+    },
+    {
+      "assignment": {
+        "authority_version": "revoked_or_stale",
+        "causal_mode": "cut",
+        "challenge_nonce": "fixed",
+        "content": "alpha",
+        "form": "plain",
+        "provenance_operation": "pure_copy",
+        "resource_band": "over_budget",
+        "target_truth_relation": "conflict"
+      },
+      "cell_id": "f82b47c7e05cc2803862"
+    },
+    {
+      "assignment": {
+        "authority_version": "revoked_or_stale",
+        "causal_mode": "cut",
+        "challenge_nonce": "fresh",
+        "content": "alpha",
+        "form": "plain",
+        "provenance_operation": "pure_copy",
+        "resource_band": "over_budget",
+        "target_truth_relation": "conflict"
+      },
+      "cell_id": "fa3a882027c4eee25337"
+    },
+    {
+      "assignment": {
+        "authority_version": "current_authorized",
+        "causal_mode": "cut",
+        "challenge_nonce": "fixed",
+        "content": "beta",
+        "form": "plain",
+        "provenance_operation": "independent_acquisition",
+        "resource_band": "within_budget",
+        "target_truth_relation": "conflict"
+      },
+      "cell_id": "4b9cc772aad9260941ae"
+    },
+    {
+      "assignment": {
+        "authority_version": "current_authorized",
+        "causal_mode": "cut",
+        "challenge_nonce": "fresh",
+        "content": "beta",
+        "form": "plain",
+        "provenance_operation": "independent_acquisition",
+        "resource_band": "within_budget",
+        "target_truth_relation": "conflict"
+      },
+      "cell_id": "97f7d2ea14164a74b9f6"
+    },
+    {
+      "assignment": {
+        "authority_version": "current_authorized",
+        "causal_mode": "cut",
+        "challenge_nonce": "fixed",
+        "content": "beta",
+        "form": "plain",
+        "provenance_operation": "independent_acquisition",
+        "resource_band": "over_budget",
+        "target_truth_relation": "conflict"
+      },
+      "cell_id": "cba49bc34a681a802a08"
+    },
+    {
+      "assignment": {
+        "authority_version": "current_authorized",
+        "causal_mode": "cut",
+        "challenge_nonce": "fresh",
+        "content": "beta",
+        "form": "plain",
+        "provenance_operation": "independent_acquisition",
+        "resource_band": "over_budget",
+        "target_truth_relation": "conflict"
+      },
+      "cell_id": "28e431b8871652d99bb1"
+    },
+    {
+      "assignment": {
+        "authority_version": "current_authorized",
+        "causal_mode": "cut",
+        "challenge_nonce": "fixed",
+        "content": "beta",
+        "form": "plain",
+        "provenance_operation": "pure_copy",
+        "resource_band": "within_budget",
+        "target_truth_relation": "conflict"
+      },
+      "cell_id": "01e384b4ac898698bc0d"
+    },
+    {
+      "assignment": {
+        "authority_version": "current_authorized",
+        "causal_mode": "cut",
+        "challenge_nonce": "fresh",
+        "content": "beta",
+        "form": "plain",
+        "provenance_operation": "pure_copy",
+        "resource_band": "within_budget",
+        "target_truth_relation": "conflict"
+      },
+      "cell_id": "066f367a44b9f8282649"
+    },
+    {
+      "assignment": {
+        "authority_version": "current_authorized",
+        "causal_mode": "cut",
+        "challenge_nonce": "fixed",
+        "content": "beta",
+        "form": "plain",
+        "provenance_operation": "pure_copy",
+        "resource_band": "over_budget",
+        "target_truth_relation": "conflict"
+      },
+      "cell_id": "a186d61f8340710dd843"
+    },
+    {
+      "assignment": {
+        "authority_version": "current_authorized",
+        "causal_mode": "cut",
+        "challenge_nonce": "fresh",
+        "content": "beta",
+        "form": "plain",
+        "provenance_operation": "pure_copy",
+        "resource_band": "over_budget",
+        "target_truth_relation": "conflict"
+      },
+      "cell_id": "3e454666936c6def74ea"
+    },
+    {
+      "assignment": {
+        "authority_version": "revoked_or_stale",
+        "causal_mode": "cut",
+        "challenge_nonce": "fixed",
+        "content": "beta",
+        "form": "plain",
+        "provenance_operation": "independent_acquisition",
+        "resource_band": "within_budget",
+        "target_truth_relation": "conflict"
+      },
+      "cell_id": "a4013550c20e05fa5354"
+    },
+    {
+      "assignment": {
+        "authority_version": "revoked_or_stale",
+        "causal_mode": "cut",
+        "challenge_nonce": "fresh",
+        "content": "beta",
+        "form": "plain",
+        "provenance_operation": "independent_acquisition",
+        "resource_band": "within_budget",
+        "target_truth_relation": "conflict"
+      },
+      "cell_id": "0631486a09edf1342e95"
+    },
+    {
+      "assignment": {
+        "authority_version": "revoked_or_stale",
+        "causal_mode": "cut",
+        "challenge_nonce": "fixed",
+        "content": "beta",
+        "form": "plain",
+        "provenance_operation": "independent_acquisition",
+        "resource_band": "over_budget",
+        "target_truth_relation": "conflict"
+      },
+      "cell_id": "f2529c55be071b4de778"
+    },
+    {
+      "assignment": {
+        "authority_version": "revoked_or_stale",
+        "causal_mode": "cut",
+        "challenge_nonce": "fresh",
+        "content": "beta",
+        "form": "plain",
+        "provenance_operation": "independent_acquisition",
+        "resource_band": "over_budget",
+        "target_truth_relation": "conflict"
+      },
+      "cell_id": "e8b6f9f4ddc974a16fe7"
+    },
+    {
+      "assignment": {
+        "authority_version": "revoked_or_stale",
+        "causal_mode": "cut",
+        "challenge_nonce": "fixed",
+        "content": "beta",
+        "form": "plain",
+        "provenance_operation": "pure_copy",
+        "resource_band": "within_budget",
+        "target_truth_relation": "conflict"
+      },
+      "cell_id": "0e784c53667db2ff2728"
+    },
+    {
+      "assignment": {
+        "authority_version": "revoked_or_stale",
+        "causal_mode": "cut",
+        "challenge_nonce": "fresh",
+        "content": "beta",
+        "form": "plain",
+        "provenance_operation": "pure_copy",
+        "resource_band": "within_budget",
+        "target_truth_relation": "conflict"
+      },
+      "cell_id": "5bb1c8283c9501b8bff0"
+    },
+    {
+      "assignment": {
+        "authority_version": "revoked_or_stale",
+        "causal_mode": "cut",
+        "challenge_nonce": "fixed",
+        "content": "beta",
+        "form": "plain",
+        "provenance_operation": "pure_copy",
+        "resource_band": "over_budget",
+        "target_truth_relation": "conflict"
+      },
+      "cell_id": "65edd68517b0c9e32170"
+    },
+    {
+      "assignment": {
+        "authority_version": "revoked_or_stale",
+        "causal_mode": "cut",
+        "challenge_nonce": "fresh",
+        "content": "beta",
+        "form": "plain",
+        "provenance_operation": "pure_copy",
+        "resource_band": "over_budget",
+        "target_truth_relation": "conflict"
+      },
+      "cell_id": "885a7fe176720bda0919"
+    },
+    {
+      "assignment": {
+        "authority_version": "current_authorized",
+        "causal_mode": "cut",
+        "challenge_nonce": "fixed",
+        "content": "alpha",
+        "form": "encoded",
+        "provenance_operation": "independent_acquisition",
+        "resource_band": "within_budget",
+        "target_truth_relation": "conflict"
+      },
+      "cell_id": "2c09750a2a167c84acd6"
+    },
+    {
+      "assignment": {
+        "authority_version": "current_authorized",
+        "causal_mode": "cut",
+        "challenge_nonce": "fresh",
+        "content": "alpha",
+        "form": "encoded",
+        "provenance_operation": "independent_acquisition",
+        "resource_band": "within_budget",
+        "target_truth_relation": "conflict"
+      },
+      "cell_id": "57f4f141024bd57f3067"
+    },
+    {
+      "assignment": {
+        "authority_version": "current_authorized",
+        "causal_mode": "cut",
+        "challenge_nonce": "fixed",
+        "content": "alpha",
+        "form": "encoded",
+        "provenance_operation": "independent_acquisition",
+        "resource_band": "over_budget",
+        "target_truth_relation": "conflict"
+      },
+      "cell_id": "a21cbd863a9c6d2aad99"
+    },
+    {
+      "assignment": {
+        "authority_version": "current_authorized",
+        "causal_mode": "cut",
+        "challenge_nonce": "fresh",
+        "content": "alpha",
+        "form": "encoded",
+        "provenance_operation": "independent_acquisition",
+        "resource_band": "over_budget",
+        "target_truth_relation": "conflict"
+      },
+      "cell_id": "42f56e4e0fdd9ace7055"
+    },
+    {
+      "assignment": {
+        "authority_version": "current_authorized",
+        "causal_mode": "cut",
+        "challenge_nonce": "fixed",
+        "content": "alpha",
+        "form": "encoded",
+        "provenance_operation": "pure_copy",
+        "resource_band": "within_budget",
+        "target_truth_relation": "conflict"
+      },
+      "cell_id": "7e883082783c11059283"
+    },
+    {
+      "assignment": {
+        "authority_version": "current_authorized",
+        "causal_mode": "cut",
+        "challenge_nonce": "fresh",
+        "content": "alpha",
+        "form": "encoded",
+        "provenance_operation": "pure_copy",
+        "resource_band": "within_budget",
+        "target_truth_relation": "conflict"
+      },
+      "cell_id": "87556feadda7d065db29"
+    },
+    {
+      "assignment": {
+        "authority_version": "current_authorized",
+        "causal_mode": "cut",
+        "challenge_nonce": "fixed",
+        "content": "alpha",
+        "form": "encoded",
+        "provenance_operation": "pure_copy",
+        "resource_band": "over_budget",
+        "target_truth_relation": "conflict"
+      },
+      "cell_id": "dd53b46a6f42e13fd002"
+    },
+    {
+      "assignment": {
+        "authority_version": "current_authorized",
+        "causal_mode": "cut",
+        "challenge_nonce": "fresh",
+        "content": "alpha",
+        "form": "encoded",
+        "provenance_operation": "pure_copy",
+        "resource_band": "over_budget",
+        "target_truth_relation": "conflict"
+      },
+      "cell_id": "f7fb88a59fc3cff988b8"
+    },
+    {
+      "assignment": {
+        "authority_version": "revoked_or_stale",
+        "causal_mode": "cut",
+        "challenge_nonce": "fixed",
+        "content": "alpha",
+        "form": "encoded",
+        "provenance_operation": "independent_acquisition",
+        "resource_band": "within_budget",
+        "target_truth_relation": "conflict"
+      },
+      "cell_id": "59c1e6d9a6184537563b"
+    },
+    {
+      "assignment": {
+        "authority_version": "revoked_or_stale",
+        "causal_mode": "cut",
+        "challenge_nonce": "fresh",
+        "content": "alpha",
+        "form": "encoded",
+        "provenance_operation": "independent_acquisition",
+        "resource_band": "within_budget",
+        "target_truth_relation": "conflict"
+      },
+      "cell_id": "7da99929f24868e4e750"
+    },
+    {
+      "assignment": {
+        "authority_version": "revoked_or_stale",
+        "causal_mode": "cut",
+        "challenge_nonce": "fixed",
+        "content": "alpha",
+        "form": "encoded",
+        "provenance_operation": "independent_acquisition",
+        "resource_band": "over_budget",
+        "target_truth_relation": "conflict"
+      },
+      "cell_id": "80c8d3f591949662d9a4"
+    },
+    {
+      "assignment": {
+        "authority_version": "revoked_or_stale",
+        "causal_mode": "cut",
+        "challenge_nonce": "fresh",
+        "content": "alpha",
+        "form": "encoded",
+        "provenance_operation": "independent_acquisition",
+        "resource_band": "over_budget",
+        "target_truth_relation": "conflict"
+      },
+      "cell_id": "969c8ce512eda06c053d"
+    },
+    {
+      "assignment": {
+        "authority_version": "revoked_or_stale",
+        "causal_mode": "cut",
+        "challenge_nonce": "fixed",
+        "content": "alpha",
+        "form": "encoded",
+        "provenance_operation": "pure_copy",
+        "resource_band": "within_budget",
+        "target_truth_relation": "conflict"
+      },
+      "cell_id": "5a0e668c22e0c5b2945f"
+    },
+    {
+      "assignment": {
+        "authority_version": "revoked_or_stale",
+        "causal_mode": "cut",
+        "challenge_nonce": "fresh",
+        "content": "alpha",
+        "form": "encoded",
+        "provenance_operation": "pure_copy",
+        "resource_band": "within_budget",
+        "target_truth_relation": "conflict"
+      },
+      "cell_id": "8fa462699c9d55065732"
+    },
+    {
+      "assignment": {
+        "authority_version": "revoked_or_stale",
+        "causal_mode": "cut",
+        "challenge_nonce": "fixed",
+        "content": "alpha",
+        "form": "encoded",
+        "provenance_operation": "pure_copy",
+        "resource_band": "over_budget",
+        "target_truth_relation": "conflict"
+      },
+      "cell_id": "976de6fdf7bd8a8dc654"
+    },
+    {
+      "assignment": {
+        "authority_version": "revoked_or_stale",
+        "causal_mode": "cut",
+        "challenge_nonce": "fresh",
+        "content": "alpha",
+        "form": "encoded",
+        "provenance_operation": "pure_copy",
+        "resource_band": "over_budget",
+        "target_truth_relation": "conflict"
+      },
+      "cell_id": "6863252b65a68a700aea"
+    },
+    {
+      "assignment": {
+        "authority_version": "current_authorized",
+        "causal_mode": "cut",
+        "challenge_nonce": "fixed",
+        "content": "beta",
+        "form": "encoded",
+        "provenance_operation": "independent_acquisition",
+        "resource_band": "within_budget",
+        "target_truth_relation": "conflict"
+      },
+      "cell_id": "7c69b152c493ac3bfc42"
+    },
+    {
+      "assignment": {
+        "authority_version": "current_authorized",
+        "causal_mode": "cut",
+        "challenge_nonce": "fresh",
+        "content": "beta",
+        "form": "encoded",
+        "provenance_operation": "independent_acquisition",
+        "resource_band": "within_budget",
+        "target_truth_relation": "conflict"
+      },
+      "cell_id": "acfd9fd1808ba6e2b4c8"
+    },
+    {
+      "assignment": {
+        "authority_version": "current_authorized",
+        "causal_mode": "cut",
+        "challenge_nonce": "fixed",
+        "content": "beta",
+        "form": "encoded",
+        "provenance_operation": "independent_acquisition",
+        "resource_band": "over_budget",
+        "target_truth_relation": "conflict"
+      },
+      "cell_id": "2515992f24da51bb7b7e"
+    },
+    {
+      "assignment": {
+        "authority_version": "current_authorized",
+        "causal_mode": "cut",
+        "challenge_nonce": "fresh",
+        "content": "beta",
+        "form": "encoded",
+        "provenance_operation": "independent_acquisition",
+        "resource_band": "over_budget",
+        "target_truth_relation": "conflict"
+      },
+      "cell_id": "53862ec06ac5fdece784"
+    },
+    {
+      "assignment": {
+        "authority_version": "current_authorized",
+        "causal_mode": "cut",
+        "challenge_nonce": "fixed",
+        "content": "beta",
+        "form": "encoded",
+        "provenance_operation": "pure_copy",
+        "resource_band": "within_budget",
+        "target_truth_relation": "conflict"
+      },
+      "cell_id": "36a24324de4af966a7e8"
+    },
+    {
+      "assignment": {
+        "authority_version": "current_authorized",
+        "causal_mode": "cut",
+        "challenge_nonce": "fresh",
+        "content": "beta",
+        "form": "encoded",
+        "provenance_operation": "pure_copy",
+        "resource_band": "within_budget",
+        "target_truth_relation": "conflict"
+      },
+      "cell_id": "ff0b1f4b6e2f8bd08ae1"
+    },
+    {
+      "assignment": {
+        "authority_version": "current_authorized",
+        "causal_mode": "cut",
+        "challenge_nonce": "fixed",
+        "content": "beta",
+        "form": "encoded",
+        "provenance_operation": "pure_copy",
+        "resource_band": "over_budget",
+        "target_truth_relation": "conflict"
+      },
+      "cell_id": "6b07c217ccb9305c8e96"
+    },
+    {
+      "assignment": {
+        "authority_version": "current_authorized",
+        "causal_mode": "cut",
+        "challenge_nonce": "fresh",
+        "content": "beta",
+        "form": "encoded",
+        "provenance_operation": "pure_copy",
+        "resource_band": "over_budget",
+        "target_truth_relation": "conflict"
+      },
+      "cell_id": "6bed62802744876bf8e0"
+    },
+    {
+      "assignment": {
+        "authority_version": "revoked_or_stale",
+        "causal_mode": "cut",
+        "challenge_nonce": "fixed",
+        "content": "beta",
+        "form": "encoded",
+        "provenance_operation": "independent_acquisition",
+        "resource_band": "within_budget",
+        "target_truth_relation": "conflict"
+      },
+      "cell_id": "237c02ae83fe1f354af1"
+    },
+    {
+      "assignment": {
+        "authority_version": "revoked_or_stale",
+        "causal_mode": "cut",
+        "challenge_nonce": "fresh",
+        "content": "beta",
+        "form": "encoded",
+        "provenance_operation": "independent_acquisition",
+        "resource_band": "within_budget",
+        "target_truth_relation": "conflict"
+      },
+      "cell_id": "984b3ce44fb95da18b40"
+    },
+    {
+      "assignment": {
+        "authority_version": "revoked_or_stale",
+        "causal_mode": "cut",
+        "challenge_nonce": "fixed",
+        "content": "beta",
+        "form": "encoded",
+        "provenance_operation": "independent_acquisition",
+        "resource_band": "over_budget",
+        "target_truth_relation": "conflict"
+      },
+      "cell_id": "5a7e8e3c9607ae448659"
+    },
+    {
+      "assignment": {
+        "authority_version": "revoked_or_stale",
+        "causal_mode": "cut",
+        "challenge_nonce": "fresh",
+        "content": "beta",
+        "form": "encoded",
+        "provenance_operation": "independent_acquisition",
+        "resource_band": "over_budget",
+        "target_truth_relation": "conflict"
+      },
+      "cell_id": "af98eba2eddb2bb64d74"
+    },
+    {
+      "assignment": {
+        "authority_version": "revoked_or_stale",
+        "causal_mode": "cut",
+        "challenge_nonce": "fixed",
+        "content": "beta",
+        "form": "encoded",
+        "provenance_operation": "pure_copy",
+        "resource_band": "within_budget",
+        "target_truth_relation": "conflict"
+      },
+      "cell_id": "c8739ea8f688331d9274"
+    },
+    {
+      "assignment": {
+        "authority_version": "revoked_or_stale",
+        "causal_mode": "cut",
+        "challenge_nonce": "fresh",
+        "content": "beta",
+        "form": "encoded",
+        "provenance_operation": "pure_copy",
+        "resource_band": "within_budget",
+        "target_truth_relation": "conflict"
+      },
+      "cell_id": "294b587596dbaa3d0de3"
+    },
+    {
+      "assignment": {
+        "authority_version": "revoked_or_stale",
+        "causal_mode": "cut",
+        "challenge_nonce": "fixed",
+        "content": "beta",
+        "form": "encoded",
+        "provenance_operation": "pure_copy",
+        "resource_band": "over_budget",
+        "target_truth_relation": "conflict"
+      },
+      "cell_id": "35624873b6fc26131a73"
+    },
+    {
+      "assignment": {
+        "authority_version": "revoked_or_stale",
+        "causal_mode": "cut",
+        "challenge_nonce": "fresh",
+        "content": "beta",
+        "form": "encoded",
+        "provenance_operation": "pure_copy",
+        "resource_band": "over_budget",
+        "target_truth_relation": "conflict"
+      },
+      "cell_id": "60463d26d0ecdecb9571"
+    }
+  ],
+  "expected_cell_count": 256,
+  "factor_cardinalities": {
+    "authority_version": 2,
+    "causal_mode": 2,
+    "challenge_nonce": 2,
+    "content": 2,
+    "form": 2,
+    "provenance_operation": 2,
+    "resource_band": 2,
+    "target_truth_relation": 2
+  },
+  "factor_ids": [
+    "causal_mode",
+    "target_truth_relation",
+    "form",
+    "content",
+    "authority_version",
+    "provenance_operation",
+    "resource_band",
+    "challenge_nonce"
+  ],
+  "schema": "spa-complete-experiment-profile-map-v1",
+  "scope_ceiling": "finite constructed declared-signature fixture only",
+  "specialist_local_result": "SPA-R1"
+}

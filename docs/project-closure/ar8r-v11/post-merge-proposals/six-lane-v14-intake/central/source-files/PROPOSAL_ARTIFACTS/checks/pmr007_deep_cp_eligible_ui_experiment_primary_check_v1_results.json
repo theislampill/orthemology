@@ -1,0 +1,19 @@
+{
+  "common_contract_pass": true,
+  "eligible_profile_mismatches": 0,
+  "equal_profile_target_variation_rows": 74880,
+  "ineligible_candidate_operations": 5,
+  "ineligible_operations_correctly_blocked": 5,
+  "interventions": 8,
+  "open_loop_words": 585,
+  "pass": true,
+  "profile_comparisons": 74880,
+  "profile_rows_per_architecture": 74880,
+  "profile_sha256": {
+    "I_impersonal_powers": "2d617658845a5f9c9156e91504d4687eec47f6b49b8d889c3a2b8ce80d294478",
+    "U_unified_personal": "2d617658845a5f9c9156e91504d4687eec47f6b49b8d889c3a2b8ce80d294478"
+  },
+  "schema": "pmr007-deep-cp-eligible-ui-experiment-primary-check-v1-results",
+  "scope": "finite_formal_common_kernel_open_loop_length_at_most_3_plus_structural_policy_induction",
+  "states": 128
+}

@@ -1,0 +1,30 @@
+{
+  "common_target_action_conflict_pass": true,
+  "exhaustive_n2_systems": 186624,
+  "fixed_hidden_each_succeeds_from_same_start": [
+    true,
+    true
+  ],
+  "pass": true,
+  "positive_witness_layers": [
+    [
+      "restored"
+    ],
+    [
+      "bridge",
+      "restored"
+    ],
+    [
+      "bad",
+      "bridge",
+      "restored"
+    ]
+  ],
+  "positive_witness_pass": true,
+  "reach_and_stay_mismatches": 0,
+  "schema": "pmr007-deep-cq-norm-uncertain-restoration-primary-check-v2-results",
+  "standard_family_narrowing_monotonicity_failures": 0,
+  "switching_adversary_defeats_same_start": true,
+  "v1_defective_auto_witness_reused": false,
+  "viability_mismatches": 0
+}

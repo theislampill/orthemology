@@ -1,0 +1,41 @@
+schema: spa-lean-status-v1
+repository_toolchain_pin:
+  locator: docs/project-closure/ar8r-v11/fable-research/lean/lean-toolchain
+  value: leanprover/lean4:v4.32.2
+runtime:
+  lean_binary_found: false
+  lake_binary_found: false
+  elan_binary_found: false
+  exact_release_download_attempted: true
+  exact_release_download_result: BLOCKED_RUNTIME_DNS_NO_BINARY_OBTAINED
+files:
+  - path: lean/DeletionCriterion.lean
+    statement_status: STABLE_DRAFT
+    relation: NARROW_RESTRICTION_INJECTIVITY_SPECIALIZATION
+    source_present: true
+    parse: NOT_RUN
+    elaboration: NOT_RUN
+    kernel: NOT_RUN
+    project_build: NOT_RUN
+    axiom_report: NOT_RUN
+    machine_claim: NONE
+  - path: lean/ObservationUniformity.lean
+    statement_status: STABLE_DRAFT
+    relation: FIBRE_FACTORIZATION_SPECIALIZATION_EXISTING_FAMILY
+    source_present: true
+    parse: NOT_RUN
+    elaboration: NOT_RUN
+    kernel: NOT_RUN
+    project_build: NOT_RUN
+    axiom_report: NOT_RUN
+    machine_claim: NONE
+repository_reference_receipts:
+  - locator: docs/project-closure/ar8r-v11/post-merge-proposals/external-challenges/challenger-b-formal-ancestry/intake-review/DeepBVCommonInterventionCriterion.repaired.lean
+    parse: PASS_RECORDED_BY_REPOSITORY_INTAKE
+    elaboration: PASS_RECORDED_BY_REPOSITORY_INTAKE
+    kernel: PASS_RECORDED_BY_REPOSITORY_INTAKE
+    project_build: NOT_RUN
+    adoption: NONE
+    historical_identity: NONE
+    novelty: 0
+firewall: source_presence_is_not_machine_checking

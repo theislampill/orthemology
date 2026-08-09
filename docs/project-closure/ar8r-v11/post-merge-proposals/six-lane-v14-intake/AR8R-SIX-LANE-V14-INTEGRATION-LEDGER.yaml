@@ -1,0 +1,80 @@
+schema: ar8r-six-lane-v14-integration-ledger-v1
+base_repository_sha: 9b80f2dfdf73a768ccad6a6ea2f2998c70ebdcf3
+historical_authority:
+  substantive_duration: 09:41:25.405101139
+  latest_closed_segment: 357
+  theorem_origin_authority: V5
+  modified: false
+program_status:
+  integrated_champion: NONE
+  meniscus: MENISCUS_NOT_REACHED
+  natural_closure: NOT_REACHED
+  repository_scientific_adoption: NONE
+  owner_adoption: PENDING
+lanes:
+- id: CENTRAL_PRO
+  role: whole-field integrator and meniscus search
+  source_path: central/source-files
+  source_files: 178
+  package_sha256: 225a7969cc39c06fcc2437b29cf3b08818012da703d317854ff4640b67513eee
+  custody: EXACT_PUBLIC_SAFE_PROPOSAL_TREE
+  result_owners: 31
+  reproduced_result_owners: 13
+  source_absent_result_owners: 17
+  blocked_missing_sidecar_result_owners: 1
+  external_review: OPEN
+  owner_adoption: PENDING
+- id: SPECIALIST_PRO_A
+  role: formal and computational flywheel
+  source_path: specialist-a/source-files
+  source_files: 77
+  package_sha256: c756c07a87128544793b1fae5ee1656072b6c0585742924b6ee3122a5a8ead19
+  custody: EXACT_PUBLIC_SAFE_PROPOSAL_TREE_WITH_CORRECTION_OVERLAY
+  checker_scope: BOUNDED_FINITE_CONSTRUCTIONS_ONLY
+  mathematical_status: CORRECTION_REQUIRED_R7_R9
+  lean_status: ORIGINALS_FAIL_REPAIRS_PASS_STANDALONE
+  external_review: OPEN
+  owner_adoption: PENDING
+- id: SPECIALIST_PRO_B
+  role: transcendental and noetic flywheel
+  source_path: specialist-b/source-files
+  source_files: 29
+  package_sha256: 550355e85eb54ffb97b8abe9c6a609c05a9a5701e02bde4d86b047e03a28c444
+  custody: EXACT_PUBLIC_SAFE_PROPOSAL_TREE_WITH_CORRECTION_OVERLAY
+  checker_scope: SUPPLIED_RESULT_ONLY_CHECKER_SOURCE_ABSENT
+  lean_status: ORIGINAL_FAIL_REPAIR_PASS_STANDALONE
+  formal_status: INDEX_AND_SIGNATURE_REPAIRS_REQUIRED
+  source_status: LOCATOR_AND_HOSTED_ARABIC_CORRECTION_OVERLAY_APPLIED
+  external_review: OPEN
+  owner_adoption: PENDING
+- id: DEEP_RESEARCH_20
+  role: mathematical ancestry and prior art
+  source_report_sha256: 812b5f4f319669fd8f09f666923df95c861bb707f1233494566f2279bbf31ed3
+  custody: HASHED_REPORT_NOT_PUBLICLY_COPIED
+  disposition: BOUNDED_SOURCE_RELATION_CORRECTIONS_ONLY
+  external_review: OPEN
+  owner_adoption: PENDING
+- id: DEEP_RESEARCH_21
+  role: primary theological, metaphysical, and proper-function sources
+  source_report_sha256: f48e324de9c1e56258a5fd2ae29285611858cd64b3b83ba15070a05c94606190
+  custody: HASHED_REPORT_NOT_PUBLICLY_COPIED
+  disposition: BOUNDED_SOURCE_LOCATOR_AND_LAYER_RECORDS_ONLY
+  external_review: OPEN
+  owner_adoption: PENDING
+- id: DEEP_RESEARCH_22
+  role: empirical, representation, and preregistration protocols
+  source_report_sha256: fc471421f8a5d0531c3512cda7243a7d5e4ccfd721e5e46509a0ff9e7caa5b89
+  custody: HASHED_REPORT_NOT_PUBLICLY_COPIED
+  disposition: PROTOCOL_SCOUTING_ONLY_B1_B4_UNANSWERED_ZERO_READY_TO_RUN
+  external_review: OPEN
+  owner_adoption: PENDING
+nonclaims:
+- no historical theorem identity is assigned
+- no original historical payload is recovered by this intake
+- no general novelty credit is added
+- no theorem is adopted as current repository theory
+- no checker establishes source truth or world truth
+- no empirical program is reported as run
+- no Lean project build or downstream integration is claimed
+- no personal ground, Necessary Being, Wisdom, Speech, or revelation conclusion is established
+- no integrated champion, meniscus, or natural closure is claimed

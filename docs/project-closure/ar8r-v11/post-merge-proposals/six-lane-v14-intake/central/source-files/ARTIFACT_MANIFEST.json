@@ -1,0 +1,890 @@
+{
+  "content_boundary": "THROUGH_DEEP_CT_PLUS_SIX_LANE_IMPORT",
+  "file_count": 176,
+  "files": [
+    {
+      "bytes": 1059,
+      "path": "CHECKPOINT_INTERNAL_BOUNDARY_THROUGH_DEEP_CT.md",
+      "sha256": "4c677ce654c0ba1b75a4c4641ba873e9cf00120981fa03e412d190712ba93f97"
+    },
+    {
+      "bytes": 460,
+      "path": "MIGRATION_AND_ROLLBACK.md",
+      "sha256": "8231bbcb5cdffc820d64d025573882f1ddda062f32aa9cced23ed37384b16bc7"
+    },
+    {
+      "bytes": 300,
+      "path": "OWNER_DECISIONS_REQUIRED.md",
+      "sha256": "cf4af09c1f5b7bda0319bca91bd5406b5209b0c7dfa473e4038416617e912fcb"
+    },
+    {
+      "bytes": 11150,
+      "path": "PRIVATE_DATA_EXCLUSION_REPORT.json",
+      "sha256": "054e09a66d964da77a722941db728f54b5548aa36c894c6f5ba0aeb920dfa54a"
+    },
+    {
+      "bytes": 300,
+      "path": "PRIVATE_DATA_EXCLUSION_REPORT.md",
+      "sha256": "60c3896796c2c352c0341d35646c40718509c1a3e889a241c9c1339079db1258"
+    },
+    {
+      "bytes": 4634,
+      "path": "PROPOSAL_ARTIFACTS/checks/pmr007_deep_ck_concrete_architecture_map_primary_check.py",
+      "sha256": "31b4039b9ab6a1d8f2d4d2e9db7b948a514138dca73fb53271bdd2b47664fe81"
+    },
+    {
+      "bytes": 702,
+      "path": "PROPOSAL_ARTIFACTS/checks/pmr007_deep_ck_concrete_architecture_map_primary_check_results.json",
+      "sha256": "f19fcbedfe7cb2e3f2ee54626cd70be83a5ea60cdbeeacfc1e46a40121490179"
+    },
+    {
+      "bytes": 4634,
+      "path": "PROPOSAL_ARTIFACTS/checks/pmr007_deep_ck_concrete_architecture_map_primary_check_v1.py",
+      "sha256": "31b4039b9ab6a1d8f2d4d2e9db7b948a514138dca73fb53271bdd2b47664fe81"
+    },
+    {
+      "bytes": 702,
+      "path": "PROPOSAL_ARTIFACTS/checks/pmr007_deep_ck_concrete_architecture_map_primary_check_v1_results.json",
+      "sha256": "f19fcbedfe7cb2e3f2ee54626cd70be83a5ea60cdbeeacfc1e46a40121490179"
+    },
+    {
+      "bytes": 4843,
+      "path": "PROPOSAL_ARTIFACTS/checks/pmr007_deep_ck_concrete_architecture_map_primary_check_v2.py",
+      "sha256": "db84d5f4e62ff17981f1932a18f7671e77764e5278c9f969a9e22c92f311e860"
+    },
+    {
+      "bytes": 870,
+      "path": "PROPOSAL_ARTIFACTS/checks/pmr007_deep_ck_concrete_architecture_map_primary_check_v2_results.json",
+      "sha256": "be4812e4cae2776c44e656dcb4d3ee239de35f52b9716edfeb772a1782275a6d"
+    },
+    {
+      "bytes": 5679,
+      "path": "PROPOSAL_ARTIFACTS/checks/pmr007_deep_ck_distinct_partition_guard_rereview_results.json",
+      "sha256": "1e1a15197931098ba8c3776590a77c92c38f48827d01e2551cc77bdfe0c5dfdf"
+    },
+    {
+      "bytes": 2668,
+      "path": "PROPOSAL_ARTIFACTS/checks/pmr007_deep_ck_source_world_primary_check_v2.py",
+      "sha256": "8cf150cac6a049189efbac9ba5eff25dcc851a18c865f7616d1aece56dce97e1"
+    },
+    {
+      "bytes": 661,
+      "path": "PROPOSAL_ARTIFACTS/checks/pmr007_deep_ck_source_world_primary_check_v2_results.json",
+      "sha256": "da97aecaa3f766df72c785369ff98de7be3b2fcfe3a8ec9f1bc9ee396e8d6052"
+    },
+    {
+      "bytes": 8832,
+      "path": "PROPOSAL_ARTIFACTS/checks/pmr007_deep_cl_anchor_cover_primary_check_v1_results.json",
+      "sha256": "cd83895b3ef8ec0501fe0cb21e37d0c9f3c86b03278e51835e51f1876cf76959"
+    },
+    {
+      "bytes": 2407,
+      "path": "PROPOSAL_ARTIFACTS/checks/pmr007_deep_cl_anchor_cover_primary_check_v2_results.json",
+      "sha256": "8484e8099295969760ddab0223778b482e260e1eb69a7c0bd2f802e722aa76f6"
+    },
+    {
+      "bytes": 525,
+      "path": "PROPOSAL_ARTIFACTS/checks/pmr007_deep_cm_objective_fitted_function_primary_check_v1_results.json",
+      "sha256": "780fd0f7bce609988e0e0e92c468b735c5ee2fe04e587ee459a0f740a2c78381"
+    },
+    {
+      "bytes": 565,
+      "path": "PROPOSAL_ARTIFACTS/checks/pmr007_deep_cm_objective_fitted_function_primary_check_v2_results.json",
+      "sha256": "c82f11ce9d56c5adfde56942cc0b5b725bf445802139aa3ad151ac6908a01f5c"
+    },
+    {
+      "bytes": 2799,
+      "path": "PROPOSAL_ARTIFACTS/checks/pmr007_deep_cn_authority_indexed_anchor_primary_check_v1_failed_results.json",
+      "sha256": "039a58147dd5aa9ea3b96a050971c67293e97a96a13e361dce3db5e714f196fc"
+    },
+    {
+      "bytes": 2799,
+      "path": "PROPOSAL_ARTIFACTS/checks/pmr007_deep_cn_authority_indexed_anchor_primary_check_v1_results.json",
+      "sha256": "039a58147dd5aa9ea3b96a050971c67293e97a96a13e361dce3db5e714f196fc"
+    },
+    {
+      "bytes": 2795,
+      "path": "PROPOSAL_ARTIFACTS/checks/pmr007_deep_cn_authority_indexed_anchor_primary_check_v2_results.json",
+      "sha256": "bc5c47709a4e783c6d35327215cd8c0c73402a22fd6cebcfb4a554a18aab5646"
+    },
+    {
+      "bytes": 2795,
+      "path": "PROPOSAL_ARTIFACTS/checks/pmr007_deep_cn_authority_indexed_anchor_primary_check_v3_results.json",
+      "sha256": "4bf52e1ff74a0384a6db5645cd44f5b0871f84a083a6b18317283409c652a0d1"
+    },
+    {
+      "bytes": 408,
+      "path": "PROPOSAL_ARTIFACTS/checks/pmr007_deep_co_profile_correction_primary_check_v1_results.json",
+      "sha256": "a5a8b61ed789e0ee3aa3eee2aad28a2da8f16c5e58c3aa61eff9b6e92913f6a6"
+    },
+    {
+      "bytes": 603,
+      "path": "PROPOSAL_ARTIFACTS/checks/pmr007_deep_co_profile_correction_primary_check_v2_results.json",
+      "sha256": "17d3572cc0866dff23438a8b5cd185d7052456e8dbded683f65dd3304955c5a6"
+    },
+    {
+      "bytes": 1053,
+      "path": "PROPOSAL_ARTIFACTS/checks/pmr007_deep_cp_distinct_bisimulation_rereview_results.json",
+      "sha256": "a185c8b2f37dbd743de6abfa2e109a10e125a155e143235498910e6b5f10592f"
+    },
+    {
+      "bytes": 757,
+      "path": "PROPOSAL_ARTIFACTS/checks/pmr007_deep_cp_eligible_ui_experiment_primary_check_v1_results.json",
+      "sha256": "1e3f646e1df4be1c865c2b1a052237196c1db486f77aa7f76c95f1d6409bdc83"
+    },
+    {
+      "bytes": 740,
+      "path": "PROPOSAL_ARTIFACTS/checks/pmr007_deep_cp_eligible_ui_experiment_primary_check_v2_results.json",
+      "sha256": "430e46e3e718fcbbce9688139b8e7e2418be806f662a2fabd36688ed5eb5ca5b"
+    },
+    {
+      "bytes": 721,
+      "path": "PROPOSAL_ARTIFACTS/checks/pmr007_deep_cq_distinct_strategy_graph_rereview_results.json",
+      "sha256": "7906130533855a43bf61a9323d1790fa338003c78f4f4c44a39528d136836b98"
+    },
+    {
+      "bytes": 2426,
+      "path": "PROPOSAL_ARTIFACTS/checks/pmr007_deep_cq_norm_uncertain_restoration_primary_check_v1_results.json",
+      "sha256": "6ad014c6c5575cfe5ba877e31abc5d946e1fb10b60e8b72e3cc66d41976eb99e"
+    },
+    {
+      "bytes": 673,
+      "path": "PROPOSAL_ARTIFACTS/checks/pmr007_deep_cq_norm_uncertain_restoration_primary_check_v2_results.json",
+      "sha256": "d6173430019911e9f82f74d263034b45184c7a234d7b1ef77fbc5f34486145ac"
+    },
+    {
+      "bytes": 4733,
+      "path": "PROPOSAL_ARTIFACTS/checks/pmr007_deep_cr_distinct_policy_graph_rereview.py",
+      "sha256": "251103b060883a51976b0908917a45ae159f18b291430d6024da822653d27ca6"
+    },
+    {
+      "bytes": 255,
+      "path": "PROPOSAL_ARTIFACTS/checks/pmr007_deep_cr_distinct_policy_graph_rereview_results.json",
+      "sha256": "926d605525af3503b2904b4d9860dd6c7f900d82d48966c328f2c2844b6ab92d"
+    },
+    {
+      "bytes": 3488,
+      "path": "PROPOSAL_ARTIFACTS/checks/pmr007_deep_cr_source_restriction_primary_check_v1.py",
+      "sha256": "e66d63970837a8c1e79cdf10f787563a7dd206dd69c448d37fa465fe9425ba8e"
+    },
+    {
+      "bytes": 271,
+      "path": "PROPOSAL_ARTIFACTS/checks/pmr007_deep_cr_source_restriction_primary_check_v1_results.json",
+      "sha256": "a424573fb651a12ec1e8ccc6ddf53ca2f41e820ae7b9fc410bc0e9220b5240d7"
+    },
+    {
+      "bytes": 2910,
+      "path": "PROPOSAL_ARTIFACTS/checks/pmr007_deep_cr_source_restriction_primary_check_v2.py",
+      "sha256": "8520948efcb5cffcd98d22a8214d4222faaf6100fcf721bd5e9d4dd173026da8"
+    },
+    {
+      "bytes": 418,
+      "path": "PROPOSAL_ARTIFACTS/checks/pmr007_deep_cr_source_restriction_primary_check_v2_results.json",
+      "sha256": "cc8147937164322560078c4ea6425dbe7189a01a271965c8794adf51122e5f21"
+    },
+    {
+      "bytes": 2486,
+      "path": "PROPOSAL_ARTIFACTS/checks/pmr007_deep_cs_distinct_fibre_cover_rereview.py",
+      "sha256": "aeef9c12902c0f41cd361c20e7f2351080cff58a34778ba76b99f981a381d977"
+    },
+    {
+      "bytes": 248,
+      "path": "PROPOSAL_ARTIFACTS/checks/pmr007_deep_cs_distinct_fibre_cover_rereview_results.json",
+      "sha256": "2384534787c19c7c8a27c7cf59ad32a865a4e25fc18d2918c5a55424d2437c4f"
+    },
+    {
+      "bytes": 2786,
+      "path": "PROPOSAL_ARTIFACTS/checks/pmr007_deep_cs_partition_refinement_primary_check_v1.py",
+      "sha256": "b484a3b5fe7a258838376d674e4c3f97887f968175f7358d37215c50b1f846a3"
+    },
+    {
+      "bytes": 352,
+      "path": "PROPOSAL_ARTIFACTS/checks/pmr007_deep_cs_partition_refinement_primary_check_v1_results.json",
+      "sha256": "9f9266588d75cbc61b3b763bbd2ff6c1daf04986ef4087e1123ba569d4328d02"
+    },
+    {
+      "bytes": 2332,
+      "path": "PROPOSAL_ARTIFACTS/checks/pmr007_deep_cs_partition_refinement_primary_check_v2.py",
+      "sha256": "303f561af5c411f64609888cd20d04b8253a0fa227c8fbbf52a10b9d94510449"
+    },
+    {
+      "bytes": 369,
+      "path": "PROPOSAL_ARTIFACTS/checks/pmr007_deep_cs_partition_refinement_primary_check_v2_results.json",
+      "sha256": "8808624a3bbb09426f95603981ca84e104f96c977d4dc091913b2a69040040e8"
+    },
+    {
+      "bytes": 4696,
+      "path": "PROPOSAL_ARTIFACTS/checks/pmr007_deep_ct_distinct_conflict_graph_rereview.py",
+      "sha256": "46eda4fb050080e687a38ace43ca4c8721f8a42e149c5cd7126af2f2b43efd17"
+    },
+    {
+      "bytes": 975,
+      "path": "PROPOSAL_ARTIFACTS/checks/pmr007_deep_ct_distinct_conflict_graph_rereview_results.json",
+      "sha256": "fa16d66f6c7527eb0164c6f4a1151fb2d0ab8a760159ab1fe62dc71f55b22494"
+    },
+    {
+      "bytes": 1859,
+      "path": "PROPOSAL_ARTIFACTS/checks/pmr007_deep_ct_partial_domain_primary_check_v1.py",
+      "sha256": "ccb8df1297194386b695c565277fcb6b44a3d38ab63a05585d25cee20b8f856f"
+    },
+    {
+      "bytes": 3882,
+      "path": "PROPOSAL_ARTIFACTS/checks/pmr007_deep_ct_partial_domain_primary_check_v1_results.json",
+      "sha256": "26ed4259faa972bbf56f2691de6085a8b3e9c17ae0bac3899612d5d567e8fd8f"
+    },
+    {
+      "bytes": 4811,
+      "path": "PROPOSAL_ARTIFACTS/checks/pmr007_deep_ct_partial_domain_primary_check_v2.py",
+      "sha256": "967ed367bcbdbfadf57345ff7dffbc22f096ee840a74885bfb1e58c51afe2366"
+    },
+    {
+      "bytes": 1168,
+      "path": "PROPOSAL_ARTIFACTS/checks/pmr007_deep_ct_partial_domain_primary_check_v2_results.json",
+      "sha256": "3906cf8498d6858014e7112a4238ad6796690dd7c9ffb86e97b66494cdf2946b"
+    },
+    {
+      "bytes": 2139,
+      "path": "PROPOSAL_ARTIFACTS/checks/pmr007_six_lane_import_integrity_check_v2.py",
+      "sha256": "94c5ea6e2b3601085a06be92dd33956fe7b81735cb90ba99963bb21d42467e11"
+    },
+    {
+      "bytes": 161,
+      "path": "PROPOSAL_ARTIFACTS/checks/pmr007_six_lane_import_integrity_check_v2_results.json",
+      "sha256": "3028306864fa699d3c8ab78fccdf0244466a2db6fea4acd5ac4fc0ca7183023c"
+    },
+    {
+      "bytes": 1508,
+      "path": "PROPOSAL_ARTIFACTS/deep_ck/PMR-007_DEEP_CK_ADMISSION_OVERLAY.yaml",
+      "sha256": "8b5772002d1c311e332de6d915e4a23ef47462574f34d9148fb9d9f3efb66110"
+    },
+    {
+      "bytes": 3163,
+      "path": "PROPOSAL_ARTIFACTS/deep_ck/PMR-007_DEEP_CK_V1_COLD_AUDIT.md",
+      "sha256": "5d7f652b17d9f7320608e2f726a0d799327264b63d8adcf2ec7e9c1a1a7e82de"
+    },
+    {
+      "bytes": 4125,
+      "path": "PROPOSAL_ARTIFACTS/deep_ck/PMR-007_DEEP_CK_V2_DISTINCT_FRESH_REREVIEW.md",
+      "sha256": "f0d8d04281876203e0ab6a61cc35bb8ad40c66214e4242b76d548d7a859584ec"
+    },
+    {
+      "bytes": 1467,
+      "path": "PROPOSAL_ARTIFACTS/deep_ck/PMR-007_DEEP_CK_V2_REPAIR_LOG.md",
+      "sha256": "1d8b140c243407d9f944344b68d799e1730391bdfd82e26cb81db558a4c45170"
+    },
+    {
+      "bytes": 3640,
+      "path": "PROPOSAL_ARTIFACTS/deep_ck/PMR-007_DEEP_ROUND_CK_SOURCE_FORMAL_WORLD_WISDOM_ADJUDICATION_V1.md",
+      "sha256": "e6920a5e326dec49e6007883bba1c173e1fc80cc327deb3f3524536a079674bc"
+    },
+    {
+      "bytes": 7506,
+      "path": "PROPOSAL_ARTIFACTS/deep_ck/PMR-007_DEEP_ROUND_CK_SOURCE_FORMAL_WORLD_WISDOM_ADJUDICATION_V2.md",
+      "sha256": "7f9a396c688925f134427ee3d6cf10acb1528f79293eb77d39fe3bf6ba12bcdd"
+    },
+    {
+      "bytes": 3918,
+      "path": "PROPOSAL_ARTIFACTS/deep_ck/PMR007_DEEP_CK_CONCRETE_ARCHITECTURE_MAP_V1.yaml",
+      "sha256": "ebcc532f9981f0d2a25be1e05e83f1d2a240e6c5696518f6a896823f0d030853"
+    },
+    {
+      "bytes": 2491,
+      "path": "PROPOSAL_ARTIFACTS/deep_ck/PMR007_DEEP_CK_SOURCE_FORMAL_WORLD_MODELS_V1.yaml",
+      "sha256": "9eae438bebd069f2ada1ab861bda8290c0b44bd2f3ad0202a4093096ef9e7ca4"
+    },
+    {
+      "bytes": 4686,
+      "path": "PROPOSAL_ARTIFACTS/deep_ck/PMR007_DEEP_CK_SOURCE_FORMAL_WORLD_MODELS_V2.yaml",
+      "sha256": "2da6b0cfdde4ea5d5871d17eb3282169df1daf85bcaf4efdf5a14ff982f7738d"
+    },
+    {
+      "bytes": 1390,
+      "path": "PROPOSAL_ARTIFACTS/deep_cl/PMR-007_DEEP_CL_ADMISSION_OVERLAY.yaml",
+      "sha256": "ef987bf8670007688841e9ddaa2fc6e85455a67644751b010223801a3a926908"
+    },
+    {
+      "bytes": 3221,
+      "path": "PROPOSAL_ARTIFACTS/deep_cl/PMR-007_DEEP_CL_V1_COLD_AUDIT.md",
+      "sha256": "b32772a39f408e28e0e67b459475473dce6655e64dbde4259eb04cff993a864c"
+    },
+    {
+      "bytes": 2678,
+      "path": "PROPOSAL_ARTIFACTS/deep_cl/PMR-007_DEEP_CL_V2_DISTINCT_FRESH_REREVIEW.md",
+      "sha256": "2be0f81ec829d73caac1e2f9181abb9d38dafdb0c86a1840f7f37808a9c74719"
+    },
+    {
+      "bytes": 1295,
+      "path": "PROPOSAL_ARTIFACTS/deep_cl/PMR-007_DEEP_CL_V2_REPAIR_LOG.md",
+      "sha256": "a9bb9ea71538c65d3986f4ef0ba910cd7b5e86ec7a7cf8d626abf253f7c6f6d6"
+    },
+    {
+      "bytes": 1596,
+      "path": "PROPOSAL_ARTIFACTS/deep_cl/PMR-007_DEEP_ROUND_CL_MINIMAL_ARCHITECTURE_BRIDGE_FACTORIZATION_V1.md",
+      "sha256": "d8b170c5acc17efc20a9da3c1b0d52f400282447a08bd8e8bd3d3bb0a3626c98"
+    },
+    {
+      "bytes": 5394,
+      "path": "PROPOSAL_ARTIFACTS/deep_cl/PMR-007_DEEP_ROUND_CL_MINIMAL_ARCHITECTURE_BRIDGE_FACTORIZATION_V2.md",
+      "sha256": "cf4f9cbd8eee325bf61b7806bd0bbb62a924abd628519b139882b6b88b82e3eb"
+    },
+    {
+      "bytes": 2454,
+      "path": "PROPOSAL_ARTIFACTS/deep_cl/PMR007_DEEP_CL_ARCHITECTURE_ANCHOR_REGISTRY_V1.yaml",
+      "sha256": "3350c31b6aeae6a13ea23837fb1817fed485f6ad8d11964ba7c22bf6720832bb"
+    },
+    {
+      "bytes": 3162,
+      "path": "PROPOSAL_ARTIFACTS/deep_cl/PMR007_DEEP_CL_ARCHITECTURE_ANCHOR_REGISTRY_V2.yaml",
+      "sha256": "27aa21fac900517a75a0cef30fe99e928c4f43c679c407e7db0bc96fc07d3318"
+    },
+    {
+      "bytes": 1473,
+      "path": "PROPOSAL_ARTIFACTS/deep_cm/PMR-007_DEEP_CM_ADMISSION_OVERLAY.yaml",
+      "sha256": "67f7b3d658ea5ace55558ab590fd0c6cfffef95f15bf295f3fc7443bfe49120d"
+    },
+    {
+      "bytes": 640,
+      "path": "PROPOSAL_ARTIFACTS/deep_cm/PMR-007_DEEP_CM_REREVIEW_CHECKER_REPAIR_LOG.md",
+      "sha256": "6613c3d824341193a89c89edc7632e9441b61ebbd571dc8609b197597c4cd601"
+    },
+    {
+      "bytes": 2909,
+      "path": "PROPOSAL_ARTIFACTS/deep_cm/PMR-007_DEEP_CM_V1_COLD_AUDIT.md",
+      "sha256": "fbea19e5a33876bee9b7b6e91d6bf2c672dcbbd0ef2fb43ec884fd6de8f635bd"
+    },
+    {
+      "bytes": 2346,
+      "path": "PROPOSAL_ARTIFACTS/deep_cm/PMR-007_DEEP_CM_V2_DISTINCT_FRESH_REREVIEW.md",
+      "sha256": "474b4294c906777661f6be8f71498faf76620e9b969b97ebe1a2087c85150d0f"
+    },
+    {
+      "bytes": 1179,
+      "path": "PROPOSAL_ARTIFACTS/deep_cm/PMR-007_DEEP_CM_V2_REPAIR_LOG.md",
+      "sha256": "b08b5b59daa19895d309fc36b32dce06f65a52eebf286c83db3c5afa9dcfa8a7"
+    },
+    {
+      "bytes": 893,
+      "path": "PROPOSAL_ARTIFACTS/deep_cm/PMR-007_DEEP_ROUND_CM_OBJECTIVE_FITTED_FUNCTION_AND_PERSONALITY_V1.md",
+      "sha256": "f6bce015afe70bd41f26063ae2d9bb099719e906f4491d620903b89c8acd90fa"
+    },
+    {
+      "bytes": 5005,
+      "path": "PROPOSAL_ARTIFACTS/deep_cm/PMR-007_DEEP_ROUND_CM_OBJECTIVE_FITTED_FUNCTION_AND_PERSONALITY_V2.md",
+      "sha256": "869f8f5606c92f0a3697863af3886163372571a3f01c3c9a0954b31e2385a984"
+    },
+    {
+      "bytes": 2451,
+      "path": "PROPOSAL_ARTIFACTS/deep_cm/PMR007_DEEP_CM_OBJECTIVE_FITTED_FUNCTION_MODELS_V1.yaml",
+      "sha256": "da7d7fddfb87dc56eadfd6bcc5a605601ad847aa5ee97263ba2a1a7eecec7160"
+    },
+    {
+      "bytes": 2751,
+      "path": "PROPOSAL_ARTIFACTS/deep_cm/PMR007_DEEP_CM_OBJECTIVE_FITTED_FUNCTION_MODELS_V2.yaml",
+      "sha256": "c564bf8c94d16ac02b089acb320107a7a7502dbe6b638b6fde987d773b0b9023"
+    },
+    {
+      "bytes": 1694,
+      "path": "PROPOSAL_ARTIFACTS/deep_cn/PMR-007_DEEP_CN_ADMISSION_OVERLAY.yaml",
+      "sha256": "4964c5c38a109deb4f680a526deb9b80c9169ed485d6e3e6ec3f8c3524b5c916"
+    },
+    {
+      "bytes": 2790,
+      "path": "PROPOSAL_ARTIFACTS/deep_cn/PMR-007_DEEP_CN_V1_COLD_AUDIT.md",
+      "sha256": "a46838ec988932ad6662f42780e9f81834c73935222727fd54105306c3b50c62"
+    },
+    {
+      "bytes": 2432,
+      "path": "PROPOSAL_ARTIFACTS/deep_cn/PMR-007_DEEP_CN_V2_DISTINCT_FRESH_REREVIEW.md",
+      "sha256": "9593233eae2648b5f1f6aaec05713638218519684271b81799b861a478c8809c"
+    },
+    {
+      "bytes": 1084,
+      "path": "PROPOSAL_ARTIFACTS/deep_cn/PMR-007_DEEP_CN_V2_REPAIR_LOG.md",
+      "sha256": "d4dc1f9ccd8de874c971b72d148bedfa8647ff7c10b074fddf62b64340d1147d"
+    },
+    {
+      "bytes": 934,
+      "path": "PROPOSAL_ARTIFACTS/deep_cn/PMR-007_DEEP_ROUND_CN_AUTHORITY_INDEXED_ANCHOR_COVERS_V1.md",
+      "sha256": "b809dedadb857d2b493b26cbe95187cb2c2558c3e19ef5b64669fb6586b2e091"
+    },
+    {
+      "bytes": 5807,
+      "path": "PROPOSAL_ARTIFACTS/deep_cn/PMR-007_DEEP_ROUND_CN_AUTHORITY_INDEXED_ANCHOR_COVERS_V2.md",
+      "sha256": "8ff04974e7c92d5db2293b111f924ca9676ff9dac8cf9e04215bb2bae4655057"
+    },
+    {
+      "bytes": 2363,
+      "path": "PROPOSAL_ARTIFACTS/deep_cn/PMR007_DEEP_CN_AUTHORITY_INDEXED_ANCHOR_MODELS_V1.yaml",
+      "sha256": "b239062074fcd058f173aed1898fbeece56974673b62cccdce97e8c7cf27c6a8"
+    },
+    {
+      "bytes": 3891,
+      "path": "PROPOSAL_ARTIFACTS/deep_cn/PMR007_DEEP_CN_AUTHORITY_INDEXED_ANCHOR_MODELS_V2.yaml",
+      "sha256": "d3787af3cf0554f39fb62f630fb3804cda9f985036d22aa1d615b48e6fc4e614"
+    },
+    {
+      "bytes": 1518,
+      "path": "PROPOSAL_ARTIFACTS/deep_co/PMR-007_DEEP_CO_ADMISSION_OVERLAY.yaml",
+      "sha256": "561bd97f52d5b076668e0b643215fc64378499d44c8fd3f3f491d1b9935858ef"
+    },
+    {
+      "bytes": 2452,
+      "path": "PROPOSAL_ARTIFACTS/deep_co/PMR-007_DEEP_CO_V1_COLD_AUDIT.md",
+      "sha256": "b058f229044ec98740ce451bc984930b73ec61fbfd8519801cd75623fc7708a0"
+    },
+    {
+      "bytes": 2035,
+      "path": "PROPOSAL_ARTIFACTS/deep_co/PMR-007_DEEP_CO_V2_DISTINCT_FRESH_REREVIEW.md",
+      "sha256": "b90a60d18f7d4f26d18fc8237e789d68b4ee3d63c1c99b62b686311a05f998ad"
+    },
+    {
+      "bytes": 1024,
+      "path": "PROPOSAL_ARTIFACTS/deep_co/PMR-007_DEEP_CO_V2_REPAIR_LOG.md",
+      "sha256": "df7ba170e78e59b30259e54faee812315054ace24676dd030fbf6ae726fa3b09"
+    },
+    {
+      "bytes": 685,
+      "path": "PROPOSAL_ARTIFACTS/deep_co/PMR-007_DEEP_ROUND_CO_PROFILE_MEASURABLE_CORRECTION_IMPOSSIBILITY_V1.md",
+      "sha256": "9ad7fc93faed8326c9f6640bdd6db5b228302acc96ff3f7512afc5b1a7bbb135"
+    },
+    {
+      "bytes": 4410,
+      "path": "PROPOSAL_ARTIFACTS/deep_co/PMR-007_DEEP_ROUND_CO_PROFILE_MEASURABLE_CORRECTION_IMPOSSIBILITY_V2.md",
+      "sha256": "ac6a657e8da2baf3c18b6c40e37ddb6e0bdfcb94756b89b64c423956737dc1c3"
+    },
+    {
+      "bytes": 1439,
+      "path": "PROPOSAL_ARTIFACTS/deep_co/PMR007_DEEP_CO_PROFILE_MEASURABLE_CORRECTION_MODELS_V1.yaml",
+      "sha256": "745a3a7e41cc9c452a0be4e76b58468d18add7fe86a229effd0365d5c092d8f6"
+    },
+    {
+      "bytes": 1935,
+      "path": "PROPOSAL_ARTIFACTS/deep_co/PMR007_DEEP_CO_PROFILE_MEASURABLE_CORRECTION_MODELS_V2.yaml",
+      "sha256": "8406e983c4c36d7803c8cec61bd97e4ad70b0bb77b9e485a9a67450b18edf317"
+    },
+    {
+      "bytes": 1754,
+      "path": "PROPOSAL_ARTIFACTS/deep_cp/PMR-007_DEEP_CP_ADMISSION_OVERLAY.yaml",
+      "sha256": "87c4d60944526bcbe32ea002d913fbd374e8633270aa11c5aeede226424c76c5"
+    },
+    {
+      "bytes": 3029,
+      "path": "PROPOSAL_ARTIFACTS/deep_cp/PMR-007_DEEP_CP_V1_COLD_AUDIT.md",
+      "sha256": "115a01e829bca4d165728b179393831f581c326a067ad17e114c9845d12dede5"
+    },
+    {
+      "bytes": 2569,
+      "path": "PROPOSAL_ARTIFACTS/deep_cp/PMR-007_DEEP_CP_V2_DISTINCT_FRESH_REREVIEW.md",
+      "sha256": "03f09113c5f7d9000a952eab5b98fa6bf3c9c8e59e7ee2fb143b374880abdb79"
+    },
+    {
+      "bytes": 1212,
+      "path": "PROPOSAL_ARTIFACTS/deep_cp/PMR-007_DEEP_CP_V2_REPAIR_LOG.md",
+      "sha256": "cb5802d784d33b641531c659d35304a24587706f7e6ee58e2e531e18fb185992"
+    },
+    {
+      "bytes": 878,
+      "path": "PROPOSAL_ARTIFACTS/deep_cp/PMR-007_DEEP_ROUND_CP_NO_CURRENT_ELIGIBLE_UI_EXPERIMENT_V1.md",
+      "sha256": "c6ceca3eb661203f48a1d15bdbe3caaaffc88d16b8918435a31b454c3fcf6a88"
+    },
+    {
+      "bytes": 6634,
+      "path": "PROPOSAL_ARTIFACTS/deep_cp/PMR-007_DEEP_ROUND_CP_NO_CURRENT_ELIGIBLE_UI_EXPERIMENT_V2.md",
+      "sha256": "1328301e0bbe0d8483c701a239c428a4ea2e49bad89f0b3592364b5b66a2b8b5"
+    },
+    {
+      "bytes": 3033,
+      "path": "PROPOSAL_ARTIFACTS/deep_cp/PMR007_DEEP_CP_ELIGIBLE_UI_EXPERIMENT_REGISTRY_V1.yaml",
+      "sha256": "ef27f520e22cab9c3d19c70b8a21287f52695770f98980d2fb310d7feb3b584e"
+    },
+    {
+      "bytes": 4084,
+      "path": "PROPOSAL_ARTIFACTS/deep_cp/PMR007_DEEP_CP_ELIGIBLE_UI_EXPERIMENT_REGISTRY_V2.yaml",
+      "sha256": "a1498322eb840c7cb9d88e4c65d0503ac264da961d96d93fe34d589d52e3e42f"
+    },
+    {
+      "bytes": 1968,
+      "path": "PROPOSAL_ARTIFACTS/deep_cq/PMR-007_DEEP_CQ_ADMISSION_OVERLAY.yaml",
+      "sha256": "70609844141c6fe0f177ea9f0c0078c1f204f0f49e81975dde97940d94403183"
+    },
+    {
+      "bytes": 3197,
+      "path": "PROPOSAL_ARTIFACTS/deep_cq/PMR-007_DEEP_CQ_V1_COLD_AUDIT.md",
+      "sha256": "f657b3acff28bef5a38bb2bee771774ae42f50abd55d74d8c1d039946dede79f"
+    },
+    {
+      "bytes": 1983,
+      "path": "PROPOSAL_ARTIFACTS/deep_cq/PMR-007_DEEP_CQ_V2_DISTINCT_FRESH_REREVIEW.md",
+      "sha256": "a9028e7b799eeb0aa061f1fa6676762d9fba2885a5adbd661e72891844e3b78d"
+    },
+    {
+      "bytes": 1118,
+      "path": "PROPOSAL_ARTIFACTS/deep_cq/PMR-007_DEEP_CQ_V2_REPAIR_LOG.md",
+      "sha256": "7ef544bbee312017d68f7ecfafbcb7d617a19d97cb3d7009768660df04d56e15"
+    },
+    {
+      "bytes": 1277,
+      "path": "PROPOSAL_ARTIFACTS/deep_cq/PMR-007_DEEP_ROUND_CQ_NORM_UNCERTAIN_ROBUST_RESTORATION_V1.md",
+      "sha256": "b375dc9b3bd7b82d6c6530dc65879fd0a4483b57ec068820825a7b6433db1912"
+    },
+    {
+      "bytes": 6581,
+      "path": "PROPOSAL_ARTIFACTS/deep_cq/PMR-007_DEEP_ROUND_CQ_NORM_UNCERTAIN_ROBUST_RESTORATION_V2.md",
+      "sha256": "f028dec8aec01a9f548e42daec343f487c35d024e3ea4a76970502dc8d8504b6"
+    },
+    {
+      "bytes": 2755,
+      "path": "PROPOSAL_ARTIFACTS/deep_cq/PMR007_DEEP_CQ_NORM_UNCERTAIN_RESTORATION_MODEL_V1.yaml",
+      "sha256": "e246434684eaa9e6b5c2e203c1dd5dd6dc7cd0f6aa00cb69f34f178f05823910"
+    },
+    {
+      "bytes": 3383,
+      "path": "PROPOSAL_ARTIFACTS/deep_cq/PMR007_DEEP_CQ_NORM_UNCERTAIN_RESTORATION_MODEL_V2.yaml",
+      "sha256": "258e982a41350546b4bba775088b10cc1a1fc9ca8dbb07be548ddbab85158679"
+    },
+    {
+      "bytes": 1033,
+      "path": "PROPOSAL_ARTIFACTS/deep_cr/PMR-007_DEEP_CR_ADMISSION_OVERLAY.yaml",
+      "sha256": "5c90c8fbbc9591081949b241017d8211d4563d6788126d0271fc7a51eac5871f"
+    },
+    {
+      "bytes": 2685,
+      "path": "PROPOSAL_ARTIFACTS/deep_cr/PMR-007_DEEP_CR_V1_COLD_AUDIT.md",
+      "sha256": "31e8c1ab4bd73c8c5ac5e67e5a41a7e487ef244f29ea785789e0a8ab3d220939"
+    },
+    {
+      "bytes": 1203,
+      "path": "PROPOSAL_ARTIFACTS/deep_cr/PMR-007_DEEP_CR_V2_DISTINCT_FRESH_REREVIEW.md",
+      "sha256": "7cbc903aea68113d6930bec5b3fd87fecb3a9e7d67b23a991869cc063b447e63"
+    },
+    {
+      "bytes": 630,
+      "path": "PROPOSAL_ARTIFACTS/deep_cr/PMR-007_DEEP_CR_V2_REPAIR_LOG.md",
+      "sha256": "21134550ebc0eb14d0c297b749975ce543d35d348b29df2407b62a4c8a11213f"
+    },
+    {
+      "bytes": 2006,
+      "path": "PROPOSAL_ARTIFACTS/deep_cr/PMR-007_DEEP_ROUND_CR_FITRAH_SOURCE_RESTRICTION_AND_RESTORATION_V1.md",
+      "sha256": "ffa3fc7ba2a1a6ca8ffd77e039b0e51a93616b91b45977d172afa6881b1b9a5d"
+    },
+    {
+      "bytes": 6641,
+      "path": "PROPOSAL_ARTIFACTS/deep_cr/PMR-007_DEEP_ROUND_CR_FITRAH_SOURCE_RESTRICTION_AND_RESTORATION_V2.md",
+      "sha256": "e6ea1537ad042e498bf74bed188f7baaf7dce02eb140d94e338a151a62e801e2"
+    },
+    {
+      "bytes": 1340,
+      "path": "PROPOSAL_ARTIFACTS/deep_cr/PMR007_DEEP_CR_SOURCE_RESTRICTION_MODEL_V1.yaml",
+      "sha256": "207dcc4f28697598805b7242776bd8ca0c539111b2fff25eb0f6d3bd999b5c44"
+    },
+    {
+      "bytes": 2515,
+      "path": "PROPOSAL_ARTIFACTS/deep_cr/PMR007_DEEP_CR_SOURCE_RESTRICTION_MODEL_V2.yaml",
+      "sha256": "7e0ce54a6a3f1fb53e816ba8019314ed7bf037803e340ebac69da34b868b50ba"
+    },
+    {
+      "bytes": 928,
+      "path": "PROPOSAL_ARTIFACTS/deep_cs/PMR-007_DEEP_CS_ADMISSION_OVERLAY.yaml",
+      "sha256": "fc35f95ca8d802f6191898806961ec1e4dcac0ba9d535253387bc564b8e86ffa"
+    },
+    {
+      "bytes": 2673,
+      "path": "PROPOSAL_ARTIFACTS/deep_cs/PMR-007_DEEP_CS_V1_COLD_AUDIT.md",
+      "sha256": "44dc72cfe4be4a41e9026551cad93b693231ccde0de4bd1ffd30f4cad1af68d1"
+    },
+    {
+      "bytes": 1009,
+      "path": "PROPOSAL_ARTIFACTS/deep_cs/PMR-007_DEEP_CS_V2_DISTINCT_FRESH_REREVIEW.md",
+      "sha256": "1400d486cd7dd2584767a61976bd4a5bcb2d38680c88900ab6de12b991aedaca"
+    },
+    {
+      "bytes": 609,
+      "path": "PROPOSAL_ARTIFACTS/deep_cs/PMR-007_DEEP_CS_V2_REPAIR_LOG.md",
+      "sha256": "8ef09821a58c6aee165fd1efbcfdb306420102d1c6ad7e98cfb26369d339d3c3"
+    },
+    {
+      "bytes": 1156,
+      "path": "PROPOSAL_ARTIFACTS/deep_cs/PMR-007_DEEP_ROUND_CS_WEAKEST_ADMISSIBLE_DISCRIMINATOR_V1.md",
+      "sha256": "8e4f5ddbf92b5fbb43eafa236bdd03987c17489e3c785d223ad5192830b8446e"
+    },
+    {
+      "bytes": 6830,
+      "path": "PROPOSAL_ARTIFACTS/deep_cs/PMR-007_DEEP_ROUND_CS_WEAKEST_ADMISSIBLE_DISCRIMINATOR_V2.md",
+      "sha256": "6377e19aba199aa17a3458cbe02d8c8b576ccf734949f4253d3a02394528568c"
+    },
+    {
+      "bytes": 738,
+      "path": "PROPOSAL_ARTIFACTS/deep_cs/PMR007_DEEP_CS_REFINEMENT_LATTICE_MODEL_V1.yaml",
+      "sha256": "1aff4e8f6e17bc8625cecbce36ce60b18a60aaedd25872b509f6496d811eb84b"
+    },
+    {
+      "bytes": 1319,
+      "path": "PROPOSAL_ARTIFACTS/deep_cs/PMR007_DEEP_CS_REFINEMENT_LATTICE_MODEL_V2.yaml",
+      "sha256": "cbb0e891acd1bd80b5bfeb12951eb92cb63294a37f796ce814aae4f8efe2444f"
+    },
+    {
+      "bytes": 1127,
+      "path": "PROPOSAL_ARTIFACTS/deep_ct/PMR-007_DEEP_CT_ADMISSION_OVERLAY.yaml",
+      "sha256": "412593543dd7a13ddf77da5c780125b3b9d47b480176949d5ddc63672050da51"
+    },
+    {
+      "bytes": 2690,
+      "path": "PROPOSAL_ARTIFACTS/deep_ct/PMR-007_DEEP_CT_V1_COLD_AUDIT.md",
+      "sha256": "10b150b9bd57ffb082c1ade3aa80fe2090dd9b105565075951cb2a4cf2c25cce"
+    },
+    {
+      "bytes": 1968,
+      "path": "PROPOSAL_ARTIFACTS/deep_ct/PMR-007_DEEP_CT_V2_DISTINCT_FRESH_REREVIEW.md",
+      "sha256": "325b0b35994c9863d87e78e7adbdd4238eeefc7c1aa25e87d2521c10145028e9"
+    },
+    {
+      "bytes": 917,
+      "path": "PROPOSAL_ARTIFACTS/deep_ct/PMR-007_DEEP_CT_V2_REPAIR_LOG.md",
+      "sha256": "89609a9508ca9572fbf937380590422997e353be1259fa584e2fd511ef9928f5"
+    },
+    {
+      "bytes": 1321,
+      "path": "PROPOSAL_ARTIFACTS/deep_ct/PMR-007_DEEP_ROUND_CT_PARTIAL_COMMON_INTERVENTION_DOMAIN_V1.md",
+      "sha256": "3cd099bdef54c2eb86cb5d946335fd1172110975937ccb7d60b7105f442731d2"
+    },
+    {
+      "bytes": 7648,
+      "path": "PROPOSAL_ARTIFACTS/deep_ct/PMR-007_DEEP_ROUND_CT_PARTIAL_COMMON_INTERVENTION_DOMAIN_V2.md",
+      "sha256": "057451541f01369e501ee18470dc11780383819ea8efce03e276f3ad70d8b26e"
+    },
+    {
+      "bytes": 782,
+      "path": "PROPOSAL_ARTIFACTS/deep_ct/PMR007_DEEP_CT_PARTIAL_INTERVENTION_MODEL_V1.yaml",
+      "sha256": "2051a104e5708ed3d359b10c015db876e8c75a229843598a7c6f660532a828f6"
+    },
+    {
+      "bytes": 2098,
+      "path": "PROPOSAL_ARTIFACTS/deep_ct/PMR007_DEEP_CT_PARTIAL_INTERVENTION_MODEL_V2.yaml",
+      "sha256": "e4160767e9d9622a6408c0f39868f802688433ad68d86fe342a015dfd1bff5bd"
+    },
+    {
+      "bytes": 634,
+      "path": "PROPOSAL_ARTIFACTS/intake/LIVE_REPOSITORY_AUTHORITY_AFTER_BW_CJ_INTAKE.json",
+      "sha256": "655fb76f3f5703a331f41900f95c1810f852b4ae2c713c7cc17ec77cc690f76a"
+    },
+    {
+      "bytes": 7298,
+      "path": "PROPOSAL_ARTIFACTS/intake/PMR007_BW_CH_PER_RESULT_INDEPENDENT_COLD_REVIEW_V1.md",
+      "sha256": "95fface693acdf5c51689893339160ebd47493459744a5e83578d455a3dc5ca2"
+    },
+    {
+      "bytes": 1910,
+      "path": "PROPOSAL_ARTIFACTS/intake/PMR007_BW_CH_PER_RESULT_INDEPENDENT_COLD_REVIEW_V1.yaml",
+      "sha256": "d6c68af080e60f89411c9bd9d380ec8bce9d43804c23abb08ecae7886fa02ba9"
+    },
+    {
+      "bytes": 1176,
+      "path": "PROPOSAL_ARTIFACTS/ledgers/CURRENT_STATE_AFTER_DEEP_CO.yaml",
+      "sha256": "641fd5d5d246c254954dfb0c8a596a7740d2255f1c6d5eedc2040a78f224be40"
+    },
+    {
+      "bytes": 1326,
+      "path": "PROPOSAL_ARTIFACTS/ledgers/CURRENT_STATE_AFTER_DEEP_CT.yaml",
+      "sha256": "da83da53b6d862532f7198d73b964d2f7ee2d0ca60feccaf05b88d72366a8925"
+    },
+    {
+      "bytes": 1737,
+      "path": "PROPOSAL_ARTIFACTS/ledgers/PMR007_APPROACH_FAMILY_REGISTRY_CK_CO_V1.yaml",
+      "sha256": "d172b0f5679e3bafd72ac2fa11c6d2151899f24f6f73c2420d6d5fc6a0ed24cd"
+    },
+    {
+      "bytes": 1094,
+      "path": "PROPOSAL_ARTIFACTS/ledgers/PMR007_APPROACH_FAMILY_REGISTRY_CK_CT_V2.yaml",
+      "sha256": "49fa3d3b1ab2f8c9c06a0d52bc6a2b84f0890b6a0b7dc00c37ada5c05b80a3e6"
+    },
+    {
+      "bytes": 1965,
+      "path": "PROPOSAL_ARTIFACTS/ledgers/PMR007_BURDEN_DELTA_CK_CO_V1.yaml",
+      "sha256": "d96e6d2fd99782cb178a7a29e1ed7e3ec5f7396323fcb4399e5f6f70aba82f41"
+    },
+    {
+      "bytes": 2154,
+      "path": "PROPOSAL_ARTIFACTS/ledgers/PMR007_BURDEN_DELTA_CK_CT_V2.yaml",
+      "sha256": "1d4306b13980c3b9ea394368a5ae336527943375bbbbc5821f6fe056325ee1ec"
+    },
+    {
+      "bytes": 2764,
+      "path": "PROPOSAL_ARTIFACTS/ledgers/PMR007_EVIDENCE_USE_REGISTER_CK_CO_V1.yaml",
+      "sha256": "d4a722a734a9047628643df1d018d3c31a93226b4b82d9dd9a7d3a0724602157"
+    },
+    {
+      "bytes": 3514,
+      "path": "PROPOSAL_ARTIFACTS/ledgers/PMR007_EVIDENCE_USE_REGISTER_CK_CT_V2.yaml",
+      "sha256": "8877d9a2677264dcfde3b14a4e7f6827069df57f2c03901714b969c3cf2c616f"
+    },
+    {
+      "bytes": 2013,
+      "path": "PROPOSAL_ARTIFACTS/ledgers/PMR007_FLYWHEEL_CROSSWALK_BW_CO_V1.yaml",
+      "sha256": "261d7f84f890e09ba2c9b8c11fabca2b48229e0ada5d4ab9d84fe03cb1699314"
+    },
+    {
+      "bytes": 1965,
+      "path": "PROPOSAL_ARTIFACTS/ledgers/PMR007_FLYWHEEL_CROSSWALK_BW_CT_V2.yaml",
+      "sha256": "91f1c2267e5f04a9aca372ad10ad747ad651e7e503beedd9f31f5da6921394d0"
+    },
+    {
+      "bytes": 1213,
+      "path": "PROPOSAL_ARTIFACTS/ledgers/PMR007_FORMALIZATION_QUEUE_CK_CO_V1.yaml",
+      "sha256": "6b46e588202facf5f62dc27adf8d1a542f22698a7f258979d3c5e8214a8ea984"
+    },
+    {
+      "bytes": 1228,
+      "path": "PROPOSAL_ARTIFACTS/ledgers/PMR007_FORMALIZATION_QUEUE_CK_CT_V2.yaml",
+      "sha256": "adce02e776bdbae59c5350e86e3d9b6690b61591da2f2211dfca744d9c494822"
+    },
+    {
+      "bytes": 7150,
+      "path": "PROPOSAL_ARTIFACTS/ledgers/PMR007_RESULT_INDEX_CK_CO_V1.json",
+      "sha256": "3811ce1e3ee1ef68092f444816761ba0596aa7756381a327d32e8c35fe41755d"
+    },
+    {
+      "bytes": 6012,
+      "path": "PROPOSAL_ARTIFACTS/ledgers/PMR007_RESULT_INDEX_CK_CO_V1.yaml",
+      "sha256": "d7f8dc9859aa15edb875cc09b73dde5e1cce4d06507956ad752c01cba8e28096"
+    },
+    {
+      "bytes": 13956,
+      "path": "PROPOSAL_ARTIFACTS/ledgers/PMR007_RESULT_INDEX_CK_CT_V2.json",
+      "sha256": "76be20af5f66f7e36dab868c5b1d10191992c1ed26a66857587c505aee64ed5e"
+    },
+    {
+      "bytes": 11725,
+      "path": "PROPOSAL_ARTIFACTS/ledgers/PMR007_RESULT_INDEX_CK_CT_V2.yaml",
+      "sha256": "ed08f44a460791e329367007ae3100b6a135c392e6f5743282f315bbd0476a18"
+    },
+    {
+      "bytes": 1077,
+      "path": "PROPOSAL_ARTIFACTS/ledgers/PMR007_THEOREM_FAMILY_RELATIONS_CK_CO_V1.yaml",
+      "sha256": "f17a43244c65b7a9da0c4760065ebfdb0be231abe7229d3f5227a72563e5dde2"
+    },
+    {
+      "bytes": 1826,
+      "path": "PROPOSAL_ARTIFACTS/ledgers/PMR007_THEOREM_FAMILY_RELATIONS_CK_CT_V2.yaml",
+      "sha256": "3bfed8c27235715383a733f2e8c6d2915f0426607dc1c4e5ac179506f1a2f240"
+    },
+    {
+      "bytes": 576,
+      "path": "PROPOSAL_ARTIFACTS/ledgers/PMR007_TIMING_LEDGER_CK_CO_V1.yaml",
+      "sha256": "206b6d09a0599eecb75a8bc52d448b0b2b58f1c488b0f2008818dbf59f1feedd"
+    },
+    {
+      "bytes": 579,
+      "path": "PROPOSAL_ARTIFACTS/ledgers/PMR007_TIMING_LEDGER_CK_CT_V2.yaml",
+      "sha256": "562b40bb3d06f37d0896f4f6a4a3f57179fa15341211d7c6aba408108460e3fc"
+    },
+    {
+      "bytes": 1627,
+      "path": "PROPOSAL_ARTIFACTS/ledgers/PMR007_WHOLE_PROGRAM_FRONTIER_ROTATION_DELTA_CK_CO_V1.yaml",
+      "sha256": "21f3500b0aefa824388d63e224bdf52e77344e33d02b7414eac650a88f143cdc"
+    },
+    {
+      "bytes": 1062,
+      "path": "PROPOSAL_ARTIFACTS/ledgers/PMR007_WHOLE_PROGRAM_FRONTIER_ROTATION_DELTA_CK_CT_V2.yaml",
+      "sha256": "d81cc16fa8fdcde376993993da13b3bd68837729760e55d3009db3389c6d075f"
+    },
+    {
+      "bytes": 2628,
+      "path": "PROPOSAL_ARTIFACTS/source_notes/PMR-007_DEEP_CK_SOURCE_AUTHORITY_AND_LOCATOR_NOTE.md",
+      "sha256": "0d02381235d1ff5c96d9e9668dd4cb9f8f7ab9a9b521627cc7a0ac1d2f2bdb1e"
+    },
+    {
+      "bytes": 1629,
+      "path": "PROPOSAL_ARTIFACTS/source_notes/PMR-007_DEEP_CR_SOURCE_FORMAL_WORLD_NOTE.md",
+      "sha256": "7c1c878cd187f769457e26fb8ba141c2196c60702ebe9bd9627a9dcffafaff9c"
+    },
+    {
+      "bytes": 2169,
+      "path": "PROPOSAL_ARTIFACTS/source_notes/PMR-007_DEEP_CS_TWO_PAPER_AND_ANCESTRY_CROSSWALK.md",
+      "sha256": "8abd555a03fe98815437c2dd8de888f85d3c2224275d4d2e14c0bf7dd01f72b2"
+    },
+    {
+      "bytes": 1620,
+      "path": "PROPOSAL_ARTIFACTS/synchronization/AR8R_CENTRAL_FRONTIER_AND_MENISCUS_ADJUDICATION_AFTER_DEEP_CT_V1.md",
+      "sha256": "02a4cfb90fd50376230d1a16337f181609df7d1426c167dffabd4cc727a17aed"
+    },
+    {
+      "bytes": 1913,
+      "path": "PROPOSAL_ARTIFACTS/synchronization/AR8R_CENTRAL_FRONTIER_AND_MENISCUS_ADJUDICATION_AFTER_DEEP_CT_V1.yaml",
+      "sha256": "c813cbcd25234dfec6f4e6dece0de1014d4d67a221d1f1fe93607974c42d70cc"
+    },
+    {
+      "bytes": 7594,
+      "path": "PROPOSAL_ARTIFACTS/synchronization/AR8R_SIX_LANE_IMPORT_ADJUDICATION_AFTER_DEEP_CT_V2.json",
+      "sha256": "4d7e187df0e9a7f459bd2a95916a853f6ac8508c284e7a3b4492840ee12da6ae"
+    },
+    {
+      "bytes": 4665,
+      "path": "PROPOSAL_ARTIFACTS/synchronization/AR8R_SIX_LANE_IMPORT_ADJUDICATION_AFTER_DEEP_CT_V2.md",
+      "sha256": "80145c06722e453aab3cd59c666473dbb59de28f3b2398822d9400a69996d888"
+    },
+    {
+      "bytes": 6335,
+      "path": "PROPOSAL_ARTIFACTS/synchronization/AR8R_SIX_LANE_IMPORT_ADJUDICATION_AFTER_DEEP_CT_V2.yaml",
+      "sha256": "14dfb04d45cf58d1d2f2c42d4e80d6c385b1c0cd65853eae6f515e4149bb6a3a"
+    },
+    {
+      "bytes": 1425,
+      "path": "PROPOSAL_ARTIFACTS/synchronization/AR8R_SIX_LANE_IMPORT_V1_COLD_AUDIT.md",
+      "sha256": "58a5fea93e24dfa2343ad267300ed54d8c770079490c42c70f25793be2728c51"
+    },
+    {
+      "bytes": 1197,
+      "path": "PROPOSAL_ARTIFACTS/synchronization/AR8R_SIX_LANE_IMPORT_V2_DISTINCT_FRESH_REREVIEW.md",
+      "sha256": "28c83dfded50e1e7cbabe910eec71bda5e483b40033a9d5bb492500f88ebb032"
+    },
+    {
+      "bytes": 1019,
+      "path": "PROPOSAL_ARTIFACTS/synchronization/AR8R_SIX_LANE_IMPORT_V2_REPAIR_LOG.md",
+      "sha256": "57be342b12fee72d54f1137cdcf9e06d1203ae462c5b22b5e4986515ba1b6c22"
+    },
+    {
+      "bytes": 5311,
+      "path": "PROPOSAL_ARTIFACTS/synchronization/AR8R_SIX_LANE_SYNCHRONIZATION_AFTER_DEEP_CO_V1.json",
+      "sha256": "e7b0e97f74bff04fd9de88a5e41491f8dc20d13b1f4c9bbe6c8c2896df2a881c"
+    },
+    {
+      "bytes": 4154,
+      "path": "PROPOSAL_ARTIFACTS/synchronization/AR8R_SIX_LANE_SYNCHRONIZATION_AFTER_DEEP_CO_V1.yaml",
+      "sha256": "f046d81079c9db015ec3d186199f83cac6bdadd71bd0eb6cb7c594e1a3d34ecd"
+    },
+    {
+      "bytes": 1913,
+      "path": "PROPOSED_CENTRAL_FRONTIER.yaml",
+      "sha256": "c813cbcd25234dfec6f4e6dece0de1014d4d67a221d1f1fe93607974c42d70cc"
+    },
+    {
+      "bytes": 1326,
+      "path": "PROPOSED_CURRENT_STATE.yaml",
+      "sha256": "da83da53b6d862532f7198d73b964d2f7ee2d0ca60feccaf05b88d72366a8925"
+    },
+    {
+      "bytes": 561,
+      "path": "PROPOSED_DIFF.md",
+      "sha256": "3bc0071ae9bcb55ef8af9bc64bfbc88fba94ce6f08485cb524be238e1763d35e"
+    },
+    {
+      "bytes": 11725,
+      "path": "PROPOSED_RESULT_INDEX.yaml",
+      "sha256": "ed08f44a460791e329367007ae3100b6a135c392e6f5743282f315bbd0476a18"
+    },
+    {
+      "bytes": 577,
+      "path": "PROVENANCE_AND_AUTHORITY.md",
+      "sha256": "d199ca0f11f1672afd2ed5469cebbfdb9928a0aa627e506f0c824677bce6188b"
+    },
+    {
+      "bytes": 438,
+      "path": "README.md",
+      "sha256": "ab3396063c5ab28a3acc19b66b35d2d1a364d50c25b30b85639b01b0aaae4f35"
+    }
+  ],
+  "package_kind": "SANITIZED_REPOSITORY_UPDATE_PROPOSAL",
+  "repository_authority": "9b80f2dfdf73a768ccad6a6ea2f2998c70ebdcf3",
+  "schema": "ar8r-pmr007-artifact-manifest-v1",
+  "total_bytes": 452834
+}

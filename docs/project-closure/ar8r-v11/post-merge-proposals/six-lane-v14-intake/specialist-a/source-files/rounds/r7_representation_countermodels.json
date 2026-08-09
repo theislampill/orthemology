@@ -1,0 +1,128 @@
+{
+  "conclusion_ceiling": "target sufficiency of induced partitions only",
+  "guards": [
+    "finite domain",
+    "exact deterministic target",
+    "representation maps frozen",
+    "common decoder target-independent",
+    "learned/hand-authored provenance kept separate from induced partition",
+    "no tensor-factorization uniqueness inference"
+  ],
+  "models": {
+    "coordinate_relabelling_same_partition": {
+      "representation_a": [
+        0,
+        0,
+        1,
+        1
+      ],
+      "representation_b": [
+        7,
+        7,
+        9,
+        9
+      ],
+      "same_defect": true,
+      "same_partition": true
+    },
+    "factorization_firewall": {
+      "nonnegative_rank_or_tensor_uniqueness_claimed": false,
+      "statement": "this operation compares induced fibres only; it does not identify a tensor factorization or its uniqueness"
+    },
+    "joint_correction_repairs_residual": {
+      "base_defect": 4,
+      "base_representation": [
+        0,
+        0,
+        0,
+        0
+      ],
+      "correction_representation": [
+        0,
+        0,
+        1,
+        1
+      ],
+      "joint_defect": 0,
+      "joint_has_decoder": true,
+      "target": [
+        0,
+        0,
+        1,
+        1
+      ]
+    },
+    "learned_hand_authored_tag_neutrality": {
+      "hand_authored": {
+        "map": [
+          0,
+          0,
+          1,
+          1
+        ],
+        "tag": "hand_authored"
+      },
+      "learned": {
+        "map": [
+          0,
+          0,
+          1,
+          1
+        ],
+        "tag": "learned"
+      },
+      "same_decoder_status": true,
+      "same_fibres": true
+    },
+    "raw_cardinality_not_sufficiency": {
+      "higher_cardinality": 3,
+      "higher_cardinality_representation": [
+        0,
+        1,
+        0,
+        2
+      ],
+      "higher_has_decoder": false,
+      "lower_cardinality": 2,
+      "lower_cardinality_representation": [
+        0,
+        0,
+        1,
+        1
+      ],
+      "lower_has_decoder": true,
+      "target": [
+        0,
+        0,
+        1,
+        1
+      ]
+    },
+    "same_histogram_not_same_partition": {
+      "a_has_decoder": true,
+      "b_has_decoder": false,
+      "representation_a": [
+        0,
+        0,
+        1,
+        1
+      ],
+      "representation_b": [
+        0,
+        1,
+        0,
+        1
+      ],
+      "same_label_histogram": true,
+      "target": [
+        0,
+        0,
+        1,
+        1
+      ]
+    }
+  },
+  "narrow_statement": "a representation admits an exact common decoder for a target iff the target is constant on representation fibres; joint representations refine fibres and cannot increase exact collision defect",
+  "schema": "spa-r7-representation-models-v1",
+  "specialist_local_result": "SPA-R7"
+}

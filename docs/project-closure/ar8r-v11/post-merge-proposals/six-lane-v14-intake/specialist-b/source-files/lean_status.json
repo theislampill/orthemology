@@ -1,0 +1,23 @@
+{
+  "axiom_dependency_report": "NOT_RUN",
+  "elaboration": "NOT_RUN",
+  "elan_available": false,
+  "kernel": "NOT_RUN",
+  "lake_available": false,
+  "lean_available": false,
+  "parser": "NOT_RUN",
+  "schema": "AR8R_SPECIALIST_B_LEAN_STATUS_V2",
+  "scope": "Static lexical scan only; not a parser, elaborator, kernel check, or axiom report.",
+  "source": "SpecialistBBridgeSignatures.lean",
+  "source_sha256": "e18b1e03b970b4d355008eb64ba3f502a23e9c36797ecb009d6487e923c97015",
+  "static_scan": {
+    "admit_tokens": 0,
+    "axiom_declarations": 0,
+    "block_comment_balance": 0,
+    "namespace_balance": 0,
+    "opaque_declarations": 0,
+    "sorry_tokens": 0,
+    "structure_declarations": 8,
+    "theorem_declarations": 5
+  }
+}

@@ -1,0 +1,35 @@
+schema: pmr007-deep-cl-admission-overlay-v1
+identity: PMR-007-MABF-1
+title: Registry-relative architecture bridge factorization and the surviving U-I residual
+canonical_version: V2
+provenance: ADMITTED_POST_MERGE_SCOPED_RESULT
+historical_identity: NONE
+repository_scientific_adoption: NONE
+owner_adoption: PENDING
+external_review: OPEN
+general_mathematical_novelty: 0
+proof_status: HUMAN_PROOF_PLUS_PRIMARY_FINITE_CONFLICT_COVER_CHECK
+countermodel_status: SIX_REGISTRY_AND_ELIGIBILITY_CONTROLS
+cold_audit: REPAIR_REQUIRED
+blocking_findings_repaired: 8
+fresh_rereview: PASS_WITH_NONBLOCKING_REGISTRY_AND_EVIDENCE_ELIGIBILITY_NOTES
+theorem_family:
+  general_mechanism: FINITE_FIBRE_CONSTANCY_AND_CONFLICT_COVER
+  relation: APPLICATION_AND_CENTRAL_BURDEN_SPECIALIZATION
+  ancestry: [Deep_BX, Deep_BV, AR8R_T294, standard_partition_refinement]
+central_effects:
+  common_bearer_resolves: [UP, IP]
+  intentional_uptake_resolves: [UI, UP]
+  current_neutral_resolves: []
+  surviving_residual: UI
+  required_next_evidence: independently_warranted_target_blind_UI_cross_cut
+scope_nonclaims:
+  - no complete anchor registry
+  - no scalar epistemic cost
+  - no neutral operationalization of intentional uptake
+  - no actual-world architecture selection
+  - no exhaustive ontology
+  - no historical or novelty credit
+integrated_champion: NONE
+meniscus: MENISCUS_NOT_REACHED
+natural_closure: NOT_REACHED

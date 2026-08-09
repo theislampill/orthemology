@@ -1,0 +1,48 @@
+{
+  "ancestry_disposition": "standard finite common-knowledge reachability/fixed-point semantics; no novelty; durable ancestry locator deferred to Deep Research 20",
+  "claim_ceiling": "bounded exhaustive evidence for up to four worlds and a direct finite proof; no asynchronous distributed-protocol theorem",
+  "countermodel_digest_set_hash": "2642f975b37da06244922303317fb0ceb575be516ff20c53eac2d672583bb1a8",
+  "declared_signature_cases": 15034,
+  "e1_not_common_knowledge_unique_count": 588,
+  "errors": [],
+  "max_epistemic_closure_radius_observed": 3,
+  "mutants_killed": 6,
+  "mutants_total": 6,
+  "mutations": [
+    {
+      "killed": true,
+      "killer": "three-world alternating partition model",
+      "mutant": "private_acknowledgment_by_one_agent_implies_common_knowledge"
+    },
+    {
+      "killed": true,
+      "killer": "union-reachability closure",
+      "mutant": "everyone_knows_once_implies_common_knowledge"
+    },
+    {
+      "killed": true,
+      "killer": "four-world alternating chains with epistemic radius three",
+      "mutant": "depth_equal_to_agent_count_always_suffices"
+    },
+    {
+      "killed": true,
+      "killer": "explicit nonlocal false world",
+      "mutant": "component_diameter_correction_is_unnecessary"
+    },
+    {
+      "killed": true,
+      "killer": "fresh partition/valuation enumeration and witness digest",
+      "mutant": "prefilled_pass_without_reachability_recomputation"
+    },
+    {
+      "killed": true,
+      "killer": "scope guard excludes message loss, clocks, failures, and source/warrant transfer",
+      "mutant": "finite_synchronous_kripke_result_proves_protocol_common_knowledge"
+    }
+  ],
+  "n_minus_one_mismatch_count": 0,
+  "radius_mismatch_count": 0,
+  "schema": "spa-r5-check-results-v1",
+  "specialist_local_result": "SPA-R5",
+  "status": "PASS"
+}

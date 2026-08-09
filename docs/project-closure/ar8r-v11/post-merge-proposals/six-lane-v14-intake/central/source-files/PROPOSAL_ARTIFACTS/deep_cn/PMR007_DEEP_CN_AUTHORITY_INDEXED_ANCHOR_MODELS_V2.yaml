@@ -1,0 +1,77 @@
+schema: pmr007-deep-cn-authority-indexed-anchor-models-v2
+identity: PMR-007-AIAC-1
+status: REPAIRED_POST_MERGE_RESEARCH_CANDIDATE
+formal_setting:
+  finite_model_class: true
+  exact_complete_anchor_values: true
+  eligible_anchor_requirement:
+    - total_on_frozen_model_class
+    - stable_value_semantics_within_context
+    - independently_supplied_authority
+  kappa_meaning: minimum_registry_cardinality_only
+  weighted_variant: requires_independently_warranted_costs
+  not_covered:
+    - noisy_or_statistical_identification
+    - unknown_or_incomplete_model_class
+    - adaptive_evidence_acquisition
+    - actual_world_selection
+    - metaphysical_truth
+architecture_instance:
+  target_type: ARCHITECTURE_CLASS
+  models: [U, I, P]
+  target: {U: U, I: I, P: P}
+  anchors:
+    neutral_profile: {values: {U: n0, I: n0, P: n0}, authority: NEUTRAL_EXECUTABLE}
+    common_bearer: {values: {U: true, I: true, P: false}, authority: FORMAL_TARGET_COORDINATE}
+    intentional_uptake: {values: {U: true, I: false, P: false}, authority: FORMAL_TARGET_COORDINATE}
+    track_n_package: {values: {U: true, I: false, P: false}, authority: TRACK_N_COMPOSITE_CONDITIONAL}
+    target_oracle: {values: {U: U, I: I, P: P}, authority: FORBIDDEN_TARGET_ORACLE}
+  contexts:
+    neutral: {eligible: [neutral_profile]}
+    formal_coordinate: {eligible: [neutral_profile, common_bearer, intentional_uptake]}
+    track_n_conditional: {eligible: [neutral_profile, common_bearer, track_n_package]}
+    forbidden_oracle: {eligible: [target_oracle]}
+recipient_version_instance:
+  target_type: RECIPIENT_ACTION
+  models: [same_bytes_v1_applicable, same_bytes_v2_stale]
+  target: {same_bytes_v1_applicable: APPLY, same_bytes_v2_stale: HOLD}
+  anchors:
+    receipt_bytes: {values: {same_bytes_v1_applicable: bytes_x, same_bytes_v2_stale: bytes_x}, authority: RECEIPT}
+    version_compatibility: {values: {same_bytes_v1_applicable: true, same_bytes_v2_stale: false}, authority: RECIPIENT_VERSION_CONTRACT}
+    authority: {values: {same_bytes_v1_applicable: true, same_bytes_v2_stale: true}, authority: RECIPIENT_AUTHORITY_CONTRACT}
+  contexts:
+    receipt_only: {eligible: [receipt_bytes]}
+    version_aware: {eligible: [receipt_bytes, version_compatibility, authority]}
+source_world_instance:
+  target_type: SOURCE_RELATIVE_CANDIDATE_CLASS
+  models: [personal_candidate, impersonal_candidate]
+  target: {personal_candidate: PERSONAL, impersonal_candidate: IMPERSONAL}
+  anchors:
+    source_role_profile: {values: {personal_candidate: role_bundle, impersonal_candidate: role_bundle}, authority: TRANSLATED_ROLE_PROFILE}
+    intensional_predicate_preservation: {values: {personal_candidate: true, impersonal_candidate: false}, authority: TRACK_N_GUARDED}
+    actual_world_selection: {values: {personal_candidate: actual, impersonal_candidate: nonactual}, authority: WORLD_LINK_GUARDED}
+  contexts:
+    translated_role_only: {eligible: [source_role_profile]}
+    track_n_guarded: {eligible: [source_role_profile, intensional_predicate_preservation, actual_world_selection]}
+context_transport:
+  required_fields:
+    - source_context
+    - target_context
+    - anchor_identity
+    - type_preservation
+    - semantic_preservation
+    - version_preservation
+    - authority_preservation_or_revalidation
+    - applicability
+  extensional_partition_similarity_sufficient: false
+anti_unification:
+  shared_layer: finite_context_indexed_conflict_cover
+  architecture_native_extras: [common_intervention_semantics, architecture_target_types]
+  recipient_native_extras: [version, authority, capability, invalidators, adoption]
+  source_world_native_extras: [source_custody, translation, referent, actual_world, predicate_strength, applicability]
+nonclaims:
+  - no context authorizes itself
+  - no cross-context migration without transport
+  - no scalar evidence burden
+  - no domain identity
+  - no historical identity or novelty credit

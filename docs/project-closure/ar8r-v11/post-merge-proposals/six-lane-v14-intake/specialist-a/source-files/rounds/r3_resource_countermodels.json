@@ -1,0 +1,106 @@
+{
+  "conclusion_ceiling": "registered realization-class feasibility only; no metaphysical architecture truth",
+  "guards": [
+    "common resource coordinates and units",
+    "external metering",
+    "fixed compiler/decoder",
+    "frozen budget",
+    "complete registered realization class for class-wide exclusion",
+    "declared scalar aggregator or full Pareto frontier"
+  ],
+  "models": {
+    "incomplete_registry_false_exclusion": {
+      "budget": 5,
+      "complete_class_says_excluded": false,
+      "lesson": "architecture exclusion requires complete realization-class custody",
+      "observed_registry": [
+        {
+          "architecture": "impersonal_powers",
+          "id": "observed",
+          "profile": "p",
+          "scalar_cost": 10
+        }
+      ],
+      "observed_registry_says_excluded": true,
+      "unregistered_realizer": {
+        "architecture": "impersonal_powers",
+        "id": "hidden",
+        "profile": "p",
+        "scalar_cost": 3
+      }
+    },
+    "pareto_incomparability": {
+      "a": [
+        1,
+        10
+      ],
+      "a_dominates_b": false,
+      "b": [
+        10,
+        1
+      ],
+      "b_dominates_a": false,
+      "lesson": "a scalar winner requires an independently declared aggregation rule"
+    },
+    "pareto_unattained_infimum": {
+      "budget_1_1_feasible": false,
+      "coordinatewise_infimum": [
+        1,
+        1
+      ],
+      "costs": [
+        [
+          1,
+          10
+        ],
+        [
+          10,
+          1
+        ]
+      ],
+      "frontier": [
+        [
+          1,
+          10
+        ],
+        [
+          10,
+          1
+        ]
+      ],
+      "infimum_attained": false,
+      "lesson": "coordinatewise minima can combine different realizers and cannot replace the Pareto frontier"
+    },
+    "state_splitting": {
+      "lesson": "raw representative cost is not representation invariant",
+      "normalized_scalar_cost": {
+        "p": 2
+      },
+      "raw_cost_fibre_constant": false,
+      "realizers": [
+        {
+          "architecture": "impersonal_powers",
+          "id": "minimal",
+          "profile": "p",
+          "scalar_cost": 2,
+          "vector_cost": [
+            2,
+            4
+          ]
+        },
+        {
+          "architecture": "impersonal_powers",
+          "id": "split_with_dead_state",
+          "profile": "p",
+          "scalar_cost": 7,
+          "vector_cost": [
+            7,
+            4
+          ]
+        }
+      ]
+    }
+  },
+  "schema": "spa-r3-resource-countermodels-v1",
+  "specialist_local_result": "SPA-R3"
+}

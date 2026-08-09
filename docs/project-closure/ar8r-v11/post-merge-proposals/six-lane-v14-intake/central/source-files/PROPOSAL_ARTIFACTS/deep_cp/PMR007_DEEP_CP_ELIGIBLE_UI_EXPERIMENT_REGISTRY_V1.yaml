@@ -1,0 +1,81 @@
+schema: pmr007-deep-cp-eligible-ui-experiment-registry-v1
+identity: PMR-007-CUIE-1
+status: POST_MERGE_RESEARCH_CANDIDATE
+model_class: [U_unified_personal, I_impersonal_powers]
+neutral_state_coordinates:
+  - semantic_content
+  - objective_fitting_status
+  - registered_payoff
+  - provenance_root_bit
+  - version_valid
+  - authority_valid
+  - self_model_token
+common_outputs:
+  decision: semantic_content_xor_objective_fitting_status
+  payoff_report: registered_payoff
+  source_eligibility: version_valid_and_authority_valid
+  provenance_report: provenance_root_bit
+  self_model_report: self_model_token
+eligible_interventions:
+  noop: {}
+  flip_semantic_content: {semantic_content: toggle}
+  flip_objective_fitting_status: {objective_fitting_status: toggle}
+  flip_registered_payoff: {registered_payoff: toggle}
+  flip_provenance_root_bit: {provenance_root_bit: toggle}
+  flip_version_valid: {version_valid: toggle}
+  flip_authority_valid: {authority_valid: toggle}
+  flip_self_model_token: {self_model_token: toggle}
+common_contract:
+  abstract_type_frozen: true
+  total_implementation_in_U_and_I: true
+  target_independent: true
+  type_preserving: true
+  version_preserving: true
+  authorization_declared: true
+  resource_contract: one_boolean_update_per_step
+  semantics_preserving: true
+  comparable_outputs: true
+architectures:
+  U_unified_personal:
+    implementation: common_kernel_CP0
+    hidden_targets:
+      intentional_uptake: true
+      selection_because_fitting: true
+      de_se_ownership: true
+      personality: true
+      wisdom: true
+  I_impersonal_powers:
+    implementation: common_kernel_CP0
+    hidden_targets:
+      intentional_uptake: false
+      selection_because_fitting: false
+      de_se_ownership: false
+      personality: false
+      wisdom: false
+ineligible_candidate_operations:
+  toggle_intentional_uptake:
+    total_common_implementation: false
+    reason: I_has_no_independently_identified_uptake_state
+  query_de_se_ownership:
+    common_output_semantics: false
+    reason: same_label_would_not_preserve_target_independent_semantics
+  toggle_selection_because_fitting:
+    total_common_implementation: false
+    reason: because_relation_is_the_disputed_target_coordinate
+  source_intensional_predication:
+    neutral_eligibility: false
+    reason: Track_N_source_world_guards_required
+  architecture_class_oracle:
+    target_independent: false
+    reason: direct_target_read
+controls:
+  self_model_proxy: common_and_behaviorally_active_but_not_de_se_ownership
+  objective_fitting_status: carried_external_status_not_intentional_uptake
+  source_eligibility: version_and_authority_only_not_source_truth
+  provenance_root: root_identity_not_personality
+nonclaims:
+  - registry is not exhaustive of every future intervention
+  - formal implementation is not physical or metaphysical realizability
+  - finite common kernel does not settle infinite-horizon internal dynamics
+  - objective fitting status does not prove objective fittingness world truth
+  - no source-world or divine-attribute inference

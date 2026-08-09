@@ -1,0 +1,63 @@
+schema: pmr007-deep-cm-objective-fitted-function-models-v1
+identity: PMR-007-OFFI-1
+status: POST_MERGE_RESEARCH_CANDIDATE
+finite_reduct:
+  states: [s0, s1, s2, s3]
+  actions: [a0, a1]
+  one_structural_bearer: b
+  truth_target: {s0: a0, s1: a1, s2: a0, s3: a1}
+  objective_fitting_relation: action_equals_truth_target
+  policy: {s0: a0, s1: a1, s2: a0, s3: a1}
+  reliable_realization: true
+  truth_linked_conformance: true
+  causal_guidance: true
+  selected_effect_history: optional_and_nonidentifying
+  design_record: optional_and_nonidentifying_of_system_personality
+expansions:
+  U_personal:
+    neutral_reduct: CM_R0
+    intentional_uptake: true
+    selection_because_fitting: true
+    de_se_ownership: true
+    personality: true
+    wisdom: true
+  I_impersonal:
+    neutral_reduct: CM_R0
+    intentional_uptake: false
+    selection_because_fitting: false
+    de_se_ownership: false
+    personality: false
+    wisdom: false
+function_coordinates:
+  causal_role: reduct_definable
+  selected_effect: history_coordinate_independent_of_personality
+  designed_function: conditional_on_designer_plan_and_does_not_make_system_personal
+  learned_objective: reduct_definable
+  system_relative_success: reduct_definable
+  objective_truth_linked_fit_conformance: reduct_definable_given_external_truth_and_fit_relations
+  intentional_proper_function: requires_nonreduct_uptake_and_because_relation
+  fitrah_oriented_proper_function: Track_N_source_relative_and_requires_source_world_applicability
+countermodels:
+  CM-CM-01:
+    deletion: objective_truth_link
+    result: perfect_success_relative_to_false_installed_target
+  CM-CM-02:
+    deletion: objective_fitting_relation
+    result: causal_and_reliable_policy_without_fittingness
+  CM-CM-03:
+    deletion: intentional_uptake
+    result: objective_fit_conformance_without_intentional_reason_uptake
+  CM-CM-04:
+    deletion: selection_because_fitting
+    result: fitting_action_without_because_relation
+  CM-CM-05:
+    deletion: de_se_ownership
+    result: one_structural_bearer_without_one_first_person_subject
+  CM-CM-06:
+    deletion: source_world_applicability
+    result: source_relative_function_predication_without_actual_world_application
+nonclaims:
+  - no proof that the declared fittingness relation is actual-world correct
+  - no complete theory of biological or epistemic proper function
+  - no claim that impersonal expansion is metaphysically actual
+  - no inference to or against divine Wisdom

@@ -1,0 +1,128 @@
+schema: pmr007-deep-ck-source-formal-world-models-v2
+identity: PMR-007-SFWA-1
+status: REPAIRED_POST_MERGE_RESEARCH_CANDIDATE
+source_evidence:
+  asfahani_translation:
+    class: TRANSLATED_PRIMARY_ACCESS
+    supplies:
+      - source_predication_of_one_knowing_able_living_volitional_speaking_hearing_seeing
+      - distinction_between_names_and_attributes
+      - praiseworthy_and_blameworthy_speech_and_volition
+      - attribute_locus_principle
+    does_not_supply:
+      - Arabic_primary_verification
+      - actual_world_selection
+      - neutral_metaphysical_entailment
+      - complete_Wisdom_bridge
+  el_tobgui:
+    class: SECONDARY_SCHOLARLY_RECONSTRUCTION
+    supplies: [source_epistemology_context, mental_external_reality_distinction, fitrah_reconstruction]
+    does_not_supply: [neutral_formal_proof, Arabic_primary_verification]
+  al_ujayri:
+    class: CONTEMPORARY_ATHARI_SYNTHESIS
+    supplies: [fitrah_and_teleological_argument_context]
+    does_not_supply: [neutral_formal_proof, actual_world_bridge]
+source_to_world_guards:
+  - source_regime_accepted
+  - exact_source_custody
+  - source_version_identity
+  - translation_adequacy
+  - source_bearer_identified
+  - admissible_interpretation_family
+  - singleton_candidate_denotation
+  - actual_world_selection
+  - intensional_predicate_preservation
+  - source_predicate_strength_preserved
+  - source_referent_equals_target_bearer
+  - world_adequacy
+  - target_applicability
+wisdom_role_guards:
+  - objective_fittingness_not_signal_only
+  - knowledge_or_apprehension
+  - intentional_uptake
+  - selection_because_fitting
+  - reliable_realization
+  - one_bearer_coinstantiation
+positive_conclusion:
+  name: WisdomApplicable_N
+  class: TRACK_N_CONDITIONAL_ROLE_PACKAGE
+  definition: all_source_to_world_guards_and_all_wisdom_role_guards
+  not_claimed: [neutral_Wisdom_theorem, actual_world_truth, uniqueness, transworld_identity, divine_Name_authorization]
+world_models:
+  U_unified_personal:
+    neutral_profile: CK_NEUTRAL_PROFILE_0
+    architecture_class: U
+    common_bearer: true
+    common_bearer_id: u
+    intensional_source_predicates: true
+    objective_fittingness: true
+    intentional_uptake: true
+    selection_because_fitting: true
+    reliable_realization: true
+    wisdom_applicable_N: true
+  I_impersonal_powers:
+    neutral_profile: CK_NEUTRAL_PROFILE_0
+    architecture_class: I
+    common_bearer: true
+    common_bearer_id: i
+    functional_roles: true
+    intensional_source_predicates: false
+    fittingness_signal: true
+    objective_fittingness: false
+    intentional_uptake: false
+    selection_because_fitting: false
+    reliable_realization: true
+    wisdom_applicable_N: false
+  P_plural_coordinated:
+    neutral_profile: CK_NEUTRAL_PROFILE_0
+    architecture_class: P
+    common_bearer: false
+    distributed_roles: {knowledge: k, will: w, power: p, semantic: k, efficacy: p}
+    intensional_source_predicates: false
+    fittingness_signal: true
+    objective_fittingness: false
+    intentional_uptake: false
+    selection_because_fitting: false
+    reliable_realization: true
+    wisdom_applicable_N: false
+countermodels:
+  CK-CM-01:
+    deletion: intensional_predicate_preservation
+    model: I_impersonal_powers
+    result: functional_source_compatibility_without_Track_N_Wisdom
+  CK-CM-02:
+    deletion: one_bearer_coinstantiation
+    model: P_plural_coordinated
+    result: plural_role_availability_without_common_bearer
+  CK-CM-03:
+    deletion: singleton_candidate_denotation
+    model_pair: [U_unified_personal, I_impersonal_powers]
+    result: source_object_has_two_candidate_world_referents
+  CK-CM-04:
+    deletion: objective_fittingness_not_signal_only
+    model: I_impersonal_powers
+    result: fittingness_signal_guidance_without_objective_fittingness
+  CK-CM-05:
+    deletion: intentional_uptake
+    model: I_impersonal_powers
+    result: semantic_and_causal_response_without_uptake
+  CK-CM-06:
+    deletion: selection_because_fitting
+    model: U_behavioral_twin_without_because_relation
+    result: fitting_outcome_and_agency_without_Wisdom_package
+  CK-CM-07:
+    deletion: actual_world_selection
+    model_pair: [U_candidate_world, I_candidate_world]
+    result: source_relative_candidate_without_actual_world_resolution
+  CK-CM-08:
+    deletion: source_referent_equals_target_bearer
+    model: downstream_host
+    result: causing_speech_in_another_locus_does_not_make_cause_the_speaker
+  CK-CM-09:
+    deletion: target_applicability
+    model: true_source_predication_wrong_target
+    result: source_truth_without_target_application
+  CK-CM-10:
+    deletion: world_adequacy
+    model: formally_interpretable_but_world_inadequate
+    result: formal_transfer_without_world_truth

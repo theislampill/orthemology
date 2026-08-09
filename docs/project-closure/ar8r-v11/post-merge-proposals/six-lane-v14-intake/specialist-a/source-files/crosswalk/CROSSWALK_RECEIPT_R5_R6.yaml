@@ -1,0 +1,82 @@
+schema: spa-two-round-crosswalk-receipt-v1
+receipt: R5_R6
+authority: PRIVATE_SPECIALIST_RESEARCH_NO_REPOSITORY_ADOPTION
+repository_sha: 9b80f2dfdf73a768ccad6a6ea2f2998c70ebdcf3
+results:
+- id: SPA-R5
+  note_path: rounds/SPA-R5_COMMON_KNOWLEDGE_RADIUS.md
+  note_sha256: 103f7dbd0706c78e4852dac3a4a1dd595ecc72c783323f6272c05f800f783c9e
+  result_path: results/r5_common_knowledge_radius_results.json
+  result_sha256: 52f748060e2b7e57f05ff5eafbefbb1f7a7eeeaf8e4e61a28b8549470af781b3
+  checker_status: PASS
+  mutants_killed: 6
+  mutants_total: 6
+  claim_ceiling: bounded exhaustive evidence for up to four worlds and a direct finite
+    proof; no asynchronous distributed-protocol theorem
+  ancestry_disposition: standard finite common-knowledge reachability/fixed-point
+    semantics; no novelty; durable ancestry locator deferred to Deep Research 20
+- id: SPA-R6
+  note_path: rounds/SPA-R6_PROVENANCE_ROOT_INVARIANT.md
+  note_sha256: 262de6927a39e3b1a6a6b3640f615613effe5be5564a0d4d27df60b01de5d044
+  result_path: results/r6_provenance_root_results.json
+  result_sha256: 061c4dece07c0e0996bdac329a0002f482e1e67be327a17b2f24da1a1690461f
+  checker_status: PASS
+  mutants_killed: 7
+  mutants_total: 7
+  claim_ceiling: bounded exhaustive operation sequences through five nodes plus explicit
+    long copy chain; no stochastic independence theorem
+  ancestry_disposition: formalizes existing provenance-root/copy nonmultiplicity discipline;
+    no historical TAC/SAC reconstruction or novelty
+formal_status: both executable finite checkers PASS; no Lean machine claim
+assumptions:
+- finite S5-style epistemic model
+- two agents
+- frozen truth valuation
+- finite authenticated provenance DAG
+- typed pure-copy/sync/acquire operations
+conclusion_ceiling: finite epistemic closure and root accounting only; no protocol
+  delivery, warrant, evidential independence, TAC/SAC identity, or source truth
+ancestry_novelty_disposition: standard common-knowledge reachability/fixed-point semantics
+  and existing provenance discipline; novelty 0; exact external locators pending DR20
+countermodels:
+- everyone-knows but not common-knowledge three-world chain
+- depth-two insufficiency in larger chains
+- 101 episodes from one root
+- distinct roots with shared hidden anchor
+- same roots with different carriers/episodes
+combined_mutation_status:
+  killed: 13
+  total: 13
+lean_checker_status: no new checked Lean; stable statements queued after ancestry
+  and interface review
+dependencies_closed:
+- private acknowledgment to common knowledge shortcut
+- copy count to independent-root count shortcut
+- root equality to carrier/episode identity shortcut
+dependencies_opened: &id001
+- asynchronous acknowledgement protocol
+- failure/loss/common-clock assumptions
+- root authentication and hidden dependence tests
+- claim-relative evidential independence semantics
+input_requested_from_specialist_b: Return exact bridge premises, if any, from fitrah/restoration/recipient
+  warrant to formal E^d/common-knowledge or provenance-root predicates; no source
+  premise is inferred here.
+input_requested_from_deep_research: 'DR20: stable primary locators for common knowledge
+  and provenance/data-incest ancestry. DR22: acknowledgment and provenance intervention
+  protocols.'
+central_flywheel_effects:
+- agentic_communication gains epistemic-radius coordinate
+- tac_sac/provenance nodes gain executable nonmultiplicity fixture
+- daee_temporal remains separate from finite epistemic common knowledge
+remaining_burdens: *id001
+exact_next_atomic_action: compare learned and hand-authored representations only through
+  induced fibres and residual target collisions
+firewalls:
+  owner_adoption: NOT_CLAIMED
+  repository_scientific_adoption: NONE
+  historical_identity: NONE
+  novelty: 0
+  source_world_transfer: NOT_ESTABLISHED
+  metaphysical_conclusion: NONE
+  meniscus: NOT_REACHED
+  closure: NOT_REACHED

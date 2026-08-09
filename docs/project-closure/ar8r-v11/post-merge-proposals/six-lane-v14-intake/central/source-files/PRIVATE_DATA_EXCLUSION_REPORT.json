@@ -1,0 +1,333 @@
+{
+  "excluded_files": [
+    {
+      "path": "deep_ck/PMR-007_DEEP_CK_ADMISSION_HASHES.sha256",
+      "reason": "path-bearing or redundant local sidecar replaced by package manifest"
+    },
+    {
+      "path": "deep_ck/PMR007_DEEP_CK_V1_FROZEN_HASHES.sha256",
+      "reason": "path-bearing or redundant local sidecar replaced by package manifest"
+    },
+    {
+      "path": "deep_ck/PMR007_DEEP_CK_V2_FROZEN_HASHES.sha256",
+      "reason": "path-bearing or redundant local sidecar replaced by package manifest"
+    },
+    {
+      "path": "deep_cl/PMR-007_DEEP_CL_ADMISSION_HASHES.sha256",
+      "reason": "path-bearing or redundant local sidecar replaced by package manifest"
+    },
+    {
+      "path": "deep_cl/PMR007_DEEP_CL_V1_FROZEN_HASHES.sha256",
+      "reason": "path-bearing or redundant local sidecar replaced by package manifest"
+    },
+    {
+      "path": "deep_cl/PMR007_DEEP_CL_V2_FROZEN_HASHES.sha256",
+      "reason": "path-bearing or redundant local sidecar replaced by package manifest"
+    },
+    {
+      "path": "deep_cm/PMR-007_DEEP_CM_ADMISSION_HASHES.sha256",
+      "reason": "path-bearing or redundant local sidecar replaced by package manifest"
+    },
+    {
+      "path": "deep_cm/PMR007_DEEP_CM_V1_FROZEN_HASHES.sha256",
+      "reason": "path-bearing or redundant local sidecar replaced by package manifest"
+    },
+    {
+      "path": "deep_cm/PMR007_DEEP_CM_V2_FROZEN_HASHES.sha256",
+      "reason": "path-bearing or redundant local sidecar replaced by package manifest"
+    },
+    {
+      "path": "deep_cn/PMR-007_DEEP_CN_ADMISSION_HASHES.sha256",
+      "reason": "path-bearing or redundant local sidecar replaced by package manifest"
+    },
+    {
+      "path": "deep_cn/PMR007_DEEP_CN_V1_FROZEN_HASHES.sha256",
+      "reason": "path-bearing or redundant local sidecar replaced by package manifest"
+    },
+    {
+      "path": "deep_cn/PMR007_DEEP_CN_V2_FROZEN_HASHES.sha256",
+      "reason": "path-bearing or redundant local sidecar replaced by package manifest"
+    },
+    {
+      "path": "deep_co/PMR-007_DEEP_CO_ADMISSION_HASHES.sha256",
+      "reason": "path-bearing or redundant local sidecar replaced by package manifest"
+    },
+    {
+      "path": "deep_co/PMR007_DEEP_CO_V1_FROZEN_HASHES.sha256",
+      "reason": "path-bearing or redundant local sidecar replaced by package manifest"
+    },
+    {
+      "path": "deep_co/PMR007_DEEP_CO_V2_FROZEN_HASHES.sha256",
+      "reason": "path-bearing or redundant local sidecar replaced by package manifest"
+    },
+    {
+      "path": "deep_cp/PMR007_DEEP_CP_ADMISSION_HASHES.sha256",
+      "reason": "path-bearing or redundant local sidecar replaced by package manifest"
+    },
+    {
+      "path": "deep_cp/PMR007_DEEP_CP_V1_FROZEN_HASHES.sha256",
+      "reason": "path-bearing or redundant local sidecar replaced by package manifest"
+    },
+    {
+      "path": "deep_cp/PMR007_DEEP_CP_V2_FROZEN_HASHES.sha256",
+      "reason": "path-bearing or redundant local sidecar replaced by package manifest"
+    },
+    {
+      "path": "deep_cq/PMR007_DEEP_CQ_ADMISSION_HASHES.sha256",
+      "reason": "path-bearing or redundant local sidecar replaced by package manifest"
+    },
+    {
+      "path": "deep_cq/PMR007_DEEP_CQ_V2_FROZEN_HASHES.sha256",
+      "reason": "path-bearing or redundant local sidecar replaced by package manifest"
+    },
+    {
+      "path": "deep_cr/PMR007_DEEP_CR_ADMISSION_HASHES.sha256",
+      "reason": "path-bearing or redundant local sidecar replaced by package manifest"
+    },
+    {
+      "path": "deep_cr/PMR007_DEEP_CR_V2_FROZEN_HASHES.sha256",
+      "reason": "path-bearing or redundant local sidecar replaced by package manifest"
+    },
+    {
+      "path": "deep_cs/PMR007_DEEP_CS_ADMISSION_HASHES.sha256",
+      "reason": "path-bearing or redundant local sidecar replaced by package manifest"
+    },
+    {
+      "path": "deep_cs/PMR007_DEEP_CS_V2_FROZEN_HASHES.sha256",
+      "reason": "path-bearing or redundant local sidecar replaced by package manifest"
+    },
+    {
+      "path": "deep_ct/PMR007_DEEP_CT_ADMISSION_HASHES.sha256",
+      "reason": "path-bearing or redundant local sidecar replaced by package manifest"
+    },
+    {
+      "path": "deep_ct/PMR007_DEEP_CT_V1_FROZEN_HASHES.sha256",
+      "reason": "path-bearing or redundant local sidecar replaced by package manifest"
+    },
+    {
+      "path": "deep_ct/PMR007_DEEP_CT_V2_FROZEN_HASHES.sha256",
+      "reason": "path-bearing or redundant local sidecar replaced by package manifest"
+    },
+    {
+      "path": "checks/pmr007_deep_ck_distinct_partition_guard_rereview.py",
+      "patterns": [
+        "ABSOLUTE_POSIX_DATA_PATH"
+      ],
+      "reason": "privacy-pattern content excluded"
+    },
+    {
+      "path": "checks/pmr007_deep_cl_anchor_cover_primary_check_v1.py",
+      "patterns": [
+        "ABSOLUTE_POSIX_DATA_PATH"
+      ],
+      "reason": "privacy-pattern content excluded"
+    },
+    {
+      "path": "checks/pmr007_deep_cl_anchor_cover_primary_check_v2.py",
+      "patterns": [
+        "ABSOLUTE_POSIX_DATA_PATH"
+      ],
+      "reason": "privacy-pattern content excluded"
+    },
+    {
+      "path": "checks/pmr007_deep_cl_distinct_partition_lattice_rereview.py",
+      "patterns": [
+        "ABSOLUTE_POSIX_DATA_PATH"
+      ],
+      "reason": "privacy-pattern content excluded"
+    },
+    {
+      "path": "checks/pmr007_deep_cl_distinct_partition_lattice_rereview_results.json",
+      "patterns": [
+        "ABSOLUTE_POSIX_DATA_PATH"
+      ],
+      "reason": "privacy-pattern content excluded"
+    },
+    {
+      "path": "checks/pmr007_deep_cm_distinct_bitset_reduct_rereview.py",
+      "patterns": [
+        "ABSOLUTE_POSIX_DATA_PATH"
+      ],
+      "reason": "privacy-pattern content excluded"
+    },
+    {
+      "path": "checks/pmr007_deep_cm_distinct_bitset_reduct_rereview_results.json",
+      "patterns": [
+        "ABSOLUTE_POSIX_DATA_PATH"
+      ],
+      "reason": "privacy-pattern content excluded"
+    },
+    {
+      "path": "checks/pmr007_deep_cm_distinct_bitset_reduct_rereview_v1.py",
+      "patterns": [
+        "ABSOLUTE_POSIX_DATA_PATH"
+      ],
+      "reason": "privacy-pattern content excluded"
+    },
+    {
+      "path": "checks/pmr007_deep_cm_distinct_bitset_reduct_rereview_v1_results.json",
+      "patterns": [
+        "ABSOLUTE_POSIX_DATA_PATH"
+      ],
+      "reason": "privacy-pattern content excluded"
+    },
+    {
+      "path": "checks/pmr007_deep_cm_distinct_bitset_reduct_rereview_v2.py",
+      "patterns": [
+        "ABSOLUTE_POSIX_DATA_PATH"
+      ],
+      "reason": "privacy-pattern content excluded"
+    },
+    {
+      "path": "checks/pmr007_deep_cm_distinct_bitset_reduct_rereview_v2_results.json",
+      "patterns": [
+        "ABSOLUTE_POSIX_DATA_PATH"
+      ],
+      "reason": "privacy-pattern content excluded"
+    },
+    {
+      "path": "checks/pmr007_deep_cm_objective_fitted_function_primary_check_v1.py",
+      "patterns": [
+        "ABSOLUTE_POSIX_DATA_PATH"
+      ],
+      "reason": "privacy-pattern content excluded"
+    },
+    {
+      "path": "checks/pmr007_deep_cm_objective_fitted_function_primary_check_v2.py",
+      "patterns": [
+        "ABSOLUTE_POSIX_DATA_PATH"
+      ],
+      "reason": "privacy-pattern content excluded"
+    },
+    {
+      "path": "checks/pmr007_deep_cn_authority_indexed_anchor_primary_check_v1.py",
+      "patterns": [
+        "ABSOLUTE_POSIX_DATA_PATH"
+      ],
+      "reason": "privacy-pattern content excluded"
+    },
+    {
+      "path": "checks/pmr007_deep_cn_authority_indexed_anchor_primary_check_v1_failed.py",
+      "patterns": [
+        "ABSOLUTE_POSIX_DATA_PATH"
+      ],
+      "reason": "privacy-pattern content excluded"
+    },
+    {
+      "path": "checks/pmr007_deep_cn_authority_indexed_anchor_primary_check_v2.py",
+      "patterns": [
+        "ABSOLUTE_POSIX_DATA_PATH"
+      ],
+      "reason": "privacy-pattern content excluded"
+    },
+    {
+      "path": "checks/pmr007_deep_cn_authority_indexed_anchor_primary_check_v3.py",
+      "patterns": [
+        "ABSOLUTE_POSIX_DATA_PATH"
+      ],
+      "reason": "privacy-pattern content excluded"
+    },
+    {
+      "path": "checks/pmr007_deep_cn_distinct_context_partition_rereview.py",
+      "patterns": [
+        "ABSOLUTE_POSIX_DATA_PATH"
+      ],
+      "reason": "privacy-pattern content excluded"
+    },
+    {
+      "path": "checks/pmr007_deep_cn_distinct_context_partition_rereview_results.json",
+      "patterns": [
+        "ABSOLUTE_POSIX_DATA_PATH"
+      ],
+      "reason": "privacy-pattern content excluded"
+    },
+    {
+      "path": "checks/pmr007_deep_co_distinct_matrix_pushforward_rereview.py",
+      "patterns": [
+        "ABSOLUTE_POSIX_DATA_PATH"
+      ],
+      "reason": "privacy-pattern content excluded"
+    },
+    {
+      "path": "checks/pmr007_deep_co_distinct_matrix_pushforward_rereview_results.json",
+      "patterns": [
+        "ABSOLUTE_POSIX_DATA_PATH"
+      ],
+      "reason": "privacy-pattern content excluded"
+    },
+    {
+      "path": "checks/pmr007_deep_co_profile_correction_primary_check_v1.py",
+      "patterns": [
+        "ABSOLUTE_POSIX_DATA_PATH"
+      ],
+      "reason": "privacy-pattern content excluded"
+    },
+    {
+      "path": "checks/pmr007_deep_co_profile_correction_primary_check_v2.py",
+      "patterns": [
+        "ABSOLUTE_POSIX_DATA_PATH"
+      ],
+      "reason": "privacy-pattern content excluded"
+    },
+    {
+      "path": "checks/pmr007_deep_cp_distinct_bisimulation_rereview.py",
+      "patterns": [
+        "ABSOLUTE_POSIX_DATA_PATH"
+      ],
+      "reason": "privacy-pattern content excluded"
+    },
+    {
+      "path": "checks/pmr007_deep_cp_eligible_ui_experiment_primary_check_v1.py",
+      "patterns": [
+        "ABSOLUTE_POSIX_DATA_PATH"
+      ],
+      "reason": "privacy-pattern content excluded"
+    },
+    {
+      "path": "checks/pmr007_deep_cp_eligible_ui_experiment_primary_check_v2.py",
+      "patterns": [
+        "ABSOLUTE_POSIX_DATA_PATH"
+      ],
+      "reason": "privacy-pattern content excluded"
+    },
+    {
+      "path": "checks/pmr007_deep_cq_distinct_strategy_graph_rereview.py",
+      "patterns": [
+        "ABSOLUTE_POSIX_DATA_PATH"
+      ],
+      "reason": "privacy-pattern content excluded"
+    },
+    {
+      "path": "checks/pmr007_deep_cq_norm_uncertain_restoration_primary_check_v1.py",
+      "patterns": [
+        "ABSOLUTE_POSIX_DATA_PATH"
+      ],
+      "reason": "privacy-pattern content excluded"
+    },
+    {
+      "path": "checks/pmr007_deep_cq_norm_uncertain_restoration_primary_check_v2.py",
+      "patterns": [
+        "ABSOLUTE_POSIX_DATA_PATH"
+      ],
+      "reason": "privacy-pattern content excluded"
+    },
+    {
+      "path": "intake/INPUT_SHA256SUMS",
+      "reason": "path-bearing or redundant local sidecar replaced by package manifest"
+    }
+  ],
+  "external_report_bytes_embedded": false,
+  "final_scan_findings": [],
+  "forbidden_content": [
+    "private transcript/activity logs",
+    "browser HTML/screenshots",
+    "message/session identifiers",
+    "sandbox/signed URLs",
+    "absolute local paths",
+    "user-uploaded source bytes",
+    "credentials/tokens"
+  ],
+  "repository_authority": "9b80f2dfdf73a768ccad6a6ea2f2998c70ebdcf3",
+  "schema": "ar8r-pmr007-sanitized-private-data-exclusion-v1",
+  "status": "PASS"
+}

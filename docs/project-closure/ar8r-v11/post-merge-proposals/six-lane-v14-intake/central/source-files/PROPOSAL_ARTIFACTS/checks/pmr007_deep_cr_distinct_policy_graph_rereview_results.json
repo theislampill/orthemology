@@ -1,0 +1,11 @@
+{
+  "first_mismatches": [],
+  "fixed_point_policy_graph_mismatches": 0,
+  "guard_rows": 2048,
+  "overall": "PASS",
+  "random_policy_graph_trials": 15000,
+  "restriction_monotonicity_failures": 0,
+  "seed": 9024107,
+  "source_rows": 4,
+  "world_rows": 1
+}

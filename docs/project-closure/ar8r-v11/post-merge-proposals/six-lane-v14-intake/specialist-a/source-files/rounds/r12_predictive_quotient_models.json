@@ -1,0 +1,136 @@
+{
+  "conclusion_ceiling": "depth-specific deterministic predictive quotient and minimal state count only",
+  "equivalence": "two histories are equivalent iff they induce the same output for every retained continuation intervention",
+  "guards": [
+    "finite deterministic interface",
+    "fixed depth and remaining horizon",
+    "all continuation interventions retained",
+    "external clock treatment explicit",
+    "complete profile semantics",
+    "no stochastic or measurable generalization"
+  ],
+  "minimality": "the number of residual-signature classes is exactly the minimum number of deterministic state identifiers needed at that depth",
+  "models": {
+    "compressed_history_example": {
+      "histories": [
+        [
+          [
+            0,
+            0
+          ]
+        ],
+        [
+          [
+            1,
+            0
+          ]
+        ]
+      ],
+      "quotient_classes": 1,
+      "residual_signatures": [
+        [
+          0,
+          0
+        ],
+        [
+          0,
+          0
+        ]
+      ],
+      "table": 0
+    },
+    "deletion_example": {
+      "full_residual_signatures": [
+        [
+          0,
+          1
+        ],
+        [
+          0,
+          0
+        ]
+      ],
+      "histories": [
+        [
+          [
+            0,
+            0
+          ]
+        ],
+        [
+          [
+            1,
+            0
+          ]
+        ]
+      ],
+      "interpretation": "deleting continuation input 1 merges histories that full future behavior separates",
+      "retained_input_zero_signatures": [
+        [
+          0
+        ],
+        [
+          0
+        ]
+      ],
+      "table": 8
+    },
+    "resource_bridge": {
+      "correction_parameter": "number of distinct continuation-law residuals at a frozen depth",
+      "guard": "architecture exclusion still requires a common machine model and a lower bound over the complete rival realization class",
+      "use": "semantics-invariant lower bound for deterministic state identifiers at that depth"
+    },
+    "state_splitting_countermodel": {
+      "minimal_predictive_classes": 2,
+      "raw_state_count": 3,
+      "reason": "a0 and a1 are duplicate labels for the same future behavior",
+      "semantic_residuals": [
+        [
+          0,
+          0
+        ],
+        [
+          1,
+          1
+        ]
+      ],
+      "split_representation_labels": [
+        "a0",
+        "a1",
+        "b"
+      ]
+    },
+    "two_class_example": {
+      "histories": [
+        [
+          [
+            0,
+            0
+          ]
+        ],
+        [
+          [
+            1,
+            0
+          ]
+        ]
+      ],
+      "quotient_classes": 2,
+      "residual_signatures": [
+        [
+          1,
+          0
+        ],
+        [
+          0,
+          0
+        ]
+      ],
+      "table": 4
+    }
+  },
+  "proof": "equivalent histories may share a state; inequivalent histories cannot share a state because a continuation input would demand two outputs from one state/input pair",
+  "schema": "spa-r12-predictive-quotient-models-v1",
+  "specialist_local_result": "SPA-R12",
+  "typed_object": "reachable depth-one histories of a binary deterministic horizon-two causal interface"
+}

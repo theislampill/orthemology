@@ -1,0 +1,41 @@
+schema: pmr007-deep-cn-admission-overlay-v1
+identity: PMR-007-AIAC-1
+title: Authority-indexed anchor covers and guarded context migration
+canonical_version: V2
+provenance: ADMITTED_POST_MERGE_SCOPED_RESULT
+historical_identity: NONE
+repository_scientific_adoption: NONE
+owner_adoption: PENDING
+external_review: OPEN
+general_mathematical_novelty: 0
+proof_status: HUMAN_PROOF_PLUS_PRIMARY_RANDOM_AND_DISTINCT_PARTITION_CHECKS
+countermodel_status: CONTEXT_MIGRATION_AND_TARGET_ORACLE_CONTROLS
+cold_audit: REPAIR_REQUIRED
+blocking_findings_repaired: 9
+primary_checker_custody:
+  failed_v1_preserved: true
+  defect: direct_identifier_rejected_legitimate_within_target_refinements
+  repaired_v3: true
+fresh_rereview: PASS_WITH_NONBLOCKING_AUTHORITY_AND_STATISTICAL_SCOPE_NOTES
+theorem_family:
+  mechanism: FINITE_CONTEXT_INDEXED_CONFLICT_COVER
+  ancestry: [Deep_BX, Deep_BV, Deep_CL, AR8R_T294, standard_set_cover_and_partition_refinement]
+  relation: GUARDED_CROSS_LANE_GENERALIZATION_AND_APPLICATION
+central_effects:
+  shared_typed_layer: finite_context_indexed_conflict_cover
+  neutral_architecture_kappa: INFINITY
+  track_n_conditional_kappa: 2
+  recipient_version_boundary: receipt_only_infinite_version_aware_one
+  source_world_boundary: translated_roles_infinite_guarded_one
+  missing_item: independently_eligible_UI_cross_cut_in_the_declared_context
+scope_nonclaims:
+  - no context self-authorization
+  - no noisy or statistical identifiability
+  - no unknown-model-class claim
+  - no scalar evidence cost
+  - no source-world truth
+  - no recipient adoption or execution
+  - no historical or novelty credit
+integrated_champion: NONE
+meniscus: MENISCUS_NOT_REACHED
+natural_closure: NOT_REACHED

@@ -1,0 +1,27 @@
+{
+  "architecture_profile_comparisons": 25600,
+  "architectures": [
+    "U",
+    "I",
+    "P"
+  ],
+  "commutation_checks": 1344,
+  "commutation_failures": 0,
+  "declared_words": 400,
+  "eligible_profile_mismatches": 0,
+  "full_profile_splits_alt_model": 64,
+  "initial_states": 64,
+  "omitted_intervention_collisions": 64,
+  "omitted_intervention_controls": 64,
+  "partial_ownership_contract_checks": 3,
+  "partial_ownership_contract_detected": true,
+  "pass": true,
+  "schema": "pmr007-deep-ck-concrete-architecture-map-primary-check-v2",
+  "source_relative_operation_rejected_as_neutral": true,
+  "target_leak_controls": 25536,
+  "target_leak_failures": 0,
+  "target_variation_in_equal_profile_fibres": 25600,
+  "v1_checker_defect": "incorrectly_expected_64_target_leak_failures_instead_of_zero",
+  "version_mismatch_controls": 64,
+  "version_mismatch_detected": 64
+}

@@ -1,0 +1,49 @@
+{
+  "ancestry_disposition": "quotient normalization and Pareto feasibility are standard constructions; no novelty credit",
+  "claim_ceiling": "finite registered realizers; no lower bound over unregistered or unrestricted implementation classes",
+  "coordinatewise_inf_false_positive_cases": 240,
+  "countermodel_digest": "6c921184ed79e975658af6cf0602079d45be91659e64c1f70cde243a8a2d829e",
+  "errors": [],
+  "mutants_killed": 6,
+  "mutants_total": 6,
+  "mutations": [
+    {
+      "killed": true,
+      "killer": "permutation and state-splitting countermodel",
+      "mutant": "use_first_representative_cost"
+    },
+    {
+      "killed": true,
+      "killer": "finite quotient minimum",
+      "mutant": "use_maximum_as_normalized_minimum"
+    },
+    {
+      "killed": true,
+      "killer": "Pareto-incomparable realizers",
+      "mutant": "coordinatewise_infimum_implies_feasible_realizer"
+    },
+    {
+      "killed": true,
+      "killer": "unregistered low-cost realizer",
+      "mutant": "incomplete_registry_can_exclude_architecture"
+    },
+    {
+      "killed": true,
+      "killer": "aggregation rule is an external guard",
+      "mutant": "pareto_incomparability_has_intrinsic_scalar_winner"
+    },
+    {
+      "killed": true,
+      "killer": "registry contract requires common units, external meter, compiler, decoder, and budget",
+      "mutant": "architecture_specific_units_are_common"
+    }
+  ],
+  "raw_cost_nonconstant_fibre_cases": 156,
+  "scalar_permutation_checks": 1296,
+  "scalar_registry_cases": 216,
+  "schema": "spa-r3-check-results-v1",
+  "specialist_local_result": "SPA-R3",
+  "status": "PASS",
+  "vector_budget_checks": 6561,
+  "vector_cost_multiset_cases": 729
+}

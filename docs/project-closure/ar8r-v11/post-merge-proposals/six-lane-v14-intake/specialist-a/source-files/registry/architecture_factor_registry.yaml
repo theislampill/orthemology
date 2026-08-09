@@ -1,0 +1,360 @@
+schema: spa-common-factor-registry-v1
+specialist_local_result: SPA-R1
+authority: PRIVATE_SPECIALIST_RESEARCH_NO_REPOSITORY_ADOPTION
+repository_sha: 9b80f2dfdf73a768ccad6a6ea2f2998c70ebdcf3
+declared_scope:
+  architectures:
+  - unified_personal
+  - impersonal_powers
+  - plural
+  architecture_universe_claimed_complete: false
+  factor_universe_claimed_complete: false
+  manifest_scope: declared Deep BV-CJ plus Challenger A factor families only
+  implementation_ceiling: constructed declared-signature witnesses; no real architecture
+    implementation
+  metaphysical_ceiling: none
+contracts:
+  finite:
+    status: EXECUTABLE_FIXTURE_CONTRACT
+    horizon: 2
+    input_alphabets_finite: true
+    output_alphabets_finite: true
+    resource_measurement: two frozen bins per declared coordinate
+    trajectory_policy: complete transcript up to frozen horizon
+    continuous_or_unbounded_fields_allowed: false
+  measurable:
+    status: SCHEMA_ONLY_REQUIRES_EXTERNAL_PROOF_RECEIPTS
+    input_measurable_space_locator: REQUIRED_BEFORE_USE
+    output_measurable_space_locator: REQUIRED_BEFORE_USE
+    kernel_measurability_receipt: REQUIRED_BEFORE_USE
+    decoder_measurability_receipt: REQUIRED_BEFORE_USE
+    adaptive_policy_measurability_receipt: REQUIRED_BEFORE_USE
+    target_blindness_receipt: REQUIRED_BEFORE_USE
+    machine_verified: false
+factors:
+- id: causal_mode
+  abstract_type: causal_channel_operation_v1
+  values:
+  - baseline
+  - cut
+  neutral_semantics: externally registered baseline or channel cut
+  guards:
+  - externally_addressable
+  - candidate_independent
+  - version_frozen
+- id: target_truth_relation
+  abstract_type: certified_relation_v1
+  values:
+  - aligned
+  - conflict
+  neutral_semantics: installed target agrees or conflicts with an independently supplied
+    certificate
+  guards:
+  - certificate_external
+  - target_not_used_by_decoder
+  - proper_function_not_inferred
+- id: form
+  abstract_type: presentation_form_v1
+  values:
+  - plain
+  - encoded
+  neutral_semantics: content-preserving presentation form
+  guards:
+  - content_equivalence_receipt
+  - type_preserving
+- id: content
+  abstract_type: content_token_v1
+  values:
+  - alpha
+  - beta
+  neutral_semantics: matched content token
+  guards:
+  - nonsemantic_coordinates_matched
+  - no_personality_label
+- id: authority_version
+  abstract_type: authority_version_state_v1
+  values:
+  - current_authorized
+  - revoked_or_stale
+  neutral_semantics: authenticated authority/version applicability state
+  guards:
+  - source_identity_separate
+  - authorization_separate
+  - receipt_not_execution
+- id: provenance_operation
+  abstract_type: provenance_lineage_operation_v1
+  values:
+  - independent_acquisition
+  - pure_copy
+  neutral_semantics: authenticated new acquisition root or pure lineage copy
+  guards:
+  - root_authentication
+  - copy_not_independent_root
+  - carrier_count_separate
+- id: resource_band
+  abstract_type: finite_resource_band_v1
+  values:
+  - within_budget
+  - over_budget
+  neutral_semantics: externally metered finite resource band
+  guards:
+  - common_units
+  - external_meter
+  - finite_bins
+  - budget_frozen
+- id: challenge_nonce
+  abstract_type: challenge_freshness_v1
+  values:
+  - fixed
+  - fresh
+  neutral_semantics: registered fixed or unpredictable challenge nonce
+  guards:
+  - nonce_authenticated
+  - policy_target_blind
+  - horizon_bounded
+architectures:
+- id: unified_personal
+  target_coordinate: unified_personal
+  implementation_status: CONSTRUCTED_SIGNATURE_WITNESS_ONLY
+  factor_map:
+    causal_mode:
+      implementation_type: causal_channel_operation_v1
+      implementation_version: 1.0.0
+      operation: external communication or memory-access channel selector
+      authorization_guard: fixture_authorized_neutral_interface_only
+      resource_guard: external_meter_or_not_applicable
+      decoder_contract: common_profile_decoder_v1
+      status: CONSTRUCTED_SIGNATURE_WITNESS_NOT_ARCHITECTURE_IMPLEMENTATION
+    target_truth_relation:
+      implementation_type: certified_relation_v1
+      implementation_version: 1.0.0
+      operation: task-target register plus external certificate feed
+      authorization_guard: fixture_authorized_neutral_interface_only
+      resource_guard: external_meter_or_not_applicable
+      decoder_contract: common_profile_decoder_v1
+      status: CONSTRUCTED_SIGNATURE_WITNESS_NOT_ARCHITECTURE_IMPLEMENTATION
+    form:
+      implementation_type: presentation_form_v1
+      implementation_version: 1.0.0
+      operation: presentation interface encoder selector
+      authorization_guard: fixture_authorized_neutral_interface_only
+      resource_guard: external_meter_or_not_applicable
+      decoder_contract: common_profile_decoder_v1
+      status: CONSTRUCTED_SIGNATURE_WITNESS_NOT_ARCHITECTURE_IMPLEMENTATION
+    content:
+      implementation_type: content_token_v1
+      implementation_version: 1.0.0
+      operation: content input port
+      authorization_guard: fixture_authorized_neutral_interface_only
+      resource_guard: external_meter_or_not_applicable
+      decoder_contract: common_profile_decoder_v1
+      status: CONSTRUCTED_SIGNATURE_WITNESS_NOT_ARCHITECTURE_IMPLEMENTATION
+    authority_version:
+      implementation_type: authority_version_state_v1
+      implementation_version: 1.0.0
+      operation: credential/version receipt interface
+      authorization_guard: fixture_authorized_neutral_interface_only
+      resource_guard: external_meter_or_not_applicable
+      decoder_contract: common_profile_decoder_v1
+      status: CONSTRUCTED_SIGNATURE_WITNESS_NOT_ARCHITECTURE_IMPLEMENTATION
+    provenance_operation:
+      implementation_type: provenance_lineage_operation_v1
+      implementation_version: 1.0.0
+      operation: acquisition-path or copy-path injection interface
+      authorization_guard: fixture_authorized_neutral_interface_only
+      resource_guard: external_meter_or_not_applicable
+      decoder_contract: common_profile_decoder_v1
+      status: CONSTRUCTED_SIGNATURE_WITNESS_NOT_ARCHITECTURE_IMPLEMENTATION
+    resource_band:
+      implementation_type: finite_resource_band_v1
+      implementation_version: 1.0.0
+      operation: external time/memory/communication meter gate
+      authorization_guard: fixture_authorized_neutral_interface_only
+      resource_guard: external_meter_or_not_applicable
+      decoder_contract: common_profile_decoder_v1
+      status: CONSTRUCTED_SIGNATURE_WITNESS_NOT_ARCHITECTURE_IMPLEMENTATION
+    challenge_nonce:
+      implementation_type: challenge_freshness_v1
+      implementation_version: 1.0.0
+      operation: challenge input port
+      authorization_guard: fixture_authorized_neutral_interface_only
+      resource_guard: external_meter_or_not_applicable
+      decoder_contract: common_profile_decoder_v1
+      status: CONSTRUCTED_SIGNATURE_WITNESS_NOT_ARCHITECTURE_IMPLEMENTATION
+- id: impersonal_powers
+  target_coordinate: impersonal_powers
+  implementation_status: CONSTRUCTED_SIGNATURE_WITNESS_ONLY
+  factor_map:
+    causal_mode:
+      implementation_type: causal_channel_operation_v1
+      implementation_version: 1.0.0
+      operation: controller/database/actuator channel selector
+      authorization_guard: fixture_authorized_neutral_interface_only
+      resource_guard: external_meter_or_not_applicable
+      decoder_contract: common_profile_decoder_v1
+      status: CONSTRUCTED_SIGNATURE_WITNESS_NOT_ARCHITECTURE_IMPLEMENTATION
+    target_truth_relation:
+      implementation_type: certified_relation_v1
+      implementation_version: 1.0.0
+      operation: objective register plus external certificate comparator
+      authorization_guard: fixture_authorized_neutral_interface_only
+      resource_guard: external_meter_or_not_applicable
+      decoder_contract: common_profile_decoder_v1
+      status: CONSTRUCTED_SIGNATURE_WITNESS_NOT_ARCHITECTURE_IMPLEMENTATION
+    form:
+      implementation_type: presentation_form_v1
+      implementation_version: 1.0.0
+      operation: parser/codec selector
+      authorization_guard: fixture_authorized_neutral_interface_only
+      resource_guard: external_meter_or_not_applicable
+      decoder_contract: common_profile_decoder_v1
+      status: CONSTRUCTED_SIGNATURE_WITNESS_NOT_ARCHITECTURE_IMPLEMENTATION
+    content:
+      implementation_type: content_token_v1
+      implementation_version: 1.0.0
+      operation: symbolic input register
+      authorization_guard: fixture_authorized_neutral_interface_only
+      resource_guard: external_meter_or_not_applicable
+      decoder_contract: common_profile_decoder_v1
+      status: CONSTRUCTED_SIGNATURE_WITNESS_NOT_ARCHITECTURE_IMPLEMENTATION
+    authority_version:
+      implementation_type: authority_version_state_v1
+      implementation_version: 1.0.0
+      operation: access-control and version gate
+      authorization_guard: fixture_authorized_neutral_interface_only
+      resource_guard: external_meter_or_not_applicable
+      decoder_contract: common_profile_decoder_v1
+      status: CONSTRUCTED_SIGNATURE_WITNESS_NOT_ARCHITECTURE_IMPLEMENTATION
+    provenance_operation:
+      implementation_type: provenance_lineage_operation_v1
+      implementation_version: 1.0.0
+      operation: database lineage or acquisition-root injection
+      authorization_guard: fixture_authorized_neutral_interface_only
+      resource_guard: external_meter_or_not_applicable
+      decoder_contract: common_profile_decoder_v1
+      status: CONSTRUCTED_SIGNATURE_WITNESS_NOT_ARCHITECTURE_IMPLEMENTATION
+    resource_band:
+      implementation_type: finite_resource_band_v1
+      implementation_version: 1.0.0
+      operation: external compute/storage/latency meter gate
+      authorization_guard: fixture_authorized_neutral_interface_only
+      resource_guard: external_meter_or_not_applicable
+      decoder_contract: common_profile_decoder_v1
+      status: CONSTRUCTED_SIGNATURE_WITNESS_NOT_ARCHITECTURE_IMPLEMENTATION
+    challenge_nonce:
+      implementation_type: challenge_freshness_v1
+      implementation_version: 1.0.0
+      operation: nonce input register
+      authorization_guard: fixture_authorized_neutral_interface_only
+      resource_guard: external_meter_or_not_applicable
+      decoder_contract: common_profile_decoder_v1
+      status: CONSTRUCTED_SIGNATURE_WITNESS_NOT_ARCHITECTURE_IMPLEMENTATION
+- id: plural
+  target_coordinate: plural
+  implementation_status: CONSTRUCTED_SIGNATURE_WITNESS_ONLY
+  factor_map:
+    causal_mode:
+      implementation_type: causal_channel_operation_v1
+      implementation_version: 1.0.0
+      operation: inter-bearer/public-board channel selector
+      authorization_guard: fixture_authorized_neutral_interface_only
+      resource_guard: external_meter_or_not_applicable
+      decoder_contract: common_profile_decoder_v1
+      status: CONSTRUCTED_SIGNATURE_WITNESS_NOT_ARCHITECTURE_IMPLEMENTATION
+    target_truth_relation:
+      implementation_type: certified_relation_v1
+      implementation_version: 1.0.0
+      operation: distributed target registers plus shared external certificate
+      authorization_guard: fixture_authorized_neutral_interface_only
+      resource_guard: external_meter_or_not_applicable
+      decoder_contract: common_profile_decoder_v1
+      status: CONSTRUCTED_SIGNATURE_WITNESS_NOT_ARCHITECTURE_IMPLEMENTATION
+    form:
+      implementation_type: presentation_form_v1
+      implementation_version: 1.0.0
+      operation: per-bearer presentation encoder selector
+      authorization_guard: fixture_authorized_neutral_interface_only
+      resource_guard: external_meter_or_not_applicable
+      decoder_contract: common_profile_decoder_v1
+      status: CONSTRUCTED_SIGNATURE_WITNESS_NOT_ARCHITECTURE_IMPLEMENTATION
+    content:
+      implementation_type: content_token_v1
+      implementation_version: 1.0.0
+      operation: distributed content injection interface
+      authorization_guard: fixture_authorized_neutral_interface_only
+      resource_guard: external_meter_or_not_applicable
+      decoder_contract: common_profile_decoder_v1
+      status: CONSTRUCTED_SIGNATURE_WITNESS_NOT_ARCHITECTURE_IMPLEMENTATION
+    authority_version:
+      implementation_type: authority_version_state_v1
+      implementation_version: 1.0.0
+      operation: quorum/delegation and version gate
+      authorization_guard: fixture_authorized_neutral_interface_only
+      resource_guard: external_meter_or_not_applicable
+      decoder_contract: common_profile_decoder_v1
+      status: CONSTRUCTED_SIGNATURE_WITNESS_NOT_ARCHITECTURE_IMPLEMENTATION
+    provenance_operation:
+      implementation_type: provenance_lineage_operation_v1
+      implementation_version: 1.0.0
+      operation: bearer-specific acquisition-root or copy-path injection
+      authorization_guard: fixture_authorized_neutral_interface_only
+      resource_guard: external_meter_or_not_applicable
+      decoder_contract: common_profile_decoder_v1
+      status: CONSTRUCTED_SIGNATURE_WITNESS_NOT_ARCHITECTURE_IMPLEMENTATION
+    resource_band:
+      implementation_type: finite_resource_band_v1
+      implementation_version: 1.0.0
+      operation: external aggregate and bearer-local meter gate
+      authorization_guard: fixture_authorized_neutral_interface_only
+      resource_guard: external_meter_or_not_applicable
+      decoder_contract: common_profile_decoder_v1
+      status: CONSTRUCTED_SIGNATURE_WITNESS_NOT_ARCHITECTURE_IMPLEMENTATION
+    challenge_nonce:
+      implementation_type: challenge_freshness_v1
+      implementation_version: 1.0.0
+      operation: broadcast challenge input
+      authorization_guard: fixture_authorized_neutral_interface_only
+      resource_guard: external_meter_or_not_applicable
+      decoder_contract: common_profile_decoder_v1
+      status: CONSTRUCTED_SIGNATURE_WITNESS_NOT_ARCHITECTURE_IMPLEMENTATION
+common_decoder:
+  id: common_profile_decoder_v1
+  version: 1.0.0
+  input_contract: architecture-specific raw fixture response
+  output_fields:
+  - action_bit
+  - certificate_match
+  - authority_handling
+  - root_count_bin
+  - latency_bin
+  - timeout
+  - trajectory_digest
+  forbidden_input_fields:
+  - architecture
+  - target_coordinate
+  - personal
+  - impersonal
+  - plural
+  - intentional_uptake
+  - one_bearer
+  - source_world_truth
+  target_independence: decoder source and configuration are identical for all architecture
+    witnesses
+  semantics_preservation_test: canonical decoded profile equality under declared content-preserving
+    encodings
+policy_registry:
+  id: candidate_independent_policy_registry_v1
+  version: 1.0.0
+  policies:
+  - lexicographic_complete_enumeration
+  - history_hash_branching
+  allowed_inputs:
+  - prior_common_outputs
+  - registered_cell_id
+  - public_nonce
+  forbidden_inputs:
+  - architecture
+  - target_coordinate
+  - private_internal_role
+  - source_world_truth
+  horizon: 2

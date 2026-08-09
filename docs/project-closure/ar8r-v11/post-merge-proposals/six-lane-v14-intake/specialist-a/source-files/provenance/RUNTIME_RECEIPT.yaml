@@ -1,0 +1,9 @@
+schema: spa-review-runtime-receipt-v1
+python: 3.13.5
+dependencies:
+  PyYAML: 6.0.3
+  jsonschema: 4.26.0
+lean:
+  toolchain_pin: leanprover/lean4:v4.32.2
+  available_in_generation_runtime: false
+  machine_claim: NONE

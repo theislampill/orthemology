@@ -1,0 +1,65 @@
+schema: pmr007-deep-cq-norm-uncertain-restoration-model-v1
+identity: PMR-007-NURV-1
+status: POST_MERGE_RESEARCH_CANDIDATE
+semantics:
+  state_space: finite
+  candidate_standards: finite_nonempty
+  controller_observation: full_current_state
+  uncertainty: adversarial_standard_switching_each_step
+  dynamics: deterministic_per_standard_state_action
+  actions: finite
+  target_truth: supplied_not_established
+  source_anchor: conditional_standard_family_restriction_only
+operators:
+  common_eligible_actions: intersection_over_candidate_standards
+  robust_target: intersection_over_candidate_targets
+  robust_predecessor: exists_common_action_forall_standards_successor_in_set
+  robust_viability: greatest_fixed_point_of_robust_target_intersect_predecessor
+  robust_reach_and_stay: least_fixed_point_of_viability_union_predecessor
+positive_witness:
+  states: [bad, bridge, restored]
+  actions: [repair, hold]
+  standards:
+    h_truth_linked:
+      target: [restored]
+      eligible: {bad: [repair], bridge: [repair], restored: [hold]}
+      transition:
+        bad: {repair: bridge}
+        bridge: {repair: restored}
+        restored: {hold: restored}
+    h_source_relative:
+      target: [restored]
+      eligible: {bad: [repair], bridge: [repair], restored: [hold]}
+      transition:
+        bad: {repair: bridge}
+        bridge: {repair: restored}
+        restored: {hold: restored}
+  expected_viability: [restored]
+  expected_reach_and_stay: [bad, bridge, restored]
+countermodel_templates:
+  individually_restorable_but_jointly_inconsistent_targets:
+    description: Each standard has a stable target, but target intersection is empty.
+  common_target_but_action_conflict:
+    description: The standards agree on the target state but license incompatible actions.
+  common_action_but_transition_conflict:
+    description: One common action reaches the target under one standard and leaves it under another.
+  unsupported_source_anchor:
+    description: Selecting one source-relative standard enlarges the kernel only conditionally on source and applicability authority.
+  fixed_unknown_vs_switching:
+    description: A policy may work when one unknown standard is fixed but fail under the stronger switching-adversary semantics.
+proper_function_instances:
+  - causal_role
+  - selected_effect
+  - design
+  - learned_objective
+  - teleological_norm
+  - plantinga_epistemic_proper_function
+  - fitrah_oriented
+nonclaims:
+  - candidate standard targets are not proven objectively correct
+  - no empirical human restoration claim
+  - no partial-observation theorem
+  - no fixed-hidden-standard equivalence
+  - no source authority or world applicability established
+  - no scalar route-gradient identified
+  - no historical identity or general novelty credit

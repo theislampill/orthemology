@@ -1,0 +1,183 @@
+schema: AR8R_SPECIALIST_B_SUSTAINED_PROPOSAL_V1
+status: NONAUTHORITATIVE_PRIVATE_SANITIZED_PROPOSAL
+research_date: 2026-08-09
+repository:
+  name: theislampill/orthemology
+  expected_origin_main: 9b80f2dfdf73a768ccad6a6ea2f2998c70ebdcf3
+  verified_live_main: 9b80f2dfdf73a768ccad6a6ea2f2998c70ebdcf3
+  delta: NONE
+  integration_pr: 25
+  mutation: NONE
+input:
+  zip_sha256: 78d049d4711d2b0cffe7cb8071d01d22b99a00126196caa5e2c4be4826eb100c
+  extracted_file_count: 3217
+  git_directory_present: false
+  continuation_readme_read: true
+custody:
+  authoritative_id_allocation: NONE
+  admission_claim: NONE
+  champion_claim: NONE
+  meniscus_claim: NONE
+  closure_claim: NONE
+  controlling_archive_created: false
+packet_local_id_notice: SB labels are packet-local crosswalk handles only
+rounds:
+  - round: 1
+    candidate: SB-C1
+    title: Wisdom source/world/bearer adjudication
+    classification: GUARDED_CERTIFICATE
+    theorem_relation: conjunction packaging over existing Deep K and BR guards
+    positive_ceiling: same-bearer same-episode Wisdom applicability record if all guards are supplied
+    not_established: [objective fittingness in the world, one bearer, personality, Wisdom existence, source truth, recipient warrant]
+    countermodels: SB-CM1..SB-CM8
+  - round: 2
+    candidate: SB-C2
+    title: declared-frame root to self-subsistence
+    classification: ELEMENTARY_GUARDED_THEOREM
+    theorem_relation: incoming completeness plus recorded root entails nonborrowedness
+    positive_ceiling: nonborrowed under the declared grounding semantics
+    not_established: [complete metaphysical domain, modal necessity, self-subsistence in every sense, originator, Creator, unity, personality]
+    countermodels: SB-CM9..SB-CM17
+  - round: 3
+    candidate: SB-C3
+    title: qiyas Speech Names and authorization
+    classification: SOURCE_SCHOOL_CONDITIONAL_RECORD
+    theorem_relation: explicit rule application and independent ladder fields
+    positive_ceiling: conditional DivineQual only under rule and all guards
+    not_established: [joint source ancestry, source truth, Name authorization, actual Speech, revelation, execution]
+    countermodels: SB-CM18..SB-CM27
+  - round: 4
+    candidate: SB-C4
+    title: fitrah occlusion reminder and restoration
+    classification: FIBRE_FAMILY_APPLICATION
+    theorem_relation: observational collision blocks restoration identification
+    positive_ceiling: nonidentifiability relative to the observed profile and model class
+    not_established: [latent fitrah state, causal restoration, proper function, truth, warrant]
+    countermodels: SB-CM28..SB-CM36
+  - round: 5
+    candidate: SB-C5
+    title: property ontology and bearer underdetermination
+    classification: INTERPRETATION_PROFILE
+    theorem_relation: no new theorem
+    positive_ceiling: multiple ontology interpretations of one reduct
+    not_established: [universal intertranslatability, correct property ontology, property dualism]
+    countermodels: SB-CM37..SB-CM44
+  - round: 6
+    candidate: SB-C6
+    title: personal impersonal noetic discrimination
+    classification: FIBRE_FAMILY_APPLICATION
+    theorem_relation: twin closure entails non-fibre-constancy of personality
+    positive_ceiling: personality nonidentifiability in the frozen twin-closed class
+    not_established: [global impossibility, adaptive closure beyond assumptions, positive personality]
+    countermodels: SB-CM45..SB-CM52
+  - round: 7
+    candidate: SB-C7
+    title: unity identity and plural realization
+    classification: DEPENDENCY_CERTIFICATE
+    theorem_relation: specialization of existing transport holonomy common-bearer and Deep-BK owners
+    positive_ceiling: one bearer relative to supplied B_ID granularity locality integration scope and source guards
+    not_established: [neutral numerical identity, simplicity, personality, Wisdom, Creatorhood, revealed referent]
+    countermodels: SB-CM53..SB-CM63
+  - round: 8
+    candidate: SB-C8
+    title: source recipient warrant and authorization
+    classification: AUDIT_RECORD_DEFINITION
+    theorem_relation: no universal warrant theorem
+    positive_ceiling: recipient-indexed readiness under frozen guards
+    not_established: [warrant under every epistemology, belief, assent, execution, world truth from authority]
+    countermodels: SB-CM64..SB-CM76
+  - round: 9
+    candidate: SB-C9
+    title: Avicennian Taymiyyan formal anti-unification
+    classification: CROSS_THEORY_INTERPRETATION_PROFILE
+    theorem_relation: ancestry unresolved pending primary argument maps
+    positive_ceiling: typed predicate mismatch and anti-unification
+    not_established: [school equivalence, theorem identity, Athari consensus, Necessary Being, Creator, revelation]
+    countermodels: SB-CM77..SB-CM86
+  - round: 10
+    candidate: SB-C10
+    title: norm provenance and correction vector
+    classification: DEEP_N_APPLICATION_PLUS_AUDIT_RECORD
+    theorem_relation: exact potential inherited from zero-holonomy family
+    positive_ceiling: path-independent ranking relative to an independently warranted stable truth-connected standard
+    not_established: [objective norm from exactness, proper function under every account, intentional uptake, personal source, Wisdom, warrant, execution]
+    countermodels: SB-CM87..SB-CM100
+formal_status:
+  checker:
+    script: specialist_b_countermodel_checker.py
+    results: specialist_b_countermodel_results.json
+    schema: AR8R_SPECIALIST_B_FINITE_CORROBORATION_V2
+    rounds: 10
+    overall_pass: true
+  lean:
+    source: SpecialistBBridgeSignatures.lean
+    parser: NOT_RUN
+    elaboration: NOT_RUN
+    kernel: NOT_RUN
+    axiom_report: NOT_RUN
+    executable_available: false
+source_status:
+  ibn_taymiyyah:
+    class: TRANSLATED_PRIMARY_ACCESS
+    exact_printed_loci: [13, 29, 101-104, 227]
+    arabic_primary_verification: OPEN
+    athari_consensus: NOT_ESTABLISHED
+  el_tobgui:
+    class: SECONDARY_SCHOLARLY_RECONSTRUCTION
+    fitrah_primary_loci_verification: OPEN
+  avicenna:
+    class: PRIMARY_WORK_METADATA_PLUS_SECONDARY_ANCESTRY_MAP
+    exact_primary_argument_extraction: OPEN
+  proper_function:
+    cummins: PRIMARY_PAPER
+    millikan: PRIMARY_MONOGRAPH
+    plantinga: PRIMARY_MONOGRAPH
+open_burdens:
+  formal:
+    - Lean parser elaboration kernel and axiom report
+    - adaptive and randomized twin closure
+    - granularity-safe bearer intersection and B_ID
+    - source-recipient account-indexed warrant record
+    - norm-provenance dependency DAG
+  source:
+    - Arabic-primary Aṣfahāniyyah verification
+    - joint qiyas-al-awla guard provenance
+    - exact Avicennian primary argument structure
+    - Speech wording meaning Name and recipient-duty locators
+  world:
+    - objective fittingness
+    - complete grounding and modal domains
+    - actual intensional common bearer
+    - reason-mediated because-of uptake
+    - proper function under a selected account
+    - Creator scope
+    - source-world referent and recipient warrant
+  empirical:
+    - validated noetic latent construct
+    - measurement invariance and causal landing
+    - target-independent closure-breaking intervention
+    - evidence-provenance and false-multiplicity controls
+surviving_rivals:
+  - one-intellect nonpersonal
+  - impersonal teleological tracker
+  - impersonal powers
+  - coordinated plural and R5
+  - abstract order plus concrete actualizer
+  - nominalist
+  - trope
+  - conceptualist
+  - immanent realist
+  - powers ontology
+  - real-pattern interpretation
+dependencies_prepared:
+  specialist_A: 17_REQUEST_TO_SPECIALIST_A.md
+  deep_research_20: 18_REQUEST_TO_DEEP_RESEARCH_20.md
+  deep_research_21: 19_REQUEST_TO_DEEP_RESEARCH_21.md
+  deep_research_22: 20_REQUEST_TO_DEEP_RESEARCH_22.md
+  transmission_status: NOT_TRANSMITTED_BY_THIS_THREAD
+central_receipt: 14_CENTRAL_INTEGRATOR_CROSSWALK_RECEIPT.md
+crosswalk_receipts:
+  human: 08_CROSSWALK_RECEIPTS.md
+  machine: crosswalk_receipts.yaml
+  count: 5
+next_atomic_action: route dependency packets and compare returned evidence against SB-C6 SB-C7 and SB-C10 before any bridge promotion

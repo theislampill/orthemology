@@ -1,0 +1,32 @@
+{
+  "action_mask_shape_pass": true,
+  "actions": 8,
+  "adaptive_policy_failures": 0,
+  "adaptive_policy_max_horizon": 7,
+  "adaptive_policy_trials": 25000,
+  "architectures": [
+    "U_unified_personal",
+    "I_impersonal_powers"
+  ],
+  "common_contract_fields_pass": true,
+  "cross_architecture_equivalence_failures": 0,
+  "cross_architecture_same_state_equivalent": 128,
+  "eligible_action_registry_total": true,
+  "frozen_hash_mismatches": 0,
+  "frozen_hash_rows": 5,
+  "future_operationalization_not_denied": true,
+  "hash_mismatch_paths": [],
+  "ineligible_operations": 5,
+  "ineligible_operations_currently_blocked": 5,
+  "method": "independent_integer_mask_mealy_partition_refinement_plus_adaptive_policy_regression",
+  "partition_class_counts": [
+    64,
+    64
+  ],
+  "partition_refinement_iterations": 2,
+  "pass": true,
+  "physical_operationalization_not_claimed": true,
+  "schema": "pmr007-deep-cp-distinct-bisimulation-rereview-results-v1",
+  "states_per_architecture": 128,
+  "target_variation_pairs_inside_equal_experiment_classes": 128
+}

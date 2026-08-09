@@ -1,0 +1,57 @@
+schema: PMR007_DEEP_CR_SOURCE_RESTRICTION_MODEL_V2
+identity: PMR-007-FSRA-1
+version: V2
+base_family: PMR-007-NURV-1
+source_relative_guards:
+  - track_n_regime_acceptance
+  - exact_textual_custody
+  - version_identity
+  - translation_fidelity
+  - attribution_and_source_bearer_fidelity
+  - predicate_preservation
+  - formal_target_link
+  - target_bearer_context_applicability
+  - authorized_use_in_declared_track_n_argument
+world_extension_guards:
+  - source_proposition_truth
+  - actual_world_referent_and_adequacy
+objects:
+  H0: live candidate standards before source restriction
+  H_D: standards satisfying the translated source predicate
+  V_H: robust stable target kernel from Deep CQ
+  W_H: robust reach-and-stay kernel from Deep CQ
+claims:
+  source_relative:
+    if: all source_relative_guards and H_D is nonempty
+    then: H_D is an authorized Track-N restriction of H0
+  world_directed:
+    if: source_relative claim and all world_extension_guards
+    then: H_D may be used as the declared actual-world standard family
+  monotonicity:
+    if: H_D is a subset of H0 and targets/actions/dynamics are inherited without reinterpretation
+    then: V_H0 subseteq V_HD and W_H0 subseteq W_HD
+  uniqueness:
+    status: NOT_INFERRED
+    requires: H_D singleton or separate uniqueness premise
+countermodels:
+  - id: CR-CM-EMPTY
+    claim: complete syntax with empty H_D gives inconsistency, not a controller target
+  - id: CR-CM-NONSINGLETON
+    claim: all custody guards can hold while H_D contains two standards
+  - id: CR-CM-WORLD
+    claim: Track-N accepted interpretation can hold while actual-world adequacy is unestablished
+  - id: CR-CM-REINTERPRET
+    claim: changing translated target/dynamics invalidates bare subset monotonicity transfer
+  - id: CR-CM-NEUTRAL-PARITY
+    claim: source-relative and impersonal realizations can share the neutral operational profile
+source_owners:
+  - file: "Ibn Taymiyyah's Epistemology(3).md"
+    sha256: d9b2fe81165c363cf7ca4ba1ed50074b3542b38793c442b7cddf219e229a7dde
+    authority: SECONDARY_COLLECTION_AND_PRIMARY_LOCATOR
+    relevant_lines: [239,243,244,252,254,302,303,314,325]
+  - file: The_Incoherence_of_Atheism_by_Sheikh_Abdullah_ibn_Salih_Al-Ujayri(1).md
+    sha256: 4aea9b66f178e3454015cd0082c3adb0dda5ae80593f7e37d26b73a96028a2d1
+    authority: CONTEMPORARY_ATHARI_SYNTHESIS
+  - file: Carl_Sharif_El-Tobgui_dissertation_snapshot.md
+    sha256: 657454ff7a1c43b895e7a378d12993295368a97c3f35df5a76edfaa32f67a177
+    authority: SECONDARY_SCHOLARLY_RECONSTRUCTION

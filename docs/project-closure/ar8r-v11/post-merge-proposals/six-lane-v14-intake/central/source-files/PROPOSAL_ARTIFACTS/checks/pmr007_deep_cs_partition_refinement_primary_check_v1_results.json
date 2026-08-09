@@ -1,0 +1,15 @@
+{
+  "criterion_failures": 0,
+  "nonunique_minimal_cases": 210,
+  "overall": "PASS",
+  "partitions_n4": 15,
+  "postprocessing_split_failures": 0,
+  "theorem_cases": 3375,
+  "ui_registry": {
+    "bearer_sufficient": false,
+    "joint_sufficient": true,
+    "neutral_sufficient": false,
+    "oracle_sufficient": true,
+    "uptake_sufficient": false
+  }
+}
