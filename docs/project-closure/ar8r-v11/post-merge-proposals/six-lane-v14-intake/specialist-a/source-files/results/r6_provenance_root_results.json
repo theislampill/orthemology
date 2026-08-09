@@ -1,0 +1,53 @@
+{
+  "acquisition_nodes_checked": 42804,
+  "ancestry_disposition": "formalizes existing provenance-root/copy nonmultiplicity discipline; no historical TAC/SAC reconstruction or novelty",
+  "claim_ceiling": "bounded exhaustive operation sequences through five nodes plus explicit long copy chain; no stochastic independence theorem",
+  "errors": [],
+  "invariant_failure_count": 0,
+  "mutants_killed": 7,
+  "mutants_total": 7,
+  "mutations": [
+    {
+      "killed": true,
+      "killer": "100-step pure-copy lineage",
+      "mutant": "copy_creates_new_root"
+    },
+    {
+      "killed": true,
+      "killer": "sync is union-only",
+      "mutant": "sync_creates_independent_root"
+    },
+    {
+      "killed": true,
+      "killer": "copy explosion",
+      "mutant": "carrier_count_equals_root_count"
+    },
+    {
+      "killed": true,
+      "killer": "shared hidden upstream anchor",
+      "mutant": "distinct_root_labels_entail_evidential_independence"
+    },
+    {
+      "killed": true,
+      "killer": "typed TAC/SAC noncollapse witness",
+      "mutant": "same_root_set_entails_same_carrier_or_episode"
+    },
+    {
+      "killed": true,
+      "killer": "registry keeps capability, authorization, receipt, execution, and warrant separate",
+      "mutant": "capability_or_receipt_entails_authorization_warrant_execution"
+    },
+    {
+      "killed": true,
+      "killer": "fresh DAG enumeration and trace digest",
+      "mutant": "prefilled_counts_without_lineage_derivation"
+    }
+  ],
+  "node_invariant_checks": 92740,
+  "operation_sequences_exhausted": 23369,
+  "pure_lineage_nodes_checked": 49936,
+  "schema": "spa-r6-check-results-v1",
+  "specialist_local_result": "SPA-R6",
+  "status": "PASS",
+  "trace_digest_set_hash": "ba8888a25139d6f2a4713f8c314094671e532361cd1cd6aae1d4d49749011cdc"
+}

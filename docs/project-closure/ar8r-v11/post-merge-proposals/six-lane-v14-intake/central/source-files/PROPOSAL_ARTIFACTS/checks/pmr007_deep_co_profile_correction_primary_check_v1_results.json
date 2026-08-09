@@ -1,0 +1,12 @@
+{
+  "architecture_specific_channel_splits": true,
+  "common_stochastic_channel_checks": 5120,
+  "deterministic_failures": 0,
+  "deterministic_postprocess_checks": 1940,
+  "equal_profile_laws": 20,
+  "pass": true,
+  "schema": "pmr007-deep-co-profile-correction-primary-check-v1-results",
+  "scope": "finite_equal_profile_laws_common_postprocessing",
+  "stochastic_failures": 0,
+  "target_leak_splits": true
+}

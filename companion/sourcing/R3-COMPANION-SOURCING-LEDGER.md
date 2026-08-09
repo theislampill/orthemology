@@ -14,7 +14,7 @@
 | Work | R3 status | Notes |
 |---|---|---|
 | al-Bukhārī, *Khalq Afʿāl al-ʿIbād* | **PRIMARY-TEXT-VERIFIED** (existence, attribution, theme) | shamela.ws/book/9697; the servants'-acts-created / Qurʾān-uncreated division confirmed in text |
-| Ibn Taymiyyah, *Majmūʿ al-Fatāwā* vol 12: "الصوت صوت القارئ والكلام كلام البارئ" | **PRIMARY-TEXT-VERIFIED** (formula verbatim in vol 12) | Islamweb vol-12 rendering; exact page (12/98 vs 12/173-region) **edition-dependent — recorded residual** |
+| Ibn Taymiyyah, *Majmūʿ al-Fatāwā* vol 12: "الكلام كلام الباري والصوت صوت القارئ" | **PRIMARY-TEXT-VERIFIED** (formula verbatim in vol 12) | Islamweb vol-12 rendering, digital pp. 98 and 409; printed-edition pagination remains edition-dependent |
 | ad-Dārimī, *ar-Radd ʿalā al-Jahmiyyah* | **PRIMARY-TEXT-VERIFIED** (existence/attribution) | shamela.ws/book/13023 (ed. al-Badr 1416/1995) |
 | al-Ājurrī, *ash-Sharīʿah* | existence **PRIMARY-TEXT-VERIFIED**; Sufyān 7:54 locus **SECONDARY-VERIFIED** | shamela.ws/book/13035; dorar.net compilation confirms the khalq/amr report; p. 80 edition-dependent |
 | Ḥanbal ibn Isḥāq, *al-Miḥnah* | **OFFICIAL-PUBLISHER-VERIFIED** (scan + editions) | archive.org scan; attribution to Aḥmad's cousin confirmed |

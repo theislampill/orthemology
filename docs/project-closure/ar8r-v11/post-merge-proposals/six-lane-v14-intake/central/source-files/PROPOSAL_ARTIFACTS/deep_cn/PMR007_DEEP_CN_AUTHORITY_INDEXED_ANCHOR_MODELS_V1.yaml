@@ -1,0 +1,47 @@
+schema: pmr007-deep-cn-authority-indexed-anchor-models-v1
+identity: PMR-007-AIAC-1
+status: POST_MERGE_RESEARCH_CANDIDATE
+architecture_instance:
+  models: [U, I, P]
+  target: {U: U, I: I, P: P}
+  anchors:
+    neutral_profile: {values: {U: n0, I: n0, P: n0}}
+    common_bearer: {values: {U: true, I: true, P: false}}
+    intentional_uptake: {values: {U: true, I: false, P: false}}
+    track_n_package: {values: {U: true, I: false, P: false}}
+    target_oracle: {values: {U: U, I: I, P: P}}
+  contexts:
+    neutral:
+      eligible: [neutral_profile]
+    formal_coordinate:
+      eligible: [neutral_profile, common_bearer, intentional_uptake]
+    track_n_conditional:
+      eligible: [neutral_profile, common_bearer, track_n_package]
+    forbidden_oracle:
+      eligible: [target_oracle]
+recipient_version_instance:
+  models: [same_bytes_v1_applicable, same_bytes_v2_stale]
+  target: {same_bytes_v1_applicable: APPLY, same_bytes_v2_stale: HOLD}
+  anchors:
+    receipt_bytes: {values: {same_bytes_v1_applicable: bytes_x, same_bytes_v2_stale: bytes_x}}
+    version_compatibility: {values: {same_bytes_v1_applicable: true, same_bytes_v2_stale: false}}
+    authority: {values: {same_bytes_v1_applicable: true, same_bytes_v2_stale: true}}
+  contexts:
+    receipt_only: {eligible: [receipt_bytes]}
+    version_aware: {eligible: [receipt_bytes, version_compatibility, authority]}
+source_world_instance:
+  models: [personal_candidate, impersonal_candidate]
+  target: {personal_candidate: PERSONAL, impersonal_candidate: IMPERSONAL}
+  anchors:
+    source_role_profile: {values: {personal_candidate: role_bundle, impersonal_candidate: role_bundle}}
+    intensional_predicate_preservation: {values: {personal_candidate: true, impersonal_candidate: false}}
+    actual_world_selection: {values: {personal_candidate: actual, impersonal_candidate: nonactual}}
+  contexts:
+    translated_role_only: {eligible: [source_role_profile]}
+    track_n_guarded: {eligible: [source_role_profile, intensional_predicate_preservation, actual_world_selection]}
+nonclaims:
+  - contexts and eligibility are inputs, not self-authorizing facts
+  - minimum anchor cardinality is not epistemic cost
+  - no noisy or statistical identifiability theorem
+  - no transfer between contexts without an explicit transport contract
+  - no source-world truth or recipient authorization from the abstract theorem

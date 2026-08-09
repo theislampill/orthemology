@@ -1,0 +1,97 @@
+schema: pmr007-deep-ck-concrete-architecture-map-v1
+status: NEW_POST_MERGE_RESEARCH_CANDIDATE
+historical_identity: NONE
+repository_authority: 9b80f2dfdf73a768ccad6a6ea2f2998c70ebdcf3
+comparison_scope:
+  model_class: [U_unified_personal, I_impersonal_powers, P_plural_coordinated]
+  neutral_state_coordinates: [content, fittingness_signal, registered_payoff, version_valid, authority_valid, provenance_root_bit]
+  common_output_coordinates: [decision, registered_payoff_report, eligible_source_status, provenance_root_report]
+  finite_horizon: 3
+  initial_state_family: all_64_boolean_neutral_states
+  intervention_family:
+    - noop
+    - flip_content
+    - flip_fittingness_signal
+    - flip_registered_payoff
+    - flip_version_valid
+    - flip_authority_valid
+    - flip_provenance_root_bit
+common_intervention_certificate:
+  abstract_type_frozen_before_architecture_implementation: true
+  target_independent_implementation: true
+  typed_identity_preserved: true
+  version_identity_preserved: true
+  authorization_contract_declared: true
+  resource_contract: one_boolean_update_per_step
+  output_semantics_common: true
+  architecture_target_not_read: true
+neutral_transition_semantics:
+  noop: {}
+  flip_content: {content: toggle}
+  flip_fittingness_signal: {fittingness_signal: toggle}
+  flip_registered_payoff: {registered_payoff: toggle}
+  flip_version_valid: {version_valid: toggle}
+  flip_authority_valid: {authority_valid: toggle}
+  flip_provenance_root_bit: {provenance_root_bit: toggle}
+neutral_output_semantics:
+  decision: content_xor_fittingness_signal
+  registered_payoff_report: registered_payoff
+  eligible_source_status: version_valid_and_authority_valid
+  provenance_root_report: provenance_root_bit
+architectures:
+  U_unified_personal:
+    hidden_target_coordinates:
+      common_bearer: true
+      intentional_uptake: true
+      selection_because_fitting: true
+      wisdom: true
+      architecture_class: U
+    functional_roles: [knowledge_role, will_role, power_role, semantic_role, effective_selection]
+    implementation: common_neutral_kernel
+  I_impersonal_powers:
+    hidden_target_coordinates:
+      common_bearer: true
+      intentional_uptake: false
+      selection_because_fitting: false
+      wisdom: false
+      architecture_class: I
+    functional_roles: [knowledge_role, will_role, power_role, semantic_role, effective_selection]
+    implementation: common_neutral_kernel
+  P_plural_coordinated:
+    hidden_target_coordinates:
+      common_bearer: false
+      intentional_uptake: false
+      selection_because_fitting: false
+      wisdom: false
+      architecture_class: P
+    functional_roles: [knowledge_role, will_role, power_role, semantic_role, effective_selection]
+    role_distribution:
+      knowledge_role: bearer_k
+      will_role: bearer_w
+      power_role: bearer_p
+      aggregate_selector: coordinator_r
+    implementation: common_neutral_kernel
+ineligible_or_separate_operations:
+  read_architecture_target:
+    reason: target_leaking_output_oracle
+  ownership_toggle:
+    reason: no_common_semantics_preserving_implementation_across_I_and_P
+  source_intensional_predication:
+    reason: Track_N_source_relative_operation_requires_source_world_bridge
+  divine_speech_query:
+    reason: not_neutral_and_not_world_operationalized
+  actual_world_selector:
+    reason: no_candidate_independent_implementation
+negative_controls:
+  target_leaking_output: must_split_but_is_ineligible
+  same_label_different_semantics: must_fail_common_certificate
+  version_drift: must_fail_commutation
+  omitted_intervention: may_hide_a_difference_outside_the_reduced_profile
+  common_profile_equal_target_different: must_witness_nonidentifiability
+nonclaims:
+  - no_exhaustion_of_all_possible_architectures
+  - no_physical_or_metaphysical_realizability_claim
+  - no_infinite_horizon_claim
+  - no_personality_or_wisdom_nonexistence_claim
+  - no_source_world_transfer
+  - no_owner_adoption

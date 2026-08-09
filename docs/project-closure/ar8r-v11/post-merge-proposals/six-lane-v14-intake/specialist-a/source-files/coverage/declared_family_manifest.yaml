@@ -1,0 +1,48 @@
+schema: spa-declared-family-manifest-v1
+scope: Deep BV-CJ and Challenger A candidate families named below; not whole-repository
+  exhaustion
+families:
+- id: DEEP_BV_COMMON_INTERVENTION_IDENTIFIABILITY
+  source: Deep BV
+- id: DEEP_BW_TARGET_BLIND_SATURATION
+  source: Deep BW
+- id: DEEP_BX_MINIMUM_BREAKING_ANCHOR_COVER
+  source: Deep BX
+- id: DEEP_BY_SOURCE_WORLD_ANCHOR_CONDITIONS
+  source: Deep BY
+- id: DEEP_BZ_BINARY_ARCHITECTURE_EXPANSIONS
+  source: Deep BZ
+- id: DEEP_CA_RESOURCE_COMPARISON_IDENTIFIABILITY
+  source: Deep CA
+- id: DEEP_CB_RESTRICTION_FIBRE_WARNING
+  source: Deep CB
+- id: DEEP_CC_COMMON_SECTION_QUANTIFIER
+  source: Deep CC
+- id: DEEP_CD_NEUTRAL_ORBIT_PROFILE
+  source: Deep CD
+- id: DEEP_CE_UNIT_SEPARABILITY
+  source: Deep CE
+- id: DEEP_CF_COMMON_BEARER_INTERSECTION
+  source: Deep CF
+- id: DEEP_CG_SIX_CONDITION_MODEL
+  source: Deep CG
+- id: DEEP_CH_OWNERSHIP_INTERVENTION
+  source: Deep CH
+- id: DEEP_CI_SEMANTIC_CONTENT_SWAP
+  source: Deep CI
+- id: DEEP_CJ_FORM_SEMANTIC_GROUND_FACTORIAL
+  source: Deep CJ
+- id: CHALLENGER_A_CAUSAL_CUTS
+  source: Challenger A
+- id: CHALLENGER_A_TARGET_TRUTH_CONFLICT
+  source: Challenger A
+- id: CHALLENGER_A_FORM_CONTENT_CROSS
+  source: Challenger A
+- id: CHALLENGER_A_AUTHORITY_VERSION_ROTATION
+  source: Challenger A
+- id: CHALLENGER_A_PROVENANCE_ROOT_INTERVENTION
+  source: Challenger A
+- id: CHALLENGER_A_OWNERSHIP_PERMUTATION
+  source: Challenger A
+- id: CHALLENGER_A_NONCE_RESOURCE_STRESS
+  source: Challenger A

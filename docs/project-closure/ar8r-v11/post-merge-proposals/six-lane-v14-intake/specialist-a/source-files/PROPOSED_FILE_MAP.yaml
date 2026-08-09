@@ -1,0 +1,26 @@
+schema: spa-sanitized-proposal-file-map-v1
+status: PROPOSAL_FOR_INDEPENDENT_REVIEW_NO_REPOSITORY_MUTATION
+suggested_staging_root: docs/project-closure/ar8r-v11/post-merge-proposals/specialist-a-formal-computational-candidate/
+review_order:
+- README.md
+- AUTHORITY_FIREWALLS.yaml
+- CENTRAL_INTEGRATOR_RECEIPT.yaml
+- BURDEN_LEDGER.yaml
+- registry/architecture_factor_registry.yaml
+- coverage/total_coverage_map.yaml
+- rounds/
+- results/all_checks_results.json
+- audit/FRESH_REREVIEW.json
+- lean/LEAN_STATUS.yaml
+adoption_gate:
+- independent source and ancestry review
+- fresh checker rerun
+- Lean status kept source-only unless exact toolchain receipts are produced
+- actual architecture implementation claims remain absent
+- central owner decides whether any file is admitted, renamed, split, or rejected
+excluded:
+- generation commentary
+- local filesystem locators
+- credential-bearing locators
+- controlling checkpoint authority
+- authoritative theorem or proposal allocation

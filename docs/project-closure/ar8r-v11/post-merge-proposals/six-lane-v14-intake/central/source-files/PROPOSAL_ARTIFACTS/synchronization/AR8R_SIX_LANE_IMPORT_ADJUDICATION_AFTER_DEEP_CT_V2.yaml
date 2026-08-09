@@ -1,0 +1,143 @@
+schema: ar8r-six-lane-import-adjudication-after-deep-ct-v2
+repository_authority: 9b80f2dfdf73a768ccad6a6ea2f2998c70ebdcf3
+coordination_readme:
+  filename: README(20260809-112436).md
+  sha256: de4c6466335f2623f761da162b62030a0d2d247887d697bfa8157240bf86e8b0
+current_repository_zip:
+  filename: orthemology-main(11)(2).zip
+  sha256: 78d049d4711d2b0cffe7cb8071d01d22b99a00126196caa5e2c4be4826eb100c
+  archive_comment: 9b80f2dfdf73a768ccad6a6ea2f2998c70ebdcf3
+imports:
+- lane: central merged-main intake
+  source_artifact: Deep BW-CJ independent review
+  frozen_artifact_sha256: 8c6edb07e14a8647df8edf8a22d69ad6ade633b855f670aa95df4047d78d1011
+  content_access: MOUNTED_EXACT_CURRENT_REPOSITORY
+  claim_evidence_class: MERGED_CUSTODY_AND_INTAKE_CORRECTION
+  affected_nodes:
+  - BW-CH
+  - CI
+  - CJ
+  conflicts:
+  - CI/CJ V1 14/14 top-line rejected
+  - V2 execution correction bounded
+  - architecture implementation remains unverified
+  central_adoption: LOAD_BEARING_INTAKE_CORRECTION_ONLY
+- lane: Specialist Pro A formal/computational
+  source_artifact: AR8R_SPECIALIST_A_PRIVATE_CHECKPOINT_9b80f2d.zip
+  frozen_artifact_sha256: c05ce4ce5762bb025e9436632963a7adf63137a62330be60d19afb4f2f40801b
+  report_sha256: b7ba16de9e42919c38137534ac91b3d091c1ffc5f8d225c6c008e4d7d9cc0ea2
+  central_receipt_sha256: b6a7d8d830de434ad589f1551b3f1be3a345889bba0c6cb284386c2a25dcf0e1
+  content_access: FILE_LIBRARY_SEMANTIC_ACCESS_NOT_ACTIVE_RUNTIME_BYTES
+  claim_evidence_class: NONAUTHORITATIVE_FORMAL_COMPUTATIONAL_CHECKPOINT
+  affected_nodes:
+  - typed common factors
+  - resource quotient
+  - co-Büchi
+  - common knowledge
+  - provenance
+  - representation fibres
+  - collision cover
+  - finite adaptive twins
+  - predictive quotients
+  conflicts:
+  - SPA-R1/R7/R8/R9/R10 overlap existing fibre/cover families
+  - SPA-R11 corroborates CP only under class closure
+  - actual implementation maps remain blocking
+  - Lean unavailable
+  central_adoption: CORROBORATION_BURDENS_AND_ANCESTRY_ONLY_NO_NEW_THEOREM_MULTIPLICITY
+- lane: Specialist Pro B transcendental/noetic
+  source_artifact: 15_AR8R_SPECIALIST_B_SUSTAINED_RESEARCH_REPORT.md
+  frozen_artifact_sha256: NOT_SURFACED_TO_CENTRAL_RUNTIME
+  controlling_archive: NOT_CREATED_BY_SOURCE_LANE
+  content_access: FILE_LIBRARY_SEMANTIC_ACCESS
+  claim_evidence_class: NONAUTHORITATIVE_TRANSCENDENTAL_NOETIC_PROPOSAL
+  affected_nodes:
+  - Wisdom bearer/episode locality
+  - grounding completeness
+  - qiyās/Speech/Name ladder
+  - restoration nonidentifiability
+  - property ontology
+  - personality twin closure
+  - recipient warrant
+  conflicts:
+  - no positive transcendental ascent
+  - impersonal/plural/powers rivals survive
+  - no kernel-checked Lean
+  - missing controlling archive/hash prevents byte adoption
+  central_adoption: SEMANTIC_NEGATIVE_AND_BURDEN_IMPORT_ONLY_PENDING_BYTE_CUSTODY
+- lane: Deep Research 20 theorem ancestry
+  source_artifact: AR8R Deep Research rerun — theorem ancestry and exact prior art
+  frozen_artifact_sha256: NOT_SURFACED_TO_CENTRAL_RUNTIME
+  content_access: FILE_LIBRARY_SEMANTIC_ACCESS
+  claim_evidence_class: EXTERNAL_EVIDENCE_SCOUT_WITH_DURABLE_LOCATORS
+  affected_nodes:
+  - fibre factorization
+  - Blackwell/Le Cam
+  - common interventions
+  - Myhill-Nerode
+  - nonnegative rank
+  - descent/holonomy
+  - co-Büchi
+  - provenance
+  conflicts:
+  - fibre and finite co-Büchi general-math cores standard
+  - typed application guards not subsumed
+  - holonomy exact ancestry unresolved
+  central_adoption: ANCESTRY_CEILING_AND_LOCATOR_QUEUE_ONLY
+- lane: Deep Research 21 primary/metaphysical/proper-function
+  source_artifact: AR8R Deep Research rerun — Primary-source and metaphysical custody
+  frozen_artifact_sha256: NOT_SURFACED_TO_CENTRAL_RUNTIME
+  content_access: FILE_LIBRARY_SEMANTIC_ACCESS
+  claim_evidence_class: EXTERNAL_SOURCE_SCOUT_WITH_EXPLICIT_CUSTODY_LEVELS
+  affected_nodes:
+  - Avicennian necessity/dependence/unity
+  - Taymiyyan qiyās/Speech/fiṭrah
+  - Plantinga proper function
+  - reliabilist rivals
+  - property/grounding/plural rivals
+  conflicts:
+  - exact Arabic and edition bytes incomplete at several loci
+  - Divine Name authorization locus unverified
+  - six qiyās guards are project synthesis
+  - no historical whole-package identity
+  central_adoption: SOURCE_STATUS_AND_RIVAL_CEILINGS_ONLY_NO_WORLD_TRANSFER
+- lane: Deep Research 22 empirical/protocol
+  source_artifact: AR8R Deep Research Rerun — Empirical and Representation Protocols
+  frozen_artifact_sha256: NOT_SURFACED_TO_CENTRAL_RUNTIME
+  content_access: FILE_LIBRARY_SEMANTIC_ACCESS
+  claim_evidence_class: EXTERNAL_EMPIRICAL_PROTOCOL_SCOUT
+  affected_nodes:
+  - OSM trajectory
+  - PRH higher-order parity
+  - provenance-root experiments
+  - MNAR/leakage
+  - representation arms
+  - partial intervention missingness
+  conflicts:
+  - source scout inspected older a8142c3 ZIP for implementation details
+  - controllers A-G are not representations A-G
+  - 120-observation five-arm mapping unresolved
+  - protocols not executed
+  central_adoption: PROTOCOL_REQUIREMENTS_AND_KILL_CONDITIONS_ONLY
+deduplication:
+  new_independent_theorem_origins_from_imports: 0
+  specialist_A_overlap:
+  - SPA-R1/R7/R9 -> T294/Deep BV fibre family
+  - SPA-R8/R10 -> partition refinement/set cover family
+  - SPA-R11 -> finite history-state realization corroboration of CP
+  - SPA-R4 -> standard finite co-Büchi family
+  specialist_B_status: new packet-local certificates/countermodels only; no central ID or historical identity
+  deep_research_status: ancestry/source/protocol evidence, not theorem adoption
+central_scientific_imports:
+- actual implementation maps and common semantics are blocking for architecture discrimination
+- because-of uptake must be target-independent, bearer-local, episode-local, and intervention-compatible
+- proper function remains account-relative and does not by itself identify personality
+- source/world/recipient and attribute/Name/Speech/wording/grammar stages remain separate
+- finite fibre, set-cover, and co-Büchi cores receive zero general mathematical novelty
+- trajectory/higher-order/provenance/MNAR controls are required for any empirical breaker
+central_adjudication:
+  integrated_champion: NONE
+  meniscus: MENISCUS_NOT_REACHED
+  natural_closure: NOT_REACHED
+  owner_decision_required: false
+  independent_ready_work_remaining: true

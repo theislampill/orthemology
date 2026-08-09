@@ -1,0 +1,36 @@
+schema: pmr007-deep-co-admission-overlay-v1
+identity: PMR-007-PMCI-1
+title: Profile-measurable correction impossibility at the surviving U-I fibre
+canonical_version: V2
+provenance: ADMITTED_POST_MERGE_SCOPED_RESULT
+historical_identity: NONE
+repository_scientific_adoption: NONE
+owner_adoption: PENDING
+external_review: OPEN
+general_mathematical_novelty: 0
+proof_status: HUMAN_PUSHFORWARD_ARGUMENT_PLUS_PRIMARY_AND_DISTINCT_EXACT_CHECKS
+countermodel_status: TARGET_ORACLE_ARCHITECTURE_SPECIFIC_CHANNEL_AND_EXPERIMENT_ENLARGEMENT_CONTROLS
+cold_audit: REPAIR_REQUIRED
+blocking_findings_repaired: 8
+fresh_rereview: PASS_WITH_NONBLOCKING_EXPERIMENT_COMPLETENESS_NOTES
+theorem_family:
+  mechanism: EQUALITY_UNDER_COMMON_PUSHFORWARD_AND_PROFILE_FIBRE_CONSTANCY
+  ancestry: [Deep_AO, Deep_CB, Deep_BV, AR8R_T294, standard_data_processing]
+  relation: COMPOSITIONAL_COROLLARY_AND_CENTRAL_RESIDUAL_APPLICATION
+central_effects:
+  profile_measurable_UI_correction: IMPOSSIBLE_AT_FROZEN_E0_SCOPE
+  permissible_next_moves:
+    - enlarged_common_experiment
+    - independent_source_world_anchor
+    - independent_nonprofile_model_restriction
+    - new_data_or_prior_not_measurable_from_E0
+  strongest_one_bearer_impersonal_rival: SURVIVES
+scope_nonclaims:
+  - no metaphysical equivalence
+  - no equal prior or explanatory merit
+  - no complete future experiment claim
+  - no bar on independent new measurements
+  - no historical or novelty credit
+integrated_champion: NONE
+meniscus: MENISCUS_NOT_REACHED
+natural_closure: NOT_REACHED

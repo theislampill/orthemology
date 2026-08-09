@@ -1,0 +1,83 @@
+schema: spa-open-burden-ledger-v1
+repository_sha: 9b80f2dfdf73a768ccad6a6ea2f2998c70ebdcf3
+status: OPEN_AT_HARD_EXTERNAL_INPUT_BOUNDARY
+burdens:
+- id: LOCAL-BURDEN-ACTUAL-IMPLEMENTATION-MAPS
+  status: BLOCKING
+  owner_input: DR22 or independently reviewed empirical implementation packet
+  requirement: At least one actual target-blind implementation map per rival class,
+    with type/version/authorisation/resource guards and complete experiment profiles.
+  blocked_claim: implemented common intervention and empirical architecture discrimination
+- id: LOCAL-BURDEN-COMMON-SEMANTICS
+  status: BLOCKING
+  owner_input: central integrator plus domain owners
+  requirement: A common observation/decoder semantics-preservation receipt across
+    implementations; architecture tags and disputed target predicates unavailable
+    to the decoder.
+  blocked_claim: cross-architecture common decoding
+- id: LOCAL-BURDEN-MEASURABLE-CONTRACT
+  status: OPEN
+  owner_input: formal lane after DR20 locators
+  requirement: Input/output measurable spaces, measurable kernels and policies, measurable
+    decoder, and target-blindness proof receipts.
+  blocked_claim: measurable or continuous generalisation of the finite registry
+- id: LOCAL-BURDEN-CLASS-CLOSURE
+  status: BLOCKING_FOR_NONIDENTIFIABILITY_TRANSFER
+  owner_input: Specialist B or central architecture owner
+  requirement: Independent premise that a target-different architecture class contains
+    every admitted guard-satisfying finite history-state realiser, or a bounded subclass
+    thereof.
+  blocked_claim: architecture-level nonidentifiability from the history-state twin
+- id: LOCAL-BURDEN-RESOURCE-LOWER-BOUND
+  status: OPEN
+  owner_input: DR22 plus formal lane
+  requirement: Common machine/compiler/clock/locality/meter semantics and a lower
+    bound over the complete rival realisation class, stated on predictive quotients
+    or Pareto feasibility.
+  blocked_claim: resource-based rival exclusion
+- id: LOCAL-BURDEN-STOCHASTIC-INFINITE
+  status: OPEN
+  owner_input: formal lane after ancestry and interface freeze
+  requirement: Stochastic/measurable history-state and predictive-equivalence conditions,
+    plus topology/regularity for infinite horizons.
+  blocked_claim: general causal-interface theorem beyond the finite deterministic
+    contract
+- id: LOCAL-BURDEN-LEAN-TOOLCHAIN
+  status: OPEN
+  owner_input: runtime/tooling
+  requirement: Lean 4.32.2 parse, elaboration, kernel, project build, and axiom reports
+    for source-only drafts.
+  blocked_claim: Lean machine verification
+- id: LOCAL-BURDEN-DR20-ANCESTRY
+  status: OPEN
+  owner_input: Deep Research 20
+  requirement: Stable theorem-level locators for restriction/factorisation, experiment
+    comparison, partial-observation co-Büchi, common knowledge, provenance/data-incest,
+    set cover, history-state realisation, and Myhill–Nerode/predictive quotients.
+  blocked_claim: citation-durable ancestry disposition
+- id: LOCAL-BURDEN-DR22-PROTOCOL
+  status: OPEN
+  owner_input: Deep Research 22
+  requirement: Actual common-intervention, representation, acknowledgment, provenance,
+    resource, held-out-rival, and mutation protocols.
+  blocked_claim: empirical implementation and external validity
+- id: LOCAL-BURDEN-SPECIALIST-B-BRIDGES
+  status: OPEN
+  owner_input: Specialist B
+  requirement: Only formally typed, independently warranted bridge predicates for
+    truth/fittingness, proper function, source applicability, personality, closure,
+    or lower bounds; source warrant must remain separate from neutral intervention
+    labels.
+  blocked_claim: formal interface to noetic/transcendental lanes
+- id: LOCAL-BURDEN-EXTERNAL-REREVIEW
+  status: OPEN
+  owner_input: independent reviewer
+  requirement: Independent rerun and source/ancestry review of the sanitised proposal;
+    the local cold audit and fresh rereview are procedurally distinct but not external
+    independence.
+  blocked_claim: external review closure or repository adoption
+exact_next_atomic_action: Instantiate one externally reviewed actual architecture
+  implementation map and one independently eligible target-blind candidate factor;
+  compute its common-decoder validity and marginal residual-collision coverage. If
+  no such input is supplied, preserve the bounded no-cover/history-state nonidentifiability
+  boundary rather than inventing a proxy.

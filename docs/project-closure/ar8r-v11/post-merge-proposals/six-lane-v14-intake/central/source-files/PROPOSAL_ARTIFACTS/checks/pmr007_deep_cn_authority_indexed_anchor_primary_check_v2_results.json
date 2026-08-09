@@ -1,0 +1,152 @@
+{
+  "criterion_failures": 0,
+  "eligibility_expansion_monotonicity_failures": 0,
+  "instances": {
+    "architecture_instance": {
+      "forbidden_oracle": {
+        "conflicts": [
+          [
+            "I",
+            "P"
+          ],
+          [
+            "U",
+            "I"
+          ],
+          [
+            "U",
+            "P"
+          ]
+        ],
+        "kappa": 1,
+        "witnesses": [
+          [
+            "target_oracle"
+          ]
+        ]
+      },
+      "formal_coordinate": {
+        "conflicts": [
+          [
+            "I",
+            "P"
+          ],
+          [
+            "U",
+            "I"
+          ],
+          [
+            "U",
+            "P"
+          ]
+        ],
+        "kappa": 2,
+        "witnesses": [
+          [
+            "common_bearer",
+            "intentional_uptake"
+          ]
+        ]
+      },
+      "neutral": {
+        "conflicts": [
+          [
+            "I",
+            "P"
+          ],
+          [
+            "U",
+            "I"
+          ],
+          [
+            "U",
+            "P"
+          ]
+        ],
+        "kappa": null,
+        "witnesses": []
+      },
+      "track_n_conditional": {
+        "conflicts": [
+          [
+            "I",
+            "P"
+          ],
+          [
+            "U",
+            "I"
+          ],
+          [
+            "U",
+            "P"
+          ]
+        ],
+        "kappa": 2,
+        "witnesses": [
+          [
+            "common_bearer",
+            "track_n_package"
+          ]
+        ]
+      }
+    },
+    "recipient_version_instance": {
+      "receipt_only": {
+        "conflicts": [
+          [
+            "same_bytes_v1_applicable",
+            "same_bytes_v2_stale"
+          ]
+        ],
+        "kappa": null,
+        "witnesses": []
+      },
+      "version_aware": {
+        "conflicts": [
+          [
+            "same_bytes_v1_applicable",
+            "same_bytes_v2_stale"
+          ]
+        ],
+        "kappa": 1,
+        "witnesses": [
+          [
+            "version_compatibility"
+          ]
+        ]
+      }
+    },
+    "source_world_instance": {
+      "track_n_guarded": {
+        "conflicts": [
+          [
+            "personal_candidate",
+            "impersonal_candidate"
+          ]
+        ],
+        "kappa": 1,
+        "witnesses": [
+          [
+            "intensional_predicate_preservation"
+          ],
+          [
+            "actual_world_selection"
+          ]
+        ]
+      },
+      "translated_role_only": {
+        "conflicts": [
+          [
+            "personal_candidate",
+            "impersonal_candidate"
+          ]
+        ],
+        "kappa": null,
+        "witnesses": []
+      }
+    }
+  },
+  "pass": true,
+  "random_cases": 30000,
+  "schema": "pmr007-deep-cn-authority-indexed-anchor-primary-check-v2-results"
+}

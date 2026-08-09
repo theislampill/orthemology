@@ -1,0 +1,42 @@
+schema: pmr007-theorem-family-relations-ck-co-v1
+relations:
+- identity: PMR-007-SFWA-1
+  family:
+  - AR8R-T294
+  - Deep BV fibre constancy
+  - Deep AP/BL/BY source-world transfer
+  - Deep CF common bearer
+  - Deep BR Wisdom guards
+  classification: INTEGRATED_APPLICATION_WITH_FRESH_CONCRETE_MAP
+  novelty: 0
+- identity: PMR-007-MABF-1
+  family:
+  - Deep BX conflict cover
+  - Deep BV/AR8R-T294
+  - standard partition refinement
+  classification: CENTRAL_BURDEN_SPECIALIZATION
+  novelty: 0
+- identity: PMR-007-OFFI-1
+  family:
+  - Deep BP
+  - Deep BG
+  - Deep BR
+  - AR8R-T294 reduct expansion
+  classification: STRENGTHENING_APPLICATION
+  novelty: 0
+- identity: PMR-007-AIAC-1
+  family:
+  - Deep BX
+  - Deep BV
+  - Deep CL
+  - standard constrained set cover
+  classification: GUARDED_CONTEXT_INDEXED_GENERALIZATION_AND_APPLICATION
+  novelty: 0
+- identity: PMR-007-PMCI-1
+  family:
+  - Deep AO data processing
+  - Deep CB restriction firewall
+  - Deep BV/AR8R-T294
+  - common pushforward equality
+  classification: COMPOSITIONAL_COROLLARY_AND_RESIDUAL_APPLICATION
+  novelty: 0

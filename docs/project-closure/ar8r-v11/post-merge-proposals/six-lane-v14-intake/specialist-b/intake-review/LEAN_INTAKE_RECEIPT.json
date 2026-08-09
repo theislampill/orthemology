@@ -1,0 +1,30 @@
+{
+  "schema": "ar8r-specialist-b-lean-intake-receipt-v1",
+  "lean_version": "4.32.2",
+  "original": {
+    "path": "source-files/SpecialistBBridgeSignatures.lean",
+    "sha256": "e18b1e03b970b4d355008eb64ba3f502a23e9c36797ecb009d6487e923c97015",
+    "status": "PARSE_ELABORATION_FAILED",
+    "first_error": "line 189: reserved field name section causes unexpected token and downstream projection failures"
+  },
+  "repair": {
+    "path": "intake-review/lean/SpecialistBBridgeSignatures.repaired.lean",
+    "sha256": "3602e4d29ebb57e8b01e78acf57dc49712373af59509bcfe193c93ba302f20d1",
+    "change": "rename the reserved structure field section to roleSection and add axiom reports",
+    "standalone_parse_elaboration_kernel": "PASS",
+    "axioms_by_declaration": {
+      "collision_not_fiberConstant": [],
+      "twinClosed_not_fiberConstant": [],
+      "recordedRoot_of_incomingComplete_is_nonborrowed": [],
+      "wisdomEpisode_intro": [],
+      "identityAndUnityLift_has_bID": []
+    }
+  },
+  "checker_reproduction": "BLOCKED_CHECKER_SOURCE_ABSENT_FROM_SANITIZED_PACKET",
+  "project_build": "NOT_RUN_NOT_A_PROJECT_INTEGRATION",
+  "downstream_integration": "NOT_RUN",
+  "repository_scientific_adoption": "NONE",
+  "owner_adoption": "PENDING",
+  "external_review": "OPEN",
+  "general_novelty": 0
+}

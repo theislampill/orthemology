@@ -1,0 +1,26 @@
+schema: ar8r-specialist-a-authority-firewalls-v1
+lane: formal_computational_specialist
+status: PRIVATE_RESEARCH_CHECKPOINT_NO_REPOSITORY_MUTATION
+repository:
+  slug: theislampill/orthemology
+  expected_origin_main: 9b80f2dfdf73a768ccad6a6ea2f2998c70ebdcf3
+  attached_zip_archive_comment: 9b80f2dfdf73a768ccad6a6ea2f2998c70ebdcf3
+  live_remote_verification: MATCH
+  integration_pr: 25
+firewalls:
+  authoritative_theorem_or_proposal_ids_allocated: false
+  repository_scientific_adoption_claimed: false
+  owner_adoption_claimed: false
+  historical_identity_claimed: false
+  novelty_claimed: false
+  source_truth_claimed: false
+  source_world_transfer_claimed: false
+  metaphysical_truth_claimed: false
+  meniscus_claimed: false
+  closure_claimed: false
+  github_mutation_performed: false
+status_vocabulary:
+  proposal_status: SPECIALIST_LOCAL_RESEARCH_ONLY
+  ancestry_default: STANDARD_OR_EXISTING_FAMILY_NO_NOVELTY_BY_DEFAULT
+  finite_checker_ceiling: BOUNDED_CONSTRUCTED_EVIDENCE_ONLY
+  lean_source_ceiling: SOURCE_PRESENT_NOT_MACHINE_CHECKED_UNLESS_EXPLICIT_RECEIPT

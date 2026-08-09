@@ -1,0 +1,54 @@
+schema: pmr007-deep-cl-architecture-anchor-registry-v1
+identity: PMR-007-MABF-1
+status: POST_MERGE_RESEARCH_CANDIDATE
+architectures: [U_unified_personal, I_impersonal_powers, P_plural_coordinated]
+conflicts:
+  - [U_unified_personal, I_impersonal_powers]
+  - [U_unified_personal, P_plural_coordinated]
+  - [I_impersonal_powers, P_plural_coordinated]
+anchors:
+  complete_neutral_experiment:
+    authority: NEUTRAL_EXECUTABLE_PROFILE
+    eligible: true
+    values: {U_unified_personal: CK_NEUTRAL_PROFILE_0, I_impersonal_powers: CK_NEUTRAL_PROFILE_0, P_plural_coordinated: CK_NEUTRAL_PROFILE_0}
+    cost: 0
+  common_bearer:
+    authority: FORMAL_TARGET_COORDINATE
+    eligible: conditional_on_independent_operationalization
+    values: {U_unified_personal: true, I_impersonal_powers: true, P_plural_coordinated: false}
+    cost: 1
+  intentional_uptake:
+    authority: FORMAL_TARGET_COORDINATE
+    eligible: conditional_on_independent_operationalization
+    values: {U_unified_personal: true, I_impersonal_powers: false, P_plural_coordinated: false}
+    cost: 1
+  because_fitting:
+    authority: FORMAL_TARGET_COORDINATE
+    eligible: false_without_independent_bridge
+    values: {U_unified_personal: true, I_impersonal_powers: false, P_plural_coordinated: false}
+    cost: 1
+  track_n_intensional_predication:
+    authority: TRACK_N_CONDITIONAL
+    eligible: conditional_on_Deep_CK_19_guard_package
+    values: {U_unified_personal: true, I_impersonal_powers: false, P_plural_coordinated: false}
+    cost: 1
+  wisdom:
+    authority: CONCLUSION_LIKE_TARGET
+    eligible: false_target_oracle
+    values: {U_unified_personal: true, I_impersonal_powers: false, P_plural_coordinated: false}
+    cost: 1
+  architecture_class:
+    authority: TARGET_ORACLE
+    eligible: false_target_oracle
+    values: {U_unified_personal: U, I_impersonal_powers: I, P_plural_coordinated: P}
+    cost: 1
+registries:
+  certified_neutral: [complete_neutral_experiment]
+  hypothetical_independent_bridges: [complete_neutral_experiment, common_bearer, intentional_uptake]
+  track_n_conditional: [complete_neutral_experiment, common_bearer, track_n_intensional_predication]
+  forbidden_oracles: [wisdom, architecture_class]
+nonclaims:
+  - no claim that the anchor registry is exhaustive
+  - no claim that common bearer or intentional uptake is currently neutrally operationalized
+  - no actual-world architecture selection
+  - no novelty claim beyond a finite conflict-cover application

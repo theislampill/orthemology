@@ -1,0 +1,16 @@
+schema: spa-sanitized-audit-repair-receipts-v1
+repairs:
+- surface: cold audit source manifest
+  failure: auditor expected a missing_count field not present in the manifest schema
+  repair: derive missing count from the manifest's missing list
+  disposition: audit false positive removed; exact file_count=60 and missing=[] retained
+- surface: fresh rereview novelty parser
+  failure: literal substring test rejected equivalent zero-novelty wording
+  repair: require novelty disposition plus absence of positive novelty markers
+  disposition: novelty firewall remains zero
+- surface: minimum collision cover checker
+  failure: wrong hard-coded expected set-system count caused the seventh mutation
+    control to survive
+  repair: derive expected total as sum((2^n)^m) for n,m in 1..4
+  disposition: 74,954 cases; 7/7 mutants killed on rerun
+ceiling: local repair receipts; not external review

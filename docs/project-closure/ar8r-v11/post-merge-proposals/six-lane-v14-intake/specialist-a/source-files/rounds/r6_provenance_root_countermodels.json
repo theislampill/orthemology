@@ -1,0 +1,115 @@
+{
+  "conclusion_ceiling": "lineage-root accounting only; no numerical identity, common knowledge, warrant, or independent-evidence conclusion",
+  "guards": [
+    "finite DAG",
+    "root labels authenticated and fresh for acquire nodes",
+    "operation kind typed",
+    "copy/transform/sync versus acquisition separated",
+    "root multiplicity not equated with evidential independence"
+  ],
+  "models": {
+    "copy_explosion": {
+      "authenticated_root_count": 1,
+      "carrier_or_copy_count_after_root": 100,
+      "episode_count": 101,
+      "last_episode_roots": [
+        "r0"
+      ],
+      "lesson": "copy multiplicity does not create independent acquisition roots"
+    },
+    "distinct_roots_shared_hidden_anchor": {
+      "declared_root_labels": [
+        "rA",
+        "rB"
+      ],
+      "hidden_upstream_anchor": {
+        "rA": "h0",
+        "rB": "h0"
+      },
+      "lesson": "distinct authenticated acquisition roots do not alone establish uncorrelated evidence or distinct ultimate source",
+      "root_labels_distinct": true,
+      "statistical_or_evidential_independence_established": false
+    },
+    "synchronization_union": {
+      "final_episode_roots": [
+        "r0",
+        "r1"
+      ],
+      "global_root_count": 2,
+      "lesson": "synchronization unions availability; it does not make episodes or carriers numerically identical",
+      "trace": [
+        {
+          "global_roots": [
+            "r0"
+          ],
+          "kind": "root",
+          "node": 0,
+          "parents": [],
+          "roots": [
+            "r0"
+          ]
+        },
+        {
+          "authenticated": true,
+          "global_after": [
+            "r0",
+            "r1"
+          ],
+          "global_before": [
+            "r0"
+          ],
+          "kind": "acquire",
+          "node": 1,
+          "parents": [],
+          "roots": [
+            "r1"
+          ]
+        },
+        {
+          "authenticated": true,
+          "global_after": [
+            "r0",
+            "r1"
+          ],
+          "global_before": [
+            "r0",
+            "r1"
+          ],
+          "kind": "sync",
+          "node": 2,
+          "parents": [
+            0,
+            1
+          ],
+          "roots": [
+            "r0",
+            "r1"
+          ]
+        }
+      ]
+    },
+    "tac_sac_noncollapse": {
+      "episode_1": {
+        "carrier": "c1",
+        "lineage": "l1",
+        "roots": [
+          "r0"
+        ]
+      },
+      "episode_2": {
+        "carrier": "c2",
+        "lineage": "l2",
+        "roots": [
+          "r0"
+        ]
+      },
+      "numerical_identity_established_by_root_equality": false,
+      "same_carrier": false,
+      "same_episode": false,
+      "same_root_set": true
+    }
+  },
+  "narrow_statement": "in the declared authenticated DAG semantics, copy/transform/sync nodes inherit unions of predecessor roots and add no fresh root; only acquire nodes add one fresh registered root",
+  "schema": "spa-r6-provenance-root-models-v1",
+  "specialist_local_result": "SPA-R6"
+}

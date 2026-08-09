@@ -1,0 +1,37 @@
+schema: pmr007-deep-cq-admission-overlay-v1
+identity: PMR-007-NURV-1
+title: Switching-standard robust viability under norm-source uncertainty
+canonical_version: V2
+status: ADMITTED_POST_MERGE_SCOPED_CENTRAL_PROPER_FUNCTION_RESTORATION_RESULT
+provenance: POST_MERGE_RESEARCH_PROPOSAL
+historical_identity: NONE
+repository_scientific_adoption: NONE
+owner_adoption: PENDING
+external_review: OPEN
+general_mathematical_novelty: 0
+proof_status: HUMAN_FINITE_ROBUST_GAME_FIXED_POINT_PROOF
+primary_executable_status: PASS
+cold_audit_status: REPAIR_REQUIRED_THEN_REPAIRED
+fresh_rereview_status: PASS_WITH_NONBLOCKING_TARGET_AUTHORITY_AND_FIXED_STANDARD_NOTES
+admitted_scope:
+  - exact greatest-fixed-point characterization of robust viability under adversarial switching among supplied finite standards
+  - exact least-fixed-point characterization of finite robust reach-and-stay
+  - memoryless sufficiency under finite full-state deterministic switching semantics
+  - monotonic expansion under independently warranted restriction of the standard family
+  - exact fixed-hidden-versus-switching and common-action-conflict countermodels
+nonclaims:
+  - no standard target proven objectively correct
+  - no unique proper-function account selected
+  - no partial-observation or fixed-hidden-standard theorem
+  - no stochastic or infinite-state theorem
+  - no source truth or applicability established
+  - no daee runtime enforcement or human restoration established
+  - no historical identity or general novelty credit
+central_burden_effect:
+  proper_function_to_restoration: FORMALIZED_AS_TARGET_FAMILY_PLUS_COMMON_POLICY_BURDEN
+  stable_restoration: REQUIRES_NONEMPTY_ROBUST_VIABILITY_AND_REACHABILITY_KERNEL
+  source_anchor: CAN_ENLARGE_KERNEL_ONLY_CONDITIONALLY_ON_INDEPENDENT_AUTHORITY
+  target_conflict: CAN_BLOCK_RESTORATION_EVEN_WHEN_EACH_STANDARD_IS_INDIVIDUALLY_RESTORABLE
+  strongest_impersonal_rival: UNCHANGED
+meniscus: MENISCUS_NOT_REACHED
+natural_closure: NOT_REACHED

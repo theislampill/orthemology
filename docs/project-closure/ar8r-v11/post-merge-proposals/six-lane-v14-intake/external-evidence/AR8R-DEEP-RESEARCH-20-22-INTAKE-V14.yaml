@@ -1,0 +1,196 @@
+schema: ar8r-deep-research-20-22-intake-v14
+authority: BOUNDED_INDEPENDENT_SOURCE_AND_PROTOCOL_INTAKE
+reports:
+- lane: DEEP_RESEARCH_20
+  sha256: 812b5f4f319669fd8f09f666923df95c861bb707f1233494566f2279bbf31ed3
+  public_bytes_copied: false
+  reason: unstable tool citations and unadjudicated aggregate counts
+- lane: DEEP_RESEARCH_21
+  sha256: f48e324de9c1e56258a5fd2ae29285611858cd64b3b83ba15070a05c94606190
+  public_bytes_copied: false
+  reason: source-locator correction required and private report not needed for public custody
+- lane: DEEP_RESEARCH_22
+  sha256: fc471421f8a5d0531c3512cda7243a7d5e4ccfd721e5e46509a0ff9e7caa5b89
+  public_bytes_copied: false
+  reason: stable primary locators distilled here; report tool tokens excluded
+mathematical_ancestry:
+- id: DR20-BASSE-BOJINOV
+  source: Basse and Bojinov, A General Theory of Identification
+  stable_id: arXiv:2002.06041
+  locator: section 2.2 Definition 4 and Proposition 1
+  relation: IDENTICAL_ON_FIBRE_IDENTIFIABILITY_CRITERION_ONLY
+  nonclaim: quotient decoder and off-image extension are not attributed to this source
+- id: DR20-COHEN-ROTHBLUM
+  source: Cohen and Rothblum, Nonnegative ranks decompositions and factorizations of nonnegative matrices
+  stable_id: doi:10.1016/0024-3795(93)90224-C
+  locator: Theorem 3.1 pages 155-156
+  relation: IDENTICAL_UP_TO_NORMALIZATION_AND_NOTATION
+  nonclaim: no generic rational or real nonnegative-rank algorithm follows
+- id: DR20-CHISTIKOV
+  source: Chistikov et al., Nonnegative Matrix Factorization Requires Irrationality
+  stable_id: arXiv:1605.06848
+  locator: section 3 Theorem 2
+  relation: SUPPORTS_FIELD_FIREWALL
+  nonclaim: rational finite checking is not generic real nonnegative-rank computation
+- id: DR20-COBUCHI
+  source: Canavoi et al., synthesis for qualitative objectives
+  stable_id: published paper section IV pages 370-371
+  locator: outer least fixed point and inner greatest fixed point; Theorem 3 concerns strategy definability
+  relation: IDENTICAL_UP_TO_RENAMING_AND_TYPED_PREDECESSOR
+  nonclaim: no randomized partial-observation or infinite-state extension follows
+- id: DR20-HAUSER-BUHLMANN
+  source: Hauser and Buhlmann, Characterization and Greedy Learning of Interventional Markov Equivalence Classes of Directed Acyclic Graphs
+  stable_id: JMLR 13 2409-2464
+  locator: Definition 6 page 2413; Definition 9 and Theorem 10 page 2414
+  relation: DOMAIN_SPECIFIC_CAUSAL_ANTECEDENT_AND_FORMAL_ANALOGUE
+  forbidden_relation: SPECIAL_CASE
+  reason: no formal reduction from interventional Markov equivalence to the repository COMMON-DESIGN premise is supplied
+- id: DR20-BLACKWELL
+  source: Blackwell, Equivalent Comparisons of Experiments
+  stable_id: doi:10.1214/aoms/1177729032
+  locator: EXACT_PRIMARY_THEOREM_LOCATOR_UNVERIFIED
+  relation: AR8R_FINITE_FORWARD_GARBLING_IS_A_SPECIAL_CASE_OF_BLACKWELL_COMPARISON
+- id: DR20-LE-CAM
+  source: Le Cam comparison of statistical experiments
+  locator: EXACT_PRIMARY_DEFINITION_AND_THEOREM_UNVERIFIED
+  relation: POSSIBLE_APPROXIMATE_COMPARISON_ANCESTRY
+- id: DR20-HOLONOMY-DESCENT-NERODE
+  relation: FORMAL_ANALOGUE_ONLY
+  status: EXPLICIT_REDUCTION_AND_DURABLE_THEOREM_LOCATORS_UNVERIFIED
+- id: DR20-DATA-INCEST-CASCADES
+  sources:
+  - Hamdi et al. data-incest removal, arXiv:1309.6687, Theorem 3.1 page 14, Topological Constraint 1 pages 15-16, Theorem 3.2 page 16
+  - Bikhchandani Hirshleifer Welch informational cascades, doi:10.1086/261849
+  relation: APPLICATION_ANALOGUE
+  nonclaim: neither source proves authenticated-root alias invariance or exact-copy likelihood conservation
+- id: DR20-TENSOR-NMF-UNIQUENESS
+  relation: CONTRARY_EVIDENCE_UNIQUENESS_REQUIRES_ADDITIONAL_HYPOTHESES
+  nonclaim: no object-independent generalization or special-case relation is licensed
+dr20_accounting_correction:
+  rendered_ledger_rows: 10
+  rendered_ancestry_families: 11
+  source_record_aggregate: UNVERIFIED_PENDING_MACHINE_READABLE_SOURCE_TABLE
+  positive_novelty_conclusions_licensed: 0
+theological_and_metaphysical_sources:
+- id: DR21-QIYAS-AL-AWLA
+  source: Ibn Taymiyyah, Dar ta'arud al-aql wa-l-naql
+  locator: volume 7 pages 362-363 in the checked digital rendering
+  status: PRIMARY_TEXT_EXACT_FOR_THE_BOUNDED_PASSAGE
+  supports: non-equalizing greater-reasoning with perfection defect and source-giver guards
+  nonclaim: the project's six-guard conjunction remains an orthemological synthesis
+- id: DR21-SPEECH-VOICE
+  source: Ibn Taymiyyah, Majmu al-Fatawa
+  exact_arabic: الكلام كلام الباري والصوت صوت القارئ
+  locator: volume 12, pages 98 and 409 in the checked Islamweb digital rendering
+  prior_locator_12_98: CONFIRMED_PARALLEL_LOCUS
+  status: PRIMARY_TEXT_EXACT_EDITION_DEPENDENT_PAGINATION
+  relation: SCHOOL_INTERNAL_SOURCE_RECORD
+  nonclaim: no neutral metaphysical or uncreated-grammar theorem follows from the citation alone
+- id: DR21-SPEECH-LAYERS
+  source: Ibn Taymiyyah, Majmu al-Fatawa
+  locator: volume 12 pages 138 and 585-587 in the checked Islamweb digital rendering
+  status: PRIMARY_TEXT_EXACT_EDITION_DEPENDENT_PAGINATION
+  supports: author-specific distinction among Speech reciter voice ink writing script points vocalization marks and irab
+  nonclaim: no uncreated human grammar translation identity paper-substrate theorem or neutral metaphysical bridge
+- id: DR21-FITRAH-PRIMARY
+  source: Ibn Taymiyyah, Dar ta'arud al-aql wa-l-naql
+  locator: volume 8 pages 457 460 and 461 in the checked Islamweb digital rendering
+  status: PRIMARY_TEXT_EXACT_FOR_HOSTED_ARABIC_AUTHOR_SPECIFIC_ONLY
+  supports: disposition toward truth possible blockers and the role of teaching prophetic reminder or another particular cause
+  nonclaim: no Plantingian proper-function equivalence neutral psychology or completed fiṭrah corpus audit
+- id: DR21-NECESSARY-BEING
+  status: COMPONENT_ANCESTRY_ONLY
+  nonclaim: the label necessary being does not establish numerical identity unity personality Wisdom Speech or revelation
+- id: DR21-PROPER-FUNCTION
+  status: THEORY_PLURAL_SOURCE_FIELD
+  nonclaim: no single proper-function theory is repository authority and no divine-design premise is established
+- id: DR21-ONTOLOGY-RIVALS
+  status: LIVE_RIVAL_TAXONOMY
+  live_rivals:
+  - nominalism
+  - conceptualism
+  - immanent realism
+  - trope or property-instance views
+  - property dualism as NEW_V11 proposal only
+empirical_and_protocol_intake:
+- id: DR22-TENSOR-ARM-ONTOLOGY
+  representation_candidates_in_current_charter: 6
+  candidate_labels: [A, B, C, D, E, F]
+  separately_named_controller_labels: [A, B, C, D, E, F, G]
+  legacy_gate_description: 120 observations and five arms
+  status: BLOCKED_SPECIFICATION_AMBIGUITY
+  required_before_ready:
+  - identify the exact five or revise the sample design for six representation arms
+  - keep controller labels separate from representation arms
+  - freeze estimands randomization exclusions multiplicity and kill criteria
+- id: DR22-OSM-TRAJECTORY
+  source: Sun et al., Learning produces an orthogonalized state machine in the hippocampus
+  stable_id: doi:10.1038/s41586-024-08548-w
+  paper_linking_code_commit: c1d1788b54c737efe24402e02762eee10da0d0d7
+  code_custody: IMMUTABLE_COMMIT_ONLY_NO_RELEASE_CONTAINER_OR_COMPLETE_DATA_MANIFEST
+  relation: BOUNDED_EMPIRICAL_ARCHITECTURE_DISCRIMINATION_EXAMPLE
+  supports: several tested models can reach selected endpoints while a stepwise trajectory distinguishes tested models
+  nonclaim: no unique CA1 mechanism human-noetic proper-function metaphysical or theological transfer
+- id: DR22-PRH-HIGHER-ORDER
+  status: PROTOCOL_RECOMMENDATION
+  requirement: pair second-order representation alignment with higher-order parity or interaction controls
+- id: DR22-PROVENANCE
+  status: PROTOCOL_RECOMMENDATION
+  requirement: count independent provenance roots rather than copies messages or synchronized replicas
+- id: DR22-CUSTODY
+  status: PREREQUISITE
+  requirements:
+  - prospective version and artifact custody
+  - missing-not-at-random analysis
+  - target and architecture leakage controls
+  - preregistered exclusions and stopping rules
+- id: DR22-CROSS-SHA-CUSTODY
+  status: FIVE_CITED_GIT_BLOBS_IDENTICAL_ACROSS_REPORTED_COMMITS_ONLY
+  compared_commits: [a8142c3, 9b80f2d]
+  blobs:
+    tensor: 5b573e630bc4f59c2372affd90d05f3424d88c06
+    prh: ee6ba96b77796cee872702c9fcf7033fff4eccd2
+    agentic_communication: 3da610c6cdd1e913e81b773954b36a4c20b46915
+    daee_temporal_provenance: c668a8c854de8957d5f160376e0f106553771d1d
+    representation_source_status: 8705a79eb85211cd18488d2dd11cb951be107653
+  nonclaim: no identity claim for every repository or implementation-sensitive file
+- id: DR22-FAIR-DIVISION-SOURCE-REPAIR
+  balanced_ef1_source: Kyropoulou Suksompong and Voudouris doi:10.1016/j.tcs.2020.07.008
+  order_statistic_source_candidate: Cookson Shah and Verma arXiv:2608.06325 Remark 1
+  status: SOURCES_SEPARATED_NO_AR8R_ADOPTION
+  local_pdf_current_arxiv_byte_identity: UNVERIFIED
+- id: DR22-B1-B4-COVERAGE-GAP
+  request: specialist-b/source-files/20_REQUEST_TO_DEEP_RESEARCH_22.md
+  status: NOT_ANSWERED_BY_CURRENT_REPORT
+  required_protocols:
+  - noetic restoration and proper function
+  - intentional uptake and personality
+  - source-recipient causal landing
+  - truth-connected norm and because-of uptake
+  nonclaim: ancillary OSM PRH provenance and tensor scouting does not satisfy these four protocols
+protocol_readiness:
+  OSM_trajectory: NEEDS_FROZEN_REPLICATION_PACKET
+  PRH_CKA: NEEDS_MODEL_LINEAGE_AND_IDENTIFICATION_PACKET
+  provenance_data_incest: PROTOCOL_SKETCH_ONLY
+  tensor_identifiability: PROTOCOL_SKETCH_ONLY
+  representation_gate: BLOCKED_SPECIFICATION_AMBIGUITY
+  residual_tournament: BLOCKED_NO_FROZEN_CORPUS
+  daee_restoration_route: BLOCKED_NO_RUNTIME_MAPPING
+  balanced_EF1_checker: SOURCE_REPAIR_REQUIRED
+  empirical_validation_claimed: false
+  ready_to_run_count: 0
+sample_size_disposition:
+  status: UNSUPPORTED_PLANNING_ASSUMPTIONS_NOT_POWER_ANALYSES
+  examples: [100-1000 seeds, 12 lineages, 10000 episodes, 30 roots]
+  missing: [variance inputs, frozen minimum effects or margins, dependence-aware simulations, declared primary units]
+authority_ceiling:
+  historical_identity: NONE
+  repository_scientific_adoption: NONE
+  owner_adoption: PENDING
+  external_review: OPEN
+  general_novelty: 0
+  empirical_program_run: false
+  source_world_bridge_established: false
+  integrated_champion: NONE
+  meniscus: MENISCUS_NOT_REACHED
+  natural_closure: NOT_REACHED

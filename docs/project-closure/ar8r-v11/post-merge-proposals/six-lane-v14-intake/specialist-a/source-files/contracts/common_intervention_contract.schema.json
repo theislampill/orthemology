@@ -1,0 +1,58 @@
+{
+  "$id": "urn:spa:common-intervention-contract:v1",
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "allOf": [
+    {
+      "if": {
+        "properties": {
+          "contract_kind": {
+            "const": "measurable"
+          }
+        }
+      },
+      "then": {
+        "required": [
+          "measurability_receipts"
+        ]
+      }
+    }
+  ],
+  "properties": {
+    "architecture_maps": {
+      "minItems": 3,
+      "type": "array"
+    },
+    "contract_kind": {
+      "enum": [
+        "finite",
+        "measurable"
+      ]
+    },
+    "decoder": {
+      "type": "object"
+    },
+    "measurability_receipts": {
+      "type": "object"
+    },
+    "policy": {
+      "type": "object"
+    },
+    "scope_ceiling": {
+      "minLength": 1,
+      "type": "string"
+    },
+    "target_blind": {
+      "const": true
+    }
+  },
+  "required": [
+    "contract_kind",
+    "target_blind",
+    "decoder",
+    "policy",
+    "architecture_maps",
+    "scope_ceiling"
+  ],
+  "title": "Specialist A common intervention contract",
+  "type": "object"
+}

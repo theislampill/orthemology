@@ -1,0 +1,55 @@
+schema: pmr007-central-frontier-after-deep-ct-v1
+repository_authority: 9b80f2dfdf73a768ccad6a6ea2f2998c70ebdcf3
+architectures:
+  U:
+    label: unified personal
+    current_status: TRACK_N_CONDITIONAL_AND_NEUTRALLY_UNIDENTIFIED
+  I:
+    label: one-bearer impersonal powers/intellect
+    current_status: STRONGEST_NEUTRAL_ONE_BEARER_RIVAL_SURVIVES
+  P:
+    label: coordinated plural realization
+    current_status: STRICT_COMMON_BEARER_FORM_EXCLUDED_ONLY_WHERE_ONE_WORLD_COINSTANTIATION_IS_INDEPENDENTLY_ESTABLISHED; COORDINATED_PLURAL_SURVIVES
+exact_partition_state:
+  neutral_profile: '{U,I,P}'
+  common_bearer: '{U,I}|{P}'
+  intentional_uptake_formal_coordinate: '{U}|{I,P}'
+  eligible_current_neutral_meet: '{U,I,P}'
+  formal_unrestricted_meet: '{U}|{I}|{P}'
+load_bearing_residual:
+  pair: U/I
+  required_coordinate: target-independent because-of uptake or first-person agentive ownership
+  required_guards:
+  - common type
+  - common semantics
+  - target blindness
+  - version identity
+  - authorization
+  - resource eligibility
+  - bearer locality
+  - episode locality
+  - independent capability certification
+  - complete experiment profile
+  - provenance-root accounting
+  - implementation map for both rivals
+  forbidden_substitutes:
+  - old-profile postprocessing
+  - target-defined availability
+  - architecture oracle
+  - source-relative predicate without cross-architecture implementation
+  - output success
+  - objective fit alone
+  - common bearer alone
+meniscus_test:
+  positive_integrated_reduction: false
+  necessity_and_sufficiency_across_formal_source_implementation_world: false
+  matched_countermodel_architecture: true
+  source_world_recipient_bridge: false
+  empirical_implementation: false
+  lean_kernel: false
+disposition:
+  integrated_champion: NONE
+  meniscus: MENISCUS_NOT_REACHED
+  natural_closure: NOT_REACHED
+  owner_decision_required: false
+  independent_ready_work_remaining: true

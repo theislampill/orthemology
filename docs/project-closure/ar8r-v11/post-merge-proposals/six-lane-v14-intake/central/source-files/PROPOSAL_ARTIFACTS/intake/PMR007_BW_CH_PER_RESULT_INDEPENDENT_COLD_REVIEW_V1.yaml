@@ -1,0 +1,65 @@
+schema: pmr007-bw-ch-per-result-independent-cold-review-v1
+review_relation: SAME_MODEL_LINEAGE_FRESH_REPOSITORY_BASED
+external_human_review: false
+rows:
+- round: BW
+  identity: PMR-007-TCIS-1
+  core_disposition: PASS_WITH_GUARDS
+  open_burden: APPLICATION_MAP_GAP
+  admission_use: 'NO'
+- round: BX
+  identity: PMR-007-MBAC-1
+  core_disposition: PASS
+  open_burden: ELIGIBLE_REGISTRY_RELATIVE
+  admission_use: CORE_ONLY
+- round: BY
+  identity: PMR-007-SWAC-1
+  core_disposition: PASS_CONDITIONAL
+  open_burden: SOURCE_WORLD_OPEN
+  admission_use: SOURCE_RELATIVE_CORE_ONLY
+- round: BZ
+  identity: PMR-007-BAXE-1
+  core_disposition: PASS_RAW_CUBE
+  open_burden: COHERENCE_PARTIAL
+  admission_use: REGISTRY_RELATIVE_ONLY
+- round: CA
+  identity: PMR-007-RCIG-1
+  core_disposition: PASS
+  open_burden: RESOURCE_SEMANTICS_GAP
+  admission_use: CORE_ONLY
+- round: CB
+  identity: PMR-007-CRFW-1
+  core_disposition: PASS
+  open_burden: AUTHORITY_SEPARATE
+  admission_use: CORE_ONLY
+- round: CC
+  identity: PMR-007-CSQF-1
+  core_disposition: PASS
+  open_burden: SEMANTIC_GROUNDING_OPEN
+  admission_use: CORE_ONLY
+- round: CD
+  identity: PMR-007-NOPF-1
+  core_disposition: PASS
+  open_burden: FITTINGNESS_AUTHORITY_OPEN
+  admission_use: CORE_ONLY
+- round: CE
+  identity: PMR-007-CDPS-1
+  core_disposition: PASS_STRICT_CLASS
+  open_burden: ACTUAL_EXPERIMENT_OPEN
+  admission_use: CORE_ONLY
+- round: CF
+  identity: PMR-007-ABIC-1
+  core_disposition: PASS
+  open_burden: INTENSIONAL_BEARER_OPEN
+  admission_use: CORE_ONLY
+- round: CG
+  identity: PMR-007-SICM-1
+  core_disposition: NOT_INDEPENDENTLY_RECONSTRUCTED
+  open_burden: ORIGINAL_MODEL_UNAVAILABLE
+  admission_use: 'NO'
+- round: CH
+  identity: PMR-007-OIOT-1
+  core_disposition: PASS_SPECIFICATION
+  open_burden: COMMON_INTERVENTION_UNSUPPLIED
+  admission_use: SPECIFICATION_ONLY
+review_markdown_sha256: 95fface693acdf5c51689893339160ebd47493459744a5e83578d455a3dc5ca2

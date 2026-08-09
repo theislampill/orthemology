@@ -1,0 +1,393 @@
+{
+  "common_bearer_resolves": [
+    [
+      "U_unified_personal",
+      "P_plural_coordinated"
+    ],
+    [
+      "I_impersonal_powers",
+      "P_plural_coordinated"
+    ]
+  ],
+  "conflicts": [
+    [
+      "U_unified_personal",
+      "I_impersonal_powers"
+    ],
+    [
+      "U_unified_personal",
+      "P_plural_coordinated"
+    ],
+    [
+      "I_impersonal_powers",
+      "P_plural_coordinated"
+    ]
+  ],
+  "forbidden_oracle_identifies": true,
+  "pass": true,
+  "results": {
+    "certified_neutral": {
+      "best": null,
+      "registry": [
+        "complete_neutral_experiment"
+      ],
+      "rows": [
+        {
+          "anchors": [],
+          "cost": 0,
+          "covered_conflicts": [],
+          "identifies": false
+        },
+        {
+          "anchors": [
+            "complete_neutral_experiment"
+          ],
+          "cost": 0,
+          "covered_conflicts": [],
+          "identifies": false
+        }
+      ]
+    },
+    "hypothetical_independent_bridges": {
+      "best": {
+        "anchors": [
+          "common_bearer",
+          "intentional_uptake"
+        ],
+        "cost": 2,
+        "covered_conflicts": [
+          [
+            "I_impersonal_powers",
+            "P_plural_coordinated"
+          ],
+          [
+            "U_unified_personal",
+            "I_impersonal_powers"
+          ],
+          [
+            "U_unified_personal",
+            "P_plural_coordinated"
+          ]
+        ],
+        "identifies": true
+      },
+      "registry": [
+        "complete_neutral_experiment",
+        "common_bearer",
+        "intentional_uptake"
+      ],
+      "rows": [
+        {
+          "anchors": [],
+          "cost": 0,
+          "covered_conflicts": [],
+          "identifies": false
+        },
+        {
+          "anchors": [
+            "complete_neutral_experiment"
+          ],
+          "cost": 0,
+          "covered_conflicts": [],
+          "identifies": false
+        },
+        {
+          "anchors": [
+            "common_bearer"
+          ],
+          "cost": 1,
+          "covered_conflicts": [
+            [
+              "I_impersonal_powers",
+              "P_plural_coordinated"
+            ],
+            [
+              "U_unified_personal",
+              "P_plural_coordinated"
+            ]
+          ],
+          "identifies": false
+        },
+        {
+          "anchors": [
+            "intentional_uptake"
+          ],
+          "cost": 1,
+          "covered_conflicts": [
+            [
+              "U_unified_personal",
+              "I_impersonal_powers"
+            ],
+            [
+              "U_unified_personal",
+              "P_plural_coordinated"
+            ]
+          ],
+          "identifies": false
+        },
+        {
+          "anchors": [
+            "complete_neutral_experiment",
+            "common_bearer"
+          ],
+          "cost": 1,
+          "covered_conflicts": [
+            [
+              "I_impersonal_powers",
+              "P_plural_coordinated"
+            ],
+            [
+              "U_unified_personal",
+              "P_plural_coordinated"
+            ]
+          ],
+          "identifies": false
+        },
+        {
+          "anchors": [
+            "complete_neutral_experiment",
+            "intentional_uptake"
+          ],
+          "cost": 1,
+          "covered_conflicts": [
+            [
+              "U_unified_personal",
+              "I_impersonal_powers"
+            ],
+            [
+              "U_unified_personal",
+              "P_plural_coordinated"
+            ]
+          ],
+          "identifies": false
+        },
+        {
+          "anchors": [
+            "common_bearer",
+            "intentional_uptake"
+          ],
+          "cost": 2,
+          "covered_conflicts": [
+            [
+              "I_impersonal_powers",
+              "P_plural_coordinated"
+            ],
+            [
+              "U_unified_personal",
+              "I_impersonal_powers"
+            ],
+            [
+              "U_unified_personal",
+              "P_plural_coordinated"
+            ]
+          ],
+          "identifies": true
+        },
+        {
+          "anchors": [
+            "complete_neutral_experiment",
+            "common_bearer",
+            "intentional_uptake"
+          ],
+          "cost": 2,
+          "covered_conflicts": [
+            [
+              "I_impersonal_powers",
+              "P_plural_coordinated"
+            ],
+            [
+              "U_unified_personal",
+              "I_impersonal_powers"
+            ],
+            [
+              "U_unified_personal",
+              "P_plural_coordinated"
+            ]
+          ],
+          "identifies": true
+        }
+      ]
+    },
+    "track_n_conditional": {
+      "best": {
+        "anchors": [
+          "common_bearer",
+          "track_n_intensional_predication"
+        ],
+        "cost": 2,
+        "covered_conflicts": [
+          [
+            "I_impersonal_powers",
+            "P_plural_coordinated"
+          ],
+          [
+            "U_unified_personal",
+            "I_impersonal_powers"
+          ],
+          [
+            "U_unified_personal",
+            "P_plural_coordinated"
+          ]
+        ],
+        "identifies": true
+      },
+      "registry": [
+        "complete_neutral_experiment",
+        "common_bearer",
+        "track_n_intensional_predication"
+      ],
+      "rows": [
+        {
+          "anchors": [],
+          "cost": 0,
+          "covered_conflicts": [],
+          "identifies": false
+        },
+        {
+          "anchors": [
+            "complete_neutral_experiment"
+          ],
+          "cost": 0,
+          "covered_conflicts": [],
+          "identifies": false
+        },
+        {
+          "anchors": [
+            "common_bearer"
+          ],
+          "cost": 1,
+          "covered_conflicts": [
+            [
+              "I_impersonal_powers",
+              "P_plural_coordinated"
+            ],
+            [
+              "U_unified_personal",
+              "P_plural_coordinated"
+            ]
+          ],
+          "identifies": false
+        },
+        {
+          "anchors": [
+            "track_n_intensional_predication"
+          ],
+          "cost": 1,
+          "covered_conflicts": [
+            [
+              "U_unified_personal",
+              "I_impersonal_powers"
+            ],
+            [
+              "U_unified_personal",
+              "P_plural_coordinated"
+            ]
+          ],
+          "identifies": false
+        },
+        {
+          "anchors": [
+            "complete_neutral_experiment",
+            "common_bearer"
+          ],
+          "cost": 1,
+          "covered_conflicts": [
+            [
+              "I_impersonal_powers",
+              "P_plural_coordinated"
+            ],
+            [
+              "U_unified_personal",
+              "P_plural_coordinated"
+            ]
+          ],
+          "identifies": false
+        },
+        {
+          "anchors": [
+            "complete_neutral_experiment",
+            "track_n_intensional_predication"
+          ],
+          "cost": 1,
+          "covered_conflicts": [
+            [
+              "U_unified_personal",
+              "I_impersonal_powers"
+            ],
+            [
+              "U_unified_personal",
+              "P_plural_coordinated"
+            ]
+          ],
+          "identifies": false
+        },
+        {
+          "anchors": [
+            "common_bearer",
+            "track_n_intensional_predication"
+          ],
+          "cost": 2,
+          "covered_conflicts": [
+            [
+              "I_impersonal_powers",
+              "P_plural_coordinated"
+            ],
+            [
+              "U_unified_personal",
+              "I_impersonal_powers"
+            ],
+            [
+              "U_unified_personal",
+              "P_plural_coordinated"
+            ]
+          ],
+          "identifies": true
+        },
+        {
+          "anchors": [
+            "complete_neutral_experiment",
+            "common_bearer",
+            "track_n_intensional_predication"
+          ],
+          "cost": 2,
+          "covered_conflicts": [
+            [
+              "I_impersonal_powers",
+              "P_plural_coordinated"
+            ],
+            [
+              "U_unified_personal",
+              "I_impersonal_powers"
+            ],
+            [
+              "U_unified_personal",
+              "P_plural_coordinated"
+            ]
+          ],
+          "identifies": true
+        }
+      ]
+    }
+  },
+  "schema": "pmr007-deep-cl-anchor-cover-primary-results-v1",
+  "track_n_resolves": [
+    [
+      "U_unified_personal",
+      "I_impersonal_powers"
+    ],
+    [
+      "U_unified_personal",
+      "P_plural_coordinated"
+    ]
+  ],
+  "uptake_resolves": [
+    [
+      "U_unified_personal",
+      "I_impersonal_powers"
+    ],
+    [
+      "U_unified_personal",
+      "P_plural_coordinated"
+    ]
+  ]
+}

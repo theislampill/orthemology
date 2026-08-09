@@ -1,0 +1,86 @@
+schema: spa-two-round-crosswalk-receipt-v1
+receipt: R7_R8
+authority: PRIVATE_SPECIALIST_RESEARCH_NO_REPOSITORY_ADOPTION
+repository_sha: 9b80f2dfdf73a768ccad6a6ea2f2998c70ebdcf3
+results:
+- id: SPA-R7
+  note_path: rounds/SPA-R7_REPRESENTATION_DEFECT.md
+  note_sha256: 08603e0bb4e39877aa1fa0a043a9a6ac945abc60a148bf0ecc47b39a5c2a80eb
+  result_path: results/r7_representation_defect_results.json
+  result_sha256: 597204202a62fa4581d4f0982824cdfe3d446c8c448f35f35ad8cbec0c7a38df
+  checker_status: PASS
+  mutants_killed: 7
+  mutants_total: 7
+  claim_ceiling: finite exact-target representation sufficiency; no learned-mechanism,
+    tensor-rank, or factor uniqueness result
+  ancestry_disposition: the decoder criterion is the existing T294/Deep BV fibre-factorization
+    family up to representation vocabulary; no new theorem identity or novelty
+- id: SPA-R8
+  note_path: rounds/SPA-R8_COLLISION_GAIN.md
+  note_sha256: 187fab224ff516b4e693e62c405bef14d59a5c92cf8529b27ca3f3bfaaafbb61
+  result_path: results/r8_collision_gain_results.json
+  result_sha256: 31cf1e64573d1ba2c13188ba513c44544da667cee1cf3e9266c474cfb1990b68
+  checker_status: PASS
+  mutants_killed: 7
+  mutants_total: 7
+  claim_ceiling: bounded exact finite target partition; no empirical, causal, source-world,
+    or metaphysical truth inference
+  ancestry_disposition: elementary partition refinement/coverage-function machinery;
+    no novelty; relation to anchor set cover remains application-level unless proposition
+    identity is proved
+formal_status: both executable finite checkers PASS; R7 theorem classified as existing
+  T294/Deep BV family
+assumptions:
+- finite exact target
+- frozen representation maps
+- finite declared rival manifest
+- target used only for evaluation
+- candidate factors independently eligible and target-blind
+conclusion_ceiling: finite target sufficiency and rival-partition power only; no tensor
+  uniqueness, learned mechanism, causal identification, or metaphysical truth
+ancestry_novelty_disposition: R7 identical-family specialization of T294/Deep BV;
+  R8 elementary partition/coverage function; novelty 0
+countermodels:
+- higher-cardinality representation less sufficient than lower-cardinality one
+- same histogram different partition
+- target-leak maximal gain but ineligible
+- high-cardinality profile-derived zero-gain factor
+- two weak factors jointly complete
+combined_mutation_status:
+  killed: 14
+  total: 14
+lean_checker_status: no duplicate fibre theorem allocated; existing repaired Deep
+  BV Lean remains the reference, project adoption none
+dependencies_closed:
+- learned tag as information order
+- raw dimension/cardinality as sufficiency
+- factor selection by plausibility/cardinality
+- profile-derived restriction as fibre refinement
+dependencies_opened: &id001
+- actual tensor-factorization uniqueness assumptions
+- empirical candidate-factor construction
+- neutrality/operationalization certificates
+- manifest expansion and held-out rival testing
+input_requested_from_specialist_b: Provide candidate formal bridge predicates only
+  after separating their source warrant from target labels; candidates will be scored
+  by residual-collision gain and leakage guards.
+input_requested_from_deep_research: 'DR20: theorem-level locators for quotient sufficiency,
+  observation quotients, and coverage/submodularity. DR22: learned/hand-authored representation
+  and held-out rival protocols.'
+central_flywheel_effects:
+- tensor_search rerouted from raw dimensionality to fibre partitions
+- representation_prh gains exact defect and joint-correction metric
+- common_intervention selection gains marginal collision-reduction rule
+- theorem-family registry receives anti-false-multiplicity receipt, not new IDs
+remaining_burdens: *id001
+exact_next_atomic_action: seek an independently operationalizable factor with positive
+  marginal collision gain after quotienting profile-derived and target-leaking candidates
+firewalls:
+  owner_adoption: NOT_CLAIMED
+  repository_scientific_adoption: NONE
+  historical_identity: NONE
+  novelty: 0
+  source_world_transfer: NOT_ESTABLISHED
+  metaphysical_conclusion: NONE
+  meniscus: NOT_REACHED
+  closure: NOT_REACHED

@@ -1,0 +1,21 @@
+{
+  "architecture_targets_in_fibre": 3,
+  "architectures_in_fibre": 3,
+  "common_bearer_deletion_reintroduces_P": true,
+  "common_bearer_values_in_fibre": 2,
+  "downstream_host_locus_control": true,
+  "false_licenses": 0,
+  "guard_count": 19,
+  "licensed_rows": 1,
+  "neutral_profile_fibres": 1,
+  "pass": true,
+  "predicate_weakening_reintroduces_I": true,
+  "referent_ambiguity_preserves_U_I": true,
+  "schema": "pmr007-deep-ck-source-world-primary-check-v2",
+  "signal_only_preserves_I": true,
+  "single_guard_deletion_false_licenses": 0,
+  "single_guard_deletions": 19,
+  "truth_rows": 524288,
+  "uptake_values_in_fibre": 2,
+  "wisdom_values_in_fibre": 2
+}

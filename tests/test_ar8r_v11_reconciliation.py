@@ -1002,6 +1002,8 @@ class TestAr8rV11Reconciliation(unittest.TestCase):
         if locator is not None:
             self.assertIsNone(locator.search(r"f_j:\{0,1\}^{V}\to\mathbb R"))
             self.assertIsNone(locator.search(r"E:\operatorname{Int}(S,C)\to Z"))
+            self.assertIsNone(locator.search(r"M:\quad E(m')=E(m)"))
+            self.assertIsNone(locator.search(r"Q:\qquad R(Q)"))
             self.assertIsNone(
                 locator.search(
                     r"\mathcal R_{r_0}=\{P:\operatorname{LRC}_{\mathbb R}(P)\le r_0\}"

@@ -1,0 +1,57 @@
+schema: pmr007-evidence-use-register-ck-co-v1
+inputs:
+- artifact: README(20260809-112436).md
+  sha256: de4c6466335f2623f761da162b62030a0d2d247887d697bfa8157240bf86e8b0
+  authority: OWNER_SIX_LANE_COORDINATION_PACKET
+  opened: true
+  supplies: lane roles and coordination rule
+  does_not_supply: scientific theorem or adoption
+- artifact: orthemology-main(11)(2).zip
+  sha256: 78d049d4711d2b0cffe7cb8071d01d22b99a00126196caa5e2c4be4826eb100c
+  authority: OWNER_SUPPLIED_CURRENT_MAIN_SNAPSHOT
+  opened: true
+  supplies: merged proposal, challenge intake, validators, ledgers
+  does_not_supply: live Git authority without web verification
+- artifact: Deep BW-CJ independent intake review
+  sha256: 8c6edb07e14a8647df8edf8a22d69ad6ade633b855f670aa95df4047d78d1011
+  authority: MERGED_REPOSITORY_INDEPENDENT_INTAKE_REVIEW
+  opened: true
+  supplies: V1/V2/V3 correction and reissue ceilings
+  does_not_supply: external scientific validation
+- artifact: Challenger A independent review
+  sha256: 8609b95b82dce74312d76600ea07e8fdac955e01e183aa1724f82053342da52d
+  authority: BOUNDED_EXTERNAL_CHALLENGE_PROPOSAL
+  opened: true
+  supplies: sound bounded common-intervention core and implementation gaps
+  does_not_supply: exhaustive architecture factorial
+- artifact: Challenger B independent review
+  sha256: b3830772dc121d8b9e3d283e709a9a2520120fd555c47e61bcfc2fe661deaa20
+  authority: BOUNDED_EXTERNAL_CHALLENGE_PROPOSAL
+  opened: true
+  supplies: T294 ancestry and standalone Lean receipt ceilings
+  does_not_supply: project adoption or new theorem identity
+- artifact: A-Commentary-on-the-Creed-of-Asfahani-v2.3.md
+  sha256: 932abd7e2d7b3702d5d6d77d2a4a95ecfb3a9ccbcfbbce7ae750b2bcf55bef7c
+  authority: TRANSLATED_PRIMARY_ACCESS
+  opened: true
+  supplies: source predication, Names/attributes, praiseworthy speech/volition, locus
+    principle
+  does_not_supply: Arabic-primary verification or actual-world bridge
+- artifact: El-Tobgui dissertation snapshot
+  sha256: 657454ff7a1c43b895e7a378d12993295368a97c3f35df5a76edfaa32f67a177
+  authority: SECONDARY_SCHOLARLY_RECONSTRUCTION
+  opened: true
+  supplies: language/ontology/epistemology and fitrah context
+  does_not_supply: neutral formal proof
+- artifact: The Incoherence of Atheism
+  sha256: 4aea9b66f178e3454015cd0082c3adb0dda5ae80593f7e37d26b73a96028a2d1
+  authority: CONTEMPORARY_ATHARI_SYNTHESIS
+  opened: true
+  supplies: fitrah and teleological source-relative context
+  does_not_supply: neutral world proof
+- artifact: Ibn Taymiyyah Epistemology collection
+  sha256: d9b2fe81165c363cf7ca4ba1ed50074b3542b38793c442b7cddf219e229a7dde
+  authority: SECONDARY_AND_COMPARATIVE_COLLECTION
+  opened: true
+  supplies: proper-function and tawatur comparison context
+  does_not_supply: single primary-source authority

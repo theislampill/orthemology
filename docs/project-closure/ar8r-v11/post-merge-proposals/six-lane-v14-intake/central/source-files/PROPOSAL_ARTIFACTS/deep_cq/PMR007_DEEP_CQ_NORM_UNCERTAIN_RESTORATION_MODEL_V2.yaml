@@ -1,0 +1,82 @@
+schema: pmr007-deep-cq-norm-uncertain-restoration-model-v2
+identity: PMR-007-NURV-1
+status: REPAIRED_POST_MERGE_RESEARCH_CANDIDATE
+semantics:
+  state_space: finite
+  candidate_standards: finite_nonempty
+  controller_observation: full_current_state
+  uncertainty: adversarial_standard_switching_each_step
+  temporal_fixed_hidden_standard: DIFFERENT_PARTIAL_INFORMATION_GAME_NOT_CHARACTERIZED_HERE
+  dynamics: deterministic_per_standard_state_action
+  actions: finite
+  policy: common_state_feedback
+  target_truth: supplied_not_established
+  source_anchor: conditional_standard_family_restriction_only
+operators:
+  common_eligible_actions: intersection_over_candidate_standards
+  robust_target: intersection_over_candidate_targets
+  robust_predecessor: exists_common_action_forall_standards_successor_in_set
+  robust_viability: greatest_fixed_point_of_robust_target_intersect_predecessor
+  robust_reach_and_stay: least_fixed_point_of_viability_union_predecessor
+positive_witness:
+  states: [bad, bridge, restored]
+  actions: [repair, hold]
+  standards:
+    h_truth_linked:
+      target: [restored]
+      eligible: {bad: [repair], bridge: [repair], restored: [hold]}
+      transition:
+        bad: {repair: bridge}
+        bridge: {repair: restored}
+        restored: {hold: restored}
+    h_source_relative:
+      target: [restored]
+      eligible: {bad: [repair], bridge: [repair], restored: [hold]}
+      transition:
+        bad: {repair: bridge}
+        bridge: {repair: restored}
+        restored: {hold: restored}
+  expected_viability: [restored]
+  expected_reach_and_stay: [bad, bridge, restored]
+exact_countermodels:
+  common_target_action_conflict:
+    states: [outside, target]
+    actions: [a, b]
+    target_both: [target]
+    h0_eligible: {outside: [a], target: [a]}
+    h1_eligible: {outside: [b], target: [b]}
+    effect: each_standard_individually_stable_but_no_common_action
+  fixed_hidden_vs_switching:
+    states: [target, mid, start]
+    actions: [go]
+    target_both: [target]
+    h0_transition: {target: target, mid: target, start: mid}
+    h1_transition: {target: target, mid: start, start: target}
+    fixed_h0_from_start: reaches_target_in_two_steps
+    fixed_h1_from_start: reaches_target_in_one_step
+    switching_adversary: start_h0_to_mid_then_h1_to_start_cycles
+  unsupported_source_anchor:
+    effect: deleting a standard enlarges the formal kernel but is epistemically licensed only by an independent authority chain
+proper_function_instances:
+  - causal_role
+  - selected_effect
+  - design
+  - learned_objective
+  - teleological_norm
+  - plantinga_epistemic_proper_function
+  - fitrah_oriented
+implementation_crosswalk:
+  repository_owner: applications/daee-epistemics/DAEE-ORTHEMOLOGY-CROSSWALK.yaml
+  correspondence: target_candidate_plus_common_eligibility_plus_route_selection_plus_runtime_closure
+  implementation_status: NOT_ESTABLISHED
+nonclaims:
+  - candidate standard targets are not proven objectively correct
+  - robust-all-standards is not the unique definition of restoration
+  - no empirical or human restoration claim
+  - no partial-observation theorem
+  - no fixed-hidden-standard characterization
+  - no stochastic or infinite-state theorem
+  - no source authority or world applicability established
+  - no daee runtime enforcement established
+  - no scalar route-gradient identified
+  - no historical identity or general novelty credit

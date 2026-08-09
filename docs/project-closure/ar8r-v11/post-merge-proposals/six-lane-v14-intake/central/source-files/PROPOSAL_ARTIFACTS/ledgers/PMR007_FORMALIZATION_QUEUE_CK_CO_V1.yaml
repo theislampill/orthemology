@@ -1,0 +1,42 @@
+schema: pmr007-formalization-queue-ck-co-v1
+lean_source_created: false
+lean_parse: NOT_RUN
+lean_elaboration: NOT_RUN
+lean_kernel: NOT_RUN
+candidates:
+- identity: PMR-007-SFWA-1
+  priority: MEDIUM
+  declarations:
+  - finite_common_kernel_profile_equality
+  - nineteen_guard_role_package_minimality
+  blockers:
+  - source/world predicates must remain parameters
+  - avoid theoremizing source truth
+- identity: PMR-007-MABF-1
+  priority: LOW
+  declarations:
+  - finite_conflict_cover_iff_factors
+  - specific_UIP_partition_meet
+  blockers:
+  - standard result; formalize only if reused
+- identity: PMR-007-OFFI-1
+  priority: MEDIUM
+  declarations:
+  - reduct_expansion_personal_impersonal_nonentailment
+  blockers:
+  - philosophical proper-function taxonomy remains prose/source-level
+- identity: PMR-007-AIAC-1
+  priority: HIGH
+  declarations:
+  - context_kappa_finite_iff_identifiable
+  - eligibility_monotonicity
+  - transport_guard_structure
+  blockers:
+  - eligibility authority must remain an assumption
+- identity: PMR-007-PMCI-1
+  priority: HIGH
+  declarations:
+  - equal_law_common_pushforward
+  - equal_law_common_markov_kernel
+  blockers:
+  - avoid conflating frozen experiment with all possible evidence

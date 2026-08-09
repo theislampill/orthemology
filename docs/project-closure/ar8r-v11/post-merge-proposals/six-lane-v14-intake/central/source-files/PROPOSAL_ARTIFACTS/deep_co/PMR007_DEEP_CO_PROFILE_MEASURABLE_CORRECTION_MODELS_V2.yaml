@@ -1,0 +1,45 @@
+schema: pmr007-deep-co-profile-measurable-correction-models-v2
+identity: PMR-007-PMCI-1
+status: REPAIRED_POST_MERGE_RESEARCH_CANDIDATE
+frozen_experiment:
+  model_pair: [U_unified_personal, I_impersonal_powers]
+  profile_space: OMEGA_NEUTRAL
+  law_U: E0
+  law_I: E0
+  completeness: relative_to_declared_neutral_interface_only
+  target_difference: {U_unified_personal: PERSONAL, I_impersonal_powers: IMPERSONAL}
+eligible_postprocessing_family:
+  deterministic:
+    definition: one_common_target_independent_function_f_from_OMEGA_to_Z
+    examples: [scalar_summary, vector_summary, quotient, normalization, correction_parameter, deterministic_representation]
+  stochastic:
+    definition: one_common_target_independent_Markov_kernel_K_from_OMEGA_to_Z
+    examples: [randomized_summary, common_channel, randomized_representation]
+  guards:
+    - common_input_profile_space
+    - same_function_or_kernel
+    - target_independent
+    - no_architecture_specific_side_channel
+    - comparable_output_semantics
+    - fixed_declared_experiment
+not_covered:
+  - genuinely_enlarged_intervention_family
+  - additional_sensor_or_internal_measurement
+  - architecture_specific_kernel
+  - independently_warranted_source_world_anchor
+  - independently_defended_nonprofile_model_class_restriction
+  - new_data_or_prior_not_measurable_from_E0
+  - infinite_horizon_or_unbounded_experiment
+controls:
+  target_oracle: separates_but_ineligible
+  architecture_specific_channel: separates_but_not_common
+  common_bearer: does_not_split_UI
+  track_n_anchor: conditional_external_anchor_not_E0_postprocessing
+  new_internal_intervention: changed_experiment
+  profile_determined_restriction: cannot_split_E0_fibre
+nonclaims:
+  - no metaphysical equivalence
+  - no equal prior or explanatory merit
+  - no claim that future evidence remains inside E0
+  - no prohibition on independently justified experiment enlargement
+  - no historical identity or novelty credit

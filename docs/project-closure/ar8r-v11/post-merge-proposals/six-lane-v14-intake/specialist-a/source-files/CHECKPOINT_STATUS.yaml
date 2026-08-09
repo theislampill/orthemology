@@ -1,0 +1,190 @@
+schema: spa-private-checkpoint-status-v1
+date: '2026-08-09'
+lane: AR8R specialist Pro A formal/computational flywheel
+authority:
+  repository: theislampill/orthemology
+  origin_main: 9b80f2dfdf73a768ccad6a6ea2f2998c70ebdcf3
+  integration_pr: 25
+  live_remote_verification: MATCH
+  attached_zip_archive_comment: 9b80f2dfdf73a768ccad6a6ea2f2998c70ebdcf3
+  github_mutation: NONE
+checkpoint_status: PRIVATE_RESEARCH_CHECKPOINT_AT_HARD_EXTERNAL_INPUT_BOUNDARY
+rounds:
+  count: 12
+  all_executable_checkers_pass: true
+  mutants_killed: 79
+  mutants_total: 79
+  aggregate_checker:
+    path: results/all_checks_results.json
+    sha256: 61a6aa485eb7619008bc9d4eab979fdbc07c7f628e1ac08794386d25540100ac
+    status: PASS
+  fresh_rereview:
+    path: audit/FRESH_REREVIEW.json
+    sha256: 11ddb76741cc395c3142a33be976cb48c527d7cff7fe9ae92e64e752747b62df
+    status: PASS
+    generation_checker_imports: false
+source_intake:
+  exact_files_manifested: 60
+  exact_bytes_manifested: 498414
+  missing: []
+  scope_note: This is the exact specialist input manifest, not a claim that every
+    repository byte was semantically reread.
+  repository_targeted_pytest: 11_PASS
+  bw_cj_validator: PASS_WITH_SEMANTIC_REISSUE_CEILING
+  external_challenge_validator: PASS_NONAUTHORITATIVE_CHALLENGE_CUSTODY
+formalisation:
+  lean_drafts: 2
+  parse: NOT_RUN
+  elaboration: NOT_RUN
+  kernel: NOT_RUN
+  project_build: NOT_RUN
+  axiom_report: NOT_RUN
+  machine_claim: NONE
+  reason: Lean/lake/elan unavailable; exact release download blocked by runtime DNS
+proposal_adoption: NONE
+owner_adoption: NOT_CLAIMED
+historical_identity: NONE
+novelty: 0
+source_world_transfer: NOT_ESTABLISHED
+metaphysical_conclusion: NONE
+meniscus: NOT_ADJUDICATED_BY_THIS_LANE
+closure: NOT_CLAIMED
+results:
+- specialist_local_result: SPA-R1
+  status: PASS
+  path: results/r1_common_factor_registry_results.json
+  sha256: 454b03d9fd88e65720ea1ee8eba52678ee12d52feb5e82d1ab3f12a17a5f4095
+  mutants_killed: 7
+  mutants_total: 7
+  claim_ceiling: typed finite registry and exhaustive declared-signature fixture;
+    no real architecture implementation; measurable contract unverified
+  ancestry_disposition: registry and coverage synthesis only; no theorem origin or
+    novelty; Deep BV finite factorization remains T294 up to renaming
+- specialist_local_result: SPA-R2
+  status: PASS
+  path: results/r2_deletion_criterion_results.json
+  sha256: 1a194c0ac6ec65d81d55c66df986c3c7dcf7610a15248442697490536f177259
+  mutants_killed: 5
+  mutants_total: 5
+  claim_ceiling: finite exhaustive verification for binary X sizes 1-3 plus general
+    paper proof; not whole architecture identification
+  ancestry_disposition: elementary restriction-injectivity/fibre criterion; no novelty;
+    Deep BV finite factorization remains T294 up to renaming
+- specialist_local_result: SPA-R3
+  status: PASS
+  path: results/r3_resource_quotient_results.json
+  sha256: 36474872dc2ab71b02f7c505c07b6c14ce7efa501e2a00d513acbf3264eb84d5
+  mutants_killed: 6
+  mutants_total: 6
+  claim_ceiling: finite registered realizers; no lower bound over unregistered or
+    unrestricted implementation classes
+  ancestry_disposition: quotient normalization and Pareto feasibility are standard
+    constructions; no novelty credit
+- specialist_local_result: SPA-R4
+  status: PASS
+  path: results/r4_observation_cobuchi_results.json
+  sha256: 997c598389652e70f39d02ac6cea4e93eead814b987048845f8cdce1bb96ba3d
+  mutants_killed: 6
+  mutants_total: 6
+  claim_ceiling: bounded exhaustive evidence for n=2,3 deterministic games plus explicit
+    n=4 countermodel; no adversarial, randomized, or infinite-state extension
+  ancestry_disposition: specialization of the existing finite co-Buchi/game family;
+    no new general fixed-point mechanism or novelty
+- specialist_local_result: SPA-R5
+  status: PASS
+  path: results/r5_common_knowledge_radius_results.json
+  sha256: 52f748060e2b7e57f05ff5eafbefbb1f7a7eeeaf8e4e61a28b8549470af781b3
+  mutants_killed: 6
+  mutants_total: 6
+  claim_ceiling: bounded exhaustive evidence for up to four worlds and a direct finite
+    proof; no asynchronous distributed-protocol theorem
+  ancestry_disposition: standard finite common-knowledge reachability/fixed-point
+    semantics; no novelty; durable ancestry locator deferred to Deep Research 20
+- specialist_local_result: SPA-R6
+  status: PASS
+  path: results/r6_provenance_root_results.json
+  sha256: 061c4dece07c0e0996bdac329a0002f482e1e67be327a17b2f24da1a1690461f
+  mutants_killed: 7
+  mutants_total: 7
+  claim_ceiling: bounded exhaustive operation sequences through five nodes plus explicit
+    long copy chain; no stochastic independence theorem
+  ancestry_disposition: formalizes existing provenance-root/copy nonmultiplicity discipline;
+    no historical TAC/SAC reconstruction or novelty
+- specialist_local_result: SPA-R7
+  status: PASS
+  path: results/r7_representation_defect_results.json
+  sha256: 597204202a62fa4581d4f0982824cdfe3d446c8c448f35f35ad8cbec0c7a38df
+  mutants_killed: 7
+  mutants_total: 7
+  claim_ceiling: finite exact-target representation sufficiency; no learned-mechanism,
+    tensor-rank, or factor uniqueness result
+  ancestry_disposition: the decoder criterion is the existing T294/Deep BV fibre-factorization
+    family up to representation vocabulary; no new theorem identity or novelty
+- specialist_local_result: SPA-R8
+  status: PASS
+  path: results/r8_collision_gain_results.json
+  sha256: 31cf1e64573d1ba2c13188ba513c44544da667cee1cf3e9266c474cfb1990b68
+  mutants_killed: 7
+  mutants_total: 7
+  claim_ceiling: bounded exact finite target partition; no empirical, causal, source-world,
+    or metaphysical truth inference
+  ancestry_disposition: elementary partition refinement/coverage-function machinery;
+    no novelty; relation to anchor set cover remains application-level unless proposition
+    identity is proved
+- specialist_local_result: SPA-R9
+  status: PASS
+  path: results/r9_common_decoder_results.json
+  sha256: 54436e892ec6c57949c7cc76f9f1cb86d290b5a3f2b930f0f232b3a726a4d78c
+  mutants_killed: 7
+  mutants_total: 7
+  claim_ceiling: finite common decoder for the frozen target; no actual architecture
+    implementation, source-world transfer, or metaphysical identification
+  ancestry_disposition: exact specialization of the existing finite fibre-factorization
+    criterion on a tagged disjoint union; no new theorem identity or novelty
+- specialist_local_result: SPA-R10
+  status: PASS
+  path: results/r10_minimum_collision_cover_results.json
+  sha256: 8ddd2ddac97e8ffe62178728de989d9f2d7c8a099f6b90530e45256009f044f0
+  mutants_killed: 7
+  mutants_total: 7
+  claim_ceiling: minimum eligible factor cover or bounded no-cover on the frozen manifest
+    only; no empirical implementation or metaphysical impossibility
+  ancestry_disposition: standard finite set-cover/coverage-function specialization
+    over target-collision pairs; no new theorem identity or novelty
+- specialist_local_result: SPA-R11
+  status: PASS
+  path: results/r11_history_state_twin_results.json
+  sha256: 049fbb747965d5f2de6e870ee6fa46f3fe1860f63d4de78e4b597c6199df0bc2
+  mutants_killed: 7
+  mutants_total: 7
+  claim_ceiling: finite horizon-two deterministic interface and conditional model-class
+    closure only; no actual architecture implementation, resource lower bound, infinite-horizon
+    result, or metaphysical truth
+  ancestry_disposition: standard finite history-state/behavioral realization construction
+    and experiment-profile equivalence; no novelty; exact durable ancestry remains
+    a Deep Research 20 burden
+- specialist_local_result: SPA-R12
+  status: PASS
+  path: results/r12_predictive_quotient_results.json
+  sha256: 3ac5802d2e782f4af2854725b857c79cd54c539579926240df9f3f8e8e824f37
+  mutants_killed: 7
+  mutants_total: 7
+  claim_ceiling: depth-specific finite deterministic minimal predictive-state count;
+    no stochastic/measurable extension, architecture exclusion, source-world transfer,
+    or metaphysical truth
+  ancestry_disposition: finite deterministic Myhill-Nerode/predictive-state quotient
+    analogue; standard ancestry expected, no novelty; exact theorem-level locator
+    remains a Deep Research 20 burden
+crosswalk_receipts:
+- path: crosswalk/CROSSWALK_RECEIPT_R11_R12.yaml
+  sha256: d43926308c81cc2c6e31f91e22d216cf7819d5395f9655a519bf129bed1f2a81
+- path: crosswalk/CROSSWALK_RECEIPT_R1_R2.yaml
+  sha256: f664a6220c20353c60d7edb85a1222dca78f8a2db64972252b47f49fff5d0c29
+- path: crosswalk/CROSSWALK_RECEIPT_R3_R4.yaml
+  sha256: ef559415cf45f9d6ea82cc2fdca8897c2b4001a23ee29de3203e94a614076ac2
+- path: crosswalk/CROSSWALK_RECEIPT_R5_R6.yaml
+  sha256: 0fb2b30958caac50d1932d22565489520d354b97f1663032f61049e737e35b57
+- path: crosswalk/CROSSWALK_RECEIPT_R7_R8.yaml
+  sha256: fbdc64fa65658cd40e70d41897c932bb8c545943738da542ce026e30bf134aa4
+- path: crosswalk/CROSSWALK_RECEIPT_R9_R10.yaml
+  sha256: af72787af11edcd87b2ab37de36ed0a8ace748e9d1c8a8649f82443ac37182ad

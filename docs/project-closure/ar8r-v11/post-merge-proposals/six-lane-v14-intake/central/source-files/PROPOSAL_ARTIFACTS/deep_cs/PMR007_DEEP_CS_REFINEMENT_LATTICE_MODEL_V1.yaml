@@ -1,0 +1,19 @@
+schema: PMR007_DEEP_CS_REFINEMENT_LATTICE_MODEL_V1
+identity: PMR-007-WADF-1
+setting:
+  M: finite model set
+  E: current evidence map
+  Q: target coordinate
+  candidate_refinement: target-blind typed map r
+orders:
+  weaker_than: every fibre of (E,s) lies within a fibre of (E,r)
+  discriminating: Q constant on every fibre of (E,r)
+v1_claims:
+  - a unique weakest discriminating refinement always exists
+  - Bennett weakness directly proves the selection policy
+  - recurrent residuals generally have one invariant-restoring correction
+controls:
+  - constant_map_is_weak_but_nondiscriminating
+  - target_oracle_is_discriminating_but_ineligible
+  - two_incomparable_minimal_refinements
+  - common_postprocessing_cannot_split_existing_fibre

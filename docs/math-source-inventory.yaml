@@ -7049,21 +7049,21 @@ occurrences:
 - file: companion/orthability-divine-attributes-and-speech-athari.md
   locus:
     line: 3
-    column: 1723
+    column: 1704
   occurrence: 5
-  text: COMPILATION_MEDIATED
+  text: PRIMARY_TEXT_EXACT
   classification: semantic-registry-id
 - file: companion/orthability-divine-attributes-and-speech-athari.md
   locus:
     line: 3
-    column: 1751
+    column: 1730
   occurrence: 6
   text: ATH-3
   classification: semantic-registry-id
 - file: companion/orthability-divine-attributes-and-speech-athari.md
   locus:
     line: 3
-    column: 2029
+    column: 1939
   occurrence: 7
   text: ATH-6
   classification: semantic-registry-id
@@ -7076,49 +7076,49 @@ occurrences:
   classification: literal-code
 - file: companion/orthability-divine-attributes-and-speech-athari.md
   locus:
-    line: 112
+    line: 114
     column: 70
   occurrence: 9
   text: references/orthemology.bib
   classification: literal-code
 - file: companion/orthability-divine-attributes-and-speech-athari.md
   locus:
-    line: 112
+    line: 114
     column: 209
   occurrence: 10
   text: references/source-status.yaml
   classification: literal-code
 - file: companion/orthability-divine-attributes-and-speech-athari.md
   locus:
-    line: 112
+    line: 114
     column: 281
   occurrence: 11
   text: ATH-1
   classification: semantic-registry-id
 - file: companion/orthability-divine-attributes-and-speech-athari.md
   locus:
-    line: 112
+    line: 114
     column: 289
   occurrence: 12
   text: ATH-7
   classification: semantic-registry-id
 - file: companion/orthability-divine-attributes-and-speech-athari.md
   locus:
-    line: 112
+    line: 114
     column: 334
   occurrence: 13
   text: docs/sourcing/CURRENT-SOURCING-LEDGER.md
   classification: literal-code
 - file: companion/orthability-divine-attributes-and-speech-athari.md
   locus:
-    line: 114
+    line: 116
     column: 35
   occurrence: 14
   text: references/quran-loci.yaml
   classification: literal-code
 - file: companion/orthability-divine-attributes-and-speech-athari.md
   locus:
-    line: 117
+    line: 119
     column: 105
   occurrence: 15
   text: ATH-3

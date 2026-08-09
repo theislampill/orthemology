@@ -1,0 +1,14 @@
+schema: pmr007-timing-ledger-ck-co-v1
+block_start: '2026-08-09T11:31:29.215727938Z'
+latest_exact_timestamp_before_packaging: '2026-08-09T11:56:58.267048939Z'
+gross_observed_lower_bound: '00:25:29.051321001'
+excluded_or_unseparated:
+- repository and attachment navigation
+- file writes and hashing
+- uninterpreted checker runtime
+- report and ledger formatting
+- packaging not yet measured
+counted_substantive_increment: NOT_YET_RECONCILED
+last_reconciled_post_merge_duration: '00:56:11.268096105'
+later_pmr007_increments: NOT_YET_RECONCILED
+historical_duration_changed: false

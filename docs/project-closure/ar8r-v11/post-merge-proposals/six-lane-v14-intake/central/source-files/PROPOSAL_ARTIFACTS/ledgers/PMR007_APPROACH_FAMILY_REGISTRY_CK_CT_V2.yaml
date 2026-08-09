@@ -1,0 +1,42 @@
+schema: pmr007-approach-family-registry-ck-ct-v2
+families:
+- family: COMMON_INTERVENTION_AND_PROFILE
+  status: ACTIVE_BLOCKED_ON_ACTUAL_IMPLEMENTATION
+  outputs:
+  - CK
+  - CO
+  - CP
+  - CT
+- family: RESIDUAL_PARTITION_AND_COVER
+  status: ACTIVE_FORMALLY_SATURATED_AT_CURRENT_REGISTRY
+  outputs:
+  - CL
+  - CN
+  - CS
+- family: PROPER_FUNCTION_AND_RESTORATION
+  status: ACTIVE_TARGET_AUTHORITY_OPEN
+  outputs:
+  - CM
+  - CQ
+  - CR
+- family: SOURCE_WORLD_RECIPIENT
+  status: ACTIVE_FAIL_CLOSED
+  outputs:
+  - CK
+  - CN
+  - CR
+- family: EMPIRICAL_REPRESENTATION
+  status: READY_FOR_PREREGISTRATION_NOT_EXECUTION
+  outputs:
+  - DR22 import
+- family: LEAN_FORMALIZATION
+  status: BLOCKED_ON_TOOLCHAIN_AND_STATEMENT_SELECTION
+  outputs: []
+retired_or_rejected_routes:
+- CI/CJ V1 no-body top-line
+- old-profile correction search
+- target-defined capability/availability
+- unique weakest discriminator
+- CT V1 partial-domain impossibility
+- endpoint-only representation discriminator
+next_high_information_family: ACTUAL_COMMON_BECAUSE_OF_UPTAKE_IMPLEMENTATION_OR_EXPLICIT_IMPLEMENTATION_IMPOSSIBILITY

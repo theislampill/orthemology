@@ -30,3 +30,12 @@ champion, meniscus, and closure remain open or absent.
 The `external-challenges` directory preserves bounded public challenge packets
 and their independent correction overlays. It is nonauthoritative challenge
 custody, not repository theory or external-review PASS.
+
+The `six-lane-v14-intake` directory preserves exact public-safe Central,
+Specialist A, and Specialist B proposal trees plus a repository-authored intake
+of Deep Research 20–22. Correction overlays record incomplete central replay,
+failed original Lean drafts, a Specialist A theorem guard defect, Specialist B
+source/signature/checker defects, narrowed prior-art relations, corrected
+classical loci, and a blocked tensor arm specification. Nothing in that intake
+is adopted theory, source-world truth, empirical validation, a champion, a
+meniscus, or closure.

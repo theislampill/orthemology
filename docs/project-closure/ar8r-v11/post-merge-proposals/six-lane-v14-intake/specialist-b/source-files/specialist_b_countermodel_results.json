@@ -1,0 +1,1176 @@
+{
+  "nonauthority_notice": "Finite corroboration only; no source truth, world truth, metaphysical necessity, personality, Wisdom, revelation, owner adoption, or novelty claim.",
+  "overall_pass": true,
+  "round_1": {
+    "distributed_common_bearers": [],
+    "distributed_global_availability": true,
+    "episode_split_common_episodes": [],
+    "guard_count": 6,
+    "result": "PASS",
+    "rows_satisfying_full_contract": 1,
+    "scope": "Boolean contract and two explicit index-alignment countermodels only",
+    "single_guard_deletion_witnesses": {
+      "apprehension": {
+        "apprehension": false,
+        "bearer_applicability": true,
+        "intentional_uptake": true,
+        "objective_fittingness": true,
+        "reliable_realization": true,
+        "selection_because_fitting": true
+      },
+      "bearer_applicability": {
+        "apprehension": true,
+        "bearer_applicability": false,
+        "intentional_uptake": true,
+        "objective_fittingness": true,
+        "reliable_realization": true,
+        "selection_because_fitting": true
+      },
+      "intentional_uptake": {
+        "apprehension": true,
+        "bearer_applicability": true,
+        "intentional_uptake": false,
+        "objective_fittingness": true,
+        "reliable_realization": true,
+        "selection_because_fitting": true
+      },
+      "objective_fittingness": {
+        "apprehension": true,
+        "bearer_applicability": true,
+        "intentional_uptake": true,
+        "objective_fittingness": false,
+        "reliable_realization": true,
+        "selection_because_fitting": true
+      },
+      "reliable_realization": {
+        "apprehension": true,
+        "bearer_applicability": true,
+        "intentional_uptake": true,
+        "objective_fittingness": true,
+        "reliable_realization": false,
+        "selection_because_fitting": true
+      },
+      "selection_because_fitting": {
+        "apprehension": true,
+        "bearer_applicability": true,
+        "intentional_uptake": true,
+        "objective_fittingness": true,
+        "reliable_realization": true,
+        "selection_because_fitting": false
+      }
+    },
+    "truth_rows": 64
+  },
+  "round_10": {
+    "coordinate_count": 13,
+    "flat_arbitrary_gauge": {
+      "cycle_sum": 0,
+      "exact_potential": true,
+      "personal_source": false,
+      "standard_custody": false,
+      "wisdom": false,
+      "world_truth_connection": false
+    },
+    "impersonal_truth_connected_optimizer": {
+      "intentional_reason_uptake": false,
+      "path_independent": true,
+      "personal": false,
+      "reliably_realized": true,
+      "truth_connected": true
+    },
+    "personal_nonwise_standard_giver": {
+      "personal_source": true,
+      "praiseworthy_or_truth_connected": false,
+      "stable_standard": true,
+      "wisdom": false
+    },
+    "result": "PASS",
+    "rows_satisfying_full_vector": 1,
+    "scope": "Finite Boolean vector and triangle-potential controls; no objective norm or metaphysical source theorem",
+    "single_coordinate_deletion_witnesses": {
+      "authority_scope": {
+        "authority_scope": false,
+        "bearer_applicability": true,
+        "execution": true,
+        "function_fixing": true,
+        "graph_completeness": true,
+        "local_increment": true,
+        "path_independence": true,
+        "reason_uptake": true,
+        "recipient_warrant": true,
+        "semantic_fidelity": true,
+        "standard_custody": true,
+        "temporal_stability": true,
+        "world_truth_connection": true
+      },
+      "bearer_applicability": {
+        "authority_scope": true,
+        "bearer_applicability": false,
+        "execution": true,
+        "function_fixing": true,
+        "graph_completeness": true,
+        "local_increment": true,
+        "path_independence": true,
+        "reason_uptake": true,
+        "recipient_warrant": true,
+        "semantic_fidelity": true,
+        "standard_custody": true,
+        "temporal_stability": true,
+        "world_truth_connection": true
+      },
+      "execution": {
+        "authority_scope": true,
+        "bearer_applicability": true,
+        "execution": false,
+        "function_fixing": true,
+        "graph_completeness": true,
+        "local_increment": true,
+        "path_independence": true,
+        "reason_uptake": true,
+        "recipient_warrant": true,
+        "semantic_fidelity": true,
+        "standard_custody": true,
+        "temporal_stability": true,
+        "world_truth_connection": true
+      },
+      "function_fixing": {
+        "authority_scope": true,
+        "bearer_applicability": true,
+        "execution": true,
+        "function_fixing": false,
+        "graph_completeness": true,
+        "local_increment": true,
+        "path_independence": true,
+        "reason_uptake": true,
+        "recipient_warrant": true,
+        "semantic_fidelity": true,
+        "standard_custody": true,
+        "temporal_stability": true,
+        "world_truth_connection": true
+      },
+      "graph_completeness": {
+        "authority_scope": true,
+        "bearer_applicability": true,
+        "execution": true,
+        "function_fixing": true,
+        "graph_completeness": false,
+        "local_increment": true,
+        "path_independence": true,
+        "reason_uptake": true,
+        "recipient_warrant": true,
+        "semantic_fidelity": true,
+        "standard_custody": true,
+        "temporal_stability": true,
+        "world_truth_connection": true
+      },
+      "local_increment": {
+        "authority_scope": true,
+        "bearer_applicability": true,
+        "execution": true,
+        "function_fixing": true,
+        "graph_completeness": true,
+        "local_increment": false,
+        "path_independence": true,
+        "reason_uptake": true,
+        "recipient_warrant": true,
+        "semantic_fidelity": true,
+        "standard_custody": true,
+        "temporal_stability": true,
+        "world_truth_connection": true
+      },
+      "path_independence": {
+        "authority_scope": true,
+        "bearer_applicability": true,
+        "execution": true,
+        "function_fixing": true,
+        "graph_completeness": true,
+        "local_increment": true,
+        "path_independence": false,
+        "reason_uptake": true,
+        "recipient_warrant": true,
+        "semantic_fidelity": true,
+        "standard_custody": true,
+        "temporal_stability": true,
+        "world_truth_connection": true
+      },
+      "reason_uptake": {
+        "authority_scope": true,
+        "bearer_applicability": true,
+        "execution": true,
+        "function_fixing": true,
+        "graph_completeness": true,
+        "local_increment": true,
+        "path_independence": true,
+        "reason_uptake": false,
+        "recipient_warrant": true,
+        "semantic_fidelity": true,
+        "standard_custody": true,
+        "temporal_stability": true,
+        "world_truth_connection": true
+      },
+      "recipient_warrant": {
+        "authority_scope": true,
+        "bearer_applicability": true,
+        "execution": true,
+        "function_fixing": true,
+        "graph_completeness": true,
+        "local_increment": true,
+        "path_independence": true,
+        "reason_uptake": true,
+        "recipient_warrant": false,
+        "semantic_fidelity": true,
+        "standard_custody": true,
+        "temporal_stability": true,
+        "world_truth_connection": true
+      },
+      "semantic_fidelity": {
+        "authority_scope": true,
+        "bearer_applicability": true,
+        "execution": true,
+        "function_fixing": true,
+        "graph_completeness": true,
+        "local_increment": true,
+        "path_independence": true,
+        "reason_uptake": true,
+        "recipient_warrant": true,
+        "semantic_fidelity": false,
+        "standard_custody": true,
+        "temporal_stability": true,
+        "world_truth_connection": true
+      },
+      "standard_custody": {
+        "authority_scope": true,
+        "bearer_applicability": true,
+        "execution": true,
+        "function_fixing": true,
+        "graph_completeness": true,
+        "local_increment": true,
+        "path_independence": true,
+        "reason_uptake": true,
+        "recipient_warrant": true,
+        "semantic_fidelity": true,
+        "standard_custody": false,
+        "temporal_stability": true,
+        "world_truth_connection": true
+      },
+      "temporal_stability": {
+        "authority_scope": true,
+        "bearer_applicability": true,
+        "execution": true,
+        "function_fixing": true,
+        "graph_completeness": true,
+        "local_increment": true,
+        "path_independence": true,
+        "reason_uptake": true,
+        "recipient_warrant": true,
+        "semantic_fidelity": true,
+        "standard_custody": true,
+        "temporal_stability": false,
+        "world_truth_connection": true
+      },
+      "world_truth_connection": {
+        "authority_scope": true,
+        "bearer_applicability": true,
+        "execution": true,
+        "function_fixing": true,
+        "graph_completeness": true,
+        "local_increment": true,
+        "path_independence": true,
+        "reason_uptake": true,
+        "recipient_warrant": true,
+        "semantic_fidelity": true,
+        "standard_custody": true,
+        "temporal_stability": true,
+        "world_truth_connection": false
+      }
+    },
+    "triangle_exactness_controls": {
+      "flat_cycle_sum": 0,
+      "flat_edges": {
+        "a->b": 1,
+        "a->c": 2,
+        "b->c": 1
+      },
+      "nonflat_cycle_sum": -1,
+      "nonflat_edges": {
+        "a->b": 1,
+        "a->c": 3,
+        "b->c": 1
+      }
+    },
+    "truth_rows": 8192
+  },
+  "round_2": {
+    "complete_incoming_plus_recorded_root_failures": [],
+    "finite_relation_pairs_checked": 256,
+    "hidden_ground_omission_witness": {
+      "hidden_incoming_grounders": [
+        "y"
+      ],
+      "recorded_grounding": [],
+      "true_grounding": [
+        [
+          "y",
+          "x"
+        ]
+      ]
+    },
+    "multiple_nonborrowed_roots_witness": {
+      "entities": [
+        "x",
+        "z"
+      ],
+      "exists_all_worlds": true,
+      "incoming_grounders": {
+        "x": [],
+        "z": []
+      },
+      "one_unique_root": false
+    },
+    "persistent_recorded_root_with_worldwise_hidden_grounders": {
+      "actually_nonborrowed_everywhere": false,
+      "persistent_recorded_root": true,
+      "worlds": {
+        "w0": [
+          [
+            "y0",
+            "x"
+          ]
+        ],
+        "w1": [
+          [
+            "y1",
+            "x"
+          ]
+        ]
+      }
+    },
+    "result": "PASS",
+    "scope": "Two-entity grounding relations plus explicit frame witnesses",
+    "unique_impersonal_noncreator_witness": {
+      "causes_anything": false,
+      "creator": false,
+      "entity": "field_x",
+      "necessary_in_declared_frame": true,
+      "nonborrowed": true,
+      "personal": false
+    }
+  },
+  "round_3": {
+    "adjacent_nonentailment_countermodels": [
+      {
+        "antecedent": "capacity",
+        "assignment": {
+          "capacity": true,
+          "execution_or_recitation": false,
+          "grammar_attribution": false,
+          "name_authorization": false,
+          "occurrence": false,
+          "positive_qualification": false,
+          "recipient_warrant": false,
+          "revealed_wording": false
+        },
+        "nonentailed_successor": "occurrence"
+      },
+      {
+        "antecedent": "occurrence",
+        "assignment": {
+          "capacity": false,
+          "execution_or_recitation": false,
+          "grammar_attribution": false,
+          "name_authorization": false,
+          "occurrence": true,
+          "positive_qualification": false,
+          "recipient_warrant": false,
+          "revealed_wording": false
+        },
+        "nonentailed_successor": "positive_qualification"
+      },
+      {
+        "antecedent": "positive_qualification",
+        "assignment": {
+          "capacity": false,
+          "execution_or_recitation": false,
+          "grammar_attribution": false,
+          "name_authorization": false,
+          "occurrence": false,
+          "positive_qualification": true,
+          "recipient_warrant": false,
+          "revealed_wording": false
+        },
+        "nonentailed_successor": "name_authorization"
+      },
+      {
+        "antecedent": "name_authorization",
+        "assignment": {
+          "capacity": false,
+          "execution_or_recitation": false,
+          "grammar_attribution": false,
+          "name_authorization": true,
+          "occurrence": false,
+          "positive_qualification": false,
+          "recipient_warrant": false,
+          "revealed_wording": false
+        },
+        "nonentailed_successor": "revealed_wording"
+      },
+      {
+        "antecedent": "revealed_wording",
+        "assignment": {
+          "capacity": false,
+          "execution_or_recitation": false,
+          "grammar_attribution": false,
+          "name_authorization": false,
+          "occurrence": false,
+          "positive_qualification": false,
+          "recipient_warrant": false,
+          "revealed_wording": true
+        },
+        "nonentailed_successor": "grammar_attribution"
+      },
+      {
+        "antecedent": "grammar_attribution",
+        "assignment": {
+          "capacity": false,
+          "execution_or_recitation": false,
+          "grammar_attribution": true,
+          "name_authorization": false,
+          "occurrence": false,
+          "positive_qualification": false,
+          "recipient_warrant": false,
+          "revealed_wording": false
+        },
+        "nonentailed_successor": "recipient_warrant"
+      },
+      {
+        "antecedent": "recipient_warrant",
+        "assignment": {
+          "capacity": false,
+          "execution_or_recitation": false,
+          "grammar_attribution": false,
+          "name_authorization": false,
+          "occurrence": false,
+          "positive_qualification": false,
+          "recipient_warrant": true,
+          "revealed_wording": false
+        },
+        "nonentailed_successor": "execution_or_recitation"
+      }
+    ],
+    "ladder_stages": [
+      "capacity",
+      "occurrence",
+      "positive_qualification",
+      "name_authorization",
+      "revealed_wording",
+      "grammar_attribution",
+      "recipient_warrant",
+      "execution_or_recitation"
+    ],
+    "positive_qualification_without_name_authorization": {
+      "beautiful_name_authorized": false,
+      "model_role": "positive qualification does not entail Name authorization",
+      "positive_attribute_meaning_true": true
+    },
+    "qiyas_guard_deletion_witnesses": {
+      "creature_limitation_removed": {
+        "creature_limitation_removed": false,
+        "defect_of_total_absence": true,
+        "intrinsic_praiseworthiness": true,
+        "nonconduit_capacity": true,
+        "nonequalizing_attribution": true,
+        "source_relation": true
+      },
+      "defect_of_total_absence": {
+        "creature_limitation_removed": true,
+        "defect_of_total_absence": false,
+        "intrinsic_praiseworthiness": true,
+        "nonconduit_capacity": true,
+        "nonequalizing_attribution": true,
+        "source_relation": true
+      },
+      "intrinsic_praiseworthiness": {
+        "creature_limitation_removed": true,
+        "defect_of_total_absence": true,
+        "intrinsic_praiseworthiness": false,
+        "nonconduit_capacity": true,
+        "nonequalizing_attribution": true,
+        "source_relation": true
+      },
+      "nonconduit_capacity": {
+        "creature_limitation_removed": true,
+        "defect_of_total_absence": true,
+        "intrinsic_praiseworthiness": true,
+        "nonconduit_capacity": false,
+        "nonequalizing_attribution": true,
+        "source_relation": true
+      },
+      "nonequalizing_attribution": {
+        "creature_limitation_removed": true,
+        "defect_of_total_absence": true,
+        "intrinsic_praiseworthiness": true,
+        "nonconduit_capacity": true,
+        "nonequalizing_attribution": false,
+        "source_relation": true
+      },
+      "source_relation": {
+        "creature_limitation_removed": true,
+        "defect_of_total_absence": true,
+        "intrinsic_praiseworthiness": true,
+        "nonconduit_capacity": true,
+        "nonequalizing_attribution": true,
+        "source_relation": false
+      }
+    },
+    "result": "PASS",
+    "scope": "Boolean independence witnesses; no source truth or theological rule validation"
+  },
+  "round_4": {
+    "models": [
+      {
+        "id": "restoration",
+        "mechanism": "reminder-mediated latent change",
+        "observed_post": 1,
+        "observed_pre": 0,
+        "post_latent": "activated",
+        "pre_latent": "occluded",
+        "restored": true
+      },
+      {
+        "id": "memorization",
+        "mechanism": "surface memorization/compliance",
+        "observed_post": 1,
+        "observed_pre": 0,
+        "post_latent": "occluded",
+        "pre_latent": "occluded",
+        "restored": false
+      },
+      {
+        "id": "silent_restoration",
+        "mechanism": "latent change without immediate report",
+        "observed_post": 0,
+        "observed_pre": 0,
+        "post_latent": "activated",
+        "pre_latent": "occluded",
+        "restored": true
+      },
+      {
+        "id": "no_change_no_output",
+        "mechanism": "no latent change",
+        "observed_post": 0,
+        "observed_pre": 0,
+        "post_latent": "occluded",
+        "pre_latent": "occluded",
+        "restored": false
+      }
+    ],
+    "observational_profile_collisions": [
+      {
+        "models": [
+          "restoration",
+          "memorization"
+        ],
+        "profile": [
+          0,
+          1
+        ],
+        "restoration_values": [
+          true,
+          false
+        ]
+      },
+      {
+        "models": [
+          "silent_restoration",
+          "no_change_no_output"
+        ],
+        "profile": [
+          0,
+          0
+        ],
+        "restoration_values": [
+          true,
+          false
+        ]
+      }
+    ],
+    "restoration_identifiable_from_two_timepoint_output_only": false,
+    "result": "PASS",
+    "scope": "Constructive latent/output countermodels only"
+  },
+  "round_5": {
+    "cross_product": [
+      {
+        "mind_body_property_dualism": false,
+        "property_theory": "nominalist"
+      },
+      {
+        "mind_body_property_dualism": true,
+        "property_theory": "nominalist"
+      },
+      {
+        "mind_body_property_dualism": false,
+        "property_theory": "trope"
+      },
+      {
+        "mind_body_property_dualism": true,
+        "property_theory": "trope"
+      },
+      {
+        "mind_body_property_dualism": false,
+        "property_theory": "immanent_realist"
+      },
+      {
+        "mind_body_property_dualism": true,
+        "property_theory": "immanent_realist"
+      },
+      {
+        "mind_body_property_dualism": false,
+        "property_theory": "conceptualist"
+      },
+      {
+        "mind_body_property_dualism": true,
+        "property_theory": "conceptualist"
+      },
+      {
+        "mind_body_property_dualism": false,
+        "property_theory": "powers"
+      },
+      {
+        "mind_body_property_dualism": true,
+        "property_theory": "powers"
+      }
+    ],
+    "presentation_count": 5,
+    "property_theory_x_property_dualism_cells": 10,
+    "result": "PASS",
+    "rival_presentations": {
+      "conceptualist": "three scheme-relative classifications of b",
+      "immanent_realist": "three sparse properties instantiated by b",
+      "nominalist": "three true predicates of b",
+      "powers": "three dispositional powers of b",
+      "trope": "three particularized tropes borne by b"
+    },
+    "scope": "One explicit profile with multiple interpretation maps; not universal intertranslatability",
+    "shared_incidence_profile": {
+      "bearer_b": [
+        "knowledge_role",
+        "selection_role",
+        "efficacy_role"
+      ]
+    }
+  },
+  "round_6": {
+    "collisions": [
+      {
+        "personality_values": [
+          false,
+          true
+        ],
+        "profile": [
+          0,
+          0
+        ]
+      },
+      {
+        "personality_values": [
+          false,
+          true
+        ],
+        "profile": [
+          0,
+          1
+        ]
+      },
+      {
+        "personality_values": [
+          false,
+          true
+        ],
+        "profile": [
+          1,
+          0
+        ]
+      },
+      {
+        "personality_values": [
+          false,
+          true
+        ],
+        "profile": [
+          1,
+          1
+        ]
+      }
+    ],
+    "intervention_count": 2,
+    "model_count_with_personality_twins": 8,
+    "personality_identifiable_in_twin_closed_class": false,
+    "profiles_with_personality_collision": 4,
+    "response_function_count": 4,
+    "result": "PASS",
+    "scope": "Finite extensional response profiles under explicit twin-closure assumption"
+  },
+  "round_7": {
+    "aggregate_laundering": {
+      "bearer_local_total_intersection": [],
+      "local_bearers": {
+        "p_K": [
+          "K"
+        ],
+        "p_P": [
+          "P"
+        ],
+        "p_W": [
+          "W"
+        ]
+      },
+      "system_level_all_roles_available": true
+    },
+    "persistent_bearer_role_drift": {
+      "persistent_bearer": true,
+      "persistent_role_bundle": false,
+      "role_by_world": {
+        "w0": [
+          "K",
+          "P",
+          "W"
+        ],
+        "w1": [
+          "K",
+          "W"
+        ]
+      }
+    },
+    "result": "PASS",
+    "scope": "Explicit counterpart, aggregate-granularity, and role-drift witnesses only",
+    "worldwise_singleton_coherent_counterpart": {
+      "numerically_identical_without_B_ID": false,
+      "section": {
+        "w0": "a0",
+        "w1": "a1"
+      },
+      "transport_coherent": true,
+      "worlds": [
+        "w0",
+        "w1"
+      ],
+      "worldwise_singleton": true
+    }
+  },
+  "round_8": {
+    "false_multiplicity_evidence": {
+      "apparent_report_count": 3,
+      "independent_source_roots": 1,
+      "reports": {
+        "report_a": "source_x",
+        "report_b": "source_x",
+        "report_c": "source_x"
+      }
+    },
+    "guard_count": 12,
+    "readiness_without_belief_assent_execution": {
+      "assent": false,
+      "belief": false,
+      "execution": false,
+      "readiness": true
+    },
+    "recipient_index_shift": {
+      "inputs": {
+        "r0": {
+          "access": true,
+          "competence": true,
+          "defeater_control": true
+        },
+        "r1": {
+          "access": false,
+          "competence": true,
+          "defeater_control": true
+        }
+      },
+      "ready": {
+        "r0": true,
+        "r1": false
+      }
+    },
+    "result": "PASS",
+    "rows_satisfying_full_readiness": 1,
+    "scope": "Boolean audit-record and provenance/index-shift witnesses; no universal warrant theory",
+    "single_guard_deletion_witnesses": {
+      "authority_scope": {
+        "authority_scope": false,
+        "defeater_control": true,
+        "evidence_independence": true,
+        "formalization_fidelity": true,
+        "interpretation_adequacy": true,
+        "recipient_access": true,
+        "recipient_competence": true,
+        "referent_applicability": true,
+        "route_reliability": true,
+        "source_custody": true,
+        "target_relevance": true,
+        "world_truth": true
+      },
+      "defeater_control": {
+        "authority_scope": true,
+        "defeater_control": false,
+        "evidence_independence": true,
+        "formalization_fidelity": true,
+        "interpretation_adequacy": true,
+        "recipient_access": true,
+        "recipient_competence": true,
+        "referent_applicability": true,
+        "route_reliability": true,
+        "source_custody": true,
+        "target_relevance": true,
+        "world_truth": true
+      },
+      "evidence_independence": {
+        "authority_scope": true,
+        "defeater_control": true,
+        "evidence_independence": false,
+        "formalization_fidelity": true,
+        "interpretation_adequacy": true,
+        "recipient_access": true,
+        "recipient_competence": true,
+        "referent_applicability": true,
+        "route_reliability": true,
+        "source_custody": true,
+        "target_relevance": true,
+        "world_truth": true
+      },
+      "formalization_fidelity": {
+        "authority_scope": true,
+        "defeater_control": true,
+        "evidence_independence": true,
+        "formalization_fidelity": false,
+        "interpretation_adequacy": true,
+        "recipient_access": true,
+        "recipient_competence": true,
+        "referent_applicability": true,
+        "route_reliability": true,
+        "source_custody": true,
+        "target_relevance": true,
+        "world_truth": true
+      },
+      "interpretation_adequacy": {
+        "authority_scope": true,
+        "defeater_control": true,
+        "evidence_independence": true,
+        "formalization_fidelity": true,
+        "interpretation_adequacy": false,
+        "recipient_access": true,
+        "recipient_competence": true,
+        "referent_applicability": true,
+        "route_reliability": true,
+        "source_custody": true,
+        "target_relevance": true,
+        "world_truth": true
+      },
+      "recipient_access": {
+        "authority_scope": true,
+        "defeater_control": true,
+        "evidence_independence": true,
+        "formalization_fidelity": true,
+        "interpretation_adequacy": true,
+        "recipient_access": false,
+        "recipient_competence": true,
+        "referent_applicability": true,
+        "route_reliability": true,
+        "source_custody": true,
+        "target_relevance": true,
+        "world_truth": true
+      },
+      "recipient_competence": {
+        "authority_scope": true,
+        "defeater_control": true,
+        "evidence_independence": true,
+        "formalization_fidelity": true,
+        "interpretation_adequacy": true,
+        "recipient_access": true,
+        "recipient_competence": false,
+        "referent_applicability": true,
+        "route_reliability": true,
+        "source_custody": true,
+        "target_relevance": true,
+        "world_truth": true
+      },
+      "referent_applicability": {
+        "authority_scope": true,
+        "defeater_control": true,
+        "evidence_independence": true,
+        "formalization_fidelity": true,
+        "interpretation_adequacy": true,
+        "recipient_access": true,
+        "recipient_competence": true,
+        "referent_applicability": false,
+        "route_reliability": true,
+        "source_custody": true,
+        "target_relevance": true,
+        "world_truth": true
+      },
+      "route_reliability": {
+        "authority_scope": true,
+        "defeater_control": true,
+        "evidence_independence": true,
+        "formalization_fidelity": true,
+        "interpretation_adequacy": true,
+        "recipient_access": true,
+        "recipient_competence": true,
+        "referent_applicability": true,
+        "route_reliability": false,
+        "source_custody": true,
+        "target_relevance": true,
+        "world_truth": true
+      },
+      "source_custody": {
+        "authority_scope": true,
+        "defeater_control": true,
+        "evidence_independence": true,
+        "formalization_fidelity": true,
+        "interpretation_adequacy": true,
+        "recipient_access": true,
+        "recipient_competence": true,
+        "referent_applicability": true,
+        "route_reliability": true,
+        "source_custody": false,
+        "target_relevance": true,
+        "world_truth": true
+      },
+      "target_relevance": {
+        "authority_scope": true,
+        "defeater_control": true,
+        "evidence_independence": true,
+        "formalization_fidelity": true,
+        "interpretation_adequacy": true,
+        "recipient_access": true,
+        "recipient_competence": true,
+        "referent_applicability": true,
+        "route_reliability": true,
+        "source_custody": true,
+        "target_relevance": false,
+        "world_truth": true
+      },
+      "world_truth": {
+        "authority_scope": true,
+        "defeater_control": true,
+        "evidence_independence": true,
+        "formalization_fidelity": true,
+        "interpretation_adequacy": true,
+        "recipient_access": true,
+        "recipient_competence": true,
+        "referent_applicability": true,
+        "route_reliability": true,
+        "source_custody": true,
+        "target_relevance": true,
+        "world_truth": false
+      }
+    },
+    "truth_rows": 4096
+  },
+  "round_9": {
+    "adjacent_nonentailment_witnesses": [
+      {
+        "antecedent": "recorded_root",
+        "assignment": {
+          "attribute_bearer": false,
+          "creator_scope": false,
+          "grounding_complete_nonborrowed": false,
+          "modal_independence": false,
+          "necessary_in_itself": false,
+          "numerical_or_metaphysical_unity": false,
+          "originator_scope": false,
+          "recorded_root": true,
+          "revealed_identification": false,
+          "source_referent": false,
+          "uncaused": false
+        },
+        "nonentailed_successor": "grounding_complete_nonborrowed"
+      },
+      {
+        "antecedent": "grounding_complete_nonborrowed",
+        "assignment": {
+          "attribute_bearer": false,
+          "creator_scope": false,
+          "grounding_complete_nonborrowed": true,
+          "modal_independence": false,
+          "necessary_in_itself": false,
+          "numerical_or_metaphysical_unity": false,
+          "originator_scope": false,
+          "recorded_root": false,
+          "revealed_identification": false,
+          "source_referent": false,
+          "uncaused": false
+        },
+        "nonentailed_successor": "modal_independence"
+      },
+      {
+        "antecedent": "modal_independence",
+        "assignment": {
+          "attribute_bearer": false,
+          "creator_scope": false,
+          "grounding_complete_nonborrowed": false,
+          "modal_independence": true,
+          "necessary_in_itself": false,
+          "numerical_or_metaphysical_unity": false,
+          "originator_scope": false,
+          "recorded_root": false,
+          "revealed_identification": false,
+          "source_referent": false,
+          "uncaused": false
+        },
+        "nonentailed_successor": "necessary_in_itself"
+      },
+      {
+        "antecedent": "necessary_in_itself",
+        "assignment": {
+          "attribute_bearer": false,
+          "creator_scope": false,
+          "grounding_complete_nonborrowed": false,
+          "modal_independence": false,
+          "necessary_in_itself": true,
+          "numerical_or_metaphysical_unity": false,
+          "originator_scope": false,
+          "recorded_root": false,
+          "revealed_identification": false,
+          "source_referent": false,
+          "uncaused": false
+        },
+        "nonentailed_successor": "uncaused"
+      },
+      {
+        "antecedent": "uncaused",
+        "assignment": {
+          "attribute_bearer": false,
+          "creator_scope": false,
+          "grounding_complete_nonborrowed": false,
+          "modal_independence": false,
+          "necessary_in_itself": false,
+          "numerical_or_metaphysical_unity": false,
+          "originator_scope": false,
+          "recorded_root": false,
+          "revealed_identification": false,
+          "source_referent": false,
+          "uncaused": true
+        },
+        "nonentailed_successor": "originator_scope"
+      },
+      {
+        "antecedent": "originator_scope",
+        "assignment": {
+          "attribute_bearer": false,
+          "creator_scope": false,
+          "grounding_complete_nonborrowed": false,
+          "modal_independence": false,
+          "necessary_in_itself": false,
+          "numerical_or_metaphysical_unity": false,
+          "originator_scope": true,
+          "recorded_root": false,
+          "revealed_identification": false,
+          "source_referent": false,
+          "uncaused": false
+        },
+        "nonentailed_successor": "creator_scope"
+      },
+      {
+        "antecedent": "creator_scope",
+        "assignment": {
+          "attribute_bearer": false,
+          "creator_scope": true,
+          "grounding_complete_nonborrowed": false,
+          "modal_independence": false,
+          "necessary_in_itself": false,
+          "numerical_or_metaphysical_unity": false,
+          "originator_scope": false,
+          "recorded_root": false,
+          "revealed_identification": false,
+          "source_referent": false,
+          "uncaused": false
+        },
+        "nonentailed_successor": "numerical_or_metaphysical_unity"
+      },
+      {
+        "antecedent": "numerical_or_metaphysical_unity",
+        "assignment": {
+          "attribute_bearer": false,
+          "creator_scope": false,
+          "grounding_complete_nonborrowed": false,
+          "modal_independence": false,
+          "necessary_in_itself": false,
+          "numerical_or_metaphysical_unity": true,
+          "originator_scope": false,
+          "recorded_root": false,
+          "revealed_identification": false,
+          "source_referent": false,
+          "uncaused": false
+        },
+        "nonentailed_successor": "attribute_bearer"
+      },
+      {
+        "antecedent": "attribute_bearer",
+        "assignment": {
+          "attribute_bearer": true,
+          "creator_scope": false,
+          "grounding_complete_nonborrowed": false,
+          "modal_independence": false,
+          "necessary_in_itself": false,
+          "numerical_or_metaphysical_unity": false,
+          "originator_scope": false,
+          "recorded_root": false,
+          "revealed_identification": false,
+          "source_referent": false,
+          "uncaused": false
+        },
+        "nonentailed_successor": "source_referent"
+      },
+      {
+        "antecedent": "source_referent",
+        "assignment": {
+          "attribute_bearer": false,
+          "creator_scope": false,
+          "grounding_complete_nonborrowed": false,
+          "modal_independence": false,
+          "necessary_in_itself": false,
+          "numerical_or_metaphysical_unity": false,
+          "originator_scope": false,
+          "recorded_root": false,
+          "revealed_identification": false,
+          "source_referent": true,
+          "uncaused": false
+        },
+        "nonentailed_successor": "revealed_identification"
+      }
+    ],
+    "predicate_vector": [
+      "recorded_root",
+      "grounding_complete_nonborrowed",
+      "modal_independence",
+      "necessary_in_itself",
+      "uncaused",
+      "originator_scope",
+      "creator_scope",
+      "numerical_or_metaphysical_unity",
+      "attribute_bearer",
+      "source_referent",
+      "revealed_identification"
+    ],
+    "result": "PASS",
+    "same_text_different_proof_architecture": {
+      "conclusion_label": "one_necessary_being",
+      "proof_architecture_A": [
+        "essence_existence",
+        "causal_dependence",
+        "necessary_in_itself"
+      ],
+      "proof_architecture_B": [
+        "source_predication",
+        "acts",
+        "attributes",
+        "creator_scope"
+      ],
+      "proofs_identical": false
+    },
+    "scope": "Typed predicate-mismatch controls; no historical-school theorem formalization"
+  },
+  "schema": "AR8R_SPECIALIST_B_FINITE_CORROBORATION_V2"
+}

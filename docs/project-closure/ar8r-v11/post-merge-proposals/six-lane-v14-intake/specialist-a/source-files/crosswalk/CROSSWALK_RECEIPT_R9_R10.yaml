@@ -1,0 +1,91 @@
+schema: spa-two-round-crosswalk-receipt-v1
+receipt: R9_R10
+authority: PRIVATE_SPECIALIST_RESEARCH_NO_REPOSITORY_ADOPTION
+repository_sha: 9b80f2dfdf73a768ccad6a6ea2f2998c70ebdcf3
+results:
+- id: SPA-R9
+  note_path: rounds/SPA-R9_COMMON_DECODER.md
+  note_sha256: 16ac8e025980e45704c89c4be688a73ece83a077fc1b7edbf4f5142ce12698b9
+  result_path: results/r9_common_decoder_results.json
+  result_sha256: 54436e892ec6c57949c7cc76f9f1cb86d290b5a3f2b930f0f232b3a726a4d78c
+  checker_status: PASS
+  mutants_killed: 7
+  mutants_total: 7
+  claim_ceiling: finite common decoder for the frozen target; no actual architecture
+    implementation, source-world transfer, or metaphysical identification
+  ancestry_disposition: exact specialization of the existing finite fibre-factorization
+    criterion on a tagged disjoint union; no new theorem identity or novelty
+- id: SPA-R10
+  note_path: rounds/SPA-R10_MINIMUM_COLLISION_COVER.md
+  note_sha256: 68a43f0610ccbe651d2d0a1160cbb24dae880beccb3c665693910d0793d0b2f1
+  result_path: results/r10_minimum_collision_cover_results.json
+  result_sha256: 8ddd2ddac97e8ffe62178728de989d9f2d7c8a099f6b90530e45256009f044f0
+  checker_status: PASS
+  mutants_killed: 7
+  mutants_total: 7
+  claim_ceiling: minimum eligible factor cover or bounded no-cover on the frozen manifest
+    only; no empirical implementation or metaphysical impossibility
+  ancestry_disposition: standard finite set-cover/coverage-function specialization
+    over target-collision pairs; no new theorem identity or novelty
+formal_status: both executable finite checkers PASS; no duplicate fibre theorem or
+  authoritative ID allocated
+assumptions:
+- finite tagged architecture domains
+- one common observation and target alphabet
+- target-blind decoder d:Y->Q
+- finite frozen rival manifest
+- pre-certified eligible factors
+- pair coverage deduplicated
+conclusion_ceiling: common reconstruction and exact minimum/no-cover over a frozen
+  finite manifest only; no actual architecture implementation or metaphysical impossibility
+ancestry_novelty_disposition: R9 exact tagged-union specialization of existing T294/Deep
+  BV; R10 standard finite set cover; novelty 0
+countermodels:
+- local architecture decoders without a common decoder
+- same histograms with conflicting observation-target alignment
+- pairwise factor without class-wide cover
+- positive-gain redundant factor
+- greedy three-factor result versus two-factor optimum
+- target-leak full cover rejected
+combined_mutation_status:
+  killed: 14
+  total: 14
+lean_checker_status: no duplicate Lean theorem created; existing repaired Deep BV
+  criterion remains the fibre-family reference; project adoption none
+dependencies_closed:
+- within-architecture decoder sufficiency
+- histogram sufficiency
+- greedy minimum-cover claim
+- positive gain as indispensability
+- pairwise-to-class-wide identification
+- all-factor no-cover overread
+dependencies_opened: &id001
+- actual architecture-domain implementation maps
+- common semantic observation crosswalk
+- neutrality receipts for candidate factors
+- held-out rival manifest
+- measurable common-decoder conditions
+input_requested_from_specialist_b: Supply only target-blind bridge predicates and
+  semantic crosswalk conditions; source-relative personality, warrant, or proper-function
+  labels must remain outside the neutral decoder.
+input_requested_from_deep_research: 'DR20: exact ancestry for tagged-union factorization
+  and finite/weighted set cover. DR22: protocols that instantiate actual common observation
+  maps and certify factor eligibility.'
+central_flywheel_effects:
+- common_decoder node receives an exact cross-architecture fibre condition
+- anchor_cover node receives exact minimum/no-cover and deletion-witness criteria
+- common intervention selection now separates eligibility from optimization
+- theorem-family registry receives identity-to-existing-family receipt, not a new
+  theorem
+remaining_burdens: *id001
+exact_next_atomic_action: construct and attack the finite adaptive history-state twin
+  under explicit model-class closure
+firewalls:
+  owner_adoption: NOT_CLAIMED
+  repository_scientific_adoption: NONE
+  historical_identity: NONE
+  novelty: 0
+  source_world_transfer: NOT_ESTABLISHED
+  metaphysical_conclusion: NONE
+  meniscus: NOT_REACHED
+  closure: NOT_REACHED

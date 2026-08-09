@@ -51,9 +51,15 @@ status-changing family missed by pairwise and human baselines. Underpowered,
 non-equivariant, typing-losing, source-custody-losing, false-zero, or
 status-dishonest results cannot promote a representation.
 
-The prospective 120-observation, five-arm gate remains unrun. A bounded win may
-change search policy or indexing only; it cannot establish ontology, source
-truth, metaphysics, or terminology.
+The prospective 120-observation, five-arm gate remains unrun. Its arm ontology
+is also not yet internally complete: the current charter names six
+representation candidates A–F but does not identify which five enter the
+five-arm design. This is `BLOCKED_SPECIFICATION_AMBIGUITY`, not
+`READY_TO_RUN`. Before preregistration, the program must either name the exact
+five or revise the sample design for six arms, while keeping controller A–G
+labels separate from representation A–F labels. A bounded win may change search
+policy or indexing only; it cannot establish ontology, source truth,
+metaphysics, or terminology.
 
 ## Standing methodological control
 

@@ -1,0 +1,29 @@
+schema: PMR007_DEEP_CT_PARTIAL_INTERVENTION_MODEL_V1
+identity: PMR-007-PCDF-1
+architectures: [U, I, P]
+neutral_profile:
+  U: neutral_0
+  I: neutral_0
+  P: neutral_0
+personal_target:
+  U: 1
+  I: 0
+  P: 0
+candidate_operations:
+  common_proxy:
+    domain: [U, I, P]
+    outcome: {U: 0, I: 0, P: 0}
+    eligibility: FORMALLY_COMMON_BUT_NOT_EMPIRICALLY_VALIDATED
+  intentional_uptake_direct:
+    domain: [U]
+    outcome: {U: 1}
+    eligibility: TARGET_LADEN_PARTIAL_OPERATION
+  common_bearer_probe:
+    domain: [U, I, P]
+    outcome: {U: 1, I: 1, P: 0}
+    eligibility: FORMAL_ANCHOR_ONLY
+  architecture_oracle:
+    domain: [U, I, P]
+    outcome: {U: 1, I: 0, P: 0}
+    eligibility: INELIGIBLE_TARGET_ORACLE
+claimed_v1_rule: PROPER_DOMAIN_PREVENTS_GLOBAL_IDENTIFICATION_EVEN_WITH_BOTTOM

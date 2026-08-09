@@ -1,0 +1,96 @@
+schema: pmr007-deep-cp-eligible-ui-experiment-registry-v2
+identity: PMR-007-CUIE-1
+status: REPAIRED_POST_MERGE_RESEARCH_CANDIDATE
+conclusion_type: NO_CURRENT_ELIGIBLE_UI_EXPERIMENT_IN_FROZEN_FORMAL_REGISTRY
+model_class:
+  models: [U_unified_personal, I_impersonal_powers]
+  class_completeness: declared_pair_only
+  physical_realizability: NOT_ESTABLISHED
+  metaphysical_actuality: NOT_ESTABLISHED
+neutral_state_coordinates:
+  - semantic_content
+  - declared_fittingness_status
+  - registered_payoff
+  - provenance_root_bit
+  - version_valid
+  - authority_valid
+  - self_model_token
+common_outputs:
+  decision: semantic_content_xor_declared_fittingness_status
+  payoff_report: registered_payoff
+  source_eligibility: version_valid_and_authority_valid
+  provenance_report: provenance_root_bit
+  self_model_report: self_model_token
+  completeness: declared_registry_only
+eligible_interventions:
+  noop: {}
+  flip_semantic_content: {semantic_content: toggle}
+  flip_declared_fittingness_status: {declared_fittingness_status: toggle}
+  flip_registered_payoff: {registered_payoff: toggle}
+  flip_provenance_root_bit: {provenance_root_bit: toggle}
+  flip_version_valid: {version_valid: toggle}
+  flip_authority_valid: {authority_valid: toggle}
+  flip_self_model_token: {self_model_token: toggle}
+common_contract:
+  abstract_type_frozen: true
+  total_formal_implementation_in_U_and_I: true
+  target_independent: true
+  type_preserving: true
+  version_preserving: true
+  authorization_declared: true
+  resource_contract: one_boolean_update_per_step
+  semantics_preserving: true
+  comparable_outputs: true
+  physical_operationalization: NOT_ESTABLISHED
+architectures:
+  U_unified_personal:
+    implementation: common_kernel_CP0
+    hidden_targets: {intentional_uptake: true, selection_because_fitting: true, de_se_ownership: true, personality: true, wisdom: true}
+  I_impersonal_powers:
+    implementation: common_kernel_CP0
+    hidden_targets: {intentional_uptake: false, selection_because_fitting: false, de_se_ownership: false, personality: false, wisdom: false}
+structural_proof:
+  premise: same_initial_law_and_same_one_step_transition_output_kernel
+  conclusion: equality_for_every_finite_common_history_adaptive_policy
+  finite_regression_role: tests_declared_kernel_and_length_at_most_three_words_only
+ineligible_candidate_operations:
+  toggle_intentional_uptake:
+    current_status: NO_COMMON_FORMAL_IMPLEMENTATION
+    future_operationalization_impossible: false
+    reason: disputed_target_state_not_independently_identified_in_I
+  query_de_se_ownership:
+    current_status: NO_COMMON_OUTPUT_SEMANTICS
+    future_operationalization_impossible: false
+    reason: same_label_would_not_yet_preserve_target_independent_semantics
+  toggle_selection_because_fitting:
+    current_status: NO_COMMON_FORMAL_IMPLEMENTATION
+    future_operationalization_impossible: false
+    reason: because_relation_is_the_disputed_target_coordinate
+  source_intensional_predication:
+    current_status: TRACK_N_ONLY
+    neutral_eligibility: false
+    reason: source_world_guards_required
+  architecture_class_oracle:
+    current_status: FORBIDDEN_TARGET_ORACLE
+    target_independent: false
+    reason: direct_target_read
+changed_experiment_exits:
+  - independently_typed_internal_intervention
+  - additional_sensor
+  - source_world_anchor
+  - new_model_class_restriction
+  - longer_or_richer_output_interface
+controls:
+  self_model_proxy: common_behavioral_coordinate_not_de_se_ownership
+  declared_fittingness_status: carried_status_not_objective_fittingness_world_truth
+  source_eligibility: version_and_authority_only_not_source_truth
+  provenance_root: root_identity_not_personality
+  architecture_specific_internal_intervention: changed_experiment_unless_common_contract_supplied
+nonclaims:
+  - no exhaustive intervention universe
+  - no empirical operationalization
+  - no physical or metaphysical realization claim
+  - no infinite-horizon internal-dynamics theorem
+  - no objective fittingness world truth
+  - no source-world or divine-attribute inference
+  - no historical identity or novelty credit

@@ -1,0 +1,59 @@
+{
+  "ancestry_disposition": "finite deterministic Myhill-Nerode/predictive-state quotient analogue; standard ancestry expected, no novelty; exact theorem-level locator remains a Deep Research 20 burden",
+  "claim_ceiling": "depth-specific finite deterministic minimal predictive-state count; no stochastic/measurable extension, architecture exclusion, source-world transfer, or metaphysical truth",
+  "complete_profile_fibres": 64,
+  "deleted_continuation_coordinate_merge_tables": 512,
+  "errors": [],
+  "history_label_permutation_checks": 2048,
+  "history_label_permutation_failure_count": 0,
+  "input_zero_only_false_sufficiency_tables": 256,
+  "kernel_tables": 1024,
+  "minimality_mismatch_count": 0,
+  "model_digest": "2a040dfa6dd259ee1830b43377156810791facc74a89e7eaf69d960b9deffa4f",
+  "mutants_killed": 7,
+  "mutants_total": 7,
+  "mutations": [
+    {
+      "killed": true,
+      "killer": "two reachable histories with identical continuation behavior",
+      "mutant": "every_reachable_history_requires_a_distinct_minimal_state"
+    },
+    {
+      "killed": true,
+      "killer": "state-splitting duplicate labels",
+      "mutant": "raw_state_count_is_representation_invariant"
+    },
+    {
+      "killed": true,
+      "killer": "deleted-continuation-coordinate witness",
+      "mutant": "one_retained_continuation_input_suffices_for_full_predictive_equivalence"
+    },
+    {
+      "killed": true,
+      "killer": "complete-profile fibre invariance across off-support table variants",
+      "mutant": "off_support_table_bits_change_predictive_quotient_despite_equal_complete_profiles"
+    },
+    {
+      "killed": true,
+      "killer": "quotient depends on future behavior, not labels or provenance tags",
+      "mutant": "learned_or_hand_authored_state_labels_change_the_quotient"
+    },
+    {
+      "killed": true,
+      "killer": "lower bound is relative to the frozen deterministic interface and machine semantics",
+      "mutant": "predictive_state_lower_bound_identifies_metaphysical_architecture"
+    },
+    {
+      "killed": true,
+      "killer": "fresh decoder search for every causal table",
+      "mutant": "prefilled_minimal_state_counts"
+    }
+  ],
+  "off_support_table_pairs_inside_profile_fibres": 7680,
+  "profile_invariance_failure_count": 0,
+  "quotient_class_count_one_tables": 256,
+  "quotient_class_count_two_tables": 768,
+  "schema": "spa-r12-check-results-v1",
+  "specialist_local_result": "SPA-R12",
+  "status": "PASS"
+}

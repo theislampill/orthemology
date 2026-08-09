@@ -1,0 +1,595 @@
+{
+  "bounded_countermodel_sample": [
+    {
+      "belief": [
+        1
+      ],
+      "good": [
+        0
+      ],
+      "n": 2,
+      "obs": [
+        0,
+        0
+      ],
+      "trans": [
+        [
+          0,
+          1
+        ],
+        [
+          1,
+          0
+        ]
+      ]
+    },
+    {
+      "belief": [
+        0,
+        1
+      ],
+      "good": [
+        0
+      ],
+      "n": 2,
+      "obs": [
+        0,
+        0
+      ],
+      "trans": [
+        [
+          0,
+          1
+        ],
+        [
+          1,
+          0
+        ]
+      ]
+    },
+    {
+      "belief": [
+        0
+      ],
+      "good": [
+        1
+      ],
+      "n": 2,
+      "obs": [
+        0,
+        0
+      ],
+      "trans": [
+        [
+          0,
+          1
+        ],
+        [
+          1,
+          0
+        ]
+      ]
+    },
+    {
+      "belief": [
+        0,
+        1
+      ],
+      "good": [
+        1
+      ],
+      "n": 2,
+      "obs": [
+        0,
+        0
+      ],
+      "trans": [
+        [
+          0,
+          1
+        ],
+        [
+          1,
+          0
+        ]
+      ]
+    },
+    {
+      "belief": [
+        1
+      ],
+      "good": [
+        0
+      ],
+      "n": 2,
+      "obs": [
+        0,
+        0
+      ],
+      "trans": [
+        [
+          1,
+          0
+        ],
+        [
+          0,
+          1
+        ]
+      ]
+    },
+    {
+      "belief": [
+        0,
+        1
+      ],
+      "good": [
+        0
+      ],
+      "n": 2,
+      "obs": [
+        0,
+        0
+      ],
+      "trans": [
+        [
+          1,
+          0
+        ],
+        [
+          0,
+          1
+        ]
+      ]
+    },
+    {
+      "belief": [
+        0
+      ],
+      "good": [
+        1
+      ],
+      "n": 2,
+      "obs": [
+        0,
+        0
+      ],
+      "trans": [
+        [
+          1,
+          0
+        ],
+        [
+          0,
+          1
+        ]
+      ]
+    },
+    {
+      "belief": [
+        0,
+        1
+      ],
+      "good": [
+        1
+      ],
+      "n": 2,
+      "obs": [
+        0,
+        0
+      ],
+      "trans": [
+        [
+          1,
+          0
+        ],
+        [
+          0,
+          1
+        ]
+      ]
+    },
+    {
+      "belief": [
+        2
+      ],
+      "good": [
+        1
+      ],
+      "n": 3,
+      "obs": [
+        0,
+        0,
+        0
+      ],
+      "trans": [
+        [
+          0,
+          0
+        ],
+        [
+          0,
+          1
+        ],
+        [
+          1,
+          0
+        ]
+      ]
+    },
+    {
+      "belief": [
+        1,
+        2
+      ],
+      "good": [
+        1
+      ],
+      "n": 3,
+      "obs": [
+        0,
+        0,
+        0
+      ],
+      "trans": [
+        [
+          0,
+          0
+        ],
+        [
+          0,
+          1
+        ],
+        [
+          1,
+          0
+        ]
+      ]
+    },
+    {
+      "belief": [
+        2
+      ],
+      "good": [
+        1
+      ],
+      "n": 3,
+      "obs": [
+        0,
+        1,
+        1
+      ],
+      "trans": [
+        [
+          0,
+          0
+        ],
+        [
+          0,
+          1
+        ],
+        [
+          1,
+          0
+        ]
+      ]
+    },
+    {
+      "belief": [
+        1,
+        2
+      ],
+      "good": [
+        1
+      ],
+      "n": 3,
+      "obs": [
+        0,
+        1,
+        1
+      ],
+      "trans": [
+        [
+          0,
+          0
+        ],
+        [
+          0,
+          1
+        ],
+        [
+          1,
+          0
+        ]
+      ]
+    },
+    {
+      "belief": [
+        2
+      ],
+      "good": [
+        1,
+        2
+      ],
+      "n": 3,
+      "obs": [
+        0,
+        0,
+        0
+      ],
+      "trans": [
+        [
+          0,
+          0
+        ],
+        [
+          0,
+          1
+        ],
+        [
+          1,
+          0
+        ]
+      ]
+    },
+    {
+      "belief": [
+        1,
+        2
+      ],
+      "good": [
+        1,
+        2
+      ],
+      "n": 3,
+      "obs": [
+        0,
+        0,
+        0
+      ],
+      "trans": [
+        [
+          0,
+          0
+        ],
+        [
+          0,
+          1
+        ],
+        [
+          1,
+          0
+        ]
+      ]
+    },
+    {
+      "belief": [
+        2
+      ],
+      "good": [
+        1,
+        2
+      ],
+      "n": 3,
+      "obs": [
+        0,
+        1,
+        1
+      ],
+      "trans": [
+        [
+          0,
+          0
+        ],
+        [
+          0,
+          1
+        ],
+        [
+          1,
+          0
+        ]
+      ]
+    },
+    {
+      "belief": [
+        1,
+        2
+      ],
+      "good": [
+        1,
+        2
+      ],
+      "n": 3,
+      "obs": [
+        0,
+        1,
+        1
+      ],
+      "trans": [
+        [
+          0,
+          0
+        ],
+        [
+          0,
+          1
+        ],
+        [
+          1,
+          0
+        ]
+      ]
+    },
+    {
+      "belief": [
+        2
+      ],
+      "good": [
+        1
+      ],
+      "n": 3,
+      "obs": [
+        0,
+        0,
+        0
+      ],
+      "trans": [
+        [
+          0,
+          0
+        ],
+        [
+          0,
+          1
+        ],
+        [
+          1,
+          2
+        ]
+      ]
+    },
+    {
+      "belief": [
+        1,
+        2
+      ],
+      "good": [
+        1
+      ],
+      "n": 3,
+      "obs": [
+        0,
+        0,
+        0
+      ],
+      "trans": [
+        [
+          0,
+          0
+        ],
+        [
+          0,
+          1
+        ],
+        [
+          1,
+          2
+        ]
+      ]
+    },
+    {
+      "belief": [
+        2
+      ],
+      "good": [
+        1
+      ],
+      "n": 3,
+      "obs": [
+        0,
+        1,
+        1
+      ],
+      "trans": [
+        [
+          0,
+          0
+        ],
+        [
+          0,
+          1
+        ],
+        [
+          1,
+          2
+        ]
+      ]
+    },
+    {
+      "belief": [
+        1,
+        2
+      ],
+      "good": [
+        1
+      ],
+      "n": 3,
+      "obs": [
+        0,
+        1,
+        1
+      ],
+      "trans": [
+        [
+          0,
+          0
+        ],
+        [
+          0,
+          1
+        ],
+        [
+          1,
+          2
+        ]
+      ]
+    }
+  ],
+  "conclusion_ceiling": "declared finite partial-observation controller model only",
+  "explicit_countermodel": {
+    "good_states": [
+      2
+    ],
+    "individually_perfect_information_winning": true,
+    "initial_belief": [
+      0,
+      1
+    ],
+    "lesson": "statewise perfect-information winning is not sufficient when one observation class requires conflicting actions",
+    "observation_based_winning": false,
+    "observation_labels": [
+      0,
+      0,
+      1,
+      2
+    ],
+    "observation_strategy": null,
+    "states": {
+      "0": "s0",
+      "1": "s1",
+      "2": "good_sink",
+      "3": "bad_sink"
+    },
+    "transition": [
+      [
+        2,
+        3
+      ],
+      [
+        3,
+        2
+      ],
+      [
+        2,
+        2
+      ],
+      [
+        3,
+        3
+      ]
+    ],
+    "uniform_perfect_information_winning": false,
+    "uniform_state_strategy": null
+  },
+  "guards": [
+    "finite deterministic transition system",
+    "two common actions",
+    "stationary strategies",
+    "observation map frozen",
+    "co-Buchi objective evaluated on eventual cycle",
+    "initial uncertainty represented as a finite belief set"
+  ],
+  "narrow_statement": "an observation-based stationary strategy is exactly an observation-uniform perfect-information stationary strategy; individual statewise winning is only necessary",
+  "schema": "spa-r4-observation-cobuchi-models-v1",
+  "specialist_local_result": "SPA-R4"
+}

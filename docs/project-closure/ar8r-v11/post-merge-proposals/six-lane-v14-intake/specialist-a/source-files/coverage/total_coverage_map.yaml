@@ -1,0 +1,118 @@
+schema: spa-total-declared-family-coverage-v1
+specialist_local_result: SPA-R1
+totality_scope: exact declared_family_manifest.yaml only
+whole_repository_exhaustion_claimed: false
+rows:
+- family_id: DEEP_BV_COMMON_INTERVENTION_IDENTIFIABILITY
+  factor_ids:
+  - all
+  bucket: derived_analysis
+  reason: fibre/partition criterion over complete profiles
+- family_id: DEEP_BW_TARGET_BLIND_SATURATION
+  factor_ids:
+  - challenge_nonce
+  - causal_mode
+  bucket: derived_analysis
+  reason: target-blind policy and conservative expansion warning
+- family_id: DEEP_BX_MINIMUM_BREAKING_ANCHOR_COVER
+  factor_ids: []
+  bucket: external_anchor_required
+  reason: anchor cover is optimized after anchors are independently eligible
+- family_id: DEEP_BY_SOURCE_WORLD_ANCHOR_CONDITIONS
+  factor_ids:
+  - authority_version
+  bucket: outside_declared_neutral_class
+  reason: source-world truth and personality are not neutral decoder fields
+- family_id: DEEP_BZ_BINARY_ARCHITECTURE_EXPANSIONS
+  factor_ids: []
+  bucket: derived_analysis
+  reason: target-coordinate expansion and reduct nonidentifiability
+- family_id: DEEP_CA_RESOURCE_COMPARISON_IDENTIFIABILITY
+  factor_ids:
+  - resource_band
+  bucket: included_neutral_factor
+  reason: finite common resource bins only
+- family_id: DEEP_CB_RESTRICTION_FIBRE_WARNING
+  factor_ids:
+  - all
+  bucket: derived_analysis
+  reason: profile-derived restrictions cannot refine profile fibres
+- family_id: DEEP_CC_COMMON_SECTION_QUANTIFIER
+  factor_ids: []
+  bucket: external_anchor_required
+  reason: common witness/bearer relation not supplied by local factor maps
+- family_id: DEEP_CD_NEUTRAL_ORBIT_PROFILE
+  factor_ids:
+  - form
+  - content
+  bucket: derived_analysis
+  reason: representation/orbit invariance test
+- family_id: DEEP_CE_UNIT_SEPARABILITY
+  factor_ids:
+  - causal_mode
+  bucket: derived_analysis
+  reason: unit-separability is an architecture-coordinate test, not a neutral factor
+    label
+- family_id: DEEP_CF_COMMON_BEARER_INTERSECTION
+  factor_ids: []
+  bucket: external_anchor_required
+  reason: actual common bearer requires independently typed bearer relation
+- family_id: DEEP_CG_SIX_CONDITION_MODEL
+  factor_ids:
+  - target_truth_relation
+  - content
+  - provenance_operation
+  bucket: derived_analysis
+  reason: operational conditions remain below personality/Wisdom/Speech
+- family_id: DEEP_CH_OWNERSHIP_INTERVENTION
+  factor_ids: []
+  bucket: outside_declared_neutral_class
+  reason: ownership/de-se labels are ineligible without a common nonspoofable anchor
+- family_id: DEEP_CI_SEMANTIC_CONTENT_SWAP
+  factor_ids:
+  - content
+  bucket: included_neutral_factor
+  reason: matched content swap
+- family_id: DEEP_CJ_FORM_SEMANTIC_GROUND_FACTORIAL
+  factor_ids:
+  - form
+  - content
+  - provenance_operation
+  bucket: included_neutral_factor
+  reason: finite crossed factor projection
+- family_id: CHALLENGER_A_CAUSAL_CUTS
+  factor_ids:
+  - causal_mode
+  bucket: included_neutral_factor
+  reason: external channel cut
+- family_id: CHALLENGER_A_TARGET_TRUTH_CONFLICT
+  factor_ids:
+  - target_truth_relation
+  bucket: included_neutral_factor
+  reason: external target/certificate conflict
+- family_id: CHALLENGER_A_FORM_CONTENT_CROSS
+  factor_ids:
+  - form
+  - content
+  bucket: included_neutral_factor
+  reason: complete form-content crossing
+- family_id: CHALLENGER_A_AUTHORITY_VERSION_ROTATION
+  factor_ids:
+  - authority_version
+  bucket: included_neutral_factor
+  reason: authenticated authority/version state
+- family_id: CHALLENGER_A_PROVENANCE_ROOT_INTERVENTION
+  factor_ids:
+  - provenance_operation
+  bucket: included_neutral_factor
+  reason: authenticated root versus copy
+- family_id: CHALLENGER_A_OWNERSHIP_PERMUTATION
+  factor_ids: []
+  bucket: outside_declared_neutral_class
+  reason: ownership remains target-relative until independently operationalized
+- family_id: CHALLENGER_A_NONCE_RESOURCE_STRESS
+  factor_ids:
+  - challenge_nonce
+  - resource_band
+  bucket: included_neutral_factor
+  reason: finite nonce and resource bins

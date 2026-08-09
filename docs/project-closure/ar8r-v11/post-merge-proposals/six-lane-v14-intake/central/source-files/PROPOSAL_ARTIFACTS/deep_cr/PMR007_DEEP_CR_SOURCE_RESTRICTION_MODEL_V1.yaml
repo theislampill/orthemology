@@ -1,0 +1,35 @@
+schema: PMR007_DEEP_CR_SOURCE_RESTRICTION_MODEL_V1
+identity: PMR-007-FSRA-1
+version: V1
+base_family: PMR-007-NURV-1
+guards:
+  - exact_textual_custody
+  - version_identity
+  - translation_fidelity
+  - attribution_fidelity
+  - source_authority
+  - source_truth_in_track_n
+  - actual_referent_or_world_interpretation
+  - predicate_preservation
+  - target_bearer_context_applicability
+  - formal_target_link
+v1_claim:
+  full_guards: source package uniquely selects h_F
+  missing_guard: source restriction unlicensed
+countermodel_templates:
+  - same_text_different_version
+  - faithful_translation_wrong_referent
+  - true_source_inapplicable_bearer
+  - predicate_preservation_failure
+  - formal_target_side_channel
+  - neutral_profile_personal_impersonal_parity
+source_owners:
+  - file: "Ibn Taymiyyah's Epistemology(3).md"
+    sha256: d9b2fe81165c363cf7ca4ba1ed50074b3542b38793c442b7cddf219e229a7dde
+    authority: SECONDARY_COLLECTION_AND_PRIMARY_LOCATOR
+  - file: The_Incoherence_of_Atheism_by_Sheikh_Abdullah_ibn_Salih_Al-Ujayri(1).md
+    sha256: 4aea9b66f178e3454015cd0082c3adb0dda5ae80593f7e37d26b73a96028a2d1
+    authority: CONTEMPORARY_ATHARI_SYNTHESIS
+  - file: Carl_Sharif_El-Tobgui_dissertation_snapshot.md
+    sha256: 657454ff7a1c43b895e7a378d12993295368a97c3f35df5a76edfaa32f67a177
+    authority: SECONDARY_SCHOLARLY_RECONSTRUCTION

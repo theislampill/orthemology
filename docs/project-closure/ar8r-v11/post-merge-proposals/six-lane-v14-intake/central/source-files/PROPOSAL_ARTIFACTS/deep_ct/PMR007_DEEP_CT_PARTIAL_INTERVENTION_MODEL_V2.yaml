@@ -1,0 +1,53 @@
+schema: PMR007_DEEP_CT_PARTIAL_INTERVENTION_MODEL_V2
+identity: PMR-007-PCDF-1
+typed_objects:
+  M: finite declared architecture class
+  E: complete current evidence profile
+  Q: unresolved target coordinate
+  A: intervention-availability indicator
+  Y: outcome on the available domain
+  X: totalized signal pairing availability with Y-or-bottom
+  T: joint extended profile (E, X)
+three_way_fork:
+  restricted_domain:
+    meaning: evidence is defined only on D_A
+    ceiling: identifies at most Q restricted to D_A
+  independently_certified_totalization:
+    meaning: availability/nonimplementation is observed under a target-blind semantics contract
+    ceiling: a new experiment or anchor, governed by the ordinary fibre criterion
+  target_defined_totalization:
+    meaning: availability or outcome is defined by Q, personality, or architecture label
+    ceiling: formal separation with target leakage; evidentially ineligible
+old_profile_barrier:
+  assumption: totalized signal X factors through E
+  result: joint profile (E,X) has exactly the E fibres
+architecture_application:
+  architectures: [U, I, P]
+  current_neutral_profile: {U: neutral_0, I: neutral_0, P: neutral_0}
+  personal_target: {U: 1, I: 0, P: 0}
+  operations:
+    common_proxy:
+      availability: {U: 1, I: 1, P: 1}
+      outcome: {U: 0, I: 0, P: 0}
+      result: NO_DISCRIMINATION
+    common_bearer_probe:
+      availability: {U: 1, I: 1, P: 1}
+      outcome: {U: 1, I: 1, P: 0}
+      result: SEPARATES_P_NOT_U_I
+    intentional_uptake_direct:
+      availability: {U: 1, I: 0, P: 0}
+      result: MATHEMATICALLY_SEPARATING_BUT_TARGET_LADEN_WITHOUT_INDEPENDENT_CAPABILITY_CERTIFICATE
+    architecture_oracle:
+      availability: {U: 1, I: 1, P: 1}
+      outcome: {U: 1, I: 0, P: 0}
+      result: INELIGIBLE_TARGET_ORACLE
+eligibility_guards:
+  - target-independent specification
+  - type identity
+  - version identity
+  - common abstract semantics
+  - implementation-map preservation
+  - authorization
+  - resource eligibility
+  - complete observation and missingness contract
+  - source/world applicability when source-relative

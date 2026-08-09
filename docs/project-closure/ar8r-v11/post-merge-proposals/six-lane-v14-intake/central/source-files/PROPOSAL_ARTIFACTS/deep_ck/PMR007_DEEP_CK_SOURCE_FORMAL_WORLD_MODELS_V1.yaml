@@ -1,0 +1,77 @@
+schema: pmr007-deep-ck-source-formal-world-models-v1
+identity: PMR-007-SFWA-1
+source_object:
+  id: g
+  translated_source_roles: [one, knowing, able, living, volitional, speaking, wise_or_praiseworthy]
+  authority: TRANSLATED_PRIMARY_ACCESS_NOT_ARABIC_PRIMARY_VERIFICATION
+world_models:
+  U_unified_personal:
+    bearers: [u]
+    source_interpretation: {g: u}
+    functional_roles: {knowledge: u, will: u, power: u, semantic: u, efficacy: u}
+    intensional_roles: {knowledge: u, will: u, power: u, speech: u}
+    common_bearer: true
+    objective_fittingness: true
+    intentional_uptake: true
+    selection_because_fitting: true
+    reliable_realization: true
+    wisdom: true
+  I_impersonal_powers:
+    bearers: [i]
+    source_interpretation: {g: i}
+    functional_roles: {knowledge: i, will: i, power: i, semantic: i, efficacy: i}
+    intensional_roles: {}
+    common_bearer: true
+    fittingness_signal: true
+    objective_fittingness: false
+    intentional_uptake: false
+    selection_because_fitting: false
+    reliable_realization: true
+    wisdom: false
+  P_plural_coordinated:
+    bearers: [k, w, p, r]
+    source_interpretation: {g: r}
+    functional_roles: {knowledge: k, will: w, power: p, semantic: k, efficacy: p}
+    intensional_roles: {}
+    common_bearer: false
+    fittingness_signal: true
+    objective_fittingness: false
+    intentional_uptake: false
+    selection_because_fitting: false
+    reliable_realization: true
+    wisdom: false
+source_transfer_guards:
+  - source_regime
+  - exact_custody
+  - version_identity
+  - translation_adequacy
+  - source_bearer_identified
+  - interpretation_supplied
+  - predicate_preservation
+  - target_applicability
+wisdom_role_guards:
+  - objective_fittingness
+  - knowledge_or_apprehension
+  - intentional_uptake
+  - selection_because_fitting
+  - reliable_realization
+  - common_bearer
+countermodels:
+  - id: CK-CM-01
+    name: functional_predicate_weakening
+    surviving_model: I_impersonal_powers
+  - id: CK-CM-02
+    name: plural_role_realization
+    surviving_model: P_plural_coordinated
+  - id: CK-CM-03
+    name: referent_ambiguity
+    interpretations: [U_unified_personal, I_impersonal_powers]
+  - id: CK-CM-04
+    name: fittingness_signal_without_objective_fittingness
+    surviving_model: I_impersonal_powers
+  - id: CK-CM-05
+    name: downstream_speech_host
+    conclusion: cause_of_speech_is_not_thereby_speaker
+  - id: CK-CM-06
+    name: common_bearer_without_intentional_uptake
+    surviving_model: I_impersonal_powers

@@ -245,32 +245,26 @@ claims:
   locus: companion/orthability-divine-attributes-and-speech-athari.md §5
   claim_level: school-internal (classical formulation)
   claim: "the words are the words of the Creator, and the voice is the voice of the reciter"
-  source: Ibn Taymiyyah, Majmu' al-Fatawa, vol. 12
-  source_type: primary classical text read through the owner-supplied compilation
+  source: Ibn Taymiyyah, Majmu' al-Fatawa, vol. 12, authoritative digital rendering opened directly
+  source_type: primary classical text in a directly checked digital rendering
   doi: null
-  locus_exact: vol. 12; the commonly cited 12/98 vs 12/173-region pagination is edition-dependent
-  status: COMPILATION_MEDIATED
-  verification_date: 2026-07-20
-  wording_directly_checked: false
+  locus_exact: vol. 12, digital pages 98 and 409; printed-edition pagination remains edition-dependent
+  status: PRIMARY_TEXT_EXACT
+  verification_date: 2026-08-09
+  wording_directly_checked: true
   page_edition_dependent: true
   school_flag: Athari/Taymiyyan
   support: >-
-    supports the Athari claim at compilation-mediated strength; the corpus does not assert direct
-    verification of this locus, and no claim rests on this row alone (the doctrine is carried by the
-    ATH-1/ATH-2 primary texts and the enumerated parallels). Status is pending direct edition access.
+    supports the exact school-internal wording in the checked digital rendering; it does not by
+    itself establish a neutral metaphysical conclusion, printed-edition pagination, or any
+    orthemological source-to-world bridge.
   notes: >-
-    R4 INDEPENDENT-REVIEW DOWNGRADE. The R4 candidate registry recorded this row as
-    PRIMARY_TEXT_EXACT with wording_directly_checked true, while the companion prose labels this
-    same locus [via compilation] at the corresponding section. Those two surfaces made incompatible
-    evidence-access claims about one citation. The independent review could not itself confirm that
-    a printed edition or an authoritative direct full-text rendering of Majmu' al-Fatawa vol. 12 was
-    opened, so it takes the WEAKER of the two claims rather than the stronger. The formula is widely
-    attested and the adopted Athari doctrine is unchanged; what changes is only the recorded strength
-    of this row's evidence access. Status is pending direct edition access; promotion trigger is
-    direct edition or authoritative full-text
-    access, which would also settle the edition-dependent pagination (research residual RR-1).
-    Recurrence is prevented mechanically: validate_source_status.py now fails any PRIMARY_TEXT_EXACT
-    row whose locus is labelled [via compilation] in the companion prose.
+    V14 promotion after the recorded trigger was satisfied by direct authoritative full-text access.
+    The exact Arabic is الكلام كلام الباري والصوت صوت القارئ. The checked rendering contains it at
+    both vol. 12 p. 98 and p. 409: p. 98 is the direct reciter-voice locus, while p. 409 repeats it in
+    the discussion of the ambiguity of lafz. This confirms rather than rejects the earlier 12/98
+    reference while leaving printed-edition mapping open. Other sources in the same companion section
+    remain compilation-mediated and are labeled separately.
 - id: ATH-4
   locus: companion/orthability-divine-attributes-and-speech-athari.md §5
   claim_level: school-internal

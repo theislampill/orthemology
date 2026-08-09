@@ -1,0 +1,100 @@
+schema: spa-two-round-crosswalk-receipt-v1
+receipt: R11_R12
+authority: PRIVATE_SPECIALIST_RESEARCH_NO_REPOSITORY_ADOPTION
+repository_sha: 9b80f2dfdf73a768ccad6a6ea2f2998c70ebdcf3
+results:
+- id: SPA-R11
+  note_path: rounds/SPA-R11_HISTORY_STATE_TWIN.md
+  note_sha256: 11a320df4ef2d93fe208798c17028129c29cdf7b51a8a8988bbe33945a509b0d
+  result_path: results/r11_history_state_twin_results.json
+  result_sha256: 049fbb747965d5f2de6e870ee6fa46f3fe1860f63d4de78e4b597c6199df0bc2
+  checker_status: PASS
+  mutants_killed: 7
+  mutants_total: 7
+  claim_ceiling: finite horizon-two deterministic interface and conditional model-class
+    closure only; no actual architecture implementation, resource lower bound, infinite-horizon
+    result, or metaphysical truth
+  ancestry_disposition: standard finite history-state/behavioral realization construction
+    and experiment-profile equivalence; no novelty; exact durable ancestry remains
+    a Deep Research 20 burden
+- id: SPA-R12
+  note_path: rounds/SPA-R12_PREDICTIVE_QUOTIENT.md
+  note_sha256: 5e1d4f91f00bfbcb5c1ee045220832ef06d3dc8ccf91faba08ed6d8ea7760198
+  result_path: results/r12_predictive_quotient_results.json
+  result_sha256: 3ac5802d2e782f4af2854725b857c79cd54c539579926240df9f3f8e8e824f37
+  checker_status: PASS
+  mutants_killed: 7
+  mutants_total: 7
+  claim_ceiling: depth-specific finite deterministic minimal predictive-state count;
+    no stochastic/measurable extension, architecture exclusion, source-world transfer,
+    or metaphysical truth
+  ancestry_disposition: finite deterministic Myhill-Nerode/predictive-state quotient
+    analogue; standard ancestry expected, no novelty; exact theorem-level locator
+    remains a Deep Research 20 burden
+formal_status: both executable finite deterministic checkers PASS; theorem-level Lean
+  and measurable/stochastic extensions not run
+assumptions:
+- finite horizon-two causal kernel
+- binary interventions and outputs
+- complete trajectory laws
+- candidate-independent policies
+- class closure separately warranted
+- fixed depth for predictive quotient
+- deterministic state/output semantics
+conclusion_ceiling: finite behavioural realization, conditional closure-based nonidentifiability,
+  and depth-specific predictive minimality only; no actual architecture membership,
+  infinite horizon, or metaphysical transfer
+ancestry_novelty_disposition: standard history-state behavioural realization plus
+  finite Myhill-Nerode/predictive quotient analogue; novelty 0; durable theorem-level
+  locators pending DR20
+countermodels:
+- selected-policy collision despite different complete profiles
+- output-only state failure
+- canonical history-state nonminimality
+- deleted continuation input merging inequivalent histories
+- state splitting inflating raw state count
+- off-support table differences inside one profile fibre
+combined_mutation_status:
+  killed: 14
+  total: 14
+lean_checker_status: no machine claim; stable statements remain queued until exact
+  ancestry and a usable Lean 4.32.2 toolchain are available
+dependencies_closed:
+- canonical history state as resource minimum
+- output-only history sufficiency
+- one selected policy completeness
+- adaptivity strictness after complete open-loop trajectories in the frozen deterministic
+  contract
+- raw state count as invariant
+- off-support bits as predictive information
+dependencies_opened: &id001
+- architecture-class closure evidence
+- stochastic/measurable history-state theorem contract
+- infinite-horizon topology/regularity
+- predictive-state lower bounds under common machine models
+- external clock and locality accounting
+input_requested_from_specialist_b: State any independently defended closure or impossibility
+  premise that places/excludes a history-state realiser in a personal, impersonal,
+  or plural class; this lane does not infer architecture membership.
+input_requested_from_deep_research: 'DR20: exact history-state, experiment comparison,
+  Myhill-Nerode/causal-state ancestry. DR22: resource, locality, clock, and held-out
+  implementation protocols for predictive-state lower bounds.'
+central_flywheel_effects:
+- common_intervention nonidentifiability gains an explicit finite adaptive twin schema
+- resource comparison replaces canonical history count with predictive quotient classes
+- observation quotient and temporal interface nodes are linked without theorem identity
+  collapse
+- hard boundary moves to actual class closure and empirical implementation
+remaining_burdens: *id001
+exact_next_atomic_action: obtain an actual target-blind architecture implementation
+  map or a separately justified class-closure/resource lower-bound premise; otherwise
+  preserve the bounded nonidentifiability boundary
+firewalls:
+  owner_adoption: NOT_CLAIMED
+  repository_scientific_adoption: NONE
+  historical_identity: NONE
+  novelty: 0
+  source_world_transfer: NOT_ESTABLISHED
+  metaphysical_conclusion: NONE
+  meniscus: NOT_REACHED
+  closure: NOT_REACHED

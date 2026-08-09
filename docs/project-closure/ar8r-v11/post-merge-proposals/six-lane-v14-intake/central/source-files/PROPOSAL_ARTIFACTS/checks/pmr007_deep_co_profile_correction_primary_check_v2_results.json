@@ -1,0 +1,16 @@
+{
+  "architecture_specific_channel_splits_but_not_common": true,
+  "common_stochastic_channel_checks": 5120,
+  "control_count": 6,
+  "deterministic_failures": 0,
+  "deterministic_postprocess_checks": 1940,
+  "equal_profile_laws": 20,
+  "guard_count": 6,
+  "model_schema": "pmr007-deep-co-profile-measurable-correction-models-v2",
+  "not_covered_count": 7,
+  "pass": true,
+  "schema": "pmr007-deep-co-profile-correction-primary-check-v2-results",
+  "scope": "finite_equal_profile_laws_common_target_independent_postprocessing",
+  "stochastic_failures": 0,
+  "target_oracle_splits_but_ineligible": true
+}

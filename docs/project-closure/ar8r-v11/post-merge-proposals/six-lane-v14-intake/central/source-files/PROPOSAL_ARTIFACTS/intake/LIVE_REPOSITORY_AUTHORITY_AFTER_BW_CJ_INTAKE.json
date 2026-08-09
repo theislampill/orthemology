@@ -1,0 +1,19 @@
+{
+  "compare_to_main": "IDENTICAL",
+  "expected_origin_main": "9b80f2dfdf73a768ccad6a6ea2f2998c70ebdcf3",
+  "github_changed_by_this_thread": false,
+  "merge_commit": true,
+  "merge_pr": 25,
+  "observed_origin_main": "9b80f2dfdf73a768ccad6a6ea2f2998c70ebdcf3",
+  "owner_zip": "orthemology-main(11)(2).zip",
+  "owner_zip_sha256": "78d049d4711d2b0cffe7cb8071d01d22b99a00126196caa5e2c4be4826eb100c",
+  "parents": [
+    "a8142c3",
+    "ffb6997"
+  ],
+  "repository": "theislampill/orthemology",
+  "schema": "pmr007-live-repository-authority-after-bw-cj-intake-v1",
+  "web_verified": true,
+  "zip_crc": "PASS",
+  "zip_path_safety": "PASS"
+}

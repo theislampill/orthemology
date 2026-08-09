@@ -163,6 +163,31 @@ external_challenge_custody:
   novelty_effect: NONE
   owner_adoption: PENDING
   repository_scientific_adoption: NONE
+six_lane_v14_intake:
+  path: post-merge-proposals/six-lane-v14-intake
+  central_source_files: 178
+  specialist_a_source_files: 77
+  specialist_b_source_files: 29
+  deep_research_reports_hashed_not_copied: 3
+  central_result_owners:
+    total: 31
+    reproduced: 13
+    source_absent: 17
+    blocked_missing_sidecar: 1
+  specialist_a: CORRECTION_REQUIRED_R7_R9_AND_ORIGINAL_LEAN_FAILURES
+  specialist_b: CHECKER_SOURCE_ABSENT_SIGNATURE_REPAIRS_REQUIRED_LOCATOR_OVERLAY_APPLIED
+  deep_research_20: BOUNDED_PRIOR_ART_RELATION_CORRECTIONS
+  deep_research_21: BOUNDED_PRIMARY_LOCUS_AND_SOURCE_LAYER_RECORDS
+  deep_research_22: PROTOCOL_SCOUTING_B1_B4_UNANSWERED_ZERO_READY_TO_RUN
+  historical_identity: NONE
+  owner_adoption: PENDING
+  external_review: OPEN
+  repository_scientific_adoption: NONE
+  general_novelty_credit: NOT_GRANTED
+  empirical_program_run: false
+  integrated_champion: NONE
+  meniscus: MENISCUS_NOT_REACHED
+  natural_closure: NOT_REACHED
 campaign_state:
   integrated_champion: NONE
   meniscus: MENISCUS_NOT_REACHED

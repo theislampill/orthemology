@@ -1,0 +1,57 @@
+{
+  "ancestry_disposition": "elementary partition refinement/coverage-function machinery; no novelty; relation to anchor set cover remains application-level unless proposition identity is proved",
+  "claim_ceiling": "bounded exact finite target partition; no empirical, causal, source-world, or metaphysical truth inference",
+  "declared_signature_cases": 32768,
+  "errors": [],
+  "full_identification_cases": 15456,
+  "gain_residual_identity_checks": 262144,
+  "identity_failure_count": 0,
+  "model_digest": "eae0d0eb6bab2d25fdf5965a0051b80ff61210477fb9a97840b9c125ef331e3a",
+  "monotonicity_checks": 884736,
+  "monotonicity_failure_count": 0,
+  "mutants_killed": 7,
+  "mutants_total": 7,
+  "mutations": [
+    {
+      "killed": true,
+      "killer": "high-cardinality profile-derived factor",
+      "mutant": "rank_candidate_by_raw_cardinality_or_entropy"
+    },
+    {
+      "killed": true,
+      "killer": "coverage overlap in complementary weak factors",
+      "mutant": "sum_individual_gains_without_overlap_correction"
+    },
+    {
+      "killed": true,
+      "killer": "Deep-CB-style restriction principle",
+      "mutant": "profile_derived_factor_can_split_profile_fibre"
+    },
+    {
+      "killed": true,
+      "killer": "target-leak guard",
+      "mutant": "maximum_gain_factor_is_automatically_neutral"
+    },
+    {
+      "killed": true,
+      "killer": "complementary residual coverage",
+      "mutant": "two_partial_factors_cannot_remove_all_residuals"
+    },
+    {
+      "killed": true,
+      "killer": "conclusion ceiling is target identification within the declared finite manifest only",
+      "mutant": "full_manifest_collision_elimination_proves_metaphysical_truth"
+    },
+    {
+      "killed": true,
+      "killer": "fresh collision-pair enumeration, identity, monotonicity, and submodularity checks",
+      "mutant": "prefilled_gain_table_without_pair_derivation"
+    }
+  ],
+  "profile_derived_zero_gain_checks": 64,
+  "schema": "spa-r8-check-results-v1",
+  "specialist_local_result": "SPA-R8",
+  "status": "PASS",
+  "submodularity_checks": 884736,
+  "submodularity_failure_count": 0
+}

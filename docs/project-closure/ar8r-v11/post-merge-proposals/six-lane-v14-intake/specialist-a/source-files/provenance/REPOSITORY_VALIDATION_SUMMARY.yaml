@@ -1,0 +1,19 @@
+schema: spa-sanitized-repository-validation-summary-v1
+repository_sha: 9b80f2dfdf73a768ccad6a6ea2f2998c70ebdcf3
+targeted_pytest:
+  tests: 2
+  cases_passed: 11
+  status: PASS
+bw_cj_validator:
+  status: PASS_WITH_SEMANTIC_REISSUE_CEILING
+  checker_pass_count: 14
+  v1_false_pass_detected: true
+  v3_checker_reproduced: true
+  authority_ceiling_exact: true
+external_challenge_validator:
+  status: PASS_NONAUTHORITATIVE_CHALLENGE_CUSTODY
+  challenger_b_finite_checker_reproduced: true
+  original_lean_failure_recorded: true
+  repaired_lean_receipt_exact: true
+ceiling: repository custody and bounded checker validation only; no proposal adoption,
+  architecture implementation, novelty, or metaphysical conclusion

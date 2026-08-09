@@ -1,0 +1,16 @@
+{
+  "exhaustive_two_state_systems": 4096,
+  "family_shapes_exercised": {
+    "empty": true,
+    "plural": true,
+    "singleton": true
+  },
+  "first_failure": null,
+  "guard_rows": 2048,
+  "inheritance_monotonicity_failures": 0,
+  "overall": "PASS",
+  "source_guard_single_deletion_witnesses": 9,
+  "source_relative_licensed_rows": 4,
+  "world_directed_licensed_rows": 1,
+  "world_guard_single_deletion_witnesses": 2
+}

@@ -14,3 +14,10 @@ This queue is a formalization plan, not a Lean proof receipt. The static invento
 - **Q1i:** finite hypergraph-transversal base; pure PRRC; AR8R wrapper only after T351/T352 and PRQT-interface gates.
 
 Pure COB has no FRLA dependency, and pure PRRC has no PRQT dependency. Application wrappers may carry those separately declared dependencies. The Connes-rigidity item is an object-faithful audit task after this queue: reproduce the exact public source object, establish the exact toolchain/build/elaboration/kernel/axiom receipts, and obtain independent operator-algebra review before any mathematical settlement.
+
+The six-lane V14 intake adds failed-source and repaired-standalone receipts for
+two Specialist A drafts and one Specialist B draft. These do not advance Q1:
+Specialist A still has an off-range decoder guard defect in R7/R9, its
+observation file does not formalize co-Büchi winning, and Specialist B's
+signatures omit several indices promised by its prose. No project integration
+or downstream build was run for these intake repairs.

@@ -1,0 +1,33 @@
+schema: pmr007-formalization-queue-ck-ct-v2
+repository_authority: 9b80f2dfdf73a768ccad6a6ea2f2998c70ebdcf3
+lean_status:
+  source_created_in_central_block: false
+  specialist_A_drafts: 2
+  specialist_B_signature_source: FILE_LIBRARY_REFERENCE_ONLY
+  parse: NOT_RUN
+  elaboration: NOT_RUN
+  kernel: NOT_RUN
+  project_build: NOT_RUN
+  axiom_report: NOT_RUN
+queue:
+- priority: 1
+  identity: PMR-007-PCDF-1
+  target: partial map/domain restriction, totalization, old-profile-measurability barrier
+  blocker: statement freeze and Lean toolchain
+- priority: 2
+  identity: PMR-007-NURV-1
+  target: finite robust viability/reach-and-stay μ/ν formulation
+  blocker: compare exact standard ancestry and avoid claiming new co-Büchi core
+- priority: 3
+  identity: PMR-007-CUIE-1
+  target: finite history-profile equality under common adaptive policies
+  blocker: model-class closure and measurable extension
+- priority: 4
+  identity: PMR-007-AIAC-1
+  target: context-indexed eligible cover criterion
+  blocker: set-cover core standard; preserve authority types
+- priority: 5
+  identity: PMR-007-FSRA-1
+  target: guarded source restriction only
+  blocker: source predicates must not be encoded as axiomatic world truth
+machine_claim: NONE

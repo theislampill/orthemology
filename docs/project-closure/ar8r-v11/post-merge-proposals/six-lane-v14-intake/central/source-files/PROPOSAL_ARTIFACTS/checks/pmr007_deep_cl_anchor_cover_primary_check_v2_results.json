@@ -1,0 +1,105 @@
+{
+  "UI_resolved_by_current_neutral": false,
+  "architectures": [
+    "U_unified_personal",
+    "I_impersonal_powers",
+    "P_plural_coordinated"
+  ],
+  "conflicts": {
+    "IP": [
+      "I_impersonal_powers",
+      "P_plural_coordinated"
+    ],
+    "UI": [
+      "U_unified_personal",
+      "I_impersonal_powers"
+    ],
+    "UP": [
+      "U_unified_personal",
+      "P_plural_coordinated"
+    ]
+  },
+  "currently_certified_neutral_identifies": false,
+  "formal_coordinate_minimal_pair_expected": [
+    "common_bearer_coordinate",
+    "intentional_uptake_coordinate"
+  ],
+  "formal_coordinate_minimal_pair_found": true,
+  "pass": true,
+  "registry_results": {
+    "currently_certified_neutral": {
+      "anchors": [
+        "complete_neutral_experiment"
+      ],
+      "covered_edges": [],
+      "identifies": false,
+      "inclusion_minimal_identifiers": []
+    },
+    "formal_coordinate_analysis": {
+      "anchors": [
+        "complete_neutral_experiment",
+        "common_bearer_coordinate",
+        "intentional_uptake_coordinate"
+      ],
+      "covered_edges": [
+        "IP",
+        "UI",
+        "UP"
+      ],
+      "identifies": true,
+      "inclusion_minimal_identifiers": [
+        [
+          "common_bearer_coordinate",
+          "intentional_uptake_coordinate"
+        ]
+      ]
+    },
+    "track_n_conditional_analysis": {
+      "anchors": [
+        "complete_neutral_experiment",
+        "common_bearer_coordinate",
+        "track_n_wisdom_role_package"
+      ],
+      "covered_edges": [
+        "IP",
+        "UI",
+        "UP"
+      ],
+      "identifies": true,
+      "inclusion_minimal_identifiers": [
+        [
+          "common_bearer_coordinate",
+          "track_n_wisdom_role_package"
+        ]
+      ]
+    }
+  },
+  "schema": "pmr007-deep-cl-anchor-cover-primary-check-v2-results",
+  "scope": "finite_declared_registry_conflict_cover_only",
+  "single_anchor_coverage": {
+    "architecture_class_oracle": [
+      "IP",
+      "UI",
+      "UP"
+    ],
+    "common_bearer_coordinate": [
+      "IP",
+      "UP"
+    ],
+    "complete_neutral_experiment": [],
+    "intentional_uptake_coordinate": [
+      "UI",
+      "UP"
+    ],
+    "track_n_wisdom_role_package": [
+      "UI",
+      "UP"
+    ]
+  },
+  "target_oracle_identifies": true,
+  "track_n_conditional_pair_expected": [
+    "common_bearer_coordinate",
+    "track_n_wisdom_role_package"
+  ],
+  "track_n_conditional_pair_found": true
+}

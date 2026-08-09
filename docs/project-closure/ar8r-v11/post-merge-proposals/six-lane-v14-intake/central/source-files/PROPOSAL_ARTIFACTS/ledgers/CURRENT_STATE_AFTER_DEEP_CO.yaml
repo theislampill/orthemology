@@ -1,0 +1,30 @@
+schema: pmr007-current-state-after-deep-co-v1
+campaign: AR8R_POST_MERGE_MENISCUS_PROGRAM_V1
+current_wave: PMR-007
+repository_authority: 9b80f2dfdf73a768ccad6a6ea2f2998c70ebdcf3
+completed_new_rounds:
+- Deep CK
+- Deep CL
+- Deep CM
+- Deep CN
+- Deep CO
+last_completed_result: PMR-007-PMCI-1
+current_scientific_boundary: THROUGH_DEEP_CO
+integrated_champion: NONE
+meniscus: MENISCUS_NOT_REACHED
+natural_closure: NOT_REACHED
+owner_decision_required: false
+independent_ready_work_remaining: true
+historical_AR8R_duration: '09:41:25.405101139'
+historical_latest_segment: 357
+historical_authority_changed: false
+last_reconciled_post_merge_duration: '00:56:11.268096105'
+later_pmr007_increments: NOT_YET_RECONCILED
+next_atomic_action:
+  identifier: DEEP_CP
+  action: Freeze an independently enlarged, target-blind common experiment aimed at
+    the U-I residual; require a typed operationalization of intentional uptake or
+    because-fittingness that is not a function of the current E0 profile; if no such
+    common operation survives, admit a scoped NO_CURRENT_ELIGIBLE_UI_EXPERIMENT result
+    and rotate to source-world actuality or constitutive-semanticity.
+github_changed: false

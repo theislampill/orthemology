@@ -1,0 +1,56 @@
+schema: pmr007-flywheel-crosswalk-bw-co-v1
+edges:
+- from: BW_CH_INTAKE
+  to: Deep_CK
+  relation: NARROWS_SCOPE
+  contribution: required a fresh concrete architecture map rather than inherited semantic
+    reissue admission
+- from: Deep_CK
+  to: Deep_CL
+  relation: SUPPLIES_PREMISE
+  contribution: U/I/P profile equality and target partitions expose the exact conflict
+    graph
+- from: Deep_CL
+  to: Deep_CM
+  relation: REOPENS
+  contribution: UI residual tests objective truth-linked function as a candidate cross-cut
+- from: Deep_CM
+  to: R5
+  relation: STRENGTHENS_RIVAL
+  contribution: one-bearer impersonal I carries objective truth-linked functional
+    fit
+- from: Deep_CK
+  to: Track_N
+  relation: FORMALIZES
+  contribution: 19-guard source/world/Wisdom conditional package
+- from: Deep_CN
+  to: agentic_communication
+  relation: GUARDED_TRANSFER
+  contribution: receipt-only versus version-aware context uses one authority-indexed
+    cover formalism
+- from: Deep_CN
+  to: source_formal_world
+  relation: GUARDED_TRANSFER
+  contribution: translated role profile cannot migrate to guarded world classification
+    without eligible anchors
+- from: Deep_CO
+  to: representation_and_profile
+  relation: COUNTERMODELS
+  contribution: common postprocessing cannot manufacture discrimination absent from
+    E0
+- from: Deep_CO
+  to: experimental_design
+  relation: REOPENS
+  contribution: requires a genuinely enlarged experiment or independent nonprofile
+    anchor
+- from: R5
+  to: transcendental_ascent
+  relation: REOPENS
+  contribution: personal/agentic/Wisdom bridge remains unsupported under the strengthened
+    one-bearer impersonal rival
+anti_unification_controls:
+- partition equality does not equal authority equality
+- common bearer does not equal subject, uniqueness, B_ID, or derivational unity
+- truth-linked functional fit does not equal intentional proper function
+- Track-N source package does not equal neutral evidence
+- common profile postprocessing does not equal experiment enlargement

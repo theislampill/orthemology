@@ -1,0 +1,82 @@
+{
+  "conclusion_ceiling": "declared hypothesis-class identifiability only",
+  "schema": "spa-r2-deletion-models-v1",
+  "specialist_local_result": "SPA-R2",
+  "structural_recovery": [
+    {
+      "hypothesis_class": [
+        {
+          "0": 0,
+          "1": 0,
+          "2": 0
+        },
+        {
+          "0": 0,
+          "1": 1,
+          "2": 1
+        },
+        {
+          "0": 1,
+          "1": 0,
+          "2": 1
+        },
+        {
+          "0": 1,
+          "1": 1,
+          "2": 0
+        }
+      ],
+      "id": "even_parity_recovers_deleted_cell_2",
+      "observed_cells": [
+        0,
+        1
+      ],
+      "recovery_rule": "y2 = y0 XOR y1",
+      "restriction_injective": true
+    },
+    {
+      "hypothesis_class": [
+        {
+          "0": 0,
+          "1": 0,
+          "2": 0
+        },
+        {
+          "0": 1,
+          "1": 1,
+          "2": 1
+        }
+      ],
+      "id": "constant_profiles_recover_two_deleted_cells",
+      "observed_cells": [
+        0
+      ],
+      "recovery_rule": "all cells equal",
+      "restriction_injective": true
+    }
+  ],
+  "structural_warning": "proper deletion can be recoverable when H imposes constraints",
+  "theorem": "restriction to D identifies H iff the restriction map H -> Y^D is injective; equivalently no distinct H-profiles agree on D",
+  "unrestricted_corollary": "for |Y| >= 2, every proper D fails on H = Y^X",
+  "unrestricted_one_cell_deletion": {
+    "collision_witness": [
+      {
+        "0": 0,
+        "1": 0,
+        "2": 0
+      },
+      {
+        "0": 0,
+        "1": 0,
+        "2": 1
+      }
+    ],
+    "hypothesis_class": "all binary response tables on three cells",
+    "observed_cells": [
+      0,
+      1
+    ],
+    "restriction_injective": false,
+    "witness_valid": true
+  }
+}

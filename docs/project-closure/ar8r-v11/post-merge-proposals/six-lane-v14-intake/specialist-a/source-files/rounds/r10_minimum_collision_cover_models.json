@@ -1,0 +1,142 @@
+{
+  "conclusion_ceiling": "exact minimum factor cover or declared-family no-cover result on a finite frozen manifest",
+  "criterion": "a factor set identifies the frozen target partition iff its coverage union equals the full collision universe",
+  "deletion": "within a covering set, deleting factor f breaks coverage iff f has a collision not covered by the remaining factors",
+  "guards": [
+    "eligibility fixed before optimization",
+    "pair coverage deduplicated",
+    "target leak excluded",
+    "manifest and target frozen",
+    "no metaphysical extrapolation"
+  ],
+  "impossibility": "if the union of every eligible factor leaves a collision, no composition from the declared factor family identifies the target on the frozen manifest",
+  "models": {
+    "greedy_countermodel": {
+      "computed_greedy": 3,
+      "computed_optimum": 2,
+      "deterministic_greedy_A_then_B_then_C": 3,
+      "greedy_subset_mask": 7,
+      "optimum_B_C": 2,
+      "optimum_subset_masks": [
+        6
+      ],
+      "sets": {
+        "A": [
+          1,
+          2,
+          3,
+          4
+        ],
+        "B": [
+          1,
+          2,
+          5
+        ],
+        "C": [
+          3,
+          4,
+          6
+        ]
+      },
+      "universe": [
+        1,
+        2,
+        3,
+        4,
+        5,
+        6
+      ]
+    },
+    "positive_gain_but_redundant": {
+      "factor_coverages": {
+        "large": [
+          0,
+          1
+        ],
+        "other": [
+          1
+        ],
+        "small": [
+          0
+        ]
+      },
+      "observation": "small has positive gain but is not indispensable because large alone covers the universe",
+      "universe": [
+        0,
+        1
+      ]
+    },
+    "three_rival_manifest": {
+      "base_profile": [
+        0,
+        0,
+        0
+      ],
+      "collision_pairs": [
+        [
+          0,
+          1
+        ],
+        [
+          0,
+          2
+        ],
+        [
+          1,
+          2
+        ]
+      ],
+      "coverage_masks": {
+        "profile_derived": 0,
+        "target_leak": 7,
+        "weak_left": 5,
+        "weak_right": 6
+      },
+      "eligible_factors": [
+        "weak_left",
+        "weak_right",
+        "profile_derived"
+      ],
+      "factor_signatures": {
+        "profile_derived": [
+          0,
+          0,
+          0
+        ],
+        "target_leak": [
+          0,
+          1,
+          2
+        ],
+        "weak_left": [
+          0,
+          1,
+          0
+        ],
+        "weak_right": [
+          0,
+          0,
+          1
+        ]
+      },
+      "ineligible_factor": "target_leak",
+      "labels": [
+        "unified_personal_witness",
+        "impersonal_powers_witness",
+        "plural_witness"
+      ],
+      "minimum_eligible_cover": [
+        "weak_left",
+        "weak_right"
+      ],
+      "target": [
+        0,
+        1,
+        2
+      ]
+    }
+  },
+  "schema": "spa-r10-minimum-collision-cover-models-v1",
+  "specialist_local_result": "SPA-R10",
+  "typed_object": "finite target-collision universe with pre-certified eligible factor coverage sets"
+}

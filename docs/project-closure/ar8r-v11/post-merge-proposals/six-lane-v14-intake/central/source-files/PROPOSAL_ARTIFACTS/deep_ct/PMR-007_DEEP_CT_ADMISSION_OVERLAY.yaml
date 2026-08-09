@@ -1,0 +1,23 @@
+schema: PMR007_DEEP_CT_ADMISSION_OVERLAY_V1
+identity: PMR-007-PCDF-1
+canonical_version: V2
+status: ADMITTED_POST_MERGE_SCOPED_CENTRAL_EXPERIMENT_DOMAIN_RESULT
+historical_identity: NONE
+general_mathematical_novelty: 0
+owner_adoption: PENDING
+external_review: OPEN
+proof_status: HUMAN_PROOF_PLUS_EXHAUSTIVE_AND_RANDOM_FINITE_CHECKS
+v1_disposition: REJECTED_FALSE_CLAIM_PRESERVED
+cold_audit: REPAIR_REQUIRED_THEN_REPAIRED
+fresh_rereview: PASS_WITH_NONBLOCKING_IMPLEMENTATION_AND_ANCESTRY_NOTES
+central_effect:
+  - restricted-domain evidence does not become a global comparison
+  - observed nonimplementation is a new signal governed by the fibre criterion
+  - old-profile-measurable totalization cannot split an old-profile collision
+  - target-defined availability or outcome is target leakage
+  - independently certified capability is a new anchor, not free evidence
+  - current intentional-uptake partial operation does not neutralize the U-I residual
+ancestry:
+  partial_map_and_fibre_core: STANDARD
+  causal_overlap_and_missingness: FORMAL_ANALOGUE
+repository_status: PUBLIC_SAFE_POST_MERGE_PROPOSAL_PENDING_REPOSITORY_AUDIT

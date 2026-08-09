@@ -1,0 +1,31 @@
+schema: pmr007-current-state-after-deep-ct-v1
+campaign: AR8R_POST_MERGE_MENISCUS_PROGRAM_V1
+current_wave: PMR-007
+repository_authority: 9b80f2dfdf73a768ccad6a6ea2f2998c70ebdcf3
+completed_new_rounds:
+- Deep CK
+- Deep CL
+- Deep CM
+- Deep CN
+- Deep CO
+- Deep CP
+- Deep CQ
+- Deep CR
+- Deep CS
+- Deep CT
+last_completed_result: PMR-007-PCDF-1
+current_scientific_boundary: THROUGH_DEEP_CT_PLUS_SIX_LANE_IMPORT
+integrated_champion: NONE
+meniscus: MENISCUS_NOT_REACHED
+natural_closure: NOT_REACHED
+owner_decision_required: false
+independent_ready_work_remaining: true
+historical_AR8R_duration: '09:41:25.405101139'
+historical_latest_segment: 357
+historical_authority_changed: false
+last_reconciled_post_merge_duration: '00:56:11.268096105'
+later_pmr007_increments: NOT_YET_RECONCILED
+next_atomic_action:
+  identifier: DEEP_CU
+  action: Freeze a target-independent, bearer- and episode-local because-of-uptake experiment contract across U/I/P. Require actual architecture implementation maps, common measurable semantics, version/authorization/resource eligibility, complete profiles, provenance-root accounting, and DR22 trajectory/higher-order controls. If no concrete map is available, preserve BLOCKED_ON_ACTUAL_IMPLEMENTATION_MAP and formalize the measurable/class-closure boundary rather than inventing one.
+github_changed: false

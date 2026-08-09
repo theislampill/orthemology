@@ -109,19 +109,19 @@
       ],
       "properties": {
         "source_commit": {
-          "const": "d7309d30612ff85ed8f94b93d4a5a610c18b3ea9"
+          "const": "5a2cf7ed77b897108afc515c90d3895ca4d706f2"
         },
         "source_tree": {
-          "const": "cded0130b092d2d13e288d6829298ec3f651e982"
+          "const": "28f132e7a37345b18d618b55cb16c1fe6c34d319"
         },
         "source_date_epoch": {
-          "const": 1786022580
+          "const": 1786293425
         },
         "independently_reviewed_equivalent_source_commit": {
-          "const": "d7309d30612ff85ed8f94b93d4a5a610c18b3ea9"
+          "const": "5a2cf7ed77b897108afc515c90d3895ca4d706f2"
         },
         "independently_reviewed_equivalent_source_tree": {
-          "const": "cded0130b092d2d13e288d6829298ec3f651e982"
+          "const": "28f132e7a37345b18d618b55cb16c1fe6c34d319"
         },
         "source_tree_equivalence": {
           "const": "verified-identical"

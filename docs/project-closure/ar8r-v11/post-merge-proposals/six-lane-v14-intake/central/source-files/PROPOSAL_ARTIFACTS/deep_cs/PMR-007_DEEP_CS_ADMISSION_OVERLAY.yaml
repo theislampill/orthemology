@@ -1,0 +1,21 @@
+schema: PMR007_DEEP_CS_ADMISSION_OVERLAY_V1
+identity: PMR-007-WADF-1
+canonical_version: V2
+status: ADMITTED_POST_MERGE_SCOPED_CENTRAL_RESIDUAL_SELECTION_RESULT
+historical_identity: NONE
+general_mathematical_novelty: 0
+owner_adoption: PENDING
+external_review: OPEN
+proof_status: HUMAN_PROOF_PLUS_EXHAUSTIVE_AND_RANDOM_FINITE_CHECKS
+cold_audit: REPAIR_REQUIRED_THEN_REPAIRED
+fresh_rereview: PASS_WITH_NONBLOCKING_ANCESTRY_AND_SELECTION_POLICY_NOTES
+ancestry:
+  fibre_partition_core: STANDARD
+  Bennett: PROOF_SEARCH_HEURISTIC_ONLY
+  balanced_EF1: PROOF_SEARCH_HEURISTIC_ONLY_AND_COUNTERMODEL_PATTERN_ONLY
+central_effect:
+  - pure weakness rejected as vacuous
+  - pure discrimination rejected when target-leaking
+  - no current eligible neutral U-I discriminator exists in the frozen registry
+  - common postprocessing family retired for the U-I residual
+repository_status: PUBLIC_SAFE_POST_MERGE_PROPOSAL_PENDING_REPOSITORY_AUDIT

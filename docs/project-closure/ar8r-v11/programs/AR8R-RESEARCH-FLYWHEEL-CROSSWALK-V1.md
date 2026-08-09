@@ -79,3 +79,16 @@ research effects remain flywheel edges so feedback cannot masquerade as a
 completed prerequisite. Current `daee-epistemics` main remains distinct from
 draft PR #8 and PR #9; Fusha/Qamus remains an external applied-language
 boundary without a pinned implementation snapshot.
+
+## Six-lane V14 intake
+
+The V14 intake adds one fail-closed synchronization node rather than six new
+authorities. Central CK–CT now points to actual implementation-map eligibility;
+Specialist A exposes an off-range decoder guard defect and failed source Lean
+drafts; Specialist B exposes index, signature, and checker-custody burdens;
+Deep Research 20 narrows prior-art relations; Deep Research 21 verifies bounded
+qiyās, Speech-layer, and fiṭrah loci; and Deep Research 22 blocks the unresolved
+six-representation/five-arm protocol while leaving the requested B1–B4 designs
+unanswered. These are burden and source edges only. No intake result changes
+theorem identity, theory, source-world truth, a champion, a meniscus, or natural
+closure.

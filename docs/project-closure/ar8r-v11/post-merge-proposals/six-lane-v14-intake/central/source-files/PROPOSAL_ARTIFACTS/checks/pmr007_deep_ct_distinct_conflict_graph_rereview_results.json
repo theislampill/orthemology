@@ -1,0 +1,36 @@
+{
+  "frozen_hash_failures": [],
+  "frozen_hashes_checked": 6,
+  "old_profile_measurable_barrier_failures": 0,
+  "overall": "PASS",
+  "proper_domain_totalizations_resolving_conflicts": 28098,
+  "random_trials": 80000,
+  "relabel_invariance_failures": 0,
+  "restricted_domain_extension_failures": 0,
+  "schema": "PMR007_DEEP_CT_DISTINCT_CONFLICT_GRAPH_REREVIEW_RESULTS",
+  "seed": "0xc7d0a1",
+  "successful_extensions_without_non_E_measurable_signal": 0,
+  "successful_new_signal_extensions": 20952,
+  "uip_controls": {
+    "common_bearer": {
+      "conflicts": 2,
+      "e_measurable": false,
+      "resolves_all": false
+    },
+    "common_proxy": {
+      "conflicts": 2,
+      "e_measurable": true,
+      "resolves_all": false
+    },
+    "target_laden_availability": {
+      "conflicts": 2,
+      "e_measurable": false,
+      "resolves_all": true
+    },
+    "target_oracle_outcome": {
+      "conflicts": 2,
+      "e_measurable": false,
+      "resolves_all": true
+    }
+  }
+}

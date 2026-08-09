@@ -1,0 +1,38 @@
+schema: pmr007-approach-family-registry-ck-co-v1
+families:
+- id: AF-CK-COMMON-KERNEL
+  burden: implement corrected BW common-intervention comparison
+  mechanism: finite transition/output kernel plus architecture expansions
+  result: equal neutral profile with target variation
+  status: ADMITTED_SCOPED
+  reopen_condition: new architecture map or enlarged intervention
+- id: AF-CK-SOURCE-WORLD
+  burden: source-relative Wisdom/common bearer
+  mechanism: nineteen typed guards and deletion models
+  result: conditional role package only
+  status: ADMITTED_SCOPED
+  reopen_condition: new source authority or world-link evidence
+- id: AF-CL-CONFLICT-COVER
+  burden: localize architecture residual
+  mechanism: partition meet and conflict cover
+  result: UI residual after common-bearer cross-cut
+  status: ADMITTED_SCOPED
+  reopen_condition: new independently eligible anchor
+- id: AF-CM-PROPER-FUNCTION
+  burden: test objective proper function as UI discriminator
+  mechanism: truth/fit reduct twins
+  result: impersonal twin survives
+  status: ADMITTED_SCOPED
+  reopen_condition: intentional/de-se/source-world premise or new experiment
+- id: AF-CN-AUTHORITY-CONTEXT
+  burden: unify source/version/architecture identification without migration
+  mechanism: context-indexed conflict covers
+  result: guarded common layer and transport firewall
+  status: ADMITTED_SCOPED
+  reopen_condition: noisy/statistical or adaptive generalization
+- id: AF-CO-CORRECTION-IMPOSSIBILITY
+  burden: test residual correction parameters derived from E0
+  mechanism: common deterministic/stochastic pushforward
+  result: profile-measurable corrections cannot split UI
+  status: ADMITTED_SCOPED
+  reopen_condition: experiment enlargement or independent anchor

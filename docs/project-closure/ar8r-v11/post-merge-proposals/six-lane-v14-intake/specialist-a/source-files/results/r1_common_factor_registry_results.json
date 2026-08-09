@@ -1,0 +1,98 @@
+{
+  "ancestry_disposition": "registry and coverage synthesis only; no theorem origin or novelty; Deep BV finite factorization remains T294 up to renaming",
+  "claim_ceiling": "typed finite registry and exhaustive declared-signature fixture; no real architecture implementation; measurable contract unverified",
+  "constructed_profile_analysis": {
+    "interpretation_ceiling": "constructed fixture discrimination only; not architecture implementation or metaphysical identification",
+    "pairwise_profile_comparison": [
+      {
+        "a": "impersonal_powers",
+        "b": "plural",
+        "differing_cells": 160,
+        "same_complete_profile": false
+      },
+      {
+        "a": "impersonal_powers",
+        "b": "unified_personal",
+        "differing_cells": 144,
+        "same_complete_profile": false
+      },
+      {
+        "a": "plural",
+        "b": "unified_personal",
+        "differing_cells": 128,
+        "same_complete_profile": false
+      }
+    ],
+    "profile_digests": {
+      "impersonal_powers": "50c7098b8938e83c40f7510342edc8a105acefb988d9d31dc5f0924287de28a4",
+      "plural": "25006e5bb453ff9721257f6a358464a7a42ba8d99b660fc0ed1708d94ee3522a",
+      "unified_personal": "266bad6ca15414d19dd7b9ddd5551c92c6b0754179b2262cc221a6fcbd428e7f"
+    }
+  },
+  "decoder_signature_target_blind": true,
+  "decoder_source_forbidden_tokens_excluding_comment_only_architecture": [],
+  "derived_counts": {
+    "architecture_witness_count": 3,
+    "coverage_row_count": 22,
+    "declared_family_count": 22,
+    "factor_count": 8,
+    "factorial_cell_count": 256
+  },
+  "errors": [],
+  "mutants_killed": 7,
+  "mutants_total": 7,
+  "mutations": [
+    {
+      "errors": [
+        "architecture unified_personal factor map not total"
+      ],
+      "killed": true,
+      "mutant": "missing_factor_map"
+    },
+    {
+      "errors": [
+        "decoder leaks forbidden fields ['architecture']"
+      ],
+      "killed": true,
+      "mutant": "decoder_target_leak"
+    },
+    {
+      "errors": [
+        "finite resource factor marked unbounded"
+      ],
+      "killed": true,
+      "mutant": "unbounded_resource_in_finite_contract"
+    },
+    {
+      "errors": [
+        "policy allowed inputs leak forbidden coordinate"
+      ],
+      "killed": true,
+      "mutant": "policy_target_leak"
+    },
+    {
+      "errors": [
+        "measurable contract missing decoder_measurability_receipt"
+      ],
+      "killed": true,
+      "mutant": "missing_measurable_decoder_receipt"
+    },
+    {
+      "errors": [
+        "profile map is not the exact complete factorial"
+      ],
+      "killed": true,
+      "mutant": "deleted_factorial_cell"
+    },
+    {
+      "errors": [
+        "coverage map is not total and one-to-one over declared manifest"
+      ],
+      "killed": true,
+      "mutant": "incomplete_family_coverage"
+    }
+  ],
+  "schema": "spa-r1-check-results-v1",
+  "specialist_local_result": "SPA-R1",
+  "status": "PASS"
+}

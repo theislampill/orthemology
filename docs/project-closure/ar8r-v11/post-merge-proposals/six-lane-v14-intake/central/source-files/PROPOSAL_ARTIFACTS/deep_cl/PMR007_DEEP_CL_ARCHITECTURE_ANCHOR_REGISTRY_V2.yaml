@@ -1,0 +1,60 @@
+schema: pmr007-deep-cl-architecture-anchor-registry-v2
+identity: PMR-007-MABF-1
+status: REPAIRED_POST_MERGE_RESEARCH_CANDIDATE
+architecture_scope:
+  class: DECLARED_THREE_ARCHITECTURE_COMPARISON_SURFACE
+  models: [U_unified_personal, I_impersonal_powers, P_plural_coordinated]
+  exhaustive_of_metaphysical_possibility: false
+target_coordinate:
+  name: declared_architecture_class
+  values: {U_unified_personal: U, I_impersonal_powers: I, P_plural_coordinated: P}
+conflict_edges:
+  UI: [U_unified_personal, I_impersonal_powers]
+  UP: [U_unified_personal, P_plural_coordinated]
+  IP: [I_impersonal_powers, P_plural_coordinated]
+anchors:
+  complete_neutral_experiment:
+    evidence_class: CERTIFIED_NEUTRAL_EXECUTABLE_PROFILE
+    current_eligibility: ELIGIBLE_AT_DECLARED_NEUTRAL_SCOPE
+    values: {U_unified_personal: CK_NEUTRAL_PROFILE_0, I_impersonal_powers: CK_NEUTRAL_PROFILE_0, P_plural_coordinated: CK_NEUTRAL_PROFILE_0}
+    resolves: []
+  common_bearer_coordinate:
+    evidence_class: FORMAL_TARGET_COORDINATE
+    current_eligibility: NOT_INDEPENDENTLY_OPERATIONALIZED
+    values: {U_unified_personal: true, I_impersonal_powers: true, P_plural_coordinated: false}
+    resolves: [UP, IP]
+    type_ceiling: one_world_role_coinstantiation_not_uniqueness_B_ID_or_derivational_unity
+  intentional_uptake_coordinate:
+    evidence_class: FORMAL_TARGET_COORDINATE
+    current_eligibility: NOT_INDEPENDENTLY_OPERATIONALIZED
+    values: {U_unified_personal: true, I_impersonal_powers: false, P_plural_coordinated: false}
+    resolves: [UI, UP]
+    type_ceiling: target_coordinate_not_neutral_measurement
+  track_n_wisdom_role_package:
+    evidence_class: TRACK_N_COMPOSITE_CONDITIONAL_PACKAGE
+    current_eligibility: CONDITIONAL_ON_DEEP_CK_19_GUARDS
+    guard_count: 19
+    values: {U_unified_personal: true, I_impersonal_powers: false, P_plural_coordinated: false}
+    resolves: [UI, UP]
+    type_ceiling: source_relative_candidate_classification_not_actual_world_selection
+  architecture_class_oracle:
+    evidence_class: FORBIDDEN_TARGET_ORACLE
+    current_eligibility: INELIGIBLE
+    values: {U_unified_personal: U, I_impersonal_powers: I, P_plural_coordinated: P}
+    resolves: [UI, UP, IP]
+registries:
+  currently_certified_neutral: [complete_neutral_experiment]
+  formal_coordinate_analysis: [complete_neutral_experiment, common_bearer_coordinate, intentional_uptake_coordinate]
+  track_n_conditional_analysis: [complete_neutral_experiment, common_bearer_coordinate, track_n_wisdom_role_package]
+  forbidden: [architecture_class_oracle]
+central_residual:
+  conflict: UI
+  description: unified_personal_and_one_bearer_impersonal_remain_in_one_complete_neutral_profile_fibre
+  required_change: independently_warranted_anchor_or_experiment_that_splits_UI_without_reading_the_target
+nonclaims:
+  - no claim that the anchor registry is complete
+  - no claim that anchor cardinality measures epistemic cost
+  - no claim that formal target coordinates are currently observable
+  - no claim that the Track-N package is neutral or actual-world true
+  - no claim that the three architectures exhaust metaphysical possibility
+  - no historical identity or novelty claim

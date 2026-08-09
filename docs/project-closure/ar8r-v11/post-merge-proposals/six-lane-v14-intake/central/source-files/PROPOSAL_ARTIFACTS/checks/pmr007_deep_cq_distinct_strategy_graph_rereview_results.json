@@ -1,0 +1,21 @@
+{
+  "fixed_hidden_standard_successes_from_same_start": [
+    true,
+    true
+  ],
+  "frozen_hash_mismatch_paths": [],
+  "frozen_hash_mismatches": 0,
+  "frozen_hash_rows": 5,
+  "larger_narrowing_monotonicity_failures": 0,
+  "larger_random_rank_trials": 50000,
+  "larger_rank_certificate_failures": 0,
+  "method": "independent_elimination_worklist_plus_explicit_policy_graph_enumeration",
+  "n3_narrowing_monotonicity_failures": 0,
+  "n3_rank_certificate_failures": 0,
+  "n3_reach_and_stay_mismatches": 0,
+  "n3_viability_mismatches": 0,
+  "pass": true,
+  "random_n3_policy_enumeration_trials": 30000,
+  "schema": "pmr007-deep-cq-distinct-strategy-graph-rereview-results-v1",
+  "switching_adversary_separation_pass": true
+}
