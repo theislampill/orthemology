@@ -134,20 +134,42 @@ class Ar8rSixLaneV14IntakeTests(unittest.TestCase):
         self.assertEqual(receipt["result"], "FAIL")
         self.assertFalse(receipt["specialist_a_repaired_lean_receipts_exact"])
 
-    def test_historical_identity_and_champion_promotion_fail_closed(self):
+    def test_duplicate_specialist_a_repair_receipt_fails_closed(self):
+        validator = load_validator()
+        with tempfile.TemporaryDirectory() as temporary:
+            copied = self.copy_surface(validator, temporary)
+            target = copied / "specialist-a/intake-review/LEAN_INTAKE_RECEIPT.json"
+            data = json.loads(target.read_text(encoding="utf-8"))
+            data["repairs"].append(dict(data["repairs"][0]))
+            target.write_text(json.dumps(data, indent=2) + "\n", encoding="utf-8")
+            receipt = validator.validate(ROOT, copied)
+        self.assertEqual(receipt["result"], "FAIL")
+        self.assertFalse(receipt["specialist_a_repaired_lean_receipts_exact"])
+
+    def test_historical_identity_promotion_fails_closed(self):
         validator = load_validator()
         with tempfile.TemporaryDirectory() as temporary:
             copied = self.copy_surface(validator, temporary)
             target = copied / "external-evidence/AR8R-DEEP-RESEARCH-20-22-INTAKE-V14.yaml"
             data = yaml.safe_load(target.read_text(encoding="utf-8"))
             data["authority_ceiling"]["historical_identity"] = "AR8R-T999"
-            data["authority_ceiling"]["integrated_champion"] = "PROMOTED"
             target.write_text(yaml.safe_dump(data, sort_keys=False), encoding="utf-8")
             receipt = validator.validate(ROOT, copied)
         self.assertEqual(receipt["result"], "FAIL")
         self.assertFalse(receipt["authority_ceiling_exact"])
 
-    def test_private_report_copy_flag_and_report_file_fail_closed(self):
+    def test_ledger_champion_promotion_fails_closed(self):
+        validator = load_validator()
+        with tempfile.TemporaryDirectory() as temporary:
+            copied = self.copy_surface(validator, temporary)
+            target = copied / "AR8R-SIX-LANE-V14-INTEGRATION-LEDGER.yaml"
+            data = yaml.safe_load(target.read_text(encoding="utf-8"))
+            data["program_status"]["integrated_champion"] = "PROMOTED"
+            target.write_text(yaml.safe_dump(data, sort_keys=False), encoding="utf-8")
+            receipt = validator.validate(ROOT, copied)
+        self.assertEqual(receipt["result"], "FAIL")
+
+    def test_private_report_copy_flag_fails_closed(self):
         validator = load_validator()
         with tempfile.TemporaryDirectory() as temporary:
             copied = self.copy_surface(validator, temporary)
@@ -155,6 +177,14 @@ class Ar8rSixLaneV14IntakeTests(unittest.TestCase):
             data = yaml.safe_load(target.read_text(encoding="utf-8"))
             data["reports"][0]["public_bytes_copied"] = True
             target.write_text(yaml.safe_dump(data, sort_keys=False), encoding="utf-8")
+            receipt = validator.validate(ROOT, copied)
+        self.assertEqual(receipt["result"], "FAIL")
+        self.assertFalse(receipt["private_reports_excluded"])
+
+    def test_private_report_file_insertion_fails_closed(self):
+        validator = load_validator()
+        with tempfile.TemporaryDirectory() as temporary:
+            copied = self.copy_surface(validator, temporary)
             (copied / "external-evidence/deep-research-report-20.md").write_text(
                 "unreviewed report bytes\n", encoding="utf-8"
             )

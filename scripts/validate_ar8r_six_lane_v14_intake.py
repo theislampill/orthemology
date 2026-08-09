@@ -282,7 +282,7 @@ def validate(root=ROOT, intake_override=None):
             "PASS",
         ),
     }
-    actual_a_repairs = {
+    actual_a_repairs = [
         (
             row.get("path"),
             row.get("sha256"),
@@ -290,11 +290,12 @@ def validate(root=ROOT, intake_override=None):
         )
         for row in a_receipt.get("repairs", [])
         if isinstance(row, dict)
-    }
+    ]
     specialist_a_repaired_lean_receipts_exact = (
         sha256(a_review / "DeletionCriterion.repaired.lean") == "8825df59e9ba945d61ec5db752087bf677f1d0fdd1f82cdb556b84732c8b2873"
         and sha256(a_review / "ObservationUniformity.repaired.lean") == "b46453b7f11f4593e3caf4e96cd2f48ad02af9df345586b720a7e9cf70f73324"
-        and actual_a_repairs == expected_a_repairs
+        and len(actual_a_repairs) == len(expected_a_repairs)
+        and set(actual_a_repairs) == expected_a_repairs
         and a_receipt.get("repository_scientific_adoption") == "NONE"
         and a_receipt.get("owner_adoption") == "PENDING"
     )
