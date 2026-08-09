@@ -9,14 +9,14 @@ with an unselected venue-specific template.
 ## Source and toolchain boundary
 
 - Authoritative source commit:
-  `aee5c7389b57ec7c3150d8fee3b3e398195d1395`
+  `5a2cf7ed77b897108afc515c90d3895ca4d706f2`
 - Authoritative source tree:
-  `766a3cfd57058d56538a0571fcff176ca44288b3`
+  `28f132e7a37345b18d618b55cb16c1fe6c34d319`
 - Independently reviewed equivalent source commit:
-  `aee5c7389b57ec7c3150d8fee3b3e398195d1395`
+  `5a2cf7ed77b897108afc515c90d3895ca4d706f2`
 - Equivalent source tree:
-  `766a3cfd57058d56538a0571fcff176ca44288b3`
-- Source epoch: `1785167892`
+  `28f132e7a37345b18d618b55cb16c1fe6c34d319`
+- Source epoch: `1786293425`
 - Container:
   `texlive/texlive@sha256:ccf0168bb3dc1e5ba18094131ebb57177f90eca37ab2727bc2d2afb54ad60a51`
 - Container configuration:
@@ -29,7 +29,7 @@ with an unselected venue-specific template.
 The authoritative command was:
 
 ```text
-python scripts/build_pdfs.py --source-commit aee5c7389b57ec7c3150d8fee3b3e398195d1395
+python scripts/build_pdfs.py --source-commit 5a2cf7ed77b897108afc515c90d3895ca4d706f2
 ```
 
 The command builds each closed source archive twice in independent clean

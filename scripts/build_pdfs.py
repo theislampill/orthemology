@@ -360,6 +360,66 @@ def compatibility_report_table_issues(root):
         issues.append(
             "compatibility report total page count is not in canonical table position"
         )
+    profile_path = root / PROFILE_PATH
+    if profile_path.is_file():
+        try:
+            provenance = yaml.safe_load(
+                profile_path.read_text(encoding="utf-8")
+            )["source_provenance"]
+        except (KeyError, TypeError, yaml.YAMLError):
+            issues.append("compatibility report source provenance owner is unreadable")
+        else:
+            fields = (
+                (
+                    "Authoritative source commit",
+                    r"- Authoritative source commit:\n  `([0-9a-f]{40})`",
+                    str(provenance["source_commit"]),
+                ),
+                (
+                    "Authoritative source tree",
+                    r"- Authoritative source tree:\n  `([0-9a-f]{40})`",
+                    str(provenance["source_tree"]),
+                ),
+                (
+                    "Independently reviewed equivalent source commit",
+                    r"- Independently reviewed equivalent source commit:\n  `([0-9a-f]{40})`",
+                    str(
+                        provenance[
+                            "independently_reviewed_equivalent_source_commit"
+                        ]
+                    ),
+                ),
+                (
+                    "Equivalent source tree",
+                    r"- Equivalent source tree:\n  `([0-9a-f]{40})`",
+                    str(
+                        provenance[
+                            "independently_reviewed_equivalent_source_tree"
+                        ]
+                    ),
+                ),
+                (
+                    "Source epoch",
+                    r"- Source epoch: `([0-9]+)`",
+                    str(provenance["source_date_epoch"]),
+                ),
+            )
+            for label, pattern, expected in fields:
+                if re.findall(pattern, text) != [expected]:
+                    issues.append(
+                        "compatibility report source provenance differs: %s"
+                        % label
+                    )
+            command_pattern = (
+                r"python scripts/build_pdfs\.py --source-commit "
+                r"([0-9a-f]{40})"
+            )
+            if re.findall(command_pattern, text) != [
+                str(provenance["source_commit"])
+            ]:
+                issues.append(
+                    "compatibility report source provenance differs: build command"
+                )
     return issues
 
 
@@ -424,6 +484,49 @@ def rewrite_compatibility_artifact_table(root):
     )
     if total_count != 1:
         raise PipelineError("compatibility report total page count is missing")
+    provenance = yaml.safe_load(
+        (root / PROFILE_PATH).read_text(encoding="utf-8")
+    )["source_provenance"]
+    replacements = (
+        (
+            r"(- Authoritative source commit:\n  `)[0-9a-f]{40}(`)",
+            str(provenance["source_commit"]),
+        ),
+        (
+            r"(- Authoritative source tree:\n  `)[0-9a-f]{40}(`)",
+            str(provenance["source_tree"]),
+        ),
+        (
+            r"(- Independently reviewed equivalent source commit:\n  `)"
+            r"[0-9a-f]{40}(`)",
+            str(provenance["independently_reviewed_equivalent_source_commit"]),
+        ),
+        (
+            r"(- Equivalent source tree:\n  `)[0-9a-f]{40}(`)",
+            str(provenance["independently_reviewed_equivalent_source_tree"]),
+        ),
+        (
+            r"(- Source epoch: `)[0-9]+(`)",
+            str(provenance["source_date_epoch"]),
+        ),
+        (
+            r"(python scripts/build_pdfs\.py --source-commit )[0-9a-f]{40}",
+            str(provenance["source_commit"]),
+        ),
+    )
+    for pattern, value in replacements:
+        updated, replacement_count = re.subn(
+            pattern,
+            lambda match, value=value: match.group(1)
+            + value
+            + (match.group(2) if match.lastindex == 2 else ""),
+            updated,
+            count=1,
+        )
+        if replacement_count != 1:
+            raise PipelineError(
+                "compatibility report source provenance field is malformed"
+            )
     report_path.write_text(updated, encoding="utf-8", newline="\n")
 
 
