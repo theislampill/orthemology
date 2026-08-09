@@ -411,7 +411,7 @@ def compatibility_report_table_issues(root):
                         % label
                     )
             command_pattern = (
-                r"python scripts/build_pdfs\.py --source-commit "
+                r"python scripts/build_pdfs[.]py --source-commit "
                 r"([0-9a-f]{40})"
             )
             if re.findall(command_pattern, text) != [
@@ -510,7 +510,7 @@ def rewrite_compatibility_artifact_table(root):
             str(provenance["source_date_epoch"]),
         ),
         (
-            r"(python scripts/build_pdfs\.py --source-commit )[0-9a-f]{40}",
+            r"(python scripts/build_pdfs[.]py --source-commit )[0-9a-f]{40}",
             str(provenance["source_commit"]),
         ),
     )
