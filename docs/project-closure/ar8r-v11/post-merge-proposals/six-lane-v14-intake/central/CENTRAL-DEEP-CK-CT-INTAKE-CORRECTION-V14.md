@@ -56,4 +56,3 @@ The next central operation is actual-map eligibility for Deep CU. If concrete,
 target-blind U/I/P implementation maps with common measurable semantics do not
 exist, the correct disposition is `BLOCKED_ON_ACTUAL_IMPLEMENTATION_MAP`, not
 another synthetic discriminator over inherited profiles.
-

@@ -57,4 +57,3 @@ Lean_project_integration: NOT_RUN
 meniscus: MENISCUS_NOT_REACHED
 natural_closure: NOT_REACHED
 ```
-

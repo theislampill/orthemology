@@ -46,6 +46,37 @@ PRIVATE_PATTERN = re.compile(
     re.IGNORECASE,
 )
 
+EXPECTED_EXTERNAL_EVIDENCE_FILES = {
+    "AR8R-DEEP-RESEARCH-20-22-INTAKE-V14.yaml",
+    "AR8R-SIX-LANE-V14-SOURCING-CORRECTION.md",
+}
+EXPECTED_B1_B4_PROTOCOLS = [
+    "noetic restoration and proper function",
+    "intentional uptake and personality",
+    "source-recipient causal landing",
+    "truth-connected norm and because-of uptake",
+]
+EXPECTED_AUTHORITY_CEILING = {
+    "historical_identity": "NONE",
+    "repository_scientific_adoption": "NONE",
+    "owner_adoption": "PENDING",
+    "external_review": "OPEN",
+    "general_novelty": 0,
+    "empirical_program_run": False,
+    "source_world_bridge_established": False,
+    "integrated_champion": "NONE",
+    "meniscus": "MENISCUS_NOT_REACHED",
+    "natural_closure": "NOT_REACHED",
+}
+
+
+def contains_ready_to_run(value) -> bool:
+    if isinstance(value, dict):
+        return any(contains_ready_to_run(item) for item in value.values())
+    if isinstance(value, list):
+        return any(contains_ready_to_run(item) for item in value)
+    return value == "READY_TO_RUN"
+
 
 def sha256(path: pathlib.Path) -> str:
     return hashlib.sha256(path.read_bytes()).hexdigest()
@@ -219,6 +250,8 @@ def validate(root=ROOT, intake_override=None):
         issues.append("repository scientific adoption promotion")
     if program.get("owner_adoption") != "PENDING":
         issues.append("program-level owner-adoption promotion")
+    if program.get("integrated_champion") != "NONE":
+        issues.append("integrated-champion promotion")
     if program.get("meniscus") != "MENISCUS_NOT_REACHED" or program.get("natural_closure") != "NOT_REACHED":
         issues.append("meniscus or closure promotion")
 
@@ -237,10 +270,31 @@ def validate(root=ROOT, intake_override=None):
         and sha256(a_source / "ObservationUniformity.lean") == "555e88086b3c6345331ff5801928940217606bbb02cb0866db56b5b05645f70e"
         and [row.get("status") for row in a_receipt.get("originals", [])] == ["PARSE_FAILED", "PARSE_FAILED"]
     )
+    expected_a_repairs = {
+        (
+            "intake-review/lean/DeletionCriterion.repaired.lean",
+            "8825df59e9ba945d61ec5db752087bf677f1d0fdd1f82cdb556b84732c8b2873",
+            "PASS",
+        ),
+        (
+            "intake-review/lean/ObservationUniformity.repaired.lean",
+            "b46453b7f11f4593e3caf4e96cd2f48ad02af9df345586b720a7e9cf70f73324",
+            "PASS",
+        ),
+    }
+    actual_a_repairs = {
+        (
+            row.get("path"),
+            row.get("sha256"),
+            row.get("standalone_parse_elaboration_kernel"),
+        )
+        for row in a_receipt.get("repairs", [])
+        if isinstance(row, dict)
+    }
     specialist_a_repaired_lean_receipts_exact = (
         sha256(a_review / "DeletionCriterion.repaired.lean") == "8825df59e9ba945d61ec5db752087bf677f1d0fdd1f82cdb556b84732c8b2873"
         and sha256(a_review / "ObservationUniformity.repaired.lean") == "b46453b7f11f4593e3caf4e96cd2f48ad02af9df345586b720a7e9cf70f73324"
-        and all(row.get("standalone_parse_elaboration_kernel") == "PASS" for row in a_receipt.get("repairs", []))
+        and actual_a_repairs == expected_a_repairs
         and a_receipt.get("repository_scientific_adoption") == "NONE"
         and a_receipt.get("owner_adoption") == "PENDING"
     )
@@ -271,6 +325,31 @@ def validate(root=ROOT, intake_override=None):
         evidence = yaml.safe_load(evidence_path.read_text(encoding="utf-8"))
     except (OSError, UnicodeDecodeError, yaml.YAMLError):
         evidence = {}
+
+    external_evidence_root = intake / "external-evidence"
+    external_evidence_files = {
+        path.relative_to(external_evidence_root).as_posix()
+        for path in external_evidence_root.rglob("*")
+        if path.is_file()
+    } if external_evidence_root.is_dir() else set()
+    reports = evidence.get("reports", []) if isinstance(evidence, dict) else []
+    report_copy_flags_exact = (
+        len(reports) == 3
+        and {row.get("lane") for row in reports if isinstance(row, dict)}
+        == {"DEEP_RESEARCH_20", "DEEP_RESEARCH_21", "DEEP_RESEARCH_22"}
+        and all(row.get("public_bytes_copied") is False for row in reports if isinstance(row, dict))
+    )
+    private_reports_excluded = (
+        report_copy_flags_exact
+        and external_evidence_files == EXPECTED_EXTERNAL_EVIDENCE_FILES
+    )
+    if not private_reports_excluded:
+        issues.append("private Deep Research report bytes or copy flags entered public intake")
+
+    authority_ceiling = evidence.get("authority_ceiling", {}) if isinstance(evidence, dict) else {}
+    authority_ceiling_exact = authority_ceiling == EXPECTED_AUTHORITY_CEILING
+    if not authority_ceiling_exact:
+        issues.append("Deep Research authority ceiling drift or promotion")
     theological = {row.get("id"): row for row in evidence.get("theological_and_metaphysical_sources", [])}
     speech = theological.get("DR21-SPEECH-VOICE", {})
     deep_research_locator_corrections_exact = (
@@ -298,7 +377,7 @@ def validate(root=ROOT, intake_override=None):
     deep_research_22_readiness_fail_closed = (
         readiness.get("ready_to_run_count") == 0
         and readiness.get("empirical_validation_claimed") is False
-        and all(value != "READY_TO_RUN" for value in readiness.values())
+        and not contains_ready_to_run(evidence)
     )
     if not deep_research_22_readiness_fail_closed:
         issues.append("Deep Research 22 protocol readiness promoted without evidence")
@@ -306,7 +385,7 @@ def validate(root=ROOT, intake_override=None):
     coverage = protocols.get("DR22-B1-B4-COVERAGE-GAP", {})
     deep_research_22_b1_b4_gap_explicit = (
         coverage.get("status") == "NOT_ANSWERED_BY_CURRENT_REPORT"
-        and len(coverage.get("required_protocols", [])) == 4
+        and coverage.get("required_protocols") == EXPECTED_B1_B4_PROTOCOLS
     )
     if not deep_research_22_b1_b4_gap_explicit:
         issues.append("Deep Research 22 B1-B4 coverage gap is not explicit")
@@ -325,6 +404,8 @@ def validate(root=ROOT, intake_override=None):
         "source_hash_mismatches": source_hash_mismatches,
         "private_path_findings": private_path_findings,
         "structured_files_parsed": structured_files_parsed,
+        "private_reports_excluded": private_reports_excluded,
+        "authority_ceiling_exact": authority_ceiling_exact,
         "specialist_a_checks_reproduced": specialist_a_checks_reproduced,
         "specialist_a_original_lean_failures_recorded": specialist_a_original_lean_failures_recorded,
         "specialist_a_repaired_lean_receipts_exact": specialist_a_repaired_lean_receipts_exact,

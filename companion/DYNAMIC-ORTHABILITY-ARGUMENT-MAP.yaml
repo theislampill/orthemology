@@ -410,7 +410,7 @@ nodes:
     evidence_access_status:
       ATH-1: PRIMARY_TEXT_EXACT
       ATH-2: PRIMARY_TEXT_EXACT
-      ATH-3: COMPILATION_MEDIATED
+      ATH-3: PRIMARY_TEXT_EXACT
       ATH-4: PRIMARY_WORK_THEME
       ATH-5: PRIMARY_LOCUS_EDITION_DEPENDENT
     reference_roles:

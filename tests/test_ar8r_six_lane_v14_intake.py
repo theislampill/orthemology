@@ -1,8 +1,11 @@
 import importlib.util
+import json
 import pathlib
 import shutil
 import tempfile
 import unittest
+
+import yaml
 
 
 ROOT = pathlib.Path(__file__).resolve().parents[1]
@@ -118,6 +121,74 @@ class Ar8rSixLaneV14IntakeTests(unittest.TestCase):
         self.assertEqual(receipt["result"], "FAIL")
         self.assertFalse(receipt["deep_research_22_readiness_fail_closed"])
         self.assertFalse(receipt["deep_research_22_b1_b4_gap_explicit"])
+
+    def test_empty_specialist_a_repair_receipt_fails_closed(self):
+        validator = load_validator()
+        with tempfile.TemporaryDirectory() as temporary:
+            copied = self.copy_surface(validator, temporary)
+            target = copied / "specialist-a/intake-review/LEAN_INTAKE_RECEIPT.json"
+            data = json.loads(target.read_text(encoding="utf-8"))
+            data["repairs"] = []
+            target.write_text(json.dumps(data, indent=2) + "\n", encoding="utf-8")
+            receipt = validator.validate(ROOT, copied)
+        self.assertEqual(receipt["result"], "FAIL")
+        self.assertFalse(receipt["specialist_a_repaired_lean_receipts_exact"])
+
+    def test_historical_identity_and_champion_promotion_fail_closed(self):
+        validator = load_validator()
+        with tempfile.TemporaryDirectory() as temporary:
+            copied = self.copy_surface(validator, temporary)
+            target = copied / "external-evidence/AR8R-DEEP-RESEARCH-20-22-INTAKE-V14.yaml"
+            data = yaml.safe_load(target.read_text(encoding="utf-8"))
+            data["authority_ceiling"]["historical_identity"] = "AR8R-T999"
+            data["authority_ceiling"]["integrated_champion"] = "PROMOTED"
+            target.write_text(yaml.safe_dump(data, sort_keys=False), encoding="utf-8")
+            receipt = validator.validate(ROOT, copied)
+        self.assertEqual(receipt["result"], "FAIL")
+        self.assertFalse(receipt["authority_ceiling_exact"])
+
+    def test_private_report_copy_flag_and_report_file_fail_closed(self):
+        validator = load_validator()
+        with tempfile.TemporaryDirectory() as temporary:
+            copied = self.copy_surface(validator, temporary)
+            target = copied / "external-evidence/AR8R-DEEP-RESEARCH-20-22-INTAKE-V14.yaml"
+            data = yaml.safe_load(target.read_text(encoding="utf-8"))
+            data["reports"][0]["public_bytes_copied"] = True
+            target.write_text(yaml.safe_dump(data, sort_keys=False), encoding="utf-8")
+            (copied / "external-evidence/deep-research-report-20.md").write_text(
+                "unreviewed report bytes\n", encoding="utf-8"
+            )
+            receipt = validator.validate(ROOT, copied)
+        self.assertEqual(receipt["result"], "FAIL")
+        self.assertFalse(receipt["private_reports_excluded"])
+
+    def test_b1_b4_protocol_identity_drift_fails_closed(self):
+        validator = load_validator()
+        with tempfile.TemporaryDirectory() as temporary:
+            copied = self.copy_surface(validator, temporary)
+            target = copied / "external-evidence/AR8R-DEEP-RESEARCH-20-22-INTAKE-V14.yaml"
+            data = yaml.safe_load(target.read_text(encoding="utf-8"))
+            for row in data["empirical_and_protocol_intake"]:
+                if row.get("id") == "DR22-B1-B4-COVERAGE-GAP":
+                    row["required_protocols"] = ["X1", "X2", "X3", "X4"]
+            target.write_text(yaml.safe_dump(data, sort_keys=False), encoding="utf-8")
+            receipt = validator.validate(ROOT, copied)
+        self.assertEqual(receipt["result"], "FAIL")
+        self.assertFalse(receipt["deep_research_22_b1_b4_gap_explicit"])
+
+    def test_nested_ready_to_run_status_fails_closed(self):
+        validator = load_validator()
+        with tempfile.TemporaryDirectory() as temporary:
+            copied = self.copy_surface(validator, temporary)
+            target = copied / "external-evidence/AR8R-DEEP-RESEARCH-20-22-INTAKE-V14.yaml"
+            data = yaml.safe_load(target.read_text(encoding="utf-8"))
+            data["empirical_and_protocol_intake"][1]["nested_disposition"] = {
+                "status": "READY_TO_RUN"
+            }
+            target.write_text(yaml.safe_dump(data, sort_keys=False), encoding="utf-8")
+            receipt = validator.validate(ROOT, copied)
+        self.assertEqual(receipt["result"], "FAIL")
+        self.assertFalse(receipt["deep_research_22_readiness_fail_closed"])
 
 
 if __name__ == "__main__":
