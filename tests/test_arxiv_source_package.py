@@ -1390,7 +1390,7 @@ class SourcePackageContractTests(unittest.TestCase):
             issues,
         )
 
-    def test_compatibility_report_rejects_prefixed_or_suffixed_provenance(self):
+    def test_compatibility_report_rejects_prefixed_provenance(self):
         validate = self.api(BUILD, "compatibility_report_table_issues")
         with tempfile.TemporaryDirectory() as temporary:
             root = pathlib.Path(temporary)
@@ -1414,11 +1414,42 @@ class SourcePackageContractTests(unittest.TestCase):
                     "- Authoritative source commit:",
                     "prefix - Authoritative source commit:",
                     1,
-                ).replace(
-                    "python scripts/build_pdfs.py --source-commit ",
-                    "python scripts/build_pdfs.py --source-commit ",
-                    1,
-                ).replace(
+                ),
+                encoding="utf-8",
+                newline="\n",
+            )
+            shutil.copy2(
+                ROOT / "docs" / "publication-profile.yaml",
+                root / "docs" / "publication-profile.yaml",
+            )
+            shutil.copytree(ROOT / "artifacts", root / "artifacts")
+            issues = validate(root)
+        self.assertTrue(
+            any("source provenance" in issue for issue in issues),
+            issues,
+        )
+
+    def test_compatibility_report_rejects_suffixed_build_command(self):
+        validate = self.api(BUILD, "compatibility_report_table_issues")
+        with tempfile.TemporaryDirectory() as temporary:
+            root = pathlib.Path(temporary)
+            report_target = (
+                root
+                / "docs"
+                / "project-closure"
+                / "r7e-sol"
+                / "R7E-SOL-ARXIV-COMPATIBILITY.md"
+            )
+            report_target.parent.mkdir(parents=True)
+            report = (
+                ROOT
+                / "docs"
+                / "project-closure"
+                / "r7e-sol"
+                / "R7E-SOL-ARXIV-COMPATIBILITY.md"
+            ).read_text(encoding="utf-8")
+            report_target.write_text(
+                report.replace(
                     "\n```\n\nThe command builds",
                     " suffix\n```\n\nThe command builds",
                     1,
@@ -1440,58 +1471,88 @@ class SourcePackageContractTests(unittest.TestCase):
     def test_compatibility_report_rewrite_updates_source_provenance(self):
         rewrite = self.api(BUILD, "rewrite_compatibility_artifact_table")
         validate = self.api(BUILD, "compatibility_report_table_issues")
-        with tempfile.TemporaryDirectory() as temporary:
-            root = pathlib.Path(temporary)
-            report_target = (
-                root
-                / "docs"
-                / "project-closure"
-                / "r7e-sol"
-                / "R7E-SOL-ARXIV-COMPATIBILITY.md"
+        canonical_report = (
+            ROOT
+            / "docs"
+            / "project-closure"
+            / "r7e-sol"
+            / "R7E-SOL-ARXIV-COMPATIBILITY.md"
+        ).read_text(encoding="utf-8")
+        provenance = yaml.safe_load(
+            (ROOT / "docs" / "publication-profile.yaml").read_text(
+                encoding="utf-8"
             )
-            report_target.parent.mkdir(parents=True)
-            shutil.copy2(
-                ROOT
-                / "docs"
-                / "project-closure"
-                / "r7e-sol"
-                / "R7E-SOL-ARXIV-COMPATIBILITY.md",
-                report_target,
-            )
-            provenance = yaml.safe_load(
-                (ROOT / "docs" / "publication-profile.yaml").read_text(
-                    encoding="utf-8"
-                )
-            )["source_provenance"]
-            report_target.write_text(
-                report_target.read_text(encoding="utf-8")
-                .replace(provenance["source_commit"], "1" * 40)
-                .replace(provenance["source_tree"], "2" * 40)
-                .replace(str(provenance["source_date_epoch"]), "1234567890"),
-                encoding="utf-8",
-                newline="\n",
-            )
-            shutil.copy2(
-                ROOT / "docs" / "publication-profile.yaml",
-                root / "docs" / "publication-profile.yaml",
-            )
-            shutil.copytree(ROOT / "artifacts", root / "artifacts")
-            rewrite(root)
-            issues = validate(root)
-            report = report_target.read_text(encoding="utf-8")
-            provenance = yaml.safe_load(
-                (root / "docs" / "publication-profile.yaml").read_text(
-                    encoding="utf-8"
-                )
-            )["source_provenance"]
-        self.assertEqual(issues, [])
-        self.assertIn(provenance["source_commit"], report)
-        self.assertIn(provenance["source_tree"], report)
-        self.assertIn(
-            "python scripts/build_pdfs.py --source-commit "
-            + provenance["source_commit"],
-            report,
+        )["source_provenance"]
+        mutations = (
+            (
+                "authoritative commit",
+                "- Authoritative source commit:\n  `"
+                + provenance["source_commit"]
+                + "`",
+                "- Authoritative source commit:\n  `" + ("1" * 40) + "`",
+            ),
+            (
+                "authoritative tree",
+                "- Authoritative source tree:\n  `"
+                + provenance["source_tree"]
+                + "`",
+                "- Authoritative source tree:\n  `" + ("2" * 40) + "`",
+            ),
+            (
+                "reviewed commit",
+                "- Independently reviewed equivalent source commit:\n  `"
+                + provenance["independently_reviewed_equivalent_source_commit"]
+                + "`",
+                "- Independently reviewed equivalent source commit:\n  `"
+                + ("3" * 40)
+                + "`",
+            ),
+            (
+                "reviewed tree",
+                "- Equivalent source tree:\n  `"
+                + provenance["independently_reviewed_equivalent_source_tree"]
+                + "`",
+                "- Equivalent source tree:\n  `" + ("4" * 40) + "`",
+            ),
+            (
+                "source epoch",
+                "- Source epoch: `" + str(provenance["source_date_epoch"]) + "`",
+                "- Source epoch: `1234567890`",
+            ),
+            (
+                "build command",
+                "python scripts/build_pdfs.py --source-commit "
+                + provenance["source_commit"],
+                "python scripts/build_pdfs.py --source-commit " + ("5" * 40),
+            ),
         )
+        for label, current, stale in mutations:
+            with self.subTest(label=label):
+                with tempfile.TemporaryDirectory() as temporary:
+                    root = pathlib.Path(temporary)
+                    report_target = (
+                        root
+                        / "docs"
+                        / "project-closure"
+                        / "r7e-sol"
+                        / "R7E-SOL-ARXIV-COMPATIBILITY.md"
+                    )
+                    report_target.parent.mkdir(parents=True)
+                    report_target.write_text(
+                        canonical_report.replace(current, stale, 1),
+                        encoding="utf-8",
+                        newline="\n",
+                    )
+                    shutil.copy2(
+                        ROOT / "docs" / "publication-profile.yaml",
+                        root / "docs" / "publication-profile.yaml",
+                    )
+                    shutil.copytree(ROOT / "artifacts", root / "artifacts")
+                    rewrite(root)
+                    issues = validate(root)
+                    rewritten = report_target.read_text(encoding="utf-8")
+                self.assertEqual(issues, [])
+                self.assertEqual(rewritten, canonical_report)
 
     def test_compatibility_report_rejects_duplicate_owner_rows(self):
         validate = self.api(BUILD, "compatibility_report_table_issues")
