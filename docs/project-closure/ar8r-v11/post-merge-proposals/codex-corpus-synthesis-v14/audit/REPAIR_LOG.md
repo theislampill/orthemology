@@ -95,3 +95,66 @@ scientific result. They were nevertheless removed so repository-level
 `git diff --check` can remain fail-closed. Candidate hashes, the freeze
 manifest, and the final local rereview receipt are refreshed after this
 format-only change.
+
+## AR8R-V14-IR01 — complete append-only audit and rereview validation
+
+The independent whole-branch review demonstrated that deleting rereview
+attempt 2, falsifying a final reviewed-member hash, or retaining a blocking
+finding could still pass after regenerating the synthesis manifest. New
+cause-specific mutation tests failed on each bypass before implementation.
+The validator now requires attempt 2's exact repair disposition, recomputes
+the final reviewed-member, audit-chain, and verification-code hash maps,
+requires an empty final blocking-finding list, and checks the declared review
+scope and contract claims.
+
+## AR8R-V14-IR02 — closed member set, signed URLs, and authority markers
+
+The same review demonstrated that an arbitrary extra file could be added to
+the source manifest and that signed-URL parameters and explicit positive
+metaphysical or empirical claim markers were not recognized. New mutation
+tests failed before implementation for the extra-member, signed-URL,
+Necessary-Being, personal-bearer, personality, Wisdom, Speech, revelation,
+Allah-identification, and empirical-run cases. The validator now pins the
+complete member set and rejects those markers. The current corpus contains no
+such promotion or private locator.
+
+## AR8R-V14-IR03 — serialized and alternate-key authority markers
+
+The distinct repair review showed that the first authority patterns recognized
+only unquoted snake-case fields. The mutation matrix now covers unquoted YAML,
+quoted JSON, hyphenated, and spaced forms for every declared metaphysical and
+empirical ceiling. The validator accepts optional serialization quotes and all
+three separators while preserving existing negative and question-form corpus
+text.
+
+## AR8R-V14-IR04 — immutable failed-review semantics and exact final scope
+
+The same review showed that selective field checks did not freeze every failed
+review detail. Cold audit and failed rereview receipts are now append-only
+SHA-256 owners. The final receipt must preserve the exact repository-relative
+source contract, scope boundary, audit-chain hashes, verification-code hashes,
+empty blocking list, and independent-repair closure list.
+
+## AR8R-V14-IR05 — URL-context signature detection
+
+The first signed-link pattern also matched ordinary mathematical assignments
+such as `sig = the selected sign map`. Generic `sig`, `signature`, `token`, and
+`expires` keys now require an HTTP(S) URL query context. Provider-specific
+`X-Amz-*` and `X-Goog-*` signed-request fields remain rejected directly.
+
+## AR8R-V14-IR06 — complete authority-boundary serialization gate
+
+The next distinct repair review refreshed the stale local receipt in an
+isolated export and demonstrated that forty of forty-four required authority
+assignments still passed in quoted, hyphenated, spaced, or previously omitted
+forms. The validator now normalizes all eleven authority-boundary keys across
+those serializations and rejects only explicit promoted values, preserving the
+declared negative, pending, unavailable, and blocked values.
+
+## AR8R-V14-IR07 — full authority-key mutation matrix
+
+The repository test suite previously covered eight metaphysical or empirical
+markers rather than the complete authority boundary. A forty-four-cell matrix
+now exercises eleven keys in unquoted YAML, quoted JSON, hyphenated, and spaced
+forms. The final receipt cannot be refreshed until every cell fails closed for
+the intended authority-promotion issue.

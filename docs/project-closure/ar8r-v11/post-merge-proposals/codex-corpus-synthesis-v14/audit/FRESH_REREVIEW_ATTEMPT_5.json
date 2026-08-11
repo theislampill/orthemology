@@ -1,0 +1,46 @@
+{
+  "schema": "ar8r-codex-corpus-synthesis-v14-independent-repair-review-attempt-v5",
+  "verdict": "REPAIR_REQUIRED",
+  "reviewer_context": "DISTINCT_FRESH_CONTEXT",
+  "reviewed_staged_tree": "83fb58dfaa662480df0ed00c43440bc522d1bbbb",
+  "blocking_findings": [
+    {
+      "id": "AR8R-V14-IR06",
+      "severity": "HIGH",
+      "summary": "Forty of forty-four required authority-key serializations bypassed the promotion scan after a valid synthetic receipt refresh."
+    },
+    {
+      "id": "AR8R-V14-IR07",
+      "severity": "MEDIUM",
+      "summary": "The repository test matrix covered eight metaphysical or empirical marker keys but not the eleven authority-boundary keys across all required serializations."
+    }
+  ],
+  "reproduction": {
+    "authority_serialization_cells": 44,
+    "accepted_cells": 40,
+    "rejected_cells": 4,
+    "audit_attempt_mutations_rejected": 34,
+    "final_receipt_mutations_rejected": 7,
+    "signed_url_mutations_rejected": 9,
+    "benign_signature_false_positives": 0
+  },
+  "candidate_byte_findings": {
+    "private_leakage_found": false,
+    "authority_promotion_found": false,
+    "theorem_relation_defect_found": false,
+    "lean_or_checker_reproduction_failure": false
+  },
+  "authority_boundary": {
+    "historical_identity": "NONE",
+    "general_novelty": 0,
+    "repository_scientific_adoption": "NONE",
+    "owner_adoption": "PENDING",
+    "source_world_bridge_established": false,
+    "empirical_result": "NO_EXPERIMENT_EXECUTED",
+    "integrated_champion": "NONE",
+    "meniscus": "MENISCUS_NOT_REACHED",
+    "natural_closure": "NOT_REACHED",
+    "T354": "BLOCKED_FORMAL_DEFECT",
+    "TAC_SAC": "UNAVAILABLE_UNDEFINED"
+  }
+}

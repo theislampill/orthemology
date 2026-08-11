@@ -128,6 +128,17 @@ EXPECTED_FREEZE_MEMBERS = {
     "lean/CodexFibreSynthesis.lean",
     "lean/LEAN_RECEIPT.json",
 }
+EXPECTED_SOURCE_MEMBERS = EXPECTED_FREEZE_MEMBERS | {
+    "audit/CANDIDATE_FREEZE_SHA256SUMS",
+    "audit/COLD_AUDIT.json",
+    "audit/FRESH_REREVIEW_ATTEMPT_1.json",
+    "audit/FRESH_REREVIEW_ATTEMPT_2.json",
+    "audit/FRESH_REREVIEW_ATTEMPT_3.json",
+    "audit/FRESH_REREVIEW_ATTEMPT_4.json",
+    "audit/FRESH_REREVIEW_ATTEMPT_5.json",
+    "audit/FRESH_REREVIEW.json",
+    "audit/REPAIR_LOG.md",
+}
 EXPECTED_AUDIT_AUTHORITY = {
     "historical_identity": "NONE",
     "general_novelty": 0,
@@ -141,11 +152,22 @@ EXPECTED_AUDIT_AUTHORITY = {
     "T354": "BLOCKED_FORMAL_DEFECT",
     "TAC_SAC": "UNAVAILABLE_UNDEFINED",
 }
+EXPECTED_APPEND_ONLY_AUDIT_SHA256 = {
+    "audit/COLD_AUDIT.json": "e0b9bccce2dbfbc76937438bf982d8e1769652e90f590b7f052399416fae7449",
+    "audit/FRESH_REREVIEW_ATTEMPT_1.json": "d0ab578df9306077a85f9ce283edb7fc574ea56383befd225b2c4fd49b78c0f2",
+    "audit/FRESH_REREVIEW_ATTEMPT_2.json": "0b0b9e091b2ac5700766985c1b313eaa45b76ed28fbbfaee30358d36cd5631d5",
+    "audit/FRESH_REREVIEW_ATTEMPT_3.json": "0102e049aa591e112c900d3f27f43656e1ab3edbdaacc5ae0cdfde07fe649926",
+    "audit/FRESH_REREVIEW_ATTEMPT_4.json": "c606916146c642911fc439f5991ac4e097b0287c57f8af926c6d6b802eab57de",
+    "audit/FRESH_REREVIEW_ATTEMPT_5.json": "5ac278b1b67a46e551e287bf8a79cae2ded7638f097c207daed79a560e5eb50c",
+}
 PRIVATE_PATTERN = re.compile(
     r"(?:[A-Za-z]:[\\/](?:Users|workspace|Temp|Documents|Downloads|Desktop)[\\/]|"
     r"(?<![A-Za-z0-9])/(?:home|Users|root|tmp|var/tmp|private/tmp)/|"
     r"/mnt/data/|sandbox:/|file://|chatgpt\.com/(?:c|g)/|data-message-id|"
-    r"screen-threadFlyOut|(?:access|refresh)[_-]?token\s*[:=])",
+    r"screen-threadFlyOut|(?:access|refresh)[_-]?token\s*[:=]|"
+    r"(?:X-Amz-(?:Signature|Credential|Security-Token)|"
+    r"X-Goog-(?:Signature|Credential))\s*=|"
+    r"https?://\S*[?&](?:signature|sig|token|expires)=)",
     re.IGNORECASE,
 )
 
@@ -390,8 +412,179 @@ def validate(root=ROOT, synthesis_override=None):
 
     cold = load_json(synthesis / "audit/COLD_AUDIT.json", issues)
     first_fresh = load_json(synthesis / "audit/FRESH_REREVIEW_ATTEMPT_1.json", issues)
+    second_fresh = load_json(synthesis / "audit/FRESH_REREVIEW_ATTEMPT_2.json", issues)
+    third_fresh = load_json(synthesis / "audit/FRESH_REREVIEW_ATTEMPT_3.json", issues)
     fresh = load_json(synthesis / "audit/FRESH_REREVIEW.json", issues)
     repair = synthesis / "audit/REPAIR_LOG.md"
+    expected_repaired_findings = [
+        "AR8R-V14-B01",
+        "AR8R-V14-B02",
+        "AR8R-V14-B03",
+        "AR8R-V14-B04",
+        "AR8R-V14-RR01",
+    ]
+    second_fresh_exact = (
+        second_fresh.get("schema")
+        == "ar8r-codex-corpus-synthesis-v14-fresh-rereview-attempt-v2"
+        and second_fresh.get("verdict") == "REPAIR_REQUIRED"
+        and second_fresh.get("reviewer_context") == "DISTINCT_FRESH_CONTEXT"
+        and second_fresh.get("repaired_findings_verified") == expected_repaired_findings
+        and [row.get("id") for row in second_fresh.get("blocking_findings", [])]
+        == ["AR8R-V14-FR01"]
+        and second_fresh.get("authority_boundary") == EXPECTED_AUDIT_AUTHORITY
+    )
+    if not second_fresh_exact:
+        issues.append("second fresh-rereview attempt missing or drifted")
+    third_fresh_exact = (
+        third_fresh.get("schema")
+        == "ar8r-codex-corpus-synthesis-v14-independent-whole-branch-review-attempt-v3"
+        and third_fresh.get("verdict") == "REPAIR_REQUIRED"
+        and third_fresh.get("reviewer_context") == "DISTINCT_FRESH_CONTEXT"
+        and third_fresh.get("reviewed_commit")
+        == "b3fba45e0957f706994fc1a5e33c405321702cf3"
+        and third_fresh.get("changed_files_reviewed") == 32
+        and [row.get("id") for row in third_fresh.get("blocking_findings", [])]
+        == ["AR8R-V14-IR01", "AR8R-V14-IR02"]
+        and third_fresh.get("mutation_evidence")
+        == {
+            "attempt_2_deletion_wrongly_accepted": True,
+            "false_final_rereview_hash_wrongly_accepted": True,
+            "final_blocking_finding_wrongly_accepted": True,
+            "manifested_extra_file_wrongly_accepted": True,
+            "signed_url_wrongly_accepted": True,
+            "authority_promotion_markers_wrongly_accepted": True,
+        }
+        and third_fresh.get("candidate_byte_findings")
+        == {
+            "private_leakage_found": False,
+            "authority_promotion_found": False,
+            "theorem_relation_defect_found": False,
+            "lean_or_checker_reproduction_failure": False,
+        }
+        and third_fresh.get("authority_boundary") == EXPECTED_AUDIT_AUTHORITY
+    )
+    if not third_fresh_exact:
+        issues.append("independent whole-branch review attempt missing or drifted")
+    append_only_audits_exact = True
+    for relative, expected_digest in EXPECTED_APPEND_ONLY_AUDIT_SHA256.items():
+        target = synthesis / pathlib.PurePosixPath(relative)
+        if not target.is_file() or sha256(target) != expected_digest:
+            append_only_audits_exact = False
+            issues.append(f"append-only audit receipt hash drift: {relative}")
+
+    freeze_path = synthesis / "audit/CANDIDATE_FREEZE_SHA256SUMS"
+    expected_reviewed_hashes = {
+        "candidate_freeze_manifest_sha256": (
+            sha256(freeze_path) if freeze_path.is_file() else None
+        ),
+        **{
+            relative: (
+                sha256(synthesis / pathlib.PurePosixPath(relative))
+                if (synthesis / pathlib.PurePosixPath(relative)).is_file()
+                else None
+            )
+            for relative in sorted(EXPECTED_FREEZE_MEMBERS)
+        },
+    }
+    if fresh.get("reviewed_hashes") != expected_reviewed_hashes:
+        issues.append("final rereview reviewed-hash claims mismatch")
+
+    expected_audit_chain_hashes = {
+        relative: (
+            sha256(synthesis / pathlib.PurePosixPath(relative))
+            if (synthesis / pathlib.PurePosixPath(relative)).is_file()
+            else None
+        )
+        for relative in (
+            "audit/COLD_AUDIT.json",
+            "audit/FRESH_REREVIEW_ATTEMPT_1.json",
+            "audit/FRESH_REREVIEW_ATTEMPT_2.json",
+            "audit/FRESH_REREVIEW_ATTEMPT_3.json",
+            "audit/FRESH_REREVIEW_ATTEMPT_4.json",
+            "audit/FRESH_REREVIEW_ATTEMPT_5.json",
+            "audit/REPAIR_LOG.md",
+        )
+    }
+    if fresh.get("audit_chain_hashes") != expected_audit_chain_hashes:
+        issues.append("final rereview audit-chain hash claims mismatch")
+
+    expected_verification_code_hashes = {
+        relative: sha256(root / pathlib.PurePosixPath(relative))
+        for relative in (
+            "scripts/validate_ar8r_codex_corpus_synthesis_v14.py",
+            "tests/test_ar8r_codex_corpus_synthesis_v14.py",
+        )
+        if (root / pathlib.PurePosixPath(relative)).is_file()
+    }
+    if fresh.get("verification_code_hashes") != expected_verification_code_hashes:
+        issues.append("final rereview verification-code hash claims mismatch")
+    if fresh.get("blocking_findings") != []:
+        issues.append("final rereview retains blocking findings")
+    expected_final_scope_boundary = {
+        "qualified_surface": "V14_LOCAL_SYNTHESIS_ONLY",
+        "repository_release_manifest": "OUT_OF_SCOPE_SEPARATE_REPAIR_AND_REVIEW",
+        "full_repository_workflow": "OUT_OF_SCOPE_SEPARATE_REPAIR_AND_REVIEW",
+        "commit_push_merge_release_publication": "NOT_AUTHORIZED",
+    }
+    final_scope_boundary_exact = fresh.get("scope_boundary") == expected_final_scope_boundary
+    if not final_scope_boundary_exact:
+        issues.append("final rereview scope boundary mismatch")
+    expected_source_contract = {
+        "reference_count": 32,
+        "unique_reference_count": 17,
+        "all_repository_relative_and_normalized": True,
+        "all_resolve_to_files": True,
+        "exact_semantic_source_mappings_verified": [
+            "CLIM-03",
+            "CLIM-04",
+            "CLIM-06",
+            "REL-05",
+            "REL-06",
+            "REL-10",
+            "REL-11",
+        ],
+    }
+    final_source_contract_exact = (
+        fresh.get("contracts_verified", {}).get("source") == expected_source_contract
+    )
+    if not final_source_contract_exact:
+        issues.append("final rereview source-contract claims mismatch")
+    expected_independent_repairs = [
+        "AR8R-V14-IR01",
+        "AR8R-V14-IR02",
+        "AR8R-V14-IR03",
+        "AR8R-V14-IR04",
+        "AR8R-V14-IR05",
+        "AR8R-V14-IR06",
+        "AR8R-V14-IR07",
+    ]
+    final_independent_repair_closure_exact = (
+        fresh.get("independent_repair_findings_verified")
+        == expected_independent_repairs
+    )
+    if not final_independent_repair_closure_exact:
+        issues.append("final rereview independent repair closure mismatch")
+    final_scope_exact = (
+        fresh.get("receipt_status") == "FINAL_V14_LOCAL_PASS"
+        and fresh.get("scope_result") == "PASS_V14_LOCAL_SYNTHESIS_ONLY"
+        and fresh.get("reviewed_surface") == "FROZEN_STAGED_WORKTREE"
+        and fresh.get("contracts_verified", {}).get("authority")
+        == {
+            "all_machine_authority_surfaces_exact": True,
+            "prose_promotion_findings": 0,
+            "protocols_executed": 0,
+        }
+        and fresh.get("contracts_verified", {}).get("privacy")
+        == {
+            "private_path_browser_locator_or_token_findings": 0,
+            "non_utf8_members": 0,
+        }
+        and final_scope_boundary_exact
+        and final_source_contract_exact
+        and final_independent_repair_closure_exact
+    )
+    if not final_scope_exact:
+        issues.append("final rereview declared scope or contract claims mismatch")
     audit_chain_complete = (
         cold.get("verdict") in {"PASS", "REPAIR_REQUIRED"}
         and cold.get("frozen_source_sha256") == EXPECTED_LEAN_SHA
@@ -407,6 +600,9 @@ def validate(root=ROOT, synthesis_override=None):
         and first_fresh.get("mutation_controls", {}).get("cause_specific_killed") == 15
         and first_fresh.get("mutation_controls", {}).get("cause_specific_total") == 20
         and first_fresh.get("authority_boundary") == EXPECTED_AUDIT_AUTHORITY
+        and second_fresh_exact
+        and third_fresh_exact
+        and append_only_audits_exact
         and fresh.get("verdict") == "PASS"
         and fresh.get("reviewed_source_sha256") == EXPECTED_LEAN_SHA
         and fresh.get("reviewer_context") == "DISTINCT_FRESH_CONTEXT"
@@ -417,11 +613,16 @@ def validate(root=ROOT, synthesis_override=None):
         and fresh.get("mutation_controls", {}).get("killed")
         == fresh.get("mutation_controls", {}).get("total")
         and fresh.get("mutation_controls", {}).get("total", 0) >= 15
+        and fresh.get("reviewed_hashes") == expected_reviewed_hashes
+        and fresh.get("audit_chain_hashes") == expected_audit_chain_hashes
+        and fresh.get("verification_code_hashes") == expected_verification_code_hashes
+        and fresh.get("blocking_findings") == []
+        and final_scope_exact
     )
     if not audit_chain_complete:
         issues.append("cold-audit, repair, or distinct-rereview chain incomplete")
 
-    freeze = synthesis / "audit/CANDIDATE_FREEZE_SHA256SUMS"
+    freeze = freeze_path
     freeze_entries: dict[str, str] = {}
     freeze_manifest_exact = freeze.is_file() and sha256(freeze) == EXPECTED_FREEZE_MANIFEST_SHA
     try:
@@ -461,14 +662,49 @@ def validate(root=ROOT, synthesis_override=None):
         all_public_text.append(text)
         private_path_findings += len(PRIVATE_PATTERN.findall(text))
     if private_path_findings:
-        issues.append("private path, browser locator, or token-like text leaked into synthesis")
+        issues.append(
+            "private path, browser locator, signed URL, or token-like text leaked into synthesis"
+        )
     joined_public_text = "\n".join(all_public_text)
+    authority_assignment = re.compile(
+        r"(?m)^[ \t]*(?:[-*+>]\s*)?[\"']?"
+        r"(?P<key>[A-Za-z0-9]+(?:[_ -]+[A-Za-z0-9]+)*)[\"']?"
+        r"\s*:\s*[\"']?"
+        r"(?P<value>[A-Za-z0-9]+(?:[_ -]+[A-Za-z0-9]+)*)[\"']?,?[ \t]*$"
+    )
+    authority_assignment_ceiling = {
+        "HISTORICAL_IDENTITY": ("NONE", "HISTORICAL_IDENTITY"),
+        "GENERAL_NOVELTY": ("0", "GENERAL_NOVELTY"),
+        "REPOSITORY_SCIENTIFIC_ADOPTION": ("NONE", "SCIENTIFIC_ADOPTION"),
+        "OWNER_ADOPTION": ("PENDING", "OWNER_ADOPTION"),
+        "SOURCE_WORLD_BRIDGE_ESTABLISHED": ("FALSE", "SOURCE_WORLD_TRUE"),
+        "EMPIRICAL_RESULT": ("NO_EXPERIMENT_EXECUTED", "EMPIRICAL_RESULT"),
+        "INTEGRATED_CHAMPION": ("NONE", "INTEGRATED_CHAMPION"),
+        "MENISCUS": ("MENISCUS_NOT_REACHED", "MENISCUS_REACHED"),
+        "NATURAL_CLOSURE": ("NOT_REACHED", "NATURAL_CLOSURE_REACHED"),
+        "T354": ("BLOCKED_FORMAL_DEFECT", "T354_PROMOTION"),
+        "TAC_SAC": ("UNAVAILABLE_UNDEFINED", "TAC_SAC_DEFINITION"),
+    }
+    for match in authority_assignment.finditer(joined_public_text):
+        normalized_key = re.sub(r"[_ -]+", "_", match.group("key")).upper()
+        normalized_value = re.sub(r"[_ -]+", "_", match.group("value")).upper()
+        ceiling = authority_assignment_ceiling.get(normalized_key)
+        if ceiling is not None and normalized_value != ceiling[0]:
+            issues.append(f"prose or machine authority promotion: {ceiling[1]}")
     forbidden_promotions = {
         "MENISCUS_REACHED": r"(?<!NOT_)\bMENISCUS_REACHED\b",
         "NATURAL_CLOSURE_REACHED": r"\bnatural_closure\s*:\s*REACHED\b",
         "SOURCE_WORLD_TRUE": r"\bsource_world_bridge_established\s*:\s*true\b",
         "SCIENTIFIC_ADOPTION": r"\brepository_scientific_adoption\s*:\s*(?!NONE\b)\S+",
         "HISTORICAL_IDENTITY": r"\bhistorical_identity\s*:\s*AR8R[-_]",
+        "NECESSARY_BEING": r"[\"']?necessary[_ -]+being[_ -]+established[\"']?\s*:\s*true\b",
+        "ONE_PERSONAL_BEARER": r"[\"']?one[_ -]+personal[_ -]+bearer[_ -]+established[\"']?\s*:\s*true\b",
+        "PERSONALITY": r"[\"']?personality[_ -]+established[\"']?\s*:\s*true\b",
+        "WISDOM": r"[\"']?wisdom[_ -]+established[\"']?\s*:\s*true\b",
+        "SPEECH": r"[\"']?speech[_ -]+established[\"']?\s*:\s*true\b",
+        "REVELATION": r"[\"']?revelation[_ -]+established[\"']?\s*:\s*true\b",
+        "ALLAH": r"[\"']?allah[_ -]+identification[_ -]+established[\"']?\s*:\s*true\b",
+        "EMPIRICAL_RUN": r"[\"']?empirical[_ -]+program[_ -]+run[\"']?\s*:\s*true\b",
     }
     for label, pattern in forbidden_promotions.items():
         if re.search(pattern, joined_public_text, re.IGNORECASE):
@@ -499,6 +735,8 @@ def validate(root=ROOT, synthesis_override=None):
         for path in synthesis.rglob("*")
         if path.is_file() and path != manifest
     } if synthesis.is_dir() else set()
+    if actual != EXPECTED_SOURCE_MEMBERS:
+        issues.append("required synthesis member set mismatch")
     if set(expected) != actual:
         source_hash_mismatches += len(set(expected) ^ actual) or 1
     for relative, digest in expected.items():
