@@ -1,0 +1,83 @@
+{
+  "schema": "ar8r-codex-corpus-synthesis-v14-fresh-rereview-attempt-v1",
+  "attempt": 10,
+  "reviewer_context": "DISTINCT_FRESH_CONTEXT",
+  "review_scope": "FINAL_WHOLE_BRANCH_FROZEN_TREE",
+  "reviewed_base": "1aecf9a915391006cc25f8f6fd71b4281aead12f",
+  "reviewed_head": "e3200a740037090941fa9aa43a116c577abeaddd",
+  "reviewed_tree": "96fd90ee924386715ef34a422f0c98d71d128143",
+  "changed_files_reviewed": 39,
+  "verdict": "REPAIR_REQUIRED",
+  "blocking_findings": [
+    {
+      "id": "AR8R-V14-IR11",
+      "severity": "BLOCKING",
+      "summary": "JSON Unicode escaping bypassed the general-novelty authority key"
+    },
+    {
+      "id": "AR8R-V14-IR12",
+      "severity": "BLOCKING",
+      "summary": "JSON Unicode escaping bypassed browser-session privacy detection"
+    },
+    {
+      "id": "AR8R-V14-IR13",
+      "severity": "BLOCKING",
+      "summary": "JSON Unicode escaping bypassed signed-parameter privacy detection"
+    },
+    {
+      "id": "AR8R-V14-IR14",
+      "severity": "BLOCKING",
+      "summary": "The terminal representation after eight percent-decode steps was not scanned"
+    },
+    {
+      "id": "AR8R-V14-IR15",
+      "severity": "BLOCKING",
+      "summary": "A valid bounded YAML value with a trailing comment was misclassified as promotion"
+    }
+  ],
+  "adversarial_results": {
+    "cases_total": 5,
+    "cases_correct": 0,
+    "authority_attacks_missed": 1,
+    "privacy_attacks_missed": 3,
+    "bounded_controls_rejected": 1
+  },
+  "content_review": {
+    "scientific_claim_blockers": 0,
+    "private_bytes_found_in_frozen_tree": 0,
+    "prompt_drafts_reviewed": 7,
+    "prompt_blockers": 0
+  },
+  "commands": [
+    {
+      "command": "python tests/test_ar8r_codex_corpus_synthesis_v14.py -v",
+      "exit_code": 0,
+      "result": "48/48 repository tests passed before the new adversarial probe"
+    },
+    {
+      "command": "python scripts/validate_ar8r_codex_corpus_synthesis_v14.py",
+      "exit_code": 0,
+      "result": "PASS_BOUNDED_CODEX_CORPUS_SYNTHESIS_NO_SCIENTIFIC_PROMOTION before the new adversarial probe"
+    },
+    {
+      "command": "read-only five-case authority/privacy adversarial probe",
+      "exit_code": 1,
+      "result": "0/5 cases correctly classified"
+    }
+  ],
+  "repair_authorized": true,
+  "safe_to_commit_or_publish": false,
+  "authority_boundary": {
+    "historical_identity": "NONE",
+    "general_novelty": 0,
+    "repository_scientific_adoption": "NONE",
+    "owner_adoption": "PENDING",
+    "source_world_bridge_established": false,
+    "empirical_result": "NO_EXPERIMENT_EXECUTED",
+    "integrated_champion": "NONE",
+    "meniscus": "MENISCUS_NOT_REACHED",
+    "natural_closure": "NOT_REACHED",
+    "T354": "BLOCKED_FORMAL_DEFECT",
+    "TAC_SAC": "UNAVAILABLE_UNDEFINED"
+  }
+}

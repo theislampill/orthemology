@@ -1,0 +1,56 @@
+{
+  "schema": "ar8r-codex-corpus-synthesis-v14-fresh-rereview-attempt-v1",
+  "attempt": 9,
+  "reviewer_context": "DISTINCT_FRESH_CONTEXT",
+  "review_scope": "IR08_IR10_FINAL_EXACT_STAGED_REPAIR_TREE",
+  "reviewed_head": "e3200a740037090941fa9aa43a116c577abeaddd",
+  "reviewed_tree": "5ea003e01ed0baa0aae6ec70c51c81ec966f445c",
+  "verdict": "PASS_REPAIR_IMPLEMENTATION",
+  "blocking_findings": [],
+  "adversarial_results": {
+    "cases_total": 462,
+    "cases_correct": 462,
+    "authority_promotions_rejected": "165/165",
+    "authority_bounded_controls_accepted": "165/165",
+    "privacy_attacks_rejected": "114/114",
+    "privacy_benign_controls_accepted": "5/5",
+    "command_object_mutations_rejected": "11/11",
+    "attempt_6_7_mutations_rejected": "2/2"
+  },
+  "repository_tests": {
+    "nonbaseline_passed": 46,
+    "nonbaseline_total": 46,
+    "stale_baseline_failures": 1,
+    "total": 47,
+    "stale_baseline_reason": "FINAL_RECEIPT_AND_MANIFEST_REFRESH_NOT_YET_MATERIALIZED"
+  },
+  "repair_findings_verified": [
+    "AR8R-V14-IR08",
+    "AR8R-V14-IR09",
+    "AR8R-V14-IR10",
+    "AR8R-V14-IR08-R1",
+    "AR8R-V14-IR09-R1",
+    "AR8R-V14-IR10-R1",
+    "AR8R-V14-IR08-R2",
+    "AR8R-V14-IR09-R2"
+  ],
+  "safe_to_refresh_final_receipt_and_manifests": true,
+  "remaining_external_gates": [
+    "full local workflow with explicit PDF-container boundary",
+    "exact-head hosted Linux CI",
+    "fresh merged-main validation"
+  ],
+  "authority_boundary": {
+    "historical_identity": "NONE",
+    "general_novelty": 0,
+    "repository_scientific_adoption": "NONE",
+    "owner_adoption": "PENDING",
+    "source_world_bridge_established": false,
+    "empirical_result": "NO_EXPERIMENT_EXECUTED",
+    "integrated_champion": "NONE",
+    "meniscus": "MENISCUS_NOT_REACHED",
+    "natural_closure": "NOT_REACHED",
+    "T354": "BLOCKED_FORMAL_DEFECT",
+    "TAC_SAC": "UNAVAILABLE_UNDEFINED"
+  }
+}

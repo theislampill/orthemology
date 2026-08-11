@@ -158,3 +158,95 @@ markers rather than the complete authority boundary. A forty-four-cell matrix
 now exercises eleven keys in unquoted YAML, quoted JSON, hyphenated, and spaced
 forms. The final receipt cannot be refreshed until every cell fails closed for
 the intended authority-promotion issue.
+
+## AR8R-V14-IR08 — non-token and compact authority assignments
+
+The distinct whole-branch review showed that a decimal novelty value and a
+promoted historical identity inside compact JSON could evade the previous
+line-oriented scalar grammar. Regression tests failed on both examples before
+implementation. The scanner now recognizes only the eleven governed authority
+keys, in quoted, underscore, hyphenated, or spaced form, but accepts an
+arbitrary scalar shape for comparison. Every value other than the exact
+bounded value is rejected.
+
+## AR8R-V14-IR09 — exact final-receipt shape and command evidence
+
+The same review added an undeclared whole-branch PASS field and fabricated a
+command exit/result while preserving the previously checked receipt fields.
+Both mutations passed before repair. The validator now pins the complete
+top-level key set and the full ordered command-evidence value, so neither
+undeclared claims nor command mutations survive remanifesting.
+
+## AR8R-V14-IR10 — encoded link and browser-session privacy controls
+
+Percent-encoded signed-request parameters and an explicit browser-session
+identifier evaded the raw-text privacy patterns. The validator now scans both
+raw text and percent-decoded text and rejects explicit browser-session
+identifier fields. Ordinary mathematical `sig` and `signature` assignments
+remain accepted because they still lack a URL query or provider-specific
+signed-request context.
+
+## IR08–IR10 residual repair after attempt 7
+
+Attempt 7 found that the first repair still relied on Python's coercive scalar
+equality, decoded privacy text only once, omitted quoted session fields, and
+used an authority grammar narrower than its declared separator boundary. New
+tests reproduce every reported case. Command evidence now uses recursive
+type-exact JSON comparison. Privacy scanning normalizes escaped slashes and
+iteratively percent-decodes to a bounded fixed point. Authority keys accept
+Unicode whitespace, comments, backtick quoting, and either colon or equals
+assignment while still comparing only the eleven governed keys against their
+exact bounded values.
+
+## IR08–IR09 residual repair after attempt 8
+
+Attempt 8 reduced its independent 462-case matrix to two failures. Recursive
+JSON comparison now preserves dictionary insertion order as part of the exact
+receipt evidence, closing command-object reordering. The redundant legacy
+scientific-adoption regex was removed because the generalized eleven-key gate
+already enforces that ceiling and correctly accepts the exact bounded value
+under supported backtick quoting.
+
+## Attempt 9 — repair implementation pass
+
+A distinct fresh context reviewed exact staged tree
+`5ea003e01ed0baa0aae6ec70c51c81ec966f445c`. Its 462-case matrix passed in
+full: 165 authority promotions rejected, 165 bounded authority controls
+accepted, 114 privacy attacks rejected, five benign privacy controls accepted,
+eleven command-object mutations rejected, and two append-only receipt
+mutations rejected. It authorized only the coordinated final receipt and
+manifest refresh. Hosted Linux CI and fresh merged-main verification remain
+separate gates.
+
+## AR8R-V14-IR11–IR15 — escaped authority/privacy and bounded-comment controls
+
+Attempt 10 independently reviewed all 39 files in exact frozen tree
+`96fd90ee924386715ef34a422f0c98d71d128143`. The scientific content and
+seven continuation-prompt drafts had no blocking finding, but a new five-case
+adversarial probe failed in full. JSON Unicode escapes hid one authority key,
+one browser-session key, and one signed-request parameter. An eight-level
+percent-encoded signed parameter reached its dangerous terminal form only
+after the previous loop's last stored variant. A valid bounded YAML value with
+a trailing comment was misclassified as promotion.
+
+Five cause-specific tests were added and observed failing before the validator
+changed. Privacy and authority scanning now share a bounded fixed-point
+normalizer over JSON slash escapes, JSON Unicode escapes, and percent encoding;
+every intermediate and terminal representation is scanned, while failure to
+stabilize within the declared bound fails closed. Authority-value comparison
+now removes a valid trailing YAML comment from an unquoted scalar before
+checking the exact ceiling. The five new tests pass after repair. Attempt 10
+remains append-only `REPAIR_REQUIRED`; a distinct rereview of the repaired
+bytes is still required before any commit or publication.
+
+## Attempt 11 — IR11–IR15 repair implementation pass
+
+A distinct fresh context reviewed exact staged tree
+`133c4f2e2850f9eeffea7d005041c9061e379f9c`. It first reproduced all five
+IR11–IR15 defects against the prior frozen logic, then exercised the repair
+with 27 attacks and 18 valid controls. Every attack was rejected and every
+control accepted. All 52 nonbaseline V14 tests passed; the sole remaining
+failure was the intentionally stale final receipt and manifest baseline.
+Attempt 11 authorizes only the coordinated receipt and hash refresh. Hosted
+Linux CI, commit and publication review, and fresh merged-main verification
+remain separate gates.

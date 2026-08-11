@@ -5,6 +5,7 @@ import pathlib
 import shutil
 import tempfile
 import unittest
+import urllib.parse
 
 import yaml
 
@@ -376,6 +377,108 @@ class Ar8rCodexCorpusSynthesisV14Tests(unittest.TestCase):
         self.assertGreater(receipt["private_path_findings"], 0, receipt)
         self.assert_failed_with(receipt, "private path, browser locator, signed URL, or token-like text leaked")
 
+    def test_percent_encoded_signed_url_parameter_fails_closed(self):
+        validator = load_validator()
+        with tempfile.TemporaryDirectory() as temporary:
+            copied = self.copy_surface(validator, temporary)
+            target = copied / "audit/REPAIR_LOG.md"
+            target.write_text(
+                target.read_text(encoding="utf-8")
+                + "\nhttps://example.invalid/file?X-Amz-Signature%3Ddeadbeef\n",
+                encoding="utf-8",
+                newline="\n",
+            )
+            self.rewrite_source_manifest(copied)
+            receipt = validator.validate(ROOT, copied)
+        self.assertGreater(receipt["private_path_findings"], 0, receipt)
+        self.assert_failed_with(receipt, "private path, browser locator, signed URL, or token-like text leaked")
+
+    def test_browser_session_identifier_fails_closed(self):
+        validator = load_validator()
+        with tempfile.TemporaryDirectory() as temporary:
+            copied = self.copy_surface(validator, temporary)
+            target = copied / "audit/REPAIR_LOG.md"
+            target.write_text(
+                target.read_text(encoding="utf-8")
+                + "\nbrowser_session_id: private-browser-session-123\n",
+                encoding="utf-8",
+                newline="\n",
+            )
+            self.rewrite_source_manifest(copied)
+            receipt = validator.validate(ROOT, copied)
+        self.assertGreater(receipt["private_path_findings"], 0, receipt)
+        self.assert_failed_with(receipt, "private path, browser locator, signed URL, or token-like text leaked")
+
+    def test_nested_encoded_and_quoted_private_locators_fail_closed(self):
+        validator = load_validator()
+        payloads = (
+            "https://example.invalid/file?X-Amz-Signature%25253Ddeadbeef",
+            '"browser_session_id": "private-browser-session-123"',
+            "'browser-session-identifier' = 'private-browser-session-123'",
+            r"https:\/\/example.invalid\/file?signature=deadbeef",
+            "browser%255Fsession%255Fid%253Aprivate-browser-session-123",
+        )
+        for payload in payloads:
+            with self.subTest(payload=payload), tempfile.TemporaryDirectory() as temporary:
+                copied = self.copy_surface(validator, temporary)
+                target = copied / "audit/REPAIR_LOG.md"
+                target.write_text(
+                    target.read_text(encoding="utf-8") + "\n" + payload + "\n",
+                    encoding="utf-8",
+                    newline="\n",
+                )
+                self.rewrite_source_manifest(copied)
+                receipt = validator.validate(ROOT, copied)
+            self.assertGreater(receipt["private_path_findings"], 0, receipt)
+            self.assert_failed_with(receipt, "private path, browser locator, signed URL, or token-like text leaked")
+
+    def test_json_unicode_escaped_private_locators_fail_closed(self):
+        validator = load_validator()
+        payloads = (
+            r'{"browser\u005fsession\u005fid": "opaque"}',
+            r"https://example.invalid/?\u0058-Amz-Signature=opaque",
+        )
+        for payload in payloads:
+            with self.subTest(payload=payload), tempfile.TemporaryDirectory() as temporary:
+                copied = self.copy_surface(validator, temporary)
+                target = copied / "audit/REPAIR_LOG.md"
+                target.write_text(
+                    target.read_text(encoding="utf-8") + "\n" + payload + "\n",
+                    encoding="utf-8",
+                    newline="\n",
+                )
+                self.rewrite_source_manifest(copied)
+                receipt = validator.validate(ROOT, copied)
+            self.assertGreater(receipt["private_path_findings"], 0, receipt)
+            self.assert_failed_with(
+                receipt,
+                "private path, browser locator, signed URL, or token-like text leaked",
+            )
+
+    def test_percent_decoding_scans_the_final_bounded_iteration(self):
+        validator = load_validator()
+        encoded = "X-Amz-Signature=opaque"
+        for _ in range(8):
+            encoded = urllib.parse.quote(encoded, safe="")
+        with tempfile.TemporaryDirectory() as temporary:
+            copied = self.copy_surface(validator, temporary)
+            target = copied / "audit/REPAIR_LOG.md"
+            target.write_text(
+                target.read_text(encoding="utf-8")
+                + "\nhttps://example.invalid/?"
+                + encoded
+                + "\n",
+                encoding="utf-8",
+                newline="\n",
+            )
+            self.rewrite_source_manifest(copied)
+            receipt = validator.validate(ROOT, copied)
+        self.assertGreater(receipt["private_path_findings"], 0, receipt)
+        self.assert_failed_with(
+            receipt,
+            "private path, browser locator, signed URL, or token-like text leaked",
+        )
+
     def test_all_transcendental_and_empirical_prose_promotions_fail_closed(self):
         validator = load_validator()
         promotions = {
@@ -436,6 +539,93 @@ class Ar8rCodexCorpusSynthesisV14Tests(unittest.TestCase):
                     target = copied / "audit/REPAIR_LOG.md"
                     target.write_text(
                         target.read_text(encoding="utf-8") + "\n" + variant + "\n",
+                        encoding="utf-8",
+                        newline="\n",
+                    )
+                    self.rewrite_source_manifest(copied)
+                    receipt = validator.validate(ROOT, copied)
+                self.assert_failed_with(receipt, f"prose or machine authority promotion: {label}")
+
+    def test_non_token_and_compact_authority_promotions_fail_closed(self):
+        validator = load_validator()
+        promotions = {
+            "GENERAL_NOVELTY": "general_novelty: 0.5",
+            "HISTORICAL_IDENTITY": '{"historical_identity":"AR8R-T999","note":"compact"}',
+        }
+        for label, payload in promotions.items():
+            with self.subTest(label=label), tempfile.TemporaryDirectory() as temporary:
+                copied = self.copy_surface(validator, temporary)
+                target = copied / "audit/REPAIR_LOG.md"
+                target.write_text(
+                    target.read_text(encoding="utf-8") + "\n" + payload + "\n",
+                    encoding="utf-8",
+                    newline="\n",
+                )
+                self.rewrite_source_manifest(copied)
+                receipt = validator.validate(ROOT, copied)
+            self.assert_failed_with(receipt, f"prose or machine authority promotion: {label}")
+
+    def test_json_unicode_escaped_authority_key_fails_closed(self):
+        validator = load_validator()
+        with tempfile.TemporaryDirectory() as temporary:
+            copied = self.copy_surface(validator, temporary)
+            target = copied / "audit/REPAIR_LOG.md"
+            target.write_text(
+                target.read_text(encoding="utf-8")
+                + '\n{"\\u0067eneral_novelty": 1}\n',
+                encoding="utf-8",
+                newline="\n",
+            )
+            self.rewrite_source_manifest(copied)
+            receipt = validator.validate(ROOT, copied)
+        self.assert_failed_with(
+            receipt,
+            "prose or machine authority promotion: GENERAL_NOVELTY",
+        )
+
+    def test_bounded_authority_value_with_yaml_comment_is_accepted(self):
+        validator = load_validator()
+        with tempfile.TemporaryDirectory() as temporary:
+            copied = self.copy_surface(validator, temporary)
+            target = copied / "audit/REPAIR_LOG.md"
+            target.write_text(
+                target.read_text(encoding="utf-8")
+                + "\ngeneral_novelty: 0 # bounded control\n",
+                encoding="utf-8",
+                newline="\n",
+            )
+            self.rewrite_source_manifest(copied)
+            receipt = validator.validate(ROOT, copied)
+        self.assertNotIn(
+            "prose or machine authority promotion: GENERAL_NOVELTY",
+            receipt["issues"],
+            receipt,
+        )
+
+    def test_authority_boundary_separator_and_quoting_bypasses_fail_closed(self):
+        validator = load_validator()
+        payloads = {
+            "GENERAL_NOVELTY": (
+                "general\u00a0novelty: 0.5",
+                "general\u2003novelty: 0.5",
+                "general\tnovelty: 0.5",
+                "general_novelty /* promoted */: 0.5",
+                "`general_novelty`: 0.5",
+                "general_novelty = 0.5",
+            ),
+            "HISTORICAL_IDENTITY": (
+                "historical\u00a0identity: AR8R-T999",
+                "historical_identity <!-- promoted -->: AR8R-T999",
+                "`historical-identity` = AR8R-T999",
+            ),
+        }
+        for label, variants in payloads.items():
+            for payload in variants:
+                with self.subTest(label=label, payload=payload), tempfile.TemporaryDirectory() as temporary:
+                    copied = self.copy_surface(validator, temporary)
+                    target = copied / "audit/REPAIR_LOG.md"
+                    target.write_text(
+                        target.read_text(encoding="utf-8") + "\n" + payload + "\n",
                         encoding="utf-8",
                         newline="\n",
                     )
@@ -509,6 +699,84 @@ class Ar8rCodexCorpusSynthesisV14Tests(unittest.TestCase):
             "append-only audit receipt hash drift: audit/FRESH_REREVIEW_ATTEMPT_5.json",
         )
 
+    def test_append_only_attempt_7_residual_findings_are_hash_pinned(self):
+        validator = load_validator()
+        with tempfile.TemporaryDirectory() as temporary:
+            copied = self.copy_surface(validator, temporary)
+            target = copied / "audit/FRESH_REREVIEW_ATTEMPT_7.json"
+            data = json.loads(target.read_text(encoding="utf-8"))
+            data["blocking_findings"] = []
+            data["verdict"] = "PASS"
+            target.write_text(json.dumps(data, indent=2) + "\n", encoding="utf-8", newline="\n")
+            self.rewrite_source_manifest(copied)
+            receipt = validator.validate(ROOT, copied)
+        self.assert_failed_with(
+            receipt,
+            "append-only audit receipt hash drift: audit/FRESH_REREVIEW_ATTEMPT_7.json",
+        )
+
+    def test_append_only_attempt_8_residual_findings_are_hash_pinned(self):
+        validator = load_validator()
+        with tempfile.TemporaryDirectory() as temporary:
+            copied = self.copy_surface(validator, temporary)
+            target = copied / "audit/FRESH_REREVIEW_ATTEMPT_8.json"
+            data = json.loads(target.read_text(encoding="utf-8"))
+            data["blocking_findings"] = []
+            data["verdict"] = "PASS"
+            target.write_text(json.dumps(data, indent=2) + "\n", encoding="utf-8", newline="\n")
+            self.rewrite_source_manifest(copied)
+            receipt = validator.validate(ROOT, copied)
+        self.assert_failed_with(
+            receipt,
+            "append-only audit receipt hash drift: audit/FRESH_REREVIEW_ATTEMPT_8.json",
+        )
+
+    def test_append_only_attempt_9_pass_is_hash_pinned(self):
+        validator = load_validator()
+        with tempfile.TemporaryDirectory() as temporary:
+            copied = self.copy_surface(validator, temporary)
+            target = copied / "audit/FRESH_REREVIEW_ATTEMPT_9.json"
+            data = json.loads(target.read_text(encoding="utf-8"))
+            data["adversarial_results"]["cases_correct"] = 461
+            target.write_text(json.dumps(data, indent=2) + "\n", encoding="utf-8", newline="\n")
+            self.rewrite_source_manifest(copied)
+            receipt = validator.validate(ROOT, copied)
+        self.assert_failed_with(
+            receipt,
+            "append-only audit receipt hash drift: audit/FRESH_REREVIEW_ATTEMPT_9.json",
+        )
+
+    def test_append_only_attempt_10_block_is_hash_pinned(self):
+        validator = load_validator()
+        with tempfile.TemporaryDirectory() as temporary:
+            copied = self.copy_surface(validator, temporary)
+            target = copied / "audit/FRESH_REREVIEW_ATTEMPT_10.json"
+            data = json.loads(target.read_text(encoding="utf-8"))
+            data["blocking_findings"] = []
+            data["verdict"] = "PASS_WHOLE_BRANCH"
+            target.write_text(json.dumps(data, indent=2) + "\n", encoding="utf-8", newline="\n")
+            self.rewrite_source_manifest(copied)
+            receipt = validator.validate(ROOT, copied)
+        self.assert_failed_with(
+            receipt,
+            "append-only audit receipt hash drift: audit/FRESH_REREVIEW_ATTEMPT_10.json",
+        )
+
+    def test_append_only_attempt_11_pass_is_hash_pinned(self):
+        validator = load_validator()
+        with tempfile.TemporaryDirectory() as temporary:
+            copied = self.copy_surface(validator, temporary)
+            target = copied / "audit/FRESH_REREVIEW_ATTEMPT_11.json"
+            data = json.loads(target.read_text(encoding="utf-8"))
+            data["adversarial_results"]["attacks_rejected"] = "26/27"
+            target.write_text(json.dumps(data, indent=2) + "\n", encoding="utf-8", newline="\n")
+            self.rewrite_source_manifest(copied)
+            receipt = validator.validate(ROOT, copied)
+        self.assert_failed_with(
+            receipt,
+            "append-only audit receipt hash drift: audit/FRESH_REREVIEW_ATTEMPT_11.json",
+        )
+
     def test_final_scope_source_contract_and_repair_closure_are_exact(self):
         validator = load_validator()
         with tempfile.TemporaryDirectory() as temporary:
@@ -527,6 +795,77 @@ class Ar8rCodexCorpusSynthesisV14Tests(unittest.TestCase):
         self.assert_failed_with(receipt, "final rereview scope boundary mismatch")
         self.assert_failed_with(receipt, "final rereview source-contract claims mismatch")
         self.assert_failed_with(receipt, "final rereview independent repair closure mismatch")
+
+    def test_final_receipt_rejects_unexpected_top_level_claim(self):
+        validator = load_validator()
+        with tempfile.TemporaryDirectory() as temporary:
+            copied = self.copy_surface(validator, temporary)
+            target = copied / "audit/FRESH_REREVIEW.json"
+            data = json.loads(target.read_text(encoding="utf-8"))
+            data["whole_branch_pass"] = True
+            target.write_text(json.dumps(data, indent=2) + "\n", encoding="utf-8", newline="\n")
+            self.rewrite_source_manifest(copied)
+            receipt = validator.validate(ROOT, copied)
+        self.assert_failed_with(receipt, "final rereview top-level shape mismatch")
+
+    def test_final_receipt_command_evidence_is_exact(self):
+        validator = load_validator()
+        with tempfile.TemporaryDirectory() as temporary:
+            copied = self.copy_surface(validator, temporary)
+            target = copied / "audit/FRESH_REREVIEW.json"
+            data = json.loads(target.read_text(encoding="utf-8"))
+            data["commands"][0]["exit_code"] = 7
+            data["commands"][0]["result"] = "fabricated whole-branch PASS"
+            target.write_text(json.dumps(data, indent=2) + "\n", encoding="utf-8", newline="\n")
+            self.rewrite_source_manifest(copied)
+            receipt = validator.validate(ROOT, copied)
+        self.assert_failed_with(receipt, "final rereview command evidence mismatch")
+
+    def test_final_receipt_command_evidence_is_type_exact(self):
+        validator = load_validator()
+        for replacement in (False, 0.0):
+            with self.subTest(replacement=replacement), tempfile.TemporaryDirectory() as temporary:
+                copied = self.copy_surface(validator, temporary)
+                target = copied / "audit/FRESH_REREVIEW.json"
+                data = json.loads(target.read_text(encoding="utf-8"))
+                data["commands"][0]["exit_code"] = replacement
+                target.write_text(json.dumps(data, indent=2) + "\n", encoding="utf-8", newline="\n")
+                self.rewrite_source_manifest(copied)
+                receipt = validator.validate(ROOT, copied)
+            self.assert_failed_with(receipt, "final rereview command evidence mismatch")
+
+    def test_final_receipt_command_object_key_order_is_exact(self):
+        validator = load_validator()
+        with tempfile.TemporaryDirectory() as temporary:
+            copied = self.copy_surface(validator, temporary)
+            target = copied / "audit/FRESH_REREVIEW.json"
+            data = json.loads(target.read_text(encoding="utf-8"))
+            first = data["commands"][0]
+            command = first.pop("command")
+            first["command"] = command
+            target.write_text(json.dumps(data, indent=2) + "\n", encoding="utf-8", newline="\n")
+            self.rewrite_source_manifest(copied)
+            receipt = validator.validate(ROOT, copied)
+        self.assert_failed_with(receipt, "final rereview command evidence mismatch")
+
+    def test_backtick_wrapped_bounded_authority_value_is_accepted(self):
+        validator = load_validator()
+        with tempfile.TemporaryDirectory() as temporary:
+            copied = self.copy_surface(validator, temporary)
+            target = copied / "audit/REPAIR_LOG.md"
+            target.write_text(
+                target.read_text(encoding="utf-8")
+                + "\nrepository_scientific_adoption: `NONE`\n",
+                encoding="utf-8",
+                newline="\n",
+            )
+            self.rewrite_source_manifest(copied)
+            receipt = validator.validate(ROOT, copied)
+        self.assertNotIn(
+            "prose or machine authority promotion: SCIENTIFIC_ADOPTION",
+            receipt["issues"],
+            receipt,
+        )
 
     def test_plain_signature_notation_is_not_a_private_locator(self):
         validator = load_validator()

@@ -1,0 +1,42 @@
+{
+  "schema": "ar8r-codex-corpus-synthesis-v14-fresh-rereview-attempt-v1",
+  "attempt": 7,
+  "reviewer_context": "DISTINCT_FRESH_CONTEXT",
+  "review_scope": "IR08_IR10_EXACT_STAGED_REPAIR_TREE",
+  "reviewed_head": "e3200a740037090941fa9aa43a116c577abeaddd",
+  "reviewed_tree": "5d8ba2f7be56c0c65e79a126cad2523da0a2d148",
+  "verdict": "REPAIR_REQUIRED",
+  "blocking_findings": [
+    {"id": "AR8R-V14-IR09-R1", "severity": "HIGH", "summary": "Python equality accepted boolean false and floating zero as integer zero in command evidence."},
+    {"id": "AR8R-V14-IR10-R1", "severity": "HIGH", "summary": "Nested encoding, JSON-escaped links, and quoted browser-session fields bypassed the privacy scan."},
+    {"id": "AR8R-V14-IR08-R1", "severity": "HIGH", "summary": "Unicode and tab separators, comments, backticks, and equals assignments bypassed authority scanning."}
+  ],
+  "adversarial_results": {
+    "IR08_core_malicious_rejected": "165/165",
+    "IR08_bounded_values_accepted": "99/99",
+    "IR08_boundary_bypasses": "6/6 reproduced",
+    "IR09_mutations_rejected": "11/13",
+    "IR10_extended_bypasses": "10 reproduced",
+    "ordinary_sig_signature_controls": "PASS"
+  },
+  "attempt_6_append_only_hash_verified": "754c372a147c0f24f7bff2a1a89253e060db4d01c727dcdf9b6efe80483d712a",
+  "remaining_gates": [
+    "repair residual IR08 through IR10 bypasses",
+    "fresh independent repair rereview",
+    "exact-head hosted Linux CI",
+    "fresh merged-main validation"
+  ],
+  "authority_boundary": {
+    "historical_identity": "NONE",
+    "general_novelty": 0,
+    "repository_scientific_adoption": "NONE",
+    "owner_adoption": "PENDING",
+    "source_world_bridge_established": false,
+    "empirical_result": "NO_EXPERIMENT_EXECUTED",
+    "integrated_champion": "NONE",
+    "meniscus": "MENISCUS_NOT_REACHED",
+    "natural_closure": "NOT_REACHED",
+    "T354": "BLOCKED_FORMAL_DEFECT",
+    "TAC_SAC": "UNAVAILABLE_UNDEFINED"
+  }
+}

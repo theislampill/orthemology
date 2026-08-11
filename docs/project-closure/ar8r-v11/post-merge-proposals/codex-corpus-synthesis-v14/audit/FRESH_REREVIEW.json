@@ -31,11 +31,17 @@
     "audit/FRESH_REREVIEW_ATTEMPT_3.json": "0102e049aa591e112c900d3f27f43656e1ab3edbdaacc5ae0cdfde07fe649926",
     "audit/FRESH_REREVIEW_ATTEMPT_4.json": "c606916146c642911fc439f5991ac4e097b0287c57f8af926c6d6b802eab57de",
     "audit/FRESH_REREVIEW_ATTEMPT_5.json": "5ac278b1b67a46e551e287bf8a79cae2ded7638f097c207daed79a560e5eb50c",
-    "audit/REPAIR_LOG.md": "7c6958fbd6d1acc7c4bf6ec7d42ae922bc6a501d1443622b5a9cf51aea3cc761"
+    "audit/FRESH_REREVIEW_ATTEMPT_6.json": "754c372a147c0f24f7bff2a1a89253e060db4d01c727dcdf9b6efe80483d712a",
+    "audit/FRESH_REREVIEW_ATTEMPT_7.json": "7f981d02706338df7df0aa85a4a4262d16fbddda7d212cd8ae29baa730ad8a32",
+    "audit/FRESH_REREVIEW_ATTEMPT_8.json": "2dd62e8ba32181c2ba04903e2f3ff9edc552a794afceaf9f52c949b175563cae",
+    "audit/FRESH_REREVIEW_ATTEMPT_9.json": "eb6d77bf4c3359c5b0bc61248d7ace7ce20ff99bdae968e96ece84d5bd1cf774",
+    "audit/FRESH_REREVIEW_ATTEMPT_10.json": "b1e249222914b0d55326904971862812c8c97084eb4bbfc2a93d9b722ea1378b",
+    "audit/FRESH_REREVIEW_ATTEMPT_11.json": "c1f8c16aa5017049429779e8648af45ece9c5d64526a3dcd84e33490e4f30a3e",
+    "audit/REPAIR_LOG.md": "ec22b3e2aae11cab67a1a0b31df15fbf04e15cba4fc9545aaf85605f10b44bbd"
   },
   "verification_code_hashes": {
-    "scripts/validate_ar8r_codex_corpus_synthesis_v14.py": "e637acfc04b2d9bd42f6b89a8fc82f57eb76d0957129087d48f7993b051a27ec",
-    "tests/test_ar8r_codex_corpus_synthesis_v14.py": "2689b18e4e792e6dc07e405c178c34170a28192d5fb94404fae584a86d1a1420"
+    "scripts/validate_ar8r_codex_corpus_synthesis_v14.py": "c2153d22937864584ca0310a129cb41badbcbea96e3a2175b53bd1a9a666a626",
+    "tests/test_ar8r_codex_corpus_synthesis_v14.py": "7801ae286ca0b8c8c4c1bce7e73aedc9dfb914474d66ea58c029c756ea1ef67e"
   },
   "staged_blob_equality": {
     "checks/codex_fibre_synthesis_check.py": {
@@ -179,7 +185,7 @@
     {
       "command": "python tests/test_ar8r_codex_corpus_synthesis_v14.py -v",
       "exit_code": 0,
-      "result": "Ran 21 tests; OK"
+      "result": "Ran 54 tests; OK"
     },
     {
       "command": "python scripts/validate_ar8r_codex_corpus_synthesis_v14.py",
@@ -224,6 +230,14 @@
     "AR8R-V14-IR04",
     "AR8R-V14-IR05",
     "AR8R-V14-IR06",
-    "AR8R-V14-IR07"
+    "AR8R-V14-IR07",
+    "AR8R-V14-IR08",
+    "AR8R-V14-IR09",
+    "AR8R-V14-IR10",
+    "AR8R-V14-IR11",
+    "AR8R-V14-IR12",
+    "AR8R-V14-IR13",
+    "AR8R-V14-IR14",
+    "AR8R-V14-IR15"
   ]
 }
