@@ -37,6 +37,22 @@ scoped_developments:
       itself was not machine-checked end to end.
     unblocks: [Q1a, Q1b, Q1c, Q1d, Q1e, Q1f, Q1g, Q1h, Q1i]
     unblocked_but_not_performed: true
+  - id: CODEX-CORPUS-SYNTHESIS-V14
+    receipt: ../post-merge-proposals/codex-corpus-synthesis-v14/lean/LEAN_RECEIPT.json
+    source: ../post-merge-proposals/codex-corpus-synthesis-v14/lean/CodexFibreSynthesis.lean
+    parse: PASS
+    elaboration: PASS
+    kernel: PASS_STANDALONE
+    axiom_report: PERFORMED
+    project_build: NOT_RUN
+    machine_check_claim: ELEMENTARY_FIBRE_GUARD_LEMMAS_ONLY
+    relation_to_historical_corpus: >
+      This is new V14 source for the existing AR-T1 fibre family and guarded
+      applications. It is not historical recovery, is not identified with a
+      lost declaration, carries general novelty zero, and has no scientific or
+      owner adoption effect.
+    candidate_ids: [CCS-V14-C1, CCS-V14-C2, CCS-V14-C3]
+    nonclaims: [NO_HISTORICAL_IDENTITY, NO_GENERAL_NOVELTY, NO_PROJECT_INTEGRATION, NO_ADOPTION]
 milestone_formalization_crosswalk:
   owner: ../programs/AR8R-ORTHEMOLOGY-MENISCUS-MILESTONES-V1.yaml
   milestones: [M1, M2, M3, M4, M5, M6, M7, M8, M9, M10, M11, M12, M13, M14, M18]

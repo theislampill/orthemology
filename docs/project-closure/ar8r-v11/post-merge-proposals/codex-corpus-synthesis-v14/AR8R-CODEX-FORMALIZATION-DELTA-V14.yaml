@@ -1,0 +1,90 @@
+schema: ar8r-codex-formalization-delta-v14
+candidates:
+  - id: CCS-V14-C1
+    title: attained-image fibre factorization
+    verdict: COMMON_THEOREM_ESTABLISHED
+    statement: an exact target decoder on the attained observation image exists exactly when the target is constant on observation fibres
+    earliest_internal_ancestor: PRIOR-ART::FIBRE_FACTORIZATION
+    internal_specialization: AR-T1
+    historical_identity: NONE
+    novelty: 0
+    proof_status: LEAN_PROVED_AS_EXISTING_FAMILY_RESTATEMENT
+    dependencies: [elementary equality, function extensionality, classical choice]
+    nonclaims: [no new theorem identity, no native mechanism identity, no owner adoption]
+  - id: CCS-V14-C2
+    title: full-codomain decoder extension guard
+    verdict: GUARDED_MULTI_LANE_APPLICATION_ESTABLISHED
+    statement: a total decoder on the full observation codomain exists exactly when fibre constancy holds and the observation is surjective or the target type is inhabited
+    earliest_internal_ancestor: PRIOR-ART::FIBRE_FACTORIZATION
+    internal_specialization: AR-T1
+    historical_identity: NONE
+    novelty: 0
+    proof_status: LEAN_PROVED
+    dependencies: [CCS-V14-C1, classical choice for extension]
+    nonclaims: [no canonical off-range value, no semantic or warrant preservation]
+  - id: CCS-V14-C3
+    title: guard-product and joint-refinement criteria
+    verdict: GUARDED_MULTI_LANE_APPLICATION_ESTABLISHED
+    statement: pair-target fibre constancy is coordinatewise, and refinement restores a target exactly when it is constant on joint fibres
+    earliest_internal_ancestor: PRIOR-ART::FIBRE_FACTORIZATION
+    internal_specialization: AR-T1
+    historical_identity: NONE
+    novelty: 0
+    proof_status: LEAN_PROVED
+    dependencies: [CCS-V14-C1]
+    nonclaims: [no selector authorization, no causal or temporal sufficiency]
+  - id: CCS-V14-C4
+    title: orthogonal guard product for content and warrant coordinates
+    verdict: GUARDED_MULTI_LANE_APPLICATION_ESTABLISHED
+    statement: extensional content factorization does not supply provenance, authorization, version applicability, or recipient warrant unless each coordinate separately factors or is certified
+    earliest_internal_ancestor: PRIOR-ART::FIBRE_FACTORIZATION
+    internal_specialization: AR-T1
+    historical_identity: NONE
+    novelty: 0
+    proof_status: TYPED_APPLICATION_OF_CCS_V14_C3
+    dependencies: [CCS-V14-C3, reason-preserving transport family]
+    nonclaims: [native guard mechanisms are not reduced to labels, no repository adoption]
+  - id: CCS-V14-C5
+    title: extensional-core anti-unification boundary
+    verdict: ANTI_UNIFICATION_BOUNDARY_ESTABLISHED
+    statement: common fibre syntax does not identify provenance, temporal, causal, proper-function, modal-identity, intentional, or source-world mechanisms
+    earliest_internal_ancestor: PRIOR-ART::FIBRE_FACTORIZATION
+    internal_specialization: AR-T1
+    historical_identity: NONE
+    novelty: 0
+    proof_status: ELEVEN_DECLARED_COUNTERMODEL_SKETCHES
+    dependencies: [CCS-V14-C1, CLIM-03, CLIM-04, CLIM-07, CLIM-08, CLIM-09, CLIM-12]
+    nonclaims: [no impossibility beyond the declared models, no claim that future unification is impossible]
+empirical_protocols:
+  - id: B1
+    title: noetic restoration and proper-function protocol
+    status: BLOCKED_NO_VALIDATED_CONSTRUCT_OR_RUNTIME_MAPPING
+    experiment_executed: false
+    identification_target: delayed truth-connected, reason-sensitive uptake rather than immediate response
+    required_controls: [measurement invariance, MNAR, leakage, delayed recurrence, arbitrary-score control]
+    blockers: [ethics, construct validation, power, external review, exact implementation]
+  - id: B2
+    title: personal versus impersonal rival audit
+    status: BLOCKED_ON_ACTUAL_IMPLEMENTATION_MAP
+    experiment_executed: false
+    identification_target: differences under target-blind interventions with resource parity
+    required_controls: [architecture blinding, resource parity, preregistered kill condition, leakage]
+    blockers: [construct validity, rival completeness, ethics, external review]
+  - id: B3
+    title: source-recipient landing protocol
+    status: PREREGISTRATION_READY_FOR_REVIEW_DRAFT
+    experiment_executed: false
+    identification_target: separate effects of provenance root, translation, authorization, and recipient stratum
+    required_controls: [source custody, version control, recipient stratification, translation equivalence]
+    blockers: [source rights, ethics, instrumentation, power, external review]
+  - id: B4
+    title: truth-connected norm and because-of uptake protocol
+    status: BLOCKED_ON_BECAUSE_OF_UPTAKE_OPERATIONALIZATION
+    experiment_executed: false
+    identification_target: causal mediation by truth-relevant reasons rather than arbitrary correlated scores
+    required_controls: [randomized reason relevance, arbitrary-score control, mediator intervention, MNAR]
+    blockers: [construct validation, ethics, causal assumptions, power, external review]
+authority:
+  repository_scientific_adoption: NONE
+  owner_adoption: PENDING
+  empirical_program_run: false

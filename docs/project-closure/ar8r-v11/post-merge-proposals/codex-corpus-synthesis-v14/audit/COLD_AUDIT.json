@@ -1,0 +1,48 @@
+{
+  "schema": "ar8r-codex-corpus-synthesis-v14-cold-audit-v1",
+  "verdict": "REPAIR_REQUIRED",
+  "reviewer_context": "DISTINCT_FRESH_CONTEXT",
+  "frozen_source_sha256": "73aef790f787ce11c65f4bb080d33b147d210d718862985299b14ce27c4e9efc",
+  "frozen_member_count": 14,
+  "hashes_verified": 14,
+  "blocking_findings": [
+    {
+      "id": "AR8R-V14-B01",
+      "severity": "HIGH",
+      "summary": "AR-T1 was incorrectly classified as identical under typed renaming to the broader generic fibre theorem."
+    },
+    {
+      "id": "AR8R-V14-B02",
+      "severity": "CRITICAL",
+      "summary": "The validator allowed fifteen exact-status, authority, identity, source-contract, freeze, T354, and TAC/SAC mutations."
+    },
+    {
+      "id": "AR8R-V14-B03",
+      "severity": "HIGH",
+      "summary": "Seven typed instance or theorem-family source references existed as paths but did not support the named mechanism."
+    },
+    {
+      "id": "AR8R-V14-B04",
+      "severity": "HIGH",
+      "summary": "The frozen baseline lacked the audit chain and final source manifest, making result-only mutation tests vacuous."
+    }
+  ],
+  "nonblocking_findings": [
+    "The eleven countermodels were declared model sketches rather than typed or executable constructions.",
+    "The new Lean source was candidate-era rather than already-public custody.",
+    "The finite joint-refinement check was a bounded regression, not a general proof."
+  ],
+  "authority_boundary": {
+    "historical_identity": "NONE",
+    "general_novelty": 0,
+    "repository_scientific_adoption": "NONE",
+    "owner_adoption": "PENDING",
+    "source_world_bridge_established": false,
+    "empirical_result": "NO_EXPERIMENT_EXECUTED",
+    "integrated_champion": "NONE",
+    "meniscus": "MENISCUS_NOT_REACHED",
+    "natural_closure": "NOT_REACHED",
+    "T354": "BLOCKED_FORMAL_DEFECT",
+    "TAC_SAC": "UNAVAILABLE_UNDEFINED"
+  }
+}

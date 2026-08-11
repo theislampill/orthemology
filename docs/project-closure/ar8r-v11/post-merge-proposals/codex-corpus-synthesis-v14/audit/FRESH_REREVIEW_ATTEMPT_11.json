@@ -1,0 +1,65 @@
+{
+  "schema": "ar8r-codex-corpus-synthesis-v14-fresh-rereview-attempt-v1",
+  "attempt": 11,
+  "reviewer_context": "DISTINCT_FRESH_CONTEXT",
+  "review_scope": "IR11_IR15_EXACT_STAGED_REPAIR_TREE",
+  "reviewed_head": "e3200a740037090941fa9aa43a116c577abeaddd",
+  "reviewed_tree": "133c4f2e2850f9eeffea7d005041c9061e379f9c",
+  "verdict": "PASS_REPAIR_IMPLEMENTATION",
+  "blocking_findings": [],
+  "prior_tree_reproduction": {
+    "reviewed_tree": "96fd90ee924386715ef34a422f0c98d71d128143",
+    "cases_total": 5,
+    "cases_correct": 0,
+    "findings_reproduced": [
+      "AR8R-V14-IR11",
+      "AR8R-V14-IR12",
+      "AR8R-V14-IR13",
+      "AR8R-V14-IR14",
+      "AR8R-V14-IR15"
+    ]
+  },
+  "adversarial_results": {
+    "attacks_rejected": "27/27",
+    "valid_controls_accepted": "18/18",
+    "unicode_hex_case_covered": true,
+    "mixed_percent_unicode_order_covered": true,
+    "escaped_slash_nesting_covered": true,
+    "normalization_boundary_and_exhaustion_covered": true,
+    "comments_whitespace_json_yaml_quotes_backticks_covered": true,
+    "benign_literal_and_mathematical_signature_controls_covered": true
+  },
+  "repository_tests": {
+    "nonbaseline_passed": 52,
+    "nonbaseline_total": 52,
+    "stale_baseline_failures": 1,
+    "total": 53,
+    "stale_baseline_reason": "FINAL_RECEIPT_AND_MANIFEST_REFRESH_NOT_YET_MATERIALIZED"
+  },
+  "repair_findings_verified": [
+    "AR8R-V14-IR11",
+    "AR8R-V14-IR12",
+    "AR8R-V14-IR13",
+    "AR8R-V14-IR14",
+    "AR8R-V14-IR15"
+  ],
+  "safe_to_refresh_final_receipt_and_manifests": true,
+  "remaining_external_gates": [
+    "full local workflow with explicit PDF-container boundary",
+    "exact-head hosted Linux CI",
+    "fresh merged-main validation"
+  ],
+  "authority_boundary": {
+    "historical_identity": "NONE",
+    "general_novelty": 0,
+    "repository_scientific_adoption": "NONE",
+    "owner_adoption": "PENDING",
+    "source_world_bridge_established": false,
+    "empirical_result": "NO_EXPERIMENT_EXECUTED",
+    "integrated_champion": "NONE",
+    "meniscus": "MENISCUS_NOT_REACHED",
+    "natural_closure": "NOT_REACHED",
+    "T354": "BLOCKED_FORMAL_DEFECT",
+    "TAC_SAC": "UNAVAILABLE_UNDEFINED"
+  }
+}

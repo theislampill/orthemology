@@ -1,0 +1,46 @@
+{
+  "schema": "ar8r-codex-corpus-synthesis-v14-independent-whole-branch-review-attempt-v3",
+  "verdict": "REPAIR_REQUIRED",
+  "reviewer_context": "DISTINCT_FRESH_CONTEXT",
+  "reviewed_commit": "b3fba45e0957f706994fc1a5e33c405321702cf3",
+  "changed_files_reviewed": 32,
+  "blocking_findings": [
+    {
+      "id": "AR8R-V14-IR01",
+      "severity": "HIGH",
+      "summary": "The validator did not require fresh-rereview attempt 2 or validate the final rereview hash maps, blocking-findings list, and declared scope."
+    },
+    {
+      "id": "AR8R-V14-IR02",
+      "severity": "HIGH",
+      "summary": "The validator accepted arbitrary manifested extra files and did not detect signed-URL parameters or every declared metaphysical and empirical authority-promotion marker."
+    }
+  ],
+  "mutation_evidence": {
+    "attempt_2_deletion_wrongly_accepted": true,
+    "false_final_rereview_hash_wrongly_accepted": true,
+    "final_blocking_finding_wrongly_accepted": true,
+    "manifested_extra_file_wrongly_accepted": true,
+    "signed_url_wrongly_accepted": true,
+    "authority_promotion_markers_wrongly_accepted": true
+  },
+  "candidate_byte_findings": {
+    "private_leakage_found": false,
+    "authority_promotion_found": false,
+    "theorem_relation_defect_found": false,
+    "lean_or_checker_reproduction_failure": false
+  },
+  "authority_boundary": {
+    "historical_identity": "NONE",
+    "general_novelty": 0,
+    "repository_scientific_adoption": "NONE",
+    "owner_adoption": "PENDING",
+    "source_world_bridge_established": false,
+    "empirical_result": "NO_EXPERIMENT_EXECUTED",
+    "integrated_champion": "NONE",
+    "meniscus": "MENISCUS_NOT_REACHED",
+    "natural_closure": "NOT_REACHED",
+    "T354": "BLOCKED_FORMAL_DEFECT",
+    "TAC_SAC": "UNAVAILABLE_UNDEFINED"
+  }
+}

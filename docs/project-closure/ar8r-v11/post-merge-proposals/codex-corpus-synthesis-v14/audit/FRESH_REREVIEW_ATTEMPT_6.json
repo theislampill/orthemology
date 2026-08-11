@@ -1,0 +1,63 @@
+{
+  "schema": "ar8r-codex-corpus-synthesis-v14-fresh-rereview-attempt-v1",
+  "attempt": 6,
+  "reviewer_context": "DISTINCT_FRESH_CONTEXT",
+  "review_scope": "WHOLE_BRANCH_AGAINST_ORIGIN_MAIN",
+  "reviewed_head": "e3200a740037090941fa9aa43a116c577abeaddd",
+  "reviewed_tree": "82e5ac20787af41976681bc0c6b8c7b29a4f38be",
+  "changed_files_reviewed": 35,
+  "changed_files_total": 35,
+  "verdict": "REPAIR_REQUIRED",
+  "blocking_findings": [
+    {
+      "id": "AR8R-V14-IR08",
+      "severity": "HIGH",
+      "summary": "Non-token and compact authority assignments could bypass the line-oriented authority scanner."
+    },
+    {
+      "id": "AR8R-V14-IR09",
+      "severity": "HIGH",
+      "summary": "The final rereview receipt accepted extra top-level claims and mutable command evidence after remanifesting."
+    },
+    {
+      "id": "AR8R-V14-IR10",
+      "severity": "MEDIUM",
+      "summary": "Percent-encoded signed-link parameters and explicit browser-session identifiers were not rejected."
+    }
+  ],
+  "preserved_scientific_boundaries": {
+    "theorem_relations": true,
+    "protocol_statuses": true,
+    "T354_blocked": true,
+    "TAC_SAC_unavailable": true,
+    "authority_ceiling": true,
+    "source_hash_coverage": true
+  },
+  "commands": [
+    {"command": "focused V14 test suite", "exit_code": 0, "result": "35 tests passed on reviewed head"},
+    {"command": "V14 production validator", "exit_code": 0},
+    {"command": "current-state drift check", "exit_code": 0},
+    {"command": "repository privacy and hygiene validator", "exit_code": 0},
+    {"command": "adversarial authority, receipt, and privacy harness", "exit_code": 0, "result": "reproduced IR08 through IR10"},
+    {"command": "standalone Lean rerun", "exit_code": 124, "result": "timeout; no PASS claimed"}
+  ],
+  "remaining_gates": [
+    "repair IR08 through IR10",
+    "fresh independent whole-branch rereview",
+    "exact-head hosted Linux CI",
+    "fresh merged-main validation"
+  ],
+  "authority_boundary": {
+    "historical_identity": "NONE",
+    "general_novelty": 0,
+    "repository_scientific_adoption": "NONE",
+    "owner_adoption": "PENDING",
+    "source_world_bridge_established": false,
+    "empirical_result": "NO_EXPERIMENT_EXECUTED",
+    "integrated_champion": "NONE",
+    "meniscus": "MENISCUS_NOT_REACHED",
+    "natural_closure": "NOT_REACHED",
+    "T354": "BLOCKED_FORMAL_DEFECT",
+    "TAC_SAC": "UNAVAILABLE_UNDEFINED"
+  }
+}

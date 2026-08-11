@@ -1,0 +1,223 @@
+schema: ar8r-codex-cross-lane-instance-map-v14
+authority:
+  historical_identity: NONE
+  repository_scientific_adoption: NONE
+  owner_adoption: PENDING
+  general_novelty: 0
+instances:
+  - id: CLIM-01
+    lane: proof validity and intended applicability
+    domain_objects: proof artifacts paired with intended claims and specifications
+    target_query: whether this proof establishes this intended claim under this specification version
+    observation_or_transport: kernel acceptance plus visible theorem signature
+    fibres: artifacts indistinguishable to the kernel-facing observation
+    load_bearing_distinction: intended theorem, object, scope, and specification warrant
+    sufficiency_condition: target constancy on the observed fibre plus exact object-claim-version correspondence
+    restoring_resource: specification-warrant certificate
+    authorization_and_version_guards: [claim identity, object identity, specification version, adoption authority]
+    failure_witness: a valid proof of a weaker or differently indexed theorem
+    downstream_uses: [Lean admission review, OSW-15, theorem-ledger custody]
+    source_refs: [docs/project-closure/ar8r-v11/programs/AR8R-PROPER-FUNCTION-TYPED-MATRIX-V11.yaml, docs/project-closure/ar8r-v11/formalization/AR8R-V11-LEAN-FORMALIZATION-QUEUE.yaml]
+    custody_class: CURRENT_PUBLIC_REPOSITORY_PLUS_NEW_V14_ANALYSIS
+    formalization_status: GUARDED_APPLICATION
+    relation_class: GUARDED_APPLICATION
+    source_world_bridge_established: false
+    nonclaims: [kernel acceptance does not establish intended applicability, no theorem adoption]
+  - id: CLIM-02
+    lane: translation and occurrence meaning
+    domain_objects: source occurrences with context, edition, and translation records
+    target_query: the declared occurrence-relative semantic query
+    observation_or_transport: translated token or representation profile
+    fibres: source occurrences collapsed by the translation profile
+    load_bearing_distinction: morphology, context, discourse force, authority, or evidential status
+    sufficiency_condition: query constancy on translation fibres
+    restoring_resource: authorized context and occurrence refinement
+    authorization_and_version_guards: [source edition, occurrence identity, translator custody, recipient scope]
+    failure_witness: one token type with context-dependent occurrence meanings
+    downstream_uses: [Fusha boundary, source-formal crosswalk, uncreated grammar]
+    source_refs: [docs/project-closure/ar8r-v11/programs/uncreated-grammar-and-articulability.md, docs/project-closure/ar8r-v11/post-merge-proposals/six-lane-v14-intake/README.md]
+    custody_class: POST_MERGE_PROPOSAL_PLUS_SOURCE_RECORD
+    formalization_status: GUARDED_APPLICATION
+    relation_class: GUARDED_APPLICATION
+    source_world_bridge_established: false
+    nonclaims: [no complete translation theorem, no Arabic-primary verification inferred]
+  - id: CLIM-03
+    lane: distributed-agent synchronization and identity
+    domain_objects: agents, episodes, state profiles, and lineage roots
+    target_query: numerical identity or claim-relative evidential independence
+    observation_or_transport: synchronized registered profile
+    fibres: agents or episodes sharing the registered state
+    load_bearing_distinction: carrier, episode, lineage, acquisition root, and counterfactual dependence
+    sufficiency_condition: profile constancy answers profile queries only
+    restoring_resource: carrier and lineage certificate
+    authorization_and_version_guards: [episode, carrier, version, provenance root]
+    failure_witness: copied synchronization with one acquisition root
+    downstream_uses: [TAC/SAC queue, false-tawatur controls, distributed agents]
+    source_refs: [docs/project-closure/ar8r-v11/post-merge-proposals/six-lane-v14-intake/specialist-a/source-files/rounds/SPA-R6_PROVENANCE_ROOT_INVARIANT.md]
+    custody_class: POST_MERGE_PROPOSAL
+    formalization_status: ANTI_UNIFICATION_BOUNDARY
+    relation_class: ANTI_UNIFICATION_BOUNDARY
+    source_world_bridge_established: false
+    nonclaims: [unavailable TAC/SAC terms remain undefined, synchronization is not identity]
+  - id: CLIM-04
+    lane: testimony and provenance
+    domain_objects: reports, certificates, and acquisition roots
+    target_query: number or structure of independent evidential roots
+    observation_or_transport: multiset of visible reports
+    fibres: report sets with the same visible multiplicity
+    load_bearing_distinction: shared ancestry and dependence
+    sufficiency_condition: visible-count constancy is insufficient for provenance rank
+    restoring_resource: provenance DAG or root certificate
+    authorization_and_version_guards: [root identity, dependency edges, version]
+    failure_witness: arbitrarily many copies descending from one root
+    downstream_uses: [data-incest controls, testimony, ensemble evidence]
+    source_refs: [docs/project-closure/ar8r-v11/post-merge-proposals/six-lane-v14-intake/specialist-a/source-files/rounds/SPA-R6_PROVENANCE_ROOT_INVARIANT.md, docs/project-closure/ar8r-v11/post-merge-proposals/six-lane-v14-intake/external-evidence/AR8R-DEEP-RESEARCH-20-22-INTAKE-V14.yaml]
+    custody_class: BOUNDED_ANCESTRY_PLUS_NEW_V14_ANALYSIS
+    formalization_status: SHARED_COUNTERMODEL_ARCHITECTURE
+    relation_class: SHARED_COUNTERMODEL_ARCHITECTURE
+    source_world_bridge_established: false
+    nonclaims: [copy count is not independent support, no probabilistic calibration theorem]
+  - id: CLIM-05
+    lane: causal identification and common intervention
+    domain_objects: finite models with intervention-response profiles
+    target_query: target model class or property
+    observation_or_transport: intervention-response profile
+    fibres: models with equal profiles
+    load_bearing_distinction: target property within an observational fibre
+    sufficiency_condition: target constancy on profile fibres
+    restoring_resource: an intervention family that refines target-varying fibres
+    authorization_and_version_guards: [intervention eligibility, model class, target definition]
+    failure_witness: a common intervention exists but does not separate the target property
+    downstream_uses: [AR8R-T294, causal protocol queue, common-intervention checks]
+    source_refs: [docs/project-closure/ar8r-v11/provenance/AR8R-CANONICAL-THEOREM-ORIGIN-REGISTRY-V5-PUBLIC-SANITIZED.yaml]
+    custody_class: EXACT_INTERNAL_ANCESTRY
+    formalization_status: EXISTING_STRICT_SPECIALIZATION
+    relation_class: STRICT_SPECIALIZATION
+    source_world_bridge_established: false
+    nonclaims: [common intervention does not imply identification, no causal-world claim]
+  - id: CLIM-06
+    lane: partial observation and strategy
+    domain_objects: states, observations, eligible actions, and target objectives
+    target_query: existence of an observation-uniform winning action or certificate
+    observation_or_transport: state observation map
+    fibres: states with equal local observation
+    load_bearing_distinction: state-dependent action eligibility and successor behavior
+    sufficiency_condition: one eligible target-preserving action on every relevant fibre
+    restoring_resource: authorized observation refinement or selector information
+    authorization_and_version_guards: [action eligibility, information pattern, objective, model digest]
+    failure_witness: individually winning states with no common fibre-uniform action
+    downstream_uses: [temporal restoration, Candidate 1 interface, distributed agents]
+    source_refs: [docs/project-closure/ar8r-v11/post-merge-proposals/six-lane-v14-intake/specialist-a/source-files/rounds/SPA-R4_OBSERVATION_COBUCHI.md]
+    custody_class: SPECIALIST_A_PROPOSAL_PLUS_NEW_V14_ANALYSIS
+    formalization_status: STRICT_SPECIALIZATION
+    relation_class: STRICT_SPECIALIZATION
+    source_world_bridge_established: false
+    nonclaims: [no partial-observation game solved generally, no runtime implementation claim]
+  - id: CLIM-07
+    lane: daee closure and temporal restoration
+    domain_objects: event records and future transition systems
+    target_query: future persistence in a safe target region
+    observation_or_transport: event-local closure record
+    fibres: transition systems compatible with the same local record
+    load_bearing_distinction: future successor structure and strategy
+    sufficiency_condition: local-record constancy is insufficient for temporal persistence
+    restoring_resource: model-bound temporal certificate and strategy
+    authorization_and_version_guards: [model digest, safe set, target set, action version]
+    failure_witness: identical closure bytes with stable and bypass futures
+    downstream_uses: [daee crosswalk, co-Buchi queue, restoration certificates]
+    source_refs: [docs/project-closure/ar8r-v11/programs/daee-temporal-restoration-and-provenance.md]
+    custody_class: CURRENT_DAEE_CROSSWALK_PLUS_POST_MERGE_PROPOSAL
+    formalization_status: ANTI_UNIFICATION_BOUNDARY
+    relation_class: ANTI_UNIFICATION_BOUNDARY
+    source_world_bridge_established: false
+    nonclaims: [event closure is not future stability, no daee runtime mutation]
+  - id: CLIM-08
+    lane: proper function
+    domain_objects: episodes, mechanisms, environments, functions, and success records
+    target_query: success because of proper function in the relevant environment
+    observation_or_transport: success and trajectory summary
+    fibres: episodes with the same visible outcome
+    load_bearing_distinction: function-fixing history, design plan, environment, and causal because-of relation
+    sufficiency_condition: outcome constancy is insufficient for proper-function attribution
+    restoring_resource: typed proper-function and causal certificate
+    authorization_and_version_guards: [theory of function, environment class, causal mediator]
+    failure_witness: reliable accidental success from a nonfunctional mechanism
+    downstream_uses: [proper functionalism, noetic restoration, empirical B1 and B4]
+    source_refs: [docs/project-closure/ar8r-v11/programs/AR8R-PROPER-FUNCTION-TYPED-MATRIX-V11.yaml, docs/project-closure/ar8r-v11/programs/proper-function-and-candidate-e.md]
+    custody_class: CURRENT_OWNER_MATRIX_PLUS_NEW_V14_ANALYSIS
+    formalization_status: FORMAL_ANALOGUE_ONLY
+    relation_class: FORMAL_ANALOGUE_ONLY
+    source_world_bridge_established: false
+    nonclaims: [no proper-function theory selected, success is not because-of success]
+  - id: CLIM-09
+    lane: source-formal-recipient-world transport
+    domain_objects: source passages, formal predicates, recipients, authorities, versions, and world interpretations
+    target_query: warranted applicability of a claim to a recipient and world
+    observation_or_transport: content-preserving translation or formalization
+    fibres: records with equal transported content
+    load_bearing_distinction: source authority, version, recipient warrant, and world bridge
+    sufficiency_condition: content constancy is only one coordinate
+    restoring_resource: guarded reason-transport contract
+    authorization_and_version_guards: [source custody, semantic equivalence, recipient, authority, invalidators]
+    failure_witness: exact content delivered to the wrong version or unauthorized recipient
+    downstream_uses: [source ascent, Fusha boundary, repository adoption]
+    source_refs: [docs/project-closure/ar8r-v11/programs/AR8R-TRANSCENDENTAL-BRIDGE-AND-RIVAL-LEDGER-V11.yaml]
+    custody_class: SOURCE_RECORD_PLUS_POST_MERGE_PROPOSAL
+    formalization_status: GUARDED_APPLICATION
+    relation_class: GUARDED_APPLICATION
+    source_world_bridge_established: false
+    nonclaims: [source record is not world truth, formal validity is not recipient warrant]
+  - id: CLIM-10
+    lane: noetic restoration
+    domain_objects: persons, burdens, reasons, interventions, uptake episodes, and recurrence trajectories
+    target_query: stable truth-connected correction of the declared burden
+    observation_or_transport: immediate response or local burden disposition
+    fibres: episodes with equal local disposition but different uptake and recurrence
+    load_bearing_distinction: recipient-sensitive uptake, because-of relation, and future stability
+    sufficiency_condition: local correctness is insufficient for stable restoration
+    restoring_resource: recipient-sensitive causal and temporal certificate
+    authorization_and_version_guards: [recipient state, burden identity, intervention authority, follow-up horizon]
+    failure_witness: immediate correct answer followed by unchanged recurrence
+    downstream_uses: [daee route gradient, proper function, empirical B1 and B4]
+    source_refs: [docs/project-closure/ar8r-v11/programs/proper-function-and-candidate-e.md]
+    custody_class: CURRENT_OWNER_PROGRAM_PLUS_NEW_V14_ANALYSIS
+    formalization_status: ANTI_UNIFICATION_BOUNDARY
+    relation_class: ANTI_UNIFICATION_BOUNDARY
+    source_world_bridge_established: false
+    nonclaims: [human restoration is not reduced to a finite game, no empirical efficacy claim]
+  - id: CLIM-11
+    lane: theorem-family deduplication
+    domain_objects: theorem statements, typed signatures, proofs, and origin records
+    target_query: whether two records instantiate one formal mechanism and how much origin credit they earn
+    observation_or_transport: canonical typed theorem skeleton
+    fibres: records equal under typed renaming
+    load_bearing_distinction: source semantics, scope, proof ancestry, and historical identity
+    sufficiency_condition: typed-renaming identity establishes a shared mechanism only
+    restoring_resource: origin and family relation ledger
+    authorization_and_version_guards: [statement version, dependency ancestry, source semantics]
+    failure_witness: one proof skeleton renamed across distinct source-relative claims
+    downstream_uses: [origin registry, novelty ceiling, family registry]
+    source_refs: [docs/project-closure/ar8r-v11/provenance/AR8R-THEOREM-FAMILY-REGISTRY-V1.yaml, docs/project-closure/ar8r-v11/provenance/AR8R-THEOREM-FAMILY-RELATION-CROSSWALK-V11.yaml]
+    custody_class: CURRENT_PUBLIC_PROVENANCE
+    formalization_status: GUARDED_APPLICATION
+    relation_class: GUARDED_APPLICATION
+    source_world_bridge_established: false
+    nonclaims: [formal identity does not merge historical identities, renamed applications earn no new general novelty]
+  - id: CLIM-12
+    lane: transcendental orthability
+    domain_objects: formal orthability structures and separately typed metaphysical bridge predicates
+    target_query: whether formal orthability establishes actuality, mentality, personality, unity, Wisdom, Speech, revelation, or Allah
+    observation_or_transport: abstract structure and role profile
+    fibres: rival realizations sharing the formal profile
+    load_bearing_distinction: concrete actuality, bearer identity, intentional agency, and source-world truth
+    sufficiency_condition: no current profile is sufficient for the full ascent
+    restoring_resource: separately proved bridge premises and rival elimination
+    authorization_and_version_guards: [actuality, mentality, personality, unity, wisdom, speech, revelation, source-world]
+    failure_witness: an impersonal abstract or plural-realizer model with the same thin formal profile
+    downstream_uses: [Necessary-Being ascent, Candidate N and R5 rivals, Speech and grammar]
+    source_refs: [docs/project-closure/ar8r-v11/programs/AR8R-TRANSCENDENTAL-BRIDGE-AND-RIVAL-LEDGER-V11.yaml, docs/project-closure/ar8r-v11/programs/candidate-n-r5-track-t-and-source-ascent.md]
+    custody_class: CURRENT_OWNER_RIVAL_LEDGER_PLUS_NEW_V14_ANALYSIS
+    formalization_status: ANTI_UNIFICATION_BOUNDARY
+    relation_class: ANTI_UNIFICATION_BOUNDARY
+    source_world_bridge_established: false
+    nonclaims: [no Necessary Being established, no personal bearer established, no Speech or revelation established, no Allah identification]

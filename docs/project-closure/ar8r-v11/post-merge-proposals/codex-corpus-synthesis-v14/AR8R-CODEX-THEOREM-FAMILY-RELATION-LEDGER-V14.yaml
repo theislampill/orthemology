@@ -1,0 +1,101 @@
+schema: ar8r-codex-theorem-family-relation-ledger-v14
+allowed_relations: [IDENTICAL_UNDER_TYPED_RENAMING, STRICT_SPECIALIZATION, GUARDED_APPLICATION, SHARED_INVARIANT, SHARED_COUNTERMODEL_ARCHITECTURE, FORMAL_ANALOGUE_ONLY, VOCABULARY_RESEMBLANCE_ONLY, ANTI_UNIFICATION_BOUNDARY, UNRESOLVED]
+relations:
+  - id: REL-01
+    source: AR-T1
+    target: AR8R-T294
+    relation: STRICT_SPECIALIZATION
+    basis: finite causal intervention-response profiles instantiate elementary fibre factorization
+    novelty_effect: 0
+    source_refs: [docs/project-closure/ar8r-v11/provenance/AR8R-CANONICAL-THEOREM-ORIGIN-REGISTRY-V5-PUBLIC-SANITIZED.yaml]
+  - id: REL-02
+    source: AR-T1
+    target: CCS-V14-C1
+    relation: SHARED_INVARIANT
+    basis: AR-T1 is the Boolean-target nonempty-world internal specialization of the broader prior-art fibre criterion; the statements are not identical under typed renaming
+    novelty_effect: 0
+    source_refs: [docs/project-closure/ar8r-v11/provenance/AR8R-THEOREM-FAMILY-RELATION-CROSSWALK-V11.yaml]
+  - id: REL-03
+    source: AR-T1
+    target: CCS-V14-C2
+    relation: GUARDED_APPLICATION
+    basis: full observation-codomain decoder additionally needs surjectivity or target inhabitation
+    novelty_effect: 0
+    source_refs: [docs/project-closure/ar8r-v11/post-merge-proposals/codex-corpus-synthesis-v14/lean/CodexFibreSynthesis.lean]
+  - id: REL-04
+    source: AR-T1
+    target: CCS-V14-C3
+    relation: GUARDED_APPLICATION
+    basis: pair guards and joint refinement are coordinatewise and product-map applications
+    novelty_effect: 0
+    source_refs: [docs/project-closure/ar8r-v11/post-merge-proposals/codex-corpus-synthesis-v14/lean/CodexFibreSynthesis.lean]
+  - id: REL-05
+    source: reason-preserving transport family
+    target: CLIM-09
+    relation: GUARDED_APPLICATION
+    basis: content factorization remains subordinate to recipient, authority, version, and invalidator guards
+    novelty_effect: 0
+    source_refs: [docs/project-closure/ar8r-v11/programs/language-translation-and-version-custody.md]
+  - id: REL-06
+    source: observation-uniform strategy family
+    target: CLIM-06
+    relation: STRICT_SPECIALIZATION
+    basis: implementable local action requires action availability and success to be uniform on observation fibres
+    novelty_effect: 0
+    source_refs: [docs/project-closure/ar8r-v11/post-merge-proposals/six-lane-v14-intake/specialist-a/source-files/rounds/SPA-R4_OBSERVATION_COBUCHI.md]
+  - id: REL-07
+    source: finite co-Buchi fixed-point family
+    target: CLIM-07
+    relation: ANTI_UNIFICATION_BOUNDARY
+    basis: temporal persistence depends on successor and policy structure absent from event-local factorization
+    novelty_effect: 0
+    source_refs: [docs/project-closure/ar8r-v11/programs/daee-temporal-restoration-and-provenance.md]
+  - id: REL-08
+    source: finite forward garbling family
+    target: Blackwell experiment comparison
+    relation: STRICT_SPECIALIZATION
+    basis: the finite forward-garbling result is a bounded special case of Blackwell comparison, not an identity with fibre factorization
+    novelty_effect: 0
+    source_refs: [docs/project-closure/ar8r-v11/post-merge-proposals/six-lane-v14-intake/external-evidence/AR8R-DEEP-RESEARCH-20-22-INTAKE-V14.yaml]
+  - id: REL-09
+    source: Le Cam comparison
+    target: CCS-V14-C1
+    relation: FORMAL_ANALOGUE_ONLY
+    basis: no exact primary theorem reduction has yet been frozen in the repository
+    novelty_effect: 0
+    source_refs: [docs/project-closure/ar8r-v11/post-merge-proposals/six-lane-v14-intake/external-evidence/AR8R-DEEP-RESEARCH-20-22-INTAKE-V14.yaml]
+  - id: REL-10
+    source: nonnegative-rank mixture width
+    target: CCS-V14-C1
+    relation: ANTI_UNIFICATION_BOUNDARY
+    basis: factorization width and field dependence do not identify quotient fibres or a causal architecture
+    novelty_effect: 0
+    source_refs: [docs/project-closure/ar8r-v11/post-merge-proposals/six-lane-v14-intake/external-evidence/AR8R-DEEP-RESEARCH-20-22-INTAKE-V14.yaml]
+  - id: REL-11
+    source: data-incest and cascade ancestry
+    target: CLIM-04
+    relation: GUARDED_APPLICATION
+    basis: copied multiplicity is compatible with one provenance root
+    novelty_effect: 0
+    source_refs: [docs/project-closure/ar8r-v11/post-merge-proposals/six-lane-v14-intake/external-evidence/AR8R-DEEP-RESEARCH-20-22-INTAKE-V14.yaml]
+  - id: REL-12
+    source: transcendental source records
+    target: CLIM-12
+    relation: ANTI_UNIFICATION_BOUNDARY
+    basis: source-relative distinctions do not establish source-world truth or the formal-to-metaphysical bridges
+    novelty_effect: 0
+    source_refs: [docs/project-closure/ar8r-v11/programs/candidate-n-r5-track-t-and-source-ascent.md]
+  - id: REL-13
+    source: Deep BV finite profile proposition
+    target: AR8R-T294
+    relation: IDENTICAL_UNDER_TYPED_RENAMING
+    basis: both characterize finite target identifiability by constancy on complete intervention-profile fibres; historical byte identity is not claimed
+    novelty_effect: 0
+    source_refs: [docs/project-closure/ar8r-v11/post-merge-proposals/pmr007-deep-bl-bv-semantic-reissue/source-files/PMR-007_DEEP_BV_ADMISSION_OVERLAY.yaml]
+  - id: REL-14
+    source: Canavoi finite co-Buchi fixed-point core
+    target: finite co-Buchi fixed-point family
+    relation: IDENTICAL_UNDER_TYPED_RENAMING
+    basis: identical outer-least and inner-greatest fixed-point mechanism under a typed predecessor; partial-observation strategy uniformity remains additional
+    novelty_effect: 0
+    source_refs: [docs/project-closure/ar8r-v11/post-merge-proposals/six-lane-v14-intake/external-evidence/AR8R-DEEP-RESEARCH-20-22-INTAKE-V14.yaml]

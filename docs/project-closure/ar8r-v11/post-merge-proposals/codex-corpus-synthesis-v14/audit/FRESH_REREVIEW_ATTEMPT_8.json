@@ -1,0 +1,50 @@
+{
+  "schema": "ar8r-codex-corpus-synthesis-v14-fresh-rereview-attempt-v1",
+  "attempt": 8,
+  "reviewer_context": "DISTINCT_FRESH_CONTEXT",
+  "review_scope": "IR08_IR10_SECOND_EXACT_STAGED_REPAIR_TREE",
+  "reviewed_head": "e3200a740037090941fa9aa43a116c577abeaddd",
+  "reviewed_tree": "a2795c28137c3fc222f329761591e950911d80e4",
+  "verdict": "REPAIR_REQUIRED",
+  "blocking_findings": [
+    {
+      "id": "AR8R-V14-IR09-R2",
+      "severity": "HIGH",
+      "summary": "Nested command-object key reordering remained accepted because dictionary key order was not compared."
+    },
+    {
+      "id": "AR8R-V14-IR08-R2",
+      "severity": "MEDIUM",
+      "summary": "A redundant legacy regex rejected the exact backtick-wrapped bounded scientific-adoption value."
+    }
+  ],
+  "adversarial_results": {
+    "cases_total": 462,
+    "cases_correct": 460,
+    "receipt_mutations_rejected": "10/11",
+    "privacy_attacks_rejected": "114/114",
+    "privacy_benign_controls_accepted": "5/5",
+    "authority_promotions_rejected": "165/165",
+    "authority_bounded_controls_accepted": "164/165",
+    "attempt_6_7_mutations_rejected": "2/2"
+  },
+  "remaining_gates": [
+    "repair command-key order and bounded-value false positive",
+    "fresh independent repair rereview",
+    "exact-head hosted Linux CI",
+    "fresh merged-main validation"
+  ],
+  "authority_boundary": {
+    "historical_identity": "NONE",
+    "general_novelty": 0,
+    "repository_scientific_adoption": "NONE",
+    "owner_adoption": "PENDING",
+    "source_world_bridge_established": false,
+    "empirical_result": "NO_EXPERIMENT_EXECUTED",
+    "integrated_champion": "NONE",
+    "meniscus": "MENISCUS_NOT_REACHED",
+    "natural_closure": "NOT_REACHED",
+    "T354": "BLOCKED_FORMAL_DEFECT",
+    "TAC_SAC": "UNAVAILABLE_UNDEFINED"
+  }
+}

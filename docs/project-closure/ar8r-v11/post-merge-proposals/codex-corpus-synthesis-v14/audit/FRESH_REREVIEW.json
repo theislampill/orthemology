@@ -1,0 +1,243 @@
+{
+  "schema": "ar8r-codex-corpus-synthesis-v14-fresh-rereview-v1",
+  "receipt_status": "FINAL_V14_LOCAL_PASS",
+  "verdict": "PASS",
+  "reviewer_context": "DISTINCT_FRESH_CONTEXT",
+  "scope_result": "PASS_V14_LOCAL_SYNTHESIS_ONLY",
+  "reviewed_surface": "FROZEN_STAGED_WORKTREE",
+  "reviewed_head": "1aecf9a915391006cc25f8f6fd71b4281aead12f",
+  "reviewed_source_sha256": "73aef790f787ce11c65f4bb080d33b147d210d718862985299b14ce27c4e9efc",
+  "reviewed_hashes": {
+    "candidate_freeze_manifest_sha256": "6c0819a21252a48e46109de01803fcdac4113fe2dd1f14d4c54fc385e2546fb2",
+    "AR8R-CODEX-CORPUS-SYNTHESIS-V14.md": "2ca4204b1324a6f944a1c23f1bb66fb969297e9554196ca7d3450a8dbb6eee3d",
+    "AR8R-CODEX-COUNTERMODEL-AND-ANTI-UNIFICATION-REPORT-V14.md": "24656e4c758e72c0eac51c579aedd421ca776d37983fb08be1ba292920b335ca",
+    "AR8R-CODEX-COUNTERMODELS-V14.yaml": "e8d6213c141b40a56b554998bac380cad5044c171ce33b6e94665e7ef26d855e",
+    "AR8R-CODEX-CROSS-LANE-INSTANCE-MAP-V14.yaml": "5066bb116552860b5c7b4f2519cf8c79165fd96762b2aeb3c804c33fd4d412cf",
+    "AR8R-CODEX-FORMALIZATION-DELTA-V14.yaml": "c24a4753ba1fb1eb3c6a621facb871ce46719fbcd801a36a3bdfb43eb4b8363b",
+    "AR8R-CODEX-MENISCUS-CANDIDATE-VERDICT-V14.yaml": "9e6132f64d7e64851758b635e2a8ab849f19881614f7a7c9b8cb749698f0097c",
+    "AR8R-CODEX-RESIDUAL-GUIDED-HYPOTHESIS-LEDGER-V14.yaml": "f11c384e471e82814faa16aaaaa802a10ebe6260431fe7cfcddefffb0eb617e4",
+    "AR8R-CODEX-THEOREM-FAMILY-RELATION-LEDGER-V14.yaml": "c839d74b315ee0a86698c69f84e42151a083f2415757abe9fc5ec32a8bdc72fc",
+    "AR8R-CODEX-UNIFICATION-CANDIDATES-V14/README.md": "8ebc6b7af85b2819f08e556b15f0cc45fedf6194aa462c14c9655320bf1cd960",
+    "README.md": "4cd2552f863d7fe3ce14e0c681812953822d0a3584fd024708489496c9064de4",
+    "checks/codex_fibre_synthesis_check.py": "e359606c9f16754ae5864fc5e07003f492ab50437541b5db842b622be4d8cffc",
+    "checks/codex_fibre_synthesis_check_results.json": "8f041c4b8b65cee3bee85c06d33ee899df5f711970f1e68837366b87fe01f078",
+    "lean/CodexFibreSynthesis.lean": "73aef790f787ce11c65f4bb080d33b147d210d718862985299b14ce27c4e9efc",
+    "lean/LEAN_RECEIPT.json": "12f9b02dd86de69bbf00180ef25720eda6d89c2a794ca2a90f1aa68307088621"
+  },
+  "audit_chain_hashes": {
+    "audit/COLD_AUDIT.json": "e0b9bccce2dbfbc76937438bf982d8e1769652e90f590b7f052399416fae7449",
+    "audit/FRESH_REREVIEW_ATTEMPT_1.json": "d0ab578df9306077a85f9ce283edb7fc574ea56383befd225b2c4fd49b78c0f2",
+    "audit/FRESH_REREVIEW_ATTEMPT_2.json": "0b0b9e091b2ac5700766985c1b313eaa45b76ed28fbbfaee30358d36cd5631d5",
+    "audit/FRESH_REREVIEW_ATTEMPT_3.json": "0102e049aa591e112c900d3f27f43656e1ab3edbdaacc5ae0cdfde07fe649926",
+    "audit/FRESH_REREVIEW_ATTEMPT_4.json": "c606916146c642911fc439f5991ac4e097b0287c57f8af926c6d6b802eab57de",
+    "audit/FRESH_REREVIEW_ATTEMPT_5.json": "5ac278b1b67a46e551e287bf8a79cae2ded7638f097c207daed79a560e5eb50c",
+    "audit/FRESH_REREVIEW_ATTEMPT_6.json": "754c372a147c0f24f7bff2a1a89253e060db4d01c727dcdf9b6efe80483d712a",
+    "audit/FRESH_REREVIEW_ATTEMPT_7.json": "7f981d02706338df7df0aa85a4a4262d16fbddda7d212cd8ae29baa730ad8a32",
+    "audit/FRESH_REREVIEW_ATTEMPT_8.json": "2dd62e8ba32181c2ba04903e2f3ff9edc552a794afceaf9f52c949b175563cae",
+    "audit/FRESH_REREVIEW_ATTEMPT_9.json": "eb6d77bf4c3359c5b0bc61248d7ace7ce20ff99bdae968e96ece84d5bd1cf774",
+    "audit/FRESH_REREVIEW_ATTEMPT_10.json": "b1e249222914b0d55326904971862812c8c97084eb4bbfc2a93d9b722ea1378b",
+    "audit/FRESH_REREVIEW_ATTEMPT_11.json": "c1f8c16aa5017049429779e8648af45ece9c5d64526a3dcd84e33490e4f30a3e",
+    "audit/REPAIR_LOG.md": "ec22b3e2aae11cab67a1a0b31df15fbf04e15cba4fc9545aaf85605f10b44bbd"
+  },
+  "verification_code_hashes": {
+    "scripts/validate_ar8r_codex_corpus_synthesis_v14.py": "c2153d22937864584ca0310a129cb41badbcbea96e3a2175b53bd1a9a666a626",
+    "tests/test_ar8r_codex_corpus_synthesis_v14.py": "7801ae286ca0b8c8c4c1bce7e73aedc9dfb914474d66ea58c029c756ea1ef67e"
+  },
+  "staged_blob_equality": {
+    "checks/codex_fibre_synthesis_check.py": {
+      "staged_git_oid": "51e0e3d5ea878bd52534ebd7341f00e7d4fa5511",
+      "working_tree_sha256": "e359606c9f16754ae5864fc5e07003f492ab50437541b5db842b622be4d8cffc",
+      "staged_blob_sha256": "e359606c9f16754ae5864fc5e07003f492ab50437541b5db842b622be4d8cffc",
+      "byte_identical": true,
+      "crlf_count": 0
+    },
+    "checks/codex_fibre_synthesis_check_results.json": {
+      "staged_git_oid": "cc741e4c8cbfbe49c48a1b3f770b530ae834fdd0",
+      "working_tree_sha256": "8f041c4b8b65cee3bee85c06d33ee899df5f711970f1e68837366b87fe01f078",
+      "staged_blob_sha256": "8f041c4b8b65cee3bee85c06d33ee899df5f711970f1e68837366b87fe01f078",
+      "byte_identical": true,
+      "crlf_count": 0
+    }
+  },
+  "frozen_members_verified": 14,
+  "candidate_freeze_all_staged_blob_equal": true,
+  "all_staged_blob_mismatch_count": 0,
+  "delta_rereview": {
+    "baseline_receipt_sha256": "e40ae47e053e52378ee1638a9541d012299831ca6752336f4042d315b4f6ee89",
+    "finding": "AR8R-V14-FR03",
+    "semantic_change": false,
+    "byte_change": "REMOVE_ONE_TERMINAL_LF_FROM_EACH_OF_FIVE_MEMBERS",
+    "changed_candidate_members": {
+      "AR8R-CODEX-COUNTERMODEL-AND-ANTI-UNIFICATION-REPORT-V14.md": {
+        "previous_sha256": "79ea0421f46a0eabea874efaab3d82dd58203f9e88d5464ff7b49f828314a8ac",
+        "reviewed_sha256": "24656e4c758e72c0eac51c579aedd421ca776d37983fb08be1ba292920b335ca",
+        "staged_git_oid": "6eaf340c3f1e24d6ce3e5f1253d4d0bd324e49da"
+      },
+      "AR8R-CODEX-COUNTERMODELS-V14.yaml": {
+        "previous_sha256": "a30776a0fbdffb22fd91e00ab4e3b68f8ccc190be28313f442ffa70c675e0118",
+        "reviewed_sha256": "e8d6213c141b40a56b554998bac380cad5044c171ce33b6e94665e7ef26d855e",
+        "staged_git_oid": "017db0d227f45b01208d60fb057b88011e0fa6bc"
+      },
+      "AR8R-CODEX-RESIDUAL-GUIDED-HYPOTHESIS-LEDGER-V14.yaml": {
+        "previous_sha256": "77718d6fde1472aa0cc34f59697652be731cea0c42d30c2524929279555a3738",
+        "reviewed_sha256": "f11c384e471e82814faa16aaaaa802a10ebe6260431fe7cfcddefffb0eb617e4",
+        "staged_git_oid": "11a4a8b41ca89ed1468acd328c885c0534749627"
+      },
+      "AR8R-CODEX-UNIFICATION-CANDIDATES-V14/README.md": {
+        "previous_sha256": "5431c63a6eca46ec2258f7741fedb33d756fb30b2cd120d194a4d47cf2127d1e",
+        "reviewed_sha256": "8ebc6b7af85b2819f08e556b15f0cc45fedf6194aa462c14c9655320bf1cd960",
+        "staged_git_oid": "b3627899b7e2514c789ea50fae884bb63b8ff394"
+      },
+      "README.md": {
+        "previous_sha256": "b072ac653d3a5cb0a9a3397f90c0aa3d034bb120d9a437abcdc4b784bbbc64d7",
+        "reviewed_sha256": "4cd2552f863d7fe3ce14e0c681812953822d0a3584fd024708489496c9064de4",
+        "staged_git_oid": "f020645e54a39faf269d0a259feb6d36d9b25f73"
+      }
+    },
+    "candidate_freeze_manifest_sha256": "6c0819a21252a48e46109de01803fcdac4113fe2dd1f14d4c54fc385e2546fb2",
+    "validator_change": "EXPECTED_FREEZE_MANIFEST_SHA_ONLY",
+    "repair_log_change": "APPEND_AR8R_V14_FR03_ONLY",
+    "staged_path_count": 31,
+    "staged_blob_mismatches": 0
+  },
+  "repaired_findings_verified": [
+    "AR8R-V14-B01",
+    "AR8R-V14-B02",
+    "AR8R-V14-B03",
+    "AR8R-V14-B04"
+  ],
+  "additional_repaired_findings_verified": [
+    "AR8R-V14-RR01"
+  ],
+  "staging_repair_verified": [
+    "AR8R-V14-FR02",
+    "AR8R-V14-FR03"
+  ],
+  "mutation_controls": {
+    "method": "IN_MEMORY_INTENDED_GATE_DISABLE_PAIRED_TEST_MUST_FAIL",
+    "cause_specific": true,
+    "killed": 20,
+    "total": 20,
+    "ids": [
+      "test_duplicate_instance_identity_fails_closed",
+      "test_unknown_relation_class_fails_closed",
+      "test_historical_identity_or_novelty_promotion_fails_closed",
+      "test_meniscus_or_closure_promotion_fails_closed",
+      "test_source_world_or_transcendental_bridge_promotion_fails_closed",
+      "test_candidate_without_nonclaims_or_ancestry_fails_closed",
+      "test_protocols_cannot_be_promoted_to_ready_to_run",
+      "test_private_locator_fails_closed",
+      "test_checker_or_lean_receipt_drift_fails_closed",
+      "test_candidate_freeze_manifest_is_independently_pinned",
+      "test_allowed_but_wrong_instance_class_fails_with_specific_issue",
+      "test_relation_truncation_fails_with_exact_coverage_issue",
+      "test_candidate_identity_and_verdict_map_are_pinned",
+      "test_countermodel_identity_map_is_pinned",
+      "test_b1_b4_exact_status_map_is_pinned",
+      "test_residual_status_and_authority_are_pinned",
+      "test_all_secondary_authority_surfaces_fail_closed",
+      "test_t354_and_tac_sac_controls_are_pinned",
+      "test_prose_promotion_is_rejected_independently_of_machine_yaml",
+      "test_semantic_source_contract_is_not_path_existence_only"
+    ]
+  },
+  "contracts_verified": {
+    "privacy": {
+      "private_path_browser_locator_or_token_findings": 0,
+      "non_utf8_members": 0
+    },
+    "source": {
+      "reference_count": 32,
+      "unique_reference_count": 17,
+      "all_repository_relative_and_normalized": true,
+      "all_resolve_to_files": true,
+      "exact_semantic_source_mappings_verified": [
+        "CLIM-03",
+        "CLIM-04",
+        "CLIM-06",
+        "REL-05",
+        "REL-06",
+        "REL-10",
+        "REL-11"
+      ]
+    },
+    "authority": {
+      "all_machine_authority_surfaces_exact": true,
+      "prose_promotion_findings": 0,
+      "protocols_executed": 0
+    }
+  },
+  "commands": [
+    {
+      "command": "python -",
+      "purpose": "read-only staged-blob, candidate-freeze, and SHA-256 audit",
+      "exit_code": 0
+    },
+    {
+      "command": "lean CodexFibreSynthesis.lean",
+      "exit_code": 0
+    },
+    {
+      "command": "python codex_fibre_synthesis_check.py",
+      "exit_code": 0,
+      "result": "PASS; regenerated bytes unchanged; UTF-8/LF"
+    },
+    {
+      "command": "python tests/test_ar8r_codex_corpus_synthesis_v14.py -v",
+      "exit_code": 0,
+      "result": "Ran 54 tests; OK"
+    },
+    {
+      "command": "python scripts/validate_ar8r_codex_corpus_synthesis_v14.py",
+      "exit_code": 0,
+      "result": "PASS_BOUNDED_CODEX_CORPUS_SYNTHESIS_NO_SCIENTIFIC_PROMOTION"
+    },
+    {
+      "command": "git diff --cached --check",
+      "exit_code": 0,
+      "result": "clean"
+    }
+  ],
+  "blocking_findings": [],
+  "nonblocking_findings": [
+    "The eleven countermodels are declared model sketches rather than a general impossibility proof.",
+    "The finite checker is a bounded exhaustive regression rather than a general proof.",
+    "Standalone Lean elaboration is not a project build, historical recovery, novelty result, or adoption."
+  ],
+  "authority_boundary": {
+    "historical_identity": "NONE",
+    "general_novelty": 0,
+    "repository_scientific_adoption": "NONE",
+    "owner_adoption": "PENDING",
+    "source_world_bridge_established": false,
+    "empirical_result": "NO_EXPERIMENT_EXECUTED",
+    "integrated_champion": "NONE",
+    "meniscus": "MENISCUS_NOT_REACHED",
+    "natural_closure": "NOT_REACHED",
+    "T354": "BLOCKED_FORMAL_DEFECT",
+    "TAC_SAC": "UNAVAILABLE_UNDEFINED"
+  },
+  "scope_boundary": {
+    "qualified_surface": "V14_LOCAL_SYNTHESIS_ONLY",
+    "repository_release_manifest": "OUT_OF_SCOPE_SEPARATE_REPAIR_AND_REVIEW",
+    "full_repository_workflow": "OUT_OF_SCOPE_SEPARATE_REPAIR_AND_REVIEW",
+    "commit_push_merge_release_publication": "NOT_AUTHORIZED"
+  },
+  "independent_repair_findings_verified": [
+    "AR8R-V14-IR01",
+    "AR8R-V14-IR02",
+    "AR8R-V14-IR03",
+    "AR8R-V14-IR04",
+    "AR8R-V14-IR05",
+    "AR8R-V14-IR06",
+    "AR8R-V14-IR07",
+    "AR8R-V14-IR08",
+    "AR8R-V14-IR09",
+    "AR8R-V14-IR10",
+    "AR8R-V14-IR11",
+    "AR8R-V14-IR12",
+    "AR8R-V14-IR13",
+    "AR8R-V14-IR14",
+    "AR8R-V14-IR15"
+  ]
+}

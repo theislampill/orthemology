@@ -1,0 +1,47 @@
+{
+  "schema": "ar8r-codex-corpus-synthesis-v14-independent-repair-review-attempt-v4",
+  "verdict": "REPAIR_REQUIRED",
+  "reviewer_context": "DISTINCT_FRESH_CONTEXT",
+  "reviewed_staged_tree": "b5699f99e88d26ed6edef836c587cdc7d882c872",
+  "blocking_findings": [
+    {
+      "id": "AR8R-V14-IR03",
+      "severity": "HIGH",
+      "summary": "Quoted, spaced, and hyphenated authority-promotion keys bypassed the first repair regexes."
+    },
+    {
+      "id": "AR8R-V14-IR04",
+      "severity": "HIGH",
+      "summary": "Selective audit checks left attempt scope, mutation totals, reviewed hashes, final scope boundaries, and source-contract declarations mutable."
+    },
+    {
+      "id": "AR8R-V14-IR05",
+      "severity": "MEDIUM",
+      "summary": "Generic sig and signature assignments were false positives without URL context."
+    }
+  ],
+  "reproduction": {
+    "authority_marker_bypasses_reproduced": 24,
+    "audit_or_scope_bypasses_reproduced": 6,
+    "signed_url_false_positive_cases_reproduced": 2
+  },
+  "candidate_byte_findings": {
+    "private_leakage_found": false,
+    "authority_promotion_found": false,
+    "theorem_relation_defect_found": false,
+    "lean_or_checker_reproduction_failure": false
+  },
+  "authority_boundary": {
+    "historical_identity": "NONE",
+    "general_novelty": 0,
+    "repository_scientific_adoption": "NONE",
+    "owner_adoption": "PENDING",
+    "source_world_bridge_established": false,
+    "empirical_result": "NO_EXPERIMENT_EXECUTED",
+    "integrated_champion": "NONE",
+    "meniscus": "MENISCUS_NOT_REACHED",
+    "natural_closure": "NOT_REACHED",
+    "T354": "BLOCKED_FORMAL_DEFECT",
+    "TAC_SAC": "UNAVAILABLE_UNDEFINED"
+  }
+}

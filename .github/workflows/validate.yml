@@ -42,6 +42,8 @@ jobs:
           python scripts/validate_ar8r_external_challenges.py
           python tests/test_ar8r_six_lane_v14_intake.py
           python scripts/validate_ar8r_six_lane_v14_intake.py
+          python tests/test_ar8r_codex_corpus_synthesis_v14.py
+          python scripts/validate_ar8r_codex_corpus_synthesis_v14.py
       - name: Generated project state — drift check (R4, Decision 0014)
         run: python scripts/generate_current_state.py --check
       - name: State-contract convergence proof (commit boundary + tamper controls)

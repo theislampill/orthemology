@@ -1,0 +1,65 @@
+{
+  "schema": "ar8r-codex-corpus-synthesis-v14-fresh-rereview-attempt-v1",
+  "verdict": "REPAIR_REQUIRED",
+  "reviewer_context": "DISTINCT_FRESH_CONTEXT",
+  "reviewed_hashes": {
+    "lean_source_sha256": "73aef790f787ce11c65f4bb080d33b147d210d718862985299b14ce27c4e9efc",
+    "checker_source_sha256": "108ecff8de22c33b826f562337d3bbabccf898a34170c048b9b5e939c03e7c69",
+    "checker_results_sha256": "15d73600ea77d15cfaae7778381d7cbadd2ee90a0689e0c06a2ff780e1f4324a",
+    "candidate_freeze_manifest_sha256": "74233a7f914fe78691e63ebbfd9cb976710cfbc5c20199f174178f9dba472ac1"
+  },
+  "frozen_members_verified": 14,
+  "repaired_findings_verified": [
+    "AR8R-V14-B01",
+    "AR8R-V14-B02",
+    "AR8R-V14-B03"
+  ],
+  "repaired_findings_not_verified": [
+    "AR8R-V14-B04"
+  ],
+  "blocking_findings": [
+    {
+      "id": "AR8R-V14-RR01",
+      "summary": "Five mutation tests remained result-only and could pass from unrelated freeze or source-manifest drift."
+    }
+  ],
+  "mutation_controls": {
+    "suite_reported_killed": 20,
+    "suite_reported_total": 20,
+    "cause_specific_killed": 15,
+    "cause_specific_total": 20,
+    "vacuous_test_ids": [
+      "test_duplicate_instance_identity_fails_closed",
+      "test_unknown_relation_class_fails_closed",
+      "test_meniscus_or_closure_promotion_fails_closed",
+      "test_source_world_or_transcendental_bridge_promotion_fails_closed",
+      "test_candidate_without_nonclaims_or_ancestry_fails_closed"
+    ]
+  },
+  "commands": [
+    {"command": "lean CodexFibreSynthesis.lean", "exit_code": 0},
+    {"command": "python codex_fibre_synthesis_check.py", "exit_code": 0},
+    {"command": "python tests/test_ar8r_codex_corpus_synthesis_v14.py -v", "exit_code": 0, "context": "disposable tentative completed surface"},
+    {"command": "five-control vacuity probe with intended semantic checks disabled", "exit_code": 0, "result": "five tests still passed"},
+    {"command": "python scripts/validate_ar8r_codex_corpus_synthesis_v14.py", "exit_code": 1, "context": "truthful REPAIR_REQUIRED surface"},
+    {"command": "git diff --check", "exit_code": 0}
+  ],
+  "nonblocking_findings": [
+    "C1 dependency metadata omitted Classical.choice although the Lean receipt reported it.",
+    "The eleven countermodels remain declared sketches.",
+    "The finite checker remains a bounded regression rather than a general proof."
+  ],
+  "authority_boundary": {
+    "historical_identity": "NONE",
+    "general_novelty": 0,
+    "repository_scientific_adoption": "NONE",
+    "owner_adoption": "PENDING",
+    "source_world_bridge_established": false,
+    "empirical_result": "NO_EXPERIMENT_EXECUTED",
+    "integrated_champion": "NONE",
+    "meniscus": "MENISCUS_NOT_REACHED",
+    "natural_closure": "NOT_REACHED",
+    "T354": "BLOCKED_FORMAL_DEFECT",
+    "TAC_SAC": "UNAVAILABLE_UNDEFINED"
+  }
+}
