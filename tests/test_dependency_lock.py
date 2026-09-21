@@ -137,6 +137,43 @@ class DependencyClassificationTests(unittest.TestCase):
         self.assertNotIn("__future__", result["unmapped"])
         self.assertEqual(set(), result["unmapped"])
 
+    def test_scanner_reads_python_imports_not_generated_language_text(self):
+        with tempfile.TemporaryDirectory() as td:
+            root = Path(td)
+            scripts = root / "scripts"
+            scripts.mkdir()
+            (scripts / "exporter.py").write_text(
+                'from __future__ import annotations\n'
+                'import yaml, jsonschema\n'
+                'def export():\n'
+                '    return """Generated Lean source\n'
+                'import FiniteBridge\n'
+                'from ForeignLanguage import Example\n'
+                '"""\n'
+                'def load():\n'
+                '    import orthemology_unmapped_dependency_probe\n',
+                encoding="utf-8",
+            )
+            used = validator.scan_repository_imports(root)
+            self.assertEqual(
+                {"__future__", "yaml", "jsonschema",
+                 "orthemology_unmapped_dependency_probe"},
+                used,
+            )
+            self.assertEqual(
+                {"orthemology_unmapped_dependency_probe"},
+                self.classify(used)["unmapped"],
+            )
+
+    def test_scanner_fails_closed_on_invalid_python(self):
+        with tempfile.TemporaryDirectory() as td:
+            root = Path(td)
+            scripts = root / "scripts"
+            scripts.mkdir()
+            (scripts / "invalid.py").write_text("import (\n", encoding="utf-8")
+            with self.assertRaises(SyntaxError):
+                validator.scan_repository_imports(root)
+
     def test_workflow_runs_focused_test_beside_production_validator(self):
         workflow = WORKFLOW.read_text(encoding="utf-8")
         focused = "python tests/test_dependency_lock.py"
