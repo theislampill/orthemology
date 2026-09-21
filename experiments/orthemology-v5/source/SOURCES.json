@@ -1,0 +1,44 @@
+{
+  "date": "2026-09-19",
+  "sources": [
+    {
+      "id": "P1",
+      "url": "https://leanprover-community.github.io/mathlib4_docs/Counterexamples/Girard.html",
+      "scope": "actual theorem signature/documentation",
+      "status": "READ"
+    },
+    {
+      "id": "P2",
+      "url": "https://arxiv.org/pdf/1802.05143",
+      "scope": "Theorems 5.21, 7.1 and section 5.3 full text; abstract metadata",
+      "status": "TEXT_READ_SCREENSHOT_ATTEMPTS_FAILED"
+    },
+    {
+      "id": "P3",
+      "url": "https://arxiv.org/pdf/1510.04629",
+      "scope": "revocation, context discovery/validation passages",
+      "status": "TEXT_READ_SCREENSHOT_ATTEMPT_FAILED"
+    },
+    {
+      "id": "P4",
+      "url": "https://arxiv.org/html/1410.7225",
+      "scope": "Definitions 6–8, Theorems 3–4, proof reduction and scope",
+      "status": "HTML_THEOREM_PASSAGES_READ"
+    },
+    {
+      "id": "P5",
+      "url": "https://raw.githubusercontent.com/leanprover/lean4/v4.19.0/src/Lean/Util/CollectAxioms.lean",
+      "scope": "full 45-line pinned API source",
+      "status": "READ_NOT_COMPILED"
+    },
+    {
+      "id": "P6",
+      "url": "https://arxiv.org/abs/2602.08846",
+      "scope": "abstract and bibliographic metadata only",
+      "status": "ABSTRACT_ONLY"
+    }
+  ],
+  "novelty_established": false,
+  "full_literature_census": false,
+  "note": "No prior-art paper is bundled wholesale; exact preserved project sources stay under history."
+}

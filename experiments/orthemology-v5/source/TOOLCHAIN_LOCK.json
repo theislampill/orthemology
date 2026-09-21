@@ -1,0 +1,20 @@
+{
+  "lean": "leanprover/lean4:v4.19.0",
+  "compiler_version": "4.19.0",
+  "mathlib_package": null,
+  "mathlib_adaptation": {
+    "file": "lean/HurkensBoundary.lean",
+    "upstream": "leanprover-community/mathlib4",
+    "commit": "81a5d257c8e410db227a6665ed08f64fea08e997",
+    "path": "Counterexamples/Girard.lean",
+    "status": "attributed preserved adaptation, not installed Mathlib"
+  },
+  "python_observed": "3.13.5 (main, Jul 15 2026, 20:25:40) [GCC 14.2.0]",
+  "dependencies": "Python standard library; active Lean imports Init or Lean plus local modules",
+  "migration": "none; wrong versions fail; no compiler obtained",
+  "approved_axiom_ceiling": [
+    "Classical.choice",
+    "Quot.sound",
+    "propext"
+  ]
+}

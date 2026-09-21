@@ -1,0 +1,37 @@
+{
+  "items": [
+    {
+      "artifact": "H14",
+      "sha256": "2f66659096c311e6a519e595c214b2f71f69048a5e443ef589b5df938743881e",
+      "bytes": 48906007,
+      "public_locator": null,
+      "status": "LOCAL_EXACT_BYTES_ONLY_NO_DURABLE_PUBLIC_RETRIEVAL_ATTESTATION",
+      "required_action": "Owner/controller retention and rights decision before claiming publicly retrievable original-packet replay. Preserve originals, manifests, unique RED evidence and receipts.",
+      "blocks_active_checkout_replay": false,
+      "blocks_full_historical_recovery_claim": true
+    },
+    {
+      "artifact": "V4",
+      "sha256": "446b97b703af5de17b93e86f585a0621c968369f704a39026aa19a59018b495b",
+      "bytes": 2727420,
+      "public_locator": null,
+      "status": "LOCAL_EXACT_BYTES_ONLY_NO_DURABLE_PUBLIC_RETRIEVAL_ATTESTATION",
+      "required_action": "Owner/controller retention and rights decision before claiming publicly retrievable original-packet replay. Preserve originals, manifests, unique RED evidence and receipts.",
+      "blocks_active_checkout_replay": false,
+      "blocks_full_historical_recovery_claim": true
+    },
+    {
+      "artifact": "V5",
+      "sha256": "6f33d5ac48ff5ac37dbf7e4570fae9b9def5b3413f2e9f57fee699e932f8ea9f",
+      "bytes": 5520586,
+      "public_locator": null,
+      "status": "LOCAL_EXACT_BYTES_ONLY_NO_DURABLE_PUBLIC_RETRIEVAL_ATTESTATION",
+      "required_action": "Owner/controller retention and rights decision before claiming publicly retrievable original-packet replay. Preserve originals, manifests, unique RED evidence and receipts.",
+      "blocks_active_checkout_replay": false,
+      "blocks_full_historical_recovery_claim": true
+    }
+  ],
+  "upload_authorised_here": false,
+  "no_invented_urls": true,
+  "checkpoints": "Local cell ZIPs are custody artifacts and never part of the staging branch."
+}

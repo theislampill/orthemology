@@ -1,0 +1,155 @@
+{
+  "status": "OPEN",
+  "items": [
+    {
+      "id": "U01",
+      "obligation": "Real Lean/kernel acceptance",
+      "blocker": "No installed compiler; official asset/network and artifact-size routes failed with retained diagnostics.",
+      "method": "Obtain exact 4.19.0 or document a deliberate migration; run verify.py, repair all actual elaboration errors without weakening statements and inspect all required declarations.",
+      "sources": [
+        "formal_targets.json",
+        "TOOLCHAIN_LOCK.json",
+        "evidence/current/TOOLCHAIN_ACTUAL.txt",
+        "evidence/current/TOOLCHAIN_CONNECTOR_DIAGNOSTICS.json"
+      ]
+    },
+    {
+      "id": "U02",
+      "obligation": "Actual transitive assumption and statement fidelity audit",
+      "blocker": "The emitted in-Lean audit command is uncompiled; no actual footprint is known.",
+      "method": "Build all twelve modules, require every declared name/type, compile RequiredAudit with #ortho_audit, inspect the actual smaller footprint and review theorem statements against AC01–AC16.",
+      "sources": [
+        "lean/AuditSupport.lean",
+        "build_gate.py",
+        "examples/RequiredAudit.preview.lean.txt"
+      ]
+    },
+    {
+      "id": "U03",
+      "obligation": "Whole deployed parser/checker/exporter refinement",
+      "blocker": "Python/JSON behaviour and eight examples are finitely checked, not universally verified.",
+      "method": "Extract the finite checker or prove raw decode/structural validation/substitution/check/serialize refinement, including budgets and rejection paths.",
+      "sources": [
+        "reference.py",
+        "boundaries.py",
+        "proof_export.py",
+        "lean/FiniteBridge.lean",
+        "lean/GeneratedExamples.lean"
+      ]
+    },
+    {
+      "id": "U04",
+      "obligation": "Operational formal model to actual registry/lock implementation",
+      "blocker": "Typed Plan model abstracts resource refusal and does not contain the full mutable issuer registry or probability grammar.",
+      "method": "State a simulation over complete Gamma/issued-record/lock states and prove successful concrete transitions refine abstract checked transitions, including failure atomicity and concurrency linearisation.",
+      "sources": [
+        "operational.py",
+        "lean/OperationalKernel.lean",
+        "PROOFS_V4.md"
+      ]
+    },
+    {
+      "id": "U05",
+      "obligation": "Actual measure-theoretic formalisation",
+      "blocker": "Q1–Q8 measure and computability arguments are ordinary proofs; preserved AlmostSureBoundary is only a logical abstraction.",
+      "method": "Pin Mathlib; define positive singleton support, countability, restrictions, pushforwards, all-event property, sums and weak limits; prove Q1–Q4/Q7 and formalise the Q8 reduction separately.",
+      "sources": [
+        "PROOFS_V4.md",
+        "lean/AlmostSureBoundary.lean"
+      ]
+    },
+    {
+      "id": "U06",
+      "obligation": "Unbounded typed sampler and productive observer semantics",
+      "blocker": "Bounded source APIs and ideal ordinary stream arguments are not a mechanised probability space.",
+      "method": "Give a guarded/coinductive stream semantics, prefix cylinder law and stopping-time measure; prove total mass, certified leaves, exact tails/expectations and finite-cap relation to Python.",
+      "sources": [
+        "guarded_sampler.py",
+        "productive_observer.py",
+        "PROOFS_V4.md"
+      ]
+    },
+    {
+      "id": "U07",
+      "obligation": "Computational cost and entropy-law assurance",
+      "blocker": "Counters exclude parsing, allocation, validation, entropy acquisition and real CPU costs; fair input law is a premise.",
+      "method": "Choose an explicit instruction/bit-cost model and entropy assumption; prove implementation costs or measure separately, never infer time from expected bits.",
+      "sources": [
+        "guarded_sampler.py",
+        "PROOFS_V4.md"
+      ]
+    },
+    {
+      "id": "U08",
+      "obligation": "General fixed-point correspondence",
+      "blocker": "A concrete singleton correspondence is solved ordinarily; no general compactness/selection theorem has been formalised here.",
+      "method": "Use a pinned existing Kakutani development, define the actual safe domain and correspondence and discharge all hypotheses; separately prove effective realisation or exhibit its impossibility.",
+      "sources": [
+        "PROOFS_V4.md",
+        "PRIOR_ART_COMPARISON.md"
+      ]
+    },
+    {
+      "id": "U09",
+      "obligation": "Finite-source normalisation and conversion-completeness bridges",
+      "blocker": "Preserved System F translation and compatible SKI confluence/completeness arguments remain unmechanised.",
+      "method": "Mechanise translation/substitution, nonempty reduction simulation and exact modulo-conversion counterexample; keep K t Omega semantic obstruction unchanged.",
+      "sources": [
+        "lean/NormalisationAndNumerals.lean",
+        "history/Orthemology_v3_Critical_Handoff/inputs/v3/MATHEMATICAL_PROOF.md"
+      ]
+    },
+    {
+      "id": "U10",
+      "obligation": "Full logical relations / semantic parametricity",
+      "blocker": "New R1 only treats finite pure derivations; its source is uncompiled.",
+      "method": "Compile it, then specify and prove stronger relation-environment/identity-extension/effect/dependent rules only with the needed hypotheses; compare Pistone Theorems 5.21/7.1.",
+      "sources": [
+        "lean/RelationalFragment.lean",
+        "PRIOR_ART_COMPARISON.md"
+      ]
+    },
+    {
+      "id": "U11",
+      "obligation": "Contextual dependent substitution, J and universe rules",
+      "blocker": "Existing Pi/Sigma/coherence semantics is not a full dependent calculus or decidable kernel.",
+      "method": "Specify contexts, substitutions, dependent eliminators and judgmental equalities, prove substitution/soundness and explain the exact universe closure excluded by SCUU.",
+      "sources": [
+        "lean/EffectsAndDependence.lean",
+        "PROOFS_V4.md"
+      ]
+    },
+    {
+      "id": "U12",
+      "obligation": "Exact-length trace and backend/contextual correctness",
+      "blocker": "Finite symbolic traces are tested and exportable but the full length-indexed simulation and contextual compiler refinement are absent.",
+      "method": "Introduce an indexed trace relation, prove each replay step and strategy cost; define effect/observable contexts and verify backend lowering before any performance claim.",
+      "sources": [
+        "extensions.py",
+        "proof_export.py",
+        "lean/BoundaryResults.lean"
+      ]
+    },
+    {
+      "id": "U13",
+      "obligation": "Novelty, priority and foundational importance",
+      "blocker": "Only a bounded source-grounded comparison exists; no independent specialist review occurred.",
+      "method": "Compare exact hypotheses/conclusions with closest complete primary work, obtain independent review, and distinguish elementary application/engineering from new mathematics.",
+      "sources": [
+        "PRIOR_ART_COMPARISON.md",
+        "SOURCES.json"
+      ]
+    },
+    {
+      "id": "U14",
+      "obligation": "Real-world law binding and distributed authority",
+      "blocker": "The host declares law models and owns local mutable state; no external authenticated law oracle or distributed revocation is implemented.",
+      "method": "Specify independent evidence provenance and an external system model; verify authentication, freshness, discovery and multi-process consistency if that deployment is pursued.",
+      "sources": [
+        "OPERATIONAL_CONTRACT.md",
+        "operational.py",
+        "observations.py"
+      ]
+    }
+  ]
+}

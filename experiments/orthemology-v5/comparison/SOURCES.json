@@ -1,0 +1,56 @@
+[
+  {
+    "id": "S1",
+    "title": "Mario Carneiro / Mathlib: Girard (Hurkens adaptation)",
+    "url": "https://github.com/leanprover-community/mathlib4/blob/c44e0c8ee63ca166450922a373c7409c5d26b00b/Counterexamples/Girard.lean",
+    "inspection": "Complete source via connected GitHub; exact pi/lam/app/beta theorem inspected."
+  },
+  {
+    "id": "S2",
+    "title": "Peter Lietz and Thomas Streicher (2002), Impredicativity entails untypedness",
+    "url": "https://doi.org/10.1017/S0960129502003663",
+    "inspection": "Publisher abstract and author theorem summary read. Compressed PostScript retrieval failed; full proof NOT reviewed."
+  },
+  {
+    "id": "S3",
+    "title": "Paolo Pistone, On completeness and parametricity in the realizability semantics of System F",
+    "url": "https://arxiv.org/abs/1802.05143",
+    "inspection": "Full text available; Theorems 6.20 and 7.1 and surrounding hypotheses/counterexamples read. Screenshot attempts failed."
+  },
+  {
+    "id": "S4",
+    "title": "Christopher P. Porter (2015), Trivial measures are not so trivial",
+    "url": "https://arxiv.org/abs/1503.06332",
+    "inspection": "Definitions 2.1\u20132.4, Section 3 tally functionals and Theorem 3.2 proof inspected. No full-paper review or exact-index novelty clearance."
+  },
+  {
+    "id": "S5",
+    "title": "Benjamin Lucien Kaminski and Joost-Pieter Katoen, Analyzing Expected Outcomes and Almost-Sure Termination of Probabilistic Programs is Hard",
+    "url": "https://arxiv.org/abs/1410.7225",
+    "inspection": "Full HTML; expected-value and AST complexity theorems and geometric-selection reduction read."
+  },
+  {
+    "id": "S6",
+    "title": "Mathlib authors, Martingale.Convergence; Ying and Degenne formalisation",
+    "url": "https://leanprover-community.github.io/mathlib4_docs/Mathlib/Probability/Martingale/Convergence.html",
+    "inspection": "Primary library documentation of martingale and Levy upwards convergence. Not executed in this environment."
+  },
+  {
+    "id": "S7",
+    "title": "George C. Necula (1997), Proof-carrying code",
+    "url": "https://doi.org/10.1145/263699.263712",
+    "inspection": "Original publication metadata/abstract and author CMU seminar abstract. Full implementation proof not rechecked."
+  },
+  {
+    "id": "S8",
+    "title": "Samuel L. Speight and Niels van der Weide (2026), Impredicativity in Linear Dependent Type Theory",
+    "url": "https://arxiv.org/html/2602.08846v1",
+    "inspection": "Full HTML; Examples 18/23, Theorem 22, formalisation scope and Section 5 encodings read. Author-reported Rocq work, not independently built here."
+  },
+  {
+    "id": "S9",
+    "title": "John Longley (May 1999), Unifying Typed and Untyped Realizability",
+    "url": "https://homepages.inf.ed.ac.uk/jrl/Research/unifying.txt",
+    "inspection": "Author plaintext note; PCTS definitions, applicative morphisms and equivalences read. Preserve note/conjecture distinctions."
+  }
+]

@@ -1,0 +1,210 @@
+{
+  "version": 1,
+  "modules": [
+    {
+      "name": "InternalPolymorphism",
+      "targets": [
+        "OrthemologyV2.Red.left",
+        "OrthemologyV2.Code.along",
+        "OrthemologyV2.polymorphic_beta",
+        "OrthemologyV2.polymorphic_eta",
+        "OrthemologyV2.selfInstantiate_same_program",
+        "OrthemologyV2.dependent_beta",
+        "OrthemologyV2.i_realises",
+        "OrthemologyV2.k_realises",
+        "OrthemologyV2.s_realises",
+        "OrthemologyV2.sound",
+        "OrthemologyV2.no_empty_derivation",
+        "OrthemologyV2.no_empty_polymorphic_value",
+        "OrthemologyV2.no_empty_polymorphic_derivation",
+        "OrthemologyV2.identity_self_beta",
+        "OrthemologyV2.identity_derives",
+        "OrthemologyV2.identity_self_derives",
+        "OrthemologyV2.true_derives",
+        "OrthemologyV2.false_derives",
+        "OrthemologyV2.bool_values_distinct",
+        "OrthemologyV2.true_selects",
+        "OrthemologyV2.false_selects",
+        "OrthemologyV2.true_selects_zero",
+        "OrthemologyV2.false_selects_one",
+        "OrthemologyV2.typed_true_observation",
+        "OrthemologyV2.typed_false_observation",
+        "OrthemologyV2.observed_outputs_distinct",
+        "OrthemologyV2.boolean_self_beta",
+        "OrthemologyV2.identity_code_decodes",
+        "OrthemologyV2.boolean_code_decodes",
+        "OrthemologyV2.diagonal_derives",
+        "OrthemologyV2.diagonal_internal_self_instantiation",
+        "OrthemologyV2.nonuniform_at_top",
+        "OrthemologyV2.nonuniform_at_bottom",
+        "OrthemologyV2.no_nonuniform_abstraction",
+        "OrthemologyV2.no_full_ambient_abstraction",
+        "OrthemologyV2.support_cannot_realise_empty",
+        "OrthemologyV2.resolution"
+      ]
+    },
+    {
+      "name": "HurkensBoundary",
+      "targets": [
+        "OrthemologyV2Boundary.no_self_product"
+      ]
+    },
+    {
+      "name": "FiniteBridge",
+      "targets": [
+        "OrthemologyV3.rename_sem",
+        "OrthemologyV3.substitute_sem",
+        "OrthemologyV3.instantiate_sem",
+        "OrthemologyV3.finite_translation",
+        "OrthemologyV3.finite_sound",
+        "OrthemologyV3.checked_sound",
+        "OrthemologyV3.check_cannot_return_bottom",
+        "OrthemologyV3.finite_allE_erasure"
+      ]
+    },
+    {
+      "name": "BoundaryResults",
+      "targets": [
+        "OrthemologyV3.Conv.left",
+        "OrthemologyV3.Conv.right",
+        "OrthemologyV3.code_conversion",
+        "OrthemologyV3.identity_characterisation",
+        "OrthemologyV3.boolean_conservative",
+        "OrthemologyV3.replace_free",
+        "OrthemologyV3.step_replace",
+        "OrthemologyV3.conv_replace",
+        "OrthemologyV3.boolean_projection",
+        "OrthemologyV3.boolean_projection_converse",
+        "OrthemologyV3.step_markerFree",
+        "OrthemologyV3.red_markerFree",
+        "OrthemologyV3.derives_markerFree",
+        "OrthemologyV3.semantic_identity_with_marker",
+        "OrthemologyV3.marker_counterexample_not_derivable",
+        "OrthemologyV3.marker_counterexample_not_finite",
+        "OrthemologyV3.red_replace",
+        "OrthemologyV3.certified_left_projection",
+        "OrthemologyV3.certified_right_projection",
+        "OrthemologyV3.branching_invariance_collapses",
+        "OrthemologyV3.singleton_full_beta",
+        "OrthemologyV3.no_erased_full_sections"
+      ]
+    },
+    {
+      "name": "EffectsAndDependence",
+      "targets": [
+        "OrthemologyV3.effect_sound",
+        "OrthemologyV3.outcome_exists",
+        "OrthemologyV3.no_empty_effect",
+        "OrthemologyV3.effect_outcomes_free",
+        "OrthemologyV3.probabilistic_boolean_projection",
+        "OrthemologyV3.support_all_iff",
+        "OrthemologyV3.dependent_application_conversion",
+        "OrthemologyV3.red_trans",
+        "OrthemologyV3.red_conv",
+        "OrthemologyV3.pair_apply",
+        "OrthemologyV3.pair_first",
+        "OrthemologyV3.pair_second",
+        "OrthemologyV3.sigma_projections",
+        "OrthemologyV3.equality_reflexive",
+        "OrthemologyV3.equality_transport"
+      ]
+    },
+    {
+      "name": "AlmostSureBoundary",
+      "targets": [
+        "OrthemologyV3.completeFull_iff_full_atoms",
+        "OrthemologyV3.no_atomless_full_intersection",
+        "OrthemologyV3.support_lifting_intersection"
+      ]
+    },
+    {
+      "name": "NormalisationAndNumerals",
+      "targets": [
+        "OrthemologyV3.omega_step1",
+        "OrthemologyV3.omega_step2",
+        "OrthemologyV3.omega_step3",
+        "OrthemologyV3.three_cycle_not_SN",
+        "OrthemologyV3.every_inhabited_code_contains_non_SN",
+        "OrthemologyV3.replace_iterate",
+        "OrthemologyV3.numeral_representability"
+      ]
+    },
+    {
+      "name": "OperationalKernel",
+      "targets": [
+        "OrthemologyV4.checked_source_application",
+        "OrthemologyV4.checker_sound",
+        "OrthemologyV4.execution_implies_checked",
+        "OrthemologyV4.ticket_good",
+        "OrthemologyV4.all_open_checked",
+        "OrthemologyV4.all_open_execute",
+        "OrthemologyV4.revision_stability",
+        "OrthemologyV4.relevant_revision_invalidates",
+        "OrthemologyV4.parametric_reach",
+        "OrthemologyV4.useful_nonidentity",
+        "OrthemologyV4.distinguishable_results",
+        "OrthemologyV4.composition_works",
+        "OrthemologyV4.source_program_exact",
+        "OrthemologyV4.internal_source_self_instantiation",
+        "OrthemologyV4.positive_OWOU"
+      ]
+    },
+    {
+      "name": "OperationalBoundary",
+      "targets": [
+        "OrthemologyV4.not_SCUUAt",
+        "OrthemologyV4.mainWitnessAt"
+      ]
+    },
+    {
+      "name": "RelationalFragment",
+      "targets": [
+        "OrthemologyV4Relations.RelationCode.alongLeft",
+        "OrthemologyV4Relations.RelationCode.alongRight",
+        "OrthemologyV4Relations.relRename",
+        "OrthemologyV4Relations.relSubstitute",
+        "OrthemologyV4Relations.relInstantiate",
+        "OrthemologyV4Relations.relatedI",
+        "OrthemologyV4Relations.relatedK",
+        "OrthemologyV4Relations.relatedS",
+        "OrthemologyV4Relations.finite_fundamental",
+        "OrthemologyV4Relations.checked_parametric"
+      ]
+    },
+    {
+      "name": "GeneratedExamples",
+      "targets": [
+        "OrthemologyV4Exports.identity_erasure",
+        "OrthemologyV4Exports.identity_type",
+        "OrthemologyV4Exports.identity_sound",
+        "OrthemologyV4Exports.identitySelf_erasure",
+        "OrthemologyV4Exports.identitySelf_type",
+        "OrthemologyV4Exports.identitySelf_sound",
+        "OrthemologyV4Exports.reducedIdentity_erasure",
+        "OrthemologyV4Exports.reducedIdentity_type",
+        "OrthemologyV4Exports.reducedIdentity_sound",
+        "OrthemologyV4Exports.trueSelector_erasure",
+        "OrthemologyV4Exports.trueSelector_type",
+        "OrthemologyV4Exports.trueSelector_sound",
+        "OrthemologyV4Exports.falseSelector_erasure",
+        "OrthemologyV4Exports.falseSelector_type",
+        "OrthemologyV4Exports.falseSelector_sound",
+        "OrthemologyV4Exports.trueSelfChoice_erasure",
+        "OrthemologyV4Exports.trueSelfChoice_type",
+        "OrthemologyV4Exports.trueSelfChoice_sound",
+        "OrthemologyV4Exports.falseSelfChoice_erasure",
+        "OrthemologyV4Exports.falseSelfChoice_type",
+        "OrthemologyV4Exports.falseSelfChoice_sound",
+        "OrthemologyV4Exports.diagonalSelf_erasure",
+        "OrthemologyV4Exports.diagonalSelf_type",
+        "OrthemologyV4Exports.diagonalSelf_sound"
+      ]
+    },
+    {
+      "name": "AuditSupport",
+      "targets": [
+        "OrthemologyAudit.allowedAxiom"
+      ]
+    }
+  ]
+}

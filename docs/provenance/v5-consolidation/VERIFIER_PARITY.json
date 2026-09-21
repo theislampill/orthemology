@@ -1,0 +1,84 @@
+{
+  "original_packet_replay": "UNCHANGED_ORIGINALS_REQUIRED",
+  "repository_native_replay": "NEW_INTEGRATION_ADAPTER_NOT_UNCHANGED_PACKET_VERIFIER",
+  "checks": [
+    {
+      "id": "P01",
+      "original": "V4 build_gate.verify_manifest exact original 550-member coverage",
+      "native": "Keep original unchanged off Git. Native source manifest exhaustively covers compact subtree; source map binds each leaf to original digest; no wildcard exclusions.",
+      "verification": "manifest/hash/rename/omission/extras negatives"
+    },
+    {
+      "id": "P02",
+      "original": "V5 custody original V4 ZIP digest and 551 byte-equal members",
+      "native": "Original archive still required for original-packet replay. Native projection verifies the complete original inventory disposition and hashes of every active source without claiming full-packet recovery.",
+      "verification": "source tamper and omission negatives"
+    },
+    {
+      "id": "P03",
+      "original": "Original twelve Lean modules unchanged between V4 and V5",
+      "native": "Single active owner under source/lean; formal driver stages same twelve byte-identical modules, shared gate, toolchain and inventory into fresh external tree.",
+      "verification": "staged identity, missing/changed formal source negatives"
+    },
+    {
+      "id": "P04",
+      "original": "183 unit tests in normal and optimised mode",
+      "native": "Original V4 test population and runner retained unchanged. Source verify.py and build_gate unchanged; compact MANIFEST is explicitly a new integration artifact.",
+      "verification": "exact test census in both modes"
+    },
+    {
+      "id": "P05",
+      "original": "335744 census cases in both modes",
+      "native": "Run unchanged census.py twice; parse JSON and exact total.",
+      "verification": "reject fake success or missing counts"
+    },
+    {
+      "id": "P06",
+      "original": "6 legacy and 10 V4 intended mutations",
+      "native": "Run unchanged scripts with positive controls and exact intended-failure checks.",
+      "verification": "each positive success plus intended assertion failure"
+    },
+    {
+      "id": "P07",
+      "original": "12 positive demonstration scenarios plus reject-all control",
+      "native": "Run unchanged demonstrate.py and check status, count and reject_all_fails.",
+      "verification": "reject-all remains false implementation"
+    },
+    {
+      "id": "P08",
+      "original": "V5 9 mathematical and 3 staging probes in each mode",
+      "native": "Run exact mathematical probes, minimal import-location adapter in staging tests, no engine change.",
+      "verification": "256 Mealy machines; 1365 traces; staging isolation"
+    },
+    {
+      "id": "P09",
+      "original": "Formal version, inventory, build artifacts and per-target axiom audit",
+      "native": "Unchanged V4 strict verifier and V5 standalone build driver in complete staged tree. Exit 2 only genuine tools unavailable in selected environment; wrong/failed compiler is failure.",
+      "verification": "missing/wrong/failed compiler and fake-green controls; no kernel credit"
+    },
+    {
+      "id": "P10",
+      "original": "Source immutability pre/post execution",
+      "native": "Native full selection manifest measured before and after; original archives independently retain their own manifests.",
+      "verification": "stale input/evidence/manifest negatives"
+    },
+    {
+      "id": "P11",
+      "original": "40 inherited theorem and 84 criticism IDs with original dispositions",
+      "native": "Exact A4T origin-scoped records and original_record_sha256 retained; generated indexes cannot omit or duplicate IDs.",
+      "verification": "duplicate and dropped IDs; ceilings unchanged"
+    },
+    {
+      "id": "P12",
+      "original": "Repository authority, privacy and generated-state owners",
+      "native": "Exact base check; focused existing validators; generated state then release manifest; A3G baseline qualification remains PARTIAL.",
+      "verification": "stale base, privacy leak, dependency collision, state drift"
+    }
+  ],
+  "strict_exit_policy": {
+    "0": "All requested strict scopes passed",
+    "1": "Failure, wrong compiler, malformed or incomplete evidence",
+    "2": "Reference/integrity passed with genuinely unavailable required formal tools; kernel OPEN"
+  },
+  "A6_acceptance": "Shadow integration PASS may record formal OPEN, as frozen A6 permits. Never label exit 2 full formal success."
+}

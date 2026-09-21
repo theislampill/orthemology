@@ -1,0 +1,95 @@
+{
+  "status": "CONVERGENCE_NOT_BREADTH",
+  "preserved_catalogue": "source/THEOREM_CATALOGUE.json",
+  "preserved_catalogue_sha256": "13d6f0a12fc8925db81b992f07bd0a6851c2cd48d07733b2607975e4d0084cc5",
+  "preserved_ids": [
+    "T01",
+    "T02",
+    "T03",
+    "T04",
+    "T05",
+    "T06",
+    "T07",
+    "T08",
+    "T09",
+    "T10",
+    "T11",
+    "T12",
+    "T13",
+    "T14",
+    "T15",
+    "T16",
+    "T17",
+    "T18",
+    "T19",
+    "T20",
+    "T21",
+    "T22",
+    "T23",
+    "T24",
+    "V4-Q1",
+    "V4-Q2",
+    "V4-Q3",
+    "V4-Q4",
+    "V4-Q5",
+    "V4-Q6",
+    "V4-Q7",
+    "V4-Q8",
+    "V4-O1",
+    "V4-O2",
+    "V4-O3",
+    "V4-O4",
+    "V4-R1",
+    "V4-R2",
+    "V4-S1",
+    "V4-S2"
+  ],
+  "convergence_families": [
+    {
+      "id": "CV-R",
+      "title": "Finite/infinite observation-refinement chain and exact certificate debt",
+      "continues": [
+        "V4-Q1",
+        "V4-Q2",
+        "V4-Q3",
+        "V4-Q4"
+      ],
+      "proof": "mathematics/REFINEMENT_CALCULUS.md",
+      "ordinary_status": "SUPPLIED_PROVISIONAL",
+      "kernel_verified": false,
+      "main_statement": "d_n=d_0+sum increments; d_infinity=d_0+sum increments+positive-cell extinction residual J; exact semantic budget transport.",
+      "novelty": "Elementary finite corollary; infinite refinement/application stated precisely; no priority established."
+    },
+    {
+      "id": "CV-C",
+      "title": "Exact productive-observer defect index hierarchy and finite-state exception",
+      "continues": [
+        "V4-Q8"
+      ],
+      "proof": "mathematics/DEFECT_COMPUTABILITY.md",
+      "ordinary_status": "SUPPLIED_PROVISIONAL",
+      "kernel_verified": false,
+      "main_statement": "In a specified total primitive-recursive synchronous observer language, zero defect is Pi03-complete and positive defect Sigma03-complete; full rational threshold table and finite Mealy decidability.",
+      "novelty": "Strongest candidate for theorem-level specialist scrutiny; equivalent prior index theorem not ruled out."
+    },
+    {
+      "id": "CV-O",
+      "title": "Typed operational wrapper and exact relevant-revision licence transport",
+      "continues": [
+        "V4-O1",
+        "V4-O2",
+        "V4-O3",
+        "V4-O4",
+        "V4-Q3",
+        "V4-R2"
+      ],
+      "proof": "mathematics/ABSTRACT_OWOU.md",
+      "ordinary_status": "SUPPLIED_PROVISIONAL",
+      "kernel_verified": false,
+      "main_statement": "For a persistent issued record under strict monotone versions and complete captured reads, a licence survives a revision sequence iff no captured dependency is touched; independent semantic defect transport and Girard boundary.",
+      "novelty": "Generic-wrapper construction makes the bare conjunction an integration, not a foundational novelty result."
+    }
+  ],
+  "kernel_verified_theorems": 0,
+  "global_novelty_established": false
+}

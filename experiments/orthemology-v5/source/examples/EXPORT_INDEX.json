@@ -1,0 +1,34 @@
+[
+  {
+    "name": "identity",
+    "path": "examples/identity.json"
+  },
+  {
+    "name": "identitySelf",
+    "path": "examples/identitySelf.json"
+  },
+  {
+    "name": "reducedIdentity",
+    "path": "examples/reducedIdentity.json"
+  },
+  {
+    "name": "trueSelector",
+    "path": "examples/trueSelector.json"
+  },
+  {
+    "name": "falseSelector",
+    "path": "examples/falseSelector.json"
+  },
+  {
+    "name": "trueSelfChoice",
+    "path": "examples/trueSelfChoice.json"
+  },
+  {
+    "name": "falseSelfChoice",
+    "path": "examples/falseSelfChoice.json"
+  },
+  {
+    "name": "diagonalSelf",
+    "path": "examples/diagonalSelf.json"
+  }
+]
