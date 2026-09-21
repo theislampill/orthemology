@@ -1,6 +1,6 @@
 # Orthemology
 
-**Non-authoritative v5 consolidation shadow:** [integration guide](docs/architecture/V5-INTEGRATION-GUIDE.md), [status and provenance](docs/provenance/v5-consolidation/README.md), and [repository-native replay](experiments/orthemology-v5/README.md). This branch adds source custody and integration checks; it grants no merge, release, research adoption, kernel acceptance or v6 authority. Inherited PDF renderings retain their recorded source commits; they do not render this shadow's two textual corrections.
+**v5 source consolidation:** [integration guide](docs/architecture/V5-INTEGRATION-GUIDE.md), [construction provenance](docs/provenance/v5-consolidation/README.md), and [repository-native replay](experiments/orthemology-v5/README.md). Source construction, exact-tree qualification and GitHub landing are separate evidence layers. All six governed PDFs and their source packages now reproduce the reviewed publication source pin recorded in [publication provenance](docs/provenance/v5-consolidation/PUBLICATION_SOURCE_REVIEW.json), including the corrected source text. Integration and artifact reproduction grant no research adoption, novelty, peer-review, release or v6 credit.
 
 **Status: research-stage draft (R6); not peer reviewed; fresh-session repository review completed; not external human peer review; not empirically validated. Coined terminology is benchmark-gated, not adopted. See [STATUS.md](STATUS.md).**
 
