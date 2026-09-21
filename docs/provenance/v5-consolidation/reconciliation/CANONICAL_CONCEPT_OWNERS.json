@@ -1,0 +1,70 @@
+{
+  "base": "f50dc1aee52356cc6adbef342387576b02afc124",
+  "smallest_coherent_spine": [
+    {
+      "order": 1,
+      "object": "Declared analysis A and Inst_A",
+      "owner": "G_CORE",
+      "role": "Concrete occurrences, repeatable types and obtaining/observed/inferred profiles."
+    },
+    {
+      "order": 2,
+      "object": "Governed orthing episode",
+      "owner": "G_CORE",
+      "role": "Governing type, binding token, executor, evidence, route, trace and result are separate."
+    },
+    {
+      "order": 3,
+      "object": "Claim and pathway assessment",
+      "owner": "G_VERDICT",
+      "role": "Claim-relative truth linkage, adequacy and explicitly dispositioned residuals."
+    },
+    {
+      "order": 4,
+      "object": "Versioned relations and justified transformations",
+      "owner": "G_CORE",
+      "role": "Typed successor/handoff, representation and preservation obligations; no universal graph/map identity."
+    }
+  ],
+  "attachments": [
+    {
+      "branch": "dynamic and representation learning",
+      "source_owner": "G_DYNAMIC",
+      "attachment_rule": "Application over the core; no empirical utility or latent/type identity claimed."
+    },
+    {
+      "branch": "modal/metaphysical and necessary-being arguments",
+      "source_owner": "G_TRACK_T",
+      "attachment_rule": "Bridge-indexed philosophical lane; historical positive arguments preserved with current ceilings."
+    },
+    {
+      "branch": "Athari attributes and Speech",
+      "source_owner": "G_ATHARI",
+      "attachment_rule": "Source-dependent school-internal lane, separate from operational/formal evidence."
+    },
+    {
+      "branch": "apoautosis and support substitution",
+      "source_owner": "H-MOAT-E3",
+      "attachment_rule": "Contract-relative physical application; no validated universal transducer, subject identity or unrestricted authority."
+    },
+    {
+      "branch": "internal polymorphism/Girard/OWOU",
+      "source_owner": "V5_INTERNAL",
+      "attachment_rule": "Modern mathematical/formal-candidate and bounded executable lineages; distinct from core adoption."
+    },
+    {
+      "branch": "CV-R / CV-C / CV-O",
+      "source_owner": "CV-R",
+      "attachment_rule": "Refinement measure, effective classification and operational transport have separate hypotheses."
+    },
+    {
+      "branch": "historical information/constraint dynamics",
+      "source_owner": "H-ICS-V5",
+      "attachment_rule": "Reusable factorisation and guarded-revision mechanisms; no forced equality with runtime checkers."
+    }
+  ],
+  "canonical_means": "One navigational/source owner at this recorded base, not promotion of scientific adoption or proof assurance.",
+  "architectural_decision": "Preserve the existing analysis-relative core; attach the modern fixed-K/revisable-context discipline through explicit interfaces, and keep specialised mathematical/application branches independently typed.",
+  "historical_priority_rule": "Frozen repository current-owner qualifications override terminal-looking historical prose; historical arguments and IDs are not rewritten.",
+  "broad_application_without_core_bloat": true
+}

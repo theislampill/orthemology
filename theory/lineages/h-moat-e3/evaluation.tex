@@ -1,0 +1,41 @@
+\subsection{Benchmark 6: does the representation preserve consequential distinctions?}\label{sec:reprbench}
+The representation programme requires a comparison against an ordinary-language contract schema, not just a comparison against having no structure. Predeclare the assessment tasks and include matched cases in which a superficial similarity conceals a decisive difference: sufficient versus insufficient noise margin, known versus unknown polarity, common versus independent power, stored versus executable state, and current versus stale calibration. Preserve unresolved answers when the supplied evidence does not determine the target.
+
+Training and evaluation must not treat paraphrases of one experiment as independent cases. Hold out case families and acquisition roots appropriate to the intended claim. Record errors separately: a false physical assertion, a wrongly transferred certificate, a missed resource conflict, an unwarranted confidence increase, and an unauthorised application are not interchangeable failures. Vocabulary can be ablated while leaving the same mathematics and evidence accessible to both arms. This tests whether the proposed terminology and representation improve work, rather than whether additional attention improves it.
+
+A bounded statistical result makes one evaluation ceiling explicit. Let $M\geq1$ fixed candidate assessors be evaluated on the same $n\geq1$ independent identically distributed held-out cases. Their bounded losses are in $[0,1]$; let $R_j$ be population loss and $\hat R_j$ the empirical mean. The candidates may be trained on separate data, but must be fixed independently of the held-out cases. Correlation between different candidates' losses on a case is allowed.
+
+\begin{proposition}[Simultaneous held-out loss bound]\label{prop:heldout}
+For $0<\alpha<1$, with probability at least $1-\alpha$,
+\begin{equation}\label{eq:heldout}
+ R_j\leq\hat R_j+\sqrt{\frac{\log(M/\alpha)}{2n}}
+ \quad\text{for every }j=1,\ldots,M.
+\end{equation}
+The logarithm here is natural. The upper bound may be clipped at one.
+\end{proposition}
+\begin{proof}
+For a centred random variable supported on an interval of length one, its log moment-generating function $\psi(s)$ satisfies $\psi(0)=\psi'(0)=0$ and $\psi''(s)\leq1/4$: the second derivative is variance under an exponential tilt, and any variable on such an interval has variance at most $1/4$. Integrating twice gives $\psi(s)\leq s^2/8$ for $s\geq0$. Independence across cases and Markov's inequality therefore give
+\[
+ \Prob(R_j-\hat R_j>t)\leq
+ \inf_{s>0}\exp(-snt+ns^2/8)=e^{-2nt^2}.
+\]
+Substitute $t=\sqrt{\log(M/\alpha)/(2n)}$ and union-bound the $M$ events. This is the usual bounded-loss concentration argument \citep{hoeffding}, not a new concentration inequality.
+\end{proof}
+
+One may select among the fixed candidates after this test and retain the simultaneous bound. One may not use the test responses to create additional uncounted candidates and silently reuse the guarantee. Distribution shift, correlated acquisition, label error and subjective redefinition of the target are separate problems. Passing an empirical test also does not establish a deterministic zero-error bound for every physical disturbance.
+
+\subsection{Benchmark 7: compositional assessment and evidence independence}
+Use already specified synthetic contracts and published descriptions, with no live-system discovery component. Compare whether assessors distinguish a faithful serial composition from a combination with an input-domain mismatch or shared-resource overcommitment. Include duplicated evidence, incompatible analysis versions and an empty model intersection. The correct outcomes include ``conflict'' and ``not established''; a system is not rewarded for turning every case into a feasible proposal.
+
+A positive result would concern error detection and evidence-preserving comparison at the benchmark's declared scope. It would not establish a general generator of new physical channels. A negative result should narrow the synthesis claim rather than be redescribed as a failure of the benchmark to appreciate the vocabulary. Equal budgets, retained adverse examples, source-pinned records and clear reporting of abstentions are part of a fair comparison.
+
+\subsection{Research hypotheses and their distinct possible defeats}
+\textbf{Representation hypothesis.} The new case representation outperforms a matched conventional schema by a predeclared margin on support-disjoint held-out assessment. Failure to improve, or improvement explained by extra information or effort, defeats that bounded claim.
+
+\textbf{Composition hypothesis.} The representation improves identification of joint incompatibilities, not merely recall of individual case descriptions. Performance indistinguishable from the baseline, or reliance on hidden assumptions about compatible endpoints, defeats that claim.
+
+\textbf{NS-transfer hypothesis.} A named dynamical estimate improves a certified observation bound for the same fixed input/readout problem. No improvement, inaccessible actuation, or operation outside the approximation's validity domain defeats the application-specific hypothesis. It does not refute fluid dynamics or the possibility of some other useful estimate.
+
+\textbf{Continuity hypothesis.} A declared externally governed replacement demonstrably preserves the specified behaviour and deadlines without an original-host dependency. A hidden dependency, changed input order, replayed effect, or unmodelled interruption defeats that instance. The conditional continuation theorem itself is defeated only by an error in its statement or proof, not by a case failing its premises.
+
+These are hypotheses with distinct targets, not one global prediction that a planetary intelligence will emerge. No positive empirical result for any of them is claimed in this edition.

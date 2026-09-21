@@ -1,0 +1,25 @@
+\subsection{Edition 3 model-level results and negative controls}
+The Edition 3 suite contains \textbf{42 top-level checks}: 27 retained from Edition 2 and 15 additions. All completed successfully in ordinary and optimised Python execution, with identical check results. The checks are grouped test functions, not independent scientific replications. The report records exact source hashes, interpreter version, values and scopes.
+
+\begin{center}\small
+\begin{tabular}{@{}p{0.52\textwidth}p{0.36\textwidth}@{}}\toprule
+Check or quantity & Executed model-level result\\\midrule
+Finite coordinate-correspondence equalities & 29366\\
+Memoryless parity functions rejected & 4 of 4\\
+One-bit delay-state initialisers rejected & 16 of 16\\
+Bistable boundary and entry-time certificate & Exact rational arithmetic\\
+Certified maximum entry time & $25/94\approx0.265957$\\
+Specified dwell & $0.3$ normalised time units\\
+Settled readout margin & $0.7$ normalised state units\\
+One-step simulated bistable trajectories & 540\\
+Smallest/largest settled signed coordinate & $0.810979$ / $1.136109$\\
+Maximum RK4 step-halving difference & $0.00003599$\\
+Length-ten traces, both initial logical states & 2048\\
+Alternative-model steps in mixed traces & 8192\\
+Model handovers in those traces & 8192\\\bottomrule
+\end{tabular}
+\end{center}
+
+The trajectory grid covers both states, both inputs, nine initial magnitudes, three reset errors and five selected disturbance functions. Piecewise disturbances include a discontinuity; the observed numerical step-halving difference is reported, not promoted to a rigorous integrator-error envelope. The analytical invariant-region proof, rather than the grid, supplies the uniform model claim. Mixed traces use a fixed declared handover schedule and bounded selected perturbations; they do not exhaust all schedules or continuous disturbances.
+
+The negative controls distinguish a realisation from an inadequate export, a legal model reset from an out-of-domain reset, and one input from a duplicated input. Separate probability calculations verify the finite-trace bound and zero-failure test formula. No physical test cells were sampled. The conventional contract evaluator and its orthemic relabelling agree on the seven synthetic joint-assessment fixtures; this is a consistency control, not an observed empirical advantage for the new representation.

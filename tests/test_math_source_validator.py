@@ -86,6 +86,33 @@ class MachineAssignmentClassificationTests(unittest.TestCase):
                 self.assertFalse(classify(span), span)
 
 
+class AcceptedPublicationRegistrationTests(unittest.TestCase):
+    def test_current_publication_inventory_matches_exact_source_occurrences(self):
+        self.assertEqual([], VALIDATOR.validate_inventory(ROOT))
+
+    def test_generated_quotation_scope_requires_exact_manifest_binding(self):
+        from validate_repo import preserved_math_source, load_source_map
+        path = ROOT / "docs/provenance/v5-consolidation/THEOREM_INDEX.md"
+        sources = load_source_map(ROOT)
+        original = path.read_bytes()
+        self.assertTrue(preserved_math_source(path, sources, ROOT))
+        try:
+            path.write_bytes(original + b"\nChanged index.\n")
+            self.assertFalse(preserved_math_source(path, sources, ROOT))
+        finally:
+            path.write_bytes(original)
+        self.assertFalse(preserved_math_source(ROOT / "docs/notation-gallery.md", sources, ROOT))
+
+    def test_prime_renders_without_silent_unknown_command_fallback(self):
+        import typst
+        from latex_to_typst_math import translate_inline, MathConvertError
+        rendered = translate_inline(r"m\prime \mapsto O^*(m\prime; A)")
+        self.assertIn("prime", rendered)
+        self.assertTrue(typst.compile(("$" + rendered + "$").encode()).startswith(b"%PDF"))
+        with self.assertRaises(MathConvertError):
+            translate_inline(r"m\unregisteredPrime")
+
+
 class BuildSourceExtractionTests(unittest.TestCase):
     def test_extracts_only_docs_owner_and_ignores_unrelated_paths(self):
         build_text = """

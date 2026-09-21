@@ -1,0 +1,169 @@
+{
+  "status": "ALL_HISTORICAL_DISPOSITIONS_PRESERVED_NOT_RECREDITED",
+  "inherited": "source/ledgers/CRITICISM_DISPOSITIONS.json",
+  "inherited_sha256": "b7e736a859d93a1df1165075a021b7cc34de5107a1a91da7bccaee24f160b84d",
+  "ids": [
+    "RV01",
+    "RV02",
+    "RV03",
+    "RV04",
+    "RV05",
+    "RV06",
+    "RV07",
+    "RV08",
+    "RV09",
+    "RV10",
+    "RV11",
+    "RV12",
+    "RV13",
+    "RV14",
+    "RV15",
+    "RV16",
+    "RV17",
+    "RV18",
+    "RV19",
+    "RV20",
+    "RV21",
+    "RV22",
+    "RV23",
+    "RV24",
+    "RV25",
+    "RV26",
+    "RV27",
+    "RV28",
+    "RV29",
+    "RV30",
+    "RV31",
+    "RV32",
+    "RV33",
+    "RV34",
+    "RV35",
+    "RV36",
+    "RV37",
+    "RV38",
+    "RV39",
+    "RV40",
+    "RV41",
+    "RV42",
+    "C01",
+    "C02",
+    "C03",
+    "C04",
+    "C05",
+    "C06",
+    "C07",
+    "C08",
+    "C09",
+    "C10",
+    "C11",
+    "C12",
+    "C13",
+    "C14",
+    "C15",
+    "C16",
+    "C17",
+    "C18",
+    "C19",
+    "C20",
+    "C21",
+    "C22",
+    "C23",
+    "C24",
+    "C25",
+    "C26",
+    "C27",
+    "C28",
+    "C29",
+    "C30",
+    "V4-N01",
+    "V4-N02",
+    "V4-N03",
+    "V4-N04",
+    "V4-N05",
+    "V4-N06",
+    "V4-N07",
+    "V4-N08",
+    "V4-N09",
+    "V4-N10",
+    "V4-N11",
+    "V4-N12"
+  ],
+  "delta": [
+    {
+      "ids": [
+        "RV01",
+        "RV03",
+        "RV06",
+        "RV41",
+        "C02",
+        "C16"
+      ],
+      "change": "Prepared actual isolated pinned build and full audit; no compiler obtained, so kernel acceptance remains open.",
+      "evidence": [
+        "formal_project/README.md",
+        "formal_project/build.py",
+        "evidence/TOOLCHAIN_ATTEMPTS.md"
+      ]
+    },
+    {
+      "ids": [
+        "RV19",
+        "RV23",
+        "RV42",
+        "C26"
+      ],
+      "change": "Ordinary finite/infinite risk transport and exact licence transport supplied; concrete unbounded implementation refinement still open.",
+      "evidence": [
+        "mathematics/REFINEMENT_CALCULUS.md",
+        "mathematics/ABSTRACT_OWOU.md",
+        "experiments/test_convergence.py"
+      ]
+    },
+    {
+      "ids": [
+        "RV21",
+        "RV22",
+        "RV24"
+      ],
+      "change": "Full-event/countable-carrier distinctions strengthened; actual measure formalisation remains open.",
+      "evidence": [
+        "mathematics/REFINEMENT_CALCULUS.md",
+        "mathematics/DEFECT_COMPUTABILITY.md"
+      ]
+    },
+    {
+      "ids": [
+        "RV36",
+        "RV37",
+        "C01",
+        "C06",
+        "C12",
+        "C20",
+        "C29"
+      ],
+      "change": "Theorem-level comparison rejects a new-foundation inference from the generic wrapper; exact defect complexity remains a priority-open candidate.",
+      "evidence": [
+        "comparison/ADVERSARIAL_COMPARISON.md",
+        "comparison/SOURCES.json"
+      ]
+    },
+    {
+      "ids": [
+        "RV11",
+        "RV13",
+        "RV15",
+        "RV17",
+        "C03",
+        "C08",
+        "C25"
+      ],
+      "change": "Minimal abstract construction and precise concrete gap stated; finite probes are not universal refinement.",
+      "evidence": [
+        "mathematics/ABSTRACT_OWOU.md",
+        "REMAINING_OBLIGATIONS.md"
+      ]
+    }
+  ],
+  "new_engine_features": 0,
+  "all_closed": false
+}

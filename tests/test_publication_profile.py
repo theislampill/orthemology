@@ -131,14 +131,14 @@ def valid_profile():
             "bibliography_owner": "references/orthemology.bib",
         },
         "source_provenance": {
-            "source_commit": "5a2cf7ed77b897108afc515c90d3895ca4d706f2",
-            "source_tree": "28f132e7a37345b18d618b55cb16c1fe6c34d319",
-            "source_date_epoch": 1786293425,
+            "source_commit": "1db15916a3965ccbba101969341bad4cb44ba22b",
+            "source_tree": "7c7a22d83b9dd86702978bae00c1e3f15d826195",
+            "source_date_epoch": 1790007430,
             "independently_reviewed_equivalent_source_commit": (
-                "5a2cf7ed77b897108afc515c90d3895ca4d706f2"
+                "1db15916a3965ccbba101969341bad4cb44ba22b"
             ),
             "independently_reviewed_equivalent_source_tree": (
-                "28f132e7a37345b18d618b55cb16c1fe6c34d319"
+                "7c7a22d83b9dd86702978bae00c1e3f15d826195"
             ),
             "source_tree_equivalence": "verified-identical",
         },

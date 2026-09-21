@@ -4,7 +4,9 @@
 Deterministic hygiene and honesty checks; run in CI on every push/PR.
 """
 import hashlib
+import json
 import os
+import posixpath
 import re
 import subprocess
 import sys
@@ -46,7 +48,7 @@ def corpus_files():
 
 def text_files(corpus=None):
     for path in corpus if corpus is not None else corpus_files():
-        if path.endswith((".md", ".patch", ".json", ".py", ".yml", ".yaml", ".cff", ".txt",
+        if path.endswith((".md", ".patch", ".json", ".jsonl", ".py", ".yml", ".yaml", ".cff", ".txt",
                           ".gitignore", ".gitattributes", ".editorconfig", ".sha256")):
             yield path
 
@@ -64,10 +66,109 @@ BANNED = [
 BANNED_FILENAMES = re.compile(r"(\.output$|\.jsonl$|synthesis-checks|owner_messages)", re.I)
 
 
+def exact_source_record(path, sources, root=None):
+    """Recognise only an unmodified, uniquely registered COPY_EXACT source."""
+    root = ROOT if root is None else root
+    relative = os.path.relpath(path, root).replace("\\", "/")
+    rows = [row for row in sources if row.get("destination_repository_path") == relative]
+    if len(rows) != 1:
+        return None
+    row = rows[0]
+    if row.get("operation") != "ADD" or row.get("transformation") != "COPY_EXACT":
+        return None
+    with open(path, "rb") as stream:
+        actual = hashlib.sha256(stream.read()).hexdigest()
+    if actual != row.get("source_sha256") or actual != row.get("output_sha256"):
+        return None
+    return row
+
+
+def load_source_map(root=None):
+    root = ROOT if root is None else root
+    path = os.path.join(root, "docs", "provenance", "v5-consolidation", "SOURCE_MAP.json")
+    if not os.path.isfile(path):
+        return []
+    with open(path, encoding="utf-8") as stream:
+        return json.load(stream)["sources"]
+
+
+def historical_notation_source(path, sources, root=None):
+    """Accepted historical originals retain their notation, never by path alone."""
+    root = ROOT if root is None else root
+    relative = os.path.relpath(path, root).replace("\\", "/")
+    row = exact_source_record(path, sources, root)
+    return bool(relative.startswith("theory/lineages/") and row
+                and row.get("source_artifact") == "H14"
+                and row.get("public_safety_tier") == "HISTORICAL_EVIDENCE")
+
+
+def preserved_math_source(path, sources, root=None):
+    """Original historical notation or exact generated quotations, not PDF inputs."""
+    root = ROOT if root is None else root
+    if historical_notation_source(path, sources, root):
+        return True
+    relative = os.path.relpath(path, root).replace("\\", "/")
+    prefix = "docs/provenance/v5-consolidation/"
+    if relative not in (prefix + "THEOREM_INDEX.md", prefix + "CRITICISM_INDEX.md"):
+        return False
+    rows = [r for r in sources if r.get("destination_repository_path") == relative]
+    if (len(rows) != 1 or rows[0].get("operation") != "GENERATE"
+            or rows[0].get("transformation") != "GENERATE_INDEXES"
+            or rows[0].get("source_artifact") != "A5_SPEC"):
+        return False
+    manifest = os.path.join(root, "experiments", "orthemology-v5", "SOURCE_MANIFEST.json")
+    if not os.path.isfile(manifest):
+        return False
+    with open(manifest, encoding="utf-8") as stream:
+        entries = [r for r in json.load(stream)["files"] if r.get("path") == relative]
+    with open(path, "rb") as stream:
+        data = stream.read()
+    return bool(len(entries) == 1 and entries[0].get("bytes") == len(data)
+                and entries[0].get("sha256") == hashlib.sha256(data).hexdigest())
+
+
+def compact_provenance_record(path, sources):
+    relative = os.path.relpath(path, ROOT).replace("\\", "/")
+    if not relative.startswith("docs/provenance/v5-consolidation/reconciliation/"):
+        return False
+    row = exact_source_record(path, sources)
+    return bool(row and row.get("source_artifact") in ("A4C", "A4T")
+                and row.get("public_safety_tier") == "COMPACT_PROVENANCE_RECORD")
+
+
+def original_packet_locator(path, target, sources, root=None, from_packet_root=False):
+    """Classify a digest-bound external locator; never claim it is a download."""
+    source = exact_source_record(path, sources, root)
+    if not source or source.get("source_artifact") not in ("V4", "V5"):
+        return False
+    if target.startswith("/") or "\\" in target or ":" in target:
+        return False
+    selector = posixpath.normpath(target if from_packet_root else
+                                  posixpath.join(posixpath.dirname(source["source_path"]), target))
+    if selector == ".." or selector.startswith("../"):
+        return False
+    rows = [row for row in sources
+            if row.get("source_artifact") == source["source_artifact"]
+            and row.get("source_path") == selector]
+    if len(rows) != 1:
+        return False
+    row = rows[0]
+    return bool(row.get("operation") == "EXTERNAL_CUSTODY"
+                and row.get("transformation") == "NO_REPOSITORY_EFFECT"
+                and row.get("destination_repository_path") is None
+                and row.get("public_safety_tier") in ("HISTORICAL_EVIDENCE", "EXTERNAL_IMMUTABLE_CUSTODY_ITEM")
+                and re.fullmatch(r"[0-9a-f]{64}", row.get("source_sha256") or ""))
+
+
 def main():
     corpus = list(corpus_files())
     files = list(text_files(corpus))
     rel = lambda p: os.path.relpath(p, ROOT).replace("\\", "/")
+    source_map = os.path.join(ROOT, "docs", "provenance", "v5-consolidation", "SOURCE_MAP.json")
+    sources = []
+    if os.path.isfile(source_map):
+        with open(source_map, encoding="utf-8") as stream:
+            sources = json.load(stream)["sources"]
 
     # 0: no tracked cache/bytecode artifact (R4 fresh review, Phase A4/E).
     # .gitignore excludes __pycache__/ but cannot un-track a force-added file;
@@ -108,7 +209,8 @@ def main():
         path.lower().endswith((".zip", ".7z", ".rar")) for path in corpus
     ))
     bad_names = [os.path.basename(path) for path in corpus
-                 if BANNED_FILENAMES.search(os.path.basename(path))]
+                 if BANNED_FILENAMES.search(os.path.basename(path))
+                 and not (path.endswith(".jsonl") and compact_provenance_record(path, sources))]
     check("no research-output/session-dump artifact files", not bad_names, str(bad_names))
 
     # 4-5: exactly one manuscript, one core
@@ -147,6 +249,7 @@ def main():
 
     # 8: internal relative links resolve
     broken = []
+    packet_locators = []
     link_re = re.compile(r"\]\(([^)#\s]+)(#[^)\s]*)?\)")
     for p in files:
         if not p.endswith(".md"):
@@ -158,8 +261,15 @@ def main():
                 continue
             full = os.path.normpath(os.path.join(os.path.dirname(p), tgt))
             if not os.path.exists(full):
-                broken.append("%s -> %s" % (rel(p), tgt))
-    check("all internal relative links resolve", not broken, str(broken))
+                edge = "%s -> %s" % (rel(p), tgt)
+                if original_packet_locator(p, tgt, sources):
+                    packet_locators.append(edge)
+                else:
+                    broken.append(edge)
+    check("all repository-relative links resolve", not broken, str(broken))
+    if packet_locators:
+        print("[INFO] %d original-packet locators (%d unique) have exact external-custody bindings; "
+              "public retrieval remains unconfirmed" % (len(packet_locators), len(set(packet_locators))))
 
     # 9: fences balanced, tables well-formed (column counts)
     bad_struct = []

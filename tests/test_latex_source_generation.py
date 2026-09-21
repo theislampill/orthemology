@@ -2,6 +2,7 @@
 """Task 12 contracts for deterministic LaTeX source generation and migration."""
 
 import copy
+import hashlib
 import importlib.util
 import pathlib
 import re
@@ -125,6 +126,32 @@ REVIEWED_SOURCE_BATCHES = {
 }
 
 
+# The accepted reconciliation replaced one historical bare intersection with
+# pullbacks to the common reachable-occurrence domain. Keep the historical
+# migration/translation record, but bind its current projection to exact source.
+CURRENT_SOURCE_RECONCILIATIONS = {
+    ("theory/orthemic-multi-actor-conflict-note.md",
+     r"\mathcal{G}_\alpha \cap \mathcal{G}_\beta"): {
+        "source_sha256": "4f00ce4cb26c7a6c884df598c8832fd72b11bc3a35dc287b62ea64d181fa8ff6",
+        "replacements": (
+            r"m\prime \mapsto O^*(m\prime; A_\alpha)",
+            r"m\prime \mapsto O^*(m\prime; A_\beta)",
+        ),
+    },
+}
+
+
+def current_migration_replacements(relative, replacement, source):
+    projection = CURRENT_SOURCE_RECONCILIATIONS.get((relative, replacement))
+    if projection is None:
+        return (replacement,)
+    if hashlib.sha256(source.encode("utf-8")).hexdigest() != projection["source_sha256"]:
+        raise AssertionError("accepted source reconciliation identity changed")
+    if "$%s$" % replacement in source:
+        raise AssertionError("superseded bare intersection reintroduced")
+    return projection["replacements"]
+
+
 class ReviewedSmallSourceBatchTests(unittest.TestCase):
     def test_reviewed_unique_expressions_translate_and_are_migrated(self):
         for relative, expressions in REVIEWED_SOURCE_BATCHES.items():
@@ -133,7 +160,21 @@ class ReviewedSmallSourceBatchTests(unittest.TestCase):
                 with self.subTest(source=relative, original=original):
                     translate_inline(latex)
                     self.assertNotIn("`%s`" % original, source)
-                    self.assertIn("$%s$" % latex, source)
+                    for current in current_migration_replacements(relative, latex, source):
+                        translate_inline(current)
+                        self.assertIn("$%s$" % current, source)
+
+    def test_reconciled_projection_rejects_source_drift(self):
+        relative, replacement = next(iter(CURRENT_SOURCE_RECONCILIATIONS))
+        source = (ROOT / relative).read_text(encoding="utf-8")
+        current = current_migration_replacements(relative, replacement, source)
+        self.assertEqual(len(current), 2)
+        for expression in current:
+            self.assertIn("$%s$" % expression, source)
+            with self.assertRaisesRegex(AssertionError, "identity changed"):
+                current_migration_replacements(
+                    relative, replacement, source.replace(expression, replacement, 1)
+                )
 
 
 class MigrationLedgerTests(unittest.TestCase):
@@ -174,7 +215,14 @@ class MigrationLedgerTests(unittest.TestCase):
                     translate_display(record["replacement"])
                 else:
                     translate_inline(record["replacement"])
-                expected_replacements[(relative, record["replacement"])] += 1
+                for current in current_migration_replacements(
+                    relative, record["replacement"], sources[relative]
+                ):
+                    if record.get("form") == "display":
+                        translate_display(current)
+                    else:
+                        translate_inline(current)
+                    expected_replacements[(relative, current)] += 1
         for (relative, replacement), expected_count in expected_replacements.items():
             with self.subTest(source=relative, replacement=replacement):
                 record_forms = {
@@ -271,9 +319,9 @@ class MigrationLedgerTests(unittest.TestCase):
             inventory["totals"],
             {
                 "sources": 7,
-                "occurrences": 208,
-                "literal-code": 114,
-                "semantic-registry-id": 94,
+                "occurrences": 235,
+                "literal-code": 115,
+                "semantic-registry-id": 120,
                 "mathematics": 0,
             },
         )

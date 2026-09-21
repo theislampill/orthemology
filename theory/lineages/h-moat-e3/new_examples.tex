@@ -1,0 +1,21 @@
+\subsection{Edition 2 uncertainty and observation examples}
+For the uniform-decoder example, take dimensionless values
+\[
+ \hat\sigma=0.8,\quad\eta=0.1,\quad\kappa=0.1,\quad
+ a=0.4,\quad\beta=0.03,\quad\delta=0.05,
+\]
+with the input radius and budget admitting $a$. The reference half-separation is $0.32$, while the common uncertainty radius is
+$\beta+a\eta+\kappa a^2+\delta=0.136$. The strict margin is $0.184$. The checker verifies representative endpoint and interior perturbations in that uncertainty box; the general guarantee comes from Proposition~\ref{prop:uniform}, not from the finite grid.
+
+For the comparison-ODE envelope associated with Equation~\eqref{eq:nserror}, set $T=1$, $L=0.4$, initial error $0.02$ and residual-norm envelope $0.01$. Then
+\[
+ B=e^{0.4}(0.02)+0.01\frac{e^{0.4}-1}{0.4}\approx0.0421321.
+\]
+With observation norm $1.2$, two nominal observations separated by $0.4$, and noise radius $0.04$, the sufficient separation slack is about $0.218883$. These are calculations in a declared norm-envelope toy, \emph{not} a Navier--Stokes simulation, validated flow residual, or measured physical signal. They illustrate how an actual residual certificate would be consumed rather than claiming one has been experimentally obtained.
+
+\subsection{Finite representation, composition and progress checks}
+The extended script exhaustively compares the fibre condition with existence and uniqueness of an attained-image decoder for 341 binary-valued finite-map cases, including the empty-domain case. It separately checks the empty-target extension guard. It verifies latent relabelling across all $7!=5{,}040$ permutations of a seven-symbol alphabet, and examines 1,944 finite-automaton initial-pair cases for bounded paired-state reasoning.
+
+Further checks retain the distinction between a sound evidence intersection and conflict, between individually feasible demands and a feasible joint budget, and between safety and progress. The progress toy uses integer states $0$ through $4$, target $0$, and successors decreasing by one or two until the target is reached. A separate safe idle loop fails the progress condition. None of these examples is a physical discovery algorithm or evidence that an unfamiliar environment supports the required operations.
+
+The retained Edition 2 suite contains 27 top-level checks: the 13 retained edition-1 checks and 14 second-edition additions. Edition 3 extends that suite as reported below. They include exact finite enumeration, algebraic example identities and numerical quadrature with declared tolerances. The machine-readable report records the source hashes, Python version, values, failures if any, and the scope of each check. The check count is not a count of independent scientific confirmations.

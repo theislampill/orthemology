@@ -1,0 +1,43 @@
+\section{Prior art and the exact place of the synthesis}\label{sec:related}
+\subsection{Published physical channels: evidence, not a new discovery here}
+The first edition omitted a directly relevant literature. BitWhisper studies thermal signalling between adjacent compromised computers; Fansmitter studies acoustic communication produced through controlled fan operation; AirHopper and GSMem study electromagnetic communication from isolated computers to receiving devices \citep{bitwhisper,fansmitter,airhopper,gsmem}. These are experimental precedents for using physical effects beyond a system's ordinary network interface. They are not evidence that every isolation boundary is permeable, that an unknown medium can be programmed, or that the transmitting process established its own initial access. In particular, software control and an appropriate receiving arrangement belong to their experimental premises.
+
+Table~\ref{tab:priorart} is a non-operational comparison. It preserves what is being compared---a physical role and its evidential limits---without treating reported demonstrations as interchangeable apparatus. The papers remain substantive experimental work, not disposable ``tricks'' or merely training data for a proposed abstraction.
+
+\begin{longtable}{@{}>{\raggedright\arraybackslash}p{0.21\textwidth}>{\raggedright\arraybackslash}p{0.31\textwidth}>{\raggedright\arraybackslash}p{0.42\textwidth}@{}}
+\caption{Selected primary precedents and the limit of the inference. No new physical channel is demonstrated in this manuscript.}\label{tab:priorart}\\
+\toprule
+Precedent & Established or reported role & What must not be inferred \\\midrule
+\endfirsthead
+\toprule Precedent & Established or reported role & What must not be inferred \\\midrule
+\endhead
+BitWhisper \citep{bitwhisper} & Controlled thermal variation and sensing support a channel in the studied setup. & Ambient heat is not automatically an addressable network; endpoint control and the tested operating conditions matter. \\\addlinespace
+Fansmitter \citep{fansmitter} & Controlled mechanical operation yields a decodable acoustic signal. & Mechanical activity alone is not a protocol, nor does the experiment establish communication at arbitrary range or noise. \\\addlinespace
+AirHopper; GSMem \citep{airhopper,gsmem} & Electromagnetic emissions can carry deliberately modulated information in specified computer/receiver configurations. & No self-originating access, arbitrary-device reachability, or persistent replacement execution follows. \\\addlinespace
+Ionospheric HF propagation \citep{noaa} & A natural planetary medium alters and can support long-distance radio propagation. & A propagation path is not a demonstrated autonomous memory, processor, or agent. \\\addlinespace
+Molecular communication \citep{eckford} & Models of molecular transport support information-rate questions under physical assumptions. & A transport model does not identify the semantic content or intention of an arbitrary biochemical event. \\\addlinespace
+Physical neural networks \citep{wright} & Controlled optical, mechanical, and electrical systems can implement trained transformations. & Input preparation, readout, training and supporting electronics are not free resources outside the system account. \\
+\bottomrule
+\end{longtable}
+
+The contribution sought here is consequently not the observation that heat, sound, fields, or molecules can carry information. It is a disciplined account of which \emph{properties and evidence} can be transported between descriptions of such systems, and which additional obligations arise when a channel is proposed as part of a continuing organisation. Literature existence supports the relevance of that question; it does not establish the usefulness of this particular synthesis.
+
+\subsection{Emissions security is relevant, but not the whole subject}
+NIST describes TEMPEST in terms of investigating, studying, and controlling unintentional compromising emanations \citep{tempest}. That established defensive perspective belongs alongside the channel literature. Unintended information-bearing emissions, deliberately modulated covert communication, and authorised unconventional communication are related but not identical objects. A physical path can matter to more than one of them; its presence does not settle the relevant permission or security-policy question.
+
+Host replacement likewise is not definitionally a security violation. An operator can retire one platform, move an approved service, or assess a replacement communications path without circumventing anyone's policy. Conversely, a mathematically feasible transition need not be authorised. This paper keeps physical possibility, evidential warrant, and permission as distinct coordinates. It neither infers benevolent or malicious intent from research terminology nor treats a benign application label as a substitute for examining an operational artifact.
+
+\subsection{Unknown dynamics and unconventional computation have established neighbours}
+System identification supplies a direct neighbour to the proposed comparison programme. Sparse identification of nonlinear dynamics estimates candidate equations within a selected representation library, while related work addresses discovery of partial differential equations from measurements \citep{sindy,rudy}. Both make model selection and measurement assumptions material. They justify studying useful representations of partially known dynamics, not an oracle that discovers every hidden physical coupling.
+
+Molecular communication offers a second neighbour: physically modelled molecular transport can be analysed using information-theoretic quantities \citep{eckford}. Information-processing capacity of driven dynamical systems and trained physical networks address yet another role, namely computation through a controlled physical input--state--readout relation \citep{dambre,wright}. These fields show why ``unconventional medium'' is not synonymous with unsupported speculation. They also prevent the opposite shortcut: relevance of neighbouring research is not a completed instance map into an unfamiliar environment.
+
+State-machine replication provides a precedent for task behaviour maintained across changing server participants \citep{schneider}; delay-tolerant networking treats intermittent paths and storage explicitly \citep{dtn}. Neither alone supplies a replacement physical computer. The present architecture combines obligations drawn from these areas, but a claim of improved practice requires a matched comparison, not the mere presence of more fields in a description.
+
+\subsection{Four different kinds of connection}
+We distinguish \emph{motivation}, \emph{structural analogy}, \emph{formal specialisation}, and \emph{empirical instantiation}. A motivation suggests a question. An analogy identifies a potentially useful resemblance. A specialisation supplies explicit maps and verifies the hypotheses of a theorem. An empirical instantiation establishes that those hypotheses describe a particular case to stated accuracy. These relations must not be presented as successive achievements unless each transition is actually supplied.
+
+The generic signalling theorem in Section~\ref{sec:channels} does useful formal work by exposing required quantities. It does not become a theorem about the ionosphere merely because the word appears elsewhere in the paper. Conversely, lack of an ionospheric instance does not make the general theorem irrelevant to every channel. Edition 2 therefore supplies a specific fluid-error-to-observation derivation in Section~\ref{sec:nsresidual}, while leaving the separate 2026-proof-transfer question open. The proposed contribution is this explicit alignment of obligations, rather than priority over the underlying disciplines.
+
+\subsection{Established compositional methods are part of the baseline}
+The joint-witness requirement is not unique to this vocabulary. Refinement mappings connect lower-level and higher-level behaviours \citep{abadi}; approximate simulation relates implementations at a declared error tolerance \citep{girard}; contract-based system design studies assumptions, guarantees, refinement and composition \citep{contracts}. The mathematical role of these traditions is substantive, not merely bibliographic. The proposed added value is a disciplined alignment of source-specific physical evidence with those obligations. It remains an empirical question whether this presentation improves actual assessments.

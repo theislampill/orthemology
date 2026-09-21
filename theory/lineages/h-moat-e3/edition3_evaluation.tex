@@ -1,0 +1,23 @@
+\subsection{A transition-test confidence bound is not a uniform physical proof}\label{subsec:transitiontest}
+A small device can be evaluated across finitely many declared test cells, such as initial logical state and input. The disturbance distribution within each cell, reset procedure, calibration and observation process must remain fixed during a stated statistical test. No finite trial count alone establishes a worst-case bound for every analogue condition.
+
+\begin{proposition}[Simultaneous zero-failure rejection bound for fixed cells]\label{prop:zerofailure}
+Fix $k\geq1$ test cells. In each cell run $n\geq1$ independent trials with a fixed failure probability $p_i$. For $0<\alpha<1$, define
+\[
+ p_*=1-(\alpha/k)^{1/n}.
+\]
+The probability that there exists a cell with $p_i>p_*$ but zero observed failures is at most $\alpha$. Independence between different cells is not required.
+\end{proposition}
+\begin{proof}
+For a particular cell with $p_i>p_*$, the probability of observing no failure is $(1-p_i)^n<(1-p_*)^n=\alpha/k$. A union bound over the fixed $k$ cells proves the claim.
+\end{proof}
+The assertion is an unconditional error guarantee for this fixed testing rule. It is not a posterior probability that a device has a given failure rate after observing zero failures. A changed environment, dependent resets, biased measurement or adaptive choice of favourable cells defeats the stated premise. For four cells, $n=1000$ and $\alpha=0.05$, the bound is approximately $0.004372$ per cell. These are design calculations; no such hardware trials were run here.
+
+\subsection{Edition 3 evaluation priorities}
+The next empirical work should keep three experiments separate. The first tests a candidate stateful physical implementation and its complete role account. The second tests an actual handover with the original host removed, preserving current state, order and deadlines. The third tests whether the proposed evidence representation improves assessment compared with established contract and provenance methods. Success on any one does not automatically establish the others.
+
+For the representation comparison, use the same source material, time and computational budget in an ordinary-language contract baseline, the same formal methods with conventional notation, and the proposed orthemic presentation. Include tasks where evidence is insufficient and where the correct answer is to withhold a verdict. The synthetic cases in Section~\ref{subsec:exportcase} check that the distinctions are expressible; they are not held-out evidence that one presentation helps people or models more than another.
+
+A physical processor comparison should report its classification axes explicitly. An analogue electronic device can provide evidence for a different computing mechanism while failing a claimed removal of all semiconductor components. A mixed photonic--electronic implementation can provide evidence for an optical processing role while retaining electronic dependence elsewhere. A stored backup is not live continuation. A laboratory transfer can be successful without implying self-directed substrate discovery or any property of consciousness.
+
+The current reproducible record therefore contains finite algebra, model trajectories, logical counterexamples and exact arithmetic certificates. Its intended value is to make the first physical experiment and the first fair comparative assessment well-posed. It does not substitute for either.

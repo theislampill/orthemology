@@ -62,6 +62,7 @@ def temporary_corpus():
         validator = root / "scripts" / "validate_internal_references.py"
         validator.parent.mkdir(parents=True, exist_ok=True)
         shutil.copy2(VALIDATOR, validator)
+        shutil.copy2(ROOT / "scripts" / "validate_repo.py", validator.parent / "validate_repo.py")
         write(
             root,
             "docs/reference-exemptions.yaml",
@@ -75,6 +76,7 @@ def temporary_corpus():
         write(root, "examples/shared-upstream-corroboration-failure.json", "{}\n")
         write(root, "scripts/validate_claim_reasoning_paths.py", "# fixture\n")
         write(root, ".gitignore", ".superpowers/sdd/\n")
+        write(root, "docs/provenance/v5-consolidation/SOURCE_MAP.json", '{"sources": []}\n')
         commit_all(root, "initialize synthetic corpus")
         yield root
 
@@ -97,6 +99,38 @@ def assert_failure(test, result, cited, source=None):
 
 
 class InternalReferenceTests(unittest.TestCase):
+    def test_jsonl_path_is_not_truncated_and_missing_jsonl_stays_red(self):
+        with temporary_corpus() as corpus:
+            target = DOCS + "/records.jsonl"
+            write(corpus, target, "{}\n")
+            write(corpus, DOCS + "/reader.md", "Read `" + target + "`.\n")
+            result = run_validator(corpus)
+            self.assertEqual(0, result.returncode, result.stdout + result.stderr)
+            (corpus / target).unlink()
+            result = run_validator(corpus)
+            assert_failure(self, result, target)
+
+    def test_original_selector_field_does_not_exempt_native_destination(self):
+        import json
+        with temporary_corpus() as corpus:
+            source_map = DOCS + "/provenance/v5-consolidation/SOURCE_MAP.json"
+            row = {"source_artifact": "V4", "source_path": "examples/" + "packet-only.json",
+                   "source_sha256": "a" * 64, "operation": "EXTERNAL_CUSTODY",
+                   "transformation": "NO_REPOSITORY_EFFECT", "destination_repository_path": None,
+                   "public_safety_tier": "HISTORICAL_EVIDENCE"}
+            write(corpus, source_map, json.dumps({"sources": [row]}, indent=2))
+            result = run_validator(corpus)
+            self.assertEqual(0, result.returncode, result.stdout + result.stderr)
+            row["destination_repository_path"] = DOCS + "/missing-native.json"
+            write(corpus, source_map, json.dumps({"sources": [row]}, indent=2))
+            result = run_validator(corpus)
+            assert_failure(self, result, row["destination_repository_path"])
+            row["destination_repository_path"] = None
+            row["source_sha256"] = None
+            write(corpus, source_map, json.dumps({"sources": [row]}, indent=2))
+            result = run_validator(corpus)
+            assert_failure(self, result, row["source_path"])
+
     def test_exact_committed_create_line_exempts_absent_output(self):
         with temporary_corpus() as corpus:
             write(corpus, PLAN, f"- Create: `{SENTINEL}`\n")

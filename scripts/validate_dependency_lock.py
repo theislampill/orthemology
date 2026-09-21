@@ -13,6 +13,7 @@ Checks, deterministically and offline:
   5. the effective installed versions of the locked packages are importable and
      recorded to stdout (the build report surface).
 """
+import ast
 import glob
 import io
 import os
@@ -55,10 +56,13 @@ def scan_repository_imports(root):
                     continue
                 with io.open(os.path.join(base, fn), encoding="utf-8") as stream:
                     src = stream.read()
-                for match in re.finditer(
-                        r"^\s*(?:import\s+([A-Za-z_][A-Za-z0-9_]*)"
-                        r"|from\s+([A-Za-z_][A-Za-z0-9_]*)\s+import\s)", src, re.M):
-                    used.add(match.group(1) or match.group(2))
+                # Generated foreign-language source inside strings is not a
+                # Python dependency. Parse errors must remain failures.
+                for node in ast.walk(ast.parse(src, filename=os.path.join(base, fn))):
+                    if isinstance(node, ast.Import):
+                        used.update(alias.name.split(".")[0] for alias in node.names)
+                    elif isinstance(node, ast.ImportFrom) and node.level == 0 and node.module:
+                        used.add(node.module.split(".")[0])
     return used
 
 

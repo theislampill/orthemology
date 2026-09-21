@@ -1,0 +1,34 @@
+\subsection{An upper bound is not a lower bound on failure}\label{subsec:bounddirection}
+Equations~\eqref{eq:errorrec}--\eqref{eq:errorbound} provide sufficient error-control information when their premises hold. They do not establish that actual error grows whenever a chosen bound has $L\geq1$. An exact implementation of the transition $q\mapsto2q$, started in the same state as its reference, has $e_n=0$ for all $n$, despite a valid Lipschitz constant two. A positive admissible defect bound need not be attained by the actual defect. A conservative exponential upper bound can also be too loose to decide a finite-horizon requirement.
+
+Consequently, three verdicts must remain distinct: a bound certifies the tolerance; an observed or proved violation defeats the tolerance; or the available bound is inconclusive. Failure of a sufficient certificate is not a necessary-condition impossibility result. The recurrence requires a specified metric, domain, transition granularity and defect bound. Neither the word ``analogue'' nor an unspecified large model supplies them. The symbolic metric on decoded logical states can behave differently from a norm on raw voltages.
+
+\subsection{Precision, scale and the particular contract}
+Useful low-precision inference is demonstrated by weight-quantisation work such as GPTQ \citep{gptq}. Its empirical accuracy results do not establish bit-identical outputs, uniformly close next-token distributions, or low precision for every intermediate operation. They do show why a blanket requirement that all useful inference reproduce every internal operation at fp16/bf16 precision is inappropriate.
+
+A comparison between a model's trainable parameters and a physical network's tunable controls is not, by itself, a resource lower bound. One is a feature of a chosen representation, the other of a different implementation. Conversely, nothing here licenses unlimited compression of arbitrary model behaviour. Relevant requirements include distinguishable state capacity, fixed programme information, input/output dimension, timing, noise tolerance, memory access and total support cost. A fixed function, an arbitrary member of a parameterised function family, and a dynamically updateable programme impose different storage demands.
+
+\begin{proposition}[A scoped robust-state packing bound]\label{prop:packing}
+Let $N$ distinguishable logical states be represented by points $x_i$ in the Euclidean ball of radius $R$ in $\R^d$, $d\geq1$. Suppose every observation in the full closed ball of radius $\zeta>0$ around each $x_i$ is allowed, and one decoder must correctly identify every state. Then $\norm{x_i-x_j}>2\zeta$ for $i\ne j$, and
+\[
+ N\leq\left(1+\frac{R}{\zeta}\right)^d.
+\]
+\end{proposition}
+\begin{proof}
+Two intersecting uncertainty balls contain an observation compatible with two different labels, contradicting zero-error identification. Hence their centres are separated strictly beyond $2\zeta$. The balls have disjoint interiors and lie in the ball of radius $R+\zeta$. Comparing Euclidean volumes gives $N\zeta^d\leq(R+\zeta)^d$.
+\end{proof}
+This is a bound for a declared finite-dimensional encoding and noise geometry, not a universal bound on matter. Calibration supplies the units; time multiplexing, external programme storage and an altered observation model change the accounting. Its role is to replace an untyped parameter-count argument with an explicitly stated distinguishability obligation.
+
+\subsection{Autoregression needs a distributional contract when sampling is allowed}
+There is another way to control a finite generated sequence that need not infer an unspecified global Lipschitz constant. It requires a stronger, directly stated condition on conditional output distributions.
+\begin{proposition}[Uniform next-step distribution bounds compose over a finite trace]\label{prop:tvtrace}
+Let $P$ and $Q$ generate length-$H$ sequences over the same finite alphabet. Suppose for every common history at step $t$, their next-symbol distributions have total variation distance at most $\alpha_t\in[0,1]$. Then
+\[
+ \TV(P_{1:H},Q_{1:H})\leq1-\prod_{t=1}^{H}(1-\alpha_t)
+ \leq\sum_{t=1}^{H}\alpha_t.
+\]
+\end{proposition}
+\begin{proof}
+While histories agree, maximally couple the next-symbol distributions. Such a coupling exists on a finite alphabet by matching their shared probability mass; it disagrees with probability equal to their total variation. Conditional on agreement so far, the next symbols therefore agree with probability at least $1-\alpha_t$. The chance of an identical whole trace is at least their product. Under any coupling, the difference in probabilities of an event is bounded by the mismatch probability, proving the first inequality. The second is the elementary union/product bound.
+\end{proof}
+The premise ranges over common histories, not only a convenient test corpus. It does not follow from comparable classification accuracy or perplexity. Distinct random samples from identical distributions are also not evidence that a distributional contract has failed. This result provides one precise target for a behavioural model replacement; it is not a claim that a particular physical processor has met it.

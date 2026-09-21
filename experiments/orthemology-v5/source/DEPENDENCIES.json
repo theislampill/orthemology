@@ -1,0 +1,13 @@
+{
+  "formal": {
+    "toolchain_file": "lean-toolchain",
+    "lock": "TOOLCHAIN_LOCK.json",
+    "inventory": "formal_targets.json",
+    "upstream_adaptation_license": "LICENSES/Apache-2.0.txt"
+  },
+  "python": {
+    "third_party": [],
+    "tested_interpreter": "3.13.5 (main, Jul 15 2026, 20:25:40) [GCC 14.2.0]"
+  },
+  "unavailable": "actual compiler version readback and transitive theorem audit"
+}

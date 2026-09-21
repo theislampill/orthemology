@@ -1,0 +1,49 @@
+\subsection{Freeze the contract before evaluating an implementation}\label{subsec:contractfreeze}
+The informal discussion after Edition 2 repeatedly changed the object to be preserved. A particular trained transformer, a service using that transformer, a human--machine organisation and an abstract state machine are not interchangeable targets. This edition makes the evaluation contract explicit:
+\begin{equation}\label{eq:contract3}
+ \Gamma=(K,Q_0,\mathcal A_H,d_Q,d_O,\varepsilon_Q,\varepsilon_O,H,\mathcal R,\mathcal F,\mathcal P).
+\end{equation}
+Here $Q_0$ is the admitted initial-state set; $\mathcal A_H$ specifies input histories through horizon $H$; $d_Q,d_O$ are state and output metrics; the two tolerances state what agreement means; $\mathcal R$ includes preparation, observation, storage and execution costs; $\mathcal F$ specifies disturbances and failed supports; and $\mathcal P$ is the permission and termination contract. A time-sensitive task additionally fixes the duration of each interface step. These fields are selected before testing, not weakened after a candidate fails.
+
+For a deterministic realisation, Equation~\eqref{eq:realisation} is one sufficient exact implementation criterion. Approximate, stochastic or externally nondeterministic systems need correspondingly different contracts; equality of a few benchmark scores is none of them. A behavioural transformer contract, for example, would specify a fixed model, tokenisation, input domain, output-distribution metric, context horizon and treatment of random sampling. A cache-preservation contract can be stronger still. Calling either contract ``nontrivial'' does not supply its missing numerical tolerance.
+
+The adjective \emph{minimal} in the kernel description is task-relative. This paper does not prove that an arbitrary real-world organisation has a unique smallest state representation. A kernel can retain more state than strictly necessary; what matters is that its declared distinctions are consequential and that its implementation claims are testable. An ordinary organisation is a legitimate baseline when it meets a specified contract. Ordinary persistence is not automatically a certificate, and an unfamiliar label does not make the certificate a novel phenomenon.
+
+\subsection{A constituent is not the whole realisation}
+A realisation may have joint state $x=(x_1,\ldots,x_m,c)$, including interconnection and controller state $c$. The correspondence is required of $\rho_r$ and $\Phi_r$ on this \emph{joint} domain. It need not hold separately for each $x_i$. Conversely, correctness of all local components under their isolated assumptions does not establish correctness of their interconnection. A carrier may transport a signal, a person may supply an explicitly agreed approval, and a processor may update a register; none thereby implements the whole kernel alone.
+
+A human interface must be specified through observable, consented actions and whatever timing or error assumptions the task requires. Participation in an organisation does not require an identification of private cognition with an AI's state. Equally, assuming a person always supplies a correct answer is not a substitute for establishing an interface. The same scrutiny applies to a software oracle or a supposedly ideal sensor.
+
+\subsection{Representation change is not parameter identity}\label{subsec:representationchange}
+Refinement mappings are established machinery for relating implementation steps to abstract behaviour, including separate safety and liveness requirements \citep{abadi}. Our equation is a restricted instance of that style of obligation, not a new foundation of implementation theory. Approximate simulation similarly has an established literature for discrete, continuous and hybrid systems \citep{girard}. Neither precedent automatically certifies the physical model used in an application.
+
+\begin{proposition}[Change of physical coordinates preserves an exact realisation]\label{prop:coordinates}
+Suppose $\rho_r\Phi_r=\Delta\rho_r$ on an invariant domain $D_r$ for every admitted input. Let $h:D_r\to D_s$ be a bijection, define
+\[
+ \Phi_s(h(x),a)=h(\Phi_r(x,a)),\qquad \rho_s=\rho_r h^{-1}.
+\]
+Then $\rho_s\Phi_s=\Delta\rho_s$ on $D_s$.
+\end{proposition}
+\begin{proof}
+For $y=h(x)$, substitution gives
+$\rho_s(\Phi_s(y,a))=\rho_r(\Phi_r(x,a))=\Delta(\rho_r(x),a)=\Delta(\rho_s(y),a)$.
+Invariance makes every expression defined.
+\end{proof}
+The result is algebraic, not a claim that an arbitrary coordinate change is physically constructible. More generally, two implementations need not even have bijective state spaces: one may contain nuisance variables discarded by its abstraction map. What must be preserved is the chosen contract.
+
+If a fixed parameter tensor $W$ defines a transition rule $\Delta_W$, a replacement need not expose $W$ in its physical state merely to implement that rule. Inference weights can be constants in the specification rather than mutable abstract state. Compilation, optimisation, substrate-aware training and direct programming are different construction histories. None is automatically disqualified; none is automatically a proof of equivalence. If the contract instead requires exact parameter custody, later parameter updates or a particular provenance, those additional requirements must be preserved too.
+
+A separately trained classifier with similar accuracy is not thereby a continuation of another trained system. Paired realisation requires the specified correspondence; migration additionally requires transfer of the current relevant state and preservation of input order and effects. A replacement of an algorithmic component in an organisation is also not a proof of numerical identity of a conscious subject.
+
+\subsection{Non-vacuity and the readout account}\label{subsec:nonvacuity}
+The conditions $|Q|>1$ and multiple transitions do not alone prevent a vacuous experiment. Two declared states might never be reached or might be indistinguishable under every admitted continuation. For a stateful witness, require two admitted histories that end in different states and for which some common future input yields different required output traces. This forces a memory distinction instead of merely assigning two names to one behaviour.
+
+The abstraction map used in a proof and the actual readout available to an operator must also be distinguished. An unrestricted decoder with access to the entire input history could compute the answer itself and assign credit to an idle ``physical processor.'' A processor-role experiment must therefore fix input preparation, decoder resources and accessible state. Its negative control removes or fixes the proposed stateful component while leaving the permitted readout unchanged. A symbolic proof may use a mathematical map unavailable as a cheap instrument, but then it establishes only semantic correspondence, not operational recoverability.
+
+\begin{proposition}[Distinguishable continuations require distinguishable realisation states]\label{prop:memorynecessity}
+Let a deterministic implementation have a fixed state-dependent output rule and receive the same future inputs after two histories. If its complete operative physical state is identical after those histories, then its future output traces are identical. Consequently, histories requiring different future output traces under the contract cannot be represented by that same physical state.
+\end{proposition}
+\begin{proof}
+Equal starting states and equal next inputs give equal successor states and outputs by determinism. Induction extends equality through every common finite input suffix. Contradiction follows when the contract requires unequal traces.
+\end{proof}
+``Complete operative state'' includes external memory actually consulted. Keeping the distinguishing bit in a controller does not evade the result; it moves the memory role into that controller. For stochastic contracts, the analogous comparison concerns output laws, not equality of independently sampled individual trajectories.

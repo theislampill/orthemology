@@ -1,0 +1,2674 @@
+{
+  "scope": "CURRENT_V4_CONTINUATION",
+  "kernel_verified": false,
+  "all_closed": false,
+  "items": [
+    {
+      "id": "RV01",
+      "title": "Kernel acceptance is still absent",
+      "priority": "BLOCKER",
+      "historical_finding": {
+        "id": "RV01",
+        "priority": "BLOCKER",
+        "status": "OPEN_ACKNOWLEDGED",
+        "title": "Kernel acceptance is still absent",
+        "source": [
+          "lean/*.lean",
+          "REMAINING_OBLIGATIONS.md:R01",
+          "evidence/fresh_v3/VERIFICATION.json"
+        ],
+        "finding": "All seven Lean modules are authored but uncompiled here and in v3. Python success is not a kernel proof. The report is candid; this is an open obligation, not dishonesty.",
+        "required_action": "Acquire the recorded toolchain or explicitly document a justified migration; compile in dependency order; repair errors without weakening statements.",
+        "acceptance": "Clean independent build, actual theorem types and transitive axiom output for every required target. No kernel credit without observed successful execution."
+      },
+      "status": "UNRESOLVED",
+      "result": "No real Lean executable or compiled theorem has been observed. Original seven modules preserved; five additional modules are candidates.",
+      "remaining": "Compile all twelve modules, fix elaboration and run the mandatory transitive-assumption audit.",
+      "evidence": [
+        "lean-toolchain",
+        "TOOLCHAIN_LOCK.json",
+        "evidence/current/TOOLCHAIN_ACTUAL.txt",
+        "evidence/current/TOOLCHAIN_CONNECTOR_DIAGNOSTICS.json"
+      ],
+      "kernel_verified": false
+    },
+    {
+      "id": "RV02",
+      "title": "Declared Lean pin is not enforced",
+      "priority": "HIGH",
+      "historical_finding": {
+        "id": "RV02",
+        "priority": "HIGH",
+        "status": "REPRODUCED_POLICY_GAP",
+        "title": "Declared Lean pin is not enforced",
+        "source": [
+          "verify.py:47–50,96–119",
+          "evidence/probes/VERIFIER_POLICY_NEGATIVE_CONTROL.json"
+        ],
+        "finding": "The target string says v4.19.0, but the observed --version is only recorded. A controlled subprocess fixture reporting version 0.0.0 still produces the top-level success report.",
+        "required_action": "Compare toolchain identity to the lock, verify version command success, use an authenticated installed toolchain and clean package lock.",
+        "acceptance": "Wrong-version negative test fails before proof credit. Record actual executable identity, toolchain, package revision and command."
+      },
+      "status": "REPAIRED",
+      "result": "The real build driver refuses any Lean identity other than 4.19.0 before compilation. A targeted guard-removal control detects removal.",
+      "remaining": "Actual identity and compilation remain unobserved; this is a repaired policy, not a build receipt.",
+      "evidence": [
+        "build_gate.py",
+        "verify.py",
+        "evidence/current/BUILD_GATE_RED.stderr.txt",
+        "evidence/current/BUILD_GATE_GREEN.stderr.txt",
+        "evidence/current/v4_mutations_complete/version_identity.json"
+      ],
+      "kernel_verified": false
+    },
+    {
+      "id": "RV03",
+      "title": "Axiom coverage is not declaration-specific",
+      "priority": "HIGH",
+      "historical_finding": {
+        "id": "RV03",
+        "priority": "HIGH",
+        "status": "REPRODUCED_POLICY_GAP",
+        "title": "Axiom coverage is not declaration-specific",
+        "source": [
+          "verify.py:103–118",
+          "evidence/probes/VERIFIER_POLICY_NEGATIVE_CONTROL.json"
+        ],
+        "finding": "One unrelated axiom-readback line per module satisfies the readback flag. The controlled fixture creates no oleans yet is labelled kernel_verified. This tests orchestration assumptions, not Lean soundness.",
+        "required_action": "Resolve and audit an explicit inventory of required declarations in Lean; fail on absent or renamed targets; tie reports to the actual clean build.",
+        "acceptance": "Missing target, unrelated readback, partial audit and skipped Audit.lean negative controls all fail. The trusted-compiler premise stays explicit."
+      },
+      "status": "PARTIALLY_RESOLVED",
+      "result": "The mandatory inventory now includes twelve modules and 145 named declarations, nine nonremovable acceptance roles, fresh artifacts and per-target type/axiom blocks. RequiredAudit also calls the transitive environment gate.",
+      "remaining": "Compile the meta command, all targets and audit; inspect actual types and assumptions. No axiom footprint inferred from static source.",
+      "evidence": [
+        "formal_targets.json",
+        "lean/AuditSupport.lean",
+        "build_gate.py",
+        "evidence/current/INVENTORY_RED.stderr.txt",
+        "evidence/current/INNER_AUDIT_GREEN.stderr.txt",
+        "evidence/current/v4_mutations_complete/audit_target_coverage.json"
+      ],
+      "kernel_verified": false
+    },
+    {
+      "id": "RV04",
+      "title": "Census checks vanish under Python optimisation",
+      "priority": "HIGH",
+      "historical_finding": {
+        "id": "RV04",
+        "priority": "HIGH",
+        "status": "REPRODUCED_DEFECT",
+        "title": "Census checks vanish under Python optimisation",
+        "source": [
+          "census.py",
+          "verify.py:69–83",
+          "evidence/probes/CENSUS_NORMAL_NEGATIVE_CONTROL.json",
+          "evidence/probes/CENSUS_OPTIMISED_NEGATIVE_CONTROL.json"
+        ],
+        "finding": "Replacing named substitution by the constant bottom function is caught normally, but the same 335,744-case census reports PASS under -O because assertions disappear.",
+        "required_action": "Use explicit check/raise validation or reject optimised execution and PYTHONOPTIMIZE at the verifier boundary. Preserve the bad-before evidence.",
+        "acceptance": "The supplied negative control remains detected under every supported interpreter mode; unsupported optimised mode refuses explicitly."
+      },
+      "status": "REPAIRED",
+      "result": "Census assertions use explicit RuntimeError checks and survive -O. Deliberately corrupted substitution is rejected; restoring removable assert defeats that exact regression.",
+      "remaining": "Finite census is not a general substitution proof.",
+      "evidence": [
+        "census.py",
+        "tests/test_v4_regressions.py",
+        "evidence/current/RECOVERED_CENSUS_OPT.stdout.txt",
+        "evidence/current/v4_mutations_complete/census_assertion_under_optimisation.json"
+      ],
+      "kernel_verified": false
+    },
+    {
+      "id": "RV05",
+      "title": "Missing manifest is not a release-verification failure",
+      "priority": "MEDIUM",
+      "historical_finding": {
+        "id": "RV05",
+        "priority": "MEDIUM",
+        "status": "OBSERVED_SOURCE_GAP",
+        "title": "Missing manifest is not a release-verification failure",
+        "source": [
+          "verify.py:52–60"
+        ],
+        "finding": "The absent-manifest branch reports NOT_PRESENT_BEFORE_PACKAGING without setting failure. A development convenience must not be accepted as final archive custody.",
+        "required_action": "Separate development and final-delivery modes. Require expected manifests and all required members for final verification.",
+        "acceptance": "Deleting a manifest or required member makes final verification fail; post-run source hash comparison is mandatory."
+      },
+      "status": "REPAIRED",
+      "result": "Root manifest is mandatory with exact file coverage including nested manifests. Failed preflight stops before running source.",
+      "remaining": "Custody is hash/coverage evidence, not semantic correctness.",
+      "evidence": [
+        "build_gate.py",
+        "verify.py",
+        "tests/test_final_boundaries.py",
+        "evidence/current/FINAL_BOUNDARY_RED.stderr.txt",
+        "evidence/current/FINAL_BOUNDARY_GREEN.stderr.txt",
+        "evidence/current/v4_mutations_complete/nested_manifest_coverage.json"
+      ],
+      "kernel_verified": false
+    },
+    {
+      "id": "RV06",
+      "title": "Lean subprocess failures can escape the structured receipt",
+      "priority": "MEDIUM",
+      "historical_finding": {
+        "id": "RV06",
+        "priority": "MEDIUM",
+        "status": "OBSERVED_SOURCE_GAP",
+        "title": "Lean subprocess failures can escape the structured receipt",
+        "source": [
+          "verify.py:96–121"
+        ],
+        "finding": "Unlike the reference-test loop, Lean version/compile calls do not catch timeout or OS exceptions. Some environment failures may terminate without a complete final status.",
+        "required_action": "Record timeout, missing executable, failed version and partial build as explicit non-success states, preserving partial logs.",
+        "acceptance": "Forced timeout/OS-error fixtures produce a nonzero exit and a readable failure receipt with no kernel credit."
+      },
+      "status": "REPAIRED",
+      "result": "Bounded process driver captures both streams, exit, timeout and OS failure; fresh artifacts are required. Failure cannot be formal success.",
+      "remaining": "Local trusted compiler/process/OS boundary remains; no hostile-code sandbox claim.",
+      "evidence": [
+        "build_gate.py",
+        "verify.py",
+        "tests/test_build_gate.py",
+        "evidence/current/BUILD_GATE_GREEN.stderr.txt"
+      ],
+      "kernel_verified": false
+    },
+    {
+      "id": "RV07",
+      "title": "Duplicate JSON keys are not rejected by the supplied AST checker",
+      "priority": "HIGH",
+      "historical_finding": {
+        "id": "RV07",
+        "priority": "HIGH",
+        "status": "REPRODUCED_CONTRACT_GAP",
+        "title": "Duplicate JSON keys are not rejected by the supplied AST checker",
+        "source": [
+          "reference.py:139–207",
+          "REMAINING_OBLIGATIONS.md:R02",
+          "evidence/probes/INPUT_PROBES.json"
+        ],
+        "finding": "The package has a dict checker, not a raw JSON-byte parser. Standard decoding overwrites duplicate rule fields and the remaining valid dict is accepted. The claim that duplicate rejection already exists is inaccurate; no typing unsoundness is shown.",
+        "required_action": "Specify raw encoding and duplicate-key rejection; use a checked pair-preserving decoder or extract the entire decoder/checker pipeline.",
+        "acceptance": "An actual bytes entry point rejects duplicate keys, trailing input, unknown fields, invalid encodings and malformed numeric forms with stable errors."
+      },
+      "status": "REPAIRED",
+      "result": "Raw JSON decoding rejects duplicate keys, malformed UTF-8, nonfinite or unsupported numbers, trailing data and oversized inputs before certificate construction.",
+      "remaining": "No formal proof of the Python parser has been supplied.",
+      "evidence": [
+        "boundaries.py",
+        "reference.py",
+        "tests/test_v4_regressions.py",
+        "evidence/current/v4_mutations_complete/raw_duplicate_keys.json"
+      ],
+      "kernel_verified": false
+    },
+    {
+      "id": "RV08",
+      "title": "Accepted outputs can exceed the same interface bounds",
+      "priority": "HIGH",
+      "historical_finding": {
+        "id": "RV08",
+        "priority": "HIGH",
+        "status": "REPRODUCED_CONTRACT_GAP",
+        "title": "Accepted outputs can exceed the same interface bounds",
+        "source": [
+          "reference.py:26–35,139–207",
+          "evidence/probes/INPUT_PROBES.json"
+        ],
+        "finding": "A bounded accepted proof with nested all-introductions returns a type that the same structural validator rejects as too deep. Input and produced-output limits are not compositionally aligned.",
+        "required_action": "Specify input/output bounds separately or prove/check closure of accepted outputs under the receiving interface. Track type growth and all resource counters.",
+        "acceptance": "The recorded witness either receives a documented bounded refusal before acceptance or its result is consumable under the promised output contract."
+      },
+      "status": "REPAIRED",
+      "result": "Accepted source outputs and each intermediate operational value are revalidated. An overflow cannot be hidden by a later projection. Serialization stops before oversized allocation.",
+      "remaining": "This establishes tested bounded behaviour, not OS-level memory isolation.",
+      "evidence": [
+        "reference.py",
+        "boundaries.py",
+        "operational.py",
+        "tests/test_v4_resources.py",
+        "evidence/current/RESOURCE_RED.stderr.txt",
+        "evidence/current/RESOURCE_GREEN.stderr.txt",
+        "evidence/current/FINAL_BOUNDARY_GREEN.stderr.txt"
+      ],
+      "kernel_verified": false
+    },
+    {
+      "id": "RV09",
+      "title": "Malformed selector-certificate objects raise AttributeError",
+      "priority": "MEDIUM",
+      "historical_finding": {
+        "id": "RV09",
+        "priority": "MEDIUM",
+        "status": "DEFENSIVE_API_ISSUE",
+        "title": "Malformed selector-certificate objects raise AttributeError",
+        "source": [
+          "extensions.py:61–106",
+          "evidence/probes/INPUT_PROBES.json"
+        ],
+        "finding": "None and dict inputs to replay_selector do not reach a declared Rejection. The typed Python API expects a SelectorCertificate, so this is a trust-boundary hardening issue, not acceptance of an invalid proof.",
+        "required_action": "Put runtime validation at the public deserialisation boundary and clarify internal typed preconditions.",
+        "acceptance": "Malformed external objects fail through bounded, typed errors. Keep the correctly rejected forged-empty-trace control."
+      },
+      "status": "REPAIRED",
+      "result": "Malformed selector-certificate objects produce the declared Rejection rather than unchecked attribute access.",
+      "remaining": "Native caller objects are not authority; actual checked bytes remain the interface.",
+      "evidence": [
+        "extensions.py",
+        "tests/test_v4_regressions.py",
+        "evidence/current/RECOVERED_UNIT.stderr.txt"
+      ],
+      "kernel_verified": false
+    },
+    {
+      "id": "RV10",
+      "title": "Resource limits are not yet an end-to-end budget",
+      "priority": "HIGH",
+      "historical_finding": {
+        "id": "RV10",
+        "priority": "HIGH",
+        "status": "DESIGN_OBLIGATION",
+        "title": "Resource limits are not yet an end-to-end budget",
+        "source": [
+          "reference.py:26–35,122–207",
+          "extensions.py:114–195,287–327"
+        ],
+        "finding": "Local depth/node limits do not establish aggregate proof-size, integer-bit, output-support, recursion, or memory bounds. The sampler API is capped and the probability interpreter has its own limits.",
+        "required_action": "Define explicit byte, proof-node, output, integer-bit, trace, support and CPU/fuel budgets. State limits as engineering refusals, not semantic incompleteness counterexamples.",
+        "acceptance": "Adversarial large inputs fail before unbounded allocation/recursion; successful outputs satisfy published limits; timeout is never reported as a mathematical rejection."
+      },
+      "status": "PARTIALLY_RESOLVED",
+      "result": "Finite structural, compiler, substitution, serialization, record, revision, process-output and sampler budgets are implemented. Preallocation and hidden-intermediate defects reproduced and repaired.",
+      "remaining": "No complete CPU/allocator/OS resource proof or security sandbox. Quantitative bit-cost is separately conditional.",
+      "evidence": [
+        "boundaries.py",
+        "reference.py",
+        "operational.py",
+        "guarded_sampler.py",
+        "build_gate.py",
+        "evidence/current/RESOURCE_RED.stderr.txt",
+        "evidence/current/FINAL_BOUNDARY_RED.stderr.txt",
+        "PROOFS_V4.md"
+      ],
+      "kernel_verified": false
+    },
+    {
+      "id": "RV11",
+      "title": "Python implementation does not refine the Lean checker yet",
+      "priority": "BLOCKER",
+      "historical_finding": {
+        "id": "RV11",
+        "priority": "BLOCKER",
+        "status": "OPEN_ACKNOWLEDGED",
+        "title": "Python implementation does not refine the Lean checker yet",
+        "source": [
+          "lean/FiniteBridge.lean:94–230",
+          "reference.py:139–207",
+          "REMAINING_OBLIGATIONS.md:R02"
+        ],
+        "finding": "FiniteBridge supplies a proposed proof-carrying checker, while Python uses its own dict syntax, cutoff substitution and reduction traces. Finite agreement is useful but not an unbounded implementation theorem.",
+        "required_action": "Extract one verified checker or define a complete translation/refinement including parsing, scoping, substitution, evaluation strategy and serialisation.",
+        "acceptance": "Every accepted external certificate yields the corresponding formal derivation; reject/error behaviours and resource truncation are explicitly related."
+      },
+      "status": "PARTIALLY_RESOLVED",
+      "result": "FiniteBridge is preserved; actual accepted Python proof trees can now export Cert source. Eight current examples regenerate deterministically and have 24 required Lean targets.",
+      "remaining": "Neither the exporter nor Python parser is universally verified; exported targets are uncompiled. Extract or prove the real parser/checker refinement.",
+      "evidence": [
+        "proof_export.py",
+        "lean/FiniteBridge.lean",
+        "lean/GeneratedExamples.lean",
+        "examples/EXPORT_INDEX.json",
+        "tests/test_generated_examples.py",
+        "PROOFS_V4.md"
+      ],
+      "kernel_verified": false
+    },
+    {
+      "id": "RV12",
+      "title": "Semantic All ranges beyond finite source syntax",
+      "priority": "HIGH",
+      "historical_finding": {
+        "id": "RV12",
+        "priority": "HIGH",
+        "status": "OPEN_ACKNOWLEDGED",
+        "title": "Semantic All ranges beyond finite source syntax",
+        "source": [
+          "MATHEMATICAL_PROOF.md:12–29,138–163",
+          "lean/InternalPolymorphism.lean:70–137",
+          "lean/FiniteBridge.lean:94–124"
+        ],
+        "finding": "The semantic repertoire contains arbitrary stable predicates and families; finite syntax names a restricted fragment. A finite introduction rule can soundly quantify over the semantic universe without representing all its families.",
+        "required_action": "Keep semantic and syntactic domains separate. Prove the environment/substitution bridge and identify represented families without narrowing the protected semantic requirement.",
+        "acceptance": "Explicit statements of semantic closure, source expressibility and any relative completeness; no complete semantic-membership oracle smuggled into a checker."
+      },
+      "status": "PROVED",
+      "result": "The finite grammar is explicitly distinguished from all semantic invariant predicates; protected self-instantiation remains a member of the same semantic code universe.",
+      "remaining": "No finite enumeration or decision of all semantic codes is asserted. Kernel implementation remains under RV01.",
+      "evidence": [
+        "lean/InternalPolymorphism.lean",
+        "lean/FiniteBridge.lean",
+        "examples/identitySelf.json",
+        "PROOFS_V4.md"
+      ],
+      "kernel_verified": false
+    },
+    {
+      "id": "RV13",
+      "title": "Frozen OWOU engine is not implemented by v3",
+      "priority": "BLOCKER",
+      "historical_finding": {
+        "id": "RV13",
+        "priority": "BLOCKER",
+        "status": "MISSING_ARCHITECTURAL_CONSTRUCTION",
+        "title": "Frozen OWOU engine is not implemented by v3",
+        "source": [
+          "01_FROZEN_DISCUSSION_BRIEFING.md",
+          "lean/InternalPolymorphism.lean",
+          "lean/FiniteBridge.lean"
+        ],
+        "finding": "V3 has no implemented operational Context-revision/projected-dispatch calculus matching the frozen O/Γ/OWOU contract. The existing internal model is a valuable core, not automatically that engine.",
+        "required_action": "Construct actual contexts, operation interfaces, candidates, checkers, dependency-bearing licences, dispatch and revision; embed the existing internal core.",
+        "acceptance": "Actual definitions and proofs for successful operations, composition, context change and preservation, with a main witness naming the achieved scope."
+      },
+      "status": "PARTIALLY_RESOLVED",
+      "result": "A nonvacuous engine now implements finite interfaces, composition, source operations, licences, projection, probability/invariant dependencies and revisions. Typed Plan semantics and an OWOU witness are constructed in candidate Lean.",
+      "remaining": "Kernel-check the model and prove the complete deployed Python refinement, including registry/resource semantics.",
+      "evidence": [
+        "operational.py",
+        "observations.py",
+        "demonstrate.py",
+        "lean/OperationalKernel.lean",
+        "PROOFS_V4.md",
+        "evidence/current/POSITIVE_DEMONSTRATION.stdout.txt"
+      ],
+      "kernel_verified": false
+    },
+    {
+      "id": "RV14",
+      "title": "A reject-all engine satisfies weak conditional safety",
+      "priority": "BLOCKER",
+      "historical_finding": {
+        "id": "RV14",
+        "priority": "BLOCKER",
+        "status": "NON_VACUITY_REQUIREMENT",
+        "title": "A reject-all engine satisfies weak conditional safety",
+        "source": [
+          "07_RESEARCH_TARGETS.md:R-D",
+          "06_FORMAL_ACCEPTANCE_CONTRACT.md"
+        ],
+        "finding": "Reach as a polymorphic signature plus soundness/fail-closed implications can be vacuous. Packaging them in OWOU does not demonstrate useful open-world capacity.",
+        "required_action": "Add independently specified expressiveness/adequacy and non-vacuity properties, accepted nonidentity witnesses and compositional examples.",
+        "acceptance": "A reject-all implementation fails the OWOU acceptance tests and the formal positive theorem assumptions."
+      },
+      "status": "PROVED",
+      "result": "Positive specification requires actual plan coverage, nonidentity results and adding/revoking permission. The executable reject-all negative control fails the positive probe.",
+      "remaining": "Finite execution and ordinary specification proof do not certify the whole implementation.",
+      "evidence": [
+        "operational.py",
+        "demonstrate.py",
+        "lean/OperationalKernel.lean",
+        "evidence/current/POSITIVE_DEMONSTRATION.stdout.txt"
+      ],
+      "kernel_verified": false
+    },
+    {
+      "id": "RV15",
+      "title": "Universe polymorphism is not ambient Lean parametricity",
+      "priority": "HIGH",
+      "historical_finding": {
+        "id": "RV15",
+        "priority": "HIGH",
+        "status": "DISCUSSION_CORRECTION",
+        "title": "Universe polymorphism is not ambient Lean parametricity",
+        "source": [
+          "01_FROZEN_DISCUSSION_BRIEFING.md:10",
+          "SOURCES.md:S03"
+        ],
+        "finding": "Earlier discussion occasionally said quantification alone yields parametricity. With the allowed classical Lean axioms that claim is false for arbitrary ambient functions.",
+        "required_action": "Prove a relational theorem only for the restricted syntax/model; rename mere universe-genericity as reach.",
+        "acceptance": "No unrestricted ambient parametricity axiom; explicit interpretation/abstraction theorem or precisely limited representation results."
+      },
+      "status": "PARTIALLY_RESOLVED",
+      "result": "Reach is the explicitly constructed universe-polymorphic Plan schema, not all Lean functions. A separate finite pure logical-relations fundamental theorem is supplied.",
+      "remaining": "No full semantic-realiser parametricity or JSON representation of arbitrary ambient types.",
+      "evidence": [
+        "lean/OperationalKernel.lean",
+        "lean/RelationalFragment.lean",
+        "PROOFS_V4.md",
+        "PRIOR_ART_COMPARISON.md"
+      ],
+      "kernel_verified": false
+    },
+    {
+      "id": "RV16",
+      "title": "Do not replace internal self-instantiation with external-only reach",
+      "priority": "BLOCKER",
+      "historical_finding": {
+        "id": "RV16",
+        "priority": "BLOCKER",
+        "status": "PROTECTED_REQUIREMENT",
+        "title": "Do not replace internal self-instantiation with external-only reach",
+        "source": [
+          "MATHEMATICAL_PROOF.md:6–29",
+          "lean/InternalPolymorphism.lean:106–137,197–226",
+          "02_GIRARD_OWOU_V3_RECONCILIATION.md"
+        ],
+        "finding": "The two threads have distinct positive requirements. The frozen relational design must be reconciled with, not substituted for, internal All(B).",
+        "required_action": "Keep the internal universe and derive a source-to-operational adapter. State the exact missing full-abstraction capability separately.",
+        "acceptance": "All(B) remains a code in C; self-instantiation and nontrivial self-application examples compile and execute under the declared source fragment."
+      },
+      "status": "PROVED",
+      "result": "All(B) and self-instantiation were not weakened. Original source is byte-identical; identity/selector self-application runs and exports are retained.",
+      "remaining": "Mathematical construction is ordinary; original formalisation still awaits kernel checking.",
+      "evidence": [
+        "lean/InternalPolymorphism.lean",
+        "examples/identitySelf.json",
+        "examples/trueSelfChoice.json",
+        "evidence/current/SOURCE_CUSTODY_COMPARISON.json",
+        "evidence/current/POSITIVE_DEMONSTRATION.stdout.txt"
+      ],
+      "kernel_verified": false
+    },
+    {
+      "id": "RV17",
+      "title": "Negative Girard theorem must match its real adapter",
+      "priority": "HIGH",
+      "historical_finding": {
+        "id": "RV17",
+        "priority": "HIGH",
+        "status": "FORMAL_BOUNDARY_OBLIGATION",
+        "title": "Negative Girard theorem must match its real adapter",
+        "source": [
+          "lean/HurkensBoundary.lean:3–53",
+          "SOURCES.md:S01",
+          "02_GIRARD_OWOU_V3_RECONCILIATION.md"
+        ],
+        "finding": "The licensed adaptation targets a specific self-product package. It must be compiled and connected to the actual SCUUAt interface; a generic slogan is not that bridge.",
+        "required_action": "Either import a pinned compatible official theorem or prove the correspondence of the preserved adaptation and its extracted full operations.",
+        "acceptance": "Named beta-preserving extraction lemma, compiled negative theorem and attribution with actual dependency audit."
+      },
+      "status": "PARTIALLY_RESOLVED",
+      "result": "SCUUAt specifies actual exported total pack/unpack calls and returned beta. It extracts the preserved full-section retraction and invokes no_self_product; separate positive construction is combined afterwards.",
+      "remaining": "Compile the extraction and audit universe levels and transitive assumptions. No current Mathlib installation is claimed.",
+      "evidence": [
+        "lean/HurkensBoundary.lean",
+        "lean/OperationalBoundary.lean",
+        "PROOFS_V4.md",
+        "TOOLCHAIN_LOCK.json"
+      ],
+      "kernel_verified": false
+    },
+    {
+      "id": "RV18",
+      "title": "Adding realizedByO is not by itself a stronger mathematical definition",
+      "priority": "MEDIUM",
+      "historical_finding": {
+        "id": "RV18",
+        "priority": "MEDIUM",
+        "status": "DISCUSSION_CORRECTION",
+        "title": "Adding realizedByO is not by itself a stronger mathematical definition",
+        "source": [
+          "01_FROZEN_DISCUSSION_BRIEFING.md:10",
+          "02_GIRARD_OWOU_V3_RECONCILIATION.md:4"
+        ],
+        "finding": "A bundled closure-plus-realisation structure and the corresponding existential are equivalent packaging. Earlier assurance that the field alone solved vacuity was overstated.",
+        "required_action": "Define O-exported capabilities independently, then prove extraction. Do not count a field rename as formal progress.",
+        "acceptance": "The realisation relation references actual O operations and laws; the positive operational theorem remains substantive independently of global not_SCUUAt."
+      },
+      "status": "PROVED",
+      "result": "No inert realizedByO field or SCUU=False is used. Pack/unpack are actual API handles whose call results supply the forbidden retraction; the witness is nonvacuous.",
+      "remaining": "The authored correspondence is uncompiled and not an all-operations embedding.",
+      "evidence": [
+        "lean/OperationalBoundary.lean",
+        "lean/OperationalKernel.lean",
+        "PROOFS_V4.md"
+      ],
+      "kernel_verified": false
+    },
+    {
+      "id": "RV19",
+      "title": "Revision stability needs stale-evidence protection",
+      "priority": "HIGH",
+      "historical_finding": {
+        "id": "RV19",
+        "priority": "HIGH",
+        "status": "DESIGN_OBLIGATION",
+        "title": "Revision stability needs stale-evidence protection",
+        "source": [
+          "01_FROZEN_DISCUSSION_BRIEFING.md:3–6",
+          "07_RESEARCH_TARGETS.md:R-B,R-C"
+        ],
+        "finding": "Keeping K fixed does not show an old certificate remains admissible after Γ changes. Revoked authority, changed observations or changed code invalidate old claims.",
+        "required_action": "Bind evidence to program/interface/assumptions/context dependencies and define atomic revalidation or revocation before dispatch.",
+        "acceptance": "Old certificate replay after relevant revocation fails; unaffected reuse has a dependency theorem; concurrent revision cannot create a check/use mismatch."
+      },
+      "status": "PARTIALLY_RESOLVED",
+      "result": "Real source/dependency stamps include absent obligations, law versions, issuer identity and immutable unique issued records. Dispatch and revision share one lock. Stale, ABA, collision and cross-issuer attacks have specific regressions.",
+      "remaining": "Kernel-level refinement and distributed revocation are not proved. The host process is trusted.",
+      "evidence": [
+        "operational.py",
+        "tests/test_ticket_collision.py",
+        "tests/test_observation_revision.py",
+        "tests/test_revision_transport.py",
+        "evidence/current/COLLISION_RED.stderr.txt",
+        "evidence/current/ISSUER_RED.stderr.txt",
+        "evidence/current/v4_mutations_complete/ticket_registry_uniqueness.json",
+        "PROOFS_V4.md"
+      ],
+      "kernel_verified": false
+    },
+    {
+      "id": "RV20",
+      "title": "Safety dimensions must not collapse into type preservation",
+      "priority": "HIGH",
+      "historical_finding": {
+        "id": "RV20",
+        "priority": "HIGH",
+        "status": "SCOPE_REQUIREMENT",
+        "title": "Safety dimensions must not collapse into type preservation",
+        "source": [
+          "MATHEMATICAL_PROOF.md:244–256",
+          "REMAINING_OBLIGATIONS.md:R07",
+          "01_FROZEN_DISCUSSION_BRIEFING.md:6"
+        ],
+        "finding": "Type-correct or logically admissible code can still consume resources or act beyond authority. Current selector proofs do not establish full host memory/capability security.",
+        "required_action": "Declare independent safety predicates and trusted runtime assumptions; prove only what each certificate actually implies.",
+        "acceptance": "Threat/resource/effect model and tests; no claim of universal intent comprehension, zero mediation or automatic memory safety."
+      },
+      "status": "PROVED",
+      "result": "The contract distinguishes typing, permission, observation law, resource refusal, productive prefix and ideal probabilistic termination. Counterexamples and explicit interfaces prevent the identified entailment conflations.",
+      "remaining": "No empirical law identification, physical safety, moral warrant or remote authentication claim.",
+      "evidence": [
+        "OPERATIONAL_CONTRACT.md",
+        "PROOFS_V4.md",
+        "operational.py",
+        "guarded_sampler.py"
+      ],
+      "kernel_verified": false
+    },
+    {
+      "id": "RV21",
+      "title": "Atomicity theorem is point-concentration with rich event hypotheses",
+      "priority": "HIGH",
+      "historical_finding": {
+        "id": "RV21",
+        "priority": "HIGH",
+        "status": "SCOPE_CLARIFICATION",
+        "title": "Atomicity theorem is point-concentration with rich event hypotheses",
+        "source": [
+          "MATHEMATICAL_PROOF.md:33–68",
+          "lean/AlmostSureBoundary.lean:16–54"
+        ],
+        "finding": "The ordinary proof is sound under measurable singletons and the stated event family. Positive point mass is not synonymous with arbitrary measurable atoms on every space.",
+        "required_action": "Formalise countability/measurability and instantiate the abstract Full laws with a measure. Keep the separating-event assumptions.",
+        "acceptance": "Actual measure theorem plus counterexample; any restricted family version states its exact necessary/sufficient condition."
+      },
+      "status": "PROVED",
+      "result": "Q1/Q2 give countable positive singleton support, measurability, sharp full-event intersection defect, monotonicity and exact positive-fibre equality conditions. Q7 separately handles countable event families.",
+      "remaining": "Ordinary probability proof only; actual measure-theoretic Lean targets remain open.",
+      "evidence": [
+        "PROOFS_V4.md",
+        "observations.py"
+      ],
+      "kernel_verified": false
+    },
+    {
+      "id": "RV22",
+      "title": "Continuum obstruction is not a present countable-program failure",
+      "priority": "HIGH",
+      "historical_finding": {
+        "id": "RV22",
+        "priority": "HIGH",
+        "status": "SCOPE_AND_INTEGRATION",
+        "title": "Continuum obstruction is not a present countable-program failure",
+        "source": [
+          "MATHEMATICAL_PROOF.md:70–94,294",
+          "07_RESEARCH_TARGETS.md:R-A"
+        ],
+        "finding": "V3 already notes its countable carrier. All laws on that discrete carrier satisfy point-concentration; the continuum result binds only a justified enlarged observation/outcome space.",
+        "required_action": "Formalise the countable corollary and exhibit the concrete extension where diffuse observable mass arises. Do not confuse type cardinality with outcome cardinality.",
+        "acceptance": "A diagram of actual raw outcomes, observations, code events and pushforward laws; both safe countable and obstructed continuum instances are proved."
+      },
+      "status": "PROVED",
+      "result": "Countable program outputs have zero point defect. Finite prefixes, infinite streams, finite predicate vocabularies and all measurable sets are explicitly separated. Q8 makes the changed carrier explicit.",
+      "remaining": "Do not infer rich-event necessity from merely finite source predicates.",
+      "evidence": [
+        "PROOFS_V4.md",
+        "observations.py",
+        "productive_observer.py"
+      ],
+      "kernel_verified": false
+    },
+    {
+      "id": "RV23",
+      "title": "Observation refinement should participate in revision checks",
+      "priority": "HIGH",
+      "historical_finding": {
+        "id": "RV23",
+        "priority": "HIGH",
+        "status": "NEW_INTEGRATION_TARGET",
+        "title": "Observation refinement should participate in revision checks",
+        "source": [
+          "MATHEMATICAL_PROOF.md:64–68",
+          "07_RESEARCH_TARGETS.md:R-B"
+        ],
+        "finding": "Coarse atomic observations can refine to diffuse ones, invalidating an earlier universal almost-sure claim while K stays fixed.",
+        "required_action": "Prove the coarsening transport theorem and a refinement counterexample; record observation/event dependencies in certificates.",
+        "acceptance": "A concrete revoked probabilistic certificate and a preserved coarsening certificate with formal or explicitly ordinary proofs at the stated layer."
+      },
+      "status": "PARTIALLY_RESOLVED",
+      "result": "Probability observation models and their exact fingerprints are part of Gamma; refinement computes the fibre increment in a declared analytic grammar, invalidates old tickets and requires a new sufficient bound. Coarsening requires new authority too.",
+      "remaining": "No generic estimator or executable decision for arbitrary laws; full deployed refinement remains open.",
+      "evidence": [
+        "observations.py",
+        "operational.py",
+        "tests/test_observation_revision.py",
+        "tests/test_revision_transport.py",
+        "evidence/current/OBSERVATION_RED.stderr.txt",
+        "evidence/current/TRANSPORT_GREEN.stderr.txt",
+        "PROOFS_V4.md"
+      ],
+      "kernel_verified": false
+    },
+    {
+      "id": "RV24",
+      "title": "Logical Full abstraction is not formal measure theory",
+      "priority": "HIGH",
+      "historical_finding": {
+        "id": "RV24",
+        "priority": "HIGH",
+        "status": "OPEN_ACKNOWLEDGED",
+        "title": "Logical Full abstraction is not formal measure theory",
+        "source": [
+          "lean/AlmostSureBoundary.lean:16–69",
+          "THEOREM_CATALOGUE.json:T01–T04",
+          "REMAINING_OBLIGATIONS.md:R05"
+        ],
+        "finding": "The supplied Lean module abstracts laws of a Full predicate. It does not construct Lebesgue measure, positive-point countability, pushforwards or weak convergence.",
+        "required_action": "Instantiate the abstraction in a verified measure library and discharge all laws; preserve the useful logical lemma.",
+        "acceptance": "Kernel proofs for actual measures, measurable intersections, grid weak convergence and all three pairwise examples."
+      },
+      "status": "UNRESOLVED",
+      "result": "All general measure, weak topology and disintegration-free restriction arguments remain ordinary proofs. AlmostSureBoundary.lean is only the preserved logical abstraction.",
+      "remaining": "Use pinned Mathlib measures to prove point countability, pushforward/restriction sums, event measurability, Q1/Q2/Q4/Q7 and the continuum examples.",
+      "evidence": [
+        "lean/AlmostSureBoundary.lean",
+        "PROOFS_V4.md"
+      ],
+      "kernel_verified": false
+    },
+    {
+      "id": "RV25",
+      "title": "Effect proof is support-level, not quantitative independence",
+      "priority": "HIGH",
+      "historical_finding": {
+        "id": "RV25",
+        "priority": "HIGH",
+        "status": "OPEN_ACKNOWLEDGED",
+        "title": "Effect proof is support-level, not quantitative independence",
+        "source": [
+          "lean/EffectsAndDependence.lean:15–114",
+          "extensions.py:114–195",
+          "MATHEMATICAL_PROOF.md:276–298"
+        ],
+        "finding": "Weights constrain syntax, while the Lean Outcome relation tracks possible outcomes. It does not prove the actual rational distribution or independent sampling law of the Python interpreter.",
+        "required_action": "Define normalized quantitative semantics and prove its correspondence with the implementation and support abstraction.",
+        "acceptance": "Mass-one, exact weighting, application product law, erasure and no-empty results for the actual source; zero-weight branches handled explicitly."
+      },
+      "status": "PARTIALLY_RESOLVED",
+      "result": "The executable finite probability tree and the guarded sampler have exact rational mass certificates; independent/shared sampling conventions and pending mass are explicit.",
+      "remaining": "No formal quantitative law for the implementation or a general effectful fundamental theorem.",
+      "evidence": [
+        "extensions.py",
+        "guarded_sampler.py",
+        "tests/test_guarded_sampler.py",
+        "PROOFS_V4.md"
+      ],
+      "kernel_verified": false
+    },
+    {
+      "id": "RV26",
+      "title": "Exact sampler is not yet a typed productive source term",
+      "priority": "HIGH",
+      "historical_finding": {
+        "id": "RV26",
+        "priority": "HIGH",
+        "status": "OPEN_ACKNOWLEDGED",
+        "title": "Exact sampler is not yet a typed productive source term",
+        "source": [
+          "extensions.py:287–327",
+          "MATHEMATICAL_PROOF.md:308–348",
+          "REMAINING_OBLIGATIONS.md:R06"
+        ],
+        "finding": "The prefix routine consumes supplied finite bits and returns a selector tag or undecided result, with a cap. The infinite fair-bit operational object and typed program output are not integrated into the finite source checker.",
+        "required_action": "Add guarded/recursive computation trees or another precise productive semantics; map every leaf to its certified actual program.",
+        "acceptance": "Kernel/ordinary distinction explicit; measure of divergence zero, exact law, source typing, cap/error semantics and shared-randomness contract proved at the promised layer."
+      },
+      "status": "PARTIALLY_RESOLVED",
+      "result": "The source now contains a checked guarded threshold programme with certified same-type leaves, bounded prefix execution and residual budget. Its ideal unbounded semantics has an ordinary productivity/mass/tail proof.",
+      "remaining": "Construct and kernel-check the unbounded productive source semantics and its measure. The Python API deliberately caps at 128 bits.",
+      "evidence": [
+        "guarded_sampler.py",
+        "operational.py",
+        "tests/test_guarded_sampler.py",
+        "PROOFS_V4.md",
+        "evidence/current/GUARDED_GREEN.stderr.txt"
+      ],
+      "kernel_verified": false
+    },
+    {
+      "id": "RV27",
+      "title": "Expected two bits is not constant expected machine time",
+      "priority": "MEDIUM",
+      "historical_finding": {
+        "id": "RV27",
+        "priority": "MEDIUM",
+        "status": "COST_SCOPE_CLARIFICATION",
+        "title": "Expected two bits is not constant expected machine time",
+        "source": [
+          "MATHEMATICAL_PROOF.md:321–348",
+          "extensions.py:287–327",
+          "07_RESEARCH_TARGETS.md:R-E"
+        ],
+        "finding": "The tail and expected-bit calculation are convincing ordinary arguments. Arbitrary-precision integer work requires its own cost model.",
+        "required_action": "Separate random-bit, arithmetic, allocation and elapsed cost. Prove an upper bound using the geometric tail and the actual implementation cost assumptions.",
+        "acceptance": "Cost claim names units and assumptions; benchmark reports do not replace semantic probability or complexity proofs."
+      },
+      "status": "PARTIALLY_RESOLVED",
+      "result": "Exact bit tails, capped expected bits, second moment and a conditional arithmetic bit-cost bound are stated separately. Incorrect addition counter was reproduced and fixed.",
+      "remaining": "No instruction-level CPU or allocator benchmark/proof.",
+      "evidence": [
+        "guarded_sampler.py",
+        "PROOFS_V4.md",
+        "evidence/current/COST_COUNTER_RED.stderr.txt",
+        "evidence/current/COST_COUNTER_GREEN.stderr.txt"
+      ],
+      "kernel_verified": false
+    },
+    {
+      "id": "RV28",
+      "title": "Kakutani needs an actual nonempty safe support and correspondence",
+      "priority": "HIGH",
+      "historical_finding": {
+        "id": "RV28",
+        "priority": "HIGH",
+        "status": "FORMALISATION_REQUIREMENT",
+        "title": "Kakutani needs an actual nonempty safe support and correspondence",
+        "source": [
+          "MATHEMATICAL_PROOF.md:300–304",
+          "REMAINING_OBLIGATIONS.md:R05"
+        ],
+        "finding": "A finite probability simplex is safe for point concentration, but a useful fixed-point application needs at least one certified program and the exact nonempty convex values/graph conditions.",
+        "required_action": "Define the actual policy correspondence, state m≥1, prove its hypotheses and connect selections to typed operations. Revalidate support under context changes.",
+        "acceptance": "An imported/proved fixed-point theorem with discharged hypotheses, not an axiom returning the desired equilibrium."
+      },
+      "status": "PARTIALLY_RESOLVED",
+      "result": "The concrete quadratic singleton correspondence on [0,1] discharges nonempty/closed/convex/compact hypotheses by ordinary mathematics and has an effective irrational sampler on two typed outputs.",
+      "remaining": "General Kakutani formalisation/selection and full native measure semantics remain open; no arbitrary real-law realisability.",
+      "evidence": [
+        "PROOFS_V4.md",
+        "guarded_sampler.py",
+        "tests/test_reflective_sampler.py"
+      ],
+      "kernel_verified": false
+    },
+    {
+      "id": "RV29",
+      "title": "Quadratic convergence is a contraction result, not general Kakutani dynamics",
+      "priority": "MEDIUM",
+      "historical_finding": {
+        "id": "RV29",
+        "priority": "MEDIUM",
+        "status": "CLAIM_BOUNDARY",
+        "title": "Quadratic convergence is a contraction result, not general Kakutani dynamics",
+        "source": [
+          "MATHEMATICAL_PROOF.md:308–348"
+        ],
+        "finding": "V3 correctly separates existence and contraction. Its one-dimensional constructive example does not establish computability or convergence of arbitrary Kakutani selections.",
+        "required_action": "Preserve that distinction; pursue an actual set-valued application only with specified dynamics and computability hypotheses.",
+        "acceptance": "Separate theorem names for existence, selection realisation, convergence and quantitative rate; no generic convergence claim."
+      },
+      "status": "PROVED",
+      "result": "For the stated quadratic map, convergence follows from contraction after one iterate. General existence gives no such iteration result, and an alternating counterexample remains preserved.",
+      "remaining": "Ordinary proof; no general equilibrium convergence claim.",
+      "evidence": [
+        "PROOFS_V4.md",
+        "history/Orthemology_v3_Critical_Handoff/inputs/v3/MATHEMATICAL_PROOF.md"
+      ],
+      "kernel_verified": false
+    },
+    {
+      "id": "RV30",
+      "title": "Finite-source normalization transfer remains unmechanised",
+      "priority": "HIGH",
+      "historical_finding": {
+        "id": "RV30",
+        "priority": "HIGH",
+        "status": "OPEN_ACKNOWLEDGED",
+        "title": "Finite-source normalization transfer remains unmechanised",
+        "source": [
+          "MATHEMATICAL_PROOF.md:185–209",
+          "lean/NormalisationAndNumerals.lean",
+          "REMAINING_OBLIGATIONS.md:R08"
+        ],
+        "finding": "The finite-source System F transfer and modulo-conversion incompleteness use ordinary reasoning and external normalization. The supplied Lean module proves different portions, not the full transfer.",
+        "required_action": "Formalise the concrete source translation, typing preservation, nonempty-step simulation, compatible reduction, and confluence/no-normal-form bridge.",
+        "acceptance": "Machine-checked T13/T14 or an explicitly bounded weaker result, with all external theorem assumptions traced."
+      },
+      "status": "UNRESOLVED",
+      "result": "The source-to-System-F normalisation and conversion-completeness bridges are preserved ordinary results, not repaired by unrelated passing tests.",
+      "remaining": "Mechanise the actual translation, substitution and nonempty reduction simulation against an existing checked System F development.",
+      "evidence": [
+        "lean/NormalisationAndNumerals.lean",
+        "history/Orthemology_v3_Critical_Handoff/inputs/v3/MATHEMATICAL_PROOF.md",
+        "REMAINING_OBLIGATIONS.md"
+      ],
+      "kernel_verified": false
+    },
+    {
+      "id": "RV31",
+      "title": "Do not promise SN of every inhabitant of current semantic codes",
+      "priority": "MEDIUM",
+      "historical_finding": {
+        "id": "RV31",
+        "priority": "MEDIUM",
+        "status": "PRESERVE_VALID_OBSTRUCTION",
+        "title": "Do not promise SN of every inhabitant of current semantic codes",
+        "source": [
+          "MATHEMATICAL_PROOF.md:175–191",
+          "lean/NormalisationAndNumerals.lean:8–45"
+        ],
+        "finding": "K t Ω shows that every inhabited conversion-invariant code contains a non-strongly-normalising term under full compatible reduction. A chosen weak-head evaluation may nevertheless terminate.",
+        "required_action": "Keep semantic membership, source typing, strong normalization and evaluation-specific termination separate. Changing candidate closure is an explicit research branch, not a silent repair.",
+        "acceptance": "Regression/proof preserves the counterexample; new normalization theorem states exactly which fragment or reduction strategy it covers."
+      },
+      "status": "PROVED",
+      "result": "The compatible conversion semantics still admits K t Omega in every nonempty code, refuting semantic strong normalisation. Source typability, semantic membership, exact-term and modulo-conversion completeness remain distinct.",
+      "remaining": "Full formal conversion-completeness bridge remains RV30; weak-head behaviour is not inferred from this counterexample.",
+      "evidence": [
+        "lean/BoundaryResults.lean",
+        "history/Orthemology_v3_Critical_Handoff/inputs/v3/MATHEMATICAL_PROOF.md",
+        "PROOFS_V4.md"
+      ],
+      "kernel_verified": false
+    },
+    {
+      "id": "RV32",
+      "title": "Representation theorems are not full relational parametricity",
+      "priority": "HIGH",
+      "historical_finding": {
+        "id": "RV32",
+        "priority": "HIGH",
+        "status": "OPEN_ACKNOWLEDGED",
+        "title": "Representation theorems are not full relational parametricity",
+        "source": [
+          "MATHEMATICAL_PROOF.md:215–240",
+          "lean/BoundaryResults.lean:55–127",
+          "lean/NormalisationAndNumerals.lean:51–76",
+          "REMAINING_OBLIGATIONS.md:R04"
+        ],
+        "finding": "Identity, global selector and numeral theorems are useful, with marker-freshness and orbit hypotheses. They do not give a fundamental theorem for arbitrary relation environments and effects.",
+        "required_action": "Define admissible binary relations/couplings and prove the full syntax induction, or delimit the accepted representation fragment.",
+        "acceptance": "Precise relational statement compared with Pistone/effects metatheory; no false ambient Lean parametricity assumption."
+      },
+      "status": "PARTIALLY_RESOLVED",
+      "result": "A binary relation interpretation, renaming/substitution and finite pure fundamental theorem now supplement the three representation theorems.",
+      "remaining": "Compile this fragment. It does not imply all unary semantic realisers are Reynolds-parametric or cover effects/dependent contexts.",
+      "evidence": [
+        "lean/RelationalFragment.lean",
+        "PROOFS_V4.md",
+        "PRIOR_ART_COMPARISON.md"
+      ],
+      "kernel_verified": false
+    },
+    {
+      "id": "RV33",
+      "title": "Exact-k symbolic trace needs a matching formal trace object",
+      "priority": "HIGH",
+      "historical_finding": {
+        "id": "RV33",
+        "priority": "HIGH",
+        "status": "SCOPE_AND_REFINEMENT",
+        "title": "Exact-k symbolic trace needs a matching formal trace object",
+        "source": [
+          "MATHEMATICAL_PROOF.md:244–256",
+          "lean/BoundaryResults.lean:182–193",
+          "extensions.py:61–106"
+        ],
+        "finding": "The Python certificate checks a chosen head-step trace with a length. The Lean reduction transport result uses unindexed Red; it does not by itself certify that exact k or the same evaluation strategy.",
+        "required_action": "Add length-indexed, strategy-specific trace validation and prove substitution transport for fresh markers.",
+        "acceptance": "All-input behavior and prefix-cost claims reference the same certified trace; include divergent arguments and distinguish prefix cost from total evaluation."
+      },
+      "status": "PARTIALLY_RESOLVED",
+      "result": "Actual symbolic trace certificates and exact head-prefix costs remain checked finitely, with explicit freshness and strategy scope. Exported Cert.step reproduces each edge.",
+      "remaining": "Introduce and prove a length-indexed simulation for the actual parser/replayer; the old unindexed Red theorem alone does not certify length.",
+      "evidence": [
+        "extensions.py",
+        "proof_export.py",
+        "lean/GeneratedExamples.lean",
+        "PROOFS_V4.md"
+      ],
+      "kernel_verified": false
+    },
+    {
+      "id": "RV34",
+      "title": "Dependent semantic constructors are not a full dependent calculus",
+      "priority": "HIGH",
+      "historical_finding": {
+        "id": "RV34",
+        "priority": "HIGH",
+        "status": "OPEN_ACKNOWLEDGED",
+        "title": "Dependent semantic constructors are not a full dependent calculus",
+        "source": [
+          "lean/EffectsAndDependence.lean:118–212",
+          "MATHEMATICAL_PROOF.md:260–274",
+          "REMAINING_OBLIGATIONS.md:R03"
+        ],
+        "finding": "Coherence, tracked Pi, Church Sigma and conversion transport are semantic constructions. Context formation/substitution, full J, judgmental equality and checking are not supplied.",
+        "required_action": "Give exact syntax and universe rules, contextual interpretation and substitution before claiming a dependent proof assistant.",
+        "acceptance": "Formation/introduction/elimination/conversion theorems and a declared decidable fragment; no restoration of full Girard closure."
+      },
+      "status": "UNRESOLVED",
+      "result": "Coherent dependent Pi/Sigma remain the prior semantic construction. No full contextual DTT or J was silently substituted.",
+      "remaining": "Specify contextual substitution, identity eliminator computation, judgemental equality and admissible universe rules; compare complete primary models.",
+      "evidence": [
+        "lean/EffectsAndDependence.lean",
+        "PROOFS_V4.md",
+        "REMAINING_OBLIGATIONS.md",
+        "PRIOR_ART_COMPARISON.md"
+      ],
+      "kernel_verified": false
+    },
+    {
+      "id": "RV35",
+      "title": "Compiler/deployment advantage is unproved",
+      "priority": "HIGH",
+      "historical_finding": {
+        "id": "RV35",
+        "priority": "HIGH",
+        "status": "OPEN_ACKNOWLEDGED",
+        "title": "Compiler/deployment advantage is unproved",
+        "source": [
+          "REMAINING_OBLIGATIONS.md:R07",
+          "MATHEMATICAL_PROOF.md:244–256"
+        ],
+        "finding": "A useful symbolic specialization prototype is not a verified native compiler or a comparative performance result. Type erasure alone is established prior technique.",
+        "required_action": "Choose a narrow use case, prove contextual correctness under its observations/effects, implement or extract backend, then benchmark matched alternatives.",
+        "acceptance": "Reproducible correctness and performance protocol, not slogans about Neuralese, flatness or zero translation overhead."
+      },
+      "status": "UNRESOLVED",
+      "result": "Concrete licensed examples and finite source exports now exist, but no contextual native backend proof, empirical advantage or production deployment is demonstrated.",
+      "remaining": "Define observable contexts/effect strategy, verify backend lowering and run comparative workloads after metatheory.",
+      "evidence": [
+        "demonstrate.py",
+        "proof_export.py",
+        "OPERATIONAL_CONTRACT.md",
+        "REMAINING_OBLIGATIONS.md"
+      ],
+      "kernel_verified": false
+    },
+    {
+      "id": "RV36",
+      "title": "Global novelty remains unestablished and must be claim-specific",
+      "priority": "HIGH",
+      "historical_finding": {
+        "id": "RV36",
+        "priority": "HIGH",
+        "status": "RESEARCH_OBLIGATION",
+        "title": "Global novelty remains unestablished and must be claim-specific",
+        "source": [
+          "PRIOR_ART_AND_NOVELTY.md",
+          "SOURCES.md",
+          "REMAINING_OBLIGATIONS.md:R09"
+        ],
+        "finding": "V3 appropriately refuses a breakthrough label. The base intersection realisability, effectful polymorphism and simple probability arguments have substantial antecedents; no exact keyword match is not priority evidence.",
+        "required_action": "Compare precise theorem hypotheses/conclusions/proof mechanisms, including the integrated revision/observation target. Distinguish theorem, mechanisation, application and engineering contribution.",
+        "acceptance": "A theorem-by-theorem comparison matrix with actual primary passages and unresolved priority questions; no invented expert review."
+      },
+      "status": "UNRESOLVED",
+      "result": "No global foundational/novel theorem verdict is granted. Contributions are classified individually as ordinary boundaries, candidate mechanisation and verified-reference integration.",
+      "remaining": "Complete priority searches, theorem comparisons and independent specialist review; compilation does not settle novelty.",
+      "evidence": [
+        "PRIOR_ART_COMPARISON.md",
+        "THEOREM_CATALOGUE.json"
+      ],
+      "kernel_verified": false
+    },
+    {
+      "id": "RV37",
+      "title": "Prior-art abstracts are not complete theorem comparisons",
+      "priority": "MEDIUM",
+      "historical_finding": {
+        "id": "RV37",
+        "priority": "MEDIUM",
+        "status": "SOURCE_COVERAGE_LIMIT",
+        "title": "Prior-art abstracts are not complete theorem comparisons",
+        "source": [
+          "SOURCES.md",
+          "09_PRIOR_ART_AND_NOVELTY.md"
+        ],
+        "finding": "Both packets record limited source access. Abstracts establish relevant competing scope but cannot prove equivalence, novelty, or superiority of the exact construction.",
+        "required_action": "Read the closest actual theorem/proof statements and relevant formal sources; record version, section, hypotheses and verification scope.",
+        "acceptance": "Each claimed superiority/non-overlap has direct evidence and a worked instance or separating model."
+      },
+      "status": "PARTIALLY_RESOLVED",
+      "result": "Primary full theorem passages of Pistone and Kaminski/Katoen plus SAFE revocation semantics are compared. Dependency API was read at the actual pin. Other abstracts are labelled as such.",
+      "remaining": "The historical bibliography and all nearest full dependent/probabilistic semantics require a broader source review. Failed PDF screenshots are disclosed.",
+      "evidence": [
+        "PRIOR_ART_COMPARISON.md",
+        "SOURCES.json"
+      ],
+      "kernel_verified": false
+    },
+    {
+      "id": "RV38",
+      "title": "Discovery and direct test invocation differ",
+      "priority": "MEDIUM",
+      "historical_finding": {
+        "id": "RV38",
+        "priority": "MEDIUM",
+        "status": "PACKAGING_AND_TEST_ENTRYPOINT",
+        "title": "Discovery and direct test invocation differ",
+        "source": [
+          "tests/test_reflective_sampler.py",
+          "lean/HurkensBoundary.lean:3–8",
+          "inherited_v2/LICENSES/Apache-2.0.txt"
+        ],
+        "finding": "The sampler test file calls unittest.main before later test classes, so direct invocation can miss tests that discovery includes. The adapted Lean header also names a license path not present at the v3 root.",
+        "required_action": "Move the direct test entry point to the end; document canonical commands; fix distributed license pointers while preserving original input.",
+        "acceptance": "Discovery/direct command counts align as documented; all license paths resolve in the new release."
+      },
+      "status": "REPAIRED",
+      "result": "Complete suite discovery, original baseline, explicit mutants and positive demonstration have distinct runnable entrypoints and raw outputs. Candidate checking does not assume evidence discovery.",
+      "remaining": "Native parser/refinement and empirical evidence acquisition remain separate.",
+      "evidence": [
+        "verify.py",
+        "demonstrate.py",
+        "evidence/current/ORIGINAL_V3_UNIT.stderr.txt",
+        "evidence/current/ALL_LATEST.stderr.txt"
+      ],
+      "kernel_verified": false
+    },
+    {
+      "id": "RV39",
+      "title": "A trivial erasure lemma is not backend erasure correctness",
+      "priority": "MEDIUM",
+      "historical_finding": {
+        "id": "RV39",
+        "priority": "MEDIUM",
+        "status": "CLAIM_SCOPE",
+        "title": "A trivial erasure lemma is not backend erasure correctness",
+        "source": [
+          "lean/FiniteBridge.lean:215–222",
+          "THEOREM_CATALOGUE.json:T10"
+        ],
+        "finding": "finite_allE_erasure is a projection equality; useful as a local fact, but not the actual extraction/serialization/compiler correctness theorem.",
+        "required_action": "Keep it with its small scope and prove the full implemented erasure pipeline separately.",
+        "acceptance": "Catalogue states exactly what is erased and at which stage; backend equivalence theorem addresses actual outputs/effects."
+      },
+      "status": "PARTIALLY_RESOLVED",
+      "result": "Erasure is described only as source programme preservation. New specific JSON-to-Cert exports are reproducible, not a universal backend theorem.",
+      "remaining": "Prove actual frontend/backend contextual refinement; no zero-cost runtime claim.",
+      "evidence": [
+        "proof_export.py",
+        "tests/test_generated_examples.py",
+        "OPERATIONAL_CONTRACT.md",
+        "PROOFS_V4.md"
+      ],
+      "kernel_verified": false
+    },
+    {
+      "id": "RV40",
+      "title": "Addressed, refuted, repaired and open are different dispositions",
+      "priority": "HIGH",
+      "historical_finding": {
+        "id": "RV40",
+        "priority": "HIGH",
+        "status": "REVIEW_METHOD",
+        "title": "Addressed, refuted, repaired and open are different dispositions",
+        "source": [
+          "CRITICISM_LEDGER.json",
+          "REMAINING_OBLIGATIONS.md",
+          "ledgers/ORIGINAL_CRITICISM_CROSSWALK.md"
+        ],
+        "finding": "Thirty coverage entries are not thirty resolved objections. Some proposals were rightly refuted, some claims downgraded, and substantial proof/engineering tasks remain open.",
+        "required_action": "Retain original IDs and map each to evidence and current status; refute flawed demands rather than forcing a false positive result.",
+        "acceptance": "Every criticism has an exact artifact or an exact residual obligation and next method. No closure credit for renaming or acknowledging a gap."
+      },
+      "status": "REPAIRED",
+      "result": "Current ledgers distinguish proved ordinary statements, repaired tested defects, refuted targets, partial progress and unresolved obligations with evidence paths. Historical identities/statuses remain preserved.",
+      "remaining": "No claim every issue is closed; open obligations have explicit methods.",
+      "evidence": [
+        "CRITICISM_LEDGER.md",
+        "ledgers/CRITICISM_DISPOSITIONS.json",
+        "REMAINING_OBLIGATIONS.md"
+      ],
+      "kernel_verified": false
+    },
+    {
+      "id": "RV41",
+      "title": "Source scanning and ordinary build success do not validate statement fidelity",
+      "priority": "MEDIUM",
+      "historical_finding": {
+        "id": "RV41",
+        "priority": "MEDIUM",
+        "status": "TRUST_BOUNDARY",
+        "title": "Source scanning and ordinary build success do not validate statement fidelity",
+        "source": [
+          "verify.py:20–39,61–68",
+          "06_FORMAL_ACCEPTANCE_CONTRACT.md"
+        ],
+        "finding": "The scanner honestly calls itself hygiene, not a parser. A valid theorem can still encode a weakened objective; an unbuilt or unused declaration may escape selected audit coverage.",
+        "required_action": "Check mandatory theorem statements and dependency inventory against the frozen acceptance contract, and inspect all distributed source for unfinished work.",
+        "acceptance": "A changed theorem must be recorded as a changed theorem. Extra placeholders cannot hide in unaudited files or external assumptions."
+      },
+      "status": "PARTIALLY_RESOLVED",
+      "result": "Original seven formal modules are byte-identical. New required declarations have named roles and candidate types; static hygiene is not claimed to validate the statements.",
+      "remaining": "Actual kernel type/axiom readback and independent statement review remain mandatory.",
+      "evidence": [
+        "formal_targets.json",
+        "build_gate.py",
+        "evidence/current/SOURCE_CUSTODY_COMPARISON.json",
+        "ACCEPTANCE_STATUS.md"
+      ],
+      "kernel_verified": false
+    },
+    {
+      "id": "RV42",
+      "title": "Turn relation-extension preservation into revision policy",
+      "priority": "HIGH",
+      "historical_finding": {
+        "id": "RV42",
+        "priority": "HIGH",
+        "status": "CONSTRUCTIVE_OPPORTUNITY",
+        "title": "Turn relation-extension preservation into revision policy",
+        "source": [
+          "MATHEMATICAL_PROOF.md:98–106",
+          "07_RESEARCH_TARGETS.md:R-C",
+          "evidence/probes/POLICY_EXTENSION_NORMAL.json"
+        ],
+        "finding": "T05 has a useful policy-relative generalisation: added edges must preserve the current observation signature, not necessarily every conceivable old code. This links v3 to Γ revisions.",
+        "required_action": "Formalise the ordinary lemma supplied here, its full-family specialization, and dependency-aware check/revalidation rules.",
+        "acceptance": "General proof, finite checker soundness for explicit finite families, counterexample after discriminating refinement, and integration with real dispatch."
+      },
+      "status": "PARTIALLY_RESOLVED",
+      "result": "Finite active signature preservation is checked by edge admission and vocabulary-version binding. A second finite invariant checker proves constant productive observations; relevant changes revoke permissions.",
+      "remaining": "Kernel-check the general relation-closure criterion and actual Python refinement; finite active signatures are not all semantic predicates.",
+      "evidence": [
+        "operational.py",
+        "productive_observer.py",
+        "tests/test_productive_observer.py",
+        "tests/test_observation_revision.py",
+        "PROOFS_V4.md"
+      ],
+      "kernel_verified": false
+    },
+    {
+      "id": "C01",
+      "title": "The base model is standard rather than novel.",
+      "historical_crosswalk": {
+        "original": {
+          "id": "C01",
+          "source_original_lines": [
+            2,
+            24,
+            26,
+            100,
+            102,
+            103
+          ],
+          "criticism_or_proposal": "The base model is standard rather than novel.",
+          "disposition": "ACCEPTED; NOVELTY CLAIM REMOVED",
+          "response": "Retain the construction as a named baseline; identify standard realisability, intersection and polymorphism antecedents. Do not promote restatement or proof-source volume into discovery.",
+          "evidence": "PRIOR_ART_AND_NOVELTY.md",
+          "remaining": "Independent priority review of the new combined boundary remains open."
+        },
+        "review_note": "Downgrade is appropriate; positive novelty research remains open.",
+        "review_links": [
+          "RV36",
+          "RV37"
+        ]
+      },
+      "status": "PARTIALLY_RESOLVED",
+      "result": "Baseline is identified as standard realisability; no original foundational discovery is asserted. Primary comparisons now delimit the actual additions.",
+      "remaining": "Novelty of the integration and exact boundaries is not established.",
+      "review_links": [
+        "RV36",
+        "RV37"
+      ],
+      "evidence": [
+        "history/Orthemology_v3_Critical_Handoff/ledgers/ORIGINAL_CRITICISM_CROSSWALK.json",
+        "PRIOR_ART_COMPARISON.md",
+        "THEOREM_CATALOGUE.json",
+        "SOURCES.json"
+      ],
+      "kernel_verified": false
+    },
+    {
+      "id": "C02",
+      "title": "Lean was not compiled; review lacked the implementation.",
+      "historical_crosswalk": {
+        "original": {
+          "id": "C02",
+          "source_original_lines": [
+            19,
+            113,
+            157,
+            159,
+            163
+          ],
+          "criticism_or_proposal": "Lean was not compiled; review lacked the implementation.",
+          "disposition": "FILES SUPPLIED; KERNEL VERIFICATION OPEN",
+          "response": "Supply all seven modules, exact input custody, module hashes, axiom-query commands and a fail-closed verification entry point. Fresh acquisition attempts failed; default verification exits 2 without Lean.",
+          "evidence": "lean/; evidence/current/VERIFICATION.json",
+          "remaining": "Install the pinned toolchain on a network-enabled host, compile every module and repair all elaboration failures before claiming formal certification."
+        },
+        "review_note": "Reproduced environment limit and discovered extra orchestration gaps.",
+        "review_links": [
+          "RV01",
+          "RV02",
+          "RV03"
+        ]
+      },
+      "status": "PARTIALLY_RESOLVED",
+      "result": "Full implementation and original bytes are present, with enforced real compiler/audit gates.",
+      "remaining": "No Lean compilation has occurred.",
+      "review_links": [
+        "RV01",
+        "RV02",
+        "RV03"
+      ],
+      "evidence": [
+        "history/Orthemology_v3_Critical_Handoff/ledgers/ORIGINAL_CRITICISM_CROSSWALK.json",
+        "lean-toolchain",
+        "TOOLCHAIN_LOCK.json",
+        "evidence/current/TOOLCHAIN_ACTUAL.txt",
+        "evidence/current/TOOLCHAIN_CONNECTOR_DIAGNOSTICS.json",
+        "build_gate.py",
+        "verify.py",
+        "evidence/current/BUILD_GATE_RED.stderr.txt",
+        "evidence/current/BUILD_GATE_GREEN.stderr.txt",
+        "evidence/current/v4_mutations_complete/version_identity.json",
+        "formal_targets.json",
+        "lean/AuditSupport.lean",
+        "evidence/current/INVENTORY_RED.stderr.txt",
+        "evidence/current/INNER_AUDIT_GREEN.stderr.txt",
+        "evidence/current/v4_mutations_complete/audit_target_coverage.json"
+      ],
+      "kernel_verified": false
+    },
+    {
+      "id": "C03",
+      "title": "Finite syntax and de Bruijn checking were disconnected from semantic soundness.",
+      "historical_crosswalk": {
+        "original": {
+          "id": "C03",
+          "source_original_lines": [
+            20,
+            114,
+            166
+          ],
+          "criticism_or_proposal": "Finite syntax and de Bruijn checking were disconnected from semantic soundness.",
+          "disposition": "ORDINARY PROOF AND FORMAL SOURCE ADDED; REFINEMENT OPEN",
+          "response": "Prove renaming/substitution environment equations; define finite one-premise type generalisation and its semantic translation; add a proof-carrying checker. Independently compare direct de Bruijn and fresh-name substitutions.",
+          "evidence": "T09-T10; lean/FiniteBridge.lean; census.py",
+          "remaining": "Kernel-check these sources and prove the real Python/JSON parser and algorithm refine the verified checker, not merely a similarly named implementation."
+        },
+        "review_note": "Formal proposal exists; the real external checker bridge remains open.",
+        "review_links": [
+          "RV07",
+          "RV08",
+          "RV11",
+          "RV12"
+        ]
+      },
+      "status": "PARTIALLY_RESOLVED",
+      "result": "FiniteBridge, actual bounded syntax checks and reproducible proof exports connect explicit examples.",
+      "remaining": "Unbounded deployed JSON/Python refinement and kernel acceptance remain open.",
+      "review_links": [
+        "RV07",
+        "RV08",
+        "RV11",
+        "RV12"
+      ],
+      "evidence": [
+        "history/Orthemology_v3_Critical_Handoff/ledgers/ORIGINAL_CRITICISM_CROSSWALK.json",
+        "boundaries.py",
+        "reference.py",
+        "tests/test_v4_regressions.py",
+        "evidence/current/v4_mutations_complete/raw_duplicate_keys.json",
+        "operational.py",
+        "tests/test_v4_resources.py",
+        "evidence/current/RESOURCE_RED.stderr.txt",
+        "evidence/current/RESOURCE_GREEN.stderr.txt",
+        "evidence/current/FINAL_BOUNDARY_GREEN.stderr.txt",
+        "proof_export.py",
+        "lean/FiniteBridge.lean",
+        "lean/GeneratedExamples.lean",
+        "examples/EXPORT_INDEX.json",
+        "tests/test_generated_examples.py",
+        "PROOFS_V4.md",
+        "lean/InternalPolymorphism.lean",
+        "examples/identitySelf.json"
+      ],
+      "kernel_verified": false
+    },
+    {
+      "id": "C04",
+      "title": "Semantic universal introduction is infinitary and soundness nearly follows the definitions.",
+      "historical_crosswalk": {
+        "original": {
+          "id": "C04",
+          "source_original_lines": [
+            21
+          ],
+          "criticism_or_proposal": "Semantic universal introduction is infinitary and soundness nearly follows the definitions.",
+          "disposition": "FINITE SOURCE REPAIR",
+          "response": "FiniteDerives and finite Cert replace per-code premises by one finite body derivation. The semantic infinitary judgement is retained only as a target.",
+          "evidence": "T09-T10",
+          "remaining": "Kernel verification remains open; no claim that the original soundness proof was a deep new result."
+        },
+        "review_note": "One-premise finite introduction is meaningful progress, not proof that all semantic families are syntactically represented.",
+        "review_links": [
+          "RV11",
+          "RV12"
+        ]
+      },
+      "status": "PARTIALLY_RESOLVED",
+      "result": "FiniteDerives has finite universal-introduction premises and explicit substitution, unlike the preserved semantic rule.",
+      "remaining": "Compile the finite translation and verify the actual parser/checker.",
+      "review_links": [
+        "RV11",
+        "RV12"
+      ],
+      "evidence": [
+        "history/Orthemology_v3_Critical_Handoff/ledgers/ORIGINAL_CRITICISM_CROSSWALK.json",
+        "proof_export.py",
+        "lean/FiniteBridge.lean",
+        "lean/GeneratedExamples.lean",
+        "examples/EXPORT_INDEX.json",
+        "tests/test_generated_examples.py",
+        "PROOFS_V4.md",
+        "lean/InternalPolymorphism.lean",
+        "examples/identitySelf.json"
+      ],
+      "kernel_verified": false
+    },
+    {
+      "id": "C05",
+      "title": "Uniform-section equivalence unfolds the intersection definition.",
+      "historical_crosswalk": {
+        "original": {
+          "id": "C05",
+          "source_original_lines": [
+            22
+          ],
+          "criticism_or_proposal": "Uniform-section equivalence unfolds the intersection definition.",
+          "disposition": "ACCEPTED; NO NOVELTY CREDIT",
+          "response": "Identify it as structural bookkeeping; distinguish it from subsequent representation, atomicity and incompleteness results.",
+          "evidence": "Mathematical proof §1",
+          "remaining": "None for this criticism."
+        },
+        "review_note": "No novelty credit is appropriate; this does not invalidate useful interface definitions.",
+        "review_links": [
+          "RV14",
+          "RV18"
+        ]
+      },
+      "status": "PROVED",
+      "result": "The intersection/uniform-section equivalence is definitional and carries no novelty credit; operational nonvacuity now has separate explicit witnesses.",
+      "remaining": "No nondefinitional novelty is attributed to that equivalence.",
+      "review_links": [
+        "RV14",
+        "RV18"
+      ],
+      "evidence": [
+        "history/Orthemology_v3_Critical_Handoff/ledgers/ORIGINAL_CRITICISM_CROSSWALK.json",
+        "operational.py",
+        "demonstrate.py",
+        "lean/OperationalKernel.lean",
+        "evidence/current/POSITIVE_DEMONSTRATION.stdout.txt",
+        "lean/OperationalBoundary.lean",
+        "PROOFS_V4.md"
+      ],
+      "kernel_verified": false
+    },
+    {
+      "id": "C06",
+      "title": "The historical citations were supplied from memory and need verification.",
+      "historical_crosswalk": {
+        "original": {
+          "id": "C06",
+          "source_original_lines": [
+            28,
+            29,
+            30,
+            31,
+            32,
+            33,
+            49
+          ],
+          "criticism_or_proposal": "The historical citations were supplied from memory and need verification.",
+          "disposition": "BIBLIOGRAPHIC AUDIT WITH EXPLICIT LIMITS",
+          "response": "Verify primary bibliographic records and nearer current results. Separate original-read, abstract/extract-read and bibliography-only observations; do not equate our small erasure argument with Reynolds full theorem.",
+          "evidence": "SOURCES.md",
+          "remaining": "Girard/Hurkens original texts and unspecified Krivine/Kreisel works were not exhaustively reread; no historical completeness claim."
+        },
+        "review_note": "Preserve access limitations and do full theorem comparison where it matters.",
+        "review_links": [
+          "RV37"
+        ]
+      },
+      "status": "PARTIALLY_RESOLVED",
+      "result": "Closest primary theorem passages and operational prior art were inspected; the source ledger distinguishes abstract-only reads.",
+      "remaining": "Complete full-source verification of the inherited bibliography.",
+      "review_links": [
+        "RV37"
+      ],
+      "evidence": [
+        "history/Orthemology_v3_Critical_Handoff/ledgers/ORIGINAL_CRITICISM_CROSSWALK.json",
+        "PRIOR_ART_COMPARISON.md",
+        "SOURCES.json"
+      ],
+      "kernel_verified": false
+    },
+    {
+      "id": "C07",
+      "title": "The construction does not prove strong normalisation.",
+      "historical_crosswalk": {
+        "original": {
+          "id": "C07",
+          "source_original_lines": [
+            35
+          ],
+          "criticism_or_proposal": "The construction does not prove strong normalisation.",
+          "disposition": "RESOLVED BY A DISTINCTION AND AN OBSTRUCTION",
+          "response": "Prove every nonempty semantic code contains a non-SN term. Separately transfer SN for the finite source through its standard System F translation.",
+          "evidence": "T12-T13; lean/NormalisationAndNumerals.lean",
+          "remaining": "The source-to-System-F transfer is ordinary mathematics, not yet a compiled formal bridge."
+        },
+        "review_note": "Semantic SN is refuted as stated; finite-source SN still needs its separate formal bridge.",
+        "review_links": [
+          "RV30",
+          "RV31"
+        ]
+      },
+      "status": "PARTIALLY_RESOLVED",
+      "result": "Semantic SN is refuted by K t Omega; finite-source SN remains a separate ordinary translation argument.",
+      "remaining": "Mechanise the finite-source normalisation bridge.",
+      "review_links": [
+        "RV30",
+        "RV31"
+      ],
+      "evidence": [
+        "history/Orthemology_v3_Critical_Handoff/ledgers/ORIGINAL_CRITICISM_CROSSWALK.json",
+        "lean/NormalisationAndNumerals.lean",
+        "history/Orthemology_v3_Critical_Handoff/inputs/v3/MATHEMATICAL_PROOF.md",
+        "REMAINING_OBLIGATIONS.md",
+        "lean/BoundaryResults.lean",
+        "PROOFS_V4.md"
+      ],
+      "kernel_verified": false
+    },
+    {
+      "id": "C08",
+      "title": "No concrete practical application or comparative advantage is established.",
+      "historical_crosswalk": {
+        "original": {
+          "id": "C08",
+          "source_original_lines": [
+            39,
+            67,
+            117,
+            119,
+            188,
+            190
+          ],
+          "criticism_or_proposal": "No concrete practical application or comparative advantage is established.",
+          "disposition": "CONCRETE PROTOTYPE; COMPARATIVE CLAIM OPEN",
+          "response": "Build a symbolic selector certificate compiler, exact cost-prefix witness, internal typed probabilistic compiler and exact irrational reflective sampler. Provide counterexamples to their missing preconditions.",
+          "evidence": "Mathematical proof §§7,9-10; extensions.py",
+          "remaining": "No native backend, deployment result, representative benchmark, or advantage over Cedille/other frameworks has been shown."
+        },
+        "review_note": "Concrete prototype is progress, not comparative deployment evidence.",
+        "review_links": [
+          "RV35"
+        ]
+      },
+      "status": "PARTIALLY_RESOLVED",
+      "result": "An actual revision-sensitive certificate engine, source exports and productive examples supply concrete applications.",
+      "remaining": "No comparative deployment/performance advantage is proved.",
+      "review_links": [
+        "RV35"
+      ],
+      "evidence": [
+        "history/Orthemology_v3_Critical_Handoff/ledgers/ORIGINAL_CRITICISM_CROSSWALK.json",
+        "demonstrate.py",
+        "proof_export.py",
+        "OPERATIONAL_CONTRACT.md",
+        "REMAINING_OBLIGATIONS.md"
+      ],
+      "kernel_verified": false
+    },
+    {
+      "id": "C09",
+      "title": "K(K false) is a trivial inhabitant; diagonal-shaped types are not the hard part.",
+      "historical_crosswalk": {
+        "original": {
+          "id": "C09",
+          "source_original_lines": [
+            43
+          ],
+          "criticism_or_proposal": "K(K false) is a trivial inhabitant; diagonal-shaped types are not the hard part.",
+          "disposition": "ACCEPTED; DOWNGRADED",
+          "response": "Keep the inherited example only as a diagnostic. It receives no foundational or novelty credit. Use exact abstraction and observational boundaries instead.",
+          "evidence": "T05-T08; inherited_v2/",
+          "remaining": "None for the downgrade; full original Girard interface remains impossible under its own hypotheses."
+        },
+        "review_note": "Correct downgrade. A diagonal-looking inhabitant does not witness full reflective closure.",
+        "review_links": [
+          "RV17",
+          "RV18"
+        ]
+      },
+      "status": "PROVED",
+      "result": "The trivial diagonal-shaped inhabitant is retained only as a sanity example. Full Girard closure is independently specified and extracted from calls.",
+      "remaining": "The negative adapter and positive conjunction remain uncompiled.",
+      "review_links": [
+        "RV17",
+        "RV18"
+      ],
+      "evidence": [
+        "history/Orthemology_v3_Critical_Handoff/ledgers/ORIGINAL_CRITICISM_CROSSWALK.json",
+        "lean/HurkensBoundary.lean",
+        "lean/OperationalBoundary.lean",
+        "PROOFS_V4.md",
+        "TOOLCHAIN_LOCK.json",
+        "lean/OperationalKernel.lean"
+      ],
+      "kernel_verified": false
+    },
+    {
+      "id": "C10",
+      "title": "Kakutani is tangential and typed-support reasoning is tautological.",
+      "historical_crosswalk": {
+        "original": {
+          "id": "C10",
+          "source_original_lines": [
+            44,
+            115
+          ],
+          "criticism_or_proposal": "Kakutani is tangential and typed-support reasoning is tautological.",
+          "disposition": "SUBSTANTIVE RECONSTRUCTION",
+          "response": "Put probability in the source syntax with an explicit semantics, prove support preservation, expose the a.s. quantifier defect, prove atomicity/compactness conditions, and give an executable nonrational equilibrium.",
+          "evidence": "T01-T04; T18-T22",
+          "remaining": "Measure-theoretic and recursive probabilistic Lean formalisation remains open. Probability plus polymorphism itself is established prior art."
+        },
+        "review_note": "Mathematical reconstruction is substantive but must be tied to the actual carrier and certified operational policy.",
+        "review_links": [
+          "RV21",
+          "RV22",
+          "RV24",
+          "RV28",
+          "RV29"
+        ]
+      },
+      "status": "PARTIALLY_RESOLVED",
+      "result": "Kakutani is connected to an actual threshold source, finite typed support, residual licences and the atomicity boundary.",
+      "remaining": "General formal probability and general fixed-point selection remain open.",
+      "review_links": [
+        "RV21",
+        "RV22",
+        "RV24",
+        "RV28",
+        "RV29"
+      ],
+      "evidence": [
+        "history/Orthemology_v3_Critical_Handoff/ledgers/ORIGINAL_CRITICISM_CROSSWALK.json",
+        "PROOFS_V4.md",
+        "observations.py",
+        "productive_observer.py",
+        "lean/AlmostSureBoundary.lean",
+        "guarded_sampler.py",
+        "tests/test_reflective_sampler.py",
+        "history/Orthemology_v3_Critical_Handoff/inputs/v3/MATHEMATICAL_PROOF.md"
+      ],
+      "kernel_verified": false
+    },
+    {
+      "id": "C11",
+      "title": "The title suggests circumvention of an interface System F never had.",
+      "historical_crosswalk": {
+        "original": {
+          "id": "C11",
+          "source_original_lines": [
+            45
+          ],
+          "criticism_or_proposal": "The title suggests circumvention of an interface System F never had.",
+          "disposition": "RESOLVED",
+          "response": "Retitle around internal polymorphism, observational boundaries and reflective probability. Do not market the work as refuting Girard or inventing impredicativity.",
+          "evidence": "README.md; MATHEMATICAL_PROOF.md",
+          "remaining": "None for wording."
+        },
+        "review_note": "Wording correction can close the wording issue, not the positive OWOU construction.",
+        "review_links": [
+          "RV16",
+          "RV17"
+        ]
+      },
+      "status": "PROVED",
+      "result": "Documentation treats internal polymorphism and full same-level reflective closure as different capabilities, not a refutation of Girard.",
+      "remaining": "No changed logical interpretation is presented as retaining the inconsistent full package.",
+      "review_links": [
+        "RV16",
+        "RV17"
+      ],
+      "evidence": [
+        "history/Orthemology_v3_Critical_Handoff/ledgers/ORIGINAL_CRITICISM_CROSSWALK.json",
+        "lean/InternalPolymorphism.lean",
+        "examples/identitySelf.json",
+        "examples/trueSelfChoice.json",
+        "evidence/current/SOURCE_CUSTODY_COMPARISON.json",
+        "evidence/current/POSITIVE_DEMONSTRATION.stdout.txt",
+        "lean/HurkensBoundary.lean",
+        "lean/OperationalBoundary.lean",
+        "PROOFS_V4.md",
+        "TOOLCHAIN_LOCK.json"
+      ],
+      "kernel_verified": false
+    },
+    {
+      "id": "C12",
+      "title": "A novelty claim must survive a textbook derivation test, literature and compilation.",
+      "historical_crosswalk": {
+        "original": {
+          "id": "C12",
+          "source_original_lines": [
+            51,
+            53,
+            54,
+            55,
+            69,
+            70,
+            71,
+            72,
+            73
+          ],
+          "criticism_or_proposal": "A novelty claim must survive a textbook derivation test, literature and compilation.",
+          "disposition": "APPLIED; BREAKTHROUGH NOT ESTABLISHED",
+          "response": "Classify established facts, new-to-this-packet derivations and candidate synthesis separately. Provide strongest combined result in one sentence and its proof; retain external review and kernel obligations.",
+          "evidence": "PRIOR_ART_AND_NOVELTY.md",
+          "remaining": "Neither a completed expert novelty review nor kernel verification occurred. No guaranteed breakthrough can honestly be asserted."
+        },
+        "review_note": "No guaranteed breakthrough; demand strongest actual research, not forced priority.",
+        "review_links": [
+          "RV01",
+          "RV36",
+          "RV37"
+        ]
+      },
+      "status": "UNRESOLVED",
+      "result": "No new-foundation verdict is manufactured; ordinary mathematics, implementation checks, kernel proof and priority remain separate.",
+      "remaining": "Finish kernel verification and theorem-level literature/independent review.",
+      "review_links": [
+        "RV01",
+        "RV36",
+        "RV37"
+      ],
+      "evidence": [
+        "history/Orthemology_v3_Critical_Handoff/ledgers/ORIGINAL_CRITICISM_CROSSWALK.json",
+        "lean-toolchain",
+        "TOOLCHAIN_LOCK.json",
+        "evidence/current/TOOLCHAIN_ACTUAL.txt",
+        "evidence/current/TOOLCHAIN_CONNECTOR_DIAGNOSTICS.json",
+        "PRIOR_ART_COMPARISON.md",
+        "THEOREM_CATALOGUE.json",
+        "SOURCES.json"
+      ],
+      "kernel_verified": false
+    },
+    {
+      "id": "C13",
+      "title": "Prove the three-way tradeoff: internal universal code, real data, full ambient abstraction.",
+      "historical_crosswalk": {
+        "original": {
+          "id": "C13",
+          "source_original_lines": [
+            59
+          ],
+          "criticism_or_proposal": "Prove the three-way tradeoff: internal universal code, real data, full ambient abstraction.",
+          "disposition": "PROPOSED CLAIM REFUTED AS STATED",
+          "response": "A singleton code universe with Boolean values satisfies all three informal properties. Supply the corrected observation-factorisation boundary and a precise different compactness/atomicity trilemma with pairwise models.",
+          "evidence": "T04; T07-T08",
+          "remaining": "A classification for a fully specified richer universe/signature is a separate task; hidden Girard assumptions cannot be omitted."
+        },
+        "review_note": "Keep the countermodel to the underspecified demand. Do not restore omitted closure hypotheses by rhetoric.",
+        "review_links": [
+          "RV17",
+          "RV18"
+        ]
+      },
+      "status": "REFUTED",
+      "result": "The bare reviewer trilemma lacks closure hypotheses and has the preserved singleton countermodel. The valid richer full-section boundary is stated independently.",
+      "remaining": "Richer classifications require their own exact expressiveness hypotheses.",
+      "review_links": [
+        "RV17",
+        "RV18"
+      ],
+      "evidence": [
+        "history/Orthemology_v3_Critical_Handoff/ledgers/ORIGINAL_CRITICISM_CROSSWALK.json",
+        "lean/HurkensBoundary.lean",
+        "lean/OperationalBoundary.lean",
+        "PROOFS_V4.md",
+        "TOOLCHAIN_LOCK.json",
+        "lean/OperationalKernel.lean"
+      ],
+      "kernel_verified": false
+    },
+    {
+      "id": "C14",
+      "title": "Prove completeness or give a natural counterexample.",
+      "historical_crosswalk": {
+        "original": {
+          "id": "C14",
+          "source_original_lines": [
+            61
+          ],
+          "criticism_or_proposal": "Prove completeness or give a natural counterexample.",
+          "disposition": "COUNTEREXAMPLES PROVIDED",
+          "response": "K I 0 gives semantic identity membership without derivability. Primitive bottom⇒bottom plus Ω gives failure even modulo conversion for the finite source, using standard SN and confluence.",
+          "evidence": "T11-T14",
+          "remaining": "The stronger modulo-conversion result is not in Lean; positive fragments under changed candidate conditions may have known completeness and require separate analysis."
+        },
+        "review_note": "Ordinary counterexamples answer the alternative request; formal coverage is still partial.",
+        "review_links": [
+          "RV30",
+          "RV31"
+        ]
+      },
+      "status": "PARTIALLY_RESOLVED",
+      "result": "Exact-term incompleteness and the primitive-bottom modulo-conversion counterexample are preserved with their assumptions.",
+      "remaining": "Full formal simulation and any positive completeness fragment remain open.",
+      "review_links": [
+        "RV30",
+        "RV31"
+      ],
+      "evidence": [
+        "history/Orthemology_v3_Critical_Handoff/ledgers/ORIGINAL_CRITICISM_CROSSWALK.json",
+        "lean/NormalisationAndNumerals.lean",
+        "history/Orthemology_v3_Critical_Handoff/inputs/v3/MATHEMATICAL_PROOF.md",
+        "REMAINING_OBLIGATIONS.md",
+        "lean/BoundaryResults.lean",
+        "PROOFS_V4.md"
+      ],
+      "kernel_verified": false
+    },
+    {
+      "id": "C15",
+      "title": "Extend reduction with probabilistic/nondeterministic choice.",
+      "historical_crosswalk": {
+        "original": {
+          "id": "C15",
+          "source_original_lines": [
+            63
+          ],
+          "criticism_or_proposal": "Extend reduction with probabilistic/nondeterministic choice.",
+          "disposition": "NAIVE EXTENSION REFUTED; EFFECT REPAIR IMPLEMENTED",
+          "response": "Show two-branch bidirectional invariance collapses the code universe; implement explicit rational effects instead of identifying outcomes. Soundness tracks positive support and one-sample application.",
+          "evidence": "T05-T06; T18; extensions.py",
+          "remaining": "General nondeterminism plus scheduling, infinite recursion and contextual equivalence are not completed."
+        },
+        "review_note": "Reject treating stochastic branches as conversion equations; complete the quantitative semantics separately.",
+        "review_links": [
+          "RV25",
+          "RV26"
+        ]
+      },
+      "status": "PARTIALLY_RESOLVED",
+      "result": "The unsafe identification of branching with symmetric conversion is refuted; probability syntax and guarded typed execution now supply a sound declared alternative.",
+      "remaining": "Formal quantitative effect semantics remain open.",
+      "review_links": [
+        "RV25",
+        "RV26"
+      ],
+      "evidence": [
+        "history/Orthemology_v3_Critical_Handoff/ledgers/ORIGINAL_CRITICISM_CROSSWALK.json",
+        "extensions.py",
+        "guarded_sampler.py",
+        "tests/test_guarded_sampler.py",
+        "PROOFS_V4.md",
+        "operational.py",
+        "evidence/current/GUARDED_GREEN.stderr.txt"
+      ],
+      "kernel_verified": false
+    },
+    {
+      "id": "C16",
+      "title": "Produce a fully machine-verified reusable library and end-to-end checker.",
+      "historical_crosswalk": {
+        "original": {
+          "id": "C16",
+          "source_original_lines": [
+            65,
+            157,
+            159,
+            163,
+            166,
+            170,
+            183,
+            185
+          ],
+          "criticism_or_proposal": "Produce a fully machine-verified reusable library and end-to-end checker.",
+          "disposition": "PARTIAL ENGINEERING; OPEN KERNEL AND PARSER",
+          "response": "Seven module proposals, proof-carrying checker, 91 executable tests at final run, bounded census, isolated mutations, strict verification and clean-extraction receipt. Existing larger verified developments are acknowledged.",
+          "evidence": "verify.py; lean/; THEOREM_CATALOGUE.json",
+          "remaining": "Formalise the actual parser and compiler; obtain successful kernel output and axiom readback; compare API/usability against existing libraries."
+        },
+        "review_note": "Still open as an end-to-end deliverable.",
+        "review_links": [
+          "RV01",
+          "RV03",
+          "RV07",
+          "RV11",
+          "RV13"
+        ]
+      },
+      "status": "PARTIALLY_RESOLVED",
+      "result": "Reusable bounded source, mandatory build gates, formal targets and example exports are supplied.",
+      "remaining": "Kernel acceptance and end-to-end extracted/verified checker are still absent.",
+      "review_links": [
+        "RV01",
+        "RV03",
+        "RV07",
+        "RV11",
+        "RV13"
+      ],
+      "evidence": [
+        "history/Orthemology_v3_Critical_Handoff/ledgers/ORIGINAL_CRITICISM_CROSSWALK.json",
+        "lean-toolchain",
+        "TOOLCHAIN_LOCK.json",
+        "evidence/current/TOOLCHAIN_ACTUAL.txt",
+        "evidence/current/TOOLCHAIN_CONNECTOR_DIAGNOSTICS.json",
+        "formal_targets.json",
+        "lean/AuditSupport.lean",
+        "build_gate.py",
+        "evidence/current/INVENTORY_RED.stderr.txt",
+        "evidence/current/INNER_AUDIT_GREEN.stderr.txt",
+        "evidence/current/v4_mutations_complete/audit_target_coverage.json",
+        "boundaries.py",
+        "reference.py",
+        "tests/test_v4_regressions.py",
+        "evidence/current/v4_mutations_complete/raw_duplicate_keys.json",
+        "proof_export.py",
+        "lean/FiniteBridge.lean",
+        "lean/GeneratedExamples.lean",
+        "examples/EXPORT_INDEX.json",
+        "tests/test_generated_examples.py",
+        "PROOFS_V4.md",
+        "operational.py",
+        "observations.py",
+        "demonstrate.py",
+        "lean/OperationalKernel.lean",
+        "evidence/current/POSITIVE_DEMONSTRATION.stdout.txt"
+      ],
+      "kernel_verified": false
+    },
+    {
+      "id": "C17",
+      "title": "The overview calls the relation weak-head.",
+      "historical_crosswalk": {
+        "original": {
+          "id": "C17",
+          "source_original_lines": [
+            85
+          ],
+          "criticism_or_proposal": "The overview calls the relation weak-head.",
+          "disposition": "CORRECTED",
+          "response": "Distinguish full compatible semantic reduction from the reference evaluator head strategy. Normalisation counterexamples require and use the former.",
+          "evidence": "Mathematical proof §1",
+          "remaining": "None."
+        },
+        "review_note": "Terminological correction accepted; formal and executable strategy still need alignment.",
+        "review_links": [
+          "RV31",
+          "RV33"
+        ]
+      },
+      "status": "REFUTED",
+      "result": "The relation closes under both application contexts, so it is compatible reduction, not merely weak-head reduction.",
+      "remaining": "Head-strategy cost needs its separately stated indexed semantics.",
+      "review_links": [
+        "RV31",
+        "RV33"
+      ],
+      "evidence": [
+        "history/Orthemology_v3_Critical_Handoff/ledgers/ORIGINAL_CRITICISM_CROSSWALK.json",
+        "lean/BoundaryResults.lean",
+        "history/Orthemology_v3_Critical_Handoff/inputs/v3/MATHEMATICAL_PROOF.md",
+        "PROOFS_V4.md",
+        "extensions.py",
+        "proof_export.py",
+        "lean/GeneratedExamples.lean"
+      ],
+      "kernel_verified": false
+    },
+    {
+      "id": "C18",
+      "title": "The model is described interchangeably as PER, modified realisability and saturated sets.",
+      "historical_crosswalk": {
+        "original": {
+          "id": "C18",
+          "source_original_lines": [
+            103
+          ],
+          "criticism_or_proposal": "The model is described interchangeably as PER, modified realisability and saturated sets.",
+          "disposition": "QUALIFIED",
+          "response": "Call this exact model an invariant-set uniform realisability model. A PER has an explicit relational component, and reducibility candidates usually include further normalisation conditions. Similarity is not identity.",
+          "evidence": "PRIOR_ART_AND_NOVELTY.md",
+          "remaining": "No exact equivalence with every named historical model is claimed."
+        },
+        "review_note": "Qualified lineage is better than an unproved equivalence of models.",
+        "review_links": [
+          "RV37"
+        ]
+      },
+      "status": "PROVED",
+      "result": "The actual model is a one-place conversion-invariant predicate realisability construction; it is not identified with every PER or modified realisability construction.",
+      "remaining": "Historical lineage comparison remains bounded by inspected sources.",
+      "review_links": [
+        "RV37"
+      ],
+      "evidence": [
+        "history/Orthemology_v3_Critical_Handoff/ledgers/ORIGINAL_CRITICISM_CROSSWALK.json",
+        "PRIOR_ART_COMPARISON.md",
+        "SOURCES.json"
+      ],
+      "kernel_verified": false
+    },
+    {
+      "id": "C19",
+      "title": "Scale to full term-dependent types with conversion and equality.",
+      "historical_crosswalk": {
+        "original": {
+          "id": "C19",
+          "source_original_lines": [
+            125,
+            127,
+            130,
+            179,
+            181
+          ],
+          "criticism_or_proposal": "Scale to full term-dependent types with conversion and equality.",
+          "disposition": "COHERENT SEMANTIC EXTENSION; FULL DTT OPEN",
+          "response": "Add coherent term families, tracked Pi, Church Sigma/projections and a conversion-indexed equality/transport semantics; show why arbitrary syntax-sensitive fibres fail.",
+          "evidence": "Mathematical proof §8; lean/EffectsAndDependence.lean",
+          "remaining": "Full context syntax, substitutions, J, judgemental equality, universe rules and checker metatheory must still be supplied."
+        },
+        "review_note": "Full DTT still open; semantic constructors are a useful intermediate step.",
+        "review_links": [
+          "RV34"
+        ]
+      },
+      "status": "UNRESOLVED",
+      "result": "The semantic coherent Pi/Sigma constructions are retained without claiming full term-dependent calculus.",
+      "remaining": "Supply contextual rules, J, judgemental equality, universe discipline and checker soundness.",
+      "review_links": [
+        "RV34"
+      ],
+      "evidence": [
+        "history/Orthemology_v3_Critical_Handoff/ledgers/ORIGINAL_CRITICISM_CROSSWALK.json",
+        "lean/EffectsAndDependence.lean",
+        "PROOFS_V4.md",
+        "REMAINING_OBLIGATIONS.md",
+        "PRIOR_ART_COMPARISON.md"
+      ],
+      "kernel_verified": false
+    },
+    {
+      "id": "C20",
+      "title": "Obtain a flat self-contained foundation through executable semantic uniformity alone.",
+      "historical_crosswalk": {
+        "original": {
+          "id": "C20",
+          "source_original_lines": [
+            130
+          ],
+          "criticism_or_proposal": "Obtain a flat self-contained foundation through executable semantic uniformity alone.",
+          "disposition": "OVERCLAIM REJECTED; PRECISE REQUIREMENT RETAINED",
+          "response": "Internal quantified codes and self-instantiation remain valid. That is not Type:Type; the model still uses an ambient foundation, and arbitrary semantic membership has not become a decidable check.",
+          "evidence": "Mathematical proof §§1,8",
+          "remaining": "A richer flat syntax and its executable admissibility judgement need an independent soundness argument; the full Girard package cannot be silently restored."
+        },
+        "review_note": "Preserve internal All while refusing the stronger inconsistent interface.",
+        "review_links": [
+          "RV13",
+          "RV14",
+          "RV16",
+          "RV17"
+        ]
+      },
+      "status": "PARTIALLY_RESOLVED",
+      "result": "A positive operational schema is constructed at fixed K, internal All retained; no Type:Type or arbitrary ambient closure is postulated.",
+      "remaining": "This is not an autonomous universal foundation; full intended operational refinement remains open.",
+      "review_links": [
+        "RV13",
+        "RV14",
+        "RV16",
+        "RV17"
+      ],
+      "evidence": [
+        "history/Orthemology_v3_Critical_Handoff/ledgers/ORIGINAL_CRITICISM_CROSSWALK.json",
+        "operational.py",
+        "observations.py",
+        "demonstrate.py",
+        "lean/OperationalKernel.lean",
+        "PROOFS_V4.md",
+        "evidence/current/POSITIVE_DEMONSTRATION.stdout.txt",
+        "lean/InternalPolymorphism.lean",
+        "examples/identitySelf.json",
+        "examples/trueSelfChoice.json",
+        "evidence/current/SOURCE_CUSTODY_COMPARISON.json",
+        "lean/HurkensBoundary.lean",
+        "lean/OperationalBoundary.lean",
+        "TOOLCHAIN_LOCK.json"
+      ],
+      "kernel_verified": false
+    },
+    {
+      "id": "C21",
+      "title": "System F_omega is offered as an example of full term-dependent theory.",
+      "historical_crosswalk": {
+        "original": {
+          "id": "C21",
+          "source_original_lines": [
+            127
+          ],
+          "criticism_or_proposal": "System F_omega is offered as an example of full term-dependent theory.",
+          "disposition": "CORRECTED",
+          "response": "Distinguish higher-kinded polymorphism from types depending on ordinary terms; higher type operators alone are not full term dependence.",
+          "evidence": "PRIOR_ART_AND_NOVELTY.md",
+          "remaining": "None for this terminological correction."
+        },
+        "review_note": "The terminology correction stands; higher kinds are not full term dependence.",
+        "review_links": [
+          "RV34"
+        ]
+      },
+      "status": "REFUTED",
+      "result": "System F_omega adds higher-kinded type-level abstraction; it is not itself a full term-dependent type theory. This supplied classification is not used to infer a DTT result.",
+      "remaining": "No proposed full DTT theorem is closed by correcting that example.",
+      "review_links": [
+        "RV34"
+      ],
+      "evidence": [
+        "history/Orthemology_v3_Critical_Handoff/ledgers/ORIGINAL_CRITICISM_CROSSWALK.json",
+        "lean/EffectsAndDependence.lean",
+        "PROOFS_V4.md",
+        "REMAINING_OBLIGATIONS.md",
+        "PRIOR_ART_COMPARISON.md"
+      ],
+      "kernel_verified": false
+    },
+    {
+      "id": "C22",
+      "title": "Runtime type operations with zero overhead would be a new compiler breakthrough.",
+      "historical_crosswalk": {
+        "original": {
+          "id": "C22",
+          "source_original_lines": [
+            136,
+            138,
+            139,
+            142
+          ],
+          "criticism_or_proposal": "Runtime type operations with zero overhead would be a new compiler breakthrough.",
+          "disposition": "ERASURE IMPLEMENTED; NOVELTY/PERFORMANCE QUALIFIED",
+          "response": "Type introduction and elimination erase to exactly the same executable effect expression. Distinguish that equality from runtime inspection/passing of arbitrary semantic type values, which erasure does not supply.",
+          "evidence": "T09-T10; extensions.py; tests/test_extensions.py",
+          "remaining": "No runtime introspective type system, zero total checking cost, hardware benchmark or new backend is proved. Zero-cost dependent erasure has prior art."
+        },
+        "review_note": "Local erasure is not a new zero-cost compiler by itself.",
+        "review_links": [
+          "RV35",
+          "RV39"
+        ]
+      },
+      "status": "UNRESOLVED",
+      "result": "Type erasure alone is not a runtime optimisation breakthrough. Source exports are explicit, but no native backend proof is delivered.",
+      "remaining": "Specify and verify backend lowering, then measure cost against existing implementations.",
+      "review_links": [
+        "RV35",
+        "RV39"
+      ],
+      "evidence": [
+        "history/Orthemology_v3_Critical_Handoff/ledgers/ORIGINAL_CRITICISM_CROSSWALK.json",
+        "demonstrate.py",
+        "proof_export.py",
+        "OPERATIONAL_CONTRACT.md",
+        "REMAINING_OBLIGATIONS.md",
+        "tests/test_generated_examples.py",
+        "PROOFS_V4.md"
+      ],
+      "kernel_verified": false
+    },
+    {
+      "id": "C23",
+      "title": "Derive free theorems or full relational parametricity.",
+      "historical_crosswalk": {
+        "original": {
+          "id": "C23",
+          "source_original_lines": [
+            150,
+            152,
+            153,
+            182
+          ],
+          "criticism_or_proposal": "Derive free theorems or full relational parametricity.",
+          "disposition": "THREE FREE THEOREMS; GENERAL RESULT OPEN",
+          "response": "Derive identity behaviour, a global Boolean projection for marker-free terms, and Church numeral representation from principal/union/orbit codes and marker substitution.",
+          "evidence": "T15-T17; lean/BoundaryResults.lean; lean/NormalisationAndNumerals.lean",
+          "remaining": "General relations/abstraction theorem, higher kinds and effects require more than these examples; stronger existing completeness/parametricity work is cited."
+        },
+        "review_note": "Representation examples are valuable but narrower than a general relational abstraction theorem.",
+        "review_links": [
+          "RV15",
+          "RV32"
+        ]
+      },
+      "status": "PARTIALLY_RESOLVED",
+      "result": "A finite-source binary logical-relations fundamental theorem now accompanies the identity/Boolean/numeral representation arguments.",
+      "remaining": "Kernel-check it; establish any stronger semantic or effectful relational theorem separately.",
+      "review_links": [
+        "RV15",
+        "RV32"
+      ],
+      "evidence": [
+        "history/Orthemology_v3_Critical_Handoff/ledgers/ORIGINAL_CRITICISM_CROSSWALK.json",
+        "lean/OperationalKernel.lean",
+        "lean/RelationalFragment.lean",
+        "PROOFS_V4.md",
+        "PRIOR_ART_COMPARISON.md"
+      ],
+      "kernel_verified": false
+    },
+    {
+      "id": "C24",
+      "title": "Invariant subsets are referred to as a topology supplying parametricity.",
+      "historical_crosswalk": {
+        "original": {
+          "id": "C24",
+          "source_original_lines": [
+            153
+          ],
+          "criticism_or_proposal": "Invariant subsets are referred to as a topology supplying parametricity.",
+          "disposition": "FORMULATION CORRECTED",
+          "response": "Use the concrete lattice of unions of conversion classes. Do not infer continuity, geometric properties or Reynolds logical relations merely by calling it a topology.",
+          "evidence": "T05; T15-T17",
+          "remaining": "No general topological parametricity theorem has been proved."
+        },
+        "review_note": "Do not promote invariant subsets alone to general topological parametricity.",
+        "review_links": [
+          "RV32",
+          "RV42"
+        ]
+      },
+      "status": "PARTIALLY_RESOLVED",
+      "result": "No unsupported topology-to-parametricity implication is used. Explicit invariant relations and a finite fundamental induction supply the declared result.",
+      "remaining": "General semantic parametricity still requires stronger hypotheses and comparison.",
+      "review_links": [
+        "RV32",
+        "RV42"
+      ],
+      "evidence": [
+        "history/Orthemology_v3_Critical_Handoff/ledgers/ORIGINAL_CRITICISM_CROSSWALK.json",
+        "lean/RelationalFragment.lean",
+        "PROOFS_V4.md",
+        "PRIOR_ART_COMPARISON.md",
+        "operational.py",
+        "productive_observer.py",
+        "tests/test_productive_observer.py",
+        "tests/test_observation_revision.py"
+      ],
+      "kernel_verified": false
+    },
+    {
+      "id": "C25",
+      "title": "AST-to-semantics verification would make the system production-grade.",
+      "historical_crosswalk": {
+        "original": {
+          "id": "C25",
+          "source_original_lines": [
+            166,
+            170
+          ],
+          "criticism_or_proposal": "AST-to-semantics verification would make the system production-grade.",
+          "disposition": "DISTINCTIONS RESTORED",
+          "response": "A sound checked calculus is valuable but does not automatically verify an external parser, implementation, resource bounds, build chain or deployment. Supply granular evidence statuses.",
+          "evidence": "REMAINING_OBLIGATIONS.md; verify.py",
+          "remaining": "Production assurance needs threat/resource models, actual refinement and integration testing beyond this packet."
+        },
+        "review_note": "Formal AST soundness is one part of production assurance, not its entirety.",
+        "review_links": [
+          "RV10",
+          "RV11",
+          "RV20"
+        ]
+      },
+      "status": "UNRESOLVED",
+      "result": "Even verified AST semantics would not alone certify packaging, resources, OS isolation, network authenticity or a deployed runtime. Tested bounds and trust assumptions are now explicit.",
+      "remaining": "Complete implementation refinement and external assurance obligations rather than labelling production-grade.",
+      "review_links": [
+        "RV10",
+        "RV11",
+        "RV20"
+      ],
+      "evidence": [
+        "history/Orthemology_v3_Critical_Handoff/ledgers/ORIGINAL_CRITICISM_CROSSWALK.json",
+        "boundaries.py",
+        "reference.py",
+        "operational.py",
+        "guarded_sampler.py",
+        "build_gate.py",
+        "evidence/current/RESOURCE_RED.stderr.txt",
+        "evidence/current/FINAL_BOUNDARY_RED.stderr.txt",
+        "PROOFS_V4.md",
+        "proof_export.py",
+        "lean/FiniteBridge.lean",
+        "lean/GeneratedExamples.lean",
+        "examples/EXPORT_INDEX.json",
+        "tests/test_generated_examples.py",
+        "OPERATIONAL_CONTRACT.md"
+      ],
+      "kernel_verified": false
+    },
+    {
+      "id": "C26",
+      "title": "Randomised equilibrium should preserve the intended universal typing.",
+      "historical_crosswalk": {
+        "original": {
+          "id": "C26",
+          "source_original_lines": [
+            44,
+            63
+          ],
+          "criticism_or_proposal": "Randomised equilibrium should preserve the intended universal typing.",
+          "disposition": "NEW DESIGN HAZARD RESOLVED UNDER EXPLICIT HYPOTHESES",
+          "response": "The uncountable a.s. intersection counterexample is excluded by positive-atom concentration or a uniform support certificate. Atomicity at the observation quotient is the exact condition for the stated rich event family.",
+          "evidence": "T01-T04; T18",
+          "remaining": "Formal measure instantiation and other/coarser code families remain to be analysed."
+        },
+        "review_note": "Point-concentration criterion is precise; formal measure instance and revision interaction remain.",
+        "review_links": [
+          "RV21",
+          "RV22",
+          "RV23",
+          "RV24"
+        ]
+      },
+      "status": "PARTIALLY_RESOLVED",
+      "result": "Exact refinement defect and countable-event protection determine when universal a.s. typing is valid; declared models and licences enforce a finite subset of those obligations.",
+      "remaining": "Kernel-check actual measures; no arbitrary-law decision procedure exists as shown by Q8.",
+      "review_links": [
+        "RV21",
+        "RV22",
+        "RV23",
+        "RV24"
+      ],
+      "evidence": [
+        "history/Orthemology_v3_Critical_Handoff/ledgers/ORIGINAL_CRITICISM_CROSSWALK.json",
+        "PROOFS_V4.md",
+        "observations.py",
+        "productive_observer.py",
+        "operational.py",
+        "tests/test_observation_revision.py",
+        "tests/test_revision_transport.py",
+        "evidence/current/OBSERVATION_RED.stderr.txt",
+        "evidence/current/TRANSPORT_GREEN.stderr.txt",
+        "lean/AlmostSureBoundary.lean"
+      ],
+      "kernel_verified": false
+    },
+    {
+      "id": "C27",
+      "title": "A fixed point alone needs an actual usable realisation.",
+      "historical_crosswalk": {
+        "original": {
+          "id": "C27",
+          "source_original_lines": [
+            44,
+            63,
+            67
+          ],
+          "criticism_or_proposal": "A fixed point alone needs an actual usable realisation.",
+          "disposition": "CONCRETE EXACT REALISATION",
+          "response": "Finite rational effects cannot represent sqrt(2)-1; an exact fair-bit prefix machine can sample it with P(N>n)=2^-n and expected two bits. It only returns certified internal Boolean selectors.",
+          "evidence": "T20-T22; tests/test_reflective_sampler.py",
+          "remaining": "The infinite productive sampler and its measure/cost proof are not yet kernel-verified or part of the finite source checker."
+        },
+        "review_note": "Prefix realisation and ordinary proof are progress; actual productive typed source and machine cost remain.",
+        "review_links": [
+          "RV26",
+          "RV27",
+          "RV28"
+        ]
+      },
+      "status": "PARTIALLY_RESOLVED",
+      "result": "The quadratic fixed point has a checked-prefix exact fair-bit realisation and ordinary mass/cost proof; pending risk is licensed explicitly.",
+      "remaining": "Formalise the unbounded source and measure, not just finite prefixes.",
+      "review_links": [
+        "RV26",
+        "RV27",
+        "RV28"
+      ],
+      "evidence": [
+        "history/Orthemology_v3_Critical_Handoff/ledgers/ORIGINAL_CRITICISM_CROSSWALK.json",
+        "guarded_sampler.py",
+        "operational.py",
+        "tests/test_guarded_sampler.py",
+        "PROOFS_V4.md",
+        "evidence/current/GUARDED_GREEN.stderr.txt",
+        "evidence/current/COST_COUNTER_RED.stderr.txt",
+        "evidence/current/COST_COUNTER_GREEN.stderr.txt",
+        "tests/test_reflective_sampler.py"
+      ],
+      "kernel_verified": false
+    },
+    {
+      "id": "C28",
+      "title": "Existence, stability, correctness and self-certification may be conflated.",
+      "historical_crosswalk": {
+        "original": {
+          "id": "C28",
+          "source_original_lines": [
+            44,
+            67,
+            73
+          ],
+          "criticism_or_proposal": "Existence, stability, correctness and self-certification may be conflated.",
+          "disposition": "SEPARATED",
+          "response": "Kakutani is used only with its compactness hypotheses; convergence is proved independently for g(p)=(1-p²)/2. Equilibrium supplies response laws, not proofs of arbitrary propositions or self-authorisation.",
+          "evidence": "T19-T22; MATHEMATICAL_PROOF.md",
+          "remaining": "No theorem of general fixed-point computability or universal equilibrium convergence."
+        },
+        "review_note": "Keep existence, convergence, semantics and trust distinct.",
+        "review_links": [
+          "RV29"
+        ]
+      },
+      "status": "PROVED",
+      "result": "Existence, contraction convergence, typing, authority and operational certificate validity have distinct definitions and proofs/counterexamples.",
+      "remaining": "No general convergence or self-certification follows from an equilibrium.",
+      "review_links": [
+        "RV29"
+      ],
+      "evidence": [
+        "history/Orthemology_v3_Critical_Handoff/ledgers/ORIGINAL_CRITICISM_CROSSWALK.json",
+        "PROOFS_V4.md",
+        "history/Orthemology_v3_Critical_Handoff/inputs/v3/MATHEMATICAL_PROOF.md"
+      ],
+      "kernel_verified": false
+    },
+    {
+      "id": "C29",
+      "title": "High leverage requires comparison, not framing.",
+      "historical_crosswalk": {
+        "original": {
+          "id": "C29",
+          "source_original_lines": [
+            39,
+            65,
+            67,
+            75,
+            117,
+            119
+          ],
+          "criticism_or_proposal": "High leverage requires comparison, not framing.",
+          "disposition": "PARTIAL: CONCRETE TASK; SUPERIORITY OPEN",
+          "response": "State the useful exact task (symbolic all-input certification plus erased self-instantiation and sampling) and acknowledge existing realisability, Cedille, algebraic-effect and formalised System F work.",
+          "evidence": "PRIOR_ART_AND_NOVELTY.md",
+          "remaining": "No evidence that existing frameworks cannot express this task more effectively; external reuse and benchmark evidence still needed."
+        },
+        "review_note": "Comparison remains an empirical/formal work item, not a prerequisite for every useful local theorem.",
+        "review_links": [
+          "RV35",
+          "RV36"
+        ]
+      },
+      "status": "UNRESOLVED",
+      "result": "Actual examples and theorem-level comparisons replace a framing-only assessment, but superiority is not shown.",
+      "remaining": "Independent comparison and representative deployment benchmarks remain required.",
+      "review_links": [
+        "RV35",
+        "RV36"
+      ],
+      "evidence": [
+        "history/Orthemology_v3_Critical_Handoff/ledgers/ORIGINAL_CRITICISM_CROSSWALK.json",
+        "demonstrate.py",
+        "proof_export.py",
+        "OPERATIONAL_CONTRACT.md",
+        "REMAINING_OBLIGATIONS.md",
+        "PRIOR_ART_COMPARISON.md",
+        "THEOREM_CATALOGUE.json"
+      ],
+      "kernel_verified": false
+    },
+    {
+      "id": "C30",
+      "title": "End only when all mathematical and verification burdens are met.",
+      "historical_crosswalk": {
+        "original": {
+          "id": "C30",
+          "source_original_lines": [
+            47,
+            69,
+            70,
+            71,
+            72,
+            73
+          ],
+          "criticism_or_proposal": "End only when all mathematical and verification burdens are met.",
+          "disposition": "NO FALSE CLOSURE",
+          "response": "Every criticism has a disposition, but unresolved demands remain genuinely open. The packet does not label coverage as solution, source as kernel evidence, or limited novelty search as priority proof.",
+          "evidence": "REMAINING_OBLIGATIONS.md; README.md",
+          "remaining": "The numbered remaining obligations are the exact continuation frontier, not a promise of asynchronous work."
+        },
+        "review_note": "Coverage is not closure. Produce actual work and exact residuals.",
+        "review_links": [
+          "RV40",
+          "RV41"
+        ]
+      },
+      "status": "UNRESOLVED",
+      "result": "This is a reference-verified checkpoint with exact remaining frontier, not complete mathematical/kernel/novelty closure.",
+      "remaining": "Continue each remaining obligation from actual bytes and evidence.",
+      "review_links": [
+        "RV40",
+        "RV41"
+      ],
+      "evidence": [
+        "history/Orthemology_v3_Critical_Handoff/ledgers/ORIGINAL_CRITICISM_CROSSWALK.json",
+        "CRITICISM_LEDGER.md",
+        "ledgers/CRITICISM_DISPOSITIONS.json",
+        "REMAINING_OBLIGATIONS.md",
+        "formal_targets.json",
+        "build_gate.py",
+        "evidence/current/SOURCE_CUSTODY_COMPARISON.json",
+        "ACCEPTANCE_STATUS.md"
+      ],
+      "kernel_verified": false
+    },
+    {
+      "id": "V4-N01",
+      "title": "Interrupted root manifest omitted three nested manifests",
+      "status": "REPAIRED",
+      "result": "Exact nested bytes matched the authoritative handoff; the new gate requires exact coverage including nested manifests.",
+      "remaining": "Finite implementation evidence only; not a kernel or hostile-host security proof.",
+      "evidence": [
+        "build_gate.py",
+        "evidence/current/SOURCE_CUSTODY_COMPARISON.json",
+        "evidence/current/v4_mutations_complete/nested_manifest_coverage.json"
+      ],
+      "kernel_verified": false
+    },
+    {
+      "id": "V4-N02",
+      "title": "An intermediate overflow could be discarded before final validation",
+      "status": "REPAIRED",
+      "result": "Every intermediate value is structurally bounded and typed before further composition.",
+      "remaining": "Finite implementation evidence only; not a kernel or hostile-host security proof.",
+      "evidence": [
+        "operational.py",
+        "tests/test_v4_resources.py",
+        "evidence/current/RESOURCE_RED.stderr.txt",
+        "evidence/current/RESOURCE_GREEN.stderr.txt"
+      ],
+      "kernel_verified": false
+    },
+    {
+      "id": "V4-N03",
+      "title": "Substitution allocated a large duplicated output before checking it",
+      "status": "REPAIRED",
+      "result": "Budget is consumed during construction and insertion, stopping before the oversized postimage exists.",
+      "remaining": "Finite implementation evidence only; not a kernel or hostile-host security proof.",
+      "evidence": [
+        "reference.py",
+        "tests/test_v4_resources.py",
+        "evidence/current/RESOURCE_RED.stderr.txt",
+        "evidence/current/RESOURCE_GREEN.stderr.txt"
+      ],
+      "kernel_verified": false
+    },
+    {
+      "id": "V4-N04",
+      "title": "Malformed probability revision host inputs escaped declared rejection",
+      "status": "REPAIRED",
+      "result": "Host model names and source shapes are validated before table access and arithmetic.",
+      "remaining": "Finite implementation evidence only; not a kernel or hostile-host security proof.",
+      "evidence": [
+        "operational.py",
+        "tests/test_v4_resources.py",
+        "evidence/current/RESOURCE_GREEN.stderr.txt"
+      ],
+      "kernel_verified": false
+    },
+    {
+      "id": "V4-N05",
+      "title": "Malformed native ticket could cause unchecked lookup failure",
+      "status": "REPAIRED",
+      "result": "The issuer, exact licence type, token shape and registry membership are checked before lookup.",
+      "remaining": "Finite implementation evidence only; not a kernel or hostile-host security proof.",
+      "evidence": [
+        "operational.py",
+        "tests/test_revision_transport.py",
+        "evidence/current/TRANSPORT_RED.stderr.txt",
+        "evidence/current/TRANSPORT_GREEN.stderr.txt"
+      ],
+      "kernel_verified": false
+    },
+    {
+      "id": "V4-N06",
+      "title": "Serialization built a multi-megabyte output before refusing the byte limit",
+      "status": "REPAIRED",
+      "result": "Bounded incremental encoding refuses before retaining the complete oversized output; allocation regression is preserved.",
+      "remaining": "Finite implementation evidence only; not a kernel or hostile-host security proof.",
+      "evidence": [
+        "boundaries.py",
+        "tests/test_final_boundaries.py",
+        "evidence/current/FINAL_BOUNDARY_RED.stderr.txt",
+        "evidence/current/FINAL_BOUNDARY_GREEN.stderr.txt"
+      ],
+      "kernel_verified": false
+    },
+    {
+      "id": "V4-N07",
+      "title": "Failed custody preflight still allowed source execution",
+      "status": "REPAIRED",
+      "result": "The verifier returns a structured failure before any test/build process after failed manifest or specification checks.",
+      "remaining": "Finite implementation evidence only; not a kernel or hostile-host security proof.",
+      "evidence": [
+        "verify.py",
+        "tests/test_final_boundaries.py",
+        "evidence/current/FINAL_BOUNDARY_RED.stderr.txt",
+        "evidence/current/FINAL_BOUNDARY_GREEN.stderr.txt"
+      ],
+      "kernel_verified": false
+    },
+    {
+      "id": "V4-N08",
+      "title": "The sampler arithmetic count understated additions",
+      "status": "REPAIRED",
+      "result": "The explicit cost counter is corrected from five to six additions; excluded costs and big-integer cost model remain explicit.",
+      "remaining": "Finite implementation evidence only; not a kernel or hostile-host security proof.",
+      "evidence": [
+        "guarded_sampler.py",
+        "PROOFS_V4.md",
+        "evidence/current/COST_COUNTER_RED.stderr.txt",
+        "evidence/current/COST_COUNTER_GREEN.stderr.txt"
+      ],
+      "kernel_verified": false
+    },
+    {
+      "id": "V4-N09",
+      "title": "First expanded mutation harness used a stale patch locator",
+      "status": "REPAIRED",
+      "result": "The harness now verifies one exact occurrence and records old/new source; the failed attempt is preserved and ten controls complete.",
+      "remaining": "Finite implementation evidence only; not a kernel or hostile-host security proof.",
+      "evidence": [
+        "v4_mutations.py",
+        "evidence/current/V4_MUTATIONS_FIRST.stderr.txt",
+        "evidence/current/V4_MUTATIONS_COMPLETE.stdout.txt"
+      ],
+      "kernel_verified": false
+    },
+    {
+      "id": "V4-N10",
+      "title": "A repeated random ticket could overwrite or revive old authority",
+      "status": "REPAIRED",
+      "result": "Admission checks uniqueness, retries at most eight times and fails closed without replacing any issued record.",
+      "remaining": "Finite implementation evidence only; not a kernel or hostile-host security proof.",
+      "evidence": [
+        "operational.py",
+        "tests/test_ticket_collision.py",
+        "evidence/current/COLLISION_RED.stderr.txt",
+        "evidence/current/COLLISION_GREEN.stderr.txt",
+        "evidence/current/v4_mutations_complete/ticket_registry_uniqueness.json"
+      ],
+      "kernel_verified": false
+    },
+    {
+      "id": "V4-N11",
+      "title": "Equal token bytes in different engines could cross-authorise",
+      "status": "REPAIRED",
+      "result": "Native licences bind an unforgeable-by-serialization process-local issuer identity as well as the ticket bytes.",
+      "remaining": "Finite implementation evidence only; not a kernel or hostile-host security proof.",
+      "evidence": [
+        "operational.py",
+        "tests/test_ticket_collision.py",
+        "evidence/current/ISSUER_RED.stderr.txt",
+        "evidence/current/ISSUER_GREEN.stderr.txt",
+        "evidence/current/v4_mutations_complete/ticket_issuer_binding.json"
+      ],
+      "kernel_verified": false
+    },
+    {
+      "id": "V4-N12",
+      "title": "Legacy isolated mutation copy omitted its new parser dependency",
+      "status": "REPAIRED",
+      "result": "The actual baseline produced a missing-boundaries setup error and zero tests, not success. The runner now copies the dependency, requires a passing named baseline, and counts only a named assertion failure; all six legacy controls were rerun.",
+      "remaining": "Finite implementation evidence only; not a kernel or hostile-host security proof.",
+      "evidence": [
+        "check_mutations.py",
+        "tests/test_legacy_mutation_integrity.py",
+        "evidence/current/LEGACY_HARNESS_RED.stderr.txt",
+        "evidence/current/legacy_harness_red/MUTATION_remove_freshness.txt",
+        "evidence/current/LEGACY_HARNESS_GREEN.stderr.txt",
+        "evidence/current/LEGACY_MUTATIONS_REPAIRED.stdout.txt"
+      ],
+      "kernel_verified": false
+    }
+  ]
+}

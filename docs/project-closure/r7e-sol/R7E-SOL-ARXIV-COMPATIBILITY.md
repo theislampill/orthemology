@@ -9,14 +9,14 @@ with an unselected venue-specific template.
 ## Source and toolchain boundary
 
 - Authoritative source commit:
-  `5a2cf7ed77b897108afc515c90d3895ca4d706f2`
+  `1db15916a3965ccbba101969341bad4cb44ba22b`
 - Authoritative source tree:
-  `28f132e7a37345b18d618b55cb16c1fe6c34d319`
+  `7c7a22d83b9dd86702978bae00c1e3f15d826195`
 - Independently reviewed equivalent source commit:
-  `5a2cf7ed77b897108afc515c90d3895ca4d706f2`
+  `1db15916a3965ccbba101969341bad4cb44ba22b`
 - Equivalent source tree:
-  `28f132e7a37345b18d618b55cb16c1fe6c34d319`
-- Source epoch: `1786293425`
+  `7c7a22d83b9dd86702978bae00c1e3f15d826195`
+- Source epoch: `1790007430`
 - Container:
   `texlive/texlive@sha256:ccf0168bb3dc1e5ba18094131ebb57177f90eca37ab2727bc2d2afb54ad60a51`
 - Container configuration:
@@ -29,7 +29,7 @@ with an unselected venue-specific template.
 The authoritative command was:
 
 ```text
-python scripts/build_pdfs.py --source-commit 5a2cf7ed77b897108afc515c90d3895ca4d706f2
+python scripts/build_pdfs.py --source-commit 1db15916a3965ccbba101969341bad4cb44ba22b
 ```
 
 The command builds each closed source archive twice in independent clean
@@ -42,12 +42,12 @@ required byte parity with the repository artifacts. Both invocations returned
 
 | Artifact | Pages | PDF SHA-256 | Source archive SHA-256 | Source manifest SHA-256 |
 |---|---:|---|---|---|
-| `orthemma-ortheme-systems-draft` | 26 | `30ee85f4f03e835b112744f8dbfec18cb040154ce883eb3f19727258f1dade2d` | `4c1cf063fbbaf21d418b109209e6308af2a7a9b9a6d564112291245ca1b8cc49` | `c9c22952a79ad3e878f41eab5d74e2977e60e3197f6bb73b00e95704c0889b54` |
-| `orthemic-core-reference-draft` | 15 | `e9d06ca5823cb446997ad344c79b65ccc633a631ae43dde5edc1fcc0f400e660` | `8f8296bab21a70154cf98401fcedf0516a81bdfb353d6ce18d943691f333e697` | `fa44ee04565663adf6c8c897a5414832b2da2a5ab4d0ba110c79630cf4cc784a` |
-| `orthability-ground-of-intelligibility-draft` | 8 | `4eb35f434ee44063a62edbcc0fe9b97a62375cbf50d452f78432dd7507746150` | `7d8f4f411e67585259637a5a1552a6ffa408e720ca9f70903b720ede3795c841` | `97dfeb6dde2ca37ba5f82c6cfd2f53a2b564662bfe1243738001813ceaa72b3a` |
-| `orthability-divine-speech-athari-draft` | 6 | `d29ca3ab9082810bf8fa0526537e7e380b1385db63ebea54fb63ff062761ac9a` | `ed8a4df949856b61aad3f980dd1ca384546a683048ab67b5e85438e518cd8686` | `c6770f329c75e8b51625d97f39297c66a44b306284b82df2d100079934829e5e` |
-| `dynamic-orthing-noetic-learning-orthability-draft` | 5 | `349f2c67882b0c2995a56c3fb487559405fc9d10c6ab8ab77c9d2e68ceecad21` | `9f7bc721c8972f92f01f75d44c4412cd6d313abd2fe0e2e0ee1266a7c7d5fb78` | `1ba0c376658b87c8d85648db48fc0259d15d154cd8cebc949287524e4f482186` |
-| `notation-gallery` | 2 | `6b0cd1f5b1292b560d6472b33b0ba54614ce2b92b0297acebe555da4df958eff` | `863275421be792cc725b0da79d641f1b1fdddd7773d97d4935486b79442e0669` | `dc22131725fa6114c636fd9abe7bb612f0f4470e9a1e1427da6b665ef7569b3a` |
+| `orthemma-ortheme-systems-draft` | 26 | `e98bd813ce177af6f8a080f7cf5fe1786beb1b3971748717b4b2de727314fce8` | `e10fb927abc26165011094bdfbf10a85e38360181c9eeadef80213622cbfc51d` | `caba109fe72371468a2fba6b3fb50bd7c6d222da0b76c48268824db78ac17a87` |
+| `orthemic-core-reference-draft` | 15 | `9a9f814feb6062cf49332bb5deb4edfe31c58b9503b75395c14edd2bafba46da` | `b7b39a02fd007dde8af4104ea61b2ca6fe4a88ef44ca25f1c9eb11856fbf8837` | `ce2457888b9e6ed2a4aeb8a5fa3f2f964d4fd9beb1e1ffa1984a9a99ce743abe` |
+| `orthability-ground-of-intelligibility-draft` | 8 | `dc2e04ed58e581fb0cecb9fdd7619f04143d68ad5f48a7c803070f67a1d03ef3` | `bdc2b1d8ddb05a41ff23b071cca7df985db4465cc24226c11cfdf0c63442e94e` | `d0e6dfd866b285c5b762461ced436e26b5168da23eb922ab45f05a19475ef7fc` |
+| `orthability-divine-speech-athari-draft` | 6 | `4affb68da10224c70d63db923397f19ca14fed242faa39e1f5dbdfe43ab28474` | `f3204c6ce69478c7e654e4a31a8f00478de6c506c9735c426dcac10215fd6df3` | `cb5d1c4299de41a985a5c7626282c625216a82ce3732cf88331158d2d6644fcd` |
+| `dynamic-orthing-noetic-learning-orthability-draft` | 5 | `23f6ede49277396073752570ca8b6a9942c5aba84fa0700dd58140ae4e81c896` | `2945d60a169059cdcbfd20941968d51a970ab1ea9e5007bd39f4a9bb005ed9a1` | `73a212d395825927141320fc0892cd351cf096e89446fcf35a94f66dd83d24c6` |
+| `notation-gallery` | 2 | `ec057d86ac5f3edc37ea85c3d54ddf5d5e1f3ce7b828f4a5f615bc789692928f` | `4ad1b67a22d9583adb58048e564c6faa7b51b4fd5bc2884c9b2db2e9cf4989ac` | `a4e3354d2434dfc1e0000da6b031e949fce228e9bbfc9a40e2b6139fb68dbc68` |
 
 Total final page count: `62`.
 

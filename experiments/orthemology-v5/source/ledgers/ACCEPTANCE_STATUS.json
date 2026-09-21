@@ -1,0 +1,102 @@
+{
+  "full_v4_acceptance": false,
+  "kernel_verified": false,
+  "items": [
+    {
+      "id": "AC01",
+      "status": "SATISFIED_ORDINARY_AND_FINITE",
+      "achieved": "Original All and self-instantiation unchanged; actual self-application examples/export.",
+      "remaining": "Formal sources uncompiled."
+    },
+    {
+      "id": "AC02",
+      "status": "SATISFIED_SPECIFICATION",
+      "achieved": "Semantic codes, finite grammar, tracked realisers and full ambient sections explicitly separated.",
+      "remaining": "No all-ambient-map reach inferred."
+    },
+    {
+      "id": "AC03",
+      "status": "PARTIAL",
+      "achieved": "Actual positive engine and typed Plan/OWOU construction supplied.",
+      "remaining": "Kernel and complete deployed refinement open."
+    },
+    {
+      "id": "AC04",
+      "status": "PARTIAL",
+      "achieved": "Finite bounded checker and explicit refusals run; proof-export recheck targets supplied.",
+      "remaining": "Actual Python checker has no formal proof."
+    },
+    {
+      "id": "AC05",
+      "status": "OPEN",
+      "achieved": "Eight concrete source certificates exported reproducibly.",
+      "remaining": "No universal raw-byte/parser/checker refinement."
+    },
+    {
+      "id": "AC06",
+      "status": "PARTIAL",
+      "achieved": "Local permission/model/vocabulary revisions, resource checks, stale/ABA/issuer tests pass.",
+      "remaining": "Full implementation/concurrency proof and external law binding open."
+    },
+    {
+      "id": "AC07",
+      "status": "SATISFIED_ORDINARY_AND_FINITE",
+      "achieved": "Nonidentity, distinction, source application, compositional schema and reject-all countertest.",
+      "remaining": "Formal coverage only a candidate; no arbitrary ambient interfaces."
+    },
+    {
+      "id": "AC08",
+      "status": "PARTIAL",
+      "achieved": "Independent exported full-section call capability extracts exact preserved boundary.",
+      "remaining": "Universe elaboration and actual axioms must be checked."
+    },
+    {
+      "id": "AC09",
+      "status": "OPEN",
+      "achieved": "Mandatory pin/inventory/artifact/transitive gate is implemented and policy-tested.",
+      "remaining": "No real compiler or axiom readback obtained."
+    },
+    {
+      "id": "AC10",
+      "status": "PARTIAL",
+      "achieved": "Exact rational law grammar and ordinary general measure proofs; countable/full-event distinctions.",
+      "remaining": "Actual measure theory is not kernel-checked."
+    },
+    {
+      "id": "AC11",
+      "status": "PARTIAL",
+      "achieved": "Checked productive source and cap/residual/bit-work distinctions, concrete fixed point.",
+      "remaining": "Unbounded probability and backend costs remain ordinary/unverified."
+    },
+    {
+      "id": "AC12",
+      "status": "SATISFIED_ORDINARY",
+      "achieved": "Original false-SN and completeness obstructions preserved byte-for-byte.",
+      "remaining": "Normalisation bridge remains uncompiled."
+    },
+    {
+      "id": "AC13",
+      "status": "PARTIAL",
+      "achieved": "Finite pure relation fundamental theorem added; dependent limits explicit.",
+      "remaining": "Full DTT/J/universes and broader parametricity open."
+    },
+    {
+      "id": "AC14",
+      "status": "PARTIAL",
+      "achieved": "Primary theorem-level comparisons and claim classification written.",
+      "remaining": "No global novelty or peer review."
+    },
+    {
+      "id": "AC15",
+      "status": "SATISFIED_CUSTODY_AND_ACCOUNTING",
+      "achieved": "Exact archives, all C/RV/T IDs and red/green evidence retained.",
+      "remaining": "Open entries remain open."
+    },
+    {
+      "id": "AC16",
+      "status": "SATISFIED_REFERENCE_CLEAN_EXTRACTION",
+      "achieved": "Phase-1 full reference verifier completed from an independently extracted ZIP, exact manifest before/after; final source identity preserved.",
+      "remaining": "Formal build remains open under AC09. Final delivered archive gets a second external hash-bound clean verification."
+    }
+  ]
+}

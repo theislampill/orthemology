@@ -1,0 +1,776 @@
+{
+  "base_commit": "f50dc1aee52356cc6adbef342387576b02afc124",
+  "managed_roots": [
+    "experiments/orthemology-v5",
+    "docs/provenance/v5-consolidation",
+    "theory/lineages/h-continuation",
+    "theory/lineages/h-formalisation",
+    "theory/lineages/h-ics-v5",
+    "theory/lineages/h-moat-e3",
+    "theory/lineages/h-modal",
+    "theory/lineages/h-reflexive-v3"
+  ],
+  "standalone_files": [
+    "README.md",
+    "theory/orthemic-multi-actor-conflict-note.md",
+    "companion/dynamic-orthing-noetic-learning-and-orthability.md",
+    "docs/architecture/V5-INTEGRATION-GUIDE.md"
+  ],
+  "inherited_updates": [
+    "README.md",
+    "theory/orthemic-multi-actor-conflict-note.md",
+    "companion/dynamic-orthing-noetic-learning-and-orthability.md"
+  ],
+  "files": [
+    {
+      "path": "README.md",
+      "bytes": 11170,
+      "sha256": "07d36a708284258d7f379a26e3af671931eb32f7e245e6a41e8b689a4bd64f58"
+    },
+    {
+      "path": "companion/dynamic-orthing-noetic-learning-and-orthability.md",
+      "bytes": 19042,
+      "sha256": "de1b55b70816a87f152b9b2a1c15edf7d173b77c29bd084fb825e56e8fcda5dd"
+    },
+    {
+      "path": "docs/architecture/V5-INTEGRATION-GUIDE.md",
+      "bytes": 5121,
+      "sha256": "b7203850aa5bcd5f02729793dd4c847393048050440aa8201ebbb893d0dd345a"
+    },
+    {
+      "path": "docs/provenance/v5-consolidation/CRITICISM_INDEX.md",
+      "bytes": 8151,
+      "sha256": "49c8d8d7aeaa19cf233d60c9985259db6b263232cf0d84cee820f8c4885627f7"
+    },
+    {
+      "path": "docs/provenance/v5-consolidation/FORMAL_SOURCE_AMENDMENT.json",
+      "bytes": 5012,
+      "sha256": "4bd2aab598af83edd1b873a7bb39aafd1d7c642267804d41a92da0fcfbec2228"
+    },
+    {
+      "path": "docs/provenance/v5-consolidation/HISTORICAL_DISPOSITIONS.json",
+      "bytes": 26998,
+      "sha256": "bce5748fbb3c061349c26a31bd2b4b06225efbd7d4db30a0dc86007bd608f7b0"
+    },
+    {
+      "path": "docs/provenance/v5-consolidation/ORIGINAL_PACKET_CUSTODY.json",
+      "bytes": 1849,
+      "sha256": "119c7a748e5d65ae4486a6f515519274305c4ae0d2bd19797dc4ee31b3a55026"
+    },
+    {
+      "path": "docs/provenance/v5-consolidation/PUBLICATION_SOURCE_REVIEW.json",
+      "bytes": 9813,
+      "sha256": "aed2e525e12c5a16b87d4ccbf7391c5320fa442497f3e90ac36927b66fa6c3ec"
+    },
+    {
+      "path": "docs/provenance/v5-consolidation/README.md",
+      "bytes": 2905,
+      "sha256": "cf8a0b2f65ce14c5efbe1ec0f385ecff576a3201e294b284421e30a99ede72f9"
+    },
+    {
+      "path": "docs/provenance/v5-consolidation/SOURCE_MAP.json",
+      "bytes": 693784,
+      "sha256": "a7021af8e1fb03119f95eb9e929ade82b788a617c019560e64cc902b1b608164"
+    },
+    {
+      "path": "docs/provenance/v5-consolidation/STATUS.json",
+      "bytes": 1933,
+      "sha256": "5df57e23bf79736c5b8269dcd86578f1db954cb8ec40eac7eacdd62464f714ac"
+    },
+    {
+      "path": "docs/provenance/v5-consolidation/THEOREM_INDEX.md",
+      "bytes": 44927,
+      "sha256": "19be1642f5391853220df3f00dbbb32e71ddf0779ce8c3905418007c21493faf"
+    },
+    {
+      "path": "docs/provenance/v5-consolidation/VERIFIER_PARITY.json",
+      "bytes": 4732,
+      "sha256": "c21165534a1de41d5dd79d82a628ad7f16b6af8402b046c622f5cfb3ddecc4b3"
+    },
+    {
+      "path": "docs/provenance/v5-consolidation/reconciliation/CANONICAL_CONCEPT_OWNERS.json",
+      "bytes": 3133,
+      "sha256": "0484b673d23b0af1fb94fe82749a322b3b5b828cee2893139f5b956727d5727e"
+    },
+    {
+      "path": "docs/provenance/v5-consolidation/reconciliation/CLAIM_STATUS_LOCK.json",
+      "bytes": 2462,
+      "sha256": "8d3c439f5fe9f8fe8dadb513c925a146f340008923ab5c29e523f81fd4da2ad4"
+    },
+    {
+      "path": "docs/provenance/v5-consolidation/reconciliation/CONCEPT_CROSSWALK.jsonl",
+      "bytes": 98282,
+      "sha256": "961952c39b1a2a60d49ed87249b77eb42a2ae5894b5da480fb165a025200e738"
+    },
+    {
+      "path": "docs/provenance/v5-consolidation/reconciliation/CONCEPT_RECONCILIATION_OBLIGATIONS.json",
+      "bytes": 2767,
+      "sha256": "7913333d9c6dec503edd01fd25dc4200d37f2b97efabdfb9a5871845b54e4980"
+    },
+    {
+      "path": "docs/provenance/v5-consolidation/reconciliation/CRITICISM_LINEAGE.jsonl",
+      "bytes": 176279,
+      "sha256": "f5eac33c1e12212ab57900721085edcb9f11bce0abff7e0d0cc6797a52b307c0"
+    },
+    {
+      "path": "docs/provenance/v5-consolidation/reconciliation/DUPLICATION_DECISIONS.json",
+      "bytes": 21828,
+      "sha256": "4d007a4078a4fda02efbfe8245e48d5603f2e8c556371fbc01d9f363b14dfd18"
+    },
+    {
+      "path": "docs/provenance/v5-consolidation/reconciliation/INDEX_COUNTS.json",
+      "bytes": 342,
+      "sha256": "19c7fd4c7ebf0decf807be65257aac1486bff29045ae43d38e1ac438ce290cb9"
+    },
+    {
+      "path": "docs/provenance/v5-consolidation/reconciliation/NON_EQUIVALENCES.md",
+      "bytes": 21618,
+      "sha256": "cc58eeddd94e94ec3b1bea15d7b030c6d347ccf377a78960677355635998c991"
+    },
+    {
+      "path": "docs/provenance/v5-consolidation/reconciliation/NOTATION_SCOPE_MAP.json",
+      "bytes": 3034,
+      "sha256": "87044781bd0c5df5940566c46f4647887820f8d8001f5df9783f16a651a854fe"
+    },
+    {
+      "path": "docs/provenance/v5-consolidation/reconciliation/PRESERVED_BRIDGE_LEDGER.json",
+      "bytes": 17446,
+      "sha256": "717debe011bc36e7b4e7b5a5f9e04fb5e61b3176181cca461ecdc9ccf99ad5ca"
+    },
+    {
+      "path": "docs/provenance/v5-consolidation/reconciliation/PROOF_EVIDENCE_MAP.jsonl",
+      "bytes": 65980,
+      "sha256": "675f2653f5e00c8fc206f44f0939731897a23f94c685b010b82458e910b901a9"
+    },
+    {
+      "path": "docs/provenance/v5-consolidation/reconciliation/RECONCILED_OBLIGATIONS.json",
+      "bytes": 50934,
+      "sha256": "6c9c234a528f701214fc9fef236330f0064f1a797fce69a956caa8050d4a23b3"
+    },
+    {
+      "path": "docs/provenance/v5-consolidation/reconciliation/THEOREM_LINEAGE.jsonl",
+      "bytes": 366300,
+      "sha256": "149b5412b7409c16680f58713f28f53f68ef70f4e17a591eaf457630e3a4b0e0"
+    },
+    {
+      "path": "experiments/orthemology-v5/CRITICISM_DELTA.json",
+      "bytes": 3229,
+      "sha256": "fb5abca9a6f523a7b6eca38694681aecc3a9a3d90cc1222458d112089dd10922"
+    },
+    {
+      "path": "experiments/orthemology-v5/README.md",
+      "bytes": 2429,
+      "sha256": "99fe6941d945091a2fa072ac91b7f15a9a6a20ef62431285d768d011edc537b5"
+    },
+    {
+      "path": "experiments/orthemology-v5/REMAINING_OBLIGATIONS.md",
+      "bytes": 4426,
+      "sha256": "3327e55bccbf4ddc2c672505bf8fc0035645db895c3de26efccdd61ae878fbc4"
+    },
+    {
+      "path": "experiments/orthemology-v5/THEOREM_CATALOGUE.json",
+      "bytes": 2851,
+      "sha256": "b49588ed88a71416ef6f5a27e0210b5322fae116ce819783dc8d20a1bbb2b804"
+    },
+    {
+      "path": "experiments/orthemology-v5/comparison/ADVERSARIAL_COMPARISON.md",
+      "bytes": 11692,
+      "sha256": "feb6d36b9cbc4b47c90c689dde27a64f58eb5f7ebfebf7cfe1c8a1cadcc8d9c1"
+    },
+    {
+      "path": "experiments/orthemology-v5/comparison/SOURCES.json",
+      "bytes": 2927,
+      "sha256": "e48f71bbe1cc8c0bb9287dc7897045384056683846440b8bcdb165387ba97b83"
+    },
+    {
+      "path": "experiments/orthemology-v5/experiments/convergence.py",
+      "bytes": 3881,
+      "sha256": "5c5c6db57f5a23a5d19c2c6e7cd33f60e4654e352e076d0060817f12b4dd55e1"
+    },
+    {
+      "path": "experiments/orthemology-v5/experiments/test_build_staging.py",
+      "bytes": 2484,
+      "sha256": "e14f164e02f5e92884d34735075c5be3592dcae90451f6f755ffcc54f514f453"
+    },
+    {
+      "path": "experiments/orthemology-v5/experiments/test_convergence.py",
+      "bytes": 3991,
+      "sha256": "91659433c1a75f9846ba32742380db1aea4d651d911ca5218008ae80f70c4d4d"
+    },
+    {
+      "path": "experiments/orthemology-v5/formal_project/CrossCheck.lean",
+      "bytes": 568,
+      "sha256": "02a5305f5fb71ecce0bda9ba10879d32662d62354fe23a864bef08f58e935854"
+    },
+    {
+      "path": "experiments/orthemology-v5/formal_project/LOCK_PROVENANCE.json",
+      "bytes": 644,
+      "sha256": "a1f19d3ba056740edbdea37ff168f4bb3fb05801e57889bb039c0299a4da4550"
+    },
+    {
+      "path": "experiments/orthemology-v5/formal_project/README.md",
+      "bytes": 3062,
+      "sha256": "afa80b786d910150627bfb3616f389e55dec61e94b69959c18820f4322ae7edb"
+    },
+    {
+      "path": "experiments/orthemology-v5/formal_project/Verification.lean",
+      "bytes": 39604,
+      "sha256": "e1b609da64a345c6b05e3979b767e7d94ac85588f1c8906b2bb50ff6faea7967"
+    },
+    {
+      "path": "experiments/orthemology-v5/formal_project/build.py",
+      "bytes": 7284,
+      "sha256": "33c21cc35b96c9528c3c6a4f3d78afb1ab0292869394f22bfce266c758823d3e"
+    },
+    {
+      "path": "experiments/orthemology-v5/formal_project/lake-manifest.json",
+      "bytes": 3545,
+      "sha256": "64deb83697d9c6303bac8263d1f9d96238770d35b8e6bc1fec6cd41698adffb2"
+    },
+    {
+      "path": "experiments/orthemology-v5/formal_project/lakefile.lean",
+      "bytes": 523,
+      "sha256": "47ab5efb940f0ddabf01f1bdfcf90bae0ca9bc1b285915dae8ec9efcd06b24b4"
+    },
+    {
+      "path": "experiments/orthemology-v5/mathematics/ABSTRACT_OWOU.md",
+      "bytes": 13372,
+      "sha256": "194799b28fdf3b63d6f774c59434b3d4511d32668da074cc0c5c89f1ced14b9e"
+    },
+    {
+      "path": "experiments/orthemology-v5/mathematics/DEFECT_COMPUTABILITY.md",
+      "bytes": 11810,
+      "sha256": "74333fb0f8232c6d91c0b8e6f8f15ad6d68a515d429bd044387c647d92689ee2"
+    },
+    {
+      "path": "experiments/orthemology-v5/mathematics/REFINEMENT_CALCULUS.md",
+      "bytes": 8532,
+      "sha256": "d8d8e96a89ca6baf01da0c8e01ef95f19197ad6f660e20621e8980b60c278cc8"
+    },
+    {
+      "path": "experiments/orthemology-v5/source/ACCEPTANCE_STATUS.md",
+      "bytes": 2856,
+      "sha256": "fd9add665feb3bbd428f5620a7535f6595149b1099b09d1e397bb0ad8f4ca4a5"
+    },
+    {
+      "path": "experiments/orthemology-v5/source/CRITICISM_LEDGER.md",
+      "bytes": 62545,
+      "sha256": "9426c1e1e2a0455b8be8af0978d54242491be47a7c4ac2925ebfe3127b3a4055"
+    },
+    {
+      "path": "experiments/orthemology-v5/source/DEPENDENCIES.json",
+      "bytes": 400,
+      "sha256": "fd2acbba68e3d653e602d03d83ea4eb6cf6334504e89985cba01bb3a3351528e"
+    },
+    {
+      "path": "experiments/orthemology-v5/source/LICENSES/Apache-2.0.txt",
+      "bytes": 11358,
+      "sha256": "cfc7749b96f63bd31c3c42b5c471bf756814053e847c10f3eb003417bc523d30"
+    },
+    {
+      "path": "experiments/orthemology-v5/source/MANIFEST.json",
+      "bytes": 11449,
+      "sha256": "1c023ff46192fea6d281630e2f958585c345c37b452d6a28caa6e12aaf3e2789"
+    },
+    {
+      "path": "experiments/orthemology-v5/source/OPERATIONAL_CONTRACT.md",
+      "bytes": 6967,
+      "sha256": "c8321c3f7a544215bb183b62a71da4adc4b57df0968be38a4513c7a52726cb98"
+    },
+    {
+      "path": "experiments/orthemology-v5/source/PRIOR_ART_COMPARISON.md",
+      "bytes": 7262,
+      "sha256": "10689b75b9ac4633cc1d57deaf00fcc6a47cd1b5cb1645e944518757a03c48f7"
+    },
+    {
+      "path": "experiments/orthemology-v5/source/PROOFS_V4.md",
+      "bytes": 28120,
+      "sha256": "bc410cac8d3c00b2d59eebeee8c482537978c03ebb6c8dfd599c317d91bef2d9"
+    },
+    {
+      "path": "experiments/orthemology-v5/source/REMAINING_OBLIGATIONS.md",
+      "bytes": 7320,
+      "sha256": "2795cb401c807b28b3fc84c4f46986e9f12ac040d5b40d3a6594634a4c38b40f"
+    },
+    {
+      "path": "experiments/orthemology-v5/source/SOURCES.json",
+      "bytes": 1445,
+      "sha256": "529fd2affdf40702ad87f014b7f726e7db43b420f20577a83958c02035c25dc9"
+    },
+    {
+      "path": "experiments/orthemology-v5/source/THEOREM_CATALOGUE.json",
+      "bytes": 43346,
+      "sha256": "13d6f0a12fc8925db81b992f07bd0a6851c2cd48d07733b2607975e4d0084cc5"
+    },
+    {
+      "path": "experiments/orthemology-v5/source/TOOLCHAIN_LOCK.json",
+      "bytes": 722,
+      "sha256": "e73cd2012023946337f2215d5ced4e2774bdb5112de1ab71c41a49513334a291"
+    },
+    {
+      "path": "experiments/orthemology-v5/source/boundaries.py",
+      "bytes": 3981,
+      "sha256": "a4382218253e193d7caafa5f164c9aed1d1b0e79754ba0041164383356dc3210"
+    },
+    {
+      "path": "experiments/orthemology-v5/source/build_gate.py",
+      "bytes": 14955,
+      "sha256": "04f2bd93ddb595eadbb8b238b9ec279caaff6875f49aac33de3fadbeccff19f3"
+    },
+    {
+      "path": "experiments/orthemology-v5/source/census.py",
+      "bytes": 6099,
+      "sha256": "ee19c32dec81aed97ff951a14b435eef47ac7241467c7e5deb31e2a400592412"
+    },
+    {
+      "path": "experiments/orthemology-v5/source/check_mutations.py",
+      "bytes": 4104,
+      "sha256": "83d52f53c16b2a1730020a23e7f2b9cf3ffc7cfd27d013c60fbbb8c6fd6c9e2e"
+    },
+    {
+      "path": "experiments/orthemology-v5/source/demonstrate.py",
+      "bytes": 5300,
+      "sha256": "9c1e4fa6cbd09ce0ef13d6969830cb25e370c0b636cc66c22e48bf9ef34176c9"
+    },
+    {
+      "path": "experiments/orthemology-v5/source/examples/EXPORT_INDEX.json",
+      "bytes": 637,
+      "sha256": "0b4387b1a019fc871d978141672a39d25ab64dc76f132b7102d8b24b889da0ee"
+    },
+    {
+      "path": "experiments/orthemology-v5/source/examples/diagonalSelf.json",
+      "bytes": 956,
+      "sha256": "68cc2c78809bc25520ddfe3273f1931989a885ed546c661f523a973d7b7130be"
+    },
+    {
+      "path": "experiments/orthemology-v5/source/examples/falseSelector.json",
+      "bytes": 138,
+      "sha256": "b9be06bad70e9292b03911c6d520bdf089225055a7dae14ee08aad6d33b0ef0d"
+    },
+    {
+      "path": "experiments/orthemology-v5/source/examples/falseSelfChoice.json",
+      "bytes": 498,
+      "sha256": "4d8c16f23262ea9ff6bf4c2ca73361bb086bba100754b6f738fc28cde29a6988"
+    },
+    {
+      "path": "experiments/orthemology-v5/source/examples/identity.json",
+      "bytes": 48,
+      "sha256": "cc86ddf29c1a214f2919234728b818cd18c6cf052f76bf56c3874af698908444"
+    },
+    {
+      "path": "experiments/orthemology-v5/source/examples/identitySelf.json",
+      "bytes": 204,
+      "sha256": "327ae08442ae006088260983d5ef56b280f837939d543b7a0f47cf392bd1cc70"
+    },
+    {
+      "path": "experiments/orthemology-v5/source/examples/reducedIdentity.json",
+      "bytes": 266,
+      "sha256": "2cb58b81f018721b7d658d6495e7c9ba7bd33fea1ad1e865834308866f1183b8"
+    },
+    {
+      "path": "experiments/orthemology-v5/source/examples/trueSelector.json",
+      "bytes": 60,
+      "sha256": "8168d31f888c46da067bdb5865830b55b122bf7c193d1cb162bb96a2790abe36"
+    },
+    {
+      "path": "experiments/orthemology-v5/source/examples/trueSelfChoice.json",
+      "bytes": 420,
+      "sha256": "59fc81f1cd820bfea79e9c92a016f61285638ed2855030a36bd5728f81313b4a"
+    },
+    {
+      "path": "experiments/orthemology-v5/source/extensions.py",
+      "bytes": 15256,
+      "sha256": "77a808b83deb74603c68e5ac2c54371e8f663443a1c12c1f43e48a4678e6e044"
+    },
+    {
+      "path": "experiments/orthemology-v5/source/formal_targets.json",
+      "bytes": 7592,
+      "sha256": "751c4bac319035dff1fda364e0bc3466efcd7b198889de4f50bf148afb448ab2"
+    },
+    {
+      "path": "experiments/orthemology-v5/source/guarded_sampler.py",
+      "bytes": 4628,
+      "sha256": "45e67b7d9b5ad2b55f00f09b23bece8248f7d360f8d1d51f07d7bd9c53a075b4"
+    },
+    {
+      "path": "experiments/orthemology-v5/source/history/Orthemology_v3_Critical_Handoff/inputs/v3/MATHEMATICAL_PROOF.md",
+      "bytes": 32696,
+      "sha256": "a74c5e7b95d5aa1aa57356a2af042a7c65d8d881a9e33ca056e61c1ad2511472"
+    },
+    {
+      "path": "experiments/orthemology-v5/source/history/Orthemology_v3_Critical_Handoff/inputs/v3/inherited_v2/MATHEMATICAL_PROOF.md",
+      "bytes": 18250,
+      "sha256": "9dfd4b843360849f1986fa7d32a7a651caee984d17dc05810e27dca84ee89834"
+    },
+    {
+      "path": "experiments/orthemology-v5/source/lean-toolchain",
+      "bytes": 25,
+      "sha256": "55e97be96000b5e9e290c9e74482e5e317861499a5540353ce845471bded8cea"
+    },
+    {
+      "path": "experiments/orthemology-v5/source/lean/AlmostSureBoundary.lean",
+      "bytes": 3234,
+      "sha256": "8485a2156b943ce569af6f219d69d7d24b00b41b04b8225a68d7480d2d70522d"
+    },
+    {
+      "path": "experiments/orthemology-v5/source/lean/AuditSupport.lean",
+      "bytes": 1024,
+      "sha256": "f3e08557b57a745bae547dc827755616cd6c6824bf1360441a72789036e1cd96"
+    },
+    {
+      "path": "experiments/orthemology-v5/source/lean/BoundaryResults.lean",
+      "bytes": 8581,
+      "sha256": "cf337cad057a4c2cb93f2c0145f8132368867257c2b0bf7ee32f7be70d29d11c"
+    },
+    {
+      "path": "experiments/orthemology-v5/source/lean/EffectsAndDependence.lean",
+      "bytes": 8707,
+      "sha256": "0e3adde9d907e2c0a28afb5087feb42986e2e1fd880682edd70d4b4214790be2"
+    },
+    {
+      "path": "experiments/orthemology-v5/source/lean/FiniteBridge.lean",
+      "bytes": 8366,
+      "sha256": "f75306d1a29cd76385058ca1a819910b1f635a63369d807d484ab6db981a0042"
+    },
+    {
+      "path": "experiments/orthemology-v5/source/lean/GeneratedExamples.lean",
+      "bytes": 13685,
+      "sha256": "0f8e551de28b6bdf549e0d2ecba0932bb2758b8ff57aaf5f1cf5956d7d88d8cd"
+    },
+    {
+      "path": "experiments/orthemology-v5/source/lean/HurkensBoundary.lean",
+      "bytes": 2245,
+      "sha256": "4c1d8a9d8a9a6ebec9f5e1a1ee41008b75fbfffeabbbd9ee489ea21982425a08"
+    },
+    {
+      "path": "experiments/orthemology-v5/source/lean/InternalPolymorphism.lean",
+      "bytes": 15288,
+      "sha256": "7cf85525305944e343b50f63e9b593a0fdcab3c89303f2f32cdb37d92c70b1ee"
+    },
+    {
+      "path": "experiments/orthemology-v5/source/lean/NormalisationAndNumerals.lean",
+      "bytes": 3101,
+      "sha256": "13c3b0ba7aa7e57fd13bf1d61d28ef842755d5f5103ef9598d18cc885f4e2ca2"
+    },
+    {
+      "path": "experiments/orthemology-v5/source/lean/OperationalBoundary.lean",
+      "bytes": 2599,
+      "sha256": "d3494436356f8aec5510b004e2a977c9946533f6190219f30eee2de511b53f4e"
+    },
+    {
+      "path": "experiments/orthemology-v5/source/lean/OperationalKernel.lean",
+      "bytes": 8778,
+      "sha256": "766ae9391263f193c6e84e16042281fb5e70fe680f083f0359b4b3c10f215779"
+    },
+    {
+      "path": "experiments/orthemology-v5/source/lean/RelationalFragment.lean",
+      "bytes": 6417,
+      "sha256": "12dfbed26b887067f2bbd2a75930d038558b3a5c715100d7c25d3cfee79a7fdb"
+    },
+    {
+      "path": "experiments/orthemology-v5/source/ledgers/ACCEPTANCE_STATUS.json",
+      "bytes": 4011,
+      "sha256": "05c306a4fb424ac49dc560957cb368a1c6081deaaabfc26004e1ff476d2c443c"
+    },
+    {
+      "path": "experiments/orthemology-v5/source/ledgers/CRITICISM_DISPOSITIONS.json",
+      "bytes": 130181,
+      "sha256": "b7e736a859d93a1df1165075a021b7cc34de5107a1a91da7bccaee24f160b84d"
+    },
+    {
+      "path": "experiments/orthemology-v5/source/ledgers/REMAINING_OBLIGATIONS.json",
+      "bytes": 7667,
+      "sha256": "693e2a00b6f5c5e20e4a98270d2658b3dc7fe3f2776109f4ae5308803e92f3fa"
+    },
+    {
+      "path": "experiments/orthemology-v5/source/observations.py",
+      "bytes": 5481,
+      "sha256": "e7ad363d03f01127f2a2090956ce26378b9c5b994361d344177c288f94670eef"
+    },
+    {
+      "path": "experiments/orthemology-v5/source/operational.py",
+      "bytes": 17499,
+      "sha256": "3e325d5b4b0ffa71cb3612a88a488a090427695896bc226c1142d8714b09fd99"
+    },
+    {
+      "path": "experiments/orthemology-v5/source/productive.py",
+      "bytes": 1616,
+      "sha256": "9b635c8d12f3f8c173ddd33c35990f1eed164f8be140041447121ab61cf00157"
+    },
+    {
+      "path": "experiments/orthemology-v5/source/productive_observer.py",
+      "bytes": 3087,
+      "sha256": "a71fe3459c09a46954120083ab09ae0d7d8814a22937881ec5eb7b96580c7bbc"
+    },
+    {
+      "path": "experiments/orthemology-v5/source/proof_export.py",
+      "bytes": 3331,
+      "sha256": "4971f828be8d21d7d5a20226e166c21e92d361ac1a53afee094f3a34e2364ad3"
+    },
+    {
+      "path": "experiments/orthemology-v5/source/reference.py",
+      "bytes": 9616,
+      "sha256": "398fdecf3c125f29fbbf7d242327cae0c5044440d58d5d8cdad9297b6e76ea77"
+    },
+    {
+      "path": "experiments/orthemology-v5/source/tests/test_build_gate.py",
+      "bytes": 6105,
+      "sha256": "6566924496965164ad815bc7d9cf754bf835f19a314275e898e20a8563458093"
+    },
+    {
+      "path": "experiments/orthemology-v5/source/tests/test_extensions.py",
+      "bytes": 9343,
+      "sha256": "d746a396c6bc86f1a1a4353cac954f449b50b5ab790b2a3ad1277db6d7621160"
+    },
+    {
+      "path": "experiments/orthemology-v5/source/tests/test_final_boundaries.py",
+      "bytes": 1223,
+      "sha256": "a47cc9c4aee4976df928fa4d2c6b98afddaaeb8161470309fd12ed4b9c88c3c2"
+    },
+    {
+      "path": "experiments/orthemology-v5/source/tests/test_generated_examples.py",
+      "bytes": 583,
+      "sha256": "e55bc17380a07e2f53b578087e1dfb0988aedb33ad13891a8d166843de1429ae"
+    },
+    {
+      "path": "experiments/orthemology-v5/source/tests/test_guarded_sampler.py",
+      "bytes": 3069,
+      "sha256": "f5b547fa9b986e7f0e4a45fd329b0e6907948cc3097eb4e45a48f735ffcbab85"
+    },
+    {
+      "path": "experiments/orthemology-v5/source/tests/test_legacy_mutation_integrity.py",
+      "bytes": 695,
+      "sha256": "face065505bc935c74ad2a06ce3ed1cfad5f00268a4b2d01dec4a60043c0c4e9"
+    },
+    {
+      "path": "experiments/orthemology-v5/source/tests/test_observation_revision.py",
+      "bytes": 6445,
+      "sha256": "a881ade3622dc84944cfab2e354016910590f55b09e7235abf7def4a5ce23fcc"
+    },
+    {
+      "path": "experiments/orthemology-v5/source/tests/test_operational.py",
+      "bytes": 5344,
+      "sha256": "3b6ed664d3e88352ceba2f33aa6e1c28607fff120624c6962c5170add4d2d0cd"
+    },
+    {
+      "path": "experiments/orthemology-v5/source/tests/test_productive_observer.py",
+      "bytes": 2401,
+      "sha256": "7d4deafd2030f5933ab31655698ce4392a302c73d297f56b830bb56b1888db9b"
+    },
+    {
+      "path": "experiments/orthemology-v5/source/tests/test_proof_export.py",
+      "bytes": 1954,
+      "sha256": "65f8954be7d13500c8d1a93f15783eb2a58548ff4de23f84685a61af987a16a6"
+    },
+    {
+      "path": "experiments/orthemology-v5/source/tests/test_reference.py",
+      "bytes": 8490,
+      "sha256": "222b0289436211fb9a865e6a7f5ac6621d6683f4d5515fcc2821471bb5e08a53"
+    },
+    {
+      "path": "experiments/orthemology-v5/source/tests/test_reflective_sampler.py",
+      "bytes": 3258,
+      "sha256": "efec28dcf92c12e4d08c2f2f88beba51ddc7383ca1c38b7e0bf8b824dda4684d"
+    },
+    {
+      "path": "experiments/orthemology-v5/source/tests/test_required_audit.py",
+      "bytes": 1000,
+      "sha256": "627ece3600e1b0e624b79a76884fd0c4137f148916001ae3e0b7903786208e4c"
+    },
+    {
+      "path": "experiments/orthemology-v5/source/tests/test_revision_transport.py",
+      "bytes": 1787,
+      "sha256": "0e8e95cc3b45a8c15a3157e1bcf1b9bcc1e2301a0c57242749b64668d04ca2ae"
+    },
+    {
+      "path": "experiments/orthemology-v5/source/tests/test_ticket_collision.py",
+      "bytes": 1447,
+      "sha256": "6d4942620a8d6b9e5dcfbcc239334b7d5147ce2f986b169899fb389886f49b72"
+    },
+    {
+      "path": "experiments/orthemology-v5/source/tests/test_v4_regressions.py",
+      "bytes": 1474,
+      "sha256": "7e784a3e80587f3d74cb3476829fdff501ceaed67b6da6ed0b3470fce07f9e80"
+    },
+    {
+      "path": "experiments/orthemology-v5/source/tests/test_v4_resources.py",
+      "bytes": 1521,
+      "sha256": "ef20ad5442f1fcaef45e62031b228ebd39d17e9d4d3591ea4b6f67b4ce1b9fde"
+    },
+    {
+      "path": "experiments/orthemology-v5/source/v4_mutations.py",
+      "bytes": 5174,
+      "sha256": "ea97b32ca79a4cfa3adeb50523e38167c79ce427e29049244a9c2b93678f65e0"
+    },
+    {
+      "path": "experiments/orthemology-v5/source/verify.py",
+      "bytes": 7722,
+      "sha256": "318c67e2f874a9e1e951fed9aed4a9ab0a1de55670e53c78c403810d6932b87e"
+    },
+    {
+      "path": "experiments/orthemology-v5/tests/test_formal_audit_parser.py",
+      "bytes": 54245,
+      "sha256": "fc570da794804e7517a20e4849e72d433dcd42948370b7b7ae856fac434e78e5"
+    },
+    {
+      "path": "experiments/orthemology-v5/tests/test_formal_source_amendment.py",
+      "bytes": 7325,
+      "sha256": "a62c886e0cc4f3b4945238efceca13551ef91611c41e9f60e66909d233136654"
+    },
+    {
+      "path": "experiments/orthemology-v5/tests/test_repository_integration.py",
+      "bytes": 4262,
+      "sha256": "834c2eadd9ef2f60a0e6571671ed7b9ff64dc351e8166a35a4d583728fc9b66f"
+    },
+    {
+      "path": "experiments/orthemology-v5/verify_repository.py",
+      "bytes": 12038,
+      "sha256": "9746d7e4f77064f4f202d4df7676712a1d8c4142dec31934ecc5d64708a34cb5"
+    },
+    {
+      "path": "theory/lineages/h-continuation/continuation_complete_orthing.md",
+      "bytes": 66411,
+      "sha256": "626504b64c2d7817b882e74992ba989d83c7ef8e67b1467b537101c2b804edb9"
+    },
+    {
+      "path": "theory/lineages/h-formalisation/orthing_formalisation_v1.md",
+      "bytes": 93523,
+      "sha256": "cd5070341a46658c0e4ac2c077d343d276cf16e50f0305f61ebb90ba0b624c2e"
+    },
+    {
+      "path": "theory/lineages/h-ics-v5/information-composition-and-self-revision-v5.tex",
+      "bytes": 47537,
+      "sha256": "4a14bdfb39655efa9f851a8875fa9591cd6344715128c43f8b153c88595318b0"
+    },
+    {
+      "path": "theory/lineages/h-moat-e3/claim_table.tex",
+      "bytes": 5579,
+      "sha256": "18164557a055f8d62a84951bb75d33b6b62ea088b35c86d29e93942b474a429a"
+    },
+    {
+      "path": "theory/lineages/h-moat-e3/composition.tex",
+      "bytes": 5443,
+      "sha256": "a986ff4fa9ec9b0fe2557e9a247e2e131c49189cec5172a604b2ef420cc06850"
+    },
+    {
+      "path": "theory/lineages/h-moat-e3/contract_refinement.tex",
+      "bytes": 8068,
+      "sha256": "8a5f8ce2d0e0b365ecee5d7478647e21d22f2b824ad447f2dee26a67d05bafb4"
+    },
+    {
+      "path": "theory/lineages/h-moat-e3/edition3_changes.tex",
+      "bytes": 4818,
+      "sha256": "a609556afc696df7a99f119033f191a6fb303f7edeacce04491ec2fd6430288f"
+    },
+    {
+      "path": "theory/lineages/h-moat-e3/edition3_evaluation.tex",
+      "bytes": 3469,
+      "sha256": "c364a3bba8e56fbfb86b72bfd57ac5a4c890b735001b9d0cbf73fc111aca4306"
+    },
+    {
+      "path": "theory/lineages/h-moat-e3/edition3_examples.tex",
+      "bytes": 2383,
+      "sha256": "175c9f7f8d6a724c602b8fc43ea7254ceaaee38e58b33432be47a1e7d89bc1b7"
+    },
+    {
+      "path": "theory/lineages/h-moat-e3/evaluation.tex",
+      "bytes": 5873,
+      "sha256": "7d49d4188dc83b5e161d23993248629938b4daa9fe398145d4ca6e70e86986c2"
+    },
+    {
+      "path": "theory/lineages/h-moat-e3/governance.tex",
+      "bytes": 1497,
+      "sha256": "14601586dae3cbf2743f39047f410966a19ce890a274cd225417b5d43e2b6854"
+    },
+    {
+      "path": "theory/lineages/h-moat-e3/joint_case.tex",
+      "bytes": 4131,
+      "sha256": "cb77d67ca5d1bcc96bb5009fcc0ff0292842e060841a23afad679cb70f6aad4e"
+    },
+    {
+      "path": "theory/lineages/h-moat-e3/large_model_audit.tex",
+      "bytes": 1724,
+      "sha256": "c0422493cd8f7a1b9fe81b3c57eae19f4d21509730fbb53509db6bc2ef1666f6"
+    },
+    {
+      "path": "theory/lineages/h-moat-e3/new_examples.tex",
+      "bytes": 2769,
+      "sha256": "1979d1a8e9014064ba3525487f1dbef95ca35092097db97a362429cd568287f7"
+    },
+    {
+      "path": "theory/lineages/h-moat-e3/ns_residual.tex",
+      "bytes": 5628,
+      "sha256": "a052eda8ee9ff225bc1636c0d20ba0f0e8959fdee6e38879f9aa6e05ffeea669"
+    },
+    {
+      "path": "theory/lineages/h-moat-e3/orthemic.tex",
+      "bytes": 9301,
+      "sha256": "78ccb094cef67d5d830f7073af9617eb0669abad9590ef38f126618157e3a6c9"
+    },
+    {
+      "path": "theory/lineages/h-moat-e3/precision_contracts.tex",
+      "bytes": 5209,
+      "sha256": "eda7d48d4b0180a2e03a9a382ecdb9a2cfa8b009cd71d19e997611c8be368cdf"
+    },
+    {
+      "path": "theory/lineages/h-moat-e3/processor_census.tex",
+      "bytes": 6018,
+      "sha256": "30d3a18206c841302fba1fea681f42ef5549b652074fb25c2e78108da40c1148"
+    },
+    {
+      "path": "theory/lineages/h-moat-e3/progress.tex",
+      "bytes": 1978,
+      "sha256": "bd845406ea2f9f189199dc100b4442186d0bd7b171b2fe12565f6947ee531d21"
+    },
+    {
+      "path": "theory/lineages/h-moat-e3/references.tex",
+      "bytes": 11258,
+      "sha256": "264bc57d0f98d6402e20dd61616d8e1d473b8abe68032d7cd5e174654bc2a964"
+    },
+    {
+      "path": "theory/lineages/h-moat-e3/related_work.tex",
+      "bytes": 8538,
+      "sha256": "be0114c8b510c5d3d8854112e27f256b582e33750cbfe4be34d353528e807fba"
+    },
+    {
+      "path": "theory/lineages/h-moat-e3/representations.tex",
+      "bytes": 6745,
+      "sha256": "c01c98813cdbd8b28ee714cc38854e7642b64005afcd43b31306b98b1cb603f8"
+    },
+    {
+      "path": "theory/lineages/h-moat-e3/stateful_witness.tex",
+      "bytes": 9635,
+      "sha256": "36b3e02e242dab824a45a2e218c2b894b4b00cd9d6fb498ccb13d11e66dbb118"
+    },
+    {
+      "path": "theory/lineages/h-moat-e3/substitution_profile.tex",
+      "bytes": 5556,
+      "sha256": "542aca8627a18b3c96ff7c875634eadcd4895845bae0f16a76f5d774c410299c"
+    },
+    {
+      "path": "theory/lineages/h-moat-e3/the_last_moat_e3.tex",
+      "bytes": 84327,
+      "sha256": "06256dd01149f7351d4c5fdcd876cc8d8ae0f264c0636b23e699b242165bc8da"
+    },
+    {
+      "path": "theory/lineages/h-moat-e3/uncertain_channels.tex",
+      "bytes": 2776,
+      "sha256": "c04031c3a64799b71a615c39f0d3f8bbd51c87d7bf77f056f5f732a32c1edc8e"
+    },
+    {
+      "path": "theory/lineages/h-modal/orthability_modal_grounding.md",
+      "bytes": 119172,
+      "sha256": "313e1ed5bdc225e380b77952c8be111b402b6359d30c53233968664372d0e1c7"
+    },
+    {
+      "path": "theory/lineages/h-reflexive-v3/reflexive_revision_evidence_budget_v3.tex",
+      "bytes": 15086,
+      "sha256": "bf8490a82b45fbf8a5be11ecd7a7ee90a0e49cbb383b86f60a5993a54782d1af"
+    },
+    {
+      "path": "theory/orthemic-multi-actor-conflict-note.md",
+      "bytes": 11626,
+      "sha256": "4f00ce4cb26c7a6c884df598c8832fd72b11bc3a35dc287b62ea64d181fa8ff6"
+    }
+  ]
+}

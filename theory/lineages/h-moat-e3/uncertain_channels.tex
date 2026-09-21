@@ -1,0 +1,34 @@
+\subsection{A known plant is different from a uniformly usable model class}\label{sec:uncertain}
+The preceding nonlinear result is a separation statement for a specified map. Physical assessment often supplies an approximate map and uncertain calibration instead. In particular,
+\[
+ \begin{gathered}
+ \forall\theta\;\exists d_\theta:\quad
+ \text{the calibrated plant can be decoded},\\
+ \not\Rightarrow\\
+ \exists d\;\forall\theta:\quad
+ \text{one decoder works for the uncalibrated class}.
+ \end{gathered}
+\]
+This is not a merely philosophical distinction. Consider $y=\theta u$, with unknown $\theta\in\{-1,+1\}$, and fixed inputs $u=\pm a$. Each calibrated plant has positive gain and admits binary decoding without noise. Across the uncalibrated class the same observed value is compatible with either input. Gain magnitude alone loses the polarity information needed for that decoding task.
+
+A useful uniform statement must retain that information or bound its uncertainty. Suppose the actual input--output map obeys
+\[
+ \mathcal F(u)=b+Lu+R(u),\qquad
+ \norm{b-\hat b}\leq\beta,\quad
+ \norm{L-\hat L}_{\mathrm{op}}\leq\eta,\quad
+ \norm{R(u)}\leq\kappa\norm{u}^{2}
+\]
+for $\norm{u}\leq r$, with nonnegative bounds, $r>0$, and $E\geq0$, valid for every admitted plant. The hatted quantities are a fixed common reference. Let $v$ be a unit input direction and $\hat\sigma=\norm{\hat L v}$.
+
+\begin{proposition}[A uniform reference-decoder margin]\label{prop:uniform}
+If both inputs $\pm av$ are admitted in every plant, $0<a\leq\min\{r,\sqrt E\}$, and
+\begin{equation}\label{eq:uniformmargin}
+ a(\hat\sigma-\eta)-\kappa a^2>\delta+\beta,
+\end{equation}
+then the reference centres $\hat b\pm a\hat L v$ determine disjoint uncertainty balls containing every corresponding noisy observation from every admitted plant. A single decoder therefore works throughout that class.
+\end{proposition}
+\begin{proof}
+For either sign, the difference between the actual noiseless output and its reference centre has norm at most $\beta+a\eta+\kappa a^2$. Including observation noise gives balls of radius $\beta+a\eta+\kappa a^2+\delta$. The reference centres have distance $2a\hat\sigma$. Equation~\eqref{eq:uniformmargin} states exactly that this distance exceeds twice the common radius.
+\end{proof}
+
+The bound is sufficient, not necessary; known offset cancellation or more informative uncertainty geometry may yield a better certificate. Its function is to make calibration and model error visible. No raw Gramian eigenvalue can be compared across physical media without compatible units and input/output norms. ``Thermal,'' ``acoustic,'' and ``electromagnetic'' do not supply those maps, and a statistical confidence interval is not automatically a deterministic worst-case envelope.

@@ -1,0 +1,1027 @@
+{
+  "original_ids_preserved": 24,
+  "new_families": 16,
+  "counts_are_not_novelty": true,
+  "kernel_verified_theorems": 0,
+  "families": [
+    {
+      "id": "T01",
+      "title": "Almost-sure arbitrary intersections iff positive-atom concentration",
+      "original_v3_entry": {
+        "id": "T01",
+        "title": "Almost-sure arbitrary intersections iff positive-atom concentration",
+        "ordinary_mathematical_proof": "SUPPLIED_WITH_EXPLICIT_HYPOTHESES_AND_STATED_EXTERNAL_THEOREMS",
+        "section": "§2",
+        "lean_source": "AlmostSureBoundary.lean: completeFull_iff_full_atoms",
+        "formal_scope": "Logical abstraction only; measure/countability instantiation is an ordinary proof",
+        "kernel_verified": false,
+        "novelty_disposition": "No priority established; elementary measure/filter ingredients"
+      },
+      "handoff_assessment": {
+        "review_ordinary_assessment": "Ordinary proof reviewed; no counterexample found under stated hypotheses.",
+        "review_formal_or_scope_limit": "Formal source is an abstract Full-predicate lemma, not a measure instance. Prove point-countability, measurability and the measure laws.",
+        "review_links": [
+          "RV21",
+          "RV24"
+        ],
+        "fresh_kernel_verified": false,
+        "global_novelty_established": false
+      },
+      "current_ordinary_status": "PRESERVED_ORDINARY_WITH_STATED_SCOPE",
+      "kernel_verified": false,
+      "novelty_established": false,
+      "preserved_proof": "history/Orthemology_v3_Critical_Handoff/inputs/v3/MATHEMATICAL_PROOF.md",
+      "current_review_links": [
+        "RV21",
+        "RV24"
+      ],
+      "current_disposition_source": "ledgers/CRITICISM_DISPOSITIONS.json"
+    },
+    {
+      "id": "T02",
+      "title": "Uncountable almost-sure universal-introduction counterexample",
+      "original_v3_entry": {
+        "id": "T02",
+        "title": "Uncountable almost-sure universal-introduction counterexample",
+        "ordinary_mathematical_proof": "SUPPLIED_WITH_EXPLICIT_HYPOTHESES_AND_STATED_EXTERNAL_THEOREMS",
+        "section": "§2",
+        "lean_source": "AlmostSureBoundary.lean: no_atomless_full_intersection",
+        "formal_scope": "Logical contradiction only; uniform measure instance ordinary",
+        "kernel_verified": false,
+        "novelty_disposition": "Standard null-set quantifier obstruction"
+      },
+      "handoff_assessment": {
+        "review_ordinary_assessment": "Uniform singleton-complement argument reviewed.",
+        "review_formal_or_scope_limit": "Actual uniform measure is not formalised in the supplied sources.",
+        "review_links": [
+          "RV21",
+          "RV24"
+        ],
+        "fresh_kernel_verified": false,
+        "global_novelty_established": false
+      },
+      "current_ordinary_status": "PRESERVED_ORDINARY_WITH_STATED_SCOPE",
+      "kernel_verified": false,
+      "novelty_established": false,
+      "preserved_proof": "history/Orthemology_v3_Critical_Handoff/inputs/v3/MATHEMATICAL_PROOF.md",
+      "current_review_links": [
+        "RV21",
+        "RV24"
+      ],
+      "current_disposition_source": "ledgers/CRITICISM_DISPOSITIONS.json"
+    },
+    {
+      "id": "T03",
+      "title": "Observational pushforward atomicity criterion",
+      "original_v3_entry": {
+        "id": "T03",
+        "title": "Observational pushforward atomicity criterion",
+        "ordinary_mathematical_proof": "SUPPLIED_WITH_EXPLICIT_HYPOTHESES_AND_STATED_EXTERNAL_THEOREMS",
+        "section": "§2",
+        "lean_source": null,
+        "formal_scope": "Ordinary corollary, with rich observable code-family hypotheses",
+        "kernel_verified": false,
+        "novelty_disposition": "Candidate typing application, not established novel"
+      },
+      "handoff_assessment": {
+        "review_ordinary_assessment": "Valid pushforward application under the rich event-family premise.",
+        "review_formal_or_scope_limit": "Define the actual observation map and semantic event family; restricted families need separate necessity results.",
+        "review_links": [
+          "RV22",
+          "RV23"
+        ],
+        "fresh_kernel_verified": false,
+        "global_novelty_established": false
+      },
+      "current_ordinary_status": "PRESERVED_ORDINARY_WITH_STATED_SCOPE",
+      "kernel_verified": false,
+      "novelty_established": false,
+      "preserved_proof": "history/Orthemology_v3_Critical_Handoff/inputs/v3/MATHEMATICAL_PROOF.md",
+      "current_review_links": [
+        "RV22",
+        "RV23"
+      ],
+      "current_disposition_source": "ledgers/CRITICISM_DISPOSITIONS.json"
+    },
+    {
+      "id": "T04",
+      "title": "Dirac richness / convex weak closure / a.s. impredicativity trilemma",
+      "original_v3_entry": {
+        "id": "T04",
+        "title": "Dirac richness / convex weak closure / a.s. impredicativity trilemma",
+        "ordinary_mathematical_proof": "SUPPLIED_WITH_EXPLICIT_HYPOTHESES_AND_STATED_EXTERNAL_THEOREMS",
+        "section": "§2",
+        "lean_source": null,
+        "formal_scope": "Full ordinary proof via grid laws and T01; no measure/topology source",
+        "kernel_verified": false,
+        "novelty_disposition": "New to this packet; literature priority unresolved"
+      },
+      "handoff_assessment": {
+        "review_ordinary_assessment": "Grid-law/weak-closure ordinary argument reviewed.",
+        "review_formal_or_scope_limit": "No formal weak convergence; the countable source does not itself exhibit this continuum hazard.",
+        "review_links": [
+          "RV22",
+          "RV24",
+          "RV28"
+        ],
+        "fresh_kernel_verified": false,
+        "global_novelty_established": false
+      },
+      "current_ordinary_status": "PRESERVED_ORDINARY_WITH_STATED_SCOPE",
+      "kernel_verified": false,
+      "novelty_established": false,
+      "preserved_proof": "history/Orthemology_v3_Critical_Handoff/inputs/v3/MATHEMATICAL_PROOF.md",
+      "current_review_links": [
+        "RV22",
+        "RV24",
+        "RV28"
+      ],
+      "current_disposition_source": "ledgers/CRITICISM_DISPOSITIONS.json"
+    },
+    {
+      "id": "T05",
+      "title": "Exact invariant-code preservation under relation extension",
+      "original_v3_entry": {
+        "id": "T05",
+        "title": "Exact invariant-code preservation under relation extension",
+        "ordinary_mathematical_proof": "SUPPLIED_WITH_EXPLICIT_HYPOTHESES_AND_STATED_EXTERNAL_THEOREMS",
+        "section": "§3",
+        "lean_source": null,
+        "formal_scope": "Ordinary proof plus 262144 finite relation pairs",
+        "kernel_verified": false,
+        "novelty_disposition": "Standard equivalence-closure fact"
+      },
+      "handoff_assessment": {
+        "review_ordinary_assessment": "Ordinary equivalence-closure criterion reviewed; finite census reproduced.",
+        "review_formal_or_scope_limit": "Formal general theorem remains; review supplies a policy-relative generalisation and a separate 1792-case check.",
+        "review_links": [
+          "RV04",
+          "RV42"
+        ],
+        "fresh_kernel_verified": false,
+        "global_novelty_established": false
+      },
+      "current_ordinary_status": "PRESERVED_ORDINARY_WITH_STATED_SCOPE",
+      "kernel_verified": false,
+      "novelty_established": false,
+      "preserved_proof": "history/Orthemology_v3_Critical_Handoff/inputs/v3/MATHEMATICAL_PROOF.md",
+      "current_review_links": [
+        "RV04",
+        "RV42"
+      ],
+      "current_disposition_source": "ledgers/CRITICISM_DISPOSITIONS.json"
+    },
+    {
+      "id": "T06",
+      "title": "Naive branching conversion collapses invariant codes",
+      "original_v3_entry": {
+        "id": "T06",
+        "title": "Naive branching conversion collapses invariant codes",
+        "ordinary_mathematical_proof": "SUPPLIED_WITH_EXPLICIT_HYPOTHESES_AND_STATED_EXTERNAL_THEOREMS",
+        "section": "§3",
+        "lean_source": "BoundaryResults.lean: branching_invariance_collapses",
+        "formal_scope": "Source plus ordinary proof",
+        "kernel_verified": false,
+        "novelty_disposition": "Elementary obstruction"
+      },
+      "handoff_assessment": {
+        "review_ordinary_assessment": "Branching-as-conversion collapse is a useful obstruction.",
+        "review_formal_or_scope_limit": "Do not identify probabilistic transitions with symmetric conversion equations.",
+        "review_links": [
+          "RV25"
+        ],
+        "fresh_kernel_verified": false,
+        "global_novelty_established": false
+      },
+      "current_ordinary_status": "PRESERVED_ORDINARY_WITH_STATED_SCOPE",
+      "kernel_verified": false,
+      "novelty_established": false,
+      "preserved_proof": "history/Orthemology_v3_Critical_Handoff/inputs/v3/MATHEMATICAL_PROOF.md",
+      "current_review_links": [
+        "RV25"
+      ],
+      "current_disposition_source": "ledgers/CRITICISM_DISPOSITIONS.json"
+    },
+    {
+      "id": "T07",
+      "title": "Singleton countermodel to the bare reviewer trilemma",
+      "original_v3_entry": {
+        "id": "T07",
+        "title": "Singleton countermodel to the bare reviewer trilemma",
+        "ordinary_mathematical_proof": "SUPPLIED_WITH_EXPLICIT_HYPOTHESES_AND_STATED_EXTERNAL_THEOREMS",
+        "section": "§3",
+        "lean_source": "BoundaryResults.lean: singleton_full_beta",
+        "formal_scope": "Source witnesses full beta; no rich closure implied",
+        "kernel_verified": false,
+        "novelty_disposition": "Counterexample to an underspecified claim"
+      },
+      "handoff_assessment": {
+        "review_ordinary_assessment": "Countermodel correctly targets the underspecified reviewer demand.",
+        "review_formal_or_scope_limit": "It does not establish rich closure or unrestricted reflective universality.",
+        "review_links": [
+          "RV17",
+          "RV40"
+        ],
+        "fresh_kernel_verified": false,
+        "global_novelty_established": false
+      },
+      "current_ordinary_status": "PRESERVED_ORDINARY_WITH_STATED_SCOPE",
+      "kernel_verified": false,
+      "novelty_established": false,
+      "preserved_proof": "history/Orthemology_v3_Critical_Handoff/inputs/v3/MATHEMATICAL_PROOF.md",
+      "current_review_links": [
+        "RV17",
+        "RV40"
+      ],
+      "current_disposition_source": "ledgers/CRITICISM_DISPOSITIONS.json"
+    },
+    {
+      "id": "T08",
+      "title": "Observation factorisation capacity and approximation radius",
+      "original_v3_entry": {
+        "id": "T08",
+        "title": "Observation factorisation capacity and approximation radius",
+        "ordinary_mathematical_proof": "SUPPLIED_WITH_EXPLICIT_HYPOTHESES_AND_STATED_EXTERNAL_THEOREMS",
+        "section": "§3",
+        "lean_source": "BoundaryResults.lean: no_erased_full_sections",
+        "formal_scope": "Source only for erased obstruction; general factorisation/optimal error ordinary",
+        "kernel_verified": false,
+        "novelty_disposition": "Standard quotient/fibre approximation facts"
+      },
+      "handoff_assessment": {
+        "review_ordinary_assessment": "Factorisation and finite fibre approximation are ordinary results.",
+        "review_formal_or_scope_limit": "Not a proof of universal language understanding or all semantic factorisation claims.",
+        "review_links": [
+          "RV20",
+          "RV36"
+        ],
+        "fresh_kernel_verified": false,
+        "global_novelty_established": false
+      },
+      "current_ordinary_status": "PRESERVED_ORDINARY_WITH_STATED_SCOPE",
+      "kernel_verified": false,
+      "novelty_established": false,
+      "preserved_proof": "history/Orthemology_v3_Critical_Handoff/inputs/v3/MATHEMATICAL_PROOF.md",
+      "current_review_links": [
+        "RV20",
+        "RV36"
+      ],
+      "current_disposition_source": "ledgers/CRITICISM_DISPOSITIONS.json"
+    },
+    {
+      "id": "T09",
+      "title": "Renaming, simultaneous substitution and environment correspondence",
+      "original_v3_entry": {
+        "id": "T09",
+        "title": "Renaming, simultaneous substitution and environment correspondence",
+        "ordinary_mathematical_proof": "SUPPLIED_WITH_EXPLICIT_HYPOTHESES_AND_STATED_EXTERNAL_THEOREMS",
+        "section": "§4",
+        "lean_source": "FiniteBridge.lean: rename_sem, substitute_sem, instantiate_sem",
+        "formal_scope": "Source plus ordinary induction and bounded independent implementations",
+        "kernel_verified": false,
+        "novelty_disposition": "Standard metatheory repair"
+      },
+      "handoff_assessment": {
+        "review_ordinary_assessment": "Renaming/substitution proofs proposed and bounded independent tests reproduced.",
+        "review_formal_or_scope_limit": "Lean elaboration and actual Python cutoff-substitution refinement still open.",
+        "review_links": [
+          "RV01",
+          "RV04",
+          "RV11"
+        ],
+        "fresh_kernel_verified": false,
+        "global_novelty_established": false
+      },
+      "current_ordinary_status": "PRESERVED_ORDINARY_WITH_STATED_SCOPE",
+      "kernel_verified": false,
+      "novelty_established": false,
+      "preserved_proof": "history/Orthemology_v3_Critical_Handoff/inputs/v3/MATHEMATICAL_PROOF.md",
+      "current_review_links": [
+        "RV01",
+        "RV04",
+        "RV11"
+      ],
+      "current_disposition_source": "ledgers/CRITICISM_DISPOSITIONS.json"
+    },
+    {
+      "id": "T10",
+      "title": "Finite source semantic translation and proof-carrying checking",
+      "original_v3_entry": {
+        "id": "T10",
+        "title": "Finite source semantic translation and proof-carrying checking",
+        "ordinary_mathematical_proof": "SUPPLIED_WITH_EXPLICIT_HYPOTHESES_AND_STATED_EXTERNAL_THEOREMS",
+        "section": "§4",
+        "lean_source": "FiniteBridge.lean: finite_translation, finite_sound, checked_sound",
+        "formal_scope": "Source plus ordinary proof; external Python refinement not supplied",
+        "kernel_verified": false,
+        "novelty_disposition": "Engineering/standard soundness"
+      },
+      "handoff_assessment": {
+        "review_ordinary_assessment": "Finite one-premise derivation/checker is substantive source progress.",
+        "review_formal_or_scope_limit": "Need actual successful kernel check and bytes-to-verified-checker bridge; projected-pair erasure fact has narrow scope.",
+        "review_links": [
+          "RV07",
+          "RV08",
+          "RV11",
+          "RV39"
+        ],
+        "fresh_kernel_verified": false,
+        "global_novelty_established": false
+      },
+      "current_ordinary_status": "PRESERVED_ORDINARY_WITH_STATED_SCOPE",
+      "kernel_verified": false,
+      "novelty_established": false,
+      "preserved_proof": "history/Orthemology_v3_Critical_Handoff/inputs/v3/MATHEMATICAL_PROOF.md",
+      "current_review_links": [
+        "RV07",
+        "RV08",
+        "RV11",
+        "RV39"
+      ],
+      "current_disposition_source": "ledgers/CRITICISM_DISPOSITIONS.json"
+    },
+    {
+      "id": "T11",
+      "title": "Exact-term incompleteness by a discarded marker",
+      "original_v3_entry": {
+        "id": "T11",
+        "title": "Exact-term incompleteness by a discarded marker",
+        "ordinary_mathematical_proof": "SUPPLIED_WITH_EXPLICIT_HYPOTHESES_AND_STATED_EXTERNAL_THEOREMS",
+        "section": "§5",
+        "lean_source": "BoundaryResults.lean: marker_counterexample_not_derivable, marker_counterexample_not_finite",
+        "formal_scope": "Source plus ordinary counterexample",
+        "kernel_verified": false,
+        "novelty_disposition": "Concrete model-specific counterexample; no priority claim"
+      },
+      "handoff_assessment": {
+        "review_ordinary_assessment": "Discarded-marker exact-term counterexample reviewed.",
+        "review_formal_or_scope_limit": "Preserve distinction from completeness modulo conversion.",
+        "review_links": [
+          "RV30",
+          "RV31"
+        ],
+        "fresh_kernel_verified": false,
+        "global_novelty_established": false
+      },
+      "current_ordinary_status": "PRESERVED_ORDINARY_WITH_STATED_SCOPE",
+      "kernel_verified": false,
+      "novelty_established": false,
+      "preserved_proof": "history/Orthemology_v3_Critical_Handoff/inputs/v3/MATHEMATICAL_PROOF.md",
+      "current_review_links": [
+        "RV30",
+        "RV31"
+      ],
+      "current_disposition_source": "ledgers/CRITICISM_DISPOSITIONS.json"
+    },
+    {
+      "id": "T12",
+      "title": "Every nonempty conversion-invariant code has a non-SN term",
+      "original_v3_entry": {
+        "id": "T12",
+        "title": "Every nonempty conversion-invariant code has a non-SN term",
+        "ordinary_mathematical_proof": "SUPPLIED_WITH_EXPLICIT_HYPOTHESES_AND_STATED_EXTERNAL_THEOREMS",
+        "section": "§5",
+        "lean_source": "NormalisationAndNumerals.lean: every_inhabited_code_contains_non_SN",
+        "formal_scope": "Source plus explicit three-cycle",
+        "kernel_verified": false,
+        "novelty_disposition": "Elementary but load-bearing correction"
+      },
+      "handoff_assessment": {
+        "review_ordinary_assessment": "Explicit compatible reduction cycle and discarded divergent term argument reviewed.",
+        "review_formal_or_scope_limit": "Not a theorem about weak-head termination of every accepted execution.",
+        "review_links": [
+          "RV31"
+        ],
+        "fresh_kernel_verified": false,
+        "global_novelty_established": false
+      },
+      "current_ordinary_status": "PRESERVED_ORDINARY_WITH_STATED_SCOPE",
+      "kernel_verified": false,
+      "novelty_established": false,
+      "preserved_proof": "history/Orthemology_v3_Critical_Handoff/inputs/v3/MATHEMATICAL_PROOF.md",
+      "current_review_links": [
+        "RV31"
+      ],
+      "current_disposition_source": "ledgers/CRITICISM_DISPOSITIONS.json"
+    },
+    {
+      "id": "T13",
+      "title": "Strong normalisation of the finite source",
+      "original_v3_entry": {
+        "id": "T13",
+        "title": "Strong normalisation of the finite source",
+        "ordinary_mathematical_proof": "SUPPLIED_WITH_EXPLICIT_HYPOTHESES_AND_STATED_EXTERNAL_THEOREMS",
+        "section": "§5",
+        "lean_source": null,
+        "formal_scope": "Ordinary translation proof using established System F SN; not formalised here",
+        "kernel_verified": false,
+        "novelty_disposition": "Known theorem transferred to this source"
+      },
+      "handoff_assessment": {
+        "review_ordinary_assessment": "Ordinary System F transfer outline reviewed with external SN dependency.",
+        "review_formal_or_scope_limit": "No source-to-verified-System-F simulation compiled; exact translation needs mechanisation.",
+        "review_links": [
+          "RV30"
+        ],
+        "fresh_kernel_verified": false,
+        "global_novelty_established": false
+      },
+      "current_ordinary_status": "PRESERVED_ORDINARY_WITH_STATED_SCOPE",
+      "kernel_verified": false,
+      "novelty_established": false,
+      "preserved_proof": "history/Orthemology_v3_Critical_Handoff/inputs/v3/MATHEMATICAL_PROOF.md",
+      "current_review_links": [
+        "RV30"
+      ],
+      "current_disposition_source": "ledgers/CRITICISM_DISPOSITIONS.json"
+    },
+    {
+      "id": "T14",
+      "title": "Failure of finite-source completeness even modulo conversion with primitive bottom",
+      "original_v3_entry": {
+        "id": "T14",
+        "title": "Failure of finite-source completeness even modulo conversion with primitive bottom",
+        "ordinary_mathematical_proof": "SUPPLIED_WITH_EXPLICIT_HYPOTHESES_AND_STATED_EXTERNAL_THEOREMS",
+        "section": "§5",
+        "lean_source": null,
+        "formal_scope": "Ordinary proof with explicit SKI parallel-confluence argument and T13; no corresponding Lean proof",
+        "kernel_verified": false,
+        "novelty_disposition": "Model-specific corollary, not a replacement for known completeness results"
+      },
+      "handoff_assessment": {
+        "review_ordinary_assessment": "Ordinary bottom/Ω argument reviewed with confluence and SN transfer dependencies.",
+        "review_formal_or_scope_limit": "No Lean proof of the whole modulo-conversion result; full mechanisation still open.",
+        "review_links": [
+          "RV30"
+        ],
+        "fresh_kernel_verified": false,
+        "global_novelty_established": false
+      },
+      "current_ordinary_status": "PRESERVED_ORDINARY_WITH_STATED_SCOPE",
+      "kernel_verified": false,
+      "novelty_established": false,
+      "preserved_proof": "history/Orthemology_v3_Critical_Handoff/inputs/v3/MATHEMATICAL_PROOF.md",
+      "current_review_links": [
+        "RV30"
+      ],
+      "current_disposition_source": "ledgers/CRITICISM_DISPOSITIONS.json"
+    },
+    {
+      "id": "T15",
+      "title": "Identity behavioural characterisation",
+      "original_v3_entry": {
+        "id": "T15",
+        "title": "Identity behavioural characterisation",
+        "ordinary_mathematical_proof": "SUPPLIED_WITH_EXPLICIT_HYPOTHESES_AND_STATED_EXTERNAL_THEOREMS",
+        "section": "§6",
+        "lean_source": "BoundaryResults.lean: identity_characterisation",
+        "formal_scope": "Source plus principal-code proof",
+        "kernel_verified": false,
+        "novelty_disposition": "Standard free-theorem reasoning"
+      },
+      "handoff_assessment": {
+        "review_ordinary_assessment": "Principal-class identity representation argument reviewed.",
+        "review_formal_or_scope_limit": "A particular representation theorem, not all ambient parametricity.",
+        "review_links": [
+          "RV15",
+          "RV32"
+        ],
+        "fresh_kernel_verified": false,
+        "global_novelty_established": false
+      },
+      "current_ordinary_status": "PRESERVED_ORDINARY_WITH_STATED_SCOPE",
+      "kernel_verified": false,
+      "novelty_established": false,
+      "preserved_proof": "history/Orthemology_v3_Critical_Handoff/inputs/v3/MATHEMATICAL_PROOF.md",
+      "current_review_links": [
+        "RV15",
+        "RV32"
+      ],
+      "current_disposition_source": "ledgers/CRITICISM_DISPOSITIONS.json"
+    },
+    {
+      "id": "T16",
+      "title": "Uniform Boolean projection characterisation",
+      "original_v3_entry": {
+        "id": "T16",
+        "title": "Uniform Boolean projection characterisation",
+        "ordinary_mathematical_proof": "SUPPLIED_WITH_EXPLICIT_HYPOTHESES_AND_STATED_EXTERNAL_THEOREMS",
+        "section": "§6",
+        "lean_source": "BoundaryResults.lean: boolean_projection, boolean_projection_converse",
+        "formal_scope": "Source proves global disjunction; branch separation relies on standard confluence if demanded",
+        "kernel_verified": false,
+        "novelty_disposition": "Established representation/free-theorem lineage"
+      },
+      "handoff_assessment": {
+        "review_ordinary_assessment": "Fresh-marker global projection argument reviewed.",
+        "review_formal_or_scope_limit": "Keep freshness and conversion assumptions; general binary-relations theorem not established.",
+        "review_links": [
+          "RV32",
+          "RV33"
+        ],
+        "fresh_kernel_verified": false,
+        "global_novelty_established": false
+      },
+      "current_ordinary_status": "PRESERVED_ORDINARY_WITH_STATED_SCOPE",
+      "kernel_verified": false,
+      "novelty_established": false,
+      "preserved_proof": "history/Orthemology_v3_Critical_Handoff/inputs/v3/MATHEMATICAL_PROOF.md",
+      "current_review_links": [
+        "RV32",
+        "RV33"
+      ],
+      "current_disposition_source": "ledgers/CRITICISM_DISPOSITIONS.json"
+    },
+    {
+      "id": "T17",
+      "title": "Church numeral representation",
+      "original_v3_entry": {
+        "id": "T17",
+        "title": "Church numeral representation",
+        "ordinary_mathematical_proof": "SUPPLIED_WITH_EXPLICIT_HYPOTHESES_AND_STATED_EXTERNAL_THEOREMS",
+        "section": "§6",
+        "lean_source": "NormalisationAndNumerals.lean: numeral_representability",
+        "formal_scope": "Source plus orbit-code proof; uniqueness not asserted",
+        "kernel_verified": false,
+        "novelty_disposition": "Established representation lineage"
+      },
+      "handoff_assessment": {
+        "review_ordinary_assessment": "Orbit/fresh-substitution numeral representation argument reviewed.",
+        "review_formal_or_scope_limit": "Do not infer all closed polymorphic ambient Lean functions are numerals.",
+        "review_links": [
+          "RV15",
+          "RV32"
+        ],
+        "fresh_kernel_verified": false,
+        "global_novelty_established": false
+      },
+      "current_ordinary_status": "PRESERVED_ORDINARY_WITH_STATED_SCOPE",
+      "kernel_verified": false,
+      "novelty_established": false,
+      "preserved_proof": "history/Orthemology_v3_Critical_Handoff/inputs/v3/MATHEMATICAL_PROOF.md",
+      "current_review_links": [
+        "RV15",
+        "RV32"
+      ],
+      "current_disposition_source": "ledgers/CRITICISM_DISPOSITIONS.json"
+    },
+    {
+      "id": "T18",
+      "title": "Atomic effect support soundness, no-empty result and lifted internal quantification",
+      "original_v3_entry": {
+        "id": "T18",
+        "title": "Atomic effect support soundness, no-empty result and lifted internal quantification",
+        "ordinary_mathematical_proof": "SUPPLIED_WITH_EXPLICIT_HYPOTHESES_AND_STATED_EXTERNAL_THEOREMS",
+        "section": "§9",
+        "lean_source": "EffectsAndDependence.lean: effect_sound, no_empty_effect, support_all_iff",
+        "formal_scope": "Support proof source; real probability arithmetic and lifted-measure universe ordinary",
+        "kernel_verified": false,
+        "novelty_disposition": "Standard effect/realisability ideas; precise atomicity integration newly worked out"
+      },
+      "handoff_assessment": {
+        "review_ordinary_assessment": "Support-level semantic lifting and executable finite distributions reviewed.",
+        "review_formal_or_scope_limit": "The Lean proof does not yet verify actual weights or product sampling law.",
+        "review_links": [
+          "RV25"
+        ],
+        "fresh_kernel_verified": false,
+        "global_novelty_established": false
+      },
+      "current_ordinary_status": "PRESERVED_ORDINARY_WITH_STATED_SCOPE",
+      "kernel_verified": false,
+      "novelty_established": false,
+      "preserved_proof": "history/Orthemology_v3_Critical_Handoff/inputs/v3/MATHEMATICAL_PROOF.md",
+      "current_review_links": [
+        "RV25"
+      ],
+      "current_disposition_source": "ledgers/CRITICISM_DISPOSITIONS.json"
+    },
+    {
+      "id": "T19",
+      "title": "Compact selection over a fixed typed support",
+      "original_v3_entry": {
+        "id": "T19",
+        "title": "Compact selection over a fixed typed support",
+        "ordinary_mathematical_proof": "SUPPLIED_WITH_EXPLICIT_HYPOTHESES_AND_STATED_EXTERNAL_THEOREMS",
+        "section": "§9",
+        "lean_source": null,
+        "formal_scope": "Ordinary application of Kakutani; no new Kakutani proof or computability claim",
+        "kernel_verified": false,
+        "novelty_disposition": "Standard fixed-point application with explicit typing restrictions"
+      },
+      "handoff_assessment": {
+        "review_ordinary_assessment": "Finite-support selection argument reviewed with external fixed-point theorem.",
+        "review_formal_or_scope_limit": "Require actual nonempty support/correspondence; finite atomicity does not imply all real laws are executable.",
+        "review_links": [
+          "RV28",
+          "RV29"
+        ],
+        "fresh_kernel_verified": false,
+        "global_novelty_established": false
+      },
+      "current_ordinary_status": "PRESERVED_ORDINARY_WITH_STATED_SCOPE",
+      "kernel_verified": false,
+      "novelty_established": false,
+      "preserved_proof": "history/Orthemology_v3_Critical_Handoff/inputs/v3/MATHEMATICAL_PROOF.md",
+      "current_review_links": [
+        "RV28",
+        "RV29"
+      ],
+      "current_disposition_source": "ledgers/CRITICISM_DISPOSITIONS.json"
+    },
+    {
+      "id": "T20",
+      "title": "Irrational reflective equilibrium excludes finite rational mixture realisation",
+      "original_v3_entry": {
+        "id": "T20",
+        "title": "Irrational reflective equilibrium excludes finite rational mixture realisation",
+        "ordinary_mathematical_proof": "SUPPLIED_WITH_EXPLICIT_HYPOTHESES_AND_STATED_EXTERNAL_THEOREMS",
+        "section": "§10",
+        "lean_source": null,
+        "formal_scope": "Ordinary algebraic proof; exact reference arithmetic",
+        "kernel_verified": false,
+        "novelty_disposition": "Worked case; no new sampling/fixed-point principle claimed"
+      },
+      "handoff_assessment": {
+        "review_ordinary_assessment": "Quadratic algebra and finite rational-mixture representation obstruction reviewed.",
+        "review_formal_or_scope_limit": "A computable irrational example does not realise arbitrary real simplex parameters.",
+        "review_links": [
+          "RV26",
+          "RV29"
+        ],
+        "fresh_kernel_verified": false,
+        "global_novelty_established": false
+      },
+      "current_ordinary_status": "PRESERVED_ORDINARY_WITH_STATED_SCOPE",
+      "kernel_verified": false,
+      "novelty_established": false,
+      "preserved_proof": "history/Orthemology_v3_Critical_Handoff/inputs/v3/MATHEMATICAL_PROOF.md",
+      "current_review_links": [
+        "RV26",
+        "RV29"
+      ],
+      "current_disposition_source": "ledgers/CRITICISM_DISPOSITIONS.json"
+    },
+    {
+      "id": "T21",
+      "title": "Fair-bit exact sampler with tail 2^-n and expectation 2",
+      "original_v3_entry": {
+        "id": "T21",
+        "title": "Fair-bit exact sampler with tail 2^-n and expectation 2",
+        "ordinary_mathematical_proof": "SUPPLIED_WITH_EXPLICIT_HYPOTHESES_AND_STATED_EXTERNAL_THEOREMS",
+        "section": "§10",
+        "lean_source": null,
+        "formal_scope": "Ordinary measure proof; executable finite prefixes/census; infinite calculus not formalised",
+        "kernel_verified": false,
+        "novelty_disposition": "Standard inverse-transform bit sampling applied to this reflective policy"
+      },
+      "handoff_assessment": {
+        "review_ordinary_assessment": "Exact-integer prefix algorithm and ordinary tail/mean argument reviewed; tests reproduced.",
+        "review_formal_or_scope_limit": "Not a typed productive source or formal measure/cost theorem; expected bits are not CPU operations.",
+        "review_links": [
+          "RV26",
+          "RV27"
+        ],
+        "fresh_kernel_verified": false,
+        "global_novelty_established": false
+      },
+      "current_ordinary_status": "PRESERVED_ORDINARY_WITH_STATED_SCOPE",
+      "kernel_verified": false,
+      "novelty_established": false,
+      "preserved_proof": "history/Orthemology_v3_Critical_Handoff/inputs/v3/MATHEMATICAL_PROOF.md",
+      "current_review_links": [
+        "RV26",
+        "RV27"
+      ],
+      "current_disposition_source": "ledgers/CRITICISM_DISPOSITIONS.json"
+    },
+    {
+      "id": "T22",
+      "title": "Convergence rate for the quadratic response",
+      "original_v3_entry": {
+        "id": "T22",
+        "title": "Convergence rate for the quadratic response",
+        "ordinary_mathematical_proof": "SUPPLIED_WITH_EXPLICIT_HYPOTHESES_AND_STATED_EXTERNAL_THEOREMS",
+        "section": "§10",
+        "lean_source": null,
+        "formal_scope": "Ordinary contraction proof and exact finite tests",
+        "kernel_verified": false,
+        "novelty_disposition": "Standard contraction application"
+      },
+      "handoff_assessment": {
+        "review_ordinary_assessment": "Contraction argument on the invariant interval reviewed.",
+        "review_formal_or_scope_limit": "Not a convergence theorem for general Kakutani correspondences.",
+        "review_links": [
+          "RV29"
+        ],
+        "fresh_kernel_verified": false,
+        "global_novelty_established": false
+      },
+      "current_ordinary_status": "PRESERVED_ORDINARY_WITH_STATED_SCOPE",
+      "kernel_verified": false,
+      "novelty_established": false,
+      "preserved_proof": "history/Orthemology_v3_Critical_Handoff/inputs/v3/MATHEMATICAL_PROOF.md",
+      "current_review_links": [
+        "RV29"
+      ],
+      "current_disposition_source": "ledgers/CRITICISM_DISPOSITIONS.json"
+    },
+    {
+      "id": "T23",
+      "title": "Coherent dependent Pi, Sigma and conversion equality transport",
+      "original_v3_entry": {
+        "id": "T23",
+        "title": "Coherent dependent Pi, Sigma and conversion equality transport",
+        "ordinary_mathematical_proof": "SUPPLIED_WITH_EXPLICIT_HYPOTHESES_AND_STATED_EXTERNAL_THEOREMS",
+        "section": "§8",
+        "lean_source": "EffectsAndDependence.lean: dependent_application_conversion, sigma_projections, equality_transport",
+        "formal_scope": "Source and ordinary semantics; full contextual DTT absent",
+        "kernel_verified": false,
+        "novelty_disposition": "Standard tracked dependent semantics"
+      },
+      "handoff_assessment": {
+        "review_ordinary_assessment": "Coherent dependent semantic constructors reviewed.",
+        "review_formal_or_scope_limit": "Contextual DTT, J, universes and executable checking still require a full specification/proof.",
+        "review_links": [
+          "RV34"
+        ],
+        "fresh_kernel_verified": false,
+        "global_novelty_established": false
+      },
+      "current_ordinary_status": "PRESERVED_ORDINARY_WITH_STATED_SCOPE",
+      "kernel_verified": false,
+      "novelty_established": false,
+      "preserved_proof": "history/Orthemology_v3_Critical_Handoff/inputs/v3/MATHEMATICAL_PROOF.md",
+      "current_review_links": [
+        "RV34"
+      ],
+      "current_disposition_source": "ledgers/CRITICISM_DISPOSITIONS.json"
+    },
+    {
+      "id": "T24",
+      "title": "Fresh symbolic selector certificate generalises to arbitrary inputs",
+      "original_v3_entry": {
+        "id": "T24",
+        "title": "Fresh symbolic selector certificate generalises to arbitrary inputs",
+        "ordinary_mathematical_proof": "SUPPLIED_WITH_EXPLICIT_HYPOTHESES_AND_STATED_EXTERNAL_THEOREMS",
+        "section": "§7",
+        "lean_source": "BoundaryResults.lean: certified_left_projection, certified_right_projection",
+        "formal_scope": "Source for reduction transport; exact head-prefix count proved in prose/tested",
+        "kernel_verified": false,
+        "novelty_disposition": "Concrete compiler certificate; no performance superiority claim"
+      },
+      "handoff_assessment": {
+        "review_ordinary_assessment": "Fresh-marker symbolic trace generalisation reviewed; finite tests reproduced.",
+        "review_formal_or_scope_limit": "The unindexed Lean Red result does not certify the Python trace length/strategy or general contextual compiler correctness.",
+        "review_links": [
+          "RV33",
+          "RV35"
+        ],
+        "fresh_kernel_verified": false,
+        "global_novelty_established": false
+      },
+      "current_ordinary_status": "PRESERVED_ORDINARY_WITH_STATED_SCOPE",
+      "kernel_verified": false,
+      "novelty_established": false,
+      "preserved_proof": "history/Orthemology_v3_Critical_Handoff/inputs/v3/MATHEMATICAL_PROOF.md",
+      "current_review_links": [
+        "RV33",
+        "RV35"
+      ],
+      "current_disposition_source": "ledgers/CRITICISM_DISPOSITIONS.json"
+    },
+    {
+      "id": "V4-Q1",
+      "title": "Exact observation-refinement defect decomposition and equality conditions",
+      "ordinary_mathematical_proof": "PROOFS_V4.md",
+      "section": "V4-Q1",
+      "status": "ORDINARY_PROVISIONAL",
+      "lean_source": null,
+      "lean_scope": "NO_MEASURE_THEORETIC_FORMALISATION",
+      "implementation_sources": [
+        "observations.py"
+      ],
+      "kernel_verified": false,
+      "novelty_established": false,
+      "formal_python_refinement": false
+    },
+    {
+      "id": "V4-Q2",
+      "title": "Sharp full-event universal failure; countable-carrier protection",
+      "ordinary_mathematical_proof": "PROOFS_V4.md",
+      "section": "V4-Q2",
+      "status": "ORDINARY_PROVISIONAL",
+      "lean_source": null,
+      "lean_scope": "NO_MEASURE_THEORETIC_FORMALISATION",
+      "implementation_sources": [],
+      "kernel_verified": false,
+      "novelty_established": false,
+      "formal_python_refinement": false
+    },
+    {
+      "id": "V4-Q3",
+      "title": "Revision-sensitive quantitative certificate transport",
+      "ordinary_mathematical_proof": "PROOFS_V4.md",
+      "section": "V4-Q3",
+      "status": "ORDINARY_PROVISIONAL",
+      "lean_source": null,
+      "lean_scope": "NO_MEASURE_THEORETIC_FORMALISATION",
+      "implementation_sources": [
+        "observations.py",
+        "operational.py"
+      ],
+      "kernel_verified": false,
+      "novelty_established": false,
+      "formal_python_refinement": false
+    },
+    {
+      "id": "V4-Q4",
+      "title": "Weak-limit and infinite-prefix failures of defect preservation",
+      "ordinary_mathematical_proof": "PROOFS_V4.md",
+      "section": "V4-Q4",
+      "status": "ORDINARY_PROVISIONAL",
+      "lean_source": null,
+      "lean_scope": "NO_MEASURE_THEORETIC_FORMALISATION",
+      "implementation_sources": [],
+      "kernel_verified": false,
+      "novelty_established": false,
+      "formal_python_refinement": false
+    },
+    {
+      "id": "V4-Q5",
+      "title": "Active finite invariant-extension equivalence",
+      "ordinary_mathematical_proof": "PROOFS_V4.md",
+      "section": "V4-Q5",
+      "status": "ORDINARY_PROVISIONAL",
+      "lean_source": null,
+      "lean_scope": "NO_MEASURE_THEORETIC_FORMALISATION",
+      "implementation_sources": [
+        "operational.py"
+      ],
+      "kernel_verified": false,
+      "novelty_established": false,
+      "formal_python_refinement": false
+    },
+    {
+      "id": "V4-Q6",
+      "title": "Correct defect computation for the declared analytic law grammar",
+      "ordinary_mathematical_proof": "PROOFS_V4.md",
+      "section": "V4-Q6",
+      "status": "ORDINARY_PROVISIONAL",
+      "lean_source": null,
+      "lean_scope": "NO_MEASURE_THEORETIC_FORMALISATION",
+      "implementation_sources": [
+        "observations.py"
+      ],
+      "kernel_verified": false,
+      "novelty_established": false,
+      "formal_python_refinement": false
+    },
+    {
+      "id": "V4-Q7",
+      "title": "Countable conull-event families have no arbitrary-intersection obstruction",
+      "ordinary_mathematical_proof": "PROOFS_V4.md",
+      "section": "V4-Q7",
+      "status": "ORDINARY_PROVISIONAL",
+      "lean_source": null,
+      "lean_scope": "NO_MEASURE_THEORETIC_FORMALISATION",
+      "implementation_sources": [],
+      "kernel_verified": false,
+      "novelty_established": false,
+      "formal_python_refinement": false
+    },
+    {
+      "id": "V4-Q8",
+      "title": "No complete effective zero-defect certifier for all productive observers",
+      "ordinary_mathematical_proof": "PROOFS_V4.md",
+      "section": "V4-Q8",
+      "status": "ORDINARY_PROVISIONAL",
+      "lean_source": null,
+      "lean_scope": "NO_MEASURE_THEORETIC_FORMALISATION",
+      "implementation_sources": [
+        "productive_observer.py"
+      ],
+      "kernel_verified": false,
+      "novelty_established": false,
+      "formal_python_refinement": false
+    },
+    {
+      "id": "V4-O1",
+      "title": "Positive fixed-K licensed operation construction",
+      "ordinary_mathematical_proof": "PROOFS_V4.md",
+      "section": "V4-O1",
+      "status": "ORDINARY_PROVISIONAL",
+      "lean_source": "lean/OperationalKernel.lean",
+      "lean_scope": "UNCOMPILED_CANDIDATE",
+      "implementation_sources": [
+        "operational.py",
+        "demonstrate.py"
+      ],
+      "kernel_verified": false,
+      "novelty_established": false,
+      "formal_python_refinement": false
+    },
+    {
+      "id": "V4-O2",
+      "title": "Structural execution preservation and explicit schema reach",
+      "ordinary_mathematical_proof": "PROOFS_V4.md",
+      "section": "V4-O2",
+      "status": "ORDINARY_PROVISIONAL",
+      "lean_source": "lean/OperationalKernel.lean",
+      "lean_scope": "UNCOMPILED_CANDIDATE",
+      "implementation_sources": [
+        "operational.py",
+        "proof_export.py"
+      ],
+      "kernel_verified": false,
+      "novelty_established": false,
+      "formal_python_refinement": false
+    },
+    {
+      "id": "V4-O3",
+      "title": "Dependency preservation and stale/ABA/collision/issuer rejection",
+      "ordinary_mathematical_proof": "PROOFS_V4.md",
+      "section": "V4-O3",
+      "status": "ORDINARY_PROVISIONAL",
+      "lean_source": "lean/OperationalKernel.lean",
+      "lean_scope": "UNCOMPILED_CANDIDATE",
+      "implementation_sources": [
+        "operational.py"
+      ],
+      "kernel_verified": false,
+      "novelty_established": false,
+      "formal_python_refinement": false
+    },
+    {
+      "id": "V4-O4",
+      "title": "Operational SCUU extraction and independent positive-negative conjunction",
+      "ordinary_mathematical_proof": "PROOFS_V4.md",
+      "section": "V4-O4",
+      "status": "ORDINARY_PROVISIONAL",
+      "lean_source": "lean/OperationalBoundary.lean",
+      "lean_scope": "UNCOMPILED_CANDIDATE",
+      "implementation_sources": [],
+      "kernel_verified": false,
+      "novelty_established": false,
+      "formal_python_refinement": false
+    },
+    {
+      "id": "V4-R1",
+      "title": "Finite pure binary-logical-relations fundamental theorem",
+      "ordinary_mathematical_proof": "PROOFS_V4.md",
+      "section": "V4-R1",
+      "status": "ORDINARY_PROVISIONAL",
+      "lean_source": "lean/RelationalFragment.lean",
+      "lean_scope": "UNCOMPILED_CANDIDATE",
+      "implementation_sources": [],
+      "kernel_verified": false,
+      "novelty_established": false,
+      "formal_python_refinement": false
+    },
+    {
+      "id": "V4-R2",
+      "title": "Finite checked source export into mandatory Lean certificates",
+      "ordinary_mathematical_proof": "PROOFS_V4.md",
+      "section": "V4-R2",
+      "status": "ORDINARY_PROVISIONAL",
+      "lean_source": "lean/GeneratedExamples.lean",
+      "lean_scope": "UNCOMPILED_CANDIDATE",
+      "implementation_sources": [
+        "proof_export.py"
+      ],
+      "kernel_verified": false,
+      "novelty_established": false,
+      "formal_python_refinement": false
+    },
+    {
+      "id": "V4-S1",
+      "title": "Guarded typed sampling, total mass, exact tails and specified costs",
+      "ordinary_mathematical_proof": "PROOFS_V4.md",
+      "section": "V4-S1",
+      "status": "ORDINARY_PROVISIONAL",
+      "lean_source": null,
+      "lean_scope": "NO_MEASURE_THEORETIC_FORMALISATION",
+      "implementation_sources": [
+        "guarded_sampler.py"
+      ],
+      "kernel_verified": false,
+      "novelty_established": false,
+      "formal_python_refinement": false
+    },
+    {
+      "id": "V4-S2",
+      "title": "Concrete quadratic fixed-point correspondence and effective realisation",
+      "ordinary_mathematical_proof": "PROOFS_V4.md",
+      "section": "V4-S2",
+      "status": "ORDINARY_PROVISIONAL",
+      "lean_source": null,
+      "lean_scope": "NO_MEASURE_THEORETIC_FORMALISATION",
+      "implementation_sources": [
+        "guarded_sampler.py"
+      ],
+      "kernel_verified": false,
+      "novelty_established": false,
+      "formal_python_refinement": false
+    }
+  ]
+}

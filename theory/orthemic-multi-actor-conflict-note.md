@@ -55,7 +55,7 @@ under the role substitution φ(α→β); the EXTENSIONS differ: φ maps
 source notes blur: (i) nothing is "the same ortheme" here — the schemas are
 isomorphic, the target profiles disjoint; (ii) the interesting fact is
 precisely that φ exists and 𝒢_{β,A_β} = φ(𝒢_{α,A_α}) while
-𝒢_{α,A_α} ∩ 𝒢_{β,A_β} = ∅.
+the compatible-occurrence set for the two win-targets is empty: there is no reachable shared occurrence m′ satisfying both O*(m′; A_α) ∈ 𝒢_{α,A_α} and O*(m′; A_β) ∈ 𝒢_{β,A_β}. The two profile spaces are not intersected directly.
 
 **C3 — "the metaortheme = the rules of the game + the logic of minimax."**
 Three different things, none of them a metaortheme:
@@ -121,8 +121,7 @@ NOT a new formal addition — the six-addition count is unchanged):**
 the true content of the source notes' "locally identical" intuition; (ii)
 GROUNDED-ORTHEME identity — $\operatorname{GoalSchema}(\alpha)$ and $\operatorname{GoalSchema}(\beta)$ are DISTINCT grounded
 targets, never identical in a strictly competitive task; (iii)
-TARGET-PROFILE overlap — $\mathcal{G}_\alpha \cap \mathcal{G}_\beta$ may be empty (zero-sum win-sets),
-partial, or total (cooperation). Local similarity is (i); material
+COMPATIBLE-OCCURRENCE overlap — pull each target profile set back along its own map $m\prime \mapsto O^*(m\prime; A_\alpha)$ or $m\prime \mapsto O^*(m\prime; A_\beta)$ to the common reachable-occurrence domain. The intersection of these pullbacks may be empty (opposed win-targets), partial, or total (cooperation). Local similarity is (i); material
 exclusivity is emptiness at (iii); no level asserts identity of the
 players' orthemes.
 

@@ -1,0 +1,1470 @@
+{
+  "obligations": [
+    {
+      "id": "V4::RV01::remaining",
+      "status": "OPEN_OR_SCOPE_LIMIT_AS_RECORDED",
+      "text": "Compile all twelve modules, fix elaboration and run the mandatory transitive-assumption audit.",
+      "parent_criticism": "V4::RV01",
+      "evidence_ids": [
+        "EV-b7e736a859d93a1df116",
+        "EV-2463507ec0b114574379",
+        "EV-55e97be96000b5e9e290",
+        "EV-e73cd2012023946337f2",
+        "EV-8ba3462941bf22e2edff",
+        "EV-daf2cedf88d3d5d1e497",
+        "EV-fb5abca9a6f523a7b6ec",
+        "EV-afa80b786d910150627b",
+        "EV-86cdd16f50950324e12e",
+        "EV-29f73ea4ff58ec66ec32"
+      ]
+    },
+    {
+      "id": "V4::RV02::remaining",
+      "status": "OPEN_OR_SCOPE_LIMIT_AS_RECORDED",
+      "text": "Actual identity and compilation remain unobserved; this is a repaired policy, not a build receipt.",
+      "parent_criticism": "V4::RV02",
+      "evidence_ids": [
+        "EV-b7e736a859d93a1df116",
+        "EV-2463507ec0b114574379",
+        "EV-ad3f7890057f7e8df3fb",
+        "EV-318c67e2f874a9e1e951",
+        "EV-2aff04596e82255e5e25",
+        "EV-39bcfbc51e2e3171793b",
+        "EV-56267a9a1ecdb1a74111"
+      ]
+    },
+    {
+      "id": "V4::RV03::remaining",
+      "status": "OPEN_OR_SCOPE_LIMIT_AS_RECORDED",
+      "text": "Compile the meta command, all targets and audit; inspect actual types and assumptions. No axiom footprint inferred from static source.",
+      "parent_criticism": "V4::RV03",
+      "evidence_ids": [
+        "EV-b7e736a859d93a1df116",
+        "EV-2463507ec0b114574379",
+        "EV-751c4bac319035dff1fd",
+        "EV-f3e08557b57a745bae54",
+        "EV-ad3f7890057f7e8df3fb",
+        "EV-176faed0078fcc749646",
+        "EV-038c71b1d34b7aba4e6d",
+        "EV-35f7dbcdc14ea81005c7",
+        "EV-fb5abca9a6f523a7b6ec",
+        "EV-afa80b786d910150627b",
+        "EV-86cdd16f50950324e12e",
+        "EV-29f73ea4ff58ec66ec32"
+      ]
+    },
+    {
+      "id": "V4::RV04::remaining",
+      "status": "OPEN_OR_SCOPE_LIMIT_AS_RECORDED",
+      "text": "Finite census is not a general substitution proof.",
+      "parent_criticism": "V4::RV04",
+      "evidence_ids": [
+        "EV-b7e736a859d93a1df116",
+        "EV-2463507ec0b114574379",
+        "EV-ee19c32dec81aed97ff9",
+        "EV-7e784a3e80587f3d74cb",
+        "EV-7b74cdac7e84c85d076d",
+        "EV-90242dcfd2f9169c283b"
+      ]
+    },
+    {
+      "id": "V4::RV05::remaining",
+      "status": "OPEN_OR_SCOPE_LIMIT_AS_RECORDED",
+      "text": "Custody is hash/coverage evidence, not semantic correctness.",
+      "parent_criticism": "V4::RV05",
+      "evidence_ids": [
+        "EV-b7e736a859d93a1df116",
+        "EV-2463507ec0b114574379",
+        "EV-ad3f7890057f7e8df3fb",
+        "EV-318c67e2f874a9e1e951",
+        "EV-a47cc9c4aee4976df928",
+        "EV-59969b02c43ffa48cdcc",
+        "EV-e8ca557a8a659956401f",
+        "EV-d997604e0be6bfff3be1"
+      ]
+    },
+    {
+      "id": "V4::RV06::remaining",
+      "status": "OPEN_OR_SCOPE_LIMIT_AS_RECORDED",
+      "text": "Local trusted compiler/process/OS boundary remains; no hostile-code sandbox claim.",
+      "parent_criticism": "V4::RV06",
+      "evidence_ids": [
+        "EV-b7e736a859d93a1df116",
+        "EV-2463507ec0b114574379",
+        "EV-ad3f7890057f7e8df3fb",
+        "EV-318c67e2f874a9e1e951",
+        "EV-6566924496965164ad81",
+        "EV-39bcfbc51e2e3171793b",
+        "EV-fb5abca9a6f523a7b6ec",
+        "EV-afa80b786d910150627b",
+        "EV-86cdd16f50950324e12e",
+        "EV-29f73ea4ff58ec66ec32"
+      ]
+    },
+    {
+      "id": "V4::RV07::remaining",
+      "status": "OPEN_OR_SCOPE_LIMIT_AS_RECORDED",
+      "text": "No formal proof of the Python parser has been supplied.",
+      "parent_criticism": "V4::RV07",
+      "evidence_ids": [
+        "EV-b7e736a859d93a1df116",
+        "EV-2463507ec0b114574379",
+        "EV-a4382218253e193d7caa",
+        "EV-398fdecf3c125f29fbbf",
+        "EV-7e784a3e80587f3d74cb",
+        "EV-83bcbf6e7afbfbf1d67c"
+      ]
+    },
+    {
+      "id": "V4::RV08::remaining",
+      "status": "OPEN_OR_SCOPE_LIMIT_AS_RECORDED",
+      "text": "This establishes tested bounded behaviour, not OS-level memory isolation.",
+      "parent_criticism": "V4::RV08",
+      "evidence_ids": [
+        "EV-b7e736a859d93a1df116",
+        "EV-2463507ec0b114574379",
+        "EV-398fdecf3c125f29fbbf",
+        "EV-a4382218253e193d7caa",
+        "EV-3e325d5b4b0ffa71cb36",
+        "EV-ef20ad5442f1fcaef45e",
+        "EV-2940658e081d09ffd623",
+        "EV-84f56f9a7631e4bdfbd9",
+        "EV-e8ca557a8a659956401f"
+      ]
+    },
+    {
+      "id": "V4::RV09::remaining",
+      "status": "OPEN_OR_SCOPE_LIMIT_AS_RECORDED",
+      "text": "Native caller objects are not authority; actual checked bytes remain the interface.",
+      "parent_criticism": "V4::RV09",
+      "evidence_ids": [
+        "EV-b7e736a859d93a1df116",
+        "EV-2463507ec0b114574379",
+        "EV-77a808b83deb74603c68",
+        "EV-7e784a3e80587f3d74cb",
+        "EV-1eda21e465d8c1600502"
+      ]
+    },
+    {
+      "id": "V4::RV10::remaining",
+      "status": "OPEN_OR_SCOPE_LIMIT_AS_RECORDED",
+      "text": "No complete CPU/allocator/OS resource proof or security sandbox. Quantitative bit-cost is separately conditional.",
+      "parent_criticism": "V4::RV10",
+      "evidence_ids": [
+        "EV-b7e736a859d93a1df116",
+        "EV-2463507ec0b114574379",
+        "EV-a4382218253e193d7caa",
+        "EV-398fdecf3c125f29fbbf",
+        "EV-3e325d5b4b0ffa71cb36",
+        "EV-45e67b7d9b5ad2b55f00",
+        "EV-ad3f7890057f7e8df3fb",
+        "EV-2940658e081d09ffd623",
+        "EV-59969b02c43ffa48cdcc",
+        "EV-bc410cac8d3c00b2d59e"
+      ]
+    },
+    {
+      "id": "V4::RV11::remaining",
+      "status": "OPEN_OR_SCOPE_LIMIT_AS_RECORDED",
+      "text": "Neither the exporter nor Python parser is universally verified; exported targets are uncompiled. Extract or prove the real parser/checker refinement.",
+      "parent_criticism": "V4::RV11",
+      "evidence_ids": [
+        "EV-b7e736a859d93a1df116",
+        "EV-2463507ec0b114574379",
+        "EV-4971f828be8d21d7d5a2",
+        "EV-f75306d1a29cd7638505",
+        "EV-0f8e551de28b6bdf549e",
+        "EV-0b4387b1a019fc871d97",
+        "EV-e55bc17380a07e2f53b5",
+        "EV-bc410cac8d3c00b2d59e",
+        "EV-fb5abca9a6f523a7b6ec",
+        "EV-194799b28fdf3b63d6f7",
+        "EV-3327e55bccbf4ddc2c67"
+      ]
+    },
+    {
+      "id": "V4::RV12::remaining",
+      "status": "OPEN_OR_SCOPE_LIMIT_AS_RECORDED",
+      "text": "No finite enumeration or decision of all semantic codes is asserted. Kernel implementation remains under RV01.",
+      "parent_criticism": "V4::RV12",
+      "evidence_ids": [
+        "EV-b7e736a859d93a1df116",
+        "EV-2463507ec0b114574379",
+        "EV-7cf85525305944e343b5",
+        "EV-f75306d1a29cd7638505",
+        "EV-327ae08442ae00608826",
+        "EV-bc410cac8d3c00b2d59e"
+      ]
+    },
+    {
+      "id": "V4::RV13::remaining",
+      "status": "OPEN_OR_SCOPE_LIMIT_AS_RECORDED",
+      "text": "Kernel-check the model and prove the complete deployed Python refinement, including registry/resource semantics.",
+      "parent_criticism": "V4::RV13",
+      "evidence_ids": [
+        "EV-b7e736a859d93a1df116",
+        "EV-2463507ec0b114574379",
+        "EV-3e325d5b4b0ffa71cb36",
+        "EV-e7ad363d03f01127f2a2",
+        "EV-9c1e4fa6cbd09ce0ef13",
+        "EV-f2cf621ac63f6a11ad1c",
+        "EV-bc410cac8d3c00b2d59e",
+        "EV-367d864972716513ead2",
+        "EV-fb5abca9a6f523a7b6ec",
+        "EV-194799b28fdf3b63d6f7",
+        "EV-3327e55bccbf4ddc2c67"
+      ]
+    },
+    {
+      "id": "V4::RV14::remaining",
+      "status": "OPEN_OR_SCOPE_LIMIT_AS_RECORDED",
+      "text": "Finite execution and ordinary specification proof do not certify the whole implementation.",
+      "parent_criticism": "V4::RV14",
+      "evidence_ids": [
+        "EV-b7e736a859d93a1df116",
+        "EV-2463507ec0b114574379",
+        "EV-3e325d5b4b0ffa71cb36",
+        "EV-9c1e4fa6cbd09ce0ef13",
+        "EV-f2cf621ac63f6a11ad1c",
+        "EV-367d864972716513ead2"
+      ]
+    },
+    {
+      "id": "V4::RV15::remaining",
+      "status": "OPEN_OR_SCOPE_LIMIT_AS_RECORDED",
+      "text": "No full semantic-realiser parametricity or JSON representation of arbitrary ambient types.",
+      "parent_criticism": "V4::RV15",
+      "evidence_ids": [
+        "EV-b7e736a859d93a1df116",
+        "EV-2463507ec0b114574379",
+        "EV-f2cf621ac63f6a11ad1c",
+        "EV-12dfbed26b887067f2bb",
+        "EV-bc410cac8d3c00b2d59e",
+        "EV-10689b75b9ac4633cc1d",
+        "EV-fb5abca9a6f523a7b6ec",
+        "EV-194799b28fdf3b63d6f7",
+        "EV-3327e55bccbf4ddc2c67"
+      ]
+    },
+    {
+      "id": "V4::RV16::remaining",
+      "status": "OPEN_OR_SCOPE_LIMIT_AS_RECORDED",
+      "text": "Mathematical construction is ordinary; original formalisation still awaits kernel checking.",
+      "parent_criticism": "V4::RV16",
+      "evidence_ids": [
+        "EV-b7e736a859d93a1df116",
+        "EV-2463507ec0b114574379",
+        "EV-7cf85525305944e343b5",
+        "EV-327ae08442ae00608826",
+        "EV-59fc81f1cd820bfea79e",
+        "EV-a77ae5fac0d2f3811394",
+        "EV-367d864972716513ead2"
+      ]
+    },
+    {
+      "id": "V4::RV17::remaining",
+      "status": "OPEN_OR_SCOPE_LIMIT_AS_RECORDED",
+      "text": "Compile the extraction and audit universe levels and transitive assumptions. No current Mathlib installation is claimed.",
+      "parent_criticism": "V4::RV17",
+      "evidence_ids": [
+        "EV-b7e736a859d93a1df116",
+        "EV-2463507ec0b114574379",
+        "EV-4c1d8a9d8a9a6ebec9f5",
+        "EV-d72ea2871daf63836f72",
+        "EV-bc410cac8d3c00b2d59e",
+        "EV-e73cd2012023946337f2",
+        "EV-fb5abca9a6f523a7b6ec",
+        "EV-194799b28fdf3b63d6f7",
+        "EV-3327e55bccbf4ddc2c67"
+      ]
+    },
+    {
+      "id": "V4::RV18::remaining",
+      "status": "OPEN_OR_SCOPE_LIMIT_AS_RECORDED",
+      "text": "The authored correspondence is uncompiled and not an all-operations embedding.",
+      "parent_criticism": "V4::RV18",
+      "evidence_ids": [
+        "EV-b7e736a859d93a1df116",
+        "EV-2463507ec0b114574379",
+        "EV-d72ea2871daf63836f72",
+        "EV-f2cf621ac63f6a11ad1c",
+        "EV-bc410cac8d3c00b2d59e"
+      ]
+    },
+    {
+      "id": "V4::RV19::remaining",
+      "status": "OPEN_OR_SCOPE_LIMIT_AS_RECORDED",
+      "text": "Kernel-level refinement and distributed revocation are not proved. The host process is trusted.",
+      "parent_criticism": "V4::RV19",
+      "evidence_ids": [
+        "EV-b7e736a859d93a1df116",
+        "EV-2463507ec0b114574379",
+        "EV-3e325d5b4b0ffa71cb36",
+        "EV-6d4942620a8d6b9e5dcf",
+        "EV-a881ade3622dc84944cf",
+        "EV-0e8e95cc3b45a8c15a31",
+        "EV-79c738caedbb25a262f4",
+        "EV-8ecd21aa30e4fc54c065",
+        "EV-9e0bbee543f9242b962a",
+        "EV-bc410cac8d3c00b2d59e",
+        "EV-fb5abca9a6f523a7b6ec",
+        "EV-d8d8e96a89ca6baf01da",
+        "EV-194799b28fdf3b63d6f7",
+        "EV-91659433c1a75f9846ba"
+      ]
+    },
+    {
+      "id": "V4::RV20::remaining",
+      "status": "OPEN_OR_SCOPE_LIMIT_AS_RECORDED",
+      "text": "No empirical law identification, physical safety, moral warrant or remote authentication claim.",
+      "parent_criticism": "V4::RV20",
+      "evidence_ids": [
+        "EV-b7e736a859d93a1df116",
+        "EV-2463507ec0b114574379",
+        "EV-c8321c3f7a544215bb18",
+        "EV-bc410cac8d3c00b2d59e",
+        "EV-3e325d5b4b0ffa71cb36",
+        "EV-45e67b7d9b5ad2b55f00"
+      ]
+    },
+    {
+      "id": "V4::RV21::remaining",
+      "status": "OPEN_OR_SCOPE_LIMIT_AS_RECORDED",
+      "text": "Ordinary probability proof only; actual measure-theoretic Lean targets remain open.",
+      "parent_criticism": "V4::RV21",
+      "evidence_ids": [
+        "EV-b7e736a859d93a1df116",
+        "EV-2463507ec0b114574379",
+        "EV-bc410cac8d3c00b2d59e",
+        "EV-e7ad363d03f01127f2a2",
+        "EV-fb5abca9a6f523a7b6ec",
+        "EV-d8d8e96a89ca6baf01da",
+        "EV-74333fb0f8232c6d91c0"
+      ]
+    },
+    {
+      "id": "V4::RV22::remaining",
+      "status": "OPEN_OR_SCOPE_LIMIT_AS_RECORDED",
+      "text": "Do not infer rich-event necessity from merely finite source predicates.",
+      "parent_criticism": "V4::RV22",
+      "evidence_ids": [
+        "EV-b7e736a859d93a1df116",
+        "EV-2463507ec0b114574379",
+        "EV-bc410cac8d3c00b2d59e",
+        "EV-e7ad363d03f01127f2a2",
+        "EV-a71fe3459c09a4695412",
+        "EV-fb5abca9a6f523a7b6ec",
+        "EV-d8d8e96a89ca6baf01da",
+        "EV-74333fb0f8232c6d91c0"
+      ]
+    },
+    {
+      "id": "V4::RV23::remaining",
+      "status": "OPEN_OR_SCOPE_LIMIT_AS_RECORDED",
+      "text": "No generic estimator or executable decision for arbitrary laws; full deployed refinement remains open.",
+      "parent_criticism": "V4::RV23",
+      "evidence_ids": [
+        "EV-b7e736a859d93a1df116",
+        "EV-2463507ec0b114574379",
+        "EV-e7ad363d03f01127f2a2",
+        "EV-3e325d5b4b0ffa71cb36",
+        "EV-a881ade3622dc84944cf",
+        "EV-0e8e95cc3b45a8c15a31",
+        "EV-8a505237264fb8faedf7",
+        "EV-c27748f32850e2db690e",
+        "EV-bc410cac8d3c00b2d59e",
+        "EV-fb5abca9a6f523a7b6ec",
+        "EV-d8d8e96a89ca6baf01da",
+        "EV-194799b28fdf3b63d6f7",
+        "EV-91659433c1a75f9846ba"
+      ]
+    },
+    {
+      "id": "V4::RV24::remaining",
+      "status": "OPEN_OR_SCOPE_LIMIT_AS_RECORDED",
+      "text": "Use pinned Mathlib measures to prove point countability, pushforward/restriction sums, event measurability, Q1/Q2/Q4/Q7 and the continuum examples.",
+      "parent_criticism": "V4::RV24",
+      "evidence_ids": [
+        "EV-b7e736a859d93a1df116",
+        "EV-2463507ec0b114574379",
+        "EV-d56d5418e659faa679eb",
+        "EV-bc410cac8d3c00b2d59e",
+        "EV-fb5abca9a6f523a7b6ec",
+        "EV-d8d8e96a89ca6baf01da",
+        "EV-74333fb0f8232c6d91c0"
+      ]
+    },
+    {
+      "id": "V4::RV25::remaining",
+      "status": "OPEN_OR_SCOPE_LIMIT_AS_RECORDED",
+      "text": "No formal quantitative law for the implementation or a general effectful fundamental theorem.",
+      "parent_criticism": "V4::RV25",
+      "evidence_ids": [
+        "EV-b7e736a859d93a1df116",
+        "EV-2463507ec0b114574379",
+        "EV-77a808b83deb74603c68",
+        "EV-45e67b7d9b5ad2b55f00",
+        "EV-f5b547fa9b986e7f0e4a",
+        "EV-bc410cac8d3c00b2d59e"
+      ]
+    },
+    {
+      "id": "V4::RV26::remaining",
+      "status": "OPEN_OR_SCOPE_LIMIT_AS_RECORDED",
+      "text": "Construct and kernel-check the unbounded productive source semantics and its measure. The Python API deliberately caps at 128 bits.",
+      "parent_criticism": "V4::RV26",
+      "evidence_ids": [
+        "EV-b7e736a859d93a1df116",
+        "EV-2463507ec0b114574379",
+        "EV-45e67b7d9b5ad2b55f00",
+        "EV-3e325d5b4b0ffa71cb36",
+        "EV-f5b547fa9b986e7f0e4a",
+        "EV-bc410cac8d3c00b2d59e",
+        "EV-aa4c5c383590bdf475ca"
+      ]
+    },
+    {
+      "id": "V4::RV27::remaining",
+      "status": "OPEN_OR_SCOPE_LIMIT_AS_RECORDED",
+      "text": "No instruction-level CPU or allocator benchmark/proof.",
+      "parent_criticism": "V4::RV27",
+      "evidence_ids": [
+        "EV-b7e736a859d93a1df116",
+        "EV-2463507ec0b114574379",
+        "EV-45e67b7d9b5ad2b55f00",
+        "EV-bc410cac8d3c00b2d59e",
+        "EV-6ab37c88408b121038d5",
+        "EV-5e9e46ed5796cf750219"
+      ]
+    },
+    {
+      "id": "V4::RV28::remaining",
+      "status": "OPEN_OR_SCOPE_LIMIT_AS_RECORDED",
+      "text": "General Kakutani formalisation/selection and full native measure semantics remain open; no arbitrary real-law realisability.",
+      "parent_criticism": "V4::RV28",
+      "evidence_ids": [
+        "EV-b7e736a859d93a1df116",
+        "EV-2463507ec0b114574379",
+        "EV-bc410cac8d3c00b2d59e",
+        "EV-45e67b7d9b5ad2b55f00",
+        "EV-efec28dcf92c12e4d08c"
+      ]
+    },
+    {
+      "id": "V4::RV29::remaining",
+      "status": "OPEN_OR_SCOPE_LIMIT_AS_RECORDED",
+      "text": "Ordinary proof; no general equilibrium convergence claim.",
+      "parent_criticism": "V4::RV29",
+      "evidence_ids": [
+        "EV-b7e736a859d93a1df116",
+        "EV-2463507ec0b114574379",
+        "EV-bc410cac8d3c00b2d59e",
+        "EV-a74c5e7b95d5aa1aa573"
+      ]
+    },
+    {
+      "id": "V4::RV30::remaining",
+      "status": "OPEN_OR_SCOPE_LIMIT_AS_RECORDED",
+      "text": "Mechanise the actual translation, substitution and nonempty reduction simulation against an existing checked System F development.",
+      "parent_criticism": "V4::RV30",
+      "evidence_ids": [
+        "EV-b7e736a859d93a1df116",
+        "EV-2463507ec0b114574379",
+        "EV-13c3b0ba7aa7e57fd13b",
+        "EV-a74c5e7b95d5aa1aa573",
+        "EV-2795cb401c807b28b3fc"
+      ]
+    },
+    {
+      "id": "V4::RV31::remaining",
+      "status": "OPEN_OR_SCOPE_LIMIT_AS_RECORDED",
+      "text": "Full formal conversion-completeness bridge remains RV30; weak-head behaviour is not inferred from this counterexample.",
+      "parent_criticism": "V4::RV31",
+      "evidence_ids": [
+        "EV-b7e736a859d93a1df116",
+        "EV-2463507ec0b114574379",
+        "EV-a947caca5150c2f21cd2",
+        "EV-a74c5e7b95d5aa1aa573",
+        "EV-bc410cac8d3c00b2d59e"
+      ]
+    },
+    {
+      "id": "V4::RV32::remaining",
+      "status": "OPEN_OR_SCOPE_LIMIT_AS_RECORDED",
+      "text": "Compile this fragment. It does not imply all unary semantic realisers are Reynolds-parametric or cover effects/dependent contexts.",
+      "parent_criticism": "V4::RV32",
+      "evidence_ids": [
+        "EV-b7e736a859d93a1df116",
+        "EV-2463507ec0b114574379",
+        "EV-12dfbed26b887067f2bb",
+        "EV-bc410cac8d3c00b2d59e",
+        "EV-10689b75b9ac4633cc1d"
+      ]
+    },
+    {
+      "id": "V4::RV33::remaining",
+      "status": "OPEN_OR_SCOPE_LIMIT_AS_RECORDED",
+      "text": "Introduce and prove a length-indexed simulation for the actual parser/replayer; the old unindexed Red theorem alone does not certify length.",
+      "parent_criticism": "V4::RV33",
+      "evidence_ids": [
+        "EV-b7e736a859d93a1df116",
+        "EV-2463507ec0b114574379",
+        "EV-77a808b83deb74603c68",
+        "EV-4971f828be8d21d7d5a2",
+        "EV-0f8e551de28b6bdf549e",
+        "EV-bc410cac8d3c00b2d59e"
+      ]
+    },
+    {
+      "id": "V4::RV34::remaining",
+      "status": "OPEN_OR_SCOPE_LIMIT_AS_RECORDED",
+      "text": "Specify contextual substitution, identity eliminator computation, judgemental equality and admissible universe rules; compare complete primary models.",
+      "parent_criticism": "V4::RV34",
+      "evidence_ids": [
+        "EV-b7e736a859d93a1df116",
+        "EV-2463507ec0b114574379",
+        "EV-f2df78fcd764749b7d42",
+        "EV-bc410cac8d3c00b2d59e",
+        "EV-2795cb401c807b28b3fc",
+        "EV-10689b75b9ac4633cc1d"
+      ]
+    },
+    {
+      "id": "V4::RV35::remaining",
+      "status": "OPEN_OR_SCOPE_LIMIT_AS_RECORDED",
+      "text": "Define observable contexts/effect strategy, verify backend lowering and run comparative workloads after metatheory.",
+      "parent_criticism": "V4::RV35",
+      "evidence_ids": [
+        "EV-b7e736a859d93a1df116",
+        "EV-2463507ec0b114574379",
+        "EV-9c1e4fa6cbd09ce0ef13",
+        "EV-4971f828be8d21d7d5a2",
+        "EV-c8321c3f7a544215bb18",
+        "EV-2795cb401c807b28b3fc"
+      ]
+    },
+    {
+      "id": "V4::RV36::remaining",
+      "status": "OPEN_OR_SCOPE_LIMIT_AS_RECORDED",
+      "text": "Complete priority searches, theorem comparisons and independent specialist review; compilation does not settle novelty.",
+      "parent_criticism": "V4::RV36",
+      "evidence_ids": [
+        "EV-b7e736a859d93a1df116",
+        "EV-2463507ec0b114574379",
+        "EV-10689b75b9ac4633cc1d",
+        "EV-13d6f0a12fc8925db81b",
+        "EV-fb5abca9a6f523a7b6ec",
+        "EV-feb6d36b9cbc4b47c90c",
+        "EV-e48f71bbe1cc8c0bb928"
+      ]
+    },
+    {
+      "id": "V4::RV37::remaining",
+      "status": "OPEN_OR_SCOPE_LIMIT_AS_RECORDED",
+      "text": "The historical bibliography and all nearest full dependent/probabilistic semantics require a broader source review. Failed PDF screenshots are disclosed.",
+      "parent_criticism": "V4::RV37",
+      "evidence_ids": [
+        "EV-b7e736a859d93a1df116",
+        "EV-2463507ec0b114574379",
+        "EV-10689b75b9ac4633cc1d",
+        "EV-529fd2affdf40702ad87",
+        "EV-fb5abca9a6f523a7b6ec",
+        "EV-feb6d36b9cbc4b47c90c",
+        "EV-e48f71bbe1cc8c0bb928"
+      ]
+    },
+    {
+      "id": "V4::RV38::remaining",
+      "status": "OPEN_OR_SCOPE_LIMIT_AS_RECORDED",
+      "text": "Native parser/refinement and empirical evidence acquisition remain separate.",
+      "parent_criticism": "V4::RV38",
+      "evidence_ids": [
+        "EV-b7e736a859d93a1df116",
+        "EV-2463507ec0b114574379",
+        "EV-318c67e2f874a9e1e951",
+        "EV-9c1e4fa6cbd09ce0ef13",
+        "EV-a052b556ebf3947f09c5",
+        "EV-f063a2372778d7f4ae3a"
+      ]
+    },
+    {
+      "id": "V4::RV39::remaining",
+      "status": "OPEN_OR_SCOPE_LIMIT_AS_RECORDED",
+      "text": "Prove actual frontend/backend contextual refinement; no zero-cost runtime claim.",
+      "parent_criticism": "V4::RV39",
+      "evidence_ids": [
+        "EV-b7e736a859d93a1df116",
+        "EV-2463507ec0b114574379",
+        "EV-4971f828be8d21d7d5a2",
+        "EV-e55bc17380a07e2f53b5",
+        "EV-c8321c3f7a544215bb18",
+        "EV-bc410cac8d3c00b2d59e"
+      ]
+    },
+    {
+      "id": "V4::RV40::remaining",
+      "status": "OPEN_OR_SCOPE_LIMIT_AS_RECORDED",
+      "text": "No claim every issue is closed; open obligations have explicit methods.",
+      "parent_criticism": "V4::RV40",
+      "evidence_ids": [
+        "EV-b7e736a859d93a1df116",
+        "EV-2463507ec0b114574379",
+        "EV-9426c1e1e2a0455b8be8",
+        "EV-2795cb401c807b28b3fc"
+      ]
+    },
+    {
+      "id": "V4::RV41::remaining",
+      "status": "OPEN_OR_SCOPE_LIMIT_AS_RECORDED",
+      "text": "Actual kernel type/axiom readback and independent statement review remain mandatory.",
+      "parent_criticism": "V4::RV41",
+      "evidence_ids": [
+        "EV-b7e736a859d93a1df116",
+        "EV-2463507ec0b114574379",
+        "EV-751c4bac319035dff1fd",
+        "EV-ad3f7890057f7e8df3fb",
+        "EV-a77ae5fac0d2f3811394",
+        "EV-fd9add665feb3bbd428f",
+        "EV-fb5abca9a6f523a7b6ec",
+        "EV-afa80b786d910150627b",
+        "EV-86cdd16f50950324e12e",
+        "EV-29f73ea4ff58ec66ec32"
+      ]
+    },
+    {
+      "id": "V4::RV42::remaining",
+      "status": "OPEN_OR_SCOPE_LIMIT_AS_RECORDED",
+      "text": "Kernel-check the general relation-closure criterion and actual Python refinement; finite active signatures are not all semantic predicates.",
+      "parent_criticism": "V4::RV42",
+      "evidence_ids": [
+        "EV-b7e736a859d93a1df116",
+        "EV-2463507ec0b114574379",
+        "EV-3e325d5b4b0ffa71cb36",
+        "EV-a71fe3459c09a4695412",
+        "EV-7d4deafd2030f5933ab3",
+        "EV-a881ade3622dc84944cf",
+        "EV-bc410cac8d3c00b2d59e",
+        "EV-fb5abca9a6f523a7b6ec",
+        "EV-d8d8e96a89ca6baf01da",
+        "EV-194799b28fdf3b63d6f7",
+        "EV-91659433c1a75f9846ba"
+      ]
+    },
+    {
+      "id": "V4::C01::remaining",
+      "status": "OPEN_OR_SCOPE_LIMIT_AS_RECORDED",
+      "text": "Novelty of the integration and exact boundaries is not established.",
+      "parent_criticism": "V4::C01",
+      "evidence_ids": [
+        "EV-b7e736a859d93a1df116",
+        "EV-2463507ec0b114574379",
+        "EV-b84a5aea0930393553b5",
+        "EV-10689b75b9ac4633cc1d",
+        "EV-13d6f0a12fc8925db81b",
+        "EV-529fd2affdf40702ad87",
+        "EV-fb5abca9a6f523a7b6ec",
+        "EV-feb6d36b9cbc4b47c90c",
+        "EV-e48f71bbe1cc8c0bb928"
+      ]
+    },
+    {
+      "id": "V4::C02::remaining",
+      "status": "OPEN_OR_SCOPE_LIMIT_AS_RECORDED",
+      "text": "No Lean compilation has occurred.",
+      "parent_criticism": "V4::C02",
+      "evidence_ids": [
+        "EV-b7e736a859d93a1df116",
+        "EV-2463507ec0b114574379",
+        "EV-b84a5aea0930393553b5",
+        "EV-55e97be96000b5e9e290",
+        "EV-e73cd2012023946337f2",
+        "EV-8ba3462941bf22e2edff",
+        "EV-daf2cedf88d3d5d1e497",
+        "EV-ad3f7890057f7e8df3fb",
+        "EV-318c67e2f874a9e1e951",
+        "EV-2aff04596e82255e5e25",
+        "EV-39bcfbc51e2e3171793b",
+        "EV-56267a9a1ecdb1a74111",
+        "EV-751c4bac319035dff1fd",
+        "EV-f3e08557b57a745bae54",
+        "EV-176faed0078fcc749646",
+        "EV-038c71b1d34b7aba4e6d",
+        "EV-35f7dbcdc14ea81005c7",
+        "EV-fb5abca9a6f523a7b6ec",
+        "EV-afa80b786d910150627b",
+        "EV-86cdd16f50950324e12e",
+        "EV-29f73ea4ff58ec66ec32"
+      ]
+    },
+    {
+      "id": "V4::C03::remaining",
+      "status": "OPEN_OR_SCOPE_LIMIT_AS_RECORDED",
+      "text": "Unbounded deployed JSON/Python refinement and kernel acceptance remain open.",
+      "parent_criticism": "V4::C03",
+      "evidence_ids": [
+        "EV-b7e736a859d93a1df116",
+        "EV-2463507ec0b114574379",
+        "EV-b84a5aea0930393553b5",
+        "EV-a4382218253e193d7caa",
+        "EV-398fdecf3c125f29fbbf",
+        "EV-7e784a3e80587f3d74cb",
+        "EV-83bcbf6e7afbfbf1d67c",
+        "EV-3e325d5b4b0ffa71cb36",
+        "EV-ef20ad5442f1fcaef45e",
+        "EV-2940658e081d09ffd623",
+        "EV-84f56f9a7631e4bdfbd9",
+        "EV-e8ca557a8a659956401f",
+        "EV-4971f828be8d21d7d5a2",
+        "EV-f75306d1a29cd7638505",
+        "EV-0f8e551de28b6bdf549e",
+        "EV-0b4387b1a019fc871d97",
+        "EV-e55bc17380a07e2f53b5",
+        "EV-bc410cac8d3c00b2d59e",
+        "EV-7cf85525305944e343b5",
+        "EV-327ae08442ae00608826",
+        "EV-fb5abca9a6f523a7b6ec",
+        "EV-194799b28fdf3b63d6f7",
+        "EV-3327e55bccbf4ddc2c67"
+      ]
+    },
+    {
+      "id": "V4::C04::remaining",
+      "status": "OPEN_OR_SCOPE_LIMIT_AS_RECORDED",
+      "text": "Compile the finite translation and verify the actual parser/checker.",
+      "parent_criticism": "V4::C04",
+      "evidence_ids": [
+        "EV-b7e736a859d93a1df116",
+        "EV-2463507ec0b114574379",
+        "EV-b84a5aea0930393553b5",
+        "EV-4971f828be8d21d7d5a2",
+        "EV-f75306d1a29cd7638505",
+        "EV-0f8e551de28b6bdf549e",
+        "EV-0b4387b1a019fc871d97",
+        "EV-e55bc17380a07e2f53b5",
+        "EV-bc410cac8d3c00b2d59e",
+        "EV-7cf85525305944e343b5",
+        "EV-327ae08442ae00608826"
+      ]
+    },
+    {
+      "id": "V4::C05::remaining",
+      "status": "OPEN_OR_SCOPE_LIMIT_AS_RECORDED",
+      "text": "No nondefinitional novelty is attributed to that equivalence.",
+      "parent_criticism": "V4::C05",
+      "evidence_ids": [
+        "EV-b7e736a859d93a1df116",
+        "EV-2463507ec0b114574379",
+        "EV-b84a5aea0930393553b5",
+        "EV-3e325d5b4b0ffa71cb36",
+        "EV-9c1e4fa6cbd09ce0ef13",
+        "EV-f2cf621ac63f6a11ad1c",
+        "EV-367d864972716513ead2",
+        "EV-d72ea2871daf63836f72",
+        "EV-bc410cac8d3c00b2d59e"
+      ]
+    },
+    {
+      "id": "V4::C06::remaining",
+      "status": "OPEN_OR_SCOPE_LIMIT_AS_RECORDED",
+      "text": "Complete full-source verification of the inherited bibliography.",
+      "parent_criticism": "V4::C06",
+      "evidence_ids": [
+        "EV-b7e736a859d93a1df116",
+        "EV-2463507ec0b114574379",
+        "EV-b84a5aea0930393553b5",
+        "EV-10689b75b9ac4633cc1d",
+        "EV-529fd2affdf40702ad87",
+        "EV-fb5abca9a6f523a7b6ec",
+        "EV-feb6d36b9cbc4b47c90c",
+        "EV-e48f71bbe1cc8c0bb928"
+      ]
+    },
+    {
+      "id": "V4::C07::remaining",
+      "status": "OPEN_OR_SCOPE_LIMIT_AS_RECORDED",
+      "text": "Mechanise the finite-source normalisation bridge.",
+      "parent_criticism": "V4::C07",
+      "evidence_ids": [
+        "EV-b7e736a859d93a1df116",
+        "EV-2463507ec0b114574379",
+        "EV-b84a5aea0930393553b5",
+        "EV-13c3b0ba7aa7e57fd13b",
+        "EV-a74c5e7b95d5aa1aa573",
+        "EV-2795cb401c807b28b3fc",
+        "EV-a947caca5150c2f21cd2",
+        "EV-bc410cac8d3c00b2d59e"
+      ]
+    },
+    {
+      "id": "V4::C08::remaining",
+      "status": "OPEN_OR_SCOPE_LIMIT_AS_RECORDED",
+      "text": "No comparative deployment/performance advantage is proved.",
+      "parent_criticism": "V4::C08",
+      "evidence_ids": [
+        "EV-b7e736a859d93a1df116",
+        "EV-2463507ec0b114574379",
+        "EV-b84a5aea0930393553b5",
+        "EV-9c1e4fa6cbd09ce0ef13",
+        "EV-4971f828be8d21d7d5a2",
+        "EV-c8321c3f7a544215bb18",
+        "EV-2795cb401c807b28b3fc",
+        "EV-fb5abca9a6f523a7b6ec",
+        "EV-194799b28fdf3b63d6f7",
+        "EV-3327e55bccbf4ddc2c67"
+      ]
+    },
+    {
+      "id": "V4::C09::remaining",
+      "status": "OPEN_OR_SCOPE_LIMIT_AS_RECORDED",
+      "text": "The negative adapter and positive conjunction remain uncompiled.",
+      "parent_criticism": "V4::C09",
+      "evidence_ids": [
+        "EV-b7e736a859d93a1df116",
+        "EV-2463507ec0b114574379",
+        "EV-b84a5aea0930393553b5",
+        "EV-4c1d8a9d8a9a6ebec9f5",
+        "EV-d72ea2871daf63836f72",
+        "EV-bc410cac8d3c00b2d59e",
+        "EV-e73cd2012023946337f2",
+        "EV-f2cf621ac63f6a11ad1c"
+      ]
+    },
+    {
+      "id": "V4::C10::remaining",
+      "status": "OPEN_OR_SCOPE_LIMIT_AS_RECORDED",
+      "text": "General formal probability and general fixed-point selection remain open.",
+      "parent_criticism": "V4::C10",
+      "evidence_ids": [
+        "EV-b7e736a859d93a1df116",
+        "EV-2463507ec0b114574379",
+        "EV-b84a5aea0930393553b5",
+        "EV-bc410cac8d3c00b2d59e",
+        "EV-e7ad363d03f01127f2a2",
+        "EV-a71fe3459c09a4695412",
+        "EV-d56d5418e659faa679eb",
+        "EV-45e67b7d9b5ad2b55f00",
+        "EV-efec28dcf92c12e4d08c",
+        "EV-a74c5e7b95d5aa1aa573"
+      ]
+    },
+    {
+      "id": "V4::C11::remaining",
+      "status": "OPEN_OR_SCOPE_LIMIT_AS_RECORDED",
+      "text": "No changed logical interpretation is presented as retaining the inconsistent full package.",
+      "parent_criticism": "V4::C11",
+      "evidence_ids": [
+        "EV-b7e736a859d93a1df116",
+        "EV-2463507ec0b114574379",
+        "EV-b84a5aea0930393553b5",
+        "EV-7cf85525305944e343b5",
+        "EV-327ae08442ae00608826",
+        "EV-59fc81f1cd820bfea79e",
+        "EV-a77ae5fac0d2f3811394",
+        "EV-367d864972716513ead2",
+        "EV-4c1d8a9d8a9a6ebec9f5",
+        "EV-d72ea2871daf63836f72",
+        "EV-bc410cac8d3c00b2d59e",
+        "EV-e73cd2012023946337f2"
+      ]
+    },
+    {
+      "id": "V4::C12::remaining",
+      "status": "OPEN_OR_SCOPE_LIMIT_AS_RECORDED",
+      "text": "Finish kernel verification and theorem-level literature/independent review.",
+      "parent_criticism": "V4::C12",
+      "evidence_ids": [
+        "EV-b7e736a859d93a1df116",
+        "EV-2463507ec0b114574379",
+        "EV-b84a5aea0930393553b5",
+        "EV-55e97be96000b5e9e290",
+        "EV-e73cd2012023946337f2",
+        "EV-8ba3462941bf22e2edff",
+        "EV-daf2cedf88d3d5d1e497",
+        "EV-10689b75b9ac4633cc1d",
+        "EV-13d6f0a12fc8925db81b",
+        "EV-529fd2affdf40702ad87",
+        "EV-fb5abca9a6f523a7b6ec",
+        "EV-feb6d36b9cbc4b47c90c",
+        "EV-e48f71bbe1cc8c0bb928"
+      ]
+    },
+    {
+      "id": "V4::C13::remaining",
+      "status": "OPEN_OR_SCOPE_LIMIT_AS_RECORDED",
+      "text": "Richer classifications require their own exact expressiveness hypotheses.",
+      "parent_criticism": "V4::C13",
+      "evidence_ids": [
+        "EV-b7e736a859d93a1df116",
+        "EV-2463507ec0b114574379",
+        "EV-b84a5aea0930393553b5",
+        "EV-4c1d8a9d8a9a6ebec9f5",
+        "EV-d72ea2871daf63836f72",
+        "EV-bc410cac8d3c00b2d59e",
+        "EV-e73cd2012023946337f2",
+        "EV-f2cf621ac63f6a11ad1c"
+      ]
+    },
+    {
+      "id": "V4::C14::remaining",
+      "status": "OPEN_OR_SCOPE_LIMIT_AS_RECORDED",
+      "text": "Full formal simulation and any positive completeness fragment remain open.",
+      "parent_criticism": "V4::C14",
+      "evidence_ids": [
+        "EV-b7e736a859d93a1df116",
+        "EV-2463507ec0b114574379",
+        "EV-b84a5aea0930393553b5",
+        "EV-13c3b0ba7aa7e57fd13b",
+        "EV-a74c5e7b95d5aa1aa573",
+        "EV-2795cb401c807b28b3fc",
+        "EV-a947caca5150c2f21cd2",
+        "EV-bc410cac8d3c00b2d59e"
+      ]
+    },
+    {
+      "id": "V4::C15::remaining",
+      "status": "OPEN_OR_SCOPE_LIMIT_AS_RECORDED",
+      "text": "Formal quantitative effect semantics remain open.",
+      "parent_criticism": "V4::C15",
+      "evidence_ids": [
+        "EV-b7e736a859d93a1df116",
+        "EV-2463507ec0b114574379",
+        "EV-b84a5aea0930393553b5",
+        "EV-77a808b83deb74603c68",
+        "EV-45e67b7d9b5ad2b55f00",
+        "EV-f5b547fa9b986e7f0e4a",
+        "EV-bc410cac8d3c00b2d59e",
+        "EV-3e325d5b4b0ffa71cb36",
+        "EV-aa4c5c383590bdf475ca"
+      ]
+    },
+    {
+      "id": "V4::C16::remaining",
+      "status": "OPEN_OR_SCOPE_LIMIT_AS_RECORDED",
+      "text": "Kernel acceptance and end-to-end extracted/verified checker are still absent.",
+      "parent_criticism": "V4::C16",
+      "evidence_ids": [
+        "EV-b7e736a859d93a1df116",
+        "EV-2463507ec0b114574379",
+        "EV-b84a5aea0930393553b5",
+        "EV-55e97be96000b5e9e290",
+        "EV-e73cd2012023946337f2",
+        "EV-8ba3462941bf22e2edff",
+        "EV-daf2cedf88d3d5d1e497",
+        "EV-751c4bac319035dff1fd",
+        "EV-f3e08557b57a745bae54",
+        "EV-ad3f7890057f7e8df3fb",
+        "EV-176faed0078fcc749646",
+        "EV-038c71b1d34b7aba4e6d",
+        "EV-35f7dbcdc14ea81005c7",
+        "EV-a4382218253e193d7caa",
+        "EV-398fdecf3c125f29fbbf",
+        "EV-7e784a3e80587f3d74cb",
+        "EV-83bcbf6e7afbfbf1d67c",
+        "EV-4971f828be8d21d7d5a2",
+        "EV-f75306d1a29cd7638505",
+        "EV-0f8e551de28b6bdf549e",
+        "EV-0b4387b1a019fc871d97",
+        "EV-e55bc17380a07e2f53b5",
+        "EV-bc410cac8d3c00b2d59e",
+        "EV-3e325d5b4b0ffa71cb36",
+        "EV-e7ad363d03f01127f2a2",
+        "EV-9c1e4fa6cbd09ce0ef13",
+        "EV-f2cf621ac63f6a11ad1c",
+        "EV-367d864972716513ead2",
+        "EV-fb5abca9a6f523a7b6ec",
+        "EV-afa80b786d910150627b",
+        "EV-86cdd16f50950324e12e",
+        "EV-29f73ea4ff58ec66ec32"
+      ]
+    },
+    {
+      "id": "V4::C17::remaining",
+      "status": "OPEN_OR_SCOPE_LIMIT_AS_RECORDED",
+      "text": "Head-strategy cost needs its separately stated indexed semantics.",
+      "parent_criticism": "V4::C17",
+      "evidence_ids": [
+        "EV-b7e736a859d93a1df116",
+        "EV-2463507ec0b114574379",
+        "EV-b84a5aea0930393553b5",
+        "EV-a947caca5150c2f21cd2",
+        "EV-a74c5e7b95d5aa1aa573",
+        "EV-bc410cac8d3c00b2d59e",
+        "EV-77a808b83deb74603c68",
+        "EV-4971f828be8d21d7d5a2",
+        "EV-0f8e551de28b6bdf549e"
+      ]
+    },
+    {
+      "id": "V4::C18::remaining",
+      "status": "OPEN_OR_SCOPE_LIMIT_AS_RECORDED",
+      "text": "Historical lineage comparison remains bounded by inspected sources.",
+      "parent_criticism": "V4::C18",
+      "evidence_ids": [
+        "EV-b7e736a859d93a1df116",
+        "EV-2463507ec0b114574379",
+        "EV-b84a5aea0930393553b5",
+        "EV-10689b75b9ac4633cc1d",
+        "EV-529fd2affdf40702ad87"
+      ]
+    },
+    {
+      "id": "V4::C19::remaining",
+      "status": "OPEN_OR_SCOPE_LIMIT_AS_RECORDED",
+      "text": "Supply contextual rules, J, judgemental equality, universe discipline and checker soundness.",
+      "parent_criticism": "V4::C19",
+      "evidence_ids": [
+        "EV-b7e736a859d93a1df116",
+        "EV-2463507ec0b114574379",
+        "EV-b84a5aea0930393553b5",
+        "EV-f2df78fcd764749b7d42",
+        "EV-bc410cac8d3c00b2d59e",
+        "EV-2795cb401c807b28b3fc",
+        "EV-10689b75b9ac4633cc1d"
+      ]
+    },
+    {
+      "id": "V4::C20::remaining",
+      "status": "OPEN_OR_SCOPE_LIMIT_AS_RECORDED",
+      "text": "This is not an autonomous universal foundation; full intended operational refinement remains open.",
+      "parent_criticism": "V4::C20",
+      "evidence_ids": [
+        "EV-b7e736a859d93a1df116",
+        "EV-2463507ec0b114574379",
+        "EV-b84a5aea0930393553b5",
+        "EV-3e325d5b4b0ffa71cb36",
+        "EV-e7ad363d03f01127f2a2",
+        "EV-9c1e4fa6cbd09ce0ef13",
+        "EV-f2cf621ac63f6a11ad1c",
+        "EV-bc410cac8d3c00b2d59e",
+        "EV-367d864972716513ead2",
+        "EV-7cf85525305944e343b5",
+        "EV-327ae08442ae00608826",
+        "EV-59fc81f1cd820bfea79e",
+        "EV-a77ae5fac0d2f3811394",
+        "EV-4c1d8a9d8a9a6ebec9f5",
+        "EV-d72ea2871daf63836f72",
+        "EV-e73cd2012023946337f2",
+        "EV-fb5abca9a6f523a7b6ec",
+        "EV-feb6d36b9cbc4b47c90c",
+        "EV-e48f71bbe1cc8c0bb928"
+      ]
+    },
+    {
+      "id": "V4::C21::remaining",
+      "status": "OPEN_OR_SCOPE_LIMIT_AS_RECORDED",
+      "text": "No proposed full DTT theorem is closed by correcting that example.",
+      "parent_criticism": "V4::C21",
+      "evidence_ids": [
+        "EV-b7e736a859d93a1df116",
+        "EV-2463507ec0b114574379",
+        "EV-b84a5aea0930393553b5",
+        "EV-f2df78fcd764749b7d42",
+        "EV-bc410cac8d3c00b2d59e",
+        "EV-2795cb401c807b28b3fc",
+        "EV-10689b75b9ac4633cc1d"
+      ]
+    },
+    {
+      "id": "V4::C22::remaining",
+      "status": "OPEN_OR_SCOPE_LIMIT_AS_RECORDED",
+      "text": "Specify and verify backend lowering, then measure cost against existing implementations.",
+      "parent_criticism": "V4::C22",
+      "evidence_ids": [
+        "EV-b7e736a859d93a1df116",
+        "EV-2463507ec0b114574379",
+        "EV-b84a5aea0930393553b5",
+        "EV-9c1e4fa6cbd09ce0ef13",
+        "EV-4971f828be8d21d7d5a2",
+        "EV-c8321c3f7a544215bb18",
+        "EV-2795cb401c807b28b3fc",
+        "EV-e55bc17380a07e2f53b5",
+        "EV-bc410cac8d3c00b2d59e"
+      ]
+    },
+    {
+      "id": "V4::C23::remaining",
+      "status": "OPEN_OR_SCOPE_LIMIT_AS_RECORDED",
+      "text": "Kernel-check it; establish any stronger semantic or effectful relational theorem separately.",
+      "parent_criticism": "V4::C23",
+      "evidence_ids": [
+        "EV-b7e736a859d93a1df116",
+        "EV-2463507ec0b114574379",
+        "EV-b84a5aea0930393553b5",
+        "EV-f2cf621ac63f6a11ad1c",
+        "EV-12dfbed26b887067f2bb",
+        "EV-bc410cac8d3c00b2d59e",
+        "EV-10689b75b9ac4633cc1d"
+      ]
+    },
+    {
+      "id": "V4::C24::remaining",
+      "status": "OPEN_OR_SCOPE_LIMIT_AS_RECORDED",
+      "text": "General semantic parametricity still requires stronger hypotheses and comparison.",
+      "parent_criticism": "V4::C24",
+      "evidence_ids": [
+        "EV-b7e736a859d93a1df116",
+        "EV-2463507ec0b114574379",
+        "EV-b84a5aea0930393553b5",
+        "EV-12dfbed26b887067f2bb",
+        "EV-bc410cac8d3c00b2d59e",
+        "EV-10689b75b9ac4633cc1d",
+        "EV-3e325d5b4b0ffa71cb36",
+        "EV-a71fe3459c09a4695412",
+        "EV-7d4deafd2030f5933ab3",
+        "EV-a881ade3622dc84944cf"
+      ]
+    },
+    {
+      "id": "V4::C25::remaining",
+      "status": "OPEN_OR_SCOPE_LIMIT_AS_RECORDED",
+      "text": "Complete implementation refinement and external assurance obligations rather than labelling production-grade.",
+      "parent_criticism": "V4::C25",
+      "evidence_ids": [
+        "EV-b7e736a859d93a1df116",
+        "EV-2463507ec0b114574379",
+        "EV-b84a5aea0930393553b5",
+        "EV-a4382218253e193d7caa",
+        "EV-398fdecf3c125f29fbbf",
+        "EV-3e325d5b4b0ffa71cb36",
+        "EV-45e67b7d9b5ad2b55f00",
+        "EV-ad3f7890057f7e8df3fb",
+        "EV-2940658e081d09ffd623",
+        "EV-59969b02c43ffa48cdcc",
+        "EV-bc410cac8d3c00b2d59e",
+        "EV-4971f828be8d21d7d5a2",
+        "EV-f75306d1a29cd7638505",
+        "EV-0f8e551de28b6bdf549e",
+        "EV-0b4387b1a019fc871d97",
+        "EV-e55bc17380a07e2f53b5",
+        "EV-c8321c3f7a544215bb18",
+        "EV-fb5abca9a6f523a7b6ec",
+        "EV-194799b28fdf3b63d6f7",
+        "EV-3327e55bccbf4ddc2c67"
+      ]
+    },
+    {
+      "id": "V4::C26::remaining",
+      "status": "OPEN_OR_SCOPE_LIMIT_AS_RECORDED",
+      "text": "Kernel-check actual measures; no arbitrary-law decision procedure exists as shown by Q8.",
+      "parent_criticism": "V4::C26",
+      "evidence_ids": [
+        "EV-b7e736a859d93a1df116",
+        "EV-2463507ec0b114574379",
+        "EV-b84a5aea0930393553b5",
+        "EV-bc410cac8d3c00b2d59e",
+        "EV-e7ad363d03f01127f2a2",
+        "EV-a71fe3459c09a4695412",
+        "EV-3e325d5b4b0ffa71cb36",
+        "EV-a881ade3622dc84944cf",
+        "EV-0e8e95cc3b45a8c15a31",
+        "EV-8a505237264fb8faedf7",
+        "EV-c27748f32850e2db690e",
+        "EV-d56d5418e659faa679eb",
+        "EV-fb5abca9a6f523a7b6ec",
+        "EV-d8d8e96a89ca6baf01da",
+        "EV-194799b28fdf3b63d6f7",
+        "EV-91659433c1a75f9846ba"
+      ]
+    },
+    {
+      "id": "V4::C27::remaining",
+      "status": "OPEN_OR_SCOPE_LIMIT_AS_RECORDED",
+      "text": "Formalise the unbounded source and measure, not just finite prefixes.",
+      "parent_criticism": "V4::C27",
+      "evidence_ids": [
+        "EV-b7e736a859d93a1df116",
+        "EV-2463507ec0b114574379",
+        "EV-b84a5aea0930393553b5",
+        "EV-45e67b7d9b5ad2b55f00",
+        "EV-3e325d5b4b0ffa71cb36",
+        "EV-f5b547fa9b986e7f0e4a",
+        "EV-bc410cac8d3c00b2d59e",
+        "EV-aa4c5c383590bdf475ca",
+        "EV-6ab37c88408b121038d5",
+        "EV-5e9e46ed5796cf750219",
+        "EV-efec28dcf92c12e4d08c"
+      ]
+    },
+    {
+      "id": "V4::C28::remaining",
+      "status": "OPEN_OR_SCOPE_LIMIT_AS_RECORDED",
+      "text": "No general convergence or self-certification follows from an equilibrium.",
+      "parent_criticism": "V4::C28",
+      "evidence_ids": [
+        "EV-b7e736a859d93a1df116",
+        "EV-2463507ec0b114574379",
+        "EV-b84a5aea0930393553b5",
+        "EV-bc410cac8d3c00b2d59e",
+        "EV-a74c5e7b95d5aa1aa573"
+      ]
+    },
+    {
+      "id": "V4::C29::remaining",
+      "status": "OPEN_OR_SCOPE_LIMIT_AS_RECORDED",
+      "text": "Independent comparison and representative deployment benchmarks remain required.",
+      "parent_criticism": "V4::C29",
+      "evidence_ids": [
+        "EV-b7e736a859d93a1df116",
+        "EV-2463507ec0b114574379",
+        "EV-b84a5aea0930393553b5",
+        "EV-9c1e4fa6cbd09ce0ef13",
+        "EV-4971f828be8d21d7d5a2",
+        "EV-c8321c3f7a544215bb18",
+        "EV-2795cb401c807b28b3fc",
+        "EV-10689b75b9ac4633cc1d",
+        "EV-13d6f0a12fc8925db81b",
+        "EV-fb5abca9a6f523a7b6ec",
+        "EV-feb6d36b9cbc4b47c90c",
+        "EV-e48f71bbe1cc8c0bb928"
+      ]
+    },
+    {
+      "id": "V4::C30::remaining",
+      "status": "OPEN_OR_SCOPE_LIMIT_AS_RECORDED",
+      "text": "Continue each remaining obligation from actual bytes and evidence.",
+      "parent_criticism": "V4::C30",
+      "evidence_ids": [
+        "EV-b7e736a859d93a1df116",
+        "EV-2463507ec0b114574379",
+        "EV-b84a5aea0930393553b5",
+        "EV-9426c1e1e2a0455b8be8",
+        "EV-2795cb401c807b28b3fc",
+        "EV-751c4bac319035dff1fd",
+        "EV-ad3f7890057f7e8df3fb",
+        "EV-a77ae5fac0d2f3811394",
+        "EV-fd9add665feb3bbd428f"
+      ]
+    },
+    {
+      "id": "V4::V4-N01::remaining",
+      "status": "OPEN_OR_SCOPE_LIMIT_AS_RECORDED",
+      "text": "Finite implementation evidence only; not a kernel or hostile-host security proof.",
+      "parent_criticism": "V4::V4-N01",
+      "evidence_ids": [
+        "EV-b7e736a859d93a1df116",
+        "EV-2463507ec0b114574379",
+        "EV-ad3f7890057f7e8df3fb",
+        "EV-a77ae5fac0d2f3811394",
+        "EV-d997604e0be6bfff3be1"
+      ]
+    },
+    {
+      "id": "V4::V4-N02::remaining",
+      "status": "OPEN_OR_SCOPE_LIMIT_AS_RECORDED",
+      "text": "Finite implementation evidence only; not a kernel or hostile-host security proof.",
+      "parent_criticism": "V4::V4-N02",
+      "evidence_ids": [
+        "EV-b7e736a859d93a1df116",
+        "EV-2463507ec0b114574379",
+        "EV-3e325d5b4b0ffa71cb36",
+        "EV-ef20ad5442f1fcaef45e",
+        "EV-2940658e081d09ffd623",
+        "EV-84f56f9a7631e4bdfbd9"
+      ]
+    },
+    {
+      "id": "V4::V4-N03::remaining",
+      "status": "OPEN_OR_SCOPE_LIMIT_AS_RECORDED",
+      "text": "Finite implementation evidence only; not a kernel or hostile-host security proof.",
+      "parent_criticism": "V4::V4-N03",
+      "evidence_ids": [
+        "EV-b7e736a859d93a1df116",
+        "EV-2463507ec0b114574379",
+        "EV-398fdecf3c125f29fbbf",
+        "EV-ef20ad5442f1fcaef45e",
+        "EV-2940658e081d09ffd623",
+        "EV-84f56f9a7631e4bdfbd9"
+      ]
+    },
+    {
+      "id": "V4::V4-N04::remaining",
+      "status": "OPEN_OR_SCOPE_LIMIT_AS_RECORDED",
+      "text": "Finite implementation evidence only; not a kernel or hostile-host security proof.",
+      "parent_criticism": "V4::V4-N04",
+      "evidence_ids": [
+        "EV-b7e736a859d93a1df116",
+        "EV-2463507ec0b114574379",
+        "EV-3e325d5b4b0ffa71cb36",
+        "EV-ef20ad5442f1fcaef45e",
+        "EV-84f56f9a7631e4bdfbd9"
+      ]
+    },
+    {
+      "id": "V4::V4-N05::remaining",
+      "status": "OPEN_OR_SCOPE_LIMIT_AS_RECORDED",
+      "text": "Finite implementation evidence only; not a kernel or hostile-host security proof.",
+      "parent_criticism": "V4::V4-N05",
+      "evidence_ids": [
+        "EV-b7e736a859d93a1df116",
+        "EV-2463507ec0b114574379",
+        "EV-3e325d5b4b0ffa71cb36",
+        "EV-0e8e95cc3b45a8c15a31",
+        "EV-432f425e18772d4b30ae",
+        "EV-c27748f32850e2db690e"
+      ]
+    },
+    {
+      "id": "V4::V4-N06::remaining",
+      "status": "OPEN_OR_SCOPE_LIMIT_AS_RECORDED",
+      "text": "Finite implementation evidence only; not a kernel or hostile-host security proof.",
+      "parent_criticism": "V4::V4-N06",
+      "evidence_ids": [
+        "EV-b7e736a859d93a1df116",
+        "EV-2463507ec0b114574379",
+        "EV-a4382218253e193d7caa",
+        "EV-a47cc9c4aee4976df928",
+        "EV-59969b02c43ffa48cdcc",
+        "EV-e8ca557a8a659956401f"
+      ]
+    },
+    {
+      "id": "V4::V4-N07::remaining",
+      "status": "OPEN_OR_SCOPE_LIMIT_AS_RECORDED",
+      "text": "Finite implementation evidence only; not a kernel or hostile-host security proof.",
+      "parent_criticism": "V4::V4-N07",
+      "evidence_ids": [
+        "EV-b7e736a859d93a1df116",
+        "EV-2463507ec0b114574379",
+        "EV-318c67e2f874a9e1e951",
+        "EV-a47cc9c4aee4976df928",
+        "EV-59969b02c43ffa48cdcc",
+        "EV-e8ca557a8a659956401f"
+      ]
+    },
+    {
+      "id": "V4::V4-N08::remaining",
+      "status": "OPEN_OR_SCOPE_LIMIT_AS_RECORDED",
+      "text": "Finite implementation evidence only; not a kernel or hostile-host security proof.",
+      "parent_criticism": "V4::V4-N08",
+      "evidence_ids": [
+        "EV-b7e736a859d93a1df116",
+        "EV-2463507ec0b114574379",
+        "EV-45e67b7d9b5ad2b55f00",
+        "EV-bc410cac8d3c00b2d59e",
+        "EV-6ab37c88408b121038d5",
+        "EV-5e9e46ed5796cf750219"
+      ]
+    },
+    {
+      "id": "V4::V4-N09::remaining",
+      "status": "OPEN_OR_SCOPE_LIMIT_AS_RECORDED",
+      "text": "Finite implementation evidence only; not a kernel or hostile-host security proof.",
+      "parent_criticism": "V4::V4-N09",
+      "evidence_ids": [
+        "EV-b7e736a859d93a1df116",
+        "EV-2463507ec0b114574379",
+        "EV-ea97b32ca79a4cfa3ade",
+        "EV-f879afbe00a5c58149df",
+        "EV-a4e1948d54645194cf05"
+      ]
+    },
+    {
+      "id": "V4::V4-N10::remaining",
+      "status": "OPEN_OR_SCOPE_LIMIT_AS_RECORDED",
+      "text": "Finite implementation evidence only; not a kernel or hostile-host security proof.",
+      "parent_criticism": "V4::V4-N10",
+      "evidence_ids": [
+        "EV-b7e736a859d93a1df116",
+        "EV-2463507ec0b114574379",
+        "EV-3e325d5b4b0ffa71cb36",
+        "EV-6d4942620a8d6b9e5dcf",
+        "EV-79c738caedbb25a262f4",
+        "EV-a364890806ef757f82fb",
+        "EV-9e0bbee543f9242b962a"
+      ]
+    },
+    {
+      "id": "V4::V4-N11::remaining",
+      "status": "OPEN_OR_SCOPE_LIMIT_AS_RECORDED",
+      "text": "Finite implementation evidence only; not a kernel or hostile-host security proof.",
+      "parent_criticism": "V4::V4-N11",
+      "evidence_ids": [
+        "EV-b7e736a859d93a1df116",
+        "EV-2463507ec0b114574379",
+        "EV-3e325d5b4b0ffa71cb36",
+        "EV-6d4942620a8d6b9e5dcf",
+        "EV-8ecd21aa30e4fc54c065",
+        "EV-32292cfb5ca60e52af22",
+        "EV-41d1b4fd5107ca058db7"
+      ]
+    },
+    {
+      "id": "V4::V4-N12::remaining",
+      "status": "OPEN_OR_SCOPE_LIMIT_AS_RECORDED",
+      "text": "Finite implementation evidence only; not a kernel or hostile-host security proof.",
+      "parent_criticism": "V4::V4-N12",
+      "evidence_ids": [
+        "EV-b7e736a859d93a1df116",
+        "EV-2463507ec0b114574379",
+        "EV-83d52f53c16b2a173002",
+        "EV-face065505bc935c74ad",
+        "EV-edf6b970f545cd26e004",
+        "EV-172e6f3aa48fb599e7ed",
+        "EV-6874a597a304fc9462b7",
+        "EV-d9a728f19de7b58426f5"
+      ]
+    },
+    {
+      "id": "A3F-U-KERNEL",
+      "original_record": {
+        "blocks_scope": [
+          "kernel qualification"
+        ],
+        "description": "Lean and Lake are absent. Unchanged driver returned 2/KERNEL_UNAVAILABLE before staging or compilation. No installed Mathlib/transitive-head, .olean, declaration-type or actual axiom evidence exists.",
+        "evidence_files": [
+          "cells/A3F/FORMAL_ATTEMPT.json"
+        ],
+        "id": "A3F-U-KERNEL"
+      },
+      "status": "OPEN",
+      "evidence_ids": [
+        "EV-d78661b8c8ee6263ab88"
+      ]
+    },
+    {
+      "id": "A3F-U-HISTORICAL-CORRESPONDENCE",
+      "original_record": {
+        "blocks_scope": [
+          "historical kernel recovery",
+          "CV formal certification"
+        ],
+        "description": "Inherited standalone/project receipts retain bounded repaired interpretations only. Nine intended historical declarations remain absent; Connes rigidity/source correspondence and CV formalisation are not discharged.",
+        "evidence_files": [
+          "cells/A3F/FORMAL_LINEAGE_MAP.json",
+          "cells/A3F/FORMAL_STATUS_BOUNDARIES.json"
+        ],
+        "id": "A3F-U-HISTORICAL-CORRESPONDENCE"
+      },
+      "status": "OPEN",
+      "evidence_ids": [
+        "EV-d78661b8c8ee6263ab88"
+      ]
+    },
+    {
+      "id": "A3F-U-MIGRATION",
+      "original_record": {
+        "blocks_scope": [
+          "integrated formal build"
+        ],
+        "description": "4.32.2 live environment and 4.19.0 v5 locks remain separate; no migration or CI policy amendment was attempted.",
+        "evidence_files": [
+          "cells/A3F/TOOLCHAIN_PROFILES.json"
+        ],
+        "id": "A3F-U-MIGRATION"
+      },
+      "status": "OPEN",
+      "evidence_ids": [
+        "EV-d78661b8c8ee6263ab88"
+      ]
+    }
+  ],
+  "accepted_A4C_obligations": "PRESERVED_A4C_OBLIGATIONS.json",
+  "further_boundaries": [
+    "A3C-U01 through A3C-U06 retained in original qualification/receipt",
+    "Historical nine absent formal declarations and Connes correspondence remain open",
+    "4.19.0 and live 4.32.2 profiles remain distinct",
+    "No specialist priority adjudication; no physical or revelational premise discharge"
+  ],
+  "all_research_obligations_closed": false,
+  "A4T_reconciliation_blockers": []
+}
