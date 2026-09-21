@@ -22,7 +22,7 @@
       "A9"
     ]
   },
-  "PDF_scope": "Inherited PDFs remain historical source-commit renderings. Two corrected Markdown sources are not represented by those inherited PDFs; no refreshed PDF readiness claim.",
+  "PDF_scope": "All six governed PDFs and their source packages were regenerated from the reviewed source-preparation commit 1db15916a3965ccbba101969341bad4cb44ba22b and independently reproduced. The current source bindings are recorded in docs/publication-profile.yaml and docs/provenance/v5-consolidation/PUBLICATION_SOURCE_REVIEW.json. Original-PDF evidence remains historical in detached custody. Artifact reproduction grants no research, peer-review, release or publication-acceptance credit.",
   "public_original_packet_recovery": "UNCONFIRMED",
   "active_replay": "REPOSITORY_NATIVE_NEW_ADAPTER",
   "original_packet_replay": "SEPARATE_EXACT_ORIGINAL_ARCHIVES_REQUIRED",
@@ -39,5 +39,6 @@
     "kernel_result": "KERNEL_AND_INVENTORY_PASS_SHADOW_ONLY",
     "baseline_145": "PASS_SHADOW_ONLY",
     "historical_A3F_unchanged": true
-  }
+  },
+  "record_scope": "HISTORICAL_CONSTRUCTION_STATUS_NOT_CURRENT_DAG_FRONTIER"
 }

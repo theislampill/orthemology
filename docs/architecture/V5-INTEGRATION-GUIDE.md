@@ -1,6 +1,6 @@
 # Orthemology v5 consolidation: source and status guide
 
-This is a non-authoritative integrated shadow on the frozen base. A7, A8R, A8G, A8F, A8P, A8 and A9 have not run. No merge, release, new research or scientific adoption is asserted.
+This guide records the source construction on the frozen base. At the initial shadow-construction boundary, A7 and the A8/A9 cells had not run. Later qualification and landing are recorded separately in exact-tree receipts and GitHub history; this construction record does not assert their completion or any release, new research or scientific adoption.
 
 ## Core architecture
 
@@ -43,6 +43,6 @@ Exact original archives/verifiers stay off Git. Local possession is verified; pu
 
 Retain existing copyright/licence and citation owner decisions. Preserve the covered Apache notice only; publish no private design records, raw chats or bulk archive.
 
-Inherited PDFs remain historical source-commit renderings. Two corrected Markdown sources are not represented by those inherited PDFs; no refreshed PDF readiness claim.
+All six governed PDFs and their source packages were regenerated from the reviewed source-preparation commit 1db15916a3965ccbba101969341bad4cb44ba22b and independently reproduced. The current source bindings are recorded in docs/publication-profile.yaml and docs/provenance/v5-consolidation/PUBLICATION_SOURCE_REVIEW.json. Original-PDF evidence remains historical in detached custody. Artifact reproduction grants no research, peer-review, release or publication-acceptance credit.
 
 Mapped native formal shadow results and exact original/derived source distinctions are in [FORMAL_SOURCE_AMENDMENT](../provenance/v5-consolidation/FORMAL_SOURCE_AMENDMENT.json). Historical A3F/A3G PARTIAL and all research limitations above are preserved.
