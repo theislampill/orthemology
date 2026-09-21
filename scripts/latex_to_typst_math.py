@@ -67,7 +67,7 @@ COMMANDS = {
     # binary ops / misc
     "times": "times", "cdot": "dot.op", "circ": "compose", "ast": "*",
     "pm": "plus.minus", "mp": "minus.plus", "star": "star.op",
-    "partial": "partial", "nabla": "nabla", "infty": "infinity",
+    "partial": "partial", "nabla": "nabla", "infty": "infinity", "prime": " prime",
     "sum": "sum", "prod": "product", "int": "integral",
     "min": "min", "max": "max", "inf": "inf", "sup": "sup", "arg": "arg",
     # delimiters (as tokens)

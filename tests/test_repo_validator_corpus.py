@@ -51,6 +51,28 @@ def run_validator():
 
 
 class RepoValidatorCorpusTests(unittest.TestCase):
+    def test_historical_notation_requires_exact_registered_source(self):
+        module = load_validator()
+        source = ROOT / "theory/lineages/h-modal/orthability_modal_grounding.md"
+        rows = json.loads(SOURCE_MAP.read_text(encoding="utf-8"))["sources"]
+        self.assertTrue(module.historical_notation_source(source, rows))
+        with changed_bytes(source, source.read_bytes() + b"\nChanged notation.\n"):
+            self.assertFalse(module.historical_notation_source(source, rows))
+        matching = next(r for r in rows if r.get("destination_repository_path") == source.relative_to(ROOT).as_posix())
+        self.assertFalse(module.historical_notation_source(source, rows + [matching]))
+        self.assertFalse(module.historical_notation_source(ROOT / "theory/orthemic-core-formalization.md", rows))
+
+    def test_packet_root_reference_is_digest_bound_and_not_a_native_waiver(self):
+        module = load_validator()
+        rows = json.loads(SOURCE_MAP.read_text(encoding="utf-8"))["sources"]
+        source = ROOT / "experiments/orthemology-v5/source/ledgers/REMAINING_OBLIGATIONS.json"
+        target = "examples/" + "RequiredAudit.preview.lean.txt"
+        self.assertTrue(module.original_packet_locator(source, target, rows, from_packet_root=True))
+        self.assertFalse(module.original_packet_locator(source, "examples/" + "unregistered.txt", rows, from_packet_root=True))
+        self.assertFalse(module.original_packet_locator(source, "../" + target, rows, from_packet_root=True))
+        with changed_bytes(source, source.read_bytes() + b" "):
+            self.assertFalse(module.original_packet_locator(source, target, rows, from_packet_root=True))
+
     def test_exact_compact_provenance_is_not_a_session_dump(self):
         result = run_validator()
         self.assertIn("[PASS] no research-output/session-dump artifact files", result.stdout)

@@ -945,6 +945,8 @@ def main():
     #    combining accent and (b) translates cleanly through the strict subset —
     #    so no shipped math source can render broken or use the notdef antipattern.
     scan_roots = ["manuscript", "theory", "companion", "docs", "applications"]
+    from validate_repo import preserved_math_source, load_source_map
+    sources = load_source_map(ROOT)
     bad_accents = []
     bad_translate = []
     for r in scan_roots:
@@ -957,7 +959,11 @@ def main():
                 if not fn.endswith(".md"):
                     continue
                 rel = os.path.relpath(os.path.join(dp, fn), ROOT).replace("\\", "/")
-                text = io.open(os.path.join(dp, fn), encoding="utf-8").read()
+                path = os.path.join(dp, fn)
+                if preserved_math_source(path, sources, ROOT):
+                    print("[INFO] exact preserved quotation math, outside publication renderer: " + rel)
+                    continue
+                text = io.open(path, encoding="utf-8").read()
                 for kind, sp in real_math_spans(text):
                     if COMBINING.search(sp):
                         bad_accents.append("%s: %r" % (rel, sp[:40]))

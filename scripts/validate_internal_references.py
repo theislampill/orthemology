@@ -24,6 +24,9 @@ ends once the path exists.
 Deterministic; offline.
 """
 import io
+import json
+
+from validate_repo import load_source_map, original_packet_locator
 import os
 import re
 import subprocess
@@ -43,7 +46,7 @@ PATH_PATTERN = (
     r"(?<![A-Za-z0-9._/\\-])"
     r"(?:applications|experiments|scripts|tests|examples|schemas|references|"
     r"terminology|companion|theory|manuscript|docs)[\\/]"
-    r"[A-Za-z0-9._/\\-]+\.(?:py|json|yaml|yml|md|bib|txt)"
+    r"[A-Za-z0-9._/\\-]+\.(?:py|jsonl?|yaml|yml|md|bib|txt)(?![A-Za-z0-9._/\\-])"
 )
 PATH_RE = re.compile(PATH_PATTERN)
 LINK_RE = re.compile(r"\[[^\]]*\]\(([^)#\s]+)(?:#[^)]*)?\)")
@@ -135,7 +138,19 @@ def _resolves(src, cited):
 
 
 def _citation_occurrences(src, text):
+    # source_path in this typed map is an origin selector, not a checkout path.
+    # Destination paths and every other field remain ordinary references.
+    selectors = set()
+    if src == "docs/provenance/v5-consolidation/SOURCE_MAP.json":
+        for row in json.loads(text).get("sources", []):
+            if (row.get("source_artifact") and row.get("operation") in
+                    ("ADD", "UPDATE", "RETAIN", "MOVE", "DO_NOT_LAND", "EXTERNAL_CUSTODY")
+                    and re.fullmatch(r"[0-9a-f]{64}", row.get("source_sha256") or "")):
+                selectors.add(row.get("source_path"))
     for line in text.splitlines():
+        field = re.fullmatch(r'\s*"source_path":\s*("(?:[^"\\]|\\.)*")\s*,?\s*', line)
+        if field and json.loads(field.group(1)) in selectors:
+            continue
         for cited in PATH_RE.findall(line):
             yield cited.replace("\\", "/"), line
         if src.endswith(".md"):
@@ -185,6 +200,8 @@ def main():
     exempt = external | set(retired)
     corpus = _corpus_files()
     committed_plans = _committed_plans()
+    sources = load_source_map(ROOT)
+    packet_locators = set()
     missing = {}
     corpus_text = {}
     for src in corpus:
@@ -204,12 +221,19 @@ def main():
                 continue
             if _resolves(src, cited):
                 continue
+            path = os.path.join(ROOT, src)
+            relative = os.path.relpath(os.path.join(ROOT, cited), os.path.dirname(path)).replace("\\", "/")
+            if (original_packet_locator(path, relative, sources, ROOT)
+                    or original_packet_locator(path, cited, sources, ROOT, from_packet_root=True)):
+                packet_locators.add((src, cited))
+                continue
             if _is_planned_output_occurrence(src, cited, line, committed_plans):
                 # Exemption is occurrence-local: only this exact inventory line
                 # in a plan present in HEAD may name a not-yet-created output.
                 continue
             missing.setdefault(cited, set()).add(src)
 
+    print("[INFO] %d digest-bound original-packet references; external custody, public retrieval unconfirmed" % len(packet_locators))
     check("every repository path cited in the corpus resolves (or is a declared exemption)",
           not missing,
           "; ".join("%s <- %s" % (p, sorted(s)[:2]) for p, s in sorted(missing.items())[:6]))

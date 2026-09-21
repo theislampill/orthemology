@@ -14,6 +14,8 @@ import os
 import re
 import sys
 
+from validate_repo import historical_notation_source, load_source_map
+
 try:
     import yaml
 except ImportError:
@@ -58,7 +60,11 @@ def main():
         nreg = yaml.safe_load(f)
 
     aliases = {v["alias"] for v in vreg["verdicts"]}
+    sources = load_source_map(ROOT)
     files = md_files(CURRENT)
+    historical = [p for p in files if historical_notation_source(p, sources, ROOT)]
+    files = [p for p in files if p not in historical]
+    print("[INFO] %d exact registered historical originals retain local notation" % len(historical))
     texts = {p: open(p, encoding="utf-8").read() for p in files}
     comp_files = md_files(COMPANION)
     comp_texts = {p: open(p, encoding="utf-8").read() for p in comp_files}

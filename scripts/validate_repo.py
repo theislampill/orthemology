@@ -66,9 +66,10 @@ BANNED = [
 BANNED_FILENAMES = re.compile(r"(\.output$|\.jsonl$|synthesis-checks|owner_messages)", re.I)
 
 
-def exact_source_record(path, sources):
+def exact_source_record(path, sources, root=None):
     """Recognise only an unmodified, uniquely registered COPY_EXACT source."""
-    relative = os.path.relpath(path, ROOT).replace("\\", "/")
+    root = ROOT if root is None else root
+    relative = os.path.relpath(path, root).replace("\\", "/")
     rows = [row for row in sources if row.get("destination_repository_path") == relative]
     if len(rows) != 1:
         return None
@@ -82,6 +83,50 @@ def exact_source_record(path, sources):
     return row
 
 
+def load_source_map(root=None):
+    root = ROOT if root is None else root
+    path = os.path.join(root, "docs", "provenance", "v5-consolidation", "SOURCE_MAP.json")
+    if not os.path.isfile(path):
+        return []
+    with open(path, encoding="utf-8") as stream:
+        return json.load(stream)["sources"]
+
+
+def historical_notation_source(path, sources, root=None):
+    """Accepted historical originals retain their notation, never by path alone."""
+    root = ROOT if root is None else root
+    relative = os.path.relpath(path, root).replace("\\", "/")
+    row = exact_source_record(path, sources, root)
+    return bool(relative.startswith("theory/lineages/") and row
+                and row.get("source_artifact") == "H14"
+                and row.get("public_safety_tier") == "HISTORICAL_EVIDENCE")
+
+
+def preserved_math_source(path, sources, root=None):
+    """Original historical notation or exact generated quotations, not PDF inputs."""
+    root = ROOT if root is None else root
+    if historical_notation_source(path, sources, root):
+        return True
+    relative = os.path.relpath(path, root).replace("\\", "/")
+    prefix = "docs/provenance/v5-consolidation/"
+    if relative not in (prefix + "THEOREM_INDEX.md", prefix + "CRITICISM_INDEX.md"):
+        return False
+    rows = [r for r in sources if r.get("destination_repository_path") == relative]
+    if (len(rows) != 1 or rows[0].get("operation") != "GENERATE"
+            or rows[0].get("transformation") != "GENERATE_INDEXES"
+            or rows[0].get("source_artifact") != "A5_SPEC"):
+        return False
+    manifest = os.path.join(root, "experiments", "orthemology-v5", "SOURCE_MANIFEST.json")
+    if not os.path.isfile(manifest):
+        return False
+    with open(manifest, encoding="utf-8") as stream:
+        entries = [r for r in json.load(stream)["files"] if r.get("path") == relative]
+    with open(path, "rb") as stream:
+        data = stream.read()
+    return bool(len(entries) == 1 and entries[0].get("bytes") == len(data)
+                and entries[0].get("sha256") == hashlib.sha256(data).hexdigest())
+
+
 def compact_provenance_record(path, sources):
     relative = os.path.relpath(path, ROOT).replace("\\", "/")
     if not relative.startswith("docs/provenance/v5-consolidation/reconciliation/"):
@@ -91,14 +136,15 @@ def compact_provenance_record(path, sources):
                 and row.get("public_safety_tier") == "COMPACT_PROVENANCE_RECORD")
 
 
-def original_packet_locator(path, target, sources):
+def original_packet_locator(path, target, sources, root=None, from_packet_root=False):
     """Classify a digest-bound external locator; never claim it is a download."""
-    source = exact_source_record(path, sources)
+    source = exact_source_record(path, sources, root)
     if not source or source.get("source_artifact") not in ("V4", "V5"):
         return False
     if target.startswith("/") or "\\" in target or ":" in target:
         return False
-    selector = posixpath.normpath(posixpath.join(posixpath.dirname(source["source_path"]), target))
+    selector = posixpath.normpath(target if from_packet_root else
+                                  posixpath.join(posixpath.dirname(source["source_path"]), target))
     if selector == ".." or selector.startswith("../"):
         return False
     rows = [row for row in sources
