@@ -1,0 +1,47 @@
+\section{Airgap-ese as a representation hypothesis}\label{sec:representation}
+\subsection{Three ambitions, not three accomplished capabilities}
+The informal suffix ``-ese'' suggests a language. Here it denotes a proposed family of task-relevant representations, not a single protocol shared by all matter. A \emph{descriptive} representation explains a demonstrated case while preserving its conditions. A \emph{compositional} representation exposes whether separately supported contracts are jointly applicable. A \emph{generalisable} representation would improve assessment of genuinely held-out cases rather than merely rename familiar mechanisms.
+
+The dialogue's stronger phrase, \emph{generative airgap-ese}, names an unestablished hypothesis that a representation could support scientifically useful candidate hypotheses in an unfamiliar but declared model class. That is not evidence of a trained general faculty, a guarantee that any environment yields a channel, or a completed method for defeating isolation. This edition develops constraints on that hypothesis and ways of evaluating representations; it supplies neither an environment-probing engine nor an operational synthesis procedure for novel covert channels.
+
+The empirical question is whether a representation preserves more consequential structure than a matched conventional account at comparable cost. Its target is not merely a fluent explanation after an experiment succeeds. It must also represent failures, inaccessible interfaces, uncertain quantities, non-composable combinations, and cases on which assessment should abstain. A corpus of successful demonstrations alone would not test those abilities.
+
+\subsection{The Neuralese comparison, accurately scoped}
+Andreas, Dragan, and Klein use \emph{Neuralese} for learned communication among decentralised neural agents and study translation through its effect on a listener's beliefs and task performance \citep{neuralese}. This supplies a useful analogy about aligning learned representations with interpretable meanings. It does not establish a universally decoded language of biological thought or a carrier-independent physical code.
+
+The corresponding question here is narrower: can a representation learned or assembled from heterogeneous cases preserve specified operational distinctions across those cases? Interpretability, causal validity and transfer are separate evaluation targets. A label that predicts a benchmark answer can still conceal the wrong mechanism. Agreement of embeddings also does not establish agreement about units, authority, physical access or identity.
+
+\begin{proposition}[Relabelling does not identify an intrinsic latent language]\label{prop:relabel}
+Let $e:M\to Z$ and $d:Z\to Y$ define a deterministic encoded input--output behaviour $d\circ e$. For any bijection $h:Z\to Z'$, the pair
+\[
+ e'=h\circ e,\qquad d'=d\circ h^{-1}
+\]
+has exactly the same external behaviour. Thus observations of that behaviour alone cannot distinguish the original latent labels from their relabelling.
+\end{proposition}
+\begin{proof}
+For every $m\in M$, $d'(e'(m))=d(h^{-1}(h(e(m))))=d(e(m))$. No behavioural observation separates pairs whose outputs agree on every admitted input.
+\end{proof}
+
+The result does not say meaningful interpretation is impossible. It says that interpretation needs anchors: specified tasks, interventions, reference cases, compositional roles, or additional observations. It also does not erase real physical differences between implementations. A notation change can preserve a mathematical function without being a feasible low-cost physical transformation.
+
+\subsection{No extrapolation theorem follows from a finite catalogue}
+\begin{proposition}[An unobserved response is not fixed by unrestricted finite data]\label{prop:finitecorpus}
+Let $D\subsetneq X$ be a finite observed case set and let the hypothesis class contain every map $f:X\to\{0,1\}$. For any labels on $D$ and any unobserved $x_*\in X\setminus D$, two hypotheses agree with every observed label and disagree at $x_*$. No procedure using only those labels can guarantee the correct label at $x_*$ for every hypothesis in the class.
+\end{proposition}
+\begin{proof}
+Extend the observed labels arbitrarily to $X$, setting $f_0(x_*)=0$. Define $f_1$ to agree everywhere except $f_1(x_*)=1$. The available data are identical under both hypotheses. A deterministic procedure outputs the same label in both cases and therefore fails in one. A randomised procedure cannot be correct with probability one in both cases, since its output distribution is likewise the same.
+\end{proof}
+
+Useful generalisation is therefore conditional on structure: justified physical restrictions, a defined statistical population, verified invariances, or information from the new case. The proposition does not show that all channel assessment is hopeless; it shows why a corpus and a powerful learner cannot by themselves establish a universal extrapolation guarantee. Orthemic profiles are subject to the same constraint as ordinary features.
+
+\subsection{A comparative, falsifiable hypothesis}
+Fix a distribution $\mathcal D$ over permitted benchmark cases, a target verdict $q$, an observation budget, and a loss $\ell$ that penalises false positive certification and inappropriate certainty. Let $R_{\mathrm{new}}$ and $R_{\mathrm{base}}$ be expected held-out losses of the proposed representation and a conventional feature/contract baseline. A concrete performance hypothesis is
+\begin{equation}\label{eq:representationhyp}
+ R_{\mathrm{new}}\leq R_{\mathrm{base}}-\gamma,
+ \qquad \gamma>0,
+\end{equation}
+under a declared total resource ceiling. The comparison must include the cost of evidence collection, schema construction, training, human review and abstention; otherwise one arm can win by using additional information.
+
+Equation~\eqref{eq:representationhyp} is an empirical hypothesis, not a consequence of the factorisation theorem. It can fail even when the vocabulary is coherent and the examples fit neatly. Cases must be separated by acquisition provenance and mechanism where the intended claim is cross-mechanism transfer, rather than split into near-duplicate reports from one demonstration. No experiment testing this hypothesis is reported here.
+
+A second, independently testable claim concerns compositional assessment: does a representation catch incompatible calibration, shared-resource overcommitment or missing execution support more reliably than the baseline? That goal remains informative even if the strongest generative ambition never succeeds. A general representation can earn its use by better rejection and better statements of uncertainty, not only by producing additional candidates.

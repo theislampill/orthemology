@@ -1,5 +1,7 @@
 # Dynamic orthing, noetic learning, and dynamic orthability
 
+> Integration navigation: stable `ARG-*` IDs in the current argument map govern node identity and status. The eight modalities in §8.1 are a separate scale. Historical rung numbers grant no bridge or source-world credit.
+
 **Status:** DRAFT companion — philosophical placement, conditional on stated
 premises. OPUS CANDIDATE — REQUIRES FRESH FABLE REVIEW BEFORE MERGE. Creed-
 internal material is school-labeled (Atharī) where it appears. **No empirical
@@ -12,7 +14,7 @@ located classical text), **secondary reconstruction** (a modern scholarly
 compilation or dissertation), **cross-source synthesis** (this project's joining
 of sources), **orthemological extension** (a claim of this framework), and
 **creed-internal inference** (a step valid only inside a labeled school, e.g. the
-Atharī route on rungs 8–10). Every load-bearing claim below and every rung in
+Atharī route at nodes `ARG-10`, `ARG-12`, and `ARG-13`). Every load-bearing claim below and every rung in
 [`DYNAMIC-ORTHABILITY-ARGUMENT-MAP.yaml`](DYNAMIC-ORTHABILITY-ARGUMENT-MAP.yaml)
 carries one of these five labels; a creed-internal step is never presented as
 school-neutral, and no empirical result is ever labeled above cross-source synthesis. The
@@ -132,12 +134,12 @@ proposed-candidate, not literal G2), a created learner producing the modal order
 This paper uses **two** numbered scales. The **eight modalities** (§8.1) disambiguate
 the *meaning* of "a correction is available"; the **fourteen argument nodes** (§9,
 `DYNAMIC-ORTHABILITY-ARGUMENT-MAP.yaml`) are the metaphysical ladder. They are
-different scales. Modalities 1–4 (objective corrigibility) are what rung 2 (dynamic
+different scales. Modalities 1–4 (objective corrigibility) are what node `ARG-02` (dynamic
 corrigibility) asserts; modalities 5–8 (agent-relative accessibility,
-discoverability, learnability, convergence) are what rung 3 (agent-accessible
+discoverability, learnability, convergence) are what node `ARG-03` (agent-accessible
 learnability) concerns and what OSM exemplifies. "Level *n*" in §8.1 therefore never
 means "rung *n*". Dynamic orthability is defined at modalities 1–4 and addressed by
-rungs 1–3; neither scale's lower entries license any upper entry of the other.
+nodes `ARG-01`–`ARG-03`; neither scale's lower entries license any upper entry of the other.
 
 ## 9. Metaphysical argument map
 
@@ -175,19 +177,18 @@ revelational and school-internal; OSM and DAEE validate neither metaphysics nor
 theology.
 <!-- END GENERATED ARGUMENT MAP -->
 
-**Gap invariance (rung 3 → rung 4).** The step from agent-accessible learnability
-(rung 3) to normative proper function (rung 4) is the framework's critical inductive
+**Gap invariance (node `ARG-03` → node `ARG-04`).** The step from agent-accessible learnability
+(node `ARG-03`) to normative proper function (node `ARG-04`) is the framework's critical inductive
 gap — a regularity → norm (broadly is/ought) transition. It is **invariant under
 additional exemplification**: no quantity of further OSM/DAEE-type learning results,
 however many cases converge, can close it, because more instances of what a faculty
-*does* do not by themselves yield a fact about what it *ought* to do. Rung 4 is
+*does* do not by themselves yield a fact about what it *ought* to do. Node `ARG-04` is
 carried only by the explanatory/teleological bridge premise (rival exit:
-teleosemantic naturalism), never by learning evidence. Empirical density at rung 3
-therefore leaves rung 4's status exactly where it was.
+teleosemantic naturalism), never by learning evidence. Empirical density at node `ARG-03`
+therefore leaves node `ARG-04`'s status exactly where it was.
 
-Rungs 1–3 are what the static and dynamic Orthemology material addresses. Rungs
-4–10 each require **explicit bridge premises already identified in the companion
-papers**; the learning/diagnosis material never carries them. Rung 10 is
+Nodes `ARG-01`–`ARG-03` are what the static and dynamic Orthemology material addresses. Node `ARG-04` and the separately qualified downstream nodes each require **explicit bridge premises already identified in the companion
+papers**; the learning/diagnosis material never carries them. The actual-Speech node `ARG-12` and bearer-classification node `ARG-13` are
 creed-internal (Atharī) and school-labeled. The full machine-readable map — every
 rung's premise, inference type, conclusion, dependency, evidence/source status,
 strongest objection, rival exit, and school-neutral vs Atharī-internal status — is
@@ -197,7 +198,7 @@ checked in CI. Its `non_entailments` block records that OSM/DAEE exemplify only 
 
 ## 10. Theological / Atharī route and the created/uncreated distinction
 
-Rung 10 (revelation-specific Speech) is developed in full in the Atharī companion
+Node `ARG-12` (actual divine Speech), with bearer classification at `ARG-13`, is developed in full in the Atharī companion
 (`orthability-divine-attributes-and-speech-athari.md`), under explicit school-labeled,
 revelational premises. The reason/revelation firewall stands: **no engineering or
 learning evidence supports any theological rung**, and OSM/DAEE belong only to the
@@ -231,27 +232,27 @@ created" is exactly the conflation the firewall forbids.
 ## 11. Objections and rival exits
 
 - **"OSM proves normative proper function."** No — OSM empirically exemplifies
-  learning dynamics (rung 3); it does not establish rung 4. Reply: keep the
+  learning dynamics (node `ARG-03`); it does not establish node `ARG-04`. Reply: keep the
   explanandum/proof distinction (row 3 vs 4).
 - **"DAEE's restorative norms prove their own ground."** No — DAEE *presupposes*
   the norms it applies (epistemological circularity); it is a worked explanandum,
   not a proof (Decision 0025; fixtures N5/N17).
-- **"Dynamic orthability entails a converging learner."** No — it is levels 1–3,
-  explicitly not 4–6.
+- **"Dynamic orthability entails a converging learner."** No — it is modalities 1–4 in §8.1,
+  explicitly not an entailment of modalities 5–8.
 
 ## 12. Limitations
 
-This is a placement, not a proof. The bridge premises (rungs 4–10) are argued
+This is a placement, not a proof. The bridge premises (node `ARG-04` and the separately qualified downstream nodes) are argued
 elsewhere and remain conditional. Primary-text verification of the Taymiyyan loci
 is a standing queue. No empirical study validates any claim here.
 
 **Absence conditions (when dynamic orthability fails under A).** The candidate is
 falsifiable-in-principle relative to a declared analysis $A$. Dynamic orthability is
 *absent* under $A$ when any of: (i) placements lack determinate correctness
-conditions, so rung 1 fails and there is nothing to be corrected toward; (ii) no
+conditions, so node `ARG-01` fails and there is nothing to be corrected toward; (ii) no
 more-adequate state is reachable — $\operatorname{Reach}_A(m, \Pi) = \varnothing$ for
 every unresolved or mistaken $m$ — so the correction structure is empty; or (iii)
-apparent improvement is shown to be brute regularity with no truth-linkage (rung 2's
+apparent improvement is shown to be brute regularity with no truth-linkage (node `ARG-02`'s
 rival exit obtains and "correction" tracks no objective gradient). Stating these
 keeps the concept from being unfalsifiable; showing a real case meets (i)–(iii) is
 itself analysis-relative and empirical, not settled here.

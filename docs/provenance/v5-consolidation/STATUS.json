@@ -1,0 +1,29 @@
+{
+  "base_commit": "f50dc1aee52356cc6adbef342387576b02afc124",
+  "base_tree": "afd612bcb4bf2a65727f82283e3a894d497f2865",
+  "status": "NON_AUTHORITATIVE_INTEGRATED_SHADOW",
+  "acceptance": "A6 construction evidence belongs to the detached checkpoint; subsequent independent DAG gates remain unexecuted.",
+  "ceilings": {
+    "A3F": "PARTIAL",
+    "A3G": "PARTIAL",
+    "kernel": "OPEN",
+    "axioms": "UNKNOWN_WITHOUT_REAL_AUDIT",
+    "novelty": "UNESTABLISHED",
+    "adoption": "UNCHANGED",
+    "release": false,
+    "merged": false,
+    "remaining": [
+      "A7",
+      "A8R",
+      "A8G",
+      "A8F",
+      "A8P",
+      "A8",
+      "A9"
+    ]
+  },
+  "PDF_scope": "Inherited PDFs remain historical source-commit renderings. Two corrected Markdown sources are not represented by those inherited PDFs; no refreshed PDF readiness claim.",
+  "public_original_packet_recovery": "UNCONFIRMED",
+  "active_replay": "REPOSITORY_NATIVE_NEW_ADAPTER",
+  "original_packet_replay": "SEPARATE_EXACT_ORIGINAL_ARCHIVES_REQUIRED"
+}

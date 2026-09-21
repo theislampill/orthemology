@@ -1,0 +1,64 @@
+\section{Orthemic comparison and evidence consolidation}\label{sec:orthemic}
+\subsection{Source terminology and a correction to the informal dialogue}
+Orthemology contributes a proposed type--token and evidence-handling discipline, not an established physical law. We use the public definitions inspected for Edition 2 at a pinned repository revision \citep{orthemology}. An \emph{orthemma} is a concrete situated case, with identity and version. An \emph{ortheme} is a repeatable, consequence-bearing operational state-type that a case may instantiate under a declared analysis. An observation of the case is neither the case nor a guaranteed correct placement under a type.
+
+Accordingly, a particular experiment, experimental record, or apparatus-at-a-time is an orthemma at an explicitly chosen level of analysis. A paper title such as BitWhisper is not itself a physical channel type. Reusable distinctions about a scoped experiment---for example, whether the specified output distinction survives the declared noise bound---can be candidate orthemes. Calling every measured quantity an ortheme would erase the consequence condition; a quantity becomes relevant through the question, contrast, tolerance and action it can change.
+
+This repairs an imprecision in the post-edition-1 dialogue: experimental identification is not the definition of an orthemma. Identification is an operation on a case; its concrete episode can itself become a case for another analysis. In the source vocabulary, \emph{orthing} names the rule-governed handling process, while an \emph{orthing episode} is a dated concrete run rather than its result alone. Likewise, a learned latent coordinate is not automatically an ortheme. A stable coordinate, a useful inferred category, and a true operational distinction are separate claims.
+
+For analysis $\mathsf A$, occurrence domain $\mathcal M_{\mathsf A}$, and type repertoire $\mathcal O_{\mathsf A}$, write
+\begin{equation}\label{eq:orthemicprofile}
+ \operatorname{Inst}_{\mathsf A}\subseteq
+ \mathcal M_{\mathsf A}\times\mathcal O_{\mathsf A},\qquad
+ O^*(m;\mathsf A)=\{o:(m,o)\in\operatorname{Inst}_{\mathsf A}\}.
+\end{equation}
+The analysis fixes scope, task, representation, tolerance and relevant constraints. It does not make worldly facts depend on an assessor's preference. The actual profile $O^*$ remains distinct from the inferred partial profile $\hat p_{\alpha,t}$ and the set of still-compatible complete profiles. Here $\mathsf A$ is an analysis identifier, not the matrix $A$ of Section~\ref{sec:channels}.
+
+\subsection{Governing a comparison is another typed operation}
+A \emph{metaortheme} is a repeatable higher-order governing distinction or configuration. A \emph{metaorthemma} is its concrete case-bound configuration token: this analysis, this occurrence/version, this calibration and this validity interval. Neither is the whole handling episode or the act of executing its policy. The source explicitly separates result correctness from pathway adequacy \citep{orthemology}: a correct answer can follow from a defective calibration, and adequate statistical procedures need not be infallible.
+
+For channel assessment, examples of governing distinctions are current versus expired calibration, compatible versus incompatible resource accounting, and same versus changed observation semantics. The corresponding policy might withhold a comparison when those conditions fail. A goal such as ``maximise information'' is not automatically a metaortheme; the governing alternative, selecting evidence, and consequential difference must be specified.
+
+An evidence item in the present application records the claim it bears on, target identity/version, physical regime, measurement or proof procedure, provenance, uncertainty, and validity conditions. This is an application of the source discipline, not a claim that the entire Orthemology architecture is empirically validated. No superiority of its vocabulary over ordinary language is assumed.
+
+\subsection{What a crosswalk must preserve}
+A crosswalk is a declared mapping between case descriptions for a specified comparison task. At minimum it must preserve the meanings of intervention, observation, resource budget, uncertainty model, timing, and claimed result where those quantities govern the verdict. Numerical entries require unit and calibration maps; missing measurements remain missing. A blank ``memory'' field cannot be silently filled because the case has a demonstrated propagation path.
+
+Three operations must be separated. \emph{Representational abstraction} retains some distinctions and discards others. \emph{Evidential consolidation} combines support about a shared target. \emph{Physical composition} connects operational components subject to joint constraints. None of these is implemented merely by taking a union of case descriptions. The term \textsc{join} below denotes only the second operation; it is a local definition in this paper, not a claim about a universal canonical JOIN operator in Orthemology.
+
+A minimal mathematical condition for a faithful abstraction is useful.
+\begin{proposition}[Task-sufficient abstraction on the attained image]\label{prop:fibre}
+Let $X$ be a case domain, $\phi:X\to Z$ a representation, and $q:X\to T$ the specified target answer. There exists $d:\phi(X)\to T$ with $q=d\circ\phi$ if and only if
+\begin{equation}\label{eq:fibre}
+ \phi(x)=\phi(x')\ \Longrightarrow\ q(x)=q(x')\qquad(x,x'\in X).
+\end{equation}
+The decoder on the attained image is then unique. A decoder on all of $Z$ needs an additional extension condition, for example a nonempty target set $T$.
+\end{proposition}
+\begin{proof}
+If $q=d\circ\phi$, equal representations have equal target answers. Conversely, assign to each $z\in\phi(X)$ the unique value $q(x)$ for a case with $\phi(x)=z$; Equation~\eqref{eq:fibre} makes that value well-defined. Every attained $z$ has such a case, so the construction gives a total function on $\phi(X)$ and forces its value there. Off-image values are not specified; if $T$ is nonempty they can be assigned any fixed member. In particular, no unguarded extension is inferred when $X=T=\varnothing$ but $Z\ne\varnothing$.
+\end{proof}
+
+This is elementary inherited factorisation mathematics, also identified as such in the Orthemology synthesis; no novelty is claimed for it. Its work here is diagnostic. A representation containing only ``nonzero physical coupling'' cannot faithfully answer a robust-decoding question when two cases with that same representation have different noise or resource limits. Conversely, gain magnitude can be sufficient for a restricted feasibility verdict while being insufficient for a decoder's label assignment, as the polarity counterexample in Section~\ref{sec:uncertain} shows. Sufficiency is relative to the question, not to an all-purpose latent essence.
+
+\subsection{A source-preserving evidential JOIN}
+For a single fixed target and analysis, let $\Theta$ be a declared model class. Evidence record $h_i$ supports a constraint $S_i\subseteq\Theta$ with a stated soundness condition. Define
+\begin{equation}\label{eq:evidencejoin}
+ J(H)=\bigcap_{h_i\in H}S_i,\qquad
+ \operatorname{Status}(H)=
+ \begin{cases}
+ \text{conflict},&J(H)=\varnothing,\\
+ \text{consistent relative to the records},&J(H)\ne\varnothing.
+ \end{cases}
+\end{equation}
+A consistent intersection is not automatically true: every source could have omitted the actual model. A conflict is not a warrant to infer every proposition by vacuous universal quantification. It is an assessment outcome requiring correction or explicit residual status.
+
+\begin{proposition}[Conditional soundness and idempotence of evidential JOIN]\label{prop:join}
+For a fixed finite family of records, suppose the actual model $\theta_*\in\Theta$ is included in every applicable $S_i$. Then $\theta_*\in J(H)$, so any predicate holding for every member of $J(H)$ holds for $\theta_*$. Duplicating a record leaves $J(H)$ unchanged. If every separately acquired record excludes the actual model with probability at most $\alpha_i$, the probability that the intersection excludes it is at most $\sum_i\alpha_i$, without requiring independent records.
+\end{proposition}
+\begin{proof}
+Membership in every $S_i$ is exactly membership in their intersection, proving the first claim. Set intersection is idempotent, proving the second. Exclusion by the intersection is the union of the events $\theta_*\notin S_i$; the union bound proves the last claim.
+\end{proof}
+
+The probabilistic statement concerns the coverage guarantees of the records' actual acquisition procedures. Copying a report does not create a new acquisition or a new confidence factor. Neither model votes nor agreement among paraphrases repair an invalid coverage premise. Similarly, equations fitted to one operating regime cannot be intersected as though they were measurements of a different regime; a transport argument is required first.
+
+This gives consolidation a modest but real purpose: retain which claims are jointly warranted, expose incompatible premises, and distinguish unassessed from contradicted from supported cases. It does not create a transducer, validate a physical hypothesis by terminology, or turn a literature catalogue into an autonomous discovery engine.

@@ -1,0 +1,13 @@
+\subsection{Safety does not by itself guarantee progress}\label{sec:progress}
+An invariant safe set can contain an infinite idle loop. Consequently, finite-state viability alone does not prove that a queued computation finishes, a requested output is delivered, or a deadline is met. The contract must state whether such progress is required and how it is guaranteed. This is a further qualification to the first edition's use of maintained operation.
+
+\begin{proposition}[Finite-rank progress certificate]\label{prop:progress}
+Let $S$ be a finite safe set and $G\subseteq S$ a target set. Suppose a specified policy keeps every admitted successor in $S$, and a rank $r:S\to\{0,1,\ldots,N\}$ satisfies $r(x)=0$ only if $x\in G$. For every $x\in S\setminus G$ and every admitted disturbance, suppose the next state has strictly smaller rank. Then every execution following that policy reaches $G$ within at most $r(x_0)$ steps.
+\end{proposition}
+\begin{proof}
+An execution avoiding $G$ reduces a nonnegative integer rank by at least one at each step. After $r(x_0)$ such steps the rank is zero, which by assumption implies membership in $G$. Avoidance beyond that time is impossible. If $x_0\in G$, the required hit has already occurred.
+\end{proof}
+
+This standard ranking argument supplies a sufficient witness for bounded task completion; it is not implied by resource redundancy. Repeated tasks need a corresponding per-request progress condition and an admissible arrival model. An operator's permitted stop or shutdown is not an adverse disturbance that an operational system may silently redefine its task to resist. The claim is preservation of the declared service contract and authority boundary, not self-selected indefinite activity.
+
+All continuing-operation invariants are conditioned on continuing permission to operate. Contract-permitted termination is a separate transition to a designated stopped state, not a disturbance that the policy is required to defeat.

@@ -1,0 +1,42 @@
+\section{Composition is a joint-witness problem}\label{sec:composition}
+\subsection{Common schema, compatible contracts, and actual construction}
+The thermal, acoustic and electromagnetic literature can be described using shared roles such as intervention, propagation, observation and decoding. Shared roles are not sufficient for connection. A common schema answers what must be described; a contract supplies a scoped claim about one description; construction must establish a physical witness satisfying the claims together.
+
+For an already specified interface, write a contract schematically as
+\[
+ \mathcal C=(\mathcal U,\mathcal Y,\mathcal M,\mathcal A,\mathcal G,
+ T,\mathcal R,\mathcal E),
+\]
+where $\mathcal U,\mathcal Y,\mathcal M$ are admitted input, observation and message spaces, $\mathcal A$ the assumptions, $\mathcal G$ the guarantee, $T$ the horizon, $\mathcal R$ the joint resource specification, and $\mathcal E$ the supporting evidence. Encoders, decoders and interface maps are either named parts of these objects or explicit linked specifications. Nothing is filled from a label such as ``works over RF.''
+
+This tuple is a notation for reviewing \emph{specified} interfaces, not a procedure for finding new physical attack paths. It separates physical assumptions from permission records. A mathematically valid guarantee can lack permission to act on it, and a fully authorised experiment can fail its mathematical guarantee.
+
+\begin{proposition}[Serial reliability requires compatibility]\label{prop:serial}
+Suppose a fixed finite chain of $m$ specified stages satisfies the following conditions. Conditional on every preceding stage succeeding, stage $i$ receives an input within its admitted domain, its assumptions and joint resource conditions hold, and its failure probability is at most $\varepsilon_i$. Success of all stages implies the stated end-to-end contract, including any required timing and interpretation. Then the probability of end-to-end failure is at most $\sum_{i=1}^m\varepsilon_i$.
+\end{proposition}
+\begin{proof}
+Let $A_i$ be the event that stage $i$ is the first failed stage. The events are disjoint and
+$\Prob(A_i)=\Prob(\text{earlier success})\Prob(\text{failure at }i\mid\text{earlier success})\leq\varepsilon_i$; if earlier success has probability zero, $\Prob(A_i)=0$. End-to-end failure can occur only when at least one stage fails under the stated all-success guarantee. Summing gives the bound. Independence is not used.
+\end{proof}
+
+A reported error rate from a stage tested in isolation does not establish the conditional premise. The preceding stage might change its input distribution, temperature, timing or calibration. The interface correspondence is where a physical composition must be justified; otherwise the algebra is about a different system.
+
+\subsection{Two countermodels to free composition}
+Consider two processes sharing a resource with normalised budget one. Each demands $3/4$ of that resource during the same interval. Each is feasible by itself, but their simultaneous demand is $3/2>1$. Separate feasibility certificates do not certify concurrent operation. Scheduling can sometimes resolve the conflict, but only if the timing contract permits it. A graph with two individually valid edges conceals this constraint unless the joint resource is represented.
+
+There is a related quantifier error across physical roles. Suppose configuration $r_1$ supplies storage but cannot execute, while $r_2$ can execute a stateless transformation but lacks the persistent state required by the task. For the role set $\{\text{storage},\text{execution}\}$ it may be true that
+\[
+ \forall j\;\exists r\;\operatorname{Supplies}(r,j),
+\]
+while false that
+\[
+ \exists r\;\forall j\;\operatorname{Supplies}(r,j).
+\]
+A physical combination of $r_1$ and $r_2$ could resolve the issue, but the existence and adequacy of that combination are precisely the missing witness. Listing the two roles in one document is not a construction. The same distinction applies to a network path and a replacement processor, or to separate pieces of evidence produced under incompatible conditions.
+
+\subsection{What can emerge only at composition}
+Composition can produce useful properties that no component establishes alone: a complete end-to-end task, a recoverable execution trace, or tolerance of a particular failed support. It can also produce a new failure: correlated interference, a deadline violation, a circular bootstrap dependency, or loss of a required distinction in an intermediate encoding.
+
+The relevant hypothesis is therefore not simply that components possess desirable properties. It is that their mapped interaction admits a joint witness, with guarantees propagated along the actual interfaces. Sections~\ref{sec:cuts}--\ref{sec:viability} analyse further obligations on that witness. This is where a cross-case representation could provide value beyond a catalogue, but its ability to do so remains subject to the comparative tests in Section~\ref{sec:representation}.
+
+In particular, bootstrap arguments must not borrow an interpreter, clock, energy source or control decision from the very host whose removal is supposed to be tolerated. A staged operator-directed transition can preserve such support until a replacement is established. A circular statement that a future independent kernel will provide its own missing prerequisites does not establish reachability.

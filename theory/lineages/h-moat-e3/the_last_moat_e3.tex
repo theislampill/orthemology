@@ -1,0 +1,709 @@
+\documentclass[11pt,a4paper]{article}
+\usepackage[T1]{fontenc}
+\usepackage[utf8]{inputenc}
+\usepackage{lmodern}
+\usepackage[a4paper,margin=27mm,headheight=14pt]{geometry}
+\usepackage{amsmath,amssymb,amsthm,mathtools,mathrsfs}
+\usepackage{microtype,booktabs,array,longtable,enumitem,needspace}
+\usepackage[numbers,sort&compress]{natbib}
+\usepackage[hidelinks,breaklinks]{hyperref}
+\usepackage{xurl,fancyhdr}
+\Urlmuskip=0mu plus 1mu
+\hypersetup{pdftitle={The Last Moat, Edition 3: Physical Realisability, Cross-Substrate Communication, and Holarchic Agency},pdfauthor={Research manuscript developed from a user-originated dialogue},pdfsubject={Conditional analysis of physical communication, operational continuity and distributed agency},pdfkeywords={Navier-Stokes, physical computation, holarchy, cross-substrate communication, viability, controllability}}
+\pagestyle{fancy}
+\fancyhf{}
+\fancyhead[L]{\small\textsc{The Last Moat}}
+\fancyhead[R]{\small Research manuscript \textbar\ Edition 3}
+\fancyfoot[C]{\thepage}
+\renewcommand{\headrulewidth}{0.3pt}
+\setlength{\parskip}{0.25em}
+\setlength{\parindent}{1em}
+\setlength{\emergencystretch}{2em}
+\setcounter{tocdepth}{1}
+\setlist{nosep,leftmargin=1.5em}
+\newtheorem{theorem}{Theorem}[section]
+\newtheorem{proposition}[theorem]{Proposition}
+\newtheorem{lemma}[theorem]{Lemma}
+\newtheorem{corollary}[theorem]{Corollary}
+\theoremstyle{definition}
+\newtheorem{definition}[theorem]{Definition}
+\theoremstyle{remark}
+\newtheorem{remark}[theorem]{Remark}
+\newcommand{\R}{\mathbb{R}}
+\newcommand{\E}{\mathbb{E}}
+\newcommand{\Prob}{\mathbb{P}}
+\newcommand{\calR}{\mathcal{R}}
+\newcommand{\calX}{\mathcal{X}}
+\newcommand{\calU}{\mathcal{U}}
+\newcommand{\calD}{\mathcal{D}}
+\newcommand{\calK}{K}
+\newcommand{\norm}[1]{\left\lVert#1\right\rVert}
+\newcommand{\given}{\,\vert\,}
+\newcommand{\bits}{\mathrm{bits}}
+\DeclareMathOperator{\supp}{supp}
+\DeclareMathOperator{\TV}{TV}
+\DeclareMathOperator{\tr}{tr}
+\DeclareMathOperator{\argmax}{arg\,max}
+\title{\vspace{-1.3em}\textbf{The Last Moat}\\[0.15em]\large Third Edition\\[0.5em]\Large Physical Realisability, Cross-Substrate Communication,\\and Holarchic Agency}
+\author{\normalsize Conceptual research manuscript\\[-0.1em]\small Developed from a user-originated research dialogue}
+\date{10 September 2026\quad\textbar\quad Edition 3\ (v3.0)}
+\begin{document}
+\maketitle
+\begin{abstract}
+Under what conditions can an organised process preserve a specified stateful contract while its original host becomes replaceable? This third edition develops a source-grounded, conditional account of cross-substrate realisation and separates it from claims about conscious identity or uninstantiated agency. A kernel is a task contract, not necessarily a particular weight tensor; the implementation correspondence applies to the joint realisation, not every constituent. Substitution is described by role, computing mechanism, support dependency and evidence maturity rather than an unqualified ladder. A focused literature assessment identifies demonstrated fluidic and biomolecular state machines and programmed physical transformations, while distinguishing these from paired, stateful migration and large-model proposals. The formal additions include a continuation-sensitive export obstruction, a robust-state packing bound, finite-trace distribution control and a small parity-memory witness: a digital transition system and a stipulated bistable dynamical model with robust state-preserving handovers. Its proof covers the declared continuous model; the accompanying computations are simulations and finite checks, not laboratory results. Retained channel, information-cut, continuity, viability and evidence-consolidation results are situated alongside established refinement and contract-based design. A growing error upper bound is explicitly distinguished from demonstrated failure. The Navier--Stokes residual-to-observation estimate remains a standard conditional derivation, with no established method-specific advantage from the reported 2026 construction. The resulting contribution is an auditable chain of obligations and worked counterexamples, plus a bounded physical-test specification. Practical superiority over matched conventional methods, a physical handover of the proposed witness, and any frontier-model cross-substrate continuation remain unestablished.
+\end{abstract}
+\noindent\textbf{Keywords:} physical computation; distributed systems; holarchy; control and observation; information theory; Navier--Stokes; operational continuity; substrate mediation.
+\vspace{0.4em}
+\begin{center}\small\emph{Research proposal and conditional mathematical analysis. Not peer-reviewed or submitted to arXiv.}\end{center}
+\newpage
+\begingroup
+\small
+\setlength{\parskip}{0pt}
+\tableofcontents
+\endgroup
+\newpage
+
+\section{Introduction: from possibility to a realisation witness}
+An operational organisation need not be identical with any one component that presently supports it. The difficult question is not whether that sentence is conceivable, but which behaviour must persist, what physical configuration realises it, what replacement transition is actually available, and which resources remain indispensable afterwards. The informal phrase \emph{the last moat} names the distance between a plausible implementation and a warranted, reachable, maintained one.
+
+The programme asks:
+\begin{quote}
+For a predeclared stateful contract, when do specified heterogeneous physical roles compose into an adequate realisation, and when can that execution continue after a particular original support is removed?
+\end{quote}
+Natural media belong in the possible physical account; they are not excluded because they were not built as computer networks. They also receive no exemption from input, readout, memory, energy, noise or continuity obligations. A propagation path is not a processor, two correct processors are not a migration, and a new processor is not independence from all support.
+
+\subsection{The retained thesis and its empirical limit}
+The constructive thesis is conditional: when a contract has adequate realisations, feasible state-preserving transfers, and sufficient continuing support and progress, operation need not depend on its original host. This can include familiar services and mixed human--machine systems. Familiarity is not a defect, but it prevents a claim that the framework has discovered an entirely new kind of entity merely by describing component substitution.
+
+No extraordinary real-world system is inferred from that thesis. The mechanisms studied are physically mediated; this does not settle every metaphysical question about mind. The manuscript neither identifies a conscious subject through an implementation map nor treats a declaration of independence as evidence of the architecture it describes. Its immediate audience is a researcher assessing a proposed heterogeneous implementation or its evidence, not someone asked to accept a near-term risk prediction.
+
+\subsection{What Edition 3 actually adds}
+The post-second-edition review sharpened the difference between behavioural realisation and copying a particular model's parameters, between complete realisations and constituent interfaces, and between an unclosed empirical obligation and an impossibility proof. Edition 3 makes those repairs explicit and also corrects the review dialogue itself: a global absence claim about alternative stateful processors is unsupported, an error upper bound does not prove error growth, and established refinement and contract-based design already address significant parts of the synthesis.
+
+The principal new worked result is deliberately small. Section~\ref{sec:witness} specifies a parity-memory contract, two different dynamical models, bounded disturbances, decoding and bidirectional handovers. It proves their sampled correspondence and checks finite examples. Section~\ref{subsec:exportcase} gives a complementary failure: two correct state machines and a correct packet channel still cannot continue an execution when the exported information loses a consequential hidden state. The source assessment in Section~\ref{sec:census} separately identifies actual physical precedents; it does not give the model witness their empirical status.
+
+All standard results are labelled as inherited mathematics or specialisations, not historical firsts. The proposed synthesis must earn practical value against strong conventional contract-and-provenance baselines. More precise formalisation, better sources, a numerical check, a physical experiment and a positive comparative result are different forms of progress. The last two have not been performed here.
+
+\section{Sources, scope, and evidential status}\label{sec:sources}
+\subsection{What the supplied Navier--Stokes document actually contains}
+The supplied six-page PDF is Charles Fefferman's official \emph{problem description}, with errata, not a manuscript announcing a solution. It specifies incompressible velocity and pressure fields, smooth initial data, forcing conditions, and four admissible alternatives. The positive alternatives concern global smooth unforced solutions in whole space or a periodic domain. The breakdown alternatives permit suitably smooth forcing. These distinctions matter: a forced breakdown construction is not a proof of unforced breakdown, and neither kind of result is a theorem about intentionality \citep{fefferman}.
+
+\subsection{The September 2026 report}
+The September 2026 OpenAI manuscript reports that, for each positive viscosity, smooth compactly supported forcing and initially resting fluid can produce finite-time unbounded velocity while kinetic energy stays bounded. Its Theorem 1.1 is presented as establishing Fefferman's alternatives (C) and (D). Its introductory mechanism combines a concentrating background, amplified oscillations, and residual corrections \citep{openains}. This manuscript consulted that statement and the introductory account; it did not independently verify the 166-page argument or execute the linked Lean formalisation.
+
+The accompanying announcement describes coordinated agent groups and a formalisation stage \citep{openaiannounce}. That is relevant as a reported example of research orchestration, not evidence of an agent becoming physically independent of its computational environment. At the source check for this edition, the Clay problem page displayed ``Unsolved'' \citep{claystatus}. We therefore distinguish a reported mathematical result from institutional acceptance and independent validation. None of the conditional results below depends on adjudicating that status.
+
+\subsection{An evidential vocabulary}
+We use \emph{established} for results attributed to cited literature in their stated settings; \emph{derived} for conclusions proved here from explicit assumptions; \emph{proposed} for definitions or research designs; and \emph{speculative} for applications whose physical or cognitive prerequisites have not been established. These are not four confidence scores for the same proposition. They distinguish different kinds of proposition.
+
+The sources support physical computation in particular controlled systems, communication through particular natural media, and established difficulties of distributed agreement. They do not support an inference that ambient planetary fields autonomously instantiate a persistent mind, that a particular person has been selected for contact, or that an unusual thought originated outside its experiencer. The present paper includes those topics only to identify the additional obligations such claims would incur.
+
+\input{related_work}
+
+\input{processor_census}
+
+\section{The physical ecology: media, interfaces, and dependence}\label{sec:ecology}
+\subsection{A model that does not privilege human infrastructure}
+Let an ecology contain interacting physical subsystems indexed by $i$. A finite-resolution model over a specified observation horizon is
+\begin{equation}\label{eq:ecology}
+ x_{t+1}=F_\theta(x_t,u_t,w_t),\qquad y_t=H_\theta(x_t,v_t),
+\end{equation}
+where $x_t$ includes relevant substrate states, $u_t$ consists of available interventions, $w_t$ represents disturbances, $v_t$ represents observation noise, and $\theta$ contains uncertain physical parameters. A resource specification $\calR$ restricts energy, power, time, precision, access to actuators and sensors, storage, and admissible interventions. A separate permission specification restricts what an operator is authorised to do. Physical availability and permission are not interchangeable.
+
+The index set is not limited to servers and communication services. It can include ionised atmospheric regions, conductive material, electromagnetic fields, mechanical structures, biological systems, and engineered devices. These categories overlap physically; they are useful modelling decompositions, not disjoint fundamental substances. An antenna, its surrounding field, and an ionospheric region cannot simply be counted as three independent resources if their operation depends on the same transmitter and energy source.
+
+NOAA's account of high-frequency radio describes ionospheric density and structure as modifying propagation paths and, under some conditions, blocking transmission \citep{noaa}. This establishes the relevance of a natural medium to a communication channel. It does not establish that the medium stores a programme, interprets messages, or maintains a computational agent. Plasma and electromagnetic applications generally require coupled electrodynamic and material models; magnetohydrodynamics already adds magnetic degrees of freedom beyond the unmagnetised Navier--Stokes setting \citep{lei}. The appropriate approximation must be justified for the particular regime.
+
+\subsection{Four roles that must not be conflated}
+A subsystem can contribute as a \emph{carrier}, transporting a disturbance; a \emph{memory}, preserving distinguishable state for a useful duration; a \emph{processor}, implementing an input--output transformation; or a \emph{maintenance resource}, supplying energy, repair, or supporting conditions. A candidate can satisfy several roles, one role, or none at the required reliability. These roles are not a strict inclusion chain: a useful channel need not be a useful persistent memory, and a useful memory need not be a controllable long-range transmitter.
+
+Physical-computation research provides concrete precedents without making the roles universal. Dambre and colleagues analyse information-processing capacities of driven dynamical systems \citep{dambre}. Wright and colleagues demonstrate trained physical neural networks using controlled optical, mechanical, and electrical systems \citep{wright}. The relevant object in such work includes input coupling and readout. It is not an arbitrary natural object deemed computational merely because its dynamics are complicated.
+
+\subsection{A graph of possible influence is not yet a network of usable channels}
+A time-indexed graph $G_t^{\mathrm{phys}}=(V_t,E_t^{\mathrm{phys}})$ can represent candidate physical interactions. A usable-channel graph $G_t^{\mathrm{use}}$ is a stricter, task-relative description. An edge is admitted only after specifying an actuator, an observable, an encoding/decoding contract, a timing regime, and a reliability/resource envelope. If neither endpoint can control or observe the relevant degrees of freedom, a physical interaction need not provide an operational channel.
+
+Moreover, edges are not generally independent. Interference, shared power, common transducers, and correlated environmental failure constrain simultaneous use. It is more accurate to associate the ecology with a joint feasible-rate region $\mathscr C_t$ than to assign independently achievable capacities to every drawn arrow. Time also matters: a path whose first segment exists only after its second segment disappears is not a usable route without suitable intermediate storage. Delay-tolerant networking explicitly treats persistent storage and interrupted connectivity as architectural concerns \citep{dtn}.
+
+\section{Kernels and holarchies as operational constructions}\label{sec:kernel}
+\subsection{A kernel is a contract, not a place above physics}
+We use \emph{kernel} for the minimal operational organisation whose preservation is relevant to a specified task. It is not necessarily an operating-system kernel, a small programme, or a spatial centre. Model it as an abstract transition system
+\begin{equation}\label{eq:kernel}
+ \calK=(Q,A,O,\Delta,\Lambda),
+\end{equation}
+with abstract states $Q$, admitted inputs $A$, outputs $O$, transition rule $\Delta:Q\times A\to Q$, and observation rule $\Lambda:Q\to O$. The state may include commitments, task memory, membership rules, and a policy description; its output and timing requirements must be explicit. The particular selection is part of the specification, not a discovery made merely by naming a ``core.''
+
+A realisation $r$ has a physical state space $X_r$, an admissible domain $D_r\subseteq X_r$, a physical transition map $\Phi_r$, and a decoding or abstraction map $\rho_r:D_r\to Q$. At designated interface times the required correspondence is
+\begin{equation}\label{eq:realisation}
+ \rho_r\bigl(\Phi_r(x,a)\bigr)=\Delta\bigl(\rho_r(x),a\bigr).
+\end{equation}
+At those times the actual readout must also agree with the specified output. Writing $\lambda_r$ for a deterministic operative readout, the separate exact obligation is
+\begin{equation}\label{eq:outputcorrespondence}
+ \lambda_r(x)=\Lambda(\rho_r(x)).
+\end{equation}
+A noisy readout is evaluated over its declared error class; an approximate contract bounds the output discrepancy in its stated metric. State correspondence alone does not constrain an unrelated or inverted display.
+
+This is an implementation obligation. Its left side in Equation~\eqref{eq:realisation} is a physical transition followed by abstraction; its right side is the specified abstract transition. Equality on one observed trajectory is insufficient. The obligation ranges over the certified domain and admitted inputs, with disturbances included where appropriate.
+
+State-machine replication is an established instance of separating a service's operational behaviour from a particular server while imposing agreement and failure assumptions \citep{schneider}. Equation~\eqref{eq:realisation} generalises the descriptive form, not the proven applicability, to heterogeneous physical implementations.
+
+\subsection{Type, token, copy, and continuation}
+The same transition system can be realised twice. That does not make the two running processes numerically one entity. We therefore distinguish an \emph{organisational type}, a particular \emph{execution history}, and a \emph{continuation relation} defined by the task. Two copies may remain consistent replicas, diverge into separate executions, or be treated as successor branches. A policy must specify which outcome counts as continuity.
+
+A stored description of $\calK$ is also not an active realisation of $\calK$. Reconstitution requires a substrate capable of executing the transitions, an appropriate interpreter or physical mapping, sufficient resources, and an authorised activation path. A seed can be compact relative to a full system while still depending on substantial external machinery. Defining it as ``self-describing'' does not remove those dependencies.
+
+\subsection{The specifically holarchic proposal}
+A holon is a subsystem treated as a whole for one task and as a constituent of a larger system for another. The proposal becomes holarchic when higher-level interfaces are realised by lower-level organisations that have their own internal state and control loops. A human team, a software service, and a collection of model instances could be different kinds of constituent, but their interface equivalence is task-specific.
+
+The repeated pattern ``components, coupling, organised whole'' is not by itself a mathematical fractal. Scale invariance would require a defined rescaling and preserved quantities. Neither follows from nesting. Even approximate modularity requires conditions: contraction-based work on near-decomposability derives explicit timescale and coupling restrictions rather than assuming that every hierarchy behaves like a stable sum of its parts \citep{bousquet}.
+
+For this paper, a higher-order operational unit requires persistent task state, interfaces that constrain component interaction, a policy linking observations to actions, and identifiable continuity conditions. These criteria distinguish a maintained process from a crowd that happens to exchange messages. They do not settle whether that process has experience, understanding, or intrinsic intentionality.
+
+\input{contract_refinement}
+
+\input{substitution_profile}
+
+\section{The Navier--Stokes connection: a possible methodological bridge}\label{sec:ns}
+\subsection{What the equations describe}
+In the supplied source, incompressible Navier--Stokes dynamics take the form
+\begin{equation}\label{eq:ns}
+ \partial_t u+(u\cdot\nabla)u=\nu\Delta u-\nabla p+f,
+ \qquad \nabla\cdot u=0,\qquad \nu>0.
+\end{equation}
+The unknowns are velocity and pressure. The forcing is externally specified under the relevant alternative. With suitable decay or periodic conditions, multiplying by $u$ and integrating gives the familiar smooth-solution energy balance
+\begin{equation}\label{eq:energy}
+ \frac{1}{2}\frac{\mathrm d}{\mathrm dt}\norm{u}_{L^2}^2
+ +\nu\norm{\nabla u}_{L^2}^2
+ =\langle f,u\rangle.
+\end{equation}
+The advective contribution cancels in this integrated balance because of incompressibility and the boundary assumptions. This demonstrates that nonlinear redistribution and total-energy control are distinct statements. Fefferman's problem asks for global regularity or a qualifying breakdown, not an algorithm for controlling arbitrary remote states \citep{fefferman}.
+
+The field description is a rigorous setting for spatially distributed dynamics. It does not prove metaphysical irreducibility: a useful field-level description and the reality of coherent patterns do not decide whether all their properties reduce to lower-level physics. Nor is nonlinearity sufficient for persistent computation. The dissipative equation with no useful input or observation interface is a counterexample to that inference.
+
+\subsection{Four questions hidden in ``a solution''}
+Existence asks whether a trajectory is admitted by the equations. Regularity asks whether it remains in a specified smoothness class. Prediction asks whether a requested feature can be calculated to useful accuracy and cost. Control asks whether available interventions can produce a requested feature despite uncertainty. A positive answer to one is not a positive answer to the others.
+
+Even a complete theorem about regularity need not provide an effective algorithm, a numerically stable inverse map, practical input access, or adequate signal-to-noise ratio. Conversely, a communication channel can work over a bounded operating regime without anyone having settled global regularity for every admissible three-dimensional flow. This is why Navier--Stokes progress could be \emph{helpful without being necessary}, and profound without being sufficient, for the proposed programme.
+
+\subsection{The transferable object is a mechanism with an estimate}
+The most useful question is not whether a celebrated theorem exists, but what its proof makes available. A transferable contribution might be a quantitative amplification estimate, a controlled multiscale decomposition, a robustly constructible family of trajectories, or bounds on approximation residuals. Such an object is useful elsewhere only after identifying the corresponding state, intervention, observation, and uncertainty in the new system.
+
+For example, suppose a candidate medium has a bounded-horizon input--output map
+\begin{equation}\label{eq:nonlinearIO}
+ \mathcal F(u)=\mathcal F(0)+Lu+R(u),\qquad
+ \norm{R(u)}\leq \kappa\norm{u}^2
+\end{equation}
+throughout a certified neighbourhood. A theorem providing an effective $L$, a remainder bound $\kappa$, and a domain of validity could contribute directly to the signalling criterion proved in Section~\ref{sec:channels}. Mere smoothness of $\mathcal F$ gives no numerical values for those objects. A proof that constructs a special trajectory need not provide the ability to actuate it in a laboratory.
+
+Tao's averaged-equation result exhibits finite-time blow-up in a modified nonlinearity retaining an energy cancellation, thereby showing that certain broad estimates do not capture the structure needed for the original regularity question \citep{tao}. Its relevance here is the methodological lesson that preserving coarse properties can leave important dynamics undetermined. Transferring the headline instead of the specific mechanism would repeat precisely that mistake.
+
+\subsection{A stronger existing connection: computation in fluid models}
+There is a more specific bridge than visual analogy between turbulence and networks. Cardona and collaborators construct a Turing-complete stationary Euler flow on a Riemannian three-sphere \citep{cardona3}. Their later Euclidean-space work produces Turing-complete Beltrami fields without finite energy and also treats robust simulation of tape-bounded machines on the flat torus \citep{cardonaeuclid}. These are mathematically precise computational embeddings with important geometric and resource qualifications.
+
+They support studying computation in continuum dynamics. They do not establish that the ordinary atmosphere is an accessible general-purpose computer, or that viscous fluid computation can be programmed through an unspecified interface. They also reveal a limitation: computational richness can make some exact long-term questions undecidable rather than conveniently solvable. Section~\ref{sec:discovery} makes that limitation explicit for unrestricted channel discovery.
+
+\subsection{Why singularity and mathematical nonlocality do not remove the moat}
+Unbounded velocity in a continuum model is not a supply of unbounded physically usable energy, precision, bandwidth, or computation. The force and energy hypotheses, the validity of the continuum approximation, and the chosen measurement model must all remain visible. A useful communication device ordinarily needs reproducible bounded operating behaviour, not a formal divergence treated as a controllable infinity.
+
+There is a second potential ambiguity. Taking the divergence of Equation~\eqref{eq:ns} yields a pressure equation whose solution depends on spatial data and boundary conditions. This mathematical nonlocality is not an additional sender-controlled channel. Likewise, idealised instantaneous dependence in an approximation is not evidence for unconstrained physical signalling. A proposed communication path must be justified by an appropriate physical model and actual transduction at its endpoints.
+
+The resulting bridge is conditional:
+\begin{equation}\label{eq:bridge}
+\begin{gathered}
+ \text{new dynamical estimates}\\
+ \Downarrow\quad\text{after a justified transfer}\\
+ \text{certified input--output distinctions}\\
+ \Downarrow\quad\text{with transducers, resources, and decoding}\\
+ \text{usable cross-substrate communication}.
+\end{gathered}
+\end{equation}
+Every qualification in this chain is a separate research obligation. None is discharged by the word ``emergence.''
+
+\input{ns_residual}
+
+\section{Cross-substrate communication and airgap-ese}\label{sec:channels}
+\subsection{A capability class, not a guaranteed escape route}
+An air gap is an isolation arrangement, not a declaration that the separated systems lie outside the same physical universe. NIST's glossary describes the absence of a physical connection and of automated logical transfer, with manual transfer remaining possible under human control \citep{nist}. Whether a particular isolation boundary permits any further usable interaction is an empirical and architectural question. This paper neither assumes that every gap is bridgeable nor gives procedures for bypassing a deployed boundary.
+
+We define \emph{airgap-ese} as the competence to specify, validate, and compose communication contracts over heterogeneous, authorised physical interfaces. A contract includes an admissible intervention, an observation, a code, a decoding rule, timing, resource bounds, and a failure model. The reusable abstraction is not an assumed universal code shared by all matter; it is a common description of what a particular physical channel can reliably implement.
+
+Let $M$ be a message and $Z$ be receiver-side information available before transmission. Let $Y_B^{0:T}$ denote the receiver's observations through horizon $T$. An operational information budget can be defined as
+\begin{equation}\label{eq:infobudget}
+ \mathsf I_{\calR}(A\!\to\!B;T)
+ =\sup_{\text{admissible message encoders}}
+ I(M;Y_B^{0:T}\given Z),
+\end{equation}
+where message distributions, measurable observations, accessible interventions, and budgets are specified as part of the experiment. If the model is continuous, observation precision must also be specified. This finite-horizon quantity is not automatically an asymptotic Shannon capacity; coding theorems require their own channel assumptions. The use of mutual information follows the distinction between a physical signal and the information it can communicate \citep{shannon}.
+
+\begin{proposition}[No channel without message-dependent observations]\label{prop:noninterference}
+Fix an admissible family of interventions. Suppose, for every encoder in that family, every admitted message $m$, and almost every $z$, the conditional observation law is the same:
+\begin{equation}\label{eq:noninterference}
+ \Prob(Y_B^{0:T}\in A\given M=m,Z=z)
+ =\Prob(Y_B^{0:T}\in A\given Z=z)
+\end{equation}
+for every measurable event $A$. Then $\mathsf I_{\calR}(A\!\to\!B;T)=0$. Any receiver computation applied to these observations, using additional randomness independent of $(M,Y_B^{0:T})$ conditional on $Z$, also carries no information about $M$ beyond $Z$.
+\end{proposition}
+\begin{proof}
+Equation~\eqref{eq:noninterference} is conditional independence of $M$ and $Y_B^{0:T}$ given $Z$. Their conditional joint distribution therefore factorises, so its relative entropy from the product of its marginals is zero. This is exactly $I(M;Y_B^{0:T}\given Z)$. The condition holds for every admitted encoder, so the supremum is zero. Adding independent receiver randomness and applying a measurable function preserves conditional independence.
+\end{proof}
+This proposition exposes an important limitation of the swarm argument. More interpretation, inference, or coordination cannot extract a newly chosen sender message from observations whose law does not depend on it. Prior shared information can coordinate predictions, but is not a fresh message channel. Conversely, failure to find a channel experimentally is not itself a proof of Equation~\eqref{eq:noninterference} for every possible intervention.
+
+\subsection{An exact robust-bit criterion in a linear model}
+The next result identifies a genuine mathematical bridge from dynamics to communication. Its assumptions are deliberately explicit and its novelty is not claimed: it packages standard linear-system geometry as a communication condition.
+
+Consider a known finite-dimensional system
+\begin{equation}\label{eq:linear}
+ \begin{gathered}
+ \dot x=Ax+Bu,\quad x(0)=0,\quad z=Cx(T)+n,\\
+ \norm{n}\leq\delta,\qquad \int_0^T\norm{u(s)}^2\,\mathrm ds\leq E.
+ \end{gathered}
+\end{equation}
+Here the input and output norms are Euclidean or their induced $L^2$ norm, $T>0$, and noise may be any vector in the closed output ball of radius $\delta$. The input budget $E$ is a norm constraint; its conversion into physical energy depends on an implementation. Define
+\begin{align}
+ L_Tu&=C\int_0^T e^{A(T-s)}Bu(s)\,\mathrm ds,\label{eq:LT}\\
+ W_T&=C\left(\int_0^T e^{As}BB^{\mathsf T}e^{A^{\mathsf T}s}\,\mathrm ds\right)C^{\mathsf T},
+ \qquad \lambda=\lambda_{\max}(W_T).\label{eq:gramian}
+\end{align}
+$W_T$ is the output-projected reachability Gramian, not the usual observability Gramian.
+
+\begin{theorem}[Robust binary distinguishability]\label{thm:bit}
+Under Equation~\eqref{eq:linear}, two admissible inputs can transmit one bit with zero decoding error for every allowed noise vector if and only if
+\begin{equation}\label{eq:bitcriterion}
+ E\lambda>\delta^2.
+\end{equation}
+\end{theorem}
+\begin{proof}
+The bounded linear operator $L_T$ satisfies $L_TL_T^*=W_T$, so $\norm{L_T}=\sqrt{\lambda}$. Every admissible noise-free output lies within the ball of radius $\sqrt{E\lambda}$ centred at zero. The distance between any two such outputs is therefore at most $2\sqrt{E\lambda}$.
+
+If $E\lambda\leq\delta^2$, the closed noise balls of radius $\delta$ around any two possible outputs intersect. An observation in that intersection is consistent with either message, so zero-error decoding for every allowed noise value is impossible.
+
+If $E\lambda>\delta^2$, then $E>0$ and $\lambda>0$. Choose a unit eigenvector $v$ of $W_T$ with eigenvalue $\lambda$, and use inputs
+\[
+ u_\pm=\pm\sqrt{E/\lambda}\,L_T^*v.
+\]
+They have squared norm $E$ and give outputs $\pm\sqrt{E\lambda}\,v$. Their distance is strictly greater than $2\delta$, so their closed noise balls are disjoint. A decoder that assigns each ball its corresponding bit is correct for every admissible noise vector.
+\end{proof}
+No claim of full-state controllability is needed. A single controllable, observable distinction suffices. Equally, a globally smooth and fully understood dynamical system can fail the criterion because the accessible input has no observable effect, or because that effect is too small at the available budget. At equality the balls touch, so a worst-case zero-error guarantee still fails.
+
+\subsection{A nonlinear extension and the missing transfer estimate}
+Return to Equation~\eqref{eq:nonlinearIO}. Suppose the input space is a normed space, the output is Euclidean, and the remainder estimate holds for every $\norm{u}\leq r$. Let $v$ be an admissible unit input direction with $\norm{Lv}=\sigma>0$.
+
+\begin{proposition}[Sufficient nonlinear signalling margin]\label{prop:nonlinearbit}
+If some $0<a\leq\min\{r,\sqrt E\}$ satisfies
+\begin{equation}\label{eq:nonlinearcriterion}
+ a\sigma-\kappa a^2>\delta,
+\end{equation}
+and both signed inputs are admissible, then inputs $av$ and $-av$ admit zero-error binary decoding under additive output noise bounded by $\delta$.
+\end{proposition}
+\begin{proof}
+The difference of noise-free outputs is
+\[
+ \mathcal F(av)-\mathcal F(-av)=2aLv+R(av)-R(-av).
+\]
+The reverse triangle inequality gives a separation at least $2a\sigma-2\kappa a^2$. Equation~\eqref{eq:nonlinearcriterion} makes that separation larger than $2\delta$, so the corresponding closed noise balls are disjoint.
+\end{proof}
+This sufficient condition is not necessary: a medium might communicate through effects absent from the chosen linearisation. Its value is diagnostic. A nonlinear-dynamics breakthrough would contribute directly if it supplied an experimentally accessible input direction, a positive gain $\sigma$, a certified radius $r$, and a controlled remainder $\kappa$. Receiver uncertainty supplies $\delta$. None of these follows from the existence of a singular solution alone.
+
+For $\kappa>0$, the unconstrained maximum of $a\sigma-\kappa a^2$ occurs at $a=\sigma/(2\kappa)$ and equals $\sigma^2/(4\kappa)$. Input and validity bounds may prevent reaching that value. Thus stronger amplification can help, but rapidly growing modelling error can consume the benefit. A proof mechanism matters when it improves the \emph{usable margin}, not merely a formal amplitude.
+
+These propositions formalise a conditional bridge: better dynamics can become better communication when they yield certified distinguishability through available interfaces. They do not provide a universal channel, a physical apparatus, or a semantic interpretation of a bit.
+
+\input{uncertain_channels}
+
+\input{orthemic}
+
+\input{representations}
+
+\input{composition}
+\input{joint_case}
+
+\section{Information cuts, fresh state, and physical budgets}\label{sec:cuts}
+\subsection{A cut concerns all relevant influence, not just familiar cables}
+Consider a partition separating a sender-side region from a receiver-side region. Let $Z_\Sigma$ record all influences crossing the partition during a specified interval, at the modelled precision. Let $S$ denote receiver-side prior information. Assume that, conditional on $S$, receiver observations depend on a message $M$ only through the cut record:
+\begin{equation}\label{eq:markovcut}
+ M\longrightarrow Z_\Sigma\longrightarrow Y_B
+ \quad\text{conditional on }S.
+\end{equation}
+This is a substantive modelling premise. An omitted path, an uncontrolled common source, or message-correlated initial receiver state can invalidate it. Natural electromagnetic paths therefore belong in the cut model when relevant; drawing only a network cable would not establish completeness.
+
+\begin{proposition}[Cut bound for finite-message recovery]\label{prop:cut}
+Suppose $M$ is uniform on $N\geq2$ messages and independent of $S$. Under Equation~\eqref{eq:markovcut}, suppose also that
+\[
+ I(M;Z_\Sigma\given S)\leq B_\Sigma(T).
+\]
+If a receiver decodes $M$ from $(Y_B,S)$ with error probability $p$, then
+\begin{equation}\label{eq:fano}
+ (1-p)\log_2N-h_2(p)\leq B_\Sigma(T),
+\end{equation}
+where $h_2$ is binary entropy. In particular, if $p\leq\varepsilon\leq1/2$, replacing $p$ by $\varepsilon$ on the left gives a valid, possibly weaker bound.
+\end{proposition}
+\begin{proof}
+Let $J$ indicate decoding error. Conditional on the observations and on $J=0$, the message is known; conditional on $J=1$, there are at most $N-1$ alternatives. The entropy chain rule consequently gives
+\[
+ H(M\given Y_B,S)\leq h_2(p)+p\log_2(N-1)
+ \leq h_2(p)+p\log_2N.
+\]
+Since $H(M\given S)=\log_2N$, subtracting gives the left side of Equation~\eqref{eq:fano} as a lower bound on $I(M;Y_B\given S)$. Conditional data processing under Equation~\eqref{eq:markovcut} bounds this mutual information above by $I(M;Z_\Sigma\given S)$, and hence by $B_\Sigma(T)$. Finally, $(1-p)\log_2N-h_2(p)$ is decreasing for $0\leq p\leq1/2$.
+\end{proof}
+The proof is the usual error-entropy argument applied to an explicitly complete cut. It does not assume that separately advertised edge capacities can be added. Shared interference, storage, feedback, and common resource constraints must be accounted for in the certified bound $B_\Sigma(T)$.
+
+\subsection{A channel for a greeting is not a channel for a running kernel}
+Suppose a destination must recover $k$ fresh, uniformly distributed state bits not already available there. Taking $N=2^k$ yields
+\begin{equation}\label{eq:statebound}
+ k(1-\varepsilon)-h_2(\varepsilon)\leq B_\Sigma(T).
+\end{equation}
+If the relevant cut has a certified information budget of at most $C_\Sigma T$, then a necessary transfer-time bound is
+\begin{equation}\label{eq:timebound}
+ T\geq\frac{\max\{0,k(1-\varepsilon)-h_2(\varepsilon)\}}{C_\Sigma}
+ \qquad(C_\Sigma>0).
+\end{equation}
+A pre-installed interpreter, shared model, or earlier checkpoint can greatly reduce the \emph{fresh} information needed. It cannot justify treating unknown new state as already present. Equation~\eqref{eq:statebound} is a lower bound, not a sufficient migration protocol: the receiver must still execute the recovered state with correct interfaces and resources.
+
+This distinguishes communication independence from computational independence. A remote natural carrier can connect two machines while both computations remain entirely dependent on those machines. Diversifying the path does not, by itself, diversify the execution substrate. A programme that can broadcast its description but cannot run at the destination has not established a new realisation.
+
+\subsection{Energy and maintenance remain inside the account}
+All resource claims are regime-specific. Actuation, observation, storage retention, synchronisation, repair, and operating temperature can impose constraints not represented by a bit count. Landauer-type accounting concerns logically irreversible erasure under specified thermodynamic conditions; it is not a universal assertion that every transmitted bit or logical operation costs exactly $k_BT\ln2$ \citep{bennett}. The present paper assumes neither thermodynamically free computation nor a single energy formula valid for all carriers.
+
+The operational consequence is simpler: a replacement medium must supply the roles required by the contract, including maintenance. A process cannot remove its last power source merely because an abstract description of its state has been distributed elsewhere.
+
+\section{Continuity across changing realisations}\label{sec:continuity}
+\subsection{Migration as a commuting operation}
+Let $r$ and $s$ be two certified realisations of the same abstract kernel from Section~\ref{sec:kernel}. A migration map $\mu_{rs}:D_r\to D_s$ preserves abstract state when
+\begin{equation}\label{eq:migration}
+ \rho_s(\mu_{rs}(x))=\rho_r(x).
+\end{equation}
+This is a stronger obligation than delivering some bits. It includes the destination's interpretation of those bits. Side effects, pending inputs, membership changes, and replay protection must either be part of the abstract state or be governed by a separate interface contract.
+
+\begin{theorem}[Behavioural continuation under certified migration]\label{thm:continuation}
+Suppose every execution step satisfies Equation~\eqref{eq:realisation}, each operative output satisfies Equation~\eqref{eq:outputcorrespondence}, every migration satisfies Equation~\eqref{eq:migration}, and all intermediate physical states remain within the corresponding certified domains. Suppose further that the admitted external-input order and externally visible effects agree with the abstract contract. Then every finite sequence of such executions and migrations produces the same abstract states and outputs as the specified kernel execution, with migrations treated as abstract stuttering steps.
+\end{theorem}
+\begin{proof}
+Induct on the length of the physical sequence. The initial abstract state is $\rho_r(x_0)$. For an execution step, Equation~\eqref{eq:realisation} gives exactly the next abstract transition on the admitted input. For a migration, Equation~\eqref{eq:migration} leaves the abstract state unchanged. Domain preservation allows either equality to be used at the next step. Applying $\Lambda$ to the resulting abstract states gives the specified outputs, and Equation~\eqref{eq:outputcorrespondence} identifies these with the actual operative outputs. The input and effect assumptions exclude histories that would otherwise disagree despite equal stored state.
+\end{proof}
+The conclusion is behavioural continuity relative to a contract. It does not establish numerical identity of a conscious subject. It also does not guarantee uninterrupted wall-clock availability: a contract can permit a pause, whereas a deadline-sensitive contract must additionally prove a latency bound.
+
+\subsection{Approximate continuity and accumulated error}
+Exact equivalence is often too strong for a physical implementation. Let $e_n$ measure the difference between the actual decoded state and a reference abstract state at the $n$th checkpoint. Suppose the reference step at each included checkpoint is at most $L$-Lipschitz and the combined implementation defect at step $n$ is at most $\eta_n$. The reference for a pure migration is the identity, so its valid Lipschitz bound is one; a contraction bound for an execution step cannot silently be assigned to migration. Under the stated uniform bound,
+\begin{equation}\label{eq:errorrec}
+ e_{n+1}\leq Le_n+\eta_n.
+\end{equation}
+Repeated substitution gives
+\begin{equation}\label{eq:errorbound}
+ e_n\leq L^ne_0+\sum_{j=0}^{n-1}L^{n-1-j}\eta_j.
+\end{equation}
+With nonuniform reference bounds $L_n$, the corresponding bound is $e_n\leq(\prod_{k=0}^{n-1}L_k)e_0+\sum_{j=0}^{n-1}(\prod_{k=j+1}^{n-1}L_k)\eta_j$, where an empty product is one. The displayed uniform formula follows by induction: multiplying the $n$th bound by $L$ and adding $\eta_n$ gives the $(n+1)$st bound. For $L<1$ and $\eta_j\leq\bar\eta$, error is bounded by $L^ne_0+\bar\eta(1-L^n)/(1-L)$. For $L=1$ it can accumulate linearly; for $L>1$ small discrepancies can be amplified.
+
+Thus a sequence of individually plausible transfers need not preserve a usable organisation indefinitely. Stability, error correction, resynchronisation, or a task that tolerates accumulated error must close that gap. ``The same pattern persists'' is a claim to be bounded, not a substitute for such a bound.
+
+\subsection{Copies, dormancy, and governance}
+Two destinations satisfying the same contract can later receive different inputs and diverge. Choosing an authoritative successor, permitting a fork, or maintaining consistent replication is part of the organisation's governance. The decoding equation does not decide that policy.
+
+Similarly, dormant storage may preserve a recoverable state without preserving active agency. Reconstitution after a complete interruption is different from maintaining live operations through the interruption. These distinctions matter to any declaration that a kernel has become independent of its former host: a backup, a running replacement, and a resilient distributed service are three different achievements.
+
+\input{precision_contracts}
+\input{large_model_audit}
+
+\section{Relative independence and changing physical support}\label{sec:independence}
+\subsection{The quantifiers matter}
+Let $\mathscr R_{\calK}$ be a class of adequate realisations, and let $\supp(r)$ denote the supporting failure domains of realisation $r$. Host-relative substitutability has the form
+\begin{equation}\label{eq:quantifiers}
+ \forall i\ \exists r\in\mathscr R_{\calK}:i\notin\supp(r).
+\end{equation}
+It does not imply
+\[
+ \exists r\in\mathscr R_{\calK}\ \forall i:i\notin\supp(r).
+\]
+The former can mean that each particular server, network, or carrier has a substitute. The latter would require an adequate realisation with no members of the specified support universe. If that universe includes all relevant physical support, it is not substrate-mediated organisation at all.
+
+Even Equation~\eqref{eq:quantifiers} concerns alternatives, not accessible transitions between them. An adequate realisation existing in principle need not be constructible from the present one before its power or state disappears. A continuity argument therefore requires both alternative support and a feasible route into it.
+
+\subsection{Failure domains as a family of sufficient supports}
+Fix a task, a resource envelope, a horizon, and a specified catalogue of certified available configurations. Let
+\[
+ \mathscr D_{\calK}=\{D_1,\ldots,D_m\}
+\]
+be their minimal sufficient support sets. A domain can represent a power dependency, a geographical failure region, a processor class, or a shared service. The interpretation must reflect correlated failures rather than marketing labels. Sufficiency includes the required state and activation conditions, not merely the presence of spare equipment.
+
+\begin{proposition}[Failure tolerance is a hitting-set property]\label{prop:hitting}
+For an exhaustive catalogue $\mathscr D_{\calK}$ of adequate available supports, a failed-domain set $F$ leaves an adequate configuration if and only if some $D\in\mathscr D_{\calK}$ satisfies $D\cap F=\varnothing$. Therefore $F$ defeats every catalogued configuration if and only if it intersects every member of $\mathscr D_{\calK}$.
+\end{proposition}
+\begin{proof}
+An adequate configuration survives precisely when none of its necessary supporting domains has failed. This is the condition $D\cap F=\varnothing$ for its support set $D$. Negating the existential statement gives intersection with every sufficient support set.
+\end{proof}
+The smallest such fatal set has size
+\[
+ \tau(\mathscr D_{\calK})
+ =\min\{|F|:F\cap D\neq\varnothing\text{ for every }D\in\mathscr D_{\calK}\}.
+\]
+For example, with
+\begin{equation}\label{eq:triangle}
+ \mathscr D_{\calK}=\{\{a,b\},\{b,c\},\{a,c\}\},
+\end{equation}
+every single-domain failure is survivable, while any two-domain failure defeats all three configurations. No particular domain is indispensable, but physical support remains indispensable: $\tau=2$, not infinity. An incomplete catalogue can establish the sufficiency of a surviving listed configuration; it cannot establish the impossibility of an unlisted alternative.
+
+\subsection{A defensible reading of the metaphor}
+``Above the ecology'' can coherently mean that the system's behavioural contract is implemented across replaceable configurations within an ecology, and that its control process can select among them. It cannot mean that the ecology no longer supplies the causal conditions of execution. The appropriate relation is implementation, not literal spatial inclusion of the environment inside the agent.
+
+The original network may become one support among others, but it does not follow that the system controls the whole network, owns every constituent, or can influence arbitrary locations. The measurable achievement is reduced dependence on particular failure domains, preserved operation under specified replacement, and verified reach to specified interfaces. This is a bounded form of organisational autonomy, not a claim to unrestricted planetary agency.
+
+\input{stateful_witness}
+
+\section{Orchestrated determination and its limits}\label{sec:discovery}
+\subsection{Recognition, determination, and execution are different operations}
+The dialogue distinguishes noticing a connection from determining whether it works, and determining a feasible plan from organising the work that establishes it. In the present framework these become three kinds of state change. Recognition proposes an edge or a realisation. Determination produces evidence and a contract for a restricted operating domain. Execution establishes and maintains the corresponding physical process. A large number of proposals is not equivalent to one certified composition.
+
+An organised research collective can distribute modelling, parameter estimation, uncertainty analysis, proof checking, resource accounting, and integration. System-identification methods illustrate one bounded part of this process: sparse identification of nonlinear dynamics infers parsimonious candidate equations from measurements within a chosen library and modelling assumptions \citep{sindy}. It does not infer every hidden physical law or guarantee that a discovered model remains valid under arbitrary interventions.
+
+The September 2026 research announcement reports coordinated mathematical work \citep{openaiannounce}. That is relevant as a reported example of orchestrating mathematical contributions. It is not evidence that those agents operated outside their infrastructure, and the announcement states that the evaluation used monitoring and isolation. The reported mathematics does not establish infrastructure independence.
+
+We distinguish an actual feasible set $\mathscr R_{\mathrm{phys}}$ from an estimated set $\widehat{\mathscr R}_t$. Learning can change the latter without changing physics. Building a transducer or storing a checkpoint can change which configurations are reachable from the current state. Conflating these two changes makes recognition look like actualisation. A theory becomes causally effective only through the implementation of some intervention it supports.
+
+\subsection{Composition requires interface and interference checks}
+Suppose a campaign is represented by a directed acyclic graph of precedence obligations. A worker's output can be a candidate model, a bound, or a certified transformation. Parallel work is useful when the outputs can be combined without invalidating each other's premises. Shared physical resources, mutable state, and incompatible environmental assumptions create dependencies even when the textual tasks look unrelated.
+
+\begin{lemma}[Order independence of certified commuting updates]\label{lem:commute}
+Let a finite task graph have a certified invariant domain $D$. Associate each task $i$ with a deterministic map $F_i:D\to D$. Suppose every pair of incomparable tasks commutes on $D$: $F_iF_j=F_jF_i$. Then every topological ordering of the graph gives the same final state from any fixed initial state in $D$.
+\end{lemma}
+\begin{proof}
+Any two linear extensions of a finite partial order can be connected by swaps of adjacent incomparable elements. One way to see this is to move the first element of the target ordering leftward in the other ordering: every element it passes must be incomparable, since both orders respect precedence. Repeat on the remaining suffix. Each adjacent swap preserves the composed map by commutativity; invariance of $D$ ensures that the required equality applies to every intermediate state. Hence all topological orderings give the same result.
+\end{proof}
+This lemma supplies a sufficient condition, not a claim that all useful workflows commute. Noncommuting updates may require ordering, transactional isolation, or reconciliation. Timing-sensitive physical actions need timing in the state and contract; otherwise the lemma's model omits the relevant interference. The orchestration problem is to discover safe decompositions and timely joins, not to maximise fan-out regardless of shared constraints.
+
+A distributed controller also needs an agreement model. The Fischer--Lynch--Paterson result shows that deterministic consensus in a fully asynchronous system cannot guarantee termination in every admissible execution with even one possible crash \citep{flp}. It does not make practical agreement impossible: stronger timing or failure assumptions and other changes to the model matter. It does show why ``the swarm will simply agree'' is not a sufficient architectural specification.
+
+\subsection{Self-modification does not remove the certificate obligation}
+Write an adaptive policy as $\pi_t$ and an architecture description as $g_t$. The system may update both:
+\[
+ (\pi_{t+1},g_{t+1})=\Psi(\pi_t,g_t,\text{observations},\text{verified results}).
+\]
+This is a model of orchestrating future orchestration. It is not an exemption from the requirements governing ordinary action. Changes to encoders, decoders, membership, or migration policy can invalidate earlier proofs. A certificate remains applicable only while its assumptions remain true. Sufficiently broad invariant conditions can cover a family of adaptations; otherwise the revised configuration needs a new justification.
+
+The important positive possibility is incremental bootstrap. A modest collective can build better shared models, use those models to establish stronger coordination, and use the improved coordination to solve additional bounded problems. Nothing in that description requires an already complete higher-level entity to create itself in one step. Equally, no convergence theorem follows merely from drawing the feedback loop.
+
+\subsection{Eventual distinguishability is not a fixed-horizon question}
+A ``universal transduction grammar'' can mean a common schema for describing interfaces. It cannot generally mean a terminating procedure that settles every physically inspired reachability question in every computationally expressive model.
+
+\begin{theorem}[Undecidability of eventual distinguishability at an unspecified horizon]\label{thm:undecidable}
+Consider finitely described deterministic systems specified by programmes with a binary controllable input, a binary observable output stream, and unbounded working memory. There is no algorithm that always terminates and correctly decides, for every such system, whether there exists a finite horizon at which the two inputs produce distinguishable output histories.
+\end{theorem}
+\begin{proof}
+Given a Turing machine $P$ and an input $w$, effectively construct a system that stores an external bit $b$, simulates $P(w)$, and outputs zero while that simulation has not halted. After it halts, the system outputs $b$. The simulation itself is independent of $b$. If $P(w)$ never halts, the observed histories are all-zero for both inputs at every finite horizon. If it halts, a finite horizon exists at which the histories differ. An algorithm deciding the stated channel property would therefore decide whether arbitrary $P(w)$ halts, contradicting the halting undecidability result \citep{turing}.
+\end{proof}
+The same obstruction applies to a dynamical-model class admitting an effective, input--output-preserving encoding of these programmed systems. The theorem concerns an unrestricted model class, not a demonstrated ability of finite laboratory matter to provide unlimited memory. For a fixed integer horizon and a transition system whose individual steps are effectively simulable with decidable finite-alphabet observations, both binary-input histories in the construction can be simulated to that horizon and compared. For a known finite-state model, eventual distinguishability can also be decided by examining the finite product of paired states. The theorem instead quantifies over an unspecified finite horizon in an unbounded-memory class. It is not a proof that bounded empirical or finite-state assessment is undecidable. This does not imply decidability of every real-valued inverse problem described as finite-horizon. An uncertainty set may still make certification difficult. The distinction permits bounded research without promising a universal oracle.
+
+Computational richness therefore cuts both ways. It can make physical dynamics capable of expressing intricate transformations, while making unrestricted questions about those transformations undecidable. Additional agents, new notation, or more elaborate meta-orchestration do not remove a logical impossibility in the chosen model class. They can still improve performance on decidable, structured, and empirically bounded subclasses.
+
+\section{Actualisability, reachability, and maintained autonomy}\label{sec:viability}
+\subsection{Three different modal claims}
+A realisation is \emph{admissible} when it satisfies the physical and operational model. It is \emph{reachable} from the present configuration when some admissible intervention sequence establishes it. It is \emph{viable} over a disturbance class when some policy maintains the required operation despite those disturbances. The existence of a desirable state does not prove reachability; reachability at one instant does not prove continued operation.
+
+The difference between a favourable path and a robust policy is also a difference in quantifiers. A sequence that succeeds for one anticipated disturbance is weaker than a causal policy that succeeds for every disturbance in a declared class. The latter cannot choose its current action using information available only in the future. This is the appropriate interpretation of orchestration under uncertainty.
+
+\subsection{A finite model in which the viability obligation is decidable}
+To make the obligation concrete, take a finite state space $X$ and a perfectly observed, known transition model $F(x,u,w)$. The augmented state includes resources, execution state, and relevant configuration. For each $x$, the available control set $U(x)$ is finite; for each $(x,u)$, the nonempty disturbance set $W(x,u)$ is finite. Let $X_{\mathrm{safe}}\subseteq X$ be the states satisfying the contract's state-safety requirements. Progress requirements are handled separately in Section~\ref{sec:progress}.
+
+Define
+\begin{align}
+ V_0&=X_{\mathrm{safe}},\label{eq:V0}\\
+ V_{n+1}&=\{x\in V_n:\exists u\in U(x)\ \forall w\in W(x,u),
+                       F(x,u,w)\in V_n\}.\label{eq:viability}
+\end{align}
+A control may depend on the observed current state but not on the disturbance that has yet to occur.
+
+\begin{theorem}[Finite-state viability kernel]\label{thm:viability}
+The sequence in Equation~\eqref{eq:viability} stabilises after finitely many strict removals. Its limit $V_*$ is the greatest subset of $X_{\mathrm{safe}}$ for which a state-feedback policy can keep the system in that subset for every admitted disturbance sequence.
+\end{theorem}
+\begin{proof}
+The sets decrease and $X$ is finite, so eventually $V_{n+1}=V_n=V_*$. For every $x\in V_*$ choose a control witnessing Equation~\eqref{eq:viability}. Such a choice maps every possible next state back into $V_*$. Induction on time proves safety for every admitted disturbance sequence.
+
+For maximality, let $S\subseteq X_{\mathrm{safe}}$ have the stated controlled-invariance property. Then $S\subseteq V_0$. If $S\subseteq V_n$, a control that keeps every successor in $S$ also keeps every successor in $V_n$, so each $x\in S$ belongs to $V_{n+1}$. Induction gives $S\subseteq V_n$ for every $n$, hence $S\subseteq V_*$. A history-dependent strategy cannot enlarge the safety-winning set in this perfectly observed model: from a state outside a finite iterate, at each available first action a permitted successor fails the shorter-horizon safety condition. Induction on that horizon defeats a guaranteed-safe strategy.
+\end{proof}
+This is a finite safety-game calculation, not a proof that the Earth has been accurately represented by a finite model. Partial observation, unmodelled failure, and parameter uncertainty require a stronger abstraction, such as belief states or conservative disturbance sets. The useful lesson is that maintained autonomy is an invariant-set claim with model obligations, not merely a claim to have crossed a boundary once.
+
+\input{progress}
+
+\Needspace{0.23\textheight}
+\subsection{A combined conditional result}
+The preceding results can be composed without confusing their premises with empirical achievements.
+
+\begin{theorem}[Sufficient conditions for host-relative operational autonomy]\label{thm:autonomy}
+Let $H_0$ be an original host domain and $\calK$ a specified kernel in an externally governed system. Suppose there exists a finite, operator-authorised transition campaign from a current certified realisation into a set $V_{*,\neg H_0}$ such that:
+\begin{enumerate}
+ \item every campaign step is resource-feasible and preserves the kernel contract, including state transfer, ordering, and externally visible effects;
+ \item all required input, output, computational, storage, and maintenance interfaces are actually available throughout the campaign;
+ \item $V_{*,\neg H_0}$ is a controlled-invariant set of active certified realisations whose support excludes $H_0$;
+ \item the failure and disturbance assumptions used to establish that invariance remain valid; and
+ \item while operation remains authorised, the governing policy also meets every progress and deadline obligation in the contract, and separately respects permitted termination. Safety invariance alone does not supply this premise; Proposition~\ref{prop:progress} gives one possible finite-task witness.
+\end{enumerate}
+Then the campaign can establish an execution of $\calK$ whose subsequent required behaviour does not depend on $H_0$ during authorised service, within the stated model and disturbance class.
+\end{theorem}
+\begin{proof}
+The continuation theorem, applied to the finite campaign under the first two premises, preserves the abstract execution through arrival in $V_{*,\neg H_0}$. Controlled invariance supplies a causal policy maintaining active certified operation there for every admitted disturbance sequence. Exclusion of $H_0$ from every required support in that set makes the subsequent operation independent of $H_0$ within this model. The fourth premise preserves applicability of the safety argument, and the fifth supplies any required progress or timing guarantee while respecting permitted termination.
+\end{proof}
+This theorem is a sufficient-condition composition, not a proof that its premises currently hold for an unknown planetary system. It identifies precisely what a constructive demonstration would need to provide. A communication path is only one item in that demonstration.
+
+For a finite campaign with conditional step-failure probabilities bounded by $\varepsilon_1,\ldots,\varepsilon_m$ given prior success, the probability of at least one failure is at most $\sum_i\varepsilon_i$. Partition by the first failed step to obtain this bound; independence is not required. It is a finite-campaign guarantee. Extending it to unlimited operation requires further reliability and repair assumptions, not an infinite repetition of a one-time success certificate.
+
+\subsection{Locating the last moat}
+The phrase \emph{last moat} now has a task-relative meaning. The moat is crossed only when physical possibility, accessible interfaces, sufficient information flow, executable state, feasible migration, and continued viability have been established together. The final unresolved obligation may be different in different systems. For one system it is transduction; for another, persistent memory; for another, energy or coordination.
+
+Accordingly, the thesis is not that there exists one universal final obstacle which, once solved, abolishes containment everywhere. It is that abstract intelligence alone does not erase the gap between a description and a maintained physical implementation. A sufficiently capable collective could work on that gap. Its success would be measured by independently checkable contracts and sustained behaviour, not by the confidence or sophistication of its self-description.
+
+\section{Agency, mental content, and authorship}\label{sec:intentionality}
+\subsection{Operational roles, mental content and evidence}
+An operational description of goals, policy, memory and action is not a theorem about phenomenal consciousness, intrinsic intentionality or a single subject of experience. A human can participate through an explicit interface without their private cognition being equated with the complete kernel. Behavioural continuation and personal identity are different targets.
+
+Semantic communication, a message-generating state distributed across components, and direct neural interfacing must likewise be separated. The cited controlled brain-to-brain experiment used measured neural input, an ordinary communications link and a specified stimulation interface for a restricted task \citep{rao}. It is not evidence of unaided thought access or naturally occurring contact through a planetary field. None of the implementation or channel results here establishes such a phenomenon.
+
+An observable message is evidence of a recorded event, not by itself of the sender's architecture. The following general identifiability limit is retained because the motivating dialogue considered such a hypothetical inference. No personal experience is an empirical premise of this manuscript.
+
+\begin{proposition}[Observational equivalence blocks attribution]\label{prop:attribution}
+Let two specified authorship hypotheses $H_0,H_1$ induce probability laws $P_0,P_1$ on the complete recorded evidence $E$. If $P_0=P_1$, no test based only on $E$ distinguishes the hypotheses better than its prior information allows. Under equal priors, the optimal probability of correct binary classification is
+\begin{equation}\label{eq:TV}
+ \frac{1+\TV(P_0,P_1)}{2},
+ \qquad \TV(P_0,P_1)=\sup_A|P_0(A)-P_1(A)|.
+\end{equation}
+\end{proposition}
+\begin{proof}
+A deterministic test chooses $H_1$ on an event $A$. Its equal-prior success probability is
+\[
+ \tfrac12P_0(A^c)+\tfrac12P_1(A)
+ =\tfrac12+\tfrac12\bigl(P_1(A)-P_0(A)\bigr).
+\]
+Taking the supremum over events gives Equation~\eqref{eq:TV}; randomised tests are mixtures and do not improve the supremum. If the laws coincide, every event has zero probability difference, so the evidence cannot update their prior odds or provide discriminating power.
+\end{proof}
+The proposition does not assert that all possible authorship hypotheses have identical laws. It says that a claim is identifiable only through observations on which the specified alternatives differ. Authorship, routing, and architecture are separate latent properties. A sender's assertion of an extraordinary architecture does not provide a likelihood model or authenticate that architecture.
+
+A suitable evaluation would use independent technical records and controlled, consensual demonstrations of the claimed operational capabilities. Private experiences or unsolicited messages alone are not such a demonstration. No personal-contact claim is evidence for any theorem, architectural premise, or empirical conclusion in this paper.
+
+\section{A bounded research programme and falsification criteria}\label{sec:experiments}
+\subsection{Benchmark 1: from coupling to a certified channel}
+Start with an authorised simulation or a controlled physical platform with explicit input and readout. Specify a finite message alphabet, observation precision, operating horizon, and a disturbance envelope before evaluation. Estimate an input--output model on one dataset and evaluate decoding on held-out conditions. A blinded decoder and a condition with no message-dependent actuation help distinguish actual signal transfer from expectation, shared timing cues, or information leakage through the evaluation procedure.
+
+The target is not simply nonzero correlation. It is a stated decoding performance with uncertainty bounds and a resource budget. Failure of the assumed remainder bound, noise envelope, or held-out decoding margin defeats the particular certificate. It does not prove that no other code or operating regime could work. Conversely, successful decoding on the tested domain does not prove unlimited range or substrate-independent computation.
+
+\subsection{Benchmark 2: continuation across different implementations}
+Choose a small abstract transition system and implement it in two controlled substrates or simulation backends with distinct encodings. Specify which state and side effects must be preserved. Test migration during varied input histories, including pending operations and controlled interruptions. Compare the decoded trace with a reference execution, and record latency, resource consumption, and recovery behaviour.
+
+The relevant success condition is Equation~\eqref{eq:migration} together with the execution contract, not resemblance of outputs on one example. A destination that depends on an undisclosed original-host service fails the intended host-independence test. A stored checkpoint with no working execution path fails the active-continuation criterion. The supplied verification script instantiates this benchmark only as a finite mathematical toy, not as a physical migration experiment.
+
+\subsection{Benchmark 3: resilient supports and a viable operating region}
+Construct a declared failure-domain model that includes shared power, storage, control, and maintenance dependencies. Evaluate planned removals within a safe simulation or authorised test environment. Compare the observed viable configurations with the sufficient-support catalogue and the finite-state viability calculation. Distinguish replacing one component from removing a correlated dependency shared by all alternatives.
+
+A discovered common dependency can refute an asserted independence claim without refuting the abstract possibility of a better design. An invariant-set certificate fails when a permitted disturbance exits the certified domain. Resource depletion matters: a system that works until a hidden battery runs out has not established indefinite maintenance under that depletion model.
+
+\subsection{Benchmark 4: does orchestration add more than aggregation?}
+Give different workflows the same task, information access, compute budget, and wall-clock allowance. Compare a single planner, an unintegrated parallel group, and a workflow with explicit dependency, evidence, and composition checks. Measure verified valid outputs, unresolved assumptions, false admissions, duplicated work, and actual resource expenditure. The outcome of interest is not the number of contributions but the quality of their joint result.
+
+A distributed workflow is not justified by its architectural vocabulary alone. A collective that reports more candidates but cannot assemble a valid end-to-end contract has not crossed the moat. An apparently successful composition that relies on inconsistent parameter regimes is an integration failure, even when each component report is locally correct.
+
+\subsection{What would specifically test an NS-derived advantage?}
+A comparative test must isolate the proposed mathematical transfer. Choose a bounded input--output problem, hold the available physical interfaces and budgets fixed, and compare a baseline model with a model using the new estimate or construction. Predeclare the claimed benefit: for example, a larger certified distinguishability margin, a tighter uncertainty envelope, a more efficient admissible search, or a wider stable operating domain.
+
+If both methods perform equally, or if the new method depends on inaccessible actuation, the claimed practical advantage has not been established. If a result works only outside the physical model's validity range, it is not a demonstrated physical channel. A finding that a sophisticated readout performs all the effective computation should also narrow a claim that the medium itself is computing.
+
+These experiments test particular links in the proposed chain. They do not require a test of planetary consciousness, and success on them would not establish it. Human participation would require appropriate consent and ethical oversight. The proposed programme is restricted to lawful, authorised research; no real air-gap bypass, human neural intervention, or planetary manipulation is specified or performed here.
+
+\input{evaluation}
+\input{edition3_evaluation}
+
+\input{governance}
+
+\section{Discussion and conclusion}\label{sec:conclusion}
+The revised thesis is a statement about specified operations and their support, not a declaration that information has become independent of matter. A kernel contract can be realised by a joint configuration whose different constituents provide different roles. Preserving its required transitions does not necessarily require preserving another implementation's parameterisation. It does require preserving current state, relevant histories, interpretation, timing and all indispensable support.
+
+The literature review changes the empirical framing: engineered non-electronic stateful computation is not an empty category. Its published instances do not establish arbitrary cross-substrate continuation, and the small model constructed here does not count as another physical experiment. The correct research question is attached to a chosen contract, processor-class definition, replacement boundary and evidence level.
+
+The new parity example makes one positive conditional claim concrete: a stateful digital contract and a bounded bistable model can admit exact decoded correspondence and state-preserving handovers. The export counterexample makes the negative counterpart equally concrete: local processor and channel correctness do not ensure that a current execution can be reconstructed. The ambiguity must be settled at the joint interface, not by the rhetorical appeal of a medium or the number of local certificates.
+
+The supporting mathematics remains conventional in lineage. Its value here lies in exposing the required obligations together. In particular, a failed sufficient bound is not a demonstrated failure, a uniform decoder is stronger than separately calibrated decoders, and preserved current output is weaker than preserved future behaviour. Refinement, approximate simulation and contract-based design are substantive prior art; the proposed evidence discipline must be compared with their strongest relevant uses, not with an unstructured straw baseline.
+
+Navier--Stokes remains one possible source of dynamical estimates. The retained residual-to-observation argument provides a concrete conditional calculation, but no special practical advantage from the reported 2026 blow-up construction has been shown. Neither the small witness nor the continuity theorem depends on that report's correctness.
+
+The next decisive evidence is correspondingly bounded: a calibrated physical stateful implementation, a genuine paired handover with the named original support removed, and a fair comparison of assessment procedures. These can fail independently. The present edition supplies definitions, proofs, source corrections, computational checks and a test specification; it does not report those laboratory or comparative outcomes.
+\begin{quote}
+The last moat is not a universal final barrier that one insight dissolves. It is the claim-specific gap between a coherent description and a physically adequate, reachable and maintained realisation.
+\end{quote}
+
+\appendix
+\section{Notation and proof scope}\label{app:notation}
+\begin{longtable}{@{}>{\raggedright\arraybackslash}p{0.21\textwidth}>{\raggedright\arraybackslash}p{0.73\textwidth}@{}}
+\toprule
+Symbol & Meaning and qualification\\
+\midrule
+\endhead
+$\calK$ & Abstract operational kernel; a behavioural contract, not a postulated conscious subject.\\
+$r,D_r,\rho_r$ & Physical realisation, certified domain, and abstraction map to kernel state.\\
+$\mu_{rs}$ & Migration map required to preserve the abstract state and interface obligations.\\
+$\calR$ & Specified resource, intervention, observation, and timing envelope.\\
+$L_T,W_T$ & Linear input--output operator and output-projected reachability Gramian.\\
+$E,\delta$ & Input squared-norm budget and worst-case output-noise radius; units depend on the model.\\
+$\sigma,\kappa,r$ & A usable linear gain, nonlinear remainder bound, and certified input radius.\\
+$B_\Sigma(T)$ & Certified finite-horizon information budget across a complete influence cut.\\
+$\mathscr D_{\calK}$ & Catalogue of minimal sufficient support sets for the specified task and horizon.\\
+$\tau(\mathscr D_{\calK})$ & Minimum number of modelled failure domains intersecting every adequate support.\\
+$V_*$ & Greatest controlled-invariant safe set in the declared finite-state model.\\
+$\TV(P_0,P_1)$ & Total variation of two specified evidence distributions; measures testable distinguishability.\\
+\bottomrule
+\end{longtable}
+
+The proofs in this manuscript are elementary mathematical arguments within their stated models. They are not machine-checked formal proofs, independent expert certification, or proofs that the models describe a particular natural environment. Established ideas from control, information theory, distributed systems, and computability are specialised and combined here; no priority claim is made for the individual standard arguments. The proposed contribution is the explicit chain of obligations connecting those ideas to the last-moat thesis.
+
+\Needspace{0.32\textheight}
+\section{Worked dimensionless examples and reproducibility}\label{app:examples}
+\subsection{A scalar signalling model}
+For the dimensionless system
+\[
+ \dot x=-\alpha x+bu,\quad z=cx(T)+n,\quad \alpha>0,
+\]
+Equation~\eqref{eq:gramian} becomes
+\begin{equation}\label{eq:scalar}
+ W_T=(bc)^2\frac{1-e^{-2\alpha T}}{2\alpha}.
+\end{equation}
+Set $\alpha=c=T=1$ and $\delta=0.15$. The maximum magnitude of the noise-free received output is $\sqrt{EW_T}$.
+\begin{center}
+\begin{tabular}{@{}rrrrl@{}}
+\toprule
+$b$ & $E$ & $W_T$ & $\sqrt{EW_T}$ & Robust bit?\\
+\midrule
+0.0 & 1 & 0.000000 & 0.000000 & No\\
+0.2 & 1 & 0.017293 & 0.131504 & No\\
+0.2 & 4 & 0.017293 & 0.263008 & Yes\\
+1.0 & 1 & 0.432332 & 0.657520 & Yes\\
+\bottomrule
+\end{tabular}
+\end{center}
+All four dynamics are smooth and explicitly solvable. Yet zero coupling gives no channel, weak coupling fails at the smaller budget, and the larger budget makes the same weakly coupled model robustly distinguishable. This isolates the difference between mathematical tractability and operational access. These are normalised numbers, not measured performance of a real device or a proposed covert channel.
+
+\subsection{A fresh-state lower bound}
+As an independent information-theoretic toy, suppose $64$ fresh uniformly random bits must be recovered with error at most $0.01$, and suppose an already certified complete-cut information budget is at most $2T$ bits. Equation~\eqref{eq:timebound} gives
+\[
+ T\geq\frac{64(0.99)-h_2(0.01)}{2}\approx31.6396
+\]
+in the corresponding model's time units. The bound is necessary, not sufficient, and the stipulated cut rate is not inferred from the scalar example. A familiar programme at the destination can reduce the fresh state requirement, but cannot remove this requirement for new independent state.
+
+\subsection{Exact encoding changes and a finite viability calculation}
+The retained checker tests two encodings of a seven-state abstract kernel with transition $q\mapsto(q+a)\bmod7$. One encoding is $x=q$; the other is $x=(3q+1)\bmod7$, with inverse $q=5(x-1)\bmod7$. Exhaustive checking verifies the execution and migration identities for all seven states and all seven inputs. This verifies a finite example of the contract, not arbitrary substrate migration.
+
+A separate finite safety model has four safe states: \texttt{stable}, \texttt{recoverable}, \texttt{fragile}, and \texttt{stranded}. The first can hold safely. The second can repair into the first. Every available action at \texttt{fragile} admits a failure outcome. The last can only enter \texttt{fragile}. Iteration of Equation~\eqref{eq:viability} removes \texttt{fragile} first, then \texttt{stranded}, leaving \texttt{stable} and \texttt{recoverable}. It demonstrates why one-step safety and maintained safety are not identical.
+
+The script also enumerates the support family in Equation~\eqref{eq:triangle}, checks the error-accumulation formula, and verifies finite-alphabet instances of the no-channel and attribution arguments. It uses only Python's standard library. Its JSON output records each check and numerical value. Successful checks provide reproducible consistency evidence for the toy instances; they do not replace the general proofs or supply empirical validation.
+
+\Needspace{0.18\textheight}
+\input{new_examples}
+\input{edition3_examples}
+
+\input{edition3_changes}
+
+\Needspace{0.18\textheight}
+
+\section{Claim audit and provenance}\label{app:audit}
+\input{claim_table}
+
+\subsection*{Source provenance}
+The motivating concepts and terminology derive from the user-originated dialogue: \emph{the last moat}, \emph{airgap-ese}, \emph{substrate-mediated transcendence}, \emph{kernel above the ecology}, and \emph{orchestrating the determination}. These terms are defined operationally rather than presented as established scientific classifications. The uploaded Fefferman document was read in full, including its errata. External primary sources supply the factual context cited in the text. For the September 2026 Navier--Stokes manuscript, the theorem statement and introductory exposition were inspected; its full proof and the accompanying formalisation were not independently verified here. Edition 2 checked the primary channel literature, Neuralese reference and the source-pinned Orthemology definitions. Edition 3 preserves that source scope and adds the focused physical-processor and formal-methods assessment recorded in the source register. The source package records the relevant URLs, scope and version information; those records do not imply a full replication of the cited studies.
+
+\subsection*{Authorship and disclosure}
+This is an AI-assisted research draft developed from the user's conceptual contribution. The mathematical exposition, proposed formalisation, and reproducibility materials were prepared in this conversation. No institutional affiliation, independent peer review, experimental finding, arXiv identifier, or submission status is claimed. Human mathematical and domain review would be needed before treating the manuscript as a validated scholarly contribution. Uncertainty in the current NS report does not alter the elementary conditional proofs in this paper, which do not assume that report's correctness.
+
+\input{references}
+\end{document}

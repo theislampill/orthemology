@@ -1,0 +1,70 @@
+{
+  "obligations": [
+    {
+      "id": "A4C-O001",
+      "description": "G_MULTI bare cross-profile intersections conflict with its own common-domain qualification.",
+      "disposition": "A6 textual correction: use explicit compatible-occurrence/pullback relation; retain the existing core owner.",
+      "blocks_scope": [
+        "A6_EDIT_SPEC"
+      ],
+      "blocks_A4C": false
+    },
+    {
+      "id": "A4C-O002",
+      "description": "Dynamic companion contains stale rung and level numbers.",
+      "disposition": "A5 specifies stable-node-ID navigation and an authority note; do not renumber historical argument-map records.",
+      "blocks_scope": [
+        "A6_EDIT_SPEC"
+      ],
+      "blocks_A4C": false
+    },
+    {
+      "id": "A4C-O003",
+      "description": "Requested Generation facet lacks a settled standalone source predicate in the selected apoautosis texts.",
+      "disposition": "UNRESOLVED; do not land an asserted Generation theorem. Retain narrower first/recursive capability contracts.",
+      "blocks_scope": [
+        "UNRESTRICTED_GENERATION_CLAIM"
+      ],
+      "blocks_A4C": false
+    },
+    {
+      "id": "A4C-O004",
+      "description": "No general metaphysical essence-identity or essential-destruction theorem is established by the selected operational/formal sources.",
+      "disposition": "Keep essential alteration distinct from action and relational change; positive general criterion remains open.",
+      "blocks_scope": [
+        "GENERAL_ESSENTIAL_CHANGE_CLAIM"
+      ],
+      "blocks_A4C": false
+    },
+    {
+      "id": "A4C-O005",
+      "description": "Necessary-being, positive-ground and world-directed bridges remain at controlling B/H statuses.",
+      "disposition": "Preserve G_TRACK_T and G_BRIDGE ceilings; historical conditional proofs do not discharge premises.",
+      "blocks_scope": [
+        "DEDUCTIVE_NECESSARY_BEING_PROMOTION"
+      ],
+      "blocks_A4C": false
+    },
+    {
+      "id": "A4C-O006",
+      "description": "Abstract/Python/Lean correspondence and actual kernel acceptance remain separate.",
+      "disposition": "Carry A3F/A3G scoped limitations into A4T/A5P; no kernel or baseline credit here.",
+      "blocks_scope": [
+        "KERNEL_CREDIT",
+        "FULL_IMPLEMENTATION_REFINEMENT"
+      ],
+      "blocks_A4C": false
+    },
+    {
+      "id": "A4C-O007",
+      "description": "Historical physical realisation assumptions and independent authority are not validated by an admission bit.",
+      "disposition": "No physical empirical, identity, autonomous acquisition or unrestricted authority credit.",
+      "blocks_scope": [
+        "WORLD_APPLICATION_PROMOTION"
+      ],
+      "blocks_A4C": false
+    }
+  ],
+  "all_required_topics_classified": true,
+  "forced_equivalences": 0
+}

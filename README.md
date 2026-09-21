@@ -1,5 +1,7 @@
 # Orthemology
 
+**Non-authoritative v5 consolidation shadow:** [integration guide](docs/architecture/V5-INTEGRATION-GUIDE.md), [status and provenance](docs/provenance/v5-consolidation/README.md), and [repository-native replay](experiments/orthemology-v5/README.md). This branch adds source custody and integration checks; it grants no merge, release, research adoption, kernel acceptance or v6 authority. Inherited PDF renderings retain their recorded source commits; they do not render this shadow's two textual corrections.
+
 **Status: research-stage draft (R6); not peer reviewed; fresh-session repository review completed; not external human peer review; not empirically validated. Coined terminology is benchmark-gated, not adopted. See [STATUS.md](STATUS.md).**
 
 Orthemology is a proposed theory of how concrete cases get correctly classified, handled, and audited by rule-governed processes — human, institutional, or automated. It gives first-class, auditable structure to a familiar but usually implicit architecture:

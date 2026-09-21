@@ -1,0 +1,54 @@
+\subsection{A quantitative fluid-to-observation bridge}\label{sec:nsresidual}
+A concrete derivation makes the methodological claim testable. The following energy estimate concerns a \emph{fixed, bounded-horizon} incompressible-flow comparison. It does not depend on the September 2026 report and does not discover an actuator or a physical communication path. Its role is to propagate already justified modelling errors to an already specified observation.
+
+Let $u$ be an exact smooth solution of Equation~\eqref{eq:ns} on the periodic three-torus for $0\leq t\leq T$. Let $v$ be a smooth, divergence-free approximate solution with the same viscosity and force, and pressure approximation $q$. Define its momentum residual
+\begin{equation}\label{eq:nsresidual}
+ r_v=\partial_t v+(v\cdot\nabla)v-\nu\Delta v+\nabla q-f.
+\end{equation}
+All norms below are over the same fixed torus, and $L(t)=\norm{\nabla v(t)}_{L^\infty,\mathrm{op}}$ is integrable. Assume $\norm{r_v(t)}_{L^2}$ is integrable as well. Different forcing errors can be incorporated into the residual; they cannot be omitted from it.
+
+\begin{proposition}[Residual-to-state estimate]\label{prop:nsresidual}
+Under these hypotheses, define
+\begin{equation}\label{eq:nserror}
+ B_v(T)=e^{\int_0^T L(s)\,ds}\norm{u(0)-v(0)}_{L^2}
+ +\int_0^T e^{\int_s^T L(\tau)\,d\tau}\norm{r_v(s)}_{L^2}\,ds.
+\end{equation}
+Then $\norm{u(T)-v(T)}_{L^2}\leq B_v(T)$.
+\end{proposition}
+\begin{proof}
+Set $w=u-v$. Subtracting the two equations gives
+\[
+ \partial_t w+(u\cdot\nabla)w+(w\cdot\nabla)v
+ =\nu\Delta w-\nabla(p-q)-r_v.
+\]
+Taking the $L^2$ inner product with $w$, incompressibility and periodicity cancel the transport and pressure terms. Integration by parts gives
+\[
+ \tfrac12\tfrac{\mathrm d}{\mathrm dt}\norm{w}_{L^2}^{2}
+ +\nu\norm{\nabla w}_{L^2}^{2}
+ \leq L(t)\norm{w}_{L^2}^{2}+\norm{r_v}_{L^2}\norm{w}_{L^2}.
+\]
+For $e_\epsilon=(\norm{w}_{L^2}^2+\epsilon^2)^{1/2}$, the same inequality implies
+$\dot e_\epsilon\leq L e_\epsilon+\norm{r_v}_{L^2}$; here $L\geq0$ and the nonnegative dissipation term has been discarded. Multiplication by the integrating factor $e^{-\int_0^tL}$ and integration yield Equation~\eqref{eq:nserror} with initial value $e_\epsilon(0)$. Letting $\epsilon\downarrow0$ proves the result, including times at which $w=0$.
+\end{proof}
+
+Let $C:L^2\to\R^d$ be a \emph{bounded linear} observation operator with known norm. An integral measurement against square-integrable test functions is one example; unrestricted point evaluation is not bounded on $L^2$ and is not licensed by this estimate. Measurement and calibration error must be accounted for separately.
+
+\begin{corollary}[Separation of two specified fluid observations]\label{cor:nsobservation}
+Consider two already specified experiments $j\in\{0,1\}$ with exact flows $u_j$, approximations $v_j$, and bounds $B_j$ from Proposition~\ref{prop:nsresidual}. Write $\hat y_j=Cv_j(T)$ and $b_j=\norm{C}B_j$. Suppose observation noise has norm at most $\delta$. If
+\begin{equation}\label{eq:nsseparation}
+ \norm{\hat y_1-\hat y_0}>b_0+b_1+2\delta,
+\end{equation}
+then the two experiments have disjoint admissible observation sets and admit an observation-based binary distinction throughout the stated uncertainty bounds.
+\end{corollary}
+\begin{proof}
+The observation in experiment $j$ lies in the closed ball centred at $\hat y_j$ with radius $b_j+\delta$, by boundedness of $C$ and the triangle inequality. Equation~\eqref{eq:nsseparation} makes those balls disjoint. Classification by membership in these certified sets therefore has no ambiguous admissible observation.
+\end{proof}
+
+This is an actual derivation from flow dynamics to a discrimination certificate, with every connecting object explicit. It is not an unconditional physical-channel construction: the two inputs must be accessible, the measurements must implement $C$, the residual bounds must be independently justified, and smooth exact solutions must exist on the stated horizon. A numerical residual computed on a mesh is not automatically a continuum residual bound; discretisation, unresolved scales, and measurement error remain obligations.
+
+The estimate also explains why singularity is not automatically beneficial. Increasing $L$ can amplify the error bound exponentially. A proof technique is useful here when it improves the certified residual, initial uncertainty, gradient control, or admissible horizon enough to improve Equation~\eqref{eq:nsseparation}. Merely making some field amplitude large need not improve the usable distinction.
+
+\subsection{What remains unproved about the reported 2026 technique}
+The reported blow-up construction describes concentration, amplification, and residual corrections \citep{openains}. The existence of those ingredients is a reason to inspect the argument for reusable estimates, not a proof that its special construction yields the bounded observation quantities above. No source-to-target reduction from that construction to an experimentally accessible communication advantage is established here.
+
+The present manuscript consequently makes two different statements. There is a demonstrated \emph{mathematical bridge} from a smooth-flow residual certificate to finite-horizon observation separation. There remains an \emph{open method-transfer hypothesis} that a specific new NS technique improves such a certificate in a specified application. Rejecting that hypothesis in one setting would not invalidate the energy estimate, nor would proving the energy estimate validate the hypothesis. Neither statement concerns a new consciousness or a process escaping its support.

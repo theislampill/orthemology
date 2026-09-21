@@ -1,0 +1,97 @@
+{
+  "scope": "INTEGRATION_NAVIGATION_ONLY",
+  "normative_registry_changes": false,
+  "registry_owner": {
+    "source_id": "G_NOTATION",
+    "path": "source_views/G/docs/notation-registry.yaml",
+    "sha256": "27e21347919cde246250ff084e42af88edcf781e271caaa8c88615c0690d1cb0",
+    "bytes": 9670,
+    "origin": "A1 frozen repository f50dc1aee52356cc6adbef342387576b02afc124:docs/notation-registry.yaml",
+    "start_line": 1,
+    "end_line": 236,
+    "range_sha256": "27e21347919cde246250ff084e42af88edcf781e271caaa8c88615c0690d1cb0"
+  },
+  "verdict_owner": {
+    "source_id": "G_VERDICT",
+    "path": "source_views/G/docs/verdict-registry.yaml",
+    "sha256": "e24f3aab23d94daf48a953f52bce915aa58e515571877d9db559a3f0d1e38bbe",
+    "bytes": 4231,
+    "origin": "A1 frozen repository f50dc1aee52356cc6adbef342387576b02afc124:docs/verdict-registry.yaml",
+    "start_line": 1,
+    "end_line": 116,
+    "range_sha256": "e24f3aab23d94daf48a953f52bce915aa58e515571877d9db559a3f0d1e38bbe"
+  },
+  "aliases": [
+    {
+      "alias": "G.Γ_E",
+      "source_id": "G_CORE",
+      "meaning": "episode-token DAG",
+      "must_not_identify_with": "CV-O.Γ"
+    },
+    {
+      "alias": "G.Γ^μ",
+      "source_id": "G_D0028",
+      "meaning": "represented-standard ecology graph",
+      "must_not_identify_with": "CV-O.Γ"
+    },
+    {
+      "alias": "CV-O.Γ",
+      "source_id": "CV-O",
+      "meaning": "versioned finite context map",
+      "must_not_identify_with": "G.Γ_E"
+    },
+    {
+      "alias": "H.calK",
+      "source_id": "H-MOAT-E3",
+      "meaning": "task transition contract",
+      "must_not_identify_with": "CV-O.K"
+    },
+    {
+      "alias": "CV-O.K",
+      "source_id": "CV-O",
+      "meaning": "fixed calculus/checking machinery",
+      "must_not_identify_with": "Lean actual kernel"
+    },
+    {
+      "alias": "H.d_V(f)",
+      "source_id": "H-CONTINUATION",
+      "meaning": "moment-summary recovery defect",
+      "must_not_identify_with": "CV-R.d(nu)"
+    },
+    {
+      "alias": "CV-R.d(nu)",
+      "source_id": "CV-R",
+      "meaning": "mass outside positive singleton atoms",
+      "must_not_identify_with": "H.d_V(f)"
+    },
+    {
+      "alias": "G.Δ_A",
+      "source_id": "G_MAIN",
+      "meaning": "analysis task risk/coarsening comparison",
+      "must_not_identify_with": "CV-R.Δ_i"
+    },
+    {
+      "alias": "CV-R.Δ_i",
+      "source_id": "CV-R",
+      "meaning": "conditional point-mass refinement increment",
+      "must_not_identify_with": "G.Δ_A"
+    },
+    {
+      "alias": "G.A",
+      "source_id": "G_CORE",
+      "meaning": "analysis identity/version",
+      "must_not_identify_with": "CV-O.Γ"
+    },
+    {
+      "alias": "AP.T/C/G/A",
+      "source_id": "H_APO_REPORT2",
+      "meaning": "request-relative facet headings; G unresolved",
+      "must_not_identify_with": "SCUU/OWOU predicates"
+    }
+  ],
+  "rule": "Retain original notation in original sources. In cross-lineage prose prefix collisions; no global substitution.",
+  "known_source_corrections": [
+    "A4C-O001",
+    "A4C-O002"
+  ]
+}

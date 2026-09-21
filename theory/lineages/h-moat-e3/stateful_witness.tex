@@ -1,0 +1,76 @@
+\section{A small stateful witness with an explicit evidence ceiling}\label{sec:witness}
+\subsection{Target and accounting boundary}
+This section supplies a complete \emph{model-level} pair and migration relation, followed by a proposed physical test. No apparatus was constructed and no physical measurements were collected. Both numerical implementations in the packet run on ordinary computing hardware; simulating different equations does not itself change the material substrate of that run.
+
+The abstract task is parity memory:
+\begin{equation}\label{eq:parity}
+ Q=\{0,1\},\quad A=\{0,1\},\quad \Delta(q,a)=q\mathbin{\oplus}a,
+ \qquad\Lambda(q)=q.
+\end{equation}
+A zero input preserves the stored parity, and a one input toggles it. The initial state may be either value. Required output is the current parity after each accepted input. Histories with different parity and the same next input require different next outputs, so the state is consequential. A memoryless function of the current input cannot implement this contract.
+
+The baseline realisation stores a digital bit, applies XOR, and uses the identity abstraction. The alternative is an idealised bistable dynamical model with a bounded input operation. The input mechanism knows only the current input bit, not the accumulated parity. The readout is a fixed memoryless threshold. An external observer can log the reference trace for evaluation but must not supply answers to the alternative. These restrictions prevent the experiment's reference computer from secretly doing the task for the candidate.
+
+\subsection{The alternative dynamics are specified, not inferred from a label}
+Let the alternative physical-model coordinate be $z\in\R$, with logical decoding
+\[
+ \rho_A(z)=\begin{cases}0,&z>0,\\1,&z<0.\end{cases}
+ \qquad
+ D_q=\{z:0.8\leq(-1)^qz\leq1.2\}.
+\]
+The units in this section are normalised. They are not voltages, pressures or measured tolerances of the cited fluidic apparatus. At an admitted input $a$, apply the reset
+\begin{equation}\label{eq:reset}
+ z^+=(-1)^a z+\xi,\qquad |\xi|\leq0.05,
+\end{equation}
+then allow a dwell of $\tau=0.3$ time units under
+\begin{equation}\label{eq:bistable}
+ \dot z=z-z^3+w(t),\qquad |w(t)|\leq0.1.
+\end{equation}
+Write the resulting sampled map as $\Phi_A(z,a;\xi,w)$; the correspondence below quantifies over every admitted $\xi,w$, rather than silently replacing a disturbed system by one deterministic trajectory. The disturbance is any measurable bounded function. Polynomial local Lipschitz continuity and the invariant compact interval used below ensure existence and uniqueness throughout every admitted dwell. The readout samples only at designated settled interface times and has additive error $|n|\leq0.1$. The dwell is not the total physical input-processing latency. A real finite-duration reset must justify this sampled reset abstraction; no guarantee is claimed during an unmodelled physical switching transient.
+
+\begin{theorem}[Robust decoded parity in the stipulated bistable model]\label{thm:parity}
+For every $q,a\in\{0,1\}$ and $z\in D_q$, the reset and dwell above end in $D_{q\oplus a}$ for every admitted $\xi$ and $w$. The threshold applied to $z+n$ then returns $q\oplus a$ for every admitted readout error. Consequently the sampled model exactly realises Equation~\eqref{eq:parity} on its declared domain for every finite input sequence.
+\end{theorem}
+\begin{proof}
+Write $q'=q\oplus a$ and $s=(-1)^{q'}z$ after reset. Equation~\eqref{eq:reset} gives $s(0)\in[0.75,1.25]$. During the dwell,
+$\dot s=s-s^3+\widetilde w$ with $|\widetilde w|\leq0.1$.
+At $s=0.75$ its derivative is at least $0.228125>0$, and at $s=1.25$ it is at most $-0.603125<0$. Thus the outer interval is forward invariant.
+
+On $[0.75,0.8]$, $s-s^3-0.1\geq0.188$; on $[1.2,1.25]$, $s-s^3+0.1\leq-0.428$. The maximum entry time into $[0.8,1.2]$ is therefore no larger than
+\[
+ \max\left\{\frac{0.05}{0.188},\frac{0.05}{0.428}\right\}
+ =\frac{25}{94}<0.3.
+\]
+At the inner boundaries the same strict inward inequalities hold, so the inner interval remains invariant. The settled magnitude is at least $0.8$, exceeding the readout error radius $0.1$; threshold sign is therefore correct. Applying the argument after each input proves the finite-trace claim by induction.
+\end{proof}
+The proof establishes a uniform statement over the continuum of admitted initial coordinates and disturbances, not merely over the tested grid. Its premises are stipulations of the model. An unbounded physical noise model would require a probabilistic claim instead of this full bounded-disturbance guarantee. The numerical script checks representative trajectories and the arithmetic inequalities; it does not measure a device or validate the ODE as a model of one.
+
+\subsection{A stateful handover, rather than two unrelated task performers}
+At an interface boundary, the operator pauses new task inputs. From digital state $q$, the alternative writer initialises
+\[
+ \mu_{D A}(q)=(-1)^q+e_{\rm write},\qquad |e_{\rm write}|\leq0.1.
+\]
+The result lies in $D_q$. In the other direction use
+$\mu_{A D}(z)=\rho_A(z+n)$ with $|n|\leq0.1$. Both preserve the abstract bit. The handover log records the last accepted input index so that the next input is neither lost nor repeated. That index is a protocol resource; preserving the parity bit alone cannot prevent replay.
+
+\begin{corollary}[Model-level mixed-realisation continuation]\label{cor:paritymigration}
+Assume the state writers and readers above, a fixed order of accepted inputs, no duplicated effects, and correct interface-time scheduling. Any finite sequence of digital parity steps, stipulated bistable steps and these handovers has the same decoded parity trace as Equation~\eqref{eq:parity}.
+\end{corollary}
+\begin{proof}
+A digital step implements XOR. Theorem~\ref{thm:parity} establishes the same abstract step for the alternative. Each handover preserves the bit, so it is an abstract stuttering step. Induction on the combined execution gives the claim, equivalently specialising Theorem~\ref{thm:continuation}.
+\end{proof}
+The claimed boundary after digital-to-alternative handover excludes the original digital state holder, not every electronic or engineered component. A candidate lab realisation would still require an input mechanism, dwell timing, a nonlinear state element, writer, readout, power and maintenance. If the former host supplies any indispensable one of these after the supposed cutover, the stronger host-removal claim fails even when the parity outputs are correct.
+
+\subsection{How published stateful hardware relates to this model}
+The published bubble toggle supplies a physically demonstrated stateful precedent for considering a two-state memory task \citep{bubble}. It does \emph{not} establish that its flow obeys Equation~\eqref{eq:bistable}, or that it has the numerical disturbance envelope used here. A source-to-model connection would require a separately justified input, state observation, operating domain and uncertainty bound. Similarly, the biomolecular automaton is evidence for a different physical execution principle, not a measured instance of this polynomial ODE \citep{benenson}.
+
+There are consequently two independent positive statements: earlier authors report actual engineered stateful computation; the present manuscript proves and checks a small controlled mathematical witness with an explicit transfer relation. Their conjunction does not become a new physical migration experiment. This distinction is essential to using prior art without borrowing its experimental status for a newly specified construction.
+
+\subsection{The proposed physical test and its stopping conditions}\label{subsec:physicaltest}
+The first laboratory test should target one declared processor-mechanism comparison, not a frontier language model. A candidate is a conventional digital parity register and a bounded, independently powered analogue bistable state element whose measured reset and relaxation satisfy the preceding contract or an appropriately revised one. Electronic analogue computation changes the declared operating mechanism, not necessarily the material class. A fluidic or optical choice would need a different physical model and its own support account.
+
+Freeze the input protocol, state regions, settling deadline, noise envelope, observation method and replaced host before collecting test outcomes. Prepare both logical states and vary physical initial conditions within each admitted region. Test both hold and toggle inputs, then mixed sequences, handovers at each permitted phase and removal of the original state holder. A test in which only one initial state is used cannot establish stateful correctness. A test that resets the destination each time cannot establish continuation. The reference logger must be disconnected from task control when testing independence.
+
+A physical implementation can establish a finite-horizon probabilistic or deterministic claim only to the scope warranted by its model and measurements. Exhaustively enumerating the four logical transitions is not exhaustive testing of analogue disturbances. The proposed experiment is defeated at its stated scope by a wrong settled state, a hidden original-host dependency, invalid state preparation, an unmodelled transient, replay, or a missed deadline. Failure to calibrate a bound is an unresolved certificate, not an observed impossible device.
+
+The supplied work reaches the mathematical and numerical stages only. No paired hardware apparatus, calibration dataset, physical handover, or external experimental replication is claimed.

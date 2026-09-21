@@ -1,0 +1,81 @@
+{
+  "schema": "orthemology-a4t-claim-lock-v1",
+  "V4_theorems": 40,
+  "V4_criticism_ids": 84,
+  "V5_families": [
+    "CV-R",
+    "CV-C",
+    "CV-O"
+  ],
+  "V5_kernel_verified": false,
+  "fresh_kernel_verified": false,
+  "internal_All_is_SCUU": false,
+  "specialist_novelty_review_completed": false,
+  "source_to_world_bridge": false,
+  "necessary_being_deductively_established": false,
+  "CV-C": {
+    "presentation": "TOTAL_PR_SYNCHRONOUS_OBSERVERS",
+    "zero_defect": "Pi03-complete",
+    "positive_defect": "Sigma03-complete",
+    "interior_rational_thresholds": {
+      "d<q": "Sigma02-complete",
+      "d>=q": "Pi02-complete",
+      "d<=q": "Pi03-complete",
+      "d>q": "Sigma03-complete",
+      "d=q": "Pi03-complete"
+    },
+    "endpoints": {
+      "d=1": "Pi02-complete",
+      "d<1": "Sigma02-complete"
+    },
+    "finite_Mealy": "DECIDABLE_EXACT_RATIONAL",
+    "proof": "ORDINARY_SUPPLIED_PROVISIONAL_NOT_KERNEL_VERIFIED"
+  },
+  "CV-R": {
+    "infinite_J_required": true,
+    "finite_telescope_alone_not_infinite_proof": true
+  },
+  "CV-O": {
+    "complete_reads_including_absences": true,
+    "strict_monotone_versions": true,
+    "issuer_record_persistence": true,
+    "semantic_bound_not_licence_freshness": true,
+    "whole_Python_refinement": "OPEN"
+  },
+  "live_kernel_successes": [
+    "G@f50dc1aee52356cc6adbef342387576b02afc124::LIVE-FABLE-T299",
+    "G@f50dc1aee52356cc6adbef342387576b02afc124::LIVE-V14-CODEX",
+    "G@f50dc1aee52356cc6adbef342387576b02afc124::LIVE-CHALLENGER-B",
+    "G@f50dc1aee52356cc6adbef342387576b02afc124::LIVE-SPECIALIST-A",
+    "G@f50dc1aee52356cc6adbef342387576b02afc124::LIVE-SPECIALIST-B"
+  ],
+  "reference_populations": {
+    "A3E": {
+      "tests_per_mode": 183,
+      "census_per_mode": 335744,
+      "same_population_two_modes": true,
+      "legacy_controls": 6,
+      "v4_controls": 10,
+      "positive_scenarios": 12
+    },
+    "A3C": {
+      "math_tests_per_mode": 9,
+      "staging_tests_per_mode": 3,
+      "Mealy_descriptions": 256,
+      "revision_traces": 1365,
+      "finite_scope_not_infinite_proof": true
+    }
+  },
+  "historical_A2E": "PARTIAL_THROUGH_ACCEPTED_A2H_SCOPE_UNCHANGED",
+  "assurance_classes": [
+    "LEAN/KERNEL VERIFIED",
+    "OTHER FORMAL-PROVER VERIFIED",
+    "ORDINARY MATHEMATICAL PROOF",
+    "FINITE EXECUTABLE EVIDENCE",
+    "CANDIDATE FORMALISATION",
+    "PHILOSOPHICAL ARGUMENT",
+    "CONJECTURE / OPEN",
+    "REFUTED / COUNTEREXAMPLE",
+    "HISTORICAL / SUPERSEDED"
+  ]
+}

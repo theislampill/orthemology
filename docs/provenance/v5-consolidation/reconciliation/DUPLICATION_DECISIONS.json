@@ -1,0 +1,477 @@
+{
+  "relations": [
+    {
+      "id": "A4T-REL-001",
+      "left": "V4::T08",
+      "right": "G@f50dc1aee52356cc6adbef342387576b02afc124::LIVE-V14-CODEX",
+      "relation": "SPECIALISATION",
+      "compared_hypotheses_and_conclusions": "T08 first clause assumes a surjective observation and general target. V14 attained-image decoding removes full-codomain extension obligations; its full-codomain theorem adds surjectivity OR target inhabitation. Only the factorisation clause is related; T08 finite cardinality/minimax clauses are not the whole V14 result.",
+      "evidence_ids": [
+        "EV-a74c5e7b95d5aa1aa573",
+        "EV-73aef790f787ce11c65f",
+        "EV-c839d74b315ee0a86698"
+      ],
+      "whole_family_duplicate": false,
+      "priority": "UNESTABLISHED",
+      "new_proof_credit": false
+    },
+    {
+      "id": "A4T-REL-002",
+      "left": "V4::T05",
+      "right": "V4::V4-Q5",
+      "relation": "SPECIALISATION",
+      "compared_hypotheses_and_conclusions": "T05 quantifies over every R-invariant subset and requires S inside equivalence closure. Q5 fixes a finite active predicate signature F and requires S inside eq_F; changing F needs a version guard. They coincide only under the additional separating-full-family condition.",
+      "evidence_ids": [
+        "EV-a74c5e7b95d5aa1aa573",
+        "EV-bc410cac8d3c00b2d59e"
+      ],
+      "whole_family_duplicate": false,
+      "priority": "UNESTABLISHED",
+      "new_proof_credit": false
+    },
+    {
+      "id": "A4T-REL-003",
+      "left": "V4::V4-Q1",
+      "right": "V5::CV-R",
+      "relation": "GENERALISATION",
+      "compared_hypotheses_and_conclusions": "The single refinement defect decomposition iterates to a finite telescope. Infinite chains require the additional positive-cell extinction residual J; zero finite increments do not imply zero infinite defect.",
+      "evidence_ids": [
+        "EV-bc410cac8d3c00b2d59e",
+        "EV-d8d8e96a89ca6baf01da"
+      ],
+      "whole_family_duplicate": false,
+      "priority": "UNESTABLISHED",
+      "new_proof_credit": false
+    },
+    {
+      "id": "A4T-REL-004",
+      "left": "V4::V4-Q8",
+      "right": "V5::CV-C",
+      "relation": "GENERALISATION",
+      "compared_hypotheses_and_conclusions": "Q8 supplies a non-halting reduction for a named productive observer subfamily. CV-C fixes a total PR synchronous presentation and proves Pi03-complete zero defect plus the exact rational-threshold hierarchy; not merely undecidable. Finite Mealy is a separately decidable restriction.",
+      "evidence_ids": [
+        "EV-bc410cac8d3c00b2d59e",
+        "EV-74333fb0f8232c6d91c0"
+      ],
+      "whole_family_duplicate": false,
+      "priority": "UNESTABLISHED",
+      "new_proof_credit": false
+    },
+    {
+      "id": "A4T-REL-005",
+      "left": "V4::V4-O3",
+      "right": "V5::CV-O",
+      "relation": "GENERALISATION",
+      "compared_hypotheses_and_conclusions": "Version checks in the fixed process-local implementation instantiate the abstract complete-read, strict-version issued-record theorem. Whole Python/parser/registry refinement remains open; unrelated revisions survive but relevant touches invalidate even after ABA value restoration.",
+      "evidence_ids": [
+        "EV-bc410cac8d3c00b2d59e",
+        "EV-194799b28fdf3b63d6f7"
+      ],
+      "whole_family_duplicate": false,
+      "priority": "UNESTABLISHED",
+      "new_proof_credit": false
+    },
+    {
+      "id": "A4T-REL-006",
+      "left": "V4::V4-Q3",
+      "right": "V5::CV-O",
+      "relation": "RELATED_NOT_EQUIVALENT",
+      "compared_hypotheses_and_conclusions": "A semantic probability bound can still be true after a revision which invalidates its licence. Reissue is a new authority act; semantic debt is not licence freshness.",
+      "evidence_ids": [
+        "EV-bc410cac8d3c00b2d59e",
+        "EV-194799b28fdf3b63d6f7",
+        "EV-d8d8e96a89ca6baf01da"
+      ],
+      "whole_family_duplicate": false,
+      "priority": "UNESTABLISHED",
+      "new_proof_credit": false
+    },
+    {
+      "id": "A4T-REL-007",
+      "left": "ARGUMENT::INTERNAL-ALL",
+      "right": "ARGUMENT::SCUU-AT",
+      "relation": "RELATED_NOT_EQUIVALENT",
+      "compared_hypotheses_and_conclusions": "Internal uniform tracked realizers and legal self-instantiation do not provide total ambient FullSections pack/unpack with beta. The positive and negative constructions are independently combined; neither is an axiom declaring SCUU false.",
+      "evidence_ids": [
+        "EV-7cf85525305944e343b5",
+        "EV-d72ea2871daf63836f72"
+      ],
+      "whole_family_duplicate": false,
+      "priority": "UNESTABLISHED",
+      "new_proof_credit": false
+    },
+    {
+      "id": "A4T-REL-008",
+      "left": "V4::V4-R1",
+      "right": "V4::V4-O2",
+      "relation": "RELATED_NOT_EQUIVALENT",
+      "compared_hypotheses_and_conclusions": "Finite pure FiniteDerives binary logical relations do not identify universe-polymorphic Plan reach, all unary semantic members or an effectful/dependent-context theorem.",
+      "evidence_ids": [
+        "EV-12dfbed26b887067f2bb",
+        "EV-bc410cac8d3c00b2d59e"
+      ],
+      "whole_family_duplicate": false,
+      "priority": "UNESTABLISHED",
+      "new_proof_credit": false
+    },
+    {
+      "id": "A4T-REL-009",
+      "left": "V4::T12",
+      "right": "V4::T13",
+      "relation": "RELATED_NOT_EQUIVALENT",
+      "compared_hypotheses_and_conclusions": "Conversion-invariant semantic membership contains non-SN K t Omega; finite source derivability has a separate ordinary System-F translation proof. Different populations prevent contradiction and prohibit exporting the positive result to all inhabitants.",
+      "evidence_ids": [
+        "EV-13c3b0ba7aa7e57fd13b",
+        "EV-a74c5e7b95d5aa1aa573"
+      ],
+      "whole_family_duplicate": false,
+      "priority": "UNESTABLISHED",
+      "new_proof_credit": false
+    },
+    {
+      "id": "A4T-REL-010",
+      "left": "V4::T11",
+      "right": "V4::T14",
+      "relation": "RELATED_NOT_EQUIVALENT",
+      "compared_hypotheses_and_conclusions": "Discarded-marker exact-term incompleteness is not the primitive-bottom modulo-conversion counterexample; the latter carries confluence and finite-source SN dependencies.",
+      "evidence_ids": [
+        "EV-a74c5e7b95d5aa1aa573",
+        "EV-13d6f0a12fc8925db81b"
+      ],
+      "whole_family_duplicate": false,
+      "priority": "UNESTABLISHED",
+      "new_proof_credit": false
+    },
+    {
+      "id": "A4T-REL-011",
+      "left": "V4::V4-S1",
+      "right": "V4::V4-S2",
+      "relation": "APPLICATION_OF",
+      "compared_hypotheses_and_conclusions": "The concrete quadratic irrational equilibrium has a guarded fair-bit implementation with stated tails and conditional cost. General Kakutani existence gives neither effective selection nor convergence, and finite prefixes are not the infinite probability theorem.",
+      "evidence_ids": [
+        "EV-bc410cac8d3c00b2d59e"
+      ],
+      "whole_family_duplicate": false,
+      "priority": "UNESTABLISHED",
+      "new_proof_credit": false
+    },
+    {
+      "id": "A4T-REL-012",
+      "left": "ARGUMENT::NECESSARY-BEING",
+      "right": "ARGUMENT::SCUU-AT",
+      "relation": "ORTHOGONAL",
+      "compared_hypotheses_and_conclusions": "The modal/explanatory bridges and independent metaphysical premises are not the ambient self-product closure hypotheses. Neither finite check nor a kernel proof in the other lane discharges them.",
+      "evidence_ids": [
+        "EV-747b886b41fc2fe152e2",
+        "EV-313e1ed5bdc225e380b7",
+        "EV-d72ea2871daf63836f72"
+      ],
+      "whole_family_duplicate": false,
+      "priority": "UNESTABLISHED",
+      "new_proof_credit": false
+    },
+    {
+      "id": "A4T-REL-013",
+      "left": "ARGUMENT::APOAUTOSIS-CONTINUITY",
+      "right": "V5::CV-O",
+      "relation": "RELATED_NOT_EQUIVALENT",
+      "compared_hypotheses_and_conclusions": "Simulation under substrate changes and future-task preservation require realisation and physical/external authority premises absent from the typed versioned wrapper. A currently valid licence is not personal identity or future-generating capability.",
+      "evidence_ids": [
+        "EV-4913e8508c35e12eeb8b",
+        "EV-194799b28fdf3b63d6f7"
+      ],
+      "whole_family_duplicate": false,
+      "priority": "UNESTABLISHED",
+      "new_proof_credit": false
+    },
+    {
+      "id": "A4T-REL-014",
+      "left": "H14/orthing_formalisation_v1::Theorem 4.2",
+      "right": "V4::T08",
+      "relation": "RELATED_NOT_EQUIVALENT",
+      "compared_hypotheses_and_conclusions": "The attained-image decoder clause is identical under typed renaming to the surjective factorisation clause. T08 also has universal-family, cardinality and approximate minimax clauses, so whole-family duplication is not established.",
+      "evidence_ids": [
+        "EV-cd5070341a46658c0e4a",
+        "EV-a74c5e7b95d5aa1aa573"
+      ],
+      "whole_family_duplicate": false,
+      "priority": "UNESTABLISHED",
+      "new_proof_credit": false
+    },
+    {
+      "id": "A4T-REL-015",
+      "left": "H14/orthing_continuation_frontier_v1::Theorem 1",
+      "right": "V5::CV-R",
+      "relation": "RELATED_NOT_EQUIVALENT",
+      "compared_hypotheses_and_conclusions": "Historical d_V(f) is a worst recovery gap for a named finite observable under equal moment summaries. Modern d(nu) is total mass not concentrated on positive singleton cells. Their carriers, quantifiers and extrema differ; neither formula replaces the other.",
+      "evidence_ids": [
+        "EV-626504b64c2d7817b882",
+        "EV-bc410cac8d3c00b2d59e"
+      ],
+      "whole_family_duplicate": false,
+      "priority": "UNESTABLISHED",
+      "new_proof_credit": false
+    },
+    {
+      "id": "A4T-REL-016",
+      "left": "H14/orthing_continuation_frontier_v1::Theorem 2",
+      "right": "V5::CV-O",
+      "relation": "RELATED_NOT_EQUIVALENT",
+      "compared_hypotheses_and_conclusions": "Finite observable-span closure and predictive memory dimension preserve future branch numerators for all laws. Issued-record freshness instead compares captured version stamps after writes; it does not calculate minimal predictive dimension.",
+      "evidence_ids": [
+        "EV-626504b64c2d7817b882",
+        "EV-bc410cac8d3c00b2d59e"
+      ],
+      "whole_family_duplicate": false,
+      "priority": "UNESTABLISHED",
+      "new_proof_credit": false
+    },
+    {
+      "id": "A4T-REL-017",
+      "left": "H14/orthing_formalisation_v1::Theorem 11.2",
+      "right": "V5::CV-O",
+      "relation": "HISTORICAL_PREDECESSOR",
+      "compared_hypotheses_and_conclusions": "The historical deterministic quotient requires factorisation of update, target and landscape and proves commuting finite iterates. CV-O provides a differently typed operational context/evidence discipline; it does not make the quotient hypotheses automatic.",
+      "evidence_ids": [
+        "EV-cd5070341a46658c0e4a",
+        "EV-bc410cac8d3c00b2d59e"
+      ],
+      "whole_family_duplicate": false,
+      "priority": "UNESTABLISHED",
+      "new_proof_credit": false
+    },
+    {
+      "id": "A4T-REL-018",
+      "left": "H14/orthing_formalisation_v1::Theorem 8.3",
+      "right": "V4::T19",
+      "relation": "RELATED_NOT_EQUIVALENT",
+      "compared_hypotheses_and_conclusions": "Both use conditional Kakutani existence over finite declared mixtures. The historical Nash best-response population and the modern term/measure fixed-point domain are different. Neither generic existence statement supplies constructive selection, convergence or the S2 sampler.",
+      "evidence_ids": [
+        "EV-cd5070341a46658c0e4a",
+        "EV-13d6f0a12fc8925db81b"
+      ],
+      "whole_family_duplicate": false,
+      "priority": "UNESTABLISHED",
+      "new_proof_credit": false
+    },
+    {
+      "id": "A4T-REL-019",
+      "left": "H14/orthing_modal_metaphysical_frontier_v2::MF2-T1",
+      "right": "ARGUMENT::NECESSARY-BEING",
+      "relation": "RELATED_NOT_EQUIVALENT",
+      "compared_hypotheses_and_conclusions": "The conditional cone theorem requires a nonempty complete actual concrete cone, well-founded dependence and a predecessor for each nonnecessary actual member. It does not validate these premises, identify a unique intelligent bearer or close the controlling B0-B16 bridges.",
+      "evidence_ids": [
+        "EV-313e1ed5bdc225e380b7",
+        "EV-747b886b41fc2fe152e2"
+      ],
+      "whole_family_duplicate": false,
+      "priority": "UNESTABLISHED",
+      "new_proof_credit": false
+    },
+    {
+      "id": "A4T-REL-020",
+      "left": "H14/orthing_modal_metaphysical_frontier_v2::MF2-T2",
+      "right": "ARGUMENT::NECESSARY-BEING",
+      "relation": "RELATED_NOT_EQUIVALENT",
+      "compared_hypotheses_and_conclusions": "The actual total-explanation theorem requires completeness, projection and exclusion of same-respect self-explanation. Its mathematical conditional is preserved separately from premise truth and the deductive Necessary-Being status.",
+      "evidence_ids": [
+        "EV-313e1ed5bdc225e380b7",
+        "EV-a0eab8374712fc402fcc"
+      ],
+      "whole_family_duplicate": false,
+      "priority": "UNESTABLISHED",
+      "new_proof_credit": false
+    },
+    {
+      "id": "A4T-REL-021",
+      "left": "H14/Moat/E3::thm:autonomy",
+      "right": "ARGUMENT::APOAUTOSIS-CONTINUITY",
+      "relation": "GENERALISATION",
+      "compared_hypotheses_and_conclusions": "The historical combined result adds operator-authorised resource-feasible migration, every required interface, controlled invariant host-excluding support, disturbance assumptions and separate progress/termination obligations. Task continuation alone supplies none of those extra premises.",
+      "evidence_ids": [
+        "EV-06256dd01149f7351d4c",
+        "EV-4913e8508c35e12eeb8b"
+      ],
+      "whole_family_duplicate": false,
+      "priority": "UNESTABLISHED",
+      "new_proof_credit": false
+    }
+  ],
+  "original_V14_ledger": {
+    "record": {
+      "schema": "ar8r-codex-theorem-family-relation-ledger-v14",
+      "allowed_relations": [
+        "IDENTICAL_UNDER_TYPED_RENAMING",
+        "STRICT_SPECIALIZATION",
+        "GUARDED_APPLICATION",
+        "SHARED_INVARIANT",
+        "SHARED_COUNTERMODEL_ARCHITECTURE",
+        "FORMAL_ANALOGUE_ONLY",
+        "VOCABULARY_RESEMBLANCE_ONLY",
+        "ANTI_UNIFICATION_BOUNDARY",
+        "UNRESOLVED"
+      ],
+      "relations": [
+        {
+          "id": "REL-01",
+          "source": "AR-T1",
+          "target": "AR8R-T294",
+          "relation": "STRICT_SPECIALIZATION",
+          "basis": "finite causal intervention-response profiles instantiate elementary fibre factorization",
+          "novelty_effect": 0,
+          "source_refs": [
+            "docs/project-closure/ar8r-v11/provenance/AR8R-CANONICAL-THEOREM-ORIGIN-REGISTRY-V5-PUBLIC-SANITIZED.yaml"
+          ]
+        },
+        {
+          "id": "REL-02",
+          "source": "AR-T1",
+          "target": "CCS-V14-C1",
+          "relation": "SHARED_INVARIANT",
+          "basis": "AR-T1 is the Boolean-target nonempty-world internal specialization of the broader prior-art fibre criterion; the statements are not identical under typed renaming",
+          "novelty_effect": 0,
+          "source_refs": [
+            "docs/project-closure/ar8r-v11/provenance/AR8R-THEOREM-FAMILY-RELATION-CROSSWALK-V11.yaml"
+          ]
+        },
+        {
+          "id": "REL-03",
+          "source": "AR-T1",
+          "target": "CCS-V14-C2",
+          "relation": "GUARDED_APPLICATION",
+          "basis": "full observation-codomain decoder additionally needs surjectivity or target inhabitation",
+          "novelty_effect": 0,
+          "source_refs": [
+            "docs/project-closure/ar8r-v11/post-merge-proposals/codex-corpus-synthesis-v14/lean/CodexFibreSynthesis.lean"
+          ]
+        },
+        {
+          "id": "REL-04",
+          "source": "AR-T1",
+          "target": "CCS-V14-C3",
+          "relation": "GUARDED_APPLICATION",
+          "basis": "pair guards and joint refinement are coordinatewise and product-map applications",
+          "novelty_effect": 0,
+          "source_refs": [
+            "docs/project-closure/ar8r-v11/post-merge-proposals/codex-corpus-synthesis-v14/lean/CodexFibreSynthesis.lean"
+          ]
+        },
+        {
+          "id": "REL-05",
+          "source": "reason-preserving transport family",
+          "target": "CLIM-09",
+          "relation": "GUARDED_APPLICATION",
+          "basis": "content factorization remains subordinate to recipient, authority, version, and invalidator guards",
+          "novelty_effect": 0,
+          "source_refs": [
+            "docs/project-closure/ar8r-v11/programs/language-translation-and-version-custody.md"
+          ]
+        },
+        {
+          "id": "REL-06",
+          "source": "observation-uniform strategy family",
+          "target": "CLIM-06",
+          "relation": "STRICT_SPECIALIZATION",
+          "basis": "implementable local action requires action availability and success to be uniform on observation fibres",
+          "novelty_effect": 0,
+          "source_refs": [
+            "docs/project-closure/ar8r-v11/post-merge-proposals/six-lane-v14-intake/specialist-a/source-files/rounds/SPA-R4_OBSERVATION_COBUCHI.md"
+          ]
+        },
+        {
+          "id": "REL-07",
+          "source": "finite co-Buchi fixed-point family",
+          "target": "CLIM-07",
+          "relation": "ANTI_UNIFICATION_BOUNDARY",
+          "basis": "temporal persistence depends on successor and policy structure absent from event-local factorization",
+          "novelty_effect": 0,
+          "source_refs": [
+            "docs/project-closure/ar8r-v11/programs/daee-temporal-restoration-and-provenance.md"
+          ]
+        },
+        {
+          "id": "REL-08",
+          "source": "finite forward garbling family",
+          "target": "Blackwell experiment comparison",
+          "relation": "STRICT_SPECIALIZATION",
+          "basis": "the finite forward-garbling result is a bounded special case of Blackwell comparison, not an identity with fibre factorization",
+          "novelty_effect": 0,
+          "source_refs": [
+            "docs/project-closure/ar8r-v11/post-merge-proposals/six-lane-v14-intake/external-evidence/AR8R-DEEP-RESEARCH-20-22-INTAKE-V14.yaml"
+          ]
+        },
+        {
+          "id": "REL-09",
+          "source": "Le Cam comparison",
+          "target": "CCS-V14-C1",
+          "relation": "FORMAL_ANALOGUE_ONLY",
+          "basis": "no exact primary theorem reduction has yet been frozen in the repository",
+          "novelty_effect": 0,
+          "source_refs": [
+            "docs/project-closure/ar8r-v11/post-merge-proposals/six-lane-v14-intake/external-evidence/AR8R-DEEP-RESEARCH-20-22-INTAKE-V14.yaml"
+          ]
+        },
+        {
+          "id": "REL-10",
+          "source": "nonnegative-rank mixture width",
+          "target": "CCS-V14-C1",
+          "relation": "ANTI_UNIFICATION_BOUNDARY",
+          "basis": "factorization width and field dependence do not identify quotient fibres or a causal architecture",
+          "novelty_effect": 0,
+          "source_refs": [
+            "docs/project-closure/ar8r-v11/post-merge-proposals/six-lane-v14-intake/external-evidence/AR8R-DEEP-RESEARCH-20-22-INTAKE-V14.yaml"
+          ]
+        },
+        {
+          "id": "REL-11",
+          "source": "data-incest and cascade ancestry",
+          "target": "CLIM-04",
+          "relation": "GUARDED_APPLICATION",
+          "basis": "copied multiplicity is compatible with one provenance root",
+          "novelty_effect": 0,
+          "source_refs": [
+            "docs/project-closure/ar8r-v11/post-merge-proposals/six-lane-v14-intake/external-evidence/AR8R-DEEP-RESEARCH-20-22-INTAKE-V14.yaml"
+          ]
+        },
+        {
+          "id": "REL-12",
+          "source": "transcendental source records",
+          "target": "CLIM-12",
+          "relation": "ANTI_UNIFICATION_BOUNDARY",
+          "basis": "source-relative distinctions do not establish source-world truth or the formal-to-metaphysical bridges",
+          "novelty_effect": 0,
+          "source_refs": [
+            "docs/project-closure/ar8r-v11/programs/candidate-n-r5-track-t-and-source-ascent.md"
+          ]
+        },
+        {
+          "id": "REL-13",
+          "source": "Deep BV finite profile proposition",
+          "target": "AR8R-T294",
+          "relation": "IDENTICAL_UNDER_TYPED_RENAMING",
+          "basis": "both characterize finite target identifiability by constancy on complete intervention-profile fibres; historical byte identity is not claimed",
+          "novelty_effect": 0,
+          "source_refs": [
+            "docs/project-closure/ar8r-v11/post-merge-proposals/pmr007-deep-bl-bv-semantic-reissue/source-files/PMR-007_DEEP_BV_ADMISSION_OVERLAY.yaml"
+          ]
+        },
+        {
+          "id": "REL-14",
+          "source": "Canavoi finite co-Buchi fixed-point core",
+          "target": "finite co-Buchi fixed-point family",
+          "relation": "IDENTICAL_UNDER_TYPED_RENAMING",
+          "basis": "identical outer-least and inner-greatest fixed-point mechanism under a typed predecessor; partial-observation strategy uniformity remains additional",
+          "novelty_effect": 0,
+          "source_refs": [
+            "docs/project-closure/ar8r-v11/post-merge-proposals/six-lane-v14-intake/external-evidence/AR8R-DEEP-RESEARCH-20-22-INTAKE-V14.yaml"
+          ]
+        }
+      ]
+    },
+    "evidence_id": "EV-c839d74b315ee0a86698",
+    "status": "RETAINED_ORIGINAL_RELATIONS_NOT_ALL_REPROVED"
+  },
+  "A4C_clause_scope": "Concept identity/definition maps do not automatically identify whole theorem families. A4C-C050 concerns the common record-fibre criterion only.",
+  "default": "UNRESOLVED_OR_RELATED_NOT_EQUIVALENT; no inferred priority",
+  "independent_specialist_review": "NOT_PERFORMED"
+}

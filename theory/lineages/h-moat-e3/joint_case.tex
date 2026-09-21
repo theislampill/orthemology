@@ -1,0 +1,31 @@
+\subsection{A fully worked counterexample: two correct machines, no adequate export}\label{subsec:exportcase}
+The next case makes the joint burden concrete without proposing a new channel. Consider the four-state delay kernel
+\[
+ Q=\{0,1\}^2,\quad \Delta((b,c),a)=(c,a),\quad \Lambda(b,c)=b,
+ \qquad a\in\{0,1\}.
+\]
+Suppose source and target are independently correct implementations of this kernel. Suppose the available migration interface exports only the current displayed output $b$, and transports that bit without error. The target has enough storage, energy and processing capacity. These local statements can all be true.
+
+Nevertheless, the export is inadequate. States $(0,0)$ and $(0,1)$ yield the same migration record $0$. After the same next input $a=0$, their required next outputs differ. A deterministic initialiser receiving only that record must initialise the same target state in both cases. That target cannot reproduce both required continuations.
+
+\begin{proposition}[Migration requires an export that distinguishes relevant continuations]\label{prop:export}
+Let $E:D_r\to Z$ be the complete source information available to a deterministic migration initialiser. If there exist $x,x'\in D_r$ with $E(x)=E(x')$ for which the required post-migration traces differ under an admitted common future input sequence, then no initialiser depending only on $E(x)$ can guarantee both traces.
+\end{proposition}
+\begin{proof}
+Equal exports give the same initialised target state. Applying the same future inputs gives the same target trace by determinism. That one trace cannot equal the two different required traces.
+\end{proof}
+If a shared checkpoint or target-side information is available, it belongs in $E$; the obstruction must then be assessed on the augmented export. In the four-state example, exporting both $b$ and $c$ removes this particular obstruction. This is not a theorem that every two-bit packet achieves migration: order, interpretation, activation and timing must still hold.
+
+The case isolates a precise missing implication:
+\[
+ \underbrace{\text{source correct} + \text{target correct} + \text{bit transfer correct}}_{\text{local claims}}
+ \quad\not\Rightarrow\quad \text{current execution can continue}.
+\]
+It is an application of familiar state-distinguishability and refinement reasoning, not a claim that existing formal methods cannot expose it. Its value in the present synthesis is that the required migration information is derived from \emph{future task behaviour}, rather than from the current display or from a medium's ability to carry some bit.
+
+\subsection{Matched assessment: do not manufacture an advantage}
+The reproducible packet includes already specified synthetic cases with an export collision, a polarity mismatch, an original-host power dependency, a deadline violation, replay of an input, and an otherwise adequate joint configuration. A deliberately weak ``all local checks pass'' rule cannot distinguish the adverse cases from the adequate one when it sees only those local results. A conventional rule supplied with the complete contracts can distinguish them, as can the same rule represented with orthemic annotations.
+
+This is a logical comparison, not a study of expert performance. With identical input information and identical decision functions, changing names cannot change verdicts. In the supplied fixtures the strong conventional and annotated assessors therefore agree by construction. Any later claim of improved practice must measure something additional---such as whether people or agents preserve the relevant assumptions more reliably at matched cost---rather than treating the weak baseline as the whole of control theory or distributed systems.
+
+The evidential account still matters: a local transfer test concerns packet transport; a state-conformance test concerns the kernel; a support audit concerns dependencies; and a provenance check concerns which version was tested. Their conjunction becomes an end-to-end certificate only when those claims concern the same actual joint configuration. This is the narrow synthesis claim worth testing.
