@@ -1,0 +1,226 @@
+{
+  "schema": "orthemology-publication-source-review-v1",
+  "mode": "NONAUTHORITATIVE_SHADOW_CONSTRUCTION",
+  "source_provenance": {
+    "source_commit": "1db15916a3965ccbba101969341bad4cb44ba22b",
+    "source_tree": "7c7a22d83b9dd86702978bae00c1e3f15d826195",
+    "source_date_epoch": 1790007430,
+    "independently_reviewed_equivalent_source_commit": "1db15916a3965ccbba101969341bad4cb44ba22b",
+    "independently_reviewed_equivalent_source_tree": "7c7a22d83b9dd86702978bae00c1e3f15d826195",
+    "source_tree_equivalence": "verified-identical"
+  },
+  "accepted_base": "f50dc1aee52356cc6adbef342387576b02afc124",
+  "source_preparation_parent": "63b91d8b9f55e4e9262f6f39f5b55d2d42336b02",
+  "review_method": "Separate implementation/process; fresh detached source-commit checkout; exact finite input readback; unchanged approved generator regenerated all six source files with a clean tree.",
+  "source_commit_remote_readback": "PASS_EXACT_HEAD_TREE_PARENT_MAIN",
+  "inputs": [
+    {
+      "path": "companion/dynamic-orthing-noetic-learning-and-orthability.md",
+      "bytes": 19042,
+      "sha256": "de1b55b70816a87f152b9b2a1c15edf7d173b77c29bd084fb825e56e8fcda5dd",
+      "entry_sha256": "de1b55b70816a87f152b9b2a1c15edf7d173b77c29bd084fb825e56e8fcda5dd",
+      "changed": false,
+      "git_mode": "100644"
+    },
+    {
+      "path": "companion/orthability-and-the-ground-of-intelligibility.md",
+      "bytes": 41661,
+      "sha256": "fd7ed7a1aa6d9893bb9da304ebffc0ebc90839e0eccbe18ee6f387aacd3c9d41",
+      "entry_sha256": "fd7ed7a1aa6d9893bb9da304ebffc0ebc90839e0eccbe18ee6f387aacd3c9d41",
+      "changed": false,
+      "git_mode": "100644"
+    },
+    {
+      "path": "companion/orthability-divine-attributes-and-speech-athari.md",
+      "bytes": 26722,
+      "sha256": "4b64fcb9700de20d9b8896a9ec2419a74771674816f6675ecdcde1614fd78b07",
+      "entry_sha256": "4b64fcb9700de20d9b8896a9ec2419a74771674816f6675ecdcde1614fd78b07",
+      "changed": false,
+      "git_mode": "100644"
+    },
+    {
+      "path": "docs/current-candidate-state.yaml",
+      "bytes": 6509,
+      "sha256": "7311b9d973761648f8b02ee47c222e64b8a752df57e86bcc74e47c34edc34fce",
+      "entry_sha256": "7311b9d973761648f8b02ee47c222e64b8a752df57e86bcc74e47c34edc34fce",
+      "changed": false,
+      "git_mode": "100644"
+    },
+    {
+      "path": "docs/notation-gallery.md",
+      "bytes": 5885,
+      "sha256": "449ead6c2f13ae066cf0ae20d3b08f76e498bf58c3c8b18da34e70a8d2863b49",
+      "entry_sha256": "449ead6c2f13ae066cf0ae20d3b08f76e498bf58c3c8b18da34e70a8d2863b49",
+      "changed": false,
+      "git_mode": "100644"
+    },
+    {
+      "path": "docs/publication-profile.yaml",
+      "bytes": 5765,
+      "sha256": "f959b059f513d7e1e1afc91822315d2f0a5c3be4e583bf740e5850caac1a6922",
+      "entry_sha256": "f959b059f513d7e1e1afc91822315d2f0a5c3be4e583bf740e5850caac1a6922",
+      "changed": false,
+      "git_mode": "100644"
+    },
+    {
+      "path": "manuscript/orthemma-ortheme-systems-revised-draft.md",
+      "bytes": 126870,
+      "sha256": "4243bd98e13f23e305088f99f6649a2fbe598d619721704cfdcd907a7e3ebfdd",
+      "entry_sha256": "4243bd98e13f23e305088f99f6649a2fbe598d619721704cfdcd907a7e3ebfdd",
+      "changed": false,
+      "git_mode": "100644"
+    },
+    {
+      "path": "publication/latex/dynamic-orthing-noetic-learning-orthability-draft/main.tex",
+      "bytes": 28126,
+      "sha256": "859ad8a7dd12ecd30e04dda7c613cdff1da1b4056f0f3cc1b9409ee8379fbd3d",
+      "entry_sha256": "8793d4214d2577429a33e745b95fc33568f575d9ea6d8e52659b1da389f268c2",
+      "changed": true,
+      "git_mode": "100644"
+    },
+    {
+      "path": "publication/latex/notation-gallery/main.tex",
+      "bytes": 14920,
+      "sha256": "2f0d1cc08ffcebfc7f30c6569e6465129648b1816440125f60b9a025ddd1290a",
+      "entry_sha256": "2f0d1cc08ffcebfc7f30c6569e6465129648b1816440125f60b9a025ddd1290a",
+      "changed": false,
+      "git_mode": "100644"
+    },
+    {
+      "path": "publication/latex/orthability-divine-speech-athari-draft/main.tex",
+      "bytes": 32080,
+      "sha256": "3789cd2c7f0012edb38d43648fe7c9a0572f5b106a353ad2f0957b128cf7f3a1",
+      "entry_sha256": "87a7c66887823e700ff440d0e94d461843c2fbd2e99e6fe077dede4e2b26f15c",
+      "changed": true,
+      "git_mode": "100644"
+    },
+    {
+      "path": "publication/latex/orthability-ground-of-intelligibility-draft/main.tex",
+      "bytes": 49392,
+      "sha256": "10c1cb7a08a0875e63276137550be0bb14c9528f3ca452d5c363207045a70880",
+      "entry_sha256": "10c1cb7a08a0875e63276137550be0bb14c9528f3ca452d5c363207045a70880",
+      "changed": false,
+      "git_mode": "100644"
+    },
+    {
+      "path": "publication/latex/orthemic-core-reference-draft/main.tex",
+      "bytes": 91559,
+      "sha256": "9ca2ab8513ab000fa161065921f98ef0de1ac37c8be7c6035a1493487e0e29a9",
+      "entry_sha256": "fa4b196b75ab9a026bbb36938ea943afbedb1703a1d843110922adf04d16dfdb",
+      "changed": true,
+      "git_mode": "100644"
+    },
+    {
+      "path": "publication/latex/orthemma-ortheme-systems-draft/main.tex",
+      "bytes": 149280,
+      "sha256": "b78c99340a451c3481699b47d8cfd53f7206aec0ab12205a4462e17c1c8aa626",
+      "entry_sha256": "b78c99340a451c3481699b47d8cfd53f7206aec0ab12205a4462e17c1c8aa626",
+      "changed": false,
+      "git_mode": "100644"
+    },
+    {
+      "path": "publication/latexmkrc",
+      "bytes": 389,
+      "sha256": "8fab079b47dda579db9b75aef4f25a4b3c78bc19089957e7076a95f1dc717979",
+      "entry_sha256": "8fab079b47dda579db9b75aef4f25a4b3c78bc19089957e7076a95f1dc717979",
+      "changed": false,
+      "git_mode": "100644"
+    },
+    {
+      "path": "publication/pdftex-unicode-compat.tex",
+      "bytes": 5422,
+      "sha256": "0f6c63d94e461c097437e78dcc371453cedff18e6aef43725609a2a3ddef94a4",
+      "entry_sha256": "0f6c63d94e461c097437e78dcc371453cedff18e6aef43725609a2a3ddef94a4",
+      "changed": false,
+      "git_mode": "100644"
+    },
+    {
+      "path": "publication/toolchain-lock.yaml",
+      "bytes": 3256,
+      "sha256": "10964d0d5b44f3a4e82543b57fcbba910fd4216e165c2461a49ee4a76dc3b8b3",
+      "entry_sha256": "10964d0d5b44f3a4e82543b57fcbba910fd4216e165c2461a49ee4a76dc3b8b3",
+      "changed": false,
+      "git_mode": "100644"
+    },
+    {
+      "path": "references/orthemology.bib",
+      "bytes": 30187,
+      "sha256": "ef6fdfe6bf8d2e6b0c88dbe157f3aa26a783c7d57285ffc133004eaac7a11893",
+      "entry_sha256": "ef6fdfe6bf8d2e6b0c88dbe157f3aa26a783c7d57285ffc133004eaac7a11893",
+      "changed": false,
+      "git_mode": "100644"
+    },
+    {
+      "path": "references/source-status.yaml",
+      "bytes": 30946,
+      "sha256": "ef5a37fa5a465e1e993b3e223b3408b6755db51f089c13089d7b8feea0b915f2",
+      "entry_sha256": "ef5a37fa5a465e1e993b3e223b3408b6755db51f089c13089d7b8feea0b915f2",
+      "changed": false,
+      "git_mode": "100644"
+    },
+    {
+      "path": "scripts/build_pdfs.py",
+      "bytes": 90653,
+      "sha256": "74d1979035c2066293d48011d8596c3a816f81562978b5864a70231130a49961",
+      "entry_sha256": "74d1979035c2066293d48011d8596c3a816f81562978b5864a70231130a49961",
+      "changed": false,
+      "git_mode": "100644"
+    },
+    {
+      "path": "scripts/generate_latex_sources.py",
+      "bytes": 52367,
+      "sha256": "febc6d61c12aea543157e9dbade974dce9915a5a2905421364a0f98a3925fc99",
+      "entry_sha256": "febc6d61c12aea543157e9dbade974dce9915a5a2905421364a0f98a3925fc99",
+      "changed": false,
+      "git_mode": "100644"
+    },
+    {
+      "path": "scripts/latex_to_typst_math.py",
+      "bytes": 15373,
+      "sha256": "f81696c876213c9948dd02ef94611916b59d3a4b7e22daa374c19e514ddb037f",
+      "entry_sha256": "f81696c876213c9948dd02ef94611916b59d3a4b7e22daa374c19e514ddb037f",
+      "changed": false,
+      "git_mode": "100644"
+    },
+    {
+      "path": "theory/orthemic-core-formalization.md",
+      "bytes": 64022,
+      "sha256": "1be1009438c3abd7c73670218e18d7564e97ff76948bb03f503cfa7bd38fe13d",
+      "entry_sha256": "1be1009438c3abd7c73670218e18d7564e97ff76948bb03f503cfa7bd38fe13d",
+      "changed": false,
+      "git_mode": "100644"
+    },
+    {
+      "path": "theory/orthemic-multi-actor-conflict-note.md",
+      "bytes": 11626,
+      "sha256": "4f00ce4cb26c7a6c884df598c8832fd72b11bc3a35dc287b62ea64d181fa8ff6",
+      "entry_sha256": "4f00ce4cb26c7a6c884df598c8832fd72b11bc3a35dc287b62ea64d181fa8ff6",
+      "changed": false,
+      "git_mode": "100644"
+    }
+  ],
+  "two_reviewed_markdown": {
+    "theory/orthemic-multi-actor-conflict-note.md": "4f00ce4cb26c7a6c884df598c8832fd72b11bc3a35dc287b62ea64d181fa8ff6",
+    "companion/dynamic-orthing-noetic-learning-and-orthability.md": "de1b55b70816a87f152b9b2a1c15edf7d173b77c29bd084fb825e56e8fcda5dd"
+  },
+  "Athari_synchronisation": {
+    "classification": "DERIVED_STALENESS_RECONCILIATION",
+    "source": "companion/orthability-divine-attributes-and-speech-athari.md",
+    "source_sha256": "4b64fcb9700de20d9b8896a9ec2419a74771674816f6675ecdcde1614fd78b07",
+    "registry": "references/source-status.yaml",
+    "row": "ATH-3",
+    "already_recorded_status": "PRIMARY_TEXT_EXACT",
+    "already_recorded_loci": "vol. 12 digital pp. 98 and 409; printed pagination remains edition-dependent",
+    "unchanged_at": [
+      "5a2cf7ed77b897108afc515c90d3895ca4d706f2",
+      "f50dc1aee52356cc6adbef342387576b02afc124",
+      "63b91d8b9f55e4e9262f6f39f5b55d2d42336b02"
+    ],
+    "no_executor_promotion": true,
+    "previous_artifacts": "Historical stale rendering preserved; not retroactively current."
+  },
+  "independent_receipt_sha256": "b366a51e51b3bc6aef1842776544ad8ee04e5a770de3e837dd276f9937fbe644",
+  "authority": "Owner recursive closure amendment; no acceptance/QA weakening or authoritative semantic source change.",
+  "limits": "This is source-provenance closure only. Scientific publication, novelty, A7 and A8 credit are not claimed.",
+  "DAG_credit": false
+}
