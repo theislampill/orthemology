@@ -19,3 +19,5 @@ The frozen [formal dependency lock](formal_project/lake-manifest.json) requires 
 Relative links inside exact inherited ledgers are original-packet locators. SOURCE_MAP records their custody disposition; unavailable off-Git evidence is not a working public download.
 
 See [provenance and status](../../docs/provenance/v5-consolidation/README.md), [parity contract](../../docs/provenance/v5-consolidation/VERIFIER_PARITY.json), and [integration guide](../../docs/architecture/V5-INTEGRATION-GUIDE.md). A3F and A3G remain PARTIAL. No A7/A8/A9 credit is created by running this command.
+
+The native Lean/parser compatibility derivatives are explicitly bound in [FORMAL_SOURCE_AMENDMENT](../../docs/provenance/v5-consolidation/FORMAL_SOURCE_AMENDMENT.json). Original archives, 183-test populations and strict exit rules are unchanged. The separately counted integration tests protect parsing and finite repair scope; they do not expand the reference count or confer DAG credit.

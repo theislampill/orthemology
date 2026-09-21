@@ -7,14 +7,64 @@
       "sha256": "fd9add665feb3bbd428f5620a7535f6595149b1099b09d1e397bb0ad8f4ca4a5"
     },
     {
+      "path": "CRITICISM_LEDGER.md",
+      "bytes": 62545,
+      "sha256": "9426c1e1e2a0455b8be8af0978d54242491be47a7c4ac2925ebfe3127b3a4055"
+    },
+    {
+      "path": "DEPENDENCIES.json",
+      "bytes": 400,
+      "sha256": "fd2acbba68e3d653e602d03d83ea4eb6cf6334504e89985cba01bb3a3351528e"
+    },
+    {
+      "path": "LICENSES/Apache-2.0.txt",
+      "bytes": 11358,
+      "sha256": "cfc7749b96f63bd31c3c42b5c471bf756814053e847c10f3eb003417bc523d30"
+    },
+    {
+      "path": "OPERATIONAL_CONTRACT.md",
+      "bytes": 6967,
+      "sha256": "c8321c3f7a544215bb183b62a71da4adc4b57df0968be38a4513c7a52726cb98"
+    },
+    {
+      "path": "PRIOR_ART_COMPARISON.md",
+      "bytes": 7262,
+      "sha256": "10689b75b9ac4633cc1d57deaf00fcc6a47cd1b5cb1645e944518757a03c48f7"
+    },
+    {
+      "path": "PROOFS_V4.md",
+      "bytes": 28120,
+      "sha256": "bc410cac8d3c00b2d59eebeee8c482537978c03ebb6c8dfd599c317d91bef2d9"
+    },
+    {
+      "path": "REMAINING_OBLIGATIONS.md",
+      "bytes": 7320,
+      "sha256": "2795cb401c807b28b3fc84c4f46986e9f12ac040d5b40d3a6594634a4c38b40f"
+    },
+    {
+      "path": "SOURCES.json",
+      "bytes": 1445,
+      "sha256": "529fd2affdf40702ad87f014b7f726e7db43b420f20577a83958c02035c25dc9"
+    },
+    {
+      "path": "THEOREM_CATALOGUE.json",
+      "bytes": 43346,
+      "sha256": "13d6f0a12fc8925db81b992f07bd0a6851c2cd48d07733b2607975e4d0084cc5"
+    },
+    {
+      "path": "TOOLCHAIN_LOCK.json",
+      "bytes": 722,
+      "sha256": "e73cd2012023946337f2215d5ced4e2774bdb5112de1ab71c41a49513334a291"
+    },
+    {
       "path": "boundaries.py",
       "bytes": 3981,
       "sha256": "a4382218253e193d7caafa5f164c9aed1d1b0e79754ba0041164383356dc3210"
     },
     {
       "path": "build_gate.py",
-      "bytes": 12225,
-      "sha256": "ad3f7890057f7e8df3fb17574edf40451583e064e5ad58570181ffb3560593a5"
+      "bytes": 14955,
+      "sha256": "04f2bd93ddb595eadbb8b238b9ec279caaff6875f49aac33de3fadbeccff19f3"
     },
     {
       "path": "census.py",
@@ -27,29 +77,19 @@
       "sha256": "83d52f53c16b2a1730020a23e7f2b9cf3ffc7cfd27d013c60fbbb8c6fd6c9e2e"
     },
     {
-      "path": "CRITICISM_LEDGER.md",
-      "bytes": 62545,
-      "sha256": "9426c1e1e2a0455b8be8af0978d54242491be47a7c4ac2925ebfe3127b3a4055"
-    },
-    {
       "path": "demonstrate.py",
       "bytes": 5300,
       "sha256": "9c1e4fa6cbd09ce0ef13d6969830cb25e370c0b636cc66c22e48bf9ef34176c9"
     },
     {
-      "path": "DEPENDENCIES.json",
-      "bytes": 400,
-      "sha256": "fd2acbba68e3d653e602d03d83ea4eb6cf6334504e89985cba01bb3a3351528e"
+      "path": "examples/EXPORT_INDEX.json",
+      "bytes": 637,
+      "sha256": "0b4387b1a019fc871d978141672a39d25ab64dc76f132b7102d8b24b889da0ee"
     },
     {
       "path": "examples/diagonalSelf.json",
       "bytes": 956,
       "sha256": "68cc2c78809bc25520ddfe3273f1931989a885ed546c661f523a973d7b7130be"
-    },
-    {
-      "path": "examples/EXPORT_INDEX.json",
-      "bytes": 637,
-      "sha256": "0b4387b1a019fc871d978141672a39d25ab64dc76f132b7102d8b24b889da0ee"
     },
     {
       "path": "examples/falseSelector.json",
@@ -102,19 +142,19 @@
       "sha256": "45e67b7d9b5ad2b55f00f09b23bece8248f7d360f8d1d51f07d7bd9c53a075b4"
     },
     {
-      "path": "history/Orthemology_v3_Critical_Handoff/inputs/v3/inherited_v2/MATHEMATICAL_PROOF.md",
-      "bytes": 18250,
-      "sha256": "9dfd4b843360849f1986fa7d32a7a651caee984d17dc05810e27dca84ee89834"
-    },
-    {
       "path": "history/Orthemology_v3_Critical_Handoff/inputs/v3/MATHEMATICAL_PROOF.md",
       "bytes": 32696,
       "sha256": "a74c5e7b95d5aa1aa57356a2af042a7c65d8d881a9e33ca056e61c1ad2511472"
     },
     {
+      "path": "history/Orthemology_v3_Critical_Handoff/inputs/v3/inherited_v2/MATHEMATICAL_PROOF.md",
+      "bytes": 18250,
+      "sha256": "9dfd4b843360849f1986fa7d32a7a651caee984d17dc05810e27dca84ee89834"
+    },
+    {
       "path": "lean/AlmostSureBoundary.lean",
-      "bytes": 3224,
-      "sha256": "d56d5418e659faa679eb22f6b6150642d2c7e24d9e29d9e4642485c91dd4db26"
+      "bytes": 3234,
+      "sha256": "8485a2156b943ce569af6f219d69d7d24b00b41b04b8225a68d7480d2d70522d"
     },
     {
       "path": "lean/AuditSupport.lean",
@@ -123,13 +163,13 @@
     },
     {
       "path": "lean/BoundaryResults.lean",
-      "bytes": 8493,
-      "sha256": "a947caca5150c2f21cd239d4313c3d8e450e49cb8470fdd721917ec72c0da4ba"
+      "bytes": 8581,
+      "sha256": "cf337cad057a4c2cb93f2c0145f8132368867257c2b0bf7ee32f7be70d29d11c"
     },
     {
       "path": "lean/EffectsAndDependence.lean",
-      "bytes": 8703,
-      "sha256": "f2df78fcd764749b7d42d6f92eb6c07697877220547a936dac4e3faf5b5e5266"
+      "bytes": 8707,
+      "sha256": "0e3adde9d907e2c0a28afb5087feb42986e2e1fd880682edd70d4b4214790be2"
     },
     {
       "path": "lean/FiniteBridge.lean",
@@ -158,13 +198,13 @@
     },
     {
       "path": "lean/OperationalBoundary.lean",
-      "bytes": 2579,
-      "sha256": "d72ea2871daf63836f72bf87aba02877c3d4a7324ed53bb32b659a30bcb36027"
+      "bytes": 2599,
+      "sha256": "d3494436356f8aec5510b004e2a977c9946533f6190219f30eee2de511b53f4e"
     },
     {
       "path": "lean/OperationalKernel.lean",
-      "bytes": 8753,
-      "sha256": "f2cf621ac63f6a11ad1c9b79db5a008d7618fca6fc8184a53da0352c54ab352c"
+      "bytes": 8778,
+      "sha256": "766ae9391263f193c6e84e16042281fb5e70fe680f083f0359b4b3c10f215779"
     },
     {
       "path": "lean/RelationalFragment.lean",
@@ -192,11 +232,6 @@
       "sha256": "693e2a00b6f5c5e20e4a98270d2658b3dc7fe3f2776109f4ae5308803e92f3fa"
     },
     {
-      "path": "LICENSES/Apache-2.0.txt",
-      "bytes": 11358,
-      "sha256": "cfc7749b96f63bd31c3c42b5c471bf756814053e847c10f3eb003417bc523d30"
-    },
-    {
       "path": "observations.py",
       "bytes": 5481,
       "sha256": "e7ad363d03f01127f2a2090956ce26378b9c5b994361d344177c288f94670eef"
@@ -205,16 +240,6 @@
       "path": "operational.py",
       "bytes": 17499,
       "sha256": "3e325d5b4b0ffa71cb3612a88a488a090427695896bc226c1142d8714b09fd99"
-    },
-    {
-      "path": "OPERATIONAL_CONTRACT.md",
-      "bytes": 6967,
-      "sha256": "c8321c3f7a544215bb183b62a71da4adc4b57df0968be38a4513c7a52726cb98"
-    },
-    {
-      "path": "PRIOR_ART_COMPARISON.md",
-      "bytes": 7262,
-      "sha256": "10689b75b9ac4633cc1d57deaf00fcc6a47cd1b5cb1645e944518757a03c48f7"
     },
     {
       "path": "productive.py",
@@ -232,24 +257,9 @@
       "sha256": "4971f828be8d21d7d5a20226e166c21e92d361ac1a53afee094f3a34e2364ad3"
     },
     {
-      "path": "PROOFS_V4.md",
-      "bytes": 28120,
-      "sha256": "bc410cac8d3c00b2d59eebeee8c482537978c03ebb6c8dfd599c317d91bef2d9"
-    },
-    {
       "path": "reference.py",
       "bytes": 9616,
       "sha256": "398fdecf3c125f29fbbf7d242327cae0c5044440d58d5d8cdad9297b6e76ea77"
-    },
-    {
-      "path": "REMAINING_OBLIGATIONS.md",
-      "bytes": 7320,
-      "sha256": "2795cb401c807b28b3fc84c4f46986e9f12ac040d5b40d3a6594634a4c38b40f"
-    },
-    {
-      "path": "SOURCES.json",
-      "bytes": 1445,
-      "sha256": "529fd2affdf40702ad87f014b7f726e7db43b420f20577a83958c02035c25dc9"
     },
     {
       "path": "tests/test_build_gate.py",
@@ -335,16 +345,6 @@
       "path": "tests/test_v4_resources.py",
       "bytes": 1521,
       "sha256": "ef20ad5442f1fcaef45e62031b228ebd39d17e9d4d3591ea4b6f67b4ce1b9fde"
-    },
-    {
-      "path": "THEOREM_CATALOGUE.json",
-      "bytes": 43346,
-      "sha256": "13d6f0a12fc8925db81b992f07bd0a6851c2cd48d07733b2607975e4d0084cc5"
-    },
-    {
-      "path": "TOOLCHAIN_LOCK.json",
-      "bytes": 722,
-      "sha256": "e73cd2012023946337f2215d5ced4e2774bdb5112de1ab71c41a49513334a291"
     },
     {
       "path": "v4_mutations.py",

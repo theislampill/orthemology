@@ -12,6 +12,8 @@ Retain existing copyright/licence and citation owner decisions. Preserve the cov
 
 Inherited PDFs remain historical source-commit renderings. Two corrected Markdown sources are not represented by those inherited PDFs; no refreshed PDF readiness claim.
 
-A3F formal status is PARTIAL, A3G repository-baseline status is PARTIAL, kernel acceptance remains OPEN, actual axiom footprint remains unknown without a real audit, and novelty remains UNESTABLISHED. The live standalone formal receipts retain their recorded scope only. No stage of the branch grants theorem credit.
+Historical A3F formal status and A3G repository-baseline status remain PARTIAL. Formal DAG qualification remains OPEN and novelty remains UNESTABLISHED. Mapped native shadow evidence is scoped separately below; no theorem novelty or programme acceptance follows from it.
 
-Remaining DAG cells: A7, A8R, A8G, A8F, A8P, A8, A9. They are outside this executor change. No main modification, final integration PR, merge, release or v6 research is authorised.
+At shadow sealing, A7 attempt-0003 is stale, A8G attempt-0002 is PARTIAL and A8R/F attempt-0001 are BLOCKED. Stable-tree A7 and fresh A8G/R/F require separate accepted checkpoints. A8P, aggregate A8 and A9 remain unexecuted; no main modification, final integration PR, merge, release or v6 research is authorised.
+
+Mapped native formal source is recorded in [FORMAL_SOURCE_AMENDMENT](FORMAL_SOURCE_AMENDMENT.json). Its six derived source postimages are distinct from immutable original-packet bytes. The exact Lean 4.19.0 standalone shadow audit checked all 145 inherited declarations plus the V5 cross-check; this does not rewrite historical A3F/A3G PARTIAL or grant A7/A8 credit. Original strict failures retain their actual exit codes.

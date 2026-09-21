@@ -17,13 +17,13 @@
     {
       "id": "P03",
       "original": "Original twelve Lean modules unchanged between V4 and V5",
-      "native": "Single active owner under source/lean; formal driver stages same twelve byte-identical modules, shared gate, toolchain and inventory into fresh external tree.",
+      "native": "One active owner under source/lean; stages the same twelve current native modules byte-for-byte. Five modules are explicitly mapped mechanical derivatives in FORMAL_SOURCE_AMENDMENT; original V4/V5 bytes and their old COPY_EXACT evidence remain unchanged in custody.",
       "verification": "staged identity, missing/changed formal source negatives"
     },
     {
       "id": "P04",
       "original": "183 unit tests in normal and optimised mode",
-      "native": "Original V4 test population and runner retained unchanged. Source verify.py and build_gate unchanged; compact MANIFEST is explicitly a new integration artifact.",
+      "native": "Original 183-test population and source verify.py retained unchanged. Native build_gate has only the reviewed declaration-header parser repair; separately counted integration controls and compact MANIFEST do not alter the original population.",
       "verification": "exact test census in both modes"
     },
     {
@@ -53,7 +53,7 @@
     {
       "id": "P09",
       "original": "Formal version, inventory, build artifacts and per-target axiom audit",
-      "native": "Unchanged V4 strict verifier and V5 standalone build driver in complete staged tree. Exit 2 only genuine tools unavailable in selected environment; wrong/failed compiler is failure.",
+      "native": "Preserved strict V4 runner and V5 standalone driver consume explicitly mapped native source and header parser. Real version/artifact/145+1/axiom checks and exits remain unchanged. Original strict replay retains actual failures; no expected-failure waiver.",
       "verification": "missing/wrong/failed compiler and fake-green controls; no kernel credit"
     },
     {

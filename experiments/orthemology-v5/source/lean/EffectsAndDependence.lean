@@ -141,7 +141,7 @@ def pairTerm (x y : Term) : Term :=
 theorem red_trans {t u v} (h : Red t u) (k : Red u v) : Red t v := by
   induction h with
   | refl => exact k
-  | tail h r ih => exact .tail h ih
+  | tail h r ih => exact .tail h (ih k)
 
 theorem red_conv {t u} (h : Red t u) : Conv t u := by
   induction h with

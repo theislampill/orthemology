@@ -13,19 +13,19 @@ universe r u
 abbrev FullSections := (X : Type r) → GirardFamily (fun Y : Type r => Y) X
 
 structure SCUUAt (O : API.{max (r+1) u}) where
-  at : O.State
+  «at» : O.State
   small : Type r
   packCall : O.Handle (ULift.{max (r+1) u} FullSections.{r})
     (ULift.{max (r+1) u} small)
   unpackCall : O.Handle (ULift.{max (r+1) u} small)
     (ULift.{max (r+1) u} FullSections.{r})
   packTotal : ∀ f : FullSections.{r}, ∃ x : small,
-    O.invoke at packCall ⟨f⟩ = some ⟨x⟩
+    O.invoke «at» packCall ⟨f⟩ = some ⟨x⟩
   unpackTotal : ∀ x : small, ∃ f : FullSections.{r},
-    O.invoke at unpackCall ⟨x⟩ = some ⟨f⟩
+    O.invoke «at» unpackCall ⟨x⟩ = some ⟨f⟩
   returnedBeta : ∀ (f : FullSections.{r}) (x : small),
-    O.invoke at packCall ⟨f⟩ = some ⟨x⟩ →
-    O.invoke at unpackCall ⟨x⟩ = some ⟨f⟩
+    O.invoke «at» packCall ⟨f⟩ = some ⟨x⟩ →
+    O.invoke «at» unpackCall ⟨x⟩ = some ⟨f⟩
 
 /-- Full section abstraction and evaluation are extracted from actual calls;
     none of pack/unpack/beta is a custom foundational axiom. -/

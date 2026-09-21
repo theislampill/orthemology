@@ -44,3 +44,5 @@ Exact original archives/verifiers stay off Git. Local possession is verified; pu
 Retain existing copyright/licence and citation owner decisions. Preserve the covered Apache notice only; publish no private design records, raw chats or bulk archive.
 
 Inherited PDFs remain historical source-commit renderings. Two corrected Markdown sources are not represented by those inherited PDFs; no refreshed PDF readiness claim.
+
+Mapped native formal shadow results and exact original/derived source distinctions are in [FORMAL_SOURCE_AMENDMENT](../provenance/v5-consolidation/FORMAL_SOURCE_AMENDMENT.json). Historical A3F/A3G PARTIAL and all research limitations above are preserved.

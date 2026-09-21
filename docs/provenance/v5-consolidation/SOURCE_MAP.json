@@ -660,9 +660,20 @@
       "source_lineage": "V4",
       "destination_repository_path": "experiments/orthemology-v5/source/build_gate.py",
       "operation": "ADD",
-      "transformation": "COPY_EXACT",
+      "transformation": "DERIVED_NATIVE_MECHANICAL_COMPATIBILITY",
       "public_safety_tier": "ACTIVE_TEST_VERIFICATION_SOURCE",
-      "output_sha256": "ad3f7890057f7e8df3fb17574edf40451583e064e5ad58570181ffb3560593a5"
+      "output_sha256": "04f2bd93ddb595eadbb8b238b9ec279caaff6875f49aac33de3fadbeccff19f3",
+      "historical_A6_selection": {
+        "operation": "ADD",
+        "transformation": "COPY_EXACT",
+        "output_sha256": "ad3f7890057f7e8df3fb17574edf40451583e064e5ad58570181ffb3560593a5",
+        "evidence": "Historical accepted A5/A6 receipt bytes remain unchanged."
+      },
+      "native_amendment": {
+        "id": "A8-INT-005",
+        "record": "FORMAL_SOURCE_AMENDMENT.json",
+        "origin_sha256": "ad3f7890057f7e8df3fb17574edf40451583e064e5ad58570181ffb3560593a5"
+      }
     },
     {
       "source_artifact": "V4",
@@ -6162,8 +6173,17 @@
       "transformation": "NO_REPOSITORY_EFFECT",
       "public_safety_tier": "EXTERNAL_IMMUTABLE_CUSTODY_ITEM",
       "output_sha256": null,
-      "byte_equal_active_destinations": [
+      "byte_equal_active_destinations": [],
+      "historical_A6_byte_equal_destinations": [
         "experiments/orthemology-v5/source/lean/AlmostSureBoundary.lean"
+      ],
+      "derived_active_destinations": [
+        {
+          "path": "experiments/orthemology-v5/source/lean/AlmostSureBoundary.lean",
+          "origin_sha256": "d56d5418e659faa679eb22f6b6150642d2c7e24d9e29d9e4642485c91dd4db26",
+          "derived_sha256": "8485a2156b943ce569af6f219d69d7d24b00b41b04b8225a68d7480d2d70522d",
+          "record": "FORMAL_SOURCE_AMENDMENT.json"
+        }
       ]
     },
     {
@@ -6176,8 +6196,17 @@
       "transformation": "NO_REPOSITORY_EFFECT",
       "public_safety_tier": "EXTERNAL_IMMUTABLE_CUSTODY_ITEM",
       "output_sha256": null,
-      "byte_equal_active_destinations": [
+      "byte_equal_active_destinations": [],
+      "historical_A6_byte_equal_destinations": [
         "experiments/orthemology-v5/source/lean/BoundaryResults.lean"
+      ],
+      "derived_active_destinations": [
+        {
+          "path": "experiments/orthemology-v5/source/lean/BoundaryResults.lean",
+          "origin_sha256": "a947caca5150c2f21cd239d4313c3d8e450e49cb8470fdd721917ec72c0da4ba",
+          "derived_sha256": "cf337cad057a4c2cb93f2c0145f8132368867257c2b0bf7ee32f7be70d29d11c",
+          "record": "FORMAL_SOURCE_AMENDMENT.json"
+        }
       ]
     },
     {
@@ -6190,8 +6219,17 @@
       "transformation": "NO_REPOSITORY_EFFECT",
       "public_safety_tier": "EXTERNAL_IMMUTABLE_CUSTODY_ITEM",
       "output_sha256": null,
-      "byte_equal_active_destinations": [
+      "byte_equal_active_destinations": [],
+      "historical_A6_byte_equal_destinations": [
         "experiments/orthemology-v5/source/lean/EffectsAndDependence.lean"
+      ],
+      "derived_active_destinations": [
+        {
+          "path": "experiments/orthemology-v5/source/lean/EffectsAndDependence.lean",
+          "origin_sha256": "f2df78fcd764749b7d42d6f92eb6c07697877220547a936dac4e3faf5b5e5266",
+          "derived_sha256": "0e3adde9d907e2c0a28afb5087feb42986e2e1fd880682edd70d4b4214790be2",
+          "record": "FORMAL_SOURCE_AMENDMENT.json"
+        }
       ]
     },
     {
@@ -6646,9 +6684,20 @@
       "source_lineage": "V4",
       "destination_repository_path": "experiments/orthemology-v5/source/lean/AlmostSureBoundary.lean",
       "operation": "ADD",
-      "transformation": "COPY_EXACT",
+      "transformation": "DERIVED_NATIVE_MECHANICAL_COMPATIBILITY",
       "public_safety_tier": "ACTIVE_FORMAL_SOURCE",
-      "output_sha256": "d56d5418e659faa679eb22f6b6150642d2c7e24d9e29d9e4642485c91dd4db26"
+      "output_sha256": "8485a2156b943ce569af6f219d69d7d24b00b41b04b8225a68d7480d2d70522d",
+      "historical_A6_selection": {
+        "operation": "ADD",
+        "transformation": "COPY_EXACT",
+        "output_sha256": "d56d5418e659faa679eb22f6b6150642d2c7e24d9e29d9e4642485c91dd4db26",
+        "evidence": "Historical accepted A5/A6 receipt bytes remain unchanged."
+      },
+      "native_amendment": {
+        "id": "A8-INT-005",
+        "record": "FORMAL_SOURCE_AMENDMENT.json",
+        "origin_sha256": "d56d5418e659faa679eb22f6b6150642d2c7e24d9e29d9e4642485c91dd4db26"
+      }
     },
     {
       "source_artifact": "V4",
@@ -6668,9 +6717,20 @@
       "source_lineage": "V4",
       "destination_repository_path": "experiments/orthemology-v5/source/lean/BoundaryResults.lean",
       "operation": "ADD",
-      "transformation": "COPY_EXACT",
+      "transformation": "DERIVED_NATIVE_MECHANICAL_COMPATIBILITY",
       "public_safety_tier": "ACTIVE_FORMAL_SOURCE",
-      "output_sha256": "a947caca5150c2f21cd239d4313c3d8e450e49cb8470fdd721917ec72c0da4ba"
+      "output_sha256": "cf337cad057a4c2cb93f2c0145f8132368867257c2b0bf7ee32f7be70d29d11c",
+      "historical_A6_selection": {
+        "operation": "ADD",
+        "transformation": "COPY_EXACT",
+        "output_sha256": "a947caca5150c2f21cd239d4313c3d8e450e49cb8470fdd721917ec72c0da4ba",
+        "evidence": "Historical accepted A5/A6 receipt bytes remain unchanged."
+      },
+      "native_amendment": {
+        "id": "A8-INT-005",
+        "record": "FORMAL_SOURCE_AMENDMENT.json",
+        "origin_sha256": "a947caca5150c2f21cd239d4313c3d8e450e49cb8470fdd721917ec72c0da4ba"
+      }
     },
     {
       "source_artifact": "V4",
@@ -6679,9 +6739,20 @@
       "source_lineage": "V4",
       "destination_repository_path": "experiments/orthemology-v5/source/lean/EffectsAndDependence.lean",
       "operation": "ADD",
-      "transformation": "COPY_EXACT",
+      "transformation": "DERIVED_NATIVE_MECHANICAL_COMPATIBILITY",
       "public_safety_tier": "ACTIVE_FORMAL_SOURCE",
-      "output_sha256": "f2df78fcd764749b7d42d6f92eb6c07697877220547a936dac4e3faf5b5e5266"
+      "output_sha256": "0e3adde9d907e2c0a28afb5087feb42986e2e1fd880682edd70d4b4214790be2",
+      "historical_A6_selection": {
+        "operation": "ADD",
+        "transformation": "COPY_EXACT",
+        "output_sha256": "f2df78fcd764749b7d42d6f92eb6c07697877220547a936dac4e3faf5b5e5266",
+        "evidence": "Historical accepted A5/A6 receipt bytes remain unchanged."
+      },
+      "native_amendment": {
+        "id": "A8-INT-006",
+        "record": "FORMAL_SOURCE_AMENDMENT.json",
+        "origin_sha256": "f2df78fcd764749b7d42d6f92eb6c07697877220547a936dac4e3faf5b5e5266"
+      }
     },
     {
       "source_artifact": "V4",
@@ -6745,9 +6816,20 @@
       "source_lineage": "V4",
       "destination_repository_path": "experiments/orthemology-v5/source/lean/OperationalBoundary.lean",
       "operation": "ADD",
-      "transformation": "COPY_EXACT",
+      "transformation": "DERIVED_NATIVE_MECHANICAL_COMPATIBILITY",
       "public_safety_tier": "ACTIVE_FORMAL_SOURCE",
-      "output_sha256": "d72ea2871daf63836f72bf87aba02877c3d4a7324ed53bb32b659a30bcb36027"
+      "output_sha256": "d3494436356f8aec5510b004e2a977c9946533f6190219f30eee2de511b53f4e",
+      "historical_A6_selection": {
+        "operation": "ADD",
+        "transformation": "COPY_EXACT",
+        "output_sha256": "d72ea2871daf63836f72bf87aba02877c3d4a7324ed53bb32b659a30bcb36027",
+        "evidence": "Historical accepted A5/A6 receipt bytes remain unchanged."
+      },
+      "native_amendment": {
+        "id": "A8-INT-005",
+        "record": "FORMAL_SOURCE_AMENDMENT.json",
+        "origin_sha256": "d72ea2871daf63836f72bf87aba02877c3d4a7324ed53bb32b659a30bcb36027"
+      }
     },
     {
       "source_artifact": "V4",
@@ -6756,9 +6838,20 @@
       "source_lineage": "V4",
       "destination_repository_path": "experiments/orthemology-v5/source/lean/OperationalKernel.lean",
       "operation": "ADD",
-      "transformation": "COPY_EXACT",
+      "transformation": "DERIVED_NATIVE_MECHANICAL_COMPATIBILITY",
       "public_safety_tier": "ACTIVE_FORMAL_SOURCE",
-      "output_sha256": "f2cf621ac63f6a11ad1c9b79db5a008d7618fca6fc8184a53da0352c54ab352c"
+      "output_sha256": "766ae9391263f193c6e84e16042281fb5e70fe680f083f0359b4b3c10f215779",
+      "historical_A6_selection": {
+        "operation": "ADD",
+        "transformation": "COPY_EXACT",
+        "output_sha256": "f2cf621ac63f6a11ad1c9b79db5a008d7618fca6fc8184a53da0352c54ab352c",
+        "evidence": "Historical accepted A5/A6 receipt bytes remain unchanged."
+      },
+      "native_amendment": {
+        "id": "A8-INT-005",
+        "record": "FORMAL_SOURCE_AMENDMENT.json",
+        "origin_sha256": "f2cf621ac63f6a11ad1c9b79db5a008d7618fca6fc8184a53da0352c54ab352c"
+      }
     },
     {
       "source_artifact": "V4",
@@ -8322,8 +8415,17 @@
       "transformation": "NO_REPOSITORY_EFFECT",
       "public_safety_tier": "COMPACT_PROVENANCE_RECORD",
       "output_sha256": null,
-      "byte_equal_active_destinations": [
+      "byte_equal_active_destinations": [],
+      "historical_A6_byte_equal_destinations": [
         "experiments/orthemology-v5/source/lean/AlmostSureBoundary.lean"
+      ],
+      "derived_active_destinations": [
+        {
+          "path": "experiments/orthemology-v5/source/lean/AlmostSureBoundary.lean",
+          "origin_sha256": "d56d5418e659faa679eb22f6b6150642d2c7e24d9e29d9e4642485c91dd4db26",
+          "derived_sha256": "8485a2156b943ce569af6f219d69d7d24b00b41b04b8225a68d7480d2d70522d",
+          "record": "FORMAL_SOURCE_AMENDMENT.json"
+        }
       ]
     },
     {
@@ -8350,8 +8452,17 @@
       "transformation": "NO_REPOSITORY_EFFECT",
       "public_safety_tier": "COMPACT_PROVENANCE_RECORD",
       "output_sha256": null,
-      "byte_equal_active_destinations": [
+      "byte_equal_active_destinations": [],
+      "historical_A6_byte_equal_destinations": [
         "experiments/orthemology-v5/source/lean/BoundaryResults.lean"
+      ],
+      "derived_active_destinations": [
+        {
+          "path": "experiments/orthemology-v5/source/lean/BoundaryResults.lean",
+          "origin_sha256": "a947caca5150c2f21cd239d4313c3d8e450e49cb8470fdd721917ec72c0da4ba",
+          "derived_sha256": "cf337cad057a4c2cb93f2c0145f8132368867257c2b0bf7ee32f7be70d29d11c",
+          "record": "FORMAL_SOURCE_AMENDMENT.json"
+        }
       ]
     },
     {
@@ -8375,8 +8486,17 @@
       "transformation": "NO_REPOSITORY_EFFECT",
       "public_safety_tier": "COMPACT_PROVENANCE_RECORD",
       "output_sha256": null,
-      "byte_equal_active_destinations": [
+      "byte_equal_active_destinations": [],
+      "historical_A6_byte_equal_destinations": [
         "experiments/orthemology-v5/source/build_gate.py"
+      ],
+      "derived_active_destinations": [
+        {
+          "path": "experiments/orthemology-v5/source/build_gate.py",
+          "origin_sha256": "ad3f7890057f7e8df3fb17574edf40451583e064e5ad58570181ffb3560593a5",
+          "derived_sha256": "04f2bd93ddb595eadbb8b238b9ec279caaff6875f49aac33de3fadbeccff19f3",
+          "record": "FORMAL_SOURCE_AMENDMENT.json"
+        }
       ]
     },
     {
@@ -8400,8 +8520,17 @@
       "transformation": "NO_REPOSITORY_EFFECT",
       "public_safety_tier": "COMPACT_PROVENANCE_RECORD",
       "output_sha256": null,
-      "byte_equal_active_destinations": [
+      "byte_equal_active_destinations": [],
+      "historical_A6_byte_equal_destinations": [
         "experiments/orthemology-v5/source/lean/EffectsAndDependence.lean"
+      ],
+      "derived_active_destinations": [
+        {
+          "path": "experiments/orthemology-v5/source/lean/EffectsAndDependence.lean",
+          "origin_sha256": "f2df78fcd764749b7d42d6f92eb6c07697877220547a936dac4e3faf5b5e5266",
+          "derived_sha256": "0e3adde9d907e2c0a28afb5087feb42986e2e1fd880682edd70d4b4214790be2",
+          "record": "FORMAL_SOURCE_AMENDMENT.json"
+        }
       ]
     },
     {
@@ -8545,8 +8674,17 @@
       "transformation": "NO_REPOSITORY_EFFECT",
       "public_safety_tier": "COMPACT_PROVENANCE_RECORD",
       "output_sha256": null,
-      "byte_equal_active_destinations": [
+      "byte_equal_active_destinations": [],
+      "historical_A6_byte_equal_destinations": [
         "experiments/orthemology-v5/source/lean/OperationalBoundary.lean"
+      ],
+      "derived_active_destinations": [
+        {
+          "path": "experiments/orthemology-v5/source/lean/OperationalBoundary.lean",
+          "origin_sha256": "d72ea2871daf63836f72bf87aba02877c3d4a7324ed53bb32b659a30bcb36027",
+          "derived_sha256": "d3494436356f8aec5510b004e2a977c9946533f6190219f30eee2de511b53f4e",
+          "record": "FORMAL_SOURCE_AMENDMENT.json"
+        }
       ]
     },
     {
@@ -8559,8 +8697,17 @@
       "transformation": "NO_REPOSITORY_EFFECT",
       "public_safety_tier": "COMPACT_PROVENANCE_RECORD",
       "output_sha256": null,
-      "byte_equal_active_destinations": [
+      "byte_equal_active_destinations": [],
+      "historical_A6_byte_equal_destinations": [
         "experiments/orthemology-v5/source/lean/OperationalKernel.lean"
+      ],
+      "derived_active_destinations": [
+        {
+          "path": "experiments/orthemology-v5/source/lean/OperationalKernel.lean",
+          "origin_sha256": "f2cf621ac63f6a11ad1c9b79db5a008d7618fca6fc8184a53da0352c54ab352c",
+          "derived_sha256": "766ae9391263f193c6e84e16042281fb5e70fe680f083f0359b4b3c10f215779",
+          "record": "FORMAL_SOURCE_AMENDMENT.json"
+        }
       ]
     },
     {
@@ -8741,8 +8888,17 @@
       "transformation": "NO_REPOSITORY_EFFECT",
       "public_safety_tier": "COMPACT_PROVENANCE_RECORD",
       "output_sha256": null,
-      "byte_equal_active_destinations": [
+      "byte_equal_active_destinations": [],
+      "historical_A6_byte_equal_destinations": [
         "experiments/orthemology-v5/source/build_gate.py"
+      ],
+      "derived_active_destinations": [
+        {
+          "path": "experiments/orthemology-v5/source/build_gate.py",
+          "origin_sha256": "ad3f7890057f7e8df3fb17574edf40451583e064e5ad58570181ffb3560593a5",
+          "derived_sha256": "04f2bd93ddb595eadbb8b238b9ec279caaff6875f49aac33de3fadbeccff19f3",
+          "record": "FORMAL_SOURCE_AMENDMENT.json"
+        }
       ]
     },
     {
@@ -14297,8 +14453,17 @@
       "transformation": "NO_REPOSITORY_EFFECT",
       "public_safety_tier": "COMPACT_PROVENANCE_RECORD",
       "output_sha256": null,
-      "byte_equal_active_destinations": [
+      "byte_equal_active_destinations": [],
+      "historical_A6_byte_equal_destinations": [
         "experiments/orthemology-v5/source/lean/AlmostSureBoundary.lean"
+      ],
+      "derived_active_destinations": [
+        {
+          "path": "experiments/orthemology-v5/source/lean/AlmostSureBoundary.lean",
+          "origin_sha256": "d56d5418e659faa679eb22f6b6150642d2c7e24d9e29d9e4642485c91dd4db26",
+          "derived_sha256": "8485a2156b943ce569af6f219d69d7d24b00b41b04b8225a68d7480d2d70522d",
+          "record": "FORMAL_SOURCE_AMENDMENT.json"
+        }
       ]
     },
     {
@@ -14311,8 +14476,17 @@
       "transformation": "NO_REPOSITORY_EFFECT",
       "public_safety_tier": "COMPACT_PROVENANCE_RECORD",
       "output_sha256": null,
-      "byte_equal_active_destinations": [
+      "byte_equal_active_destinations": [],
+      "historical_A6_byte_equal_destinations": [
         "experiments/orthemology-v5/source/lean/BoundaryResults.lean"
+      ],
+      "derived_active_destinations": [
+        {
+          "path": "experiments/orthemology-v5/source/lean/BoundaryResults.lean",
+          "origin_sha256": "a947caca5150c2f21cd239d4313c3d8e450e49cb8470fdd721917ec72c0da4ba",
+          "derived_sha256": "cf337cad057a4c2cb93f2c0145f8132368867257c2b0bf7ee32f7be70d29d11c",
+          "record": "FORMAL_SOURCE_AMENDMENT.json"
+        }
       ]
     },
     {
@@ -14325,8 +14499,17 @@
       "transformation": "NO_REPOSITORY_EFFECT",
       "public_safety_tier": "COMPACT_PROVENANCE_RECORD",
       "output_sha256": null,
-      "byte_equal_active_destinations": [
+      "byte_equal_active_destinations": [],
+      "historical_A6_byte_equal_destinations": [
         "experiments/orthemology-v5/source/lean/EffectsAndDependence.lean"
+      ],
+      "derived_active_destinations": [
+        {
+          "path": "experiments/orthemology-v5/source/lean/EffectsAndDependence.lean",
+          "origin_sha256": "f2df78fcd764749b7d42d6f92eb6c07697877220547a936dac4e3faf5b5e5266",
+          "derived_sha256": "0e3adde9d907e2c0a28afb5087feb42986e2e1fd880682edd70d4b4214790be2",
+          "record": "FORMAL_SOURCE_AMENDMENT.json"
+        }
       ]
     },
     {
@@ -14787,8 +14970,17 @@
       "transformation": "NO_REPOSITORY_EFFECT",
       "public_safety_tier": "COMPACT_PROVENANCE_RECORD",
       "output_sha256": null,
-      "byte_equal_active_destinations": [
+      "byte_equal_active_destinations": [],
+      "historical_A6_byte_equal_destinations": [
         "experiments/orthemology-v5/source/lean/AlmostSureBoundary.lean"
+      ],
+      "derived_active_destinations": [
+        {
+          "path": "experiments/orthemology-v5/source/lean/AlmostSureBoundary.lean",
+          "origin_sha256": "d56d5418e659faa679eb22f6b6150642d2c7e24d9e29d9e4642485c91dd4db26",
+          "derived_sha256": "8485a2156b943ce569af6f219d69d7d24b00b41b04b8225a68d7480d2d70522d",
+          "record": "FORMAL_SOURCE_AMENDMENT.json"
+        }
       ]
     },
     {
@@ -14815,8 +15007,17 @@
       "transformation": "NO_REPOSITORY_EFFECT",
       "public_safety_tier": "COMPACT_PROVENANCE_RECORD",
       "output_sha256": null,
-      "byte_equal_active_destinations": [
+      "byte_equal_active_destinations": [],
+      "historical_A6_byte_equal_destinations": [
         "experiments/orthemology-v5/source/lean/BoundaryResults.lean"
+      ],
+      "derived_active_destinations": [
+        {
+          "path": "experiments/orthemology-v5/source/lean/BoundaryResults.lean",
+          "origin_sha256": "a947caca5150c2f21cd239d4313c3d8e450e49cb8470fdd721917ec72c0da4ba",
+          "derived_sha256": "cf337cad057a4c2cb93f2c0145f8132368867257c2b0bf7ee32f7be70d29d11c",
+          "record": "FORMAL_SOURCE_AMENDMENT.json"
+        }
       ]
     },
     {
@@ -14829,8 +15030,17 @@
       "transformation": "NO_REPOSITORY_EFFECT",
       "public_safety_tier": "COMPACT_PROVENANCE_RECORD",
       "output_sha256": null,
-      "byte_equal_active_destinations": [
+      "byte_equal_active_destinations": [],
+      "historical_A6_byte_equal_destinations": [
         "experiments/orthemology-v5/source/lean/EffectsAndDependence.lean"
+      ],
+      "derived_active_destinations": [
+        {
+          "path": "experiments/orthemology-v5/source/lean/EffectsAndDependence.lean",
+          "origin_sha256": "f2df78fcd764749b7d42d6f92eb6c07697877220547a936dac4e3faf5b5e5266",
+          "derived_sha256": "0e3adde9d907e2c0a28afb5087feb42986e2e1fd880682edd70d4b4214790be2",
+          "record": "FORMAL_SOURCE_AMENDMENT.json"
+        }
       ]
     },
     {
@@ -14913,8 +15123,17 @@
       "transformation": "NO_REPOSITORY_EFFECT",
       "public_safety_tier": "COMPACT_PROVENANCE_RECORD",
       "output_sha256": null,
-      "byte_equal_active_destinations": [
+      "byte_equal_active_destinations": [],
+      "historical_A6_byte_equal_destinations": [
         "experiments/orthemology-v5/source/lean/OperationalBoundary.lean"
+      ],
+      "derived_active_destinations": [
+        {
+          "path": "experiments/orthemology-v5/source/lean/OperationalBoundary.lean",
+          "origin_sha256": "d72ea2871daf63836f72bf87aba02877c3d4a7324ed53bb32b659a30bcb36027",
+          "derived_sha256": "d3494436356f8aec5510b004e2a977c9946533f6190219f30eee2de511b53f4e",
+          "record": "FORMAL_SOURCE_AMENDMENT.json"
+        }
       ]
     },
     {
@@ -14927,8 +15146,17 @@
       "transformation": "NO_REPOSITORY_EFFECT",
       "public_safety_tier": "COMPACT_PROVENANCE_RECORD",
       "output_sha256": null,
-      "byte_equal_active_destinations": [
+      "byte_equal_active_destinations": [],
+      "historical_A6_byte_equal_destinations": [
         "experiments/orthemology-v5/source/lean/OperationalKernel.lean"
+      ],
+      "derived_active_destinations": [
+        {
+          "path": "experiments/orthemology-v5/source/lean/OperationalKernel.lean",
+          "origin_sha256": "f2cf621ac63f6a11ad1c9b79db5a008d7618fca6fc8184a53da0352c54ab352c",
+          "derived_sha256": "766ae9391263f193c6e84e16042281fb5e70fe680f083f0359b4b3c10f215779",
+          "record": "FORMAL_SOURCE_AMENDMENT.json"
+        }
       ]
     },
     {

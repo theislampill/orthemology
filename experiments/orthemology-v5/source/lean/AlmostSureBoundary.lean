@@ -50,9 +50,9 @@ theorem no_atomless_full_intersection {X : Type u}
     (Full : (X → Prop) → Prop)
     (mono : ∀ P Q : X → Prop, (∀ x, P x → Q x) → Full P → Full Q)
     (noFalse : ¬ Full (fun _ => False))
-    (omit : ∀ x, Full (fun y => y ≠ x)) : ¬ CompleteFull Full := by
+    (omitPoint : ∀ x, Full (fun y => y ≠ x)) : ¬ CompleteFull Full := by
   intro h
-  have all := h X (fun x y => y ≠ x) omit
+  have all := h X (fun x y => y ≠ x) omitPoint
   apply noFalse
   exact mono (fun y => ∀ x, y ≠ x) (fun _ => False)
     (fun y hy => hy y rfl) all

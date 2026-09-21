@@ -88,7 +88,8 @@ theorem replace_free {t : Term} (h : MarkerFree t) (x y : Term) :
   | zero => exact False.elim h
   | one => exact False.elim h
   | app f a ihf iha =>
-      exact congrArg₂ Term.app (ihf h.1) (iha h.2)
+      change Term.app (replaceMarkers x y f) (replaceMarkers x y a) = Term.app f a
+      exact congr (congrArg Term.app (ihf h.1)) (iha h.2)
 
 theorem step_replace {t u} (h : Step t u) (x y : Term) :
     Step (replaceMarkers x y t) (replaceMarkers x y u) := by

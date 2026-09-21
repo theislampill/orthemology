@@ -1,0 +1,103 @@
+{
+  "schema": "orthemology-derived-native-formal-source-v1",
+  "scope": "BOUNDED_MECHANICAL_NATIVE_DERIVATIVES",
+  "origin_candidate_head": "63b91d8b9f55e4e9262f6f39f5b55d2d42336b02",
+  "origin_candidate_tree": "3bc120ff7579a2cd0f9b2e9688ac1f32958f7444",
+  "owner_adjudication_sha256": "583a02f77ac799bacabb98b476ec1638429f7697cedb97e36fc11db3b8ce1690",
+  "owner_extension": "Finite SCUUAt identifier/replace_free elaboration extension and bounded subsequent engineering defects; no new mathematics or claim change.",
+  "historical_blocked_predecessor_sha256": "bb834d2aee57be8c162d8f8384ce0f41da77dd5c48987eccd157ea83c56d5055",
+  "sources": [
+    {
+      "path": "experiments/orthemology-v5/source/lean/AlmostSureBoundary.lean",
+      "origin_sha256": "d56d5418e659faa679eb22f6b6150642d2c7e24d9e29d9e4642485c91dd4db26",
+      "origin_bytes": 3224,
+      "derived_sha256": "8485a2156b943ce569af6f219d69d7d24b00b41b04b8225a68d7480d2d70522d",
+      "derived_bytes": 3234,
+      "amendment": "A8-INT-005"
+    },
+    {
+      "path": "experiments/orthemology-v5/source/lean/BoundaryResults.lean",
+      "origin_sha256": "a947caca5150c2f21cd239d4313c3d8e450e49cb8470fdd721917ec72c0da4ba",
+      "origin_bytes": 8493,
+      "derived_sha256": "cf337cad057a4c2cb93f2c0145f8132368867257c2b0bf7ee32f7be70d29d11c",
+      "derived_bytes": 8581,
+      "amendment": "A8-INT-005"
+    },
+    {
+      "path": "experiments/orthemology-v5/source/lean/OperationalKernel.lean",
+      "origin_sha256": "f2cf621ac63f6a11ad1c9b79db5a008d7618fca6fc8184a53da0352c54ab352c",
+      "origin_bytes": 8753,
+      "derived_sha256": "766ae9391263f193c6e84e16042281fb5e70fe680f083f0359b4b3c10f215779",
+      "derived_bytes": 8778,
+      "amendment": "A8-INT-005"
+    },
+    {
+      "path": "experiments/orthemology-v5/source/lean/OperationalBoundary.lean",
+      "origin_sha256": "d72ea2871daf63836f72bf87aba02877c3d4a7324ed53bb32b659a30bcb36027",
+      "origin_bytes": 2579,
+      "derived_sha256": "d3494436356f8aec5510b004e2a977c9946533f6190219f30eee2de511b53f4e",
+      "derived_bytes": 2599,
+      "amendment": "A8-INT-005"
+    },
+    {
+      "path": "experiments/orthemology-v5/source/lean/EffectsAndDependence.lean",
+      "origin_sha256": "f2df78fcd764749b7d42d6f92eb6c07697877220547a936dac4e3faf5b5e5266",
+      "origin_bytes": 8703,
+      "derived_sha256": "0e3adde9d907e2c0a28afb5087feb42986e2e1fd880682edd70d4b4214790be2",
+      "derived_bytes": 8707,
+      "amendment": "A8-INT-006"
+    },
+    {
+      "path": "experiments/orthemology-v5/source/build_gate.py",
+      "origin_sha256": "ad3f7890057f7e8df3fb17574edf40451583e064e5ad58570181ffb3560593a5",
+      "origin_bytes": 12225,
+      "derived_sha256": "04f2bd93ddb595eadbb8b238b9ec279caaff6875f49aac33de3fadbeccff19f3",
+      "derived_bytes": 14955,
+      "amendment": "A8-INT-005"
+    }
+  ],
+  "declarations": [
+    "OrthemologyV3.no_atomless_full_intersection",
+    "OrthemologyV3.replace_free",
+    "OrthemologyV4.ticket_good",
+    "OrthemologyV4.all_open_execute",
+    "OrthemologyV4.SCUUAt",
+    "OrthemologyV3.red_trans"
+  ],
+  "transformations": [
+    "Alpha-rename local omit binder and its reference.",
+    "Expose definitionally equal existing application goal; use pinned congr/congrArg and unchanged induction hypotheses.",
+    "Expose existing list composition/identity and ticket projection.",
+    "Quote field at and its four in-structure references; unquoting recovers exact original source.",
+    "Apply existing red_trans induction hypothesis to existing k; no additional premise/case.",
+    "Parse exact real declaration binder headers; retain every enclosing compiler/version/artifact/target/axiom/exit gate."
+  ],
+  "original_packet_replay": "UNCHANGED_ORIGINALS_REQUIRED; genuine original strict FAIL remains FAIL.",
+  "standalone_shadow_result": {
+    "status": "KERNEL_AND_INVENTORY_PASS",
+    "targets": 146,
+    "Lean": "4.19.0 / 6caaee842e94",
+    "Lake": "5.0.0-6caaee8",
+    "Mathlib": "c44e0c8ee63ca166450922a373c7409c5d26b00b",
+    "axiom_union": [
+      "Classical.choice",
+      "Quot.sound",
+      "propext"
+    ],
+    "receipt_sha256": "3b90082f4636a71b63066033db3641f8330bd49cce2b33a89797014955182d0f",
+    "binding": "Exact six source postimage hashes above; complete standalone and native wrapper pass with unchanged source. Final tree binding remains a separate closure control."
+  },
+  "baseline_145_result": {
+    "status": "REFERENCE_AND_REQUIRED_FORMAL_TARGETS_PASS",
+    "targets": 145,
+    "receipt_sha256": "a8387ecf9048bbb8cbc9690debcece994ff3c1e41baba6f167615f181d949f36",
+    "ELAN_TOOLCHAIN": "leanprover/lean4:v4.19.0",
+    "scope": "Mapped native shadow; no A8 credit and no original-wrapper status change."
+  },
+  "DAG_credit": false,
+  "A3F_historical": "PARTIAL",
+  "A3G_historical": "PARTIAL",
+  "novelty": "UNESTABLISHED",
+  "public_original_packet_recovery": "UNCONFIRMED",
+  "rollback": "Append reviewed source/metadata revert and regenerate exhaustive owners; preserve all earlier heads. No force-push or main effect."
+}

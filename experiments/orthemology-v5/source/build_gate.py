@@ -82,6 +82,78 @@ def check_artifact(path: Path) -> dict:
     if d['bytes']==0:raise GateError('empty compiled artifact: '+str(path))
     return d
 
+def _has_declaration_header(text: str, name: str) -> bool:
+    """Recognise one real #check header before its exact axiom readback.
+
+    Binder colons are not the outer type colon. Keep raw text unchanged; the
+    enclosing compiler and existing axiom/coverage checks remain mandatory.
+    """
+    escaped = re.escape(name)
+    axiom = re.compile(
+        r"^(?:'" + escaped + r"'|`" + escaped + r"`|" + escaped + r") "
+        r"(?:depends on axioms:\s*\[[^\]]*\]|does not depend on any axioms)[ \t]*$",
+        re.M,
+    )
+    records = list(axiom.finditer(text))
+    if len(records) != 1 or text[records[0].end():].strip():
+        return False
+    header = text[:records[0].start()].rstrip()
+    if not header.startswith(name):
+        return False
+    # A second top-level record is not a continuation of a pretty-printed type.
+    if any(line and not line[0].isspace() for line in header.splitlines()[1:]):
+        return False
+    if 'depends on axioms:' in header or 'does not depend on any axioms' in header:
+        return False
+    if re.search(r'^[ \t]+' + escaped + r'(?=\s|:|\.\{)', header, re.M):
+        return False
+    index = len(name)
+    if header[index:index + 2] == '.{':
+        universe = re.match(r"\.\{[A-Za-z_][A-Za-z0-9_']*(?:,\s*[A-Za-z_][A-Za-z0-9_']*)*\}", header[index:])
+        if universe is None:
+            return False
+        index += universe.end()
+    if index < len(header) and not (header[index].isspace() or header[index] == ':'):
+        return False
+    pairs = {'(': ')', '{': '}', '[': ']', '⦃': '⦄'}
+    while index < len(header):
+        while index < len(header) and header[index].isspace():
+            index += 1
+        if index == len(header):
+            return False
+        if header[index] == ':':
+            return bool(header[index + 1:].strip())
+        if header[index] not in pairs:
+            return False
+        stack = [pairs[header[index]]]
+        index += 1
+        quoted = None
+        escaped_string = False
+        while stack and index < len(header):
+            char = header[index]
+            index += 1
+            if quoted:
+                if escaped_string:
+                    escaped_string = False
+                elif ord(char) == 92 and quoted == '"':
+                    escaped_string = True
+                elif char == quoted:
+                    quoted = None
+                continue
+            if char == '"':
+                quoted = '"'
+            elif char == '«':
+                quoted = '»'
+            elif char in pairs:
+                stack.append(pairs[char])
+            elif char in pairs.values():
+                if char != stack.pop():
+                    return False
+        if stack or quoted:
+            return False
+    return False
+
+
 def parse_audit(output: str, targets: list[str]) -> dict:
     """Exact per-declaration types AND transitive axiom readback are mandatory.
 
@@ -96,7 +168,7 @@ def parse_audit(output: str, targets: list[str]) -> dict:
     result={}
     for name,text in blocks:
         # #check prints a universe suffix when pp.universes is enabled.
-        if re.search(r'^'+re.escape(name)+r'(?:\.\{[^}]*\})?\s*:',text,re.M) is None:raise GateError('missing declaration type: '+name)
+        if not _has_declaration_header(text, name):raise GateError('missing declaration type: '+name)
         dep=re.findall(r"['`]?"+re.escape(name)+r"['`]? depends on axioms:\s*\[([^\]]*)\]",text,re.S)
         empty=re.findall(r"['`]?"+re.escape(name)+r"['`]? does not depend on any axioms",text)
         if len(dep)+len(empty)!=1:raise GateError('missing/ambiguous axiom target: '+name)

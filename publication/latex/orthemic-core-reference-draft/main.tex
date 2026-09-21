@@ -2,7 +2,7 @@
 % source: theory/orthemic-core-formalization.md
 % source-sha256: 1be1009438c3abd7c73670218e18d7564e97ff76948bb03f503cfa7bd38fe13d
 % source: theory/orthemic-multi-actor-conflict-note.md
-% source-sha256: aa7b1378b1f1983c3ec406fb2533a68c6242881c2d04bf34470632b37359d7b9
+% source-sha256: 4f00ce4cb26c7a6c884df598c8832fd72b11bc3a35dc287b62ea64d181fa8ff6
 % source-qualification: research-stage-draft
 % source-qualification: not-peer-reviewed
 % source-qualification: not-externally-peer-reviewed
@@ -842,7 +842,7 @@ Define, informally, $\operatorname{depth}(e)$ as the executor's grasp of the gov
 \section*{2. Category conflations corrected}
 \textbf{C1 — ``Player A's ortheme: the state where my utility is maximized.''} That is not an ortheme; it is an OBJECTIVE rendered as a state description. An ortheme is a repeatable state-type of the occurrence (``White checkmates Black'' IS one). The repair: player A's \emph{target profile set} $\mathcal{G}_{\alpha,A_\alpha} \subseteq \Pi_{A_\alpha}$ is the set of terminal profiles that satisfy that player's task — the states are orthemes; ``maximize my utility'' is the task that SELECTS them. Utility/objective/loss are external parameters (core-formalization §3), never orthemes and never metaorthemes.
 
-\textbf{C2 — ``their orthemes are completely identical in structure.''} Isomorphism is not identity. The goal SCHEMA ``win-for-me'' is invariant under the role substitution φ(α→β); the EXTENSIONS differ: φ maps ``White checkmates Black'' to ``Black checkmates White.'' Two consequences the source notes blur: (i) nothing is ``the same ortheme'' here — the schemas are isomorphic, the target profiles disjoint; (ii) the interesting fact is precisely that φ exists and 𝒢\_\{β,A\_β\} = φ(𝒢\_\{α,A\_α\}) while 𝒢\_\{α,A\_α\} ∩ 𝒢\_\{β,A\_β\} = ∅.
+\textbf{C2 — ``their orthemes are completely identical in structure.''} Isomorphism is not identity. The goal SCHEMA ``win-for-me'' is invariant under the role substitution φ(α→β); the EXTENSIONS differ: φ maps ``White checkmates Black'' to ``Black checkmates White.'' Two consequences the source notes blur: (i) nothing is ``the same ortheme'' here — the schemas are isomorphic, the target profiles disjoint; (ii) the interesting fact is precisely that φ exists and 𝒢\_\{β,A\_β\} = φ(𝒢\_\{α,A\_α\}) while the compatible-occurrence set for the two win-targets is empty: there is no reachable shared occurrence m′ satisfying both O*(m′; A\_α) ∈ 𝒢\_\{α,A\_α\} and O*(m′; A\_β) ∈ 𝒢\_\{β,A\_β\}. The two profile spaces are not intersected directly.
 
 \textbf{C3 — ``the metaortheme = the rules of the game + the logic of minimax.''} Three different things, none of them a metaortheme:
 
@@ -883,7 +883,7 @@ Already expressible with existing machinery: episodes carry actor α and declare
 \needspace{3\baselineskip}\item $\operatorname{Conflict}_m(\mathcal{G}_\alpha, \mathcal{G}_\beta)$ — no such reachable $m'$ exists (cooperation: shared analysis $+$ shared target set, or an explicit alignment map $\phi(\alpha \to \beta)$).
 
 \end{itemize}
-\textbf{Three distinct relations the parametric schema untangles:} (i) SCHEMA identity — players A and B run the same parametric form $\operatorname{GoalSchema}(\cdot)$; this is the true content of the source notes' ``locally identical'' intuition; (ii) GROUNDED-ORTHEME identity — $\operatorname{GoalSchema}(\alpha)$ and $\operatorname{GoalSchema}(\beta)$ are DISTINCT grounded targets, never identical in a strictly competitive task; (iii) TARGET-PROFILE overlap — $\mathcal{G}_\alpha \cap \mathcal{G}_\beta$ may be empty (zero-sum win-sets), partial, or total (cooperation). Local similarity is (i); material exclusivity is emptiness at (iii); no level asserts identity of the players' orthemes.
+\textbf{Three distinct relations the parametric schema untangles:} (i) SCHEMA identity — players A and B run the same parametric form $\operatorname{GoalSchema}(\cdot)$; this is the true content of the source notes' ``locally identical'' intuition; (ii) GROUNDED-ORTHEME identity — $\operatorname{GoalSchema}(\alpha)$ and $\operatorname{GoalSchema}(\beta)$ are DISTINCT grounded targets, never identical in a strictly competitive task; (iii) COMPATIBLE-OCCURRENCE overlap — pull each target profile set back along its own map $m\prime \mapsto O^*(m\prime; A_\alpha)$ or $m\prime \mapsto O^*(m\prime; A_\beta)$ to the common reachable-occurrence domain. The intersection of these pullbacks may be empty (opposed win-targets), partial, or total (cooperation). Local similarity is (i); material exclusivity is emptiness at (iii); no level asserts identity of the players' orthemes.
 
 \textbf{The limited sense in which competitors DO share a metaorthemic configuration:} both players may consult the SAME governing distinctions — terminality (decided vs live position), evidence-validity for reading the opponent's information state, analysis-sufficiency before moving. Sharing those configurations while holding opposed targets is exactly the configuration-vs-task separation: metaorthemes govern HOW placements are made and validated, never WHOSE target wins.
 

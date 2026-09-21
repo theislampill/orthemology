@@ -103,7 +103,7 @@ theorem execution_implies_checked {A B : Type u} (g : Context) (l : Licence A B)
 theorem ticket_good {A B : Type u} (g : Context) (p : Plan A B)
     (allowed : ∀ k ∈ dependencies p, (g k).enabled = true) : Good g (ticket g p) := by
   constructor
-  · simp [ticket, List.map_map]
+  · simp [ticket, List.map_map, Function.comp_def]
   · intro x hx
     obtain ⟨k,hk,rfl⟩ := List.mem_map.mp hx
     exact ⟨allowed k hk,rfl⟩
@@ -115,6 +115,7 @@ theorem all_open_checked {A B : Type u} (p : Plan A B) :
 theorem all_open_execute {A B : Type u} (p : Plan A B) (x : A) :
     execute openContext (ticket openContext p) x = some (evaluate p x) := by
   simp [execute, all_open_checked]
+  rfl
 
 def Agree (g h : Context) (ks : List Nat) : Prop := ∀ k ∈ ks, g k = h k
 

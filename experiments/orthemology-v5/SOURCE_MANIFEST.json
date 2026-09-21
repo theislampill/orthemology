@@ -34,13 +34,18 @@
     },
     {
       "path": "docs/architecture/V5-INTEGRATION-GUIDE.md",
-      "bytes": 4380,
-      "sha256": "2dcf1caed68c39b0c606c5c46185d7487191e87efabeb6fce8459c705cf9e570"
+      "bytes": 4636,
+      "sha256": "046672e3c7f2bc4518369593326753290c70651d895c295ad58c6b6a8e66caf7"
     },
     {
       "path": "docs/provenance/v5-consolidation/CRITICISM_INDEX.md",
       "bytes": 8151,
       "sha256": "49c8d8d7aeaa19cf233d60c9985259db6b263232cf0d84cee820f8c4885627f7"
+    },
+    {
+      "path": "docs/provenance/v5-consolidation/FORMAL_SOURCE_AMENDMENT.json",
+      "bytes": 5012,
+      "sha256": "4bd2aab598af83edd1b873a7bb39aafd1d7c642267804d41a92da0fcfbec2228"
     },
     {
       "path": "docs/provenance/v5-consolidation/HISTORICAL_DISPOSITIONS.json",
@@ -54,18 +59,18 @@
     },
     {
       "path": "docs/provenance/v5-consolidation/README.md",
-      "bytes": 1796,
-      "sha256": "f3ac55a9bb8f57671b5d14fab6824b7e014dd76c3ed8b89103752600120e125f"
+      "bytes": 2308,
+      "sha256": "b70ca21a786f3197b45a0842ab5c58b824fc1239693b2fc12dca0c0bcf53697b"
     },
     {
       "path": "docs/provenance/v5-consolidation/SOURCE_MAP.json",
-      "bytes": 682682,
-      "sha256": "52cf5252b0268762fa36f496531d4dbd39c8957a02037e23f369169a31b7cb7b"
+      "bytes": 693784,
+      "sha256": "a7021af8e1fb03119f95eb9e929ade82b788a617c019560e64cc902b1b608164"
     },
     {
       "path": "docs/provenance/v5-consolidation/STATUS.json",
-      "bytes": 1017,
-      "sha256": "54107d4bd7b355d5028752cc16f48330a62726a5d588031c68dc5e698578538c"
+      "bytes": 1543,
+      "sha256": "a537cd0695720062cbe586b70d2c6d8e5c93ff08bbf1788a4243b9bbd8bc1481"
     },
     {
       "path": "docs/provenance/v5-consolidation/THEOREM_INDEX.md",
@@ -74,8 +79,8 @@
     },
     {
       "path": "docs/provenance/v5-consolidation/VERIFIER_PARITY.json",
-      "bytes": 4468,
-      "sha256": "94c8bd3643d27b5efc6a6fddd94f5ed3fc321714520a6bdf0ab45b79d656d9df"
+      "bytes": 4732,
+      "sha256": "c21165534a1de41d5dd79d82a628ad7f16b6af8402b046c622f5cfb3ddecc4b3"
     },
     {
       "path": "docs/provenance/v5-consolidation/reconciliation/CANONICAL_CONCEPT_OWNERS.json",
@@ -149,8 +154,8 @@
     },
     {
       "path": "experiments/orthemology-v5/README.md",
-      "bytes": 2039,
-      "sha256": "e27cb8439f4585b73454c989dcdd2922b1114184142738b8ee9d4e21001320fc"
+      "bytes": 2429,
+      "sha256": "99fe6941d945091a2fa072ac91b7f15a9a6a20ef62431285d768d011edc537b5"
     },
     {
       "path": "experiments/orthemology-v5/REMAINING_OBLIGATIONS.md",
@@ -260,7 +265,7 @@
     {
       "path": "experiments/orthemology-v5/source/MANIFEST.json",
       "bytes": 11449,
-      "sha256": "d7096bf52bed699cffb68de78dac8f79bdd97ef245bc9717e7bed191b0287854"
+      "sha256": "1c023ff46192fea6d281630e2f958585c345c37b452d6a28caa6e12aaf3e2789"
     },
     {
       "path": "experiments/orthemology-v5/source/OPERATIONAL_CONTRACT.md",
@@ -304,8 +309,8 @@
     },
     {
       "path": "experiments/orthemology-v5/source/build_gate.py",
-      "bytes": 12225,
-      "sha256": "ad3f7890057f7e8df3fb17574edf40451583e064e5ad58570181ffb3560593a5"
+      "bytes": 14955,
+      "sha256": "04f2bd93ddb595eadbb8b238b9ec279caaff6875f49aac33de3fadbeccff19f3"
     },
     {
       "path": "experiments/orthemology-v5/source/census.py",
@@ -399,8 +404,8 @@
     },
     {
       "path": "experiments/orthemology-v5/source/lean/AlmostSureBoundary.lean",
-      "bytes": 3224,
-      "sha256": "d56d5418e659faa679eb22f6b6150642d2c7e24d9e29d9e4642485c91dd4db26"
+      "bytes": 3234,
+      "sha256": "8485a2156b943ce569af6f219d69d7d24b00b41b04b8225a68d7480d2d70522d"
     },
     {
       "path": "experiments/orthemology-v5/source/lean/AuditSupport.lean",
@@ -409,13 +414,13 @@
     },
     {
       "path": "experiments/orthemology-v5/source/lean/BoundaryResults.lean",
-      "bytes": 8493,
-      "sha256": "a947caca5150c2f21cd239d4313c3d8e450e49cb8470fdd721917ec72c0da4ba"
+      "bytes": 8581,
+      "sha256": "cf337cad057a4c2cb93f2c0145f8132368867257c2b0bf7ee32f7be70d29d11c"
     },
     {
       "path": "experiments/orthemology-v5/source/lean/EffectsAndDependence.lean",
-      "bytes": 8703,
-      "sha256": "f2df78fcd764749b7d42d6f92eb6c07697877220547a936dac4e3faf5b5e5266"
+      "bytes": 8707,
+      "sha256": "0e3adde9d907e2c0a28afb5087feb42986e2e1fd880682edd70d4b4214790be2"
     },
     {
       "path": "experiments/orthemology-v5/source/lean/FiniteBridge.lean",
@@ -444,13 +449,13 @@
     },
     {
       "path": "experiments/orthemology-v5/source/lean/OperationalBoundary.lean",
-      "bytes": 2579,
-      "sha256": "d72ea2871daf63836f72bf87aba02877c3d4a7324ed53bb32b659a30bcb36027"
+      "bytes": 2599,
+      "sha256": "d3494436356f8aec5510b004e2a977c9946533f6190219f30eee2de511b53f4e"
     },
     {
       "path": "experiments/orthemology-v5/source/lean/OperationalKernel.lean",
-      "bytes": 8753,
-      "sha256": "f2cf621ac63f6a11ad1c9b79db5a008d7618fca6fc8184a53da0352c54ab352c"
+      "bytes": 8778,
+      "sha256": "766ae9391263f193c6e84e16042281fb5e70fe680f083f0359b4b3c10f215779"
     },
     {
       "path": "experiments/orthemology-v5/source/lean/RelationalFragment.lean",
@@ -596,6 +601,16 @@
       "path": "experiments/orthemology-v5/source/verify.py",
       "bytes": 7722,
       "sha256": "318c67e2f874a9e1e951fed9aed4a9ab0a1de55670e53c78c403810d6932b87e"
+    },
+    {
+      "path": "experiments/orthemology-v5/tests/test_formal_audit_parser.py",
+      "bytes": 54245,
+      "sha256": "fc570da794804e7517a20e4849e72d433dcd42948370b7b7ae856fac434e78e5"
+    },
+    {
+      "path": "experiments/orthemology-v5/tests/test_formal_source_amendment.py",
+      "bytes": 6398,
+      "sha256": "436dae818f31a77cac466fe2e972059aad2a13161b9ffd7ad8bba0af0b025224"
     },
     {
       "path": "experiments/orthemology-v5/tests/test_repository_integration.py",
