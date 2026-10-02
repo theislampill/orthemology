@@ -1,0 +1,430 @@
+{
+  "id": "d6f6fa5be514-policy-embedding",
+  "origin": "d6f6fa5be51464c0aef8e06f0ab0433fc0b375ccf57f855a95e6fb8a55a14ade",
+  "descriptor_source_id": "src-d6f6fa5be51464c0-85c042fef1d85c5a",
+  "modules": [
+    {
+      "module": "GenericFiniteQueryLocality",
+      "source_id": "src-d6f6fa5be51464c0-7884859285f75163",
+      "imports": [
+        "Mathlib"
+      ]
+    },
+    {
+      "module": "GenericFiniteQueryMeasure",
+      "source_id": "src-d6f6fa5be51464c0-1c2d85f82603b3ed",
+      "imports": [
+        "GenericFiniteQueryLocality",
+        "Mathlib.Probability.ProductMeasure"
+      ]
+    },
+    {
+      "module": "GenericQueryReference",
+      "source_id": "src-d6f6fa5be51464c0-a9344d610efb134e",
+      "imports": [
+        "GenericFiniteQueryMeasure"
+      ]
+    },
+    {
+      "module": "PolicyRowEvaluator",
+      "source_id": "src-d6f6fa5be51464c0-a58b16f7f1bc891a",
+      "imports": [
+        "GenericFiniteQueryMeasure"
+      ]
+    },
+    {
+      "module": "PolicyTranscriptFiber",
+      "source_id": "src-d6f6fa5be51464c0-50fe74b821449ed4",
+      "imports": [
+        "PolicyRowEvaluator"
+      ]
+    },
+    {
+      "module": "PolicyRowLaw",
+      "source_id": "src-d6f6fa5be51464c0-08795c471109fb40",
+      "imports": [
+        "GenericQueryReference"
+      ]
+    }
+  ],
+  "module_order": [
+    "GenericFiniteQueryLocality",
+    "GenericFiniteQueryMeasure",
+    "GenericQueryReference",
+    "PolicyRowEvaluator",
+    "PolicyTranscriptFiber",
+    "PolicyRowLaw"
+  ],
+  "targets": [
+    {
+      "name": "Orthemology.Tranche2.FiniteAlphabetQuery.advance",
+      "module": "GenericFiniteQueryLocality"
+    },
+    {
+      "name": "Orthemology.Tranche2.FiniteAlphabetQuery.run",
+      "module": "GenericFiniteQueryLocality"
+    },
+    {
+      "name": "Orthemology.Tranche2.FiniteAlphabetQuery.Bounded",
+      "module": "GenericFiniteQueryLocality"
+    },
+    {
+      "name": "Orthemology.Tranche2.FiniteAlphabetQuery.bounded_prefix_locality",
+      "module": "GenericFiniteQueryLocality"
+    },
+    {
+      "name": "Orthemology.Tranche2.FiniteAlphabetQuery.bounded_prefix_equivalence",
+      "module": "GenericFiniteQueryLocality"
+    },
+    {
+      "name": "Orthemology.Tranche2.FiniteAlphabetQuery.prefixOracle",
+      "module": "GenericFiniteQueryLocality"
+    },
+    {
+      "name": "Orthemology.Tranche2.FiniteAlphabetQuery.prefixOracle_agrees",
+      "module": "GenericFiniteQueryLocality"
+    },
+    {
+      "name": "Orthemology.Tranche2.FiniteAlphabetQuery.bounded_trace_factorisation",
+      "module": "GenericFiniteQueryLocality"
+    },
+    {
+      "name": "Orthemology.Tranche2.FiniteAlphabetQuery.counter_monotone",
+      "module": "GenericFiniteQueryLocality"
+    },
+    {
+      "name": "Orthemology.Tranche2.FiniteAlphabetQuery.bounded_iff_eventually_no_query",
+      "module": "GenericFiniteQueryLocality"
+    },
+    {
+      "name": "Orthemology.Tranche2.FiniteAlphabetQuery.Oracle",
+      "module": "GenericFiniteQueryMeasure"
+    },
+    {
+      "name": "Orthemology.Tranche2.FiniteAlphabetQuery.Trace",
+      "module": "GenericFiniteQueryMeasure"
+    },
+    {
+      "name": "Orthemology.Tranche2.FiniteAlphabetQuery.measurable_advance_joint",
+      "module": "GenericFiniteQueryMeasure"
+    },
+    {
+      "name": "Orthemology.Tranche2.FiniteAlphabetQuery.measurable_run",
+      "module": "GenericFiniteQueryMeasure"
+    },
+    {
+      "name": "Orthemology.Tranche2.FiniteAlphabetQuery.measurable_trajectory",
+      "module": "GenericFiniteQueryMeasure"
+    },
+    {
+      "name": "Orthemology.Tranche2.FiniteAlphabetQuery.boundedTrace",
+      "module": "GenericFiniteQueryMeasure"
+    },
+    {
+      "name": "Orthemology.Tranche2.FiniteAlphabetQuery.measurable_boundedTrace",
+      "module": "GenericFiniteQueryMeasure"
+    },
+    {
+      "name": "Orthemology.Tranche2.FiniteAlphabetQuery.measurable_prefixOracle",
+      "module": "GenericFiniteQueryMeasure"
+    },
+    {
+      "name": "Orthemology.Tranche2.FiniteAlphabetQuery.prefixInput",
+      "module": "GenericFiniteQueryMeasure"
+    },
+    {
+      "name": "Orthemology.Tranche2.FiniteAlphabetQuery.measurable_prefixInput",
+      "module": "GenericFiniteQueryMeasure"
+    },
+    {
+      "name": "Orthemology.Tranche2.FiniteAlphabetQuery.finiteTrajectory",
+      "module": "GenericFiniteQueryMeasure"
+    },
+    {
+      "name": "Orthemology.Tranche2.FiniteAlphabetQuery.measurable_finiteTrajectory",
+      "module": "GenericFiniteQueryMeasure"
+    },
+    {
+      "name": "Orthemology.Tranche2.FiniteAlphabetQuery.bounded_event_prefix",
+      "module": "GenericFiniteQueryMeasure"
+    },
+    {
+      "name": "Orthemology.Tranche2.FiniteAlphabetQuery.trajectory_prefix_on_bounded",
+      "module": "GenericFiniteQueryMeasure"
+    },
+    {
+      "name": "Orthemology.Tranche2.FiniteAlphabetQuery.restricted_observable_factorisation",
+      "module": "GenericFiniteQueryMeasure"
+    },
+    {
+      "name": "Orthemology.Tranche2.FiniteAlphabetQuery.absolutelyContinuous_of_singletons",
+      "module": "GenericFiniteQueryMeasure"
+    },
+    {
+      "name": "Orthemology.Tranche2.FiniteAlphabetQuery.prefixSymbols",
+      "module": "GenericFiniteQueryMeasure"
+    },
+    {
+      "name": "Orthemology.Tranche2.FiniteAlphabetQuery.measurable_prefixSymbols",
+      "module": "GenericFiniteQueryMeasure"
+    },
+    {
+      "name": "Orthemology.Tranche2.FiniteAlphabetQuery.traceLaw",
+      "module": "GenericFiniteQueryMeasure"
+    },
+    {
+      "name": "Orthemology.Tranche2.FiniteAlphabetQuery.input_prefix_map",
+      "module": "GenericFiniteQueryMeasure"
+    },
+    {
+      "name": "Orthemology.Tranche2.FiniteAlphabetQuery.bounded_trace_law_factorisation",
+      "module": "GenericFiniteQueryMeasure"
+    },
+    {
+      "name": "Orthemology.Tranche2.FiniteAlphabetQuery.bounded_trace_domination",
+      "module": "GenericFiniteQueryMeasure"
+    },
+    {
+      "name": "Orthemology.Tranche2.FiniteAlphabetQuery.restrict_iUnion_domination",
+      "module": "GenericFiniteQueryMeasure"
+    },
+    {
+      "name": "Orthemology.Tranche2.FiniteAlphabetQuery.finiteQueryTrace",
+      "module": "GenericFiniteQueryMeasure"
+    },
+    {
+      "name": "Orthemology.Tranche2.FiniteAlphabetQuery.measurable_finiteQueryTrace",
+      "module": "GenericFiniteQueryMeasure"
+    },
+    {
+      "name": "Orthemology.Tranche2.FiniteAlphabetQuery.finite_query_trace_domination",
+      "module": "GenericFiniteQueryMeasure"
+    },
+    {
+      "name": "Orthemology.Tranche2.FiniteAlphabetQuery.iidOracle",
+      "module": "GenericQueryReference"
+    },
+    {
+      "name": "Orthemology.Tranche2.FiniteAlphabetQuery.prefixSymbols_singleton_preimage",
+      "module": "GenericQueryReference"
+    },
+    {
+      "name": "Orthemology.Tranche2.FiniteAlphabetQuery.iidOracle_prefix_nonzero",
+      "module": "GenericQueryReference"
+    },
+    {
+      "name": "Orthemology.Tranche2.FiniteAlphabetQuery.finite_query_domination_by_iid_rival",
+      "module": "GenericQueryReference"
+    },
+    {
+      "name": "Orthemology.Tranche2.FiniteAlphabetQuery.positive_finite_query_event_transfers",
+      "module": "GenericQueryReference"
+    },
+    {
+      "name": "Orthemology.Tranche2.PolicyEmbedding.History",
+      "module": "PolicyRowEvaluator"
+    },
+    {
+      "name": "Orthemology.Tranche2.PolicyEmbedding.Stack",
+      "module": "PolicyRowEvaluator"
+    },
+    {
+      "name": "Orthemology.Tranche2.PolicyEmbedding.EvalState",
+      "module": "PolicyRowEvaluator"
+    },
+    {
+      "name": "Orthemology.Tranche2.PolicyEmbedding.selected",
+      "module": "PolicyRowEvaluator"
+    },
+    {
+      "name": "Orthemology.Tranche2.PolicyEmbedding.query",
+      "module": "PolicyRowEvaluator"
+    },
+    {
+      "name": "Orthemology.Tranche2.PolicyEmbedding.actionCount",
+      "module": "PolicyRowEvaluator"
+    },
+    {
+      "name": "Orthemology.Tranche2.PolicyEmbedding.step",
+      "module": "PolicyRowEvaluator"
+    },
+    {
+      "name": "Orthemology.Tranche2.PolicyEmbedding.step_preserves_seed",
+      "module": "PolicyRowEvaluator"
+    },
+    {
+      "name": "Orthemology.Tranche2.PolicyEmbedding.step_history_length",
+      "module": "PolicyRowEvaluator"
+    },
+    {
+      "name": "Orthemology.Tranche2.PolicyEmbedding.step_inside_row_independent",
+      "module": "PolicyRowEvaluator"
+    },
+    {
+      "name": "Orthemology.Tranche2.PolicyEmbedding.step_outside_coordinate_only",
+      "module": "PolicyRowEvaluator"
+    },
+    {
+      "name": "Orthemology.Tranche2.PolicyEmbedding.policyRun",
+      "module": "PolicyRowEvaluator"
+    },
+    {
+      "name": "Orthemology.Tranche2.PolicyEmbedding.actionAt",
+      "module": "PolicyRowEvaluator"
+    },
+    {
+      "name": "Orthemology.Tranche2.PolicyEmbedding.query_counter_eq_outside_actions",
+      "module": "PolicyRowEvaluator"
+    },
+    {
+      "name": "Orthemology.Tranche2.PolicyEmbedding.selected_measurable",
+      "module": "PolicyRowEvaluator"
+    },
+    {
+      "name": "Orthemology.Tranche2.PolicyEmbedding.query_measurable",
+      "module": "PolicyRowEvaluator"
+    },
+    {
+      "name": "Orthemology.Tranche2.PolicyEmbedding.step_measurable",
+      "module": "PolicyRowEvaluator"
+    },
+    {
+      "name": "Orthemology.Tranche2.PolicyEmbedding.outsideCount",
+      "module": "PolicyTranscriptFiber"
+    },
+    {
+      "name": "Orthemology.Tranche2.PolicyEmbedding.feedback",
+      "module": "PolicyTranscriptFiber"
+    },
+    {
+      "name": "Orthemology.Tranche2.PolicyEmbedding.observedHistory",
+      "module": "PolicyTranscriptFiber"
+    },
+    {
+      "name": "Orthemology.Tranche2.PolicyEmbedding.observedHistory_length",
+      "module": "PolicyTranscriptFiber"
+    },
+    {
+      "name": "Orthemology.Tranche2.PolicyEmbedding.policyRun_eq_observedHistory",
+      "module": "PolicyTranscriptFiber"
+    },
+    {
+      "name": "Orthemology.Tranche2.PolicyEmbedding.ActionCompatible",
+      "module": "PolicyTranscriptFiber"
+    },
+    {
+      "name": "Orthemology.Tranche2.PolicyEmbedding.FeedbackCompatible",
+      "module": "PolicyTranscriptFiber"
+    },
+    {
+      "name": "Orthemology.Tranche2.PolicyEmbedding.observedHistory_fiber",
+      "module": "PolicyTranscriptFiber"
+    },
+    {
+      "name": "Orthemology.Tranche2.PolicyEmbedding.policyRun_transcript_fiber",
+      "module": "PolicyTranscriptFiber"
+    },
+    {
+      "name": "Orthemology.Tranche2.PolicyEmbedding.rowMass",
+      "module": "PolicyRowLaw"
+    },
+    {
+      "name": "Orthemology.Tranche2.PolicyEmbedding.rowMass_nonneg",
+      "module": "PolicyRowLaw"
+    },
+    {
+      "name": "Orthemology.Tranche2.PolicyEmbedding.rowMass_pos",
+      "module": "PolicyRowLaw"
+    },
+    {
+      "name": "Orthemology.Tranche2.PolicyEmbedding.rowMass_normalized",
+      "module": "PolicyRowLaw"
+    },
+    {
+      "name": "Orthemology.Tranche2.PolicyEmbedding.rowPMF",
+      "module": "PolicyRowLaw"
+    },
+    {
+      "name": "Orthemology.Tranche2.PolicyEmbedding.rowMass_coordinate",
+      "module": "PolicyRowLaw"
+    },
+    {
+      "name": "Orthemology.Tranche2.PolicyEmbedding.rowMeasure",
+      "module": "PolicyRowLaw"
+    },
+    {
+      "name": "Orthemology.Tranche2.PolicyEmbedding.rowMeasure_full_support",
+      "module": "PolicyRowLaw"
+    },
+    {
+      "name": "Orthemology.Tranche2.PolicyEmbedding.rowMeasure_coordinate",
+      "module": "PolicyRowLaw"
+    },
+    {
+      "name": "Orthemology.Tranche2.PolicyEmbedding.rowOracle_finite_prefix_positive",
+      "module": "PolicyRowLaw"
+    }
+  ],
+  "pins": {
+    "lean_version": "4.19.0",
+    "lean_binary_sha256": "92c3d35b5bfaa5e0fea413a775d504cf46cd95e1345df61c2274f76779e7e023",
+    "packages": [
+      {
+        "name": "mathlib",
+        "revision": "c44e0c8ee63ca166450922a373c7409c5d26b00b"
+      },
+      {
+        "name": "plausible",
+        "revision": "77e08eddc486491d7b9e470926b3dbe50319451a"
+      },
+      {
+        "name": "LeanSearchClient",
+        "revision": "25078369972d295301f5a1e53c3e5850cf6d9d4c"
+      },
+      {
+        "name": "importGraph",
+        "revision": "e6a9f0f5ee3ccf7443a0070f92b62f8db12ae82b"
+      },
+      {
+        "name": "proofwidgets",
+        "revision": "c4919189477c3221e6a204008998b0d724f49904"
+      },
+      {
+        "name": "aesop",
+        "revision": "5d50b08dedd7d69b3d9b3176e0d58a23af228884"
+      },
+      {
+        "name": "Qq",
+        "revision": "fa4f7f15d97591a9cf3aa7724ba371c7fc6dda02"
+      },
+      {
+        "name": "batteries",
+        "revision": "f5d04a9c4973d401c8c92500711518f7c656f034"
+      },
+      {
+        "name": "Cli",
+        "revision": "02dbd02bc00ec4916e99b04b2245b30200e200d0"
+      }
+    ]
+  },
+  "official_imports": [
+    {
+      "module": "Mathlib",
+      "repository": "mathlib",
+      "source": "Mathlib.lean",
+      "sha256": "b0518254279fabf0c6a920804e684536b0f5e2bd1cb6318d0609eb563413f20a"
+    },
+    {
+      "module": "Mathlib.Probability.ProductMeasure",
+      "repository": "mathlib",
+      "source": "Mathlib/Probability/ProductMeasure.lean",
+      "sha256": "f8af06e87e2e28916f0fa8a455f792ded4b85a22e1dea5e1c6f9cac1d31b9830"
+    }
+  ],
+  "driver": {
+    "source_id": "src-d6f6fa5be51464c0-119c0f60ed32aec4",
+    "lean_argument": "BIN_DIRECTORY"
+  },
+  "controls": "ORIGINAL_DRIVER_REQUIRED",
+  "classification": "CURRENT_EVIDENCE"
+}

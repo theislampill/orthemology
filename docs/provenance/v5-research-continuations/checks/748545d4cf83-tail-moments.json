@@ -1,0 +1,1256 @@
+{
+  "status": "FRESH_KERNEL_COMPONENTS",
+  "exit_code": 0,
+  "kernel_verified": true,
+  "suite_id": "748545d4cf83-tail-moments",
+  "suite_sha256": "963ba07c302d9daee78753cad8dc7e5e5db0eb78e0a001ee1c7424254b9a5585",
+  "source_hashes": {
+    "FiniteChainAvoidance": "f7af0f36a68359e8b20b5c85ca527e07191c43686ec345b7d08f582bb4741e24",
+    "FiniteReachability": "ad50af371e175b27b62f9fe545267dd434ed256ab84b950afdc92b932dc5fd74",
+    "GenericFiniteQueryLocality": "520c08e4f3bfa298029d651a8a6e6672896560597ac0963edab4780ed2b4a573",
+    "ProductObservationLaw": "f7903cc3b7756f708e51eeccaf15220fd864e6964cf81db71b242694c6785760",
+    "PruningKernel": "d16d51d77c59f0538952e1401e105e699fd6d2648df3aa3db8dbf3c09888a253",
+    "RecurrentSupport": "ee53d2fceb24d3552b0cf0798fb8c10b22717f66e80546db2e26d48c36d19899",
+    "SelfVerifyingSupport": "46643e3bd1194b699ffe67687dfba24761e2eb05ad750bae8b25d2f5fe96470b",
+    "ShellCostTransfer": "31b050eab747a860e966a0a3f4a7f59e02d64fe4926a458e01ea7f2fecad506e",
+    "TailMoments": "7f58b3c0270925b452c97ebeaaaa9383f7958f2c0c0b4fc6b578a7cde01ef4f7",
+    "dependencies.StatisticalRepair": "8e6a771ec5c6b853055f7f13dd1b93b319172a2e10a4f41d71284cc681627bf4",
+    "EndComponents": "f4298061653adc768b292363885e1a7b2213ccb56d17d52376762529d35b2531",
+    "GenericFiniteQueryMeasure": "72974cb133e58a3c33cde719245ca96c4e1a5dff1e91558e18ef1d67b297423b",
+    "HellingerTree": "3c5dc0288543e481971f9ccdbf811102b191fa4067ff65ed1e0e3cd8e0da06b2",
+    "IndependentProductFamilies": "9abc010ebfcfabc85695acd3aef10c1ea7fd5c0527dd215320840d57546b1a3d",
+    "TailMomentControls": "41936560aa0942f079957a14f6848207cb209d1b33e1ab1833cf33a731e90bd8",
+    "ExecutablePruning": "3098f76a8065b9a327a4e9763de88428cd4711c79232b87201b7c079ee7789db",
+    "GenericQueryReference": "577666771c95033429bf8ee328a372bc99b637d2abbe1eb11aa4b7e4a7ca514d",
+    "KilledQueryLaw": "17793ba9787eb9c3fc1618d4acfc368804be8309197156f22d440508f8ad22a0",
+    "PolicyRowEvaluator": "737d368aa9f74a3daa751924690dba374cd7838a8f6d9fbb1f5371e5039fdd05",
+    "RecurrentGraph": "395d925096b881b32a46cfdf901ffbd73029cfe598a175bf667884cdc2b6436c",
+    "StationaryPairChain": "5b7e23bf7aca12b0529cb77362bf1cb93d54fc1567fe5db7e9d8d000b5d50d99",
+    "SubprobHellinger": "3e56c01155f3f838a3d911426e10746ab4a20b00711c2c4da3a5ff2f7568c8ad",
+    "DependentHellinger": "cfcafcc7e1ebcda71370644b4b89c84a9948353e9115ed2e3a7807b78079a97e",
+    "MarkovSupportAdapter": "6c281b2bc6036789a0d342a14df80b1d9c68bcbdf49a1720855d3cd03a46e499",
+    "PolicyRowLaw": "8d66ad4ebbea2ba7e825dbb1f880db994026cef22c55d15f7d4b918884251338",
+    "PolicyTranscriptFiber": "f872c6ff9b3cd6d7e813640f4f538fcb2edd420d22661dfaff800e16e4758f59",
+    "FeedbackRequests": "327eea767c3a2f2ad30e66b2c9c9591b4bb6a1fe7dea39c71c50623cb4b07b38",
+    "HistoryPathConsistency": "2fc036ffd94d213ad5215c447308132dd08edaad19d5f893dd130780382cc146",
+    "ResetBudget": "d482ed24b70fa4501eefcd7878a7889af7b8f3fbf31f8c6de60b77ebffa758b1",
+    "FeedbackFiberProbability": "dbaf6f6cafc94a08bd2f00ca8ecc6c4a253f002b517b52ff58825b944475a834",
+    "ResetLaw": "f76f752f31565baa5262aa4aafcf21a7f3722d1f74c9681fe6d8a2a50bb02d12",
+    "PolicyCylinderProbability": "2fe2e33744bbd7edada29f4faab67f4b63e22efff2945381c1d367a2859c8d72",
+    "ResetTrajectory": "c1bae278764e20b67382204474b62e8bba769463f812d5adfc2086b85b303f68",
+    "MarkovCharge": "97e0f881af3140b625d45642c06cecc20dbb49773528f8345dd4c948b1ddfc68",
+    "PolicyObservedLaw": "ad890909953de257c58ae2750e7f7710747489936704e0767b77aa0485f59d76",
+    "FiniteChainTrajectory": "71acea2c2028a111c1e15ddc85f76f0dd59efb639f9a0372bc35a320c7f4e3ef",
+    "PolicyTraceBinding": "fe8d6b84a1cd526a6b0a10770aebd52fdbf19b7ae7804f7d2447a33e133e44bf",
+    "InfiniteRecurrence": "1792831c1af1628fae2c31b821f40d6d3a67be22303595f66ca14d273223228a",
+    "KilledAdaptiveHistory": "ff7c13f5212d6b5f9cfdf64979e664e51934422189528d6169b8a72c57cfff56",
+    "PolicyTailTransfer": "a42c82222bd810e4005b536d27d394a01d28b9fcbdb9ab8d53e3c5d6cdc48720",
+    "ResidualSeedPosterior": "9608772a6948c3dfb69d95659d27b5f6b961aece08ccc09afc594b63cd264ba6",
+    "StackActionLaw": "6127e1c8362a4c17f8074937d88ffb13b9fdf7de7ad88d64130f8ee3d35a27fc",
+    "ConditionalPrefix": "987df7f2262b0b2a5e74bd4aee521b3315d61ca97d1e308ef6b10223f20d48f2",
+    "FairComponentParity": "566f01a571617215b71386917896044a7dc150e84130dcd0f92f36e45038f414",
+    "KilledRecurrentTransfer": "5de3075faa5e7041d31cb7c18868c0a91db7ef8d47a0630d26cb63dfcd6dd60b",
+    "PosteriorFeedbackProduct": "0f37e47723087f1ad72667012a3abac927ae29162a14625cc58dfae754346115",
+    "RawEmpiricalRows": "dbbc16fe32b75bfcd3d1575175cfc857b45926f48533f2317a044cb30cc95d6b",
+    "RawTapeRecurrence": "d8ff5864c4b0697dbd056940503b6913fe8c3256277efc790601b0e2528f5a8e",
+    "RelativeTailTransfer": "bd89640236881734ec68ed3f1bc21684b8af6c986683a5530f550a2221d4a167",
+    "SeededPolicyNecessity": "d0335e4234a9462aa5f9af7217b78717983539703835041c9a0a334040ede016",
+    "SequentialTapeConsumption": "c06b02171163bd00875060eb97e870673ef689d2e4b0fa6a767324899bc304cb",
+    "CheckedTargetOperation": "d1751ecda2c7730b2580575391486f38a40a9ea0e585d90ad12774da9fb33ff8",
+    "ConditionalContinuationLaw": "1547d34d2a53302e070e7a02131f242f9cb1d80f6aa0f96fc478844f630703a3",
+    "EmpiricalTailBounds": "76d70084a57a2beb4b41784b3c93fd248d732b7422055aba2fdafdaf7957f993",
+    "MarkovKilledBridge": "7d828069e42926c9e7acb36bfb683a6b3bd8c6f46907d00ccd8c643e27555c04",
+    "ParityTailInvariance": "1dc8c0e40a86a205498af32bd7c4a0d96afca6020f2fbd321e21fae2beee0077",
+    "SafeSetTailTransfer": "960293c6ff358b5bcd571b1f24ad62ce43983894836ce8516a24212bb1cd5699",
+    "AdaptiveMarkovRecurrentGraph": "24cf86efc439d077f7860aabf90f455d75269130094d94c46bc6734bacc2aaf9",
+    "MarkovSeedPosterior": "adc48e40e89c35782be3f30eafb0a62bb6100de48bf853a84e081631da8092e0",
+    "ObservedEmpiricalRows": "90ba0fd6a17d86323b83185acd96a639fe584407d2496dad678aed08bc74717e",
+    "ConditionalKilledContinuation": "48f69898de357b1cce90acfa6d575cf0688fae41821c8376a4a395bea1ba04c8",
+    "RoundRobinSchedule": "21db947de0a6f06908487f50d6ca0038c9337aed7184cd2dc0eb929982f93e2b",
+    "StableSupportParityNecessity": "e7efd3c855f5adf29c0a3fce65aac3cadba994e8ccc72f32e2829bc1434f802d",
+    "ConditionalAlmostSure": "06d403f36ee3cb95094a53b4a53eea72810565fc66ac1fb0607fef9b01922a9b",
+    "PhaseStabilization": "b4d8348961420e0b0ec7459d0ddc0276090fb34349e6b26823ac90afb8ef4183",
+    "StageTargetOrExit": "6235ac02c768a8184b5a05b9f30659b2c24cb33e8c52017ef4a61652001e125e",
+    "LawfulRestart": "f163f76a1fdab9b12bd96122780339901fcb76b5a3c75cdec56b8d3d505e32dd",
+    "RegionAlgorithm": "ca456e211d02a994192809bac318ae3a75684f163daf2f9037346b84517b347a",
+    "LawfulProbability": "feef9755524c9f08ad782339f0c60cbbd5c82391d992b48d59d30e191b1da17e",
+    "SemanticWinning": "a759594adc211fdce0e9013a1d680fabd89983a0202885d8658b7e72477b4252",
+    "SemanticSafeActions": "66b166d81fd29f864f7dd81f0af6a67f07c4c35ab709fe67eba52bd1b20bc55b",
+    "HistoryStageSafety": "2870a3c2d0dd125a59b49600e0fa0853e8d5c46a98153f27846a9f43f860bea5",
+    "GlobalParityNecessity": "7b54bfb8cd869bbe72f7ebeb42504a616c216a1912d09a6fc0d2ab35ca9d39c3",
+    "RoundRobinPolicy": "210a5417479100f010c2c38954c89d551a1c1d52b0d8d784e6fa8e8c94245ea1",
+    "RegionControls": "11acf6ccc6901809193257be76e666927716a8887783e8fb32af7af76a45321b",
+    "RoundRobinRecurrence": "94da50ee38d07888783573e1d78ece8dac5c58871f2e0c3ac5f6dea77008fc4c",
+    "ActualTargetPolicy": "7040e104fbb268ae6dea93fbd21f1db8bccc56bd5f04910b9d43c64597d0da74",
+    "FairStageNavigation": "c497220e36e59578dc8d1efa53bfac17014446fcc84826f3af37f270d9f6e8f3",
+    "ObservedRowTest": "e38e3a972bbdf859b854b42c44a7cbf4d83c0f5b2fb7566d2f726f155572bfee",
+    "StageAvailability": "8e0df2c695b21d91c2473f200317ebd5c4cf3f8203b34f93f5ec4c77d9a9312a",
+    "EmpiricalTestLaw": "81f3343152589ab4d36d10ccc487f2bbf8c251bd6a2e95cf50826d59fff88da6",
+    "EventualCycling": "eb29e22c35c3a366d440669da516663f9fe56601794f98ba8dbc81958ab7d5b7",
+    "ObservedPhaseController": "9814025d9195fe98c7df8a8839fd37b8696f0b61d3970cb3dd61cb257a0009f1",
+    "StackPathRegularity": "fee7903917eff18207791b8d6c3679ad671e14873c025b2ff71987fe265fbaf2",
+    "GeneratedPolicySafety": "6a52c99c8bfe581ed13dcec6a396dcb7227656e6eba937a4cf73c7e36a8f4100",
+    "MemoryTransitions": "3fd4a3d8e4a7a2c74343087c8f3a31714b569ff209b3d63b9764f70c2462fe25",
+    "GeneratedRun": "bdd551d8c61ae4c78332b957eba7ecab5718747747a51a91902ea55e2306aca9",
+    "GeneratedPhaseDynamics": "3c52bf3ff7d270ef0343f1d41223b3aacc8a748df216d130a580ff338dd94174",
+    "GeneratedPhaseStability": "df0a80d810a176bb32b8a5574039115e823bfbeaa588a3ed23a52a7d7aa10a91",
+    "GeneratedParitySuccess": "db9ec6cae92ba47810fd360afa3eda2b4447327378a032b17d87afef743a67c4",
+    "GlobalParitySufficiency": "4a93ef96999718cc4fc6ac566da899c6f9938d5a8cbce269d8ee20a3f459d9a3",
+    "CoBuchiTargetCost": "da8afc5803348faf36591c7070209d076c28cf0fcb397dd2acec4784931befec",
+    "GlobalControllerControls": "6ccd9162d6012dd21d23181f167eaf7d92d86fc38b8ea30e4ccfbaf256c7249c",
+    "QuantitativeEmpiricalGate": "00743077f4ad01f106967f1200f4d8a0d2b04cd48c568ad0a82ab4ae38b9b5c3",
+    "ActualBadCount": "057c948fa0e0d2aadadeb81c33e864b0e0890e8e42802dec1fb18aefaf139142",
+    "ActualCostTailMoments": "a284c713565d4883d8eb48a9dd6145a917a4169c43ebb3828183e2a141b3b17a",
+    "GeneratedCostLaw": "9e5c38fdd7f3c7c3fe19dc9849cdba3ae3cb6abb1639d3ce7d4c8edfca0d7736"
+  },
+  "post_source_hashes": {
+    "FiniteChainAvoidance": "f7af0f36a68359e8b20b5c85ca527e07191c43686ec345b7d08f582bb4741e24",
+    "FiniteReachability": "ad50af371e175b27b62f9fe545267dd434ed256ab84b950afdc92b932dc5fd74",
+    "GenericFiniteQueryLocality": "520c08e4f3bfa298029d651a8a6e6672896560597ac0963edab4780ed2b4a573",
+    "ProductObservationLaw": "f7903cc3b7756f708e51eeccaf15220fd864e6964cf81db71b242694c6785760",
+    "PruningKernel": "d16d51d77c59f0538952e1401e105e699fd6d2648df3aa3db8dbf3c09888a253",
+    "RecurrentSupport": "ee53d2fceb24d3552b0cf0798fb8c10b22717f66e80546db2e26d48c36d19899",
+    "SelfVerifyingSupport": "46643e3bd1194b699ffe67687dfba24761e2eb05ad750bae8b25d2f5fe96470b",
+    "ShellCostTransfer": "31b050eab747a860e966a0a3f4a7f59e02d64fe4926a458e01ea7f2fecad506e",
+    "TailMoments": "7f58b3c0270925b452c97ebeaaaa9383f7958f2c0c0b4fc6b578a7cde01ef4f7",
+    "dependencies.StatisticalRepair": "8e6a771ec5c6b853055f7f13dd1b93b319172a2e10a4f41d71284cc681627bf4",
+    "EndComponents": "f4298061653adc768b292363885e1a7b2213ccb56d17d52376762529d35b2531",
+    "GenericFiniteQueryMeasure": "72974cb133e58a3c33cde719245ca96c4e1a5dff1e91558e18ef1d67b297423b",
+    "HellingerTree": "3c5dc0288543e481971f9ccdbf811102b191fa4067ff65ed1e0e3cd8e0da06b2",
+    "IndependentProductFamilies": "9abc010ebfcfabc85695acd3aef10c1ea7fd5c0527dd215320840d57546b1a3d",
+    "TailMomentControls": "41936560aa0942f079957a14f6848207cb209d1b33e1ab1833cf33a731e90bd8",
+    "ExecutablePruning": "3098f76a8065b9a327a4e9763de88428cd4711c79232b87201b7c079ee7789db",
+    "GenericQueryReference": "577666771c95033429bf8ee328a372bc99b637d2abbe1eb11aa4b7e4a7ca514d",
+    "KilledQueryLaw": "17793ba9787eb9c3fc1618d4acfc368804be8309197156f22d440508f8ad22a0",
+    "PolicyRowEvaluator": "737d368aa9f74a3daa751924690dba374cd7838a8f6d9fbb1f5371e5039fdd05",
+    "RecurrentGraph": "395d925096b881b32a46cfdf901ffbd73029cfe598a175bf667884cdc2b6436c",
+    "StationaryPairChain": "5b7e23bf7aca12b0529cb77362bf1cb93d54fc1567fe5db7e9d8d000b5d50d99",
+    "SubprobHellinger": "3e56c01155f3f838a3d911426e10746ab4a20b00711c2c4da3a5ff2f7568c8ad",
+    "DependentHellinger": "cfcafcc7e1ebcda71370644b4b89c84a9948353e9115ed2e3a7807b78079a97e",
+    "MarkovSupportAdapter": "6c281b2bc6036789a0d342a14df80b1d9c68bcbdf49a1720855d3cd03a46e499",
+    "PolicyRowLaw": "8d66ad4ebbea2ba7e825dbb1f880db994026cef22c55d15f7d4b918884251338",
+    "PolicyTranscriptFiber": "f872c6ff9b3cd6d7e813640f4f538fcb2edd420d22661dfaff800e16e4758f59",
+    "FeedbackRequests": "327eea767c3a2f2ad30e66b2c9c9591b4bb6a1fe7dea39c71c50623cb4b07b38",
+    "HistoryPathConsistency": "2fc036ffd94d213ad5215c447308132dd08edaad19d5f893dd130780382cc146",
+    "ResetBudget": "d482ed24b70fa4501eefcd7878a7889af7b8f3fbf31f8c6de60b77ebffa758b1",
+    "FeedbackFiberProbability": "dbaf6f6cafc94a08bd2f00ca8ecc6c4a253f002b517b52ff58825b944475a834",
+    "ResetLaw": "f76f752f31565baa5262aa4aafcf21a7f3722d1f74c9681fe6d8a2a50bb02d12",
+    "PolicyCylinderProbability": "2fe2e33744bbd7edada29f4faab67f4b63e22efff2945381c1d367a2859c8d72",
+    "ResetTrajectory": "c1bae278764e20b67382204474b62e8bba769463f812d5adfc2086b85b303f68",
+    "MarkovCharge": "97e0f881af3140b625d45642c06cecc20dbb49773528f8345dd4c948b1ddfc68",
+    "PolicyObservedLaw": "ad890909953de257c58ae2750e7f7710747489936704e0767b77aa0485f59d76",
+    "FiniteChainTrajectory": "71acea2c2028a111c1e15ddc85f76f0dd59efb639f9a0372bc35a320c7f4e3ef",
+    "PolicyTraceBinding": "fe8d6b84a1cd526a6b0a10770aebd52fdbf19b7ae7804f7d2447a33e133e44bf",
+    "InfiniteRecurrence": "1792831c1af1628fae2c31b821f40d6d3a67be22303595f66ca14d273223228a",
+    "KilledAdaptiveHistory": "ff7c13f5212d6b5f9cfdf64979e664e51934422189528d6169b8a72c57cfff56",
+    "PolicyTailTransfer": "a42c82222bd810e4005b536d27d394a01d28b9fcbdb9ab8d53e3c5d6cdc48720",
+    "ResidualSeedPosterior": "9608772a6948c3dfb69d95659d27b5f6b961aece08ccc09afc594b63cd264ba6",
+    "StackActionLaw": "6127e1c8362a4c17f8074937d88ffb13b9fdf7de7ad88d64130f8ee3d35a27fc",
+    "ConditionalPrefix": "987df7f2262b0b2a5e74bd4aee521b3315d61ca97d1e308ef6b10223f20d48f2",
+    "FairComponentParity": "566f01a571617215b71386917896044a7dc150e84130dcd0f92f36e45038f414",
+    "KilledRecurrentTransfer": "5de3075faa5e7041d31cb7c18868c0a91db7ef8d47a0630d26cb63dfcd6dd60b",
+    "PosteriorFeedbackProduct": "0f37e47723087f1ad72667012a3abac927ae29162a14625cc58dfae754346115",
+    "RawEmpiricalRows": "dbbc16fe32b75bfcd3d1575175cfc857b45926f48533f2317a044cb30cc95d6b",
+    "RawTapeRecurrence": "d8ff5864c4b0697dbd056940503b6913fe8c3256277efc790601b0e2528f5a8e",
+    "RelativeTailTransfer": "bd89640236881734ec68ed3f1bc21684b8af6c986683a5530f550a2221d4a167",
+    "SeededPolicyNecessity": "d0335e4234a9462aa5f9af7217b78717983539703835041c9a0a334040ede016",
+    "SequentialTapeConsumption": "c06b02171163bd00875060eb97e870673ef689d2e4b0fa6a767324899bc304cb",
+    "CheckedTargetOperation": "d1751ecda2c7730b2580575391486f38a40a9ea0e585d90ad12774da9fb33ff8",
+    "ConditionalContinuationLaw": "1547d34d2a53302e070e7a02131f242f9cb1d80f6aa0f96fc478844f630703a3",
+    "EmpiricalTailBounds": "76d70084a57a2beb4b41784b3c93fd248d732b7422055aba2fdafdaf7957f993",
+    "MarkovKilledBridge": "7d828069e42926c9e7acb36bfb683a6b3bd8c6f46907d00ccd8c643e27555c04",
+    "ParityTailInvariance": "1dc8c0e40a86a205498af32bd7c4a0d96afca6020f2fbd321e21fae2beee0077",
+    "SafeSetTailTransfer": "960293c6ff358b5bcd571b1f24ad62ce43983894836ce8516a24212bb1cd5699",
+    "AdaptiveMarkovRecurrentGraph": "24cf86efc439d077f7860aabf90f455d75269130094d94c46bc6734bacc2aaf9",
+    "MarkovSeedPosterior": "adc48e40e89c35782be3f30eafb0a62bb6100de48bf853a84e081631da8092e0",
+    "ObservedEmpiricalRows": "90ba0fd6a17d86323b83185acd96a639fe584407d2496dad678aed08bc74717e",
+    "ConditionalKilledContinuation": "48f69898de357b1cce90acfa6d575cf0688fae41821c8376a4a395bea1ba04c8",
+    "RoundRobinSchedule": "21db947de0a6f06908487f50d6ca0038c9337aed7184cd2dc0eb929982f93e2b",
+    "StableSupportParityNecessity": "e7efd3c855f5adf29c0a3fce65aac3cadba994e8ccc72f32e2829bc1434f802d",
+    "ConditionalAlmostSure": "06d403f36ee3cb95094a53b4a53eea72810565fc66ac1fb0607fef9b01922a9b",
+    "PhaseStabilization": "b4d8348961420e0b0ec7459d0ddc0276090fb34349e6b26823ac90afb8ef4183",
+    "StageTargetOrExit": "6235ac02c768a8184b5a05b9f30659b2c24cb33e8c52017ef4a61652001e125e",
+    "LawfulRestart": "f163f76a1fdab9b12bd96122780339901fcb76b5a3c75cdec56b8d3d505e32dd",
+    "RegionAlgorithm": "ca456e211d02a994192809bac318ae3a75684f163daf2f9037346b84517b347a",
+    "LawfulProbability": "feef9755524c9f08ad782339f0c60cbbd5c82391d992b48d59d30e191b1da17e",
+    "SemanticWinning": "a759594adc211fdce0e9013a1d680fabd89983a0202885d8658b7e72477b4252",
+    "SemanticSafeActions": "66b166d81fd29f864f7dd81f0af6a67f07c4c35ab709fe67eba52bd1b20bc55b",
+    "HistoryStageSafety": "2870a3c2d0dd125a59b49600e0fa0853e8d5c46a98153f27846a9f43f860bea5",
+    "GlobalParityNecessity": "7b54bfb8cd869bbe72f7ebeb42504a616c216a1912d09a6fc0d2ab35ca9d39c3",
+    "RoundRobinPolicy": "210a5417479100f010c2c38954c89d551a1c1d52b0d8d784e6fa8e8c94245ea1",
+    "RegionControls": "11acf6ccc6901809193257be76e666927716a8887783e8fb32af7af76a45321b",
+    "RoundRobinRecurrence": "94da50ee38d07888783573e1d78ece8dac5c58871f2e0c3ac5f6dea77008fc4c",
+    "ActualTargetPolicy": "7040e104fbb268ae6dea93fbd21f1db8bccc56bd5f04910b9d43c64597d0da74",
+    "FairStageNavigation": "c497220e36e59578dc8d1efa53bfac17014446fcc84826f3af37f270d9f6e8f3",
+    "ObservedRowTest": "e38e3a972bbdf859b854b42c44a7cbf4d83c0f5b2fb7566d2f726f155572bfee",
+    "StageAvailability": "8e0df2c695b21d91c2473f200317ebd5c4cf3f8203b34f93f5ec4c77d9a9312a",
+    "EmpiricalTestLaw": "81f3343152589ab4d36d10ccc487f2bbf8c251bd6a2e95cf50826d59fff88da6",
+    "EventualCycling": "eb29e22c35c3a366d440669da516663f9fe56601794f98ba8dbc81958ab7d5b7",
+    "ObservedPhaseController": "9814025d9195fe98c7df8a8839fd37b8696f0b61d3970cb3dd61cb257a0009f1",
+    "StackPathRegularity": "fee7903917eff18207791b8d6c3679ad671e14873c025b2ff71987fe265fbaf2",
+    "GeneratedPolicySafety": "6a52c99c8bfe581ed13dcec6a396dcb7227656e6eba937a4cf73c7e36a8f4100",
+    "MemoryTransitions": "3fd4a3d8e4a7a2c74343087c8f3a31714b569ff209b3d63b9764f70c2462fe25",
+    "GeneratedRun": "bdd551d8c61ae4c78332b957eba7ecab5718747747a51a91902ea55e2306aca9",
+    "GeneratedPhaseDynamics": "3c52bf3ff7d270ef0343f1d41223b3aacc8a748df216d130a580ff338dd94174",
+    "GeneratedPhaseStability": "df0a80d810a176bb32b8a5574039115e823bfbeaa588a3ed23a52a7d7aa10a91",
+    "GeneratedParitySuccess": "db9ec6cae92ba47810fd360afa3eda2b4447327378a032b17d87afef743a67c4",
+    "GlobalParitySufficiency": "4a93ef96999718cc4fc6ac566da899c6f9938d5a8cbce269d8ee20a3f459d9a3",
+    "CoBuchiTargetCost": "da8afc5803348faf36591c7070209d076c28cf0fcb397dd2acec4784931befec",
+    "GlobalControllerControls": "6ccd9162d6012dd21d23181f167eaf7d92d86fc38b8ea30e4ccfbaf256c7249c",
+    "QuantitativeEmpiricalGate": "00743077f4ad01f106967f1200f4d8a0d2b04cd48c568ad0a82ab4ae38b9b5c3",
+    "ActualBadCount": "057c948fa0e0d2aadadeb81c33e864b0e0890e8e42802dec1fb18aefaf139142",
+    "ActualCostTailMoments": "a284c713565d4883d8eb48a9dd6145a917a4169c43ebb3828183e2a141b3b17a",
+    "GeneratedCostLaw": "9e5c38fdd7f3c7c3fe19dc9849cdba3ae3cb6abb1639d3ce7d4c8edfca0d7736"
+  },
+  "compiler_sha256": "92c3d35b5bfaa5e0fea413a775d504cf46cd95e1345df61c2274f76779e7e023",
+  "pins": {
+    "lean_version": "4.19.0",
+    "lean_binary_sha256": "92c3d35b5bfaa5e0fea413a775d504cf46cd95e1345df61c2274f76779e7e023",
+    "packages": [
+      {
+        "name": "mathlib",
+        "revision": "c44e0c8ee63ca166450922a373c7409c5d26b00b"
+      },
+      {
+        "name": "plausible",
+        "revision": "77e08eddc486491d7b9e470926b3dbe50319451a"
+      },
+      {
+        "name": "LeanSearchClient",
+        "revision": "25078369972d295301f5a1e53c3e5850cf6d9d4c"
+      },
+      {
+        "name": "importGraph",
+        "revision": "e6a9f0f5ee3ccf7443a0070f92b62f8db12ae82b"
+      },
+      {
+        "name": "proofwidgets",
+        "revision": "c4919189477c3221e6a204008998b0d724f49904"
+      },
+      {
+        "name": "aesop",
+        "revision": "5d50b08dedd7d69b3d9b3176e0d58a23af228884"
+      },
+      {
+        "name": "Qq",
+        "revision": "fa4f7f15d97591a9cf3aa7724ba371c7fc6dda02"
+      },
+      {
+        "name": "batteries",
+        "revision": "f5d04a9c4973d401c8c92500711518f7c656f034"
+      },
+      {
+        "name": "Cli",
+        "revision": "02dbd02bc00ec4916e99b04b2245b30200e200d0"
+      }
+    ]
+  },
+  "modules": [
+    {
+      "module": "FiniteChainAvoidance",
+      "source_sha256": "f7af0f36a68359e8b20b5c85ca527e07191c43686ec345b7d08f582bb4741e24",
+      "object_sha256": "0538eb5863756e6b0b8166795330c4031d9896cf0fece3b6eca4e5eb0983e796",
+      "transitive_source_fingerprint": "5fe18e4ca2a478c34bedeaeef546167f7fbdffdbd603267eaaf6c0ecb6090cc3",
+      "status": "QUALIFIED_PREDECESSOR",
+      "predecessor_receipt": "docs/provenance/v5-research-continuations/checks/4bd668ffbcfa-actual-cobuchi-cost.json",
+      "predecessor_receipt_sha256": "1acb1452e50582ea5ba7f115101286c258237a9cb41874a61ae6c9c70a45aa5e"
+    },
+    {
+      "module": "FiniteReachability",
+      "source_sha256": "ad50af371e175b27b62f9fe545267dd434ed256ab84b950afdc92b932dc5fd74",
+      "object_sha256": "b063d92f065eaa30349738908f13604acc1ac7a83287100f5129528077d91914",
+      "transitive_source_fingerprint": "310649e97eb6d77a7b527e8eb8231b9c67d9d0f226e5a6cdd812ea47e36dee5d",
+      "status": "QUALIFIED_PREDECESSOR",
+      "predecessor_receipt": "docs/provenance/v5-research-continuations/checks/4bd668ffbcfa-actual-cobuchi-cost.json",
+      "predecessor_receipt_sha256": "1acb1452e50582ea5ba7f115101286c258237a9cb41874a61ae6c9c70a45aa5e"
+    },
+    {
+      "module": "GenericFiniteQueryLocality",
+      "source_sha256": "520c08e4f3bfa298029d651a8a6e6672896560597ac0963edab4780ed2b4a573",
+      "object_sha256": "42b4acb1951d5d4938610a5909473d90298ec5ab058c067ae3f49657ceb6407f",
+      "transitive_source_fingerprint": "8ec7f663ca9742e3cdc861648a4fca73c1277de6fe19624508ed52cfe8b2f622",
+      "status": "QUALIFIED_PREDECESSOR",
+      "predecessor_receipt": "docs/provenance/v5-research-continuations/checks/4bd668ffbcfa-actual-cobuchi-cost.json",
+      "predecessor_receipt_sha256": "1acb1452e50582ea5ba7f115101286c258237a9cb41874a61ae6c9c70a45aa5e"
+    },
+    {
+      "module": "ProductObservationLaw",
+      "source_sha256": "f7903cc3b7756f708e51eeccaf15220fd864e6964cf81db71b242694c6785760",
+      "object_sha256": "2a6782617537fccbee2444adcd60af2c2f31e0bbedb86094166e6a1bca9675e6",
+      "transitive_source_fingerprint": "de2c983e7ef639ce87d1920bc3c63cbddf414eb63aab08d2b3f098914cddac31",
+      "status": "QUALIFIED_PREDECESSOR",
+      "predecessor_receipt": "docs/provenance/v5-research-continuations/checks/4bd668ffbcfa-actual-cobuchi-cost.json",
+      "predecessor_receipt_sha256": "1acb1452e50582ea5ba7f115101286c258237a9cb41874a61ae6c9c70a45aa5e"
+    },
+    {
+      "module": "PruningKernel",
+      "source_sha256": "d16d51d77c59f0538952e1401e105e699fd6d2648df3aa3db8dbf3c09888a253",
+      "object_sha256": "49c43c520771d95587de1a0bfb1ac0eb4c3a6882087d95bad43cd85cf58b858d",
+      "transitive_source_fingerprint": "00174aab9a51bf85a4e722a9b19301c44d2b80f47d8d941745b484dc37c328c1",
+      "status": "QUALIFIED_PREDECESSOR",
+      "predecessor_receipt": "docs/provenance/v5-research-continuations/checks/4bd668ffbcfa-actual-cobuchi-cost.json",
+      "predecessor_receipt_sha256": "1acb1452e50582ea5ba7f115101286c258237a9cb41874a61ae6c9c70a45aa5e"
+    },
+    {
+      "module": "RecurrentSupport",
+      "source_sha256": "ee53d2fceb24d3552b0cf0798fb8c10b22717f66e80546db2e26d48c36d19899",
+      "object_sha256": "faf8f9614458e9706e85dce37863b42abbeef21a8fbdf2a8036f4637ac7da79d",
+      "transitive_source_fingerprint": "d1f8e65a223623b2fb857dad53c07320543b170404d53b38d981f0daaab25005",
+      "status": "QUALIFIED_PREDECESSOR",
+      "predecessor_receipt": "docs/provenance/v5-research-continuations/checks/4bd668ffbcfa-actual-cobuchi-cost.json",
+      "predecessor_receipt_sha256": "1acb1452e50582ea5ba7f115101286c258237a9cb41874a61ae6c9c70a45aa5e"
+    },
+    {
+      "module": "SelfVerifyingSupport",
+      "source_sha256": "46643e3bd1194b699ffe67687dfba24761e2eb05ad750bae8b25d2f5fe96470b",
+      "object_sha256": "c374298f87d9a74b9262585054e1cd04b6bf87bbfbc4ba9033d6acaf4e32a489",
+      "transitive_source_fingerprint": "1a9e2463bbb2e5036a8229e0f217150b21c4c30ec3bb08891687cb0a58fe3fae",
+      "status": "QUALIFIED_PREDECESSOR",
+      "predecessor_receipt": "docs/provenance/v5-research-continuations/checks/4bd668ffbcfa-actual-cobuchi-cost.json",
+      "predecessor_receipt_sha256": "1acb1452e50582ea5ba7f115101286c258237a9cb41874a61ae6c9c70a45aa5e"
+    },
+    {
+      "module": "ShellCostTransfer",
+      "source_sha256": "31b050eab747a860e966a0a3f4a7f59e02d64fe4926a458e01ea7f2fecad506e",
+      "object_sha256": "387067cc425a1f07192f54a3336a2084e577962167ded4e1fdeeefeb94064d80",
+      "transitive_source_fingerprint": "68cd381a162260ed1b32fd1bceedf379276383cca6213f39de9ae0c22852f463",
+      "status": "QUALIFIED_PREDECESSOR",
+      "predecessor_receipt": "docs/provenance/v5-research-continuations/checks/4bd668ffbcfa-actual-cobuchi-cost.json",
+      "predecessor_receipt_sha256": "1acb1452e50582ea5ba7f115101286c258237a9cb41874a61ae6c9c70a45aa5e"
+    },
+    {
+      "module": "TailMoments",
+      "source_sha256": "7f58b3c0270925b452c97ebeaaaa9383f7958f2c0c0b4fc6b578a7cde01ef4f7",
+      "object_sha256": "65123fa96a7f262baae3471754135f9e48c14673826b0001932c5d433e0f1592",
+      "transitive_source_fingerprint": "4b76dedac51a0dc391019bd174408cf18519c4c8afd6ea9e258516496bd07148",
+      "status": "FRESH_COMPILE",
+      "exit_code": 0
+    },
+    {
+      "module": "dependencies.StatisticalRepair",
+      "source_sha256": "8e6a771ec5c6b853055f7f13dd1b93b319172a2e10a4f41d71284cc681627bf4",
+      "object_sha256": "93b51d4a8318e5127657bb80b4f8eec2ee0dd35c4e7356c574efc0ac1a25297c",
+      "transitive_source_fingerprint": "dae2e04f9ea05425e966cc3fb40d7556f4ee716febae0b9b029523fd0c91f097",
+      "status": "QUALIFIED_PREDECESSOR",
+      "predecessor_receipt": "docs/provenance/v5-research-continuations/checks/4bd668ffbcfa-actual-cobuchi-cost.json",
+      "predecessor_receipt_sha256": "1acb1452e50582ea5ba7f115101286c258237a9cb41874a61ae6c9c70a45aa5e"
+    },
+    {
+      "module": "EndComponents",
+      "source_sha256": "f4298061653adc768b292363885e1a7b2213ccb56d17d52376762529d35b2531",
+      "object_sha256": "76ab90b02cc455f6704a7d6eef12f916c9a053ef03ccaf902d8e9c158b2fb466",
+      "transitive_source_fingerprint": "719a0b31151b38449aeb4d4314ef749eecfc5f3fd2f2a9f51e31271d6ebf793c",
+      "status": "QUALIFIED_PREDECESSOR",
+      "predecessor_receipt": "docs/provenance/v5-research-continuations/checks/4bd668ffbcfa-actual-cobuchi-cost.json",
+      "predecessor_receipt_sha256": "1acb1452e50582ea5ba7f115101286c258237a9cb41874a61ae6c9c70a45aa5e"
+    },
+    {
+      "module": "GenericFiniteQueryMeasure",
+      "source_sha256": "72974cb133e58a3c33cde719245ca96c4e1a5dff1e91558e18ef1d67b297423b",
+      "object_sha256": "6623cf440929c6c839f526c6c78dd3ccd7ef7e6b0ce26078af9b4a97f8aa7cd7",
+      "transitive_source_fingerprint": "0fc5c8cceebbc2fba09a3db1bd80a7fbad8f075158a272ec596029ba3b199433",
+      "status": "QUALIFIED_PREDECESSOR",
+      "predecessor_receipt": "docs/provenance/v5-research-continuations/checks/4bd668ffbcfa-actual-cobuchi-cost.json",
+      "predecessor_receipt_sha256": "1acb1452e50582ea5ba7f115101286c258237a9cb41874a61ae6c9c70a45aa5e"
+    },
+    {
+      "module": "HellingerTree",
+      "source_sha256": "3c5dc0288543e481971f9ccdbf811102b191fa4067ff65ed1e0e3cd8e0da06b2",
+      "object_sha256": "e6492536f62b81c4b363b1ac7b4485e64e09d60f5f9d9ff4403d53ab659dffa2",
+      "transitive_source_fingerprint": "bd060b1a0712d9f882a515dbe123e927601d9d63aa790d777160aba4f40948da",
+      "status": "QUALIFIED_PREDECESSOR",
+      "predecessor_receipt": "docs/provenance/v5-research-continuations/checks/4bd668ffbcfa-actual-cobuchi-cost.json",
+      "predecessor_receipt_sha256": "1acb1452e50582ea5ba7f115101286c258237a9cb41874a61ae6c9c70a45aa5e"
+    },
+    {
+      "module": "IndependentProductFamilies",
+      "source_sha256": "9abc010ebfcfabc85695acd3aef10c1ea7fd5c0527dd215320840d57546b1a3d",
+      "object_sha256": "4eb66abf62797de8c08a49ac2d6df776deaba7765129db04d14be4df869462ef",
+      "transitive_source_fingerprint": "73d77925b925bb355215f46da9011f5c69147686b7a312b347b59e5805ce6813",
+      "status": "QUALIFIED_PREDECESSOR",
+      "predecessor_receipt": "docs/provenance/v5-research-continuations/checks/4bd668ffbcfa-actual-cobuchi-cost.json",
+      "predecessor_receipt_sha256": "1acb1452e50582ea5ba7f115101286c258237a9cb41874a61ae6c9c70a45aa5e"
+    },
+    {
+      "module": "TailMomentControls",
+      "source_sha256": "41936560aa0942f079957a14f6848207cb209d1b33e1ab1833cf33a731e90bd8",
+      "object_sha256": "c497f3513550ddc779e5790361ac3270a9c21353b8dd8afd75314affba1957b2",
+      "transitive_source_fingerprint": "f04968ace7ca5bb2c0aa00eefa010b2498422cb0fbb41cffbd0290ece88f3a9e",
+      "status": "FRESH_COMPILE",
+      "exit_code": 0
+    },
+    {
+      "module": "ExecutablePruning",
+      "source_sha256": "3098f76a8065b9a327a4e9763de88428cd4711c79232b87201b7c079ee7789db",
+      "object_sha256": "06e30d038d6c5b7949dcd73b6ac4c2886b34089deebdcd496440f3eb2c207dac",
+      "transitive_source_fingerprint": "d3e9467631414d7244049ef84b9076ef3760f6b691a76837ac4fd5590fedb0b4",
+      "status": "QUALIFIED_PREDECESSOR",
+      "predecessor_receipt": "docs/provenance/v5-research-continuations/checks/4bd668ffbcfa-actual-cobuchi-cost.json",
+      "predecessor_receipt_sha256": "1acb1452e50582ea5ba7f115101286c258237a9cb41874a61ae6c9c70a45aa5e"
+    },
+    {
+      "module": "GenericQueryReference",
+      "source_sha256": "577666771c95033429bf8ee328a372bc99b637d2abbe1eb11aa4b7e4a7ca514d",
+      "object_sha256": "af71fa9094a205265b80f33571a505b63b50b3a20db40aad621710e234ef9789",
+      "transitive_source_fingerprint": "974f088f0b9f50cce8123217ca49793bb9c421d387411d643e04987665572286",
+      "status": "QUALIFIED_PREDECESSOR",
+      "predecessor_receipt": "docs/provenance/v5-research-continuations/checks/4bd668ffbcfa-actual-cobuchi-cost.json",
+      "predecessor_receipt_sha256": "1acb1452e50582ea5ba7f115101286c258237a9cb41874a61ae6c9c70a45aa5e"
+    },
+    {
+      "module": "KilledQueryLaw",
+      "source_sha256": "17793ba9787eb9c3fc1618d4acfc368804be8309197156f22d440508f8ad22a0",
+      "object_sha256": "4da478436236f3e9de535fc4c8ce31d11403a33252454d650208d76631565114",
+      "transitive_source_fingerprint": "41f15f91165a43105420a1aa5e64b9f99dd6eb37d1880e7901624192d119d32b",
+      "status": "QUALIFIED_PREDECESSOR",
+      "predecessor_receipt": "docs/provenance/v5-research-continuations/checks/4bd668ffbcfa-actual-cobuchi-cost.json",
+      "predecessor_receipt_sha256": "1acb1452e50582ea5ba7f115101286c258237a9cb41874a61ae6c9c70a45aa5e"
+    },
+    {
+      "module": "PolicyRowEvaluator",
+      "source_sha256": "737d368aa9f74a3daa751924690dba374cd7838a8f6d9fbb1f5371e5039fdd05",
+      "object_sha256": "237f8d93547cb1a49856158698efebfd1b1c82152a7e7f4194d43cfee68a16bf",
+      "transitive_source_fingerprint": "fb23dbc85d9c6d8712c8b5d050702175e89927bcba249cb8f35646bca030a477",
+      "status": "QUALIFIED_PREDECESSOR",
+      "predecessor_receipt": "docs/provenance/v5-research-continuations/checks/4bd668ffbcfa-actual-cobuchi-cost.json",
+      "predecessor_receipt_sha256": "1acb1452e50582ea5ba7f115101286c258237a9cb41874a61ae6c9c70a45aa5e"
+    },
+    {
+      "module": "RecurrentGraph",
+      "source_sha256": "395d925096b881b32a46cfdf901ffbd73029cfe598a175bf667884cdc2b6436c",
+      "object_sha256": "6b0f500c9a4bfc5272f8827eb624f6ee59dcd55651b2ff9f5c71a10e2bce9f50",
+      "transitive_source_fingerprint": "22c1ba9b314e6a08886ab1e1ceba84ded81ce4ce4affb40d5c0859852b95c028",
+      "status": "QUALIFIED_PREDECESSOR",
+      "predecessor_receipt": "docs/provenance/v5-research-continuations/checks/4bd668ffbcfa-actual-cobuchi-cost.json",
+      "predecessor_receipt_sha256": "1acb1452e50582ea5ba7f115101286c258237a9cb41874a61ae6c9c70a45aa5e"
+    },
+    {
+      "module": "StationaryPairChain",
+      "source_sha256": "5b7e23bf7aca12b0529cb77362bf1cb93d54fc1567fe5db7e9d8d000b5d50d99",
+      "object_sha256": "e8de90eed0275b630d7d22c61de9f263c5d02188b66fe62037bba559058092fd",
+      "transitive_source_fingerprint": "d41797f86f9e4bd35c3220d9bd6cbaabba1b34ab7ab75966dcef9ff39c382d86",
+      "status": "QUALIFIED_PREDECESSOR",
+      "predecessor_receipt": "docs/provenance/v5-research-continuations/checks/4bd668ffbcfa-actual-cobuchi-cost.json",
+      "predecessor_receipt_sha256": "1acb1452e50582ea5ba7f115101286c258237a9cb41874a61ae6c9c70a45aa5e"
+    },
+    {
+      "module": "SubprobHellinger",
+      "source_sha256": "3e56c01155f3f838a3d911426e10746ab4a20b00711c2c4da3a5ff2f7568c8ad",
+      "object_sha256": "567e07b06781c2a66b6d0ee8659dbfbc134e11d6f0162f3d7fb63d5fb43ad434",
+      "transitive_source_fingerprint": "a8a544459e68a1b3c9f8b9f5d00dd89210270b0f0301916ee0fc2b7f997c0d90",
+      "status": "QUALIFIED_PREDECESSOR",
+      "predecessor_receipt": "docs/provenance/v5-research-continuations/checks/4bd668ffbcfa-actual-cobuchi-cost.json",
+      "predecessor_receipt_sha256": "1acb1452e50582ea5ba7f115101286c258237a9cb41874a61ae6c9c70a45aa5e"
+    },
+    {
+      "module": "DependentHellinger",
+      "source_sha256": "cfcafcc7e1ebcda71370644b4b89c84a9948353e9115ed2e3a7807b78079a97e",
+      "object_sha256": "abbde594afa11643cff2b1ec4aea2e0bd4b742b835d5d1a7ea878a6505f94e03",
+      "transitive_source_fingerprint": "84a716e7c1e7267fdee73728f242d813f0c656b78bac13860e5a938885a249cb",
+      "status": "QUALIFIED_PREDECESSOR",
+      "predecessor_receipt": "docs/provenance/v5-research-continuations/checks/4bd668ffbcfa-actual-cobuchi-cost.json",
+      "predecessor_receipt_sha256": "1acb1452e50582ea5ba7f115101286c258237a9cb41874a61ae6c9c70a45aa5e"
+    },
+    {
+      "module": "MarkovSupportAdapter",
+      "source_sha256": "6c281b2bc6036789a0d342a14df80b1d9c68bcbdf49a1720855d3cd03a46e499",
+      "object_sha256": "6b2d9b4e676dacc2b696a8879c8d3d62c6636f03fcf39a01dfb39e63f39d490a",
+      "transitive_source_fingerprint": "870f505333eeb06d51dd03195441f9523a81716102aba00dbdeff4b21e70e811",
+      "status": "QUALIFIED_PREDECESSOR",
+      "predecessor_receipt": "docs/provenance/v5-research-continuations/checks/4bd668ffbcfa-actual-cobuchi-cost.json",
+      "predecessor_receipt_sha256": "1acb1452e50582ea5ba7f115101286c258237a9cb41874a61ae6c9c70a45aa5e"
+    },
+    {
+      "module": "PolicyRowLaw",
+      "source_sha256": "8d66ad4ebbea2ba7e825dbb1f880db994026cef22c55d15f7d4b918884251338",
+      "object_sha256": "03a34af5d076fd961be054f9f04d3d61a28a5127ecbaa22256974e0153cf9a20",
+      "transitive_source_fingerprint": "0c7a496d55939a83556a767fd133d788b19572c4872945792dd5cb9ae9dee23c",
+      "status": "QUALIFIED_PREDECESSOR",
+      "predecessor_receipt": "docs/provenance/v5-research-continuations/checks/4bd668ffbcfa-actual-cobuchi-cost.json",
+      "predecessor_receipt_sha256": "1acb1452e50582ea5ba7f115101286c258237a9cb41874a61ae6c9c70a45aa5e"
+    },
+    {
+      "module": "PolicyTranscriptFiber",
+      "source_sha256": "f872c6ff9b3cd6d7e813640f4f538fcb2edd420d22661dfaff800e16e4758f59",
+      "object_sha256": "daaed36effe9303aece81043ba9fe7e798d0a9650a012cd66b6fa893e0ee4e4c",
+      "transitive_source_fingerprint": "9e8c50259f7ea49038bb3c2a50c88481224cd6985c7a9a66485e4009ed416d2b",
+      "status": "QUALIFIED_PREDECESSOR",
+      "predecessor_receipt": "docs/provenance/v5-research-continuations/checks/4bd668ffbcfa-actual-cobuchi-cost.json",
+      "predecessor_receipt_sha256": "1acb1452e50582ea5ba7f115101286c258237a9cb41874a61ae6c9c70a45aa5e"
+    },
+    {
+      "module": "FeedbackRequests",
+      "source_sha256": "327eea767c3a2f2ad30e66b2c9c9591b4bb6a1fe7dea39c71c50623cb4b07b38",
+      "object_sha256": "f3becdc21a91b36fda599b71b5c5bd86f44d9d2e600326a5612d78dd94959a9c",
+      "transitive_source_fingerprint": "a57ba540fc05139df10f4bede92f06f9cae83e0ff0f8f39ece7da125e6191545",
+      "status": "QUALIFIED_PREDECESSOR",
+      "predecessor_receipt": "docs/provenance/v5-research-continuations/checks/4bd668ffbcfa-actual-cobuchi-cost.json",
+      "predecessor_receipt_sha256": "1acb1452e50582ea5ba7f115101286c258237a9cb41874a61ae6c9c70a45aa5e"
+    },
+    {
+      "module": "HistoryPathConsistency",
+      "source_sha256": "2fc036ffd94d213ad5215c447308132dd08edaad19d5f893dd130780382cc146",
+      "object_sha256": "d43152f7f3a257736341efac1d18eabb32a8a7487597a1cef4a5fbf7a1654263",
+      "transitive_source_fingerprint": "d43cc06a52f09e663624fb6028ec9ed82224315d5a7d950b2afc8262f016f057",
+      "status": "QUALIFIED_PREDECESSOR",
+      "predecessor_receipt": "docs/provenance/v5-research-continuations/checks/4bd668ffbcfa-actual-cobuchi-cost.json",
+      "predecessor_receipt_sha256": "1acb1452e50582ea5ba7f115101286c258237a9cb41874a61ae6c9c70a45aa5e"
+    },
+    {
+      "module": "ResetBudget",
+      "source_sha256": "d482ed24b70fa4501eefcd7878a7889af7b8f3fbf31f8c6de60b77ebffa758b1",
+      "object_sha256": "f3d38d03695eebd8239db079100e0da5b42e931601cbb6b47d87bc7d04e1137c",
+      "transitive_source_fingerprint": "cfa77bd3fbb0a35de99867cb19f701abf5e51f79656a2061cdfea6400eeb2c36",
+      "status": "QUALIFIED_PREDECESSOR",
+      "predecessor_receipt": "docs/provenance/v5-research-continuations/checks/4bd668ffbcfa-actual-cobuchi-cost.json",
+      "predecessor_receipt_sha256": "1acb1452e50582ea5ba7f115101286c258237a9cb41874a61ae6c9c70a45aa5e"
+    },
+    {
+      "module": "FeedbackFiberProbability",
+      "source_sha256": "dbaf6f6cafc94a08bd2f00ca8ecc6c4a253f002b517b52ff58825b944475a834",
+      "object_sha256": "14ee2d0387fc74a093e18e71a41be701b42e65be6ff6cbd013f6ec68332ea060",
+      "transitive_source_fingerprint": "d248857358b201034ed3b7156a75f187c88f5507571e46b0a423f215e857f61e",
+      "status": "QUALIFIED_PREDECESSOR",
+      "predecessor_receipt": "docs/provenance/v5-research-continuations/checks/4bd668ffbcfa-actual-cobuchi-cost.json",
+      "predecessor_receipt_sha256": "1acb1452e50582ea5ba7f115101286c258237a9cb41874a61ae6c9c70a45aa5e"
+    },
+    {
+      "module": "ResetLaw",
+      "source_sha256": "f76f752f31565baa5262aa4aafcf21a7f3722d1f74c9681fe6d8a2a50bb02d12",
+      "object_sha256": "df550024c0736693090ad9742ce3ee36c270090640a2a40592d2a2895c8f5731",
+      "transitive_source_fingerprint": "0a70581cdb6b8e10ee3fb52f8db94d9a358a12d2e2215fe9364d37e87fad4f4a",
+      "status": "QUALIFIED_PREDECESSOR",
+      "predecessor_receipt": "docs/provenance/v5-research-continuations/checks/4bd668ffbcfa-actual-cobuchi-cost.json",
+      "predecessor_receipt_sha256": "1acb1452e50582ea5ba7f115101286c258237a9cb41874a61ae6c9c70a45aa5e"
+    },
+    {
+      "module": "PolicyCylinderProbability",
+      "source_sha256": "2fe2e33744bbd7edada29f4faab67f4b63e22efff2945381c1d367a2859c8d72",
+      "object_sha256": "1f2135dd16f483f5a86bd8d0cdca61825f90a7968aae29244ac1c48d414087f9",
+      "transitive_source_fingerprint": "41d385e505b429b7bf7780e63d17cd0cf95c6f373da378ac7c7a4e53919c808a",
+      "status": "QUALIFIED_PREDECESSOR",
+      "predecessor_receipt": "docs/provenance/v5-research-continuations/checks/4bd668ffbcfa-actual-cobuchi-cost.json",
+      "predecessor_receipt_sha256": "1acb1452e50582ea5ba7f115101286c258237a9cb41874a61ae6c9c70a45aa5e"
+    },
+    {
+      "module": "ResetTrajectory",
+      "source_sha256": "c1bae278764e20b67382204474b62e8bba769463f812d5adfc2086b85b303f68",
+      "object_sha256": "28e93e447be01944e4944653a3b38b87a83506fe4e7738ce828d2849fcd61313",
+      "transitive_source_fingerprint": "88ccfe8415b67054dd03429f0c26e34dda2cd66c575c0d2674796d52c6e3c3ca",
+      "status": "QUALIFIED_PREDECESSOR",
+      "predecessor_receipt": "docs/provenance/v5-research-continuations/checks/4bd668ffbcfa-actual-cobuchi-cost.json",
+      "predecessor_receipt_sha256": "1acb1452e50582ea5ba7f115101286c258237a9cb41874a61ae6c9c70a45aa5e"
+    },
+    {
+      "module": "MarkovCharge",
+      "source_sha256": "97e0f881af3140b625d45642c06cecc20dbb49773528f8345dd4c948b1ddfc68",
+      "object_sha256": "9705e93391502c05da152205c4f338e414b44c127e2ad5c5de98073efaf1d2f9",
+      "transitive_source_fingerprint": "52663e01624d069ed36b169c5ab89c19611e6630e2ecae6c14beb0052d8dd4ab",
+      "status": "QUALIFIED_PREDECESSOR",
+      "predecessor_receipt": "docs/provenance/v5-research-continuations/checks/4bd668ffbcfa-actual-cobuchi-cost.json",
+      "predecessor_receipt_sha256": "1acb1452e50582ea5ba7f115101286c258237a9cb41874a61ae6c9c70a45aa5e"
+    },
+    {
+      "module": "PolicyObservedLaw",
+      "source_sha256": "ad890909953de257c58ae2750e7f7710747489936704e0767b77aa0485f59d76",
+      "object_sha256": "cf5c1f598088a68da31ffe5055858d542413a05985181dfe83de9ca6814ef479",
+      "transitive_source_fingerprint": "cd07aac83cc3881fdf012273303d5ae3e5c186231f62e53c961d931d81162dd5",
+      "status": "QUALIFIED_PREDECESSOR",
+      "predecessor_receipt": "docs/provenance/v5-research-continuations/checks/4bd668ffbcfa-actual-cobuchi-cost.json",
+      "predecessor_receipt_sha256": "1acb1452e50582ea5ba7f115101286c258237a9cb41874a61ae6c9c70a45aa5e"
+    },
+    {
+      "module": "FiniteChainTrajectory",
+      "source_sha256": "71acea2c2028a111c1e15ddc85f76f0dd59efb639f9a0372bc35a320c7f4e3ef",
+      "object_sha256": "988036119ad08486826d0e70cb1eb2ea567f11d3d2951d81638230c2fa785d32",
+      "transitive_source_fingerprint": "cde3f8c120573b6dc5c94fa8fba28b82b33c2443021ce05eb9f735ef12addff4",
+      "status": "QUALIFIED_PREDECESSOR",
+      "predecessor_receipt": "docs/provenance/v5-research-continuations/checks/4bd668ffbcfa-actual-cobuchi-cost.json",
+      "predecessor_receipt_sha256": "1acb1452e50582ea5ba7f115101286c258237a9cb41874a61ae6c9c70a45aa5e"
+    },
+    {
+      "module": "PolicyTraceBinding",
+      "source_sha256": "fe8d6b84a1cd526a6b0a10770aebd52fdbf19b7ae7804f7d2447a33e133e44bf",
+      "object_sha256": "50ad6bcac13a0e1afad9ba1ac6b2775629374bc5c3e0bca696b3ab57e2b08bc0",
+      "transitive_source_fingerprint": "d14434d1177870de21b81b5492e83e3101591f484472414980d3068753dd3c05",
+      "status": "QUALIFIED_PREDECESSOR",
+      "predecessor_receipt": "docs/provenance/v5-research-continuations/checks/4bd668ffbcfa-actual-cobuchi-cost.json",
+      "predecessor_receipt_sha256": "1acb1452e50582ea5ba7f115101286c258237a9cb41874a61ae6c9c70a45aa5e"
+    },
+    {
+      "module": "InfiniteRecurrence",
+      "source_sha256": "1792831c1af1628fae2c31b821f40d6d3a67be22303595f66ca14d273223228a",
+      "object_sha256": "e90f02a7c676a2bdf6a29c686b773067b6d3e7a81b0301795a25b4d42c199b0a",
+      "transitive_source_fingerprint": "d123011ee80dfb36880a8dd1a37130be8a8804c4f7cf30c020eca611940edcdd",
+      "status": "QUALIFIED_PREDECESSOR",
+      "predecessor_receipt": "docs/provenance/v5-research-continuations/checks/4bd668ffbcfa-actual-cobuchi-cost.json",
+      "predecessor_receipt_sha256": "1acb1452e50582ea5ba7f115101286c258237a9cb41874a61ae6c9c70a45aa5e"
+    },
+    {
+      "module": "KilledAdaptiveHistory",
+      "source_sha256": "ff7c13f5212d6b5f9cfdf64979e664e51934422189528d6169b8a72c57cfff56",
+      "object_sha256": "b9bd5d2ab1c78fffbd20d4adfa70c90270749cc571a35c845ba4b5b48429cd41",
+      "transitive_source_fingerprint": "92533668e5c66670471e601406bce28c10b2b12c1cb8485ba5bea1755f2abc08",
+      "status": "QUALIFIED_PREDECESSOR",
+      "predecessor_receipt": "docs/provenance/v5-research-continuations/checks/4bd668ffbcfa-actual-cobuchi-cost.json",
+      "predecessor_receipt_sha256": "1acb1452e50582ea5ba7f115101286c258237a9cb41874a61ae6c9c70a45aa5e"
+    },
+    {
+      "module": "PolicyTailTransfer",
+      "source_sha256": "a42c82222bd810e4005b536d27d394a01d28b9fcbdb9ab8d53e3c5d6cdc48720",
+      "object_sha256": "d575aa17fa2fa5bddb5e37547bfa5bc8600d6ea7ee969f74c47b4f280c8ab552",
+      "transitive_source_fingerprint": "f8288c740f8e504c10fcbb2b3071f88413fca16a47e7f2b44f9553769497b532",
+      "status": "QUALIFIED_PREDECESSOR",
+      "predecessor_receipt": "docs/provenance/v5-research-continuations/checks/4bd668ffbcfa-actual-cobuchi-cost.json",
+      "predecessor_receipt_sha256": "1acb1452e50582ea5ba7f115101286c258237a9cb41874a61ae6c9c70a45aa5e"
+    },
+    {
+      "module": "ResidualSeedPosterior",
+      "source_sha256": "9608772a6948c3dfb69d95659d27b5f6b961aece08ccc09afc594b63cd264ba6",
+      "object_sha256": "a6dcfb7676eb9007a950f74e0fbe4780ab9092b9a93d9902d40746f865cc6dfd",
+      "transitive_source_fingerprint": "3f90a2dd11472a88c6983926bd885b6a6ce91d74fb72bddcd511bd38c68a07ae",
+      "status": "QUALIFIED_PREDECESSOR",
+      "predecessor_receipt": "docs/provenance/v5-research-continuations/checks/4bd668ffbcfa-actual-cobuchi-cost.json",
+      "predecessor_receipt_sha256": "1acb1452e50582ea5ba7f115101286c258237a9cb41874a61ae6c9c70a45aa5e"
+    },
+    {
+      "module": "StackActionLaw",
+      "source_sha256": "6127e1c8362a4c17f8074937d88ffb13b9fdf7de7ad88d64130f8ee3d35a27fc",
+      "object_sha256": "e186b8b42c6e1f582f421fee1259ae92abbf8c5b9a22fed17b40f50735798cb9",
+      "transitive_source_fingerprint": "3b5c398f9c1ec6f9c61752841d7de17385fc187ab088a2d8c6075b3606db1d13",
+      "status": "QUALIFIED_PREDECESSOR",
+      "predecessor_receipt": "docs/provenance/v5-research-continuations/checks/4bd668ffbcfa-actual-cobuchi-cost.json",
+      "predecessor_receipt_sha256": "1acb1452e50582ea5ba7f115101286c258237a9cb41874a61ae6c9c70a45aa5e"
+    },
+    {
+      "module": "ConditionalPrefix",
+      "source_sha256": "987df7f2262b0b2a5e74bd4aee521b3315d61ca97d1e308ef6b10223f20d48f2",
+      "object_sha256": "8a3c6e01e23c9fdeca26e5a4ce93547ebd76c5ea34dddc5003cb74dc98f7bf06",
+      "transitive_source_fingerprint": "407eb2ec868a8c79fd4f9ff9bfb9bfd2e48f4c58e756d083716f8d190f71b97c",
+      "status": "QUALIFIED_PREDECESSOR",
+      "predecessor_receipt": "docs/provenance/v5-research-continuations/checks/4bd668ffbcfa-actual-cobuchi-cost.json",
+      "predecessor_receipt_sha256": "1acb1452e50582ea5ba7f115101286c258237a9cb41874a61ae6c9c70a45aa5e"
+    },
+    {
+      "module": "FairComponentParity",
+      "source_sha256": "566f01a571617215b71386917896044a7dc150e84130dcd0f92f36e45038f414",
+      "object_sha256": "aace7157db8f06a4bd0fe7b8610b43e51fffa78275c42ce77899ff080deddf47",
+      "transitive_source_fingerprint": "104cf649c6e4b12c3f5e047d8c7265957686cbe056e6469b7c35a7d66cdc624a",
+      "status": "QUALIFIED_PREDECESSOR",
+      "predecessor_receipt": "docs/provenance/v5-research-continuations/checks/4bd668ffbcfa-actual-cobuchi-cost.json",
+      "predecessor_receipt_sha256": "1acb1452e50582ea5ba7f115101286c258237a9cb41874a61ae6c9c70a45aa5e"
+    },
+    {
+      "module": "KilledRecurrentTransfer",
+      "source_sha256": "5de3075faa5e7041d31cb7c18868c0a91db7ef8d47a0630d26cb63dfcd6dd60b",
+      "object_sha256": "85f73027df07a01f8b641c9173e9d555aff5a9b3f6b78648ee5d9a0ce41b162b",
+      "transitive_source_fingerprint": "c79714d0c9241a4231301a79dbb7e3a478d8c06ba8d89252f92f51dca48678c9",
+      "status": "QUALIFIED_PREDECESSOR",
+      "predecessor_receipt": "docs/provenance/v5-research-continuations/checks/4bd668ffbcfa-actual-cobuchi-cost.json",
+      "predecessor_receipt_sha256": "1acb1452e50582ea5ba7f115101286c258237a9cb41874a61ae6c9c70a45aa5e"
+    },
+    {
+      "module": "PosteriorFeedbackProduct",
+      "source_sha256": "0f37e47723087f1ad72667012a3abac927ae29162a14625cc58dfae754346115",
+      "object_sha256": "1da990b2acb4fc2804a6c1d0e13151205c1f08b2d39f58a5774b5b08034d116b",
+      "transitive_source_fingerprint": "22098205639a9eb72c4ebf952ba818637f261f731122a306e00ff3316dc78053",
+      "status": "QUALIFIED_PREDECESSOR",
+      "predecessor_receipt": "docs/provenance/v5-research-continuations/checks/4bd668ffbcfa-actual-cobuchi-cost.json",
+      "predecessor_receipt_sha256": "1acb1452e50582ea5ba7f115101286c258237a9cb41874a61ae6c9c70a45aa5e"
+    },
+    {
+      "module": "RawEmpiricalRows",
+      "source_sha256": "dbbc16fe32b75bfcd3d1575175cfc857b45926f48533f2317a044cb30cc95d6b",
+      "object_sha256": "23a6fa0465972cac46f4050ba6c84790a671bfbe9e61b33856543d1fdfeb21a3",
+      "transitive_source_fingerprint": "a7d1f2e75fed6bcd718e56dc6ffecabe06166af36a80ec3b03c7af7323897a36",
+      "status": "QUALIFIED_PREDECESSOR",
+      "predecessor_receipt": "docs/provenance/v5-research-continuations/checks/4bd668ffbcfa-actual-cobuchi-cost.json",
+      "predecessor_receipt_sha256": "1acb1452e50582ea5ba7f115101286c258237a9cb41874a61ae6c9c70a45aa5e"
+    },
+    {
+      "module": "RawTapeRecurrence",
+      "source_sha256": "d8ff5864c4b0697dbd056940503b6913fe8c3256277efc790601b0e2528f5a8e",
+      "object_sha256": "907d5b639687fbe7511aaef9fe5575cef07b41a65a7727ea8dbf0049f12aca7d",
+      "transitive_source_fingerprint": "e3e46bf02705324eac78ea3858a9596d58e4e108dc863b4d4eec3ada9e82d962",
+      "status": "QUALIFIED_PREDECESSOR",
+      "predecessor_receipt": "docs/provenance/v5-research-continuations/checks/4bd668ffbcfa-actual-cobuchi-cost.json",
+      "predecessor_receipt_sha256": "1acb1452e50582ea5ba7f115101286c258237a9cb41874a61ae6c9c70a45aa5e"
+    },
+    {
+      "module": "RelativeTailTransfer",
+      "source_sha256": "bd89640236881734ec68ed3f1bc21684b8af6c986683a5530f550a2221d4a167",
+      "object_sha256": "3c23ce221f774139aa05b0751d23534cabafc82e4eac69a7fe8db5cf79ea8315",
+      "transitive_source_fingerprint": "d247b22fa96a22a712783bad6dda758887dad0af3dfff6456ae686e8669e4027",
+      "status": "QUALIFIED_PREDECESSOR",
+      "predecessor_receipt": "docs/provenance/v5-research-continuations/checks/4bd668ffbcfa-actual-cobuchi-cost.json",
+      "predecessor_receipt_sha256": "1acb1452e50582ea5ba7f115101286c258237a9cb41874a61ae6c9c70a45aa5e"
+    },
+    {
+      "module": "SeededPolicyNecessity",
+      "source_sha256": "d0335e4234a9462aa5f9af7217b78717983539703835041c9a0a334040ede016",
+      "object_sha256": "8ff9af34b04a19b6b3744554d044e03f4c92697ed253f2bddc322107088a49d0",
+      "transitive_source_fingerprint": "b8a659e80e99f9aca7f76ad0539a37cb571367c1a1e35c8d76fbaf43881389e5",
+      "status": "QUALIFIED_PREDECESSOR",
+      "predecessor_receipt": "docs/provenance/v5-research-continuations/checks/4bd668ffbcfa-actual-cobuchi-cost.json",
+      "predecessor_receipt_sha256": "1acb1452e50582ea5ba7f115101286c258237a9cb41874a61ae6c9c70a45aa5e"
+    },
+    {
+      "module": "SequentialTapeConsumption",
+      "source_sha256": "c06b02171163bd00875060eb97e870673ef689d2e4b0fa6a767324899bc304cb",
+      "object_sha256": "4d1af15c5427ba0b9d073eab22f23c454f2c8f438710228f619491179fdbcf1d",
+      "transitive_source_fingerprint": "508a844907c7f47a72dc261bcbb956cd1eb3cc98b570690b84a138a8a96fc87d",
+      "status": "QUALIFIED_PREDECESSOR",
+      "predecessor_receipt": "docs/provenance/v5-research-continuations/checks/4bd668ffbcfa-actual-cobuchi-cost.json",
+      "predecessor_receipt_sha256": "1acb1452e50582ea5ba7f115101286c258237a9cb41874a61ae6c9c70a45aa5e"
+    },
+    {
+      "module": "CheckedTargetOperation",
+      "source_sha256": "d1751ecda2c7730b2580575391486f38a40a9ea0e585d90ad12774da9fb33ff8",
+      "object_sha256": "e46a731c01fdb3c79687043a49e491bcca8d6456096d98ea406a729ab74f708c",
+      "transitive_source_fingerprint": "0d8a117928572313afc2b3f61d9501bab03ae2cbff537638b397133b02b77990",
+      "status": "QUALIFIED_PREDECESSOR",
+      "predecessor_receipt": "docs/provenance/v5-research-continuations/checks/4bd668ffbcfa-actual-cobuchi-cost.json",
+      "predecessor_receipt_sha256": "1acb1452e50582ea5ba7f115101286c258237a9cb41874a61ae6c9c70a45aa5e"
+    },
+    {
+      "module": "ConditionalContinuationLaw",
+      "source_sha256": "1547d34d2a53302e070e7a02131f242f9cb1d80f6aa0f96fc478844f630703a3",
+      "object_sha256": "2dad1ad81ae9b4a7ee5f9347c56e8c9c6cde7df57fbc5f3ad65c55b9e2918901",
+      "transitive_source_fingerprint": "59610d51fce7c5ea3d9b0d62d663472708a671d30348d58d8126985b9e5649fb",
+      "status": "QUALIFIED_PREDECESSOR",
+      "predecessor_receipt": "docs/provenance/v5-research-continuations/checks/4bd668ffbcfa-actual-cobuchi-cost.json",
+      "predecessor_receipt_sha256": "1acb1452e50582ea5ba7f115101286c258237a9cb41874a61ae6c9c70a45aa5e"
+    },
+    {
+      "module": "EmpiricalTailBounds",
+      "source_sha256": "76d70084a57a2beb4b41784b3c93fd248d732b7422055aba2fdafdaf7957f993",
+      "object_sha256": "571ee265733651e94070bed10c13f52fcd9cb109525f58c66fda98fa10ee449b",
+      "transitive_source_fingerprint": "a09e8ae750889dc71693117be5fa0bf51158dadf0e65eb3819080932c2d8f3ca",
+      "status": "QUALIFIED_PREDECESSOR",
+      "predecessor_receipt": "docs/provenance/v5-research-continuations/checks/4bd668ffbcfa-actual-cobuchi-cost.json",
+      "predecessor_receipt_sha256": "1acb1452e50582ea5ba7f115101286c258237a9cb41874a61ae6c9c70a45aa5e"
+    },
+    {
+      "module": "MarkovKilledBridge",
+      "source_sha256": "7d828069e42926c9e7acb36bfb683a6b3bd8c6f46907d00ccd8c643e27555c04",
+      "object_sha256": "03c44fa4636ee5e22cb9d99fe93c66f4be40e3478c7493e65395b8e0dc8840a0",
+      "transitive_source_fingerprint": "284dba6890e9c2abd7103a18be54c227b5140ace92ff5f611dcaf8cb14de572f",
+      "status": "QUALIFIED_PREDECESSOR",
+      "predecessor_receipt": "docs/provenance/v5-research-continuations/checks/4bd668ffbcfa-actual-cobuchi-cost.json",
+      "predecessor_receipt_sha256": "1acb1452e50582ea5ba7f115101286c258237a9cb41874a61ae6c9c70a45aa5e"
+    },
+    {
+      "module": "ParityTailInvariance",
+      "source_sha256": "1dc8c0e40a86a205498af32bd7c4a0d96afca6020f2fbd321e21fae2beee0077",
+      "object_sha256": "b288df14e68ac142eb93e8884237fba987358b77619900d82badd21d6a2e0564",
+      "transitive_source_fingerprint": "98cc12146658c8f534c0cf40f723ec9a7122d656fd507def1f0202fb54da66e6",
+      "status": "QUALIFIED_PREDECESSOR",
+      "predecessor_receipt": "docs/provenance/v5-research-continuations/checks/4bd668ffbcfa-actual-cobuchi-cost.json",
+      "predecessor_receipt_sha256": "1acb1452e50582ea5ba7f115101286c258237a9cb41874a61ae6c9c70a45aa5e"
+    },
+    {
+      "module": "SafeSetTailTransfer",
+      "source_sha256": "960293c6ff358b5bcd571b1f24ad62ce43983894836ce8516a24212bb1cd5699",
+      "object_sha256": "5464d868c3687c9e72ad82c287bc9a0a65abf6d7f06ff736b0640f66a126b936",
+      "transitive_source_fingerprint": "3cad0df8456962ca7c20d6a6f36f2f43226a8df224502f56b898449202e0b453",
+      "status": "QUALIFIED_PREDECESSOR",
+      "predecessor_receipt": "docs/provenance/v5-research-continuations/checks/4bd668ffbcfa-actual-cobuchi-cost.json",
+      "predecessor_receipt_sha256": "1acb1452e50582ea5ba7f115101286c258237a9cb41874a61ae6c9c70a45aa5e"
+    },
+    {
+      "module": "AdaptiveMarkovRecurrentGraph",
+      "source_sha256": "24cf86efc439d077f7860aabf90f455d75269130094d94c46bc6734bacc2aaf9",
+      "object_sha256": "b8e8de48f6940f0d27a58710f8466aafafea8c9fa23d69c9068f46b0aba01a15",
+      "transitive_source_fingerprint": "e8cc46f3ff1bc2723c5faee9d38ec97d13e15074a405d4f91be16db8c637ef02",
+      "status": "QUALIFIED_PREDECESSOR",
+      "predecessor_receipt": "docs/provenance/v5-research-continuations/checks/4bd668ffbcfa-actual-cobuchi-cost.json",
+      "predecessor_receipt_sha256": "1acb1452e50582ea5ba7f115101286c258237a9cb41874a61ae6c9c70a45aa5e"
+    },
+    {
+      "module": "MarkovSeedPosterior",
+      "source_sha256": "adc48e40e89c35782be3f30eafb0a62bb6100de48bf853a84e081631da8092e0",
+      "object_sha256": "6d930df587d0c9ce1f33bc748a065e366acab09b730e46680ce7641fc04ecbca",
+      "transitive_source_fingerprint": "e305df680c0b33c7c6f409e807bf5a111b7afe91604b18dd50ea085141bb7e49",
+      "status": "QUALIFIED_PREDECESSOR",
+      "predecessor_receipt": "docs/provenance/v5-research-continuations/checks/4bd668ffbcfa-actual-cobuchi-cost.json",
+      "predecessor_receipt_sha256": "1acb1452e50582ea5ba7f115101286c258237a9cb41874a61ae6c9c70a45aa5e"
+    },
+    {
+      "module": "ObservedEmpiricalRows",
+      "source_sha256": "90ba0fd6a17d86323b83185acd96a639fe584407d2496dad678aed08bc74717e",
+      "object_sha256": "2dd3501db27f7d9b390fbc40eacbc56614e7334838fe174c789577a58d48dd6e",
+      "transitive_source_fingerprint": "0248b1ee802110b20c856806ac13eecc67b162ac3d74b0dfe7005b55c1bc124c",
+      "status": "QUALIFIED_PREDECESSOR",
+      "predecessor_receipt": "docs/provenance/v5-research-continuations/checks/4bd668ffbcfa-actual-cobuchi-cost.json",
+      "predecessor_receipt_sha256": "1acb1452e50582ea5ba7f115101286c258237a9cb41874a61ae6c9c70a45aa5e"
+    },
+    {
+      "module": "ConditionalKilledContinuation",
+      "source_sha256": "48f69898de357b1cce90acfa6d575cf0688fae41821c8376a4a395bea1ba04c8",
+      "object_sha256": "7d05ff2422610d570bace7f53cf2fdc4ad344c8ceaaf8bf3cc2242149b167e2c",
+      "transitive_source_fingerprint": "eb08113f2d05553e3073d9e9b8052a495228464bdb2a9312f62235a71489be93",
+      "status": "QUALIFIED_PREDECESSOR",
+      "predecessor_receipt": "docs/provenance/v5-research-continuations/checks/4bd668ffbcfa-actual-cobuchi-cost.json",
+      "predecessor_receipt_sha256": "1acb1452e50582ea5ba7f115101286c258237a9cb41874a61ae6c9c70a45aa5e"
+    },
+    {
+      "module": "RoundRobinSchedule",
+      "source_sha256": "21db947de0a6f06908487f50d6ca0038c9337aed7184cd2dc0eb929982f93e2b",
+      "object_sha256": "ed2fe58af08b0f28e82c04eb5ab65101f776dbd727640b65534c0f6a5058f096",
+      "transitive_source_fingerprint": "ecb65b453c77ce258c8051b0108e8e2dd1ecd94d72ab3341844918dc6e98289c",
+      "status": "QUALIFIED_PREDECESSOR",
+      "predecessor_receipt": "docs/provenance/v5-research-continuations/checks/4bd668ffbcfa-actual-cobuchi-cost.json",
+      "predecessor_receipt_sha256": "1acb1452e50582ea5ba7f115101286c258237a9cb41874a61ae6c9c70a45aa5e"
+    },
+    {
+      "module": "StableSupportParityNecessity",
+      "source_sha256": "e7efd3c855f5adf29c0a3fce65aac3cadba994e8ccc72f32e2829bc1434f802d",
+      "object_sha256": "459468d0b762124db3d4d71adcf457f1a08e9e5ae335de36c9e359456db0565d",
+      "transitive_source_fingerprint": "2a22a753832918ffcc592bcd994353c4911ee1edfd3c6f582de6a77a87dfadff",
+      "status": "QUALIFIED_PREDECESSOR",
+      "predecessor_receipt": "docs/provenance/v5-research-continuations/checks/4bd668ffbcfa-actual-cobuchi-cost.json",
+      "predecessor_receipt_sha256": "1acb1452e50582ea5ba7f115101286c258237a9cb41874a61ae6c9c70a45aa5e"
+    },
+    {
+      "module": "ConditionalAlmostSure",
+      "source_sha256": "06d403f36ee3cb95094a53b4a53eea72810565fc66ac1fb0607fef9b01922a9b",
+      "object_sha256": "c3fd38810c93580bdb916ac2f65b6f84fb1dad79c5e34b039e843d6df27d1880",
+      "transitive_source_fingerprint": "05a0059ce37ac34922dcdac85473d194e8810caa800a98bdc87a92179471d254",
+      "status": "QUALIFIED_PREDECESSOR",
+      "predecessor_receipt": "docs/provenance/v5-research-continuations/checks/4bd668ffbcfa-actual-cobuchi-cost.json",
+      "predecessor_receipt_sha256": "1acb1452e50582ea5ba7f115101286c258237a9cb41874a61ae6c9c70a45aa5e"
+    },
+    {
+      "module": "PhaseStabilization",
+      "source_sha256": "b4d8348961420e0b0ec7459d0ddc0276090fb34349e6b26823ac90afb8ef4183",
+      "object_sha256": "a60dbc68555768a12ff128143802fe971effd64498f645fbf591b8a9cc7c7302",
+      "transitive_source_fingerprint": "49983e83460a2d6c246f93cc226f7432c5a8fac09949cd87d382e3bb15ad4c35",
+      "status": "QUALIFIED_PREDECESSOR",
+      "predecessor_receipt": "docs/provenance/v5-research-continuations/checks/4bd668ffbcfa-actual-cobuchi-cost.json",
+      "predecessor_receipt_sha256": "1acb1452e50582ea5ba7f115101286c258237a9cb41874a61ae6c9c70a45aa5e"
+    },
+    {
+      "module": "StageTargetOrExit",
+      "source_sha256": "6235ac02c768a8184b5a05b9f30659b2c24cb33e8c52017ef4a61652001e125e",
+      "object_sha256": "2612d9f20a621d48241abb782ab7aa86a0574782b8a7180996dfd2c0d58ffa80",
+      "transitive_source_fingerprint": "4b1c3b7fbe44c49fbc14a4989462b818cd7081d61ab509cd6ff9a0835bed1fdf",
+      "status": "QUALIFIED_PREDECESSOR",
+      "predecessor_receipt": "docs/provenance/v5-research-continuations/checks/4bd668ffbcfa-actual-cobuchi-cost.json",
+      "predecessor_receipt_sha256": "1acb1452e50582ea5ba7f115101286c258237a9cb41874a61ae6c9c70a45aa5e"
+    },
+    {
+      "module": "LawfulRestart",
+      "source_sha256": "f163f76a1fdab9b12bd96122780339901fcb76b5a3c75cdec56b8d3d505e32dd",
+      "object_sha256": "f2f2ba7f051c99992ff74d281a56813155b5b7a64dc9aee42eb7b2378586d8be",
+      "transitive_source_fingerprint": "b96521f1180ad14a5bcc37160850cad02d4a72adf0b98ce62dc8cb1f63c5d21f",
+      "status": "QUALIFIED_PREDECESSOR",
+      "predecessor_receipt": "docs/provenance/v5-research-continuations/checks/4bd668ffbcfa-actual-cobuchi-cost.json",
+      "predecessor_receipt_sha256": "1acb1452e50582ea5ba7f115101286c258237a9cb41874a61ae6c9c70a45aa5e"
+    },
+    {
+      "module": "RegionAlgorithm",
+      "source_sha256": "ca456e211d02a994192809bac318ae3a75684f163daf2f9037346b84517b347a",
+      "object_sha256": "171c72418fb7e91a3da5c3465d0ae4b3ecfcd57a937e9f980716222a39158817",
+      "transitive_source_fingerprint": "c1e2a1a6da31ca0bab2c04f3b1e9b7bb40613ce5bbad010b95f4671c0f5be218",
+      "status": "QUALIFIED_PREDECESSOR",
+      "predecessor_receipt": "docs/provenance/v5-research-continuations/checks/4bd668ffbcfa-actual-cobuchi-cost.json",
+      "predecessor_receipt_sha256": "1acb1452e50582ea5ba7f115101286c258237a9cb41874a61ae6c9c70a45aa5e"
+    },
+    {
+      "module": "LawfulProbability",
+      "source_sha256": "feef9755524c9f08ad782339f0c60cbbd5c82391d992b48d59d30e191b1da17e",
+      "object_sha256": "c2f7a296586ef24dd4ceae6b0ef1f79bea3bde0dc5c5f4219e92b955241d45a5",
+      "transitive_source_fingerprint": "2230443ab42ad74a254d8f237e69bf6bf3e90cca62b8addee83eff5bd1229681",
+      "status": "QUALIFIED_PREDECESSOR",
+      "predecessor_receipt": "docs/provenance/v5-research-continuations/checks/4bd668ffbcfa-actual-cobuchi-cost.json",
+      "predecessor_receipt_sha256": "1acb1452e50582ea5ba7f115101286c258237a9cb41874a61ae6c9c70a45aa5e"
+    },
+    {
+      "module": "SemanticWinning",
+      "source_sha256": "a759594adc211fdce0e9013a1d680fabd89983a0202885d8658b7e72477b4252",
+      "object_sha256": "7b3737bdc318b3ece10c80599392f8b7f51cf795bd581bca026c013f1934a92f",
+      "transitive_source_fingerprint": "5b79d3596181db12d66fc11f763aa9f82a4e5d543771e81b715092d9a51d5dbe",
+      "status": "QUALIFIED_PREDECESSOR",
+      "predecessor_receipt": "docs/provenance/v5-research-continuations/checks/4bd668ffbcfa-actual-cobuchi-cost.json",
+      "predecessor_receipt_sha256": "1acb1452e50582ea5ba7f115101286c258237a9cb41874a61ae6c9c70a45aa5e"
+    },
+    {
+      "module": "SemanticSafeActions",
+      "source_sha256": "66b166d81fd29f864f7dd81f0af6a67f07c4c35ab709fe67eba52bd1b20bc55b",
+      "object_sha256": "b7b8d786ff4e4bc68475eb04feb90100028c1516a9350fb8699001b0b50eed58",
+      "transitive_source_fingerprint": "b2d0ca63e02c6413ba0787d000954e110b391c386bc02326cb3aa0fe96d2a7b3",
+      "status": "QUALIFIED_PREDECESSOR",
+      "predecessor_receipt": "docs/provenance/v5-research-continuations/checks/4bd668ffbcfa-actual-cobuchi-cost.json",
+      "predecessor_receipt_sha256": "1acb1452e50582ea5ba7f115101286c258237a9cb41874a61ae6c9c70a45aa5e"
+    },
+    {
+      "module": "HistoryStageSafety",
+      "source_sha256": "2870a3c2d0dd125a59b49600e0fa0853e8d5c46a98153f27846a9f43f860bea5",
+      "object_sha256": "c1c11cb33bcb1dda7586e5fe4aa410f7a93dab88dbbadd746f43ed8ad5b9b379",
+      "transitive_source_fingerprint": "feffadbe9b707518ab8243147d702ea83a0eaddfa854e470fe2c4c9e93aeeb5c",
+      "status": "QUALIFIED_PREDECESSOR",
+      "predecessor_receipt": "docs/provenance/v5-research-continuations/checks/4bd668ffbcfa-actual-cobuchi-cost.json",
+      "predecessor_receipt_sha256": "1acb1452e50582ea5ba7f115101286c258237a9cb41874a61ae6c9c70a45aa5e"
+    },
+    {
+      "module": "GlobalParityNecessity",
+      "source_sha256": "7b54bfb8cd869bbe72f7ebeb42504a616c216a1912d09a6fc0d2ab35ca9d39c3",
+      "object_sha256": "85f03c41ec92aea7838246dc00b13fc20fa466914f97033189badaa508d6b250",
+      "transitive_source_fingerprint": "9a3797343c516ae09905d66bba95ad995ce9e3f0cd800d1e8daa195ca5c32657",
+      "status": "QUALIFIED_PREDECESSOR",
+      "predecessor_receipt": "docs/provenance/v5-research-continuations/checks/4bd668ffbcfa-actual-cobuchi-cost.json",
+      "predecessor_receipt_sha256": "1acb1452e50582ea5ba7f115101286c258237a9cb41874a61ae6c9c70a45aa5e"
+    },
+    {
+      "module": "RoundRobinPolicy",
+      "source_sha256": "210a5417479100f010c2c38954c89d551a1c1d52b0d8d784e6fa8e8c94245ea1",
+      "object_sha256": "2ea50a7799814c0b9369d40455ec232b7f44c608794c4bb1c07699ae93669d51",
+      "transitive_source_fingerprint": "d2005dffb1693e0b1a8f1253f07ac030e8313416fed9fca770906894f007560b",
+      "status": "QUALIFIED_PREDECESSOR",
+      "predecessor_receipt": "docs/provenance/v5-research-continuations/checks/4bd668ffbcfa-actual-cobuchi-cost.json",
+      "predecessor_receipt_sha256": "1acb1452e50582ea5ba7f115101286c258237a9cb41874a61ae6c9c70a45aa5e"
+    },
+    {
+      "module": "RegionControls",
+      "source_sha256": "11acf6ccc6901809193257be76e666927716a8887783e8fb32af7af76a45321b",
+      "object_sha256": "010832bdaa176c7b8f506c5ad8feb2694bf2a023bdec0407caa7157cbd1a7a85",
+      "transitive_source_fingerprint": "3d0acf66ee2b91534c19385a944bd671dfc3a6961c84d63ab4f6881c77baee8a",
+      "status": "QUALIFIED_PREDECESSOR",
+      "predecessor_receipt": "docs/provenance/v5-research-continuations/checks/4bd668ffbcfa-actual-cobuchi-cost.json",
+      "predecessor_receipt_sha256": "1acb1452e50582ea5ba7f115101286c258237a9cb41874a61ae6c9c70a45aa5e"
+    },
+    {
+      "module": "RoundRobinRecurrence",
+      "source_sha256": "94da50ee38d07888783573e1d78ece8dac5c58871f2e0c3ac5f6dea77008fc4c",
+      "object_sha256": "35aedda7c75427ae607e548d9141e6df962cea46acf368af15e851850d0f973c",
+      "transitive_source_fingerprint": "27864a7f8716f0ef3eda85d99088328eac5622a2b76ac4ae3dd46b9ed805e687",
+      "status": "QUALIFIED_PREDECESSOR",
+      "predecessor_receipt": "docs/provenance/v5-research-continuations/checks/4bd668ffbcfa-actual-cobuchi-cost.json",
+      "predecessor_receipt_sha256": "1acb1452e50582ea5ba7f115101286c258237a9cb41874a61ae6c9c70a45aa5e"
+    },
+    {
+      "module": "ActualTargetPolicy",
+      "source_sha256": "7040e104fbb268ae6dea93fbd21f1db8bccc56bd5f04910b9d43c64597d0da74",
+      "object_sha256": "655803361255cf59533c885a1c3f9aaf5ee53f123812352a3b5fce6ca870814a",
+      "transitive_source_fingerprint": "04942f02da6410dd42750cf7524e93d5e2d7db8c4de1b745038dc445f3499546",
+      "status": "QUALIFIED_PREDECESSOR",
+      "predecessor_receipt": "docs/provenance/v5-research-continuations/checks/4bd668ffbcfa-actual-cobuchi-cost.json",
+      "predecessor_receipt_sha256": "1acb1452e50582ea5ba7f115101286c258237a9cb41874a61ae6c9c70a45aa5e"
+    },
+    {
+      "module": "FairStageNavigation",
+      "source_sha256": "c497220e36e59578dc8d1efa53bfac17014446fcc84826f3af37f270d9f6e8f3",
+      "object_sha256": "1f520d1a045e904dbe2850c53a6259b9aa90a39b39cca3f790467164dc699658",
+      "transitive_source_fingerprint": "82eb22677c923d105a053fa3b46df269f2fc021e85e3a150a4ca80a0f6d5b3e4",
+      "status": "QUALIFIED_PREDECESSOR",
+      "predecessor_receipt": "docs/provenance/v5-research-continuations/checks/4bd668ffbcfa-actual-cobuchi-cost.json",
+      "predecessor_receipt_sha256": "1acb1452e50582ea5ba7f115101286c258237a9cb41874a61ae6c9c70a45aa5e"
+    },
+    {
+      "module": "ObservedRowTest",
+      "source_sha256": "e38e3a972bbdf859b854b42c44a7cbf4d83c0f5b2fb7566d2f726f155572bfee",
+      "object_sha256": "b891b48267e3f3678bb434ffba0660393ed1cb446429e2134ae6e775c65ae141",
+      "transitive_source_fingerprint": "a28022410d71dc47e0b0c121bdf253d8407260cf77ca5b8f9a5c595876465ab1",
+      "status": "QUALIFIED_PREDECESSOR",
+      "predecessor_receipt": "docs/provenance/v5-research-continuations/checks/4bd668ffbcfa-actual-cobuchi-cost.json",
+      "predecessor_receipt_sha256": "1acb1452e50582ea5ba7f115101286c258237a9cb41874a61ae6c9c70a45aa5e"
+    },
+    {
+      "module": "StageAvailability",
+      "source_sha256": "8e0df2c695b21d91c2473f200317ebd5c4cf3f8203b34f93f5ec4c77d9a9312a",
+      "object_sha256": "74b06463a64f03d079e0097999ec1edccdc1c841b8ff29529ff29227d18ead9b",
+      "transitive_source_fingerprint": "8c661f6561c5af89dc618b68ed9f67cbc79c9e27df0570317837aaba25f56786",
+      "status": "QUALIFIED_PREDECESSOR",
+      "predecessor_receipt": "docs/provenance/v5-research-continuations/checks/4bd668ffbcfa-actual-cobuchi-cost.json",
+      "predecessor_receipt_sha256": "1acb1452e50582ea5ba7f115101286c258237a9cb41874a61ae6c9c70a45aa5e"
+    },
+    {
+      "module": "EmpiricalTestLaw",
+      "source_sha256": "81f3343152589ab4d36d10ccc487f2bbf8c251bd6a2e95cf50826d59fff88da6",
+      "object_sha256": "1894948acb511b2ae3834a2728027e26f1b929adb36657e7d78e98afae12bfa0",
+      "transitive_source_fingerprint": "26e9625d96de36bb08f19e7665472475faf6f44bda030421562ac28295d9f2d7",
+      "status": "QUALIFIED_PREDECESSOR",
+      "predecessor_receipt": "docs/provenance/v5-research-continuations/checks/4bd668ffbcfa-actual-cobuchi-cost.json",
+      "predecessor_receipt_sha256": "1acb1452e50582ea5ba7f115101286c258237a9cb41874a61ae6c9c70a45aa5e"
+    },
+    {
+      "module": "EventualCycling",
+      "source_sha256": "eb29e22c35c3a366d440669da516663f9fe56601794f98ba8dbc81958ab7d5b7",
+      "object_sha256": "c028a64d8c8d32a112a6cb1d9b6444021688c60906c3b7d7323d649da02192d3",
+      "transitive_source_fingerprint": "619f4afe14dc8fd073e0ca9965c417d450abd43c8d14230ed8cb64696bce60bf",
+      "status": "QUALIFIED_PREDECESSOR",
+      "predecessor_receipt": "docs/provenance/v5-research-continuations/checks/4bd668ffbcfa-actual-cobuchi-cost.json",
+      "predecessor_receipt_sha256": "1acb1452e50582ea5ba7f115101286c258237a9cb41874a61ae6c9c70a45aa5e"
+    },
+    {
+      "module": "ObservedPhaseController",
+      "source_sha256": "9814025d9195fe98c7df8a8839fd37b8696f0b61d3970cb3dd61cb257a0009f1",
+      "object_sha256": "39e88887bd03db5e623f10ed647b4944ef54641322f0fc7622f3d8f6ff1ccec5",
+      "transitive_source_fingerprint": "e36bb973a2648b7e0588f1902334ede22bd5b2844f136388eae7079b77c337b5",
+      "status": "QUALIFIED_PREDECESSOR",
+      "predecessor_receipt": "docs/provenance/v5-research-continuations/checks/4bd668ffbcfa-actual-cobuchi-cost.json",
+      "predecessor_receipt_sha256": "1acb1452e50582ea5ba7f115101286c258237a9cb41874a61ae6c9c70a45aa5e"
+    },
+    {
+      "module": "StackPathRegularity",
+      "source_sha256": "fee7903917eff18207791b8d6c3679ad671e14873c025b2ff71987fe265fbaf2",
+      "object_sha256": "56486be403741d59736b66d0f6303065d57bb8aa82a55a80b5b761cb828803c4",
+      "transitive_source_fingerprint": "f1a6e650a4509c0fd7b866a05579b7ef4117258704db215465c68db586b933d1",
+      "status": "QUALIFIED_PREDECESSOR",
+      "predecessor_receipt": "docs/provenance/v5-research-continuations/checks/4bd668ffbcfa-actual-cobuchi-cost.json",
+      "predecessor_receipt_sha256": "1acb1452e50582ea5ba7f115101286c258237a9cb41874a61ae6c9c70a45aa5e"
+    },
+    {
+      "module": "GeneratedPolicySafety",
+      "source_sha256": "6a52c99c8bfe581ed13dcec6a396dcb7227656e6eba937a4cf73c7e36a8f4100",
+      "object_sha256": "89b3dfd9d6c910313a742c390f078df48d230fdd42c90def8b0407a81965689a",
+      "transitive_source_fingerprint": "31b29ba6c04ac99f4ef3839d61a7116414ed1863f10bea3903858248f1425ec3",
+      "status": "QUALIFIED_PREDECESSOR",
+      "predecessor_receipt": "docs/provenance/v5-research-continuations/checks/4bd668ffbcfa-actual-cobuchi-cost.json",
+      "predecessor_receipt_sha256": "1acb1452e50582ea5ba7f115101286c258237a9cb41874a61ae6c9c70a45aa5e"
+    },
+    {
+      "module": "MemoryTransitions",
+      "source_sha256": "3fd4a3d8e4a7a2c74343087c8f3a31714b569ff209b3d63b9764f70c2462fe25",
+      "object_sha256": "cd7a42da7af1dfc0537cba734696b1109b807b494a55187bb20b1ae954d52b67",
+      "transitive_source_fingerprint": "6c88e8d6deb4654ebdb7ec5faf9587716669ba6b36841ce980905c2ca9a14266",
+      "status": "QUALIFIED_PREDECESSOR",
+      "predecessor_receipt": "docs/provenance/v5-research-continuations/checks/4bd668ffbcfa-actual-cobuchi-cost.json",
+      "predecessor_receipt_sha256": "1acb1452e50582ea5ba7f115101286c258237a9cb41874a61ae6c9c70a45aa5e"
+    },
+    {
+      "module": "GeneratedRun",
+      "source_sha256": "bdd551d8c61ae4c78332b957eba7ecab5718747747a51a91902ea55e2306aca9",
+      "object_sha256": "8d98d5d9fb9db27b670a09b564a8a8dee1474682e97214e1b8da0186883f0f45",
+      "transitive_source_fingerprint": "2ca82f0f9afa0ec4afb127b9a0082491e04fc961aa22437f44cb4056386f2c5d",
+      "status": "QUALIFIED_PREDECESSOR",
+      "predecessor_receipt": "docs/provenance/v5-research-continuations/checks/4bd668ffbcfa-actual-cobuchi-cost.json",
+      "predecessor_receipt_sha256": "1acb1452e50582ea5ba7f115101286c258237a9cb41874a61ae6c9c70a45aa5e"
+    },
+    {
+      "module": "GeneratedPhaseDynamics",
+      "source_sha256": "3c52bf3ff7d270ef0343f1d41223b3aacc8a748df216d130a580ff338dd94174",
+      "object_sha256": "1a20d8bae326a2f98f499b305fcad87d93f5f6525ab9055287fad49321e1b3b5",
+      "transitive_source_fingerprint": "f6c331d96491aa1dd8b041193fae9c7a70377116545d8cb2efb2b128caba612f",
+      "status": "QUALIFIED_PREDECESSOR",
+      "predecessor_receipt": "docs/provenance/v5-research-continuations/checks/4bd668ffbcfa-actual-cobuchi-cost.json",
+      "predecessor_receipt_sha256": "1acb1452e50582ea5ba7f115101286c258237a9cb41874a61ae6c9c70a45aa5e"
+    },
+    {
+      "module": "GeneratedPhaseStability",
+      "source_sha256": "df0a80d810a176bb32b8a5574039115e823bfbeaa588a3ed23a52a7d7aa10a91",
+      "object_sha256": "20e633963c352190c19ecf31a340c3a2016665bddb801624a7c54cab794a7e21",
+      "transitive_source_fingerprint": "757f6918c3934849ae673329d819f7d075f7c00a3be191726197d849fd5f037f",
+      "status": "QUALIFIED_PREDECESSOR",
+      "predecessor_receipt": "docs/provenance/v5-research-continuations/checks/4bd668ffbcfa-actual-cobuchi-cost.json",
+      "predecessor_receipt_sha256": "1acb1452e50582ea5ba7f115101286c258237a9cb41874a61ae6c9c70a45aa5e"
+    },
+    {
+      "module": "GeneratedParitySuccess",
+      "source_sha256": "db9ec6cae92ba47810fd360afa3eda2b4447327378a032b17d87afef743a67c4",
+      "object_sha256": "7f060f00c4e72ba38e870425bb28113f9ddce9ca78cb7f3c8047a93c3d887bdf",
+      "transitive_source_fingerprint": "ad0ee7c808169fb85ad99c9d78435dc24382c7e53dde0d7fd782efb5a2ff1c46",
+      "status": "QUALIFIED_PREDECESSOR",
+      "predecessor_receipt": "docs/provenance/v5-research-continuations/checks/4bd668ffbcfa-actual-cobuchi-cost.json",
+      "predecessor_receipt_sha256": "1acb1452e50582ea5ba7f115101286c258237a9cb41874a61ae6c9c70a45aa5e"
+    },
+    {
+      "module": "GlobalParitySufficiency",
+      "source_sha256": "4a93ef96999718cc4fc6ac566da899c6f9938d5a8cbce269d8ee20a3f459d9a3",
+      "object_sha256": "0c009b4c0b299ad59835371479a9787c63e374e3a352a817aea4ef1ddf5d6c74",
+      "transitive_source_fingerprint": "cf9b21934324911d789c571191011abe4003cd0fd678fd8986ada7d7fa66b8cb",
+      "status": "QUALIFIED_PREDECESSOR",
+      "predecessor_receipt": "docs/provenance/v5-research-continuations/checks/4bd668ffbcfa-actual-cobuchi-cost.json",
+      "predecessor_receipt_sha256": "1acb1452e50582ea5ba7f115101286c258237a9cb41874a61ae6c9c70a45aa5e"
+    },
+    {
+      "module": "CoBuchiTargetCost",
+      "source_sha256": "da8afc5803348faf36591c7070209d076c28cf0fcb397dd2acec4784931befec",
+      "object_sha256": "d82ff72d8c9612e2f0b442eb130c654db942ba63f840c7db81c566514452e9c9",
+      "transitive_source_fingerprint": "cb4eff65c938e6de5a68eab01652e4bda3e3ea396b7a08fab7ecf48ed62b442e",
+      "status": "QUALIFIED_PREDECESSOR",
+      "predecessor_receipt": "docs/provenance/v5-research-continuations/checks/4bd668ffbcfa-actual-cobuchi-cost.json",
+      "predecessor_receipt_sha256": "1acb1452e50582ea5ba7f115101286c258237a9cb41874a61ae6c9c70a45aa5e"
+    },
+    {
+      "module": "GlobalControllerControls",
+      "source_sha256": "6ccd9162d6012dd21d23181f167eaf7d92d86fc38b8ea30e4ccfbaf256c7249c",
+      "object_sha256": "68c9a579ac49c2822de16c430872b8a18bf4f53cdf7844dbfe3cb191c8bf56d0",
+      "transitive_source_fingerprint": "4f97955f46eaf5edd76ead876913524a1bec1d6865545e63e7f888ceaf49fbf7",
+      "status": "QUALIFIED_PREDECESSOR",
+      "predecessor_receipt": "docs/provenance/v5-research-continuations/checks/4bd668ffbcfa-actual-cobuchi-cost.json",
+      "predecessor_receipt_sha256": "1acb1452e50582ea5ba7f115101286c258237a9cb41874a61ae6c9c70a45aa5e"
+    },
+    {
+      "module": "QuantitativeEmpiricalGate",
+      "source_sha256": "00743077f4ad01f106967f1200f4d8a0d2b04cd48c568ad0a82ab4ae38b9b5c3",
+      "object_sha256": "1a750dd8999b3c85bd8017787b0e50aeb734ba11e7611fcb0ff5a0d9288d118e",
+      "transitive_source_fingerprint": "a49cfaa3ca7e3e0f0eecaab8079ca5cca2b0e8d1df292e846cdf9dd2eac35adb",
+      "status": "QUALIFIED_PREDECESSOR",
+      "predecessor_receipt": "docs/provenance/v5-research-continuations/checks/4bd668ffbcfa-actual-cobuchi-cost.json",
+      "predecessor_receipt_sha256": "1acb1452e50582ea5ba7f115101286c258237a9cb41874a61ae6c9c70a45aa5e"
+    },
+    {
+      "module": "ActualBadCount",
+      "source_sha256": "057c948fa0e0d2aadadeb81c33e864b0e0890e8e42802dec1fb18aefaf139142",
+      "object_sha256": "5537b29866158662bd096b39fe643fca2543944da2ff9835898c4a8f84986f29",
+      "transitive_source_fingerprint": "4c960353f88816b3291ce78ad4f8845d8d6556894309b9f09c42eef38e117583",
+      "status": "QUALIFIED_PREDECESSOR",
+      "predecessor_receipt": "docs/provenance/v5-research-continuations/checks/4bd668ffbcfa-actual-cobuchi-cost.json",
+      "predecessor_receipt_sha256": "1acb1452e50582ea5ba7f115101286c258237a9cb41874a61ae6c9c70a45aa5e"
+    },
+    {
+      "module": "ActualCostTailMoments",
+      "source_sha256": "a284c713565d4883d8eb48a9dd6145a917a4169c43ebb3828183e2a141b3b17a",
+      "object_sha256": "39411507a524d4040ca91264c047a9127735e2a06fed4412c91c3e24b702ae67",
+      "transitive_source_fingerprint": "470d4a6b5e2b55ecb2d9d94f405f3badb376a8e6c83203f0da8c719d6d70e6ef",
+      "status": "FRESH_COMPILE",
+      "exit_code": 0
+    },
+    {
+      "module": "GeneratedCostLaw",
+      "source_sha256": "9e5c38fdd7f3c7c3fe19dc9849cdba3ae3cb6abb1639d3ce7d4c8edfca0d7736",
+      "object_sha256": "a72f6a2455e8256df7c8aad6089f9443931752adcc454b017886bababf11c3ba",
+      "transitive_source_fingerprint": "f977f3abd629340bf45e9c8e75263eac6f63c772fc757158fb883a8fb7ac4ccb",
+      "status": "QUALIFIED_PREDECESSOR",
+      "predecessor_receipt": "docs/provenance/v5-research-continuations/checks/4bd668ffbcfa-actual-cobuchi-cost.json",
+      "predecessor_receipt_sha256": "1acb1452e50582ea5ba7f115101286c258237a9cb41874a61ae6c9c70a45aa5e"
+    }
+  ],
+  "readbacks": {
+    "Orthemology.TailMoments.le_tail_indicator_sum": {
+      "type_sha256": "d9035234fa92cef60a5c27b4f75a33c80d9833b0be7161194e1a241c0974e5c7",
+      "axioms": [
+        "Classical.choice",
+        "Quot.sound",
+        "propext"
+      ]
+    },
+    "Orthemology.TailMoments.lintegral_le_tail_sum": {
+      "type_sha256": "a563670c60fd53530f5175b4a3415f1fe65ceb5f24be75cfa39eecc43315383f",
+      "axioms": [
+        "Classical.choice",
+        "Quot.sound",
+        "propext"
+      ]
+    },
+    "Orthemology.TailMoments.lintegral_le_geometric_tail": {
+      "type_sha256": "b4c20aa032f798d153d87abc2281f5adceaaadf6aeead715f6b2668025feacff",
+      "axioms": [
+        "Classical.choice",
+        "Quot.sound",
+        "propext"
+      ]
+    },
+    "Orthemology.TailMoments.geometric_tail_finite_expectation": {
+      "type_sha256": "b74d3885c5f70413ecac8e15d5396b470e2bea614a259050b4df51d1be068647",
+      "axioms": [
+        "Classical.choice",
+        "Quot.sound",
+        "propext"
+      ]
+    },
+    "Orthemology.TailMoments.exponential_le_weighted_tail": {
+      "type_sha256": "b3a7c589a47cca8db69da044b2659827a1a6e65c714eca5402e425babb256431",
+      "axioms": [
+        "Classical.choice",
+        "Quot.sound",
+        "propext"
+      ]
+    },
+    "Orthemology.TailMoments.exponential_moment_le_geometric_tail": {
+      "type_sha256": "f1ed11410ac035926359a374cb4036897e0060de5715f9e2442fb7733ac1882f",
+      "axioms": [
+        "Classical.choice",
+        "Quot.sound",
+        "propext"
+      ]
+    },
+    "Orthemology.TailMoments.geometric_tail_finite_exponential_moment": {
+      "type_sha256": "144cdeed4c4485a102ef9ed47c55e9afde53c80f2ba1f4c2f18f10aee9d95725",
+      "axioms": [
+        "Classical.choice",
+        "Quot.sound",
+        "propext"
+      ]
+    },
+    "Orthemology.TailMoments.affine_tail_geometric_envelope": {
+      "type_sha256": "23313d4750303aeac0a74f3c4a486364411667001f17a43fcc83747f8f2190f1",
+      "axioms": [
+        "Classical.choice",
+        "Quot.sound",
+        "propext"
+      ]
+    },
+    "Orthemology.TailMoments.affine_tail_finite_moments": {
+      "type_sha256": "984b0f236d51ad4e53de01b3b4092414b60395ad83d99a304adb9333271f93ff",
+      "axioms": [
+        "Classical.choice",
+        "Quot.sound",
+        "propext"
+      ]
+    },
+    "Orthemology.TailMoments.power_le_scaled_exponential": {
+      "type_sha256": "43d0f700c9606a314498b00310223eb673f33a3d61d817eb5927852b9e91adb2",
+      "axioms": [
+        "Classical.choice",
+        "Quot.sound",
+        "propext"
+      ]
+    },
+    "Orthemology.TailMoments.finite_power_moment_of_positive_exponential_moment": {
+      "type_sha256": "a3f9178928725f5cbd235500b6e62d6093640e8efc6dea5dc8fbc489674cb2a3",
+      "axioms": [
+        "Classical.choice",
+        "Quot.sound",
+        "propext"
+      ]
+    },
+    "Orthemology.TailMoments.actual_bad_count_moments_from_affine_tail": {
+      "type_sha256": "61f7b85a4bbf17687b35c7f6344a3ae683066ace36668f49704e18efebb6c680",
+      "axioms": [
+        "Classical.choice",
+        "Quot.sound",
+        "propext"
+      ]
+    },
+    "Orthemology.TailMoments.actual_bad_count_all_power_moments_from_affine_tail": {
+      "type_sha256": "71baaddf4651b9cd7d253df88f237896e066c6823e357932d39f4a3f79cb10cc",
+      "axioms": [
+        "Classical.choice",
+        "Quot.sound",
+        "propext"
+      ]
+    },
+    "Orthemology.TailMoments.Controls.geometric_weights_normalized": {
+      "type_sha256": "102bb64229a329e16a89f4eb212150f3593b406c93f8df1d898659a4d8271765",
+      "axioms": [
+        "Classical.choice",
+        "Quot.sound",
+        "propext"
+      ]
+    },
+    "Orthemology.TailMoments.Controls.boundary_exponential_moment_infinite": {
+      "type_sha256": "696afb7fca0634fd75d4f225be4d2d67e793331880ea511260ee4d66faf048b5",
+      "axioms": [
+        "Classical.choice",
+        "Quot.sound",
+        "propext"
+      ]
+    },
+    "Orthemology.TailMoments.Controls.toReal_top_exponential_is_one": {
+      "type_sha256": "9033bc84ae95978ea78554aa885b9b7866c0a3f43182580475646cf7ca5a03cf",
+      "axioms": [
+        "Classical.choice",
+        "Quot.sound",
+        "propext"
+      ]
+    }
+  },
+  "original_controls": "PASS",
+  "original_receipt_sha256": "3b603c800f9e2712aac08caba7c4f322c81d4cb822559baaa4bb6c56e6d06446",
+  "original_driver_sha256": null,
+  "execution_kind": "QUALIFIED_CURRENT_PREDECESSOR_PLUS_FRESH_SOURCE",
+  "finished_utc": null,
+  "scope": "Source-bound custom closure and selected declaration readbacks. Types are represented by hashes of the exact printed types; complete logs remain private. Official caches are trusted. This does not establish ordinary proof, runtime completeness, empirical or normative warrant, novelty, external human review or merged adoption."
+}

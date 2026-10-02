@@ -2,6 +2,17 @@ schema: orthemology-current-state-v1
 note: GENERATED derived block — edit only the authored block, then run scripts/generate_current_state.py.
   CI checks for drift.
 authored:
+  v5_research_continuations:
+    status: LOCAL_INTEGRATION_CANDIDATE
+    cutoff: sixth-tranche-checkpoint-3
+    guide: docs/architecture/V5-RESEARCH-CONTINUATIONS.md
+    registry: experiments/orthemology-v5-continuations/registry.json
+    evidence: docs/provenance/v5-research-continuations/RESULT_STATUS.json
+    sixth_return: NOT_FINAL
+    remote_adoption: NOT_ESTABLISHED
+    total_cost_tail: ORDINARY_REVIEWED_MATHEMATICS_WITH_FORMAL_COMPONENTS
+    chronological_tail_aggregation: OPEN
+    full_general_controller_p02_implementation: NOT_SUPPLIED
   revision: R6
   revision_label: R6 (2026-07-20) — experiment-readiness, sourcing-state, and reference-apparatus tie-off
   release_status: research revision, not a numbered stable release; no tag, DOI, or archival claim
@@ -109,9 +120,9 @@ authored:
     meniscus: MENISCUS_NOT_REACHED
     natural_closure: NATURAL_CLOSURE_NOT_REACHED
 derived:
-  source_tree_digest: 7a19effa4ba61e2b2090c49ba1d6b1a427a99438d0cd0d55840287f6f831aeab
+  source_tree_digest: e620aaa827ea748094dfc40767b3e66f14087f40ff76768c01a3da6da9897f7f
   source_tree_digest_policy: docs/project-state-inputs.yaml
-  tracked_files: 3695
+  tracked_files: 4726
   decision_ids:
   - '0001'
   - '0002'
@@ -149,7 +160,8 @@ derived:
   - '0034'
   - '0035'
   - '0036'
-  decision_count: 36
+  - '0037'
+  decision_count: 37
   schemas:
   - activation-contract-fixtures.schema.json
   - activation-contract.schema.json
@@ -236,6 +248,7 @@ derived:
   - validate_reason_fixtures.py
   - validate_recursive_mutations.py
   - validate_repo.py
+  - validate_research_continuations.py
   - validate_review_state.py
   - validate_schemas.py
   - validate_semantic_operator_contract.py
@@ -246,7 +259,7 @@ derived:
   - validate_terminology_etymology.py
   - validate_type_token_semantics.py
   - validate_verdict_semantics.py
-  validator_count: 61
+  validator_count: 62
   fixture_counts:
     verdict: 7
     reason: 8

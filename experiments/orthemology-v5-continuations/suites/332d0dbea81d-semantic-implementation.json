@@ -1,0 +1,1360 @@
+{
+  "id": "332d0dbea81d-semantic-implementation",
+  "origin": "332d0dbea81d90d7697f391520f43df61afb04c10bf11736320d9f8299cb6d58",
+  "descriptor_source_id": "src-332d0dbea81d90d7-85c042fef1d85c5a",
+  "modules": [
+    {
+      "module": "PERRefinement",
+      "source_id": "src-332d0dbea81d90d7-8f16d13aa5cf580c",
+      "imports": [
+        "Mathlib.SetTheory.Cardinal.Finite",
+        "Mathlib.Data.Fintype.EquivFin",
+        "Mathlib.Tactic"
+      ]
+    },
+    {
+      "module": "MealyRefinement",
+      "source_id": "src-332d0dbea81d90d7-15e6a1a8e7012efb",
+      "imports": [
+        "PERRefinement"
+      ]
+    },
+    {
+      "module": "BlockMismatch",
+      "source_id": "src-332d0dbea81d90d7-32c571ee5a165a1f",
+      "imports": [
+        "MealyRefinement",
+        "Mathlib.Data.List.OfFn",
+        "Mathlib.Data.Finset.Sigma"
+      ]
+    },
+    {
+      "module": "P02A2.MeasureCore",
+      "source_id": "src-332d0dbea81d90d7-a0d46241b43dc306",
+      "imports": [
+        "Mathlib.MeasureTheory.Measure.Typeclasses.SFinite",
+        "Mathlib.MeasureTheory.Measure.Typeclasses.Probability",
+        "Mathlib.MeasureTheory.Measure.Map",
+        "Mathlib.MeasureTheory.Measure.Restrict",
+        "Mathlib.Tactic"
+      ]
+    },
+    {
+      "module": "Q8Measure",
+      "source_id": "src-332d0dbea81d90d7-ef9e14f03e95c50a",
+      "imports": [
+        "P02A2.MeasureCore",
+        "Mathlib.Probability.ProductMeasure",
+        "Mathlib.Probability.ProbabilityMassFunction.Constructions",
+        "Mathlib.Analysis.SpecificLimits.Basic"
+      ]
+    },
+    {
+      "module": "MealyMeasure",
+      "source_id": "src-332d0dbea81d90d7-ee7f83397f53337e",
+      "imports": [
+        "BlockMismatch",
+        "Q8Measure"
+      ]
+    },
+    {
+      "module": "MealyHitting",
+      "source_id": "src-332d0dbea81d90d7-324f070161619e7a",
+      "imports": [
+        "MealyMeasure"
+      ]
+    },
+    {
+      "module": "MealyRational",
+      "source_id": "src-332d0dbea81d90d7-3c838bce69e30766",
+      "imports": [
+        "MealyHitting",
+        "Mathlib.LinearAlgebra.FiniteDimensional.Basic"
+      ]
+    },
+    {
+      "module": "MealySolver",
+      "source_id": "src-332d0dbea81d90d7-f6671c3e3c8d9704",
+      "imports": [
+        "MealyRational",
+        "Mathlib.LinearAlgebra.Determinant"
+      ]
+    },
+    {
+      "module": "MealyAtoms",
+      "source_id": "src-332d0dbea81d90d7-eb17684dec93c369",
+      "imports": [
+        "MealyHitting"
+      ]
+    },
+    {
+      "module": "MealyMeasureFixtures",
+      "source_id": "src-332d0dbea81d90d7-72bf0228b780046e",
+      "imports": [
+        "MealyAtoms",
+        "MealyRational"
+      ]
+    },
+    {
+      "module": "TotalVariation",
+      "source_id": "src-332d0dbea81d90d7-3b56aac387d720a3",
+      "imports": [
+        "P02A2.MeasureCore",
+        "Mathlib.MeasureTheory.Measure.Typeclasses.NoAtoms"
+      ]
+    },
+    {
+      "module": "InternalPolymorphism",
+      "source_id": "src-332d0dbea81d90d7-589a10ef7588885b",
+      "imports": [
+        "Init"
+      ]
+    },
+    {
+      "module": "FiniteBridge",
+      "source_id": "src-332d0dbea81d90d7-8da0c9485eb9db17",
+      "imports": [
+        "InternalPolymorphism"
+      ]
+    },
+    {
+      "module": "P01TypeAlgebra",
+      "source_id": "src-332d0dbea81d90d7-4ad2dbd01c009483",
+      "imports": [
+        "Mathlib.Data.Bool.Basic",
+        "FiniteBridge"
+      ]
+    },
+    {
+      "module": "P01SNReflection",
+      "source_id": "src-332d0dbea81d90d7-fcea105a5ff90921",
+      "imports": [
+        "Init"
+      ]
+    },
+    {
+      "module": "BoundaryResults",
+      "source_id": "src-332d0dbea81d90d7-0e631c5caf1e675f",
+      "imports": [
+        "FiniteBridge"
+      ]
+    },
+    {
+      "module": "P01Candidates",
+      "source_id": "src-332d0dbea81d90d7-065d6d1ffba095f5",
+      "imports": [
+        "P01TypeAlgebra",
+        "P01SNReflection",
+        "BoundaryResults"
+      ]
+    },
+    {
+      "module": "P01Confluence",
+      "source_id": "src-332d0dbea81d90d7-a15338d7b5949256",
+      "imports": [
+        "P01Candidates"
+      ]
+    },
+    {
+      "module": "EffectsAndDependence",
+      "source_id": "src-332d0dbea81d90d7-cefd6b646fa9eafb",
+      "imports": [
+        "BoundaryResults"
+      ]
+    },
+    {
+      "module": "NormalisationAndNumerals",
+      "source_id": "src-332d0dbea81d90d7-27b820753930abd3",
+      "imports": [
+        "EffectsAndDependence"
+      ]
+    },
+    {
+      "module": "P01Omega",
+      "source_id": "src-332d0dbea81d90d7-8592bd466c2101f6",
+      "imports": [
+        "P01Confluence",
+        "NormalisationAndNumerals"
+      ]
+    },
+    {
+      "module": "P01Polynomials",
+      "source_id": "src-332d0dbea81d90d7-4d3e7f2f541b6022",
+      "imports": [
+        "P01Omega"
+      ]
+    },
+    {
+      "module": "P01PER",
+      "source_id": "src-332d0dbea81d90d7-2538682179c21506",
+      "imports": [
+        "P01Polynomials"
+      ]
+    },
+    {
+      "module": "P01DependentCore",
+      "source_id": "src-332d0dbea81d90d7-e7d38cf8dfe7d11a",
+      "imports": [
+        "P01PER"
+      ]
+    },
+    {
+      "module": "P01ContextualJ",
+      "source_id": "src-332d0dbea81d90d7-da5164980ad2e2aa",
+      "imports": [
+        "P01DependentCore"
+      ]
+    },
+    {
+      "module": "P01Certificates",
+      "source_id": "src-332d0dbea81d90d7-cd94b7713c060b8f",
+      "imports": [
+        "P01ContextualJ"
+      ]
+    },
+    {
+      "module": "P01Examples",
+      "source_id": "src-332d0dbea81d90d7-6c0d0f7941b1d480",
+      "imports": [
+        "P01Certificates"
+      ]
+    },
+    {
+      "module": "P01RecursiveModel",
+      "source_id": "src-332d0dbea81d90d7-7410fab7e36b328e",
+      "imports": [
+        "P01Examples"
+      ]
+    },
+    {
+      "module": "P01LambdaSyntax",
+      "source_id": "src-332d0dbea81d90d7-2ccc459d5fd3bce9",
+      "imports": [
+        "P01TypeAlgebra",
+        "P01SNReflection"
+      ]
+    },
+    {
+      "module": "P01SystemF",
+      "source_id": "src-332d0dbea81d90d7-31834504e91d3637",
+      "imports": [
+        "P01LambdaSyntax"
+      ]
+    },
+    {
+      "module": "P01CurryParametricity",
+      "source_id": "src-332d0dbea81d90d7-5ee4b6bc8407cf41",
+      "imports": [
+        "P01RecursiveModel",
+        "P01SystemF"
+      ]
+    },
+    {
+      "module": "P01Translation",
+      "source_id": "src-332d0dbea81d90d7-29ad206e535cf988",
+      "imports": [
+        "P01SystemF",
+        "BoundaryResults"
+      ]
+    },
+    {
+      "module": "P01ModelWitnesses",
+      "source_id": "src-332d0dbea81d90d7-e2038d1fec99c535",
+      "imports": [
+        "P01CurryParametricity",
+        "P01Translation"
+      ]
+    },
+    {
+      "module": "P01DependentModel",
+      "source_id": "src-332d0dbea81d90d7-c1d1bf2385777e3d",
+      "imports": [
+        "P01RecursiveModel",
+        "P01ModelWitnesses"
+      ]
+    },
+    {
+      "module": "P01DependentSubstitution",
+      "source_id": "src-332d0dbea81d90d7-c3b5d9fcfe73d108",
+      "imports": [
+        "P01DependentModel"
+      ]
+    },
+    {
+      "module": "P01DependentFundamental",
+      "source_id": "src-332d0dbea81d90d7-ce9f242f1eb46592",
+      "imports": [
+        "P01DependentSubstitution"
+      ]
+    },
+    {
+      "module": "P01DependentControls",
+      "source_id": "src-332d0dbea81d90d7-6388dbcb5107c2d5",
+      "imports": [
+        "P01DependentFundamental"
+      ]
+    },
+    {
+      "module": "P01DependentRepresentation",
+      "source_id": "src-332d0dbea81d90d7-469a6d1b568b07af",
+      "imports": [
+        "P01DependentControls"
+      ]
+    },
+    {
+      "module": "P01CanonicalCarrierProjection",
+      "source_id": "src-332d0dbea81d90d7-73ac8b8eef0d9f31",
+      "imports": [
+        "P01DependentRepresentation"
+      ]
+    },
+    {
+      "module": "P02A2.ObserverCore",
+      "source_id": "src-332d0dbea81d90d7-755171e29970e026",
+      "imports": [
+        "Mathlib"
+      ]
+    },
+    {
+      "module": "Q8Machine",
+      "source_id": "src-332d0dbea81d90d7-a909afb206998720",
+      "imports": [
+        "Q8Measure"
+      ]
+    },
+    {
+      "module": "Q8Compiler",
+      "source_id": "src-332d0dbea81d90d7-66ebd79061fa29da",
+      "imports": [
+        "Q8Machine",
+        "P02A2.ObserverCore"
+      ]
+    },
+    {
+      "module": "CodecVarint",
+      "source_id": "src-332d0dbea81d90d7-654efe3ff4b52abe",
+      "imports": [
+        "Mathlib.Data.Nat.Bitwise",
+        "Mathlib.Tactic"
+      ]
+    },
+    {
+      "module": "CodecExpr",
+      "source_id": "src-332d0dbea81d90d7-e9bd94ac0eb5ddc6",
+      "imports": [
+        "CodecVarint",
+        "P02A2.ObserverCore"
+      ]
+    },
+    {
+      "module": "CodecStmt",
+      "source_id": "src-332d0dbea81d90d7-01a597905ab85261",
+      "imports": [
+        "CodecExpr"
+      ]
+    },
+    {
+      "module": "CodecNumeric",
+      "source_id": "src-332d0dbea81d90d7-2708e63783ab7362",
+      "imports": [
+        "CodecVarint"
+      ]
+    },
+    {
+      "module": "LoopRenaming",
+      "source_id": "src-332d0dbea81d90d7-3c820649a577934c",
+      "imports": [
+        "P02A2.ObserverCore"
+      ]
+    },
+    {
+      "module": "LoopPrimrec",
+      "source_id": "src-332d0dbea81d90d7-4bcea9243d13eec7",
+      "imports": [
+        "LoopRenaming",
+        "Mathlib.Computability.Primrec"
+      ]
+    },
+    {
+      "module": "PRProgram",
+      "source_id": "src-332d0dbea81d90d7-d4546c5ab9747c9c",
+      "imports": [
+        "LoopPrimrec"
+      ]
+    },
+    {
+      "module": "PRComposition",
+      "source_id": "src-332d0dbea81d90d7-5dbb4d71f62ddf99",
+      "imports": [
+        "PRProgram"
+      ]
+    },
+    {
+      "module": "PRRecursion",
+      "source_id": "src-332d0dbea81d90d7-1438bc27be34548e",
+      "imports": [
+        "PRComposition"
+      ]
+    },
+    {
+      "module": "PRHeadRecursion",
+      "source_id": "src-332d0dbea81d90d7-f78e11e1aa39b7fe",
+      "imports": [
+        "PRRecursion"
+      ]
+    },
+    {
+      "module": "PRDerivation",
+      "source_id": "src-332d0dbea81d90d7-6bf75fcfb8fb00e0",
+      "imports": [
+        "PRHeadRecursion",
+        "Mathlib.Computability.Primrec"
+      ]
+    },
+    {
+      "module": "PRCoverage",
+      "source_id": "src-332d0dbea81d90d7-dff9cbc3e8b4d642",
+      "imports": [
+        "PRDerivation"
+      ]
+    },
+    {
+      "module": "PRSpecialize",
+      "source_id": "src-332d0dbea81d90d7-18e1f7d75a968630",
+      "imports": [
+        "PRCoverage"
+      ]
+    },
+    {
+      "module": "CodecProgram",
+      "source_id": "src-332d0dbea81d90d7-6b2a2413a9b7746a",
+      "imports": [
+        "CodecStmt",
+        "CodecNumeric",
+        "PRSpecialize"
+      ]
+    },
+    {
+      "module": "CodecPrimrec",
+      "source_id": "src-332d0dbea81d90d7-f3930f00edb18825",
+      "imports": [
+        "CodecNumeric",
+        "Mathlib.Computability.Primrec"
+      ]
+    },
+    {
+      "module": "UniformComputabilityNumeric",
+      "source_id": "src-332d0dbea81d90d7-e40262d8168fece0",
+      "imports": [
+        "CodecPrimrec",
+        "Mathlib.Computability.Partrec"
+      ]
+    },
+    {
+      "module": "UniformComputabilityMachine",
+      "source_id": "src-332d0dbea81d90d7-0d736090d6d86b25",
+      "imports": [
+        "CodecProgram",
+        "UniformComputabilityNumeric"
+      ]
+    },
+    {
+      "module": "ObserverAbstraction",
+      "source_id": "src-332d0dbea81d90d7-027bedd26b95c962",
+      "imports": [
+        "MealySolver",
+        "TotalVariation"
+      ]
+    },
+    {
+      "module": "GuardedObserver",
+      "source_id": "src-332d0dbea81d90d7-d945ca1e31eb4dd8",
+      "imports": [
+        "ObserverAbstraction"
+      ]
+    },
+    {
+      "module": "ContextualObserver",
+      "source_id": "src-332d0dbea81d90d7-f50e21ce5c204e6a",
+      "imports": [
+        "ObserverAbstraction",
+        "P01CanonicalCarrierProjection"
+      ]
+    },
+    {
+      "module": "ObserverFixtures",
+      "source_id": "src-332d0dbea81d90d7-c8328e872475b5d2",
+      "imports": [
+        "GuardedObserver",
+        "MealyMeasureFixtures"
+      ]
+    },
+    {
+      "module": "ContextualFixtures",
+      "source_id": "src-332d0dbea81d90d7-cea41f504b60ef93",
+      "imports": [
+        "ContextualObserver",
+        "ObserverFixtures"
+      ]
+    },
+    {
+      "module": "Q8ObserverAbstraction",
+      "source_id": "src-332d0dbea81d90d7-c5a83f091fbb0385",
+      "imports": [
+        "ObserverAbstraction",
+        "Q8Compiler",
+        "MealyMeasureFixtures"
+      ]
+    },
+    {
+      "module": "ParsedObserverAbstraction",
+      "source_id": "src-332d0dbea81d90d7-3851dbda1d61a272",
+      "imports": [
+        "Q8ObserverAbstraction",
+        "UniformComputabilityMachine"
+      ]
+    },
+    {
+      "module": "UniformRuntimeTrace",
+      "source_id": "src-332d0dbea81d90d7-704d4b8853dfb961",
+      "imports": [
+        "ParsedObserverAbstraction"
+      ]
+    },
+    {
+      "module": "ObserverReadback",
+      "source_id": "src-332d0dbea81d90d7-f8b488d856cc2ab5",
+      "imports": [
+        "ObserverFixtures",
+        "ContextualFixtures",
+        "UniformRuntimeTrace"
+      ]
+    },
+    {
+      "module": "Controls",
+      "source_id": "src-332d0dbea81d90d7-f18ecf7ffc4a6fd8",
+      "imports": [
+        "UniformRuntimeTrace",
+        "ContextualFixtures"
+      ]
+    }
+  ],
+  "module_order": [
+    "PERRefinement",
+    "MealyRefinement",
+    "BlockMismatch",
+    "P02A2.MeasureCore",
+    "Q8Measure",
+    "MealyMeasure",
+    "MealyHitting",
+    "MealyRational",
+    "MealySolver",
+    "MealyAtoms",
+    "MealyMeasureFixtures",
+    "TotalVariation",
+    "InternalPolymorphism",
+    "FiniteBridge",
+    "P01TypeAlgebra",
+    "P01SNReflection",
+    "BoundaryResults",
+    "P01Candidates",
+    "P01Confluence",
+    "EffectsAndDependence",
+    "NormalisationAndNumerals",
+    "P01Omega",
+    "P01Polynomials",
+    "P01PER",
+    "P01DependentCore",
+    "P01ContextualJ",
+    "P01Certificates",
+    "P01Examples",
+    "P01RecursiveModel",
+    "P01LambdaSyntax",
+    "P01SystemF",
+    "P01CurryParametricity",
+    "P01Translation",
+    "P01ModelWitnesses",
+    "P01DependentModel",
+    "P01DependentSubstitution",
+    "P01DependentFundamental",
+    "P01DependentControls",
+    "P01DependentRepresentation",
+    "P01CanonicalCarrierProjection",
+    "P02A2.ObserverCore",
+    "Q8Machine",
+    "Q8Compiler",
+    "CodecVarint",
+    "CodecExpr",
+    "CodecStmt",
+    "CodecNumeric",
+    "LoopRenaming",
+    "LoopPrimrec",
+    "PRProgram",
+    "PRComposition",
+    "PRRecursion",
+    "PRHeadRecursion",
+    "PRDerivation",
+    "PRCoverage",
+    "PRSpecialize",
+    "CodecProgram",
+    "CodecPrimrec",
+    "UniformComputabilityNumeric",
+    "UniformComputabilityMachine",
+    "ObserverAbstraction",
+    "GuardedObserver",
+    "ContextualObserver",
+    "ObserverFixtures",
+    "ContextualFixtures",
+    "Q8ObserverAbstraction",
+    "ParsedObserverAbstraction",
+    "UniformRuntimeTrace",
+    "ObserverReadback",
+    "Controls"
+  ],
+  "targets": [
+    {
+      "name": "Orthemology.CertifiedObserver.state_measurable",
+      "module": "ObserverAbstraction"
+    },
+    {
+      "name": "Orthemology.CertifiedObserver.output_measurable",
+      "module": "ObserverAbstraction"
+    },
+    {
+      "name": "Orthemology.CertifiedObserver.law_probability",
+      "module": "ObserverAbstraction"
+    },
+    {
+      "name": "Orthemology.CertifiedObserver.Simulation",
+      "module": "ObserverAbstraction"
+    },
+    {
+      "name": "Orthemology.CertifiedObserver.simulation_states",
+      "module": "ObserverAbstraction"
+    },
+    {
+      "name": "Orthemology.CertifiedObserver.simulation_output",
+      "module": "ObserverAbstraction"
+    },
+    {
+      "name": "Orthemology.CertifiedObserver.simulation_law",
+      "module": "ObserverAbstraction"
+    },
+    {
+      "name": "Orthemology.CertifiedObserver.certified_defect_exact",
+      "module": "ObserverAbstraction"
+    },
+    {
+      "name": "Orthemology.CertifiedObserver.simulationOfMap",
+      "module": "ObserverAbstraction"
+    },
+    {
+      "name": "Orthemology.CertifiedObserver.map_eventTV_le_bad",
+      "module": "ObserverAbstraction"
+    },
+    {
+      "name": "Orthemology.CertifiedObserver.certified_defect_error",
+      "module": "ObserverAbstraction"
+    },
+    {
+      "name": "Orthemology.CertifiedObserver.GuardedSimulation",
+      "module": "GuardedObserver"
+    },
+    {
+      "name": "Orthemology.CertifiedObserver.badMonitor",
+      "module": "GuardedObserver"
+    },
+    {
+      "name": "Orthemology.CertifiedObserver.badMonitor_state",
+      "module": "GuardedObserver"
+    },
+    {
+      "name": "Orthemology.CertifiedObserver.badAt",
+      "module": "GuardedObserver"
+    },
+    {
+      "name": "Orthemology.CertifiedObserver.badRun",
+      "module": "GuardedObserver"
+    },
+    {
+      "name": "Orthemology.CertifiedObserver.badAt_measurable",
+      "module": "GuardedObserver"
+    },
+    {
+      "name": "Orthemology.CertifiedObserver.badRun_measurable",
+      "module": "GuardedObserver"
+    },
+    {
+      "name": "Orthemology.CertifiedObserver.guarded_states",
+      "module": "GuardedObserver"
+    },
+    {
+      "name": "Orthemology.CertifiedObserver.guarded_output",
+      "module": "GuardedObserver"
+    },
+    {
+      "name": "Orthemology.CertifiedObserver.guarded_defect_error",
+      "module": "GuardedObserver"
+    },
+    {
+      "name": "Orthemology.CertifiedObserver.badRun_le_tsum",
+      "module": "GuardedObserver"
+    },
+    {
+      "name": "Orthemology.CertifiedObserver.guarded_defect_error_budget",
+      "module": "GuardedObserver"
+    },
+    {
+      "name": "Orthemology.CertifiedObserver.ObserverFamily",
+      "module": "ContextualObserver"
+    },
+    {
+      "name": "Orthemology.CertifiedObserver.ObserverFamily.simulation",
+      "module": "ContextualObserver"
+    },
+    {
+      "name": "Orthemology.CertifiedObserver.ObserverFamily.observe",
+      "module": "ContextualObserver"
+    },
+    {
+      "name": "Orthemology.CertifiedObserver.ObserverFamily.observe_literal_source",
+      "module": "ContextualObserver"
+    },
+    {
+      "name": "Orthemology.CertifiedObserver.ObserverFamily.eqTm_observation",
+      "module": "ContextualObserver"
+    },
+    {
+      "name": "Orthemology.CertifiedObserver.ObserverFamily.valuation_observation",
+      "module": "ContextualObserver"
+    },
+    {
+      "name": "Orthemology.CertifiedObserver.ObserverFamily.pull",
+      "module": "ContextualObserver"
+    },
+    {
+      "name": "Orthemology.CertifiedObserver.ObserverFamily.substitution_square",
+      "module": "ContextualObserver"
+    },
+    {
+      "name": "Orthemology.CertifiedObserver.ObserverFamily.related_substitution_observation",
+      "module": "ContextualObserver"
+    },
+    {
+      "name": "Orthemology.CertifiedObserver.ObserverFamily.finite_solver_transport",
+      "module": "ContextualObserver"
+    },
+    {
+      "name": "Orthemology.CertifiedObserver.ObserverFamily.related_substitution_solvers",
+      "module": "ContextualObserver"
+    },
+    {
+      "name": "Orthemology.CertifiedObserver.ObserverFamily.candidate_source_observation",
+      "module": "ContextualObserver"
+    },
+    {
+      "name": "Orthemology.CertifiedObserver.Fixtures.counterLift",
+      "module": "ObserverFixtures"
+    },
+    {
+      "name": "Orthemology.CertifiedObserver.Fixtures.counterSimulation",
+      "module": "ObserverFixtures"
+    },
+    {
+      "name": "Orthemology.CertifiedObserver.Fixtures.counter_law",
+      "module": "ObserverFixtures"
+    },
+    {
+      "name": "Orthemology.CertifiedObserver.Fixtures.unbounded_split_defect",
+      "module": "ObserverFixtures"
+    },
+    {
+      "name": "Orthemology.CertifiedObserver.Fixtures.split_solver_exact",
+      "module": "ObserverFixtures"
+    },
+    {
+      "name": "Orthemology.CertifiedObserver.Fixtures.unbounded_split_solver",
+      "module": "ObserverFixtures"
+    },
+    {
+      "name": "Orthemology.CertifiedObserver.Fixtures.splitZeroGuard",
+      "module": "ObserverFixtures"
+    },
+    {
+      "name": "Orthemology.CertifiedObserver.Fixtures.split_badAt_zero",
+      "module": "ObserverFixtures"
+    },
+    {
+      "name": "Orthemology.CertifiedObserver.Fixtures.split_badAt_succ",
+      "module": "ObserverFixtures"
+    },
+    {
+      "name": "Orthemology.CertifiedObserver.Fixtures.split_badRun",
+      "module": "ObserverFixtures"
+    },
+    {
+      "name": "Orthemology.CertifiedObserver.Fixtures.split_budget_exact",
+      "module": "ObserverFixtures"
+    },
+    {
+      "name": "Orthemology.CertifiedObserver.Fixtures.split_guarded_error",
+      "module": "ObserverFixtures"
+    },
+    {
+      "name": "Orthemology.CertifiedObserver.Fixtures.delayedCopy",
+      "module": "ObserverFixtures"
+    },
+    {
+      "name": "Orthemology.CertifiedObserver.Fixtures.delayed_state",
+      "module": "ObserverFixtures"
+    },
+    {
+      "name": "Orthemology.CertifiedObserver.Fixtures.delayed_output",
+      "module": "ObserverFixtures"
+    },
+    {
+      "name": "Orthemology.CertifiedObserver.Fixtures.delayed_defect_one",
+      "module": "ObserverFixtures"
+    },
+    {
+      "name": "Orthemology.CertifiedObserver.Fixtures.delayed_prefix_exact",
+      "module": "ObserverFixtures"
+    },
+    {
+      "name": "Orthemology.CertifiedObserver.Fixtures.zero_defect",
+      "module": "ObserverFixtures"
+    },
+    {
+      "name": "Orthemology.CertifiedObserver.Fixtures.finite_prefix_is_not_defect_certificate",
+      "module": "ObserverFixtures"
+    },
+    {
+      "name": "Orthemology.CertifiedObserver.Fixtures.split_error_sharp",
+      "module": "ObserverFixtures"
+    },
+    {
+      "name": "Orthemology.CertifiedObserver.Fixtures.transition_omission_fails",
+      "module": "ObserverFixtures"
+    },
+    {
+      "name": "Orthemology.CertifiedObserver.Fixtures.output_omission_fails",
+      "module": "ObserverFixtures"
+    },
+    {
+      "name": "Orthemology.CertifiedObserver.ContextFixtures.nodes",
+      "module": "ContextualFixtures"
+    },
+    {
+      "name": "Orthemology.CertifiedObserver.ContextFixtures.isI",
+      "module": "ContextualFixtures"
+    },
+    {
+      "name": "Orthemology.CertifiedObserver.ContextFixtures.isI_transport",
+      "module": "ContextualFixtures"
+    },
+    {
+      "name": "Orthemology.CertifiedObserver.ContextFixtures.State",
+      "module": "ContextualFixtures"
+    },
+    {
+      "name": "Orthemology.CertifiedObserver.ContextFixtures.machine",
+      "module": "ContextualFixtures"
+    },
+    {
+      "name": "Orthemology.CertifiedObserver.ContextFixtures.observer",
+      "module": "ContextualFixtures"
+    },
+    {
+      "name": "Orthemology.CertifiedObserver.ContextFixtures.observerStateFintype",
+      "module": "ContextualFixtures"
+    },
+    {
+      "name": "Orthemology.CertifiedObserver.ContextFixtures.iEnv",
+      "module": "ContextualFixtures"
+    },
+    {
+      "name": "Orthemology.CertifiedObserver.ContextFixtures.iiEnv",
+      "module": "ContextualFixtures"
+    },
+    {
+      "name": "Orthemology.CertifiedObserver.ContextFixtures.skkEnv",
+      "module": "ContextualFixtures"
+    },
+    {
+      "name": "Orthemology.CertifiedObserver.ContextFixtures.iSub",
+      "module": "ContextualFixtures"
+    },
+    {
+      "name": "Orthemology.CertifiedObserver.ContextFixtures.iiSub",
+      "module": "ContextualFixtures"
+    },
+    {
+      "name": "Orthemology.CertifiedObserver.ContextFixtures.substitutions_related",
+      "module": "ContextualFixtures"
+    },
+    {
+      "name": "Orthemology.CertifiedObserver.ContextFixtures.source",
+      "module": "ContextualFixtures"
+    },
+    {
+      "name": "Orthemology.CertifiedObserver.ContextFixtures.substitution_codes_distinct",
+      "module": "ContextualFixtures"
+    },
+    {
+      "name": "Orthemology.CertifiedObserver.ContextFixtures.genuinely_different_state_carriers",
+      "module": "ContextualFixtures"
+    },
+    {
+      "name": "Orthemology.CertifiedObserver.ContextFixtures.concrete_substitution_laws",
+      "module": "ContextualFixtures"
+    },
+    {
+      "name": "Orthemology.CertifiedObserver.ContextFixtures.zeroSimulation",
+      "module": "ContextualFixtures"
+    },
+    {
+      "name": "Orthemology.CertifiedObserver.ContextFixtures.copySimulation",
+      "module": "ContextualFixtures"
+    },
+    {
+      "name": "Orthemology.CertifiedObserver.ContextFixtures.source_I_zero",
+      "module": "ContextualFixtures"
+    },
+    {
+      "name": "Orthemology.CertifiedObserver.ContextFixtures.source_II_zero",
+      "module": "ContextualFixtures"
+    },
+    {
+      "name": "Orthemology.CertifiedObserver.ContextFixtures.source_SKK_copy",
+      "module": "ContextualFixtures"
+    },
+    {
+      "name": "Orthemology.CertifiedObserver.ContextFixtures.source_sensitive_defects",
+      "module": "ContextualFixtures"
+    },
+    {
+      "name": "Orthemology.CertifiedObserver.ContextFixtures.inspectSyntax",
+      "module": "ContextualFixtures"
+    },
+    {
+      "name": "Orthemology.CertifiedObserver.ContextFixtures.raw_related_but_unlicensed_observer_distinguishes",
+      "module": "ContextualFixtures"
+    },
+    {
+      "name": "Orthemology.CertifiedObserver.ContextFixtures.silent",
+      "module": "ContextualFixtures"
+    },
+    {
+      "name": "Orthemology.CertifiedObserver.ContextFixtures.silentSimulation",
+      "module": "ContextualFixtures"
+    },
+    {
+      "name": "Orthemology.CertifiedObserver.ContextFixtures.law_equality_not_raw_identity",
+      "module": "ContextualFixtures"
+    },
+    {
+      "name": "Orthemology.CertifiedObserver.Q8.observer",
+      "module": "Q8ObserverAbstraction"
+    },
+    {
+      "name": "Orthemology.CertifiedObserver.Q8.state_eq_run",
+      "module": "Q8ObserverAbstraction"
+    },
+    {
+      "name": "Orthemology.CertifiedObserver.Q8.output_eq_switched",
+      "module": "Q8ObserverAbstraction"
+    },
+    {
+      "name": "Orthemology.CertifiedObserver.Q8.compiled_output",
+      "module": "Q8ObserverAbstraction"
+    },
+    {
+      "name": "Orthemology.CertifiedObserver.Q8.compiled_law",
+      "module": "Q8ObserverAbstraction"
+    },
+    {
+      "name": "Orthemology.CertifiedObserver.Q8.compiled_finite_solver",
+      "module": "Q8ObserverAbstraction"
+    },
+    {
+      "name": "Orthemology.CertifiedObserver.Q8.Fixtures.grow",
+      "module": "Q8ObserverAbstraction"
+    },
+    {
+      "name": "Orthemology.CertifiedObserver.Q8.Fixtures.growSimulation",
+      "module": "Q8ObserverAbstraction"
+    },
+    {
+      "name": "Orthemology.CertifiedObserver.Q8.Fixtures.grow_run_unbounded",
+      "module": "Q8ObserverAbstraction"
+    },
+    {
+      "name": "Orthemology.CertifiedObserver.Q8.Fixtures.grow_compiled_zero",
+      "module": "Q8ObserverAbstraction"
+    },
+    {
+      "name": "Orthemology.CertifiedObserver.Q8.Fixtures.grow_solver",
+      "module": "Q8ObserverAbstraction"
+    },
+    {
+      "name": "Orthemology.CertifiedObserver.Q8.Fixtures.haltNow",
+      "module": "Q8ObserverAbstraction"
+    },
+    {
+      "name": "Orthemology.CertifiedObserver.Q8.Fixtures.haltSimulation",
+      "module": "Q8ObserverAbstraction"
+    },
+    {
+      "name": "Orthemology.CertifiedObserver.Q8.Fixtures.halt_compiled_copy",
+      "module": "Q8ObserverAbstraction"
+    },
+    {
+      "name": "Orthemology.CertifiedObserver.Q8.Fixtures.wrongClock",
+      "module": "Q8ObserverAbstraction"
+    },
+    {
+      "name": "Orthemology.CertifiedObserver.Q8.Fixtures.wrong_clock_rejected",
+      "module": "Q8ObserverAbstraction"
+    },
+    {
+      "name": "Orthemology.CertifiedObserver.ParsedQ8.packed",
+      "module": "ParsedObserverAbstraction"
+    },
+    {
+      "name": "Orthemology.CertifiedObserver.ParsedQ8.code",
+      "module": "ParsedObserverAbstraction"
+    },
+    {
+      "name": "Orthemology.CertifiedObserver.ParsedQ8.decoded_source_exact",
+      "module": "ParsedObserverAbstraction"
+    },
+    {
+      "name": "Orthemology.CertifiedObserver.ParsedQ8.generated_bytes_exact",
+      "module": "ParsedObserverAbstraction"
+    },
+    {
+      "name": "Orthemology.CertifiedObserver.ParsedQ8.observer",
+      "module": "ParsedObserverAbstraction"
+    },
+    {
+      "name": "Orthemology.CertifiedObserver.ParsedQ8.parsed_output_compiled",
+      "module": "ParsedObserverAbstraction"
+    },
+    {
+      "name": "Orthemology.CertifiedObserver.ParsedQ8.parsed_output_mealy",
+      "module": "ParsedObserverAbstraction"
+    },
+    {
+      "name": "Orthemology.CertifiedObserver.ParsedQ8.law",
+      "module": "ParsedObserverAbstraction"
+    },
+    {
+      "name": "Orthemology.CertifiedObserver.ParsedQ8.parsed_law_compiled",
+      "module": "ParsedObserverAbstraction"
+    },
+    {
+      "name": "Orthemology.CertifiedObserver.ParsedQ8.parsed_finite_solver",
+      "module": "ParsedObserverAbstraction"
+    },
+    {
+      "name": "Orthemology.CertifiedObserver.ParsedQ8.inputWord",
+      "module": "ParsedObserverAbstraction"
+    },
+    {
+      "name": "Orthemology.CertifiedObserver.ParsedQ8.runtimeTick",
+      "module": "ParsedObserverAbstraction"
+    },
+    {
+      "name": "Orthemology.CertifiedObserver.ParsedQ8.runtime_tick_sound",
+      "module": "ParsedObserverAbstraction"
+    },
+    {
+      "name": "Orthemology.CertifiedObserver.ParsedQ8.runtime_tick_complete",
+      "module": "ParsedObserverAbstraction"
+    },
+    {
+      "name": "Orthemology.CertifiedObserver.ParsedQ8.runtime_finite_trace",
+      "module": "ParsedObserverAbstraction"
+    },
+    {
+      "name": "Orthemology.CertifiedObserver.ParsedQ8.Fixtures.grow_parsed_solver",
+      "module": "ParsedObserverAbstraction"
+    },
+    {
+      "name": "Orthemology.CertifiedObserver.ParsedQ8.Fixtures.halt_parsed_solver",
+      "module": "ParsedObserverAbstraction"
+    },
+    {
+      "name": "Orthemology.CertifiedObserver.ParsedQ8.Fixtures.zero_fuel_is_not_zero",
+      "module": "ParsedObserverAbstraction"
+    },
+    {
+      "name": "Orthemology.CertifiedObserver.ParsedQ8.Fixtures.timeout_defaulting_corrupts_halt",
+      "module": "ParsedObserverAbstraction"
+    },
+    {
+      "name": "Orthemology.CertifiedObserver.ParsedQ8.extendBits",
+      "module": "UniformRuntimeTrace"
+    },
+    {
+      "name": "Orthemology.CertifiedObserver.ParsedQ8.completeThrough",
+      "module": "UniformRuntimeTrace"
+    },
+    {
+      "name": "Orthemology.CertifiedObserver.ParsedQ8.completeThrough_decidable",
+      "module": "UniformRuntimeTrace"
+    },
+    {
+      "name": "Orthemology.CertifiedObserver.ParsedQ8.runtime_tick_mono",
+      "module": "UniformRuntimeTrace"
+    },
+    {
+      "name": "Orthemology.CertifiedObserver.ParsedQ8.exists_completeThrough",
+      "module": "UniformRuntimeTrace"
+    },
+    {
+      "name": "Orthemology.CertifiedObserver.ParsedQ8.uniformFuel",
+      "module": "UniformRuntimeTrace"
+    },
+    {
+      "name": "Orthemology.CertifiedObserver.ParsedQ8.uniformFuel_complete",
+      "module": "UniformRuntimeTrace"
+    },
+    {
+      "name": "Orthemology.CertifiedObserver.ParsedQ8.inputWord_extend_prefix",
+      "module": "UniformRuntimeTrace"
+    },
+    {
+      "name": "Orthemology.CertifiedObserver.ParsedQ8.uniform_runtime_trace",
+      "module": "UniformRuntimeTrace"
+    },
+    {
+      "name": "IndependentSourceRuntimeControls.first_tick_precedes_halt",
+      "module": "Controls"
+    },
+    {
+      "name": "IndependentSourceRuntimeControls.second_tick_reads_current_bit",
+      "module": "Controls"
+    },
+    {
+      "name": "IndependentSourceRuntimeControls.source_bytes_roundtrip",
+      "module": "Controls"
+    },
+    {
+      "name": "IndependentSourceRuntimeControls.source_index_roundtrip",
+      "module": "Controls"
+    },
+    {
+      "name": "IndependentSourceRuntimeControls.malformed_empty_bytes",
+      "module": "Controls"
+    },
+    {
+      "name": "IndependentSourceRuntimeControls.no_timeout_bit",
+      "module": "Controls"
+    },
+    {
+      "name": "IndependentSourceRuntimeControls.successful_tick_is_source_tick",
+      "module": "Controls"
+    },
+    {
+      "name": "IndependentSourceRuntimeControls.chosen_horizon_uniform",
+      "module": "Controls"
+    },
+    {
+      "name": "IndependentSourceRuntimeControls.no_horizon_zero_tick",
+      "module": "Controls"
+    },
+    {
+      "name": "IndependentSourceRuntimeControls.prefix_cutoff_is_strict",
+      "module": "Controls"
+    },
+    {
+      "name": "IndependentSourceRuntimeControls.old_clock_loses_real_first_output",
+      "module": "Controls"
+    },
+    {
+      "name": "IndependentSourceRuntimeControls.actual_counter_is_unbounded",
+      "module": "Controls"
+    },
+    {
+      "name": "IndependentSourceRuntimeControls.concrete_carriers_differ",
+      "module": "Controls"
+    }
+  ],
+  "pins": {
+    "lean_version": "4.19.0",
+    "lean_binary_sha256": "92c3d35b5bfaa5e0fea413a775d504cf46cd95e1345df61c2274f76779e7e023",
+    "packages": [
+      {
+        "name": "mathlib",
+        "revision": "c44e0c8ee63ca166450922a373c7409c5d26b00b"
+      },
+      {
+        "name": "plausible",
+        "revision": "77e08eddc486491d7b9e470926b3dbe50319451a"
+      },
+      {
+        "name": "LeanSearchClient",
+        "revision": "25078369972d295301f5a1e53c3e5850cf6d9d4c"
+      },
+      {
+        "name": "importGraph",
+        "revision": "e6a9f0f5ee3ccf7443a0070f92b62f8db12ae82b"
+      },
+      {
+        "name": "proofwidgets",
+        "revision": "c4919189477c3221e6a204008998b0d724f49904"
+      },
+      {
+        "name": "aesop",
+        "revision": "5d50b08dedd7d69b3d9b3176e0d58a23af228884"
+      },
+      {
+        "name": "Qq",
+        "revision": "fa4f7f15d97591a9cf3aa7724ba371c7fc6dda02"
+      },
+      {
+        "name": "batteries",
+        "revision": "f5d04a9c4973d401c8c92500711518f7c656f034"
+      },
+      {
+        "name": "Cli",
+        "revision": "02dbd02bc00ec4916e99b04b2245b30200e200d0"
+      }
+    ]
+  },
+  "official_imports": [
+    {
+      "module": "Init",
+      "repository": "lean-release",
+      "source": "Init.lean",
+      "sha256": "94c76e813fdf92a0375566c1c7f3335cf269703da809c6189dc0de09d66b0204"
+    },
+    {
+      "module": "Mathlib",
+      "repository": "mathlib",
+      "source": "Mathlib.lean",
+      "sha256": "b0518254279fabf0c6a920804e684536b0f5e2bd1cb6318d0609eb563413f20a"
+    },
+    {
+      "module": "Mathlib.Analysis.SpecificLimits.Basic",
+      "repository": "mathlib",
+      "source": "Mathlib/Analysis/SpecificLimits/Basic.lean",
+      "sha256": "cbf9b6b47e6ee6b2962fb2f16ba49b7e005e9a93c0adc1244cc770c34f527315"
+    },
+    {
+      "module": "Mathlib.Computability.Partrec",
+      "repository": "mathlib",
+      "source": "Mathlib/Computability/Partrec.lean",
+      "sha256": "e8435a76ce5b2f4b22892d82b3e1e3e2835c8038011a68ca37a7efff797929d1"
+    },
+    {
+      "module": "Mathlib.Computability.Primrec",
+      "repository": "mathlib",
+      "source": "Mathlib/Computability/Primrec.lean",
+      "sha256": "b279a3218434a6f930970b9f43669567e99adc548c31796590f42bdc205dcc22"
+    },
+    {
+      "module": "Mathlib.Data.Bool.Basic",
+      "repository": "mathlib",
+      "source": "Mathlib/Data/Bool/Basic.lean",
+      "sha256": "fb20d50c3aed15cdf7c5b7f1bc92db8ab850444f158199bfa8cb2f09ac3a5e55"
+    },
+    {
+      "module": "Mathlib.Data.Finset.Sigma",
+      "repository": "mathlib",
+      "source": "Mathlib/Data/Finset/Sigma.lean",
+      "sha256": "fff03be1b7cc1debfb34cb668f7c0a3d92f7f6031896a3eff65b7e33ec16da8e"
+    },
+    {
+      "module": "Mathlib.Data.Fintype.EquivFin",
+      "repository": "mathlib",
+      "source": "Mathlib/Data/Fintype/EquivFin.lean",
+      "sha256": "e0842e47c8ba3cc9ef6b9fdd78432beac04b613851220973fca283dab71448e9"
+    },
+    {
+      "module": "Mathlib.Data.List.OfFn",
+      "repository": "mathlib",
+      "source": "Mathlib/Data/List/OfFn.lean",
+      "sha256": "7ed0d919af0879458511e8ca33f62bc73952a7c520371467514dc4669fd68d32"
+    },
+    {
+      "module": "Mathlib.Data.Nat.Bitwise",
+      "repository": "mathlib",
+      "source": "Mathlib/Data/Nat/Bitwise.lean",
+      "sha256": "e987a9f57489a80d8e2de33b7ad8662516b85fe745d611c0fe9e6c965fb6f5b7"
+    },
+    {
+      "module": "Mathlib.LinearAlgebra.Determinant",
+      "repository": "mathlib",
+      "source": "Mathlib/LinearAlgebra/Determinant.lean",
+      "sha256": "3514c23630a2e872c8bd403d2ffa84f4170aeb870497627475e8573c6feae4b9"
+    },
+    {
+      "module": "Mathlib.LinearAlgebra.FiniteDimensional.Basic",
+      "repository": "mathlib",
+      "source": "Mathlib/LinearAlgebra/FiniteDimensional/Basic.lean",
+      "sha256": "0d51bff219c4945969805570370bdfc14ada71990c1f65b89a8b6a19ff4f01cc"
+    },
+    {
+      "module": "Mathlib.MeasureTheory.Measure.Map",
+      "repository": "mathlib",
+      "source": "Mathlib/MeasureTheory/Measure/Map.lean",
+      "sha256": "3c7fb458eece85551c9b7bd28955a517e14f4bee77934b8b001440a57b6f7f71"
+    },
+    {
+      "module": "Mathlib.MeasureTheory.Measure.Restrict",
+      "repository": "mathlib",
+      "source": "Mathlib/MeasureTheory/Measure/Restrict.lean",
+      "sha256": "0c0c2108a28516ae3a85dfbfc2e5d7a3afd26dcc113aa8b19c2a79adfe12e56e"
+    },
+    {
+      "module": "Mathlib.MeasureTheory.Measure.Typeclasses.NoAtoms",
+      "repository": "mathlib",
+      "source": "Mathlib/MeasureTheory/Measure/Typeclasses/NoAtoms.lean",
+      "sha256": "f840a5341797290644d0bae0b916c866e7f98a6d25b3894de87341ff4c1cfdb7"
+    },
+    {
+      "module": "Mathlib.MeasureTheory.Measure.Typeclasses.Probability",
+      "repository": "mathlib",
+      "source": "Mathlib/MeasureTheory/Measure/Typeclasses/Probability.lean",
+      "sha256": "419ec9a5612f378b8603f4adb8a0941485481c1d754e95afb8d0a4ddd35f8883"
+    },
+    {
+      "module": "Mathlib.MeasureTheory.Measure.Typeclasses.SFinite",
+      "repository": "mathlib",
+      "source": "Mathlib/MeasureTheory/Measure/Typeclasses/SFinite.lean",
+      "sha256": "b9fb829526454d1f9526ed9bb21de6d661fdb4a01a9847eb6669bedf68f1f784"
+    },
+    {
+      "module": "Mathlib.Probability.ProbabilityMassFunction.Constructions",
+      "repository": "mathlib",
+      "source": "Mathlib/Probability/ProbabilityMassFunction/Constructions.lean",
+      "sha256": "8e50bff3cd3b46107d612eed21e1648752a86f9c373d4b6b0fe10e0e22a43973"
+    },
+    {
+      "module": "Mathlib.Probability.ProductMeasure",
+      "repository": "mathlib",
+      "source": "Mathlib/Probability/ProductMeasure.lean",
+      "sha256": "f8af06e87e2e28916f0fa8a455f792ded4b85a22e1dea5e1c6f9cac1d31b9830"
+    },
+    {
+      "module": "Mathlib.SetTheory.Cardinal.Finite",
+      "repository": "mathlib",
+      "source": "Mathlib/SetTheory/Cardinal/Finite.lean",
+      "sha256": "57a20638e916d020a1f6eda323560bc56b338aa4fb5b7f4d8236202ee195c471"
+    },
+    {
+      "module": "Mathlib.Tactic",
+      "repository": "mathlib",
+      "source": "Mathlib/Tactic.lean",
+      "sha256": "f20038eba7bba63f07a2f854496101226df407e20414e6b8ebf94b14f95e831b"
+    }
+  ],
+  "driver": {
+    "source_id": "src-332d0dbea81d90d7-817e8553aa5fdf95",
+    "lean_argument": "BIN_DIRECTORY"
+  },
+  "controls": "ORIGINAL_DRIVER_REQUIRED",
+  "classification": "PREDECESSOR"
+}

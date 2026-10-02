@@ -1,0 +1,195 @@
+{
+  "id": "332d0dbea81d-existence-aware-history",
+  "origin": "332d0dbea81d90d7697f391520f43df61afb04c10bf11736320d9f8299cb6d58",
+  "descriptor_source_id": "src-332d0dbea81d90d7-85c042fef1d85c5a",
+  "modules": [
+    {
+      "module": "ExistenceAwareHistory",
+      "source_id": "src-332d0dbea81d90d7-cd0368a221290d3e",
+      "imports": [
+        "Mathlib"
+      ]
+    },
+    {
+      "module": "Controls",
+      "source_id": "src-332d0dbea81d90d7-8b53f4da3aceb2b8",
+      "imports": [
+        "ExistenceAwareHistory"
+      ]
+    }
+  ],
+  "module_order": [
+    "ExistenceAwareHistory",
+    "Controls"
+  ],
+  "targets": [
+    {
+      "name": "Orthemology.Tranche3.ExistenceAwareHistory.HalfHistory",
+      "module": "ExistenceAwareHistory"
+    },
+    {
+      "name": "Orthemology.Tranche3.ExistenceAwareHistory.backwards_deviation",
+      "module": "ExistenceAwareHistory"
+    },
+    {
+      "name": "Orthemology.Tranche3.ExistenceAwareHistory.bounded_history_constant",
+      "module": "ExistenceAwareHistory"
+    },
+    {
+      "name": "Orthemology.Tranche3.ExistenceAwareHistory.unbounded_family",
+      "module": "ExistenceAwareHistory"
+    },
+    {
+      "name": "Orthemology.Tranche3.ExistenceAwareHistory.nonconstant_unbounded_control",
+      "module": "ExistenceAwareHistory"
+    },
+    {
+      "name": "Orthemology.Tranche3.ExistenceAwareHistory.liftHalf",
+      "module": "ExistenceAwareHistory"
+    },
+    {
+      "name": "Orthemology.Tranche3.ExistenceAwareHistory.LiftedHistory",
+      "module": "ExistenceAwareHistory"
+    },
+    {
+      "name": "Orthemology.Tranche3.ExistenceAwareHistory.ConditionallyBounded",
+      "module": "ExistenceAwareHistory"
+    },
+    {
+      "name": "Orthemology.Tranche3.ExistenceAwareHistory.absent_history",
+      "module": "ExistenceAwareHistory"
+    },
+    {
+      "name": "Orthemology.Tranche3.ExistenceAwareHistory.present_history",
+      "module": "ExistenceAwareHistory"
+    },
+    {
+      "name": "Orthemology.Tranche3.ExistenceAwareHistory.absence_iff_next",
+      "module": "ExistenceAwareHistory"
+    },
+    {
+      "name": "Orthemology.Tranche3.ExistenceAwareHistory.same_absence_profile",
+      "module": "ExistenceAwareHistory"
+    },
+    {
+      "name": "Orthemology.Tranche3.ExistenceAwareHistory.bounded_lifted_classification",
+      "module": "ExistenceAwareHistory"
+    },
+    {
+      "name": "Orthemology.Tranche3.ExistenceAwareHistory.two_existence_profiles",
+      "module": "ExistenceAwareHistory"
+    },
+    {
+      "name": "Orthemology.Tranche3.ExistenceAwareHistory.absence_preserving_not_unique_active",
+      "module": "ExistenceAwareHistory"
+    },
+    {
+      "name": "Orthemology.Tranche3.ExistenceAwareHistory.no_global_contraction_with_preserved_absence",
+      "module": "ExistenceAwareHistory"
+    },
+    {
+      "name": "Orthemology.Tranche3.ExistenceAwareHistory.active_profile_satisfies_existence",
+      "module": "ExistenceAwareHistory"
+    },
+    {
+      "name": "IndependentExistenceControls.no_bound_no_uniqueness",
+      "module": "Controls"
+    },
+    {
+      "name": "IndependentExistenceControls.bounded_nonhistory",
+      "module": "Controls"
+    },
+    {
+      "name": "IndependentExistenceControls.finite_prefix_bound_does_not_force_constant",
+      "module": "Controls"
+    },
+    {
+      "name": "IndependentExistenceControls.absent_vacuous_even_negative_bound",
+      "module": "Controls"
+    },
+    {
+      "name": "IndependentExistenceControls.classification_does_not_need_nonnegative_bound",
+      "module": "Controls"
+    },
+    {
+      "name": "IndependentExistenceControls.present_zero_is_not_absent",
+      "module": "Controls"
+    },
+    {
+      "name": "IndependentExistenceControls.alternating_existence_violates_lift",
+      "module": "Controls"
+    },
+    {
+      "name": "IndependentExistenceControls.absent_profile_not_derived_actuality",
+      "module": "Controls"
+    },
+    {
+      "name": "IndependentExistenceControls.preserving_only_empty_allows_unique",
+      "module": "Controls"
+    },
+    {
+      "name": "IndependentExistenceControls.preserving_only_active_allows_unique",
+      "module": "Controls"
+    },
+    {
+      "name": "IndependentExistenceControls.collapsed_names_allow_unique",
+      "module": "Controls"
+    }
+  ],
+  "pins": {
+    "lean_version": "4.19.0",
+    "lean_binary_sha256": "92c3d35b5bfaa5e0fea413a775d504cf46cd95e1345df61c2274f76779e7e023",
+    "packages": [
+      {
+        "name": "mathlib",
+        "revision": "c44e0c8ee63ca166450922a373c7409c5d26b00b"
+      },
+      {
+        "name": "plausible",
+        "revision": "77e08eddc486491d7b9e470926b3dbe50319451a"
+      },
+      {
+        "name": "LeanSearchClient",
+        "revision": "25078369972d295301f5a1e53c3e5850cf6d9d4c"
+      },
+      {
+        "name": "importGraph",
+        "revision": "e6a9f0f5ee3ccf7443a0070f92b62f8db12ae82b"
+      },
+      {
+        "name": "proofwidgets",
+        "revision": "c4919189477c3221e6a204008998b0d724f49904"
+      },
+      {
+        "name": "aesop",
+        "revision": "5d50b08dedd7d69b3d9b3176e0d58a23af228884"
+      },
+      {
+        "name": "Qq",
+        "revision": "fa4f7f15d97591a9cf3aa7724ba371c7fc6dda02"
+      },
+      {
+        "name": "batteries",
+        "revision": "f5d04a9c4973d401c8c92500711518f7c656f034"
+      },
+      {
+        "name": "Cli",
+        "revision": "02dbd02bc00ec4916e99b04b2245b30200e200d0"
+      }
+    ]
+  },
+  "official_imports": [
+    {
+      "module": "Mathlib",
+      "repository": "mathlib",
+      "source": "Mathlib.lean",
+      "sha256": "b0518254279fabf0c6a920804e684536b0f5e2bd1cb6318d0609eb563413f20a"
+    }
+  ],
+  "driver": {
+    "source_id": "src-332d0dbea81d90d7-817e8553aa5fdf95",
+    "lean_argument": "BIN_DIRECTORY"
+  },
+  "controls": "ORIGINAL_DRIVER_REQUIRED",
+  "classification": "PREDECESSOR"
+}

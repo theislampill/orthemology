@@ -1,0 +1,731 @@
+{
+  "id": "332d0dbea81d-chain-budget",
+  "origin": "332d0dbea81d90d7697f391520f43df61afb04c10bf11736320d9f8299cb6d58",
+  "descriptor_source_id": "src-332d0dbea81d90d7-85c042fef1d85c5a",
+  "modules": [
+    {
+      "module": "AcyclicPhaseBudget",
+      "source_id": "src-332d0dbea81d90d7-e1d9f9eefc0139fe",
+      "imports": [
+        "RecursivePhysicalBudget"
+      ]
+    },
+    {
+      "module": "ChainHellingerBudget",
+      "source_id": "src-332d0dbea81d90d7-8c9e15b1f1f2774a",
+      "imports": [
+        "AcyclicPhaseBudget"
+      ]
+    },
+    {
+      "module": "ChainPhysicalBudget",
+      "source_id": "src-332d0dbea81d90d7-82f3a8398c0d3443",
+      "imports": [
+        "ChainHellingerBudget"
+      ]
+    },
+    {
+      "module": "Controls",
+      "source_id": "src-332d0dbea81d90d7-250f627a77471b51",
+      "imports": [
+        "ChainPhysicalBudget"
+      ]
+    },
+    {
+      "module": "RecursivePhysicalBudget",
+      "source_id": "src-332d0dbea81d90d7-95b94b30fc980b02",
+      "imports": [
+        "PhysicalCostConservation"
+      ]
+    },
+    {
+      "module": "PhysicalCostConservation",
+      "source_id": "src-332d0dbea81d90d7-c82a332796717638",
+      "imports": [
+        "RecursivePhysicalDecoder"
+      ]
+    },
+    {
+      "module": "RecursivePhysicalDecoder",
+      "source_id": "src-332d0dbea81d90d7-a6acebcfe054389f",
+      "imports": [
+        "RecursiveRecordedController",
+        "MarkovZeroEvent",
+        "dependencies.MeasurablePhysicalFlattening"
+      ]
+    },
+    {
+      "module": "MarkovZeroEvent",
+      "source_id": "src-332d0dbea81d90d7-ea652d39d0ccf162",
+      "imports": [
+        "MarkovCharge"
+      ]
+    },
+    {
+      "module": "RecursiveRecordedController",
+      "source_id": "src-332d0dbea81d90d7-362a8a8a534ed90e",
+      "imports": [
+        "RecursiveGeneratedController",
+        "RecordedBudgetTransfer",
+        "StoppedRecordActions",
+        "dependencies.PhysicalFlattening"
+      ]
+    },
+    {
+      "module": "dependencies.MeasurablePhysicalFlattening",
+      "source_id": "src-332d0dbea81d90d7-581e9b2d6ebf28f3",
+      "imports": [
+        "dependencies.PhysicalFlattening"
+      ]
+    },
+    {
+      "module": "MarkovCharge",
+      "source_id": "src-332d0dbea81d90d7-f69f70a08b13f8f8",
+      "imports": [
+        "ResetTrajectory"
+      ]
+    },
+    {
+      "module": "RecordedBudgetTransfer",
+      "source_id": "src-332d0dbea81d90d7-a0d25909fcbba07f",
+      "imports": [
+        "RecordedCharge"
+      ]
+    },
+    {
+      "module": "RecursiveGeneratedController",
+      "source_id": "src-332d0dbea81d90d7-fbed992c750afaa9",
+      "imports": [
+        "RecursivePhaseExtraction",
+        "StoppedActionCost"
+      ]
+    },
+    {
+      "module": "StoppedRecordActions",
+      "source_id": "src-332d0dbea81d90d7-09c4fa81120ce223",
+      "imports": [
+        "RecordedTransition",
+        "StoppedActionCost"
+      ]
+    },
+    {
+      "module": "dependencies.PhysicalFlattening",
+      "source_id": "src-332d0dbea81d90d7-196c217c80731c7a",
+      "imports": [
+        "Mathlib"
+      ]
+    },
+    {
+      "module": "RecordedCharge",
+      "source_id": "src-332d0dbea81d90d7-6d54ae5b662ec696",
+      "imports": [
+        "RecordedTransition",
+        "TrajectoryBudget"
+      ]
+    },
+    {
+      "module": "RecordedTransition",
+      "source_id": "src-332d0dbea81d90d7-09373e330040cc5f",
+      "imports": [
+        "ResetExpectation"
+      ]
+    },
+    {
+      "module": "RecursivePhaseExtraction",
+      "source_id": "src-332d0dbea81d90d7-ce28dcbd98a3f909",
+      "imports": [
+        "StoppedSupportUpdate"
+      ]
+    },
+    {
+      "module": "ResetTrajectory",
+      "source_id": "src-332d0dbea81d90d7-be1e6092a6ce4a8c",
+      "imports": [
+        "ResetLaw",
+        "Mathlib.Probability.Kernel.IonescuTulcea.Traj",
+        "Mathlib.Probability.ProbabilityMassFunction.Integrals"
+      ]
+    },
+    {
+      "module": "StoppedActionCost",
+      "source_id": "src-332d0dbea81d90d7-01e792ce81a76c30",
+      "imports": [
+        "StoppedBlock"
+      ]
+    },
+    {
+      "module": "ResetExpectation",
+      "source_id": "src-332d0dbea81d90d7-ecc61758fb30241d",
+      "imports": [
+        "ResetFutureCost",
+        "MarkovCharge",
+        "Mathlib.MeasureTheory.Integral.Lebesgue.Countable"
+      ]
+    },
+    {
+      "module": "ResetLaw",
+      "source_id": "src-332d0dbea81d90d7-66052d1fd0be9eb9",
+      "imports": [
+        "ResetBudget"
+      ]
+    },
+    {
+      "module": "StoppedBlock",
+      "source_id": "src-332d0dbea81d90d7-05706d0e966ccb34",
+      "imports": [
+        "SubprobHellinger",
+        "BlockKernel"
+      ]
+    },
+    {
+      "module": "StoppedSupportUpdate",
+      "source_id": "src-332d0dbea81d90d7-0432c07db4737d01",
+      "imports": [
+        "RecursiveWinningCertificate"
+      ]
+    },
+    {
+      "module": "TrajectoryBudget",
+      "source_id": "src-332d0dbea81d90d7-1f42dc2c08168260",
+      "imports": [
+        "ResetExpectation",
+        "FiniteBudgetAlmostSure"
+      ]
+    },
+    {
+      "module": "BlockKernel",
+      "source_id": "src-332d0dbea81d90d7-4ae4c2415adaadaa",
+      "imports": [
+        "HellingerTree",
+        "Mathlib.Algebra.BigOperators.Ring.Finset"
+      ]
+    },
+    {
+      "module": "FiniteBudgetAlmostSure",
+      "source_id": "src-332d0dbea81d90d7-354944e3a7213298",
+      "imports": [
+        "ResetHellinger",
+        "Mathlib.MeasureTheory.OuterMeasure.BorelCantelli",
+        "Mathlib.MeasureTheory.Integral.Lebesgue.Countable",
+        "Mathlib.Data.ENNReal.BigOperators"
+      ]
+    },
+    {
+      "module": "RecursiveWinningCertificate",
+      "source_id": "src-332d0dbea81d90d7-e7133b663f92674a",
+      "imports": [
+        "GeneratedLiveController",
+        "SupportStageCertificate"
+      ]
+    },
+    {
+      "module": "ResetBudget",
+      "source_id": "src-332d0dbea81d90d7-5b1d300a3a144beb",
+      "imports": [
+        "DependentHellinger"
+      ]
+    },
+    {
+      "module": "ResetFutureCost",
+      "source_id": "src-332d0dbea81d90d7-f5ee0d57858cbf29",
+      "imports": [
+        "ResetTrajectory"
+      ]
+    },
+    {
+      "module": "SubprobHellinger",
+      "source_id": "src-332d0dbea81d90d7-93abbed0eb628688",
+      "imports": [
+        "HellingerTree"
+      ]
+    },
+    {
+      "module": "DependentHellinger",
+      "source_id": "src-332d0dbea81d90d7-832cc44403410c48",
+      "imports": [
+        "SubprobHellinger"
+      ]
+    },
+    {
+      "module": "GeneratedLiveController",
+      "source_id": "src-332d0dbea81d90d7-5ad52b65d5e056ee",
+      "imports": [
+        "GuardedLiveController",
+        "StoppedActionCost",
+        "TrajectoryBudget"
+      ]
+    },
+    {
+      "module": "HellingerTree",
+      "source_id": "src-332d0dbea81d90d7-746e8c60c36f9d31",
+      "imports": [
+        "dependencies.StatisticalRepair",
+        "Mathlib.Topology.Instances.ENNReal.Lemmas"
+      ]
+    },
+    {
+      "module": "ResetHellinger",
+      "source_id": "src-332d0dbea81d90d7-51b05f84c4d410ec",
+      "imports": [
+        "WeightedPotential"
+      ]
+    },
+    {
+      "module": "SupportStageCertificate",
+      "source_id": "src-332d0dbea81d90d7-c8c4dbf1cc8282ad",
+      "imports": [
+        "SelfVerifyingSupport"
+      ]
+    },
+    {
+      "module": "GuardedLiveController",
+      "source_id": "src-332d0dbea81d90d7-be1a824a5359614b",
+      "imports": [
+        "LiveSourceCertificate",
+        "GuardedResetHellinger"
+      ]
+    },
+    {
+      "module": "SelfVerifyingSupport",
+      "source_id": "src-332d0dbea81d90d7-1d4927af4fb14b1c",
+      "imports": [
+        "Mathlib.Data.Finset.Powerset",
+        "Mathlib.Data.Finset.Card",
+        "Mathlib.Tactic"
+      ]
+    },
+    {
+      "module": "WeightedPotential",
+      "source_id": "src-332d0dbea81d90d7-1be8e7d869307106",
+      "imports": [
+        "ResetBudget",
+        "StoppedPhasePolicy"
+      ]
+    },
+    {
+      "module": "dependencies.StatisticalRepair",
+      "source_id": "src-332d0dbea81d90d7-0d67f1c061e97e8b",
+      "imports": [
+        "Mathlib.Data.Real.Sqrt",
+        "Mathlib.Algebra.Order.BigOperators.Ring.Finset",
+        "Mathlib.Tactic"
+      ]
+    },
+    {
+      "module": "GuardedResetHellinger",
+      "source_id": "src-332d0dbea81d90d7-cedc3f6cd560a22d",
+      "imports": [
+        "WeightedPotential",
+        "GuardedResetBudget"
+      ]
+    },
+    {
+      "module": "LiveSourceCertificate",
+      "source_id": "src-332d0dbea81d90d7-413bdd2a5c0e43d0",
+      "imports": [
+        "ResetHellinger"
+      ]
+    },
+    {
+      "module": "StoppedPhasePolicy",
+      "source_id": "src-332d0dbea81d90d7-81f519c2097f9a7a",
+      "imports": [
+        "DependentHellinger",
+        "ResidualDeficit",
+        "CanonicalBlockPolicy"
+      ]
+    },
+    {
+      "module": "CanonicalBlockPolicy",
+      "source_id": "src-332d0dbea81d90d7-faee15f28ef68689",
+      "imports": [
+        "BlockController"
+      ]
+    },
+    {
+      "module": "GuardedResetBudget",
+      "source_id": "src-332d0dbea81d90d7-b4e918e6478d0fdf",
+      "imports": [
+        "ResetBudget"
+      ]
+    },
+    {
+      "module": "ResidualDeficit",
+      "source_id": "src-332d0dbea81d90d7-848070b2fe8aad0e",
+      "imports": [
+        "StoppedBlock",
+        "SelfVerifyingSupport"
+      ]
+    },
+    {
+      "module": "BlockController",
+      "source_id": "src-332d0dbea81d90d7-61ad32cec1ec2490",
+      "imports": [
+        "LikelihoodProducts",
+        "SelfVerifyingSupport",
+        "Mathlib.Data.Nat.Nth",
+        "Mathlib.Order.Filter.Cofinite"
+      ]
+    },
+    {
+      "module": "LikelihoodProducts",
+      "source_id": "src-332d0dbea81d90d7-ae3eff830790c4ac",
+      "imports": [
+        "AdaptiveLikelihood"
+      ]
+    },
+    {
+      "module": "AdaptiveLikelihood",
+      "source_id": "src-332d0dbea81d90d7-775009a60633f95a",
+      "imports": [
+        "FiniteLikelihood",
+        "Mathlib.Order.Filter.IsBounded"
+      ]
+    },
+    {
+      "module": "FiniteLikelihood",
+      "source_id": "src-332d0dbea81d90d7-2e42fd6cfba54107",
+      "imports": [
+        "Mathlib.Probability.StrongLaw",
+        "Mathlib.InformationTheory.KullbackLeibler.KLFun",
+        "Mathlib.Tactic"
+      ]
+    }
+  ],
+  "module_order": [
+    "dependencies.StatisticalRepair",
+    "HellingerTree",
+    "SubprobHellinger",
+    "DependentHellinger",
+    "ResetBudget",
+    "BlockKernel",
+    "StoppedBlock",
+    "SelfVerifyingSupport",
+    "ResidualDeficit",
+    "FiniteLikelihood",
+    "AdaptiveLikelihood",
+    "LikelihoodProducts",
+    "BlockController",
+    "CanonicalBlockPolicy",
+    "StoppedPhasePolicy",
+    "WeightedPotential",
+    "ResetHellinger",
+    "LiveSourceCertificate",
+    "GuardedResetBudget",
+    "GuardedResetHellinger",
+    "GuardedLiveController",
+    "StoppedActionCost",
+    "ResetLaw",
+    "ResetTrajectory",
+    "ResetFutureCost",
+    "MarkovCharge",
+    "ResetExpectation",
+    "FiniteBudgetAlmostSure",
+    "TrajectoryBudget",
+    "GeneratedLiveController",
+    "SupportStageCertificate",
+    "RecursiveWinningCertificate",
+    "StoppedSupportUpdate",
+    "RecursivePhaseExtraction",
+    "RecursiveGeneratedController",
+    "RecordedTransition",
+    "RecordedCharge",
+    "RecordedBudgetTransfer",
+    "StoppedRecordActions",
+    "dependencies.PhysicalFlattening",
+    "RecursiveRecordedController",
+    "MarkovZeroEvent",
+    "dependencies.MeasurablePhysicalFlattening",
+    "RecursivePhysicalDecoder",
+    "PhysicalCostConservation",
+    "RecursivePhysicalBudget",
+    "AcyclicPhaseBudget",
+    "ChainHellingerBudget",
+    "ChainPhysicalBudget",
+    "Controls"
+  ],
+  "targets": [
+    {
+      "name": "Orthemology.Tranche3.resetCost_continuation_bound",
+      "module": "AcyclicPhaseBudget"
+    },
+    {
+      "name": "Orthemology.Tranche3.phaseChainBudget",
+      "module": "AcyclicPhaseBudget"
+    },
+    {
+      "name": "Orthemology.Tranche3.phaseContinuationBudget",
+      "module": "AcyclicPhaseBudget"
+    },
+    {
+      "name": "Orthemology.Tranche3.phaseChainBudget_eq",
+      "module": "AcyclicPhaseBudget"
+    },
+    {
+      "name": "Orthemology.Tranche3.phaseContinuationBudget_nonneg",
+      "module": "AcyclicPhaseBudget"
+    },
+    {
+      "name": "Orthemology.Tranche3.phaseChainBudget_nonneg",
+      "module": "AcyclicPhaseBudget"
+    },
+    {
+      "name": "Orthemology.Tranche3.phaseChainBudget_le_continuation",
+      "module": "AcyclicPhaseBudget"
+    },
+    {
+      "name": "Orthemology.Tranche3.phaseChainBudget_le_rank_bound",
+      "module": "AcyclicPhaseBudget"
+    },
+    {
+      "name": "Orthemology.Tranche3.phaseChainBudget_le_supersolution",
+      "module": "AcyclicPhaseBudget"
+    },
+    {
+      "name": "Orthemology.Tranche3.chain_reset_hellinger_budget",
+      "module": "ChainHellingerBudget"
+    },
+    {
+      "name": "Orthemology.Tranche3.recursiveExitEdge",
+      "module": "ChainHellingerBudget"
+    },
+    {
+      "name": "Orthemology.Tranche3.recursiveExitEdge_rank",
+      "module": "ChainHellingerBudget"
+    },
+    {
+      "name": "Orthemology.Tranche3.recursiveHellingerWeight",
+      "module": "ChainHellingerBudget"
+    },
+    {
+      "name": "Orthemology.Tranche3.recursiveBadCharge_positive",
+      "module": "ChainHellingerBudget"
+    },
+    {
+      "name": "Orthemology.Tranche3.recursiveHellingerWeight_nonneg",
+      "module": "ChainHellingerBudget"
+    },
+    {
+      "name": "Orthemology.Tranche3.recursiveChainBudget",
+      "module": "ChainHellingerBudget"
+    },
+    {
+      "name": "Orthemology.Tranche3.recursiveChainBudget_le_global",
+      "module": "ChainHellingerBudget"
+    },
+    {
+      "name": "Orthemology.Tranche3.recursive_resetCost_le_chainBudget",
+      "module": "ChainHellingerBudget"
+    },
+    {
+      "name": "Orthemology.Tranche3.recursive_physical_budget_transfer",
+      "module": "ChainPhysicalBudget"
+    },
+    {
+      "name": "Orthemology.Tranche3.recursivePhysicalLaw_total_bad_chain_budget",
+      "module": "ChainPhysicalBudget"
+    },
+    {
+      "name": "Orthemology.Tranche3.recursivePhysicalLaw_finite_bad_chain_budget",
+      "module": "ChainPhysicalBudget"
+    },
+    {
+      "name": "Orthemology.Tranche3.recursivePhysicalLaw_chain_bad_count_tail",
+      "module": "ChainPhysicalBudget"
+    },
+    {
+      "name": "Orthemology.Tranche3.recursivePhysicalLaw_total_bad_finite_ae",
+      "module": "ChainPhysicalBudget"
+    },
+    {
+      "name": "IndependentChainControls.no_self_edge",
+      "module": "Controls"
+    },
+    {
+      "name": "IndependentChainControls.leaf_budget",
+      "module": "Controls"
+    },
+    {
+      "name": "IndependentChainControls.root_budget",
+      "module": "Controls"
+    },
+    {
+      "name": "IndependentChainControls.coarse_rank_budget",
+      "module": "Controls"
+    },
+    {
+      "name": "IndependentChainControls.strict_improvement",
+      "module": "Controls"
+    },
+    {
+      "name": "IndependentChainControls.local_supersolution_least",
+      "module": "Controls"
+    },
+    {
+      "name": "IndependentChainControls.no_rank_for_self_reset",
+      "module": "Controls"
+    },
+    {
+      "name": "IndependentChainControls.no_rank_for_cycle",
+      "module": "Controls"
+    }
+  ],
+  "pins": {
+    "lean_version": "4.19.0",
+    "lean_binary_sha256": "92c3d35b5bfaa5e0fea413a775d504cf46cd95e1345df61c2274f76779e7e023",
+    "packages": [
+      {
+        "name": "mathlib",
+        "revision": "c44e0c8ee63ca166450922a373c7409c5d26b00b"
+      },
+      {
+        "name": "plausible",
+        "revision": "77e08eddc486491d7b9e470926b3dbe50319451a"
+      },
+      {
+        "name": "LeanSearchClient",
+        "revision": "25078369972d295301f5a1e53c3e5850cf6d9d4c"
+      },
+      {
+        "name": "importGraph",
+        "revision": "e6a9f0f5ee3ccf7443a0070f92b62f8db12ae82b"
+      },
+      {
+        "name": "proofwidgets",
+        "revision": "c4919189477c3221e6a204008998b0d724f49904"
+      },
+      {
+        "name": "aesop",
+        "revision": "5d50b08dedd7d69b3d9b3176e0d58a23af228884"
+      },
+      {
+        "name": "Qq",
+        "revision": "fa4f7f15d97591a9cf3aa7724ba371c7fc6dda02"
+      },
+      {
+        "name": "batteries",
+        "revision": "f5d04a9c4973d401c8c92500711518f7c656f034"
+      },
+      {
+        "name": "Cli",
+        "revision": "02dbd02bc00ec4916e99b04b2245b30200e200d0"
+      }
+    ]
+  },
+  "official_imports": [
+    {
+      "module": "Mathlib",
+      "repository": "mathlib",
+      "source": "Mathlib.lean",
+      "sha256": "b0518254279fabf0c6a920804e684536b0f5e2bd1cb6318d0609eb563413f20a"
+    },
+    {
+      "module": "Mathlib.Algebra.BigOperators.Ring.Finset",
+      "repository": "mathlib",
+      "source": "Mathlib/Algebra/BigOperators/Ring/Finset.lean",
+      "sha256": "4230d51ee93a5228a7a606be8a1b0d3e37d403ea88f4ae53e18499e6adec7056"
+    },
+    {
+      "module": "Mathlib.Algebra.Order.BigOperators.Ring.Finset",
+      "repository": "mathlib",
+      "source": "Mathlib/Algebra/Order/BigOperators/Ring/Finset.lean",
+      "sha256": "6341ca875f3963664c94147b1eacd45c9aedfe2015ae695b06af4e717849abe4"
+    },
+    {
+      "module": "Mathlib.Data.ENNReal.BigOperators",
+      "repository": "mathlib",
+      "source": "Mathlib/Data/ENNReal/BigOperators.lean",
+      "sha256": "5aab09c5a12d60ae590fd1bb83423323c407fdf0599f92f5a3362e541127fb73"
+    },
+    {
+      "module": "Mathlib.Data.Finset.Card",
+      "repository": "mathlib",
+      "source": "Mathlib/Data/Finset/Card.lean",
+      "sha256": "a915b4a9c6ed684221397e67503048f604fc2caf58a88b03c02e4d7e070a940b"
+    },
+    {
+      "module": "Mathlib.Data.Finset.Powerset",
+      "repository": "mathlib",
+      "source": "Mathlib/Data/Finset/Powerset.lean",
+      "sha256": "ff946726d050b01703aec4dd1a66398f461455942e036806c24ceaeee6e23ac8"
+    },
+    {
+      "module": "Mathlib.Data.Nat.Nth",
+      "repository": "mathlib",
+      "source": "Mathlib/Data/Nat/Nth.lean",
+      "sha256": "f9c3f28e98e349044dc2ed66c469fb9d708aae76bfecff177057afa2c621c345"
+    },
+    {
+      "module": "Mathlib.Data.Real.Sqrt",
+      "repository": "mathlib",
+      "source": "Mathlib/Data/Real/Sqrt.lean",
+      "sha256": "100af39c6d268959221d07b8f2fee4579d2dbef4e87bf64158066cc675f67323"
+    },
+    {
+      "module": "Mathlib.InformationTheory.KullbackLeibler.KLFun",
+      "repository": "mathlib",
+      "source": "Mathlib/InformationTheory/KullbackLeibler/KLFun.lean",
+      "sha256": "2a8bd6be0fdcea32c85d5e671d412890b222ec0678f337f594a3beef8823b5bf"
+    },
+    {
+      "module": "Mathlib.MeasureTheory.Integral.Lebesgue.Countable",
+      "repository": "mathlib",
+      "source": "Mathlib/MeasureTheory/Integral/Lebesgue/Countable.lean",
+      "sha256": "d72bbe283ae4450a54542434fae411870672bfcad5b518d17a4b909a0c7b4c62"
+    },
+    {
+      "module": "Mathlib.MeasureTheory.OuterMeasure.BorelCantelli",
+      "repository": "mathlib",
+      "source": "Mathlib/MeasureTheory/OuterMeasure/BorelCantelli.lean",
+      "sha256": "9e38230dcc3fff080e7ea05c64e7a04af8d9440753ff8be290e8cd110b9afa6a"
+    },
+    {
+      "module": "Mathlib.Order.Filter.Cofinite",
+      "repository": "mathlib",
+      "source": "Mathlib/Order/Filter/Cofinite.lean",
+      "sha256": "90ab3333c25d9fa1a5cd55329717a5e2e0bf22008edeff96e5d91074146c6a3c"
+    },
+    {
+      "module": "Mathlib.Order.Filter.IsBounded",
+      "repository": "mathlib",
+      "source": "Mathlib/Order/Filter/IsBounded.lean",
+      "sha256": "7612a3743f96379ab16577c154486e9ea0e7ad1efbd81e1c2e65f95aa7665646"
+    },
+    {
+      "module": "Mathlib.Probability.Kernel.IonescuTulcea.Traj",
+      "repository": "mathlib",
+      "source": "Mathlib/Probability/Kernel/IonescuTulcea/Traj.lean",
+      "sha256": "c565dd9bdc17c21181cd5cbe41055aa2889210745bc463ff0596a01c580ccbcb"
+    },
+    {
+      "module": "Mathlib.Probability.ProbabilityMassFunction.Integrals",
+      "repository": "mathlib",
+      "source": "Mathlib/Probability/ProbabilityMassFunction/Integrals.lean",
+      "sha256": "412763e5ad86cc96721b1bbb1bfaccb5fa15919a2d5afb7af9da419cc2290292"
+    },
+    {
+      "module": "Mathlib.Probability.StrongLaw",
+      "repository": "mathlib",
+      "source": "Mathlib/Probability/StrongLaw.lean",
+      "sha256": "3c3768b70c3779bea384592bb548bc06de2d25af315e0a0d59a1742b0807717c"
+    },
+    {
+      "module": "Mathlib.Tactic",
+      "repository": "mathlib",
+      "source": "Mathlib/Tactic.lean",
+      "sha256": "f20038eba7bba63f07a2f854496101226df407e20414e6b8ebf94b14f95e831b"
+    },
+    {
+      "module": "Mathlib.Topology.Instances.ENNReal.Lemmas",
+      "repository": "mathlib",
+      "source": "Mathlib/Topology/Instances/ENNReal/Lemmas.lean",
+      "sha256": "5b078eb5f8aeae72ee8c7348f2cfcc02c36e0ff01e9f72205c2c06187ee04c82"
+    }
+  ],
+  "driver": {
+    "source_id": "src-332d0dbea81d90d7-817e8553aa5fdf95",
+    "lean_argument": "BIN_DIRECTORY"
+  },
+  "controls": "ORIGINAL_DRIVER_REQUIRED",
+  "classification": "PREDECESSOR"
+}

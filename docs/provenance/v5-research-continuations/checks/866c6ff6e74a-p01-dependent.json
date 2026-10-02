@@ -1,0 +1,1059 @@
+{
+  "status": "FRESH_KERNEL_COMPONENTS",
+  "exit_code": 0,
+  "kernel_verified": true,
+  "suite_id": "866c6ff6e74a-p01-dependent",
+  "suite_sha256": "01efc046f1aa4d2b5b8f33f1dae2ca8cadf3288ccd037577afcfab1709ee3ffc",
+  "source_hashes": {
+    "AuditSupport": "f3e08557b57a745bae547dc827755616cd6c6824bf1360441a72789036e1cd96",
+    "InternalPolymorphism": "7cf85525305944e343b50f63e9b593a0fdcab3c89303f2f32cdb37d92c70b1ee",
+    "FiniteBridge": "f75306d1a29cd76385058ca1a819910b1f635a63369d807d484ab6db981a0042",
+    "BoundaryResults": "cf337cad057a4c2cb93f2c0145f8132368867257c2b0bf7ee32f7be70d29d11c",
+    "P01TypeAlgebra": "222b99bb10321cfe4fbd55ea252631fb0824fa43d966995bb7873a3c8b11b188",
+    "P01SNReflection": "017d12cb7f47f1767310f550277043536a6606e520bdd2f406eabcd91480dd86",
+    "P01Candidates": "9b1a18c1f189774d22858ba56bb77aecd5fc7506a08195c94fbb1873158a0e7e",
+    "P01Confluence": "682ad4ce3fda2b69601f267e6c7cfd729d8004fbfdd95c60f12d24fb59bc303e",
+    "EffectsAndDependence": "0e3adde9d907e2c0a28afb5087feb42986e2e1fd880682edd70d4b4214790be2",
+    "NormalisationAndNumerals": "13c3b0ba7aa7e57fd13bf1d61d28ef842755d5f5103ef9598d18cc885f4e2ca2",
+    "P01Omega": "df83be41f01616777a5e53aba4e890161c155ad21d6c8b594d0c6cf7806fdf88",
+    "P01Polynomials": "57bef4972e782bb85bc9f267bd899afdd09f65ebad610b107348db42b2b3b8b8",
+    "P01PER": "ee15654ad70d9c0e9a77d699a0ff53122d1dcde65f610e26555edc589f97c87e",
+    "P01DependentCore": "d69233c44f1406044f649204626c4f58155bcb2dc81ac319cf451c473ab13498",
+    "P01ContextualJ": "e3342d36b3012206cdcf39115d13f14246236f24a122cbd466d6b11bda15d28c",
+    "P01Certificates": "5e457f06ecc1622fd53b1917f383c48ce019887910ce0fcb64d99c7e5a2b35f6",
+    "P01Examples": "7372d4bd7f7c70fb1b4178743ba84c3ba2f072be88c5a0b04a67a53ccf947c82",
+    "P01RecursiveModel": "a53b9b16b5013701ab18692035d140db6d34fd3076dd595837dd8808553274f9",
+    "P01LambdaSyntax": "1a969ade6fc6daf226cde5a9f077bb7f16ef5a396a090728c8468356df555e21",
+    "P01SystemF": "9d06b1180a90048ebe6249e461ed6551fdbf94971a8ba1232b6ffb86e5d45f1a",
+    "P01CurryParametricity": "b29f2917d48adf8462cc272ecffb12e50cb3217b4de360c71f9f13fe75bbeb2a",
+    "P01Translation": "538b51e6c199bc43ef2f32d4ffdc16f52043e277b8ea50b1da93a73aa9b38b4d",
+    "P01ModelWitnesses": "f49f5693dd928e74bb375a3a52a4e8cd0e9792ba0f90b9d543928ab0cf84510f",
+    "P01DependentModel": "f2017f4ff67c81eb2d1cb6d4ed3b7efea3e686567409e9d07531a61f6b6d5e59",
+    "P01DependentSubstitution": "74eec27e534d5b3fe69b0543d343043483288011d7edc85a424cc8458e91a610",
+    "P01DependentFundamental": "82cd316ba5a0c4efbfb7bbc8ce5e69659e33cb7227d1d4effbaddb3d2f1d66aa",
+    "P01DependentControls": "6f1afe90be0a46d00763808013733f068a65b4f0fd34d215fb101f0db313856c",
+    "P01DependentRepresentation": "e7c7bd5d62f361f4f8a283e1fe442341e87f0200f0494cb2553af4da3a0ff737",
+    "DependentContract": "fd09417334025064a1dfd203fb44262c191b581b8ba2147394fdd7becedde350",
+    "ImpredicativeContract": "5b9fb3a1161444f5e6e0a57932abdf0b0f4f681b43deb3fde16ea8dc063a9668",
+    "RepresentationContract": "df41aaae5197391ba7b1079c45b3135e3969c8691c021748df597dd625b74408"
+  },
+  "post_source_hashes": {
+    "AuditSupport": "f3e08557b57a745bae547dc827755616cd6c6824bf1360441a72789036e1cd96",
+    "InternalPolymorphism": "7cf85525305944e343b50f63e9b593a0fdcab3c89303f2f32cdb37d92c70b1ee",
+    "FiniteBridge": "f75306d1a29cd76385058ca1a819910b1f635a63369d807d484ab6db981a0042",
+    "BoundaryResults": "cf337cad057a4c2cb93f2c0145f8132368867257c2b0bf7ee32f7be70d29d11c",
+    "P01TypeAlgebra": "222b99bb10321cfe4fbd55ea252631fb0824fa43d966995bb7873a3c8b11b188",
+    "P01SNReflection": "017d12cb7f47f1767310f550277043536a6606e520bdd2f406eabcd91480dd86",
+    "P01Candidates": "9b1a18c1f189774d22858ba56bb77aecd5fc7506a08195c94fbb1873158a0e7e",
+    "P01Confluence": "682ad4ce3fda2b69601f267e6c7cfd729d8004fbfdd95c60f12d24fb59bc303e",
+    "EffectsAndDependence": "0e3adde9d907e2c0a28afb5087feb42986e2e1fd880682edd70d4b4214790be2",
+    "NormalisationAndNumerals": "13c3b0ba7aa7e57fd13bf1d61d28ef842755d5f5103ef9598d18cc885f4e2ca2",
+    "P01Omega": "df83be41f01616777a5e53aba4e890161c155ad21d6c8b594d0c6cf7806fdf88",
+    "P01Polynomials": "57bef4972e782bb85bc9f267bd899afdd09f65ebad610b107348db42b2b3b8b8",
+    "P01PER": "ee15654ad70d9c0e9a77d699a0ff53122d1dcde65f610e26555edc589f97c87e",
+    "P01DependentCore": "d69233c44f1406044f649204626c4f58155bcb2dc81ac319cf451c473ab13498",
+    "P01ContextualJ": "e3342d36b3012206cdcf39115d13f14246236f24a122cbd466d6b11bda15d28c",
+    "P01Certificates": "5e457f06ecc1622fd53b1917f383c48ce019887910ce0fcb64d99c7e5a2b35f6",
+    "P01Examples": "7372d4bd7f7c70fb1b4178743ba84c3ba2f072be88c5a0b04a67a53ccf947c82",
+    "P01RecursiveModel": "a53b9b16b5013701ab18692035d140db6d34fd3076dd595837dd8808553274f9",
+    "P01LambdaSyntax": "1a969ade6fc6daf226cde5a9f077bb7f16ef5a396a090728c8468356df555e21",
+    "P01SystemF": "9d06b1180a90048ebe6249e461ed6551fdbf94971a8ba1232b6ffb86e5d45f1a",
+    "P01CurryParametricity": "b29f2917d48adf8462cc272ecffb12e50cb3217b4de360c71f9f13fe75bbeb2a",
+    "P01Translation": "538b51e6c199bc43ef2f32d4ffdc16f52043e277b8ea50b1da93a73aa9b38b4d",
+    "P01ModelWitnesses": "f49f5693dd928e74bb375a3a52a4e8cd0e9792ba0f90b9d543928ab0cf84510f",
+    "P01DependentModel": "f2017f4ff67c81eb2d1cb6d4ed3b7efea3e686567409e9d07531a61f6b6d5e59",
+    "P01DependentSubstitution": "74eec27e534d5b3fe69b0543d343043483288011d7edc85a424cc8458e91a610",
+    "P01DependentFundamental": "82cd316ba5a0c4efbfb7bbc8ce5e69659e33cb7227d1d4effbaddb3d2f1d66aa",
+    "P01DependentControls": "6f1afe90be0a46d00763808013733f068a65b4f0fd34d215fb101f0db313856c",
+    "P01DependentRepresentation": "e7c7bd5d62f361f4f8a283e1fe442341e87f0200f0494cb2553af4da3a0ff737",
+    "DependentContract": "fd09417334025064a1dfd203fb44262c191b581b8ba2147394fdd7becedde350",
+    "ImpredicativeContract": "5b9fb3a1161444f5e6e0a57932abdf0b0f4f681b43deb3fde16ea8dc063a9668",
+    "RepresentationContract": "df41aaae5197391ba7b1079c45b3135e3969c8691c021748df597dd625b74408"
+  },
+  "compiler_sha256": "92c3d35b5bfaa5e0fea413a775d504cf46cd95e1345df61c2274f76779e7e023",
+  "pins": {
+    "lean_version": "4.19.0",
+    "lean_binary_sha256": "92c3d35b5bfaa5e0fea413a775d504cf46cd95e1345df61c2274f76779e7e023",
+    "packages": [
+      {
+        "name": "mathlib",
+        "revision": "c44e0c8ee63ca166450922a373c7409c5d26b00b"
+      },
+      {
+        "name": "plausible",
+        "revision": "77e08eddc486491d7b9e470926b3dbe50319451a"
+      },
+      {
+        "name": "LeanSearchClient",
+        "revision": "25078369972d295301f5a1e53c3e5850cf6d9d4c"
+      },
+      {
+        "name": "importGraph",
+        "revision": "e6a9f0f5ee3ccf7443a0070f92b62f8db12ae82b"
+      },
+      {
+        "name": "proofwidgets",
+        "revision": "c4919189477c3221e6a204008998b0d724f49904"
+      },
+      {
+        "name": "aesop",
+        "revision": "5d50b08dedd7d69b3d9b3176e0d58a23af228884"
+      },
+      {
+        "name": "Qq",
+        "revision": "fa4f7f15d97591a9cf3aa7724ba371c7fc6dda02"
+      },
+      {
+        "name": "batteries",
+        "revision": "f5d04a9c4973d401c8c92500711518f7c656f034"
+      },
+      {
+        "name": "Cli",
+        "revision": "02dbd02bc00ec4916e99b04b2245b30200e200d0"
+      }
+    ]
+  },
+  "modules": [
+    {
+      "module": "AuditSupport",
+      "source_sha256": "f3e08557b57a745bae547dc827755616cd6c6824bf1360441a72789036e1cd96",
+      "object_sha256": "ae1e690ae6db0a1a70c3abbab83e4d3823493d407ed8e3a0a01e33a1e88ffc04",
+      "transitive_source_fingerprint": "c6886b3ed99d0ed50587fd1e37a84f82eeb6ec1f31bb47e0d4bde12264ccd619",
+      "status": "FRESH_COMPILE",
+      "exit_code": 0
+    },
+    {
+      "module": "InternalPolymorphism",
+      "source_sha256": "7cf85525305944e343b50f63e9b593a0fdcab3c89303f2f32cdb37d92c70b1ee",
+      "object_sha256": "8bc4fd26a84db26001e504602a5ed92423e179b3c23e2234e6f5674ae50c6634",
+      "transitive_source_fingerprint": "a3deec8fad36f8aa86a29970636562ecc45d695fb86474829a9afe2277a17fdd",
+      "status": "FRESH_COMPILE",
+      "exit_code": 0
+    },
+    {
+      "module": "FiniteBridge",
+      "source_sha256": "f75306d1a29cd76385058ca1a819910b1f635a63369d807d484ab6db981a0042",
+      "object_sha256": "775a2e2415b52757d02c3c46da80bc5f2116ccf3abc8d58950bb69c57bf53de3",
+      "transitive_source_fingerprint": "f0143d1e1a68725c32234b85c62af36c99a5e349f56ecd2707cec1ba5b49e467",
+      "status": "FRESH_COMPILE",
+      "exit_code": 0
+    },
+    {
+      "module": "BoundaryResults",
+      "source_sha256": "cf337cad057a4c2cb93f2c0145f8132368867257c2b0bf7ee32f7be70d29d11c",
+      "object_sha256": "81eb5b3e6ca35865bf0f9bee888d4b6a34964f9c7c8cbb19ce41157685b4c7b5",
+      "transitive_source_fingerprint": "5c68da52e2b59f9f9434cd6ac6c8e8715dcc0a76bcf65bd800a51167be62f740",
+      "status": "FRESH_COMPILE",
+      "exit_code": 0
+    },
+    {
+      "module": "P01TypeAlgebra",
+      "source_sha256": "222b99bb10321cfe4fbd55ea252631fb0824fa43d966995bb7873a3c8b11b188",
+      "object_sha256": "4a0b9935e11876311987434e98f0b6534f0ad4bf9875263b89bf08580eb84540",
+      "transitive_source_fingerprint": "b5ae62c3fe8307da0c844ea9b00794f65b969cc4c91891318dde786ed8b404ba",
+      "status": "FRESH_COMPILE",
+      "exit_code": 0
+    },
+    {
+      "module": "P01SNReflection",
+      "source_sha256": "017d12cb7f47f1767310f550277043536a6606e520bdd2f406eabcd91480dd86",
+      "object_sha256": "09298dfc0f331cfea152b4b783f05896185aaff99daa0247e2f9b8130f82a881",
+      "transitive_source_fingerprint": "348e27d87d9d30f84d36ba0bccc65432017b7c97f047164a4398295e40520a95",
+      "status": "FRESH_COMPILE",
+      "exit_code": 0
+    },
+    {
+      "module": "P01Candidates",
+      "source_sha256": "9b1a18c1f189774d22858ba56bb77aecd5fc7506a08195c94fbb1873158a0e7e",
+      "object_sha256": "562b7993bfb83a7bbd278ba66c60f1e17354cb7fa66da96a9cdb8cfca9739005",
+      "transitive_source_fingerprint": "60bb2eddf9c15ff92cdc6c6d16408e6e5889c2d7453f586ae7621d63a03b186d",
+      "status": "FRESH_COMPILE",
+      "exit_code": 0
+    },
+    {
+      "module": "P01Confluence",
+      "source_sha256": "682ad4ce3fda2b69601f267e6c7cfd729d8004fbfdd95c60f12d24fb59bc303e",
+      "object_sha256": "6c80ceb2e9b07bef179858974bde1d712591f5735a8320b1bbf1752325e7b6ba",
+      "transitive_source_fingerprint": "11726459a0ffa3b505fa4bac0c84e9e99a6127d7b341887493e69a24a0de366a",
+      "status": "FRESH_COMPILE",
+      "exit_code": 0
+    },
+    {
+      "module": "EffectsAndDependence",
+      "source_sha256": "0e3adde9d907e2c0a28afb5087feb42986e2e1fd880682edd70d4b4214790be2",
+      "object_sha256": "6d513da0bf81abf8a72726cd941e2f2bbdbf5af696f466513a6e8844057c9e99",
+      "transitive_source_fingerprint": "4a62caa39b0a8f9885037255f62bda6dff370d124b3f83a8d082474c2ba41830",
+      "status": "FRESH_COMPILE",
+      "exit_code": 0
+    },
+    {
+      "module": "NormalisationAndNumerals",
+      "source_sha256": "13c3b0ba7aa7e57fd13bf1d61d28ef842755d5f5103ef9598d18cc885f4e2ca2",
+      "object_sha256": "0ce90d9138da7b172b0480cd7d4734e5eb5558e8bc8e8459ee530d432bc77c9a",
+      "transitive_source_fingerprint": "4c343864f919e30e539aba6981d192b2103940c864613531014b554fa046dea3",
+      "status": "FRESH_COMPILE",
+      "exit_code": 0
+    },
+    {
+      "module": "P01Omega",
+      "source_sha256": "df83be41f01616777a5e53aba4e890161c155ad21d6c8b594d0c6cf7806fdf88",
+      "object_sha256": "bc015739c015f782ef7ad7835e8e652a4f7299e7fe052859697694cbf3c29482",
+      "transitive_source_fingerprint": "472d9b9eb81b66ed3e750bedcdb5d94bcd15f1365ab73f3e208beeed1046ccf0",
+      "status": "FRESH_COMPILE",
+      "exit_code": 0
+    },
+    {
+      "module": "P01Polynomials",
+      "source_sha256": "57bef4972e782bb85bc9f267bd899afdd09f65ebad610b107348db42b2b3b8b8",
+      "object_sha256": "b3a0c2ffe42cd2ea3b9a166e23b1d70c983d73e3b8f29b1ff59d0a48f4d9b8a0",
+      "transitive_source_fingerprint": "a43917d09a05235aa927f6c375123ca1c46637be77e76e512ed9f950353b890f",
+      "status": "FRESH_COMPILE",
+      "exit_code": 0
+    },
+    {
+      "module": "P01PER",
+      "source_sha256": "ee15654ad70d9c0e9a77d699a0ff53122d1dcde65f610e26555edc589f97c87e",
+      "object_sha256": "a90097ab348c4761f6e2ce5b940d581e02cfce83419e0d15bcad8f1c1d1fceee",
+      "transitive_source_fingerprint": "5ad4685a0c9e1c3af186d42f1c218a3590a67390b01153093383e8ed8d0a5a46",
+      "status": "FRESH_COMPILE",
+      "exit_code": 0
+    },
+    {
+      "module": "P01DependentCore",
+      "source_sha256": "d69233c44f1406044f649204626c4f58155bcb2dc81ac319cf451c473ab13498",
+      "object_sha256": "624eab0ba77fb321c91669e5a619625dee80f2022137a05d14bf5af0149e7ab3",
+      "transitive_source_fingerprint": "e39a72f55af5c4e71ba242e6c3460bd9e40f86ff322ef52fe416de7598e8e7e5",
+      "status": "FRESH_COMPILE",
+      "exit_code": 0
+    },
+    {
+      "module": "P01ContextualJ",
+      "source_sha256": "e3342d36b3012206cdcf39115d13f14246236f24a122cbd466d6b11bda15d28c",
+      "object_sha256": "a1ed119f34e0f728f7b2e1dca2bd7caf39f9a4025d04a37da9db98d9db50b860",
+      "transitive_source_fingerprint": "2a00ed77ed42d6c99c3643882ee61836c9b6b890f8e5c161d547ec60e05fff12",
+      "status": "FRESH_COMPILE",
+      "exit_code": 0
+    },
+    {
+      "module": "P01Certificates",
+      "source_sha256": "5e457f06ecc1622fd53b1917f383c48ce019887910ce0fcb64d99c7e5a2b35f6",
+      "object_sha256": "4daea8a2d9e81043953c433bd77ed6c7248e2a4469ac33a10429948aa271e29d",
+      "transitive_source_fingerprint": "d469d83bd5ba11b17ba80eef12fcb17ff64bb34b4ffd9d3672be7bf7242347cd",
+      "status": "FRESH_COMPILE",
+      "exit_code": 0
+    },
+    {
+      "module": "P01Examples",
+      "source_sha256": "7372d4bd7f7c70fb1b4178743ba84c3ba2f072be88c5a0b04a67a53ccf947c82",
+      "object_sha256": "41ce27a619b617e1305384946958c24a89692071e85661b64ca0de6446e5d900",
+      "transitive_source_fingerprint": "712102958adf7dfe24f74311d5c9c284dff94f35aafaf89b6b40e16d6654c581",
+      "status": "FRESH_COMPILE",
+      "exit_code": 0
+    },
+    {
+      "module": "P01RecursiveModel",
+      "source_sha256": "a53b9b16b5013701ab18692035d140db6d34fd3076dd595837dd8808553274f9",
+      "object_sha256": "745265a3cf70dac86a34a0f85e3361c868bb2ba4e6d93f348e8fc274e51829d5",
+      "transitive_source_fingerprint": "3761a9ad58d8e365cc2a288a2afb2945933369e40956d615da1bb3e414249878",
+      "status": "FRESH_COMPILE",
+      "exit_code": 0
+    },
+    {
+      "module": "P01LambdaSyntax",
+      "source_sha256": "1a969ade6fc6daf226cde5a9f077bb7f16ef5a396a090728c8468356df555e21",
+      "object_sha256": "f65577bd52bf511700cbafeee4e00103cd3f5ca4e4f0a641c590bab47788816f",
+      "transitive_source_fingerprint": "dca28e4f361ad8a3b3584a52536b030d466f0ed3990fc6f4b6dcd0f8469f4960",
+      "status": "FRESH_COMPILE",
+      "exit_code": 0
+    },
+    {
+      "module": "P01SystemF",
+      "source_sha256": "9d06b1180a90048ebe6249e461ed6551fdbf94971a8ba1232b6ffb86e5d45f1a",
+      "object_sha256": "2e89db84bf64e1eb92e9bdb8c829f0be5d27a6f7220cdfa96264989d1f62cff7",
+      "transitive_source_fingerprint": "5cdca7d83099c698f049c222b8dd3685b910c83e581ef786e039ef98556ceeaa",
+      "status": "FRESH_COMPILE",
+      "exit_code": 0
+    },
+    {
+      "module": "P01CurryParametricity",
+      "source_sha256": "b29f2917d48adf8462cc272ecffb12e50cb3217b4de360c71f9f13fe75bbeb2a",
+      "object_sha256": "60e298e19060e2c49e99c11993e1cf34f5c37f783bc330d74bb3677e23ac7d00",
+      "transitive_source_fingerprint": "669b25eebfef1b4c01e0da79034cc378454a1812261521298ddfe537b7fdebbc",
+      "status": "FRESH_COMPILE",
+      "exit_code": 0
+    },
+    {
+      "module": "P01Translation",
+      "source_sha256": "538b51e6c199bc43ef2f32d4ffdc16f52043e277b8ea50b1da93a73aa9b38b4d",
+      "object_sha256": "bbf0285d71e64d51e683968dab2792924e3260c30688c59635ccb1f684bca7a0",
+      "transitive_source_fingerprint": "426936ac88f5b0fb6c2a11caf0b4b2ab60ac0ef9b7bf58e1f4063d2650e92581",
+      "status": "FRESH_COMPILE",
+      "exit_code": 0
+    },
+    {
+      "module": "P01ModelWitnesses",
+      "source_sha256": "f49f5693dd928e74bb375a3a52a4e8cd0e9792ba0f90b9d543928ab0cf84510f",
+      "object_sha256": "e58990420299483ea560e60cad8a8d43da8cc3224fd26e6429096aea9e647bd5",
+      "transitive_source_fingerprint": "86460a345a73647ebdf408f19c8d05228d31c78134ba95868a157aab2d6e60e2",
+      "status": "FRESH_COMPILE",
+      "exit_code": 0
+    },
+    {
+      "module": "P01DependentModel",
+      "source_sha256": "f2017f4ff67c81eb2d1cb6d4ed3b7efea3e686567409e9d07531a61f6b6d5e59",
+      "object_sha256": "4b3e4580902f2e17c2aa941beba498556b548089ee190a5ec424da45e8bce5d4",
+      "transitive_source_fingerprint": "d3fa11702be3d323cf9ad83dec163e06e55bc4a2520a7c57e12efbca09cb5434",
+      "status": "FRESH_COMPILE",
+      "exit_code": 0
+    },
+    {
+      "module": "P01DependentSubstitution",
+      "source_sha256": "74eec27e534d5b3fe69b0543d343043483288011d7edc85a424cc8458e91a610",
+      "object_sha256": "0e292ed6bacffb6d099272c48b354722ab540a0fbd724c8c3898cde9114a26f6",
+      "transitive_source_fingerprint": "1522923a4db61efbdffd98ead75d091c2d4970074c6eec620e259c0f7501c391",
+      "status": "FRESH_COMPILE",
+      "exit_code": 0
+    },
+    {
+      "module": "P01DependentFundamental",
+      "source_sha256": "82cd316ba5a0c4efbfb7bbc8ce5e69659e33cb7227d1d4effbaddb3d2f1d66aa",
+      "object_sha256": "d382e0923feb63c701b0c81e18fef67391720d2125b382043f52ed9d6bd5e664",
+      "transitive_source_fingerprint": "129e275019b00d26d69fa83d1fb7525de5a517ca05554dcab263d18d0299c445",
+      "status": "FRESH_COMPILE",
+      "exit_code": 0
+    },
+    {
+      "module": "P01DependentControls",
+      "source_sha256": "6f1afe90be0a46d00763808013733f068a65b4f0fd34d215fb101f0db313856c",
+      "object_sha256": "2d774a6e9d8d683bd41210ce82cb16248f97a0aeb133b4c2d2478d6b1861e2d4",
+      "transitive_source_fingerprint": "b94c602dbc19db7869aa70b12a9758f7806ddd0fa40e3ce1314bc29f64e173c7",
+      "status": "FRESH_COMPILE",
+      "exit_code": 0
+    },
+    {
+      "module": "P01DependentRepresentation",
+      "source_sha256": "e7c7bd5d62f361f4f8a283e1fe442341e87f0200f0494cb2553af4da3a0ff737",
+      "object_sha256": "eb9e44bd109d1315602509583d020875f55b9122cf0604160e9f23be2587745b",
+      "transitive_source_fingerprint": "4f4762645ebe2ee83f0c6f56314fd683107ef9aa5311fe6a672d8b852974c007",
+      "status": "FRESH_COMPILE",
+      "exit_code": 0
+    },
+    {
+      "module": "DependentContract",
+      "source_sha256": "fd09417334025064a1dfd203fb44262c191b581b8ba2147394fdd7becedde350",
+      "object_sha256": "c7925c065b634f54de352d1869e8ac3e997c7ddddc2cae4df0882e9af248ee9e",
+      "transitive_source_fingerprint": "60c375c1d1ea614e8085b235d3c0154c8bd8869e2159841f0948ae67d57cdcaf",
+      "status": "FRESH_COMPILE",
+      "exit_code": 0
+    },
+    {
+      "module": "ImpredicativeContract",
+      "source_sha256": "5b9fb3a1161444f5e6e0a57932abdf0b0f4f681b43deb3fde16ea8dc063a9668",
+      "object_sha256": "72cbe84c400daa2648646dab68863aa5fd6c176bd423a7eac6e56d59cae66b48",
+      "transitive_source_fingerprint": "8783428b4009de9a3ca5e2fb8b528bf7bdf653efe4e9951d049aaf6cb8280dcd",
+      "status": "FRESH_COMPILE",
+      "exit_code": 0
+    },
+    {
+      "module": "RepresentationContract",
+      "source_sha256": "df41aaae5197391ba7b1079c45b3135e3969c8691c021748df597dd625b74408",
+      "object_sha256": "61378f17b1a67491ba33490ec6e7a0fe8e2cc5d68ea636f3db256e92bb03203c",
+      "transitive_source_fingerprint": "c797f3aba42b0bce10240ac5e7b7dd52a85a7df8b1a97689cd37455a6862a932",
+      "status": "FRESH_COMPILE",
+      "exit_code": 0
+    }
+  ],
+  "readbacks": {
+    "P01DF.IndexRelated": {
+      "type_sha256": "f74dd1f535324119f659cfef5fc1abc8dad7b88b43bd0afafc4b0e1565689124",
+      "axioms": []
+    },
+    "P01DF.index_refl": {
+      "type_sha256": "93960dcfdf777594740fb29ce8ae432cbde909b0b39ca7ca304f06748bfef316",
+      "axioms": []
+    },
+    "P01DF.index_cons": {
+      "type_sha256": "491b6a51a6c5e53ffc42d11554f5c5bf6d46d8e53510979955cee1e11fd323b0",
+      "axioms": []
+    },
+    "P01DF.eval_index_related": {
+      "type_sha256": "b2b20b28bd80c0c93930e8deb20a6e41a6f9836ddd26550bba0bf15dfcb46ac2",
+      "axioms": []
+    },
+    "P01DF.rawModel": {
+      "type_sha256": "841f6a0b2e42309a5c8fe15e9ba27960eaf490e29528ef9f564c1ccee4fc671d",
+      "axioms": []
+    },
+    "P01DF.idModel": {
+      "type_sha256": "8899d55e02ff314ad143bbbeb5ff89a8546da88f9e3b48d484f8815879520efe",
+      "axioms": []
+    },
+    "P01DF.idModel_transport": {
+      "type_sha256": "ce43a82cfa893449fc77c7096c76d4c9832d4449612333702914209457c7296c",
+      "axioms": [
+        "Quot.sound",
+        "propext"
+      ]
+    },
+    "P01DF.piModel": {
+      "type_sha256": "5cd1c408cae39519d9569b477cb00eaa4c687546b56f02783e919acc0ae8d40e",
+      "axioms": []
+    },
+    "P01DF.sigmaModel": {
+      "type_sha256": "f40c816a5fc43d9f14ffa8a088b804f22d8cf878fe88c9b53fa743118daa6d49",
+      "axioms": [
+        "propext"
+      ]
+    },
+    "P01DF.IndexFamily": {
+      "type_sha256": "3cee804c28b89f35a0e318087edb2f7a2ac39606e098924e6b6c7840880e8f3d",
+      "axioms": []
+    },
+    "P01DF.Ty": {
+      "type_sha256": "d59808a0aa8dfec0a5ec6bd8ee8746d1edaf03e5a068e5a96e96e9c988f34e3f",
+      "axioms": []
+    },
+    "P01DF.interpret": {
+      "type_sha256": "b76779c6f05746f25b8765c4bd39939b198ea8ca02760aa8036eb7dfbecbcb76",
+      "axioms": [
+        "Quot.sound",
+        "propext"
+      ]
+    },
+    "P01DF.interpret_index_transport": {
+      "type_sha256": "afabb29a56954871959a71325a0370f65a7d7675f6c21c11f241700e119a231d",
+      "axioms": [
+        "Quot.sound",
+        "propext"
+      ]
+    },
+    "P01DF.dependent_identity_extension": {
+      "type_sha256": "486d8074053c252a76cea3ef4d4462b536c4cb4270b7dee1f94762143bd83ed0",
+      "axioms": [
+        "Quot.sound",
+        "propext"
+      ]
+    },
+    "P01DF.dependent_endpoint_restriction": {
+      "type_sha256": "99d118b754c97c43a8a2cef476349a7e1e05c91d1cf11d4b2ab74fe941afcbe3",
+      "axioms": [
+        "Quot.sound",
+        "propext"
+      ]
+    },
+    "P01DF.substIndex": {
+      "type_sha256": "b0100209dfb736ed42901ee724d982841f53c42b821f6237b450a9b8cbc8737c",
+      "axioms": []
+    },
+    "P01DF.subIndexEnv": {
+      "type_sha256": "3c2f42c4b61bf7534bac27306ab37e3a3254ef8d0d113e7720def6e9f94de9e5",
+      "axioms": []
+    },
+    "P01DF.subIndexEnv_lift": {
+      "type_sha256": "92a35aef8c17ff6b8653f787c1fdb607cba10933b89e182e08bffe254d1cc9e2",
+      "axioms": [
+        "Quot.sound",
+        "propext"
+      ]
+    },
+    "P01DF.interpret_index_substitution": {
+      "type_sha256": "6192338966c939a2461c6ef8284993ef2dfc4c438af5698d482b0cded152356a",
+      "axioms": [
+        "Quot.sound",
+        "propext"
+      ]
+    },
+    "P01DF.instantiate": {
+      "type_sha256": "b77f400d3553f608e0aa5b980bad80348aa097cc3d5b2de6562dbb55a01f602c",
+      "axioms": []
+    },
+    "P01DF.interpret_instantiate": {
+      "type_sha256": "f2e53180a607a8046f24f6a0545d7b1d8545c2943e56d1a6a278b12ac1b436b8",
+      "axioms": [
+        "Quot.sound",
+        "propext"
+      ]
+    },
+    "P01DF.embedFinite": {
+      "type_sha256": "24af47dd88b57c722cc078a8c9530e879fc342e5a8a81e92f2616cce8f2c987f",
+      "axioms": []
+    },
+    "P01DF.interpret_embedFinite": {
+      "type_sha256": "ee6a860bd8c7bd839cc3a0aecb280320ed8cf5555f96de5c4f10ef17ca1406e7",
+      "axioms": [
+        "Quot.sound",
+        "propext"
+      ]
+    },
+    "P01DF.renameType": {
+      "type_sha256": "9db81f44f379c2cde67a5536263625340bd198d6d04e68d25f530141f6d71742",
+      "axioms": []
+    },
+    "P01DF.piModel_congr": {
+      "type_sha256": "fc5eaf0dfc0b3a24104c303eb8dd24dc5e1106f0d3e85bc6ad99a47b70490836",
+      "axioms": [
+        "Quot.sound"
+      ]
+    },
+    "P01DF.sigmaModel_congr": {
+      "type_sha256": "b4e798e45e2118e0a63f7053934f6e42e8357a8af438c979ab6b9f1f56198bb5",
+      "axioms": [
+        "Quot.sound",
+        "propext"
+      ]
+    },
+    "P01DF.piModel_rename": {
+      "type_sha256": "1df8fd5a047b70259b75ce0dd51bd732314454b24e52cef17bbbc155faa6c512",
+      "axioms": []
+    },
+    "P01DF.sigmaModel_rename": {
+      "type_sha256": "1554d006bc752990fb09b325ed27690a3283406f5d3e2f63acb44aebe1b11bb9",
+      "axioms": [
+        "propext"
+      ]
+    },
+    "P01DF.interpret_type_rename": {
+      "type_sha256": "2cc0e641128cd0591e462d2029380ddeb40b7646ae810ab1b65bd0892a5c1df7",
+      "axioms": [
+        "Quot.sound",
+        "propext"
+      ]
+    },
+    "P01DF.liftTypes": {
+      "type_sha256": "8c30f8c70e2a59813507205ef301bbac2b0cb52a780948c1300043233c1f2fff",
+      "axioms": []
+    },
+    "P01DF.liftIndices": {
+      "type_sha256": "38742b3461eae2e1f0e3ed2714e15b3225fecf759e532e932a58cba9f504e4e2",
+      "axioms": []
+    },
+    "P01DF.substType": {
+      "type_sha256": "27776928d43b8b9ba877649b96fb374a8a119a7aacf4091cfcc2b03778ea009e",
+      "axioms": []
+    },
+    "P01DF.interpret_liftTypes": {
+      "type_sha256": "c0f0cef069b240fa63b94a3f91828ea0a68dc99c7e43719f0e235a25b0476eed",
+      "axioms": [
+        "Quot.sound",
+        "propext"
+      ]
+    },
+    "P01DF.interpret_liftIndices": {
+      "type_sha256": "55a680c28bedc0ef90cc77f84991f19f852ad7f6d1a79ea840802e8e0d7f3ce9",
+      "axioms": [
+        "Quot.sound",
+        "propext"
+      ]
+    },
+    "P01DF.piModel_substitute": {
+      "type_sha256": "a525b403c07c43b2fdbaa93c6c3ec86a0ab5de817d457c16d6f4eff8425049a1",
+      "axioms": [
+        "Quot.sound",
+        "propext"
+      ]
+    },
+    "P01DF.sigmaModel_substitute": {
+      "type_sha256": "b100a151213e67d7f12ca1c92d7363f6feae724e5de226cc06df707ffc5c7fa5",
+      "axioms": [
+        "Quot.sound",
+        "propext"
+      ]
+    },
+    "P01DF.interpret_type_substitution": {
+      "type_sha256": "f31e2c66fcb7c23ea631848b72a135f9c566c29f6262dc50c5897dc3a07a99ee",
+      "axioms": [
+        "Quot.sound",
+        "propext"
+      ]
+    },
+    "P01DF.instantiateType": {
+      "type_sha256": "b0b4c95dcc1923ec584829e0f2a663561e75f0bc3ff9076f1744b06ce44583b3",
+      "axioms": []
+    },
+    "P01DF.interpret_type_instantiate": {
+      "type_sha256": "53e23d3d0782ba834a5fdc67dd6345149a3b9017245897825113b6ecc9e9d644",
+      "axioms": [
+        "Quot.sound",
+        "propext"
+      ]
+    },
+    "P01DF.type_instantiate_rel": {
+      "type_sha256": "bb5cc883e9d065a10514604f6401a341bcdb1e618efb96d64a5d04e29eb5c05f",
+      "axioms": [
+        "Quot.sound",
+        "propext"
+      ]
+    },
+    "P01DF.type_instantiate_obj": {
+      "type_sha256": "f4f4bc5ddcf52992307a6d3fe51be34f0b0f22bbf759b24164a1d37fbd815573",
+      "axioms": [
+        "Quot.sound",
+        "propext"
+      ]
+    },
+    "P01DF.PolyConv": {
+      "type_sha256": "186b5e0661681e996da29f32d4162d9093622375f061fcba90202d221b9abe72",
+      "axioms": []
+    },
+    "P01DF.polyConv_sound": {
+      "type_sha256": "2b13cdb3abdbaf9d27bb8e23c2c57a6cb6beb60f0cb85e094c016a40c4bcc8a2",
+      "axioms": []
+    },
+    "P01DF.motiveAt": {
+      "type_sha256": "846d5347487264f9dfbf0708e988bc1ef80468a510b2f0ab40983044ef076d62",
+      "axioms": []
+    },
+    "P01DF.interpret_motiveAt": {
+      "type_sha256": "f6e58ddd225d9e60f5ab9444c8bdd42376c562bb9907e35b3ea9257fbd7603a2",
+      "axioms": [
+        "Quot.sound",
+        "propext"
+      ]
+    },
+    "P01DF.Has": {
+      "type_sha256": "5fa99e5f9f767b97dc5aa27a46bee2ac97bafa44e3418da91c72758659dce22e",
+      "axioms": [
+        "Quot.sound",
+        "propext"
+      ]
+    },
+    "P01DF.fundamental": {
+      "type_sha256": "447a76ce01485e747f66edbdd0a139396fd2a71f630b8c052d8493b4d4b4b541",
+      "axioms": [
+        "Quot.sound",
+        "propext"
+      ]
+    },
+    "P01DF.unary_soundness": {
+      "type_sha256": "6ddfa261a0b4f7b9665909d8e0042ec963568a609dce69041079dd146cbd337e",
+      "axioms": [
+        "Quot.sound",
+        "propext"
+      ]
+    },
+    "P01DF.substitution_fundamental": {
+      "type_sha256": "6f552386277db2176b4999d55534f8e8c4363fcdbfa7f71a910a3da081be1482",
+      "axioms": [
+        "Quot.sound",
+        "propext"
+      ]
+    },
+    "P01DF.type_substitution_fundamental": {
+      "type_sha256": "8179de7aa4abd823aa1b08b81148fef42b503049837c0daa61fa545cd3eee4b9",
+      "axioms": [
+        "Quot.sound",
+        "propext"
+      ]
+    },
+    "P01DF.dependent_all_fundamental": {
+      "type_sha256": "097d6a958dbf93f9bc3b23ec2189618f517faa63c29d0adaa3ca6076bcd21577",
+      "axioms": [
+        "Quot.sound",
+        "propext"
+      ]
+    },
+    "P01DF.dependent_all_self_instantiation": {
+      "type_sha256": "f6015de98bb62e03928a4572c8d7194a1d3ff5d7fb736c7dab18a536698cc15c",
+      "axioms": [
+        "Quot.sound",
+        "propext"
+      ]
+    },
+    "P01DF.skk": {
+      "type_sha256": "0d86d8295c793af088225c91caccfc46a8668e8414c01c57a0c8dc5ed2cdfe33",
+      "axioms": []
+    },
+    "P01DF.emptyIndices": {
+      "type_sha256": "c1a3208febc04b14c4f24453fdf0da0f3f97ca8d4c5a129e273b6c814c0515ea",
+      "axioms": []
+    },
+    "P01DF.anchoredIdentity": {
+      "type_sha256": "63e761f3dca4449c8a291294c50079f8ec296547f0e0a2e050c2c30784647843",
+      "axioms": []
+    },
+    "P01DF.anchored_identity_inhabited": {
+      "type_sha256": "67ed82a3b1e7f1f32e14d8d4ee14d11caf4ad4fb77715c820855c9ee3c66d0ea",
+      "axioms": [
+        "Quot.sound",
+        "propext"
+      ]
+    },
+    "P01DF.anchored_identity_empty": {
+      "type_sha256": "62447e1bc214ab55a9cc7421a9ee85dd4940305a56cbfc163413d7c6ba76aaed",
+      "axioms": [
+        "Classical.choice",
+        "Quot.sound",
+        "propext"
+      ]
+    },
+    "P01DF.nonconstant_fibres": {
+      "type_sha256": "482a3da2f3520726612f784f17beffbf4cbf63c52a575dafeb57375dc964b119",
+      "axioms": [
+        "Classical.choice",
+        "Quot.sound",
+        "propext"
+      ]
+    },
+    "P01DF.heterogeneous_index_transport_fails": {
+      "type_sha256": "b95f6050aaba0bcf3108948ec1bc405870fcfd01e46d629a4ae690ac02879a18",
+      "axioms": [
+        "Classical.choice",
+        "Quot.sound",
+        "propext"
+      ]
+    },
+    "P01DF.totalPER": {
+      "type_sha256": "f1168e1491dfe6ebb41c3251b0b934f7d5db6910f097cf16af78eaa30acb1658",
+      "axioms": []
+    },
+    "P01DF.inspectedFibre": {
+      "type_sha256": "3c740f1a388b5a5d5d3a3c2c08af958e7db031a7e400bf1201ec5cf57dd9790d",
+      "axioms": []
+    },
+    "P01DF.naivePiRel": {
+      "type_sha256": "574275caf62ab4949bf6add35291e2e3b6fe855e11eb4b4511b11e7d4bf5f046",
+      "axioms": []
+    },
+    "P01DF.omitted_coherence_breaks_pi_symmetry": {
+      "type_sha256": "a08d2a554fe6cca3c8209f6bbf1598dd651ae041c2ab034d60e1c59759ac8253",
+      "axioms": [
+        "Classical.choice",
+        "Quot.sound",
+        "propext"
+      ]
+    },
+    "P01DF.dependentReflType": {
+      "type_sha256": "29875e0d22087e9dbcf8b62c6e55f7d44be3c7cc986cce3d49486faa3af6fe29",
+      "axioms": []
+    },
+    "P01DF.dependent_reflexivity_typed": {
+      "type_sha256": "4dd428769dd7cc21bfde78795f07bf1caf3b1249f93c8dc605981820b78ad488",
+      "axioms": [
+        "Quot.sound",
+        "propext"
+      ]
+    },
+    "P01DF.dependent_reflexivity_nonempty": {
+      "type_sha256": "49f05ed0578faf5eb93baabd13426c92c69a09c70dc1f8c02bb63393211bf2d0",
+      "axioms": [
+        "Quot.sound",
+        "propext"
+      ]
+    },
+    "P01DF.dependent_pair_typed": {
+      "type_sha256": "abb2495055c99960f276b04acbc1fe32abd70159cdee5b7fbb7828c19602f3b2",
+      "axioms": [
+        "Quot.sound",
+        "propext"
+      ]
+    },
+    "P01DF.dependent_pair_nonempty": {
+      "type_sha256": "0758bbc6a327847b1ac8fd4c1fc6728f9c4c90cf8af06a5c46d71730b1309977",
+      "axioms": [
+        "Quot.sound",
+        "propext"
+      ]
+    },
+    "P01DF.dependent_pair_projection_typed": {
+      "type_sha256": "5cf3def5ebed275197cd8b4a9fb44dc3602c1510fb7d774b2da952fc9a8de4a5",
+      "axioms": [
+        "Quot.sound",
+        "propext"
+      ]
+    },
+    "P01DF.convertedProof": {
+      "type_sha256": "4dad883fcf448f2c4914a7476cc0381a38f5a196cce3b9b53b7ccd6d40e350c2",
+      "axioms": []
+    },
+    "P01DF.converted_identity_proof_typed": {
+      "type_sha256": "5459c2ca89aeaf729be6970e498642dc37438fd8bfdaf39110d39a90a1d90a75",
+      "axioms": [
+        "Quot.sound",
+        "propext"
+      ]
+    },
+    "P01DF.proof_dependent_j_typed": {
+      "type_sha256": "506d0e84a4540a4953f5826197f8142614eefa3d372b35234f82072f30e2a2dc",
+      "axioms": [
+        "Quot.sound",
+        "propext"
+      ]
+    },
+    "P01DF.proof_dependent_j_nonempty": {
+      "type_sha256": "c400c69cd3dc1c88e75eff66f185b9c3b4cfe3b631f34174c4d60728ed230bb6",
+      "axioms": [
+        "Quot.sound",
+        "propext"
+      ]
+    },
+    "P01DF.two_sort_substitution_control": {
+      "type_sha256": "7c7bfe04c08930ff82c9dc3ad640137c2d2b9c4f52fc1165c099705ef54a2573",
+      "axioms": []
+    },
+    "P01DF.dependentPolyBody": {
+      "type_sha256": "14be9e4bdd9e6e3e49945bf04dca94de3972dbef6af067b583d71442354ea461",
+      "axioms": []
+    },
+    "P01DF.dependentPolyType": {
+      "type_sha256": "aa3e199377cb8138ca2469fffd31e88101f82b737650887f9b27655e36428272",
+      "axioms": []
+    },
+    "P01DF.dependent_polymorphic_typed": {
+      "type_sha256": "0fe20e33312075612da1a4bc2e9b8da2b3679d8c93c85c261bb933d7660bc9fa",
+      "axioms": [
+        "Quot.sound",
+        "propext"
+      ]
+    },
+    "P01DF.dependent_polymorphic_nonempty": {
+      "type_sha256": "2aa24c43838a4d5ce86a3ffb7d93a1121e8dfa950e4d3568e27730fd850c5524",
+      "axioms": [
+        "Quot.sound",
+        "propext"
+      ]
+    },
+    "P01DF.dependent_polymorphic_self_typed": {
+      "type_sha256": "2bc75012b2d6ef584650c8fab18034b10d84ceea820b17daf0a70ad77916cead",
+      "axioms": [
+        "Quot.sound",
+        "propext"
+      ]
+    },
+    "P01DF.raw_index_variable_not_arbitrary_type_parameter": {
+      "type_sha256": "43a81e0a97cf6c8b9d3d975d71c2e7581a01cdb8a16ca1506efaeb0cc0ede550",
+      "axioms": [
+        "Quot.sound",
+        "propext"
+      ]
+    },
+    "P01DF.raw_omega_typed": {
+      "type_sha256": "cdff5fb7ac4aadcfa10500cc13b7fa4405111e52368a7be60086ce615ef79c3d",
+      "axioms": [
+        "Quot.sound",
+        "propext"
+      ]
+    },
+    "P01DF.raw_omega_has_no_normal_reduct": {
+      "type_sha256": "885b6e5d1b0db18a750b250ffd2f93eb1605f6c29a600438fcab0db1009c3929",
+      "axioms": []
+    },
+    "P01DF.indexContext": {
+      "type_sha256": "49f2bd856b6d437b9a49624233b6311f1a21b0c39d0b4846575913235c071f3a",
+      "axioms": []
+    },
+    "P01DF.candidateTy": {
+      "type_sha256": "ab429a81b184cca0ea09e806edea099f19faad72ae923e82081882890027e794",
+      "axioms": [
+        "Quot.sound",
+        "propext"
+      ]
+    },
+    "P01DF.candidateTm": {
+      "type_sha256": "f7d3c0bad6267d3b811026d400086bd8b770489c50fe0bb4fcdb967b8d900f7c",
+      "axioms": [
+        "Quot.sound",
+        "propext"
+      ]
+    },
+    "P01DF.candidateEnvelope": {
+      "type_sha256": "f9f82532fb44c1f62c4b2c8859035f667063da6116e106f27a2abf8775fbe92f",
+      "axioms": [
+        "Quot.sound",
+        "propext"
+      ]
+    },
+    "P01DF.candidate_envelope_code_exact": {
+      "type_sha256": "146a2d53795be922fee1c061cade23010be71db64c9a83819ce2381f16571e09",
+      "axioms": [
+        "Quot.sound",
+        "propext"
+      ]
+    },
+    "P01DF.candidate_replay_sound": {
+      "type_sha256": "7ac2d6f3dc8ba78e752aa4002c2f65a36c640a3b5b9bfb1672dbcb5fc816d890",
+      "axioms": [
+        "Quot.sound",
+        "propext"
+      ]
+    },
+    "P01DF.candidate_ty_ext": {
+      "type_sha256": "a0ea160d5fe55570b98ba97665ae877aae4653ea4c6874947cdfe5108d4b9b1d",
+      "axioms": [
+        "Quot.sound"
+      ]
+    },
+    "P01DF.candidateRaw": {
+      "type_sha256": "3d5a2a7a8b7e3110d7bda89f5eea2effc52b73b250515126bd4e00a3b0003d5b",
+      "axioms": []
+    },
+    "P01DF.candidate_raw_representation": {
+      "type_sha256": "7352edea7d5cda278eb995325a75d4a47c9d65ae930fdf85eea2b125cc0ef9ed",
+      "axioms": [
+        "Quot.sound",
+        "propext"
+      ]
+    },
+    "P01DF.rawIndexTm": {
+      "type_sha256": "c446b5cbcb4cfa14955f4009a3c78c14ef3a56fdee642d7538b1f3e14720f1dd",
+      "axioms": []
+    },
+    "P01DF.candidate_identity_representation": {
+      "type_sha256": "6f919d0bfd3f2a1148983e108a25e72a1f7aaa9b7a4d6ca9291ac6c9c590bf77",
+      "axioms": [
+        "Quot.sound",
+        "propext"
+      ]
+    },
+    "P01DF.candidateBinder": {
+      "type_sha256": "9518a9760d04f88850279a21d5cb87a50cc5ee19a4dc5eb941475a14184d5002",
+      "axioms": []
+    },
+    "P01DF.candidateBody": {
+      "type_sha256": "c644e1eec1d3373887df753444e452082858fb4113b14b99a005f7096a60e942",
+      "axioms": [
+        "Quot.sound",
+        "propext"
+      ]
+    },
+    "P01DF.candidate_fibre": {
+      "type_sha256": "b5b8e09599bd75fd6975287ffabb64d5b0eed1ba4b1320b7e895917e45495e92",
+      "axioms": [
+        "Classical.choice",
+        "Quot.sound",
+        "propext"
+      ]
+    },
+    "P01DF.candidate_pi_representation": {
+      "type_sha256": "cbe66cfb5e67ff644b3cab4a1019578a280394225993daef88b37039b97d0ae0",
+      "axioms": [
+        "Classical.choice",
+        "Quot.sound",
+        "propext"
+      ]
+    },
+    "P01DF.candidate_sigma_representation": {
+      "type_sha256": "62e73a2ecf2ca4bff62c23c0316f4f965ba3e8bb0a3382634797d32635d06672",
+      "axioms": [
+        "Classical.choice",
+        "Quot.sound",
+        "propext"
+      ]
+    },
+    "P01DF.candidate_lambda_code": {
+      "type_sha256": "bef14ea72294247038527729121873d930884be6e9deafee1bbd0e693322e891",
+      "axioms": [
+        "Classical.choice",
+        "Quot.sound",
+        "propext"
+      ]
+    },
+    "P01DF.candidateIndexSub": {
+      "type_sha256": "aaa53eaf08f0089e50560499489548b82a23e32b3876a406b4c4b1d8b85e3012",
+      "axioms": []
+    },
+    "P01DF.candidate_substitution_representation": {
+      "type_sha256": "17a3b49ae438f03381fe50bb0a746ed65bc5fd39408efda0684fe8944e15ae97",
+      "axioms": [
+        "Quot.sound",
+        "propext"
+      ]
+    },
+    "P01DF.candidate_substitution_code": {
+      "type_sha256": "a04268078dd68a23d965ac9f16f68f3b5af7e3499658aeeaf357ed809527cef8",
+      "axioms": [
+        "Quot.sound",
+        "propext"
+      ]
+    },
+    "P01DF.candidateAllBody": {
+      "type_sha256": "960f3ebd3575cd060d7d09a205b105aa6a9f7a9ab954eb2feb9e2ce7f7011dfb",
+      "axioms": [
+        "Quot.sound",
+        "propext"
+      ]
+    },
+    "P01DF.candidateAllFormation": {
+      "type_sha256": "7f1b242b39d2c12b1f529ab912ebfc9f104d8f6b25deb52f82f778eaff170f90",
+      "axioms": [
+        "Quot.sound",
+        "propext"
+      ]
+    },
+    "P01DF.candidate_all_representation": {
+      "type_sha256": "e4a8cd5189a5714b1017b99d8dc26b7261329761c900324fb1a805f004b3880d",
+      "axioms": [
+        "Quot.sound",
+        "propext"
+      ]
+    },
+    "P01DF.candidateAllBodyTm": {
+      "type_sha256": "88795ee63bd289bdd293deaa1170359e370a04edbfc39c0201f4f8a70d01ad70",
+      "axioms": [
+        "Quot.sound",
+        "propext"
+      ]
+    },
+    "P01DF.candidate_all_uniformity": {
+      "type_sha256": "1dac57537803d70b868ec2db7f6cd197a4ee7f57016f54896f29afa13d2f4876",
+      "axioms": [
+        "Quot.sound",
+        "propext"
+      ]
+    },
+    "P01DF.candidateAllIntro": {
+      "type_sha256": "5f5c8218567d8070e0488383d4877b3ab42bc820f0c363d96818295b942708e1",
+      "axioms": [
+        "Quot.sound",
+        "propext"
+      ]
+    },
+    "P01DF.candidate_all_intro_code": {
+      "type_sha256": "650c4a8231391068b2baf146425d4985962b96680935ba32f26037fb5d755d76",
+      "axioms": [
+        "Quot.sound",
+        "propext"
+      ]
+    },
+    "P01DF.candidate_type_instantiation_representation": {
+      "type_sha256": "ae4acfe81dbd141e8f732b2e0a3697edd9840365386db20540d1621ec6e77484",
+      "axioms": [
+        "Quot.sound",
+        "propext"
+      ]
+    },
+    "P01DF.candidateAllTm": {
+      "type_sha256": "d9ab219885518a4640cc6c63e57ad41f292dde67f6e1841c5cb4188ee588c723",
+      "axioms": [
+        "Quot.sound",
+        "propext"
+      ]
+    },
+    "P01DF.candidateAllElim": {
+      "type_sha256": "75c0a2770255fba909014789855458a1813ae841ab083d19565958e908c0cb1a",
+      "axioms": [
+        "Quot.sound",
+        "propext"
+      ]
+    },
+    "P01DF.candidate_all_elim_code": {
+      "type_sha256": "d7d5a3920441bba2ea68f94b5d111a4557568466ae8686fbe20cde8d6fa07597",
+      "axioms": [
+        "Quot.sound",
+        "propext"
+      ]
+    },
+    "P01DF.candidate_finite_representation": {
+      "type_sha256": "0a3e1b51737c69c8999f9434b6e16656dce4b587efa55aca96dddde8547c0c9b",
+      "axioms": [
+        "Quot.sound",
+        "propext"
+      ]
+    }
+  },
+  "original_controls": "NOT_RUN",
+  "original_receipt_sha256": "9a40a5eee0371a197669b117410ad0c3ab2c7a10a8366d4c2e4a4621dfaa924e",
+  "original_driver_sha256": "0666003f5081aca1efd6570a72da06d735b454d787dba97dd59fc1b42554bd14",
+  "execution_kind": "FRESH_CUSTOM_CLOSURE",
+  "finished_utc": null,
+  "scope": "Source-bound custom closure and selected declaration readbacks. Types are represented by hashes of the exact printed types; complete logs remain private. Official caches are trusted. This does not establish ordinary proof, runtime completeness, empirical or normative warrant, novelty, external human review or merged adoption."
+}

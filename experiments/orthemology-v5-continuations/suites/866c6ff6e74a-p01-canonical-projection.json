@@ -1,0 +1,404 @@
+{
+  "id": "866c6ff6e74a-p01-canonical-projection",
+  "origin": "866c6ff6e74a67f2bc452b49a0ada05311c0c2601585ea166404719172bd8086",
+  "descriptor_source_id": "src-866c6ff6e74a67f2-47b7b457c989b63a",
+  "modules": [
+    {
+      "module": "AuditSupport",
+      "source_id": "src-866c6ff6e74a67f2-fbf32580db2da4de",
+      "imports": [
+        "Lean"
+      ]
+    },
+    {
+      "module": "InternalPolymorphism",
+      "source_id": "src-866c6ff6e74a67f2-9755dfdcc6616b00",
+      "imports": [
+        "Init"
+      ]
+    },
+    {
+      "module": "FiniteBridge",
+      "source_id": "src-866c6ff6e74a67f2-24110bbdf4453504",
+      "imports": [
+        "InternalPolymorphism"
+      ]
+    },
+    {
+      "module": "BoundaryResults",
+      "source_id": "src-866c6ff6e74a67f2-04f0a98ee2456182",
+      "imports": [
+        "FiniteBridge"
+      ]
+    },
+    {
+      "module": "EffectsAndDependence",
+      "source_id": "src-866c6ff6e74a67f2-7c6e27776d063505",
+      "imports": [
+        "BoundaryResults"
+      ]
+    },
+    {
+      "module": "NormalisationAndNumerals",
+      "source_id": "src-866c6ff6e74a67f2-8ca8729262131232",
+      "imports": [
+        "EffectsAndDependence"
+      ]
+    },
+    {
+      "module": "P01TypeAlgebra",
+      "source_id": "src-866c6ff6e74a67f2-01f04bac6f31c186",
+      "imports": [
+        "Mathlib.Data.Bool.Basic",
+        "FiniteBridge"
+      ]
+    },
+    {
+      "module": "P01SNReflection",
+      "source_id": "src-866c6ff6e74a67f2-e440e0ce83ba02e0",
+      "imports": [
+        "Init"
+      ]
+    },
+    {
+      "module": "P01Candidates",
+      "source_id": "src-866c6ff6e74a67f2-9654f9143a28e013",
+      "imports": [
+        "P01TypeAlgebra",
+        "P01SNReflection",
+        "BoundaryResults"
+      ]
+    },
+    {
+      "module": "P01Confluence",
+      "source_id": "src-866c6ff6e74a67f2-11c4a79093795e36",
+      "imports": [
+        "P01Candidates"
+      ]
+    },
+    {
+      "module": "P01Omega",
+      "source_id": "src-866c6ff6e74a67f2-6fc528bb28590a7a",
+      "imports": [
+        "P01Confluence",
+        "NormalisationAndNumerals"
+      ]
+    },
+    {
+      "module": "P01Polynomials",
+      "source_id": "src-866c6ff6e74a67f2-59b538bccd2e58c0",
+      "imports": [
+        "P01Omega"
+      ]
+    },
+    {
+      "module": "P01PER",
+      "source_id": "src-866c6ff6e74a67f2-8fc6be4bf9490c8e",
+      "imports": [
+        "P01Polynomials"
+      ]
+    },
+    {
+      "module": "P01DependentCore",
+      "source_id": "src-866c6ff6e74a67f2-ca3b2b64ba646524",
+      "imports": [
+        "P01PER"
+      ]
+    },
+    {
+      "module": "P01ContextualJ",
+      "source_id": "src-866c6ff6e74a67f2-1fbcbea70a8872f6",
+      "imports": [
+        "P01DependentCore"
+      ]
+    },
+    {
+      "module": "P01Certificates",
+      "source_id": "src-866c6ff6e74a67f2-4b655157b7a1a6d3",
+      "imports": [
+        "P01ContextualJ"
+      ]
+    },
+    {
+      "module": "P01Examples",
+      "source_id": "src-866c6ff6e74a67f2-32f7d8a034a87f81",
+      "imports": [
+        "P01Certificates"
+      ]
+    },
+    {
+      "module": "P01RecursiveModel",
+      "source_id": "src-866c6ff6e74a67f2-24bd272cd6988f7b",
+      "imports": [
+        "P01Examples"
+      ]
+    },
+    {
+      "module": "P01LambdaSyntax",
+      "source_id": "src-866c6ff6e74a67f2-de413e23b821bb4e",
+      "imports": [
+        "P01TypeAlgebra",
+        "P01SNReflection"
+      ]
+    },
+    {
+      "module": "P01SystemF",
+      "source_id": "src-866c6ff6e74a67f2-8e22adf635d91669",
+      "imports": [
+        "P01LambdaSyntax"
+      ]
+    },
+    {
+      "module": "P01CurryParametricity",
+      "source_id": "src-866c6ff6e74a67f2-507b72b1f412e3e4",
+      "imports": [
+        "P01RecursiveModel",
+        "P01SystemF"
+      ]
+    },
+    {
+      "module": "P01Translation",
+      "source_id": "src-866c6ff6e74a67f2-5c91eed16c6dcf66",
+      "imports": [
+        "P01SystemF",
+        "BoundaryResults"
+      ]
+    },
+    {
+      "module": "P01ModelWitnesses",
+      "source_id": "src-866c6ff6e74a67f2-303158948d5ebf71",
+      "imports": [
+        "P01CurryParametricity",
+        "P01Translation"
+      ]
+    },
+    {
+      "module": "P01DependentModel",
+      "source_id": "src-866c6ff6e74a67f2-c444f2d1929be7ce",
+      "imports": [
+        "P01RecursiveModel",
+        "P01ModelWitnesses"
+      ]
+    },
+    {
+      "module": "P01DependentSubstitution",
+      "source_id": "src-866c6ff6e74a67f2-0981aef2ce1d57c6",
+      "imports": [
+        "P01DependentModel"
+      ]
+    },
+    {
+      "module": "P01DependentFundamental",
+      "source_id": "src-866c6ff6e74a67f2-3e00fab1bbfb8a8c",
+      "imports": [
+        "P01DependentSubstitution"
+      ]
+    },
+    {
+      "module": "P01DependentControls",
+      "source_id": "src-866c6ff6e74a67f2-e0292fef5673a544",
+      "imports": [
+        "P01DependentFundamental"
+      ]
+    },
+    {
+      "module": "P01DependentRepresentation",
+      "source_id": "src-866c6ff6e74a67f2-7bb0ec89fb39f5ce",
+      "imports": [
+        "P01DependentControls"
+      ]
+    },
+    {
+      "module": "P01CanonicalCarrierProjection",
+      "source_id": "src-866c6ff6e74a67f2-14a4673c903efa5d",
+      "imports": [
+        "P01DependentRepresentation"
+      ]
+    },
+    {
+      "module": "ProjectionContract",
+      "source_id": "src-866c6ff6e74a67f2-05164a96993513e7",
+      "imports": [
+        "P01CanonicalCarrierProjection"
+      ]
+    }
+  ],
+  "module_order": [
+    "AuditSupport",
+    "InternalPolymorphism",
+    "FiniteBridge",
+    "BoundaryResults",
+    "EffectsAndDependence",
+    "NormalisationAndNumerals",
+    "P01TypeAlgebra",
+    "P01SNReflection",
+    "P01Candidates",
+    "P01Confluence",
+    "P01Omega",
+    "P01Polynomials",
+    "P01PER",
+    "P01DependentCore",
+    "P01ContextualJ",
+    "P01Certificates",
+    "P01Examples",
+    "P01RecursiveModel",
+    "P01LambdaSyntax",
+    "P01SystemF",
+    "P01CurryParametricity",
+    "P01Translation",
+    "P01ModelWitnesses",
+    "P01DependentModel",
+    "P01DependentSubstitution",
+    "P01DependentFundamental",
+    "P01DependentControls",
+    "P01DependentRepresentation",
+    "P01CanonicalCarrierProjection",
+    "ProjectionContract"
+  ],
+  "targets": [
+    {
+      "name": "P01DF.carrierCode",
+      "module": "P01CanonicalCarrierProjection"
+    },
+    {
+      "name": "P01DF.carrier_code_ext",
+      "module": "P01CanonicalCarrierProjection"
+    },
+    {
+      "name": "P01DF.raw_carrier_is_top",
+      "module": "P01CanonicalCarrierProjection"
+    },
+    {
+      "name": "P01DF.carrierFamily",
+      "module": "P01CanonicalCarrierProjection"
+    },
+    {
+      "name": "P01DF.raw_pi_carrier_square",
+      "module": "P01CanonicalCarrierProjection"
+    },
+    {
+      "name": "P01DF.sigma_carrier_square",
+      "module": "P01CanonicalCarrierProjection"
+    },
+    {
+      "name": "P01DF.raw_sigma_carrier_square",
+      "module": "P01CanonicalCarrierProjection"
+    },
+    {
+      "name": "P01DF.raw_identity_carrier_square",
+      "module": "P01CanonicalCarrierProjection"
+    },
+    {
+      "name": "P01DF.projectedBody",
+      "module": "P01CanonicalCarrierProjection"
+    },
+    {
+      "name": "P01DF.syntax_pi_carrier_square",
+      "module": "P01CanonicalCarrierProjection"
+    },
+    {
+      "name": "P01DF.syntax_sigma_carrier_square",
+      "module": "P01CanonicalCarrierProjection"
+    },
+    {
+      "name": "P01DF.syntax_identity_carrier_square",
+      "module": "P01CanonicalCarrierProjection"
+    },
+    {
+      "name": "P01DF.canonical_pi_admission",
+      "module": "P01CanonicalCarrierProjection"
+    },
+    {
+      "name": "P01DF.canonical_sigma_admission",
+      "module": "P01CanonicalCarrierProjection"
+    },
+    {
+      "name": "P01DF.canonical_identity_admission",
+      "module": "P01CanonicalCarrierProjection"
+    },
+    {
+      "name": "P01DF.arrow_carrier_inclusion",
+      "module": "P01CanonicalCarrierProjection"
+    },
+    {
+      "name": "P01DF.arbitrary_arrow_reverse_projection_fails",
+      "module": "P01CanonicalCarrierProjection"
+    },
+    {
+      "name": "P01DF.canonical_identity_inclusion",
+      "module": "P01CanonicalCarrierProjection"
+    },
+    {
+      "name": "P01DF.arbitrary_identity_forward_projection_fails",
+      "module": "P01CanonicalCarrierProjection"
+    }
+  ],
+  "pins": {
+    "lean_version": "4.19.0",
+    "lean_binary_sha256": "92c3d35b5bfaa5e0fea413a775d504cf46cd95e1345df61c2274f76779e7e023",
+    "packages": [
+      {
+        "name": "mathlib",
+        "revision": "c44e0c8ee63ca166450922a373c7409c5d26b00b"
+      },
+      {
+        "name": "plausible",
+        "revision": "77e08eddc486491d7b9e470926b3dbe50319451a"
+      },
+      {
+        "name": "LeanSearchClient",
+        "revision": "25078369972d295301f5a1e53c3e5850cf6d9d4c"
+      },
+      {
+        "name": "importGraph",
+        "revision": "e6a9f0f5ee3ccf7443a0070f92b62f8db12ae82b"
+      },
+      {
+        "name": "proofwidgets",
+        "revision": "c4919189477c3221e6a204008998b0d724f49904"
+      },
+      {
+        "name": "aesop",
+        "revision": "5d50b08dedd7d69b3d9b3176e0d58a23af228884"
+      },
+      {
+        "name": "Qq",
+        "revision": "fa4f7f15d97591a9cf3aa7724ba371c7fc6dda02"
+      },
+      {
+        "name": "batteries",
+        "revision": "f5d04a9c4973d401c8c92500711518f7c656f034"
+      },
+      {
+        "name": "Cli",
+        "revision": "02dbd02bc00ec4916e99b04b2245b30200e200d0"
+      }
+    ]
+  },
+  "official_imports": [
+    {
+      "module": "Init",
+      "repository": "lean-release",
+      "source": "Init.lean",
+      "sha256": "94c76e813fdf92a0375566c1c7f3335cf269703da809c6189dc0de09d66b0204"
+    },
+    {
+      "module": "Lean",
+      "repository": "lean-release",
+      "source": "Lean.lean",
+      "sha256": "81987fb597b14adf25104f16006c885d1feb9a9ec59745384b10989c9546e9a4"
+    },
+    {
+      "module": "Mathlib.Data.Bool.Basic",
+      "repository": "mathlib",
+      "source": "Mathlib/Data/Bool/Basic.lean",
+      "sha256": "fb20d50c3aed15cdf7c5b7f1bc92db8ab850444f158199bfa8cb2f09ac3a5e55"
+    }
+  ],
+  "driver": {
+    "source_id": "src-866c6ff6e74a67f2-279d28ea9829b80d",
+    "lean_argument": "EXECUTABLE"
+  },
+  "controls": "ORIGINAL_DRIVER_REQUIRED",
+  "classification": "CURRENT_EVIDENCE"
+}

@@ -1,0 +1,442 @@
+{
+  "compiler_sha256": "92c3d35b5bfaa5e0fea413a775d504cf46cd95e1345df61c2274f76779e7e023",
+  "compiler_version": "Lean (version 4.19.0, x86_64-unknown-linux-gnu, commit 6caaee842e94, Release)",
+  "dependency_checks": [
+    {
+      "build_cache_present": true,
+      "name": "mathlib",
+      "revision": "c44e0c8ee63ca166450922a373c7409c5d26b00b",
+      "tracked_clean": true
+    },
+    {
+      "build_cache_present": true,
+      "name": "plausible",
+      "revision": "77e08eddc486491d7b9e470926b3dbe50319451a",
+      "tracked_clean": true
+    },
+    {
+      "build_cache_present": true,
+      "name": "LeanSearchClient",
+      "revision": "25078369972d295301f5a1e53c3e5850cf6d9d4c",
+      "tracked_clean": true
+    },
+    {
+      "build_cache_present": true,
+      "name": "importGraph",
+      "revision": "e6a9f0f5ee3ccf7443a0070f92b62f8db12ae82b",
+      "tracked_clean": true
+    },
+    {
+      "build_cache_present": true,
+      "name": "proofwidgets",
+      "revision": "c4919189477c3221e6a204008998b0d724f49904",
+      "tracked_clean": true
+    },
+    {
+      "build_cache_present": true,
+      "name": "aesop",
+      "revision": "5d50b08dedd7d69b3d9b3176e0d58a23af228884",
+      "tracked_clean": true
+    },
+    {
+      "build_cache_present": true,
+      "name": "Qq",
+      "revision": "fa4f7f15d97591a9cf3aa7724ba371c7fc6dda02",
+      "tracked_clean": true
+    },
+    {
+      "build_cache_present": true,
+      "name": "batteries",
+      "revision": "f5d04a9c4973d401c8c92500711518f7c656f034",
+      "tracked_clean": true
+    },
+    {
+      "build_cache_present": false,
+      "name": "Cli",
+      "revision": "02dbd02bc00ec4916e99b04b2245b30200e200d0",
+      "tracked_clean": true
+    }
+  ],
+  "exit_code": 0,
+  "finished_utc": "2026-10-02T05:47:09.250022+00:00",
+  "kernel_verified": true,
+  "modules": [
+    {
+      "exit_code": 0,
+      "log_sha256": "7bcb1cf88c8eaf54369bddbf8ba673a4e724e8c27f792917b9e7bdff98372262",
+      "module": "ProcessExpectation",
+      "object_sha256": "f1951183598101eb27caf38048b80d763b8b37f8e283c55041d39cb7c256fd17",
+      "source_sha256": "f428c83592fbda3cb3297f4fcebd0e067e4e8bfbfecb646ce3a059947479da4c",
+      "status": "FRESH_COMPILE",
+      "transitive_source_fingerprint": "8e3813680ef628a097e80a77e456ddf765f717f79d09d0842f5b47077378ff65"
+    },
+    {
+      "exit_code": 0,
+      "log_sha256": "7e4677b13f22645c8f2dc72870f96e3c9df193017dafa72cb1ea7eceddc5bd86",
+      "module": "ProcessContractProbe",
+      "object_sha256": "1f34c0a2d2bfe8c00050f7278b0b97ea5f24e48883b49f0ef25c39420a654a2f",
+      "source_sha256": "027ca9df3825b18c022bf5a6d4cfddcd44677598f78adc16d212a49796fadbf6",
+      "status": "FRESH_COMPILE",
+      "transitive_source_fingerprint": "fe878b3b29eb5e6d87a0f788d30a5c6444874fd20359dee0d5fa2ea318af9753"
+    }
+  ],
+  "original_controls": "NOT_RUN",
+  "pins": {
+    "lean_binary_sha256": "92c3d35b5bfaa5e0fea413a775d504cf46cd95e1345df61c2274f76779e7e023",
+    "lean_version": "4.19.0",
+    "packages": [
+      {
+        "name": "mathlib",
+        "revision": "c44e0c8ee63ca166450922a373c7409c5d26b00b"
+      },
+      {
+        "name": "plausible",
+        "revision": "77e08eddc486491d7b9e470926b3dbe50319451a"
+      },
+      {
+        "name": "LeanSearchClient",
+        "revision": "25078369972d295301f5a1e53c3e5850cf6d9d4c"
+      },
+      {
+        "name": "importGraph",
+        "revision": "e6a9f0f5ee3ccf7443a0070f92b62f8db12ae82b"
+      },
+      {
+        "name": "proofwidgets",
+        "revision": "c4919189477c3221e6a204008998b0d724f49904"
+      },
+      {
+        "name": "aesop",
+        "revision": "5d50b08dedd7d69b3d9b3176e0d58a23af228884"
+      },
+      {
+        "name": "Qq",
+        "revision": "fa4f7f15d97591a9cf3aa7724ba371c7fc6dda02"
+      },
+      {
+        "name": "batteries",
+        "revision": "f5d04a9c4973d401c8c92500711518f7c656f034"
+      },
+      {
+        "name": "Cli",
+        "revision": "02dbd02bc00ec4916e99b04b2245b30200e200d0"
+      }
+    ]
+  },
+  "post_source_hashes": {
+    "ProcessContractProbe": "027ca9df3825b18c022bf5a6d4cfddcd44677598f78adc16d212a49796fadbf6",
+    "ProcessExpectation": "f428c83592fbda3cb3297f4fcebd0e067e4e8bfbfecb646ce3a059947479da4c"
+  },
+  "readback_log_sha256": "2a6e8e0a0ecac2a3d7fcbe4957e870118df6d1f1c436bdd3afc5d53cc9f5550a",
+  "readbacks": {
+    "IndependentProcessContract.accepted_is_coherent": {
+      "type_sha256": "149e6e195937e547ab6c8832b4deda265d2ce9f7cd58ce3a8d4d6769877e6962",
+      "axioms": [
+        "Classical.choice",
+        "Quot.sound",
+        "propext"
+      ]
+    },
+    "IndependentProcessContract.coherent_policy_finite_iff": {
+      "type_sha256": "ed62e4104947f78943e9165b691121677a600d22ae06e6e73aca00e18abbd7c7",
+      "axioms": [
+        "Classical.choice",
+        "Quot.sound",
+        "propext"
+      ]
+    },
+    "IndependentProcessContract.expanded_process_iff": {
+      "type_sha256": "c3d1c9a8941c48d3aab1d9a3f87787e51398dd9886e03e500fa4c254e4d845a8",
+      "axioms": [
+        "Classical.choice",
+        "Quot.sound",
+        "propext"
+      ]
+    },
+    "IndependentProcessContract.independent_seed_cylinder": {
+      "type_sha256": "0e77dceac9e9fef9eb4bad95be7ee7ccc31d8c7c6b4736aa4a0c41cc0a6ae870",
+      "axioms": [
+        "Classical.choice",
+        "Quot.sound",
+        "propext"
+      ]
+    },
+    "IndependentProcessContract.initial_bound_p_one_iff": {
+      "type_sha256": "66a4962f853d6c38ad56f280e172e7b001fdfd219a30d9db574c675ed7b1034d",
+      "axioms": [
+        "Classical.choice",
+        "Quot.sound",
+        "propext"
+      ]
+    },
+    "IndependentProcessContract.initial_expected_cost_le_one": {
+      "type_sha256": "3e9509d3bf669fea131f997f0107332854dd8679c48f4c209f2553bfa9d02daf",
+      "axioms": [
+        "Classical.choice",
+        "Quot.sound",
+        "propext"
+      ]
+    },
+    "IndependentProcessContract.latent_cylinder": {
+      "type_sha256": "bc92443575565bc6201848ff4c630f443f745a03b2a935a088bcae866559df5e",
+      "axioms": [
+        "Classical.choice",
+        "Quot.sound",
+        "propext"
+      ]
+    },
+    "IndependentProcessContract.no_future_receipt": {
+      "type_sha256": "ead8bad591215a18b1fb1a9b582fae84fb4c7b6ce9732ed1e5168b5ef1345a18",
+      "axioms": [
+        "Classical.choice",
+        "Quot.sound",
+        "propext"
+      ]
+    },
+    "IndependentProcessContract.rawLaw_probability": {
+      "type_sha256": "230eee0fa2fcd30b21e02c180c81ac0abb6ce5983afaa491ec71a1383afaa4a4",
+      "axioms": [
+        "Classical.choice",
+        "Quot.sound",
+        "propext"
+      ]
+    },
+    "SparsePriorAnalytic.affinity_deficit": {
+      "type_sha256": "e81d2e7392525bc0376b9883ab50e6f4b90b73e56a615d153805db3d8b0800be",
+      "axioms": [
+        "Classical.choice",
+        "Quot.sound",
+        "propext"
+      ]
+    },
+    "SparsePriorAnalytic.binaryOverlap_chernoff": {
+      "type_sha256": "bf789e5a725cc8d210e1ff2faad4b71acff098162330d185bf584c0cab6a4361",
+      "axioms": [
+        "Classical.choice",
+        "Quot.sound",
+        "propext"
+      ]
+    },
+    "SparsePriorAnalytic.binaryOverlap_lifetime_lower": {
+      "type_sha256": "d43e187b68a6061ec748fb8edfe729484a64a7a801220023e89b3ee173830cf6",
+      "axioms": [
+        "Classical.choice",
+        "Quot.sound",
+        "propext"
+      ]
+    },
+    "SparsePriorAnalytic.binaryOverlap_lifetime_upper": {
+      "type_sha256": "a3b2d3b59ee2985ac201da471b6771c0f9332b712a450e46c754a97a9ed766bc",
+      "axioms": [
+        "Classical.choice",
+        "Quot.sound",
+        "propext"
+      ]
+    },
+    "SparsePriorAnalytic.integrated_comparison": {
+      "type_sha256": "a65abd660c6855721e914eaacc524ece1a03ea0fbd4c6e1620921a4aa629ddde",
+      "axioms": [
+        "Classical.choice",
+        "Quot.sound",
+        "propext"
+      ]
+    },
+    "SparsePriorAnalytic.overlapTotal_finite_iff": {
+      "type_sha256": "47b2d7b4392d2a24486e5c94fda4f3497edc42f4d6e146ee718abafa9bd5f29b",
+      "axioms": [
+        "Classical.choice",
+        "Quot.sound",
+        "propext"
+      ]
+    },
+    "SparsePriorAnalytic.overlapTotal_finite_iff_summable": {
+      "type_sha256": "ee0aab1510ef175ce4e71d9edc47e0ac4ab76b164adcd0d1e5ae32e8589dec25",
+      "axioms": [
+        "Classical.choice",
+        "Quot.sound",
+        "propext"
+      ]
+    },
+    "SparsePriorAnalytic.zeroPrefix_finite_lower": {
+      "type_sha256": "32eaf2eaa9c864cc9a3b91bac233ba91e915f2de226f9785d89560e9d389c255",
+      "axioms": [
+        "Classical.choice",
+        "Quot.sound",
+        "propext"
+      ]
+    },
+    "SparsePriorBayes.conditional_bayes_identification": {
+      "type_sha256": "c41374b944b63400c8a5f76a5656e4d73b3e726647e4ae3fb9880d2e2cdb37fc",
+      "axioms": [
+        "Classical.choice",
+        "Quot.sound",
+        "propext"
+      ]
+    },
+    "SparsePriorBayes.exists_finite_policyCost_iff": {
+      "type_sha256": "44bd967bfc2900bcb046400cfc561423c5edf7c51d4f44591d5922205a3378ad",
+      "axioms": [
+        "Classical.choice",
+        "Quot.sound",
+        "propext"
+      ]
+    },
+    "SparsePriorBayes.exists_finite_randomizedCost_iff": {
+      "type_sha256": "82479c5df4823592e0c58343e8987faeacb7cc1a510a42e86a6fa210795d957a",
+      "axioms": [
+        "Classical.choice",
+        "Quot.sound",
+        "propext"
+      ]
+    },
+    "SparsePriorBayes.priorWeight_sum_one": {
+      "type_sha256": "63c0656e69cee1f3c66821d13084713b360a679be0f1f447faa5e82bcd2a2291",
+      "axioms": [
+        "Classical.choice",
+        "Quot.sound",
+        "propext"
+      ]
+    },
+    "SparsePriorBayes.randomizedCost_lower": {
+      "type_sha256": "2bc4e1c6bc576d383f200189b008fe69d4e2337bf94db637d2d542fc069557bf",
+      "axioms": [
+        "Classical.choice",
+        "Quot.sound",
+        "propext"
+      ]
+    },
+    "SparsePriorBayes.score_mode_and_adjacent_identity": {
+      "type_sha256": "37a05dca717ebdfddf6acc2245c66b7d65112db6ec907ecdb93751335e17cbd8",
+      "axioms": [
+        "Classical.choice",
+        "Quot.sound",
+        "propext"
+      ]
+    },
+    "SparsePriorBayes.sum_joint_word_mass_one": {
+      "type_sha256": "0436ad3ebcbc0bdd59834b6b84c5c488959032b0e475582d56848bafcb7a23e1",
+      "axioms": [
+        "Classical.choice",
+        "Quot.sound",
+        "propext"
+      ]
+    },
+    "SparsePriorBayes.sum_optimal_words_eq_overlap": {
+      "type_sha256": "e02bd17aec5402b1b19547b0adba4392ce333463222a49e78ba24f31dc46ba3d",
+      "axioms": [
+        "Classical.choice",
+        "Quot.sound",
+        "propext"
+      ]
+    },
+    "SparsePriorGeometry.acceptance_ratio": {
+      "type_sha256": "d78a60c05113b1c380f4023ef8683579fb44b2026ad7f08cec392250f379404e",
+      "axioms": [
+        "Classical.choice",
+        "Quot.sound",
+        "propext"
+      ]
+    },
+    "SparsePriorGeometry.adjacent_min_sum": {
+      "type_sha256": "62e140cac23c1395e34deee16ea0ea73d4c25ba22cfe582ebeeeab706e1f2c2e",
+      "axioms": [
+        "Classical.choice",
+        "Quot.sound",
+        "propext"
+      ]
+    },
+    "SparsePriorGeometry.no_common_report_at_factor_two": {
+      "type_sha256": "16b43ebf2c440783f7661ea392d6b428a14543b355975d1bb6219b953ad6874b",
+      "axioms": [
+        "Classical.choice",
+        "Quot.sound",
+        "propext"
+      ]
+    },
+    "SparsePriorGeometry.own_report_margin": {
+      "type_sha256": "2fe574922047ec4b01529a717ba41c0dde9407a43bb73b5bb98ca4294efdbf58",
+      "axioms": [
+        "Classical.choice",
+        "Quot.sound",
+        "propext"
+      ]
+    },
+    "SparsePriorProcess.actual_expectation_eq_randomizedCost": {
+      "type_sha256": "aaecfc78c583fef05d8a0cba54e5195fc67fd251094fb1447800c1b1f533ff9e",
+      "axioms": [
+        "Classical.choice",
+        "Quot.sound",
+        "propext"
+      ]
+    },
+    "SparsePriorProcess.actual_expectation_lower": {
+      "type_sha256": "a4b0787c167abd82ebb309eb83f890c04b568328690bcbbfa142b6793357d658",
+      "axioms": [
+        "Classical.choice",
+        "Quot.sound",
+        "propext"
+      ]
+    },
+    "SparsePriorProcess.every_policy_infinite_of_not_summable": {
+      "type_sha256": "3ceb6b8a810426406306efac037c9478230e4e69c9257a46bc17ae4405f4e575",
+      "axioms": [
+        "Classical.choice",
+        "Quot.sound",
+        "propext"
+      ]
+    },
+    "SparsePriorProcess.exists_actual_expectation_eq": {
+      "type_sha256": "8211fd9daffec5853564f99e4aab95b5fd95a1febbe79539325c05a3c7a01afe",
+      "axioms": [
+        "Classical.choice",
+        "Quot.sound",
+        "propext"
+      ]
+    },
+    "SparsePriorProcess.exists_finite_actual_expectation_iff": {
+      "type_sha256": "3b4e6bbd1b4f4e0c374e8be40d491b623f6428f096f70cdb2edcdc438d1798d2",
+      "axioms": [
+        "Classical.choice",
+        "Quot.sound",
+        "propext"
+      ]
+    },
+    "SparsePriorProcess.latentLaw_probability": {
+      "type_sha256": "fc66db203afa8961a2d44c630799da2d4f30579e2837f44cc93bf58de8f88909",
+      "axioms": [
+        "Classical.choice",
+        "Quot.sound",
+        "propext"
+      ]
+    },
+    "SparsePriorProcess.receiptLaw_prefix_mass": {
+      "type_sha256": "7c89d373c26d16310d85414a35125278141e3a6e9d1daed1f08d685939eb3707",
+      "axioms": [
+        "Classical.choice",
+        "Quot.sound",
+        "propext"
+      ]
+    },
+    "SparsePriorProcess.totalFailures_measurable": {
+      "type_sha256": "d57a87c5854308462e618e43a7f31f479d2f0369e70eb4390d7b5bc23e7cd6e7",
+      "axioms": [
+        "Classical.choice",
+        "Quot.sound",
+        "propext"
+      ]
+    }
+  },
+  "runner_sha256": "677911518ee7a5e249f1cd41d4271b910fc8ddcb06daa3d34a4aea1eed98d19f",
+  "scope": "Cold custom source components and exact type/axiom readbacks; official caches trusted. No total family, runtime, empirical, normative or adoption claim.",
+  "source_hashes": {
+    "ProcessContractProbe": "027ca9df3825b18c022bf5a6d4cfddcd44677598f78adc16d212a49796fadbf6",
+    "ProcessExpectation": "f428c83592fbda3cb3297f4fcebd0e067e4e8bfbfecb646ce3a059947479da4c"
+  },
+  "started_utc": "2026-10-02T05:46:04.212054+00:00",
+  "status": "FRESH_KERNEL_COMPONENTS",
+  "suite_id": "26d6d6369d07-sparse-process",
+  "suite_sha256": "011e91d376e03af8dbd2ef69ddf5e492f3799f0e268c1ce0d4d9f67912439774",
+  "validator_sha256": "f0e3c39662b727914b7c83086aa958f8962275bc59fa47c9b508e025310fd26c",
+  "execution_kind": "FRESH_PUBLIC_REPLAY",
+  "private_receipt_sha256": "61f5937ad65facd6f0224f6e82e7012e1f5e0af04b09e0abb385695ce98661c7"
+}

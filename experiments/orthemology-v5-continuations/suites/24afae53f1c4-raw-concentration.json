@@ -1,0 +1,386 @@
+{
+  "id": "24afae53f1c4-raw-concentration",
+  "origin": "24afae53f1c4a71c01a431e3c27258d90258b4bd295c13102d7f2d604f12e850",
+  "descriptor_source_id": "src-24afae53f1c4a71c-b503549394144eea",
+  "modules": [
+    {
+      "module": "GenericFiniteQueryLocality",
+      "source_id": "src-24afae53f1c4a71c-48c2043471cbd977",
+      "imports": [
+        "Mathlib"
+      ]
+    },
+    {
+      "module": "GenericFiniteQueryMeasure",
+      "source_id": "src-24afae53f1c4a71c-bca41cd736b4dbf7",
+      "imports": [
+        "GenericFiniteQueryLocality",
+        "Mathlib.Probability.ProductMeasure"
+      ]
+    },
+    {
+      "module": "PolicyRowEvaluator",
+      "source_id": "src-24afae53f1c4a71c-09a24e08a892bac0",
+      "imports": [
+        "GenericFiniteQueryMeasure"
+      ]
+    },
+    {
+      "module": "PolicyTranscriptFiber",
+      "source_id": "src-24afae53f1c4a71c-fbe02f6da92a96ca",
+      "imports": [
+        "PolicyRowEvaluator"
+      ]
+    },
+    {
+      "module": "FeedbackRequests",
+      "source_id": "src-24afae53f1c4a71c-8e9fd63ac4d905b0",
+      "imports": [
+        "PolicyTranscriptFiber"
+      ]
+    },
+    {
+      "module": "ProductObservationLaw",
+      "source_id": "src-24afae53f1c4a71c-97be7dd4d39275e6",
+      "imports": [
+        "Mathlib",
+        "Mathlib.Probability.ProductMeasure"
+      ]
+    },
+    {
+      "module": "IndependentProductFamilies",
+      "source_id": "src-24afae53f1c4a71c-22bf8644c4d91f80",
+      "imports": [
+        "ProductObservationLaw"
+      ]
+    },
+    {
+      "module": "GenericQueryReference",
+      "source_id": "src-24afae53f1c4a71c-5fccddbcbcfd1182",
+      "imports": [
+        "GenericFiniteQueryMeasure"
+      ]
+    },
+    {
+      "module": "PolicyRowLaw",
+      "source_id": "src-24afae53f1c4a71c-d89dfabcf15d09dc",
+      "imports": [
+        "GenericQueryReference"
+      ]
+    },
+    {
+      "module": "FeedbackFiberProbability",
+      "source_id": "src-24afae53f1c4a71c-8d6a3ba89790aaa9",
+      "imports": [
+        "FeedbackRequests",
+        "IndependentProductFamilies",
+        "PolicyRowLaw"
+      ]
+    },
+    {
+      "module": "PolicyCylinderProbability",
+      "source_id": "src-24afae53f1c4a71c-f8cae22a1772a8db",
+      "imports": [
+        "FeedbackFiberProbability"
+      ]
+    },
+    {
+      "module": "HistoryPathConsistency",
+      "source_id": "src-24afae53f1c4a71c-885c17d47cdacb2e",
+      "imports": [
+        "PolicyTranscriptFiber",
+        "Mathlib.Probability.Kernel.IonescuTulcea.Traj"
+      ]
+    },
+    {
+      "module": "PolicyObservedLaw",
+      "source_id": "src-24afae53f1c4a71c-57deb20faccdece0",
+      "imports": [
+        "PolicyCylinderProbability",
+        "HistoryPathConsistency"
+      ]
+    },
+    {
+      "module": "PolicyTraceBinding",
+      "source_id": "src-24afae53f1c4a71c-d9ff7bf7f9b40f58",
+      "imports": [
+        "PolicyObservedLaw"
+      ]
+    },
+    {
+      "module": "StackActionLaw",
+      "source_id": "src-24afae53f1c4a71c-a55b1e5290938b3d",
+      "imports": [
+        "PolicyTraceBinding"
+      ]
+    },
+    {
+      "module": "RawEmpiricalRows",
+      "source_id": "src-24afae53f1c4a71c-de00e221dbfbe582",
+      "imports": [
+        "StackActionLaw",
+        "Mathlib.Probability.StrongLaw"
+      ]
+    },
+    {
+      "module": "EmpiricalTailBounds",
+      "source_id": "src-24afae53f1c4a71c-b1328066d072c0bc",
+      "imports": [
+        "RawEmpiricalRows"
+      ]
+    },
+    {
+      "module": "EndpointMoment",
+      "source_id": "src-24afae53f1c4a71c-6a51da7c858c0385",
+      "imports": [
+        "Mathlib"
+      ]
+    },
+    {
+      "module": "AnnularLiteral",
+      "source_id": "src-24afae53f1c4a71c-c5948a7096694ce8",
+      "imports": [
+        "EndpointMoment"
+      ]
+    },
+    {
+      "module": "BernoulliWord",
+      "source_id": "src-24afae53f1c4a71c-f847a9aa3322fa53",
+      "imports": [
+        "AnnularLiteral"
+      ]
+    },
+    {
+      "module": "GrowthMoment",
+      "source_id": "src-24afae53f1c4a71c-3ae1204839ebd647",
+      "imports": [
+        "BernoulliWord"
+      ]
+    },
+    {
+      "module": "BayesBridge",
+      "source_id": "src-24afae53f1c4a71c-32884e46a8402177",
+      "imports": [
+        "GrowthMoment"
+      ]
+    },
+    {
+      "module": "CentredBernoulli",
+      "source_id": "src-24afae53f1c4a71c-d1e4900d61cfa0cc",
+      "imports": [
+        "BayesBridge"
+      ]
+    },
+    {
+      "module": "FiniteWordDeviation",
+      "source_id": "src-24afae53f1c4a71c-e38bb85a00f92030",
+      "imports": [
+        "CentredBernoulli"
+      ]
+    },
+    {
+      "module": "RawWordLaw",
+      "source_id": "src-24afae53f1c4a71c-bce7a830770c316d",
+      "imports": [
+        "EmpiricalTailBounds",
+        "FiniteWordDeviation"
+      ]
+    },
+    {
+      "module": "EmpiricalGeometry",
+      "source_id": "src-24afae53f1c4a71c-d9df38d3049ef265",
+      "imports": [
+        "CentredBernoulli"
+      ]
+    },
+    {
+      "module": "RawPrefixDeviation",
+      "source_id": "src-24afae53f1c4a71c-af8dbf5f4759a92a",
+      "imports": [
+        "RawWordLaw",
+        "EmpiricalGeometry"
+      ]
+    },
+    {
+      "module": "RawExponentialTail",
+      "source_id": "src-24afae53f1c4a71c-87521174cf53e79e",
+      "imports": [
+        "RawPrefixDeviation"
+      ]
+    },
+    {
+      "module": "RawUnrestrictedDeviation",
+      "source_id": "src-24afae53f1c4a71c-7c33897ddb6343cc",
+      "imports": [
+        "RawExponentialTail"
+      ]
+    }
+  ],
+  "module_order": [
+    "GenericFiniteQueryLocality",
+    "GenericFiniteQueryMeasure",
+    "PolicyRowEvaluator",
+    "PolicyTranscriptFiber",
+    "FeedbackRequests",
+    "ProductObservationLaw",
+    "IndependentProductFamilies",
+    "GenericQueryReference",
+    "PolicyRowLaw",
+    "FeedbackFiberProbability",
+    "PolicyCylinderProbability",
+    "HistoryPathConsistency",
+    "PolicyObservedLaw",
+    "PolicyTraceBinding",
+    "StackActionLaw",
+    "RawEmpiricalRows",
+    "EmpiricalTailBounds",
+    "EndpointMoment",
+    "AnnularLiteral",
+    "BernoulliWord",
+    "GrowthMoment",
+    "BayesBridge",
+    "CentredBernoulli",
+    "FiniteWordDeviation",
+    "RawWordLaw",
+    "EmpiricalGeometry",
+    "RawPrefixDeviation",
+    "RawExponentialTail",
+    "RawUnrestrictedDeviation"
+  ],
+  "targets": [
+    {
+      "name": "HiddenParity.Exponential.exp_pair_dominates_one_le",
+      "module": "FiniteWordDeviation"
+    },
+    {
+      "name": "HiddenParity.Exponential.realDeviation",
+      "module": "FiniteWordDeviation"
+    },
+    {
+      "name": "HiddenParity.Exponential.realDeviation_le",
+      "module": "FiniteWordDeviation"
+    },
+    {
+      "name": "HiddenParity.Exponential.symbolWord",
+      "module": "RawWordLaw"
+    },
+    {
+      "name": "HiddenParity.Exponential.symbolWord_measurable",
+      "module": "RawWordLaw"
+    },
+    {
+      "name": "HiddenParity.Exponential.row_probability_le_one",
+      "module": "RawWordLaw"
+    },
+    {
+      "name": "HiddenParity.Exponential.symbolWord_probability",
+      "module": "RawWordLaw"
+    },
+    {
+      "name": "HiddenParity.Exponential.symbolWord_law",
+      "module": "RawWordLaw"
+    },
+    {
+      "name": "HiddenParity.Exponential.empiricalMean_symbolWord",
+      "module": "RawPrefixDeviation"
+    },
+    {
+      "name": "HiddenParity.Exponential.word_deviation_probability",
+      "module": "RawPrefixDeviation"
+    },
+    {
+      "name": "HiddenParity.Exponential.seeded_rawFrequency_exponential",
+      "module": "RawPrefixDeviation"
+    },
+    {
+      "name": "HiddenParity.Exponential.exponential_tail_sum",
+      "module": "RawExponentialTail"
+    },
+    {
+      "name": "HiddenParity.Exponential.seeded_rawTailDeviation_exponential",
+      "module": "RawExponentialTail"
+    },
+    {
+      "name": "HiddenParity.Exponential.rawTailDeviation_mono_tolerance",
+      "module": "RawUnrestrictedDeviation"
+    },
+    {
+      "name": "HiddenParity.Exponential.seeded_rawTailDeviation_exponential_all_positive",
+      "module": "RawUnrestrictedDeviation"
+    }
+  ],
+  "pins": {
+    "lean_version": "4.19.0",
+    "lean_binary_sha256": "92c3d35b5bfaa5e0fea413a775d504cf46cd95e1345df61c2274f76779e7e023",
+    "packages": [
+      {
+        "name": "mathlib",
+        "revision": "c44e0c8ee63ca166450922a373c7409c5d26b00b"
+      },
+      {
+        "name": "plausible",
+        "revision": "77e08eddc486491d7b9e470926b3dbe50319451a"
+      },
+      {
+        "name": "LeanSearchClient",
+        "revision": "25078369972d295301f5a1e53c3e5850cf6d9d4c"
+      },
+      {
+        "name": "importGraph",
+        "revision": "e6a9f0f5ee3ccf7443a0070f92b62f8db12ae82b"
+      },
+      {
+        "name": "proofwidgets",
+        "revision": "c4919189477c3221e6a204008998b0d724f49904"
+      },
+      {
+        "name": "aesop",
+        "revision": "5d50b08dedd7d69b3d9b3176e0d58a23af228884"
+      },
+      {
+        "name": "Qq",
+        "revision": "fa4f7f15d97591a9cf3aa7724ba371c7fc6dda02"
+      },
+      {
+        "name": "batteries",
+        "revision": "f5d04a9c4973d401c8c92500711518f7c656f034"
+      },
+      {
+        "name": "Cli",
+        "revision": "02dbd02bc00ec4916e99b04b2245b30200e200d0"
+      }
+    ]
+  },
+  "official_imports": [
+    {
+      "module": "Mathlib",
+      "repository": "mathlib",
+      "source": "Mathlib.lean",
+      "sha256": "b0518254279fabf0c6a920804e684536b0f5e2bd1cb6318d0609eb563413f20a"
+    },
+    {
+      "module": "Mathlib.Probability.Kernel.IonescuTulcea.Traj",
+      "repository": "mathlib",
+      "source": "Mathlib/Probability/Kernel/IonescuTulcea/Traj.lean",
+      "sha256": "c565dd9bdc17c21181cd5cbe41055aa2889210745bc463ff0596a01c580ccbcb"
+    },
+    {
+      "module": "Mathlib.Probability.ProductMeasure",
+      "repository": "mathlib",
+      "source": "Mathlib/Probability/ProductMeasure.lean",
+      "sha256": "f8af06e87e2e28916f0fa8a455f792ded4b85a22e1dea5e1c6f9cac1d31b9830"
+    },
+    {
+      "module": "Mathlib.Probability.StrongLaw",
+      "repository": "mathlib",
+      "source": "Mathlib/Probability/StrongLaw.lean",
+      "sha256": "3c3768b70c3779bea384592bb548bc06de2d25af315e0a0d59a1742b0807717c"
+    }
+  ],
+  "driver": {
+    "source_id": "src-24afae53f1c4a71c-996fd2e09c80ab70",
+    "lean_argument": "EXECUTABLE"
+  },
+  "controls": "ORIGINAL_DRIVER_REQUIRED",
+  "classification": "CURRENT_EVIDENCE"
+}

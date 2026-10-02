@@ -1,0 +1,1342 @@
+{
+  "status": "FRESH_KERNEL_COMPONENTS",
+  "exit_code": 0,
+  "kernel_verified": true,
+  "suite_id": "866c6ff6e74a-uniform-computability",
+  "suite_sha256": "6f73bfb5097516f59b02dbecbc13a88f1580c66a63a264862f9605d892ec391c",
+  "source_hashes": {
+    "CodecVarint": "ed635e3754d8c70655cc8db31392eff9c979c9015f771b50de09b7231f54c3a6",
+    "P02A2.ObserverCore": "e032088073d2fd667f568de952afba3f2b84aa500d4303ff37268e125fd363e5",
+    "CodecExpr": "5682f0b6f6c94c7c261e096f0a78035c3835c25c32aea50973a861a85af896c3",
+    "CodecStmt": "136772eff0be842ab0007874f84860141662876fcc11a4d02bdb6117004d2d08",
+    "CodecNumeric": "2716ca254d871a96fa149b3809a55a809d13e2c23a3fd67a63d19a240b79de01",
+    "LoopRenaming": "3fa0d92a221427c1ffdde94cbb34374952112e7a5d6e50e26778ac7aefbdbe89",
+    "LoopPrimrec": "f01b305287f3ae1d977ee72e62e9ea1ab4068358a324933b38572f1c66f02998",
+    "PRProgram": "9c66d134902dd8b5d3ee8b9b3ceb30e20daebc5b6a714489b8d95f09c9abce9f",
+    "PRComposition": "8549db02bf449e14c0d5d6520380a4f2bdae040cef77f11a573ac31ea08f940d",
+    "PRRecursion": "7a577b8a7c506feb4e5243a577fd09386b2d208ecc8221b8d69a1990b50cb63a",
+    "PRHeadRecursion": "6a0037a55a1739be1365f08fcd839c8be9de58a19f85e739e6890faa09db9b94",
+    "PRDerivation": "3141c21d177da58b90fbb2c268b6a9b4ef334785f155c0668cff77fbad37ce86",
+    "PRCoverage": "22b2f657fd787eef93957975e38b184d201648949ccdd875e7ae12432279e4e3",
+    "PRSpecialize": "beffce2a55f2f2ffcfbd71ef073e72d5fb022273e292798e18ea9b4a58b5a980",
+    "CodecProgram": "dc6594471accf19077201c1c33dd70e80f7c374c31316fbd478eed62245ef1ae",
+    "CodecPrimrec": "08f5ef87a655e07fda4c6fd81330789541a18cf70ef31d0bd55ea082701ec9c9",
+    "UniformComputabilityNumeric": "31864c8129fab9ef98cc377ef647f9cee8323a2319a3756a1504ce2e8ebe8f0c",
+    "UniformComputabilityMachine": "4f137dd91e8d56c084dd0a664f182b4fe3f09356eef1fa1fd08102c7e514df73",
+    "UniformComputabilitySyntax": "ba64a8c6745afaa3ec7579b9412db90f66c241f0036ecdc259b296ec48c17540",
+    "UniformStmtCoding": "f9b92e7e1aed4e139e0f2aa5744fa12e1a03d5961345aad59bdc07e051cd6535",
+    "UniformStmtCodingStep": "35c9adbb36f904f3e207ba538ed61a90924a9901ac3b01d202575e0e6842237c",
+    "UniformStmtCodingProgram": "b35aee95ada4bc6c97fab8942b9de4fc3d9dbf69a702ee3d74c0296e2975d68b",
+    "UniformComputabilityReadMany": "58d3441f4832f42dd2224ba51aea7f39403cc1fe52bda7da7726c9254555b6c5",
+    "UniformVarintPrimrec": "0a753dd580e113d766759f99f40bc116dea59ced1d2ea6d1a3edd63d487cc415",
+    "UniformComputabilityExprConstructors": "033137a20fb42ef102cdd733b821777d662baf1827fa2c56f54c33a3db69d54a",
+    "UniformParserCombinators": "db663be2558fe4429ad340627e6d41f934e3d8f8fa83678c024a00fd24b8c830",
+    "UniformComputabilityParserBounds": "8aaf35e24f11aba46887c9084fb139910077465b4d7e1d71f4dd022b85bdbfd6",
+    "UniformComputabilityStmtParser": "e4039eb1aa7110db405695d48806e6528f2e64ef5e82cd730fb0b3e3ed1427cc",
+    "UniformStmtLayerPrimrec": "b87e772a81836153a55e61f77b7c0d383059b15dad86d9212fc275403e596b62",
+    "UniformExprParser": "ea9073dc5830304417d9c6e993f5ff6639c4ebeb807a8f2780c06f9665b3b23e",
+    "UniformExprLayerPrimrec": "a6c3adcaeafd1ec04f98207fe70fb1c6ca45f26b0766b3d8c93df4c3ab613b73",
+    "UniformExprParserPrimrec": "b99e84db7064e5134b5f174bbbe5155625782092e25f39606cb435103e259f92",
+    "UniformStmtParserPrimrec": "f28d1911bdbc216241b713c2752954d36235cd040c519fa2725ff74ed4e49de1",
+    "UniformStmtCodingEvaluation": "578f35cfd7857f9f1df2e004f1eef08d6bf9c20fcc00de03abc40baec425fd3b",
+    "UniformDecoderPrimrec": "373593d1d9b371b29d72414f2e2142e528441b33b723138be1352d3883b93808"
+  },
+  "post_source_hashes": {
+    "CodecVarint": "ed635e3754d8c70655cc8db31392eff9c979c9015f771b50de09b7231f54c3a6",
+    "P02A2.ObserverCore": "e032088073d2fd667f568de952afba3f2b84aa500d4303ff37268e125fd363e5",
+    "CodecExpr": "5682f0b6f6c94c7c261e096f0a78035c3835c25c32aea50973a861a85af896c3",
+    "CodecStmt": "136772eff0be842ab0007874f84860141662876fcc11a4d02bdb6117004d2d08",
+    "CodecNumeric": "2716ca254d871a96fa149b3809a55a809d13e2c23a3fd67a63d19a240b79de01",
+    "LoopRenaming": "3fa0d92a221427c1ffdde94cbb34374952112e7a5d6e50e26778ac7aefbdbe89",
+    "LoopPrimrec": "f01b305287f3ae1d977ee72e62e9ea1ab4068358a324933b38572f1c66f02998",
+    "PRProgram": "9c66d134902dd8b5d3ee8b9b3ceb30e20daebc5b6a714489b8d95f09c9abce9f",
+    "PRComposition": "8549db02bf449e14c0d5d6520380a4f2bdae040cef77f11a573ac31ea08f940d",
+    "PRRecursion": "7a577b8a7c506feb4e5243a577fd09386b2d208ecc8221b8d69a1990b50cb63a",
+    "PRHeadRecursion": "6a0037a55a1739be1365f08fcd839c8be9de58a19f85e739e6890faa09db9b94",
+    "PRDerivation": "3141c21d177da58b90fbb2c268b6a9b4ef334785f155c0668cff77fbad37ce86",
+    "PRCoverage": "22b2f657fd787eef93957975e38b184d201648949ccdd875e7ae12432279e4e3",
+    "PRSpecialize": "beffce2a55f2f2ffcfbd71ef073e72d5fb022273e292798e18ea9b4a58b5a980",
+    "CodecProgram": "dc6594471accf19077201c1c33dd70e80f7c374c31316fbd478eed62245ef1ae",
+    "CodecPrimrec": "08f5ef87a655e07fda4c6fd81330789541a18cf70ef31d0bd55ea082701ec9c9",
+    "UniformComputabilityNumeric": "31864c8129fab9ef98cc377ef647f9cee8323a2319a3756a1504ce2e8ebe8f0c",
+    "UniformComputabilityMachine": "4f137dd91e8d56c084dd0a664f182b4fe3f09356eef1fa1fd08102c7e514df73",
+    "UniformComputabilitySyntax": "ba64a8c6745afaa3ec7579b9412db90f66c241f0036ecdc259b296ec48c17540",
+    "UniformStmtCoding": "f9b92e7e1aed4e139e0f2aa5744fa12e1a03d5961345aad59bdc07e051cd6535",
+    "UniformStmtCodingStep": "35c9adbb36f904f3e207ba538ed61a90924a9901ac3b01d202575e0e6842237c",
+    "UniformStmtCodingProgram": "b35aee95ada4bc6c97fab8942b9de4fc3d9dbf69a702ee3d74c0296e2975d68b",
+    "UniformComputabilityReadMany": "58d3441f4832f42dd2224ba51aea7f39403cc1fe52bda7da7726c9254555b6c5",
+    "UniformVarintPrimrec": "0a753dd580e113d766759f99f40bc116dea59ced1d2ea6d1a3edd63d487cc415",
+    "UniformComputabilityExprConstructors": "033137a20fb42ef102cdd733b821777d662baf1827fa2c56f54c33a3db69d54a",
+    "UniformParserCombinators": "db663be2558fe4429ad340627e6d41f934e3d8f8fa83678c024a00fd24b8c830",
+    "UniformComputabilityParserBounds": "8aaf35e24f11aba46887c9084fb139910077465b4d7e1d71f4dd022b85bdbfd6",
+    "UniformComputabilityStmtParser": "e4039eb1aa7110db405695d48806e6528f2e64ef5e82cd730fb0b3e3ed1427cc",
+    "UniformStmtLayerPrimrec": "b87e772a81836153a55e61f77b7c0d383059b15dad86d9212fc275403e596b62",
+    "UniformExprParser": "ea9073dc5830304417d9c6e993f5ff6639c4ebeb807a8f2780c06f9665b3b23e",
+    "UniformExprLayerPrimrec": "a6c3adcaeafd1ec04f98207fe70fb1c6ca45f26b0766b3d8c93df4c3ab613b73",
+    "UniformExprParserPrimrec": "b99e84db7064e5134b5f174bbbe5155625782092e25f39606cb435103e259f92",
+    "UniformStmtParserPrimrec": "f28d1911bdbc216241b713c2752954d36235cd040c519fa2725ff74ed4e49de1",
+    "UniformStmtCodingEvaluation": "578f35cfd7857f9f1df2e004f1eef08d6bf9c20fcc00de03abc40baec425fd3b",
+    "UniformDecoderPrimrec": "373593d1d9b371b29d72414f2e2142e528441b33b723138be1352d3883b93808"
+  },
+  "compiler_sha256": "92c3d35b5bfaa5e0fea413a775d504cf46cd95e1345df61c2274f76779e7e023",
+  "pins": {
+    "lean_version": "4.19.0",
+    "lean_binary_sha256": "92c3d35b5bfaa5e0fea413a775d504cf46cd95e1345df61c2274f76779e7e023",
+    "packages": [
+      {
+        "name": "mathlib",
+        "revision": "c44e0c8ee63ca166450922a373c7409c5d26b00b"
+      },
+      {
+        "name": "plausible",
+        "revision": "77e08eddc486491d7b9e470926b3dbe50319451a"
+      },
+      {
+        "name": "LeanSearchClient",
+        "revision": "25078369972d295301f5a1e53c3e5850cf6d9d4c"
+      },
+      {
+        "name": "importGraph",
+        "revision": "e6a9f0f5ee3ccf7443a0070f92b62f8db12ae82b"
+      },
+      {
+        "name": "proofwidgets",
+        "revision": "c4919189477c3221e6a204008998b0d724f49904"
+      },
+      {
+        "name": "aesop",
+        "revision": "5d50b08dedd7d69b3d9b3176e0d58a23af228884"
+      },
+      {
+        "name": "Qq",
+        "revision": "fa4f7f15d97591a9cf3aa7724ba371c7fc6dda02"
+      },
+      {
+        "name": "batteries",
+        "revision": "f5d04a9c4973d401c8c92500711518f7c656f034"
+      },
+      {
+        "name": "Cli",
+        "revision": "02dbd02bc00ec4916e99b04b2245b30200e200d0"
+      }
+    ]
+  },
+  "modules": [
+    {
+      "module": "CodecVarint",
+      "source_sha256": "ed635e3754d8c70655cc8db31392eff9c979c9015f771b50de09b7231f54c3a6",
+      "object_sha256": "11617c6772236ec892e80bdc0b1e83ce071956c81905b9ae1933c11d4dc41af6",
+      "transitive_source_fingerprint": "c1ddc3ea3791547c992d41d6b5b93fc35faf056e8bff59dde472f2a59c1a0b7a",
+      "status": "FRESH_COMPILE",
+      "exit_code": 0
+    },
+    {
+      "module": "P02A2.ObserverCore",
+      "source_sha256": "e032088073d2fd667f568de952afba3f2b84aa500d4303ff37268e125fd363e5",
+      "object_sha256": "167ff29621e3d1e034713d43e3e48fd5f71830a1931cfcf0cca6e0920c4d3170",
+      "transitive_source_fingerprint": "02325b8d037b8bc24bae5d5c35f594b0f0510752d0efc7da8fc8dd525626ac57",
+      "status": "FRESH_COMPILE",
+      "exit_code": 0
+    },
+    {
+      "module": "CodecExpr",
+      "source_sha256": "5682f0b6f6c94c7c261e096f0a78035c3835c25c32aea50973a861a85af896c3",
+      "object_sha256": "b3f65a8629802eeef77471c033ac4174506c726197e8e7f244046cde5d8f348e",
+      "transitive_source_fingerprint": "3ef436acfee86a95151de01af7f8669afe1013a9bccfa78d28204eec6ebb79a7",
+      "status": "FRESH_COMPILE",
+      "exit_code": 0
+    },
+    {
+      "module": "CodecStmt",
+      "source_sha256": "136772eff0be842ab0007874f84860141662876fcc11a4d02bdb6117004d2d08",
+      "object_sha256": "05c16997c4f1a6f77f6db67b5cadbc4d64e8a7a694abd84fc410590c33c63215",
+      "transitive_source_fingerprint": "06ac1c586292d378138c57dcbe1030f3c2f7f29741472629ed0d664a07f785f9",
+      "status": "FRESH_COMPILE",
+      "exit_code": 0
+    },
+    {
+      "module": "CodecNumeric",
+      "source_sha256": "2716ca254d871a96fa149b3809a55a809d13e2c23a3fd67a63d19a240b79de01",
+      "object_sha256": "03dc35e5a783c2c5ac69b0b938f0681b8045877c8716d019984cb74018754024",
+      "transitive_source_fingerprint": "d34e44b677a7a6aedc62c6b3963dab9804b71794d4cdb676f2b70f920f4d04c2",
+      "status": "FRESH_COMPILE",
+      "exit_code": 0
+    },
+    {
+      "module": "LoopRenaming",
+      "source_sha256": "3fa0d92a221427c1ffdde94cbb34374952112e7a5d6e50e26778ac7aefbdbe89",
+      "object_sha256": "e03847ec603e5538ed2864ec38e828d6059d6849a47a1736ade4fd0e8991e997",
+      "transitive_source_fingerprint": "90a97adb1faa09a721bd1f681513fd31ae5202f2bff16ca20226092c452225ad",
+      "status": "FRESH_COMPILE",
+      "exit_code": 0
+    },
+    {
+      "module": "LoopPrimrec",
+      "source_sha256": "f01b305287f3ae1d977ee72e62e9ea1ab4068358a324933b38572f1c66f02998",
+      "object_sha256": "9afc76fac8381466c35132938de5fd9ce5b94b0076c10bb97c79b604100ee710",
+      "transitive_source_fingerprint": "0339fb08d3df15f9826789f471ad636fc4868fa661bdb88832b6d4cc405cd60d",
+      "status": "FRESH_COMPILE",
+      "exit_code": 0
+    },
+    {
+      "module": "PRProgram",
+      "source_sha256": "9c66d134902dd8b5d3ee8b9b3ceb30e20daebc5b6a714489b8d95f09c9abce9f",
+      "object_sha256": "5dbb3141ca25758cf56e47752c0d2433bfd4e8099a72e28765b3fb4fd4f4fd7f",
+      "transitive_source_fingerprint": "c445dbfad8b1d7d78739220dbba6852bcd611e1bff100d1d9077aebe5196e20e",
+      "status": "FRESH_COMPILE",
+      "exit_code": 0
+    },
+    {
+      "module": "PRComposition",
+      "source_sha256": "8549db02bf449e14c0d5d6520380a4f2bdae040cef77f11a573ac31ea08f940d",
+      "object_sha256": "f69e256581595883b6e7f6ef9dc2129e09363dfa0bb93ff289d2637f30b1427b",
+      "transitive_source_fingerprint": "f673bb5428194f4b5bf5747911d0bbb50299a48f7cda340adb97741f1958d0a0",
+      "status": "FRESH_COMPILE",
+      "exit_code": 0
+    },
+    {
+      "module": "PRRecursion",
+      "source_sha256": "7a577b8a7c506feb4e5243a577fd09386b2d208ecc8221b8d69a1990b50cb63a",
+      "object_sha256": "bb9f4f175f7863745ce11a5023640affc72af717e38b31403afbda38def55291",
+      "transitive_source_fingerprint": "7248ac8add77960dbdc7c6635b726c08ae909989e060adf724e8c9c444f6b532",
+      "status": "FRESH_COMPILE",
+      "exit_code": 0
+    },
+    {
+      "module": "PRHeadRecursion",
+      "source_sha256": "6a0037a55a1739be1365f08fcd839c8be9de58a19f85e739e6890faa09db9b94",
+      "object_sha256": "8a7273f5a59f79f58b66047ce06fc7384c61545224c8bedb152e0c48326b2cff",
+      "transitive_source_fingerprint": "96591c1b83644e40f24243c8d6b13b655d4447db903afb91f3a8ffbe7ffeea3e",
+      "status": "FRESH_COMPILE",
+      "exit_code": 0
+    },
+    {
+      "module": "PRDerivation",
+      "source_sha256": "3141c21d177da58b90fbb2c268b6a9b4ef334785f155c0668cff77fbad37ce86",
+      "object_sha256": "f0aa3a4a95f1d74c5b11d2dfde0c5a24b8bd2aed75161fda75c4e488aa96e949",
+      "transitive_source_fingerprint": "727193695e7c56da9b0bacb917a7409ab632658b8d763f8e223c9f8730f21fba",
+      "status": "FRESH_COMPILE",
+      "exit_code": 0
+    },
+    {
+      "module": "PRCoverage",
+      "source_sha256": "22b2f657fd787eef93957975e38b184d201648949ccdd875e7ae12432279e4e3",
+      "object_sha256": "a7978fca16c45528085858de4e51403bd62eb607675f15f4e57e0cb99641801c",
+      "transitive_source_fingerprint": "48a9d509cd411d19a0353523025e8a74eded9a6ad0c6b1aa77ffe872609c32ce",
+      "status": "FRESH_COMPILE",
+      "exit_code": 0
+    },
+    {
+      "module": "PRSpecialize",
+      "source_sha256": "beffce2a55f2f2ffcfbd71ef073e72d5fb022273e292798e18ea9b4a58b5a980",
+      "object_sha256": "9c449d262d3fe977915f987b34836d8b66062ed836c24ddb55fcb3de45e8f321",
+      "transitive_source_fingerprint": "0db9ed53437d9e882a1f356af6616b9fc846ab4b4a00c926ff8f3f318ad2b647",
+      "status": "FRESH_COMPILE",
+      "exit_code": 0
+    },
+    {
+      "module": "CodecProgram",
+      "source_sha256": "dc6594471accf19077201c1c33dd70e80f7c374c31316fbd478eed62245ef1ae",
+      "object_sha256": "7a2d6f14507280d0e5d18813ca6a49992cd097d26d3f869abbc20f5226722a5b",
+      "transitive_source_fingerprint": "7fae8c70f177d1ffd729f1dbbfcf8b4540c93d8c17aa84d3e39debdc2fb2bdca",
+      "status": "FRESH_COMPILE",
+      "exit_code": 0
+    },
+    {
+      "module": "CodecPrimrec",
+      "source_sha256": "08f5ef87a655e07fda4c6fd81330789541a18cf70ef31d0bd55ea082701ec9c9",
+      "object_sha256": "b9baeaf7d9a6f04e836192a3c4f347a55475f1a46c722dc3b4d4163d116bd833",
+      "transitive_source_fingerprint": "8732cad7306c4443e48db5cd6cd57971a0fe8c25b3c6c24bc546f93adbc09b4b",
+      "status": "FRESH_COMPILE",
+      "exit_code": 0
+    },
+    {
+      "module": "UniformComputabilityNumeric",
+      "source_sha256": "31864c8129fab9ef98cc377ef647f9cee8323a2319a3756a1504ce2e8ebe8f0c",
+      "object_sha256": "9cdc544a6f4df5847ea804986b9e6947ac70938e1353116f75b2eca87284d156",
+      "transitive_source_fingerprint": "6393848202c7b43b9b1cfc5a9afac3dd02f7a869e54bdfbf1efbb3581f37a95c",
+      "status": "FRESH_COMPILE",
+      "exit_code": 0
+    },
+    {
+      "module": "UniformComputabilityMachine",
+      "source_sha256": "4f137dd91e8d56c084dd0a664f182b4fe3f09356eef1fa1fd08102c7e514df73",
+      "object_sha256": "dd327f837f0fd61613ed359454720dcd5f40b2e3d255516912f1993c513051b3",
+      "transitive_source_fingerprint": "9644770d2b4085d5f228891afde8cdf53bd162486ca6de65f3af256c60ba4e4a",
+      "status": "FRESH_COMPILE",
+      "exit_code": 0
+    },
+    {
+      "module": "UniformComputabilitySyntax",
+      "source_sha256": "ba64a8c6745afaa3ec7579b9412db90f66c241f0036ecdc259b296ec48c17540",
+      "object_sha256": "fb194206b26b0c839021b309eee48d512fb8f0a340fba64eeb221c06f0b6d8a0",
+      "transitive_source_fingerprint": "73d6da80cc06def5d8c01ed604812edc71e55d74e24b6860da225536d5c3ebee",
+      "status": "FRESH_COMPILE",
+      "exit_code": 0
+    },
+    {
+      "module": "UniformStmtCoding",
+      "source_sha256": "f9b92e7e1aed4e139e0f2aa5744fa12e1a03d5961345aad59bdc07e051cd6535",
+      "object_sha256": "608a26896cfeb89c251acc082e940cf30a842e8b77c6bf993df1c36b63858bae",
+      "transitive_source_fingerprint": "6bef6433c2b4f84db470311ea233ff23ba7f84a8b57585334a4f6145549da4aa",
+      "status": "FRESH_COMPILE",
+      "exit_code": 0
+    },
+    {
+      "module": "UniformStmtCodingStep",
+      "source_sha256": "35c9adbb36f904f3e207ba538ed61a90924a9901ac3b01d202575e0e6842237c",
+      "object_sha256": "74bb3e05d973907b6ed4a6d97f91c32c9dcad446c3d6d1cca5db51b4aa501ac3",
+      "transitive_source_fingerprint": "d4cbd8de8694c11ed04f9b4a4ca0dc263243cc374a2836f50d0a5c9fb36499a3",
+      "status": "FRESH_COMPILE",
+      "exit_code": 0
+    },
+    {
+      "module": "UniformStmtCodingProgram",
+      "source_sha256": "b35aee95ada4bc6c97fab8942b9de4fc3d9dbf69a702ee3d74c0296e2975d68b",
+      "object_sha256": "c0a186433a3eba37a2f1db061c24aad1c10d51d9397311c787738afb9c2e83a2",
+      "transitive_source_fingerprint": "0589b52fa319326189f2278b1c7b9f688e2208e13c80a59ada3e37b57c2a7c3f",
+      "status": "FRESH_COMPILE",
+      "exit_code": 0
+    },
+    {
+      "module": "UniformComputabilityReadMany",
+      "source_sha256": "58d3441f4832f42dd2224ba51aea7f39403cc1fe52bda7da7726c9254555b6c5",
+      "object_sha256": "6474ee263f4a553310929ea8db7879df428b7481c299c5f098447ff7a4e57f68",
+      "transitive_source_fingerprint": "f896306d3b3be93c477a9e08514f2a320e830326fd5e245114985fdf9f0bbc2a",
+      "status": "FRESH_COMPILE",
+      "exit_code": 0
+    },
+    {
+      "module": "UniformVarintPrimrec",
+      "source_sha256": "0a753dd580e113d766759f99f40bc116dea59ced1d2ea6d1a3edd63d487cc415",
+      "object_sha256": "e16e4f7bb2c9d32e602458b8fd261b1800182faf6d67c7f4a5e2e48f312e2fe7",
+      "transitive_source_fingerprint": "3143c05205cb4d575e182b5f3a8a4ba234ed0bae6d4a56a46aae2dc1dd1c88b8",
+      "status": "FRESH_COMPILE",
+      "exit_code": 0
+    },
+    {
+      "module": "UniformComputabilityExprConstructors",
+      "source_sha256": "033137a20fb42ef102cdd733b821777d662baf1827fa2c56f54c33a3db69d54a",
+      "object_sha256": "d70a580eab29b522ba44001fc3580e62c05b03b06e57103eaf3e073b4de52d8d",
+      "transitive_source_fingerprint": "2b06d7c4b4ead7e5f6e4e8dd04ceb2820856b48eb463f856fe68417011b103d0",
+      "status": "FRESH_COMPILE",
+      "exit_code": 0
+    },
+    {
+      "module": "UniformParserCombinators",
+      "source_sha256": "db663be2558fe4429ad340627e6d41f934e3d8f8fa83678c024a00fd24b8c830",
+      "object_sha256": "254816667f109cf302659f9fb0d0232fc37b3326a2096cc05d0480b321bf531d",
+      "transitive_source_fingerprint": "5a56fd1889fbd04acc01f23fbc1f2f9e534c809eda75b38978502acf40fb9458",
+      "status": "FRESH_COMPILE",
+      "exit_code": 0
+    },
+    {
+      "module": "UniformComputabilityParserBounds",
+      "source_sha256": "8aaf35e24f11aba46887c9084fb139910077465b4d7e1d71f4dd022b85bdbfd6",
+      "object_sha256": "152d3992f08cf77e60d9425a448f399181dd8208f1a41820779cc35cf7506c13",
+      "transitive_source_fingerprint": "29a0d2b4d3d6ef6a43be65bfdf4049bfdf9f7d34f48be209d7bae61c0a5b0867",
+      "status": "FRESH_COMPILE",
+      "exit_code": 0
+    },
+    {
+      "module": "UniformComputabilityStmtParser",
+      "source_sha256": "e4039eb1aa7110db405695d48806e6528f2e64ef5e82cd730fb0b3e3ed1427cc",
+      "object_sha256": "25e9edb55bee7f92254ce99bc7fd300a2c15a702d6f22a324c4ff9de925a4e79",
+      "transitive_source_fingerprint": "2ffbcda0a5456bd8849117e5b7cb9b136ee93014724ca5569d33c3a3fe25fb86",
+      "status": "FRESH_COMPILE",
+      "exit_code": 0
+    },
+    {
+      "module": "UniformStmtLayerPrimrec",
+      "source_sha256": "b87e772a81836153a55e61f77b7c0d383059b15dad86d9212fc275403e596b62",
+      "object_sha256": "cb141fe47b6f63ad218491dddc6b5b0e7a9612c0b54b19fa4e250a93ee56dde6",
+      "transitive_source_fingerprint": "09ba5cb47de5ef16d1c807a4aae7f68149e4ee7cc69ad9d3d2be130e1550a8e9",
+      "status": "FRESH_COMPILE",
+      "exit_code": 0
+    },
+    {
+      "module": "UniformExprParser",
+      "source_sha256": "ea9073dc5830304417d9c6e993f5ff6639c4ebeb807a8f2780c06f9665b3b23e",
+      "object_sha256": "d750cdfac6d10b80b02a64357764b93c784da1b064a55fae52d1abc40ab3c4cc",
+      "transitive_source_fingerprint": "cab5e6d872847d7839f34d1433c29fb2e29b509c9a3b2327b957c43ca63393fe",
+      "status": "FRESH_COMPILE",
+      "exit_code": 0
+    },
+    {
+      "module": "UniformExprLayerPrimrec",
+      "source_sha256": "a6c3adcaeafd1ec04f98207fe70fb1c6ca45f26b0766b3d8c93df4c3ab613b73",
+      "object_sha256": "076af13f3e577639eec2217412f5cdcf25162e9a85c79cbabb397562c3e2ffe1",
+      "transitive_source_fingerprint": "098e3689cb76a10f9a190084ae034490cfdf84c73b6235b0c13b7a867fca0e8f",
+      "status": "FRESH_COMPILE",
+      "exit_code": 0
+    },
+    {
+      "module": "UniformExprParserPrimrec",
+      "source_sha256": "b99e84db7064e5134b5f174bbbe5155625782092e25f39606cb435103e259f92",
+      "object_sha256": "fa1c5626e510f34f31f77f12d0d817afb46b8913a7e30c069bb058142cd38916",
+      "transitive_source_fingerprint": "1439bf1cd65a4ff4b1d44966f1e3c5a8190270c8abb1bd256abd7b19ec6f2821",
+      "status": "FRESH_COMPILE",
+      "exit_code": 0
+    },
+    {
+      "module": "UniformStmtParserPrimrec",
+      "source_sha256": "f28d1911bdbc216241b713c2752954d36235cd040c519fa2725ff74ed4e49de1",
+      "object_sha256": "04ec43f2686b7c939ac2c825a9b2613a008a3068cd26bbff67adc6fe28a59919",
+      "transitive_source_fingerprint": "0e6bd0b5457514044bb958b477c8a35f2ff7e2dbda11b82cbc9bdca6a66aaf13",
+      "status": "FRESH_COMPILE",
+      "exit_code": 0
+    },
+    {
+      "module": "UniformStmtCodingEvaluation",
+      "source_sha256": "578f35cfd7857f9f1df2e004f1eef08d6bf9c20fcc00de03abc40baec425fd3b",
+      "object_sha256": "c6a2bfd97f838a3ec949860fed0d0fdc49c1a9d957224a83120f1822ec45b8e6",
+      "transitive_source_fingerprint": "03f47c785e9fcfd235eae9da5d5a3a8af1facd55ca1db990c2bec09bb1cfbd74",
+      "status": "FRESH_COMPILE",
+      "exit_code": 0
+    },
+    {
+      "module": "UniformDecoderPrimrec",
+      "source_sha256": "373593d1d9b371b29d72414f2e2142e528441b33b723138be1352d3883b93808",
+      "object_sha256": "8bba04b12400a67ad27fef1ec3411e7609ac7ec725bd8d163858aac7b5212dfd",
+      "transitive_source_fingerprint": "f8b28760cbce46bd83e5e510930e5917897621cbefb7c559c209252de312a8d7",
+      "status": "FRESH_COMPILE",
+      "exit_code": 0
+    }
+  ],
+  "readbacks": {
+    "P02.Codec.UniformComputability.exprOfNat_exprEncode": {
+      "type_sha256": "588af99f6d163171136037e8f77f7ab5558b7f9a298e2fce606da3a1aa6123c7",
+      "axioms": [
+        "Classical.choice",
+        "Quot.sound",
+        "propext"
+      ]
+    },
+    "P02.Codec.UniformComputability.exprEncode_exprOfNat": {
+      "type_sha256": "faefbb72be17976bc01f16858448ab667d9e4bdcec0eb3c208c5dca0eab5d88a",
+      "axioms": [
+        "Classical.choice",
+        "Quot.sound",
+        "propext"
+      ]
+    },
+    "P02.Codec.UniformComputability.expr_encode_eq": {
+      "type_sha256": "277032264adef466f8e70df809dcfd88d12128b2ccd139a422a06a96b8cb1b09",
+      "axioms": [
+        "Classical.choice",
+        "Quot.sound",
+        "propext"
+      ]
+    },
+    "P02.Codec.UniformComputability.expr_ofNat_eq": {
+      "type_sha256": "66a7cc22959f37c83c357c7de277d6cbf78a6d8a7363ba1b98ebae5fe1383714",
+      "axioms": [
+        "Classical.choice",
+        "Quot.sound",
+        "propext"
+      ]
+    },
+    "P02.Codec.UniformComputability.readRegs_primrec": {
+      "type_sha256": "5468715957e8b9940c825487bd8baea188165ff46abe9f11569b0d49372e2d2f",
+      "axioms": [
+        "Classical.choice",
+        "Quot.sound",
+        "propext"
+      ]
+    },
+    "P02.Codec.UniformComputability.exprTableValue_primrec": {
+      "type_sha256": "95e0a41052b14ba16f0a46617bcc1a56bbe98103304f1bf21cafd1794dc61c18",
+      "axioms": [
+        "Classical.choice",
+        "Quot.sound",
+        "propext"
+      ]
+    },
+    "P02.Codec.UniformComputability.exprTableValue_table": {
+      "type_sha256": "ca91857531b9527cd83d33114c86f6b931a5627124d444f732050d933767d89a",
+      "axioms": [
+        "Classical.choice",
+        "Quot.sound",
+        "propext"
+      ]
+    },
+    "P02.Codec.UniformComputability.evalRegs_primrec": {
+      "type_sha256": "3d3657b5ce83a5215d9f7279f049f9f694a4ed53f3631e4d2fccb6d01a04880e",
+      "axioms": [
+        "Classical.choice",
+        "Quot.sound",
+        "propext"
+      ]
+    },
+    "P02.Codec.UniformComputability.stmtOfNat_stmtEncode": {
+      "type_sha256": "4c4db3c1336b4de5b9307d86ed004a484ff3fb8aedbd3397cd2fead35d0cc7f3",
+      "axioms": [
+        "Classical.choice",
+        "Quot.sound",
+        "propext"
+      ]
+    },
+    "P02.Codec.UniformComputability.stmtEncode_stmtOfNat": {
+      "type_sha256": "d392e6b4ec9102657b605e6df45f7cff06c1d145516391a7e9cca943055f919f",
+      "axioms": [
+        "Classical.choice",
+        "Quot.sound",
+        "propext"
+      ]
+    },
+    "P02.Codec.UniformComputability.stmt_encode_eq": {
+      "type_sha256": "3b4d93db1f60fc18c50457e950b977d0f1cd77a0b13c0e630bf54a1cdc132802",
+      "axioms": [
+        "Classical.choice",
+        "Quot.sound",
+        "propext"
+      ]
+    },
+    "P02.Codec.UniformComputability.stmt_ofNat_eq": {
+      "type_sha256": "46427fce51323c4205a4db711813f3ea324fb91231eb505307584784dc59c227",
+      "axioms": [
+        "Classical.choice",
+        "Quot.sound",
+        "propext"
+      ]
+    },
+    "P02.Codec.UniformComputability.taskOfNat_taskEncode": {
+      "type_sha256": "a8495b5ed49d30b3b3648dd96ae14c0183e93ccf08844afec55bd371545e5205",
+      "axioms": [
+        "Classical.choice",
+        "Quot.sound",
+        "propext"
+      ]
+    },
+    "P02.Codec.UniformComputability.taskEncode_taskOfNat": {
+      "type_sha256": "ac7a4273c4b3425db8bf189436ba1df679a066d2bba49e7ff096612e5b043c6f",
+      "axioms": [
+        "Classical.choice",
+        "Quot.sound",
+        "propext"
+      ]
+    },
+    "P02.Codec.UniformComputability.task_encode_eq": {
+      "type_sha256": "a921bbf18b92bc8b2f9c1cc5b6a852d039a4d675d96608318a6d079522876d83",
+      "axioms": [
+        "Classical.choice",
+        "Quot.sound",
+        "propext"
+      ]
+    },
+    "P02.Codec.UniformComputability.task_ofNat_eq": {
+      "type_sha256": "d0736c3e55928bb7d14e6dfc08d7c5e63dd925813a43c6ef8b36930e2f374614",
+      "axioms": [
+        "Classical.choice",
+        "Quot.sound",
+        "propext"
+      ]
+    },
+    "P02.Codec.UniformComputability.stmtOfNat_primrec": {
+      "type_sha256": "6475590e44b30a3fe6b3cb241251ac6248818991e7d23c5c64a0ba40a1ea3c47",
+      "axioms": [
+        "Classical.choice",
+        "Quot.sound",
+        "propext"
+      ]
+    },
+    "P02.Codec.UniformComputability.taskOfNat_primrec": {
+      "type_sha256": "140613431a361aa44701808efff6acc9cea9d3ede5d8740cdd3c6d3f4377a1b5",
+      "axioms": [
+        "Classical.choice",
+        "Quot.sound",
+        "propext"
+      ]
+    },
+    "P02.Codec.UniformComputability.stmtSet_primrec": {
+      "type_sha256": "a6b357bfcd4c7108f91bcdd89b41e1f39d5b2afdf06b8ff9ef278adfc9970594",
+      "axioms": [
+        "Classical.choice",
+        "Quot.sound",
+        "propext"
+      ]
+    },
+    "P02.Codec.UniformComputability.stmtSeq_primrec": {
+      "type_sha256": "dd59e5e57ee5866b29a19ee12eec0bd6e1d56349877f7f41214e54f9522f2aa2",
+      "axioms": [
+        "Classical.choice",
+        "Quot.sound",
+        "propext"
+      ]
+    },
+    "P02.Codec.UniformComputability.stmtLoop_primrec": {
+      "type_sha256": "fd4b03b03b798e949b15d48a8d8394aae1913d7d8489a259b484dfb4b74590a1",
+      "axioms": [
+        "Classical.choice",
+        "Quot.sound",
+        "propext"
+      ]
+    },
+    "P02.Codec.UniformComputability.stmtBranch_primrec": {
+      "type_sha256": "ff922dd9ffde9a36348f0098ad5770008bca0b988e07fde53b53b9515a73de14",
+      "axioms": [
+        "Classical.choice",
+        "Quot.sound",
+        "propext"
+      ]
+    },
+    "P02.Codec.UniformComputability.taskStmt_primrec": {
+      "type_sha256": "972c2800102c1eb04b8a7cc2fb66f56bdc15c8b45fbae34f124455d9c23344a7",
+      "axioms": [
+        "Classical.choice",
+        "Quot.sound",
+        "propext"
+      ]
+    },
+    "P02.Codec.UniformComputability.taskRepeat_primrec": {
+      "type_sha256": "7abcc5acbec7f69c97ca9db927d0b3ade90b81d7515bf6e73106e30899824f92",
+      "axioms": [
+        "Classical.choice",
+        "Quot.sound",
+        "propext"
+      ]
+    },
+    "P02.Codec.UniformComputability.stepByCode_eq_step": {
+      "type_sha256": "62c4d73b50838f02a07ce7e627ac518f57965e74b4d2e55d5e8fb19bf0043386",
+      "axioms": [
+        "Classical.choice",
+        "Quot.sound",
+        "propext"
+      ]
+    },
+    "P02.Codec.UniformComputability.writeRegs_primrec": {
+      "type_sha256": "02053eba4caac97f3acc8f8052f511c3b0108daa83b65d7541f31775c7624312",
+      "axioms": [
+        "Classical.choice",
+        "Quot.sound",
+        "propext"
+      ]
+    },
+    "P02.Codec.UniformComputability.stepByCode_primrec": {
+      "type_sha256": "37ed133270555cc8aabf718bab1a8ca6684b329479c170e9395960f4231583ba",
+      "axioms": [
+        "Classical.choice",
+        "Quot.sound",
+        "propext"
+      ]
+    },
+    "P02.Codec.UniformComputability.step_primrec": {
+      "type_sha256": "f304621f1396e2868e4732c03d7614ca00a227950b8dbb24c7d537d2bf5f6614",
+      "axioms": [
+        "Classical.choice",
+        "Quot.sound",
+        "propext"
+      ]
+    },
+    "P02.Codec.UniformComputability.step_computable": {
+      "type_sha256": "118abc10f9ca25b52f7b298f7bcc14122d6141af87ebea07fa83f3a133fe2f60",
+      "axioms": [
+        "Classical.choice",
+        "Quot.sound",
+        "propext"
+      ]
+    },
+    "P02.Codec.UniformComputability.runFuel_primrec": {
+      "type_sha256": "07cc730bce333de95b82bd0c5cc9c24e8c812eafdbf878d8dcf38f2d31b4f0b6",
+      "axioms": [
+        "Classical.choice",
+        "Quot.sound",
+        "propext"
+      ]
+    },
+    "P02.Codec.UniformComputability.runFuel_computable": {
+      "type_sha256": "61cd94123539e2b9463e020b8c47e3bd2b70b20a4f4477c06bc4e6541a33200d",
+      "axioms": [
+        "Classical.choice",
+        "Quot.sound",
+        "propext"
+      ]
+    },
+    "P02.Codec.UniformComputability.binaryRegs_primrec": {
+      "type_sha256": "76bbac0477e2f6968300442f6ac49990a9e79de61ee2cfd298abfde357f57518",
+      "axioms": [
+        "Classical.choice",
+        "Quot.sound",
+        "propext"
+      ]
+    },
+    "P02.Codec.UniformComputability.packedOfNat_packedEncode": {
+      "type_sha256": "cd9a4ffdff222833bdf10fd24469e10961e2567650c399900ecee225ee156a91",
+      "axioms": [
+        "Classical.choice",
+        "Quot.sound",
+        "propext"
+      ]
+    },
+    "P02.Codec.UniformComputability.packedEncode_packedOfNat": {
+      "type_sha256": "b7f39f9cb6850060ebdfa248d85e7164d75978fa4babe86c12e98cac6a96cc11",
+      "axioms": [
+        "Classical.choice",
+        "Quot.sound",
+        "propext"
+      ]
+    },
+    "P02.Codec.UniformComputability.packed_encode_eq": {
+      "type_sha256": "977b6e7646865f8d4f0b015c53cceb32039cef6c8ee0f9b426b39c7e1d33916f",
+      "axioms": [
+        "Classical.choice",
+        "Quot.sound",
+        "propext"
+      ]
+    },
+    "P02.Codec.UniformComputability.packed_ofNat_eq": {
+      "type_sha256": "4aa1117461a2f410a70c2d8b2a2679dd7e6d77bf9dec9142bbc76613819ba7f0",
+      "axioms": [
+        "Classical.choice",
+        "Quot.sound",
+        "propext"
+      ]
+    },
+    "P02.Codec.UniformComputability.packedMk_primrec": {
+      "type_sha256": "a9a248ffad0381ff196342a0b0398a6c26b5d6a02e7fffd20aace5ff68c78f66",
+      "axioms": [
+        "Classical.choice",
+        "Quot.sound",
+        "propext"
+      ]
+    },
+    "P02.Codec.UniformComputability.packedArity_primrec": {
+      "type_sha256": "b299a51d05b6211f4906de6426c25a697d792acd79c90f3c2484289d97f99271",
+      "axioms": [
+        "Classical.choice",
+        "Quot.sound",
+        "propext"
+      ]
+    },
+    "P02.Codec.UniformComputability.packedOutput_primrec": {
+      "type_sha256": "4a8579b8491a5c202c47cbc6d15ee69f35b10dd1f86eb6cf27f6adbde5112e4b",
+      "axioms": [
+        "Classical.choice",
+        "Quot.sound",
+        "propext"
+      ]
+    },
+    "P02.Codec.UniformComputability.packedBody_primrec": {
+      "type_sha256": "ea270d8e1cb2afa5ea12886e2469a36a677b41e714a89273d4e2b975b2257ee8",
+      "axioms": [
+        "Classical.choice",
+        "Quot.sound",
+        "propext"
+      ]
+    },
+    "P02.Codec.UniformComputability.sequenceList_primrec": {
+      "type_sha256": "41224e595a611e9b20ffbf26d216000949ad636e6efee9f532a613c215308c87",
+      "axioms": [
+        "Classical.choice",
+        "Quot.sound",
+        "propext"
+      ]
+    },
+    "P02.Codec.UniformComputability.readManyStep_primrec": {
+      "type_sha256": "4d2259ce823aaf32321b48e906512e2986e018ab99fc584f1f4daed7356cef0e",
+      "axioms": [
+        "Classical.choice",
+        "Quot.sound",
+        "propext"
+      ]
+    },
+    "P02.Codec.UniformComputability.readManyStep_correct": {
+      "type_sha256": "c2826120f6fa695904265c2195833b2ee7a314ffd432605b0d1bf0d21b36f964",
+      "axioms": [
+        "Quot.sound",
+        "propext"
+      ]
+    },
+    "P02.Codec.UniformComputability.readMany_primrec": {
+      "type_sha256": "77ddb8deb4dc8d0a90b2812844a919312a4648be81fa71d4daab8733994698dc",
+      "axioms": [
+        "Classical.choice",
+        "Quot.sound",
+        "propext"
+      ]
+    },
+    "P02.Codec.UniformComputability.plainRead_eq": {
+      "type_sha256": "53feb617e4fe25d108055736a95aa0da2c5d9debb00958997567b0936b44093b",
+      "axioms": [
+        "Classical.choice",
+        "Quot.sound",
+        "propext"
+      ]
+    },
+    "P02.Codec.UniformComputability.uvAdvance_terminal": {
+      "type_sha256": "11ed5e479be16cd68bfb22e836053c8957ef8ad82063fcdc9e0f8a9d11b0ac50",
+      "axioms": [
+        "propext"
+      ]
+    },
+    "P02.Codec.UniformComputability.uvAdvance_complete": {
+      "type_sha256": "39af0b9e313e8d132802b35990a152965a51a688cea2023d5576d6384a3775dd",
+      "axioms": [
+        "Quot.sound",
+        "propext"
+      ]
+    },
+    "P02.Codec.UniformComputability.plainInitialRead_eq": {
+      "type_sha256": "685107e5d718f9b0648aa978ceda1213873417a3d120d504eb5c6c8e9ca27329",
+      "axioms": [
+        "Classical.choice",
+        "Quot.sound",
+        "propext"
+      ]
+    },
+    "P02.Codec.UniformComputability.uvConsBranch_primrec": {
+      "type_sha256": "5148bb10186e1600ec8b97741e870cd4158fb6c4507ad06a35464863b8e4b97c",
+      "axioms": [
+        "Classical.choice",
+        "Quot.sound",
+        "propext"
+      ]
+    },
+    "P02.Codec.UniformComputability.uvAdvance_primrec": {
+      "type_sha256": "17a6a4877bbdac603457e3583db0fc4b98772a89ca5d944322897bcc85d0c363",
+      "axioms": [
+        "Classical.choice",
+        "Quot.sound",
+        "propext"
+      ]
+    },
+    "P02.Codec.UniformComputability.uvFinish_primrec": {
+      "type_sha256": "b02840a798058d2bc9095eb36663e5a0ca2ea30f9a35c114641d5042fce5626d",
+      "axioms": [
+        "Classical.choice",
+        "Quot.sound",
+        "propext"
+      ]
+    },
+    "P02.Codec.UniformComputability.plainInitialRead_primrec": {
+      "type_sha256": "2936294070c511dc68346dd06cc70c84db385f94aa7cb91b3165dbf18f2adf83",
+      "axioms": [
+        "Classical.choice",
+        "Quot.sound",
+        "propext"
+      ]
+    },
+    "P02.Codec.UniformComputability.initialReadAccum_primrec": {
+      "type_sha256": "c2fb56991250a7983cc9f321fe96f27196c02459596529d29278f82c84e4476b",
+      "axioms": [
+        "Classical.choice",
+        "Quot.sound",
+        "propext"
+      ]
+    },
+    "P02.Codec.UniformComputability.uvRead_primrec": {
+      "type_sha256": "6570a86cbd8923ea6239746cb15a2ca70816198b65e363694a2657cf07b3cbc0",
+      "axioms": [
+        "Classical.choice",
+        "Quot.sound",
+        "propext"
+      ]
+    },
+    "P02.Codec.UniformComputability.expr_constant_primrec": {
+      "type_sha256": "bd5d9b21913854e0269311c09235c014ed7d4b6354a446058c9e0f17fdf71f37",
+      "axioms": [
+        "Classical.choice",
+        "Quot.sound",
+        "propext"
+      ]
+    },
+    "P02.Codec.UniformComputability.expr_reg_primrec": {
+      "type_sha256": "94c64da1250fe4148b928bc9ae409fa38aabc6aeb60849d0f478c9475848e8b4",
+      "axioms": [
+        "Classical.choice",
+        "Quot.sound",
+        "propext"
+      ]
+    },
+    "P02.Codec.UniformComputability.expr_add_primrec": {
+      "type_sha256": "38e68158f37f24f38ae6d7daaf7b13ec7e9e52b92ec8d9c4f99f959ef19f06cc",
+      "axioms": [
+        "Classical.choice",
+        "Quot.sound",
+        "propext"
+      ]
+    },
+    "P02.Codec.UniformComputability.expr_sub_primrec": {
+      "type_sha256": "a4be175a452a0b742a214299ceebeef60606117b6ef51f6aa7f4e40eb461c9b1",
+      "axioms": [
+        "Classical.choice",
+        "Quot.sound",
+        "propext"
+      ]
+    },
+    "P02.Codec.UniformComputability.expr_mul_primrec": {
+      "type_sha256": "6c47b237803e5870654a9763fbddb24e06c3a939dc43649c3e7f81bec923cd53",
+      "axioms": [
+        "Classical.choice",
+        "Quot.sound",
+        "propext"
+      ]
+    },
+    "P02.Codec.UniformComputability.expr_div_primrec": {
+      "type_sha256": "82ebd2029efa8baf0adb2be0592d383c2eed25f4e26600c9816a08dd6b4bedb5",
+      "axioms": [
+        "Classical.choice",
+        "Quot.sound",
+        "propext"
+      ]
+    },
+    "P02.Codec.UniformComputability.expr_mod_primrec": {
+      "type_sha256": "591414fff45dc6171685598c6c19c23eb0981f2a4cc730003fd07029e918d274",
+      "axioms": [
+        "Classical.choice",
+        "Quot.sound",
+        "propext"
+      ]
+    },
+    "P02.Codec.UniformComputability.expr_le_primrec": {
+      "type_sha256": "01802e033cd3789c711902936063f78c814b7b82a534e2ab8bd31ada9f0abffd",
+      "axioms": [
+        "Classical.choice",
+        "Quot.sound",
+        "propext"
+      ]
+    },
+    "P02.Codec.UniformComputability.expr_eq_primrec": {
+      "type_sha256": "db3fc4c2a84366dc3f5d163cb5b39e19e3f1cf3e11c3a3d7fc9c831e3721a3dc",
+      "axioms": [
+        "Classical.choice",
+        "Quot.sound",
+        "propext"
+      ]
+    },
+    "P02.Codec.UniformComputability.expr_pow2_primrec": {
+      "type_sha256": "397d764ef9d648c32c1ece902b68e5da4aef26e5a7224580ff6ad1a670ec62c7",
+      "axioms": [
+        "Classical.choice",
+        "Quot.sound",
+        "propext"
+      ]
+    },
+    "P02.Codec.UniformComputability.mapParser_primrec": {
+      "type_sha256": "b1d3ff0aad82b56966e37704c8b4ab8c2e3c8f4740b41f6123eecde7bfebc712",
+      "axioms": [
+        "Classical.choice",
+        "Quot.sound",
+        "propext"
+      ]
+    },
+    "P02.Codec.UniformComputability.bindParser_primrec": {
+      "type_sha256": "4c6be0a803d66e4cea6c2321f12ef11ccb2665fe8117dc017fb53362b2687caf",
+      "axioms": [
+        "Classical.choice",
+        "Quot.sound",
+        "propext"
+      ]
+    },
+    "P02.Codec.UniformComputability.readBinary_primrec": {
+      "type_sha256": "6ce4d4364b7a8f08794b2999a3bd2cf45a2229593a46be080c395887ea9fc96d",
+      "axioms": [
+        "Classical.choice",
+        "Quot.sound",
+        "propext"
+      ]
+    },
+    "P02.Codec.UniformComputability.list_drop_primrec": {
+      "type_sha256": "98d6dcf7ddcb34996caf99f61343c94315d297a5384a0d1bd6a4407031838a77",
+      "axioms": [
+        "Classical.choice",
+        "Quot.sound",
+        "propext"
+      ]
+    },
+    "P02.Codec.UniformComputability.list_replicate_primrec": {
+      "type_sha256": "607dba6ccb242971ed66de6999b83c82c8f03108ab7b0c38c5896eb2d8d2af1e",
+      "axioms": [
+        "Classical.choice",
+        "Quot.sound",
+        "propext"
+      ]
+    },
+    "P02.Codec.UniformComputability.bind_preservesSuffix": {
+      "type_sha256": "6ab5bd8134b60d0c26a49e33eb6f7f20d61180b704427e229fc70deafba44d2c",
+      "axioms": [
+        "propext"
+      ]
+    },
+    "P02.Codec.UniformComputability.map_preservesSuffix": {
+      "type_sha256": "9900dd66baed75f3f393bc0df5cf5919351af0669ce187a8cebf5c00833a0f30",
+      "axioms": [
+        "propext"
+      ]
+    },
+    "P02.Codec.UniformComputability.uvRead_preservesSuffix": {
+      "type_sha256": "f261aca8dac7a06956b241a589881382b4cc5ccbd10575848b4d7b1d43a56534",
+      "axioms": [
+        "Classical.choice",
+        "Quot.sound",
+        "propext"
+      ]
+    },
+    "P02.Codec.UniformComputability.readBinary_preservesSuffix": {
+      "type_sha256": "e2788bd6da52845128756c36470cc50cc2a58dccaa7f9901b400a879d9d22807",
+      "axioms": [
+        "propext"
+      ]
+    },
+    "P02.Codec.UniformComputability.readExpr_preservesSuffix": {
+      "type_sha256": "d01874e78238e1c5efe2ade19650c4d10ceda28935be2a14ab40cb3d50335d76",
+      "axioms": [
+        "Classical.choice",
+        "Quot.sound",
+        "propext"
+      ]
+    },
+    "P02.Codec.UniformComputability.readMany_preservesSuffix": {
+      "type_sha256": "9f1311dad3ab96863e36515440d6cc583dc27ed5c029219d65dfd5fd67bcaab3",
+      "axioms": [
+        "propext"
+      ]
+    },
+    "P02.Codec.UniformComputability.sequenceList_preservesSuffix": {
+      "type_sha256": "d8a5e5a6d249725c3df535c930c6b2d6923232d202504c92c5fa85a175f92ec1",
+      "axioms": [
+        "propext"
+      ]
+    },
+    "P02.Codec.UniformComputability.readStmt_preservesSuffix": {
+      "type_sha256": "4a9762507f1a5bb0feb41e8dda86241ff05e69782b766be1a4a3ed004babe902",
+      "axioms": [
+        "Classical.choice",
+        "Quot.sound",
+        "propext"
+      ]
+    },
+    "P02.Codec.UniformComputability.readExpr_suffix": {
+      "type_sha256": "54e4f5a514c33e2fb19bc79779591efbb020f7ce1d8c852f43a986736409b2b1",
+      "axioms": [
+        "Classical.choice",
+        "Quot.sound",
+        "propext"
+      ]
+    },
+    "P02.Codec.UniformComputability.readStmt_suffix": {
+      "type_sha256": "4f9bc31802ac6adf8bee460a09da216e2d75049033d7bcf5c87af829fa136e8f",
+      "axioms": [
+        "Classical.choice",
+        "Quot.sound",
+        "propext"
+      ]
+    },
+    "P02.Codec.UniformComputability.readExpr_rest_length_le": {
+      "type_sha256": "c9f6cc52217b1bad982216cb245338a48baf79c3a27691f854ffc2d66f278464",
+      "axioms": [
+        "Classical.choice",
+        "Quot.sound",
+        "propext"
+      ]
+    },
+    "P02.Codec.UniformComputability.readStmt_rest_length_le": {
+      "type_sha256": "4e88134c20f0587580330716f18bd4d3fdade37170e9d19e6f45058d05ed58ba",
+      "axioms": [
+        "Classical.choice",
+        "Quot.sound",
+        "propext"
+      ]
+    },
+    "P02.Codec.UniformComputability.readExpr_rest_mem_tails": {
+      "type_sha256": "6d5ccf2e84e20dffeda9a8832aa037b069ef2eec50ee24ea096a3714cbbcd629",
+      "axioms": [
+        "Classical.choice",
+        "Quot.sound",
+        "propext"
+      ]
+    },
+    "P02.Codec.UniformComputability.readStmt_rest_mem_tails": {
+      "type_sha256": "91e38f13c5d01ad2b6303388f7bb945c066b740a69f7db59fd27a5e032631e15",
+      "axioms": [
+        "Classical.choice",
+        "Quot.sound",
+        "propext"
+      ]
+    },
+    "P02.Codec.UniformComputability.parser_rest_mem_original_tails": {
+      "type_sha256": "b335cfad2969c8bd9d5721fa428160e5372a162b800ffe525d8b5f4f126bf34f",
+      "axioms": [
+        "propext"
+      ]
+    },
+    "P02.Codec.UniformComputability.readStmt_succ_layer": {
+      "type_sha256": "c1678da6860834b35e4ddbc3391abdec3b07e6ffd10f74a98c16044580d5105f",
+      "axioms": [
+        "Quot.sound",
+        "propext"
+      ]
+    },
+    "P02.Codec.UniformComputability.readMany_stmt_suffix_congr": {
+      "type_sha256": "60c1ab91cb5f89f7f2ec64dc5301ebdafcfae50e9205b3bdf4c9ed06218033fe",
+      "axioms": [
+        "Classical.choice",
+        "Quot.sound",
+        "propext"
+      ]
+    },
+    "P02.Codec.UniformComputability.stmtLayer_suffix_congr": {
+      "type_sha256": "75d428bca63456422478aaa903b111ef2e2e2495c8bf5b1ea61d4d14a3ebd79d",
+      "axioms": [
+        "Classical.choice",
+        "Quot.sound",
+        "propext"
+      ]
+    },
+    "P02.Codec.UniformComputability.stmtLookup_correct": {
+      "type_sha256": "6fae7aa8be715dbacf9d3378dac7a05f4def585b56f2d765a2aabd24af16a820",
+      "axioms": [
+        "Quot.sound",
+        "propext"
+      ]
+    },
+    "P02.Codec.UniformComputability.stmtTable_correct": {
+      "type_sha256": "0e686672d008d80a20ddf1bceb5a712f2bb5c7cbe70e3ec0aea8cdb17dc65ed0",
+      "axioms": [
+        "Classical.choice",
+        "Quot.sound",
+        "propext"
+      ]
+    },
+    "P02.Codec.UniformComputability.stmtLayer_primrec": {
+      "type_sha256": "ac1a80ad84e0bafc2268843bab5088e9b2c80787e71ccc3000bd1e17d0683aaf",
+      "axioms": [
+        "Classical.choice",
+        "Quot.sound",
+        "propext"
+      ]
+    },
+    "P02.Codec.UniformComputability.readExpr_succ_layer": {
+      "type_sha256": "c4aee406699b7aab04e91c60f6750ab922633ee17c576e23b7349323d6913295",
+      "axioms": [
+        "Quot.sound",
+        "propext"
+      ]
+    },
+    "P02.Codec.UniformComputability.readBinary_suffix_congr": {
+      "type_sha256": "e8b9f94c6bd9cd20e06ac8b5aa3790ccfa9fd51d45cf9676ca5108b386412580",
+      "axioms": [
+        "Classical.choice",
+        "Quot.sound",
+        "propext"
+      ]
+    },
+    "P02.Codec.UniformComputability.exprLayer_suffix_congr": {
+      "type_sha256": "25f3ca9a32147a556ba91df6a211499acdfd0f31456c6b4cc34bdf04fb5466b4",
+      "axioms": [
+        "Classical.choice",
+        "Quot.sound",
+        "propext"
+      ]
+    },
+    "P02.Codec.UniformComputability.exprLookup_correct": {
+      "type_sha256": "b17908a87e73fb518d01f1012fcc135af9b3852718e786863b788c28b339d3d9",
+      "axioms": [
+        "Quot.sound",
+        "propext"
+      ]
+    },
+    "P02.Codec.UniformComputability.exprTable_correct": {
+      "type_sha256": "660d8d634921453389870bbc51da50032b46d3ac6f135e975e88c12d2f237593",
+      "axioms": [
+        "Classical.choice",
+        "Quot.sound",
+        "propext"
+      ]
+    },
+    "P02.Codec.UniformComputability.exprLayer_primrec": {
+      "type_sha256": "3c8ce87b59c8a34695a00b878443d732a8c68d2ae3b9740310dba83c64142c13",
+      "axioms": [
+        "Classical.choice",
+        "Quot.sound",
+        "propext"
+      ]
+    },
+    "P02.Codec.UniformComputability.exprLookup_primrec": {
+      "type_sha256": "0019c1ddfb4e7dd559cbb21c95166131f2e8b84d9086a55c1437df73ac8f9f28",
+      "axioms": [
+        "Classical.choice",
+        "Quot.sound",
+        "propext"
+      ]
+    },
+    "P02.Codec.UniformComputability.exprNextTable_primrec": {
+      "type_sha256": "e2553ff59e99df1974d26b885fbfb87cdacc9742debcc5b3075c84556d03acfb",
+      "axioms": [
+        "Classical.choice",
+        "Quot.sound",
+        "propext"
+      ]
+    },
+    "P02.Codec.UniformComputability.exprTable_primrec": {
+      "type_sha256": "374e0e5ed8b078ca796d5f5d82c14cb9bbf04cb26e7a227ec2d453e0478aed18",
+      "axioms": [
+        "Classical.choice",
+        "Quot.sound",
+        "propext"
+      ]
+    },
+    "P02.Codec.UniformComputability.readExpr_primrec": {
+      "type_sha256": "0a385b0cf8e38560e5e836b7d540a4528b534ec4277e1e0ba6b2dbea65e50fc0",
+      "axioms": [
+        "Classical.choice",
+        "Quot.sound",
+        "propext"
+      ]
+    },
+    "P02.Codec.UniformComputability.stmtLookup_primrec": {
+      "type_sha256": "f7ade6b52222601ecabeb3d2fa48a0243bebecaa35f59ff733a8f3f69b555f78",
+      "axioms": [
+        "Classical.choice",
+        "Quot.sound",
+        "propext"
+      ]
+    },
+    "P02.Codec.UniformComputability.stmtNextTable_primrec": {
+      "type_sha256": "ccb4db2b9fbc4de98b71e79942dc2eba4420bae1b55c1e80167b95da29b58d65",
+      "axioms": [
+        "Classical.choice",
+        "Quot.sound",
+        "propext"
+      ]
+    },
+    "P02.Codec.UniformComputability.stmtTable_primrec": {
+      "type_sha256": "3fe73bd5885dd9aa332c7fd2fa9c5f23fe0cf05beb1689880622ec471d753b22",
+      "axioms": [
+        "Classical.choice",
+        "Quot.sound",
+        "propext"
+      ]
+    },
+    "P02.Codec.UniformComputability.readStmt_primrec": {
+      "type_sha256": "c1e32cb0738b6012ea62044dc7bda7a53dd6a99725ec59fe03c5bf688103b276",
+      "axioms": [
+        "Classical.choice",
+        "Quot.sound",
+        "propext"
+      ]
+    },
+    "P02.Codec.UniformComputability.evaluatePackedFuel_primrec": {
+      "type_sha256": "86b8679e0222070c1107454f8a00e2d47b8fb383f5616f06cd81d367faad887d",
+      "axioms": [
+        "Classical.choice",
+        "Quot.sound",
+        "propext"
+      ]
+    },
+    "P02.Codec.UniformComputability.evaluateIndexFuel_primrec_of_decode": {
+      "type_sha256": "5bae981960ef1a64cacd59c7b3023265fbe1a3b56a491b5def07a038c93e44f3",
+      "axioms": [
+        "Classical.choice",
+        "Quot.sound",
+        "propext"
+      ]
+    },
+    "P02.Codec.UniformComputability.evaluateIndexFuel_computable_of_decode": {
+      "type_sha256": "64f2f1693dd3957415410741af18aec77c4972cc48304469f249f21c8896cd76",
+      "axioms": [
+        "Classical.choice",
+        "Quot.sound",
+        "propext"
+      ]
+    },
+    "P02.Codec.UniformComputability.list_take_fixed_primrec": {
+      "type_sha256": "1881148da1a402e5346a3dbff7e7f17452c74d2c98fc96e918e567865c02dd05",
+      "axioms": [
+        "Classical.choice",
+        "Quot.sound",
+        "propext"
+      ]
+    },
+    "P02.Codec.UniformComputability.stripMagic_primrec": {
+      "type_sha256": "128f98f8c1f584314babe041e8a0503d44fa1698d796d31cbcedd6e94dfefac1",
+      "axioms": [
+        "Classical.choice",
+        "Quot.sound",
+        "propext"
+      ]
+    },
+    "P02.Codec.UniformComputability.decodeBody_primrec": {
+      "type_sha256": "b4abd439e437dd3df7a5fb11d5d1b00b26497a240745caab2080fe5a5959a67f",
+      "axioms": [
+        "Classical.choice",
+        "Quot.sound",
+        "propext"
+      ]
+    },
+    "P02.Codec.UniformComputability.decodeOutput_primrec": {
+      "type_sha256": "3f68f430e663f06684997cc651599d8957d8cd67f6e8c2115f456feca3036232",
+      "axioms": [
+        "Classical.choice",
+        "Quot.sound",
+        "propext"
+      ]
+    },
+    "P02.Codec.UniformComputability.decodeFields_primrec": {
+      "type_sha256": "5513bff76daa3a2a8a4fc4955b198ad4680c3270c628c320926e08fe0b31b3ab",
+      "axioms": [
+        "Classical.choice",
+        "Quot.sound",
+        "propext"
+      ]
+    },
+    "P02.Codec.UniformComputability.decodeBytes_primrec": {
+      "type_sha256": "e02557f7879ffc8f77c147aa077cc6de290d04771400ee4be4e8cd4878bc1a96",
+      "axioms": [
+        "Classical.choice",
+        "Quot.sound",
+        "propext"
+      ]
+    },
+    "P02.Codec.UniformComputability.decodeIndex_primrec": {
+      "type_sha256": "af003439ba21e20adc8376f4a3b1f43ef17a4a518b809319db01e3f0b7eb0f61",
+      "axioms": [
+        "Classical.choice",
+        "Quot.sound",
+        "propext"
+      ]
+    },
+    "P02.Codec.UniformComputability.decodeIndex_computable": {
+      "type_sha256": "efb90d6f143ed2b50cd68d60cbfc4e39899b06e16b5925f32a80930a7db03370",
+      "axioms": [
+        "Classical.choice",
+        "Quot.sound",
+        "propext"
+      ]
+    },
+    "P02.Codec.UniformComputability.evaluateIndexFuel_primrec": {
+      "type_sha256": "ac724653855971edfbf620e7f684e78c7a79890e9fa5cd79d6e0a849a3bf87d4",
+      "axioms": [
+        "Classical.choice",
+        "Quot.sound",
+        "propext"
+      ]
+    },
+    "P02.Codec.UniformComputability.evaluateIndex_computable": {
+      "type_sha256": "b5945ebf62a04f15f8b42ab0a2b4021d1dc9f8bf81cf8bbc26bb8daf2c847e2a",
+      "axioms": [
+        "Classical.choice",
+        "Quot.sound",
+        "propext"
+      ]
+    },
+    "P02.Codec.UniformComputability.evaluateIndex_nat_computable": {
+      "type_sha256": "8bad988edb9881546ac7258e31e48030d041ccb4b6d63230453a265127f21083",
+      "axioms": [
+        "Classical.choice",
+        "Quot.sound",
+        "propext"
+      ]
+    },
+    "P02.Codec.UniformComputability.pure_preservesSuffix": {
+      "type_sha256": "43899be0459608d3487a82b991a7adfed2eb638c7e7d74ee6d1c1562469c38f6",
+      "axioms": []
+    }
+  },
+  "original_controls": "NOT_RUN",
+  "original_receipt_sha256": "9a40a5eee0371a197669b117410ad0c3ab2c7a10a8366d4c2e4a4621dfaa924e",
+  "original_driver_sha256": "0666003f5081aca1efd6570a72da06d735b454d787dba97dd59fc1b42554bd14",
+  "execution_kind": "FRESH_CUSTOM_CLOSURE",
+  "finished_utc": null,
+  "scope": "Source-bound custom closure and selected declaration readbacks. Types are represented by hashes of the exact printed types; complete logs remain private. Official caches are trusted. This does not establish ordinary proof, runtime completeness, empirical or normative warrant, novelty, external human review or merged adoption."
+}

@@ -1,0 +1,105 @@
+> Retained incoming research text. Verification claims below describe the original packet. See the [current evidence status](../RESULT_STATUS.json) and [original-to-public source map](../SOURCE_MAP.json). Packet navigation is rendered as text; spaced path separators denote original packet locators.
+
+# Sharp strict-width boundary for distribution-free cluster robustness
+
+Separate ordinary successor to the frozen candidate1 theorem. The earlier uniform epsilon/4 theorem and its constants remain unchanged. Version1,2026-10-01.
+
+## 1. Quantifiers and the sharp question
+
+Keep half-separated centres a_i, a_0<=1/2, weights a_i/Z, spacing S=sum r_i log(1/r_i), the actual EndpointProcess experiment, and literal tolerance0<e<=1/4. Fix0<=d<=1/16 and allow every component probability nu_i supported on[(1-d)a_i,(1+d)a_i].
+
+For d<e, EVERY such component family has a finite common-policy expected literal count iff S<infinity. Necessity retains exp(-1)S/(9Z). Sufficiency has an explicit finite head term in addition to30000S/Z.
+
+For d>=e, the class includes component families for which EVERY common policy has infinite expected count, even when S<infinity. These adversarial component laws can be chosen absolutely continuous. Thus, when S<infinity, d<e is the sharp boundary for a guarantee UNIFORM OVER ALL WITHIN-CLUSTER DISTRIBUTIONS. This does not assert that every individual prior with d>=e is bad: choosing each component to be the centre atom recovers the finite-budget sparse prior.
+
+No conclusion about the critical case of UNIFORM density over the whole cluster is smuggled into this worst-case statement. The counterexample uses balanced endpoint masses or narrow endpoint strips.
+
+## 2. Positive theorem for every d<e
+
+Define the shifted centre
+
+    q_i*=1/2+e a_i(1-de).
+
+At the lower endpoint l_i=(1-d)a_i and upper endpoint u_i=(1+d)a_i, exact algebra gives
+
+    D0(l_i,e,q_i*)=D1(u_i,e,q_i*)
+       = e a_i[d-e+e a_i(1-de)^2].                    (6)
+
+D0 decreases with the true parameter and D1 increases. Hence (6) is the worst excess throughout the cluster. The report is coherent because0<1-de<=1.
+
+Choose H>=0 such that a_i<=(e-d)/(2e) for every i>=H. Such H exists by half separation. Since(1-de)^2<=1, every tail cluster has strict worst excess at most
+
+    -(1/2)e a_i(e-d)<0.
+
+Use the SAME clipped-log selector J_n as in the candidate1 theorem. If J_n>=H, output q*_(J_n); if J_n<H, output the inherited empirical report1/2+e H_n. This is one measurable deterministic coherent policy, based on the observed word and time only. In particular, whether to use the head or tail branch depends on the selected index, not the unknown true index.
+
+For a true parameter in cluster i, literal failure is contained in
+
+    {J_n != i} union ({i<H} intersect {empirical literal failure}).
+
+The classification-error analysis in sections4–6 of CLUSTER_SMOOTHING_THEOREM.md uses only d<=1/16, the protected boundary range and conditional Bernoulli receipts. It does not use d<=e/4; that smaller condition was needed only to make the unshifted centre accepted everywhere. Thus its total classification-error bound remains30000S/Z.
+
+Let
+
+    M_head=sum_(i<H)(a_i/Z) integral [1/(a(1-a))] nu_i(da).
+
+This is finite because H is finite and its clusters lie in a compact subinterval of(0,1). The proved empirical actual-process bound gives
+
+    E_mu count(the switched policy)<=30000S/Z+(32/e^2)M_head.       (7)
+
+For H=0 the head term is zero. For H>=1, one explicit bound is
+
+    M_head <= [sum_(i<H)a_i/Z]
+                 /[(15a_(H-1)/16)(15/32)].
+
+Indeed all head parameters are at least15a_(H-1)/16 and at most17/32. The positive theorem is quantitative, but its constant need not remain bounded as d increases to e.
+
+Necessity is unchanged: different d-clusters still have ratio at least30/17>5/3, and the all-zero adjacent-mass proof uses only d<=1/16. This completes the iff for EVERY component family when d<e.
+
+## 3. Endpoint-pair obstruction at and above critical width
+
+Suppose d>=e. Within the allowed d-cluster put half the component mass at
+
+    l_i=(1-e)a_i,  u_i=(1+e)a_i.
+
+No real report is accepted at both points. To see the strict critical case directly, write t=q-1/2. The sum of the two relevant excesses is
+
+    D0(l_i,e,q)+D1(u_i,e,q)=2t^2.
+
+If both were nonpositive, then t=0, so q=1/2. But D1(u_i,e,1/2)=u_i e(1-e)>0. Thus equality of the limiting multiplicative width does not supply an accepted common report at positive parameter values.
+
+For each fixed zero-word report, at least one half of EVERY component is missed. The zero-prefix likelihood on each component is at least exp(-3a_i n), and shifting from index0 to genuine index1 loses at most a factor1/3, exactly as in the earlier proof. For n=0,...,floor(1/(3a_i)), the next positive report therefore forces component failure mass at least
+
+    exp(-1)a_i/(6Z).
+
+Summing these indices gives at least exp(-1)/(18Z) per component. There are infinitely many components, so Tonelli makes the actual expected count infinite for every measurable full-prefix policy and every fixed independent probability seed. This is true even on the exponential-square support with finite S. The argument sums nonnegative component risks; it does not add mutually exclusive guesses about which cluster a report accepts.
+
+## 4. An absolutely continuous critical counterexample
+
+The obstruction need not rely on atoms. Put h_i=e a_i^2/16. Give half the component law uniformly to each of the two intervals
+
+    L_i=[(1-e)a_i,(1-e)a_i+h_i],
+    U_i=[(1+e)a_i-h_i,(1+e)a_i].
+
+Both lie in the allowed d-cluster. Any point l in L_i and u in U_i are incompatible for one report.
+
+Proof: if both are accepted, the literal inequalities imply q>=1/2. With t=q-1/2, acceptance at u implies
+
+    t-t^2>=u e(1-e), hence t>=u e(1-e)>=(3/4)e a_i,
+
+because u>=a_i and e<=1/4. Monotonicity of D0 in l and D1 in u, evaluated at the two inner strip endpoints, gives
+
+    0>=D0(l,e,q)+D1(u,e,q)>=2t^2-2e h_i.
+
+Thus t^2<=e h_i=e^2 a_i^2/16, contradicting t^2>=9e^2 a_i^2/16. The contradiction is strict since e,a_i>0.
+
+Each strip has component mass1/2 and lies within the same parameter range used for the all-zero likelihood bound. The preceding per-component argument therefore applies unchanged. The resulting prior is absolutely continuous, has no endpoint atom, and gives infinite expected count for every common policy. Its density is concentrated in very narrow edge strips; it is not the uniform-whole-cluster example.
+
+## 5. What is and is not sharp
+
+The strict-width boundary is sharp for the distribution-free guarantee when S<infinity:
+
+- d<e: every allowed component family admits a finite-budget policy, with(7)
+- d>=e: an allowed absolutely continuous component family forces every policy to have infinite budget
+
+The theorem is not a complete classification of every component shape at critical or supercritical width. At d=e, centre atoms are easy and the constructed edge-strip family is impossible in expected lifetime cost. Resolving other shapes requires their internal geometry and mass distribution. The epsilon/4 theorem remains the simpler uniform-constant guarantee; this successor explains exactly which loss of uniformity permits the larger strict-width range.

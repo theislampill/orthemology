@@ -1,0 +1,419 @@
+{
+  "id": "a5ea2c511948-borel-endpoint",
+  "origin": "a5ea2c5119482abdb1c0b0f59c24a573782707f3d9cae2662ef7af879f39693c",
+  "descriptor_source_id": "src-a5ea2c5119482abd-ac1a57d94319c835",
+  "modules": [
+    {
+      "module": "EndpointMoment",
+      "source_id": "src-a5ea2c5119482abd-6a51da7c858c0385",
+      "imports": [
+        "Mathlib"
+      ]
+    },
+    {
+      "module": "EndpointMomentControls",
+      "source_id": "src-a5ea2c5119482abd-70ff091c068a4c7b",
+      "imports": [
+        "EndpointMoment"
+      ]
+    },
+    {
+      "module": "AnnularLiteral",
+      "source_id": "src-a5ea2c5119482abd-c5948a7096694ce8",
+      "imports": [
+        "EndpointMoment"
+      ]
+    },
+    {
+      "module": "BernoulliWord",
+      "source_id": "src-a5ea2c5119482abd-f847a9aa3322fa53",
+      "imports": [
+        "AnnularLiteral"
+      ]
+    },
+    {
+      "module": "GrowthMoment",
+      "source_id": "src-a5ea2c5119482abd-3ae1204839ebd647",
+      "imports": [
+        "BernoulliWord"
+      ]
+    },
+    {
+      "module": "BayesBridge",
+      "source_id": "src-a5ea2c5119482abd-32884e46a8402177",
+      "imports": [
+        "GrowthMoment"
+      ]
+    },
+    {
+      "module": "AnnularControls",
+      "source_id": "src-a5ea2c5119482abd-9478104b5a0fa438",
+      "imports": [
+        "BayesBridge"
+      ]
+    },
+    {
+      "module": "CentredBernoulli",
+      "source_id": "src-a5ea2c5119482abd-d1e4900d61cfa0cc",
+      "imports": [
+        "BayesBridge"
+      ]
+    },
+    {
+      "module": "EmpiricalGeometry",
+      "source_id": "src-a5ea2c5119482abd-d9df38d3049ef265",
+      "imports": [
+        "CentredBernoulli"
+      ]
+    },
+    {
+      "module": "EmpiricalChernoff",
+      "source_id": "src-a5ea2c5119482abd-1445284cfc1105ef",
+      "imports": [
+        "EmpiricalGeometry"
+      ]
+    },
+    {
+      "module": "ExponentialSeries",
+      "source_id": "src-a5ea2c5119482abd-b6a759a4b90b90f2",
+      "imports": [
+        "EmpiricalChernoff"
+      ]
+    },
+    {
+      "module": "EmpiricalEndpoints",
+      "source_id": "src-a5ea2c5119482abd-3920f4167e28b82d",
+      "imports": [
+        "ExponentialSeries"
+      ]
+    },
+    {
+      "module": "PriorSufficiency",
+      "source_id": "src-a5ea2c5119482abd-ef44d1a711564c21",
+      "imports": [
+        "EmpiricalEndpoints"
+      ]
+    },
+    {
+      "module": "SufficiencyControls",
+      "source_id": "src-a5ea2c5119482abd-10c0506363129eb7",
+      "imports": [
+        "PriorSufficiency"
+      ]
+    },
+    {
+      "module": "EndpointProcess",
+      "source_id": "src-a5ea2c5119482abd-a7dd91f3e6309e98",
+      "imports": [
+        "PriorSufficiency"
+      ]
+    },
+    {
+      "module": "EndpointProcessControls",
+      "source_id": "src-a5ea2c5119482abd-3e6372569037826f",
+      "imports": [
+        "EndpointProcess"
+      ]
+    }
+  ],
+  "module_order": [
+    "EndpointMoment",
+    "EndpointMomentControls",
+    "AnnularLiteral",
+    "BernoulliWord",
+    "GrowthMoment",
+    "BayesBridge",
+    "AnnularControls",
+    "CentredBernoulli",
+    "EmpiricalGeometry",
+    "EmpiricalChernoff",
+    "ExponentialSeries",
+    "EmpiricalEndpoints",
+    "PriorSufficiency",
+    "SufficiencyControls",
+    "EndpointProcess",
+    "EndpointProcessControls"
+  ],
+  "targets": [
+    {
+      "name": "EndpointMoment.count_reciprocal_thresholds",
+      "module": "EndpointMoment"
+    },
+    {
+      "name": "EndpointMoment.count_reciprocal_thresholds_tail",
+      "module": "EndpointMoment"
+    },
+    {
+      "name": "EndpointMoment.tsum_profile_eq_lintegral_floor",
+      "module": "EndpointMoment"
+    },
+    {
+      "name": "EndpointMoment.tsum_profile_tail_eq_lintegral_floor",
+      "module": "EndpointMoment"
+    },
+    {
+      "name": "EndpointMoment.tsum_profile_lt_top_iff",
+      "module": "EndpointMoment"
+    },
+    {
+      "name": "EndpointMoment.endpoint_series_lt_top_iff",
+      "module": "EndpointMoment"
+    },
+    {
+      "name": "EndpointMoment.endpoint_tail_series_lt_top_iff",
+      "module": "EndpointMoment"
+    },
+    {
+      "name": "EndpointMoment.interior_add_endpoint_atoms",
+      "module": "EndpointMoment"
+    },
+    {
+      "name": "AnnularLiteral.left_width",
+      "module": "AnnularLiteral"
+    },
+    {
+      "name": "AnnularLiteral.right_width",
+      "module": "AnnularLiteral"
+    },
+    {
+      "name": "AnnularLiteral.left_annular_lower",
+      "module": "AnnularLiteral"
+    },
+    {
+      "name": "AnnularLiteral.right_annular_lower",
+      "module": "AnnularLiteral"
+    },
+    {
+      "name": "AnnularLiteral.left_growth_weighted_lower",
+      "module": "AnnularLiteral"
+    },
+    {
+      "name": "AnnularLiteral.right_growth_weighted_lower",
+      "module": "AnnularLiteral"
+    },
+    {
+      "name": "AnnularLiteral.zero_prefix_lower",
+      "module": "AnnularLiteral"
+    },
+    {
+      "name": "AnnularLiteral.seed_averaged_two_prefix_growth_lower",
+      "module": "AnnularLiteral"
+    },
+    {
+      "name": "BernoulliWord.sum_weight",
+      "module": "BernoulliWord"
+    },
+    {
+      "name": "BernoulliWord.failure_probability",
+      "module": "BernoulliWord"
+    },
+    {
+      "name": "BernoulliWord.all_reports_growth_lower",
+      "module": "BernoulliWord"
+    },
+    {
+      "name": "GrowthMoment.exists_cutoff",
+      "module": "GrowthMoment"
+    },
+    {
+      "name": "GrowthMoment.finite_tail_risk_implies_inverse_moment",
+      "module": "GrowthMoment"
+    },
+    {
+      "name": "GrowthMoment.finite_risk_implies_inverse_moment",
+      "module": "GrowthMoment"
+    },
+    {
+      "name": "GrowthMoment.lowerGrowth_of_separate",
+      "module": "GrowthMoment"
+    },
+    {
+      "name": "BayesBridge.productRisk_eq_bayesRisk",
+      "module": "BayesBridge"
+    },
+    {
+      "name": "BayesBridge.bayesRisk_eq_risk",
+      "module": "BayesBridge"
+    },
+    {
+      "name": "BayesBridge.finite_product_risk_implies_inverse_moment",
+      "module": "BayesBridge"
+    },
+    {
+      "name": "CentredBernoulli.one_mgf_upper",
+      "module": "CentredBernoulli"
+    },
+    {
+      "name": "CentredBernoulli.word_mgf_exact",
+      "module": "CentredBernoulli"
+    },
+    {
+      "name": "CentredBernoulli.word_mgf_upper",
+      "module": "CentredBernoulli"
+    },
+    {
+      "name": "EmpiricalGeometry.accepted_of_relative_error",
+      "module": "EmpiricalGeometry"
+    },
+    {
+      "name": "EmpiricalChernoff.realError_upper",
+      "module": "EmpiricalChernoff"
+    },
+    {
+      "name": "EmpiricalChernoff.error_upper",
+      "module": "EmpiricalChernoff"
+    },
+    {
+      "name": "ExponentialSeries.summed_error_bound",
+      "module": "ExponentialSeries"
+    },
+    {
+      "name": "EmpiricalEndpoints.error_at_zero",
+      "module": "EmpiricalEndpoints"
+    },
+    {
+      "name": "EmpiricalEndpoints.error_at_one",
+      "module": "EmpiricalEndpoints"
+    },
+    {
+      "name": "PriorSufficiency.summed_empirical_risk_bound",
+      "module": "PriorSufficiency"
+    },
+    {
+      "name": "PriorSufficiency.empirical_productRisk_eq",
+      "module": "PriorSufficiency"
+    },
+    {
+      "name": "PriorSufficiency.empirical_product_risk_finite",
+      "module": "PriorSufficiency"
+    },
+    {
+      "name": "PriorSufficiency.exists_seeded_report_family_iff",
+      "module": "PriorSufficiency"
+    },
+    {
+      "name": "PriorSufficiency.exists_report_family_iff",
+      "module": "PriorSufficiency"
+    },
+    {
+      "name": "EndpointProcess.wordEvent_mass",
+      "module": "EndpointProcess"
+    },
+    {
+      "name": "EndpointProcess.lintegral_prefix_function",
+      "module": "EndpointProcess"
+    },
+    {
+      "name": "EndpointProcess.stageFailure_measurable",
+      "module": "EndpointProcess"
+    },
+    {
+      "name": "EndpointProcess.totalFailures_measurable",
+      "module": "EndpointProcess"
+    },
+    {
+      "name": "EndpointProcess.expected_stage_eq",
+      "module": "EndpointProcess"
+    },
+    {
+      "name": "EndpointProcess.actual_expectation_eq_risk_series",
+      "module": "EndpointProcess"
+    },
+    {
+      "name": "EndpointProcess.empirical_actual_expectation_bound",
+      "module": "EndpointProcess"
+    },
+    {
+      "name": "EndpointProcess.exists_finite_actual_expectation_iff",
+      "module": "EndpointProcess"
+    },
+    {
+      "name": "EndpointProcess.every_policy_infinite_of_infinite_moment",
+      "module": "EndpointProcess"
+    },
+    {
+      "name": "EndpointProcess.experiment_rectangle",
+      "module": "EndpointProcess"
+    },
+    {
+      "name": "EndpointProcess.finite_receipt_mass",
+      "module": "EndpointProcess"
+    },
+    {
+      "name": "EndpointProcess.prefix_causality",
+      "module": "EndpointProcess"
+    },
+    {
+      "name": "EndpointProcess.empirical_report_coherent",
+      "module": "EndpointProcess"
+    },
+    {
+      "name": "EndpointProcess.exists_coherent_finite_actual_expectation_iff",
+      "module": "EndpointProcess"
+    },
+    {
+      "name": "actual_empirical_left_endpoint",
+      "module": "EndpointProcessControls"
+    },
+    {
+      "name": "actual_empirical_right_endpoint",
+      "module": "EndpointProcessControls"
+    }
+  ],
+  "pins": {
+    "lean_version": "4.19.0",
+    "lean_binary_sha256": "92c3d35b5bfaa5e0fea413a775d504cf46cd95e1345df61c2274f76779e7e023",
+    "packages": [
+      {
+        "name": "mathlib",
+        "revision": "c44e0c8ee63ca166450922a373c7409c5d26b00b"
+      },
+      {
+        "name": "plausible",
+        "revision": "77e08eddc486491d7b9e470926b3dbe50319451a"
+      },
+      {
+        "name": "LeanSearchClient",
+        "revision": "25078369972d295301f5a1e53c3e5850cf6d9d4c"
+      },
+      {
+        "name": "importGraph",
+        "revision": "e6a9f0f5ee3ccf7443a0070f92b62f8db12ae82b"
+      },
+      {
+        "name": "proofwidgets",
+        "revision": "c4919189477c3221e6a204008998b0d724f49904"
+      },
+      {
+        "name": "aesop",
+        "revision": "5d50b08dedd7d69b3d9b3176e0d58a23af228884"
+      },
+      {
+        "name": "Qq",
+        "revision": "fa4f7f15d97591a9cf3aa7724ba371c7fc6dda02"
+      },
+      {
+        "name": "batteries",
+        "revision": "f5d04a9c4973d401c8c92500711518f7c656f034"
+      },
+      {
+        "name": "Cli",
+        "revision": "02dbd02bc00ec4916e99b04b2245b30200e200d0"
+      }
+    ]
+  },
+  "official_imports": [
+    {
+      "module": "Mathlib",
+      "repository": "mathlib",
+      "source": "Mathlib.lean",
+      "sha256": "b0518254279fabf0c6a920804e684536b0f5e2bd1cb6318d0609eb563413f20a"
+    }
+  ],
+  "driver": {
+    "source_id": "src-a5ea2c5119482abd-996fd2e09c80ab70",
+    "lean_argument": "ENVIRONMENT_DIRECTORY"
+  },
+  "controls": "ORIGINAL_DRIVER_REQUIRED",
+  "classification": "CURRENT_EVIDENCE"
+}

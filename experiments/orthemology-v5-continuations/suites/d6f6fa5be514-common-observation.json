@@ -1,0 +1,228 @@
+{
+  "id": "d6f6fa5be514-common-observation",
+  "origin": "d6f6fa5be51464c0aef8e06f0ab0433fc0b375ccf57f855a95e6fb8a55a14ade",
+  "descriptor_source_id": "src-d6f6fa5be51464c0-85c042fef1d85c5a",
+  "modules": [
+    {
+      "module": "SelfVerifyingSupport",
+      "source_id": "src-d6f6fa5be51464c0-de27c4144fbd9f13",
+      "imports": [
+        "Mathlib.Data.Finset.Powerset",
+        "Mathlib.Data.Finset.Card",
+        "Mathlib.Tactic"
+      ]
+    },
+    {
+      "module": "CommonObservationBoundary",
+      "source_id": "src-d6f6fa5be51464c0-52e4f025d7957109",
+      "imports": [
+        "Mathlib",
+        "SelfVerifyingSupport"
+      ]
+    },
+    {
+      "module": "CommonObservationFiniteActions",
+      "source_id": "src-d6f6fa5be51464c0-f98b7a7048a9b169",
+      "imports": [
+        "CommonObservationBoundary"
+      ]
+    }
+  ],
+  "module_order": [
+    "SelfVerifyingSupport",
+    "CommonObservationBoundary",
+    "CommonObservationFiniteActions"
+  ],
+  "targets": [
+    {
+      "name": "Orthemology.Tranche2.AgreeOn",
+      "module": "SelfVerifyingSupport"
+    },
+    {
+      "name": "Orthemology.Tranche2.SelfVerifying",
+      "module": "SelfVerifyingSupport"
+    },
+    {
+      "name": "Orthemology.Tranche2.prune",
+      "module": "SelfVerifyingSupport"
+    },
+    {
+      "name": "Orthemology.Tranche2.mem_prune",
+      "module": "SelfVerifyingSupport"
+    },
+    {
+      "name": "Orthemology.Tranche2.prune_subset",
+      "module": "SelfVerifyingSupport"
+    },
+    {
+      "name": "Orthemology.Tranche2.agreeOn_mono",
+      "module": "SelfVerifyingSupport"
+    },
+    {
+      "name": "Orthemology.Tranche2.prune_mono",
+      "module": "SelfVerifyingSupport"
+    },
+    {
+      "name": "Orthemology.Tranche2.selfVerifying_empty",
+      "module": "SelfVerifyingSupport"
+    },
+    {
+      "name": "Orthemology.Tranche2.selfVerifying_union",
+      "module": "SelfVerifyingSupport"
+    },
+    {
+      "name": "Orthemology.Tranche2.selfVerifying_iff_fixed",
+      "module": "SelfVerifyingSupport"
+    },
+    {
+      "name": "Orthemology.Tranche2.pruneIter",
+      "module": "SelfVerifyingSupport"
+    },
+    {
+      "name": "Orthemology.Tranche2.pruneIter_step_subset",
+      "module": "SelfVerifyingSupport"
+    },
+    {
+      "name": "Orthemology.Tranche2.pruneIter_subset_target",
+      "module": "SelfVerifyingSupport"
+    },
+    {
+      "name": "Orthemology.Tranche2.selfVerifying_survives",
+      "module": "SelfVerifyingSupport"
+    },
+    {
+      "name": "Orthemology.Tranche2.pruneIter_fixed_propagates",
+      "module": "SelfVerifyingSupport"
+    },
+    {
+      "name": "Orthemology.Tranche2.pruneIter_card_bound_of_no_fixed",
+      "module": "SelfVerifyingSupport"
+    },
+    {
+      "name": "Orthemology.Tranche2.pruneIter_exists_fixed",
+      "module": "SelfVerifyingSupport"
+    },
+    {
+      "name": "Orthemology.Tranche2.pruneIter_card_fixed",
+      "module": "SelfVerifyingSupport"
+    },
+    {
+      "name": "Orthemology.Tranche2.supportKernel",
+      "module": "SelfVerifyingSupport"
+    },
+    {
+      "name": "Orthemology.Tranche2.supportKernel_selfVerifying",
+      "module": "SelfVerifyingSupport"
+    },
+    {
+      "name": "Orthemology.Tranche2.supportKernel_greatest",
+      "module": "SelfVerifyingSupport"
+    },
+    {
+      "name": "Orthemology.Tranche2.supportKernel_nonempty_iff",
+      "module": "SelfVerifyingSupport"
+    },
+    {
+      "name": "Orthemology.Tranche2.CommonObservationBoundary.common_action_of_dominated_eventual_success",
+      "module": "CommonObservationBoundary"
+    },
+    {
+      "name": "Orthemology.Tranche2.CommonObservationBoundary.common_action_of_same_law",
+      "module": "CommonObservationBoundary"
+    },
+    {
+      "name": "Orthemology.Tranche2.CommonObservationBoundary.constant_action_success",
+      "module": "CommonObservationBoundary"
+    },
+    {
+      "name": "Orthemology.Tranche2.CommonObservationBoundary.selfVerifying_iff_common_target",
+      "module": "CommonObservationBoundary"
+    },
+    {
+      "name": "Orthemology.Tranche2.CommonObservationBoundary.infinite_target_counterexample",
+      "module": "CommonObservationBoundary"
+    },
+    {
+      "name": "Orthemology.Tranche2.CommonObservationBoundary.common_action_of_finite_actions",
+      "module": "CommonObservationFiniteActions"
+    },
+    {
+      "name": "Orthemology.Tranche2.CommonObservationBoundary.common_action_of_either_finite",
+      "module": "CommonObservationFiniteActions"
+    }
+  ],
+  "pins": {
+    "lean_version": "4.19.0",
+    "lean_binary_sha256": "92c3d35b5bfaa5e0fea413a775d504cf46cd95e1345df61c2274f76779e7e023",
+    "packages": [
+      {
+        "name": "mathlib",
+        "revision": "c44e0c8ee63ca166450922a373c7409c5d26b00b"
+      },
+      {
+        "name": "plausible",
+        "revision": "77e08eddc486491d7b9e470926b3dbe50319451a"
+      },
+      {
+        "name": "LeanSearchClient",
+        "revision": "25078369972d295301f5a1e53c3e5850cf6d9d4c"
+      },
+      {
+        "name": "importGraph",
+        "revision": "e6a9f0f5ee3ccf7443a0070f92b62f8db12ae82b"
+      },
+      {
+        "name": "proofwidgets",
+        "revision": "c4919189477c3221e6a204008998b0d724f49904"
+      },
+      {
+        "name": "aesop",
+        "revision": "5d50b08dedd7d69b3d9b3176e0d58a23af228884"
+      },
+      {
+        "name": "Qq",
+        "revision": "fa4f7f15d97591a9cf3aa7724ba371c7fc6dda02"
+      },
+      {
+        "name": "batteries",
+        "revision": "f5d04a9c4973d401c8c92500711518f7c656f034"
+      },
+      {
+        "name": "Cli",
+        "revision": "02dbd02bc00ec4916e99b04b2245b30200e200d0"
+      }
+    ]
+  },
+  "official_imports": [
+    {
+      "module": "Mathlib",
+      "repository": "mathlib",
+      "source": "Mathlib.lean",
+      "sha256": "b0518254279fabf0c6a920804e684536b0f5e2bd1cb6318d0609eb563413f20a"
+    },
+    {
+      "module": "Mathlib.Data.Finset.Card",
+      "repository": "mathlib",
+      "source": "Mathlib/Data/Finset/Card.lean",
+      "sha256": "a915b4a9c6ed684221397e67503048f604fc2caf58a88b03c02e4d7e070a940b"
+    },
+    {
+      "module": "Mathlib.Data.Finset.Powerset",
+      "repository": "mathlib",
+      "source": "Mathlib/Data/Finset/Powerset.lean",
+      "sha256": "ff946726d050b01703aec4dd1a66398f461455942e036806c24ceaeee6e23ac8"
+    },
+    {
+      "module": "Mathlib.Tactic",
+      "repository": "mathlib",
+      "source": "Mathlib/Tactic.lean",
+      "sha256": "f20038eba7bba63f07a2f854496101226df407e20414e6b8ebf94b14f95e831b"
+    }
+  ],
+  "driver": {
+    "source_id": "src-d6f6fa5be51464c0-119c0f60ed32aec4",
+    "lean_argument": "BIN_DIRECTORY"
+  },
+  "controls": "ORIGINAL_DRIVER_REQUIRED",
+  "classification": "CURRENT_EVIDENCE"
+}

@@ -1,0 +1,406 @@
+{
+  "status": "FRESH_KERNEL_COMPONENTS",
+  "exit_code": 0,
+  "kernel_verified": true,
+  "suite_id": "db6ccdc793a0-coverage-boundary",
+  "suite_sha256": "4f86c9a3c959710637f2f7080fdf8e68ec544fdd677581528af20b5dd0910b42",
+  "source_hashes": {
+    "CoverageBoundary": "980fd23bf14834dbc34b3b214f8b3a7e6912b4f5020e82a6d6c72c0b499caf74",
+    "Controls": "8938168f378c0710cdceeb2e130c77087527f5de988fc731492098b1ecf8ba85"
+  },
+  "post_source_hashes": {
+    "CoverageBoundary": "980fd23bf14834dbc34b3b214f8b3a7e6912b4f5020e82a6d6c72c0b499caf74",
+    "Controls": "8938168f378c0710cdceeb2e130c77087527f5de988fc731492098b1ecf8ba85"
+  },
+  "compiler_sha256": "92c3d35b5bfaa5e0fea413a775d504cf46cd95e1345df61c2274f76779e7e023",
+  "pins": {
+    "lean_version": "4.19.0",
+    "lean_binary_sha256": "92c3d35b5bfaa5e0fea413a775d504cf46cd95e1345df61c2274f76779e7e023",
+    "packages": [
+      {
+        "name": "mathlib",
+        "revision": "c44e0c8ee63ca166450922a373c7409c5d26b00b"
+      },
+      {
+        "name": "plausible",
+        "revision": "77e08eddc486491d7b9e470926b3dbe50319451a"
+      },
+      {
+        "name": "LeanSearchClient",
+        "revision": "25078369972d295301f5a1e53c3e5850cf6d9d4c"
+      },
+      {
+        "name": "importGraph",
+        "revision": "e6a9f0f5ee3ccf7443a0070f92b62f8db12ae82b"
+      },
+      {
+        "name": "proofwidgets",
+        "revision": "c4919189477c3221e6a204008998b0d724f49904"
+      },
+      {
+        "name": "aesop",
+        "revision": "5d50b08dedd7d69b3d9b3176e0d58a23af228884"
+      },
+      {
+        "name": "Qq",
+        "revision": "fa4f7f15d97591a9cf3aa7724ba371c7fc6dda02"
+      },
+      {
+        "name": "batteries",
+        "revision": "f5d04a9c4973d401c8c92500711518f7c656f034"
+      },
+      {
+        "name": "Cli",
+        "revision": "02dbd02bc00ec4916e99b04b2245b30200e200d0"
+      }
+    ]
+  },
+  "modules": [
+    {
+      "module": "CoverageBoundary",
+      "source_sha256": "980fd23bf14834dbc34b3b214f8b3a7e6912b4f5020e82a6d6c72c0b499caf74",
+      "object_sha256": "bf406123bd04d61c79a3f36368fb739a24b8fbcc66347fbf4b6356067d6d13fe",
+      "transitive_source_fingerprint": "7d757010c152750c7ffc20067f9f8c0f923fbefc8446c3bb9625adb219374c31",
+      "status": "FRESH_COMPILE",
+      "exit_code": 0
+    },
+    {
+      "module": "Controls",
+      "source_sha256": "8938168f378c0710cdceeb2e130c77087527f5de988fc731492098b1ecf8ba85",
+      "object_sha256": "35b778f33b75a2fa2bb394e7569dae88161bfaf40128df4d4403419c60f3e45f",
+      "transitive_source_fingerprint": "1c773aa39aaa98e2bdee549555745ae57b5d299ba0fb70115efcf29b81571349",
+      "status": "FRESH_COMPILE",
+      "exit_code": 0
+    }
+  ],
+  "readbacks": {
+    "Orthemology.Tranche3.CoverageBoundary.Source": {
+      "type_sha256": "087513e08c12d753e4df8932fabfb7f6e445efc2895a2d23796b945bf048c798",
+      "axioms": []
+    },
+    "Orthemology.Tranche3.CoverageBoundary.Token": {
+      "type_sha256": "e558028df4016746a75b4c259ac6f2e6df2520c9eabe4831aa5d5f175b594b36",
+      "axioms": []
+    },
+    "Orthemology.Tranche3.CoverageBoundary.World": {
+      "type_sha256": "3b6e58d7385f5e519005a67fcde83e4a202188d2e60f8eb9baccaf4716ac107f",
+      "axioms": []
+    },
+    "Orthemology.Tranche3.CoverageBoundary.SourceExists": {
+      "type_sha256": "204408f771bcde26be04039e7812c4bbe3f7a0145dfa85d3ac7a5d74c1332473",
+      "axioms": []
+    },
+    "Orthemology.Tranche3.CoverageBoundary.actual": {
+      "type_sha256": "a045dd2a1cd26e7eefeffae745a3273434ac084f83e6f453ffcdfa74a64e4b1c",
+      "axioms": []
+    },
+    "Orthemology.Tranche3.CoverageBoundary.available": {
+      "type_sha256": "07c4a447a19a842bb3d4f0c2e16480b82fdc652b8d6f08a3a48c5d1afa63cebb",
+      "axioms": [
+        "Quot.sound",
+        "propext"
+      ]
+    },
+    "Orthemology.Tranche3.CoverageBoundary.Payload": {
+      "type_sha256": "ae64a5defbf6e907020eddda0a7c31ff6d49b493259153ff0ddff36adcba7372",
+      "axioms": []
+    },
+    "Orthemology.Tranche3.CoverageBoundary.evaluationOutput": {
+      "type_sha256": "497a81865a07d8a597d75e4a1d4b8f11e2eabc967fad181dfc625dee6a294591",
+      "axioms": []
+    },
+    "Orthemology.Tranche3.CoverageBoundary.auxiliaryOutput": {
+      "type_sha256": "8c55cf0e0ee9a34129c545c84ec72c11d0449b2046d226adb207d452635762f1",
+      "axioms": []
+    },
+    "Orthemology.Tranche3.CoverageBoundary.output": {
+      "type_sha256": "faafe7d2fc62a8095bfd2c27895bcbe5e93853c5cb285b2bcb979db7a6b983d2",
+      "axioms": []
+    },
+    "Orthemology.Tranche3.CoverageBoundary.ExistsToken": {
+      "type_sha256": "c3b660b57aa5557946b4cd21334a1195a9a9eb66ac4fb07d47ac20b98aa3f13d",
+      "axioms": []
+    },
+    "Orthemology.Tranche3.CoverageBoundary.Provides": {
+      "type_sha256": "1768023cb896bc798f7143855ff9ba895e75fe3ba2ed93b05d764852b89277cb",
+      "axioms": [
+        "Quot.sound",
+        "propext"
+      ]
+    },
+    "Orthemology.Tranche3.CoverageBoundary.Complete": {
+      "type_sha256": "202bde0d300e8eff8a89463015413dd7833a4f4107cb70fb7d9710039a27a1e4",
+      "axioms": [
+        "Quot.sound",
+        "propext"
+      ]
+    },
+    "Orthemology.Tranche3.CoverageBoundary.requirements": {
+      "type_sha256": "6d8e05b06d60c03c9cd7010aa69a06de91a7c79bc824ad0ceeaf4e076e0faae9",
+      "axioms": [
+        "Quot.sound",
+        "propext"
+      ]
+    },
+    "Orthemology.Tranche3.CoverageBoundary.Needs": {
+      "type_sha256": "223b88af6405128631a83c980b419249c3df22ddaedfe87cb4bbf0b5d2f6fe99",
+      "axioms": []
+    },
+    "Orthemology.Tranche3.CoverageBoundary.provides_iff_requirements": {
+      "type_sha256": "75b2b2debd4b6ba07a54e5005bedf016499f57a3a090d735b1b4dfe7953698c1",
+      "axioms": [
+        "Quot.sound",
+        "propext"
+      ]
+    },
+    "Orthemology.Tranche3.CoverageBoundary.actual_outputs": {
+      "type_sha256": "9ebf85f4637432266904407a5cab822fe3a41f1492c7b6fa1bcba0eb784b5842",
+      "axioms": []
+    },
+    "Orthemology.Tranche3.CoverageBoundary.actual_evaluation_correct": {
+      "type_sha256": "2ad9a6522c80ffbd834a831ba01a294cd100cfb779a8c320e4b4edd52578694f",
+      "axioms": []
+    },
+    "Orthemology.Tranche3.CoverageBoundary.enablers_exist_necessarily": {
+      "type_sha256": "fd9205e8d1523def3ef11ae4fafb53a65a8b358888b787f8832d17d24530b48c",
+      "axioms": []
+    },
+    "Orthemology.Tranche3.CoverageBoundary.every_actual_token_produced": {
+      "type_sha256": "13266a443a105cce192e08f3505281ace333a909f8a1d5892c6844603e6619d7",
+      "axioms": [
+        "Classical.choice",
+        "Quot.sound",
+        "propext"
+      ]
+    },
+    "Orthemology.Tranche3.CoverageBoundary.local_but_not_universal": {
+      "type_sha256": "65eb34877f118d5d3d649284c9fe0f081479ea3fa41060402982373934ef8d11",
+      "axioms": [
+        "Quot.sound",
+        "propext"
+      ]
+    },
+    "Orthemology.Tranche3.CoverageBoundary.no_individual_complete_for_joint": {
+      "type_sha256": "9fbf91c868ae7c4046edc333b94471ad833c35cce566465490e0eeeaa4b94668",
+      "axioms": [
+        "Classical.choice",
+        "Quot.sound",
+        "propext"
+      ]
+    },
+    "Orthemology.Tranche3.CoverageBoundary.no_universal_individual": {
+      "type_sha256": "0839f99644a70f9c72101dd7db4b0fee0db68574fba12a0ab8a79492213b024c",
+      "axioms": [
+        "Classical.choice",
+        "Quot.sound",
+        "propext"
+      ]
+    },
+    "Orthemology.Tranche3.CoverageBoundary.local_exclusive": {
+      "type_sha256": "363f107b38d568ccb5c7eb6694a5ad35c121c22f1f8f6a667144e9d6a9ab1798",
+      "axioms": [
+        "Classical.choice",
+        "Quot.sound",
+        "propext"
+      ]
+    },
+    "Orthemology.Tranche3.CoverageBoundary.prerequisite_closed": {
+      "type_sha256": "b56ffbe8d99277d791ec79c39948f64028d85a23c12c9e0b8452b52dac808d5d",
+      "axioms": [
+        "Classical.choice",
+        "Quot.sound",
+        "propext"
+      ]
+    },
+    "Orthemology.Tranche3.CoverageBoundary.connected_hub": {
+      "type_sha256": "5900a056ea8954677e4d4daffbb95b98ebbfd4fee8a71d54b39a53f6e884db9b",
+      "axioms": [
+        "Classical.choice",
+        "Quot.sound",
+        "propext"
+      ]
+    },
+    "Orthemology.Tranche3.CoverageBoundary.genuine_cooperation": {
+      "type_sha256": "2c24af32e5e99033d60361b195ad691ae9fb615bcf7171dadd5be9e55a6713ce",
+      "axioms": [
+        "Quot.sound",
+        "propext"
+      ]
+    },
+    "Orthemology.Tranche3.CoverageBoundary.effects_contingent": {
+      "type_sha256": "b468705e7beb1652884d7ed24c3e8b29233017683f21ba4d5d162382c3a1b816",
+      "axioms": [
+        "Classical.choice",
+        "Quot.sound",
+        "propext"
+      ]
+    },
+    "Orthemology.Tranche3.CoverageBoundary.Node": {
+      "type_sha256": "3d919d313bb7b1c8303671fa7570f21feab047b89c4b8d3308c324ad921266a3",
+      "axioms": []
+    },
+    "Orthemology.Tranche3.CoverageBoundary.NodeExists": {
+      "type_sha256": "1a0194f527cb6f7aac7324c585000dd5211e96b522dea4e24f75402a440b4b9d",
+      "axioms": []
+    },
+    "Orthemology.Tranche3.CoverageBoundary.Origin": {
+      "type_sha256": "36174aa557fc043d78811d84af0360ecc6c0175328d89981b2c21626d470aa54",
+      "axioms": [
+        "Quot.sound",
+        "propext"
+      ]
+    },
+    "Orthemology.Tranche3.CoverageBoundary.nodeExistsDecidable": {
+      "type_sha256": "9df5e02632f75b16821d90f6ad652e1b9d3a72d4956b04a29bac7f83f4084219",
+      "axioms": []
+    },
+    "Orthemology.Tranche3.CoverageBoundary.originDecidable": {
+      "type_sha256": "283388a9d189b023d2eb8a1b36ff4ae4ac7f69a884d901b72a4a18d45188d53a",
+      "axioms": [
+        "Quot.sound",
+        "propext"
+      ]
+    },
+    "Orthemology.Tranche3.CoverageBoundary.rank": {
+      "type_sha256": "964feb179d989ef28cbdbb9c7025ed766476b227281c6c23def0e40523776d56",
+      "axioms": []
+    },
+    "Orthemology.Tranche3.CoverageBoundary.source_roots_necessary": {
+      "type_sha256": "7e171c88b6fcbed410df2eb419b7448ba9b6a69b74b07866aa6c875918668dad",
+      "axioms": [
+        "Classical.choice",
+        "Quot.sound",
+        "propext"
+      ]
+    },
+    "Orthemology.Tranche3.CoverageBoundary.origin_factive": {
+      "type_sha256": "0db6ce58ef1cf99ec6f3c96a64b1115065b28169f27c1e4dc07bb669c154cee7",
+      "axioms": [
+        "Classical.choice",
+        "Quot.sound",
+        "propext"
+      ]
+    },
+    "Orthemology.Tranche3.CoverageBoundary.origin_strict_rank": {
+      "type_sha256": "3c4a8b0a88237abec11cdf7788649625e572ccd663cf4ea6be68fcba6148232e",
+      "axioms": [
+        "Classical.choice",
+        "Quot.sound",
+        "propext"
+      ]
+    },
+    "Orthemology.Tranche3.CoverageBoundary.actual_contingent_source_principle": {
+      "type_sha256": "77df54c084b65de7bfc530b44f1809cc028b3957bb3e87bde1251c2db2a62002",
+      "axioms": [
+        "Classical.choice",
+        "Quot.sound",
+        "propext"
+      ]
+    },
+    "Orthemology.Tranche3.CoverageBoundary.generic_reception_retained": {
+      "type_sha256": "470ef86e950c05d8188f871e6041ba6daa99cabe15640330c4623ec6d9016c8a",
+      "axioms": [
+        "Classical.choice",
+        "Quot.sound",
+        "propext"
+      ]
+    },
+    "Orthemology.Tranche3.CoverageBoundary.InEnvelope": {
+      "type_sha256": "044813a19094ed8197d1d4ae9146588debe6bc06a23c7ed837f7004e36ef070e",
+      "axioms": []
+    },
+    "Orthemology.Tranche3.CoverageBoundary.ClosedUnder": {
+      "type_sha256": "ea24bf3aa721befcde2deba97feafa5a4fac29de62d9dbfa7228cc4e1f8e274b",
+      "axioms": []
+    },
+    "Orthemology.Tranche3.CoverageBoundary.envelope_closed": {
+      "type_sha256": "083f394505200e783ac717b29ea8f0eea5cdb21f770c907a9ecba6522e2ce7fd",
+      "axioms": []
+    },
+    "Orthemology.Tranche3.CoverageBoundary.envelope_least": {
+      "type_sha256": "c4dc3f05a537b21eab7eeeb83404626774df93c9121cff08bf7500207fc61d62",
+      "axioms": []
+    },
+    "Orthemology.Tranche3.CoverageBoundary.universal_propagation_iff_envelope": {
+      "type_sha256": "5962805dd3b63cfeaecad16e774ea1162150a649923507daa918b46ccb0ca199",
+      "axioms": []
+    },
+    "Orthemology.Tranche3.CoverageBoundary.complete_on_field_of_envelope": {
+      "type_sha256": "2a7b722d921e2837fe596531b49bd1474749e9d77c3847dc073f07d0ad2936b0",
+      "axioms": []
+    },
+    "Orthemology.Tranche3.CoverageBoundary.seed_evaluation_envelope_only": {
+      "type_sha256": "f0ae2976cf1271a67fb2a7a1ce9117ff656927aabeaa94b0884072c9cf0e1738",
+      "axioms": []
+    },
+    "Orthemology.Tranche3.CoverageBoundary.connected_does_not_give_prerequisite_scope": {
+      "type_sha256": "fcadeea7de9477a2beb3b38a50e68f9489039a9a54825c17ce4d30a4c82d4a9b",
+      "axioms": [
+        "Classical.choice",
+        "Quot.sound",
+        "propext"
+      ]
+    },
+    "IndependentCoverageControls.computed_joint_requires_both": {
+      "type_sha256": "a917181763db4d64913cf87c239170ded7ebf74c91531348908c1f6d9426415e",
+      "axioms": [
+        "Quot.sound",
+        "propext"
+      ]
+    },
+    "IndependentCoverageControls.actual_evaluation_keeps_objective_correctness": {
+      "type_sha256": "74fe4f6bee0fcfdc7435406a4e6706970df337630bf447d95e0f22fbb765851d",
+      "axioms": []
+    },
+    "IndependentCoverageControls.connected_undirected_graph_does_not_expand_forward_closure": {
+      "type_sha256": "8010069ccc73fea24541e1dbccf66dcc33f228888df10ea6de9e0e92e990a9dc",
+      "axioms": [
+        "Classical.choice",
+        "Quot.sound",
+        "propext"
+      ]
+    },
+    "IndependentCoverageControls.direction_reversal_would_change_coverage": {
+      "type_sha256": "5ae045a4c82152ebe2cb9a9fb09c3f912a3a0143a3fca17324322b4b35535b86",
+      "axioms": []
+    },
+    "IndependentCoverageControls.empty_seed_cannot_generate_anything": {
+      "type_sha256": "9308b1f6b93546a7d819a0abe896f6af50e02d4831a0e491ee28910f9e769b3e",
+      "axioms": [
+        "Classical.choice",
+        "Quot.sound",
+        "propext"
+      ]
+    },
+    "IndependentCoverageControls.universal_seed_needs_no_edges": {
+      "type_sha256": "9fb618dce33f614708ec9ffbcf9f9c016bcc95ab3d9501c9b1318043f062d23e",
+      "axioms": []
+    },
+    "IndependentCoverageControls.local_role_does_not_cover_all_tokens": {
+      "type_sha256": "52ff154e7fb51298fdded65445e1e414a73b440e33a6024882daace80d3cdbce",
+      "axioms": [
+        "Classical.choice",
+        "Quot.sound",
+        "propext"
+      ]
+    },
+    "IndependentCoverageControls.exists_bearer_can_withhold_exercise": {
+      "type_sha256": "ffd0402a8a1a881e80faabac8a2de30d8613dfebc4804bd2e71361e0d12f7d82",
+      "axioms": []
+    },
+    "IndependentCoverageControls.no_claim_of_two_complete_universal_sources": {
+      "type_sha256": "8cb0123a6e3a60511ef424dee3956b21a90b23909b2a2a666d23d0793155217d",
+      "axioms": [
+        "Classical.choice",
+        "Quot.sound",
+        "propext"
+      ]
+    }
+  },
+  "original_controls": "NOT_RUN",
+  "original_receipt_sha256": "53453a2920c5c69b9df80f4bbff8934636ed13f70202343ffbbb4145c4d224ea",
+  "original_driver_sha256": "4933d602f18c749ff170629964914907bf1c5bf05160329bd8aab623dfd65f98",
+  "execution_kind": "FRESH_CUSTOM_CLOSURE",
+  "finished_utc": "2026-10-02T05:42:34.892959+00:00",
+  "scope": "Source-bound custom closure and selected declaration readbacks. Types are represented by hashes of the exact printed types; complete logs remain private. Official caches are trusted. This does not establish ordinary proof, runtime completeness, empirical or normative warrant, novelty, external human review or merged adoption."
+}

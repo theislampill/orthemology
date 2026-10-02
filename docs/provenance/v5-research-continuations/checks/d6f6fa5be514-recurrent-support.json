@@ -1,0 +1,233 @@
+{
+  "status": "FRESH_KERNEL_COMPONENTS",
+  "exit_code": 0,
+  "kernel_verified": true,
+  "suite_id": "d6f6fa5be514-recurrent-support",
+  "suite_sha256": "a898934919ba26fee6378fdb55d292d3ed8e474d51495d955635ed866de2505f",
+  "source_hashes": {
+    "RecurrentSupport": "ee53d2fceb24d3552b0cf0798fb8c10b22717f66e80546db2e26d48c36d19899"
+  },
+  "post_source_hashes": {
+    "RecurrentSupport": "ee53d2fceb24d3552b0cf0798fb8c10b22717f66e80546db2e26d48c36d19899"
+  },
+  "compiler_sha256": "92c3d35b5bfaa5e0fea413a775d504cf46cd95e1345df61c2274f76779e7e023",
+  "pins": {
+    "lean_version": "4.19.0",
+    "lean_binary_sha256": "92c3d35b5bfaa5e0fea413a775d504cf46cd95e1345df61c2274f76779e7e023",
+    "packages": [
+      {
+        "name": "mathlib",
+        "revision": "c44e0c8ee63ca166450922a373c7409c5d26b00b"
+      },
+      {
+        "name": "plausible",
+        "revision": "77e08eddc486491d7b9e470926b3dbe50319451a"
+      },
+      {
+        "name": "LeanSearchClient",
+        "revision": "25078369972d295301f5a1e53c3e5850cf6d9d4c"
+      },
+      {
+        "name": "importGraph",
+        "revision": "e6a9f0f5ee3ccf7443a0070f92b62f8db12ae82b"
+      },
+      {
+        "name": "proofwidgets",
+        "revision": "c4919189477c3221e6a204008998b0d724f49904"
+      },
+      {
+        "name": "aesop",
+        "revision": "5d50b08dedd7d69b3d9b3176e0d58a23af228884"
+      },
+      {
+        "name": "Qq",
+        "revision": "fa4f7f15d97591a9cf3aa7724ba371c7fc6dda02"
+      },
+      {
+        "name": "batteries",
+        "revision": "f5d04a9c4973d401c8c92500711518f7c656f034"
+      },
+      {
+        "name": "Cli",
+        "revision": "02dbd02bc00ec4916e99b04b2245b30200e200d0"
+      }
+    ]
+  },
+  "modules": [
+    {
+      "module": "RecurrentSupport",
+      "source_sha256": "ee53d2fceb24d3552b0cf0798fb8c10b22717f66e80546db2e26d48c36d19899",
+      "object_sha256": "faf8f9614458e9706e85dce37863b42abbeef21a8fbdf2a8036f4637ac7da79d",
+      "transitive_source_fingerprint": "d1f8e65a223623b2fb857dad53c07320543b170404d53b38d981f0daaab25005",
+      "status": "FRESH_COMPILE",
+      "exit_code": 0
+    }
+  ],
+  "readbacks": {
+    "Orthemology.Tranche2.RecurrentSupport.Recurs": {
+      "type_sha256": "f559127b772204a1eadb67b73f28899e37279368721c4de6c3e127ebba1022e6",
+      "axioms": [
+        "Quot.sound",
+        "propext"
+      ]
+    },
+    "Orthemology.Tranche2.RecurrentSupport.recurrentSet": {
+      "type_sha256": "b906aafc9339071d377563d3556cd88ad8f9dba649b384900aaff31a1bb3641c",
+      "axioms": [
+        "Classical.choice",
+        "Quot.sound",
+        "propext"
+      ]
+    },
+    "Orthemology.Tranche2.RecurrentSupport.mem_recurrentSet": {
+      "type_sha256": "dc0415afdce945cfaf48a265884c643fb13c0e894feb88c81cfaa3df31e2ff24",
+      "axioms": [
+        "Classical.choice",
+        "Quot.sound",
+        "propext"
+      ]
+    },
+    "Orthemology.Tranche2.RecurrentSupport.exists_recurrent": {
+      "type_sha256": "741d52be06d8b8720f4d714aa870466fa7abf1ca83056c7899bc0e3628faded4",
+      "axioms": [
+        "Classical.choice",
+        "Quot.sound",
+        "propext"
+      ]
+    },
+    "Orthemology.Tranche2.RecurrentSupport.recurrentSet_nonempty": {
+      "type_sha256": "23321a664f0dd3ed2d3b5d9c46bcdaa7bb4dd7ef71d28239b29ee527a7751f03",
+      "axioms": [
+        "Classical.choice",
+        "Quot.sound",
+        "propext"
+      ]
+    },
+    "Orthemology.Tranche2.RecurrentSupport.eventually_mem_recurrentSet": {
+      "type_sha256": "d962a1cf2283795b5aa1bd023bff9cd9d03ba94f71fc22058efd39ba234449b0",
+      "axioms": [
+        "Classical.choice",
+        "Quot.sound",
+        "propext"
+      ]
+    },
+    "Orthemology.Tranche2.RecurrentSupport.recurrentSet_subset_of_eventually_mem": {
+      "type_sha256": "2400d0d8937f1abde722eb23bb0931f972dcfd4faf61232114a3fce5f8ddc9fa",
+      "axioms": [
+        "Classical.choice",
+        "Quot.sound",
+        "propext"
+      ]
+    },
+    "Orthemology.Tranche2.RecurrentSupport.exactRecurrentEvent": {
+      "type_sha256": "4ba7f949de5d6198e9983d8eff6da4f62b91c2b7278eb6a1d5604aaf9d11b963",
+      "axioms": [
+        "Classical.choice",
+        "Quot.sound",
+        "propext"
+      ]
+    },
+    "Orthemology.Tranche2.RecurrentSupport.tailEvent": {
+      "type_sha256": "350e4a2ce5b86d041c9f377ae3c6a2be37067106d070bc0592ad50bc76ddfc6a",
+      "axioms": [
+        "Classical.choice",
+        "Quot.sound",
+        "propext"
+      ]
+    },
+    "Orthemology.Tranche2.RecurrentSupport.exact_event_eventually_mem": {
+      "type_sha256": "167b0ff117023e94b3f53f8f3d225a7f4c35850c2bc4162e17fb43f3b7f56645",
+      "axioms": [
+        "Classical.choice",
+        "Quot.sound",
+        "propext"
+      ]
+    },
+    "Orthemology.Tranche2.RecurrentSupport.exact_event_finitely_many_outside": {
+      "type_sha256": "3c1c6639a126cf0562c928506638446251b144bdbf5eb9dda9f6d3f41239455f",
+      "axioms": [
+        "Classical.choice",
+        "Quot.sound",
+        "propext"
+      ]
+    },
+    "Orthemology.Tranche2.RecurrentSupport.exact_event_eq_iUnion_tail": {
+      "type_sha256": "d1a008b8327f1dc643efdb7d4459b336f844bc037a647afc8f125bde16ff960b",
+      "axioms": [
+        "Classical.choice",
+        "Quot.sound",
+        "propext"
+      ]
+    },
+    "Orthemology.Tranche2.RecurrentSupport.measurable_recurrence": {
+      "type_sha256": "4c46ec4c4119b3e7e24d65eddc62b4f0abb8922eae3e734bf62cf4265b2baab3",
+      "axioms": [
+        "Classical.choice",
+        "Quot.sound",
+        "propext"
+      ]
+    },
+    "Orthemology.Tranche2.RecurrentSupport.measurable_exactRecurrentEvent": {
+      "type_sha256": "e3e93e1f18b938c1915aae3c8185c3576251dc6baf1826b159d3d58209c64af5",
+      "axioms": [
+        "Classical.choice",
+        "Quot.sound",
+        "propext"
+      ]
+    },
+    "Orthemology.Tranche2.RecurrentSupport.measurable_tailEvent": {
+      "type_sha256": "ee95ce13baa270e3d74770a6743e45f01ef590fd00e3e344da3b0880190d65fe",
+      "axioms": [
+        "Classical.choice",
+        "Quot.sound",
+        "propext"
+      ]
+    },
+    "Orthemology.Tranche2.RecurrentSupport.exists_positive_recurrent_support": {
+      "type_sha256": "943b1620c4a5960ec3ab93dd9aed2891246946ada76481075479b4ec8e8e94c6",
+      "axioms": [
+        "Classical.choice",
+        "Quot.sound",
+        "propext"
+      ]
+    },
+    "Orthemology.Tranche2.RecurrentSupport.exists_positive_tail_index": {
+      "type_sha256": "2963834931c868fdb9ee0548593481ae38e41ea922f1dc47fe53f476309f8555",
+      "axioms": [
+        "Classical.choice",
+        "Quot.sound",
+        "propext"
+      ]
+    },
+    "Orthemology.Tranche2.RecurrentSupport.exists_measurable_positive_recurrent_support": {
+      "type_sha256": "93678ce2eaada5230eb46e97c72bedf0f5039509fff0288b406c05acdeb67dc9",
+      "axioms": [
+        "Classical.choice",
+        "Quot.sound",
+        "propext"
+      ]
+    },
+    "Orthemology.Tranche2.RecurrentSupport.support_subset_of_positive_exact_event": {
+      "type_sha256": "b79dac8acf348067cff456a824617ac7d2662a419458dae64eed9737be112625",
+      "axioms": [
+        "Classical.choice",
+        "Quot.sound",
+        "propext"
+      ]
+    },
+    "Orthemology.Tranche2.RecurrentSupport.abstract_self_verifying_support": {
+      "type_sha256": "52a6fef5cbf50f5f713d74ed6fdc81561affd8687314730586ee7ace37508556",
+      "axioms": [
+        "Classical.choice",
+        "Quot.sound",
+        "propext"
+      ]
+    }
+  },
+  "original_controls": "NOT_RUN",
+  "original_receipt_sha256": "b678735fc02b101f86aa4f0e5eee0f6a76e84eec52dd5fda4200704fce56d65a",
+  "original_driver_sha256": "3ecc40bb0ab970bc5b7efc0347bab9c5662fa5b50fb99bf23f6d3d1c0e12a710",
+  "execution_kind": "FRESH_CUSTOM_CLOSURE",
+  "finished_utc": "2026-10-02T05:33:57.245644+00:00",
+  "scope": "Source-bound custom closure and selected declaration readbacks. Types are represented by hashes of the exact printed types; complete logs remain private. Official caches are trusted. This does not establish ordinary proof, runtime completeness, empirical or normative warrant, novelty, external human review or merged adoption."
+}

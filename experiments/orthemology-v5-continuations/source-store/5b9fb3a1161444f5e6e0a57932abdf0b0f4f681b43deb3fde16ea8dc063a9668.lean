@@ -1,0 +1,5 @@
+import P01DependentRepresentation
+#check P01DF.interpret_type_substitution
+#check P01DF.dependent_all_fundamental
+#check P01DF.dependent_all_self_instantiation
+#check P01DF.two_sort_substitution_control

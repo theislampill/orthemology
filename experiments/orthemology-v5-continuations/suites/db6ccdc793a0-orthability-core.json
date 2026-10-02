@@ -1,0 +1,371 @@
+{
+  "id": "db6ccdc793a0-orthability-core",
+  "origin": "db6ccdc793a0a1a96b736cee6c55c47145b86b8f5f91d2dbb1cf80e7036b614e",
+  "descriptor_source_id": "src-db6ccdc793a0a1a9-85c042fef1d85c5a",
+  "modules": [
+    {
+      "module": "SourceIdentity",
+      "source_id": "src-db6ccdc793a0a1a9-a04b99d4ca66aed8",
+      "imports": [
+        "Mathlib"
+      ]
+    },
+    {
+      "module": "ProductiveCompleteness",
+      "source_id": "src-db6ccdc793a0a1a9-ba8c6576b25abeae",
+      "imports": [
+        "Mathlib"
+      ]
+    },
+    {
+      "module": "IntegratedContingency",
+      "source_id": "src-db6ccdc793a0a1a9-d4e1cb125533656a",
+      "imports": [
+        "SourceIdentity",
+        "ProductiveCompleteness"
+      ]
+    },
+    {
+      "module": "CompleteControl",
+      "source_id": "src-db6ccdc793a0a1a9-215f7cd3b721ca42",
+      "imports": [
+        "Mathlib"
+      ]
+    },
+    {
+      "module": "Controls",
+      "source_id": "src-db6ccdc793a0a1a9-2652ee6ac655d1b9",
+      "imports": [
+        "SourceIdentity",
+        "CompleteControl",
+        "ProductiveCompleteness",
+        "IntegratedContingency"
+      ]
+    }
+  ],
+  "module_order": [
+    "SourceIdentity",
+    "ProductiveCompleteness",
+    "IntegratedContingency",
+    "CompleteControl",
+    "Controls"
+  ],
+  "targets": [
+    {
+      "name": "Orthemology.Tranche3.SourceIdentity.Received",
+      "module": "SourceIdentity"
+    },
+    {
+      "name": "Orthemology.Tranche3.SourceIdentity.Root",
+      "module": "SourceIdentity"
+    },
+    {
+      "name": "Orthemology.Tranche3.SourceIdentity.Necessary",
+      "module": "SourceIdentity"
+    },
+    {
+      "name": "Orthemology.Tranche3.SourceIdentity.UniformRoot",
+      "module": "SourceIdentity"
+    },
+    {
+      "name": "Orthemology.Tranche3.SourceIdentity.GenericReception",
+      "module": "SourceIdentity"
+    },
+    {
+      "name": "Orthemology.Tranche3.SourceIdentity.ActualReceptionPreservation",
+      "module": "SourceIdentity"
+    },
+    {
+      "name": "Orthemology.Tranche3.SourceIdentity.necessary_of_actual_root",
+      "module": "SourceIdentity"
+    },
+    {
+      "name": "Orthemology.Tranche3.SourceIdentity.uniform_of_necessary_actual_root",
+      "module": "SourceIdentity"
+    },
+    {
+      "name": "Orthemology.Tranche3.SourceIdentity.uniform_of_contingent_reception",
+      "module": "SourceIdentity"
+    },
+    {
+      "name": "Orthemology.Tranche3.SourceIdentity.local_transfer_iff_uniform",
+      "module": "SourceIdentity"
+    },
+    {
+      "name": "Orthemology.Tranche3.SourceIdentity.generic_of_fixed_origin",
+      "module": "SourceIdentity"
+    },
+    {
+      "name": "Orthemology.Tranche3.SourceIdentity.Controls.changingDep",
+      "module": "SourceIdentity"
+    },
+    {
+      "name": "Orthemology.Tranche3.SourceIdentity.Controls.actual_preservation_does_not_give_uniform",
+      "module": "SourceIdentity"
+    },
+    {
+      "name": "Orthemology.Tranche3.SourceIdentity.Controls.variableOrigin",
+      "module": "SourceIdentity"
+    },
+    {
+      "name": "Orthemology.Tranche3.SourceIdentity.Controls.generic_not_fixed_origin",
+      "module": "SourceIdentity"
+    },
+    {
+      "name": "Orthemology.Tranche3.SourceIdentity.Controls.switchingOrder",
+      "module": "SourceIdentity"
+    },
+    {
+      "name": "Orthemology.Tranche3.SourceIdentity.Controls.generic_allows_modal_cycle",
+      "module": "SourceIdentity"
+    },
+    {
+      "name": "Orthemology.Tranche3.SourceIdentity.Controls.reception_alone_does_not_give_necessary",
+      "module": "SourceIdentity"
+    },
+    {
+      "name": "Orthemology.Tranche3.CompleteControl.CompatibleOutcomes",
+      "module": "CompleteControl"
+    },
+    {
+      "name": "Orthemology.Tranche3.CompleteControl.Edge",
+      "module": "CompleteControl"
+    },
+    {
+      "name": "Orthemology.Tranche3.CompleteControl.Label",
+      "module": "CompleteControl"
+    },
+    {
+      "name": "Orthemology.Tranche3.CompleteControl.Reachable",
+      "module": "CompleteControl"
+    },
+    {
+      "name": "Orthemology.Tranche3.CompleteControl.Connected",
+      "module": "CompleteControl"
+    },
+    {
+      "name": "Orthemology.Tranche3.CompleteControl.equal_on_edge",
+      "module": "CompleteControl"
+    },
+    {
+      "name": "Orthemology.Tranche3.CompleteControl.equal_on_path",
+      "module": "CompleteControl"
+    },
+    {
+      "name": "Orthemology.Tranche3.CompleteControl.connected_control_is_constant",
+      "module": "CompleteControl"
+    },
+    {
+      "name": "Orthemology.Tranche3.CompleteControl.nonconstant_requires_disconnected",
+      "module": "CompleteControl"
+    },
+    {
+      "name": "Orthemology.Tranche3.CompleteControl.rectangular_control_is_constant",
+      "module": "CompleteControl"
+    },
+    {
+      "name": "Orthemology.Tranche3.CompleteControl.no_conflicting_guarantees",
+      "module": "CompleteControl"
+    },
+    {
+      "name": "Orthemology.Tranche3.CompleteControl.Controls.diagonal_harmony",
+      "module": "CompleteControl"
+    },
+    {
+      "name": "Orthemology.Tranche3.CompleteControl.Controls.diagonal_is_disconnected",
+      "module": "CompleteControl"
+    },
+    {
+      "name": "Orthemology.Tranche3.CompleteControl.Controls.or_is_only_one_sided",
+      "module": "CompleteControl"
+    },
+    {
+      "name": "Orthemology.Tranche3.CompleteControl.Controls.threeEdge",
+      "module": "CompleteControl"
+    },
+    {
+      "name": "Orthemology.Tranche3.CompleteControl.Controls.three_edges_force_constancy",
+      "module": "CompleteControl"
+    },
+    {
+      "name": "Orthemology.Tranche3.CompleteControl.Controls.three_edge_not_rectangular",
+      "module": "CompleteControl"
+    },
+    {
+      "name": "Orthemology.Tranche3.ProductiveCompleteness.HistoryComplete",
+      "module": "ProductiveCompleteness"
+    },
+    {
+      "name": "Orthemology.Tranche3.ProductiveCompleteness.UnborrowedActs",
+      "module": "ProductiveCompleteness"
+    },
+    {
+      "name": "Orthemology.Tranche3.ProductiveCompleteness.ProductiveWitness",
+      "module": "ProductiveCompleteness"
+    },
+    {
+      "name": "Orthemology.Tranche3.ProductiveCompleteness.uniqueness_of_history_complete",
+      "module": "ProductiveCompleteness"
+    },
+    {
+      "name": "Orthemology.Tranche3.ProductiveCompleteness.uniqueness_of_universal_activity_scope",
+      "module": "ProductiveCompleteness"
+    },
+    {
+      "name": "Orthemology.Tranche3.ProductiveCompleteness.Controls.endpointOnly",
+      "module": "ProductiveCompleteness"
+    },
+    {
+      "name": "Orthemology.Tranche3.ProductiveCompleteness.Controls.everyMode",
+      "module": "ProductiveCompleteness"
+    },
+    {
+      "name": "Orthemology.Tranche3.ProductiveCompleteness.Controls.ownMode",
+      "module": "ProductiveCompleteness"
+    },
+    {
+      "name": "Orthemology.Tranche3.ProductiveCompleteness.Controls.endpoint_sufficiency_does_not_give_history_closure",
+      "module": "ProductiveCompleteness"
+    },
+    {
+      "name": "Orthemology.Tranche3.IntegratedContingency.Ex",
+      "module": "IntegratedContingency"
+    },
+    {
+      "name": "Orthemology.Tranche3.IntegratedContingency.Dep",
+      "module": "IntegratedContingency"
+    },
+    {
+      "name": "Orthemology.Tranche3.IntegratedContingency.Will",
+      "module": "IntegratedContingency"
+    },
+    {
+      "name": "Orthemology.Tranche3.IntegratedContingency.Power",
+      "module": "IntegratedContingency"
+    },
+    {
+      "name": "Orthemology.Tranche3.IntegratedContingency.source_with_contingent_effect",
+      "module": "IntegratedContingency"
+    },
+    {
+      "name": "Orthemology.Tranche3.IntegratedContingency.Complete",
+      "module": "IntegratedContingency"
+    },
+    {
+      "name": "Orthemology.Tranche3.IntegratedContingency.Mode",
+      "module": "IntegratedContingency"
+    },
+    {
+      "name": "Orthemology.Tranche3.IntegratedContingency.Proper",
+      "module": "IntegratedContingency"
+    },
+    {
+      "name": "Orthemology.Tranche3.IntegratedContingency.Account",
+      "module": "IntegratedContingency"
+    },
+    {
+      "name": "Orthemology.Tranche3.IntegratedContingency.productive_package_is_inhabited",
+      "module": "IntegratedContingency"
+    },
+    {
+      "name": "Orthemology.Tranche3.IntegratedContingency.integrated_noncollapse_witness",
+      "module": "IntegratedContingency"
+    },
+    {
+      "name": "IndependentOrthabilityControls.closure_is_indispensable",
+      "module": "Controls"
+    },
+    {
+      "name": "IndependentOrthabilityControls.unborrowed_is_indispensable",
+      "module": "Controls"
+    },
+    {
+      "name": "IndependentOrthabilityControls.witness_is_indispensable",
+      "module": "Controls"
+    },
+    {
+      "name": "IndependentOrthabilityControls.generic_reception_is_not_necessity",
+      "module": "Controls"
+    },
+    {
+      "name": "IndependentOrthabilityControls.actual_root_is_indispensable",
+      "module": "Controls"
+    },
+    {
+      "name": "IndependentOrthabilityControls.uniform_roothood_is_not_uniqueness",
+      "module": "Controls"
+    },
+    {
+      "name": "IndependentOrthabilityControls.empty_compatibility_allows_variation",
+      "module": "Controls"
+    },
+    {
+      "name": "IndependentOrthabilityControls.rectangular_nonempty_is_essential",
+      "module": "Controls"
+    },
+    {
+      "name": "IndependentOrthabilityControls.model_has_actual_effect",
+      "module": "Controls"
+    },
+    {
+      "name": "IndependentOrthabilityControls.power_does_not_fix_will",
+      "module": "Controls"
+    }
+  ],
+  "pins": {
+    "lean_version": "4.19.0",
+    "lean_binary_sha256": "92c3d35b5bfaa5e0fea413a775d504cf46cd95e1345df61c2274f76779e7e023",
+    "packages": [
+      {
+        "name": "mathlib",
+        "revision": "c44e0c8ee63ca166450922a373c7409c5d26b00b"
+      },
+      {
+        "name": "plausible",
+        "revision": "77e08eddc486491d7b9e470926b3dbe50319451a"
+      },
+      {
+        "name": "LeanSearchClient",
+        "revision": "25078369972d295301f5a1e53c3e5850cf6d9d4c"
+      },
+      {
+        "name": "importGraph",
+        "revision": "e6a9f0f5ee3ccf7443a0070f92b62f8db12ae82b"
+      },
+      {
+        "name": "proofwidgets",
+        "revision": "c4919189477c3221e6a204008998b0d724f49904"
+      },
+      {
+        "name": "aesop",
+        "revision": "5d50b08dedd7d69b3d9b3176e0d58a23af228884"
+      },
+      {
+        "name": "Qq",
+        "revision": "fa4f7f15d97591a9cf3aa7724ba371c7fc6dda02"
+      },
+      {
+        "name": "batteries",
+        "revision": "f5d04a9c4973d401c8c92500711518f7c656f034"
+      },
+      {
+        "name": "Cli",
+        "revision": "02dbd02bc00ec4916e99b04b2245b30200e200d0"
+      }
+    ]
+  },
+  "official_imports": [
+    {
+      "module": "Mathlib",
+      "repository": "mathlib",
+      "source": "Mathlib.lean",
+      "sha256": "b0518254279fabf0c6a920804e684536b0f5e2bd1cb6318d0609eb563413f20a"
+    }
+  ],
+  "driver": {
+    "source_id": "src-db6ccdc793a0a1a9-817e8553aa5fdf95",
+    "lean_argument": "BIN_DIRECTORY"
+  },
+  "controls": "ORIGINAL_DRIVER_REQUIRED",
+  "classification": "CURRENT_EVIDENCE"
+}

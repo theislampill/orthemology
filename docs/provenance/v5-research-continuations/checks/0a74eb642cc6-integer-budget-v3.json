@@ -1,0 +1,194 @@
+{
+  "compiler_sha256": "92c3d35b5bfaa5e0fea413a775d504cf46cd95e1345df61c2274f76779e7e023",
+  "compiler_version": "Lean (version 4.19.0, x86_64-unknown-linux-gnu, commit 6caaee842e94, Release)",
+  "dependency_checks": [
+    {
+      "build_cache_present": true,
+      "name": "mathlib",
+      "revision": "c44e0c8ee63ca166450922a373c7409c5d26b00b",
+      "tracked_clean": true
+    },
+    {
+      "build_cache_present": true,
+      "name": "plausible",
+      "revision": "77e08eddc486491d7b9e470926b3dbe50319451a",
+      "tracked_clean": true
+    },
+    {
+      "build_cache_present": true,
+      "name": "LeanSearchClient",
+      "revision": "25078369972d295301f5a1e53c3e5850cf6d9d4c",
+      "tracked_clean": true
+    },
+    {
+      "build_cache_present": true,
+      "name": "importGraph",
+      "revision": "e6a9f0f5ee3ccf7443a0070f92b62f8db12ae82b",
+      "tracked_clean": true
+    },
+    {
+      "build_cache_present": true,
+      "name": "proofwidgets",
+      "revision": "c4919189477c3221e6a204008998b0d724f49904",
+      "tracked_clean": true
+    },
+    {
+      "build_cache_present": true,
+      "name": "aesop",
+      "revision": "5d50b08dedd7d69b3d9b3176e0d58a23af228884",
+      "tracked_clean": true
+    },
+    {
+      "build_cache_present": true,
+      "name": "Qq",
+      "revision": "fa4f7f15d97591a9cf3aa7724ba371c7fc6dda02",
+      "tracked_clean": true
+    },
+    {
+      "build_cache_present": true,
+      "name": "batteries",
+      "revision": "f5d04a9c4973d401c8c92500711518f7c656f034",
+      "tracked_clean": true
+    },
+    {
+      "build_cache_present": false,
+      "name": "Cli",
+      "revision": "02dbd02bc00ec4916e99b04b2245b30200e200d0",
+      "tracked_clean": true
+    }
+  ],
+  "exit_code": 0,
+  "finished_utc": "2026-10-02T05:33:37.052908+00:00",
+  "kernel_verified": true,
+  "modules": [
+    {
+      "exit_code": 0,
+      "log_sha256": "9dbda2705a68312152b1d684a1ed3140cc94321ccd85e9a0b3b3321b99137d76",
+      "module": "IntegerBudget",
+      "object_sha256": "15319f90cfa7e7547267fe4735a4f72471bdb078535ffc972531d47209f29487",
+      "source_sha256": "55b5ef8c90e95df1d9c1d03539cffbcaeae7502190e3b616bc9725526f7abb61",
+      "status": "FRESH_COMPILE",
+      "transitive_source_fingerprint": "b4b4d0718ab8e090429c044775af96607cc5bc08d7a34877153037109d8a218d"
+    },
+    {
+      "exit_code": 0,
+      "log_sha256": "a0289330e80390e8a8db3a4495f83e100556e6f3b044f8050b942f5c47e01c97",
+      "module": "ExactBudgetEnvelope",
+      "object_sha256": "f4a3562421f11999703190b1c71a0710776fa7c74c1fa4d6b345d8e46bd99c10",
+      "source_sha256": "4134b9222e5f5697ff4f9df05873ee0c985819fc10fbab843426f00422e98d31",
+      "status": "FRESH_COMPILE",
+      "transitive_source_fingerprint": "5f23609f697cf457944db2963f1fee6d3eda43d62b7cabfd4076e1222cf3355e"
+    }
+  ],
+  "original_controls": "NOT_RUN",
+  "pins": {
+    "lean_binary_sha256": "92c3d35b5bfaa5e0fea413a775d504cf46cd95e1345df61c2274f76779e7e023",
+    "lean_version": "4.19.0",
+    "packages": [
+      {
+        "name": "mathlib",
+        "revision": "c44e0c8ee63ca166450922a373c7409c5d26b00b"
+      },
+      {
+        "name": "plausible",
+        "revision": "77e08eddc486491d7b9e470926b3dbe50319451a"
+      },
+      {
+        "name": "LeanSearchClient",
+        "revision": "25078369972d295301f5a1e53c3e5850cf6d9d4c"
+      },
+      {
+        "name": "importGraph",
+        "revision": "e6a9f0f5ee3ccf7443a0070f92b62f8db12ae82b"
+      },
+      {
+        "name": "proofwidgets",
+        "revision": "c4919189477c3221e6a204008998b0d724f49904"
+      },
+      {
+        "name": "aesop",
+        "revision": "5d50b08dedd7d69b3d9b3176e0d58a23af228884"
+      },
+      {
+        "name": "Qq",
+        "revision": "fa4f7f15d97591a9cf3aa7724ba371c7fc6dda02"
+      },
+      {
+        "name": "batteries",
+        "revision": "f5d04a9c4973d401c8c92500711518f7c656f034"
+      },
+      {
+        "name": "Cli",
+        "revision": "02dbd02bc00ec4916e99b04b2245b30200e200d0"
+      }
+    ]
+  },
+  "post_source_hashes": {
+    "ExactBudgetEnvelope": "4134b9222e5f5697ff4f9df05873ee0c985819fc10fbab843426f00422e98d31",
+    "IntegerBudget": "55b5ef8c90e95df1d9c1d03539cffbcaeae7502190e3b616bc9725526f7abb61"
+  },
+  "readback_log_sha256": "14a23f7ed1fe73d53fbf21ad06681a7f61d6539d98c1f7715a5ac7ae4985a551",
+  "readbacks": {
+    "Orthemology.IntegerBudget.confidence_from_exact_tail": {
+      "type_sha256": "f40a0e8edf2ba6f150ef5c8e52a2b40d7a442396db864b23a28ec3ec46119601",
+      "axioms": [
+        "Classical.choice",
+        "Quot.sound",
+        "propext"
+      ]
+    },
+    "Orthemology.IntegerBudget.confidence_from_witnesses": {
+      "type_sha256": "21b18de871aac0c02526db687d1b578a375b6bfc282d795d364e45817da9b531",
+      "axioms": [
+        "Classical.choice",
+        "Quot.sound",
+        "propext"
+      ]
+    },
+    "Orthemology.IntegerBudget.dyadic_tail": {
+      "type_sha256": "65fcfe7a157dff2e8ef526cf978849a988cecede4f16de259307b301ba761d86",
+      "axioms": [
+        "Classical.choice",
+        "Quot.sound",
+        "propext"
+      ]
+    },
+    "Orthemology.IntegerBudget.geometric_prefactor_le_rational": {
+      "type_sha256": "b480554322ff86f9c5637d318db3e4a2a1d5451ef09c6708459eef9fa5d68b68",
+      "axioms": [
+        "Classical.choice",
+        "Quot.sound",
+        "propext"
+      ]
+    },
+    "Orthemology.IntegerBudget.progress_log_rate_lower": {
+      "type_sha256": "a6e2425cdce686e07b85b8b6db04987f7eb56a07a3de7f964f790b2eaf1705b0",
+      "axioms": [
+        "Classical.choice",
+        "Quot.sound",
+        "propext"
+      ]
+    },
+    "Orthemology.IntegerBudget.two_pow_le_exp_nat": {
+      "type_sha256": "5368564c509e62553179afb9070a027339d5877c9726343b18ad7ee0dffebfaa",
+      "axioms": [
+        "Classical.choice",
+        "Quot.sound",
+        "propext"
+      ]
+    }
+  },
+  "runner_sha256": "677911518ee7a5e249f1cd41d4271b910fc8ddcb06daa3d34a4aea1eed98d19f",
+  "scope": "Cold custom source components and exact type/axiom readbacks; official caches trusted. No total family, runtime, empirical, normative or adoption claim.",
+  "source_hashes": {
+    "ExactBudgetEnvelope": "4134b9222e5f5697ff4f9df05873ee0c985819fc10fbab843426f00422e98d31",
+    "IntegerBudget": "55b5ef8c90e95df1d9c1d03539cffbcaeae7502190e3b616bc9725526f7abb61"
+  },
+  "started_utc": "2026-10-02T05:33:29.315834+00:00",
+  "status": "FRESH_KERNEL_COMPONENTS",
+  "suite_id": "0a74eb642cc6-integer-budget-v3",
+  "suite_sha256": "c1a0b8cbc37f07fd0141e82e275502d8c147795ffaa1fab688144de6f3ff791b",
+  "validator_sha256": "f0e3c39662b727914b7c83086aa958f8962275bc59fa47c9b508e025310fd26c",
+  "execution_kind": "FRESH_PUBLIC_REPLAY",
+  "private_receipt_sha256": "74809ecd7bdf65a060835ec428cb76b3a241529ec0218354570276c5f119bcfe"
+}

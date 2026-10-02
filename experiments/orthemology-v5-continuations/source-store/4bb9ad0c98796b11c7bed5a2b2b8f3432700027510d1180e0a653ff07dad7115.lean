@@ -1,0 +1,6 @@
+import P01CanonicalCarrierProjection
+#check P01DF.raw_pi_carrier_square
+#check P01DF.sigma_carrier_square
+#check P01DF.raw_identity_carrier_square
+#check P01DF.arbitrary_arrow_reverse_projection_fails
+#check P01DF.arbitrary_identity_forward_projection_fails

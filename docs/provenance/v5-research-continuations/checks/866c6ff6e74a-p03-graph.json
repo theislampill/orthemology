@@ -1,0 +1,150 @@
+{
+  "status": "FRESH_KERNEL_COMPONENTS",
+  "exit_code": 0,
+  "kernel_verified": true,
+  "suite_id": "866c6ff6e74a-p03-graph",
+  "suite_sha256": "0114e3831bdf9e76ab933a6970b726dd956b3a98e6990a62add154c51d41966a",
+  "source_hashes": {
+    "P03GuardedGraph": "e7b6e0df73f1ed2e8de8e2301c30237a644979e99a0dab437d0e3bb02ea398de",
+    "P03GuardedVCT": "a1e0123fa5e9a7b64b08effdc318eeef8178b235f9817accc56f9c9c15a5d885",
+    "P03Audit": "6e04a5bd8477118c5d8c4e3fcc4987c89163833778d185f1632e1679180727c0"
+  },
+  "post_source_hashes": {
+    "P03GuardedGraph": "e7b6e0df73f1ed2e8de8e2301c30237a644979e99a0dab437d0e3bb02ea398de",
+    "P03GuardedVCT": "a1e0123fa5e9a7b64b08effdc318eeef8178b235f9817accc56f9c9c15a5d885",
+    "P03Audit": "6e04a5bd8477118c5d8c4e3fcc4987c89163833778d185f1632e1679180727c0"
+  },
+  "compiler_sha256": "92c3d35b5bfaa5e0fea413a775d504cf46cd95e1345df61c2274f76779e7e023",
+  "pins": {
+    "lean_version": "4.19.0",
+    "lean_binary_sha256": "92c3d35b5bfaa5e0fea413a775d504cf46cd95e1345df61c2274f76779e7e023",
+    "packages": [
+      {
+        "name": "mathlib",
+        "revision": "c44e0c8ee63ca166450922a373c7409c5d26b00b"
+      },
+      {
+        "name": "plausible",
+        "revision": "77e08eddc486491d7b9e470926b3dbe50319451a"
+      },
+      {
+        "name": "LeanSearchClient",
+        "revision": "25078369972d295301f5a1e53c3e5850cf6d9d4c"
+      },
+      {
+        "name": "importGraph",
+        "revision": "e6a9f0f5ee3ccf7443a0070f92b62f8db12ae82b"
+      },
+      {
+        "name": "proofwidgets",
+        "revision": "c4919189477c3221e6a204008998b0d724f49904"
+      },
+      {
+        "name": "aesop",
+        "revision": "5d50b08dedd7d69b3d9b3176e0d58a23af228884"
+      },
+      {
+        "name": "Qq",
+        "revision": "fa4f7f15d97591a9cf3aa7724ba371c7fc6dda02"
+      },
+      {
+        "name": "batteries",
+        "revision": "f5d04a9c4973d401c8c92500711518f7c656f034"
+      },
+      {
+        "name": "Cli",
+        "revision": "02dbd02bc00ec4916e99b04b2245b30200e200d0"
+      }
+    ]
+  },
+  "modules": [
+    {
+      "module": "P03GuardedGraph",
+      "source_sha256": "e7b6e0df73f1ed2e8de8e2301c30237a644979e99a0dab437d0e3bb02ea398de",
+      "object_sha256": "97b2361aceb08e696e073553e4a94c3fa8957ab34503645b79ff7c791f24e2c7",
+      "transitive_source_fingerprint": "f44e57870dc95baf9338937773bb58cf00aa18e55378049032a640e9daa2cf7b",
+      "status": "FRESH_COMPILE",
+      "exit_code": 0
+    },
+    {
+      "module": "P03GuardedVCT",
+      "source_sha256": "a1e0123fa5e9a7b64b08effdc318eeef8178b235f9817accc56f9c9c15a5d885",
+      "object_sha256": "adfaafc8ba9e2d2431d8de205d7c015392bb6ced37ae7bdf3b9c9239e7c33c7e",
+      "transitive_source_fingerprint": "a2d706419b82e8d068149a0989993090b9508d19207f72f63ee0277b9aa576e2",
+      "status": "FRESH_COMPILE",
+      "exit_code": 0
+    },
+    {
+      "module": "P03Audit",
+      "source_sha256": "6e04a5bd8477118c5d8c4e3fcc4987c89163833778d185f1632e1679180727c0",
+      "object_sha256": "13e8a61f877aebb92876800eb4372210568e9b903ca2f6b2046915b337ce85af",
+      "transitive_source_fingerprint": "061d41eec442f4255e252179cdcf98d726f846da550e72888487c6eace16917b",
+      "status": "FRESH_COMPILE",
+      "exit_code": 0
+    }
+  ],
+  "readbacks": {
+    "P03Q1f.Chain.mapEdge": {
+      "type_sha256": "c07be58580689dd775760119cf9cf414619b357cee191237a48e2184040d6626",
+      "axioms": []
+    },
+    "P03Q1f.walkRank": {
+      "type_sha256": "7e2f00ac5947cf43ea4e454deb74026f8c17ec4685ff0d93336955a4e10b7b01",
+      "axioms": []
+    },
+    "P03Q1f.Hom.mapWalk": {
+      "type_sha256": "5e370372f4af9ec0941b39b2fbcc3b3d82e17c3ab62bd1219382d8d103b9a2c7",
+      "axioms": []
+    },
+    "P03Q1f.noClosedWalk": {
+      "type_sha256": "392b0571dda32311226291a3f1c707b5151d6c4e629f85db8e834bd38eff88eb",
+      "axioms": []
+    },
+    "P03Q1f.Hom.noCollapseOfWalk": {
+      "type_sha256": "4e284e18e221008ce758e586c7af10c1a36184c93180e4450ba60561969bcad3",
+      "axioms": []
+    },
+    "P03A2.EvidenceHop.sound": {
+      "type_sha256": "7e454c212c95acbfb28ac794d2a1610b3ec715f6acd077664ad6468c2ebd416e",
+      "axioms": []
+    },
+    "P03A2.EvidenceHop.closed": {
+      "type_sha256": "42d55860e849f80fbf3507bd5d83446b575561928863e8de8b2bfda8212f8bb6",
+      "axioms": []
+    },
+    "P03A2.SemanticHop.composite_square": {
+      "type_sha256": "c18ef962fe4417bc74df7d5b4225bd058a7c85b0da76cc6cbeeb48d4e5cc7a43",
+      "axioms": []
+    },
+    "P03A2.Path.mapEdge": {
+      "type_sha256": "bd425a54a5a1f31a9277e30636de10d04b14438c7443338bc619e41a932cc136",
+      "axioms": []
+    },
+    "P03A2.guarded_reason_version_composition": {
+      "type_sha256": "cc4390b67ced8dbdcc59c12ea65eb629bee27ee09994ec5f202386badb9f4382",
+      "axioms": []
+    },
+    "P03A2.Path.semantic_truth_transport": {
+      "type_sha256": "1c212ecf5b8d19749ef600633a17ab60c560b1a32ddac2e94bfe93e175a405ef",
+      "axioms": []
+    },
+    "P03A2.Via.eq_endpoints": {
+      "type_sha256": "70e034bdf4e8e6704a934661d812564830634dce259a00b45ed01470e7e3bd07",
+      "axioms": []
+    },
+    "P03A2.Path.no_collapse": {
+      "type_sha256": "96bc36e7da712256fe0e6283669c5370db285410aa087aed77d53658c02c3fd7",
+      "axioms": []
+    },
+    "P03A2.Path.preimage": {
+      "type_sha256": "fb2bd55b672ef43d9f8c9ab9e5e6b4ac38a910802bb094cc69e7587cc7c0dba3",
+      "axioms": []
+    }
+  },
+  "original_controls": "NOT_RUN",
+  "original_receipt_sha256": "9a40a5eee0371a197669b117410ad0c3ab2c7a10a8366d4c2e4a4621dfaa924e",
+  "original_driver_sha256": "0666003f5081aca1efd6570a72da06d735b454d787dba97dd59fc1b42554bd14",
+  "execution_kind": "FRESH_CUSTOM_CLOSURE",
+  "finished_utc": null,
+  "scope": "Source-bound custom closure and selected declaration readbacks. Types are represented by hashes of the exact printed types; complete logs remain private. Official caches are trusted. This does not establish ordinary proof, runtime completeness, empirical or normative warrant, novelty, external human review or merged adoption."
+}

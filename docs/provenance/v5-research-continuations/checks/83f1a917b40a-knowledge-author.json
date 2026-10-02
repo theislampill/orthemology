@@ -1,0 +1,226 @@
+{
+  "status": "FRESH_KERNEL_COMPONENTS",
+  "exit_code": 0,
+  "kernel_verified": true,
+  "suite_id": "83f1a917b40a-knowledge-author",
+  "suite_sha256": "4a5382bda464ff79f42f92380edf3f872d026995a48b445c8395221614ec0240",
+  "source_hashes": {
+    "ProductiveCompleteness": "8765c137491f2f5e2cd9e0c699987c53fcbb00b9cc9e90b49712ec124e97906a",
+    "SourceIdentity": "45ab18f7305033091f8fc31bb906d4c87866de47138df76637c6937440064503",
+    "KnowledgeScope": "546c9e7d6c71021867105caee9f1a5b86a6a2c63b1d5eeb4bfac1bd59e0ffed3",
+    "CreativeKnowledge": "c6378e90f5347069abaaa3e7d165a6029d6643cd1b551bdd31678906adea9cb1",
+    "ModalKnowledge": "85e78a9e6d8994b215af19da69614dd2b84dc996b8a4c038b45d3b46f45a0ec2"
+  },
+  "post_source_hashes": {
+    "ProductiveCompleteness": "8765c137491f2f5e2cd9e0c699987c53fcbb00b9cc9e90b49712ec124e97906a",
+    "SourceIdentity": "45ab18f7305033091f8fc31bb906d4c87866de47138df76637c6937440064503",
+    "KnowledgeScope": "546c9e7d6c71021867105caee9f1a5b86a6a2c63b1d5eeb4bfac1bd59e0ffed3",
+    "CreativeKnowledge": "c6378e90f5347069abaaa3e7d165a6029d6643cd1b551bdd31678906adea9cb1",
+    "ModalKnowledge": "85e78a9e6d8994b215af19da69614dd2b84dc996b8a4c038b45d3b46f45a0ec2"
+  },
+  "compiler_sha256": "92c3d35b5bfaa5e0fea413a775d504cf46cd95e1345df61c2274f76779e7e023",
+  "pins": {
+    "lean_version": "4.19.0",
+    "lean_binary_sha256": "92c3d35b5bfaa5e0fea413a775d504cf46cd95e1345df61c2274f76779e7e023",
+    "packages": [
+      {
+        "name": "mathlib",
+        "revision": "c44e0c8ee63ca166450922a373c7409c5d26b00b"
+      },
+      {
+        "name": "plausible",
+        "revision": "77e08eddc486491d7b9e470926b3dbe50319451a"
+      },
+      {
+        "name": "LeanSearchClient",
+        "revision": "25078369972d295301f5a1e53c3e5850cf6d9d4c"
+      },
+      {
+        "name": "importGraph",
+        "revision": "e6a9f0f5ee3ccf7443a0070f92b62f8db12ae82b"
+      },
+      {
+        "name": "proofwidgets",
+        "revision": "c4919189477c3221e6a204008998b0d724f49904"
+      },
+      {
+        "name": "aesop",
+        "revision": "5d50b08dedd7d69b3d9b3176e0d58a23af228884"
+      },
+      {
+        "name": "Qq",
+        "revision": "fa4f7f15d97591a9cf3aa7724ba371c7fc6dda02"
+      },
+      {
+        "name": "batteries",
+        "revision": "f5d04a9c4973d401c8c92500711518f7c656f034"
+      },
+      {
+        "name": "Cli",
+        "revision": "02dbd02bc00ec4916e99b04b2245b30200e200d0"
+      }
+    ]
+  },
+  "modules": [
+    {
+      "module": "ProductiveCompleteness",
+      "source_sha256": "8765c137491f2f5e2cd9e0c699987c53fcbb00b9cc9e90b49712ec124e97906a",
+      "object_sha256": "8296d838a723ff76f4274886f8fb45219eaa9819a8890283d3b83a6969488cff",
+      "transitive_source_fingerprint": "041bd4576cebfb5ae4e42ad4d0e691835e882743ce68035a70a98ad1b050c42b",
+      "status": "FRESH_COMPILE",
+      "exit_code": 0
+    },
+    {
+      "module": "SourceIdentity",
+      "source_sha256": "45ab18f7305033091f8fc31bb906d4c87866de47138df76637c6937440064503",
+      "object_sha256": "39d9009d24028b82362dad37769d484320683b6980504487fdacc817f541c599",
+      "transitive_source_fingerprint": "9f686dd18b5cda0baf2a3e5f24b403b16612c4501cf0d53401350e736fb47ee6",
+      "status": "FRESH_COMPILE",
+      "exit_code": 0
+    },
+    {
+      "module": "KnowledgeScope",
+      "source_sha256": "546c9e7d6c71021867105caee9f1a5b86a6a2c63b1d5eeb4bfac1bd59e0ffed3",
+      "object_sha256": "b0fc861eef0f96084f8d8bf03502cc369c7bba4d47ae67d9c81b56f4d6010fc2",
+      "transitive_source_fingerprint": "36a942f4bc915532cdd7e986bd57a6dab953d8c80117c2946587e41cc05b5efb",
+      "status": "FRESH_COMPILE",
+      "exit_code": 0
+    },
+    {
+      "module": "CreativeKnowledge",
+      "source_sha256": "c6378e90f5347069abaaa3e7d165a6029d6643cd1b551bdd31678906adea9cb1",
+      "object_sha256": "47e16c1732ea4ab396933c2b38018cc56454c04338dcec5809b218bb9f0e743c",
+      "transitive_source_fingerprint": "9b88deb62c5f717bf870fa7e43a49e78975286d9653c53077d4ec203dc7e2a32",
+      "status": "FRESH_COMPILE",
+      "exit_code": 0
+    },
+    {
+      "module": "ModalKnowledge",
+      "source_sha256": "85e78a9e6d8994b215af19da69614dd2b84dc996b8a4c038b45d3b46f45a0ec2",
+      "object_sha256": "3f285c54431057f253f41b70eb67d25fc61d05f57cb6de4b749128e175933203",
+      "transitive_source_fingerprint": "ba4aed1cee946dc8f590d447dcb22ba55559b4bcf3d5a9bb2b4edc8c5e3cf01b",
+      "status": "FRESH_COMPILE",
+      "exit_code": 0
+    }
+  ],
+  "readbacks": {
+    "Orthemology.Tranche6.ModalKnowledge.actual_giver_priority": {
+      "type_sha256": "2dd17167ba9288fa85f731dfbaf5872c028151ee23c6c7db5bdc7fb42910710c",
+      "axioms": [
+        "Classical.choice",
+        "Quot.sound",
+        "propext"
+      ]
+    },
+    "Orthemology.Tranche6.ModalKnowledge.cognitive_factivity": {
+      "type_sha256": "e714e953d1ee6e2a34f6b75d6f417ee00b9080594b464b2fadc2213f57e00df3",
+      "axioms": [
+        "Classical.choice",
+        "Quot.sound",
+        "propext"
+      ]
+    },
+    "Orthemology.Tranche6.ModalKnowledge.recipient_and_source_actually_know": {
+      "type_sha256": "8f1b4683c79fe181854c39f6589cb619080e4133c2871fffd446b8a3c66a063c",
+      "axioms": [
+        "propext"
+      ]
+    },
+    "Orthemology.Tranche6.ModalKnowledge.source_not_standing": {
+      "type_sha256": "226cba8373a1be211be7a23958878388f3fb6f6b31a3026fffd74b3b052ad54f",
+      "axioms": [
+        "Classical.choice",
+        "Quot.sound",
+        "propext"
+      ]
+    },
+    "Orthemology.Tranche6.ModalKnowledge.possible_giving_at_every_world": {
+      "type_sha256": "3cbf92d025989cda05d755128389752b43897cadf15b182ac93cf400b21a3e5e",
+      "axioms": [
+        "Classical.choice",
+        "Quot.sound",
+        "propext"
+      ]
+    },
+    "Orthemology.Tranche6.ModalKnowledge.stable_response_law": {
+      "type_sha256": "c8faa23abe2971f4c73812631d88838c9d977a39b8f079df74be840c1918b6ba",
+      "axioms": [
+        "Classical.choice",
+        "Quot.sound",
+        "propext"
+      ]
+    },
+    "Orthemology.Tranche6.ModalKnowledge.source_still_productive_at_c": {
+      "type_sha256": "208cb057fc8b877ff4d943df9c83e36e21b093f763acba6cca50f2ef0f69c0d4",
+      "axioms": [
+        "propext"
+      ]
+    },
+    "Orthemology.Tranche6.ModalKnowledge.knowledge_not_recipient_thought_ownership": {
+      "type_sha256": "60a4b16c404067a7441a1b1b877a23485e116d8faa7f851ae183eb3b99610bb6",
+      "axioms": [
+        "propext"
+      ]
+    },
+    "Orthemology.Tranche6.ModalKnowledge.exact_sources_with_giver_priority_without_standing": {
+      "type_sha256": "7dba64c8205660e7d81817457fb112b082ae0f0c5756ae53d7174bec09513691",
+      "axioms": [
+        "Classical.choice",
+        "Quot.sound",
+        "propext"
+      ]
+    },
+    "Orthemology.Tranche6.ModalKnowledge.actual_knowledge_of_giver_priority": {
+      "type_sha256": "833b407b2e732de9b899853436b30cecca1c843928f9e846246f8b75f823c4da",
+      "axioms": []
+    },
+    "Orthemology.Tranche6.ModalKnowledge.standing_of_everywhere_cognitive_giving": {
+      "type_sha256": "e71734476db4ca9d9253d80ef0eead6a160b8a64d6d7197c397e90b7d86a947e",
+      "axioms": []
+    },
+    "Orthemology.Tranche6.ModalKnowledge.standing_of_intrinsic_determination": {
+      "type_sha256": "1736991aef5e449bba864536d8364a39085868fe884474726320937049a190e7",
+      "axioms": []
+    },
+    "Orthemology.Tranche6.CreativeKnowledge.effect_knowledge_of_known_complete_act": {
+      "type_sha256": "e44fc1b88102dbfcd9711b54fc535ec04b60338fadeb37c1506309b7db84c855",
+      "axioms": []
+    },
+    "Orthemology.Tranche6.CreativeKnowledge.effect_determined_by_complete_state": {
+      "type_sha256": "541dd3f3490a19c6413b6e6334cefed21572aee05a5ca541bda3026e61592b2e",
+      "axioms": []
+    },
+    "Orthemology.Tranche6.CreativeKnowledge.complete_act_determines_effect": {
+      "type_sha256": "e59e0099bc3c0d470ee884af51732e6ccf7c2dc1b9886746982886920996adea",
+      "axioms": []
+    },
+    "Orthemology.Tranche6.CreativeKnowledge.generic_nature_does_not_determine_actual_effect": {
+      "type_sha256": "444ae91c137cdc6b8ddef783140dd515ccbde1f9fe31564d37007b7af6285e00",
+      "axioms": [
+        "Classical.choice",
+        "Quot.sound",
+        "propext"
+      ]
+    },
+    "Orthemology.Tranche6.CreativeKnowledge.same_nature_different_acts_and_effects": {
+      "type_sha256": "e13c03b498bb55a4a31ae17791fce3e17a18331f4b4b3416a58770e38d7f4409",
+      "axioms": [
+        "propext"
+      ]
+    },
+    "Orthemology.Tranche6.CreativeKnowledge.determined_factive": {
+      "type_sha256": "cdddc8db64397e28993b5a9e58dbe7d645eec975eb43c357d172c02a7c0c7872",
+      "axioms": []
+    },
+    "Orthemology.Tranche6.CreativeKnowledge.determined_closed": {
+      "type_sha256": "ae0dbc299fddefa20dfd34e185da5fdbd4619ee0f3e473b78b214b7d98d97fdc",
+      "axioms": []
+    }
+  },
+  "original_controls": "PASS",
+  "original_receipt_sha256": "e2efb1a81dfca6101c69ae17625ea95726979f9548c13d4176759cc7afbea49b",
+  "original_driver_sha256": "72d5a458d1b327f11c8d8c927742aa73c3bfcd7900ac0de59e2fbb808a756e9f",
+  "execution_kind": "FRESH_CUSTOM_CLOSURE",
+  "finished_utc": "2026-10-02T05:21:32.428019+00:00",
+  "scope": "Source-bound custom closure and selected declaration readbacks. Types are represented by hashes of the exact printed types; complete logs remain private. Official caches are trusted. This does not establish ordinary proof, runtime completeness, empirical or normative warrant, novelty, external human review or merged adoption."
+}

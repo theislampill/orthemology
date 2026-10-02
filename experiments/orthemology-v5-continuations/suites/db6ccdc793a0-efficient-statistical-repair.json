@@ -1,0 +1,514 @@
+{
+  "id": "db6ccdc793a0-efficient-statistical-repair",
+  "origin": "db6ccdc793a0a1a96b736cee6c55c47145b86b8f5f91d2dbb1cf80e7036b614e",
+  "descriptor_source_id": "src-db6ccdc793a0a1a9-85c042fef1d85c5a",
+  "modules": [
+    {
+      "module": "StatisticalRepair",
+      "source_id": "src-db6ccdc793a0a1a9-9c3d6087bc56befc",
+      "imports": [
+        "Mathlib.Data.Real.Sqrt",
+        "Mathlib.Algebra.Order.BigOperators.Ring.Finset",
+        "Mathlib.Tactic"
+      ]
+    },
+    {
+      "module": "FiniteTailCoverage",
+      "source_id": "src-db6ccdc793a0a1a9-aee3edaa1bac385f",
+      "imports": [
+        "Mathlib.Tactic",
+        "Mathlib.Data.Finset.Max"
+      ]
+    },
+    {
+      "module": "BernoulliTailMonotonicity",
+      "source_id": "src-db6ccdc793a0a1a9-0d41255073d77216",
+      "imports": [
+        "StatisticalRepair",
+        "FiniteTailCoverage"
+      ]
+    },
+    {
+      "module": "BernoulliIntervalCoverage",
+      "source_id": "src-db6ccdc793a0a1a9-acd4a4d741bc0dfe",
+      "imports": [
+        "BernoulliTailMonotonicity"
+      ]
+    },
+    {
+      "module": "BernoulliPrefixLaw",
+      "source_id": "src-db6ccdc793a0a1a9-6a51ecfd23fdfe82",
+      "imports": [
+        "BernoulliIntervalCoverage",
+        "Mathlib.Probability.ProductMeasure",
+        "Mathlib.Probability.ProbabilityMassFunction.Constructions"
+      ]
+    },
+    {
+      "module": "RobustBinaryRepair",
+      "source_id": "src-db6ccdc793a0a1a9-c6b1c535e4130613",
+      "imports": [
+        "Mathlib.Tactic"
+      ]
+    },
+    {
+      "module": "CertifiedRepairCoverage",
+      "source_id": "src-db6ccdc793a0a1a9-bdc682cc5fe7c584",
+      "imports": [
+        "RobustBinaryRepair",
+        "Mathlib.MeasureTheory.Measure.MeasureSpaceDef"
+      ]
+    },
+    {
+      "module": "AnytimeRepairCoverage",
+      "source_id": "src-db6ccdc793a0a1a9-8304a59115a799f3",
+      "imports": [
+        "BernoulliPrefixLaw",
+        "CertifiedRepairCoverage"
+      ]
+    },
+    {
+      "module": "RationalTailReference",
+      "source_id": "src-db6ccdc793a0a1a9-062cecd99659e720",
+      "imports": [
+        "BernoulliIntervalCoverage"
+      ]
+    },
+    {
+      "module": "RationalRepairCertificate",
+      "source_id": "src-db6ccdc793a0a1a9-69886ef50b3c10f0",
+      "imports": [
+        "RobustBinaryRepair"
+      ]
+    },
+    {
+      "module": "ExecutableAuditRepair",
+      "source_id": "src-db6ccdc793a0a1a9-cda9be25f28c7a17",
+      "imports": [
+        "AnytimeRepairCoverage",
+        "RationalTailReference",
+        "RationalRepairCertificate"
+      ]
+    },
+    {
+      "module": "AuditContractBinding",
+      "source_id": "src-db6ccdc793a0a1a9-ea01c9b697911802",
+      "imports": [
+        "ExecutableAuditRepair"
+      ]
+    },
+    {
+      "module": "RandomisedRepairRegret",
+      "source_id": "src-db6ccdc793a0a1a9-370c9eab4aa221a8",
+      "imports": [
+        "RobustBinaryRepair",
+        "Mathlib.Algebra.Order.BigOperators.Ring.Finset"
+      ]
+    },
+    {
+      "module": "GroupedBinomialTails",
+      "source_id": "src-db6ccdc793a0a1a9-c89dccda96e778ce",
+      "imports": [
+        "RationalTailReference",
+        "Mathlib.Data.Nat.Choose.Basic"
+      ]
+    },
+    {
+      "module": "EfficientAuditRepair",
+      "source_id": "src-db6ccdc793a0a1a9-be5a2ac9aa4b4a4a",
+      "imports": [
+        "GroupedBinomialTails",
+        "ExecutableAuditRepair"
+      ]
+    },
+    {
+      "module": "EventualAuditSafety",
+      "source_id": "src-db6ccdc793a0a1a9-9988371e9b8e0a0d",
+      "imports": [
+        "EfficientAuditRepair",
+        "Mathlib.MeasureTheory.OuterMeasure.BorelCantelli",
+        "Mathlib.MeasureTheory.Integral.Lebesgue.Add"
+      ]
+    },
+    {
+      "module": "SequentialBinomialTails",
+      "source_id": "src-db6ccdc793a0a1a9-d87dcd1f9c80f9ca",
+      "imports": [
+        "GroupedBinomialTails"
+      ]
+    },
+    {
+      "module": "SequentialAuditRepair",
+      "source_id": "src-db6ccdc793a0a1a9-3d0be3c1511b49c9",
+      "imports": [
+        "SequentialBinomialTails",
+        "ExecutableAuditRepair"
+      ]
+    },
+    {
+      "module": "Controls",
+      "source_id": "src-db6ccdc793a0a1a9-55441a2617b5ab09",
+      "imports": [
+        "SequentialAuditRepair",
+        "EventualAuditSafety"
+      ]
+    }
+  ],
+  "module_order": [
+    "StatisticalRepair",
+    "FiniteTailCoverage",
+    "BernoulliTailMonotonicity",
+    "BernoulliIntervalCoverage",
+    "BernoulliPrefixLaw",
+    "RobustBinaryRepair",
+    "CertifiedRepairCoverage",
+    "AnytimeRepairCoverage",
+    "RationalTailReference",
+    "RationalRepairCertificate",
+    "ExecutableAuditRepair",
+    "AuditContractBinding",
+    "RandomisedRepairRegret",
+    "GroupedBinomialTails",
+    "EfficientAuditRepair",
+    "EventualAuditSafety",
+    "SequentialBinomialTails",
+    "SequentialAuditRepair",
+    "Controls"
+  ],
+  "targets": [
+    {
+      "name": "Orthemology.Tranche3.countMass",
+      "module": "GroupedBinomialTails"
+    },
+    {
+      "name": "Orthemology.Tranche3.countMass_zero_base",
+      "module": "GroupedBinomialTails"
+    },
+    {
+      "name": "Orthemology.Tranche3.countMass_above",
+      "module": "GroupedBinomialTails"
+    },
+    {
+      "name": "Orthemology.Tranche3.countMass_succ_zero",
+      "module": "GroupedBinomialTails"
+    },
+    {
+      "name": "Orthemology.Tranche3.countMass_succ_succ",
+      "module": "GroupedBinomialTails"
+    },
+    {
+      "name": "Orthemology.Tranche3.countMass_binomial",
+      "module": "GroupedBinomialTails"
+    },
+    {
+      "name": "Orthemology.Tranche3.efficientUpper",
+      "module": "GroupedBinomialTails"
+    },
+    {
+      "name": "Orthemology.Tranche3.efficientLower",
+      "module": "GroupedBinomialTails"
+    },
+    {
+      "name": "Orthemology.Tranche3.sum_grouped_count",
+      "module": "GroupedBinomialTails"
+    },
+    {
+      "name": "Orthemology.Tranche3.efficientUpper_eq",
+      "module": "GroupedBinomialTails"
+    },
+    {
+      "name": "Orthemology.Tranche3.efficientLower_eq",
+      "module": "GroupedBinomialTails"
+    },
+    {
+      "name": "Orthemology.Tranche3.efficientReferenceLower",
+      "module": "EfficientAuditRepair"
+    },
+    {
+      "name": "Orthemology.Tranche3.efficientReferenceUpper",
+      "module": "EfficientAuditRepair"
+    },
+    {
+      "name": "Orthemology.Tranche3.efficientReferenceLower_eq",
+      "module": "EfficientAuditRepair"
+    },
+    {
+      "name": "Orthemology.Tranche3.efficientReferenceUpper_eq",
+      "module": "EfficientAuditRepair"
+    },
+    {
+      "name": "Orthemology.Tranche3.efficientAuditRepair",
+      "module": "EfficientAuditRepair"
+    },
+    {
+      "name": "Orthemology.Tranche3.efficientAuditRepair_eq",
+      "module": "EfficientAuditRepair"
+    },
+    {
+      "name": "Orthemology.Tranche3.efficient_auditRepair_anytime_sound",
+      "module": "EfficientAuditRepair"
+    },
+    {
+      "name": "Orthemology.Tranche3.AuditStepFailure",
+      "module": "EventualAuditSafety"
+    },
+    {
+      "name": "Orthemology.Tranche3.auditStepFailure_measurable",
+      "module": "EventualAuditSafety"
+    },
+    {
+      "name": "Orthemology.Tranche3.auditStepFailure_bound",
+      "module": "EventualAuditSafety"
+    },
+    {
+      "name": "Orthemology.Tranche3.expected_incorrect_reports_le",
+      "module": "EventualAuditSafety"
+    },
+    {
+      "name": "Orthemology.Tranche3.eventually_no_incorrect_emissions",
+      "module": "EventualAuditSafety"
+    },
+    {
+      "name": "Orthemology.Tranche3.binomialTerm",
+      "module": "SequentialBinomialTails"
+    },
+    {
+      "name": "Orthemology.Tranche3.nextBinomialTerm",
+      "module": "SequentialBinomialTails"
+    },
+    {
+      "name": "Orthemology.Tranche3.binomialTerm_next",
+      "module": "SequentialBinomialTails"
+    },
+    {
+      "name": "Orthemology.Tranche3.tailSweep",
+      "module": "SequentialBinomialTails"
+    },
+    {
+      "name": "Orthemology.Tranche3.tailSweep_correct",
+      "module": "SequentialBinomialTails"
+    },
+    {
+      "name": "Orthemology.Tranche3.sequentialTail",
+      "module": "SequentialBinomialTails"
+    },
+    {
+      "name": "Orthemology.Tranche3.binomialTerm_at_one",
+      "module": "SequentialBinomialTails"
+    },
+    {
+      "name": "Orthemology.Tranche3.sequentialTail_eq",
+      "module": "SequentialBinomialTails"
+    },
+    {
+      "name": "Orthemology.Tranche3.sequentialUpper",
+      "module": "SequentialBinomialTails"
+    },
+    {
+      "name": "Orthemology.Tranche3.sequentialLower",
+      "module": "SequentialBinomialTails"
+    },
+    {
+      "name": "Orthemology.Tranche3.sequentialUpper_eq",
+      "module": "SequentialBinomialTails"
+    },
+    {
+      "name": "Orthemology.Tranche3.sequentialLower_eq",
+      "module": "SequentialBinomialTails"
+    },
+    {
+      "name": "Orthemology.Tranche3.sequentialReferenceLower",
+      "module": "SequentialAuditRepair"
+    },
+    {
+      "name": "Orthemology.Tranche3.sequentialReferenceUpper",
+      "module": "SequentialAuditRepair"
+    },
+    {
+      "name": "Orthemology.Tranche3.sequentialReferenceLower_eq",
+      "module": "SequentialAuditRepair"
+    },
+    {
+      "name": "Orthemology.Tranche3.sequentialReferenceUpper_eq",
+      "module": "SequentialAuditRepair"
+    },
+    {
+      "name": "Orthemology.Tranche3.sequentialAuditRepair",
+      "module": "SequentialAuditRepair"
+    },
+    {
+      "name": "Orthemology.Tranche3.sequentialAuditRepair_eq",
+      "module": "SequentialAuditRepair"
+    },
+    {
+      "name": "Orthemology.Tranche3.sequential_auditRepair_anytime_sound",
+      "module": "SequentialAuditRepair"
+    },
+    {
+      "name": "IndependentEfficientControls.zero_sample_upper_at_zero",
+      "module": "Controls"
+    },
+    {
+      "name": "IndependentEfficientControls.zero_sample_upper_beyond",
+      "module": "Controls"
+    },
+    {
+      "name": "IndependentEfficientControls.point_one_upper",
+      "module": "Controls"
+    },
+    {
+      "name": "IndependentEfficientControls.point_one_lower_below",
+      "module": "Controls"
+    },
+    {
+      "name": "IndependentEfficientControls.point_zero_positive_count",
+      "module": "Controls"
+    },
+    {
+      "name": "IndependentEfficientControls.division_by_one_boundary_is_real",
+      "module": "Controls"
+    },
+    {
+      "name": "IndependentEfficientControls.exhausted_sweep_preserves_accumulator",
+      "module": "Controls"
+    },
+    {
+      "name": "IndependentEfficientControls.sequential_grouped_upper_agree",
+      "module": "Controls"
+    },
+    {
+      "name": "IndependentEfficientControls.sequential_grouped_lower_agree",
+      "module": "Controls"
+    },
+    {
+      "name": "IndependentEfficientControls.every_finite_precision_agrees",
+      "module": "Controls"
+    },
+    {
+      "name": "IndependentEfficientControls.invalid_report_input_always_abstains",
+      "module": "Controls"
+    },
+    {
+      "name": "IndependentEfficientControls.abstention_has_empty_failure",
+      "module": "Controls"
+    },
+    {
+      "name": "IndependentEfficientControls.literal_sequential_failure_eq",
+      "module": "Controls"
+    },
+    {
+      "name": "IndependentEfficientControls.literal_sequential_expected_budget",
+      "module": "Controls"
+    }
+  ],
+  "pins": {
+    "lean_version": "4.19.0",
+    "lean_binary_sha256": "92c3d35b5bfaa5e0fea413a775d504cf46cd95e1345df61c2274f76779e7e023",
+    "packages": [
+      {
+        "name": "mathlib",
+        "revision": "c44e0c8ee63ca166450922a373c7409c5d26b00b"
+      },
+      {
+        "name": "plausible",
+        "revision": "77e08eddc486491d7b9e470926b3dbe50319451a"
+      },
+      {
+        "name": "LeanSearchClient",
+        "revision": "25078369972d295301f5a1e53c3e5850cf6d9d4c"
+      },
+      {
+        "name": "importGraph",
+        "revision": "e6a9f0f5ee3ccf7443a0070f92b62f8db12ae82b"
+      },
+      {
+        "name": "proofwidgets",
+        "revision": "c4919189477c3221e6a204008998b0d724f49904"
+      },
+      {
+        "name": "aesop",
+        "revision": "5d50b08dedd7d69b3d9b3176e0d58a23af228884"
+      },
+      {
+        "name": "Qq",
+        "revision": "fa4f7f15d97591a9cf3aa7724ba371c7fc6dda02"
+      },
+      {
+        "name": "batteries",
+        "revision": "f5d04a9c4973d401c8c92500711518f7c656f034"
+      },
+      {
+        "name": "Cli",
+        "revision": "02dbd02bc00ec4916e99b04b2245b30200e200d0"
+      }
+    ]
+  },
+  "official_imports": [
+    {
+      "module": "Mathlib.Algebra.Order.BigOperators.Ring.Finset",
+      "repository": "mathlib",
+      "source": "Mathlib/Algebra/Order/BigOperators/Ring/Finset.lean",
+      "sha256": "6341ca875f3963664c94147b1eacd45c9aedfe2015ae695b06af4e717849abe4"
+    },
+    {
+      "module": "Mathlib.Data.Finset.Max",
+      "repository": "mathlib",
+      "source": "Mathlib/Data/Finset/Max.lean",
+      "sha256": "5da0ec1876605df7573c9c6a3f859f1426014883e2411cb5909fc36d6c0063a9"
+    },
+    {
+      "module": "Mathlib.Data.Nat.Choose.Basic",
+      "repository": "mathlib",
+      "source": "Mathlib/Data/Nat/Choose/Basic.lean",
+      "sha256": "f3b34bef59b7e8d527fcde9ac9238d23be07ddc335002d0a8e972a266b818336"
+    },
+    {
+      "module": "Mathlib.Data.Real.Sqrt",
+      "repository": "mathlib",
+      "source": "Mathlib/Data/Real/Sqrt.lean",
+      "sha256": "100af39c6d268959221d07b8f2fee4579d2dbef4e87bf64158066cc675f67323"
+    },
+    {
+      "module": "Mathlib.MeasureTheory.Integral.Lebesgue.Add",
+      "repository": "mathlib",
+      "source": "Mathlib/MeasureTheory/Integral/Lebesgue/Add.lean",
+      "sha256": "eee4032e5814e52c87cec5d1dd67fa17527aae8d0ae6d97a8fc7e65857b5062f"
+    },
+    {
+      "module": "Mathlib.MeasureTheory.Measure.MeasureSpaceDef",
+      "repository": "mathlib",
+      "source": "Mathlib/MeasureTheory/Measure/MeasureSpaceDef.lean",
+      "sha256": "51f7479de5f95a4681f2d7a45f48dd9ee04ccf40d8296020a4c20d8121005dbe"
+    },
+    {
+      "module": "Mathlib.MeasureTheory.OuterMeasure.BorelCantelli",
+      "repository": "mathlib",
+      "source": "Mathlib/MeasureTheory/OuterMeasure/BorelCantelli.lean",
+      "sha256": "9e38230dcc3fff080e7ea05c64e7a04af8d9440753ff8be290e8cd110b9afa6a"
+    },
+    {
+      "module": "Mathlib.Probability.ProbabilityMassFunction.Constructions",
+      "repository": "mathlib",
+      "source": "Mathlib/Probability/ProbabilityMassFunction/Constructions.lean",
+      "sha256": "8e50bff3cd3b46107d612eed21e1648752a86f9c373d4b6b0fe10e0e22a43973"
+    },
+    {
+      "module": "Mathlib.Probability.ProductMeasure",
+      "repository": "mathlib",
+      "source": "Mathlib/Probability/ProductMeasure.lean",
+      "sha256": "f8af06e87e2e28916f0fa8a455f792ded4b85a22e1dea5e1c6f9cac1d31b9830"
+    },
+    {
+      "module": "Mathlib.Tactic",
+      "repository": "mathlib",
+      "source": "Mathlib/Tactic.lean",
+      "sha256": "f20038eba7bba63f07a2f854496101226df407e20414e6b8ebf94b14f95e831b"
+    }
+  ],
+  "driver": {
+    "source_id": "src-db6ccdc793a0a1a9-817e8553aa5fdf95",
+    "lean_argument": "BIN_DIRECTORY"
+  },
+  "controls": "ORIGINAL_DRIVER_REQUIRED",
+  "classification": "CURRENT_EVIDENCE"
+}

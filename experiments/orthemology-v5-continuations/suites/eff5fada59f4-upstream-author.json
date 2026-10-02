@@ -1,0 +1,155 @@
+{
+  "id": "eff5fada59f4-upstream-author",
+  "origin": "eff5fada59f4f411bb5dce5fedc5b6aae566df4220bcde7bbc421764dd1d1bd4",
+  "descriptor_source_id": "src-eff5fada59f4f411-f4aa387483639e51",
+  "modules": [
+    {
+      "module": "SourceIdentity",
+      "source_id": "src-eff5fada59f4f411-3e5403aa4cb7858c",
+      "imports": [
+        "Mathlib"
+      ]
+    },
+    {
+      "module": "UpstreamGround",
+      "source_id": "src-eff5fada59f4f411-69761a5f38d592cd",
+      "imports": [
+        "SourceIdentity"
+      ]
+    }
+  ],
+  "module_order": [
+    "SourceIdentity",
+    "UpstreamGround"
+  ],
+  "targets": [
+    {
+      "name": "Orthemology.Tranche6.UpstreamGround.predecessor_free_of_coverage",
+      "module": "UpstreamGround"
+    },
+    {
+      "name": "Orthemology.Tranche6.UpstreamGround.uniform_of_complete_coverage",
+      "module": "UpstreamGround"
+    },
+    {
+      "name": "Orthemology.Tranche6.UpstreamGround.InfiniteControls.chain_irreflexive",
+      "module": "UpstreamGround"
+    },
+    {
+      "name": "Orthemology.Tranche6.UpstreamGround.InfiniteControls.chain_transitive",
+      "module": "UpstreamGround"
+    },
+    {
+      "name": "Orthemology.Tranche6.UpstreamGround.InfiniteControls.chain_every_member_receives",
+      "module": "UpstreamGround"
+    },
+    {
+      "name": "Orthemology.Tranche6.UpstreamGround.InfiniteControls.chain_has_no_covering_member",
+      "module": "UpstreamGround"
+    },
+    {
+      "name": "Orthemology.Tranche6.UpstreamGround.InfiniteControls.contingent_dependency_factive",
+      "module": "UpstreamGround"
+    },
+    {
+      "name": "Orthemology.Tranche6.UpstreamGround.InfiniteControls.contingent_reception",
+      "module": "UpstreamGround"
+    },
+    {
+      "name": "Orthemology.Tranche6.UpstreamGround.InfiniteControls.generic_reception_without_foundation",
+      "module": "UpstreamGround"
+    },
+    {
+      "name": "Orthemology.Tranche6.UpstreamGround.InfiniteControls.actual_chain_but_no_root",
+      "module": "UpstreamGround"
+    },
+    {
+      "name": "Orthemology.Tranche6.UpstreamGround.InfiniteControls.all_necessarily_exist_without_root",
+      "module": "UpstreamGround"
+    },
+    {
+      "name": "Orthemology.Tranche6.UpstreamGround.InfiniteControls.rooted_irreflexive",
+      "module": "UpstreamGround"
+    },
+    {
+      "name": "Orthemology.Tranche6.UpstreamGround.InfiniteControls.rooted_transitive",
+      "module": "UpstreamGround"
+    },
+    {
+      "name": "Orthemology.Tranche6.UpstreamGround.InfiniteControls.root_covers_infinite_ancestry",
+      "module": "UpstreamGround"
+    },
+    {
+      "name": "Orthemology.Tranche6.UpstreamGround.InfiniteControls.complete_root_without_global_wellfoundedness",
+      "module": "UpstreamGround"
+    },
+    {
+      "name": "Orthemology.Tranche6.UpstreamGround.FiniteControls.split_local_coverage",
+      "module": "UpstreamGround"
+    },
+    {
+      "name": "Orthemology.Tranche6.UpstreamGround.FiniteControls.split_no_common_source",
+      "module": "UpstreamGround"
+    },
+    {
+      "name": "Orthemology.Tranche6.UpstreamGround.FiniteControls.brute_actual_root_without_necessity",
+      "module": "UpstreamGround"
+    }
+  ],
+  "pins": {
+    "lean_version": "4.19.0",
+    "lean_binary_sha256": "92c3d35b5bfaa5e0fea413a775d504cf46cd95e1345df61c2274f76779e7e023",
+    "packages": [
+      {
+        "name": "mathlib",
+        "revision": "c44e0c8ee63ca166450922a373c7409c5d26b00b"
+      },
+      {
+        "name": "plausible",
+        "revision": "77e08eddc486491d7b9e470926b3dbe50319451a"
+      },
+      {
+        "name": "LeanSearchClient",
+        "revision": "25078369972d295301f5a1e53c3e5850cf6d9d4c"
+      },
+      {
+        "name": "importGraph",
+        "revision": "e6a9f0f5ee3ccf7443a0070f92b62f8db12ae82b"
+      },
+      {
+        "name": "proofwidgets",
+        "revision": "c4919189477c3221e6a204008998b0d724f49904"
+      },
+      {
+        "name": "aesop",
+        "revision": "5d50b08dedd7d69b3d9b3176e0d58a23af228884"
+      },
+      {
+        "name": "Qq",
+        "revision": "fa4f7f15d97591a9cf3aa7724ba371c7fc6dda02"
+      },
+      {
+        "name": "batteries",
+        "revision": "f5d04a9c4973d401c8c92500711518f7c656f034"
+      },
+      {
+        "name": "Cli",
+        "revision": "02dbd02bc00ec4916e99b04b2245b30200e200d0"
+      }
+    ]
+  },
+  "official_imports": [
+    {
+      "module": "Mathlib",
+      "repository": "mathlib",
+      "source": "Mathlib.lean",
+      "sha256": "b0518254279fabf0c6a920804e684536b0f5e2bd1cb6318d0609eb563413f20a"
+    }
+  ],
+  "driver": {
+    "source_id": "src-eff5fada59f4f411-f4aa387483639e51",
+    "lean_argument": "EXECUTABLE"
+  },
+  "controls": "ORIGINAL_DRIVER_REQUIRED",
+  "classification": "CURRENT_EVIDENCE"
+}

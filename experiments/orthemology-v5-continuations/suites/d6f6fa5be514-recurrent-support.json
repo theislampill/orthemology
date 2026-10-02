@@ -1,0 +1,155 @@
+{
+  "id": "d6f6fa5be514-recurrent-support",
+  "origin": "d6f6fa5be51464c0aef8e06f0ab0433fc0b375ccf57f855a95e6fb8a55a14ade",
+  "descriptor_source_id": "src-d6f6fa5be51464c0-85c042fef1d85c5a",
+  "modules": [
+    {
+      "module": "RecurrentSupport",
+      "source_id": "src-d6f6fa5be51464c0-c03988cb865e6170",
+      "imports": [
+        "Mathlib"
+      ]
+    }
+  ],
+  "module_order": [
+    "RecurrentSupport"
+  ],
+  "targets": [
+    {
+      "name": "Orthemology.Tranche2.RecurrentSupport.Recurs",
+      "module": "RecurrentSupport"
+    },
+    {
+      "name": "Orthemology.Tranche2.RecurrentSupport.recurrentSet",
+      "module": "RecurrentSupport"
+    },
+    {
+      "name": "Orthemology.Tranche2.RecurrentSupport.mem_recurrentSet",
+      "module": "RecurrentSupport"
+    },
+    {
+      "name": "Orthemology.Tranche2.RecurrentSupport.exists_recurrent",
+      "module": "RecurrentSupport"
+    },
+    {
+      "name": "Orthemology.Tranche2.RecurrentSupport.recurrentSet_nonempty",
+      "module": "RecurrentSupport"
+    },
+    {
+      "name": "Orthemology.Tranche2.RecurrentSupport.eventually_mem_recurrentSet",
+      "module": "RecurrentSupport"
+    },
+    {
+      "name": "Orthemology.Tranche2.RecurrentSupport.recurrentSet_subset_of_eventually_mem",
+      "module": "RecurrentSupport"
+    },
+    {
+      "name": "Orthemology.Tranche2.RecurrentSupport.exactRecurrentEvent",
+      "module": "RecurrentSupport"
+    },
+    {
+      "name": "Orthemology.Tranche2.RecurrentSupport.tailEvent",
+      "module": "RecurrentSupport"
+    },
+    {
+      "name": "Orthemology.Tranche2.RecurrentSupport.exact_event_eventually_mem",
+      "module": "RecurrentSupport"
+    },
+    {
+      "name": "Orthemology.Tranche2.RecurrentSupport.exact_event_finitely_many_outside",
+      "module": "RecurrentSupport"
+    },
+    {
+      "name": "Orthemology.Tranche2.RecurrentSupport.exact_event_eq_iUnion_tail",
+      "module": "RecurrentSupport"
+    },
+    {
+      "name": "Orthemology.Tranche2.RecurrentSupport.measurable_recurrence",
+      "module": "RecurrentSupport"
+    },
+    {
+      "name": "Orthemology.Tranche2.RecurrentSupport.measurable_exactRecurrentEvent",
+      "module": "RecurrentSupport"
+    },
+    {
+      "name": "Orthemology.Tranche2.RecurrentSupport.measurable_tailEvent",
+      "module": "RecurrentSupport"
+    },
+    {
+      "name": "Orthemology.Tranche2.RecurrentSupport.exists_positive_recurrent_support",
+      "module": "RecurrentSupport"
+    },
+    {
+      "name": "Orthemology.Tranche2.RecurrentSupport.exists_positive_tail_index",
+      "module": "RecurrentSupport"
+    },
+    {
+      "name": "Orthemology.Tranche2.RecurrentSupport.exists_measurable_positive_recurrent_support",
+      "module": "RecurrentSupport"
+    },
+    {
+      "name": "Orthemology.Tranche2.RecurrentSupport.support_subset_of_positive_exact_event",
+      "module": "RecurrentSupport"
+    },
+    {
+      "name": "Orthemology.Tranche2.RecurrentSupport.abstract_self_verifying_support",
+      "module": "RecurrentSupport"
+    }
+  ],
+  "pins": {
+    "lean_version": "4.19.0",
+    "lean_binary_sha256": "92c3d35b5bfaa5e0fea413a775d504cf46cd95e1345df61c2274f76779e7e023",
+    "packages": [
+      {
+        "name": "mathlib",
+        "revision": "c44e0c8ee63ca166450922a373c7409c5d26b00b"
+      },
+      {
+        "name": "plausible",
+        "revision": "77e08eddc486491d7b9e470926b3dbe50319451a"
+      },
+      {
+        "name": "LeanSearchClient",
+        "revision": "25078369972d295301f5a1e53c3e5850cf6d9d4c"
+      },
+      {
+        "name": "importGraph",
+        "revision": "e6a9f0f5ee3ccf7443a0070f92b62f8db12ae82b"
+      },
+      {
+        "name": "proofwidgets",
+        "revision": "c4919189477c3221e6a204008998b0d724f49904"
+      },
+      {
+        "name": "aesop",
+        "revision": "5d50b08dedd7d69b3d9b3176e0d58a23af228884"
+      },
+      {
+        "name": "Qq",
+        "revision": "fa4f7f15d97591a9cf3aa7724ba371c7fc6dda02"
+      },
+      {
+        "name": "batteries",
+        "revision": "f5d04a9c4973d401c8c92500711518f7c656f034"
+      },
+      {
+        "name": "Cli",
+        "revision": "02dbd02bc00ec4916e99b04b2245b30200e200d0"
+      }
+    ]
+  },
+  "official_imports": [
+    {
+      "module": "Mathlib",
+      "repository": "mathlib",
+      "source": "Mathlib.lean",
+      "sha256": "b0518254279fabf0c6a920804e684536b0f5e2bd1cb6318d0609eb563413f20a"
+    }
+  ],
+  "driver": {
+    "source_id": "src-d6f6fa5be51464c0-119c0f60ed32aec4",
+    "lean_argument": "BIN_DIRECTORY"
+  },
+  "controls": "ORIGINAL_DRIVER_REQUIRED",
+  "classification": "CURRENT_EVIDENCE"
+}

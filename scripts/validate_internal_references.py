@@ -141,6 +141,15 @@ def _citation_occurrences(src, text):
     # source_path in this typed map is an origin selector, not a checkout path.
     # Destination paths and every other field remain ordinary references.
     selectors = set()
+    continuation_members = set()
+    if src == "/".join(("docs", "provenance", "v5-research-continuations", "SOURCE_MAP.json")):
+        for row in json.loads(text).get("sources", []):
+            if (re.fullmatch(r"[0-9a-f]{64}", row.get("origin") or "")
+                    and re.fullmatch(r"[0-9a-f]{64}", row.get("original_sha256") or "")
+                    and type(row.get("original_bytes")) is int
+                    and row["original_bytes"] >= 0
+                    and row.get("projection") in ("EXACT", "DERIVED", "CUSTODY_ONLY")):
+                continuation_members.add(row.get("member"))
     if src == "docs/provenance/v5-consolidation/SOURCE_MAP.json":
         for row in json.loads(text).get("sources", []):
             if (row.get("source_artifact") and row.get("operation") in
@@ -148,6 +157,9 @@ def _citation_occurrences(src, text):
                     and re.fullmatch(r"[0-9a-f]{64}", row.get("source_sha256") or "")):
                 selectors.add(row.get("source_path"))
     for line in text.splitlines():
+        member = re.fullmatch(r'\s*"member":\s*("(?:[^"\\]|\\.)*")\s*,?\s*', line)
+        if member and json.loads(member.group(1)) in continuation_members:
+            continue
         field = re.fullmatch(r'\s*"source_path":\s*("(?:[^"\\]|\\.)*")\s*,?\s*', line)
         if field and json.loads(field.group(1)) in selectors:
             continue

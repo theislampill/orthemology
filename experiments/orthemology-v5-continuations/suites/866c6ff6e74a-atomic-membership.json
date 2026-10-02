@@ -1,0 +1,799 @@
+{
+  "id": "866c6ff6e74a-atomic-membership",
+  "origin": "866c6ff6e74a67f2bc452b49a0ada05311c0c2601585ea166404719172bd8086",
+  "descriptor_source_id": "src-866c6ff6e74a67f2-47b7b457c989b63a",
+  "modules": [
+    {
+      "module": "P02A2.MeasureCore",
+      "source_id": "src-866c6ff6e74a67f2-8cc18d57242929a1",
+      "imports": [
+        "Mathlib.MeasureTheory.Measure.Typeclasses.SFinite",
+        "Mathlib.MeasureTheory.Measure.Typeclasses.Probability",
+        "Mathlib.MeasureTheory.Measure.Map",
+        "Mathlib.MeasureTheory.Measure.Restrict",
+        "Mathlib.Tactic"
+      ]
+    },
+    {
+      "module": "TotalVariation",
+      "source_id": "src-866c6ff6e74a67f2-ade7bcfb90224ed3",
+      "imports": [
+        "P02A2.MeasureCore",
+        "Mathlib.MeasureTheory.Measure.Typeclasses.NoAtoms"
+      ]
+    },
+    {
+      "module": "P02A2.Fibres",
+      "source_id": "src-866c6ff6e74a67f2-3975e32ffba0ca0f",
+      "imports": [
+        "P02A2.MeasureCore",
+        "Mathlib"
+      ]
+    },
+    {
+      "module": "P02A2.Refinement",
+      "source_id": "src-866c6ff6e74a67f2-3e1f45740b9802ce",
+      "imports": [
+        "P02A2.MeasureCore",
+        "Mathlib.MeasureTheory.Measure.MeasureSpace",
+        "Mathlib.Tactic"
+      ]
+    },
+    {
+      "module": "P02A2.Observation",
+      "source_id": "src-866c6ff6e74a67f2-73f768bb1c4f1988",
+      "imports": [
+        "P02A2.Fibres",
+        "P02A2.Refinement",
+        "Mathlib"
+      ]
+    },
+    {
+      "module": "ResidualStability",
+      "source_id": "src-866c6ff6e74a67f2-2abece6bdb891b7f",
+      "imports": [
+        "TotalVariation",
+        "P02A2.Observation"
+      ]
+    },
+    {
+      "module": "AtomicPattern",
+      "source_id": "src-866c6ff6e74a67f2-75c0c5451559ee7b",
+      "imports": [
+        "ResidualStability"
+      ]
+    },
+    {
+      "module": "ArbitraryPattern",
+      "source_id": "src-866c6ff6e74a67f2-c6f2825e2dc64523",
+      "imports": [
+        "AtomicPattern",
+        "Mathlib.MeasureTheory.Constructions.Projective"
+      ]
+    },
+    {
+      "module": "CodecVarint",
+      "source_id": "src-866c6ff6e74a67f2-46bd5f8653e28ee5",
+      "imports": [
+        "Mathlib.Data.Nat.Bitwise",
+        "Mathlib.Tactic"
+      ]
+    },
+    {
+      "module": "P02A2.ObserverCore",
+      "source_id": "src-866c6ff6e74a67f2-183847dbf08fa0af",
+      "imports": [
+        "Mathlib"
+      ]
+    },
+    {
+      "module": "CodecExpr",
+      "source_id": "src-866c6ff6e74a67f2-d4b4f17e32fc57be",
+      "imports": [
+        "CodecVarint",
+        "P02A2.ObserverCore"
+      ]
+    },
+    {
+      "module": "CodecStmt",
+      "source_id": "src-866c6ff6e74a67f2-c4b775b5ca66244e",
+      "imports": [
+        "CodecExpr"
+      ]
+    },
+    {
+      "module": "CodecNumeric",
+      "source_id": "src-866c6ff6e74a67f2-53139d63f53980ea",
+      "imports": [
+        "CodecVarint"
+      ]
+    },
+    {
+      "module": "LoopRenaming",
+      "source_id": "src-866c6ff6e74a67f2-c318bcb16786af1c",
+      "imports": [
+        "P02A2.ObserverCore"
+      ]
+    },
+    {
+      "module": "LoopPrimrec",
+      "source_id": "src-866c6ff6e74a67f2-1f38cd2b58bffe2b",
+      "imports": [
+        "LoopRenaming",
+        "Mathlib.Computability.Primrec"
+      ]
+    },
+    {
+      "module": "PRProgram",
+      "source_id": "src-866c6ff6e74a67f2-29b0b71bfb6a5137",
+      "imports": [
+        "LoopPrimrec"
+      ]
+    },
+    {
+      "module": "PRComposition",
+      "source_id": "src-866c6ff6e74a67f2-ddaebe70d9a3c18c",
+      "imports": [
+        "PRProgram"
+      ]
+    },
+    {
+      "module": "PRRecursion",
+      "source_id": "src-866c6ff6e74a67f2-2ae7c143ca1fd1ce",
+      "imports": [
+        "PRComposition"
+      ]
+    },
+    {
+      "module": "PRHeadRecursion",
+      "source_id": "src-866c6ff6e74a67f2-8eb181464cd8e4bc",
+      "imports": [
+        "PRRecursion"
+      ]
+    },
+    {
+      "module": "PRDerivation",
+      "source_id": "src-866c6ff6e74a67f2-7f7cbbea7d11b76a",
+      "imports": [
+        "PRHeadRecursion",
+        "Mathlib.Computability.Primrec"
+      ]
+    },
+    {
+      "module": "PRCoverage",
+      "source_id": "src-866c6ff6e74a67f2-d2def608ebee1084",
+      "imports": [
+        "PRDerivation"
+      ]
+    },
+    {
+      "module": "PRSpecialize",
+      "source_id": "src-866c6ff6e74a67f2-58b23491d7df0311",
+      "imports": [
+        "PRCoverage"
+      ]
+    },
+    {
+      "module": "CodecProgram",
+      "source_id": "src-866c6ff6e74a67f2-69e9498261af9f24",
+      "imports": [
+        "CodecStmt",
+        "CodecNumeric",
+        "PRSpecialize"
+      ]
+    },
+    {
+      "module": "CodecParameter",
+      "source_id": "src-866c6ff6e74a67f2-87c01de1dc65405a",
+      "imports": [
+        "CodecProgram"
+      ]
+    },
+    {
+      "module": "CodecPrimrec",
+      "source_id": "src-866c6ff6e74a67f2-809bdf115fbfbf6f",
+      "imports": [
+        "CodecNumeric",
+        "Mathlib.Computability.Primrec"
+      ]
+    },
+    {
+      "module": "CodecIndexPrimrec",
+      "source_id": "src-866c6ff6e74a67f2-88c6fe41014da9da",
+      "imports": [
+        "CodecParameter",
+        "CodecPrimrec"
+      ]
+    },
+    {
+      "module": "Q8Measure",
+      "source_id": "src-866c6ff6e74a67f2-0a54d36ceb6c6de7",
+      "imports": [
+        "P02A2.MeasureCore",
+        "Mathlib.Probability.ProductMeasure",
+        "Mathlib.Probability.ProbabilityMassFunction.Constructions",
+        "Mathlib.Analysis.SpecificLimits.Basic"
+      ]
+    },
+    {
+      "module": "HeavyCylinders",
+      "source_id": "src-866c6ff6e74a67f2-d3d02ba9567432d2",
+      "imports": [
+        "Q8Measure",
+        "Mathlib.Data.ENNReal.Inv"
+      ]
+    },
+    {
+      "module": "FiniteOutputTable",
+      "source_id": "src-866c6ff6e74a67f2-7460c3db1e82f886",
+      "imports": [
+        "HeavyCylinders",
+        "CodecProgram"
+      ]
+    },
+    {
+      "module": "PatternBoundary",
+      "source_id": "src-866c6ff6e74a67f2-9c78a8a81f596e1b",
+      "imports": [
+        "ArbitraryPattern",
+        "Q8Measure"
+      ]
+    },
+    {
+      "module": "FinitePrefixBoundary",
+      "source_id": "src-866c6ff6e74a67f2-072ae24bb14aff58",
+      "imports": [
+        "PatternBoundary"
+      ]
+    },
+    {
+      "module": "PrefixTail",
+      "source_id": "src-866c6ff6e74a67f2-52013315ce22b34d",
+      "imports": [
+        "FinitePrefixBoundary",
+        "Mathlib.MeasureTheory.Constructions.Projective"
+      ]
+    },
+    {
+      "module": "P02A2.Mixture",
+      "source_id": "src-866c6ff6e74a67f2-6eb33bc9a03e8ffd",
+      "imports": [
+        "P02A2.MeasureCore",
+        "Mathlib"
+      ]
+    },
+    {
+      "module": "TaggedRows",
+      "source_id": "src-866c6ff6e74a67f2-4bcbddfd97307b60",
+      "imports": [
+        "PrefixTail",
+        "P02A2.Mixture"
+      ]
+    },
+    {
+      "module": "TaggedMass",
+      "source_id": "src-866c6ff6e74a67f2-90c7d4ebb6add9ab",
+      "imports": [
+        "TaggedRows"
+      ]
+    },
+    {
+      "module": "InnovationMeasure",
+      "source_id": "src-866c6ff6e74a67f2-94b56e1372fcbe86",
+      "imports": [
+        "Q8Measure",
+        "Mathlib.Data.Set.Finite.Lattice",
+        "Mathlib"
+      ]
+    },
+    {
+      "module": "SurvivorCandidates",
+      "source_id": "src-866c6ff6e74a67f2-36f74dd224b40f2f",
+      "imports": [
+        "Mathlib"
+      ]
+    },
+    {
+      "module": "SurvivorPrimrec",
+      "source_id": "src-866c6ff6e74a67f2-90ffe8c43d1509f7",
+      "imports": [
+        "SurvivorCandidates",
+        "Mathlib.Computability.Primrec"
+      ]
+    },
+    {
+      "module": "Q8Machine",
+      "source_id": "src-866c6ff6e74a67f2-3b126ac3c8047c02",
+      "imports": [
+        "Q8Measure"
+      ]
+    },
+    {
+      "module": "Q8Compiler",
+      "source_id": "src-866c6ff6e74a67f2-3b9193021fd749c7",
+      "imports": [
+        "Q8Machine",
+        "P02A2.ObserverCore"
+      ]
+    },
+    {
+      "module": "Sigma2RowLaw",
+      "source_id": "src-866c6ff6e74a67f2-444ae3c2779ac0f8",
+      "imports": [
+        "InnovationMeasure",
+        "SurvivorPrimrec",
+        "Q8Compiler"
+      ]
+    },
+    {
+      "module": "Pi3Law",
+      "source_id": "src-866c6ff6e74a67f2-31cbd7b0139c7471",
+      "imports": [
+        "TaggedMass",
+        "Sigma2RowLaw"
+      ]
+    },
+    {
+      "module": "PrefixBits",
+      "source_id": "src-866c6ff6e74a67f2-51d684b28dc7acbc",
+      "imports": [
+        "Pi3Law"
+      ]
+    },
+    {
+      "module": "FiniteSelector",
+      "source_id": "src-866c6ff6e74a67f2-c712feb21140b980",
+      "imports": [
+        "PrefixBits"
+      ]
+    },
+    {
+      "module": "FixedIndexPrimrec",
+      "source_id": "src-866c6ff6e74a67f2-36a9b0c85f443fd8",
+      "imports": [
+        "FiniteOutputTable"
+      ]
+    },
+    {
+      "module": "FiniteTableWitnesses",
+      "source_id": "src-866c6ff6e74a67f2-a3a3039cbf510bd4",
+      "imports": [
+        "FixedIndexPrimrec"
+      ]
+    },
+    {
+      "module": "RationalNormalForm",
+      "source_id": "src-866c6ff6e74a67f2-22289144aa4795eb",
+      "imports": [
+        "HeavyCylinders"
+      ]
+    },
+    {
+      "module": "PrefixObserver",
+      "source_id": "src-866c6ff6e74a67f2-9d4b47264e6c5448",
+      "imports": [
+        "FiniteSelector"
+      ]
+    },
+    {
+      "module": "SelectorPrimrec",
+      "source_id": "src-866c6ff6e74a67f2-c896bc7d613472fc",
+      "imports": [
+        "FiniteSelector",
+        "Mathlib.Computability.Primrec"
+      ]
+    },
+    {
+      "module": "PrefixPrimrec",
+      "source_id": "src-866c6ff6e74a67f2-5ac62ce32392ca41",
+      "imports": [
+        "PrefixObserver",
+        "SelectorPrimrec"
+      ]
+    },
+    {
+      "module": "Pi3Program",
+      "source_id": "src-866c6ff6e74a67f2-b4de27857b43e5ff",
+      "imports": [
+        "PrefixPrimrec",
+        "CodecParameter"
+      ]
+    },
+    {
+      "module": "Pi3IndexReduction",
+      "source_id": "src-866c6ff6e74a67f2-5a73301c54c4e41d",
+      "imports": [
+        "Pi3Program",
+        "CodecIndexPrimrec"
+      ]
+    },
+    {
+      "module": "NumericMembership",
+      "source_id": "src-866c6ff6e74a67f2-fb0eda487ca74475",
+      "imports": [
+        "RationalNormalForm",
+        "FiniteOutputTable",
+        "Pi3IndexReduction"
+      ]
+    }
+  ],
+  "module_order": [
+    "P02A2.MeasureCore",
+    "TotalVariation",
+    "P02A2.Fibres",
+    "P02A2.Refinement",
+    "P02A2.Observation",
+    "ResidualStability",
+    "AtomicPattern",
+    "ArbitraryPattern",
+    "CodecVarint",
+    "P02A2.ObserverCore",
+    "CodecExpr",
+    "CodecStmt",
+    "CodecNumeric",
+    "LoopRenaming",
+    "LoopPrimrec",
+    "PRProgram",
+    "PRComposition",
+    "PRRecursion",
+    "PRHeadRecursion",
+    "PRDerivation",
+    "PRCoverage",
+    "PRSpecialize",
+    "CodecProgram",
+    "CodecParameter",
+    "CodecPrimrec",
+    "CodecIndexPrimrec",
+    "Q8Measure",
+    "HeavyCylinders",
+    "FiniteOutputTable",
+    "PatternBoundary",
+    "FinitePrefixBoundary",
+    "PrefixTail",
+    "P02A2.Mixture",
+    "TaggedRows",
+    "TaggedMass",
+    "InnovationMeasure",
+    "SurvivorCandidates",
+    "SurvivorPrimrec",
+    "Q8Machine",
+    "Q8Compiler",
+    "Sigma2RowLaw",
+    "Pi3Law",
+    "PrefixBits",
+    "FiniteSelector",
+    "FixedIndexPrimrec",
+    "FiniteTableWitnesses",
+    "RationalNormalForm",
+    "PrefixObserver",
+    "SelectorPrimrec",
+    "PrefixPrimrec",
+    "Pi3Program",
+    "Pi3IndexReduction",
+    "NumericMembership"
+  ],
+  "targets": [
+    {
+      "name": "P02A2.FiniteOutputTable.finiteOutput_actual",
+      "module": "FiniteOutputTable"
+    },
+    {
+      "name": "P02A2.FiniteOutputTable.output_measurable",
+      "module": "FiniteOutputTable"
+    },
+    {
+      "name": "P02A2.FiniteOutputTable.fair_cylinder",
+      "module": "FiniteOutputTable"
+    },
+    {
+      "name": "P02A2.FiniteOutputTable.output_cylinder_preimage",
+      "module": "FiniteOutputTable"
+    },
+    {
+      "name": "P02A2.FiniteOutputTable.cylinder_probability_count",
+      "module": "FiniteOutputTable"
+    },
+    {
+      "name": "P02A2.FiniteOutputTable.tableProbability_exact",
+      "module": "FiniteOutputTable"
+    },
+    {
+      "name": "P02A2.FiniteOutputTable.indexTable_exact",
+      "module": "FiniteOutputTable"
+    },
+    {
+      "name": "P02.Codec.evaluateIndex_fixed_primrec",
+      "module": "FixedIndexPrimrec"
+    },
+    {
+      "name": "P02A2.FiniteOutputTable.echo_two_bit_probability",
+      "module": "FiniteTableWitnesses"
+    },
+    {
+      "name": "P02A2.FiniteOutputTable.zero_two_bit_probability",
+      "module": "FiniteTableWitnesses"
+    },
+    {
+      "name": "P02A2.FiniteOutputTable.zero_cannot_emit_true",
+      "module": "FiniteTableWitnesses"
+    },
+    {
+      "name": "P02A2.FiniteOutputTable.first_input_then_zero",
+      "module": "FiniteTableWitnesses"
+    },
+    {
+      "name": "AtomicMembership.prefix_measurable",
+      "module": "HeavyCylinders"
+    },
+    {
+      "name": "AtomicMembership.cylinder_measurable",
+      "module": "HeavyCylinders"
+    },
+    {
+      "name": "AtomicMembership.cell_antitone",
+      "module": "HeavyCylinders"
+    },
+    {
+      "name": "AtomicMembership.cell_inter",
+      "module": "HeavyCylinders"
+    },
+    {
+      "name": "AtomicMembership.singleton_mass",
+      "module": "HeavyCylinders"
+    },
+    {
+      "name": "AtomicMembership.heavy_measurable",
+      "module": "HeavyCylinders"
+    },
+    {
+      "name": "AtomicMembership.heavy_antitone",
+      "module": "HeavyCylinders"
+    },
+    {
+      "name": "AtomicMembership.level_inter",
+      "module": "HeavyCylinders"
+    },
+    {
+      "name": "AtomicMembership.level_measurable",
+      "module": "HeavyCylinders"
+    },
+    {
+      "name": "AtomicMembership.level_mass",
+      "module": "HeavyCylinders"
+    },
+    {
+      "name": "AtomicMembership.threshold_pos",
+      "module": "HeavyCylinders"
+    },
+    {
+      "name": "AtomicMembership.level_monotone",
+      "module": "HeavyCylinders"
+    },
+    {
+      "name": "AtomicMembership.positive_union",
+      "module": "HeavyCylinders"
+    },
+    {
+      "name": "AtomicMembership.atomic_mass_formula",
+      "module": "HeavyCylinders"
+    },
+    {
+      "name": "AtomicMembership.heavy_union",
+      "module": "HeavyCylinders"
+    },
+    {
+      "name": "AtomicMembership.cylinders_disjoint",
+      "module": "HeavyCylinders"
+    },
+    {
+      "name": "AtomicMembership.heavy_finite_sum",
+      "module": "HeavyCylinders"
+    },
+    {
+      "name": "AtomicMembership.mass_one_normal_form",
+      "module": "HeavyCylinders"
+    },
+    {
+      "name": "AtomicMembership.nnrat_le_cast",
+      "module": "RationalNormalForm"
+    },
+    {
+      "name": "AtomicMembership.nnrat_lt_cast",
+      "module": "RationalNormalForm"
+    },
+    {
+      "name": "AtomicMembership.nnrat_cast_sum",
+      "module": "RationalNormalForm"
+    },
+    {
+      "name": "AtomicMembership.nnrat_threshold_cast",
+      "module": "RationalNormalForm"
+    },
+    {
+      "name": "AtomicMembership.rational_heavy_words",
+      "module": "RationalNormalForm"
+    },
+    {
+      "name": "AtomicMembership.rational_heavy_mass",
+      "module": "RationalNormalForm"
+    },
+    {
+      "name": "AtomicMembership.nnrat_cast_real",
+      "module": "RationalNormalForm"
+    },
+    {
+      "name": "AtomicMembership.mass_one_nnrat_normal",
+      "module": "RationalNormalForm"
+    },
+    {
+      "name": "AtomicMembership.defect_zero_rational_normal",
+      "module": "RationalNormalForm"
+    },
+    {
+      "name": "AtomicMembership.numeric_zero_defect_normal",
+      "module": "NumericMembership"
+    },
+    {
+      "name": "AtomicMembership.numeric_not_zero_defect_normal",
+      "module": "NumericMembership"
+    },
+    {
+      "name": "AtomicMembership.rationalOfCode_surjective",
+      "module": "NumericMembership"
+    },
+    {
+      "name": "AtomicMembership.numeric_zero_defect_nat_normal",
+      "module": "NumericMembership"
+    },
+    {
+      "name": "AtomicMembership.numeric_not_zero_defect_nat_normal",
+      "module": "NumericMembership"
+    }
+  ],
+  "pins": {
+    "lean_version": "4.19.0",
+    "lean_binary_sha256": "92c3d35b5bfaa5e0fea413a775d504cf46cd95e1345df61c2274f76779e7e023",
+    "packages": [
+      {
+        "name": "mathlib",
+        "revision": "c44e0c8ee63ca166450922a373c7409c5d26b00b"
+      },
+      {
+        "name": "plausible",
+        "revision": "77e08eddc486491d7b9e470926b3dbe50319451a"
+      },
+      {
+        "name": "LeanSearchClient",
+        "revision": "25078369972d295301f5a1e53c3e5850cf6d9d4c"
+      },
+      {
+        "name": "importGraph",
+        "revision": "e6a9f0f5ee3ccf7443a0070f92b62f8db12ae82b"
+      },
+      {
+        "name": "proofwidgets",
+        "revision": "c4919189477c3221e6a204008998b0d724f49904"
+      },
+      {
+        "name": "aesop",
+        "revision": "5d50b08dedd7d69b3d9b3176e0d58a23af228884"
+      },
+      {
+        "name": "Qq",
+        "revision": "fa4f7f15d97591a9cf3aa7724ba371c7fc6dda02"
+      },
+      {
+        "name": "batteries",
+        "revision": "f5d04a9c4973d401c8c92500711518f7c656f034"
+      },
+      {
+        "name": "Cli",
+        "revision": "02dbd02bc00ec4916e99b04b2245b30200e200d0"
+      }
+    ]
+  },
+  "official_imports": [
+    {
+      "module": "Mathlib",
+      "repository": "mathlib",
+      "source": "Mathlib.lean",
+      "sha256": "b0518254279fabf0c6a920804e684536b0f5e2bd1cb6318d0609eb563413f20a"
+    },
+    {
+      "module": "Mathlib.Analysis.SpecificLimits.Basic",
+      "repository": "mathlib",
+      "source": "Mathlib/Analysis/SpecificLimits/Basic.lean",
+      "sha256": "cbf9b6b47e6ee6b2962fb2f16ba49b7e005e9a93c0adc1244cc770c34f527315"
+    },
+    {
+      "module": "Mathlib.Computability.Primrec",
+      "repository": "mathlib",
+      "source": "Mathlib/Computability/Primrec.lean",
+      "sha256": "b279a3218434a6f930970b9f43669567e99adc548c31796590f42bdc205dcc22"
+    },
+    {
+      "module": "Mathlib.Data.ENNReal.Inv",
+      "repository": "mathlib",
+      "source": "Mathlib/Data/ENNReal/Inv.lean",
+      "sha256": "55641a8caba4834b9b4307e7c5dcb2cf98baa750ead05b50ef26e90542505b11"
+    },
+    {
+      "module": "Mathlib.Data.Nat.Bitwise",
+      "repository": "mathlib",
+      "source": "Mathlib/Data/Nat/Bitwise.lean",
+      "sha256": "e987a9f57489a80d8e2de33b7ad8662516b85fe745d611c0fe9e6c965fb6f5b7"
+    },
+    {
+      "module": "Mathlib.Data.Set.Finite.Lattice",
+      "repository": "mathlib",
+      "source": "Mathlib/Data/Set/Finite/Lattice.lean",
+      "sha256": "e09c1e49262e285fa21e3992434730d48a792abc4d31d4e0e448ff526e931144"
+    },
+    {
+      "module": "Mathlib.MeasureTheory.Constructions.Projective",
+      "repository": "mathlib",
+      "source": "Mathlib/MeasureTheory/Constructions/Projective.lean",
+      "sha256": "3fc8a814734c382ebda3bfb68dbba775c461f411380fac854ec7121ae7712fcf"
+    },
+    {
+      "module": "Mathlib.MeasureTheory.Measure.Map",
+      "repository": "mathlib",
+      "source": "Mathlib/MeasureTheory/Measure/Map.lean",
+      "sha256": "3c7fb458eece85551c9b7bd28955a517e14f4bee77934b8b001440a57b6f7f71"
+    },
+    {
+      "module": "Mathlib.MeasureTheory.Measure.MeasureSpace",
+      "repository": "mathlib",
+      "source": "Mathlib/MeasureTheory/Measure/MeasureSpace.lean",
+      "sha256": "c955504c3afe89c1c0524f939b5ebec195726997d4cf4fa9975be3352146f51f"
+    },
+    {
+      "module": "Mathlib.MeasureTheory.Measure.Restrict",
+      "repository": "mathlib",
+      "source": "Mathlib/MeasureTheory/Measure/Restrict.lean",
+      "sha256": "0c0c2108a28516ae3a85dfbfc2e5d7a3afd26dcc113aa8b19c2a79adfe12e56e"
+    },
+    {
+      "module": "Mathlib.MeasureTheory.Measure.Typeclasses.NoAtoms",
+      "repository": "mathlib",
+      "source": "Mathlib/MeasureTheory/Measure/Typeclasses/NoAtoms.lean",
+      "sha256": "f840a5341797290644d0bae0b916c866e7f98a6d25b3894de87341ff4c1cfdb7"
+    },
+    {
+      "module": "Mathlib.MeasureTheory.Measure.Typeclasses.Probability",
+      "repository": "mathlib",
+      "source": "Mathlib/MeasureTheory/Measure/Typeclasses/Probability.lean",
+      "sha256": "419ec9a5612f378b8603f4adb8a0941485481c1d754e95afb8d0a4ddd35f8883"
+    },
+    {
+      "module": "Mathlib.MeasureTheory.Measure.Typeclasses.SFinite",
+      "repository": "mathlib",
+      "source": "Mathlib/MeasureTheory/Measure/Typeclasses/SFinite.lean",
+      "sha256": "b9fb829526454d1f9526ed9bb21de6d661fdb4a01a9847eb6669bedf68f1f784"
+    },
+    {
+      "module": "Mathlib.Probability.ProbabilityMassFunction.Constructions",
+      "repository": "mathlib",
+      "source": "Mathlib/Probability/ProbabilityMassFunction/Constructions.lean",
+      "sha256": "8e50bff3cd3b46107d612eed21e1648752a86f9c373d4b6b0fe10e0e22a43973"
+    },
+    {
+      "module": "Mathlib.Probability.ProductMeasure",
+      "repository": "mathlib",
+      "source": "Mathlib/Probability/ProductMeasure.lean",
+      "sha256": "f8af06e87e2e28916f0fa8a455f792ded4b85a22e1dea5e1c6f9cac1d31b9830"
+    },
+    {
+      "module": "Mathlib.Tactic",
+      "repository": "mathlib",
+      "source": "Mathlib/Tactic.lean",
+      "sha256": "f20038eba7bba63f07a2f854496101226df407e20414e6b8ebf94b14f95e831b"
+    }
+  ],
+  "driver": {
+    "source_id": "src-866c6ff6e74a67f2-279d28ea9829b80d",
+    "lean_argument": "EXECUTABLE"
+  },
+  "controls": "ORIGINAL_DRIVER_REQUIRED",
+  "classification": "CURRENT_EVIDENCE"
+}

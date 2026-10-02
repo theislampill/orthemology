@@ -1,0 +1,1083 @@
+{
+  "id": "866c6ff6e74a-p01-successor",
+  "origin": "866c6ff6e74a67f2bc452b49a0ada05311c0c2601585ea166404719172bd8086",
+  "descriptor_source_id": "src-866c6ff6e74a67f2-47b7b457c989b63a",
+  "modules": [
+    {
+      "module": "AlmostSureBoundary",
+      "source_id": "src-866c6ff6e74a67f2-8093c78798d6cca2",
+      "imports": [
+        "Init"
+      ]
+    },
+    {
+      "module": "AuditSupport",
+      "source_id": "src-866c6ff6e74a67f2-14cc00986087c126",
+      "imports": [
+        "Lean"
+      ]
+    },
+    {
+      "module": "InternalPolymorphism",
+      "source_id": "src-866c6ff6e74a67f2-4891b4aafe26ea93",
+      "imports": [
+        "Init"
+      ]
+    },
+    {
+      "module": "FiniteBridge",
+      "source_id": "src-866c6ff6e74a67f2-497940eedbc2e84d",
+      "imports": [
+        "InternalPolymorphism"
+      ]
+    },
+    {
+      "module": "BoundaryResults",
+      "source_id": "src-866c6ff6e74a67f2-d71d8723c2243086",
+      "imports": [
+        "FiniteBridge"
+      ]
+    },
+    {
+      "module": "EffectsAndDependence",
+      "source_id": "src-866c6ff6e74a67f2-aa4d55edc338ac7e",
+      "imports": [
+        "BoundaryResults"
+      ]
+    },
+    {
+      "module": "GeneratedExamples",
+      "source_id": "src-866c6ff6e74a67f2-35cd3b8045bab054",
+      "imports": [
+        "FiniteBridge"
+      ]
+    },
+    {
+      "module": "HurkensBoundary",
+      "source_id": "src-866c6ff6e74a67f2-def38b90ccbec6a6",
+      "imports": [
+        "Init"
+      ]
+    },
+    {
+      "module": "NormalisationAndNumerals",
+      "source_id": "src-866c6ff6e74a67f2-4fa2693771e9b5cd",
+      "imports": [
+        "EffectsAndDependence"
+      ]
+    },
+    {
+      "module": "OperationalKernel",
+      "source_id": "src-866c6ff6e74a67f2-745256f635eb1b4a",
+      "imports": [
+        "FiniteBridge"
+      ]
+    },
+    {
+      "module": "OperationalBoundary",
+      "source_id": "src-866c6ff6e74a67f2-65795fa696b7195b",
+      "imports": [
+        "OperationalKernel",
+        "HurkensBoundary"
+      ]
+    },
+    {
+      "module": "P01TypeAlgebra",
+      "source_id": "src-866c6ff6e74a67f2-7d0a9b9237e1426a",
+      "imports": [
+        "Mathlib.Data.Bool.Basic",
+        "FiniteBridge"
+      ]
+    },
+    {
+      "module": "P01SNReflection",
+      "source_id": "src-866c6ff6e74a67f2-87ecc572ef231665",
+      "imports": [
+        "Init"
+      ]
+    },
+    {
+      "module": "P01Candidates",
+      "source_id": "src-866c6ff6e74a67f2-9ff0808b11628c62",
+      "imports": [
+        "P01TypeAlgebra",
+        "P01SNReflection",
+        "BoundaryResults"
+      ]
+    },
+    {
+      "module": "P01Confluence",
+      "source_id": "src-866c6ff6e74a67f2-d720406b57a5c061",
+      "imports": [
+        "P01Candidates"
+      ]
+    },
+    {
+      "module": "P01Omega",
+      "source_id": "src-866c6ff6e74a67f2-15aa1a1f8e346854",
+      "imports": [
+        "P01Confluence",
+        "NormalisationAndNumerals"
+      ]
+    },
+    {
+      "module": "P01Polynomials",
+      "source_id": "src-866c6ff6e74a67f2-5c21fdf62c60e2be",
+      "imports": [
+        "P01Omega"
+      ]
+    },
+    {
+      "module": "P01PER",
+      "source_id": "src-866c6ff6e74a67f2-90beff7ce3f07365",
+      "imports": [
+        "P01Polynomials"
+      ]
+    },
+    {
+      "module": "P01DependentCore",
+      "source_id": "src-866c6ff6e74a67f2-18b49f7bfd5cda14",
+      "imports": [
+        "P01PER"
+      ]
+    },
+    {
+      "module": "P01ContextualJ",
+      "source_id": "src-866c6ff6e74a67f2-2e00c251767f6e53",
+      "imports": [
+        "P01DependentCore"
+      ]
+    },
+    {
+      "module": "P01Certificates",
+      "source_id": "src-866c6ff6e74a67f2-b30b1b132fc7125f",
+      "imports": [
+        "P01ContextualJ"
+      ]
+    },
+    {
+      "module": "P01Examples",
+      "source_id": "src-866c6ff6e74a67f2-f2db6a17e1949412",
+      "imports": [
+        "P01Certificates"
+      ]
+    },
+    {
+      "module": "P01GeneratedExports",
+      "source_id": "src-866c6ff6e74a67f2-e7ab19102581495c",
+      "imports": [
+        "P01Certificates"
+      ]
+    },
+    {
+      "module": "P01LambdaSyntax",
+      "source_id": "src-866c6ff6e74a67f2-a2607c88f5248da4",
+      "imports": [
+        "P01TypeAlgebra",
+        "P01SNReflection"
+      ]
+    },
+    {
+      "module": "P01SystemF",
+      "source_id": "src-866c6ff6e74a67f2-80aa41c4c403d0dc",
+      "imports": [
+        "P01LambdaSyntax"
+      ]
+    },
+    {
+      "module": "P01Translation",
+      "source_id": "src-866c6ff6e74a67f2-dc8a7bead824b96d",
+      "imports": [
+        "P01SystemF",
+        "BoundaryResults"
+      ]
+    },
+    {
+      "module": "P01ReflectionCountermodel",
+      "source_id": "src-866c6ff6e74a67f2-a47643830a1bcf04",
+      "imports": [
+        "P01Omega",
+        "P01Translation"
+      ]
+    },
+    {
+      "module": "P01UniverseBoundary",
+      "source_id": "src-866c6ff6e74a67f2-314c4b741d4132c7",
+      "imports": [
+        "P01Examples",
+        "HurkensBoundary"
+      ]
+    },
+    {
+      "module": "P01TypeAssertions",
+      "source_id": "src-866c6ff6e74a67f2-5f8aa29e21e51851",
+      "imports": [
+        "P01GeneratedExports",
+        "P01ReflectionCountermodel",
+        "P01UniverseBoundary"
+      ]
+    },
+    {
+      "module": "P01Audit",
+      "source_id": "src-866c6ff6e74a67f2-731f020924eeee58",
+      "imports": [
+        "AuditSupport",
+        "P01Candidates",
+        "P01Certificates",
+        "P01Confluence",
+        "P01ContextualJ",
+        "P01DependentCore",
+        "P01Examples",
+        "P01GeneratedExports",
+        "P01LambdaSyntax",
+        "P01Omega",
+        "P01PER",
+        "P01Polynomials",
+        "P01ReflectionCountermodel",
+        "P01SNReflection",
+        "P01SystemF",
+        "P01Translation",
+        "P01TypeAlgebra",
+        "P01TypeAssertions",
+        "P01UniverseBoundary"
+      ]
+    },
+    {
+      "module": "P01RecursiveModel",
+      "source_id": "src-866c6ff6e74a67f2-5650ad654eb87f21",
+      "imports": [
+        "P01Examples"
+      ]
+    },
+    {
+      "module": "P01CurryParametricity",
+      "source_id": "src-866c6ff6e74a67f2-3cbd4ef3be30888d",
+      "imports": [
+        "P01RecursiveModel",
+        "P01SystemF"
+      ]
+    },
+    {
+      "module": "P01EffectSeeds",
+      "source_id": "src-866c6ff6e74a67f2-92a80d64e179ffe1",
+      "imports": [
+        "P01CurryParametricity",
+        "Mathlib.Data.Fintype.Prod"
+      ]
+    },
+    {
+      "module": "P01FiniteCoupling",
+      "source_id": "src-866c6ff6e74a67f2-e08c08a5280613bf",
+      "imports": [
+        "P01EffectSeeds",
+        "Mathlib.Algebra.Order.Field.Rat",
+        "Mathlib.Algebra.BigOperators.Field",
+        "Mathlib.Algebra.Order.BigOperators.Group.Finset",
+        "Mathlib.Data.Fintype.BigOperators"
+      ]
+    },
+    {
+      "module": "P01EffectMass",
+      "source_id": "src-866c6ff6e74a67f2-9071af6b59033a79",
+      "imports": [
+        "P01FiniteCoupling",
+        "Mathlib.Tactic.Ring"
+      ]
+    },
+    {
+      "module": "P01ModelWitnesses",
+      "source_id": "src-866c6ff6e74a67f2-e8aff71d23b625d5",
+      "imports": [
+        "P01CurryParametricity",
+        "P01Translation"
+      ]
+    },
+    {
+      "module": "P01CouplingWitness",
+      "source_id": "src-866c6ff6e74a67f2-ba9da114fbfaa842",
+      "imports": [
+        "P01EffectMass",
+        "P01ModelWitnesses",
+        "Mathlib.Tactic.NormNum",
+        "Mathlib.Algebra.BigOperators.Fin"
+      ]
+    },
+    {
+      "module": "P01RecursiveAssertions",
+      "source_id": "src-866c6ff6e74a67f2-23457e2532f3e1a3",
+      "imports": [
+        "P01RecursiveModel"
+      ]
+    },
+    {
+      "module": "RelationalFragment",
+      "source_id": "src-866c6ff6e74a67f2-cff78a4285d78182",
+      "imports": [
+        "FiniteBridge"
+      ]
+    }
+  ],
+  "module_order": [
+    "AlmostSureBoundary",
+    "AuditSupport",
+    "InternalPolymorphism",
+    "FiniteBridge",
+    "BoundaryResults",
+    "EffectsAndDependence",
+    "GeneratedExamples",
+    "HurkensBoundary",
+    "NormalisationAndNumerals",
+    "OperationalKernel",
+    "OperationalBoundary",
+    "P01TypeAlgebra",
+    "P01SNReflection",
+    "P01Candidates",
+    "P01Confluence",
+    "P01Omega",
+    "P01Polynomials",
+    "P01PER",
+    "P01DependentCore",
+    "P01ContextualJ",
+    "P01Certificates",
+    "P01Examples",
+    "P01GeneratedExports",
+    "P01LambdaSyntax",
+    "P01SystemF",
+    "P01Translation",
+    "P01ReflectionCountermodel",
+    "P01UniverseBoundary",
+    "P01TypeAssertions",
+    "P01Audit",
+    "P01RecursiveModel",
+    "P01CurryParametricity",
+    "P01EffectSeeds",
+    "P01FiniteCoupling",
+    "P01EffectMass",
+    "P01ModelWitnesses",
+    "P01CouplingWitness",
+    "P01RecursiveAssertions",
+    "RelationalFragment"
+  ],
+  "targets": [
+    {
+      "name": "P01R.OEnv",
+      "module": "P01RecursiveModel"
+    },
+    {
+      "name": "P01R.REnv",
+      "module": "P01RecursiveModel"
+    },
+    {
+      "name": "P01R.renv_ext",
+      "module": "P01RecursiveModel"
+    },
+    {
+      "name": "P01R.diagEnv",
+      "module": "P01RecursiveModel"
+    },
+    {
+      "name": "P01R.REnv.at",
+      "module": "P01RecursiveModel"
+    },
+    {
+      "name": "P01R.extendEnv",
+      "module": "P01RecursiveModel"
+    },
+    {
+      "name": "P01R.extend_diag",
+      "module": "P01RecursiveModel"
+    },
+    {
+      "name": "P01R.link_ext",
+      "module": "P01RecursiveModel"
+    },
+    {
+      "name": "P01R.Model",
+      "module": "P01RecursiveModel"
+    },
+    {
+      "name": "P01R.Model.asLink",
+      "module": "P01RecursiveModel"
+    },
+    {
+      "name": "P01R.Model.asLink_diag",
+      "module": "P01RecursiveModel"
+    },
+    {
+      "name": "P01R.model_ext",
+      "module": "P01RecursiveModel"
+    },
+    {
+      "name": "P01R.varModel",
+      "module": "P01RecursiveModel"
+    },
+    {
+      "name": "P01R.bottomModel",
+      "module": "P01RecursiveModel"
+    },
+    {
+      "name": "P01R.arrowModel",
+      "module": "P01RecursiveModel"
+    },
+    {
+      "name": "P01R.bodyFamily",
+      "module": "P01RecursiveModel"
+    },
+    {
+      "name": "P01R.allModel",
+      "module": "P01RecursiveModel"
+    },
+    {
+      "name": "P01R.interpret",
+      "module": "P01RecursiveModel"
+    },
+    {
+      "name": "P01R.recursive_identity_extension",
+      "module": "P01RecursiveModel"
+    },
+    {
+      "name": "P01R.recursive_endpoint_restriction",
+      "module": "P01RecursiveModel"
+    },
+    {
+      "name": "P01R.recursive_respectfulness",
+      "module": "P01RecursiveModel"
+    },
+    {
+      "name": "P01R.recursive_raw_compatibility",
+      "module": "P01RecursiveModel"
+    },
+    {
+      "name": "P01R.renEnv",
+      "module": "P01RecursiveModel"
+    },
+    {
+      "name": "P01R.REnv.rename",
+      "module": "P01RecursiveModel"
+    },
+    {
+      "name": "P01R.Model.rename",
+      "module": "P01RecursiveModel"
+    },
+    {
+      "name": "P01R.renEnv_cons",
+      "module": "P01RecursiveModel"
+    },
+    {
+      "name": "P01R.rename_extend",
+      "module": "P01RecursiveModel"
+    },
+    {
+      "name": "P01R.rename_diag",
+      "module": "P01RecursiveModel"
+    },
+    {
+      "name": "P01R.rename_all",
+      "module": "P01RecursiveModel"
+    },
+    {
+      "name": "P01R.interpret_rename",
+      "module": "P01RecursiveModel"
+    },
+    {
+      "name": "P01R.subEnv",
+      "module": "P01RecursiveModel"
+    },
+    {
+      "name": "P01R.REnv.substitute",
+      "module": "P01RecursiveModel"
+    },
+    {
+      "name": "P01R.substitute_diag",
+      "module": "P01RecursiveModel"
+    },
+    {
+      "name": "P01R.Model.substitute",
+      "module": "P01RecursiveModel"
+    },
+    {
+      "name": "P01R.liftModels",
+      "module": "P01RecursiveModel"
+    },
+    {
+      "name": "P01R.subEnv_cons",
+      "module": "P01RecursiveModel"
+    },
+    {
+      "name": "P01R.rename_succ_extend",
+      "module": "P01RecursiveModel"
+    },
+    {
+      "name": "P01R.substitute_extend",
+      "module": "P01RecursiveModel"
+    },
+    {
+      "name": "P01R.substitute_all",
+      "module": "P01RecursiveModel"
+    },
+    {
+      "name": "P01R.interpret_lift",
+      "module": "P01RecursiveModel"
+    },
+    {
+      "name": "P01R.interpret_substitute",
+      "module": "P01RecursiveModel"
+    },
+    {
+      "name": "P01R.interpret_single",
+      "module": "P01RecursiveModel"
+    },
+    {
+      "name": "P01R.single_obj_environment",
+      "module": "P01RecursiveModel"
+    },
+    {
+      "name": "P01R.single_rel_environment",
+      "module": "P01RecursiveModel"
+    },
+    {
+      "name": "P01R.instantiate_obj",
+      "module": "P01RecursiveModel"
+    },
+    {
+      "name": "P01R.instantiate_rel",
+      "module": "P01RecursiveModel"
+    },
+    {
+      "name": "P01R.k_per",
+      "module": "P01RecursiveModel"
+    },
+    {
+      "name": "P01R.k_link",
+      "module": "P01RecursiveModel"
+    },
+    {
+      "name": "P01R.s_per",
+      "module": "P01RecursiveModel"
+    },
+    {
+      "name": "P01R.s_link",
+      "module": "P01RecursiveModel"
+    },
+    {
+      "name": "P01R.finite_fundamental",
+      "module": "P01RecursiveModel"
+    },
+    {
+      "name": "P01R.finite_new_model_member",
+      "module": "P01RecursiveModel"
+    },
+    {
+      "name": "P01R.recursive_all_self_instance",
+      "module": "P01RecursiveModel"
+    },
+    {
+      "name": "P01RAssertions.unconditional_recursive_IE",
+      "module": "P01RecursiveAssertions"
+    },
+    {
+      "name": "P01RAssertions.original_capture_avoiding_substitution",
+      "module": "P01RecursiveAssertions"
+    },
+    {
+      "name": "P01RAssertions.all_seven_original_finite_rules",
+      "module": "P01RecursiveAssertions"
+    },
+    {
+      "name": "P01RAssertions.no_external_uniformity_premise",
+      "module": "P01RecursiveAssertions"
+    },
+    {
+      "name": "P01RAssertions.both_endpoint_memberships",
+      "module": "P01RecursiveAssertions"
+    },
+    {
+      "name": "P01R.compile",
+      "module": "P01CurryParametricity"
+    },
+    {
+      "name": "P01R.ValRelated",
+      "module": "P01CurryParametricity"
+    },
+    {
+      "name": "P01R.valuations_left",
+      "module": "P01CurryParametricity"
+    },
+    {
+      "name": "P01R.valuations_right",
+      "module": "P01CurryParametricity"
+    },
+    {
+      "name": "P01R.valuations_cons",
+      "module": "P01CurryParametricity"
+    },
+    {
+      "name": "P01R.valuations_shift",
+      "module": "P01CurryParametricity"
+    },
+    {
+      "name": "P01R.abstraction_endpoint",
+      "module": "P01CurryParametricity"
+    },
+    {
+      "name": "P01R.curry_fundamental",
+      "module": "P01CurryParametricity"
+    },
+    {
+      "name": "P01R.emptyLink",
+      "module": "P01ModelWitnesses"
+    },
+    {
+      "name": "P01R.finite_polymorphic_I",
+      "module": "P01ModelWitnesses"
+    },
+    {
+      "name": "P01R.recursive_polymorphic_I_nonempty",
+      "module": "P01ModelWitnesses"
+    },
+    {
+      "name": "P01R.recursive_polymorphic_I_uniform",
+      "module": "P01ModelWitnesses"
+    },
+    {
+      "name": "P01R.recursive_polymorphic_I_self_instance",
+      "module": "P01ModelWitnesses"
+    },
+    {
+      "name": "P01R.all_variable_empty",
+      "module": "P01ModelWitnesses"
+    },
+    {
+      "name": "P01R.fixed_assumption_cannot_generalise",
+      "module": "P01ModelWitnesses"
+    },
+    {
+      "name": "P01R.unrestricted_allI_is_not_admissible",
+      "module": "P01ModelWitnesses"
+    },
+    {
+      "name": "P01R.typing_excludes_markers",
+      "module": "P01ModelWitnesses"
+    },
+    {
+      "name": "P01R.original_finite_markers_untypable",
+      "module": "P01ModelWitnesses"
+    },
+    {
+      "name": "P01R.skk",
+      "module": "P01ModelWitnesses"
+    },
+    {
+      "name": "P01R.skk_application",
+      "module": "P01ModelWitnesses"
+    },
+    {
+      "name": "P01R.skk_per",
+      "module": "P01ModelWitnesses"
+    },
+    {
+      "name": "P01R.identity_skk_link",
+      "module": "P01ModelWitnesses"
+    },
+    {
+      "name": "P01R.finite_skk_identity",
+      "module": "P01ModelWitnesses"
+    },
+    {
+      "name": "P01R.finite_polymorphic_skk",
+      "module": "P01ModelWitnesses"
+    },
+    {
+      "name": "P01R.recursive_polymorphic_I_skk",
+      "module": "P01ModelWitnesses"
+    },
+    {
+      "name": "P01R.recursive_parametric_equality_not_raw_conversion",
+      "module": "P01ModelWitnesses"
+    },
+    {
+      "name": "P01R.EExpr",
+      "module": "P01EffectSeeds"
+    },
+    {
+      "name": "P01R.Seed",
+      "module": "P01EffectSeeds"
+    },
+    {
+      "name": "P01R.seedFintype",
+      "module": "P01EffectSeeds"
+    },
+    {
+      "name": "P01R.seedInhabited",
+      "module": "P01EffectSeeds"
+    },
+    {
+      "name": "P01R.run",
+      "module": "P01EffectSeeds"
+    },
+    {
+      "name": "P01R.erase",
+      "module": "P01EffectSeeds"
+    },
+    {
+      "name": "P01R.embed",
+      "module": "P01EffectSeeds"
+    },
+    {
+      "name": "P01R.erase_embed",
+      "module": "P01EffectSeeds"
+    },
+    {
+      "name": "P01R.seed_outcome",
+      "module": "P01EffectSeeds"
+    },
+    {
+      "name": "P01R.outcome_has_seed",
+      "module": "P01EffectSeeds"
+    },
+    {
+      "name": "P01R.seed_support_exact",
+      "module": "P01EffectSeeds"
+    },
+    {
+      "name": "P01R.EHas",
+      "module": "P01EffectSeeds"
+    },
+    {
+      "name": "P01R.original_effect_embeds",
+      "module": "P01EffectSeeds"
+    },
+    {
+      "name": "P01R.shared_seed_fundamental",
+      "module": "P01EffectSeeds"
+    },
+    {
+      "name": "P01R.run_embed_independent",
+      "module": "P01EffectSeeds"
+    },
+    {
+      "name": "P01R.original_outcome_finite",
+      "module": "P01EffectSeeds"
+    },
+    {
+      "name": "P01R.original_seed_relational",
+      "module": "P01EffectSeeds"
+    },
+    {
+      "name": "P01Probability.support",
+      "module": "P01FiniteCoupling"
+    },
+    {
+      "name": "P01Probability.pushMass",
+      "module": "P01FiniteCoupling"
+    },
+    {
+      "name": "P01Probability.jointMass",
+      "module": "P01FiniteCoupling"
+    },
+    {
+      "name": "P01Probability.support_mem",
+      "module": "P01FiniteCoupling"
+    },
+    {
+      "name": "P01Probability.push_nonnegative",
+      "module": "P01FiniteCoupling"
+    },
+    {
+      "name": "P01Probability.joint_nonnegative",
+      "module": "P01FiniteCoupling"
+    },
+    {
+      "name": "P01Probability.push_total",
+      "module": "P01FiniteCoupling"
+    },
+    {
+      "name": "P01Probability.joint_left_marginal",
+      "module": "P01FiniteCoupling"
+    },
+    {
+      "name": "P01Probability.joint_right_marginal",
+      "module": "P01FiniteCoupling"
+    },
+    {
+      "name": "P01Probability.joint_positive_has_seed",
+      "module": "P01FiniteCoupling"
+    },
+    {
+      "name": "P01Probability.joint_zero_off_support",
+      "module": "P01FiniteCoupling"
+    },
+    {
+      "name": "P01Probability.push_positive_iff",
+      "module": "P01FiniteCoupling"
+    },
+    {
+      "name": "P01Probability.observations_same_law",
+      "module": "P01FiniteCoupling"
+    },
+    {
+      "name": "P01R.seedWeight",
+      "module": "P01FiniteCoupling"
+    },
+    {
+      "name": "P01R.seed_weight_positive",
+      "module": "P01FiniteCoupling"
+    },
+    {
+      "name": "P01R.seed_weight_total",
+      "module": "P01FiniteCoupling"
+    },
+    {
+      "name": "P01R.outputMass",
+      "module": "P01FiniteCoupling"
+    },
+    {
+      "name": "P01R.outputSupport",
+      "module": "P01FiniteCoupling"
+    },
+    {
+      "name": "P01R.outputCoupling",
+      "module": "P01FiniteCoupling"
+    },
+    {
+      "name": "P01R.output_mass_nonnegative",
+      "module": "P01FiniteCoupling"
+    },
+    {
+      "name": "P01R.output_mass_total",
+      "module": "P01FiniteCoupling"
+    },
+    {
+      "name": "P01R.output_mass_support_exact",
+      "module": "P01FiniteCoupling"
+    },
+    {
+      "name": "P01R.common_coupling",
+      "module": "P01FiniteCoupling"
+    },
+    {
+      "name": "P01R.related_observations_equal",
+      "module": "P01FiniteCoupling"
+    },
+    {
+      "name": "P01R.original_common_coupling",
+      "module": "P01FiniteCoupling"
+    },
+    {
+      "name": "P01R.original_positive_support",
+      "module": "P01FiniteCoupling"
+    },
+    {
+      "name": "P01R.coupling_total",
+      "module": "P01FiniteCoupling"
+    },
+    {
+      "name": "P01R.seed_weight_app",
+      "module": "P01EffectMass"
+    },
+    {
+      "name": "P01R.seed_weight_mix",
+      "module": "P01EffectMass"
+    },
+    {
+      "name": "P01R.output_mass_pure",
+      "module": "P01EffectMass"
+    },
+    {
+      "name": "P01R.output_mass_application",
+      "module": "P01EffectMass"
+    },
+    {
+      "name": "P01R.coin_left_count",
+      "module": "P01EffectMass"
+    },
+    {
+      "name": "P01R.coin_right_count",
+      "module": "P01EffectMass"
+    },
+    {
+      "name": "P01R.coin_sum",
+      "module": "P01EffectMass"
+    },
+    {
+      "name": "P01R.output_mass_mixture_seed",
+      "module": "P01EffectMass"
+    },
+    {
+      "name": "P01R.output_mass_mixture",
+      "module": "P01EffectMass"
+    },
+    {
+      "name": "P01R.fairWeight",
+      "module": "P01CouplingWitness"
+    },
+    {
+      "name": "P01R.witnessContext",
+      "module": "P01CouplingWitness"
+    },
+    {
+      "name": "P01R.witnessEffect",
+      "module": "P01CouplingWitness"
+    },
+    {
+      "name": "P01R.leftValues",
+      "module": "P01CouplingWitness"
+    },
+    {
+      "name": "P01R.rightValues",
+      "module": "P01CouplingWitness"
+    },
+    {
+      "name": "P01R.witness_typed",
+      "module": "P01CouplingWitness"
+    },
+    {
+      "name": "P01R.witness_inputs_related",
+      "module": "P01CouplingWitness"
+    },
+    {
+      "name": "P01R.left_I_mass",
+      "module": "P01CouplingWitness"
+    },
+    {
+      "name": "P01R.right_I_mass",
+      "module": "P01CouplingWitness"
+    },
+    {
+      "name": "P01R.right_skk_mass",
+      "module": "P01CouplingWitness"
+    },
+    {
+      "name": "P01R.non_diagonal_mass",
+      "module": "P01CouplingWitness"
+    },
+    {
+      "name": "P01R.different_raw_output_laws",
+      "module": "P01CouplingWitness"
+    },
+    {
+      "name": "P01R.witness_one_coupling_for_all_relations",
+      "module": "P01CouplingWitness"
+    },
+    {
+      "name": "P01R.witness_all_respectful_observations_agree",
+      "module": "P01CouplingWitness"
+    }
+  ],
+  "pins": {
+    "lean_version": "4.19.0",
+    "lean_binary_sha256": "92c3d35b5bfaa5e0fea413a775d504cf46cd95e1345df61c2274f76779e7e023",
+    "packages": [
+      {
+        "name": "mathlib",
+        "revision": "c44e0c8ee63ca166450922a373c7409c5d26b00b"
+      },
+      {
+        "name": "plausible",
+        "revision": "77e08eddc486491d7b9e470926b3dbe50319451a"
+      },
+      {
+        "name": "LeanSearchClient",
+        "revision": "25078369972d295301f5a1e53c3e5850cf6d9d4c"
+      },
+      {
+        "name": "importGraph",
+        "revision": "e6a9f0f5ee3ccf7443a0070f92b62f8db12ae82b"
+      },
+      {
+        "name": "proofwidgets",
+        "revision": "c4919189477c3221e6a204008998b0d724f49904"
+      },
+      {
+        "name": "aesop",
+        "revision": "5d50b08dedd7d69b3d9b3176e0d58a23af228884"
+      },
+      {
+        "name": "Qq",
+        "revision": "fa4f7f15d97591a9cf3aa7724ba371c7fc6dda02"
+      },
+      {
+        "name": "batteries",
+        "revision": "f5d04a9c4973d401c8c92500711518f7c656f034"
+      },
+      {
+        "name": "Cli",
+        "revision": "02dbd02bc00ec4916e99b04b2245b30200e200d0"
+      }
+    ]
+  },
+  "official_imports": [
+    {
+      "module": "Init",
+      "repository": "lean-release",
+      "source": "Init.lean",
+      "sha256": "94c76e813fdf92a0375566c1c7f3335cf269703da809c6189dc0de09d66b0204"
+    },
+    {
+      "module": "Lean",
+      "repository": "lean-release",
+      "source": "Lean.lean",
+      "sha256": "81987fb597b14adf25104f16006c885d1feb9a9ec59745384b10989c9546e9a4"
+    },
+    {
+      "module": "Mathlib.Algebra.BigOperators.Field",
+      "repository": "mathlib",
+      "source": "Mathlib/Algebra/BigOperators/Field.lean",
+      "sha256": "da30762d0744a7f3958418b6eb0b679f4604846e4c0cb2a63e002396fe20af9c"
+    },
+    {
+      "module": "Mathlib.Algebra.BigOperators.Fin",
+      "repository": "mathlib",
+      "source": "Mathlib/Algebra/BigOperators/Fin.lean",
+      "sha256": "2f199c1f08a34c3dfb2a7e247ddbfae56197441e3fac4a8817b1eb141189059c"
+    },
+    {
+      "module": "Mathlib.Algebra.Order.BigOperators.Group.Finset",
+      "repository": "mathlib",
+      "source": "Mathlib/Algebra/Order/BigOperators/Group/Finset.lean",
+      "sha256": "b5f6e00176a4e6d7796c8badf94326ca39af0a83fd41d8808369fbe4f9aaed18"
+    },
+    {
+      "module": "Mathlib.Algebra.Order.Field.Rat",
+      "repository": "mathlib",
+      "source": "Mathlib/Algebra/Order/Field/Rat.lean",
+      "sha256": "c2a89b520d249516869abec532ae47a1e6ac3f59a89cde6291b9408d985e7c1f"
+    },
+    {
+      "module": "Mathlib.Data.Bool.Basic",
+      "repository": "mathlib",
+      "source": "Mathlib/Data/Bool/Basic.lean",
+      "sha256": "fb20d50c3aed15cdf7c5b7f1bc92db8ab850444f158199bfa8cb2f09ac3a5e55"
+    },
+    {
+      "module": "Mathlib.Data.Fintype.BigOperators",
+      "repository": "mathlib",
+      "source": "Mathlib/Data/Fintype/BigOperators.lean",
+      "sha256": "007241ebb2b7028ceb0ef4c500f2f1e9f62ac82d95b7f72e625d5f39dd7db74f"
+    },
+    {
+      "module": "Mathlib.Data.Fintype.Prod",
+      "repository": "mathlib",
+      "source": "Mathlib/Data/Fintype/Prod.lean",
+      "sha256": "272b57521233c0e371c9d6cccfe6612b9b148d6a461b96d1228f104fac46fe2d"
+    },
+    {
+      "module": "Mathlib.Tactic.NormNum",
+      "repository": "mathlib",
+      "source": "Mathlib/Tactic/NormNum.lean",
+      "sha256": "9348e2bdbbe926fd04afc96e43c20982e287dda4eb3c77c96f9e7b1e366019d4"
+    },
+    {
+      "module": "Mathlib.Tactic.Ring",
+      "repository": "mathlib",
+      "source": "Mathlib/Tactic/Ring.lean",
+      "sha256": "5a3e267047718ad293e87d1d6fde600e704d3a7d280ed921bd605f5d2a4a6e2c"
+    }
+  ],
+  "driver": {
+    "source_id": "src-866c6ff6e74a67f2-279d28ea9829b80d",
+    "lean_argument": "EXECUTABLE"
+  },
+  "controls": "ORIGINAL_DRIVER_REQUIRED",
+  "classification": "CURRENT_EVIDENCE"
+}

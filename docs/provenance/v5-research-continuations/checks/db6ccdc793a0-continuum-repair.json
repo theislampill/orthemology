@@ -1,0 +1,737 @@
+{
+  "status": "FRESH_KERNEL_COMPONENTS",
+  "exit_code": 0,
+  "kernel_verified": true,
+  "suite_id": "db6ccdc793a0-continuum-repair",
+  "suite_sha256": "9acc90b0ff1ae13b80b8138ec7088cb028cd7f512af1061ea43e3f9bb03e445b",
+  "source_hashes": {
+    "StatisticalRepair": "8e6a771ec5c6b853055f7f13dd1b93b319172a2e10a4f41d71284cc681627bf4",
+    "FiniteTailCoverage": "27726774f9c65cd5827f9ff1a7f9e840e6d0332bb1ab10b63afd10d26244ae9d",
+    "BernoulliTailMonotonicity": "e9efe25a7e4bc22b9e7893f412a6107a9d1757d557e3a1ca44d6d752c95c1659",
+    "BernoulliIntervalCoverage": "f48619991474ed415fe560dabeef1e47b90856de0c4eed3b4201bef4ca801c6a",
+    "BernoulliPrefixLaw": "f7c79b0cab33c9888eba0f0e29edbfdcb50d1f2cf11bd95d6e0256ae986e08c0",
+    "RobustBinaryRepair": "1762b3ce9b4c3d11826eb724c1d15468d8ddda69666da3e06f332979288b4c31",
+    "CertifiedRepairCoverage": "ce7c17727753d78a199ba2ecda1e2a0b1a81f6c50852785ff6cf45f9e727d9fe",
+    "AnytimeRepairCoverage": "53460179667b4cbd53f86b780ae15d4cdefbaa7d3b8896dce05c2e8b02ce1e52",
+    "RationalTailReference": "eb18e890efec80015ba7bbf459af9fd56793e093438c24732b76e4f259a3b37b",
+    "RationalRepairCertificate": "9d069a77d114d1e80f3f7b15db5d54fe03175d6e541109937de2c7a958082922",
+    "ExecutableAuditRepair": "79a5b2d5533226c48b2a885eb720a35046436343800e272615a3a661680a762d",
+    "AuditContractBinding": "85aa05cb15f73c3ef6441c00a5a8e270120fd5e877fc7a88e4445cce1089cb24",
+    "ProductObservationLaw": "f7903cc3b7756f708e51eeccaf15220fd864e6964cf81db71b242694c6785760",
+    "RepairObstruction": "a12ee87fa7a58cbd8384bb9a22f773cbf7e96eeadc3d3783ae2b9750bccc848d",
+    "RepairTestingBridge": "64728e91ba19c1455a955e23336da054ef7cbbfd07b77e1599a7040e1f3ef4fe",
+    "BinaryConstructiveRepair": "7ef4e852ab4f4a53e1e6017e5ef6e9703c5993bf6274a0f8f3369709c68eaa01",
+    "ContinuumAuditRestoration": "bb282db7bdfb603906189cabe2f22b506dfef4aa154bde5185ea92d288114a92",
+    "RepairEndpointCells": "48fa3944856cc27e03bdf6bd43de8634710ac38bf990d2b5836684e799d5146b",
+    "EmpiricalRepairCost": "7a853611f73396c6fb3b92bbb22bdadc4fe6a5b1620ff4c05847e9a3d1dfafb3",
+    "EmpiricalFourthMoment": "5dd1a16e4b266337725317ea4b25cc8f0c54b13b5bd4ce32968a5df0648281d4",
+    "GroupedBinomialTails": "5cfdcb3bda7d8d7d55eea2b9326425f9b260f0b4d7c7c9019448817bd8a76f23",
+    "EfficientAuditRepair": "c19e8558e4ecc76bea8179ed299e0aae3cf7475a07f044134a86eadf259daec3",
+    "EventualAuditSafety": "fc8e020c0aafc12028cb50598457f1550a7c3bbf4f41c7f8d3453ca87d62f232",
+    "EmpiricalExpectedCost": "18cbc586358c08feac36aa004a7f640713a5f41f5936ae6704281213e4b60054",
+    "Controls": "643ca52c7ae9749e1c2991071c853326d573216ced18a5a7880876c35884a889"
+  },
+  "post_source_hashes": {
+    "StatisticalRepair": "8e6a771ec5c6b853055f7f13dd1b93b319172a2e10a4f41d71284cc681627bf4",
+    "FiniteTailCoverage": "27726774f9c65cd5827f9ff1a7f9e840e6d0332bb1ab10b63afd10d26244ae9d",
+    "BernoulliTailMonotonicity": "e9efe25a7e4bc22b9e7893f412a6107a9d1757d557e3a1ca44d6d752c95c1659",
+    "BernoulliIntervalCoverage": "f48619991474ed415fe560dabeef1e47b90856de0c4eed3b4201bef4ca801c6a",
+    "BernoulliPrefixLaw": "f7c79b0cab33c9888eba0f0e29edbfdcb50d1f2cf11bd95d6e0256ae986e08c0",
+    "RobustBinaryRepair": "1762b3ce9b4c3d11826eb724c1d15468d8ddda69666da3e06f332979288b4c31",
+    "CertifiedRepairCoverage": "ce7c17727753d78a199ba2ecda1e2a0b1a81f6c50852785ff6cf45f9e727d9fe",
+    "AnytimeRepairCoverage": "53460179667b4cbd53f86b780ae15d4cdefbaa7d3b8896dce05c2e8b02ce1e52",
+    "RationalTailReference": "eb18e890efec80015ba7bbf459af9fd56793e093438c24732b76e4f259a3b37b",
+    "RationalRepairCertificate": "9d069a77d114d1e80f3f7b15db5d54fe03175d6e541109937de2c7a958082922",
+    "ExecutableAuditRepair": "79a5b2d5533226c48b2a885eb720a35046436343800e272615a3a661680a762d",
+    "AuditContractBinding": "85aa05cb15f73c3ef6441c00a5a8e270120fd5e877fc7a88e4445cce1089cb24",
+    "ProductObservationLaw": "f7903cc3b7756f708e51eeccaf15220fd864e6964cf81db71b242694c6785760",
+    "RepairObstruction": "a12ee87fa7a58cbd8384bb9a22f773cbf7e96eeadc3d3783ae2b9750bccc848d",
+    "RepairTestingBridge": "64728e91ba19c1455a955e23336da054ef7cbbfd07b77e1599a7040e1f3ef4fe",
+    "BinaryConstructiveRepair": "7ef4e852ab4f4a53e1e6017e5ef6e9703c5993bf6274a0f8f3369709c68eaa01",
+    "ContinuumAuditRestoration": "bb282db7bdfb603906189cabe2f22b506dfef4aa154bde5185ea92d288114a92",
+    "RepairEndpointCells": "48fa3944856cc27e03bdf6bd43de8634710ac38bf990d2b5836684e799d5146b",
+    "EmpiricalRepairCost": "7a853611f73396c6fb3b92bbb22bdadc4fe6a5b1620ff4c05847e9a3d1dfafb3",
+    "EmpiricalFourthMoment": "5dd1a16e4b266337725317ea4b25cc8f0c54b13b5bd4ce32968a5df0648281d4",
+    "GroupedBinomialTails": "5cfdcb3bda7d8d7d55eea2b9326425f9b260f0b4d7c7c9019448817bd8a76f23",
+    "EfficientAuditRepair": "c19e8558e4ecc76bea8179ed299e0aae3cf7475a07f044134a86eadf259daec3",
+    "EventualAuditSafety": "fc8e020c0aafc12028cb50598457f1550a7c3bbf4f41c7f8d3453ca87d62f232",
+    "EmpiricalExpectedCost": "18cbc586358c08feac36aa004a7f640713a5f41f5936ae6704281213e4b60054",
+    "Controls": "643ca52c7ae9749e1c2991071c853326d573216ced18a5a7880876c35884a889"
+  },
+  "compiler_sha256": "92c3d35b5bfaa5e0fea413a775d504cf46cd95e1345df61c2274f76779e7e023",
+  "pins": {
+    "lean_version": "4.19.0",
+    "lean_binary_sha256": "92c3d35b5bfaa5e0fea413a775d504cf46cd95e1345df61c2274f76779e7e023",
+    "packages": [
+      {
+        "name": "mathlib",
+        "revision": "c44e0c8ee63ca166450922a373c7409c5d26b00b"
+      },
+      {
+        "name": "plausible",
+        "revision": "77e08eddc486491d7b9e470926b3dbe50319451a"
+      },
+      {
+        "name": "LeanSearchClient",
+        "revision": "25078369972d295301f5a1e53c3e5850cf6d9d4c"
+      },
+      {
+        "name": "importGraph",
+        "revision": "e6a9f0f5ee3ccf7443a0070f92b62f8db12ae82b"
+      },
+      {
+        "name": "proofwidgets",
+        "revision": "c4919189477c3221e6a204008998b0d724f49904"
+      },
+      {
+        "name": "aesop",
+        "revision": "5d50b08dedd7d69b3d9b3176e0d58a23af228884"
+      },
+      {
+        "name": "Qq",
+        "revision": "fa4f7f15d97591a9cf3aa7724ba371c7fc6dda02"
+      },
+      {
+        "name": "batteries",
+        "revision": "f5d04a9c4973d401c8c92500711518f7c656f034"
+      },
+      {
+        "name": "Cli",
+        "revision": "02dbd02bc00ec4916e99b04b2245b30200e200d0"
+      }
+    ]
+  },
+  "modules": [
+    {
+      "module": "StatisticalRepair",
+      "source_sha256": "8e6a771ec5c6b853055f7f13dd1b93b319172a2e10a4f41d71284cc681627bf4",
+      "object_sha256": "2d66a16941c61faba01bd2609c09bdf18c425a1264921802de352d75e47368a0",
+      "transitive_source_fingerprint": "7f58b04601ed0c1d878297de1502fc45245c0caa0b583a2c2180cf9c6ccfe89a",
+      "status": "FRESH_COMPILE",
+      "exit_code": 0
+    },
+    {
+      "module": "FiniteTailCoverage",
+      "source_sha256": "27726774f9c65cd5827f9ff1a7f9e840e6d0332bb1ab10b63afd10d26244ae9d",
+      "object_sha256": "43d598d4558b3fa2eb64a51310dfcb93b8286791888f5b7abd7c62d02512304d",
+      "transitive_source_fingerprint": "f3902ced4145393e6390b3f3c3145a17bc6d1defd399c42d7650ff918a324013",
+      "status": "FRESH_COMPILE",
+      "exit_code": 0
+    },
+    {
+      "module": "BernoulliTailMonotonicity",
+      "source_sha256": "e9efe25a7e4bc22b9e7893f412a6107a9d1757d557e3a1ca44d6d752c95c1659",
+      "object_sha256": "e5dd17ef762606d069e5063fa0baa6844454c0d44e7c73d2996e5e41f75ac783",
+      "transitive_source_fingerprint": "405d17335d5114a7e2f2610ba8f2438c2a990d52dfd3739fcbd8048b2e876c22",
+      "status": "FRESH_COMPILE",
+      "exit_code": 0
+    },
+    {
+      "module": "BernoulliIntervalCoverage",
+      "source_sha256": "f48619991474ed415fe560dabeef1e47b90856de0c4eed3b4201bef4ca801c6a",
+      "object_sha256": "52267e86d46b8db87bc452e4618243d1ccd87089494f7b0b6aa3fd5d15115b18",
+      "transitive_source_fingerprint": "794b7806c45e8ccdf4f95a6866cbc78228d79c68819147b86b3161a6dd832240",
+      "status": "FRESH_COMPILE",
+      "exit_code": 0
+    },
+    {
+      "module": "BernoulliPrefixLaw",
+      "source_sha256": "f7c79b0cab33c9888eba0f0e29edbfdcb50d1f2cf11bd95d6e0256ae986e08c0",
+      "object_sha256": "b8551def078695a967c48311a0311d1d7204377b793b3c120c13418972e10d1c",
+      "transitive_source_fingerprint": "bf87d7c54d13fc8f40c62504abce76e183ace568702ad731743624ce6c229bf1",
+      "status": "FRESH_COMPILE",
+      "exit_code": 0
+    },
+    {
+      "module": "RobustBinaryRepair",
+      "source_sha256": "1762b3ce9b4c3d11826eb724c1d15468d8ddda69666da3e06f332979288b4c31",
+      "object_sha256": "1e38d62d6829039b175447f36f2faf9890c142896e7e79f4ce60d365e586ebb9",
+      "transitive_source_fingerprint": "79e5372a2926af49521fe0604453296db2ee98bc03e4b7dfa6b4707c1e044758",
+      "status": "FRESH_COMPILE",
+      "exit_code": 0
+    },
+    {
+      "module": "CertifiedRepairCoverage",
+      "source_sha256": "ce7c17727753d78a199ba2ecda1e2a0b1a81f6c50852785ff6cf45f9e727d9fe",
+      "object_sha256": "df96edb207823ee2e5bbbad5359e74e6c5dd870c4ea848fc491ead64731eec6c",
+      "transitive_source_fingerprint": "0c793070ccb2e011b15dcee48db725789098325a326b1c9df54a5b214ae5ac1f",
+      "status": "FRESH_COMPILE",
+      "exit_code": 0
+    },
+    {
+      "module": "AnytimeRepairCoverage",
+      "source_sha256": "53460179667b4cbd53f86b780ae15d4cdefbaa7d3b8896dce05c2e8b02ce1e52",
+      "object_sha256": "3d1cef837632381f180ef2602da5a2daed90097fe16b325f9b8b6f1e2f940ee0",
+      "transitive_source_fingerprint": "690e94e77e3b15dd94de28afba91cc976c0abefff6787c0412a31e5c01f1f7ff",
+      "status": "FRESH_COMPILE",
+      "exit_code": 0
+    },
+    {
+      "module": "RationalTailReference",
+      "source_sha256": "eb18e890efec80015ba7bbf459af9fd56793e093438c24732b76e4f259a3b37b",
+      "object_sha256": "917dcf60d0f0ea4d48f980cddaec781694f369c83a9a17483a5c69f35c33b3c9",
+      "transitive_source_fingerprint": "bb5f0a239ae890332d2f623e4f18a9aa6bf1c9d0a32e06274fb4a4cd715b6902",
+      "status": "FRESH_COMPILE",
+      "exit_code": 0
+    },
+    {
+      "module": "RationalRepairCertificate",
+      "source_sha256": "9d069a77d114d1e80f3f7b15db5d54fe03175d6e541109937de2c7a958082922",
+      "object_sha256": "0d14e093458842e8feff35bbc5e9db339a3f03f2d9b1004138e91432b3132aaf",
+      "transitive_source_fingerprint": "925f435efd88a1b44314a0302090768bb812680f498678265e1557f1fd1c1c51",
+      "status": "FRESH_COMPILE",
+      "exit_code": 0
+    },
+    {
+      "module": "ExecutableAuditRepair",
+      "source_sha256": "79a5b2d5533226c48b2a885eb720a35046436343800e272615a3a661680a762d",
+      "object_sha256": "a18f8f78073b6ee9eca3475c8e5e762cc3bd55430999dca3f8dbf9a754f63e1c",
+      "transitive_source_fingerprint": "8832c4922c05b1e3ec789ca962818c1da253c50d5c4ac3a36ff94cac7d32c46d",
+      "status": "FRESH_COMPILE",
+      "exit_code": 0
+    },
+    {
+      "module": "AuditContractBinding",
+      "source_sha256": "85aa05cb15f73c3ef6441c00a5a8e270120fd5e877fc7a88e4445cce1089cb24",
+      "object_sha256": "018fdef26400e9bc9b21d65bec7c838df55259b46b96681ef8571aefa242f6e5",
+      "transitive_source_fingerprint": "6d26aeb458513e99ff5a6cc0a449b313cd48bba5cc10f06b37f425fe652a5bf6",
+      "status": "FRESH_COMPILE",
+      "exit_code": 0
+    },
+    {
+      "module": "ProductObservationLaw",
+      "source_sha256": "f7903cc3b7756f708e51eeccaf15220fd864e6964cf81db71b242694c6785760",
+      "object_sha256": "2a6782617537fccbee2444adcd60af2c2f31e0bbedb86094166e6a1bca9675e6",
+      "transitive_source_fingerprint": "de2c983e7ef639ce87d1920bc3c63cbddf414eb63aab08d2b3f098914cddac31",
+      "status": "QUALIFIED_PREDECESSOR",
+      "predecessor_receipt": "docs/provenance/v5-research-continuations/checks/db6ccdc793a0-ae-licensing.json",
+      "predecessor_receipt_sha256": "2089a11a4c6511e00c9cf2f5a3f546953a0fa47acad95f7eb5f25125e7a4a00b"
+    },
+    {
+      "module": "RepairObstruction",
+      "source_sha256": "a12ee87fa7a58cbd8384bb9a22f773cbf7e96eeadc3d3783ae2b9750bccc848d",
+      "object_sha256": "ac863c8078870d0678ff4b990c629c3a1803b7f5905ce6e7fb1dab6b45ff7b19",
+      "transitive_source_fingerprint": "19ac6ec41b5a8adcadd380465a7bad22bdd5999917dd187e45ab1b133c47294f",
+      "status": "FRESH_COMPILE",
+      "exit_code": 0
+    },
+    {
+      "module": "RepairTestingBridge",
+      "source_sha256": "64728e91ba19c1455a955e23336da054ef7cbbfd07b77e1599a7040e1f3ef4fe",
+      "object_sha256": "0c7373de3789c48d5944b24c521e8fc0ae49106c584073424d327f8af16b9bc9",
+      "transitive_source_fingerprint": "d1369d62c05aae2f11984a2b199abb6a48b8dc561265d5e4610f65ff83b1a564",
+      "status": "FRESH_COMPILE",
+      "exit_code": 0
+    },
+    {
+      "module": "BinaryConstructiveRepair",
+      "source_sha256": "7ef4e852ab4f4a53e1e6017e5ef6e9703c5993bf6274a0f8f3369709c68eaa01",
+      "object_sha256": "79d7a65a21a4adc054b2a53eb1e09b2604b61c200d764240cef2fdc0ce13341d",
+      "transitive_source_fingerprint": "a20399519f53b9b368796aa1c2e3d216dcbd563713bd4c67c9bff8064ee7334e",
+      "status": "FRESH_COMPILE",
+      "exit_code": 0
+    },
+    {
+      "module": "ContinuumAuditRestoration",
+      "source_sha256": "bb282db7bdfb603906189cabe2f22b506dfef4aa154bde5185ea92d288114a92",
+      "object_sha256": "8254be1790cfa521e4e91e3d33f85a200f49aab868da2330490e49538518b66d",
+      "transitive_source_fingerprint": "016f85837d7813e1bfef94b719b8957fd9934161019d779e031b24dbe77cd06d",
+      "status": "FRESH_COMPILE",
+      "exit_code": 0
+    },
+    {
+      "module": "RepairEndpointCells",
+      "source_sha256": "48fa3944856cc27e03bdf6bd43de8634710ac38bf990d2b5836684e799d5146b",
+      "object_sha256": "974d713596915a0ae4ef97f6ede5ec6ffb1e2cfef734eb0baac6088656549ba3",
+      "transitive_source_fingerprint": "a3ae0a29351ee07e654f634e78ee928ae0482f983468e7cab389bc0cf1d29fa2",
+      "status": "FRESH_COMPILE",
+      "exit_code": 0
+    },
+    {
+      "module": "EmpiricalRepairCost",
+      "source_sha256": "7a853611f73396c6fb3b92bbb22bdadc4fe6a5b1620ff4c05847e9a3d1dfafb3",
+      "object_sha256": "a6773c6300dd0d02712f8dddf766273f4406bdd4e91fe49598299ad1dae4fc0d",
+      "transitive_source_fingerprint": "6ce102ab9455a510d2b80f0ba414ac0418aa3e32b068c4a9b3c2c8d5b5d6f967",
+      "status": "FRESH_COMPILE",
+      "exit_code": 0
+    },
+    {
+      "module": "EmpiricalFourthMoment",
+      "source_sha256": "5dd1a16e4b266337725317ea4b25cc8f0c54b13b5bd4ce32968a5df0648281d4",
+      "object_sha256": "6dd09b8d6cb25f524fcb6f14e85cd5274003cdcb68cfd236a1f847f5df231e1c",
+      "transitive_source_fingerprint": "963263b561cb451d352f12b0d64846482699c31976b56dd1171ccf520b484741",
+      "status": "FRESH_COMPILE",
+      "exit_code": 0
+    },
+    {
+      "module": "GroupedBinomialTails",
+      "source_sha256": "5cfdcb3bda7d8d7d55eea2b9326425f9b260f0b4d7c7c9019448817bd8a76f23",
+      "object_sha256": "e2e3ae7a4cb07d14648de763146e1bfb8b9fa2697411652e778ab2944bc3fce5",
+      "transitive_source_fingerprint": "fab45a2d032718b54445c3775ef3e01a1625c2bc5e73eed158e5afc5693e9942",
+      "status": "FRESH_COMPILE",
+      "exit_code": 0
+    },
+    {
+      "module": "EfficientAuditRepair",
+      "source_sha256": "c19e8558e4ecc76bea8179ed299e0aae3cf7475a07f044134a86eadf259daec3",
+      "object_sha256": "3460d8ced3143a32793486da2d936a575f75f299a31b1b28526d13189e6c17a7",
+      "transitive_source_fingerprint": "31fc60d2ae557587f6e2244b56e4502e92142116a18f0447b06a9c460d8132ad",
+      "status": "FRESH_COMPILE",
+      "exit_code": 0
+    },
+    {
+      "module": "EventualAuditSafety",
+      "source_sha256": "fc8e020c0aafc12028cb50598457f1550a7c3bbf4f41c7f8d3453ca87d62f232",
+      "object_sha256": "4d5a2ee2663af4ecf4aac06404250af2fdfb9a5b52dba81d7a57994464ee3835",
+      "transitive_source_fingerprint": "ca178c8f5fb31d9f5f295ab6e109d501843aeaef4493fd65cb310607db64329e",
+      "status": "FRESH_COMPILE",
+      "exit_code": 0
+    },
+    {
+      "module": "EmpiricalExpectedCost",
+      "source_sha256": "18cbc586358c08feac36aa004a7f640713a5f41f5936ae6704281213e4b60054",
+      "object_sha256": "b3d96716f2acd7c06e252f203fe6072d0028ae141491e2e1260dd92e2c716cd9",
+      "transitive_source_fingerprint": "502941256dca2215e7c6ee7297c29ae4b1613d5de62542faddd9955061760ff9",
+      "status": "FRESH_COMPILE",
+      "exit_code": 0
+    },
+    {
+      "module": "Controls",
+      "source_sha256": "643ca52c7ae9749e1c2991071c853326d573216ced18a5a7880876c35884a889",
+      "object_sha256": "f8b5df70ab0472511a4fe899e2214b12a81d209533ea9ee9b990e255bd8de5bc",
+      "transitive_source_fingerprint": "22b3744a11e8e720902dc145efb56913ceb28c0fae64f849aece15a620644edb",
+      "status": "FRESH_COMPILE",
+      "exit_code": 0
+    }
+  ],
+  "readbacks": {
+    "Orthemology.Tranche3.empiricalWeight": {
+      "type_sha256": "1ad31c10b327c91e07a365b12d556a0aabb0f76e882db7cc5a7ce8cf80ece6e8",
+      "axioms": [
+        "propext"
+      ]
+    },
+    "Orthemology.Tranche3.empiricalRepair": {
+      "type_sha256": "8a2595d00990f9e4c3433c8199ff093d413fbf93b4dfa2048d94cdfb19114a85",
+      "axioms": [
+        "propext"
+      ]
+    },
+    "Orthemology.Tranche3.bitValue": {
+      "type_sha256": "10edf44227bc380539798b9b130abfbaa7ae71893b618fb11e2407ba90e01adf",
+      "axioms": [
+        "Classical.choice",
+        "Quot.sound",
+        "propext"
+      ]
+    },
+    "Orthemology.Tranche3.count_prefix_real": {
+      "type_sha256": "1bb42924d5b857b52490db192d6fba82b52864cf702c2c7704729fef30d2b028",
+      "axioms": [
+        "Classical.choice",
+        "Quot.sound",
+        "propext"
+      ]
+    },
+    "Orthemology.Tranche3.empiricalWeight_mem": {
+      "type_sha256": "884e6c0180b29b02574d692bb0c344456275bdde4612716c286e59558c039611",
+      "axioms": [
+        "Classical.choice",
+        "Quot.sound",
+        "propext"
+      ]
+    },
+    "Orthemology.Tranche3.empiricalRepair_coherent": {
+      "type_sha256": "f8d655f5662aa15b8afb2fcd6ef3db534b69b9bb43a4659c54489e6bf6d37a58",
+      "axioms": [
+        "Classical.choice",
+        "Quot.sound",
+        "propext"
+      ]
+    },
+    "Orthemology.Tranche3.source_bit_expectation": {
+      "type_sha256": "2e9eded30eca18eecad0696da880adb214d0940317966d70f9476670ede2c531",
+      "axioms": [
+        "Classical.choice",
+        "Quot.sound",
+        "propext"
+      ]
+    },
+    "Orthemology.Tranche3.empiricalWeight_converges": {
+      "type_sha256": "bac175046fdccddc592a577840a0ef497a05aa83076ecd3b0929753ddad972f7",
+      "axioms": [
+        "Classical.choice",
+        "Quot.sound",
+        "propext"
+      ]
+    },
+    "Orthemology.Tranche3.interior_empirical_strict_restoration": {
+      "type_sha256": "9a3dfb39eeac8026747ae452932e6d4c8378fa2e06ff3da9e1f749e12d47029f",
+      "axioms": [
+        "Classical.choice",
+        "Quot.sound",
+        "propext"
+      ]
+    },
+    "Orthemology.Tranche3.LiteralRepairGood": {
+      "type_sha256": "3741fa1e4f0ad95be699fd8bff4e1314b67d3b867c6fc3598293e98394137c4b",
+      "axioms": [
+        "Classical.choice",
+        "Quot.sound",
+        "propext"
+      ]
+    },
+    "Orthemology.Tranche3.positive_weight_punctured_cell": {
+      "type_sha256": "01c7d6f2d993002370bf3486443a594fb71166f8c52c6497e91f8d31b013b213",
+      "axioms": [
+        "Classical.choice",
+        "Quot.sound",
+        "propext"
+      ]
+    },
+    "Orthemology.Tranche3.zero_weight_unique": {
+      "type_sha256": "8c8ced037a5cdcf0e12ee5efe51e3c57c6d529f5a2f459afcf85bd87c39d240d",
+      "axioms": [
+        "Classical.choice",
+        "Quot.sound",
+        "propext"
+      ]
+    },
+    "Orthemology.Tranche3.one_weight_unique": {
+      "type_sha256": "c06afd64386438bbfc4cc51ccd8010b14ff10e2a44adfc8c38df5175ba90a046",
+      "axioms": [
+        "Classical.choice",
+        "Quot.sound",
+        "propext"
+      ]
+    },
+    "Orthemology.Tranche3.below_one_punctured_cell": {
+      "type_sha256": "809d8db30ce22557c7ecbaac9b8d13ef84567c44dffdd200775c63acbc3b2e78",
+      "axioms": [
+        "Classical.choice",
+        "Quot.sound",
+        "propext"
+      ]
+    },
+    "Orthemology.Tranche3.constantBits": {
+      "type_sha256": "e8c26dba634bcf11ef19c792e8c045eb7f9c7b63749562bdd7923aea63dedce1",
+      "axioms": []
+    },
+    "Orthemology.Tranche3.constantBits_count": {
+      "type_sha256": "4a3567aaf164357b00a4f344909c914c69a1ce359be596eb4b1d6ccb0dd96131",
+      "axioms": [
+        "propext"
+      ]
+    },
+    "Orthemology.Tranche3.constantBits_mass": {
+      "type_sha256": "8aca17fdd7047778b439f4010bcef0887f432826deeb7562025e7dd25f28a924",
+      "axioms": [
+        "Classical.choice",
+        "Quot.sound",
+        "propext"
+      ]
+    },
+    "Orthemology.Tranche3.empiricalRepair_constant": {
+      "type_sha256": "38f5a320bb8c41b5e9ee65453b9aa8ebd9c102b88d3aabf493eb21decc3ae2d4",
+      "axioms": [
+        "Classical.choice",
+        "Quot.sound",
+        "propext"
+      ]
+    },
+    "Orthemology.Tranche3.EmpiricalFailure": {
+      "type_sha256": "4c9eacaada670f34ec83fc65d933361f40dfaa52c1354b7ce55d2be439a31937",
+      "axioms": [
+        "Classical.choice",
+        "Quot.sound",
+        "propext"
+      ]
+    },
+    "Orthemology.Tranche3.empiricalFailure_measurable": {
+      "type_sha256": "0a54e3a35d917abcdba4766a28d2e08cff58579120a3756e2c02aee2c0d8a81e",
+      "axioms": [
+        "Classical.choice",
+        "Quot.sound",
+        "propext"
+      ]
+    },
+    "Orthemology.Tranche3.constant_prefix_failure": {
+      "type_sha256": "7314bbfe4f1386148e20d74daa8bf9fbd36205470a5353c6ec55fae9906b678b",
+      "axioms": [
+        "Classical.choice",
+        "Quot.sound",
+        "propext"
+      ]
+    },
+    "Orthemology.Tranche3.constant_prefix_probability": {
+      "type_sha256": "c17311680e7461ec08aee426f192cc6523471eccf059be9b21afd723a975d586",
+      "axioms": [
+        "Classical.choice",
+        "Quot.sound",
+        "propext"
+      ]
+    },
+    "Orthemology.Tranche3.empirical_failure_probability_lower": {
+      "type_sha256": "9a9c945ab2edf752f18d4de2699af9c75df7666d61cd2f197cf97099f8083616",
+      "axioms": [
+        "Classical.choice",
+        "Quot.sound",
+        "propext"
+      ]
+    },
+    "Orthemology.Tranche3.empirical_expected_failure_lower": {
+      "type_sha256": "888d2ccd819cb402d6f3f53ffd629d6a60b6a97ce2ec2b6aecf4c30cedfa2b02",
+      "axioms": [
+        "Classical.choice",
+        "Quot.sound",
+        "propext"
+      ]
+    },
+    "Orthemology.Tranche3.centeredTotal": {
+      "type_sha256": "eefbb7ba6c93adda63403377242ef133adb47757ab26d089f5ce6e6b995e23ff",
+      "axioms": [
+        "Classical.choice",
+        "Quot.sound",
+        "propext"
+      ]
+    },
+    "Orthemology.Tranche3.centeredMoment": {
+      "type_sha256": "bcf65e567590fe358b0eb044fd842014d819e66606b27dd228d10c327840d125",
+      "axioms": [
+        "Classical.choice",
+        "Quot.sound",
+        "propext"
+      ]
+    },
+    "Orthemology.Tranche3.expectation_add": {
+      "type_sha256": "176dcc7e1f759731b84a9f98ab541c8443900da79fb4164a0e439c36e28707f0",
+      "axioms": [
+        "Classical.choice",
+        "Quot.sound",
+        "propext"
+      ]
+    },
+    "Orthemology.Tranche3.expectation_mul": {
+      "type_sha256": "f4ff615a88dfee63766e64e8d15d14ac771650d34fb8a6e2b9dc2bf799691e11",
+      "axioms": [
+        "Classical.choice",
+        "Quot.sound",
+        "propext"
+      ]
+    },
+    "Orthemology.Tranche3.expectation_const": {
+      "type_sha256": "a7c1fbe0e8b8544dd8a166ffb5341628ee4ac485fa7481b19c9b1e4f84fb1c0c",
+      "axioms": [
+        "Classical.choice",
+        "Quot.sound",
+        "propext"
+      ]
+    },
+    "Orthemology.Tranche3.centeredTotal_step": {
+      "type_sha256": "5cf06102a83e850cb6788b5c4e645b33b50d159b4af188ec84d245afaa037786",
+      "axioms": [
+        "Classical.choice",
+        "Quot.sound",
+        "propext"
+      ]
+    },
+    "Orthemology.Tranche3.centeredMoment_step": {
+      "type_sha256": "13513853ee4c312a1fac3726ec10141b12513c8443fa4fb37c4ed99b1fb1f183",
+      "axioms": [
+        "Classical.choice",
+        "Quot.sound",
+        "propext"
+      ]
+    },
+    "Orthemology.Tranche3.centeredMoment_one_step": {
+      "type_sha256": "17509f20422890a839ee4fde3a4a9998b983376b4e3378467cd64b54e3b9afa4",
+      "axioms": [
+        "Classical.choice",
+        "Quot.sound",
+        "propext"
+      ]
+    },
+    "Orthemology.Tranche3.centeredMoment_two_step": {
+      "type_sha256": "144d0df6a861f76767d07c999ddca6e10ec263d3f511eaefdbe29c491553a65b",
+      "axioms": [
+        "Classical.choice",
+        "Quot.sound",
+        "propext"
+      ]
+    },
+    "Orthemology.Tranche3.centeredMoment_four_step": {
+      "type_sha256": "09bce644eb69f5abec01ae5a36d4f189c6e3a0b59619bab34e1092f339f6e9b2",
+      "axioms": [
+        "Classical.choice",
+        "Quot.sound",
+        "propext"
+      ]
+    },
+    "Orthemology.Tranche3.centered_moments": {
+      "type_sha256": "3a4188945e06ee67fda52ea902ef58cddee3958c7e9fa2e14e689bf339f67b58",
+      "axioms": [
+        "Classical.choice",
+        "Quot.sound",
+        "propext"
+      ]
+    },
+    "Orthemology.Tranche3.centered_fourth_le": {
+      "type_sha256": "fda958fa4877c1923fd2dba05d33414cdeef82e7714541457cad52496f90de92",
+      "axioms": [
+        "Classical.choice",
+        "Quot.sound",
+        "propext"
+      ]
+    },
+    "Orthemology.Tranche3.repairRadius": {
+      "type_sha256": "5f800afa8cc1de43534ba390db81e08b87024a7762576a1e85cbefb34e13225e",
+      "axioms": [
+        "Classical.choice",
+        "Quot.sound",
+        "propext"
+      ]
+    },
+    "Orthemology.Tranche3.empirical_good_of_error": {
+      "type_sha256": "c15a01ffd11b61c30a2606ba8bb6cbebdca6d3d607e667b79a9e0f29f3e94bf1",
+      "axioms": [
+        "Classical.choice",
+        "Quot.sound",
+        "propext"
+      ]
+    },
+    "Orthemology.Tranche3.empirical_centered_identity": {
+      "type_sha256": "57e2bab94bc80299c08ce1e32d49b3768c0a2d4a6cbb872d597f772468e1f7f1",
+      "axioms": [
+        "Classical.choice",
+        "Quot.sound",
+        "propext"
+      ]
+    },
+    "Orthemology.Tranche3.empirical_bad_fourth": {
+      "type_sha256": "17fcb5ff1c49448810d5ced24a9b80cc88e78dfea7a7c4ed18eb08a8b7043f4d",
+      "axioms": [
+        "Classical.choice",
+        "Quot.sound",
+        "propext"
+      ]
+    },
+    "Orthemology.Tranche3.empirical_failure_probability_upper": {
+      "type_sha256": "660f19e6f6abecc2c4cdf30a80560046a7c85c9ca8c496d8353e3be53180d14a",
+      "axioms": [
+        "Classical.choice",
+        "Quot.sound",
+        "propext"
+      ]
+    },
+    "Orthemology.Tranche3.empirical_probability_spending": {
+      "type_sha256": "6f028a1587a5eea584add32c955fec5187767c3b219371885a4803fbdca6f36c",
+      "axioms": [
+        "Classical.choice",
+        "Quot.sound",
+        "propext"
+      ]
+    },
+    "Orthemology.Tranche3.empirical_expected_failure_upper": {
+      "type_sha256": "e106cd467339baa549cf58857eaaaa0a33dc33012766832fc0d985f20c55f9ac",
+      "axioms": [
+        "Classical.choice",
+        "Quot.sound",
+        "propext"
+      ]
+    },
+    "IndependentContinuumControls.plugin_oracle_exact_margin": {
+      "type_sha256": "7f9be35559813d39464a5e8b37f3b5f5c819f902c8cebb702c817f9653179618",
+      "axioms": [
+        "Classical.choice",
+        "Quot.sound",
+        "propext"
+      ]
+    },
+    "IndependentContinuumControls.no_strict_margin_at_zero": {
+      "type_sha256": "281bb8eecc9941fa579bf149d27e5700f38b9f0ae4c87c6ba61eb29a3ea6c734",
+      "axioms": [
+        "Classical.choice",
+        "Quot.sound",
+        "propext"
+      ]
+    },
+    "IndependentContinuumControls.no_strict_margin_at_one": {
+      "type_sha256": "d3ee545c24f483aa3ea72801135dae38bde976fd0a9c4ab85ce70048ab3efb99",
+      "axioms": [
+        "Classical.choice",
+        "Quot.sound",
+        "propext"
+      ]
+    },
+    "IndependentContinuumControls.empirical_always_emits_rational_coherent": {
+      "type_sha256": "6c951e87eb18361153a6307f8c62e81db07cfc08d9d3274355eef44112819af9",
+      "axioms": [
+        "Classical.choice",
+        "Quot.sound",
+        "propext"
+      ]
+    },
+    "IndependentContinuumControls.first_report_is_wrong_with_probability_one": {
+      "type_sha256": "f569e26439271a5eb2edfc8d83ae45cfff0300b27c5ada7d63ea746e52373bff",
+      "axioms": [
+        "Classical.choice",
+        "Quot.sound",
+        "propext"
+      ]
+    },
+    "IndependentContinuumControls.zero_disturbance_is_always_weakly_good": {
+      "type_sha256": "fd7e5bce4e773c8c03dc9f3015fd73d96b2e3ca25f8d72d456ec585f05143f28",
+      "axioms": [
+        "Classical.choice",
+        "Quot.sound",
+        "propext"
+      ]
+    },
+    "IndependentContinuumControls.two_bits_centered_moments": {
+      "type_sha256": "67bf052d56de817b6f248344800d6dc5e530e1b8220f27265c7ee1e4941126c0",
+      "axioms": [
+        "Classical.choice",
+        "Quot.sound",
+        "propext"
+      ]
+    },
+    "IndependentContinuumControls.missing_cross_terms_give_wrong_fourth": {
+      "type_sha256": "53bf99d17f1d238b235f97b0f9a02fdf8d1ab9aa101276b0c2cfd11d3f475fc2",
+      "axioms": [
+        "Classical.choice",
+        "Quot.sound",
+        "propext"
+      ]
+    },
+    "IndependentContinuumControls.large_disturbance_can_break_coherence": {
+      "type_sha256": "13eac003b2b6cca967833bd4dcb5b6ed41c1cbd97f4eb6baa60bc9b92f3eac17",
+      "axioms": [
+        "Classical.choice",
+        "Quot.sound",
+        "propext"
+      ]
+    },
+    "IndependentContinuumControls.convergent_estimate_alone_has_no_vanishing_disturbance_guarantee": {
+      "type_sha256": "d38f6ee9567411b155a1d83da117deea8bb434fe49806a95d61e156f3b97701e",
+      "axioms": [
+        "Classical.choice",
+        "Quot.sound",
+        "propext"
+      ]
+    },
+    "IndependentContinuumControls.finite_upper_is_parameterwise": {
+      "type_sha256": "0ac68b3f94565e2be914b3f6b31b47abf59b1a2324f0b56ec2079c53de6ffa57",
+      "axioms": [
+        "Classical.choice",
+        "Quot.sound",
+        "propext"
+      ]
+    }
+  },
+  "original_controls": "NOT_RUN",
+  "original_receipt_sha256": "53453a2920c5c69b9df80f4bbff8934636ed13f70202343ffbbb4145c4d224ea",
+  "original_driver_sha256": "4933d602f18c749ff170629964914907bf1c5bf05160329bd8aab623dfd65f98",
+  "execution_kind": "FRESH_CUSTOM_CLOSURE",
+  "finished_utc": "2026-10-02T05:42:34.892959+00:00",
+  "scope": "Source-bound custom closure and selected declaration readbacks. Types are represented by hashes of the exact printed types; complete logs remain private. Official caches are trusted. This does not establish ordinary proof, runtime completeness, empirical or normative warrant, novelty, external human review or merged adoption."
+}

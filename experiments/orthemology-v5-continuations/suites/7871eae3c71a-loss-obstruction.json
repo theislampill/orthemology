@@ -1,0 +1,138 @@
+{
+  "id": "7871eae3c71a-loss-obstruction",
+  "origin": "7871eae3c71aec59d246b81f6dccc67d1c6bedb40f6b8e8a460f1e998fff7815",
+  "descriptor_source_id": "src-7871eae3c71aec59-ac1a57d94319c835",
+  "modules": [
+    {
+      "module": "EndpointMoment",
+      "source_id": "src-7871eae3c71aec59-35ed183662abcfa2",
+      "imports": [
+        "Mathlib"
+      ]
+    },
+    {
+      "module": "ObservationLoss",
+      "source_id": "src-7871eae3c71aec59-4032119e99d04161",
+      "imports": [
+        "Mathlib.Tactic"
+      ]
+    },
+    {
+      "module": "AnnularLiteral",
+      "source_id": "src-7871eae3c71aec59-c60525eb5c38c5bb",
+      "imports": [
+        "EndpointMoment"
+      ]
+    },
+    {
+      "module": "LiteralObservationObstruction",
+      "source_id": "src-7871eae3c71aec59-651a23d3b90a2cff",
+      "imports": [
+        "ObservationLoss",
+        "AnnularLiteral"
+      ]
+    }
+  ],
+  "module_order": [
+    "EndpointMoment",
+    "ObservationLoss",
+    "AnnularLiteral",
+    "LiteralObservationObstruction"
+  ],
+  "targets": [
+    {
+      "name": "Orthemology.ObservationLoss.zero_score_under_full_support",
+      "module": "ObservationLoss"
+    },
+    {
+      "name": "Orthemology.ObservationLoss.no_zero_positive_representation",
+      "module": "ObservationLoss"
+    },
+    {
+      "name": "Orthemology.ObservationLoss.bernoulli_no_zero_positive_score",
+      "module": "ObservationLoss"
+    },
+    {
+      "name": "Orthemology.ObservationLoss.Controls.endpoint_support_countercontrol",
+      "module": "ObservationLoss"
+    },
+    {
+      "name": "Orthemology.ObservationLoss.Controls.signed_loss_countercontrol",
+      "module": "ObservationLoss"
+    },
+    {
+      "name": "Orthemology.ObservationLoss.literal_accepts_quarter",
+      "module": "LiteralObservationObstruction"
+    },
+    {
+      "name": "Orthemology.ObservationLoss.literal_rejects_half",
+      "module": "LiteralObservationObstruction"
+    },
+    {
+      "name": "Orthemology.ObservationLoss.literal_no_common_next_bit_score",
+      "module": "LiteralObservationObstruction"
+    }
+  ],
+  "pins": {
+    "lean_version": "4.19.0",
+    "lean_binary_sha256": "92c3d35b5bfaa5e0fea413a775d504cf46cd95e1345df61c2274f76779e7e023",
+    "packages": [
+      {
+        "name": "mathlib",
+        "revision": "c44e0c8ee63ca166450922a373c7409c5d26b00b"
+      },
+      {
+        "name": "plausible",
+        "revision": "77e08eddc486491d7b9e470926b3dbe50319451a"
+      },
+      {
+        "name": "LeanSearchClient",
+        "revision": "25078369972d295301f5a1e53c3e5850cf6d9d4c"
+      },
+      {
+        "name": "importGraph",
+        "revision": "e6a9f0f5ee3ccf7443a0070f92b62f8db12ae82b"
+      },
+      {
+        "name": "proofwidgets",
+        "revision": "c4919189477c3221e6a204008998b0d724f49904"
+      },
+      {
+        "name": "aesop",
+        "revision": "5d50b08dedd7d69b3d9b3176e0d58a23af228884"
+      },
+      {
+        "name": "Qq",
+        "revision": "fa4f7f15d97591a9cf3aa7724ba371c7fc6dda02"
+      },
+      {
+        "name": "batteries",
+        "revision": "f5d04a9c4973d401c8c92500711518f7c656f034"
+      },
+      {
+        "name": "Cli",
+        "revision": "02dbd02bc00ec4916e99b04b2245b30200e200d0"
+      }
+    ]
+  },
+  "official_imports": [
+    {
+      "module": "Mathlib",
+      "repository": "mathlib",
+      "source": "Mathlib.lean",
+      "sha256": "b0518254279fabf0c6a920804e684536b0f5e2bd1cb6318d0609eb563413f20a"
+    },
+    {
+      "module": "Mathlib.Tactic",
+      "repository": "mathlib",
+      "source": "Mathlib/Tactic.lean",
+      "sha256": "f20038eba7bba63f07a2f854496101226df407e20414e6b8ebf94b14f95e831b"
+    }
+  ],
+  "driver": {
+    "source_id": "src-7871eae3c71aec59-fb7cfc7bd74f9508",
+    "lean_argument": "EXECUTABLE"
+  },
+  "controls": "ORIGINAL_DRIVER_REQUIRED",
+  "classification": "CURRENT_EVIDENCE"
+}

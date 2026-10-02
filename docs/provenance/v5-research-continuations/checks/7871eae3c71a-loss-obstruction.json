@@ -1,0 +1,232 @@
+{
+  "compiler_sha256": "92c3d35b5bfaa5e0fea413a775d504cf46cd95e1345df61c2274f76779e7e023",
+  "compiler_version": "Lean (version 4.19.0, x86_64-unknown-linux-gnu, commit 6caaee842e94, Release)",
+  "dependency_checks": [
+    {
+      "build_cache_present": true,
+      "name": "mathlib",
+      "revision": "c44e0c8ee63ca166450922a373c7409c5d26b00b",
+      "tracked_clean": true
+    },
+    {
+      "build_cache_present": true,
+      "name": "plausible",
+      "revision": "77e08eddc486491d7b9e470926b3dbe50319451a",
+      "tracked_clean": true
+    },
+    {
+      "build_cache_present": true,
+      "name": "LeanSearchClient",
+      "revision": "25078369972d295301f5a1e53c3e5850cf6d9d4c",
+      "tracked_clean": true
+    },
+    {
+      "build_cache_present": true,
+      "name": "importGraph",
+      "revision": "e6a9f0f5ee3ccf7443a0070f92b62f8db12ae82b",
+      "tracked_clean": true
+    },
+    {
+      "build_cache_present": true,
+      "name": "proofwidgets",
+      "revision": "c4919189477c3221e6a204008998b0d724f49904",
+      "tracked_clean": true
+    },
+    {
+      "build_cache_present": true,
+      "name": "aesop",
+      "revision": "5d50b08dedd7d69b3d9b3176e0d58a23af228884",
+      "tracked_clean": true
+    },
+    {
+      "build_cache_present": true,
+      "name": "Qq",
+      "revision": "fa4f7f15d97591a9cf3aa7724ba371c7fc6dda02",
+      "tracked_clean": true
+    },
+    {
+      "build_cache_present": true,
+      "name": "batteries",
+      "revision": "f5d04a9c4973d401c8c92500711518f7c656f034",
+      "tracked_clean": true
+    },
+    {
+      "build_cache_present": false,
+      "name": "Cli",
+      "revision": "02dbd02bc00ec4916e99b04b2245b30200e200d0",
+      "tracked_clean": true
+    }
+  ],
+  "exit_code": 0,
+  "finished_utc": "2026-10-02T05:34:39.079632+00:00",
+  "kernel_verified": true,
+  "modules": [
+    {
+      "exit_code": 0,
+      "log_sha256": "01ba4719c80b6fe911b091a7c05124b64eeece964e09c058ef8f9805daca546b",
+      "module": "EndpointMoment",
+      "object_sha256": "d7d709b683501d47e56f3779b7e33f59602854a4ab775ae30722dbe1998c59a0",
+      "source_sha256": "e2a61649f0ca59b94c3dd8ae0e578f49ab9b40ef111592036b4691479d7842d3",
+      "status": "FRESH_COMPILE",
+      "transitive_source_fingerprint": "28f9f0039e92cbb3871ff8a5d4911ee099e4c6e7c7923a1189cd03607e68b63f"
+    },
+    {
+      "exit_code": 0,
+      "log_sha256": "d6bc8e9ed7c9cdce5aa67d5797c0b796bf7289cee450b8c2109a4a60b034ea2b",
+      "module": "ObservationLoss",
+      "object_sha256": "979a618ec8fc6a279a4b66dbb6d7519cd8320e49d8e427cf90770d9b163099e5",
+      "source_sha256": "7d48e09f756cf8cb71361acb3383fca20e3100f6bcc0fc88f1d0955a0ab80531",
+      "status": "FRESH_COMPILE",
+      "transitive_source_fingerprint": "77ead2a3d22ccb42425ffa8735451fadd20909c1f1c700d61865806e554f1978"
+    },
+    {
+      "exit_code": 0,
+      "log_sha256": "01ba4719c80b6fe911b091a7c05124b64eeece964e09c058ef8f9805daca546b",
+      "module": "AnnularLiteral",
+      "object_sha256": "bbfb82d333568dd9ec1fe597716f64e96188313aa3e9354417415eef3272e752",
+      "source_sha256": "66dce1aa30b7f75987a9e145e3fc82051c97f08082fedaa5938ac49cf8759ff6",
+      "status": "FRESH_COMPILE",
+      "transitive_source_fingerprint": "a4ca93d1bf5df0a44dc16740e0c150b7a937a62c7ab354ccf0368ba963f56283"
+    },
+    {
+      "exit_code": 0,
+      "log_sha256": "d002fa6cc12edc2df3af236bb299d6330fe79c4c1c29cce63a25ba0e83feb6f2",
+      "module": "LiteralObservationObstruction",
+      "object_sha256": "50412d64c33f308d7e0eb56905f3ee94ffc1d4787a113ca1fa5a14a2bfc07487",
+      "source_sha256": "1d294f8542feba53501eedeae981a65d1aabc9f6fa185cf429775607d42ff8f0",
+      "status": "FRESH_COMPILE",
+      "transitive_source_fingerprint": "45c3fda560680cfe5d43cca17b75cbac04ab585f87ff49b0c26aa768c7297b7d"
+    }
+  ],
+  "original_controls": "NOT_RUN",
+  "pins": {
+    "lean_binary_sha256": "92c3d35b5bfaa5e0fea413a775d504cf46cd95e1345df61c2274f76779e7e023",
+    "lean_version": "4.19.0",
+    "packages": [
+      {
+        "name": "mathlib",
+        "revision": "c44e0c8ee63ca166450922a373c7409c5d26b00b"
+      },
+      {
+        "name": "plausible",
+        "revision": "77e08eddc486491d7b9e470926b3dbe50319451a"
+      },
+      {
+        "name": "LeanSearchClient",
+        "revision": "25078369972d295301f5a1e53c3e5850cf6d9d4c"
+      },
+      {
+        "name": "importGraph",
+        "revision": "e6a9f0f5ee3ccf7443a0070f92b62f8db12ae82b"
+      },
+      {
+        "name": "proofwidgets",
+        "revision": "c4919189477c3221e6a204008998b0d724f49904"
+      },
+      {
+        "name": "aesop",
+        "revision": "5d50b08dedd7d69b3d9b3176e0d58a23af228884"
+      },
+      {
+        "name": "Qq",
+        "revision": "fa4f7f15d97591a9cf3aa7724ba371c7fc6dda02"
+      },
+      {
+        "name": "batteries",
+        "revision": "f5d04a9c4973d401c8c92500711518f7c656f034"
+      },
+      {
+        "name": "Cli",
+        "revision": "02dbd02bc00ec4916e99b04b2245b30200e200d0"
+      }
+    ]
+  },
+  "post_source_hashes": {
+    "AnnularLiteral": "66dce1aa30b7f75987a9e145e3fc82051c97f08082fedaa5938ac49cf8759ff6",
+    "EndpointMoment": "e2a61649f0ca59b94c3dd8ae0e578f49ab9b40ef111592036b4691479d7842d3",
+    "LiteralObservationObstruction": "1d294f8542feba53501eedeae981a65d1aabc9f6fa185cf429775607d42ff8f0",
+    "ObservationLoss": "7d48e09f756cf8cb71361acb3383fca20e3100f6bcc0fc88f1d0955a0ab80531"
+  },
+  "readback_log_sha256": "03e8c6b7d3ace5871660c796fff7407e993358456279f00ab903310368abfc12",
+  "readbacks": {
+    "Orthemology.ObservationLoss.Controls.endpoint_support_countercontrol": {
+      "type_sha256": "601b26172af7ec0ee2af83a32cc42e42b8b0d4dfcadfdb65c54a7a805f920a67",
+      "axioms": [
+        "Classical.choice",
+        "Quot.sound",
+        "propext"
+      ]
+    },
+    "Orthemology.ObservationLoss.Controls.signed_loss_countercontrol": {
+      "type_sha256": "2c4b70ee6ee584455e22208d8497f0efb6813996f6978ac5f0f935afab99fbda",
+      "axioms": [
+        "Classical.choice",
+        "Quot.sound",
+        "propext"
+      ]
+    },
+    "Orthemology.ObservationLoss.bernoulli_no_zero_positive_score": {
+      "type_sha256": "1464883196f63c9a6044cee5f23a698fde75c96897770ce509ef2e9262625756",
+      "axioms": [
+        "Classical.choice",
+        "Quot.sound",
+        "propext"
+      ]
+    },
+    "Orthemology.ObservationLoss.literal_accepts_quarter": {
+      "type_sha256": "fa404b14f0792e45f8e737c5413792c25c3caa6594485603b9b9c4db95c330e9",
+      "axioms": [
+        "Classical.choice",
+        "Quot.sound",
+        "propext"
+      ]
+    },
+    "Orthemology.ObservationLoss.literal_no_common_next_bit_score": {
+      "type_sha256": "e59c4cf85a851c7584b21a9082eff7c3a7e1e887956bab35f8c246eae47763e4",
+      "axioms": [
+        "Classical.choice",
+        "Quot.sound",
+        "propext"
+      ]
+    },
+    "Orthemology.ObservationLoss.literal_rejects_half": {
+      "type_sha256": "0fbbca4a7a55ecc7f3a07856115bc7c35fa88f3538a94c21e8bc8a6a3a9be68d",
+      "axioms": [
+        "Classical.choice",
+        "Quot.sound",
+        "propext"
+      ]
+    },
+    "Orthemology.ObservationLoss.no_zero_positive_representation": {
+      "type_sha256": "e6ef003b6ff604afb8aa98e1d5800a6836a43f6cf02df9acfd95ca865041d426",
+      "axioms": [
+        "Classical.choice",
+        "Quot.sound",
+        "propext"
+      ]
+    },
+    "Orthemology.ObservationLoss.zero_score_under_full_support": {
+      "type_sha256": "a94ea1e5c9be13a0fcb49624ae6a3ac37810c3b725f65d8de7b2d91d75ac443e",
+      "axioms": [
+        "Classical.choice",
+        "Quot.sound",
+        "propext"
+      ]
+    }
+  },
+  "runner_sha256": "677911518ee7a5e249f1cd41d4271b910fc8ddcb06daa3d34a4aea1eed98d19f",
+  "scope": "Cold custom source components and exact type/axiom readbacks; official caches trusted. No total family, runtime, empirical, normative or adoption claim.",
+  "source_hashes": {
+    "AnnularLiteral": "66dce1aa30b7f75987a9e145e3fc82051c97f08082fedaa5938ac49cf8759ff6",
+    "EndpointMoment": "e2a61649f0ca59b94c3dd8ae0e578f49ab9b40ef111592036b4691479d7842d3",
+    "LiteralObservationObstruction": "1d294f8542feba53501eedeae981a65d1aabc9f6fa185cf429775607d42ff8f0",
+    "ObservationLoss": "7d48e09f756cf8cb71361acb3383fca20e3100f6bcc0fc88f1d0955a0ab80531"
+  },
+  "started_utc": "2026-10-02T05:34:12.555400+00:00",
+  "status": "FRESH_KERNEL_COMPONENTS",
+  "suite_id": "7871eae3c71a-loss-obstruction",
+  "suite_sha256": "768e503d107ae0132c5396b4434ecad4a31854d3f84302e1472ffe1dcc70481c",
+  "validator_sha256": "f0e3c39662b727914b7c83086aa958f8962275bc59fa47c9b508e025310fd26c",
+  "execution_kind": "FRESH_PUBLIC_REPLAY",
+  "private_receipt_sha256": "5b83c295d5708dbc964dfa531dfafd0d62523b9aa6d5a2eb321fe9125f7981c8"
+}

@@ -1,0 +1,978 @@
+{
+  "status": "FRESH_KERNEL_COMPONENTS",
+  "exit_code": 0,
+  "kernel_verified": true,
+  "suite_id": "db6ccdc793a0-indexed-semantic",
+  "suite_sha256": "d474bdda509e6676765ca9ccdc30631712f7eab2202cdc8d356d4beb817d7ea6",
+  "source_hashes": {
+    "PERRefinement": "fb4cb976520bc761e0405386e86cfdd7b7ff4995983f0ddcc869c0c79a05df4d",
+    "MealyRefinement": "13868f16b0f2a14a41cb515b8861326bcfbb284ea0ea3801272099db7a30fe17",
+    "BlockMismatch": "89590f09b77eb40b8c320cbf8a02aaccedb30d14a7fda1efde6657f9afcc9b1e",
+    "P02A2.MeasureCore": "acd3d802db12b8b610ee8301f63f36b04906bedb2a28995c719aa7eb16f8047b",
+    "Q8Measure": "b815803aa2aff0656830d0d2384225215687ef473ff124a4de82198dc8e20048",
+    "MealyMeasure": "65ddeb0646c373e7022f73079a5f9b67dc05740a5615c49382567f2c471517d9",
+    "MealyHitting": "a689461fc7e789e57451d4ed69f8f9ab9acd4d117d8221e46a2151991f628962",
+    "MealyRational": "17c5b6eba13f6a3251a7efed6dbc48b69bc3fc0f8d16bc3c31cf69f327ac453a",
+    "MealySolver": "f037c56ca783feffbafc6d5643b5356e321cc388e0ade5baec961d62d43655b6",
+    "TotalVariation": "7289c2117d990a40d53ab43925cebac082b15464d854a670968aa1e6dccb8fbf",
+    "ObserverAbstraction": "6f47ec82664394ae24c10eeab20c42396b8522a8fd579aa19256018f322d6383",
+    "GuardedObserver": "c068c4f3c0a668895fc8afa57491ed9d829b764b80a069c480109b13e037ee1e",
+    "CodecVarint": "ed635e3754d8c70655cc8db31392eff9c979c9015f771b50de09b7231f54c3a6",
+    "P02A2.ObserverCore": "e032088073d2fd667f568de952afba3f2b84aa500d4303ff37268e125fd363e5",
+    "CodecExpr": "5682f0b6f6c94c7c261e096f0a78035c3835c25c32aea50973a861a85af896c3",
+    "CodecStmt": "136772eff0be842ab0007874f84860141662876fcc11a4d02bdb6117004d2d08",
+    "CodecNumeric": "2716ca254d871a96fa149b3809a55a809d13e2c23a3fd67a63d19a240b79de01",
+    "LoopRenaming": "3fa0d92a221427c1ffdde94cbb34374952112e7a5d6e50e26778ac7aefbdbe89",
+    "LoopPrimrec": "f01b305287f3ae1d977ee72e62e9ea1ab4068358a324933b38572f1c66f02998",
+    "PRProgram": "9c66d134902dd8b5d3ee8b9b3ceb30e20daebc5b6a714489b8d95f09c9abce9f",
+    "PRComposition": "8549db02bf449e14c0d5d6520380a4f2bdae040cef77f11a573ac31ea08f940d",
+    "PRRecursion": "7a577b8a7c506feb4e5243a577fd09386b2d208ecc8221b8d69a1990b50cb63a",
+    "PRHeadRecursion": "6a0037a55a1739be1365f08fcd839c8be9de58a19f85e739e6890faa09db9b94",
+    "PRDerivation": "3141c21d177da58b90fbb2c268b6a9b4ef334785f155c0668cff77fbad37ce86",
+    "PRCoverage": "22b2f657fd787eef93957975e38b184d201648949ccdd875e7ae12432279e4e3",
+    "PRSpecialize": "beffce2a55f2f2ffcfbd71ef073e72d5fb022273e292798e18ea9b4a58b5a980",
+    "CodecProgram": "dc6594471accf19077201c1c33dd70e80f7c374c31316fbd478eed62245ef1ae",
+    "CodecPrimrec": "08f5ef87a655e07fda4c6fd81330789541a18cf70ef31d0bd55ea082701ec9c9",
+    "UniformComputabilityNumeric": "31864c8129fab9ef98cc377ef647f9cee8323a2319a3756a1504ce2e8ebe8f0c",
+    "UniformComputabilityMachine": "4f137dd91e8d56c084dd0a664f182b4fe3f09356eef1fa1fd08102c7e514df73",
+    "Q8Machine": "eb2e669fe278c0cf9feef49ce315cc55da13ae77960beb29f6d68b4e06e23e44",
+    "Q8Compiler": "34fd76a9ab81edffb61134ad8ea8f39ffd1571b90b9e64af4352ee4a8a6a1cb2",
+    "IndexedObserver": "98c1923c5c9ef77094ca28a63c32866fae56ae04b7a1597da59874935d9b1167",
+    "MealyAtoms": "be4175314d4edc235aca06f205de1f3469b9aa389b0f840de58679012c0d63b5",
+    "MealyMeasureFixtures": "c8f3dfb898335e324ca947fc9062a091a920a0a773708c900dc125b685ca9a1f",
+    "Q8ObserverAbstraction": "59dee0059b0f1cd3b035934475edd4fd96690f7fc59edfb59d1257cd03edce0d",
+    "ParsedObserverAbstraction": "87b884265db13aa42dee7c7581bee0f091239945fef2aa7bf32ead12f21e0ffd",
+    "UniformRuntimeTrace": "ffdd64d1a7d01f80a2eb8e9576c5fd503f1835de036d2ef85c42df3c8b03d3ea",
+    "IndexedRuntime": "73b3cb0b813ff303a6735c3cf8ac3c8dbbc1ed5c5dd335d4e0c239b8ddb23cc3",
+    "ObserverFixtures": "8603b2223d533bdf7579674343a16668f345e6736e6dbef8cc12f9628249a8c0",
+    "IndexedSplitProgram": "44b103ef09eeb6177013a95da0e18f58a70e0761ac797fa7fd39e7c3decf6c4d",
+    "IndexedControls": "a09a9f1c8ff61645b4df6c301cbb3060cc6b6e48b9a67b256a52adc32ffc86cb",
+    "IndexedReadback": "474f08832eddf374160b97a323b3f0dc1c58d4a219ba76243b98afedcf14aaa8",
+    "Controls": "229ef78d99f4ac14790f97d4351432f4bfd952d4f476373c5ee070f4ff489776"
+  },
+  "post_source_hashes": {
+    "PERRefinement": "fb4cb976520bc761e0405386e86cfdd7b7ff4995983f0ddcc869c0c79a05df4d",
+    "MealyRefinement": "13868f16b0f2a14a41cb515b8861326bcfbb284ea0ea3801272099db7a30fe17",
+    "BlockMismatch": "89590f09b77eb40b8c320cbf8a02aaccedb30d14a7fda1efde6657f9afcc9b1e",
+    "P02A2.MeasureCore": "acd3d802db12b8b610ee8301f63f36b04906bedb2a28995c719aa7eb16f8047b",
+    "Q8Measure": "b815803aa2aff0656830d0d2384225215687ef473ff124a4de82198dc8e20048",
+    "MealyMeasure": "65ddeb0646c373e7022f73079a5f9b67dc05740a5615c49382567f2c471517d9",
+    "MealyHitting": "a689461fc7e789e57451d4ed69f8f9ab9acd4d117d8221e46a2151991f628962",
+    "MealyRational": "17c5b6eba13f6a3251a7efed6dbc48b69bc3fc0f8d16bc3c31cf69f327ac453a",
+    "MealySolver": "f037c56ca783feffbafc6d5643b5356e321cc388e0ade5baec961d62d43655b6",
+    "TotalVariation": "7289c2117d990a40d53ab43925cebac082b15464d854a670968aa1e6dccb8fbf",
+    "ObserverAbstraction": "6f47ec82664394ae24c10eeab20c42396b8522a8fd579aa19256018f322d6383",
+    "GuardedObserver": "c068c4f3c0a668895fc8afa57491ed9d829b764b80a069c480109b13e037ee1e",
+    "CodecVarint": "ed635e3754d8c70655cc8db31392eff9c979c9015f771b50de09b7231f54c3a6",
+    "P02A2.ObserverCore": "e032088073d2fd667f568de952afba3f2b84aa500d4303ff37268e125fd363e5",
+    "CodecExpr": "5682f0b6f6c94c7c261e096f0a78035c3835c25c32aea50973a861a85af896c3",
+    "CodecStmt": "136772eff0be842ab0007874f84860141662876fcc11a4d02bdb6117004d2d08",
+    "CodecNumeric": "2716ca254d871a96fa149b3809a55a809d13e2c23a3fd67a63d19a240b79de01",
+    "LoopRenaming": "3fa0d92a221427c1ffdde94cbb34374952112e7a5d6e50e26778ac7aefbdbe89",
+    "LoopPrimrec": "f01b305287f3ae1d977ee72e62e9ea1ab4068358a324933b38572f1c66f02998",
+    "PRProgram": "9c66d134902dd8b5d3ee8b9b3ceb30e20daebc5b6a714489b8d95f09c9abce9f",
+    "PRComposition": "8549db02bf449e14c0d5d6520380a4f2bdae040cef77f11a573ac31ea08f940d",
+    "PRRecursion": "7a577b8a7c506feb4e5243a577fd09386b2d208ecc8221b8d69a1990b50cb63a",
+    "PRHeadRecursion": "6a0037a55a1739be1365f08fcd839c8be9de58a19f85e739e6890faa09db9b94",
+    "PRDerivation": "3141c21d177da58b90fbb2c268b6a9b4ef334785f155c0668cff77fbad37ce86",
+    "PRCoverage": "22b2f657fd787eef93957975e38b184d201648949ccdd875e7ae12432279e4e3",
+    "PRSpecialize": "beffce2a55f2f2ffcfbd71ef073e72d5fb022273e292798e18ea9b4a58b5a980",
+    "CodecProgram": "dc6594471accf19077201c1c33dd70e80f7c374c31316fbd478eed62245ef1ae",
+    "CodecPrimrec": "08f5ef87a655e07fda4c6fd81330789541a18cf70ef31d0bd55ea082701ec9c9",
+    "UniformComputabilityNumeric": "31864c8129fab9ef98cc377ef647f9cee8323a2319a3756a1504ce2e8ebe8f0c",
+    "UniformComputabilityMachine": "4f137dd91e8d56c084dd0a664f182b4fe3f09356eef1fa1fd08102c7e514df73",
+    "Q8Machine": "eb2e669fe278c0cf9feef49ce315cc55da13ae77960beb29f6d68b4e06e23e44",
+    "Q8Compiler": "34fd76a9ab81edffb61134ad8ea8f39ffd1571b90b9e64af4352ee4a8a6a1cb2",
+    "IndexedObserver": "98c1923c5c9ef77094ca28a63c32866fae56ae04b7a1597da59874935d9b1167",
+    "MealyAtoms": "be4175314d4edc235aca06f205de1f3469b9aa389b0f840de58679012c0d63b5",
+    "MealyMeasureFixtures": "c8f3dfb898335e324ca947fc9062a091a920a0a773708c900dc125b685ca9a1f",
+    "Q8ObserverAbstraction": "59dee0059b0f1cd3b035934475edd4fd96690f7fc59edfb59d1257cd03edce0d",
+    "ParsedObserverAbstraction": "87b884265db13aa42dee7c7581bee0f091239945fef2aa7bf32ead12f21e0ffd",
+    "UniformRuntimeTrace": "ffdd64d1a7d01f80a2eb8e9576c5fd503f1835de036d2ef85c42df3c8b03d3ea",
+    "IndexedRuntime": "73b3cb0b813ff303a6735c3cf8ac3c8dbbc1ed5c5dd335d4e0c239b8ddb23cc3",
+    "ObserverFixtures": "8603b2223d533bdf7579674343a16668f345e6736e6dbef8cc12f9628249a8c0",
+    "IndexedSplitProgram": "44b103ef09eeb6177013a95da0e18f58a70e0761ac797fa7fd39e7c3decf6c4d",
+    "IndexedControls": "a09a9f1c8ff61645b4df6c301cbb3060cc6b6e48b9a67b256a52adc32ffc86cb",
+    "IndexedReadback": "474f08832eddf374160b97a323b3f0dc1c58d4a219ba76243b98afedcf14aaa8",
+    "Controls": "229ef78d99f4ac14790f97d4351432f4bfd952d4f476373c5ee070f4ff489776"
+  },
+  "compiler_sha256": "92c3d35b5bfaa5e0fea413a775d504cf46cd95e1345df61c2274f76779e7e023",
+  "pins": {
+    "lean_version": "4.19.0",
+    "lean_binary_sha256": "92c3d35b5bfaa5e0fea413a775d504cf46cd95e1345df61c2274f76779e7e023",
+    "packages": [
+      {
+        "name": "mathlib",
+        "revision": "c44e0c8ee63ca166450922a373c7409c5d26b00b"
+      },
+      {
+        "name": "plausible",
+        "revision": "77e08eddc486491d7b9e470926b3dbe50319451a"
+      },
+      {
+        "name": "LeanSearchClient",
+        "revision": "25078369972d295301f5a1e53c3e5850cf6d9d4c"
+      },
+      {
+        "name": "importGraph",
+        "revision": "e6a9f0f5ee3ccf7443a0070f92b62f8db12ae82b"
+      },
+      {
+        "name": "proofwidgets",
+        "revision": "c4919189477c3221e6a204008998b0d724f49904"
+      },
+      {
+        "name": "aesop",
+        "revision": "5d50b08dedd7d69b3d9b3176e0d58a23af228884"
+      },
+      {
+        "name": "Qq",
+        "revision": "fa4f7f15d97591a9cf3aa7724ba371c7fc6dda02"
+      },
+      {
+        "name": "batteries",
+        "revision": "f5d04a9c4973d401c8c92500711518f7c656f034"
+      },
+      {
+        "name": "Cli",
+        "revision": "02dbd02bc00ec4916e99b04b2245b30200e200d0"
+      }
+    ]
+  },
+  "modules": [
+    {
+      "module": "PERRefinement",
+      "source_sha256": "fb4cb976520bc761e0405386e86cfdd7b7ff4995983f0ddcc869c0c79a05df4d",
+      "object_sha256": "90b08cd511d8b0360db7f50bf5751dd5a7b8fcf1ce94bf9f2e76a77495095878",
+      "transitive_source_fingerprint": "cd7d19a5a7b035643463bbfe86d5269b44ef6fee94f911aab549e92b051e8edc",
+      "status": "FRESH_COMPILE",
+      "exit_code": 0
+    },
+    {
+      "module": "MealyRefinement",
+      "source_sha256": "13868f16b0f2a14a41cb515b8861326bcfbb284ea0ea3801272099db7a30fe17",
+      "object_sha256": "5895880dba259693a508d7a466d6868106e9b670442be68c979acd49ea659d5c",
+      "transitive_source_fingerprint": "21d288b9517bfc27ec9a33257bda938a40f87d238081b82458fe0e0bc230cee2",
+      "status": "FRESH_COMPILE",
+      "exit_code": 0
+    },
+    {
+      "module": "BlockMismatch",
+      "source_sha256": "89590f09b77eb40b8c320cbf8a02aaccedb30d14a7fda1efde6657f9afcc9b1e",
+      "object_sha256": "3c3c46bb6682c47a84935fd7fc2f2a4954c5c09fc3dd12d8c505f009800712c5",
+      "transitive_source_fingerprint": "9b7c3c17a4b7e3f792c0eb71ed18664726e6750612b5681daa3988bbd5545b19",
+      "status": "FRESH_COMPILE",
+      "exit_code": 0
+    },
+    {
+      "module": "P02A2.MeasureCore",
+      "source_sha256": "acd3d802db12b8b610ee8301f63f36b04906bedb2a28995c719aa7eb16f8047b",
+      "object_sha256": "e63f18ebe7f312a6427bd0f0add48502abb2cd2c8110a2f3782993933c8ae69d",
+      "transitive_source_fingerprint": "25ab8639f0d3a54d1c6c4e72142f0ea47a2fe8ccd1f80498e096278215df806a",
+      "status": "FRESH_COMPILE",
+      "exit_code": 0
+    },
+    {
+      "module": "Q8Measure",
+      "source_sha256": "b815803aa2aff0656830d0d2384225215687ef473ff124a4de82198dc8e20048",
+      "object_sha256": "57734136855c4cbd2ff40481d819e1834070d81c0eee5614cf272cc08ef77785",
+      "transitive_source_fingerprint": "e8d75d66b542b8a7818088ca80ea4fca76bd4dd730d8443a331e33af568a01e6",
+      "status": "FRESH_COMPILE",
+      "exit_code": 0
+    },
+    {
+      "module": "MealyMeasure",
+      "source_sha256": "65ddeb0646c373e7022f73079a5f9b67dc05740a5615c49382567f2c471517d9",
+      "object_sha256": "120612753242bcfe3c08f31607b172de57a4b1e7fa48237c11eeb07b32ae93e9",
+      "transitive_source_fingerprint": "71903dec858f66e13b148d1a17aa0b3dd8041d7253af63a12547725b0fe357f4",
+      "status": "FRESH_COMPILE",
+      "exit_code": 0
+    },
+    {
+      "module": "MealyHitting",
+      "source_sha256": "a689461fc7e789e57451d4ed69f8f9ab9acd4d117d8221e46a2151991f628962",
+      "object_sha256": "19a98d563e7b0cad6a896147e8000d88cda8887b476b26f91260d461001bd333",
+      "transitive_source_fingerprint": "d67e6d1e49c844a4b46d0498785ab2b473a3fe792d5b35abae10226af5972399",
+      "status": "FRESH_COMPILE",
+      "exit_code": 0
+    },
+    {
+      "module": "MealyRational",
+      "source_sha256": "17c5b6eba13f6a3251a7efed6dbc48b69bc3fc0f8d16bc3c31cf69f327ac453a",
+      "object_sha256": "fb6549c10c0f64d65871b67269d347453e4cfe0ee4e61c5a432c56a2c96c5e41",
+      "transitive_source_fingerprint": "21fb5e6660e0cbb042558c7d47f47095d1366ef12a4291a76c0b36205d344f0c",
+      "status": "FRESH_COMPILE",
+      "exit_code": 0
+    },
+    {
+      "module": "MealySolver",
+      "source_sha256": "f037c56ca783feffbafc6d5643b5356e321cc388e0ade5baec961d62d43655b6",
+      "object_sha256": "c70aa3acf950b6684a1339861640e58628ced8bc4f6be516d498cd4d497b688d",
+      "transitive_source_fingerprint": "f6cdedca5bb1e26cbf539ef1e116dac7e15fd71be824093153fcde950da26dcf",
+      "status": "FRESH_COMPILE",
+      "exit_code": 0
+    },
+    {
+      "module": "TotalVariation",
+      "source_sha256": "7289c2117d990a40d53ab43925cebac082b15464d854a670968aa1e6dccb8fbf",
+      "object_sha256": "07d6b380af22ee9d3b138f52f863db6797b83df2c9b3c05a79da2dae9fe42e1b",
+      "transitive_source_fingerprint": "3dffc728b3fc4d3aecd33b22b77a0483a8bd065aae5f9b490c7d48bc094c3931",
+      "status": "FRESH_COMPILE",
+      "exit_code": 0
+    },
+    {
+      "module": "ObserverAbstraction",
+      "source_sha256": "6f47ec82664394ae24c10eeab20c42396b8522a8fd579aa19256018f322d6383",
+      "object_sha256": "e0581b52d478691d3f48c07efc5c36fbf3b1b94da2ba315851786c636b3eff9c",
+      "transitive_source_fingerprint": "8294ff33f6501eba451225858954e848a5e47ee1b3573a9619e6d05473472cde",
+      "status": "FRESH_COMPILE",
+      "exit_code": 0
+    },
+    {
+      "module": "GuardedObserver",
+      "source_sha256": "c068c4f3c0a668895fc8afa57491ed9d829b764b80a069c480109b13e037ee1e",
+      "object_sha256": "5c8aea660de03d454db700c22c6749988cb2e904eac9945c75ec015402357f8e",
+      "transitive_source_fingerprint": "7eabcb45feadf123e9315096182429f18d51390badc3fb6e716d6620c3015375",
+      "status": "FRESH_COMPILE",
+      "exit_code": 0
+    },
+    {
+      "module": "CodecVarint",
+      "source_sha256": "ed635e3754d8c70655cc8db31392eff9c979c9015f771b50de09b7231f54c3a6",
+      "object_sha256": "11617c6772236ec892e80bdc0b1e83ce071956c81905b9ae1933c11d4dc41af6",
+      "transitive_source_fingerprint": "c1ddc3ea3791547c992d41d6b5b93fc35faf056e8bff59dde472f2a59c1a0b7a",
+      "status": "FRESH_COMPILE",
+      "exit_code": 0
+    },
+    {
+      "module": "P02A2.ObserverCore",
+      "source_sha256": "e032088073d2fd667f568de952afba3f2b84aa500d4303ff37268e125fd363e5",
+      "object_sha256": "167ff29621e3d1e034713d43e3e48fd5f71830a1931cfcf0cca6e0920c4d3170",
+      "transitive_source_fingerprint": "02325b8d037b8bc24bae5d5c35f594b0f0510752d0efc7da8fc8dd525626ac57",
+      "status": "FRESH_COMPILE",
+      "exit_code": 0
+    },
+    {
+      "module": "CodecExpr",
+      "source_sha256": "5682f0b6f6c94c7c261e096f0a78035c3835c25c32aea50973a861a85af896c3",
+      "object_sha256": "b3f65a8629802eeef77471c033ac4174506c726197e8e7f244046cde5d8f348e",
+      "transitive_source_fingerprint": "3ef436acfee86a95151de01af7f8669afe1013a9bccfa78d28204eec6ebb79a7",
+      "status": "FRESH_COMPILE",
+      "exit_code": 0
+    },
+    {
+      "module": "CodecStmt",
+      "source_sha256": "136772eff0be842ab0007874f84860141662876fcc11a4d02bdb6117004d2d08",
+      "object_sha256": "05c16997c4f1a6f77f6db67b5cadbc4d64e8a7a694abd84fc410590c33c63215",
+      "transitive_source_fingerprint": "06ac1c586292d378138c57dcbe1030f3c2f7f29741472629ed0d664a07f785f9",
+      "status": "FRESH_COMPILE",
+      "exit_code": 0
+    },
+    {
+      "module": "CodecNumeric",
+      "source_sha256": "2716ca254d871a96fa149b3809a55a809d13e2c23a3fd67a63d19a240b79de01",
+      "object_sha256": "03dc35e5a783c2c5ac69b0b938f0681b8045877c8716d019984cb74018754024",
+      "transitive_source_fingerprint": "d34e44b677a7a6aedc62c6b3963dab9804b71794d4cdb676f2b70f920f4d04c2",
+      "status": "FRESH_COMPILE",
+      "exit_code": 0
+    },
+    {
+      "module": "LoopRenaming",
+      "source_sha256": "3fa0d92a221427c1ffdde94cbb34374952112e7a5d6e50e26778ac7aefbdbe89",
+      "object_sha256": "e03847ec603e5538ed2864ec38e828d6059d6849a47a1736ade4fd0e8991e997",
+      "transitive_source_fingerprint": "90a97adb1faa09a721bd1f681513fd31ae5202f2bff16ca20226092c452225ad",
+      "status": "FRESH_COMPILE",
+      "exit_code": 0
+    },
+    {
+      "module": "LoopPrimrec",
+      "source_sha256": "f01b305287f3ae1d977ee72e62e9ea1ab4068358a324933b38572f1c66f02998",
+      "object_sha256": "9afc76fac8381466c35132938de5fd9ce5b94b0076c10bb97c79b604100ee710",
+      "transitive_source_fingerprint": "0339fb08d3df15f9826789f471ad636fc4868fa661bdb88832b6d4cc405cd60d",
+      "status": "FRESH_COMPILE",
+      "exit_code": 0
+    },
+    {
+      "module": "PRProgram",
+      "source_sha256": "9c66d134902dd8b5d3ee8b9b3ceb30e20daebc5b6a714489b8d95f09c9abce9f",
+      "object_sha256": "5dbb3141ca25758cf56e47752c0d2433bfd4e8099a72e28765b3fb4fd4f4fd7f",
+      "transitive_source_fingerprint": "c445dbfad8b1d7d78739220dbba6852bcd611e1bff100d1d9077aebe5196e20e",
+      "status": "FRESH_COMPILE",
+      "exit_code": 0
+    },
+    {
+      "module": "PRComposition",
+      "source_sha256": "8549db02bf449e14c0d5d6520380a4f2bdae040cef77f11a573ac31ea08f940d",
+      "object_sha256": "f69e256581595883b6e7f6ef9dc2129e09363dfa0bb93ff289d2637f30b1427b",
+      "transitive_source_fingerprint": "f673bb5428194f4b5bf5747911d0bbb50299a48f7cda340adb97741f1958d0a0",
+      "status": "FRESH_COMPILE",
+      "exit_code": 0
+    },
+    {
+      "module": "PRRecursion",
+      "source_sha256": "7a577b8a7c506feb4e5243a577fd09386b2d208ecc8221b8d69a1990b50cb63a",
+      "object_sha256": "bb9f4f175f7863745ce11a5023640affc72af717e38b31403afbda38def55291",
+      "transitive_source_fingerprint": "7248ac8add77960dbdc7c6635b726c08ae909989e060adf724e8c9c444f6b532",
+      "status": "FRESH_COMPILE",
+      "exit_code": 0
+    },
+    {
+      "module": "PRHeadRecursion",
+      "source_sha256": "6a0037a55a1739be1365f08fcd839c8be9de58a19f85e739e6890faa09db9b94",
+      "object_sha256": "8a7273f5a59f79f58b66047ce06fc7384c61545224c8bedb152e0c48326b2cff",
+      "transitive_source_fingerprint": "96591c1b83644e40f24243c8d6b13b655d4447db903afb91f3a8ffbe7ffeea3e",
+      "status": "FRESH_COMPILE",
+      "exit_code": 0
+    },
+    {
+      "module": "PRDerivation",
+      "source_sha256": "3141c21d177da58b90fbb2c268b6a9b4ef334785f155c0668cff77fbad37ce86",
+      "object_sha256": "f0aa3a4a95f1d74c5b11d2dfde0c5a24b8bd2aed75161fda75c4e488aa96e949",
+      "transitive_source_fingerprint": "727193695e7c56da9b0bacb917a7409ab632658b8d763f8e223c9f8730f21fba",
+      "status": "FRESH_COMPILE",
+      "exit_code": 0
+    },
+    {
+      "module": "PRCoverage",
+      "source_sha256": "22b2f657fd787eef93957975e38b184d201648949ccdd875e7ae12432279e4e3",
+      "object_sha256": "a7978fca16c45528085858de4e51403bd62eb607675f15f4e57e0cb99641801c",
+      "transitive_source_fingerprint": "48a9d509cd411d19a0353523025e8a74eded9a6ad0c6b1aa77ffe872609c32ce",
+      "status": "FRESH_COMPILE",
+      "exit_code": 0
+    },
+    {
+      "module": "PRSpecialize",
+      "source_sha256": "beffce2a55f2f2ffcfbd71ef073e72d5fb022273e292798e18ea9b4a58b5a980",
+      "object_sha256": "9c449d262d3fe977915f987b34836d8b66062ed836c24ddb55fcb3de45e8f321",
+      "transitive_source_fingerprint": "0db9ed53437d9e882a1f356af6616b9fc846ab4b4a00c926ff8f3f318ad2b647",
+      "status": "FRESH_COMPILE",
+      "exit_code": 0
+    },
+    {
+      "module": "CodecProgram",
+      "source_sha256": "dc6594471accf19077201c1c33dd70e80f7c374c31316fbd478eed62245ef1ae",
+      "object_sha256": "7a2d6f14507280d0e5d18813ca6a49992cd097d26d3f869abbc20f5226722a5b",
+      "transitive_source_fingerprint": "7fae8c70f177d1ffd729f1dbbfcf8b4540c93d8c17aa84d3e39debdc2fb2bdca",
+      "status": "FRESH_COMPILE",
+      "exit_code": 0
+    },
+    {
+      "module": "CodecPrimrec",
+      "source_sha256": "08f5ef87a655e07fda4c6fd81330789541a18cf70ef31d0bd55ea082701ec9c9",
+      "object_sha256": "b9baeaf7d9a6f04e836192a3c4f347a55475f1a46c722dc3b4d4163d116bd833",
+      "transitive_source_fingerprint": "8732cad7306c4443e48db5cd6cd57971a0fe8c25b3c6c24bc546f93adbc09b4b",
+      "status": "FRESH_COMPILE",
+      "exit_code": 0
+    },
+    {
+      "module": "UniformComputabilityNumeric",
+      "source_sha256": "31864c8129fab9ef98cc377ef647f9cee8323a2319a3756a1504ce2e8ebe8f0c",
+      "object_sha256": "9cdc544a6f4df5847ea804986b9e6947ac70938e1353116f75b2eca87284d156",
+      "transitive_source_fingerprint": "6393848202c7b43b9b1cfc5a9afac3dd02f7a869e54bdfbf1efbb3581f37a95c",
+      "status": "FRESH_COMPILE",
+      "exit_code": 0
+    },
+    {
+      "module": "UniformComputabilityMachine",
+      "source_sha256": "4f137dd91e8d56c084dd0a664f182b4fe3f09356eef1fa1fd08102c7e514df73",
+      "object_sha256": "dd327f837f0fd61613ed359454720dcd5f40b2e3d255516912f1993c513051b3",
+      "transitive_source_fingerprint": "9644770d2b4085d5f228891afde8cdf53bd162486ca6de65f3af256c60ba4e4a",
+      "status": "FRESH_COMPILE",
+      "exit_code": 0
+    },
+    {
+      "module": "Q8Machine",
+      "source_sha256": "eb2e669fe278c0cf9feef49ce315cc55da13ae77960beb29f6d68b4e06e23e44",
+      "object_sha256": "f032262d7d5e9c801ddae283663f5c2c47fde5fa5eebcaea48890c7b1fd9c473",
+      "transitive_source_fingerprint": "02cbf059f18c466944d88e250562d8461adf854efdbbb05a9063b45f5296d546",
+      "status": "FRESH_COMPILE",
+      "exit_code": 0
+    },
+    {
+      "module": "Q8Compiler",
+      "source_sha256": "34fd76a9ab81edffb61134ad8ea8f39ffd1571b90b9e64af4352ee4a8a6a1cb2",
+      "object_sha256": "15c756f339cf33d166870831ebc259c56cda155302101359cb90f28561334b04",
+      "transitive_source_fingerprint": "40762d1ca9c784961dc719718b743a7a56a27c86be7a226eaa89083b7e12aa4f",
+      "status": "FRESH_COMPILE",
+      "exit_code": 0
+    },
+    {
+      "module": "IndexedObserver",
+      "source_sha256": "98c1923c5c9ef77094ca28a63c32866fae56ae04b7a1597da59874935d9b1167",
+      "object_sha256": "42b4240318af395aaa4beadd3f2f859baae44df9c8ce66732f71276708eafab4",
+      "transitive_source_fingerprint": "55b0d620f4a7ed0ce4e20170d2d92efabf534c1831c66ab78ab1a3b55318d5fd",
+      "status": "FRESH_COMPILE",
+      "exit_code": 0
+    },
+    {
+      "module": "MealyAtoms",
+      "source_sha256": "be4175314d4edc235aca06f205de1f3469b9aa389b0f840de58679012c0d63b5",
+      "object_sha256": "b5677e18e6ecdfdc95eba81feba244e59fb2cd5029824a50e5a596f559de06bf",
+      "transitive_source_fingerprint": "95f2043802cad18f3b9c43ced9c65c7432fe489ed4e2692cf700209afdc135dd",
+      "status": "FRESH_COMPILE",
+      "exit_code": 0
+    },
+    {
+      "module": "MealyMeasureFixtures",
+      "source_sha256": "c8f3dfb898335e324ca947fc9062a091a920a0a773708c900dc125b685ca9a1f",
+      "object_sha256": "2c7abc51c937a72f5494d2781c495b23e77c0ac30d9ed9e7d9074bbe2f2f4246",
+      "transitive_source_fingerprint": "ba44180e0831cb8a7dadb432b8628bd18c7779e4822bf041b3927c34aaf1af4f",
+      "status": "FRESH_COMPILE",
+      "exit_code": 0
+    },
+    {
+      "module": "Q8ObserverAbstraction",
+      "source_sha256": "59dee0059b0f1cd3b035934475edd4fd96690f7fc59edfb59d1257cd03edce0d",
+      "object_sha256": "4758f7c7cc092a5406d111e83f62202131a175b1dd616e5536c32772c59b6f56",
+      "transitive_source_fingerprint": "7ec63c3c0f55f64c8412913676539b6151e436d33677af54fe9a6645552effde",
+      "status": "FRESH_COMPILE",
+      "exit_code": 0
+    },
+    {
+      "module": "ParsedObserverAbstraction",
+      "source_sha256": "87b884265db13aa42dee7c7581bee0f091239945fef2aa7bf32ead12f21e0ffd",
+      "object_sha256": "7119756078192f7ab2c9433b52323948dfb4d8e5e6ae2af2754766a20bf0b604",
+      "transitive_source_fingerprint": "c37a0d5c7dccedeb2e5bdbd7195bf641c066ae785a379df5be0f42c71d7da7f4",
+      "status": "FRESH_COMPILE",
+      "exit_code": 0
+    },
+    {
+      "module": "UniformRuntimeTrace",
+      "source_sha256": "ffdd64d1a7d01f80a2eb8e9576c5fd503f1835de036d2ef85c42df3c8b03d3ea",
+      "object_sha256": "90e73c56b5d5aa6ee30cbba166ea92f42e712a9d11de1cf83d855320b41d7992",
+      "transitive_source_fingerprint": "69142a0d245f1f4daad9d8019edf33cdb7feb5ecf0169d5da3cb176e264ffc86",
+      "status": "FRESH_COMPILE",
+      "exit_code": 0
+    },
+    {
+      "module": "IndexedRuntime",
+      "source_sha256": "73b3cb0b813ff303a6735c3cf8ac3c8dbbc1ed5c5dd335d4e0c239b8ddb23cc3",
+      "object_sha256": "6c6293aaa32500f74f42bc6a54d1ab66a305c305c8c76d7f5cf65cc2b8fcc8d9",
+      "transitive_source_fingerprint": "ed3d5f2495fbd1b3853a0c417cfee91346c2999b9456aa7abcaf1613ae7fba90",
+      "status": "FRESH_COMPILE",
+      "exit_code": 0
+    },
+    {
+      "module": "ObserverFixtures",
+      "source_sha256": "8603b2223d533bdf7579674343a16668f345e6736e6dbef8cc12f9628249a8c0",
+      "object_sha256": "f4a5acd918e7bd51abbc0631ad1386438ad17eca366e801a6983656d77daa85b",
+      "transitive_source_fingerprint": "751037bdfa2272e2a55bbd1ebcc243b538ccbf340372c83acaa6dfd183f3d017",
+      "status": "FRESH_COMPILE",
+      "exit_code": 0
+    },
+    {
+      "module": "IndexedSplitProgram",
+      "source_sha256": "44b103ef09eeb6177013a95da0e18f58a70e0761ac797fa7fd39e7c3decf6c4d",
+      "object_sha256": "77b6a4ab821e857d9320cd2236acc01f42a1fe4a4e8f2ddfadf94be8067e034f",
+      "transitive_source_fingerprint": "d340bba2d31d4a323ef3cd2956be64cb816b26686baa97407c06a7349747f632",
+      "status": "FRESH_COMPILE",
+      "exit_code": 0
+    },
+    {
+      "module": "IndexedControls",
+      "source_sha256": "a09a9f1c8ff61645b4df6c301cbb3060cc6b6e48b9a67b256a52adc32ffc86cb",
+      "object_sha256": "637c1621fcdc10f26190387ef639fa3352a6cb0610df668b4327725f4dd6e920",
+      "transitive_source_fingerprint": "7805f92fef6d79cf7e2335ca776714f8fec5c06ca43b4c77ed0a2e211c94dff5",
+      "status": "FRESH_COMPILE",
+      "exit_code": 0
+    },
+    {
+      "module": "IndexedReadback",
+      "source_sha256": "474f08832eddf374160b97a323b3f0dc1c58d4a219ba76243b98afedcf14aaa8",
+      "object_sha256": "ba2ae1f6d59d3f24d4610485bfd34132ed392455af68d924e06053861fd7e5c6",
+      "transitive_source_fingerprint": "df9d63eb34d264a13ee5a0228ebc5517a36a5ce0da4db73e4db3572b1aec1e84",
+      "status": "FRESH_COMPILE",
+      "exit_code": 0
+    },
+    {
+      "module": "Controls",
+      "source_sha256": "229ef78d99f4ac14790f97d4351432f4bfd952d4f476373c5ee070f4ff489776",
+      "object_sha256": "47947274d0edfb73890c22dad7814eb44bcb4adaef6f31083416bc3faabd41d1",
+      "transitive_source_fingerprint": "63b80f2244f701775118cb0cd786cec5478753fc5c696b2929669a9aaf05b734",
+      "status": "FRESH_COMPILE",
+      "exit_code": 0
+    }
+  ],
+  "readbacks": {
+    "Orthemology.CertifiedObserver.Indexed.Config": {
+      "type_sha256": "ef15e9bf8a5aab00f5760d2db874576197dd8dc18cbfa464c223b36e66b7fe18",
+      "axioms": []
+    },
+    "Orthemology.CertifiedObserver.Indexed.initial": {
+      "type_sha256": "78963abc984ec6227ab51a141d5cccacfe6260614dde9f08ab0293e24cc9d7f1",
+      "axioms": []
+    },
+    "Orthemology.CertifiedObserver.Indexed.appendBit": {
+      "type_sha256": "25c1c320b7632d18e31906c02547781a04757ea879f47ed1294a25f6499e0c59",
+      "axioms": []
+    },
+    "Orthemology.CertifiedObserver.Indexed.machine": {
+      "type_sha256": "85a6c2c5b4ce758a27535b056fe11db15717fc448a36d6cf647ac7fe0c60501a",
+      "axioms": [
+        "Quot.sound",
+        "propext"
+      ]
+    },
+    "Orthemology.CertifiedObserver.Indexed.sentinel_succ": {
+      "type_sha256": "f9f6c3e19512f160f0e21f192bc79f7350a2e8f7f3aea7892144fa30533c92c4",
+      "axioms": [
+        "Quot.sound",
+        "propext"
+      ]
+    },
+    "Orthemology.CertifiedObserver.Indexed.literal_state": {
+      "type_sha256": "e802de7a75a511d82e3727e65981ee4dba514efeef16ed66960aa3004a4b1bd6",
+      "axioms": [
+        "Quot.sound",
+        "propext"
+      ]
+    },
+    "Orthemology.CertifiedObserver.Indexed.source_output_exact": {
+      "type_sha256": "2b81cac74780ac927b18ef4c7dc30c9aa05a2d1e1594913b69231dd3d8790613",
+      "axioms": [
+        "Quot.sound",
+        "propext"
+      ]
+    },
+    "Orthemology.CertifiedObserver.Indexed.sourceLaw": {
+      "type_sha256": "972d6114ee22b91ef72d75d728fcc167d4b789973f89ae3220855c97681562e1",
+      "axioms": [
+        "Classical.choice",
+        "Quot.sound",
+        "propext"
+      ]
+    },
+    "Orthemology.CertifiedObserver.Indexed.source_law_exact": {
+      "type_sha256": "1f5c0bb8902e185196fd9007c086f1cf13521802dca03b3ee422c047b8e21df6",
+      "axioms": [
+        "Classical.choice",
+        "Quot.sound",
+        "propext"
+      ]
+    },
+    "Orthemology.CertifiedObserver.Indexed.sourceLaw_probability": {
+      "type_sha256": "6dc538196a5fc97156ccd20f576db3b0c91aa1e133137e4a3e1b4feecee489b7",
+      "axioms": [
+        "Classical.choice",
+        "Quot.sound",
+        "propext"
+      ]
+    },
+    "Orthemology.CertifiedObserver.Indexed.acquired_prefix_only": {
+      "type_sha256": "c41aa32a66d3e0ad5178f6acced6d41db3a390c1a8d48dda495d604d50230689",
+      "axioms": [
+        "Quot.sound",
+        "propext"
+      ]
+    },
+    "Orthemology.CertifiedObserver.Indexed.unbounded_stage": {
+      "type_sha256": "cc4e8809b61ecde9f42f4a9691860b1955ca2f732986817006ef29dc2fa6fd8c",
+      "axioms": [
+        "Quot.sound",
+        "propext"
+      ]
+    },
+    "Orthemology.CertifiedObserver.Indexed.certified_index_defect": {
+      "type_sha256": "b6ba0e65f8e04f065787b26d18447c8ec579255e768067e73a5634ed00e64ae0",
+      "axioms": [
+        "Classical.choice",
+        "Quot.sound",
+        "propext"
+      ]
+    },
+    "Orthemology.CertifiedObserver.Indexed.certified_index_error": {
+      "type_sha256": "92e97a201f88acaa1478aa8faef33d586cdb11a429c6bf5372badd7af354fb4e",
+      "axioms": [
+        "Classical.choice",
+        "Quot.sound",
+        "propext"
+      ]
+    },
+    "Orthemology.CertifiedObserver.Indexed.tick": {
+      "type_sha256": "e3bf0e905c4a06c02bedc618247d71b0107d3f275dd5cd0fed35ebe1af759df0",
+      "axioms": [
+        "Quot.sound",
+        "propext"
+      ]
+    },
+    "Orthemology.CertifiedObserver.Indexed.tick_sound": {
+      "type_sha256": "95c2d7114b38f4aca6611b572ed3480adedc75a041455832a72eef837ba755b0",
+      "axioms": [
+        "Quot.sound",
+        "propext"
+      ]
+    },
+    "Orthemology.CertifiedObserver.Indexed.tick_complete": {
+      "type_sha256": "6d9ef04ab221cef15677c1aab01e5a2ad65dd4f23ee36a717334f50a5d22475c",
+      "axioms": [
+        "Quot.sound",
+        "propext"
+      ]
+    },
+    "Orthemology.CertifiedObserver.Indexed.searchTick": {
+      "type_sha256": "e692c5ba04ab071581471fe8c55db5bbd0e9266bdfad2da9261f44206555a0ab",
+      "axioms": [
+        "Quot.sound",
+        "propext"
+      ]
+    },
+    "Orthemology.CertifiedObserver.Indexed.search_tick_exact": {
+      "type_sha256": "e0ef95a7208f7a8a385c9d3cec3eaa0ac170e89bc145d2cf18e39a5a5aae0347",
+      "axioms": [
+        "Quot.sound",
+        "propext"
+      ]
+    },
+    "Orthemology.CertifiedObserver.Indexed.tick_mono": {
+      "type_sha256": "6ec05cd2d477663d93f4a9f138c6cd7db5f9bf98078246f0ffcc16c826ef810e",
+      "axioms": [
+        "Quot.sound",
+        "propext"
+      ]
+    },
+    "Orthemology.CertifiedObserver.Indexed.completeThrough": {
+      "type_sha256": "26250234f4e61a1cbdccdf93428c7cdda49ec92d22baa9758f8339b1e5f06870",
+      "axioms": [
+        "Quot.sound",
+        "propext"
+      ]
+    },
+    "Orthemology.CertifiedObserver.Indexed.completeThrough_decidable": {
+      "type_sha256": "b293260ce6833b885dea50167fca366f0f0ef5edb67eeeb7eba0d62b766f3bc3",
+      "axioms": [
+        "Classical.choice",
+        "Quot.sound",
+        "propext"
+      ]
+    },
+    "Orthemology.CertifiedObserver.Indexed.exists_completeThrough": {
+      "type_sha256": "480485345f301b82e17f5bcc7424bc96a36b7afbde78f3079e0688031b202a0e",
+      "axioms": [
+        "Classical.choice",
+        "Quot.sound",
+        "propext"
+      ]
+    },
+    "Orthemology.CertifiedObserver.Indexed.uniformFuel": {
+      "type_sha256": "6f5e54c812f733a01dccad05cce320c61d1da57c2a8a59269e4e838fe838dcc4",
+      "axioms": [
+        "Classical.choice",
+        "Quot.sound",
+        "propext"
+      ]
+    },
+    "Orthemology.CertifiedObserver.Indexed.uniformFuel_complete": {
+      "type_sha256": "17602623c67906c05d6b6f7224135979c9643c9eaf426eaa588a4079d601eba4",
+      "axioms": [
+        "Classical.choice",
+        "Quot.sound",
+        "propext"
+      ]
+    },
+    "Orthemology.CertifiedObserver.Indexed.uniform_tick": {
+      "type_sha256": "91d2917a32d3508de10f31e115f555272e6cbdbc080b26d77412125844222a83",
+      "axioms": [
+        "Classical.choice",
+        "Quot.sound",
+        "propext"
+      ]
+    },
+    "Orthemology.CertifiedObserver.Indexed.runtimeOutput": {
+      "type_sha256": "10f364ff036bb5aecc1ab85d491703577b9e46a74942a3a34d88e0beede19863",
+      "axioms": [
+        "Classical.choice",
+        "Quot.sound",
+        "propext"
+      ]
+    },
+    "Orthemology.CertifiedObserver.Indexed.scheduled_tick_success": {
+      "type_sha256": "68400197ca805aaac7e450b97c3bf483b276afed38e38b9d8630eafb5e136ae3",
+      "axioms": [
+        "Classical.choice",
+        "Quot.sound",
+        "propext"
+      ]
+    },
+    "Orthemology.CertifiedObserver.Indexed.runtime_output_exact": {
+      "type_sha256": "6d1afd5bf108a461a366f9c0ce996e054ca78c4bbc62419c0968def1b003bccf",
+      "axioms": [
+        "Classical.choice",
+        "Quot.sound",
+        "propext"
+      ]
+    },
+    "Orthemology.CertifiedObserver.Indexed.runtime_output_measurable": {
+      "type_sha256": "04a58a4602418f03b3f06ec8ff181d8f4ce18c77c5247fcbf7e43a10e0fa7cbe",
+      "axioms": [
+        "Classical.choice",
+        "Quot.sound",
+        "propext"
+      ]
+    },
+    "Orthemology.CertifiedObserver.Indexed.runtime_law_exact": {
+      "type_sha256": "74f586669d0a89b05571495ea7c6766c588b0ca2f2cefefc2b43329081f1cb64",
+      "axioms": [
+        "Classical.choice",
+        "Quot.sound",
+        "propext"
+      ]
+    },
+    "Orthemology.CertifiedObserver.Indexed.runtime_finite_solver": {
+      "type_sha256": "1928076741ec94d57ed038e11a511a9247cf22ec4f19e5b1e8093b8c2057609f",
+      "axioms": [
+        "Classical.choice",
+        "Quot.sound",
+        "propext"
+      ]
+    },
+    "Orthemology.CertifiedObserver.Indexed.Fixtures.splitProgram": {
+      "type_sha256": "0789c1a5138ed13dc06b1ecf661a25d7f85b6bee79caab2e679e094d24429bfc",
+      "axioms": []
+    },
+    "Orthemology.CertifiedObserver.Indexed.Fixtures.splitIndex": {
+      "type_sha256": "826e04fefcd3ad6aa546bc16ac6ead5b6e96c709ca4d5e62667aa3cf2175f05c",
+      "axioms": [
+        "Quot.sound",
+        "propext"
+      ]
+    },
+    "Orthemology.CertifiedObserver.Indexed.Fixtures.split_decode": {
+      "type_sha256": "6923c6f910b3374cfa3ab8c1dbab7ed304fcad75a4ae8d944fa69976b4813c1b",
+      "axioms": [
+        "Classical.choice",
+        "Quot.sound",
+        "propext"
+      ]
+    },
+    "Orthemology.CertifiedObserver.Indexed.Fixtures.split_evaluate": {
+      "type_sha256": "fc7ed703aca0db6c5ff62661f45651a4f0f387c6a6e01c26656f5bba968f47ca",
+      "axioms": [
+        "Classical.choice",
+        "Quot.sound",
+        "propext"
+      ]
+    },
+    "Orthemology.CertifiedObserver.Indexed.Fixtures.append_half": {
+      "type_sha256": "c858e81e9c277a6cc3d3b42e2ee55845f3b1a4ae82e719d85cbde1d8a936dc65",
+      "axioms": [
+        "Quot.sound",
+        "propext"
+      ]
+    },
+    "Orthemology.CertifiedObserver.Indexed.Fixtures.append_last": {
+      "type_sha256": "1f93b6f6f61110ebd69c71607a14b8ee49716c41955f69b30d08e7c7fd8d57b5",
+      "axioms": [
+        "propext"
+      ]
+    },
+    "Orthemology.CertifiedObserver.Indexed.Fixtures.append_first": {
+      "type_sha256": "9bed883125243a0ed9a13082276054374f1fefd71984311b9a4056260884f2e8",
+      "axioms": [
+        "Quot.sound",
+        "propext"
+      ]
+    },
+    "Orthemology.CertifiedObserver.Indexed.Fixtures.classify": {
+      "type_sha256": "f25d9eb8e57e3e07e0b601adb722afe2cc8023b52f682f5a6aed43d2a0134433",
+      "axioms": [
+        "propext"
+      ]
+    },
+    "Orthemology.CertifiedObserver.Indexed.Fixtures.split_local_output": {
+      "type_sha256": "18afebd0ce54e559799f633f4f1bb0b99be6d6a4954b4df1ab02fee9f1158697",
+      "axioms": [
+        "Classical.choice",
+        "Quot.sound",
+        "propext"
+      ]
+    },
+    "Orthemology.CertifiedObserver.Indexed.Fixtures.split_local_next": {
+      "type_sha256": "cd473691926a3afbd00b18c0495d4a118b244756d29be21c4c382f2abcbd50d1",
+      "axioms": [
+        "Quot.sound",
+        "propext"
+      ]
+    },
+    "Orthemology.CertifiedObserver.Indexed.Fixtures.splitSimulation": {
+      "type_sha256": "67fc4903172b82fbb28b202a0b9816e75003a768d648d5323918f9c3851508a1",
+      "axioms": [
+        "Classical.choice",
+        "Quot.sound",
+        "propext"
+      ]
+    },
+    "Orthemology.CertifiedObserver.Indexed.Fixtures.indexed_split_law": {
+      "type_sha256": "708e7209d58c395917edbaedfc592787c879ba323cc1b5ef9b020a9adb260e49",
+      "axioms": [
+        "Classical.choice",
+        "Quot.sound",
+        "propext"
+      ]
+    },
+    "Orthemology.CertifiedObserver.Indexed.Fixtures.indexed_split_solver": {
+      "type_sha256": "e1ff59b9c780c4d33271b0186797724ed79d4b8d0f3ca6c189439175e5758f68",
+      "axioms": [
+        "Classical.choice",
+        "Quot.sound",
+        "propext"
+      ]
+    },
+    "Orthemology.CertifiedObserver.Indexed.Fixtures.runtime_split_defect": {
+      "type_sha256": "0698563c50ec1ba74daf47a4a5ffd6e60c738076f9e9980ca199241104082bc7",
+      "axioms": [
+        "Classical.choice",
+        "Quot.sound",
+        "propext"
+      ]
+    },
+    "Orthemology.CertifiedObserver.Indexed.Controls.empty_horizon_fuel": {
+      "type_sha256": "96bd70eac257f9d727d91f87fc672289fd5043ac1c353e044ed7eb150afd673b",
+      "axioms": [
+        "Classical.choice",
+        "Quot.sound",
+        "propext"
+      ]
+    },
+    "Orthemology.CertifiedObserver.Indexed.Controls.undersized_horizon_loses_tick": {
+      "type_sha256": "9d97fbc90ee13bf6e56d1d5d3c239ac916d0a51436b03da0060ba2a68236fc1c",
+      "axioms": [
+        "Classical.choice",
+        "Quot.sound",
+        "propext"
+      ]
+    },
+    "Orthemology.CertifiedObserver.Indexed.Controls.copySource": {
+      "type_sha256": "656cf46b9a1d90a271b3afcc069fca171e408971e27266566843d604ba6b096d",
+      "axioms": []
+    },
+    "Orthemology.CertifiedObserver.Indexed.Controls.reducedCopySource": {
+      "type_sha256": "1bf30ae68cc66ea9eb2969d9e6b2acd0cdf621f35f91c890a4836eb6cb587c7a",
+      "axioms": []
+    },
+    "Orthemology.CertifiedObserver.Indexed.Controls.distinct_generated_codes": {
+      "type_sha256": "0e9dfce82c0b31bd3fd03672b7de8f720ac415e670d555b2676fd353eaf13df2",
+      "axioms": [
+        "Classical.choice",
+        "Quot.sound",
+        "propext"
+      ]
+    },
+    "Orthemology.CertifiedObserver.Indexed.Controls.equivalent_actual_evaluators": {
+      "type_sha256": "3745792de90ccf3e4a145af8e5598c543b94643079ab75d54d13bab16658a949",
+      "axioms": [
+        "Classical.choice",
+        "Quot.sound",
+        "propext"
+      ]
+    },
+    "Orthemology.CertifiedObserver.Indexed.Controls.same_runtime_law_distinct_source": {
+      "type_sha256": "94ee880c9d852de992fa3a826efafe23df6834fd8ef3253c7f05e77cec7242cc",
+      "axioms": [
+        "Classical.choice",
+        "Quot.sound",
+        "propext"
+      ]
+    },
+    "IndependentIndexedControls.literal_initial_is_fixed": {
+      "type_sha256": "710c260bb034e1eabf339076764b00990667b022e125c0be4d9e68e573049eca",
+      "axioms": []
+    },
+    "IndependentIndexedControls.acquired_word_three_bits": {
+      "type_sha256": "45af4ac22641a05375674d3fea3db7b2e0a275e1a0dba86a5e4cc0fb90bb3dba",
+      "axioms": [
+        "Quot.sound",
+        "propext"
+      ]
+    },
+    "IndependentIndexedControls.unacquired_bits_do_not_change_state": {
+      "type_sha256": "d0594cb31c520aabf8db9603c877a728b6c4909a923bace49128f9f990507dae",
+      "axioms": [
+        "Quot.sound",
+        "propext"
+      ]
+    },
+    "IndependentIndexedControls.invalid_numeric_code_rejected": {
+      "type_sha256": "1969f709b6f6823d40f3cba1f01eee867d80457215287ddd1aa1158e6bf90d75",
+      "axioms": [
+        "Quot.sound",
+        "propext"
+      ]
+    },
+    "IndependentIndexedControls.invalid_numeric_code_has_specified_default": {
+      "type_sha256": "f12403e2fac36c281e113d5e633bc32b9eb4609059362b8032d655428ae9a326",
+      "axioms": [
+        "Quot.sound",
+        "propext"
+      ]
+    },
+    "IndependentIndexedControls.invalid_code_tick_is_some_false": {
+      "type_sha256": "d5b07cfd5f2b98f945ff9e9da56d8b5530ff7957a254a212f68a3952ac608bc0",
+      "axioms": [
+        "Quot.sound",
+        "propext"
+      ]
+    },
+    "IndependentIndexedControls.wrong_arity_default_is_not_execution": {
+      "type_sha256": "cc55103aa7180fec5bca6feff23c3f37e6943bbf62bd6d15fce13faf0433b29a",
+      "axioms": [
+        "Classical.choice",
+        "Quot.sound",
+        "propext"
+      ]
+    },
+    "IndependentIndexedControls.valid_code_zero_fuel_is_timeout": {
+      "type_sha256": "480a9c53ab6fbc225322b46df4190d02530c13fc217db19e3e6fce71b0f422e9",
+      "axioms": [
+        "Classical.choice",
+        "Quot.sound",
+        "propext"
+      ]
+    },
+    "IndependentIndexedControls.valid_one_source_is_true": {
+      "type_sha256": "6bc088a35300596b5607599bf88451a4f7c94bd0529a348f5b77e7ea5edb9775",
+      "axioms": [
+        "Classical.choice",
+        "Quot.sound",
+        "propext"
+      ]
+    },
+    "IndependentIndexedControls.scheduled_one_is_true": {
+      "type_sha256": "72e30c0932d8459e15d1ed80fd0547914cccaa1f22cabf4e3f5bceea7f45eef4",
+      "axioms": [
+        "Classical.choice",
+        "Quot.sound",
+        "propext"
+      ]
+    },
+    "IndependentIndexedControls.successful_scheduled_invocation_precedes_default": {
+      "type_sha256": "3864fffb107c2baa45e55965d390ef83186a08175d4070dd1b7b7953463bcacd",
+      "axioms": [
+        "Classical.choice",
+        "Quot.sound",
+        "propext"
+      ]
+    },
+    "IndependentIndexedControls.empty_horizon_does_not_cover_tick_zero": {
+      "type_sha256": "d5b01b1069f34e4e361b2e394e6f60628bd11c2b2d958bb5fb51777f32ae0f5a",
+      "axioms": [
+        "Classical.choice",
+        "Quot.sound",
+        "propext"
+      ]
+    },
+    "IndependentIndexedControls.literal_stream_equality_transports_actual_law": {
+      "type_sha256": "fb8ca4dd67784623207e23006a52c105370af024d67bfb71285909bd60a9e70a",
+      "axioms": [
+        "Classical.choice",
+        "Quot.sound",
+        "propext"
+      ]
+    }
+  },
+  "original_controls": "NOT_RUN",
+  "original_receipt_sha256": "53453a2920c5c69b9df80f4bbff8934636ed13f70202343ffbbb4145c4d224ea",
+  "original_driver_sha256": "4933d602f18c749ff170629964914907bf1c5bf05160329bd8aab623dfd65f98",
+  "execution_kind": "FRESH_CUSTOM_CLOSURE",
+  "finished_utc": "2026-10-02T05:42:34.892959+00:00",
+  "scope": "Source-bound custom closure and selected declaration readbacks. Types are represented by hashes of the exact printed types; complete logs remain private. Official caches are trusted. This does not establish ordinary proof, runtime completeness, empirical or normative warrant, novelty, external human review or merged adoption."
+}

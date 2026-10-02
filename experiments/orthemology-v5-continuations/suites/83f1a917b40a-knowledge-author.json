@@ -1,0 +1,184 @@
+{
+  "id": "83f1a917b40a-knowledge-author",
+  "origin": "83f1a917b40abc1e4d6ebac2df9fec31e1141440cf17bd57321efe9ebcab9cd9",
+  "descriptor_source_id": "src-83f1a917b40abc1e-f4aa387483639e51",
+  "modules": [
+    {
+      "module": "ProductiveCompleteness",
+      "source_id": "src-83f1a917b40abc1e-0d06ed00c0031fd4",
+      "imports": [
+        "Mathlib"
+      ]
+    },
+    {
+      "module": "SourceIdentity",
+      "source_id": "src-83f1a917b40abc1e-3e5403aa4cb7858c",
+      "imports": [
+        "Mathlib"
+      ]
+    },
+    {
+      "module": "KnowledgeScope",
+      "source_id": "src-83f1a917b40abc1e-423fc5e85a3612ac",
+      "imports": [
+        "SourceIdentity",
+        "ProductiveCompleteness"
+      ]
+    },
+    {
+      "module": "CreativeKnowledge",
+      "source_id": "src-83f1a917b40abc1e-ee614019a0f8964c",
+      "imports": [
+        "KnowledgeScope"
+      ]
+    },
+    {
+      "module": "ModalKnowledge",
+      "source_id": "src-83f1a917b40abc1e-7331643e4ae17a67",
+      "imports": [
+        "KnowledgeScope"
+      ]
+    }
+  ],
+  "module_order": [
+    "ProductiveCompleteness",
+    "SourceIdentity",
+    "KnowledgeScope",
+    "CreativeKnowledge",
+    "ModalKnowledge"
+  ],
+  "targets": [
+    {
+      "name": "Orthemology.Tranche6.ModalKnowledge.actual_giver_priority",
+      "module": "ModalKnowledge"
+    },
+    {
+      "name": "Orthemology.Tranche6.ModalKnowledge.cognitive_factivity",
+      "module": "ModalKnowledge"
+    },
+    {
+      "name": "Orthemology.Tranche6.ModalKnowledge.recipient_and_source_actually_know",
+      "module": "ModalKnowledge"
+    },
+    {
+      "name": "Orthemology.Tranche6.ModalKnowledge.source_not_standing",
+      "module": "ModalKnowledge"
+    },
+    {
+      "name": "Orthemology.Tranche6.ModalKnowledge.possible_giving_at_every_world",
+      "module": "ModalKnowledge"
+    },
+    {
+      "name": "Orthemology.Tranche6.ModalKnowledge.stable_response_law",
+      "module": "ModalKnowledge"
+    },
+    {
+      "name": "Orthemology.Tranche6.ModalKnowledge.source_still_productive_at_c",
+      "module": "ModalKnowledge"
+    },
+    {
+      "name": "Orthemology.Tranche6.ModalKnowledge.knowledge_not_recipient_thought_ownership",
+      "module": "ModalKnowledge"
+    },
+    {
+      "name": "Orthemology.Tranche6.ModalKnowledge.exact_sources_with_giver_priority_without_standing",
+      "module": "ModalKnowledge"
+    },
+    {
+      "name": "Orthemology.Tranche6.ModalKnowledge.actual_knowledge_of_giver_priority",
+      "module": "ModalKnowledge"
+    },
+    {
+      "name": "Orthemology.Tranche6.ModalKnowledge.standing_of_everywhere_cognitive_giving",
+      "module": "ModalKnowledge"
+    },
+    {
+      "name": "Orthemology.Tranche6.ModalKnowledge.standing_of_intrinsic_determination",
+      "module": "ModalKnowledge"
+    },
+    {
+      "name": "Orthemology.Tranche6.CreativeKnowledge.effect_knowledge_of_known_complete_act",
+      "module": "CreativeKnowledge"
+    },
+    {
+      "name": "Orthemology.Tranche6.CreativeKnowledge.effect_determined_by_complete_state",
+      "module": "CreativeKnowledge"
+    },
+    {
+      "name": "Orthemology.Tranche6.CreativeKnowledge.complete_act_determines_effect",
+      "module": "CreativeKnowledge"
+    },
+    {
+      "name": "Orthemology.Tranche6.CreativeKnowledge.generic_nature_does_not_determine_actual_effect",
+      "module": "CreativeKnowledge"
+    },
+    {
+      "name": "Orthemology.Tranche6.CreativeKnowledge.same_nature_different_acts_and_effects",
+      "module": "CreativeKnowledge"
+    },
+    {
+      "name": "Orthemology.Tranche6.CreativeKnowledge.determined_factive",
+      "module": "CreativeKnowledge"
+    },
+    {
+      "name": "Orthemology.Tranche6.CreativeKnowledge.determined_closed",
+      "module": "CreativeKnowledge"
+    }
+  ],
+  "pins": {
+    "lean_version": "4.19.0",
+    "lean_binary_sha256": "92c3d35b5bfaa5e0fea413a775d504cf46cd95e1345df61c2274f76779e7e023",
+    "packages": [
+      {
+        "name": "mathlib",
+        "revision": "c44e0c8ee63ca166450922a373c7409c5d26b00b"
+      },
+      {
+        "name": "plausible",
+        "revision": "77e08eddc486491d7b9e470926b3dbe50319451a"
+      },
+      {
+        "name": "LeanSearchClient",
+        "revision": "25078369972d295301f5a1e53c3e5850cf6d9d4c"
+      },
+      {
+        "name": "importGraph",
+        "revision": "e6a9f0f5ee3ccf7443a0070f92b62f8db12ae82b"
+      },
+      {
+        "name": "proofwidgets",
+        "revision": "c4919189477c3221e6a204008998b0d724f49904"
+      },
+      {
+        "name": "aesop",
+        "revision": "5d50b08dedd7d69b3d9b3176e0d58a23af228884"
+      },
+      {
+        "name": "Qq",
+        "revision": "fa4f7f15d97591a9cf3aa7724ba371c7fc6dda02"
+      },
+      {
+        "name": "batteries",
+        "revision": "f5d04a9c4973d401c8c92500711518f7c656f034"
+      },
+      {
+        "name": "Cli",
+        "revision": "02dbd02bc00ec4916e99b04b2245b30200e200d0"
+      }
+    ]
+  },
+  "official_imports": [
+    {
+      "module": "Mathlib",
+      "repository": "mathlib",
+      "source": "Mathlib.lean",
+      "sha256": "b0518254279fabf0c6a920804e684536b0f5e2bd1cb6318d0609eb563413f20a"
+    }
+  ],
+  "driver": {
+    "source_id": "src-83f1a917b40abc1e-f4aa387483639e51",
+    "lean_argument": "EXECUTABLE"
+  },
+  "controls": "ORIGINAL_DRIVER_REQUIRED",
+  "classification": "CURRENT_EVIDENCE"
+}

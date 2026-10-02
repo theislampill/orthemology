@@ -1,0 +1,910 @@
+{
+  "id": "866c6ff6e74a-codec-pi3",
+  "origin": "866c6ff6e74a67f2bc452b49a0ada05311c0c2601585ea166404719172bd8086",
+  "descriptor_source_id": "src-866c6ff6e74a67f2-47b7b457c989b63a",
+  "modules": [
+    {
+      "module": "CodecVarint",
+      "source_id": "src-866c6ff6e74a67f2-7b5766c6a84c49e4",
+      "imports": [
+        "Mathlib.Data.Nat.Bitwise",
+        "Mathlib.Tactic"
+      ]
+    },
+    {
+      "module": "CodecNumeric",
+      "source_id": "src-866c6ff6e74a67f2-470a01ff0c816240",
+      "imports": [
+        "CodecVarint"
+      ]
+    },
+    {
+      "module": "P02A2.ObserverCore",
+      "source_id": "src-866c6ff6e74a67f2-f0355cf0c1432374",
+      "imports": [
+        "Mathlib"
+      ]
+    },
+    {
+      "module": "CodecExpr",
+      "source_id": "src-866c6ff6e74a67f2-185d5ab51d470a2f",
+      "imports": [
+        "CodecVarint",
+        "P02A2.ObserverCore"
+      ]
+    },
+    {
+      "module": "CodecStmt",
+      "source_id": "src-866c6ff6e74a67f2-cedde9c5841301ee",
+      "imports": [
+        "CodecExpr"
+      ]
+    },
+    {
+      "module": "LoopRenaming",
+      "source_id": "src-866c6ff6e74a67f2-deeacdba6f7e38f0",
+      "imports": [
+        "P02A2.ObserverCore"
+      ]
+    },
+    {
+      "module": "LoopPrimrec",
+      "source_id": "src-866c6ff6e74a67f2-d737de5671769155",
+      "imports": [
+        "LoopRenaming",
+        "Mathlib.Computability.Primrec"
+      ]
+    },
+    {
+      "module": "PRProgram",
+      "source_id": "src-866c6ff6e74a67f2-d7d981f8e4b7c431",
+      "imports": [
+        "LoopPrimrec"
+      ]
+    },
+    {
+      "module": "PRComposition",
+      "source_id": "src-866c6ff6e74a67f2-3baa5105ce03af68",
+      "imports": [
+        "PRProgram"
+      ]
+    },
+    {
+      "module": "PRRecursion",
+      "source_id": "src-866c6ff6e74a67f2-cfa3906b44082ed0",
+      "imports": [
+        "PRComposition"
+      ]
+    },
+    {
+      "module": "PRHeadRecursion",
+      "source_id": "src-866c6ff6e74a67f2-cd094a18aca4c831",
+      "imports": [
+        "PRRecursion"
+      ]
+    },
+    {
+      "module": "PRDerivation",
+      "source_id": "src-866c6ff6e74a67f2-a19a7d8a10f83f1d",
+      "imports": [
+        "PRHeadRecursion",
+        "Mathlib.Computability.Primrec"
+      ]
+    },
+    {
+      "module": "PRCoverage",
+      "source_id": "src-866c6ff6e74a67f2-81cb16d34e9ecfab",
+      "imports": [
+        "PRDerivation"
+      ]
+    },
+    {
+      "module": "PRSpecialize",
+      "source_id": "src-866c6ff6e74a67f2-81ea190ed896fdf5",
+      "imports": [
+        "PRCoverage"
+      ]
+    },
+    {
+      "module": "CodecProgram",
+      "source_id": "src-866c6ff6e74a67f2-ddfc3045b32a6d88",
+      "imports": [
+        "CodecStmt",
+        "CodecNumeric",
+        "PRSpecialize"
+      ]
+    },
+    {
+      "module": "PRWitnesses",
+      "source_id": "src-866c6ff6e74a67f2-da0c63dc5d066391",
+      "imports": [
+        "PRSpecialize"
+      ]
+    },
+    {
+      "module": "CodecWitnesses",
+      "source_id": "src-866c6ff6e74a67f2-7c5d81a92c7f53ea",
+      "imports": [
+        "CodecProgram",
+        "PRWitnesses"
+      ]
+    },
+    {
+      "module": "CodecParameter",
+      "source_id": "src-866c6ff6e74a67f2-a5866029402004dd",
+      "imports": [
+        "CodecProgram"
+      ]
+    },
+    {
+      "module": "CodecPrimrec",
+      "source_id": "src-866c6ff6e74a67f2-fe56ddf90eb85f56",
+      "imports": [
+        "CodecNumeric",
+        "Mathlib.Computability.Primrec"
+      ]
+    },
+    {
+      "module": "CodecIndexPrimrec",
+      "source_id": "src-866c6ff6e74a67f2-006b6fbeb441c681",
+      "imports": [
+        "CodecParameter",
+        "CodecPrimrec"
+      ]
+    },
+    {
+      "module": "P02A2.MeasureCore",
+      "source_id": "src-866c6ff6e74a67f2-1a34731f8a6703ff",
+      "imports": [
+        "Mathlib.MeasureTheory.Measure.Typeclasses.SFinite",
+        "Mathlib.MeasureTheory.Measure.Typeclasses.Probability",
+        "Mathlib.MeasureTheory.Measure.Map",
+        "Mathlib.MeasureTheory.Measure.Restrict",
+        "Mathlib.Tactic"
+      ]
+    },
+    {
+      "module": "TotalVariation",
+      "source_id": "src-866c6ff6e74a67f2-90a6ff04d553e876",
+      "imports": [
+        "P02A2.MeasureCore",
+        "Mathlib.MeasureTheory.Measure.Typeclasses.NoAtoms"
+      ]
+    },
+    {
+      "module": "P02A2.Fibres",
+      "source_id": "src-866c6ff6e74a67f2-9c917dc80eb9debd",
+      "imports": [
+        "P02A2.MeasureCore",
+        "Mathlib"
+      ]
+    },
+    {
+      "module": "P02A2.Refinement",
+      "source_id": "src-866c6ff6e74a67f2-9aea3b42373fd2d0",
+      "imports": [
+        "P02A2.MeasureCore",
+        "Mathlib.MeasureTheory.Measure.MeasureSpace",
+        "Mathlib.Tactic"
+      ]
+    },
+    {
+      "module": "P02A2.Observation",
+      "source_id": "src-866c6ff6e74a67f2-53f7ad4731bb3014",
+      "imports": [
+        "P02A2.Fibres",
+        "P02A2.Refinement",
+        "Mathlib"
+      ]
+    },
+    {
+      "module": "ResidualStability",
+      "source_id": "src-866c6ff6e74a67f2-2af01d12490d8039",
+      "imports": [
+        "TotalVariation",
+        "P02A2.Observation"
+      ]
+    },
+    {
+      "module": "AtomicPattern",
+      "source_id": "src-866c6ff6e74a67f2-ae0feb043e69e40f",
+      "imports": [
+        "ResidualStability"
+      ]
+    },
+    {
+      "module": "ArbitraryPattern",
+      "source_id": "src-866c6ff6e74a67f2-f96471552e69d73f",
+      "imports": [
+        "AtomicPattern",
+        "Mathlib.MeasureTheory.Constructions.Projective"
+      ]
+    },
+    {
+      "module": "Q8Measure",
+      "source_id": "src-866c6ff6e74a67f2-e95c4c134146e4a6",
+      "imports": [
+        "P02A2.MeasureCore",
+        "Mathlib.Probability.ProductMeasure",
+        "Mathlib.Probability.ProbabilityMassFunction.Constructions",
+        "Mathlib.Analysis.SpecificLimits.Basic"
+      ]
+    },
+    {
+      "module": "PatternBoundary",
+      "source_id": "src-866c6ff6e74a67f2-a6c558d0951e5aa8",
+      "imports": [
+        "ArbitraryPattern",
+        "Q8Measure"
+      ]
+    },
+    {
+      "module": "FinitePrefixBoundary",
+      "source_id": "src-866c6ff6e74a67f2-f4bcdfc838596b6f",
+      "imports": [
+        "PatternBoundary"
+      ]
+    },
+    {
+      "module": "PrefixTail",
+      "source_id": "src-866c6ff6e74a67f2-c9883345920c23ee",
+      "imports": [
+        "FinitePrefixBoundary",
+        "Mathlib.MeasureTheory.Constructions.Projective"
+      ]
+    },
+    {
+      "module": "P02A2.Mixture",
+      "source_id": "src-866c6ff6e74a67f2-7abc9a790a651846",
+      "imports": [
+        "P02A2.MeasureCore",
+        "Mathlib"
+      ]
+    },
+    {
+      "module": "TaggedRows",
+      "source_id": "src-866c6ff6e74a67f2-716927d203b8c2cb",
+      "imports": [
+        "PrefixTail",
+        "P02A2.Mixture"
+      ]
+    },
+    {
+      "module": "TaggedMass",
+      "source_id": "src-866c6ff6e74a67f2-1ff924f0e0595396",
+      "imports": [
+        "TaggedRows"
+      ]
+    },
+    {
+      "module": "InnovationMeasure",
+      "source_id": "src-866c6ff6e74a67f2-51e76bafa8a302b8",
+      "imports": [
+        "Q8Measure",
+        "Mathlib.Data.Set.Finite.Lattice",
+        "Mathlib"
+      ]
+    },
+    {
+      "module": "SurvivorCandidates",
+      "source_id": "src-866c6ff6e74a67f2-9c526399207b5b2a",
+      "imports": [
+        "Mathlib"
+      ]
+    },
+    {
+      "module": "SurvivorPrimrec",
+      "source_id": "src-866c6ff6e74a67f2-3b8a0d305eec405a",
+      "imports": [
+        "SurvivorCandidates",
+        "Mathlib.Computability.Primrec"
+      ]
+    },
+    {
+      "module": "Q8Machine",
+      "source_id": "src-866c6ff6e74a67f2-ca1d96ed0a685a45",
+      "imports": [
+        "Q8Measure"
+      ]
+    },
+    {
+      "module": "Q8Compiler",
+      "source_id": "src-866c6ff6e74a67f2-1cfa871f0191d634",
+      "imports": [
+        "Q8Machine",
+        "P02A2.ObserverCore"
+      ]
+    },
+    {
+      "module": "Sigma2RowLaw",
+      "source_id": "src-866c6ff6e74a67f2-4743de91fbc96740",
+      "imports": [
+        "InnovationMeasure",
+        "SurvivorPrimrec",
+        "Q8Compiler"
+      ]
+    },
+    {
+      "module": "Pi3Law",
+      "source_id": "src-866c6ff6e74a67f2-60b6ca5853bcb413",
+      "imports": [
+        "TaggedMass",
+        "Sigma2RowLaw"
+      ]
+    },
+    {
+      "module": "PrefixBits",
+      "source_id": "src-866c6ff6e74a67f2-326857107245a8e5",
+      "imports": [
+        "Pi3Law"
+      ]
+    },
+    {
+      "module": "FiniteSelector",
+      "source_id": "src-866c6ff6e74a67f2-0cae68bd3a1cd6b4",
+      "imports": [
+        "PrefixBits"
+      ]
+    },
+    {
+      "module": "PrefixObserver",
+      "source_id": "src-866c6ff6e74a67f2-fd86594015cd5b44",
+      "imports": [
+        "FiniteSelector"
+      ]
+    },
+    {
+      "module": "SelectorPrimrec",
+      "source_id": "src-866c6ff6e74a67f2-6d38d3a161358a2a",
+      "imports": [
+        "FiniteSelector",
+        "Mathlib.Computability.Primrec"
+      ]
+    },
+    {
+      "module": "PrefixPrimrec",
+      "source_id": "src-866c6ff6e74a67f2-9554a82544c736ea",
+      "imports": [
+        "PrefixObserver",
+        "SelectorPrimrec"
+      ]
+    },
+    {
+      "module": "Pi3Program",
+      "source_id": "src-866c6ff6e74a67f2-1027bda2ad760775",
+      "imports": [
+        "PrefixPrimrec",
+        "CodecParameter"
+      ]
+    },
+    {
+      "module": "Pi3IndexReduction",
+      "source_id": "src-866c6ff6e74a67f2-e0ff1f0d0bfd4b05",
+      "imports": [
+        "Pi3Program",
+        "CodecIndexPrimrec"
+      ]
+    }
+  ],
+  "module_order": [
+    "CodecVarint",
+    "CodecNumeric",
+    "P02A2.ObserverCore",
+    "CodecExpr",
+    "CodecStmt",
+    "LoopRenaming",
+    "LoopPrimrec",
+    "PRProgram",
+    "PRComposition",
+    "PRRecursion",
+    "PRHeadRecursion",
+    "PRDerivation",
+    "PRCoverage",
+    "PRSpecialize",
+    "CodecProgram",
+    "PRWitnesses",
+    "CodecWitnesses",
+    "CodecParameter",
+    "CodecPrimrec",
+    "CodecIndexPrimrec",
+    "P02A2.MeasureCore",
+    "TotalVariation",
+    "P02A2.Fibres",
+    "P02A2.Refinement",
+    "P02A2.Observation",
+    "ResidualStability",
+    "AtomicPattern",
+    "ArbitraryPattern",
+    "Q8Measure",
+    "PatternBoundary",
+    "FinitePrefixBoundary",
+    "PrefixTail",
+    "P02A2.Mixture",
+    "TaggedRows",
+    "TaggedMass",
+    "InnovationMeasure",
+    "SurvivorCandidates",
+    "SurvivorPrimrec",
+    "Q8Machine",
+    "Q8Compiler",
+    "Sigma2RowLaw",
+    "Pi3Law",
+    "PrefixBits",
+    "FiniteSelector",
+    "PrefixObserver",
+    "SelectorPrimrec",
+    "PrefixPrimrec",
+    "Pi3Program",
+    "Pi3IndexReduction"
+  ],
+  "targets": [
+    {
+      "name": "P02.Codec.continuation_byte",
+      "module": "CodecVarint"
+    },
+    {
+      "name": "P02.Codec.payload_eq_mod",
+      "module": "CodecVarint"
+    },
+    {
+      "name": "P02.Codec.accumulator_or",
+      "module": "CodecVarint"
+    },
+    {
+      "name": "P02.Codec.uv_nonempty",
+      "module": "CodecVarint"
+    },
+    {
+      "name": "P02.Codec.uv_bytes",
+      "module": "CodecVarint"
+    },
+    {
+      "name": "P02.Codec.readAccum_uv",
+      "module": "CodecVarint"
+    },
+    {
+      "name": "P02.Codec.uvRead_append",
+      "module": "CodecVarint"
+    },
+    {
+      "name": "P02.Codec.uvRead_uv",
+      "module": "CodecVarint"
+    },
+    {
+      "name": "P02.Codec.uv_injective",
+      "module": "CodecVarint"
+    },
+    {
+      "name": "P02.Codec.readAccum_split",
+      "module": "CodecVarint"
+    },
+    {
+      "name": "P02.Codec.uvRead_eq_some_iff",
+      "module": "CodecVarint"
+    },
+    {
+      "name": "P02.Codec.uv_zero",
+      "module": "CodecVarint"
+    },
+    {
+      "name": "P02.Codec.uv_one",
+      "module": "CodecVarint"
+    },
+    {
+      "name": "P02.Codec.uv_127",
+      "module": "CodecVarint"
+    },
+    {
+      "name": "P02.Codec.uv_128",
+      "module": "CodecVarint"
+    },
+    {
+      "name": "P02.Codec.uv_16384",
+      "module": "CodecVarint"
+    },
+    {
+      "name": "P02.Codec.uv_624485",
+      "module": "CodecVarint"
+    },
+    {
+      "name": "P02.Codec.uvRead_reject_overlong_zero",
+      "module": "CodecVarint"
+    },
+    {
+      "name": "P02.Codec.uvRead_reject_overlong_one",
+      "module": "CodecVarint"
+    },
+    {
+      "name": "P02.Codec.uvRead_reject_truncated",
+      "module": "CodecVarint"
+    },
+    {
+      "name": "P02.Codec.uvRead_reject_nonbyte",
+      "module": "CodecVarint"
+    },
+    {
+      "name": "P02.Codec.fromBytes_append_byte",
+      "module": "CodecNumeric"
+    },
+    {
+      "name": "P02.Codec.encodeNumeric_append_byte",
+      "module": "CodecNumeric"
+    },
+    {
+      "name": "P02.Codec.encodeNumeric_pos",
+      "module": "CodecNumeric"
+    },
+    {
+      "name": "P02.Codec.toBytes_zero",
+      "module": "CodecNumeric"
+    },
+    {
+      "name": "P02.Codec.toBytes_one",
+      "module": "CodecNumeric"
+    },
+    {
+      "name": "P02.Codec.toBytes_step",
+      "module": "CodecNumeric"
+    },
+    {
+      "name": "P02.Codec.toBytes_encodeNumeric",
+      "module": "CodecNumeric"
+    },
+    {
+      "name": "P02.Codec.decodeNumeric_encodeNumeric",
+      "module": "CodecNumeric"
+    },
+    {
+      "name": "P02.Codec.encodeNumeric_injective",
+      "module": "CodecNumeric"
+    },
+    {
+      "name": "P02.Codec.toBytes_bytes",
+      "module": "CodecNumeric"
+    },
+    {
+      "name": "P02.Codec.fromBytes_toBytes",
+      "module": "CodecNumeric"
+    },
+    {
+      "name": "P02.Codec.decodeNumeric_sound",
+      "module": "CodecNumeric"
+    },
+    {
+      "name": "P02.Codec.decodeNumeric_eq_some_iff",
+      "module": "CodecNumeric"
+    },
+    {
+      "name": "P02.Codec.numeric_uv_roundtrip",
+      "module": "CodecNumeric"
+    },
+    {
+      "name": "P02.Codec.readExpr_append",
+      "module": "CodecExpr"
+    },
+    {
+      "name": "P02.Codec.bytes_cons",
+      "module": "CodecExpr"
+    },
+    {
+      "name": "P02.Codec.bytes_append",
+      "module": "CodecExpr"
+    },
+    {
+      "name": "P02.Codec.exprBytes_bytes",
+      "module": "CodecExpr"
+    },
+    {
+      "name": "P02.Codec.exprDepth_le_length",
+      "module": "CodecExpr"
+    },
+    {
+      "name": "P02.Codec.readStmt_append",
+      "module": "CodecStmt"
+    },
+    {
+      "name": "P02.Codec.stmtBytes_bytes",
+      "module": "CodecStmt"
+    },
+    {
+      "name": "P02.Codec.stmtDepth_le_length",
+      "module": "CodecStmt"
+    },
+    {
+      "name": "P02.Codec.sequenceList_execution",
+      "module": "CodecStmt"
+    },
+    {
+      "name": "P02.Codec.stripMagic_append",
+      "module": "CodecProgram"
+    },
+    {
+      "name": "P02.Codec.encodeBytes_bytes",
+      "module": "CodecProgram"
+    },
+    {
+      "name": "P02.Codec.readStmt_self",
+      "module": "CodecProgram"
+    },
+    {
+      "name": "P02.Codec.decodeBytes_encodeBytes",
+      "module": "CodecProgram"
+    },
+    {
+      "name": "P02.Codec.decodeIndex_programIndex",
+      "module": "CodecProgram"
+    },
+    {
+      "name": "P02.Codec.binaryStore_extend",
+      "module": "CodecProgram"
+    },
+    {
+      "name": "P02.Codec.evaluateIndex_programIndex",
+      "module": "CodecProgram"
+    },
+    {
+      "name": "P02.Codec.literal128_bytes",
+      "module": "CodecWitnesses"
+    },
+    {
+      "name": "P02.Codec.literal128_roundtrip",
+      "module": "CodecWitnesses"
+    },
+    {
+      "name": "P02.Codec.rejects_wrong_magic_version",
+      "module": "CodecWitnesses"
+    },
+    {
+      "name": "P02.Codec.rejects_trailing_byte",
+      "module": "CodecWitnesses"
+    },
+    {
+      "name": "P02.Codec.compiled_addition_index",
+      "module": "CodecWitnesses"
+    },
+    {
+      "name": "P02.Codec.rejects_specialized_arity_one",
+      "module": "CodecWitnesses"
+    },
+    {
+      "name": "P02.Codec.parameterIndex_correct",
+      "module": "CodecParameter"
+    },
+    {
+      "name": "P02.Codec.derivation_parameterIndex_correct",
+      "module": "CodecParameter"
+    },
+    {
+      "name": "P02.Codec.exists_parameterIndex_of_primrec",
+      "module": "CodecParameter"
+    },
+    {
+      "name": "P02.Codec.uvTableStep_primrec",
+      "module": "CodecPrimrec"
+    },
+    {
+      "name": "P02.Codec.uvTableStep_table",
+      "module": "CodecPrimrec"
+    },
+    {
+      "name": "P02.Codec.uv_primrec",
+      "module": "CodecPrimrec"
+    },
+    {
+      "name": "P02.Codec.fromBytes_primrec",
+      "module": "CodecPrimrec"
+    },
+    {
+      "name": "P02.Codec.encodeNumeric_primrec",
+      "module": "CodecPrimrec"
+    },
+    {
+      "name": "P02.Codec.numeric_uv_primrec",
+      "module": "CodecPrimrec"
+    },
+    {
+      "name": "P02.Codec.encodeNumeric_comp_primrec",
+      "module": "CodecPrimrec"
+    },
+    {
+      "name": "P02.Codec.stmtBytes_seq_primrec",
+      "module": "CodecIndexPrimrec"
+    },
+    {
+      "name": "P02.Codec.stmtBytes_constant_primrec",
+      "module": "CodecIndexPrimrec"
+    },
+    {
+      "name": "P02.Codec.parameterAssignments",
+      "module": "CodecIndexPrimrec"
+    },
+    {
+      "name": "P02.Codec.specialize_body_bytes_primrec",
+      "module": "CodecIndexPrimrec"
+    },
+    {
+      "name": "P02.Codec.specialize_bytes_primrec",
+      "module": "CodecIndexPrimrec"
+    },
+    {
+      "name": "P02.Codec.parameterIndex_primrec",
+      "module": "CodecIndexPrimrec"
+    },
+    {
+      "name": "P02A2.Pi3Program.family_primrec",
+      "module": "Pi3Program"
+    },
+    {
+      "name": "P02A2.Pi3Program.exists_fixed_program",
+      "module": "Pi3Program"
+    },
+    {
+      "name": "P02A2.Pi3Program.numeric_observer_eq",
+      "module": "Pi3Program"
+    },
+    {
+      "name": "P02A2.Pi3Program.numeric_zero_defect_iff",
+      "module": "Pi3Program"
+    },
+    {
+      "name": "P02A2.Pi3Program.exists_numeric_family",
+      "module": "Pi3Program"
+    },
+    {
+      "name": "P02A2.Pi3IndexReduction.exists_primrec_zero_defect_reduction",
+      "module": "Pi3IndexReduction"
+    },
+    {
+      "name": "P02A2.Pi3IndexReduction.exists_primrec_positive_defect_reduction",
+      "module": "Pi3IndexReduction"
+    },
+    {
+      "name": "P02.Codec.fromBytes_nil",
+      "module": "CodecNumeric"
+    },
+    {
+      "name": "P02.Codec.encodeNumeric_nil",
+      "module": "CodecNumeric"
+    }
+  ],
+  "pins": {
+    "lean_version": "4.19.0",
+    "lean_binary_sha256": "92c3d35b5bfaa5e0fea413a775d504cf46cd95e1345df61c2274f76779e7e023",
+    "packages": [
+      {
+        "name": "mathlib",
+        "revision": "c44e0c8ee63ca166450922a373c7409c5d26b00b"
+      },
+      {
+        "name": "plausible",
+        "revision": "77e08eddc486491d7b9e470926b3dbe50319451a"
+      },
+      {
+        "name": "LeanSearchClient",
+        "revision": "25078369972d295301f5a1e53c3e5850cf6d9d4c"
+      },
+      {
+        "name": "importGraph",
+        "revision": "e6a9f0f5ee3ccf7443a0070f92b62f8db12ae82b"
+      },
+      {
+        "name": "proofwidgets",
+        "revision": "c4919189477c3221e6a204008998b0d724f49904"
+      },
+      {
+        "name": "aesop",
+        "revision": "5d50b08dedd7d69b3d9b3176e0d58a23af228884"
+      },
+      {
+        "name": "Qq",
+        "revision": "fa4f7f15d97591a9cf3aa7724ba371c7fc6dda02"
+      },
+      {
+        "name": "batteries",
+        "revision": "f5d04a9c4973d401c8c92500711518f7c656f034"
+      },
+      {
+        "name": "Cli",
+        "revision": "02dbd02bc00ec4916e99b04b2245b30200e200d0"
+      }
+    ]
+  },
+  "official_imports": [
+    {
+      "module": "Mathlib",
+      "repository": "mathlib",
+      "source": "Mathlib.lean",
+      "sha256": "b0518254279fabf0c6a920804e684536b0f5e2bd1cb6318d0609eb563413f20a"
+    },
+    {
+      "module": "Mathlib.Analysis.SpecificLimits.Basic",
+      "repository": "mathlib",
+      "source": "Mathlib/Analysis/SpecificLimits/Basic.lean",
+      "sha256": "cbf9b6b47e6ee6b2962fb2f16ba49b7e005e9a93c0adc1244cc770c34f527315"
+    },
+    {
+      "module": "Mathlib.Computability.Primrec",
+      "repository": "mathlib",
+      "source": "Mathlib/Computability/Primrec.lean",
+      "sha256": "b279a3218434a6f930970b9f43669567e99adc548c31796590f42bdc205dcc22"
+    },
+    {
+      "module": "Mathlib.Data.Nat.Bitwise",
+      "repository": "mathlib",
+      "source": "Mathlib/Data/Nat/Bitwise.lean",
+      "sha256": "e987a9f57489a80d8e2de33b7ad8662516b85fe745d611c0fe9e6c965fb6f5b7"
+    },
+    {
+      "module": "Mathlib.Data.Set.Finite.Lattice",
+      "repository": "mathlib",
+      "source": "Mathlib/Data/Set/Finite/Lattice.lean",
+      "sha256": "e09c1e49262e285fa21e3992434730d48a792abc4d31d4e0e448ff526e931144"
+    },
+    {
+      "module": "Mathlib.MeasureTheory.Constructions.Projective",
+      "repository": "mathlib",
+      "source": "Mathlib/MeasureTheory/Constructions/Projective.lean",
+      "sha256": "3fc8a814734c382ebda3bfb68dbba775c461f411380fac854ec7121ae7712fcf"
+    },
+    {
+      "module": "Mathlib.MeasureTheory.Measure.Map",
+      "repository": "mathlib",
+      "source": "Mathlib/MeasureTheory/Measure/Map.lean",
+      "sha256": "3c7fb458eece85551c9b7bd28955a517e14f4bee77934b8b001440a57b6f7f71"
+    },
+    {
+      "module": "Mathlib.MeasureTheory.Measure.MeasureSpace",
+      "repository": "mathlib",
+      "source": "Mathlib/MeasureTheory/Measure/MeasureSpace.lean",
+      "sha256": "c955504c3afe89c1c0524f939b5ebec195726997d4cf4fa9975be3352146f51f"
+    },
+    {
+      "module": "Mathlib.MeasureTheory.Measure.Restrict",
+      "repository": "mathlib",
+      "source": "Mathlib/MeasureTheory/Measure/Restrict.lean",
+      "sha256": "0c0c2108a28516ae3a85dfbfc2e5d7a3afd26dcc113aa8b19c2a79adfe12e56e"
+    },
+    {
+      "module": "Mathlib.MeasureTheory.Measure.Typeclasses.NoAtoms",
+      "repository": "mathlib",
+      "source": "Mathlib/MeasureTheory/Measure/Typeclasses/NoAtoms.lean",
+      "sha256": "f840a5341797290644d0bae0b916c866e7f98a6d25b3894de87341ff4c1cfdb7"
+    },
+    {
+      "module": "Mathlib.MeasureTheory.Measure.Typeclasses.Probability",
+      "repository": "mathlib",
+      "source": "Mathlib/MeasureTheory/Measure/Typeclasses/Probability.lean",
+      "sha256": "419ec9a5612f378b8603f4adb8a0941485481c1d754e95afb8d0a4ddd35f8883"
+    },
+    {
+      "module": "Mathlib.MeasureTheory.Measure.Typeclasses.SFinite",
+      "repository": "mathlib",
+      "source": "Mathlib/MeasureTheory/Measure/Typeclasses/SFinite.lean",
+      "sha256": "b9fb829526454d1f9526ed9bb21de6d661fdb4a01a9847eb6669bedf68f1f784"
+    },
+    {
+      "module": "Mathlib.Probability.ProbabilityMassFunction.Constructions",
+      "repository": "mathlib",
+      "source": "Mathlib/Probability/ProbabilityMassFunction/Constructions.lean",
+      "sha256": "8e50bff3cd3b46107d612eed21e1648752a86f9c373d4b6b0fe10e0e22a43973"
+    },
+    {
+      "module": "Mathlib.Probability.ProductMeasure",
+      "repository": "mathlib",
+      "source": "Mathlib/Probability/ProductMeasure.lean",
+      "sha256": "f8af06e87e2e28916f0fa8a455f792ded4b85a22e1dea5e1c6f9cac1d31b9830"
+    },
+    {
+      "module": "Mathlib.Tactic",
+      "repository": "mathlib",
+      "source": "Mathlib/Tactic.lean",
+      "sha256": "f20038eba7bba63f07a2f854496101226df407e20414e6b8ebf94b14f95e831b"
+    }
+  ],
+  "driver": {
+    "source_id": "src-866c6ff6e74a67f2-279d28ea9829b80d",
+    "lean_argument": "EXECUTABLE"
+  },
+  "controls": "ORIGINAL_DRIVER_REQUIRED",
+  "classification": "CURRENT_EVIDENCE"
+}

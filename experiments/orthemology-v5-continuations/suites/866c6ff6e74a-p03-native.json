@@ -1,0 +1,387 @@
+{
+  "id": "866c6ff6e74a-p03-native",
+  "origin": "866c6ff6e74a67f2bc452b49a0ada05311c0c2601585ea166404719172bd8086",
+  "descriptor_source_id": "src-866c6ff6e74a67f2-47b7b457c989b63a",
+  "modules": [
+    {
+      "module": "InternalPolymorphism",
+      "source_id": "src-866c6ff6e74a67f2-51476876f2f489fd",
+      "imports": [
+        "Init"
+      ]
+    },
+    {
+      "module": "FiniteBridge",
+      "source_id": "src-866c6ff6e74a67f2-f65fe32d5c7c2be9",
+      "imports": [
+        "InternalPolymorphism"
+      ]
+    },
+    {
+      "module": "SourceTypeOps",
+      "source_id": "src-866c6ff6e74a67f2-bed7610ef289fba9",
+      "imports": [
+        "FiniteBridge"
+      ]
+    },
+    {
+      "module": "SourceHeadStep",
+      "source_id": "src-866c6ff6e74a67f2-a844a64ee48e7898",
+      "imports": [
+        "SourceTypeOps"
+      ]
+    },
+    {
+      "module": "SourceChecker",
+      "source_id": "src-866c6ff6e74a67f2-f975d1604677ad96",
+      "imports": [
+        "SourceHeadStep"
+      ]
+    },
+    {
+      "module": "SourceCheckerProofs",
+      "source_id": "src-866c6ff6e74a67f2-c21e94ce682d5ad1",
+      "imports": [
+        "SourceChecker"
+      ]
+    },
+    {
+      "module": "SourceResources",
+      "source_id": "src-866c6ff6e74a67f2-195ea776a6188b18",
+      "imports": [
+        "SourceCheckerProofs"
+      ]
+    },
+    {
+      "module": "SourceRepresentation",
+      "source_id": "src-866c6ff6e74a67f2-517a1f41c66cc68d",
+      "imports": [
+        "SourceResources"
+      ]
+    },
+    {
+      "module": "NativeDecoder",
+      "source_id": "src-866c6ff6e74a67f2-c94b05cad45aa034",
+      "imports": [
+        "SourceRepresentation"
+      ]
+    },
+    {
+      "module": "NativeDecoderProofs",
+      "source_id": "src-866c6ff6e74a67f2-0d7645c52f15c9df",
+      "imports": [
+        "NativeDecoder"
+      ]
+    },
+    {
+      "module": "NativeDecoderSoundness",
+      "source_id": "src-866c6ff6e74a67f2-4c6af2e210d77e0b",
+      "imports": [
+        "NativeDecoderProofs"
+      ]
+    },
+    {
+      "module": "NativeProofGrammar",
+      "source_id": "src-866c6ff6e74a67f2-b0822547eb5a982c",
+      "imports": [
+        "NativeDecoderSoundness"
+      ]
+    },
+    {
+      "module": "NativeProofSoundness",
+      "source_id": "src-866c6ff6e74a67f2-4a2ca5cd4266ff90",
+      "imports": [
+        "NativeProofGrammar"
+      ]
+    },
+    {
+      "module": "SourceExportBoundary",
+      "source_id": "src-866c6ff6e74a67f2-78cbec8512227de4",
+      "imports": [
+        "SourceResources"
+      ]
+    },
+    {
+      "module": "NativeCheckerBridge",
+      "source_id": "src-866c6ff6e74a67f2-1a18c91d7479f9ec",
+      "imports": [
+        "NativeProofSoundness",
+        "SourceExportBoundary"
+      ]
+    },
+    {
+      "module": "NativeFieldLemmas",
+      "source_id": "src-866c6ff6e74a67f2-b5b5008f62bda477",
+      "imports": [
+        "NativeCheckerBridge"
+      ]
+    },
+    {
+      "module": "NativeDecoderCompleteness",
+      "source_id": "src-866c6ff6e74a67f2-363b03b286d5bb23",
+      "imports": [
+        "NativeFieldLemmas"
+      ]
+    },
+    {
+      "module": "SourceResourceBounds",
+      "source_id": "src-866c6ff6e74a67f2-faf4d8cb10e80d6e",
+      "imports": [
+        "SourceRepresentation"
+      ]
+    },
+    {
+      "module": "NativeRepresentationEquivalence",
+      "source_id": "src-866c6ff6e74a67f2-295ad59a7d5ba2c9",
+      "imports": [
+        "NativeDecoderCompleteness",
+        "SourceResourceBounds"
+      ]
+    },
+    {
+      "module": "NativeDecoderControls",
+      "source_id": "src-866c6ff6e74a67f2-906a1b42552ce13f",
+      "imports": [
+        "NativeProofSoundness",
+        "SourceExportBoundary"
+      ]
+    },
+    {
+      "module": "NativeDecoderAudit",
+      "source_id": "src-866c6ff6e74a67f2-d1d66343d7e92359",
+      "imports": [
+        "NativeRepresentationEquivalence",
+        "NativeDecoderControls"
+      ]
+    },
+    {
+      "module": "SourceBranchControls",
+      "source_id": "src-866c6ff6e74a67f2-a584d2345b7dd3e0",
+      "imports": [
+        "SourceResources"
+      ]
+    },
+    {
+      "module": "SourceControls",
+      "source_id": "src-866c6ff6e74a67f2-9ee77cf952ff750a",
+      "imports": [
+        "SourceResources"
+      ]
+    },
+    {
+      "module": "SourceCheckerAudit",
+      "source_id": "src-866c6ff6e74a67f2-45bbb6ac4d6e4bba",
+      "imports": [
+        "SourceResources",
+        "SourceControls",
+        "SourceResourceBounds",
+        "SourceBranchControls",
+        "SourceExportBoundary"
+      ]
+    }
+  ],
+  "module_order": [
+    "InternalPolymorphism",
+    "FiniteBridge",
+    "SourceTypeOps",
+    "SourceHeadStep",
+    "SourceChecker",
+    "SourceCheckerProofs",
+    "SourceResources",
+    "SourceRepresentation",
+    "NativeDecoder",
+    "NativeDecoderProofs",
+    "NativeDecoderSoundness",
+    "NativeProofGrammar",
+    "NativeProofSoundness",
+    "SourceExportBoundary",
+    "NativeCheckerBridge",
+    "NativeFieldLemmas",
+    "NativeDecoderCompleteness",
+    "SourceResourceBounds",
+    "NativeRepresentationEquivalence",
+    "NativeDecoderControls",
+    "NativeDecoderAudit",
+    "SourceBranchControls",
+    "SourceControls",
+    "SourceCheckerAudit"
+  ],
+  "targets": [
+    {
+      "name": "P03Source.sourceScoped_eq",
+      "module": "SourceTypeOps"
+    },
+    {
+      "name": "P03Source.sourceInstantiate_eq",
+      "module": "SourceTypeOps"
+    },
+    {
+      "name": "P03Source.sourceHeadStep_eq",
+      "module": "SourceHeadStep"
+    },
+    {
+      "name": "P03Source.trace_matches",
+      "module": "SourceCheckerProofs"
+    },
+    {
+      "name": "P03Source.source_core_export_square",
+      "module": "SourceCheckerProofs"
+    },
+    {
+      "name": "P03Source.sourceRun_refines_core",
+      "module": "SourceResources"
+    },
+    {
+      "name": "P03Source.sourceCheck_refines_core",
+      "module": "SourceResources"
+    },
+    {
+      "name": "P03Source.source_checker_constructor_erasure_square",
+      "module": "SourceResources"
+    },
+    {
+      "name": "P03Source.source_checker_sound",
+      "module": "SourceResources"
+    },
+    {
+      "name": "P03SourceControls.erased_checker_acceptance_is_not_source_acceptance",
+      "module": "SourceControls"
+    },
+    {
+      "name": "P03Source.proofTree_shape",
+      "module": "SourceRepresentation"
+    },
+    {
+      "name": "P03Source.sourceCheck_input_guards",
+      "module": "SourceResourceBounds"
+    },
+    {
+      "name": "P03Source.semantic_refusal_preserved",
+      "module": "SourceBranchControls"
+    },
+    {
+      "name": "P03Source.semantic_singleton_trace",
+      "module": "SourceBranchControls"
+    },
+    {
+      "name": "P03Source.encoded_nodes_le_export_work",
+      "module": "SourceExportBoundary"
+    },
+    {
+      "name": "P03Source.partial_constructor_export_square",
+      "module": "SourceExportBoundary"
+    },
+    {
+      "name": "P03Source.source_checker_export_square",
+      "module": "SourceExportBoundary"
+    },
+    {
+      "name": "P03Source.checker_acceptance_not_total_export",
+      "module": "SourceExportBoundary"
+    },
+    {
+      "name": "P03Source.decodeType_sound",
+      "module": "NativeDecoderSoundness"
+    },
+    {
+      "name": "P03Source.decodeTerm_sound",
+      "module": "NativeDecoderSoundness"
+    },
+    {
+      "name": "P03Source.decodeTrace_sound",
+      "module": "NativeDecoderSoundness"
+    },
+    {
+      "name": "P03Source.decodeProof_sound",
+      "module": "NativeProofSoundness"
+    },
+    {
+      "name": "P03Source.decodeNativeProof_roundtrip",
+      "module": "NativeDecoderProofs"
+    },
+    {
+      "name": "P03Source.NativeProofRep.decode_complete",
+      "module": "NativeDecoderCompleteness"
+    },
+    {
+      "name": "P03Source.NativeProofRep.deterministic",
+      "module": "NativeRepresentationEquivalence"
+    },
+    {
+      "name": "P03Source.nativeCheck_representation_equivalence",
+      "module": "NativeRepresentationEquivalence"
+    },
+    {
+      "name": "P03Source.native_checker_constructor_erasure_square",
+      "module": "NativeCheckerBridge"
+    },
+    {
+      "name": "P03Source.native_checker_sound",
+      "module": "NativeCheckerBridge"
+    },
+    {
+      "name": "P03Source.native_check_rejects_duplicate_fields",
+      "module": "NativeCheckerBridge"
+    },
+    {
+      "name": "P03Source.native_checker_partial_export_square",
+      "module": "NativeCheckerBridge"
+    }
+  ],
+  "pins": {
+    "lean_version": "4.19.0",
+    "lean_binary_sha256": "92c3d35b5bfaa5e0fea413a775d504cf46cd95e1345df61c2274f76779e7e023",
+    "packages": [
+      {
+        "name": "mathlib",
+        "revision": "c44e0c8ee63ca166450922a373c7409c5d26b00b"
+      },
+      {
+        "name": "plausible",
+        "revision": "77e08eddc486491d7b9e470926b3dbe50319451a"
+      },
+      {
+        "name": "LeanSearchClient",
+        "revision": "25078369972d295301f5a1e53c3e5850cf6d9d4c"
+      },
+      {
+        "name": "importGraph",
+        "revision": "e6a9f0f5ee3ccf7443a0070f92b62f8db12ae82b"
+      },
+      {
+        "name": "proofwidgets",
+        "revision": "c4919189477c3221e6a204008998b0d724f49904"
+      },
+      {
+        "name": "aesop",
+        "revision": "5d50b08dedd7d69b3d9b3176e0d58a23af228884"
+      },
+      {
+        "name": "Qq",
+        "revision": "fa4f7f15d97591a9cf3aa7724ba371c7fc6dda02"
+      },
+      {
+        "name": "batteries",
+        "revision": "f5d04a9c4973d401c8c92500711518f7c656f034"
+      },
+      {
+        "name": "Cli",
+        "revision": "02dbd02bc00ec4916e99b04b2245b30200e200d0"
+      }
+    ]
+  },
+  "official_imports": [
+    {
+      "module": "Init",
+      "repository": "lean-release",
+      "source": "Init.lean",
+      "sha256": "94c76e813fdf92a0375566c1c7f3335cf269703da809c6189dc0de09d66b0204"
+    }
+  ],
+  "driver": {
+    "source_id": "src-866c6ff6e74a67f2-279d28ea9829b80d",
+    "lean_argument": "EXECUTABLE"
+  },
+  "controls": "ORIGINAL_DRIVER_REQUIRED",
+  "classification": "CURRENT_EVIDENCE"
+}

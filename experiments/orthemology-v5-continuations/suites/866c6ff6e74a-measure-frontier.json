@@ -1,0 +1,639 @@
+{
+  "id": "866c6ff6e74a-measure-frontier",
+  "origin": "866c6ff6e74a67f2bc452b49a0ada05311c0c2601585ea166404719172bd8086",
+  "descriptor_source_id": "src-866c6ff6e74a67f2-47b7b457c989b63a",
+  "modules": [
+    {
+      "module": "P02A2.MeasureCore",
+      "source_id": "src-866c6ff6e74a67f2-b5a2270ccae34bac",
+      "imports": [
+        "Mathlib.MeasureTheory.Measure.Typeclasses.SFinite",
+        "Mathlib.MeasureTheory.Measure.Typeclasses.Probability",
+        "Mathlib.MeasureTheory.Measure.Map",
+        "Mathlib.MeasureTheory.Measure.Restrict",
+        "Mathlib.Tactic"
+      ]
+    },
+    {
+      "module": "TotalVariation",
+      "source_id": "src-866c6ff6e74a67f2-df0636c7ec44458d",
+      "imports": [
+        "P02A2.MeasureCore",
+        "Mathlib.MeasureTheory.Measure.Typeclasses.NoAtoms"
+      ]
+    },
+    {
+      "module": "P02A2.Fibres",
+      "source_id": "src-866c6ff6e74a67f2-f2979e25e6860e1a",
+      "imports": [
+        "P02A2.MeasureCore",
+        "Mathlib"
+      ]
+    },
+    {
+      "module": "P02A2.Refinement",
+      "source_id": "src-866c6ff6e74a67f2-62958769f7c66975",
+      "imports": [
+        "P02A2.MeasureCore",
+        "Mathlib.MeasureTheory.Measure.MeasureSpace",
+        "Mathlib.Tactic"
+      ]
+    },
+    {
+      "module": "P02A2.Observation",
+      "source_id": "src-866c6ff6e74a67f2-8d62a0beba53bb1b",
+      "imports": [
+        "P02A2.Fibres",
+        "P02A2.Refinement",
+        "Mathlib"
+      ]
+    },
+    {
+      "module": "ResidualStability",
+      "source_id": "src-866c6ff6e74a67f2-bc5c5574a3f3d1e6",
+      "imports": [
+        "TotalVariation",
+        "P02A2.Observation"
+      ]
+    },
+    {
+      "module": "AtomicPattern",
+      "source_id": "src-866c6ff6e74a67f2-219b7ebec4a6f48e",
+      "imports": [
+        "ResidualStability"
+      ]
+    },
+    {
+      "module": "ArbitraryPattern",
+      "source_id": "src-866c6ff6e74a67f2-6c104e2995596d84",
+      "imports": [
+        "AtomicPattern",
+        "Mathlib.MeasureTheory.Constructions.Projective"
+      ]
+    },
+    {
+      "module": "Q8Measure",
+      "source_id": "src-866c6ff6e74a67f2-12fc936fba30ce01",
+      "imports": [
+        "P02A2.MeasureCore",
+        "Mathlib.Probability.ProductMeasure",
+        "Mathlib.Probability.ProbabilityMassFunction.Constructions",
+        "Mathlib.Analysis.SpecificLimits.Basic"
+      ]
+    },
+    {
+      "module": "PatternBoundary",
+      "source_id": "src-866c6ff6e74a67f2-0e60542271533a04",
+      "imports": [
+        "ArbitraryPattern",
+        "Q8Measure"
+      ]
+    },
+    {
+      "module": "FinitePrefixBoundary",
+      "source_id": "src-866c6ff6e74a67f2-d8d1c0c9015c4763",
+      "imports": [
+        "PatternBoundary"
+      ]
+    },
+    {
+      "module": "LossDecoder",
+      "source_id": "src-866c6ff6e74a67f2-ba8607af3550e2e2",
+      "imports": [
+        "AtomicPattern"
+      ]
+    },
+    {
+      "module": "HistoryClass",
+      "source_id": "src-866c6ff6e74a67f2-e670a81b29dbb19f",
+      "imports": [
+        "LossDecoder"
+      ]
+    },
+    {
+      "module": "NoUniversalClassifier",
+      "source_id": "src-866c6ff6e74a67f2-b9663eaed43bf48c",
+      "imports": [
+        "FinitePrefixBoundary"
+      ]
+    },
+    {
+      "module": "PatternAdditivity",
+      "source_id": "src-866c6ff6e74a67f2-50aac2bbb4b56432",
+      "imports": [
+        "AtomicPattern"
+      ]
+    },
+    {
+      "module": "PointAtomBoundary",
+      "source_id": "src-866c6ff6e74a67f2-946cfa0b29512068",
+      "imports": [
+        "TotalVariation",
+        "Mathlib.Data.Real.Cardinality"
+      ]
+    },
+    {
+      "module": "PositiveMass",
+      "source_id": "src-866c6ff6e74a67f2-1c5e53eccdf75b4f",
+      "imports": [
+        "Mathlib.MeasureTheory.Measure.Typeclasses.SFinite",
+        "Mathlib.MeasureTheory.Measure.Map",
+        "Mathlib.Tactic"
+      ]
+    },
+    {
+      "module": "PrefixMixture",
+      "source_id": "src-866c6ff6e74a67f2-47552fcb47b81073",
+      "imports": [
+        "FinitePrefixBoundary",
+        "PatternAdditivity"
+      ]
+    }
+  ],
+  "module_order": [
+    "P02A2.MeasureCore",
+    "TotalVariation",
+    "P02A2.Fibres",
+    "P02A2.Refinement",
+    "P02A2.Observation",
+    "ResidualStability",
+    "AtomicPattern",
+    "ArbitraryPattern",
+    "Q8Measure",
+    "PatternBoundary",
+    "FinitePrefixBoundary",
+    "LossDecoder",
+    "HistoryClass",
+    "NoUniversalClassifier",
+    "PatternAdditivity",
+    "PointAtomBoundary",
+    "PositiveMass",
+    "PrefixMixture"
+  ],
+  "targets": [
+    {
+      "name": "OrthemologyMeasure.positivePoints_countable",
+      "module": "PositiveMass"
+    },
+    {
+      "name": "OrthemologyMeasure.positiveEvent_measurable",
+      "module": "PositiveMass"
+    },
+    {
+      "name": "OrthemologyMeasure.positiveEvent_refinement",
+      "module": "PositiveMass"
+    },
+    {
+      "name": "OrthemologyMeasure.full_cell_eq_iInter",
+      "module": "PositiveMass"
+    },
+    {
+      "name": "OrthemologyMeasure.positiveEvent_full_subset",
+      "module": "PositiveMass"
+    },
+    {
+      "name": "OrthemologyMeasure.residual_mass_identity",
+      "module": "PositiveMass"
+    },
+    {
+      "name": "OrthemologyMeasure.eventTV_range_bddAbove",
+      "module": "TotalVariation"
+    },
+    {
+      "name": "OrthemologyMeasure.measurable_event_le_eventTV",
+      "module": "TotalVariation"
+    },
+    {
+      "name": "OrthemologyMeasure.eventTV_le_iff",
+      "module": "TotalVariation"
+    },
+    {
+      "name": "OrthemologyMeasure.eventTV_nonnegative",
+      "module": "TotalVariation"
+    },
+    {
+      "name": "OrthemologyMeasure.eventTV_map_le",
+      "module": "TotalVariation"
+    },
+    {
+      "name": "OrthemologyMeasure.defect_eventTV_bound",
+      "module": "TotalVariation"
+    },
+    {
+      "name": "OrthemologyMeasure.observedSupport_measurable",
+      "module": "ResidualStability"
+    },
+    {
+      "name": "OrthemologyMeasure.commonObservedSupport_measurable",
+      "module": "ResidualStability"
+    },
+    {
+      "name": "OrthemologyMeasure.observedSupport_ae_common_left",
+      "module": "ResidualStability"
+    },
+    {
+      "name": "OrthemologyMeasure.observedSupport_ae_common_right",
+      "module": "ResidualStability"
+    },
+    {
+      "name": "OrthemologyMeasure.ae_iInter",
+      "module": "ResidualStability"
+    },
+    {
+      "name": "OrthemologyMeasure.commonResidual_measurable",
+      "module": "ResidualStability"
+    },
+    {
+      "name": "OrthemologyMeasure.ownResidual_ae_common_left",
+      "module": "ResidualStability"
+    },
+    {
+      "name": "OrthemologyMeasure.ownResidual_ae_common_right",
+      "module": "ResidualStability"
+    },
+    {
+      "name": "OrthemologyMeasure.residual_eventTV_bound",
+      "module": "ResidualStability"
+    },
+    {
+      "name": "OrthemologyMeasure.membershipPattern_measurable",
+      "module": "AtomicPattern"
+    },
+    {
+      "name": "OrthemologyMeasure.membershipPattern_ae",
+      "module": "AtomicPattern"
+    },
+    {
+      "name": "OrthemologyMeasure.atomicPattern_eventTV_bound",
+      "module": "AtomicPattern"
+    },
+    {
+      "name": "OrthemologyMeasure.decodedAtomicPattern_eventTV_bound",
+      "module": "AtomicPattern"
+    },
+    {
+      "name": "OrthemologyMeasure.firstLoss_none",
+      "module": "LossDecoder"
+    },
+    {
+      "name": "OrthemologyMeasure.firstLoss_some",
+      "module": "LossDecoder"
+    },
+    {
+      "name": "OrthemologyMeasure.firstLoss_measurable",
+      "module": "LossDecoder"
+    },
+    {
+      "name": "OrthemologyMeasure.lossClass_measurable",
+      "module": "LossDecoder"
+    },
+    {
+      "name": "OrthemologyMeasure.historyPattern_measurable",
+      "module": "HistoryClass"
+    },
+    {
+      "name": "OrthemologyMeasure.historyClass_measurable",
+      "module": "HistoryClass"
+    },
+    {
+      "name": "OrthemologyMeasure.historyPattern_eventTV_bound",
+      "module": "HistoryClass"
+    },
+    {
+      "name": "OrthemologyMeasure.historyClass_eventTV_bound",
+      "module": "HistoryClass"
+    },
+    {
+      "name": "OrthemologyMeasure.historyClass_atom",
+      "module": "HistoryClass"
+    },
+    {
+      "name": "OrthemologyMeasure.historyClass_residual",
+      "module": "HistoryClass"
+    },
+    {
+      "name": "OrthemologyMeasure.historyClass_finite",
+      "module": "HistoryClass"
+    },
+    {
+      "name": "OrthemologyMeasure.historyClass_initial",
+      "module": "HistoryClass"
+    },
+    {
+      "name": "OrthemologyMeasure.historyClass_step",
+      "module": "HistoryClass"
+    },
+    {
+      "name": "OrthemologyMeasure.historyClass_residual_mass",
+      "module": "HistoryClass"
+    },
+    {
+      "name": "OrthemologyMeasure.historyClass_initial_mass",
+      "module": "HistoryClass"
+    },
+    {
+      "name": "OrthemologyMeasure.historyClass_step_mass",
+      "module": "HistoryClass"
+    },
+    {
+      "name": "OrthemologyMeasure.product_map_congr_coordinate_ae",
+      "module": "ArbitraryPattern"
+    },
+    {
+      "name": "OrthemologyMeasure.arbitraryPattern_measurable",
+      "module": "ArbitraryPattern"
+    },
+    {
+      "name": "OrthemologyMeasure.arbitraryAtomicPattern_eventTV_bound",
+      "module": "ArbitraryPattern"
+    },
+    {
+      "name": "OrthemologyMeasure.spike_measurable",
+      "module": "PatternBoundary"
+    },
+    {
+      "name": "OrthemologyMeasure.spike_ne_zero",
+      "module": "PatternBoundary"
+    },
+    {
+      "name": "OrthemologyMeasure.spike_coordinate_ae",
+      "module": "PatternBoundary"
+    },
+    {
+      "name": "OrthemologyMeasure.fairCantor_singleton_zero",
+      "module": "PatternBoundary"
+    },
+    {
+      "name": "OrthemologyMeasure.spike_law_dirac",
+      "module": "PatternBoundary"
+    },
+    {
+      "name": "OrthemologyMeasure.spike_not_ae_zero",
+      "module": "PatternBoundary"
+    },
+    {
+      "name": "OrthemologyMeasure.zero_pattern_not_measurable",
+      "module": "PatternBoundary"
+    },
+    {
+      "name": "OrthemologyMeasure.truncateBits_measurable",
+      "module": "FinitePrefixBoundary"
+    },
+    {
+      "name": "OrthemologyMeasure.prefixBits_measurable",
+      "module": "FinitePrefixBoundary"
+    },
+    {
+      "name": "OrthemologyMeasure.truncate_extend",
+      "module": "FinitePrefixBoundary"
+    },
+    {
+      "name": "OrthemologyMeasure.truncatedLaw_finite_carrier",
+      "module": "FinitePrefixBoundary"
+    },
+    {
+      "name": "OrthemologyMeasure.truncatedLaw_defect_zero",
+      "module": "FinitePrefixBoundary"
+    },
+    {
+      "name": "OrthemologyMeasure.fairCantor_defect_one",
+      "module": "FinitePrefixBoundary"
+    },
+    {
+      "name": "OrthemologyMeasure.finite_prefix_laws_equal",
+      "module": "FinitePrefixBoundary"
+    },
+    {
+      "name": "OrthemologyMeasure.probability_eventTV_le_one",
+      "module": "FinitePrefixBoundary"
+    },
+    {
+      "name": "OrthemologyMeasure.finite_prefix_full_TV_one",
+      "module": "FinitePrefixBoundary"
+    },
+    {
+      "name": "OrthemologyMeasure.observedSupport_add",
+      "module": "PatternAdditivity"
+    },
+    {
+      "name": "OrthemologyMeasure.atomicPatternLaw_add",
+      "module": "PatternAdditivity"
+    },
+    {
+      "name": "OrthemologyMeasure.observedSupport_smul",
+      "module": "PatternAdditivity"
+    },
+    {
+      "name": "OrthemologyMeasure.atomicPatternLaw_smul",
+      "module": "PatternAdditivity"
+    },
+    {
+      "name": "OrthemologyMeasure.atomicBit_measurable",
+      "module": "NoUniversalClassifier"
+    },
+    {
+      "name": "OrthemologyMeasure.atomicBit_dirac_self",
+      "module": "NoUniversalClassifier"
+    },
+    {
+      "name": "OrthemologyMeasure.atomicBit_fair_zero",
+      "module": "NoUniversalClassifier"
+    },
+    {
+      "name": "OrthemologyMeasure.no_universal_atomic_classifier",
+      "module": "NoUniversalClassifier"
+    },
+    {
+      "name": "OrthemologyMeasure.no_universal_randomised_atomic_test",
+      "module": "NoUniversalClassifier"
+    },
+    {
+      "name": "OrthemologyMeasure.positive_add",
+      "module": "PrefixMixture"
+    },
+    {
+      "name": "OrthemologyMeasure.mass_add",
+      "module": "PrefixMixture"
+    },
+    {
+      "name": "OrthemologyMeasure.mass_smul",
+      "module": "PrefixMixture"
+    },
+    {
+      "name": "OrthemologyMeasure.fairCantor_mass_zero",
+      "module": "PrefixMixture"
+    },
+    {
+      "name": "OrthemologyMeasure.truncatedLaw_mass_one",
+      "module": "PrefixMixture"
+    },
+    {
+      "name": "OrthemologyMeasure.prefixMixture_probability",
+      "module": "PrefixMixture"
+    },
+    {
+      "name": "OrthemologyMeasure.prefixMixture_defect",
+      "module": "PrefixMixture"
+    },
+    {
+      "name": "OrthemologyMeasure.prefixMixture_prefix_law",
+      "module": "PrefixMixture"
+    },
+    {
+      "name": "OrthemologyMeasure.CoCountable.value_iUnion",
+      "module": "PointAtomBoundary"
+    },
+    {
+      "name": "OrthemologyMeasure.CoCountable.law_apply",
+      "module": "PointAtomBoundary"
+    },
+    {
+      "name": "OrthemologyMeasure.CoCountable.singleton_zero",
+      "module": "PointAtomBoundary"
+    },
+    {
+      "name": "OrthemologyMeasure.CoCountable.measurable_zero_or_one",
+      "module": "PointAtomBoundary"
+    },
+    {
+      "name": "OrthemologyMeasure.CoCountable.whole_space_atom",
+      "module": "PointAtomBoundary"
+    },
+    {
+      "name": "OrthemologyMeasure.CoCountable.point_defect_one",
+      "module": "PointAtomBoundary"
+    },
+    {
+      "name": "OrthemologyMeasure.CoCountable.real_counterexample",
+      "module": "PointAtomBoundary"
+    }
+  ],
+  "pins": {
+    "lean_version": "4.19.0",
+    "lean_binary_sha256": "92c3d35b5bfaa5e0fea413a775d504cf46cd95e1345df61c2274f76779e7e023",
+    "packages": [
+      {
+        "name": "mathlib",
+        "revision": "c44e0c8ee63ca166450922a373c7409c5d26b00b"
+      },
+      {
+        "name": "plausible",
+        "revision": "77e08eddc486491d7b9e470926b3dbe50319451a"
+      },
+      {
+        "name": "LeanSearchClient",
+        "revision": "25078369972d295301f5a1e53c3e5850cf6d9d4c"
+      },
+      {
+        "name": "importGraph",
+        "revision": "e6a9f0f5ee3ccf7443a0070f92b62f8db12ae82b"
+      },
+      {
+        "name": "proofwidgets",
+        "revision": "c4919189477c3221e6a204008998b0d724f49904"
+      },
+      {
+        "name": "aesop",
+        "revision": "5d50b08dedd7d69b3d9b3176e0d58a23af228884"
+      },
+      {
+        "name": "Qq",
+        "revision": "fa4f7f15d97591a9cf3aa7724ba371c7fc6dda02"
+      },
+      {
+        "name": "batteries",
+        "revision": "f5d04a9c4973d401c8c92500711518f7c656f034"
+      },
+      {
+        "name": "Cli",
+        "revision": "02dbd02bc00ec4916e99b04b2245b30200e200d0"
+      }
+    ]
+  },
+  "official_imports": [
+    {
+      "module": "Mathlib",
+      "repository": "mathlib",
+      "source": "Mathlib.lean",
+      "sha256": "b0518254279fabf0c6a920804e684536b0f5e2bd1cb6318d0609eb563413f20a"
+    },
+    {
+      "module": "Mathlib.Analysis.SpecificLimits.Basic",
+      "repository": "mathlib",
+      "source": "Mathlib/Analysis/SpecificLimits/Basic.lean",
+      "sha256": "cbf9b6b47e6ee6b2962fb2f16ba49b7e005e9a93c0adc1244cc770c34f527315"
+    },
+    {
+      "module": "Mathlib.Data.Real.Cardinality",
+      "repository": "mathlib",
+      "source": "Mathlib/Data/Real/Cardinality.lean",
+      "sha256": "34458b7d7d8fb81d9f50e8a9ea6d71bc8dd56d2271d61e48ea9a7ebd71f9cf83"
+    },
+    {
+      "module": "Mathlib.MeasureTheory.Constructions.Projective",
+      "repository": "mathlib",
+      "source": "Mathlib/MeasureTheory/Constructions/Projective.lean",
+      "sha256": "3fc8a814734c382ebda3bfb68dbba775c461f411380fac854ec7121ae7712fcf"
+    },
+    {
+      "module": "Mathlib.MeasureTheory.Measure.Map",
+      "repository": "mathlib",
+      "source": "Mathlib/MeasureTheory/Measure/Map.lean",
+      "sha256": "3c7fb458eece85551c9b7bd28955a517e14f4bee77934b8b001440a57b6f7f71"
+    },
+    {
+      "module": "Mathlib.MeasureTheory.Measure.MeasureSpace",
+      "repository": "mathlib",
+      "source": "Mathlib/MeasureTheory/Measure/MeasureSpace.lean",
+      "sha256": "c955504c3afe89c1c0524f939b5ebec195726997d4cf4fa9975be3352146f51f"
+    },
+    {
+      "module": "Mathlib.MeasureTheory.Measure.Restrict",
+      "repository": "mathlib",
+      "source": "Mathlib/MeasureTheory/Measure/Restrict.lean",
+      "sha256": "0c0c2108a28516ae3a85dfbfc2e5d7a3afd26dcc113aa8b19c2a79adfe12e56e"
+    },
+    {
+      "module": "Mathlib.MeasureTheory.Measure.Typeclasses.NoAtoms",
+      "repository": "mathlib",
+      "source": "Mathlib/MeasureTheory/Measure/Typeclasses/NoAtoms.lean",
+      "sha256": "f840a5341797290644d0bae0b916c866e7f98a6d25b3894de87341ff4c1cfdb7"
+    },
+    {
+      "module": "Mathlib.MeasureTheory.Measure.Typeclasses.Probability",
+      "repository": "mathlib",
+      "source": "Mathlib/MeasureTheory/Measure/Typeclasses/Probability.lean",
+      "sha256": "419ec9a5612f378b8603f4adb8a0941485481c1d754e95afb8d0a4ddd35f8883"
+    },
+    {
+      "module": "Mathlib.MeasureTheory.Measure.Typeclasses.SFinite",
+      "repository": "mathlib",
+      "source": "Mathlib/MeasureTheory/Measure/Typeclasses/SFinite.lean",
+      "sha256": "b9fb829526454d1f9526ed9bb21de6d661fdb4a01a9847eb6669bedf68f1f784"
+    },
+    {
+      "module": "Mathlib.Probability.ProbabilityMassFunction.Constructions",
+      "repository": "mathlib",
+      "source": "Mathlib/Probability/ProbabilityMassFunction/Constructions.lean",
+      "sha256": "8e50bff3cd3b46107d612eed21e1648752a86f9c373d4b6b0fe10e0e22a43973"
+    },
+    {
+      "module": "Mathlib.Probability.ProductMeasure",
+      "repository": "mathlib",
+      "source": "Mathlib/Probability/ProductMeasure.lean",
+      "sha256": "f8af06e87e2e28916f0fa8a455f792ded4b85a22e1dea5e1c6f9cac1d31b9830"
+    },
+    {
+      "module": "Mathlib.Tactic",
+      "repository": "mathlib",
+      "source": "Mathlib/Tactic.lean",
+      "sha256": "f20038eba7bba63f07a2f854496101226df407e20414e6b8ebf94b14f95e831b"
+    }
+  ],
+  "driver": {
+    "source_id": "src-866c6ff6e74a67f2-279d28ea9829b80d",
+    "lean_argument": "EXECUTABLE"
+  },
+  "controls": "ORIGINAL_DRIVER_REQUIRED",
+  "classification": "CURRENT_EVIDENCE"
+}

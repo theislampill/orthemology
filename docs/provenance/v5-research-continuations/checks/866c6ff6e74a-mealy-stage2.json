@@ -1,0 +1,538 @@
+{
+  "status": "FRESH_KERNEL_COMPONENTS",
+  "exit_code": 0,
+  "kernel_verified": true,
+  "suite_id": "866c6ff6e74a-mealy-stage2",
+  "suite_sha256": "bc4c99a515d7e178c73862ed6c0b1d19b0e9033ae44a14e0fbb3d20d0482ff5a",
+  "source_hashes": {
+    "PERRefinement": "fb4cb976520bc761e0405386e86cfdd7b7ff4995983f0ddcc869c0c79a05df4d",
+    "MealyRefinement": "13868f16b0f2a14a41cb515b8861326bcfbb284ea0ea3801272099db7a30fe17",
+    "BlockMismatch": "89590f09b77eb40b8c320cbf8a02aaccedb30d14a7fda1efde6657f9afcc9b1e",
+    "P02A2.MeasureCore": "acd3d802db12b8b610ee8301f63f36b04906bedb2a28995c719aa7eb16f8047b",
+    "Q8Measure": "b815803aa2aff0656830d0d2384225215687ef473ff124a4de82198dc8e20048",
+    "MealyMeasure": "65ddeb0646c373e7022f73079a5f9b67dc05740a5615c49382567f2c471517d9",
+    "MealyHitting": "a689461fc7e789e57451d4ed69f8f9ab9acd4d117d8221e46a2151991f628962",
+    "MealyAtoms": "be4175314d4edc235aca06f205de1f3469b9aa389b0f840de58679012c0d63b5",
+    "MealyRational": "17c5b6eba13f6a3251a7efed6dbc48b69bc3fc0f8d16bc3c31cf69f327ac453a",
+    "MealyMeasureFixtures": "c8f3dfb898335e324ca947fc9062a091a920a0a773708c900dc125b685ca9a1f",
+    "MealySolver": "f037c56ca783feffbafc6d5643b5356e321cc388e0ade5baec961d62d43655b6",
+    "MealySolverFixtures": "090785d2362f1bf5b24881f30bdeaf812f4be77bc4a6aab953ad2de7fdf0664b",
+    "SolverVerification": "7f128741fe040dda21a58946b66e33e930de717eeb11f01f177372198e851d4b",
+    "Verification": "324ba79204098e1491678db4674006c5e3b610730d2c10516d0230e7e67e4b93"
+  },
+  "post_source_hashes": {
+    "PERRefinement": "fb4cb976520bc761e0405386e86cfdd7b7ff4995983f0ddcc869c0c79a05df4d",
+    "MealyRefinement": "13868f16b0f2a14a41cb515b8861326bcfbb284ea0ea3801272099db7a30fe17",
+    "BlockMismatch": "89590f09b77eb40b8c320cbf8a02aaccedb30d14a7fda1efde6657f9afcc9b1e",
+    "P02A2.MeasureCore": "acd3d802db12b8b610ee8301f63f36b04906bedb2a28995c719aa7eb16f8047b",
+    "Q8Measure": "b815803aa2aff0656830d0d2384225215687ef473ff124a4de82198dc8e20048",
+    "MealyMeasure": "65ddeb0646c373e7022f73079a5f9b67dc05740a5615c49382567f2c471517d9",
+    "MealyHitting": "a689461fc7e789e57451d4ed69f8f9ab9acd4d117d8221e46a2151991f628962",
+    "MealyAtoms": "be4175314d4edc235aca06f205de1f3469b9aa389b0f840de58679012c0d63b5",
+    "MealyRational": "17c5b6eba13f6a3251a7efed6dbc48b69bc3fc0f8d16bc3c31cf69f327ac453a",
+    "MealyMeasureFixtures": "c8f3dfb898335e324ca947fc9062a091a920a0a773708c900dc125b685ca9a1f",
+    "MealySolver": "f037c56ca783feffbafc6d5643b5356e321cc388e0ade5baec961d62d43655b6",
+    "MealySolverFixtures": "090785d2362f1bf5b24881f30bdeaf812f4be77bc4a6aab953ad2de7fdf0664b",
+    "SolverVerification": "7f128741fe040dda21a58946b66e33e930de717eeb11f01f177372198e851d4b",
+    "Verification": "324ba79204098e1491678db4674006c5e3b610730d2c10516d0230e7e67e4b93"
+  },
+  "compiler_sha256": "92c3d35b5bfaa5e0fea413a775d504cf46cd95e1345df61c2274f76779e7e023",
+  "pins": {
+    "lean_version": "4.19.0",
+    "lean_binary_sha256": "92c3d35b5bfaa5e0fea413a775d504cf46cd95e1345df61c2274f76779e7e023",
+    "packages": [
+      {
+        "name": "mathlib",
+        "revision": "c44e0c8ee63ca166450922a373c7409c5d26b00b"
+      },
+      {
+        "name": "plausible",
+        "revision": "77e08eddc486491d7b9e470926b3dbe50319451a"
+      },
+      {
+        "name": "LeanSearchClient",
+        "revision": "25078369972d295301f5a1e53c3e5850cf6d9d4c"
+      },
+      {
+        "name": "importGraph",
+        "revision": "e6a9f0f5ee3ccf7443a0070f92b62f8db12ae82b"
+      },
+      {
+        "name": "proofwidgets",
+        "revision": "c4919189477c3221e6a204008998b0d724f49904"
+      },
+      {
+        "name": "aesop",
+        "revision": "5d50b08dedd7d69b3d9b3176e0d58a23af228884"
+      },
+      {
+        "name": "Qq",
+        "revision": "fa4f7f15d97591a9cf3aa7724ba371c7fc6dda02"
+      },
+      {
+        "name": "batteries",
+        "revision": "f5d04a9c4973d401c8c92500711518f7c656f034"
+      },
+      {
+        "name": "Cli",
+        "revision": "02dbd02bc00ec4916e99b04b2245b30200e200d0"
+      }
+    ]
+  },
+  "modules": [
+    {
+      "module": "PERRefinement",
+      "source_sha256": "fb4cb976520bc761e0405386e86cfdd7b7ff4995983f0ddcc869c0c79a05df4d",
+      "object_sha256": "90b08cd511d8b0360db7f50bf5751dd5a7b8fcf1ce94bf9f2e76a77495095878",
+      "transitive_source_fingerprint": "cd7d19a5a7b035643463bbfe86d5269b44ef6fee94f911aab549e92b051e8edc",
+      "status": "FRESH_COMPILE",
+      "exit_code": 0
+    },
+    {
+      "module": "MealyRefinement",
+      "source_sha256": "13868f16b0f2a14a41cb515b8861326bcfbb284ea0ea3801272099db7a30fe17",
+      "object_sha256": "5895880dba259693a508d7a466d6868106e9b670442be68c979acd49ea659d5c",
+      "transitive_source_fingerprint": "21d288b9517bfc27ec9a33257bda938a40f87d238081b82458fe0e0bc230cee2",
+      "status": "FRESH_COMPILE",
+      "exit_code": 0
+    },
+    {
+      "module": "BlockMismatch",
+      "source_sha256": "89590f09b77eb40b8c320cbf8a02aaccedb30d14a7fda1efde6657f9afcc9b1e",
+      "object_sha256": "3c3c46bb6682c47a84935fd7fc2f2a4954c5c09fc3dd12d8c505f009800712c5",
+      "transitive_source_fingerprint": "9b7c3c17a4b7e3f792c0eb71ed18664726e6750612b5681daa3988bbd5545b19",
+      "status": "FRESH_COMPILE",
+      "exit_code": 0
+    },
+    {
+      "module": "P02A2.MeasureCore",
+      "source_sha256": "acd3d802db12b8b610ee8301f63f36b04906bedb2a28995c719aa7eb16f8047b",
+      "object_sha256": "e63f18ebe7f312a6427bd0f0add48502abb2cd2c8110a2f3782993933c8ae69d",
+      "transitive_source_fingerprint": "25ab8639f0d3a54d1c6c4e72142f0ea47a2fe8ccd1f80498e096278215df806a",
+      "status": "FRESH_COMPILE",
+      "exit_code": 0
+    },
+    {
+      "module": "Q8Measure",
+      "source_sha256": "b815803aa2aff0656830d0d2384225215687ef473ff124a4de82198dc8e20048",
+      "object_sha256": "57734136855c4cbd2ff40481d819e1834070d81c0eee5614cf272cc08ef77785",
+      "transitive_source_fingerprint": "e8d75d66b542b8a7818088ca80ea4fca76bd4dd730d8443a331e33af568a01e6",
+      "status": "FRESH_COMPILE",
+      "exit_code": 0
+    },
+    {
+      "module": "MealyMeasure",
+      "source_sha256": "65ddeb0646c373e7022f73079a5f9b67dc05740a5615c49382567f2c471517d9",
+      "object_sha256": "120612753242bcfe3c08f31607b172de57a4b1e7fa48237c11eeb07b32ae93e9",
+      "transitive_source_fingerprint": "71903dec858f66e13b148d1a17aa0b3dd8041d7253af63a12547725b0fe357f4",
+      "status": "FRESH_COMPILE",
+      "exit_code": 0
+    },
+    {
+      "module": "MealyHitting",
+      "source_sha256": "a689461fc7e789e57451d4ed69f8f9ab9acd4d117d8221e46a2151991f628962",
+      "object_sha256": "19a98d563e7b0cad6a896147e8000d88cda8887b476b26f91260d461001bd333",
+      "transitive_source_fingerprint": "d67e6d1e49c844a4b46d0498785ab2b473a3fe792d5b35abae10226af5972399",
+      "status": "FRESH_COMPILE",
+      "exit_code": 0
+    },
+    {
+      "module": "MealyAtoms",
+      "source_sha256": "be4175314d4edc235aca06f205de1f3469b9aa389b0f840de58679012c0d63b5",
+      "object_sha256": "b5677e18e6ecdfdc95eba81feba244e59fb2cd5029824a50e5a596f559de06bf",
+      "transitive_source_fingerprint": "95f2043802cad18f3b9c43ced9c65c7432fe489ed4e2692cf700209afdc135dd",
+      "status": "FRESH_COMPILE",
+      "exit_code": 0
+    },
+    {
+      "module": "MealyRational",
+      "source_sha256": "17c5b6eba13f6a3251a7efed6dbc48b69bc3fc0f8d16bc3c31cf69f327ac453a",
+      "object_sha256": "fb6549c10c0f64d65871b67269d347453e4cfe0ee4e61c5a432c56a2c96c5e41",
+      "transitive_source_fingerprint": "21fb5e6660e0cbb042558c7d47f47095d1366ef12a4291a76c0b36205d344f0c",
+      "status": "FRESH_COMPILE",
+      "exit_code": 0
+    },
+    {
+      "module": "MealyMeasureFixtures",
+      "source_sha256": "c8f3dfb898335e324ca947fc9062a091a920a0a773708c900dc125b685ca9a1f",
+      "object_sha256": "2c7abc51c937a72f5494d2781c495b23e77c0ac30d9ed9e7d9074bbe2f2f4246",
+      "transitive_source_fingerprint": "ba44180e0831cb8a7dadb432b8628bd18c7779e4822bf041b3927c34aaf1af4f",
+      "status": "FRESH_COMPILE",
+      "exit_code": 0
+    },
+    {
+      "module": "MealySolver",
+      "source_sha256": "f037c56ca783feffbafc6d5643b5356e321cc388e0ade5baec961d62d43655b6",
+      "object_sha256": "c70aa3acf950b6684a1339861640e58628ced8bc4f6be516d498cd4d497b688d",
+      "transitive_source_fingerprint": "f6cdedca5bb1e26cbf539ef1e116dac7e15fd71be824093153fcde950da26dcf",
+      "status": "FRESH_COMPILE",
+      "exit_code": 0
+    },
+    {
+      "module": "MealySolverFixtures",
+      "source_sha256": "090785d2362f1bf5b24881f30bdeaf812f4be77bc4a6aab953ad2de7fdf0664b",
+      "object_sha256": "9b315a19dbbb25cd4ed532089fcfe8296e2c13fe11c618c239c73afdf2ffd33c",
+      "transitive_source_fingerprint": "85f76211dce28976798a028a6e8ce4a3146406c030d483c6055e3ce4451c269e",
+      "status": "FRESH_COMPILE",
+      "exit_code": 0
+    },
+    {
+      "module": "SolverVerification",
+      "source_sha256": "7f128741fe040dda21a58946b66e33e930de717eeb11f01f177372198e851d4b",
+      "object_sha256": "f3e4e5d5a15564bbe63d2433ad57a512902eb24b4d9cf9f48ea570dd0f5438b3",
+      "transitive_source_fingerprint": "b2abfac3b81004d62d5e8a0f0daa9b4d483867191e02abc64f9b6493bd3d378f",
+      "status": "FRESH_COMPILE",
+      "exit_code": 0
+    },
+    {
+      "module": "Verification",
+      "source_sha256": "324ba79204098e1491678db4674006c5e3b610730d2c10516d0230e7e67e4b93",
+      "object_sha256": "492e4919175973a8881833bc8a0f1c87674fe2dc487c6599fd5efb1dea567c51",
+      "transitive_source_fingerprint": "c754d9847fcab07e7942667369cbf0fff4ebaee4b6d9bd5443075a56ae12bd84",
+      "status": "FRESH_COMPILE",
+      "exit_code": 0
+    }
+  ],
+  "readbacks": {
+    "Orthemology.Frontier.MealyMeasure.measure_cylinder": {
+      "type_sha256": "90dc8d22bfa174c932ec407323565aa3afd13e708d757e0bcf55c664bc61ce0d",
+      "axioms": [
+        "Classical.choice",
+        "Quot.sound",
+        "propext"
+      ]
+    },
+    "Orthemology.Frontier.MealyMeasure.state_prefix": {
+      "type_sha256": "c1a1ad32414cddcb1f47326626ab7f2273456cb8170025a688711755767c99f0",
+      "axioms": [
+        "Quot.sound",
+        "propext"
+      ]
+    },
+    "Orthemology.Frontier.MealyMeasure.output_prefix": {
+      "type_sha256": "ca9f38e44f847a56a084c11ab234e39cec19d8248b99e58ea3854c1bb03c4a95",
+      "axioms": [
+        "Quot.sound",
+        "propext"
+      ]
+    },
+    "Orthemology.Frontier.MealyMeasure.output_measurable": {
+      "type_sha256": "7f5add0c9f6b5c5d2cc654ad1261a80a1686d8c5bbc1fb58791d8ae1676e9622",
+      "axioms": [
+        "Classical.choice",
+        "Quot.sound",
+        "propext"
+      ]
+    },
+    "Orthemology.Frontier.MealyMeasure.measure_block_event": {
+      "type_sha256": "7ade8b31dbc11e8f259b3552d9a33971f7dd8542ca508787b295336a98bfd61c",
+      "axioms": [
+        "Classical.choice",
+        "Quot.sound",
+        "propext"
+      ]
+    },
+    "Orthemology.Frontier.MealyMeasure.finite_survivor_measure_bound": {
+      "type_sha256": "9b4113d73e99afe5a40c669fc3e51240c1dc7f9afb8b3be9b0db93e1ddf857f1",
+      "axioms": [
+        "Classical.choice",
+        "Quot.sound",
+        "propext"
+      ]
+    },
+    "Orthemology.Frontier.MealyMeasure.avoidMatch_null": {
+      "type_sha256": "ea5d868f96ba83000925377c949b96ea4ac797c0567bdca0ce8ffd7c3dea6fa5",
+      "axioms": [
+        "Classical.choice",
+        "Quot.sound",
+        "propext"
+      ]
+    },
+    "Orthemology.Frontier.MealyMeasure.hitting_prefix_determines_output": {
+      "type_sha256": "67fdd4c91371d70ac213977a1a9dce5e06a8d80a9543788ad3c0487e61356aa3",
+      "axioms": [
+        "Classical.choice",
+        "Quot.sound",
+        "propext"
+      ]
+    },
+    "Orthemology.Frontier.MealyMeasure.hits_output_positive": {
+      "type_sha256": "c1461b3571ccd8d6679b762b3562ea145da5e4405656abf71a9a902247166f0e",
+      "axioms": [
+        "Classical.choice",
+        "Quot.sound",
+        "propext"
+      ]
+    },
+    "Orthemology.Frontier.MealyMeasure.positive_avoiding_null": {
+      "type_sha256": "e6cf05c6efd68424b7ad0c2bac025e871fba32794664b1c21043b2bd7f7038cc",
+      "axioms": [
+        "Classical.choice",
+        "Quot.sound",
+        "propext"
+      ]
+    },
+    "Orthemology.Frontier.MealyMeasure.atomic_mass_eq_hitting_probability": {
+      "type_sha256": "3740439d352f945dd2d3b3004293890cced0183e5c25147b4337ed31dc377449",
+      "axioms": [
+        "Classical.choice",
+        "Quot.sound",
+        "propext"
+      ]
+    },
+    "Orthemology.Frontier.MealyMeasure.positive_iff_hitting_prefix": {
+      "type_sha256": "0582662f25b110618502502753e4572596e84ba5003f851ac47d5f2d1a243e7e",
+      "axioms": [
+        "Classical.choice",
+        "Quot.sound",
+        "propext"
+      ]
+    },
+    "Orthemology.Frontier.MealyMeasure.deterministicBit_spec": {
+      "type_sha256": "8917306593d00216c60295ef63fe99522d16303465a1a3e02094519408184db4",
+      "axioms": [
+        "Classical.choice",
+        "Quot.sound",
+        "propext"
+      ]
+    },
+    "Orthemology.Frontier.MealyMeasure.measure_hitAt": {
+      "type_sha256": "96e1fa06e6868340a74adbefb406b8008c3b5ab7d46db457fa9edf51e283bf9a",
+      "axioms": [
+        "Classical.choice",
+        "Quot.sound",
+        "propext"
+      ]
+    },
+    "Orthemology.Frontier.MealyMeasure.hittingProbabilityQ_correct": {
+      "type_sha256": "033b408fe6e32d7b80b246db49596df0eda6de51cbea39a230922dacbbdd5afa",
+      "axioms": [
+        "Classical.choice",
+        "Quot.sound",
+        "propext"
+      ]
+    },
+    "Orthemology.Frontier.MealyMeasure.atomic_mass_tendsto_finite_hitting": {
+      "type_sha256": "208bbd935770fd5474b6dbb157185f4e1d3b1d837be6371176df4dd7e13c3982",
+      "axioms": [
+        "Classical.choice",
+        "Quot.sound",
+        "propext"
+      ]
+    },
+    "Orthemology.Frontier.MealyMeasure.atomic_mass_zero_iff_unreachable": {
+      "type_sha256": "15b4bae70d023373d69f07ad5b4deddea3c0fde71d2f66633a470eb7ee11c894",
+      "axioms": [
+        "Classical.choice",
+        "Quot.sound",
+        "propext"
+      ]
+    },
+    "Orthemology.Frontier.MealyMeasure.positive_output_eventually_periodic": {
+      "type_sha256": "680984486b43fdce424583f65980c9278645702475ef43bc9354a21238003835",
+      "axioms": [
+        "Classical.choice",
+        "Quot.sound",
+        "propext"
+      ]
+    },
+    "Orthemology.Frontier.MealyMeasure.card_hittingBlocks_succ": {
+      "type_sha256": "a04b6685216f7c5cb0811419a90f08b7d7c6052a79cb849f16f424350413be0c",
+      "axioms": [
+        "Classical.choice",
+        "Quot.sound",
+        "propext"
+      ]
+    },
+    "Orthemology.Frontier.MealyMeasure.hittingProbabilityQ_tendsto": {
+      "type_sha256": "3ebd6ec72f779bad95b1ec2c6c0c2e7c7d10698f69178a62f5a3d603355160cd",
+      "axioms": [
+        "Classical.choice",
+        "Quot.sound",
+        "propext"
+      ]
+    },
+    "Orthemology.Frontier.MealyMeasure.hittingReal_harmonic": {
+      "type_sha256": "45523675b0297d3be5375c7e7372f4de0891e4df58d8573b7a22faec89e32f2a",
+      "axioms": [
+        "Classical.choice",
+        "Quot.sound",
+        "propext"
+      ]
+    },
+    "Orthemology.Frontier.MealyMeasure.homogeneous_eq_zero": {
+      "type_sha256": "4badb54c35a59cfc1e6c74367f06bd519b541bd1d44eda6bbe4510699f57e0c1",
+      "axioms": [
+        "Classical.choice",
+        "Quot.sound",
+        "propext"
+      ]
+    },
+    "Orthemology.Frontier.MealyMeasure.hittingSystem_injective": {
+      "type_sha256": "04cff3e34da54c8624001c936b04220df7ef0de087bd2ef7d75be75b7bef7da3",
+      "axioms": [
+        "Classical.choice",
+        "Quot.sound",
+        "propext"
+      ]
+    },
+    "Orthemology.Frontier.MealyMeasure.exists_rational_solution": {
+      "type_sha256": "f5994ac2184233e0a90282a901200e09044366299317ba401dd3d34ed79ec43b",
+      "axioms": [
+        "Classical.choice",
+        "Quot.sound",
+        "propext"
+      ]
+    },
+    "Orthemology.Frontier.MealyMeasure.hittingReal_system": {
+      "type_sha256": "295745457ba2cd646234f2116b8febf56189e77dacf407909497dbae15e87843",
+      "axioms": [
+        "Classical.choice",
+        "Quot.sound",
+        "propext"
+      ]
+    },
+    "Orthemology.Frontier.MealyMeasure.rational_hitting_probability": {
+      "type_sha256": "c3b6c610ec3e55e162220abd5f5aab4827c8aaa95e901275f20c1f976928e23f",
+      "axioms": [
+        "Classical.choice",
+        "Quot.sound",
+        "propext"
+      ]
+    },
+    "Orthemology.Frontier.MealyMeasure.atomic_mass_rational": {
+      "type_sha256": "bcbe74692835da04ce862a5dda9489a599ccbf8fdfdc2199be15de3b5f556781",
+      "axioms": [
+        "Classical.choice",
+        "Quot.sound",
+        "propext"
+      ]
+    },
+    "Orthemology.Frontier.MealyMeasure.defect_rational": {
+      "type_sha256": "521242c33fd68e2ccb83064bc3948c4706eb5e27233b98ca7ddee5f355f961f3",
+      "axioms": [
+        "Classical.choice",
+        "Quot.sound",
+        "propext"
+      ]
+    },
+    "Orthemology.Frontier.MealyMeasure.Fixtures.zero_atomic_mass_one": {
+      "type_sha256": "bafad36415f8678ae4b266fb3bad7bb2ca73c524889400039dbd1a14334e0c27",
+      "axioms": [
+        "Classical.choice",
+        "Quot.sound",
+        "propext"
+      ]
+    },
+    "Orthemology.Frontier.MealyMeasure.Fixtures.copy_atomic_mass_zero": {
+      "type_sha256": "4a79a59030b1aab0e0ea9ec2297a912c9171c93c93089d51eb8a3e97932362ee",
+      "axioms": [
+        "Classical.choice",
+        "Quot.sound",
+        "propext"
+      ]
+    },
+    "Orthemology.Frontier.MealyMeasure.Fixtures.split_atomic_mass_half": {
+      "type_sha256": "00ac5e6669cca3100388f611105d92136a8f6d4b6d90989bbcaaa711ad3ee934",
+      "axioms": [
+        "Classical.choice",
+        "Quot.sound",
+        "propext"
+      ]
+    },
+    "Orthemology.Frontier.MealyMeasure.reachSet_stable": {
+      "type_sha256": "1ce7fb745fc82f9328faf07822ba41534e791f7d3b76284afbf09c162ecfc620",
+      "axioms": [
+        "Classical.choice",
+        "Quot.sound",
+        "propext"
+      ]
+    },
+    "Orthemology.Frontier.MealyMeasure.reaches_iff_mem_reachSet": {
+      "type_sha256": "c5b8a627b5441a83b7e4aa9933b9bba69d0d3c805051360a7b12b3805d00f0d3",
+      "axioms": [
+        "Classical.choice",
+        "Quot.sound",
+        "propext"
+      ]
+    },
+    "Orthemology.Frontier.MealyMeasure.reachesBit_spec": {
+      "type_sha256": "1734d8b1fe3d16e04be4a2a5dc3fa4168cc56f9bb32d659f77dcf53c8c1f597b",
+      "axioms": [
+        "Classical.choice",
+        "Quot.sound",
+        "propext"
+      ]
+    },
+    "Orthemology.Frontier.MealyMeasure.hittingMatrix_mulVec": {
+      "type_sha256": "95b6739d569e3ac69958ad157878f9c7f17069ad5372a9991efd890b38f12b31",
+      "axioms": [
+        "Classical.choice",
+        "Quot.sound",
+        "propext"
+      ]
+    },
+    "Orthemology.Frontier.MealyMeasure.hittingMatrix_det_ne_zero": {
+      "type_sha256": "b533429debadc847930496de49957c07a47108386ba401efaf7e9e5c638f230b",
+      "axioms": [
+        "Classical.choice",
+        "Quot.sound",
+        "propext"
+      ]
+    },
+    "Orthemology.Frontier.MealyMeasure.solveHitting_matrix_equation": {
+      "type_sha256": "0a534c360dcb2f1f1c4c6039769e87a9863862397eaada8eb5436a01c9769d44",
+      "axioms": [
+        "Classical.choice",
+        "Quot.sound",
+        "propext"
+      ]
+    },
+    "Orthemology.Frontier.MealyMeasure.solveHitting_correct": {
+      "type_sha256": "caeebcae968bc4a4c8c0fc52912e942830cef9ed337f1e357f940f8ee014634b",
+      "axioms": [
+        "Classical.choice",
+        "Quot.sound",
+        "propext"
+      ]
+    },
+    "Orthemology.Frontier.MealyMeasure.solveDefect_correct": {
+      "type_sha256": "4c3471efbfc8f2c6ce6ddd82600b88f75c0749718aec735caa0c4fa337c3eddd",
+      "axioms": [
+        "Classical.choice",
+        "Quot.sound",
+        "propext"
+      ]
+    },
+    "Orthemology.Frontier.MealyMeasure.Fixtures.gambler_solver_exact": {
+      "type_sha256": "93c9b76ac8b0b43e0f51d6fdbf339fa9636907bfc91de99e48a66ef382774a58",
+      "axioms": [
+        "Classical.choice",
+        "Quot.sound",
+        "propext"
+      ]
+    },
+    "Orthemology.Frontier.MealyMeasure.Fixtures.gambler_atomic_mass_two_thirds": {
+      "type_sha256": "4a67fec6f0d9c8a3b6620a2b766777ff44a9a0905f382373e9b3c22b35010a5e",
+      "axioms": [
+        "Classical.choice",
+        "Quot.sound",
+        "propext"
+      ]
+    },
+    "Orthemology.Frontier.MealyMeasure.Fixtures.gambler_defect_one_third": {
+      "type_sha256": "21085ee26ad595131d2d5eb7556e7d54d1e8e502253453ea67f570c329fc12f7",
+      "axioms": [
+        "Classical.choice",
+        "Quot.sound",
+        "propext"
+      ]
+    }
+  },
+  "original_controls": "NOT_RUN",
+  "original_receipt_sha256": "9a40a5eee0371a197669b117410ad0c3ab2c7a10a8366d4c2e4a4621dfaa924e",
+  "original_driver_sha256": "0666003f5081aca1efd6570a72da06d735b454d787dba97dd59fc1b42554bd14",
+  "execution_kind": "FRESH_CUSTOM_CLOSURE",
+  "finished_utc": null,
+  "scope": "Source-bound custom closure and selected declaration readbacks. Types are represented by hashes of the exact printed types; complete logs remain private. Official caches are trusted. This does not establish ordinary proof, runtime completeness, empirical or normative warrant, novelty, external human review or merged adoption."
+}

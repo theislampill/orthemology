@@ -1,0 +1,279 @@
+{
+  "status": "FRESH_KERNEL_COMPONENTS",
+  "exit_code": 0,
+  "kernel_verified": true,
+  "suite_id": "db6ccdc793a0-explicit-scale-kernel-audit",
+  "suite_sha256": "ec80feb69d23527a4c0c820b1a74d16773331f1e4f7a89ddd54a661e8b0778cb",
+  "source_hashes": {
+    "PolynomialAND": "3c1721046ecb48ff4b4d1d9bde2e483cfa6ed532b69009bbd02c27ed8d9a36a5",
+    "ANDCorrection": "9b040710b99321214095e434c1096b3caa1e9135e1a2bde4bf7e09eee473be94",
+    "ANDScore": "684841d865cfddb7e9f8db226a7405c39c01ed53888f8e9535906f97465ff125",
+    "ANDRepair": "cf1797c8641901158a7d8d617549a25f82320cea4bae4e2367ffb0c6f413d8ee",
+    "ANDPotentialBinding": "f45dd6bbb8c47e16ea20a8c7299257b39a84bd00a5d74fdd5c8cb640ad7893e4",
+    "FiniteHullWeights": "ac0ed23555915fcd324b9aa575cc5acde4d57cbcbe4edacd0ef6b64665f33ef5",
+    "ANDIntrinsic": "8bae672267258cf279713113382148d759b3818c516173d3cdaae81e1412ee7f",
+    "PolynomialBounds": "c26354ffa7da15f07620f32c208bd5afef75ec5e26d0be4a535621aa25e9c6f6",
+    "ConstraintBounds": "446be356118af1bc2ea8af2adedbfdd3c861172169a6e9261a537349d8210247",
+    "ExplicitANDScale": "5800709b1381958aaa2e30ae8ca0da34fb2af1df6fafe1200b65d37183eacca9",
+    "ScaleReadback": "9f7eea77430a992112a605d297f5f9fdf913241e5f8f8059f432dc71a3e38246",
+    "IndependentScaleAudit": "48480e64f691652b5204acb7fcf07a895513d952a2889ff5c9858a922893b9ba"
+  },
+  "post_source_hashes": {
+    "PolynomialAND": "3c1721046ecb48ff4b4d1d9bde2e483cfa6ed532b69009bbd02c27ed8d9a36a5",
+    "ANDCorrection": "9b040710b99321214095e434c1096b3caa1e9135e1a2bde4bf7e09eee473be94",
+    "ANDScore": "684841d865cfddb7e9f8db226a7405c39c01ed53888f8e9535906f97465ff125",
+    "ANDRepair": "cf1797c8641901158a7d8d617549a25f82320cea4bae4e2367ffb0c6f413d8ee",
+    "ANDPotentialBinding": "f45dd6bbb8c47e16ea20a8c7299257b39a84bd00a5d74fdd5c8cb640ad7893e4",
+    "FiniteHullWeights": "ac0ed23555915fcd324b9aa575cc5acde4d57cbcbe4edacd0ef6b64665f33ef5",
+    "ANDIntrinsic": "8bae672267258cf279713113382148d759b3818c516173d3cdaae81e1412ee7f",
+    "PolynomialBounds": "c26354ffa7da15f07620f32c208bd5afef75ec5e26d0be4a535621aa25e9c6f6",
+    "ConstraintBounds": "446be356118af1bc2ea8af2adedbfdd3c861172169a6e9261a537349d8210247",
+    "ExplicitANDScale": "5800709b1381958aaa2e30ae8ca0da34fb2af1df6fafe1200b65d37183eacca9",
+    "ScaleReadback": "9f7eea77430a992112a605d297f5f9fdf913241e5f8f8059f432dc71a3e38246",
+    "IndependentScaleAudit": "48480e64f691652b5204acb7fcf07a895513d952a2889ff5c9858a922893b9ba"
+  },
+  "compiler_sha256": "92c3d35b5bfaa5e0fea413a775d504cf46cd95e1345df61c2274f76779e7e023",
+  "pins": {
+    "lean_version": "4.19.0",
+    "lean_binary_sha256": "92c3d35b5bfaa5e0fea413a775d504cf46cd95e1345df61c2274f76779e7e023",
+    "packages": [
+      {
+        "name": "mathlib",
+        "revision": "c44e0c8ee63ca166450922a373c7409c5d26b00b"
+      },
+      {
+        "name": "plausible",
+        "revision": "77e08eddc486491d7b9e470926b3dbe50319451a"
+      },
+      {
+        "name": "LeanSearchClient",
+        "revision": "25078369972d295301f5a1e53c3e5850cf6d9d4c"
+      },
+      {
+        "name": "importGraph",
+        "revision": "e6a9f0f5ee3ccf7443a0070f92b62f8db12ae82b"
+      },
+      {
+        "name": "proofwidgets",
+        "revision": "c4919189477c3221e6a204008998b0d724f49904"
+      },
+      {
+        "name": "aesop",
+        "revision": "5d50b08dedd7d69b3d9b3176e0d58a23af228884"
+      },
+      {
+        "name": "Qq",
+        "revision": "fa4f7f15d97591a9cf3aa7724ba371c7fc6dda02"
+      },
+      {
+        "name": "batteries",
+        "revision": "f5d04a9c4973d401c8c92500711518f7c656f034"
+      },
+      {
+        "name": "Cli",
+        "revision": "02dbd02bc00ec4916e99b04b2245b30200e200d0"
+      }
+    ]
+  },
+  "modules": [
+    {
+      "module": "PolynomialAND",
+      "source_sha256": "3c1721046ecb48ff4b4d1d9bde2e483cfa6ed532b69009bbd02c27ed8d9a36a5",
+      "object_sha256": "23a26bdae69edb3f4c908c1a62f0a8fbcb5384afe1896cc5f6efe59b520d3cdb",
+      "transitive_source_fingerprint": "64c85e85904703bddd3dd5bd1778c80059a97a276f6541018210db2d7c62da44",
+      "status": "QUALIFIED_PREDECESSOR",
+      "predecessor_receipt": "docs/provenance/v5-research-continuations/checks/db6ccdc793a0-polynomial-geometry-audit.json",
+      "predecessor_receipt_sha256": "2fdd4a5531332fb9d85d4f917944f804830ccf0adb9714f3a3099932098958d6"
+    },
+    {
+      "module": "ANDCorrection",
+      "source_sha256": "9b040710b99321214095e434c1096b3caa1e9135e1a2bde4bf7e09eee473be94",
+      "object_sha256": "3d384f982f69a5f1cc1a464b69d09d602b18bb4ece414feab26b91d3fc0ce241",
+      "transitive_source_fingerprint": "429bdf12176bb59c6e133dcc3d6444280cab94631ff399782fd503f6f03018d5",
+      "status": "QUALIFIED_PREDECESSOR",
+      "predecessor_receipt": "docs/provenance/v5-research-continuations/checks/db6ccdc793a0-polynomial-geometry-audit.json",
+      "predecessor_receipt_sha256": "2fdd4a5531332fb9d85d4f917944f804830ccf0adb9714f3a3099932098958d6"
+    },
+    {
+      "module": "ANDScore",
+      "source_sha256": "684841d865cfddb7e9f8db226a7405c39c01ed53888f8e9535906f97465ff125",
+      "object_sha256": "2c3af063a9e9924ad043ae62cac88590235ffe80ab7555429ab8240ae2f21ec6",
+      "transitive_source_fingerprint": "c012e0627bde7d6c0109f693ead26953fcbe4d58861d3a691e892e2759ce5b9a",
+      "status": "QUALIFIED_PREDECESSOR",
+      "predecessor_receipt": "docs/provenance/v5-research-continuations/checks/db6ccdc793a0-polynomial-geometry-audit.json",
+      "predecessor_receipt_sha256": "2fdd4a5531332fb9d85d4f917944f804830ccf0adb9714f3a3099932098958d6"
+    },
+    {
+      "module": "ANDRepair",
+      "source_sha256": "cf1797c8641901158a7d8d617549a25f82320cea4bae4e2367ffb0c6f413d8ee",
+      "object_sha256": "bf04685cb9e94a098975c2b874757bd4b141e390ca0ea54409a03cf025634bd4",
+      "transitive_source_fingerprint": "79cfb3777ffaafbfe38c76f0d8ae2da1e404d876e14a1a9b82a2ed0ee3b184a8",
+      "status": "QUALIFIED_PREDECESSOR",
+      "predecessor_receipt": "docs/provenance/v5-research-continuations/checks/db6ccdc793a0-polynomial-geometry-audit.json",
+      "predecessor_receipt_sha256": "2fdd4a5531332fb9d85d4f917944f804830ccf0adb9714f3a3099932098958d6"
+    },
+    {
+      "module": "ANDPotentialBinding",
+      "source_sha256": "f45dd6bbb8c47e16ea20a8c7299257b39a84bd00a5d74fdd5c8cb640ad7893e4",
+      "object_sha256": "3d37068f67ed2300f5fbeeb91b36eb7265a58dabfbf6d73ebf525a173d964b00",
+      "transitive_source_fingerprint": "dfa41555c16310a29bb2de61964f6136d098588ad3729b76566bab43cf1f2741",
+      "status": "QUALIFIED_PREDECESSOR",
+      "predecessor_receipt": "docs/provenance/v5-research-continuations/checks/db6ccdc793a0-polynomial-geometry-audit.json",
+      "predecessor_receipt_sha256": "2fdd4a5531332fb9d85d4f917944f804830ccf0adb9714f3a3099932098958d6"
+    },
+    {
+      "module": "FiniteHullWeights",
+      "source_sha256": "ac0ed23555915fcd324b9aa575cc5acde4d57cbcbe4edacd0ef6b64665f33ef5",
+      "object_sha256": "7ca72550e382afd5dd1aae7478499dc1e69039cda332f70f477f23430ee043ff",
+      "transitive_source_fingerprint": "cb875a486f2c9937c77486a893d673230da6c525c5968934ab42a6c8b07cc18c",
+      "status": "QUALIFIED_PREDECESSOR",
+      "predecessor_receipt": "docs/provenance/v5-research-continuations/checks/db6ccdc793a0-polynomial-geometry-audit.json",
+      "predecessor_receipt_sha256": "2fdd4a5531332fb9d85d4f917944f804830ccf0adb9714f3a3099932098958d6"
+    },
+    {
+      "module": "ANDIntrinsic",
+      "source_sha256": "8bae672267258cf279713113382148d759b3818c516173d3cdaae81e1412ee7f",
+      "object_sha256": "85e4ae231e9f08466ffc5d52e837fd6a6343efa3e6ebe0239e9c97cdc6c4844f",
+      "transitive_source_fingerprint": "99dbb1627c2fb3b3ecff974d6facc4e89b2ab9a5e16b508c844680ad8963523b",
+      "status": "QUALIFIED_PREDECESSOR",
+      "predecessor_receipt": "docs/provenance/v5-research-continuations/checks/db6ccdc793a0-polynomial-geometry-audit.json",
+      "predecessor_receipt_sha256": "2fdd4a5531332fb9d85d4f917944f804830ccf0adb9714f3a3099932098958d6"
+    },
+    {
+      "module": "PolynomialBounds",
+      "source_sha256": "c26354ffa7da15f07620f32c208bd5afef75ec5e26d0be4a535621aa25e9c6f6",
+      "object_sha256": "cc439daeba23d2ea450b730a93a680fb6701064f84600c643465c3bc4a49335c",
+      "transitive_source_fingerprint": "7cac4195df628cf3b1c833ace92755cb3f55c7cf5464c6a59c7707cb0c3a20b4",
+      "status": "FRESH_COMPILE",
+      "exit_code": 0
+    },
+    {
+      "module": "ConstraintBounds",
+      "source_sha256": "446be356118af1bc2ea8af2adedbfdd3c861172169a6e9261a537349d8210247",
+      "object_sha256": "08bd82cd0c8ca6aa343b1ca29c045a7564acb316dbfa71f9a83a5cd6969bbc0a",
+      "transitive_source_fingerprint": "dbaa2741a84938f9a7ba2a95489362ff13673421f748bc7bc230f71ce165fe02",
+      "status": "FRESH_COMPILE",
+      "exit_code": 0
+    },
+    {
+      "module": "ExplicitANDScale",
+      "source_sha256": "5800709b1381958aaa2e30ae8ca0da34fb2af1df6fafe1200b65d37183eacca9",
+      "object_sha256": "decdbe2aec8a6effff67996bceead1f9febfecec27017d969e1669d98020ae57",
+      "transitive_source_fingerprint": "e43960aaa49a1675a59c8ba5109fef67f7533352ae41412241be3675211c715e",
+      "status": "FRESH_COMPILE",
+      "exit_code": 0
+    },
+    {
+      "module": "ScaleReadback",
+      "source_sha256": "9f7eea77430a992112a605d297f5f9fdf913241e5f8f8059f432dc71a3e38246",
+      "object_sha256": "bb0ae16e12d6113ec59d7fdc08c79c7d2f63b6ba5eb8a0a751203ef29c15371a",
+      "transitive_source_fingerprint": "b9284080d523626d8f085fe2b30c2eea4ead8edf9a0108d8a3a6521354cd999c",
+      "status": "FRESH_COMPILE",
+      "exit_code": 0
+    },
+    {
+      "module": "IndependentScaleAudit",
+      "source_sha256": "48480e64f691652b5204acb7fcf07a895513d952a2889ff5c9858a922893b9ba",
+      "object_sha256": "182f6fb6c9de2935b3352b65cdc0dce812a2217325fda9f40a9f72616509df00",
+      "transitive_source_fingerprint": "8e80d0670235463638dab565170b3180cfca342e01c3dd63542cb546f2560a78",
+      "status": "FRESH_COMPILE",
+      "exit_code": 0
+    }
+  ],
+  "readbacks": {
+    "ANDRepair.universal_strict_repair": {
+      "type_sha256": "f3508908012f2a260f3f8c74e343f4138c6265070e684e94bd671b2c89cb6210",
+      "axioms": [
+        "Classical.choice",
+        "Quot.sound",
+        "propext"
+      ]
+    },
+    "ANDPotentialBinding.universal_Bregman_repair": {
+      "type_sha256": "b1faaa7f80ec36a586cd983b505ce477cb095a6e1e8f1de5b277358f26fe7897",
+      "axioms": [
+        "Classical.choice",
+        "Quot.sound",
+        "propext"
+      ]
+    },
+    "ANDPotentialBinding.potential_hasFDerivAt": {
+      "type_sha256": "d4500f4d25ae351d9e528115410e5b0e458a50b3f5f6c6a0134eafdf230c6b02",
+      "axioms": [
+        "Classical.choice",
+        "Quot.sound",
+        "propext"
+      ]
+    },
+    "ANDIntrinsic.intrinsic_universal_Bregman_repair": {
+      "type_sha256": "0dcd8f61a5ae0e9150a84bb1783c97cc599c26d08db0807bbd800f073a4eb2c6",
+      "axioms": [
+        "Classical.choice",
+        "Quot.sound",
+        "propext"
+      ]
+    },
+    "PolynomialBounds.strict_gain_of_budget": {
+      "type_sha256": "deec1208e6689277bb6294c3ca228fa77b667a6d83e4f89cd95d1fa4de34c158",
+      "axioms": [
+        "Classical.choice",
+        "Quot.sound",
+        "propext"
+      ]
+    },
+    "ConstraintBounds.positive_inside_radius": {
+      "type_sha256": "47fe9cf6d1f4c7dc60602c252be57bfafebbecb9216c7002e412eb489cf06cfa",
+      "axioms": [
+        "Classical.choice",
+        "Quot.sound",
+        "propext"
+      ]
+    },
+    "ExplicitANDScale.intrinsic_explicit_strict_repair": {
+      "type_sha256": "e20b8c1c698124a64fcef62981c8d1f587ead8d32eeffb95dc12c559a10670e2",
+      "axioms": [
+        "Classical.choice",
+        "Quot.sound",
+        "propext"
+      ]
+    },
+    "ExplicitANDScale.Data.explicit_strict_repair": {
+      "type_sha256": "367217b0d66621a5537ff20d2416fbf68a874e4c2aefae1fb96c5bd1e8620e3c",
+      "axioms": [
+        "Classical.choice",
+        "Quot.sound",
+        "propext"
+      ]
+    },
+    "PolynomialBounds.value_bound": {
+      "type_sha256": "ea158d0f058f2c70887c68b38903ca4fe9a5f959845eb86bc2b076d0feea3403",
+      "axioms": [
+        "Classical.choice",
+        "Quot.sound",
+        "propext"
+      ]
+    },
+    "IndependentScaleAudit.fixture_delta": {
+      "type_sha256": "57b36564ba33ffae23d91ca2dc56f48073fc2bb6550b24581f0612377b908f32",
+      "axioms": [
+        "Classical.choice",
+        "Quot.sound",
+        "propext"
+      ]
+    },
+    "IndependentScaleAudit.fixture_valid": {
+      "type_sha256": "30777ba0647a6bd5a8684863e6c49f65f104a3cde7f6bf0e9bbfa7f993584657",
+      "axioms": [
+        "Classical.choice",
+        "Quot.sound",
+        "propext"
+      ]
+    }
+  },
+  "original_controls": "NOT_RUN",
+  "original_receipt_sha256": "53453a2920c5c69b9df80f4bbff8934636ed13f70202343ffbbb4145c4d224ea",
+  "original_driver_sha256": "4933d602f18c749ff170629964914907bf1c5bf05160329bd8aab623dfd65f98",
+  "execution_kind": "FRESH_CUSTOM_CLOSURE",
+  "finished_utc": "2026-10-02T05:42:34.892959+00:00",
+  "scope": "Source-bound custom closure and selected declaration readbacks. Types are represented by hashes of the exact printed types; complete logs remain private. Official caches are trusted. This does not establish ordinary proof, runtime completeness, empirical or normative warrant, novelty, external human review or merged adoption."
+}

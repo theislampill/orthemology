@@ -1,0 +1,340 @@
+{
+  "id": "866c6ff6e74a-finite-frontier",
+  "origin": "866c6ff6e74a67f2bc452b49a0ada05311c0c2601585ea166404719172bd8086",
+  "descriptor_source_id": "src-866c6ff6e74a67f2-47b7b457c989b63a",
+  "modules": [
+    {
+      "module": "PERRefinement",
+      "source_id": "src-866c6ff6e74a67f2-579eba61a6f2ec19",
+      "imports": [
+        "Mathlib.SetTheory.Cardinal.Finite",
+        "Mathlib.Data.Fintype.EquivFin",
+        "Mathlib.Tactic"
+      ]
+    },
+    {
+      "module": "MealyRefinement",
+      "source_id": "src-866c6ff6e74a67f2-b2d0d70bbecf6f46",
+      "imports": [
+        "PERRefinement"
+      ]
+    },
+    {
+      "module": "BlockMismatch",
+      "source_id": "src-866c6ff6e74a67f2-ba2af5ee33eee250",
+      "imports": [
+        "MealyRefinement",
+        "Mathlib.Data.List.OfFn",
+        "Mathlib.Data.Finset.Sigma"
+      ]
+    },
+    {
+      "module": "MealySharpness",
+      "source_id": "src-866c6ff6e74a67f2-f9b013b4950185c8",
+      "imports": [
+        "MealyRefinement"
+      ]
+    },
+    {
+      "module": "GuardedRefinement",
+      "source_id": "src-866c6ff6e74a67f2-5cfa6b931c1a3330",
+      "imports": [
+        "MealySharpness"
+      ]
+    },
+    {
+      "module": "RankTransport",
+      "source_id": "src-866c6ff6e74a67f2-5c76b33c61e35e3f",
+      "imports": [
+        "Mathlib.Data.Finset.Lattice.Fold",
+        "Mathlib.Tactic"
+      ]
+    },
+    {
+      "module": "LowerEnvelopeBudget",
+      "source_id": "src-866c6ff6e74a67f2-667a9cfb83c649f4",
+      "imports": [
+        "RankTransport"
+      ]
+    },
+    {
+      "module": "PERPotentialFormula",
+      "source_id": "src-866c6ff6e74a67f2-5fdfe3a6b08edef2",
+      "imports": [
+        "PERRefinement",
+        "Mathlib.Logic.Equiv.Sum"
+      ]
+    },
+    {
+      "module": "Verification",
+      "source_id": "src-866c6ff6e74a67f2-be52a5b1023f0466",
+      "imports": [
+        "RankTransport",
+        "LowerEnvelopeBudget",
+        "PERRefinement",
+        "PERPotentialFormula",
+        "MealyRefinement",
+        "MealySharpness",
+        "GuardedRefinement",
+        "BlockMismatch"
+      ]
+    }
+  ],
+  "module_order": [
+    "PERRefinement",
+    "MealyRefinement",
+    "BlockMismatch",
+    "MealySharpness",
+    "GuardedRefinement",
+    "RankTransport",
+    "LowerEnvelopeBudget",
+    "PERPotentialFormula",
+    "Verification"
+  ],
+  "targets": [
+    {
+      "name": "Orthemology.Frontier.liftedRank_step",
+      "module": "RankTransport"
+    },
+    {
+      "name": "Orthemology.Frontier.liftedRank_run_bound",
+      "module": "RankTransport"
+    },
+    {
+      "name": "Orthemology.Frontier.target_after_liftedRank",
+      "module": "RankTransport"
+    },
+    {
+      "name": "Orthemology.Frontier.matched_run",
+      "module": "RankTransport"
+    },
+    {
+      "name": "Orthemology.Frontier.restoration_transport",
+      "module": "RankTransport"
+    },
+    {
+      "name": "Orthemology.Frontier.exists_policy_run",
+      "module": "RankTransport"
+    },
+    {
+      "name": "Orthemology.Frontier.PER.potential_strict",
+      "module": "PERRefinement"
+    },
+    {
+      "name": "Orthemology.Frontier.PER.potential_le",
+      "module": "PERRefinement"
+    },
+    {
+      "name": "Orthemology.Frontier.PER.strict_chain_length",
+      "module": "PERRefinement"
+    },
+    {
+      "name": "Orthemology.Frontier.PER.stabilization_bound",
+      "module": "PERRefinement"
+    },
+    {
+      "name": "Orthemology.Frontier.Mealy.stabilization_bound",
+      "module": "MealyRefinement"
+    },
+    {
+      "name": "Orthemology.Frontier.Mealy.bound_iff_infinite",
+      "module": "MealyRefinement"
+    },
+    {
+      "name": "Orthemology.Frontier.Mealy.approx_iff_words",
+      "module": "MealyRefinement"
+    },
+    {
+      "name": "Orthemology.Frontier.Mealy.distinguishing_words",
+      "module": "MealyRefinement"
+    },
+    {
+      "name": "Orthemology.Frontier.Mealy.Fixtures.two_state_requires_three",
+      "module": "MealyRefinement"
+    },
+    {
+      "name": "Orthemology.Frontier.Mealy.Fixtures.three_state_requires_five",
+      "module": "MealyRefinement"
+    },
+    {
+      "name": "Orthemology.Frontier.RankFixtures.overlap_coverage",
+      "module": "RankTransport"
+    },
+    {
+      "name": "Orthemology.Frontier.RankFixtures.overlap_lifted_ranks",
+      "module": "RankTransport"
+    },
+    {
+      "name": "Orthemology.Frontier.RankFixtures.stale_coverage_fails",
+      "module": "RankTransport"
+    },
+    {
+      "name": "Orthemology.Frontier.Mealy.surviving_input_words_bound",
+      "module": "BlockMismatch"
+    },
+    {
+      "name": "Orthemology.Frontier.Mealy.surviving_uniform_fraction_bound",
+      "module": "BlockMismatch"
+    },
+    {
+      "name": "Orthemology.Frontier.BoundedPaths.mem_words_succ",
+      "module": "BlockMismatch"
+    },
+    {
+      "name": "Orthemology.Frontier.Mealy.deterministic_domain_closed",
+      "module": "BlockMismatch"
+    },
+    {
+      "name": "Orthemology.Frontier.PER.potential_formula",
+      "module": "PERPotentialFormula"
+    },
+    {
+      "name": "Orthemology.Frontier.Mealy.sharp_family_all_sizes",
+      "module": "MealySharpness"
+    },
+    {
+      "name": "Orthemology.Frontier.Mealy.sharp_every_cardinality",
+      "module": "MealySharpness"
+    },
+    {
+      "name": "Orthemology.Frontier.Mealy.one_state_sharp",
+      "module": "MealySharpness"
+    },
+    {
+      "name": "Orthemology.Frontier.BoundedPaths.card_all_words",
+      "module": "BlockMismatch"
+    },
+    {
+      "name": "Orthemology.Frontier.BoundedPaths.length_of_mem_words",
+      "module": "BlockMismatch"
+    },
+    {
+      "name": "Orthemology.Frontier.BoundedPaths.words_subset_all",
+      "module": "BlockMismatch"
+    },
+    {
+      "name": "Orthemology.Frontier.Mealy.guardedApprox_eq",
+      "module": "GuardedRefinement"
+    },
+    {
+      "name": "Orthemology.Frontier.Mealy.guarded_sharp_every_cardinality",
+      "module": "GuardedRefinement"
+    },
+    {
+      "name": "Orthemology.Frontier.lowerRank_step",
+      "module": "LowerEnvelopeBudget"
+    },
+    {
+      "name": "Orthemology.Frontier.badVisits_add_rank_le",
+      "module": "LowerEnvelopeBudget"
+    },
+    {
+      "name": "Orthemology.Frontier.eventually_no_bad_of_budget",
+      "module": "LowerEnvelopeBudget"
+    },
+    {
+      "name": "Orthemology.Frontier.lowerRank_preserves_eventual_good",
+      "module": "LowerEnvelopeBudget"
+    },
+    {
+      "name": "Orthemology.Frontier.LowerBudgetFixtures.arbitrarily_late_bad_visit",
+      "module": "LowerEnvelopeBudget"
+    },
+    {
+      "name": "Orthemology.Frontier.LowerBudgetFixtures.stale_bad_reflection_fails",
+      "module": "LowerEnvelopeBudget"
+    }
+  ],
+  "pins": {
+    "lean_version": "4.19.0",
+    "lean_binary_sha256": "92c3d35b5bfaa5e0fea413a775d504cf46cd95e1345df61c2274f76779e7e023",
+    "packages": [
+      {
+        "name": "mathlib",
+        "revision": "c44e0c8ee63ca166450922a373c7409c5d26b00b"
+      },
+      {
+        "name": "plausible",
+        "revision": "77e08eddc486491d7b9e470926b3dbe50319451a"
+      },
+      {
+        "name": "LeanSearchClient",
+        "revision": "25078369972d295301f5a1e53c3e5850cf6d9d4c"
+      },
+      {
+        "name": "importGraph",
+        "revision": "e6a9f0f5ee3ccf7443a0070f92b62f8db12ae82b"
+      },
+      {
+        "name": "proofwidgets",
+        "revision": "c4919189477c3221e6a204008998b0d724f49904"
+      },
+      {
+        "name": "aesop",
+        "revision": "5d50b08dedd7d69b3d9b3176e0d58a23af228884"
+      },
+      {
+        "name": "Qq",
+        "revision": "fa4f7f15d97591a9cf3aa7724ba371c7fc6dda02"
+      },
+      {
+        "name": "batteries",
+        "revision": "f5d04a9c4973d401c8c92500711518f7c656f034"
+      },
+      {
+        "name": "Cli",
+        "revision": "02dbd02bc00ec4916e99b04b2245b30200e200d0"
+      }
+    ]
+  },
+  "official_imports": [
+    {
+      "module": "Mathlib.Data.Finset.Lattice.Fold",
+      "repository": "mathlib",
+      "source": "Mathlib/Data/Finset/Lattice/Fold.lean",
+      "sha256": "9beff53307586344439df7a87b3697107cf763de3a1c8740a59afc56d06c827b"
+    },
+    {
+      "module": "Mathlib.Data.Finset.Sigma",
+      "repository": "mathlib",
+      "source": "Mathlib/Data/Finset/Sigma.lean",
+      "sha256": "fff03be1b7cc1debfb34cb668f7c0a3d92f7f6031896a3eff65b7e33ec16da8e"
+    },
+    {
+      "module": "Mathlib.Data.Fintype.EquivFin",
+      "repository": "mathlib",
+      "source": "Mathlib/Data/Fintype/EquivFin.lean",
+      "sha256": "e0842e47c8ba3cc9ef6b9fdd78432beac04b613851220973fca283dab71448e9"
+    },
+    {
+      "module": "Mathlib.Data.List.OfFn",
+      "repository": "mathlib",
+      "source": "Mathlib/Data/List/OfFn.lean",
+      "sha256": "7ed0d919af0879458511e8ca33f62bc73952a7c520371467514dc4669fd68d32"
+    },
+    {
+      "module": "Mathlib.Logic.Equiv.Sum",
+      "repository": "mathlib",
+      "source": "Mathlib/Logic/Equiv/Sum.lean",
+      "sha256": "d841cefa18ccca502582d79efe1819f95ebde30d0d3073dcdff37ca47c744ead"
+    },
+    {
+      "module": "Mathlib.SetTheory.Cardinal.Finite",
+      "repository": "mathlib",
+      "source": "Mathlib/SetTheory/Cardinal/Finite.lean",
+      "sha256": "57a20638e916d020a1f6eda323560bc56b338aa4fb5b7f4d8236202ee195c471"
+    },
+    {
+      "module": "Mathlib.Tactic",
+      "repository": "mathlib",
+      "source": "Mathlib/Tactic.lean",
+      "sha256": "f20038eba7bba63f07a2f854496101226df407e20414e6b8ebf94b14f95e831b"
+    }
+  ],
+  "driver": {
+    "source_id": "src-866c6ff6e74a67f2-279d28ea9829b80d",
+    "lean_argument": "EXECUTABLE"
+  },
+  "controls": "ORIGINAL_DRIVER_REQUIRED",
+  "classification": "CURRENT_EVIDENCE"
+}
