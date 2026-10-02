@@ -1,10 +1,15 @@
 # Research-continuation source and evidence index
 
-This is the same Orthemology v5 programme, frozen through **sixth-tranche checkpoint 3**, not a final sixth return. The 42 family labels below are navigation inherited from the intake assessment, not a new theorem catalogue.
+This is the same Orthemology v5 programme through the **final sixth return**. The 42 checkpoint-3 families remain intact; 26 later groups select scoped successors. These labels are navigation, not a theorem catalogue. [The successor overlay](SIXTH_FINAL_OVERLAY.json) records all 113 report/support bindings, eight input identities, the 42-family crosswalk, source-bound controls and all twelve research-avenue dispositions. Seventh remains prospective.
 
 The [architecture and claim boundaries](../../architecture/V5-RESEARCH-CONTINUATIONS.md) explain the current overlay. The [registry](../../../experiments/orthemology-v5-continuations/registry.json) binds actual original sources, reviews and isolated suites. [Evidence status](RESULT_STATUS.json) separates retained reviews from fresh work; **CANDIDATE** does not mean merged adoption.
 
 Original packet paths in the [source map](SOURCE_MAP.json) are archive-member selectors. Null paths mean private custody only, not downloadable files. Projected notes carry an inherited-evidence banner and a reviewed original-to-derived diff digest. Sources preserve their original notices. Official primary texts, raw archives, logs and objects are not distributed.
+
+## Preserved checkpoint-3 families
+
+The historical cost/runtime frontiers in these rows retain their original scope;
+use the final-sixth selectors below for current developments.
 
 | Family | Exact retained source/review entry | Evidence form |
 |---|---|---|
@@ -285,3 +290,39 @@ Each item links to the public projection of the named original archive member. E
 ## Historical obligations
 
 The [obligation crosswalk](OBLIGATION_CROSSWALK.json) preserves U01–U14, CV-R/CV-C/CV-O and every qualified criticism ID at its exact immutable owner. The [source supersession ledger](SUPERSESSION.json) records only scoped corrections. The [archive lineage graph](PACKET_LINEAGES.json) retains all 250 supplied identities and their nesting.
+
+## Final-sixth source and review selections
+
+Ordinary proofs, conditional philosophical arguments, finite controls and fresh
+formal components retain different evidence fields. Historical pending labels in
+retained notes are not the current verdict when a later reviewed source closes
+that exact slice. See the scoped selectors and claim contracts in the overlay.
+
+| Group | Actual source | Review / scope evidence | Form |
+|---|---|---|---|
+| S6F-01 | [Completion and canonical authority](notes/dd653de8a16de0196c33109d11a2c447589d57f8a8cad4877c8383856c845a3a.md) | [Retained assessment](notes/b2ae5609c728772b2d8a4fc7b7065d70ef604ada875c2b85eb66608a753511d9.md) | PROPOSAL |
+| S6F-02 | [Complete coverage and connected local unity](notes/25c6c5efae4829755fb829a57157f1682b67234322ffde87d154559dd9fa246d.md) | [Retained assessment](notes/25c6c5efae4829755fb829a57157f1682b67234322ffde87d154559dd9fa246d.md) | MIXED |
+| S6F-03 | [World bridge v2 and source premise map](notes/9509540e197dabd06c92e20870e65c4fc185d3a27b987531c1adce152dea8f08.md) | [Retained assessment](notes/8afe28df890e0966292e13757265f0ff04c480aa5ba9178c76611943e47630db.md) | CONDITIONAL |
+| S6F-04 | [Intrinsic necessity v2](notes/cfc0393b381fcd5fea90cce22c271420f5c6c9fbd74c30ec91b1c2563a876ee3.md) | [Retained assessment](notes/3a974351c029888d37347ed4d7cd6f651cfe1f7bbe9d680b858676e9d7e14c95.md) | CONDITIONAL |
+| S6F-05 | [Knowledge and original cognitive ownership](notes/77a990a1968d9219806652ca7b9808d2680e96918629a50018ed04ef30094688.md) | [Retained assessment](notes/f137edf983814635c4a6af28f9a1c6b4eab9bcdee116bc19e38d10d1692e82af.md) | CONDITIONAL |
+| S6F-06 | [Integrated agency, Power and Will](notes/77a990a1968d9219806652ca7b9808d2680e96918629a50018ed04ef30094688.md) | [Retained assessment](notes/d805d7a4603ec884bd90818de5b3f2e5e30dd289350ad222360f9cdea58947da.md) | CONDITIONAL |
+| S6F-07 | [Wisdom and motivation/value v2](notes/7bf4f9e1df2de0b49cbc677310d2a882dfdf698e2bd1c275f822dd8038ba67ff.md) | [Retained assessment](notes/ff13d89de1010427223797162127d0b4da44cb28b1cacc4539541e872763973f.md) | CONDITIONAL |
+| S6F-08 | [Disclosure capacity versus actual authentication](notes/77a990a1968d9219806652ca7b9808d2680e96918629a50018ed04ef30094688.md) | [Retained assessment](notes/d805d7a4603ec884bd90818de5b3f2e5e30dd289350ad222360f9cdea58947da.md) | CONDITIONAL |
+| S6F-09 | [Target-first local objective correctness](notes/11627e65cd18f0f52f7f9f2e5d5f051076ea72f4d3560067e7dcc3d7332885d7.md) | [Retained assessment](notes/27bc8608b4db1442a5d330e9a03a0427df1a639bef15309a5c6f189e1553f398.md) | ORDINARY |
+| S6F-10 | [Commuting adequate repairs and claim-relative independence](notes/11627e65cd18f0f52f7f9f2e5d5f051076ea72f4d3560067e7dcc3d7332885d7.md) | [Retained assessment](notes/27bc8608b4db1442a5d330e9a03a0427df1a639bef15309a5c6f189e1553f398.md) | ORDINARY |
+| S6F-11 | [Correct diagnosis does not guarantee safe actuation](notes/9f42b862f0c1fd75d0d8558fd9d4be8b70ed49d2b2284c64e3832b4dc42bce63.md) | [Retained assessment](notes/d77f9db8d731e4ec5b5dee00e88e535a68599cd1948dffbca9de83b5416308be.md) | ORDINARY |
+| S6F-12 | [Conditional root risk and fail-silent remedy](notes/9f42b862f0c1fd75d0d8558fd9d4be8b70ed49d2b2284c64e3832b4dc42bce63.md) | [Retained assessment](notes/d77f9db8d731e4ec5b5dee00e88e535a68599cd1948dffbca9de83b5416308be.md) | ORDINARY |
+| S6F-13 | [Lossy synchronisation, copy weights and recipient warrant](notes/9f42b862f0c1fd75d0d8558fd9d4be8b70ed49d2b2284c64e3832b4dc42bce63.md) | [Retained assessment](notes/d77f9db8d731e4ec5b5dee00e88e535a68599cd1948dffbca9de83b5416308be.md) | ORDINARY |
+| S6F-14 | [Zero-error action-sufficient disclosure](notes/9040abfeb65df6bf2cfc6ae6cf27384cfd2d21b8220e27f88400eedb1f26f222.md) | [Retained assessment](notes/7af35c4c1589b9522fba37eb2ab521994e5a525a6b06728add0fc987d4e5d766.md) | MIXED |
+| S6F-15 | [Exact shared-random disclosure frontier](notes/052b34c2ae9594c118465c0b12b03aa1b93ccc71486183b7aad907820ca87b54.md) | [Retained assessment](notes/2345ce91be761877205ec312de101aeab84d44982b858554d975584f9ee7e4bc.md) | ORDINARY |
+| S6F-16 | [Complete private fixed-codebook classification](notes/dcbaf45a6a43878061f33259605be18510a6ba09f816514c8a9a36112570ebde.md) | [Retained assessment](notes/5ef69e148d510f5ed907251c268b97793fe3abc8c0b17f2ee3e42ef85700042b.md) | ORDINARY |
+| S6F-17 | [Independent elementary disclosure slices](notes/6adf2975e5eb92a7d20800ac69c5083ba15842e252f196c5194db14c721c6a01.md) | [Retained assessment](notes/a5279243b2927e07d78be662b3a34c4b43243eca0497a516b13ce6adbfcee211.md) | ORDINARY |
+| S6F-18 | [Four temporal action-integrity regimes](notes/fcfb1786cde8e3c12524d3f1769c7016e91a77e028e588a655af2b7e474776fe.md) | [Retained assessment](notes/042b3587ffc374867bead681da780a5c683c80a44039f4d6373cb9c98839cf7a.md) | ORDINARY |
+| S6F-19 | [Actual chronological logical bad-count closure](notes/db9a2fff3d920e05b7d65afad780241979b588ffa391d1fca47201cf6d0fbf87.md) | [Retained assessment](notes/1f69bc25dcbb3d1b179568545c4c9aded19f0d3e1d58d53ded8c2a32e1647359.md) | FORMAL |
+| S6F-20 | [Actual positive exponential and canonical-history transport](notes/1f8ec4ba8c4961fe0d3a5719db29030c5eaff3aaf4c07ea9f41361a608997489.md) | [Retained assessment](notes/e074754e266b989c3a058d55ec20820f4f9a00172f404e3269691bc28883bbe8.md) | FORMAL |
+| S6F-21 | [Fixed-finite-family common exponential range](notes/fd6a5f2e156d0ae95e9e1e0a5f44e3266cbe77a9f6d4dabbfc51f9d1979b2e6b.md) | [Retained assessment](notes/a96b3fc7e9c37ccb4ef28fea5d652e2b4229a704b97b8d7531c5595a08cf1ad9.md) | FORMAL |
+| S6F-22 | Runtime v8 bounded full-phase canonical law (private custody; identity in source map) | [Retained assessment](notes/464052cebf9b352e961f0b1f16045db069b60db3dfabaa5a8839bcc794459955.md) | IMPLEMENTATION |
+| S6F-23 | Exact rational sampling and projection boundaries (private custody; identity in source map) | [Retained assessment](notes/464052cebf9b352e961f0b1f16045db069b60db3dfabaa5a8839bcc794459955.md) | MIXED |
+| S6F-24 | [Prior width, nonconvexity, rational reference and literal loss](notes/b3403229c91a718f3e8c61068649590ec090d208206d9922da2270f71e956658.md) | [Retained assessment](notes/1f972baeaf0cebf902b265839466390f9b47fae990b1bd294fd14b80c62ed948.md) | MIXED |
+| S6F-25 | [Controller and disclosure prior-art corrections](notes/09b4a02871f01bb4a676c5a9ebb751344074d349107336b7f86ff1ee719183f1.md) | [Retained assessment](notes/dcbaf45a6a43878061f33259605be18510a6ba09f816514c8a9a36112570ebde.md) | ORDINARY |
+| S6F-26 | [Residual agenda and twelve-avenue reconciliation](notes/dd653de8a16de0196c33109d11a2c447589d57f8a8cad4877c8383856c845a3a.md) | [Retained assessment](notes/27bc8608b4db1442a5d330e9a03a0427df1a639bef15309a5c6f189e1553f398.md) | PROPOSAL |

@@ -1,0 +1,235 @@
+{
+  "id": "549ba6a7f094-connected-author",
+  "origin": "549ba6a7f0941c36faa048bf525a252b943d74956c356b70f3bd0dbada96440f",
+  "descriptor_source_id": "src-549ba6a7f0941c36-d73c11bc1a3e0251",
+  "modules": [
+    {
+      "module": "ConnectedUnity",
+      "source_id": "src-549ba6a7f0941c36-fc26842425d00959",
+      "imports": [
+        "ProductiveCompleteness"
+      ]
+    },
+    {
+      "module": "InfiniteRootlessBranch",
+      "source_id": "src-549ba6a7f0941c36-7793f6e920bf844b",
+      "imports": [
+        "ConnectedUnity"
+      ]
+    },
+    {
+      "module": "ProductiveCompleteness",
+      "source_id": "src-549ba6a7f0941c36-5405cfe6e3ccbc0c",
+      "imports": [
+        "Mathlib"
+      ]
+    }
+  ],
+  "module_order": [
+    "ProductiveCompleteness",
+    "ConnectedUnity",
+    "InfiniteRootlessBranch"
+  ],
+  "targets": [
+    {
+      "name": "Orthemology.Tranche6.ConnectedUnity.below_transitive",
+      "module": "ConnectedUnity"
+    },
+    {
+      "name": "Orthemology.Tranche6.ConnectedUnity.below_root_eq",
+      "module": "ConnectedUnity"
+    },
+    {
+      "name": "Orthemology.Tranche6.ConnectedUnity.root_of_local_cover",
+      "module": "ConnectedUnity"
+    },
+    {
+      "name": "Orthemology.Tranche6.ConnectedUnity.local_cover_unique",
+      "module": "ConnectedUnity"
+    },
+    {
+      "name": "Orthemology.Tranche6.ConnectedUnity.root_covers_itself",
+      "module": "ConnectedUnity"
+    },
+    {
+      "name": "Orthemology.Tranche6.ConnectedUnity.roots_agree_on_edge",
+      "module": "ConnectedUnity"
+    },
+    {
+      "name": "Orthemology.Tranche6.ConnectedUnity.roots_agree_on_path",
+      "module": "ConnectedUnity"
+    },
+    {
+      "name": "Orthemology.Tranche6.ConnectedUnity.common_cover_of_connected_local",
+      "module": "ConnectedUnity"
+    },
+    {
+      "name": "Orthemology.Tranche6.ConnectedUnity.least_of_connected_local",
+      "module": "ConnectedUnity"
+    },
+    {
+      "name": "Orthemology.Tranche6.ConnectedUnity.least_implies_local_and_connected",
+      "module": "ConnectedUnity"
+    },
+    {
+      "name": "Orthemology.Tranche6.ConnectedUnity.local_connected_iff_least",
+      "module": "ConnectedUnity"
+    },
+    {
+      "name": "Orthemology.Tranche6.ConnectedUnity.unique_root_of_connected_local",
+      "module": "ConnectedUnity"
+    },
+    {
+      "name": "Orthemology.Tranche6.ConnectedUnity.local_cover_iff_unique_root_and_ancestral_support",
+      "module": "ConnectedUnity"
+    },
+    {
+      "name": "Orthemology.Tranche6.ConnectedUnity.local_iff_unique_root_ancestors",
+      "module": "ConnectedUnity"
+    },
+    {
+      "name": "Orthemology.Tranche6.ConnectedUnity.strict_descendant_of_nontrivial_field",
+      "module": "ConnectedUnity"
+    },
+    {
+      "name": "Orthemology.Tranche6.ConnectedUnity.Controls.merge_strict",
+      "module": "ConnectedUnity"
+    },
+    {
+      "name": "Orthemology.Tranche6.ConnectedUnity.Controls.merge_connected",
+      "module": "ConnectedUnity"
+    },
+    {
+      "name": "Orthemology.Tranche6.ConnectedUnity.Controls.merge_two_roots_no_local_completion",
+      "module": "ConnectedUnity"
+    },
+    {
+      "name": "Orthemology.Tranche6.ConnectedUnity.Controls.split_strict",
+      "module": "ConnectedUnity"
+    },
+    {
+      "name": "Orthemology.Tranche6.ConnectedUnity.Controls.split_local_no_global",
+      "module": "ConnectedUnity"
+    },
+    {
+      "name": "Orthemology.Tranche6.ConnectedUnity.Controls.split_disconnected",
+      "module": "ConnectedUnity"
+    },
+    {
+      "name": "Orthemology.Tranche6.ConnectedUnity.Controls.merge_all_necessary",
+      "module": "ConnectedUnity"
+    },
+    {
+      "name": "Orthemology.Tranche6.ConnectedUnity.Controls.singleton_reflexive_no_productivity",
+      "module": "ConnectedUnity"
+    },
+    {
+      "name": "Orthemology.Tranche6.ConnectedUnity.Controls.empty_vacuous_local_connected_no_least",
+      "module": "ConnectedUnity"
+    },
+    {
+      "name": "Orthemology.Tranche6.ConnectedUnity.InfiniteControls.fork_irreflexive",
+      "module": "InfiniteRootlessBranch"
+    },
+    {
+      "name": "Orthemology.Tranche6.ConnectedUnity.InfiniteControls.fork_transitive",
+      "module": "InfiniteRootlessBranch"
+    },
+    {
+      "name": "Orthemology.Tranche6.ConnectedUnity.InfiniteControls.ground_is_root",
+      "module": "InfiniteRootlessBranch"
+    },
+    {
+      "name": "Orthemology.Tranche6.ConnectedUnity.InfiniteControls.branch_has_predecessor",
+      "module": "InfiniteRootlessBranch"
+    },
+    {
+      "name": "Orthemology.Tranche6.ConnectedUnity.InfiniteControls.only_ground_is_root",
+      "module": "InfiniteRootlessBranch"
+    },
+    {
+      "name": "Orthemology.Tranche6.ConnectedUnity.InfiniteControls.branch_has_no_root_ancestor",
+      "module": "InfiniteRootlessBranch"
+    },
+    {
+      "name": "Orthemology.Tranche6.ConnectedUnity.InfiniteControls.target_unique_root_ancestor",
+      "module": "InfiniteRootlessBranch"
+    },
+    {
+      "name": "Orthemology.Tranche6.ConnectedUnity.InfiniteControls.target_no_local_cover",
+      "module": "InfiniteRootlessBranch"
+    },
+    {
+      "name": "Orthemology.Tranche6.ConnectedUnity.InfiniteControls.fork_connected",
+      "module": "InfiniteRootlessBranch"
+    },
+    {
+      "name": "Orthemology.Tranche6.ConnectedUnity.InfiniteControls.unique_root_connected_without_least",
+      "module": "InfiniteRootlessBranch"
+    },
+    {
+      "name": "Orthemology.Tranche6.ConnectedUnity.InfiniteControls.pointwise_uniqueness_without_local_completion",
+      "module": "InfiniteRootlessBranch"
+    },
+    {
+      "name": "Orthemology.Tranche6.ConnectedUnity.InfiniteControls.all_fork_nodes_necessary",
+      "module": "InfiniteRootlessBranch"
+    }
+  ],
+  "pins": {
+    "lean_version": "4.19.0",
+    "lean_binary_sha256": "92c3d35b5bfaa5e0fea413a775d504cf46cd95e1345df61c2274f76779e7e023",
+    "packages": [
+      {
+        "name": "mathlib",
+        "revision": "c44e0c8ee63ca166450922a373c7409c5d26b00b"
+      },
+      {
+        "name": "plausible",
+        "revision": "77e08eddc486491d7b9e470926b3dbe50319451a"
+      },
+      {
+        "name": "LeanSearchClient",
+        "revision": "25078369972d295301f5a1e53c3e5850cf6d9d4c"
+      },
+      {
+        "name": "importGraph",
+        "revision": "e6a9f0f5ee3ccf7443a0070f92b62f8db12ae82b"
+      },
+      {
+        "name": "proofwidgets",
+        "revision": "c4919189477c3221e6a204008998b0d724f49904"
+      },
+      {
+        "name": "aesop",
+        "revision": "5d50b08dedd7d69b3d9b3176e0d58a23af228884"
+      },
+      {
+        "name": "Qq",
+        "revision": "fa4f7f15d97591a9cf3aa7724ba371c7fc6dda02"
+      },
+      {
+        "name": "batteries",
+        "revision": "f5d04a9c4973d401c8c92500711518f7c656f034"
+      },
+      {
+        "name": "Cli",
+        "revision": "02dbd02bc00ec4916e99b04b2245b30200e200d0"
+      }
+    ]
+  },
+  "official_imports": [
+    {
+      "module": "Mathlib",
+      "repository": "mathlib",
+      "source": "Mathlib.lean",
+      "sha256": "b0518254279fabf0c6a920804e684536b0f5e2bd1cb6318d0609eb563413f20a"
+    }
+  ],
+  "driver": {
+    "source_id": "src-549ba6a7f0941c36-d73c11bc1a3e0251",
+    "lean_argument": "EXECUTABLE"
+  },
+  "controls": "ORIGINAL_DRIVER_REQUIRED",
+  "classification": "CURRENT_EVIDENCE"
+}

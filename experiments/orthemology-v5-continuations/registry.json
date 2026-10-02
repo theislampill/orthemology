@@ -1,7 +1,7 @@
 {
   "schema": "orthemology-v5-continuations-v1",
   "programme": "Orthemology v5",
-  "cutoff": "sixth-tranche-checkpoint-3",
+  "cutoff": "sixth-tranche-final",
   "source_map": "docs/provenance/v5-research-continuations/SOURCE_MAP.json",
   "result_status": "docs/provenance/v5-research-continuations/RESULT_STATUS.json",
   "supersession": "docs/provenance/v5-research-continuations/SUPERSESSION.json",
@@ -118,7 +118,12 @@
     "experiments/orthemology-v5-continuations/suites/24afae53f1c4-raw-concentration.json",
     "experiments/orthemology-v5-continuations/suites/3dae38ab50de-prior-width.json",
     "experiments/orthemology-v5-continuations/suites/7871eae3c71a-loss-obstruction.json",
-    "experiments/orthemology-v5-continuations/suites/748545d4cf83-tail-moments.json"
+    "experiments/orthemology-v5-continuations/suites/748545d4cf83-tail-moments.json",
+    "experiments/orthemology-v5-continuations/suites/7cbe94fa76f6-actual-finite-model-common-exponential-range.json",
+    "experiments/orthemology-v5-continuations/suites/b5be7775f6d0-runtime-v8.json",
+    "experiments/orthemology-v5-continuations/suites/549ba6a7f094-connected-author.json",
+    "experiments/orthemology-v5-continuations/suites/549ba6a7f094-connected-review.json",
+    "experiments/orthemology-v5-continuations/suites/549ba6a7f094-zero-error-disclosure.json"
   ],
   "results": [
     {
@@ -3225,7 +3230,690 @@
       ],
       "math_form": "CONDITIONAL",
       "implementation": "FORMAL_COMPONENT"
+    },
+    {
+      "id": "S6F-01",
+      "origin": "549ba6a7f0941c36faa048bf525a252b943d74956c356b70f3bd0dbada96440f",
+      "title": "Completion and canonical authority",
+      "claim": "Sixth research completed at 2026-10-02T02:30:09Z; Seventh residual agenda is a handoff, not performed seventh research. Canonical Track T and R5 ceiling unchanged.",
+      "limit": "No Seventh research, canonical status promotion, publication or remote repository mutation is inferred from this research completion record.",
+      "source_ids": [
+        "src-549ba6a7f0941c36-d26d3a38a4d8c885",
+        "src-70677d135cd8957f-6c6aefba741b6c4b",
+        "src-70677d135cd8957f-667f1012e1518113"
+      ],
+      "review_source_ids": [
+        "src-549ba6a7f0941c36-1d2e43188bf60f27",
+        "src-70677d135cd8957f-667f1012e1518113"
+      ],
+      "suite_ids": [],
+      "math_form": "PROPOSAL",
+      "implementation": "NONE"
+    },
+    {
+      "id": "S6F-02",
+      "origin": "549ba6a7f0941c36faa048bf525a252b943d74956c356b70f3bd0dbada96440f",
+      "title": "Complete coverage and connected local unity",
+      "claim": "Coverage implies independence without global well-foundedness; local covers plus connectedness factorise a least ancestor. A connected single-root infinite fork can lack complete coverage.",
+      "limit": "World existence of local covers and field completeness not proved. Graph result is not the older act-inclusive productive uniqueness theorem.",
+      "source_ids": [
+        "src-549ba6a7f0941c36-9da2afc107d10fbd",
+        "src-549ba6a7f0941c36-cd09ef9986bd7cce",
+        "src-eff5fada59f4f411-3e5403aa4cb7858c",
+        "src-eff5fada59f4f411-69761a5f38d592cd",
+        "src-549ba6a7f0941c36-fc26842425d00959",
+        "src-549ba6a7f0941c36-7793f6e920bf844b",
+        "src-549ba6a7f0941c36-5405cfe6e3ccbc0c",
+        "src-549ba6a7f0941c36-a40446d7a332b520"
+      ],
+      "review_source_ids": [
+        "src-549ba6a7f0941c36-9da2afc107d10fbd",
+        "src-549ba6a7f0941c36-cd09ef9986bd7cce"
+      ],
+      "suite_ids": [
+        "eff5fada59f4-upstream-author",
+        "549ba6a7f094-connected-author",
+        "549ba6a7f094-connected-review"
+      ],
+      "math_form": "MIXED",
+      "implementation": "FORMAL_COMPONENT"
+    },
+    {
+      "id": "S6F-03",
+      "origin": "549ba6a7f0941c36faa048bf525a252b943d74956c356b70f3bd0dbada96440f",
+      "title": "World bridge v2 and source premise map",
+      "claim": "Actual corrective exercise, target-sensitive warrant and original productive actuality are connected through explicit premises; origin-closure does not depend on reifying an extra mode object. K3–K6 anti-sceptical transfers remain independent burdens.",
+      "limit": "No actual-world defeating artefact for R5. Do not equate impersonal cosmology with architectural R5. No blanket rejection of populated infinite reception.",
+      "source_ids": [
+        "src-549ba6a7f0941c36-dd71397452079597",
+        "src-549ba6a7f0941c36-834a7acb563ae11b",
+        "src-549ba6a7f0941c36-764e31f1aa0b7921",
+        "src-549ba6a7f0941c36-d1e4b50df5befb10"
+      ],
+      "review_source_ids": [
+        "src-549ba6a7f0941c36-cc08ab1f10f43b2f",
+        "src-549ba6a7f0941c36-8eca0e563472b9b5",
+        "src-549ba6a7f0941c36-62be2581c549e0fb"
+      ],
+      "suite_ids": [],
+      "math_form": "CONDITIONAL",
+      "implementation": "NONE"
+    },
+    {
+      "id": "S6F-04",
+      "origin": "549ba6a7f0941c36faa048bf525a252b943d74956c356b70f3bd0dbada96440f",
+      "title": "Intrinsic necessity v2",
+      "claim": "Existence-entailing intrinsic sufficiency is separated from essential independence while existing; whole-existence self-production is tested without banning temporal maintenance or noncausal rivals.",
+      "limit": "No deductive Necessary Being or modal collapse result. Coverage and exhaustive nonbrute existential account remain defended premises.",
+      "source_ids": [
+        "src-549ba6a7f0941c36-e37aa2da9a054ee1"
+      ],
+      "review_source_ids": [
+        "src-549ba6a7f0941c36-ce204404f17848f3",
+        "src-549ba6a7f0941c36-d83c60d91bf48ccb"
+      ],
+      "suite_ids": [],
+      "math_form": "CONDITIONAL",
+      "implementation": "NONE"
+    },
+    {
+      "id": "S6F-05",
+      "origin": "549ba6a7f0941c36faa048bf525a252b943d74956c356b70f3bd0dbada96440f",
+      "title": "Knowledge and original cognitive ownership",
+      "claim": "Respect-specific original-giver Knowledge is distinguished from recipient ownership, standing cognition, effect Knowledge and noninferential source possession.",
+      "limit": "No psychological acquisition by the source. Productive completeness alone does not prove intrinsic cognition.",
+      "source_ids": [
+        "src-549ba6a7f0941c36-15356310170a68eb",
+        "src-549ba6a7f0941c36-c1f76a9be18bbf78",
+        "src-83f1a917b40abc1e-0d06ed00c0031fd4",
+        "src-83f1a917b40abc1e-3e5403aa4cb7858c",
+        "src-83f1a917b40abc1e-423fc5e85a3612ac",
+        "src-83f1a917b40abc1e-ee614019a0f8964c",
+        "src-83f1a917b40abc1e-7331643e4ae17a67",
+        "src-db6ccdc793a0a1a9-a04b99d4ca66aed8",
+        "src-db6ccdc793a0a1a9-ba8c6576b25abeae",
+        "src-db6ccdc793a0a1a9-d4e1cb125533656a",
+        "src-db6ccdc793a0a1a9-215f7cd3b721ca42",
+        "src-db6ccdc793a0a1a9-2652ee6ac655d1b9",
+        "src-db6ccdc793a0a1a9-cd0368a221290d3e",
+        "src-db6ccdc793a0a1a9-8b53f4da3aceb2b8",
+        "src-db6ccdc793a0a1a9-5173aba7436e4725",
+        "src-db6ccdc793a0a1a9-6f73c0ebdf442e29"
+      ],
+      "review_source_ids": [
+        "src-549ba6a7f0941c36-f7e7098e2b616d02",
+        "src-549ba6a7f0941c36-add1b65c03e0cef3",
+        "src-549ba6a7f0941c36-b31aca7fb59161db"
+      ],
+      "suite_ids": [
+        "83f1a917b40a-knowledge-author",
+        "db6ccdc793a0-orthability-core",
+        "db6ccdc793a0-existence-aware-history",
+        "db6ccdc793a0-coverage-boundary"
+      ],
+      "math_form": "CONDITIONAL",
+      "implementation": "FORMAL_COMPONENT"
+    },
+    {
+      "id": "S6F-06",
+      "origin": "549ba6a7f0941c36faa048bf525a252b943d74956c356b70f3bd0dbada96440f",
+      "title": "Integrated agency, Power and Will",
+      "claim": "Cognition and efficacy in one bearer do not yet give cognition-guided production; actual efficacy, modal capacity, intention, reason and completed exercise are separate steps.",
+      "limit": "No omnipotence from one actual effect. No automatic Will from differentiated outcomes. No pure-act premise imported.",
+      "source_ids": [
+        "src-549ba6a7f0941c36-15356310170a68eb",
+        "src-549ba6a7f0941c36-c1f76a9be18bbf78",
+        "src-549ba6a7f0941c36-85fc04e1293c73f4"
+      ],
+      "review_source_ids": [
+        "src-549ba6a7f0941c36-add1b65c03e0cef3",
+        "src-549ba6a7f0941c36-b31aca7fb59161db"
+      ],
+      "suite_ids": [],
+      "math_form": "CONDITIONAL",
+      "implementation": "NONE"
+    },
+    {
+      "id": "S6F-07",
+      "origin": "549ba6a7f0941c36faa048bf525a252b943d74956c356b70f3bd0dbada96440f",
+      "title": "Wisdom and motivation/value v2",
+      "claim": "Controlled avoidable-injury comparison, de re eligibility and mixed-source test sharpen the proposed practical-perfection route.",
+      "limit": "No universal no-harm premise or automatic Knowledge→benevolence. No empirical conclusion about divine actions; stronger practical governance remains open.",
+      "source_ids": [
+        "src-549ba6a7f0941c36-7e65625be63067a2",
+        "src-549ba6a7f0941c36-15356310170a68eb"
+      ],
+      "review_source_ids": [
+        "src-549ba6a7f0941c36-0b6a5669cdc11422",
+        "src-549ba6a7f0941c36-add1b65c03e0cef3"
+      ],
+      "suite_ids": [],
+      "math_form": "CONDITIONAL",
+      "implementation": "NONE"
+    },
+    {
+      "id": "S6F-08",
+      "origin": "549ba6a7f0941c36faa048bf525a252b943d74956c356b70f3bd0dbada96440f",
+      "title": "Disclosure capacity versus actual authentication",
+      "claim": "Content, recipient, suitable channel and joint capacities support a conditional disclosure route; actual mission, authorship, truthfulness and recipient warrant remain further evidence.",
+      "limit": "No actual revelation, safe-root message or authority from generic source Knowledge. Origin authentication alone is not truthful content.",
+      "source_ids": [
+        "src-549ba6a7f0941c36-15356310170a68eb",
+        "src-549ba6a7f0941c36-c1f76a9be18bbf78",
+        "src-549ba6a7f0941c36-85fc04e1293c73f4"
+      ],
+      "review_source_ids": [
+        "src-549ba6a7f0941c36-add1b65c03e0cef3",
+        "src-549ba6a7f0941c36-b31aca7fb59161db",
+        "src-549ba6a7f0941c36-3c0795fe05c739ab"
+      ],
+      "suite_ids": [],
+      "math_form": "CONDITIONAL",
+      "implementation": "NONE"
+    },
+    {
+      "id": "S6F-09",
+      "origin": "549ba6a7f0941c36faa048bf525a252b943d74956c356b70f3bd0dbada96440f",
+      "title": "Target-first local objective correctness",
+      "claim": "N1–N4 fix target, obtaining relation, token/respect and target-preserving repair; constitutive correctness, truth, warrant, function and practical authority remain distinct.",
+      "limit": "No categorical authority or full-basis radical-correction proof. No Candidate E or R5 promotion.",
+      "source_ids": [
+        "src-549ba6a7f0941c36-c1097960f2caf067",
+        "src-549ba6a7f0941c36-3c0795fe05c739ab",
+        "src-549ba6a7f0941c36-4081ce5e809f87e8"
+      ],
+      "review_source_ids": [
+        "src-549ba6a7f0941c36-8cf03bb68272e04b"
+      ],
+      "suite_ids": [],
+      "math_form": "ORDINARY",
+      "implementation": "NONE"
+    },
+    {
+      "id": "S6F-10",
+      "origin": "549ba6a7f0941c36faa048bf525a252b943d74956c356b70f3bd0dbada96440f",
+      "title": "Commuting adequate repairs and claim-relative independence",
+      "claim": "Commuting idempotent lawful maps with independently adequate fixed points compose; an appropriate order preserving earlier achievements can also work. Evidence independence is relative to the disputed claim.",
+      "limit": "Commutation sufficient not necessary. Pairwise compatibility alone not joint solvability. Fresh scan of same source does not authenticate its origin.",
+      "source_ids": [
+        "src-549ba6a7f0941c36-c1097960f2caf067",
+        "src-549ba6a7f0941c36-4081ce5e809f87e8"
+      ],
+      "review_source_ids": [
+        "src-549ba6a7f0941c36-8cf03bb68272e04b"
+      ],
+      "suite_ids": [],
+      "math_form": "ORDINARY",
+      "implementation": "NONE"
+    },
+    {
+      "id": "S6F-11",
+      "origin": "549ba6a7f0941c36faa048bf525a252b943d74956c356b70f3bd0dbada96440f",
+      "title": "Correct diagnosis does not guarantee safe actuation",
+      "claim": "For n=2f+1 roots with ≤f static root-coupled report/actuator faults, exact shared diagnosis and surviving supports coexist with destructive first intervention; minimax unanimous risk f/n.",
+      "limit": "Not a refutation of AW/PRRC or a deployed-system result. One damaging incident can prevent restoration forever.",
+      "source_ids": [
+        "src-549ba6a7f0941c36-19d76e1601b852c5"
+      ],
+      "review_source_ids": [
+        "src-549ba6a7f0941c36-039532d623f6ec63"
+      ],
+      "suite_ids": [],
+      "math_form": "ORDINARY",
+      "implementation": "NONE"
+    },
+    {
+      "id": "S6F-12",
+      "origin": "549ba6a7f0941c36faa048bf525a252b943d74956c356b70f3bd0dbada96440f",
+      "title": "Conditional root risk and fail-silent remedy",
+      "claim": "After k dissenters, b=f−k and u=n−k give first-attempt minimax risk b/u. If each root applies adequate idempotent R or harmless identity, f+1 distinct-root actions guarantee safe restoration.",
+      "limit": "Harmlessness covers safety and future routes, not just a FAIL label. Shared corruptible containment gate must be included; κ may collapse to1.",
+      "source_ids": [
+        "src-549ba6a7f0941c36-19d76e1601b852c5",
+        "src-549ba6a7f0941c36-c1097960f2caf067"
+      ],
+      "review_source_ids": [
+        "src-549ba6a7f0941c36-039532d623f6ec63"
+      ],
+      "suite_ids": [],
+      "math_form": "ORDINARY",
+      "implementation": "NONE"
+    },
+    {
+      "id": "S6F-13",
+      "origin": "549ba6a7f0941c36faa048bf525a252b943d74956c356b70f3bd0dbada96440f",
+      "title": "Lossy synchronisation, copy weights and recipient warrant",
+      "claim": "Root-labelled transcript preserves safe-action discrimination that majority-only and unlabelled summaries lose; 40/1/1 copies across three roots can yield20/21 carrier-choice risk rather than1/3 root-choice risk.",
+      "limit": "No general numerical identity or apoautotic continuation theorem. Operational fault roots are not ultimate metaphysical sources.",
+      "source_ids": [
+        "src-549ba6a7f0941c36-19d76e1601b852c5",
+        "src-549ba6a7f0941c36-4081ce5e809f87e8"
+      ],
+      "review_source_ids": [
+        "src-549ba6a7f0941c36-039532d623f6ec63"
+      ],
+      "suite_ids": [],
+      "math_form": "ORDINARY",
+      "implementation": "NONE"
+    },
+    {
+      "id": "S6F-14",
+      "origin": "549ba6a7f0941c36faa048bf525a252b943d74956c356b70f3bd0dbada96440f",
+      "title": "Zero-error action-sufficient disclosure",
+      "claim": "An informed truthful sender needs b+1 distinct action meanings, or ceil(log2(b+1)) fixed binary bits, for zero-error compulsory first repair; three-module formal subset proves deterministic decoder-image/counting/action binding.",
+      "limit": "Formal subset does not prove ordinary private/shared-seed argument. Not a scripture-length theorem or physical channel authentication.",
+      "source_ids": [
+        "src-549ba6a7f0941c36-61e32b3392b5688f",
+        "src-549ba6a7f0941c36-1b75d1b5ceff0550",
+        "src-549ba6a7f0941c36-9a4206fb3497b9cd",
+        "src-549ba6a7f0941c36-792f6a4c5a5b6f2b"
+      ],
+      "review_source_ids": [
+        "src-549ba6a7f0941c36-d84e6016504d5c09",
+        "src-549ba6a7f0941c36-1c210fdf5c9d2eb0"
+      ],
+      "suite_ids": [
+        "549ba6a7f094-zero-error-disclosure"
+      ],
+      "math_form": "MIXED",
+      "implementation": "FORMAL_COMPONENT"
+    },
+    {
+      "id": "S6F-15",
+      "origin": "549ba6a7f0941c36faa048bf525a252b943d74956c356b70f3bd0dbada96440f",
+      "title": "Exact shared-random disclosure frontier",
+      "claim": "For static independent corruption and shared fresh codebook, Vshared=choose(b,M)/choose(u,M) on1≤M≤b; zero for M>b including b0.",
+      "limit": "No binomial ratio outside its stated domain. Risk not posterior credibility or ethical permission.",
+      "source_ids": [
+        "src-549ba6a7f0941c36-4c374368b3a374bf",
+        "src-549ba6a7f0941c36-b11d06d27e926720"
+      ],
+      "review_source_ids": [
+        "src-549ba6a7f0941c36-0dd239785e52e997",
+        "src-549ba6a7f0941c36-b11d06d27e926720"
+      ],
+      "suite_ids": [],
+      "math_form": "ORDINARY",
+      "implementation": "NONE"
+    },
+    {
+      "id": "S6F-16",
+      "origin": "549ba6a7f0941c36faa048bf525a252b943d74956c356b70f3bd0dbada96440f",
+      "title": "Complete private fixed-codebook classification",
+      "claim": "For all u>b≥0 and M≥1, arbitrary real overlapping codebooks have the exact disjoint-uniform-partition optimum; all intermediate M cases now closed within this game.",
+      "limit": "No Lean proof of full frontier. External Azarpendar–Jafari partition-Kneser theorem remains load-bearing. Does not require every optimizer to be a partition.",
+      "source_ids": [
+        "src-549ba6a7f0941c36-4a6fa83023ecd435",
+        "src-549ba6a7f0941c36-b11d06d27e926720",
+        "src-549ba6a7f0941c36-7d4a8dccdeea796c"
+      ],
+      "review_source_ids": [
+        "src-549ba6a7f0941c36-5318d5926e5ed3bb",
+        "src-549ba6a7f0941c36-93b72ec775cd629e"
+      ],
+      "suite_ids": [],
+      "math_form": "ORDINARY",
+      "implementation": "NONE"
+    },
+    {
+      "id": "S6F-17",
+      "origin": "549ba6a7f0941c36faa048bf525a252b943d74956c356b70f3bd0dbada96440f",
+      "title": "Independent elementary disclosure slices",
+      "claim": "Complete M2 matroid route and b4M3 elementary/certificate route remain independent supports even though the general frontier closes the larger game.",
+      "limit": "Do not double-count these as disjoint discoveries. Certificate enumeration is not proof of all real codebooks without its ordinary reduction.",
+      "source_ids": [
+        "src-549ba6a7f0941c36-06b2817a81e55908",
+        "src-549ba6a7f0941c36-e004f4629bb20954",
+        "src-549ba6a7f0941c36-fc414b8412e86cd5"
+      ],
+      "review_source_ids": [
+        "src-549ba6a7f0941c36-750b561127c21491",
+        "src-549ba6a7f0941c36-104427e99cb500bb"
+      ],
+      "suite_ids": [],
+      "math_form": "ORDINARY",
+      "implementation": "NONE"
+    },
+    {
+      "id": "S6F-18",
+      "origin": "549ba6a7f0941c36faa048bf525a252b943d74956c356b70f3bd0dbada96440f",
+      "title": "Four temporal action-integrity regimes",
+      "claim": "Reoptimising corruption timing gives shared value, private value, b/u, and1 if b≥1 when chosen root exposed before fault landing. At8,3,2 these are3/28,1/4,3/8,1.",
+      "limit": "Not four measurements of one unchanged protocol. Not a general mobile-adversary theorem or moral duty to accept risk.",
+      "source_ids": [
+        "src-549ba6a7f0941c36-6e9be7191d6dc866"
+      ],
+      "review_source_ids": [
+        "src-549ba6a7f0941c36-9fefe9797d0946dd"
+      ],
+      "suite_ids": [],
+      "math_form": "ORDINARY",
+      "implementation": "NONE"
+    },
+    {
+      "id": "S6F-19",
+      "origin": "2a1791994b2965d9b2502886d6f836d49134d2b84bd0910359268fa674f0e9f8",
+      "title": "Actual chronological logical bad-count closure",
+      "claim": "Actual generated controller chronological slices now compose into total logical cost control under full observed-history conditioning, not assumed independent durations.",
+      "limit": "Does not change conditional theorem types into unconditional ones. Not every almost-sure policy, general odd visits or physical runtime cost.",
+      "source_ids": [
+        "src-2a1791994b2965d9-c6be8020cbb124cc",
+        "src-2a1791994b2965d9-a12da4cdf7be3ab5",
+        "src-577ce1a4825d79bc-1d3ce4552be499fd",
+        "src-3d5b240940fec360-ef8015527839e465",
+        "src-3d5b240940fec360-1fc6b1200bd7c5dc",
+        "src-7cbe94fa76f64863-b9ecdb25d68f2027",
+        "src-7cbe94fa76f64863-99d9b69f71b14667",
+        "src-7cbe94fa76f64863-8722f9d3cbfe5fea",
+        "src-7cbe94fa76f64863-9509008770ab69f5",
+        "src-7cbe94fa76f64863-28096e283a191562",
+        "src-7cbe94fa76f64863-c301d2da3eca2033",
+        "src-7cbe94fa76f64863-45ae2ea9c521af5a",
+        "src-7cbe94fa76f64863-b323c6989878c25c",
+        "src-7cbe94fa76f64863-d94017e054dcb247",
+        "src-7cbe94fa76f64863-ef3ff807911eecde",
+        "src-7cbe94fa76f64863-5b06e089a0c500d2",
+        "src-7cbe94fa76f64863-87bb1fed86398b05",
+        "src-7cbe94fa76f64863-7a3932970395151c",
+        "src-7cbe94fa76f64863-f2181ee785e61ae6"
+      ],
+      "review_source_ids": [
+        "src-930c8d704c92e7d0-4b776210ba07a121",
+        "src-70677d135cd8957f-6f7a946ec7242c64",
+        "src-3d5b240940fec360-ef8015527839e465",
+        "src-3d5b240940fec360-1fc6b1200bd7c5dc"
+      ],
+      "suite_ids": [
+        "7cbe94fa76f6-actual-finite-model-common-exponential-range"
+      ],
+      "math_form": "FORMAL",
+      "implementation": "MATHEMATICAL_POLICY"
+    },
+    {
+      "id": "S6F-20",
+      "origin": "577ce1a4825d79bca5997c5c67be3a0375902729f8dc513f157e5745a9fec0f6",
+      "title": "Actual positive exponential and canonical-history transport",
+      "claim": "Pointwise generated logical badCount has a positive open exponential-integrability range, explicit a.e finiteness, and exact full-integrand transport to canonical markovHistoryLaw. No assumed stochastic tail or full-law equality premise.",
+      "limit": "ENNReal.toReal infinity=0 cannot stand in for a.e finiteness. No physical acquisition/CPU/memory/raw-output bound. Not uniform over instances or every winning policy.",
+      "source_ids": [
+        "src-577ce1a4825d79bc-12afdcb1f0a4fae2",
+        "src-577ce1a4825d79bc-f2ee1cff88f4f574",
+        "src-7cbe94fa76f64863-422f68af32fda048",
+        "src-7cbe94fa76f64863-60566ba0ebc39186",
+        "src-7cbe94fa76f64863-92aa63aae0030472",
+        "src-7cbe94fa76f64863-825dfa1a584e75a0",
+        "src-7cbe94fa76f64863-0afaf4c3c8312bd2",
+        "src-7cbe94fa76f64863-a8957081da1e4191",
+        "src-7cbe94fa76f64863-ea32261aa332b82a",
+        "src-7cbe94fa76f64863-d22de715b70b1cb5",
+        "src-7cbe94fa76f64863-badd13f57e790d00",
+        "src-7cbe94fa76f64863-d046f3a6aa41b5de"
+      ],
+      "review_source_ids": [
+        "src-8f44852c1c59cfd3-4b776210ba07a121",
+        "src-70677d135cd8957f-69fe395aa6409b65"
+      ],
+      "suite_ids": [
+        "7cbe94fa76f6-actual-finite-model-common-exponential-range"
+      ],
+      "math_form": "FORMAL",
+      "implementation": "MATHEMATICAL_POLICY"
+    },
+    {
+      "id": "S6F-21",
+      "origin": "7cbe94fa76f64863abe9025316db7e3968d74a7b4018dc787da5b2e58dbbf8ee",
+      "title": "Fixed-finite-family common exponential range",
+      "claim": "One generated policy for a fixed finite admitted family has a common positive open range and a common finite bound at each parameter; suitable-tolerance wrapper selects ε before the true model.",
+      "limit": "No uniformity over arbitrary instances. Prescribed tolerance requires family-wide row separation, not one-model premise. Heartbeat-limited mutation is inconclusive, not rejected.",
+      "source_ids": [
+        "src-7cbe94fa76f64863-b335630551682c19",
+        "src-7cbe94fa76f64863-dcbb9e70375f105f"
+      ],
+      "review_source_ids": [
+        "src-ea5cb47949ee771a-4b776210ba07a121",
+        "src-70677d135cd8957f-08897ce4bb88371b"
+      ],
+      "suite_ids": [
+        "7cbe94fa76f6-actual-finite-model-common-exponential-range"
+      ],
+      "math_form": "FORMAL",
+      "implementation": "MATHEMATICAL_POLICY"
+    },
+    {
+      "id": "S6F-22",
+      "origin": "2a1791994b2965d9b2502886d6f836d49134d2b84bd0910359268fa674f0e9f8",
+      "title": "Runtime v8 bounded full-phase canonical law",
+      "claim": "Two-model/two-state/two-action complete phase source with unbounded histories/counters reaches exact decoded canonical-history law and parity via a common output-only decoder. ComputedToleranceSource and FullControllerCanonicalLaw derive missing law correspondence.",
+      "limit": "Still36 finite selector equalities, positive denominators, fixed1/3 vs2/3 environment match,false initial state. No automatic opaque selector extraction or certified full concrete fixture. No arbitrary dimensions/rational environments or physical-time/defect claim.",
+      "source_ids": [
+        "src-2a1791994b2965d9-ab9ed4c3e84efdcf",
+        "src-2a1791994b2965d9-b4526d1fd7c4dfcb",
+        "src-b5be7775f6d0b1d5-1fcda0c98402d4e6",
+        "src-b5be7775f6d0b1d5-a731694cd466a9f5",
+        "src-b5be7775f6d0b1d5-9f1c469ab3a60611",
+        "src-b5be7775f6d0b1d5-0f033084efbe72e7",
+        "src-b5be7775f6d0b1d5-6b6f4480076dbc9c",
+        "src-b5be7775f6d0b1d5-7e8036d38833c54b",
+        "src-b5be7775f6d0b1d5-8d34c14e93be7749"
+      ],
+      "review_source_ids": [
+        "src-2a1791994b2965d9-1934080625d2428f",
+        "src-2a1791994b2965d9-4374e07405f24ee8"
+      ],
+      "suite_ids": [
+        "b5be7775f6d0-runtime-v8"
+      ],
+      "math_form": "IMPLEMENTATION",
+      "implementation": "SOURCE_PROGRAM"
+    },
+    {
+      "id": "S6F-23",
+      "origin": "2a1791994b2965d9b2502886d6f836d49134d2b84bd0910359268fa674f0e9f8",
+      "title": "Exact rational sampling and projection boundaries",
+      "claim": "Rational rejection sampling laws, positive stuttering, source-bound atomless held stream and countable-fibre sufficient preservation separate decoded law from richer physical stream.",
+      "limit": "No equality of all physical invariants from decoded parity. Countable fibres sufficient, not necessary classification. Finite expected acquisition not worst-case bound.",
+      "source_ids": [
+        "src-2a1791994b2965d9-ab9ed4c3e84efdcf",
+        "src-2a1791994b2965d9-dfd83a2a8ac4a529",
+        "src-b5be7775f6d0b1d5-5d4b9242eca7c536",
+        "src-b5be7775f6d0b1d5-bcb6d234c8073b01",
+        "src-b5be7775f6d0b1d5-ec2302d46c61f0f2",
+        "src-b5be7775f6d0b1d5-9bee0b4b8f8ca65f",
+        "src-b5be7775f6d0b1d5-95d6c9363d4d4d4b",
+        "src-b5be7775f6d0b1d5-27658fa5794cedbf",
+        "src-b5be7775f6d0b1d5-43b3ff4e67b2104c",
+        "src-b5be7775f6d0b1d5-6a24ab72acb6cad6",
+        "src-b5be7775f6d0b1d5-f29e77bc6db92a32",
+        "src-b5be7775f6d0b1d5-88ffcfe949ebf52a",
+        "src-b5be7775f6d0b1d5-c2fa3af974cf15e0",
+        "src-b5be7775f6d0b1d5-bc0e8c5f8099a743",
+        "src-b5be7775f6d0b1d5-3aabe433d2308106",
+        "src-b5be7775f6d0b1d5-8d34c14e93be7749"
+      ],
+      "review_source_ids": [
+        "src-2a1791994b2965d9-1934080625d2428f",
+        "src-2a1791994b2965d9-dfd83a2a8ac4a529"
+      ],
+      "suite_ids": [
+        "b5be7775f6d0-runtime-v8"
+      ],
+      "math_form": "MIXED",
+      "implementation": "RUNTIME_COMPONENT"
+    },
+    {
+      "id": "S6F-24",
+      "origin": "14c267b8206a8967f886ac034460941f4df142be58d2675895c4863ed943f075",
+      "title": "Prior width, nonconvexity, rational reference and literal loss",
+      "claim": "Retain accepted prior families/nonconvexity/candidate3/loss interfaces; final report clarifies their relation and narrower formal positive scopes.",
+      "limit": "Composite infinite priors are not a pair of known finite transition kernels. No contradiction with finite-model common exponential theorem. Infinite expectation not a.s infinite errors; loss obstruction not all learning reductions.",
+      "source_ids": [
+        "src-14c267b8206a8967-f42feed088b7d9d3",
+        "src-45af85cc433a27ab-1f565442059cffbb",
+        "src-70677d135cd8957f-aea7cde29d1bf311",
+        "src-2a1791994b2965d9-c6be8020cbb124cc",
+        "src-3dae38ab50de2b81-6a51da7c858c0385",
+        "src-3dae38ab50de2b81-c5948a7096694ce8",
+        "src-3dae38ab50de2b81-f847a9aa3322fa53",
+        "src-3dae38ab50de2b81-3ae1204839ebd647",
+        "src-3dae38ab50de2b81-32884e46a8402177",
+        "src-3dae38ab50de2b81-d1e4900d61cfa0cc",
+        "src-3dae38ab50de2b81-d9df38d3049ef265",
+        "src-3dae38ab50de2b81-1445284cfc1105ef",
+        "src-3dae38ab50de2b81-b6a759a4b90b90f2",
+        "src-3dae38ab50de2b81-3920f4167e28b82d",
+        "src-3dae38ab50de2b81-ef44d1a711564c21",
+        "src-3dae38ab50de2b81-a7dd91f3e6309e98",
+        "src-3dae38ab50de2b81-3e6372569037826f",
+        "src-3dae38ab50de2b81-ca81a6fc0c6218b4",
+        "src-3dae38ab50de2b81-ae37a6434d2b768c",
+        "src-3dae38ab50de2b81-343cde738e94873d",
+        "src-3dae38ab50de2b81-0378759bdd274150",
+        "src-3dae38ab50de2b81-b0ec1d01cfeae39b",
+        "src-3dae38ab50de2b81-413aacb14e29b331",
+        "src-3dae38ab50de2b81-b37e11d743164b3a",
+        "src-3dae38ab50de2b81-62ee1cfe00e322b6",
+        "src-3dae38ab50de2b81-d6456d2698a68208",
+        "src-3dae38ab50de2b81-6487ea2767a0dd9d",
+        "src-3dae38ab50de2b81-0bad52f9254a0d73",
+        "src-3dae38ab50de2b81-5da5f07b30ec1eb0",
+        "src-3dae38ab50de2b81-1cdb3ec42a28fd0c",
+        "src-3dae38ab50de2b81-de47d09fd4de6212",
+        "src-3dae38ab50de2b81-1567975121dc7871",
+        "src-3dae38ab50de2b81-d5516df681fd00a7",
+        "src-3dae38ab50de2b81-6b74d8f9decc44c2",
+        "src-3dae38ab50de2b81-10e7dd276e2c9ab1",
+        "src-3dae38ab50de2b81-3237d1a5830d8f5e",
+        "src-3dae38ab50de2b81-b335630551682c19",
+        "src-3dae38ab50de2b81-7c4cd68b6675ae1f",
+        "src-3dae38ab50de2b81-5460ca42843bfa32",
+        "src-3dae38ab50de2b81-4adacf817edf2a54",
+        "src-3dae38ab50de2b81-ff3d7eee4824bafe",
+        "src-15e2b6abb662c4df-6a51da7c858c0385",
+        "src-15e2b6abb662c4df-c5948a7096694ce8",
+        "src-15e2b6abb662c4df-f847a9aa3322fa53",
+        "src-15e2b6abb662c4df-3ae1204839ebd647",
+        "src-15e2b6abb662c4df-32884e46a8402177",
+        "src-15e2b6abb662c4df-d1e4900d61cfa0cc",
+        "src-15e2b6abb662c4df-d9df38d3049ef265",
+        "src-15e2b6abb662c4df-1445284cfc1105ef",
+        "src-15e2b6abb662c4df-b6a759a4b90b90f2",
+        "src-15e2b6abb662c4df-3920f4167e28b82d",
+        "src-15e2b6abb662c4df-ef44d1a711564c21",
+        "src-15e2b6abb662c4df-a7dd91f3e6309e98",
+        "src-15e2b6abb662c4df-3e6372569037826f",
+        "src-15e2b6abb662c4df-ca81a6fc0c6218b4",
+        "src-15e2b6abb662c4df-ae37a6434d2b768c",
+        "src-15e2b6abb662c4df-343cde738e94873d",
+        "src-15e2b6abb662c4df-0378759bdd274150",
+        "src-15e2b6abb662c4df-b0ec1d01cfeae39b",
+        "src-15e2b6abb662c4df-413aacb14e29b331",
+        "src-15e2b6abb662c4df-b37e11d743164b3a",
+        "src-15e2b6abb662c4df-62ee1cfe00e322b6",
+        "src-15e2b6abb662c4df-d6456d2698a68208",
+        "src-15e2b6abb662c4df-6487ea2767a0dd9d",
+        "src-15e2b6abb662c4df-0bad52f9254a0d73",
+        "src-15e2b6abb662c4df-5da5f07b30ec1eb0",
+        "src-15e2b6abb662c4df-1cdb3ec42a28fd0c",
+        "src-15e2b6abb662c4df-de47d09fd4de6212",
+        "src-15e2b6abb662c4df-12d03a153da08437",
+        "src-15e2b6abb662c4df-48b15f63f98bdd86",
+        "src-15e2b6abb662c4df-9d3e8acf5057b276",
+        "src-15e2b6abb662c4df-5e7a169a123fba81",
+        "src-15e2b6abb662c4df-b335630551682c19",
+        "src-78f19b47a154a2a4-fa45267a08d90c0a",
+        "src-78f19b47a154a2a4-c3a442bdb50efafc",
+        "src-78f19b47a154a2a4-a128a6332d9d8311",
+        "src-78f19b47a154a2a4-6c64fde74e6a2c2f",
+        "src-78f19b47a154a2a4-65626cc8b13f1fa3",
+        "src-78f19b47a154a2a4-121d22476e05511c",
+        "src-78f19b47a154a2a4-4ec0811c8c277650",
+        "src-78f19b47a154a2a4-b335630551682c19",
+        "src-78f19b47a154a2a4-df7635a70bd297d5",
+        "src-78f19b47a154a2a4-a794857d42fdd138",
+        "src-7871eae3c71aec59-4032119e99d04161",
+        "src-7871eae3c71aec59-651a23d3b90a2cff",
+        "src-7871eae3c71aec59-92193895eed3cdfb"
+      ],
+      "review_source_ids": [
+        "src-14c267b8206a8967-f42feed088b7d9d3",
+        "src-45af85cc433a27ab-1f565442059cffbb",
+        "src-70677d135cd8957f-aea7cde29d1bf311",
+        "src-e41706b14ab77d8c-b335630551682c19",
+        "src-e41706b14ab77d8c-6fec8d33d0c546be",
+        "src-e41706b14ab77d8c-411a29f6be1a21c7",
+        "src-e41706b14ab77d8c-d246764d605dee46",
+        "src-e41706b14ab77d8c-377958ffb3aa580f",
+        "src-e41706b14ab77d8c-e3bd1f9352b2b056",
+        "src-e41706b14ab77d8c-0bc0460ec8721a35",
+        "src-e41706b14ab77d8c-5e41e73014e29d69",
+        "src-e41706b14ab77d8c-2df44d2012ce2b12",
+        "src-e41706b14ab77d8c-a5ad0f86ce143f07",
+        "src-e41706b14ab77d8c-4111e52f80cb6365",
+        "src-e41706b14ab77d8c-d1621eba1ec769c0",
+        "src-e41706b14ab77d8c-a671446ede0e6155",
+        "src-c9f8099a9d4768f8-411a29f6be1a21c7",
+        "src-c9f8099a9d4768f8-dda09c9011496dfc",
+        "src-c9f8099a9d4768f8-d246764d605dee46",
+        "src-c9f8099a9d4768f8-377958ffb3aa580f",
+        "src-c9f8099a9d4768f8-b335630551682c19",
+        "src-a64783ac9ab414e8-b335630551682c19",
+        "src-a64783ac9ab414e8-411a29f6be1a21c7",
+        "src-a64783ac9ab414e8-6e7843efed41ce6a",
+        "src-a64783ac9ab414e8-66745eddb0d8ea6a",
+        "src-a64783ac9ab414e8-44ed9fca3dec7428",
+        "src-a64783ac9ab414e8-03037acb3c0ad811",
+        "src-a64783ac9ab414e8-57ec74881189ddb6",
+        "src-a64783ac9ab414e8-d969aa19c04e2239",
+        "src-6497ce9e8af6ce5a-4b776210ba07a121",
+        "src-6497ce9e8af6ce5a-b335630551682c19"
+      ],
+      "suite_ids": [],
+      "math_form": "MIXED",
+      "implementation": "NONE"
+    },
+    {
+      "id": "S6F-25",
+      "origin": "70677d135cd8957f5b527d555001eb8e53b0cc19652297709eb110e94f2a39be",
+      "title": "Controller and disclosure prior-art corrections",
+      "claim": "Common observable coBüchi finite-memory existence already implies exponential bad-count moments; finite-statistic external clocks and selection/topological tools have established ancestry. Defensible controller credit is exact generated hidden-badness witness and source-law/cost chain.",
+      "limit": "No new universal moment theorem or Gödel-level historical claim. This handoff has not independently reread external literature.",
+      "source_ids": [
+        "src-70677d135cd8957f-aa4873eda1fd543d",
+        "src-70677d135cd8957f-9702dd43db702e06"
+      ],
+      "review_source_ids": [
+        "src-549ba6a7f0941c36-4a6fa83023ecd435",
+        "src-549ba6a7f0941c36-93b72ec775cd629e",
+        "src-70677d135cd8957f-aa4873eda1fd543d"
+      ],
+      "suite_ids": [],
+      "math_form": "ORDINARY",
+      "implementation": "NONE"
+    },
+    {
+      "id": "S6F-26",
+      "origin": "70677d135cd8957f5b527d555001eb8e53b0cc19652297709eb110e94f2a39be",
+      "title": "Residual agenda and twelve-avenue reconciliation",
+      "claim": "New local work materially advances5–7 and norm-fixing; next four connections concern necessary particular source, truthful practical agency, enduring integrity, and warranted cross-recipient/version criterion revision.",
+      "limit": "No completed general provenance/identity theory, full dependent calculus, empirical validation or seventh research.",
+      "source_ids": [
+        "src-70677d135cd8957f-6c6aefba741b6c4b"
+      ],
+      "review_source_ids": [
+        "src-549ba6a7f0941c36-8cf03bb68272e04b",
+        "src-549ba6a7f0941c36-039532d623f6ec63",
+        "src-ea5cb47949ee771a-4b776210ba07a121"
+      ],
+      "suite_ids": [],
+      "math_form": "PROPOSAL",
+      "implementation": "NONE"
     }
   ],
-  "evidence_bindings": "docs/provenance/v5-research-continuations/EVIDENCE_BINDINGS.json"
+  "evidence_bindings": "docs/provenance/v5-research-continuations/EVIDENCE_BINDINGS.json",
+  "successor_overlay": "docs/provenance/v5-research-continuations/SIXTH_FINAL_OVERLAY.json",
+  "native_suites": [
+    "experiments/orthemology-v5-continuations/native-suites/sixth-foundations.json",
+    "experiments/orthemology-v5-continuations/native-suites/sixth-foundations-addenda.json",
+    "experiments/orthemology-v5-continuations/native-suites/sixth-cost-controls.json"
+  ]
 }

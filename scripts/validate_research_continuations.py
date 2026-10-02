@@ -346,9 +346,10 @@ def validate_qualified_controls(rec, suite, sources, contracts, root):
 
 def _validate(root):
     registry=read_json(root/AREA/'registry.json')
-    keys(registry,{'schema','programme','cutoff','source_map','result_status','supersession','obligations','lineages','evidence_bindings','suites','results'})
+    keys(registry,{'schema','programme','cutoff','source_map','result_status','supersession','obligations','lineages','evidence_bindings','suites','results'}, {'successor_overlay','native_suites'})
     require(registry['schema']=='orthemology-v5-continuations-v1' and registry['programme']=='Orthemology v5','Wrong programme/schema')
-    require(registry['cutoff']=='sixth-tranche-checkpoint-3','Wrong research cutoff')
+    enum(registry['cutoff'],{'sixth-tranche-checkpoint-3','sixth-tranche-final'})
+    require(('successor_overlay' in registry)==(registry['cutoff']=='sixth-tranche-final'), 'Cutoff requires its scoped successor overlay')
     data={name:read_json(path_in(root,registry[name])) for name in ['source_map','result_status','supersession','obligations','lineages']}
     archives=indexed(data['lineages']['archives'],'sha256')
     for ident,row in archives.items():
@@ -441,6 +442,15 @@ def _validate(root):
         nonempty(row['statement']);nonempty(row['residual']);enum(row['disposition'],{'PRESERVED_OPEN','SCOPED_SUCCESSOR','PRESERVED_STATUS'})
         require(owner_contains(root/row['owner_path'],row['statement'],owner_cache),'Obligation statement does not match its exact owner')
         require(all(x in results for x in row['result_ids']),'Unknown obligation successor')
+    if 'successor_overlay' in registry:
+        from validate_continuation_successor import validate_overlay
+        validate_overlay(read_json(path_in(root,registry['successor_overlay'])),results,statuses,sources,root)
+    if 'native_suites' in registry:
+        from replay_continuation_controls import validate_suite as validate_native_suite
+        native_ids=set()
+        for rel in registry['native_suites']:
+            suite=read_json(path_in(root,rel));validate_native_suite(suite,sources,root)
+            require(suite['id'] not in native_ids,'Duplicate native suite');native_ids.add(suite['id'])
     return {'status':'SOURCE_AND_STATUS_INTEGRITY_PASS','results':len(results),'sources':len(sources),'suites':len(suites),
             'archives':len(archives),'fresh_qualified_results':sum(r['fresh']=='QUALIFIED' for r in statuses.values()),
             'scope':'Source/status consistency only; no kernel, empirical, normative or adoption credit.'}

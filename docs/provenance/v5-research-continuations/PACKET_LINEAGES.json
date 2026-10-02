@@ -148,6 +148,10 @@
         {
           "archive": "241b0d580f8ff0a838e9430668304782a40d9abcea7af7b43fd6250c14db7073",
           "member": "tranche5/knowledge-warrant/Fifth_Knowledge_Sourcehood_Lean_Instantiation_v1_20261001.zip"
+        },
+        {
+          "archive": "549ba6a7f0941c36faa048bf525a252b943d74956c356b70f3bd0dbada96440f",
+          "member": "selected-source-union/tranche5/knowledge-warrant/Fifth_Knowledge_Sourcehood_Lean_Instantiation_v1_20261001.zip"
         }
       ]
     },
@@ -164,6 +168,10 @@
         {
           "archive": "241b0d580f8ff0a838e9430668304782a40d9abcea7af7b43fd6250c14db7073",
           "member": "tranche5/knowledge-warrant/Fifth_Knowledge_Warrant_Author_v1_20261001.zip"
+        },
+        {
+          "archive": "549ba6a7f0941c36faa048bf525a252b943d74956c356b70f3bd0dbada96440f",
+          "member": "selected-source-union/tranche5/knowledge-warrant/Fifth_Knowledge_Warrant_Author_v1_20261001.zip"
         }
       ]
     },
@@ -180,6 +188,10 @@
         {
           "archive": "241b0d580f8ff0a838e9430668304782a40d9abcea7af7b43fd6250c14db7073",
           "member": "tranche5/knowledge-warrant/Fifth_Orthability_Sourcehood_Extension_v1_20261001.zip"
+        },
+        {
+          "archive": "549ba6a7f0941c36faa048bf525a252b943d74956c356b70f3bd0dbada96440f",
+          "member": "selected-source-union/tranche5/knowledge-warrant/Fifth_Orthability_Sourcehood_Extension_v1_20261001.zip"
         }
       ]
     },
@@ -2692,6 +2704,10 @@
         {
           "archive": "a532aa7af35e8d31064b6df5c606c25f100ebd237ca01dbd55c9360f8bae4163",
           "member": "tranche6/independent-challenge/returns/Independent_Controller_Cost_Review_20261001.zip"
+        },
+        {
+          "archive": "2a1791994b2965d9b2502886d6f836d49134d2b84bd0910359268fa674f0e9f8",
+          "member": "technical/archives/tranche6/independent-challenge/returns/Independent_Controller_Cost_Review_20261001.zip"
         }
       ]
     },
@@ -2720,6 +2736,10 @@
         {
           "archive": "ecce241d8f1a1df809871201d5d9178deccc8efbc5a46359c30f7a1e2f6f0318",
           "member": "dependencies/cost-pin-packet-v2.zip"
+        },
+        {
+          "archive": "330ee695423464b253189a2baa1bcb2a8311fbd3e23b60efc284ef4531fb7fe8",
+          "member": "dependencies/cost-pin-packet-v2.zip"
         }
       ]
     },
@@ -2732,6 +2752,10 @@
         {
           "archive": "80437d2b1d39fbd951255348613f71bb9f8ea3254274be582e468e341f7227a1",
           "member": "author/candidate-v3.zip"
+        },
+        {
+          "archive": "2a1791994b2965d9b2502886d6f836d49134d2b84bd0910359268fa674f0e9f8",
+          "member": "technical/archives/tranche6/controller-cost/candidate-v3.zip"
         }
       ]
     },
@@ -2744,6 +2768,14 @@
         {
           "archive": "a532aa7af35e8d31064b6df5c606c25f100ebd237ca01dbd55c9360f8bae4163",
           "member": "tranche6/independent-challenge/returns/Independent_Raw_Tape_Concentration_Review_20261001.zip"
+        },
+        {
+          "archive": "3d5b240940fec3602033f77ca8e40eb26eaa27a06d5e25b95af5a14e7c6492b9",
+          "member": "dependencies/independent-raw-review.zip"
+        },
+        {
+          "archive": "2a1791994b2965d9b2502886d6f836d49134d2b84bd0910359268fa674f0e9f8",
+          "member": "technical/archives/tranche6/independent-challenge/returns/Independent_Raw_Tape_Concentration_Review_20261001.zip"
         }
       ]
     },
@@ -2756,6 +2788,10 @@
         {
           "archive": "dc3258f61b36cfeb982889b1305c3a1efad6403a5aed3e3344e4e2c5bc762e23",
           "member": "author/raw-candidate-v2.zip"
+        },
+        {
+          "archive": "2a1791994b2965d9b2502886d6f836d49134d2b84bd0910359268fa674f0e9f8",
+          "member": "technical/archives/tranche6/raw-tape-bound/Raw_Tape_Exponential_Bound_Author_Candidate_2_20261001.zip"
         }
       ]
     },
@@ -2768,6 +2804,10 @@
         {
           "archive": "a532aa7af35e8d31064b6df5c606c25f100ebd237ca01dbd55c9360f8bae4163",
           "member": "tranche6/necessary-ground/Sixth_Noninferential_Knowledge_Clarification_v1_20261001.zip"
+        },
+        {
+          "archive": "549ba6a7f0941c36faa048bf525a252b943d74956c356b70f3bd0dbada96440f",
+          "member": "archives/tranche6/necessary-ground/Sixth_Noninferential_Knowledge_Clarification_v1_20261001.zip"
         }
       ]
     },
@@ -2799,6 +2839,14 @@
         {
           "archive": "0faf8b83f2ec532ef630c7473c25c5bd728dfd3ad8c26f5e14ddd9123ae14c8a",
           "member": "Independent_Runtime_Bridge_Review_20261001.zip"
+        },
+        {
+          "archive": "330ee695423464b253189a2baa1bcb2a8311fbd3e23b60efc284ef4531fb7fe8",
+          "member": "dependencies/independent-runtime-v5-review.zip"
+        },
+        {
+          "archive": "2a1791994b2965d9b2502886d6f836d49134d2b84bd0910359268fa674f0e9f8",
+          "member": "technical/archives/tranche6/independent-challenge/returns/Independent_Runtime_Bridge_Review_20261001.zip"
         }
       ]
     },
@@ -2847,6 +2895,10 @@
         {
           "archive": "15e2b6abb662c4df77254634da03cea567ec6e896d90c3fb9426d93a872a3feb",
           "member": "dependencies/width-review.zip"
+        },
+        {
+          "archive": "14c267b8206a8967f886ac034460941f4df142be58d2675895c4863ed943f075",
+          "member": "technical/archives/tranche6/prior-width-review/Sparse_Prior_Width_Shape_Independent_Review_1_20261001.zip"
         }
       ]
     },
@@ -2871,6 +2923,10 @@
         {
           "archive": "15e2b6abb662c4df77254634da03cea567ec6e896d90c3fb9426d93a872a3feb",
           "member": "dependencies/width-author.zip"
+        },
+        {
+          "archive": "14c267b8206a8967f886ac034460941f4df142be58d2675895c4863ed943f075",
+          "member": "technical/archives/tranche6/prior-classification/Sparse_Prior_Width_Shape_Nonendpoint_Successor_1_20261001.zip"
         }
       ]
     },
@@ -2883,6 +2939,10 @@
         {
           "archive": "3dae38ab50de2b81c59d9648577dac97233d5bfcd15bc382a548482a7a92a3ea",
           "member": "dependencies/Sparse_Prior_Cluster_Smoothing_Crossover_Author_Candidate_1_20261001.zip"
+        },
+        {
+          "archive": "14c267b8206a8967f886ac034460941f4df142be58d2675895c4863ed943f075",
+          "member": "technical/archives/tranche6/prior-classification/Sparse_Prior_Cluster_Smoothing_Crossover_Author_Candidate_1_20261001.zip"
         }
       ]
     },
@@ -2895,6 +2955,10 @@
         {
           "archive": "0faf8b83f2ec532ef630c7473c25c5bd728dfd3ad8c26f5e14ddd9123ae14c8a",
           "member": "Rational_Effective_Candidate_3_Independent_Review_20261001.zip"
+        },
+        {
+          "archive": "09674147709829575386c5f5889eb74410e732646caffbec7bc5a06bb4a008a7",
+          "member": "technical/archives/tranche6/prior-width-review/rational-reference-successor-review/Rational_Effective_Candidate_3_Independent_Review_20261001.zip"
         }
       ]
     },
@@ -2907,6 +2971,10 @@
         {
           "archive": "a64783ac9ab414e894d715a865828dce1695bb3b8842bcb10df46c799085ec8e",
           "member": "author-candidate-3.zip"
+        },
+        {
+          "archive": "14c267b8206a8967f886ac034460941f4df142be58d2675895c4863ed943f075",
+          "member": "technical/archives/tranche6/prior-classification/Sparse_Prior_Rational_Effective_Reference_Candidate_3_20261001.zip"
         }
       ]
     },
@@ -2978,6 +3046,10 @@
         {
           "archive": "0429e04ee3e5ba1d7288db1dd4be9ec800531342f21a9235d4f759b853fdb4ed",
           "member": "Sparse_Prior_Nonconvexity_Independent_Review_1_20261001.zip"
+        },
+        {
+          "archive": "45af85cc433a27ab53102839c6fa9f59dd95832fc49ae467faf4626593e65311",
+          "member": "technical/archives/tranche6/prior-nonconvexity-review/Sparse_Prior_Nonconvexity_Independent_Review_1_20261001.zip"
         }
       ]
     },
@@ -2990,6 +3062,10 @@
         {
           "archive": "c9f8099a9d4768f8d37c3d5a94b9828c63939635765c876f8a31bb3e57534e1c",
           "member": "dependencies/nonconvexity-candidate-2.zip"
+        },
+        {
+          "archive": "8b11ddc6d9e633234d7743c82e58176bba97039fb85fa730af0adee9bfb73d37",
+          "member": "technical/archives/tranche6/prior-classification/Sparse_Prior_Nonconvexity_Actual_Process_Candidate_2_20261001.zip"
         }
       ]
     },
@@ -3014,6 +3090,10 @@
         {
           "archive": "0429e04ee3e5ba1d7288db1dd4be9ec800531342f21a9235d4f759b853fdb4ed",
           "member": "Literal_Loss_Observation_Independent_Review_1_20261001.zip"
+        },
+        {
+          "archive": "45af85cc433a27ab53102839c6fa9f59dd95832fc49ae467faf4626593e65311",
+          "member": "technical/archives/tranche6/prior-nonconvexity-review/observation-loss-review/Literal_Loss_Observation_Independent_Review_1_20261001.zip"
         }
       ]
     },
@@ -3042,6 +3122,10 @@
         {
           "archive": "e90780190185c8a8fb1e2767d4201753d82ac061645103249a6dcc4361311a01",
           "member": "dependencies/independent-rotor-review.zip"
+        },
+        {
+          "archive": "2a1791994b2965d9b2502886d6f836d49134d2b84bd0910359268fa674f0e9f8",
+          "member": "technical/archives/tranche6/independent-challenge/returns/Independent_Killed_Rotor_Review_20261001.zip"
         }
       ]
     },
@@ -3054,6 +3138,10 @@
         {
           "archive": "fb85245673a9a7f35c4f1f4ee460f6b3fe30fc4b0fa43e7856e74206b2f8a2fa",
           "member": "author/candidate-v1.zip"
+        },
+        {
+          "archive": "2a1791994b2965d9b2502886d6f836d49134d2b84bd0910359268fa674f0e9f8",
+          "member": "technical/archives/tranche6/controller-cost/frontier/candidate-v1.zip"
         }
       ]
     },
@@ -3066,6 +3154,10 @@
         {
           "archive": "0429e04ee3e5ba1d7288db1dd4be9ec800531342f21a9235d4f759b853fdb4ed",
           "member": "Independent_Tail_Moment_Review_20261001.zip"
+        },
+        {
+          "archive": "2a1791994b2965d9b2502886d6f836d49134d2b84bd0910359268fa674f0e9f8",
+          "member": "technical/archives/tranche6/independent-challenge/returns/Independent_Tail_Moment_Review_20261001.zip"
         }
       ]
     },
@@ -3090,6 +3182,10 @@
         {
           "archive": "0429e04ee3e5ba1d7288db1dd4be9ec800531342f21a9235d4f759b853fdb4ed",
           "member": "Independent_Integer_Budget_Review_20261001.zip"
+        },
+        {
+          "archive": "2a1791994b2965d9b2502886d6f836d49134d2b84bd0910359268fa674f0e9f8",
+          "member": "technical/archives/tranche6/independent-challenge/returns/Independent_Integer_Budget_Review_20261001.zip"
         }
       ]
     },
@@ -3126,6 +3222,14 @@
         {
           "archive": "0429e04ee3e5ba1d7288db1dd4be9ec800531342f21a9235d4f759b853fdb4ed",
           "member": "Independent_Generated_History_Tail_Review_20261001.zip"
+        },
+        {
+          "archive": "3d5b240940fec3602033f77ca8e40eb26eaa27a06d5e25b95af5a14e7c6492b9",
+          "member": "dependencies/independent-history-review.zip"
+        },
+        {
+          "archive": "2a1791994b2965d9b2502886d6f836d49134d2b84bd0910359268fa674f0e9f8",
+          "member": "technical/archives/tranche6/independent-challenge/returns/Independent_Generated_History_Tail_Review_20261001.zip"
         }
       ]
     },
@@ -3138,6 +3242,10 @@
         {
           "archive": "e90780190185c8a8fb1e2767d4201753d82ac061645103249a6dcc4361311a01",
           "member": "author/candidate-v1.zip"
+        },
+        {
+          "archive": "2a1791994b2965d9b2502886d6f836d49134d2b84bd0910359268fa674f0e9f8",
+          "member": "technical/archives/tranche6/controller-cost/history-frontier/candidate-v1.zip"
         }
       ]
     },
@@ -3593,6 +3701,623 @@
         {
           "archive": "866c6ff6e74a67f2bc452b49a0ada05311c0c2601585ea166404719172bd8086",
           "member": "inputs/Orthemology_Pro_P15_Normative_Gap_Disclosure.zip"
+        }
+      ]
+    },
+    {
+      "sha256": "549ba6a7f0941c36faa048bf525a252b943d74956c356b70f3bd0dbada96440f",
+      "bytes": 10416109,
+      "classification": "COLLECTION",
+      "basis": "Exact sixth-final input transport; claims are assigned to source-specific results.",
+      "parents": []
+    },
+    {
+      "sha256": "ac00c344a3ef8d18f380962f2251e735de54e1588225a938dda5f877bfddfb5b",
+      "bytes": 87116,
+      "classification": "CURRENT_EVIDENCE",
+      "basis": "Contains exact selected sixth-final argument or retained-review bytes. Current claims are selected individually in the result/report bindings; this is not whole-archive acceptance.",
+      "parents": [
+        {
+          "archive": "549ba6a7f0941c36faa048bf525a252b943d74956c356b70f3bd0dbada96440f",
+          "member": "addenda/b4-m3-bounded-evidence-v1/archives/Sixth_B4_M3_Independent_Review_20261002.zip"
+        }
+      ]
+    },
+    {
+      "sha256": "6ca8a0a73cfbdae689c5619b070f9533044f0c9b51168c24b0b54bb297a26b4a",
+      "bytes": 72376,
+      "classification": "CURRENT_EVIDENCE",
+      "basis": "Contains exact selected sixth-final argument or retained-review bytes. Current claims are selected individually in the result/report bindings; this is not whole-archive acceptance.",
+      "parents": [
+        {
+          "archive": "ac00c344a3ef8d18f380962f2251e735de54e1588225a938dda5f877bfddfb5b",
+          "member": "input.zip"
+        },
+        {
+          "archive": "549ba6a7f0941c36faa048bf525a252b943d74956c356b70f3bd0dbada96440f",
+          "member": "addenda/b4-m3-bounded-evidence-v1/review/input.zip"
+        }
+      ]
+    },
+    {
+      "sha256": "39205cffe4b418fe7925c7c92f4655d01af895f0d2ddc2da809e1c7a1331e280",
+      "bytes": 11964,
+      "classification": "CURRENT_EVIDENCE",
+      "basis": "Contains exact selected sixth-final argument or retained-review bytes. Current claims are selected individually in the result/report bindings; this is not whole-archive acceptance.",
+      "parents": [
+        {
+          "archive": "549ba6a7f0941c36faa048bf525a252b943d74956c356b70f3bd0dbada96440f",
+          "member": "addenda/full-frontier-acceptance-v1/archives/Sixth_General_Private_Frontier_Arithmetic_Review_v1_20261002.zip"
+        }
+      ]
+    },
+    {
+      "sha256": "6786bcbf8ea9ce1197ff055d997151e64130ba95291ccce825e0715500cca05b",
+      "bytes": 45953,
+      "classification": "CURRENT_EVIDENCE",
+      "basis": "Contains exact selected sixth-final argument or retained-review bytes. Current claims are selected individually in the result/report bindings; this is not whole-archive acceptance.",
+      "parents": [
+        {
+          "archive": "549ba6a7f0941c36faa048bf525a252b943d74956c356b70f3bd0dbada96440f",
+          "member": "addenda/full-frontier-acceptance-v1/archives/Sixth_General_Private_Frontier_Independent_Review_20261002.zip"
+        }
+      ]
+    },
+    {
+      "sha256": "b364e935230e244cd890df3f229e2ec24c472c5e9445e0aae57ddbf3d30948e1",
+      "bytes": 26208,
+      "classification": "CURRENT_EVIDENCE",
+      "basis": "Contains exact selected sixth-final argument or retained-review bytes. Current claims are selected individually in the result/report bindings; this is not whole-archive acceptance.",
+      "parents": [
+        {
+          "archive": "6786bcbf8ea9ce1197ff055d997151e64130ba95291ccce825e0715500cca05b",
+          "member": "input.zip"
+        },
+        {
+          "archive": "549ba6a7f0941c36faa048bf525a252b943d74956c356b70f3bd0dbada96440f",
+          "member": "addenda/full-frontier-acceptance-v1/reviews/broad-review/input.zip"
+        },
+        {
+          "archive": "549ba6a7f0941c36faa048bf525a252b943d74956c356b70f3bd0dbada96440f",
+          "member": "pending/tranche6/foundations/action-disclosure/private-frontier-continuation/Sixth_General_Private_Frontier_v1_20261002.zip"
+        }
+      ]
+    },
+    {
+      "sha256": "577ce1a4825d79bca5997c5c67be3a0375902729f8dc513f157e5745a9fec0f6",
+      "bytes": 6438836,
+      "classification": "CURRENT_EVIDENCE",
+      "basis": "Contains exact selected sixth-final argument or retained-review bytes. Current claims are selected individually in the result/report bindings; this is not whole-archive acceptance.",
+      "parents": [
+        {
+          "archive": "549ba6a7f0941c36faa048bf525a252b943d74956c356b70f3bd0dbada96440f",
+          "member": "archives/tranche6/controller-cost/mgf-continuation/Actual_Positive_Exponential_Verified_Return_20261002.zip"
+        }
+      ]
+    },
+    {
+      "sha256": "930c8d704c92e7d0df4b96ca4a1ef9f1117719e78095fa403856a363d3933188",
+      "bytes": 867032,
+      "classification": "CURRENT_EVIDENCE",
+      "basis": "Contains exact selected sixth-final argument or retained-review bytes. Current claims are selected individually in the result/report bindings; this is not whole-archive acceptance.",
+      "parents": [
+        {
+          "archive": "577ce1a4825d79bca5997c5c67be3a0375902729f8dc513f157e5745a9fec0f6",
+          "member": "review/Independent_Actual_Exponential_Cutoff_Review_20261002.zip"
+        },
+        {
+          "archive": "8f44852c1c59cfd328af7755111af1d586eee46e6eae4296bd8b0931497357b3",
+          "member": "predecessor-independent-cutoff-review.zip"
+        }
+      ]
+    },
+    {
+      "sha256": "7b8a3f3b424956fd1c738fbe09345e2df460616ee2169c3e2068a3f1c9d11cb4",
+      "bytes": 825216,
+      "classification": "PREDECESSOR",
+      "basis": "Retained source lineage or auxiliary component of the final sixth return. It is not independently selected as a new whole-result acceptance; exact current source selectors and preserved predecessor failures govern its use.",
+      "parents": [
+        {
+          "archive": "930c8d704c92e7d0df4b96ca4a1ef9f1117719e78095fa403856a363d3933188",
+          "member": "candidate.zip"
+        },
+        {
+          "archive": "4de2c1afe24d3766e87f10b2cd22f0e9248e1cbe0961ea71eb00731e2156e0ce",
+          "member": "provenance/actual-tail-intermediate-v1.zip"
+        },
+        {
+          "archive": "7cbe94fa76f64863abe9025316db7e3968d74a7b4018dc787da5b2e58dbbf8ee",
+          "member": "provenance/actual-tail-intermediate-v1.zip"
+        }
+      ]
+    },
+    {
+      "sha256": "ee848de0157f0549f514ac529bdb974bd6a69c7e931f87e0ffdb67e9b451b1d1",
+      "bytes": 19718,
+      "classification": "RECOVERY_ONLY",
+      "basis": "Explicitly unqualified actual-MGF work preservation. Later accepted sources have separate exact identities; this archive receives no fresh-kernel credit.",
+      "parents": [
+        {
+          "archive": "7b8a3f3b424956fd1c738fbe09345e2df460616ee2169c3e2068a3f1c9d11cb4",
+          "member": "provenance/Unqualified_Actual_MGF_Work_Preservation_20261002.zip"
+        },
+        {
+          "archive": "4de2c1afe24d3766e87f10b2cd22f0e9248e1cbe0961ea71eb00731e2156e0ce",
+          "member": "provenance/Unqualified_Actual_MGF_Work_Preservation_20261002.zip"
+        },
+        {
+          "archive": "7cbe94fa76f64863abe9025316db7e3968d74a7b4018dc787da5b2e58dbbf8ee",
+          "member": "provenance/Unqualified_Actual_MGF_Work_Preservation_20261002.zip"
+        }
+      ]
+    },
+    {
+      "sha256": "18d2f215de16335a00ccbc2da3f01c93857baf4ba0948006c5689c9f50852eea",
+      "bytes": 414991,
+      "classification": "PREDECESSOR",
+      "basis": "Retained source lineage or auxiliary component of the final sixth return. It is not independently selected as a new whole-result acceptance; exact current source selectors and preserved predecessor failures govern its use.",
+      "parents": [
+        {
+          "archive": "7b8a3f3b424956fd1c738fbe09345e2df460616ee2169c3e2068a3f1c9d11cb4",
+          "member": "provenance/accepted-cost-142.zip"
+        },
+        {
+          "archive": "4de2c1afe24d3766e87f10b2cd22f0e9248e1cbe0961ea71eb00731e2156e0ce",
+          "member": "provenance/accepted-cost-142.zip"
+        },
+        {
+          "archive": "2a1791994b2965d9b2502886d6f836d49134d2b84bd0910359268fa674f0e9f8",
+          "member": "technical/archives/tranche6/controller-cost/stopped-cost/candidate-v1.zip"
+        },
+        {
+          "archive": "3d5b240940fec3602033f77ca8e40eb26eaa27a06d5e25b95af5a14e7c6492b9",
+          "member": "author/candidate-v1.zip"
+        },
+        {
+          "archive": "7cbe94fa76f64863abe9025316db7e3968d74a7b4018dc787da5b2e58dbbf8ee",
+          "member": "provenance/accepted-cost-142.zip"
+        }
+      ]
+    },
+    {
+      "sha256": "8f44852c1c59cfd328af7755111af1d586eee46e6eae4296bd8b0931497357b3",
+      "bytes": 2797664,
+      "classification": "CURRENT_EVIDENCE",
+      "basis": "Contains exact selected sixth-final argument or retained-review bytes. Current claims are selected individually in the result/report bindings; this is not whole-archive acceptance.",
+      "parents": [
+        {
+          "archive": "577ce1a4825d79bca5997c5c67be3a0375902729f8dc513f157e5745a9fec0f6",
+          "member": "review/Independent_Actual_Positive_Exponential_Moments_Review_20261002.zip"
+        },
+        {
+          "archive": "7cbe94fa76f64863abe9025316db7e3968d74a7b4018dc787da5b2e58dbbf8ee",
+          "member": "provenance/pointwise-independent-review.zip"
+        }
+      ]
+    },
+    {
+      "sha256": "4de2c1afe24d3766e87f10b2cd22f0e9248e1cbe0961ea71eb00731e2156e0ce",
+      "bytes": 1666229,
+      "classification": "PREDECESSOR",
+      "basis": "Retained source lineage or auxiliary component of the final sixth return. It is not independently selected as a new whole-result acceptance; exact current source selectors and preserved predecessor failures govern its use.",
+      "parents": [
+        {
+          "archive": "8f44852c1c59cfd328af7755111af1d586eee46e6eae4296bd8b0931497357b3",
+          "member": "candidate.zip"
+        },
+        {
+          "archive": "577ce1a4825d79bca5997c5c67be3a0375902729f8dc513f157e5745a9fec0f6",
+          "member": "source/Actual_Generated_Positive_Exponential_Moments_Author_Candidate_3_20261002.zip"
+        },
+        {
+          "archive": "7cbe94fa76f64863abe9025316db7e3968d74a7b4018dc787da5b2e58dbbf8ee",
+          "member": "provenance/pointwise-author-candidate-v3.zip"
+        }
+      ]
+    },
+    {
+      "sha256": "12590009261483e7e11421dde3633ed8418fb10c6893cc0907da78fa5a175821",
+      "bytes": 20983,
+      "classification": "CURRENT_EVIDENCE",
+      "basis": "Contains exact selected sixth-final argument or retained-review bytes. Current claims are selected individually in the result/report bindings; this is not whole-archive acceptance.",
+      "parents": [
+        {
+          "archive": "549ba6a7f0941c36faa048bf525a252b943d74956c356b70f3bd0dbada96440f",
+          "member": "archives/tranche6/foundations/Sixth_Motivation_Value_Continuation_v2_20261002.zip"
+        }
+      ]
+    },
+    {
+      "sha256": "3079a4ad57a0359a82af4c4f057954d1a877bb46a65c530faca5e7744913bddb",
+      "bytes": 151748,
+      "classification": "CURRENT_EVIDENCE",
+      "basis": "Contains exact selected sixth-final argument or retained-review bytes. Current claims are selected individually in the result/report bindings; this is not whole-archive acceptance.",
+      "parents": [
+        {
+          "archive": "549ba6a7f0941c36faa048bf525a252b943d74956c356b70f3bd0dbada96440f",
+          "member": "archives/tranche6/foundations/Sixth_Source_Attribute_Ascent_Delivery_v1_20261002.zip"
+        }
+      ]
+    },
+    {
+      "sha256": "afde2040f2e22e9923857deec6efc7edca9f27616fdec75d7fda663d2aa5a97a",
+      "bytes": 17363,
+      "classification": "CURRENT_EVIDENCE",
+      "basis": "Contains exact selected sixth-final argument or retained-review bytes. Current claims are selected individually in the result/report bindings; this is not whole-archive acceptance.",
+      "parents": [
+        {
+          "archive": "549ba6a7f0941c36faa048bf525a252b943d74956c356b70f3bd0dbada96440f",
+          "member": "archives/tranche6/foundations/action-disclosure/Sixth_Action_Disclosure_Zero_Error_Formal_Subset_v1_20261002.zip"
+        }
+      ]
+    },
+    {
+      "sha256": "56e13a1f8750d08e5df1b5f97dd4b7281a4d84899a961e812d60e031c67fe3d0",
+      "bytes": 39891,
+      "classification": "CURRENT_EVIDENCE",
+      "basis": "Contains exact selected sixth-final argument or retained-review bytes. Current claims are selected individually in the result/report bindings; this is not whole-archive acceptance.",
+      "parents": [
+        {
+          "archive": "549ba6a7f0941c36faa048bf525a252b943d74956c356b70f3bd0dbada96440f",
+          "member": "archives/tranche6/foundations/action-disclosure/positive-error/Sixth_Positive_Error_Action_Disclosure_v2_20261002.zip"
+        }
+      ]
+    },
+    {
+      "sha256": "cfeffde8aad2925cf4482acdbadb9f6804d2ca31b8d2ed87df29f9cb98fb8753",
+      "bytes": 17433,
+      "classification": "CURRENT_EVIDENCE",
+      "basis": "Contains exact selected sixth-final argument or retained-review bytes. Current claims are selected individually in the result/report bindings; this is not whole-archive acceptance.",
+      "parents": [
+        {
+          "archive": "549ba6a7f0941c36faa048bf525a252b943d74956c356b70f3bd0dbada96440f",
+          "member": "archives/tranche6/foundations/action-disclosure/private-frontier-continuation/Sixth_Odd_Three_Message_Private_Frontier_v1_20261002.zip"
+        }
+      ]
+    },
+    {
+      "sha256": "8379c66a6150fe91cfecd49579fc6a6ec5a56b95dfd2d1d1e7648e692d2381de",
+      "bytes": 23961,
+      "classification": "CURRENT_EVIDENCE",
+      "basis": "Contains exact selected sixth-final argument or retained-review bytes. Current claims are selected individually in the result/report bindings; this is not whole-archive acceptance.",
+      "parents": [
+        {
+          "archive": "549ba6a7f0941c36faa048bf525a252b943d74956c356b70f3bd0dbada96440f",
+          "member": "archives/tranche6/foundations/action-disclosure/private-frontier-continuation/Sixth_Two_Message_Private_Frontier_v2_20261002.zip"
+        },
+        {
+          "archive": "a6eba26c060f84843ddb5b73039ff6b9c9089edfaf22efbf6e930ab12e2ccd1b",
+          "member": "input-v2.zip"
+        },
+        {
+          "archive": "549ba6a7f0941c36faa048bf525a252b943d74956c356b70f3bd0dbada96440f",
+          "member": "projections/two-message-independent-review/input-v2.zip"
+        }
+      ]
+    },
+    {
+      "sha256": "c5a70ad8ca84390102765ba5bd2a76b3fd0aeb96cdcd63c2702f0ab55cac973b",
+      "bytes": 79573,
+      "classification": "CURRENT_EVIDENCE",
+      "basis": "Contains exact selected sixth-final argument or retained-review bytes. Current claims are selected individually in the result/report bindings; this is not whole-archive acceptance.",
+      "parents": [
+        {
+          "archive": "549ba6a7f0941c36faa048bf525a252b943d74956c356b70f3bd0dbada96440f",
+          "member": "archives/tranche6/foundations/independent-review/Sixth_Foundational_Independent_Reviews_Checkpoint_v1_20261002.zip"
+        }
+      ]
+    },
+    {
+      "sha256": "fdc6dd691740cb2dd74562ddc3f82b6e61198f0f77dcd5cb3ecc56f2dda851e4",
+      "bytes": 23199,
+      "classification": "CURRENT_EVIDENCE",
+      "basis": "Contains exact selected sixth-final argument or retained-review bytes. Current claims are selected individually in the result/report bindings; this is not whole-archive acceptance.",
+      "parents": [
+        {
+          "archive": "549ba6a7f0941c36faa048bf525a252b943d74956c356b70f3bd0dbada96440f",
+          "member": "archives/tranche6/foundations/independent-review/Sixth_Private_Frontier_Independent_Review_Continuation_v1_20261002.zip"
+        }
+      ]
+    },
+    {
+      "sha256": "83edfcd9bbe9aad69df3276873250b6d18a1e79a524bc9260bd1f79b351b501e",
+      "bytes": 11783,
+      "classification": "CURRENT_EVIDENCE",
+      "basis": "Contains exact selected sixth-final argument or retained-review bytes. Current claims are selected individually in the result/report bindings; this is not whole-archive acceptance.",
+      "parents": [
+        {
+          "archive": "549ba6a7f0941c36faa048bf525a252b943d74956c356b70f3bd0dbada96440f",
+          "member": "archives/tranche6/foundations/independent-review/Sixth_Timing_Resource_Independent_Review_v1_20261002.zip"
+        }
+      ]
+    },
+    {
+      "sha256": "efdfef4fac0c11d7e6cc640350293b168bed7b02c0879e9e18c8243b12663c2d",
+      "bytes": 149523,
+      "classification": "CURRENT_EVIDENCE",
+      "basis": "Contains exact selected sixth-final argument or retained-review bytes. Current claims are selected individually in the result/report bindings; this is not whole-archive acceptance.",
+      "parents": [
+        {
+          "archive": "549ba6a7f0941c36faa048bf525a252b943d74956c356b70f3bd0dbada96440f",
+          "member": "archives/tranche6/foundations/restoration-crosswalk/Sixth_Action_Integrity_Restoration_Candidate_v1_20261002.zip"
+        }
+      ]
+    },
+    {
+      "sha256": "a6eba26c060f84843ddb5b73039ff6b9c9089edfaf22efbf6e930ab12e2ccd1b",
+      "bytes": 70905,
+      "classification": "PREDECESSOR",
+      "basis": "Retained source lineage or auxiliary component of the final sixth return. It is not independently selected as a new whole-result acceptance; exact current source selectors and preserved predecessor failures govern its use.",
+      "parents": [
+        {
+          "archive": "549ba6a7f0941c36faa048bf525a252b943d74956c356b70f3bd0dbada96440f",
+          "member": "archives/tranche6/two-message-independent-review/Sixth_Two_Message_Independent_Review_20261002.zip"
+        }
+      ]
+    },
+    {
+      "sha256": "62d19275fab197469c4e52efa22ff94a5d0fab5cbdd70ed1c67967bfaf8a1c36",
+      "bytes": 23941,
+      "classification": "SUPERSEDED",
+      "basis": "Two-message v1 retains its source identity; v2 supplies the reviewed locator-corrected successor with unchanged mathematical substance.",
+      "parents": [
+        {
+          "archive": "a6eba26c060f84843ddb5b73039ff6b9c9089edfaf22efbf6e930ab12e2ccd1b",
+          "member": "input.zip"
+        },
+        {
+          "archive": "549ba6a7f0941c36faa048bf525a252b943d74956c356b70f3bd0dbada96440f",
+          "member": "projections/two-message-independent-review/input.zip"
+        }
+      ]
+    },
+    {
+      "sha256": "ed6ff00cc9e82f9be8706961b2e55696fc1f571063aa6d394b35f26f28e9d28a",
+      "bytes": 19920,
+      "classification": "SUPERSEDED",
+      "basis": "Motivation/value v1 is preserved as the exact predecessor of the reviewed v2 argument; no historical statement is rewritten.",
+      "parents": [
+        {
+          "archive": "549ba6a7f0941c36faa048bf525a252b943d74956c356b70f3bd0dbada96440f",
+          "member": "selected-source-union/tranche6/foundations/Sixth_Motivation_Value_Continuation_v1_20261002.zip"
+        }
+      ]
+    },
+    {
+      "sha256": "2a1791994b2965d9b2502886d6f836d49134d2b84bd0910359268fa674f0e9f8",
+      "bytes": 13044814,
+      "classification": "COLLECTION",
+      "basis": "Exact sixth-final input transport; claims are assigned to source-specific results.",
+      "parents": []
+    },
+    {
+      "sha256": "3d5b240940fec3602033f77ca8e40eb26eaa27a06d5e25b95af5a14e7c6492b9",
+      "bytes": 1652711,
+      "classification": "PREDECESSOR",
+      "basis": "Retained source lineage or auxiliary component of the final sixth return. It is not independently selected as a new whole-result acceptance; exact current source selectors and preserved predecessor failures govern its use.",
+      "parents": [
+        {
+          "archive": "2a1791994b2965d9b2502886d6f836d49134d2b84bd0910359268fa674f0e9f8",
+          "member": "technical/archives/tranche6/independent-challenge/returns/Independent_Actual_All_Moments_Review_20261001.zip"
+        }
+      ]
+    },
+    {
+      "sha256": "330ee695423464b253189a2baa1bcb2a8311fbd3e23b60efc284ef4531fb7fe8",
+      "bytes": 1949036,
+      "classification": "PREDECESSOR",
+      "basis": "Retained source lineage or auxiliary component of the final sixth return. It is not independently selected as a new whole-result acceptance; exact current source selectors and preserved predecessor failures govern its use.",
+      "parents": [
+        {
+          "archive": "2a1791994b2965d9b2502886d6f836d49134d2b84bd0910359268fa674f0e9f8",
+          "member": "technical/archives/tranche6/independent-challenge/returns/Independent_Full_Phase_Source_Review_20261001.zip"
+        }
+      ]
+    },
+    {
+      "sha256": "f378747c75879cc02b48974bc039a53b3c6fbc4e6781dc9448d9bd58437614c0",
+      "bytes": 412231,
+      "classification": "SUPERSEDED",
+      "basis": "Runtime v6 is an earlier full-phase source. Current bounded runtime-v8 claims and controls use their own exact source closure.",
+      "parents": [
+        {
+          "archive": "330ee695423464b253189a2baa1bcb2a8311fbd3e23b60efc284ef4531fb7fe8",
+          "member": "author/candidate-v6.zip"
+        }
+      ]
+    },
+    {
+      "sha256": "f17bf4cb6cafd2e792fa7a553d6c565aeeb9244bc883410fac962aabbcf78e93",
+      "bytes": 17584,
+      "classification": "PREDECESSOR",
+      "basis": "Retained source lineage or auxiliary component of the final sixth return. It is not independently selected as a new whole-result acceptance; exact current source selectors and preserved predecessor failures govern its use.",
+      "parents": [
+        {
+          "archive": "2a1791994b2965d9b2502886d6f836d49134d2b84bd0910359268fa674f0e9f8",
+          "member": "technical/archives/tranche6/integer-budget/Exact_Integer_Confidence_Budget_Candidate_4_20261001.zip"
+        }
+      ]
+    },
+    {
+      "sha256": "124ac3364130663f08d42fa791d6203c4bf138c0b4f33ce0e43512661a7b6ab0",
+      "bytes": 13411,
+      "classification": "PREDECESSOR",
+      "basis": "Retained source lineage or auxiliary component of the final sixth return. It is not independently selected as a new whole-result acceptance; exact current source selectors and preserved predecessor failures govern its use.",
+      "parents": [
+        {
+          "archive": "2a1791994b2965d9b2502886d6f836d49134d2b84bd0910359268fa674f0e9f8",
+          "member": "technical/archives/tranche6/polynomial-tail/Polynomial_Cutoff_Moment_Candidate_2_20261001.zip"
+        }
+      ]
+    },
+    {
+      "sha256": "6fe52f09004c55c3044bc8ef4f65f4eef55fa6be1d194e21100f7f5c282f9d8f",
+      "bytes": 20791,
+      "classification": "PREDECESSOR",
+      "basis": "Retained source lineage or auxiliary component of the final sixth return. It is not independently selected as a new whole-result acceptance; exact current source selectors and preserved predecessor failures govern its use.",
+      "parents": [
+        {
+          "archive": "2a1791994b2965d9b2502886d6f836d49134d2b84bd0910359268fa674f0e9f8",
+          "member": "technical/archives/tranche6/probability-bridge-exponential-supplement/Every_Positive_Exponential_Divergence_Review_Supplement_20261001.zip"
+        }
+      ]
+    },
+    {
+      "sha256": "c463a026bcb8da7fbf88c2963b889332f8499ecf3c000067097d31030b7360c8",
+      "bytes": 1677694,
+      "classification": "PREDECESSOR",
+      "basis": "Retained source lineage or auxiliary component of the final sixth return. It is not independently selected as a new whole-result acceptance; exact current source selectors and preserved predecessor failures govern its use.",
+      "parents": [
+        {
+          "archive": "2a1791994b2965d9b2502886d6f836d49134d2b84bd0910359268fa674f0e9f8",
+          "member": "technical/archives/tranche6/probability-bridge-review/Probability_Bridge_Independent_Review_20261001.zip"
+        }
+      ]
+    },
+    {
+      "sha256": "7630686339037e1df66c3e155982f4394548b81c2cd6d29bdf82fc37ad501072",
+      "bytes": 357299,
+      "classification": "PREDECESSOR",
+      "basis": "Retained source lineage or auxiliary component of the final sixth return. It is not independently selected as a new whole-result acceptance; exact current source selectors and preserved predecessor failures govern its use.",
+      "parents": [
+        {
+          "archive": "2a1791994b2965d9b2502886d6f836d49134d2b84bd0910359268fa674f0e9f8",
+          "member": "technical/archives/tranche6/rational-law/candidate-v3.zip"
+        }
+      ]
+    },
+    {
+      "sha256": "b5be7775f6d0b1d5628f8d100f4d0db3c3d44827472e3965c7bbd4cb04423b34",
+      "bytes": 473728,
+      "classification": "CURRENT_EVIDENCE",
+      "basis": "Source-specific current sixth-final suite, with source-owned targets and explicit pins; fresh checks remain separate.",
+      "parents": [
+        {
+          "archive": "2a1791994b2965d9b2502886d6f836d49134d2b84bd0910359268fa674f0e9f8",
+          "member": "technical/archives/tranche6/runtime-bridge/candidate-v8.zip"
+        }
+      ]
+    },
+    {
+      "sha256": "2aed8cf3b3b8f6089896e737b9db92d00ca12da54ef09e7f3ae0d33f9ea4a675",
+      "bytes": 230638,
+      "classification": "PREDECESSOR",
+      "basis": "Retained source lineage or auxiliary component of the final sixth return. It is not independently selected as a new whole-result acceptance; exact current source selectors and preserved predecessor failures govern its use.",
+      "parents": [
+        {
+          "archive": "2a1791994b2965d9b2502886d6f836d49134d2b84bd0910359268fa674f0e9f8",
+          "member": "technical/archives/tranche6/tail-moments/Tail_To_Actual_Cost_Moments_Candidate_2_20261001.zip"
+        }
+      ]
+    },
+    {
+      "sha256": "b9193cfd76be7615ae4185799b5271e02b02df00cd851c96f05e5d3d58a8f1f5",
+      "bytes": 17531,
+      "classification": "PREDECESSOR",
+      "basis": "The conditional affine-tail calculation remains conditional; the later actual-controller proof supplies a separately checked instantiation.",
+      "parents": [
+        {
+          "archive": "2a1791994b2965d9b2502886d6f836d49134d2b84bd0910359268fa674f0e9f8",
+          "member": "technical/conditional/Conditional_Affine_Tail_Optimization_Verification_20261002.zip"
+        }
+      ]
+    },
+    {
+      "sha256": "14c267b8206a8967f886ac034460941f4df142be58d2675895c4863ed943f075",
+      "bytes": 13411156,
+      "classification": "COLLECTION",
+      "basis": "Exact sixth-final input transport; claims are assigned to source-specific results.",
+      "parents": []
+    },
+    {
+      "sha256": "8b11ddc6d9e633234d7743c82e58176bba97039fb85fa730af0adee9bfb73d37",
+      "bytes": 12092265,
+      "classification": "COLLECTION",
+      "basis": "Exact sixth-final input transport; claims are assigned to source-specific results.",
+      "parents": []
+    },
+    {
+      "sha256": "45af85cc433a27ab53102839c6fa9f59dd95832fc49ae467faf4626593e65311",
+      "bytes": 12169109,
+      "classification": "COLLECTION",
+      "basis": "Exact sixth-final input transport; claims are assigned to source-specific results.",
+      "parents": []
+    },
+    {
+      "sha256": "243dcc215d756c23c2ab11fc8de9b11f9d8f41fe1bdd6b17cfe744520a2a48c1",
+      "bytes": 16199,
+      "classification": "PREDECESSOR",
+      "basis": "Retained source lineage or auxiliary component of the final sixth return. It is not independently selected as a new whole-result acceptance; exact current source selectors and preserved predecessor failures govern its use.",
+      "parents": [
+        {
+          "archive": "45af85cc433a27ab53102839c6fa9f59dd95832fc49ae467faf4626593e65311",
+          "member": "technical/archives/tranche6/observation-loss/Literal_Loss_Observation_Obstruction_Candidate_2_20261001.zip"
+        }
+      ]
+    },
+    {
+      "sha256": "09674147709829575386c5f5889eb74410e732646caffbec7bc5a06bb4a008a7",
+      "bytes": 12049467,
+      "classification": "COLLECTION",
+      "basis": "Exact sixth-final input transport; claims are assigned to source-specific results.",
+      "parents": []
+    },
+    {
+      "sha256": "70677d135cd8957f5b527d555001eb8e53b0cc19652297709eb110e94f2a39be",
+      "bytes": 13039464,
+      "classification": "COLLECTION",
+      "basis": "Exact sixth-final input transport; claims are assigned to source-specific results.",
+      "parents": []
+    },
+    {
+      "sha256": "cb9c7f3abc82e94ecd6953f6ee0336cc24c51d4cdd586759ee9842ce6fb40a3e",
+      "bytes": 6415748,
+      "classification": "PREDECESSOR",
+      "basis": "Retained source lineage or auxiliary component of the final sixth return. It is not independently selected as a new whole-result acceptance; exact current source selectors and preserved predecessor failures govern its use.",
+      "parents": [
+        {
+          "archive": "70677d135cd8957f5b527d555001eb8e53b0cc19652297709eb110e94f2a39be",
+          "member": "finite-model-exponential/Actual_Finite_Model_Common_Exponential_Range_Author_Verification_20261002.zip"
+        }
+      ]
+    },
+    {
+      "sha256": "7cbe94fa76f64863abe9025316db7e3968d74a7b4018dc787da5b2e58dbbf8ee",
+      "bytes": 6198013,
+      "classification": "CURRENT_EVIDENCE",
+      "basis": "Contains exact selected sixth-final argument or retained-review bytes. Current claims are selected individually in the result/report bindings; this is not whole-archive acceptance.",
+      "parents": [
+        {
+          "archive": "cb9c7f3abc82e94ecd6953f6ee0336cc24c51d4cdd586759ee9842ce6fb40a3e",
+          "member": "candidate.zip"
+        },
+        {
+          "archive": "ea5cb47949ee771a67be5aab2384da8c627923b4ae978c650b7caffb9b98f86b",
+          "member": "candidate.zip"
+        }
+      ]
+    },
+    {
+      "sha256": "ea5cb47949ee771a67be5aab2384da8c627923b4ae978c650b7caffb9b98f86b",
+      "bytes": 6446609,
+      "classification": "CURRENT_EVIDENCE",
+      "basis": "Contains exact selected sixth-final argument or retained-review bytes. Current claims are selected individually in the result/report bindings; this is not whole-archive acceptance.",
+      "parents": [
+        {
+          "archive": "70677d135cd8957f5b527d555001eb8e53b0cc19652297709eb110e94f2a39be",
+          "member": "finite-model-exponential/Actual_Finite_Model_Common_Exponential_Range_Independent_Review_20261002.zip"
+        }
+      ]
+    },
+    {
+      "sha256": "a9d77765ada3ea4931447f0a0c457e9fa64222829ed294b2cd1351226501639e",
+      "bytes": 21127,
+      "classification": "CONTEXTUAL",
+      "basis": "Completion-verifier fixture review concerns packaging/integrity, not mathematical research adoption.",
+      "parents": [
+        {
+          "archive": "70677d135cd8957f5b527d555001eb8e53b0cc19652297709eb110e94f2a39be",
+          "member": "packaging-review/Completion_Verifier_Fixture_Review_20261002.zip"
         }
       ]
     }

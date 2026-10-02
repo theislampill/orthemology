@@ -1,0 +1,161 @@
+{
+  "id": "549ba6a7f094-zero-error-disclosure",
+  "origin": "549ba6a7f0941c36faa048bf525a252b943d74956c356b70f3bd0dbada96440f",
+  "descriptor_source_id": "src-549ba6a7f0941c36-882ce339953908e0",
+  "modules": [
+    {
+      "module": "ActionDisclosure",
+      "source_id": "src-549ba6a7f0941c36-1b75d1b5ceff0550",
+      "imports": [
+        "Mathlib.Data.Finset.Card",
+        "Mathlib.Data.Fintype.Card",
+        "Mathlib.Tactic"
+      ]
+    },
+    {
+      "module": "ActionDisclosureControls",
+      "source_id": "src-549ba6a7f0941c36-9a4206fb3497b9cd",
+      "imports": [
+        "ActionDisclosure"
+      ]
+    },
+    {
+      "module": "DisclosureRepair",
+      "source_id": "src-549ba6a7f0941c36-792f6a4c5a5b6f2b",
+      "imports": [
+        "ActionDisclosure"
+      ]
+    }
+  ],
+  "module_order": [
+    "ActionDisclosure",
+    "ActionDisclosureControls",
+    "DisclosureRepair"
+  ],
+  "targets": [
+    {
+      "name": "Orthemology.ActionDisclosure.safeDecoder_iff_range_card",
+      "module": "ActionDisclosure"
+    },
+    {
+      "name": "Orthemology.ActionDisclosure.safeDecoder_message_lower_bound",
+      "module": "ActionDisclosure"
+    },
+    {
+      "name": "Orthemology.ActionDisclosure.injective_menu_suffices",
+      "module": "ActionDisclosure"
+    },
+    {
+      "name": "Orthemology.ActionDisclosure.support_code_lower_bound",
+      "module": "ActionDisclosure"
+    },
+    {
+      "name": "Orthemology.ActionDisclosure.residual_budget_card",
+      "module": "ActionDisclosure"
+    },
+    {
+      "name": "Orthemology.ActionDisclosure.twoRootMenu_safe",
+      "module": "ActionDisclosureControls"
+    },
+    {
+      "name": "Orthemology.ActionDisclosure.duplicate_labels_not_safe",
+      "module": "ActionDisclosureControls"
+    },
+    {
+      "name": "Orthemology.ActionDisclosure.equal_size_menu_not_safe",
+      "module": "ActionDisclosureControls"
+    },
+    {
+      "name": "Orthemology.ActionDisclosure.two_root_supports_not_safe",
+      "module": "ActionDisclosureControls"
+    },
+    {
+      "name": "Orthemology.ActionDisclosure.repair_success_iff",
+      "module": "DisclosureRepair"
+    },
+    {
+      "name": "Orthemology.ActionDisclosure.repair_message_contract_iff",
+      "module": "DisclosureRepair"
+    },
+    {
+      "name": "Orthemology.ActionDisclosure.successful_repair_message_lower_bound",
+      "module": "DisclosureRepair"
+    },
+    {
+      "name": "Orthemology.ActionDisclosure.corrupt_action_irreversible",
+      "module": "DisclosureRepair"
+    },
+    {
+      "name": "Orthemology.ActionDisclosure.corrupt_action_not_restorative",
+      "module": "DisclosureRepair"
+    }
+  ],
+  "pins": {
+    "lean_version": "4.19.0",
+    "lean_binary_sha256": "92c3d35b5bfaa5e0fea413a775d504cf46cd95e1345df61c2274f76779e7e023",
+    "packages": [
+      {
+        "name": "mathlib",
+        "revision": "c44e0c8ee63ca166450922a373c7409c5d26b00b"
+      },
+      {
+        "name": "plausible",
+        "revision": "77e08eddc486491d7b9e470926b3dbe50319451a"
+      },
+      {
+        "name": "LeanSearchClient",
+        "revision": "25078369972d295301f5a1e53c3e5850cf6d9d4c"
+      },
+      {
+        "name": "importGraph",
+        "revision": "e6a9f0f5ee3ccf7443a0070f92b62f8db12ae82b"
+      },
+      {
+        "name": "proofwidgets",
+        "revision": "c4919189477c3221e6a204008998b0d724f49904"
+      },
+      {
+        "name": "aesop",
+        "revision": "5d50b08dedd7d69b3d9b3176e0d58a23af228884"
+      },
+      {
+        "name": "Qq",
+        "revision": "fa4f7f15d97591a9cf3aa7724ba371c7fc6dda02"
+      },
+      {
+        "name": "batteries",
+        "revision": "f5d04a9c4973d401c8c92500711518f7c656f034"
+      },
+      {
+        "name": "Cli",
+        "revision": "02dbd02bc00ec4916e99b04b2245b30200e200d0"
+      }
+    ]
+  },
+  "official_imports": [
+    {
+      "module": "Mathlib.Data.Finset.Card",
+      "repository": "mathlib",
+      "source": "Mathlib/Data/Finset/Card.lean",
+      "sha256": "a915b4a9c6ed684221397e67503048f604fc2caf58a88b03c02e4d7e070a940b"
+    },
+    {
+      "module": "Mathlib.Data.Fintype.Card",
+      "repository": "mathlib",
+      "source": "Mathlib/Data/Fintype/Card.lean",
+      "sha256": "49122bdbe4551c4bc0ffaa87030d6ff6b566beafa81a754a1835b62c40d6f577"
+    },
+    {
+      "module": "Mathlib.Tactic",
+      "repository": "mathlib",
+      "source": "Mathlib/Tactic.lean",
+      "sha256": "f20038eba7bba63f07a2f854496101226df407e20414e6b8ebf94b14f95e831b"
+    }
+  ],
+  "driver": {
+    "source_id": "src-549ba6a7f0941c36-9f2009d3fb197f50",
+    "lean_argument": "EXECUTABLE"
+  },
+  "controls": "ORIGINAL_DRIVER_REQUIRED",
+  "classification": "CURRENT_EVIDENCE"
+}

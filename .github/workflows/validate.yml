@@ -53,6 +53,15 @@ jobs:
           python -B tests/test_research_continuation_replay.py
           python -B -O tests/test_research_continuation_replay.py
           python -B scripts/validate_research_continuations.py
+      - name: Sixth-final preservation and isolated controls (Decision 0038)
+        run: |
+          python -B tests/test_research_continuation_successors.py
+          python -B -O tests/test_research_continuation_successors.py
+          python -B tests/test_continuation_controls.py
+          python -B -O tests/test_continuation_controls.py
+          python -B scripts/replay_continuation_controls.py --suite sixth-foundations --out "$RUNNER_TEMP/v5-sixth-foundations"
+          python -B scripts/replay_continuation_controls.py --suite sixth-foundations-addenda --out "$RUNNER_TEMP/v5-sixth-foundations-addenda"
+          python -B scripts/replay_continuation_controls.py --suite sixth-cost-controls --out "$RUNNER_TEMP/v5-sixth-cost-controls"
       - name: State-contract convergence proof (commit boundary + tamper controls)
         run: python scripts/validate_state_convergence.py
       - name: Public state surfaces agree with the generated state

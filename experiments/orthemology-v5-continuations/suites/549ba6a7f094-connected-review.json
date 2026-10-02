@@ -1,0 +1,171 @@
+{
+  "id": "549ba6a7f094-connected-review",
+  "origin": "549ba6a7f0941c36faa048bf525a252b943d74956c356b70f3bd0dbada96440f",
+  "descriptor_source_id": "src-549ba6a7f0941c36-25ab2bb2ae29be86",
+  "modules": [
+    {
+      "module": "ConnectedUnity",
+      "source_id": "src-549ba6a7f0941c36-fc26842425d00959",
+      "imports": [
+        "ProductiveCompleteness"
+      ]
+    },
+    {
+      "module": "InfiniteRootlessBranch",
+      "source_id": "src-549ba6a7f0941c36-7793f6e920bf844b",
+      "imports": [
+        "ConnectedUnity"
+      ]
+    },
+    {
+      "module": "ProductiveCompleteness",
+      "source_id": "src-549ba6a7f0941c36-5405cfe6e3ccbc0c",
+      "imports": [
+        "Mathlib"
+      ]
+    },
+    {
+      "module": "ReviewerProbes",
+      "source_id": "src-549ba6a7f0941c36-a40446d7a332b520",
+      "imports": [
+        "InfiniteRootlessBranch"
+      ]
+    }
+  ],
+  "module_order": [
+    "ProductiveCompleteness",
+    "ConnectedUnity",
+    "InfiniteRootlessBranch",
+    "ReviewerProbes"
+  ],
+  "targets": [
+    {
+      "name": "ConnectedReview.reviewer_root_of_cover",
+      "module": "ReviewerProbes"
+    },
+    {
+      "name": "ConnectedReview.reviewer_edge_cover_eq",
+      "module": "ReviewerProbes"
+    },
+    {
+      "name": "ConnectedReview.reviewer_path_cover",
+      "module": "ReviewerProbes"
+    },
+    {
+      "name": "ConnectedReview.reviewer_constructive_local_to_least",
+      "module": "ReviewerProbes"
+    },
+    {
+      "name": "ConnectedReview.reviewer_least_unique",
+      "module": "ReviewerProbes"
+    },
+    {
+      "name": "ConnectedReview.reviewer_global_unique_supported_to_least",
+      "module": "ReviewerProbes"
+    },
+    {
+      "name": "ConnectedReview.reviewer_pointwise_forward",
+      "module": "ReviewerProbes"
+    },
+    {
+      "name": "ConnectedReview.reviewer_pointwise_reverse",
+      "module": "ReviewerProbes"
+    },
+    {
+      "name": "ConnectedReview.reviewer_transitivity_is_material",
+      "module": "ReviewerProbes"
+    },
+    {
+      "name": "ConnectedReview.reviewer_unclosed_chain_connected",
+      "module": "ReviewerProbes"
+    },
+    {
+      "name": "ConnectedReview.reviewer_irreflexivity_is_material_to_uniqueness",
+      "module": "ReviewerProbes"
+    },
+    {
+      "name": "ConnectedReview.reviewer_scope_roothood_control",
+      "module": "ReviewerProbes"
+    },
+    {
+      "name": "ConnectedReview.reviewer_rooted_strict",
+      "module": "ReviewerProbes"
+    },
+    {
+      "name": "ConnectedReview.reviewer_rooted_least",
+      "module": "ReviewerProbes"
+    },
+    {
+      "name": "ConnectedReview.reviewer_rooted_no_accessible_branch",
+      "module": "ReviewerProbes"
+    },
+    {
+      "name": "ConnectedReview.reviewer_rooted_not_well_founded",
+      "module": "ReviewerProbes"
+    },
+    {
+      "name": "ConnectedReview.reviewer_fork_support_failure_inside_cone",
+      "module": "ReviewerProbes"
+    },
+    {
+      "name": "ConnectedReview.reviewer_graph_does_not_supply_act_bridge",
+      "module": "ReviewerProbes"
+    }
+  ],
+  "pins": {
+    "lean_version": "4.19.0",
+    "lean_binary_sha256": "92c3d35b5bfaa5e0fea413a775d504cf46cd95e1345df61c2274f76779e7e023",
+    "packages": [
+      {
+        "name": "mathlib",
+        "revision": "c44e0c8ee63ca166450922a373c7409c5d26b00b"
+      },
+      {
+        "name": "plausible",
+        "revision": "77e08eddc486491d7b9e470926b3dbe50319451a"
+      },
+      {
+        "name": "LeanSearchClient",
+        "revision": "25078369972d295301f5a1e53c3e5850cf6d9d4c"
+      },
+      {
+        "name": "importGraph",
+        "revision": "e6a9f0f5ee3ccf7443a0070f92b62f8db12ae82b"
+      },
+      {
+        "name": "proofwidgets",
+        "revision": "c4919189477c3221e6a204008998b0d724f49904"
+      },
+      {
+        "name": "aesop",
+        "revision": "5d50b08dedd7d69b3d9b3176e0d58a23af228884"
+      },
+      {
+        "name": "Qq",
+        "revision": "fa4f7f15d97591a9cf3aa7724ba371c7fc6dda02"
+      },
+      {
+        "name": "batteries",
+        "revision": "f5d04a9c4973d401c8c92500711518f7c656f034"
+      },
+      {
+        "name": "Cli",
+        "revision": "02dbd02bc00ec4916e99b04b2245b30200e200d0"
+      }
+    ]
+  },
+  "official_imports": [
+    {
+      "module": "Mathlib",
+      "repository": "mathlib",
+      "source": "Mathlib.lean",
+      "sha256": "b0518254279fabf0c6a920804e684536b0f5e2bd1cb6318d0609eb563413f20a"
+    }
+  ],
+  "driver": {
+    "source_id": "src-549ba6a7f0941c36-25ab2bb2ae29be86",
+    "lean_argument": "EXECUTABLE"
+  },
+  "controls": "ORIGINAL_DRIVER_REQUIRED",
+  "classification": "CURRENT_EVIDENCE"
+}
