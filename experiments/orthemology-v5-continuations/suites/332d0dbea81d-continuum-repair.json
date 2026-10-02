@@ -1,0 +1,579 @@
+{
+  "id": "332d0dbea81d-continuum-repair",
+  "origin": "332d0dbea81d90d7697f391520f43df61afb04c10bf11736320d9f8299cb6d58",
+  "descriptor_source_id": "src-332d0dbea81d90d7-85c042fef1d85c5a",
+  "modules": [
+    {
+      "module": "StatisticalRepair",
+      "source_id": "src-332d0dbea81d90d7-9d98c33b0e5796e3",
+      "imports": [
+        "Mathlib.Data.Real.Sqrt",
+        "Mathlib.Algebra.Order.BigOperators.Ring.Finset",
+        "Mathlib.Tactic"
+      ]
+    },
+    {
+      "module": "FiniteTailCoverage",
+      "source_id": "src-332d0dbea81d90d7-63d856a1ee8943a3",
+      "imports": [
+        "Mathlib.Tactic",
+        "Mathlib.Data.Finset.Max"
+      ]
+    },
+    {
+      "module": "BernoulliTailMonotonicity",
+      "source_id": "src-332d0dbea81d90d7-72f340a9c5d4d5ed",
+      "imports": [
+        "StatisticalRepair",
+        "FiniteTailCoverage"
+      ]
+    },
+    {
+      "module": "BernoulliIntervalCoverage",
+      "source_id": "src-332d0dbea81d90d7-82e38c6784ea9d64",
+      "imports": [
+        "BernoulliTailMonotonicity"
+      ]
+    },
+    {
+      "module": "BernoulliPrefixLaw",
+      "source_id": "src-332d0dbea81d90d7-51649c156e05db14",
+      "imports": [
+        "BernoulliIntervalCoverage",
+        "Mathlib.Probability.ProductMeasure",
+        "Mathlib.Probability.ProbabilityMassFunction.Constructions"
+      ]
+    },
+    {
+      "module": "RobustBinaryRepair",
+      "source_id": "src-332d0dbea81d90d7-24aefa7e71e251ce",
+      "imports": [
+        "Mathlib.Tactic"
+      ]
+    },
+    {
+      "module": "CertifiedRepairCoverage",
+      "source_id": "src-332d0dbea81d90d7-5b4342d036e56078",
+      "imports": [
+        "RobustBinaryRepair",
+        "Mathlib.MeasureTheory.Measure.MeasureSpaceDef"
+      ]
+    },
+    {
+      "module": "AnytimeRepairCoverage",
+      "source_id": "src-332d0dbea81d90d7-9c661a53afa1aece",
+      "imports": [
+        "BernoulliPrefixLaw",
+        "CertifiedRepairCoverage"
+      ]
+    },
+    {
+      "module": "RationalTailReference",
+      "source_id": "src-332d0dbea81d90d7-2bb2764be064d09c",
+      "imports": [
+        "BernoulliIntervalCoverage"
+      ]
+    },
+    {
+      "module": "RationalRepairCertificate",
+      "source_id": "src-332d0dbea81d90d7-bb7cea9d2c158ffd",
+      "imports": [
+        "RobustBinaryRepair"
+      ]
+    },
+    {
+      "module": "ExecutableAuditRepair",
+      "source_id": "src-332d0dbea81d90d7-fbf251df1ac79439",
+      "imports": [
+        "AnytimeRepairCoverage",
+        "RationalTailReference",
+        "RationalRepairCertificate"
+      ]
+    },
+    {
+      "module": "AuditContractBinding",
+      "source_id": "src-332d0dbea81d90d7-76083e5a1ced910b",
+      "imports": [
+        "ExecutableAuditRepair"
+      ]
+    },
+    {
+      "module": "ProductObservationLaw",
+      "source_id": "src-332d0dbea81d90d7-242ad0075a4a9bf5",
+      "imports": [
+        "Mathlib",
+        "Mathlib.Probability.ProductMeasure"
+      ]
+    },
+    {
+      "module": "RepairObstruction",
+      "source_id": "src-332d0dbea81d90d7-c079a5c62015bc95",
+      "imports": [
+        "Mathlib"
+      ]
+    },
+    {
+      "module": "RepairTestingBridge",
+      "source_id": "src-332d0dbea81d90d7-6b6d590f5485de43",
+      "imports": [
+        "StatisticalRepair",
+        "RepairObstruction"
+      ]
+    },
+    {
+      "module": "BinaryConstructiveRepair",
+      "source_id": "src-332d0dbea81d90d7-622b12124dab8103",
+      "imports": [
+        "RepairTestingBridge"
+      ]
+    },
+    {
+      "module": "ContinuumAuditRestoration",
+      "source_id": "src-332d0dbea81d90d7-307d377106ef608b",
+      "imports": [
+        "AuditContractBinding",
+        "ProductObservationLaw",
+        "BinaryConstructiveRepair",
+        "Mathlib.Probability.StrongLaw"
+      ]
+    },
+    {
+      "module": "RepairEndpointCells",
+      "source_id": "src-332d0dbea81d90d7-44fffc733af76d76",
+      "imports": [
+        "RobustBinaryRepair"
+      ]
+    },
+    {
+      "module": "EmpiricalRepairCost",
+      "source_id": "src-332d0dbea81d90d7-cee41144298ee8d7",
+      "imports": [
+        "ContinuumAuditRestoration",
+        "RepairEndpointCells",
+        "Mathlib.MeasureTheory.Integral.Lebesgue.Add",
+        "Mathlib.Analysis.SpecificLimits.Basic"
+      ]
+    },
+    {
+      "module": "EmpiricalFourthMoment",
+      "source_id": "src-332d0dbea81d90d7-bde3d7d234358eb6",
+      "imports": [
+        "ContinuumAuditRestoration"
+      ]
+    },
+    {
+      "module": "GroupedBinomialTails",
+      "source_id": "src-332d0dbea81d90d7-dea4f3c74046552c",
+      "imports": [
+        "RationalTailReference",
+        "Mathlib.Data.Nat.Choose.Basic"
+      ]
+    },
+    {
+      "module": "EfficientAuditRepair",
+      "source_id": "src-332d0dbea81d90d7-310efe756893f237",
+      "imports": [
+        "GroupedBinomialTails",
+        "ExecutableAuditRepair"
+      ]
+    },
+    {
+      "module": "EventualAuditSafety",
+      "source_id": "src-332d0dbea81d90d7-df2360ab86080ebb",
+      "imports": [
+        "EfficientAuditRepair",
+        "Mathlib.MeasureTheory.OuterMeasure.BorelCantelli",
+        "Mathlib.MeasureTheory.Integral.Lebesgue.Add"
+      ]
+    },
+    {
+      "module": "EmpiricalExpectedCost",
+      "source_id": "src-332d0dbea81d90d7-f1ade1c561c0be28",
+      "imports": [
+        "EmpiricalRepairCost",
+        "EmpiricalFourthMoment",
+        "EventualAuditSafety"
+      ]
+    },
+    {
+      "module": "Controls",
+      "source_id": "src-332d0dbea81d90d7-227e7e0902066c53",
+      "imports": [
+        "EmpiricalExpectedCost"
+      ]
+    }
+  ],
+  "module_order": [
+    "StatisticalRepair",
+    "FiniteTailCoverage",
+    "BernoulliTailMonotonicity",
+    "BernoulliIntervalCoverage",
+    "BernoulliPrefixLaw",
+    "RobustBinaryRepair",
+    "CertifiedRepairCoverage",
+    "AnytimeRepairCoverage",
+    "RationalTailReference",
+    "RationalRepairCertificate",
+    "ExecutableAuditRepair",
+    "AuditContractBinding",
+    "ProductObservationLaw",
+    "RepairObstruction",
+    "RepairTestingBridge",
+    "BinaryConstructiveRepair",
+    "ContinuumAuditRestoration",
+    "RepairEndpointCells",
+    "EmpiricalRepairCost",
+    "EmpiricalFourthMoment",
+    "GroupedBinomialTails",
+    "EfficientAuditRepair",
+    "EventualAuditSafety",
+    "EmpiricalExpectedCost",
+    "Controls"
+  ],
+  "targets": [
+    {
+      "name": "Orthemology.Tranche3.empiricalWeight",
+      "module": "ContinuumAuditRestoration"
+    },
+    {
+      "name": "Orthemology.Tranche3.empiricalRepair",
+      "module": "ContinuumAuditRestoration"
+    },
+    {
+      "name": "Orthemology.Tranche3.bitValue",
+      "module": "ContinuumAuditRestoration"
+    },
+    {
+      "name": "Orthemology.Tranche3.count_prefix_real",
+      "module": "ContinuumAuditRestoration"
+    },
+    {
+      "name": "Orthemology.Tranche3.empiricalWeight_mem",
+      "module": "ContinuumAuditRestoration"
+    },
+    {
+      "name": "Orthemology.Tranche3.empiricalRepair_coherent",
+      "module": "ContinuumAuditRestoration"
+    },
+    {
+      "name": "Orthemology.Tranche3.source_bit_expectation",
+      "module": "ContinuumAuditRestoration"
+    },
+    {
+      "name": "Orthemology.Tranche3.empiricalWeight_converges",
+      "module": "ContinuumAuditRestoration"
+    },
+    {
+      "name": "Orthemology.Tranche3.interior_empirical_strict_restoration",
+      "module": "ContinuumAuditRestoration"
+    },
+    {
+      "name": "Orthemology.Tranche3.LiteralRepairGood",
+      "module": "RepairEndpointCells"
+    },
+    {
+      "name": "Orthemology.Tranche3.positive_weight_punctured_cell",
+      "module": "RepairEndpointCells"
+    },
+    {
+      "name": "Orthemology.Tranche3.zero_weight_unique",
+      "module": "RepairEndpointCells"
+    },
+    {
+      "name": "Orthemology.Tranche3.one_weight_unique",
+      "module": "RepairEndpointCells"
+    },
+    {
+      "name": "Orthemology.Tranche3.below_one_punctured_cell",
+      "module": "RepairEndpointCells"
+    },
+    {
+      "name": "Orthemology.Tranche3.constantBits",
+      "module": "EmpiricalRepairCost"
+    },
+    {
+      "name": "Orthemology.Tranche3.constantBits_count",
+      "module": "EmpiricalRepairCost"
+    },
+    {
+      "name": "Orthemology.Tranche3.constantBits_mass",
+      "module": "EmpiricalRepairCost"
+    },
+    {
+      "name": "Orthemology.Tranche3.empiricalRepair_constant",
+      "module": "EmpiricalRepairCost"
+    },
+    {
+      "name": "Orthemology.Tranche3.EmpiricalFailure",
+      "module": "EmpiricalRepairCost"
+    },
+    {
+      "name": "Orthemology.Tranche3.empiricalFailure_measurable",
+      "module": "EmpiricalRepairCost"
+    },
+    {
+      "name": "Orthemology.Tranche3.constant_prefix_failure",
+      "module": "EmpiricalRepairCost"
+    },
+    {
+      "name": "Orthemology.Tranche3.constant_prefix_probability",
+      "module": "EmpiricalRepairCost"
+    },
+    {
+      "name": "Orthemology.Tranche3.empirical_failure_probability_lower",
+      "module": "EmpiricalRepairCost"
+    },
+    {
+      "name": "Orthemology.Tranche3.empirical_expected_failure_lower",
+      "module": "EmpiricalRepairCost"
+    },
+    {
+      "name": "Orthemology.Tranche3.centeredTotal",
+      "module": "EmpiricalFourthMoment"
+    },
+    {
+      "name": "Orthemology.Tranche3.centeredMoment",
+      "module": "EmpiricalFourthMoment"
+    },
+    {
+      "name": "Orthemology.Tranche3.expectation_add",
+      "module": "EmpiricalFourthMoment"
+    },
+    {
+      "name": "Orthemology.Tranche3.expectation_mul",
+      "module": "EmpiricalFourthMoment"
+    },
+    {
+      "name": "Orthemology.Tranche3.expectation_const",
+      "module": "EmpiricalFourthMoment"
+    },
+    {
+      "name": "Orthemology.Tranche3.centeredTotal_step",
+      "module": "EmpiricalFourthMoment"
+    },
+    {
+      "name": "Orthemology.Tranche3.centeredMoment_step",
+      "module": "EmpiricalFourthMoment"
+    },
+    {
+      "name": "Orthemology.Tranche3.centeredMoment_one_step",
+      "module": "EmpiricalFourthMoment"
+    },
+    {
+      "name": "Orthemology.Tranche3.centeredMoment_two_step",
+      "module": "EmpiricalFourthMoment"
+    },
+    {
+      "name": "Orthemology.Tranche3.centeredMoment_four_step",
+      "module": "EmpiricalFourthMoment"
+    },
+    {
+      "name": "Orthemology.Tranche3.centered_moments",
+      "module": "EmpiricalFourthMoment"
+    },
+    {
+      "name": "Orthemology.Tranche3.centered_fourth_le",
+      "module": "EmpiricalFourthMoment"
+    },
+    {
+      "name": "Orthemology.Tranche3.repairRadius",
+      "module": "EmpiricalExpectedCost"
+    },
+    {
+      "name": "Orthemology.Tranche3.empirical_good_of_error",
+      "module": "EmpiricalExpectedCost"
+    },
+    {
+      "name": "Orthemology.Tranche3.empirical_centered_identity",
+      "module": "EmpiricalExpectedCost"
+    },
+    {
+      "name": "Orthemology.Tranche3.empirical_bad_fourth",
+      "module": "EmpiricalExpectedCost"
+    },
+    {
+      "name": "Orthemology.Tranche3.empirical_failure_probability_upper",
+      "module": "EmpiricalExpectedCost"
+    },
+    {
+      "name": "Orthemology.Tranche3.empirical_probability_spending",
+      "module": "EmpiricalExpectedCost"
+    },
+    {
+      "name": "Orthemology.Tranche3.empirical_expected_failure_upper",
+      "module": "EmpiricalExpectedCost"
+    },
+    {
+      "name": "IndependentContinuumControls.plugin_oracle_exact_margin",
+      "module": "Controls"
+    },
+    {
+      "name": "IndependentContinuumControls.no_strict_margin_at_zero",
+      "module": "Controls"
+    },
+    {
+      "name": "IndependentContinuumControls.no_strict_margin_at_one",
+      "module": "Controls"
+    },
+    {
+      "name": "IndependentContinuumControls.empirical_always_emits_rational_coherent",
+      "module": "Controls"
+    },
+    {
+      "name": "IndependentContinuumControls.first_report_is_wrong_with_probability_one",
+      "module": "Controls"
+    },
+    {
+      "name": "IndependentContinuumControls.zero_disturbance_is_always_weakly_good",
+      "module": "Controls"
+    },
+    {
+      "name": "IndependentContinuumControls.two_bits_centered_moments",
+      "module": "Controls"
+    },
+    {
+      "name": "IndependentContinuumControls.missing_cross_terms_give_wrong_fourth",
+      "module": "Controls"
+    },
+    {
+      "name": "IndependentContinuumControls.large_disturbance_can_break_coherence",
+      "module": "Controls"
+    },
+    {
+      "name": "IndependentContinuumControls.convergent_estimate_alone_has_no_vanishing_disturbance_guarantee",
+      "module": "Controls"
+    },
+    {
+      "name": "IndependentContinuumControls.finite_upper_is_parameterwise",
+      "module": "Controls"
+    }
+  ],
+  "pins": {
+    "lean_version": "4.19.0",
+    "lean_binary_sha256": "92c3d35b5bfaa5e0fea413a775d504cf46cd95e1345df61c2274f76779e7e023",
+    "packages": [
+      {
+        "name": "mathlib",
+        "revision": "c44e0c8ee63ca166450922a373c7409c5d26b00b"
+      },
+      {
+        "name": "plausible",
+        "revision": "77e08eddc486491d7b9e470926b3dbe50319451a"
+      },
+      {
+        "name": "LeanSearchClient",
+        "revision": "25078369972d295301f5a1e53c3e5850cf6d9d4c"
+      },
+      {
+        "name": "importGraph",
+        "revision": "e6a9f0f5ee3ccf7443a0070f92b62f8db12ae82b"
+      },
+      {
+        "name": "proofwidgets",
+        "revision": "c4919189477c3221e6a204008998b0d724f49904"
+      },
+      {
+        "name": "aesop",
+        "revision": "5d50b08dedd7d69b3d9b3176e0d58a23af228884"
+      },
+      {
+        "name": "Qq",
+        "revision": "fa4f7f15d97591a9cf3aa7724ba371c7fc6dda02"
+      },
+      {
+        "name": "batteries",
+        "revision": "f5d04a9c4973d401c8c92500711518f7c656f034"
+      },
+      {
+        "name": "Cli",
+        "revision": "02dbd02bc00ec4916e99b04b2245b30200e200d0"
+      }
+    ]
+  },
+  "official_imports": [
+    {
+      "module": "Mathlib",
+      "repository": "mathlib",
+      "source": "Mathlib.lean",
+      "sha256": "b0518254279fabf0c6a920804e684536b0f5e2bd1cb6318d0609eb563413f20a"
+    },
+    {
+      "module": "Mathlib.Algebra.Order.BigOperators.Ring.Finset",
+      "repository": "mathlib",
+      "source": "Mathlib/Algebra/Order/BigOperators/Ring/Finset.lean",
+      "sha256": "6341ca875f3963664c94147b1eacd45c9aedfe2015ae695b06af4e717849abe4"
+    },
+    {
+      "module": "Mathlib.Analysis.SpecificLimits.Basic",
+      "repository": "mathlib",
+      "source": "Mathlib/Analysis/SpecificLimits/Basic.lean",
+      "sha256": "cbf9b6b47e6ee6b2962fb2f16ba49b7e005e9a93c0adc1244cc770c34f527315"
+    },
+    {
+      "module": "Mathlib.Data.Finset.Max",
+      "repository": "mathlib",
+      "source": "Mathlib/Data/Finset/Max.lean",
+      "sha256": "5da0ec1876605df7573c9c6a3f859f1426014883e2411cb5909fc36d6c0063a9"
+    },
+    {
+      "module": "Mathlib.Data.Nat.Choose.Basic",
+      "repository": "mathlib",
+      "source": "Mathlib/Data/Nat/Choose/Basic.lean",
+      "sha256": "f3b34bef59b7e8d527fcde9ac9238d23be07ddc335002d0a8e972a266b818336"
+    },
+    {
+      "module": "Mathlib.Data.Real.Sqrt",
+      "repository": "mathlib",
+      "source": "Mathlib/Data/Real/Sqrt.lean",
+      "sha256": "100af39c6d268959221d07b8f2fee4579d2dbef4e87bf64158066cc675f67323"
+    },
+    {
+      "module": "Mathlib.MeasureTheory.Integral.Lebesgue.Add",
+      "repository": "mathlib",
+      "source": "Mathlib/MeasureTheory/Integral/Lebesgue/Add.lean",
+      "sha256": "eee4032e5814e52c87cec5d1dd67fa17527aae8d0ae6d97a8fc7e65857b5062f"
+    },
+    {
+      "module": "Mathlib.MeasureTheory.Measure.MeasureSpaceDef",
+      "repository": "mathlib",
+      "source": "Mathlib/MeasureTheory/Measure/MeasureSpaceDef.lean",
+      "sha256": "51f7479de5f95a4681f2d7a45f48dd9ee04ccf40d8296020a4c20d8121005dbe"
+    },
+    {
+      "module": "Mathlib.MeasureTheory.OuterMeasure.BorelCantelli",
+      "repository": "mathlib",
+      "source": "Mathlib/MeasureTheory/OuterMeasure/BorelCantelli.lean",
+      "sha256": "9e38230dcc3fff080e7ea05c64e7a04af8d9440753ff8be290e8cd110b9afa6a"
+    },
+    {
+      "module": "Mathlib.Probability.ProbabilityMassFunction.Constructions",
+      "repository": "mathlib",
+      "source": "Mathlib/Probability/ProbabilityMassFunction/Constructions.lean",
+      "sha256": "8e50bff3cd3b46107d612eed21e1648752a86f9c373d4b6b0fe10e0e22a43973"
+    },
+    {
+      "module": "Mathlib.Probability.ProductMeasure",
+      "repository": "mathlib",
+      "source": "Mathlib/Probability/ProductMeasure.lean",
+      "sha256": "f8af06e87e2e28916f0fa8a455f792ded4b85a22e1dea5e1c6f9cac1d31b9830"
+    },
+    {
+      "module": "Mathlib.Probability.StrongLaw",
+      "repository": "mathlib",
+      "source": "Mathlib/Probability/StrongLaw.lean",
+      "sha256": "3c3768b70c3779bea384592bb548bc06de2d25af315e0a0d59a1742b0807717c"
+    },
+    {
+      "module": "Mathlib.Tactic",
+      "repository": "mathlib",
+      "source": "Mathlib/Tactic.lean",
+      "sha256": "f20038eba7bba63f07a2f854496101226df407e20414e6b8ebf94b14f95e831b"
+    }
+  ],
+  "driver": {
+    "source_id": "src-332d0dbea81d90d7-817e8553aa5fdf95",
+    "lean_argument": "BIN_DIRECTORY"
+  },
+  "controls": "ORIGINAL_DRIVER_REQUIRED",
+  "classification": "PREDECESSOR"
+}

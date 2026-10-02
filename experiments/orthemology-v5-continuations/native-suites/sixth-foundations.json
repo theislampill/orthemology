@@ -1,0 +1,290 @@
+{
+  "schema": "orthemology-native-controls-v1",
+  "id": "sixth-foundations",
+  "steps": [
+    {
+      "id": "knowledge",
+      "files": [
+        {
+          "path": "check_bridges.py",
+          "source_id": "src-549ba6a7f0941c36-3964f683343e70ec"
+        }
+      ],
+      "entry": "check_bridges.py",
+      "outputs": [],
+      "args": []
+    },
+    {
+      "id": "upstream",
+      "files": [
+        {
+          "path": "check_scope.py",
+          "source_id": "src-549ba6a7f0941c36-d88fd766be75aca2"
+        }
+      ],
+      "entry": "check_scope.py",
+      "outputs": [],
+      "args": []
+    },
+    {
+      "id": "connected",
+      "files": [
+        {
+          "path": "check_connected.py",
+          "source_id": "src-549ba6a7f0941c36-b6c235114c275e17"
+        }
+      ],
+      "entry": "check_connected.py",
+      "outputs": [],
+      "args": []
+    },
+    {
+      "id": "connected-review",
+      "files": [
+        {
+          "path": "check_independent.py",
+          "source_id": "src-549ba6a7f0941c36-872c937ef2aaa89b"
+        }
+      ],
+      "entry": "check_independent.py",
+      "outputs": [],
+      "args": []
+    },
+    {
+      "id": "attributes",
+      "files": [
+        {
+          "path": "check_scope_controls.py",
+          "source_id": "src-549ba6a7f0941c36-c7bb8d28a86a0f7e"
+        }
+      ],
+      "entry": "check_scope_controls.py",
+      "outputs": [],
+      "args": []
+    },
+    {
+      "id": "norm-repair",
+      "files": [
+        {
+          "path": "check_semantic_repairs.py",
+          "source_id": "src-549ba6a7f0941c36-cf2dfce849922992"
+        }
+      ],
+      "entry": "check_semantic_repairs.py",
+      "outputs": [],
+      "args": []
+    },
+    {
+      "id": "restoration",
+      "files": [
+        {
+          "path": "check_semantics.py",
+          "source_id": "src-549ba6a7f0941c36-e0cc727620f80fbe"
+        }
+      ],
+      "entry": "check_semantics.py",
+      "outputs": [
+        "CHECK_RESULTS.json"
+      ],
+      "args": []
+    },
+    {
+      "id": "disclosure-cover",
+      "files": [
+        {
+          "path": "check_disclosure_cover.py",
+          "source_id": "src-549ba6a7f0941c36-cdb6ae87f16733e9"
+        }
+      ],
+      "entry": "check_disclosure_cover.py",
+      "outputs": [],
+      "args": []
+    },
+    {
+      "id": "repair-review",
+      "files": [
+        {
+          "path": "check_repair_algebra.py",
+          "source_id": "src-549ba6a7f0941c36-f72778ef3ce81032"
+        }
+      ],
+      "entry": "check_repair_algebra.py",
+      "outputs": [],
+      "args": []
+    },
+    {
+      "id": "integrity-review",
+      "files": [
+        {
+          "path": "check_action_integrity.py",
+          "source_id": "src-549ba6a7f0941c36-9b315c2e73e2f455"
+        }
+      ],
+      "entry": "check_action_integrity.py",
+      "outputs": [],
+      "args": []
+    },
+    {
+      "id": "positive-error",
+      "files": [
+        {
+          "path": "check_exact.py",
+          "source_id": "src-549ba6a7f0941c36-4a26e64cb15fcf20"
+        }
+      ],
+      "entry": "check_exact.py",
+      "outputs": [
+        "EXACT_RESULTS.json"
+      ],
+      "args": []
+    },
+    {
+      "id": "positive-error-review",
+      "files": [
+        {
+          "path": "check_positive_error.py",
+          "source_id": "src-549ba6a7f0941c36-2ed2569bff0577d7"
+        }
+      ],
+      "entry": "check_positive_error.py",
+      "outputs": [],
+      "args": []
+    },
+    {
+      "id": "two-message",
+      "files": [
+        {
+          "path": "check_two_message.py",
+          "source_id": "src-549ba6a7f0941c36-6fa2ae2c0bf9a242"
+        }
+      ],
+      "entry": "check_two_message.py",
+      "outputs": [
+        "TWO_MESSAGE_EXACT_RESULTS.json"
+      ],
+      "args": []
+    },
+    {
+      "id": "two-message-scope",
+      "files": [
+        {
+          "path": "check_scope_controls.py",
+          "source_id": "src-549ba6a7f0941c36-7af15051d9913f6c"
+        }
+      ],
+      "entry": "check_scope_controls.py",
+      "outputs": [
+        "SCOPE_CONTROL_RESULTS.json"
+      ],
+      "args": []
+    },
+    {
+      "id": "odd-three",
+      "files": [
+        {
+          "path": "check_odd_three.py",
+          "source_id": "src-549ba6a7f0941c36-bad3e6df0df17316"
+        }
+      ],
+      "entry": "check_odd_three.py",
+      "outputs": [
+        "ODD_THREE_EXACT_RESULTS.json"
+      ],
+      "args": []
+    },
+    {
+      "id": "private-general",
+      "files": [
+        {
+          "path": "check_general_frontier.py",
+          "source_id": "src-549ba6a7f0941c36-c78e269aaed70704"
+        }
+      ],
+      "entry": "check_general_frontier.py",
+      "outputs": [
+        "GENERAL_FRONTIER_EXACT_RESULTS.json"
+      ],
+      "args": []
+    },
+    {
+      "id": "private-construction",
+      "files": [
+        {
+          "path": "check_general_construction.py",
+          "source_id": "src-549ba6a7f0941c36-e5a31b94cfe1f8d3"
+        }
+      ],
+      "entry": "check_general_construction.py",
+      "outputs": [
+        "GENERAL_CONSTRUCTION_RESULTS.json"
+      ],
+      "args": []
+    },
+    {
+      "id": "private-broad-review",
+      "files": [
+        {
+          "path": "independent_checks.py",
+          "source_id": "src-549ba6a7f0941c36-2d4015f059dbf956"
+        }
+      ],
+      "entry": "independent_checks.py",
+      "outputs": [],
+      "args": []
+    },
+    {
+      "id": "private-arithmetic-review",
+      "files": [
+        {
+          "path": "check_general_private_arithmetic.py",
+          "source_id": "src-549ba6a7f0941c36-21a4e7213e720a4d"
+        }
+      ],
+      "entry": "check_general_private_arithmetic.py",
+      "outputs": [],
+      "args": []
+    },
+    {
+      "id": "timing",
+      "files": [
+        {
+          "path": "check_timing_resources.py",
+          "source_id": "src-549ba6a7f0941c36-79ea4066c2e9b5b6"
+        }
+      ],
+      "entry": "check_timing_resources.py",
+      "outputs": [],
+      "args": []
+    },
+    {
+      "id": "b4-certificates",
+      "files": [
+        {
+          "path": "verify_sender_trees.py",
+          "source_id": "src-549ba6a7f0941c36-c4f9a4bf3124da97"
+        },
+        {
+          "path": "EXACT_SENDER_TREE_u6.json",
+          "source_id": "src-549ba6a7f0941c36-45d71240ff83035e"
+        },
+        {
+          "path": "EXACT_SENDER_TREE_u8.json",
+          "source_id": "src-549ba6a7f0941c36-956eed2642882fd1"
+        },
+        {
+          "path": "EXACT_SENDER_TREE_u10.json",
+          "source_id": "src-549ba6a7f0941c36-dcbe2697d490e3a8"
+        },
+        {
+          "path": "EXACT_SENDER_TREE_u12.json",
+          "source_id": "src-549ba6a7f0941c36-a9ca8b281115292b"
+        }
+      ],
+      "entry": "verify_sender_trees.py",
+      "outputs": [
+        "EXACT_SENDER_VERIFICATION.json"
+      ],
+      "args": []
+    }
+  ]
+}

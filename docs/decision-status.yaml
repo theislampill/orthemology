@@ -54,6 +54,8 @@ decisions:
   "0034": {status: proposed-candidate, pr: 12, title: R7E Sol independent repair contract}
   "0035": {status: proposed-candidate, pr: 12, title: somnic orthing and activation contracts}
   "0036": {status: proposed-candidate, pr: 12, title: somnic episode identity and intra/inter-somnic relations}
+  "0037": {status: proposed-candidate, stage: local-preparation, title: v5 research-continuation source and evidence registry}
+  "0038": {status: proposed-candidate, stage: local-preparation, title: final-sixth source and evidence successor overlay}
 normative_symbols:
   StrictlySoundReasoning_q:
     current:

@@ -1,0 +1,52 @@
+{
+  "edges": [
+    {
+      "from": "src-8cff855363027d09-996fd2e09c80ab70",
+      "to": "src-15e2b6abb662c4df-996fd2e09c80ab70",
+      "statement": "Driver syntax failure is corrected; the Lean and theorem sources are unchanged.",
+      "relation": "CORRECTS"
+    },
+    {
+      "from": "src-63c60d38bc16b17e-35838ad2aa722484",
+      "to": "src-0a74eb642cc61b50-35838ad2aa722484",
+      "statement": "Exact certificate field types now reject equivalent float substitutions; arithmetic formulas and Lean sources are unchanged.",
+      "relation": "CORRECTS"
+    },
+    {
+      "from": "src-71aa209ede7855cf-ac1a57d94319c835",
+      "to": "src-74b86eeeda4675fb-ac1a57d94319c835",
+      "statement": "Runtime v5 adds history/guard and source-law bindings, rejects invalid fixture actions and repairs portable packaging; it does not implement the complete controller.",
+      "relation": "CORRECTS"
+    },
+    {
+      "from": "src-17797ddebb985eab-d24f6fabae178d47",
+      "to": "src-4bd668ffbcfaa1a3-43e07981fc423343",
+      "statement": "Ordinary global-count concentration strengthens the same controller-cost proof; chronological aggregation remains outside the formal components.",
+      "relation": "REFINES"
+    },
+    {
+      "from": "src-16408a2f5a9166d8-fa45267a08d90c0a",
+      "to": "src-78f19b47a154a2a4-fa45267a08d90c0a",
+      "statement": "Candidate 3 keeps the uncapped mathematical core distinct from bounded adapters and uses chunked decimal parsing/serialization, including guard 640. Earlier failures remain historical.",
+      "relation": "REFINES"
+    },
+    {
+      "from": "src-4bd668ffbcfaa1a3-23ab03b7a89959d7",
+      "to": "src-7cbe94fa76f64863-f2181ee785e61ae6",
+      "statement": "The later actual-controller source instantiates chronological bad-count aggregation and all natural moments. The checkpoint-3 ordinary result remains historically unchanged.",
+      "relation": "REFINES"
+    },
+    {
+      "from": "src-748545d4cf832fbc-badd13f57e790d00",
+      "to": "src-7cbe94fa76f64863-d046f3a6aa41b5de",
+      "statement": "The retained affine-tail lemma remains conditional; later source derives its actual-controller input and transports the complete exponential integrand.",
+      "relation": "REFINES"
+    },
+    {
+      "from": "src-74b86eeeda4675fb-595c6e4a2a13af2a",
+      "to": "src-b5be7775f6d0b1d5-8d34c14e93be7749",
+      "statement": "Runtime v8 supplies the bounded two-model/two-state/two-action phase-controller and derived canonical history-law bridge under explicit selector, environment and initial-state certificates.",
+      "relation": "REFINES"
+    }
+  ]
+}

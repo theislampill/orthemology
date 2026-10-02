@@ -1,0 +1,441 @@
+{
+  "id": "866c6ff6e74a-mealy-stage2",
+  "origin": "866c6ff6e74a67f2bc452b49a0ada05311c0c2601585ea166404719172bd8086",
+  "descriptor_source_id": "src-866c6ff6e74a67f2-47b7b457c989b63a",
+  "modules": [
+    {
+      "module": "PERRefinement",
+      "source_id": "src-866c6ff6e74a67f2-99cb89fa27febe8b",
+      "imports": [
+        "Mathlib.SetTheory.Cardinal.Finite",
+        "Mathlib.Data.Fintype.EquivFin",
+        "Mathlib.Tactic"
+      ]
+    },
+    {
+      "module": "MealyRefinement",
+      "source_id": "src-866c6ff6e74a67f2-c6fc4316d7648f2d",
+      "imports": [
+        "PERRefinement"
+      ]
+    },
+    {
+      "module": "BlockMismatch",
+      "source_id": "src-866c6ff6e74a67f2-7075072f8eb48d4e",
+      "imports": [
+        "MealyRefinement",
+        "Mathlib.Data.List.OfFn",
+        "Mathlib.Data.Finset.Sigma"
+      ]
+    },
+    {
+      "module": "P02A2.MeasureCore",
+      "source_id": "src-866c6ff6e74a67f2-bfd880ffe27a6259",
+      "imports": [
+        "Mathlib.MeasureTheory.Measure.Typeclasses.SFinite",
+        "Mathlib.MeasureTheory.Measure.Typeclasses.Probability",
+        "Mathlib.MeasureTheory.Measure.Map",
+        "Mathlib.MeasureTheory.Measure.Restrict",
+        "Mathlib.Tactic"
+      ]
+    },
+    {
+      "module": "Q8Measure",
+      "source_id": "src-866c6ff6e74a67f2-f6cfb33c6981bf28",
+      "imports": [
+        "P02A2.MeasureCore",
+        "Mathlib.Probability.ProductMeasure",
+        "Mathlib.Probability.ProbabilityMassFunction.Constructions",
+        "Mathlib.Analysis.SpecificLimits.Basic"
+      ]
+    },
+    {
+      "module": "MealyMeasure",
+      "source_id": "src-866c6ff6e74a67f2-28e73591982f97e5",
+      "imports": [
+        "BlockMismatch",
+        "Q8Measure"
+      ]
+    },
+    {
+      "module": "MealyHitting",
+      "source_id": "src-866c6ff6e74a67f2-83154c898ba82e00",
+      "imports": [
+        "MealyMeasure"
+      ]
+    },
+    {
+      "module": "MealyAtoms",
+      "source_id": "src-866c6ff6e74a67f2-05f2188136dc9e62",
+      "imports": [
+        "MealyHitting"
+      ]
+    },
+    {
+      "module": "MealyRational",
+      "source_id": "src-866c6ff6e74a67f2-d3ea1c38e51fc463",
+      "imports": [
+        "MealyHitting",
+        "Mathlib.LinearAlgebra.FiniteDimensional.Basic"
+      ]
+    },
+    {
+      "module": "MealyMeasureFixtures",
+      "source_id": "src-866c6ff6e74a67f2-be9db08297894b89",
+      "imports": [
+        "MealyAtoms",
+        "MealyRational"
+      ]
+    },
+    {
+      "module": "MealySolver",
+      "source_id": "src-866c6ff6e74a67f2-d6140c9d45f03034",
+      "imports": [
+        "MealyRational",
+        "Mathlib.LinearAlgebra.Determinant"
+      ]
+    },
+    {
+      "module": "MealySolverFixtures",
+      "source_id": "src-866c6ff6e74a67f2-e5f43d9f46dca7be",
+      "imports": [
+        "MealySolver",
+        "MealyMeasureFixtures"
+      ]
+    },
+    {
+      "module": "SolverVerification",
+      "source_id": "src-866c6ff6e74a67f2-38aa302908895d14",
+      "imports": [
+        "MealySolverFixtures"
+      ]
+    },
+    {
+      "module": "Verification",
+      "source_id": "src-866c6ff6e74a67f2-e1f4d8250a6b9a79",
+      "imports": [
+        "MealyMeasureFixtures"
+      ]
+    }
+  ],
+  "module_order": [
+    "PERRefinement",
+    "MealyRefinement",
+    "BlockMismatch",
+    "P02A2.MeasureCore",
+    "Q8Measure",
+    "MealyMeasure",
+    "MealyHitting",
+    "MealyAtoms",
+    "MealyRational",
+    "MealyMeasureFixtures",
+    "MealySolver",
+    "MealySolverFixtures",
+    "SolverVerification",
+    "Verification"
+  ],
+  "targets": [
+    {
+      "name": "Orthemology.Frontier.MealyMeasure.measure_cylinder",
+      "module": "MealyMeasure"
+    },
+    {
+      "name": "Orthemology.Frontier.MealyMeasure.state_prefix",
+      "module": "MealyMeasure"
+    },
+    {
+      "name": "Orthemology.Frontier.MealyMeasure.output_prefix",
+      "module": "MealyMeasure"
+    },
+    {
+      "name": "Orthemology.Frontier.MealyMeasure.output_measurable",
+      "module": "MealyMeasure"
+    },
+    {
+      "name": "Orthemology.Frontier.MealyMeasure.measure_block_event",
+      "module": "MealyMeasure"
+    },
+    {
+      "name": "Orthemology.Frontier.MealyMeasure.finite_survivor_measure_bound",
+      "module": "MealyMeasure"
+    },
+    {
+      "name": "Orthemology.Frontier.MealyMeasure.avoidMatch_null",
+      "module": "MealyMeasure"
+    },
+    {
+      "name": "Orthemology.Frontier.MealyMeasure.hitting_prefix_determines_output",
+      "module": "MealyMeasure"
+    },
+    {
+      "name": "Orthemology.Frontier.MealyMeasure.hits_output_positive",
+      "module": "MealyMeasure"
+    },
+    {
+      "name": "Orthemology.Frontier.MealyMeasure.positive_avoiding_null",
+      "module": "MealyMeasure"
+    },
+    {
+      "name": "Orthemology.Frontier.MealyMeasure.atomic_mass_eq_hitting_probability",
+      "module": "MealyMeasure"
+    },
+    {
+      "name": "Orthemology.Frontier.MealyMeasure.positive_iff_hitting_prefix",
+      "module": "MealyMeasure"
+    },
+    {
+      "name": "Orthemology.Frontier.MealyMeasure.deterministicBit_spec",
+      "module": "MealyHitting"
+    },
+    {
+      "name": "Orthemology.Frontier.MealyMeasure.measure_hitAt",
+      "module": "MealyHitting"
+    },
+    {
+      "name": "Orthemology.Frontier.MealyMeasure.hittingProbabilityQ_correct",
+      "module": "MealyHitting"
+    },
+    {
+      "name": "Orthemology.Frontier.MealyMeasure.atomic_mass_tendsto_finite_hitting",
+      "module": "MealyHitting"
+    },
+    {
+      "name": "Orthemology.Frontier.MealyMeasure.atomic_mass_zero_iff_unreachable",
+      "module": "MealyHitting"
+    },
+    {
+      "name": "Orthemology.Frontier.MealyMeasure.positive_output_eventually_periodic",
+      "module": "MealyAtoms"
+    },
+    {
+      "name": "Orthemology.Frontier.MealyMeasure.card_hittingBlocks_succ",
+      "module": "MealyRational"
+    },
+    {
+      "name": "Orthemology.Frontier.MealyMeasure.hittingProbabilityQ_tendsto",
+      "module": "MealyRational"
+    },
+    {
+      "name": "Orthemology.Frontier.MealyMeasure.hittingReal_harmonic",
+      "module": "MealyRational"
+    },
+    {
+      "name": "Orthemology.Frontier.MealyMeasure.homogeneous_eq_zero",
+      "module": "MealyRational"
+    },
+    {
+      "name": "Orthemology.Frontier.MealyMeasure.hittingSystem_injective",
+      "module": "MealyRational"
+    },
+    {
+      "name": "Orthemology.Frontier.MealyMeasure.exists_rational_solution",
+      "module": "MealyRational"
+    },
+    {
+      "name": "Orthemology.Frontier.MealyMeasure.hittingReal_system",
+      "module": "MealyRational"
+    },
+    {
+      "name": "Orthemology.Frontier.MealyMeasure.rational_hitting_probability",
+      "module": "MealyRational"
+    },
+    {
+      "name": "Orthemology.Frontier.MealyMeasure.atomic_mass_rational",
+      "module": "MealyRational"
+    },
+    {
+      "name": "Orthemology.Frontier.MealyMeasure.defect_rational",
+      "module": "MealyRational"
+    },
+    {
+      "name": "Orthemology.Frontier.MealyMeasure.Fixtures.zero_atomic_mass_one",
+      "module": "MealyMeasureFixtures"
+    },
+    {
+      "name": "Orthemology.Frontier.MealyMeasure.Fixtures.copy_atomic_mass_zero",
+      "module": "MealyMeasureFixtures"
+    },
+    {
+      "name": "Orthemology.Frontier.MealyMeasure.Fixtures.split_atomic_mass_half",
+      "module": "MealyMeasureFixtures"
+    },
+    {
+      "name": "Orthemology.Frontier.MealyMeasure.reachSet_stable",
+      "module": "MealySolver"
+    },
+    {
+      "name": "Orthemology.Frontier.MealyMeasure.reaches_iff_mem_reachSet",
+      "module": "MealySolver"
+    },
+    {
+      "name": "Orthemology.Frontier.MealyMeasure.reachesBit_spec",
+      "module": "MealySolver"
+    },
+    {
+      "name": "Orthemology.Frontier.MealyMeasure.hittingMatrix_mulVec",
+      "module": "MealySolver"
+    },
+    {
+      "name": "Orthemology.Frontier.MealyMeasure.hittingMatrix_det_ne_zero",
+      "module": "MealySolver"
+    },
+    {
+      "name": "Orthemology.Frontier.MealyMeasure.solveHitting_matrix_equation",
+      "module": "MealySolver"
+    },
+    {
+      "name": "Orthemology.Frontier.MealyMeasure.solveHitting_correct",
+      "module": "MealySolver"
+    },
+    {
+      "name": "Orthemology.Frontier.MealyMeasure.solveDefect_correct",
+      "module": "MealySolver"
+    },
+    {
+      "name": "Orthemology.Frontier.MealyMeasure.Fixtures.gambler_solver_exact",
+      "module": "MealySolverFixtures"
+    },
+    {
+      "name": "Orthemology.Frontier.MealyMeasure.Fixtures.gambler_atomic_mass_two_thirds",
+      "module": "MealySolverFixtures"
+    },
+    {
+      "name": "Orthemology.Frontier.MealyMeasure.Fixtures.gambler_defect_one_third",
+      "module": "MealySolverFixtures"
+    }
+  ],
+  "pins": {
+    "lean_version": "4.19.0",
+    "lean_binary_sha256": "92c3d35b5bfaa5e0fea413a775d504cf46cd95e1345df61c2274f76779e7e023",
+    "packages": [
+      {
+        "name": "mathlib",
+        "revision": "c44e0c8ee63ca166450922a373c7409c5d26b00b"
+      },
+      {
+        "name": "plausible",
+        "revision": "77e08eddc486491d7b9e470926b3dbe50319451a"
+      },
+      {
+        "name": "LeanSearchClient",
+        "revision": "25078369972d295301f5a1e53c3e5850cf6d9d4c"
+      },
+      {
+        "name": "importGraph",
+        "revision": "e6a9f0f5ee3ccf7443a0070f92b62f8db12ae82b"
+      },
+      {
+        "name": "proofwidgets",
+        "revision": "c4919189477c3221e6a204008998b0d724f49904"
+      },
+      {
+        "name": "aesop",
+        "revision": "5d50b08dedd7d69b3d9b3176e0d58a23af228884"
+      },
+      {
+        "name": "Qq",
+        "revision": "fa4f7f15d97591a9cf3aa7724ba371c7fc6dda02"
+      },
+      {
+        "name": "batteries",
+        "revision": "f5d04a9c4973d401c8c92500711518f7c656f034"
+      },
+      {
+        "name": "Cli",
+        "revision": "02dbd02bc00ec4916e99b04b2245b30200e200d0"
+      }
+    ]
+  },
+  "official_imports": [
+    {
+      "module": "Mathlib.Analysis.SpecificLimits.Basic",
+      "repository": "mathlib",
+      "source": "Mathlib/Analysis/SpecificLimits/Basic.lean",
+      "sha256": "cbf9b6b47e6ee6b2962fb2f16ba49b7e005e9a93c0adc1244cc770c34f527315"
+    },
+    {
+      "module": "Mathlib.Data.Finset.Sigma",
+      "repository": "mathlib",
+      "source": "Mathlib/Data/Finset/Sigma.lean",
+      "sha256": "fff03be1b7cc1debfb34cb668f7c0a3d92f7f6031896a3eff65b7e33ec16da8e"
+    },
+    {
+      "module": "Mathlib.Data.Fintype.EquivFin",
+      "repository": "mathlib",
+      "source": "Mathlib/Data/Fintype/EquivFin.lean",
+      "sha256": "e0842e47c8ba3cc9ef6b9fdd78432beac04b613851220973fca283dab71448e9"
+    },
+    {
+      "module": "Mathlib.Data.List.OfFn",
+      "repository": "mathlib",
+      "source": "Mathlib/Data/List/OfFn.lean",
+      "sha256": "7ed0d919af0879458511e8ca33f62bc73952a7c520371467514dc4669fd68d32"
+    },
+    {
+      "module": "Mathlib.LinearAlgebra.Determinant",
+      "repository": "mathlib",
+      "source": "Mathlib/LinearAlgebra/Determinant.lean",
+      "sha256": "3514c23630a2e872c8bd403d2ffa84f4170aeb870497627475e8573c6feae4b9"
+    },
+    {
+      "module": "Mathlib.LinearAlgebra.FiniteDimensional.Basic",
+      "repository": "mathlib",
+      "source": "Mathlib/LinearAlgebra/FiniteDimensional/Basic.lean",
+      "sha256": "0d51bff219c4945969805570370bdfc14ada71990c1f65b89a8b6a19ff4f01cc"
+    },
+    {
+      "module": "Mathlib.MeasureTheory.Measure.Map",
+      "repository": "mathlib",
+      "source": "Mathlib/MeasureTheory/Measure/Map.lean",
+      "sha256": "3c7fb458eece85551c9b7bd28955a517e14f4bee77934b8b001440a57b6f7f71"
+    },
+    {
+      "module": "Mathlib.MeasureTheory.Measure.Restrict",
+      "repository": "mathlib",
+      "source": "Mathlib/MeasureTheory/Measure/Restrict.lean",
+      "sha256": "0c0c2108a28516ae3a85dfbfc2e5d7a3afd26dcc113aa8b19c2a79adfe12e56e"
+    },
+    {
+      "module": "Mathlib.MeasureTheory.Measure.Typeclasses.Probability",
+      "repository": "mathlib",
+      "source": "Mathlib/MeasureTheory/Measure/Typeclasses/Probability.lean",
+      "sha256": "419ec9a5612f378b8603f4adb8a0941485481c1d754e95afb8d0a4ddd35f8883"
+    },
+    {
+      "module": "Mathlib.MeasureTheory.Measure.Typeclasses.SFinite",
+      "repository": "mathlib",
+      "source": "Mathlib/MeasureTheory/Measure/Typeclasses/SFinite.lean",
+      "sha256": "b9fb829526454d1f9526ed9bb21de6d661fdb4a01a9847eb6669bedf68f1f784"
+    },
+    {
+      "module": "Mathlib.Probability.ProbabilityMassFunction.Constructions",
+      "repository": "mathlib",
+      "source": "Mathlib/Probability/ProbabilityMassFunction/Constructions.lean",
+      "sha256": "8e50bff3cd3b46107d612eed21e1648752a86f9c373d4b6b0fe10e0e22a43973"
+    },
+    {
+      "module": "Mathlib.Probability.ProductMeasure",
+      "repository": "mathlib",
+      "source": "Mathlib/Probability/ProductMeasure.lean",
+      "sha256": "f8af06e87e2e28916f0fa8a455f792ded4b85a22e1dea5e1c6f9cac1d31b9830"
+    },
+    {
+      "module": "Mathlib.SetTheory.Cardinal.Finite",
+      "repository": "mathlib",
+      "source": "Mathlib/SetTheory/Cardinal/Finite.lean",
+      "sha256": "57a20638e916d020a1f6eda323560bc56b338aa4fb5b7f4d8236202ee195c471"
+    },
+    {
+      "module": "Mathlib.Tactic",
+      "repository": "mathlib",
+      "source": "Mathlib/Tactic.lean",
+      "sha256": "f20038eba7bba63f07a2f854496101226df407e20414e6b8ebf94b14f95e831b"
+    }
+  ],
+  "driver": {
+    "source_id": "src-866c6ff6e74a67f2-279d28ea9829b80d",
+    "lean_argument": "EXECUTABLE"
+  },
+  "controls": "ORIGINAL_DRIVER_REQUIRED",
+  "classification": "CURRENT_EVIDENCE"
+}

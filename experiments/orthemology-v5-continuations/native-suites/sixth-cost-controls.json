@@ -1,0 +1,50 @@
+{
+  "schema": "orthemology-native-controls-v1",
+  "id": "sixth-cost-controls",
+  "steps": [
+    {
+      "id": "affine-cutoff",
+      "files": [
+        {
+          "path": "finite_controls.py",
+          "source_id": "src-8f44852c1c59cfd3-72964ff0a28edb3b"
+        }
+      ],
+      "entry": "finite_controls.py",
+      "args": [],
+      "outputs": [
+        "finite_controls.json"
+      ]
+    },
+    {
+      "id": "duration-product",
+      "files": [
+        {
+          "path": "finite_controls.py",
+          "source_id": "src-930c8d704c92e7d0-72964ff0a28edb3b"
+        }
+      ],
+      "entry": "finite_controls.py",
+      "args": [],
+      "outputs": [
+        "finite_controls.json"
+      ]
+    },
+    {
+      "id": "stopped-union",
+      "files": [
+        {
+          "path": "independent_stopped_union_controls.py",
+          "source_id": "src-3d5b240940fec360-cba8faecf8dd18ed"
+        }
+      ],
+      "entry": "independent_stopped_union_controls.py",
+      "args": [
+        "RESULT.json"
+      ],
+      "outputs": [
+        "RESULT.json"
+      ]
+    }
+  ]
+}

@@ -1,0 +1,510 @@
+{
+  "status": "FRESH_KERNEL_COMPONENTS",
+  "exit_code": 0,
+  "kernel_verified": true,
+  "suite_id": "866c6ff6e74a-operational-machine",
+  "suite_sha256": "ec15145da7f11586a6ed91098322c09a166be9c958060048bdb64396735d2819",
+  "source_hashes": {
+    "CodecVarint": "ed635e3754d8c70655cc8db31392eff9c979c9015f771b50de09b7231f54c3a6",
+    "CodecNumeric": "2716ca254d871a96fa149b3809a55a809d13e2c23a3fd67a63d19a240b79de01",
+    "CodecPrimrec": "08f5ef87a655e07fda4c6fd81330789541a18cf70ef31d0bd55ea082701ec9c9",
+    "UniformComputabilityNumeric": "31864c8129fab9ef98cc377ef647f9cee8323a2319a3756a1504ce2e8ebe8f0c",
+    "P02A2.ObserverCore": "e032088073d2fd667f568de952afba3f2b84aa500d4303ff37268e125fd363e5",
+    "CodecExpr": "5682f0b6f6c94c7c261e096f0a78035c3835c25c32aea50973a861a85af896c3",
+    "CodecStmt": "136772eff0be842ab0007874f84860141662876fcc11a4d02bdb6117004d2d08",
+    "LoopRenaming": "3fa0d92a221427c1ffdde94cbb34374952112e7a5d6e50e26778ac7aefbdbe89",
+    "LoopPrimrec": "f01b305287f3ae1d977ee72e62e9ea1ab4068358a324933b38572f1c66f02998",
+    "PRProgram": "9c66d134902dd8b5d3ee8b9b3ceb30e20daebc5b6a714489b8d95f09c9abce9f",
+    "PRComposition": "8549db02bf449e14c0d5d6520380a4f2bdae040cef77f11a573ac31ea08f940d",
+    "PRRecursion": "7a577b8a7c506feb4e5243a577fd09386b2d208ecc8221b8d69a1990b50cb63a",
+    "PRHeadRecursion": "6a0037a55a1739be1365f08fcd839c8be9de58a19f85e739e6890faa09db9b94",
+    "PRDerivation": "3141c21d177da58b90fbb2c268b6a9b4ef334785f155c0668cff77fbad37ce86",
+    "PRCoverage": "22b2f657fd787eef93957975e38b184d201648949ccdd875e7ae12432279e4e3",
+    "PRSpecialize": "beffce2a55f2f2ffcfbd71ef073e72d5fb022273e292798e18ea9b4a58b5a980",
+    "CodecProgram": "dc6594471accf19077201c1c33dd70e80f7c374c31316fbd478eed62245ef1ae",
+    "UniformComputabilityMachine": "4f137dd91e8d56c084dd0a664f182b4fe3f09356eef1fa1fd08102c7e514df73",
+    "UniformComputabilityControls": "d851d7c49464f06e0f4a13edea2d51b54e0e00af95a4f410c3c56f3a9ab1a47d"
+  },
+  "post_source_hashes": {
+    "CodecVarint": "ed635e3754d8c70655cc8db31392eff9c979c9015f771b50de09b7231f54c3a6",
+    "CodecNumeric": "2716ca254d871a96fa149b3809a55a809d13e2c23a3fd67a63d19a240b79de01",
+    "CodecPrimrec": "08f5ef87a655e07fda4c6fd81330789541a18cf70ef31d0bd55ea082701ec9c9",
+    "UniformComputabilityNumeric": "31864c8129fab9ef98cc377ef647f9cee8323a2319a3756a1504ce2e8ebe8f0c",
+    "P02A2.ObserverCore": "e032088073d2fd667f568de952afba3f2b84aa500d4303ff37268e125fd363e5",
+    "CodecExpr": "5682f0b6f6c94c7c261e096f0a78035c3835c25c32aea50973a861a85af896c3",
+    "CodecStmt": "136772eff0be842ab0007874f84860141662876fcc11a4d02bdb6117004d2d08",
+    "LoopRenaming": "3fa0d92a221427c1ffdde94cbb34374952112e7a5d6e50e26778ac7aefbdbe89",
+    "LoopPrimrec": "f01b305287f3ae1d977ee72e62e9ea1ab4068358a324933b38572f1c66f02998",
+    "PRProgram": "9c66d134902dd8b5d3ee8b9b3ceb30e20daebc5b6a714489b8d95f09c9abce9f",
+    "PRComposition": "8549db02bf449e14c0d5d6520380a4f2bdae040cef77f11a573ac31ea08f940d",
+    "PRRecursion": "7a577b8a7c506feb4e5243a577fd09386b2d208ecc8221b8d69a1990b50cb63a",
+    "PRHeadRecursion": "6a0037a55a1739be1365f08fcd839c8be9de58a19f85e739e6890faa09db9b94",
+    "PRDerivation": "3141c21d177da58b90fbb2c268b6a9b4ef334785f155c0668cff77fbad37ce86",
+    "PRCoverage": "22b2f657fd787eef93957975e38b184d201648949ccdd875e7ae12432279e4e3",
+    "PRSpecialize": "beffce2a55f2f2ffcfbd71ef073e72d5fb022273e292798e18ea9b4a58b5a980",
+    "CodecProgram": "dc6594471accf19077201c1c33dd70e80f7c374c31316fbd478eed62245ef1ae",
+    "UniformComputabilityMachine": "4f137dd91e8d56c084dd0a664f182b4fe3f09356eef1fa1fd08102c7e514df73",
+    "UniformComputabilityControls": "d851d7c49464f06e0f4a13edea2d51b54e0e00af95a4f410c3c56f3a9ab1a47d"
+  },
+  "compiler_sha256": "92c3d35b5bfaa5e0fea413a775d504cf46cd95e1345df61c2274f76779e7e023",
+  "pins": {
+    "lean_version": "4.19.0",
+    "lean_binary_sha256": "92c3d35b5bfaa5e0fea413a775d504cf46cd95e1345df61c2274f76779e7e023",
+    "packages": [
+      {
+        "name": "mathlib",
+        "revision": "c44e0c8ee63ca166450922a373c7409c5d26b00b"
+      },
+      {
+        "name": "plausible",
+        "revision": "77e08eddc486491d7b9e470926b3dbe50319451a"
+      },
+      {
+        "name": "LeanSearchClient",
+        "revision": "25078369972d295301f5a1e53c3e5850cf6d9d4c"
+      },
+      {
+        "name": "importGraph",
+        "revision": "e6a9f0f5ee3ccf7443a0070f92b62f8db12ae82b"
+      },
+      {
+        "name": "proofwidgets",
+        "revision": "c4919189477c3221e6a204008998b0d724f49904"
+      },
+      {
+        "name": "aesop",
+        "revision": "5d50b08dedd7d69b3d9b3176e0d58a23af228884"
+      },
+      {
+        "name": "Qq",
+        "revision": "fa4f7f15d97591a9cf3aa7724ba371c7fc6dda02"
+      },
+      {
+        "name": "batteries",
+        "revision": "f5d04a9c4973d401c8c92500711518f7c656f034"
+      },
+      {
+        "name": "Cli",
+        "revision": "02dbd02bc00ec4916e99b04b2245b30200e200d0"
+      }
+    ]
+  },
+  "modules": [
+    {
+      "module": "CodecVarint",
+      "source_sha256": "ed635e3754d8c70655cc8db31392eff9c979c9015f771b50de09b7231f54c3a6",
+      "object_sha256": "11617c6772236ec892e80bdc0b1e83ce071956c81905b9ae1933c11d4dc41af6",
+      "transitive_source_fingerprint": "c1ddc3ea3791547c992d41d6b5b93fc35faf056e8bff59dde472f2a59c1a0b7a",
+      "status": "FRESH_COMPILE",
+      "exit_code": 0
+    },
+    {
+      "module": "CodecNumeric",
+      "source_sha256": "2716ca254d871a96fa149b3809a55a809d13e2c23a3fd67a63d19a240b79de01",
+      "object_sha256": "03dc35e5a783c2c5ac69b0b938f0681b8045877c8716d019984cb74018754024",
+      "transitive_source_fingerprint": "d34e44b677a7a6aedc62c6b3963dab9804b71794d4cdb676f2b70f920f4d04c2",
+      "status": "FRESH_COMPILE",
+      "exit_code": 0
+    },
+    {
+      "module": "CodecPrimrec",
+      "source_sha256": "08f5ef87a655e07fda4c6fd81330789541a18cf70ef31d0bd55ea082701ec9c9",
+      "object_sha256": "b9baeaf7d9a6f04e836192a3c4f347a55475f1a46c722dc3b4d4163d116bd833",
+      "transitive_source_fingerprint": "8732cad7306c4443e48db5cd6cd57971a0fe8c25b3c6c24bc546f93adbc09b4b",
+      "status": "FRESH_COMPILE",
+      "exit_code": 0
+    },
+    {
+      "module": "UniformComputabilityNumeric",
+      "source_sha256": "31864c8129fab9ef98cc377ef647f9cee8323a2319a3756a1504ce2e8ebe8f0c",
+      "object_sha256": "9cdc544a6f4df5847ea804986b9e6947ac70938e1353116f75b2eca87284d156",
+      "transitive_source_fingerprint": "6393848202c7b43b9b1cfc5a9afac3dd02f7a869e54bdfbf1efbb3581f37a95c",
+      "status": "FRESH_COMPILE",
+      "exit_code": 0
+    },
+    {
+      "module": "P02A2.ObserverCore",
+      "source_sha256": "e032088073d2fd667f568de952afba3f2b84aa500d4303ff37268e125fd363e5",
+      "object_sha256": "167ff29621e3d1e034713d43e3e48fd5f71830a1931cfcf0cca6e0920c4d3170",
+      "transitive_source_fingerprint": "02325b8d037b8bc24bae5d5c35f594b0f0510752d0efc7da8fc8dd525626ac57",
+      "status": "FRESH_COMPILE",
+      "exit_code": 0
+    },
+    {
+      "module": "CodecExpr",
+      "source_sha256": "5682f0b6f6c94c7c261e096f0a78035c3835c25c32aea50973a861a85af896c3",
+      "object_sha256": "b3f65a8629802eeef77471c033ac4174506c726197e8e7f244046cde5d8f348e",
+      "transitive_source_fingerprint": "3ef436acfee86a95151de01af7f8669afe1013a9bccfa78d28204eec6ebb79a7",
+      "status": "FRESH_COMPILE",
+      "exit_code": 0
+    },
+    {
+      "module": "CodecStmt",
+      "source_sha256": "136772eff0be842ab0007874f84860141662876fcc11a4d02bdb6117004d2d08",
+      "object_sha256": "05c16997c4f1a6f77f6db67b5cadbc4d64e8a7a694abd84fc410590c33c63215",
+      "transitive_source_fingerprint": "06ac1c586292d378138c57dcbe1030f3c2f7f29741472629ed0d664a07f785f9",
+      "status": "FRESH_COMPILE",
+      "exit_code": 0
+    },
+    {
+      "module": "LoopRenaming",
+      "source_sha256": "3fa0d92a221427c1ffdde94cbb34374952112e7a5d6e50e26778ac7aefbdbe89",
+      "object_sha256": "e03847ec603e5538ed2864ec38e828d6059d6849a47a1736ade4fd0e8991e997",
+      "transitive_source_fingerprint": "90a97adb1faa09a721bd1f681513fd31ae5202f2bff16ca20226092c452225ad",
+      "status": "FRESH_COMPILE",
+      "exit_code": 0
+    },
+    {
+      "module": "LoopPrimrec",
+      "source_sha256": "f01b305287f3ae1d977ee72e62e9ea1ab4068358a324933b38572f1c66f02998",
+      "object_sha256": "9afc76fac8381466c35132938de5fd9ce5b94b0076c10bb97c79b604100ee710",
+      "transitive_source_fingerprint": "0339fb08d3df15f9826789f471ad636fc4868fa661bdb88832b6d4cc405cd60d",
+      "status": "FRESH_COMPILE",
+      "exit_code": 0
+    },
+    {
+      "module": "PRProgram",
+      "source_sha256": "9c66d134902dd8b5d3ee8b9b3ceb30e20daebc5b6a714489b8d95f09c9abce9f",
+      "object_sha256": "5dbb3141ca25758cf56e47752c0d2433bfd4e8099a72e28765b3fb4fd4f4fd7f",
+      "transitive_source_fingerprint": "c445dbfad8b1d7d78739220dbba6852bcd611e1bff100d1d9077aebe5196e20e",
+      "status": "FRESH_COMPILE",
+      "exit_code": 0
+    },
+    {
+      "module": "PRComposition",
+      "source_sha256": "8549db02bf449e14c0d5d6520380a4f2bdae040cef77f11a573ac31ea08f940d",
+      "object_sha256": "f69e256581595883b6e7f6ef9dc2129e09363dfa0bb93ff289d2637f30b1427b",
+      "transitive_source_fingerprint": "f673bb5428194f4b5bf5747911d0bbb50299a48f7cda340adb97741f1958d0a0",
+      "status": "FRESH_COMPILE",
+      "exit_code": 0
+    },
+    {
+      "module": "PRRecursion",
+      "source_sha256": "7a577b8a7c506feb4e5243a577fd09386b2d208ecc8221b8d69a1990b50cb63a",
+      "object_sha256": "bb9f4f175f7863745ce11a5023640affc72af717e38b31403afbda38def55291",
+      "transitive_source_fingerprint": "7248ac8add77960dbdc7c6635b726c08ae909989e060adf724e8c9c444f6b532",
+      "status": "FRESH_COMPILE",
+      "exit_code": 0
+    },
+    {
+      "module": "PRHeadRecursion",
+      "source_sha256": "6a0037a55a1739be1365f08fcd839c8be9de58a19f85e739e6890faa09db9b94",
+      "object_sha256": "8a7273f5a59f79f58b66047ce06fc7384c61545224c8bedb152e0c48326b2cff",
+      "transitive_source_fingerprint": "96591c1b83644e40f24243c8d6b13b655d4447db903afb91f3a8ffbe7ffeea3e",
+      "status": "FRESH_COMPILE",
+      "exit_code": 0
+    },
+    {
+      "module": "PRDerivation",
+      "source_sha256": "3141c21d177da58b90fbb2c268b6a9b4ef334785f155c0668cff77fbad37ce86",
+      "object_sha256": "f0aa3a4a95f1d74c5b11d2dfde0c5a24b8bd2aed75161fda75c4e488aa96e949",
+      "transitive_source_fingerprint": "727193695e7c56da9b0bacb917a7409ab632658b8d763f8e223c9f8730f21fba",
+      "status": "FRESH_COMPILE",
+      "exit_code": 0
+    },
+    {
+      "module": "PRCoverage",
+      "source_sha256": "22b2f657fd787eef93957975e38b184d201648949ccdd875e7ae12432279e4e3",
+      "object_sha256": "a7978fca16c45528085858de4e51403bd62eb607675f15f4e57e0cb99641801c",
+      "transitive_source_fingerprint": "48a9d509cd411d19a0353523025e8a74eded9a6ad0c6b1aa77ffe872609c32ce",
+      "status": "FRESH_COMPILE",
+      "exit_code": 0
+    },
+    {
+      "module": "PRSpecialize",
+      "source_sha256": "beffce2a55f2f2ffcfbd71ef073e72d5fb022273e292798e18ea9b4a58b5a980",
+      "object_sha256": "9c449d262d3fe977915f987b34836d8b66062ed836c24ddb55fcb3de45e8f321",
+      "transitive_source_fingerprint": "0db9ed53437d9e882a1f356af6616b9fc846ab4b4a00c926ff8f3f318ad2b647",
+      "status": "FRESH_COMPILE",
+      "exit_code": 0
+    },
+    {
+      "module": "CodecProgram",
+      "source_sha256": "dc6594471accf19077201c1c33dd70e80f7c374c31316fbd478eed62245ef1ae",
+      "object_sha256": "7a2d6f14507280d0e5d18813ca6a49992cd097d26d3f869abbc20f5226722a5b",
+      "transitive_source_fingerprint": "7fae8c70f177d1ffd729f1dbbfcf8b4540c93d8c17aa84d3e39debdc2fb2bdca",
+      "status": "FRESH_COMPILE",
+      "exit_code": 0
+    },
+    {
+      "module": "UniformComputabilityMachine",
+      "source_sha256": "4f137dd91e8d56c084dd0a664f182b4fe3f09356eef1fa1fd08102c7e514df73",
+      "object_sha256": "dd327f837f0fd61613ed359454720dcd5f40b2e3d255516912f1993c513051b3",
+      "transitive_source_fingerprint": "9644770d2b4085d5f228891afde8cdf53bd162486ca6de65f3af256c60ba4e4a",
+      "status": "FRESH_COMPILE",
+      "exit_code": 0
+    },
+    {
+      "module": "UniformComputabilityControls",
+      "source_sha256": "d851d7c49464f06e0f4a13edea2d51b54e0e00af95a4f410c3c56f3a9ab1a47d",
+      "object_sha256": "087f0db2e4994ec7a1724f676cbdc305b5236c01015c1a3702b0cd507198a6c1",
+      "transitive_source_fingerprint": "51f02f072970b88d787e4f56a58c79c77fa83d052fd26be68287bcb93a0a54f1",
+      "status": "FRESH_COMPILE",
+      "exit_code": 0
+    }
+  ],
+  "readbacks": {
+    "P02.Codec.UniformComputability.bytesTableStep_primrec": {
+      "type_sha256": "48124b47d5087fe79777e708751758dea8afd35f4aa006bb7615d9681d3632c5",
+      "axioms": [
+        "Classical.choice",
+        "Quot.sound",
+        "propext"
+      ]
+    },
+    "P02.Codec.UniformComputability.bytesTableStep_table": {
+      "type_sha256": "893d8f75fa68331aef47d72ab7814ebe92fff786a93e8f66d6a22c0307a48126",
+      "axioms": [
+        "Quot.sound",
+        "propext"
+      ]
+    },
+    "P02.Codec.UniformComputability.toBytes_primrec": {
+      "type_sha256": "05d8a456efb5318f087afe93fe3ccebc3f0f597e0bac2e463f0cba9347d34058",
+      "axioms": [
+        "Classical.choice",
+        "Quot.sound",
+        "propext"
+      ]
+    },
+    "P02.Codec.UniformComputability.decodeNumeric_primrec": {
+      "type_sha256": "909b93ca567201762780f5a0540a6ce6ffd214e3e467ecf0c3562b2d3fd31e1e",
+      "axioms": [
+        "Classical.choice",
+        "Quot.sound",
+        "propext"
+      ]
+    },
+    "P02.Codec.UniformComputability.decodeNumeric_computable": {
+      "type_sha256": "f5f8c74b5b8aead17ec05eea43625304e799d3d482d1f444a50d05f4bea5e647",
+      "axioms": [
+        "Classical.choice",
+        "Quot.sound",
+        "propext"
+      ]
+    },
+    "P02.Codec.UniformComputability.readRegs_write": {
+      "type_sha256": "d7514d5c21226ba6b45ebf8e817de5c2aaca614bd04da9a1f7c50e33863c52b6",
+      "axioms": [
+        "Quot.sound",
+        "propext"
+      ]
+    },
+    "P02.Codec.UniformComputability.evalRegs_correct": {
+      "type_sha256": "accb677b68aaf6d7d701a2ff820d5fbac30021d57f5658a2020864b5e6839516",
+      "axioms": [
+        "propext"
+      ]
+    },
+    "P02.Codec.UniformComputability.repeatFrom_succ_last": {
+      "type_sha256": "6a7a0a4d73c54d3e053b848990fda4e7d83059f93fca74aa73b8d5ad23a579c8",
+      "axioms": [
+        "Quot.sound",
+        "propext"
+      ]
+    },
+    "P02.Codec.UniformComputability.repeatFrom_runLoop": {
+      "type_sha256": "e83fce721bee674fe0ec1d39453f14a6c34f29680b2c6d20e2a4740d7e240c80",
+      "axioms": [
+        "Quot.sound",
+        "propext"
+      ]
+    },
+    "P02.Codec.UniformComputability.repeatFrom_read": {
+      "type_sha256": "0dd1341ba93eacfa46350727f4649568ce058bab2b84faee07f48a80557a1b27",
+      "axioms": [
+        "Quot.sound",
+        "propext"
+      ]
+    },
+    "P02.Codec.UniformComputability.execRegs_correct": {
+      "type_sha256": "b0f19e73d2af51b0ea21ef4e2b0059d66fbbbd8c7efe5a9a4b476a4d2028ed52",
+      "axioms": [
+        "Quot.sound",
+        "propext"
+      ]
+    },
+    "P02.Codec.UniformComputability.runFuel_complete": {
+      "type_sha256": "a6033921b9f0dd4c2dea7ec77fed97de034ae28ce4f70e0e262575fb060a3681",
+      "axioms": [
+        "propext"
+      ]
+    },
+    "P02.Codec.UniformComputability.step_preserves": {
+      "type_sha256": "7e907eebe9a1fcc01b18512f3f3a08c6a971ad96388be41cd7a687e6ef127590",
+      "axioms": [
+        "Quot.sound",
+        "propext"
+      ]
+    },
+    "P02.Codec.UniformComputability.iterate_preserves": {
+      "type_sha256": "dc67fa44b5d8fce1d727e02b359d508a297816f0a01846f1303f806d6abc119a",
+      "axioms": [
+        "Quot.sound",
+        "propext"
+      ]
+    },
+    "P02.Codec.UniformComputability.runFuel_sound": {
+      "type_sha256": "627369be3ab6ddc08cfb131644ff00b7a2eec828c19532cd6f4bbd899796dae7",
+      "axioms": [
+        "Quot.sound",
+        "propext"
+      ]
+    },
+    "P02.Codec.UniformComputability.readRegs_binary": {
+      "type_sha256": "eb0483e53c3a11f818268e103fc15612f299e3fa14cff03283f16a36bb6b8ec9",
+      "axioms": [
+        "Quot.sound",
+        "propext"
+      ]
+    },
+    "P02.Codec.UniformComputability.evaluateIndexFuel_sound": {
+      "type_sha256": "12dfa79b6443b2892d425ef08114290e20409f3bbc8f6a1b7744ec551ef82175",
+      "axioms": [
+        "Quot.sound",
+        "propext"
+      ]
+    },
+    "P02.Codec.UniformComputability.evaluateIndexFuel_complete": {
+      "type_sha256": "87d71f485cd5f6574c851af337dbef2d8a270df3b63ea13b1fa0bf2e8032acb0",
+      "axioms": [
+        "Quot.sound",
+        "propext"
+      ]
+    },
+    "P02.Codec.UniformComputability.runFuel_mono": {
+      "type_sha256": "1be344f155cd69f964b2fa0f5e8535a4506b9b26106df3d52e55e8149f699494",
+      "axioms": [
+        "propext"
+      ]
+    },
+    "P02.Codec.UniformComputability.evaluateIndexFuel_mono": {
+      "type_sha256": "53fba24f4d8772c4377c749d317de920b5418be91a6e6fe1fd6cefa0f2d3b111",
+      "axioms": [
+        "Quot.sound",
+        "propext"
+      ]
+    },
+    "P02.Codec.UniformComputability.evaluateIndexFuel_eventually": {
+      "type_sha256": "0cf30a9207dbee0f8d07f2d81abc16e6b9de4054460be9c9ec696115a0465dcc",
+      "axioms": [
+        "Quot.sound",
+        "propext"
+      ]
+    },
+    "P02.Codec.UniformComputability.evaluateIndexSearch_exact": {
+      "type_sha256": "8cdcf9e07469b14242726240422480439792610cf1dbb88c1db92f7b9d2a7cdd",
+      "axioms": [
+        "Quot.sound",
+        "propext"
+      ]
+    },
+    "P02.Codec.UniformComputability.evaluateIndex_computable_of_fuel": {
+      "type_sha256": "77703ad4b0fda48a63b9a4d17171b4af1bc7762b77aa173237143de8d1591c6a",
+      "axioms": [
+        "Classical.choice",
+        "Quot.sound",
+        "propext"
+      ]
+    },
+    "P02.Codec.UniformComputability.evaluateIndexFuel_invalid": {
+      "type_sha256": "1e3b50934cd54951ae2bad14ea52a1a659372d125b4cb09c2e1a1de30ecbb459",
+      "axioms": [
+        "Quot.sound",
+        "propext"
+      ]
+    },
+    "P02.Codec.UniformComputability.evaluateIndexFuel_wrong_arity": {
+      "type_sha256": "6170447504246d6171ac2813a41d9ad6dec7ddd9a53ba3aa064b2d09e28cb0bf",
+      "axioms": [
+        "Quot.sound",
+        "propext"
+      ]
+    },
+    "P02.Codec.UniformComputability.evaluateIndexFuel_programIndex": {
+      "type_sha256": "3b1aad42d4dd3687d4e554fbb2dbaf18367c2518d4e5081bc6582ad107b45a2e",
+      "axioms": [
+        "Classical.choice",
+        "Quot.sound",
+        "propext"
+      ]
+    },
+    "P02.Codec.UniformComputability.exhausted_one": {
+      "type_sha256": "4d118b10aa20f97cbf3dc5adedf7cb6fa65c2fcbb2e1e06209f400a541666582",
+      "axioms": [
+        "Classical.choice",
+        "Quot.sound",
+        "propext"
+      ]
+    },
+    "P02.Codec.UniformComputability.captured_count_control": {
+      "type_sha256": "507003c459727cfd8a3b430c82768b7e0bd8f8ee2976261d5bae2827e2e2b55c",
+      "axioms": [
+        "Classical.choice",
+        "Quot.sound",
+        "propext"
+      ]
+    },
+    "P02.Codec.UniformComputability.overwritten_index_control": {
+      "type_sha256": "349b924f45eeaed9b57007554d6c2a982b1036503bc7b4b23e861734b97d00de",
+      "axioms": [
+        "Classical.choice",
+        "Quot.sound",
+        "propext"
+      ]
+    },
+    "P02.Codec.UniformComputability.arithmetic_control": {
+      "type_sha256": "8e12c0f1e7fb8a6bfe9abdb334c5817daf5bd0dfb59dfcb6bccea909c60687a3",
+      "axioms": [
+        "Classical.choice",
+        "Quot.sound",
+        "propext"
+      ]
+    },
+    "P02.Codec.UniformComputability.branch_zero_control": {
+      "type_sha256": "70165eedc4bc832478ae10d95d4b8097bc35bbb080ddaaf1b10bdad1709dd923",
+      "axioms": [
+        "Classical.choice",
+        "Quot.sound",
+        "propext"
+      ]
+    },
+    "P02.Codec.UniformComputability.branch_nonzero_control": {
+      "type_sha256": "c71b3becd3a79f921191bf0d3e1f104270186da7df94b4fd8d4b2c72160b4bdc",
+      "axioms": [
+        "Classical.choice",
+        "Quot.sound",
+        "propext"
+      ]
+    },
+    "P02.Codec.UniformComputability.zero_loop_control": {
+      "type_sha256": "7d1043b7d23b1511aea5cd4501a24f0983c4bc9c3f5d5c4c0c1febeb142d68df",
+      "axioms": [
+        "Classical.choice",
+        "Quot.sound",
+        "propext"
+      ]
+    },
+    "P02.Codec.UniformComputability.invalid_zero_control": {
+      "type_sha256": "2c7d473bf7d9f4081d6ca66a9db19a3f2969123dcebeeaa0059bc637d6b8dd24",
+      "axioms": [
+        "Quot.sound",
+        "propext"
+      ]
+    },
+    "P02.Codec.UniformComputability.wrong_arity_control": {
+      "type_sha256": "252fb63d71eb3537c868a0008fbac1091169bcb3230a1b8dfaa6528387e77e12",
+      "axioms": [
+        "Classical.choice",
+        "Quot.sound",
+        "propext"
+      ]
+    }
+  },
+  "original_controls": "NOT_RUN",
+  "original_receipt_sha256": "9a40a5eee0371a197669b117410ad0c3ab2c7a10a8366d4c2e4a4621dfaa924e",
+  "original_driver_sha256": "0666003f5081aca1efd6570a72da06d735b454d787dba97dd59fc1b42554bd14",
+  "execution_kind": "FRESH_CUSTOM_CLOSURE",
+  "finished_utc": null,
+  "scope": "Source-bound custom closure and selected declaration readbacks. Types are represented by hashes of the exact printed types; complete logs remain private. Official caches are trusted. This does not establish ordinary proof, runtime completeness, empirical or normative warrant, novelty, external human review or merged adoption."
+}

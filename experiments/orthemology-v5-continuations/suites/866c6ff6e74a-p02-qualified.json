@@ -1,0 +1,1790 @@
+{
+  "id": "866c6ff6e74a-p02-qualified",
+  "origin": "866c6ff6e74a67f2bc452b49a0ada05311c0c2601585ea166404719172bd8086",
+  "descriptor_source_id": "src-866c6ff6e74a67f2-47b7b457c989b63a",
+  "modules": [
+    {
+      "module": "P02A2.ObserverCore",
+      "source_id": "src-866c6ff6e74a67f2-5d2114e6ad1f313b",
+      "imports": [
+        "Mathlib"
+      ]
+    },
+    {
+      "module": "LoopRenaming",
+      "source_id": "src-866c6ff6e74a67f2-75145d91b531b0de",
+      "imports": [
+        "P02A2.ObserverCore"
+      ]
+    },
+    {
+      "module": "SurvivorCandidates",
+      "source_id": "src-866c6ff6e74a67f2-610d2fdd9951c52c",
+      "imports": [
+        "Mathlib"
+      ]
+    },
+    {
+      "module": "CandidateCompiler",
+      "source_id": "src-866c6ff6e74a67f2-c8c50e6771c582a6",
+      "imports": [
+        "LoopRenaming",
+        "SurvivorCandidates"
+      ]
+    },
+    {
+      "module": "P02A2.MeasureCore",
+      "source_id": "src-866c6ff6e74a67f2-072e7edee870ce15",
+      "imports": [
+        "Mathlib.MeasureTheory.Measure.Typeclasses.SFinite",
+        "Mathlib.MeasureTheory.Measure.Typeclasses.Probability",
+        "Mathlib.MeasureTheory.Measure.Map",
+        "Mathlib.MeasureTheory.Measure.Restrict",
+        "Mathlib.Tactic"
+      ]
+    },
+    {
+      "module": "Q8Measure",
+      "source_id": "src-866c6ff6e74a67f2-8965f4ec5250956a",
+      "imports": [
+        "P02A2.MeasureCore",
+        "Mathlib.Probability.ProductMeasure",
+        "Mathlib.Probability.ProbabilityMassFunction.Constructions",
+        "Mathlib.Analysis.SpecificLimits.Basic"
+      ]
+    },
+    {
+      "module": "InnovationMeasure",
+      "source_id": "src-866c6ff6e74a67f2-1a31d5dc4993dc78",
+      "imports": [
+        "Q8Measure",
+        "Mathlib.Data.Set.Finite.Lattice",
+        "Mathlib"
+      ]
+    },
+    {
+      "module": "SurvivorPrimrec",
+      "source_id": "src-866c6ff6e74a67f2-ab03d6c31b3155f4",
+      "imports": [
+        "SurvivorCandidates",
+        "Mathlib.Computability.Primrec"
+      ]
+    },
+    {
+      "module": "Q8Machine",
+      "source_id": "src-866c6ff6e74a67f2-f5822d3977eed985",
+      "imports": [
+        "Q8Measure"
+      ]
+    },
+    {
+      "module": "Q8Compiler",
+      "source_id": "src-866c6ff6e74a67f2-0b1ef169e7298ead",
+      "imports": [
+        "Q8Machine",
+        "P02A2.ObserverCore"
+      ]
+    },
+    {
+      "module": "Sigma2RowLaw",
+      "source_id": "src-866c6ff6e74a67f2-a28c9f8faa1967c1",
+      "imports": [
+        "InnovationMeasure",
+        "SurvivorPrimrec",
+        "Q8Compiler"
+      ]
+    },
+    {
+      "module": "LoopPrimrec",
+      "source_id": "src-866c6ff6e74a67f2-355eb88753d46f4c",
+      "imports": [
+        "LoopRenaming",
+        "Mathlib.Computability.Primrec"
+      ]
+    },
+    {
+      "module": "Sigma2SourceMatrix",
+      "source_id": "src-866c6ff6e74a67f2-602ea55623c187e5",
+      "imports": [
+        "Sigma2RowLaw",
+        "LoopPrimrec"
+      ]
+    },
+    {
+      "module": "CandidateSource",
+      "source_id": "src-866c6ff6e74a67f2-0ed2032384b3c9e9",
+      "imports": [
+        "CandidateCompiler",
+        "Sigma2SourceMatrix"
+      ]
+    },
+    {
+      "module": "CandidateWitnesses",
+      "source_id": "src-866c6ff6e74a67f2-942b85af89b45ae8",
+      "imports": [
+        "CandidateSource"
+      ]
+    },
+    {
+      "module": "LoopInliningWitnesses",
+      "source_id": "src-866c6ff6e74a67f2-a2c81b4806fd870b",
+      "imports": [
+        "LoopRenaming"
+      ]
+    },
+    {
+      "module": "P02.MeasureCore",
+      "source_id": "src-866c6ff6e74a67f2-951032fb43a2beeb",
+      "imports": [
+        "Mathlib"
+      ]
+    },
+    {
+      "module": "P02.T300ThreeBit",
+      "source_id": "src-866c6ff6e74a67f2-b702f5ea0d901ca5",
+      "imports": [
+        "Mathlib"
+      ]
+    },
+    {
+      "module": "P02",
+      "source_id": "src-866c6ff6e74a67f2-b3d88894ae47dd77",
+      "imports": [
+        "P02.MeasureCore",
+        "P02.T300ThreeBit"
+      ]
+    },
+    {
+      "module": "P02A2.Mixture",
+      "source_id": "src-866c6ff6e74a67f2-8b326730ef418526",
+      "imports": [
+        "P02A2.MeasureCore",
+        "Mathlib"
+      ]
+    },
+    {
+      "module": "P02A2.Refinement",
+      "source_id": "src-866c6ff6e74a67f2-66f0f6ab9c9f9bc8",
+      "imports": [
+        "P02A2.MeasureCore",
+        "Mathlib.MeasureTheory.Measure.MeasureSpace",
+        "Mathlib.Tactic"
+      ]
+    },
+    {
+      "module": "P02A2.FiniteLaw",
+      "source_id": "src-866c6ff6e74a67f2-84bc7e599045b84a",
+      "imports": [
+        "Mathlib"
+      ]
+    },
+    {
+      "module": "P02A2.AllNParity",
+      "source_id": "src-866c6ff6e74a67f2-04b262aedec34063",
+      "imports": [
+        "Mathlib"
+      ]
+    },
+    {
+      "module": "P02A2.Flow",
+      "source_id": "src-866c6ff6e74a67f2-d1da18640e64a632",
+      "imports": [
+        "Mathlib"
+      ]
+    },
+    {
+      "module": "P02A2.Fibres",
+      "source_id": "src-866c6ff6e74a67f2-ab7dd2d82c8f624f",
+      "imports": [
+        "P02A2.MeasureCore",
+        "Mathlib"
+      ]
+    },
+    {
+      "module": "P02A2.Observation",
+      "source_id": "src-866c6ff6e74a67f2-054e956c7ecab2a8",
+      "imports": [
+        "P02A2.Fibres",
+        "P02A2.Refinement",
+        "Mathlib"
+      ]
+    },
+    {
+      "module": "P02A2.Stationary",
+      "source_id": "src-866c6ff6e74a67f2-5000aeb3859bd770",
+      "imports": [
+        "Mathlib.Analysis.Convex.Combination",
+        "Mathlib.Topology.Sequences",
+        "Mathlib"
+      ]
+    },
+    {
+      "module": "P02A2.SimplexStationary",
+      "source_id": "src-866c6ff6e74a67f2-24adcd7fbd05b384",
+      "imports": [
+        "P02A2.Stationary",
+        "Mathlib"
+      ]
+    },
+    {
+      "module": "P02A2.ParityBridge",
+      "source_id": "src-866c6ff6e74a67f2-131fe10d0ef78dd7",
+      "imports": [
+        "P02A2.AllNParity",
+        "P02A2.FiniteLaw",
+        "Mathlib"
+      ]
+    },
+    {
+      "module": "P02A2.FiniteMeasureBridge",
+      "source_id": "src-866c6ff6e74a67f2-5f89690e70964f67",
+      "imports": [
+        "P02A2.FiniteLaw",
+        "P02A2.MeasureCore",
+        "Mathlib"
+      ]
+    },
+    {
+      "module": "P02A2",
+      "source_id": "src-866c6ff6e74a67f2-c0a4affc66317615",
+      "imports": [
+        "P02A2.MeasureCore",
+        "P02A2.Mixture",
+        "P02A2.Refinement",
+        "P02A2.FiniteLaw",
+        "P02A2.AllNParity",
+        "P02A2.Flow",
+        "P02A2.ObserverCore",
+        "P02A2.Fibres",
+        "P02A2.Observation",
+        "P02A2.Stationary",
+        "P02A2.SimplexStationary",
+        "P02A2.ParityBridge",
+        "P02A2.FiniteMeasureBridge"
+      ]
+    },
+    {
+      "module": "Q8Primrec",
+      "source_id": "src-866c6ff6e74a67f2-24a6238f9891c3c9",
+      "imports": [
+        "LoopPrimrec",
+        "Q8Compiler"
+      ]
+    },
+    {
+      "module": "Q8Witnesses",
+      "source_id": "src-866c6ff6e74a67f2-5e0120b931dcc9ed",
+      "imports": [
+        "Q8Compiler"
+      ]
+    },
+    {
+      "module": "Sigma2Compiled",
+      "source_id": "src-866c6ff6e74a67f2-0c78ad3b02034e3e",
+      "imports": [
+        "CandidateSource",
+        "Sigma2RowLaw"
+      ]
+    },
+    {
+      "module": "Sigma2Witnesses",
+      "source_id": "src-866c6ff6e74a67f2-661c6e1d29ff4244",
+      "imports": [
+        "Sigma2RowLaw"
+      ]
+    }
+  ],
+  "module_order": [
+    "P02A2.ObserverCore",
+    "LoopRenaming",
+    "SurvivorCandidates",
+    "CandidateCompiler",
+    "P02A2.MeasureCore",
+    "Q8Measure",
+    "InnovationMeasure",
+    "SurvivorPrimrec",
+    "Q8Machine",
+    "Q8Compiler",
+    "Sigma2RowLaw",
+    "LoopPrimrec",
+    "Sigma2SourceMatrix",
+    "CandidateSource",
+    "CandidateWitnesses",
+    "LoopInliningWitnesses",
+    "P02.MeasureCore",
+    "P02.T300ThreeBit",
+    "P02",
+    "P02A2.Mixture",
+    "P02A2.Refinement",
+    "P02A2.FiniteLaw",
+    "P02A2.AllNParity",
+    "P02A2.Flow",
+    "P02A2.Fibres",
+    "P02A2.Observation",
+    "P02A2.Stationary",
+    "P02A2.SimplexStationary",
+    "P02A2.ParityBridge",
+    "P02A2.FiniteMeasureBridge",
+    "P02A2",
+    "Q8Primrec",
+    "Q8Witnesses",
+    "Sigma2Compiled",
+    "Sigma2Witnesses"
+  ],
+  "targets": [
+    {
+      "name": "P02A2.AllNParity.solutions_length",
+      "module": "P02A2.AllNParity"
+    },
+    {
+      "name": "P02A2.AllNParity.free_fixed",
+      "module": "P02A2.AllNParity"
+    },
+    {
+      "name": "P02A2.AllNParity.free_replicate",
+      "module": "P02A2.AllNParity"
+    },
+    {
+      "name": "P02A2.AllNParity.complementary_count",
+      "module": "P02A2.AllNParity"
+    },
+    {
+      "name": "P02A2.AllNParity.proper_mask_count",
+      "module": "P02A2.AllNParity"
+    },
+    {
+      "name": "P02A2.AllNParity.full_parity_count",
+      "module": "P02A2.AllNParity"
+    },
+    {
+      "name": "P02A2.AllNParity.proper_mask_marginal",
+      "module": "P02A2.AllNParity"
+    },
+    {
+      "name": "P02A2.AllNParity.parity_marginals_equal",
+      "module": "P02A2.AllNParity"
+    },
+    {
+      "name": "P02A2.AllNParity.mixture_pair_00",
+      "module": "P02A2.AllNParity"
+    },
+    {
+      "name": "P02A2.AllNParity.mixture_pair_other",
+      "module": "P02A2.AllNParity"
+    },
+    {
+      "name": "P02A2.AllNParity.mixture_half_profile",
+      "module": "P02A2.AllNParity"
+    },
+    {
+      "name": "P02A2.positive_fibre",
+      "module": "P02A2.Fibres"
+    },
+    {
+      "name": "P02A2.weighted_fibre_mass",
+      "module": "P02A2.Fibres"
+    },
+    {
+      "name": "P02A2.positive_fibre_partition",
+      "module": "P02A2.Fibres"
+    },
+    {
+      "name": "P02A2.mass_as_sum_weighted_fibres",
+      "module": "P02A2.Fibres"
+    },
+    {
+      "name": "P02A2.mass_add_diffuseMass",
+      "module": "P02A2.Fibres"
+    },
+    {
+      "name": "P02A2.defect_eq_diffuse_toReal",
+      "module": "P02A2.Fibres"
+    },
+    {
+      "name": "P02A2.weighted_fibre_diffuse",
+      "module": "P02A2.Fibres"
+    },
+    {
+      "name": "P02A2.diffuse_fibre_identity",
+      "module": "P02A2.Fibres"
+    },
+    {
+      "name": "P02A2.defect_fibre_identity",
+      "module": "P02A2.Fibres"
+    },
+    {
+      "name": "P02A2.FiniteLaw.mix_event",
+      "module": "P02A2.FiniteLaw"
+    },
+    {
+      "name": "P02A2.FiniteLaw.push_event",
+      "module": "P02A2.FiniteLaw"
+    },
+    {
+      "name": "P02A2.FiniteLaw.complete_length",
+      "module": "P02A2.FiniteLaw"
+    },
+    {
+      "name": "P02A2.FiniteLaw.complete_unique",
+      "module": "P02A2.FiniteLaw"
+    },
+    {
+      "name": "P02A2.FiniteMeasureBridge.bind_event",
+      "module": "P02A2.FiniteMeasureBridge"
+    },
+    {
+      "name": "P02A2.FiniteMeasureBridge.toMeasure_apply",
+      "module": "P02A2.FiniteMeasureBridge"
+    },
+    {
+      "name": "P02A2.FiniteMeasureBridge.toMeasure_total",
+      "module": "P02A2.FiniteMeasureBridge"
+    },
+    {
+      "name": "P02A2.FiniteMeasureBridge.toMeasure_push",
+      "module": "P02A2.FiniteMeasureBridge"
+    },
+    {
+      "name": "P02A2.FiniteMeasureBridge.toMeasure_bind_event",
+      "module": "P02A2.FiniteMeasureBridge"
+    },
+    {
+      "name": "P02A2.FiniteMeasureBridge.finite_law_zero_defect",
+      "module": "P02A2.FiniteMeasureBridge"
+    },
+    {
+      "name": "P02A2.Flow.stationary_to_flow",
+      "module": "P02A2.Flow"
+    },
+    {
+      "name": "P02A2.Flow.zero_row",
+      "module": "P02A2.Flow"
+    },
+    {
+      "name": "P02A2.Flow.flow_to_stationary",
+      "module": "P02A2.Flow"
+    },
+    {
+      "name": "P02A2.positive_countable",
+      "module": "P02A2.MeasureCore"
+    },
+    {
+      "name": "P02A2.positive_measurable",
+      "module": "P02A2.MeasureCore"
+    },
+    {
+      "name": "P02A2.positive_le_total",
+      "module": "P02A2.MeasureCore"
+    },
+    {
+      "name": "P02A2.positive_mem_conull",
+      "module": "P02A2.MeasureCore"
+    },
+    {
+      "name": "P02A2.positive_subset_inter",
+      "module": "P02A2.MeasureCore"
+    },
+    {
+      "name": "P02A2.mass_le_conull_inter",
+      "module": "P02A2.MeasureCore"
+    },
+    {
+      "name": "P02A2.null_singleton_of_not_positive",
+      "module": "P02A2.MeasureCore"
+    },
+    {
+      "name": "P02A2.singleton_complement_conull",
+      "module": "P02A2.MeasureCore"
+    },
+    {
+      "name": "P02A2.attaining_family",
+      "module": "P02A2.MeasureCore"
+    },
+    {
+      "name": "P02A2.countable_null",
+      "module": "P02A2.MeasureCore"
+    },
+    {
+      "name": "P02A2.countable_sdiff_positive_null",
+      "module": "P02A2.MeasureCore"
+    },
+    {
+      "name": "P02A2.mass_eq_countable_superset",
+      "module": "P02A2.MeasureCore"
+    },
+    {
+      "name": "P02A2.countable_carrier_mass_one",
+      "module": "P02A2.MeasureCore"
+    },
+    {
+      "name": "P02A2.map_singleton",
+      "module": "P02A2.MeasureCore"
+    },
+    {
+      "name": "P02A2.positive_maps_positive",
+      "module": "P02A2.MeasureCore"
+    },
+    {
+      "name": "P02A2.positive_subset_preimage",
+      "module": "P02A2.MeasureCore"
+    },
+    {
+      "name": "P02A2.mass_map_mono",
+      "module": "P02A2.MeasureCore"
+    },
+    {
+      "name": "P02A2.fibre_eval",
+      "module": "P02A2.MeasureCore"
+    },
+    {
+      "name": "P02A2.fibre_total",
+      "module": "P02A2.MeasureCore"
+    },
+    {
+      "name": "P02A2.commonPositive_countable",
+      "module": "P02A2.Mixture"
+    },
+    {
+      "name": "P02A2.component_positive_subset_common",
+      "module": "P02A2.Mixture"
+    },
+    {
+      "name": "P02A2.mixture_positive_subset_common",
+      "module": "P02A2.Mixture"
+    },
+    {
+      "name": "P02A2.mass_mixture",
+      "module": "P02A2.Mixture"
+    },
+    {
+      "name": "P02A2.mixture_total",
+      "module": "P02A2.Mixture"
+    },
+    {
+      "name": "P02A2.Observation.history_measurable",
+      "module": "P02A2.Observation"
+    },
+    {
+      "name": "P02A2.Observation.event_measurable",
+      "module": "P02A2.Observation"
+    },
+    {
+      "name": "P02A2.Observation.fullEvent_measurable",
+      "module": "P02A2.Observation"
+    },
+    {
+      "name": "P02A2.Observation.event_step",
+      "module": "P02A2.Observation"
+    },
+    {
+      "name": "P02A2.Observation.events_antitone",
+      "module": "P02A2.Observation"
+    },
+    {
+      "name": "P02A2.Observation.full_subset_event",
+      "module": "P02A2.Observation"
+    },
+    {
+      "name": "P02A2.Observation.full_subset_persist",
+      "module": "P02A2.Observation"
+    },
+    {
+      "name": "P02A2.Observation.observation_extinction_identity",
+      "module": "P02A2.Observation"
+    },
+    {
+      "name": "P02A2.Observation.mapped_probability",
+      "module": "P02A2.Observation"
+    },
+    {
+      "name": "P02A2.Observation.defect_mapped_complement",
+      "module": "P02A2.Observation"
+    },
+    {
+      "name": "P02A2.Observation.coarse_law",
+      "module": "P02A2.Observation"
+    },
+    {
+      "name": "P02A2.Observation.step_fibre",
+      "module": "P02A2.Observation"
+    },
+    {
+      "name": "P02A2.Observation.step_loss",
+      "module": "P02A2.Observation"
+    },
+    {
+      "name": "P02A2.Observation.increment_eq_loss",
+      "module": "P02A2.Observation"
+    },
+    {
+      "name": "P02A2.Observation.increments_summable",
+      "module": "P02A2.Observation"
+    },
+    {
+      "name": "P02A2.Observation.finite_observation_identity",
+      "module": "P02A2.Observation"
+    },
+    {
+      "name": "P02A2.Observation.full_observation_identity",
+      "module": "P02A2.Observation"
+    },
+    {
+      "name": "P02A2.ObserverCore.loop_zero",
+      "module": "P02A2.ObserverCore"
+    },
+    {
+      "name": "P02A2.ObserverCore.loop_successor",
+      "module": "P02A2.ObserverCore"
+    },
+    {
+      "name": "P02A2.ObserverCore.sequence_execution",
+      "module": "P02A2.ObserverCore"
+    },
+    {
+      "name": "P02A2.ObserverCore.prefix_causal",
+      "module": "P02A2.ObserverCore"
+    },
+    {
+      "name": "P02A2.ObserverCore.diagonal_differs",
+      "module": "P02A2.ObserverCore"
+    },
+    {
+      "name": "P02A2.ObserverCore.shift_eq_threshold",
+      "module": "P02A2.ObserverCore"
+    },
+    {
+      "name": "P02A2.ObserverCore.shift_le_threshold",
+      "module": "P02A2.ObserverCore"
+    },
+    {
+      "name": "P02A2.ObserverCore.shift_gt_threshold",
+      "module": "P02A2.ObserverCore"
+    },
+    {
+      "name": "P02A2.ParityBridge.solutions_mem",
+      "module": "P02A2.ParityBridge"
+    },
+    {
+      "name": "P02A2.ParityBridge.fits_length",
+      "module": "P02A2.ParityBridge"
+    },
+    {
+      "name": "P02A2.ParityBridge.solutions_nodup",
+      "module": "P02A2.ParityBridge"
+    },
+    {
+      "name": "P02A2.ParityBridge.solutions_filter",
+      "module": "P02A2.ParityBridge"
+    },
+    {
+      "name": "P02A2.ParityBridge.general_proper_probability",
+      "module": "P02A2.ParityBridge"
+    },
+    {
+      "name": "P02A2.ParityBridge.parity_target_probability",
+      "module": "P02A2.ParityBridge"
+    },
+    {
+      "name": "P02A2.ParityBridge.mixture_proper_profile",
+      "module": "P02A2.ParityBridge"
+    },
+    {
+      "name": "P02A2.Refinement.persist_subset",
+      "module": "P02A2.Refinement"
+    },
+    {
+      "name": "P02A2.Refinement.loss_measurable",
+      "module": "P02A2.Refinement"
+    },
+    {
+      "name": "P02A2.Refinement.persist_measurable",
+      "module": "P02A2.Refinement"
+    },
+    {
+      "name": "P02A2.Refinement.losses_disjoint",
+      "module": "P02A2.Refinement"
+    },
+    {
+      "name": "P02A2.Refinement.union_losses",
+      "module": "P02A2.Refinement"
+    },
+    {
+      "name": "P02A2.Refinement.complement_partition",
+      "module": "P02A2.Refinement"
+    },
+    {
+      "name": "P02A2.Refinement.measure_extinction_decomposition",
+      "module": "P02A2.Refinement"
+    },
+    {
+      "name": "P02A2.Refinement.real_extinction_decomposition",
+      "module": "P02A2.Refinement"
+    },
+    {
+      "name": "P02A2.Refinement.losses_real_summable",
+      "module": "P02A2.Refinement"
+    },
+    {
+      "name": "P02A2.Refinement.finite_telescope",
+      "module": "P02A2.Refinement"
+    },
+    {
+      "name": "P02A2.Refinement.exact_budget",
+      "module": "P02A2.Refinement"
+    },
+    {
+      "name": "P02A2.Refinement.exact_residual_budget",
+      "module": "P02A2.Refinement"
+    },
+    {
+      "name": "P02A2.Refinement.no_residual_limit",
+      "module": "P02A2.Refinement"
+    },
+    {
+      "name": "P02A2.SimplexStationary.simplex_closed",
+      "module": "P02A2.SimplexStationary"
+    },
+    {
+      "name": "P02A2.SimplexStationary.simplex_compact",
+      "module": "P02A2.SimplexStationary"
+    },
+    {
+      "name": "P02A2.SimplexStationary.simplex_convex",
+      "module": "P02A2.SimplexStationary"
+    },
+    {
+      "name": "P02A2.SimplexStationary.rows_preserve_simplex",
+      "module": "P02A2.SimplexStationary"
+    },
+    {
+      "name": "P02A2.SimplexStationary.stationary_row",
+      "module": "P02A2.SimplexStationary"
+    },
+    {
+      "name": "P02A2.SimplexStationary.finite_correspondence_fixed",
+      "module": "P02A2.SimplexStationary"
+    },
+    {
+      "name": "P02A2.Stationary.fixed_of_approximate",
+      "module": "P02A2.Stationary"
+    },
+    {
+      "name": "P02A2.Stationary.orbit_mem",
+      "module": "P02A2.Stationary"
+    },
+    {
+      "name": "P02A2.Stationary.average_mem",
+      "module": "P02A2.Stationary"
+    },
+    {
+      "name": "P02A2.Stationary.orbit_sum_difference",
+      "module": "P02A2.Stationary"
+    },
+    {
+      "name": "P02A2.Stationary.average_difference",
+      "module": "P02A2.Stationary"
+    },
+    {
+      "name": "P02A2.Stationary.average_difference_norm",
+      "module": "P02A2.Stationary"
+    },
+    {
+      "name": "P02A2.Stationary.averages_approximate",
+      "module": "P02A2.Stationary"
+    },
+    {
+      "name": "P02A2.Stationary.compact_convex_linear_fixed",
+      "module": "P02A2.Stationary"
+    },
+    {
+      "name": "P02.positiveSingletons_countable",
+      "module": "P02.MeasureCore"
+    },
+    {
+      "name": "P02.positiveSingletons_measurable",
+      "module": "P02.MeasureCore"
+    },
+    {
+      "name": "P02.positiveSingleton_mem_of_null_compl",
+      "module": "P02.MeasureCore"
+    },
+    {
+      "name": "P02.positiveSingletons_subset_conull_intersection",
+      "module": "P02.MeasureCore"
+    },
+    {
+      "name": "P02.T300.normalised",
+      "module": "P02.T300ThreeBit"
+    },
+    {
+      "name": "P02.T300.weights_nonnegative",
+      "module": "P02.T300ThreeBit"
+    },
+    {
+      "name": "P02.T300.all_proper_marginals_equal",
+      "module": "P02.T300ThreeBit"
+    },
+    {
+      "name": "P02.T300.parity_target_changes",
+      "module": "P02.T300ThreeBit"
+    },
+    {
+      "name": "P02.T300.declared_flip",
+      "module": "P02.T300ThreeBit"
+    },
+    {
+      "name": "P02.T300.mixture_target_retained",
+      "module": "P02.T300ThreeBit"
+    },
+    {
+      "name": "P02.T300.every_pair_profile_changes",
+      "module": "P02.T300ThreeBit"
+    },
+    {
+      "name": "P02A2.FiniteLaw.complete_parity",
+      "module": "P02A2.FiniteLaw"
+    },
+    {
+      "name": "P02A2.FiniteLaw.complete_injective",
+      "module": "P02A2.FiniteLaw"
+    },
+    {
+      "name": "P02A2.ParityBridge.unrestricted_fits",
+      "module": "P02A2.ParityBridge"
+    },
+    {
+      "name": "P02A2.CandidateCompiler.testBody_good",
+      "module": "CandidateCompiler"
+    },
+    {
+      "name": "P02A2.CandidateCompiler.testBody_preserves",
+      "module": "CandidateCompiler"
+    },
+    {
+      "name": "P02A2.CandidateCompiler.testLoop_preserves",
+      "module": "CandidateCompiler"
+    },
+    {
+      "name": "P02A2.CandidateCompiler.testLoop_good",
+      "module": "CandidateCompiler"
+    },
+    {
+      "name": "P02A2.CandidateCompiler.outerBody_matches",
+      "module": "CandidateCompiler"
+    },
+    {
+      "name": "P02A2.CandidateCompiler.search_before_candidate",
+      "module": "CandidateCompiler"
+    },
+    {
+      "name": "P02A2.CandidateCompiler.search_found_stable",
+      "module": "CandidateCompiler"
+    },
+    {
+      "name": "P02A2.CandidateCompiler.search_result",
+      "module": "CandidateCompiler"
+    },
+    {
+      "name": "P02A2.CandidateCompiler.outerLoop_matches",
+      "module": "CandidateCompiler"
+    },
+    {
+      "name": "P02A2.CandidateCompiler.candidateBlock_value",
+      "module": "CandidateCompiler"
+    },
+    {
+      "name": "P02A2.CandidateCompiler.preserves_skip",
+      "module": "CandidateCompiler"
+    },
+    {
+      "name": "P02A2.CandidateCompiler.preserves_set",
+      "module": "CandidateCompiler"
+    },
+    {
+      "name": "P02A2.CandidateCompiler.preserves_seq",
+      "module": "CandidateCompiler"
+    },
+    {
+      "name": "P02A2.CandidateCompiler.preserves_branch",
+      "module": "CandidateCompiler"
+    },
+    {
+      "name": "P02A2.CandidateCompiler.preserves_loop",
+      "module": "CandidateCompiler"
+    },
+    {
+      "name": "P02A2.CandidateCompiler.tryCandidate_preserves",
+      "module": "CandidateCompiler"
+    },
+    {
+      "name": "P02A2.CandidateCompiler.outerBody_preserves",
+      "module": "CandidateCompiler"
+    },
+    {
+      "name": "P02A2.CandidateCompiler.candidateBlock_preserves",
+      "module": "CandidateCompiler"
+    },
+    {
+      "name": "P02A2.CandidateSource.registerList_mem",
+      "module": "CandidateSource"
+    },
+    {
+      "name": "P02A2.CandidateSource.registerMap_injective_on",
+      "module": "CandidateSource"
+    },
+    {
+      "name": "P02A2.CandidateSource.registerMap_fresh",
+      "module": "CandidateSource"
+    },
+    {
+      "name": "P02A2.CandidateSource.controller_not_private",
+      "module": "CandidateSource"
+    },
+    {
+      "name": "P02A2.CandidateSource.matrixArgs_fresh",
+      "module": "CandidateSource"
+    },
+    {
+      "name": "P02A2.CandidateSource.matrix_sourceLoad",
+      "module": "CandidateSource"
+    },
+    {
+      "name": "P02A2.CandidateSource.matrixCall_spec",
+      "module": "CandidateSource"
+    },
+    {
+      "name": "P02A2.CandidateSource.sourceCandidate_value",
+      "module": "CandidateSource"
+    },
+    {
+      "name": "P02A2.CandidateSource.sourceCandidate_preserves",
+      "module": "CandidateSource"
+    },
+    {
+      "name": "P02A2.CandidateWitnesses.bounded_registers",
+      "module": "CandidateWitnesses"
+    },
+    {
+      "name": "P02A2.CandidateWitnesses.true_registers",
+      "module": "CandidateWitnesses"
+    },
+    {
+      "name": "P02A2.CandidateWitnesses.bounded_registerList",
+      "module": "CandidateWitnesses"
+    },
+    {
+      "name": "P02A2.CandidateWitnesses.true_registerList",
+      "module": "CandidateWitnesses"
+    },
+    {
+      "name": "P02A2.CandidateWitnesses.candidate_checks_inclusive_test_bound",
+      "module": "CandidateWitnesses"
+    },
+    {
+      "name": "P02A2.CandidateWitnesses.candidate_retains_first_success",
+      "module": "CandidateWitnesses"
+    },
+    {
+      "name": "P02A2.Sigma2Compiled.secondMap_zero",
+      "module": "Sigma2Compiled"
+    },
+    {
+      "name": "P02A2.Sigma2Compiled.secondMap_one",
+      "module": "Sigma2Compiled"
+    },
+    {
+      "name": "P02A2.Sigma2Compiled.secondMap_three",
+      "module": "Sigma2Compiled"
+    },
+    {
+      "name": "P02A2.Sigma2Compiled.secondMap_four",
+      "module": "Sigma2Compiled"
+    },
+    {
+      "name": "P02A2.Sigma2Compiled.secondMap_injective",
+      "module": "Sigma2Compiled"
+    },
+    {
+      "name": "P02A2.Sigma2Compiled.renamedCandidate_value",
+      "module": "Sigma2Compiled"
+    },
+    {
+      "name": "P02A2.Sigma2Compiled.renamedCandidate_preserves",
+      "module": "Sigma2Compiled"
+    },
+    {
+      "name": "P02A2.Sigma2Compiled.previousBlock_value",
+      "module": "Sigma2Compiled"
+    },
+    {
+      "name": "P02A2.Sigma2Compiled.previousBlock_preserves_zero",
+      "module": "Sigma2Compiled"
+    },
+    {
+      "name": "P02A2.Sigma2Compiled.previousBlock_preserves_one",
+      "module": "Sigma2Compiled"
+    },
+    {
+      "name": "P02A2.Sigma2Compiled.previousBlock_preserves_three",
+      "module": "Sigma2Compiled"
+    },
+    {
+      "name": "P02A2.Sigma2Compiled.emitComparison_value",
+      "module": "Sigma2Compiled"
+    },
+    {
+      "name": "P02A2.Sigma2Compiled.compiled_value",
+      "module": "Sigma2Compiled"
+    },
+    {
+      "name": "P02A2.Sigma2Compiled.prefixValue_eq",
+      "module": "Sigma2Compiled"
+    },
+    {
+      "name": "P02A2.Sigma2Compiled.observer_eq",
+      "module": "Sigma2Compiled"
+    },
+    {
+      "name": "P02A2.Sigma2Compiled.law_eq",
+      "module": "Sigma2Compiled"
+    },
+    {
+      "name": "P02A2.Sigma2Compiled.zero_defect_iff",
+      "module": "Sigma2Compiled"
+    },
+    {
+      "name": "P02A2.Sigma2Compiled.one_defect_iff",
+      "module": "Sigma2Compiled"
+    },
+    {
+      "name": "P02A2.Sigma2Compiled.prefixValue_primitive_recursive",
+      "module": "Sigma2Compiled"
+    },
+    {
+      "name": "P02A2.LoopRenaming.agrees_update",
+      "module": "LoopRenaming"
+    },
+    {
+      "name": "P02A2.LoopRenaming.evalExpr_rename",
+      "module": "LoopRenaming"
+    },
+    {
+      "name": "P02A2.LoopRenaming.runLoop_agrees",
+      "module": "LoopRenaming"
+    },
+    {
+      "name": "P02A2.LoopRenaming.exec_rename",
+      "module": "LoopRenaming"
+    },
+    {
+      "name": "P02A2.LoopRenaming.renameExpr_id",
+      "module": "LoopRenaming"
+    },
+    {
+      "name": "P02A2.LoopRenaming.evalExpr_congr",
+      "module": "LoopRenaming"
+    },
+    {
+      "name": "P02A2.LoopRenaming.exprRegs_rename",
+      "module": "LoopRenaming"
+    },
+    {
+      "name": "P02A2.LoopRenaming.stmtRegs_rename",
+      "module": "LoopRenaming"
+    },
+    {
+      "name": "P02A2.LoopRenaming.runLoop_frame",
+      "module": "LoopRenaming"
+    },
+    {
+      "name": "P02A2.LoopRenaming.exec_frame",
+      "module": "LoopRenaming"
+    },
+    {
+      "name": "P02A2.LoopRenaming.renamed_frame",
+      "module": "LoopRenaming"
+    },
+    {
+      "name": "P02A2.LoopRenaming.outsideEq_update",
+      "module": "LoopRenaming"
+    },
+    {
+      "name": "P02A2.LoopRenaming.resetList_apply",
+      "module": "LoopRenaming"
+    },
+    {
+      "name": "P02A2.LoopRenaming.resetList_agrees",
+      "module": "LoopRenaming"
+    },
+    {
+      "name": "P02A2.LoopRenaming.resetList_outside",
+      "module": "LoopRenaming"
+    },
+    {
+      "name": "P02A2.LoopRenaming.evalExpr_outside",
+      "module": "LoopRenaming"
+    },
+    {
+      "name": "P02A2.LoopRenaming.loadArgs_correct",
+      "module": "LoopRenaming"
+    },
+    {
+      "name": "P02A2.LoopRenaming.inlineCode_correct",
+      "module": "LoopRenaming"
+    },
+    {
+      "name": "P02A2.LoopPrimrec.read_primrec",
+      "module": "LoopPrimrec"
+    },
+    {
+      "name": "P02A2.LoopPrimrec.writeFin_primrec",
+      "module": "LoopPrimrec"
+    },
+    {
+      "name": "P02A2.LoopPrimrec.evalExpr_primrec",
+      "module": "LoopPrimrec"
+    },
+    {
+      "name": "P02A2.LoopPrimrec.runLoopFin_primrec",
+      "module": "LoopPrimrec"
+    },
+    {
+      "name": "P02A2.LoopPrimrec.execFin_primrec",
+      "module": "LoopPrimrec"
+    },
+    {
+      "name": "P02A2.LoopPrimrec.extend_writeFin",
+      "module": "LoopPrimrec"
+    },
+    {
+      "name": "P02A2.LoopPrimrec.runLoopFin_simulation",
+      "module": "LoopPrimrec"
+    },
+    {
+      "name": "P02A2.LoopPrimrec.execFin_simulation",
+      "module": "LoopPrimrec"
+    },
+    {
+      "name": "P02A2.LoopPrimrec.fixed_program_primrec",
+      "module": "LoopPrimrec"
+    },
+    {
+      "name": "P02A2.LoopPrimrec.programBound_registers",
+      "module": "LoopPrimrec"
+    },
+    {
+      "name": "P02A2.LoopPrimrec.programBound_output",
+      "module": "LoopPrimrec"
+    },
+    {
+      "name": "P02A2.LoopPrimrec.programBound_arity",
+      "module": "LoopPrimrec"
+    },
+    {
+      "name": "P02A2.LoopPrimrec.inputFin_primrec",
+      "module": "LoopPrimrec"
+    },
+    {
+      "name": "P02A2.LoopPrimrec.extend_inputFin",
+      "module": "LoopPrimrec"
+    },
+    {
+      "name": "P02A2.LoopPrimrec.program_denotation_primrec",
+      "module": "LoopPrimrec"
+    },
+    {
+      "name": "P02A2.LoopPrimrec.binaryInput_primrec",
+      "module": "LoopPrimrec"
+    },
+    {
+      "name": "P02A2.LoopPrimrec.extend_binaryInput",
+      "module": "LoopPrimrec"
+    },
+    {
+      "name": "P02A2.LoopPrimrec.binary_program_primrec",
+      "module": "LoopPrimrec"
+    },
+    {
+      "name": "P02A2.LoopInliningWitnesses.full_reset_prevents_history_dependence",
+      "module": "LoopInliningWitnesses"
+    },
+    {
+      "name": "P02A2.LoopInliningWitnesses.omitted_reset_creates_history_dependence",
+      "module": "LoopInliningWitnesses"
+    },
+    {
+      "name": "P02A2.LoopInliningWitnesses.colliding_renaming_changes_semantics",
+      "module": "LoopInliningWitnesses"
+    },
+    {
+      "name": "P02A2.LoopInliningWitnesses.nonfresh_argument_is_overwritten",
+      "module": "LoopInliningWitnesses"
+    },
+    {
+      "name": "P02A2.Q8Primrec.generated_prefix_function_primrec",
+      "module": "Q8Primrec"
+    },
+    {
+      "name": "P02A2.Q8Measure.fairBit_singleton",
+      "module": "Q8Measure"
+    },
+    {
+      "name": "P02A2.Q8Measure.fairCantor_cylinder",
+      "module": "Q8Measure"
+    },
+    {
+      "name": "P02A2.Q8Measure.switched_measurable",
+      "module": "Q8Measure"
+    },
+    {
+      "name": "P02A2.Q8Measure.never_law_dirac",
+      "module": "Q8Measure"
+    },
+    {
+      "name": "P02A2.Q8Measure.eventually_singleton_bound",
+      "module": "Q8Measure"
+    },
+    {
+      "name": "P02A2.Q8Measure.eventually_singleton_zero",
+      "module": "Q8Measure"
+    },
+    {
+      "name": "P02A2.Q8Measure.never_defect_zero",
+      "module": "Q8Measure"
+    },
+    {
+      "name": "P02A2.Q8Measure.eventually_defect_one",
+      "module": "Q8Measure"
+    },
+    {
+      "name": "P02A2.Q8Machine.step_of_halted",
+      "module": "Q8Machine"
+    },
+    {
+      "name": "P02A2.Q8Machine.run_halted_persistent",
+      "module": "Q8Machine"
+    },
+    {
+      "name": "P02A2.Q8Machine.boundedFlag_persistent",
+      "module": "Q8Machine"
+    },
+    {
+      "name": "P02A2.Q8Machine.halts_iff_boundedFlag",
+      "module": "Q8Machine"
+    },
+    {
+      "name": "P02A2.Q8Machine.not_halts_flags_false",
+      "module": "Q8Machine"
+    },
+    {
+      "name": "P02A2.Q8Machine.halts_eventually_flags_true",
+      "module": "Q8Machine"
+    },
+    {
+      "name": "P02A2.Q8Machine.nonhalting_law_dirac",
+      "module": "Q8Machine"
+    },
+    {
+      "name": "P02A2.Q8Machine.nonhalting_defect_zero",
+      "module": "Q8Machine"
+    },
+    {
+      "name": "P02A2.Q8Machine.halting_singletons_zero",
+      "module": "Q8Machine"
+    },
+    {
+      "name": "P02A2.Q8Machine.halting_defect_one",
+      "module": "Q8Machine"
+    },
+    {
+      "name": "P02A2.Q8Machine.defect_zero_iff_nonhalting",
+      "module": "Q8Machine"
+    },
+    {
+      "name": "P02A2.Q8Machine.defect_one_iff_halting",
+      "module": "Q8Machine"
+    },
+    {
+      "name": "P02A2.Q8Compiler.instruction_matches",
+      "module": "Q8Compiler"
+    },
+    {
+      "name": "P02A2.Q8Compiler.instruction_preserves",
+      "module": "Q8Compiler"
+    },
+    {
+      "name": "P02A2.Q8Compiler.scan_exec",
+      "module": "Q8Compiler"
+    },
+    {
+      "name": "P02A2.Q8Compiler.matches_update_scratch",
+      "module": "Q8Compiler"
+    },
+    {
+      "name": "P02A2.Q8Compiler.compiledStep_matches",
+      "module": "Q8Compiler"
+    },
+    {
+      "name": "P02A2.Q8Compiler.loop_matches",
+      "module": "Q8Compiler"
+    },
+    {
+      "name": "P02A2.Q8Compiler.scan_preserves",
+      "module": "Q8Compiler"
+    },
+    {
+      "name": "P02A2.Q8Compiler.compiledStep_preserves",
+      "module": "Q8Compiler"
+    },
+    {
+      "name": "P02A2.Q8Compiler.runLoop_preserves",
+      "module": "Q8Compiler"
+    },
+    {
+      "name": "P02A2.Q8Compiler.initCode_matches",
+      "module": "Q8Compiler"
+    },
+    {
+      "name": "P02A2.Q8Compiler.initCode_preserves",
+      "module": "Q8Compiler"
+    },
+    {
+      "name": "P02A2.Q8Compiler.compiled_value",
+      "module": "Q8Compiler"
+    },
+    {
+      "name": "P02A2.Q8Compiler.programValue_eq",
+      "module": "Q8Compiler"
+    },
+    {
+      "name": "P02A2.Q8Compiler.sentinel_append_bit",
+      "module": "Q8Compiler"
+    },
+    {
+      "name": "P02A2.Q8Compiler.sentinel_prefix_last",
+      "module": "Q8Compiler"
+    },
+    {
+      "name": "P02A2.Q8Compiler.program_output_switched",
+      "module": "Q8Compiler"
+    },
+    {
+      "name": "P02A2.Q8Compiler.compiledObserver_eq",
+      "module": "Q8Compiler"
+    },
+    {
+      "name": "P02A2.Q8Compiler.compiledObserver_measurable",
+      "module": "Q8Compiler"
+    },
+    {
+      "name": "P02A2.Q8Compiler.compiledLaw_eq",
+      "module": "Q8Compiler"
+    },
+    {
+      "name": "P02A2.Q8Compiler.compiled_defect_zero_iff_nonhalting",
+      "module": "Q8Compiler"
+    },
+    {
+      "name": "P02A2.Q8Compiler.compiled_defect_one_iff_halting",
+      "module": "Q8Compiler"
+    },
+    {
+      "name": "P02A2.Q8Compiler.compiled_nonhalting_dirac",
+      "module": "Q8Compiler"
+    },
+    {
+      "name": "P02A2.Q8Compiler.compiled_halting_singletons_zero",
+      "module": "Q8Compiler"
+    },
+    {
+      "name": "P02A2.Q8Witnesses.foreverIncrement_flags",
+      "module": "Q8Witnesses"
+    },
+    {
+      "name": "P02A2.Q8Witnesses.foreverIncrement_never_halts",
+      "module": "Q8Witnesses"
+    },
+    {
+      "name": "P02A2.Q8Witnesses.immediateHalt_defect",
+      "module": "Q8Witnesses"
+    },
+    {
+      "name": "P02A2.Q8Witnesses.foreverIncrement_defect",
+      "module": "Q8Witnesses"
+    },
+    {
+      "name": "P02A2.Q8Witnesses.wrong_bound_changes_immediate_output",
+      "module": "Q8Witnesses"
+    },
+    {
+      "name": "P02A2.Q8Witnesses.wrong_snapshot_changes_delayed_output",
+      "module": "Q8Witnesses"
+    },
+    {
+      "name": "P02A2.Q8Machine.run_zero_not_halted",
+      "module": "Q8Machine"
+    },
+    {
+      "name": "P02A2.Q8Witnesses.immediateHalt_halts",
+      "module": "Q8Witnesses"
+    },
+    {
+      "name": "P02A2.InnovationMeasure.singleton_bound_of_copied",
+      "module": "InnovationMeasure"
+    },
+    {
+      "name": "P02A2.InnovationMeasure.infinite_copied_singleton_zero",
+      "module": "InnovationMeasure"
+    },
+    {
+      "name": "P02A2.InnovationMeasure.infinite_copied_defect_one",
+      "module": "InnovationMeasure"
+    },
+    {
+      "name": "P02A2.InnovationMeasure.eventually_false_finite_carrier",
+      "module": "InnovationMeasure"
+    },
+    {
+      "name": "P02A2.InnovationMeasure.eventually_false_defect_zero",
+      "module": "InnovationMeasure"
+    },
+    {
+      "name": "P02A2.InnovationMeasure.finite_copied_iff_eventually_false",
+      "module": "InnovationMeasure"
+    },
+    {
+      "name": "P02A2.InnovationMeasure.finite_copied_defect_zero",
+      "module": "InnovationMeasure"
+    },
+    {
+      "name": "P02A2.InnovationMeasure.defect_zero_iff_finite_copied",
+      "module": "InnovationMeasure"
+    },
+    {
+      "name": "P02A2.InnovationMeasure.defect_one_iff_infinite_copied",
+      "module": "InnovationMeasure"
+    },
+    {
+      "name": "P02A2.SurvivorCandidates.candidate_spec",
+      "module": "SurvivorCandidates"
+    },
+    {
+      "name": "P02A2.SurvivorCandidates.candidate_le_default",
+      "module": "SurvivorCandidates"
+    },
+    {
+      "name": "P02A2.SurvivorCandidates.candidate_le_passing",
+      "module": "SurvivorCandidates"
+    },
+    {
+      "name": "P02A2.SurvivorCandidates.candidate_passes",
+      "module": "SurvivorCandidates"
+    },
+    {
+      "name": "P02A2.SurvivorCandidates.passes_mono",
+      "module": "SurvivorCandidates"
+    },
+    {
+      "name": "P02A2.SurvivorCandidates.candidate_step",
+      "module": "SurvivorCandidates"
+    },
+    {
+      "name": "P02A2.SurvivorCandidates.candidate_monotone",
+      "module": "SurvivorCandidates"
+    },
+    {
+      "name": "P02A2.SurvivorCandidates.candidate_bounded_by_witness",
+      "module": "SurvivorCandidates"
+    },
+    {
+      "name": "P02A2.SurvivorCandidates.monotone_nat_bounded_eventually_constant",
+      "module": "SurvivorCandidates"
+    },
+    {
+      "name": "P02A2.SurvivorCandidates.witness_implies_stabilization",
+      "module": "SurvivorCandidates"
+    },
+    {
+      "name": "P02A2.SurvivorCandidates.stabilization_implies_witness",
+      "module": "SurvivorCandidates"
+    },
+    {
+      "name": "P02A2.SurvivorCandidates.innovation_successor",
+      "module": "SurvivorCandidates"
+    },
+    {
+      "name": "P02A2.SurvivorCandidates.stabilization_implies_eventually_no_innovation",
+      "module": "SurvivorCandidates"
+    },
+    {
+      "name": "P02A2.SurvivorCandidates.eventually_no_innovation_implies_stabilization",
+      "module": "SurvivorCandidates"
+    },
+    {
+      "name": "P02A2.SurvivorCandidates.witness_iff_eventually_no_innovation",
+      "module": "SurvivorCandidates"
+    },
+    {
+      "name": "P02A2.SurvivorPrimrec.allBelow_eq_decide",
+      "module": "SurvivorPrimrec"
+    },
+    {
+      "name": "P02A2.SurvivorPrimrec.allBelow_primrec",
+      "module": "SurvivorPrimrec"
+    },
+    {
+      "name": "P02A2.SurvivorPrimrec.bounded_all_primrec",
+      "module": "SurvivorPrimrec"
+    },
+    {
+      "name": "P02A2.SurvivorPrimrec.available_primrec",
+      "module": "SurvivorPrimrec"
+    },
+    {
+      "name": "P02A2.SurvivorPrimrec.candidate_graph",
+      "module": "SurvivorPrimrec"
+    },
+    {
+      "name": "P02A2.SurvivorPrimrec.candidate_primrec",
+      "module": "SurvivorPrimrec"
+    },
+    {
+      "name": "P02A2.SurvivorPrimrec.previous_primrec",
+      "module": "SurvivorPrimrec"
+    },
+    {
+      "name": "P02A2.SurvivorPrimrec.innovation_primrec",
+      "module": "SurvivorPrimrec"
+    },
+    {
+      "name": "P02A2.SurvivorPrimrec.prefixFunction_primrec",
+      "module": "SurvivorPrimrec"
+    },
+    {
+      "name": "P02A2.Sigma2RowLaw.observer_eq_switched",
+      "module": "Sigma2RowLaw"
+    },
+    {
+      "name": "P02A2.Sigma2RowLaw.observer_measurable",
+      "module": "Sigma2RowLaw"
+    },
+    {
+      "name": "P02A2.Sigma2RowLaw.rowLaw_eq",
+      "module": "Sigma2RowLaw"
+    },
+    {
+      "name": "P02A2.Sigma2RowLaw.finite_innovation_iff_witness",
+      "module": "Sigma2RowLaw"
+    },
+    {
+      "name": "P02A2.Sigma2RowLaw.defect_zero_iff_witness",
+      "module": "Sigma2RowLaw"
+    },
+    {
+      "name": "P02A2.Sigma2RowLaw.defect_one_iff_no_witness",
+      "module": "Sigma2RowLaw"
+    },
+    {
+      "name": "P02A2.Sigma2RowLaw.witness_finite_carrier",
+      "module": "Sigma2RowLaw"
+    },
+    {
+      "name": "P02A2.Sigma2RowLaw.no_witness_singletons_zero",
+      "module": "Sigma2RowLaw"
+    },
+    {
+      "name": "P02A2.Sigma2RowLaw.defect_dichotomy",
+      "module": "Sigma2RowLaw"
+    },
+    {
+      "name": "P02A2.Sigma2RowLaw.joint_prefix_primitive_recursive",
+      "module": "Sigma2RowLaw"
+    },
+    {
+      "name": "P02A2.Sigma2Witnesses.trueMatrix_primitive_recursive",
+      "module": "Sigma2Witnesses"
+    },
+    {
+      "name": "P02A2.Sigma2Witnesses.falseMatrix_primitive_recursive",
+      "module": "Sigma2Witnesses"
+    },
+    {
+      "name": "P02A2.Sigma2Witnesses.swappedMatrix_primitive_recursive",
+      "module": "Sigma2Witnesses"
+    },
+    {
+      "name": "P02A2.Sigma2Witnesses.trueMatrix_defect_zero",
+      "module": "Sigma2Witnesses"
+    },
+    {
+      "name": "P02A2.Sigma2Witnesses.falseMatrix_defect_one",
+      "module": "Sigma2Witnesses"
+    },
+    {
+      "name": "P02A2.Sigma2Witnesses.swappedMatrix_not_exists_forall",
+      "module": "Sigma2Witnesses"
+    },
+    {
+      "name": "P02A2.Sigma2Witnesses.swappedMatrix_defect_one",
+      "module": "Sigma2Witnesses"
+    },
+    {
+      "name": "P02A2.Sigma2SourceMatrix.tripleInput_primrec",
+      "module": "Sigma2SourceMatrix"
+    },
+    {
+      "name": "P02A2.Sigma2SourceMatrix.matrix_primrec",
+      "module": "Sigma2SourceMatrix"
+    },
+    {
+      "name": "P02A2.Sigma2SourceMatrix.source_prefix_primrec",
+      "module": "Sigma2SourceMatrix"
+    },
+    {
+      "name": "P02A2.Sigma2SourceMatrix.source_row_zero_iff",
+      "module": "Sigma2SourceMatrix"
+    },
+    {
+      "name": "P02A2.Sigma2SourceMatrix.source_row_one_iff",
+      "module": "Sigma2SourceMatrix"
+    },
+    {
+      "name": "P02A2.Sigma2Witnesses.swappedMatrix_forall_exists",
+      "module": "Sigma2Witnesses"
+    }
+  ],
+  "pins": {
+    "lean_version": "4.19.0",
+    "lean_binary_sha256": "92c3d35b5bfaa5e0fea413a775d504cf46cd95e1345df61c2274f76779e7e023",
+    "packages": [
+      {
+        "name": "mathlib",
+        "revision": "c44e0c8ee63ca166450922a373c7409c5d26b00b"
+      },
+      {
+        "name": "plausible",
+        "revision": "77e08eddc486491d7b9e470926b3dbe50319451a"
+      },
+      {
+        "name": "LeanSearchClient",
+        "revision": "25078369972d295301f5a1e53c3e5850cf6d9d4c"
+      },
+      {
+        "name": "importGraph",
+        "revision": "e6a9f0f5ee3ccf7443a0070f92b62f8db12ae82b"
+      },
+      {
+        "name": "proofwidgets",
+        "revision": "c4919189477c3221e6a204008998b0d724f49904"
+      },
+      {
+        "name": "aesop",
+        "revision": "5d50b08dedd7d69b3d9b3176e0d58a23af228884"
+      },
+      {
+        "name": "Qq",
+        "revision": "fa4f7f15d97591a9cf3aa7724ba371c7fc6dda02"
+      },
+      {
+        "name": "batteries",
+        "revision": "f5d04a9c4973d401c8c92500711518f7c656f034"
+      },
+      {
+        "name": "Cli",
+        "revision": "02dbd02bc00ec4916e99b04b2245b30200e200d0"
+      }
+    ]
+  },
+  "official_imports": [
+    {
+      "module": "Mathlib",
+      "repository": "mathlib",
+      "source": "Mathlib.lean",
+      "sha256": "b0518254279fabf0c6a920804e684536b0f5e2bd1cb6318d0609eb563413f20a"
+    },
+    {
+      "module": "Mathlib.Analysis.Convex.Combination",
+      "repository": "mathlib",
+      "source": "Mathlib/Analysis/Convex/Combination.lean",
+      "sha256": "70a55bd085de3558bcc6ce7d22459044931ed90dfebb6ce9263b182950ba0dc0"
+    },
+    {
+      "module": "Mathlib.Analysis.SpecificLimits.Basic",
+      "repository": "mathlib",
+      "source": "Mathlib/Analysis/SpecificLimits/Basic.lean",
+      "sha256": "cbf9b6b47e6ee6b2962fb2f16ba49b7e005e9a93c0adc1244cc770c34f527315"
+    },
+    {
+      "module": "Mathlib.Computability.Primrec",
+      "repository": "mathlib",
+      "source": "Mathlib/Computability/Primrec.lean",
+      "sha256": "b279a3218434a6f930970b9f43669567e99adc548c31796590f42bdc205dcc22"
+    },
+    {
+      "module": "Mathlib.Data.Set.Finite.Lattice",
+      "repository": "mathlib",
+      "source": "Mathlib/Data/Set/Finite/Lattice.lean",
+      "sha256": "e09c1e49262e285fa21e3992434730d48a792abc4d31d4e0e448ff526e931144"
+    },
+    {
+      "module": "Mathlib.MeasureTheory.Measure.Map",
+      "repository": "mathlib",
+      "source": "Mathlib/MeasureTheory/Measure/Map.lean",
+      "sha256": "3c7fb458eece85551c9b7bd28955a517e14f4bee77934b8b001440a57b6f7f71"
+    },
+    {
+      "module": "Mathlib.MeasureTheory.Measure.MeasureSpace",
+      "repository": "mathlib",
+      "source": "Mathlib/MeasureTheory/Measure/MeasureSpace.lean",
+      "sha256": "c955504c3afe89c1c0524f939b5ebec195726997d4cf4fa9975be3352146f51f"
+    },
+    {
+      "module": "Mathlib.MeasureTheory.Measure.Restrict",
+      "repository": "mathlib",
+      "source": "Mathlib/MeasureTheory/Measure/Restrict.lean",
+      "sha256": "0c0c2108a28516ae3a85dfbfc2e5d7a3afd26dcc113aa8b19c2a79adfe12e56e"
+    },
+    {
+      "module": "Mathlib.MeasureTheory.Measure.Typeclasses.Probability",
+      "repository": "mathlib",
+      "source": "Mathlib/MeasureTheory/Measure/Typeclasses/Probability.lean",
+      "sha256": "419ec9a5612f378b8603f4adb8a0941485481c1d754e95afb8d0a4ddd35f8883"
+    },
+    {
+      "module": "Mathlib.MeasureTheory.Measure.Typeclasses.SFinite",
+      "repository": "mathlib",
+      "source": "Mathlib/MeasureTheory/Measure/Typeclasses/SFinite.lean",
+      "sha256": "b9fb829526454d1f9526ed9bb21de6d661fdb4a01a9847eb6669bedf68f1f784"
+    },
+    {
+      "module": "Mathlib.Probability.ProbabilityMassFunction.Constructions",
+      "repository": "mathlib",
+      "source": "Mathlib/Probability/ProbabilityMassFunction/Constructions.lean",
+      "sha256": "8e50bff3cd3b46107d612eed21e1648752a86f9c373d4b6b0fe10e0e22a43973"
+    },
+    {
+      "module": "Mathlib.Probability.ProductMeasure",
+      "repository": "mathlib",
+      "source": "Mathlib/Probability/ProductMeasure.lean",
+      "sha256": "f8af06e87e2e28916f0fa8a455f792ded4b85a22e1dea5e1c6f9cac1d31b9830"
+    },
+    {
+      "module": "Mathlib.Tactic",
+      "repository": "mathlib",
+      "source": "Mathlib/Tactic.lean",
+      "sha256": "f20038eba7bba63f07a2f854496101226df407e20414e6b8ebf94b14f95e831b"
+    },
+    {
+      "module": "Mathlib.Topology.Sequences",
+      "repository": "mathlib",
+      "source": "Mathlib/Topology/Sequences.lean",
+      "sha256": "f2821653a592a338204f54fcd3a3ece008aa8838e6564916bc6c560c56c0dbe6"
+    }
+  ],
+  "driver": {
+    "source_id": "src-866c6ff6e74a67f2-279d28ea9829b80d",
+    "lean_argument": "EXECUTABLE"
+  },
+  "controls": "ORIGINAL_DRIVER_REQUIRED",
+  "classification": "CURRENT_EVIDENCE"
+}

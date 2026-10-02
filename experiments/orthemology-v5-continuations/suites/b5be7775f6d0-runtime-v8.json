@@ -1,0 +1,3386 @@
+{
+  "id": "b5be7775f6d0-runtime-v8",
+  "origin": "b5be7775f6d0b1d5628f8d100f4d0db3c3d44827472e3965c7bbd4cb04423b34",
+  "descriptor_source_id": "src-b5be7775f6d0b1d5-ac1a57d94319c835",
+  "modules": [
+    {
+      "module": "PERRefinement",
+      "source_id": "src-b5be7775f6d0b1d5-b70ba7365053bf0f",
+      "imports": [
+        "Mathlib.SetTheory.Cardinal.Finite",
+        "Mathlib.Data.Fintype.EquivFin",
+        "Mathlib.Tactic"
+      ]
+    },
+    {
+      "module": "MealyRefinement",
+      "source_id": "src-b5be7775f6d0b1d5-7f22ed6422033891",
+      "imports": [
+        "PERRefinement"
+      ]
+    },
+    {
+      "module": "BlockMismatch",
+      "source_id": "src-b5be7775f6d0b1d5-a2619ca7eb85faaa",
+      "imports": [
+        "MealyRefinement",
+        "Mathlib.Data.List.OfFn",
+        "Mathlib.Data.Finset.Sigma"
+      ]
+    },
+    {
+      "module": "P02A2.MeasureCore",
+      "source_id": "src-b5be7775f6d0b1d5-774c8cbff7874770",
+      "imports": [
+        "Mathlib.MeasureTheory.Measure.Typeclasses.SFinite",
+        "Mathlib.MeasureTheory.Measure.Typeclasses.Probability",
+        "Mathlib.MeasureTheory.Measure.Map",
+        "Mathlib.MeasureTheory.Measure.Restrict",
+        "Mathlib.Tactic"
+      ]
+    },
+    {
+      "module": "Q8Measure",
+      "source_id": "src-b5be7775f6d0b1d5-7979cba986f68934",
+      "imports": [
+        "P02A2.MeasureCore",
+        "Mathlib.Probability.ProductMeasure",
+        "Mathlib.Probability.ProbabilityMassFunction.Constructions",
+        "Mathlib.Analysis.SpecificLimits.Basic"
+      ]
+    },
+    {
+      "module": "MealyMeasure",
+      "source_id": "src-b5be7775f6d0b1d5-d4c61ec16f99935e",
+      "imports": [
+        "BlockMismatch",
+        "Q8Measure"
+      ]
+    },
+    {
+      "module": "MealyHitting",
+      "source_id": "src-b5be7775f6d0b1d5-295d9bab10660651",
+      "imports": [
+        "MealyMeasure"
+      ]
+    },
+    {
+      "module": "MealyRational",
+      "source_id": "src-b5be7775f6d0b1d5-a6df2bd3e75b7386",
+      "imports": [
+        "MealyHitting",
+        "Mathlib.LinearAlgebra.FiniteDimensional.Basic"
+      ]
+    },
+    {
+      "module": "MealySolver",
+      "source_id": "src-b5be7775f6d0b1d5-69d9c711358d73c4",
+      "imports": [
+        "MealyRational",
+        "Mathlib.LinearAlgebra.Determinant"
+      ]
+    },
+    {
+      "module": "TotalVariation",
+      "source_id": "src-b5be7775f6d0b1d5-6000a7bf2a0b9784",
+      "imports": [
+        "P02A2.MeasureCore",
+        "Mathlib.MeasureTheory.Measure.Typeclasses.NoAtoms"
+      ]
+    },
+    {
+      "module": "ObserverAbstraction",
+      "source_id": "src-b5be7775f6d0b1d5-ee95d1319ea490b0",
+      "imports": [
+        "MealySolver",
+        "TotalVariation"
+      ]
+    },
+    {
+      "module": "GuardedObserver",
+      "source_id": "src-b5be7775f6d0b1d5-049e64bf39816e68",
+      "imports": [
+        "ObserverAbstraction"
+      ]
+    },
+    {
+      "module": "CodecVarint",
+      "source_id": "src-b5be7775f6d0b1d5-456fb26d21ef1b7c",
+      "imports": [
+        "Mathlib.Data.Nat.Bitwise",
+        "Mathlib.Tactic"
+      ]
+    },
+    {
+      "module": "P02A2.ObserverCore",
+      "source_id": "src-b5be7775f6d0b1d5-e99758cf0041a2fd",
+      "imports": [
+        "Mathlib"
+      ]
+    },
+    {
+      "module": "CodecExpr",
+      "source_id": "src-b5be7775f6d0b1d5-f8ecdc6e02f5324c",
+      "imports": [
+        "CodecVarint",
+        "P02A2.ObserverCore"
+      ]
+    },
+    {
+      "module": "CodecStmt",
+      "source_id": "src-b5be7775f6d0b1d5-3a2e370e9559f8b2",
+      "imports": [
+        "CodecExpr"
+      ]
+    },
+    {
+      "module": "CodecNumeric",
+      "source_id": "src-b5be7775f6d0b1d5-6b6f9ad8e1edfcbf",
+      "imports": [
+        "CodecVarint"
+      ]
+    },
+    {
+      "module": "LoopRenaming",
+      "source_id": "src-b5be7775f6d0b1d5-5bf84d80aec9fc42",
+      "imports": [
+        "P02A2.ObserverCore"
+      ]
+    },
+    {
+      "module": "LoopPrimrec",
+      "source_id": "src-b5be7775f6d0b1d5-a159a5fd13fb1d69",
+      "imports": [
+        "LoopRenaming",
+        "Mathlib.Computability.Primrec"
+      ]
+    },
+    {
+      "module": "PRProgram",
+      "source_id": "src-b5be7775f6d0b1d5-8ca96217bf051757",
+      "imports": [
+        "LoopPrimrec"
+      ]
+    },
+    {
+      "module": "PRComposition",
+      "source_id": "src-b5be7775f6d0b1d5-36741dcab19bce78",
+      "imports": [
+        "PRProgram"
+      ]
+    },
+    {
+      "module": "PRRecursion",
+      "source_id": "src-b5be7775f6d0b1d5-eab514a661492fab",
+      "imports": [
+        "PRComposition"
+      ]
+    },
+    {
+      "module": "PRHeadRecursion",
+      "source_id": "src-b5be7775f6d0b1d5-afe56a5c31b8fa04",
+      "imports": [
+        "PRRecursion"
+      ]
+    },
+    {
+      "module": "PRDerivation",
+      "source_id": "src-b5be7775f6d0b1d5-581edd3525e5391e",
+      "imports": [
+        "PRHeadRecursion",
+        "Mathlib.Computability.Primrec"
+      ]
+    },
+    {
+      "module": "PRCoverage",
+      "source_id": "src-b5be7775f6d0b1d5-de63431b5526fc8e",
+      "imports": [
+        "PRDerivation"
+      ]
+    },
+    {
+      "module": "PRSpecialize",
+      "source_id": "src-b5be7775f6d0b1d5-c117f3ced3edd853",
+      "imports": [
+        "PRCoverage"
+      ]
+    },
+    {
+      "module": "CodecProgram",
+      "source_id": "src-b5be7775f6d0b1d5-99a43d1445d04c3a",
+      "imports": [
+        "CodecStmt",
+        "CodecNumeric",
+        "PRSpecialize"
+      ]
+    },
+    {
+      "module": "CodecPrimrec",
+      "source_id": "src-b5be7775f6d0b1d5-85209d78fe918029",
+      "imports": [
+        "CodecNumeric",
+        "Mathlib.Computability.Primrec"
+      ]
+    },
+    {
+      "module": "UniformComputabilityNumeric",
+      "source_id": "src-b5be7775f6d0b1d5-9646780b262e78bd",
+      "imports": [
+        "CodecPrimrec",
+        "Mathlib.Computability.Partrec"
+      ]
+    },
+    {
+      "module": "UniformComputabilityMachine",
+      "source_id": "src-b5be7775f6d0b1d5-681c68db4e3a3c75",
+      "imports": [
+        "CodecProgram",
+        "UniformComputabilityNumeric"
+      ]
+    },
+    {
+      "module": "Q8Machine",
+      "source_id": "src-b5be7775f6d0b1d5-66281faee193ff50",
+      "imports": [
+        "Q8Measure"
+      ]
+    },
+    {
+      "module": "Q8Compiler",
+      "source_id": "src-b5be7775f6d0b1d5-9580e8d9610b23bf",
+      "imports": [
+        "Q8Machine",
+        "P02A2.ObserverCore"
+      ]
+    },
+    {
+      "module": "IndexedObserver",
+      "source_id": "src-b5be7775f6d0b1d5-492e1a078290392b",
+      "imports": [
+        "GuardedObserver",
+        "UniformComputabilityMachine",
+        "Q8Compiler"
+      ]
+    },
+    {
+      "module": "MealyAtoms",
+      "source_id": "src-b5be7775f6d0b1d5-b3fabf4ef412bcb0",
+      "imports": [
+        "MealyHitting"
+      ]
+    },
+    {
+      "module": "MealyMeasureFixtures",
+      "source_id": "src-b5be7775f6d0b1d5-33d5486d06deacce",
+      "imports": [
+        "MealyAtoms",
+        "MealyRational"
+      ]
+    },
+    {
+      "module": "Q8ObserverAbstraction",
+      "source_id": "src-b5be7775f6d0b1d5-d2b504cf3790a3e8",
+      "imports": [
+        "ObserverAbstraction",
+        "Q8Compiler",
+        "MealyMeasureFixtures"
+      ]
+    },
+    {
+      "module": "ParsedObserverAbstraction",
+      "source_id": "src-b5be7775f6d0b1d5-fd3bdebedcefe334",
+      "imports": [
+        "Q8ObserverAbstraction",
+        "UniformComputabilityMachine"
+      ]
+    },
+    {
+      "module": "UniformRuntimeTrace",
+      "source_id": "src-b5be7775f6d0b1d5-c9772031a0868aff",
+      "imports": [
+        "ParsedObserverAbstraction"
+      ]
+    },
+    {
+      "module": "IndexedRuntime",
+      "source_id": "src-b5be7775f6d0b1d5-e6a9f062fb0230cc",
+      "imports": [
+        "IndexedObserver",
+        "UniformRuntimeTrace"
+      ]
+    },
+    {
+      "module": "FiniteMealyCompiler",
+      "source_id": "src-b5be7775f6d0b1d5-595c6e4a2a13af2a",
+      "imports": [
+        "IndexedRuntime"
+      ]
+    },
+    {
+      "module": "ObservationChannels",
+      "source_id": "src-b5be7775f6d0b1d5-3bf1f8da5596463b",
+      "imports": [
+        "FiniteMealyCompiler"
+      ]
+    },
+    {
+      "module": "FourBitFraming",
+      "source_id": "src-b5be7775f6d0b1d5-c9269fe312cd658f",
+      "imports": [
+        "ObservationChannels"
+      ]
+    },
+    {
+      "module": "GenericFiniteQueryLocality",
+      "source_id": "src-b5be7775f6d0b1d5-48c2043471cbd977",
+      "imports": [
+        "Mathlib"
+      ]
+    },
+    {
+      "module": "GenericFiniteQueryMeasure",
+      "source_id": "src-b5be7775f6d0b1d5-bca41cd736b4dbf7",
+      "imports": [
+        "GenericFiniteQueryLocality",
+        "Mathlib.Probability.ProductMeasure"
+      ]
+    },
+    {
+      "module": "PolicyRowEvaluator",
+      "source_id": "src-b5be7775f6d0b1d5-09a24e08a892bac0",
+      "imports": [
+        "GenericFiniteQueryMeasure"
+      ]
+    },
+    {
+      "module": "PolicyTranscriptFiber",
+      "source_id": "src-b5be7775f6d0b1d5-fbe02f6da92a96ca",
+      "imports": [
+        "PolicyRowEvaluator"
+      ]
+    },
+    {
+      "module": "FeedbackRequests",
+      "source_id": "src-b5be7775f6d0b1d5-8e9fd63ac4d905b0",
+      "imports": [
+        "PolicyTranscriptFiber"
+      ]
+    },
+    {
+      "module": "ProductObservationLaw",
+      "source_id": "src-b5be7775f6d0b1d5-97be7dd4d39275e6",
+      "imports": [
+        "Mathlib",
+        "Mathlib.Probability.ProductMeasure"
+      ]
+    },
+    {
+      "module": "IndependentProductFamilies",
+      "source_id": "src-b5be7775f6d0b1d5-22bf8644c4d91f80",
+      "imports": [
+        "ProductObservationLaw"
+      ]
+    },
+    {
+      "module": "GenericQueryReference",
+      "source_id": "src-b5be7775f6d0b1d5-5fccddbcbcfd1182",
+      "imports": [
+        "GenericFiniteQueryMeasure"
+      ]
+    },
+    {
+      "module": "PolicyRowLaw",
+      "source_id": "src-b5be7775f6d0b1d5-d89dfabcf15d09dc",
+      "imports": [
+        "GenericQueryReference"
+      ]
+    },
+    {
+      "module": "FeedbackFiberProbability",
+      "source_id": "src-b5be7775f6d0b1d5-8d6a3ba89790aaa9",
+      "imports": [
+        "FeedbackRequests",
+        "IndependentProductFamilies",
+        "PolicyRowLaw"
+      ]
+    },
+    {
+      "module": "PolicyCylinderProbability",
+      "source_id": "src-b5be7775f6d0b1d5-f8cae22a1772a8db",
+      "imports": [
+        "FeedbackFiberProbability"
+      ]
+    },
+    {
+      "module": "HistoryPathConsistency",
+      "source_id": "src-b5be7775f6d0b1d5-885c17d47cdacb2e",
+      "imports": [
+        "PolicyTranscriptFiber",
+        "Mathlib.Probability.Kernel.IonescuTulcea.Traj"
+      ]
+    },
+    {
+      "module": "PolicyObservedLaw",
+      "source_id": "src-b5be7775f6d0b1d5-57deb20faccdece0",
+      "imports": [
+        "PolicyCylinderProbability",
+        "HistoryPathConsistency"
+      ]
+    },
+    {
+      "module": "PolicyTraceBinding",
+      "source_id": "src-b5be7775f6d0b1d5-d9ff7bf7f9b40f58",
+      "imports": [
+        "PolicyObservedLaw"
+      ]
+    },
+    {
+      "module": "StackActionLaw",
+      "source_id": "src-b5be7775f6d0b1d5-a55b1e5290938b3d",
+      "imports": [
+        "PolicyTraceBinding"
+      ]
+    },
+    {
+      "module": "RecurrentSupport",
+      "source_id": "src-b5be7775f6d0b1d5-5c29ffd4a45828c6",
+      "imports": [
+        "Mathlib"
+      ]
+    },
+    {
+      "module": "RawTapeRecurrence",
+      "source_id": "src-b5be7775f6d0b1d5-96f62c1659c47520",
+      "imports": [
+        "StackActionLaw",
+        "RecurrentSupport",
+        "Mathlib.Probability.BorelCantelli"
+      ]
+    },
+    {
+      "module": "SequentialTapeConsumption",
+      "source_id": "src-b5be7775f6d0b1d5-b9c6d96bb9165139",
+      "imports": [
+        "StackActionLaw",
+        "RecurrentSupport"
+      ]
+    },
+    {
+      "module": "PruningKernel",
+      "source_id": "src-b5be7775f6d0b1d5-c70ade1d8227aae9",
+      "imports": [
+        "Mathlib"
+      ]
+    },
+    {
+      "module": "EndComponents",
+      "source_id": "src-b5be7775f6d0b1d5-5bf2047250b50c64",
+      "imports": [
+        "PruningKernel"
+      ]
+    },
+    {
+      "module": "RecurrentGraph",
+      "source_id": "src-b5be7775f6d0b1d5-b31411ac868c02dc",
+      "imports": [
+        "EndComponents",
+        "RecurrentSupport"
+      ]
+    },
+    {
+      "module": "KilledQueryLaw",
+      "source_id": "src-b5be7775f6d0b1d5-aa1c22e2640a43ea",
+      "imports": [
+        "GenericFiniteQueryMeasure"
+      ]
+    },
+    {
+      "module": "KilledAdaptiveHistory",
+      "source_id": "src-b5be7775f6d0b1d5-ff220a6cc2c0f089",
+      "imports": [
+        "KilledQueryLaw",
+        "PolicyTraceBinding"
+      ]
+    },
+    {
+      "module": "KilledRecurrentTransfer",
+      "source_id": "src-b5be7775f6d0b1d5-eb5908b6f2305f03",
+      "imports": [
+        "KilledAdaptiveHistory",
+        "RecurrentSupport",
+        "PruningKernel"
+      ]
+    },
+    {
+      "module": "FiniteReachability",
+      "source_id": "src-b5be7775f6d0b1d5-34b8f24048b97cc0",
+      "imports": [
+        "Mathlib"
+      ]
+    },
+    {
+      "module": "ExecutablePruning",
+      "source_id": "src-b5be7775f6d0b1d5-e8c5877bcfb46cf9",
+      "imports": [
+        "EndComponents",
+        "FiniteReachability"
+      ]
+    },
+    {
+      "module": "MarkovSupportAdapter",
+      "source_id": "src-b5be7775f6d0b1d5-432424b8aa3c42b5",
+      "imports": [
+        "ExecutablePruning"
+      ]
+    },
+    {
+      "module": "MarkovKilledBridge",
+      "source_id": "src-b5be7775f6d0b1d5-c8aac833e47b5539",
+      "imports": [
+        "KilledRecurrentTransfer",
+        "MarkovSupportAdapter"
+      ]
+    },
+    {
+      "module": "AdaptiveMarkovRecurrentGraph",
+      "source_id": "src-b5be7775f6d0b1d5-d2bfe097a6cddb54",
+      "imports": [
+        "RawTapeRecurrence",
+        "SequentialTapeConsumption",
+        "RecurrentGraph",
+        "MarkovKilledBridge"
+      ]
+    },
+    {
+      "module": "RoundRobinSchedule",
+      "source_id": "src-b5be7775f6d0b1d5-e11d8bcb71f6cfd5",
+      "imports": [
+        "AdaptiveMarkovRecurrentGraph"
+      ]
+    },
+    {
+      "module": "PolicyTailTransfer",
+      "source_id": "src-b5be7775f6d0b1d5-19e692133e7bbcc7",
+      "imports": [
+        "PolicyTraceBinding",
+        "RecurrentSupport"
+      ]
+    },
+    {
+      "module": "RelativeTailTransfer",
+      "source_id": "src-b5be7775f6d0b1d5-c1fd49a16e328825",
+      "imports": [
+        "PolicyTailTransfer"
+      ]
+    },
+    {
+      "module": "SafeSetTailTransfer",
+      "source_id": "src-b5be7775f6d0b1d5-698f930ebb3f0945",
+      "imports": [
+        "RelativeTailTransfer"
+      ]
+    },
+    {
+      "module": "SelfVerifyingSupport",
+      "source_id": "src-b5be7775f6d0b1d5-60abfe13c35c3426",
+      "imports": [
+        "Mathlib.Data.Finset.Powerset",
+        "Mathlib.Data.Finset.Card",
+        "Mathlib.Tactic"
+      ]
+    },
+    {
+      "module": "SeededPolicyNecessity",
+      "source_id": "src-b5be7775f6d0b1d5-0922b3d56f8ed87e",
+      "imports": [
+        "PolicyTailTransfer",
+        "SelfVerifyingSupport"
+      ]
+    },
+    {
+      "module": "FiniteChainAvoidance",
+      "source_id": "src-b5be7775f6d0b1d5-81e4d2e39e2bcaa9",
+      "imports": [
+        "Mathlib"
+      ]
+    },
+    {
+      "module": "dependencies.StatisticalRepair",
+      "source_id": "src-b5be7775f6d0b1d5-000200ebda76d9cd",
+      "imports": [
+        "Mathlib.Data.Real.Sqrt",
+        "Mathlib.Algebra.Order.BigOperators.Ring.Finset",
+        "Mathlib.Tactic"
+      ]
+    },
+    {
+      "module": "HellingerTree",
+      "source_id": "src-b5be7775f6d0b1d5-995477338c662eea",
+      "imports": [
+        "dependencies.StatisticalRepair",
+        "Mathlib.Topology.Instances.ENNReal.Lemmas"
+      ]
+    },
+    {
+      "module": "SubprobHellinger",
+      "source_id": "src-b5be7775f6d0b1d5-a6c093b0ab6cd4b8",
+      "imports": [
+        "HellingerTree"
+      ]
+    },
+    {
+      "module": "DependentHellinger",
+      "source_id": "src-b5be7775f6d0b1d5-f1e174f7c2d7cf7e",
+      "imports": [
+        "SubprobHellinger"
+      ]
+    },
+    {
+      "module": "ResetBudget",
+      "source_id": "src-b5be7775f6d0b1d5-c8de46ebfe5635f3",
+      "imports": [
+        "DependentHellinger"
+      ]
+    },
+    {
+      "module": "ResetLaw",
+      "source_id": "src-b5be7775f6d0b1d5-32105476f336cadb",
+      "imports": [
+        "ResetBudget"
+      ]
+    },
+    {
+      "module": "ResetTrajectory",
+      "source_id": "src-b5be7775f6d0b1d5-cb0ddaccd59454b7",
+      "imports": [
+        "ResetLaw",
+        "Mathlib.Probability.Kernel.IonescuTulcea.Traj",
+        "Mathlib.Probability.ProbabilityMassFunction.Integrals"
+      ]
+    },
+    {
+      "module": "MarkovCharge",
+      "source_id": "src-b5be7775f6d0b1d5-3c0d4c1ef32e27d2",
+      "imports": [
+        "ResetTrajectory"
+      ]
+    },
+    {
+      "module": "FiniteChainTrajectory",
+      "source_id": "src-b5be7775f6d0b1d5-19af88acf2f24fa2",
+      "imports": [
+        "FiniteChainAvoidance",
+        "MarkovCharge"
+      ]
+    },
+    {
+      "module": "InfiniteRecurrence",
+      "source_id": "src-b5be7775f6d0b1d5-3c985618a5cf4953",
+      "imports": [
+        "FiniteChainTrajectory",
+        "RecurrentSupport"
+      ]
+    },
+    {
+      "module": "StationaryPairChain",
+      "source_id": "src-b5be7775f6d0b1d5-74642c7c20e42815",
+      "imports": [
+        "FiniteChainAvoidance",
+        "EndComponents"
+      ]
+    },
+    {
+      "module": "FairComponentParity",
+      "source_id": "src-b5be7775f6d0b1d5-8fdcd85f2c2cddd1",
+      "imports": [
+        "InfiniteRecurrence",
+        "StationaryPairChain",
+        "PruningKernel"
+      ]
+    },
+    {
+      "module": "CheckedTargetOperation",
+      "source_id": "src-b5be7775f6d0b1d5-d85453a2fcdb5147",
+      "imports": [
+        "FairComponentParity",
+        "MarkovSupportAdapter"
+      ]
+    },
+    {
+      "module": "StableSupportParityNecessity",
+      "source_id": "src-b5be7775f6d0b1d5-c5a4fe612fda854d",
+      "imports": [
+        "AdaptiveMarkovRecurrentGraph",
+        "SafeSetTailTransfer",
+        "SeededPolicyNecessity",
+        "CheckedTargetOperation"
+      ]
+    },
+    {
+      "module": "StageTargetOrExit",
+      "source_id": "src-b5be7775f6d0b1d5-65dc291638758842",
+      "imports": [
+        "StableSupportParityNecessity"
+      ]
+    },
+    {
+      "module": "ResidualSeedPosterior",
+      "source_id": "src-b5be7775f6d0b1d5-c09ac9691d2600fc",
+      "imports": [
+        "PolicyTraceBinding"
+      ]
+    },
+    {
+      "module": "ConditionalPrefix",
+      "source_id": "src-b5be7775f6d0b1d5-58d56ae4af974fb4",
+      "imports": [
+        "ResidualSeedPosterior"
+      ]
+    },
+    {
+      "module": "ConditionalContinuationLaw",
+      "source_id": "src-b5be7775f6d0b1d5-14e1d12e6841a6da",
+      "imports": [
+        "ConditionalPrefix"
+      ]
+    },
+    {
+      "module": "PosteriorFeedbackProduct",
+      "source_id": "src-b5be7775f6d0b1d5-4eba1286c4a4355a",
+      "imports": [
+        "ResidualSeedPosterior"
+      ]
+    },
+    {
+      "module": "MarkovSeedPosterior",
+      "source_id": "src-b5be7775f6d0b1d5-c4564b3802157142",
+      "imports": [
+        "PosteriorFeedbackProduct",
+        "MarkovKilledBridge"
+      ]
+    },
+    {
+      "module": "ConditionalKilledContinuation",
+      "source_id": "src-b5be7775f6d0b1d5-a80e1cda5af4cc86",
+      "imports": [
+        "ConditionalContinuationLaw",
+        "KilledRecurrentTransfer",
+        "MarkovSeedPosterior"
+      ]
+    },
+    {
+      "module": "LawfulRestart",
+      "source_id": "src-b5be7775f6d0b1d5-57d657dd6d6788df",
+      "imports": [
+        "StageTargetOrExit",
+        "ConditionalKilledContinuation"
+      ]
+    },
+    {
+      "module": "LawfulProbability",
+      "source_id": "src-b5be7775f6d0b1d5-4c8a4a61365081b1",
+      "imports": [
+        "LawfulRestart"
+      ]
+    },
+    {
+      "module": "ParityTailInvariance",
+      "source_id": "src-b5be7775f6d0b1d5-934401811e675f25",
+      "imports": [
+        "KilledRecurrentTransfer"
+      ]
+    },
+    {
+      "module": "ConditionalAlmostSure",
+      "source_id": "src-b5be7775f6d0b1d5-7852181e218872ee",
+      "imports": [
+        "ConditionalKilledContinuation",
+        "ParityTailInvariance"
+      ]
+    },
+    {
+      "module": "SemanticWinning",
+      "source_id": "src-b5be7775f6d0b1d5-f6f5e7dcb4e54bcd",
+      "imports": [
+        "LawfulProbability",
+        "ConditionalAlmostSure"
+      ]
+    },
+    {
+      "module": "SemanticSafeActions",
+      "source_id": "src-b5be7775f6d0b1d5-432a336c26fe60cf",
+      "imports": [
+        "SemanticWinning"
+      ]
+    },
+    {
+      "module": "HistoryStageSafety",
+      "source_id": "src-b5be7775f6d0b1d5-4f03c5f4b047df6b",
+      "imports": [
+        "SemanticSafeActions"
+      ]
+    },
+    {
+      "module": "RoundRobinPolicy",
+      "source_id": "src-b5be7775f6d0b1d5-c9dca4d5d8b1c81b",
+      "imports": [
+        "RoundRobinSchedule",
+        "HistoryStageSafety"
+      ]
+    },
+    {
+      "module": "RoundRobinRecurrence",
+      "source_id": "src-b5be7775f6d0b1d5-3eb55e8e64e3df02",
+      "imports": [
+        "RoundRobinPolicy"
+      ]
+    },
+    {
+      "module": "RegionAlgorithm",
+      "source_id": "src-b5be7775f6d0b1d5-34dab163af4afa58",
+      "imports": [
+        "StageTargetOrExit"
+      ]
+    },
+    {
+      "module": "GlobalParityNecessity",
+      "source_id": "src-b5be7775f6d0b1d5-3f87706a18d3dbfc",
+      "imports": [
+        "HistoryStageSafety",
+        "RegionAlgorithm"
+      ]
+    },
+    {
+      "module": "ActualTargetPolicy",
+      "source_id": "src-b5be7775f6d0b1d5-c675df1dad8f8b4d",
+      "imports": [
+        "RoundRobinRecurrence",
+        "CheckedTargetOperation",
+        "GlobalParityNecessity"
+      ]
+    },
+    {
+      "module": "StageAvailability",
+      "source_id": "src-b5be7775f6d0b1d5-a00f2a1ccb017411",
+      "imports": [
+        "ActualTargetPolicy"
+      ]
+    },
+    {
+      "module": "FairStageNavigation",
+      "source_id": "src-b5be7775f6d0b1d5-788590471bb4cc9d",
+      "imports": [
+        "ActualTargetPolicy"
+      ]
+    },
+    {
+      "module": "EventualCycling",
+      "source_id": "src-b5be7775f6d0b1d5-94591d75d221b76c",
+      "imports": [
+        "FairStageNavigation"
+      ]
+    },
+    {
+      "module": "ObservedPhaseController",
+      "source_id": "src-b5be7775f6d0b1d5-ca1dc6e00062bf33",
+      "imports": [
+        "StageAvailability",
+        "EventualCycling"
+      ]
+    },
+    {
+      "module": "GeneratedPolicySafety",
+      "source_id": "src-b5be7775f6d0b1d5-290639bd6bd7f6bf",
+      "imports": [
+        "ObservedPhaseController"
+      ]
+    },
+    {
+      "module": "StackPathRegularity",
+      "source_id": "src-b5be7775f6d0b1d5-9970a17f26958b0f",
+      "imports": [
+        "EventualCycling"
+      ]
+    },
+    {
+      "module": "GeneratedRun",
+      "source_id": "src-b5be7775f6d0b1d5-6746e2591438cfb5",
+      "imports": [
+        "GeneratedPolicySafety",
+        "StackPathRegularity"
+      ]
+    },
+    {
+      "module": "MemoryTransitions",
+      "source_id": "src-b5be7775f6d0b1d5-5f4c19d4177f90eb",
+      "imports": [
+        "ObservedPhaseController"
+      ]
+    },
+    {
+      "module": "GeneratedPhaseDynamics",
+      "source_id": "src-b5be7775f6d0b1d5-5e2e2077b8e264fe",
+      "imports": [
+        "GeneratedRun",
+        "MemoryTransitions"
+      ]
+    },
+    {
+      "module": "RawEmpiricalRows",
+      "source_id": "src-b5be7775f6d0b1d5-de00e221dbfbe582",
+      "imports": [
+        "StackActionLaw",
+        "Mathlib.Probability.StrongLaw"
+      ]
+    },
+    {
+      "module": "EmpiricalTailBounds",
+      "source_id": "src-b5be7775f6d0b1d5-b1328066d072c0bc",
+      "imports": [
+        "RawEmpiricalRows"
+      ]
+    },
+    {
+      "module": "ObservedEmpiricalRows",
+      "source_id": "src-b5be7775f6d0b1d5-eca294820eba427d",
+      "imports": [
+        "EmpiricalTailBounds",
+        "SequentialTapeConsumption"
+      ]
+    },
+    {
+      "module": "ObservedRowTest",
+      "source_id": "src-b5be7775f6d0b1d5-a1d0c6427f898b28",
+      "imports": [
+        "ActualTargetPolicy",
+        "ObservedEmpiricalRows"
+      ]
+    },
+    {
+      "module": "EmpiricalTestLaw",
+      "source_id": "src-b5be7775f6d0b1d5-126e91b208802b65",
+      "imports": [
+        "ObservedRowTest"
+      ]
+    },
+    {
+      "module": "PhaseStabilization",
+      "source_id": "src-b5be7775f6d0b1d5-7e4205ec744bdc03",
+      "imports": [
+        "RoundRobinSchedule"
+      ]
+    },
+    {
+      "module": "GeneratedPhaseStability",
+      "source_id": "src-b5be7775f6d0b1d5-249ebd1f5b581bf0",
+      "imports": [
+        "GeneratedPhaseDynamics",
+        "EmpiricalTestLaw",
+        "PhaseStabilization"
+      ]
+    },
+    {
+      "module": "GeneratedParitySuccess",
+      "source_id": "src-b5be7775f6d0b1d5-c5e61459a9c643d7",
+      "imports": [
+        "GeneratedPhaseStability"
+      ]
+    },
+    {
+      "module": "GlobalParitySufficiency",
+      "source_id": "src-b5be7775f6d0b1d5-c206df7de106001f",
+      "imports": [
+        "GeneratedParitySuccess"
+      ]
+    },
+    {
+      "module": "SingletonControllerSpecialization",
+      "source_id": "src-b5be7775f6d0b1d5-b0683e3917e3e653",
+      "imports": [
+        "GlobalParitySufficiency"
+      ]
+    },
+    {
+      "module": "StutteringClock",
+      "source_id": "src-b5be7775f6d0b1d5-876cad5388c87eeb",
+      "imports": [
+        "GlobalParitySufficiency"
+      ]
+    },
+    {
+      "module": "RationalFixture",
+      "source_id": "src-b5be7775f6d0b1d5-794dcf1c82780593",
+      "imports": [
+        "FourBitFraming"
+      ]
+    },
+    {
+      "module": "RationalFixtureContract",
+      "source_id": "src-b5be7775f6d0b1d5-3b1e9266f4bfd884",
+      "imports": [
+        "RationalFixture",
+        "SingletonControllerSpecialization"
+      ]
+    },
+    {
+      "module": "AcceptedFixtureController",
+      "source_id": "src-b5be7775f6d0b1d5-152f0597a3ccc0be",
+      "imports": [
+        "SingletonControllerSpecialization"
+      ]
+    },
+    {
+      "module": "NaturalStateCompiler",
+      "source_id": "src-b5be7775f6d0b1d5-7437b7257c8409b0",
+      "imports": [
+        "FiniteMealyCompiler"
+      ]
+    },
+    {
+      "module": "NaturalCounterFixture",
+      "source_id": "src-b5be7775f6d0b1d5-8bc8d059833e64e8",
+      "imports": [
+        "NaturalStateCompiler"
+      ]
+    },
+    {
+      "module": "HistoryPolicyRuntime",
+      "source_id": "src-b5be7775f6d0b1d5-8cdea0c1c4aa8f66",
+      "imports": [
+        "NaturalStateCompiler"
+      ]
+    },
+    {
+      "module": "RationalEmpiricalGate",
+      "source_id": "src-b5be7775f6d0b1d5-0c401a9d99f06b97",
+      "imports": [
+        "ObservedRowTest"
+      ]
+    },
+    {
+      "module": "EncodedPolicyHistory",
+      "source_id": "src-b5be7775f6d0b1d5-8969387e9ae1de28",
+      "imports": [
+        "HistoryPolicyRuntime",
+        "RationalEmpiricalGate",
+        "AcceptedFixtureController"
+      ]
+    },
+    {
+      "module": "HistoryRuntimeFraming",
+      "source_id": "src-b5be7775f6d0b1d5-9e74c610a7fb3d8e",
+      "imports": [
+        "EncodedPolicyHistory",
+        "FourBitFraming"
+      ]
+    },
+    {
+      "module": "HistorySamplingSemantics",
+      "source_id": "src-b5be7775f6d0b1d5-94dde8a9c8400ef3",
+      "imports": [
+        "HistoryRuntimeFraming"
+      ]
+    },
+    {
+      "module": "RationalGateSufficiency",
+      "source_id": "src-b5be7775f6d0b1d5-d9bbabc825b5db4b",
+      "imports": [
+        "RationalEmpiricalGate",
+        "GlobalParitySufficiency",
+        "AcceptedFixtureController"
+      ]
+    },
+    {
+      "module": "HistoryRuntimeReadback",
+      "source_id": "src-b5be7775f6d0b1d5-bb4ab6e6b90b3067",
+      "imports": [
+        "HistorySamplingSemantics"
+      ]
+    },
+    {
+      "module": "ExplicitWinningRecord",
+      "source_id": "src-b5be7775f6d0b1d5-39482e7abb5f397b",
+      "imports": [
+        "GlobalParitySufficiency"
+      ]
+    },
+    {
+      "module": "ExplicitRecordRuntimeBinding",
+      "source_id": "src-b5be7775f6d0b1d5-e57c0fd1383e753c",
+      "imports": [
+        "ExplicitWinningRecord",
+        "AcceptedFixtureController",
+        "EncodedPolicyHistory"
+      ]
+    },
+    {
+      "module": "PhaseAdvanceSource",
+      "source_id": "src-b5be7775f6d0b1d5-83b9b07053da30b7",
+      "imports": [
+        "ObservedPhaseController",
+        "CodecProgram"
+      ]
+    },
+    {
+      "module": "StatisticUpdateSource",
+      "source_id": "src-b5be7775f6d0b1d5-e9c24ffd189366b1",
+      "imports": [
+        "PhaseAdvanceSource",
+        "RationalEmpiricalGate"
+      ]
+    },
+    {
+      "module": "EmpiricalGateSource",
+      "source_id": "src-b5be7775f6d0b1d5-886e95d0bb705d8c",
+      "imports": [
+        "StatisticUpdateSource"
+      ]
+    },
+    {
+      "module": "CompleteEmpiricalSource",
+      "source_id": "src-b5be7775f6d0b1d5-55d250528544ce12",
+      "imports": [
+        "EmpiricalGateSource"
+      ]
+    },
+    {
+      "module": "SupportUpdateSource",
+      "source_id": "src-b5be7775f6d0b1d5-e1d52552c8daa296",
+      "imports": [
+        "PhaseAdvanceSource"
+      ]
+    },
+    {
+      "module": "PhaseSourceFixtures",
+      "source_id": "src-b5be7775f6d0b1d5-1697ded68730a646",
+      "imports": [
+        "SupportUpdateSource",
+        "CompleteEmpiricalSource",
+        "AcceptedFixtureController"
+      ]
+    },
+    {
+      "module": "CallableSourceRuntime",
+      "source_id": "src-b5be7775f6d0b1d5-5c040d46c89b3439",
+      "imports": [
+        "PhaseSourceFixtures",
+        "UniformComputabilityMachine"
+      ]
+    },
+    {
+      "module": "PhaseUpdateControls",
+      "source_id": "src-b5be7775f6d0b1d5-3af1d612aca94c36",
+      "imports": [
+        "CallableSourceRuntime"
+      ]
+    },
+    {
+      "module": "FiniteSelectorSource",
+      "source_id": "src-b5be7775f6d0b1d5-1fcda0c98402d4e6",
+      "imports": [
+        "PhaseAdvanceSource"
+      ]
+    },
+    {
+      "module": "EncodedHistoryFoldSource",
+      "source_id": "src-b5be7775f6d0b1d5-b33247645d3c01ec",
+      "imports": [
+        "EncodedPolicyHistory",
+        "CallableSourceRuntime"
+      ]
+    },
+    {
+      "module": "ParallelHistorySource",
+      "source_id": "src-b5be7775f6d0b1d5-778d2c82a1042e63",
+      "imports": [
+        "EncodedHistoryFoldSource"
+      ]
+    },
+    {
+      "module": "FullControllerSource",
+      "source_id": "src-b5be7775f6d0b1d5-a731694cd466a9f5",
+      "imports": [
+        "ParallelHistorySource",
+        "FiniteSelectorSource",
+        "CompleteEmpiricalSource"
+      ]
+    },
+    {
+      "module": "FullControllerRuntime",
+      "source_id": "src-b5be7775f6d0b1d5-9f1c469ab3a60611",
+      "imports": [
+        "FullControllerSource",
+        "HistorySamplingSemantics"
+      ]
+    },
+    {
+      "module": "FullControllerFixtureReadback",
+      "source_id": "src-b5be7775f6d0b1d5-c695966f54532c31",
+      "imports": [
+        "FullControllerRuntime"
+      ]
+    },
+    {
+      "module": "SelectorContracts",
+      "source_id": "src-b5be7775f6d0b1d5-0f033084efbe72e7",
+      "imports": [
+        "FiniteSelectorSource"
+      ]
+    },
+    {
+      "module": "FairBlockConstraints",
+      "source_id": "src-b5be7775f6d0b1d5-d437cace19317f02",
+      "imports": [
+        "MealyMeasure",
+        "Mathlib.Algebra.BigOperators.Fin"
+      ]
+    },
+    {
+      "module": "RationalRejectionLaw",
+      "source_id": "src-b5be7775f6d0b1d5-5d4b9242eca7c536",
+      "imports": [
+        "FairBlockConstraints"
+      ]
+    },
+    {
+      "module": "AdaptiveRationalCylinders",
+      "source_id": "src-b5be7775f6d0b1d5-bcb6d234c8073b01",
+      "imports": [
+        "RationalRejectionLaw"
+      ]
+    },
+    {
+      "module": "LiteralSamplerExecution",
+      "source_id": "src-b5be7775f6d0b1d5-ec2302d46c61f0f2",
+      "imports": [
+        "AdaptiveRationalCylinders"
+      ]
+    },
+    {
+      "module": "FairBitSubsequence",
+      "source_id": "src-b5be7775f6d0b1d5-9bee0b4b8f8ca65f",
+      "imports": [
+        "ProductObservationLaw",
+        "FourBitFraming"
+      ]
+    },
+    {
+      "module": "SamplerClockMarginals",
+      "source_id": "src-b5be7775f6d0b1d5-95d6c9363d4d4d4b",
+      "imports": [
+        "LiteralSamplerExecution"
+      ]
+    },
+    {
+      "module": "ReceiptProjectionDefect",
+      "source_id": "src-b5be7775f6d0b1d5-27658fa5794cedbf",
+      "imports": [
+        "RationalRejectionLaw",
+        "FourBitFraming"
+      ]
+    },
+    {
+      "module": "HeldStateProjectionDefect",
+      "source_id": "src-b5be7775f6d0b1d5-43b3ff4e67b2104c",
+      "imports": [
+        "SamplerClockMarginals",
+        "LiteralSamplerExecution",
+        "ReceiptProjectionDefect",
+        "FairBitSubsequence",
+        "StutteringClock",
+        "ObservationChannels"
+      ]
+    },
+    {
+      "module": "ReceiptPathDecoder",
+      "source_id": "src-b5be7775f6d0b1d5-6a24ab72acb6cad6",
+      "imports": [
+        "LiteralSamplerExecution",
+        "HistoryPathConsistency"
+      ]
+    },
+    {
+      "module": "HeldReceiptProjection",
+      "source_id": "src-b5be7775f6d0b1d5-f29e77bc6db92a32",
+      "imports": [
+        "HeldStateProjectionDefect",
+        "ReceiptPathDecoder"
+      ]
+    },
+    {
+      "module": "RuntimeRationalBinding",
+      "source_id": "src-b5be7775f6d0b1d5-88ffcfe949ebf52a",
+      "imports": [
+        "LiteralSamplerExecution",
+        "FairBitSubsequence",
+        "HistorySamplingSemantics",
+        "AcceptedFixtureController"
+      ]
+    },
+    {
+      "module": "RuntimeReceiptPath",
+      "source_id": "src-b5be7775f6d0b1d5-c2fa3af974cf15e0",
+      "imports": [
+        "RuntimeRationalBinding",
+        "ReceiptPathDecoder"
+      ]
+    },
+    {
+      "module": "RationalSamplingControls",
+      "source_id": "src-b5be7775f6d0b1d5-cd8bac250013274c",
+      "imports": [
+        "RuntimeReceiptPath",
+        "HeldReceiptProjection"
+      ]
+    },
+    {
+      "module": "ProjectionSourceReadback",
+      "source_id": "src-b5be7775f6d0b1d5-b35bd27a839cdb7e",
+      "imports": [
+        "HeldReceiptProjection"
+      ]
+    },
+    {
+      "module": "FullControllerReceiptLaw",
+      "source_id": "src-b5be7775f6d0b1d5-6b6f4480076dbc9c",
+      "imports": [
+        "FullControllerRuntime",
+        "RuntimeReceiptPath"
+      ]
+    },
+    {
+      "module": "CanonicalHistoryBinding",
+      "source_id": "src-b5be7775f6d0b1d5-bc0e8c5f8099a743",
+      "imports": [
+        "RuntimeReceiptPath",
+        "MarkovSeedPosterior",
+        "ConditionalPrefix",
+        "PolicyObservedLaw"
+      ]
+    },
+    {
+      "module": "ExplicitRecordSamplerBinding",
+      "source_id": "src-b5be7775f6d0b1d5-3aabe433d2308106",
+      "imports": [
+        "CanonicalHistoryBinding",
+        "ExplicitRecordRuntimeBinding"
+      ]
+    },
+    {
+      "module": "ComputedToleranceSource",
+      "source_id": "src-b5be7775f6d0b1d5-7e8036d38833c54b",
+      "imports": [
+        "FullControllerSource",
+        "RationalGateSufficiency"
+      ]
+    },
+    {
+      "module": "FullControllerCanonicalLaw",
+      "source_id": "src-b5be7775f6d0b1d5-8d34c14e93be7749",
+      "imports": [
+        "FullControllerReceiptLaw",
+        "ComputedToleranceSource",
+        "CanonicalHistoryBinding"
+      ]
+    }
+  ],
+  "module_order": [
+    "PERRefinement",
+    "MealyRefinement",
+    "BlockMismatch",
+    "P02A2.MeasureCore",
+    "Q8Measure",
+    "MealyMeasure",
+    "MealyHitting",
+    "MealyRational",
+    "MealySolver",
+    "TotalVariation",
+    "ObserverAbstraction",
+    "GuardedObserver",
+    "CodecVarint",
+    "P02A2.ObserverCore",
+    "CodecExpr",
+    "CodecStmt",
+    "CodecNumeric",
+    "LoopRenaming",
+    "LoopPrimrec",
+    "PRProgram",
+    "PRComposition",
+    "PRRecursion",
+    "PRHeadRecursion",
+    "PRDerivation",
+    "PRCoverage",
+    "PRSpecialize",
+    "CodecProgram",
+    "CodecPrimrec",
+    "UniformComputabilityNumeric",
+    "UniformComputabilityMachine",
+    "Q8Machine",
+    "Q8Compiler",
+    "IndexedObserver",
+    "MealyAtoms",
+    "MealyMeasureFixtures",
+    "Q8ObserverAbstraction",
+    "ParsedObserverAbstraction",
+    "UniformRuntimeTrace",
+    "IndexedRuntime",
+    "FiniteMealyCompiler",
+    "ObservationChannels",
+    "FourBitFraming",
+    "GenericFiniteQueryLocality",
+    "GenericFiniteQueryMeasure",
+    "PolicyRowEvaluator",
+    "PolicyTranscriptFiber",
+    "FeedbackRequests",
+    "ProductObservationLaw",
+    "IndependentProductFamilies",
+    "GenericQueryReference",
+    "PolicyRowLaw",
+    "FeedbackFiberProbability",
+    "PolicyCylinderProbability",
+    "HistoryPathConsistency",
+    "PolicyObservedLaw",
+    "PolicyTraceBinding",
+    "StackActionLaw",
+    "RecurrentSupport",
+    "RawTapeRecurrence",
+    "SequentialTapeConsumption",
+    "PruningKernel",
+    "EndComponents",
+    "RecurrentGraph",
+    "KilledQueryLaw",
+    "KilledAdaptiveHistory",
+    "KilledRecurrentTransfer",
+    "FiniteReachability",
+    "ExecutablePruning",
+    "MarkovSupportAdapter",
+    "MarkovKilledBridge",
+    "AdaptiveMarkovRecurrentGraph",
+    "RoundRobinSchedule",
+    "PolicyTailTransfer",
+    "RelativeTailTransfer",
+    "SafeSetTailTransfer",
+    "SelfVerifyingSupport",
+    "SeededPolicyNecessity",
+    "FiniteChainAvoidance",
+    "dependencies.StatisticalRepair",
+    "HellingerTree",
+    "SubprobHellinger",
+    "DependentHellinger",
+    "ResetBudget",
+    "ResetLaw",
+    "ResetTrajectory",
+    "MarkovCharge",
+    "FiniteChainTrajectory",
+    "InfiniteRecurrence",
+    "StationaryPairChain",
+    "FairComponentParity",
+    "CheckedTargetOperation",
+    "StableSupportParityNecessity",
+    "StageTargetOrExit",
+    "ResidualSeedPosterior",
+    "ConditionalPrefix",
+    "ConditionalContinuationLaw",
+    "PosteriorFeedbackProduct",
+    "MarkovSeedPosterior",
+    "ConditionalKilledContinuation",
+    "LawfulRestart",
+    "LawfulProbability",
+    "ParityTailInvariance",
+    "ConditionalAlmostSure",
+    "SemanticWinning",
+    "SemanticSafeActions",
+    "HistoryStageSafety",
+    "RoundRobinPolicy",
+    "RoundRobinRecurrence",
+    "RegionAlgorithm",
+    "GlobalParityNecessity",
+    "ActualTargetPolicy",
+    "StageAvailability",
+    "FairStageNavigation",
+    "EventualCycling",
+    "ObservedPhaseController",
+    "GeneratedPolicySafety",
+    "StackPathRegularity",
+    "GeneratedRun",
+    "MemoryTransitions",
+    "GeneratedPhaseDynamics",
+    "RawEmpiricalRows",
+    "EmpiricalTailBounds",
+    "ObservedEmpiricalRows",
+    "ObservedRowTest",
+    "EmpiricalTestLaw",
+    "PhaseStabilization",
+    "GeneratedPhaseStability",
+    "GeneratedParitySuccess",
+    "GlobalParitySufficiency",
+    "SingletonControllerSpecialization",
+    "StutteringClock",
+    "RationalFixture",
+    "RationalFixtureContract",
+    "AcceptedFixtureController",
+    "NaturalStateCompiler",
+    "NaturalCounterFixture",
+    "HistoryPolicyRuntime",
+    "RationalEmpiricalGate",
+    "EncodedPolicyHistory",
+    "HistoryRuntimeFraming",
+    "HistorySamplingSemantics",
+    "RationalGateSufficiency",
+    "HistoryRuntimeReadback",
+    "ExplicitWinningRecord",
+    "ExplicitRecordRuntimeBinding",
+    "PhaseAdvanceSource",
+    "StatisticUpdateSource",
+    "EmpiricalGateSource",
+    "CompleteEmpiricalSource",
+    "SupportUpdateSource",
+    "PhaseSourceFixtures",
+    "CallableSourceRuntime",
+    "PhaseUpdateControls",
+    "FiniteSelectorSource",
+    "EncodedHistoryFoldSource",
+    "ParallelHistorySource",
+    "FullControllerSource",
+    "FullControllerRuntime",
+    "FullControllerFixtureReadback",
+    "SelectorContracts",
+    "FairBlockConstraints",
+    "RationalRejectionLaw",
+    "AdaptiveRationalCylinders",
+    "LiteralSamplerExecution",
+    "FairBitSubsequence",
+    "SamplerClockMarginals",
+    "ReceiptProjectionDefect",
+    "HeldStateProjectionDefect",
+    "ReceiptPathDecoder",
+    "HeldReceiptProjection",
+    "RuntimeRationalBinding",
+    "RuntimeReceiptPath",
+    "RationalSamplingControls",
+    "ProjectionSourceReadback",
+    "FullControllerReceiptLaw",
+    "CanonicalHistoryBinding",
+    "ExplicitRecordSamplerBinding",
+    "ComputedToleranceSource",
+    "FullControllerCanonicalLaw"
+  ],
+  "targets": [
+    {
+      "name": "Orthemology.RuntimeBridge.transition_value",
+      "module": "FiniteMealyCompiler"
+    },
+    {
+      "name": "Orthemology.RuntimeBridge.transition_frame",
+      "module": "FiniteMealyCompiler"
+    },
+    {
+      "name": "Orthemology.RuntimeBridge.dispatch_value",
+      "module": "FiniteMealyCompiler"
+    },
+    {
+      "name": "Orthemology.RuntimeBridge.row_value",
+      "module": "FiniteMealyCompiler"
+    },
+    {
+      "name": "Orthemology.RuntimeBridge.step_value",
+      "module": "FiniteMealyCompiler"
+    },
+    {
+      "name": "Orthemology.RuntimeBridge.dispatch_frame",
+      "module": "FiniteMealyCompiler"
+    },
+    {
+      "name": "Orthemology.RuntimeBridge.step_frame",
+      "module": "FiniteMealyCompiler"
+    },
+    {
+      "name": "Orthemology.RuntimeBridge.loop_inputs",
+      "module": "FiniteMealyCompiler"
+    },
+    {
+      "name": "Orthemology.RuntimeBridge.loop_state",
+      "module": "FiniteMealyCompiler"
+    },
+    {
+      "name": "Orthemology.RuntimeBridge.loop_output",
+      "module": "FiniteMealyCompiler"
+    },
+    {
+      "name": "Orthemology.RuntimeBridge.decode_compiled",
+      "module": "FiniteMealyCompiler"
+    },
+    {
+      "name": "Orthemology.RuntimeBridge.evaluate_compiled",
+      "module": "FiniteMealyCompiler"
+    },
+    {
+      "name": "Orthemology.RuntimeBridge.prefix_half",
+      "module": "FiniteMealyCompiler"
+    },
+    {
+      "name": "Orthemology.RuntimeBridge.prefix_last",
+      "module": "FiniteMealyCompiler"
+    },
+    {
+      "name": "Orthemology.RuntimeBridge.prefix_digit",
+      "module": "FiniteMealyCompiler"
+    },
+    {
+      "name": "Orthemology.RuntimeBridge.wordBits_prefix",
+      "module": "FiniteMealyCompiler"
+    },
+    {
+      "name": "Orthemology.RuntimeBridge.wordBits_output",
+      "module": "FiniteMealyCompiler"
+    },
+    {
+      "name": "Orthemology.RuntimeBridge.compiled_source_output",
+      "module": "FiniteMealyCompiler"
+    },
+    {
+      "name": "Orthemology.RuntimeBridge.compiled_runtime_output",
+      "module": "FiniteMealyCompiler"
+    },
+    {
+      "name": "Orthemology.RuntimeBridge.compiled_runtime_law",
+      "module": "FiniteMealyCompiler"
+    },
+    {
+      "name": "Orthemology.RuntimeBridge.compiled_runtime_defect",
+      "module": "FiniteMealyCompiler"
+    },
+    {
+      "name": "Orthemology.RuntimeBridge.number_state",
+      "module": "ObservationChannels"
+    },
+    {
+      "name": "Orthemology.RuntimeBridge.number_output",
+      "module": "ObservationChannels"
+    },
+    {
+      "name": "Orthemology.RuntimeBridge.numbered_runtime_output",
+      "module": "ObservationChannels"
+    },
+    {
+      "name": "Orthemology.RuntimeBridge.runtime_channels_exact",
+      "module": "ObservationChannels"
+    },
+    {
+      "name": "Orthemology.RuntimeBridge.runtime_channels_law",
+      "module": "ObservationChannels"
+    },
+    {
+      "name": "Orthemology.RuntimeBridge.runtime_channels_measurable",
+      "module": "ObservationChannels"
+    },
+    {
+      "name": "Orthemology.RuntimeBridge.decoded_runtime_probability",
+      "module": "ObservationChannels"
+    },
+    {
+      "name": "Orthemology.RuntimeBridge.decoded_runtime_law",
+      "module": "ObservationChannels"
+    },
+    {
+      "name": "Orthemology.RuntimeBridge.four_frame_state",
+      "module": "FourBitFraming"
+    },
+    {
+      "name": "Orthemology.RuntimeBridge.four_frame_output",
+      "module": "FourBitFraming"
+    },
+    {
+      "name": "Orthemology.RuntimeBridge.Controller.selectedPolicy_measurable",
+      "module": "SingletonControllerSpecialization"
+    },
+    {
+      "name": "Orthemology.RuntimeBridge.Controller.pair_selectedPolicy",
+      "module": "SingletonControllerSpecialization"
+    },
+    {
+      "name": "Orthemology.RuntimeBridge.Controller.singleton_lawful_action",
+      "module": "SingletonControllerSpecialization"
+    },
+    {
+      "name": "Orthemology.RuntimeBridge.Controller.singleton_supported_action",
+      "module": "SingletonControllerSpecialization"
+    },
+    {
+      "name": "Orthemology.RuntimeBridge.Controller.singleton_supported_histories",
+      "module": "SingletonControllerSpecialization"
+    },
+    {
+      "name": "Orthemology.RuntimeBridge.Controller.generated_singleton_histories",
+      "module": "SingletonControllerSpecialization"
+    },
+    {
+      "name": "Orthemology.RuntimeBridge.Controller.markov_law_stack",
+      "module": "SingletonControllerSpecialization"
+    },
+    {
+      "name": "Orthemology.RuntimeBridge.Controller.singleton_law_exact",
+      "module": "SingletonControllerSpecialization"
+    },
+    {
+      "name": "Orthemology.RuntimeBridge.Controller.generated_singleton_law",
+      "module": "SingletonControllerSpecialization"
+    },
+    {
+      "name": "Orthemology.RuntimeBridge.Clock.recurrent_iff",
+      "module": "StutteringClock"
+    },
+    {
+      "name": "Orthemology.RuntimeBridge.Clock.recurrent_set_exact",
+      "module": "StutteringClock"
+    },
+    {
+      "name": "Orthemology.RuntimeBridge.Clock.parity_exact",
+      "module": "StutteringClock"
+    },
+    {
+      "name": "Orthemology.RuntimeBridge.Clock.block_charge_exact",
+      "module": "StutteringClock"
+    },
+    {
+      "name": "Orthemology.RuntimeBridge.Fixture.runtime0_exact",
+      "module": "RationalFixture"
+    },
+    {
+      "name": "Orthemology.RuntimeBridge.Fixture.frame0_exact",
+      "module": "RationalFixture"
+    },
+    {
+      "name": "Orthemology.RuntimeBridge.Fixture.runtime1_exact",
+      "module": "RationalFixture"
+    },
+    {
+      "name": "Orthemology.RuntimeBridge.Fixture.frame1_exact",
+      "module": "RationalFixture"
+    },
+    {
+      "name": "Orthemology.RuntimeBridge.Fixture.core0_next_spec",
+      "module": "RationalFixtureContract"
+    },
+    {
+      "name": "Orthemology.RuntimeBridge.Fixture.core1_next_spec",
+      "module": "RationalFixtureContract"
+    },
+    {
+      "name": "Orthemology.RuntimeBridge.Fixture.core0_observe_spec",
+      "module": "RationalFixtureContract"
+    },
+    {
+      "name": "Orthemology.RuntimeBridge.Fixture.core1_observe_spec",
+      "module": "RationalFixtureContract"
+    },
+    {
+      "name": "Orthemology.RuntimeBridge.Fixture.runtime0_frames",
+      "module": "RationalFixtureContract"
+    },
+    {
+      "name": "Orthemology.RuntimeBridge.Fixture.runtime1_frames",
+      "module": "RationalFixtureContract"
+    },
+    {
+      "name": "Orthemology.RuntimeBridge.Fixture.reported_action_is_old",
+      "module": "RationalFixtureContract"
+    },
+    {
+      "name": "Orthemology.RuntimeBridge.Fixture.wait_filler",
+      "module": "RationalFixtureContract"
+    },
+    {
+      "name": "Orthemology.RuntimeBridge.Fixture.initial_row0_counts",
+      "module": "RationalFixtureContract"
+    },
+    {
+      "name": "Orthemology.RuntimeBridge.Fixture.initial_row1_counts",
+      "module": "RationalFixtureContract"
+    },
+    {
+      "name": "Orthemology.RuntimeBridge.Controller.Fixture.selected_lawful",
+      "module": "AcceptedFixtureController"
+    },
+    {
+      "name": "Orthemology.RuntimeBridge.Controller.Fixture.every_path_zero_parity",
+      "module": "AcceptedFixtureController"
+    },
+    {
+      "name": "Orthemology.RuntimeBridge.Controller.Fixture.initial_winning",
+      "module": "AcceptedFixtureController"
+    },
+    {
+      "name": "Orthemology.RuntimeBridge.Controller.Fixture.accepted_fixture_law",
+      "module": "AcceptedFixtureController"
+    },
+    {
+      "name": "Orthemology.RuntimeBridge.Natural.args_fresh",
+      "module": "NaturalStateCompiler"
+    },
+    {
+      "name": "Orthemology.RuntimeBridge.Natural.bit_value",
+      "module": "NaturalStateCompiler"
+    },
+    {
+      "name": "Orthemology.RuntimeBridge.Natural.args_value",
+      "module": "NaturalStateCompiler"
+    },
+    {
+      "name": "Orthemology.RuntimeBridge.Natural.step_value",
+      "module": "NaturalStateCompiler"
+    },
+    {
+      "name": "Orthemology.RuntimeBridge.Natural.step_frame",
+      "module": "NaturalStateCompiler"
+    },
+    {
+      "name": "Orthemology.RuntimeBridge.Natural.loop_inputs",
+      "module": "NaturalStateCompiler"
+    },
+    {
+      "name": "Orthemology.RuntimeBridge.Natural.loop_state",
+      "module": "NaturalStateCompiler"
+    },
+    {
+      "name": "Orthemology.RuntimeBridge.Natural.loop_output",
+      "module": "NaturalStateCompiler"
+    },
+    {
+      "name": "Orthemology.RuntimeBridge.Natural.evaluate_compiled",
+      "module": "NaturalStateCompiler"
+    },
+    {
+      "name": "Orthemology.RuntimeBridge.Natural.compiled_source_output",
+      "module": "NaturalStateCompiler"
+    },
+    {
+      "name": "Orthemology.RuntimeBridge.Natural.compiled_runtime_output",
+      "module": "NaturalStateCompiler"
+    },
+    {
+      "name": "Orthemology.RuntimeBridge.Natural.compiled_runtime_law",
+      "module": "NaturalStateCompiler"
+    },
+    {
+      "name": "Orthemology.RuntimeBridge.Natural.implemented_output_measurable",
+      "module": "NaturalStateCompiler"
+    },
+    {
+      "name": "Orthemology.RuntimeBridge.Natural.Fixture.counter_implemented",
+      "module": "NaturalCounterFixture"
+    },
+    {
+      "name": "Orthemology.RuntimeBridge.Natural.Fixture.literal_unbounded_state",
+      "module": "NaturalCounterFixture"
+    },
+    {
+      "name": "Orthemology.RuntimeBridge.Natural.Fixture.counter_runtime_exact",
+      "module": "NaturalCounterFixture"
+    },
+    {
+      "name": "Orthemology.RuntimeBridge.HistoryRuntime.policy_args_fresh",
+      "module": "HistoryPolicyRuntime"
+    },
+    {
+      "name": "Orthemology.RuntimeBridge.HistoryRuntime.prepare_values",
+      "module": "HistoryPolicyRuntime"
+    },
+    {
+      "name": "Orthemology.RuntimeBridge.HistoryRuntime.bitNat_mod",
+      "module": "HistoryPolicyRuntime"
+    },
+    {
+      "name": "Orthemology.RuntimeBridge.HistoryRuntime.source_value",
+      "module": "HistoryPolicyRuntime"
+    },
+    {
+      "name": "Orthemology.RuntimeBridge.HistoryRuntime.proposal_value",
+      "module": "HistoryPolicyRuntime"
+    },
+    {
+      "name": "Orthemology.RuntimeBridge.HistoryRuntime.accept_value",
+      "module": "HistoryPolicyRuntime"
+    },
+    {
+      "name": "Orthemology.RuntimeBridge.HistoryRuntime.receipt_value",
+      "module": "HistoryPolicyRuntime"
+    },
+    {
+      "name": "Orthemology.RuntimeBridge.HistoryRuntime.event_value",
+      "module": "HistoryPolicyRuntime"
+    },
+    {
+      "name": "Orthemology.RuntimeBridge.HistoryRuntime.core_value",
+      "module": "HistoryPolicyRuntime"
+    },
+    {
+      "name": "Orthemology.RuntimeBridge.HistoryRuntime.next_body_value",
+      "module": "HistoryPolicyRuntime"
+    },
+    {
+      "name": "Orthemology.RuntimeBridge.HistoryRuntime.output_body_value",
+      "module": "HistoryPolicyRuntime"
+    },
+    {
+      "name": "Orthemology.RuntimeBridge.HistoryRuntime.wrapper_implemented",
+      "module": "HistoryPolicyRuntime"
+    },
+    {
+      "name": "Orthemology.RuntimeBridge.HistoryRuntime.actual_history_runtime",
+      "module": "HistoryPolicyRuntime"
+    },
+    {
+      "name": "Orthemology.RuntimeBridge.RationalGate.count_eq_mass",
+      "module": "RationalEmpiricalGate"
+    },
+    {
+      "name": "Orthemology.RuntimeBridge.RationalGate.frequency_cast",
+      "module": "RationalEmpiricalGate"
+    },
+    {
+      "name": "Orthemology.RuntimeBridge.RationalGate.reject_exact",
+      "module": "RationalEmpiricalGate"
+    },
+    {
+      "name": "Orthemology.RuntimeBridge.RationalGate.positive_gap_member",
+      "module": "RationalEmpiricalGate"
+    },
+    {
+      "name": "Orthemology.RuntimeBridge.RationalGate.tolerance_spec",
+      "module": "RationalEmpiricalGate"
+    },
+    {
+      "name": "Orthemology.RuntimeBridge.RationalGate.tolerance_real_spec",
+      "module": "RationalEmpiricalGate"
+    },
+    {
+      "name": "Orthemology.RuntimeBridge.HistoryRuntime.encoded_positive",
+      "module": "EncodedPolicyHistory"
+    },
+    {
+      "name": "Orthemology.RuntimeBridge.HistoryRuntime.append_tail",
+      "module": "EncodedPolicyHistory"
+    },
+    {
+      "name": "Orthemology.RuntimeBridge.HistoryRuntime.append_receipt",
+      "module": "EncodedPolicyHistory"
+    },
+    {
+      "name": "Orthemology.RuntimeBridge.HistoryRuntime.observed_history_exact",
+      "module": "EncodedPolicyHistory"
+    },
+    {
+      "name": "Orthemology.RuntimeBridge.HistoryRuntime.selector_program_exact",
+      "module": "EncodedPolicyHistory"
+    },
+    {
+      "name": "Orthemology.RuntimeBridge.HistoryRuntime.selector_retained_policy",
+      "module": "EncodedPolicyHistory"
+    },
+    {
+      "name": "Orthemology.RuntimeBridge.HistoryRuntime.encode_history_injective",
+      "module": "EncodedPolicyHistory"
+    },
+    {
+      "name": "Orthemology.RuntimeBridge.HistoryRuntime.encoded_length_lower",
+      "module": "EncodedPolicyHistory"
+    },
+    {
+      "name": "Orthemology.RuntimeBridge.HistoryRuntime.event_bound",
+      "module": "HistoryRuntimeFraming"
+    },
+    {
+      "name": "Orthemology.RuntimeBridge.HistoryRuntime.event_bits_exact",
+      "module": "HistoryRuntimeFraming"
+    },
+    {
+      "name": "Orthemology.RuntimeBridge.HistoryRuntime.packed_core",
+      "module": "HistoryRuntimeFraming"
+    },
+    {
+      "name": "Orthemology.RuntimeBridge.HistoryRuntime.packed_phase",
+      "module": "HistoryRuntimeFraming"
+    },
+    {
+      "name": "Orthemology.RuntimeBridge.HistoryRuntime.packed_pending",
+      "module": "HistoryRuntimeFraming"
+    },
+    {
+      "name": "Orthemology.RuntimeBridge.HistoryRuntime.boundary_phase",
+      "module": "HistoryRuntimeFraming"
+    },
+    {
+      "name": "Orthemology.RuntimeBridge.HistoryRuntime.program_waits_skip_policy",
+      "module": "HistoryRuntimeFraming"
+    },
+    {
+      "name": "Orthemology.RuntimeBridge.HistoryRuntime.history_frame_exact",
+      "module": "HistoryRuntimeFraming"
+    },
+    {
+      "name": "Orthemology.RuntimeBridge.HistoryRuntime.actual_history_frames",
+      "module": "HistoryRuntimeFraming"
+    },
+    {
+      "name": "Orthemology.RuntimeBridge.HistoryRuntime.encoded_fields",
+      "module": "HistorySamplingSemantics"
+    },
+    {
+      "name": "Orthemology.RuntimeBridge.HistoryRuntime.encoded_proposal",
+      "module": "HistorySamplingSemantics"
+    },
+    {
+      "name": "Orthemology.RuntimeBridge.HistoryRuntime.encoded_receipt",
+      "module": "HistorySamplingSemantics"
+    },
+    {
+      "name": "Orthemology.RuntimeBridge.HistoryRuntime.encoded_receipt_value",
+      "module": "HistorySamplingSemantics"
+    },
+    {
+      "name": "Orthemology.RuntimeBridge.HistoryRuntime.encoded_history_next",
+      "module": "HistorySamplingSemantics"
+    },
+    {
+      "name": "Orthemology.RuntimeBridge.HistoryRuntime.encoded_history_observation",
+      "module": "HistorySamplingSemantics"
+    },
+    {
+      "name": "Orthemology.RuntimeBridge.HistoryRuntime.history_state_exact",
+      "module": "HistorySamplingSemantics"
+    },
+    {
+      "name": "Orthemology.RuntimeBridge.HistoryRuntime.runtime_observed_history_frames",
+      "module": "HistorySamplingSemantics"
+    },
+    {
+      "name": "Orthemology.RuntimeBridge.RationalGate.rational_gate_parity",
+      "module": "RationalGateSufficiency"
+    },
+    {
+      "name": "Orthemology.RuntimeBridge.RationalGate.Controls.tolerance_substitution_changes_decision",
+      "module": "RationalGateSufficiency"
+    },
+    {
+      "name": "Orthemology.RuntimeBridge.Controller.Fixture.explicit_record_history_law",
+      "module": "ExplicitRecordRuntimeBinding"
+    },
+    {
+      "name": "Orthemology.RuntimeBridge.Controller.Fixture.source_selector_history_identity",
+      "module": "ExplicitRecordRuntimeBinding"
+    },
+    {
+      "name": "Orthemology.RuntimeBridge.PhaseUpdate.support_code_injective",
+      "module": "PhaseAdvanceSource"
+    },
+    {
+      "name": "Orthemology.RuntimeBridge.PhaseUpdate.target_state_bit_exact",
+      "module": "PhaseAdvanceSource"
+    },
+    {
+      "name": "Orthemology.RuntimeBridge.PhaseUpdate.phase_source_exact",
+      "module": "PhaseAdvanceSource"
+    },
+    {
+      "name": "Orthemology.RuntimeBridge.PhaseUpdate.target_source_exact",
+      "module": "PhaseAdvanceSource"
+    },
+    {
+      "name": "Orthemology.RuntimeBridge.PhaseUpdate.pair_code_injective",
+      "module": "StatisticUpdateSource"
+    },
+    {
+      "name": "Orthemology.RuntimeBridge.PhaseUpdate.bit_nat_injective",
+      "module": "StatisticUpdateSource"
+    },
+    {
+      "name": "Orthemology.RuntimeBridge.PhaseUpdate.count_source_exact",
+      "module": "StatisticUpdateSource"
+    },
+    {
+      "name": "Orthemology.RuntimeBridge.PhaseUpdate.symbol_source_exact",
+      "module": "StatisticUpdateSource"
+    },
+    {
+      "name": "Orthemology.RuntimeBridge.PhaseUpdate.symbol_source_real_mass",
+      "module": "StatisticUpdateSource"
+    },
+    {
+      "name": "Orthemology.RuntimeBridge.PhaseUpdate.distance_cast",
+      "module": "EmpiricalGateSource"
+    },
+    {
+      "name": "Orthemology.RuntimeBridge.PhaseUpdate.rational_cross_gate",
+      "module": "EmpiricalGateSource"
+    },
+    {
+      "name": "Orthemology.RuntimeBridge.PhaseUpdate.gate_source_exact",
+      "module": "EmpiricalGateSource"
+    },
+    {
+      "name": "Orthemology.RuntimeBridge.PhaseUpdate.coord_pair_inverse",
+      "module": "CompleteEmpiricalSource"
+    },
+    {
+      "name": "Orthemology.RuntimeBridge.PhaseUpdate.coord_receipt_inverse",
+      "module": "CompleteEmpiricalSource"
+    },
+    {
+      "name": "Orthemology.RuntimeBridge.PhaseUpdate.statistic_input_coordinate",
+      "module": "CompleteEmpiricalSource"
+    },
+    {
+      "name": "Orthemology.RuntimeBridge.PhaseUpdate.coordinate_expr_value",
+      "module": "CompleteEmpiricalSource"
+    },
+    {
+      "name": "Orthemology.RuntimeBridge.PhaseUpdate.sum_expr_value",
+      "module": "CompleteEmpiricalSource"
+    },
+    {
+      "name": "Orthemology.RuntimeBridge.PhaseUpdate.positive_bit_sum",
+      "module": "CompleteEmpiricalSource"
+    },
+    {
+      "name": "Orthemology.RuntimeBridge.PhaseUpdate.empirical_source_exact",
+      "module": "CompleteEmpiricalSource"
+    },
+    {
+      "name": "Orthemology.RuntimeBridge.PhaseUpdate.empirical_source_real_exact",
+      "module": "CompleteEmpiricalSource"
+    },
+    {
+      "name": "Orthemology.RuntimeBridge.PhaseUpdate.intersection_bits_exact",
+      "module": "SupportUpdateSource"
+    },
+    {
+      "name": "Orthemology.RuntimeBridge.PhaseUpdate.support_lookup_value",
+      "module": "SupportUpdateSource"
+    },
+    {
+      "name": "Orthemology.RuntimeBridge.PhaseUpdate.support_source_exact",
+      "module": "SupportUpdateSource"
+    },
+    {
+      "name": "Orthemology.RuntimeBridge.PhaseUpdate.Fixture.fixture_coefficients",
+      "module": "PhaseSourceFixtures"
+    },
+    {
+      "name": "Orthemology.RuntimeBridge.PhaseUpdate.Fixture.fixture_empirical_exact",
+      "module": "PhaseSourceFixtures"
+    },
+    {
+      "name": "Orthemology.RuntimeBridge.PhaseUpdate.Fixture.reset_precedes_rejection",
+      "module": "PhaseSourceFixtures"
+    },
+    {
+      "name": "Orthemology.RuntimeBridge.PhaseUpdate.Fixture.empty_target_differs_from_none",
+      "module": "PhaseSourceFixtures"
+    },
+    {
+      "name": "Orthemology.RuntimeBridge.PhaseUpdate.readRegs_missing",
+      "module": "CallableSourceRuntime"
+    },
+    {
+      "name": "Orthemology.RuntimeBridge.PhaseUpdate.readRegs_member",
+      "module": "CallableSourceRuntime"
+    },
+    {
+      "name": "Orthemology.RuntimeBridge.PhaseUpdate.readRegs_inputs",
+      "module": "CallableSourceRuntime"
+    },
+    {
+      "name": "Orthemology.RuntimeBridge.PhaseUpdate.callFuel_complete",
+      "module": "CallableSourceRuntime"
+    },
+    {
+      "name": "Orthemology.RuntimeBridge.PhaseUpdate.callFuel_sound",
+      "module": "CallableSourceRuntime"
+    },
+    {
+      "name": "Orthemology.RuntimeBridge.PhaseUpdate.actual_phase_update",
+      "module": "CallableSourceRuntime"
+    },
+    {
+      "name": "Orthemology.RuntimeBridge.PhaseUpdate.actual_fixture_empirical",
+      "module": "CallableSourceRuntime"
+    },
+    {
+      "name": "Orthemology.RuntimeBridge.PhaseUpdate.Controls.no_zero_fuel_value",
+      "module": "PhaseUpdateControls"
+    },
+    {
+      "name": "Orthemology.RuntimeBridge.PhaseUpdate.Controls.wrong_callable_arity",
+      "module": "PhaseUpdateControls"
+    },
+    {
+      "name": "Orthemology.RuntimeBridge.PhaseUpdate.Controls.binary_observer_wrong_arity",
+      "module": "PhaseUpdateControls"
+    },
+    {
+      "name": "Orthemology.RuntimeBridge.PhaseUpdate.FiniteSelectorSource.cycle_mod_two",
+      "module": "FiniteSelectorSource"
+    },
+    {
+      "name": "Orthemology.RuntimeBridge.PhaseUpdate.FiniteSelectorSource.cycle_value_exact",
+      "module": "FiniteSelectorSource"
+    },
+    {
+      "name": "Orthemology.RuntimeBridge.PhaseUpdate.FiniteSelectorSource.cycle_source_exact",
+      "module": "FiniteSelectorSource"
+    },
+    {
+      "name": "Orthemology.RuntimeBridge.PhaseUpdate.FiniteSelectorSource.phase_candidate_source_exact",
+      "module": "FiniteSelectorSource"
+    },
+    {
+      "name": "Orthemology.RuntimeBridge.PhaseUpdate.FiniteSelectorSource.bind_source_exact",
+      "module": "FiniteSelectorSource"
+    },
+    {
+      "name": "Orthemology.RuntimeBridge.PhaseUpdate.FiniteSelectorSource.normalize_retained_source_exact",
+      "module": "FiniteSelectorSource"
+    },
+    {
+      "name": "Orthemology.RuntimeBridge.PhaseUpdate.FiniteSelectorSource.active_pairs_source_exact",
+      "module": "FiniteSelectorSource"
+    },
+    {
+      "name": "Orthemology.RuntimeBridge.PhaseUpdate.FiniteSelectorSource.retained_actions_code",
+      "module": "FiniteSelectorSource"
+    },
+    {
+      "name": "Orthemology.RuntimeBridge.PhaseUpdate.FiniteSelectorSource.action_cycle_source_exact",
+      "module": "FiniteSelectorSource"
+    },
+    {
+      "name": "Orthemology.RuntimeBridge.PhaseUpdate.HistoryFold.consume_complete",
+      "module": "EncodedHistoryFoldSource"
+    },
+    {
+      "name": "Orthemology.RuntimeBridge.PhaseUpdate.HistoryFold.fold_body_exact",
+      "module": "EncodedHistoryFoldSource"
+    },
+    {
+      "name": "Orthemology.RuntimeBridge.PhaseUpdate.HistoryFold.loop_exact",
+      "module": "EncodedHistoryFoldSource"
+    },
+    {
+      "name": "Orthemology.RuntimeBridge.PhaseUpdate.HistoryFold.length_le_code",
+      "module": "EncodedHistoryFoldSource"
+    },
+    {
+      "name": "Orthemology.RuntimeBridge.PhaseUpdate.HistoryFold.append_digit",
+      "module": "EncodedHistoryFoldSource"
+    },
+    {
+      "name": "Orthemology.RuntimeBridge.PhaseUpdate.HistoryFold.reverse_step_exact",
+      "module": "EncodedHistoryFoldSource"
+    },
+    {
+      "name": "Orthemology.RuntimeBridge.PhaseUpdate.HistoryFold.reverse_source_exact",
+      "module": "EncodedHistoryFoldSource"
+    },
+    {
+      "name": "Orthemology.RuntimeBridge.PhaseUpdate.HistoryFold.data_args_fresh",
+      "module": "EncodedHistoryFoldSource"
+    },
+    {
+      "name": "Orthemology.RuntimeBridge.PhaseUpdate.HistoryFold.reverse_args_fresh",
+      "module": "EncodedHistoryFoldSource"
+    },
+    {
+      "name": "Orthemology.RuntimeBridge.PhaseUpdate.HistoryFold.compiled_history_exact",
+      "module": "EncodedHistoryFoldSource"
+    },
+    {
+      "name": "Orthemology.RuntimeBridge.PhaseUpdate.HistoryFold.collect_correct",
+      "module": "ParallelHistorySource"
+    },
+    {
+      "name": "Orthemology.RuntimeBridge.PhaseUpdate.HistoryFold.copy_buffers_correct",
+      "module": "ParallelHistorySource"
+    },
+    {
+      "name": "Orthemology.RuntimeBridge.PhaseUpdate.HistoryFold.parallel_step_exact",
+      "module": "ParallelHistorySource"
+    },
+    {
+      "name": "Orthemology.RuntimeBridge.PhaseUpdate.HistoryFold.step_args_fresh",
+      "module": "ParallelHistorySource"
+    },
+    {
+      "name": "Orthemology.RuntimeBridge.PhaseUpdate.HistoryFold.step_args_value",
+      "module": "ParallelHistorySource"
+    },
+    {
+      "name": "Orthemology.RuntimeBridge.PhaseUpdate.HistoryFold.parallel_implements",
+      "module": "ParallelHistorySource"
+    },
+    {
+      "name": "Orthemology.RuntimeBridge.PhaseUpdate.FullController.denote_exprProgram",
+      "module": "FullControllerSource"
+    },
+    {
+      "name": "Orthemology.RuntimeBridge.PhaseUpdate.FullController.denote_substProgram",
+      "module": "FullControllerSource"
+    },
+    {
+      "name": "Orthemology.RuntimeBridge.PhaseUpdate.FullController.choose_exact",
+      "module": "FullControllerSource"
+    },
+    {
+      "name": "Orthemology.RuntimeBridge.PhaseUpdate.FullController.pairAt_code",
+      "module": "FullControllerSource"
+    },
+    {
+      "name": "Orthemology.RuntimeBridge.PhaseUpdate.FullController.count_source",
+      "module": "FullControllerSource"
+    },
+    {
+      "name": "Orthemology.RuntimeBridge.PhaseUpdate.FullController.symbol_source",
+      "module": "FullControllerSource"
+    },
+    {
+      "name": "Orthemology.RuntimeBridge.PhaseUpdate.FullController.normalize_source",
+      "module": "FullControllerSource"
+    },
+    {
+      "name": "Orthemology.RuntimeBridge.PhaseUpdate.FullController.candidate_source",
+      "module": "FullControllerSource"
+    },
+    {
+      "name": "Orthemology.RuntimeBridge.PhaseUpdate.FullController.support_source",
+      "module": "FullControllerSource"
+    },
+    {
+      "name": "Orthemology.RuntimeBridge.PhaseUpdate.FullController.guard_args_source",
+      "module": "FullControllerSource"
+    },
+    {
+      "name": "Orthemology.RuntimeBridge.PhaseUpdate.FullController.fixed_guard_source",
+      "module": "FullControllerSource"
+    },
+    {
+      "name": "Orthemology.RuntimeBridge.PhaseUpdate.FullController.guard_source",
+      "module": "FullControllerSource"
+    },
+    {
+      "name": "Orthemology.RuntimeBridge.PhaseUpdate.FullController.advance_args_source",
+      "module": "FullControllerSource"
+    },
+    {
+      "name": "Orthemology.RuntimeBridge.PhaseUpdate.FullController.phase_source",
+      "module": "FullControllerSource"
+    },
+    {
+      "name": "Orthemology.RuntimeBridge.PhaseUpdate.FullController.target_source",
+      "module": "FullControllerSource"
+    },
+    {
+      "name": "Orthemology.RuntimeBridge.PhaseUpdate.FullController.next_source",
+      "module": "FullControllerSource"
+    },
+    {
+      "name": "Orthemology.RuntimeBridge.PhaseUpdate.FullController.normalize_state_source",
+      "module": "FullControllerSource"
+    },
+    {
+      "name": "Orthemology.RuntimeBridge.PhaseUpdate.FullController.active_source",
+      "module": "FullControllerSource"
+    },
+    {
+      "name": "Orthemology.RuntimeBridge.PhaseUpdate.FullController.current_visits_source",
+      "module": "FullControllerSource"
+    },
+    {
+      "name": "Orthemology.RuntimeBridge.PhaseUpdate.FullController.action_source",
+      "module": "FullControllerSource"
+    },
+    {
+      "name": "Orthemology.RuntimeBridge.PhaseUpdate.FullController.next_rep_exact",
+      "module": "FullControllerSource"
+    },
+    {
+      "name": "Orthemology.RuntimeBridge.PhaseUpdate.FullController.action_rep_exact",
+      "module": "FullControllerSource"
+    },
+    {
+      "name": "Orthemology.RuntimeBridge.PhaseUpdate.FullController.initial_exact",
+      "module": "FullControllerSource"
+    },
+    {
+      "name": "Orthemology.RuntimeBridge.PhaseUpdate.FullController.raw_policy_source_exact",
+      "module": "FullControllerSource"
+    },
+    {
+      "name": "Orthemology.RuntimeBridge.PhaseUpdate.FullController.policy_program_implements",
+      "module": "FullControllerSource"
+    },
+    {
+      "name": "Orthemology.RuntimeBridge.PhaseUpdate.FullController.source_policy_retained_exact",
+      "module": "FullControllerSource"
+    },
+    {
+      "name": "Orthemology.RuntimeBridge.PhaseUpdate.FullController.policy_program_retained_exact",
+      "module": "FullControllerSource"
+    },
+    {
+      "name": "Orthemology.RuntimeBridge.PhaseUpdate.FullController.actual_policy_call",
+      "module": "FullControllerRuntime"
+    },
+    {
+      "name": "Orthemology.RuntimeBridge.PhaseUpdate.FullController.retained_step_binding",
+      "module": "FullControllerRuntime"
+    },
+    {
+      "name": "Orthemology.RuntimeBridge.PhaseUpdate.FullController.retained_observation_binding",
+      "module": "FullControllerRuntime"
+    },
+    {
+      "name": "Orthemology.RuntimeBridge.PhaseUpdate.FullController.runtime_retained_history_frames",
+      "module": "FullControllerRuntime"
+    },
+    {
+      "name": "Orthemology.RuntimeBridge.PhaseUpdate.FullController.generated_kernel_mass_exact",
+      "module": "FullControllerReceiptLaw"
+    },
+    {
+      "name": "Orthemology.RuntimeBridge.PhaseUpdate.FullController.full_phase_runtime_receipt_cylinders",
+      "module": "FullControllerReceiptLaw"
+    },
+    {
+      "name": "Orthemology.RuntimeBridge.PhaseUpdate.FullController.full_phase_runtime_law_unique",
+      "module": "FullControllerReceiptLaw"
+    },
+    {
+      "name": "Orthemology.RuntimeBridge.PhaseUpdate.FullController.full_phase_runtime_joint_clock",
+      "module": "FullControllerReceiptLaw"
+    },
+    {
+      "name": "Orthemology.RuntimeBridge.PhaseUpdate.FullController.full_phase_runtime_receipts_complete",
+      "module": "FullControllerReceiptLaw"
+    },
+    {
+      "name": "Orthemology.RationalLaw.mem_words",
+      "module": "FairBlockConstraints"
+    },
+    {
+      "name": "Orthemology.RationalLaw.words_length",
+      "module": "FairBlockConstraints"
+    },
+    {
+      "name": "Orthemology.RationalLaw.card_words",
+      "module": "FairBlockConstraints"
+    },
+    {
+      "name": "Orthemology.RationalLaw.constraintEvent_eq",
+      "module": "FairBlockConstraints"
+    },
+    {
+      "name": "Orthemology.RationalLaw.measurableSet_constraintEvent",
+      "module": "FairBlockConstraints"
+    },
+    {
+      "name": "Orthemology.RationalLaw.measure_constraintEvent",
+      "module": "FairBlockConstraints"
+    },
+    {
+      "name": "Orthemology.RationalLaw.measure_constraintEvent_product",
+      "module": "FairBlockConstraints"
+    },
+    {
+      "name": "Orthemology.RationalLaw.block_shift",
+      "module": "FairBlockConstraints"
+    },
+    {
+      "name": "Orthemology.RationalLaw.constraintEvent_append",
+      "module": "FairBlockConstraints"
+    },
+    {
+      "name": "Orthemology.RationalLaw.mem_acceptedBlocks",
+      "module": "RationalRejectionLaw"
+    },
+    {
+      "name": "Orthemology.RationalLaw.mem_rejectedBlocks",
+      "module": "RationalRejectionLaw"
+    },
+    {
+      "name": "Orthemology.RationalLaw.card_acceptedBlocks",
+      "module": "RationalRejectionLaw"
+    },
+    {
+      "name": "Orthemology.RationalLaw.card_rejectedBlocks",
+      "module": "RationalRejectionLaw"
+    },
+    {
+      "name": "Orthemology.RationalLaw.card_receiptBlocks",
+      "module": "RationalRejectionLaw"
+    },
+    {
+      "name": "Orthemology.RationalLaw.receiptBlocks_subset",
+      "module": "RationalRejectionLaw"
+    },
+    {
+      "name": "Orthemology.RationalLaw.sample_none_iff",
+      "module": "RationalRejectionLaw"
+    },
+    {
+      "name": "Orthemology.RationalLaw.sample_some_iff",
+      "module": "RationalRejectionLaw"
+    },
+    {
+      "name": "Orthemology.RationalLaw.receiptBlocks_disjoint",
+      "module": "RationalRejectionLaw"
+    },
+    {
+      "name": "Orthemology.RationalLaw.firstEvent_iff",
+      "module": "RationalRejectionLaw"
+    },
+    {
+      "name": "Orthemology.RationalLaw.measurableSet_firstEvent",
+      "module": "RationalRejectionLaw"
+    },
+    {
+      "name": "Orthemology.RationalLaw.firstEvent_disjoint",
+      "module": "RationalRejectionLaw"
+    },
+    {
+      "name": "Orthemology.RationalLaw.measure_firstEvent",
+      "module": "RationalRejectionLaw"
+    },
+    {
+      "name": "Orthemology.RationalLaw.measure_everEvent",
+      "module": "RationalRejectionLaw"
+    },
+    {
+      "name": "Orthemology.RationalLaw.binary_unit",
+      "module": "RationalRejectionLaw"
+    },
+    {
+      "name": "Orthemology.RationalLaw.rejected_fraction",
+      "module": "RationalRejectionLaw"
+    },
+    {
+      "name": "Orthemology.RationalLaw.accepted_fraction_le_one",
+      "module": "RationalRejectionLaw"
+    },
+    {
+      "name": "Orthemology.RationalLaw.rejection_receipt_disjoint",
+      "module": "RationalRejectionLaw"
+    },
+    {
+      "name": "Orthemology.RationalLaw.first_receipt_unique",
+      "module": "RationalRejectionLaw"
+    },
+    {
+      "name": "Orthemology.RationalLaw.receipt_probability",
+      "module": "RationalRejectionLaw"
+    },
+    {
+      "name": "Orthemology.RationalLaw.rejection_count_probability",
+      "module": "RationalRejectionLaw"
+    },
+    {
+      "name": "Orthemology.RationalLaw.eventual_acceptance_probability",
+      "module": "RationalRejectionLaw"
+    },
+    {
+      "name": "Orthemology.RationalLaw.receipt_clock_factorization",
+      "module": "RationalRejectionLaw"
+    },
+    {
+      "name": "Orthemology.RationalLaw.historyJoint_succ",
+      "module": "AdaptiveRationalCylinders"
+    },
+    {
+      "name": "Orthemology.RationalLaw.historyJoint_disjoint",
+      "module": "AdaptiveRationalCylinders"
+    },
+    {
+      "name": "Orthemology.RationalLaw.history_joint_probability",
+      "module": "AdaptiveRationalCylinders"
+    },
+    {
+      "name": "Orthemology.RationalLaw.tsum_fin_product",
+      "module": "AdaptiveRationalCylinders"
+    },
+    {
+      "name": "Orthemology.RationalLaw.clockMass_total",
+      "module": "AdaptiveRationalCylinders"
+    },
+    {
+      "name": "Orthemology.RationalLaw.accepted_history_probability",
+      "module": "AdaptiveRationalCylinders"
+    },
+    {
+      "name": "Orthemology.RationalLaw.historyJoint_unique",
+      "module": "AdaptiveRationalCylinders"
+    },
+    {
+      "name": "Orthemology.RationalLaw.measurableSet_acceptedHistory",
+      "module": "AdaptiveRationalCylinders"
+    },
+    {
+      "name": "Orthemology.RationalLaw.acceptedHistory_disjoint",
+      "module": "AdaptiveRationalCylinders"
+    },
+    {
+      "name": "Orthemology.RationalLaw.weight_sum",
+      "module": "AdaptiveRationalCylinders"
+    },
+    {
+      "name": "Orthemology.RationalLaw.row_fraction_sum",
+      "module": "AdaptiveRationalCylinders"
+    },
+    {
+      "name": "Orthemology.RationalLaw.historyMass_total",
+      "module": "AdaptiveRationalCylinders"
+    },
+    {
+      "name": "Orthemology.RationalLaw.n_receipts_probability",
+      "module": "AdaptiveRationalCylinders"
+    },
+    {
+      "name": "Orthemology.RationalLaw.infinitely_many_receipts",
+      "module": "AdaptiveRationalCylinders"
+    },
+    {
+      "name": "Orthemology.RationalLaw.delivers_iff_acceptedHistory",
+      "module": "AdaptiveRationalCylinders"
+    },
+    {
+      "name": "Orthemology.RationalLaw.literal_sampler_history_law",
+      "module": "AdaptiveRationalCylinders"
+    },
+    {
+      "name": "Orthemology.RationalLaw.proposalState_add",
+      "module": "LiteralSamplerExecution"
+    },
+    {
+      "name": "Orthemology.RationalLaw.proposalReceipt_add",
+      "module": "LiteralSamplerExecution"
+    },
+    {
+      "name": "Orthemology.RationalLaw.rejected_prefix_state",
+      "module": "LiteralSamplerExecution"
+    },
+    {
+      "name": "Orthemology.RationalLaw.reported_prefix_state",
+      "module": "LiteralSamplerExecution"
+    },
+    {
+      "name": "Orthemology.RationalLaw.reports_iff_delivers",
+      "module": "LiteralSamplerExecution"
+    },
+    {
+      "name": "Orthemology.RationalLaw.reportsWithCounts_iff_joint",
+      "module": "LiteralSamplerExecution"
+    },
+    {
+      "name": "Orthemology.RationalLaw.fair_reindex_law",
+      "module": "FairBitSubsequence"
+    },
+    {
+      "name": "Orthemology.RationalLaw.fair_decimateFour_law",
+      "module": "FairBitSubsequence"
+    },
+    {
+      "name": "Orthemology.RationalLaw.fair_decimateFour_preimage",
+      "module": "FairBitSubsequence"
+    },
+    {
+      "name": "Orthemology.RationalLaw.measurableSet_rejectionCounts",
+      "module": "SamplerClockMarginals"
+    },
+    {
+      "name": "Orthemology.RationalLaw.rejectionCounts_probability",
+      "module": "SamplerClockMarginals"
+    },
+    {
+      "name": "Orthemology.RationalLaw.acceptedHistory_inter_rejectionCounts",
+      "module": "SamplerClockMarginals"
+    },
+    {
+      "name": "Orthemology.RationalLaw.history_clock_marginal_factorization",
+      "module": "SamplerClockMarginals"
+    },
+    {
+      "name": "Orthemology.RationalLaw.ProjectionControl.local_frame",
+      "module": "ReceiptProjectionDefect"
+    },
+    {
+      "name": "Orthemology.RationalLaw.ProjectionControl.exact_frames",
+      "module": "ReceiptProjectionDefect"
+    },
+    {
+      "name": "Orthemology.RationalLaw.ProjectionControl.ack_nondeterministic",
+      "module": "ReceiptProjectionDefect"
+    },
+    {
+      "name": "Orthemology.RationalLaw.ProjectionControl.physical_atomic_mass_zero",
+      "module": "ReceiptProjectionDefect"
+    },
+    {
+      "name": "Orthemology.RationalLaw.ProjectionControl.compiled_physical_defect_one",
+      "module": "ReceiptProjectionDefect"
+    },
+    {
+      "name": "Orthemology.RationalLaw.ProjectionControl.measurable_acknowledgments",
+      "module": "ReceiptProjectionDefect"
+    },
+    {
+      "name": "Orthemology.RationalLaw.ProjectionControl.measurable_decodeReceipts",
+      "module": "ReceiptProjectionDefect"
+    },
+    {
+      "name": "Orthemology.RationalLaw.ProjectionControl.decoded_output_constant",
+      "module": "ReceiptProjectionDefect"
+    },
+    {
+      "name": "Orthemology.RationalLaw.ProjectionControl.decoded_runtime_constant",
+      "module": "ReceiptProjectionDefect"
+    },
+    {
+      "name": "Orthemology.RationalLaw.ProjectionControl.decoded_runtime_law",
+      "module": "ReceiptProjectionDefect"
+    },
+    {
+      "name": "Orthemology.RationalLaw.ProjectionControl.decoded_runtime_defect_zero",
+      "module": "ReceiptProjectionDefect"
+    },
+    {
+      "name": "Orthemology.RationalLaw.ProjectionControl.defect_map_le",
+      "module": "ReceiptProjectionDefect"
+    },
+    {
+      "name": "Orthemology.RationalLaw.ProjectionControl.mass_map_eq_of_countable_fibres",
+      "module": "ReceiptProjectionDefect"
+    },
+    {
+      "name": "Orthemology.RationalLaw.ProjectionControl.defect_map_eq_of_countable_fibres",
+      "module": "ReceiptProjectionDefect"
+    },
+    {
+      "name": "Orthemology.RationalLaw.HeldStateControl.state_exact",
+      "module": "HeldStateProjectionDefect"
+    },
+    {
+      "name": "Orthemology.RationalLaw.HeldStateControl.output_exact",
+      "module": "HeldStateProjectionDefect"
+    },
+    {
+      "name": "Orthemology.RationalLaw.HeldStateControl.held_nondeterministic",
+      "module": "HeldStateProjectionDefect"
+    },
+    {
+      "name": "Orthemology.RationalLaw.HeldStateControl.held_atomic_mass_zero",
+      "module": "HeldStateProjectionDefect"
+    },
+    {
+      "name": "Orthemology.RationalLaw.HeldStateControl.held_defect_one",
+      "module": "HeldStateProjectionDefect"
+    },
+    {
+      "name": "Orthemology.RationalLaw.HeldStateControl.logical_defect_zero",
+      "module": "HeldStateProjectionDefect"
+    },
+    {
+      "name": "Orthemology.RationalLaw.HeldStateControl.receiptCount_monotone",
+      "module": "HeldStateProjectionDefect"
+    },
+    {
+      "name": "Orthemology.RationalLaw.HeldStateControl.receiptCount_onto",
+      "module": "HeldStateProjectionDefect"
+    },
+    {
+      "name": "Orthemology.RationalLaw.HeldStateControl.fair_singleton_zero",
+      "module": "HeldStateProjectionDefect"
+    },
+    {
+      "name": "Orthemology.RationalLaw.HeldStateControl.infinitely_many_zeros",
+      "module": "HeldStateProjectionDefect"
+    },
+    {
+      "name": "Orthemology.RationalLaw.HeldStateControl.almost_sure_positive_stutter",
+      "module": "HeldStateProjectionDefect"
+    },
+    {
+      "name": "Orthemology.RationalLaw.HeldStateControl.almost_sure_parity_exact",
+      "module": "HeldStateProjectionDefect"
+    },
+    {
+      "name": "Orthemology.RationalLaw.HeldStateControl.compiled_held_output",
+      "module": "HeldStateProjectionDefect"
+    },
+    {
+      "name": "Orthemology.RationalLaw.HeldStateControl.compiled_held_defect_one",
+      "module": "HeldStateProjectionDefect"
+    },
+    {
+      "name": "Orthemology.RationalLaw.HeldStateControl.compiled_held_parity_exact",
+      "module": "HeldStateProjectionDefect"
+    },
+    {
+      "name": "Orthemology.RationalLaw.HeldStateControl.code_one",
+      "module": "HeldStateProjectionDefect"
+    },
+    {
+      "name": "Orthemology.RationalLaw.HeldStateControl.toggle_sample",
+      "module": "HeldStateProjectionDefect"
+    },
+    {
+      "name": "Orthemology.RationalLaw.HeldStateControl.proposalState_held",
+      "module": "HeldStateProjectionDefect"
+    },
+    {
+      "name": "Orthemology.RationalLaw.HeldStateControl.changeReports_exact",
+      "module": "HeldStateProjectionDefect"
+    },
+    {
+      "name": "Orthemology.RationalLaw.HeldStateControl.held_clock_probability",
+      "module": "HeldStateProjectionDefect"
+    },
+    {
+      "name": "Orthemology.RationalLaw.HeldStateControl.toggle_sample_value",
+      "module": "HeldStateProjectionDefect"
+    },
+    {
+      "name": "Orthemology.RationalLaw.HeldStateControl.delivered_toggle_receipts",
+      "module": "HeldStateProjectionDefect"
+    },
+    {
+      "name": "Orthemology.RationalLaw.HeldStateControl.held_reports_alternating",
+      "module": "HeldStateProjectionDefect"
+    },
+    {
+      "name": "Orthemology.RationalLaw.HeldStateControl.held_infinitely_many_reports",
+      "module": "HeldStateProjectionDefect"
+    },
+    {
+      "name": "Orthemology.RationalLaw.first_report_unique",
+      "module": "ReceiptPathDecoder"
+    },
+    {
+      "name": "Orthemology.RationalLaw.reports_unique",
+      "module": "ReceiptPathDecoder"
+    },
+    {
+      "name": "Orthemology.RationalLaw.reports_take",
+      "module": "ReceiptPathDecoder"
+    },
+    {
+      "name": "Orthemology.RationalLaw.measurableSet_reports",
+      "module": "ReceiptPathDecoder"
+    },
+    {
+      "name": "Orthemology.RationalLaw.decodeReports_of_reports",
+      "module": "ReceiptPathDecoder"
+    },
+    {
+      "name": "Orthemology.RationalLaw.measurable_decodeReports",
+      "module": "ReceiptPathDecoder"
+    },
+    {
+      "name": "Orthemology.RationalLaw.measurableSet_receiptCylinder",
+      "module": "ReceiptPathDecoder"
+    },
+    {
+      "name": "Orthemology.RationalLaw.decodeReports_cylinder_iff",
+      "module": "ReceiptPathDecoder"
+    },
+    {
+      "name": "Orthemology.RationalLaw.decoded_cylinder_eq_report_event",
+      "module": "ReceiptPathDecoder"
+    },
+    {
+      "name": "Orthemology.RationalLaw.receipt_law_ext",
+      "module": "ReceiptPathDecoder"
+    },
+    {
+      "name": "Orthemology.RationalLaw.decoded_law_eq_of_report_probabilities",
+      "module": "ReceiptPathDecoder"
+    },
+    {
+      "name": "Orthemology.RationalLaw.HeldStateControl.changeReports_event_measurable",
+      "module": "HeldReceiptProjection"
+    },
+    {
+      "name": "Orthemology.RationalLaw.HeldStateControl.compressHeld_measurable",
+      "module": "HeldReceiptProjection"
+    },
+    {
+      "name": "Orthemology.RationalLaw.HeldStateControl.receiptAlternating_eq_iterate",
+      "module": "HeldReceiptProjection"
+    },
+    {
+      "name": "Orthemology.RationalLaw.HeldStateControl.alternating_eq_iterate",
+      "module": "HeldReceiptProjection"
+    },
+    {
+      "name": "Orthemology.RationalLaw.HeldStateControl.compressed_held_alternating",
+      "module": "HeldReceiptProjection"
+    },
+    {
+      "name": "Orthemology.RationalLaw.HeldStateControl.compressed_held_law",
+      "module": "HeldReceiptProjection"
+    },
+    {
+      "name": "Orthemology.RationalLaw.HeldStateControl.compressed_held_defect_zero",
+      "module": "HeldReceiptProjection"
+    },
+    {
+      "name": "Orthemology.RationalLaw.HeldStateControl.compiled_compressed_held_law",
+      "module": "HeldReceiptProjection"
+    },
+    {
+      "name": "Orthemology.RationalLaw.RuntimeBinding.code_two",
+      "module": "RuntimeRationalBinding"
+    },
+    {
+      "name": "Orthemology.RationalLaw.RuntimeBinding.sample_reject_iff",
+      "module": "RuntimeRationalBinding"
+    },
+    {
+      "name": "Orthemology.RationalLaw.RuntimeBinding.two_bit_historyStep",
+      "module": "RuntimeRationalBinding"
+    },
+    {
+      "name": "Orthemology.RationalLaw.RuntimeBinding.row_weight",
+      "module": "RuntimeRationalBinding"
+    },
+    {
+      "name": "Orthemology.RationalLaw.RuntimeBinding.weight_div_three_eq_kernel",
+      "module": "RuntimeRationalBinding"
+    },
+    {
+      "name": "Orthemology.RationalLaw.RuntimeBinding.physical_accepted_probability",
+      "module": "RuntimeRationalBinding"
+    },
+    {
+      "name": "Orthemology.RationalLaw.RuntimeBinding.historyStep_even_state",
+      "module": "RuntimeRationalBinding"
+    },
+    {
+      "name": "Orthemology.RationalLaw.RuntimeBinding.second_frame_sample",
+      "module": "RuntimeRationalBinding"
+    },
+    {
+      "name": "Orthemology.RationalLaw.RuntimeBinding.first_frame_no_ack",
+      "module": "RuntimeRationalBinding"
+    },
+    {
+      "name": "Orthemology.RationalLaw.RuntimeBinding.runtime_first_frame_no_ack",
+      "module": "RuntimeRationalBinding"
+    },
+    {
+      "name": "Orthemology.RationalLaw.RuntimeBinding.runtime_proposal_exact",
+      "module": "RuntimeRationalBinding"
+    },
+    {
+      "name": "Orthemology.RationalLaw.RuntimeBinding.runtime_accepted_history_probability",
+      "module": "RuntimeRationalBinding"
+    },
+    {
+      "name": "Orthemology.RationalLaw.RuntimeBinding.runtime_joint_probability",
+      "module": "RuntimeRationalBinding"
+    },
+    {
+      "name": "Orthemology.RationalLaw.RuntimeBinding.runtime_infinitely_many_reports",
+      "module": "RuntimeRationalBinding"
+    },
+    {
+      "name": "Orthemology.RationalLaw.RuntimeBinding.all_one_runtime_never_reports",
+      "module": "RuntimeRationalBinding"
+    },
+    {
+      "name": "Orthemology.RationalLaw.RuntimeBinding.runtime_never_reports_null",
+      "module": "RuntimeRationalBinding"
+    },
+    {
+      "name": "Orthemology.RationalLaw.RuntimeBinding.runtimeProposal_event_measurable",
+      "module": "RuntimeReceiptPath"
+    },
+    {
+      "name": "Orthemology.RationalLaw.RuntimeBinding.runtimeReceiptPath_measurable",
+      "module": "RuntimeReceiptPath"
+    },
+    {
+      "name": "Orthemology.RationalLaw.RuntimeBinding.runtime_receipt_path_cylinder_probability",
+      "module": "RuntimeReceiptPath"
+    },
+    {
+      "name": "Orthemology.RationalLaw.RuntimeBinding.runtime_receipt_path_law_unique",
+      "module": "RuntimeReceiptPath"
+    },
+    {
+      "name": "Orthemology.RationalLaw.Controls.denominator_one_first_clock",
+      "module": "RationalSamplingControls"
+    },
+    {
+      "name": "Orthemology.RationalLaw.Controls.dyadic_boundary_first_clock",
+      "module": "RationalSamplingControls"
+    },
+    {
+      "name": "Orthemology.RationalLaw.Controls.dyadic_boundary_no_rejections",
+      "module": "RationalSamplingControls"
+    },
+    {
+      "name": "Orthemology.RationalLaw.Controls.zero_weight_unreachable",
+      "module": "RationalSamplingControls"
+    },
+    {
+      "name": "Orthemology.RationalLaw.Controls.row_dependent_timing_distinguishes",
+      "module": "RationalSamplingControls"
+    },
+    {
+      "name": "Orthemology.RationalLaw.Controls.same_constant_receipt_laws",
+      "module": "RationalSamplingControls"
+    },
+    {
+      "name": "Orthemology.RationalLaw.Controls.parity_safe_stutter_not_defect_safe",
+      "module": "RationalSamplingControls"
+    },
+    {
+      "name": "Orthemology.RationalLaw.foldReceipts_snoc",
+      "module": "CanonicalHistoryBinding"
+    },
+    {
+      "name": "Orthemology.RationalLaw.historyMass_snoc",
+      "module": "CanonicalHistoryBinding"
+    },
+    {
+      "name": "Orthemology.RationalLaw.CanonicalBinding.generatedHistory_snoc",
+      "module": "CanonicalHistoryBinding"
+    },
+    {
+      "name": "Orthemology.RationalLaw.CanonicalBinding.generatedHistory_length",
+      "module": "CanonicalHistoryBinding"
+    },
+    {
+      "name": "Orthemology.RationalLaw.CanonicalBinding.generatedHistory_injective",
+      "module": "CanonicalHistoryBinding"
+    },
+    {
+      "name": "Orthemology.RationalLaw.CanonicalBinding.generatedHistory_compatible",
+      "module": "CanonicalHistoryBinding"
+    },
+    {
+      "name": "Orthemology.RationalLaw.CanonicalBinding.compatible_generatedHistory",
+      "module": "CanonicalHistoryBinding"
+    },
+    {
+      "name": "Orthemology.RationalLaw.CanonicalBinding.pair_mass_eq_runtime",
+      "module": "CanonicalHistoryBinding"
+    },
+    {
+      "name": "Orthemology.RationalLaw.CanonicalBinding.generatedHistory_likelihood",
+      "module": "CanonicalHistoryBinding"
+    },
+    {
+      "name": "Orthemology.RationalLaw.CanonicalBinding.canonicalLaw_marginal",
+      "module": "CanonicalHistoryBinding"
+    },
+    {
+      "name": "Orthemology.RationalLaw.CanonicalBinding.decodedHistory_measurable",
+      "module": "CanonicalHistoryBinding"
+    },
+    {
+      "name": "Orthemology.RationalLaw.CanonicalBinding.decodedHistory_marginal",
+      "module": "CanonicalHistoryBinding"
+    },
+    {
+      "name": "Orthemology.RationalLaw.CanonicalBinding.generatedHistory_drop",
+      "module": "CanonicalHistoryBinding"
+    },
+    {
+      "name": "Orthemology.RationalLaw.CanonicalBinding.decodedHistory_prefix_from_last",
+      "module": "CanonicalHistoryBinding"
+    },
+    {
+      "name": "Orthemology.RationalLaw.CanonicalBinding.canonicalLaw_prefix_from_last",
+      "module": "CanonicalHistoryBinding"
+    },
+    {
+      "name": "Orthemology.RationalLaw.CanonicalBinding.actual_runtime_canonical_history_law",
+      "module": "CanonicalHistoryBinding"
+    },
+    {
+      "name": "Orthemology.RationalLaw.CanonicalBinding.physicalProposals_event_measurable",
+      "module": "CanonicalHistoryBinding"
+    },
+    {
+      "name": "Orthemology.RationalLaw.CanonicalBinding.canonicalHistoryDecoder_measurable",
+      "module": "CanonicalHistoryBinding"
+    },
+    {
+      "name": "Orthemology.RationalLaw.CanonicalBinding.canonicalHistoryDecoder_on_runtime",
+      "module": "CanonicalHistoryBinding"
+    },
+    {
+      "name": "Orthemology.RationalLaw.CanonicalBinding.physical_runtime_projected_canonical_law",
+      "module": "CanonicalHistoryBinding"
+    },
+    {
+      "name": "Orthemology.RationalLaw.ExplicitRecordBinding.physical_runtime_explicit_record_law",
+      "module": "ExplicitRecordSamplerBinding"
+    },
+    {
+      "name": "Orthemology.RuntimeBridge.PhaseUpdate.FullController.computed_tolerance_exact",
+      "module": "ComputedToleranceSource"
+    },
+    {
+      "name": "Orthemology.RuntimeBridge.PhaseUpdate.FullController.computed_tolerance_certificate",
+      "module": "ComputedToleranceSource"
+    },
+    {
+      "name": "Orthemology.RuntimeBridge.PhaseUpdate.FullController.computed_policy_parity",
+      "module": "ComputedToleranceSource"
+    },
+    {
+      "name": "Orthemology.RuntimeBridge.PhaseUpdate.FullController.source_history_policy_exact",
+      "module": "FullControllerCanonicalLaw"
+    },
+    {
+      "name": "Orthemology.RuntimeBridge.PhaseUpdate.FullController.full_phase_runtime_canonical_history_law",
+      "module": "FullControllerCanonicalLaw"
+    },
+    {
+      "name": "Orthemology.RuntimeBridge.PhaseUpdate.FullController.full_phase_physical_projected_canonical_law",
+      "module": "FullControllerCanonicalLaw"
+    },
+    {
+      "name": "Orthemology.RuntimeBridge.PhaseUpdate.FullController.full_phase_computed_tolerance_decoded_parity",
+      "module": "FullControllerCanonicalLaw"
+    },
+    {
+      "name": "Orthemology.RuntimeBridge.PhaseUpdate.FullController.full_phase_computed_tolerance_output_parity",
+      "module": "FullControllerCanonicalLaw"
+    }
+  ],
+  "pins": {
+    "lean_version": "4.19.0",
+    "lean_binary_sha256": "92c3d35b5bfaa5e0fea413a775d504cf46cd95e1345df61c2274f76779e7e023",
+    "packages": [
+      {
+        "name": "mathlib",
+        "revision": "c44e0c8ee63ca166450922a373c7409c5d26b00b"
+      },
+      {
+        "name": "plausible",
+        "revision": "77e08eddc486491d7b9e470926b3dbe50319451a"
+      },
+      {
+        "name": "LeanSearchClient",
+        "revision": "25078369972d295301f5a1e53c3e5850cf6d9d4c"
+      },
+      {
+        "name": "importGraph",
+        "revision": "e6a9f0f5ee3ccf7443a0070f92b62f8db12ae82b"
+      },
+      {
+        "name": "proofwidgets",
+        "revision": "c4919189477c3221e6a204008998b0d724f49904"
+      },
+      {
+        "name": "aesop",
+        "revision": "5d50b08dedd7d69b3d9b3176e0d58a23af228884"
+      },
+      {
+        "name": "Qq",
+        "revision": "fa4f7f15d97591a9cf3aa7724ba371c7fc6dda02"
+      },
+      {
+        "name": "batteries",
+        "revision": "f5d04a9c4973d401c8c92500711518f7c656f034"
+      },
+      {
+        "name": "Cli",
+        "revision": "02dbd02bc00ec4916e99b04b2245b30200e200d0"
+      }
+    ]
+  },
+  "official_imports": [
+    {
+      "module": "Mathlib",
+      "repository": "mathlib",
+      "source": "Mathlib.lean",
+      "sha256": "b0518254279fabf0c6a920804e684536b0f5e2bd1cb6318d0609eb563413f20a"
+    },
+    {
+      "module": "Mathlib.Algebra.BigOperators.Fin",
+      "repository": "mathlib",
+      "source": "Mathlib/Algebra/BigOperators/Fin.lean",
+      "sha256": "2f199c1f08a34c3dfb2a7e247ddbfae56197441e3fac4a8817b1eb141189059c"
+    },
+    {
+      "module": "Mathlib.Algebra.Order.BigOperators.Ring.Finset",
+      "repository": "mathlib",
+      "source": "Mathlib/Algebra/Order/BigOperators/Ring/Finset.lean",
+      "sha256": "6341ca875f3963664c94147b1eacd45c9aedfe2015ae695b06af4e717849abe4"
+    },
+    {
+      "module": "Mathlib.Analysis.SpecificLimits.Basic",
+      "repository": "mathlib",
+      "source": "Mathlib/Analysis/SpecificLimits/Basic.lean",
+      "sha256": "cbf9b6b47e6ee6b2962fb2f16ba49b7e005e9a93c0adc1244cc770c34f527315"
+    },
+    {
+      "module": "Mathlib.Computability.Partrec",
+      "repository": "mathlib",
+      "source": "Mathlib/Computability/Partrec.lean",
+      "sha256": "e8435a76ce5b2f4b22892d82b3e1e3e2835c8038011a68ca37a7efff797929d1"
+    },
+    {
+      "module": "Mathlib.Computability.Primrec",
+      "repository": "mathlib",
+      "source": "Mathlib/Computability/Primrec.lean",
+      "sha256": "b279a3218434a6f930970b9f43669567e99adc548c31796590f42bdc205dcc22"
+    },
+    {
+      "module": "Mathlib.Data.Finset.Card",
+      "repository": "mathlib",
+      "source": "Mathlib/Data/Finset/Card.lean",
+      "sha256": "a915b4a9c6ed684221397e67503048f604fc2caf58a88b03c02e4d7e070a940b"
+    },
+    {
+      "module": "Mathlib.Data.Finset.Powerset",
+      "repository": "mathlib",
+      "source": "Mathlib/Data/Finset/Powerset.lean",
+      "sha256": "ff946726d050b01703aec4dd1a66398f461455942e036806c24ceaeee6e23ac8"
+    },
+    {
+      "module": "Mathlib.Data.Finset.Sigma",
+      "repository": "mathlib",
+      "source": "Mathlib/Data/Finset/Sigma.lean",
+      "sha256": "fff03be1b7cc1debfb34cb668f7c0a3d92f7f6031896a3eff65b7e33ec16da8e"
+    },
+    {
+      "module": "Mathlib.Data.Fintype.EquivFin",
+      "repository": "mathlib",
+      "source": "Mathlib/Data/Fintype/EquivFin.lean",
+      "sha256": "e0842e47c8ba3cc9ef6b9fdd78432beac04b613851220973fca283dab71448e9"
+    },
+    {
+      "module": "Mathlib.Data.List.OfFn",
+      "repository": "mathlib",
+      "source": "Mathlib/Data/List/OfFn.lean",
+      "sha256": "7ed0d919af0879458511e8ca33f62bc73952a7c520371467514dc4669fd68d32"
+    },
+    {
+      "module": "Mathlib.Data.Nat.Bitwise",
+      "repository": "mathlib",
+      "source": "Mathlib/Data/Nat/Bitwise.lean",
+      "sha256": "e987a9f57489a80d8e2de33b7ad8662516b85fe745d611c0fe9e6c965fb6f5b7"
+    },
+    {
+      "module": "Mathlib.Data.Real.Sqrt",
+      "repository": "mathlib",
+      "source": "Mathlib/Data/Real/Sqrt.lean",
+      "sha256": "100af39c6d268959221d07b8f2fee4579d2dbef4e87bf64158066cc675f67323"
+    },
+    {
+      "module": "Mathlib.LinearAlgebra.Determinant",
+      "repository": "mathlib",
+      "source": "Mathlib/LinearAlgebra/Determinant.lean",
+      "sha256": "3514c23630a2e872c8bd403d2ffa84f4170aeb870497627475e8573c6feae4b9"
+    },
+    {
+      "module": "Mathlib.LinearAlgebra.FiniteDimensional.Basic",
+      "repository": "mathlib",
+      "source": "Mathlib/LinearAlgebra/FiniteDimensional/Basic.lean",
+      "sha256": "0d51bff219c4945969805570370bdfc14ada71990c1f65b89a8b6a19ff4f01cc"
+    },
+    {
+      "module": "Mathlib.MeasureTheory.Measure.Map",
+      "repository": "mathlib",
+      "source": "Mathlib/MeasureTheory/Measure/Map.lean",
+      "sha256": "3c7fb458eece85551c9b7bd28955a517e14f4bee77934b8b001440a57b6f7f71"
+    },
+    {
+      "module": "Mathlib.MeasureTheory.Measure.Restrict",
+      "repository": "mathlib",
+      "source": "Mathlib/MeasureTheory/Measure/Restrict.lean",
+      "sha256": "0c0c2108a28516ae3a85dfbfc2e5d7a3afd26dcc113aa8b19c2a79adfe12e56e"
+    },
+    {
+      "module": "Mathlib.MeasureTheory.Measure.Typeclasses.NoAtoms",
+      "repository": "mathlib",
+      "source": "Mathlib/MeasureTheory/Measure/Typeclasses/NoAtoms.lean",
+      "sha256": "f840a5341797290644d0bae0b916c866e7f98a6d25b3894de87341ff4c1cfdb7"
+    },
+    {
+      "module": "Mathlib.MeasureTheory.Measure.Typeclasses.Probability",
+      "repository": "mathlib",
+      "source": "Mathlib/MeasureTheory/Measure/Typeclasses/Probability.lean",
+      "sha256": "419ec9a5612f378b8603f4adb8a0941485481c1d754e95afb8d0a4ddd35f8883"
+    },
+    {
+      "module": "Mathlib.MeasureTheory.Measure.Typeclasses.SFinite",
+      "repository": "mathlib",
+      "source": "Mathlib/MeasureTheory/Measure/Typeclasses/SFinite.lean",
+      "sha256": "b9fb829526454d1f9526ed9bb21de6d661fdb4a01a9847eb6669bedf68f1f784"
+    },
+    {
+      "module": "Mathlib.Probability.BorelCantelli",
+      "repository": "mathlib",
+      "source": "Mathlib/Probability/BorelCantelli.lean",
+      "sha256": "033046517cdc893d6c849aa77f04b039e9e12cabc83eb46cfb8130cc5f6020ea"
+    },
+    {
+      "module": "Mathlib.Probability.Kernel.IonescuTulcea.Traj",
+      "repository": "mathlib",
+      "source": "Mathlib/Probability/Kernel/IonescuTulcea/Traj.lean",
+      "sha256": "c565dd9bdc17c21181cd5cbe41055aa2889210745bc463ff0596a01c580ccbcb"
+    },
+    {
+      "module": "Mathlib.Probability.ProbabilityMassFunction.Constructions",
+      "repository": "mathlib",
+      "source": "Mathlib/Probability/ProbabilityMassFunction/Constructions.lean",
+      "sha256": "8e50bff3cd3b46107d612eed21e1648752a86f9c373d4b6b0fe10e0e22a43973"
+    },
+    {
+      "module": "Mathlib.Probability.ProbabilityMassFunction.Integrals",
+      "repository": "mathlib",
+      "source": "Mathlib/Probability/ProbabilityMassFunction/Integrals.lean",
+      "sha256": "412763e5ad86cc96721b1bbb1bfaccb5fa15919a2d5afb7af9da419cc2290292"
+    },
+    {
+      "module": "Mathlib.Probability.ProductMeasure",
+      "repository": "mathlib",
+      "source": "Mathlib/Probability/ProductMeasure.lean",
+      "sha256": "f8af06e87e2e28916f0fa8a455f792ded4b85a22e1dea5e1c6f9cac1d31b9830"
+    },
+    {
+      "module": "Mathlib.Probability.StrongLaw",
+      "repository": "mathlib",
+      "source": "Mathlib/Probability/StrongLaw.lean",
+      "sha256": "3c3768b70c3779bea384592bb548bc06de2d25af315e0a0d59a1742b0807717c"
+    },
+    {
+      "module": "Mathlib.SetTheory.Cardinal.Finite",
+      "repository": "mathlib",
+      "source": "Mathlib/SetTheory/Cardinal/Finite.lean",
+      "sha256": "57a20638e916d020a1f6eda323560bc56b338aa4fb5b7f4d8236202ee195c471"
+    },
+    {
+      "module": "Mathlib.Tactic",
+      "repository": "mathlib",
+      "source": "Mathlib/Tactic.lean",
+      "sha256": "f20038eba7bba63f07a2f854496101226df407e20414e6b8ebf94b14f95e831b"
+    },
+    {
+      "module": "Mathlib.Topology.Instances.ENNReal.Lemmas",
+      "repository": "mathlib",
+      "source": "Mathlib/Topology/Instances/ENNReal/Lemmas.lean",
+      "sha256": "5b078eb5f8aeae72ee8c7348f2cfcc02c36e0ff01e9f72205c2c06187ee04c82"
+    }
+  ],
+  "driver": {
+    "source_id": "src-b5be7775f6d0b1d5-1ea3ce332c7c85b7",
+    "lean_argument": "EXECUTABLE"
+  },
+  "controls": "ORIGINAL_DRIVER_REQUIRED",
+  "classification": "CURRENT_EVIDENCE"
+}

@@ -1,0 +1,307 @@
+{
+  "id": "db6ccdc793a0-coverage-boundary",
+  "origin": "db6ccdc793a0a1a96b736cee6c55c47145b86b8f5f91d2dbb1cf80e7036b614e",
+  "descriptor_source_id": "src-db6ccdc793a0a1a9-85c042fef1d85c5a",
+  "modules": [
+    {
+      "module": "CoverageBoundary",
+      "source_id": "src-db6ccdc793a0a1a9-5173aba7436e4725",
+      "imports": [
+        "Mathlib"
+      ]
+    },
+    {
+      "module": "Controls",
+      "source_id": "src-db6ccdc793a0a1a9-6f73c0ebdf442e29",
+      "imports": [
+        "CoverageBoundary"
+      ]
+    }
+  ],
+  "module_order": [
+    "CoverageBoundary",
+    "Controls"
+  ],
+  "targets": [
+    {
+      "name": "Orthemology.Tranche3.CoverageBoundary.Source",
+      "module": "CoverageBoundary"
+    },
+    {
+      "name": "Orthemology.Tranche3.CoverageBoundary.Token",
+      "module": "CoverageBoundary"
+    },
+    {
+      "name": "Orthemology.Tranche3.CoverageBoundary.World",
+      "module": "CoverageBoundary"
+    },
+    {
+      "name": "Orthemology.Tranche3.CoverageBoundary.SourceExists",
+      "module": "CoverageBoundary"
+    },
+    {
+      "name": "Orthemology.Tranche3.CoverageBoundary.actual",
+      "module": "CoverageBoundary"
+    },
+    {
+      "name": "Orthemology.Tranche3.CoverageBoundary.available",
+      "module": "CoverageBoundary"
+    },
+    {
+      "name": "Orthemology.Tranche3.CoverageBoundary.Payload",
+      "module": "CoverageBoundary"
+    },
+    {
+      "name": "Orthemology.Tranche3.CoverageBoundary.evaluationOutput",
+      "module": "CoverageBoundary"
+    },
+    {
+      "name": "Orthemology.Tranche3.CoverageBoundary.auxiliaryOutput",
+      "module": "CoverageBoundary"
+    },
+    {
+      "name": "Orthemology.Tranche3.CoverageBoundary.output",
+      "module": "CoverageBoundary"
+    },
+    {
+      "name": "Orthemology.Tranche3.CoverageBoundary.ExistsToken",
+      "module": "CoverageBoundary"
+    },
+    {
+      "name": "Orthemology.Tranche3.CoverageBoundary.Provides",
+      "module": "CoverageBoundary"
+    },
+    {
+      "name": "Orthemology.Tranche3.CoverageBoundary.Complete",
+      "module": "CoverageBoundary"
+    },
+    {
+      "name": "Orthemology.Tranche3.CoverageBoundary.requirements",
+      "module": "CoverageBoundary"
+    },
+    {
+      "name": "Orthemology.Tranche3.CoverageBoundary.Needs",
+      "module": "CoverageBoundary"
+    },
+    {
+      "name": "Orthemology.Tranche3.CoverageBoundary.provides_iff_requirements",
+      "module": "CoverageBoundary"
+    },
+    {
+      "name": "Orthemology.Tranche3.CoverageBoundary.actual_outputs",
+      "module": "CoverageBoundary"
+    },
+    {
+      "name": "Orthemology.Tranche3.CoverageBoundary.actual_evaluation_correct",
+      "module": "CoverageBoundary"
+    },
+    {
+      "name": "Orthemology.Tranche3.CoverageBoundary.enablers_exist_necessarily",
+      "module": "CoverageBoundary"
+    },
+    {
+      "name": "Orthemology.Tranche3.CoverageBoundary.every_actual_token_produced",
+      "module": "CoverageBoundary"
+    },
+    {
+      "name": "Orthemology.Tranche3.CoverageBoundary.local_but_not_universal",
+      "module": "CoverageBoundary"
+    },
+    {
+      "name": "Orthemology.Tranche3.CoverageBoundary.no_individual_complete_for_joint",
+      "module": "CoverageBoundary"
+    },
+    {
+      "name": "Orthemology.Tranche3.CoverageBoundary.no_universal_individual",
+      "module": "CoverageBoundary"
+    },
+    {
+      "name": "Orthemology.Tranche3.CoverageBoundary.local_exclusive",
+      "module": "CoverageBoundary"
+    },
+    {
+      "name": "Orthemology.Tranche3.CoverageBoundary.prerequisite_closed",
+      "module": "CoverageBoundary"
+    },
+    {
+      "name": "Orthemology.Tranche3.CoverageBoundary.connected_hub",
+      "module": "CoverageBoundary"
+    },
+    {
+      "name": "Orthemology.Tranche3.CoverageBoundary.genuine_cooperation",
+      "module": "CoverageBoundary"
+    },
+    {
+      "name": "Orthemology.Tranche3.CoverageBoundary.effects_contingent",
+      "module": "CoverageBoundary"
+    },
+    {
+      "name": "Orthemology.Tranche3.CoverageBoundary.Node",
+      "module": "CoverageBoundary"
+    },
+    {
+      "name": "Orthemology.Tranche3.CoverageBoundary.NodeExists",
+      "module": "CoverageBoundary"
+    },
+    {
+      "name": "Orthemology.Tranche3.CoverageBoundary.Origin",
+      "module": "CoverageBoundary"
+    },
+    {
+      "name": "Orthemology.Tranche3.CoverageBoundary.nodeExistsDecidable",
+      "module": "CoverageBoundary"
+    },
+    {
+      "name": "Orthemology.Tranche3.CoverageBoundary.originDecidable",
+      "module": "CoverageBoundary"
+    },
+    {
+      "name": "Orthemology.Tranche3.CoverageBoundary.rank",
+      "module": "CoverageBoundary"
+    },
+    {
+      "name": "Orthemology.Tranche3.CoverageBoundary.source_roots_necessary",
+      "module": "CoverageBoundary"
+    },
+    {
+      "name": "Orthemology.Tranche3.CoverageBoundary.origin_factive",
+      "module": "CoverageBoundary"
+    },
+    {
+      "name": "Orthemology.Tranche3.CoverageBoundary.origin_strict_rank",
+      "module": "CoverageBoundary"
+    },
+    {
+      "name": "Orthemology.Tranche3.CoverageBoundary.actual_contingent_source_principle",
+      "module": "CoverageBoundary"
+    },
+    {
+      "name": "Orthemology.Tranche3.CoverageBoundary.generic_reception_retained",
+      "module": "CoverageBoundary"
+    },
+    {
+      "name": "Orthemology.Tranche3.CoverageBoundary.InEnvelope",
+      "module": "CoverageBoundary"
+    },
+    {
+      "name": "Orthemology.Tranche3.CoverageBoundary.ClosedUnder",
+      "module": "CoverageBoundary"
+    },
+    {
+      "name": "Orthemology.Tranche3.CoverageBoundary.envelope_closed",
+      "module": "CoverageBoundary"
+    },
+    {
+      "name": "Orthemology.Tranche3.CoverageBoundary.envelope_least",
+      "module": "CoverageBoundary"
+    },
+    {
+      "name": "Orthemology.Tranche3.CoverageBoundary.universal_propagation_iff_envelope",
+      "module": "CoverageBoundary"
+    },
+    {
+      "name": "Orthemology.Tranche3.CoverageBoundary.complete_on_field_of_envelope",
+      "module": "CoverageBoundary"
+    },
+    {
+      "name": "Orthemology.Tranche3.CoverageBoundary.seed_evaluation_envelope_only",
+      "module": "CoverageBoundary"
+    },
+    {
+      "name": "Orthemology.Tranche3.CoverageBoundary.connected_does_not_give_prerequisite_scope",
+      "module": "CoverageBoundary"
+    },
+    {
+      "name": "IndependentCoverageControls.computed_joint_requires_both",
+      "module": "Controls"
+    },
+    {
+      "name": "IndependentCoverageControls.actual_evaluation_keeps_objective_correctness",
+      "module": "Controls"
+    },
+    {
+      "name": "IndependentCoverageControls.connected_undirected_graph_does_not_expand_forward_closure",
+      "module": "Controls"
+    },
+    {
+      "name": "IndependentCoverageControls.direction_reversal_would_change_coverage",
+      "module": "Controls"
+    },
+    {
+      "name": "IndependentCoverageControls.empty_seed_cannot_generate_anything",
+      "module": "Controls"
+    },
+    {
+      "name": "IndependentCoverageControls.universal_seed_needs_no_edges",
+      "module": "Controls"
+    },
+    {
+      "name": "IndependentCoverageControls.local_role_does_not_cover_all_tokens",
+      "module": "Controls"
+    },
+    {
+      "name": "IndependentCoverageControls.exists_bearer_can_withhold_exercise",
+      "module": "Controls"
+    },
+    {
+      "name": "IndependentCoverageControls.no_claim_of_two_complete_universal_sources",
+      "module": "Controls"
+    }
+  ],
+  "pins": {
+    "lean_version": "4.19.0",
+    "lean_binary_sha256": "92c3d35b5bfaa5e0fea413a775d504cf46cd95e1345df61c2274f76779e7e023",
+    "packages": [
+      {
+        "name": "mathlib",
+        "revision": "c44e0c8ee63ca166450922a373c7409c5d26b00b"
+      },
+      {
+        "name": "plausible",
+        "revision": "77e08eddc486491d7b9e470926b3dbe50319451a"
+      },
+      {
+        "name": "LeanSearchClient",
+        "revision": "25078369972d295301f5a1e53c3e5850cf6d9d4c"
+      },
+      {
+        "name": "importGraph",
+        "revision": "e6a9f0f5ee3ccf7443a0070f92b62f8db12ae82b"
+      },
+      {
+        "name": "proofwidgets",
+        "revision": "c4919189477c3221e6a204008998b0d724f49904"
+      },
+      {
+        "name": "aesop",
+        "revision": "5d50b08dedd7d69b3d9b3176e0d58a23af228884"
+      },
+      {
+        "name": "Qq",
+        "revision": "fa4f7f15d97591a9cf3aa7724ba371c7fc6dda02"
+      },
+      {
+        "name": "batteries",
+        "revision": "f5d04a9c4973d401c8c92500711518f7c656f034"
+      },
+      {
+        "name": "Cli",
+        "revision": "02dbd02bc00ec4916e99b04b2245b30200e200d0"
+      }
+    ]
+  },
+  "official_imports": [
+    {
+      "module": "Mathlib",
+      "repository": "mathlib",
+      "source": "Mathlib.lean",
+      "sha256": "b0518254279fabf0c6a920804e684536b0f5e2bd1cb6318d0609eb563413f20a"
+    }
+  ],
+  "driver": {
+    "source_id": "src-db6ccdc793a0a1a9-817e8553aa5fdf95",
+    "lean_argument": "BIN_DIRECTORY"
+  },
+  "controls": "ORIGINAL_DRIVER_REQUIRED",
+  "classification": "CURRENT_EVIDENCE"
+}

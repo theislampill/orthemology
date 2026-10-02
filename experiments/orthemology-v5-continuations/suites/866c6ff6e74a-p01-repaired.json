@@ -1,0 +1,1884 @@
+{
+  "id": "866c6ff6e74a-p01-repaired",
+  "origin": "866c6ff6e74a67f2bc452b49a0ada05311c0c2601585ea166404719172bd8086",
+  "descriptor_source_id": "src-866c6ff6e74a67f2-47b7b457c989b63a",
+  "modules": [
+    {
+      "module": "AlmostSureBoundary",
+      "source_id": "src-866c6ff6e74a67f2-a6ebca3a4d81869b",
+      "imports": [
+        "Init"
+      ]
+    },
+    {
+      "module": "AuditSupport",
+      "source_id": "src-866c6ff6e74a67f2-99372a5cac1f5df8",
+      "imports": [
+        "Lean"
+      ]
+    },
+    {
+      "module": "InternalPolymorphism",
+      "source_id": "src-866c6ff6e74a67f2-6658d1bb2e4a8dd5",
+      "imports": [
+        "Init"
+      ]
+    },
+    {
+      "module": "FiniteBridge",
+      "source_id": "src-866c6ff6e74a67f2-8ff2e4b040256c9e",
+      "imports": [
+        "InternalPolymorphism"
+      ]
+    },
+    {
+      "module": "BoundaryResults",
+      "source_id": "src-866c6ff6e74a67f2-511327d42daef25e",
+      "imports": [
+        "FiniteBridge"
+      ]
+    },
+    {
+      "module": "EffectsAndDependence",
+      "source_id": "src-866c6ff6e74a67f2-eddaad65d8593457",
+      "imports": [
+        "BoundaryResults"
+      ]
+    },
+    {
+      "module": "GeneratedExamples",
+      "source_id": "src-866c6ff6e74a67f2-32f3457897f7365f",
+      "imports": [
+        "FiniteBridge"
+      ]
+    },
+    {
+      "module": "HurkensBoundary",
+      "source_id": "src-866c6ff6e74a67f2-afaf5bb6a3463145",
+      "imports": [
+        "Init"
+      ]
+    },
+    {
+      "module": "NormalisationAndNumerals",
+      "source_id": "src-866c6ff6e74a67f2-a2fabf4c7e505a9c",
+      "imports": [
+        "EffectsAndDependence"
+      ]
+    },
+    {
+      "module": "OperationalKernel",
+      "source_id": "src-866c6ff6e74a67f2-d0674b738864eae6",
+      "imports": [
+        "FiniteBridge"
+      ]
+    },
+    {
+      "module": "OperationalBoundary",
+      "source_id": "src-866c6ff6e74a67f2-f8db73bee7f4cf95",
+      "imports": [
+        "OperationalKernel",
+        "HurkensBoundary"
+      ]
+    },
+    {
+      "module": "P01TypeAlgebra",
+      "source_id": "src-866c6ff6e74a67f2-723c1dcc07b45526",
+      "imports": [
+        "Mathlib.Data.Bool.Basic",
+        "FiniteBridge"
+      ]
+    },
+    {
+      "module": "P01SNReflection",
+      "source_id": "src-866c6ff6e74a67f2-eee245c56eff0094",
+      "imports": [
+        "Init"
+      ]
+    },
+    {
+      "module": "P01Candidates",
+      "source_id": "src-866c6ff6e74a67f2-c2657fcdcdb8a0bf",
+      "imports": [
+        "P01TypeAlgebra",
+        "P01SNReflection",
+        "BoundaryResults"
+      ]
+    },
+    {
+      "module": "P01Confluence",
+      "source_id": "src-866c6ff6e74a67f2-e85a155bd3e7ac60",
+      "imports": [
+        "P01Candidates"
+      ]
+    },
+    {
+      "module": "P01Omega",
+      "source_id": "src-866c6ff6e74a67f2-88b438565041e7dd",
+      "imports": [
+        "P01Confluence",
+        "NormalisationAndNumerals"
+      ]
+    },
+    {
+      "module": "P01Polynomials",
+      "source_id": "src-866c6ff6e74a67f2-bd7bfa7079092f1d",
+      "imports": [
+        "P01Omega"
+      ]
+    },
+    {
+      "module": "P01PER",
+      "source_id": "src-866c6ff6e74a67f2-45082a3c3dfb85e4",
+      "imports": [
+        "P01Polynomials"
+      ]
+    },
+    {
+      "module": "P01DependentCore",
+      "source_id": "src-866c6ff6e74a67f2-a6745ee1c8c90f9f",
+      "imports": [
+        "P01PER"
+      ]
+    },
+    {
+      "module": "P01ContextualJ",
+      "source_id": "src-866c6ff6e74a67f2-d2caf3770a995321",
+      "imports": [
+        "P01DependentCore"
+      ]
+    },
+    {
+      "module": "P01Certificates",
+      "source_id": "src-866c6ff6e74a67f2-eb48d21c9483f724",
+      "imports": [
+        "P01ContextualJ"
+      ]
+    },
+    {
+      "module": "P01Examples",
+      "source_id": "src-866c6ff6e74a67f2-4062cfd4748b09f0",
+      "imports": [
+        "P01Certificates"
+      ]
+    },
+    {
+      "module": "P01GeneratedExports",
+      "source_id": "src-866c6ff6e74a67f2-db156b4983412f05",
+      "imports": [
+        "P01Certificates"
+      ]
+    },
+    {
+      "module": "P01LambdaSyntax",
+      "source_id": "src-866c6ff6e74a67f2-6dbb3cb27102bd24",
+      "imports": [
+        "P01TypeAlgebra",
+        "P01SNReflection"
+      ]
+    },
+    {
+      "module": "P01SystemF",
+      "source_id": "src-866c6ff6e74a67f2-2b3f3e2e1edb6cf6",
+      "imports": [
+        "P01LambdaSyntax"
+      ]
+    },
+    {
+      "module": "P01Translation",
+      "source_id": "src-866c6ff6e74a67f2-cbf26e5fc0b1f66b",
+      "imports": [
+        "P01SystemF",
+        "BoundaryResults"
+      ]
+    },
+    {
+      "module": "P01ReflectionCountermodel",
+      "source_id": "src-866c6ff6e74a67f2-d8233d2f386f3798",
+      "imports": [
+        "P01Omega",
+        "P01Translation"
+      ]
+    },
+    {
+      "module": "P01UniverseBoundary",
+      "source_id": "src-866c6ff6e74a67f2-3b666f08365926d2",
+      "imports": [
+        "P01Examples",
+        "HurkensBoundary"
+      ]
+    },
+    {
+      "module": "P01TypeAssertions",
+      "source_id": "src-866c6ff6e74a67f2-0d49fd980db9c3d8",
+      "imports": [
+        "P01GeneratedExports",
+        "P01ReflectionCountermodel",
+        "P01UniverseBoundary"
+      ]
+    },
+    {
+      "module": "P01Audit",
+      "source_id": "src-866c6ff6e74a67f2-5e33c55ca3e5ab9a",
+      "imports": [
+        "AuditSupport",
+        "P01Candidates",
+        "P01Certificates",
+        "P01Confluence",
+        "P01ContextualJ",
+        "P01DependentCore",
+        "P01Examples",
+        "P01GeneratedExports",
+        "P01LambdaSyntax",
+        "P01Omega",
+        "P01PER",
+        "P01Polynomials",
+        "P01ReflectionCountermodel",
+        "P01SNReflection",
+        "P01SystemF",
+        "P01Translation",
+        "P01TypeAlgebra",
+        "P01TypeAssertions",
+        "P01UniverseBoundary"
+      ]
+    },
+    {
+      "module": "RelationalFragment",
+      "source_id": "src-866c6ff6e74a67f2-3e93323a3f29bb5a",
+      "imports": [
+        "FiniteBridge"
+      ]
+    }
+  ],
+  "module_order": [
+    "AlmostSureBoundary",
+    "AuditSupport",
+    "InternalPolymorphism",
+    "FiniteBridge",
+    "BoundaryResults",
+    "EffectsAndDependence",
+    "GeneratedExamples",
+    "HurkensBoundary",
+    "NormalisationAndNumerals",
+    "OperationalKernel",
+    "OperationalBoundary",
+    "P01TypeAlgebra",
+    "P01SNReflection",
+    "P01Candidates",
+    "P01Confluence",
+    "P01Omega",
+    "P01Polynomials",
+    "P01PER",
+    "P01DependentCore",
+    "P01ContextualJ",
+    "P01Certificates",
+    "P01Examples",
+    "P01GeneratedExports",
+    "P01LambdaSyntax",
+    "P01SystemF",
+    "P01Translation",
+    "P01ReflectionCountermodel",
+    "P01UniverseBoundary",
+    "P01TypeAssertions",
+    "P01Audit",
+    "RelationalFragment"
+  ],
+  "targets": [
+    {
+      "name": "P01Candidates.SN",
+      "module": "P01Candidates"
+    },
+    {
+      "name": "P01Candidates.Neutral",
+      "module": "P01Candidates"
+    },
+    {
+      "name": "P01Candidates.neutral_app",
+      "module": "P01Candidates"
+    },
+    {
+      "name": "P01Candidates.neutral_successor",
+      "module": "P01Candidates"
+    },
+    {
+      "name": "P01Candidates.sn_step",
+      "module": "P01Candidates"
+    },
+    {
+      "name": "P01Candidates.sn_red",
+      "module": "P01Candidates"
+    },
+    {
+      "name": "P01Candidates.sn_function",
+      "module": "P01Candidates"
+    },
+    {
+      "name": "P01Candidates.Candidate",
+      "module": "P01Candidates"
+    },
+    {
+      "name": "P01Candidates.candidate_ext",
+      "module": "P01Candidates"
+    },
+    {
+      "name": "P01Candidates.snCandidate",
+      "module": "P01Candidates"
+    },
+    {
+      "name": "P01Candidates.zero_mem",
+      "module": "P01Candidates"
+    },
+    {
+      "name": "P01Candidates.descend_red",
+      "module": "P01Candidates"
+    },
+    {
+      "name": "P01Candidates.arrow",
+      "module": "P01Candidates"
+    },
+    {
+      "name": "P01Candidates.intersection",
+      "module": "P01Candidates"
+    },
+    {
+      "name": "P01Candidates.i_successor",
+      "module": "P01Candidates"
+    },
+    {
+      "name": "P01Candidates.k_successor",
+      "module": "P01Candidates"
+    },
+    {
+      "name": "P01Candidates.s_successor",
+      "module": "P01Candidates"
+    },
+    {
+      "name": "P01Candidates.i_expand",
+      "module": "P01Candidates"
+    },
+    {
+      "name": "P01Candidates.k_expand",
+      "module": "P01Candidates"
+    },
+    {
+      "name": "P01Candidates.s_expand",
+      "module": "P01Candidates"
+    },
+    {
+      "name": "P01Candidates.i_member",
+      "module": "P01Candidates"
+    },
+    {
+      "name": "P01Candidates.k_member",
+      "module": "P01Candidates"
+    },
+    {
+      "name": "P01Candidates.s_member",
+      "module": "P01Candidates"
+    },
+    {
+      "name": "P01Candidates.interpret",
+      "module": "P01Candidates"
+    },
+    {
+      "name": "P01Candidates.rename_interpret",
+      "module": "P01Candidates"
+    },
+    {
+      "name": "P01Candidates.substitute_interpret",
+      "module": "P01Candidates"
+    },
+    {
+      "name": "P01Candidates.instantiate_interpret",
+      "module": "P01Candidates"
+    },
+    {
+      "name": "P01Candidates.finite_reducibility",
+      "module": "P01Candidates"
+    },
+    {
+      "name": "P01Candidates.finite_SN",
+      "module": "P01Candidates"
+    },
+    {
+      "name": "P01Certificate.Direction",
+      "module": "P01Certificates"
+    },
+    {
+      "name": "P01Certificate.Address",
+      "module": "P01Certificates"
+    },
+    {
+      "name": "P01Certificate.root",
+      "module": "P01Certificates"
+    },
+    {
+      "name": "P01Certificate.stepAt",
+      "module": "P01Certificates"
+    },
+    {
+      "name": "P01Certificate.replay",
+      "module": "P01Certificates"
+    },
+    {
+      "name": "P01Certificate.checkJoin",
+      "module": "P01Certificates"
+    },
+    {
+      "name": "P01Certificate.replay_sound",
+      "module": "P01Certificates"
+    },
+    {
+      "name": "P01Certificate.join_sound",
+      "module": "P01Certificates"
+    },
+    {
+      "name": "P01Certificate.FiniteEnvelope",
+      "module": "P01Certificates"
+    },
+    {
+      "name": "P01Certificate.finite_envelope_sound",
+      "module": "P01Certificates"
+    },
+    {
+      "name": "P01Certificate.finite_envelope_SN",
+      "module": "P01Certificates"
+    },
+    {
+      "name": "P01Certificate.DependentEnvelope",
+      "module": "P01Certificates"
+    },
+    {
+      "name": "P01Certificate.dependent_envelope_sound",
+      "module": "P01Certificates"
+    },
+    {
+      "name": "P01Certificate.ReplayResult",
+      "module": "P01Certificates"
+    },
+    {
+      "name": "P01Certificate.acceptedProof",
+      "module": "P01Certificates"
+    },
+    {
+      "name": "P01Certificate.refusal_preserved",
+      "module": "P01Certificates"
+    },
+    {
+      "name": "P01Certificate.accepted_replay_sound",
+      "module": "P01Certificates"
+    },
+    {
+      "name": "P01Certificate.TypeShape",
+      "module": "P01Certificates"
+    },
+    {
+      "name": "P01Certificate.image",
+      "module": "P01Certificates"
+    },
+    {
+      "name": "P01Certificate.identity_not_in_exact_target_image",
+      "module": "P01Certificates"
+    },
+    {
+      "name": "P01Certificate.sigma_not_in_exact_target_image",
+      "module": "P01Certificates"
+    },
+    {
+      "name": "P01Source.Par",
+      "module": "P01Confluence"
+    },
+    {
+      "name": "P01Source.par_refl",
+      "module": "P01Confluence"
+    },
+    {
+      "name": "P01Source.dev",
+      "module": "P01Confluence"
+    },
+    {
+      "name": "P01Source.par_i_form",
+      "module": "P01Confluence"
+    },
+    {
+      "name": "P01Source.par_k_form",
+      "module": "P01Confluence"
+    },
+    {
+      "name": "P01Source.par_s1_form",
+      "module": "P01Confluence"
+    },
+    {
+      "name": "P01Source.par_s2_form",
+      "module": "P01Confluence"
+    },
+    {
+      "name": "P01Source.par_k_args",
+      "module": "P01Confluence"
+    },
+    {
+      "name": "P01Source.par_s2_args",
+      "module": "P01Confluence"
+    },
+    {
+      "name": "P01Source.dev_plain",
+      "module": "P01Confluence"
+    },
+    {
+      "name": "P01Source.par_develop",
+      "module": "P01Confluence"
+    },
+    {
+      "name": "P01Source.par_diamond",
+      "module": "P01Confluence"
+    },
+    {
+      "name": "P01Source.red_trans",
+      "module": "P01Confluence"
+    },
+    {
+      "name": "P01Source.red_right",
+      "module": "P01Confluence"
+    },
+    {
+      "name": "P01Source.red_app",
+      "module": "P01Confluence"
+    },
+    {
+      "name": "P01Source.par_red",
+      "module": "P01Confluence"
+    },
+    {
+      "name": "P01Source.step_par",
+      "module": "P01Confluence"
+    },
+    {
+      "name": "P01Source.PStar",
+      "module": "P01Confluence"
+    },
+    {
+      "name": "P01Source.pstar_trans",
+      "module": "P01Confluence"
+    },
+    {
+      "name": "P01Source.strip",
+      "module": "P01Confluence"
+    },
+    {
+      "name": "P01Source.pstar_confluence",
+      "module": "P01Confluence"
+    },
+    {
+      "name": "P01Source.red_pstar",
+      "module": "P01Confluence"
+    },
+    {
+      "name": "P01Source.pstar_red",
+      "module": "P01Confluence"
+    },
+    {
+      "name": "P01Source.confluence",
+      "module": "P01Confluence"
+    },
+    {
+      "name": "P01Source.conv_join",
+      "module": "P01Confluence"
+    },
+    {
+      "name": "P01Source.Normal",
+      "module": "P01Confluence"
+    },
+    {
+      "name": "P01Source.normal_red",
+      "module": "P01Confluence"
+    },
+    {
+      "name": "P01Source.normal_exists",
+      "module": "P01Confluence"
+    },
+    {
+      "name": "P01Source.normal_unique",
+      "module": "P01Confluence"
+    },
+    {
+      "name": "P01Source.red_conv",
+      "module": "P01Confluence"
+    },
+    {
+      "name": "P01Source.conversion_by_normal_forms",
+      "module": "P01Confluence"
+    },
+    {
+      "name": "P01Source.finite_normal_form",
+      "module": "P01Confluence"
+    },
+    {
+      "name": "P01Source.I_SKK_not_convertible",
+      "module": "P01Confluence"
+    },
+    {
+      "name": "P01D.idBody",
+      "module": "P01ContextualJ"
+    },
+    {
+      "name": "P01D.idContext",
+      "module": "P01ContextualJ"
+    },
+    {
+      "name": "P01D.baseProof",
+      "module": "P01ContextualJ"
+    },
+    {
+      "name": "P01D.baseSub",
+      "module": "P01ContextualJ"
+    },
+    {
+      "name": "P01D.pointSub",
+      "module": "P01ContextualJ"
+    },
+    {
+      "name": "P01D.identity_at",
+      "module": "P01ContextualJ"
+    },
+    {
+      "name": "P01D.base_point_related",
+      "module": "P01ContextualJ"
+    },
+    {
+      "name": "P01D.j",
+      "module": "P01ContextualJ"
+    },
+    {
+      "name": "P01D.j_computation",
+      "module": "P01ContextualJ"
+    },
+    {
+      "name": "P01D.inspectProof",
+      "module": "P01ContextualJ"
+    },
+    {
+      "name": "P01D.proof_inspection_not_coherent",
+      "module": "P01ContextualJ"
+    },
+    {
+      "name": "P01D.Context",
+      "module": "P01DependentCore"
+    },
+    {
+      "name": "P01D.nilContext",
+      "module": "P01DependentCore"
+    },
+    {
+      "name": "P01D.Ty",
+      "module": "P01DependentCore"
+    },
+    {
+      "name": "P01D.Tm",
+      "module": "P01DependentCore"
+    },
+    {
+      "name": "P01D.tracked",
+      "module": "P01DependentCore"
+    },
+    {
+      "name": "P01D.Tm.at",
+      "module": "P01DependentCore"
+    },
+    {
+      "name": "P01D.Tm.member",
+      "module": "P01DependentCore"
+    },
+    {
+      "name": "P01D.EqTm",
+      "module": "P01DependentCore"
+    },
+    {
+      "name": "P01D.eqTm_refl",
+      "module": "P01DependentCore"
+    },
+    {
+      "name": "P01D.eqTm_sym",
+      "module": "P01DependentCore"
+    },
+    {
+      "name": "P01D.eqTm_trans",
+      "module": "P01DependentCore"
+    },
+    {
+      "name": "P01D.Sub",
+      "module": "P01DependentCore"
+    },
+    {
+      "name": "P01D.Sub.id",
+      "module": "P01DependentCore"
+    },
+    {
+      "name": "P01D.Sub.comp",
+      "module": "P01DependentCore"
+    },
+    {
+      "name": "P01D.SubEq",
+      "module": "P01DependentCore"
+    },
+    {
+      "name": "P01D.SubRel",
+      "module": "P01DependentCore"
+    },
+    {
+      "name": "P01D.subrel_refl",
+      "module": "P01DependentCore"
+    },
+    {
+      "name": "P01D.subrel_sym",
+      "module": "P01DependentCore"
+    },
+    {
+      "name": "P01D.subrel_trans",
+      "module": "P01DependentCore"
+    },
+    {
+      "name": "P01D.code_exact_substitution_implies_related",
+      "module": "P01DependentCore"
+    },
+    {
+      "name": "P01D.subrel_composition",
+      "module": "P01DependentCore"
+    },
+    {
+      "name": "P01D.sub_left_identity",
+      "module": "P01DependentCore"
+    },
+    {
+      "name": "P01D.sub_right_identity",
+      "module": "P01DependentCore"
+    },
+    {
+      "name": "P01D.sub_associative",
+      "module": "P01DependentCore"
+    },
+    {
+      "name": "P01D.Ty.pull",
+      "module": "P01DependentCore"
+    },
+    {
+      "name": "P01D.Tm.subst",
+      "module": "P01DependentCore"
+    },
+    {
+      "name": "P01D.related_substitution_fibres",
+      "module": "P01DependentCore"
+    },
+    {
+      "name": "P01D.term_substitution_related",
+      "module": "P01DependentCore"
+    },
+    {
+      "name": "P01D.typing_under_substitution",
+      "module": "P01DependentCore"
+    },
+    {
+      "name": "P01D.term_substitution_identity",
+      "module": "P01DependentCore"
+    },
+    {
+      "name": "P01D.term_substitution_composition",
+      "module": "P01DependentCore"
+    },
+    {
+      "name": "P01D.extend",
+      "module": "P01DependentCore"
+    },
+    {
+      "name": "P01D.weaken",
+      "module": "P01DependentCore"
+    },
+    {
+      "name": "P01D.variable",
+      "module": "P01DependentCore"
+    },
+    {
+      "name": "P01D.Sub.extend",
+      "module": "P01DependentCore"
+    },
+    {
+      "name": "P01D.instanceSub",
+      "module": "P01DependentCore"
+    },
+    {
+      "name": "P01D.instanceTy",
+      "module": "P01DependentCore"
+    },
+    {
+      "name": "P01D.fibre",
+      "module": "P01DependentCore"
+    },
+    {
+      "name": "P01D.fibre_cross",
+      "module": "P01DependentCore"
+    },
+    {
+      "name": "P01D.piTy",
+      "module": "P01DependentCore"
+    },
+    {
+      "name": "P01D.lam",
+      "module": "P01DependentCore"
+    },
+    {
+      "name": "P01D.app",
+      "module": "P01DependentCore"
+    },
+    {
+      "name": "P01D.abstraction_congruence",
+      "module": "P01DependentCore"
+    },
+    {
+      "name": "P01D.pi_beta",
+      "module": "P01DependentCore"
+    },
+    {
+      "name": "P01D.sigmaTy",
+      "module": "P01DependentCore"
+    },
+    {
+      "name": "P01D.pair",
+      "module": "P01DependentCore"
+    },
+    {
+      "name": "P01D.fst",
+      "module": "P01DependentCore"
+    },
+    {
+      "name": "P01D.snd",
+      "module": "P01DependentCore"
+    },
+    {
+      "name": "P01D.sigma_beta_first",
+      "module": "P01DependentCore"
+    },
+    {
+      "name": "P01D.sigma_beta_second",
+      "module": "P01DependentCore"
+    },
+    {
+      "name": "P01D.sigma_eta_context",
+      "module": "P01DependentCore"
+    },
+    {
+      "name": "P01D.identityTy",
+      "module": "P01DependentCore"
+    },
+    {
+      "name": "P01D.reflTm",
+      "module": "P01DependentCore"
+    },
+    {
+      "name": "P01D.typeExtend",
+      "module": "P01DependentCore"
+    },
+    {
+      "name": "P01D.typeWeaken",
+      "module": "P01DependentCore"
+    },
+    {
+      "name": "P01D.typeVariable",
+      "module": "P01DependentCore"
+    },
+    {
+      "name": "P01D.typeInstance",
+      "module": "P01DependentCore"
+    },
+    {
+      "name": "P01D.AllFormation",
+      "module": "P01DependentCore"
+    },
+    {
+      "name": "P01D.allTy",
+      "module": "P01DependentCore"
+    },
+    {
+      "name": "P01D.allIntro",
+      "module": "P01DependentCore"
+    },
+    {
+      "name": "P01D.allElim",
+      "module": "P01DependentCore"
+    },
+    {
+      "name": "P01D.allSelf",
+      "module": "P01DependentCore"
+    },
+    {
+      "name": "P01D.constantTy",
+      "module": "P01Examples"
+    },
+    {
+      "name": "P01D.identity_rel",
+      "module": "P01Examples"
+    },
+    {
+      "name": "P01D.identity_link",
+      "module": "P01Examples"
+    },
+    {
+      "name": "P01D.idParamFamily",
+      "module": "P01Examples"
+    },
+    {
+      "name": "P01D.idBodyTy",
+      "module": "P01Examples"
+    },
+    {
+      "name": "P01D.idAllFormation",
+      "module": "P01Examples"
+    },
+    {
+      "name": "P01D.idAllBody",
+      "module": "P01Examples"
+    },
+    {
+      "name": "P01D.polymorphicIdentity",
+      "module": "P01Examples"
+    },
+    {
+      "name": "P01D.polymorphicIdentitySelf",
+      "module": "P01Examples"
+    },
+    {
+      "name": "P01D.atomIdentity",
+      "module": "P01Examples"
+    },
+    {
+      "name": "P01D.dependentReflexivity",
+      "module": "P01Examples"
+    },
+    {
+      "name": "P01D.dependentReflexivityEnvelope",
+      "module": "P01Examples"
+    },
+    {
+      "name": "P01D.pairBody",
+      "module": "P01Examples"
+    },
+    {
+      "name": "P01D.representedPair",
+      "module": "P01Examples"
+    },
+    {
+      "name": "P01D.representedPair_eta",
+      "module": "P01Examples"
+    },
+    {
+      "name": "P01D.constantMotive",
+      "module": "P01Examples"
+    },
+    {
+      "name": "P01D.basedJExample",
+      "module": "P01Examples"
+    },
+    {
+      "name": "P01D.basedJExample_computes",
+      "module": "P01Examples"
+    },
+    {
+      "name": "P01D.polymorphicIdentity_uniform",
+      "module": "P01Examples"
+    },
+    {
+      "name": "P01Generated.cert_identity",
+      "module": "P01GeneratedExports"
+    },
+    {
+      "name": "P01Generated.checked_identity",
+      "module": "P01GeneratedExports"
+    },
+    {
+      "name": "P01Generated.term_identity",
+      "module": "P01GeneratedExports"
+    },
+    {
+      "name": "P01Generated.type_identity",
+      "module": "P01GeneratedExports"
+    },
+    {
+      "name": "P01Generated.envelope_identity",
+      "module": "P01GeneratedExports"
+    },
+    {
+      "name": "P01Generated.derives_identity",
+      "module": "P01GeneratedExports"
+    },
+    {
+      "name": "P01Generated.cert_polymorphic_identity",
+      "module": "P01GeneratedExports"
+    },
+    {
+      "name": "P01Generated.checked_polymorphic_identity",
+      "module": "P01GeneratedExports"
+    },
+    {
+      "name": "P01Generated.term_polymorphic_identity",
+      "module": "P01GeneratedExports"
+    },
+    {
+      "name": "P01Generated.type_polymorphic_identity",
+      "module": "P01GeneratedExports"
+    },
+    {
+      "name": "P01Generated.envelope_polymorphic_identity",
+      "module": "P01GeneratedExports"
+    },
+    {
+      "name": "P01Generated.derives_polymorphic_identity",
+      "module": "P01GeneratedExports"
+    },
+    {
+      "name": "P01Generated.cert_identity_self",
+      "module": "P01GeneratedExports"
+    },
+    {
+      "name": "P01Generated.checked_identity_self",
+      "module": "P01GeneratedExports"
+    },
+    {
+      "name": "P01Generated.term_identity_self",
+      "module": "P01GeneratedExports"
+    },
+    {
+      "name": "P01Generated.type_identity_self",
+      "module": "P01GeneratedExports"
+    },
+    {
+      "name": "P01Generated.envelope_identity_self",
+      "module": "P01GeneratedExports"
+    },
+    {
+      "name": "P01Generated.derives_identity_self",
+      "module": "P01GeneratedExports"
+    },
+    {
+      "name": "P01Generated.cert_binder_identity",
+      "module": "P01GeneratedExports"
+    },
+    {
+      "name": "P01Generated.checked_binder_identity",
+      "module": "P01GeneratedExports"
+    },
+    {
+      "name": "P01Generated.term_binder_identity",
+      "module": "P01GeneratedExports"
+    },
+    {
+      "name": "P01Generated.type_binder_identity",
+      "module": "P01GeneratedExports"
+    },
+    {
+      "name": "P01Generated.envelope_binder_identity",
+      "module": "P01GeneratedExports"
+    },
+    {
+      "name": "P01Generated.derives_binder_identity",
+      "module": "P01GeneratedExports"
+    },
+    {
+      "name": "P01Generated.cert_binder_K",
+      "module": "P01GeneratedExports"
+    },
+    {
+      "name": "P01Generated.checked_binder_K",
+      "module": "P01GeneratedExports"
+    },
+    {
+      "name": "P01Generated.term_binder_K",
+      "module": "P01GeneratedExports"
+    },
+    {
+      "name": "P01Generated.type_binder_K",
+      "module": "P01GeneratedExports"
+    },
+    {
+      "name": "P01Generated.envelope_binder_K",
+      "module": "P01GeneratedExports"
+    },
+    {
+      "name": "P01Generated.derives_binder_K",
+      "module": "P01GeneratedExports"
+    },
+    {
+      "name": "P01Generated.cert_binder_S",
+      "module": "P01GeneratedExports"
+    },
+    {
+      "name": "P01Generated.checked_binder_S",
+      "module": "P01GeneratedExports"
+    },
+    {
+      "name": "P01Generated.term_binder_S",
+      "module": "P01GeneratedExports"
+    },
+    {
+      "name": "P01Generated.type_binder_S",
+      "module": "P01GeneratedExports"
+    },
+    {
+      "name": "P01Generated.envelope_binder_S",
+      "module": "P01GeneratedExports"
+    },
+    {
+      "name": "P01Generated.derives_binder_S",
+      "module": "P01GeneratedExports"
+    },
+    {
+      "name": "P01F.LTerm",
+      "module": "P01LambdaSyntax"
+    },
+    {
+      "name": "P01F.ren",
+      "module": "P01LambdaSyntax"
+    },
+    {
+      "name": "P01F.up",
+      "module": "P01LambdaSyntax"
+    },
+    {
+      "name": "P01F.sub",
+      "module": "P01LambdaSyntax"
+    },
+    {
+      "name": "P01F.single",
+      "module": "P01LambdaSyntax"
+    },
+    {
+      "name": "P01F.inst",
+      "module": "P01LambdaSyntax"
+    },
+    {
+      "name": "P01F.ren_id",
+      "module": "P01LambdaSyntax"
+    },
+    {
+      "name": "P01F.ren_comp",
+      "module": "P01LambdaSyntax"
+    },
+    {
+      "name": "P01F.sub_id",
+      "module": "P01LambdaSyntax"
+    },
+    {
+      "name": "P01F.sub_ren",
+      "module": "P01LambdaSyntax"
+    },
+    {
+      "name": "P01F.ren_sub",
+      "module": "P01LambdaSyntax"
+    },
+    {
+      "name": "P01F.sub_comp",
+      "module": "P01LambdaSyntax"
+    },
+    {
+      "name": "P01F.sub_up_shift",
+      "module": "P01LambdaSyntax"
+    },
+    {
+      "name": "P01F.inst_shift",
+      "module": "P01LambdaSyntax"
+    },
+    {
+      "name": "P01F.sub_inst",
+      "module": "P01LambdaSyntax"
+    },
+    {
+      "name": "P01F.Beta",
+      "module": "P01LambdaSyntax"
+    },
+    {
+      "name": "P01F.BStar",
+      "module": "P01LambdaSyntax"
+    },
+    {
+      "name": "P01F.BPositive",
+      "module": "P01LambdaSyntax"
+    },
+    {
+      "name": "P01F.beta_sub",
+      "module": "P01LambdaSyntax"
+    },
+    {
+      "name": "P01F.bstar_trans",
+      "module": "P01LambdaSyntax"
+    },
+    {
+      "name": "P01F.bstar_left",
+      "module": "P01LambdaSyntax"
+    },
+    {
+      "name": "P01F.bstar_right",
+      "module": "P01LambdaSyntax"
+    },
+    {
+      "name": "P01F.BConv",
+      "module": "P01LambdaSyntax"
+    },
+    {
+      "name": "P01F.bstar_conv",
+      "module": "P01LambdaSyntax"
+    },
+    {
+      "name": "P01Source.tower",
+      "module": "P01Omega"
+    },
+    {
+      "name": "P01Source.omegaShape",
+      "module": "P01Omega"
+    },
+    {
+      "name": "P01Source.duplicator_normal",
+      "module": "P01Omega"
+    },
+    {
+      "name": "P01Source.tower_step",
+      "module": "P01Omega"
+    },
+    {
+      "name": "P01Source.shape_step",
+      "module": "P01Omega"
+    },
+    {
+      "name": "P01Source.shape_has_step",
+      "module": "P01Omega"
+    },
+    {
+      "name": "P01Source.shape_red",
+      "module": "P01Omega"
+    },
+    {
+      "name": "P01Source.omega_no_normal_reduct",
+      "module": "P01Omega"
+    },
+    {
+      "name": "P01Source.omega_no_finite_representative",
+      "module": "P01Omega"
+    },
+    {
+      "name": "P01Source.omega_semantic_bottom_arrow",
+      "module": "P01Omega"
+    },
+    {
+      "name": "P01D.PER",
+      "module": "P01PER"
+    },
+    {
+      "name": "P01D.PER.dom",
+      "module": "P01PER"
+    },
+    {
+      "name": "P01D.PER.left",
+      "module": "P01PER"
+    },
+    {
+      "name": "P01D.PER.right",
+      "module": "P01PER"
+    },
+    {
+      "name": "P01D.per_ext",
+      "module": "P01PER"
+    },
+    {
+      "name": "P01D.botPER",
+      "module": "P01PER"
+    },
+    {
+      "name": "P01D.rawPER",
+      "module": "P01PER"
+    },
+    {
+      "name": "P01D.conv_app",
+      "module": "P01PER"
+    },
+    {
+      "name": "P01D.PiPER",
+      "module": "P01PER"
+    },
+    {
+      "name": "P01D.ArrPER",
+      "module": "P01PER"
+    },
+    {
+      "name": "P01D.Link",
+      "module": "P01PER"
+    },
+    {
+      "name": "P01D.Link.raw",
+      "module": "P01PER"
+    },
+    {
+      "name": "P01D.diagonal",
+      "module": "P01PER"
+    },
+    {
+      "name": "P01D.arrowLink",
+      "module": "P01PER"
+    },
+    {
+      "name": "P01D.arrow_identity",
+      "module": "P01PER"
+    },
+    {
+      "name": "P01D.pair_congr",
+      "module": "P01PER"
+    },
+    {
+      "name": "P01D.Represented",
+      "module": "P01PER"
+    },
+    {
+      "name": "P01D.pair_represented",
+      "module": "P01PER"
+    },
+    {
+      "name": "P01D.represented_raw",
+      "module": "P01PER"
+    },
+    {
+      "name": "P01D.SigmaPER",
+      "module": "P01PER"
+    },
+    {
+      "name": "P01D.sigma_pair",
+      "module": "P01PER"
+    },
+    {
+      "name": "P01D.sigma_witness_iff",
+      "module": "P01PER"
+    },
+    {
+      "name": "P01D.sigma_eta",
+      "module": "P01PER"
+    },
+    {
+      "name": "P01D.IdPER",
+      "module": "P01PER"
+    },
+    {
+      "name": "P01D.id_intro",
+      "module": "P01PER"
+    },
+    {
+      "name": "P01D.BasedMotive",
+      "module": "P01PER"
+    },
+    {
+      "name": "P01D.based_transport",
+      "module": "P01PER"
+    },
+    {
+      "name": "P01D.Jterm",
+      "module": "P01PER"
+    },
+    {
+      "name": "P01D.J_red",
+      "module": "P01PER"
+    },
+    {
+      "name": "P01D.based_J",
+      "module": "P01PER"
+    },
+    {
+      "name": "P01D.ParamFamily",
+      "module": "P01PER"
+    },
+    {
+      "name": "P01D.Parametric",
+      "module": "P01PER"
+    },
+    {
+      "name": "P01D.AllPER",
+      "module": "P01PER"
+    },
+    {
+      "name": "P01D.all_domain",
+      "module": "P01PER"
+    },
+    {
+      "name": "P01D.AllDiagonal",
+      "module": "P01PER"
+    },
+    {
+      "name": "P01D.all_identity_extension",
+      "module": "P01PER"
+    },
+    {
+      "name": "P01D.all_eliminate",
+      "module": "P01PER"
+    },
+    {
+      "name": "P01D.all_self_eliminate",
+      "module": "P01PER"
+    },
+    {
+      "name": "P01D.Poly",
+      "module": "P01Polynomials"
+    },
+    {
+      "name": "P01D.Env",
+      "module": "P01Polynomials"
+    },
+    {
+      "name": "P01D.eval",
+      "module": "P01Polynomials"
+    },
+    {
+      "name": "P01D.psub",
+      "module": "P01Polynomials"
+    },
+    {
+      "name": "P01D.pren",
+      "module": "P01Polynomials"
+    },
+    {
+      "name": "P01D.pup",
+      "module": "P01Polynomials"
+    },
+    {
+      "name": "P01D.eval_sub",
+      "module": "P01Polynomials"
+    },
+    {
+      "name": "P01D.psub_id",
+      "module": "P01Polynomials"
+    },
+    {
+      "name": "P01D.psub_comp",
+      "module": "P01Polynomials"
+    },
+    {
+      "name": "P01D.eval_ren",
+      "module": "P01Polynomials"
+    },
+    {
+      "name": "P01D.freeZero",
+      "module": "P01Polynomials"
+    },
+    {
+      "name": "P01D.drop",
+      "module": "P01Polynomials"
+    },
+    {
+      "name": "P01D.abstract",
+      "module": "P01Polynomials"
+    },
+    {
+      "name": "P01D.freeZero_pren_succ",
+      "module": "P01Polynomials"
+    },
+    {
+      "name": "P01D.drop_pren_succ",
+      "module": "P01Polynomials"
+    },
+    {
+      "name": "P01D.freeZero_lifted_sub",
+      "module": "P01Polynomials"
+    },
+    {
+      "name": "P01D.drop_lifted_sub_absent",
+      "module": "P01Polynomials"
+    },
+    {
+      "name": "P01D.abstract_absent",
+      "module": "P01Polynomials"
+    },
+    {
+      "name": "P01D.abstract_present_app",
+      "module": "P01Polynomials"
+    },
+    {
+      "name": "P01D.abstraction_naturality",
+      "module": "P01Polynomials"
+    },
+    {
+      "name": "P01D.eval_absent",
+      "module": "P01Polynomials"
+    },
+    {
+      "name": "P01D.abstraction_beta",
+      "module": "P01Polynomials"
+    },
+    {
+      "name": "P01D.abstraction_substitution",
+      "module": "P01Polynomials"
+    },
+    {
+      "name": "P01D.pairPoly",
+      "module": "P01Polynomials"
+    },
+    {
+      "name": "P01D.fstPoly",
+      "module": "P01Polynomials"
+    },
+    {
+      "name": "P01D.sndPoly",
+      "module": "P01Polynomials"
+    },
+    {
+      "name": "P01D.jPoly",
+      "module": "P01Polynomials"
+    },
+    {
+      "name": "P01D.eval_pair",
+      "module": "P01Polynomials"
+    },
+    {
+      "name": "P01D.eval_fst",
+      "module": "P01Polynomials"
+    },
+    {
+      "name": "P01D.eval_snd",
+      "module": "P01Polynomials"
+    },
+    {
+      "name": "P01D.eval_j",
+      "module": "P01Polynomials"
+    },
+    {
+      "name": "P01F.bstar_under",
+      "module": "P01ReflectionCountermodel"
+    },
+    {
+      "name": "P01F.SKK_beta_I",
+      "module": "P01ReflectionCountermodel"
+    },
+    {
+      "name": "P01F.target_conversion_reflection_false",
+      "module": "P01ReflectionCountermodel"
+    },
+    {
+      "name": "P01SNReflection.Star",
+      "module": "P01SNReflection"
+    },
+    {
+      "name": "P01SNReflection.Positive",
+      "module": "P01SNReflection"
+    },
+    {
+      "name": "P01SNReflection.SN",
+      "module": "P01SNReflection"
+    },
+    {
+      "name": "P01SNReflection.positive_simulation_reflects_SN",
+      "module": "P01SNReflection"
+    },
+    {
+      "name": "P01F.Context",
+      "module": "P01SystemF"
+    },
+    {
+      "name": "P01F.shiftContext",
+      "module": "P01SystemF"
+    },
+    {
+      "name": "P01F.subContext",
+      "module": "P01SystemF"
+    },
+    {
+      "name": "P01F.Has",
+      "module": "P01SystemF"
+    },
+    {
+      "name": "P01F.subContext_cons",
+      "module": "P01SystemF"
+    },
+    {
+      "name": "P01F.subContext_up",
+      "module": "P01SystemF"
+    },
+    {
+      "name": "P01F.subContext_single_shift",
+      "module": "P01SystemF"
+    },
+    {
+      "name": "P01F.type_substitution",
+      "module": "P01SystemF"
+    },
+    {
+      "name": "P01F.type_renaming",
+      "module": "P01SystemF"
+    },
+    {
+      "name": "P01F.term_renaming",
+      "module": "P01SystemF"
+    },
+    {
+      "name": "P01F.term_weakening",
+      "module": "P01SystemF"
+    },
+    {
+      "name": "P01F.term_substitution",
+      "module": "P01SystemF"
+    },
+    {
+      "name": "P01F.instantiate_term",
+      "module": "P01SystemF"
+    },
+    {
+      "name": "P01F.LamView",
+      "module": "P01SystemF"
+    },
+    {
+      "name": "P01F.lamView_substitution",
+      "module": "P01SystemF"
+    },
+    {
+      "name": "P01F.lamView_instantiation",
+      "module": "P01SystemF"
+    },
+    {
+      "name": "P01F.lambda_view",
+      "module": "P01SystemF"
+    },
+    {
+      "name": "P01F.lambda_generation",
+      "module": "P01SystemF"
+    },
+    {
+      "name": "P01F.subject_reduction",
+      "module": "P01SystemF"
+    },
+    {
+      "name": "P01F.subject_reduction_star",
+      "module": "P01SystemF"
+    },
+    {
+      "name": "P01F.translateType",
+      "module": "P01Translation"
+    },
+    {
+      "name": "P01F.translate",
+      "module": "P01Translation"
+    },
+    {
+      "name": "P01F.translate_ren",
+      "module": "P01Translation"
+    },
+    {
+      "name": "P01F.translate_sub",
+      "module": "P01Translation"
+    },
+    {
+      "name": "P01F.translate_type_substitution",
+      "module": "P01Translation"
+    },
+    {
+      "name": "P01F.positive_left",
+      "module": "P01Translation"
+    },
+    {
+      "name": "P01F.positive_right",
+      "module": "P01Translation"
+    },
+    {
+      "name": "P01F.positive_to_star",
+      "module": "P01Translation"
+    },
+    {
+      "name": "P01F.step_simulation",
+      "module": "P01Translation"
+    },
+    {
+      "name": "P01F.reduction_simulation",
+      "module": "P01Translation"
+    },
+    {
+      "name": "P01F.conversion_preservation",
+      "module": "P01Translation"
+    },
+    {
+      "name": "P01F.typing_preservation",
+      "module": "P01Translation"
+    },
+    {
+      "name": "P01F.target_SN_implies_source_SN",
+      "module": "P01Translation"
+    },
+    {
+      "name": "P01F.chain_simulation",
+      "module": "P01Translation"
+    },
+    {
+      "name": "P01F.SN_no_chain",
+      "module": "P01Translation"
+    },
+    {
+      "name": "P01F.Ty",
+      "module": "P01TypeAlgebra"
+    },
+    {
+      "name": "P01F.cons",
+      "module": "P01TypeAlgebra"
+    },
+    {
+      "name": "P01F.ty_rename_id",
+      "module": "P01TypeAlgebra"
+    },
+    {
+      "name": "P01F.ty_rename_comp",
+      "module": "P01TypeAlgebra"
+    },
+    {
+      "name": "P01F.ty_sub_id",
+      "module": "P01TypeAlgebra"
+    },
+    {
+      "name": "P01F.ty_sub_rename",
+      "module": "P01TypeAlgebra"
+    },
+    {
+      "name": "P01F.ty_rename_sub",
+      "module": "P01TypeAlgebra"
+    },
+    {
+      "name": "P01F.ty_sub_comp",
+      "module": "P01TypeAlgebra"
+    },
+    {
+      "name": "P01F.ty_sub_up_shift",
+      "module": "P01TypeAlgebra"
+    },
+    {
+      "name": "P01F.ty_inst_shift",
+      "module": "P01TypeAlgebra"
+    },
+    {
+      "name": "P01F.ty_sub_inst",
+      "module": "P01TypeAlgebra"
+    },
+    {
+      "name": "P01F.ty_sub_vars",
+      "module": "P01TypeAlgebra"
+    },
+    {
+      "name": "P01TypeAssertions.bridge_subject_reduction",
+      "module": "P01TypeAssertions"
+    },
+    {
+      "name": "P01TypeAssertions.bridge_typing",
+      "module": "P01TypeAssertions"
+    },
+    {
+      "name": "P01TypeAssertions.bridge_nonempty",
+      "module": "P01TypeAssertions"
+    },
+    {
+      "name": "P01TypeAssertions.direct_normalisation",
+      "module": "P01TypeAssertions"
+    },
+    {
+      "name": "P01TypeAssertions.raw_source_confluence",
+      "module": "P01TypeAssertions"
+    },
+    {
+      "name": "P01TypeAssertions.typed_conversion",
+      "module": "P01TypeAssertions"
+    },
+    {
+      "name": "P01TypeAssertions.exact_nonrepresentability",
+      "module": "P01TypeAssertions"
+    },
+    {
+      "name": "P01TypeAssertions.no_target_reflection",
+      "module": "P01TypeAssertions"
+    },
+    {
+      "name": "P01TypeAssertions.code_bound_intrinsic_soundness",
+      "module": "P01TypeAssertions"
+    },
+    {
+      "name": "P01TypeAssertions.all_new_identity_extension",
+      "module": "P01TypeAssertions"
+    },
+    {
+      "name": "P01TypeAssertions.j_two_coordinate_transport",
+      "module": "P01TypeAssertions"
+    },
+    {
+      "name": "P01D.Realiser",
+      "module": "P01UniverseBoundary"
+    },
+    {
+      "name": "P01D.internal_all_self_instance",
+      "module": "P01UniverseBoundary"
+    },
+    {
+      "name": "P01D.no_same_level_Girard_retraction",
+      "module": "P01UniverseBoundary"
+    }
+  ],
+  "pins": {
+    "lean_version": "4.19.0",
+    "lean_binary_sha256": "92c3d35b5bfaa5e0fea413a775d504cf46cd95e1345df61c2274f76779e7e023",
+    "packages": [
+      {
+        "name": "mathlib",
+        "revision": "c44e0c8ee63ca166450922a373c7409c5d26b00b"
+      },
+      {
+        "name": "plausible",
+        "revision": "77e08eddc486491d7b9e470926b3dbe50319451a"
+      },
+      {
+        "name": "LeanSearchClient",
+        "revision": "25078369972d295301f5a1e53c3e5850cf6d9d4c"
+      },
+      {
+        "name": "importGraph",
+        "revision": "e6a9f0f5ee3ccf7443a0070f92b62f8db12ae82b"
+      },
+      {
+        "name": "proofwidgets",
+        "revision": "c4919189477c3221e6a204008998b0d724f49904"
+      },
+      {
+        "name": "aesop",
+        "revision": "5d50b08dedd7d69b3d9b3176e0d58a23af228884"
+      },
+      {
+        "name": "Qq",
+        "revision": "fa4f7f15d97591a9cf3aa7724ba371c7fc6dda02"
+      },
+      {
+        "name": "batteries",
+        "revision": "f5d04a9c4973d401c8c92500711518f7c656f034"
+      },
+      {
+        "name": "Cli",
+        "revision": "02dbd02bc00ec4916e99b04b2245b30200e200d0"
+      }
+    ]
+  },
+  "official_imports": [
+    {
+      "module": "Init",
+      "repository": "lean-release",
+      "source": "Init.lean",
+      "sha256": "94c76e813fdf92a0375566c1c7f3335cf269703da809c6189dc0de09d66b0204"
+    },
+    {
+      "module": "Lean",
+      "repository": "lean-release",
+      "source": "Lean.lean",
+      "sha256": "81987fb597b14adf25104f16006c885d1feb9a9ec59745384b10989c9546e9a4"
+    },
+    {
+      "module": "Mathlib.Data.Bool.Basic",
+      "repository": "mathlib",
+      "source": "Mathlib/Data/Bool/Basic.lean",
+      "sha256": "fb20d50c3aed15cdf7c5b7f1bc92db8ab850444f158199bfa8cb2f09ac3a5e55"
+    }
+  ],
+  "driver": {
+    "source_id": "src-866c6ff6e74a67f2-279d28ea9829b80d",
+    "lean_argument": "EXECUTABLE"
+  },
+  "controls": "ORIGINAL_DRIVER_REQUIRED",
+  "classification": "CURRENT_EVIDENCE"
+}

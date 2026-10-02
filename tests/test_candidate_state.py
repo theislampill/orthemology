@@ -55,7 +55,7 @@ def generator_exit(data):
         return exit_code, stream.getvalue(), output_path.exists()
 
 
-def production_validator_exit(data, overlay=None):
+def production_validator_exit(data, overlay=None, decisions=None):
     """Run the real production validator with only input/output reads replaced."""
     scripts_path = str(SCRIPTS)
     if scripts_path not in sys.path:
@@ -79,6 +79,10 @@ def production_validator_exit(data, overlay=None):
         ),
         "docs/current-candidate-state.yaml": yaml.safe_dump(overlay, sort_keys=False),
     }
+    if decisions is not None:
+        registry=yaml.safe_load(DECISIONS.read_text(encoding="utf-8"))
+        registry["decisions"]=decisions
+        overrides["docs/decision-status.yaml"]=yaml.safe_dump(registry,sort_keys=False)
     real_read = module.read
     module.read = lambda rel: overrides.get(rel, real_read(rel))
     module.FAILS.clear()
@@ -96,6 +100,23 @@ def production_validator_exit(data, overlay=None):
 
 
 class CandidateStateTests(unittest.TestCase):
+    def test_local_candidate_requires_no_invented_pull_request(self):
+        data=yaml.safe_load(INPUT.read_text(encoding="utf-8"))
+        decisions=yaml.safe_load(DECISIONS.read_text(encoding="utf-8"))["decisions"]
+        decisions["0037"]={"status":"proposed-candidate","stage":"local-preparation","title":"Local continuation"}
+        code,output=production_validator_exit(data,decisions=decisions)
+        self.assertEqual(code,0,output)
+        decisions["0037"]["status"]="adopted-merged"
+        code,_=production_validator_exit(data,decisions=decisions)
+        self.assertEqual(code,1)
+
+    def test_historical_candidate_cannot_lose_its_pull_request(self):
+        data=yaml.safe_load(INPUT.read_text(encoding="utf-8"))
+        decisions=yaml.safe_load(DECISIONS.read_text(encoding="utf-8"))["decisions"]
+        decisions["0034"].pop("pr")
+        code,_=production_validator_exit(data,decisions=decisions)
+        self.assertEqual(code,1)
+
     def setUp(self):
         self.data = yaml.safe_load(INPUT.read_text(encoding="utf-8"))
         self.decisions = yaml.safe_load(DECISIONS.read_text(encoding="utf-8"))["decisions"]

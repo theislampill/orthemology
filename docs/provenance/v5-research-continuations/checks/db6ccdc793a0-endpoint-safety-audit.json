@@ -1,0 +1,184 @@
+{
+  "status": "FRESH_KERNEL_COMPONENTS",
+  "exit_code": 0,
+  "kernel_verified": true,
+  "suite_id": "db6ccdc793a0-endpoint-safety-audit",
+  "suite_sha256": "54f2eaad2b31b8177c1c904e64e041bf7ad33030db9871bef7a4cb936ec4d33b",
+  "source_hashes": {
+    "RobustBinaryRepair": "1762b3ce9b4c3d11826eb724c1d15468d8ddda69666da3e06f332979288b4c31",
+    "RepairEndpointCells": "48fa3944856cc27e03bdf6bd43de8634710ac38bf990d2b5836684e799d5146b",
+    "EndpointReadback": "9773ca285989ab98561575eaed3fbc14c7951813af4e456073f8ee9a80f46df9"
+  },
+  "post_source_hashes": {
+    "RobustBinaryRepair": "1762b3ce9b4c3d11826eb724c1d15468d8ddda69666da3e06f332979288b4c31",
+    "RepairEndpointCells": "48fa3944856cc27e03bdf6bd43de8634710ac38bf990d2b5836684e799d5146b",
+    "EndpointReadback": "9773ca285989ab98561575eaed3fbc14c7951813af4e456073f8ee9a80f46df9"
+  },
+  "compiler_sha256": "92c3d35b5bfaa5e0fea413a775d504cf46cd95e1345df61c2274f76779e7e023",
+  "pins": {
+    "lean_version": "4.19.0",
+    "lean_binary_sha256": "92c3d35b5bfaa5e0fea413a775d504cf46cd95e1345df61c2274f76779e7e023",
+    "packages": [
+      {
+        "name": "mathlib",
+        "revision": "c44e0c8ee63ca166450922a373c7409c5d26b00b"
+      },
+      {
+        "name": "plausible",
+        "revision": "77e08eddc486491d7b9e470926b3dbe50319451a"
+      },
+      {
+        "name": "LeanSearchClient",
+        "revision": "25078369972d295301f5a1e53c3e5850cf6d9d4c"
+      },
+      {
+        "name": "importGraph",
+        "revision": "e6a9f0f5ee3ccf7443a0070f92b62f8db12ae82b"
+      },
+      {
+        "name": "proofwidgets",
+        "revision": "c4919189477c3221e6a204008998b0d724f49904"
+      },
+      {
+        "name": "aesop",
+        "revision": "5d50b08dedd7d69b3d9b3176e0d58a23af228884"
+      },
+      {
+        "name": "Qq",
+        "revision": "fa4f7f15d97591a9cf3aa7724ba371c7fc6dda02"
+      },
+      {
+        "name": "batteries",
+        "revision": "f5d04a9c4973d401c8c92500711518f7c656f034"
+      },
+      {
+        "name": "Cli",
+        "revision": "02dbd02bc00ec4916e99b04b2245b30200e200d0"
+      }
+    ]
+  },
+  "modules": [
+    {
+      "module": "RobustBinaryRepair",
+      "source_sha256": "1762b3ce9b4c3d11826eb724c1d15468d8ddda69666da3e06f332979288b4c31",
+      "object_sha256": "1e38d62d6829039b175447f36f2faf9890c142896e7e79f4ce60d365e586ebb9",
+      "transitive_source_fingerprint": "79e5372a2926af49521fe0604453296db2ee98bc03e4b7dfa6b4707c1e044758",
+      "status": "QUALIFIED_PREDECESSOR",
+      "predecessor_receipt": "docs/provenance/v5-research-continuations/checks/db6ccdc793a0-continuum-repair.json",
+      "predecessor_receipt_sha256": "6f58d28bfc29e1500254c3337c28d6a9e76a12805c0ff3261f273d363e9d6e77"
+    },
+    {
+      "module": "RepairEndpointCells",
+      "source_sha256": "48fa3944856cc27e03bdf6bd43de8634710ac38bf990d2b5836684e799d5146b",
+      "object_sha256": "974d713596915a0ae4ef97f6ede5ec6ffb1e2cfef734eb0baac6088656549ba3",
+      "transitive_source_fingerprint": "a3ae0a29351ee07e654f634e78ee928ae0482f983468e7cab389bc0cf1d29fa2",
+      "status": "QUALIFIED_PREDECESSOR",
+      "predecessor_receipt": "docs/provenance/v5-research-continuations/checks/db6ccdc793a0-continuum-repair.json",
+      "predecessor_receipt_sha256": "6f58d28bfc29e1500254c3337c28d6a9e76a12805c0ff3261f273d363e9d6e77"
+    },
+    {
+      "module": "EndpointReadback",
+      "source_sha256": "9773ca285989ab98561575eaed3fbc14c7951813af4e456073f8ee9a80f46df9",
+      "object_sha256": "9bc9b2f9ca9c538e7cbe7ce305d8831f905581c97b18d2683daa240dfcd49eae",
+      "transitive_source_fingerprint": "bafe6c3a940f9757973d3af38da8d72757262fd8ce1ddb769fafdd2d493cecd6",
+      "status": "FRESH_COMPILE",
+      "exit_code": 0
+    }
+  ],
+  "readbacks": {
+    "Orthemology.Tranche3.robustGood_iff_endpoints": {
+      "type_sha256": "0065ed3cbf6228b09a6b5900dc5026120a4f702fa216d6350591d85152db9f8c",
+      "axioms": [
+        "Classical.choice",
+        "Quot.sound",
+        "propext"
+      ]
+    },
+    "Orthemology.Tranche3.robust_repair_exists_iff": {
+      "type_sha256": "9f41767998527cfcc4b83170c50e7783bd370d438a06b2bb5826b491fb4c98c3",
+      "axioms": [
+        "Classical.choice",
+        "Quot.sound",
+        "propext"
+      ]
+    },
+    "Orthemology.Tranche3.robustValue_polynomial": {
+      "type_sha256": "902e6c00b95334eba0c6f6f6d956c11d55e299cd7bfb0412e6650e90896dfaea",
+      "axioms": [
+        "Classical.choice",
+        "Quot.sound",
+        "propext"
+      ]
+    },
+    "Orthemology.Tranche3.robustReport_unique": {
+      "type_sha256": "aa5f4700836d727e7e50248ba8a93716c138301d18c24c4093816c01012b37ee",
+      "axioms": [
+        "Classical.choice",
+        "Quot.sound",
+        "propext"
+      ]
+    },
+    "Orthemology.Tranche3.covered_certificate_sound": {
+      "type_sha256": "78cf8ab310b2d88e75d08311edc870185d53d7ecfd91e5770a2324741137d8f3",
+      "axioms": [
+        "Classical.choice",
+        "Quot.sound",
+        "propext"
+      ]
+    },
+    "Orthemology.Tranche3.width_sufficient": {
+      "type_sha256": "724169ec229ee8a35ac12af0e8fd7f3f741141ee3bb85578915cf9b33e62d97e",
+      "axioms": [
+        "Classical.choice",
+        "Quot.sound",
+        "propext"
+      ]
+    },
+    "Orthemology.Tranche3.width_necessary": {
+      "type_sha256": "e85eb848c588a578b7869fca7822df18fa911c747223aeae7a3e2d6bec60da82",
+      "axioms": [
+        "Classical.choice",
+        "Quot.sound",
+        "propext"
+      ]
+    },
+    "Orthemology.Tranche3.positive_weight_punctured_cell": {
+      "type_sha256": "01c7d6f2d993002370bf3486443a594fb71166f8c52c6497e91f8d31b013b213",
+      "axioms": [
+        "Classical.choice",
+        "Quot.sound",
+        "propext"
+      ]
+    },
+    "Orthemology.Tranche3.zero_weight_unique": {
+      "type_sha256": "8c8ced037a5cdcf0e12ee5efe51e3c57c6d529f5a2f459afcf85bd87c39d240d",
+      "axioms": [
+        "Classical.choice",
+        "Quot.sound",
+        "propext"
+      ]
+    },
+    "Orthemology.Tranche3.one_weight_unique": {
+      "type_sha256": "c06afd64386438bbfc4cc51ccd8010b14ff10e2a44adfc8c38df5175ba90a046",
+      "axioms": [
+        "Classical.choice",
+        "Quot.sound",
+        "propext"
+      ]
+    },
+    "Orthemology.Tranche3.below_one_punctured_cell": {
+      "type_sha256": "809d8db30ce22557c7ecbaac9b8d13ef84567c44dffdd200775c63acbc3b2e78",
+      "axioms": [
+        "Classical.choice",
+        "Quot.sound",
+        "propext"
+      ]
+    }
+  },
+  "original_controls": "NOT_RUN",
+  "original_receipt_sha256": "53453a2920c5c69b9df80f4bbff8934636ed13f70202343ffbbb4145c4d224ea",
+  "original_driver_sha256": "4933d602f18c749ff170629964914907bf1c5bf05160329bd8aab623dfd65f98",
+  "execution_kind": "FRESH_CUSTOM_CLOSURE",
+  "finished_utc": "2026-10-02T05:42:34.892959+00:00",
+  "scope": "Source-bound custom closure and selected declaration readbacks. Types are represented by hashes of the exact printed types; complete logs remain private. Official caches are trusted. This does not establish ordinary proof, runtime completeness, empirical or normative warrant, novelty, external human review or merged adoption."
+}

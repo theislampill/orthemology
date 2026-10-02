@@ -1,0 +1,5 @@
+import ClusterWidthBoundary
+#check ClusterWidthBoundary.shifted_worst_excess
+#check ClusterWidthBoundary.shifted_tail_accepts
+#check ClusterWidthBoundary.critical_pair_incompatible
+#check ClusterWidthBoundary.critical_strips_incompatible

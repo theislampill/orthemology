@@ -1,0 +1,977 @@
+{
+  "id": "866c6ff6e74a-membership-computability",
+  "origin": "866c6ff6e74a67f2bc452b49a0ada05311c0c2601585ea166404719172bd8086",
+  "descriptor_source_id": "src-866c6ff6e74a67f2-47b7b457c989b63a",
+  "modules": [
+    {
+      "module": "P02A2.MeasureCore",
+      "source_id": "src-866c6ff6e74a67f2-3810e747c3f17e40",
+      "imports": [
+        "Mathlib.MeasureTheory.Measure.Typeclasses.SFinite",
+        "Mathlib.MeasureTheory.Measure.Typeclasses.Probability",
+        "Mathlib.MeasureTheory.Measure.Map",
+        "Mathlib.MeasureTheory.Measure.Restrict",
+        "Mathlib.Tactic"
+      ]
+    },
+    {
+      "module": "Q8Measure",
+      "source_id": "src-866c6ff6e74a67f2-a30129deb9018dd8",
+      "imports": [
+        "P02A2.MeasureCore",
+        "Mathlib.Probability.ProductMeasure",
+        "Mathlib.Probability.ProbabilityMassFunction.Constructions",
+        "Mathlib.Analysis.SpecificLimits.Basic"
+      ]
+    },
+    {
+      "module": "HeavyCylinders",
+      "source_id": "src-866c6ff6e74a67f2-c763f10f5150eafa",
+      "imports": [
+        "Q8Measure",
+        "Mathlib.Data.ENNReal.Inv"
+      ]
+    },
+    {
+      "module": "CodecVarint",
+      "source_id": "src-866c6ff6e74a67f2-b2559cf5a816456a",
+      "imports": [
+        "Mathlib.Data.Nat.Bitwise",
+        "Mathlib.Tactic"
+      ]
+    },
+    {
+      "module": "P02A2.ObserverCore",
+      "source_id": "src-866c6ff6e74a67f2-94268870c6ab05d8",
+      "imports": [
+        "Mathlib"
+      ]
+    },
+    {
+      "module": "CodecExpr",
+      "source_id": "src-866c6ff6e74a67f2-a29f527981175403",
+      "imports": [
+        "CodecVarint",
+        "P02A2.ObserverCore"
+      ]
+    },
+    {
+      "module": "CodecStmt",
+      "source_id": "src-866c6ff6e74a67f2-be27f29cc4255fc9",
+      "imports": [
+        "CodecExpr"
+      ]
+    },
+    {
+      "module": "CodecNumeric",
+      "source_id": "src-866c6ff6e74a67f2-173b45df849767a5",
+      "imports": [
+        "CodecVarint"
+      ]
+    },
+    {
+      "module": "LoopRenaming",
+      "source_id": "src-866c6ff6e74a67f2-ddd01e0e2eb21586",
+      "imports": [
+        "P02A2.ObserverCore"
+      ]
+    },
+    {
+      "module": "LoopPrimrec",
+      "source_id": "src-866c6ff6e74a67f2-81cf0e30cb417832",
+      "imports": [
+        "LoopRenaming",
+        "Mathlib.Computability.Primrec"
+      ]
+    },
+    {
+      "module": "PRProgram",
+      "source_id": "src-866c6ff6e74a67f2-8405ccc73ce77f57",
+      "imports": [
+        "LoopPrimrec"
+      ]
+    },
+    {
+      "module": "PRComposition",
+      "source_id": "src-866c6ff6e74a67f2-25b2d347ee00adff",
+      "imports": [
+        "PRProgram"
+      ]
+    },
+    {
+      "module": "PRRecursion",
+      "source_id": "src-866c6ff6e74a67f2-18de41768254a342",
+      "imports": [
+        "PRComposition"
+      ]
+    },
+    {
+      "module": "PRHeadRecursion",
+      "source_id": "src-866c6ff6e74a67f2-8237a560ea0c9316",
+      "imports": [
+        "PRRecursion"
+      ]
+    },
+    {
+      "module": "PRDerivation",
+      "source_id": "src-866c6ff6e74a67f2-ffdc25a7e88472f3",
+      "imports": [
+        "PRHeadRecursion",
+        "Mathlib.Computability.Primrec"
+      ]
+    },
+    {
+      "module": "PRCoverage",
+      "source_id": "src-866c6ff6e74a67f2-08ee3621225278c0",
+      "imports": [
+        "PRDerivation"
+      ]
+    },
+    {
+      "module": "PRSpecialize",
+      "source_id": "src-866c6ff6e74a67f2-8c4cae90fa2462b5",
+      "imports": [
+        "PRCoverage"
+      ]
+    },
+    {
+      "module": "CodecProgram",
+      "source_id": "src-866c6ff6e74a67f2-e7fae0d2cf3fd872",
+      "imports": [
+        "CodecStmt",
+        "CodecNumeric",
+        "PRSpecialize"
+      ]
+    },
+    {
+      "module": "FiniteOutputTable",
+      "source_id": "src-866c6ff6e74a67f2-2349a926825e3e0c",
+      "imports": [
+        "HeavyCylinders",
+        "CodecProgram"
+      ]
+    },
+    {
+      "module": "CodecPrimrec",
+      "source_id": "src-866c6ff6e74a67f2-e1bae9dbaa919b58",
+      "imports": [
+        "CodecNumeric",
+        "Mathlib.Computability.Primrec"
+      ]
+    },
+    {
+      "module": "UniformComputabilityNumeric",
+      "source_id": "src-866c6ff6e74a67f2-cc7491aa7371af8e",
+      "imports": [
+        "CodecPrimrec",
+        "Mathlib.Computability.Partrec"
+      ]
+    },
+    {
+      "module": "UniformComputabilityMachine",
+      "source_id": "src-866c6ff6e74a67f2-bdb3421b526b98c4",
+      "imports": [
+        "CodecProgram",
+        "UniformComputabilityNumeric"
+      ]
+    },
+    {
+      "module": "UniformComputabilitySyntax",
+      "source_id": "src-866c6ff6e74a67f2-ba745ce0d36343dc",
+      "imports": [
+        "UniformComputabilityMachine"
+      ]
+    },
+    {
+      "module": "UniformStmtCoding",
+      "source_id": "src-866c6ff6e74a67f2-c60f35fb4efc092b",
+      "imports": [
+        "UniformComputabilitySyntax"
+      ]
+    },
+    {
+      "module": "UniformStmtCodingStep",
+      "source_id": "src-866c6ff6e74a67f2-5b1ec11248323e5a",
+      "imports": [
+        "UniformStmtCoding"
+      ]
+    },
+    {
+      "module": "UniformStmtCodingProgram",
+      "source_id": "src-866c6ff6e74a67f2-48cac73a0b1d7ebc",
+      "imports": [
+        "UniformStmtCodingStep"
+      ]
+    },
+    {
+      "module": "UniformComputabilityReadMany",
+      "source_id": "src-866c6ff6e74a67f2-a8490b11c30c95a1",
+      "imports": [
+        "CodecStmt",
+        "Mathlib.Computability.Primrec"
+      ]
+    },
+    {
+      "module": "UniformVarintPrimrec",
+      "source_id": "src-866c6ff6e74a67f2-a18bdfb7e8bbec6e",
+      "imports": [
+        "UniformComputabilityNumeric"
+      ]
+    },
+    {
+      "module": "UniformComputabilityExprConstructors",
+      "source_id": "src-866c6ff6e74a67f2-336992dfd689ff3a",
+      "imports": [
+        "UniformComputabilitySyntax"
+      ]
+    },
+    {
+      "module": "UniformParserCombinators",
+      "source_id": "src-866c6ff6e74a67f2-e8905656ceadb11b",
+      "imports": [
+        "UniformVarintPrimrec",
+        "UniformComputabilityExprConstructors"
+      ]
+    },
+    {
+      "module": "UniformComputabilityParserBounds",
+      "source_id": "src-866c6ff6e74a67f2-005814af09571c69",
+      "imports": [
+        "CodecProgram"
+      ]
+    },
+    {
+      "module": "UniformComputabilityStmtParser",
+      "source_id": "src-866c6ff6e74a67f2-bc2c2ab805a63eb0",
+      "imports": [
+        "UniformStmtCodingProgram",
+        "UniformComputabilityReadMany",
+        "UniformParserCombinators",
+        "UniformComputabilityParserBounds"
+      ]
+    },
+    {
+      "module": "UniformStmtLayerPrimrec",
+      "source_id": "src-866c6ff6e74a67f2-18d63ead8bfcd3e4",
+      "imports": [
+        "UniformComputabilityStmtParser"
+      ]
+    },
+    {
+      "module": "UniformExprParser",
+      "source_id": "src-866c6ff6e74a67f2-e4949a08f2bb881c",
+      "imports": [
+        "UniformVarintPrimrec",
+        "UniformComputabilityExprConstructors",
+        "UniformComputabilityParserBounds"
+      ]
+    },
+    {
+      "module": "UniformExprLayerPrimrec",
+      "source_id": "src-866c6ff6e74a67f2-449055d905868fb6",
+      "imports": [
+        "UniformExprParser",
+        "UniformParserCombinators"
+      ]
+    },
+    {
+      "module": "UniformExprParserPrimrec",
+      "source_id": "src-866c6ff6e74a67f2-461abd4d7faadcd7",
+      "imports": [
+        "UniformExprLayerPrimrec"
+      ]
+    },
+    {
+      "module": "UniformStmtParserPrimrec",
+      "source_id": "src-866c6ff6e74a67f2-7967acf51f48db7a",
+      "imports": [
+        "UniformStmtLayerPrimrec",
+        "UniformExprParserPrimrec"
+      ]
+    },
+    {
+      "module": "UniformStmtCodingEvaluation",
+      "source_id": "src-866c6ff6e74a67f2-e2c4c41e1efdbb94",
+      "imports": [
+        "UniformStmtCodingProgram"
+      ]
+    },
+    {
+      "module": "UniformDecoderPrimrec",
+      "source_id": "src-866c6ff6e74a67f2-54c6478b379ee67a",
+      "imports": [
+        "UniformStmtParserPrimrec",
+        "UniformStmtCodingEvaluation"
+      ]
+    },
+    {
+      "module": "MembershipWords",
+      "source_id": "src-866c6ff6e74a67f2-95eeaa5ba6b0392c",
+      "imports": [
+        "FiniteOutputTable",
+        "UniformDecoderPrimrec"
+      ]
+    },
+    {
+      "module": "RationalNormalForm",
+      "source_id": "src-866c6ff6e74a67f2-80f1c84747528cc9",
+      "imports": [
+        "HeavyCylinders"
+      ]
+    },
+    {
+      "module": "TotalVariation",
+      "source_id": "src-866c6ff6e74a67f2-b6f1d3459c8a0a27",
+      "imports": [
+        "P02A2.MeasureCore",
+        "Mathlib.MeasureTheory.Measure.Typeclasses.NoAtoms"
+      ]
+    },
+    {
+      "module": "P02A2.Fibres",
+      "source_id": "src-866c6ff6e74a67f2-78b4446c0a954c4a",
+      "imports": [
+        "P02A2.MeasureCore",
+        "Mathlib"
+      ]
+    },
+    {
+      "module": "P02A2.Refinement",
+      "source_id": "src-866c6ff6e74a67f2-c6ab532484d4a026",
+      "imports": [
+        "P02A2.MeasureCore",
+        "Mathlib.MeasureTheory.Measure.MeasureSpace",
+        "Mathlib.Tactic"
+      ]
+    },
+    {
+      "module": "P02A2.Observation",
+      "source_id": "src-866c6ff6e74a67f2-047b25f7dcedfa22",
+      "imports": [
+        "P02A2.Fibres",
+        "P02A2.Refinement",
+        "Mathlib"
+      ]
+    },
+    {
+      "module": "ResidualStability",
+      "source_id": "src-866c6ff6e74a67f2-825e0c63bc193f3a",
+      "imports": [
+        "TotalVariation",
+        "P02A2.Observation"
+      ]
+    },
+    {
+      "module": "AtomicPattern",
+      "source_id": "src-866c6ff6e74a67f2-c055efa6bae2ed93",
+      "imports": [
+        "ResidualStability"
+      ]
+    },
+    {
+      "module": "ArbitraryPattern",
+      "source_id": "src-866c6ff6e74a67f2-2263cc8a7bf77bda",
+      "imports": [
+        "AtomicPattern",
+        "Mathlib.MeasureTheory.Constructions.Projective"
+      ]
+    },
+    {
+      "module": "PatternBoundary",
+      "source_id": "src-866c6ff6e74a67f2-9f36b3e73c09fa3c",
+      "imports": [
+        "ArbitraryPattern",
+        "Q8Measure"
+      ]
+    },
+    {
+      "module": "FinitePrefixBoundary",
+      "source_id": "src-866c6ff6e74a67f2-a8214105c8c2a9f3",
+      "imports": [
+        "PatternBoundary"
+      ]
+    },
+    {
+      "module": "PrefixTail",
+      "source_id": "src-866c6ff6e74a67f2-2db1c9eb49b8ef7c",
+      "imports": [
+        "FinitePrefixBoundary",
+        "Mathlib.MeasureTheory.Constructions.Projective"
+      ]
+    },
+    {
+      "module": "P02A2.Mixture",
+      "source_id": "src-866c6ff6e74a67f2-49428b7bf04e0925",
+      "imports": [
+        "P02A2.MeasureCore",
+        "Mathlib"
+      ]
+    },
+    {
+      "module": "TaggedRows",
+      "source_id": "src-866c6ff6e74a67f2-73086ab4edd9ccdf",
+      "imports": [
+        "PrefixTail",
+        "P02A2.Mixture"
+      ]
+    },
+    {
+      "module": "TaggedMass",
+      "source_id": "src-866c6ff6e74a67f2-2b249bd8ed52ceab",
+      "imports": [
+        "TaggedRows"
+      ]
+    },
+    {
+      "module": "InnovationMeasure",
+      "source_id": "src-866c6ff6e74a67f2-cf0dc8510cc66e11",
+      "imports": [
+        "Q8Measure",
+        "Mathlib.Data.Set.Finite.Lattice",
+        "Mathlib"
+      ]
+    },
+    {
+      "module": "SurvivorCandidates",
+      "source_id": "src-866c6ff6e74a67f2-2c9ebde57eb21b28",
+      "imports": [
+        "Mathlib"
+      ]
+    },
+    {
+      "module": "SurvivorPrimrec",
+      "source_id": "src-866c6ff6e74a67f2-8def78e360103b62",
+      "imports": [
+        "SurvivorCandidates",
+        "Mathlib.Computability.Primrec"
+      ]
+    },
+    {
+      "module": "Q8Machine",
+      "source_id": "src-866c6ff6e74a67f2-3016200cc58386ff",
+      "imports": [
+        "Q8Measure"
+      ]
+    },
+    {
+      "module": "Q8Compiler",
+      "source_id": "src-866c6ff6e74a67f2-b020ab89defc3dcc",
+      "imports": [
+        "Q8Machine",
+        "P02A2.ObserverCore"
+      ]
+    },
+    {
+      "module": "Sigma2RowLaw",
+      "source_id": "src-866c6ff6e74a67f2-5381e5bbbf53fbe0",
+      "imports": [
+        "InnovationMeasure",
+        "SurvivorPrimrec",
+        "Q8Compiler"
+      ]
+    },
+    {
+      "module": "Pi3Law",
+      "source_id": "src-866c6ff6e74a67f2-f7b2101e4f381db6",
+      "imports": [
+        "TaggedMass",
+        "Sigma2RowLaw"
+      ]
+    },
+    {
+      "module": "PrefixBits",
+      "source_id": "src-866c6ff6e74a67f2-48d50f13a4fe2369",
+      "imports": [
+        "Pi3Law"
+      ]
+    },
+    {
+      "module": "FiniteSelector",
+      "source_id": "src-866c6ff6e74a67f2-81451c318e5c3b5b",
+      "imports": [
+        "PrefixBits"
+      ]
+    },
+    {
+      "module": "PrefixObserver",
+      "source_id": "src-866c6ff6e74a67f2-708a5189a82e1dcc",
+      "imports": [
+        "FiniteSelector"
+      ]
+    },
+    {
+      "module": "SelectorPrimrec",
+      "source_id": "src-866c6ff6e74a67f2-5ca54151a389519d",
+      "imports": [
+        "FiniteSelector",
+        "Mathlib.Computability.Primrec"
+      ]
+    },
+    {
+      "module": "PrefixPrimrec",
+      "source_id": "src-866c6ff6e74a67f2-622decdbe8fe6591",
+      "imports": [
+        "PrefixObserver",
+        "SelectorPrimrec"
+      ]
+    },
+    {
+      "module": "CodecParameter",
+      "source_id": "src-866c6ff6e74a67f2-df7729f16c9c66c4",
+      "imports": [
+        "CodecProgram"
+      ]
+    },
+    {
+      "module": "Pi3Program",
+      "source_id": "src-866c6ff6e74a67f2-719b49ae0fe1fe8e",
+      "imports": [
+        "PrefixPrimrec",
+        "CodecParameter"
+      ]
+    },
+    {
+      "module": "CodecIndexPrimrec",
+      "source_id": "src-866c6ff6e74a67f2-673f3507e2e1aef1",
+      "imports": [
+        "CodecParameter",
+        "CodecPrimrec"
+      ]
+    },
+    {
+      "module": "Pi3IndexReduction",
+      "source_id": "src-866c6ff6e74a67f2-81c56e80d0c8f3af",
+      "imports": [
+        "Pi3Program",
+        "CodecIndexPrimrec"
+      ]
+    },
+    {
+      "module": "NumericMembership",
+      "source_id": "src-866c6ff6e74a67f2-466d0be07ede2491",
+      "imports": [
+        "RationalNormalForm",
+        "FiniteOutputTable",
+        "Pi3IndexReduction"
+      ]
+    },
+    {
+      "module": "MatrixArithmetic",
+      "source_id": "src-866c6ff6e74a67f2-b9d353f0c101196d",
+      "imports": [
+        "Mathlib"
+      ]
+    },
+    {
+      "module": "MembershipHeavyBridge",
+      "source_id": "src-866c6ff6e74a67f2-ca28993c159a4d53",
+      "imports": [
+        "MembershipWords",
+        "NumericMembership",
+        "MatrixArithmetic"
+      ]
+    },
+    {
+      "module": "MembershipComputableCore",
+      "source_id": "src-866c6ff6e74a67f2-25c6cf4794166beb",
+      "imports": [
+        "MembershipWords"
+      ]
+    },
+    {
+      "module": "MembershipComputable",
+      "source_id": "src-866c6ff6e74a67f2-aaf0c88122f02a8e",
+      "imports": [
+        "MembershipComputableCore"
+      ]
+    },
+    {
+      "module": "MembershipMatrixComputable",
+      "source_id": "src-866c6ff6e74a67f2-fd51c67ebd86bda2",
+      "imports": [
+        "MembershipHeavyBridge",
+        "MembershipComputable"
+      ]
+    },
+    {
+      "module": "MembershipWitnesses",
+      "source_id": "src-866c6ff6e74a67f2-84dc6636dcab672c",
+      "imports": [
+        "MembershipMatrixComputable"
+      ]
+    }
+  ],
+  "module_order": [
+    "P02A2.MeasureCore",
+    "Q8Measure",
+    "HeavyCylinders",
+    "CodecVarint",
+    "P02A2.ObserverCore",
+    "CodecExpr",
+    "CodecStmt",
+    "CodecNumeric",
+    "LoopRenaming",
+    "LoopPrimrec",
+    "PRProgram",
+    "PRComposition",
+    "PRRecursion",
+    "PRHeadRecursion",
+    "PRDerivation",
+    "PRCoverage",
+    "PRSpecialize",
+    "CodecProgram",
+    "FiniteOutputTable",
+    "CodecPrimrec",
+    "UniformComputabilityNumeric",
+    "UniformComputabilityMachine",
+    "UniformComputabilitySyntax",
+    "UniformStmtCoding",
+    "UniformStmtCodingStep",
+    "UniformStmtCodingProgram",
+    "UniformComputabilityReadMany",
+    "UniformVarintPrimrec",
+    "UniformComputabilityExprConstructors",
+    "UniformParserCombinators",
+    "UniformComputabilityParserBounds",
+    "UniformComputabilityStmtParser",
+    "UniformStmtLayerPrimrec",
+    "UniformExprParser",
+    "UniformExprLayerPrimrec",
+    "UniformExprParserPrimrec",
+    "UniformStmtParserPrimrec",
+    "UniformStmtCodingEvaluation",
+    "UniformDecoderPrimrec",
+    "MembershipWords",
+    "RationalNormalForm",
+    "TotalVariation",
+    "P02A2.Fibres",
+    "P02A2.Refinement",
+    "P02A2.Observation",
+    "ResidualStability",
+    "AtomicPattern",
+    "ArbitraryPattern",
+    "PatternBoundary",
+    "FinitePrefixBoundary",
+    "PrefixTail",
+    "P02A2.Mixture",
+    "TaggedRows",
+    "TaggedMass",
+    "InnovationMeasure",
+    "SurvivorCandidates",
+    "SurvivorPrimrec",
+    "Q8Machine",
+    "Q8Compiler",
+    "Sigma2RowLaw",
+    "Pi3Law",
+    "PrefixBits",
+    "FiniteSelector",
+    "PrefixObserver",
+    "SelectorPrimrec",
+    "PrefixPrimrec",
+    "CodecParameter",
+    "Pi3Program",
+    "CodecIndexPrimrec",
+    "Pi3IndexReduction",
+    "NumericMembership",
+    "MatrixArithmetic",
+    "MembershipHeavyBridge",
+    "MembershipComputableCore",
+    "MembershipComputable",
+    "MembershipMatrixComputable",
+    "MembershipWitnesses"
+  ],
+  "targets": [
+    {
+      "name": "P02.Codec.UniformComputability.mem_allWords",
+      "module": "MembershipWords"
+    },
+    {
+      "name": "P02.Codec.UniformComputability.allWords_nodup",
+      "module": "MembershipWords"
+    },
+    {
+      "name": "P02.Codec.UniformComputability.allWords_toFinset",
+      "module": "MembershipWords"
+    },
+    {
+      "name": "P02.Codec.UniformComputability.sum_allWords",
+      "module": "MembershipWords"
+    },
+    {
+      "name": "P02.Codec.UniformComputability.ofFn_take_extend",
+      "module": "MembershipWords"
+    },
+    {
+      "name": "P02.Codec.UniformComputability.outputList_ofFn",
+      "module": "MembershipWords"
+    },
+    {
+      "name": "P02.Codec.UniformComputability.wordCount_exact",
+      "module": "MembershipWords"
+    },
+    {
+      "name": "P02.Codec.UniformComputability.computable_range_map",
+      "module": "MembershipComputableCore"
+    },
+    {
+      "name": "P02.Codec.UniformComputability.computable_list_map",
+      "module": "MembershipComputableCore"
+    },
+    {
+      "name": "P02.Codec.UniformComputability.allWords_primrec",
+      "module": "MembershipComputableCore"
+    },
+    {
+      "name": "P02.Codec.UniformComputability.sentinel_primrec",
+      "module": "MembershipComputableCore"
+    },
+    {
+      "name": "P02.Codec.UniformComputability.list_take_primrec",
+      "module": "MembershipComputableCore"
+    },
+    {
+      "name": "P02.Codec.UniformComputability.outputList_computable",
+      "module": "MembershipComputableCore"
+    },
+    {
+      "name": "P02.Codec.UniformComputability.wordCount_computable",
+      "module": "MembershipComputableCore"
+    },
+    {
+      "name": "P02.Codec.UniformComputability.membershipNatSum_primrec",
+      "module": "MembershipComputableCore"
+    },
+    {
+      "name": "P02.Codec.UniformComputability.heavyCount_computable",
+      "module": "MembershipComputable"
+    },
+    {
+      "name": "P02.Codec.UniformComputability.heavyCount_nat_computable",
+      "module": "MembershipComputable"
+    },
+    {
+      "name": "P02.Codec.UniformComputability.dyadic_threshold_count_iff",
+      "module": "MembershipHeavyBridge"
+    },
+    {
+      "name": "P02.Codec.UniformComputability.rationalHeavyMass_finiteCount",
+      "module": "MembershipHeavyBridge"
+    },
+    {
+      "name": "P02.Codec.UniformComputability.heavyCount_eq_finite",
+      "module": "MembershipHeavyBridge"
+    },
+    {
+      "name": "P02.Codec.UniformComputability.rationalHeavyMass_heavyCount",
+      "module": "MembershipHeavyBridge"
+    },
+    {
+      "name": "P02.Codec.UniformComputability.membershipMatrix_integer_iff",
+      "module": "MembershipHeavyBridge"
+    },
+    {
+      "name": "P02.Codec.UniformComputability.integerMatrix_computable",
+      "module": "MembershipMatrixComputable"
+    },
+    {
+      "name": "P02.Codec.UniformComputability.membershipMatrix_computable",
+      "module": "MembershipMatrixComputable"
+    },
+    {
+      "name": "P02.Codec.UniformComputability.matrixInputOfNat_primrec",
+      "module": "MembershipMatrixComputable"
+    },
+    {
+      "name": "P02.Codec.UniformComputability.membershipMatrix_nat_computable",
+      "module": "MembershipMatrixComputable"
+    },
+    {
+      "name": "P02.Codec.UniformComputability.membershipMatrix_characteristic_computable",
+      "module": "MembershipMatrixComputable"
+    },
+    {
+      "name": "P02.Codec.UniformComputability.effective_membership_normal_form",
+      "module": "MembershipMatrixComputable"
+    },
+    {
+      "name": "P02.Codec.UniformComputability.echo_value",
+      "module": "MembershipWitnesses"
+    },
+    {
+      "name": "P02.Codec.UniformComputability.invalid_zero_heavy_count",
+      "module": "MembershipWitnesses"
+    },
+    {
+      "name": "P02.Codec.UniformComputability.echo_below_threshold",
+      "module": "MembershipWitnesses"
+    },
+    {
+      "name": "P02.Codec.UniformComputability.echo_inclusive_threshold",
+      "module": "MembershipWitnesses"
+    },
+    {
+      "name": "P02.Codec.UniformComputability.membership_zero_denominator",
+      "module": "MembershipWitnesses"
+    },
+    {
+      "name": "P02.Codec.UniformComputability.membership_vacuous_one",
+      "module": "MembershipWitnesses"
+    },
+    {
+      "name": "P02.Codec.UniformComputability.zero_horizon_heavy",
+      "module": "MembershipWitnesses"
+    }
+  ],
+  "pins": {
+    "lean_version": "4.19.0",
+    "lean_binary_sha256": "92c3d35b5bfaa5e0fea413a775d504cf46cd95e1345df61c2274f76779e7e023",
+    "packages": [
+      {
+        "name": "mathlib",
+        "revision": "c44e0c8ee63ca166450922a373c7409c5d26b00b"
+      },
+      {
+        "name": "plausible",
+        "revision": "77e08eddc486491d7b9e470926b3dbe50319451a"
+      },
+      {
+        "name": "LeanSearchClient",
+        "revision": "25078369972d295301f5a1e53c3e5850cf6d9d4c"
+      },
+      {
+        "name": "importGraph",
+        "revision": "e6a9f0f5ee3ccf7443a0070f92b62f8db12ae82b"
+      },
+      {
+        "name": "proofwidgets",
+        "revision": "c4919189477c3221e6a204008998b0d724f49904"
+      },
+      {
+        "name": "aesop",
+        "revision": "5d50b08dedd7d69b3d9b3176e0d58a23af228884"
+      },
+      {
+        "name": "Qq",
+        "revision": "fa4f7f15d97591a9cf3aa7724ba371c7fc6dda02"
+      },
+      {
+        "name": "batteries",
+        "revision": "f5d04a9c4973d401c8c92500711518f7c656f034"
+      },
+      {
+        "name": "Cli",
+        "revision": "02dbd02bc00ec4916e99b04b2245b30200e200d0"
+      }
+    ]
+  },
+  "official_imports": [
+    {
+      "module": "Mathlib",
+      "repository": "mathlib",
+      "source": "Mathlib.lean",
+      "sha256": "b0518254279fabf0c6a920804e684536b0f5e2bd1cb6318d0609eb563413f20a"
+    },
+    {
+      "module": "Mathlib.Analysis.SpecificLimits.Basic",
+      "repository": "mathlib",
+      "source": "Mathlib/Analysis/SpecificLimits/Basic.lean",
+      "sha256": "cbf9b6b47e6ee6b2962fb2f16ba49b7e005e9a93c0adc1244cc770c34f527315"
+    },
+    {
+      "module": "Mathlib.Computability.Partrec",
+      "repository": "mathlib",
+      "source": "Mathlib/Computability/Partrec.lean",
+      "sha256": "e8435a76ce5b2f4b22892d82b3e1e3e2835c8038011a68ca37a7efff797929d1"
+    },
+    {
+      "module": "Mathlib.Computability.Primrec",
+      "repository": "mathlib",
+      "source": "Mathlib/Computability/Primrec.lean",
+      "sha256": "b279a3218434a6f930970b9f43669567e99adc548c31796590f42bdc205dcc22"
+    },
+    {
+      "module": "Mathlib.Data.ENNReal.Inv",
+      "repository": "mathlib",
+      "source": "Mathlib/Data/ENNReal/Inv.lean",
+      "sha256": "55641a8caba4834b9b4307e7c5dcb2cf98baa750ead05b50ef26e90542505b11"
+    },
+    {
+      "module": "Mathlib.Data.Nat.Bitwise",
+      "repository": "mathlib",
+      "source": "Mathlib/Data/Nat/Bitwise.lean",
+      "sha256": "e987a9f57489a80d8e2de33b7ad8662516b85fe745d611c0fe9e6c965fb6f5b7"
+    },
+    {
+      "module": "Mathlib.Data.Set.Finite.Lattice",
+      "repository": "mathlib",
+      "source": "Mathlib/Data/Set/Finite/Lattice.lean",
+      "sha256": "e09c1e49262e285fa21e3992434730d48a792abc4d31d4e0e448ff526e931144"
+    },
+    {
+      "module": "Mathlib.MeasureTheory.Constructions.Projective",
+      "repository": "mathlib",
+      "source": "Mathlib/MeasureTheory/Constructions/Projective.lean",
+      "sha256": "3fc8a814734c382ebda3bfb68dbba775c461f411380fac854ec7121ae7712fcf"
+    },
+    {
+      "module": "Mathlib.MeasureTheory.Measure.Map",
+      "repository": "mathlib",
+      "source": "Mathlib/MeasureTheory/Measure/Map.lean",
+      "sha256": "3c7fb458eece85551c9b7bd28955a517e14f4bee77934b8b001440a57b6f7f71"
+    },
+    {
+      "module": "Mathlib.MeasureTheory.Measure.MeasureSpace",
+      "repository": "mathlib",
+      "source": "Mathlib/MeasureTheory/Measure/MeasureSpace.lean",
+      "sha256": "c955504c3afe89c1c0524f939b5ebec195726997d4cf4fa9975be3352146f51f"
+    },
+    {
+      "module": "Mathlib.MeasureTheory.Measure.Restrict",
+      "repository": "mathlib",
+      "source": "Mathlib/MeasureTheory/Measure/Restrict.lean",
+      "sha256": "0c0c2108a28516ae3a85dfbfc2e5d7a3afd26dcc113aa8b19c2a79adfe12e56e"
+    },
+    {
+      "module": "Mathlib.MeasureTheory.Measure.Typeclasses.NoAtoms",
+      "repository": "mathlib",
+      "source": "Mathlib/MeasureTheory/Measure/Typeclasses/NoAtoms.lean",
+      "sha256": "f840a5341797290644d0bae0b916c866e7f98a6d25b3894de87341ff4c1cfdb7"
+    },
+    {
+      "module": "Mathlib.MeasureTheory.Measure.Typeclasses.Probability",
+      "repository": "mathlib",
+      "source": "Mathlib/MeasureTheory/Measure/Typeclasses/Probability.lean",
+      "sha256": "419ec9a5612f378b8603f4adb8a0941485481c1d754e95afb8d0a4ddd35f8883"
+    },
+    {
+      "module": "Mathlib.MeasureTheory.Measure.Typeclasses.SFinite",
+      "repository": "mathlib",
+      "source": "Mathlib/MeasureTheory/Measure/Typeclasses/SFinite.lean",
+      "sha256": "b9fb829526454d1f9526ed9bb21de6d661fdb4a01a9847eb6669bedf68f1f784"
+    },
+    {
+      "module": "Mathlib.Probability.ProbabilityMassFunction.Constructions",
+      "repository": "mathlib",
+      "source": "Mathlib/Probability/ProbabilityMassFunction/Constructions.lean",
+      "sha256": "8e50bff3cd3b46107d612eed21e1648752a86f9c373d4b6b0fe10e0e22a43973"
+    },
+    {
+      "module": "Mathlib.Probability.ProductMeasure",
+      "repository": "mathlib",
+      "source": "Mathlib/Probability/ProductMeasure.lean",
+      "sha256": "f8af06e87e2e28916f0fa8a455f792ded4b85a22e1dea5e1c6f9cac1d31b9830"
+    },
+    {
+      "module": "Mathlib.Tactic",
+      "repository": "mathlib",
+      "source": "Mathlib/Tactic.lean",
+      "sha256": "f20038eba7bba63f07a2f854496101226df407e20414e6b8ebf94b14f95e831b"
+    }
+  ],
+  "driver": {
+    "source_id": "src-866c6ff6e74a67f2-279d28ea9829b80d",
+    "lean_argument": "EXECUTABLE"
+  },
+  "controls": "ORIGINAL_DRIVER_REQUIRED",
+  "classification": "CURRENT_EVIDENCE"
+}

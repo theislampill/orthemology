@@ -1,0 +1,1258 @@
+{
+  "id": "810768c2edec-empirical-rows",
+  "origin": "810768c2edecd6dd0f6c6e9341d0b5d968b35dde34903f4941ec2799effd58be",
+  "descriptor_source_id": "src-810768c2edecd6dd-b71c5460b8041c2c",
+  "modules": [
+    {
+      "module": "EmpiricalControls",
+      "source_id": "src-810768c2edecd6dd-5a641713afa7607f",
+      "imports": [
+        "ObservedEmpiricalRows"
+      ]
+    },
+    {
+      "module": "EmpiricalTailBounds",
+      "source_id": "src-810768c2edecd6dd-97f7e6e4af1c59b7",
+      "imports": [
+        "RawEmpiricalRows"
+      ]
+    },
+    {
+      "module": "FeedbackFiberProbability",
+      "source_id": "src-810768c2edecd6dd-07722edaf12b14bc",
+      "imports": [
+        "FeedbackRequests",
+        "IndependentProductFamilies",
+        "PolicyRowLaw"
+      ]
+    },
+    {
+      "module": "FeedbackRequests",
+      "source_id": "src-810768c2edecd6dd-16f0d477324e4c4f",
+      "imports": [
+        "PolicyTranscriptFiber"
+      ]
+    },
+    {
+      "module": "GenericFiniteQueryLocality",
+      "source_id": "src-810768c2edecd6dd-ae03d9dbf2c5d7ad",
+      "imports": [
+        "Mathlib"
+      ]
+    },
+    {
+      "module": "GenericFiniteQueryMeasure",
+      "source_id": "src-810768c2edecd6dd-61385a00cd51c5ea",
+      "imports": [
+        "GenericFiniteQueryLocality",
+        "Mathlib.Probability.ProductMeasure"
+      ]
+    },
+    {
+      "module": "GenericQueryReference",
+      "source_id": "src-810768c2edecd6dd-dff96107a7151de8",
+      "imports": [
+        "GenericFiniteQueryMeasure"
+      ]
+    },
+    {
+      "module": "HistoryPathConsistency",
+      "source_id": "src-810768c2edecd6dd-9673077a4e6c698d",
+      "imports": [
+        "PolicyTranscriptFiber",
+        "Mathlib.Probability.Kernel.IonescuTulcea.Traj"
+      ]
+    },
+    {
+      "module": "IndependentProductFamilies",
+      "source_id": "src-810768c2edecd6dd-96da826b0d7d5e3e",
+      "imports": [
+        "ProductObservationLaw"
+      ]
+    },
+    {
+      "module": "ObservedEmpiricalRows",
+      "source_id": "src-810768c2edecd6dd-270714e84bbf3e4b",
+      "imports": [
+        "EmpiricalTailBounds",
+        "SequentialTapeConsumption"
+      ]
+    },
+    {
+      "module": "PolicyCylinderProbability",
+      "source_id": "src-810768c2edecd6dd-bcd6479933de989d",
+      "imports": [
+        "FeedbackFiberProbability"
+      ]
+    },
+    {
+      "module": "PolicyObservedLaw",
+      "source_id": "src-810768c2edecd6dd-47bdfc7a10cc0009",
+      "imports": [
+        "PolicyCylinderProbability",
+        "HistoryPathConsistency"
+      ]
+    },
+    {
+      "module": "PolicyRowEvaluator",
+      "source_id": "src-810768c2edecd6dd-bc6ee8dcd2e3d892",
+      "imports": [
+        "GenericFiniteQueryMeasure"
+      ]
+    },
+    {
+      "module": "PolicyRowLaw",
+      "source_id": "src-810768c2edecd6dd-d5670322827c6639",
+      "imports": [
+        "GenericQueryReference"
+      ]
+    },
+    {
+      "module": "PolicyTraceBinding",
+      "source_id": "src-810768c2edecd6dd-a10f7a166044fd02",
+      "imports": [
+        "PolicyObservedLaw"
+      ]
+    },
+    {
+      "module": "PolicyTranscriptFiber",
+      "source_id": "src-810768c2edecd6dd-d1bdf58f74298404",
+      "imports": [
+        "PolicyRowEvaluator"
+      ]
+    },
+    {
+      "module": "ProductObservationLaw",
+      "source_id": "src-810768c2edecd6dd-ea898cdfce86f83c",
+      "imports": [
+        "Mathlib",
+        "Mathlib.Probability.ProductMeasure"
+      ]
+    },
+    {
+      "module": "RawEmpiricalRows",
+      "source_id": "src-810768c2edecd6dd-2d0c19b124931249",
+      "imports": [
+        "StackActionLaw",
+        "Mathlib.Probability.StrongLaw"
+      ]
+    },
+    {
+      "module": "RecurrentSupport",
+      "source_id": "src-810768c2edecd6dd-092355b11db6b3c6",
+      "imports": [
+        "Mathlib"
+      ]
+    },
+    {
+      "module": "SequentialTapeConsumption",
+      "source_id": "src-810768c2edecd6dd-4e985ffc5e955b0f",
+      "imports": [
+        "StackActionLaw",
+        "RecurrentSupport"
+      ]
+    },
+    {
+      "module": "StackActionLaw",
+      "source_id": "src-810768c2edecd6dd-259e12ba329944c0",
+      "imports": [
+        "PolicyTraceBinding"
+      ]
+    }
+  ],
+  "module_order": [
+    "GenericFiniteQueryLocality",
+    "GenericFiniteQueryMeasure",
+    "PolicyRowEvaluator",
+    "PolicyTranscriptFiber",
+    "FeedbackRequests",
+    "ProductObservationLaw",
+    "IndependentProductFamilies",
+    "GenericQueryReference",
+    "PolicyRowLaw",
+    "FeedbackFiberProbability",
+    "PolicyCylinderProbability",
+    "HistoryPathConsistency",
+    "PolicyObservedLaw",
+    "PolicyTraceBinding",
+    "StackActionLaw",
+    "RawEmpiricalRows",
+    "EmpiricalTailBounds",
+    "RecurrentSupport",
+    "SequentialTapeConsumption",
+    "ObservedEmpiricalRows",
+    "EmpiricalControls"
+  ],
+  "targets": [
+    {
+      "name": "HiddenParity.Empirical.Controls.constantPolicy",
+      "module": "EmpiricalControls"
+    },
+    {
+      "name": "HiddenParity.Empirical.Controls.allTrueInput",
+      "module": "EmpiricalControls"
+    },
+    {
+      "name": "HiddenParity.Empirical.Controls.unused_pair_count_zero",
+      "module": "EmpiricalControls"
+    },
+    {
+      "name": "HiddenParity.Empirical.Controls.unused_pair_empirical_zero",
+      "module": "EmpiricalControls"
+    },
+    {
+      "name": "HiddenParity.Empirical.Controls.positive_raw_frequency_one",
+      "module": "EmpiricalControls"
+    },
+    {
+      "name": "HiddenParity.Empirical.Controls.unused_observed_differs_from_positive_raw",
+      "module": "EmpiricalControls"
+    },
+    {
+      "name": "HiddenParity.Empirical.Controls.action_specific_history_frequency",
+      "module": "EmpiricalControls"
+    },
+    {
+      "name": "HiddenParity.Empirical.Controls.positive_prefix_differs_from_zero",
+      "module": "EmpiricalControls"
+    },
+    {
+      "name": "HiddenParity.Empirical.RawTailDeviation",
+      "module": "EmpiricalTailBounds"
+    },
+    {
+      "name": "HiddenParity.Empirical.rawTailDeviation_measurable",
+      "module": "EmpiricalTailBounds"
+    },
+    {
+      "name": "HiddenParity.Empirical.rawTailDeviation_antitone",
+      "module": "EmpiricalTailBounds"
+    },
+    {
+      "name": "HiddenParity.Empirical.raw_eventually_all_close",
+      "module": "EmpiricalTailBounds"
+    },
+    {
+      "name": "HiddenParity.Empirical.rawTailDeviation_inter_null",
+      "module": "EmpiricalTailBounds"
+    },
+    {
+      "name": "HiddenParity.Empirical.rawTailDeviation_measure_tendsto_zero",
+      "module": "EmpiricalTailBounds"
+    },
+    {
+      "name": "HiddenParity.Empirical.exists_raw_burnin",
+      "module": "EmpiricalTailBounds"
+    },
+    {
+      "name": "HiddenParity.Empirical.exists_summable_raw_burnin",
+      "module": "EmpiricalTailBounds"
+    },
+    {
+      "name": "HiddenParity.Empirical.exists_uniform_model_burnin",
+      "module": "EmpiricalTailBounds"
+    },
+    {
+      "name": "HiddenParity.Empirical.exists_uniform_summable_burnin",
+      "module": "EmpiricalTailBounds"
+    },
+    {
+      "name": "Orthemology.Tranche2.PolicyEmbedding.FlatStack",
+      "module": "FeedbackFiberProbability"
+    },
+    {
+      "name": "Orthemology.Tranche2.PolicyEmbedding.RowOracle",
+      "module": "FeedbackFiberProbability"
+    },
+    {
+      "name": "Orthemology.Tranche2.PolicyEmbedding.actionMeasure",
+      "module": "FeedbackFiberProbability"
+    },
+    {
+      "name": "Orthemology.Tranche2.PolicyEmbedding.actionMeasure_probability",
+      "module": "FeedbackFiberProbability"
+    },
+    {
+      "name": "Orthemology.Tranche2.PolicyEmbedding.actionMeasure_singleton",
+      "module": "FeedbackFiberProbability"
+    },
+    {
+      "name": "Orthemology.Tranche2.PolicyEmbedding.stackMeasure",
+      "module": "FeedbackFiberProbability"
+    },
+    {
+      "name": "Orthemology.Tranche2.PolicyEmbedding.stackMeasure_probability",
+      "module": "FeedbackFiberProbability"
+    },
+    {
+      "name": "Orthemology.Tranche2.PolicyEmbedding.feedbackLaw",
+      "module": "FeedbackFiberProbability"
+    },
+    {
+      "name": "Orthemology.Tranche2.PolicyEmbedding.feedbackLaw_probability",
+      "module": "FeedbackFiberProbability"
+    },
+    {
+      "name": "Orthemology.Tranche2.PolicyEmbedding.sourceFamily",
+      "module": "FeedbackFiberProbability"
+    },
+    {
+      "name": "Orthemology.Tranche2.PolicyEmbedding.sourceRead",
+      "module": "FeedbackFiberProbability"
+    },
+    {
+      "name": "Orthemology.Tranche2.PolicyEmbedding.sourceRead_measurable",
+      "module": "FeedbackFiberProbability"
+    },
+    {
+      "name": "Orthemology.Tranche2.PolicyEmbedding.transcriptSample",
+      "module": "FeedbackFiberProbability"
+    },
+    {
+      "name": "Orthemology.Tranche2.PolicyEmbedding.transcriptSample_eq_source",
+      "module": "FeedbackFiberProbability"
+    },
+    {
+      "name": "Orthemology.Tranche2.PolicyEmbedding.transcriptSamples_independent",
+      "module": "FeedbackFiberProbability"
+    },
+    {
+      "name": "Orthemology.Tranche2.PolicyEmbedding.feedbackLaw_left_marginal",
+      "module": "FeedbackFiberProbability"
+    },
+    {
+      "name": "Orthemology.Tranche2.PolicyEmbedding.feedbackLaw_right_marginal",
+      "module": "FeedbackFiberProbability"
+    },
+    {
+      "name": "Orthemology.Tranche2.PolicyEmbedding.transcriptSample_marginal",
+      "module": "FeedbackFiberProbability"
+    },
+    {
+      "name": "Orthemology.Tranche2.PolicyEmbedding.feedbackCompatible_probability",
+      "module": "FeedbackFiberProbability"
+    },
+    {
+      "name": "Orthemology.Tranche2.PolicyEmbedding.FeedbackKey",
+      "module": "FeedbackRequests"
+    },
+    {
+      "name": "Orthemology.Tranche2.PolicyEmbedding.feedbackKey",
+      "module": "FeedbackRequests"
+    },
+    {
+      "name": "Orthemology.Tranche2.PolicyEmbedding.feedbackKeys",
+      "module": "FeedbackRequests"
+    },
+    {
+      "name": "Orthemology.Tranche2.PolicyEmbedding.feedbackKeys_length",
+      "module": "FeedbackRequests"
+    },
+    {
+      "name": "Orthemology.Tranche2.PolicyEmbedding.actionCount_cons",
+      "module": "FeedbackRequests"
+    },
+    {
+      "name": "Orthemology.Tranche2.PolicyEmbedding.outsideCount_cons",
+      "module": "FeedbackRequests"
+    },
+    {
+      "name": "Orthemology.Tranche2.PolicyEmbedding.inside_key_bound",
+      "module": "FeedbackRequests"
+    },
+    {
+      "name": "Orthemology.Tranche2.PolicyEmbedding.outside_key_bound",
+      "module": "FeedbackRequests"
+    },
+    {
+      "name": "Orthemology.Tranche2.PolicyEmbedding.feedbackKeys_nodup",
+      "module": "FeedbackRequests"
+    },
+    {
+      "name": "Orthemology.Tranche2.PolicyEmbedding.requestKey",
+      "module": "FeedbackRequests"
+    },
+    {
+      "name": "Orthemology.Tranche2.PolicyEmbedding.requestKey_zero",
+      "module": "FeedbackRequests"
+    },
+    {
+      "name": "Orthemology.Tranche2.PolicyEmbedding.requestKey_succ",
+      "module": "FeedbackRequests"
+    },
+    {
+      "name": "Orthemology.Tranche2.PolicyEmbedding.requestKey_injective",
+      "module": "FeedbackRequests"
+    },
+    {
+      "name": "Orthemology.Tranche2.PolicyEmbedding.readFeedback",
+      "module": "FeedbackRequests"
+    },
+    {
+      "name": "Orthemology.Tranche2.PolicyEmbedding.readFeedback_key",
+      "module": "FeedbackRequests"
+    },
+    {
+      "name": "Orthemology.Tranche2.PolicyEmbedding.feedbackCompatible_iff_requests",
+      "module": "FeedbackRequests"
+    },
+    {
+      "name": "Orthemology.Tranche2.PolicyEmbedding.requestKey_branch",
+      "module": "FeedbackRequests"
+    },
+    {
+      "name": "Orthemology.Tranche2.FiniteAlphabetQuery.advance",
+      "module": "GenericFiniteQueryLocality"
+    },
+    {
+      "name": "Orthemology.Tranche2.FiniteAlphabetQuery.run",
+      "module": "GenericFiniteQueryLocality"
+    },
+    {
+      "name": "Orthemology.Tranche2.FiniteAlphabetQuery.Bounded",
+      "module": "GenericFiniteQueryLocality"
+    },
+    {
+      "name": "Orthemology.Tranche2.FiniteAlphabetQuery.bounded_prefix_locality",
+      "module": "GenericFiniteQueryLocality"
+    },
+    {
+      "name": "Orthemology.Tranche2.FiniteAlphabetQuery.bounded_prefix_equivalence",
+      "module": "GenericFiniteQueryLocality"
+    },
+    {
+      "name": "Orthemology.Tranche2.FiniteAlphabetQuery.prefixOracle",
+      "module": "GenericFiniteQueryLocality"
+    },
+    {
+      "name": "Orthemology.Tranche2.FiniteAlphabetQuery.prefixOracle_agrees",
+      "module": "GenericFiniteQueryLocality"
+    },
+    {
+      "name": "Orthemology.Tranche2.FiniteAlphabetQuery.bounded_trace_factorisation",
+      "module": "GenericFiniteQueryLocality"
+    },
+    {
+      "name": "Orthemology.Tranche2.FiniteAlphabetQuery.counter_monotone",
+      "module": "GenericFiniteQueryLocality"
+    },
+    {
+      "name": "Orthemology.Tranche2.FiniteAlphabetQuery.bounded_iff_eventually_no_query",
+      "module": "GenericFiniteQueryLocality"
+    },
+    {
+      "name": "Orthemology.Tranche2.FiniteAlphabetQuery.Oracle",
+      "module": "GenericFiniteQueryMeasure"
+    },
+    {
+      "name": "Orthemology.Tranche2.FiniteAlphabetQuery.Trace",
+      "module": "GenericFiniteQueryMeasure"
+    },
+    {
+      "name": "Orthemology.Tranche2.FiniteAlphabetQuery.measurable_advance_joint",
+      "module": "GenericFiniteQueryMeasure"
+    },
+    {
+      "name": "Orthemology.Tranche2.FiniteAlphabetQuery.measurable_run",
+      "module": "GenericFiniteQueryMeasure"
+    },
+    {
+      "name": "Orthemology.Tranche2.FiniteAlphabetQuery.measurable_trajectory",
+      "module": "GenericFiniteQueryMeasure"
+    },
+    {
+      "name": "Orthemology.Tranche2.FiniteAlphabetQuery.boundedTrace",
+      "module": "GenericFiniteQueryMeasure"
+    },
+    {
+      "name": "Orthemology.Tranche2.FiniteAlphabetQuery.measurable_boundedTrace",
+      "module": "GenericFiniteQueryMeasure"
+    },
+    {
+      "name": "Orthemology.Tranche2.FiniteAlphabetQuery.measurable_prefixOracle",
+      "module": "GenericFiniteQueryMeasure"
+    },
+    {
+      "name": "Orthemology.Tranche2.FiniteAlphabetQuery.prefixInput",
+      "module": "GenericFiniteQueryMeasure"
+    },
+    {
+      "name": "Orthemology.Tranche2.FiniteAlphabetQuery.measurable_prefixInput",
+      "module": "GenericFiniteQueryMeasure"
+    },
+    {
+      "name": "Orthemology.Tranche2.FiniteAlphabetQuery.finiteTrajectory",
+      "module": "GenericFiniteQueryMeasure"
+    },
+    {
+      "name": "Orthemology.Tranche2.FiniteAlphabetQuery.measurable_finiteTrajectory",
+      "module": "GenericFiniteQueryMeasure"
+    },
+    {
+      "name": "Orthemology.Tranche2.FiniteAlphabetQuery.bounded_event_prefix",
+      "module": "GenericFiniteQueryMeasure"
+    },
+    {
+      "name": "Orthemology.Tranche2.FiniteAlphabetQuery.trajectory_prefix_on_bounded",
+      "module": "GenericFiniteQueryMeasure"
+    },
+    {
+      "name": "Orthemology.Tranche2.FiniteAlphabetQuery.restricted_observable_factorisation",
+      "module": "GenericFiniteQueryMeasure"
+    },
+    {
+      "name": "Orthemology.Tranche2.FiniteAlphabetQuery.absolutelyContinuous_of_singletons",
+      "module": "GenericFiniteQueryMeasure"
+    },
+    {
+      "name": "Orthemology.Tranche2.FiniteAlphabetQuery.prefixSymbols",
+      "module": "GenericFiniteQueryMeasure"
+    },
+    {
+      "name": "Orthemology.Tranche2.FiniteAlphabetQuery.measurable_prefixSymbols",
+      "module": "GenericFiniteQueryMeasure"
+    },
+    {
+      "name": "Orthemology.Tranche2.FiniteAlphabetQuery.traceLaw",
+      "module": "GenericFiniteQueryMeasure"
+    },
+    {
+      "name": "Orthemology.Tranche2.FiniteAlphabetQuery.input_prefix_map",
+      "module": "GenericFiniteQueryMeasure"
+    },
+    {
+      "name": "Orthemology.Tranche2.FiniteAlphabetQuery.bounded_trace_law_factorisation",
+      "module": "GenericFiniteQueryMeasure"
+    },
+    {
+      "name": "Orthemology.Tranche2.FiniteAlphabetQuery.bounded_trace_domination",
+      "module": "GenericFiniteQueryMeasure"
+    },
+    {
+      "name": "Orthemology.Tranche2.FiniteAlphabetQuery.restrict_iUnion_domination",
+      "module": "GenericFiniteQueryMeasure"
+    },
+    {
+      "name": "Orthemology.Tranche2.FiniteAlphabetQuery.finiteQueryTrace",
+      "module": "GenericFiniteQueryMeasure"
+    },
+    {
+      "name": "Orthemology.Tranche2.FiniteAlphabetQuery.measurable_finiteQueryTrace",
+      "module": "GenericFiniteQueryMeasure"
+    },
+    {
+      "name": "Orthemology.Tranche2.FiniteAlphabetQuery.finite_query_trace_domination",
+      "module": "GenericFiniteQueryMeasure"
+    },
+    {
+      "name": "Orthemology.Tranche2.FiniteAlphabetQuery.iidOracle",
+      "module": "GenericQueryReference"
+    },
+    {
+      "name": "Orthemology.Tranche2.FiniteAlphabetQuery.iidOracle_probability",
+      "module": "GenericQueryReference"
+    },
+    {
+      "name": "Orthemology.Tranche2.FiniteAlphabetQuery.prefixSymbols_singleton_preimage",
+      "module": "GenericQueryReference"
+    },
+    {
+      "name": "Orthemology.Tranche2.FiniteAlphabetQuery.iidOracle_prefix_nonzero",
+      "module": "GenericQueryReference"
+    },
+    {
+      "name": "Orthemology.Tranche2.FiniteAlphabetQuery.finite_query_domination_by_iid_rival",
+      "module": "GenericQueryReference"
+    },
+    {
+      "name": "Orthemology.Tranche2.FiniteAlphabetQuery.positive_finite_query_event_transfers",
+      "module": "GenericQueryReference"
+    },
+    {
+      "name": "Orthemology.Tranche2.PolicyEmbedding.observedHistory_drop",
+      "module": "HistoryPathConsistency"
+    },
+    {
+      "name": "Orthemology.Tranche2.PolicyEmbedding.reconstructPrefix",
+      "module": "HistoryPathConsistency"
+    },
+    {
+      "name": "Orthemology.Tranche2.PolicyEmbedding.observedHistory_prefix_from_last",
+      "module": "HistoryPathConsistency"
+    },
+    {
+      "name": "Orthemology.Tranche2.PolicyEmbedding.measure_eq_of_prefix_maps",
+      "module": "HistoryPathConsistency"
+    },
+    {
+      "name": "Orthemology.Tranche2.PolicyEmbedding.FamilyValue",
+      "module": "IndependentProductFamilies"
+    },
+    {
+      "name": "Orthemology.Tranche2.PolicyEmbedding.familyValueMeasurable",
+      "module": "IndependentProductFamilies"
+    },
+    {
+      "name": "Orthemology.Tranche2.PolicyEmbedding.productFamily",
+      "module": "IndependentProductFamilies"
+    },
+    {
+      "name": "Orthemology.Tranche2.PolicyEmbedding.independent_product_families",
+      "module": "IndependentProductFamilies"
+    },
+    {
+      "name": "HiddenParity.Empirical.historySymbolMass",
+      "module": "ObservedEmpiricalRows"
+    },
+    {
+      "name": "HiddenParity.Empirical.historyFrequency",
+      "module": "ObservedEmpiricalRows"
+    },
+    {
+      "name": "HiddenParity.Empirical.historySymbolMass_nil",
+      "module": "ObservedEmpiricalRows"
+    },
+    {
+      "name": "HiddenParity.Empirical.historySymbolMass_cons",
+      "module": "ObservedEmpiricalRows"
+    },
+    {
+      "name": "HiddenParity.Empirical.stackHistoryTrajectory_succ_receipt",
+      "module": "ObservedEmpiricalRows"
+    },
+    {
+      "name": "HiddenParity.Empirical.historySymbolMass_eq_raw_sum",
+      "module": "ObservedEmpiricalRows"
+    },
+    {
+      "name": "HiddenParity.Empirical.historyFrequency_eq_rawFrequency",
+      "module": "ObservedEmpiricalRows"
+    },
+    {
+      "name": "HiddenParity.Empirical.recurrent_count_tendsto",
+      "module": "ObservedEmpiricalRows"
+    },
+    {
+      "name": "HiddenParity.Empirical.historyFrequency_tendsto_of_recurrent",
+      "module": "ObservedEmpiricalRows"
+    },
+    {
+      "name": "HiddenParity.Empirical.observed_deviation_subset_raw",
+      "module": "ObservedEmpiricalRows"
+    },
+    {
+      "name": "HiddenParity.Empirical.seeded_observedFrequencies_tendsto",
+      "module": "ObservedEmpiricalRows"
+    },
+    {
+      "name": "HiddenParity.Empirical.observed_deviation_measure_le_raw",
+      "module": "ObservedEmpiricalRows"
+    },
+    {
+      "name": "HiddenParity.Empirical.historyFrequency_measurable",
+      "module": "ObservedEmpiricalRows"
+    },
+    {
+      "name": "HiddenParity.Empirical.countBefore_measurable",
+      "module": "ObservedEmpiricalRows"
+    },
+    {
+      "name": "HiddenParity.Empirical.observedFrequency_measurable",
+      "module": "ObservedEmpiricalRows"
+    },
+    {
+      "name": "HiddenParity.Empirical.observed_deviation_measurable",
+      "module": "ObservedEmpiricalRows"
+    },
+    {
+      "name": "HiddenParity.Empirical.seeded_uniform_observed_tail_good",
+      "module": "ObservedEmpiricalRows"
+    },
+    {
+      "name": "HiddenParity.Empirical.seeded_true_phase_rejections_bounded",
+      "module": "ObservedEmpiricalRows"
+    },
+    {
+      "name": "HiddenParity.Empirical.recurrent_false_row_eventually_rejected",
+      "module": "ObservedEmpiricalRows"
+    },
+    {
+      "name": "HiddenParity.Empirical.seeded_false_rows_eventually_rejected",
+      "module": "ObservedEmpiricalRows"
+    },
+    {
+      "name": "Orthemology.Tranche2.PolicyEmbedding.Input",
+      "module": "PolicyCylinderProbability"
+    },
+    {
+      "name": "Orthemology.Tranche2.PolicyEmbedding.historyTrajectory",
+      "module": "PolicyCylinderProbability"
+    },
+    {
+      "name": "Orthemology.Tranche2.PolicyEmbedding.private_transcript_cylinder_probability",
+      "module": "PolicyCylinderProbability"
+    },
+    {
+      "name": "Orthemology.Tranche2.PolicyEmbedding.historyTrajectory_coordinate_measurable",
+      "module": "PolicyCylinderProbability"
+    },
+    {
+      "name": "Orthemology.Tranche2.PolicyEmbedding.historyTrajectory_measurable",
+      "module": "PolicyCylinderProbability"
+    },
+    {
+      "name": "Orthemology.Tranche2.PolicyEmbedding.observedTraceLaw",
+      "module": "PolicyCylinderProbability"
+    },
+    {
+      "name": "Orthemology.Tranche2.PolicyEmbedding.history_marginal_formula",
+      "module": "PolicyObservedLaw"
+    },
+    {
+      "name": "Orthemology.Tranche2.PolicyEmbedding.history_marginal_eq_all_query",
+      "module": "PolicyObservedLaw"
+    },
+    {
+      "name": "Orthemology.Tranche2.PolicyEmbedding.observed_prefix_map_from_last",
+      "module": "PolicyObservedLaw"
+    },
+    {
+      "name": "Orthemology.Tranche2.PolicyEmbedding.observedTraceLaw_eq_all_query",
+      "module": "PolicyObservedLaw"
+    },
+    {
+      "name": "Orthemology.Tranche2.PolicyEmbedding.History",
+      "module": "PolicyRowEvaluator"
+    },
+    {
+      "name": "Orthemology.Tranche2.PolicyEmbedding.Stack",
+      "module": "PolicyRowEvaluator"
+    },
+    {
+      "name": "Orthemology.Tranche2.PolicyEmbedding.EvalState",
+      "module": "PolicyRowEvaluator"
+    },
+    {
+      "name": "Orthemology.Tranche2.PolicyEmbedding.selected",
+      "module": "PolicyRowEvaluator"
+    },
+    {
+      "name": "Orthemology.Tranche2.PolicyEmbedding.query",
+      "module": "PolicyRowEvaluator"
+    },
+    {
+      "name": "Orthemology.Tranche2.PolicyEmbedding.actionCount",
+      "module": "PolicyRowEvaluator"
+    },
+    {
+      "name": "Orthemology.Tranche2.PolicyEmbedding.step",
+      "module": "PolicyRowEvaluator"
+    },
+    {
+      "name": "Orthemology.Tranche2.PolicyEmbedding.step_preserves_seed",
+      "module": "PolicyRowEvaluator"
+    },
+    {
+      "name": "Orthemology.Tranche2.PolicyEmbedding.step_history_length",
+      "module": "PolicyRowEvaluator"
+    },
+    {
+      "name": "Orthemology.Tranche2.PolicyEmbedding.step_inside_row_independent",
+      "module": "PolicyRowEvaluator"
+    },
+    {
+      "name": "Orthemology.Tranche2.PolicyEmbedding.step_outside_coordinate_only",
+      "module": "PolicyRowEvaluator"
+    },
+    {
+      "name": "Orthemology.Tranche2.PolicyEmbedding.policyRun",
+      "module": "PolicyRowEvaluator"
+    },
+    {
+      "name": "Orthemology.Tranche2.PolicyEmbedding.actionAt",
+      "module": "PolicyRowEvaluator"
+    },
+    {
+      "name": "Orthemology.Tranche2.PolicyEmbedding.query_counter_eq_outside_actions",
+      "module": "PolicyRowEvaluator"
+    },
+    {
+      "name": "Orthemology.Tranche2.PolicyEmbedding.historyMeasurableSpace",
+      "module": "PolicyRowEvaluator"
+    },
+    {
+      "name": "Orthemology.Tranche2.PolicyEmbedding.selected_measurable",
+      "module": "PolicyRowEvaluator"
+    },
+    {
+      "name": "Orthemology.Tranche2.PolicyEmbedding.query_measurable",
+      "module": "PolicyRowEvaluator"
+    },
+    {
+      "name": "Orthemology.Tranche2.PolicyEmbedding.step_measurable",
+      "module": "PolicyRowEvaluator"
+    },
+    {
+      "name": "Orthemology.Tranche2.PolicyEmbedding.rowMass",
+      "module": "PolicyRowLaw"
+    },
+    {
+      "name": "Orthemology.Tranche2.PolicyEmbedding.rowMass_nonneg",
+      "module": "PolicyRowLaw"
+    },
+    {
+      "name": "Orthemology.Tranche2.PolicyEmbedding.rowMass_pos",
+      "module": "PolicyRowLaw"
+    },
+    {
+      "name": "Orthemology.Tranche2.PolicyEmbedding.rowMass_normalized",
+      "module": "PolicyRowLaw"
+    },
+    {
+      "name": "Orthemology.Tranche2.PolicyEmbedding.rowPMF",
+      "module": "PolicyRowLaw"
+    },
+    {
+      "name": "Orthemology.Tranche2.PolicyEmbedding.rowMass_coordinate",
+      "module": "PolicyRowLaw"
+    },
+    {
+      "name": "Orthemology.Tranche2.PolicyEmbedding.rowMeasure",
+      "module": "PolicyRowLaw"
+    },
+    {
+      "name": "Orthemology.Tranche2.PolicyEmbedding.rowMeasure_probability",
+      "module": "PolicyRowLaw"
+    },
+    {
+      "name": "Orthemology.Tranche2.PolicyEmbedding.rowMeasure_full_support",
+      "module": "PolicyRowLaw"
+    },
+    {
+      "name": "Orthemology.Tranche2.PolicyEmbedding.rowMeasure_coordinate",
+      "module": "PolicyRowLaw"
+    },
+    {
+      "name": "Orthemology.Tranche2.PolicyEmbedding.rowOracle_finite_prefix_positive",
+      "module": "PolicyRowLaw"
+    },
+    {
+      "name": "Orthemology.Tranche2.PolicyEmbedding.initialState",
+      "module": "PolicyTraceBinding"
+    },
+    {
+      "name": "Orthemology.Tranche2.PolicyEmbedding.initialState_measurable",
+      "module": "PolicyTraceBinding"
+    },
+    {
+      "name": "Orthemology.Tranche2.PolicyEmbedding.seedLaw",
+      "module": "PolicyTraceBinding"
+    },
+    {
+      "name": "Orthemology.Tranche2.PolicyEmbedding.seedLaw_probability",
+      "module": "PolicyTraceBinding"
+    },
+    {
+      "name": "Orthemology.Tranche2.PolicyEmbedding.historyReadout",
+      "module": "PolicyTraceBinding"
+    },
+    {
+      "name": "Orthemology.Tranche2.PolicyEmbedding.historyReadout_measurable",
+      "module": "PolicyTraceBinding"
+    },
+    {
+      "name": "Orthemology.Tranche2.PolicyEmbedding.traceLaw_historyReadout",
+      "module": "PolicyTraceBinding"
+    },
+    {
+      "name": "Orthemology.Tranche2.PolicyEmbedding.traceAction",
+      "module": "PolicyTraceBinding"
+    },
+    {
+      "name": "Orthemology.Tranche2.PolicyEmbedding.historyAction",
+      "module": "PolicyTraceBinding"
+    },
+    {
+      "name": "Orthemology.Tranche2.PolicyEmbedding.traceAction_measurable",
+      "module": "PolicyTraceBinding"
+    },
+    {
+      "name": "Orthemology.Tranche2.PolicyEmbedding.historyAction_measurable",
+      "module": "PolicyTraceBinding"
+    },
+    {
+      "name": "Orthemology.Tranche2.PolicyEmbedding.action_readout_on_run",
+      "module": "PolicyTraceBinding"
+    },
+    {
+      "name": "Orthemology.Tranche2.PolicyEmbedding.traceLaw_actionReadout",
+      "module": "PolicyTraceBinding"
+    },
+    {
+      "name": "Orthemology.Tranche2.PolicyEmbedding.actionLaw",
+      "module": "PolicyTraceBinding"
+    },
+    {
+      "name": "Orthemology.Tranche2.PolicyEmbedding.traceLaw_action_eq_canonical",
+      "module": "PolicyTraceBinding"
+    },
+    {
+      "name": "Orthemology.Tranche2.PolicyEmbedding.outsideCount",
+      "module": "PolicyTranscriptFiber"
+    },
+    {
+      "name": "Orthemology.Tranche2.PolicyEmbedding.feedback",
+      "module": "PolicyTranscriptFiber"
+    },
+    {
+      "name": "Orthemology.Tranche2.PolicyEmbedding.observedHistory",
+      "module": "PolicyTranscriptFiber"
+    },
+    {
+      "name": "Orthemology.Tranche2.PolicyEmbedding.observedHistory_length",
+      "module": "PolicyTranscriptFiber"
+    },
+    {
+      "name": "Orthemology.Tranche2.PolicyEmbedding.policyRun_eq_observedHistory",
+      "module": "PolicyTranscriptFiber"
+    },
+    {
+      "name": "Orthemology.Tranche2.PolicyEmbedding.ActionCompatible",
+      "module": "PolicyTranscriptFiber"
+    },
+    {
+      "name": "Orthemology.Tranche2.PolicyEmbedding.FeedbackCompatible",
+      "module": "PolicyTranscriptFiber"
+    },
+    {
+      "name": "Orthemology.Tranche2.PolicyEmbedding.observedHistory_fiber",
+      "module": "PolicyTranscriptFiber"
+    },
+    {
+      "name": "Orthemology.Tranche2.PolicyEmbedding.policyRun_transcript_fiber",
+      "module": "PolicyTranscriptFiber"
+    },
+    {
+      "name": "Orthemology.Tranche2.infinite_product_coordinate_law",
+      "module": "ProductObservationLaw"
+    },
+    {
+      "name": "Orthemology.Tranche2.infinite_product_coordinates_independent",
+      "module": "ProductObservationLaw"
+    },
+    {
+      "name": "HiddenParity.Empirical.symbolIndicator",
+      "module": "RawEmpiricalRows"
+    },
+    {
+      "name": "HiddenParity.Empirical.rawFrequency",
+      "module": "RawEmpiricalRows"
+    },
+    {
+      "name": "HiddenParity.Empirical.rawFrequency_measurable",
+      "module": "RawEmpiricalRows"
+    },
+    {
+      "name": "HiddenParity.Empirical.seeded_symbol_integrable",
+      "module": "RawEmpiricalRows"
+    },
+    {
+      "name": "HiddenParity.Empirical.seeded_symbol_integral",
+      "module": "RawEmpiricalRows"
+    },
+    {
+      "name": "HiddenParity.Empirical.seeded_rawFrequency_tendsto",
+      "module": "RawEmpiricalRows"
+    },
+    {
+      "name": "HiddenParity.Empirical.seeded_all_rawFrequencies_tendsto",
+      "module": "RawEmpiricalRows"
+    },
+    {
+      "name": "Orthemology.Tranche2.RecurrentSupport.Recurs",
+      "module": "RecurrentSupport"
+    },
+    {
+      "name": "Orthemology.Tranche2.RecurrentSupport.recurrentSet",
+      "module": "RecurrentSupport"
+    },
+    {
+      "name": "Orthemology.Tranche2.RecurrentSupport.mem_recurrentSet",
+      "module": "RecurrentSupport"
+    },
+    {
+      "name": "Orthemology.Tranche2.RecurrentSupport.exists_recurrent",
+      "module": "RecurrentSupport"
+    },
+    {
+      "name": "Orthemology.Tranche2.RecurrentSupport.recurrentSet_nonempty",
+      "module": "RecurrentSupport"
+    },
+    {
+      "name": "Orthemology.Tranche2.RecurrentSupport.eventually_mem_recurrentSet",
+      "module": "RecurrentSupport"
+    },
+    {
+      "name": "Orthemology.Tranche2.RecurrentSupport.recurrentSet_subset_of_eventually_mem",
+      "module": "RecurrentSupport"
+    },
+    {
+      "name": "Orthemology.Tranche2.RecurrentSupport.exactRecurrentEvent",
+      "module": "RecurrentSupport"
+    },
+    {
+      "name": "Orthemology.Tranche2.RecurrentSupport.tailEvent",
+      "module": "RecurrentSupport"
+    },
+    {
+      "name": "Orthemology.Tranche2.RecurrentSupport.exact_event_eventually_mem",
+      "module": "RecurrentSupport"
+    },
+    {
+      "name": "Orthemology.Tranche2.RecurrentSupport.exact_event_finitely_many_outside",
+      "module": "RecurrentSupport"
+    },
+    {
+      "name": "Orthemology.Tranche2.RecurrentSupport.exact_event_eq_iUnion_tail",
+      "module": "RecurrentSupport"
+    },
+    {
+      "name": "Orthemology.Tranche2.RecurrentSupport.measurable_recurrence",
+      "module": "RecurrentSupport"
+    },
+    {
+      "name": "Orthemology.Tranche2.RecurrentSupport.measurable_exactRecurrentEvent",
+      "module": "RecurrentSupport"
+    },
+    {
+      "name": "Orthemology.Tranche2.RecurrentSupport.measurable_tailEvent",
+      "module": "RecurrentSupport"
+    },
+    {
+      "name": "Orthemology.Tranche2.RecurrentSupport.exists_positive_recurrent_support",
+      "module": "RecurrentSupport"
+    },
+    {
+      "name": "Orthemology.Tranche2.RecurrentSupport.exists_positive_tail_index",
+      "module": "RecurrentSupport"
+    },
+    {
+      "name": "Orthemology.Tranche2.RecurrentSupport.exists_measurable_positive_recurrent_support",
+      "module": "RecurrentSupport"
+    },
+    {
+      "name": "Orthemology.Tranche2.RecurrentSupport.support_subset_of_positive_exact_event",
+      "module": "RecurrentSupport"
+    },
+    {
+      "name": "Orthemology.Tranche2.RecurrentSupport.abstract_self_verifying_support",
+      "module": "RecurrentSupport"
+    },
+    {
+      "name": "HiddenParity.Adaptive.countBefore",
+      "module": "SequentialTapeConsumption"
+    },
+    {
+      "name": "HiddenParity.Adaptive.countBefore_zero",
+      "module": "SequentialTapeConsumption"
+    },
+    {
+      "name": "HiddenParity.Adaptive.countBefore_succ",
+      "module": "SequentialTapeConsumption"
+    },
+    {
+      "name": "HiddenParity.Adaptive.countBefore_mono",
+      "module": "SequentialTapeConsumption"
+    },
+    {
+      "name": "HiddenParity.Adaptive.countBefore_le_time",
+      "module": "SequentialTapeConsumption"
+    },
+    {
+      "name": "HiddenParity.Adaptive.recurrent_action_unbounded_count",
+      "module": "SequentialTapeConsumption"
+    },
+    {
+      "name": "HiddenParity.Adaptive.recurrent_action_consumes_every_index",
+      "module": "SequentialTapeConsumption"
+    },
+    {
+      "name": "HiddenParity.Adaptive.stackReceipt",
+      "module": "SequentialTapeConsumption"
+    },
+    {
+      "name": "HiddenParity.Adaptive.recurrent_action_observes_recurrent_symbol",
+      "module": "SequentialTapeConsumption"
+    },
+    {
+      "name": "HiddenParity.Adaptive.historyReceipt",
+      "module": "SequentialTapeConsumption"
+    },
+    {
+      "name": "HiddenParity.Adaptive.stackReceipt_eq_historyReceipt",
+      "module": "SequentialTapeConsumption"
+    },
+    {
+      "name": "Orthemology.Tranche2.PolicyEmbedding.stackHistoryTrajectory",
+      "module": "StackActionLaw"
+    },
+    {
+      "name": "Orthemology.Tranche2.PolicyEmbedding.stackActionTrajectory",
+      "module": "StackActionLaw"
+    },
+    {
+      "name": "Orthemology.Tranche2.PolicyEmbedding.observedHistory_univ_oracle_irrelevant",
+      "module": "StackActionLaw"
+    },
+    {
+      "name": "Orthemology.Tranche2.PolicyEmbedding.stackHistoryTrajectory_measurable",
+      "module": "StackActionLaw"
+    },
+    {
+      "name": "Orthemology.Tranche2.PolicyEmbedding.stackActionTrajectory_measurable",
+      "module": "StackActionLaw"
+    },
+    {
+      "name": "Orthemology.Tranche2.PolicyEmbedding.stackActionTrajectory_eq_historyAction",
+      "module": "StackActionLaw"
+    },
+    {
+      "name": "Orthemology.Tranche2.PolicyEmbedding.observedTraceLaw_univ_eq_stack",
+      "module": "StackActionLaw"
+    },
+    {
+      "name": "Orthemology.Tranche2.PolicyEmbedding.stackActionTrajectory_law",
+      "module": "StackActionLaw"
+    },
+    {
+      "name": "Orthemology.Tranche2.PolicyEmbedding.actionLaw_ae_of_stack",
+      "module": "StackActionLaw"
+    },
+    {
+      "name": "Orthemology.Tranche2.PolicyEmbedding.measurableSet_eventually_mem",
+      "module": "StackActionLaw"
+    },
+    {
+      "name": "Orthemology.Tranche2.PolicyEmbedding.actionLaw_eventually_good_of_stack",
+      "module": "StackActionLaw"
+    },
+    {
+      "name": "Orthemology.Tranche2.PolicyEmbedding.actionLaw_eventually_good_of_stack_fibers",
+      "module": "StackActionLaw"
+    },
+    {
+      "name": "Orthemology.Tranche2.PolicyEmbedding.stack_coordinate_law",
+      "module": "StackActionLaw"
+    },
+    {
+      "name": "Orthemology.Tranche2.PolicyEmbedding.stack_coordinates_independent",
+      "module": "StackActionLaw"
+    },
+    {
+      "name": "Orthemology.Tranche2.PolicyEmbedding.stack_coordinates_identDistrib",
+      "module": "StackActionLaw"
+    },
+    {
+      "name": "Orthemology.Tranche2.PolicyEmbedding.stack_coordinate_real_singleton",
+      "module": "StackActionLaw"
+    },
+    {
+      "name": "Orthemology.Tranche2.PolicyEmbedding.seededStackCoordinate",
+      "module": "StackActionLaw"
+    },
+    {
+      "name": "Orthemology.Tranche2.PolicyEmbedding.seededStackCoordinate_measurable",
+      "module": "StackActionLaw"
+    },
+    {
+      "name": "Orthemology.Tranche2.PolicyEmbedding.seededStackCoordinate_law",
+      "module": "StackActionLaw"
+    },
+    {
+      "name": "Orthemology.Tranche2.PolicyEmbedding.seededStackCoordinates_independent",
+      "module": "StackActionLaw"
+    },
+    {
+      "name": "Orthemology.Tranche2.PolicyEmbedding.seededStackCoordinates_identDistrib",
+      "module": "StackActionLaw"
+    },
+    {
+      "name": "Orthemology.Tranche2.PolicyEmbedding.seededStackCoordinate_real_singleton",
+      "module": "StackActionLaw"
+    }
+  ],
+  "pins": {
+    "lean_version": "4.19.0",
+    "lean_binary_sha256": "92c3d35b5bfaa5e0fea413a775d504cf46cd95e1345df61c2274f76779e7e023",
+    "packages": [
+      {
+        "name": "mathlib",
+        "revision": "c44e0c8ee63ca166450922a373c7409c5d26b00b"
+      },
+      {
+        "name": "plausible",
+        "revision": "77e08eddc486491d7b9e470926b3dbe50319451a"
+      },
+      {
+        "name": "LeanSearchClient",
+        "revision": "25078369972d295301f5a1e53c3e5850cf6d9d4c"
+      },
+      {
+        "name": "importGraph",
+        "revision": "e6a9f0f5ee3ccf7443a0070f92b62f8db12ae82b"
+      },
+      {
+        "name": "proofwidgets",
+        "revision": "c4919189477c3221e6a204008998b0d724f49904"
+      },
+      {
+        "name": "aesop",
+        "revision": "5d50b08dedd7d69b3d9b3176e0d58a23af228884"
+      },
+      {
+        "name": "Qq",
+        "revision": "fa4f7f15d97591a9cf3aa7724ba371c7fc6dda02"
+      },
+      {
+        "name": "batteries",
+        "revision": "f5d04a9c4973d401c8c92500711518f7c656f034"
+      },
+      {
+        "name": "Cli",
+        "revision": "02dbd02bc00ec4916e99b04b2245b30200e200d0"
+      }
+    ]
+  },
+  "official_imports": [
+    {
+      "module": "Mathlib",
+      "repository": "mathlib",
+      "source": "Mathlib.lean",
+      "sha256": "b0518254279fabf0c6a920804e684536b0f5e2bd1cb6318d0609eb563413f20a"
+    },
+    {
+      "module": "Mathlib.Probability.Kernel.IonescuTulcea.Traj",
+      "repository": "mathlib",
+      "source": "Mathlib/Probability/Kernel/IonescuTulcea/Traj.lean",
+      "sha256": "c565dd9bdc17c21181cd5cbe41055aa2889210745bc463ff0596a01c580ccbcb"
+    },
+    {
+      "module": "Mathlib.Probability.ProductMeasure",
+      "repository": "mathlib",
+      "source": "Mathlib/Probability/ProductMeasure.lean",
+      "sha256": "f8af06e87e2e28916f0fa8a455f792ded4b85a22e1dea5e1c6f9cac1d31b9830"
+    },
+    {
+      "module": "Mathlib.Probability.StrongLaw",
+      "repository": "mathlib",
+      "source": "Mathlib/Probability/StrongLaw.lean",
+      "sha256": "3c3768b70c3779bea384592bb548bc06de2d25af315e0a0d59a1742b0807717c"
+    }
+  ],
+  "driver": {
+    "source_id": "src-810768c2edecd6dd-4a069cf871f9890f",
+    "lean_argument": "BIN_DIRECTORY"
+  },
+  "controls": "ORIGINAL_DRIVER_REQUIRED",
+  "classification": "PREDECESSOR"
+}

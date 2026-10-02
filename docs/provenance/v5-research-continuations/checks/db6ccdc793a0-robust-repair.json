@@ -1,0 +1,497 @@
+{
+  "status": "FRESH_KERNEL_COMPONENTS",
+  "exit_code": 0,
+  "kernel_verified": true,
+  "suite_id": "db6ccdc793a0-robust-repair",
+  "suite_sha256": "9f3ec3038c07cbe8adb0e4156a6098307c9751eba387adbeb9f58642cda053fe",
+  "source_hashes": {
+    "RobustBinaryRepair": "1762b3ce9b4c3d11826eb724c1d15468d8ddda69666da3e06f332979288b4c31",
+    "CertifiedRepairCoverage": "ce7c17727753d78a199ba2ecda1e2a0b1a81f6c50852785ff6cf45f9e727d9fe",
+    "RationalRepairCertificate": "9d069a77d114d1e80f3f7b15db5d54fe03175d6e541109937de2c7a958082922",
+    "Controls": "c8ffd221a31d97c4179b2b85df38c1d0d542e2f15ec7dfbca4c101f6c44da324"
+  },
+  "post_source_hashes": {
+    "RobustBinaryRepair": "1762b3ce9b4c3d11826eb724c1d15468d8ddda69666da3e06f332979288b4c31",
+    "CertifiedRepairCoverage": "ce7c17727753d78a199ba2ecda1e2a0b1a81f6c50852785ff6cf45f9e727d9fe",
+    "RationalRepairCertificate": "9d069a77d114d1e80f3f7b15db5d54fe03175d6e541109937de2c7a958082922",
+    "Controls": "c8ffd221a31d97c4179b2b85df38c1d0d542e2f15ec7dfbca4c101f6c44da324"
+  },
+  "compiler_sha256": "92c3d35b5bfaa5e0fea413a775d504cf46cd95e1345df61c2274f76779e7e023",
+  "pins": {
+    "lean_version": "4.19.0",
+    "lean_binary_sha256": "92c3d35b5bfaa5e0fea413a775d504cf46cd95e1345df61c2274f76779e7e023",
+    "packages": [
+      {
+        "name": "mathlib",
+        "revision": "c44e0c8ee63ca166450922a373c7409c5d26b00b"
+      },
+      {
+        "name": "plausible",
+        "revision": "77e08eddc486491d7b9e470926b3dbe50319451a"
+      },
+      {
+        "name": "LeanSearchClient",
+        "revision": "25078369972d295301f5a1e53c3e5850cf6d9d4c"
+      },
+      {
+        "name": "importGraph",
+        "revision": "e6a9f0f5ee3ccf7443a0070f92b62f8db12ae82b"
+      },
+      {
+        "name": "proofwidgets",
+        "revision": "c4919189477c3221e6a204008998b0d724f49904"
+      },
+      {
+        "name": "aesop",
+        "revision": "5d50b08dedd7d69b3d9b3176e0d58a23af228884"
+      },
+      {
+        "name": "Qq",
+        "revision": "fa4f7f15d97591a9cf3aa7724ba371c7fc6dda02"
+      },
+      {
+        "name": "batteries",
+        "revision": "f5d04a9c4973d401c8c92500711518f7c656f034"
+      },
+      {
+        "name": "Cli",
+        "revision": "02dbd02bc00ec4916e99b04b2245b30200e200d0"
+      }
+    ]
+  },
+  "modules": [
+    {
+      "module": "RobustBinaryRepair",
+      "source_sha256": "1762b3ce9b4c3d11826eb724c1d15468d8ddda69666da3e06f332979288b4c31",
+      "object_sha256": "1e38d62d6829039b175447f36f2faf9890c142896e7e79f4ce60d365e586ebb9",
+      "transitive_source_fingerprint": "79e5372a2926af49521fe0604453296db2ee98bc03e4b7dfa6b4707c1e044758",
+      "status": "QUALIFIED_PREDECESSOR",
+      "predecessor_receipt": "docs/provenance/v5-research-continuations/checks/db6ccdc793a0-continuum-repair.json",
+      "predecessor_receipt_sha256": "6f58d28bfc29e1500254c3337c28d6a9e76a12805c0ff3261f273d363e9d6e77"
+    },
+    {
+      "module": "CertifiedRepairCoverage",
+      "source_sha256": "ce7c17727753d78a199ba2ecda1e2a0b1a81f6c50852785ff6cf45f9e727d9fe",
+      "object_sha256": "df96edb207823ee2e5bbbad5359e74e6c5dd870c4ea848fc491ead64731eec6c",
+      "transitive_source_fingerprint": "0c793070ccb2e011b15dcee48db725789098325a326b1c9df54a5b214ae5ac1f",
+      "status": "QUALIFIED_PREDECESSOR",
+      "predecessor_receipt": "docs/provenance/v5-research-continuations/checks/db6ccdc793a0-continuum-repair.json",
+      "predecessor_receipt_sha256": "6f58d28bfc29e1500254c3337c28d6a9e76a12805c0ff3261f273d363e9d6e77"
+    },
+    {
+      "module": "RationalRepairCertificate",
+      "source_sha256": "9d069a77d114d1e80f3f7b15db5d54fe03175d6e541109937de2c7a958082922",
+      "object_sha256": "0d14e093458842e8feff35bbc5e9db339a3f03f2d9b1004138e91432b3132aaf",
+      "transitive_source_fingerprint": "925f435efd88a1b44314a0302090768bb812680f498678265e1557f1fd1c1c51",
+      "status": "QUALIFIED_PREDECESSOR",
+      "predecessor_receipt": "docs/provenance/v5-research-continuations/checks/db6ccdc793a0-continuum-repair.json",
+      "predecessor_receipt_sha256": "6f58d28bfc29e1500254c3337c28d6a9e76a12805c0ff3261f273d363e9d6e77"
+    },
+    {
+      "module": "Controls",
+      "source_sha256": "c8ffd221a31d97c4179b2b85df38c1d0d542e2f15ec7dfbca4c101f6c44da324",
+      "object_sha256": "6e4c99ca721dce4a1790dd6762c830aea670feb44fa658c82680f127d506bf82",
+      "transitive_source_fingerprint": "161da84153c2fa214bba2d4b8ee176e63552beab8568b970fe1af746ab985ba2",
+      "status": "FRESH_COMPILE",
+      "exit_code": 0
+    }
+  ],
+  "readbacks": {
+    "Orthemology.Tranche3.excessZero": {
+      "type_sha256": "5c33f33f279d1018fd916228497ca2cc65e89bf110694e46565ed7d7966df097",
+      "axioms": [
+        "Classical.choice",
+        "Quot.sound",
+        "propext"
+      ]
+    },
+    "Orthemology.Tranche3.excessOne": {
+      "type_sha256": "ecfd32d5eceedfd1903506bbb9033db3a3399460f828fc9ae51e520c80017af5",
+      "axioms": [
+        "Classical.choice",
+        "Quot.sound",
+        "propext"
+      ]
+    },
+    "Orthemology.Tranche3.RobustGood": {
+      "type_sha256": "f8b73ba2290b56c2272c21959b995d3d740f79350625ffd4f3a67651fccbbfc2",
+      "axioms": [
+        "Classical.choice",
+        "Quot.sound",
+        "propext"
+      ]
+    },
+    "Orthemology.Tranche3.robustReport": {
+      "type_sha256": "66b1d94538b6466de82291ea8e103d695111350a097d1155af904223ba47c533",
+      "axioms": [
+        "Classical.choice",
+        "Quot.sound",
+        "propext"
+      ]
+    },
+    "Orthemology.Tranche3.robustValue": {
+      "type_sha256": "3871f4e58c741c50a9236122f18e2a52874a49da563f31e772fbd4765c0efa0e",
+      "axioms": [
+        "Classical.choice",
+        "Quot.sound",
+        "propext"
+      ]
+    },
+    "Orthemology.Tranche3.excessZero_expand": {
+      "type_sha256": "54ea1d0f321b5fb15e5e1ff08f0c031c93ccdc2aea97f3971a4f62424678ece8",
+      "axioms": [
+        "Classical.choice",
+        "Quot.sound",
+        "propext"
+      ]
+    },
+    "Orthemology.Tranche3.excessOne_expand": {
+      "type_sha256": "d91ce4761a03a8fad46b93342971d1deba014f985d37191796c8c3f339bd7a39",
+      "axioms": [
+        "Classical.choice",
+        "Quot.sound",
+        "propext"
+      ]
+    },
+    "Orthemology.Tranche3.robustGood_iff_endpoints": {
+      "type_sha256": "0065ed3cbf6228b09a6b5900dc5026120a4f702fa216d6350591d85152db9f8c",
+      "axioms": [
+        "Classical.choice",
+        "Quot.sound",
+        "propext"
+      ]
+    },
+    "Orthemology.Tranche3.robustReport_mem": {
+      "type_sha256": "d2fca884cf7734f781d0a192001abc1b5e8af0c2bc424dd0550c8333ef37e6c1",
+      "axioms": [
+        "Classical.choice",
+        "Quot.sound",
+        "propext"
+      ]
+    },
+    "Orthemology.Tranche3.robust_crossing": {
+      "type_sha256": "61290e4eaa2376c83de77f74e74dce454b8af07ed5768e30dedcec91e7d0632c",
+      "axioms": [
+        "Classical.choice",
+        "Quot.sound",
+        "propext"
+      ]
+    },
+    "Orthemology.Tranche3.robustValue_le_max": {
+      "type_sha256": "01099d3456b5ae4761ed0a313833f40feb115df6da82f1dde375125202777999",
+      "axioms": [
+        "Classical.choice",
+        "Quot.sound",
+        "propext"
+      ]
+    },
+    "Orthemology.Tranche3.robust_repair_exists_iff": {
+      "type_sha256": "9f41767998527cfcc4b83170c50e7783bd370d438a06b2bb5826b491fb4c98c3",
+      "axioms": [
+        "Classical.choice",
+        "Quot.sound",
+        "propext"
+      ]
+    },
+    "Orthemology.Tranche3.robustValue_polynomial": {
+      "type_sha256": "902e6c00b95334eba0c6f6f6d956c11d55e299cd7bfb0412e6650e90896dfaea",
+      "axioms": [
+        "Classical.choice",
+        "Quot.sound",
+        "propext"
+      ]
+    },
+    "Orthemology.Tranche3.robustReport_unique": {
+      "type_sha256": "aa5f4700836d727e7e50248ba8a93716c138301d18c24c4093816c01012b37ee",
+      "axioms": [
+        "Classical.choice",
+        "Quot.sound",
+        "propext"
+      ]
+    },
+    "Orthemology.Tranche3.covered_certificate_sound": {
+      "type_sha256": "78cf8ab310b2d88e75d08311edc870185d53d7ecfd91e5770a2324741137d8f3",
+      "axioms": [
+        "Classical.choice",
+        "Quot.sound",
+        "propext"
+      ]
+    },
+    "Orthemology.Tranche3.width_sufficient": {
+      "type_sha256": "724169ec229ee8a35ac12af0e8fd7f3f741141ee3bb85578915cf9b33e62d97e",
+      "axioms": [
+        "Classical.choice",
+        "Quot.sound",
+        "propext"
+      ]
+    },
+    "Orthemology.Tranche3.robustValue_lower_width": {
+      "type_sha256": "ee8df38fc03e48dc14c212e3926c72ed8296425e25eb382afb92bc998bb3af47",
+      "axioms": [
+        "Classical.choice",
+        "Quot.sound",
+        "propext"
+      ]
+    },
+    "Orthemology.Tranche3.width_necessary": {
+      "type_sha256": "e85eb848c588a578b7869fca7822df18fa911c747223aeae7a3e2d6bec60da82",
+      "axioms": [
+        "Classical.choice",
+        "Quot.sound",
+        "propext"
+      ]
+    },
+    "Orthemology.Tranche3.IntervalCoverage": {
+      "type_sha256": "46ba9b5d0dad8e9a64aaca7d240d7c8f197bf766bad03c4f53c602334b446a1c",
+      "axioms": [
+        "Classical.choice",
+        "Quot.sound",
+        "propext"
+      ]
+    },
+    "Orthemology.Tranche3.AllCertificatesSound": {
+      "type_sha256": "a14850cb10eb85b34e683286a6bfccdf03fc2a9abd0b84a7db27d716e144fb1d",
+      "axioms": [
+        "Classical.choice",
+        "Quot.sound",
+        "propext"
+      ]
+    },
+    "Orthemology.Tranche3.coverage_subset_sound": {
+      "type_sha256": "7ce6d8dc08b2c9bbd087e9e8f19702ec7f3a9d252076607cdefe247a6c2dba65",
+      "axioms": [
+        "Classical.choice",
+        "Quot.sound",
+        "propext"
+      ]
+    },
+    "Orthemology.Tranche3.certificate_failure_measure_le": {
+      "type_sha256": "07eb378b207d35eb15e5cbe4d0862a687a6ecbde897dcc3aafac66f9ea8ab399",
+      "axioms": [
+        "Classical.choice",
+        "Quot.sound",
+        "propext"
+      ]
+    },
+    "Orthemology.Tranche3.rationalReport": {
+      "type_sha256": "cbe68691c8cecf171864840a1bed594deb9ff027d13d003cec864db09cdcd9b1",
+      "axioms": [
+        "Classical.choice",
+        "Quot.sound",
+        "propext"
+      ]
+    },
+    "Orthemology.Tranche3.rationalValue": {
+      "type_sha256": "51734c057a66ef8428f9fd3d81fedade0ba48209dee1d881cfc4fa00ae7f8249",
+      "axioms": [
+        "Classical.choice",
+        "Quot.sound",
+        "propext"
+      ]
+    },
+    "Orthemology.Tranche3.RationalValid": {
+      "type_sha256": "0551594060b903eb2a251622d414cc0407887c3259dab00aaf9c776165876aac",
+      "axioms": [
+        "propext"
+      ]
+    },
+    "Orthemology.Tranche3.rationalCertificate": {
+      "type_sha256": "8666a6c7de6e5af6870ee4c005116249fe6dd8581b89c7b89b65496312de25b0",
+      "axioms": [
+        "Classical.choice",
+        "Quot.sound",
+        "propext"
+      ]
+    },
+    "Orthemology.Tranche3.rationalReport_cast": {
+      "type_sha256": "7927c7ca702a55828bb447ec6cec580f865d46120291a74535dd4d2de3148780",
+      "axioms": [
+        "Classical.choice",
+        "Quot.sound",
+        "propext"
+      ]
+    },
+    "Orthemology.Tranche3.rationalValue_cast": {
+      "type_sha256": "0882e7087600421aa33740268aefc44c21b37c2bfc11c662e4a5b683fe8fc04a",
+      "axioms": [
+        "Classical.choice",
+        "Quot.sound",
+        "propext"
+      ]
+    },
+    "Orthemology.Tranche3.rationalValid_cast": {
+      "type_sha256": "fb1882a54b4d8bde67d4f80754ea8d326438d31b4e0efb934446141be5a30516",
+      "axioms": [
+        "Classical.choice",
+        "Quot.sound",
+        "propext"
+      ]
+    },
+    "Orthemology.Tranche3.rationalCertificate_sound": {
+      "type_sha256": "b05d05546fc5b3c136249efbd79ab91d2480c959bf63b1623075611e4e98a1dd",
+      "axioms": [
+        "Classical.choice",
+        "Quot.sound",
+        "propext"
+      ]
+    },
+    "Orthemology.Tranche3.rationalCertificate_reject_iff": {
+      "type_sha256": "f6737f8fec9b75a9de415b83a346803ab79810fda7f68015c6b624843a791817",
+      "axioms": [
+        "Classical.choice",
+        "Quot.sound",
+        "propext"
+      ]
+    },
+    "IndependentRobustControls.boundary_01": {
+      "type_sha256": "65ebb78fe4e06198915c99819d208f4614d1554d588fe55afcb98fe5a980eb9f",
+      "axioms": [
+        "Classical.choice",
+        "Quot.sound",
+        "propext"
+      ]
+    },
+    "IndependentRobustControls.boundary_02": {
+      "type_sha256": "27279daa5aaef6c14eb5620f9e6f30a6a71ac052b117c12469ef91ca77f32569",
+      "axioms": [
+        "Classical.choice",
+        "Quot.sound",
+        "propext"
+      ]
+    },
+    "IndependentRobustControls.boundary_03": {
+      "type_sha256": "c7e4655523220a69e9707f4a5f637b5c0a9addf2ef127d0f16ce0ae55be05c0c",
+      "axioms": [
+        "Classical.choice",
+        "Quot.sound",
+        "propext"
+      ]
+    },
+    "IndependentRobustControls.boundary_04": {
+      "type_sha256": "4169913bf9bd51f5c4a4dc73360efbf3c5daf94f302c4257a11bc16c75c272b5",
+      "axioms": [
+        "Classical.choice",
+        "Quot.sound",
+        "propext"
+      ]
+    },
+    "IndependentRobustControls.boundary_05": {
+      "type_sha256": "aa56bf165cf6d7f3a1d84cda3d3a1e203efbcfdd18c2b6bf255ca18ecbd2ae76",
+      "axioms": [
+        "Classical.choice",
+        "Quot.sound",
+        "propext"
+      ]
+    },
+    "IndependentRobustControls.boundary_06": {
+      "type_sha256": "22e08417e3dd9f2e372a74588d4069ecafe80ee4a748925abf974fddae7fd68a",
+      "axioms": [
+        "Classical.choice",
+        "Quot.sound",
+        "propext"
+      ]
+    },
+    "IndependentRobustControls.boundary_07": {
+      "type_sha256": "38daee3a5d8316a59b945bff4ab2b6f9829d7ca81ec5add71ee6c1f8e50d0034",
+      "axioms": [
+        "Classical.choice",
+        "Quot.sound",
+        "propext"
+      ]
+    },
+    "IndependentRobustControls.boundary_08": {
+      "type_sha256": "538e993b26c1c7d996cb08e8012bc7884a98686ae88442a3ee02499196dbfe70",
+      "axioms": [
+        "Classical.choice",
+        "Quot.sound",
+        "propext"
+      ]
+    },
+    "IndependentRobustControls.boundary_09": {
+      "type_sha256": "7dc79484459ca7ea3a18321924edc80532f29bfe61bfc977de0e5253569416c1",
+      "axioms": [
+        "Classical.choice",
+        "Quot.sound",
+        "propext"
+      ]
+    },
+    "IndependentRobustControls.boundary_10": {
+      "type_sha256": "0acb906597451eb703e6a96f2151b0d79cfc4fe202e02fe0258d99349609f7ef",
+      "axioms": [
+        "Classical.choice",
+        "Quot.sound",
+        "propext"
+      ]
+    },
+    "IndependentRobustControls.boundary_11": {
+      "type_sha256": "50a807436acadc6aee823b21b27dba7502a2ca4d74b50c01d358cef66e63ff7b",
+      "axioms": [
+        "Classical.choice",
+        "Quot.sound",
+        "propext"
+      ]
+    },
+    "IndependentRobustControls.boundary_12": {
+      "type_sha256": "e76bfbf8ce4f60f7717652e99459bef881f6aaa6bc0dbe9f5be0f08122bff096",
+      "axioms": [
+        "Classical.choice",
+        "Quot.sound",
+        "propext"
+      ]
+    },
+    "IndependentRobustControls.boundary_13": {
+      "type_sha256": "809474219097e890fb1d14ebd9d517664aebdf8eaf08e188072dbddc33a4159f",
+      "axioms": [
+        "Classical.choice",
+        "Quot.sound",
+        "propext"
+      ]
+    },
+    "IndependentRobustControls.boundary_14": {
+      "type_sha256": "3f683cb6d3989a6b7a8b58a77f0ddde42a3a34f1c778d695f7c214f7b63d9f68",
+      "axioms": [
+        "Classical.choice",
+        "Quot.sound",
+        "propext"
+      ]
+    },
+    "IndependentRobustControls.boundary_15": {
+      "type_sha256": "cb8f1013b39e3993eb75c053ada374ee07741f396834f81086ca06623622ace0",
+      "axioms": [
+        "Classical.choice",
+        "Quot.sound",
+        "propext"
+      ]
+    },
+    "IndependentRobustControls.boundary_16": {
+      "type_sha256": "08855f80f1b284c5d3fe723d151ed1c504a4a86e090c7408e38df1f7325c8d0b",
+      "axioms": [
+        "Classical.choice",
+        "Quot.sound",
+        "propext"
+      ]
+    },
+    "IndependentRobustControls.boundary_17": {
+      "type_sha256": "2bf93ea1239239869fd698da050cac7ce2379c11b81a32707598fce4abf62372",
+      "axioms": [
+        "Classical.choice",
+        "Quot.sound",
+        "propext"
+      ]
+    },
+    "IndependentRobustControls.boundary_18": {
+      "type_sha256": "1a32d8b4bb93f9e0ea85c7c66b3d2c0116cf213e466309dfbd310abc290514b9",
+      "axioms": [
+        "Classical.choice",
+        "Quot.sound",
+        "propext"
+      ]
+    }
+  },
+  "original_controls": "NOT_RUN",
+  "original_receipt_sha256": "53453a2920c5c69b9df80f4bbff8934636ed13f70202343ffbbb4145c4d224ea",
+  "original_driver_sha256": "4933d602f18c749ff170629964914907bf1c5bf05160329bd8aab623dfd65f98",
+  "execution_kind": "FRESH_CUSTOM_CLOSURE",
+  "finished_utc": "2026-10-02T05:42:34.892959+00:00",
+  "scope": "Source-bound custom closure and selected declaration readbacks. Types are represented by hashes of the exact printed types; complete logs remain private. Official caches are trusted. This does not establish ordinary proof, runtime completeness, empirical or normative warrant, novelty, external human review or merged adoption."
+}

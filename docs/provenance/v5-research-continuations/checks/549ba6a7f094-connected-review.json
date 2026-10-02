@@ -1,0 +1,198 @@
+{
+  "status": "FRESH_KERNEL_COMPONENTS",
+  "exit_code": 0,
+  "kernel_verified": true,
+  "suite_id": "549ba6a7f094-connected-review",
+  "suite_sha256": "e2a5ffe8bb296a05eb3391614f1b95d1d1671d291daeb320ae581c3aab5d2725",
+  "source_hashes": {
+    "ConnectedUnity": "261ba4fbf10ee9d8baf1e4330bd9e842b23a0ffcbcadf3f3338cc2f47e240eea",
+    "InfiniteRootlessBranch": "b47fc7376e7ec701edabd721775d45db944d6ee2c312273dadf61559fa897988",
+    "ProductiveCompleteness": "8765c137491f2f5e2cd9e0c699987c53fcbb00b9cc9e90b49712ec124e97906a",
+    "ReviewerProbes": "db96ef53e43355b052b9305011e5e8c0f3987b7ad12345a46564e0b5c3f94ad6"
+  },
+  "post_source_hashes": {
+    "ConnectedUnity": "261ba4fbf10ee9d8baf1e4330bd9e842b23a0ffcbcadf3f3338cc2f47e240eea",
+    "InfiniteRootlessBranch": "b47fc7376e7ec701edabd721775d45db944d6ee2c312273dadf61559fa897988",
+    "ProductiveCompleteness": "8765c137491f2f5e2cd9e0c699987c53fcbb00b9cc9e90b49712ec124e97906a",
+    "ReviewerProbes": "db96ef53e43355b052b9305011e5e8c0f3987b7ad12345a46564e0b5c3f94ad6"
+  },
+  "compiler_sha256": "92c3d35b5bfaa5e0fea413a775d504cf46cd95e1345df61c2274f76779e7e023",
+  "pins": {
+    "lean_version": "4.19.0",
+    "lean_binary_sha256": "92c3d35b5bfaa5e0fea413a775d504cf46cd95e1345df61c2274f76779e7e023",
+    "packages": [
+      {
+        "name": "mathlib",
+        "revision": "c44e0c8ee63ca166450922a373c7409c5d26b00b"
+      },
+      {
+        "name": "plausible",
+        "revision": "77e08eddc486491d7b9e470926b3dbe50319451a"
+      },
+      {
+        "name": "LeanSearchClient",
+        "revision": "25078369972d295301f5a1e53c3e5850cf6d9d4c"
+      },
+      {
+        "name": "importGraph",
+        "revision": "e6a9f0f5ee3ccf7443a0070f92b62f8db12ae82b"
+      },
+      {
+        "name": "proofwidgets",
+        "revision": "c4919189477c3221e6a204008998b0d724f49904"
+      },
+      {
+        "name": "aesop",
+        "revision": "5d50b08dedd7d69b3d9b3176e0d58a23af228884"
+      },
+      {
+        "name": "Qq",
+        "revision": "fa4f7f15d97591a9cf3aa7724ba371c7fc6dda02"
+      },
+      {
+        "name": "batteries",
+        "revision": "f5d04a9c4973d401c8c92500711518f7c656f034"
+      },
+      {
+        "name": "Cli",
+        "revision": "02dbd02bc00ec4916e99b04b2245b30200e200d0"
+      }
+    ]
+  },
+  "modules": [
+    {
+      "module": "ConnectedUnity",
+      "source_sha256": "261ba4fbf10ee9d8baf1e4330bd9e842b23a0ffcbcadf3f3338cc2f47e240eea",
+      "object_sha256": "5c696e3f40f77d3f5f99adfd4ca589077c476b31fff049346f716d28d2c1a4a5",
+      "transitive_source_fingerprint": "030c2695b57e619afd728ea9b8a90c5f44e54459990034c8421de256345182d9",
+      "status": "QUALIFIED_PREDECESSOR",
+      "predecessor_receipt": "docs/provenance/v5-research-continuations/checks/549ba6a7f094-connected-author.json",
+      "predecessor_receipt_sha256": "1e7a4d3f9ca9935d6d5c1328b0e958a08a03fb12f247fcb8ca643705f6c1349f"
+    },
+    {
+      "module": "InfiniteRootlessBranch",
+      "source_sha256": "b47fc7376e7ec701edabd721775d45db944d6ee2c312273dadf61559fa897988",
+      "object_sha256": "f540bea1f20edf4c7c121ad27ef5b7f0963c4539dd90a530e4634298478a7be6",
+      "transitive_source_fingerprint": "3ac4236dce575754dd8c885739cc83669322cfab8a4d5fe469f76ce9eb11581f",
+      "status": "QUALIFIED_PREDECESSOR",
+      "predecessor_receipt": "docs/provenance/v5-research-continuations/checks/549ba6a7f094-connected-author.json",
+      "predecessor_receipt_sha256": "1e7a4d3f9ca9935d6d5c1328b0e958a08a03fb12f247fcb8ca643705f6c1349f"
+    },
+    {
+      "module": "ProductiveCompleteness",
+      "source_sha256": "8765c137491f2f5e2cd9e0c699987c53fcbb00b9cc9e90b49712ec124e97906a",
+      "object_sha256": "8296d838a723ff76f4274886f8fb45219eaa9819a8890283d3b83a6969488cff",
+      "transitive_source_fingerprint": "041bd4576cebfb5ae4e42ad4d0e691835e882743ce68035a70a98ad1b050c42b",
+      "status": "QUALIFIED_PREDECESSOR",
+      "predecessor_receipt": "docs/provenance/v5-research-continuations/checks/549ba6a7f094-connected-author.json",
+      "predecessor_receipt_sha256": "1e7a4d3f9ca9935d6d5c1328b0e958a08a03fb12f247fcb8ca643705f6c1349f"
+    },
+    {
+      "module": "ReviewerProbes",
+      "source_sha256": "db96ef53e43355b052b9305011e5e8c0f3987b7ad12345a46564e0b5c3f94ad6",
+      "object_sha256": "c0d5b283c2c32357e3beae97038bbabbd75b0bc77c9b4e9db34af8b7b76c8cf5",
+      "transitive_source_fingerprint": "075fb797dc2102f698703edb970fcc5a7b18e8b363c24e2de1dac43f19cb532a",
+      "status": "FRESH_COMPILE",
+      "exit_code": 0
+    }
+  ],
+  "readbacks": {
+    "ConnectedReview.reviewer_root_of_cover": {
+      "type_sha256": "53ccd24f0f0edfba1f860d67a2ab430a175b08583ed2d1b93660f49dedd1ef05",
+      "axioms": []
+    },
+    "ConnectedReview.reviewer_edge_cover_eq": {
+      "type_sha256": "f38a115b4a33efcc653657d7bd07210766e13c5be02fe9025ad184b1f0a5f84e",
+      "axioms": []
+    },
+    "ConnectedReview.reviewer_path_cover": {
+      "type_sha256": "1796d930b7a413c838c525e5a3edabef27c5c67a779692d22ed4248e9716120c",
+      "axioms": []
+    },
+    "ConnectedReview.reviewer_constructive_local_to_least": {
+      "type_sha256": "1dbea82b1b2c6fde5a71799b71916261743762eb4e564d0e8c16acc891d7c784",
+      "axioms": []
+    },
+    "ConnectedReview.reviewer_least_unique": {
+      "type_sha256": "205eed5b056b03e0e1fd59864f26e82fb97886cd5f7d8e41003ac9d9e6ac7612",
+      "axioms": []
+    },
+    "ConnectedReview.reviewer_global_unique_supported_to_least": {
+      "type_sha256": "4aca01c4d4dec9b16003a8854a1796da185879137050e82c6204afe24fa616f5",
+      "axioms": []
+    },
+    "ConnectedReview.reviewer_pointwise_forward": {
+      "type_sha256": "4299fe394961d98cb83192c9ca120d44723064df39e89a3e45ea39c7b4dd0070",
+      "axioms": []
+    },
+    "ConnectedReview.reviewer_pointwise_reverse": {
+      "type_sha256": "23f4679aa17fd475a0d3a83a9e3844a1343bfad73fdffef8156bfbfc280a7e2e",
+      "axioms": []
+    },
+    "ConnectedReview.reviewer_transitivity_is_material": {
+      "type_sha256": "c1321cebb9a9c293cddc726524341c06195960214e8028f89b4801e5cda8e34b",
+      "axioms": [
+        "Classical.choice",
+        "Quot.sound",
+        "propext"
+      ]
+    },
+    "ConnectedReview.reviewer_unclosed_chain_connected": {
+      "type_sha256": "04f7da898b8b8465057dd1ea900f13509c2a0c8cfa1ceb742996ed7c87e481c7",
+      "axioms": [
+        "Classical.choice",
+        "Quot.sound",
+        "propext"
+      ]
+    },
+    "ConnectedReview.reviewer_irreflexivity_is_material_to_uniqueness": {
+      "type_sha256": "ebadafeb8540e6f666393aef78b03102dda5ccfd830fa6de2feedc5cb5dd3493",
+      "axioms": [
+        "propext"
+      ]
+    },
+    "ConnectedReview.reviewer_scope_roothood_control": {
+      "type_sha256": "319b00191168fe3dd8a986ba98157221d8af4f6950bf99ffdb64798949bcdc1e",
+      "axioms": [
+        "Quot.sound",
+        "propext"
+      ]
+    },
+    "ConnectedReview.reviewer_rooted_strict": {
+      "type_sha256": "7ff9e42929496db1c9e662d37c6a4a32060e8da4cc959c27cb57e07e3797cbc9",
+      "axioms": [
+        "propext"
+      ]
+    },
+    "ConnectedReview.reviewer_rooted_least": {
+      "type_sha256": "ae5851b7c06fd121b0364b8a69d3e9202e9b45661fb2d079a33ad5c115cae578",
+      "axioms": []
+    },
+    "ConnectedReview.reviewer_rooted_no_accessible_branch": {
+      "type_sha256": "c7808447fe17499b986d76613d933e5632a719a8dc492c82d96634d35306e608",
+      "axioms": []
+    },
+    "ConnectedReview.reviewer_rooted_not_well_founded": {
+      "type_sha256": "f48da5eedea8c9051c4a43461fb5ffd18a517b477f9edff953a21b6f0e63aadc",
+      "axioms": []
+    },
+    "ConnectedReview.reviewer_fork_support_failure_inside_cone": {
+      "type_sha256": "05c698e5d6593c16ba561f04e7eea3025c78f6e146fccf707b161cc2ffb27d6e",
+      "axioms": [
+        "propext"
+      ]
+    },
+    "ConnectedReview.reviewer_graph_does_not_supply_act_bridge": {
+      "type_sha256": "1dac880e3ca214693778ab90dbe14cdcc880f0db2c3d544c71f3f9b24ba27965",
+      "axioms": [
+        "Quot.sound",
+        "propext"
+      ]
+    }
+  },
+  "original_controls": "NOT_RUN",
+  "original_receipt_sha256": "99afd217d25408e57dcc21a5a3a7aea496e4cc8cb0fbe3e864ea2c72e3a382ea",
+  "original_driver_sha256": "dd50876cba835215f2a0c860629cc8a341d9f6bf5de037755152bf6f91afa0fd",
+  "execution_kind": "QUALIFIED_CURRENT_PREDECESSOR_PLUS_FRESH_SOURCE",
+  "scope": "Exact custom source closure and selected type/axiom readbacks. Separate native, positive and mutation controls are associated in the sixth-final overlay; this component receipt alone does not qualify the whole original control contract. Official dependency caches are trusted. No ordinary-proof, philosophical, empirical, normative, novelty, external human review or merged-adoption credit."
+}

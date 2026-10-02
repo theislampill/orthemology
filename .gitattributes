@@ -15,3 +15,9 @@ docs/project-closure/ar8r-v11/post-merge-proposals/pmr007-deep-bw-cj-semantic-re
 docs/project-closure/ar8r-v11/post-merge-proposals/external-challenges/**/source-files/** -text whitespace=-trailing-space
 docs/project-closure/ar8r-v11/programs/deferred-candidate-source/exact/** -text
 docs/project-closure/ar8r-v11/programs/AR8R-ORTHEMOLOGY-MENISCUS-MILESTONE-ARCHITECTURE-V1.md -text
+
+# Continuation source custody is byte-exact across Windows and Linux checkouts.
+experiments/orthemology-v5-continuations/source-store/** -text
+experiments/orthemology-v5-continuations/support-source/** -text
+experiments/orthemology-v5-continuations/reference/** -text
+docs/provenance/v5-research-continuations/notes/** -text

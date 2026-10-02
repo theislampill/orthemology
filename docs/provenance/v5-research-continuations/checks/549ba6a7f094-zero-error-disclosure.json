@@ -1,0 +1,199 @@
+{
+  "status": "FRESH_KERNEL_COMPONENTS",
+  "exit_code": 0,
+  "kernel_verified": true,
+  "suite_id": "549ba6a7f094-zero-error-disclosure",
+  "suite_sha256": "992cce3a552497bd9cd4f49f7ddb29bbaf99987a8b0e5dc3a856a752338a3cb4",
+  "source_hashes": {
+    "ActionDisclosure": "ec03d96ddb213db0f65bf3c3780f611419a9433e4079a9d0f2553b79c9712fa3",
+    "ActionDisclosureControls": "287af5692e0352d13943a2fd4a47bea088e5f6ba6420ce2e94e05daa5a50fd02",
+    "DisclosureRepair": "d2506f87086ba508732b2e349390dba49a5989642b46cb0a9de6ee387aa4b81f"
+  },
+  "post_source_hashes": {
+    "ActionDisclosure": "ec03d96ddb213db0f65bf3c3780f611419a9433e4079a9d0f2553b79c9712fa3",
+    "ActionDisclosureControls": "287af5692e0352d13943a2fd4a47bea088e5f6ba6420ce2e94e05daa5a50fd02",
+    "DisclosureRepair": "d2506f87086ba508732b2e349390dba49a5989642b46cb0a9de6ee387aa4b81f"
+  },
+  "compiler_sha256": "92c3d35b5bfaa5e0fea413a775d504cf46cd95e1345df61c2274f76779e7e023",
+  "pins": {
+    "lean_version": "4.19.0",
+    "lean_binary_sha256": "92c3d35b5bfaa5e0fea413a775d504cf46cd95e1345df61c2274f76779e7e023",
+    "packages": [
+      {
+        "name": "mathlib",
+        "revision": "c44e0c8ee63ca166450922a373c7409c5d26b00b"
+      },
+      {
+        "name": "plausible",
+        "revision": "77e08eddc486491d7b9e470926b3dbe50319451a"
+      },
+      {
+        "name": "LeanSearchClient",
+        "revision": "25078369972d295301f5a1e53c3e5850cf6d9d4c"
+      },
+      {
+        "name": "importGraph",
+        "revision": "e6a9f0f5ee3ccf7443a0070f92b62f8db12ae82b"
+      },
+      {
+        "name": "proofwidgets",
+        "revision": "c4919189477c3221e6a204008998b0d724f49904"
+      },
+      {
+        "name": "aesop",
+        "revision": "5d50b08dedd7d69b3d9b3176e0d58a23af228884"
+      },
+      {
+        "name": "Qq",
+        "revision": "fa4f7f15d97591a9cf3aa7724ba371c7fc6dda02"
+      },
+      {
+        "name": "batteries",
+        "revision": "f5d04a9c4973d401c8c92500711518f7c656f034"
+      },
+      {
+        "name": "Cli",
+        "revision": "02dbd02bc00ec4916e99b04b2245b30200e200d0"
+      }
+    ]
+  },
+  "modules": [
+    {
+      "module": "ActionDisclosure",
+      "source_sha256": "ec03d96ddb213db0f65bf3c3780f611419a9433e4079a9d0f2553b79c9712fa3",
+      "object_sha256": "04f6063859ded5e033b4a3245f75e207699b8d59a02c804e1674f424cd53b06b",
+      "transitive_source_fingerprint": "021621e2e1fc8550798c49a0d52e2b57d704808719c7eba5d5a4a5e526558235",
+      "status": "FRESH_COMPILE",
+      "exit_code": 0
+    },
+    {
+      "module": "ActionDisclosureControls",
+      "source_sha256": "287af5692e0352d13943a2fd4a47bea088e5f6ba6420ce2e94e05daa5a50fd02",
+      "object_sha256": "6017700243a39ba36bdc1eb7a18a6bd52f1cbfddd906dfa8cf611108b7b7e4f4",
+      "transitive_source_fingerprint": "021946da61ba4d3f5a4c9d99e10f9bdf67681e6df50cbed8f325c75eaa76c3ac",
+      "status": "FRESH_COMPILE",
+      "exit_code": 0
+    },
+    {
+      "module": "DisclosureRepair",
+      "source_sha256": "d2506f87086ba508732b2e349390dba49a5989642b46cb0a9de6ee387aa4b81f",
+      "object_sha256": "70a5855b5cfb4362f6eafd6408737c48fdedd5d3988027cbb145cab20b850d54",
+      "transitive_source_fingerprint": "251930ef35e08c873e3ed1b599303503672d0419771da0b102eed3e23372bb6e",
+      "status": "FRESH_COMPILE",
+      "exit_code": 0
+    }
+  ],
+  "readbacks": {
+    "Orthemology.ActionDisclosure.safeDecoder_iff_range_card": {
+      "type_sha256": "bf7dc76edcf72b9aa4918e2c0ae9d083e2cb5fce61b7181b5a92fdfd3a88c58b",
+      "axioms": [
+        "Classical.choice",
+        "Quot.sound",
+        "propext"
+      ]
+    },
+    "Orthemology.ActionDisclosure.safeDecoder_message_lower_bound": {
+      "type_sha256": "731acd4d361903d91f4e056cec890a4f3f39105172537276537cdc8feb2f8b0c",
+      "axioms": [
+        "Classical.choice",
+        "Quot.sound",
+        "propext"
+      ]
+    },
+    "Orthemology.ActionDisclosure.injective_menu_suffices": {
+      "type_sha256": "6fa0ff779cb1ba91d1c34836a972e44897d02f1384546652eb99e9c04cc29a66",
+      "axioms": [
+        "Classical.choice",
+        "Quot.sound",
+        "propext"
+      ]
+    },
+    "Orthemology.ActionDisclosure.support_code_lower_bound": {
+      "type_sha256": "6da3ddae71fd3f22533d868dec95d46ece559b4fd62a47b3ee319c60cd51c17e",
+      "axioms": [
+        "Classical.choice",
+        "Quot.sound",
+        "propext"
+      ]
+    },
+    "Orthemology.ActionDisclosure.residual_budget_card": {
+      "type_sha256": "1c1cf5991c863e821258f7600247fa874d01319b41fcc1303fa4a94f98cce9b7",
+      "axioms": [
+        "Classical.choice",
+        "Quot.sound",
+        "propext"
+      ]
+    },
+    "Orthemology.ActionDisclosure.twoRootMenu_safe": {
+      "type_sha256": "04cc0044917e4ac5f2ab7a0a8994da48394b7bd6be7332b82963e815d3228517",
+      "axioms": [
+        "Classical.choice",
+        "Quot.sound",
+        "propext"
+      ]
+    },
+    "Orthemology.ActionDisclosure.duplicate_labels_not_safe": {
+      "type_sha256": "1373920b1e28184fe96373515040de590467700fa2aa67ed6571871fbd0a86a5",
+      "axioms": [
+        "Quot.sound",
+        "propext"
+      ]
+    },
+    "Orthemology.ActionDisclosure.equal_size_menu_not_safe": {
+      "type_sha256": "8867abeeae763a7a3e26af7e3a61484bbb93ee896af5083102f1fef3af03bf18",
+      "axioms": [
+        "Classical.choice",
+        "Quot.sound",
+        "propext"
+      ]
+    },
+    "Orthemology.ActionDisclosure.two_root_supports_not_safe": {
+      "type_sha256": "d74bb0e9c625771ebe51ec7fdec2ad1645f48444e8093449de2ebd49f281bebd",
+      "axioms": [
+        "Quot.sound",
+        "propext"
+      ]
+    },
+    "Orthemology.ActionDisclosure.repair_success_iff": {
+      "type_sha256": "ae84e9730939dc96ec4a8ae1bae0f3f5c66f1ced9c3fbc357347937a74c563ae",
+      "axioms": [
+        "Quot.sound",
+        "propext"
+      ]
+    },
+    "Orthemology.ActionDisclosure.repair_message_contract_iff": {
+      "type_sha256": "cbf41246c5429cfdecaa9f758dfffa7e50d961f0891a8df6d30ec104448093b4",
+      "axioms": [
+        "Quot.sound",
+        "propext"
+      ]
+    },
+    "Orthemology.ActionDisclosure.successful_repair_message_lower_bound": {
+      "type_sha256": "be27601e63692be82b1d7ac3afbb4cbf467658b1aeac3b2222f5be89bbf10602",
+      "axioms": [
+        "Classical.choice",
+        "Quot.sound",
+        "propext"
+      ]
+    },
+    "Orthemology.ActionDisclosure.corrupt_action_irreversible": {
+      "type_sha256": "b4a5980fa2aded4e870a481e6d5c5fa1eb94490092dc4c23b6135ae7007f565b",
+      "axioms": [
+        "Quot.sound",
+        "propext"
+      ]
+    },
+    "Orthemology.ActionDisclosure.corrupt_action_not_restorative": {
+      "type_sha256": "5e83715ce8370866839a7f792b55bc523d775038ea1d0c1bed33ddd2a2243c6b",
+      "axioms": [
+        "Quot.sound",
+        "propext"
+      ]
+    }
+  },
+  "original_controls": "NOT_RUN",
+  "original_receipt_sha256": "04b4bb82fb7643c5a8b85d0b9d731e403fbb77d12c4b3d1522ed5ec8707a0e1b",
+  "original_driver_sha256": "5c6cd4943819b3a963815a215c37a216108d01b8ef381f268b4b2f70b4d1bcb2",
+  "execution_kind": "FRESH_CUSTOM_CLOSURE",
+  "scope": "Exact custom source closure and selected type/axiom readbacks. Separate native, positive and mutation controls are associated in the sixth-final overlay; this component receipt alone does not qualify the whole original control contract. Official dependency caches are trusted. No ordinary-proof, philosophical, empirical, normative, novelty, external human review or merged-adoption credit."
+}

@@ -1,0 +1,938 @@
+{
+  "compiler_sha256": "92c3d35b5bfaa5e0fea413a775d504cf46cd95e1345df61c2274f76779e7e023",
+  "compiler_version": "Lean (version 4.19.0, x86_64-unknown-linux-gnu, commit 6caaee842e94, Release)",
+  "dependency_checks": [
+    {
+      "build_cache_present": true,
+      "name": "mathlib",
+      "revision": "c44e0c8ee63ca166450922a373c7409c5d26b00b",
+      "tracked_clean": true
+    },
+    {
+      "build_cache_present": true,
+      "name": "plausible",
+      "revision": "77e08eddc486491d7b9e470926b3dbe50319451a",
+      "tracked_clean": true
+    },
+    {
+      "build_cache_present": true,
+      "name": "LeanSearchClient",
+      "revision": "25078369972d295301f5a1e53c3e5850cf6d9d4c",
+      "tracked_clean": true
+    },
+    {
+      "build_cache_present": true,
+      "name": "importGraph",
+      "revision": "e6a9f0f5ee3ccf7443a0070f92b62f8db12ae82b",
+      "tracked_clean": true
+    },
+    {
+      "build_cache_present": true,
+      "name": "proofwidgets",
+      "revision": "c4919189477c3221e6a204008998b0d724f49904",
+      "tracked_clean": true
+    },
+    {
+      "build_cache_present": true,
+      "name": "aesop",
+      "revision": "5d50b08dedd7d69b3d9b3176e0d58a23af228884",
+      "tracked_clean": true
+    },
+    {
+      "build_cache_present": true,
+      "name": "Qq",
+      "revision": "fa4f7f15d97591a9cf3aa7724ba371c7fc6dda02",
+      "tracked_clean": true
+    },
+    {
+      "build_cache_present": true,
+      "name": "batteries",
+      "revision": "f5d04a9c4973d401c8c92500711518f7c656f034",
+      "tracked_clean": true
+    },
+    {
+      "build_cache_present": false,
+      "name": "Cli",
+      "revision": "02dbd02bc00ec4916e99b04b2245b30200e200d0",
+      "tracked_clean": true
+    }
+  ],
+  "exit_code": 0,
+  "finished_utc": "2026-10-02T05:52:13.335062+00:00",
+  "kernel_verified": true,
+  "modules": [
+    {
+      "exit_code": 0,
+      "log_sha256": "01ba4719c80b6fe911b091a7c05124b64eeece964e09c058ef8f9805daca546b",
+      "module": "EndpointMoment",
+      "object_sha256": "d7d709b683501d47e56f3779b7e33f59602854a4ab775ae30722dbe1998c59a0",
+      "source_sha256": "e2a61649f0ca59b94c3dd8ae0e578f49ab9b40ef111592036b4691479d7842d3",
+      "status": "FRESH_COMPILE",
+      "transitive_source_fingerprint": "28f9f0039e92cbb3871ff8a5d4911ee099e4c6e7c7923a1189cd03607e68b63f"
+    },
+    {
+      "exit_code": 0,
+      "log_sha256": "41bc2745772489d61c93c4262454b05676c8ade58b72ff70d73a394f48b4e2d0",
+      "module": "EndpointMomentControls",
+      "object_sha256": "bd2c9700a75c9484db259edbaf0f5062e1642e0a33c0c3ed34988da309a52f8d",
+      "source_sha256": "04523a7e4e811181318b3591b6f51bc6539fa76a45301248b9a4b29d22f51d27",
+      "status": "FRESH_COMPILE",
+      "transitive_source_fingerprint": "56a64872c26c383db2beae66213a827c2f3d30b77e1a77a45b812010b6700d85"
+    },
+    {
+      "exit_code": 0,
+      "log_sha256": "01ba4719c80b6fe911b091a7c05124b64eeece964e09c058ef8f9805daca546b",
+      "module": "AnnularLiteral",
+      "object_sha256": "bbfb82d333568dd9ec1fe597716f64e96188313aa3e9354417415eef3272e752",
+      "source_sha256": "66dce1aa30b7f75987a9e145e3fc82051c97f08082fedaa5938ac49cf8759ff6",
+      "status": "FRESH_COMPILE",
+      "transitive_source_fingerprint": "a4ca93d1bf5df0a44dc16740e0c150b7a937a62c7ab354ccf0368ba963f56283"
+    },
+    {
+      "exit_code": 0,
+      "log_sha256": "01ba4719c80b6fe911b091a7c05124b64eeece964e09c058ef8f9805daca546b",
+      "module": "BernoulliWord",
+      "object_sha256": "5b295693fb267d77d9e5d609c693c5e77e54a545c15c4712420591c6fce38b8d",
+      "source_sha256": "7565efa23652a7156b448c72bd13be25ebcb53e8f4717156324635a9cef4e2d0",
+      "status": "FRESH_COMPILE",
+      "transitive_source_fingerprint": "d39fce74bb0755e196993569f7047f36978200110d810ccc950100038905684d"
+    },
+    {
+      "exit_code": 0,
+      "log_sha256": "01ba4719c80b6fe911b091a7c05124b64eeece964e09c058ef8f9805daca546b",
+      "module": "GrowthMoment",
+      "object_sha256": "2f6eefdccdbbedb46d520383e167a3b09958fa746aecadc098350233a3127bb3",
+      "source_sha256": "c79a4d9c42440f1ccb6b92d48f650c657fe164baf82610520893b48d9b64ebab",
+      "status": "FRESH_COMPILE",
+      "transitive_source_fingerprint": "b10b1256601cda3e55842e6b8d8554a7cac0f648f3d6329ede8da62f76a0c7a8"
+    },
+    {
+      "exit_code": 0,
+      "log_sha256": "01ba4719c80b6fe911b091a7c05124b64eeece964e09c058ef8f9805daca546b",
+      "module": "BayesBridge",
+      "object_sha256": "529379b4c948ea14d24dccc1f57a96bebca9691f010c3a95d267c33c385567e7",
+      "source_sha256": "ea71b954c4f4905f694a7dc76d45b170b4b07895eb7a3d90d85a1ee42504a0b7",
+      "status": "FRESH_COMPILE",
+      "transitive_source_fingerprint": "810e67a819c5710ca8ef6819441f6dc5575863c81407a1221d58d1fc16816bd1"
+    },
+    {
+      "exit_code": 0,
+      "log_sha256": "72d1a4c06ee385492a4968541624bfba9620cbdba3ae8af3abac825416e881b4",
+      "module": "AnnularControls",
+      "object_sha256": "d2959cabc70fd9fa7d0ffcd59a67431b5e65cd8eeb5ea954a2646df7aa60f7da",
+      "source_sha256": "ad2cb01cafd0a23bdaced18885bb4a18de0f0b5e074905847bb840d3cb3a3426",
+      "status": "FRESH_COMPILE",
+      "transitive_source_fingerprint": "6cef2d019ab2a9d47b88129f7e69c8d325e35f83c269a6f7ccec8b128ec1001b"
+    },
+    {
+      "exit_code": 0,
+      "log_sha256": "11643930ec291f2e6190c342f915b18a83f1fa4b7cb4a7abcd2502cb16cfa12d",
+      "module": "CentredBernoulli",
+      "object_sha256": "acf788068c687cf62be6c5c830bc8ca5cbe08a90cfb5aef424aaaed345a2a553",
+      "source_sha256": "e353d544fdc6814d53f8b79866998c28263baa665aaeaf90bbf509355e7ab7f9",
+      "status": "FRESH_COMPILE",
+      "transitive_source_fingerprint": "adf097a430e9e7983a02c620ad68c5ba0e6b1934a40813441dfe5fd16522fb0a"
+    },
+    {
+      "exit_code": 0,
+      "log_sha256": "aac5b406b24b88f779b7811e378a2de30283810cdc3386c698b45611dbd5c51d",
+      "module": "EmpiricalGeometry",
+      "object_sha256": "611d23ace3bca1d38b67ebf190603f9448faa05a16af5b18829517cff936331c",
+      "source_sha256": "21e21eec8d1252c877b6ca384715762697704551f5ffd0ec9a3e9f9ddd5981fb",
+      "status": "FRESH_COMPILE",
+      "transitive_source_fingerprint": "3a7267973d28b9f8313ee49e239e87c5f376ee805835a5ce657f12a88279e398"
+    },
+    {
+      "exit_code": 0,
+      "log_sha256": "109924085d4312851491ea495e6854ddccf7627b34ec8b4b6b96b5338fc1d59e",
+      "module": "EmpiricalChernoff",
+      "object_sha256": "e4ded1000f2b5f208abf908204fd892f167587a085b493a47bb9d49d429574e8",
+      "source_sha256": "8170e577062ddd6fb64439afc456badf606ffbeef2c18a2d5a307afb6c33d670",
+      "status": "FRESH_COMPILE",
+      "transitive_source_fingerprint": "ac190ff70b3c6192c153c2210be59427a4afb9f5e4342be986d617268e492133"
+    },
+    {
+      "exit_code": 0,
+      "log_sha256": "5d3979ae76cc0d229ce476c2202e7284358b83b24752404266e425a7694f9987",
+      "module": "ExponentialSeries",
+      "object_sha256": "26c53ba5f8c503234171ee2a03c304aa8ebec4c9e6b650a62a87d5e28f5d4eb3",
+      "source_sha256": "1e5501fa4bcf2c6ac27d6e1518de449cdf9499e136198ba427480a3cb1e3a35e",
+      "status": "FRESH_COMPILE",
+      "transitive_source_fingerprint": "361a2d137edd2f3cb0cf087cd9072b266686402fe1b7cd76ef0403154b10df25"
+    },
+    {
+      "exit_code": 0,
+      "log_sha256": "93b13232025df601ba315f0dacb7192c06443a507b0db3ae44dba4bf0fd10d2c",
+      "module": "EmpiricalEndpoints",
+      "object_sha256": "ebdbd7ac6a9941ad6b9f39df7835fca4dfb0b75082cdd44df0b729274272118a",
+      "source_sha256": "f34ce7e7b3394f0a9ba182828c2ac7d12746ae5b9921ab8ddbceb498bbec0722",
+      "status": "FRESH_COMPILE",
+      "transitive_source_fingerprint": "dc74a0ef8f109648863eeba4ae76358b5f3d2b4e454df94d4a2242dbc95d33fb"
+    },
+    {
+      "exit_code": 0,
+      "log_sha256": "01ba4719c80b6fe911b091a7c05124b64eeece964e09c058ef8f9805daca546b",
+      "module": "PriorSufficiency",
+      "object_sha256": "8f806f20bc9cdb6e42cff30ba7851c4e27e6fafd4f6e2b6f241cd6d8c13f913f",
+      "source_sha256": "4d0e81c2f086e03c0fd923c59caf2087abffd986e8b934f53effa44e32855a2c",
+      "status": "FRESH_COMPILE",
+      "transitive_source_fingerprint": "7373a46703606188aaa14ea8929562782d86bb944a5dcdda73b63251ce7a2215"
+    },
+    {
+      "exit_code": 0,
+      "log_sha256": "6c38721899f0e04848b0d278c6d47af3f07eea3650b1c8a56511a7b78ad7fb1a",
+      "module": "SufficiencyControls",
+      "object_sha256": "88cd5baa01634867186f3a519c3c8f819a14dd1ee7338bf833f08bab4aa3344d",
+      "source_sha256": "8c4de316893b0dc23c3b5e77c38d8208e39548e74629588d2e2e67efe93c02dd",
+      "status": "FRESH_COMPILE",
+      "transitive_source_fingerprint": "2216cfa4743c59ba9960e2c21e99baee500729be7b40b97b1bbaacddaaf7ef96"
+    },
+    {
+      "exit_code": 0,
+      "log_sha256": "9abcdcf709712ab8ae2f4ad9adffb75bd1a09c8a9ee0877e93a05cecbc3f4d6e",
+      "module": "EndpointProcess",
+      "object_sha256": "f79770936ce5149f50da17520b228e6c11cf6f0a19e82ce09f0da155b8d1c14e",
+      "source_sha256": "b68dd6106e9fc3f311091731e8f9990a0a3829ff9838c164d6870fbec0bfa219",
+      "status": "FRESH_COMPILE",
+      "transitive_source_fingerprint": "362638819e14ef37554b1d78a25365ee9c4fffc59ae65e276c537e8af75a9c4b"
+    },
+    {
+      "exit_code": 0,
+      "log_sha256": "2cc609ed7660f889e93ab83aa237b8735cc2911d4e501ebdf033aef9484b6e80",
+      "module": "EndpointProcessControls",
+      "object_sha256": "acf983dc94513c43f490bc8de463c26ad3e3e1fc5f33a349e6e3ef1dd39f7172",
+      "source_sha256": "526e7be92e423216029f548c1c03be43d1721737a40f1d9f57ee9e9cc0752ab3",
+      "status": "FRESH_COMPILE",
+      "transitive_source_fingerprint": "3e20dc45adb99ab2a4af2a0c0cc701e32db2ed484a2aa4f8617a75d3b3f9687e"
+    },
+    {
+      "exit_code": 0,
+      "log_sha256": "c486ce03254b52090eab36d64d6c17af2c57f924a6eb1a22ee6c43c1a1f1e740",
+      "module": "EndpointAtoms",
+      "object_sha256": "a949a29069bf1a687e4e628349d20becd1e68ea0c7e9fe3ceb29217022b80bc1",
+      "source_sha256": "43303f5bfe6413bf317e402abcf02bdee90aca8617d940d962875dc613d6998c",
+      "status": "FRESH_COMPILE",
+      "transitive_source_fingerprint": "2e235e119da24a9ab9b3814a2133f2bdcfadb7a55a964b90c114dae291270e92"
+    },
+    {
+      "exit_code": 0,
+      "log_sha256": "89e1e8cc1884f0beb7733f719c1609968b3d26fb268465afec9dbc880ac8a830",
+      "module": "EndpointAtomControls",
+      "object_sha256": "f79a82bf34aff60d6ffd4085ee37b0a80efa2d1fa1fe9c3ed8fa38caf9df208e",
+      "source_sha256": "23aad2f1524861d58da6a0b34ee1476e8382e5a11c69533b4cc3f9848531130c",
+      "status": "FRESH_COMPILE",
+      "transitive_source_fingerprint": "8354c879ebf993189ecffeb1d7ad50ff943d1080be1bdbb9418286063f681729"
+    }
+  ],
+  "original_controls": "NOT_RUN",
+  "pins": {
+    "lean_binary_sha256": "92c3d35b5bfaa5e0fea413a775d504cf46cd95e1345df61c2274f76779e7e023",
+    "lean_version": "4.19.0",
+    "packages": [
+      {
+        "name": "mathlib",
+        "revision": "c44e0c8ee63ca166450922a373c7409c5d26b00b"
+      },
+      {
+        "name": "plausible",
+        "revision": "77e08eddc486491d7b9e470926b3dbe50319451a"
+      },
+      {
+        "name": "LeanSearchClient",
+        "revision": "25078369972d295301f5a1e53c3e5850cf6d9d4c"
+      },
+      {
+        "name": "importGraph",
+        "revision": "e6a9f0f5ee3ccf7443a0070f92b62f8db12ae82b"
+      },
+      {
+        "name": "proofwidgets",
+        "revision": "c4919189477c3221e6a204008998b0d724f49904"
+      },
+      {
+        "name": "aesop",
+        "revision": "5d50b08dedd7d69b3d9b3176e0d58a23af228884"
+      },
+      {
+        "name": "Qq",
+        "revision": "fa4f7f15d97591a9cf3aa7724ba371c7fc6dda02"
+      },
+      {
+        "name": "batteries",
+        "revision": "f5d04a9c4973d401c8c92500711518f7c656f034"
+      },
+      {
+        "name": "Cli",
+        "revision": "02dbd02bc00ec4916e99b04b2245b30200e200d0"
+      }
+    ]
+  },
+  "post_source_hashes": {
+    "AnnularControls": "ad2cb01cafd0a23bdaced18885bb4a18de0f0b5e074905847bb840d3cb3a3426",
+    "AnnularLiteral": "66dce1aa30b7f75987a9e145e3fc82051c97f08082fedaa5938ac49cf8759ff6",
+    "BayesBridge": "ea71b954c4f4905f694a7dc76d45b170b4b07895eb7a3d90d85a1ee42504a0b7",
+    "BernoulliWord": "7565efa23652a7156b448c72bd13be25ebcb53e8f4717156324635a9cef4e2d0",
+    "CentredBernoulli": "e353d544fdc6814d53f8b79866998c28263baa665aaeaf90bbf509355e7ab7f9",
+    "EmpiricalChernoff": "8170e577062ddd6fb64439afc456badf606ffbeef2c18a2d5a307afb6c33d670",
+    "EmpiricalEndpoints": "f34ce7e7b3394f0a9ba182828c2ac7d12746ae5b9921ab8ddbceb498bbec0722",
+    "EmpiricalGeometry": "21e21eec8d1252c877b6ca384715762697704551f5ffd0ec9a3e9f9ddd5981fb",
+    "EndpointAtomControls": "23aad2f1524861d58da6a0b34ee1476e8382e5a11c69533b4cc3f9848531130c",
+    "EndpointAtoms": "43303f5bfe6413bf317e402abcf02bdee90aca8617d940d962875dc613d6998c",
+    "EndpointMoment": "e2a61649f0ca59b94c3dd8ae0e578f49ab9b40ef111592036b4691479d7842d3",
+    "EndpointMomentControls": "04523a7e4e811181318b3591b6f51bc6539fa76a45301248b9a4b29d22f51d27",
+    "EndpointProcess": "b68dd6106e9fc3f311091731e8f9990a0a3829ff9838c164d6870fbec0bfa219",
+    "EndpointProcessControls": "526e7be92e423216029f548c1c03be43d1721737a40f1d9f57ee9e9cc0752ab3",
+    "ExponentialSeries": "1e5501fa4bcf2c6ac27d6e1518de449cdf9499e136198ba427480a3cb1e3a35e",
+    "GrowthMoment": "c79a4d9c42440f1ccb6b92d48f650c657fe164baf82610520893b48d9b64ebab",
+    "PriorSufficiency": "4d0e81c2f086e03c0fd923c59caf2087abffd986e8b934f53effa44e32855a2c",
+    "SufficiencyControls": "8c4de316893b0dc23c3b5e77c38d8208e39548e74629588d2e2e67efe93c02dd"
+  },
+  "readback_log_sha256": "c6f975bdc4343723572a367d73f68378fc70bae0f0c66037522cebfc415e0400",
+  "readbacks": {
+    "AnnularLiteral.left_annular_lower": {
+      "type_sha256": "e1a66f79f04f5c277c0715f8fe946ccc86e02cecd05dc373dcaf97e45c714a9b",
+      "axioms": [
+        "Classical.choice",
+        "Quot.sound",
+        "propext"
+      ]
+    },
+    "AnnularLiteral.left_growth_weighted_lower": {
+      "type_sha256": "f5dd205bc48c6e855eb678ddc027055376b438b8cdab5d16c492f70bd6962ad9",
+      "axioms": [
+        "Classical.choice",
+        "Quot.sound",
+        "propext"
+      ]
+    },
+    "AnnularLiteral.left_width": {
+      "type_sha256": "e84d8825f41226c617a9a9a490178ec8d1133f17eb6c27b324369f879d4aeb04",
+      "axioms": [
+        "Classical.choice",
+        "Quot.sound",
+        "propext"
+      ]
+    },
+    "AnnularLiteral.right_annular_lower": {
+      "type_sha256": "2089625b85e11b304bd8adc014e139782c5fdfd8da2cff971c3ab0ec9eb856fd",
+      "axioms": [
+        "Classical.choice",
+        "Quot.sound",
+        "propext"
+      ]
+    },
+    "AnnularLiteral.right_growth_weighted_lower": {
+      "type_sha256": "c3bd5a5eff6f3dc69e0299d51095f87e8a2a9c10398369c47f77747357db9140",
+      "axioms": [
+        "Classical.choice",
+        "Quot.sound",
+        "propext"
+      ]
+    },
+    "AnnularLiteral.right_width": {
+      "type_sha256": "8cafce19b790fbdedd4f778d34d2fe06fcbe87420c9e9a470b4612960ccad059",
+      "axioms": [
+        "Classical.choice",
+        "Quot.sound",
+        "propext"
+      ]
+    },
+    "AnnularLiteral.seed_averaged_two_prefix_growth_lower": {
+      "type_sha256": "f8d309cea2d860c894bc46ff3e62c4429af005ced959f64904841b3e0dca149a",
+      "axioms": [
+        "Classical.choice",
+        "Quot.sound",
+        "propext"
+      ]
+    },
+    "AnnularLiteral.zero_prefix_lower": {
+      "type_sha256": "370ac6b3c39ccba5c8b62d1192df7afb29768d62515f40c1ed495e705ee0c62d",
+      "axioms": [
+        "Classical.choice",
+        "Quot.sound",
+        "propext"
+      ]
+    },
+    "BayesBridge.bayesRisk_eq_risk": {
+      "type_sha256": "875058d3a14ab23fab6dd830b3663e80a69f761521eb7ba0c6038f44e5ed1bba",
+      "axioms": [
+        "Classical.choice",
+        "Quot.sound",
+        "propext"
+      ]
+    },
+    "BayesBridge.finite_product_risk_implies_inverse_moment": {
+      "type_sha256": "d16b04054e36b5c134dae1ea12e8807f0bfdc7ce9229fca8906e1bebea1d8ab8",
+      "axioms": [
+        "Classical.choice",
+        "Quot.sound",
+        "propext"
+      ]
+    },
+    "BayesBridge.productRisk_eq_bayesRisk": {
+      "type_sha256": "86d137fa31e00c01a33d29c2865cbeecccfea791476832c7fdeb7d8af5902f88",
+      "axioms": [
+        "Classical.choice",
+        "Quot.sound",
+        "propext"
+      ]
+    },
+    "BernoulliWord.all_reports_growth_lower": {
+      "type_sha256": "480103980b36626bf67205708cab5767ddcd259314e8672a01567b746360d2b6",
+      "axioms": [
+        "Classical.choice",
+        "Quot.sound",
+        "propext"
+      ]
+    },
+    "BernoulliWord.failure_probability": {
+      "type_sha256": "a3aed51cf7f5a0aafe410dcf6997f8c920ad400a4e4bc94ed8fda28e0993074f",
+      "axioms": [
+        "Classical.choice",
+        "Quot.sound",
+        "propext"
+      ]
+    },
+    "BernoulliWord.sum_weight": {
+      "type_sha256": "8edd231a4a7e554931d24e310411168401b12f96ff3001ed95671bcd29ce07f2",
+      "axioms": [
+        "Classical.choice",
+        "Quot.sound",
+        "propext"
+      ]
+    },
+    "CentredBernoulli.one_mgf_upper": {
+      "type_sha256": "dbb1fa3f887939b6b3da1e06b22e1d7396d641b9691ad9e1b796f8aad8cb34fe",
+      "axioms": [
+        "Classical.choice",
+        "Quot.sound",
+        "propext"
+      ]
+    },
+    "CentredBernoulli.word_mgf_exact": {
+      "type_sha256": "f38859665a9b464ee312018546e0206406ec2822a300829590e976f3941805a4",
+      "axioms": [
+        "Classical.choice",
+        "Quot.sound",
+        "propext"
+      ]
+    },
+    "CentredBernoulli.word_mgf_upper": {
+      "type_sha256": "3f415a725f430310df5d1e2c549fb5f6ee1ff237335b3df7343bf30255ce7b93",
+      "axioms": [
+        "Classical.choice",
+        "Quot.sound",
+        "propext"
+      ]
+    },
+    "EmpiricalChernoff.error_upper": {
+      "type_sha256": "5978f660a47009ec46e5e2fe250fbd46b7bf285030777d208f0f965b84c6b084",
+      "axioms": [
+        "Classical.choice",
+        "Quot.sound",
+        "propext"
+      ]
+    },
+    "EmpiricalChernoff.realError_upper": {
+      "type_sha256": "db263d520c9811e1cc91084a9af8cebab3cc4c4bd06995123f740c6f1b118dce",
+      "axioms": [
+        "Classical.choice",
+        "Quot.sound",
+        "propext"
+      ]
+    },
+    "EmpiricalEndpoints.error_at_one": {
+      "type_sha256": "8e2584e0be76d1fdcf7e079e79992a751d53f984651e41a692adcbd2794e72f8",
+      "axioms": [
+        "Classical.choice",
+        "Quot.sound",
+        "propext"
+      ]
+    },
+    "EmpiricalEndpoints.error_at_zero": {
+      "type_sha256": "eaa98d891d914454e6a21be0df3e53612e31218edc93a40517ec800a86318421",
+      "axioms": [
+        "Classical.choice",
+        "Quot.sound",
+        "propext"
+      ]
+    },
+    "EmpiricalGeometry.accepted_of_relative_error": {
+      "type_sha256": "b27cedaba6e4fa4b4a181d37b3c017df1789957a02b55648e0d8445f9023a112",
+      "axioms": [
+        "Classical.choice",
+        "Quot.sound",
+        "propext"
+      ]
+    },
+    "EndpointAtoms.accepted_one_iff": {
+      "type_sha256": "98c001c5d3b34b036e2ec328294c50a86f82c4af2171821ef2b0acafabb55546",
+      "axioms": [
+        "Classical.choice",
+        "Quot.sound",
+        "propext"
+      ]
+    },
+    "EndpointAtoms.accepted_zero_iff": {
+      "type_sha256": "cf57e02e4bb42fc2a2ee8d00078620972bbd97c657014e49682479f83462e34e",
+      "axioms": [
+        "Classical.choice",
+        "Quot.sound",
+        "propext"
+      ]
+    },
+    "EndpointAtoms.atom_profile_product_le": {
+      "type_sha256": "355c0390f07491de418d3b133bdad3fb0d509b3f180a54afc83351a99f7981a1",
+      "axioms": [
+        "Classical.choice",
+        "Quot.sound",
+        "propext"
+      ]
+    },
+    "EndpointAtoms.both_atoms_coherent_actual_iff": {
+      "type_sha256": "73428466a7d41f1c78103bfaa0dccfd44b948de0d422ae42c17848ae17483b18",
+      "axioms": [
+        "Classical.choice",
+        "Quot.sound",
+        "propext"
+      ]
+    },
+    "EndpointAtoms.finite_actual_implies_left_moment": {
+      "type_sha256": "2532b7625e28bbff9552f36dc826eb6a5d83fecc9885b5446aa04837ee71f108",
+      "axioms": [
+        "Classical.choice",
+        "Quot.sound",
+        "propext"
+      ]
+    },
+    "EndpointAtoms.finite_actual_implies_right_moment": {
+      "type_sha256": "bf13bdbe922a57b0630f2a1c8bdbd1f4f3f2c9a946f0bd224739936b963cbe83",
+      "axioms": [
+        "Classical.choice",
+        "Quot.sound",
+        "propext"
+      ]
+    },
+    "EndpointAtoms.finite_risk_implies_left_moment": {
+      "type_sha256": "608eabf731503275770b87d85a6af348b154e101bf61b40a3c81fe1f5624fbc7",
+      "axioms": [
+        "Classical.choice",
+        "Quot.sound",
+        "propext"
+      ]
+    },
+    "EndpointAtoms.finite_risk_implies_right_moment": {
+      "type_sha256": "7634cba1af6f38f834b8f78078ca07465a87f6e2c52aee3508e39d7212b2c613",
+      "axioms": [
+        "Classical.choice",
+        "Quot.sound",
+        "propext"
+      ]
+    },
+    "EndpointAtoms.leftSpike_leftMoment": {
+      "type_sha256": "88f4105aac36b62b74ea6f1a843dca33b8c77367e74efd9670628700a9d6db59",
+      "axioms": [
+        "Classical.choice",
+        "Quot.sound",
+        "propext"
+      ]
+    },
+    "EndpointAtoms.leftSpike_probability": {
+      "type_sha256": "428e2dde6286d7323704639c503ad8379f4cdf4cdf4f5baf40f0421f1d5e70d1",
+      "axioms": [
+        "Classical.choice",
+        "Quot.sound",
+        "propext"
+      ]
+    },
+    "EndpointAtoms.left_atom_infinite_of_infinite_moment": {
+      "type_sha256": "f8481fd3e932e033fafee342c9bf409ba2fc0b03b7c5a8aa8c34f5360736d2b5",
+      "axioms": [
+        "Classical.choice",
+        "Quot.sound",
+        "propext"
+      ]
+    },
+    "EndpointAtoms.left_atom_mass_lower": {
+      "type_sha256": "1266effec7ff678726a2a0bdd4eba6382730242d437e1f2da94fe0e7b963a463",
+      "axioms": [
+        "Classical.choice",
+        "Quot.sound",
+        "propext"
+      ]
+    },
+    "EndpointAtoms.left_spike_destroys_finite_budget": {
+      "type_sha256": "53a469991b9a5e44b25abc54acaa0155e689d1cddca2478dfe4b2ebe18c07510",
+      "axioms": [
+        "Classical.choice",
+        "Quot.sound",
+        "propext"
+      ]
+    },
+    "EndpointAtoms.one_prefix_atom_lower": {
+      "type_sha256": "86f5f89b6528285e125578231111c4b82fbdc343a75a67598a80c09a9d8f0310",
+      "axioms": [
+        "Classical.choice",
+        "Quot.sound",
+        "propext"
+      ]
+    },
+    "EndpointAtoms.right_atom_infinite_of_infinite_moment": {
+      "type_sha256": "873c33ddbae171bad5baffe240947d81f7ca1d342343be45c1b9c3ce93d341ec",
+      "axioms": [
+        "Classical.choice",
+        "Quot.sound",
+        "propext"
+      ]
+    },
+    "EndpointAtoms.right_atom_mass_lower": {
+      "type_sha256": "8ded1d8af4e022a5c0779ebbbfa3cd9bd62fc40c4e54e933d7aa46e9d67ffa3f",
+      "axioms": [
+        "Classical.choice",
+        "Quot.sound",
+        "propext"
+      ]
+    },
+    "EndpointAtoms.zero_prefix_atom_lower": {
+      "type_sha256": "7848dc510a3eb73dad1bff20e83d8532e39ae510aa79f27799925574f716c872",
+      "axioms": [
+        "Classical.choice",
+        "Quot.sound",
+        "propext"
+      ]
+    },
+    "EndpointMoment.count_reciprocal_thresholds": {
+      "type_sha256": "cf05afd6a2337a4c543345bca004cf8a392ec81b1fc4c3d0f7a06ce63a5ee124",
+      "axioms": [
+        "Classical.choice",
+        "Quot.sound",
+        "propext"
+      ]
+    },
+    "EndpointMoment.count_reciprocal_thresholds_tail": {
+      "type_sha256": "96c1acc6f7f234bc3e43e0ce617a0beb2a520a56c6ce0e51808c7294d56bc0fe",
+      "axioms": [
+        "Classical.choice",
+        "Quot.sound",
+        "propext"
+      ]
+    },
+    "EndpointMoment.endpoint_series_lt_top_iff": {
+      "type_sha256": "f7e4378126cf02c627c56d18b487fdd954e21c0dadd64908a1f327ff2c8b80d9",
+      "axioms": [
+        "Classical.choice",
+        "Quot.sound",
+        "propext"
+      ]
+    },
+    "EndpointMoment.endpoint_tail_series_lt_top_iff": {
+      "type_sha256": "b40e199a483f012ba836a5f739cef5c28f3ceb10eddf9f726d87ea37788691d1",
+      "axioms": [
+        "Classical.choice",
+        "Quot.sound",
+        "propext"
+      ]
+    },
+    "EndpointMoment.interior_add_endpoint_atoms": {
+      "type_sha256": "682cbc698def6dbd34285dcb4448ef09d175399036011069e0df93035163a9c1",
+      "axioms": [
+        "Classical.choice",
+        "Quot.sound",
+        "propext"
+      ]
+    },
+    "EndpointMoment.tsum_profile_eq_lintegral_floor": {
+      "type_sha256": "d76b3e0286ceced4174442258aa0bb99ec8ad83b3db7510d88556a8028d8eddb",
+      "axioms": [
+        "Classical.choice",
+        "Quot.sound",
+        "propext"
+      ]
+    },
+    "EndpointMoment.tsum_profile_lt_top_iff": {
+      "type_sha256": "ae6d372a34592cdcf3fdfb07d48efe03bc9f3499a48f04213dc5baed5d2187af",
+      "axioms": [
+        "Classical.choice",
+        "Quot.sound",
+        "propext"
+      ]
+    },
+    "EndpointMoment.tsum_profile_tail_eq_lintegral_floor": {
+      "type_sha256": "5147e480dad1a4cb2c88c9aa942fa7e2e60115ac55b7a2f6c11c5b22595828f1",
+      "axioms": [
+        "Classical.choice",
+        "Quot.sound",
+        "propext"
+      ]
+    },
+    "EndpointProcess.actual_expectation_eq_risk_series": {
+      "type_sha256": "8c1b297eb50e4fcf16a309d3be88476eaddf7cd227637db96c9df337cee5f0ed",
+      "axioms": [
+        "Classical.choice",
+        "Quot.sound",
+        "propext"
+      ]
+    },
+    "EndpointProcess.empirical_actual_expectation_bound": {
+      "type_sha256": "efa0465d779ab3aaebc36a8118ab5bbb15cc82442ab368ae55fad0bf83679704",
+      "axioms": [
+        "Classical.choice",
+        "Quot.sound",
+        "propext"
+      ]
+    },
+    "EndpointProcess.empirical_report_coherent": {
+      "type_sha256": "8ff9d4d53860ead5ae3dd4d7c9334aa784a17fe464995b1222288d575581779f",
+      "axioms": [
+        "Classical.choice",
+        "Quot.sound",
+        "propext"
+      ]
+    },
+    "EndpointProcess.every_policy_infinite_of_infinite_moment": {
+      "type_sha256": "9e9a62470a086ed1244f1b9ca6e38068e23914e7690f62b40822ab5b8251e850",
+      "axioms": [
+        "Classical.choice",
+        "Quot.sound",
+        "propext"
+      ]
+    },
+    "EndpointProcess.exists_coherent_finite_actual_expectation_iff": {
+      "type_sha256": "0f880c6380d02dbde4de6e8d1718e908702cdf6d1213bfd9619fb2c3f8380bee",
+      "axioms": [
+        "Classical.choice",
+        "Quot.sound",
+        "propext"
+      ]
+    },
+    "EndpointProcess.exists_finite_actual_expectation_iff": {
+      "type_sha256": "efd38b1b289d4817f685248f4d728c4e9de98a826a00a8ae8698a2d4fb9580f8",
+      "axioms": [
+        "Classical.choice",
+        "Quot.sound",
+        "propext"
+      ]
+    },
+    "EndpointProcess.expected_stage_eq": {
+      "type_sha256": "8e5dd9699178a3022d82460b9f24dbc0f5bad1a1ec14b85ab24c6345848609b5",
+      "axioms": [
+        "Classical.choice",
+        "Quot.sound",
+        "propext"
+      ]
+    },
+    "EndpointProcess.experiment_rectangle": {
+      "type_sha256": "b94ac7985c4d5b5ba2db8c28c76f79c0f3c6abfb0e1e8fc5633fac0d576f6fdf",
+      "axioms": [
+        "Classical.choice",
+        "Quot.sound",
+        "propext"
+      ]
+    },
+    "EndpointProcess.finite_receipt_mass": {
+      "type_sha256": "de2140aa79e737f3cf4edd6525fcfe38fe81de11d5185dba0f469581570d5f2d",
+      "axioms": [
+        "Classical.choice",
+        "Quot.sound",
+        "propext"
+      ]
+    },
+    "EndpointProcess.lintegral_prefix_function": {
+      "type_sha256": "696355d9a4f4a4dc956c020078e77cbd7b1178f4cb381664a8ac67f72a9a99c1",
+      "axioms": [
+        "Classical.choice",
+        "Quot.sound",
+        "propext"
+      ]
+    },
+    "EndpointProcess.prefix_causality": {
+      "type_sha256": "8df7d20b3f127f63a0b67485187b16ae9a93802fa75c930a42e4054db978715f",
+      "axioms": [
+        "Classical.choice",
+        "Quot.sound",
+        "propext"
+      ]
+    },
+    "EndpointProcess.stageFailure_measurable": {
+      "type_sha256": "51a2bbe35ae04b767822ac7deb035415e7a6fad4e319a5396aee9374bd326c91",
+      "axioms": [
+        "Classical.choice",
+        "Quot.sound",
+        "propext"
+      ]
+    },
+    "EndpointProcess.totalFailures_measurable": {
+      "type_sha256": "77b32b21bcc503337d81e6cbe248d242966156721297e35765f70991db5305ee",
+      "axioms": [
+        "Classical.choice",
+        "Quot.sound",
+        "propext"
+      ]
+    },
+    "EndpointProcess.wordEvent_mass": {
+      "type_sha256": "d6d131b65b5b1a55d39c6c3eceda7fc886204dcce1a4009cd625e974982db6ce",
+      "axioms": [
+        "Classical.choice",
+        "Quot.sound",
+        "propext"
+      ]
+    },
+    "ExponentialSeries.summed_error_bound": {
+      "type_sha256": "5401b865a4919603fe4cf2013419368382918c643d1b65f50ba6b6077b1bbeef",
+      "axioms": [
+        "Classical.choice",
+        "Quot.sound",
+        "propext"
+      ]
+    },
+    "GrowthMoment.exists_cutoff": {
+      "type_sha256": "a6968b380dd4eb5ecdfd52f88258aa12cb730d233b747c79f54b40fbdbade945",
+      "axioms": [
+        "Classical.choice",
+        "Quot.sound",
+        "propext"
+      ]
+    },
+    "GrowthMoment.finite_risk_implies_inverse_moment": {
+      "type_sha256": "51f01268ff2e6ec630fcf816136cfdfdbfec3ae40eae1d2c0158920a10c1f1c6",
+      "axioms": [
+        "Classical.choice",
+        "Quot.sound",
+        "propext"
+      ]
+    },
+    "GrowthMoment.finite_tail_risk_implies_inverse_moment": {
+      "type_sha256": "34d0a446959d8f01b8a1e36df9cdfe4b9f0464175b353a34e079b62847fe94fc",
+      "axioms": [
+        "Classical.choice",
+        "Quot.sound",
+        "propext"
+      ]
+    },
+    "GrowthMoment.lowerGrowth_of_separate": {
+      "type_sha256": "2b087921fd0841e2e07f6c834de6e77640546790ce504c442bb4882bba69929b",
+      "axioms": [
+        "Classical.choice",
+        "Quot.sound",
+        "propext"
+      ]
+    },
+    "PriorSufficiency.empirical_productRisk_eq": {
+      "type_sha256": "53a850cc1ce842724a637057fc46e35c400663a395370964362904c984c83871",
+      "axioms": [
+        "Classical.choice",
+        "Quot.sound",
+        "propext"
+      ]
+    },
+    "PriorSufficiency.empirical_product_risk_finite": {
+      "type_sha256": "edfb36d579a92ac1c2829e5b26d3c0feb8d191142a8dc570895b1687316fa8b5",
+      "axioms": [
+        "Classical.choice",
+        "Quot.sound",
+        "propext"
+      ]
+    },
+    "PriorSufficiency.exists_report_family_iff": {
+      "type_sha256": "1572babbaac4c7dde83ed57293c831ef42ce3bc7e4f02694ff4eb17bb6ebfd75",
+      "axioms": [
+        "Classical.choice",
+        "Quot.sound",
+        "propext"
+      ]
+    },
+    "PriorSufficiency.exists_seeded_report_family_iff": {
+      "type_sha256": "68ca3ec421ef8d9594f9a83d68ae5bf4c139d75737dd7eb506878c86a989d25b",
+      "axioms": [
+        "Classical.choice",
+        "Quot.sound",
+        "propext"
+      ]
+    },
+    "PriorSufficiency.summed_empirical_risk_bound": {
+      "type_sha256": "6ded5c4adfe75d81ef5438cb0589f526ff6a54f0ae073a427bab2dd3ea8f6287",
+      "axioms": [
+        "Classical.choice",
+        "Quot.sound",
+        "propext"
+      ]
+    },
+    "actual_empirical_left_endpoint": {
+      "type_sha256": "d4f06bd42432aed936a2de631df563d368cf844f1f61a745a1efe3f5b4ba3528",
+      "axioms": [
+        "Classical.choice",
+        "Quot.sound",
+        "propext"
+      ]
+    },
+    "actual_empirical_right_endpoint": {
+      "type_sha256": "c24233b4442db108f0318142c76b366e2f13fb6bd74b6fe05f1ebc0f6a21bec9",
+      "axioms": [
+        "Classical.choice",
+        "Quot.sound",
+        "propext"
+      ]
+    },
+    "endpoint_pair_interior_moment_zero": {
+      "type_sha256": "be14a7bf679049be4f7e8baff364083e1c3b87e0b29f187b89fb5b8ea69d2938",
+      "axioms": [
+        "Classical.choice",
+        "Quot.sound",
+        "propext"
+      ]
+    },
+    "spike_one_empirical_zero": {
+      "type_sha256": "42148091ad04203ca47a254d0f7be41b4fd2fb90677f33bd973b07c5d8e80d29",
+      "axioms": [
+        "Classical.choice",
+        "Quot.sound",
+        "propext"
+      ]
+    },
+    "spike_one_pure_endpoint": {
+      "type_sha256": "9fab77e010fe13eac9c5d96c8825710e68069bb0d244d48e2f096606078c735a",
+      "axioms": [
+        "Classical.choice",
+        "Quot.sound",
+        "propext"
+      ]
+    },
+    "spike_zero_unchanged": {
+      "type_sha256": "3638890bdc23ba95c76973f753c7c4d859d161290a581223bde2db10cd9973ef",
+      "axioms": [
+        "Classical.choice",
+        "Quot.sound",
+        "propext"
+      ]
+    }
+  },
+  "runner_sha256": "677911518ee7a5e249f1cd41d4271b910fc8ddcb06daa3d34a4aea1eed98d19f",
+  "scope": "Cold custom source components and exact type/axiom readbacks; official caches trusted. No total family, runtime, empirical, normative or adoption claim.",
+  "source_hashes": {
+    "AnnularControls": "ad2cb01cafd0a23bdaced18885bb4a18de0f0b5e074905847bb840d3cb3a3426",
+    "AnnularLiteral": "66dce1aa30b7f75987a9e145e3fc82051c97f08082fedaa5938ac49cf8759ff6",
+    "BayesBridge": "ea71b954c4f4905f694a7dc76d45b170b4b07895eb7a3d90d85a1ee42504a0b7",
+    "BernoulliWord": "7565efa23652a7156b448c72bd13be25ebcb53e8f4717156324635a9cef4e2d0",
+    "CentredBernoulli": "e353d544fdc6814d53f8b79866998c28263baa665aaeaf90bbf509355e7ab7f9",
+    "EmpiricalChernoff": "8170e577062ddd6fb64439afc456badf606ffbeef2c18a2d5a307afb6c33d670",
+    "EmpiricalEndpoints": "f34ce7e7b3394f0a9ba182828c2ac7d12746ae5b9921ab8ddbceb498bbec0722",
+    "EmpiricalGeometry": "21e21eec8d1252c877b6ca384715762697704551f5ffd0ec9a3e9f9ddd5981fb",
+    "EndpointAtomControls": "23aad2f1524861d58da6a0b34ee1476e8382e5a11c69533b4cc3f9848531130c",
+    "EndpointAtoms": "43303f5bfe6413bf317e402abcf02bdee90aca8617d940d962875dc613d6998c",
+    "EndpointMoment": "e2a61649f0ca59b94c3dd8ae0e578f49ab9b40ef111592036b4691479d7842d3",
+    "EndpointMomentControls": "04523a7e4e811181318b3591b6f51bc6539fa76a45301248b9a4b29d22f51d27",
+    "EndpointProcess": "b68dd6106e9fc3f311091731e8f9990a0a3829ff9838c164d6870fbec0bfa219",
+    "EndpointProcessControls": "526e7be92e423216029f548c1c03be43d1721737a40f1d9f57ee9e9cc0752ab3",
+    "ExponentialSeries": "1e5501fa4bcf2c6ac27d6e1518de449cdf9499e136198ba427480a3cb1e3a35e",
+    "GrowthMoment": "c79a4d9c42440f1ccb6b92d48f650c657fe164baf82610520893b48d9b64ebab",
+    "PriorSufficiency": "4d0e81c2f086e03c0fd923c59caf2087abffd986e8b934f53effa44e32855a2c",
+    "SufficiencyControls": "8c4de316893b0dc23c3b5e77c38d8208e39548e74629588d2e2e67efe93c02dd"
+  },
+  "started_utc": "2026-10-02T05:49:39.786740+00:00",
+  "status": "FRESH_KERNEL_COMPONENTS",
+  "suite_id": "ddbad6ca12d0-endpoint-atoms",
+  "suite_sha256": "398a10b18ed67b755bd5f81542ec37392c01a7cb5d960b6e961b047978eeba24",
+  "validator_sha256": "f0e3c39662b727914b7c83086aa958f8962275bc59fa47c9b508e025310fd26c",
+  "execution_kind": "FRESH_PUBLIC_REPLAY",
+  "private_receipt_sha256": "0c092e822d4a2bd1b3cebc0b1dbb4dd83446537298cfb637e6ca4b10ef10d215"
+}

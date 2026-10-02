@@ -1,0 +1,147 @@
+{
+  "id": "866c6ff6e74a-p03-graph",
+  "origin": "866c6ff6e74a67f2bc452b49a0ada05311c0c2601585ea166404719172bd8086",
+  "descriptor_source_id": "src-866c6ff6e74a67f2-47b7b457c989b63a",
+  "modules": [
+    {
+      "module": "P03GuardedGraph",
+      "source_id": "src-866c6ff6e74a67f2-9510204143001e04",
+      "imports": [
+        "Init"
+      ]
+    },
+    {
+      "module": "P03GuardedVCT",
+      "source_id": "src-866c6ff6e74a67f2-6724d098624d3ed8",
+      "imports": [
+        "P03GuardedGraph"
+      ]
+    },
+    {
+      "module": "P03Audit",
+      "source_id": "src-866c6ff6e74a67f2-36b9f95fec80adf2",
+      "imports": [
+        "P03GuardedVCT"
+      ]
+    }
+  ],
+  "module_order": [
+    "P03GuardedGraph",
+    "P03GuardedVCT",
+    "P03Audit"
+  ],
+  "targets": [
+    {
+      "name": "P03Q1f.Chain.mapEdge",
+      "module": "P03GuardedGraph"
+    },
+    {
+      "name": "P03Q1f.walkRank",
+      "module": "P03GuardedGraph"
+    },
+    {
+      "name": "P03Q1f.Hom.mapWalk",
+      "module": "P03GuardedGraph"
+    },
+    {
+      "name": "P03Q1f.noClosedWalk",
+      "module": "P03GuardedGraph"
+    },
+    {
+      "name": "P03Q1f.Hom.noCollapseOfWalk",
+      "module": "P03GuardedGraph"
+    },
+    {
+      "name": "P03A2.EvidenceHop.sound",
+      "module": "P03GuardedVCT"
+    },
+    {
+      "name": "P03A2.EvidenceHop.closed",
+      "module": "P03GuardedVCT"
+    },
+    {
+      "name": "P03A2.SemanticHop.composite_square",
+      "module": "P03GuardedVCT"
+    },
+    {
+      "name": "P03A2.Path.mapEdge",
+      "module": "P03GuardedVCT"
+    },
+    {
+      "name": "P03A2.guarded_reason_version_composition",
+      "module": "P03GuardedVCT"
+    },
+    {
+      "name": "P03A2.Path.semantic_truth_transport",
+      "module": "P03GuardedVCT"
+    },
+    {
+      "name": "P03A2.Via.eq_endpoints",
+      "module": "P03GuardedVCT"
+    },
+    {
+      "name": "P03A2.Path.no_collapse",
+      "module": "P03GuardedVCT"
+    },
+    {
+      "name": "P03A2.Path.preimage",
+      "module": "P03GuardedVCT"
+    }
+  ],
+  "pins": {
+    "lean_version": "4.19.0",
+    "lean_binary_sha256": "92c3d35b5bfaa5e0fea413a775d504cf46cd95e1345df61c2274f76779e7e023",
+    "packages": [
+      {
+        "name": "mathlib",
+        "revision": "c44e0c8ee63ca166450922a373c7409c5d26b00b"
+      },
+      {
+        "name": "plausible",
+        "revision": "77e08eddc486491d7b9e470926b3dbe50319451a"
+      },
+      {
+        "name": "LeanSearchClient",
+        "revision": "25078369972d295301f5a1e53c3e5850cf6d9d4c"
+      },
+      {
+        "name": "importGraph",
+        "revision": "e6a9f0f5ee3ccf7443a0070f92b62f8db12ae82b"
+      },
+      {
+        "name": "proofwidgets",
+        "revision": "c4919189477c3221e6a204008998b0d724f49904"
+      },
+      {
+        "name": "aesop",
+        "revision": "5d50b08dedd7d69b3d9b3176e0d58a23af228884"
+      },
+      {
+        "name": "Qq",
+        "revision": "fa4f7f15d97591a9cf3aa7724ba371c7fc6dda02"
+      },
+      {
+        "name": "batteries",
+        "revision": "f5d04a9c4973d401c8c92500711518f7c656f034"
+      },
+      {
+        "name": "Cli",
+        "revision": "02dbd02bc00ec4916e99b04b2245b30200e200d0"
+      }
+    ]
+  },
+  "official_imports": [
+    {
+      "module": "Init",
+      "repository": "lean-release",
+      "source": "Init.lean",
+      "sha256": "94c76e813fdf92a0375566c1c7f3335cf269703da809c6189dc0de09d66b0204"
+    }
+  ],
+  "driver": {
+    "source_id": "src-866c6ff6e74a67f2-279d28ea9829b80d",
+    "lean_argument": "EXECUTABLE"
+  },
+  "controls": "ORIGINAL_DRIVER_REQUIRED",
+  "classification": "CURRENT_EVIDENCE"
+}

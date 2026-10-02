@@ -43,7 +43,7 @@ def main():
 
     # Candidate decisions remain candidate and their source records say so.
     for did, row in sorted(decisions.items()):
-        is_candidate = "pr" in row
+        is_candidate = "pr" in row or row.get("stage") == "local-preparation"
         if is_candidate:
             check(
                 "candidate decision %s is proposed-candidate (not adopted-merged)" % did,
@@ -66,8 +66,12 @@ def main():
 
     for did, row in decisions.items():
         number = int(did)
-        if number >= 20:
-            check("decision %s (>=0020) is classified candidate (carries pr)" % did, "pr" in row)
+        if 20 <= number <= 36:
+            check("historical R7 decision %s (0020..0036) retains its candidate PR" % did, "pr" in row)
+        elif number > 36:
+            check("new decision %s declares candidate preparation or a PR" % did,
+                  row.get("status") == "proposed-candidate"
+                  and ("pr" in row or row.get("stage") == "local-preparation"))
         else:
             check("merged decision %s (<=0019) carries no pr field" % did, "pr" not in row)
 

@@ -1,0 +1,1120 @@
+{
+  "id": "3dae38ab50de-prior-width",
+  "origin": "3dae38ab50de2b81c59d9648577dac97233d5bfcd15bc382a548482a7a92a3ea",
+  "descriptor_source_id": "src-3dae38ab50de2b81-eba23cc1c6888261",
+  "modules": [
+    {
+      "module": "EndpointMoment",
+      "source_id": "src-3dae38ab50de2b81-6a51da7c858c0385",
+      "imports": [
+        "Mathlib"
+      ]
+    },
+    {
+      "module": "EndpointMomentControls",
+      "source_id": "src-3dae38ab50de2b81-70ff091c068a4c7b",
+      "imports": [
+        "EndpointMoment"
+      ]
+    },
+    {
+      "module": "AnnularLiteral",
+      "source_id": "src-3dae38ab50de2b81-c5948a7096694ce8",
+      "imports": [
+        "EndpointMoment"
+      ]
+    },
+    {
+      "module": "BernoulliWord",
+      "source_id": "src-3dae38ab50de2b81-f847a9aa3322fa53",
+      "imports": [
+        "AnnularLiteral"
+      ]
+    },
+    {
+      "module": "GrowthMoment",
+      "source_id": "src-3dae38ab50de2b81-3ae1204839ebd647",
+      "imports": [
+        "BernoulliWord"
+      ]
+    },
+    {
+      "module": "BayesBridge",
+      "source_id": "src-3dae38ab50de2b81-32884e46a8402177",
+      "imports": [
+        "GrowthMoment"
+      ]
+    },
+    {
+      "module": "AnnularControls",
+      "source_id": "src-3dae38ab50de2b81-9478104b5a0fa438",
+      "imports": [
+        "BayesBridge"
+      ]
+    },
+    {
+      "module": "CentredBernoulli",
+      "source_id": "src-3dae38ab50de2b81-d1e4900d61cfa0cc",
+      "imports": [
+        "BayesBridge"
+      ]
+    },
+    {
+      "module": "EmpiricalGeometry",
+      "source_id": "src-3dae38ab50de2b81-d9df38d3049ef265",
+      "imports": [
+        "CentredBernoulli"
+      ]
+    },
+    {
+      "module": "EmpiricalChernoff",
+      "source_id": "src-3dae38ab50de2b81-1445284cfc1105ef",
+      "imports": [
+        "EmpiricalGeometry"
+      ]
+    },
+    {
+      "module": "ExponentialSeries",
+      "source_id": "src-3dae38ab50de2b81-b6a759a4b90b90f2",
+      "imports": [
+        "EmpiricalChernoff"
+      ]
+    },
+    {
+      "module": "EmpiricalEndpoints",
+      "source_id": "src-3dae38ab50de2b81-3920f4167e28b82d",
+      "imports": [
+        "ExponentialSeries"
+      ]
+    },
+    {
+      "module": "PriorSufficiency",
+      "source_id": "src-3dae38ab50de2b81-ef44d1a711564c21",
+      "imports": [
+        "EmpiricalEndpoints"
+      ]
+    },
+    {
+      "module": "SufficiencyControls",
+      "source_id": "src-3dae38ab50de2b81-10c0506363129eb7",
+      "imports": [
+        "PriorSufficiency"
+      ]
+    },
+    {
+      "module": "EndpointProcess",
+      "source_id": "src-3dae38ab50de2b81-a7dd91f3e6309e98",
+      "imports": [
+        "PriorSufficiency"
+      ]
+    },
+    {
+      "module": "EndpointProcessControls",
+      "source_id": "src-3dae38ab50de2b81-3e6372569037826f",
+      "imports": [
+        "EndpointProcess"
+      ]
+    },
+    {
+      "module": "EndpointAtoms",
+      "source_id": "src-3dae38ab50de2b81-ca81a6fc0c6218b4",
+      "imports": [
+        "EndpointProcess"
+      ]
+    },
+    {
+      "module": "EndpointAtomControls",
+      "source_id": "src-3dae38ab50de2b81-ae37a6434d2b768c",
+      "imports": [
+        "EndpointAtoms"
+      ]
+    },
+    {
+      "module": "ConcreteSparsePrior",
+      "source_id": "src-3dae38ab50de2b81-343cde738e94873d",
+      "imports": [
+        "Mathlib"
+      ]
+    },
+    {
+      "module": "ConcreteContractProbe",
+      "source_id": "src-3dae38ab50de2b81-0378759bdd274150",
+      "imports": [
+        "ConcreteSparsePrior"
+      ]
+    },
+    {
+      "module": "SparseAtomBridge",
+      "source_id": "src-3dae38ab50de2b81-b0ec1d01cfeae39b",
+      "imports": [
+        "EndpointAtoms",
+        "ConcreteContractProbe"
+      ]
+    },
+    {
+      "module": "SparsePolicyTransport",
+      "source_id": "src-3dae38ab50de2b81-413aacb14e29b331",
+      "imports": [
+        "SparseAtomBridge"
+      ]
+    },
+    {
+      "module": "ClusterGeometry",
+      "source_id": "src-3dae38ab50de2b81-b37e11d743164b3a",
+      "imports": [
+        "EndpointAtoms"
+      ]
+    },
+    {
+      "module": "ClusterConcentration",
+      "source_id": "src-3dae38ab50de2b81-62ee1cfe00e322b6",
+      "imports": [
+        "ClusterGeometry"
+      ]
+    },
+    {
+      "module": "ContaminationAlgebra",
+      "source_id": "src-3dae38ab50de2b81-d6456d2698a68208",
+      "imports": [
+        "ClusterConcentration"
+      ]
+    },
+    {
+      "module": "KernelContractProbe",
+      "source_id": "src-3dae38ab50de2b81-312fab3a4889743a",
+      "imports": [
+        "ClusterGeometry",
+        "ClusterConcentration",
+        "ContaminationAlgebra"
+      ]
+    },
+    {
+      "module": "ClusterPolicy",
+      "source_id": "src-3dae38ab50de2b81-6487ea2767a0dd9d",
+      "imports": [
+        "ContaminationAlgebra"
+      ]
+    },
+    {
+      "module": "ClusterWidthBoundary",
+      "source_id": "src-3dae38ab50de2b81-0bad52f9254a0d73",
+      "imports": [
+        "ClusterPolicy"
+      ]
+    },
+    {
+      "module": "WidthContractProbe",
+      "source_id": "src-3dae38ab50de2b81-3be9fbe2439f0378",
+      "imports": [
+        "ClusterWidthBoundary"
+      ]
+    },
+    {
+      "module": "CriticalPairProcess",
+      "source_id": "src-3dae38ab50de2b81-5da5f07b30ec1eb0",
+      "imports": [
+        "ClusterWidthBoundary",
+        "ConcreteSparsePrior"
+      ]
+    },
+    {
+      "module": "CriticalUniform",
+      "source_id": "src-3dae38ab50de2b81-1cdb3ec42a28fd0c",
+      "imports": [
+        "ClusterWidthBoundary"
+      ]
+    },
+    {
+      "module": "RelativeContamination",
+      "source_id": "src-3dae38ab50de2b81-de47d09fd4de6212",
+      "imports": [
+        "CriticalPairProcess",
+        "SparsePolicyTransport"
+      ]
+    }
+  ],
+  "module_order": [
+    "EndpointMoment",
+    "EndpointMomentControls",
+    "AnnularLiteral",
+    "BernoulliWord",
+    "GrowthMoment",
+    "BayesBridge",
+    "AnnularControls",
+    "CentredBernoulli",
+    "EmpiricalGeometry",
+    "EmpiricalChernoff",
+    "ExponentialSeries",
+    "EmpiricalEndpoints",
+    "PriorSufficiency",
+    "SufficiencyControls",
+    "EndpointProcess",
+    "EndpointProcessControls",
+    "EndpointAtoms",
+    "EndpointAtomControls",
+    "ConcreteSparsePrior",
+    "ConcreteContractProbe",
+    "SparseAtomBridge",
+    "SparsePolicyTransport",
+    "ClusterGeometry",
+    "ClusterConcentration",
+    "ContaminationAlgebra",
+    "KernelContractProbe",
+    "ClusterPolicy",
+    "ClusterWidthBoundary",
+    "WidthContractProbe",
+    "CriticalPairProcess",
+    "CriticalUniform",
+    "RelativeContamination"
+  ],
+  "targets": [
+    {
+      "name": "EndpointMoment.count_reciprocal_thresholds",
+      "module": "EndpointMoment"
+    },
+    {
+      "name": "EndpointMoment.count_reciprocal_thresholds_tail",
+      "module": "EndpointMoment"
+    },
+    {
+      "name": "EndpointMoment.tsum_profile_eq_lintegral_floor",
+      "module": "EndpointMoment"
+    },
+    {
+      "name": "EndpointMoment.tsum_profile_tail_eq_lintegral_floor",
+      "module": "EndpointMoment"
+    },
+    {
+      "name": "EndpointMoment.tsum_profile_lt_top_iff",
+      "module": "EndpointMoment"
+    },
+    {
+      "name": "EndpointMoment.endpoint_series_lt_top_iff",
+      "module": "EndpointMoment"
+    },
+    {
+      "name": "EndpointMoment.endpoint_tail_series_lt_top_iff",
+      "module": "EndpointMoment"
+    },
+    {
+      "name": "EndpointMoment.interior_add_endpoint_atoms",
+      "module": "EndpointMoment"
+    },
+    {
+      "name": "AnnularLiteral.left_width",
+      "module": "AnnularLiteral"
+    },
+    {
+      "name": "AnnularLiteral.right_width",
+      "module": "AnnularLiteral"
+    },
+    {
+      "name": "AnnularLiteral.left_annular_lower",
+      "module": "AnnularLiteral"
+    },
+    {
+      "name": "AnnularLiteral.right_annular_lower",
+      "module": "AnnularLiteral"
+    },
+    {
+      "name": "AnnularLiteral.left_growth_weighted_lower",
+      "module": "AnnularLiteral"
+    },
+    {
+      "name": "AnnularLiteral.right_growth_weighted_lower",
+      "module": "AnnularLiteral"
+    },
+    {
+      "name": "AnnularLiteral.zero_prefix_lower",
+      "module": "AnnularLiteral"
+    },
+    {
+      "name": "AnnularLiteral.seed_averaged_two_prefix_growth_lower",
+      "module": "AnnularLiteral"
+    },
+    {
+      "name": "BernoulliWord.sum_weight",
+      "module": "BernoulliWord"
+    },
+    {
+      "name": "BernoulliWord.failure_probability",
+      "module": "BernoulliWord"
+    },
+    {
+      "name": "BernoulliWord.all_reports_growth_lower",
+      "module": "BernoulliWord"
+    },
+    {
+      "name": "GrowthMoment.exists_cutoff",
+      "module": "GrowthMoment"
+    },
+    {
+      "name": "GrowthMoment.finite_tail_risk_implies_inverse_moment",
+      "module": "GrowthMoment"
+    },
+    {
+      "name": "GrowthMoment.finite_risk_implies_inverse_moment",
+      "module": "GrowthMoment"
+    },
+    {
+      "name": "GrowthMoment.lowerGrowth_of_separate",
+      "module": "GrowthMoment"
+    },
+    {
+      "name": "BayesBridge.productRisk_eq_bayesRisk",
+      "module": "BayesBridge"
+    },
+    {
+      "name": "BayesBridge.bayesRisk_eq_risk",
+      "module": "BayesBridge"
+    },
+    {
+      "name": "BayesBridge.finite_product_risk_implies_inverse_moment",
+      "module": "BayesBridge"
+    },
+    {
+      "name": "CentredBernoulli.one_mgf_upper",
+      "module": "CentredBernoulli"
+    },
+    {
+      "name": "CentredBernoulli.word_mgf_exact",
+      "module": "CentredBernoulli"
+    },
+    {
+      "name": "CentredBernoulli.word_mgf_upper",
+      "module": "CentredBernoulli"
+    },
+    {
+      "name": "EmpiricalGeometry.accepted_of_relative_error",
+      "module": "EmpiricalGeometry"
+    },
+    {
+      "name": "EmpiricalChernoff.realError_upper",
+      "module": "EmpiricalChernoff"
+    },
+    {
+      "name": "EmpiricalChernoff.error_upper",
+      "module": "EmpiricalChernoff"
+    },
+    {
+      "name": "ExponentialSeries.summed_error_bound",
+      "module": "ExponentialSeries"
+    },
+    {
+      "name": "EmpiricalEndpoints.error_at_zero",
+      "module": "EmpiricalEndpoints"
+    },
+    {
+      "name": "EmpiricalEndpoints.error_at_one",
+      "module": "EmpiricalEndpoints"
+    },
+    {
+      "name": "PriorSufficiency.summed_empirical_risk_bound",
+      "module": "PriorSufficiency"
+    },
+    {
+      "name": "PriorSufficiency.empirical_productRisk_eq",
+      "module": "PriorSufficiency"
+    },
+    {
+      "name": "PriorSufficiency.empirical_product_risk_finite",
+      "module": "PriorSufficiency"
+    },
+    {
+      "name": "PriorSufficiency.exists_seeded_report_family_iff",
+      "module": "PriorSufficiency"
+    },
+    {
+      "name": "PriorSufficiency.exists_report_family_iff",
+      "module": "PriorSufficiency"
+    },
+    {
+      "name": "EndpointProcess.wordEvent_mass",
+      "module": "EndpointProcess"
+    },
+    {
+      "name": "EndpointProcess.lintegral_prefix_function",
+      "module": "EndpointProcess"
+    },
+    {
+      "name": "EndpointProcess.stageFailure_measurable",
+      "module": "EndpointProcess"
+    },
+    {
+      "name": "EndpointProcess.totalFailures_measurable",
+      "module": "EndpointProcess"
+    },
+    {
+      "name": "EndpointProcess.expected_stage_eq",
+      "module": "EndpointProcess"
+    },
+    {
+      "name": "EndpointProcess.actual_expectation_eq_risk_series",
+      "module": "EndpointProcess"
+    },
+    {
+      "name": "EndpointProcess.empirical_actual_expectation_bound",
+      "module": "EndpointProcess"
+    },
+    {
+      "name": "EndpointProcess.exists_finite_actual_expectation_iff",
+      "module": "EndpointProcess"
+    },
+    {
+      "name": "EndpointProcess.every_policy_infinite_of_infinite_moment",
+      "module": "EndpointProcess"
+    },
+    {
+      "name": "EndpointProcess.experiment_rectangle",
+      "module": "EndpointProcess"
+    },
+    {
+      "name": "EndpointProcess.finite_receipt_mass",
+      "module": "EndpointProcess"
+    },
+    {
+      "name": "EndpointProcess.prefix_causality",
+      "module": "EndpointProcess"
+    },
+    {
+      "name": "EndpointProcess.empirical_report_coherent",
+      "module": "EndpointProcess"
+    },
+    {
+      "name": "EndpointProcess.exists_coherent_finite_actual_expectation_iff",
+      "module": "EndpointProcess"
+    },
+    {
+      "name": "actual_empirical_left_endpoint",
+      "module": "EndpointProcessControls"
+    },
+    {
+      "name": "actual_empirical_right_endpoint",
+      "module": "EndpointProcessControls"
+    },
+    {
+      "name": "EndpointAtoms.accepted_zero_iff",
+      "module": "EndpointAtoms"
+    },
+    {
+      "name": "EndpointAtoms.accepted_one_iff",
+      "module": "EndpointAtoms"
+    },
+    {
+      "name": "EndpointAtoms.zero_prefix_atom_lower",
+      "module": "EndpointAtoms"
+    },
+    {
+      "name": "EndpointAtoms.one_prefix_atom_lower",
+      "module": "EndpointAtoms"
+    },
+    {
+      "name": "EndpointAtoms.atom_profile_product_le",
+      "module": "EndpointAtoms"
+    },
+    {
+      "name": "EndpointAtoms.left_atom_mass_lower",
+      "module": "EndpointAtoms"
+    },
+    {
+      "name": "EndpointAtoms.right_atom_mass_lower",
+      "module": "EndpointAtoms"
+    },
+    {
+      "name": "EndpointAtoms.finite_risk_implies_left_moment",
+      "module": "EndpointAtoms"
+    },
+    {
+      "name": "EndpointAtoms.finite_risk_implies_right_moment",
+      "module": "EndpointAtoms"
+    },
+    {
+      "name": "EndpointAtoms.finite_actual_implies_left_moment",
+      "module": "EndpointAtoms"
+    },
+    {
+      "name": "EndpointAtoms.finite_actual_implies_right_moment",
+      "module": "EndpointAtoms"
+    },
+    {
+      "name": "EndpointAtoms.both_atoms_coherent_actual_iff",
+      "module": "EndpointAtoms"
+    },
+    {
+      "name": "EndpointAtoms.left_atom_infinite_of_infinite_moment",
+      "module": "EndpointAtoms"
+    },
+    {
+      "name": "EndpointAtoms.right_atom_infinite_of_infinite_moment",
+      "module": "EndpointAtoms"
+    },
+    {
+      "name": "EndpointAtoms.leftSpike_probability",
+      "module": "EndpointAtoms"
+    },
+    {
+      "name": "EndpointAtoms.leftSpike_leftMoment",
+      "module": "EndpointAtoms"
+    },
+    {
+      "name": "EndpointAtoms.left_spike_destroys_finite_budget",
+      "module": "EndpointAtoms"
+    },
+    {
+      "name": "spike_zero_unchanged",
+      "module": "EndpointAtomControls"
+    },
+    {
+      "name": "spike_one_pure_endpoint",
+      "module": "EndpointAtomControls"
+    },
+    {
+      "name": "spike_one_empirical_zero",
+      "module": "EndpointAtomControls"
+    },
+    {
+      "name": "endpoint_pair_interior_moment_zero",
+      "module": "EndpointAtomControls"
+    },
+    {
+      "name": "SparsePriorAnalytic.zeroPrefix_finite_lower",
+      "module": "ConcreteSparsePrior"
+    },
+    {
+      "name": "SparsePriorAnalytic.binaryOverlap_lifetime_lower",
+      "module": "ConcreteSparsePrior"
+    },
+    {
+      "name": "SparsePriorAnalytic.affinity_deficit",
+      "module": "ConcreteSparsePrior"
+    },
+    {
+      "name": "SparsePriorAnalytic.binaryOverlap_chernoff",
+      "module": "ConcreteSparsePrior"
+    },
+    {
+      "name": "SparsePriorAnalytic.binaryOverlap_lifetime_upper",
+      "module": "ConcreteSparsePrior"
+    },
+    {
+      "name": "SparsePriorAnalytic.integrated_comparison",
+      "module": "ConcreteSparsePrior"
+    },
+    {
+      "name": "SparsePriorAnalytic.overlapTotal_finite_iff",
+      "module": "ConcreteSparsePrior"
+    },
+    {
+      "name": "SparsePriorAnalytic.overlapTotal_finite_iff_summable",
+      "module": "ConcreteSparsePrior"
+    },
+    {
+      "name": "SparsePriorGeometry.own_report_margin",
+      "module": "ConcreteSparsePrior"
+    },
+    {
+      "name": "SparsePriorGeometry.acceptance_ratio",
+      "module": "ConcreteSparsePrior"
+    },
+    {
+      "name": "SparsePriorGeometry.no_common_report_at_factor_two",
+      "module": "ConcreteSparsePrior"
+    },
+    {
+      "name": "SparsePriorGeometry.adjacent_min_sum",
+      "module": "ConcreteSparsePrior"
+    },
+    {
+      "name": "SparsePriorBayes.score_mode_and_adjacent_identity",
+      "module": "ConcreteSparsePrior"
+    },
+    {
+      "name": "SparsePriorBayes.conditional_bayes_identification",
+      "module": "ConcreteSparsePrior"
+    },
+    {
+      "name": "SparsePriorBayes.sum_optimal_words_eq_overlap",
+      "module": "ConcreteSparsePrior"
+    },
+    {
+      "name": "SparsePriorBayes.exists_finite_policyCost_iff",
+      "module": "ConcreteSparsePrior"
+    },
+    {
+      "name": "SparsePriorBayes.priorWeight_sum_one",
+      "module": "ConcreteSparsePrior"
+    },
+    {
+      "name": "SparsePriorBayes.sum_joint_word_mass_one",
+      "module": "ConcreteSparsePrior"
+    },
+    {
+      "name": "SparsePriorBayes.randomizedCost_lower",
+      "module": "ConcreteSparsePrior"
+    },
+    {
+      "name": "SparsePriorBayes.exists_finite_randomizedCost_iff",
+      "module": "ConcreteSparsePrior"
+    },
+    {
+      "name": "SparsePriorProcess.receiptLaw_prefix_mass",
+      "module": "ConcreteSparsePrior"
+    },
+    {
+      "name": "SparsePriorProcess.latentLaw_probability",
+      "module": "ConcreteSparsePrior"
+    },
+    {
+      "name": "SparsePriorProcess.totalFailures_measurable",
+      "module": "ConcreteSparsePrior"
+    },
+    {
+      "name": "SparsePriorProcess.actual_expectation_eq_randomizedCost",
+      "module": "ConcreteSparsePrior"
+    },
+    {
+      "name": "SparsePriorProcess.actual_expectation_lower",
+      "module": "ConcreteSparsePrior"
+    },
+    {
+      "name": "SparsePriorProcess.exists_actual_expectation_eq",
+      "module": "ConcreteSparsePrior"
+    },
+    {
+      "name": "SparsePriorProcess.exists_finite_actual_expectation_iff",
+      "module": "ConcreteSparsePrior"
+    },
+    {
+      "name": "SparsePriorProcess.every_policy_infinite_of_not_summable",
+      "module": "ConcreteSparsePrior"
+    },
+    {
+      "name": "ConcreteSparsePrior.quadraticSupport_spacing_summable",
+      "module": "ConcreteSparsePrior"
+    },
+    {
+      "name": "ConcreteSparsePrior.quadraticSupport_finite_expected_count",
+      "module": "ConcreteSparsePrior"
+    },
+    {
+      "name": "ConcreteSparsePrior.quadraticSupport_inverse_moment_infinite",
+      "module": "ConcreteSparsePrior"
+    },
+    {
+      "name": "ConcreteSparsePrior.quadraticSupport_inverse_variance_infinite",
+      "module": "ConcreteSparsePrior"
+    },
+    {
+      "name": "ConcreteSparsePrior.quadraticSupport_no_endpoint_atoms",
+      "module": "ConcreteSparsePrior"
+    },
+    {
+      "name": "IndependentConcreteContract.parameter_strictly_interior",
+      "module": "ConcreteContractProbe"
+    },
+    {
+      "name": "IndependentConcreteContract.seed_product_integral",
+      "module": "ConcreteContractProbe"
+    },
+    {
+      "name": "IndependentConcreteContract.full_inverse_moment",
+      "module": "ConcreteContractProbe"
+    },
+    {
+      "name": "IndependentConcreteContract.full_inverse_variance",
+      "module": "ConcreteContractProbe"
+    },
+    {
+      "name": "IndependentConcreteContract.full_no_endpoint_atoms",
+      "module": "ConcreteContractProbe"
+    },
+    {
+      "name": "IndependentConcreteContract.coherent_counterexample_same_law",
+      "module": "ConcreteContractProbe"
+    },
+    {
+      "name": "SparseAtomBridge.realPrior_probability",
+      "module": "SparseAtomBridge"
+    },
+    {
+      "name": "SparseAtomBridge.realPrior_inside",
+      "module": "SparseAtomBridge"
+    },
+    {
+      "name": "SparseAtomBridge.realPrior_left_moment_infinite",
+      "module": "SparseAtomBridge"
+    },
+    {
+      "name": "SparseAtomBridge.parameter_event_mass",
+      "module": "SparseAtomBridge"
+    },
+    {
+      "name": "SparseAtomBridge.literal_contract_identical",
+      "module": "SparseAtomBridge"
+    },
+    {
+      "name": "SparseAtomBridge.constant_parameter_countercontrol",
+      "module": "SparseAtomBridge"
+    },
+    {
+      "name": "SparseAtomBridge.contaminated_sparse_prior_all_policies_infinite",
+      "module": "SparseAtomBridge"
+    },
+    {
+      "name": "SparseAtomBridge.finite_before_infinite_after",
+      "module": "SparseAtomBridge"
+    },
+    {
+      "name": "SparsePolicyTransport.receiptStream_map_law",
+      "module": "SparsePolicyTransport"
+    },
+    {
+      "name": "SparsePolicyTransport.wordSet_observed",
+      "module": "SparsePolicyTransport"
+    },
+    {
+      "name": "SparsePolicyTransport.wordSet_injective",
+      "module": "SparsePolicyTransport"
+    },
+    {
+      "name": "SparsePolicyTransport.same_count_different_word_sets",
+      "module": "SparsePolicyTransport"
+    },
+    {
+      "name": "SparsePolicyTransport.transportPolicy_measurable",
+      "module": "SparsePolicyTransport"
+    },
+    {
+      "name": "SparsePolicyTransport.transportPolicy_coherent",
+      "module": "SparsePolicyTransport"
+    },
+    {
+      "name": "SparsePolicyTransport.total_count_pointwise",
+      "module": "SparsePolicyTransport"
+    },
+    {
+      "name": "SparsePolicyTransport.conditional_count_integral_equal",
+      "module": "SparsePolicyTransport"
+    },
+    {
+      "name": "SparsePolicyTransport.conditionalIntegral_measurable",
+      "module": "SparsePolicyTransport"
+    },
+    {
+      "name": "SparsePolicyTransport.prior_conditional_integral_equal",
+      "module": "SparsePolicyTransport"
+    },
+    {
+      "name": "SparsePolicyTransport.actual_count_expectations_equal",
+      "module": "SparsePolicyTransport"
+    },
+    {
+      "name": "SparsePolicyTransport.realPrior_finite_coherent_actual_count",
+      "module": "SparsePolicyTransport"
+    },
+    {
+      "name": "SparsePolicyTransport.same_interface_finite_before_infinite_after",
+      "module": "SparsePolicyTransport"
+    },
+    {
+      "name": "ClusterGeometry.centre_margin",
+      "module": "ClusterGeometry"
+    },
+    {
+      "name": "ClusterGeometry.centre_accepts_cluster",
+      "module": "ClusterGeometry"
+    },
+    {
+      "name": "ClusterGeometry.centre_coherent",
+      "module": "ClusterGeometry"
+    },
+    {
+      "name": "ClusterGeometry.distinct_cluster_separation",
+      "module": "ClusterGeometry"
+    },
+    {
+      "name": "ClusterGeometry.boundary_range",
+      "module": "ClusterGeometry"
+    },
+    {
+      "name": "ClusterGeometry.boundary_pos",
+      "module": "ClusterGeometry"
+    },
+    {
+      "name": "ClusterGeometry.lower_boundary_relative",
+      "module": "ClusterGeometry"
+    },
+    {
+      "name": "ClusterGeometry.upper_boundary_relative",
+      "module": "ClusterGeometry"
+    },
+    {
+      "name": "ClusterConcentration.finite_mgf_tail",
+      "module": "ClusterConcentration"
+    },
+    {
+      "name": "ClusterConcentration.upper_tail_bound",
+      "module": "ClusterConcentration"
+    },
+    {
+      "name": "ClusterConcentration.lower_tail_bound",
+      "module": "ClusterConcentration"
+    },
+    {
+      "name": "ClusterConcentration.actual_upper_tail_bound",
+      "module": "ClusterConcentration"
+    },
+    {
+      "name": "ClusterConcentration.actual_lower_tail_bound",
+      "module": "ClusterConcentration"
+    },
+    {
+      "name": "ClusterConcentration.actual_finite_count_eq",
+      "module": "ClusterConcentration"
+    },
+    {
+      "name": "ContaminationAlgebra.endpoint_increment",
+      "module": "ContaminationAlgebra"
+    },
+    {
+      "name": "ContaminationAlgebra.finite_increment_bound",
+      "module": "ContaminationAlgebra"
+    },
+    {
+      "name": "ContaminationAlgebra.total_cost_lipschitz",
+      "module": "ContaminationAlgebra"
+    },
+    {
+      "name": "ContaminationAlgebra.small_mass_lower",
+      "module": "ContaminationAlgebra"
+    },
+    {
+      "name": "ContaminationAlgebra.adjacent_min_lower",
+      "module": "ContaminationAlgebra"
+    },
+    {
+      "name": "ContaminationAlgebra.adjacency_equality_counterexample",
+      "module": "ContaminationAlgebra"
+    },
+    {
+      "name": "ClusterPolicy.actual_floored_upper",
+      "module": "ClusterPolicy"
+    },
+    {
+      "name": "ClusterPolicy.actual_floored_lower",
+      "module": "ClusterPolicy"
+    },
+    {
+      "name": "ClusterPolicy.actual_successor_stage_bound",
+      "module": "ClusterPolicy"
+    },
+    {
+      "name": "ClusterPolicy.actual_zero_stage_bound",
+      "module": "ClusterPolicy"
+    },
+    {
+      "name": "ClusterPolicy.boundaries_range",
+      "module": "ClusterPolicy"
+    },
+    {
+      "name": "ClusterPolicy.boundaries_geometric",
+      "module": "ClusterPolicy"
+    },
+    {
+      "name": "ClusterPolicy.exists_boundary_below",
+      "module": "ClusterPolicy"
+    },
+    {
+      "name": "ClusterPolicy.selector_zero_iff",
+      "module": "ClusterPolicy"
+    },
+    {
+      "name": "ClusterPolicy.selector_succ_iff",
+      "module": "ClusterPolicy"
+    },
+    {
+      "name": "ClusterPolicy.report_measurable",
+      "module": "ClusterPolicy"
+    },
+    {
+      "name": "ClusterPolicy.report_coherent",
+      "module": "ClusterPolicy"
+    },
+    {
+      "name": "ClusterPolicy.zero_failure_implies_lower",
+      "module": "ClusterPolicy"
+    },
+    {
+      "name": "ClusterPolicy.successor_failure_implies_boundary",
+      "module": "ClusterPolicy"
+    },
+    {
+      "name": "ClusterPolicy.floor_upper_event",
+      "module": "ClusterPolicy"
+    },
+    {
+      "name": "ClusterPolicy.floor_lower_event",
+      "module": "ClusterPolicy"
+    },
+    {
+      "name": "ClusterWidthBoundary.shifted_worst_excess",
+      "module": "ClusterWidthBoundary"
+    },
+    {
+      "name": "ClusterWidthBoundary.shifted_coherent",
+      "module": "ClusterWidthBoundary"
+    },
+    {
+      "name": "ClusterWidthBoundary.shifted_tail_accepts",
+      "module": "ClusterWidthBoundary"
+    },
+    {
+      "name": "ClusterWidthBoundary.critical_pair_incompatible",
+      "module": "ClusterWidthBoundary"
+    },
+    {
+      "name": "ClusterWidthBoundary.critical_strips_incompatible",
+      "module": "ClusterWidthBoundary"
+    },
+    {
+      "name": "CriticalPairProcess.positive_geometric_sum",
+      "module": "CriticalPairProcess"
+    },
+    {
+      "name": "CriticalPairProcess.pair_cost_lower",
+      "module": "CriticalPairProcess"
+    },
+    {
+      "name": "CriticalPairProcess.component_lifetime_lower",
+      "module": "CriticalPairProcess"
+    },
+    {
+      "name": "CriticalPairProcess.prefix_risk_lower",
+      "module": "CriticalPairProcess"
+    },
+    {
+      "name": "CriticalPairProcess.every_policy_infinite",
+      "module": "CriticalPairProcess"
+    },
+    {
+      "name": "CriticalPairProcess.pairPrior_probability",
+      "module": "CriticalPairProcess"
+    },
+    {
+      "name": "CriticalPairProcess.pairPrior_supported",
+      "module": "CriticalPairProcess"
+    },
+    {
+      "name": "CriticalPairProcess.zero_pair_lower",
+      "module": "CriticalPairProcess"
+    },
+    {
+      "name": "CriticalPairProcess.zero_prior_lower",
+      "module": "CriticalPairProcess"
+    },
+    {
+      "name": "CriticalUniform.reports_coherent",
+      "module": "CriticalUniform"
+    },
+    {
+      "name": "CriticalUniform.endpoint_margins",
+      "module": "CriticalUniform"
+    },
+    {
+      "name": "CriticalUniform.left_accepts",
+      "module": "CriticalUniform"
+    },
+    {
+      "name": "CriticalUniform.right_accepts",
+      "module": "CriticalUniform"
+    },
+    {
+      "name": "CriticalUniform.strips_away_from_centre",
+      "module": "CriticalUniform"
+    },
+    {
+      "name": "RelativeContamination.pairPrior_inside",
+      "module": "RelativeContamination"
+    },
+    {
+      "name": "RelativeContamination.contaminated_probability",
+      "module": "RelativeContamination"
+    },
+    {
+      "name": "RelativeContamination.contaminated_inside",
+      "module": "RelativeContamination"
+    },
+    {
+      "name": "RelativeContamination.count_prior_lintegral",
+      "module": "RelativeContamination"
+    },
+    {
+      "name": "RelativeContamination.count_mixture",
+      "module": "RelativeContamination"
+    },
+    {
+      "name": "RelativeContamination.every_policy_infinite",
+      "module": "RelativeContamination"
+    },
+    {
+      "name": "RelativeContamination.same_interface_nonendpoint_perturbation",
+      "module": "RelativeContamination"
+    }
+  ],
+  "pins": {
+    "lean_version": "4.19.0",
+    "lean_binary_sha256": "92c3d35b5bfaa5e0fea413a775d504cf46cd95e1345df61c2274f76779e7e023",
+    "packages": [
+      {
+        "name": "mathlib",
+        "revision": "c44e0c8ee63ca166450922a373c7409c5d26b00b"
+      },
+      {
+        "name": "plausible",
+        "revision": "77e08eddc486491d7b9e470926b3dbe50319451a"
+      },
+      {
+        "name": "LeanSearchClient",
+        "revision": "25078369972d295301f5a1e53c3e5850cf6d9d4c"
+      },
+      {
+        "name": "importGraph",
+        "revision": "e6a9f0f5ee3ccf7443a0070f92b62f8db12ae82b"
+      },
+      {
+        "name": "proofwidgets",
+        "revision": "c4919189477c3221e6a204008998b0d724f49904"
+      },
+      {
+        "name": "aesop",
+        "revision": "5d50b08dedd7d69b3d9b3176e0d58a23af228884"
+      },
+      {
+        "name": "Qq",
+        "revision": "fa4f7f15d97591a9cf3aa7724ba371c7fc6dda02"
+      },
+      {
+        "name": "batteries",
+        "revision": "f5d04a9c4973d401c8c92500711518f7c656f034"
+      },
+      {
+        "name": "Cli",
+        "revision": "02dbd02bc00ec4916e99b04b2245b30200e200d0"
+      }
+    ]
+  },
+  "official_imports": [
+    {
+      "module": "Mathlib",
+      "repository": "mathlib",
+      "source": "Mathlib.lean",
+      "sha256": "b0518254279fabf0c6a920804e684536b0f5e2bd1cb6318d0609eb563413f20a"
+    }
+  ],
+  "driver": {
+    "source_id": "src-3dae38ab50de2b81-996fd2e09c80ab70",
+    "lean_argument": "ENVIRONMENT_DIRECTORY"
+  },
+  "controls": "ORIGINAL_DRIVER_REQUIRED",
+  "classification": "CURRENT_EVIDENCE"
+}

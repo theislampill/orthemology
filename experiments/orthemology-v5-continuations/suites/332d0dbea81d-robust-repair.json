@@ -1,0 +1,303 @@
+{
+  "id": "332d0dbea81d-robust-repair",
+  "origin": "332d0dbea81d90d7697f391520f43df61afb04c10bf11736320d9f8299cb6d58",
+  "descriptor_source_id": "src-332d0dbea81d90d7-85c042fef1d85c5a",
+  "modules": [
+    {
+      "module": "RobustBinaryRepair",
+      "source_id": "src-332d0dbea81d90d7-c16d6721a29173b7",
+      "imports": [
+        "Mathlib.Tactic"
+      ]
+    },
+    {
+      "module": "CertifiedRepairCoverage",
+      "source_id": "src-332d0dbea81d90d7-906a2264d7cd6573",
+      "imports": [
+        "RobustBinaryRepair",
+        "Mathlib.MeasureTheory.Measure.MeasureSpaceDef"
+      ]
+    },
+    {
+      "module": "RationalRepairCertificate",
+      "source_id": "src-332d0dbea81d90d7-e29e5e17852509e6",
+      "imports": [
+        "RobustBinaryRepair"
+      ]
+    },
+    {
+      "module": "Controls",
+      "source_id": "src-332d0dbea81d90d7-b31cd3765fb68bcb",
+      "imports": [
+        "RationalRepairCertificate",
+        "CertifiedRepairCoverage"
+      ]
+    }
+  ],
+  "module_order": [
+    "RobustBinaryRepair",
+    "CertifiedRepairCoverage",
+    "RationalRepairCertificate",
+    "Controls"
+  ],
+  "targets": [
+    {
+      "name": "Orthemology.Tranche3.excessZero",
+      "module": "RobustBinaryRepair"
+    },
+    {
+      "name": "Orthemology.Tranche3.excessOne",
+      "module": "RobustBinaryRepair"
+    },
+    {
+      "name": "Orthemology.Tranche3.RobustGood",
+      "module": "RobustBinaryRepair"
+    },
+    {
+      "name": "Orthemology.Tranche3.robustReport",
+      "module": "RobustBinaryRepair"
+    },
+    {
+      "name": "Orthemology.Tranche3.robustValue",
+      "module": "RobustBinaryRepair"
+    },
+    {
+      "name": "Orthemology.Tranche3.excessZero_expand",
+      "module": "RobustBinaryRepair"
+    },
+    {
+      "name": "Orthemology.Tranche3.excessOne_expand",
+      "module": "RobustBinaryRepair"
+    },
+    {
+      "name": "Orthemology.Tranche3.robustGood_iff_endpoints",
+      "module": "RobustBinaryRepair"
+    },
+    {
+      "name": "Orthemology.Tranche3.robustReport_mem",
+      "module": "RobustBinaryRepair"
+    },
+    {
+      "name": "Orthemology.Tranche3.robust_crossing",
+      "module": "RobustBinaryRepair"
+    },
+    {
+      "name": "Orthemology.Tranche3.robustValue_le_max",
+      "module": "RobustBinaryRepair"
+    },
+    {
+      "name": "Orthemology.Tranche3.robust_repair_exists_iff",
+      "module": "RobustBinaryRepair"
+    },
+    {
+      "name": "Orthemology.Tranche3.robustValue_polynomial",
+      "module": "RobustBinaryRepair"
+    },
+    {
+      "name": "Orthemology.Tranche3.robustReport_unique",
+      "module": "RobustBinaryRepair"
+    },
+    {
+      "name": "Orthemology.Tranche3.covered_certificate_sound",
+      "module": "RobustBinaryRepair"
+    },
+    {
+      "name": "Orthemology.Tranche3.width_sufficient",
+      "module": "RobustBinaryRepair"
+    },
+    {
+      "name": "Orthemology.Tranche3.robustValue_lower_width",
+      "module": "RobustBinaryRepair"
+    },
+    {
+      "name": "Orthemology.Tranche3.width_necessary",
+      "module": "RobustBinaryRepair"
+    },
+    {
+      "name": "Orthemology.Tranche3.IntervalCoverage",
+      "module": "CertifiedRepairCoverage"
+    },
+    {
+      "name": "Orthemology.Tranche3.AllCertificatesSound",
+      "module": "CertifiedRepairCoverage"
+    },
+    {
+      "name": "Orthemology.Tranche3.coverage_subset_sound",
+      "module": "CertifiedRepairCoverage"
+    },
+    {
+      "name": "Orthemology.Tranche3.certificate_failure_measure_le",
+      "module": "CertifiedRepairCoverage"
+    },
+    {
+      "name": "Orthemology.Tranche3.rationalReport",
+      "module": "RationalRepairCertificate"
+    },
+    {
+      "name": "Orthemology.Tranche3.rationalValue",
+      "module": "RationalRepairCertificate"
+    },
+    {
+      "name": "Orthemology.Tranche3.RationalValid",
+      "module": "RationalRepairCertificate"
+    },
+    {
+      "name": "Orthemology.Tranche3.rationalCertificate",
+      "module": "RationalRepairCertificate"
+    },
+    {
+      "name": "Orthemology.Tranche3.rationalReport_cast",
+      "module": "RationalRepairCertificate"
+    },
+    {
+      "name": "Orthemology.Tranche3.rationalValue_cast",
+      "module": "RationalRepairCertificate"
+    },
+    {
+      "name": "Orthemology.Tranche3.rationalValid_cast",
+      "module": "RationalRepairCertificate"
+    },
+    {
+      "name": "Orthemology.Tranche3.rationalCertificate_sound",
+      "module": "RationalRepairCertificate"
+    },
+    {
+      "name": "Orthemology.Tranche3.rationalCertificate_reject_iff",
+      "module": "RationalRepairCertificate"
+    },
+    {
+      "name": "IndependentRobustControls.boundary_01",
+      "module": "Controls"
+    },
+    {
+      "name": "IndependentRobustControls.boundary_02",
+      "module": "Controls"
+    },
+    {
+      "name": "IndependentRobustControls.boundary_03",
+      "module": "Controls"
+    },
+    {
+      "name": "IndependentRobustControls.boundary_04",
+      "module": "Controls"
+    },
+    {
+      "name": "IndependentRobustControls.boundary_05",
+      "module": "Controls"
+    },
+    {
+      "name": "IndependentRobustControls.boundary_06",
+      "module": "Controls"
+    },
+    {
+      "name": "IndependentRobustControls.boundary_07",
+      "module": "Controls"
+    },
+    {
+      "name": "IndependentRobustControls.boundary_08",
+      "module": "Controls"
+    },
+    {
+      "name": "IndependentRobustControls.boundary_09",
+      "module": "Controls"
+    },
+    {
+      "name": "IndependentRobustControls.boundary_10",
+      "module": "Controls"
+    },
+    {
+      "name": "IndependentRobustControls.boundary_11",
+      "module": "Controls"
+    },
+    {
+      "name": "IndependentRobustControls.boundary_12",
+      "module": "Controls"
+    },
+    {
+      "name": "IndependentRobustControls.boundary_13",
+      "module": "Controls"
+    },
+    {
+      "name": "IndependentRobustControls.boundary_14",
+      "module": "Controls"
+    },
+    {
+      "name": "IndependentRobustControls.boundary_15",
+      "module": "Controls"
+    },
+    {
+      "name": "IndependentRobustControls.boundary_16",
+      "module": "Controls"
+    },
+    {
+      "name": "IndependentRobustControls.boundary_17",
+      "module": "Controls"
+    },
+    {
+      "name": "IndependentRobustControls.boundary_18",
+      "module": "Controls"
+    }
+  ],
+  "pins": {
+    "lean_version": "4.19.0",
+    "lean_binary_sha256": "92c3d35b5bfaa5e0fea413a775d504cf46cd95e1345df61c2274f76779e7e023",
+    "packages": [
+      {
+        "name": "mathlib",
+        "revision": "c44e0c8ee63ca166450922a373c7409c5d26b00b"
+      },
+      {
+        "name": "plausible",
+        "revision": "77e08eddc486491d7b9e470926b3dbe50319451a"
+      },
+      {
+        "name": "LeanSearchClient",
+        "revision": "25078369972d295301f5a1e53c3e5850cf6d9d4c"
+      },
+      {
+        "name": "importGraph",
+        "revision": "e6a9f0f5ee3ccf7443a0070f92b62f8db12ae82b"
+      },
+      {
+        "name": "proofwidgets",
+        "revision": "c4919189477c3221e6a204008998b0d724f49904"
+      },
+      {
+        "name": "aesop",
+        "revision": "5d50b08dedd7d69b3d9b3176e0d58a23af228884"
+      },
+      {
+        "name": "Qq",
+        "revision": "fa4f7f15d97591a9cf3aa7724ba371c7fc6dda02"
+      },
+      {
+        "name": "batteries",
+        "revision": "f5d04a9c4973d401c8c92500711518f7c656f034"
+      },
+      {
+        "name": "Cli",
+        "revision": "02dbd02bc00ec4916e99b04b2245b30200e200d0"
+      }
+    ]
+  },
+  "official_imports": [
+    {
+      "module": "Mathlib.MeasureTheory.Measure.MeasureSpaceDef",
+      "repository": "mathlib",
+      "source": "Mathlib/MeasureTheory/Measure/MeasureSpaceDef.lean",
+      "sha256": "51f7479de5f95a4681f2d7a45f48dd9ee04ccf40d8296020a4c20d8121005dbe"
+    },
+    {
+      "module": "Mathlib.Tactic",
+      "repository": "mathlib",
+      "source": "Mathlib/Tactic.lean",
+      "sha256": "f20038eba7bba63f07a2f854496101226df407e20414e6b8ebf94b14f95e831b"
+    }
+  ],
+  "driver": {
+    "source_id": "src-332d0dbea81d90d7-817e8553aa5fdf95",
+    "lean_argument": "BIN_DIRECTORY"
+  },
+  "controls": "ORIGINAL_DRIVER_REQUIRED",
+  "classification": "PREDECESSOR"
+}

@@ -1,0 +1,3596 @@
+{
+  "status": "FRESH_KERNEL_COMPONENTS",
+  "exit_code": 0,
+  "kernel_verified": true,
+  "suite_id": "d6f6fa5be514-core",
+  "suite_sha256": "0a0bb0d319cb2340bb4aa9244adbc923c64aa28585571720b7c75f36493a4b57",
+  "source_hashes": {
+    "BregmanProjection": "51ea427dd19ed8bbffd7120c1cb62aed4cbf28648e4299bdd254da50675c393e",
+    "CoherentNudgeRigidity": "229b7273ce75c5e119f18593fe95901e5b4f049ccd99fef9303bda3278080917",
+    "FiniteHullApproximateIff": "4404099e3cff80cde3c34a81bb6d4af0c2015d053ef26a78378e351e806b8c91",
+    "FiniteHullSmoothRigidity": "fbb94e84a7a0a02c42e6da70a04ff7e4db1a12cef2aa6608745d953216760523",
+    "GeneratorRigidity": "2dac22943ea6d31bfb00a459cb36a591d8cfdb69159b2caadf8570207e6b2d30",
+    "IntrinsicBarycentric": "4792328206bd362737bf4db247b62abab5c31d81583b9ecec8de43f759f1ab78",
+    "LocalRigidity": "87d45bddda95f888fcd2d18a374031efa1cca9cfd922061e39257f8936e47f3d",
+    "NudgeRigidity": "50968a1703261df4e2794636cbdddca8e0e1a5867854a27e543bc83b0a9afc46",
+    "RepairObstruction": "a12ee87fa7a58cbd8384bb9a22f773cbf7e96eeadc3d3783ae2b9750bccc848d",
+    "SmoothRigidity": "64c44e997e3986ae25042f3149f5c1f139c33f725b471ce2322fabccb6752493",
+    "SmoothRobustness": "e70adf24f9cc824e654cf5b4be6023d5bfc15410d2c15cc24143e98e5de809e4",
+    "SmoothScalar": "e7c0be83410fe9bda9a983f8b82a65ec77cb8377e1e3e9880137dc6d83d2864f",
+    "ApproximateRepairIdentification": "16f467976b9d30b5fe1bfa5997e7378dcf391e989d17aaed4e69224da0686261",
+    "BinaryConstructiveRepair": "7ef4e852ab4f4a53e1e6017e5ef6e9703c5993bf6274a0f8f3369709c68eaa01",
+    "BlindGuessSharpness": "75d8ceba960b2ae9698515d20e05badd9257fcab10a8a60bf295aad36eb21395",
+    "CorrelatedOracleMeasure": "2807aaf24bd997dd5b61acbbadef86d6dbae18ef3c986c7f49252e36fe26d4cb",
+    "CountableIdentification": "2df7c47363350f3eb58e07495b1b20319baab5847d3cc0998d7aef2d02a09720",
+    "EventualCausalRestoration": "7551d3dbf744250a840e0cbb224654a6d8973da353aaa1f6cede18d64ea47a4d",
+    "FiniteQueryLocality": "13eab28f535c45cdf0347e27913ebd5b18f5dda07f6dac8f2774afd2ad57c8c6",
+    "FiniteQueryMeasure": "f018854d64b5885a992b41c1180a551063dfe66603951901a9d2b65645883280",
+    "GeneratedBinaryExperiment": "c310bea34c30013a508646a337d5bb0308f6d30709da82869b8d6f69654675b6",
+    "GenericFiniteQueryLocality": "520c08e4f3bfa298029d651a8a6e6672896560597ac0963edab4780ed2b4a573",
+    "GenericFiniteQueryMeasure": "72974cb133e58a3c33cde719245ca96c4e1a5dff1e91558e18ef1d67b297423b",
+    "GenericQueryReference": "577666771c95033429bf8ee328a372bc99b637d2abbe1eb11aa4b7e4a7ca514d",
+    "IntegratedBinaryRestoration": "faa8b924c277d4f533df870324f008fdbeaa8b75c024fe84723f76d57b3c0bb5",
+    "MeasurablePhysicalFlattening": "76724062f45dc658859517fcddeb1507ab1f208e82fa3cb2e024e9900060b269",
+    "PhysicalFlattening": "3111f8189b6bc36447c9da68da38775f828ce660ed19f5725cd7f240ee451d63",
+    "ProductObservationLaw": "f7903cc3b7756f708e51eeccaf15220fd864e6964cf81db71b242694c6785760",
+    "RepairTestingBridge": "64728e91ba19c1455a955e23336da054ef7cbbfd07b77e1599a7040e1f3ef4fe",
+    "RestorationCountability": "c70637a1796ceaade41ec9687f55403af5c844ca31f75a6a0fea5c2a4db2bd56",
+    "StatisticalRepair": "8e6a771ec5c6b853055f7f13dd1b93b319172a2e10a4f41d71284cc681627bf4",
+    "AdaptiveLikelihood": "e47004a10354c5e357042b82e30a1f0b2237c5efbe1b84137d7ac8b252d54caa",
+    "BlockController": "6fc14b24c36ad2d2875c70709ebd1156ccc29c563b69c16a74122b639e09fa12",
+    "CanonicalBlockPolicy": "bd40fa5bd28123573019c977068df4ac76b5651e73383fae10f66a1046f138ea",
+    "FiniteLikelihood": "f97c13919ae0b01054a01fe6c441290d51cb3893ac9c31e9cbfb11560795294c",
+    "LikelihoodProducts": "d826b86fea76814d4acba5304268804cb6e5374ba2a88ac9bb583a03efa282bc",
+    "SelfVerifyingSupport": "46643e3bd1194b699ffe67687dfba24761e2eb05ad750bae8b25d2f5fe96470b",
+    "SupportFixtures": "eb1825e861c23f82e842738988b1bd3f13ee2956c9ad372d0dce299c0dec9bf9",
+    "SupportStageCertificate": "e69b816ffff722823cba3f4d90ec5bc89c78f5c1315ecbc3057e3abd022bc72f"
+  },
+  "post_source_hashes": {
+    "BregmanProjection": "51ea427dd19ed8bbffd7120c1cb62aed4cbf28648e4299bdd254da50675c393e",
+    "CoherentNudgeRigidity": "229b7273ce75c5e119f18593fe95901e5b4f049ccd99fef9303bda3278080917",
+    "FiniteHullApproximateIff": "4404099e3cff80cde3c34a81bb6d4af0c2015d053ef26a78378e351e806b8c91",
+    "FiniteHullSmoothRigidity": "fbb94e84a7a0a02c42e6da70a04ff7e4db1a12cef2aa6608745d953216760523",
+    "GeneratorRigidity": "2dac22943ea6d31bfb00a459cb36a591d8cfdb69159b2caadf8570207e6b2d30",
+    "IntrinsicBarycentric": "4792328206bd362737bf4db247b62abab5c31d81583b9ecec8de43f759f1ab78",
+    "LocalRigidity": "87d45bddda95f888fcd2d18a374031efa1cca9cfd922061e39257f8936e47f3d",
+    "NudgeRigidity": "50968a1703261df4e2794636cbdddca8e0e1a5867854a27e543bc83b0a9afc46",
+    "RepairObstruction": "a12ee87fa7a58cbd8384bb9a22f773cbf7e96eeadc3d3783ae2b9750bccc848d",
+    "SmoothRigidity": "64c44e997e3986ae25042f3149f5c1f139c33f725b471ce2322fabccb6752493",
+    "SmoothRobustness": "e70adf24f9cc824e654cf5b4be6023d5bfc15410d2c15cc24143e98e5de809e4",
+    "SmoothScalar": "e7c0be83410fe9bda9a983f8b82a65ec77cb8377e1e3e9880137dc6d83d2864f",
+    "ApproximateRepairIdentification": "16f467976b9d30b5fe1bfa5997e7378dcf391e989d17aaed4e69224da0686261",
+    "BinaryConstructiveRepair": "7ef4e852ab4f4a53e1e6017e5ef6e9703c5993bf6274a0f8f3369709c68eaa01",
+    "BlindGuessSharpness": "75d8ceba960b2ae9698515d20e05badd9257fcab10a8a60bf295aad36eb21395",
+    "CorrelatedOracleMeasure": "2807aaf24bd997dd5b61acbbadef86d6dbae18ef3c986c7f49252e36fe26d4cb",
+    "CountableIdentification": "2df7c47363350f3eb58e07495b1b20319baab5847d3cc0998d7aef2d02a09720",
+    "EventualCausalRestoration": "7551d3dbf744250a840e0cbb224654a6d8973da353aaa1f6cede18d64ea47a4d",
+    "FiniteQueryLocality": "13eab28f535c45cdf0347e27913ebd5b18f5dda07f6dac8f2774afd2ad57c8c6",
+    "FiniteQueryMeasure": "f018854d64b5885a992b41c1180a551063dfe66603951901a9d2b65645883280",
+    "GeneratedBinaryExperiment": "c310bea34c30013a508646a337d5bb0308f6d30709da82869b8d6f69654675b6",
+    "GenericFiniteQueryLocality": "520c08e4f3bfa298029d651a8a6e6672896560597ac0963edab4780ed2b4a573",
+    "GenericFiniteQueryMeasure": "72974cb133e58a3c33cde719245ca96c4e1a5dff1e91558e18ef1d67b297423b",
+    "GenericQueryReference": "577666771c95033429bf8ee328a372bc99b637d2abbe1eb11aa4b7e4a7ca514d",
+    "IntegratedBinaryRestoration": "faa8b924c277d4f533df870324f008fdbeaa8b75c024fe84723f76d57b3c0bb5",
+    "MeasurablePhysicalFlattening": "76724062f45dc658859517fcddeb1507ab1f208e82fa3cb2e024e9900060b269",
+    "PhysicalFlattening": "3111f8189b6bc36447c9da68da38775f828ce660ed19f5725cd7f240ee451d63",
+    "ProductObservationLaw": "f7903cc3b7756f708e51eeccaf15220fd864e6964cf81db71b242694c6785760",
+    "RepairTestingBridge": "64728e91ba19c1455a955e23336da054ef7cbbfd07b77e1599a7040e1f3ef4fe",
+    "RestorationCountability": "c70637a1796ceaade41ec9687f55403af5c844ca31f75a6a0fea5c2a4db2bd56",
+    "StatisticalRepair": "8e6a771ec5c6b853055f7f13dd1b93b319172a2e10a4f41d71284cc681627bf4",
+    "AdaptiveLikelihood": "e47004a10354c5e357042b82e30a1f0b2237c5efbe1b84137d7ac8b252d54caa",
+    "BlockController": "6fc14b24c36ad2d2875c70709ebd1156ccc29c563b69c16a74122b639e09fa12",
+    "CanonicalBlockPolicy": "bd40fa5bd28123573019c977068df4ac76b5651e73383fae10f66a1046f138ea",
+    "FiniteLikelihood": "f97c13919ae0b01054a01fe6c441290d51cb3893ac9c31e9cbfb11560795294c",
+    "LikelihoodProducts": "d826b86fea76814d4acba5304268804cb6e5374ba2a88ac9bb583a03efa282bc",
+    "SelfVerifyingSupport": "46643e3bd1194b699ffe67687dfba24761e2eb05ad750bae8b25d2f5fe96470b",
+    "SupportFixtures": "eb1825e861c23f82e842738988b1bd3f13ee2956c9ad372d0dce299c0dec9bf9",
+    "SupportStageCertificate": "e69b816ffff722823cba3f4d90ec5bc89c78f5c1315ecbc3057e3abd022bc72f"
+  },
+  "compiler_sha256": "92c3d35b5bfaa5e0fea413a775d504cf46cd95e1345df61c2274f76779e7e023",
+  "pins": {
+    "lean_version": "4.19.0",
+    "lean_binary_sha256": "92c3d35b5bfaa5e0fea413a775d504cf46cd95e1345df61c2274f76779e7e023",
+    "packages": [
+      {
+        "name": "mathlib",
+        "revision": "c44e0c8ee63ca166450922a373c7409c5d26b00b"
+      },
+      {
+        "name": "plausible",
+        "revision": "77e08eddc486491d7b9e470926b3dbe50319451a"
+      },
+      {
+        "name": "LeanSearchClient",
+        "revision": "25078369972d295301f5a1e53c3e5850cf6d9d4c"
+      },
+      {
+        "name": "importGraph",
+        "revision": "e6a9f0f5ee3ccf7443a0070f92b62f8db12ae82b"
+      },
+      {
+        "name": "proofwidgets",
+        "revision": "c4919189477c3221e6a204008998b0d724f49904"
+      },
+      {
+        "name": "aesop",
+        "revision": "5d50b08dedd7d69b3d9b3176e0d58a23af228884"
+      },
+      {
+        "name": "Qq",
+        "revision": "fa4f7f15d97591a9cf3aa7724ba371c7fc6dda02"
+      },
+      {
+        "name": "batteries",
+        "revision": "f5d04a9c4973d401c8c92500711518f7c656f034"
+      },
+      {
+        "name": "Cli",
+        "revision": "02dbd02bc00ec4916e99b04b2245b30200e200d0"
+      }
+    ]
+  },
+  "modules": [
+    {
+      "module": "BregmanProjection",
+      "source_sha256": "51ea427dd19ed8bbffd7120c1cb62aed4cbf28648e4299bdd254da50675c393e",
+      "object_sha256": "fe0937b1e68b7bd8c98f3c31e0bbe7fb694eee84d0b3911d70ad3fc9a6e91e17",
+      "transitive_source_fingerprint": "6785faa4a55d6dfbc74cbacebfe7decb1c73e733ffd23c5ef45b7f020f83d3ad",
+      "status": "FRESH_COMPILE",
+      "exit_code": 0
+    },
+    {
+      "module": "CoherentNudgeRigidity",
+      "source_sha256": "229b7273ce75c5e119f18593fe95901e5b4f049ccd99fef9303bda3278080917",
+      "object_sha256": "9be637aab550d6a1ee48042c89bf6618a02414609ef9bda38238d99b94d53cb9",
+      "transitive_source_fingerprint": "452323697afccda0ed4fe6dd823b4282b095f99356100956461ca241b5bbcde9",
+      "status": "FRESH_COMPILE",
+      "exit_code": 0
+    },
+    {
+      "module": "FiniteHullApproximateIff",
+      "source_sha256": "4404099e3cff80cde3c34a81bb6d4af0c2015d053ef26a78378e351e806b8c91",
+      "object_sha256": "7228faa8faeb4cb0bd11966ba9b994311299b3e7d952f41c6a3e20f5769f5652",
+      "transitive_source_fingerprint": "263f2a52e869471b971ec4acb89acc8c9759b21471355a88cedd1e3d8fc8d0a4",
+      "status": "FRESH_COMPILE",
+      "exit_code": 0
+    },
+    {
+      "module": "FiniteHullSmoothRigidity",
+      "source_sha256": "fbb94e84a7a0a02c42e6da70a04ff7e4db1a12cef2aa6608745d953216760523",
+      "object_sha256": "dbb54cd88cafa6ce2ad7ae64bfef18e42e2168dee2ff459f8bbcb071ce6ffa6b",
+      "transitive_source_fingerprint": "6d00b6c868fe8edd84f9aa24aebb099234e613636584589291788ceb5b3c448b",
+      "status": "FRESH_COMPILE",
+      "exit_code": 0
+    },
+    {
+      "module": "GeneratorRigidity",
+      "source_sha256": "2dac22943ea6d31bfb00a459cb36a591d8cfdb69159b2caadf8570207e6b2d30",
+      "object_sha256": "e0c6d4f26ae8877bf3b6ff2375a4f53c3e5b8db380e16316bdafe0f6531b9f5b",
+      "transitive_source_fingerprint": "0703dd45c36105549c85de70f6841d097a35261ab0e3b9c8e37f894bb8b13827",
+      "status": "FRESH_COMPILE",
+      "exit_code": 0
+    },
+    {
+      "module": "IntrinsicBarycentric",
+      "source_sha256": "4792328206bd362737bf4db247b62abab5c31d81583b9ecec8de43f759f1ab78",
+      "object_sha256": "e53a95249bde89844103a2334640738bfda4abedbaaa0b2bbafd5c4c21f45612",
+      "transitive_source_fingerprint": "1805c32b992e86a7ab286b71ea16170a731c607bf6054ebba7fe432d8de85248",
+      "status": "FRESH_COMPILE",
+      "exit_code": 0
+    },
+    {
+      "module": "LocalRigidity",
+      "source_sha256": "87d45bddda95f888fcd2d18a374031efa1cca9cfd922061e39257f8936e47f3d",
+      "object_sha256": "5df0d41a549da86d0e9da54a484d6c09ce1d979fe4bb6dc59e8c8f10055e2a53",
+      "transitive_source_fingerprint": "659abd0190b5513dd49895ee1b8c5b908e852f63f68a9ab2741665e90423347b",
+      "status": "FRESH_COMPILE",
+      "exit_code": 0
+    },
+    {
+      "module": "NudgeRigidity",
+      "source_sha256": "50968a1703261df4e2794636cbdddca8e0e1a5867854a27e543bc83b0a9afc46",
+      "object_sha256": "6b9662c31e921d3cddc1ca7ad338b6eaadcfbe4bb9017f5980c03ad5203a1889",
+      "transitive_source_fingerprint": "bb8c39ae5206cfb02a33faeff3d1a4ec8a58607ce8ed51506a6aee6cd8515df5",
+      "status": "FRESH_COMPILE",
+      "exit_code": 0
+    },
+    {
+      "module": "RepairObstruction",
+      "source_sha256": "a12ee87fa7a58cbd8384bb9a22f773cbf7e96eeadc3d3783ae2b9750bccc848d",
+      "object_sha256": "ac863c8078870d0678ff4b990c629c3a1803b7f5905ce6e7fb1dab6b45ff7b19",
+      "transitive_source_fingerprint": "19ac6ec41b5a8adcadd380465a7bad22bdd5999917dd187e45ab1b133c47294f",
+      "status": "FRESH_COMPILE",
+      "exit_code": 0
+    },
+    {
+      "module": "SmoothRigidity",
+      "source_sha256": "64c44e997e3986ae25042f3149f5c1f139c33f725b471ce2322fabccb6752493",
+      "object_sha256": "e868b088d955912a46eb3cb0f11de5d0bf20d5b705f3bfe5d7f6a07511892461",
+      "transitive_source_fingerprint": "666c49a97585bc3127ecae3eb6cee85d001411956bf10bb827c0679db143eb7b",
+      "status": "FRESH_COMPILE",
+      "exit_code": 0
+    },
+    {
+      "module": "SmoothRobustness",
+      "source_sha256": "e70adf24f9cc824e654cf5b4be6023d5bfc15410d2c15cc24143e98e5de809e4",
+      "object_sha256": "07d4a0feb78c74ae0970fd59848f22fcb3b6f1f583bd67c25e2a2a66beb55284",
+      "transitive_source_fingerprint": "6f35f742e3a405f4a6cac358a836f1de7717dd1d9a5fcc9653dd526e0b196922",
+      "status": "FRESH_COMPILE",
+      "exit_code": 0
+    },
+    {
+      "module": "SmoothScalar",
+      "source_sha256": "e7c0be83410fe9bda9a983f8b82a65ec77cb8377e1e3e9880137dc6d83d2864f",
+      "object_sha256": "be567e35b3496bc5f4f8433c200215123d6aaff72d99015218a6e3731ceae24d",
+      "transitive_source_fingerprint": "69cdc18b946f31f130feaef0b78a08f0b9223cdf92227e4b06202514c86e7099",
+      "status": "FRESH_COMPILE",
+      "exit_code": 0
+    },
+    {
+      "module": "ApproximateRepairIdentification",
+      "source_sha256": "16f467976b9d30b5fe1bfa5997e7378dcf391e989d17aaed4e69224da0686261",
+      "object_sha256": "f280f1c7291d70786b77bb21f4ce4f130483ae3f8f967abfb9d63d9acc469827",
+      "transitive_source_fingerprint": "33ac433d67b19c62a2ff4b6f083c27bebd01c8ccdbcb089740e84c6e6cb79aaa",
+      "status": "FRESH_COMPILE",
+      "exit_code": 0
+    },
+    {
+      "module": "BinaryConstructiveRepair",
+      "source_sha256": "7ef4e852ab4f4a53e1e6017e5ef6e9703c5993bf6274a0f8f3369709c68eaa01",
+      "object_sha256": "79d7a65a21a4adc054b2a53eb1e09b2604b61c200d764240cef2fdc0ce13341d",
+      "transitive_source_fingerprint": "a20399519f53b9b368796aa1c2e3d216dcbd563713bd4c67c9bff8064ee7334e",
+      "status": "FRESH_COMPILE",
+      "exit_code": 0
+    },
+    {
+      "module": "BlindGuessSharpness",
+      "source_sha256": "75d8ceba960b2ae9698515d20e05badd9257fcab10a8a60bf295aad36eb21395",
+      "object_sha256": "8d01a89b53026f29e225ba4feec87521c325cb580b82c1d533b0b2c341698ee1",
+      "transitive_source_fingerprint": "b40fcc8515f9171756526cb4d66f674379c29d035251c98256f953620792d943",
+      "status": "FRESH_COMPILE",
+      "exit_code": 0
+    },
+    {
+      "module": "CorrelatedOracleMeasure",
+      "source_sha256": "2807aaf24bd997dd5b61acbbadef86d6dbae18ef3c986c7f49252e36fe26d4cb",
+      "object_sha256": "e58192823667d7ebb2ffbf507282c5b28fb7ecc27597cad02ddc85bd0495f3d5",
+      "transitive_source_fingerprint": "502c4c46d379427548d68b006aae6c354246489ae11ad45940565f51a8ed4d60",
+      "status": "FRESH_COMPILE",
+      "exit_code": 0
+    },
+    {
+      "module": "CountableIdentification",
+      "source_sha256": "2df7c47363350f3eb58e07495b1b20319baab5847d3cc0998d7aef2d02a09720",
+      "object_sha256": "bea14b67c75db67a100229ab99a9e46ca5d9313c8169d25763322e63a462053f",
+      "transitive_source_fingerprint": "ac29bd6f7671882008563b168bec879d0a2c9a3d8e8ab70e48843021179bfca9",
+      "status": "FRESH_COMPILE",
+      "exit_code": 0
+    },
+    {
+      "module": "EventualCausalRestoration",
+      "source_sha256": "7551d3dbf744250a840e0cbb224654a6d8973da353aaa1f6cede18d64ea47a4d",
+      "object_sha256": "ee974a4cbb4f584e8f1cffe90d20b54c11fd5c83fc866112577003bc3a2ed30e",
+      "transitive_source_fingerprint": "625702fb20afe3a1106369847f9093d3f3bf16379d50990599600b8d215aa260",
+      "status": "FRESH_COMPILE",
+      "exit_code": 0
+    },
+    {
+      "module": "FiniteQueryLocality",
+      "source_sha256": "13eab28f535c45cdf0347e27913ebd5b18f5dda07f6dac8f2774afd2ad57c8c6",
+      "object_sha256": "a1b5c0c0d6fb4698fa000fa1ce9d1c1b8515840f57770994ccdf32d44c825e19",
+      "transitive_source_fingerprint": "e8c7d2c3bb07c6c23944379247f8902217634f6c9729e51743b8426f21282249",
+      "status": "FRESH_COMPILE",
+      "exit_code": 0
+    },
+    {
+      "module": "FiniteQueryMeasure",
+      "source_sha256": "f018854d64b5885a992b41c1180a551063dfe66603951901a9d2b65645883280",
+      "object_sha256": "1e3fae4873939c1deee4d566a782bd7f3674a523554a585a2848c6487b7aa611",
+      "transitive_source_fingerprint": "349fa538aa8a415bb1abe7bef84c24c181aff90efc33aa5c964ccf9f8a38fe0e",
+      "status": "FRESH_COMPILE",
+      "exit_code": 0
+    },
+    {
+      "module": "GeneratedBinaryExperiment",
+      "source_sha256": "c310bea34c30013a508646a337d5bb0308f6d30709da82869b8d6f69654675b6",
+      "object_sha256": "369d72f9ca2b50c923fdfcaf60a2b4bb1acfe4da726dc8c33fe06dc2055eca6f",
+      "transitive_source_fingerprint": "842d6548b7ed09c08548f2d1d2ba51f1b4303f1ded7da0d343d16b83f139afed",
+      "status": "FRESH_COMPILE",
+      "exit_code": 0
+    },
+    {
+      "module": "GenericFiniteQueryLocality",
+      "source_sha256": "520c08e4f3bfa298029d651a8a6e6672896560597ac0963edab4780ed2b4a573",
+      "object_sha256": "42b4acb1951d5d4938610a5909473d90298ec5ab058c067ae3f49657ceb6407f",
+      "transitive_source_fingerprint": "8ec7f663ca9742e3cdc861648a4fca73c1277de6fe19624508ed52cfe8b2f622",
+      "status": "FRESH_COMPILE",
+      "exit_code": 0
+    },
+    {
+      "module": "GenericFiniteQueryMeasure",
+      "source_sha256": "72974cb133e58a3c33cde719245ca96c4e1a5dff1e91558e18ef1d67b297423b",
+      "object_sha256": "6623cf440929c6c839f526c6c78dd3ccd7ef7e6b0ce26078af9b4a97f8aa7cd7",
+      "transitive_source_fingerprint": "0fc5c8cceebbc2fba09a3db1bd80a7fbad8f075158a272ec596029ba3b199433",
+      "status": "FRESH_COMPILE",
+      "exit_code": 0
+    },
+    {
+      "module": "GenericQueryReference",
+      "source_sha256": "577666771c95033429bf8ee328a372bc99b637d2abbe1eb11aa4b7e4a7ca514d",
+      "object_sha256": "af71fa9094a205265b80f33571a505b63b50b3a20db40aad621710e234ef9789",
+      "transitive_source_fingerprint": "974f088f0b9f50cce8123217ca49793bb9c421d387411d643e04987665572286",
+      "status": "FRESH_COMPILE",
+      "exit_code": 0
+    },
+    {
+      "module": "IntegratedBinaryRestoration",
+      "source_sha256": "faa8b924c277d4f533df870324f008fdbeaa8b75c024fe84723f76d57b3c0bb5",
+      "object_sha256": "a174e812e26862fd0d1afff5af4db4c6f40a27ad8b2775ed8398a5f825287f88",
+      "transitive_source_fingerprint": "87ffb52946a43bc8b43f1c812c3ff32450c42562d7fae4d5eb38fe5374ae6b3c",
+      "status": "FRESH_COMPILE",
+      "exit_code": 0
+    },
+    {
+      "module": "MeasurablePhysicalFlattening",
+      "source_sha256": "76724062f45dc658859517fcddeb1507ab1f208e82fa3cb2e024e9900060b269",
+      "object_sha256": "25af67b5a0516a6f3b846495b4015701d85bf9cc1044c3c816a47807cad770ef",
+      "transitive_source_fingerprint": "9b178f19742b4168bd267bc8961dfcd0c9b18e340afa1ba46a5ed87cdd59e1c2",
+      "status": "FRESH_COMPILE",
+      "exit_code": 0
+    },
+    {
+      "module": "PhysicalFlattening",
+      "source_sha256": "3111f8189b6bc36447c9da68da38775f828ce660ed19f5725cd7f240ee451d63",
+      "object_sha256": "ce9a8a19f72803c1f343e1cb617bd84ad321509b36961204a91811897374c791",
+      "transitive_source_fingerprint": "947b3e9019f7aec4dd71f7fe2e24bf7c995bd987717f6df1946c2ad00947b372",
+      "status": "FRESH_COMPILE",
+      "exit_code": 0
+    },
+    {
+      "module": "ProductObservationLaw",
+      "source_sha256": "f7903cc3b7756f708e51eeccaf15220fd864e6964cf81db71b242694c6785760",
+      "object_sha256": "2a6782617537fccbee2444adcd60af2c2f31e0bbedb86094166e6a1bca9675e6",
+      "transitive_source_fingerprint": "de2c983e7ef639ce87d1920bc3c63cbddf414eb63aab08d2b3f098914cddac31",
+      "status": "FRESH_COMPILE",
+      "exit_code": 0
+    },
+    {
+      "module": "RepairTestingBridge",
+      "source_sha256": "64728e91ba19c1455a955e23336da054ef7cbbfd07b77e1599a7040e1f3ef4fe",
+      "object_sha256": "0c7373de3789c48d5944b24c521e8fc0ae49106c584073424d327f8af16b9bc9",
+      "transitive_source_fingerprint": "d1369d62c05aae2f11984a2b199abb6a48b8dc561265d5e4610f65ff83b1a564",
+      "status": "FRESH_COMPILE",
+      "exit_code": 0
+    },
+    {
+      "module": "RestorationCountability",
+      "source_sha256": "c70637a1796ceaade41ec9687f55403af5c844ca31f75a6a0fea5c2a4db2bd56",
+      "object_sha256": "6e736d74ca342f7a8568bb113722722085cfd1e3530d0238d2538ef3be600bbd",
+      "transitive_source_fingerprint": "f2cdf6ca630d8d6f0a469820ae599e24cc9609da9c0e12d76edc0e159d309fe4",
+      "status": "FRESH_COMPILE",
+      "exit_code": 0
+    },
+    {
+      "module": "StatisticalRepair",
+      "source_sha256": "8e6a771ec5c6b853055f7f13dd1b93b319172a2e10a4f41d71284cc681627bf4",
+      "object_sha256": "2d66a16941c61faba01bd2609c09bdf18c425a1264921802de352d75e47368a0",
+      "transitive_source_fingerprint": "7f58b04601ed0c1d878297de1502fc45245c0caa0b583a2c2180cf9c6ccfe89a",
+      "status": "FRESH_COMPILE",
+      "exit_code": 0
+    },
+    {
+      "module": "AdaptiveLikelihood",
+      "source_sha256": "e47004a10354c5e357042b82e30a1f0b2237c5efbe1b84137d7ac8b252d54caa",
+      "object_sha256": "3a44af80468ac4c1c4d826dd498bce8d61ccaf97c96f116bf7ea55ff564bff8e",
+      "transitive_source_fingerprint": "ee441aa8e2e59e55df16cf3fefc1a4edd82f20c181f3623b3760cd4b9c63035c",
+      "status": "FRESH_COMPILE",
+      "exit_code": 0
+    },
+    {
+      "module": "BlockController",
+      "source_sha256": "6fc14b24c36ad2d2875c70709ebd1156ccc29c563b69c16a74122b639e09fa12",
+      "object_sha256": "d322e506b49857900df8e4af3550ee8e1f21611a7fa929a5d94d7be7d32798db",
+      "transitive_source_fingerprint": "d717e1202b104da756d52200d23ef3fadc01cc8c2dc9b219f1c857de7439bb77",
+      "status": "FRESH_COMPILE",
+      "exit_code": 0
+    },
+    {
+      "module": "CanonicalBlockPolicy",
+      "source_sha256": "bd40fa5bd28123573019c977068df4ac76b5651e73383fae10f66a1046f138ea",
+      "object_sha256": "3078f2135d23cc63db6084d1c01ed814ae2021a5839f7e1dffee1ae85f96a625",
+      "transitive_source_fingerprint": "e74b27cef76d392a6c543e2484bcf155143b0e3795aaba28882ef4858766b4b7",
+      "status": "FRESH_COMPILE",
+      "exit_code": 0
+    },
+    {
+      "module": "FiniteLikelihood",
+      "source_sha256": "f97c13919ae0b01054a01fe6c441290d51cb3893ac9c31e9cbfb11560795294c",
+      "object_sha256": "ba0d25494deeade4781577d820606b3a598f203477389cedd81190bff937fa35",
+      "transitive_source_fingerprint": "d67cdfa19e798caef8d4b57b5e865f9c5f82cb311cf72c79b760624aeb538d14",
+      "status": "FRESH_COMPILE",
+      "exit_code": 0
+    },
+    {
+      "module": "LikelihoodProducts",
+      "source_sha256": "d826b86fea76814d4acba5304268804cb6e5374ba2a88ac9bb583a03efa282bc",
+      "object_sha256": "9ad328abb3d1ff6de408dfb21e0c8bfb32eb91a7e22bbe26267a20d0d3f0f8f7",
+      "transitive_source_fingerprint": "ded0ed7411cddc7006549177653dd82459deaa9b27bcb61bece941c685ab2dc6",
+      "status": "FRESH_COMPILE",
+      "exit_code": 0
+    },
+    {
+      "module": "SelfVerifyingSupport",
+      "source_sha256": "46643e3bd1194b699ffe67687dfba24761e2eb05ad750bae8b25d2f5fe96470b",
+      "object_sha256": "c374298f87d9a74b9262585054e1cd04b6bf87bbfbc4ba9033d6acaf4e32a489",
+      "transitive_source_fingerprint": "1a9e2463bbb2e5036a8229e0f217150b21c4c30ec3bb08891687cb0a58fe3fae",
+      "status": "FRESH_COMPILE",
+      "exit_code": 0
+    },
+    {
+      "module": "SupportFixtures",
+      "source_sha256": "eb1825e861c23f82e842738988b1bd3f13ee2956c9ad372d0dce299c0dec9bf9",
+      "object_sha256": "9407fa8565f5792387426e326bee3d80d5c97e96390e58bb2cecbdd71852be24",
+      "transitive_source_fingerprint": "6b2d0fb6a2acccb5eef13d0c45f884641789eb19770a49afa763968662ac9b2b",
+      "status": "FRESH_COMPILE",
+      "exit_code": 0
+    },
+    {
+      "module": "SupportStageCertificate",
+      "source_sha256": "e69b816ffff722823cba3f4d90ec5bc89c78f5c1315ecbc3057e3abd022bc72f",
+      "object_sha256": "dc6e3f55a559dbe1afd5897e1e5f0f5d451134fb5aa2bf59c49bd40f39826a41",
+      "transitive_source_fingerprint": "e6138a0d354128f756d625182f3636ff09a750c39607d326bc7e175411fcb016",
+      "status": "FRESH_COMPILE",
+      "exit_code": 0
+    }
+  ],
+  "readbacks": {
+    "BregmanProjection.score_strictConvex": {
+      "type_sha256": "3f929b0b512b480939add789a97f05ac1392a88ecd4bbfbb3a23e87759894ab6",
+      "axioms": [
+        "Classical.choice",
+        "Quot.sound",
+        "propext"
+      ]
+    },
+    "BregmanProjection.boundary_divergence_pos": {
+      "type_sha256": "553e44647ba6e7bb84a8f3e741dcf1d46e095273f8c9107f78923c2934aa2bda",
+      "axioms": [
+        "Classical.choice",
+        "Quot.sound",
+        "propext"
+      ]
+    },
+    "BregmanProjection.boundary_divergence_nonneg": {
+      "type_sha256": "bf94536d4db8d0be334d67cad8be43ff45f9c867c90bdbc7016582145c9b91e4",
+      "axioms": [
+        "Classical.choice",
+        "Quot.sound",
+        "propext"
+      ]
+    },
+    "BregmanProjection.potential_hasFDerivAt": {
+      "type_sha256": "a9750ec9b048ce6971845d9f066d9d2049e6a4be5783d9bc53e4f31acb3f8bb6",
+      "axioms": [
+        "Classical.choice",
+        "Quot.sound",
+        "propext"
+      ]
+    },
+    "BregmanProjection.potential_continuousOn": {
+      "type_sha256": "ecc527b999d50ffffd002d499a0883a85c1fba5ed980e0d28c7975b9578adb51",
+      "axioms": [
+        "Classical.choice",
+        "Quot.sound",
+        "propext"
+      ]
+    },
+    "BregmanProjection.gradient_continuousAt": {
+      "type_sha256": "e35212c508938e57fd34fb465150081e37289b155dd9eca70f49d7b8b63b676d",
+      "axioms": [
+        "Classical.choice",
+        "Quot.sound",
+        "propext"
+      ]
+    },
+    "BregmanProjection.totalDiv_continuousOn_first": {
+      "type_sha256": "aefcf6bed2e18697c3c3e59acd6e21f865e4a4b77ec19f1f5a4aa9466f543d30",
+      "axioms": [
+        "Classical.choice",
+        "Quot.sound",
+        "propext"
+      ]
+    },
+    "BregmanProjection.totalDiv_first_positive": {
+      "type_sha256": "ce6ee4804a2aec128ac3708799d793d96ffee2de442831eb276cf4b9ac117d72",
+      "axioms": [
+        "Classical.choice",
+        "Quot.sound",
+        "propext"
+      ]
+    },
+    "BregmanProjection.exists_projection": {
+      "type_sha256": "ae638784617fb64fed3497c0ed1a239eb2643f77e0fc635538f71ad24545b5ab",
+      "axioms": [
+        "Classical.choice",
+        "Quot.sound",
+        "propext"
+      ]
+    },
+    "BregmanProjection.totalDiv_joint_tendsto": {
+      "type_sha256": "912e45bb51b630d1c10939f09192b0ca0243f81d13fa74a207361e67624cbc32",
+      "axioms": [
+        "Classical.choice",
+        "Quot.sound",
+        "propext"
+      ]
+    },
+    "BregmanProjection.projections_tendsto": {
+      "type_sha256": "19e6b75da7c71e2f7403dabd0e1451aacf35fdf373d87c67301b3a9ddd4af1ec",
+      "axioms": [
+        "Classical.choice",
+        "Quot.sound",
+        "propext"
+      ]
+    },
+    "BregmanProjection.tangent_path_in_simplex": {
+      "type_sha256": "b4f345eef0641529373040ae84f3633b46daf81aeb17918f1558f48004134770",
+      "axioms": [
+        "Classical.choice",
+        "Quot.sound",
+        "propext"
+      ]
+    },
+    "BregmanProjection.projection_normal": {
+      "type_sha256": "f7cfbe5ff483bf182c1404eb2eea9988cd3748db03b82114386736afee9194e2",
+      "axioms": [
+        "Classical.choice",
+        "Quot.sound",
+        "propext"
+      ]
+    },
+    "BregmanProjection.projection_weakly_repairs": {
+      "type_sha256": "168352234cd7e47e6caea8bc80f586479792aba98c2c22cdf9ae25245cd9c1b7",
+      "axioms": [
+        "Classical.choice",
+        "Quot.sound",
+        "propext"
+      ]
+    },
+    "BregmanProjection.single_score_local_repairs": {
+      "type_sha256": "bede9ceb8934bf6a5e8acf3ba1d1dbdfe82e9998a72d66c7cf72943604d708d4",
+      "axioms": [
+        "Classical.choice",
+        "Quot.sound",
+        "propext"
+      ]
+    },
+    "BregmanProjection.affine_gradient_coordinate": {
+      "type_sha256": "fc38188f3f3e84db4780608d4f79241c22e98b472be9eb64aa4f9d4f8d3931ba",
+      "axioms": [
+        "Classical.choice",
+        "Quot.sound",
+        "propext"
+      ]
+    },
+    "BregmanProjection.affine_totalDiv": {
+      "type_sha256": "a1a71ae364fe66f198e24fa485aff129a6f15bc6df0ce1cb82df6fb94f863190",
+      "axioms": [
+        "Classical.choice",
+        "Quot.sound",
+        "propext"
+      ]
+    },
+    "BregmanProjection.CommonLocalRepairs": {
+      "type_sha256": "562abe4a28ebed93180e122b6b450d68ebb94311b6e5b6bb0f03b53807f6c6b4",
+      "axioms": [
+        "Classical.choice",
+        "Quot.sound",
+        "propext"
+      ]
+    },
+    "BregmanProjection.PositiveAffineEquivalent": {
+      "type_sha256": "02227b34ea84e162e7288b13e28600f0939fad3da21e019096d008019f4bf451",
+      "axioms": [
+        "Classical.choice",
+        "Quot.sound",
+        "propext"
+      ]
+    },
+    "BregmanProjection.universal_common_repair_iff_affine": {
+      "type_sha256": "deb7d00985ba6748bfab35330d150ab19cb12ea2a0097a433fca2177ef33f437",
+      "axioms": [
+        "Classical.choice",
+        "Quot.sound",
+        "propext"
+      ]
+    },
+    "CoherentNudgeRigidity.CommonCoherentLocalNudges": {
+      "type_sha256": "b150a5d18a0e9cf5d1e4103526ceada562352dee4012ad086bfef006a8ed66ec",
+      "axioms": [
+        "Classical.choice",
+        "Quot.sound",
+        "propext"
+      ]
+    },
+    "CoherentNudgeRigidity.coherent_nudges_are_ambient": {
+      "type_sha256": "b9f919775dad615e74512f594eb1ec4ad36f5e4debea88035e6d92f5027bb206",
+      "axioms": [
+        "Classical.choice",
+        "Quot.sound",
+        "propext"
+      ]
+    },
+    "CoherentNudgeRigidity.single_score_coherent_nudges": {
+      "type_sha256": "e9f134d620528eda65b25bd4e3f534d8c5055189c30652d3abb3afb1d4683a8e",
+      "axioms": [
+        "Classical.choice",
+        "Quot.sound",
+        "propext"
+      ]
+    },
+    "CoherentNudgeRigidity.universal_coherent_nudge_iff_affine": {
+      "type_sha256": "1abe62bb8c00ef4470db0ad2d4430c724416b9a1f672eeafbf357efeb34dc7a4",
+      "axioms": [
+        "Classical.choice",
+        "Quot.sound",
+        "propext"
+      ]
+    },
+    "CoherentNudgeRigidity.universal_coherent_nudge_iff_common_repair": {
+      "type_sha256": "758ee7d379e3b244ee1daebb84c2c7910ab72faf9cf7d72b593744644f8fec62",
+      "axioms": [
+        "Classical.choice",
+        "Quot.sound",
+        "propext"
+      ]
+    },
+    "FiniteHullApproximateIff.interior_tangent_sequence": {
+      "type_sha256": "5f50342d2c1e1d2ba9b6056e01f1effdc0f4c7b7077b86aa376f42bc175a594f",
+      "axioms": [
+        "Classical.choice",
+        "Quot.sound",
+        "propext"
+      ]
+    },
+    "FiniteHullApproximateIff.common_normal_sublinear_gains": {
+      "type_sha256": "e8431a9c4759981a82d42b7b3602eb21946d8a28e58050ec70e6747c0d1e67ac",
+      "axioms": [
+        "Classical.choice",
+        "Quot.sound",
+        "propext"
+      ]
+    },
+    "FiniteHullApproximateIff.finite_hull_local_approximate_iff": {
+      "type_sha256": "6d8480f603ae2af797fff3edaa73d84608e95074d5a8a1f57edc339a0b74bc0c",
+      "axioms": [
+        "Classical.choice",
+        "Quot.sound",
+        "propext"
+      ]
+    },
+    "FiniteHullSmoothRigidity.weighted_approximate_regret_bound": {
+      "type_sha256": "cb4d48df4979adaa753feb74fbb3a0cedc04788d4b01eb876f342ec34fd2db5a",
+      "axioms": [
+        "Classical.choice",
+        "Quot.sound",
+        "propext"
+      ]
+    },
+    "FiniteHullSmoothRigidity.weighted_approximate_repairs_tendsto": {
+      "type_sha256": "8bd2481d12f89995e29ae61894593ae5412689d213de65f67a731adac6e069d2",
+      "axioms": [
+        "Classical.choice",
+        "Quot.sound",
+        "propext"
+      ]
+    },
+    "FiniteHullSmoothRigidity.finite_hull_normalized_approximate_repairs_bounded": {
+      "type_sha256": "1d49f99227e1e68330a0ff34bf98f3a57cdceb4510d7d265506f06adb3988c3d",
+      "axioms": [
+        "Classical.choice",
+        "Quot.sound",
+        "propext"
+      ]
+    },
+    "FiniteHullSmoothRigidity.finite_hull_approximate_hessian_necessary": {
+      "type_sha256": "67f9107b890f533cbba401bf9ee6f28cf572c8a240310ddc8fca1c1b93626af4",
+      "axioms": [
+        "Classical.choice",
+        "Quot.sound",
+        "propext"
+      ]
+    },
+    "FiniteHullSmoothRigidity.finite_hull_common_hessian_necessary": {
+      "type_sha256": "526dcaf2a000e6526c573c31c3cbae92b5fc92a029d36c5f850b8e3983859d4a",
+      "axioms": [
+        "Classical.choice",
+        "Quot.sound",
+        "propext"
+      ]
+    },
+    "GeneratorRigidity.vertex_sum": {
+      "type_sha256": "6ff18d25d96fb1119a3c7d4ded3dc6ab8fca8c197259d9410fb85bbfb51d781c",
+      "axioms": [
+        "Classical.choice",
+        "Quot.sound",
+        "propext"
+      ]
+    },
+    "GeneratorRigidity.tangent_sum_zero": {
+      "type_sha256": "c8120d38c3f51200232b83cbbef75950aa9aeae21441f7b829db7a2195cd4dfe",
+      "axioms": [
+        "Classical.choice",
+        "Quot.sound",
+        "propext"
+      ]
+    },
+    "GeneratorRigidity.vertex_transverse": {
+      "type_sha256": "d3617fe8595bb5acb257917d7a409a8deeb6afd26e52cfc16cce05fc8630e490",
+      "axioms": [
+        "Classical.choice",
+        "Quot.sound",
+        "propext"
+      ]
+    },
+    "GeneratorRigidity.vertex_difference_tangent": {
+      "type_sha256": "48b1ccef74649b9d9b6266039e2407d844f46deabb367aaeeb45c6fd5bd77067",
+      "axioms": [
+        "Classical.choice",
+        "Quot.sound",
+        "propext"
+      ]
+    },
+    "GeneratorRigidity.hessian_vertex": {
+      "type_sha256": "fcaa33b25dae0cd4e7216aa7ed69e1e4bbe1a9d4727778c1dcd84125a4705494",
+      "axioms": [
+        "Classical.choice",
+        "Quot.sound",
+        "propext"
+      ]
+    },
+    "GeneratorRigidity.positive_normal_proportional": {
+      "type_sha256": "3f64acbe50d75ac015bdc5e64c3bc49f0ec68359a92b6b77d6709a9e240ee4a9",
+      "axioms": [
+        "Classical.choice",
+        "Quot.sound",
+        "propext"
+      ]
+    },
+    "GeneratorRigidity.common_repairs_hessians_proportional": {
+      "type_sha256": "14147e3c0f346b8201220b62cdd852492e4890474f27cc4cc32e1d9f4f77c476",
+      "axioms": [
+        "Classical.choice",
+        "Quot.sound",
+        "propext"
+      ]
+    },
+    "GeneratorRigidity.fill_two_coordinates": {
+      "type_sha256": "40bfa12d76db14d2da3da40d3045edea71712ccd3a63397fa978d9cf1181cdc0",
+      "axioms": [
+        "Classical.choice",
+        "Quot.sound",
+        "propext"
+      ]
+    },
+    "GeneratorRigidity.simplex_ratio_connectivity": {
+      "type_sha256": "f08fa41b6e262582a368813ab430cb2f051cb495e42a9e14830f67f387958b00",
+      "axioms": [
+        "Classical.choice",
+        "Quot.sound",
+        "propext"
+      ]
+    },
+    "GeneratorRigidity.generators_affine_of_hessian_eq": {
+      "type_sha256": "28936c55716a2c7862ab7027f0c1142c8a7136c29f7a4691b4af95ee3688e5fb",
+      "axioms": [
+        "Classical.choice",
+        "Quot.sound",
+        "propext"
+      ]
+    },
+    "GeneratorRigidity.universal_common_repairs_force_affine": {
+      "type_sha256": "0048a910dfbe601f927df5b2498ca621162c5d290faea5e535aacb59fd997894",
+      "axioms": [
+        "Classical.choice",
+        "Quot.sound",
+        "propext"
+      ]
+    },
+    "IntrinsicBarycentric.finite_convex_weights": {
+      "type_sha256": "c1f720eacec0d211b4b8b83d98f26ef77e168ba5a33c03af1a94077725c7bd2a",
+      "axioms": [
+        "Classical.choice",
+        "Quot.sound",
+        "propext"
+      ]
+    },
+    "IntrinsicBarycentric.intrinsicInterior_positive_barycentric": {
+      "type_sha256": "056fa33dc25b42f6169d1805edaabdd814f6f7577e3566228840cd498e267948",
+      "axioms": [
+        "Classical.choice",
+        "Quot.sound",
+        "propext"
+      ]
+    },
+    "IntrinsicBarycentric.quadratic_local_common_repair_iff_intrinsicInterior": {
+      "type_sha256": "cef25987ff6172ab0f78db9189683698b83dc06e949efdb49f58d00ab543d617",
+      "axioms": [
+        "Classical.choice",
+        "Quot.sound",
+        "propext"
+      ]
+    },
+    "IntrinsicBarycentric.smooth_finite_hull_approximate_necessary_intrinsicInterior": {
+      "type_sha256": "ce3ab1734750a5fea604f0fd2005009bc20bb3f4903ce16f00705a653584bc02",
+      "axioms": [
+        "Classical.choice",
+        "Quot.sound",
+        "propext"
+      ]
+    },
+    "IntrinsicBarycentric.smooth_finite_hull_approximate_iff_intrinsicInterior": {
+      "type_sha256": "15e3b7703796b88f7d346776997f9c1e72c80b74bac7284b0450d41ae4ab676d",
+      "axioms": [
+        "Classical.choice",
+        "Quot.sound",
+        "propext"
+      ]
+    },
+    "LocalRigidity.Form": {
+      "type_sha256": "2ade8c5424d80d54c104ae3454866f8bdab2990f5886c2860e6b73325cd077a8",
+      "axioms": [
+        "Classical.choice",
+        "Quot.sound",
+        "propext"
+      ]
+    },
+    "LocalRigidity.loss": {
+      "type_sha256": "4451495b2c8c1075c18a71cdae836613bb92010785296d7f64f7ca8f5d175fb7",
+      "axioms": [
+        "Classical.choice",
+        "Quot.sound",
+        "propext"
+      ]
+    },
+    "LocalRigidity.gain_expansion": {
+      "type_sha256": "5a021c989d898f7d5504b7b7667042f12531c0397c731f61d529a05fe7578343",
+      "axioms": [
+        "Classical.choice",
+        "Quot.sound",
+        "propext"
+      ]
+    },
+    "LocalRigidity.continuous_diag": {
+      "type_sha256": "8fedc0be88df0439b380d3c007877148c51ced27f696d4e2294a9f686c194162",
+      "axioms": [
+        "Classical.choice",
+        "Quot.sound",
+        "propext"
+      ]
+    },
+    "LocalRigidity.first_order_nonnegative": {
+      "type_sha256": "45261ec671a42a514ddecc45df974500753df78a386f2293afc576d7ed5e5659",
+      "axioms": [
+        "Classical.choice",
+        "Quot.sound",
+        "propext"
+      ]
+    },
+    "LocalRigidity.barycenter_sub_sum": {
+      "type_sha256": "4c236299a3ac294b6ad472831568548d24832838b083f10b95ecbe9bc480f565",
+      "axioms": [
+        "Classical.choice",
+        "Quot.sound",
+        "propext"
+      ]
+    },
+    "LocalRigidity.barycenter_form_sum": {
+      "type_sha256": "6b50ecdacb3262dfeec1ae71c05359b4921318dcc4abc383caea36b2528979d7",
+      "axioms": [
+        "Classical.choice",
+        "Quot.sound",
+        "propext"
+      ]
+    },
+    "LocalRigidity.barycenter_nonnegative_vanish": {
+      "type_sha256": "1135a76da6c01a21ef2e45bb1a054a7daa77e0b1c09683d478ad55d1162f199f",
+      "axioms": [
+        "Classical.choice",
+        "Quot.sound",
+        "propext"
+      ]
+    },
+    "LocalRigidity.orthogonal_span": {
+      "type_sha256": "5ef6a86f9d292595d8e7148175f85896e71228faf982e7b4076683ef327d04b2",
+      "axioms": [
+        "Classical.choice",
+        "Quot.sound",
+        "propext"
+      ]
+    },
+    "LocalRigidity.common_limit_orthogonal": {
+      "type_sha256": "0ac0fea6517567f4cc98f12f59ae68557662b80bc30660065b64bb8e8ead827f",
+      "axioms": [
+        "Classical.choice",
+        "Quot.sound",
+        "propext"
+      ]
+    },
+    "LocalRigidity.weighted_first_order_sum": {
+      "type_sha256": "be7caf5a7296c0a1d2e360d2879962cac201b90beb399cd08f3e529c5245ce2d",
+      "axioms": [
+        "Classical.choice",
+        "Quot.sound",
+        "propext"
+      ]
+    },
+    "LocalRigidity.repair_energy_bound": {
+      "type_sha256": "3905365c124d52b2d879783148cd533af639dbd74450b31983964fb02f56378d",
+      "axioms": [
+        "Classical.choice",
+        "Quot.sound",
+        "propext"
+      ]
+    },
+    "LocalRigidity.common_repair_necessary": {
+      "type_sha256": "2c31ae8b74c065314981288c931ef7c0f51d16f347c89eeaf2b961eaffe8f7a5",
+      "axioms": [
+        "Classical.choice",
+        "Quot.sound",
+        "propext"
+      ]
+    },
+    "LocalRigidity.positive_definite_coercive": {
+      "type_sha256": "b9d21c7b179e86e23a5ba0d2694d4301188eed8fc77cce909d6e97dded43dce4",
+      "axioms": [
+        "Classical.choice",
+        "Quot.sound",
+        "propext"
+      ]
+    },
+    "LocalRigidity.tangent_ray_in_convexHull": {
+      "type_sha256": "bf3010f251062efdf17a47592cc356c077860a8c0afdccf7400ccdeddc046937",
+      "axioms": [
+        "Classical.choice",
+        "Quot.sound",
+        "propext"
+      ]
+    },
+    "LocalRigidity.convexHull_sub_mem": {
+      "type_sha256": "7da981b7ce5a39dc17074c3d074f9b535d1c2dc4fea20ac61a0d980d0a87f272",
+      "axioms": [
+        "Classical.choice",
+        "Quot.sound",
+        "propext"
+      ]
+    },
+    "LocalRigidity.normal_gain_identity": {
+      "type_sha256": "7bc308aa4b274943bfc9d56e23c236702d82a30036c800832555d9bfdab91a98",
+      "axioms": [
+        "Classical.choice",
+        "Quot.sound",
+        "propext"
+      ]
+    },
+    "LocalRigidity.common_repair_sufficient": {
+      "type_sha256": "328fe8d1041102fc49c75800c5c356cd9776e28d4310f79aba2391023c0f1430",
+      "axioms": [
+        "Classical.choice",
+        "Quot.sound",
+        "propext"
+      ]
+    },
+    "LocalRigidity.convex_common_repair_necessary": {
+      "type_sha256": "fac399c409fe250295d92c42b6d8294aed557c3995eb7b0d3c235c0a6a6f9665",
+      "axioms": [
+        "Classical.choice",
+        "Quot.sound",
+        "propext"
+      ]
+    },
+    "LocalRigidity.local_common_repair_iff": {
+      "type_sha256": "837914ee9f05d94ca3d404abb95c8fde27b50a63ef036a98d165f1e9401aaaee",
+      "axioms": [
+        "Classical.choice",
+        "Quot.sound",
+        "propext"
+      ]
+    },
+    "LocalRigidity.simultaneous_normal_unique": {
+      "type_sha256": "5b425f93a2e4694af8e6d7a27f04b8b8f6e919bc77667fa75244368a5e2f2d46",
+      "axioms": [
+        "Classical.choice",
+        "Quot.sound",
+        "propext"
+      ]
+    },
+    "NudgeRigidity.hessian_loss_direction_tendsto": {
+      "type_sha256": "342a0d6e33a3333528face60b69221c57a0d0bb3a8c34c36f8c444eb0be8b5bd",
+      "axioms": [
+        "Classical.choice",
+        "Quot.sound",
+        "propext"
+      ]
+    },
+    "NudgeRigidity.local_nudges_hessians_proportional": {
+      "type_sha256": "3ae2cb21824728af8ff4637b727347c52419a74201b6fb1be2b92b069bdb21ca",
+      "axioms": [
+        "Classical.choice",
+        "Quot.sound",
+        "propext"
+      ]
+    },
+    "NudgeRigidity.CommonLocalNudges": {
+      "type_sha256": "c4d4e983e740a5b7624e574204e54241ec67db0b605f301a964b5f5674d73ae7",
+      "axioms": [
+        "Classical.choice",
+        "Quot.sound",
+        "propext"
+      ]
+    },
+    "NudgeRigidity.nudge_derivative_is_actual": {
+      "type_sha256": "2baa7f32fd8d17153be2ae92566d27e5cd6cf5b39899a43bf67eb6df6d522a46",
+      "axioms": [
+        "Classical.choice",
+        "Quot.sound",
+        "propext"
+      ]
+    },
+    "NudgeRigidity.universal_local_nudges_force_affine": {
+      "type_sha256": "3ce640f9d482d8156e75d2f42f8c678527d5eb42b25461a81900e8cd11145451",
+      "axioms": [
+        "Classical.choice",
+        "Quot.sound",
+        "propext"
+      ]
+    },
+    "NudgeRigidity.affine_second_derivative": {
+      "type_sha256": "7dac481238c6a62fca6c97e442510ce3b71c51b9b77e733e1f1097b82815d2d2",
+      "axioms": [
+        "Classical.choice",
+        "Quot.sound",
+        "propext"
+      ]
+    },
+    "NudgeRigidity.canonical_nudge_gain": {
+      "type_sha256": "0fefac44992c095905aa0dc1769eecc5562e85b0086985003f2cfbd7900b482d",
+      "axioms": [
+        "Classical.choice",
+        "Quot.sound",
+        "propext"
+      ]
+    },
+    "NudgeRigidity.affine_hessian_direction": {
+      "type_sha256": "c33fd4447f16f2686fb2ea1e566d2c89f638d6a81a6d82fb187218e780dc20f2",
+      "axioms": [
+        "Classical.choice",
+        "Quot.sound",
+        "propext"
+      ]
+    },
+    "NudgeRigidity.universal_local_nudge_iff_affine": {
+      "type_sha256": "9f47c69aed797f8f4556e85df78a142f588d6477805d201b1ed52f3055c354c4",
+      "axioms": [
+        "Classical.choice",
+        "Quot.sound",
+        "propext"
+      ]
+    },
+    "NudgeRigidity.universal_local_nudge_iff_common_repair": {
+      "type_sha256": "b795e71a4668fdc4440a0e7c6f70b0ff4e264f9d90d7381acaca226d0be1aa08",
+      "axioms": [
+        "Classical.choice",
+        "Quot.sound",
+        "propext"
+      ]
+    },
+    "RepairObstruction.binary_product_identities": {
+      "type_sha256": "718aa9ff8d98956193a0ff037578213219b2d2fc66746ef8b63111bcf8e161b9",
+      "axioms": [
+        "Classical.choice",
+        "Quot.sound",
+        "propext"
+      ]
+    },
+    "RepairObstruction.binary_quadratic_identities": {
+      "type_sha256": "07f59f775f8ab2e62c64121d7e2ad6506d6b24a64acb41ed44ef7c5346769eb7",
+      "axioms": [
+        "Classical.choice",
+        "Quot.sound",
+        "propext"
+      ]
+    },
+    "RepairObstruction.binary_cell_bound": {
+      "type_sha256": "16519bb9fb32804311947e389681e738b023dee3e1d2444bf192c47129dd595d",
+      "axioms": [
+        "Classical.choice",
+        "Quot.sound",
+        "propext"
+      ]
+    },
+    "RepairObstruction.binary_repair_readout": {
+      "type_sha256": "635be0715206d26cb26da922953868ca346b9b986bbd2872269219fb21e05278",
+      "axioms": [
+        "Classical.choice",
+        "Quot.sound",
+        "propext"
+      ]
+    },
+    "RepairObstruction.quadratic_box": {
+      "type_sha256": "b6d918e9d532fe23c66b18c5ca6d995c2429c9ba1b550e4470eb3660515ae95e",
+      "axioms": [
+        "Classical.choice",
+        "Quot.sound",
+        "propext"
+      ]
+    },
+    "RepairObstruction.no_common_polynomial_repair": {
+      "type_sha256": "ca9f8f8292c370f549717868f3e0915f876ba509140adbd4f85491ca36632b93",
+      "axioms": [
+        "Classical.choice",
+        "Quot.sound",
+        "propext"
+      ]
+    },
+    "RepairObstruction.no_common_logarithmic_repair": {
+      "type_sha256": "18bd26875fd82de9fd6f2921d16f188b84a35967a4a6c1ce3497f70ea9da4ca1",
+      "axioms": [
+        "Classical.choice",
+        "Quot.sound",
+        "propext"
+      ]
+    },
+    "RepairObstruction.binary_parameter_decoder": {
+      "type_sha256": "1e7333f56485ac38d9a7cf3410653dd7318e097c2f5253d8106d6852db7199fb",
+      "axioms": [
+        "Classical.choice",
+        "Quot.sound",
+        "propext"
+      ]
+    },
+    "SmoothRigidity.varying_direction_limit": {
+      "type_sha256": "a4ea0e739c2e8e6d804f95debdd46831a4f370165c3e147688ad7907b3b12404",
+      "axioms": [
+        "Classical.choice",
+        "Quot.sound",
+        "propext"
+      ]
+    },
+    "SmoothRigidity.smooth_first_order_nonnegative": {
+      "type_sha256": "f35b83941b7e10429630e7a5d68126c528b5d4e7b0344244fa502dd3bfde3de0",
+      "axioms": [
+        "Classical.choice",
+        "Quot.sound",
+        "propext"
+      ]
+    },
+    "SmoothRigidity.bregman": {
+      "type_sha256": "e3538d4e39e78e518609e0a190a5f86e1d4ec923b2109f3f96ce841cd3634bdf",
+      "axioms": [
+        "Classical.choice",
+        "Quot.sound",
+        "propext"
+      ]
+    },
+    "SmoothRigidity.bregman_gain": {
+      "type_sha256": "39dc6de9c94229d6b64c4a68536f4a979313b7781128e29bb16656c47fb9a71c",
+      "axioms": [
+        "Classical.choice",
+        "Quot.sound",
+        "propext"
+      ]
+    },
+    "SmoothRigidity.weighted_bregman_gain": {
+      "type_sha256": "1a70a066a81b23c951ceb5cf02eee10d33a2fb2db6f0d621d378d8a9cd16ac65",
+      "axioms": [
+        "Classical.choice",
+        "Quot.sound",
+        "propext"
+      ]
+    },
+    "SmoothRigidity.bregman_regret_bound": {
+      "type_sha256": "18b604ebccf8380690f63a0ebf38ffcaa8b2a3bd4f3feb65bf36a0a2f4924508",
+      "axioms": [
+        "Classical.choice",
+        "Quot.sound",
+        "propext"
+      ]
+    },
+    "SmoothRigidity.Vec": {
+      "type_sha256": "59211848ffaead933cd4928656ef5b317b6f4261928a33539cd9d62cab9c740c",
+      "axioms": [
+        "Classical.choice",
+        "Quot.sound",
+        "propext"
+      ]
+    },
+    "SmoothRigidity.potential": {
+      "type_sha256": "7b3575a356e11d08fb9d144a8da43cb4f04deda33d7936c5c453efff58803e3c",
+      "axioms": [
+        "Classical.choice",
+        "Quot.sound",
+        "propext"
+      ]
+    },
+    "SmoothRigidity.gradient": {
+      "type_sha256": "bd229f621c2186e9f2ef41cc675a5af8845de945e58aff58c87a5a39402b65a6",
+      "axioms": [
+        "Classical.choice",
+        "Quot.sound",
+        "propext"
+      ]
+    },
+    "SmoothRigidity.hessian": {
+      "type_sha256": "2e5359eb86169b38cf00fdc41bb832388b863acb31818690bf05d5b448ce81ea",
+      "axioms": [
+        "Classical.choice",
+        "Quot.sound",
+        "propext"
+      ]
+    },
+    "SmoothRigidity.totalDiv": {
+      "type_sha256": "2898d6c1aa645b4ddad93a4022e077fe37faa7129e42b142cd3e10d2e79b77e2",
+      "axioms": [
+        "Classical.choice",
+        "Quot.sound",
+        "propext"
+      ]
+    },
+    "SmoothRigidity.vertex": {
+      "type_sha256": "88c7a83217b44bdb107505bd98712df562e5ad80cd3cf218ec3cbd2571bdb3e7",
+      "axioms": [
+        "Classical.choice",
+        "Quot.sound",
+        "propext"
+      ]
+    },
+    "SmoothRigidity.hessian_apply": {
+      "type_sha256": "beb6defb16ad36306877b7bd5b0c9037ba38fc63f89839b888daafd34028bb75",
+      "axioms": [
+        "Classical.choice",
+        "Quot.sound",
+        "propext"
+      ]
+    },
+    "SmoothRigidity.totalDiv_eq_sum": {
+      "type_sha256": "395c7dff3a8d02906461d8cb2f0e5be47a9ddb8578930b0dd93691c92219a6d3",
+      "axioms": [
+        "Classical.choice",
+        "Quot.sound",
+        "propext"
+      ]
+    },
+    "SmoothRigidity.score_hasFDerivAt": {
+      "type_sha256": "c46bc1f70d00d67372a59fdf05f3fc84fed21b66a390b6d6fb49214afe5dc75a",
+      "axioms": [
+        "Classical.choice",
+        "Quot.sound",
+        "propext"
+      ]
+    },
+    "SmoothRigidity.vertex_barycenter": {
+      "type_sha256": "207e9d7c39b7757ee207e8c2656f7db0d8e299932b577708f4a63bbeaef8c6a5",
+      "axioms": [
+        "Classical.choice",
+        "Quot.sound",
+        "propext"
+      ]
+    },
+    "SmoothRigidity.totalDiv_nonneg": {
+      "type_sha256": "4ec43ff0b7e3123f7a97363d36c9df10df8c9e9692d5460f4501ff5b2faa3c3d",
+      "axioms": [
+        "Classical.choice",
+        "Quot.sound",
+        "propext"
+      ]
+    },
+    "SmoothRigidity.vertex_regret_bound": {
+      "type_sha256": "f520c20f7a9eb0f4d9deb45ee5edb3c8e10e2017b460a63f898a8ab0cbda7f50",
+      "axioms": [
+        "Classical.choice",
+        "Quot.sound",
+        "propext"
+      ]
+    },
+    "SmoothRigidity.scalar_divergence_le_total": {
+      "type_sha256": "c8a5d1376539a087340281ae07f34240049276ee12d629e317cac39b7a7e8be3",
+      "axioms": [
+        "Classical.choice",
+        "Quot.sound",
+        "propext"
+      ]
+    },
+    "SmoothRigidity.repairs_tendsto": {
+      "type_sha256": "0ba596f6d5636ce3e4d74bfec38ae3c3482fd75d62e6d77b96e023d193e053df",
+      "axioms": [
+        "Classical.choice",
+        "Quot.sound",
+        "propext"
+      ]
+    },
+    "SmoothRigidity.normalized_repairs_bounded": {
+      "type_sha256": "8ad3a88a28fbaa999533312f4cff8fbf4b2fb99fccf2f35df4ccc06988e77ec2",
+      "axioms": [
+        "Classical.choice",
+        "Quot.sound",
+        "propext"
+      ]
+    },
+    "SmoothRigidity.hessian_symmetric": {
+      "type_sha256": "6b85aad5e631f29f6653f8f4e31969d50a9bd7a04b8fa728b2fc210ea2745668",
+      "axioms": [
+        "Classical.choice",
+        "Quot.sound",
+        "propext"
+      ]
+    },
+    "SmoothRigidity.hessian_positive": {
+      "type_sha256": "475e1c7af044e8b135c0c2240da7ca6fe63dec6a071f179e269b3c7073a8848b",
+      "axioms": [
+        "Classical.choice",
+        "Quot.sound",
+        "propext"
+      ]
+    },
+    "SmoothRigidity.smooth_common_repair_hessian_necessary": {
+      "type_sha256": "08fd5e0a3f97a86c55cce58cc91c41b0f4f77857220a16f6cd6676fe9e1f5c93",
+      "axioms": [
+        "Classical.choice",
+        "Quot.sound",
+        "propext"
+      ]
+    },
+    "SmoothRobustness.positive_derivative_coercive": {
+      "type_sha256": "79e58fc6acd7fc3dda085bf97a36237f43bca8f7259d6de795db0755877f04a0",
+      "axioms": [
+        "Classical.choice",
+        "Quot.sound",
+        "propext"
+      ]
+    },
+    "SmoothRobustness.approximate_first_order_nonnegative": {
+      "type_sha256": "5fb7655087f0e76ec46e372a54fd25c22f44bd9cec452b593a00d3c7ced8e399",
+      "axioms": [
+        "Classical.choice",
+        "Quot.sound",
+        "propext"
+      ]
+    },
+    "SmoothRobustness.approximate_vertex_regret_bound": {
+      "type_sha256": "8d4fbbedb1e21943deebfa8957b2fecbe1558e859050bd5cf901197bd9967282",
+      "axioms": [
+        "Classical.choice",
+        "Quot.sound",
+        "propext"
+      ]
+    },
+    "SmoothRobustness.approximate_repairs_tendsto": {
+      "type_sha256": "38cb84d16979ddda478d24e42312c50ad05e28151e3ac7b0f8ddc8e034a66260",
+      "axioms": [
+        "Classical.choice",
+        "Quot.sound",
+        "propext"
+      ]
+    },
+    "SmoothRobustness.sublinear_tolerance_tendsto_zero": {
+      "type_sha256": "b27305af9f033ffc68e2c6e0cc0e633e9a4e97a1c86f031ae46e7a478adedfa0",
+      "axioms": [
+        "Classical.choice",
+        "Quot.sound",
+        "propext"
+      ]
+    },
+    "SmoothRobustness.normalized_approximate_repairs_bounded": {
+      "type_sha256": "8c0fa3fd388818eed81a4990872c3f74cb06f9ddbc68df98ce3acb47a50949de",
+      "axioms": [
+        "Classical.choice",
+        "Quot.sound",
+        "propext"
+      ]
+    },
+    "SmoothRobustness.approximate_common_repair_hessian_necessary": {
+      "type_sha256": "f3bc77f78796c6c4fa228d0ba50ce083e8bae30f9599729ba1159c14527578a1",
+      "axioms": [
+        "Classical.choice",
+        "Quot.sound",
+        "propext"
+      ]
+    },
+    "SmoothRobustness.approximate_repairs_hessians_proportional": {
+      "type_sha256": "4f1addd02fef966bf872f6928e1aab40f25e6378b0f86355a8d4b8366b7213e6",
+      "axioms": [
+        "Classical.choice",
+        "Quot.sound",
+        "propext"
+      ]
+    },
+    "SmoothRobustness.universal_approximate_repairs_force_affine": {
+      "type_sha256": "893955d37aaa375db379e68b8f0a1e2e163f4cd6f8d2bd3876334f1b0611d802",
+      "axioms": [
+        "Classical.choice",
+        "Quot.sound",
+        "propext"
+      ]
+    },
+    "SmoothRobustness.ApproximateCommonLocalRepairs": {
+      "type_sha256": "d249dcebfda98a862d77ca065e07968197e64d0236771c86b9cd4a191ad2e56f",
+      "axioms": [
+        "Classical.choice",
+        "Quot.sound",
+        "propext"
+      ]
+    },
+    "SmoothRobustness.universal_approximate_common_repair_iff_affine": {
+      "type_sha256": "954f11d8bc5453eba99fb2ac38c7ccc33139ec4954dac2e5e236a257ab2593ae",
+      "axioms": [
+        "Classical.choice",
+        "Quot.sound",
+        "propext"
+      ]
+    },
+    "SmoothScalar.Score": {
+      "type_sha256": "c84d75e6e4fc4914b882877f1f1388066ebdc33fa0926dbaf445a9ac9da0009e",
+      "axioms": [
+        "Classical.choice",
+        "Quot.sound",
+        "propext"
+      ]
+    },
+    "SmoothScalar.divergence": {
+      "type_sha256": "a0528531a42a6d0f234a661a5e7ad7fdfe77196ececc8479ce9feff158866be4",
+      "axioms": [
+        "Classical.choice",
+        "Quot.sound",
+        "propext"
+      ]
+    },
+    "SmoothScalar.divergence_self": {
+      "type_sha256": "1df8d2411000ebf97929c74b7efb29f6f43974d5ce7130892d5d70861aab7c5b",
+      "axioms": [
+        "Classical.choice",
+        "Quot.sound",
+        "propext"
+      ]
+    },
+    "SmoothScalar.divergence_deriv": {
+      "type_sha256": "a30acaec4b9f3124ca9f05b48d782299ee91e929651d0d8d5e688e15e6ed3bb5",
+      "axioms": [
+        "Classical.choice",
+        "Quot.sound",
+        "propext"
+      ]
+    },
+    "SmoothScalar.divergence_strictMono_right": {
+      "type_sha256": "4ede2f6413428602abc9b66b667fcce0b1b1b516a103b5444ef037a1380cc486",
+      "axioms": [
+        "Classical.choice",
+        "Quot.sound",
+        "propext"
+      ]
+    },
+    "SmoothScalar.divergence_strictAnti_left": {
+      "type_sha256": "da0c4bbd31a3c31c25452996b63b4b890b18ae829490030e73f36431764ef09c",
+      "axioms": [
+        "Classical.choice",
+        "Quot.sound",
+        "propext"
+      ]
+    },
+    "SmoothScalar.divergence_pos": {
+      "type_sha256": "97b640b8aa00292434604eb28a274483b92972524414bc33efdecf4d108abd6d",
+      "axioms": [
+        "Classical.choice",
+        "Quot.sound",
+        "propext"
+      ]
+    },
+    "SmoothScalar.divergence_nonneg": {
+      "type_sha256": "711c4cdd478fc2baa3b42c50f955cb5606f07b6709f20a75b008b07a68ecbe02",
+      "axioms": [
+        "Classical.choice",
+        "Quot.sound",
+        "propext"
+      ]
+    },
+    "SmoothScalar.tendsto_of_divergence_tendsto_zero": {
+      "type_sha256": "11a41916fce77e5d0e810429ebf1c1d1cfbc693bb68328e2c2fc86d1d3261a56",
+      "axioms": [
+        "Classical.choice",
+        "Quot.sound",
+        "propext"
+      ]
+    },
+    "SmoothScalar.radial_local_min": {
+      "type_sha256": "bfe13534c54161a25829466d094dba09152e4cba04cad23f59a0ee120ec7b1e0",
+      "axioms": [
+        "Classical.choice",
+        "Quot.sound",
+        "propext"
+      ]
+    },
+    "SmoothScalar.adjusted_divergence_deriv": {
+      "type_sha256": "ed26da851adfb32962079faed3fa2dfe1edfce6eabe46c131096c0a1f4f23257",
+      "axioms": [
+        "Classical.choice",
+        "Quot.sound",
+        "propext"
+      ]
+    },
+    "SmoothScalar.local_curvature_sandwich": {
+      "type_sha256": "2bc8c2d007484c36c4a2d64ba0039af2a83743a1cb24c23a170c3dabc49f7cc0",
+      "axioms": [
+        "Classical.choice",
+        "Quot.sound",
+        "propext"
+      ]
+    },
+    "Orthemology.Tranche2.BinaryApproxGood": {
+      "type_sha256": "a553408789afcf87d8b8c31f38d1fed0d82f6e9d57426f7acdebd907187f90a7",
+      "axioms": [
+        "Classical.choice",
+        "Quot.sound",
+        "propext"
+      ]
+    },
+    "Orthemology.Tranche2.eventual_approximate_binary_good_decodes": {
+      "type_sha256": "47d60b6db2acc5db310c5582d909ba5df4266e24b1d73537152c5cb799cc10f8",
+      "axioms": [
+        "Classical.choice",
+        "Quot.sound",
+        "propext"
+      ]
+    },
+    "Orthemology.Tranche2.no_information_linear_tolerance": {
+      "type_sha256": "11c2b34b0fa7700563babcd1975df472deaf37f47d8a8ac34f0bf2949364adc6",
+      "axioms": [
+        "Classical.choice",
+        "Quot.sound",
+        "propext"
+      ]
+    },
+    "Orthemology.Tranche2.countable_positive_eventual_approximate_repairs": {
+      "type_sha256": "5e5a64b288f010419b4b8d5a69297cfd06fb1d9b0001c36408074aeb1ce1ae91",
+      "axioms": [
+        "Classical.choice",
+        "Quot.sound",
+        "propext"
+      ]
+    },
+    "Orthemology.Tranche2.FiniteQuery.measurable_eventual_approximate_score": {
+      "type_sha256": "92849bdb9ada51105db0b404663b6a88a59236dda2a0a54832cf95dd8034c3e9",
+      "axioms": [
+        "Classical.choice",
+        "Quot.sound",
+        "propext"
+      ]
+    },
+    "Orthemology.Tranche2.FiniteQuery.countable_positive_approximate_causal_restoration": {
+      "type_sha256": "6f6fee66ff078769e6499a13943a778c85dfa5b3aface73da3d0f027cd3163b5",
+      "axioms": [
+        "Classical.choice",
+        "Quot.sound",
+        "propext"
+      ]
+    },
+    "Orthemology.Tranche2.binary_good_is_coherent": {
+      "type_sha256": "d07fe0725420440333316dcea9b42abf5d21a7089885537c550240a13d82f276",
+      "axioms": [
+        "Classical.choice",
+        "Quot.sound",
+        "propext"
+      ]
+    },
+    "Orthemology.Tranche2.sufficient_binary_cell": {
+      "type_sha256": "cc0b6c59516861318d072a8a070a27c137d9012370253c4787d03165f4ae9b9d",
+      "axioms": [
+        "Classical.choice",
+        "Quot.sound",
+        "propext"
+      ]
+    },
+    "Orthemology.Tranche2.approximate_parameter_strict_repair": {
+      "type_sha256": "6925c7819e83d18f03d7a87a1d0b00eb0da0c63816bbb5f835f569f82d5d05ff",
+      "axioms": [
+        "Classical.choice",
+        "Quot.sound",
+        "propext"
+      ]
+    },
+    "Orthemology.Tranche2.exact_parameter_repair": {
+      "type_sha256": "7a0071c5e74d21a312005379675c9d09d74f2802e683904e93effa2b8627768a",
+      "axioms": [
+        "Classical.choice",
+        "Quot.sound",
+        "propext"
+      ]
+    },
+    "Orthemology.Tranche2.guessed_parameter_eventual_success_iff": {
+      "type_sha256": "33222e8456ad0f6ec4c4f3c687911500f8e11755f22f15ba5080a5fb67b15629",
+      "axioms": [
+        "Classical.choice",
+        "Quot.sound",
+        "propext"
+      ]
+    },
+    "Orthemology.Tranche2.FiniteQuery.blindAsk": {
+      "type_sha256": "576c3e1e72e356521ad95c9f439916e246bb043ca4d08e3a52e54c034a7b3137",
+      "axioms": [
+        "Classical.choice",
+        "Quot.sound",
+        "propext"
+      ]
+    },
+    "Orthemology.Tranche2.FiniteQuery.blindNext": {
+      "type_sha256": "aa8af5c9b3d15e721167729ca9d5c5e3b44ec27b1467a413b0908de95b9455fc",
+      "axioms": [
+        "Classical.choice",
+        "Quot.sound",
+        "propext"
+      ]
+    },
+    "Orthemology.Tranche2.FiniteQuery.blind_run": {
+      "type_sha256": "305581b6fc42ca1276d9b8213fbeea904f86c0b7d73a0f88569935eacfe16db4",
+      "axioms": [
+        "Classical.choice",
+        "Quot.sound",
+        "propext"
+      ]
+    },
+    "Orthemology.Tranche2.FiniteQuery.blind_causal_success_mass": {
+      "type_sha256": "88ca252ccc9a7cca4ea488e1876c7d542bcb85dfd8423b64b97e631c6ae82590",
+      "axioms": [
+        "Classical.choice",
+        "Quot.sound",
+        "propext"
+      ]
+    },
+    "Orthemology.Tranche2.FiniteQuery.joint_dominated_by_countable_reference": {
+      "type_sha256": "c66986cfb015683393d81568d5b375245a4e5f7a3f0644de7a59bcfbd1d677df",
+      "axioms": [
+        "Classical.choice",
+        "Quot.sound",
+        "propext"
+      ]
+    },
+    "Orthemology.Tranche2.FiniteQuery.jointTraceLaw": {
+      "type_sha256": "d136f424e7d3b04544371cb6fa04544a914de72fdb738a55ec17a4c4ca7730c5",
+      "axioms": [
+        "Classical.choice",
+        "Quot.sound",
+        "propext"
+      ]
+    },
+    "Orthemology.Tranche2.FiniteQuery.bounded_joint_trace_factorisation": {
+      "type_sha256": "3e1f2bce594d7d1701db5f399bf81ec2fd7067634983ce4560c1cbab3b1c0040",
+      "axioms": [
+        "Classical.choice",
+        "Quot.sound",
+        "propext"
+      ]
+    },
+    "Orthemology.Tranche2.FiniteQuery.correlated_finite_query_trace_domination": {
+      "type_sha256": "bad229dd27ccd749a5f8ec569b11b065c345294871c477462a61ed60b9f6f684",
+      "axioms": [
+        "Classical.choice",
+        "Quot.sound",
+        "propext"
+      ]
+    },
+    "Orthemology.Tranche2.FiniteQuery.countable_positive_shared_seed_query_repairs": {
+      "type_sha256": "d4993159cc948f0ffa8d973d9f5665459a18737f2d528f5f445330d5a57e33ca",
+      "axioms": [
+        "Classical.choice",
+        "Quot.sound",
+        "propext"
+      ]
+    },
+    "Orthemology.Tranche2.countable_positive_exact_identification": {
+      "type_sha256": "39e9b0bcdd7764b938e8e0ba02be0a962a183350545ca0ee865dc1e5bf98e1d5",
+      "axioms": [
+        "Classical.choice",
+        "Quot.sound",
+        "propext"
+      ]
+    },
+    "Orthemology.Tranche2.countable_positive_identification_on_event": {
+      "type_sha256": "be66acb82144f43d097b77c98cf2531bbb12b646ed66e28955b9aeae6156a0ab",
+      "axioms": [
+        "Classical.choice",
+        "Quot.sound",
+        "propext"
+      ]
+    },
+    "Orthemology.Tranche2.common_components_dominated": {
+      "type_sha256": "90214e21dbbad6ab8ca5a4a69a5a8d3eb6cec1b4b2d28ba5f7507e412cce7a77",
+      "axioms": [
+        "Classical.choice",
+        "Quot.sound",
+        "propext"
+      ]
+    },
+    "Orthemology.Tranche2.countable_positive_identification_from_components": {
+      "type_sha256": "468247e541fb5eb004146d0ac540fe467c29e913f1a6606d52c63a435471c5e7",
+      "axioms": [
+        "Classical.choice",
+        "Quot.sound",
+        "propext"
+      ]
+    },
+    "Orthemology.Tranche2.FiniteQuery.actual_eventual_target": {
+      "type_sha256": "0766b87c406861b79d37e528d28e8aa024933616b24fe119d19f1ffd6a01dfa3",
+      "axioms": [
+        "Classical.choice",
+        "Quot.sound",
+        "propext"
+      ]
+    },
+    "Orthemology.Tranche2.FiniteQuery.measurable_eventual_score": {
+      "type_sha256": "fdc75f1db299c3699dd9e04a0461347acfb51ddeeac4abc9b340ac7ed9abf67a",
+      "axioms": [
+        "Classical.choice",
+        "Quot.sound",
+        "propext"
+      ]
+    },
+    "Orthemology.Tranche2.FiniteQuery.countable_positive_eventual_causal_restoration": {
+      "type_sha256": "27ffffe9560203786719854d2e22996142701a2c0e62be30df9efaa95a37b7ff",
+      "axioms": [
+        "Classical.choice",
+        "Quot.sound",
+        "propext"
+      ]
+    },
+    "Orthemology.Tranche2.FiniteQuery.advance": {
+      "type_sha256": "3cafeae41e5f099a093f87b1167b228dc15eb6d47c4e6b215dbc3df386ef0f9c",
+      "axioms": []
+    },
+    "Orthemology.Tranche2.FiniteQuery.run": {
+      "type_sha256": "76a94f5862877f802d444d739cc7e1b5fe941ef0b92b0ca203b54a81e0d2d702",
+      "axioms": []
+    },
+    "Orthemology.Tranche2.FiniteQuery.Bounded": {
+      "type_sha256": "4b91aec434a90d6b4cc0ecc48d7e45ac53955814a736001579e2992fe0f4a81c",
+      "axioms": []
+    },
+    "Orthemology.Tranche2.FiniteQuery.bounded_prefix_locality": {
+      "type_sha256": "47b3da1dd184adb58d5a09a0ad1dd7d54bd35b03f27f1178f2cdf9b61bda2c8f",
+      "axioms": [
+        "propext"
+      ]
+    },
+    "Orthemology.Tranche2.FiniteQuery.bounded_prefix_equivalence": {
+      "type_sha256": "88998a6268613b7fdb4d5ff971089c39e5e2da44de5587f1644dd5b1ecc7d2b4",
+      "axioms": [
+        "propext"
+      ]
+    },
+    "Orthemology.Tranche2.FiniteQuery.prefixOracle": {
+      "type_sha256": "b5cabf2f2acd4b388497bdeb25bf92013687be9717a1fa0923ad971b373998c3",
+      "axioms": []
+    },
+    "Orthemology.Tranche2.FiniteQuery.prefixOracle_agrees": {
+      "type_sha256": "8542427d1d4f2ba1b0faed7129e3d2124477527fc8281d1f2d9ac7c11ad34213",
+      "axioms": [
+        "propext"
+      ]
+    },
+    "Orthemology.Tranche2.FiniteQuery.bounded_trace_factorisation": {
+      "type_sha256": "bca42184330dcfb745cfe30b468ebc1bb897218af457b569b1f601c8fed8e07a",
+      "axioms": [
+        "Quot.sound",
+        "propext"
+      ]
+    },
+    "Orthemology.Tranche2.FiniteQuery.counter_monotone": {
+      "type_sha256": "c3809e69255c8604443237ba14d1fd1062311031aaed2174f398dfb09d92a891",
+      "axioms": [
+        "Classical.choice",
+        "Quot.sound",
+        "propext"
+      ]
+    },
+    "Orthemology.Tranche2.FiniteQuery.bounded_iff_eventually_no_query": {
+      "type_sha256": "47608c8605adaf0b16ca6f7977342a9d464f738ec9e06eb7241e3031d4ffe6c9",
+      "axioms": [
+        "Classical.choice",
+        "Quot.sound",
+        "propext"
+      ]
+    },
+    "Orthemology.Tranche2.FiniteQuery.Oracle": {
+      "type_sha256": "a1b5f36c85282c8653c566cd50e01ef38a2830d845e3fc375c2d4ee880adb0ab",
+      "axioms": []
+    },
+    "Orthemology.Tranche2.FiniteQuery.Trace": {
+      "type_sha256": "38e4206fd6f4b144977bbc494df814bf90775ec1cb5f3fd21cc63ba8542e3891",
+      "axioms": []
+    },
+    "Orthemology.Tranche2.FiniteQuery.measurable_advance_joint": {
+      "type_sha256": "ad28067d3c11362e334d011113fdab1c35153125f18bfcfa8385cf86bdd529a2",
+      "axioms": [
+        "Classical.choice",
+        "Quot.sound",
+        "propext"
+      ]
+    },
+    "Orthemology.Tranche2.FiniteQuery.measurable_run": {
+      "type_sha256": "5784e94e9ee5167d0bd5e10c232be3e6b818d1140913a06ceba27a395f7ba177",
+      "axioms": [
+        "Classical.choice",
+        "Quot.sound",
+        "propext"
+      ]
+    },
+    "Orthemology.Tranche2.FiniteQuery.measurable_trajectory": {
+      "type_sha256": "cece4ed777da092dccbdda4d0f40c418309ad345dad1514c9b667974f80725d9",
+      "axioms": [
+        "Classical.choice",
+        "Quot.sound",
+        "propext"
+      ]
+    },
+    "Orthemology.Tranche2.FiniteQuery.boundedTrace": {
+      "type_sha256": "3199df8355c43f7bfa9b20844444ac02fff9806440fe1bf09df46d3b62bd8d17",
+      "axioms": []
+    },
+    "Orthemology.Tranche2.FiniteQuery.measurable_boundedTrace": {
+      "type_sha256": "b6aeda85afc66278c9d0dba58e394673a6749c022df402c7bdaf9d6f04c9011c",
+      "axioms": [
+        "Classical.choice",
+        "Quot.sound",
+        "propext"
+      ]
+    },
+    "Orthemology.Tranche2.FiniteQuery.measurable_prefixOracle": {
+      "type_sha256": "2340d363cfc3b0428b61a5066d9b3109fc3da2e941b676ac4007ec087c3d5326",
+      "axioms": [
+        "Classical.choice",
+        "Quot.sound",
+        "propext"
+      ]
+    },
+    "Orthemology.Tranche2.FiniteQuery.prefixInput": {
+      "type_sha256": "ec4c3e5f624c640dcc1d87b094a6c9df75c911fc9246955451feb262a6243a05",
+      "axioms": []
+    },
+    "Orthemology.Tranche2.FiniteQuery.measurable_prefixInput": {
+      "type_sha256": "929cf33eff9536a49698255b40ec9e31aa4a8caf946e317ea65a692f460be06e",
+      "axioms": [
+        "Classical.choice",
+        "Quot.sound",
+        "propext"
+      ]
+    },
+    "Orthemology.Tranche2.FiniteQuery.finiteTrajectory": {
+      "type_sha256": "86d2e3a4596dd1634776786f333efbbd49f81ea5e315bd947962f5fa131d2c6d",
+      "axioms": []
+    },
+    "Orthemology.Tranche2.FiniteQuery.measurable_finiteTrajectory": {
+      "type_sha256": "faf2e0ba200f6370c945ece1f9d123c8530ae270cb32b4da11f5d04c786403fa",
+      "axioms": [
+        "Classical.choice",
+        "Quot.sound",
+        "propext"
+      ]
+    },
+    "Orthemology.Tranche2.FiniteQuery.bounded_event_prefix": {
+      "type_sha256": "e36c923b6486f963648b2dbfb7a6aa6101df08ee58ad753caf77be7c477dacd3",
+      "axioms": [
+        "Quot.sound",
+        "propext"
+      ]
+    },
+    "Orthemology.Tranche2.FiniteQuery.trajectory_prefix_on_bounded": {
+      "type_sha256": "6052d6db7f0c4adef123f631ed6cd7b15dbf4361767b81f7a6a69f1a92628062",
+      "axioms": [
+        "Quot.sound",
+        "propext"
+      ]
+    },
+    "Orthemology.Tranche2.FiniteQuery.restricted_observable_factorisation": {
+      "type_sha256": "622e866186a872b21d3fe3de79cb209a2ef8a84c7a7082d20816161c70c80db5",
+      "axioms": [
+        "Classical.choice",
+        "Quot.sound",
+        "propext"
+      ]
+    },
+    "Orthemology.Tranche2.FiniteQuery.absolutelyContinuous_of_singletons": {
+      "type_sha256": "62ee3be84d9e3e38ab3576fc9960ff72c0460665df39d10d86ebe7e0a673839f",
+      "axioms": [
+        "Classical.choice",
+        "Quot.sound",
+        "propext"
+      ]
+    },
+    "Orthemology.Tranche2.FiniteQuery.prefixBits": {
+      "type_sha256": "444e3b6702e45abab628c4b94a87fe84c6ec7fc64f58bfc9589e973cc7770144",
+      "axioms": []
+    },
+    "Orthemology.Tranche2.FiniteQuery.measurable_prefixBits": {
+      "type_sha256": "5ae3464608fcf3f7153008eba572dca462f9c261633041c370fae7e330159c40",
+      "axioms": [
+        "Classical.choice",
+        "Quot.sound",
+        "propext"
+      ]
+    },
+    "Orthemology.Tranche2.FiniteQuery.traceLaw": {
+      "type_sha256": "597b3befa5b3304005d5d209700fbe7d84ed126f1f4e1227ed2962c36db68080",
+      "axioms": [
+        "Classical.choice",
+        "Quot.sound",
+        "propext"
+      ]
+    },
+    "Orthemology.Tranche2.FiniteQuery.input_prefix_map": {
+      "type_sha256": "99d083c589c9b4e38882541d3c0c3643030c87e22dcd5aae22a47308541f3fa2",
+      "axioms": [
+        "Classical.choice",
+        "Quot.sound",
+        "propext"
+      ]
+    },
+    "Orthemology.Tranche2.FiniteQuery.bounded_trace_law_factorisation": {
+      "type_sha256": "b390b032c91bb7a5f8f54a4daaf8c8753043a0e0cf2b80c3d57f77cc96a939fe",
+      "axioms": [
+        "Classical.choice",
+        "Quot.sound",
+        "propext"
+      ]
+    },
+    "Orthemology.Tranche2.FiniteQuery.bounded_trace_domination": {
+      "type_sha256": "f1478dea03a0c1030fd8f608e4755ed5df6fe76f23a6be7e59b03243e3969b20",
+      "axioms": [
+        "Classical.choice",
+        "Quot.sound",
+        "propext"
+      ]
+    },
+    "Orthemology.Tranche2.FiniteQuery.restrict_iUnion_domination": {
+      "type_sha256": "48b850cb7a599f9e5da30540148e1b36659b3103d0f1274ee41620b9984092c5",
+      "axioms": [
+        "Classical.choice",
+        "Quot.sound",
+        "propext"
+      ]
+    },
+    "Orthemology.Tranche2.FiniteQuery.finiteQueryTrace": {
+      "type_sha256": "4bf202e7ff53f13723f5da3cd27e81287dbf8e6c503e42764d72cfc3c48afb46",
+      "axioms": []
+    },
+    "Orthemology.Tranche2.FiniteQuery.measurable_finiteQueryTrace": {
+      "type_sha256": "0d1526c6c8e4875c1f476805277bd553ca6a8c0b39f7820dc31a2498c8ebf8e6",
+      "axioms": [
+        "Classical.choice",
+        "Quot.sound",
+        "propext"
+      ]
+    },
+    "Orthemology.Tranche2.FiniteQuery.finite_query_trace_domination": {
+      "type_sha256": "3a771ba68ece244c6f2c9372124440de15bf0430d96a9f9e11e2aefa090f712a",
+      "axioms": [
+        "Classical.choice",
+        "Quot.sound",
+        "propext"
+      ]
+    },
+    "Orthemology.Tranche2.FiniteQuery.fairBit": {
+      "type_sha256": "1b30fe6967515c52fe79228e0f7ae406311b2165fd297a2874ab62c8771371ad",
+      "axioms": [
+        "Classical.choice",
+        "Quot.sound",
+        "propext"
+      ]
+    },
+    "Orthemology.Tranche2.FiniteQuery.fairBit_singleton": {
+      "type_sha256": "f2668d0a105a6a7503890915cc19b5502098b1b9f9a3281a252f058ce47938e7",
+      "axioms": [
+        "Classical.choice",
+        "Quot.sound",
+        "propext"
+      ]
+    },
+    "Orthemology.Tranche2.FiniteQuery.fairOracle": {
+      "type_sha256": "2abd3ceeb4149facc1dd31444e3975da1b8886dcf850d8e8725743b11597832e",
+      "axioms": [
+        "Classical.choice",
+        "Quot.sound",
+        "propext"
+      ]
+    },
+    "Orthemology.Tranche2.FiniteQuery.prefixBits_singleton_preimage": {
+      "type_sha256": "539f5974b0f61d2d4cb51b6d2c998661c6b30a07745a7408615dd2f082c9fbf3",
+      "axioms": [
+        "Classical.choice",
+        "Quot.sound",
+        "propext"
+      ]
+    },
+    "Orthemology.Tranche2.FiniteQuery.fairOracle_prefix_mass": {
+      "type_sha256": "979b4bc6b9bfb5e2a5a39dd0e8067a0d2490f8f32b60e0b336263eaf005b9c66",
+      "axioms": [
+        "Classical.choice",
+        "Quot.sound",
+        "propext"
+      ]
+    },
+    "Orthemology.Tranche2.FiniteQuery.fairOracle_prefix_nonzero": {
+      "type_sha256": "ca0ad3e7ff85ebf674087178e994af02e117011cbe2320b93fb97e6b9bd2f88b",
+      "axioms": [
+        "Classical.choice",
+        "Quot.sound",
+        "propext"
+      ]
+    },
+    "Orthemology.Tranche2.FiniteQuery.finite_query_trace_fair_domination": {
+      "type_sha256": "af71caea07a6bfa969331688dfbd985328de73ca06afc2c9b21f8db98148c219",
+      "axioms": [
+        "Classical.choice",
+        "Quot.sound",
+        "propext"
+      ]
+    },
+    "Orthemology.Tranche2.FiniteQuery.countable_positive_causal_finite_query_repairs": {
+      "type_sha256": "13f17a2df5f678231e4c7054e22a4ffca776fd5b66d01557bf6270243268a029",
+      "axioms": [
+        "Classical.choice",
+        "Quot.sound",
+        "propext"
+      ]
+    },
+    "Orthemology.Tranche2.IntegratedBinary.coin": {
+      "type_sha256": "911d2b82fa3d579ae0e8567496f94682f7bc23532f91d2fd7a2dada1ca9b35cd",
+      "axioms": [
+        "Classical.choice",
+        "Quot.sound",
+        "propext"
+      ]
+    },
+    "Orthemology.Tranche2.IntegratedBinary.coinMeasure": {
+      "type_sha256": "38ad71f2f83942a69e992f4949cc3fb913bfe3ed938967d1d37cc70b069605d4",
+      "axioms": [
+        "Classical.choice",
+        "Quot.sound",
+        "propext"
+      ]
+    },
+    "Orthemology.Tranche2.IntegratedBinary.coinMeasure_real": {
+      "type_sha256": "d3861fad4e7a1e34cbb163b3f1708d484c861a5cd0de68ca269bef61c6a76487",
+      "axioms": [
+        "Classical.choice",
+        "Quot.sound",
+        "propext"
+      ]
+    },
+    "Orthemology.Tranche2.IntegratedBinary.Experiment": {
+      "type_sha256": "d0b3d8cbdaae789ead78876aead2e9df592c21d2279b8160499d43d478967526",
+      "axioms": []
+    },
+    "Orthemology.Tranche2.IntegratedBinary.experimentLaw": {
+      "type_sha256": "ce93b64a72796536ed10559fd767f5549909c9acbcf8499a081904a190efeef5",
+      "axioms": [
+        "Classical.choice",
+        "Quot.sound",
+        "propext"
+      ]
+    },
+    "Orthemology.Tranche2.IntegratedBinary.observation": {
+      "type_sha256": "c28bb802042cebfb4a4b0f5896ec8be5798ef6d749334e110d678e6081ce9558",
+      "axioms": []
+    },
+    "Orthemology.Tranche2.IntegratedBinary.selectedRepair": {
+      "type_sha256": "8bf1eecb36bb7ae240345a56529dcb9d92beaa21d6b4942ffdbbe149fee66d3c",
+      "axioms": [
+        "Classical.choice",
+        "Quot.sound",
+        "propext"
+      ]
+    },
+    "Orthemology.Tranche2.IntegratedBinary.generated_experiment_eventually_repairs": {
+      "type_sha256": "30684d9228e787662be0711dea89d23259e53bcc1acda1c284ddeeb715ed1230",
+      "axioms": [
+        "Classical.choice",
+        "Quot.sound",
+        "propext"
+      ]
+    },
+    "Orthemology.Tranche2.FiniteAlphabetQuery.advance": {
+      "type_sha256": "5c37c96b15a788537b5783e76d87ef7f95d5f4da82aab42e00c7dfbd8ee7f09b",
+      "axioms": []
+    },
+    "Orthemology.Tranche2.FiniteAlphabetQuery.run": {
+      "type_sha256": "fa32f7ccc0444b787c50b79b10536f95fdd26c556ff3d6d5111f83999b38ff02",
+      "axioms": []
+    },
+    "Orthemology.Tranche2.FiniteAlphabetQuery.Bounded": {
+      "type_sha256": "25901c820862b3d147df4d20c993e6b63fc6bee56fddda0b4c85b282dcc8ca43",
+      "axioms": []
+    },
+    "Orthemology.Tranche2.FiniteAlphabetQuery.bounded_prefix_locality": {
+      "type_sha256": "be3889e88055fe1d1e83c1e098a1a01cc8186cc137ac004a95727fef75b84c4a",
+      "axioms": [
+        "propext"
+      ]
+    },
+    "Orthemology.Tranche2.FiniteAlphabetQuery.bounded_prefix_equivalence": {
+      "type_sha256": "859ed52f247589ae25fe0bd09f089a2d3624a83cd0f87d255839730c3d9e32be",
+      "axioms": [
+        "propext"
+      ]
+    },
+    "Orthemology.Tranche2.FiniteAlphabetQuery.prefixOracle": {
+      "type_sha256": "0567775cc896b4f478e77979b047f8c224259199f457b1a6394a2168de045e02",
+      "axioms": []
+    },
+    "Orthemology.Tranche2.FiniteAlphabetQuery.prefixOracle_agrees": {
+      "type_sha256": "49e4da25368a89f664d1770eb7b67963bea8dfe899ee9d29cd11df0f18e29ebb",
+      "axioms": [
+        "propext"
+      ]
+    },
+    "Orthemology.Tranche2.FiniteAlphabetQuery.bounded_trace_factorisation": {
+      "type_sha256": "a87c1b5d49b6ce2838952697536e1c089d8bcce16da4fcc347198900a3d7d0b7",
+      "axioms": [
+        "Quot.sound",
+        "propext"
+      ]
+    },
+    "Orthemology.Tranche2.FiniteAlphabetQuery.counter_monotone": {
+      "type_sha256": "6e06e538a4f167d027584b7162b358e17e9e513e2bc6857037f4f2777ec06398",
+      "axioms": [
+        "Classical.choice",
+        "Quot.sound",
+        "propext"
+      ]
+    },
+    "Orthemology.Tranche2.FiniteAlphabetQuery.bounded_iff_eventually_no_query": {
+      "type_sha256": "bd938b44acdc7ae5bd9046bf07faa2f8b11ac2d6287fff6ac9dd70113695f5a8",
+      "axioms": [
+        "Classical.choice",
+        "Quot.sound",
+        "propext"
+      ]
+    },
+    "Orthemology.Tranche2.FiniteAlphabetQuery.Oracle": {
+      "type_sha256": "33a4749bf02cf9026ca5d03fc40a43cc384dffdfb87524c61dccd4f7d8a4b5d4",
+      "axioms": []
+    },
+    "Orthemology.Tranche2.FiniteAlphabetQuery.Trace": {
+      "type_sha256": "d606a53e5a89abaa85556df5b6b002a3215ef3acf2433b59e21014a5632a5731",
+      "axioms": []
+    },
+    "Orthemology.Tranche2.FiniteAlphabetQuery.measurable_advance_joint": {
+      "type_sha256": "c9a073e8646a75f9a4fd728c093cbd5f1f9197523dcad5df99b7eae604817b3d",
+      "axioms": [
+        "Classical.choice",
+        "Quot.sound",
+        "propext"
+      ]
+    },
+    "Orthemology.Tranche2.FiniteAlphabetQuery.measurable_run": {
+      "type_sha256": "5f6034b95e66b7adb158ee265cb57fe76519aa0fff4a64636f0d3281cffffcb7",
+      "axioms": [
+        "Classical.choice",
+        "Quot.sound",
+        "propext"
+      ]
+    },
+    "Orthemology.Tranche2.FiniteAlphabetQuery.measurable_trajectory": {
+      "type_sha256": "2e1447810f1d8388922395e7a0ed0b29f25f266a40f7218244e67b71eca5522c",
+      "axioms": [
+        "Classical.choice",
+        "Quot.sound",
+        "propext"
+      ]
+    },
+    "Orthemology.Tranche2.FiniteAlphabetQuery.boundedTrace": {
+      "type_sha256": "5a8b2b85d41c5bc6b13da91eef3530c64c57b46bed2a51ed899ddead3082bf1c",
+      "axioms": []
+    },
+    "Orthemology.Tranche2.FiniteAlphabetQuery.measurable_boundedTrace": {
+      "type_sha256": "c80e214491d92c0bb597a91952ad0553d81a5e4dffb7a2a6e5b9269bc565ad50",
+      "axioms": [
+        "Classical.choice",
+        "Quot.sound",
+        "propext"
+      ]
+    },
+    "Orthemology.Tranche2.FiniteAlphabetQuery.measurable_prefixOracle": {
+      "type_sha256": "fe8e55821f5d507d4c2dde7c9fd5c2a20f5b029b610eebb7de5237d283a9390d",
+      "axioms": [
+        "Classical.choice",
+        "Quot.sound",
+        "propext"
+      ]
+    },
+    "Orthemology.Tranche2.FiniteAlphabetQuery.prefixInput": {
+      "type_sha256": "0c4c34808deb52609edebf5ab76632c5bcd870983b6b9e0f226345726a040ea9",
+      "axioms": []
+    },
+    "Orthemology.Tranche2.FiniteAlphabetQuery.measurable_prefixInput": {
+      "type_sha256": "cd1e1c766321adcd69b69c0352db8d7b59bd0423f75c8b59ac76cfdabef2fba0",
+      "axioms": [
+        "Classical.choice",
+        "Quot.sound",
+        "propext"
+      ]
+    },
+    "Orthemology.Tranche2.FiniteAlphabetQuery.finiteTrajectory": {
+      "type_sha256": "4232884053c1fe2aa0739ad2d946f4130d8682c50f76b6ecf33c72092f4ec53d",
+      "axioms": []
+    },
+    "Orthemology.Tranche2.FiniteAlphabetQuery.measurable_finiteTrajectory": {
+      "type_sha256": "74835dca5b7768218b3bb2ce2df4487b3232b90e816f641f4ae25b3227cdb96f",
+      "axioms": [
+        "Classical.choice",
+        "Quot.sound",
+        "propext"
+      ]
+    },
+    "Orthemology.Tranche2.FiniteAlphabetQuery.bounded_event_prefix": {
+      "type_sha256": "943fd581f86194fe4c4ee55885487ce82e9ef0bebe03ab5e608e82234c3c3ed4",
+      "axioms": [
+        "Quot.sound",
+        "propext"
+      ]
+    },
+    "Orthemology.Tranche2.FiniteAlphabetQuery.trajectory_prefix_on_bounded": {
+      "type_sha256": "ba43d524191f52f1ec52dffd7b373fedb5ff90f752863361793da8592cc34141",
+      "axioms": [
+        "Quot.sound",
+        "propext"
+      ]
+    },
+    "Orthemology.Tranche2.FiniteAlphabetQuery.restricted_observable_factorisation": {
+      "type_sha256": "a47dacedea529d57cae416025a2bf92e29c01ed89407aab5acf24dc5f53b95c4",
+      "axioms": [
+        "Classical.choice",
+        "Quot.sound",
+        "propext"
+      ]
+    },
+    "Orthemology.Tranche2.FiniteAlphabetQuery.absolutelyContinuous_of_singletons": {
+      "type_sha256": "5bb2ab59d623c3b4c7e4150dc972eb76197b07845f7dd99b2931bb3550ef9516",
+      "axioms": [
+        "Classical.choice",
+        "Quot.sound",
+        "propext"
+      ]
+    },
+    "Orthemology.Tranche2.FiniteAlphabetQuery.prefixSymbols": {
+      "type_sha256": "627b170f98e23b06c3b72ab8ff6fff21e363d75e6d22b812b18cbb531342d551",
+      "axioms": []
+    },
+    "Orthemology.Tranche2.FiniteAlphabetQuery.measurable_prefixSymbols": {
+      "type_sha256": "697ce5eddf66177e1313d51c4c0453259fd4d91668cb360302e1239dce3d452c",
+      "axioms": [
+        "Classical.choice",
+        "Quot.sound",
+        "propext"
+      ]
+    },
+    "Orthemology.Tranche2.FiniteAlphabetQuery.traceLaw": {
+      "type_sha256": "cd3125f3f02714be404f12dbc8637f9d05f3f77c4631c67dfccff15a58028add",
+      "axioms": [
+        "Classical.choice",
+        "Quot.sound",
+        "propext"
+      ]
+    },
+    "Orthemology.Tranche2.FiniteAlphabetQuery.input_prefix_map": {
+      "type_sha256": "830d02cf2180d36e977211c68395864b8b6789f14a9c81c3e434b802abbd219d",
+      "axioms": [
+        "Classical.choice",
+        "Quot.sound",
+        "propext"
+      ]
+    },
+    "Orthemology.Tranche2.FiniteAlphabetQuery.bounded_trace_law_factorisation": {
+      "type_sha256": "fd910976786cd3e7c627023d144dc428f8c830a9347defc50f521f5e439cfda8",
+      "axioms": [
+        "Classical.choice",
+        "Quot.sound",
+        "propext"
+      ]
+    },
+    "Orthemology.Tranche2.FiniteAlphabetQuery.bounded_trace_domination": {
+      "type_sha256": "b751ce71d204578b7d2782275a28afaf0c789f271650924988e625aa41e515ca",
+      "axioms": [
+        "Classical.choice",
+        "Quot.sound",
+        "propext"
+      ]
+    },
+    "Orthemology.Tranche2.FiniteAlphabetQuery.restrict_iUnion_domination": {
+      "type_sha256": "a0821f44a1cbd58cc9805c5f034249a20d9def97530482d8bb258a53679c5da2",
+      "axioms": [
+        "Classical.choice",
+        "Quot.sound",
+        "propext"
+      ]
+    },
+    "Orthemology.Tranche2.FiniteAlphabetQuery.finiteQueryTrace": {
+      "type_sha256": "2a97f1842f773659bfa7fb347f5f73699bd6a42d50d5285ca0b4e9dca7ef5514",
+      "axioms": []
+    },
+    "Orthemology.Tranche2.FiniteAlphabetQuery.measurable_finiteQueryTrace": {
+      "type_sha256": "8d91352f4a0e333242d780dde94b60de6c8729e0f3ae73f347e9d67558dda717",
+      "axioms": [
+        "Classical.choice",
+        "Quot.sound",
+        "propext"
+      ]
+    },
+    "Orthemology.Tranche2.FiniteAlphabetQuery.finite_query_trace_domination": {
+      "type_sha256": "87687f569f8d60d6fb84183eb2559e2713acb6b4b786631ad8d657e558f6227b",
+      "axioms": [
+        "Classical.choice",
+        "Quot.sound",
+        "propext"
+      ]
+    },
+    "Orthemology.Tranche2.FiniteAlphabetQuery.iidOracle": {
+      "type_sha256": "f9fddbaaf80e605a13f5f59edb376fe9210a6460f261f23bd273658e01c72faf",
+      "axioms": [
+        "Classical.choice",
+        "Quot.sound",
+        "propext"
+      ]
+    },
+    "Orthemology.Tranche2.FiniteAlphabetQuery.prefixSymbols_singleton_preimage": {
+      "type_sha256": "40ebd2954acfdb2cb816cdd37192145c4bfef10377fdda52a149d3a0e0c7ac40",
+      "axioms": [
+        "Classical.choice",
+        "Quot.sound",
+        "propext"
+      ]
+    },
+    "Orthemology.Tranche2.FiniteAlphabetQuery.iidOracle_prefix_nonzero": {
+      "type_sha256": "17feaab6ab44746994f6a549d7535cf975852d3f423805f90ff7a5d93381adf5",
+      "axioms": [
+        "Classical.choice",
+        "Quot.sound",
+        "propext"
+      ]
+    },
+    "Orthemology.Tranche2.FiniteAlphabetQuery.finite_query_domination_by_iid_rival": {
+      "type_sha256": "16e9f533f0ce09584f16168044497923d1ba5b0c8accbf1d0ca0ae6c70e68975",
+      "axioms": [
+        "Classical.choice",
+        "Quot.sound",
+        "propext"
+      ]
+    },
+    "Orthemology.Tranche2.FiniteAlphabetQuery.positive_finite_query_event_transfers": {
+      "type_sha256": "97fc3ebd7ed384c709fe091992333d5eac17c75365b3efeb85c96013236483a4",
+      "axioms": [
+        "Classical.choice",
+        "Quot.sound",
+        "propext"
+      ]
+    },
+    "Orthemology.Tranche2.IntegratedBinary.alpha": {
+      "type_sha256": "ac33005d74b51328e146483eaca7f02c19f7fe3ebf7b79e3bc7d0e96d54deb4b",
+      "axioms": [
+        "Classical.choice",
+        "Quot.sound",
+        "propext"
+      ]
+    },
+    "Orthemology.Tranche2.IntegratedBinary.repair": {
+      "type_sha256": "a900eec324c62d327196e5d2cc3c0d8ffd18997e5188839e49e39e4afe553611",
+      "axioms": [
+        "Classical.choice",
+        "Quot.sound",
+        "propext"
+      ]
+    },
+    "Orthemology.Tranche2.IntegratedBinary.law": {
+      "type_sha256": "1f729bf9b7ed57265c8f538bfc402b29ec1b63e9fe83671050cc0a56a305299b",
+      "axioms": [
+        "Classical.choice",
+        "Quot.sound",
+        "propext"
+      ]
+    },
+    "Orthemology.Tranche2.IntegratedBinary.support": {
+      "type_sha256": "7c6acc0465fa6a62680cac2f3a5c460b92017bf4c8ea7e6b3ba8a0d185eb8671",
+      "axioms": [
+        "Quot.sound",
+        "propext"
+      ]
+    },
+    "Orthemology.Tranche2.IntegratedBinary.good": {
+      "type_sha256": "0bcd5a764ccf66631240def0c4d2ccef4df87a20f713d244b9dc1b2766f1c3db",
+      "axioms": [
+        "Classical.choice",
+        "Quot.sound",
+        "propext"
+      ]
+    },
+    "Orthemology.Tranche2.IntegratedBinary.alpha_bounds": {
+      "type_sha256": "1e9a5030e43a04bc6a485b28f63d85842b9eb0bd25b44fff8a7040f174c1322d",
+      "axioms": [
+        "Classical.choice",
+        "Quot.sound",
+        "propext"
+      ]
+    },
+    "Orthemology.Tranche2.IntegratedBinary.exact_action_good": {
+      "type_sha256": "7b49584834979e60a93310f34ea563107f4db1c618604f6fa4d7f2c7465130a9",
+      "axioms": [
+        "Classical.choice",
+        "Quot.sound",
+        "propext"
+      ]
+    },
+    "Orthemology.Tranche2.IntegratedBinary.good_iff_same": {
+      "type_sha256": "97dc0558a4c975330b7c7dfcdfeff4ead1b83db8e20ef912013f272b5f13f481",
+      "axioms": [
+        "Classical.choice",
+        "Quot.sound",
+        "propext"
+      ]
+    },
+    "Orthemology.Tranche2.IntegratedBinary.good_eq_support": {
+      "type_sha256": "3b875d6d306daee1d0bb79884065d6d954778b5c5f007d8adadf54e59568770e",
+      "axioms": [
+        "Classical.choice",
+        "Quot.sound",
+        "propext"
+      ]
+    },
+    "Orthemology.Tranche2.IntegratedBinary.law_positive": {
+      "type_sha256": "807ef8506e3e035f9ea60697c81f052ca5ed110405c601d59ea21ee0cb5f8973",
+      "axioms": [
+        "Classical.choice",
+        "Quot.sound",
+        "propext"
+      ]
+    },
+    "Orthemology.Tranche2.IntegratedBinary.law_normalised": {
+      "type_sha256": "c8ea17cd5421126cd24fdb638ac983bfa4c4c78f678a284d7ac3cba22a50c026",
+      "axioms": [
+        "Classical.choice",
+        "Quot.sound",
+        "propext"
+      ]
+    },
+    "Orthemology.Tranche2.IntegratedBinary.law_identifies": {
+      "type_sha256": "bdf6d123719682a8691ba0b123d9686ac83a33717bf8596cfbcfeba8ea9bdf90",
+      "axioms": [
+        "Classical.choice",
+        "Quot.sound",
+        "propext"
+      ]
+    },
+    "Orthemology.Tranche2.IntegratedBinary.supports_self_verifying": {
+      "type_sha256": "91f4ac09c0f3780cc736e329fc5592e50eb8c12ce5ec0b524402b0d990155c92",
+      "axioms": [
+        "Classical.choice",
+        "Quot.sound",
+        "propext"
+      ]
+    },
+    "Orthemology.Tranche2.IntegratedBinary.canonical_repairs_eventually_good": {
+      "type_sha256": "19379359dc04a8b4d6ec20031f4f1bb6c5cc1a02a667e30fa5182aa68e5fd222",
+      "axioms": [
+        "Classical.choice",
+        "Quot.sound",
+        "propext"
+      ]
+    },
+    "Orthemology.Tranche2.PhysicalFlattening.prefixActions": {
+      "type_sha256": "90b41f60392c853012fb17b8a91d9a8a00bba5fdb32b963f18e22d1f5c767f52",
+      "axioms": []
+    },
+    "Orthemology.Tranche2.PhysicalFlattening.prefixActions_zero": {
+      "type_sha256": "7299a41f50b3b3429d983f2570efea16e73b6e4f0aed20191b1ec0ab069a3cde",
+      "axioms": []
+    },
+    "Orthemology.Tranche2.PhysicalFlattening.prefixActions_succ": {
+      "type_sha256": "b03d25dc053f8dadf8a4d9fa4a4a3bed3d6e607bdd5ce049c964b07640bc5c1e",
+      "axioms": [
+        "propext"
+      ]
+    },
+    "Orthemology.Tranche2.PhysicalFlattening.prefixActions_length": {
+      "type_sha256": "17aa01b303edbb323f82ca45c128cdb494eb49e3cbbbd4757415d2781a2aabfc",
+      "axioms": [
+        "Classical.choice",
+        "Quot.sound",
+        "propext"
+      ]
+    },
+    "Orthemology.Tranche2.PhysicalFlattening.prefix_getD_eq_flatten": {
+      "type_sha256": "ff1757ea13f7324505a918b8a6720b792a853518cf7c65d5ec68b5f70d368bc6",
+      "axioms": [
+        "Classical.choice",
+        "Quot.sound",
+        "propext"
+      ]
+    },
+    "Orthemology.Tranche2.PhysicalFlattening.decode": {
+      "type_sha256": "6f370f91db64198b479daedd5881e5cc736827e3e7b9aa76c143e48050cbce20",
+      "axioms": []
+    },
+    "Orthemology.Tranche2.PhysicalFlattening.decode_eq_flatten": {
+      "type_sha256": "563ed2839f8e0ad37c2554d2fe6ff27d651a76426d0f2bb626023a4e3ef84ad9",
+      "axioms": [
+        "Classical.choice",
+        "Quot.sound",
+        "propext"
+      ]
+    },
+    "Orthemology.Tranche2.PhysicalFlattening.prefixActions_congr": {
+      "type_sha256": "635685a768ce8ea4ed93dbdb6c71d9998171b59229acff0e3de8061c3f6e5e71",
+      "axioms": [
+        "Quot.sound",
+        "propext"
+      ]
+    },
+    "Orthemology.Tranche2.PhysicalFlattening.decode_prefix_local": {
+      "type_sha256": "812975e8fd2ae9957931b1935303483896f6e067e8e1e38d99fb1b741da02e46",
+      "axioms": [
+        "Quot.sound",
+        "propext"
+      ]
+    },
+    "Orthemology.Tranche2.PhysicalFlattening.decode_measurable": {
+      "type_sha256": "8ee92677340dc978b81416133aa102882538ca453bc7fe9d49ca1d4588aec59d",
+      "axioms": [
+        "Classical.choice",
+        "Quot.sound",
+        "propext"
+      ]
+    },
+    "Orthemology.Tranche2.PhysicalFlattening.prefixLength": {
+      "type_sha256": "1af1d6db61e3609b3c57bb720741539259a671348fccd3eb58cfbc72ccb7e6ff",
+      "axioms": [
+        "Classical.choice",
+        "Quot.sound",
+        "propext"
+      ]
+    },
+    "Orthemology.Tranche2.PhysicalFlattening.prefixLength_zero": {
+      "type_sha256": "5779660929c4140a9f7906fc0efb2377325525e9ea628d5d670dc653dbbb65da",
+      "axioms": [
+        "Classical.choice",
+        "Quot.sound",
+        "propext"
+      ]
+    },
+    "Orthemology.Tranche2.PhysicalFlattening.prefixLength_succ": {
+      "type_sha256": "22044cf6b8a4b431fcda616cb64d2f3f4175e4a0e107c7b170683c1ce2da2339",
+      "axioms": [
+        "Classical.choice",
+        "Quot.sound",
+        "propext"
+      ]
+    },
+    "Orthemology.Tranche2.PhysicalFlattening.prefixLength_mono": {
+      "type_sha256": "d0502ccb07c9e0b0c51a7ff1a812a8ff834c3b4629f5c7ab477a56b40e01caa5",
+      "axioms": [
+        "Classical.choice",
+        "Quot.sound",
+        "propext"
+      ]
+    },
+    "Orthemology.Tranche2.PhysicalFlattening.Unbounded": {
+      "type_sha256": "e26961d581651c12393e6288849cd7d103622e5abbe6d2f366ab12cce811077f",
+      "axioms": [
+        "Classical.choice",
+        "Quot.sound",
+        "propext"
+      ]
+    },
+    "Orthemology.Tranche2.PhysicalFlattening.blockIndex": {
+      "type_sha256": "c629c23beeb6165634bf1f8b55e462e5d86cd5ddbe25225402dba335462594f3",
+      "axioms": [
+        "Classical.choice",
+        "Quot.sound",
+        "propext"
+      ]
+    },
+    "Orthemology.Tranche2.PhysicalFlattening.blockIndex_upper": {
+      "type_sha256": "e4dfa2c684ecd3493cb89ab9432f44312c6df26dc26554b8ac163ebc10151a68",
+      "axioms": [
+        "Classical.choice",
+        "Quot.sound",
+        "propext"
+      ]
+    },
+    "Orthemology.Tranche2.PhysicalFlattening.blockIndex_lower": {
+      "type_sha256": "1324a3dd05e96d3ca682220fac41ce4b3f8ba4ba0e3fa8e83c8bc91b3e45cced",
+      "axioms": [
+        "Classical.choice",
+        "Quot.sound",
+        "propext"
+      ]
+    },
+    "Orthemology.Tranche2.PhysicalFlattening.offset_lt_length": {
+      "type_sha256": "6264ee65dc67607d29a3f20b7bdab2bd7cadaf33afae458cf76480c585a787bf",
+      "axioms": [
+        "Classical.choice",
+        "Quot.sound",
+        "propext"
+      ]
+    },
+    "Orthemology.Tranche2.PhysicalFlattening.flatten": {
+      "type_sha256": "13de4ff35d07b379cb785843f84b83caf2cff2b2f62e6e9b21d120073931c721",
+      "axioms": [
+        "Classical.choice",
+        "Quot.sound",
+        "propext"
+      ]
+    },
+    "Orthemology.Tranche2.PhysicalFlattening.flatten_mem_block": {
+      "type_sha256": "9a34c4709aa87b449a91de050604bbd802f689960c500dddb49f4101f6af2145",
+      "axioms": [
+        "Classical.choice",
+        "Quot.sound",
+        "propext"
+      ]
+    },
+    "Orthemology.Tranche2.PhysicalFlattening.late_index": {
+      "type_sha256": "8aad81599ae578ddce1dcbaebe8c6e4292b40b78f8a5c9901f01e5d7ff0d3575",
+      "axioms": [
+        "Classical.choice",
+        "Quot.sound",
+        "propext"
+      ]
+    },
+    "Orthemology.Tranche2.PhysicalFlattening.eventually_flatten_good": {
+      "type_sha256": "0585a8bf730616a1751fe5da450039744f11e38336be75bad4f666d8a6e18fbe",
+      "axioms": [
+        "Classical.choice",
+        "Quot.sound",
+        "propext"
+      ]
+    },
+    "Orthemology.Tranche2.PhysicalFlattening.index_le_prefixLength": {
+      "type_sha256": "cd159fa75a1633f640bdfc8ebcf0b1ca4c2c55d12d435c7e3d510218376d69b0",
+      "axioms": [
+        "Classical.choice",
+        "Quot.sound",
+        "propext"
+      ]
+    },
+    "Orthemology.Tranche2.PhysicalFlattening.unbounded_of_nonempty": {
+      "type_sha256": "12966eb11a129b3b5513bbc808c1f22e62ace9a6264911647549244388f12412",
+      "axioms": [
+        "Classical.choice",
+        "Quot.sound",
+        "propext"
+      ]
+    },
+    "Orthemology.Tranche2.PhysicalFlattening.blockIndex_le_time": {
+      "type_sha256": "e356b28aec21292aa352d6f797089f9f3964a5306cc34a03615ae4d914af4aed",
+      "axioms": [
+        "Classical.choice",
+        "Quot.sound",
+        "propext"
+      ]
+    },
+    "Orthemology.Tranche2.PhysicalFlattening.tail_prefix_lower": {
+      "type_sha256": "f8e28ffb48e981fb2e3a83a80fd328637ecb028cfdf8da2ca57927ac6717b284",
+      "axioms": [
+        "Classical.choice",
+        "Quot.sound",
+        "propext"
+      ]
+    },
+    "Orthemology.Tranche2.PhysicalFlattening.unbounded_of_eventually_nonempty": {
+      "type_sha256": "a2ca4b5e56236f80ed073041aaaf3a8925e2e189ac5e4eeda4e2dd8ec4b07fa5",
+      "axioms": [
+        "Classical.choice",
+        "Quot.sound",
+        "propext"
+      ]
+    },
+    "Orthemology.Tranche2.PhysicalFlattening.prefixLength_congr": {
+      "type_sha256": "7895786897bf0e61cb8134b8773aa2ff4b88f1658891f9ae2cf0a39b3ac2711b",
+      "axioms": [
+        "Classical.choice",
+        "Quot.sound",
+        "propext"
+      ]
+    },
+    "Orthemology.Tranche2.PhysicalFlattening.blockIndex_prefix_local": {
+      "type_sha256": "c3eb97571ebfad83f287ab31d0d583298126faf7ade4bb3ebe95016be9f0bbb6",
+      "axioms": [
+        "Classical.choice",
+        "Quot.sound",
+        "propext"
+      ]
+    },
+    "Orthemology.Tranche2.infinite_product_coordinate_law": {
+      "type_sha256": "3ea1687720ebbc0eba1a04bf95b5e5b6a9a7456ff8006f5fc57413d8eb4c3d9a",
+      "axioms": [
+        "Classical.choice",
+        "Quot.sound",
+        "propext"
+      ]
+    },
+    "Orthemology.Tranche2.infinite_product_coordinates_independent": {
+      "type_sha256": "4c1d771bce72a8108fbd769ca57fb845df434d8710ac1d071266c92b1a8e3cd3",
+      "axioms": [
+        "Classical.choice",
+        "Quot.sound",
+        "propext"
+      ]
+    },
+    "Orthemology.Tranche2.BinaryGood": {
+      "type_sha256": "c6fabb9a786f095bb47cd2ee31b43c298618e1bb4e166b14aa65ff6168eda2df",
+      "axioms": [
+        "Classical.choice",
+        "Quot.sound",
+        "propext"
+      ]
+    },
+    "Orthemology.Tranche2.binary_symmetric_success_disjoint": {
+      "type_sha256": "9d3e281ef7c3154dd3edef5368a4aef4e5b0f5dcb23ddfcd6bf395c46286a60c",
+      "axioms": [
+        "Classical.choice",
+        "Quot.sound",
+        "propext"
+      ]
+    },
+    "Orthemology.Tranche2.repairFailure": {
+      "type_sha256": "941942d3530999b5b29fc59549207372659134b1d425ff8be4e2f376a3bf3a19",
+      "axioms": [
+        "Classical.choice",
+        "Quot.sound",
+        "propext"
+      ]
+    },
+    "Orthemology.Tranche2.bernoulli_repair_lower_bound": {
+      "type_sha256": "6c11ba693e8af8f0603aefbc895965d568704aa3c772e6cf981733dfd0eb1a16",
+      "axioms": [
+        "Classical.choice",
+        "Quot.sound",
+        "propext"
+      ]
+    },
+    "Orthemology.Tranche2.measurable_binaryGood": {
+      "type_sha256": "9003eccd0cbfba5137a57bb1670d211eb1b197ff593d090e4b2bd6a99b50960d",
+      "axioms": [
+        "Classical.choice",
+        "Quot.sound",
+        "propext"
+      ]
+    },
+    "Orthemology.Tranche2.randomizedRepairFailure": {
+      "type_sha256": "83cc988e3bf8384d5cc86d5aafbce7971cade5f937e0a7d0b364c607f0ae19e6",
+      "axioms": [
+        "Classical.choice",
+        "Quot.sound",
+        "propext"
+      ]
+    },
+    "Orthemology.Tranche2.randomized_acceptance_disjoint": {
+      "type_sha256": "9295abcc777b0ae76b801e3a1f0c41e2d797cdc271fe6efc543e1b0008d950ad",
+      "axioms": [
+        "Classical.choice",
+        "Quot.sound",
+        "propext"
+      ]
+    },
+    "Orthemology.Tranche2.bernoulli_randomized_repair_lower_bound": {
+      "type_sha256": "f5df3c5fe2988aa2fcd5f8aed8f81e466127ed0849e10cf76ed8b61021da8301",
+      "axioms": [
+        "Classical.choice",
+        "Quot.sound",
+        "propext"
+      ]
+    },
+    "Orthemology.Tranche2.eventual_binary_good_decodes": {
+      "type_sha256": "a9a4fd714bdb3e8c8175703ebf6f6ca72fd33a6fa4f5f0f5cb69af6304838bd0",
+      "axioms": [
+        "Classical.choice",
+        "Quot.sound",
+        "propext"
+      ]
+    },
+    "Orthemology.Tranche2.countable_positive_limit_values": {
+      "type_sha256": "941e6ff1a4a9128c8fd5f276d00ae6e5057cd19618c66927e42a081345a406ec",
+      "axioms": [
+        "Classical.choice",
+        "Quot.sound",
+        "propext"
+      ]
+    },
+    "Orthemology.Tranche2.countable_positive_eventual_binary_repairs": {
+      "type_sha256": "f079bafb002494e35ad94dd6f0c5ea00919d08742b3b5a17dd3418276431f095",
+      "axioms": [
+        "Classical.choice",
+        "Quot.sound",
+        "propext"
+      ]
+    },
+    "Orthemology.Tranche2.affinity": {
+      "type_sha256": "f23ef91ed4082cb4cf9613aeea1f2c7fcc1863c69e8f290752c91e4ad9a12389",
+      "axioms": [
+        "Classical.choice",
+        "Quot.sound",
+        "propext"
+      ]
+    },
+    "Orthemology.Tranche2.errorP": {
+      "type_sha256": "c51cb3a8a1940323171ba5014f1716df296b13726dc4eb8b8b8fea1a596195e4",
+      "axioms": [
+        "Classical.choice",
+        "Quot.sound",
+        "propext"
+      ]
+    },
+    "Orthemology.Tranche2.errorQ": {
+      "type_sha256": "5049c60e218769f7372304251995cb5290b4cfd38760cfe2513c95a2a00b24ee",
+      "axioms": [
+        "Classical.choice",
+        "Quot.sound",
+        "propext"
+      ]
+    },
+    "Orthemology.Tranche2.minimum_le_test_error": {
+      "type_sha256": "eeb2283a1f42a86005a925dd8f67b263cf7271da85a598174f032e6d79d0f38d",
+      "axioms": [
+        "Classical.choice",
+        "Quot.sound",
+        "propext"
+      ]
+    },
+    "Orthemology.Tranche2.sqrt_product_min_max": {
+      "type_sha256": "8f4aa769570a0c3947592f025d2dd9f6dae526fd0ba5d3cfeaebcd515864dd1f",
+      "axioms": [
+        "Classical.choice",
+        "Quot.sound",
+        "propext"
+      ]
+    },
+    "Orthemology.Tranche2.affinity_sq_le_twice_error_sum": {
+      "type_sha256": "5d419af8aa818a82a896ece3373b86a7b5d1fccccdd67762a1fcfc175d6d59c9",
+      "axioms": [
+        "Classical.choice",
+        "Quot.sound",
+        "propext"
+      ]
+    },
+    "Orthemology.Tranche2.affinity_error_lower_bound": {
+      "type_sha256": "046cffca1f5ff784c8eec4748707979cb0dcd7c54e8da99cb090c8ea3779e250",
+      "axioms": [
+        "Classical.choice",
+        "Quot.sound",
+        "propext"
+      ]
+    },
+    "Orthemology.Tranche2.affinity_nonneg": {
+      "type_sha256": "7e3deea9fd5bfbe5dce75d6aa628daedbf387de9975a8b989e4d723eaba60b18",
+      "axioms": [
+        "Classical.choice",
+        "Quot.sound",
+        "propext"
+      ]
+    },
+    "Orthemology.Tranche2.affinity_tensor": {
+      "type_sha256": "ea10dbf4ade7aaa00c959fb4ebebf07de52bede5fdce4ec5d908faea2c2816a3",
+      "axioms": [
+        "Classical.choice",
+        "Quot.sound",
+        "propext"
+      ]
+    },
+    "Orthemology.Tranche2.Bits": {
+      "type_sha256": "8b2ca94647fe156991d8e94fd297f448db40dfce065405e3974657e9c399eaf7",
+      "axioms": []
+    },
+    "Orthemology.Tranche2.coinMass": {
+      "type_sha256": "2f3e5e3594da140beabd4034da52a5363700137ea04779bbe5435409a7f4d8d5",
+      "axioms": [
+        "Classical.choice",
+        "Quot.sound",
+        "propext"
+      ]
+    },
+    "Orthemology.Tranche2.bernoulliMass": {
+      "type_sha256": "4a662a1d16028046e9b97cb0a2beb99fa4e19c6b7a78720744e0a56ad4b4359b",
+      "axioms": [
+        "Classical.choice",
+        "Quot.sound",
+        "propext"
+      ]
+    },
+    "Orthemology.Tranche2.coinMass_nonneg": {
+      "type_sha256": "2cdadc207bfdde68500da0651545bf13626daac02b2048a5309e7a031b9a1714",
+      "axioms": [
+        "Classical.choice",
+        "Quot.sound",
+        "propext"
+      ]
+    },
+    "Orthemology.Tranche2.bernoulliMass_nonneg": {
+      "type_sha256": "4659b7b558b517719bf80b6be05c3a28f768ef9b34b0692e4ae933061c781590",
+      "axioms": [
+        "Classical.choice",
+        "Quot.sound",
+        "propext"
+      ]
+    },
+    "Orthemology.Tranche2.bernoulliMass_sum": {
+      "type_sha256": "acf196e5f2c5413fc6bcdc61eb11ec1818e43438f5c65e5deee5cb39bd653775",
+      "axioms": [
+        "Classical.choice",
+        "Quot.sound",
+        "propext"
+      ]
+    },
+    "Orthemology.Tranche2.coin_affinity": {
+      "type_sha256": "6414f7a68683d73ec5082ec04b64d42fe15def4f380707e72543e2efc2d28bb2",
+      "axioms": [
+        "Classical.choice",
+        "Quot.sound",
+        "propext"
+      ]
+    },
+    "Orthemology.Tranche2.bernoulli_affinity": {
+      "type_sha256": "8adeb1087cd9da523f6cc8b6e81054035ef9b84119619c9d303708829e4a9099",
+      "axioms": [
+        "Classical.choice",
+        "Quot.sound",
+        "propext"
+      ]
+    },
+    "Orthemology.Tranche2.symmetric_coin_affinity_sq": {
+      "type_sha256": "e9dae6f7fd9e20e2b5aad68eb5b1b91bb1eacd745a04f9e366718029e98f0515",
+      "axioms": [
+        "Classical.choice",
+        "Quot.sound",
+        "propext"
+      ]
+    },
+    "Orthemology.Tranche2.symmetric_bernoulli_test_lower_bound": {
+      "type_sha256": "eb06008128c08eb4e3ba597955670569d7419bf9dfcb6e4c8a1502788fee2970",
+      "axioms": [
+        "Classical.choice",
+        "Quot.sound",
+        "propext"
+      ]
+    },
+    "Orthemology.Tranche2.finite_sum_tendsto_atTop_of_one": {
+      "type_sha256": "048c3670a4b5ab894c4a453c2752f0fb01380d3527e54f65f533356b4fdbf4ec",
+      "axioms": [
+        "Classical.choice",
+        "Quot.sound",
+        "propext"
+      ]
+    },
+    "Orthemology.Tranche2.sampled_logScore_tendsto_atTop": {
+      "type_sha256": "c0be72b378ffd6064d6b2b7aee0a2fcf47d91a8de2b3ec33d9f1d56bdf6b781d",
+      "axioms": [
+        "Classical.choice",
+        "Quot.sound",
+        "propext"
+      ]
+    },
+    "Orthemology.Tranche2.sampled_logScore_tendsto_of_joint_independent": {
+      "type_sha256": "14aaddf248543a16b10f38cc72b53bf299872c98e01a0ee99d1f8465f7a76697",
+      "axioms": [
+        "Classical.choice",
+        "Quot.sound",
+        "propext"
+      ]
+    },
+    "Orthemology.Tranche2.blockCount": {
+      "type_sha256": "fc98c4ae295278263f17712f3a49ab8df625855dfed223584c4d51c5d2872029",
+      "axioms": [
+        "Classical.choice",
+        "Quot.sound",
+        "propext"
+      ]
+    },
+    "Orthemology.Tranche2.count_tendsto_of_infinite": {
+      "type_sha256": "c6130886c05638a13536069bcbdc2b5324c3c8756433208bce5cd840b45b5e98",
+      "axioms": [
+        "Classical.choice",
+        "Quot.sound",
+        "propext"
+      ]
+    },
+    "Orthemology.Tranche2.blockCount_tendsto_of_selected_infinite": {
+      "type_sha256": "628c65d9100d90fe62d615a158c26997950f51585678f482353409a63f8674be",
+      "axioms": [
+        "Classical.choice",
+        "Quot.sound",
+        "propext"
+      ]
+    },
+    "Orthemology.Tranche2.likelihood_block_controller_eventually_good": {
+      "type_sha256": "07cd9e77b527914e508c8324e7498db4c9b5dd41a6781b1b21ca1baaa5a25808",
+      "axioms": [
+        "Classical.choice",
+        "Quot.sound",
+        "propext"
+      ]
+    },
+    "Orthemology.Tranche2.greedyMax": {
+      "type_sha256": "61c29b04bdc22d57a287cb3b65c0afef1d0f9b85dc0acf8d9fef5f2f3f7b9f38",
+      "axioms": [
+        "Classical.choice",
+        "Quot.sound",
+        "propext"
+      ]
+    },
+    "Orthemology.Tranche2.greedyMax_ge": {
+      "type_sha256": "a63880e29cee8b8e06ff2677dbe90c3197d059a4c98352da08c8f3d4a91cadd9",
+      "axioms": [
+        "Classical.choice",
+        "Quot.sound",
+        "propext"
+      ]
+    },
+    "Orthemology.Tranche2.historyCount": {
+      "type_sha256": "af3d9c26f00ed3c5790266617581b67c831b898ce70bb9b551500ec6ac4496e6",
+      "axioms": [
+        "Classical.choice",
+        "Quot.sound",
+        "propext"
+      ]
+    },
+    "Orthemology.Tranche2.candidateFor": {
+      "type_sha256": "4ae8797ebc9aa610cfadd1040d614b4f12e5f779561fcfdefaaca1d841168148",
+      "axioms": [
+        "Classical.choice",
+        "Quot.sound",
+        "propext"
+      ]
+    },
+    "Orthemology.Tranche2.canonicalHistory": {
+      "type_sha256": "caaaf31927a6f17930ffd31a63fdbfd315c3148ea8e89ef93fa5896b31fdaf0d",
+      "axioms": [
+        "Classical.choice",
+        "Quot.sound",
+        "propext"
+      ]
+    },
+    "Orthemology.Tranche2.canonicalSelected": {
+      "type_sha256": "95f9570866df3bd85852d27f5a69f357e61e409f45f7e7e536af0bcfb7648bd2",
+      "axioms": [
+        "Classical.choice",
+        "Quot.sound",
+        "propext"
+      ]
+    },
+    "Orthemology.Tranche2.canonicalHistory_eq_range_map": {
+      "type_sha256": "d74a6af9eddb2a3c5a3c716838d0600d8e8a68b314e547edc30486a5a5d068c7",
+      "axioms": [
+        "Classical.choice",
+        "Quot.sound",
+        "propext"
+      ]
+    },
+    "Orthemology.Tranche2.historyCount_eq_blockCount": {
+      "type_sha256": "2cd1c23de75885c95dbaf767095df1ac6b85042755ad17d261e8452b9fddcd98",
+      "axioms": [
+        "Classical.choice",
+        "Quot.sound",
+        "propext"
+      ]
+    },
+    "Orthemology.Tranche2.canonicalSelected_maximizes": {
+      "type_sha256": "0392b3ad122c1c8b3da425dae9773b25e999ee93c79848a097fe1d69260a0157",
+      "axioms": [
+        "Classical.choice",
+        "Quot.sound",
+        "propext"
+      ]
+    },
+    "Orthemology.Tranche2.candidateFor_prefix_local": {
+      "type_sha256": "909fb1bfaef0f9db5e38a28f9bd2ae11860ef044bd580a53f2fe702e0205d170",
+      "axioms": [
+        "Classical.choice",
+        "Quot.sound",
+        "propext"
+      ]
+    },
+    "Orthemology.Tranche2.greedyMax_measurable": {
+      "type_sha256": "92184d5f9754fe2116b653c37b074d6314186651ff09be6199c1a6960281e781",
+      "axioms": [
+        "Classical.choice",
+        "Quot.sound",
+        "propext"
+      ]
+    },
+    "Orthemology.Tranche2.candidateFor_measurable": {
+      "type_sha256": "35f6495f167b8e5ec05b39c48c92b81f1a3b9117a7a6771e863210e0da6db83e",
+      "axioms": [
+        "Classical.choice",
+        "Quot.sound",
+        "propext"
+      ]
+    },
+    "Orthemology.Tranche2.measurable_countable_diagonal": {
+      "type_sha256": "81f04fadfc0339422f593434e305748e7efedc0005b50e6802c18bdcc761680f",
+      "axioms": [
+        "Classical.choice",
+        "Quot.sound",
+        "propext"
+      ]
+    },
+    "Orthemology.Tranche2.canonicalSelected_measurable": {
+      "type_sha256": "e53e4119d5f76331b4e473e7b10a1df1beec5ac874269ef36f4b437b4d083942",
+      "axioms": [
+        "Classical.choice",
+        "Quot.sound",
+        "propext"
+      ]
+    },
+    "Orthemology.Tranche2.canonical_block_policy_eventually_good": {
+      "type_sha256": "1f43d6209e66e8d85e5ad46033284f5da4a4ac0989e5b8f36e26ebdc3d3fa1b2",
+      "axioms": [
+        "Classical.choice",
+        "Quot.sound",
+        "propext"
+      ]
+    },
+    "Orthemology.Tranche2.logScore": {
+      "type_sha256": "4ee2a78c3fe22a22a2bc37935a210cde9bbc4436ad12f8c1c581ae30b674be2b",
+      "axioms": [
+        "Classical.choice",
+        "Quot.sound",
+        "propext"
+      ]
+    },
+    "Orthemology.Tranche2.finiteKL": {
+      "type_sha256": "e5b346f8e929f0dbead0570d374921d6ad894581f6ace33066cf2afad636acbc",
+      "axioms": [
+        "Classical.choice",
+        "Quot.sound",
+        "propext"
+      ]
+    },
+    "Orthemology.Tranche2.finiteKL_eq_sum_klFun": {
+      "type_sha256": "097d7aceae2032fe5968941856dc3e44a10f83693beba726c9eb78827d66db56",
+      "axioms": [
+        "Classical.choice",
+        "Quot.sound",
+        "propext"
+      ]
+    },
+    "Orthemology.Tranche2.finiteKL_nonneg": {
+      "type_sha256": "50d4394a310776fde28b80d291c1c7354ae9238da1174104394799505d2bdcf4",
+      "axioms": [
+        "Classical.choice",
+        "Quot.sound",
+        "propext"
+      ]
+    },
+    "Orthemology.Tranche2.finiteKL_pos": {
+      "type_sha256": "df8c848b29baf517f7ddccf18c70055297360b3d3fda6e7a4d2f4dc318a1373b",
+      "axioms": [
+        "Classical.choice",
+        "Quot.sound",
+        "propext"
+      ]
+    },
+    "Orthemology.Tranche2.logScore_self": {
+      "type_sha256": "adb7ff65d00787e6b5fff8d90ffce5835aee5d0ebb6da705e1ddc00f41a03ea2",
+      "axioms": [
+        "Classical.choice",
+        "Quot.sound",
+        "propext"
+      ]
+    },
+    "Orthemology.Tranche2.logScore_integrable_comp": {
+      "type_sha256": "604ec5e27b8f4657be70d641c919d820018545c2303973eebcac6a7ae6acdf17",
+      "axioms": [
+        "Classical.choice",
+        "Quot.sound",
+        "propext"
+      ]
+    },
+    "Orthemology.Tranche2.logScore_expectation": {
+      "type_sha256": "144b5444ad9d10aca4f611fcf0b59b9ef1da8bef660194883af56b1a47273238",
+      "axioms": [
+        "Classical.choice",
+        "Quot.sound",
+        "propext"
+      ]
+    },
+    "Orthemology.Tranche2.logScore_strong_law": {
+      "type_sha256": "4adf7b8aaa2024159eef3d2699e37edf1a8437e03fb092394e807bcd3f393822",
+      "axioms": [
+        "Classical.choice",
+        "Quot.sound",
+        "propext"
+      ]
+    },
+    "Orthemology.Tranche2.sums_tendsto_atTop_of_average": {
+      "type_sha256": "b45fad8bbe6f20c6489f6ae483b3a40a0dd651143f3df63eb2e775e3c288469d",
+      "axioms": [
+        "Classical.choice",
+        "Quot.sound",
+        "propext"
+      ]
+    },
+    "Orthemology.Tranche2.logScore_sum_tendsto_atTop": {
+      "type_sha256": "80edc740e41d8d467ac9a55d9781c6835f448643e5829d1fb68d8ab16c67bdc9",
+      "axioms": [
+        "Classical.choice",
+        "Quot.sound",
+        "propext"
+      ]
+    },
+    "Orthemology.Tranche2.prefixLikelihood": {
+      "type_sha256": "8566bd7cebbc1fbee208790604b9baf117898f4e1cd9d1c49a134da5993b5db7",
+      "axioms": [
+        "Classical.choice",
+        "Quot.sound",
+        "propext"
+      ]
+    },
+    "Orthemology.Tranche2.prefixLikelihood_pos": {
+      "type_sha256": "799ec95045afca9fe11b99905508070e3f63d58edd18fe275173faf03d1fb6ae",
+      "axioms": [
+        "Classical.choice",
+        "Quot.sound",
+        "propext"
+      ]
+    },
+    "Orthemology.Tranche2.log_prefixLikelihood": {
+      "type_sha256": "db5031415a4ce45eb7092034f7dd07e4c8ab296ccf7e521ec7a7f6242681890a",
+      "axioms": [
+        "Classical.choice",
+        "Quot.sound",
+        "propext"
+      ]
+    },
+    "Orthemology.Tranche2.log_prefixLikelihood_ratio": {
+      "type_sha256": "ee7b8eec50968f1228c744d6d0802bbef9d44776bc82c3b060008ef3d2b8d189",
+      "axioms": [
+        "Classical.choice",
+        "Quot.sound",
+        "propext"
+      ]
+    },
+    "Orthemology.Tranche2.inverse_prefixLikelihood_ratio": {
+      "type_sha256": "4eb25ad79ea465b507a32064cee1157ab302dcab4d08686c976fee717da2059e",
+      "axioms": [
+        "Classical.choice",
+        "Quot.sound",
+        "propext"
+      ]
+    },
+    "Orthemology.Tranche2.sampled_false_likelihood_ratio_tendsto_zero": {
+      "type_sha256": "52070e424b0c2b9c740f293991e61efcc4dc3983dc537d44ed9909ec528e3360",
+      "axioms": [
+        "Classical.choice",
+        "Quot.sound",
+        "propext"
+      ]
+    },
+    "Orthemology.Tranche2.AgreeOn": {
+      "type_sha256": "1b673bcda56d8c9d7f7d0f8d6868f3dfb6094f09849239483e9d9431d9dee169",
+      "axioms": [
+        "Quot.sound",
+        "propext"
+      ]
+    },
+    "Orthemology.Tranche2.SelfVerifying": {
+      "type_sha256": "a52566424a26d85d7592adb022b271e55529164302331f4671371346e3f0695f",
+      "axioms": [
+        "Quot.sound",
+        "propext"
+      ]
+    },
+    "Orthemology.Tranche2.prune": {
+      "type_sha256": "eef23b772ff2c6600d4b23a714aee872a3b47a7b749ff95bb173cf1cbd21af19",
+      "axioms": [
+        "Classical.choice",
+        "Quot.sound",
+        "propext"
+      ]
+    },
+    "Orthemology.Tranche2.mem_prune": {
+      "type_sha256": "cab1b94c377255212dba0484009a9d25874f24302cb8328d034b361a886a49c7",
+      "axioms": [
+        "Classical.choice",
+        "Quot.sound",
+        "propext"
+      ]
+    },
+    "Orthemology.Tranche2.prune_subset": {
+      "type_sha256": "9318bca49c3cd3bce893a848c5b009dc655826004ca4a7f7f1a922b89d6c213b",
+      "axioms": [
+        "Classical.choice",
+        "Quot.sound",
+        "propext"
+      ]
+    },
+    "Orthemology.Tranche2.agreeOn_mono": {
+      "type_sha256": "fb04ee9598e16ef1e996aab2cb9c6f89bb4dacbd9c62644c7214c9046005e3a6",
+      "axioms": [
+        "Quot.sound",
+        "propext"
+      ]
+    },
+    "Orthemology.Tranche2.prune_mono": {
+      "type_sha256": "46a3462ec1e783e79539a792898f2fc7e029df1e4904d8c829be59a4046716bc",
+      "axioms": [
+        "Classical.choice",
+        "Quot.sound",
+        "propext"
+      ]
+    },
+    "Orthemology.Tranche2.selfVerifying_empty": {
+      "type_sha256": "a2d5a53e8337e47c32a30227fc88cdb7ee34df8a49a65fd934c2b8ca27f5c4f0",
+      "axioms": [
+        "Quot.sound",
+        "propext"
+      ]
+    },
+    "Orthemology.Tranche2.selfVerifying_union": {
+      "type_sha256": "f129e9b9e033b5e97665d24ba2994d50e5735e99706f553561d0f71962f2a8ae",
+      "axioms": [
+        "Quot.sound",
+        "propext"
+      ]
+    },
+    "Orthemology.Tranche2.selfVerifying_iff_fixed": {
+      "type_sha256": "66a623b6b7f3d7cdbc829f54a741da1ca22e39b7ac6d9ef7ac18726c3a40caee",
+      "axioms": [
+        "Classical.choice",
+        "Quot.sound",
+        "propext"
+      ]
+    },
+    "Orthemology.Tranche2.pruneIter": {
+      "type_sha256": "f37dc7f64f8e5cb24a9ae63b633c5e96b242a41bd74715ccc09592fe0acd8c60",
+      "axioms": [
+        "Classical.choice",
+        "Quot.sound",
+        "propext"
+      ]
+    },
+    "Orthemology.Tranche2.pruneIter_step_subset": {
+      "type_sha256": "1fd0390b508271a578a532a25fa25a1c49165976c2f84e676a77064f6291cd40",
+      "axioms": [
+        "Classical.choice",
+        "Quot.sound",
+        "propext"
+      ]
+    },
+    "Orthemology.Tranche2.pruneIter_subset_target": {
+      "type_sha256": "aa266ee4491c371252f647ce3ac35b834f7103fe004f1ec80c90484d2bcac786",
+      "axioms": [
+        "Classical.choice",
+        "Quot.sound",
+        "propext"
+      ]
+    },
+    "Orthemology.Tranche2.selfVerifying_survives": {
+      "type_sha256": "609b3d38d5643ae189dfe1b103b14ad4899b5c5bc567d08b701859ba8c9d7bca",
+      "axioms": [
+        "Classical.choice",
+        "Quot.sound",
+        "propext"
+      ]
+    },
+    "Orthemology.Tranche2.pruneIter_fixed_propagates": {
+      "type_sha256": "86bde3c42c1c95854ccaed825ba476029db8d8301251d96a09bc2c9b5296b9e0",
+      "axioms": [
+        "Classical.choice",
+        "Quot.sound",
+        "propext"
+      ]
+    },
+    "Orthemology.Tranche2.pruneIter_card_bound_of_no_fixed": {
+      "type_sha256": "ff5238be9d2a33600ab0e585e8213e9de5cdf568f313aa3d35a4feed92791026",
+      "axioms": [
+        "Classical.choice",
+        "Quot.sound",
+        "propext"
+      ]
+    },
+    "Orthemology.Tranche2.pruneIter_exists_fixed": {
+      "type_sha256": "96e6c71e655545e6f70997311c7d142cae940460c51ea976b1c1da67a6900982",
+      "axioms": [
+        "Classical.choice",
+        "Quot.sound",
+        "propext"
+      ]
+    },
+    "Orthemology.Tranche2.pruneIter_card_fixed": {
+      "type_sha256": "c370b72188ad3ebd780b30fefcd2454471ad5879fd4fe9bf9dc4c8986e97772d",
+      "axioms": [
+        "Classical.choice",
+        "Quot.sound",
+        "propext"
+      ]
+    },
+    "Orthemology.Tranche2.supportKernel": {
+      "type_sha256": "424481835f7c5163248a15c8f628404d8789245f6b31b64844434175ff72f293",
+      "axioms": [
+        "Classical.choice",
+        "Quot.sound",
+        "propext"
+      ]
+    },
+    "Orthemology.Tranche2.supportKernel_selfVerifying": {
+      "type_sha256": "d3ef37f98973bd77cf4a312d8ec495213558ec60b972baffdd57d7921da648f3",
+      "axioms": [
+        "Classical.choice",
+        "Quot.sound",
+        "propext"
+      ]
+    },
+    "Orthemology.Tranche2.supportKernel_greatest": {
+      "type_sha256": "9d2161ba910bc38a386adc9ef2ead9002a99e79ee4d74644d9c70fda8f083b95",
+      "axioms": [
+        "Classical.choice",
+        "Quot.sound",
+        "propext"
+      ]
+    },
+    "Orthemology.Tranche2.supportKernel_nonempty_iff": {
+      "type_sha256": "28ad743fb536d56eb7845c8720ce68cdbcf63fecf786ef90aa386d2109504ed6",
+      "axioms": [
+        "Classical.choice",
+        "Quot.sound",
+        "propext"
+      ]
+    },
+    "Orthemology.Tranche2.Fixtures.cascadeSame": {
+      "type_sha256": "0502ffbd77116f74c24ab44e2084bff9630db9382b4c06bdc8d0920b10de06c2",
+      "axioms": [
+        "propext"
+      ]
+    },
+    "Orthemology.Tranche2.Fixtures.cascadeGood": {
+      "type_sha256": "08c924415cc086b16022be8c209b7b37107fc21fdd1b1a049fbb5971d9b09b6b",
+      "axioms": [
+        "Quot.sound",
+        "propext"
+      ]
+    },
+    "Orthemology.Tranche2.Fixtures.cascade_no_nonempty_support": {
+      "type_sha256": "1ed640b45b8fadbbafafea5b99d56f9a02ec16c87e218ee162ecee7969755e26",
+      "axioms": [
+        "Classical.choice",
+        "Quot.sound",
+        "propext"
+      ]
+    },
+    "Orthemology.Tranche2.Fixtures.cascade_kernel_empty": {
+      "type_sha256": "c544a275f2533eaecc85bf5c7dfc4a5cddeb5d453d7d471ac30fdb3e36f7e058",
+      "axioms": [
+        "Classical.choice",
+        "Quot.sound",
+        "propext"
+      ]
+    },
+    "Orthemology.Tranche2.Fixtures.cascade_first_round": {
+      "type_sha256": "838af453ce38850d4c23405268e0b53320e92ee74aab6b5f7f7faf3d823732fb",
+      "axioms": [
+        "Classical.choice",
+        "Quot.sound",
+        "propext"
+      ]
+    },
+    "Orthemology.Tranche2.Fixtures.cascade_second_round": {
+      "type_sha256": "6170d24ceebf27158a2dc570da6d6fb6d9305280651a1b31497f517cafee7789",
+      "axioms": [
+        "Classical.choice",
+        "Quot.sound",
+        "propext"
+      ]
+    },
+    "Orthemology.Tranche2.Fixtures.informativeGood": {
+      "type_sha256": "86eb29e30e8b3fca8b76b2791a8aeffd97bfdfd0a9838854ac57ebfa2de2aee3",
+      "axioms": [
+        "Quot.sound",
+        "propext"
+      ]
+    },
+    "Orthemology.Tranche2.Fixtures.informativeSame": {
+      "type_sha256": "c5019f8afbaf883733906395ecb48280fb5e06598c31bd5181e538d8a0161c83",
+      "axioms": []
+    },
+    "Orthemology.Tranche2.Fixtures.informative_singleton_valid": {
+      "type_sha256": "3054a1557e7f6885fdddb67161db3c54fd9d97af25796249df0c240d21ac8a30",
+      "axioms": [
+        "Quot.sound",
+        "propext"
+      ]
+    },
+    "Orthemology.Tranche2.Fixtures.informative_kernel": {
+      "type_sha256": "b9406c49505f0ad7b03157d89f98b6aaef260c403e418d36aef2cc7d5e0199a7",
+      "axioms": [
+        "Classical.choice",
+        "Quot.sound",
+        "propext"
+      ]
+    },
+    "Orthemology.Tranche2.Fixtures.informative_all_kernels_nonempty": {
+      "type_sha256": "a9d59a9d49ce0a46cf40da453275fe8367861fe80ca8347779e3cd574509b49f",
+      "axioms": [
+        "Classical.choice",
+        "Quot.sound",
+        "propext"
+      ]
+    },
+    "Orthemology.Tranche2.Fixtures.informative_no_common_target": {
+      "type_sha256": "a65081379607176651c7a9af625e13a3f371b115fc790a6b15a7fdd9a7967c5c",
+      "axioms": [
+        "Quot.sound",
+        "propext"
+      ]
+    },
+    "Orthemology.Tranche2.StageWitness": {
+      "type_sha256": "6ff24ef4d8b080a034fb5fdf7f7ff40327077d9211cf17aa9a398aeae654cfa4",
+      "axioms": [
+        "Quot.sound",
+        "propext"
+      ]
+    },
+    "Orthemology.Tranche2.RestrictedTargets": {
+      "type_sha256": "525ccbac0668896dcf5d73ee7cb8e8652d41ad3ade43d2b267e2cc3928111de7",
+      "axioms": [
+        "Quot.sound",
+        "propext"
+      ]
+    },
+    "Orthemology.Tranche2.selfVerifying_restrict_iff": {
+      "type_sha256": "0be6bb43ddf5cbf0f566602dd9be175acfafc303daa8c7b2ec238ce129ff7e38",
+      "axioms": [
+        "Quot.sound",
+        "propext"
+      ]
+    },
+    "Orthemology.Tranche2.StageCertificate": {
+      "type_sha256": "767fb145701037079b1dc409af444ff20b05edaaf6ad44c656a1ad1479d56e3c",
+      "axioms": [
+        "Classical.choice",
+        "Quot.sound",
+        "propext"
+      ]
+    },
+    "Orthemology.Tranche2.stageCertificate_iff_witness": {
+      "type_sha256": "2547076b8907da73ba4f2afbc8d54f536b1739f837b3883f9cdc89e5947314d3",
+      "axioms": [
+        "Classical.choice",
+        "Quot.sound",
+        "propext"
+      ]
+    },
+    "Orthemology.Tranche2.selfVerifying_signal_refinement": {
+      "type_sha256": "1f0e6e10e0c423bc89f3627312a926f2e299ea108332871735ecdfd9106d47a5",
+      "axioms": [
+        "Quot.sound",
+        "propext"
+      ]
+    },
+    "Orthemology.Tranche2.supportKernel_signal_refinement": {
+      "type_sha256": "170db8a0f2520f70df103ef0f324607447c5f098bc4884c33892b668cbccfd0c",
+      "axioms": [
+        "Classical.choice",
+        "Quot.sound",
+        "propext"
+      ]
+    },
+    "Orthemology.Tranche2.supportKernel_target_enlargement": {
+      "type_sha256": "117ebcbb123f3d397659b9617eb1457624397663aa31a02fd47c3a75650de432",
+      "axioms": [
+        "Classical.choice",
+        "Quot.sound",
+        "propext"
+      ]
+    }
+  },
+  "original_controls": "NOT_RUN",
+  "original_receipt_sha256": "b678735fc02b101f86aa4f0e5eee0f6a76e84eec52dd5fda4200704fce56d65a",
+  "original_driver_sha256": "3ecc40bb0ab970bc5b7efc0347bab9c5662fa5b50fb99bf23f6d3d1c0e12a710",
+  "execution_kind": "FRESH_CUSTOM_CLOSURE",
+  "finished_utc": "2026-10-02T05:33:57.245644+00:00",
+  "scope": "Source-bound custom closure and selected declaration readbacks. Types are represented by hashes of the exact printed types; complete logs remain private. Official caches are trusted. This does not establish ordinary proof, runtime completeness, empirical or normative warrant, novelty, external human review or merged adoption."
+}

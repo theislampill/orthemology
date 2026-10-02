@@ -1,0 +1,392 @@
+{
+  "id": "866c6ff6e74a-operational-machine",
+  "origin": "866c6ff6e74a67f2bc452b49a0ada05311c0c2601585ea166404719172bd8086",
+  "descriptor_source_id": "src-866c6ff6e74a67f2-47b7b457c989b63a",
+  "modules": [
+    {
+      "module": "CodecVarint",
+      "source_id": "src-866c6ff6e74a67f2-ab021dc47c2d9f8e",
+      "imports": [
+        "Mathlib.Data.Nat.Bitwise",
+        "Mathlib.Tactic"
+      ]
+    },
+    {
+      "module": "CodecNumeric",
+      "source_id": "src-866c6ff6e74a67f2-2eca3aa43b5eee50",
+      "imports": [
+        "CodecVarint"
+      ]
+    },
+    {
+      "module": "CodecPrimrec",
+      "source_id": "src-866c6ff6e74a67f2-7752dd20547a8950",
+      "imports": [
+        "CodecNumeric",
+        "Mathlib.Computability.Primrec"
+      ]
+    },
+    {
+      "module": "UniformComputabilityNumeric",
+      "source_id": "src-866c6ff6e74a67f2-754bc4586c73d830",
+      "imports": [
+        "CodecPrimrec",
+        "Mathlib.Computability.Partrec"
+      ]
+    },
+    {
+      "module": "P02A2.ObserverCore",
+      "source_id": "src-866c6ff6e74a67f2-55561c50f0d8416b",
+      "imports": [
+        "Mathlib"
+      ]
+    },
+    {
+      "module": "CodecExpr",
+      "source_id": "src-866c6ff6e74a67f2-f24686bb77b6cfa7",
+      "imports": [
+        "CodecVarint",
+        "P02A2.ObserverCore"
+      ]
+    },
+    {
+      "module": "CodecStmt",
+      "source_id": "src-866c6ff6e74a67f2-0654af72570c2c96",
+      "imports": [
+        "CodecExpr"
+      ]
+    },
+    {
+      "module": "LoopRenaming",
+      "source_id": "src-866c6ff6e74a67f2-7083c228eb4b22ed",
+      "imports": [
+        "P02A2.ObserverCore"
+      ]
+    },
+    {
+      "module": "LoopPrimrec",
+      "source_id": "src-866c6ff6e74a67f2-54014d66383da171",
+      "imports": [
+        "LoopRenaming",
+        "Mathlib.Computability.Primrec"
+      ]
+    },
+    {
+      "module": "PRProgram",
+      "source_id": "src-866c6ff6e74a67f2-415bc8d7e8d2cedb",
+      "imports": [
+        "LoopPrimrec"
+      ]
+    },
+    {
+      "module": "PRComposition",
+      "source_id": "src-866c6ff6e74a67f2-7a1b878e3f34aa3a",
+      "imports": [
+        "PRProgram"
+      ]
+    },
+    {
+      "module": "PRRecursion",
+      "source_id": "src-866c6ff6e74a67f2-ff368597291ee12c",
+      "imports": [
+        "PRComposition"
+      ]
+    },
+    {
+      "module": "PRHeadRecursion",
+      "source_id": "src-866c6ff6e74a67f2-82a4d36e182ab97f",
+      "imports": [
+        "PRRecursion"
+      ]
+    },
+    {
+      "module": "PRDerivation",
+      "source_id": "src-866c6ff6e74a67f2-823895bee02b3ec0",
+      "imports": [
+        "PRHeadRecursion",
+        "Mathlib.Computability.Primrec"
+      ]
+    },
+    {
+      "module": "PRCoverage",
+      "source_id": "src-866c6ff6e74a67f2-b0863d2206747047",
+      "imports": [
+        "PRDerivation"
+      ]
+    },
+    {
+      "module": "PRSpecialize",
+      "source_id": "src-866c6ff6e74a67f2-819d9bcdce0a2e6f",
+      "imports": [
+        "PRCoverage"
+      ]
+    },
+    {
+      "module": "CodecProgram",
+      "source_id": "src-866c6ff6e74a67f2-dfd03f03c5e21e6d",
+      "imports": [
+        "CodecStmt",
+        "CodecNumeric",
+        "PRSpecialize"
+      ]
+    },
+    {
+      "module": "UniformComputabilityMachine",
+      "source_id": "src-866c6ff6e74a67f2-cdb46926ce8a5959",
+      "imports": [
+        "CodecProgram",
+        "UniformComputabilityNumeric"
+      ]
+    },
+    {
+      "module": "UniformComputabilityControls",
+      "source_id": "src-866c6ff6e74a67f2-434df1d19a0485fa",
+      "imports": [
+        "UniformComputabilityMachine"
+      ]
+    }
+  ],
+  "module_order": [
+    "CodecVarint",
+    "CodecNumeric",
+    "CodecPrimrec",
+    "UniformComputabilityNumeric",
+    "P02A2.ObserverCore",
+    "CodecExpr",
+    "CodecStmt",
+    "LoopRenaming",
+    "LoopPrimrec",
+    "PRProgram",
+    "PRComposition",
+    "PRRecursion",
+    "PRHeadRecursion",
+    "PRDerivation",
+    "PRCoverage",
+    "PRSpecialize",
+    "CodecProgram",
+    "UniformComputabilityMachine",
+    "UniformComputabilityControls"
+  ],
+  "targets": [
+    {
+      "name": "P02.Codec.UniformComputability.bytesTableStep_primrec",
+      "module": "UniformComputabilityNumeric"
+    },
+    {
+      "name": "P02.Codec.UniformComputability.bytesTableStep_table",
+      "module": "UniformComputabilityNumeric"
+    },
+    {
+      "name": "P02.Codec.UniformComputability.toBytes_primrec",
+      "module": "UniformComputabilityNumeric"
+    },
+    {
+      "name": "P02.Codec.UniformComputability.decodeNumeric_primrec",
+      "module": "UniformComputabilityNumeric"
+    },
+    {
+      "name": "P02.Codec.UniformComputability.decodeNumeric_computable",
+      "module": "UniformComputabilityNumeric"
+    },
+    {
+      "name": "P02.Codec.UniformComputability.readRegs_write",
+      "module": "UniformComputabilityMachine"
+    },
+    {
+      "name": "P02.Codec.UniformComputability.evalRegs_correct",
+      "module": "UniformComputabilityMachine"
+    },
+    {
+      "name": "P02.Codec.UniformComputability.repeatFrom_succ_last",
+      "module": "UniformComputabilityMachine"
+    },
+    {
+      "name": "P02.Codec.UniformComputability.repeatFrom_runLoop",
+      "module": "UniformComputabilityMachine"
+    },
+    {
+      "name": "P02.Codec.UniformComputability.repeatFrom_read",
+      "module": "UniformComputabilityMachine"
+    },
+    {
+      "name": "P02.Codec.UniformComputability.execRegs_correct",
+      "module": "UniformComputabilityMachine"
+    },
+    {
+      "name": "P02.Codec.UniformComputability.runFuel_complete",
+      "module": "UniformComputabilityMachine"
+    },
+    {
+      "name": "P02.Codec.UniformComputability.step_preserves",
+      "module": "UniformComputabilityMachine"
+    },
+    {
+      "name": "P02.Codec.UniformComputability.iterate_preserves",
+      "module": "UniformComputabilityMachine"
+    },
+    {
+      "name": "P02.Codec.UniformComputability.runFuel_sound",
+      "module": "UniformComputabilityMachine"
+    },
+    {
+      "name": "P02.Codec.UniformComputability.readRegs_binary",
+      "module": "UniformComputabilityMachine"
+    },
+    {
+      "name": "P02.Codec.UniformComputability.evaluateIndexFuel_sound",
+      "module": "UniformComputabilityMachine"
+    },
+    {
+      "name": "P02.Codec.UniformComputability.evaluateIndexFuel_complete",
+      "module": "UniformComputabilityMachine"
+    },
+    {
+      "name": "P02.Codec.UniformComputability.runFuel_mono",
+      "module": "UniformComputabilityMachine"
+    },
+    {
+      "name": "P02.Codec.UniformComputability.evaluateIndexFuel_mono",
+      "module": "UniformComputabilityMachine"
+    },
+    {
+      "name": "P02.Codec.UniformComputability.evaluateIndexFuel_eventually",
+      "module": "UniformComputabilityMachine"
+    },
+    {
+      "name": "P02.Codec.UniformComputability.evaluateIndexSearch_exact",
+      "module": "UniformComputabilityMachine"
+    },
+    {
+      "name": "P02.Codec.UniformComputability.evaluateIndex_computable_of_fuel",
+      "module": "UniformComputabilityMachine"
+    },
+    {
+      "name": "P02.Codec.UniformComputability.evaluateIndexFuel_invalid",
+      "module": "UniformComputabilityMachine"
+    },
+    {
+      "name": "P02.Codec.UniformComputability.evaluateIndexFuel_wrong_arity",
+      "module": "UniformComputabilityMachine"
+    },
+    {
+      "name": "P02.Codec.UniformComputability.evaluateIndexFuel_programIndex",
+      "module": "UniformComputabilityMachine"
+    },
+    {
+      "name": "P02.Codec.UniformComputability.exhausted_one",
+      "module": "UniformComputabilityMachine"
+    },
+    {
+      "name": "P02.Codec.UniformComputability.captured_count_control",
+      "module": "UniformComputabilityControls"
+    },
+    {
+      "name": "P02.Codec.UniformComputability.overwritten_index_control",
+      "module": "UniformComputabilityControls"
+    },
+    {
+      "name": "P02.Codec.UniformComputability.arithmetic_control",
+      "module": "UniformComputabilityControls"
+    },
+    {
+      "name": "P02.Codec.UniformComputability.branch_zero_control",
+      "module": "UniformComputabilityControls"
+    },
+    {
+      "name": "P02.Codec.UniformComputability.branch_nonzero_control",
+      "module": "UniformComputabilityControls"
+    },
+    {
+      "name": "P02.Codec.UniformComputability.zero_loop_control",
+      "module": "UniformComputabilityControls"
+    },
+    {
+      "name": "P02.Codec.UniformComputability.invalid_zero_control",
+      "module": "UniformComputabilityControls"
+    },
+    {
+      "name": "P02.Codec.UniformComputability.wrong_arity_control",
+      "module": "UniformComputabilityControls"
+    }
+  ],
+  "pins": {
+    "lean_version": "4.19.0",
+    "lean_binary_sha256": "92c3d35b5bfaa5e0fea413a775d504cf46cd95e1345df61c2274f76779e7e023",
+    "packages": [
+      {
+        "name": "mathlib",
+        "revision": "c44e0c8ee63ca166450922a373c7409c5d26b00b"
+      },
+      {
+        "name": "plausible",
+        "revision": "77e08eddc486491d7b9e470926b3dbe50319451a"
+      },
+      {
+        "name": "LeanSearchClient",
+        "revision": "25078369972d295301f5a1e53c3e5850cf6d9d4c"
+      },
+      {
+        "name": "importGraph",
+        "revision": "e6a9f0f5ee3ccf7443a0070f92b62f8db12ae82b"
+      },
+      {
+        "name": "proofwidgets",
+        "revision": "c4919189477c3221e6a204008998b0d724f49904"
+      },
+      {
+        "name": "aesop",
+        "revision": "5d50b08dedd7d69b3d9b3176e0d58a23af228884"
+      },
+      {
+        "name": "Qq",
+        "revision": "fa4f7f15d97591a9cf3aa7724ba371c7fc6dda02"
+      },
+      {
+        "name": "batteries",
+        "revision": "f5d04a9c4973d401c8c92500711518f7c656f034"
+      },
+      {
+        "name": "Cli",
+        "revision": "02dbd02bc00ec4916e99b04b2245b30200e200d0"
+      }
+    ]
+  },
+  "official_imports": [
+    {
+      "module": "Mathlib",
+      "repository": "mathlib",
+      "source": "Mathlib.lean",
+      "sha256": "b0518254279fabf0c6a920804e684536b0f5e2bd1cb6318d0609eb563413f20a"
+    },
+    {
+      "module": "Mathlib.Computability.Partrec",
+      "repository": "mathlib",
+      "source": "Mathlib/Computability/Partrec.lean",
+      "sha256": "e8435a76ce5b2f4b22892d82b3e1e3e2835c8038011a68ca37a7efff797929d1"
+    },
+    {
+      "module": "Mathlib.Computability.Primrec",
+      "repository": "mathlib",
+      "source": "Mathlib/Computability/Primrec.lean",
+      "sha256": "b279a3218434a6f930970b9f43669567e99adc548c31796590f42bdc205dcc22"
+    },
+    {
+      "module": "Mathlib.Data.Nat.Bitwise",
+      "repository": "mathlib",
+      "source": "Mathlib/Data/Nat/Bitwise.lean",
+      "sha256": "e987a9f57489a80d8e2de33b7ad8662516b85fe745d611c0fe9e6c965fb6f5b7"
+    },
+    {
+      "module": "Mathlib.Tactic",
+      "repository": "mathlib",
+      "source": "Mathlib/Tactic.lean",
+      "sha256": "f20038eba7bba63f07a2f854496101226df407e20414e6b8ebf94b14f95e831b"
+    }
+  ],
+  "driver": {
+    "source_id": "src-866c6ff6e74a67f2-279d28ea9829b80d",
+    "lean_argument": "EXECUTABLE"
+  },
+  "controls": "ORIGINAL_DRIVER_REQUIRED",
+  "classification": "CURRENT_EVIDENCE"
+}

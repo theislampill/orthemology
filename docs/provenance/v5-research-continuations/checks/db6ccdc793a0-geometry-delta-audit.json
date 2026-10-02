@@ -1,0 +1,224 @@
+{
+  "status": "FRESH_KERNEL_COMPONENTS",
+  "exit_code": 0,
+  "kernel_verified": true,
+  "suite_id": "db6ccdc793a0-geometry-delta-audit",
+  "suite_sha256": "58faf07954503cba9e3d543033a6e7582ae15f48f6c73ac523ffc74fedb0d657",
+  "source_hashes": {
+    "CriticalZero": "8455190e311c328f9e14f0eec8fc25486a759ba387617eab472618a5ca80ed86",
+    "FiniteLPCertificates": "600fbda2e786bb58c4fb22efd8618bc82bb87932051b12d9488605f98dcd3547",
+    "BoundaryReadback": "8202d56a246a00857ad20a91a3e5128b90ce271f0e8dc86ff9627071175944d0",
+    "IndependentBoundaryAudit": "ba0af79718b611b0304d32bf6f9fb4b0dbba90bce9e50f8842963decef377efd"
+  },
+  "post_source_hashes": {
+    "CriticalZero": "8455190e311c328f9e14f0eec8fc25486a759ba387617eab472618a5ca80ed86",
+    "FiniteLPCertificates": "600fbda2e786bb58c4fb22efd8618bc82bb87932051b12d9488605f98dcd3547",
+    "BoundaryReadback": "8202d56a246a00857ad20a91a3e5128b90ce271f0e8dc86ff9627071175944d0",
+    "IndependentBoundaryAudit": "ba0af79718b611b0304d32bf6f9fb4b0dbba90bce9e50f8842963decef377efd"
+  },
+  "compiler_sha256": "92c3d35b5bfaa5e0fea413a775d504cf46cd95e1345df61c2274f76779e7e023",
+  "pins": {
+    "lean_version": "4.19.0",
+    "lean_binary_sha256": "92c3d35b5bfaa5e0fea413a775d504cf46cd95e1345df61c2274f76779e7e023",
+    "packages": [
+      {
+        "name": "mathlib",
+        "revision": "c44e0c8ee63ca166450922a373c7409c5d26b00b"
+      },
+      {
+        "name": "plausible",
+        "revision": "77e08eddc486491d7b9e470926b3dbe50319451a"
+      },
+      {
+        "name": "LeanSearchClient",
+        "revision": "25078369972d295301f5a1e53c3e5850cf6d9d4c"
+      },
+      {
+        "name": "importGraph",
+        "revision": "e6a9f0f5ee3ccf7443a0070f92b62f8db12ae82b"
+      },
+      {
+        "name": "proofwidgets",
+        "revision": "c4919189477c3221e6a204008998b0d724f49904"
+      },
+      {
+        "name": "aesop",
+        "revision": "5d50b08dedd7d69b3d9b3176e0d58a23af228884"
+      },
+      {
+        "name": "Qq",
+        "revision": "fa4f7f15d97591a9cf3aa7724ba371c7fc6dda02"
+      },
+      {
+        "name": "batteries",
+        "revision": "f5d04a9c4973d401c8c92500711518f7c656f034"
+      },
+      {
+        "name": "Cli",
+        "revision": "02dbd02bc00ec4916e99b04b2245b30200e200d0"
+      }
+    ]
+  },
+  "modules": [
+    {
+      "module": "CriticalZero",
+      "source_sha256": "8455190e311c328f9e14f0eec8fc25486a759ba387617eab472618a5ca80ed86",
+      "object_sha256": "5756c24d1c61c098a4cf34e29aedd55358bf7975ad2f8b3c179547e50002a892",
+      "transitive_source_fingerprint": "ae11a8dc26f671c62b4b8a15272da893ad5d0765ce3cc38430096d29389a0476",
+      "status": "FRESH_COMPILE",
+      "exit_code": 0
+    },
+    {
+      "module": "FiniteLPCertificates",
+      "source_sha256": "600fbda2e786bb58c4fb22efd8618bc82bb87932051b12d9488605f98dcd3547",
+      "object_sha256": "a4a54fb147bb12db4302b4def0af4e19f76a8aca235e8b3918a6ba1c709ed20e",
+      "transitive_source_fingerprint": "849ce5705346a6a798ba3fb44f44b6afd83606153c7ac2c1a3a40a1e8cbd4966",
+      "status": "FRESH_COMPILE",
+      "exit_code": 0
+    },
+    {
+      "module": "BoundaryReadback",
+      "source_sha256": "8202d56a246a00857ad20a91a3e5128b90ce271f0e8dc86ff9627071175944d0",
+      "object_sha256": "ed4220c0feab2a13ae184bb4a8883eb20df7f897818fd2ffb0e797acd209a359",
+      "transitive_source_fingerprint": "c9cce7a4ae96179ce6930e5af0118f58fb16d416103e3d157cf370fe3485fbd7",
+      "status": "FRESH_COMPILE",
+      "exit_code": 0
+    },
+    {
+      "module": "IndependentBoundaryAudit",
+      "source_sha256": "ba0af79718b611b0304d32bf6f9fb4b0dbba90bce9e50f8842963decef377efd",
+      "object_sha256": "e29c984fcb587249be2c73f2cba7d097f0e1399a6699d3378cd5cc1ee06ff34c",
+      "transitive_source_fingerprint": "b7376e8ced88cab5606891e1dee5c3f8bd19ed852733fb3482c70252f3e6886e",
+      "status": "FRESH_COMPILE",
+      "exit_code": 0
+    }
+  ],
+  "readbacks": {
+    "CriticalZero.no_exact_repair": {
+      "type_sha256": "aa498056bea625cb9f732e7458ae9d4819dc7a903482e3b3ba130deac5f6d94d",
+      "axioms": [
+        "Classical.choice",
+        "Quot.sound",
+        "propext"
+      ]
+    },
+    "CriticalZero.second_order_optimum_zero": {
+      "type_sha256": "eeaa9bfcf4123a2f83cb7f450186e798c727a7c5007e08d8485f865e6cec515a",
+      "axioms": [
+        "Classical.choice",
+        "Quot.sound",
+        "propext"
+      ]
+    },
+    "CriticalZero.actual_second_order_F": {
+      "type_sha256": "a6b1bf0bf10f9bf7a3dbc43bd11e78e2cab3eba5ea129f287487e889ca939676",
+      "axioms": [
+        "Classical.choice",
+        "Quot.sound",
+        "propext"
+      ]
+    },
+    "FiniteLPCertificates.dual_bound": {
+      "type_sha256": "b0373dff734b11fd51d338c5fb96bb277371d21bf159466f39cb49f307322870",
+      "axioms": [
+        "Classical.choice",
+        "Quot.sound",
+        "propext"
+      ]
+    },
+    "FiniteLPCertificates.negative_dual_excludes_weak": {
+      "type_sha256": "6a84489d4ad74e6e6f0e5f3ef5af5e56190b5e754c28e3cdc9087fa8e33c509e",
+      "axioms": [
+        "Classical.choice",
+        "Quot.sound",
+        "propext"
+      ]
+    },
+    "FiniteLPCertificates.zero_dual_excludes_strict": {
+      "type_sha256": "c8d134de288ebf77abfbae18b51ed9889d467d5e395dd5ffb890461d7db21b43",
+      "axioms": [
+        "Classical.choice",
+        "Quot.sound",
+        "propext"
+      ]
+    },
+    "CriticalZero.psi_deriv": {
+      "type_sha256": "6cee01654acce5f33c82c2d942fe530a25e0a7f6b5700d47a1b6fb685c035622",
+      "axioms": [
+        "Classical.choice",
+        "Quot.sound",
+        "propext"
+      ]
+    },
+    "CriticalZero.dpsi_deriv": {
+      "type_sha256": "d62f0443c473bd4b6299634b2ea9a1decf3096ab97152234f289e4762b6cec14",
+      "axioms": [
+        "Classical.choice",
+        "Quot.sound",
+        "propext"
+      ]
+    },
+    "CriticalZero.curvature_pos": {
+      "type_sha256": "a5f8a2804e285154d729a87e418eb5692ce03ddfe488022159db5757ec596c41",
+      "axioms": [
+        "Classical.choice",
+        "Quot.sound",
+        "propext"
+      ]
+    },
+    "CriticalZero.actual_second_order_G": {
+      "type_sha256": "8d89f62b2ec5782949fcd85e4501a18e6da28e9b35f99c4663dc300de7538b14",
+      "axioms": [
+        "Classical.choice",
+        "Quot.sound",
+        "propext"
+      ]
+    },
+    "IndependentBoundaryAudit.actual_four_rows": {
+      "type_sha256": "97064753ebdd0fcfd90f3eb47fd902f7bf583f123eb9c0cbc4fc97ae19ed3c78",
+      "axioms": [
+        "Classical.choice",
+        "Quot.sound",
+        "propext"
+      ]
+    },
+    "IndependentBoundaryAudit.critical_generic_dual_bound": {
+      "type_sha256": "5dbf6874001c6d355ee567d57af6a23e6ad0443bb1ea9764281486581c81309e",
+      "axioms": [
+        "Classical.choice",
+        "Quot.sound",
+        "propext"
+      ]
+    },
+    "IndependentBoundaryAudit.critical_generic_no_strict": {
+      "type_sha256": "8a3f1476fadeae61c7d6ab028b4c16b0deaf0ff96f7d186fa491b5c38d78c241",
+      "axioms": [
+        "Classical.choice",
+        "Quot.sound",
+        "propext"
+      ]
+    },
+    "IndependentBoundaryAudit.bound_zero_but_no_exact": {
+      "type_sha256": "418ced30788ae888648be61c57eeda822fa112fd8860ecca20f41497cd059b6f",
+      "axioms": [
+        "Classical.choice",
+        "Quot.sound",
+        "propext"
+      ]
+    },
+    "IndependentBoundaryAudit.critical_curvature_slope": {
+      "type_sha256": "118c3e4319d01192cf6e63d56e3dc58321cf8dcaeaa228bd13634376d9a4d622",
+      "axioms": [
+        "Classical.choice",
+        "Quot.sound",
+        "propext"
+      ]
+    }
+  },
+  "original_controls": "NOT_RUN",
+  "original_receipt_sha256": "53453a2920c5c69b9df80f4bbff8934636ed13f70202343ffbbb4145c4d224ea",
+  "original_driver_sha256": "4933d602f18c749ff170629964914907bf1c5bf05160329bd8aab623dfd65f98",
+  "execution_kind": "FRESH_CUSTOM_CLOSURE",
+  "finished_utc": "2026-10-02T05:42:34.892959+00:00",
+  "scope": "Source-bound custom closure and selected declaration readbacks. Types are represented by hashes of the exact printed types; complete logs remain private. Official caches are trusted. This does not establish ordinary proof, runtime completeness, empirical or normative warrant, novelty, external human review or merged adoption."
+}

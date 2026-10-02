@@ -1,0 +1,1251 @@
+{
+  "id": "db6ccdc793a0-finite-audit-bridge",
+  "origin": "db6ccdc793a0a1a96b736cee6c55c47145b86b8f5f91d2dbb1cf80e7036b614e",
+  "descriptor_source_id": "src-db6ccdc793a0a1a9-85c042fef1d85c5a",
+  "modules": [
+    {
+      "module": "GenericFiniteQueryLocality",
+      "source_id": "src-db6ccdc793a0a1a9-2e2cda1b87b4c849",
+      "imports": [
+        "Mathlib"
+      ]
+    },
+    {
+      "module": "GenericFiniteQueryMeasure",
+      "source_id": "src-db6ccdc793a0a1a9-370e92230d280190",
+      "imports": [
+        "GenericFiniteQueryLocality",
+        "Mathlib.Probability.ProductMeasure"
+      ]
+    },
+    {
+      "module": "PolicyRowEvaluator",
+      "source_id": "src-db6ccdc793a0a1a9-721587fba005bad9",
+      "imports": [
+        "GenericFiniteQueryMeasure"
+      ]
+    },
+    {
+      "module": "PolicyTranscriptFiber",
+      "source_id": "src-db6ccdc793a0a1a9-47bea5b38963b026",
+      "imports": [
+        "PolicyRowEvaluator"
+      ]
+    },
+    {
+      "module": "FeedbackRequests",
+      "source_id": "src-db6ccdc793a0a1a9-ef9ba126f65be19c",
+      "imports": [
+        "PolicyTranscriptFiber"
+      ]
+    },
+    {
+      "module": "ProductObservationLaw",
+      "source_id": "src-db6ccdc793a0a1a9-95203d0c6b42dd4c",
+      "imports": [
+        "Mathlib",
+        "Mathlib.Probability.ProductMeasure"
+      ]
+    },
+    {
+      "module": "IndependentProductFamilies",
+      "source_id": "src-db6ccdc793a0a1a9-9eda9d543f98f8a3",
+      "imports": [
+        "ProductObservationLaw"
+      ]
+    },
+    {
+      "module": "GenericQueryReference",
+      "source_id": "src-db6ccdc793a0a1a9-a10400a981a79571",
+      "imports": [
+        "GenericFiniteQueryMeasure"
+      ]
+    },
+    {
+      "module": "PolicyRowLaw",
+      "source_id": "src-db6ccdc793a0a1a9-cde5a6afc99a9277",
+      "imports": [
+        "GenericQueryReference"
+      ]
+    },
+    {
+      "module": "FeedbackFiberProbability",
+      "source_id": "src-db6ccdc793a0a1a9-ba874cd7f391dbaf",
+      "imports": [
+        "FeedbackRequests",
+        "IndependentProductFamilies",
+        "PolicyRowLaw"
+      ]
+    },
+    {
+      "module": "PolicyCylinderProbability",
+      "source_id": "src-db6ccdc793a0a1a9-bd8bd736fd723c51",
+      "imports": [
+        "FeedbackFiberProbability"
+      ]
+    },
+    {
+      "module": "HistoryPathConsistency",
+      "source_id": "src-db6ccdc793a0a1a9-e4f49079faf9d9bb",
+      "imports": [
+        "PolicyTranscriptFiber",
+        "Mathlib.Probability.Kernel.IonescuTulcea.Traj"
+      ]
+    },
+    {
+      "module": "PolicyObservedLaw",
+      "source_id": "src-db6ccdc793a0a1a9-1dffc974b828103c",
+      "imports": [
+        "PolicyCylinderProbability",
+        "HistoryPathConsistency"
+      ]
+    },
+    {
+      "module": "PolicyTraceBinding",
+      "source_id": "src-db6ccdc793a0a1a9-f0ae3cb5f0faae11",
+      "imports": [
+        "PolicyObservedLaw"
+      ]
+    },
+    {
+      "module": "dependencies.StatisticalRepair",
+      "source_id": "src-db6ccdc793a0a1a9-13f84ed940da6f74",
+      "imports": [
+        "Mathlib.Data.Real.Sqrt",
+        "Mathlib.Algebra.Order.BigOperators.Ring.Finset",
+        "Mathlib.Tactic"
+      ]
+    },
+    {
+      "module": "HellingerTree",
+      "source_id": "src-db6ccdc793a0a1a9-acda892e0d2d9411",
+      "imports": [
+        "dependencies.StatisticalRepair",
+        "Mathlib.Topology.Instances.ENNReal.Lemmas"
+      ]
+    },
+    {
+      "module": "SubprobHellinger",
+      "source_id": "src-db6ccdc793a0a1a9-47a2a767829fdc85",
+      "imports": [
+        "HellingerTree"
+      ]
+    },
+    {
+      "module": "DependentHellinger",
+      "source_id": "src-db6ccdc793a0a1a9-a2514520803d92e4",
+      "imports": [
+        "SubprobHellinger"
+      ]
+    },
+    {
+      "module": "ResetBudget",
+      "source_id": "src-db6ccdc793a0a1a9-9d1890c6dd3c3cc6",
+      "imports": [
+        "DependentHellinger"
+      ]
+    },
+    {
+      "module": "BlockKernel",
+      "source_id": "src-db6ccdc793a0a1a9-accc211e0dbed431",
+      "imports": [
+        "HellingerTree",
+        "Mathlib.Algebra.BigOperators.Ring.Finset"
+      ]
+    },
+    {
+      "module": "StoppedBlock",
+      "source_id": "src-db6ccdc793a0a1a9-9b0f3549e68c6e20",
+      "imports": [
+        "SubprobHellinger",
+        "BlockKernel"
+      ]
+    },
+    {
+      "module": "SelfVerifyingSupport",
+      "source_id": "src-db6ccdc793a0a1a9-02478a3bf1ac2f5a",
+      "imports": [
+        "Mathlib.Data.Finset.Powerset",
+        "Mathlib.Data.Finset.Card",
+        "Mathlib.Tactic"
+      ]
+    },
+    {
+      "module": "ResidualDeficit",
+      "source_id": "src-db6ccdc793a0a1a9-3b4319457f689743",
+      "imports": [
+        "StoppedBlock",
+        "SelfVerifyingSupport"
+      ]
+    },
+    {
+      "module": "FiniteLikelihood",
+      "source_id": "src-db6ccdc793a0a1a9-2d20ef51c9a8fa1a",
+      "imports": [
+        "Mathlib.Probability.StrongLaw",
+        "Mathlib.InformationTheory.KullbackLeibler.KLFun",
+        "Mathlib.Tactic"
+      ]
+    },
+    {
+      "module": "AdaptiveLikelihood",
+      "source_id": "src-db6ccdc793a0a1a9-e754d0bc7a35bfeb",
+      "imports": [
+        "FiniteLikelihood",
+        "Mathlib.Order.Filter.IsBounded"
+      ]
+    },
+    {
+      "module": "LikelihoodProducts",
+      "source_id": "src-db6ccdc793a0a1a9-dc1a27b78dda4802",
+      "imports": [
+        "AdaptiveLikelihood"
+      ]
+    },
+    {
+      "module": "BlockController",
+      "source_id": "src-db6ccdc793a0a1a9-26fa79f5c6766fda",
+      "imports": [
+        "LikelihoodProducts",
+        "SelfVerifyingSupport",
+        "Mathlib.Data.Nat.Nth",
+        "Mathlib.Order.Filter.Cofinite"
+      ]
+    },
+    {
+      "module": "CanonicalBlockPolicy",
+      "source_id": "src-db6ccdc793a0a1a9-578cea611c2818ee",
+      "imports": [
+        "BlockController"
+      ]
+    },
+    {
+      "module": "StoppedPhasePolicy",
+      "source_id": "src-db6ccdc793a0a1a9-6f87d5dc1c9336c0",
+      "imports": [
+        "DependentHellinger",
+        "ResidualDeficit",
+        "CanonicalBlockPolicy"
+      ]
+    },
+    {
+      "module": "WeightedPotential",
+      "source_id": "src-db6ccdc793a0a1a9-167a707f95ff336e",
+      "imports": [
+        "ResetBudget",
+        "StoppedPhasePolicy"
+      ]
+    },
+    {
+      "module": "ResetHellinger",
+      "source_id": "src-db6ccdc793a0a1a9-5758cd2dc4e8da53",
+      "imports": [
+        "WeightedPotential"
+      ]
+    },
+    {
+      "module": "LiveSourceCertificate",
+      "source_id": "src-db6ccdc793a0a1a9-5156b53d8e63be66",
+      "imports": [
+        "ResetHellinger"
+      ]
+    },
+    {
+      "module": "GuardedResetBudget",
+      "source_id": "src-db6ccdc793a0a1a9-e933390a8ec4be6a",
+      "imports": [
+        "ResetBudget"
+      ]
+    },
+    {
+      "module": "GuardedResetHellinger",
+      "source_id": "src-db6ccdc793a0a1a9-a76adc79b300df8d",
+      "imports": [
+        "WeightedPotential",
+        "GuardedResetBudget"
+      ]
+    },
+    {
+      "module": "GuardedLiveController",
+      "source_id": "src-db6ccdc793a0a1a9-3a3756bc57acccd7",
+      "imports": [
+        "LiveSourceCertificate",
+        "GuardedResetHellinger"
+      ]
+    },
+    {
+      "module": "StoppedActionCost",
+      "source_id": "src-db6ccdc793a0a1a9-d6dc9008c872c495",
+      "imports": [
+        "StoppedBlock"
+      ]
+    },
+    {
+      "module": "ResetLaw",
+      "source_id": "src-db6ccdc793a0a1a9-6b09e0aecfc451e5",
+      "imports": [
+        "ResetBudget"
+      ]
+    },
+    {
+      "module": "ResetTrajectory",
+      "source_id": "src-db6ccdc793a0a1a9-6eb13ca8583f735f",
+      "imports": [
+        "ResetLaw",
+        "Mathlib.Probability.Kernel.IonescuTulcea.Traj",
+        "Mathlib.Probability.ProbabilityMassFunction.Integrals"
+      ]
+    },
+    {
+      "module": "ResetFutureCost",
+      "source_id": "src-db6ccdc793a0a1a9-db4c3090b0b5958d",
+      "imports": [
+        "ResetTrajectory"
+      ]
+    },
+    {
+      "module": "MarkovCharge",
+      "source_id": "src-db6ccdc793a0a1a9-6785783f27a684fc",
+      "imports": [
+        "ResetTrajectory"
+      ]
+    },
+    {
+      "module": "ResetExpectation",
+      "source_id": "src-db6ccdc793a0a1a9-4d6da4678a2b2593",
+      "imports": [
+        "ResetFutureCost",
+        "MarkovCharge",
+        "Mathlib.MeasureTheory.Integral.Lebesgue.Countable"
+      ]
+    },
+    {
+      "module": "FiniteBudgetAlmostSure",
+      "source_id": "src-db6ccdc793a0a1a9-30d48c1bbcc5fafc",
+      "imports": [
+        "ResetHellinger",
+        "Mathlib.MeasureTheory.OuterMeasure.BorelCantelli",
+        "Mathlib.MeasureTheory.Integral.Lebesgue.Countable",
+        "Mathlib.Data.ENNReal.BigOperators"
+      ]
+    },
+    {
+      "module": "TrajectoryBudget",
+      "source_id": "src-db6ccdc793a0a1a9-6721654d9d467fbf",
+      "imports": [
+        "ResetExpectation",
+        "FiniteBudgetAlmostSure"
+      ]
+    },
+    {
+      "module": "GeneratedLiveController",
+      "source_id": "src-db6ccdc793a0a1a9-95f7e87dbbdff6f4",
+      "imports": [
+        "GuardedLiveController",
+        "StoppedActionCost",
+        "TrajectoryBudget"
+      ]
+    },
+    {
+      "module": "SupportStageCertificate",
+      "source_id": "src-db6ccdc793a0a1a9-d52778d9d78fe459",
+      "imports": [
+        "SelfVerifyingSupport"
+      ]
+    },
+    {
+      "module": "RecursiveWinningCertificate",
+      "source_id": "src-db6ccdc793a0a1a9-410e3b477fa0e0a2",
+      "imports": [
+        "GeneratedLiveController",
+        "SupportStageCertificate"
+      ]
+    },
+    {
+      "module": "StoppedSupportUpdate",
+      "source_id": "src-db6ccdc793a0a1a9-4ecd497522f34b79",
+      "imports": [
+        "RecursiveWinningCertificate"
+      ]
+    },
+    {
+      "module": "RecursivePhaseExtraction",
+      "source_id": "src-db6ccdc793a0a1a9-207f25be42bb02a7",
+      "imports": [
+        "StoppedSupportUpdate"
+      ]
+    },
+    {
+      "module": "RecursiveGeneratedController",
+      "source_id": "src-db6ccdc793a0a1a9-8f4552d20a3a593e",
+      "imports": [
+        "RecursivePhaseExtraction",
+        "StoppedActionCost"
+      ]
+    },
+    {
+      "module": "RecordedTransition",
+      "source_id": "src-db6ccdc793a0a1a9-df21a3b28124d5e0",
+      "imports": [
+        "ResetExpectation"
+      ]
+    },
+    {
+      "module": "RecordedCharge",
+      "source_id": "src-db6ccdc793a0a1a9-805a720c4c2185e6",
+      "imports": [
+        "RecordedTransition",
+        "TrajectoryBudget"
+      ]
+    },
+    {
+      "module": "RecordedBudgetTransfer",
+      "source_id": "src-db6ccdc793a0a1a9-d2890e0de4396ab0",
+      "imports": [
+        "RecordedCharge"
+      ]
+    },
+    {
+      "module": "StoppedRecordActions",
+      "source_id": "src-db6ccdc793a0a1a9-230aa33803d80146",
+      "imports": [
+        "RecordedTransition",
+        "StoppedActionCost"
+      ]
+    },
+    {
+      "module": "dependencies.PhysicalFlattening",
+      "source_id": "src-db6ccdc793a0a1a9-cad912cb37fa0d6a",
+      "imports": [
+        "Mathlib"
+      ]
+    },
+    {
+      "module": "RecursiveRecordedController",
+      "source_id": "src-db6ccdc793a0a1a9-ef4288212a1768cd",
+      "imports": [
+        "RecursiveGeneratedController",
+        "RecordedBudgetTransfer",
+        "StoppedRecordActions",
+        "dependencies.PhysicalFlattening"
+      ]
+    },
+    {
+      "module": "MarkovZeroEvent",
+      "source_id": "src-db6ccdc793a0a1a9-700425d4be77abb7",
+      "imports": [
+        "MarkovCharge"
+      ]
+    },
+    {
+      "module": "dependencies.MeasurablePhysicalFlattening",
+      "source_id": "src-db6ccdc793a0a1a9-1e19d34f05cd9350",
+      "imports": [
+        "dependencies.PhysicalFlattening"
+      ]
+    },
+    {
+      "module": "RecursivePhysicalDecoder",
+      "source_id": "src-db6ccdc793a0a1a9-ae34eca525becc80",
+      "imports": [
+        "RecursiveRecordedController",
+        "MarkovZeroEvent",
+        "dependencies.MeasurablePhysicalFlattening"
+      ]
+    },
+    {
+      "module": "PhysicalCostConservation",
+      "source_id": "src-db6ccdc793a0a1a9-22c0f4d72a82b104",
+      "imports": [
+        "RecursivePhysicalDecoder"
+      ]
+    },
+    {
+      "module": "RecursivePhysicalBudget",
+      "source_id": "src-db6ccdc793a0a1a9-8067cbbb1acd2991",
+      "imports": [
+        "PhysicalCostConservation"
+      ]
+    },
+    {
+      "module": "AcyclicPhaseBudget",
+      "source_id": "src-db6ccdc793a0a1a9-0073e1f06f260a97",
+      "imports": [
+        "RecursivePhysicalBudget"
+      ]
+    },
+    {
+      "module": "ChainHellingerBudget",
+      "source_id": "src-db6ccdc793a0a1a9-cdaac8f8610e525a",
+      "imports": [
+        "AcyclicPhaseBudget"
+      ]
+    },
+    {
+      "module": "ChainPhysicalBudget",
+      "source_id": "src-db6ccdc793a0a1a9-73feb11412bf2283",
+      "imports": [
+        "ChainHellingerBudget"
+      ]
+    },
+    {
+      "module": "CanonicalHistoryPMF",
+      "source_id": "src-db6ccdc793a0a1a9-d56c0fbe52a0d697",
+      "imports": [
+        "PolicyTraceBinding",
+        "ChainPhysicalBudget"
+      ]
+    },
+    {
+      "module": "CanonicalHistoryBudget",
+      "source_id": "src-db6ccdc793a0a1a9-8cacbcb61c8a7d6a",
+      "imports": [
+        "CanonicalHistoryPMF"
+      ]
+    },
+    {
+      "module": "FiniteTailCoverage",
+      "source_id": "src-db6ccdc793a0a1a9-31b30ad17c70c9e8",
+      "imports": [
+        "Mathlib.Tactic",
+        "Mathlib.Data.Finset.Max"
+      ]
+    },
+    {
+      "module": "BernoulliTailMonotonicity",
+      "source_id": "src-db6ccdc793a0a1a9-60558ca568c11c7d",
+      "imports": [
+        "dependencies.StatisticalRepair",
+        "FiniteTailCoverage"
+      ]
+    },
+    {
+      "module": "BernoulliIntervalCoverage",
+      "source_id": "src-db6ccdc793a0a1a9-2830c38f6a1d1ed4",
+      "imports": [
+        "BernoulliTailMonotonicity"
+      ]
+    },
+    {
+      "module": "BernoulliPrefixLaw",
+      "source_id": "src-db6ccdc793a0a1a9-bf3b8bca40a72ee1",
+      "imports": [
+        "BernoulliIntervalCoverage",
+        "Mathlib.Probability.ProductMeasure",
+        "Mathlib.Probability.ProbabilityMassFunction.Constructions"
+      ]
+    },
+    {
+      "module": "RobustBinaryRepair",
+      "source_id": "src-db6ccdc793a0a1a9-6702ed18ffb497d6",
+      "imports": [
+        "Mathlib.Tactic"
+      ]
+    },
+    {
+      "module": "RepairEndpointCells",
+      "source_id": "src-db6ccdc793a0a1a9-b8990fd3c116d9a6",
+      "imports": [
+        "RobustBinaryRepair"
+      ]
+    },
+    {
+      "module": "AuditedBitControlLaw",
+      "source_id": "src-db6ccdc793a0a1a9-315a3e469f4c9883",
+      "imports": [
+        "CanonicalHistoryBudget",
+        "BernoulliPrefixLaw",
+        "RepairEndpointCells"
+      ]
+    },
+    {
+      "module": "StackActionLaw",
+      "source_id": "src-db6ccdc793a0a1a9-1899e60f5d915519",
+      "imports": [
+        "PolicyTraceBinding"
+      ]
+    },
+    {
+      "module": "CommonSeedDerandomization",
+      "source_id": "src-db6ccdc793a0a1a9-5f01624a9c6c608e",
+      "imports": [
+        "StackActionLaw"
+      ]
+    },
+    {
+      "module": "IIDHeadTail",
+      "source_id": "src-db6ccdc793a0a1a9-a06ccafc0408f170",
+      "imports": [
+        "IndependentProductFamilies"
+      ]
+    },
+    {
+      "module": "DeterministicContinuation",
+      "source_id": "src-db6ccdc793a0a1a9-1ab80fc86b5232eb",
+      "imports": [
+        "CommonSeedDerandomization",
+        "IIDHeadTail"
+      ]
+    },
+    {
+      "module": "RecurrentSupport",
+      "source_id": "src-db6ccdc793a0a1a9-fc567580578bb9c1",
+      "imports": [
+        "Mathlib"
+      ]
+    },
+    {
+      "module": "PolicyTailTransfer",
+      "source_id": "src-db6ccdc793a0a1a9-36a8c0b43a1ef2fb",
+      "imports": [
+        "PolicyTraceBinding",
+        "RecurrentSupport"
+      ]
+    },
+    {
+      "module": "RelativeTailTransfer",
+      "source_id": "src-db6ccdc793a0a1a9-015c561a8e779a41",
+      "imports": [
+        "PolicyTailTransfer"
+      ]
+    },
+    {
+      "module": "SafeSetTailTransfer",
+      "source_id": "src-db6ccdc793a0a1a9-c5a327dac935efd4",
+      "imports": [
+        "RelativeTailTransfer"
+      ]
+    },
+    {
+      "module": "SeededPolicyNecessity",
+      "source_id": "src-db6ccdc793a0a1a9-cab1250c533e600d",
+      "imports": [
+        "PolicyTailTransfer",
+        "SelfVerifyingSupport"
+      ]
+    },
+    {
+      "module": "CausalActionTree",
+      "source_id": "src-db6ccdc793a0a1a9-bca4e6d4f89d0561",
+      "imports": [
+        "ChainPhysicalBudget"
+      ]
+    },
+    {
+      "module": "CausalTreeLaw",
+      "source_id": "src-db6ccdc793a0a1a9-a2231f37326511d6",
+      "imports": [
+        "CausalActionTree",
+        "CanonicalHistoryBudget"
+      ]
+    },
+    {
+      "module": "NormalizedResetPotential",
+      "source_id": "src-db6ccdc793a0a1a9-17f52999db3b6e7c",
+      "imports": [
+        "CausalTreeLaw"
+      ]
+    },
+    {
+      "module": "RecursiveMacroPotential",
+      "source_id": "src-db6ccdc793a0a1a9-e3935d286883ca37",
+      "imports": [
+        "NormalizedResetPotential"
+      ]
+    },
+    {
+      "module": "RecursiveCausalPolicy",
+      "source_id": "src-db6ccdc793a0a1a9-f5e586541b077bcd",
+      "imports": [
+        "RecursiveMacroPotential"
+      ]
+    },
+    {
+      "module": "RecursiveHistorySafety",
+      "source_id": "src-db6ccdc793a0a1a9-56e9d1f4c5fa731a",
+      "imports": [
+        "RecursiveCausalPolicy"
+      ]
+    },
+    {
+      "module": "RecursiveCanonicalSufficiency",
+      "source_id": "src-db6ccdc793a0a1a9-f8fce99711594ca8",
+      "imports": [
+        "RecursiveHistorySafety"
+      ]
+    },
+    {
+      "module": "StableSupportNecessity",
+      "source_id": "src-db6ccdc793a0a1a9-68dff7439de26ddd",
+      "imports": [
+        "SafeSetTailTransfer",
+        "SeededPolicyNecessity",
+        "RecursiveCanonicalSufficiency"
+      ]
+    },
+    {
+      "module": "WinningContinuation",
+      "source_id": "src-db6ccdc793a0a1a9-16f4248dc8d96138",
+      "imports": [
+        "DeterministicContinuation",
+        "StableSupportNecessity"
+      ]
+    },
+    {
+      "module": "CanonicalInvariantSafety",
+      "source_id": "src-db6ccdc793a0a1a9-f85f860a344fc36c",
+      "imports": [
+        "WinningContinuation"
+      ]
+    },
+    {
+      "module": "RecursiveKernelEquivalence",
+      "source_id": "src-db6ccdc793a0a1a9-5f00817725dec70e",
+      "imports": [
+        "RecursiveWinningCertificate"
+      ]
+    },
+    {
+      "module": "RecursiveNecessity",
+      "source_id": "src-db6ccdc793a0a1a9-1e077a3c1c6e6441",
+      "imports": [
+        "CanonicalInvariantSafety",
+        "RecursiveKernelEquivalence"
+      ]
+    },
+    {
+      "module": "RecursiveCanonicalEquivalence",
+      "source_id": "src-db6ccdc793a0a1a9-fe1a07d82bfe989d",
+      "imports": [
+        "RecursiveNecessity"
+      ]
+    },
+    {
+      "module": "FiniteAuditRepair",
+      "source_id": "src-db6ccdc793a0a1a9-ec803228e5ce83ef",
+      "imports": [
+        "AuditedBitControlLaw",
+        "RecursiveCanonicalEquivalence"
+      ]
+    },
+    {
+      "module": "Controls",
+      "source_id": "src-db6ccdc793a0a1a9-845f4b550b160d3e",
+      "imports": [
+        "FiniteAuditRepair"
+      ]
+    }
+  ],
+  "module_order": [
+    "GenericFiniteQueryLocality",
+    "GenericFiniteQueryMeasure",
+    "PolicyRowEvaluator",
+    "PolicyTranscriptFiber",
+    "FeedbackRequests",
+    "ProductObservationLaw",
+    "IndependentProductFamilies",
+    "GenericQueryReference",
+    "PolicyRowLaw",
+    "FeedbackFiberProbability",
+    "PolicyCylinderProbability",
+    "HistoryPathConsistency",
+    "PolicyObservedLaw",
+    "PolicyTraceBinding",
+    "dependencies.StatisticalRepair",
+    "HellingerTree",
+    "SubprobHellinger",
+    "DependentHellinger",
+    "ResetBudget",
+    "BlockKernel",
+    "StoppedBlock",
+    "SelfVerifyingSupport",
+    "ResidualDeficit",
+    "FiniteLikelihood",
+    "AdaptiveLikelihood",
+    "LikelihoodProducts",
+    "BlockController",
+    "CanonicalBlockPolicy",
+    "StoppedPhasePolicy",
+    "WeightedPotential",
+    "ResetHellinger",
+    "LiveSourceCertificate",
+    "GuardedResetBudget",
+    "GuardedResetHellinger",
+    "GuardedLiveController",
+    "StoppedActionCost",
+    "ResetLaw",
+    "ResetTrajectory",
+    "ResetFutureCost",
+    "MarkovCharge",
+    "ResetExpectation",
+    "FiniteBudgetAlmostSure",
+    "TrajectoryBudget",
+    "GeneratedLiveController",
+    "SupportStageCertificate",
+    "RecursiveWinningCertificate",
+    "StoppedSupportUpdate",
+    "RecursivePhaseExtraction",
+    "RecursiveGeneratedController",
+    "RecordedTransition",
+    "RecordedCharge",
+    "RecordedBudgetTransfer",
+    "StoppedRecordActions",
+    "dependencies.PhysicalFlattening",
+    "RecursiveRecordedController",
+    "MarkovZeroEvent",
+    "dependencies.MeasurablePhysicalFlattening",
+    "RecursivePhysicalDecoder",
+    "PhysicalCostConservation",
+    "RecursivePhysicalBudget",
+    "AcyclicPhaseBudget",
+    "ChainHellingerBudget",
+    "ChainPhysicalBudget",
+    "CanonicalHistoryPMF",
+    "CanonicalHistoryBudget",
+    "FiniteTailCoverage",
+    "BernoulliTailMonotonicity",
+    "BernoulliIntervalCoverage",
+    "BernoulliPrefixLaw",
+    "RobustBinaryRepair",
+    "RepairEndpointCells",
+    "AuditedBitControlLaw",
+    "StackActionLaw",
+    "CommonSeedDerandomization",
+    "IIDHeadTail",
+    "DeterministicContinuation",
+    "RecurrentSupport",
+    "PolicyTailTransfer",
+    "RelativeTailTransfer",
+    "SafeSetTailTransfer",
+    "SeededPolicyNecessity",
+    "CausalActionTree",
+    "CausalTreeLaw",
+    "NormalizedResetPotential",
+    "RecursiveMacroPotential",
+    "RecursiveCausalPolicy",
+    "RecursiveHistorySafety",
+    "RecursiveCanonicalSufficiency",
+    "StableSupportNecessity",
+    "WinningContinuation",
+    "CanonicalInvariantSafety",
+    "RecursiveKernelEquivalence",
+    "RecursiveNecessity",
+    "RecursiveCanonicalEquivalence",
+    "FiniteAuditRepair",
+    "Controls"
+  ],
+  "targets": [
+    {
+      "name": "Orthemology.Tranche3.AuditControlBridge.actionBlindKernel",
+      "module": "AuditedBitControlLaw"
+    },
+    {
+      "name": "Orthemology.Tranche3.AuditControlBridge.actionBlindKernel_nonneg",
+      "module": "AuditedBitControlLaw"
+    },
+    {
+      "name": "Orthemology.Tranche3.AuditControlBridge.actionBlindKernel_normalized",
+      "module": "AuditedBitControlLaw"
+    },
+    {
+      "name": "Orthemology.Tranche3.AuditControlBridge.wordPMF",
+      "module": "AuditedBitControlLaw"
+    },
+    {
+      "name": "Orthemology.Tranche3.AuditControlBridge.wordPMF_zero",
+      "module": "AuditedBitControlLaw"
+    },
+    {
+      "name": "Orthemology.Tranche3.AuditControlBridge.wordPMF_succ",
+      "module": "AuditedBitControlLaw"
+    },
+    {
+      "name": "Orthemology.Tranche3.AuditControlBridge.wordPMF_eq_audit_prefix",
+      "module": "AuditedBitControlLaw"
+    },
+    {
+      "name": "Orthemology.Tranche3.AuditControlBridge.encodeHistory",
+      "module": "AuditedBitControlLaw"
+    },
+    {
+      "name": "Orthemology.Tranche3.AuditControlBridge.auditHistory",
+      "module": "AuditedBitControlLaw"
+    },
+    {
+      "name": "Orthemology.Tranche3.AuditControlBridge.auditActions",
+      "module": "AuditedBitControlLaw"
+    },
+    {
+      "name": "Orthemology.Tranche3.AuditControlBridge.auditHistory_succ",
+      "module": "AuditedBitControlLaw"
+    },
+    {
+      "name": "Orthemology.Tranche3.AuditControlBridge.encoded_wordPMF_eq_historyPMF",
+      "module": "AuditedBitControlLaw"
+    },
+    {
+      "name": "Orthemology.Tranche3.AuditControlBridge.auditHistory_measurable",
+      "module": "AuditedBitControlLaw"
+    },
+    {
+      "name": "Orthemology.Tranche3.AuditControlBridge.auditHistory_drop",
+      "module": "AuditedBitControlLaw"
+    },
+    {
+      "name": "Orthemology.Tranche3.AuditControlBridge.auditHistory_prefix_from_last",
+      "module": "AuditedBitControlLaw"
+    },
+    {
+      "name": "Orthemology.Tranche3.AuditControlBridge.observedPrefix_agrees",
+      "module": "AuditedBitControlLaw"
+    },
+    {
+      "name": "Orthemology.Tranche3.AuditControlBridge.auditActions_uses_only_past",
+      "module": "AuditedBitControlLaw"
+    },
+    {
+      "name": "Orthemology.Tranche3.AuditControlBridge.auditHistory_marginal_eq_canonical",
+      "module": "AuditedBitControlLaw"
+    },
+    {
+      "name": "Orthemology.Tranche3.AuditControlBridge.auditHistory_law_eq_canonical",
+      "module": "AuditedBitControlLaw"
+    },
+    {
+      "name": "Orthemology.Tranche3.AuditControlBridge.auditActions_measurable",
+      "module": "AuditedBitControlLaw"
+    },
+    {
+      "name": "Orthemology.Tranche3.AuditControlBridge.auditActions_law_eq_canonical",
+      "module": "AuditedBitControlLaw"
+    },
+    {
+      "name": "Orthemology.Tranche3.FiniteAuditRepair.weight",
+      "module": "FiniteAuditRepair"
+    },
+    {
+      "name": "Orthemology.Tranche3.FiniteAuditRepair.report",
+      "module": "FiniteAuditRepair"
+    },
+    {
+      "name": "Orthemology.Tranche3.FiniteAuditRepair.kernels",
+      "module": "FiniteAuditRepair"
+    },
+    {
+      "name": "Orthemology.Tranche3.FiniteAuditRepair.literalGood",
+      "module": "FiniteAuditRepair"
+    },
+    {
+      "name": "Orthemology.Tranche3.FiniteAuditRepair.publicMenu",
+      "module": "FiniteAuditRepair"
+    },
+    {
+      "name": "Orthemology.Tranche3.FiniteAuditRepair.weight_nonneg",
+      "module": "FiniteAuditRepair"
+    },
+    {
+      "name": "Orthemology.Tranche3.FiniteAuditRepair.weight_le_one",
+      "module": "FiniteAuditRepair"
+    },
+    {
+      "name": "Orthemology.Tranche3.FiniteAuditRepair.kernels_pos",
+      "module": "FiniteAuditRepair"
+    },
+    {
+      "name": "Orthemology.Tranche3.FiniteAuditRepair.kernels_nonneg",
+      "module": "FiniteAuditRepair"
+    },
+    {
+      "name": "Orthemology.Tranche3.FiniteAuditRepair.kernels_normalized",
+      "module": "FiniteAuditRepair"
+    },
+    {
+      "name": "Orthemology.Tranche3.FiniteAuditRepair.literalGood_exact",
+      "module": "FiniteAuditRepair"
+    },
+    {
+      "name": "Orthemology.Tranche3.FiniteAuditRepair.matching_report_losses",
+      "module": "FiniteAuditRepair"
+    },
+    {
+      "name": "Orthemology.Tranche3.FiniteAuditRepair.crossed_report_losses",
+      "module": "FiniteAuditRepair"
+    },
+    {
+      "name": "Orthemology.Tranche3.FiniteAuditRepair.no_static_common_literal_repair",
+      "module": "FiniteAuditRepair"
+    },
+    {
+      "name": "Orthemology.Tranche3.FiniteAuditRepair.all_reports_coherent",
+      "module": "FiniteAuditRepair"
+    },
+    {
+      "name": "Orthemology.Tranche3.FiniteAuditRepair.kernels_identify",
+      "module": "FiniteAuditRepair"
+    },
+    {
+      "name": "Orthemology.Tranche3.FiniteAuditRepair.support_stays",
+      "module": "FiniteAuditRepair"
+    },
+    {
+      "name": "Orthemology.Tranche3.FiniteAuditRepair.full_family_winning",
+      "module": "FiniteAuditRepair"
+    },
+    {
+      "name": "Orthemology.Tranche3.FiniteAuditRepair.initialPhase",
+      "module": "FiniteAuditRepair"
+    },
+    {
+      "name": "Orthemology.Tranche3.FiniteAuditRepair.policy",
+      "module": "FiniteAuditRepair"
+    },
+    {
+      "name": "Orthemology.Tranche3.FiniteAuditRepair.reports",
+      "module": "FiniteAuditRepair"
+    },
+    {
+      "name": "Orthemology.Tranche3.FiniteAuditRepair.budget",
+      "module": "FiniteAuditRepair"
+    },
+    {
+      "name": "Orthemology.Tranche3.FiniteAuditRepair.actual_audit_control_law",
+      "module": "FiniteAuditRepair"
+    },
+    {
+      "name": "Orthemology.Tranche3.FiniteAuditRepair.reports_always_coherent",
+      "module": "FiniteAuditRepair"
+    },
+    {
+      "name": "Orthemology.Tranche3.FiniteAuditRepair.reports_eventually_strict",
+      "module": "FiniteAuditRepair"
+    },
+    {
+      "name": "Orthemology.Tranche3.FiniteAuditRepair.literal_failure_cost",
+      "module": "FiniteAuditRepair"
+    },
+    {
+      "name": "Orthemology.Tranche3.FiniteAuditRepair.reports_expected_literal_failures",
+      "module": "FiniteAuditRepair"
+    },
+    {
+      "name": "Orthemology.Tranche3.FiniteAuditRepair.reports_expected_literal_failures_finite",
+      "module": "FiniteAuditRepair"
+    },
+    {
+      "name": "IndependentFiniteAuditControls.action_zero_precedes_first_bit",
+      "module": "Controls"
+    },
+    {
+      "name": "IndependentFiniteAuditControls.action_one_uses_acquired_bit",
+      "module": "Controls"
+    },
+    {
+      "name": "IndependentFiniteAuditControls.generic_past_only",
+      "module": "Controls"
+    },
+    {
+      "name": "IndependentFiniteAuditControls.no_current_bit_access_at_initial_action",
+      "module": "Controls"
+    },
+    {
+      "name": "IndependentFiniteAuditControls.actual_source_action_law_for_concrete_policy",
+      "module": "Controls"
+    },
+    {
+      "name": "IndependentFiniteAuditControls.report_labels_are_literal_scores",
+      "module": "Controls"
+    },
+    {
+      "name": "IndependentFiniteAuditControls.static_obstruction_covers_all_real_reports",
+      "module": "Controls"
+    },
+    {
+      "name": "IndependentFiniteAuditControls.fixed_expected_score_gains",
+      "module": "Controls"
+    },
+    {
+      "name": "IndependentFiniteAuditControls.every_observation_retains_both_models",
+      "module": "Controls"
+    },
+    {
+      "name": "IndependentFiniteAuditControls.all_reports_licensed",
+      "module": "Controls"
+    }
+  ],
+  "pins": {
+    "lean_version": "4.19.0",
+    "lean_binary_sha256": "92c3d35b5bfaa5e0fea413a775d504cf46cd95e1345df61c2274f76779e7e023",
+    "packages": [
+      {
+        "name": "mathlib",
+        "revision": "c44e0c8ee63ca166450922a373c7409c5d26b00b"
+      },
+      {
+        "name": "plausible",
+        "revision": "77e08eddc486491d7b9e470926b3dbe50319451a"
+      },
+      {
+        "name": "LeanSearchClient",
+        "revision": "25078369972d295301f5a1e53c3e5850cf6d9d4c"
+      },
+      {
+        "name": "importGraph",
+        "revision": "e6a9f0f5ee3ccf7443a0070f92b62f8db12ae82b"
+      },
+      {
+        "name": "proofwidgets",
+        "revision": "c4919189477c3221e6a204008998b0d724f49904"
+      },
+      {
+        "name": "aesop",
+        "revision": "5d50b08dedd7d69b3d9b3176e0d58a23af228884"
+      },
+      {
+        "name": "Qq",
+        "revision": "fa4f7f15d97591a9cf3aa7724ba371c7fc6dda02"
+      },
+      {
+        "name": "batteries",
+        "revision": "f5d04a9c4973d401c8c92500711518f7c656f034"
+      },
+      {
+        "name": "Cli",
+        "revision": "02dbd02bc00ec4916e99b04b2245b30200e200d0"
+      }
+    ]
+  },
+  "official_imports": [
+    {
+      "module": "Mathlib",
+      "repository": "mathlib",
+      "source": "Mathlib.lean",
+      "sha256": "b0518254279fabf0c6a920804e684536b0f5e2bd1cb6318d0609eb563413f20a"
+    },
+    {
+      "module": "Mathlib.Algebra.BigOperators.Ring.Finset",
+      "repository": "mathlib",
+      "source": "Mathlib/Algebra/BigOperators/Ring/Finset.lean",
+      "sha256": "4230d51ee93a5228a7a606be8a1b0d3e37d403ea88f4ae53e18499e6adec7056"
+    },
+    {
+      "module": "Mathlib.Algebra.Order.BigOperators.Ring.Finset",
+      "repository": "mathlib",
+      "source": "Mathlib/Algebra/Order/BigOperators/Ring/Finset.lean",
+      "sha256": "6341ca875f3963664c94147b1eacd45c9aedfe2015ae695b06af4e717849abe4"
+    },
+    {
+      "module": "Mathlib.Data.ENNReal.BigOperators",
+      "repository": "mathlib",
+      "source": "Mathlib/Data/ENNReal/BigOperators.lean",
+      "sha256": "5aab09c5a12d60ae590fd1bb83423323c407fdf0599f92f5a3362e541127fb73"
+    },
+    {
+      "module": "Mathlib.Data.Finset.Card",
+      "repository": "mathlib",
+      "source": "Mathlib/Data/Finset/Card.lean",
+      "sha256": "a915b4a9c6ed684221397e67503048f604fc2caf58a88b03c02e4d7e070a940b"
+    },
+    {
+      "module": "Mathlib.Data.Finset.Max",
+      "repository": "mathlib",
+      "source": "Mathlib/Data/Finset/Max.lean",
+      "sha256": "5da0ec1876605df7573c9c6a3f859f1426014883e2411cb5909fc36d6c0063a9"
+    },
+    {
+      "module": "Mathlib.Data.Finset.Powerset",
+      "repository": "mathlib",
+      "source": "Mathlib/Data/Finset/Powerset.lean",
+      "sha256": "ff946726d050b01703aec4dd1a66398f461455942e036806c24ceaeee6e23ac8"
+    },
+    {
+      "module": "Mathlib.Data.Nat.Nth",
+      "repository": "mathlib",
+      "source": "Mathlib/Data/Nat/Nth.lean",
+      "sha256": "f9c3f28e98e349044dc2ed66c469fb9d708aae76bfecff177057afa2c621c345"
+    },
+    {
+      "module": "Mathlib.Data.Real.Sqrt",
+      "repository": "mathlib",
+      "source": "Mathlib/Data/Real/Sqrt.lean",
+      "sha256": "100af39c6d268959221d07b8f2fee4579d2dbef4e87bf64158066cc675f67323"
+    },
+    {
+      "module": "Mathlib.InformationTheory.KullbackLeibler.KLFun",
+      "repository": "mathlib",
+      "source": "Mathlib/InformationTheory/KullbackLeibler/KLFun.lean",
+      "sha256": "2a8bd6be0fdcea32c85d5e671d412890b222ec0678f337f594a3beef8823b5bf"
+    },
+    {
+      "module": "Mathlib.MeasureTheory.Integral.Lebesgue.Countable",
+      "repository": "mathlib",
+      "source": "Mathlib/MeasureTheory/Integral/Lebesgue/Countable.lean",
+      "sha256": "d72bbe283ae4450a54542434fae411870672bfcad5b518d17a4b909a0c7b4c62"
+    },
+    {
+      "module": "Mathlib.MeasureTheory.OuterMeasure.BorelCantelli",
+      "repository": "mathlib",
+      "source": "Mathlib/MeasureTheory/OuterMeasure/BorelCantelli.lean",
+      "sha256": "9e38230dcc3fff080e7ea05c64e7a04af8d9440753ff8be290e8cd110b9afa6a"
+    },
+    {
+      "module": "Mathlib.Order.Filter.Cofinite",
+      "repository": "mathlib",
+      "source": "Mathlib/Order/Filter/Cofinite.lean",
+      "sha256": "90ab3333c25d9fa1a5cd55329717a5e2e0bf22008edeff96e5d91074146c6a3c"
+    },
+    {
+      "module": "Mathlib.Order.Filter.IsBounded",
+      "repository": "mathlib",
+      "source": "Mathlib/Order/Filter/IsBounded.lean",
+      "sha256": "7612a3743f96379ab16577c154486e9ea0e7ad1efbd81e1c2e65f95aa7665646"
+    },
+    {
+      "module": "Mathlib.Probability.Kernel.IonescuTulcea.Traj",
+      "repository": "mathlib",
+      "source": "Mathlib/Probability/Kernel/IonescuTulcea/Traj.lean",
+      "sha256": "c565dd9bdc17c21181cd5cbe41055aa2889210745bc463ff0596a01c580ccbcb"
+    },
+    {
+      "module": "Mathlib.Probability.ProbabilityMassFunction.Constructions",
+      "repository": "mathlib",
+      "source": "Mathlib/Probability/ProbabilityMassFunction/Constructions.lean",
+      "sha256": "8e50bff3cd3b46107d612eed21e1648752a86f9c373d4b6b0fe10e0e22a43973"
+    },
+    {
+      "module": "Mathlib.Probability.ProbabilityMassFunction.Integrals",
+      "repository": "mathlib",
+      "source": "Mathlib/Probability/ProbabilityMassFunction/Integrals.lean",
+      "sha256": "412763e5ad86cc96721b1bbb1bfaccb5fa15919a2d5afb7af9da419cc2290292"
+    },
+    {
+      "module": "Mathlib.Probability.ProductMeasure",
+      "repository": "mathlib",
+      "source": "Mathlib/Probability/ProductMeasure.lean",
+      "sha256": "f8af06e87e2e28916f0fa8a455f792ded4b85a22e1dea5e1c6f9cac1d31b9830"
+    },
+    {
+      "module": "Mathlib.Probability.StrongLaw",
+      "repository": "mathlib",
+      "source": "Mathlib/Probability/StrongLaw.lean",
+      "sha256": "3c3768b70c3779bea384592bb548bc06de2d25af315e0a0d59a1742b0807717c"
+    },
+    {
+      "module": "Mathlib.Tactic",
+      "repository": "mathlib",
+      "source": "Mathlib/Tactic.lean",
+      "sha256": "f20038eba7bba63f07a2f854496101226df407e20414e6b8ebf94b14f95e831b"
+    },
+    {
+      "module": "Mathlib.Topology.Instances.ENNReal.Lemmas",
+      "repository": "mathlib",
+      "source": "Mathlib/Topology/Instances/ENNReal/Lemmas.lean",
+      "sha256": "5b078eb5f8aeae72ee8c7348f2cfcc02c36e0ff01e9f72205c2c06187ee04c82"
+    }
+  ],
+  "driver": {
+    "source_id": "src-db6ccdc793a0a1a9-817e8553aa5fdf95",
+    "lean_argument": "BIN_DIRECTORY"
+  },
+  "controls": "ORIGINAL_DRIVER_REQUIRED",
+  "classification": "CURRENT_EVIDENCE"
+}

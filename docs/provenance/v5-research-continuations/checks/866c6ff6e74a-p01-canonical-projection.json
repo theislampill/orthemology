@@ -1,0 +1,487 @@
+{
+  "status": "FRESH_KERNEL_COMPONENTS",
+  "exit_code": 0,
+  "kernel_verified": true,
+  "suite_id": "866c6ff6e74a-p01-canonical-projection",
+  "suite_sha256": "b42363aa4ddaa543786d731305a3591050136d9712ab29c144a1d9b95f5e30ac",
+  "source_hashes": {
+    "AuditSupport": "f3e08557b57a745bae547dc827755616cd6c6824bf1360441a72789036e1cd96",
+    "InternalPolymorphism": "7cf85525305944e343b50f63e9b593a0fdcab3c89303f2f32cdb37d92c70b1ee",
+    "FiniteBridge": "f75306d1a29cd76385058ca1a819910b1f635a63369d807d484ab6db981a0042",
+    "BoundaryResults": "cf337cad057a4c2cb93f2c0145f8132368867257c2b0bf7ee32f7be70d29d11c",
+    "EffectsAndDependence": "0e3adde9d907e2c0a28afb5087feb42986e2e1fd880682edd70d4b4214790be2",
+    "NormalisationAndNumerals": "13c3b0ba7aa7e57fd13bf1d61d28ef842755d5f5103ef9598d18cc885f4e2ca2",
+    "P01TypeAlgebra": "222b99bb10321cfe4fbd55ea252631fb0824fa43d966995bb7873a3c8b11b188",
+    "P01SNReflection": "017d12cb7f47f1767310f550277043536a6606e520bdd2f406eabcd91480dd86",
+    "P01Candidates": "9b1a18c1f189774d22858ba56bb77aecd5fc7506a08195c94fbb1873158a0e7e",
+    "P01Confluence": "682ad4ce3fda2b69601f267e6c7cfd729d8004fbfdd95c60f12d24fb59bc303e",
+    "P01Omega": "df83be41f01616777a5e53aba4e890161c155ad21d6c8b594d0c6cf7806fdf88",
+    "P01Polynomials": "57bef4972e782bb85bc9f267bd899afdd09f65ebad610b107348db42b2b3b8b8",
+    "P01PER": "ee15654ad70d9c0e9a77d699a0ff53122d1dcde65f610e26555edc589f97c87e",
+    "P01DependentCore": "d69233c44f1406044f649204626c4f58155bcb2dc81ac319cf451c473ab13498",
+    "P01ContextualJ": "e3342d36b3012206cdcf39115d13f14246236f24a122cbd466d6b11bda15d28c",
+    "P01Certificates": "5e457f06ecc1622fd53b1917f383c48ce019887910ce0fcb64d99c7e5a2b35f6",
+    "P01Examples": "7372d4bd7f7c70fb1b4178743ba84c3ba2f072be88c5a0b04a67a53ccf947c82",
+    "P01RecursiveModel": "a53b9b16b5013701ab18692035d140db6d34fd3076dd595837dd8808553274f9",
+    "P01LambdaSyntax": "1a969ade6fc6daf226cde5a9f077bb7f16ef5a396a090728c8468356df555e21",
+    "P01SystemF": "9d06b1180a90048ebe6249e461ed6551fdbf94971a8ba1232b6ffb86e5d45f1a",
+    "P01CurryParametricity": "b29f2917d48adf8462cc272ecffb12e50cb3217b4de360c71f9f13fe75bbeb2a",
+    "P01Translation": "538b51e6c199bc43ef2f32d4ffdc16f52043e277b8ea50b1da93a73aa9b38b4d",
+    "P01ModelWitnesses": "f49f5693dd928e74bb375a3a52a4e8cd0e9792ba0f90b9d543928ab0cf84510f",
+    "P01DependentModel": "f2017f4ff67c81eb2d1cb6d4ed3b7efea3e686567409e9d07531a61f6b6d5e59",
+    "P01DependentSubstitution": "74eec27e534d5b3fe69b0543d343043483288011d7edc85a424cc8458e91a610",
+    "P01DependentFundamental": "82cd316ba5a0c4efbfb7bbc8ce5e69659e33cb7227d1d4effbaddb3d2f1d66aa",
+    "P01DependentControls": "6f1afe90be0a46d00763808013733f068a65b4f0fd34d215fb101f0db313856c",
+    "P01DependentRepresentation": "e7c7bd5d62f361f4f8a283e1fe442341e87f0200f0494cb2553af4da3a0ff737",
+    "P01CanonicalCarrierProjection": "d2cd1460fd8f15eabdcf0bc7044af5b01e82f7ea05242157f2503eaf5585b41e",
+    "ProjectionContract": "4bb9ad0c98796b11c7bed5a2b2b8f3432700027510d1180e0a653ff07dad7115"
+  },
+  "post_source_hashes": {
+    "AuditSupport": "f3e08557b57a745bae547dc827755616cd6c6824bf1360441a72789036e1cd96",
+    "InternalPolymorphism": "7cf85525305944e343b50f63e9b593a0fdcab3c89303f2f32cdb37d92c70b1ee",
+    "FiniteBridge": "f75306d1a29cd76385058ca1a819910b1f635a63369d807d484ab6db981a0042",
+    "BoundaryResults": "cf337cad057a4c2cb93f2c0145f8132368867257c2b0bf7ee32f7be70d29d11c",
+    "EffectsAndDependence": "0e3adde9d907e2c0a28afb5087feb42986e2e1fd880682edd70d4b4214790be2",
+    "NormalisationAndNumerals": "13c3b0ba7aa7e57fd13bf1d61d28ef842755d5f5103ef9598d18cc885f4e2ca2",
+    "P01TypeAlgebra": "222b99bb10321cfe4fbd55ea252631fb0824fa43d966995bb7873a3c8b11b188",
+    "P01SNReflection": "017d12cb7f47f1767310f550277043536a6606e520bdd2f406eabcd91480dd86",
+    "P01Candidates": "9b1a18c1f189774d22858ba56bb77aecd5fc7506a08195c94fbb1873158a0e7e",
+    "P01Confluence": "682ad4ce3fda2b69601f267e6c7cfd729d8004fbfdd95c60f12d24fb59bc303e",
+    "P01Omega": "df83be41f01616777a5e53aba4e890161c155ad21d6c8b594d0c6cf7806fdf88",
+    "P01Polynomials": "57bef4972e782bb85bc9f267bd899afdd09f65ebad610b107348db42b2b3b8b8",
+    "P01PER": "ee15654ad70d9c0e9a77d699a0ff53122d1dcde65f610e26555edc589f97c87e",
+    "P01DependentCore": "d69233c44f1406044f649204626c4f58155bcb2dc81ac319cf451c473ab13498",
+    "P01ContextualJ": "e3342d36b3012206cdcf39115d13f14246236f24a122cbd466d6b11bda15d28c",
+    "P01Certificates": "5e457f06ecc1622fd53b1917f383c48ce019887910ce0fcb64d99c7e5a2b35f6",
+    "P01Examples": "7372d4bd7f7c70fb1b4178743ba84c3ba2f072be88c5a0b04a67a53ccf947c82",
+    "P01RecursiveModel": "a53b9b16b5013701ab18692035d140db6d34fd3076dd595837dd8808553274f9",
+    "P01LambdaSyntax": "1a969ade6fc6daf226cde5a9f077bb7f16ef5a396a090728c8468356df555e21",
+    "P01SystemF": "9d06b1180a90048ebe6249e461ed6551fdbf94971a8ba1232b6ffb86e5d45f1a",
+    "P01CurryParametricity": "b29f2917d48adf8462cc272ecffb12e50cb3217b4de360c71f9f13fe75bbeb2a",
+    "P01Translation": "538b51e6c199bc43ef2f32d4ffdc16f52043e277b8ea50b1da93a73aa9b38b4d",
+    "P01ModelWitnesses": "f49f5693dd928e74bb375a3a52a4e8cd0e9792ba0f90b9d543928ab0cf84510f",
+    "P01DependentModel": "f2017f4ff67c81eb2d1cb6d4ed3b7efea3e686567409e9d07531a61f6b6d5e59",
+    "P01DependentSubstitution": "74eec27e534d5b3fe69b0543d343043483288011d7edc85a424cc8458e91a610",
+    "P01DependentFundamental": "82cd316ba5a0c4efbfb7bbc8ce5e69659e33cb7227d1d4effbaddb3d2f1d66aa",
+    "P01DependentControls": "6f1afe90be0a46d00763808013733f068a65b4f0fd34d215fb101f0db313856c",
+    "P01DependentRepresentation": "e7c7bd5d62f361f4f8a283e1fe442341e87f0200f0494cb2553af4da3a0ff737",
+    "P01CanonicalCarrierProjection": "d2cd1460fd8f15eabdcf0bc7044af5b01e82f7ea05242157f2503eaf5585b41e",
+    "ProjectionContract": "4bb9ad0c98796b11c7bed5a2b2b8f3432700027510d1180e0a653ff07dad7115"
+  },
+  "compiler_sha256": "92c3d35b5bfaa5e0fea413a775d504cf46cd95e1345df61c2274f76779e7e023",
+  "pins": {
+    "lean_version": "4.19.0",
+    "lean_binary_sha256": "92c3d35b5bfaa5e0fea413a775d504cf46cd95e1345df61c2274f76779e7e023",
+    "packages": [
+      {
+        "name": "mathlib",
+        "revision": "c44e0c8ee63ca166450922a373c7409c5d26b00b"
+      },
+      {
+        "name": "plausible",
+        "revision": "77e08eddc486491d7b9e470926b3dbe50319451a"
+      },
+      {
+        "name": "LeanSearchClient",
+        "revision": "25078369972d295301f5a1e53c3e5850cf6d9d4c"
+      },
+      {
+        "name": "importGraph",
+        "revision": "e6a9f0f5ee3ccf7443a0070f92b62f8db12ae82b"
+      },
+      {
+        "name": "proofwidgets",
+        "revision": "c4919189477c3221e6a204008998b0d724f49904"
+      },
+      {
+        "name": "aesop",
+        "revision": "5d50b08dedd7d69b3d9b3176e0d58a23af228884"
+      },
+      {
+        "name": "Qq",
+        "revision": "fa4f7f15d97591a9cf3aa7724ba371c7fc6dda02"
+      },
+      {
+        "name": "batteries",
+        "revision": "f5d04a9c4973d401c8c92500711518f7c656f034"
+      },
+      {
+        "name": "Cli",
+        "revision": "02dbd02bc00ec4916e99b04b2245b30200e200d0"
+      }
+    ]
+  },
+  "modules": [
+    {
+      "module": "AuditSupport",
+      "source_sha256": "f3e08557b57a745bae547dc827755616cd6c6824bf1360441a72789036e1cd96",
+      "object_sha256": "ae1e690ae6db0a1a70c3abbab83e4d3823493d407ed8e3a0a01e33a1e88ffc04",
+      "transitive_source_fingerprint": "c6886b3ed99d0ed50587fd1e37a84f82eeb6ec1f31bb47e0d4bde12264ccd619",
+      "status": "FRESH_COMPILE",
+      "exit_code": 0
+    },
+    {
+      "module": "InternalPolymorphism",
+      "source_sha256": "7cf85525305944e343b50f63e9b593a0fdcab3c89303f2f32cdb37d92c70b1ee",
+      "object_sha256": "8bc4fd26a84db26001e504602a5ed92423e179b3c23e2234e6f5674ae50c6634",
+      "transitive_source_fingerprint": "a3deec8fad36f8aa86a29970636562ecc45d695fb86474829a9afe2277a17fdd",
+      "status": "FRESH_COMPILE",
+      "exit_code": 0
+    },
+    {
+      "module": "FiniteBridge",
+      "source_sha256": "f75306d1a29cd76385058ca1a819910b1f635a63369d807d484ab6db981a0042",
+      "object_sha256": "775a2e2415b52757d02c3c46da80bc5f2116ccf3abc8d58950bb69c57bf53de3",
+      "transitive_source_fingerprint": "f0143d1e1a68725c32234b85c62af36c99a5e349f56ecd2707cec1ba5b49e467",
+      "status": "FRESH_COMPILE",
+      "exit_code": 0
+    },
+    {
+      "module": "BoundaryResults",
+      "source_sha256": "cf337cad057a4c2cb93f2c0145f8132368867257c2b0bf7ee32f7be70d29d11c",
+      "object_sha256": "81eb5b3e6ca35865bf0f9bee888d4b6a34964f9c7c8cbb19ce41157685b4c7b5",
+      "transitive_source_fingerprint": "5c68da52e2b59f9f9434cd6ac6c8e8715dcc0a76bcf65bd800a51167be62f740",
+      "status": "FRESH_COMPILE",
+      "exit_code": 0
+    },
+    {
+      "module": "EffectsAndDependence",
+      "source_sha256": "0e3adde9d907e2c0a28afb5087feb42986e2e1fd880682edd70d4b4214790be2",
+      "object_sha256": "6d513da0bf81abf8a72726cd941e2f2bbdbf5af696f466513a6e8844057c9e99",
+      "transitive_source_fingerprint": "4a62caa39b0a8f9885037255f62bda6dff370d124b3f83a8d082474c2ba41830",
+      "status": "FRESH_COMPILE",
+      "exit_code": 0
+    },
+    {
+      "module": "NormalisationAndNumerals",
+      "source_sha256": "13c3b0ba7aa7e57fd13bf1d61d28ef842755d5f5103ef9598d18cc885f4e2ca2",
+      "object_sha256": "0ce90d9138da7b172b0480cd7d4734e5eb5558e8bc8e8459ee530d432bc77c9a",
+      "transitive_source_fingerprint": "4c343864f919e30e539aba6981d192b2103940c864613531014b554fa046dea3",
+      "status": "FRESH_COMPILE",
+      "exit_code": 0
+    },
+    {
+      "module": "P01TypeAlgebra",
+      "source_sha256": "222b99bb10321cfe4fbd55ea252631fb0824fa43d966995bb7873a3c8b11b188",
+      "object_sha256": "4a0b9935e11876311987434e98f0b6534f0ad4bf9875263b89bf08580eb84540",
+      "transitive_source_fingerprint": "b5ae62c3fe8307da0c844ea9b00794f65b969cc4c91891318dde786ed8b404ba",
+      "status": "FRESH_COMPILE",
+      "exit_code": 0
+    },
+    {
+      "module": "P01SNReflection",
+      "source_sha256": "017d12cb7f47f1767310f550277043536a6606e520bdd2f406eabcd91480dd86",
+      "object_sha256": "09298dfc0f331cfea152b4b783f05896185aaff99daa0247e2f9b8130f82a881",
+      "transitive_source_fingerprint": "348e27d87d9d30f84d36ba0bccc65432017b7c97f047164a4398295e40520a95",
+      "status": "FRESH_COMPILE",
+      "exit_code": 0
+    },
+    {
+      "module": "P01Candidates",
+      "source_sha256": "9b1a18c1f189774d22858ba56bb77aecd5fc7506a08195c94fbb1873158a0e7e",
+      "object_sha256": "562b7993bfb83a7bbd278ba66c60f1e17354cb7fa66da96a9cdb8cfca9739005",
+      "transitive_source_fingerprint": "60bb2eddf9c15ff92cdc6c6d16408e6e5889c2d7453f586ae7621d63a03b186d",
+      "status": "FRESH_COMPILE",
+      "exit_code": 0
+    },
+    {
+      "module": "P01Confluence",
+      "source_sha256": "682ad4ce3fda2b69601f267e6c7cfd729d8004fbfdd95c60f12d24fb59bc303e",
+      "object_sha256": "6c80ceb2e9b07bef179858974bde1d712591f5735a8320b1bbf1752325e7b6ba",
+      "transitive_source_fingerprint": "11726459a0ffa3b505fa4bac0c84e9e99a6127d7b341887493e69a24a0de366a",
+      "status": "FRESH_COMPILE",
+      "exit_code": 0
+    },
+    {
+      "module": "P01Omega",
+      "source_sha256": "df83be41f01616777a5e53aba4e890161c155ad21d6c8b594d0c6cf7806fdf88",
+      "object_sha256": "bc015739c015f782ef7ad7835e8e652a4f7299e7fe052859697694cbf3c29482",
+      "transitive_source_fingerprint": "472d9b9eb81b66ed3e750bedcdb5d94bcd15f1365ab73f3e208beeed1046ccf0",
+      "status": "FRESH_COMPILE",
+      "exit_code": 0
+    },
+    {
+      "module": "P01Polynomials",
+      "source_sha256": "57bef4972e782bb85bc9f267bd899afdd09f65ebad610b107348db42b2b3b8b8",
+      "object_sha256": "b3a0c2ffe42cd2ea3b9a166e23b1d70c983d73e3b8f29b1ff59d0a48f4d9b8a0",
+      "transitive_source_fingerprint": "a43917d09a05235aa927f6c375123ca1c46637be77e76e512ed9f950353b890f",
+      "status": "FRESH_COMPILE",
+      "exit_code": 0
+    },
+    {
+      "module": "P01PER",
+      "source_sha256": "ee15654ad70d9c0e9a77d699a0ff53122d1dcde65f610e26555edc589f97c87e",
+      "object_sha256": "a90097ab348c4761f6e2ce5b940d581e02cfce83419e0d15bcad8f1c1d1fceee",
+      "transitive_source_fingerprint": "5ad4685a0c9e1c3af186d42f1c218a3590a67390b01153093383e8ed8d0a5a46",
+      "status": "FRESH_COMPILE",
+      "exit_code": 0
+    },
+    {
+      "module": "P01DependentCore",
+      "source_sha256": "d69233c44f1406044f649204626c4f58155bcb2dc81ac319cf451c473ab13498",
+      "object_sha256": "624eab0ba77fb321c91669e5a619625dee80f2022137a05d14bf5af0149e7ab3",
+      "transitive_source_fingerprint": "e39a72f55af5c4e71ba242e6c3460bd9e40f86ff322ef52fe416de7598e8e7e5",
+      "status": "FRESH_COMPILE",
+      "exit_code": 0
+    },
+    {
+      "module": "P01ContextualJ",
+      "source_sha256": "e3342d36b3012206cdcf39115d13f14246236f24a122cbd466d6b11bda15d28c",
+      "object_sha256": "a1ed119f34e0f728f7b2e1dca2bd7caf39f9a4025d04a37da9db98d9db50b860",
+      "transitive_source_fingerprint": "2a00ed77ed42d6c99c3643882ee61836c9b6b890f8e5c161d547ec60e05fff12",
+      "status": "FRESH_COMPILE",
+      "exit_code": 0
+    },
+    {
+      "module": "P01Certificates",
+      "source_sha256": "5e457f06ecc1622fd53b1917f383c48ce019887910ce0fcb64d99c7e5a2b35f6",
+      "object_sha256": "4daea8a2d9e81043953c433bd77ed6c7248e2a4469ac33a10429948aa271e29d",
+      "transitive_source_fingerprint": "d469d83bd5ba11b17ba80eef12fcb17ff64bb34b4ffd9d3672be7bf7242347cd",
+      "status": "FRESH_COMPILE",
+      "exit_code": 0
+    },
+    {
+      "module": "P01Examples",
+      "source_sha256": "7372d4bd7f7c70fb1b4178743ba84c3ba2f072be88c5a0b04a67a53ccf947c82",
+      "object_sha256": "41ce27a619b617e1305384946958c24a89692071e85661b64ca0de6446e5d900",
+      "transitive_source_fingerprint": "712102958adf7dfe24f74311d5c9c284dff94f35aafaf89b6b40e16d6654c581",
+      "status": "FRESH_COMPILE",
+      "exit_code": 0
+    },
+    {
+      "module": "P01RecursiveModel",
+      "source_sha256": "a53b9b16b5013701ab18692035d140db6d34fd3076dd595837dd8808553274f9",
+      "object_sha256": "745265a3cf70dac86a34a0f85e3361c868bb2ba4e6d93f348e8fc274e51829d5",
+      "transitive_source_fingerprint": "3761a9ad58d8e365cc2a288a2afb2945933369e40956d615da1bb3e414249878",
+      "status": "FRESH_COMPILE",
+      "exit_code": 0
+    },
+    {
+      "module": "P01LambdaSyntax",
+      "source_sha256": "1a969ade6fc6daf226cde5a9f077bb7f16ef5a396a090728c8468356df555e21",
+      "object_sha256": "f65577bd52bf511700cbafeee4e00103cd3f5ca4e4f0a641c590bab47788816f",
+      "transitive_source_fingerprint": "dca28e4f361ad8a3b3584a52536b030d466f0ed3990fc6f4b6dcd0f8469f4960",
+      "status": "FRESH_COMPILE",
+      "exit_code": 0
+    },
+    {
+      "module": "P01SystemF",
+      "source_sha256": "9d06b1180a90048ebe6249e461ed6551fdbf94971a8ba1232b6ffb86e5d45f1a",
+      "object_sha256": "2e89db84bf64e1eb92e9bdb8c829f0be5d27a6f7220cdfa96264989d1f62cff7",
+      "transitive_source_fingerprint": "5cdca7d83099c698f049c222b8dd3685b910c83e581ef786e039ef98556ceeaa",
+      "status": "FRESH_COMPILE",
+      "exit_code": 0
+    },
+    {
+      "module": "P01CurryParametricity",
+      "source_sha256": "b29f2917d48adf8462cc272ecffb12e50cb3217b4de360c71f9f13fe75bbeb2a",
+      "object_sha256": "60e298e19060e2c49e99c11993e1cf34f5c37f783bc330d74bb3677e23ac7d00",
+      "transitive_source_fingerprint": "669b25eebfef1b4c01e0da79034cc378454a1812261521298ddfe537b7fdebbc",
+      "status": "FRESH_COMPILE",
+      "exit_code": 0
+    },
+    {
+      "module": "P01Translation",
+      "source_sha256": "538b51e6c199bc43ef2f32d4ffdc16f52043e277b8ea50b1da93a73aa9b38b4d",
+      "object_sha256": "bbf0285d71e64d51e683968dab2792924e3260c30688c59635ccb1f684bca7a0",
+      "transitive_source_fingerprint": "426936ac88f5b0fb6c2a11caf0b4b2ab60ac0ef9b7bf58e1f4063d2650e92581",
+      "status": "FRESH_COMPILE",
+      "exit_code": 0
+    },
+    {
+      "module": "P01ModelWitnesses",
+      "source_sha256": "f49f5693dd928e74bb375a3a52a4e8cd0e9792ba0f90b9d543928ab0cf84510f",
+      "object_sha256": "e58990420299483ea560e60cad8a8d43da8cc3224fd26e6429096aea9e647bd5",
+      "transitive_source_fingerprint": "86460a345a73647ebdf408f19c8d05228d31c78134ba95868a157aab2d6e60e2",
+      "status": "FRESH_COMPILE",
+      "exit_code": 0
+    },
+    {
+      "module": "P01DependentModel",
+      "source_sha256": "f2017f4ff67c81eb2d1cb6d4ed3b7efea3e686567409e9d07531a61f6b6d5e59",
+      "object_sha256": "4b3e4580902f2e17c2aa941beba498556b548089ee190a5ec424da45e8bce5d4",
+      "transitive_source_fingerprint": "d3fa11702be3d323cf9ad83dec163e06e55bc4a2520a7c57e12efbca09cb5434",
+      "status": "FRESH_COMPILE",
+      "exit_code": 0
+    },
+    {
+      "module": "P01DependentSubstitution",
+      "source_sha256": "74eec27e534d5b3fe69b0543d343043483288011d7edc85a424cc8458e91a610",
+      "object_sha256": "0e292ed6bacffb6d099272c48b354722ab540a0fbd724c8c3898cde9114a26f6",
+      "transitive_source_fingerprint": "1522923a4db61efbdffd98ead75d091c2d4970074c6eec620e259c0f7501c391",
+      "status": "FRESH_COMPILE",
+      "exit_code": 0
+    },
+    {
+      "module": "P01DependentFundamental",
+      "source_sha256": "82cd316ba5a0c4efbfb7bbc8ce5e69659e33cb7227d1d4effbaddb3d2f1d66aa",
+      "object_sha256": "d382e0923feb63c701b0c81e18fef67391720d2125b382043f52ed9d6bd5e664",
+      "transitive_source_fingerprint": "129e275019b00d26d69fa83d1fb7525de5a517ca05554dcab263d18d0299c445",
+      "status": "FRESH_COMPILE",
+      "exit_code": 0
+    },
+    {
+      "module": "P01DependentControls",
+      "source_sha256": "6f1afe90be0a46d00763808013733f068a65b4f0fd34d215fb101f0db313856c",
+      "object_sha256": "2d774a6e9d8d683bd41210ce82cb16248f97a0aeb133b4c2d2478d6b1861e2d4",
+      "transitive_source_fingerprint": "b94c602dbc19db7869aa70b12a9758f7806ddd0fa40e3ce1314bc29f64e173c7",
+      "status": "FRESH_COMPILE",
+      "exit_code": 0
+    },
+    {
+      "module": "P01DependentRepresentation",
+      "source_sha256": "e7c7bd5d62f361f4f8a283e1fe442341e87f0200f0494cb2553af4da3a0ff737",
+      "object_sha256": "eb9e44bd109d1315602509583d020875f55b9122cf0604160e9f23be2587745b",
+      "transitive_source_fingerprint": "4f4762645ebe2ee83f0c6f56314fd683107ef9aa5311fe6a672d8b852974c007",
+      "status": "FRESH_COMPILE",
+      "exit_code": 0
+    },
+    {
+      "module": "P01CanonicalCarrierProjection",
+      "source_sha256": "d2cd1460fd8f15eabdcf0bc7044af5b01e82f7ea05242157f2503eaf5585b41e",
+      "object_sha256": "a44711776702fa15a3749d355a493241b1385fb91f5cf3fb4f8a8f88ebedd41b",
+      "transitive_source_fingerprint": "efb60301d1376125d8640ade7f209efd28dfd7f3cd2fc0d313589a053d018ae9",
+      "status": "FRESH_COMPILE",
+      "exit_code": 0
+    },
+    {
+      "module": "ProjectionContract",
+      "source_sha256": "4bb9ad0c98796b11c7bed5a2b2b8f3432700027510d1180e0a653ff07dad7115",
+      "object_sha256": "c9dd37a43b90b3ec84a0a705a20982a0fcb47b32c5bd96310fe2ff42003334ad",
+      "transitive_source_fingerprint": "f9a6326d2e0bdaeb42c3de9dc194b06172bd80dc35bcfa96c9ed3af9d6d7b44f",
+      "status": "FRESH_COMPILE",
+      "exit_code": 0
+    }
+  ],
+  "readbacks": {
+    "P01DF.carrierCode": {
+      "type_sha256": "dd88e5df7b7ad99986c5130387d534e99d4814a054b7e9c6ba575dfc3f7cd87e",
+      "axioms": []
+    },
+    "P01DF.carrier_code_ext": {
+      "type_sha256": "8c14cc82e664841383046d9d9d1487cbe734c7fc2e8f4739562725a859058e01",
+      "axioms": [
+        "Quot.sound",
+        "propext"
+      ]
+    },
+    "P01DF.raw_carrier_is_top": {
+      "type_sha256": "55f50a494e433d160c8db81ecd02f73be9d8d3187a4a3f93d0d028c87d232d00",
+      "axioms": [
+        "Quot.sound",
+        "propext"
+      ]
+    },
+    "P01DF.carrierFamily": {
+      "type_sha256": "3c6c9186565beb7e243171622430761962a71d6565d67e3deb3ec5aee383ab04",
+      "axioms": []
+    },
+    "P01DF.raw_pi_carrier_square": {
+      "type_sha256": "bfc6b668d2a0d046f7409c0f03c83505bf64edff1c4d76b9c67052efaa2e4ed8",
+      "axioms": [
+        "Quot.sound",
+        "propext"
+      ]
+    },
+    "P01DF.sigma_carrier_square": {
+      "type_sha256": "381e8ddb93e467139e8d168be82bf0b852dcbb991296e6e8fac97ea5a91f23e4",
+      "axioms": [
+        "Quot.sound",
+        "propext"
+      ]
+    },
+    "P01DF.raw_sigma_carrier_square": {
+      "type_sha256": "41461eb70d8abd2eee7979cf8db9c59bdedcb3b3f17a38233e1b2ffa28156031",
+      "axioms": [
+        "Quot.sound",
+        "propext"
+      ]
+    },
+    "P01DF.raw_identity_carrier_square": {
+      "type_sha256": "06cc7bb5f8ad3385be979cc6e177ffe858d77f2de21eb9227de75ebef70910bf",
+      "axioms": [
+        "Quot.sound",
+        "propext"
+      ]
+    },
+    "P01DF.projectedBody": {
+      "type_sha256": "e053a25b763e6460e238ba9783e4609fca50e0fa9f04ff8e53b4234e276e7fad",
+      "axioms": [
+        "Quot.sound",
+        "propext"
+      ]
+    },
+    "P01DF.syntax_pi_carrier_square": {
+      "type_sha256": "10d3f64f7af0d7131be042d15634ad0bbce5696e79c501ec7e99b0d8334648a4",
+      "axioms": [
+        "Quot.sound",
+        "propext"
+      ]
+    },
+    "P01DF.syntax_sigma_carrier_square": {
+      "type_sha256": "48dd7ae403345f7546e1e6451dc2e59cf5bb4e59c2cf5e7b386cc7f791abb8e2",
+      "axioms": [
+        "Quot.sound",
+        "propext"
+      ]
+    },
+    "P01DF.syntax_identity_carrier_square": {
+      "type_sha256": "ecf1ae17d35147453f7fc8332070596defd1dbd55c3eac23f78113f9cb89bf91",
+      "axioms": [
+        "Quot.sound",
+        "propext"
+      ]
+    },
+    "P01DF.canonical_pi_admission": {
+      "type_sha256": "7024a1d215f0b3a10ac1fbf2fe34f452bc205e66ef30c5b33d298b23f49eb2a4",
+      "axioms": [
+        "Quot.sound",
+        "propext"
+      ]
+    },
+    "P01DF.canonical_sigma_admission": {
+      "type_sha256": "4426d463c726d81fcfbe9c2ff0d78a896492f2a46aade44277e6d31159aa921d",
+      "axioms": [
+        "Quot.sound",
+        "propext"
+      ]
+    },
+    "P01DF.canonical_identity_admission": {
+      "type_sha256": "db3d513e058847bd0e39793cd261ff837a3fb157153613d51c236cf2cb394893",
+      "axioms": [
+        "Quot.sound",
+        "propext"
+      ]
+    },
+    "P01DF.arrow_carrier_inclusion": {
+      "type_sha256": "85c343114f57b9f699cc3265eb259374afcb3c0a9c251d358e4762402bcd1d49",
+      "axioms": []
+    },
+    "P01DF.arbitrary_arrow_reverse_projection_fails": {
+      "type_sha256": "b0a927ec65946fb72c3cc24aff3d78bd449d40ab97a6d7fb82d801c2139a8fa3",
+      "axioms": [
+        "Classical.choice",
+        "Quot.sound",
+        "propext"
+      ]
+    },
+    "P01DF.canonical_identity_inclusion": {
+      "type_sha256": "a993b9f24b2db01baad014891796651bfb17abff44a2358066a0355075f326fa",
+      "axioms": []
+    },
+    "P01DF.arbitrary_identity_forward_projection_fails": {
+      "type_sha256": "124be220713f6360e30074a6cc22bf7906fd24123ce589f6578da153b5ed8afb",
+      "axioms": [
+        "Classical.choice",
+        "Quot.sound",
+        "propext"
+      ]
+    }
+  },
+  "original_controls": "NOT_RUN",
+  "original_receipt_sha256": "9a40a5eee0371a197669b117410ad0c3ab2c7a10a8366d4c2e4a4621dfaa924e",
+  "original_driver_sha256": "0666003f5081aca1efd6570a72da06d735b454d787dba97dd59fc1b42554bd14",
+  "execution_kind": "FRESH_CUSTOM_CLOSURE",
+  "finished_utc": null,
+  "scope": "Source-bound custom closure and selected declaration readbacks. Types are represented by hashes of the exact printed types; complete logs remain private. Official caches are trusted. This does not establish ordinary proof, runtime completeness, empirical or normative warrant, novelty, external human review or merged adoption."
+}

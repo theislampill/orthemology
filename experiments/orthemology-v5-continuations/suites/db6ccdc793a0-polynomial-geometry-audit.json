@@ -1,0 +1,263 @@
+{
+  "id": "db6ccdc793a0-polynomial-geometry-audit",
+  "origin": "db6ccdc793a0a1a96b736cee6c55c47145b86b8f5f91d2dbb1cf80e7036b614e",
+  "descriptor_source_id": "src-db6ccdc793a0a1a9-85c042fef1d85c5a",
+  "modules": [
+    {
+      "module": "PolynomialAND",
+      "source_id": "src-db6ccdc793a0a1a9-510961862f4c7b46",
+      "imports": [
+        "Mathlib"
+      ]
+    },
+    {
+      "module": "ANDCorrection",
+      "source_id": "src-db6ccdc793a0a1a9-f7080c3310824ea2",
+      "imports": [
+        "PolynomialAND"
+      ]
+    },
+    {
+      "module": "ANDScore",
+      "source_id": "src-db6ccdc793a0a1a9-0b16a0f565fecef0",
+      "imports": [
+        "ANDCorrection"
+      ]
+    },
+    {
+      "module": "ANDRepair",
+      "source_id": "src-db6ccdc793a0a1a9-2c50d068f59beb68",
+      "imports": [
+        "ANDScore"
+      ]
+    },
+    {
+      "module": "ANDPotentialBinding",
+      "source_id": "src-db6ccdc793a0a1a9-6373c957ecc99890",
+      "imports": [
+        "ANDRepair"
+      ]
+    },
+    {
+      "module": "FiniteHullWeights",
+      "source_id": "src-db6ccdc793a0a1a9-014903317668fbc6",
+      "imports": [
+        "Mathlib"
+      ]
+    },
+    {
+      "module": "ANDIntrinsic",
+      "source_id": "src-db6ccdc793a0a1a9-1a35c7e4b475516e",
+      "imports": [
+        "ANDPotentialBinding",
+        "FiniteHullWeights"
+      ]
+    },
+    {
+      "module": "IsolatedObstruction",
+      "source_id": "src-db6ccdc793a0a1a9-01760e9b865f995f",
+      "imports": [
+        "PolynomialAND"
+      ]
+    },
+    {
+      "module": "AuditReadback",
+      "source_id": "src-db6ccdc793a0a1a9-502e11771c9c732a",
+      "imports": [
+        "ANDIntrinsic",
+        "IsolatedObstruction"
+      ]
+    },
+    {
+      "module": "IndependentReadback",
+      "source_id": "src-db6ccdc793a0a1a9-cfa0055bc8938820",
+      "imports": [
+        "ANDIntrinsic",
+        "IsolatedObstruction"
+      ]
+    },
+    {
+      "module": "AuditControls",
+      "source_id": "src-db6ccdc793a0a1a9-8c3409b24e3f5274",
+      "imports": [
+        "ANDIntrinsic",
+        "IsolatedObstruction"
+      ]
+    }
+  ],
+  "module_order": [
+    "PolynomialAND",
+    "ANDCorrection",
+    "ANDScore",
+    "ANDRepair",
+    "ANDPotentialBinding",
+    "FiniteHullWeights",
+    "ANDIntrinsic",
+    "IsolatedObstruction",
+    "AuditReadback",
+    "IndependentReadback",
+    "AuditControls"
+  ],
+  "targets": [
+    {
+      "name": "ANDRepair.universal_strict_repair",
+      "module": "ANDRepair"
+    },
+    {
+      "name": "ANDPotentialBinding.universal_Bregman_repair",
+      "module": "ANDPotentialBinding"
+    },
+    {
+      "name": "ANDPotentialBinding.potential_hasFDerivAt",
+      "module": "ANDPotentialBinding"
+    },
+    {
+      "name": "ANDIntrinsic.intrinsic_universal_Bregman_repair",
+      "module": "ANDIntrinsic"
+    },
+    {
+      "name": "IsolatedObstruction.no_isolated_common_repair",
+      "module": "IsolatedObstruction"
+    },
+    {
+      "name": "ANDPotentialBinding.coordF_deriv",
+      "module": "ANDPotentialBinding"
+    },
+    {
+      "name": "ANDPotentialBinding.coordDF_deriv",
+      "module": "ANDPotentialBinding"
+    },
+    {
+      "name": "ANDPotentialBinding.common_hessian_normal",
+      "module": "ANDPotentialBinding"
+    },
+    {
+      "name": "ANDPotentialBinding.potentialF_contDiff",
+      "module": "ANDPotentialBinding"
+    },
+    {
+      "name": "IsolatedObstruction.no_isolated_all_state_repair",
+      "module": "IsolatedObstruction"
+    },
+    {
+      "name": "IsolatedObstruction.isolated_slope_violation",
+      "module": "IsolatedObstruction"
+    },
+    {
+      "name": "ANDIntrinsic.transverse_iff",
+      "module": "ANDIntrinsic"
+    },
+    {
+      "name": "PolynomialAND.certificateP_lower",
+      "module": "PolynomialAND"
+    },
+    {
+      "name": "ANDCorrection.all_leading_positive",
+      "module": "ANDCorrection"
+    },
+    {
+      "name": "ANDScore.g_gain_identity",
+      "module": "ANDScore"
+    },
+    {
+      "name": "ANDScore.f_gain_identity",
+      "module": "ANDScore"
+    },
+    {
+      "name": "ANDScore.hull_of_inequalities",
+      "module": "ANDScore"
+    },
+    {
+      "name": "ANDPotentialBinding.coordF_curvature_positive",
+      "module": "ANDPotentialBinding"
+    },
+    {
+      "name": "ANDPotentialBinding.scoreF_is_actual_Bregman",
+      "module": "ANDPotentialBinding"
+    },
+    {
+      "name": "ANDPotentialBinding.scoreG_is_actual_Bregman",
+      "module": "ANDPotentialBinding"
+    },
+    {
+      "name": "FiniteHullWeights.intrinsicInterior_positive_barycentric",
+      "module": "FiniteHullWeights"
+    },
+    {
+      "name": "PolynomialANDAudit.full_success_with_projected_failure",
+      "module": "AuditControls"
+    },
+    {
+      "name": "PolynomialANDAudit.transverse_baseline_outside",
+      "module": "AuditControls"
+    },
+    {
+      "name": "PolynomialANDAudit.tangent_not_strict",
+      "module": "AuditControls"
+    },
+    {
+      "name": "PolynomialANDAudit.natural_truth_binding",
+      "module": "AuditControls"
+    },
+    {
+      "name": "PolynomialANDAudit.psi_strictConvex",
+      "module": "AuditControls"
+    }
+  ],
+  "pins": {
+    "lean_version": "4.19.0",
+    "lean_binary_sha256": "92c3d35b5bfaa5e0fea413a775d504cf46cd95e1345df61c2274f76779e7e023",
+    "packages": [
+      {
+        "name": "mathlib",
+        "revision": "c44e0c8ee63ca166450922a373c7409c5d26b00b"
+      },
+      {
+        "name": "plausible",
+        "revision": "77e08eddc486491d7b9e470926b3dbe50319451a"
+      },
+      {
+        "name": "LeanSearchClient",
+        "revision": "25078369972d295301f5a1e53c3e5850cf6d9d4c"
+      },
+      {
+        "name": "importGraph",
+        "revision": "e6a9f0f5ee3ccf7443a0070f92b62f8db12ae82b"
+      },
+      {
+        "name": "proofwidgets",
+        "revision": "c4919189477c3221e6a204008998b0d724f49904"
+      },
+      {
+        "name": "aesop",
+        "revision": "5d50b08dedd7d69b3d9b3176e0d58a23af228884"
+      },
+      {
+        "name": "Qq",
+        "revision": "fa4f7f15d97591a9cf3aa7724ba371c7fc6dda02"
+      },
+      {
+        "name": "batteries",
+        "revision": "f5d04a9c4973d401c8c92500711518f7c656f034"
+      },
+      {
+        "name": "Cli",
+        "revision": "02dbd02bc00ec4916e99b04b2245b30200e200d0"
+      }
+    ]
+  },
+  "official_imports": [
+    {
+      "module": "Mathlib",
+      "repository": "mathlib",
+      "source": "Mathlib.lean",
+      "sha256": "b0518254279fabf0c6a920804e684536b0f5e2bd1cb6318d0609eb563413f20a"
+    }
+  ],
+  "driver": {
+    "source_id": "src-db6ccdc793a0a1a9-817e8553aa5fdf95",
+    "lean_argument": "BIN_DIRECTORY"
+  },
+  "controls": "ORIGINAL_DRIVER_REQUIRED",
+  "classification": "CURRENT_EVIDENCE"
+}

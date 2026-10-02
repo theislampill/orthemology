@@ -1,0 +1,12 @@
+import ClusterGeometry
+import ClusterConcentration
+import ContaminationAlgebra
+
+#check ClusterGeometry.centre_accepts_cluster
+#check ClusterGeometry.distinct_cluster_separation
+#check ClusterGeometry.boundary_range
+#check ClusterConcentration.upper_tail_bound
+#check ClusterConcentration.lower_tail_bound
+#check ClusterConcentration.actual_upper_tail_bound
+#check ContaminationAlgebra.endpoint_increment
+#check ContaminationAlgebra.small_mass_lower

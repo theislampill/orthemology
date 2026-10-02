@@ -1,0 +1,1090 @@
+{
+  "results": [
+    {
+      "id": "T1-P01",
+      "custody": "VERIFIED_DERIVED",
+      "inherited": "RETAINED_FORMAL_REVIEW",
+      "fresh": "FRESH_COMPONENTS",
+      "adoption": "CANDIDATE",
+      "receipts": [
+        "docs/provenance/v5-research-continuations/checks/866c6ff6e74a-p01-repaired.json",
+        "docs/provenance/v5-research-continuations/checks/866c6ff6e74a-p01-successor.json"
+      ],
+      "external_warrant": {
+        "empirical": "NOT_ESTABLISHED",
+        "normative": "NOT_ESTABLISHED",
+        "external_peer_review": "NOT_ESTABLISHED",
+        "novelty": "NOT_ESTABLISHED"
+      }
+    },
+    {
+      "id": "T1-DEPENDENT",
+      "custody": "VERIFIED_DERIVED",
+      "inherited": "RETAINED_FORMAL_REVIEW",
+      "fresh": "FRESH_COMPONENTS",
+      "adoption": "CANDIDATE",
+      "receipts": [
+        "docs/provenance/v5-research-continuations/checks/866c6ff6e74a-p01-dependent.json",
+        "docs/provenance/v5-research-continuations/checks/866c6ff6e74a-p01-canonical-projection.json"
+      ],
+      "external_warrant": {
+        "empirical": "NOT_ESTABLISHED",
+        "normative": "NOT_ESTABLISHED",
+        "external_peer_review": "NOT_ESTABLISHED",
+        "novelty": "NOT_ESTABLISHED"
+      }
+    },
+    {
+      "id": "T1-P02",
+      "custody": "VERIFIED_DERIVED",
+      "inherited": "RETAINED_FORMAL_REVIEW",
+      "fresh": "FRESH_COMPONENTS",
+      "adoption": "CANDIDATE",
+      "receipts": [
+        "docs/provenance/v5-research-continuations/checks/866c6ff6e74a-p02-qualified.json",
+        "docs/provenance/v5-research-continuations/checks/866c6ff6e74a-measure-frontier.json",
+        "docs/provenance/v5-research-continuations/checks/866c6ff6e74a-tagged-row.json",
+        "docs/provenance/v5-research-continuations/checks/866c6ff6e74a-tagged-prefix-primrec.json"
+      ],
+      "external_warrant": {
+        "empirical": "NOT_ESTABLISHED",
+        "normative": "NOT_ESTABLISHED",
+        "external_peer_review": "NOT_ESTABLISHED",
+        "novelty": "NOT_ESTABLISHED"
+      }
+    },
+    {
+      "id": "T1-P03",
+      "custody": "VERIFIED_DERIVED",
+      "inherited": "RETAINED_FORMAL_AND_FINITE",
+      "fresh": "FRESH_COMPONENTS",
+      "adoption": "CANDIDATE",
+      "receipts": [
+        "docs/provenance/v5-research-continuations/checks/866c6ff6e74a-p03-native.json",
+        "docs/provenance/v5-research-continuations/checks/866c6ff6e74a-p03-graph.json",
+        "docs/provenance/v5-research-continuations/checks/866c6ff6e74a-operational-machine.json"
+      ],
+      "external_warrant": {
+        "empirical": "NOT_ESTABLISHED",
+        "normative": "NOT_ESTABLISHED",
+        "external_peer_review": "NOT_ESTABLISHED",
+        "novelty": "NOT_ESTABLISHED"
+      }
+    },
+    {
+      "id": "T1-MEALY",
+      "custody": "VERIFIED_DERIVED",
+      "inherited": "RETAINED_FORMAL_REVIEW",
+      "fresh": "FRESH_COMPONENTS",
+      "adoption": "CANDIDATE",
+      "receipts": [
+        "docs/provenance/v5-research-continuations/checks/866c6ff6e74a-finite-frontier.json",
+        "docs/provenance/v5-research-continuations/checks/866c6ff6e74a-mealy-stage2.json",
+        "docs/provenance/v5-research-continuations/checks/866c6ff6e74a-mealy-stage3.json"
+      ],
+      "external_warrant": {
+        "empirical": "NOT_ESTABLISHED",
+        "normative": "NOT_ESTABLISHED",
+        "external_peer_review": "NOT_ESTABLISHED",
+        "novelty": "NOT_ESTABLISHED"
+      }
+    },
+    {
+      "id": "T1-COMPUTABLE",
+      "custody": "VERIFIED_DERIVED",
+      "inherited": "RETAINED_FORMAL_REVIEW",
+      "fresh": "FRESH_COMPONENTS",
+      "adoption": "CANDIDATE",
+      "receipts": [
+        "docs/provenance/v5-research-continuations/checks/866c6ff6e74a-codec-pi3.json",
+        "docs/provenance/v5-research-continuations/checks/866c6ff6e74a-atomic-membership.json",
+        "docs/provenance/v5-research-continuations/checks/866c6ff6e74a-p02-pr-compiler.json",
+        "docs/provenance/v5-research-continuations/checks/866c6ff6e74a-uniform-computability.json",
+        "docs/provenance/v5-research-continuations/checks/866c6ff6e74a-membership-computability.json"
+      ],
+      "external_warrant": {
+        "empirical": "NOT_ESTABLISHED",
+        "normative": "NOT_ESTABLISHED",
+        "external_peer_review": "NOT_ESTABLISHED",
+        "novelty": "NOT_ESTABLISHED"
+      }
+    },
+    {
+      "id": "T1-MIGRATION",
+      "custody": "VERIFIED_DERIVED",
+      "inherited": "MIXED_RETAINED_EVIDENCE",
+      "fresh": "NOT_RUN",
+      "adoption": "CANDIDATE",
+      "receipts": [],
+      "external_warrant": {
+        "empirical": "NOT_ESTABLISHED",
+        "normative": "NOT_ESTABLISHED",
+        "external_peer_review": "NOT_ESTABLISHED",
+        "novelty": "NOT_ESTABLISHED"
+      }
+    },
+    {
+      "id": "T2-GEOMETRY",
+      "custody": "VERIFIED_DERIVED",
+      "inherited": "MIXED_FORMAL_AND_ORDINARY",
+      "fresh": "FRESH_COMPONENTS",
+      "adoption": "CANDIDATE",
+      "receipts": [
+        "docs/provenance/v5-research-continuations/checks/d6f6fa5be514-core.json"
+      ],
+      "external_warrant": {
+        "empirical": "NOT_ESTABLISHED",
+        "normative": "NOT_ESTABLISHED",
+        "external_peer_review": "NOT_ESTABLISHED",
+        "novelty": "NOT_ESTABLISHED"
+      }
+    },
+    {
+      "id": "T2-INFORMATION",
+      "custody": "VERIFIED_DERIVED",
+      "inherited": "MIXED_FORMAL_AND_ORDINARY",
+      "fresh": "FRESH_COMPONENTS",
+      "adoption": "CANDIDATE",
+      "receipts": [
+        "docs/provenance/v5-research-continuations/checks/d6f6fa5be514-core.json",
+        "docs/provenance/v5-research-continuations/checks/d6f6fa5be514-control-action.json"
+      ],
+      "external_warrant": {
+        "empirical": "NOT_ESTABLISHED",
+        "normative": "NOT_ESTABLISHED",
+        "external_peer_review": "NOT_ESTABLISHED",
+        "novelty": "NOT_ESTABLISHED"
+      }
+    },
+    {
+      "id": "T2-RESTORATION",
+      "custody": "VERIFIED_DERIVED",
+      "inherited": "RETAINED_FORMAL_REVIEW",
+      "fresh": "FRESH_COMPONENTS",
+      "adoption": "CANDIDATE",
+      "receipts": [
+        "docs/provenance/v5-research-continuations/checks/d6f6fa5be514-micro-static-equivalence.json",
+        "docs/provenance/v5-research-continuations/checks/d6f6fa5be514-seeded-necessity.json",
+        "docs/provenance/v5-research-continuations/checks/d6f6fa5be514-control-action.json",
+        "docs/provenance/v5-research-continuations/checks/d6f6fa5be514-recurrent-support.json",
+        "docs/provenance/v5-research-continuations/checks/d6f6fa5be514-common-observation.json",
+        "docs/provenance/v5-research-continuations/checks/d6f6fa5be514-policy-embedding.json",
+        "docs/provenance/v5-research-continuations/checks/d6f6fa5be514-compact-observation.json"
+      ],
+      "external_warrant": {
+        "empirical": "NOT_ESTABLISHED",
+        "normative": "NOT_ESTABLISHED",
+        "external_peer_review": "NOT_ESTABLISHED",
+        "novelty": "NOT_ESTABLISHED"
+      }
+    },
+    {
+      "id": "T2-COUNTABILITY",
+      "custody": "VERIFIED_DERIVED",
+      "inherited": "RETAINED_FORMAL_REVIEW",
+      "fresh": "FRESH_COMPONENTS",
+      "adoption": "CANDIDATE",
+      "receipts": [
+        "docs/provenance/v5-research-continuations/checks/d6f6fa5be514-core.json",
+        "docs/provenance/v5-research-continuations/checks/d6f6fa5be514-common-observation.json"
+      ],
+      "external_warrant": {
+        "empirical": "NOT_ESTABLISHED",
+        "normative": "NOT_ESTABLISHED",
+        "external_peer_review": "NOT_ESTABLISHED",
+        "novelty": "NOT_ESTABLISHED"
+      }
+    },
+    {
+      "id": "T3-AUDIT",
+      "custody": "VERIFIED_DERIVED",
+      "inherited": "RETAINED_FORMAL_AND_FINITE",
+      "fresh": "FRESH_COMPONENTS",
+      "adoption": "CANDIDATE",
+      "receipts": [
+        "docs/provenance/v5-research-continuations/checks/db6ccdc793a0-statistical-repair.json",
+        "docs/provenance/v5-research-continuations/checks/db6ccdc793a0-efficient-statistical-repair.json",
+        "docs/provenance/v5-research-continuations/checks/db6ccdc793a0-finite-audit-bridge.json"
+      ],
+      "external_warrant": {
+        "empirical": "NOT_ESTABLISHED",
+        "normative": "NOT_ESTABLISHED",
+        "external_peer_review": "NOT_ESTABLISHED",
+        "novelty": "NOT_ESTABLISHED"
+      }
+    },
+    {
+      "id": "T3-RECURSION",
+      "custody": "VERIFIED_DERIVED",
+      "inherited": "RETAINED_FORMAL_REVIEW",
+      "fresh": "FRESH_COMPONENTS",
+      "adoption": "CANDIDATE",
+      "receipts": [
+        "docs/provenance/v5-research-continuations/checks/db6ccdc793a0-recursive-equivalence.json",
+        "docs/provenance/v5-research-continuations/checks/db6ccdc793a0-canonical-sufficiency-v2.json",
+        "docs/provenance/v5-research-continuations/checks/db6ccdc793a0-ae-licensing.json",
+        "docs/provenance/v5-research-continuations/checks/db6ccdc793a0-chain-budget.json",
+        "docs/provenance/v5-research-continuations/checks/db6ccdc793a0-physical-budget.json"
+      ],
+      "external_warrant": {
+        "empirical": "NOT_ESTABLISHED",
+        "normative": "NOT_ESTABLISHED",
+        "external_peer_review": "NOT_ESTABLISHED",
+        "novelty": "NOT_ESTABLISHED"
+      }
+    },
+    {
+      "id": "T3-SEMANTICS",
+      "custody": "VERIFIED_DERIVED",
+      "inherited": "RETAINED_FORMAL_AND_FINITE",
+      "fresh": "FRESH_COMPONENTS",
+      "adoption": "CANDIDATE",
+      "receipts": [
+        "docs/provenance/v5-research-continuations/checks/db6ccdc793a0-semantic-core.json",
+        "docs/provenance/v5-research-continuations/checks/db6ccdc793a0-semantic-implementation.json",
+        "docs/provenance/v5-research-continuations/checks/db6ccdc793a0-indexed-semantic.json",
+        "docs/provenance/v5-research-continuations/checks/db6ccdc793a0-negative-clock.json",
+        "docs/provenance/v5-research-continuations/checks/db6ccdc793a0-negative-receipts.json",
+        "docs/provenance/v5-research-continuations/checks/db6ccdc793a0-endpoint-law.json",
+        "docs/provenance/v5-research-continuations/checks/db6ccdc793a0-continuum-repair.json"
+      ],
+      "external_warrant": {
+        "empirical": "NOT_ESTABLISHED",
+        "normative": "NOT_ESTABLISHED",
+        "external_peer_review": "NOT_ESTABLISHED",
+        "novelty": "NOT_ESTABLISHED"
+      }
+    },
+    {
+      "id": "T3-GEOMETRY",
+      "custody": "VERIFIED_DERIVED",
+      "inherited": "MIXED_FORMAL_AND_ORDINARY",
+      "fresh": "FRESH_COMPONENTS",
+      "adoption": "CANDIDATE",
+      "receipts": [
+        "docs/provenance/v5-research-continuations/checks/db6ccdc793a0-robust-repair.json",
+        "docs/provenance/v5-research-continuations/checks/db6ccdc793a0-polynomial-geometry-audit.json",
+        "docs/provenance/v5-research-continuations/checks/db6ccdc793a0-geometry-delta-audit.json",
+        "docs/provenance/v5-research-continuations/checks/db6ccdc793a0-mixed-rank-kernel-audit.json",
+        "docs/provenance/v5-research-continuations/checks/db6ccdc793a0-explicit-scale-kernel-audit.json",
+        "docs/provenance/v5-research-continuations/checks/db6ccdc793a0-endpoint-safety-audit.json"
+      ],
+      "external_warrant": {
+        "empirical": "NOT_ESTABLISHED",
+        "normative": "NOT_ESTABLISHED",
+        "external_peer_review": "NOT_ESTABLISHED",
+        "novelty": "NOT_ESTABLISHED"
+      }
+    },
+    {
+      "id": "T4-MARKOV",
+      "custody": "VERIFIED_DERIVED",
+      "inherited": "ORDINARY_REVIEW_AND_FINITE",
+      "fresh": "NOT_RUN",
+      "adoption": "CANDIDATE",
+      "receipts": [],
+      "external_warrant": {
+        "empirical": "NOT_ESTABLISHED",
+        "normative": "NOT_ESTABLISHED",
+        "external_peer_review": "NOT_ESTABLISHED",
+        "novelty": "NOT_ESTABLISHED"
+      }
+    },
+    {
+      "id": "T4-ENDPOINT",
+      "custody": "VERIFIED_DERIVED",
+      "inherited": "SOURCE_RECOVERY_ORDINARY_AND_FINITE",
+      "fresh": "NOT_RUN",
+      "adoption": "CANDIDATE",
+      "receipts": [],
+      "external_warrant": {
+        "empirical": "NOT_ESTABLISHED",
+        "normative": "NOT_ESTABLISHED",
+        "external_peer_review": "NOT_ESTABLISHED",
+        "novelty": "NOT_ESTABLISHED"
+      }
+    },
+    {
+      "id": "T4-PRIOR",
+      "custody": "VERIFIED_DERIVED",
+      "inherited": "ORDINARY_REVIEW",
+      "fresh": "NOT_RUN",
+      "adoption": "CANDIDATE",
+      "receipts": [],
+      "external_warrant": {
+        "empirical": "NOT_ESTABLISHED",
+        "normative": "NOT_ESTABLISHED",
+        "external_peer_review": "NOT_ESTABLISHED",
+        "novelty": "NOT_ESTABLISHED"
+      }
+    },
+    {
+      "id": "T5-GLOBAL",
+      "custody": "VERIFIED_DERIVED",
+      "inherited": "RETAINED_FORMAL_REVIEW",
+      "fresh": "QUALIFIED",
+      "adoption": "CANDIDATE",
+      "receipts": [
+        "docs/provenance/v5-research-continuations/checks/769dc45d15ba-global-parity-controller.json"
+      ],
+      "external_warrant": {
+        "empirical": "NOT_ESTABLISHED",
+        "normative": "NOT_ESTABLISHED",
+        "external_peer_review": "NOT_ESTABLISHED",
+        "novelty": "NOT_ESTABLISHED"
+      }
+    },
+    {
+      "id": "T5-SCC",
+      "custody": "VERIFIED_DERIVED",
+      "inherited": "RETAINED_FORMAL_REVIEW",
+      "fresh": "FRESH_COMPONENTS",
+      "adoption": "CANDIDATE",
+      "receipts": [
+        "docs/provenance/v5-research-continuations/checks/00b240cf2bfd-scc-region-integration.json",
+        "docs/provenance/v5-research-continuations/checks/a45cc7cb3021-scc-global-parity-iff.json"
+      ],
+      "external_warrant": {
+        "empirical": "NOT_ESTABLISHED",
+        "normative": "NOT_ESTABLISHED",
+        "external_peer_review": "NOT_ESTABLISHED",
+        "novelty": "NOT_ESTABLISHED"
+      }
+    },
+    {
+      "id": "T5-RECORD",
+      "custody": "VERIFIED_DERIVED",
+      "inherited": "RETAINED_FORMAL_REVIEW",
+      "fresh": "FRESH_COMPONENTS",
+      "adoption": "CANDIDATE",
+      "receipts": [
+        "docs/provenance/v5-research-continuations/checks/8d2cc96380ed-explicit-winning-record.json"
+      ],
+      "external_warrant": {
+        "empirical": "NOT_ESTABLISHED",
+        "normative": "NOT_ESTABLISHED",
+        "external_peer_review": "NOT_ESTABLISHED",
+        "novelty": "NOT_ESTABLISHED"
+      }
+    },
+    {
+      "id": "T5-CONTINUATION",
+      "custody": "VERIFIED_DERIVED",
+      "inherited": "RETAINED_FORMAL_REVIEW",
+      "fresh": "FRESH_COMPONENTS",
+      "adoption": "CANDIDATE",
+      "receipts": [
+        "docs/provenance/v5-research-continuations/checks/628d98dc2727-conditional-continuation.json",
+        "docs/provenance/v5-research-continuations/checks/5b59e4a2a1c4-conditional-as-preservation.json"
+      ],
+      "external_warrant": {
+        "empirical": "NOT_ESTABLISHED",
+        "normative": "NOT_ESTABLISHED",
+        "external_peer_review": "NOT_ESTABLISHED",
+        "novelty": "NOT_ESTABLISHED"
+      }
+    },
+    {
+      "id": "T5-COMPLEXITY",
+      "custody": "VERIFIED_DERIVED",
+      "inherited": "ORDINARY_REVIEW",
+      "fresh": "NOT_RUN",
+      "adoption": "CANDIDATE",
+      "receipts": [],
+      "external_warrant": {
+        "empirical": "NOT_ESTABLISHED",
+        "normative": "NOT_ESTABLISHED",
+        "external_peer_review": "NOT_ESTABLISHED",
+        "novelty": "NOT_ESTABLISHED"
+      }
+    },
+    {
+      "id": "T5-SPARSE",
+      "custody": "VERIFIED_DERIVED",
+      "inherited": "RETAINED_FORMAL_REVIEW",
+      "fresh": "FRESH_COMPONENTS",
+      "adoption": "CANDIDATE",
+      "receipts": [
+        "docs/provenance/v5-research-continuations/checks/26d6d6369d07-sparse-process.json"
+      ],
+      "external_warrant": {
+        "empirical": "NOT_ESTABLISHED",
+        "normative": "NOT_ESTABLISHED",
+        "external_peer_review": "NOT_ESTABLISHED",
+        "novelty": "NOT_ESTABLISHED"
+      }
+    },
+    {
+      "id": "T5-SPARSE-EXAMPLE",
+      "custody": "VERIFIED_DERIVED",
+      "inherited": "RETAINED_FORMAL_REVIEW",
+      "fresh": "FRESH_COMPONENTS",
+      "adoption": "CANDIDATE",
+      "receipts": [
+        "docs/provenance/v5-research-continuations/checks/abce3ba5d09e-sparse-concrete.json"
+      ],
+      "external_warrant": {
+        "empirical": "NOT_ESTABLISHED",
+        "normative": "NOT_ESTABLISHED",
+        "external_peer_review": "NOT_ESTABLISHED",
+        "novelty": "NOT_ESTABLISHED"
+      }
+    },
+    {
+      "id": "T5-ENDPOINT",
+      "custody": "VERIFIED_DERIVED",
+      "inherited": "RETAINED_FORMAL_REVIEW",
+      "fresh": "FRESH_COMPONENTS",
+      "adoption": "CANDIDATE",
+      "receipts": [
+        "docs/provenance/v5-research-continuations/checks/a5ea2c511948-borel-endpoint.json"
+      ],
+      "external_warrant": {
+        "empirical": "NOT_ESTABLISHED",
+        "normative": "NOT_ESTABLISHED",
+        "external_peer_review": "NOT_ESTABLISHED",
+        "novelty": "NOT_ESTABLISHED"
+      }
+    },
+    {
+      "id": "T5-ATOMS",
+      "custody": "VERIFIED_DERIVED",
+      "inherited": "RETAINED_FORMAL_REVIEW",
+      "fresh": "FRESH_COMPONENTS",
+      "adoption": "CANDIDATE",
+      "receipts": [
+        "docs/provenance/v5-research-continuations/checks/ddbad6ca12d0-endpoint-atoms.json"
+      ],
+      "external_warrant": {
+        "empirical": "NOT_ESTABLISHED",
+        "normative": "NOT_ESTABLISHED",
+        "external_peer_review": "NOT_ESTABLISHED",
+        "novelty": "NOT_ESTABLISHED"
+      }
+    },
+    {
+      "id": "T5-TRANSPORT",
+      "custody": "VERIFIED_DERIVED",
+      "inherited": "RETAINED_FORMAL_REVIEW",
+      "fresh": "FRESH_COMPONENTS",
+      "adoption": "CANDIDATE",
+      "receipts": [
+        "docs/provenance/v5-research-continuations/checks/c95f5175af02-sparse-transport.json"
+      ],
+      "external_warrant": {
+        "empirical": "NOT_ESTABLISHED",
+        "normative": "NOT_ESTABLISHED",
+        "external_peer_review": "NOT_ESTABLISHED",
+        "novelty": "NOT_ESTABLISHED"
+      }
+    },
+    {
+      "id": "T5-BENCHMARK",
+      "custody": "VERIFIED_DERIVED",
+      "inherited": "ORDINARY_REVIEW",
+      "fresh": "NOT_RUN",
+      "adoption": "CANDIDATE",
+      "receipts": [],
+      "external_warrant": {
+        "empirical": "NOT_ESTABLISHED",
+        "normative": "NOT_ESTABLISHED",
+        "external_peer_review": "NOT_ESTABLISHED",
+        "novelty": "NOT_ESTABLISHED"
+      }
+    },
+    {
+      "id": "T6-COST",
+      "custody": "VERIFIED_DERIVED",
+      "inherited": "ORDINARY_REVIEW_WITH_FORMAL_SUBCLAIMS",
+      "fresh": "FRESH_COMPONENTS",
+      "adoption": "CANDIDATE",
+      "receipts": [
+        "docs/provenance/v5-research-continuations/checks/4bd668ffbcfa-actual-cobuchi-cost.json"
+      ],
+      "external_warrant": {
+        "empirical": "NOT_ESTABLISHED",
+        "normative": "NOT_ESTABLISHED",
+        "external_peer_review": "NOT_ESTABLISHED",
+        "novelty": "NOT_ESTABLISHED"
+      }
+    },
+    {
+      "id": "T6-CONCENTRATION",
+      "custody": "VERIFIED_DERIVED",
+      "inherited": "RETAINED_FORMAL_REVIEW",
+      "fresh": "FRESH_COMPONENTS",
+      "adoption": "CANDIDATE",
+      "receipts": [
+        "docs/provenance/v5-research-continuations/checks/24afae53f1c4-raw-concentration.json"
+      ],
+      "external_warrant": {
+        "empirical": "NOT_ESTABLISHED",
+        "normative": "NOT_ESTABLISHED",
+        "external_peer_review": "NOT_ESTABLISHED",
+        "novelty": "NOT_ESTABLISHED"
+      }
+    },
+    {
+      "id": "T6-RUNTIME",
+      "custody": "VERIFIED_DERIVED",
+      "inherited": "MIXED_FORMAL_ORDINARY_AND_FINITE",
+      "fresh": "FRESH_COMPONENTS",
+      "adoption": "CANDIDATE",
+      "receipts": [
+        "docs/provenance/v5-research-continuations/checks/74b86eeeda46-runtime-v5.json"
+      ],
+      "external_warrant": {
+        "empirical": "NOT_ESTABLISHED",
+        "normative": "NOT_ESTABLISHED",
+        "external_peer_review": "NOT_ESTABLISHED",
+        "novelty": "NOT_ESTABLISHED"
+      }
+    },
+    {
+      "id": "T6-WIDTH",
+      "custody": "VERIFIED_DERIVED",
+      "inherited": "MIXED_FORMAL_AND_ORDINARY",
+      "fresh": "FRESH_COMPONENTS",
+      "adoption": "CANDIDATE",
+      "receipts": [
+        "docs/provenance/v5-research-continuations/checks/3dae38ab50de-prior-width.json"
+      ],
+      "external_warrant": {
+        "empirical": "NOT_ESTABLISHED",
+        "normative": "NOT_ESTABLISHED",
+        "external_peer_review": "NOT_ESTABLISHED",
+        "novelty": "NOT_ESTABLISHED"
+      }
+    },
+    {
+      "id": "T6-RATIONAL",
+      "custody": "VERIFIED_DERIVED",
+      "inherited": "IMPLEMENTATION_AND_ORDINARY_REVIEW",
+      "fresh": "NOT_RUN",
+      "adoption": "CANDIDATE",
+      "receipts": [],
+      "external_warrant": {
+        "empirical": "NOT_ESTABLISHED",
+        "normative": "NOT_ESTABLISHED",
+        "external_peer_review": "NOT_ESTABLISHED",
+        "novelty": "NOT_ESTABLISHED"
+      }
+    },
+    {
+      "id": "T6-NONCONVEX",
+      "custody": "VERIFIED_DERIVED",
+      "inherited": "RETAINED_FORMAL_REVIEW_PLUS_ORDINARY_COROLLARIES",
+      "fresh": "FRESH_COMPONENTS",
+      "adoption": "CANDIDATE",
+      "receipts": [
+        "docs/provenance/v5-research-continuations/checks/15e2b6abb662-prior-nonconvexity-v2.json"
+      ],
+      "external_warrant": {
+        "empirical": "NOT_ESTABLISHED",
+        "normative": "NOT_ESTABLISHED",
+        "external_peer_review": "NOT_ESTABLISHED",
+        "novelty": "NOT_ESTABLISHED"
+      }
+    },
+    {
+      "id": "T6-LOSS",
+      "custody": "VERIFIED_DERIVED",
+      "inherited": "RETAINED_FORMAL_AND_SOURCE_REVIEW",
+      "fresh": "FRESH_COMPONENTS",
+      "adoption": "CANDIDATE",
+      "receipts": [
+        "docs/provenance/v5-research-continuations/checks/7871eae3c71a-loss-obstruction.json"
+      ],
+      "external_warrant": {
+        "empirical": "NOT_ESTABLISHED",
+        "normative": "NOT_ESTABLISHED",
+        "external_peer_review": "NOT_ESTABLISHED",
+        "novelty": "NOT_ESTABLISHED"
+      }
+    },
+    {
+      "id": "T6-ROTOR",
+      "custody": "VERIFIED_DERIVED",
+      "inherited": "RETAINED_FORMAL_REVIEW",
+      "fresh": "FRESH_COMPONENTS",
+      "adoption": "CANDIDATE",
+      "receipts": [
+        "docs/provenance/v5-research-continuations/checks/4cde2d91223b-finite-law-rotor-progress.json"
+      ],
+      "external_warrant": {
+        "empirical": "NOT_ESTABLISHED",
+        "normative": "NOT_ESTABLISHED",
+        "external_peer_review": "NOT_ESTABLISHED",
+        "novelty": "NOT_ESTABLISHED"
+      }
+    },
+    {
+      "id": "T6-HISTORY",
+      "custody": "VERIFIED_DERIVED",
+      "inherited": "RETAINED_FORMAL_REVIEW",
+      "fresh": "FRESH_COMPONENTS",
+      "adoption": "CANDIDATE",
+      "receipts": [
+        "docs/provenance/v5-research-continuations/checks/0d018cbe2cff-generated-history-slice-tail.json"
+      ],
+      "external_warrant": {
+        "empirical": "NOT_ESTABLISHED",
+        "normative": "NOT_ESTABLISHED",
+        "external_peer_review": "NOT_ESTABLISHED",
+        "novelty": "NOT_ESTABLISHED"
+      }
+    },
+    {
+      "id": "T6-MOMENTS",
+      "custody": "VERIFIED_DERIVED",
+      "inherited": "RETAINED_FORMAL_REVIEW",
+      "fresh": "FRESH_COMPONENTS",
+      "adoption": "CANDIDATE",
+      "receipts": [
+        "docs/provenance/v5-research-continuations/checks/748545d4cf83-tail-moments.json"
+      ],
+      "external_warrant": {
+        "empirical": "NOT_ESTABLISHED",
+        "normative": "NOT_ESTABLISHED",
+        "external_peer_review": "NOT_ESTABLISHED",
+        "novelty": "NOT_ESTABLISHED"
+      }
+    },
+    {
+      "id": "T6-INTEGER",
+      "custody": "VERIFIED_DERIVED",
+      "inherited": "FORMAL_ARITHMETIC_AND_IMPLEMENTATION_REVIEW",
+      "fresh": "FRESH_COMPONENTS",
+      "adoption": "CANDIDATE",
+      "receipts": [
+        "docs/provenance/v5-research-continuations/checks/0a74eb642cc6-integer-budget-v3.json"
+      ],
+      "external_warrant": {
+        "empirical": "NOT_ESTABLISHED",
+        "normative": "NOT_ESTABLISHED",
+        "external_peer_review": "NOT_ESTABLISHED",
+        "novelty": "NOT_ESTABLISHED"
+      }
+    },
+    {
+      "id": "T6-KNOWLEDGE",
+      "custody": "VERIFIED_DERIVED",
+      "inherited": "CONDITIONAL_PHILOSOPHY_WITH_FORMAL_MODELS",
+      "fresh": "FRESH_COMPONENTS",
+      "adoption": "CANDIDATE",
+      "receipts": [
+        "docs/provenance/v5-research-continuations/checks/83f1a917b40a-knowledge-author.json",
+        "docs/provenance/v5-research-continuations/checks/db6ccdc793a0-orthability-core.json",
+        "docs/provenance/v5-research-continuations/checks/db6ccdc793a0-existence-aware-history.json",
+        "docs/provenance/v5-research-continuations/checks/db6ccdc793a0-coverage-boundary.json"
+      ],
+      "external_warrant": {
+        "empirical": "NOT_ESTABLISHED",
+        "normative": "NOT_ESTABLISHED",
+        "external_peer_review": "NOT_ESTABLISHED",
+        "novelty": "NOT_ESTABLISHED"
+      }
+    },
+    {
+      "id": "T6-UPSTREAM",
+      "custody": "VERIFIED_DERIVED",
+      "inherited": "CONDITIONAL_PHILOSOPHY_WITH_FORMAL_MODELS",
+      "fresh": "FRESH_COMPONENTS",
+      "adoption": "CANDIDATE",
+      "receipts": [
+        "docs/provenance/v5-research-continuations/checks/eff5fada59f4-upstream-author.json"
+      ],
+      "external_warrant": {
+        "empirical": "NOT_ESTABLISHED",
+        "normative": "NOT_ESTABLISHED",
+        "external_peer_review": "NOT_ESTABLISHED",
+        "novelty": "NOT_ESTABLISHED"
+      }
+    },
+    {
+      "id": "S6F-01",
+      "custody": "VERIFIED_DERIVED",
+      "inherited": "MIXED_RETAINED_EVIDENCE",
+      "fresh": "NOT_RUN",
+      "adoption": "CANDIDATE",
+      "receipts": [],
+      "external_warrant": {
+        "empirical": "NOT_ESTABLISHED",
+        "normative": "NOT_ESTABLISHED",
+        "external_peer_review": "NOT_ESTABLISHED",
+        "novelty": "NOT_ESTABLISHED"
+      }
+    },
+    {
+      "id": "S6F-02",
+      "custody": "VERIFIED_DERIVED",
+      "inherited": "CONDITIONAL_PHILOSOPHY_WITH_FORMAL_MODELS",
+      "fresh": "FRESH_COMPONENTS",
+      "adoption": "CANDIDATE",
+      "receipts": [
+        "docs/provenance/v5-research-continuations/checks/eff5fada59f4-upstream-author.json",
+        "docs/provenance/v5-research-continuations/checks/549ba6a7f094-connected-author.json",
+        "docs/provenance/v5-research-continuations/checks/549ba6a7f094-connected-review.json"
+      ],
+      "external_warrant": {
+        "empirical": "NOT_ESTABLISHED",
+        "normative": "NOT_ESTABLISHED",
+        "external_peer_review": "NOT_ESTABLISHED",
+        "novelty": "NOT_ESTABLISHED"
+      }
+    },
+    {
+      "id": "S6F-03",
+      "custody": "VERIFIED_DERIVED",
+      "inherited": "CONDITIONAL_PHILOSOPHY_WITH_FORMAL_MODELS",
+      "fresh": "NOT_RUN",
+      "adoption": "CANDIDATE",
+      "receipts": [],
+      "external_warrant": {
+        "empirical": "NOT_ESTABLISHED",
+        "normative": "NOT_ESTABLISHED",
+        "external_peer_review": "NOT_ESTABLISHED",
+        "novelty": "NOT_ESTABLISHED"
+      }
+    },
+    {
+      "id": "S6F-04",
+      "custody": "VERIFIED_DERIVED",
+      "inherited": "CONDITIONAL_PHILOSOPHY_WITH_FORMAL_MODELS",
+      "fresh": "NOT_RUN",
+      "adoption": "CANDIDATE",
+      "receipts": [],
+      "external_warrant": {
+        "empirical": "NOT_ESTABLISHED",
+        "normative": "NOT_ESTABLISHED",
+        "external_peer_review": "NOT_ESTABLISHED",
+        "novelty": "NOT_ESTABLISHED"
+      }
+    },
+    {
+      "id": "S6F-05",
+      "custody": "VERIFIED_DERIVED",
+      "inherited": "CONDITIONAL_PHILOSOPHY_WITH_FORMAL_MODELS",
+      "fresh": "FRESH_COMPONENTS",
+      "adoption": "CANDIDATE",
+      "receipts": [
+        "docs/provenance/v5-research-continuations/checks/83f1a917b40a-knowledge-author.json",
+        "docs/provenance/v5-research-continuations/checks/db6ccdc793a0-orthability-core.json",
+        "docs/provenance/v5-research-continuations/checks/db6ccdc793a0-existence-aware-history.json",
+        "docs/provenance/v5-research-continuations/checks/db6ccdc793a0-coverage-boundary.json"
+      ],
+      "external_warrant": {
+        "empirical": "NOT_ESTABLISHED",
+        "normative": "NOT_ESTABLISHED",
+        "external_peer_review": "NOT_ESTABLISHED",
+        "novelty": "NOT_ESTABLISHED"
+      }
+    },
+    {
+      "id": "S6F-06",
+      "custody": "VERIFIED_DERIVED",
+      "inherited": "CONDITIONAL_PHILOSOPHY_WITH_FORMAL_MODELS",
+      "fresh": "NOT_RUN",
+      "adoption": "CANDIDATE",
+      "receipts": [],
+      "external_warrant": {
+        "empirical": "NOT_ESTABLISHED",
+        "normative": "NOT_ESTABLISHED",
+        "external_peer_review": "NOT_ESTABLISHED",
+        "novelty": "NOT_ESTABLISHED"
+      }
+    },
+    {
+      "id": "S6F-07",
+      "custody": "VERIFIED_DERIVED",
+      "inherited": "CONDITIONAL_PHILOSOPHY_WITH_FORMAL_MODELS",
+      "fresh": "NOT_RUN",
+      "adoption": "CANDIDATE",
+      "receipts": [],
+      "external_warrant": {
+        "empirical": "NOT_ESTABLISHED",
+        "normative": "NOT_ESTABLISHED",
+        "external_peer_review": "NOT_ESTABLISHED",
+        "novelty": "NOT_ESTABLISHED"
+      }
+    },
+    {
+      "id": "S6F-08",
+      "custody": "VERIFIED_DERIVED",
+      "inherited": "CONDITIONAL_PHILOSOPHY_WITH_FORMAL_MODELS",
+      "fresh": "NOT_RUN",
+      "adoption": "CANDIDATE",
+      "receipts": [],
+      "external_warrant": {
+        "empirical": "NOT_ESTABLISHED",
+        "normative": "NOT_ESTABLISHED",
+        "external_peer_review": "NOT_ESTABLISHED",
+        "novelty": "NOT_ESTABLISHED"
+      }
+    },
+    {
+      "id": "S6F-09",
+      "custody": "VERIFIED_DERIVED",
+      "inherited": "ORDINARY_REVIEW_AND_FINITE",
+      "fresh": "NOT_RUN",
+      "adoption": "CANDIDATE",
+      "receipts": [],
+      "external_warrant": {
+        "empirical": "NOT_ESTABLISHED",
+        "normative": "NOT_ESTABLISHED",
+        "external_peer_review": "NOT_ESTABLISHED",
+        "novelty": "NOT_ESTABLISHED"
+      }
+    },
+    {
+      "id": "S6F-10",
+      "custody": "VERIFIED_DERIVED",
+      "inherited": "ORDINARY_REVIEW_AND_FINITE",
+      "fresh": "NOT_RUN",
+      "adoption": "CANDIDATE",
+      "receipts": [],
+      "external_warrant": {
+        "empirical": "NOT_ESTABLISHED",
+        "normative": "NOT_ESTABLISHED",
+        "external_peer_review": "NOT_ESTABLISHED",
+        "novelty": "NOT_ESTABLISHED"
+      }
+    },
+    {
+      "id": "S6F-11",
+      "custody": "VERIFIED_DERIVED",
+      "inherited": "ORDINARY_REVIEW_AND_FINITE",
+      "fresh": "NOT_RUN",
+      "adoption": "CANDIDATE",
+      "receipts": [],
+      "external_warrant": {
+        "empirical": "NOT_ESTABLISHED",
+        "normative": "NOT_ESTABLISHED",
+        "external_peer_review": "NOT_ESTABLISHED",
+        "novelty": "NOT_ESTABLISHED"
+      }
+    },
+    {
+      "id": "S6F-12",
+      "custody": "VERIFIED_DERIVED",
+      "inherited": "ORDINARY_REVIEW_AND_FINITE",
+      "fresh": "NOT_RUN",
+      "adoption": "CANDIDATE",
+      "receipts": [],
+      "external_warrant": {
+        "empirical": "NOT_ESTABLISHED",
+        "normative": "NOT_ESTABLISHED",
+        "external_peer_review": "NOT_ESTABLISHED",
+        "novelty": "NOT_ESTABLISHED"
+      }
+    },
+    {
+      "id": "S6F-13",
+      "custody": "VERIFIED_DERIVED",
+      "inherited": "ORDINARY_REVIEW_AND_FINITE",
+      "fresh": "NOT_RUN",
+      "adoption": "CANDIDATE",
+      "receipts": [],
+      "external_warrant": {
+        "empirical": "NOT_ESTABLISHED",
+        "normative": "NOT_ESTABLISHED",
+        "external_peer_review": "NOT_ESTABLISHED",
+        "novelty": "NOT_ESTABLISHED"
+      }
+    },
+    {
+      "id": "S6F-14",
+      "custody": "VERIFIED_DERIVED",
+      "inherited": "ORDINARY_REVIEW_AND_FINITE",
+      "fresh": "FRESH_COMPONENTS",
+      "adoption": "CANDIDATE",
+      "receipts": [
+        "docs/provenance/v5-research-continuations/checks/549ba6a7f094-zero-error-disclosure.json"
+      ],
+      "external_warrant": {
+        "empirical": "NOT_ESTABLISHED",
+        "normative": "NOT_ESTABLISHED",
+        "external_peer_review": "NOT_ESTABLISHED",
+        "novelty": "NOT_ESTABLISHED"
+      }
+    },
+    {
+      "id": "S6F-15",
+      "custody": "VERIFIED_DERIVED",
+      "inherited": "ORDINARY_REVIEW_AND_FINITE",
+      "fresh": "NOT_RUN",
+      "adoption": "CANDIDATE",
+      "receipts": [],
+      "external_warrant": {
+        "empirical": "NOT_ESTABLISHED",
+        "normative": "NOT_ESTABLISHED",
+        "external_peer_review": "NOT_ESTABLISHED",
+        "novelty": "NOT_ESTABLISHED"
+      }
+    },
+    {
+      "id": "S6F-16",
+      "custody": "VERIFIED_DERIVED",
+      "inherited": "ORDINARY_REVIEW_AND_FINITE",
+      "fresh": "NOT_RUN",
+      "adoption": "CANDIDATE",
+      "receipts": [],
+      "external_warrant": {
+        "empirical": "NOT_ESTABLISHED",
+        "normative": "NOT_ESTABLISHED",
+        "external_peer_review": "NOT_ESTABLISHED",
+        "novelty": "NOT_ESTABLISHED"
+      }
+    },
+    {
+      "id": "S6F-17",
+      "custody": "VERIFIED_DERIVED",
+      "inherited": "ORDINARY_REVIEW_AND_FINITE",
+      "fresh": "NOT_RUN",
+      "adoption": "CANDIDATE",
+      "receipts": [],
+      "external_warrant": {
+        "empirical": "NOT_ESTABLISHED",
+        "normative": "NOT_ESTABLISHED",
+        "external_peer_review": "NOT_ESTABLISHED",
+        "novelty": "NOT_ESTABLISHED"
+      }
+    },
+    {
+      "id": "S6F-18",
+      "custody": "VERIFIED_DERIVED",
+      "inherited": "ORDINARY_REVIEW_AND_FINITE",
+      "fresh": "NOT_RUN",
+      "adoption": "CANDIDATE",
+      "receipts": [],
+      "external_warrant": {
+        "empirical": "NOT_ESTABLISHED",
+        "normative": "NOT_ESTABLISHED",
+        "external_peer_review": "NOT_ESTABLISHED",
+        "novelty": "NOT_ESTABLISHED"
+      }
+    },
+    {
+      "id": "S6F-19",
+      "custody": "VERIFIED_DERIVED",
+      "inherited": "RETAINED_FORMAL_REVIEW",
+      "fresh": "FRESH_COMPONENTS",
+      "adoption": "CANDIDATE",
+      "receipts": [
+        "docs/provenance/v5-research-continuations/checks/7cbe94fa76f6-actual-finite-model-common-exponential-range.json"
+      ],
+      "external_warrant": {
+        "empirical": "NOT_ESTABLISHED",
+        "normative": "NOT_ESTABLISHED",
+        "external_peer_review": "NOT_ESTABLISHED",
+        "novelty": "NOT_ESTABLISHED"
+      }
+    },
+    {
+      "id": "S6F-20",
+      "custody": "VERIFIED_DERIVED",
+      "inherited": "RETAINED_FORMAL_REVIEW",
+      "fresh": "FRESH_COMPONENTS",
+      "adoption": "CANDIDATE",
+      "receipts": [
+        "docs/provenance/v5-research-continuations/checks/7cbe94fa76f6-actual-finite-model-common-exponential-range.json"
+      ],
+      "external_warrant": {
+        "empirical": "NOT_ESTABLISHED",
+        "normative": "NOT_ESTABLISHED",
+        "external_peer_review": "NOT_ESTABLISHED",
+        "novelty": "NOT_ESTABLISHED"
+      }
+    },
+    {
+      "id": "S6F-21",
+      "custody": "VERIFIED_DERIVED",
+      "inherited": "RETAINED_FORMAL_REVIEW",
+      "fresh": "FRESH_COMPONENTS",
+      "adoption": "CANDIDATE",
+      "receipts": [
+        "docs/provenance/v5-research-continuations/checks/7cbe94fa76f6-actual-finite-model-common-exponential-range.json"
+      ],
+      "external_warrant": {
+        "empirical": "NOT_ESTABLISHED",
+        "normative": "NOT_ESTABLISHED",
+        "external_peer_review": "NOT_ESTABLISHED",
+        "novelty": "NOT_ESTABLISHED"
+      }
+    },
+    {
+      "id": "S6F-22",
+      "custody": "VERIFIED_DERIVED",
+      "inherited": "IMPLEMENTATION_AND_ORDINARY_REVIEW",
+      "fresh": "FRESH_COMPONENTS",
+      "adoption": "CANDIDATE",
+      "receipts": [
+        "docs/provenance/v5-research-continuations/checks/b5be7775f6d0-runtime-v8.json"
+      ],
+      "external_warrant": {
+        "empirical": "NOT_ESTABLISHED",
+        "normative": "NOT_ESTABLISHED",
+        "external_peer_review": "NOT_ESTABLISHED",
+        "novelty": "NOT_ESTABLISHED"
+      }
+    },
+    {
+      "id": "S6F-23",
+      "custody": "VERIFIED_DERIVED",
+      "inherited": "MIXED_RETAINED_EVIDENCE",
+      "fresh": "FRESH_COMPONENTS",
+      "adoption": "CANDIDATE",
+      "receipts": [
+        "docs/provenance/v5-research-continuations/checks/b5be7775f6d0-runtime-v8.json"
+      ],
+      "external_warrant": {
+        "empirical": "NOT_ESTABLISHED",
+        "normative": "NOT_ESTABLISHED",
+        "external_peer_review": "NOT_ESTABLISHED",
+        "novelty": "NOT_ESTABLISHED"
+      }
+    },
+    {
+      "id": "S6F-24",
+      "custody": "VERIFIED_DERIVED",
+      "inherited": "MIXED_RETAINED_EVIDENCE",
+      "fresh": "NOT_RUN",
+      "adoption": "CANDIDATE",
+      "receipts": [],
+      "external_warrant": {
+        "empirical": "NOT_ESTABLISHED",
+        "normative": "NOT_ESTABLISHED",
+        "external_peer_review": "NOT_ESTABLISHED",
+        "novelty": "NOT_ESTABLISHED"
+      }
+    },
+    {
+      "id": "S6F-25",
+      "custody": "VERIFIED_DERIVED",
+      "inherited": "MIXED_RETAINED_EVIDENCE",
+      "fresh": "NOT_RUN",
+      "adoption": "CANDIDATE",
+      "receipts": [],
+      "external_warrant": {
+        "empirical": "NOT_ESTABLISHED",
+        "normative": "NOT_ESTABLISHED",
+        "external_peer_review": "NOT_ESTABLISHED",
+        "novelty": "NOT_ESTABLISHED"
+      }
+    },
+    {
+      "id": "S6F-26",
+      "custody": "VERIFIED_DERIVED",
+      "inherited": "MIXED_RETAINED_EVIDENCE",
+      "fresh": "NOT_RUN",
+      "adoption": "CANDIDATE",
+      "receipts": [],
+      "external_warrant": {
+        "empirical": "NOT_ESTABLISHED",
+        "normative": "NOT_ESTABLISHED",
+        "external_peer_review": "NOT_ESTABLISHED",
+        "novelty": "NOT_ESTABLISHED"
+      }
+    }
+  ]
+}

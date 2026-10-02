@@ -1,0 +1,711 @@
+{
+  "status": "FRESH_KERNEL_COMPONENTS",
+  "exit_code": 0,
+  "kernel_verified": true,
+  "suite_id": "db6ccdc793a0-efficient-statistical-repair",
+  "suite_sha256": "45c55a72ce6941278591366d786e46d2059cabb32d51df57443e2f50fb4e6ddf",
+  "source_hashes": {
+    "StatisticalRepair": "8e6a771ec5c6b853055f7f13dd1b93b319172a2e10a4f41d71284cc681627bf4",
+    "FiniteTailCoverage": "27726774f9c65cd5827f9ff1a7f9e840e6d0332bb1ab10b63afd10d26244ae9d",
+    "BernoulliTailMonotonicity": "e9efe25a7e4bc22b9e7893f412a6107a9d1757d557e3a1ca44d6d752c95c1659",
+    "BernoulliIntervalCoverage": "f48619991474ed415fe560dabeef1e47b90856de0c4eed3b4201bef4ca801c6a",
+    "BernoulliPrefixLaw": "f7c79b0cab33c9888eba0f0e29edbfdcb50d1f2cf11bd95d6e0256ae986e08c0",
+    "RobustBinaryRepair": "1762b3ce9b4c3d11826eb724c1d15468d8ddda69666da3e06f332979288b4c31",
+    "CertifiedRepairCoverage": "ce7c17727753d78a199ba2ecda1e2a0b1a81f6c50852785ff6cf45f9e727d9fe",
+    "AnytimeRepairCoverage": "53460179667b4cbd53f86b780ae15d4cdefbaa7d3b8896dce05c2e8b02ce1e52",
+    "RationalTailReference": "eb18e890efec80015ba7bbf459af9fd56793e093438c24732b76e4f259a3b37b",
+    "RationalRepairCertificate": "9d069a77d114d1e80f3f7b15db5d54fe03175d6e541109937de2c7a958082922",
+    "ExecutableAuditRepair": "79a5b2d5533226c48b2a885eb720a35046436343800e272615a3a661680a762d",
+    "AuditContractBinding": "85aa05cb15f73c3ef6441c00a5a8e270120fd5e877fc7a88e4445cce1089cb24",
+    "RandomisedRepairRegret": "d2c72c3060eda128041de85af4d88b285eb8c65946ef001a47c64b6a36f950d5",
+    "GroupedBinomialTails": "5cfdcb3bda7d8d7d55eea2b9326425f9b260f0b4d7c7c9019448817bd8a76f23",
+    "EfficientAuditRepair": "c19e8558e4ecc76bea8179ed299e0aae3cf7475a07f044134a86eadf259daec3",
+    "EventualAuditSafety": "fc8e020c0aafc12028cb50598457f1550a7c3bbf4f41c7f8d3453ca87d62f232",
+    "SequentialBinomialTails": "aa8b2c0127df7638c071a3db1094aced7f9398f5165760b5376ef6430519fd57",
+    "SequentialAuditRepair": "a0c27a8fae15d29478f02ca1e2b6942a9bc2e9a753f8d8e03550a363273c0cae",
+    "Controls": "d0bfff3a85c8f035689d070bea224f9aa589ce55c49281d1ba92a16dab8c8e24"
+  },
+  "post_source_hashes": {
+    "StatisticalRepair": "8e6a771ec5c6b853055f7f13dd1b93b319172a2e10a4f41d71284cc681627bf4",
+    "FiniteTailCoverage": "27726774f9c65cd5827f9ff1a7f9e840e6d0332bb1ab10b63afd10d26244ae9d",
+    "BernoulliTailMonotonicity": "e9efe25a7e4bc22b9e7893f412a6107a9d1757d557e3a1ca44d6d752c95c1659",
+    "BernoulliIntervalCoverage": "f48619991474ed415fe560dabeef1e47b90856de0c4eed3b4201bef4ca801c6a",
+    "BernoulliPrefixLaw": "f7c79b0cab33c9888eba0f0e29edbfdcb50d1f2cf11bd95d6e0256ae986e08c0",
+    "RobustBinaryRepair": "1762b3ce9b4c3d11826eb724c1d15468d8ddda69666da3e06f332979288b4c31",
+    "CertifiedRepairCoverage": "ce7c17727753d78a199ba2ecda1e2a0b1a81f6c50852785ff6cf45f9e727d9fe",
+    "AnytimeRepairCoverage": "53460179667b4cbd53f86b780ae15d4cdefbaa7d3b8896dce05c2e8b02ce1e52",
+    "RationalTailReference": "eb18e890efec80015ba7bbf459af9fd56793e093438c24732b76e4f259a3b37b",
+    "RationalRepairCertificate": "9d069a77d114d1e80f3f7b15db5d54fe03175d6e541109937de2c7a958082922",
+    "ExecutableAuditRepair": "79a5b2d5533226c48b2a885eb720a35046436343800e272615a3a661680a762d",
+    "AuditContractBinding": "85aa05cb15f73c3ef6441c00a5a8e270120fd5e877fc7a88e4445cce1089cb24",
+    "RandomisedRepairRegret": "d2c72c3060eda128041de85af4d88b285eb8c65946ef001a47c64b6a36f950d5",
+    "GroupedBinomialTails": "5cfdcb3bda7d8d7d55eea2b9326425f9b260f0b4d7c7c9019448817bd8a76f23",
+    "EfficientAuditRepair": "c19e8558e4ecc76bea8179ed299e0aae3cf7475a07f044134a86eadf259daec3",
+    "EventualAuditSafety": "fc8e020c0aafc12028cb50598457f1550a7c3bbf4f41c7f8d3453ca87d62f232",
+    "SequentialBinomialTails": "aa8b2c0127df7638c071a3db1094aced7f9398f5165760b5376ef6430519fd57",
+    "SequentialAuditRepair": "a0c27a8fae15d29478f02ca1e2b6942a9bc2e9a753f8d8e03550a363273c0cae",
+    "Controls": "d0bfff3a85c8f035689d070bea224f9aa589ce55c49281d1ba92a16dab8c8e24"
+  },
+  "compiler_sha256": "92c3d35b5bfaa5e0fea413a775d504cf46cd95e1345df61c2274f76779e7e023",
+  "pins": {
+    "lean_version": "4.19.0",
+    "lean_binary_sha256": "92c3d35b5bfaa5e0fea413a775d504cf46cd95e1345df61c2274f76779e7e023",
+    "packages": [
+      {
+        "name": "mathlib",
+        "revision": "c44e0c8ee63ca166450922a373c7409c5d26b00b"
+      },
+      {
+        "name": "plausible",
+        "revision": "77e08eddc486491d7b9e470926b3dbe50319451a"
+      },
+      {
+        "name": "LeanSearchClient",
+        "revision": "25078369972d295301f5a1e53c3e5850cf6d9d4c"
+      },
+      {
+        "name": "importGraph",
+        "revision": "e6a9f0f5ee3ccf7443a0070f92b62f8db12ae82b"
+      },
+      {
+        "name": "proofwidgets",
+        "revision": "c4919189477c3221e6a204008998b0d724f49904"
+      },
+      {
+        "name": "aesop",
+        "revision": "5d50b08dedd7d69b3d9b3176e0d58a23af228884"
+      },
+      {
+        "name": "Qq",
+        "revision": "fa4f7f15d97591a9cf3aa7724ba371c7fc6dda02"
+      },
+      {
+        "name": "batteries",
+        "revision": "f5d04a9c4973d401c8c92500711518f7c656f034"
+      },
+      {
+        "name": "Cli",
+        "revision": "02dbd02bc00ec4916e99b04b2245b30200e200d0"
+      }
+    ]
+  },
+  "modules": [
+    {
+      "module": "StatisticalRepair",
+      "source_sha256": "8e6a771ec5c6b853055f7f13dd1b93b319172a2e10a4f41d71284cc681627bf4",
+      "object_sha256": "2d66a16941c61faba01bd2609c09bdf18c425a1264921802de352d75e47368a0",
+      "transitive_source_fingerprint": "7f58b04601ed0c1d878297de1502fc45245c0caa0b583a2c2180cf9c6ccfe89a",
+      "status": "QUALIFIED_PREDECESSOR",
+      "predecessor_receipt": "docs/provenance/v5-research-continuations/checks/db6ccdc793a0-continuum-repair.json",
+      "predecessor_receipt_sha256": "6f58d28bfc29e1500254c3337c28d6a9e76a12805c0ff3261f273d363e9d6e77"
+    },
+    {
+      "module": "FiniteTailCoverage",
+      "source_sha256": "27726774f9c65cd5827f9ff1a7f9e840e6d0332bb1ab10b63afd10d26244ae9d",
+      "object_sha256": "43d598d4558b3fa2eb64a51310dfcb93b8286791888f5b7abd7c62d02512304d",
+      "transitive_source_fingerprint": "f3902ced4145393e6390b3f3c3145a17bc6d1defd399c42d7650ff918a324013",
+      "status": "QUALIFIED_PREDECESSOR",
+      "predecessor_receipt": "docs/provenance/v5-research-continuations/checks/db6ccdc793a0-continuum-repair.json",
+      "predecessor_receipt_sha256": "6f58d28bfc29e1500254c3337c28d6a9e76a12805c0ff3261f273d363e9d6e77"
+    },
+    {
+      "module": "BernoulliTailMonotonicity",
+      "source_sha256": "e9efe25a7e4bc22b9e7893f412a6107a9d1757d557e3a1ca44d6d752c95c1659",
+      "object_sha256": "e5dd17ef762606d069e5063fa0baa6844454c0d44e7c73d2996e5e41f75ac783",
+      "transitive_source_fingerprint": "405d17335d5114a7e2f2610ba8f2438c2a990d52dfd3739fcbd8048b2e876c22",
+      "status": "QUALIFIED_PREDECESSOR",
+      "predecessor_receipt": "docs/provenance/v5-research-continuations/checks/db6ccdc793a0-continuum-repair.json",
+      "predecessor_receipt_sha256": "6f58d28bfc29e1500254c3337c28d6a9e76a12805c0ff3261f273d363e9d6e77"
+    },
+    {
+      "module": "BernoulliIntervalCoverage",
+      "source_sha256": "f48619991474ed415fe560dabeef1e47b90856de0c4eed3b4201bef4ca801c6a",
+      "object_sha256": "52267e86d46b8db87bc452e4618243d1ccd87089494f7b0b6aa3fd5d15115b18",
+      "transitive_source_fingerprint": "794b7806c45e8ccdf4f95a6866cbc78228d79c68819147b86b3161a6dd832240",
+      "status": "QUALIFIED_PREDECESSOR",
+      "predecessor_receipt": "docs/provenance/v5-research-continuations/checks/db6ccdc793a0-continuum-repair.json",
+      "predecessor_receipt_sha256": "6f58d28bfc29e1500254c3337c28d6a9e76a12805c0ff3261f273d363e9d6e77"
+    },
+    {
+      "module": "BernoulliPrefixLaw",
+      "source_sha256": "f7c79b0cab33c9888eba0f0e29edbfdcb50d1f2cf11bd95d6e0256ae986e08c0",
+      "object_sha256": "b8551def078695a967c48311a0311d1d7204377b793b3c120c13418972e10d1c",
+      "transitive_source_fingerprint": "bf87d7c54d13fc8f40c62504abce76e183ace568702ad731743624ce6c229bf1",
+      "status": "QUALIFIED_PREDECESSOR",
+      "predecessor_receipt": "docs/provenance/v5-research-continuations/checks/db6ccdc793a0-continuum-repair.json",
+      "predecessor_receipt_sha256": "6f58d28bfc29e1500254c3337c28d6a9e76a12805c0ff3261f273d363e9d6e77"
+    },
+    {
+      "module": "RobustBinaryRepair",
+      "source_sha256": "1762b3ce9b4c3d11826eb724c1d15468d8ddda69666da3e06f332979288b4c31",
+      "object_sha256": "1e38d62d6829039b175447f36f2faf9890c142896e7e79f4ce60d365e586ebb9",
+      "transitive_source_fingerprint": "79e5372a2926af49521fe0604453296db2ee98bc03e4b7dfa6b4707c1e044758",
+      "status": "QUALIFIED_PREDECESSOR",
+      "predecessor_receipt": "docs/provenance/v5-research-continuations/checks/db6ccdc793a0-continuum-repair.json",
+      "predecessor_receipt_sha256": "6f58d28bfc29e1500254c3337c28d6a9e76a12805c0ff3261f273d363e9d6e77"
+    },
+    {
+      "module": "CertifiedRepairCoverage",
+      "source_sha256": "ce7c17727753d78a199ba2ecda1e2a0b1a81f6c50852785ff6cf45f9e727d9fe",
+      "object_sha256": "df96edb207823ee2e5bbbad5359e74e6c5dd870c4ea848fc491ead64731eec6c",
+      "transitive_source_fingerprint": "0c793070ccb2e011b15dcee48db725789098325a326b1c9df54a5b214ae5ac1f",
+      "status": "QUALIFIED_PREDECESSOR",
+      "predecessor_receipt": "docs/provenance/v5-research-continuations/checks/db6ccdc793a0-continuum-repair.json",
+      "predecessor_receipt_sha256": "6f58d28bfc29e1500254c3337c28d6a9e76a12805c0ff3261f273d363e9d6e77"
+    },
+    {
+      "module": "AnytimeRepairCoverage",
+      "source_sha256": "53460179667b4cbd53f86b780ae15d4cdefbaa7d3b8896dce05c2e8b02ce1e52",
+      "object_sha256": "3d1cef837632381f180ef2602da5a2daed90097fe16b325f9b8b6f1e2f940ee0",
+      "transitive_source_fingerprint": "690e94e77e3b15dd94de28afba91cc976c0abefff6787c0412a31e5c01f1f7ff",
+      "status": "QUALIFIED_PREDECESSOR",
+      "predecessor_receipt": "docs/provenance/v5-research-continuations/checks/db6ccdc793a0-continuum-repair.json",
+      "predecessor_receipt_sha256": "6f58d28bfc29e1500254c3337c28d6a9e76a12805c0ff3261f273d363e9d6e77"
+    },
+    {
+      "module": "RationalTailReference",
+      "source_sha256": "eb18e890efec80015ba7bbf459af9fd56793e093438c24732b76e4f259a3b37b",
+      "object_sha256": "917dcf60d0f0ea4d48f980cddaec781694f369c83a9a17483a5c69f35c33b3c9",
+      "transitive_source_fingerprint": "bb5f0a239ae890332d2f623e4f18a9aa6bf1c9d0a32e06274fb4a4cd715b6902",
+      "status": "QUALIFIED_PREDECESSOR",
+      "predecessor_receipt": "docs/provenance/v5-research-continuations/checks/db6ccdc793a0-continuum-repair.json",
+      "predecessor_receipt_sha256": "6f58d28bfc29e1500254c3337c28d6a9e76a12805c0ff3261f273d363e9d6e77"
+    },
+    {
+      "module": "RationalRepairCertificate",
+      "source_sha256": "9d069a77d114d1e80f3f7b15db5d54fe03175d6e541109937de2c7a958082922",
+      "object_sha256": "0d14e093458842e8feff35bbc5e9db339a3f03f2d9b1004138e91432b3132aaf",
+      "transitive_source_fingerprint": "925f435efd88a1b44314a0302090768bb812680f498678265e1557f1fd1c1c51",
+      "status": "QUALIFIED_PREDECESSOR",
+      "predecessor_receipt": "docs/provenance/v5-research-continuations/checks/db6ccdc793a0-continuum-repair.json",
+      "predecessor_receipt_sha256": "6f58d28bfc29e1500254c3337c28d6a9e76a12805c0ff3261f273d363e9d6e77"
+    },
+    {
+      "module": "ExecutableAuditRepair",
+      "source_sha256": "79a5b2d5533226c48b2a885eb720a35046436343800e272615a3a661680a762d",
+      "object_sha256": "a18f8f78073b6ee9eca3475c8e5e762cc3bd55430999dca3f8dbf9a754f63e1c",
+      "transitive_source_fingerprint": "8832c4922c05b1e3ec789ca962818c1da253c50d5c4ac3a36ff94cac7d32c46d",
+      "status": "QUALIFIED_PREDECESSOR",
+      "predecessor_receipt": "docs/provenance/v5-research-continuations/checks/db6ccdc793a0-continuum-repair.json",
+      "predecessor_receipt_sha256": "6f58d28bfc29e1500254c3337c28d6a9e76a12805c0ff3261f273d363e9d6e77"
+    },
+    {
+      "module": "AuditContractBinding",
+      "source_sha256": "85aa05cb15f73c3ef6441c00a5a8e270120fd5e877fc7a88e4445cce1089cb24",
+      "object_sha256": "018fdef26400e9bc9b21d65bec7c838df55259b46b96681ef8571aefa242f6e5",
+      "transitive_source_fingerprint": "6d26aeb458513e99ff5a6cc0a449b313cd48bba5cc10f06b37f425fe652a5bf6",
+      "status": "QUALIFIED_PREDECESSOR",
+      "predecessor_receipt": "docs/provenance/v5-research-continuations/checks/db6ccdc793a0-continuum-repair.json",
+      "predecessor_receipt_sha256": "6f58d28bfc29e1500254c3337c28d6a9e76a12805c0ff3261f273d363e9d6e77"
+    },
+    {
+      "module": "RandomisedRepairRegret",
+      "source_sha256": "d2c72c3060eda128041de85af4d88b285eb8c65946ef001a47c64b6a36f950d5",
+      "object_sha256": "0c9552ca5079b0c95e30fda69b2c12898a92a4326f0e005b480b8a1d76a0b880",
+      "transitive_source_fingerprint": "c8169792391673d065c17276f77cc6141b3e908bcfd7ee8ef8f778ddda88b49d",
+      "status": "FRESH_COMPILE",
+      "exit_code": 0
+    },
+    {
+      "module": "GroupedBinomialTails",
+      "source_sha256": "5cfdcb3bda7d8d7d55eea2b9326425f9b260f0b4d7c7c9019448817bd8a76f23",
+      "object_sha256": "e2e3ae7a4cb07d14648de763146e1bfb8b9fa2697411652e778ab2944bc3fce5",
+      "transitive_source_fingerprint": "fab45a2d032718b54445c3775ef3e01a1625c2bc5e73eed158e5afc5693e9942",
+      "status": "QUALIFIED_PREDECESSOR",
+      "predecessor_receipt": "docs/provenance/v5-research-continuations/checks/db6ccdc793a0-continuum-repair.json",
+      "predecessor_receipt_sha256": "6f58d28bfc29e1500254c3337c28d6a9e76a12805c0ff3261f273d363e9d6e77"
+    },
+    {
+      "module": "EfficientAuditRepair",
+      "source_sha256": "c19e8558e4ecc76bea8179ed299e0aae3cf7475a07f044134a86eadf259daec3",
+      "object_sha256": "3460d8ced3143a32793486da2d936a575f75f299a31b1b28526d13189e6c17a7",
+      "transitive_source_fingerprint": "31fc60d2ae557587f6e2244b56e4502e92142116a18f0447b06a9c460d8132ad",
+      "status": "QUALIFIED_PREDECESSOR",
+      "predecessor_receipt": "docs/provenance/v5-research-continuations/checks/db6ccdc793a0-continuum-repair.json",
+      "predecessor_receipt_sha256": "6f58d28bfc29e1500254c3337c28d6a9e76a12805c0ff3261f273d363e9d6e77"
+    },
+    {
+      "module": "EventualAuditSafety",
+      "source_sha256": "fc8e020c0aafc12028cb50598457f1550a7c3bbf4f41c7f8d3453ca87d62f232",
+      "object_sha256": "4d5a2ee2663af4ecf4aac06404250af2fdfb9a5b52dba81d7a57994464ee3835",
+      "transitive_source_fingerprint": "ca178c8f5fb31d9f5f295ab6e109d501843aeaef4493fd65cb310607db64329e",
+      "status": "QUALIFIED_PREDECESSOR",
+      "predecessor_receipt": "docs/provenance/v5-research-continuations/checks/db6ccdc793a0-continuum-repair.json",
+      "predecessor_receipt_sha256": "6f58d28bfc29e1500254c3337c28d6a9e76a12805c0ff3261f273d363e9d6e77"
+    },
+    {
+      "module": "SequentialBinomialTails",
+      "source_sha256": "aa8b2c0127df7638c071a3db1094aced7f9398f5165760b5376ef6430519fd57",
+      "object_sha256": "8d7dca34f44f87d262bc89da4e3aca63f84892e8913b6f2e95688db6bac06aa0",
+      "transitive_source_fingerprint": "1ddfe7fc9e7c3035bc7c3447edb5a41c581753d6bc739fed5e77b50f21798e48",
+      "status": "FRESH_COMPILE",
+      "exit_code": 0
+    },
+    {
+      "module": "SequentialAuditRepair",
+      "source_sha256": "a0c27a8fae15d29478f02ca1e2b6942a9bc2e9a753f8d8e03550a363273c0cae",
+      "object_sha256": "1d0ff512cbbedd8257aa791e452d8c66c1b9684edff1902320aa52ffb6651f69",
+      "transitive_source_fingerprint": "67d5393f84a270cdf3adb5f740bbbbd407d5945b504c6d601147c74e781f768c",
+      "status": "FRESH_COMPILE",
+      "exit_code": 0
+    },
+    {
+      "module": "Controls",
+      "source_sha256": "d0bfff3a85c8f035689d070bea224f9aa589ce55c49281d1ba92a16dab8c8e24",
+      "object_sha256": "37d8cdf9b335b2b4bf8965e99778aac948378c7af0a15effa712fe6d65fa7f1d",
+      "transitive_source_fingerprint": "b99094258c8e806a3f30c95ab04f81a1c1ad4133bfe176c8e7eb8c36e5e91db8",
+      "status": "FRESH_COMPILE",
+      "exit_code": 0
+    }
+  ],
+  "readbacks": {
+    "Orthemology.Tranche3.countMass": {
+      "type_sha256": "b46daba0232363946fb9e45acd39ada3bd872f525a547d1855271489261c6bb2",
+      "axioms": [
+        "Classical.choice",
+        "Quot.sound",
+        "propext"
+      ]
+    },
+    "Orthemology.Tranche3.countMass_zero_base": {
+      "type_sha256": "f247624e666ebe46ea19b1389e8a523da93dd228a41a7a843a3f11bafc81e353",
+      "axioms": [
+        "Classical.choice",
+        "Quot.sound",
+        "propext"
+      ]
+    },
+    "Orthemology.Tranche3.countMass_above": {
+      "type_sha256": "7e16237c7a6d546f3f89e421958ec615d66df98f84d9133d41b99933ff9cbd20",
+      "axioms": [
+        "Classical.choice",
+        "Quot.sound",
+        "propext"
+      ]
+    },
+    "Orthemology.Tranche3.countMass_succ_zero": {
+      "type_sha256": "b9c36cc1e0e817bed7e8fb120f455fb881e53c6b1c7ed8519c3ea13e02b62ffa",
+      "axioms": [
+        "Classical.choice",
+        "Quot.sound",
+        "propext"
+      ]
+    },
+    "Orthemology.Tranche3.countMass_succ_succ": {
+      "type_sha256": "452db8b31271b9b7db269adcc52b14032ab2058d5c93c4a8766a3d22a632dc21",
+      "axioms": [
+        "Classical.choice",
+        "Quot.sound",
+        "propext"
+      ]
+    },
+    "Orthemology.Tranche3.countMass_binomial": {
+      "type_sha256": "b6ee29d3daac79398bf378c4db4ed9b8c748435d814bde02c87979abd2d5d399",
+      "axioms": [
+        "Classical.choice",
+        "Quot.sound",
+        "propext"
+      ]
+    },
+    "Orthemology.Tranche3.efficientUpper": {
+      "type_sha256": "23052cea2e8beb3993d1386673bcba9df32813775aeab879da98706ad19cead8",
+      "axioms": [
+        "Classical.choice",
+        "Quot.sound",
+        "propext"
+      ]
+    },
+    "Orthemology.Tranche3.efficientLower": {
+      "type_sha256": "478543d6bc368bac0dec96c0a5692cecfac6d8e66966f703bc9fa1d4f2e6fc16",
+      "axioms": [
+        "Classical.choice",
+        "Quot.sound",
+        "propext"
+      ]
+    },
+    "Orthemology.Tranche3.sum_grouped_count": {
+      "type_sha256": "bba9cb514349c9b6499257e3d12201cc0b09659e722656a3035a7b2f5a0c4c09",
+      "axioms": [
+        "Classical.choice",
+        "Quot.sound",
+        "propext"
+      ]
+    },
+    "Orthemology.Tranche3.efficientUpper_eq": {
+      "type_sha256": "4addd2638922c0e940c93a8ae94786695c4ff9876c371d6b5c02878406e113c1",
+      "axioms": [
+        "Classical.choice",
+        "Quot.sound",
+        "propext"
+      ]
+    },
+    "Orthemology.Tranche3.efficientLower_eq": {
+      "type_sha256": "b7da50460db56c7a7979fb334d734bf874eb50b08b458e70d63f418ed2935286",
+      "axioms": [
+        "Classical.choice",
+        "Quot.sound",
+        "propext"
+      ]
+    },
+    "Orthemology.Tranche3.efficientReferenceLower": {
+      "type_sha256": "2ff4f8f68ff502e9a82e140287afa226c2faad97c8b4a5000670365c859dec93",
+      "axioms": [
+        "Classical.choice",
+        "Quot.sound",
+        "propext"
+      ]
+    },
+    "Orthemology.Tranche3.efficientReferenceUpper": {
+      "type_sha256": "53b133ddf62bab32c84d27266e3254934f72ed4ae459a8375c24dc8d580ec1f0",
+      "axioms": [
+        "Classical.choice",
+        "Quot.sound",
+        "propext"
+      ]
+    },
+    "Orthemology.Tranche3.efficientReferenceLower_eq": {
+      "type_sha256": "61276da42442b5c08b35bed0bc1b5ed4ed5d734aec9383c43c567ec4b0f5d4e0",
+      "axioms": [
+        "Classical.choice",
+        "Quot.sound",
+        "propext"
+      ]
+    },
+    "Orthemology.Tranche3.efficientReferenceUpper_eq": {
+      "type_sha256": "75ecf867755e4824cd68b5c7f2a41b4a4e2324f447f73ed9ddf5c2d248604ad6",
+      "axioms": [
+        "Classical.choice",
+        "Quot.sound",
+        "propext"
+      ]
+    },
+    "Orthemology.Tranche3.efficientAuditRepair": {
+      "type_sha256": "8205bbf8617e69b813da07ff71800e0259880da5dd6c8a43ebcc6ffbb26cd593",
+      "axioms": [
+        "Classical.choice",
+        "Quot.sound",
+        "propext"
+      ]
+    },
+    "Orthemology.Tranche3.efficientAuditRepair_eq": {
+      "type_sha256": "bae1d3bdf333b705b382d3eecaac8a8c33c96d70fc855e944679c31ddc43d993",
+      "axioms": [
+        "Classical.choice",
+        "Quot.sound",
+        "propext"
+      ]
+    },
+    "Orthemology.Tranche3.efficient_auditRepair_anytime_sound": {
+      "type_sha256": "f53a73c5f88f69f7693b221eb7aa6b0fb333cde06250852bd1947024eb886366",
+      "axioms": [
+        "Classical.choice",
+        "Quot.sound",
+        "propext"
+      ]
+    },
+    "Orthemology.Tranche3.AuditStepFailure": {
+      "type_sha256": "2104efee080c276d036a8584a81f31ee58e87b62e87ed924db2939c17957ed93",
+      "axioms": [
+        "Classical.choice",
+        "Quot.sound",
+        "propext"
+      ]
+    },
+    "Orthemology.Tranche3.auditStepFailure_measurable": {
+      "type_sha256": "d689151fb5d2a9b1e1989162b7b23243d6a383f5a4e84bd3ad16dbb68f4ef09e",
+      "axioms": [
+        "Classical.choice",
+        "Quot.sound",
+        "propext"
+      ]
+    },
+    "Orthemology.Tranche3.auditStepFailure_bound": {
+      "type_sha256": "91251e5468fcf0aff83797dca6550d4b2c5e7d86c621ab767ffc3a293f977da0",
+      "axioms": [
+        "Classical.choice",
+        "Quot.sound",
+        "propext"
+      ]
+    },
+    "Orthemology.Tranche3.expected_incorrect_reports_le": {
+      "type_sha256": "9a6797fc1431acc4cf41f7d374a217c5bc08a1a58e807ad3d2dc021b34aa7f56",
+      "axioms": [
+        "Classical.choice",
+        "Quot.sound",
+        "propext"
+      ]
+    },
+    "Orthemology.Tranche3.eventually_no_incorrect_emissions": {
+      "type_sha256": "baa7945eb1c99bb6f4ce9918f4bd037e3b121f6882ad660a6d8de4c753385477",
+      "axioms": [
+        "Classical.choice",
+        "Quot.sound",
+        "propext"
+      ]
+    },
+    "Orthemology.Tranche3.binomialTerm": {
+      "type_sha256": "25cb5aa6538fef91a1cbf24edfc379639968cc8e5406f7d67732daa5f0916f9d",
+      "axioms": [
+        "Classical.choice",
+        "Quot.sound",
+        "propext"
+      ]
+    },
+    "Orthemology.Tranche3.nextBinomialTerm": {
+      "type_sha256": "9074149770d4a0dcd5be57b429c0b0436e526ae4ffc1d3820aa9c00d9782c6a7",
+      "axioms": [
+        "propext"
+      ]
+    },
+    "Orthemology.Tranche3.binomialTerm_next": {
+      "type_sha256": "d56a4e21c1f639b9864f812fd87f78025fbeacbb0fb43d032023cdb42150ad46",
+      "axioms": [
+        "Classical.choice",
+        "Quot.sound",
+        "propext"
+      ]
+    },
+    "Orthemology.Tranche3.tailSweep": {
+      "type_sha256": "3174079f9274482caaac30ea92e986d13b34a6c5fbc07cf5dadbcf0c4939ce15",
+      "axioms": [
+        "propext"
+      ]
+    },
+    "Orthemology.Tranche3.tailSweep_correct": {
+      "type_sha256": "8f24a9b34293fc07e4364d96a8f089f283a7a41c3a753847048e8b74212fbd3e",
+      "axioms": [
+        "Classical.choice",
+        "Quot.sound",
+        "propext"
+      ]
+    },
+    "Orthemology.Tranche3.sequentialTail": {
+      "type_sha256": "587ccbd7d153c56b8dd914ab0652f1516c30fbbff6a183150c083ebc13f4b820",
+      "axioms": [
+        "Classical.choice",
+        "Quot.sound",
+        "propext"
+      ]
+    },
+    "Orthemology.Tranche3.binomialTerm_at_one": {
+      "type_sha256": "6770b27e32759c64ffc389180d95cecbd84342d27e6d9010a68e982004a9c70e",
+      "axioms": [
+        "Classical.choice",
+        "Quot.sound",
+        "propext"
+      ]
+    },
+    "Orthemology.Tranche3.sequentialTail_eq": {
+      "type_sha256": "db5158fbcbb3693408449b607c8c789b5faa348aa03cef19072723a0b11cb3f0",
+      "axioms": [
+        "Classical.choice",
+        "Quot.sound",
+        "propext"
+      ]
+    },
+    "Orthemology.Tranche3.sequentialUpper": {
+      "type_sha256": "8a557bb1ef2d5f6f07a7446572d8d7d02215c33426140746eb18fa8d8ccdab97",
+      "axioms": [
+        "Classical.choice",
+        "Quot.sound",
+        "propext"
+      ]
+    },
+    "Orthemology.Tranche3.sequentialLower": {
+      "type_sha256": "c32c7dea95339d1c4bf38e8123c9b9d933cf9bfe3d738cb2d9d4b971316f55af",
+      "axioms": [
+        "Classical.choice",
+        "Quot.sound",
+        "propext"
+      ]
+    },
+    "Orthemology.Tranche3.sequentialUpper_eq": {
+      "type_sha256": "a63f099ce99526d7ca1a91c766d87d17ef43ce62107a105c85ea91281e6e859a",
+      "axioms": [
+        "Classical.choice",
+        "Quot.sound",
+        "propext"
+      ]
+    },
+    "Orthemology.Tranche3.sequentialLower_eq": {
+      "type_sha256": "4bbf540a934cf6373a25a4689194945e22ab35830fa20655fe6543fb37a07b27",
+      "axioms": [
+        "Classical.choice",
+        "Quot.sound",
+        "propext"
+      ]
+    },
+    "Orthemology.Tranche3.sequentialReferenceLower": {
+      "type_sha256": "a40a95a54075a5b2c5827615b1f033c94a5f7d0d1c32cf200d8869934c67ef03",
+      "axioms": [
+        "Classical.choice",
+        "Quot.sound",
+        "propext"
+      ]
+    },
+    "Orthemology.Tranche3.sequentialReferenceUpper": {
+      "type_sha256": "d8c1714aa91e2e6def890e9229cd50a2ace706742010376822183c2ceb278321",
+      "axioms": [
+        "Classical.choice",
+        "Quot.sound",
+        "propext"
+      ]
+    },
+    "Orthemology.Tranche3.sequentialReferenceLower_eq": {
+      "type_sha256": "7d9bbeb85a3cb379a6a15f19a1a1d40214dc1f69874ce3ecbd37aa420f6be6f5",
+      "axioms": [
+        "Classical.choice",
+        "Quot.sound",
+        "propext"
+      ]
+    },
+    "Orthemology.Tranche3.sequentialReferenceUpper_eq": {
+      "type_sha256": "2d0ee4e3cf6631bd1fe1dbe609ba8bf3531523fea224f6f9ef709f4bedecc7d3",
+      "axioms": [
+        "Classical.choice",
+        "Quot.sound",
+        "propext"
+      ]
+    },
+    "Orthemology.Tranche3.sequentialAuditRepair": {
+      "type_sha256": "15d12bc83b8f241d4d4101784a18b13466397a0ca60af413d15a83e8a81e16fe",
+      "axioms": [
+        "Classical.choice",
+        "Quot.sound",
+        "propext"
+      ]
+    },
+    "Orthemology.Tranche3.sequentialAuditRepair_eq": {
+      "type_sha256": "ddae974b2e04068f36ef277f3f05eb856ca5b91d508967df2a52630ede33e8eb",
+      "axioms": [
+        "Classical.choice",
+        "Quot.sound",
+        "propext"
+      ]
+    },
+    "Orthemology.Tranche3.sequential_auditRepair_anytime_sound": {
+      "type_sha256": "e4a08efbc68cf96710eed282aabf7214a6b15d47bd6309de3105ed9f41a8b86c",
+      "axioms": [
+        "Classical.choice",
+        "Quot.sound",
+        "propext"
+      ]
+    },
+    "IndependentEfficientControls.zero_sample_upper_at_zero": {
+      "type_sha256": "3af24621cea307a706f5e23ce611220474b51bbff3856f8f1eecd2a4a4beb6e3",
+      "axioms": [
+        "Classical.choice",
+        "Quot.sound",
+        "propext"
+      ]
+    },
+    "IndependentEfficientControls.zero_sample_upper_beyond": {
+      "type_sha256": "8e1e31ed9d1d594860a494411888274f21cffa6d5f430422c1054753aa7354e7",
+      "axioms": [
+        "Classical.choice",
+        "Quot.sound",
+        "propext"
+      ]
+    },
+    "IndependentEfficientControls.point_one_upper": {
+      "type_sha256": "767dd36e9e2db3cca28c35a22e72118940b19ae11cda54ed712dcbdc09ee3a06",
+      "axioms": [
+        "Classical.choice",
+        "Quot.sound",
+        "propext"
+      ]
+    },
+    "IndependentEfficientControls.point_one_lower_below": {
+      "type_sha256": "9666bd5f4706e57a9cf1fecc8cd975a210dbcb1172c11e10e2ee6e547d81a139",
+      "axioms": [
+        "Classical.choice",
+        "Quot.sound",
+        "propext"
+      ]
+    },
+    "IndependentEfficientControls.point_zero_positive_count": {
+      "type_sha256": "17a5b364e0a081204d1abb59d99c19f93c620144e9813c617ff817f6f42d4372",
+      "axioms": [
+        "Classical.choice",
+        "Quot.sound",
+        "propext"
+      ]
+    },
+    "IndependentEfficientControls.division_by_one_boundary_is_real": {
+      "type_sha256": "9adb2b6df2c34e4ee4390f436f07dd6d5d58bb8717e9bb347ae97f1706d5f228",
+      "axioms": [
+        "Classical.choice",
+        "Quot.sound",
+        "propext"
+      ]
+    },
+    "IndependentEfficientControls.exhausted_sweep_preserves_accumulator": {
+      "type_sha256": "6af1b9d6d91f817e028b0a42aa411f2af963de94e66b6a7bb15af8a35aec50de",
+      "axioms": [
+        "propext"
+      ]
+    },
+    "IndependentEfficientControls.sequential_grouped_upper_agree": {
+      "type_sha256": "4027e61a96468d2ca5bb2da2c5ed393bbbe6110909839fdf22a3d9c931753f57",
+      "axioms": [
+        "Classical.choice",
+        "Quot.sound",
+        "propext"
+      ]
+    },
+    "IndependentEfficientControls.sequential_grouped_lower_agree": {
+      "type_sha256": "71088b766402135cad93506259de568cb7b80c8f13f3f8e4bd7187ae45529701",
+      "axioms": [
+        "Classical.choice",
+        "Quot.sound",
+        "propext"
+      ]
+    },
+    "IndependentEfficientControls.every_finite_precision_agrees": {
+      "type_sha256": "f280e6336459032605de0669f47076d3a833a55adf7ef59f1b55c97487311591",
+      "axioms": [
+        "Classical.choice",
+        "Quot.sound",
+        "propext"
+      ]
+    },
+    "IndependentEfficientControls.invalid_report_input_always_abstains": {
+      "type_sha256": "5df21bc819c13996beb8a024eece7d0659a7d97ebf6eb3b9b5ea726377713be0",
+      "axioms": [
+        "Classical.choice",
+        "Quot.sound",
+        "propext"
+      ]
+    },
+    "IndependentEfficientControls.abstention_has_empty_failure": {
+      "type_sha256": "a2d59c8bf11211babc110e9e916459d8d4351827dbdf70b78285db4bab942407",
+      "axioms": [
+        "Classical.choice",
+        "Quot.sound",
+        "propext"
+      ]
+    },
+    "IndependentEfficientControls.literal_sequential_failure_eq": {
+      "type_sha256": "d7a750311cd6ce9d8489099618ceb5d4cfa0cdcfb8ca65b8de8abb19bbe3320e",
+      "axioms": [
+        "Classical.choice",
+        "Quot.sound",
+        "propext"
+      ]
+    },
+    "IndependentEfficientControls.literal_sequential_expected_budget": {
+      "type_sha256": "fdecb497ee00b90e6f18156e8d4296bee8cd78c92d65221b6caccc3f9625b60a",
+      "axioms": [
+        "Classical.choice",
+        "Quot.sound",
+        "propext"
+      ]
+    }
+  },
+  "original_controls": "NOT_RUN",
+  "original_receipt_sha256": "53453a2920c5c69b9df80f4bbff8934636ed13f70202343ffbbb4145c4d224ea",
+  "original_driver_sha256": "4933d602f18c749ff170629964914907bf1c5bf05160329bd8aab623dfd65f98",
+  "execution_kind": "FRESH_CUSTOM_CLOSURE",
+  "finished_utc": "2026-10-02T05:42:34.892959+00:00",
+  "scope": "Source-bound custom closure and selected declaration readbacks. Types are represented by hashes of the exact printed types; complete logs remain private. Official caches are trusted. This does not establish ordinary proof, runtime completeness, empirical or normative warrant, novelty, external human review or merged adoption."
+}

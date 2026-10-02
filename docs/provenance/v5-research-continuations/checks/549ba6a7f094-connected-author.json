@@ -1,0 +1,278 @@
+{
+  "status": "FRESH_KERNEL_COMPONENTS",
+  "exit_code": 0,
+  "kernel_verified": true,
+  "suite_id": "549ba6a7f094-connected-author",
+  "suite_sha256": "bf39aa906ad586e826a47059205d6c7660d8ae2d45598cbe42f53c244620c0ff",
+  "source_hashes": {
+    "ConnectedUnity": "261ba4fbf10ee9d8baf1e4330bd9e842b23a0ffcbcadf3f3338cc2f47e240eea",
+    "InfiniteRootlessBranch": "b47fc7376e7ec701edabd721775d45db944d6ee2c312273dadf61559fa897988",
+    "ProductiveCompleteness": "8765c137491f2f5e2cd9e0c699987c53fcbb00b9cc9e90b49712ec124e97906a"
+  },
+  "post_source_hashes": {
+    "ConnectedUnity": "261ba4fbf10ee9d8baf1e4330bd9e842b23a0ffcbcadf3f3338cc2f47e240eea",
+    "InfiniteRootlessBranch": "b47fc7376e7ec701edabd721775d45db944d6ee2c312273dadf61559fa897988",
+    "ProductiveCompleteness": "8765c137491f2f5e2cd9e0c699987c53fcbb00b9cc9e90b49712ec124e97906a"
+  },
+  "compiler_sha256": "92c3d35b5bfaa5e0fea413a775d504cf46cd95e1345df61c2274f76779e7e023",
+  "pins": {
+    "lean_version": "4.19.0",
+    "lean_binary_sha256": "92c3d35b5bfaa5e0fea413a775d504cf46cd95e1345df61c2274f76779e7e023",
+    "packages": [
+      {
+        "name": "mathlib",
+        "revision": "c44e0c8ee63ca166450922a373c7409c5d26b00b"
+      },
+      {
+        "name": "plausible",
+        "revision": "77e08eddc486491d7b9e470926b3dbe50319451a"
+      },
+      {
+        "name": "LeanSearchClient",
+        "revision": "25078369972d295301f5a1e53c3e5850cf6d9d4c"
+      },
+      {
+        "name": "importGraph",
+        "revision": "e6a9f0f5ee3ccf7443a0070f92b62f8db12ae82b"
+      },
+      {
+        "name": "proofwidgets",
+        "revision": "c4919189477c3221e6a204008998b0d724f49904"
+      },
+      {
+        "name": "aesop",
+        "revision": "5d50b08dedd7d69b3d9b3176e0d58a23af228884"
+      },
+      {
+        "name": "Qq",
+        "revision": "fa4f7f15d97591a9cf3aa7724ba371c7fc6dda02"
+      },
+      {
+        "name": "batteries",
+        "revision": "f5d04a9c4973d401c8c92500711518f7c656f034"
+      },
+      {
+        "name": "Cli",
+        "revision": "02dbd02bc00ec4916e99b04b2245b30200e200d0"
+      }
+    ]
+  },
+  "modules": [
+    {
+      "module": "ConnectedUnity",
+      "source_sha256": "261ba4fbf10ee9d8baf1e4330bd9e842b23a0ffcbcadf3f3338cc2f47e240eea",
+      "object_sha256": "5c696e3f40f77d3f5f99adfd4ca589077c476b31fff049346f716d28d2c1a4a5",
+      "transitive_source_fingerprint": "030c2695b57e619afd728ea9b8a90c5f44e54459990034c8421de256345182d9",
+      "status": "FRESH_COMPILE",
+      "exit_code": 0
+    },
+    {
+      "module": "InfiniteRootlessBranch",
+      "source_sha256": "b47fc7376e7ec701edabd721775d45db944d6ee2c312273dadf61559fa897988",
+      "object_sha256": "f540bea1f20edf4c7c121ad27ef5b7f0963c4539dd90a530e4634298478a7be6",
+      "transitive_source_fingerprint": "3ac4236dce575754dd8c885739cc83669322cfab8a4d5fe469f76ce9eb11581f",
+      "status": "FRESH_COMPILE",
+      "exit_code": 0
+    },
+    {
+      "module": "ProductiveCompleteness",
+      "source_sha256": "8765c137491f2f5e2cd9e0c699987c53fcbb00b9cc9e90b49712ec124e97906a",
+      "object_sha256": "8296d838a723ff76f4274886f8fb45219eaa9819a8890283d3b83a6969488cff",
+      "transitive_source_fingerprint": "041bd4576cebfb5ae4e42ad4d0e691835e882743ce68035a70a98ad1b050c42b",
+      "status": "FRESH_COMPILE",
+      "exit_code": 0
+    }
+  ],
+  "readbacks": {
+    "Orthemology.Tranche6.ConnectedUnity.below_transitive": {
+      "type_sha256": "77a4528277e9a349ca1e54537968cf3d7f7a510342452fc6d86ddfe5b737b987",
+      "axioms": []
+    },
+    "Orthemology.Tranche6.ConnectedUnity.below_root_eq": {
+      "type_sha256": "478d0ca51846c57ba8592e21fb85898e195395d0fc39946395198f80d4ecd972",
+      "axioms": []
+    },
+    "Orthemology.Tranche6.ConnectedUnity.root_of_local_cover": {
+      "type_sha256": "8518ad08bc3035293ed1f2f1df9b8fcf0f22f2742c4064225e74731ddae01cc1",
+      "axioms": []
+    },
+    "Orthemology.Tranche6.ConnectedUnity.local_cover_unique": {
+      "type_sha256": "c32182f208c5b2ecb1ae385f2151f8bd322cca897a7a9eb420de605b5615ee87",
+      "axioms": []
+    },
+    "Orthemology.Tranche6.ConnectedUnity.root_covers_itself": {
+      "type_sha256": "7326f63c1b5c46a130487139b6069b8df51cdd59077a0d68d7f5de22d6d8ab90",
+      "axioms": []
+    },
+    "Orthemology.Tranche6.ConnectedUnity.roots_agree_on_edge": {
+      "type_sha256": "e7c1a257ecddfaee102b59450d4d4c72d18fda675aa2f358ce5a079ff47ebf50",
+      "axioms": []
+    },
+    "Orthemology.Tranche6.ConnectedUnity.roots_agree_on_path": {
+      "type_sha256": "0f53d61e9448a25e833c6ab2e282de3dc2a9da06a7d83faf897c96f20cc8d887",
+      "axioms": []
+    },
+    "Orthemology.Tranche6.ConnectedUnity.common_cover_of_connected_local": {
+      "type_sha256": "75e83d8735063fd14035040de621d8b8525fe9d87848d416631b27f7b35c0fda",
+      "axioms": [
+        "Classical.choice"
+      ]
+    },
+    "Orthemology.Tranche6.ConnectedUnity.least_of_connected_local": {
+      "type_sha256": "bfaaf323b5caced44898ae23c014f2d1658f18f3ef48b93f3ae8127a0e947c45",
+      "axioms": [
+        "Classical.choice"
+      ]
+    },
+    "Orthemology.Tranche6.ConnectedUnity.least_implies_local_and_connected": {
+      "type_sha256": "9d4884b63dbdeb30ea7478a35e61d2b343d58ff7a21e41cf7297ca7eee440d0c",
+      "axioms": []
+    },
+    "Orthemology.Tranche6.ConnectedUnity.local_connected_iff_least": {
+      "type_sha256": "38f55123980c85147a1b8342a660b61ff58d56b6d30cf4989c2e56b70cb743bb",
+      "axioms": [
+        "Classical.choice"
+      ]
+    },
+    "Orthemology.Tranche6.ConnectedUnity.unique_root_of_connected_local": {
+      "type_sha256": "6889a0009263a6b911db5c82c54b8d6d6f02003a9cbb562916efb3cc8dea6a18",
+      "axioms": [
+        "Classical.choice"
+      ]
+    },
+    "Orthemology.Tranche6.ConnectedUnity.local_cover_iff_unique_root_and_ancestral_support": {
+      "type_sha256": "a0a7522f6e9b832f5d0a2f754185b3aa96f2a13442bc68b22a2664ab2f5af1ee",
+      "axioms": []
+    },
+    "Orthemology.Tranche6.ConnectedUnity.local_iff_unique_root_ancestors": {
+      "type_sha256": "4dac368a36ae694c844cb4cdffa43615861785a5004e06f47bf0274f5be56219",
+      "axioms": []
+    },
+    "Orthemology.Tranche6.ConnectedUnity.strict_descendant_of_nontrivial_field": {
+      "type_sha256": "62b6adc709431b142f39bc64f2a34f15374c8d4be50bb288299b72d994072d4a",
+      "axioms": []
+    },
+    "Orthemology.Tranche6.ConnectedUnity.Controls.merge_strict": {
+      "type_sha256": "56da3891737e36272ddea23cd4c0480adfd49b9b0e4ec8b1d06db5d8ebd7f220",
+      "axioms": [
+        "propext"
+      ]
+    },
+    "Orthemology.Tranche6.ConnectedUnity.Controls.merge_connected": {
+      "type_sha256": "2cfdf337aa8276061e9ca2a542215f12b2c6d0ad4ca0646aa2b1fd09ba7db4ea",
+      "axioms": [
+        "Classical.choice",
+        "Quot.sound",
+        "propext"
+      ]
+    },
+    "Orthemology.Tranche6.ConnectedUnity.Controls.merge_two_roots_no_local_completion": {
+      "type_sha256": "2d5b368c1ea03417b5cd2def570518aac9dcf2b9a908a4fc9398e1198360d283",
+      "axioms": [
+        "Classical.choice",
+        "Quot.sound",
+        "propext"
+      ]
+    },
+    "Orthemology.Tranche6.ConnectedUnity.Controls.split_strict": {
+      "type_sha256": "721ed24b92db43b020d2d53e6d522d18b29b73b5c5c51f2d21d4ae6da1870cfa",
+      "axioms": [
+        "propext"
+      ]
+    },
+    "Orthemology.Tranche6.ConnectedUnity.Controls.split_local_no_global": {
+      "type_sha256": "28c7e55b9482a73474dfe90ace51fa182a4deaf1314f92f76500b8947b4408b7",
+      "axioms": [
+        "Classical.choice",
+        "Quot.sound",
+        "propext"
+      ]
+    },
+    "Orthemology.Tranche6.ConnectedUnity.Controls.split_disconnected": {
+      "type_sha256": "4e52e75c88fbc4f88f233280c457a9d2e8b1d6cdf7c8cd2c15e3b55712dbdf5e",
+      "axioms": [
+        "Classical.choice",
+        "Quot.sound",
+        "propext"
+      ]
+    },
+    "Orthemology.Tranche6.ConnectedUnity.Controls.merge_all_necessary": {
+      "type_sha256": "865305278fa0987715be188dea6bca9f91109763dd83769ecc062d414421ac2a",
+      "axioms": []
+    },
+    "Orthemology.Tranche6.ConnectedUnity.Controls.singleton_reflexive_no_productivity": {
+      "type_sha256": "1eb49bfe6be5da81f84b075e9b22e5800101b25fd44e1a4b01f87d47ffb7950d",
+      "axioms": [
+        "Quot.sound",
+        "propext"
+      ]
+    },
+    "Orthemology.Tranche6.ConnectedUnity.Controls.empty_vacuous_local_connected_no_least": {
+      "type_sha256": "5a22d943bcab884dc80c1b5a6d7ef0ffcf4d5fd79cd82952aa9bee8f4f67011c",
+      "axioms": []
+    },
+    "Orthemology.Tranche6.ConnectedUnity.InfiniteControls.fork_irreflexive": {
+      "type_sha256": "73fff83492de0b586ae1e00caddf5a823a5c5560ea58df333768a8cd113a4e7a",
+      "axioms": [
+        "propext"
+      ]
+    },
+    "Orthemology.Tranche6.ConnectedUnity.InfiniteControls.fork_transitive": {
+      "type_sha256": "af21651944a8ee324e8720fea1d5bef59b86b7d9fdc5c3a71672984c13c06a61",
+      "axioms": []
+    },
+    "Orthemology.Tranche6.ConnectedUnity.InfiniteControls.ground_is_root": {
+      "type_sha256": "a495b01ada886a338544e3b27ffb853472955f071cf1c761e18d9b1fff2f5b92",
+      "axioms": []
+    },
+    "Orthemology.Tranche6.ConnectedUnity.InfiniteControls.branch_has_predecessor": {
+      "type_sha256": "01e66a9ca0ecdf4526802c18f91b3070d575617e86883e90c22b7955cdc91bb7",
+      "axioms": []
+    },
+    "Orthemology.Tranche6.ConnectedUnity.InfiniteControls.only_ground_is_root": {
+      "type_sha256": "bb9c6e9442c81ed7c7ae5a092da453c5454ac32b2fae8d824d5b9786a379e217",
+      "axioms": []
+    },
+    "Orthemology.Tranche6.ConnectedUnity.InfiniteControls.branch_has_no_root_ancestor": {
+      "type_sha256": "1c2c923d1c55542fe5e031b50bec26b12d494e78e2d865e42cb57202b33c4d51",
+      "axioms": [
+        "propext"
+      ]
+    },
+    "Orthemology.Tranche6.ConnectedUnity.InfiniteControls.target_unique_root_ancestor": {
+      "type_sha256": "786fbac53755b1f84feb2f22eca1525786ff09d98b6000b4225785c5166ace2c",
+      "axioms": []
+    },
+    "Orthemology.Tranche6.ConnectedUnity.InfiniteControls.target_no_local_cover": {
+      "type_sha256": "f1ba2e233b75e2c37fc4a051d22be31e6eb85e8257f549f4a8e780b3a43c7117",
+      "axioms": [
+        "propext"
+      ]
+    },
+    "Orthemology.Tranche6.ConnectedUnity.InfiniteControls.fork_connected": {
+      "type_sha256": "8bbad37c7a9eee2a1b30486df85301f2311be5b071e028f29c7de0ec4809fff9",
+      "axioms": []
+    },
+    "Orthemology.Tranche6.ConnectedUnity.InfiniteControls.unique_root_connected_without_least": {
+      "type_sha256": "2042a1d0919567a28604fdf0db4db12da09eabf8083c7797af48baf488ce1966",
+      "axioms": [
+        "propext"
+      ]
+    },
+    "Orthemology.Tranche6.ConnectedUnity.InfiniteControls.pointwise_uniqueness_without_local_completion": {
+      "type_sha256": "7b3c68e5bf522ce5151750d60933b0466996c60631a40752688dc3125ddaa60e",
+      "axioms": [
+        "propext"
+      ]
+    },
+    "Orthemology.Tranche6.ConnectedUnity.InfiniteControls.all_fork_nodes_necessary": {
+      "type_sha256": "0d2aa62a02bd84163bcb3096444c257a368fb977d43507452f72f8ed68ea234f",
+      "axioms": []
+    }
+  },
+  "original_controls": "NOT_RUN",
+  "original_receipt_sha256": "600e2e31b9f91a5b7a5cb9608935506dfe730d2837a1d4e323890731a7ff921e",
+  "original_driver_sha256": "7e3319091a51a440a869c87200fb234701f6ff50d17a9f4898ceb7de82e71d83",
+  "execution_kind": "FRESH_CUSTOM_CLOSURE",
+  "scope": "Exact custom source closure and selected type/axiom readbacks. Separate native, positive and mutation controls are associated in the sixth-final overlay; this component receipt alone does not qualify the whole original control contract. Official dependency caches are trusted. No ordinary-proof, philosophical, empirical, normative, novelty, external human review or merged-adoption credit."
+}

@@ -1,0 +1,172 @@
+{
+  "id": "93fa38fffbbc-recovered-fourth-core",
+  "origin": "93fa38fffbbc0e379aecffc25cd311d4dc7baf56e6bb9f715a3c54bf4f3cd3d5",
+  "descriptor_source_id": "src-93fa38fffbbc0e37-85c042fef1d85c5a",
+  "modules": [
+    {
+      "module": "RationalWinningCore",
+      "source_id": "src-93fa38fffbbc0e37-2f9c7cd3397fba4c",
+      "imports": [
+        "Mathlib.Data.Finset.Powerset",
+        "Mathlib.Data.List.FinRange",
+        "Mathlib.Data.Rat.Defs",
+        "Mathlib.Tactic"
+      ]
+    }
+  ],
+  "module_order": [
+    "RationalWinningCore"
+  ],
+  "targets": [
+    {
+      "name": "Orthemology.Tranche4.RationalWinning.Tables",
+      "module": "RationalWinningCore"
+    },
+    {
+      "name": "Orthemology.Tranche4.RationalWinning.listTotal",
+      "module": "RationalWinningCore"
+    },
+    {
+      "name": "Orthemology.Tranche4.RationalWinning.rowTotal",
+      "module": "RationalWinningCore"
+    },
+    {
+      "name": "Orthemology.Tranche4.RationalWinning.validTable",
+      "module": "RationalWinningCore"
+    },
+    {
+      "name": "Orthemology.Tranche4.RationalWinning.update",
+      "module": "RationalWinningCore"
+    },
+    {
+      "name": "Orthemology.Tranche4.RationalWinning.enumerateSupports",
+      "module": "RationalWinningCore"
+    },
+    {
+      "name": "Orthemology.Tranche4.RationalWinning.supportOptions",
+      "module": "RationalWinningCore"
+    },
+    {
+      "name": "Orthemology.Tranche4.RationalWinning.admissible",
+      "module": "RationalWinningCore"
+    },
+    {
+      "name": "Orthemology.Tranche4.RationalWinning.verifies",
+      "module": "RationalWinningCore"
+    },
+    {
+      "name": "Orthemology.Tranche4.RationalWinning.verifiesDecidable",
+      "module": "RationalWinningCore"
+    },
+    {
+      "name": "Orthemology.Tranche4.RationalWinning.progresses",
+      "module": "RationalWinningCore"
+    },
+    {
+      "name": "Orthemology.Tranche4.RationalWinning.planCheck",
+      "module": "RationalWinningCore"
+    },
+    {
+      "name": "Orthemology.Tranche4.RationalWinning.wins",
+      "module": "RationalWinningCore"
+    },
+    {
+      "name": "Orthemology.Tranche4.RationalWinning.selectedSupport",
+      "module": "RationalWinningCore"
+    },
+    {
+      "name": "Orthemology.Tranche4.RationalWinning.orderedActions",
+      "module": "RationalWinningCore"
+    },
+    {
+      "name": "Orthemology.Tranche4.RationalWinning.selectedActions",
+      "module": "RationalWinningCore"
+    },
+    {
+      "name": "Orthemology.Tranche4.RationalWinning.Decision",
+      "module": "RationalWinningCore"
+    },
+    {
+      "name": "Orthemology.Tranche4.RationalWinning.decideWinning",
+      "module": "RationalWinningCore"
+    },
+    {
+      "name": "Orthemology.Tranche4.RationalWinning.winningPlan",
+      "module": "RationalWinningCore"
+    }
+  ],
+  "pins": {
+    "lean_version": "4.19.0",
+    "lean_binary_sha256": "92c3d35b5bfaa5e0fea413a775d504cf46cd95e1345df61c2274f76779e7e023",
+    "packages": [
+      {
+        "name": "mathlib",
+        "revision": "c44e0c8ee63ca166450922a373c7409c5d26b00b"
+      },
+      {
+        "name": "plausible",
+        "revision": "77e08eddc486491d7b9e470926b3dbe50319451a"
+      },
+      {
+        "name": "LeanSearchClient",
+        "revision": "25078369972d295301f5a1e53c3e5850cf6d9d4c"
+      },
+      {
+        "name": "importGraph",
+        "revision": "e6a9f0f5ee3ccf7443a0070f92b62f8db12ae82b"
+      },
+      {
+        "name": "proofwidgets",
+        "revision": "c4919189477c3221e6a204008998b0d724f49904"
+      },
+      {
+        "name": "aesop",
+        "revision": "5d50b08dedd7d69b3d9b3176e0d58a23af228884"
+      },
+      {
+        "name": "Qq",
+        "revision": "fa4f7f15d97591a9cf3aa7724ba371c7fc6dda02"
+      },
+      {
+        "name": "batteries",
+        "revision": "f5d04a9c4973d401c8c92500711518f7c656f034"
+      },
+      {
+        "name": "Cli",
+        "revision": "02dbd02bc00ec4916e99b04b2245b30200e200d0"
+      }
+    ]
+  },
+  "official_imports": [
+    {
+      "module": "Mathlib.Data.Finset.Powerset",
+      "repository": "mathlib",
+      "source": "Mathlib/Data/Finset/Powerset.lean",
+      "sha256": "ff946726d050b01703aec4dd1a66398f461455942e036806c24ceaeee6e23ac8"
+    },
+    {
+      "module": "Mathlib.Data.List.FinRange",
+      "repository": "mathlib",
+      "source": "Mathlib/Data/List/FinRange.lean",
+      "sha256": "4bb651e0c03ac13cb4bdf1fc2fb208339754ac858b7f70df718f3471a600a974"
+    },
+    {
+      "module": "Mathlib.Data.Rat.Defs",
+      "repository": "mathlib",
+      "source": "Mathlib/Data/Rat/Defs.lean",
+      "sha256": "8571e65f5e4420a7425d95436946aac91c7b7c70db5e9774e0ad4ff185c3640e"
+    },
+    {
+      "module": "Mathlib.Tactic",
+      "repository": "mathlib",
+      "source": "Mathlib/Tactic.lean",
+      "sha256": "f20038eba7bba63f07a2f854496101226df407e20414e6b8ebf94b14f95e831b"
+    }
+  ],
+  "driver": {
+    "source_id": "src-93fa38fffbbc0e37-817e8553aa5fdf95",
+    "lean_argument": "BIN_DIRECTORY"
+  },
+  "controls": "ORIGINAL_DRIVER_REQUIRED",
+  "classification": "PREDECESSOR"
+}

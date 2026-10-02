@@ -1,0 +1,914 @@
+{
+  "status": "FRESH_KERNEL_COMPONENTS",
+  "exit_code": 0,
+  "kernel_verified": true,
+  "suite_id": "866c6ff6e74a-measure-frontier",
+  "suite_sha256": "544ec965a11ef7d58d2b30888603230c2842b4dff378827b58a0b7e874b1e0c1",
+  "source_hashes": {
+    "P02A2.MeasureCore": "acd3d802db12b8b610ee8301f63f36b04906bedb2a28995c719aa7eb16f8047b",
+    "TotalVariation": "7289c2117d990a40d53ab43925cebac082b15464d854a670968aa1e6dccb8fbf",
+    "P02A2.Fibres": "10db75c79f8286c1c69dae038577141f6c901d7a8fd5dbe77f464447f149b7b9",
+    "P02A2.Refinement": "6bcc51d54debb63822cc9e4e95023b86b2e664462842ca6c81395a26c48bc158",
+    "P02A2.Observation": "f74a3d14879ac7900f60e3460e75565c0d0c4f8649bd701de92ec8a9b86da08e",
+    "ResidualStability": "41bfe7bba72a6f1e03195209bd6015b0f04756383f870a453ae60631b5678f6c",
+    "AtomicPattern": "8bc979a7a2ba177eb7a6f95e62aca21204311978df87916974c85b7420910db0",
+    "ArbitraryPattern": "60048582c444e3ef035563b21104a2257c69a2b92072731ea48a82b52d53969a",
+    "Q8Measure": "b815803aa2aff0656830d0d2384225215687ef473ff124a4de82198dc8e20048",
+    "PatternBoundary": "d00ca1e87e3d38291e85df0e888f6660a7267a80d2a26405a3522c5f3b3a30f2",
+    "FinitePrefixBoundary": "24d08b389775c8378864236edf70f1aaf056c972a0a6298a3f110e7dddb44434",
+    "LossDecoder": "36532217daf82f33705ff917af6a872a5bdc7698feed2bd735c85eb9b21cc54a",
+    "HistoryClass": "fc26d0b55b298c35fb44ba063c919d5eb1c8d804d1d2a99c9e1f8893dfa602ce",
+    "NoUniversalClassifier": "dd5c47a84aa44d88741eb36d6796994292b60e1edfde2d3ef1fa8f3dd5647415",
+    "PatternAdditivity": "6e0c018511a869d4e35c68dc42039ad9b590805ff54e7ead37b570fa3a26bb93",
+    "PointAtomBoundary": "cc6841b59d5e931b71fc7fd6be9e9f3befce9dd6147a6b70b3a6c2f45210b1db",
+    "PositiveMass": "3ed73612f735e98f9163093c975a272a78dd2db7330d816ce8d386f15a31b2cf",
+    "PrefixMixture": "6b797b74a50ab60907c1461efe146f3e421e63788578ea231eb4d20f404e5a20"
+  },
+  "post_source_hashes": {
+    "P02A2.MeasureCore": "acd3d802db12b8b610ee8301f63f36b04906bedb2a28995c719aa7eb16f8047b",
+    "TotalVariation": "7289c2117d990a40d53ab43925cebac082b15464d854a670968aa1e6dccb8fbf",
+    "P02A2.Fibres": "10db75c79f8286c1c69dae038577141f6c901d7a8fd5dbe77f464447f149b7b9",
+    "P02A2.Refinement": "6bcc51d54debb63822cc9e4e95023b86b2e664462842ca6c81395a26c48bc158",
+    "P02A2.Observation": "f74a3d14879ac7900f60e3460e75565c0d0c4f8649bd701de92ec8a9b86da08e",
+    "ResidualStability": "41bfe7bba72a6f1e03195209bd6015b0f04756383f870a453ae60631b5678f6c",
+    "AtomicPattern": "8bc979a7a2ba177eb7a6f95e62aca21204311978df87916974c85b7420910db0",
+    "ArbitraryPattern": "60048582c444e3ef035563b21104a2257c69a2b92072731ea48a82b52d53969a",
+    "Q8Measure": "b815803aa2aff0656830d0d2384225215687ef473ff124a4de82198dc8e20048",
+    "PatternBoundary": "d00ca1e87e3d38291e85df0e888f6660a7267a80d2a26405a3522c5f3b3a30f2",
+    "FinitePrefixBoundary": "24d08b389775c8378864236edf70f1aaf056c972a0a6298a3f110e7dddb44434",
+    "LossDecoder": "36532217daf82f33705ff917af6a872a5bdc7698feed2bd735c85eb9b21cc54a",
+    "HistoryClass": "fc26d0b55b298c35fb44ba063c919d5eb1c8d804d1d2a99c9e1f8893dfa602ce",
+    "NoUniversalClassifier": "dd5c47a84aa44d88741eb36d6796994292b60e1edfde2d3ef1fa8f3dd5647415",
+    "PatternAdditivity": "6e0c018511a869d4e35c68dc42039ad9b590805ff54e7ead37b570fa3a26bb93",
+    "PointAtomBoundary": "cc6841b59d5e931b71fc7fd6be9e9f3befce9dd6147a6b70b3a6c2f45210b1db",
+    "PositiveMass": "3ed73612f735e98f9163093c975a272a78dd2db7330d816ce8d386f15a31b2cf",
+    "PrefixMixture": "6b797b74a50ab60907c1461efe146f3e421e63788578ea231eb4d20f404e5a20"
+  },
+  "compiler_sha256": "92c3d35b5bfaa5e0fea413a775d504cf46cd95e1345df61c2274f76779e7e023",
+  "pins": {
+    "lean_version": "4.19.0",
+    "lean_binary_sha256": "92c3d35b5bfaa5e0fea413a775d504cf46cd95e1345df61c2274f76779e7e023",
+    "packages": [
+      {
+        "name": "mathlib",
+        "revision": "c44e0c8ee63ca166450922a373c7409c5d26b00b"
+      },
+      {
+        "name": "plausible",
+        "revision": "77e08eddc486491d7b9e470926b3dbe50319451a"
+      },
+      {
+        "name": "LeanSearchClient",
+        "revision": "25078369972d295301f5a1e53c3e5850cf6d9d4c"
+      },
+      {
+        "name": "importGraph",
+        "revision": "e6a9f0f5ee3ccf7443a0070f92b62f8db12ae82b"
+      },
+      {
+        "name": "proofwidgets",
+        "revision": "c4919189477c3221e6a204008998b0d724f49904"
+      },
+      {
+        "name": "aesop",
+        "revision": "5d50b08dedd7d69b3d9b3176e0d58a23af228884"
+      },
+      {
+        "name": "Qq",
+        "revision": "fa4f7f15d97591a9cf3aa7724ba371c7fc6dda02"
+      },
+      {
+        "name": "batteries",
+        "revision": "f5d04a9c4973d401c8c92500711518f7c656f034"
+      },
+      {
+        "name": "Cli",
+        "revision": "02dbd02bc00ec4916e99b04b2245b30200e200d0"
+      }
+    ]
+  },
+  "modules": [
+    {
+      "module": "P02A2.MeasureCore",
+      "source_sha256": "acd3d802db12b8b610ee8301f63f36b04906bedb2a28995c719aa7eb16f8047b",
+      "object_sha256": "e63f18ebe7f312a6427bd0f0add48502abb2cd2c8110a2f3782993933c8ae69d",
+      "transitive_source_fingerprint": "25ab8639f0d3a54d1c6c4e72142f0ea47a2fe8ccd1f80498e096278215df806a",
+      "status": "FRESH_COMPILE",
+      "exit_code": 0
+    },
+    {
+      "module": "TotalVariation",
+      "source_sha256": "7289c2117d990a40d53ab43925cebac082b15464d854a670968aa1e6dccb8fbf",
+      "object_sha256": "07d6b380af22ee9d3b138f52f863db6797b83df2c9b3c05a79da2dae9fe42e1b",
+      "transitive_source_fingerprint": "3dffc728b3fc4d3aecd33b22b77a0483a8bd065aae5f9b490c7d48bc094c3931",
+      "status": "FRESH_COMPILE",
+      "exit_code": 0
+    },
+    {
+      "module": "P02A2.Fibres",
+      "source_sha256": "10db75c79f8286c1c69dae038577141f6c901d7a8fd5dbe77f464447f149b7b9",
+      "object_sha256": "3eb0545926380812d367b2b859706db51f4f034523c14ef69d8dcf81bff3e0b0",
+      "transitive_source_fingerprint": "c25876681dc0fa1715eb351ecb2afb1434db80e9482d1dd37cee35eb50bc0dfb",
+      "status": "FRESH_COMPILE",
+      "exit_code": 0
+    },
+    {
+      "module": "P02A2.Refinement",
+      "source_sha256": "6bcc51d54debb63822cc9e4e95023b86b2e664462842ca6c81395a26c48bc158",
+      "object_sha256": "cbbfedaf3fdddf1a7fc57d964ad723b97f2dc6a0b00896e058c7d66af01f1cd8",
+      "transitive_source_fingerprint": "de70dbdcd219b1d68c99ad84ea8acd5c553fbccd250940511770353c6a50a733",
+      "status": "FRESH_COMPILE",
+      "exit_code": 0
+    },
+    {
+      "module": "P02A2.Observation",
+      "source_sha256": "f74a3d14879ac7900f60e3460e75565c0d0c4f8649bd701de92ec8a9b86da08e",
+      "object_sha256": "c4e947ece229087920147af4a30e404d757ddabe22068ac5e6d6f309f0b04b3b",
+      "transitive_source_fingerprint": "829b814dac858799720ffd1ef2020ece041247c0dec578f870c9ed0511f365cc",
+      "status": "FRESH_COMPILE",
+      "exit_code": 0
+    },
+    {
+      "module": "ResidualStability",
+      "source_sha256": "41bfe7bba72a6f1e03195209bd6015b0f04756383f870a453ae60631b5678f6c",
+      "object_sha256": "7d77b463c0e98912c8c1e612b647faf0a523ea98cdbfdaac82d576c7a0b629c0",
+      "transitive_source_fingerprint": "040d57e667a10400e8a8d704d84edcf458f198419627ff14c52dcf380209061b",
+      "status": "FRESH_COMPILE",
+      "exit_code": 0
+    },
+    {
+      "module": "AtomicPattern",
+      "source_sha256": "8bc979a7a2ba177eb7a6f95e62aca21204311978df87916974c85b7420910db0",
+      "object_sha256": "61d4ecce8a012d099399ee710ec85c1bbb8e9c7f23435c64cabde7b996e404d2",
+      "transitive_source_fingerprint": "d206ea8ad8b1b24a523b63c9203db5fa7309e13dd335fc0765420a93a6732565",
+      "status": "FRESH_COMPILE",
+      "exit_code": 0
+    },
+    {
+      "module": "ArbitraryPattern",
+      "source_sha256": "60048582c444e3ef035563b21104a2257c69a2b92072731ea48a82b52d53969a",
+      "object_sha256": "46e6bb094fe85de4b985cb41739ac76309b6a287bf33734c33a74417453b7c0f",
+      "transitive_source_fingerprint": "b67ae66f14d2ef0043ab06e85c866e7a9ee9f890268e3d82e8f3560d2e7b6247",
+      "status": "FRESH_COMPILE",
+      "exit_code": 0
+    },
+    {
+      "module": "Q8Measure",
+      "source_sha256": "b815803aa2aff0656830d0d2384225215687ef473ff124a4de82198dc8e20048",
+      "object_sha256": "57734136855c4cbd2ff40481d819e1834070d81c0eee5614cf272cc08ef77785",
+      "transitive_source_fingerprint": "e8d75d66b542b8a7818088ca80ea4fca76bd4dd730d8443a331e33af568a01e6",
+      "status": "FRESH_COMPILE",
+      "exit_code": 0
+    },
+    {
+      "module": "PatternBoundary",
+      "source_sha256": "d00ca1e87e3d38291e85df0e888f6660a7267a80d2a26405a3522c5f3b3a30f2",
+      "object_sha256": "db5c425112926c581925335dd6b1964999bd76803f739778b2f1c21c3d9b537b",
+      "transitive_source_fingerprint": "56f937ffc720aa9ad4009b21f10d442e5aad5df8ad3095e686286741ebeb7574",
+      "status": "FRESH_COMPILE",
+      "exit_code": 0
+    },
+    {
+      "module": "FinitePrefixBoundary",
+      "source_sha256": "24d08b389775c8378864236edf70f1aaf056c972a0a6298a3f110e7dddb44434",
+      "object_sha256": "428edbf04d450fdf5dd58f6959bbdf1c136033cdfc64e345e6f379e87861f444",
+      "transitive_source_fingerprint": "002b2c6ac58d7b6b91cd8cb44f0b65c4a106dc0be4e5c195726565e4f115323b",
+      "status": "FRESH_COMPILE",
+      "exit_code": 0
+    },
+    {
+      "module": "LossDecoder",
+      "source_sha256": "36532217daf82f33705ff917af6a872a5bdc7698feed2bd735c85eb9b21cc54a",
+      "object_sha256": "b52a38adf666adddd3b63254a479faf2cde0b9a3b0292a1d46f70d73f4b97fb1",
+      "transitive_source_fingerprint": "9189899dca73fb24acafd25a5dcdc9000050ff684445c8990170e5cca18a882a",
+      "status": "FRESH_COMPILE",
+      "exit_code": 0
+    },
+    {
+      "module": "HistoryClass",
+      "source_sha256": "fc26d0b55b298c35fb44ba063c919d5eb1c8d804d1d2a99c9e1f8893dfa602ce",
+      "object_sha256": "e5e96a003b573f99ae7cee74e289649a57287a96b2acdacab225086b79258c5f",
+      "transitive_source_fingerprint": "5447a9050ffe0d573990d2ed0bf7b7eeec0ca2a306fedaa8bfa40b91faadbf3a",
+      "status": "FRESH_COMPILE",
+      "exit_code": 0
+    },
+    {
+      "module": "NoUniversalClassifier",
+      "source_sha256": "dd5c47a84aa44d88741eb36d6796994292b60e1edfde2d3ef1fa8f3dd5647415",
+      "object_sha256": "84d29b86ea6ec0895c5668528d501ff92f77301be024e3a0881c40b24e058d5e",
+      "transitive_source_fingerprint": "05d70be783b3de7c9ffaf70ca7bd480429bc56e9e4f56db3672111d355513152",
+      "status": "FRESH_COMPILE",
+      "exit_code": 0
+    },
+    {
+      "module": "PatternAdditivity",
+      "source_sha256": "6e0c018511a869d4e35c68dc42039ad9b590805ff54e7ead37b570fa3a26bb93",
+      "object_sha256": "32631fdd15d0484c01da7074f1ddd2ccd7da73ab468fa057cc3c6941e9810b50",
+      "transitive_source_fingerprint": "433af2f0e2bb27d4b6690df7b186201ba2032083eb0373e4a3f09898305f90ac",
+      "status": "FRESH_COMPILE",
+      "exit_code": 0
+    },
+    {
+      "module": "PointAtomBoundary",
+      "source_sha256": "cc6841b59d5e931b71fc7fd6be9e9f3befce9dd6147a6b70b3a6c2f45210b1db",
+      "object_sha256": "6b2e3fde6358e48fb43fd17ec642f8f1c6752127c8ca918502d9ef45e85a92fe",
+      "transitive_source_fingerprint": "bdc1247ab4e1147a7caa7df668cc4a94f092de96f2595d3397e5c5054798d948",
+      "status": "FRESH_COMPILE",
+      "exit_code": 0
+    },
+    {
+      "module": "PositiveMass",
+      "source_sha256": "3ed73612f735e98f9163093c975a272a78dd2db7330d816ce8d386f15a31b2cf",
+      "object_sha256": "0bfdf3325d2d122b62d5e955d539225565d745d1df8db5d815b6068b6366bc00",
+      "transitive_source_fingerprint": "eb9d5a24f6dbc96a1aebbae7b7b47ead4dd6372badf9e9b6b6be62185c2fef0d",
+      "status": "FRESH_COMPILE",
+      "exit_code": 0
+    },
+    {
+      "module": "PrefixMixture",
+      "source_sha256": "6b797b74a50ab60907c1461efe146f3e421e63788578ea231eb4d20f404e5a20",
+      "object_sha256": "68fd27178aeb83dc9ed0abde25cf295d2651952b65fe09a26c9de0b7e9d458d4",
+      "transitive_source_fingerprint": "12e338a18e0dc1906d03532f779256e28f5b4b21363ebc6902a181ddce550473",
+      "status": "FRESH_COMPILE",
+      "exit_code": 0
+    }
+  ],
+  "readbacks": {
+    "OrthemologyMeasure.positivePoints_countable": {
+      "type_sha256": "d6e89f173b54feba6f761f09d1412cd8130ed8951b4f610e24281b539f6a27ad",
+      "axioms": [
+        "Classical.choice",
+        "Quot.sound",
+        "propext"
+      ]
+    },
+    "OrthemologyMeasure.positiveEvent_measurable": {
+      "type_sha256": "0414e7c404ea1d1266b46baa347641d57495694c97e0e8ff5e77e8baac7282df",
+      "axioms": [
+        "Classical.choice",
+        "Quot.sound",
+        "propext"
+      ]
+    },
+    "OrthemologyMeasure.positiveEvent_refinement": {
+      "type_sha256": "7133e7a2896f12a3d49826710235390ee442288ab23945f75ffceee0e224ddc4",
+      "axioms": [
+        "Classical.choice",
+        "Quot.sound",
+        "propext"
+      ]
+    },
+    "OrthemologyMeasure.full_cell_eq_iInter": {
+      "type_sha256": "24cca30c81862f1b93088380a7217485695433bb246aaab271894a4e39109e72",
+      "axioms": [
+        "Quot.sound",
+        "propext"
+      ]
+    },
+    "OrthemologyMeasure.positiveEvent_full_subset": {
+      "type_sha256": "6693ed8985e1466b718cbd8618637920dfe27e4c3625df40eeb9e83c7e26fabf",
+      "axioms": [
+        "Classical.choice",
+        "Quot.sound",
+        "propext"
+      ]
+    },
+    "OrthemologyMeasure.residual_mass_identity": {
+      "type_sha256": "85e7a9500dcd7dd5810f6235af9348046f248467a62ebe7b88e80d8e71e750ba",
+      "axioms": [
+        "Classical.choice",
+        "Quot.sound",
+        "propext"
+      ]
+    },
+    "OrthemologyMeasure.eventTV_range_bddAbove": {
+      "type_sha256": "89d5cf50c5222e0e2febc6de8d88d0dbb4f410196910466ea9e30933964504e2",
+      "axioms": [
+        "Classical.choice",
+        "Quot.sound",
+        "propext"
+      ]
+    },
+    "OrthemologyMeasure.measurable_event_le_eventTV": {
+      "type_sha256": "d6f51050c1d4c0435c7993099b4de88e8ca2f066086872e95b4ac08dd31202a9",
+      "axioms": [
+        "Classical.choice",
+        "Quot.sound",
+        "propext"
+      ]
+    },
+    "OrthemologyMeasure.eventTV_le_iff": {
+      "type_sha256": "3e04a3de4d86adac495fe37a8b479674c1dc665a682761c38bb4ec1236365dfa",
+      "axioms": [
+        "Classical.choice",
+        "Quot.sound",
+        "propext"
+      ]
+    },
+    "OrthemologyMeasure.eventTV_nonnegative": {
+      "type_sha256": "052e11783ac255e697fb961220d5ed99006041d55bc30ce42aa5c6717416dbf7",
+      "axioms": [
+        "Classical.choice",
+        "Quot.sound",
+        "propext"
+      ]
+    },
+    "OrthemologyMeasure.eventTV_map_le": {
+      "type_sha256": "382485534894204f10924d2bead2944ec10831cac9fb6ca8a1d5a7644bf03347",
+      "axioms": [
+        "Classical.choice",
+        "Quot.sound",
+        "propext"
+      ]
+    },
+    "OrthemologyMeasure.defect_eventTV_bound": {
+      "type_sha256": "df8158e6a0a2a9954f75e16d971b8feb70ca9c68d7364a2261c17add760df7d4",
+      "axioms": [
+        "Classical.choice",
+        "Quot.sound",
+        "propext"
+      ]
+    },
+    "OrthemologyMeasure.observedSupport_measurable": {
+      "type_sha256": "d4420908064c34497d12b3700ea91f50015fc5965d35063fd434aa7bec79629d",
+      "axioms": [
+        "Classical.choice",
+        "Quot.sound",
+        "propext"
+      ]
+    },
+    "OrthemologyMeasure.commonObservedSupport_measurable": {
+      "type_sha256": "62e59ee0403b6340901101246df0b096589f185af09adb6b8fc24ca73beaa051",
+      "axioms": [
+        "Classical.choice",
+        "Quot.sound",
+        "propext"
+      ]
+    },
+    "OrthemologyMeasure.observedSupport_ae_common_left": {
+      "type_sha256": "4cfabc4a0178a80f096c538cf93d4727b252e3b0effe21c5c8f7bb8e12bafc28",
+      "axioms": [
+        "Classical.choice",
+        "Quot.sound",
+        "propext"
+      ]
+    },
+    "OrthemologyMeasure.observedSupport_ae_common_right": {
+      "type_sha256": "5b582fa6427ac6cfaaec9be96803600708651b99a542160194f8bb07fd48a3f1",
+      "axioms": [
+        "Classical.choice",
+        "Quot.sound",
+        "propext"
+      ]
+    },
+    "OrthemologyMeasure.ae_iInter": {
+      "type_sha256": "f4bc175ee8100e5b9399dc836bf6d016e0b02af62263358c28f28f1fecb67430",
+      "axioms": [
+        "Classical.choice",
+        "Quot.sound",
+        "propext"
+      ]
+    },
+    "OrthemologyMeasure.commonResidual_measurable": {
+      "type_sha256": "109debf982ff6ee21c7ee39301c86240db8cf48e0b478d0ab1d6c8ff516bf3b4",
+      "axioms": [
+        "Classical.choice",
+        "Quot.sound",
+        "propext"
+      ]
+    },
+    "OrthemologyMeasure.ownResidual_ae_common_left": {
+      "type_sha256": "a3b8eae12ae85f35bd08b70f57750bc38eac1596cb784a7d2780aecc255c0446",
+      "axioms": [
+        "Classical.choice",
+        "Quot.sound",
+        "propext"
+      ]
+    },
+    "OrthemologyMeasure.ownResidual_ae_common_right": {
+      "type_sha256": "d7d3a3fafbb87272b1bb6c860b3ab677fde3af628b792b60e164817b6b6baa1b",
+      "axioms": [
+        "Classical.choice",
+        "Quot.sound",
+        "propext"
+      ]
+    },
+    "OrthemologyMeasure.residual_eventTV_bound": {
+      "type_sha256": "636cbacb94c1ed288a32a156f0f132ebf78168a92115008619ba835538b7096a",
+      "axioms": [
+        "Classical.choice",
+        "Quot.sound",
+        "propext"
+      ]
+    },
+    "OrthemologyMeasure.membershipPattern_measurable": {
+      "type_sha256": "ca20a088f77ddc404719be1a486e87e2fbc0486785f4096ebacc8e5174666659",
+      "axioms": [
+        "Classical.choice",
+        "Quot.sound",
+        "propext"
+      ]
+    },
+    "OrthemologyMeasure.membershipPattern_ae": {
+      "type_sha256": "3b6410670147e8e929f227ab56b84fb9c04d49e48ecaad3e3746d0d02ce2c802",
+      "axioms": [
+        "Classical.choice",
+        "Quot.sound",
+        "propext"
+      ]
+    },
+    "OrthemologyMeasure.atomicPattern_eventTV_bound": {
+      "type_sha256": "92eb939a04a37a34110e915ddf77ad7b788c0105c3badffba3bd5b0704fd22f1",
+      "axioms": [
+        "Classical.choice",
+        "Quot.sound",
+        "propext"
+      ]
+    },
+    "OrthemologyMeasure.decodedAtomicPattern_eventTV_bound": {
+      "type_sha256": "285305b3a0c6b7e55eda7cdc10e9b7fa85cc74e49756952c8ecf24bcbe3a619d",
+      "axioms": [
+        "Classical.choice",
+        "Quot.sound",
+        "propext"
+      ]
+    },
+    "OrthemologyMeasure.firstLoss_none": {
+      "type_sha256": "57cdaa5caeb0e1270ebbc7d3413e50c34e3a29ba7d1e0613fe65117d8869e0ea",
+      "axioms": [
+        "Classical.choice",
+        "Quot.sound",
+        "propext"
+      ]
+    },
+    "OrthemologyMeasure.firstLoss_some": {
+      "type_sha256": "68176a36a8fa9f2fc9d36c8b45a76942f654902ecb3d18eb1ecb51bc991a0bb8",
+      "axioms": [
+        "Classical.choice",
+        "Quot.sound",
+        "propext"
+      ]
+    },
+    "OrthemologyMeasure.firstLoss_measurable": {
+      "type_sha256": "c6a8a64f6c101326133afd57f961ac3e1a68a73e82edc29fb5fb037202ab393e",
+      "axioms": [
+        "Classical.choice",
+        "Quot.sound",
+        "propext"
+      ]
+    },
+    "OrthemologyMeasure.lossClass_measurable": {
+      "type_sha256": "33acffff365afb62694550ee00e13b21a819aaaab108ce7843f4d766b8504fd6",
+      "axioms": [
+        "Classical.choice",
+        "Quot.sound",
+        "propext"
+      ]
+    },
+    "OrthemologyMeasure.historyPattern_measurable": {
+      "type_sha256": "5964f715c8b78e2d72d496d3dacec4b10e2a2c4ca9dcf21d660e23f8b2b8e801",
+      "axioms": [
+        "Classical.choice",
+        "Quot.sound",
+        "propext"
+      ]
+    },
+    "OrthemologyMeasure.historyClass_measurable": {
+      "type_sha256": "24c302d6a80c49c1e4c2dfcb88fc58ba3e64c6c3343bc927086e77a3217bae23",
+      "axioms": [
+        "Classical.choice",
+        "Quot.sound",
+        "propext"
+      ]
+    },
+    "OrthemologyMeasure.historyPattern_eventTV_bound": {
+      "type_sha256": "02a0190d9adcc333e1b32e3eb7df2d8074f4ee1c0b3f51e0e192aa7b4c9e59ef",
+      "axioms": [
+        "Classical.choice",
+        "Quot.sound",
+        "propext"
+      ]
+    },
+    "OrthemologyMeasure.historyClass_eventTV_bound": {
+      "type_sha256": "be402b0972b29f9b0eda1d8579f8853b002b37bcd59256930ff4c8234c432b56",
+      "axioms": [
+        "Classical.choice",
+        "Quot.sound",
+        "propext"
+      ]
+    },
+    "OrthemologyMeasure.historyClass_atom": {
+      "type_sha256": "20b3ca9c67c821f2581977a09a391032ee7b037483257c2802448dd461ce5084",
+      "axioms": [
+        "Classical.choice",
+        "Quot.sound",
+        "propext"
+      ]
+    },
+    "OrthemologyMeasure.historyClass_residual": {
+      "type_sha256": "823babb78dcf23a932dfc1357e97d4d144d2a551bda14747619e84da692858e3",
+      "axioms": [
+        "Classical.choice",
+        "Quot.sound",
+        "propext"
+      ]
+    },
+    "OrthemologyMeasure.historyClass_finite": {
+      "type_sha256": "c832c83ae62de8e204383295e59d368fdc463e6e27af6d6827cb602154c09c71",
+      "axioms": [
+        "Classical.choice",
+        "Quot.sound",
+        "propext"
+      ]
+    },
+    "OrthemologyMeasure.historyClass_initial": {
+      "type_sha256": "46603c275827c95afe8c8d4a8a08bae057100e585eaca877b85cd42bb0270fcb",
+      "axioms": [
+        "Classical.choice",
+        "Quot.sound",
+        "propext"
+      ]
+    },
+    "OrthemologyMeasure.historyClass_step": {
+      "type_sha256": "92c9109998f0d2216f84f767f39022add6b6f81432da03698a28023fb34c0827",
+      "axioms": [
+        "Classical.choice",
+        "Quot.sound",
+        "propext"
+      ]
+    },
+    "OrthemologyMeasure.historyClass_residual_mass": {
+      "type_sha256": "8ff7d6ee158fdebf13d8d3df3e809e55e79b1662c4ea5b0c6b9ee96dc385c47e",
+      "axioms": [
+        "Classical.choice",
+        "Quot.sound",
+        "propext"
+      ]
+    },
+    "OrthemologyMeasure.historyClass_initial_mass": {
+      "type_sha256": "f7bffb9412dd0b1c48c949eeeeca2274049fcc817524756930823d0ed9616528",
+      "axioms": [
+        "Classical.choice",
+        "Quot.sound",
+        "propext"
+      ]
+    },
+    "OrthemologyMeasure.historyClass_step_mass": {
+      "type_sha256": "34bbd2b045c5a7623862a82495e9c8c29bc7d42acd9d6b355249337099792887",
+      "axioms": [
+        "Classical.choice",
+        "Quot.sound",
+        "propext"
+      ]
+    },
+    "OrthemologyMeasure.product_map_congr_coordinate_ae": {
+      "type_sha256": "516348150721282ec9c54f3c164bd38b70fff01f14974cd7807bf99a1e1bd502",
+      "axioms": [
+        "Classical.choice",
+        "Quot.sound",
+        "propext"
+      ]
+    },
+    "OrthemologyMeasure.arbitraryPattern_measurable": {
+      "type_sha256": "c336ae300e67385488d986ee0f9cf85975f73e07cf17f78a3746b79a778edb53",
+      "axioms": [
+        "Classical.choice",
+        "Quot.sound",
+        "propext"
+      ]
+    },
+    "OrthemologyMeasure.arbitraryAtomicPattern_eventTV_bound": {
+      "type_sha256": "d2985341f0a90d2579f4950b23e25f22e1562482c4706f81e33161dd5e8fc3e2",
+      "axioms": [
+        "Classical.choice",
+        "Quot.sound",
+        "propext"
+      ]
+    },
+    "OrthemologyMeasure.spike_measurable": {
+      "type_sha256": "45e1808f5a2183ec391d49cfd877f382719b1e8c3f8247317e1255c423069c81",
+      "axioms": [
+        "Classical.choice",
+        "Quot.sound",
+        "propext"
+      ]
+    },
+    "OrthemologyMeasure.spike_ne_zero": {
+      "type_sha256": "e48aab4239531180f6a180eb882956e34e5cb2fed99d2c79caa62e58acde33df",
+      "axioms": [
+        "Classical.choice",
+        "Quot.sound",
+        "propext"
+      ]
+    },
+    "OrthemologyMeasure.spike_coordinate_ae": {
+      "type_sha256": "a6adc23de4d50d7765c5624b26c59f5962f82309a396ef2d0b85130327fee18c",
+      "axioms": [
+        "Classical.choice",
+        "Quot.sound",
+        "propext"
+      ]
+    },
+    "OrthemologyMeasure.fairCantor_singleton_zero": {
+      "type_sha256": "d8c93d2fcb98380f9def90aa9417c309809bd0b68c3909f6c420c8f08fb37127",
+      "axioms": [
+        "Classical.choice",
+        "Quot.sound",
+        "propext"
+      ]
+    },
+    "OrthemologyMeasure.spike_law_dirac": {
+      "type_sha256": "f497a8d52c7a54b2246d829ccaa776b1c02bdf06404f3930ced0bb74380531a8",
+      "axioms": [
+        "Classical.choice",
+        "Quot.sound",
+        "propext"
+      ]
+    },
+    "OrthemologyMeasure.spike_not_ae_zero": {
+      "type_sha256": "58c4fb3a2685947ff2850c0e80104c3efee6bf0ad34572dc6dbb4de1dbb137c1",
+      "axioms": [
+        "Classical.choice",
+        "Quot.sound",
+        "propext"
+      ]
+    },
+    "OrthemologyMeasure.zero_pattern_not_measurable": {
+      "type_sha256": "a0b605850abcdb394e609bad1532fdbd1068a6183dec3a95ebc4f151ea68e1e8",
+      "axioms": [
+        "Classical.choice",
+        "Quot.sound",
+        "propext"
+      ]
+    },
+    "OrthemologyMeasure.truncateBits_measurable": {
+      "type_sha256": "8b77f67168e8664fbcc969073e2fa0f5fae5addf9e81e2968083304338cd99bb",
+      "axioms": [
+        "Classical.choice",
+        "Quot.sound",
+        "propext"
+      ]
+    },
+    "OrthemologyMeasure.prefixBits_measurable": {
+      "type_sha256": "4e84644c68ee3613e20581d94fcc68cba6170f6a20402f965e97b39c86520bbc",
+      "axioms": [
+        "Classical.choice",
+        "Quot.sound",
+        "propext"
+      ]
+    },
+    "OrthemologyMeasure.truncate_extend": {
+      "type_sha256": "d8f0535a0a103c5b58b00b8c7e258ccd4ff56a8c0e8936c79105d3b769e17579",
+      "axioms": [
+        "Quot.sound",
+        "propext"
+      ]
+    },
+    "OrthemologyMeasure.truncatedLaw_finite_carrier": {
+      "type_sha256": "5cf305df19ade3a9ebabba4b0f30a609b995d15dc4e0721fdd4552d0acce8db6",
+      "axioms": [
+        "Classical.choice",
+        "Quot.sound",
+        "propext"
+      ]
+    },
+    "OrthemologyMeasure.truncatedLaw_defect_zero": {
+      "type_sha256": "6b8c7c2c0d7b4d8075d54a04fa003a3dc63c192bec97a5291169fae916cba83b",
+      "axioms": [
+        "Classical.choice",
+        "Quot.sound",
+        "propext"
+      ]
+    },
+    "OrthemologyMeasure.fairCantor_defect_one": {
+      "type_sha256": "aebf1e4be514d2ff5b990c4c4efb661b7cd96f1d2561c4db1550fa09503d2f51",
+      "axioms": [
+        "Classical.choice",
+        "Quot.sound",
+        "propext"
+      ]
+    },
+    "OrthemologyMeasure.finite_prefix_laws_equal": {
+      "type_sha256": "05843b715c7bc44f56e123fd8162301b80539a3535ddd6397f4b235a418b721c",
+      "axioms": [
+        "Classical.choice",
+        "Quot.sound",
+        "propext"
+      ]
+    },
+    "OrthemologyMeasure.probability_eventTV_le_one": {
+      "type_sha256": "81cb3a136b617dcccd20e70cc2bb3f00bcb4add916ca7148729c557651b5cb88",
+      "axioms": [
+        "Classical.choice",
+        "Quot.sound",
+        "propext"
+      ]
+    },
+    "OrthemologyMeasure.finite_prefix_full_TV_one": {
+      "type_sha256": "69ab40945b526a46b1ec6082c0433e4a8073aa453112905272c97d7e8f34b950",
+      "axioms": [
+        "Classical.choice",
+        "Quot.sound",
+        "propext"
+      ]
+    },
+    "OrthemologyMeasure.observedSupport_add": {
+      "type_sha256": "e03d8d6877b6e747216aa0f5a0bc31b02992ffbafeb22ece5e2f56d8f5418884",
+      "axioms": [
+        "Classical.choice",
+        "Quot.sound",
+        "propext"
+      ]
+    },
+    "OrthemologyMeasure.atomicPatternLaw_add": {
+      "type_sha256": "64f5065c39a996bafe27ab664cdb1c0b7381a3a8d33b7b299a7ac6a84832920d",
+      "axioms": [
+        "Classical.choice",
+        "Quot.sound",
+        "propext"
+      ]
+    },
+    "OrthemologyMeasure.observedSupport_smul": {
+      "type_sha256": "29eec2d36adb5af7f0518471aa58c254d4b73ea3c2b920198865172a901fccca",
+      "axioms": [
+        "Classical.choice",
+        "Quot.sound",
+        "propext"
+      ]
+    },
+    "OrthemologyMeasure.atomicPatternLaw_smul": {
+      "type_sha256": "3d03bce713f602f44717f0255504b25eec977d8db3081b04ed9daec3f9482967",
+      "axioms": [
+        "Classical.choice",
+        "Quot.sound",
+        "propext"
+      ]
+    },
+    "OrthemologyMeasure.atomicBit_measurable": {
+      "type_sha256": "4afad832b6a4c8692b936f05dfd476db50ef0785f529645226719a39e9f2ae6d",
+      "axioms": [
+        "Classical.choice",
+        "Quot.sound",
+        "propext"
+      ]
+    },
+    "OrthemologyMeasure.atomicBit_dirac_self": {
+      "type_sha256": "f51411a655a03d60ca93868b2f397ccc9724b358201b0d738d786bf14e4be8b8",
+      "axioms": [
+        "Classical.choice",
+        "Quot.sound",
+        "propext"
+      ]
+    },
+    "OrthemologyMeasure.atomicBit_fair_zero": {
+      "type_sha256": "f9ce43f800416f56796ecbc095018407508b6bf2ca5a06221a62efa57dbbb527",
+      "axioms": [
+        "Classical.choice",
+        "Quot.sound",
+        "propext"
+      ]
+    },
+    "OrthemologyMeasure.no_universal_atomic_classifier": {
+      "type_sha256": "8074f732ca5d9b793c90d7f0c2851556484024c764d733254c31d747862438f2",
+      "axioms": [
+        "Classical.choice",
+        "Quot.sound",
+        "propext"
+      ]
+    },
+    "OrthemologyMeasure.no_universal_randomised_atomic_test": {
+      "type_sha256": "71d3c90ee24ae0571177d8416004ea9303cf49b546e2f55c8110888d6e7fd6e4",
+      "axioms": [
+        "Classical.choice",
+        "Quot.sound",
+        "propext"
+      ]
+    },
+    "OrthemologyMeasure.positive_add": {
+      "type_sha256": "8d9da176c6dd4211e33f11b074a2f8491ad44759467dc47cf7361baa758d4ee8",
+      "axioms": [
+        "Classical.choice",
+        "Quot.sound",
+        "propext"
+      ]
+    },
+    "OrthemologyMeasure.mass_add": {
+      "type_sha256": "4d78dc77140121ed6c65c3355b2a3e03423fa273d1c6a420d6ccaf70b5ffc7c4",
+      "axioms": [
+        "Classical.choice",
+        "Quot.sound",
+        "propext"
+      ]
+    },
+    "OrthemologyMeasure.mass_smul": {
+      "type_sha256": "a183b99293ebb9391734a247ae1e018051e38012516005bad59225aec421d2dd",
+      "axioms": [
+        "Classical.choice",
+        "Quot.sound",
+        "propext"
+      ]
+    },
+    "OrthemologyMeasure.fairCantor_mass_zero": {
+      "type_sha256": "64200f247cacc24422e24f9eb04a5ca34ea99eada1fdb073b5f839282ef0ed98",
+      "axioms": [
+        "Classical.choice",
+        "Quot.sound",
+        "propext"
+      ]
+    },
+    "OrthemologyMeasure.truncatedLaw_mass_one": {
+      "type_sha256": "437be3862fc52aeab1d2a32c03ec70bb451170e01f1731a055f556a5d8945fe6",
+      "axioms": [
+        "Classical.choice",
+        "Quot.sound",
+        "propext"
+      ]
+    },
+    "OrthemologyMeasure.prefixMixture_probability": {
+      "type_sha256": "f79332e3b53c90835e60fb79e2ca39b450b1752c6f736dba2634090b06ce5ca4",
+      "axioms": [
+        "Classical.choice",
+        "Quot.sound",
+        "propext"
+      ]
+    },
+    "OrthemologyMeasure.prefixMixture_defect": {
+      "type_sha256": "bdd6a39517d5e7323a3c2c1bad75b71aefcef6c972ee92b3371116fa46ce34b6",
+      "axioms": [
+        "Classical.choice",
+        "Quot.sound",
+        "propext"
+      ]
+    },
+    "OrthemologyMeasure.prefixMixture_prefix_law": {
+      "type_sha256": "304dfbcff66a3948c41fd99f208536a7e798829c22b3622300064238882ca64a",
+      "axioms": [
+        "Classical.choice",
+        "Quot.sound",
+        "propext"
+      ]
+    },
+    "OrthemologyMeasure.CoCountable.value_iUnion": {
+      "type_sha256": "dffb08479d37d319877768738934206ea1721b003eac13fefa87ae28fec5f9aa",
+      "axioms": [
+        "Classical.choice",
+        "Quot.sound",
+        "propext"
+      ]
+    },
+    "OrthemologyMeasure.CoCountable.law_apply": {
+      "type_sha256": "26dc992d1ce63f2b7f36b05d5061b6b21b9c93993082a6ff23c5f46c2d88d15a",
+      "axioms": [
+        "Classical.choice",
+        "Quot.sound",
+        "propext"
+      ]
+    },
+    "OrthemologyMeasure.CoCountable.singleton_zero": {
+      "type_sha256": "ae7e9efa726324bd25c2339516b932f0fbd87fb27966cd7e0b94a7a016b49639",
+      "axioms": [
+        "Classical.choice",
+        "Quot.sound",
+        "propext"
+      ]
+    },
+    "OrthemologyMeasure.CoCountable.measurable_zero_or_one": {
+      "type_sha256": "4c1f5a858e874a3270465771ed28d9e7f1b550effc8347231bf54e3f921dadb8",
+      "axioms": [
+        "Classical.choice",
+        "Quot.sound",
+        "propext"
+      ]
+    },
+    "OrthemologyMeasure.CoCountable.whole_space_atom": {
+      "type_sha256": "31217b4540db247f0339946018885442409ab16e0cff2029af1591cdbbf482c2",
+      "axioms": [
+        "Classical.choice",
+        "Quot.sound",
+        "propext"
+      ]
+    },
+    "OrthemologyMeasure.CoCountable.point_defect_one": {
+      "type_sha256": "e5a7ac3378e57e3dd6cd181817b3a7b77f405531aeffd9c221f7d24546695a39",
+      "axioms": [
+        "Classical.choice",
+        "Quot.sound",
+        "propext"
+      ]
+    },
+    "OrthemologyMeasure.CoCountable.real_counterexample": {
+      "type_sha256": "bdb22e1362ad61f451d7b770b0a8f5db9d34748e92b9b765932454288952961f",
+      "axioms": [
+        "Classical.choice",
+        "Quot.sound",
+        "propext"
+      ]
+    }
+  },
+  "original_controls": "NOT_RUN",
+  "original_receipt_sha256": "9a40a5eee0371a197669b117410ad0c3ab2c7a10a8366d4c2e4a4621dfaa924e",
+  "original_driver_sha256": "0666003f5081aca1efd6570a72da06d735b454d787dba97dd59fc1b42554bd14",
+  "execution_kind": "FRESH_CUSTOM_CLOSURE",
+  "finished_utc": null,
+  "scope": "Source-bound custom closure and selected declaration readbacks. Types are represented by hashes of the exact printed types; complete logs remain private. Official caches are trusted. This does not establish ordinary proof, runtime completeness, empirical or normative warrant, novelty, external human review or merged adoption."
+}

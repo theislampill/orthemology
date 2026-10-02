@@ -1,0 +1,492 @@
+{
+  "status": "FRESH_KERNEL_COMPONENTS",
+  "exit_code": 0,
+  "kernel_verified": true,
+  "suite_id": "d6f6fa5be514-compact-observation",
+  "suite_sha256": "52b4f1e8d6e741fec47acedf8385f918683883337c499cc6afbc2e6a0d92f330",
+  "source_hashes": {
+    "SelfVerifyingSupport": "46643e3bd1194b699ffe67687dfba24761e2eb05ad750bae8b25d2f5fe96470b",
+    "CommonObservationBoundary": "8fdc8956bc6176f220dc6ec217aa2d3df5ce0c3c6c3ad2911523bb9198692fb4",
+    "CommonObservationFiniteActions": "e5b0b4c3152654377a4dfb7146039ccbdb4f4a1f54a89cab5ffae1e9647a8040",
+    "CompactObservationBoundary": "874ceabb1267306eaff41f28fa4e2450c47d6bc10cdde2e7cee4ce5819dd1b10",
+    "CompactBoundaryControls": "a6fdb6988be16dd35cca26cc8573d98c0b5f4828ef340446cc315d9d613c7d58"
+  },
+  "post_source_hashes": {
+    "SelfVerifyingSupport": "46643e3bd1194b699ffe67687dfba24761e2eb05ad750bae8b25d2f5fe96470b",
+    "CommonObservationBoundary": "8fdc8956bc6176f220dc6ec217aa2d3df5ce0c3c6c3ad2911523bb9198692fb4",
+    "CommonObservationFiniteActions": "e5b0b4c3152654377a4dfb7146039ccbdb4f4a1f54a89cab5ffae1e9647a8040",
+    "CompactObservationBoundary": "874ceabb1267306eaff41f28fa4e2450c47d6bc10cdde2e7cee4ce5819dd1b10",
+    "CompactBoundaryControls": "a6fdb6988be16dd35cca26cc8573d98c0b5f4828ef340446cc315d9d613c7d58"
+  },
+  "compiler_sha256": "92c3d35b5bfaa5e0fea413a775d504cf46cd95e1345df61c2274f76779e7e023",
+  "pins": {
+    "lean_version": "4.19.0",
+    "lean_binary_sha256": "92c3d35b5bfaa5e0fea413a775d504cf46cd95e1345df61c2274f76779e7e023",
+    "packages": [
+      {
+        "name": "mathlib",
+        "revision": "c44e0c8ee63ca166450922a373c7409c5d26b00b"
+      },
+      {
+        "name": "plausible",
+        "revision": "77e08eddc486491d7b9e470926b3dbe50319451a"
+      },
+      {
+        "name": "LeanSearchClient",
+        "revision": "25078369972d295301f5a1e53c3e5850cf6d9d4c"
+      },
+      {
+        "name": "importGraph",
+        "revision": "e6a9f0f5ee3ccf7443a0070f92b62f8db12ae82b"
+      },
+      {
+        "name": "proofwidgets",
+        "revision": "c4919189477c3221e6a204008998b0d724f49904"
+      },
+      {
+        "name": "aesop",
+        "revision": "5d50b08dedd7d69b3d9b3176e0d58a23af228884"
+      },
+      {
+        "name": "Qq",
+        "revision": "fa4f7f15d97591a9cf3aa7724ba371c7fc6dda02"
+      },
+      {
+        "name": "batteries",
+        "revision": "f5d04a9c4973d401c8c92500711518f7c656f034"
+      },
+      {
+        "name": "Cli",
+        "revision": "02dbd02bc00ec4916e99b04b2245b30200e200d0"
+      }
+    ]
+  },
+  "modules": [
+    {
+      "module": "SelfVerifyingSupport",
+      "source_sha256": "46643e3bd1194b699ffe67687dfba24761e2eb05ad750bae8b25d2f5fe96470b",
+      "object_sha256": "c374298f87d9a74b9262585054e1cd04b6bf87bbfbc4ba9033d6acaf4e32a489",
+      "transitive_source_fingerprint": "1a9e2463bbb2e5036a8229e0f217150b21c4c30ec3bb08891687cb0a58fe3fae",
+      "status": "FRESH_COMPILE",
+      "exit_code": 0
+    },
+    {
+      "module": "CommonObservationBoundary",
+      "source_sha256": "8fdc8956bc6176f220dc6ec217aa2d3df5ce0c3c6c3ad2911523bb9198692fb4",
+      "object_sha256": "665ee673370fc682813092a06017d27e837ef673fedef1dc154c61ab266fcbe2",
+      "transitive_source_fingerprint": "3c7edff63bade8910c0042a5dd09c75c74057c7baa1617ea8bddfca3caa884f5",
+      "status": "FRESH_COMPILE",
+      "exit_code": 0
+    },
+    {
+      "module": "CommonObservationFiniteActions",
+      "source_sha256": "e5b0b4c3152654377a4dfb7146039ccbdb4f4a1f54a89cab5ffae1e9647a8040",
+      "object_sha256": "6cff14c611228c1d71e9b06f25708d709dff4e21cf1c8a44677acfd83d0e978d",
+      "transitive_source_fingerprint": "1177f4aa074be1119fca8f36ac310d42811c195f324f775a8b7a523eaaa260a3",
+      "status": "FRESH_COMPILE",
+      "exit_code": 0
+    },
+    {
+      "module": "CompactObservationBoundary",
+      "source_sha256": "874ceabb1267306eaff41f28fa4e2450c47d6bc10cdde2e7cee4ce5819dd1b10",
+      "object_sha256": "2d5652d82705dc45b7e8463506ccd5173929b7774d1eb28296f4712f91871162",
+      "transitive_source_fingerprint": "647140e1198d417b7766959a55371c2ebc37f31fa5a5aca5f868370fb3e024a9",
+      "status": "FRESH_COMPILE",
+      "exit_code": 0
+    },
+    {
+      "module": "CompactBoundaryControls",
+      "source_sha256": "a6fdb6988be16dd35cca26cc8573d98c0b5f4828ef340446cc315d9d613c7d58",
+      "object_sha256": "dfcf6654614641c574955b6598f98d176e3ce741df62218adc8f3d134af16e94",
+      "transitive_source_fingerprint": "39b7a3bed3c28169c3aa306e4505b76cc0112ed979dce43b1db71bb374c9c881",
+      "status": "FRESH_COMPILE",
+      "exit_code": 0
+    }
+  ],
+  "readbacks": {
+    "Orthemology.Tranche2.AgreeOn": {
+      "type_sha256": "1b673bcda56d8c9d7f7d0f8d6868f3dfb6094f09849239483e9d9431d9dee169",
+      "axioms": [
+        "Quot.sound",
+        "propext"
+      ]
+    },
+    "Orthemology.Tranche2.SelfVerifying": {
+      "type_sha256": "a52566424a26d85d7592adb022b271e55529164302331f4671371346e3f0695f",
+      "axioms": [
+        "Quot.sound",
+        "propext"
+      ]
+    },
+    "Orthemology.Tranche2.prune": {
+      "type_sha256": "eef23b772ff2c6600d4b23a714aee872a3b47a7b749ff95bb173cf1cbd21af19",
+      "axioms": [
+        "Classical.choice",
+        "Quot.sound",
+        "propext"
+      ]
+    },
+    "Orthemology.Tranche2.mem_prune": {
+      "type_sha256": "cab1b94c377255212dba0484009a9d25874f24302cb8328d034b361a886a49c7",
+      "axioms": [
+        "Classical.choice",
+        "Quot.sound",
+        "propext"
+      ]
+    },
+    "Orthemology.Tranche2.prune_subset": {
+      "type_sha256": "9318bca49c3cd3bce893a848c5b009dc655826004ca4a7f7f1a922b89d6c213b",
+      "axioms": [
+        "Classical.choice",
+        "Quot.sound",
+        "propext"
+      ]
+    },
+    "Orthemology.Tranche2.agreeOn_mono": {
+      "type_sha256": "fb04ee9598e16ef1e996aab2cb9c6f89bb4dacbd9c62644c7214c9046005e3a6",
+      "axioms": [
+        "Quot.sound",
+        "propext"
+      ]
+    },
+    "Orthemology.Tranche2.prune_mono": {
+      "type_sha256": "46a3462ec1e783e79539a792898f2fc7e029df1e4904d8c829be59a4046716bc",
+      "axioms": [
+        "Classical.choice",
+        "Quot.sound",
+        "propext"
+      ]
+    },
+    "Orthemology.Tranche2.selfVerifying_empty": {
+      "type_sha256": "a2d5a53e8337e47c32a30227fc88cdb7ee34df8a49a65fd934c2b8ca27f5c4f0",
+      "axioms": [
+        "Quot.sound",
+        "propext"
+      ]
+    },
+    "Orthemology.Tranche2.selfVerifying_union": {
+      "type_sha256": "f129e9b9e033b5e97665d24ba2994d50e5735e99706f553561d0f71962f2a8ae",
+      "axioms": [
+        "Quot.sound",
+        "propext"
+      ]
+    },
+    "Orthemology.Tranche2.selfVerifying_iff_fixed": {
+      "type_sha256": "66a623b6b7f3d7cdbc829f54a741da1ca22e39b7ac6d9ef7ac18726c3a40caee",
+      "axioms": [
+        "Classical.choice",
+        "Quot.sound",
+        "propext"
+      ]
+    },
+    "Orthemology.Tranche2.pruneIter": {
+      "type_sha256": "f37dc7f64f8e5cb24a9ae63b633c5e96b242a41bd74715ccc09592fe0acd8c60",
+      "axioms": [
+        "Classical.choice",
+        "Quot.sound",
+        "propext"
+      ]
+    },
+    "Orthemology.Tranche2.pruneIter_step_subset": {
+      "type_sha256": "1fd0390b508271a578a532a25fa25a1c49165976c2f84e676a77064f6291cd40",
+      "axioms": [
+        "Classical.choice",
+        "Quot.sound",
+        "propext"
+      ]
+    },
+    "Orthemology.Tranche2.pruneIter_subset_target": {
+      "type_sha256": "aa266ee4491c371252f647ce3ac35b834f7103fe004f1ec80c90484d2bcac786",
+      "axioms": [
+        "Classical.choice",
+        "Quot.sound",
+        "propext"
+      ]
+    },
+    "Orthemology.Tranche2.selfVerifying_survives": {
+      "type_sha256": "609b3d38d5643ae189dfe1b103b14ad4899b5c5bc567d08b701859ba8c9d7bca",
+      "axioms": [
+        "Classical.choice",
+        "Quot.sound",
+        "propext"
+      ]
+    },
+    "Orthemology.Tranche2.pruneIter_fixed_propagates": {
+      "type_sha256": "86bde3c42c1c95854ccaed825ba476029db8d8301251d96a09bc2c9b5296b9e0",
+      "axioms": [
+        "Classical.choice",
+        "Quot.sound",
+        "propext"
+      ]
+    },
+    "Orthemology.Tranche2.pruneIter_card_bound_of_no_fixed": {
+      "type_sha256": "ff5238be9d2a33600ab0e585e8213e9de5cdf568f313aa3d35a4feed92791026",
+      "axioms": [
+        "Classical.choice",
+        "Quot.sound",
+        "propext"
+      ]
+    },
+    "Orthemology.Tranche2.pruneIter_exists_fixed": {
+      "type_sha256": "96e6c71e655545e6f70997311c7d142cae940460c51ea976b1c1da67a6900982",
+      "axioms": [
+        "Classical.choice",
+        "Quot.sound",
+        "propext"
+      ]
+    },
+    "Orthemology.Tranche2.pruneIter_card_fixed": {
+      "type_sha256": "c370b72188ad3ebd780b30fefcd2454471ad5879fd4fe9bf9dc4c8986e97772d",
+      "axioms": [
+        "Classical.choice",
+        "Quot.sound",
+        "propext"
+      ]
+    },
+    "Orthemology.Tranche2.supportKernel": {
+      "type_sha256": "424481835f7c5163248a15c8f628404d8789245f6b31b64844434175ff72f293",
+      "axioms": [
+        "Classical.choice",
+        "Quot.sound",
+        "propext"
+      ]
+    },
+    "Orthemology.Tranche2.supportKernel_selfVerifying": {
+      "type_sha256": "d3ef37f98973bd77cf4a312d8ec495213558ec60b972baffdd57d7921da648f3",
+      "axioms": [
+        "Classical.choice",
+        "Quot.sound",
+        "propext"
+      ]
+    },
+    "Orthemology.Tranche2.supportKernel_greatest": {
+      "type_sha256": "9d2161ba910bc38a386adc9ef2ead9002a99e79ee4d74644d9c70fda8f083b95",
+      "axioms": [
+        "Classical.choice",
+        "Quot.sound",
+        "propext"
+      ]
+    },
+    "Orthemology.Tranche2.supportKernel_nonempty_iff": {
+      "type_sha256": "28ad743fb536d56eb7845c8720ce68cdbcf63fecf786ef90aa386d2109504ed6",
+      "axioms": [
+        "Classical.choice",
+        "Quot.sound",
+        "propext"
+      ]
+    },
+    "Orthemology.Tranche2.CommonObservationBoundary.common_action_of_dominated_eventual_success": {
+      "type_sha256": "e811420fab5f62cebf3bf16845b51e6bc54fd7b5085892a92c4bd8cd765ac861",
+      "axioms": [
+        "Classical.choice",
+        "Quot.sound",
+        "propext"
+      ]
+    },
+    "Orthemology.Tranche2.CommonObservationBoundary.common_action_of_same_law": {
+      "type_sha256": "32cdcea9d6ea849e2c7462eda0c3de0e59d80546b63f9a647f4d38232eb36402",
+      "axioms": [
+        "Classical.choice",
+        "Quot.sound",
+        "propext"
+      ]
+    },
+    "Orthemology.Tranche2.CommonObservationBoundary.constant_action_success": {
+      "type_sha256": "fab81074ca8b30a98e89288227eab2ef70cc25cc900480567215b0c1496b99d4",
+      "axioms": [
+        "Classical.choice",
+        "Quot.sound",
+        "propext"
+      ]
+    },
+    "Orthemology.Tranche2.CommonObservationBoundary.selfVerifying_iff_common_target": {
+      "type_sha256": "2296c433c6121684f37c08ee72d6bcbb3ad1bdc20459e515d49966c6b90ebdef",
+      "axioms": [
+        "Quot.sound",
+        "propext"
+      ]
+    },
+    "Orthemology.Tranche2.CommonObservationBoundary.infinite_target_counterexample": {
+      "type_sha256": "dbbb5934f9e82094907dec2b17b22d03f4e16156c52b70bed31d3093f2908380",
+      "axioms": [
+        "Classical.choice",
+        "Quot.sound",
+        "propext"
+      ]
+    },
+    "Orthemology.Tranche2.CommonObservationBoundary.common_action_of_finite_actions": {
+      "type_sha256": "3e719aac659dfdfa8fabc3d43fcb76ff3fc9d9798c299c1f22dec81cb01999a2",
+      "axioms": [
+        "Classical.choice",
+        "Quot.sound",
+        "propext"
+      ]
+    },
+    "Orthemology.Tranche2.CommonObservationBoundary.common_action_of_either_finite": {
+      "type_sha256": "b9c101e2c88ad9d2abedd5cd4c0ba40cdde9e6e21173c0b24cb492e7a6546d93",
+      "axioms": [
+        "Classical.choice",
+        "Quot.sound",
+        "propext"
+      ]
+    },
+    "Orthemology.Tranche2.CompactObservationBoundary.common_action_of_compact_confinement": {
+      "type_sha256": "8e3672bc9ee7334bb1040906e5cec1d69671a2cef344b3c9a8b8838a57ff45d2",
+      "axioms": [
+        "Classical.choice",
+        "Quot.sound",
+        "propext"
+      ]
+    },
+    "Orthemology.Tranche2.CompactObservationBoundary.common_action_of_compact_space": {
+      "type_sha256": "088bf9fff94575141dcb44d0d5c42bf9b11553e4855457d3d710ecf682ba15a3",
+      "axioms": [
+        "Classical.choice",
+        "Quot.sound",
+        "propext"
+      ]
+    },
+    "Orthemology.Tranche2.CompactObservationBoundary.common_action_of_one_compact_target": {
+      "type_sha256": "5c76d9305817bce4b93ba8a5fb8ed95f88215a24ee10f75de1784acb1488f042",
+      "axioms": [
+        "Classical.choice",
+        "Quot.sound",
+        "propext"
+      ]
+    },
+    "Orthemology.Tranche2.CompactObservationBoundary.nonworseningTarget": {
+      "type_sha256": "bc4ff9544660350fb1551ed663d601e9c7def72fbb1acc29a0dc864840ac9938",
+      "axioms": [
+        "Classical.choice",
+        "Quot.sound",
+        "propext"
+      ]
+    },
+    "Orthemology.Tranche2.CompactObservationBoundary.nonworseningTarget_closed": {
+      "type_sha256": "f0919b0c0f934c21e271bde4be8d1a702b5c839cee1db52dc41b12ce0763850d",
+      "axioms": [
+        "Classical.choice",
+        "Quot.sound",
+        "propext"
+      ]
+    },
+    "Orthemology.Tranche2.CompactObservationBoundary.common_nonworsening_of_continuous_scores": {
+      "type_sha256": "f5f5e8eaa0674b820d7b263c9a83ae9421716bbe2f3a2aa7489db66f7f96fe25",
+      "axioms": [
+        "Classical.choice",
+        "Quot.sound",
+        "propext"
+      ]
+    },
+    "Orthemology.Tranche2.CompactObservationBoundary.quadraticLoss": {
+      "type_sha256": "97aa1ec782917fada4dd51363c08b6336a108df7936bf01e8cf2062bf8fd71a4",
+      "axioms": [
+        "Classical.choice",
+        "Quot.sound",
+        "propext"
+      ]
+    },
+    "Orthemology.Tranche2.CompactObservationBoundary.quadraticLoss_continuous": {
+      "type_sha256": "084c490c40f6409772f06c281fe3c817c07b03112b7d2644520424f745d4e75d",
+      "axioms": [
+        "Classical.choice",
+        "Quot.sound",
+        "propext"
+      ]
+    },
+    "Orthemology.Tranche2.CompactObservationBoundary.common_finite_hull_quadratic_repair": {
+      "type_sha256": "75b1ac07a299a0a4f1f516ffe61d4925cb41caf7593666194ccac79603dee779",
+      "axioms": [
+        "Classical.choice",
+        "Quot.sound",
+        "propext"
+      ]
+    },
+    "Orthemology.Tranche2.CompactBoundaryControls.reciprocal": {
+      "type_sha256": "73f3f9a0c29cd3aeb79951c4497ecb7fc3192cde19eb21e57a61d92b126d6c9c",
+      "axioms": [
+        "Classical.choice",
+        "Quot.sound",
+        "propext"
+      ]
+    },
+    "Orthemology.Tranche2.CompactBoundaryControls.reciprocal_pos": {
+      "type_sha256": "930ceb898fa578bad5c0676c60baed2d78c64abf3747340f116e36f3cde6f705",
+      "axioms": [
+        "Classical.choice",
+        "Quot.sound",
+        "propext"
+      ]
+    },
+    "Orthemology.Tranche2.CompactBoundaryControls.reciprocal_le_one": {
+      "type_sha256": "284f0bb9a97d70e1b51e656ca91631a6bbb7fc660af9d7f4e6ac4d708a5cc198",
+      "axioms": [
+        "Classical.choice",
+        "Quot.sound",
+        "propext"
+      ]
+    },
+    "Orthemology.Tranche2.CompactBoundaryControls.reciprocal_tendsto": {
+      "type_sha256": "6e866b1f9363b1ec9f4d0e0a9e2569b293f92317d1c79c5df22b1091ccd7547d",
+      "axioms": [
+        "Classical.choice",
+        "Quot.sound",
+        "propext"
+      ]
+    },
+    "Orthemology.Tranche2.CompactBoundaryControls.eventually_in_shrinking_target": {
+      "type_sha256": "74c87a57866081afa142bcf801a9bfa6aa62001676b0b0dc346b67238675a9ad",
+      "axioms": [
+        "Classical.choice",
+        "Quot.sound",
+        "propext"
+      ]
+    },
+    "Orthemology.Tranche2.CompactBoundaryControls.no_common_shrinking_target": {
+      "type_sha256": "48c8a8a83eb09c5574f588eb8a9844e27d12999228d7edf5de3a285bbe3adf0a",
+      "axioms": [
+        "Classical.choice",
+        "Quot.sound",
+        "propext"
+      ]
+    },
+    "Orthemology.Tranche2.CompactBoundaryControls.target_not_closed": {
+      "type_sha256": "6c6deaada4352818b877974b6a1fe77b4a62e5150ce4aec6cc5eb912b09a4a1f",
+      "axioms": [
+        "Classical.choice",
+        "Quot.sound",
+        "propext"
+      ]
+    },
+    "Orthemology.Tranche2.CompactBoundaryControls.nonclosed_compact_confinement_counterexample": {
+      "type_sha256": "0db2ded4d81f31c4b84f70b5468b24cff5a28db6fcdbc495f807621794949249",
+      "axioms": [
+        "Classical.choice",
+        "Quot.sound",
+        "propext"
+      ]
+    },
+    "Orthemology.Tranche2.CompactBoundaryControls.naturals_not_compact": {
+      "type_sha256": "b762c9a50e9f11a374b9b9486b757388671290196438071d457abafa5c8033f9",
+      "axioms": [
+        "Classical.choice",
+        "Quot.sound",
+        "propext"
+      ]
+    },
+    "Orthemology.Tranche2.CompactBoundaryControls.noncompact_closed_targets_counterexample": {
+      "type_sha256": "9397a6e6b9cc520d5fa112354267227b8c7e18bd386761d618aef400bc8e918d",
+      "axioms": [
+        "Classical.choice",
+        "Quot.sound",
+        "propext"
+      ]
+    }
+  },
+  "original_controls": "NOT_RUN",
+  "original_receipt_sha256": "b678735fc02b101f86aa4f0e5eee0f6a76e84eec52dd5fda4200704fce56d65a",
+  "original_driver_sha256": "3ecc40bb0ab970bc5b7efc0347bab9c5662fa5b50fb99bf23f6d3d1c0e12a710",
+  "execution_kind": "FRESH_CUSTOM_CLOSURE",
+  "finished_utc": "2026-10-02T05:33:57.245644+00:00",
+  "scope": "Source-bound custom closure and selected declaration readbacks. Types are represented by hashes of the exact printed types; complete logs remain private. Official caches are trusted. This does not establish ordinary proof, runtime completeness, empirical or normative warrant, novelty, external human review or merged adoption."
+}

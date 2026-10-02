@@ -1,0 +1,121 @@
+{
+  "id": "0a74eb642cc6-integer-budget-v3",
+  "origin": "0a74eb642cc61b5012749f42dcd8e578cfe70406d051cbf4e09ce6d371962ae5",
+  "descriptor_source_id": "src-0a74eb642cc61b50-ac1a57d94319c835",
+  "modules": [
+    {
+      "module": "IntegerBudget",
+      "source_id": "src-0a74eb642cc61b50-6e741c2b8425ca8b",
+      "imports": [
+        "Mathlib.Analysis.SpecialFunctions.ExpDeriv",
+        "Mathlib.Tactic"
+      ]
+    },
+    {
+      "module": "ExactBudgetEnvelope",
+      "source_id": "src-0a74eb642cc61b50-7ca49a4d1aa02b47",
+      "imports": [
+        "IntegerBudget",
+        "Mathlib.Analysis.SpecialFunctions.Log.Basic"
+      ]
+    }
+  ],
+  "module_order": [
+    "IntegerBudget",
+    "ExactBudgetEnvelope"
+  ],
+  "targets": [
+    {
+      "name": "Orthemology.IntegerBudget.two_pow_le_exp_nat",
+      "module": "IntegerBudget"
+    },
+    {
+      "name": "Orthemology.IntegerBudget.dyadic_tail",
+      "module": "IntegerBudget"
+    },
+    {
+      "name": "Orthemology.IntegerBudget.confidence_from_witnesses",
+      "module": "IntegerBudget"
+    },
+    {
+      "name": "Orthemology.IntegerBudget.geometric_prefactor_le_rational",
+      "module": "ExactBudgetEnvelope"
+    },
+    {
+      "name": "Orthemology.IntegerBudget.progress_log_rate_lower",
+      "module": "ExactBudgetEnvelope"
+    },
+    {
+      "name": "Orthemology.IntegerBudget.confidence_from_exact_tail",
+      "module": "ExactBudgetEnvelope"
+    }
+  ],
+  "pins": {
+    "lean_version": "4.19.0",
+    "lean_binary_sha256": "92c3d35b5bfaa5e0fea413a775d504cf46cd95e1345df61c2274f76779e7e023",
+    "packages": [
+      {
+        "name": "mathlib",
+        "revision": "c44e0c8ee63ca166450922a373c7409c5d26b00b"
+      },
+      {
+        "name": "plausible",
+        "revision": "77e08eddc486491d7b9e470926b3dbe50319451a"
+      },
+      {
+        "name": "LeanSearchClient",
+        "revision": "25078369972d295301f5a1e53c3e5850cf6d9d4c"
+      },
+      {
+        "name": "importGraph",
+        "revision": "e6a9f0f5ee3ccf7443a0070f92b62f8db12ae82b"
+      },
+      {
+        "name": "proofwidgets",
+        "revision": "c4919189477c3221e6a204008998b0d724f49904"
+      },
+      {
+        "name": "aesop",
+        "revision": "5d50b08dedd7d69b3d9b3176e0d58a23af228884"
+      },
+      {
+        "name": "Qq",
+        "revision": "fa4f7f15d97591a9cf3aa7724ba371c7fc6dda02"
+      },
+      {
+        "name": "batteries",
+        "revision": "f5d04a9c4973d401c8c92500711518f7c656f034"
+      },
+      {
+        "name": "Cli",
+        "revision": "02dbd02bc00ec4916e99b04b2245b30200e200d0"
+      }
+    ]
+  },
+  "official_imports": [
+    {
+      "module": "Mathlib.Analysis.SpecialFunctions.ExpDeriv",
+      "repository": "mathlib",
+      "source": "Mathlib/Analysis/SpecialFunctions/ExpDeriv.lean",
+      "sha256": "e74050736957c4265287333e2f13fc925d352923f7812b3a6f1dc7196912c08b"
+    },
+    {
+      "module": "Mathlib.Analysis.SpecialFunctions.Log.Basic",
+      "repository": "mathlib",
+      "source": "Mathlib/Analysis/SpecialFunctions/Log/Basic.lean",
+      "sha256": "7a9330163b97b280680288661e2657652e863d8f53869c897d0fd250fd479898"
+    },
+    {
+      "module": "Mathlib.Tactic",
+      "repository": "mathlib",
+      "source": "Mathlib/Tactic.lean",
+      "sha256": "f20038eba7bba63f07a2f854496101226df407e20414e6b8ebf94b14f95e831b"
+    }
+  ],
+  "driver": {
+    "source_id": "src-0a74eb642cc61b50-fb7cfc7bd74f9508",
+    "lean_argument": "EXECUTABLE"
+  },
+  "controls": "ORIGINAL_DRIVER_REQUIRED",
+  "classification": "CURRENT_EVIDENCE"
+}

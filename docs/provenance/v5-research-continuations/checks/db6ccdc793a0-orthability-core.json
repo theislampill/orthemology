@@ -1,0 +1,444 @@
+{
+  "status": "FRESH_KERNEL_COMPONENTS",
+  "exit_code": 0,
+  "kernel_verified": true,
+  "suite_id": "db6ccdc793a0-orthability-core",
+  "suite_sha256": "eaf4833b56f96d541ac2133f97cdf5670a20d79d5b1abf32abfd8b3577e61050",
+  "source_hashes": {
+    "SourceIdentity": "45ab18f7305033091f8fc31bb906d4c87866de47138df76637c6937440064503",
+    "ProductiveCompleteness": "8765c137491f2f5e2cd9e0c699987c53fcbb00b9cc9e90b49712ec124e97906a",
+    "IntegratedContingency": "e8a34f77ddea0dc2696c16a33fb2f89330958cc17ea2e011dfd269b125b26cd7",
+    "CompleteControl": "95832d98bc3c1e7eab7523ab639d1734a0bee46cd59948233fefe75f7abb17b6",
+    "Controls": "76b7f9d4591b7deab9033a953ea5646e27d02a63cb78e900c094409914872896"
+  },
+  "post_source_hashes": {
+    "SourceIdentity": "45ab18f7305033091f8fc31bb906d4c87866de47138df76637c6937440064503",
+    "ProductiveCompleteness": "8765c137491f2f5e2cd9e0c699987c53fcbb00b9cc9e90b49712ec124e97906a",
+    "IntegratedContingency": "e8a34f77ddea0dc2696c16a33fb2f89330958cc17ea2e011dfd269b125b26cd7",
+    "CompleteControl": "95832d98bc3c1e7eab7523ab639d1734a0bee46cd59948233fefe75f7abb17b6",
+    "Controls": "76b7f9d4591b7deab9033a953ea5646e27d02a63cb78e900c094409914872896"
+  },
+  "compiler_sha256": "92c3d35b5bfaa5e0fea413a775d504cf46cd95e1345df61c2274f76779e7e023",
+  "pins": {
+    "lean_version": "4.19.0",
+    "lean_binary_sha256": "92c3d35b5bfaa5e0fea413a775d504cf46cd95e1345df61c2274f76779e7e023",
+    "packages": [
+      {
+        "name": "mathlib",
+        "revision": "c44e0c8ee63ca166450922a373c7409c5d26b00b"
+      },
+      {
+        "name": "plausible",
+        "revision": "77e08eddc486491d7b9e470926b3dbe50319451a"
+      },
+      {
+        "name": "LeanSearchClient",
+        "revision": "25078369972d295301f5a1e53c3e5850cf6d9d4c"
+      },
+      {
+        "name": "importGraph",
+        "revision": "e6a9f0f5ee3ccf7443a0070f92b62f8db12ae82b"
+      },
+      {
+        "name": "proofwidgets",
+        "revision": "c4919189477c3221e6a204008998b0d724f49904"
+      },
+      {
+        "name": "aesop",
+        "revision": "5d50b08dedd7d69b3d9b3176e0d58a23af228884"
+      },
+      {
+        "name": "Qq",
+        "revision": "fa4f7f15d97591a9cf3aa7724ba371c7fc6dda02"
+      },
+      {
+        "name": "batteries",
+        "revision": "f5d04a9c4973d401c8c92500711518f7c656f034"
+      },
+      {
+        "name": "Cli",
+        "revision": "02dbd02bc00ec4916e99b04b2245b30200e200d0"
+      }
+    ]
+  },
+  "modules": [
+    {
+      "module": "SourceIdentity",
+      "source_sha256": "45ab18f7305033091f8fc31bb906d4c87866de47138df76637c6937440064503",
+      "object_sha256": "39d9009d24028b82362dad37769d484320683b6980504487fdacc817f541c599",
+      "transitive_source_fingerprint": "9f686dd18b5cda0baf2a3e5f24b403b16612c4501cf0d53401350e736fb47ee6",
+      "status": "FRESH_COMPILE",
+      "exit_code": 0
+    },
+    {
+      "module": "ProductiveCompleteness",
+      "source_sha256": "8765c137491f2f5e2cd9e0c699987c53fcbb00b9cc9e90b49712ec124e97906a",
+      "object_sha256": "8296d838a723ff76f4274886f8fb45219eaa9819a8890283d3b83a6969488cff",
+      "transitive_source_fingerprint": "041bd4576cebfb5ae4e42ad4d0e691835e882743ce68035a70a98ad1b050c42b",
+      "status": "FRESH_COMPILE",
+      "exit_code": 0
+    },
+    {
+      "module": "IntegratedContingency",
+      "source_sha256": "e8a34f77ddea0dc2696c16a33fb2f89330958cc17ea2e011dfd269b125b26cd7",
+      "object_sha256": "3e0be2a5609713cd4cfff9652d7ff6bb2507c577e29665ea3a4db7b5d99e4ab3",
+      "transitive_source_fingerprint": "4efffed68c0a0e91fe29db8618a6a2dbebafef21c99c1fa8f96ed398047a5c03",
+      "status": "FRESH_COMPILE",
+      "exit_code": 0
+    },
+    {
+      "module": "CompleteControl",
+      "source_sha256": "95832d98bc3c1e7eab7523ab639d1734a0bee46cd59948233fefe75f7abb17b6",
+      "object_sha256": "2aa4866523718b03adada40d3fe1f2001d15b947a059056869f70506e63092c6",
+      "transitive_source_fingerprint": "f3ea8bb10cc7a3b8416444b3d903911b272aa2970bd6c709d4df7ed37d8ec0ba",
+      "status": "FRESH_COMPILE",
+      "exit_code": 0
+    },
+    {
+      "module": "Controls",
+      "source_sha256": "76b7f9d4591b7deab9033a953ea5646e27d02a63cb78e900c094409914872896",
+      "object_sha256": "4b9a6a7ae26efedd03d674782522d1516ed07c951c8ce30b8b3b4d99719e622a",
+      "transitive_source_fingerprint": "325a10efa1e2cc049957823f615acead2e8f7179f4cb32a67f54c120c5bcfd75",
+      "status": "FRESH_COMPILE",
+      "exit_code": 0
+    }
+  ],
+  "readbacks": {
+    "Orthemology.Tranche3.SourceIdentity.Received": {
+      "type_sha256": "6935e5d287507f1a9a9c46a0a82a934c6639e6ef7aa4a867b579d40759b170cd",
+      "axioms": []
+    },
+    "Orthemology.Tranche3.SourceIdentity.Root": {
+      "type_sha256": "83b044c96f2f14e9237a1052bfc10fe7499d8aec4efebd577cbabbc50ccf057b",
+      "axioms": []
+    },
+    "Orthemology.Tranche3.SourceIdentity.Necessary": {
+      "type_sha256": "1beba629d24c5e937df9ee3ddb9bba25d5915bb6550b3da374adf5a62eb90c76",
+      "axioms": []
+    },
+    "Orthemology.Tranche3.SourceIdentity.UniformRoot": {
+      "type_sha256": "67acd0561fa5d9f0afa5009c6d37230550d4d6df1a5e1420f88cb5c55b5f5a40",
+      "axioms": []
+    },
+    "Orthemology.Tranche3.SourceIdentity.GenericReception": {
+      "type_sha256": "1c303343e84885c98f49a44e70280bef99542f88df12903a8d8583781d23ca1b",
+      "axioms": []
+    },
+    "Orthemology.Tranche3.SourceIdentity.ActualReceptionPreservation": {
+      "type_sha256": "4c26e94a966686fabd232b84ebbbef276604c80533923d8ec11bd2a20da14a83",
+      "axioms": []
+    },
+    "Orthemology.Tranche3.SourceIdentity.necessary_of_actual_root": {
+      "type_sha256": "6689a2796f2a353c8522819d3b0e0710529618a427d8541e3daccad40f3c4ee0",
+      "axioms": [
+        "Classical.choice",
+        "Quot.sound",
+        "propext"
+      ]
+    },
+    "Orthemology.Tranche3.SourceIdentity.uniform_of_necessary_actual_root": {
+      "type_sha256": "b2e06edf1a7e3532770f5aee1c5339907932d7b0e46faafb1683fb74e81b4fac",
+      "axioms": []
+    },
+    "Orthemology.Tranche3.SourceIdentity.uniform_of_contingent_reception": {
+      "type_sha256": "e1da8c54925d7141ca9ea567fffd100e8efa0bb2763798552b02eefd8159ea88",
+      "axioms": [
+        "Classical.choice",
+        "Quot.sound",
+        "propext"
+      ]
+    },
+    "Orthemology.Tranche3.SourceIdentity.local_transfer_iff_uniform": {
+      "type_sha256": "39b784e48b1c9015f92eb7f3881c5d1b5dd68d0b2c07c69eaa4105e0cb78d2ed",
+      "axioms": []
+    },
+    "Orthemology.Tranche3.SourceIdentity.generic_of_fixed_origin": {
+      "type_sha256": "ad1f2f3771fc42eebf8d66602ad393fc3fc8d65913b23bc1ba7777c46ed5c1de",
+      "axioms": []
+    },
+    "Orthemology.Tranche3.SourceIdentity.Controls.changingDep": {
+      "type_sha256": "a8397fdec9d344d83e1f8f77e3ed96d631752002f74fd7d7c062b6c846cc4d37",
+      "axioms": [
+        "propext"
+      ]
+    },
+    "Orthemology.Tranche3.SourceIdentity.Controls.actual_preservation_does_not_give_uniform": {
+      "type_sha256": "37e46cff22b8c47c3900105c6c420d7738b205096c4206bb9c4e5d3d1f0f2e60",
+      "axioms": [
+        "Classical.choice",
+        "Quot.sound",
+        "propext"
+      ]
+    },
+    "Orthemology.Tranche3.SourceIdentity.Controls.variableOrigin": {
+      "type_sha256": "171376898862858223cf2ee4055ed7dc0b0d42feb93ee0af4d3ed84d2aa58827",
+      "axioms": [
+        "propext"
+      ]
+    },
+    "Orthemology.Tranche3.SourceIdentity.Controls.generic_not_fixed_origin": {
+      "type_sha256": "645270f1d93465cf03c90eb0d533d8915c374c953553a2d8d916568e2e8382be",
+      "axioms": [
+        "Classical.choice",
+        "Quot.sound",
+        "propext"
+      ]
+    },
+    "Orthemology.Tranche3.SourceIdentity.Controls.switchingOrder": {
+      "type_sha256": "7250267f85b38e1873e5478b49092952eedda65e3789ff516d8d339006300547",
+      "axioms": [
+        "propext"
+      ]
+    },
+    "Orthemology.Tranche3.SourceIdentity.Controls.generic_allows_modal_cycle": {
+      "type_sha256": "60ba2e7d077dca9d3cbc122e5d027ff6606698cd0bed033db6f1fdd1fe391137",
+      "axioms": [
+        "Classical.choice",
+        "Quot.sound",
+        "propext"
+      ]
+    },
+    "Orthemology.Tranche3.SourceIdentity.Controls.reception_alone_does_not_give_necessary": {
+      "type_sha256": "6fbb8f8129557c7a2e2c0f4d069658779b349968aef3e9b2b60ad5cc4b78bdd0",
+      "axioms": [
+        "Quot.sound",
+        "propext"
+      ]
+    },
+    "Orthemology.Tranche3.CompleteControl.CompatibleOutcomes": {
+      "type_sha256": "ad4435e51be45da8da7492742ad3f2c7fcec355c8f97c3037f120d0693c6288f",
+      "axioms": []
+    },
+    "Orthemology.Tranche3.CompleteControl.Edge": {
+      "type_sha256": "cf4beff49944c6bff18e6870fbf79cd8c0a947f1ac13850648a0d25ac13586c4",
+      "axioms": []
+    },
+    "Orthemology.Tranche3.CompleteControl.Label": {
+      "type_sha256": "554bb55cc158f590c111eab7bd46b1fe7ac13db79f048d52264185f70ab71e4a",
+      "axioms": []
+    },
+    "Orthemology.Tranche3.CompleteControl.Reachable": {
+      "type_sha256": "e947ef1067850e95f286a178f76d11108b9b3695bc3d097a2e37dfeb6df182f8",
+      "axioms": []
+    },
+    "Orthemology.Tranche3.CompleteControl.Connected": {
+      "type_sha256": "59586127c8dd48e7bc1080955b8a9df9de2c96b5f39c081520255f305d4559a4",
+      "axioms": []
+    },
+    "Orthemology.Tranche3.CompleteControl.equal_on_edge": {
+      "type_sha256": "247343b2c2ac4fb360687abda4aea95ad122d99ea7aae58b8fde2e4921deed5b",
+      "axioms": []
+    },
+    "Orthemology.Tranche3.CompleteControl.equal_on_path": {
+      "type_sha256": "60efe53ac0cd4ef627515a9716b30a3e0c40113bdd70b115c363ecdd5228c4b7",
+      "axioms": []
+    },
+    "Orthemology.Tranche3.CompleteControl.connected_control_is_constant": {
+      "type_sha256": "70e7cd49f59178f94023d9209b7371b35a46a6a58d5cf8353d5d5ef1013c3c1d",
+      "axioms": []
+    },
+    "Orthemology.Tranche3.CompleteControl.nonconstant_requires_disconnected": {
+      "type_sha256": "bc07b90c39b7bd48b8e28ecbfba87c4d9b23d62060e947ac527130b6437e3996",
+      "axioms": []
+    },
+    "Orthemology.Tranche3.CompleteControl.rectangular_control_is_constant": {
+      "type_sha256": "bf979caa3043d49027f9aa1f7af537001774338264de2d7fc83c893ee2993fad",
+      "axioms": []
+    },
+    "Orthemology.Tranche3.CompleteControl.no_conflicting_guarantees": {
+      "type_sha256": "2ffc5aae0d033b7732ff39187b2144b33550c1352d6210b99e369afbd54879f3",
+      "axioms": []
+    },
+    "Orthemology.Tranche3.CompleteControl.Controls.diagonal_harmony": {
+      "type_sha256": "6e320312b587fdb70601c07aab6cf4b9e9391ce6e17f2de3f45fc2852ebd03ee",
+      "axioms": []
+    },
+    "Orthemology.Tranche3.CompleteControl.Controls.diagonal_is_disconnected": {
+      "type_sha256": "21857c74cd07d331bb0caed50355491ebf5f80960af52fcba66be796d4063315",
+      "axioms": []
+    },
+    "Orthemology.Tranche3.CompleteControl.Controls.or_is_only_one_sided": {
+      "type_sha256": "3927645fdcff57f14d2f1eb91b2a9526ca85cac1f94e1afcae464c2bed449660",
+      "axioms": []
+    },
+    "Orthemology.Tranche3.CompleteControl.Controls.threeEdge": {
+      "type_sha256": "c4b54fd132c27903a98a69223bb406f0bb33ffa6a39d3fbeb4bdbba454ee0eae",
+      "axioms": []
+    },
+    "Orthemology.Tranche3.CompleteControl.Controls.three_edges_force_constancy": {
+      "type_sha256": "cd169be245c746e25bdfaa5313924acace91199a0794d1a472c0fb2efd0e2a30",
+      "axioms": []
+    },
+    "Orthemology.Tranche3.CompleteControl.Controls.three_edge_not_rectangular": {
+      "type_sha256": "39e40fc3e08bdc56c637b70b03ebfcbdb46f5cafd499c65fd069f816d16ff685",
+      "axioms": []
+    },
+    "Orthemology.Tranche3.ProductiveCompleteness.HistoryComplete": {
+      "type_sha256": "48a8fb67a87861a7e939a9a5c0838997c0b60190f6e76f6a52b0605a6996c15a",
+      "axioms": []
+    },
+    "Orthemology.Tranche3.ProductiveCompleteness.UnborrowedActs": {
+      "type_sha256": "a47d435a6ef59bee5187ec0007bd07392ab73a553a8856c4a0498ef607795099",
+      "axioms": []
+    },
+    "Orthemology.Tranche3.ProductiveCompleteness.ProductiveWitness": {
+      "type_sha256": "10bb78c63ae196e1efea205f778e780a99398de1b83face769e906688b9eb97f",
+      "axioms": []
+    },
+    "Orthemology.Tranche3.ProductiveCompleteness.uniqueness_of_history_complete": {
+      "type_sha256": "19d62e3adbaf359ee1a6ac55cb1bb1ee2a78be38e7d7a0a517b8bb072153f53a",
+      "axioms": []
+    },
+    "Orthemology.Tranche3.ProductiveCompleteness.uniqueness_of_universal_activity_scope": {
+      "type_sha256": "62753de0813c6805cb2e955fce8b6acacfbb5a35e9256161b6e5033cef9ddaf3",
+      "axioms": []
+    },
+    "Orthemology.Tranche3.ProductiveCompleteness.Controls.endpointOnly": {
+      "type_sha256": "41030cc98f4b4fffb6aa778b39672e5eebb598c70732127d0758794db582cd52",
+      "axioms": []
+    },
+    "Orthemology.Tranche3.ProductiveCompleteness.Controls.everyMode": {
+      "type_sha256": "e3406d948dc0cacf8f79e96acbca5c55e98d9000102360de6edf043aff14e56a",
+      "axioms": []
+    },
+    "Orthemology.Tranche3.ProductiveCompleteness.Controls.ownMode": {
+      "type_sha256": "10c197d667c08c38d3a61c3340f0b9ba8c63b63f25857e85972a466090e1baae",
+      "axioms": []
+    },
+    "Orthemology.Tranche3.ProductiveCompleteness.Controls.endpoint_sufficiency_does_not_give_history_closure": {
+      "type_sha256": "9b53d4bc9f1142a48a0f9301d041f03ca55fe28f6cda5bcb40e6c877836a10a1",
+      "axioms": [
+        "Quot.sound",
+        "propext"
+      ]
+    },
+    "Orthemology.Tranche3.IntegratedContingency.Ex": {
+      "type_sha256": "36b65c27ebd10b4b0cb3f5e5e8e56ec60742538a3dbbb988e65471b2f142214b",
+      "axioms": [
+        "propext"
+      ]
+    },
+    "Orthemology.Tranche3.IntegratedContingency.Dep": {
+      "type_sha256": "0ddb0bf590b584cf66a415ec7490436ea6b96524be5db1d3fcd0aa0a972cada3",
+      "axioms": [
+        "propext"
+      ]
+    },
+    "Orthemology.Tranche3.IntegratedContingency.Will": {
+      "type_sha256": "d3c09339aefafdb39032a9f2331ad2397cd42c09dab37db22cbfc851f6764df3",
+      "axioms": []
+    },
+    "Orthemology.Tranche3.IntegratedContingency.Power": {
+      "type_sha256": "b3b3a685c13eb4549808762620c44eb85c82c593dae962e078e73e9ec2f3cbba",
+      "axioms": []
+    },
+    "Orthemology.Tranche3.IntegratedContingency.source_with_contingent_effect": {
+      "type_sha256": "e3592526ad9e392a3cf7370a8cd0e75b6149604cc7c9f796ee3d845aec9b8a88",
+      "axioms": [
+        "Classical.choice",
+        "Quot.sound",
+        "propext"
+      ]
+    },
+    "Orthemology.Tranche3.IntegratedContingency.Complete": {
+      "type_sha256": "2b6bf6a34fd32861e8e05c9ddb750c26ee1efcb4bca67ec6f433f444180fdde3",
+      "axioms": [
+        "propext"
+      ]
+    },
+    "Orthemology.Tranche3.IntegratedContingency.Mode": {
+      "type_sha256": "3fd9c7620001716fbfdc66cff567da15a0a17182cbbbace904061a7af71f4c2f",
+      "axioms": []
+    },
+    "Orthemology.Tranche3.IntegratedContingency.Proper": {
+      "type_sha256": "4967c4a35c317dec8e066c9551c12e53195850f5c964d2a9aebe83479558a715",
+      "axioms": [
+        "propext"
+      ]
+    },
+    "Orthemology.Tranche3.IntegratedContingency.Account": {
+      "type_sha256": "be6ab4532fed74e6722b5b8f842adea31a3d8c5b21c4a53884c756d5ee7e32f1",
+      "axioms": [
+        "propext"
+      ]
+    },
+    "Orthemology.Tranche3.IntegratedContingency.productive_package_is_inhabited": {
+      "type_sha256": "48207ff6bbac84e65a7c7e0533d51544fde0dbf77bc39829400677bf175164cf",
+      "axioms": [
+        "Quot.sound",
+        "propext"
+      ]
+    },
+    "Orthemology.Tranche3.IntegratedContingency.integrated_noncollapse_witness": {
+      "type_sha256": "87abd1b0cfca28123ed4ff84018490bbfdf5a81552d85d30cda1f2ccda356951",
+      "axioms": [
+        "Classical.choice",
+        "Quot.sound",
+        "propext"
+      ]
+    },
+    "IndependentOrthabilityControls.closure_is_indispensable": {
+      "type_sha256": "28df0eb1cb26808c0ce94a05145aec454192adae88f779dd6d4bd3d28efa1321",
+      "axioms": [
+        "Quot.sound",
+        "propext"
+      ]
+    },
+    "IndependentOrthabilityControls.unborrowed_is_indispensable": {
+      "type_sha256": "2e732b473cb07b66bf0b30093cc20eafc56b2eb3046867e6cc0ee907d819e3e5",
+      "axioms": [
+        "Quot.sound",
+        "propext"
+      ]
+    },
+    "IndependentOrthabilityControls.witness_is_indispensable": {
+      "type_sha256": "918113c3a152830fa992c6fa5a7ad21c6057a87361ebbf6ad4f94f3230fb9f2e",
+      "axioms": [
+        "Quot.sound",
+        "propext"
+      ]
+    },
+    "IndependentOrthabilityControls.generic_reception_is_not_necessity": {
+      "type_sha256": "4d70531eff5e05c91b94627c1450fa9bd6a15c11299df0d9c46daa972a100381",
+      "axioms": [
+        "Quot.sound",
+        "propext"
+      ]
+    },
+    "IndependentOrthabilityControls.actual_root_is_indispensable": {
+      "type_sha256": "f31816ae8c6341d3ff99b5c7a283e577dcc4388520e7b540e0d682405f46e3ef",
+      "axioms": [
+        "Quot.sound",
+        "propext"
+      ]
+    },
+    "IndependentOrthabilityControls.uniform_roothood_is_not_uniqueness": {
+      "type_sha256": "54cfc8a1e1d653bcfd99bc2dc30d5ecdba46b056438fd547275d679e76cbb412",
+      "axioms": []
+    },
+    "IndependentOrthabilityControls.empty_compatibility_allows_variation": {
+      "type_sha256": "8f6ff735c172aaba855d856a8a617dbd651260a41c11b03aa2f2f50108e28f97",
+      "axioms": []
+    },
+    "IndependentOrthabilityControls.rectangular_nonempty_is_essential": {
+      "type_sha256": "9758338bf5f21ed03de310697e69b933d9c2557f85b531a648dae79c9829ebcc",
+      "axioms": []
+    },
+    "IndependentOrthabilityControls.model_has_actual_effect": {
+      "type_sha256": "d8ca12df1a974315da27402c8df137388b82e715e83b5ea9b484e1b311e9ea27",
+      "axioms": [
+        "propext"
+      ]
+    },
+    "IndependentOrthabilityControls.power_does_not_fix_will": {
+      "type_sha256": "df61cc1fbef2a66f80f657906d33f62640405bb9a591fca47b5b36df630d55bd",
+      "axioms": []
+    }
+  },
+  "original_controls": "NOT_RUN",
+  "original_receipt_sha256": "53453a2920c5c69b9df80f4bbff8934636ed13f70202343ffbbb4145c4d224ea",
+  "original_driver_sha256": "4933d602f18c749ff170629964914907bf1c5bf05160329bd8aab623dfd65f98",
+  "execution_kind": "FRESH_CUSTOM_CLOSURE",
+  "finished_utc": "2026-10-02T05:42:34.892959+00:00",
+  "scope": "Source-bound custom closure and selected declaration readbacks. Types are represented by hashes of the exact printed types; complete logs remain private. Official caches are trusted. This does not establish ordinary proof, runtime completeness, empirical or normative warrant, novelty, external human review or merged adoption."
+}

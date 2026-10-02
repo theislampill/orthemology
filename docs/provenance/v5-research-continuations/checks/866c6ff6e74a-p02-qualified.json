@@ -1,0 +1,2923 @@
+{
+  "status": "FRESH_KERNEL_COMPONENTS",
+  "exit_code": 0,
+  "kernel_verified": true,
+  "suite_id": "866c6ff6e74a-p02-qualified",
+  "suite_sha256": "a3f3a4883115e911976baa3c1e7f61de732f7d3cc37b28678c36c12f6de234c0",
+  "source_hashes": {
+    "P02A2.ObserverCore": "e032088073d2fd667f568de952afba3f2b84aa500d4303ff37268e125fd363e5",
+    "LoopRenaming": "3fa0d92a221427c1ffdde94cbb34374952112e7a5d6e50e26778ac7aefbdbe89",
+    "SurvivorCandidates": "a69f3bb7726f6b8afbe12c2fc41ab56ad3ef1d36d78858ff8d8497fbb883f89e",
+    "CandidateCompiler": "7835d072e31efd49b1dbd416be49ca1ab24cda1afeb38c8ec408e9122cdd0cfc",
+    "P02A2.MeasureCore": "acd3d802db12b8b610ee8301f63f36b04906bedb2a28995c719aa7eb16f8047b",
+    "Q8Measure": "b815803aa2aff0656830d0d2384225215687ef473ff124a4de82198dc8e20048",
+    "InnovationMeasure": "77effa27df0ef2d7c97ed670cbae5525698708149ab148308d6f6d34573af7bc",
+    "SurvivorPrimrec": "905491ae8dc081bb2374caf8fdb91c9b5d6b3028428b1851c8882af9b0eee8a4",
+    "Q8Machine": "eb2e669fe278c0cf9feef49ce315cc55da13ae77960beb29f6d68b4e06e23e44",
+    "Q8Compiler": "34fd76a9ab81edffb61134ad8ea8f39ffd1571b90b9e64af4352ee4a8a6a1cb2",
+    "Sigma2RowLaw": "285808eb9aa6b1878d97aeeaaf806f58b5a461152ead50a623012b5ac49329e1",
+    "LoopPrimrec": "f01b305287f3ae1d977ee72e62e9ea1ab4068358a324933b38572f1c66f02998",
+    "Sigma2SourceMatrix": "fef6d15b3d4e8df6b26caf5f6148ac876338adbc621d287175f7e0a0eebb304b",
+    "CandidateSource": "3b6c855f505eb1484467048398747283a6da46002a809fc9114932b3cd7fa9d7",
+    "CandidateWitnesses": "dff9e373464e90db066e2cc1c18a81a5723ccde8cd20278c5b307a308c57c14e",
+    "LoopInliningWitnesses": "cb4ea35d6f17be3971a921e495e76d1830b692433705f1c01b459cd847ed284f",
+    "P02.MeasureCore": "a7cd3994ec4bb0ca8b897ee7cc5d3092fd3b8615cfc4c4c8b7d26f7c7827d510",
+    "P02.T300ThreeBit": "db49f44c8e562db1034304ac770bdac6fd884fb45e596b254f7e8f21d6400fa6",
+    "P02": "7de7568a694c7b42b4bcb0b48101431944ab4d1908521468cff3c261f943aff0",
+    "P02A2.Mixture": "ca0993e8c106672be0732f289c3040eb4929d3913b701a974a1371eccac62f66",
+    "P02A2.Refinement": "6bcc51d54debb63822cc9e4e95023b86b2e664462842ca6c81395a26c48bc158",
+    "P02A2.FiniteLaw": "6fc53381792db1d718fffb1e207db3e469d88147ddbaa8d0037614939441b11f",
+    "P02A2.AllNParity": "527e11239cdf880b52993f1737560c5dbfb7f3fb1424a9302e8f4cd2acc50ba7",
+    "P02A2.Flow": "262dbaf5d6ad39cce576ce7ef7aa247612d0b1ef9222459c8d3a3b719ded4770",
+    "P02A2.Fibres": "10db75c79f8286c1c69dae038577141f6c901d7a8fd5dbe77f464447f149b7b9",
+    "P02A2.Observation": "f74a3d14879ac7900f60e3460e75565c0d0c4f8649bd701de92ec8a9b86da08e",
+    "P02A2.Stationary": "a78f6f3705b95c704edf0721f493a8c6ee8ddcf6ff8e76ce8bc1b122e7401915",
+    "P02A2.SimplexStationary": "3dc9af004d538724b19288fcb169c4e65b62d12e251c29ae0b154ad14e4d5c85",
+    "P02A2.ParityBridge": "34518db955169af9a1bb9756ad41e10370b0560130b9f537e7b7e0749f044dd1",
+    "P02A2.FiniteMeasureBridge": "a2ee7cd36a61ce0097a9815d6b17e23854522757b812e68e0aa5bc8560d7973c",
+    "P02A2": "3759227a8cc0f2396070a38ec1b47d5de601eccc906d18eeb2f7ffd4a3218904",
+    "Q8Primrec": "b3134d7b472d047d5c4571ce3d723c60025f2ac3058386f5d25f62b0bb717749",
+    "Q8Witnesses": "6b39972cfd6decde18b129db470eab3d11a8891a6cca50401eb4d45f3bdd3dec",
+    "Sigma2Compiled": "e07cdba14f17b47066bdd4e1ac69ee5c9e622f6456952db34817944d0d406b06",
+    "Sigma2Witnesses": "9e006a64fdeeb1b8f82158cb4b33cf6a681100690dd24e0e1724042aec1d13a5"
+  },
+  "post_source_hashes": {
+    "P02A2.ObserverCore": "e032088073d2fd667f568de952afba3f2b84aa500d4303ff37268e125fd363e5",
+    "LoopRenaming": "3fa0d92a221427c1ffdde94cbb34374952112e7a5d6e50e26778ac7aefbdbe89",
+    "SurvivorCandidates": "a69f3bb7726f6b8afbe12c2fc41ab56ad3ef1d36d78858ff8d8497fbb883f89e",
+    "CandidateCompiler": "7835d072e31efd49b1dbd416be49ca1ab24cda1afeb38c8ec408e9122cdd0cfc",
+    "P02A2.MeasureCore": "acd3d802db12b8b610ee8301f63f36b04906bedb2a28995c719aa7eb16f8047b",
+    "Q8Measure": "b815803aa2aff0656830d0d2384225215687ef473ff124a4de82198dc8e20048",
+    "InnovationMeasure": "77effa27df0ef2d7c97ed670cbae5525698708149ab148308d6f6d34573af7bc",
+    "SurvivorPrimrec": "905491ae8dc081bb2374caf8fdb91c9b5d6b3028428b1851c8882af9b0eee8a4",
+    "Q8Machine": "eb2e669fe278c0cf9feef49ce315cc55da13ae77960beb29f6d68b4e06e23e44",
+    "Q8Compiler": "34fd76a9ab81edffb61134ad8ea8f39ffd1571b90b9e64af4352ee4a8a6a1cb2",
+    "Sigma2RowLaw": "285808eb9aa6b1878d97aeeaaf806f58b5a461152ead50a623012b5ac49329e1",
+    "LoopPrimrec": "f01b305287f3ae1d977ee72e62e9ea1ab4068358a324933b38572f1c66f02998",
+    "Sigma2SourceMatrix": "fef6d15b3d4e8df6b26caf5f6148ac876338adbc621d287175f7e0a0eebb304b",
+    "CandidateSource": "3b6c855f505eb1484467048398747283a6da46002a809fc9114932b3cd7fa9d7",
+    "CandidateWitnesses": "dff9e373464e90db066e2cc1c18a81a5723ccde8cd20278c5b307a308c57c14e",
+    "LoopInliningWitnesses": "cb4ea35d6f17be3971a921e495e76d1830b692433705f1c01b459cd847ed284f",
+    "P02.MeasureCore": "a7cd3994ec4bb0ca8b897ee7cc5d3092fd3b8615cfc4c4c8b7d26f7c7827d510",
+    "P02.T300ThreeBit": "db49f44c8e562db1034304ac770bdac6fd884fb45e596b254f7e8f21d6400fa6",
+    "P02": "7de7568a694c7b42b4bcb0b48101431944ab4d1908521468cff3c261f943aff0",
+    "P02A2.Mixture": "ca0993e8c106672be0732f289c3040eb4929d3913b701a974a1371eccac62f66",
+    "P02A2.Refinement": "6bcc51d54debb63822cc9e4e95023b86b2e664462842ca6c81395a26c48bc158",
+    "P02A2.FiniteLaw": "6fc53381792db1d718fffb1e207db3e469d88147ddbaa8d0037614939441b11f",
+    "P02A2.AllNParity": "527e11239cdf880b52993f1737560c5dbfb7f3fb1424a9302e8f4cd2acc50ba7",
+    "P02A2.Flow": "262dbaf5d6ad39cce576ce7ef7aa247612d0b1ef9222459c8d3a3b719ded4770",
+    "P02A2.Fibres": "10db75c79f8286c1c69dae038577141f6c901d7a8fd5dbe77f464447f149b7b9",
+    "P02A2.Observation": "f74a3d14879ac7900f60e3460e75565c0d0c4f8649bd701de92ec8a9b86da08e",
+    "P02A2.Stationary": "a78f6f3705b95c704edf0721f493a8c6ee8ddcf6ff8e76ce8bc1b122e7401915",
+    "P02A2.SimplexStationary": "3dc9af004d538724b19288fcb169c4e65b62d12e251c29ae0b154ad14e4d5c85",
+    "P02A2.ParityBridge": "34518db955169af9a1bb9756ad41e10370b0560130b9f537e7b7e0749f044dd1",
+    "P02A2.FiniteMeasureBridge": "a2ee7cd36a61ce0097a9815d6b17e23854522757b812e68e0aa5bc8560d7973c",
+    "P02A2": "3759227a8cc0f2396070a38ec1b47d5de601eccc906d18eeb2f7ffd4a3218904",
+    "Q8Primrec": "b3134d7b472d047d5c4571ce3d723c60025f2ac3058386f5d25f62b0bb717749",
+    "Q8Witnesses": "6b39972cfd6decde18b129db470eab3d11a8891a6cca50401eb4d45f3bdd3dec",
+    "Sigma2Compiled": "e07cdba14f17b47066bdd4e1ac69ee5c9e622f6456952db34817944d0d406b06",
+    "Sigma2Witnesses": "9e006a64fdeeb1b8f82158cb4b33cf6a681100690dd24e0e1724042aec1d13a5"
+  },
+  "compiler_sha256": "92c3d35b5bfaa5e0fea413a775d504cf46cd95e1345df61c2274f76779e7e023",
+  "pins": {
+    "lean_version": "4.19.0",
+    "lean_binary_sha256": "92c3d35b5bfaa5e0fea413a775d504cf46cd95e1345df61c2274f76779e7e023",
+    "packages": [
+      {
+        "name": "mathlib",
+        "revision": "c44e0c8ee63ca166450922a373c7409c5d26b00b"
+      },
+      {
+        "name": "plausible",
+        "revision": "77e08eddc486491d7b9e470926b3dbe50319451a"
+      },
+      {
+        "name": "LeanSearchClient",
+        "revision": "25078369972d295301f5a1e53c3e5850cf6d9d4c"
+      },
+      {
+        "name": "importGraph",
+        "revision": "e6a9f0f5ee3ccf7443a0070f92b62f8db12ae82b"
+      },
+      {
+        "name": "proofwidgets",
+        "revision": "c4919189477c3221e6a204008998b0d724f49904"
+      },
+      {
+        "name": "aesop",
+        "revision": "5d50b08dedd7d69b3d9b3176e0d58a23af228884"
+      },
+      {
+        "name": "Qq",
+        "revision": "fa4f7f15d97591a9cf3aa7724ba371c7fc6dda02"
+      },
+      {
+        "name": "batteries",
+        "revision": "f5d04a9c4973d401c8c92500711518f7c656f034"
+      },
+      {
+        "name": "Cli",
+        "revision": "02dbd02bc00ec4916e99b04b2245b30200e200d0"
+      }
+    ]
+  },
+  "modules": [
+    {
+      "module": "P02A2.ObserverCore",
+      "source_sha256": "e032088073d2fd667f568de952afba3f2b84aa500d4303ff37268e125fd363e5",
+      "object_sha256": "167ff29621e3d1e034713d43e3e48fd5f71830a1931cfcf0cca6e0920c4d3170",
+      "transitive_source_fingerprint": "02325b8d037b8bc24bae5d5c35f594b0f0510752d0efc7da8fc8dd525626ac57",
+      "status": "FRESH_COMPILE",
+      "exit_code": 0
+    },
+    {
+      "module": "LoopRenaming",
+      "source_sha256": "3fa0d92a221427c1ffdde94cbb34374952112e7a5d6e50e26778ac7aefbdbe89",
+      "object_sha256": "e03847ec603e5538ed2864ec38e828d6059d6849a47a1736ade4fd0e8991e997",
+      "transitive_source_fingerprint": "90a97adb1faa09a721bd1f681513fd31ae5202f2bff16ca20226092c452225ad",
+      "status": "FRESH_COMPILE",
+      "exit_code": 0
+    },
+    {
+      "module": "SurvivorCandidates",
+      "source_sha256": "a69f3bb7726f6b8afbe12c2fc41ab56ad3ef1d36d78858ff8d8497fbb883f89e",
+      "object_sha256": "f0e54f20211f07fa7b05d71302316c3bc324c3f04097ac4e5a9746186eedddde",
+      "transitive_source_fingerprint": "e9be6d90bb03be4ad895da2e9c9fb75c5ceff14e7e32b49c5f2a7c874ab10b3d",
+      "status": "FRESH_COMPILE",
+      "exit_code": 0
+    },
+    {
+      "module": "CandidateCompiler",
+      "source_sha256": "7835d072e31efd49b1dbd416be49ca1ab24cda1afeb38c8ec408e9122cdd0cfc",
+      "object_sha256": "8c22955648d059084759d2692d048bc56e04c818070d3a0bd0d9a21778932974",
+      "transitive_source_fingerprint": "e47429c1eef62b10084d30743721a7c275cf2e97138457f03d3a986c2fc4bce5",
+      "status": "FRESH_COMPILE",
+      "exit_code": 0
+    },
+    {
+      "module": "P02A2.MeasureCore",
+      "source_sha256": "acd3d802db12b8b610ee8301f63f36b04906bedb2a28995c719aa7eb16f8047b",
+      "object_sha256": "e63f18ebe7f312a6427bd0f0add48502abb2cd2c8110a2f3782993933c8ae69d",
+      "transitive_source_fingerprint": "25ab8639f0d3a54d1c6c4e72142f0ea47a2fe8ccd1f80498e096278215df806a",
+      "status": "FRESH_COMPILE",
+      "exit_code": 0
+    },
+    {
+      "module": "Q8Measure",
+      "source_sha256": "b815803aa2aff0656830d0d2384225215687ef473ff124a4de82198dc8e20048",
+      "object_sha256": "57734136855c4cbd2ff40481d819e1834070d81c0eee5614cf272cc08ef77785",
+      "transitive_source_fingerprint": "e8d75d66b542b8a7818088ca80ea4fca76bd4dd730d8443a331e33af568a01e6",
+      "status": "FRESH_COMPILE",
+      "exit_code": 0
+    },
+    {
+      "module": "InnovationMeasure",
+      "source_sha256": "77effa27df0ef2d7c97ed670cbae5525698708149ab148308d6f6d34573af7bc",
+      "object_sha256": "c5e3c60fa176737818bb4197eda5d451032324d459d6ddbc083c3d1e4bfcc217",
+      "transitive_source_fingerprint": "f557618d092e4870a844d3297cf48172110c4bf1dd4ae14b8c2830206eb7e680",
+      "status": "FRESH_COMPILE",
+      "exit_code": 0
+    },
+    {
+      "module": "SurvivorPrimrec",
+      "source_sha256": "905491ae8dc081bb2374caf8fdb91c9b5d6b3028428b1851c8882af9b0eee8a4",
+      "object_sha256": "1a9ed3b9a3e4e37f9c4d4dc99208deee89ed6186ba6dd04c3ecad1f9f7f27ff7",
+      "transitive_source_fingerprint": "73be3671ea8455e1cff4c3c8c621adc169b3d2cadc5ed582b8fb91b55004523d",
+      "status": "FRESH_COMPILE",
+      "exit_code": 0
+    },
+    {
+      "module": "Q8Machine",
+      "source_sha256": "eb2e669fe278c0cf9feef49ce315cc55da13ae77960beb29f6d68b4e06e23e44",
+      "object_sha256": "f032262d7d5e9c801ddae283663f5c2c47fde5fa5eebcaea48890c7b1fd9c473",
+      "transitive_source_fingerprint": "02cbf059f18c466944d88e250562d8461adf854efdbbb05a9063b45f5296d546",
+      "status": "FRESH_COMPILE",
+      "exit_code": 0
+    },
+    {
+      "module": "Q8Compiler",
+      "source_sha256": "34fd76a9ab81edffb61134ad8ea8f39ffd1571b90b9e64af4352ee4a8a6a1cb2",
+      "object_sha256": "15c756f339cf33d166870831ebc259c56cda155302101359cb90f28561334b04",
+      "transitive_source_fingerprint": "40762d1ca9c784961dc719718b743a7a56a27c86be7a226eaa89083b7e12aa4f",
+      "status": "FRESH_COMPILE",
+      "exit_code": 0
+    },
+    {
+      "module": "Sigma2RowLaw",
+      "source_sha256": "285808eb9aa6b1878d97aeeaaf806f58b5a461152ead50a623012b5ac49329e1",
+      "object_sha256": "722c81292b59ae36b63a4dbb09de6eeade292a934f11de8163ee3a9fba557201",
+      "transitive_source_fingerprint": "44cbf335f57652de20d3a229931fb22d06e8b86d081cd64aba0d4d184fd2b262",
+      "status": "FRESH_COMPILE",
+      "exit_code": 0
+    },
+    {
+      "module": "LoopPrimrec",
+      "source_sha256": "f01b305287f3ae1d977ee72e62e9ea1ab4068358a324933b38572f1c66f02998",
+      "object_sha256": "9afc76fac8381466c35132938de5fd9ce5b94b0076c10bb97c79b604100ee710",
+      "transitive_source_fingerprint": "0339fb08d3df15f9826789f471ad636fc4868fa661bdb88832b6d4cc405cd60d",
+      "status": "FRESH_COMPILE",
+      "exit_code": 0
+    },
+    {
+      "module": "Sigma2SourceMatrix",
+      "source_sha256": "fef6d15b3d4e8df6b26caf5f6148ac876338adbc621d287175f7e0a0eebb304b",
+      "object_sha256": "74b22adb4a71d91ec1669a8f2519c732f7ccaabcb1d638a152f5c2cadf8cab90",
+      "transitive_source_fingerprint": "7afc8c924b160dd8d6121b519528dd33585c6254854559ecfa7cc7166215abd1",
+      "status": "FRESH_COMPILE",
+      "exit_code": 0
+    },
+    {
+      "module": "CandidateSource",
+      "source_sha256": "3b6c855f505eb1484467048398747283a6da46002a809fc9114932b3cd7fa9d7",
+      "object_sha256": "e059769bc2b20ed4588098201c91e5017431bcb9dbc457355490d4645064663f",
+      "transitive_source_fingerprint": "88e9c3113672506919ba0503d30985f4fd04e6b1a0bc2765c8d7b53c7cde109b",
+      "status": "FRESH_COMPILE",
+      "exit_code": 0
+    },
+    {
+      "module": "CandidateWitnesses",
+      "source_sha256": "dff9e373464e90db066e2cc1c18a81a5723ccde8cd20278c5b307a308c57c14e",
+      "object_sha256": "c4f338d2b6eeba431318294e68fd44d258396176ae544ace21ec3355301fb2e4",
+      "transitive_source_fingerprint": "50ecf9d6227f55fbba908b5811a3730924131a81fc1495934c6ff1f689b4b462",
+      "status": "FRESH_COMPILE",
+      "exit_code": 0
+    },
+    {
+      "module": "LoopInliningWitnesses",
+      "source_sha256": "cb4ea35d6f17be3971a921e495e76d1830b692433705f1c01b459cd847ed284f",
+      "object_sha256": "0105025e195558672f45b13270f478ff92807ad46a74041d443e8eac12776e0a",
+      "transitive_source_fingerprint": "5404c65a357c400c003382112890c90a421501f88a5301324e04be50acc29062",
+      "status": "FRESH_COMPILE",
+      "exit_code": 0
+    },
+    {
+      "module": "P02.MeasureCore",
+      "source_sha256": "a7cd3994ec4bb0ca8b897ee7cc5d3092fd3b8615cfc4c4c8b7d26f7c7827d510",
+      "object_sha256": "af178193673afb35b99ac5e6f6c7d505f6f4a11406eb976cf910971a7f87aa0f",
+      "transitive_source_fingerprint": "e3da06b2c230de30ff3c15fea18e2f1c48f2a4779043b1b2aee3928848a6de15",
+      "status": "FRESH_COMPILE",
+      "exit_code": 0
+    },
+    {
+      "module": "P02.T300ThreeBit",
+      "source_sha256": "db49f44c8e562db1034304ac770bdac6fd884fb45e596b254f7e8f21d6400fa6",
+      "object_sha256": "b88c2aaf8d6525d9ac66616694bd02971770ddc1dc37aac7ec6f7d770e8bdb8d",
+      "transitive_source_fingerprint": "7ec0e9c6f5ad3ab218a98929c32542409b304b8d4d126e25f289a5edf4943ef7",
+      "status": "FRESH_COMPILE",
+      "exit_code": 0
+    },
+    {
+      "module": "P02",
+      "source_sha256": "7de7568a694c7b42b4bcb0b48101431944ab4d1908521468cff3c261f943aff0",
+      "object_sha256": "2a01b4fbf5dd0577dcfea8faf67534cccb602017c51d86f4ff1ef48c0d6d5cc3",
+      "transitive_source_fingerprint": "c81a1359873ac4c9e44f4424b3a3112e6e0dd96c62a6f47c0dc99c0b80447655",
+      "status": "FRESH_COMPILE",
+      "exit_code": 0
+    },
+    {
+      "module": "P02A2.Mixture",
+      "source_sha256": "ca0993e8c106672be0732f289c3040eb4929d3913b701a974a1371eccac62f66",
+      "object_sha256": "e8145b4646f61529e12728ca82d474490cef1160d31af2a094383639ce2d4d11",
+      "transitive_source_fingerprint": "79f765de3dfc04c46102546db056a71f54c04ceba92a14899e7cffe15eb7198b",
+      "status": "FRESH_COMPILE",
+      "exit_code": 0
+    },
+    {
+      "module": "P02A2.Refinement",
+      "source_sha256": "6bcc51d54debb63822cc9e4e95023b86b2e664462842ca6c81395a26c48bc158",
+      "object_sha256": "cbbfedaf3fdddf1a7fc57d964ad723b97f2dc6a0b00896e058c7d66af01f1cd8",
+      "transitive_source_fingerprint": "de70dbdcd219b1d68c99ad84ea8acd5c553fbccd250940511770353c6a50a733",
+      "status": "FRESH_COMPILE",
+      "exit_code": 0
+    },
+    {
+      "module": "P02A2.FiniteLaw",
+      "source_sha256": "6fc53381792db1d718fffb1e207db3e469d88147ddbaa8d0037614939441b11f",
+      "object_sha256": "82f1e93cc46fbec5f8aabffa9e759d64cbf0eb44166b38bf95cc64c33a20e1e4",
+      "transitive_source_fingerprint": "130ec1d7840715b7b8b9d6507810e3d8fcea3e1a07bf6712ae633b7c82bb2a0e",
+      "status": "FRESH_COMPILE",
+      "exit_code": 0
+    },
+    {
+      "module": "P02A2.AllNParity",
+      "source_sha256": "527e11239cdf880b52993f1737560c5dbfb7f3fb1424a9302e8f4cd2acc50ba7",
+      "object_sha256": "ede783a50d4a8b2115fa43032b360b697585eb6cbb944655b2ddf57a34aa38e2",
+      "transitive_source_fingerprint": "2a1950307519035dae909aede796c510cd494c3fa8a7fdf884d0c10046e6e4d7",
+      "status": "FRESH_COMPILE",
+      "exit_code": 0
+    },
+    {
+      "module": "P02A2.Flow",
+      "source_sha256": "262dbaf5d6ad39cce576ce7ef7aa247612d0b1ef9222459c8d3a3b719ded4770",
+      "object_sha256": "6ca7b2c61c63d4966730288954922ae16cf8920b6688b91862fe02afd344482e",
+      "transitive_source_fingerprint": "98a06e6a27332612cb4d6256b68ba6f90441f237999cf2dd4dee60bd6abac0ef",
+      "status": "FRESH_COMPILE",
+      "exit_code": 0
+    },
+    {
+      "module": "P02A2.Fibres",
+      "source_sha256": "10db75c79f8286c1c69dae038577141f6c901d7a8fd5dbe77f464447f149b7b9",
+      "object_sha256": "3eb0545926380812d367b2b859706db51f4f034523c14ef69d8dcf81bff3e0b0",
+      "transitive_source_fingerprint": "c25876681dc0fa1715eb351ecb2afb1434db80e9482d1dd37cee35eb50bc0dfb",
+      "status": "FRESH_COMPILE",
+      "exit_code": 0
+    },
+    {
+      "module": "P02A2.Observation",
+      "source_sha256": "f74a3d14879ac7900f60e3460e75565c0d0c4f8649bd701de92ec8a9b86da08e",
+      "object_sha256": "c4e947ece229087920147af4a30e404d757ddabe22068ac5e6d6f309f0b04b3b",
+      "transitive_source_fingerprint": "829b814dac858799720ffd1ef2020ece041247c0dec578f870c9ed0511f365cc",
+      "status": "FRESH_COMPILE",
+      "exit_code": 0
+    },
+    {
+      "module": "P02A2.Stationary",
+      "source_sha256": "a78f6f3705b95c704edf0721f493a8c6ee8ddcf6ff8e76ce8bc1b122e7401915",
+      "object_sha256": "27bb51216fe6225b56fb93ce8c3732c735563e8d058d66b59b40e276b0a55523",
+      "transitive_source_fingerprint": "6a26e73ea398462d39f1c088b3cd6f92b719ce513abc0b4ed10643b332dc42d6",
+      "status": "FRESH_COMPILE",
+      "exit_code": 0
+    },
+    {
+      "module": "P02A2.SimplexStationary",
+      "source_sha256": "3dc9af004d538724b19288fcb169c4e65b62d12e251c29ae0b154ad14e4d5c85",
+      "object_sha256": "50086fb15a553ecd43d9f3b297c04611151f18adff503a056c415c9a20541c9d",
+      "transitive_source_fingerprint": "c54cfe5a9797f037ace888034f4525d2029b24433f91ae5e57162d3f9a70c732",
+      "status": "FRESH_COMPILE",
+      "exit_code": 0
+    },
+    {
+      "module": "P02A2.ParityBridge",
+      "source_sha256": "34518db955169af9a1bb9756ad41e10370b0560130b9f537e7b7e0749f044dd1",
+      "object_sha256": "b515617860aa22ca7c34fa8a469489f00bba267d023094fc0947a9376373a9e9",
+      "transitive_source_fingerprint": "53c4ee4f04f9d467daceee5f56dd360065de928cde8686f24a3c529c395cfbd9",
+      "status": "FRESH_COMPILE",
+      "exit_code": 0
+    },
+    {
+      "module": "P02A2.FiniteMeasureBridge",
+      "source_sha256": "a2ee7cd36a61ce0097a9815d6b17e23854522757b812e68e0aa5bc8560d7973c",
+      "object_sha256": "eb5e112e444502ae4f7b60bbfdf8b2760ac76e2bd0f871d7d81bb305cab54197",
+      "transitive_source_fingerprint": "e94938ed04d3a54c3ab24323dfbde0b9a409c7216e2b045aa71c217669f6b718",
+      "status": "FRESH_COMPILE",
+      "exit_code": 0
+    },
+    {
+      "module": "P02A2",
+      "source_sha256": "3759227a8cc0f2396070a38ec1b47d5de601eccc906d18eeb2f7ffd4a3218904",
+      "object_sha256": "ec251e34006a256b535e3e3d10bed166a71d9525da0e77e704e44985b1efece3",
+      "transitive_source_fingerprint": "4a26760ddd2bfb907764cd58a71e5458cb3a9b3247339cee1c5fd8e9e9dab9eb",
+      "status": "FRESH_COMPILE",
+      "exit_code": 0
+    },
+    {
+      "module": "Q8Primrec",
+      "source_sha256": "b3134d7b472d047d5c4571ce3d723c60025f2ac3058386f5d25f62b0bb717749",
+      "object_sha256": "5f690610f15c266acdfc6141d41f88e21f7882e78790005e2bbc311df208a118",
+      "transitive_source_fingerprint": "30fb8d76dfc918be44021a422fb474bccabe5c7745c0e0d2d258e6fc429e6f6e",
+      "status": "FRESH_COMPILE",
+      "exit_code": 0
+    },
+    {
+      "module": "Q8Witnesses",
+      "source_sha256": "6b39972cfd6decde18b129db470eab3d11a8891a6cca50401eb4d45f3bdd3dec",
+      "object_sha256": "3d79176f68a5d9c0743decd0517c92da7bd11d8b3e5163b6525662b2dfd3dd73",
+      "transitive_source_fingerprint": "b87f996289310a9e72e7615a629c0a5827463ba47681d28c167103f1fcc637f8",
+      "status": "FRESH_COMPILE",
+      "exit_code": 0
+    },
+    {
+      "module": "Sigma2Compiled",
+      "source_sha256": "e07cdba14f17b47066bdd4e1ac69ee5c9e622f6456952db34817944d0d406b06",
+      "object_sha256": "eb9dbee76b37e450128c6650583f5c9e7d657a8b41e49e46dcedf61b9f0cf4e5",
+      "transitive_source_fingerprint": "95cc5f54b6b729a9d7f0fcf01c38956c1310df1fa5392ce7776fdffbce068138",
+      "status": "FRESH_COMPILE",
+      "exit_code": 0
+    },
+    {
+      "module": "Sigma2Witnesses",
+      "source_sha256": "9e006a64fdeeb1b8f82158cb4b33cf6a681100690dd24e0e1724042aec1d13a5",
+      "object_sha256": "305235e4370fbc1b46206d3f6b7208dd1e4413adfc60b751b16b8780ad28c45d",
+      "transitive_source_fingerprint": "f3e1f0bb3fa10062aa9e91990025df66991d1ff15f4fbe4b6ee73a31798c90a9",
+      "status": "FRESH_COMPILE",
+      "exit_code": 0
+    }
+  ],
+  "readbacks": {
+    "P02A2.AllNParity.solutions_length": {
+      "type_sha256": "f3f8f49af4b4ae621d47575c0b9463c9ef0c9d95908dec1dbc4189cf4aab7578",
+      "axioms": [
+        "propext"
+      ]
+    },
+    "P02A2.AllNParity.free_fixed": {
+      "type_sha256": "dfa5db6c330027edf1ffa814ce93774a1c7c7cce50a5362ff9d69f4d3c788559",
+      "axioms": [
+        "Quot.sound",
+        "propext"
+      ]
+    },
+    "P02A2.AllNParity.free_replicate": {
+      "type_sha256": "6a488f4fcc4b3212936c7a18369a8f33ec6914dac56d5f48967475554ac4b330",
+      "axioms": [
+        "propext"
+      ]
+    },
+    "P02A2.AllNParity.complementary_count": {
+      "type_sha256": "de11ea7f58507d80aa5f4babe21176ab499e08e262c6e926fda09fe2f28f17f8",
+      "axioms": [
+        "Quot.sound",
+        "propext"
+      ]
+    },
+    "P02A2.AllNParity.proper_mask_count": {
+      "type_sha256": "3a1281c3f19eaebc379b1aff3c3eb613cdfc0fd9ab28b15b403fb1dc808049f8",
+      "axioms": [
+        "Classical.choice",
+        "Quot.sound",
+        "propext"
+      ]
+    },
+    "P02A2.AllNParity.full_parity_count": {
+      "type_sha256": "adcbca41ef1a5e23c73fa781b4c0e2700f85653d2bf56ef65a74009cd177f0a5",
+      "axioms": [
+        "Classical.choice",
+        "Quot.sound",
+        "propext"
+      ]
+    },
+    "P02A2.AllNParity.proper_mask_marginal": {
+      "type_sha256": "33c22c590ce6af254a267cd20195aa7fa019f2ed0ab86cc4cba2cff926dd28a5",
+      "axioms": [
+        "Classical.choice",
+        "Quot.sound",
+        "propext"
+      ]
+    },
+    "P02A2.AllNParity.parity_marginals_equal": {
+      "type_sha256": "acf0352d8d63bb67b0d8cd5a289a644b2a0efda30aa860b626bd1d31076d9102",
+      "axioms": [
+        "Classical.choice",
+        "Quot.sound",
+        "propext"
+      ]
+    },
+    "P02A2.AllNParity.mixture_pair_00": {
+      "type_sha256": "ae258bbf367b1ece6c23fa24560966a429e7c63f0eb89fdad00c51d122f88e92",
+      "axioms": [
+        "Classical.choice",
+        "Quot.sound",
+        "propext"
+      ]
+    },
+    "P02A2.AllNParity.mixture_pair_other": {
+      "type_sha256": "647143c9769923bd7e6a3b7a30cab04fe7a06aa7049081308632bf97d89a184f",
+      "axioms": [
+        "Classical.choice",
+        "Quot.sound",
+        "propext"
+      ]
+    },
+    "P02A2.AllNParity.mixture_half_profile": {
+      "type_sha256": "765466f718ba99ae98faaa3b93b24420ea418338efddf334f1eeac2a3eb49784",
+      "axioms": [
+        "Classical.choice",
+        "Quot.sound",
+        "propext"
+      ]
+    },
+    "P02A2.positive_fibre": {
+      "type_sha256": "99676a8a2c2fc2afa8341523b0f3afe8113ad5d4f98332575ef95efd260eba48",
+      "axioms": [
+        "Classical.choice",
+        "Quot.sound",
+        "propext"
+      ]
+    },
+    "P02A2.weighted_fibre_mass": {
+      "type_sha256": "024b5571067f2a7a4432a7393322f4c3d7c70853ee02c36416016d8993f6df11",
+      "axioms": [
+        "Classical.choice",
+        "Quot.sound",
+        "propext"
+      ]
+    },
+    "P02A2.positive_fibre_partition": {
+      "type_sha256": "3598856cb8bc632f7f752ad9fd57f75d4640246a49a215672ad535f5fb61ef30",
+      "axioms": [
+        "Classical.choice",
+        "Quot.sound",
+        "propext"
+      ]
+    },
+    "P02A2.mass_as_sum_weighted_fibres": {
+      "type_sha256": "3f4ef38012220144be5ed66f7195c15c5329713833126bd034b8f7459192819f",
+      "axioms": [
+        "Classical.choice",
+        "Quot.sound",
+        "propext"
+      ]
+    },
+    "P02A2.mass_add_diffuseMass": {
+      "type_sha256": "7108244cb1c7863cdefa7d06784ef1c438ef4c1cc2dd68c11df7be0621d7fe01",
+      "axioms": [
+        "Classical.choice",
+        "Quot.sound",
+        "propext"
+      ]
+    },
+    "P02A2.defect_eq_diffuse_toReal": {
+      "type_sha256": "00aa544b4e4ff9e14ee365c49e1cd197aed64a18f63c751c60b3f36e84aa66da",
+      "axioms": [
+        "Classical.choice",
+        "Quot.sound",
+        "propext"
+      ]
+    },
+    "P02A2.weighted_fibre_diffuse": {
+      "type_sha256": "dfcc2bd213da8a5f871780a2d6958a84479595c000a9f76b470432aff9c0827a",
+      "axioms": [
+        "Classical.choice",
+        "Quot.sound",
+        "propext"
+      ]
+    },
+    "P02A2.diffuse_fibre_identity": {
+      "type_sha256": "d12faeac6669cc351723dc7e266c303fc1e383a7f76d805a3af25fc06e987a4b",
+      "axioms": [
+        "Classical.choice",
+        "Quot.sound",
+        "propext"
+      ]
+    },
+    "P02A2.defect_fibre_identity": {
+      "type_sha256": "dd003f93f283ec526f2e0e7763ad38b2bfb7b7b063d52b4b63ee463d396b6964",
+      "axioms": [
+        "Classical.choice",
+        "Quot.sound",
+        "propext"
+      ]
+    },
+    "P02A2.FiniteLaw.mix_event": {
+      "type_sha256": "eaa45c8bdea89eb0f68289436e4358cca6a4d1ffb1bee2aaf777c7665e1a5ac8",
+      "axioms": [
+        "Classical.choice",
+        "Quot.sound",
+        "propext"
+      ]
+    },
+    "P02A2.FiniteLaw.push_event": {
+      "type_sha256": "b73219b01427fc845edd2b084c5d042458102c1d6a047540b2062d9563cba304",
+      "axioms": [
+        "Classical.choice",
+        "Quot.sound",
+        "propext"
+      ]
+    },
+    "P02A2.FiniteLaw.complete_length": {
+      "type_sha256": "a365c49eeb2d670515bf121a663158d4d449cadd1879ab60ae7a8cb1fc3244f2",
+      "axioms": [
+        "propext"
+      ]
+    },
+    "P02A2.FiniteLaw.complete_unique": {
+      "type_sha256": "78e303b3f955b573dd34abae7ed9658f9e3b40b21170387cf86a951c5626b9dd",
+      "axioms": [
+        "propext"
+      ]
+    },
+    "P02A2.FiniteMeasureBridge.bind_event": {
+      "type_sha256": "1ac51c6d4f69a39c45bac7f1fe515d291f3b8bdf0ef95ff313b36574c9dbb9b9",
+      "axioms": [
+        "Classical.choice",
+        "Quot.sound",
+        "propext"
+      ]
+    },
+    "P02A2.FiniteMeasureBridge.toMeasure_apply": {
+      "type_sha256": "89abaae2f21392dc5bc475f418d8f80783be62333228e4816e19c83084ae1387",
+      "axioms": [
+        "Classical.choice",
+        "Quot.sound",
+        "propext"
+      ]
+    },
+    "P02A2.FiniteMeasureBridge.toMeasure_total": {
+      "type_sha256": "7aebfd647aad20bb0ba49e51d91a6f4459f3b56e5bcedc0ddbeb6eebebe9cad5",
+      "axioms": [
+        "Classical.choice",
+        "Quot.sound",
+        "propext"
+      ]
+    },
+    "P02A2.FiniteMeasureBridge.toMeasure_push": {
+      "type_sha256": "3f9851f77fe8aee0f9f2a916d46a71bd57ac48532cab3471b20be3b57faed46c",
+      "axioms": [
+        "Classical.choice",
+        "Quot.sound",
+        "propext"
+      ]
+    },
+    "P02A2.FiniteMeasureBridge.toMeasure_bind_event": {
+      "type_sha256": "02001d5ae3df04afc6e2d1e7c704044da23424753e1c41fd655f26481f3d549e",
+      "axioms": [
+        "Classical.choice",
+        "Quot.sound",
+        "propext"
+      ]
+    },
+    "P02A2.FiniteMeasureBridge.finite_law_zero_defect": {
+      "type_sha256": "7d474dd64a683d2c2a1c71104a6d3a48a837dcfe8a4d0433e11bbf27e853d69e",
+      "axioms": [
+        "Classical.choice",
+        "Quot.sound",
+        "propext"
+      ]
+    },
+    "P02A2.Flow.stationary_to_flow": {
+      "type_sha256": "e9796a475c0a2ca8d4d51d6f3aba414bda02fed47172a5b2a8b4ce9e434ecacd",
+      "axioms": [
+        "Classical.choice",
+        "Quot.sound",
+        "propext"
+      ]
+    },
+    "P02A2.Flow.zero_row": {
+      "type_sha256": "6e094f43740289acc4be7e11001d1fd65897105ac2f42d12ff48b9889031806f",
+      "axioms": [
+        "Classical.choice",
+        "Quot.sound",
+        "propext"
+      ]
+    },
+    "P02A2.Flow.flow_to_stationary": {
+      "type_sha256": "89b8b2e19e1de837ec812aad53b383f199dde7a7bb8e99287bd31bd5222042d8",
+      "axioms": [
+        "Classical.choice",
+        "Quot.sound",
+        "propext"
+      ]
+    },
+    "P02A2.positive_countable": {
+      "type_sha256": "c49f14a3be5fb7a943edfdf039fc19153c2c8856a1c0114fbc0c22f808592bee",
+      "axioms": [
+        "Classical.choice",
+        "Quot.sound",
+        "propext"
+      ]
+    },
+    "P02A2.positive_measurable": {
+      "type_sha256": "1c2fcba2f18af40661b43cbf43561e9e653970ea7038c1cc3a6fec4c87ce17de",
+      "axioms": [
+        "Classical.choice",
+        "Quot.sound",
+        "propext"
+      ]
+    },
+    "P02A2.positive_le_total": {
+      "type_sha256": "95dfcba1a875051ceb99943eed376efa289b59d54f09dd7e43472ac1e3011331",
+      "axioms": [
+        "Classical.choice",
+        "Quot.sound",
+        "propext"
+      ]
+    },
+    "P02A2.positive_mem_conull": {
+      "type_sha256": "391bb7225baccbcd8d06e0c88fa90fb54bfa657415493397466bdd1caa86ce8b",
+      "axioms": [
+        "Classical.choice",
+        "Quot.sound",
+        "propext"
+      ]
+    },
+    "P02A2.positive_subset_inter": {
+      "type_sha256": "04eca07fc9c8529645de1ad74d0e0583ef57965575ddb8ba7fe4a21e9fc0aace",
+      "axioms": [
+        "Classical.choice",
+        "Quot.sound",
+        "propext"
+      ]
+    },
+    "P02A2.mass_le_conull_inter": {
+      "type_sha256": "7ea327b585caa6c6983a503c293bcac97adabf3dcd71d3fab38ee536ca22a7d1",
+      "axioms": [
+        "Classical.choice",
+        "Quot.sound",
+        "propext"
+      ]
+    },
+    "P02A2.null_singleton_of_not_positive": {
+      "type_sha256": "822886accbd1f2de8dfb86958b7df54adf6d8fb8c60c99668091d462b66e925f",
+      "axioms": [
+        "Classical.choice",
+        "Quot.sound",
+        "propext"
+      ]
+    },
+    "P02A2.singleton_complement_conull": {
+      "type_sha256": "5d19ee4f51d626b27f370fc3ef055a1e5e56569760e48f94e1c2fb3babd5940a",
+      "axioms": [
+        "Classical.choice",
+        "Quot.sound",
+        "propext"
+      ]
+    },
+    "P02A2.attaining_family": {
+      "type_sha256": "e9ccd2df095e28a56ef68b7fce277df1aded4389be3cb4ecd6659ec52731bb34",
+      "axioms": [
+        "Classical.choice",
+        "Quot.sound",
+        "propext"
+      ]
+    },
+    "P02A2.countable_null": {
+      "type_sha256": "088ebf6955a44969b64f7b823d5476a17bc65d49c94b06650490024613d75291",
+      "axioms": [
+        "Classical.choice",
+        "Quot.sound",
+        "propext"
+      ]
+    },
+    "P02A2.countable_sdiff_positive_null": {
+      "type_sha256": "8e230cc68ede45c9ff934b4cdf3f5299291245402b3cb345115c30e33aedac5a",
+      "axioms": [
+        "Classical.choice",
+        "Quot.sound",
+        "propext"
+      ]
+    },
+    "P02A2.mass_eq_countable_superset": {
+      "type_sha256": "866bf6ccc96187fa90ddf0f69115aab8c5eace5dd57b3450bc5d3e69bc47b1cf",
+      "axioms": [
+        "Classical.choice",
+        "Quot.sound",
+        "propext"
+      ]
+    },
+    "P02A2.countable_carrier_mass_one": {
+      "type_sha256": "386304be27b65c122503fa083715f76ee71ff995947afac5180251a89de61229",
+      "axioms": [
+        "Classical.choice",
+        "Quot.sound",
+        "propext"
+      ]
+    },
+    "P02A2.map_singleton": {
+      "type_sha256": "f5513001d6ec3485f20f95b4aa9c137d24ee3574ed8bc9881c841f246400e11b",
+      "axioms": [
+        "Classical.choice",
+        "Quot.sound",
+        "propext"
+      ]
+    },
+    "P02A2.positive_maps_positive": {
+      "type_sha256": "7fc0375872f973bd5b535a14f255a6a91e76dd0b91041005efd60b6c4ec6b188",
+      "axioms": [
+        "Classical.choice",
+        "Quot.sound",
+        "propext"
+      ]
+    },
+    "P02A2.positive_subset_preimage": {
+      "type_sha256": "ecc6f951d89b99422994b2bbc314a930a2c23ab8d148060f7c74baf7ec68d1a3",
+      "axioms": [
+        "Classical.choice",
+        "Quot.sound",
+        "propext"
+      ]
+    },
+    "P02A2.mass_map_mono": {
+      "type_sha256": "9238449c8945413f566b0605c788a468081903658c21a322a06e9387eb1e51ba",
+      "axioms": [
+        "Classical.choice",
+        "Quot.sound",
+        "propext"
+      ]
+    },
+    "P02A2.fibre_eval": {
+      "type_sha256": "a01acb2563f680b38c424378658f49a7c2a665d2f1aef5466c23868836a995f6",
+      "axioms": [
+        "Classical.choice",
+        "Quot.sound",
+        "propext"
+      ]
+    },
+    "P02A2.fibre_total": {
+      "type_sha256": "4bb2f9dbff8785229393fc2366b83ba02f9ac571db850bbecfa2bc544be3dfd4",
+      "axioms": [
+        "Classical.choice",
+        "Quot.sound",
+        "propext"
+      ]
+    },
+    "P02A2.commonPositive_countable": {
+      "type_sha256": "5b571ed07d12abf806a71655bc3dc3b861bb1df183b4f989189a076a19d64154",
+      "axioms": [
+        "Classical.choice",
+        "Quot.sound",
+        "propext"
+      ]
+    },
+    "P02A2.component_positive_subset_common": {
+      "type_sha256": "4c19e2a43c8b3bd4078198c2f0aa73dbab921d5396e0eaa3efeff2892f8a6fe4",
+      "axioms": [
+        "Classical.choice",
+        "Quot.sound",
+        "propext"
+      ]
+    },
+    "P02A2.mixture_positive_subset_common": {
+      "type_sha256": "26569f5e592a662545eda8f2f499a63bd9686b7fb7c31dac0b2dc3cb57411301",
+      "axioms": [
+        "Classical.choice",
+        "Quot.sound",
+        "propext"
+      ]
+    },
+    "P02A2.mass_mixture": {
+      "type_sha256": "6212e0e846239a8b28f1c8a0cb6e16f1e90ce5f36b4a33a432b527ab31b6b1d5",
+      "axioms": [
+        "Classical.choice",
+        "Quot.sound",
+        "propext"
+      ]
+    },
+    "P02A2.mixture_total": {
+      "type_sha256": "4ff8cee99526e03411edb90b5a52fef23f620cfddfc587f492499cef7f404a33",
+      "axioms": [
+        "Classical.choice",
+        "Quot.sound",
+        "propext"
+      ]
+    },
+    "P02A2.Observation.history_measurable": {
+      "type_sha256": "d51a2c9ca529056cf1f9111d1271577f54a02a06251c50951c06f3abba2e29e0",
+      "axioms": [
+        "Classical.choice",
+        "Quot.sound",
+        "propext"
+      ]
+    },
+    "P02A2.Observation.event_measurable": {
+      "type_sha256": "a7d2c8db2dfadf7ecbec01a1344bf24dcf3096d3498c2833d28c0a26d81d0170",
+      "axioms": [
+        "Classical.choice",
+        "Quot.sound",
+        "propext"
+      ]
+    },
+    "P02A2.Observation.fullEvent_measurable": {
+      "type_sha256": "13f76f488813ba5e269df55531d5c72f22317b85727165c9ecc5bded377ea710",
+      "axioms": [
+        "Classical.choice",
+        "Quot.sound",
+        "propext"
+      ]
+    },
+    "P02A2.Observation.event_step": {
+      "type_sha256": "65de110387910f431927be2fc80f9c804faa4c74eeadf6593c9a9e73eab7c2a1",
+      "axioms": [
+        "Classical.choice",
+        "Quot.sound",
+        "propext"
+      ]
+    },
+    "P02A2.Observation.events_antitone": {
+      "type_sha256": "92c4e60caa2f2cf70dd8c9f746e86fcd72b8688eae3949e826b399e791158e8e",
+      "axioms": [
+        "Classical.choice",
+        "Quot.sound",
+        "propext"
+      ]
+    },
+    "P02A2.Observation.full_subset_event": {
+      "type_sha256": "2afd17c02aa55830bf33e8e81a90c2fca31bc3bdf32dddf7829030d85e412af2",
+      "axioms": [
+        "Classical.choice",
+        "Quot.sound",
+        "propext"
+      ]
+    },
+    "P02A2.Observation.full_subset_persist": {
+      "type_sha256": "b81a3d40ac28f39bb12fbd70c047461f7b8409a85ffdd944fac11a39c2e155dc",
+      "axioms": [
+        "Classical.choice",
+        "Quot.sound",
+        "propext"
+      ]
+    },
+    "P02A2.Observation.observation_extinction_identity": {
+      "type_sha256": "182ddf01e44a7108d35d20726e56fbbf272929f3ba036f34fc88a4dc3e21f67c",
+      "axioms": [
+        "Classical.choice",
+        "Quot.sound",
+        "propext"
+      ]
+    },
+    "P02A2.Observation.mapped_probability": {
+      "type_sha256": "91efc7404c5d3d59e940aeead699fe2b239c6a6c2316813c75afb09a625e00c3",
+      "axioms": [
+        "Classical.choice",
+        "Quot.sound",
+        "propext"
+      ]
+    },
+    "P02A2.Observation.defect_mapped_complement": {
+      "type_sha256": "5caf77aacb45f68f1a83135b48396b55af034b48900d9b1f6263c38f614f3bda",
+      "axioms": [
+        "Classical.choice",
+        "Quot.sound",
+        "propext"
+      ]
+    },
+    "P02A2.Observation.coarse_law": {
+      "type_sha256": "a1384b0187024a0e05511ae609700a4fd048493dbfad5035b5709049f1e322e5",
+      "axioms": [
+        "Classical.choice",
+        "Quot.sound",
+        "propext"
+      ]
+    },
+    "P02A2.Observation.step_fibre": {
+      "type_sha256": "53d766719f40051e460c59155be3f6c14e8440fa9ed7c4b49d545e77f76c2bdd",
+      "axioms": [
+        "Classical.choice",
+        "Quot.sound",
+        "propext"
+      ]
+    },
+    "P02A2.Observation.step_loss": {
+      "type_sha256": "1f19284fee23c0c272fc4fcda86c7cb5ac32e00d7bf579b8bbb91609625b2289",
+      "axioms": [
+        "Classical.choice",
+        "Quot.sound",
+        "propext"
+      ]
+    },
+    "P02A2.Observation.increment_eq_loss": {
+      "type_sha256": "0e3deba649d4c0b27c50792702b16a50f182082a0abae0473b263eaf568c94aa",
+      "axioms": [
+        "Classical.choice",
+        "Quot.sound",
+        "propext"
+      ]
+    },
+    "P02A2.Observation.increments_summable": {
+      "type_sha256": "3947ad9a2a1cdc50a9b1b98ec82288420ea850ab3189d886065268f4935a242f",
+      "axioms": [
+        "Classical.choice",
+        "Quot.sound",
+        "propext"
+      ]
+    },
+    "P02A2.Observation.finite_observation_identity": {
+      "type_sha256": "ae2b09160b6dd1c34345afeda444ae540a9b71f5c792fbd8e659a945bc1b4eee",
+      "axioms": [
+        "Classical.choice",
+        "Quot.sound",
+        "propext"
+      ]
+    },
+    "P02A2.Observation.full_observation_identity": {
+      "type_sha256": "38ba0917ff97dc900e8e13a6135fd00be619ccfb3107961713a007eff65faf49",
+      "axioms": [
+        "Classical.choice",
+        "Quot.sound",
+        "propext"
+      ]
+    },
+    "P02A2.ObserverCore.loop_zero": {
+      "type_sha256": "131850d9d26e2c84c2031e1ca7419fab3ebc61282b42b42df978e8a3ffc7a71a",
+      "axioms": [
+        "propext"
+      ]
+    },
+    "P02A2.ObserverCore.loop_successor": {
+      "type_sha256": "876b2ecd4e6615119abdddb2d276759d91f81e2ba78f42a4c5cb3ffa48f61f40",
+      "axioms": [
+        "propext"
+      ]
+    },
+    "P02A2.ObserverCore.sequence_execution": {
+      "type_sha256": "8dda6960b0fe392c343bf09deff46ee254faf098b7b41ee28b8458db0954b86b",
+      "axioms": [
+        "propext"
+      ]
+    },
+    "P02A2.ObserverCore.prefix_causal": {
+      "type_sha256": "826aeaecce6154e18d0304c85da8bc3860e64aa7ae93bf7f3210eeafc87cf63f",
+      "axioms": [
+        "Quot.sound",
+        "propext"
+      ]
+    },
+    "P02A2.ObserverCore.diagonal_differs": {
+      "type_sha256": "be3bb521e8fcbc7386cfd0e9a89907400a8fae297ba41dd07d3abab9a0d29aa0",
+      "axioms": [
+        "propext"
+      ]
+    },
+    "P02A2.ObserverCore.shift_eq_threshold": {
+      "type_sha256": "9883203f3d7c4575b64b9af7564460886bf27cbf5a176e9815487b66cfd41396",
+      "axioms": [
+        "Classical.choice",
+        "Quot.sound",
+        "propext"
+      ]
+    },
+    "P02A2.ObserverCore.shift_le_threshold": {
+      "type_sha256": "35be7c5f2928e25e3e2a316b1066b877144e3e4257df5e09a38c0a1c12db322e",
+      "axioms": [
+        "Classical.choice",
+        "Quot.sound",
+        "propext"
+      ]
+    },
+    "P02A2.ObserverCore.shift_gt_threshold": {
+      "type_sha256": "b3aaa335f44f48cf0f620500f161e4a158647a71e3fbb3d25e0b6f1e4b1eb90f",
+      "axioms": [
+        "Classical.choice",
+        "Quot.sound",
+        "propext"
+      ]
+    },
+    "P02A2.ParityBridge.solutions_mem": {
+      "type_sha256": "9c195a2736d60ff15b3310d9d3f9d6a7732db2a63a06942de57c3f3ddf78dbb3",
+      "axioms": [
+        "Quot.sound",
+        "propext"
+      ]
+    },
+    "P02A2.ParityBridge.fits_length": {
+      "type_sha256": "043402c67a37c004d1c9e976960b2243200616f5dc6cdba0a95f9546e1795394",
+      "axioms": [
+        "propext"
+      ]
+    },
+    "P02A2.ParityBridge.solutions_nodup": {
+      "type_sha256": "44d39769fc44a661b3aa6c8b9cc725c6f199f0d7ff04523bd1fc154e89cf5144",
+      "axioms": [
+        "Quot.sound",
+        "propext"
+      ]
+    },
+    "P02A2.ParityBridge.solutions_filter": {
+      "type_sha256": "f79d8dd6f55bec305d3ac82a45c8f4aea022c9046fcef6a545d8d48c505a3b2f",
+      "axioms": [
+        "Quot.sound",
+        "propext"
+      ]
+    },
+    "P02A2.ParityBridge.general_proper_probability": {
+      "type_sha256": "2b96edc485d986de271482fd42b8cd5e83c20d57f2bab55f3077e683abbf7ced",
+      "axioms": [
+        "Classical.choice",
+        "Quot.sound",
+        "propext"
+      ]
+    },
+    "P02A2.ParityBridge.parity_target_probability": {
+      "type_sha256": "ffac2cf099b71f4f7ccff98e0bd4d37daeb76916129612144be64ffe243f89a5",
+      "axioms": [
+        "Classical.choice",
+        "Quot.sound",
+        "propext"
+      ]
+    },
+    "P02A2.ParityBridge.mixture_proper_profile": {
+      "type_sha256": "c95c777fa9c424a20d652f48d5904fd55bcaae177d2c573a20924453da7b5e97",
+      "axioms": [
+        "Classical.choice",
+        "Quot.sound",
+        "propext"
+      ]
+    },
+    "P02A2.Refinement.persist_subset": {
+      "type_sha256": "13052078d609cf9d0308e93b18ef06cec096dd6b3fde2e79ac208f779d8bc26c",
+      "axioms": [
+        "Classical.choice",
+        "Quot.sound",
+        "propext"
+      ]
+    },
+    "P02A2.Refinement.loss_measurable": {
+      "type_sha256": "af54803266ea48bbfc94b3c437582970af13f4837eade39275a0f463e4fc7b01",
+      "axioms": [
+        "Classical.choice",
+        "Quot.sound",
+        "propext"
+      ]
+    },
+    "P02A2.Refinement.persist_measurable": {
+      "type_sha256": "0a89236570220062e7abe9c65b4286e0e8bc0e3d7406fb0a247736602d75a7fe",
+      "axioms": [
+        "Classical.choice",
+        "Quot.sound",
+        "propext"
+      ]
+    },
+    "P02A2.Refinement.losses_disjoint": {
+      "type_sha256": "c5bec49215c23b068068383a86db53ce69d4fcd665d6396d2b18e8c200840263",
+      "axioms": [
+        "Classical.choice",
+        "Quot.sound",
+        "propext"
+      ]
+    },
+    "P02A2.Refinement.union_losses": {
+      "type_sha256": "93a09ddb3b4be65a17bed774a7be6e852ae4891e97e11e87cb0a907f262d4bdc",
+      "axioms": [
+        "Classical.choice",
+        "Quot.sound",
+        "propext"
+      ]
+    },
+    "P02A2.Refinement.complement_partition": {
+      "type_sha256": "ac755015e340940d875b324a84b8904dbfe77fccefb9a7ea4090cc5bcc10a515",
+      "axioms": [
+        "Classical.choice",
+        "Quot.sound",
+        "propext"
+      ]
+    },
+    "P02A2.Refinement.measure_extinction_decomposition": {
+      "type_sha256": "c8d804ab025da900f0e819dc7f85c8ccdbde1cd780cf50e67d117e8d90053d38",
+      "axioms": [
+        "Classical.choice",
+        "Quot.sound",
+        "propext"
+      ]
+    },
+    "P02A2.Refinement.real_extinction_decomposition": {
+      "type_sha256": "7a3ce04d205698a43974b3e3c909a23c3438f23344ba97932555587f213442db",
+      "axioms": [
+        "Classical.choice",
+        "Quot.sound",
+        "propext"
+      ]
+    },
+    "P02A2.Refinement.losses_real_summable": {
+      "type_sha256": "a02eff4d1a561730d6320c65ea05d16ad4cd43e3922b20fd9b0edcb9438747a9",
+      "axioms": [
+        "Classical.choice",
+        "Quot.sound",
+        "propext"
+      ]
+    },
+    "P02A2.Refinement.finite_telescope": {
+      "type_sha256": "afce2d1f93695a6e55312b29c7e0588f7df5681c65a757e2caaa8176d2d35175",
+      "axioms": [
+        "Classical.choice",
+        "Quot.sound",
+        "propext"
+      ]
+    },
+    "P02A2.Refinement.exact_budget": {
+      "type_sha256": "c414a9a7db8db46e5f0d688596546774d4ba644a1545980f8c83d07405869d9b",
+      "axioms": [
+        "Classical.choice",
+        "Quot.sound",
+        "propext"
+      ]
+    },
+    "P02A2.Refinement.exact_residual_budget": {
+      "type_sha256": "a162deec738b3c3b32c18747dcd2b5f790696ebf732ea2b0cddb6733e1685cc8",
+      "axioms": [
+        "Classical.choice",
+        "Quot.sound",
+        "propext"
+      ]
+    },
+    "P02A2.Refinement.no_residual_limit": {
+      "type_sha256": "fed35fe738d97e2277776a0072580d1d8549e397380490ddfbccb863c39f8680",
+      "axioms": [
+        "Classical.choice",
+        "Quot.sound",
+        "propext"
+      ]
+    },
+    "P02A2.SimplexStationary.simplex_closed": {
+      "type_sha256": "a167c09cbcdd8506ffd0c7eb9337c6c2f7c883fc4819f77eea9bf6fb17fc765b",
+      "axioms": [
+        "Classical.choice",
+        "Quot.sound",
+        "propext"
+      ]
+    },
+    "P02A2.SimplexStationary.simplex_compact": {
+      "type_sha256": "b08dba13cb50c3bc2196c07889417ca65c98c19fd39956f9c8b8362e147b0084",
+      "axioms": [
+        "Classical.choice",
+        "Quot.sound",
+        "propext"
+      ]
+    },
+    "P02A2.SimplexStationary.simplex_convex": {
+      "type_sha256": "471bfa81e6857ff594cde3cc808b530659e460821043b4d430049b4f8f2f50f4",
+      "axioms": [
+        "Classical.choice",
+        "Quot.sound",
+        "propext"
+      ]
+    },
+    "P02A2.SimplexStationary.rows_preserve_simplex": {
+      "type_sha256": "c3ea9d5b0b5b7d8c1e2917c776770ea47f32f9338285e989996c150a2685c0ab",
+      "axioms": [
+        "Classical.choice",
+        "Quot.sound",
+        "propext"
+      ]
+    },
+    "P02A2.SimplexStationary.stationary_row": {
+      "type_sha256": "1c3fc88c45345b2262fa0ac5f0391baf8189f0c7cfb6f371767ce19a6f0e2def",
+      "axioms": [
+        "Classical.choice",
+        "Quot.sound",
+        "propext"
+      ]
+    },
+    "P02A2.SimplexStationary.finite_correspondence_fixed": {
+      "type_sha256": "2c3b90afc3a6624e3e28881aa1b72ab27fc55af579d7afd01091821148dfc185",
+      "axioms": [
+        "Classical.choice",
+        "Quot.sound",
+        "propext"
+      ]
+    },
+    "P02A2.Stationary.fixed_of_approximate": {
+      "type_sha256": "b7297b13d5c7a3e4ced43c43507f14a3c9dd14bc0c97df339ef7418a4c6d58c0",
+      "axioms": [
+        "Classical.choice",
+        "Quot.sound",
+        "propext"
+      ]
+    },
+    "P02A2.Stationary.orbit_mem": {
+      "type_sha256": "c24e88ec5ec8dc0aaa9d616258fc9abb24835fd657e2d6382ade7495c62e81d6",
+      "axioms": [
+        "Classical.choice",
+        "Quot.sound",
+        "propext"
+      ]
+    },
+    "P02A2.Stationary.average_mem": {
+      "type_sha256": "b6ba0068914da2e2f963a7cdb965f0242a77176022dfb0e5e7e7ebc4f79ca28d",
+      "axioms": [
+        "Classical.choice",
+        "Quot.sound",
+        "propext"
+      ]
+    },
+    "P02A2.Stationary.orbit_sum_difference": {
+      "type_sha256": "d6776136874862eaa5edf9ca8f1c5e68c93d0f98915d95e1a9d007e5ed84cd96",
+      "axioms": [
+        "Classical.choice",
+        "Quot.sound",
+        "propext"
+      ]
+    },
+    "P02A2.Stationary.average_difference": {
+      "type_sha256": "8e87a8055e5e45571ec748d78d7683edd676e816671af640b38b49e8905b58f4",
+      "axioms": [
+        "Classical.choice",
+        "Quot.sound",
+        "propext"
+      ]
+    },
+    "P02A2.Stationary.average_difference_norm": {
+      "type_sha256": "351318add3fe0a6fd2e9f2fd6ba29e4667e456c984ed29e41f3861a7372efa05",
+      "axioms": [
+        "Classical.choice",
+        "Quot.sound",
+        "propext"
+      ]
+    },
+    "P02A2.Stationary.averages_approximate": {
+      "type_sha256": "b191e736d164bef43a1bca2385aefed25f8faf4008d3780f31266511d3f99308",
+      "axioms": [
+        "Classical.choice",
+        "Quot.sound",
+        "propext"
+      ]
+    },
+    "P02A2.Stationary.compact_convex_linear_fixed": {
+      "type_sha256": "84b8c56626c0d2c128f46d389a4b9e94ab86bedcc84a107f5e83f064f8b54274",
+      "axioms": [
+        "Classical.choice",
+        "Quot.sound",
+        "propext"
+      ]
+    },
+    "P02.positiveSingletons_countable": {
+      "type_sha256": "6419dec984f988b0130498cd4e3e79fa3d13bc6baf53126f2f13e9af44f46460",
+      "axioms": [
+        "Classical.choice",
+        "Quot.sound",
+        "propext"
+      ]
+    },
+    "P02.positiveSingletons_measurable": {
+      "type_sha256": "68c148b813ff7b13db0f3da1124358822a884825503f713300a3f730fcef4a97",
+      "axioms": [
+        "Classical.choice",
+        "Quot.sound",
+        "propext"
+      ]
+    },
+    "P02.positiveSingleton_mem_of_null_compl": {
+      "type_sha256": "bdc818dab07e0e428c13dc4ac2a3176badd2720c2d1c04a54cc950f86dae1b82",
+      "axioms": [
+        "Classical.choice",
+        "Quot.sound",
+        "propext"
+      ]
+    },
+    "P02.positiveSingletons_subset_conull_intersection": {
+      "type_sha256": "985db0c5e4892cb1186792ebbf22ecae3064543f0af7b921899d0d4d08822cd4",
+      "axioms": [
+        "Classical.choice",
+        "Quot.sound",
+        "propext"
+      ]
+    },
+    "P02.T300.normalised": {
+      "type_sha256": "670878785070821c68e0875c7cf27ad488afdeb65cec1ed021fcedd2590c0eb2",
+      "axioms": [
+        "Classical.choice",
+        "Quot.sound",
+        "propext"
+      ]
+    },
+    "P02.T300.weights_nonnegative": {
+      "type_sha256": "6880b8c7838794aff52386788c10c09e191e5c6786a281abbd636d4b8bedd218",
+      "axioms": [
+        "propext"
+      ]
+    },
+    "P02.T300.all_proper_marginals_equal": {
+      "type_sha256": "df174e0a225754c7a00bfcd6e3a3d9c540615c6b21782ae7630981962eb94ff3",
+      "axioms": [
+        "Classical.choice",
+        "Quot.sound",
+        "propext"
+      ]
+    },
+    "P02.T300.parity_target_changes": {
+      "type_sha256": "37c79dc4329e983017ba52dd61a9ab1dbb728de7b0087278b58a52389bd4e442",
+      "axioms": [
+        "Classical.choice",
+        "Quot.sound",
+        "propext"
+      ]
+    },
+    "P02.T300.declared_flip": {
+      "type_sha256": "05553b80f812f053bbb516cd5456c27f828b93e5e2bba3e50b170597037245f5",
+      "axioms": [
+        "Quot.sound",
+        "propext"
+      ]
+    },
+    "P02.T300.mixture_target_retained": {
+      "type_sha256": "301ed37577e532a9287e38c8cff8f611181351e204de84bdd8ae91ed84c3e7c9",
+      "axioms": [
+        "Classical.choice",
+        "Quot.sound",
+        "propext"
+      ]
+    },
+    "P02.T300.every_pair_profile_changes": {
+      "type_sha256": "9e9fdf326ee312f6e903eb25a56cef18db8daff8ebc32e918b74f5cb39c80e2c",
+      "axioms": [
+        "Classical.choice",
+        "Quot.sound",
+        "propext"
+      ]
+    },
+    "P02A2.FiniteLaw.complete_parity": {
+      "type_sha256": "1489db294618c6deddba32b87863536a91e5f6c6ba65cd519440faec2a8538bc",
+      "axioms": []
+    },
+    "P02A2.FiniteLaw.complete_injective": {
+      "type_sha256": "3180c17f69ceae7725816be0b06638279c20b9f1e67c983705e015d1a697f256",
+      "axioms": []
+    },
+    "P02A2.ParityBridge.unrestricted_fits": {
+      "type_sha256": "452fe0b1b9bf76baf0add0ddafeba70947280693cd48613598a9cff83858ee30",
+      "axioms": []
+    },
+    "P02A2.CandidateCompiler.testBody_good": {
+      "type_sha256": "c6084c276f115f8ed1a884e66b36a38bc3bcff6075cc76882843d8ab6f302aec",
+      "axioms": [
+        "propext"
+      ]
+    },
+    "P02A2.CandidateCompiler.testBody_preserves": {
+      "type_sha256": "6d4eb1dd179832eb6234de1c70cfc43b30217c59da7b540c07669c5c2a39b368",
+      "axioms": [
+        "Quot.sound",
+        "propext"
+      ]
+    },
+    "P02A2.CandidateCompiler.testLoop_preserves": {
+      "type_sha256": "87a9ff1b8ccc03de1950193c25143fc13dea01fa0bca0d64e87c65257eb3c5be",
+      "axioms": [
+        "Quot.sound",
+        "propext"
+      ]
+    },
+    "P02A2.CandidateCompiler.testLoop_good": {
+      "type_sha256": "99bdfa61dc422fcdf85097ecb3b854bffa66d2b8e52d0f6125b6089c9433eb3b",
+      "axioms": [
+        "Quot.sound",
+        "propext"
+      ]
+    },
+    "P02A2.CandidateCompiler.outerBody_matches": {
+      "type_sha256": "349dc3653c3b0b71590500542d13008ecb9763866612c8361be2b4524a5653c6",
+      "axioms": [
+        "Classical.choice",
+        "Quot.sound",
+        "propext"
+      ]
+    },
+    "P02A2.CandidateCompiler.search_before_candidate": {
+      "type_sha256": "ed14f567f33d490e0556c9ce8154c572e5bdb9fda5744a25e162fc83fa745d95",
+      "axioms": [
+        "Classical.choice",
+        "Quot.sound",
+        "propext"
+      ]
+    },
+    "P02A2.CandidateCompiler.search_found_stable": {
+      "type_sha256": "53c2825d53a8004e5f3768f7c4db8145a9e2b90215e79ae8516657eb8addd8e6",
+      "axioms": [
+        "Classical.choice",
+        "Quot.sound",
+        "propext"
+      ]
+    },
+    "P02A2.CandidateCompiler.search_result": {
+      "type_sha256": "f9447bff251f7db47521b8dd23da25ae4c1df7e237fb9584fdb63d2b833bc973",
+      "axioms": [
+        "Classical.choice",
+        "Quot.sound",
+        "propext"
+      ]
+    },
+    "P02A2.CandidateCompiler.outerLoop_matches": {
+      "type_sha256": "c1fc5195b174cfb91b6800ddb2480091d20dc07b3fdef8a9ba192dd5d54a9092",
+      "axioms": [
+        "Classical.choice",
+        "Quot.sound",
+        "propext"
+      ]
+    },
+    "P02A2.CandidateCompiler.candidateBlock_value": {
+      "type_sha256": "4aa810dd9d74ac92232f99dfb347c95a729e6a162c9ec01573f74088ea21248e",
+      "axioms": [
+        "Classical.choice",
+        "Quot.sound",
+        "propext"
+      ]
+    },
+    "P02A2.CandidateCompiler.preserves_skip": {
+      "type_sha256": "3f016f58c88ae5524a74de0cad1141ced13e174a276f69c6cea51ceb7e3e5629",
+      "axioms": [
+        "propext"
+      ]
+    },
+    "P02A2.CandidateCompiler.preserves_set": {
+      "type_sha256": "bf4061d27e6b233e36d5079b7a9fd107c40b48a08c44857205b3b388e8f59d9c",
+      "axioms": [
+        "propext"
+      ]
+    },
+    "P02A2.CandidateCompiler.preserves_seq": {
+      "type_sha256": "a91a23bd6bbdd739f597618053b3e993ca5a1885fce93114993d84318b08a730",
+      "axioms": [
+        "propext"
+      ]
+    },
+    "P02A2.CandidateCompiler.preserves_branch": {
+      "type_sha256": "cb3f3e1db12866cabdb87d86c0cdabad6af3432e708a7493953e2172e4ddc5a5",
+      "axioms": [
+        "propext"
+      ]
+    },
+    "P02A2.CandidateCompiler.preserves_loop": {
+      "type_sha256": "6e0b491fcb5ec1b960a8c80cfb096a4a81909e58c15528b9c125b6206b3835a5",
+      "axioms": [
+        "propext"
+      ]
+    },
+    "P02A2.CandidateCompiler.tryCandidate_preserves": {
+      "type_sha256": "caeee067dde8a117e31fd3355268e6be5e2be8b82946f74443e74ce879457447",
+      "axioms": [
+        "Quot.sound",
+        "propext"
+      ]
+    },
+    "P02A2.CandidateCompiler.outerBody_preserves": {
+      "type_sha256": "6bea37d7de016f084db0086095d2c4b894f46dec809a4b722a3257c6575900bc",
+      "axioms": [
+        "Quot.sound",
+        "propext"
+      ]
+    },
+    "P02A2.CandidateCompiler.candidateBlock_preserves": {
+      "type_sha256": "003af86fb0c270c122e14b93b6303a40f4296cc912ae387a4111ea7e888e7103",
+      "axioms": [
+        "Quot.sound",
+        "propext"
+      ]
+    },
+    "P02A2.CandidateSource.registerList_mem": {
+      "type_sha256": "881f68740ad2a95a52756d39244a6d6061bf078751869088c81079084bdeb1f9",
+      "axioms": [
+        "Classical.choice",
+        "Quot.sound",
+        "propext"
+      ]
+    },
+    "P02A2.CandidateSource.registerMap_injective_on": {
+      "type_sha256": "b07f4dd4b050427ac366c5cb8795020098a5b76e75f0c7800c94bce6fa34ebeb",
+      "axioms": [
+        "Classical.choice",
+        "Quot.sound",
+        "propext"
+      ]
+    },
+    "P02A2.CandidateSource.registerMap_fresh": {
+      "type_sha256": "64eb70c10ec032300660ea3cc366f2200b284d3c62ec302d95d459498a8bc54a",
+      "axioms": [
+        "Classical.choice",
+        "Quot.sound",
+        "propext"
+      ]
+    },
+    "P02A2.CandidateSource.controller_not_private": {
+      "type_sha256": "f4b604f3b17f382205207c2b8a00d55a2e4816f202dbdb75a85b7bf8dbbc38bc",
+      "axioms": [
+        "Classical.choice",
+        "Quot.sound",
+        "propext"
+      ]
+    },
+    "P02A2.CandidateSource.matrixArgs_fresh": {
+      "type_sha256": "85f06137594041a9fe8d18ce3e4f43597a51fce63886562327011ff0efe59747",
+      "axioms": [
+        "Classical.choice",
+        "Quot.sound",
+        "propext"
+      ]
+    },
+    "P02A2.CandidateSource.matrix_sourceLoad": {
+      "type_sha256": "68332a55e041c301d66bceb00eb34ac232117b3f18f0aabe13d5f91f1ac14441",
+      "axioms": [
+        "Classical.choice",
+        "Quot.sound",
+        "propext"
+      ]
+    },
+    "P02A2.CandidateSource.matrixCall_spec": {
+      "type_sha256": "c34a77365e6bed59b63bf696ea3c569b426a8c52e3158e6db26e52178c0c06c4",
+      "axioms": [
+        "Classical.choice",
+        "Quot.sound",
+        "propext"
+      ]
+    },
+    "P02A2.CandidateSource.sourceCandidate_value": {
+      "type_sha256": "83358a87ab3dc937f222ecc860179a98dd40867b8644d05b0236e364e393eb46",
+      "axioms": [
+        "Classical.choice",
+        "Quot.sound",
+        "propext"
+      ]
+    },
+    "P02A2.CandidateSource.sourceCandidate_preserves": {
+      "type_sha256": "dfe0af36573398a9da0130e86b312784a756e8f81a05a5f731644a8dead0c95d",
+      "axioms": [
+        "Classical.choice",
+        "Quot.sound",
+        "propext"
+      ]
+    },
+    "P02A2.CandidateWitnesses.bounded_registers": {
+      "type_sha256": "2492cf99c726c032a65679d2e1c95b6f0573d8a674e72ea0ec5370a920cdcdc0",
+      "axioms": [
+        "Classical.choice",
+        "Quot.sound",
+        "propext"
+      ]
+    },
+    "P02A2.CandidateWitnesses.true_registers": {
+      "type_sha256": "1ee706f0107dc7445586014353a7c01f661f469a9b2bff513d90df4d7272eed2",
+      "axioms": [
+        "Classical.choice",
+        "Quot.sound",
+        "propext"
+      ]
+    },
+    "P02A2.CandidateWitnesses.bounded_registerList": {
+      "type_sha256": "26de5dcb9f2740384cb552fa43cf4f9d1f9b8dcdbfa63a87f2bcebf6125b79d7",
+      "axioms": [
+        "Classical.choice",
+        "Quot.sound",
+        "propext"
+      ]
+    },
+    "P02A2.CandidateWitnesses.true_registerList": {
+      "type_sha256": "d5926134655de2cfc70e051adcbd5fc713f62cb2142f30acab1f1a485f4035c5",
+      "axioms": [
+        "Classical.choice",
+        "Quot.sound",
+        "propext"
+      ]
+    },
+    "P02A2.CandidateWitnesses.candidate_checks_inclusive_test_bound": {
+      "type_sha256": "794983f1e11a50e5bac0c15ae617e5276aa947433bc8457af85043c3e334dd61",
+      "axioms": [
+        "Classical.choice",
+        "Quot.sound",
+        "propext"
+      ]
+    },
+    "P02A2.CandidateWitnesses.candidate_retains_first_success": {
+      "type_sha256": "f3057cf1f7739ca323e801000c0e913c4db37272873e75e3d1ccc578acd34081",
+      "axioms": [
+        "Classical.choice",
+        "Quot.sound",
+        "propext"
+      ]
+    },
+    "P02A2.Sigma2Compiled.secondMap_zero": {
+      "type_sha256": "0f3596b4f28a5c1a26708359444b97df3142e527f9c7ac4df2405118775c4e55",
+      "axioms": [
+        "Classical.choice",
+        "Quot.sound",
+        "propext"
+      ]
+    },
+    "P02A2.Sigma2Compiled.secondMap_one": {
+      "type_sha256": "e743cdb17a2405693a862859ca40d297b63d54f14e912ae41eda9ec35552c705",
+      "axioms": [
+        "Classical.choice",
+        "Quot.sound",
+        "propext"
+      ]
+    },
+    "P02A2.Sigma2Compiled.secondMap_three": {
+      "type_sha256": "e00212d69fcf467611881d143129739c1dc9e7b44bb48aa467f322e09c6ef8a1",
+      "axioms": [
+        "propext"
+      ]
+    },
+    "P02A2.Sigma2Compiled.secondMap_four": {
+      "type_sha256": "b93666d6eba7b9a3acd9e217c7e5ce38afc888762cb748d3c9a4229be4718f5d",
+      "axioms": [
+        "propext"
+      ]
+    },
+    "P02A2.Sigma2Compiled.secondMap_injective": {
+      "type_sha256": "5e00411c2494ba1427033ba305badc60bce38d5d00831f6725bdd5517b447c98",
+      "axioms": [
+        "Quot.sound",
+        "propext"
+      ]
+    },
+    "P02A2.Sigma2Compiled.renamedCandidate_value": {
+      "type_sha256": "9c3099ff3f565f453b2184e60790a10fe8d9db45a4f00abed25652f5c48cc1a1",
+      "axioms": [
+        "Classical.choice",
+        "Quot.sound",
+        "propext"
+      ]
+    },
+    "P02A2.Sigma2Compiled.renamedCandidate_preserves": {
+      "type_sha256": "75b762174e7ceaa2bb846c145428abb495ccb7b8b00aa05d43aa3909809a9669",
+      "axioms": [
+        "Classical.choice",
+        "Quot.sound",
+        "propext"
+      ]
+    },
+    "P02A2.Sigma2Compiled.previousBlock_value": {
+      "type_sha256": "afe50cb85d95d6bbe7abfde4e0760d424487afaffaa9079b5cc38d997fc7fdd0",
+      "axioms": [
+        "Classical.choice",
+        "Quot.sound",
+        "propext"
+      ]
+    },
+    "P02A2.Sigma2Compiled.previousBlock_preserves_zero": {
+      "type_sha256": "43b073d3631087f0052ad1a994e0806ef7c8e0a1447b477b29bb5be17b2452ed",
+      "axioms": [
+        "Classical.choice",
+        "Quot.sound",
+        "propext"
+      ]
+    },
+    "P02A2.Sigma2Compiled.previousBlock_preserves_one": {
+      "type_sha256": "4438a03aa21dc29436754b1f7b360de62119214adcf116495f9240e1a14fa363",
+      "axioms": [
+        "Classical.choice",
+        "Quot.sound",
+        "propext"
+      ]
+    },
+    "P02A2.Sigma2Compiled.previousBlock_preserves_three": {
+      "type_sha256": "c2b221b8137acf742456b670dd8f2eda3e4a189fb526f62b24cdfa61e8d12904",
+      "axioms": [
+        "Classical.choice",
+        "Quot.sound",
+        "propext"
+      ]
+    },
+    "P02A2.Sigma2Compiled.emitComparison_value": {
+      "type_sha256": "f1453a79a694e7be2c145e92ac78ed926b9a874faf1bdf92ed96371757645cda",
+      "axioms": [
+        "Quot.sound",
+        "propext"
+      ]
+    },
+    "P02A2.Sigma2Compiled.compiled_value": {
+      "type_sha256": "82796011ae0429fded655f09e78ff0cc2d4862c899a2b917d06a4cb39b50dff9",
+      "axioms": [
+        "Classical.choice",
+        "Quot.sound",
+        "propext"
+      ]
+    },
+    "P02A2.Sigma2Compiled.prefixValue_eq": {
+      "type_sha256": "3d959860f9799958e5a5af4002e43ab3bd61e5b20c77f743dfbbc8046ff6ec67",
+      "axioms": [
+        "Classical.choice",
+        "Quot.sound",
+        "propext"
+      ]
+    },
+    "P02A2.Sigma2Compiled.observer_eq": {
+      "type_sha256": "6d3155129c0a32a09d15771e46963a0d3cb575f862dc55cbf12b8105effe8fa9",
+      "axioms": [
+        "Classical.choice",
+        "Quot.sound",
+        "propext"
+      ]
+    },
+    "P02A2.Sigma2Compiled.law_eq": {
+      "type_sha256": "f098a9e0114d1ca0a926dcff7454401bf41fbd242b71a1bf52960dfe71af61b0",
+      "axioms": [
+        "Classical.choice",
+        "Quot.sound",
+        "propext"
+      ]
+    },
+    "P02A2.Sigma2Compiled.zero_defect_iff": {
+      "type_sha256": "5ed8efaa3b7fe50aac101497e788d9e3170595dc8f433d807d47ffbe64886ba6",
+      "axioms": [
+        "Classical.choice",
+        "Quot.sound",
+        "propext"
+      ]
+    },
+    "P02A2.Sigma2Compiled.one_defect_iff": {
+      "type_sha256": "c472baa3d0698224c12405f149e2bf2e1efa7376825d2b2f4bff80ce563211ca",
+      "axioms": [
+        "Classical.choice",
+        "Quot.sound",
+        "propext"
+      ]
+    },
+    "P02A2.Sigma2Compiled.prefixValue_primitive_recursive": {
+      "type_sha256": "bca85e7fa51e060ba9dc6e363567a0652539cdb61f5e48ad69d07b32e813c97e",
+      "axioms": [
+        "Classical.choice",
+        "Quot.sound",
+        "propext"
+      ]
+    },
+    "P02A2.LoopRenaming.agrees_update": {
+      "type_sha256": "6a63f897fd63ccd62a613f10ba889e1b9666c5201b71a75e0b7640fa89768d94",
+      "axioms": [
+        "Quot.sound",
+        "propext"
+      ]
+    },
+    "P02A2.LoopRenaming.evalExpr_rename": {
+      "type_sha256": "fb124c98f5b29712770693c391abc80d9aedbb4937edb332394a3b12ae957273",
+      "axioms": [
+        "Quot.sound",
+        "propext"
+      ]
+    },
+    "P02A2.LoopRenaming.runLoop_agrees": {
+      "type_sha256": "c7e122539f90a6818d062e83db24177002805ab141eafc2729bf0a63bca02762",
+      "axioms": [
+        "Quot.sound",
+        "propext"
+      ]
+    },
+    "P02A2.LoopRenaming.exec_rename": {
+      "type_sha256": "a952d99938821284d21f33698c2c1a9695f193370430939a03f97426d510824f",
+      "axioms": [
+        "Quot.sound",
+        "propext"
+      ]
+    },
+    "P02A2.LoopRenaming.renameExpr_id": {
+      "type_sha256": "aa69f919e89e993bbf99ec07ef6b4b70791a2dd6a3f58745d53a1ba7e6a4f6da",
+      "axioms": [
+        "propext"
+      ]
+    },
+    "P02A2.LoopRenaming.evalExpr_congr": {
+      "type_sha256": "f1b977e1add254f6dab0e7e8479072fcc0a3264a9fe64cb4dfa44ccb39b77ec4",
+      "axioms": [
+        "Quot.sound",
+        "propext"
+      ]
+    },
+    "P02A2.LoopRenaming.exprRegs_rename": {
+      "type_sha256": "b4665b0e058115e22a9b4cf48fca82a22ac7bcb4f6b9b5939ffec2abd17b2280",
+      "axioms": [
+        "Classical.choice",
+        "Quot.sound",
+        "propext"
+      ]
+    },
+    "P02A2.LoopRenaming.stmtRegs_rename": {
+      "type_sha256": "c22daafd1d597a4120489b5e19ea4166fe3021d5fb19debfbc6cdd9be4e5e59d",
+      "axioms": [
+        "Classical.choice",
+        "Quot.sound",
+        "propext"
+      ]
+    },
+    "P02A2.LoopRenaming.runLoop_frame": {
+      "type_sha256": "101ef070e308686d21e9d499b521ad0aae94be425ad00b05b8b5684de825329c",
+      "axioms": [
+        "propext"
+      ]
+    },
+    "P02A2.LoopRenaming.exec_frame": {
+      "type_sha256": "630e5ed9bee33c17969b5e111ed8a0ef439d8b3e30b20ef0bcc605379f6bbe9d",
+      "axioms": [
+        "Quot.sound",
+        "propext"
+      ]
+    },
+    "P02A2.LoopRenaming.renamed_frame": {
+      "type_sha256": "3299be1aec727bff021a8117187f457b860bab8ed16cbe7ac6c214fb50ec0380",
+      "axioms": [
+        "Classical.choice",
+        "Quot.sound",
+        "propext"
+      ]
+    },
+    "P02A2.LoopRenaming.outsideEq_update": {
+      "type_sha256": "2d3380a5822c340c701d1a65480163b8c2bc58845ea89fb516a41e840868f98e",
+      "axioms": [
+        "Classical.choice",
+        "Quot.sound",
+        "propext"
+      ]
+    },
+    "P02A2.LoopRenaming.resetList_apply": {
+      "type_sha256": "b0a03e4486e72e7477f84a67f35fcc2108afb900a41a9b6674b60d9a44a9d78e",
+      "axioms": [
+        "Quot.sound",
+        "propext"
+      ]
+    },
+    "P02A2.LoopRenaming.resetList_agrees": {
+      "type_sha256": "9ae19c5a3ce380be20b843dbe5e29715efe0542636d5eba0f24eaae21c083f9e",
+      "axioms": [
+        "Classical.choice",
+        "Quot.sound",
+        "propext"
+      ]
+    },
+    "P02A2.LoopRenaming.resetList_outside": {
+      "type_sha256": "a6c4e839f7e9d5d47533c7adbc85659da41be712fc48a2b2ecc9df091df8fc80",
+      "axioms": [
+        "Classical.choice",
+        "Quot.sound",
+        "propext"
+      ]
+    },
+    "P02A2.LoopRenaming.evalExpr_outside": {
+      "type_sha256": "cd8615be1c9b9ce3a20c85bcc32319835e7c236070418db8fa020ca2f159efef",
+      "axioms": [
+        "Classical.choice",
+        "Quot.sound",
+        "propext"
+      ]
+    },
+    "P02A2.LoopRenaming.loadArgs_correct": {
+      "type_sha256": "77c390262c31940fce2175673c222d8a29de143e2448b710dee09777f9dd3f35",
+      "axioms": [
+        "Classical.choice",
+        "Quot.sound",
+        "propext"
+      ]
+    },
+    "P02A2.LoopRenaming.inlineCode_correct": {
+      "type_sha256": "8caed27526754fd6c3137c1275048d34232fdd2b1aed3544f2228ec51d578ee3",
+      "axioms": [
+        "Classical.choice",
+        "Quot.sound",
+        "propext"
+      ]
+    },
+    "P02A2.LoopPrimrec.read_primrec": {
+      "type_sha256": "9b2091c0f56103cf364326db589538d9fc8491ff19974b773f78ada2215c427d",
+      "axioms": [
+        "Classical.choice",
+        "Quot.sound",
+        "propext"
+      ]
+    },
+    "P02A2.LoopPrimrec.writeFin_primrec": {
+      "type_sha256": "521651d9ea58305b09f8039e9334d40f567d2b2c0b3a1d594af18c7e10af4453",
+      "axioms": [
+        "Classical.choice",
+        "Quot.sound",
+        "propext"
+      ]
+    },
+    "P02A2.LoopPrimrec.evalExpr_primrec": {
+      "type_sha256": "c9dce4293c46a9c2b3226018cd4ee4da523dd18e8464ef236aaded33e7f66ca9",
+      "axioms": [
+        "Classical.choice",
+        "Quot.sound",
+        "propext"
+      ]
+    },
+    "P02A2.LoopPrimrec.runLoopFin_primrec": {
+      "type_sha256": "f0ebd629188294b914e49066a16199b4e130d033ac495ffd3554b535f0c0443c",
+      "axioms": [
+        "Classical.choice",
+        "Quot.sound",
+        "propext"
+      ]
+    },
+    "P02A2.LoopPrimrec.execFin_primrec": {
+      "type_sha256": "bc65aebaf1b0507edb6372457ac60a151b06f4f35d8cc9a7afcd1babb10dfeea",
+      "axioms": [
+        "Classical.choice",
+        "Quot.sound",
+        "propext"
+      ]
+    },
+    "P02A2.LoopPrimrec.extend_writeFin": {
+      "type_sha256": "0715dd29614eac80fedfd8dcffef904574bd7d0f56561634ea9cb1d1f25534ac",
+      "axioms": [
+        "Quot.sound",
+        "propext"
+      ]
+    },
+    "P02A2.LoopPrimrec.runLoopFin_simulation": {
+      "type_sha256": "8ffc2a331a825700d247cf3f5c248778a76aa1debef3b0b6a17c29ec98f2a4c3",
+      "axioms": [
+        "Quot.sound",
+        "propext"
+      ]
+    },
+    "P02A2.LoopPrimrec.execFin_simulation": {
+      "type_sha256": "0eca495df7c0683787680f733e3453631e7d310a5f912a8e5f41a9f5ef0fe9fa",
+      "axioms": [
+        "Classical.choice",
+        "Quot.sound",
+        "propext"
+      ]
+    },
+    "P02A2.LoopPrimrec.fixed_program_primrec": {
+      "type_sha256": "8fff5034318a22a7e29b36683a381447e7ea33a8b009628aa3cdfbd17b5459f7",
+      "axioms": [
+        "Classical.choice",
+        "Quot.sound",
+        "propext"
+      ]
+    },
+    "P02A2.LoopPrimrec.programBound_registers": {
+      "type_sha256": "807a430a89a3dbdb8a87eabacf941819919c8fabf687d4b0e9205f1105099fd1",
+      "axioms": [
+        "Classical.choice",
+        "Quot.sound",
+        "propext"
+      ]
+    },
+    "P02A2.LoopPrimrec.programBound_output": {
+      "type_sha256": "fc3665c5e9d7c4b0c6ab0557e7622277f91218896b808fc6ca47ef0a812f273a",
+      "axioms": [
+        "Quot.sound",
+        "propext"
+      ]
+    },
+    "P02A2.LoopPrimrec.programBound_arity": {
+      "type_sha256": "7e4ecaa222096b107366aee812e11ecaa8e46122f9724134904cf0ddad3d0c5e",
+      "axioms": [
+        "Quot.sound",
+        "propext"
+      ]
+    },
+    "P02A2.LoopPrimrec.inputFin_primrec": {
+      "type_sha256": "8bf85a7f68dc9a1fe79f9a4866fc3192f85fc807828929a48c52dd93e660dfb6",
+      "axioms": [
+        "Classical.choice",
+        "Quot.sound",
+        "propext"
+      ]
+    },
+    "P02A2.LoopPrimrec.extend_inputFin": {
+      "type_sha256": "c7ca37bce848919676c41f2031c4398479fcde2c829dd68e9c4e1e9c156f44a8",
+      "axioms": [
+        "Quot.sound",
+        "propext"
+      ]
+    },
+    "P02A2.LoopPrimrec.program_denotation_primrec": {
+      "type_sha256": "d909f7b2c38fe5dbb1715a98f25aa03d86ff5fe897073760de88a3cdde016ccc",
+      "axioms": [
+        "Classical.choice",
+        "Quot.sound",
+        "propext"
+      ]
+    },
+    "P02A2.LoopPrimrec.binaryInput_primrec": {
+      "type_sha256": "30ab37fbd673c908cefd8306b01e109ef2c58226a654fd290ebce4a1f1e582f2",
+      "axioms": [
+        "Classical.choice",
+        "Quot.sound",
+        "propext"
+      ]
+    },
+    "P02A2.LoopPrimrec.extend_binaryInput": {
+      "type_sha256": "d737110eba186d4e4b0de121758751aa052039f1aca6e216c0b4479a360444c5",
+      "axioms": [
+        "Classical.choice",
+        "Quot.sound",
+        "propext"
+      ]
+    },
+    "P02A2.LoopPrimrec.binary_program_primrec": {
+      "type_sha256": "cc97d481397c5625485ab64ec2db29da7d9b51efceb29717621d4628ccffedae",
+      "axioms": [
+        "Classical.choice",
+        "Quot.sound",
+        "propext"
+      ]
+    },
+    "P02A2.LoopInliningWitnesses.full_reset_prevents_history_dependence": {
+      "type_sha256": "fa8346fad0a753cbe1a77cc91d4c82680c6f2b483aa0f2707ffff5e534fee20f",
+      "axioms": [
+        "propext"
+      ]
+    },
+    "P02A2.LoopInliningWitnesses.omitted_reset_creates_history_dependence": {
+      "type_sha256": "62652c18d7e2a7851dab7aac9659566d3f0c9942a7ab11de9e558d474446542e",
+      "axioms": [
+        "propext"
+      ]
+    },
+    "P02A2.LoopInliningWitnesses.colliding_renaming_changes_semantics": {
+      "type_sha256": "8e8affce19c71593f88297d9cfd0717a0ff94c2b20050ebc25d02fcf9ba597ca",
+      "axioms": [
+        "propext"
+      ]
+    },
+    "P02A2.LoopInliningWitnesses.nonfresh_argument_is_overwritten": {
+      "type_sha256": "8371b991046531436ef90dcf4d06340fb0d9862e9eb8fdbf01eacc343d1b22ac",
+      "axioms": [
+        "propext"
+      ]
+    },
+    "P02A2.Q8Primrec.generated_prefix_function_primrec": {
+      "type_sha256": "7bfdb7f553600889fa99d8017fd73a7631465c050b60dd13eebfb9344ae0dce4",
+      "axioms": [
+        "Classical.choice",
+        "Quot.sound",
+        "propext"
+      ]
+    },
+    "P02A2.Q8Measure.fairBit_singleton": {
+      "type_sha256": "3fb9afa8a50d7607da01b5388845f6101fe6358f67de699466989cd50f38f086",
+      "axioms": [
+        "Classical.choice",
+        "Quot.sound",
+        "propext"
+      ]
+    },
+    "P02A2.Q8Measure.fairCantor_cylinder": {
+      "type_sha256": "f3210c24a233a90b5bbccb89fd755274b6f2e1da4cfc9680a4610b50672cc5f4",
+      "axioms": [
+        "Classical.choice",
+        "Quot.sound",
+        "propext"
+      ]
+    },
+    "P02A2.Q8Measure.switched_measurable": {
+      "type_sha256": "fb6e2071577b5c8a0f462079d1a1b5b1d24515a8fd4c5a070c92d17027de5c8d",
+      "axioms": [
+        "Classical.choice",
+        "Quot.sound",
+        "propext"
+      ]
+    },
+    "P02A2.Q8Measure.never_law_dirac": {
+      "type_sha256": "357db6268c2b0fb3034d624a265a5c5c37c53703d1a272f58a25177ce2dee930",
+      "axioms": [
+        "Classical.choice",
+        "Quot.sound",
+        "propext"
+      ]
+    },
+    "P02A2.Q8Measure.eventually_singleton_bound": {
+      "type_sha256": "1c0a102c7c84ebdd17dfa091c64e4f4bb0646910cdcfb40d4766077fe0a7170f",
+      "axioms": [
+        "Classical.choice",
+        "Quot.sound",
+        "propext"
+      ]
+    },
+    "P02A2.Q8Measure.eventually_singleton_zero": {
+      "type_sha256": "accfa2a9744662110328b731f06cace18544e646049687b5112b9c36f6d01ee3",
+      "axioms": [
+        "Classical.choice",
+        "Quot.sound",
+        "propext"
+      ]
+    },
+    "P02A2.Q8Measure.never_defect_zero": {
+      "type_sha256": "b4c99c62b5912193ed8cab3d45a491c6aa08150449509d57631ed017d22e67c4",
+      "axioms": [
+        "Classical.choice",
+        "Quot.sound",
+        "propext"
+      ]
+    },
+    "P02A2.Q8Measure.eventually_defect_one": {
+      "type_sha256": "641348dfd2e37a9145f8258cdc393a32069062d0f997fb128e760d482d92b55c",
+      "axioms": [
+        "Classical.choice",
+        "Quot.sound",
+        "propext"
+      ]
+    },
+    "P02A2.Q8Machine.step_of_halted": {
+      "type_sha256": "02e033859f16787380235952e87dbcb9ba798d8eb50a8937d79c941ef420c6db",
+      "axioms": [
+        "propext"
+      ]
+    },
+    "P02A2.Q8Machine.run_halted_persistent": {
+      "type_sha256": "dc27748513c9e4d50d051edf634e4e338ece05b2724714ef27838b1f8b21a66f",
+      "axioms": [
+        "propext"
+      ]
+    },
+    "P02A2.Q8Machine.boundedFlag_persistent": {
+      "type_sha256": "e0c4655b5c649c1354ba1311857d66b3355fd10a7a3bc4d3ba4714474915a7b7",
+      "axioms": [
+        "propext"
+      ]
+    },
+    "P02A2.Q8Machine.halts_iff_boundedFlag": {
+      "type_sha256": "118c2af6a4b090bdd630f4dc626498d31c72f275bd2f3699fa9a824206852b6d",
+      "axioms": [
+        "propext"
+      ]
+    },
+    "P02A2.Q8Machine.not_halts_flags_false": {
+      "type_sha256": "342ad08d8addcce87904500938732deb0b17670dfa8972511543cc373521ac8c",
+      "axioms": [
+        "propext"
+      ]
+    },
+    "P02A2.Q8Machine.halts_eventually_flags_true": {
+      "type_sha256": "ee31d4d5025251102a26ee42ebc46d2c12edcce48f3c306a54bcb9ef145f6346",
+      "axioms": [
+        "propext"
+      ]
+    },
+    "P02A2.Q8Machine.nonhalting_law_dirac": {
+      "type_sha256": "5f6b681175dd62652707aeac903b065cebff76fe4579f271353b137fca99b043",
+      "axioms": [
+        "Classical.choice",
+        "Quot.sound",
+        "propext"
+      ]
+    },
+    "P02A2.Q8Machine.nonhalting_defect_zero": {
+      "type_sha256": "b93b180ad798642862a101e7b97fb32e786696003de83162856e6d54f95029f1",
+      "axioms": [
+        "Classical.choice",
+        "Quot.sound",
+        "propext"
+      ]
+    },
+    "P02A2.Q8Machine.halting_singletons_zero": {
+      "type_sha256": "32a143c3085321990678c6cde7c7c2d41d6885cc25ab55308ed6b63f3f8e9d39",
+      "axioms": [
+        "Classical.choice",
+        "Quot.sound",
+        "propext"
+      ]
+    },
+    "P02A2.Q8Machine.halting_defect_one": {
+      "type_sha256": "ddf7e5b359e67bbecd1d407298f3c4b3821d1a4a0b6644a10294ee26057a3a5e",
+      "axioms": [
+        "Classical.choice",
+        "Quot.sound",
+        "propext"
+      ]
+    },
+    "P02A2.Q8Machine.defect_zero_iff_nonhalting": {
+      "type_sha256": "0fc5d03b984b7fc9973d9385272a170698d0494011b08beb4297924deb3749a1",
+      "axioms": [
+        "Classical.choice",
+        "Quot.sound",
+        "propext"
+      ]
+    },
+    "P02A2.Q8Machine.defect_one_iff_halting": {
+      "type_sha256": "8d01a28956821a3fee2fb1437558075422ad03a9385405517edb9565fb394ae1",
+      "axioms": [
+        "Classical.choice",
+        "Quot.sound",
+        "propext"
+      ]
+    },
+    "P02A2.Q8Compiler.instruction_matches": {
+      "type_sha256": "684af8cdb119d0b3ec04f43ffa3edb790a666212b20de2d7c1103c8e593ecfd1",
+      "axioms": [
+        "Classical.choice",
+        "Quot.sound",
+        "propext"
+      ]
+    },
+    "P02A2.Q8Compiler.instruction_preserves": {
+      "type_sha256": "7c9c686981ff4e7bd6449ef1c6bbc636837b1dbc37e52e00f5e2bbcfdcc2babc",
+      "axioms": [
+        "Classical.choice",
+        "Quot.sound",
+        "propext"
+      ]
+    },
+    "P02A2.Q8Compiler.scan_exec": {
+      "type_sha256": "7918723c374c5c0f8fad62c125b5ece1a0fe06fd54930acf0bf69382a9e92457",
+      "axioms": [
+        "Classical.choice",
+        "Quot.sound",
+        "propext"
+      ]
+    },
+    "P02A2.Q8Compiler.matches_update_scratch": {
+      "type_sha256": "d4fdaba92f35d2777da39ff180d848a18af0aa2e8c5733ee92a29e53244cdba8",
+      "axioms": [
+        "propext"
+      ]
+    },
+    "P02A2.Q8Compiler.compiledStep_matches": {
+      "type_sha256": "843e240356dbd115be28c4adb90e0a44fc1508f8cbbe60aa4e7b606d639fa61a",
+      "axioms": [
+        "Classical.choice",
+        "Quot.sound",
+        "propext"
+      ]
+    },
+    "P02A2.Q8Compiler.loop_matches": {
+      "type_sha256": "b2a3c83415f57d798cbb00629d708ba78d14b6cd3347418eacf97366ca372e28",
+      "axioms": [
+        "Classical.choice",
+        "Quot.sound",
+        "propext"
+      ]
+    },
+    "P02A2.Q8Compiler.scan_preserves": {
+      "type_sha256": "b5a318f7030ef80ff30a667301c128e6d6bf3139ed2224a33eec9c526686e94c",
+      "axioms": [
+        "Classical.choice",
+        "Quot.sound",
+        "propext"
+      ]
+    },
+    "P02A2.Q8Compiler.compiledStep_preserves": {
+      "type_sha256": "156cdd429f8a3463d6b95987db6f1be4434bbd50447ddc28bb00a5a2f07482cf",
+      "axioms": [
+        "Classical.choice",
+        "Quot.sound",
+        "propext"
+      ]
+    },
+    "P02A2.Q8Compiler.runLoop_preserves": {
+      "type_sha256": "84c54e46ddddb787b3f55fc9ec811b45429c63c508250b3ebfb857bc8572fb04",
+      "axioms": [
+        "propext"
+      ]
+    },
+    "P02A2.Q8Compiler.initCode_matches": {
+      "type_sha256": "6bd8a4cc1b0a95b8f92b0bc1c50d14e4bc25386f0419b976029a8c79c7430639",
+      "axioms": [
+        "propext"
+      ]
+    },
+    "P02A2.Q8Compiler.initCode_preserves": {
+      "type_sha256": "ea2f935af60aaa5767245cb64d03813796af358c3c46690bbe8e13d8e3f0f536",
+      "axioms": [
+        "propext"
+      ]
+    },
+    "P02A2.Q8Compiler.compiled_value": {
+      "type_sha256": "8a3d224ba9edfc26f95d9b9c7c55b0bcfb2ebc7e28080141bd001ab62477f93c",
+      "axioms": [
+        "Classical.choice",
+        "Quot.sound",
+        "propext"
+      ]
+    },
+    "P02A2.Q8Compiler.programValue_eq": {
+      "type_sha256": "3946dc2068badbbe381b9f0c59b4d1670f2fbe2efc494d735056b052124551df",
+      "axioms": [
+        "Classical.choice",
+        "Quot.sound",
+        "propext"
+      ]
+    },
+    "P02A2.Q8Compiler.sentinel_append_bit": {
+      "type_sha256": "773106567f5659a179cf93748b3f29cda6761879dfed33bdd61c4e5861a8f37e",
+      "axioms": [
+        "Quot.sound",
+        "propext"
+      ]
+    },
+    "P02A2.Q8Compiler.sentinel_prefix_last": {
+      "type_sha256": "a6a70c98027d73985f8f3103217922f02ce3609a885b043474373dadc433c9f7",
+      "axioms": [
+        "Quot.sound",
+        "propext"
+      ]
+    },
+    "P02A2.Q8Compiler.program_output_switched": {
+      "type_sha256": "67fd692d27b7000aeebb0da768e6ff13e616155b00175be8661214b4e2ed1b5b",
+      "axioms": [
+        "Classical.choice",
+        "Quot.sound",
+        "propext"
+      ]
+    },
+    "P02A2.Q8Compiler.compiledObserver_eq": {
+      "type_sha256": "a901ad0849b53035bcb214f77aff346e92683d5d29a3830b6ed68ddf0a98243f",
+      "axioms": [
+        "Classical.choice",
+        "Quot.sound",
+        "propext"
+      ]
+    },
+    "P02A2.Q8Compiler.compiledObserver_measurable": {
+      "type_sha256": "4519b280aca67a91703fd368b0f3298c47daba31155a36180f390b1e88418f09",
+      "axioms": [
+        "Classical.choice",
+        "Quot.sound",
+        "propext"
+      ]
+    },
+    "P02A2.Q8Compiler.compiledLaw_eq": {
+      "type_sha256": "66a99db0011776301aa2ae9f4879e0228f982d2e1d830f799b89b57ecac81329",
+      "axioms": [
+        "Classical.choice",
+        "Quot.sound",
+        "propext"
+      ]
+    },
+    "P02A2.Q8Compiler.compiled_defect_zero_iff_nonhalting": {
+      "type_sha256": "4006fe5f363ca7b3aeb7da4a59af70bc660e07a0310da9539dbe0cf85fe08ad5",
+      "axioms": [
+        "Classical.choice",
+        "Quot.sound",
+        "propext"
+      ]
+    },
+    "P02A2.Q8Compiler.compiled_defect_one_iff_halting": {
+      "type_sha256": "4bf733c82e430197d4712576942bebc0682bd011e7c30e2e7e18fdc7fa8f8a15",
+      "axioms": [
+        "Classical.choice",
+        "Quot.sound",
+        "propext"
+      ]
+    },
+    "P02A2.Q8Compiler.compiled_nonhalting_dirac": {
+      "type_sha256": "127e6bc6ddd2ffc020d4de7220b152a8bf9d4c33b8272a26682aae1d6c81ad14",
+      "axioms": [
+        "Classical.choice",
+        "Quot.sound",
+        "propext"
+      ]
+    },
+    "P02A2.Q8Compiler.compiled_halting_singletons_zero": {
+      "type_sha256": "e179b01668a3dc6326fa03a9cc986350f4f3459167f55ca35c23b31b75bf0165",
+      "axioms": [
+        "Classical.choice",
+        "Quot.sound",
+        "propext"
+      ]
+    },
+    "P02A2.Q8Witnesses.foreverIncrement_flags": {
+      "type_sha256": "bd65c672192be60e71a1311b879c1ce9a317df895952fa222dc6af242fabc395",
+      "axioms": [
+        "propext"
+      ]
+    },
+    "P02A2.Q8Witnesses.foreverIncrement_never_halts": {
+      "type_sha256": "b3aa511befeedf398871c80c8635014bd014527c5ab4bffa1cff91a8f42c3129",
+      "axioms": [
+        "propext"
+      ]
+    },
+    "P02A2.Q8Witnesses.immediateHalt_defect": {
+      "type_sha256": "09c8a463a1f9cded5fd8ac6d96e9944c6442e4e77ad75a5e1c3d651872bf05d2",
+      "axioms": [
+        "Classical.choice",
+        "Quot.sound",
+        "propext"
+      ]
+    },
+    "P02A2.Q8Witnesses.foreverIncrement_defect": {
+      "type_sha256": "2c1e22a99eaadcaee16ffcea4c72aab413a9eaa4e75b7bf554b1522dc3e8cbc8",
+      "axioms": [
+        "Classical.choice",
+        "Quot.sound",
+        "propext"
+      ]
+    },
+    "P02A2.Q8Witnesses.wrong_bound_changes_immediate_output": {
+      "type_sha256": "77c67712d191717085e5076794fec92052fe9dbc924ea37894c00857d4f282c6",
+      "axioms": [
+        "propext"
+      ]
+    },
+    "P02A2.Q8Witnesses.wrong_snapshot_changes_delayed_output": {
+      "type_sha256": "1f7a42aa40cdfd281e3faaa767ae591c3a8d8a79253570f69f350bf42fdcb9fd",
+      "axioms": [
+        "propext"
+      ]
+    },
+    "P02A2.Q8Machine.run_zero_not_halted": {
+      "type_sha256": "56f90c9f3f8d431fc4b58cc3104b0138055631d31107ecd958ac129e29aa2651",
+      "axioms": []
+    },
+    "P02A2.Q8Witnesses.immediateHalt_halts": {
+      "type_sha256": "183b01be15520a1d92e6137887cdd069ebba0327468b44c0713abab4455c8371",
+      "axioms": []
+    },
+    "P02A2.InnovationMeasure.singleton_bound_of_copied": {
+      "type_sha256": "fb04332fac7fa769ffae45b1c08fb83088d8683d11eb0cabb5b228648838a574",
+      "axioms": [
+        "Classical.choice",
+        "Quot.sound",
+        "propext"
+      ]
+    },
+    "P02A2.InnovationMeasure.infinite_copied_singleton_zero": {
+      "type_sha256": "18625d02e3ce67199113ad476268d0f9af9da3b2be181736724def0a732a5026",
+      "axioms": [
+        "Classical.choice",
+        "Quot.sound",
+        "propext"
+      ]
+    },
+    "P02A2.InnovationMeasure.infinite_copied_defect_one": {
+      "type_sha256": "1200dbb84e150423ff33dbf59d63147483317dccc720c0722b53690efa2d994a",
+      "axioms": [
+        "Classical.choice",
+        "Quot.sound",
+        "propext"
+      ]
+    },
+    "P02A2.InnovationMeasure.eventually_false_finite_carrier": {
+      "type_sha256": "6c098c89962de92278c7034ecbdc0c72cc6ffa64c0e0d1659870626bfaf2e550",
+      "axioms": [
+        "Classical.choice",
+        "Quot.sound",
+        "propext"
+      ]
+    },
+    "P02A2.InnovationMeasure.eventually_false_defect_zero": {
+      "type_sha256": "4f8bcc656377bd0b3ebf262ad21605bfa2931fe92140a78141d52727d423ce91",
+      "axioms": [
+        "Classical.choice",
+        "Quot.sound",
+        "propext"
+      ]
+    },
+    "P02A2.InnovationMeasure.finite_copied_iff_eventually_false": {
+      "type_sha256": "6862305e6562e2dee8593cb7585338e3c6af07e36a00cfd319a33a64df8e5dde",
+      "axioms": [
+        "Classical.choice",
+        "Quot.sound",
+        "propext"
+      ]
+    },
+    "P02A2.InnovationMeasure.finite_copied_defect_zero": {
+      "type_sha256": "a1d7c89cb277c0f514fae6ede198212edce40415cf4222aaef3809df1c82f7ef",
+      "axioms": [
+        "Classical.choice",
+        "Quot.sound",
+        "propext"
+      ]
+    },
+    "P02A2.InnovationMeasure.defect_zero_iff_finite_copied": {
+      "type_sha256": "275d6571586c17c5104e85d9ffcfff66e0e83aa4dd2bd4e9459d14dfbbbecd5f",
+      "axioms": [
+        "Classical.choice",
+        "Quot.sound",
+        "propext"
+      ]
+    },
+    "P02A2.InnovationMeasure.defect_one_iff_infinite_copied": {
+      "type_sha256": "ae22121e38fc098d6f98f60097bd1adb241df50c1958abe464323f9682443ed1",
+      "axioms": [
+        "Classical.choice",
+        "Quot.sound",
+        "propext"
+      ]
+    },
+    "P02A2.SurvivorCandidates.candidate_spec": {
+      "type_sha256": "6e48c976d0bcc2a2773c4b96591db6ff91ff7e070234dc6e6ccab757c6e85400",
+      "axioms": [
+        "Classical.choice",
+        "Quot.sound",
+        "propext"
+      ]
+    },
+    "P02A2.SurvivorCandidates.candidate_le_default": {
+      "type_sha256": "38ecdf4a9c286efabba4dae0f2bd07736b3db1d7c3f1967ba18fbc3879dd4cde",
+      "axioms": [
+        "Classical.choice",
+        "Quot.sound",
+        "propext"
+      ]
+    },
+    "P02A2.SurvivorCandidates.candidate_le_passing": {
+      "type_sha256": "5e58a1b2dd80c9036898886f480b256fd1fcb567806396927ee8a8784ead4460",
+      "axioms": [
+        "Classical.choice",
+        "Quot.sound",
+        "propext"
+      ]
+    },
+    "P02A2.SurvivorCandidates.candidate_passes": {
+      "type_sha256": "da8d2c998ac773e346705538f057ae6807a7b58e62750b2e9a528264d44cf4cf",
+      "axioms": [
+        "Classical.choice",
+        "Quot.sound",
+        "propext"
+      ]
+    },
+    "P02A2.SurvivorCandidates.passes_mono": {
+      "type_sha256": "c8fa6384a0cd881dc3efb9d3fe2d7186b9590fa4a3800a1f76de6d5c08df5ded",
+      "axioms": [
+        "Classical.choice",
+        "Quot.sound",
+        "propext"
+      ]
+    },
+    "P02A2.SurvivorCandidates.candidate_step": {
+      "type_sha256": "3e01c7f61a1be4bdee735c2bae2b3215b4bbe03d53155395775402a0983b79b0",
+      "axioms": [
+        "Classical.choice",
+        "Quot.sound",
+        "propext"
+      ]
+    },
+    "P02A2.SurvivorCandidates.candidate_monotone": {
+      "type_sha256": "599e09c9428fffebdc8b787bade40d17b90a8853957b64f39b07d9cd59433a75",
+      "axioms": [
+        "Classical.choice",
+        "Quot.sound",
+        "propext"
+      ]
+    },
+    "P02A2.SurvivorCandidates.candidate_bounded_by_witness": {
+      "type_sha256": "253450176a58190e6129c172bb85baa0fe309cdc45f835816adf523413f22754",
+      "axioms": [
+        "Classical.choice",
+        "Quot.sound",
+        "propext"
+      ]
+    },
+    "P02A2.SurvivorCandidates.monotone_nat_bounded_eventually_constant": {
+      "type_sha256": "834b5b5583a90c4a7825c25f44d12b779fe29ccf7e1b1ba6880c46b9a3698452",
+      "axioms": [
+        "Classical.choice",
+        "Quot.sound",
+        "propext"
+      ]
+    },
+    "P02A2.SurvivorCandidates.witness_implies_stabilization": {
+      "type_sha256": "bd44844a3ff64e6e375d3060118e8b05164d96527178d413eda630f91b70d2a6",
+      "axioms": [
+        "Classical.choice",
+        "Quot.sound",
+        "propext"
+      ]
+    },
+    "P02A2.SurvivorCandidates.stabilization_implies_witness": {
+      "type_sha256": "b902bc8edec6190cdcd57ae2c885608719c192c3790321fc67a410a382a41314",
+      "axioms": [
+        "Classical.choice",
+        "Quot.sound",
+        "propext"
+      ]
+    },
+    "P02A2.SurvivorCandidates.innovation_successor": {
+      "type_sha256": "81a359418bf9e6383fc5212d3a8ed79dea190c46b183ef048e0bc79a7b26ac85",
+      "axioms": [
+        "Classical.choice",
+        "Quot.sound",
+        "propext"
+      ]
+    },
+    "P02A2.SurvivorCandidates.stabilization_implies_eventually_no_innovation": {
+      "type_sha256": "2969371cce2c261f3ac3732ca0f7f32737ca96782e11b94aa07122eb89522fa8",
+      "axioms": [
+        "Classical.choice",
+        "Quot.sound",
+        "propext"
+      ]
+    },
+    "P02A2.SurvivorCandidates.eventually_no_innovation_implies_stabilization": {
+      "type_sha256": "5d3ffc5a1705e0dfba350b2a45057ccd86e808a7774a2934dcefd2a9338ef10d",
+      "axioms": [
+        "Classical.choice",
+        "Quot.sound",
+        "propext"
+      ]
+    },
+    "P02A2.SurvivorCandidates.witness_iff_eventually_no_innovation": {
+      "type_sha256": "83569a430c1aa3ed99014fbe98e8d994e2a82757197a02fd421731ec12945027",
+      "axioms": [
+        "Classical.choice",
+        "Quot.sound",
+        "propext"
+      ]
+    },
+    "P02A2.SurvivorPrimrec.allBelow_eq_decide": {
+      "type_sha256": "db3f72a433307df858f87af6e40894978fba0f33fbdf04bb0d36093d00a6dcd1",
+      "axioms": [
+        "Quot.sound",
+        "propext"
+      ]
+    },
+    "P02A2.SurvivorPrimrec.allBelow_primrec": {
+      "type_sha256": "abfb84430a14e28db28f667ebd834c2058cf290bbf372f7c845f57bfaaa148ef",
+      "axioms": [
+        "Classical.choice",
+        "Quot.sound",
+        "propext"
+      ]
+    },
+    "P02A2.SurvivorPrimrec.bounded_all_primrec": {
+      "type_sha256": "6c597c15ef3ffa233495f29399551c69f8ab239f1f9df9586d7a29634e5c4792",
+      "axioms": [
+        "Classical.choice",
+        "Quot.sound",
+        "propext"
+      ]
+    },
+    "P02A2.SurvivorPrimrec.available_primrec": {
+      "type_sha256": "da186892dfdce3cda6e05be2e091a466a9b254ecfced4d713909d8bb85d78cca",
+      "axioms": [
+        "Classical.choice",
+        "Quot.sound",
+        "propext"
+      ]
+    },
+    "P02A2.SurvivorPrimrec.candidate_graph": {
+      "type_sha256": "0e77e774597ad67d03d94288476770aa29ba8df2a852220c152a4fc69e0371e5",
+      "axioms": [
+        "Classical.choice",
+        "Quot.sound",
+        "propext"
+      ]
+    },
+    "P02A2.SurvivorPrimrec.candidate_primrec": {
+      "type_sha256": "bbc3cea1c7382cc3ee1f33288a785ad2911f322242644b094b16eb6d03683da7",
+      "axioms": [
+        "Classical.choice",
+        "Quot.sound",
+        "propext"
+      ]
+    },
+    "P02A2.SurvivorPrimrec.previous_primrec": {
+      "type_sha256": "f2067a968558a6af065810dfcf74171620175e5965940e9ac46be1e5e4116184",
+      "axioms": [
+        "Classical.choice",
+        "Quot.sound",
+        "propext"
+      ]
+    },
+    "P02A2.SurvivorPrimrec.innovation_primrec": {
+      "type_sha256": "8a06f46697943f6a51216a34e144c455c7c764b0020fcf23edd82c08ae685844",
+      "axioms": [
+        "Classical.choice",
+        "Quot.sound",
+        "propext"
+      ]
+    },
+    "P02A2.SurvivorPrimrec.prefixFunction_primrec": {
+      "type_sha256": "26093f9989fe54393222f7df2ef1a090fd12921b184d20434ed4d153aa6db66c",
+      "axioms": [
+        "Classical.choice",
+        "Quot.sound",
+        "propext"
+      ]
+    },
+    "P02A2.Sigma2RowLaw.observer_eq_switched": {
+      "type_sha256": "a162a09ad4879ee82dc22ce9b3ba49ba55632d738d0de08865cccbd72321d065",
+      "axioms": [
+        "Classical.choice",
+        "Quot.sound",
+        "propext"
+      ]
+    },
+    "P02A2.Sigma2RowLaw.observer_measurable": {
+      "type_sha256": "00fa1723c835875d3be91069dcf87398bddc62bb1069eae03de6efb375caeaa4",
+      "axioms": [
+        "Classical.choice",
+        "Quot.sound",
+        "propext"
+      ]
+    },
+    "P02A2.Sigma2RowLaw.rowLaw_eq": {
+      "type_sha256": "c1e6a2e7bf3b382d81cdfd6641b5d92dfc34c834189ef054e2bdc8964db2bae0",
+      "axioms": [
+        "Classical.choice",
+        "Quot.sound",
+        "propext"
+      ]
+    },
+    "P02A2.Sigma2RowLaw.finite_innovation_iff_witness": {
+      "type_sha256": "016b5639ad86341fcf162bbc5d47c81bb56241a3b4329fdb41edf59ad3f263ac",
+      "axioms": [
+        "Classical.choice",
+        "Quot.sound",
+        "propext"
+      ]
+    },
+    "P02A2.Sigma2RowLaw.defect_zero_iff_witness": {
+      "type_sha256": "9f71c3956df282219a43b4f2deb15c8081c56afe4ea9113f191ac71a94a82cf4",
+      "axioms": [
+        "Classical.choice",
+        "Quot.sound",
+        "propext"
+      ]
+    },
+    "P02A2.Sigma2RowLaw.defect_one_iff_no_witness": {
+      "type_sha256": "211d751e461d70f58df8af6ad5d7c944b5a5709af432357062110ab5b4affe90",
+      "axioms": [
+        "Classical.choice",
+        "Quot.sound",
+        "propext"
+      ]
+    },
+    "P02A2.Sigma2RowLaw.witness_finite_carrier": {
+      "type_sha256": "e7e94dad5004908e07ea5a604008f3ffbffac190d29a04d4ae7effd7322e4dd1",
+      "axioms": [
+        "Classical.choice",
+        "Quot.sound",
+        "propext"
+      ]
+    },
+    "P02A2.Sigma2RowLaw.no_witness_singletons_zero": {
+      "type_sha256": "6e70bdee5c55b17d85f9ce3434b85ca0f3ee295009298566b7140e2ad5edb777",
+      "axioms": [
+        "Classical.choice",
+        "Quot.sound",
+        "propext"
+      ]
+    },
+    "P02A2.Sigma2RowLaw.defect_dichotomy": {
+      "type_sha256": "6504e178dcc77f6a38c438ee4646fbed215bd3eba8629f8b49eb7a931e40fd41",
+      "axioms": [
+        "Classical.choice",
+        "Quot.sound",
+        "propext"
+      ]
+    },
+    "P02A2.Sigma2RowLaw.joint_prefix_primitive_recursive": {
+      "type_sha256": "c2ba7febce5cc361adf3ae3089bfe7d04cf3b2bc4de0f12d45d265c623a41d73",
+      "axioms": [
+        "Classical.choice",
+        "Quot.sound",
+        "propext"
+      ]
+    },
+    "P02A2.Sigma2Witnesses.trueMatrix_primitive_recursive": {
+      "type_sha256": "fc78d2e809dbb035f785f51072189b5f3046b8aace86069a787f516bb230fa62",
+      "axioms": [
+        "Classical.choice",
+        "Quot.sound",
+        "propext"
+      ]
+    },
+    "P02A2.Sigma2Witnesses.falseMatrix_primitive_recursive": {
+      "type_sha256": "acc9a279b127f2123f681b9224bd4a4aae6abd873d9d0ae426e84491f505bc33",
+      "axioms": [
+        "Classical.choice",
+        "Quot.sound",
+        "propext"
+      ]
+    },
+    "P02A2.Sigma2Witnesses.swappedMatrix_primitive_recursive": {
+      "type_sha256": "02276c82136b4ca14458ba383c4ab43208af8f494150e2f80ec33ae12385233a",
+      "axioms": [
+        "Classical.choice",
+        "Quot.sound",
+        "propext"
+      ]
+    },
+    "P02A2.Sigma2Witnesses.trueMatrix_defect_zero": {
+      "type_sha256": "f0d656c11f100a88768dc14ce68f765298a8df44f806e78be7db3f426e0ed228",
+      "axioms": [
+        "Classical.choice",
+        "Quot.sound",
+        "propext"
+      ]
+    },
+    "P02A2.Sigma2Witnesses.falseMatrix_defect_one": {
+      "type_sha256": "e15ac494d62e41718b694d71f90cba6748d95578e4ce0057f92c0928ea4a69ba",
+      "axioms": [
+        "Classical.choice",
+        "Quot.sound",
+        "propext"
+      ]
+    },
+    "P02A2.Sigma2Witnesses.swappedMatrix_not_exists_forall": {
+      "type_sha256": "69869a1238a74047657f34af10b3515bee084f7253b74ac4aaacd12dfa81a613",
+      "axioms": [
+        "Quot.sound",
+        "propext"
+      ]
+    },
+    "P02A2.Sigma2Witnesses.swappedMatrix_defect_one": {
+      "type_sha256": "6a89ef44c90230134c4e19e2182a7c8d731b696b884115239599647fc0571bb1",
+      "axioms": [
+        "Classical.choice",
+        "Quot.sound",
+        "propext"
+      ]
+    },
+    "P02A2.Sigma2SourceMatrix.tripleInput_primrec": {
+      "type_sha256": "fd772668ac3e6af79afa3b8c3b555c952768498405d48a72f592156b2db5ef48",
+      "axioms": [
+        "Classical.choice",
+        "Quot.sound",
+        "propext"
+      ]
+    },
+    "P02A2.Sigma2SourceMatrix.matrix_primrec": {
+      "type_sha256": "d05ec4b36071467c354a717b7567a227260304650e1acaa8a28bcb8af0ec6367",
+      "axioms": [
+        "Classical.choice",
+        "Quot.sound",
+        "propext"
+      ]
+    },
+    "P02A2.Sigma2SourceMatrix.source_prefix_primrec": {
+      "type_sha256": "fa77ab33123aa3e472eb363be55053f01bc7cf7e94128c60f34c885734f05085",
+      "axioms": [
+        "Classical.choice",
+        "Quot.sound",
+        "propext"
+      ]
+    },
+    "P02A2.Sigma2SourceMatrix.source_row_zero_iff": {
+      "type_sha256": "657162229c0eba81c938085146dfd90fbbc693789910d67e3684ec253dec257b",
+      "axioms": [
+        "Classical.choice",
+        "Quot.sound",
+        "propext"
+      ]
+    },
+    "P02A2.Sigma2SourceMatrix.source_row_one_iff": {
+      "type_sha256": "f0402db399b75bb1cb0370dc9546964937e1ad67e7106f6d34c6ce5a3487ed16",
+      "axioms": [
+        "Classical.choice",
+        "Quot.sound",
+        "propext"
+      ]
+    },
+    "P02A2.Sigma2Witnesses.swappedMatrix_forall_exists": {
+      "type_sha256": "dde6f6b50ac39035d4fbce062ca694d5905202d542110c5c9abb5b762a999e7e",
+      "axioms": []
+    }
+  },
+  "original_controls": "NOT_RUN",
+  "original_receipt_sha256": "9a40a5eee0371a197669b117410ad0c3ab2c7a10a8366d4c2e4a4621dfaa924e",
+  "original_driver_sha256": "0666003f5081aca1efd6570a72da06d735b454d787dba97dd59fc1b42554bd14",
+  "execution_kind": "FRESH_CUSTOM_CLOSURE",
+  "finished_utc": null,
+  "scope": "Source-bound custom closure and selected declaration readbacks. Types are represented by hashes of the exact printed types; complete logs remain private. Official caches are trusted. This does not establish ordinary proof, runtime completeness, empirical or normative warrant, novelty, external human review or merged adoption."
+}

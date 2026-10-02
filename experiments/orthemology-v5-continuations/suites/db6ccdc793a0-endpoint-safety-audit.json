@@ -1,0 +1,135 @@
+{
+  "id": "db6ccdc793a0-endpoint-safety-audit",
+  "origin": "db6ccdc793a0a1a96b736cee6c55c47145b86b8f5f91d2dbb1cf80e7036b614e",
+  "descriptor_source_id": "src-db6ccdc793a0a1a9-85c042fef1d85c5a",
+  "modules": [
+    {
+      "module": "RobustBinaryRepair",
+      "source_id": "src-db6ccdc793a0a1a9-4a785d96f5d01700",
+      "imports": [
+        "Mathlib.Tactic"
+      ]
+    },
+    {
+      "module": "RepairEndpointCells",
+      "source_id": "src-db6ccdc793a0a1a9-899f7b57cd1c05de",
+      "imports": [
+        "RobustBinaryRepair"
+      ]
+    },
+    {
+      "module": "EndpointReadback",
+      "source_id": "src-db6ccdc793a0a1a9-0b81e577134a6270",
+      "imports": [
+        "RepairEndpointCells"
+      ]
+    }
+  ],
+  "module_order": [
+    "RobustBinaryRepair",
+    "RepairEndpointCells",
+    "EndpointReadback"
+  ],
+  "targets": [
+    {
+      "name": "Orthemology.Tranche3.robustGood_iff_endpoints",
+      "module": "RobustBinaryRepair"
+    },
+    {
+      "name": "Orthemology.Tranche3.robust_repair_exists_iff",
+      "module": "RobustBinaryRepair"
+    },
+    {
+      "name": "Orthemology.Tranche3.robustValue_polynomial",
+      "module": "RobustBinaryRepair"
+    },
+    {
+      "name": "Orthemology.Tranche3.robustReport_unique",
+      "module": "RobustBinaryRepair"
+    },
+    {
+      "name": "Orthemology.Tranche3.covered_certificate_sound",
+      "module": "RobustBinaryRepair"
+    },
+    {
+      "name": "Orthemology.Tranche3.width_sufficient",
+      "module": "RobustBinaryRepair"
+    },
+    {
+      "name": "Orthemology.Tranche3.width_necessary",
+      "module": "RobustBinaryRepair"
+    },
+    {
+      "name": "Orthemology.Tranche3.positive_weight_punctured_cell",
+      "module": "RepairEndpointCells"
+    },
+    {
+      "name": "Orthemology.Tranche3.zero_weight_unique",
+      "module": "RepairEndpointCells"
+    },
+    {
+      "name": "Orthemology.Tranche3.one_weight_unique",
+      "module": "RepairEndpointCells"
+    },
+    {
+      "name": "Orthemology.Tranche3.below_one_punctured_cell",
+      "module": "RepairEndpointCells"
+    }
+  ],
+  "pins": {
+    "lean_version": "4.19.0",
+    "lean_binary_sha256": "92c3d35b5bfaa5e0fea413a775d504cf46cd95e1345df61c2274f76779e7e023",
+    "packages": [
+      {
+        "name": "mathlib",
+        "revision": "c44e0c8ee63ca166450922a373c7409c5d26b00b"
+      },
+      {
+        "name": "plausible",
+        "revision": "77e08eddc486491d7b9e470926b3dbe50319451a"
+      },
+      {
+        "name": "LeanSearchClient",
+        "revision": "25078369972d295301f5a1e53c3e5850cf6d9d4c"
+      },
+      {
+        "name": "importGraph",
+        "revision": "e6a9f0f5ee3ccf7443a0070f92b62f8db12ae82b"
+      },
+      {
+        "name": "proofwidgets",
+        "revision": "c4919189477c3221e6a204008998b0d724f49904"
+      },
+      {
+        "name": "aesop",
+        "revision": "5d50b08dedd7d69b3d9b3176e0d58a23af228884"
+      },
+      {
+        "name": "Qq",
+        "revision": "fa4f7f15d97591a9cf3aa7724ba371c7fc6dda02"
+      },
+      {
+        "name": "batteries",
+        "revision": "f5d04a9c4973d401c8c92500711518f7c656f034"
+      },
+      {
+        "name": "Cli",
+        "revision": "02dbd02bc00ec4916e99b04b2245b30200e200d0"
+      }
+    ]
+  },
+  "official_imports": [
+    {
+      "module": "Mathlib.Tactic",
+      "repository": "mathlib",
+      "source": "Mathlib/Tactic.lean",
+      "sha256": "f20038eba7bba63f07a2f854496101226df407e20414e6b8ebf94b14f95e831b"
+    }
+  ],
+  "driver": {
+    "source_id": "src-db6ccdc793a0a1a9-817e8553aa5fdf95",
+    "lean_argument": "BIN_DIRECTORY"
+  },
+  "controls": "ORIGINAL_DRIVER_REQUIRED",
+  "classification": "CURRENT_EVIDENCE"
+}

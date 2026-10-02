@@ -1,0 +1,2141 @@
+{
+  "id": "d6f6fa5be514-core",
+  "origin": "d6f6fa5be51464c0aef8e06f0ab0433fc0b375ccf57f855a95e6fb8a55a14ade",
+  "descriptor_source_id": "src-d6f6fa5be51464c0-85c042fef1d85c5a",
+  "modules": [
+    {
+      "module": "BregmanProjection",
+      "source_id": "src-d6f6fa5be51464c0-0bd693dd7be71e05",
+      "imports": [
+        "GeneratorRigidity"
+      ]
+    },
+    {
+      "module": "CoherentNudgeRigidity",
+      "source_id": "src-d6f6fa5be51464c0-3cc3c6bec415c9b7",
+      "imports": [
+        "NudgeRigidity"
+      ]
+    },
+    {
+      "module": "FiniteHullApproximateIff",
+      "source_id": "src-d6f6fa5be51464c0-9716e8489dd5bf58",
+      "imports": [
+        "FiniteHullSmoothRigidity"
+      ]
+    },
+    {
+      "module": "FiniteHullSmoothRigidity",
+      "source_id": "src-d6f6fa5be51464c0-b152717836d0b289",
+      "imports": [
+        "SmoothRobustness"
+      ]
+    },
+    {
+      "module": "GeneratorRigidity",
+      "source_id": "src-d6f6fa5be51464c0-365f786aff9f4ae7",
+      "imports": [
+        "SmoothRigidity"
+      ]
+    },
+    {
+      "module": "IntrinsicBarycentric",
+      "source_id": "src-d6f6fa5be51464c0-cd164c8b63e628d1",
+      "imports": [
+        "FiniteHullApproximateIff"
+      ]
+    },
+    {
+      "module": "LocalRigidity",
+      "source_id": "src-d6f6fa5be51464c0-bc7093eed0a7cd4a",
+      "imports": [
+        "Mathlib"
+      ]
+    },
+    {
+      "module": "NudgeRigidity",
+      "source_id": "src-d6f6fa5be51464c0-7e2eb258e65ab221",
+      "imports": [
+        "SmoothRobustness"
+      ]
+    },
+    {
+      "module": "RepairObstruction",
+      "source_id": "src-d6f6fa5be51464c0-f3b71b36834c12ef",
+      "imports": [
+        "Mathlib"
+      ]
+    },
+    {
+      "module": "SmoothRigidity",
+      "source_id": "src-d6f6fa5be51464c0-914ae829f00518b5",
+      "imports": [
+        "LocalRigidity",
+        "SmoothScalar"
+      ]
+    },
+    {
+      "module": "SmoothRobustness",
+      "source_id": "src-d6f6fa5be51464c0-ddc6202a0a3a924d",
+      "imports": [
+        "BregmanProjection"
+      ]
+    },
+    {
+      "module": "SmoothScalar",
+      "source_id": "src-d6f6fa5be51464c0-cae19a6d634ff13e",
+      "imports": [
+        "Mathlib"
+      ]
+    },
+    {
+      "module": "ApproximateRepairIdentification",
+      "source_id": "src-d6f6fa5be51464c0-acad6cb8c4ed34de",
+      "imports": [
+        "EventualCausalRestoration"
+      ]
+    },
+    {
+      "module": "BinaryConstructiveRepair",
+      "source_id": "src-d6f6fa5be51464c0-1d5942a80ec50a56",
+      "imports": [
+        "RepairTestingBridge"
+      ]
+    },
+    {
+      "module": "BlindGuessSharpness",
+      "source_id": "src-d6f6fa5be51464c0-39c03554a548ffe9",
+      "imports": [
+        "EventualCausalRestoration"
+      ]
+    },
+    {
+      "module": "CorrelatedOracleMeasure",
+      "source_id": "src-d6f6fa5be51464c0-f0289b7d2a4bddc9",
+      "imports": [
+        "FiniteQueryMeasure"
+      ]
+    },
+    {
+      "module": "CountableIdentification",
+      "source_id": "src-d6f6fa5be51464c0-f99c54b0cbe71486",
+      "imports": [
+        "Mathlib.MeasureTheory.Measure.Typeclasses.SFinite",
+        "Mathlib.MeasureTheory.Measure.AbsolutelyContinuous",
+        "Mathlib.MeasureTheory.Measure.Restrict",
+        "Mathlib.Tactic"
+      ]
+    },
+    {
+      "module": "EventualCausalRestoration",
+      "source_id": "src-d6f6fa5be51464c0-b03d7210d8bb725b",
+      "imports": [
+        "CorrelatedOracleMeasure"
+      ]
+    },
+    {
+      "module": "FiniteQueryLocality",
+      "source_id": "src-d6f6fa5be51464c0-2629926f753fa5db",
+      "imports": [
+        "Mathlib"
+      ]
+    },
+    {
+      "module": "FiniteQueryMeasure",
+      "source_id": "src-d6f6fa5be51464c0-93245e97a2270319",
+      "imports": [
+        "FiniteQueryLocality",
+        "RestorationCountability",
+        "Mathlib.Probability.ProductMeasure"
+      ]
+    },
+    {
+      "module": "GeneratedBinaryExperiment",
+      "source_id": "src-d6f6fa5be51464c0-fbebb2441fd9dc1a",
+      "imports": [
+        "IntegratedBinaryRestoration",
+        "ProductObservationLaw"
+      ]
+    },
+    {
+      "module": "GenericFiniteQueryLocality",
+      "source_id": "src-d6f6fa5be51464c0-9f0d4e3dae3a1622",
+      "imports": [
+        "Mathlib"
+      ]
+    },
+    {
+      "module": "GenericFiniteQueryMeasure",
+      "source_id": "src-d6f6fa5be51464c0-954815b5c6878aa1",
+      "imports": [
+        "GenericFiniteQueryLocality",
+        "Mathlib.Probability.ProductMeasure"
+      ]
+    },
+    {
+      "module": "GenericQueryReference",
+      "source_id": "src-d6f6fa5be51464c0-57a6683ed44dd072",
+      "imports": [
+        "GenericFiniteQueryMeasure"
+      ]
+    },
+    {
+      "module": "IntegratedBinaryRestoration",
+      "source_id": "src-d6f6fa5be51464c0-bdcca572e2665b60",
+      "imports": [
+        "CanonicalBlockPolicy",
+        "BlindGuessSharpness",
+        "Mathlib.Probability.ProductMeasure"
+      ]
+    },
+    {
+      "module": "MeasurablePhysicalFlattening",
+      "source_id": "src-d6f6fa5be51464c0-d3f2d11cd59010d3",
+      "imports": [
+        "PhysicalFlattening"
+      ]
+    },
+    {
+      "module": "PhysicalFlattening",
+      "source_id": "src-d6f6fa5be51464c0-b766de6b98b54ad8",
+      "imports": [
+        "Mathlib"
+      ]
+    },
+    {
+      "module": "ProductObservationLaw",
+      "source_id": "src-d6f6fa5be51464c0-3954dbce4e3677b6",
+      "imports": [
+        "Mathlib",
+        "Mathlib.Probability.ProductMeasure"
+      ]
+    },
+    {
+      "module": "RepairTestingBridge",
+      "source_id": "src-d6f6fa5be51464c0-82f81be03de36e52",
+      "imports": [
+        "StatisticalRepair",
+        "RepairObstruction"
+      ]
+    },
+    {
+      "module": "RestorationCountability",
+      "source_id": "src-d6f6fa5be51464c0-a9762a717b540f81",
+      "imports": [
+        "RepairTestingBridge",
+        "CountableIdentification",
+        "Mathlib.MeasureTheory.Constructions.Polish.Basic"
+      ]
+    },
+    {
+      "module": "StatisticalRepair",
+      "source_id": "src-d6f6fa5be51464c0-b9995e9cc012fc17",
+      "imports": [
+        "Mathlib.Data.Real.Sqrt",
+        "Mathlib.Algebra.Order.BigOperators.Ring.Finset",
+        "Mathlib.Tactic"
+      ]
+    },
+    {
+      "module": "AdaptiveLikelihood",
+      "source_id": "src-d6f6fa5be51464c0-23d5fd9b94d572cc",
+      "imports": [
+        "FiniteLikelihood",
+        "Mathlib.Order.Filter.IsBounded"
+      ]
+    },
+    {
+      "module": "BlockController",
+      "source_id": "src-d6f6fa5be51464c0-1e4bdb9395b40566",
+      "imports": [
+        "LikelihoodProducts",
+        "SelfVerifyingSupport",
+        "Mathlib.Data.Nat.Nth",
+        "Mathlib.Order.Filter.Cofinite"
+      ]
+    },
+    {
+      "module": "CanonicalBlockPolicy",
+      "source_id": "src-d6f6fa5be51464c0-a153a623432c705d",
+      "imports": [
+        "BlockController"
+      ]
+    },
+    {
+      "module": "FiniteLikelihood",
+      "source_id": "src-d6f6fa5be51464c0-a59caf972a6f32ae",
+      "imports": [
+        "Mathlib.Probability.StrongLaw",
+        "Mathlib.InformationTheory.KullbackLeibler.KLFun",
+        "Mathlib.Tactic"
+      ]
+    },
+    {
+      "module": "LikelihoodProducts",
+      "source_id": "src-d6f6fa5be51464c0-8ad49565b761058e",
+      "imports": [
+        "AdaptiveLikelihood"
+      ]
+    },
+    {
+      "module": "SelfVerifyingSupport",
+      "source_id": "src-d6f6fa5be51464c0-de27c4144fbd9f13",
+      "imports": [
+        "Mathlib.Data.Finset.Powerset",
+        "Mathlib.Data.Finset.Card",
+        "Mathlib.Tactic"
+      ]
+    },
+    {
+      "module": "SupportFixtures",
+      "source_id": "src-d6f6fa5be51464c0-64cff4d562d7fc05",
+      "imports": [
+        "SupportStageCertificate"
+      ]
+    },
+    {
+      "module": "SupportStageCertificate",
+      "source_id": "src-d6f6fa5be51464c0-4f7ca1b5fe02a342",
+      "imports": [
+        "SelfVerifyingSupport"
+      ]
+    }
+  ],
+  "module_order": [
+    "LocalRigidity",
+    "SmoothScalar",
+    "SmoothRigidity",
+    "GeneratorRigidity",
+    "BregmanProjection",
+    "SmoothRobustness",
+    "NudgeRigidity",
+    "CoherentNudgeRigidity",
+    "FiniteHullSmoothRigidity",
+    "FiniteHullApproximateIff",
+    "IntrinsicBarycentric",
+    "RepairObstruction",
+    "FiniteQueryLocality",
+    "StatisticalRepair",
+    "RepairTestingBridge",
+    "CountableIdentification",
+    "RestorationCountability",
+    "FiniteQueryMeasure",
+    "CorrelatedOracleMeasure",
+    "EventualCausalRestoration",
+    "ApproximateRepairIdentification",
+    "BinaryConstructiveRepair",
+    "BlindGuessSharpness",
+    "FiniteLikelihood",
+    "AdaptiveLikelihood",
+    "LikelihoodProducts",
+    "SelfVerifyingSupport",
+    "BlockController",
+    "CanonicalBlockPolicy",
+    "IntegratedBinaryRestoration",
+    "ProductObservationLaw",
+    "GeneratedBinaryExperiment",
+    "GenericFiniteQueryLocality",
+    "GenericFiniteQueryMeasure",
+    "GenericQueryReference",
+    "PhysicalFlattening",
+    "MeasurablePhysicalFlattening",
+    "SupportStageCertificate",
+    "SupportFixtures"
+  ],
+  "targets": [
+    {
+      "name": "BregmanProjection.score_strictConvex",
+      "module": "BregmanProjection"
+    },
+    {
+      "name": "BregmanProjection.boundary_divergence_pos",
+      "module": "BregmanProjection"
+    },
+    {
+      "name": "BregmanProjection.boundary_divergence_nonneg",
+      "module": "BregmanProjection"
+    },
+    {
+      "name": "BregmanProjection.potential_hasFDerivAt",
+      "module": "BregmanProjection"
+    },
+    {
+      "name": "BregmanProjection.potential_continuousOn",
+      "module": "BregmanProjection"
+    },
+    {
+      "name": "BregmanProjection.gradient_continuousAt",
+      "module": "BregmanProjection"
+    },
+    {
+      "name": "BregmanProjection.totalDiv_continuousOn_first",
+      "module": "BregmanProjection"
+    },
+    {
+      "name": "BregmanProjection.totalDiv_first_positive",
+      "module": "BregmanProjection"
+    },
+    {
+      "name": "BregmanProjection.exists_projection",
+      "module": "BregmanProjection"
+    },
+    {
+      "name": "BregmanProjection.totalDiv_joint_tendsto",
+      "module": "BregmanProjection"
+    },
+    {
+      "name": "BregmanProjection.projections_tendsto",
+      "module": "BregmanProjection"
+    },
+    {
+      "name": "BregmanProjection.tangent_path_in_simplex",
+      "module": "BregmanProjection"
+    },
+    {
+      "name": "BregmanProjection.projection_normal",
+      "module": "BregmanProjection"
+    },
+    {
+      "name": "BregmanProjection.projection_weakly_repairs",
+      "module": "BregmanProjection"
+    },
+    {
+      "name": "BregmanProjection.single_score_local_repairs",
+      "module": "BregmanProjection"
+    },
+    {
+      "name": "BregmanProjection.affine_gradient_coordinate",
+      "module": "BregmanProjection"
+    },
+    {
+      "name": "BregmanProjection.affine_totalDiv",
+      "module": "BregmanProjection"
+    },
+    {
+      "name": "BregmanProjection.CommonLocalRepairs",
+      "module": "BregmanProjection"
+    },
+    {
+      "name": "BregmanProjection.PositiveAffineEquivalent",
+      "module": "BregmanProjection"
+    },
+    {
+      "name": "BregmanProjection.universal_common_repair_iff_affine",
+      "module": "BregmanProjection"
+    },
+    {
+      "name": "CoherentNudgeRigidity.CommonCoherentLocalNudges",
+      "module": "CoherentNudgeRigidity"
+    },
+    {
+      "name": "CoherentNudgeRigidity.coherent_nudges_are_ambient",
+      "module": "CoherentNudgeRigidity"
+    },
+    {
+      "name": "CoherentNudgeRigidity.single_score_coherent_nudges",
+      "module": "CoherentNudgeRigidity"
+    },
+    {
+      "name": "CoherentNudgeRigidity.universal_coherent_nudge_iff_affine",
+      "module": "CoherentNudgeRigidity"
+    },
+    {
+      "name": "CoherentNudgeRigidity.universal_coherent_nudge_iff_common_repair",
+      "module": "CoherentNudgeRigidity"
+    },
+    {
+      "name": "FiniteHullApproximateIff.interior_tangent_sequence",
+      "module": "FiniteHullApproximateIff"
+    },
+    {
+      "name": "FiniteHullApproximateIff.common_normal_sublinear_gains",
+      "module": "FiniteHullApproximateIff"
+    },
+    {
+      "name": "FiniteHullApproximateIff.finite_hull_local_approximate_iff",
+      "module": "FiniteHullApproximateIff"
+    },
+    {
+      "name": "FiniteHullSmoothRigidity.weighted_approximate_regret_bound",
+      "module": "FiniteHullSmoothRigidity"
+    },
+    {
+      "name": "FiniteHullSmoothRigidity.weighted_approximate_repairs_tendsto",
+      "module": "FiniteHullSmoothRigidity"
+    },
+    {
+      "name": "FiniteHullSmoothRigidity.finite_hull_normalized_approximate_repairs_bounded",
+      "module": "FiniteHullSmoothRigidity"
+    },
+    {
+      "name": "FiniteHullSmoothRigidity.finite_hull_approximate_hessian_necessary",
+      "module": "FiniteHullSmoothRigidity"
+    },
+    {
+      "name": "FiniteHullSmoothRigidity.finite_hull_common_hessian_necessary",
+      "module": "FiniteHullSmoothRigidity"
+    },
+    {
+      "name": "GeneratorRigidity.vertex_sum",
+      "module": "GeneratorRigidity"
+    },
+    {
+      "name": "GeneratorRigidity.tangent_sum_zero",
+      "module": "GeneratorRigidity"
+    },
+    {
+      "name": "GeneratorRigidity.vertex_transverse",
+      "module": "GeneratorRigidity"
+    },
+    {
+      "name": "GeneratorRigidity.vertex_difference_tangent",
+      "module": "GeneratorRigidity"
+    },
+    {
+      "name": "GeneratorRigidity.hessian_vertex",
+      "module": "GeneratorRigidity"
+    },
+    {
+      "name": "GeneratorRigidity.positive_normal_proportional",
+      "module": "GeneratorRigidity"
+    },
+    {
+      "name": "GeneratorRigidity.common_repairs_hessians_proportional",
+      "module": "GeneratorRigidity"
+    },
+    {
+      "name": "GeneratorRigidity.fill_two_coordinates",
+      "module": "GeneratorRigidity"
+    },
+    {
+      "name": "GeneratorRigidity.simplex_ratio_connectivity",
+      "module": "GeneratorRigidity"
+    },
+    {
+      "name": "GeneratorRigidity.generators_affine_of_hessian_eq",
+      "module": "GeneratorRigidity"
+    },
+    {
+      "name": "GeneratorRigidity.universal_common_repairs_force_affine",
+      "module": "GeneratorRigidity"
+    },
+    {
+      "name": "IntrinsicBarycentric.finite_convex_weights",
+      "module": "IntrinsicBarycentric"
+    },
+    {
+      "name": "IntrinsicBarycentric.intrinsicInterior_positive_barycentric",
+      "module": "IntrinsicBarycentric"
+    },
+    {
+      "name": "IntrinsicBarycentric.quadratic_local_common_repair_iff_intrinsicInterior",
+      "module": "IntrinsicBarycentric"
+    },
+    {
+      "name": "IntrinsicBarycentric.smooth_finite_hull_approximate_necessary_intrinsicInterior",
+      "module": "IntrinsicBarycentric"
+    },
+    {
+      "name": "IntrinsicBarycentric.smooth_finite_hull_approximate_iff_intrinsicInterior",
+      "module": "IntrinsicBarycentric"
+    },
+    {
+      "name": "LocalRigidity.Form",
+      "module": "LocalRigidity"
+    },
+    {
+      "name": "LocalRigidity.loss",
+      "module": "LocalRigidity"
+    },
+    {
+      "name": "LocalRigidity.gain_expansion",
+      "module": "LocalRigidity"
+    },
+    {
+      "name": "LocalRigidity.continuous_diag",
+      "module": "LocalRigidity"
+    },
+    {
+      "name": "LocalRigidity.first_order_nonnegative",
+      "module": "LocalRigidity"
+    },
+    {
+      "name": "LocalRigidity.barycenter_sub_sum",
+      "module": "LocalRigidity"
+    },
+    {
+      "name": "LocalRigidity.barycenter_form_sum",
+      "module": "LocalRigidity"
+    },
+    {
+      "name": "LocalRigidity.barycenter_nonnegative_vanish",
+      "module": "LocalRigidity"
+    },
+    {
+      "name": "LocalRigidity.orthogonal_span",
+      "module": "LocalRigidity"
+    },
+    {
+      "name": "LocalRigidity.common_limit_orthogonal",
+      "module": "LocalRigidity"
+    },
+    {
+      "name": "LocalRigidity.weighted_first_order_sum",
+      "module": "LocalRigidity"
+    },
+    {
+      "name": "LocalRigidity.repair_energy_bound",
+      "module": "LocalRigidity"
+    },
+    {
+      "name": "LocalRigidity.common_repair_necessary",
+      "module": "LocalRigidity"
+    },
+    {
+      "name": "LocalRigidity.positive_definite_coercive",
+      "module": "LocalRigidity"
+    },
+    {
+      "name": "LocalRigidity.tangent_ray_in_convexHull",
+      "module": "LocalRigidity"
+    },
+    {
+      "name": "LocalRigidity.convexHull_sub_mem",
+      "module": "LocalRigidity"
+    },
+    {
+      "name": "LocalRigidity.normal_gain_identity",
+      "module": "LocalRigidity"
+    },
+    {
+      "name": "LocalRigidity.common_repair_sufficient",
+      "module": "LocalRigidity"
+    },
+    {
+      "name": "LocalRigidity.convex_common_repair_necessary",
+      "module": "LocalRigidity"
+    },
+    {
+      "name": "LocalRigidity.local_common_repair_iff",
+      "module": "LocalRigidity"
+    },
+    {
+      "name": "LocalRigidity.simultaneous_normal_unique",
+      "module": "LocalRigidity"
+    },
+    {
+      "name": "NudgeRigidity.hessian_loss_direction_tendsto",
+      "module": "NudgeRigidity"
+    },
+    {
+      "name": "NudgeRigidity.local_nudges_hessians_proportional",
+      "module": "NudgeRigidity"
+    },
+    {
+      "name": "NudgeRigidity.CommonLocalNudges",
+      "module": "NudgeRigidity"
+    },
+    {
+      "name": "NudgeRigidity.nudge_derivative_is_actual",
+      "module": "NudgeRigidity"
+    },
+    {
+      "name": "NudgeRigidity.universal_local_nudges_force_affine",
+      "module": "NudgeRigidity"
+    },
+    {
+      "name": "NudgeRigidity.affine_second_derivative",
+      "module": "NudgeRigidity"
+    },
+    {
+      "name": "NudgeRigidity.canonical_nudge_gain",
+      "module": "NudgeRigidity"
+    },
+    {
+      "name": "NudgeRigidity.affine_hessian_direction",
+      "module": "NudgeRigidity"
+    },
+    {
+      "name": "NudgeRigidity.universal_local_nudge_iff_affine",
+      "module": "NudgeRigidity"
+    },
+    {
+      "name": "NudgeRigidity.universal_local_nudge_iff_common_repair",
+      "module": "NudgeRigidity"
+    },
+    {
+      "name": "RepairObstruction.binary_product_identities",
+      "module": "RepairObstruction"
+    },
+    {
+      "name": "RepairObstruction.binary_quadratic_identities",
+      "module": "RepairObstruction"
+    },
+    {
+      "name": "RepairObstruction.binary_cell_bound",
+      "module": "RepairObstruction"
+    },
+    {
+      "name": "RepairObstruction.binary_repair_readout",
+      "module": "RepairObstruction"
+    },
+    {
+      "name": "RepairObstruction.quadratic_box",
+      "module": "RepairObstruction"
+    },
+    {
+      "name": "RepairObstruction.no_common_polynomial_repair",
+      "module": "RepairObstruction"
+    },
+    {
+      "name": "RepairObstruction.no_common_logarithmic_repair",
+      "module": "RepairObstruction"
+    },
+    {
+      "name": "RepairObstruction.binary_parameter_decoder",
+      "module": "RepairObstruction"
+    },
+    {
+      "name": "SmoothRigidity.varying_direction_limit",
+      "module": "SmoothRigidity"
+    },
+    {
+      "name": "SmoothRigidity.smooth_first_order_nonnegative",
+      "module": "SmoothRigidity"
+    },
+    {
+      "name": "SmoothRigidity.bregman",
+      "module": "SmoothRigidity"
+    },
+    {
+      "name": "SmoothRigidity.bregman_gain",
+      "module": "SmoothRigidity"
+    },
+    {
+      "name": "SmoothRigidity.weighted_bregman_gain",
+      "module": "SmoothRigidity"
+    },
+    {
+      "name": "SmoothRigidity.bregman_regret_bound",
+      "module": "SmoothRigidity"
+    },
+    {
+      "name": "SmoothRigidity.Vec",
+      "module": "SmoothRigidity"
+    },
+    {
+      "name": "SmoothRigidity.potential",
+      "module": "SmoothRigidity"
+    },
+    {
+      "name": "SmoothRigidity.gradient",
+      "module": "SmoothRigidity"
+    },
+    {
+      "name": "SmoothRigidity.hessian",
+      "module": "SmoothRigidity"
+    },
+    {
+      "name": "SmoothRigidity.totalDiv",
+      "module": "SmoothRigidity"
+    },
+    {
+      "name": "SmoothRigidity.vertex",
+      "module": "SmoothRigidity"
+    },
+    {
+      "name": "SmoothRigidity.hessian_apply",
+      "module": "SmoothRigidity"
+    },
+    {
+      "name": "SmoothRigidity.totalDiv_eq_sum",
+      "module": "SmoothRigidity"
+    },
+    {
+      "name": "SmoothRigidity.score_hasFDerivAt",
+      "module": "SmoothRigidity"
+    },
+    {
+      "name": "SmoothRigidity.vertex_barycenter",
+      "module": "SmoothRigidity"
+    },
+    {
+      "name": "SmoothRigidity.totalDiv_nonneg",
+      "module": "SmoothRigidity"
+    },
+    {
+      "name": "SmoothRigidity.vertex_regret_bound",
+      "module": "SmoothRigidity"
+    },
+    {
+      "name": "SmoothRigidity.scalar_divergence_le_total",
+      "module": "SmoothRigidity"
+    },
+    {
+      "name": "SmoothRigidity.repairs_tendsto",
+      "module": "SmoothRigidity"
+    },
+    {
+      "name": "SmoothRigidity.normalized_repairs_bounded",
+      "module": "SmoothRigidity"
+    },
+    {
+      "name": "SmoothRigidity.hessian_symmetric",
+      "module": "SmoothRigidity"
+    },
+    {
+      "name": "SmoothRigidity.hessian_positive",
+      "module": "SmoothRigidity"
+    },
+    {
+      "name": "SmoothRigidity.smooth_common_repair_hessian_necessary",
+      "module": "SmoothRigidity"
+    },
+    {
+      "name": "SmoothRobustness.positive_derivative_coercive",
+      "module": "SmoothRobustness"
+    },
+    {
+      "name": "SmoothRobustness.approximate_first_order_nonnegative",
+      "module": "SmoothRobustness"
+    },
+    {
+      "name": "SmoothRobustness.approximate_vertex_regret_bound",
+      "module": "SmoothRobustness"
+    },
+    {
+      "name": "SmoothRobustness.approximate_repairs_tendsto",
+      "module": "SmoothRobustness"
+    },
+    {
+      "name": "SmoothRobustness.sublinear_tolerance_tendsto_zero",
+      "module": "SmoothRobustness"
+    },
+    {
+      "name": "SmoothRobustness.normalized_approximate_repairs_bounded",
+      "module": "SmoothRobustness"
+    },
+    {
+      "name": "SmoothRobustness.approximate_common_repair_hessian_necessary",
+      "module": "SmoothRobustness"
+    },
+    {
+      "name": "SmoothRobustness.approximate_repairs_hessians_proportional",
+      "module": "SmoothRobustness"
+    },
+    {
+      "name": "SmoothRobustness.universal_approximate_repairs_force_affine",
+      "module": "SmoothRobustness"
+    },
+    {
+      "name": "SmoothRobustness.ApproximateCommonLocalRepairs",
+      "module": "SmoothRobustness"
+    },
+    {
+      "name": "SmoothRobustness.universal_approximate_common_repair_iff_affine",
+      "module": "SmoothRobustness"
+    },
+    {
+      "name": "SmoothScalar.Score",
+      "module": "SmoothScalar"
+    },
+    {
+      "name": "SmoothScalar.divergence",
+      "module": "SmoothScalar"
+    },
+    {
+      "name": "SmoothScalar.divergence_self",
+      "module": "SmoothScalar"
+    },
+    {
+      "name": "SmoothScalar.divergence_deriv",
+      "module": "SmoothScalar"
+    },
+    {
+      "name": "SmoothScalar.divergence_strictMono_right",
+      "module": "SmoothScalar"
+    },
+    {
+      "name": "SmoothScalar.divergence_strictAnti_left",
+      "module": "SmoothScalar"
+    },
+    {
+      "name": "SmoothScalar.divergence_pos",
+      "module": "SmoothScalar"
+    },
+    {
+      "name": "SmoothScalar.divergence_nonneg",
+      "module": "SmoothScalar"
+    },
+    {
+      "name": "SmoothScalar.tendsto_of_divergence_tendsto_zero",
+      "module": "SmoothScalar"
+    },
+    {
+      "name": "SmoothScalar.radial_local_min",
+      "module": "SmoothScalar"
+    },
+    {
+      "name": "SmoothScalar.adjusted_divergence_deriv",
+      "module": "SmoothScalar"
+    },
+    {
+      "name": "SmoothScalar.local_curvature_sandwich",
+      "module": "SmoothScalar"
+    },
+    {
+      "name": "Orthemology.Tranche2.BinaryApproxGood",
+      "module": "ApproximateRepairIdentification"
+    },
+    {
+      "name": "Orthemology.Tranche2.eventual_approximate_binary_good_decodes",
+      "module": "ApproximateRepairIdentification"
+    },
+    {
+      "name": "Orthemology.Tranche2.no_information_linear_tolerance",
+      "module": "ApproximateRepairIdentification"
+    },
+    {
+      "name": "Orthemology.Tranche2.countable_positive_eventual_approximate_repairs",
+      "module": "ApproximateRepairIdentification"
+    },
+    {
+      "name": "Orthemology.Tranche2.FiniteQuery.measurable_eventual_approximate_score",
+      "module": "ApproximateRepairIdentification"
+    },
+    {
+      "name": "Orthemology.Tranche2.FiniteQuery.countable_positive_approximate_causal_restoration",
+      "module": "ApproximateRepairIdentification"
+    },
+    {
+      "name": "Orthemology.Tranche2.binary_good_is_coherent",
+      "module": "BinaryConstructiveRepair"
+    },
+    {
+      "name": "Orthemology.Tranche2.sufficient_binary_cell",
+      "module": "BinaryConstructiveRepair"
+    },
+    {
+      "name": "Orthemology.Tranche2.approximate_parameter_strict_repair",
+      "module": "BinaryConstructiveRepair"
+    },
+    {
+      "name": "Orthemology.Tranche2.exact_parameter_repair",
+      "module": "BlindGuessSharpness"
+    },
+    {
+      "name": "Orthemology.Tranche2.guessed_parameter_eventual_success_iff",
+      "module": "BlindGuessSharpness"
+    },
+    {
+      "name": "Orthemology.Tranche2.FiniteQuery.blindAsk",
+      "module": "BlindGuessSharpness"
+    },
+    {
+      "name": "Orthemology.Tranche2.FiniteQuery.blindNext",
+      "module": "BlindGuessSharpness"
+    },
+    {
+      "name": "Orthemology.Tranche2.FiniteQuery.blind_run",
+      "module": "BlindGuessSharpness"
+    },
+    {
+      "name": "Orthemology.Tranche2.FiniteQuery.blind_causal_success_mass",
+      "module": "BlindGuessSharpness"
+    },
+    {
+      "name": "Orthemology.Tranche2.FiniteQuery.joint_dominated_by_countable_reference",
+      "module": "CorrelatedOracleMeasure"
+    },
+    {
+      "name": "Orthemology.Tranche2.FiniteQuery.jointTraceLaw",
+      "module": "CorrelatedOracleMeasure"
+    },
+    {
+      "name": "Orthemology.Tranche2.FiniteQuery.bounded_joint_trace_factorisation",
+      "module": "CorrelatedOracleMeasure"
+    },
+    {
+      "name": "Orthemology.Tranche2.FiniteQuery.correlated_finite_query_trace_domination",
+      "module": "CorrelatedOracleMeasure"
+    },
+    {
+      "name": "Orthemology.Tranche2.FiniteQuery.countable_positive_shared_seed_query_repairs",
+      "module": "CorrelatedOracleMeasure"
+    },
+    {
+      "name": "Orthemology.Tranche2.countable_positive_exact_identification",
+      "module": "CountableIdentification"
+    },
+    {
+      "name": "Orthemology.Tranche2.countable_positive_identification_on_event",
+      "module": "CountableIdentification"
+    },
+    {
+      "name": "Orthemology.Tranche2.common_components_dominated",
+      "module": "CountableIdentification"
+    },
+    {
+      "name": "Orthemology.Tranche2.countable_positive_identification_from_components",
+      "module": "CountableIdentification"
+    },
+    {
+      "name": "Orthemology.Tranche2.FiniteQuery.actual_eventual_target",
+      "module": "EventualCausalRestoration"
+    },
+    {
+      "name": "Orthemology.Tranche2.FiniteQuery.measurable_eventual_score",
+      "module": "EventualCausalRestoration"
+    },
+    {
+      "name": "Orthemology.Tranche2.FiniteQuery.countable_positive_eventual_causal_restoration",
+      "module": "EventualCausalRestoration"
+    },
+    {
+      "name": "Orthemology.Tranche2.FiniteQuery.advance",
+      "module": "FiniteQueryLocality"
+    },
+    {
+      "name": "Orthemology.Tranche2.FiniteQuery.run",
+      "module": "FiniteQueryLocality"
+    },
+    {
+      "name": "Orthemology.Tranche2.FiniteQuery.Bounded",
+      "module": "FiniteQueryLocality"
+    },
+    {
+      "name": "Orthemology.Tranche2.FiniteQuery.bounded_prefix_locality",
+      "module": "FiniteQueryLocality"
+    },
+    {
+      "name": "Orthemology.Tranche2.FiniteQuery.bounded_prefix_equivalence",
+      "module": "FiniteQueryLocality"
+    },
+    {
+      "name": "Orthemology.Tranche2.FiniteQuery.prefixOracle",
+      "module": "FiniteQueryLocality"
+    },
+    {
+      "name": "Orthemology.Tranche2.FiniteQuery.prefixOracle_agrees",
+      "module": "FiniteQueryLocality"
+    },
+    {
+      "name": "Orthemology.Tranche2.FiniteQuery.bounded_trace_factorisation",
+      "module": "FiniteQueryLocality"
+    },
+    {
+      "name": "Orthemology.Tranche2.FiniteQuery.counter_monotone",
+      "module": "FiniteQueryLocality"
+    },
+    {
+      "name": "Orthemology.Tranche2.FiniteQuery.bounded_iff_eventually_no_query",
+      "module": "FiniteQueryLocality"
+    },
+    {
+      "name": "Orthemology.Tranche2.FiniteQuery.Oracle",
+      "module": "FiniteQueryMeasure"
+    },
+    {
+      "name": "Orthemology.Tranche2.FiniteQuery.Trace",
+      "module": "FiniteQueryMeasure"
+    },
+    {
+      "name": "Orthemology.Tranche2.FiniteQuery.measurable_advance_joint",
+      "module": "FiniteQueryMeasure"
+    },
+    {
+      "name": "Orthemology.Tranche2.FiniteQuery.measurable_run",
+      "module": "FiniteQueryMeasure"
+    },
+    {
+      "name": "Orthemology.Tranche2.FiniteQuery.measurable_trajectory",
+      "module": "FiniteQueryMeasure"
+    },
+    {
+      "name": "Orthemology.Tranche2.FiniteQuery.boundedTrace",
+      "module": "FiniteQueryMeasure"
+    },
+    {
+      "name": "Orthemology.Tranche2.FiniteQuery.measurable_boundedTrace",
+      "module": "FiniteQueryMeasure"
+    },
+    {
+      "name": "Orthemology.Tranche2.FiniteQuery.measurable_prefixOracle",
+      "module": "FiniteQueryMeasure"
+    },
+    {
+      "name": "Orthemology.Tranche2.FiniteQuery.prefixInput",
+      "module": "FiniteQueryMeasure"
+    },
+    {
+      "name": "Orthemology.Tranche2.FiniteQuery.measurable_prefixInput",
+      "module": "FiniteQueryMeasure"
+    },
+    {
+      "name": "Orthemology.Tranche2.FiniteQuery.finiteTrajectory",
+      "module": "FiniteQueryMeasure"
+    },
+    {
+      "name": "Orthemology.Tranche2.FiniteQuery.measurable_finiteTrajectory",
+      "module": "FiniteQueryMeasure"
+    },
+    {
+      "name": "Orthemology.Tranche2.FiniteQuery.bounded_event_prefix",
+      "module": "FiniteQueryMeasure"
+    },
+    {
+      "name": "Orthemology.Tranche2.FiniteQuery.trajectory_prefix_on_bounded",
+      "module": "FiniteQueryMeasure"
+    },
+    {
+      "name": "Orthemology.Tranche2.FiniteQuery.restricted_observable_factorisation",
+      "module": "FiniteQueryMeasure"
+    },
+    {
+      "name": "Orthemology.Tranche2.FiniteQuery.absolutelyContinuous_of_singletons",
+      "module": "FiniteQueryMeasure"
+    },
+    {
+      "name": "Orthemology.Tranche2.FiniteQuery.prefixBits",
+      "module": "FiniteQueryMeasure"
+    },
+    {
+      "name": "Orthemology.Tranche2.FiniteQuery.measurable_prefixBits",
+      "module": "FiniteQueryMeasure"
+    },
+    {
+      "name": "Orthemology.Tranche2.FiniteQuery.traceLaw",
+      "module": "FiniteQueryMeasure"
+    },
+    {
+      "name": "Orthemology.Tranche2.FiniteQuery.input_prefix_map",
+      "module": "FiniteQueryMeasure"
+    },
+    {
+      "name": "Orthemology.Tranche2.FiniteQuery.bounded_trace_law_factorisation",
+      "module": "FiniteQueryMeasure"
+    },
+    {
+      "name": "Orthemology.Tranche2.FiniteQuery.bounded_trace_domination",
+      "module": "FiniteQueryMeasure"
+    },
+    {
+      "name": "Orthemology.Tranche2.FiniteQuery.restrict_iUnion_domination",
+      "module": "FiniteQueryMeasure"
+    },
+    {
+      "name": "Orthemology.Tranche2.FiniteQuery.finiteQueryTrace",
+      "module": "FiniteQueryMeasure"
+    },
+    {
+      "name": "Orthemology.Tranche2.FiniteQuery.measurable_finiteQueryTrace",
+      "module": "FiniteQueryMeasure"
+    },
+    {
+      "name": "Orthemology.Tranche2.FiniteQuery.finite_query_trace_domination",
+      "module": "FiniteQueryMeasure"
+    },
+    {
+      "name": "Orthemology.Tranche2.FiniteQuery.fairBit",
+      "module": "FiniteQueryMeasure"
+    },
+    {
+      "name": "Orthemology.Tranche2.FiniteQuery.fairBit_singleton",
+      "module": "FiniteQueryMeasure"
+    },
+    {
+      "name": "Orthemology.Tranche2.FiniteQuery.fairOracle",
+      "module": "FiniteQueryMeasure"
+    },
+    {
+      "name": "Orthemology.Tranche2.FiniteQuery.prefixBits_singleton_preimage",
+      "module": "FiniteQueryMeasure"
+    },
+    {
+      "name": "Orthemology.Tranche2.FiniteQuery.fairOracle_prefix_mass",
+      "module": "FiniteQueryMeasure"
+    },
+    {
+      "name": "Orthemology.Tranche2.FiniteQuery.fairOracle_prefix_nonzero",
+      "module": "FiniteQueryMeasure"
+    },
+    {
+      "name": "Orthemology.Tranche2.FiniteQuery.finite_query_trace_fair_domination",
+      "module": "FiniteQueryMeasure"
+    },
+    {
+      "name": "Orthemology.Tranche2.FiniteQuery.countable_positive_causal_finite_query_repairs",
+      "module": "FiniteQueryMeasure"
+    },
+    {
+      "name": "Orthemology.Tranche2.IntegratedBinary.coin",
+      "module": "GeneratedBinaryExperiment"
+    },
+    {
+      "name": "Orthemology.Tranche2.IntegratedBinary.coinMeasure",
+      "module": "GeneratedBinaryExperiment"
+    },
+    {
+      "name": "Orthemology.Tranche2.IntegratedBinary.coinMeasure_real",
+      "module": "GeneratedBinaryExperiment"
+    },
+    {
+      "name": "Orthemology.Tranche2.IntegratedBinary.Experiment",
+      "module": "GeneratedBinaryExperiment"
+    },
+    {
+      "name": "Orthemology.Tranche2.IntegratedBinary.experimentLaw",
+      "module": "GeneratedBinaryExperiment"
+    },
+    {
+      "name": "Orthemology.Tranche2.IntegratedBinary.observation",
+      "module": "GeneratedBinaryExperiment"
+    },
+    {
+      "name": "Orthemology.Tranche2.IntegratedBinary.selectedRepair",
+      "module": "GeneratedBinaryExperiment"
+    },
+    {
+      "name": "Orthemology.Tranche2.IntegratedBinary.generated_experiment_eventually_repairs",
+      "module": "GeneratedBinaryExperiment"
+    },
+    {
+      "name": "Orthemology.Tranche2.FiniteAlphabetQuery.advance",
+      "module": "GenericFiniteQueryLocality"
+    },
+    {
+      "name": "Orthemology.Tranche2.FiniteAlphabetQuery.run",
+      "module": "GenericFiniteQueryLocality"
+    },
+    {
+      "name": "Orthemology.Tranche2.FiniteAlphabetQuery.Bounded",
+      "module": "GenericFiniteQueryLocality"
+    },
+    {
+      "name": "Orthemology.Tranche2.FiniteAlphabetQuery.bounded_prefix_locality",
+      "module": "GenericFiniteQueryLocality"
+    },
+    {
+      "name": "Orthemology.Tranche2.FiniteAlphabetQuery.bounded_prefix_equivalence",
+      "module": "GenericFiniteQueryLocality"
+    },
+    {
+      "name": "Orthemology.Tranche2.FiniteAlphabetQuery.prefixOracle",
+      "module": "GenericFiniteQueryLocality"
+    },
+    {
+      "name": "Orthemology.Tranche2.FiniteAlphabetQuery.prefixOracle_agrees",
+      "module": "GenericFiniteQueryLocality"
+    },
+    {
+      "name": "Orthemology.Tranche2.FiniteAlphabetQuery.bounded_trace_factorisation",
+      "module": "GenericFiniteQueryLocality"
+    },
+    {
+      "name": "Orthemology.Tranche2.FiniteAlphabetQuery.counter_monotone",
+      "module": "GenericFiniteQueryLocality"
+    },
+    {
+      "name": "Orthemology.Tranche2.FiniteAlphabetQuery.bounded_iff_eventually_no_query",
+      "module": "GenericFiniteQueryLocality"
+    },
+    {
+      "name": "Orthemology.Tranche2.FiniteAlphabetQuery.Oracle",
+      "module": "GenericFiniteQueryMeasure"
+    },
+    {
+      "name": "Orthemology.Tranche2.FiniteAlphabetQuery.Trace",
+      "module": "GenericFiniteQueryMeasure"
+    },
+    {
+      "name": "Orthemology.Tranche2.FiniteAlphabetQuery.measurable_advance_joint",
+      "module": "GenericFiniteQueryMeasure"
+    },
+    {
+      "name": "Orthemology.Tranche2.FiniteAlphabetQuery.measurable_run",
+      "module": "GenericFiniteQueryMeasure"
+    },
+    {
+      "name": "Orthemology.Tranche2.FiniteAlphabetQuery.measurable_trajectory",
+      "module": "GenericFiniteQueryMeasure"
+    },
+    {
+      "name": "Orthemology.Tranche2.FiniteAlphabetQuery.boundedTrace",
+      "module": "GenericFiniteQueryMeasure"
+    },
+    {
+      "name": "Orthemology.Tranche2.FiniteAlphabetQuery.measurable_boundedTrace",
+      "module": "GenericFiniteQueryMeasure"
+    },
+    {
+      "name": "Orthemology.Tranche2.FiniteAlphabetQuery.measurable_prefixOracle",
+      "module": "GenericFiniteQueryMeasure"
+    },
+    {
+      "name": "Orthemology.Tranche2.FiniteAlphabetQuery.prefixInput",
+      "module": "GenericFiniteQueryMeasure"
+    },
+    {
+      "name": "Orthemology.Tranche2.FiniteAlphabetQuery.measurable_prefixInput",
+      "module": "GenericFiniteQueryMeasure"
+    },
+    {
+      "name": "Orthemology.Tranche2.FiniteAlphabetQuery.finiteTrajectory",
+      "module": "GenericFiniteQueryMeasure"
+    },
+    {
+      "name": "Orthemology.Tranche2.FiniteAlphabetQuery.measurable_finiteTrajectory",
+      "module": "GenericFiniteQueryMeasure"
+    },
+    {
+      "name": "Orthemology.Tranche2.FiniteAlphabetQuery.bounded_event_prefix",
+      "module": "GenericFiniteQueryMeasure"
+    },
+    {
+      "name": "Orthemology.Tranche2.FiniteAlphabetQuery.trajectory_prefix_on_bounded",
+      "module": "GenericFiniteQueryMeasure"
+    },
+    {
+      "name": "Orthemology.Tranche2.FiniteAlphabetQuery.restricted_observable_factorisation",
+      "module": "GenericFiniteQueryMeasure"
+    },
+    {
+      "name": "Orthemology.Tranche2.FiniteAlphabetQuery.absolutelyContinuous_of_singletons",
+      "module": "GenericFiniteQueryMeasure"
+    },
+    {
+      "name": "Orthemology.Tranche2.FiniteAlphabetQuery.prefixSymbols",
+      "module": "GenericFiniteQueryMeasure"
+    },
+    {
+      "name": "Orthemology.Tranche2.FiniteAlphabetQuery.measurable_prefixSymbols",
+      "module": "GenericFiniteQueryMeasure"
+    },
+    {
+      "name": "Orthemology.Tranche2.FiniteAlphabetQuery.traceLaw",
+      "module": "GenericFiniteQueryMeasure"
+    },
+    {
+      "name": "Orthemology.Tranche2.FiniteAlphabetQuery.input_prefix_map",
+      "module": "GenericFiniteQueryMeasure"
+    },
+    {
+      "name": "Orthemology.Tranche2.FiniteAlphabetQuery.bounded_trace_law_factorisation",
+      "module": "GenericFiniteQueryMeasure"
+    },
+    {
+      "name": "Orthemology.Tranche2.FiniteAlphabetQuery.bounded_trace_domination",
+      "module": "GenericFiniteQueryMeasure"
+    },
+    {
+      "name": "Orthemology.Tranche2.FiniteAlphabetQuery.restrict_iUnion_domination",
+      "module": "GenericFiniteQueryMeasure"
+    },
+    {
+      "name": "Orthemology.Tranche2.FiniteAlphabetQuery.finiteQueryTrace",
+      "module": "GenericFiniteQueryMeasure"
+    },
+    {
+      "name": "Orthemology.Tranche2.FiniteAlphabetQuery.measurable_finiteQueryTrace",
+      "module": "GenericFiniteQueryMeasure"
+    },
+    {
+      "name": "Orthemology.Tranche2.FiniteAlphabetQuery.finite_query_trace_domination",
+      "module": "GenericFiniteQueryMeasure"
+    },
+    {
+      "name": "Orthemology.Tranche2.FiniteAlphabetQuery.iidOracle",
+      "module": "GenericQueryReference"
+    },
+    {
+      "name": "Orthemology.Tranche2.FiniteAlphabetQuery.prefixSymbols_singleton_preimage",
+      "module": "GenericQueryReference"
+    },
+    {
+      "name": "Orthemology.Tranche2.FiniteAlphabetQuery.iidOracle_prefix_nonzero",
+      "module": "GenericQueryReference"
+    },
+    {
+      "name": "Orthemology.Tranche2.FiniteAlphabetQuery.finite_query_domination_by_iid_rival",
+      "module": "GenericQueryReference"
+    },
+    {
+      "name": "Orthemology.Tranche2.FiniteAlphabetQuery.positive_finite_query_event_transfers",
+      "module": "GenericQueryReference"
+    },
+    {
+      "name": "Orthemology.Tranche2.IntegratedBinary.alpha",
+      "module": "IntegratedBinaryRestoration"
+    },
+    {
+      "name": "Orthemology.Tranche2.IntegratedBinary.repair",
+      "module": "IntegratedBinaryRestoration"
+    },
+    {
+      "name": "Orthemology.Tranche2.IntegratedBinary.law",
+      "module": "IntegratedBinaryRestoration"
+    },
+    {
+      "name": "Orthemology.Tranche2.IntegratedBinary.support",
+      "module": "IntegratedBinaryRestoration"
+    },
+    {
+      "name": "Orthemology.Tranche2.IntegratedBinary.good",
+      "module": "IntegratedBinaryRestoration"
+    },
+    {
+      "name": "Orthemology.Tranche2.IntegratedBinary.alpha_bounds",
+      "module": "IntegratedBinaryRestoration"
+    },
+    {
+      "name": "Orthemology.Tranche2.IntegratedBinary.exact_action_good",
+      "module": "IntegratedBinaryRestoration"
+    },
+    {
+      "name": "Orthemology.Tranche2.IntegratedBinary.good_iff_same",
+      "module": "IntegratedBinaryRestoration"
+    },
+    {
+      "name": "Orthemology.Tranche2.IntegratedBinary.good_eq_support",
+      "module": "IntegratedBinaryRestoration"
+    },
+    {
+      "name": "Orthemology.Tranche2.IntegratedBinary.law_positive",
+      "module": "IntegratedBinaryRestoration"
+    },
+    {
+      "name": "Orthemology.Tranche2.IntegratedBinary.law_normalised",
+      "module": "IntegratedBinaryRestoration"
+    },
+    {
+      "name": "Orthemology.Tranche2.IntegratedBinary.law_identifies",
+      "module": "IntegratedBinaryRestoration"
+    },
+    {
+      "name": "Orthemology.Tranche2.IntegratedBinary.supports_self_verifying",
+      "module": "IntegratedBinaryRestoration"
+    },
+    {
+      "name": "Orthemology.Tranche2.IntegratedBinary.canonical_repairs_eventually_good",
+      "module": "IntegratedBinaryRestoration"
+    },
+    {
+      "name": "Orthemology.Tranche2.PhysicalFlattening.prefixActions",
+      "module": "MeasurablePhysicalFlattening"
+    },
+    {
+      "name": "Orthemology.Tranche2.PhysicalFlattening.prefixActions_zero",
+      "module": "MeasurablePhysicalFlattening"
+    },
+    {
+      "name": "Orthemology.Tranche2.PhysicalFlattening.prefixActions_succ",
+      "module": "MeasurablePhysicalFlattening"
+    },
+    {
+      "name": "Orthemology.Tranche2.PhysicalFlattening.prefixActions_length",
+      "module": "MeasurablePhysicalFlattening"
+    },
+    {
+      "name": "Orthemology.Tranche2.PhysicalFlattening.prefix_getD_eq_flatten",
+      "module": "MeasurablePhysicalFlattening"
+    },
+    {
+      "name": "Orthemology.Tranche2.PhysicalFlattening.decode",
+      "module": "MeasurablePhysicalFlattening"
+    },
+    {
+      "name": "Orthemology.Tranche2.PhysicalFlattening.decode_eq_flatten",
+      "module": "MeasurablePhysicalFlattening"
+    },
+    {
+      "name": "Orthemology.Tranche2.PhysicalFlattening.prefixActions_congr",
+      "module": "MeasurablePhysicalFlattening"
+    },
+    {
+      "name": "Orthemology.Tranche2.PhysicalFlattening.decode_prefix_local",
+      "module": "MeasurablePhysicalFlattening"
+    },
+    {
+      "name": "Orthemology.Tranche2.PhysicalFlattening.decode_measurable",
+      "module": "MeasurablePhysicalFlattening"
+    },
+    {
+      "name": "Orthemology.Tranche2.PhysicalFlattening.prefixLength",
+      "module": "PhysicalFlattening"
+    },
+    {
+      "name": "Orthemology.Tranche2.PhysicalFlattening.prefixLength_zero",
+      "module": "PhysicalFlattening"
+    },
+    {
+      "name": "Orthemology.Tranche2.PhysicalFlattening.prefixLength_succ",
+      "module": "PhysicalFlattening"
+    },
+    {
+      "name": "Orthemology.Tranche2.PhysicalFlattening.prefixLength_mono",
+      "module": "PhysicalFlattening"
+    },
+    {
+      "name": "Orthemology.Tranche2.PhysicalFlattening.Unbounded",
+      "module": "PhysicalFlattening"
+    },
+    {
+      "name": "Orthemology.Tranche2.PhysicalFlattening.blockIndex",
+      "module": "PhysicalFlattening"
+    },
+    {
+      "name": "Orthemology.Tranche2.PhysicalFlattening.blockIndex_upper",
+      "module": "PhysicalFlattening"
+    },
+    {
+      "name": "Orthemology.Tranche2.PhysicalFlattening.blockIndex_lower",
+      "module": "PhysicalFlattening"
+    },
+    {
+      "name": "Orthemology.Tranche2.PhysicalFlattening.offset_lt_length",
+      "module": "PhysicalFlattening"
+    },
+    {
+      "name": "Orthemology.Tranche2.PhysicalFlattening.flatten",
+      "module": "PhysicalFlattening"
+    },
+    {
+      "name": "Orthemology.Tranche2.PhysicalFlattening.flatten_mem_block",
+      "module": "PhysicalFlattening"
+    },
+    {
+      "name": "Orthemology.Tranche2.PhysicalFlattening.late_index",
+      "module": "PhysicalFlattening"
+    },
+    {
+      "name": "Orthemology.Tranche2.PhysicalFlattening.eventually_flatten_good",
+      "module": "PhysicalFlattening"
+    },
+    {
+      "name": "Orthemology.Tranche2.PhysicalFlattening.index_le_prefixLength",
+      "module": "PhysicalFlattening"
+    },
+    {
+      "name": "Orthemology.Tranche2.PhysicalFlattening.unbounded_of_nonempty",
+      "module": "PhysicalFlattening"
+    },
+    {
+      "name": "Orthemology.Tranche2.PhysicalFlattening.blockIndex_le_time",
+      "module": "PhysicalFlattening"
+    },
+    {
+      "name": "Orthemology.Tranche2.PhysicalFlattening.tail_prefix_lower",
+      "module": "PhysicalFlattening"
+    },
+    {
+      "name": "Orthemology.Tranche2.PhysicalFlattening.unbounded_of_eventually_nonempty",
+      "module": "PhysicalFlattening"
+    },
+    {
+      "name": "Orthemology.Tranche2.PhysicalFlattening.prefixLength_congr",
+      "module": "PhysicalFlattening"
+    },
+    {
+      "name": "Orthemology.Tranche2.PhysicalFlattening.blockIndex_prefix_local",
+      "module": "PhysicalFlattening"
+    },
+    {
+      "name": "Orthemology.Tranche2.infinite_product_coordinate_law",
+      "module": "ProductObservationLaw"
+    },
+    {
+      "name": "Orthemology.Tranche2.infinite_product_coordinates_independent",
+      "module": "ProductObservationLaw"
+    },
+    {
+      "name": "Orthemology.Tranche2.BinaryGood",
+      "module": "RepairTestingBridge"
+    },
+    {
+      "name": "Orthemology.Tranche2.binary_symmetric_success_disjoint",
+      "module": "RepairTestingBridge"
+    },
+    {
+      "name": "Orthemology.Tranche2.repairFailure",
+      "module": "RepairTestingBridge"
+    },
+    {
+      "name": "Orthemology.Tranche2.bernoulli_repair_lower_bound",
+      "module": "RepairTestingBridge"
+    },
+    {
+      "name": "Orthemology.Tranche2.measurable_binaryGood",
+      "module": "RepairTestingBridge"
+    },
+    {
+      "name": "Orthemology.Tranche2.randomizedRepairFailure",
+      "module": "RepairTestingBridge"
+    },
+    {
+      "name": "Orthemology.Tranche2.randomized_acceptance_disjoint",
+      "module": "RepairTestingBridge"
+    },
+    {
+      "name": "Orthemology.Tranche2.bernoulli_randomized_repair_lower_bound",
+      "module": "RepairTestingBridge"
+    },
+    {
+      "name": "Orthemology.Tranche2.eventual_binary_good_decodes",
+      "module": "RestorationCountability"
+    },
+    {
+      "name": "Orthemology.Tranche2.countable_positive_limit_values",
+      "module": "RestorationCountability"
+    },
+    {
+      "name": "Orthemology.Tranche2.countable_positive_eventual_binary_repairs",
+      "module": "RestorationCountability"
+    },
+    {
+      "name": "Orthemology.Tranche2.affinity",
+      "module": "StatisticalRepair"
+    },
+    {
+      "name": "Orthemology.Tranche2.errorP",
+      "module": "StatisticalRepair"
+    },
+    {
+      "name": "Orthemology.Tranche2.errorQ",
+      "module": "StatisticalRepair"
+    },
+    {
+      "name": "Orthemology.Tranche2.minimum_le_test_error",
+      "module": "StatisticalRepair"
+    },
+    {
+      "name": "Orthemology.Tranche2.sqrt_product_min_max",
+      "module": "StatisticalRepair"
+    },
+    {
+      "name": "Orthemology.Tranche2.affinity_sq_le_twice_error_sum",
+      "module": "StatisticalRepair"
+    },
+    {
+      "name": "Orthemology.Tranche2.affinity_error_lower_bound",
+      "module": "StatisticalRepair"
+    },
+    {
+      "name": "Orthemology.Tranche2.affinity_nonneg",
+      "module": "StatisticalRepair"
+    },
+    {
+      "name": "Orthemology.Tranche2.affinity_tensor",
+      "module": "StatisticalRepair"
+    },
+    {
+      "name": "Orthemology.Tranche2.Bits",
+      "module": "StatisticalRepair"
+    },
+    {
+      "name": "Orthemology.Tranche2.coinMass",
+      "module": "StatisticalRepair"
+    },
+    {
+      "name": "Orthemology.Tranche2.bernoulliMass",
+      "module": "StatisticalRepair"
+    },
+    {
+      "name": "Orthemology.Tranche2.coinMass_nonneg",
+      "module": "StatisticalRepair"
+    },
+    {
+      "name": "Orthemology.Tranche2.bernoulliMass_nonneg",
+      "module": "StatisticalRepair"
+    },
+    {
+      "name": "Orthemology.Tranche2.bernoulliMass_sum",
+      "module": "StatisticalRepair"
+    },
+    {
+      "name": "Orthemology.Tranche2.coin_affinity",
+      "module": "StatisticalRepair"
+    },
+    {
+      "name": "Orthemology.Tranche2.bernoulli_affinity",
+      "module": "StatisticalRepair"
+    },
+    {
+      "name": "Orthemology.Tranche2.symmetric_coin_affinity_sq",
+      "module": "StatisticalRepair"
+    },
+    {
+      "name": "Orthemology.Tranche2.symmetric_bernoulli_test_lower_bound",
+      "module": "StatisticalRepair"
+    },
+    {
+      "name": "Orthemology.Tranche2.finite_sum_tendsto_atTop_of_one",
+      "module": "AdaptiveLikelihood"
+    },
+    {
+      "name": "Orthemology.Tranche2.sampled_logScore_tendsto_atTop",
+      "module": "AdaptiveLikelihood"
+    },
+    {
+      "name": "Orthemology.Tranche2.sampled_logScore_tendsto_of_joint_independent",
+      "module": "AdaptiveLikelihood"
+    },
+    {
+      "name": "Orthemology.Tranche2.blockCount",
+      "module": "BlockController"
+    },
+    {
+      "name": "Orthemology.Tranche2.count_tendsto_of_infinite",
+      "module": "BlockController"
+    },
+    {
+      "name": "Orthemology.Tranche2.blockCount_tendsto_of_selected_infinite",
+      "module": "BlockController"
+    },
+    {
+      "name": "Orthemology.Tranche2.likelihood_block_controller_eventually_good",
+      "module": "BlockController"
+    },
+    {
+      "name": "Orthemology.Tranche2.greedyMax",
+      "module": "CanonicalBlockPolicy"
+    },
+    {
+      "name": "Orthemology.Tranche2.greedyMax_ge",
+      "module": "CanonicalBlockPolicy"
+    },
+    {
+      "name": "Orthemology.Tranche2.historyCount",
+      "module": "CanonicalBlockPolicy"
+    },
+    {
+      "name": "Orthemology.Tranche2.candidateFor",
+      "module": "CanonicalBlockPolicy"
+    },
+    {
+      "name": "Orthemology.Tranche2.canonicalHistory",
+      "module": "CanonicalBlockPolicy"
+    },
+    {
+      "name": "Orthemology.Tranche2.canonicalSelected",
+      "module": "CanonicalBlockPolicy"
+    },
+    {
+      "name": "Orthemology.Tranche2.canonicalHistory_eq_range_map",
+      "module": "CanonicalBlockPolicy"
+    },
+    {
+      "name": "Orthemology.Tranche2.historyCount_eq_blockCount",
+      "module": "CanonicalBlockPolicy"
+    },
+    {
+      "name": "Orthemology.Tranche2.canonicalSelected_maximizes",
+      "module": "CanonicalBlockPolicy"
+    },
+    {
+      "name": "Orthemology.Tranche2.candidateFor_prefix_local",
+      "module": "CanonicalBlockPolicy"
+    },
+    {
+      "name": "Orthemology.Tranche2.greedyMax_measurable",
+      "module": "CanonicalBlockPolicy"
+    },
+    {
+      "name": "Orthemology.Tranche2.candidateFor_measurable",
+      "module": "CanonicalBlockPolicy"
+    },
+    {
+      "name": "Orthemology.Tranche2.measurable_countable_diagonal",
+      "module": "CanonicalBlockPolicy"
+    },
+    {
+      "name": "Orthemology.Tranche2.canonicalSelected_measurable",
+      "module": "CanonicalBlockPolicy"
+    },
+    {
+      "name": "Orthemology.Tranche2.canonical_block_policy_eventually_good",
+      "module": "CanonicalBlockPolicy"
+    },
+    {
+      "name": "Orthemology.Tranche2.logScore",
+      "module": "FiniteLikelihood"
+    },
+    {
+      "name": "Orthemology.Tranche2.finiteKL",
+      "module": "FiniteLikelihood"
+    },
+    {
+      "name": "Orthemology.Tranche2.finiteKL_eq_sum_klFun",
+      "module": "FiniteLikelihood"
+    },
+    {
+      "name": "Orthemology.Tranche2.finiteKL_nonneg",
+      "module": "FiniteLikelihood"
+    },
+    {
+      "name": "Orthemology.Tranche2.finiteKL_pos",
+      "module": "FiniteLikelihood"
+    },
+    {
+      "name": "Orthemology.Tranche2.logScore_self",
+      "module": "FiniteLikelihood"
+    },
+    {
+      "name": "Orthemology.Tranche2.logScore_integrable_comp",
+      "module": "FiniteLikelihood"
+    },
+    {
+      "name": "Orthemology.Tranche2.logScore_expectation",
+      "module": "FiniteLikelihood"
+    },
+    {
+      "name": "Orthemology.Tranche2.logScore_strong_law",
+      "module": "FiniteLikelihood"
+    },
+    {
+      "name": "Orthemology.Tranche2.sums_tendsto_atTop_of_average",
+      "module": "FiniteLikelihood"
+    },
+    {
+      "name": "Orthemology.Tranche2.logScore_sum_tendsto_atTop",
+      "module": "FiniteLikelihood"
+    },
+    {
+      "name": "Orthemology.Tranche2.prefixLikelihood",
+      "module": "LikelihoodProducts"
+    },
+    {
+      "name": "Orthemology.Tranche2.prefixLikelihood_pos",
+      "module": "LikelihoodProducts"
+    },
+    {
+      "name": "Orthemology.Tranche2.log_prefixLikelihood",
+      "module": "LikelihoodProducts"
+    },
+    {
+      "name": "Orthemology.Tranche2.log_prefixLikelihood_ratio",
+      "module": "LikelihoodProducts"
+    },
+    {
+      "name": "Orthemology.Tranche2.inverse_prefixLikelihood_ratio",
+      "module": "LikelihoodProducts"
+    },
+    {
+      "name": "Orthemology.Tranche2.sampled_false_likelihood_ratio_tendsto_zero",
+      "module": "LikelihoodProducts"
+    },
+    {
+      "name": "Orthemology.Tranche2.AgreeOn",
+      "module": "SelfVerifyingSupport"
+    },
+    {
+      "name": "Orthemology.Tranche2.SelfVerifying",
+      "module": "SelfVerifyingSupport"
+    },
+    {
+      "name": "Orthemology.Tranche2.prune",
+      "module": "SelfVerifyingSupport"
+    },
+    {
+      "name": "Orthemology.Tranche2.mem_prune",
+      "module": "SelfVerifyingSupport"
+    },
+    {
+      "name": "Orthemology.Tranche2.prune_subset",
+      "module": "SelfVerifyingSupport"
+    },
+    {
+      "name": "Orthemology.Tranche2.agreeOn_mono",
+      "module": "SelfVerifyingSupport"
+    },
+    {
+      "name": "Orthemology.Tranche2.prune_mono",
+      "module": "SelfVerifyingSupport"
+    },
+    {
+      "name": "Orthemology.Tranche2.selfVerifying_empty",
+      "module": "SelfVerifyingSupport"
+    },
+    {
+      "name": "Orthemology.Tranche2.selfVerifying_union",
+      "module": "SelfVerifyingSupport"
+    },
+    {
+      "name": "Orthemology.Tranche2.selfVerifying_iff_fixed",
+      "module": "SelfVerifyingSupport"
+    },
+    {
+      "name": "Orthemology.Tranche2.pruneIter",
+      "module": "SelfVerifyingSupport"
+    },
+    {
+      "name": "Orthemology.Tranche2.pruneIter_step_subset",
+      "module": "SelfVerifyingSupport"
+    },
+    {
+      "name": "Orthemology.Tranche2.pruneIter_subset_target",
+      "module": "SelfVerifyingSupport"
+    },
+    {
+      "name": "Orthemology.Tranche2.selfVerifying_survives",
+      "module": "SelfVerifyingSupport"
+    },
+    {
+      "name": "Orthemology.Tranche2.pruneIter_fixed_propagates",
+      "module": "SelfVerifyingSupport"
+    },
+    {
+      "name": "Orthemology.Tranche2.pruneIter_card_bound_of_no_fixed",
+      "module": "SelfVerifyingSupport"
+    },
+    {
+      "name": "Orthemology.Tranche2.pruneIter_exists_fixed",
+      "module": "SelfVerifyingSupport"
+    },
+    {
+      "name": "Orthemology.Tranche2.pruneIter_card_fixed",
+      "module": "SelfVerifyingSupport"
+    },
+    {
+      "name": "Orthemology.Tranche2.supportKernel",
+      "module": "SelfVerifyingSupport"
+    },
+    {
+      "name": "Orthemology.Tranche2.supportKernel_selfVerifying",
+      "module": "SelfVerifyingSupport"
+    },
+    {
+      "name": "Orthemology.Tranche2.supportKernel_greatest",
+      "module": "SelfVerifyingSupport"
+    },
+    {
+      "name": "Orthemology.Tranche2.supportKernel_nonempty_iff",
+      "module": "SelfVerifyingSupport"
+    },
+    {
+      "name": "Orthemology.Tranche2.Fixtures.cascadeSame",
+      "module": "SupportFixtures"
+    },
+    {
+      "name": "Orthemology.Tranche2.Fixtures.cascadeGood",
+      "module": "SupportFixtures"
+    },
+    {
+      "name": "Orthemology.Tranche2.Fixtures.cascade_no_nonempty_support",
+      "module": "SupportFixtures"
+    },
+    {
+      "name": "Orthemology.Tranche2.Fixtures.cascade_kernel_empty",
+      "module": "SupportFixtures"
+    },
+    {
+      "name": "Orthemology.Tranche2.Fixtures.cascade_first_round",
+      "module": "SupportFixtures"
+    },
+    {
+      "name": "Orthemology.Tranche2.Fixtures.cascade_second_round",
+      "module": "SupportFixtures"
+    },
+    {
+      "name": "Orthemology.Tranche2.Fixtures.informativeGood",
+      "module": "SupportFixtures"
+    },
+    {
+      "name": "Orthemology.Tranche2.Fixtures.informativeSame",
+      "module": "SupportFixtures"
+    },
+    {
+      "name": "Orthemology.Tranche2.Fixtures.informative_singleton_valid",
+      "module": "SupportFixtures"
+    },
+    {
+      "name": "Orthemology.Tranche2.Fixtures.informative_kernel",
+      "module": "SupportFixtures"
+    },
+    {
+      "name": "Orthemology.Tranche2.Fixtures.informative_all_kernels_nonempty",
+      "module": "SupportFixtures"
+    },
+    {
+      "name": "Orthemology.Tranche2.Fixtures.informative_no_common_target",
+      "module": "SupportFixtures"
+    },
+    {
+      "name": "Orthemology.Tranche2.StageWitness",
+      "module": "SupportStageCertificate"
+    },
+    {
+      "name": "Orthemology.Tranche2.RestrictedTargets",
+      "module": "SupportStageCertificate"
+    },
+    {
+      "name": "Orthemology.Tranche2.selfVerifying_restrict_iff",
+      "module": "SupportStageCertificate"
+    },
+    {
+      "name": "Orthemology.Tranche2.StageCertificate",
+      "module": "SupportStageCertificate"
+    },
+    {
+      "name": "Orthemology.Tranche2.stageCertificate_iff_witness",
+      "module": "SupportStageCertificate"
+    },
+    {
+      "name": "Orthemology.Tranche2.selfVerifying_signal_refinement",
+      "module": "SupportStageCertificate"
+    },
+    {
+      "name": "Orthemology.Tranche2.supportKernel_signal_refinement",
+      "module": "SupportStageCertificate"
+    },
+    {
+      "name": "Orthemology.Tranche2.supportKernel_target_enlargement",
+      "module": "SupportStageCertificate"
+    }
+  ],
+  "pins": {
+    "lean_version": "4.19.0",
+    "lean_binary_sha256": "92c3d35b5bfaa5e0fea413a775d504cf46cd95e1345df61c2274f76779e7e023",
+    "packages": [
+      {
+        "name": "mathlib",
+        "revision": "c44e0c8ee63ca166450922a373c7409c5d26b00b"
+      },
+      {
+        "name": "plausible",
+        "revision": "77e08eddc486491d7b9e470926b3dbe50319451a"
+      },
+      {
+        "name": "LeanSearchClient",
+        "revision": "25078369972d295301f5a1e53c3e5850cf6d9d4c"
+      },
+      {
+        "name": "importGraph",
+        "revision": "e6a9f0f5ee3ccf7443a0070f92b62f8db12ae82b"
+      },
+      {
+        "name": "proofwidgets",
+        "revision": "c4919189477c3221e6a204008998b0d724f49904"
+      },
+      {
+        "name": "aesop",
+        "revision": "5d50b08dedd7d69b3d9b3176e0d58a23af228884"
+      },
+      {
+        "name": "Qq",
+        "revision": "fa4f7f15d97591a9cf3aa7724ba371c7fc6dda02"
+      },
+      {
+        "name": "batteries",
+        "revision": "f5d04a9c4973d401c8c92500711518f7c656f034"
+      },
+      {
+        "name": "Cli",
+        "revision": "02dbd02bc00ec4916e99b04b2245b30200e200d0"
+      }
+    ]
+  },
+  "official_imports": [
+    {
+      "module": "Mathlib",
+      "repository": "mathlib",
+      "source": "Mathlib.lean",
+      "sha256": "b0518254279fabf0c6a920804e684536b0f5e2bd1cb6318d0609eb563413f20a"
+    },
+    {
+      "module": "Mathlib.Algebra.Order.BigOperators.Ring.Finset",
+      "repository": "mathlib",
+      "source": "Mathlib/Algebra/Order/BigOperators/Ring/Finset.lean",
+      "sha256": "6341ca875f3963664c94147b1eacd45c9aedfe2015ae695b06af4e717849abe4"
+    },
+    {
+      "module": "Mathlib.Data.Finset.Card",
+      "repository": "mathlib",
+      "source": "Mathlib/Data/Finset/Card.lean",
+      "sha256": "a915b4a9c6ed684221397e67503048f604fc2caf58a88b03c02e4d7e070a940b"
+    },
+    {
+      "module": "Mathlib.Data.Finset.Powerset",
+      "repository": "mathlib",
+      "source": "Mathlib/Data/Finset/Powerset.lean",
+      "sha256": "ff946726d050b01703aec4dd1a66398f461455942e036806c24ceaeee6e23ac8"
+    },
+    {
+      "module": "Mathlib.Data.Nat.Nth",
+      "repository": "mathlib",
+      "source": "Mathlib/Data/Nat/Nth.lean",
+      "sha256": "f9c3f28e98e349044dc2ed66c469fb9d708aae76bfecff177057afa2c621c345"
+    },
+    {
+      "module": "Mathlib.Data.Real.Sqrt",
+      "repository": "mathlib",
+      "source": "Mathlib/Data/Real/Sqrt.lean",
+      "sha256": "100af39c6d268959221d07b8f2fee4579d2dbef4e87bf64158066cc675f67323"
+    },
+    {
+      "module": "Mathlib.InformationTheory.KullbackLeibler.KLFun",
+      "repository": "mathlib",
+      "source": "Mathlib/InformationTheory/KullbackLeibler/KLFun.lean",
+      "sha256": "2a8bd6be0fdcea32c85d5e671d412890b222ec0678f337f594a3beef8823b5bf"
+    },
+    {
+      "module": "Mathlib.MeasureTheory.Constructions.Polish.Basic",
+      "repository": "mathlib",
+      "source": "Mathlib/MeasureTheory/Constructions/Polish/Basic.lean",
+      "sha256": "a320787e8b77ad401c59203bb7896d329d60489b26b9765cc545c5ea9cb91eca"
+    },
+    {
+      "module": "Mathlib.MeasureTheory.Measure.AbsolutelyContinuous",
+      "repository": "mathlib",
+      "source": "Mathlib/MeasureTheory/Measure/AbsolutelyContinuous.lean",
+      "sha256": "344204b6528f8d862411b1c64d2cb672612f973cfd533574f808527660afd70c"
+    },
+    {
+      "module": "Mathlib.MeasureTheory.Measure.Restrict",
+      "repository": "mathlib",
+      "source": "Mathlib/MeasureTheory/Measure/Restrict.lean",
+      "sha256": "0c0c2108a28516ae3a85dfbfc2e5d7a3afd26dcc113aa8b19c2a79adfe12e56e"
+    },
+    {
+      "module": "Mathlib.MeasureTheory.Measure.Typeclasses.SFinite",
+      "repository": "mathlib",
+      "source": "Mathlib/MeasureTheory/Measure/Typeclasses/SFinite.lean",
+      "sha256": "b9fb829526454d1f9526ed9bb21de6d661fdb4a01a9847eb6669bedf68f1f784"
+    },
+    {
+      "module": "Mathlib.Order.Filter.Cofinite",
+      "repository": "mathlib",
+      "source": "Mathlib/Order/Filter/Cofinite.lean",
+      "sha256": "90ab3333c25d9fa1a5cd55329717a5e2e0bf22008edeff96e5d91074146c6a3c"
+    },
+    {
+      "module": "Mathlib.Order.Filter.IsBounded",
+      "repository": "mathlib",
+      "source": "Mathlib/Order/Filter/IsBounded.lean",
+      "sha256": "7612a3743f96379ab16577c154486e9ea0e7ad1efbd81e1c2e65f95aa7665646"
+    },
+    {
+      "module": "Mathlib.Probability.ProductMeasure",
+      "repository": "mathlib",
+      "source": "Mathlib/Probability/ProductMeasure.lean",
+      "sha256": "f8af06e87e2e28916f0fa8a455f792ded4b85a22e1dea5e1c6f9cac1d31b9830"
+    },
+    {
+      "module": "Mathlib.Probability.StrongLaw",
+      "repository": "mathlib",
+      "source": "Mathlib/Probability/StrongLaw.lean",
+      "sha256": "3c3768b70c3779bea384592bb548bc06de2d25af315e0a0d59a1742b0807717c"
+    },
+    {
+      "module": "Mathlib.Tactic",
+      "repository": "mathlib",
+      "source": "Mathlib/Tactic.lean",
+      "sha256": "f20038eba7bba63f07a2f854496101226df407e20414e6b8ebf94b14f95e831b"
+    }
+  ],
+  "driver": {
+    "source_id": "src-d6f6fa5be51464c0-119c0f60ed32aec4",
+    "lean_argument": "BIN_DIRECTORY"
+  },
+  "controls": "ORIGINAL_DRIVER_REQUIRED",
+  "classification": "CURRENT_EVIDENCE"
+}

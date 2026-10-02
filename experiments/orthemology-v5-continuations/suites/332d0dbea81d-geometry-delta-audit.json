@@ -1,0 +1,161 @@
+{
+  "id": "332d0dbea81d-geometry-delta-audit",
+  "origin": "332d0dbea81d90d7697f391520f43df61afb04c10bf11736320d9f8299cb6d58",
+  "descriptor_source_id": "src-332d0dbea81d90d7-85c042fef1d85c5a",
+  "modules": [
+    {
+      "module": "CriticalZero",
+      "source_id": "src-332d0dbea81d90d7-1e10cbc00136ea96",
+      "imports": [
+        "Mathlib"
+      ]
+    },
+    {
+      "module": "FiniteLPCertificates",
+      "source_id": "src-332d0dbea81d90d7-e1a47a777b11cbed",
+      "imports": [
+        "Mathlib"
+      ]
+    },
+    {
+      "module": "BoundaryReadback",
+      "source_id": "src-332d0dbea81d90d7-6524890dc5db824b",
+      "imports": [
+        "CriticalZero",
+        "FiniteLPCertificates"
+      ]
+    },
+    {
+      "module": "IndependentBoundaryAudit",
+      "source_id": "src-332d0dbea81d90d7-50b21486b8149484",
+      "imports": [
+        "CriticalZero",
+        "FiniteLPCertificates"
+      ]
+    }
+  ],
+  "module_order": [
+    "CriticalZero",
+    "FiniteLPCertificates",
+    "BoundaryReadback",
+    "IndependentBoundaryAudit"
+  ],
+  "targets": [
+    {
+      "name": "CriticalZero.no_exact_repair",
+      "module": "CriticalZero"
+    },
+    {
+      "name": "CriticalZero.second_order_optimum_zero",
+      "module": "CriticalZero"
+    },
+    {
+      "name": "CriticalZero.actual_second_order_F",
+      "module": "CriticalZero"
+    },
+    {
+      "name": "FiniteLPCertificates.dual_bound",
+      "module": "FiniteLPCertificates"
+    },
+    {
+      "name": "FiniteLPCertificates.negative_dual_excludes_weak",
+      "module": "FiniteLPCertificates"
+    },
+    {
+      "name": "FiniteLPCertificates.zero_dual_excludes_strict",
+      "module": "FiniteLPCertificates"
+    },
+    {
+      "name": "CriticalZero.psi_deriv",
+      "module": "CriticalZero"
+    },
+    {
+      "name": "CriticalZero.dpsi_deriv",
+      "module": "CriticalZero"
+    },
+    {
+      "name": "CriticalZero.curvature_pos",
+      "module": "CriticalZero"
+    },
+    {
+      "name": "CriticalZero.actual_second_order_G",
+      "module": "CriticalZero"
+    },
+    {
+      "name": "IndependentBoundaryAudit.actual_four_rows",
+      "module": "IndependentBoundaryAudit"
+    },
+    {
+      "name": "IndependentBoundaryAudit.critical_generic_dual_bound",
+      "module": "IndependentBoundaryAudit"
+    },
+    {
+      "name": "IndependentBoundaryAudit.critical_generic_no_strict",
+      "module": "IndependentBoundaryAudit"
+    },
+    {
+      "name": "IndependentBoundaryAudit.bound_zero_but_no_exact",
+      "module": "IndependentBoundaryAudit"
+    },
+    {
+      "name": "IndependentBoundaryAudit.critical_curvature_slope",
+      "module": "IndependentBoundaryAudit"
+    }
+  ],
+  "pins": {
+    "lean_version": "4.19.0",
+    "lean_binary_sha256": "92c3d35b5bfaa5e0fea413a775d504cf46cd95e1345df61c2274f76779e7e023",
+    "packages": [
+      {
+        "name": "mathlib",
+        "revision": "c44e0c8ee63ca166450922a373c7409c5d26b00b"
+      },
+      {
+        "name": "plausible",
+        "revision": "77e08eddc486491d7b9e470926b3dbe50319451a"
+      },
+      {
+        "name": "LeanSearchClient",
+        "revision": "25078369972d295301f5a1e53c3e5850cf6d9d4c"
+      },
+      {
+        "name": "importGraph",
+        "revision": "e6a9f0f5ee3ccf7443a0070f92b62f8db12ae82b"
+      },
+      {
+        "name": "proofwidgets",
+        "revision": "c4919189477c3221e6a204008998b0d724f49904"
+      },
+      {
+        "name": "aesop",
+        "revision": "5d50b08dedd7d69b3d9b3176e0d58a23af228884"
+      },
+      {
+        "name": "Qq",
+        "revision": "fa4f7f15d97591a9cf3aa7724ba371c7fc6dda02"
+      },
+      {
+        "name": "batteries",
+        "revision": "f5d04a9c4973d401c8c92500711518f7c656f034"
+      },
+      {
+        "name": "Cli",
+        "revision": "02dbd02bc00ec4916e99b04b2245b30200e200d0"
+      }
+    ]
+  },
+  "official_imports": [
+    {
+      "module": "Mathlib",
+      "repository": "mathlib",
+      "source": "Mathlib.lean",
+      "sha256": "b0518254279fabf0c6a920804e684536b0f5e2bd1cb6318d0609eb563413f20a"
+    }
+  ],
+  "driver": {
+    "source_id": "src-332d0dbea81d90d7-817e8553aa5fdf95",
+    "lean_argument": "BIN_DIRECTORY"
+  },
+  "controls": "ORIGINAL_DRIVER_REQUIRED",
+  "classification": "PREDECESSOR"
+}

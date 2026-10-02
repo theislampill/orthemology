@@ -1,0 +1,239 @@
+{
+  "id": "abce3ba5d09e-sparse-concrete",
+  "origin": "abce3ba5d09ef06b843608d1b1503afaf499ce63bbef0ba771aa61d23cc26eee",
+  "descriptor_source_id": "src-abce3ba5d09ef06b-b4c5d2fbe1fe1685",
+  "modules": [
+    {
+      "module": "ConcreteSparsePrior",
+      "source_id": "src-abce3ba5d09ef06b-343cde738e94873d",
+      "imports": [
+        "Mathlib"
+      ]
+    },
+    {
+      "module": "ConcreteContractProbe",
+      "source_id": "src-abce3ba5d09ef06b-0378759bdd274150",
+      "imports": [
+        "ConcreteSparsePrior"
+      ]
+    }
+  ],
+  "module_order": [
+    "ConcreteSparsePrior",
+    "ConcreteContractProbe"
+  ],
+  "targets": [
+    {
+      "name": "SparsePriorAnalytic.zeroPrefix_finite_lower",
+      "module": "ConcreteSparsePrior"
+    },
+    {
+      "name": "SparsePriorAnalytic.binaryOverlap_lifetime_lower",
+      "module": "ConcreteSparsePrior"
+    },
+    {
+      "name": "SparsePriorAnalytic.affinity_deficit",
+      "module": "ConcreteSparsePrior"
+    },
+    {
+      "name": "SparsePriorAnalytic.binaryOverlap_chernoff",
+      "module": "ConcreteSparsePrior"
+    },
+    {
+      "name": "SparsePriorAnalytic.binaryOverlap_lifetime_upper",
+      "module": "ConcreteSparsePrior"
+    },
+    {
+      "name": "SparsePriorAnalytic.integrated_comparison",
+      "module": "ConcreteSparsePrior"
+    },
+    {
+      "name": "SparsePriorAnalytic.overlapTotal_finite_iff",
+      "module": "ConcreteSparsePrior"
+    },
+    {
+      "name": "SparsePriorAnalytic.overlapTotal_finite_iff_summable",
+      "module": "ConcreteSparsePrior"
+    },
+    {
+      "name": "SparsePriorGeometry.own_report_margin",
+      "module": "ConcreteSparsePrior"
+    },
+    {
+      "name": "SparsePriorGeometry.acceptance_ratio",
+      "module": "ConcreteSparsePrior"
+    },
+    {
+      "name": "SparsePriorGeometry.no_common_report_at_factor_two",
+      "module": "ConcreteSparsePrior"
+    },
+    {
+      "name": "SparsePriorGeometry.adjacent_min_sum",
+      "module": "ConcreteSparsePrior"
+    },
+    {
+      "name": "SparsePriorBayes.score_mode_and_adjacent_identity",
+      "module": "ConcreteSparsePrior"
+    },
+    {
+      "name": "SparsePriorBayes.conditional_bayes_identification",
+      "module": "ConcreteSparsePrior"
+    },
+    {
+      "name": "SparsePriorBayes.sum_optimal_words_eq_overlap",
+      "module": "ConcreteSparsePrior"
+    },
+    {
+      "name": "SparsePriorBayes.exists_finite_policyCost_iff",
+      "module": "ConcreteSparsePrior"
+    },
+    {
+      "name": "SparsePriorBayes.priorWeight_sum_one",
+      "module": "ConcreteSparsePrior"
+    },
+    {
+      "name": "SparsePriorBayes.sum_joint_word_mass_one",
+      "module": "ConcreteSparsePrior"
+    },
+    {
+      "name": "SparsePriorBayes.randomizedCost_lower",
+      "module": "ConcreteSparsePrior"
+    },
+    {
+      "name": "SparsePriorBayes.exists_finite_randomizedCost_iff",
+      "module": "ConcreteSparsePrior"
+    },
+    {
+      "name": "SparsePriorProcess.receiptLaw_prefix_mass",
+      "module": "ConcreteSparsePrior"
+    },
+    {
+      "name": "SparsePriorProcess.latentLaw_probability",
+      "module": "ConcreteSparsePrior"
+    },
+    {
+      "name": "SparsePriorProcess.totalFailures_measurable",
+      "module": "ConcreteSparsePrior"
+    },
+    {
+      "name": "SparsePriorProcess.actual_expectation_eq_randomizedCost",
+      "module": "ConcreteSparsePrior"
+    },
+    {
+      "name": "SparsePriorProcess.actual_expectation_lower",
+      "module": "ConcreteSparsePrior"
+    },
+    {
+      "name": "SparsePriorProcess.exists_actual_expectation_eq",
+      "module": "ConcreteSparsePrior"
+    },
+    {
+      "name": "SparsePriorProcess.exists_finite_actual_expectation_iff",
+      "module": "ConcreteSparsePrior"
+    },
+    {
+      "name": "SparsePriorProcess.every_policy_infinite_of_not_summable",
+      "module": "ConcreteSparsePrior"
+    },
+    {
+      "name": "ConcreteSparsePrior.quadraticSupport_spacing_summable",
+      "module": "ConcreteSparsePrior"
+    },
+    {
+      "name": "ConcreteSparsePrior.quadraticSupport_finite_expected_count",
+      "module": "ConcreteSparsePrior"
+    },
+    {
+      "name": "ConcreteSparsePrior.quadraticSupport_inverse_moment_infinite",
+      "module": "ConcreteSparsePrior"
+    },
+    {
+      "name": "ConcreteSparsePrior.quadraticSupport_inverse_variance_infinite",
+      "module": "ConcreteSparsePrior"
+    },
+    {
+      "name": "ConcreteSparsePrior.quadraticSupport_no_endpoint_atoms",
+      "module": "ConcreteSparsePrior"
+    },
+    {
+      "name": "IndependentConcreteContract.parameter_strictly_interior",
+      "module": "ConcreteContractProbe"
+    },
+    {
+      "name": "IndependentConcreteContract.seed_product_integral",
+      "module": "ConcreteContractProbe"
+    },
+    {
+      "name": "IndependentConcreteContract.full_inverse_moment",
+      "module": "ConcreteContractProbe"
+    },
+    {
+      "name": "IndependentConcreteContract.full_inverse_variance",
+      "module": "ConcreteContractProbe"
+    },
+    {
+      "name": "IndependentConcreteContract.full_no_endpoint_atoms",
+      "module": "ConcreteContractProbe"
+    },
+    {
+      "name": "IndependentConcreteContract.coherent_counterexample_same_law",
+      "module": "ConcreteContractProbe"
+    }
+  ],
+  "pins": {
+    "lean_version": "4.19.0",
+    "lean_binary_sha256": "92c3d35b5bfaa5e0fea413a775d504cf46cd95e1345df61c2274f76779e7e023",
+    "packages": [
+      {
+        "name": "mathlib",
+        "revision": "c44e0c8ee63ca166450922a373c7409c5d26b00b"
+      },
+      {
+        "name": "plausible",
+        "revision": "77e08eddc486491d7b9e470926b3dbe50319451a"
+      },
+      {
+        "name": "LeanSearchClient",
+        "revision": "25078369972d295301f5a1e53c3e5850cf6d9d4c"
+      },
+      {
+        "name": "importGraph",
+        "revision": "e6a9f0f5ee3ccf7443a0070f92b62f8db12ae82b"
+      },
+      {
+        "name": "proofwidgets",
+        "revision": "c4919189477c3221e6a204008998b0d724f49904"
+      },
+      {
+        "name": "aesop",
+        "revision": "5d50b08dedd7d69b3d9b3176e0d58a23af228884"
+      },
+      {
+        "name": "Qq",
+        "revision": "fa4f7f15d97591a9cf3aa7724ba371c7fc6dda02"
+      },
+      {
+        "name": "batteries",
+        "revision": "f5d04a9c4973d401c8c92500711518f7c656f034"
+      },
+      {
+        "name": "Cli",
+        "revision": "02dbd02bc00ec4916e99b04b2245b30200e200d0"
+      }
+    ]
+  },
+  "official_imports": [
+    {
+      "module": "Mathlib",
+      "repository": "mathlib",
+      "source": "Mathlib.lean",
+      "sha256": "b0518254279fabf0c6a920804e684536b0f5e2bd1cb6318d0609eb563413f20a"
+    }
+  ],
+  "driver": {
+    "source_id": "src-abce3ba5d09ef06b-8161e9e7667539d2",
+    "lean_argument": "ENVIRONMENT_DIRECTORY"
+  },
+  "controls": "ORIGINAL_DRIVER_REQUIRED",
+  "classification": "CURRENT_EVIDENCE"
+}

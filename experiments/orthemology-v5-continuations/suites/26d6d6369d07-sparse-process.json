@@ -1,0 +1,231 @@
+{
+  "id": "26d6d6369d07-sparse-process",
+  "origin": "26d6d6369d07319ab65fb0697fb4ac274d143c271059ed389e0f958057508ccc",
+  "descriptor_source_id": "src-26d6d6369d07319a-b4c5d2fbe1fe1685",
+  "modules": [
+    {
+      "module": "ProcessExpectation",
+      "source_id": "src-26d6d6369d07319a-20bd58a73a002056",
+      "imports": [
+        "Mathlib"
+      ]
+    },
+    {
+      "module": "ProcessContractProbe",
+      "source_id": "src-26d6d6369d07319a-ebd2abe4c448b5e2",
+      "imports": [
+        "ProcessExpectation"
+      ]
+    }
+  ],
+  "module_order": [
+    "ProcessExpectation",
+    "ProcessContractProbe"
+  ],
+  "targets": [
+    {
+      "name": "SparsePriorAnalytic.zeroPrefix_finite_lower",
+      "module": "ProcessExpectation"
+    },
+    {
+      "name": "SparsePriorAnalytic.binaryOverlap_lifetime_lower",
+      "module": "ProcessExpectation"
+    },
+    {
+      "name": "SparsePriorAnalytic.affinity_deficit",
+      "module": "ProcessExpectation"
+    },
+    {
+      "name": "SparsePriorAnalytic.binaryOverlap_chernoff",
+      "module": "ProcessExpectation"
+    },
+    {
+      "name": "SparsePriorAnalytic.binaryOverlap_lifetime_upper",
+      "module": "ProcessExpectation"
+    },
+    {
+      "name": "SparsePriorAnalytic.integrated_comparison",
+      "module": "ProcessExpectation"
+    },
+    {
+      "name": "SparsePriorAnalytic.overlapTotal_finite_iff",
+      "module": "ProcessExpectation"
+    },
+    {
+      "name": "SparsePriorAnalytic.overlapTotal_finite_iff_summable",
+      "module": "ProcessExpectation"
+    },
+    {
+      "name": "SparsePriorGeometry.own_report_margin",
+      "module": "ProcessExpectation"
+    },
+    {
+      "name": "SparsePriorGeometry.acceptance_ratio",
+      "module": "ProcessExpectation"
+    },
+    {
+      "name": "SparsePriorGeometry.no_common_report_at_factor_two",
+      "module": "ProcessExpectation"
+    },
+    {
+      "name": "SparsePriorGeometry.adjacent_min_sum",
+      "module": "ProcessExpectation"
+    },
+    {
+      "name": "SparsePriorBayes.score_mode_and_adjacent_identity",
+      "module": "ProcessExpectation"
+    },
+    {
+      "name": "SparsePriorBayes.conditional_bayes_identification",
+      "module": "ProcessExpectation"
+    },
+    {
+      "name": "SparsePriorBayes.sum_optimal_words_eq_overlap",
+      "module": "ProcessExpectation"
+    },
+    {
+      "name": "SparsePriorBayes.exists_finite_policyCost_iff",
+      "module": "ProcessExpectation"
+    },
+    {
+      "name": "SparsePriorBayes.priorWeight_sum_one",
+      "module": "ProcessExpectation"
+    },
+    {
+      "name": "SparsePriorBayes.sum_joint_word_mass_one",
+      "module": "ProcessExpectation"
+    },
+    {
+      "name": "SparsePriorBayes.randomizedCost_lower",
+      "module": "ProcessExpectation"
+    },
+    {
+      "name": "SparsePriorBayes.exists_finite_randomizedCost_iff",
+      "module": "ProcessExpectation"
+    },
+    {
+      "name": "SparsePriorProcess.receiptLaw_prefix_mass",
+      "module": "ProcessExpectation"
+    },
+    {
+      "name": "SparsePriorProcess.latentLaw_probability",
+      "module": "ProcessExpectation"
+    },
+    {
+      "name": "SparsePriorProcess.totalFailures_measurable",
+      "module": "ProcessExpectation"
+    },
+    {
+      "name": "SparsePriorProcess.actual_expectation_eq_randomizedCost",
+      "module": "ProcessExpectation"
+    },
+    {
+      "name": "SparsePriorProcess.actual_expectation_lower",
+      "module": "ProcessExpectation"
+    },
+    {
+      "name": "SparsePriorProcess.exists_actual_expectation_eq",
+      "module": "ProcessExpectation"
+    },
+    {
+      "name": "SparsePriorProcess.exists_finite_actual_expectation_iff",
+      "module": "ProcessExpectation"
+    },
+    {
+      "name": "SparsePriorProcess.every_policy_infinite_of_not_summable",
+      "module": "ProcessExpectation"
+    },
+    {
+      "name": "IndependentProcessContract.expanded_process_iff",
+      "module": "ProcessContractProbe"
+    },
+    {
+      "name": "IndependentProcessContract.initial_bound_p_one_iff",
+      "module": "ProcessContractProbe"
+    },
+    {
+      "name": "IndependentProcessContract.rawLaw_probability",
+      "module": "ProcessContractProbe"
+    },
+    {
+      "name": "IndependentProcessContract.no_future_receipt",
+      "module": "ProcessContractProbe"
+    },
+    {
+      "name": "IndependentProcessContract.latent_cylinder",
+      "module": "ProcessContractProbe"
+    },
+    {
+      "name": "IndependentProcessContract.independent_seed_cylinder",
+      "module": "ProcessContractProbe"
+    },
+    {
+      "name": "IndependentProcessContract.accepted_is_coherent",
+      "module": "ProcessContractProbe"
+    },
+    {
+      "name": "IndependentProcessContract.coherent_policy_finite_iff",
+      "module": "ProcessContractProbe"
+    },
+    {
+      "name": "IndependentProcessContract.initial_expected_cost_le_one",
+      "module": "ProcessContractProbe"
+    }
+  ],
+  "pins": {
+    "lean_version": "4.19.0",
+    "lean_binary_sha256": "92c3d35b5bfaa5e0fea413a775d504cf46cd95e1345df61c2274f76779e7e023",
+    "packages": [
+      {
+        "name": "mathlib",
+        "revision": "c44e0c8ee63ca166450922a373c7409c5d26b00b"
+      },
+      {
+        "name": "plausible",
+        "revision": "77e08eddc486491d7b9e470926b3dbe50319451a"
+      },
+      {
+        "name": "LeanSearchClient",
+        "revision": "25078369972d295301f5a1e53c3e5850cf6d9d4c"
+      },
+      {
+        "name": "importGraph",
+        "revision": "e6a9f0f5ee3ccf7443a0070f92b62f8db12ae82b"
+      },
+      {
+        "name": "proofwidgets",
+        "revision": "c4919189477c3221e6a204008998b0d724f49904"
+      },
+      {
+        "name": "aesop",
+        "revision": "5d50b08dedd7d69b3d9b3176e0d58a23af228884"
+      },
+      {
+        "name": "Qq",
+        "revision": "fa4f7f15d97591a9cf3aa7724ba371c7fc6dda02"
+      },
+      {
+        "name": "batteries",
+        "revision": "f5d04a9c4973d401c8c92500711518f7c656f034"
+      },
+      {
+        "name": "Cli",
+        "revision": "02dbd02bc00ec4916e99b04b2245b30200e200d0"
+      }
+    ]
+  },
+  "official_imports": [
+    {
+      "module": "Mathlib",
+      "repository": "mathlib",
+      "source": "Mathlib.lean",
+      "sha256": "b0518254279fabf0c6a920804e684536b0f5e2bd1cb6318d0609eb563413f20a"
+    }
+  ],
+  "driver": {
+    "source_id": "src-26d6d6369d07319a-8161e9e7667539d2",
+    "lean_argument": "ENVIRONMENT_DIRECTORY"
+  },
+  "controls": "ORIGINAL_DRIVER_REQUIRED",
+  "classification": "CURRENT_EVIDENCE"
+}

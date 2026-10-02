@@ -1,0 +1,45 @@
+import ObserverFixtures
+import ContextualFixtures
+import UniformRuntimeTrace
+set_option pp.universes true
+set_option format.width 120
+#check @Orthemology.CertifiedObserver.output_measurable
+#print axioms Orthemology.CertifiedObserver.output_measurable
+#check @Orthemology.CertifiedObserver.certified_defect_exact
+#print axioms Orthemology.CertifiedObserver.certified_defect_exact
+#check @Orthemology.CertifiedObserver.guarded_defect_error_budget
+#print axioms Orthemology.CertifiedObserver.guarded_defect_error_budget
+#check @Orthemology.CertifiedObserver.ObserverFamily.related_substitution_solvers
+#print axioms Orthemology.CertifiedObserver.ObserverFamily.related_substitution_solvers
+#check @Orthemology.CertifiedObserver.Fixtures.unbounded_split_solver
+#print axioms Orthemology.CertifiedObserver.Fixtures.unbounded_split_solver
+#check @Orthemology.CertifiedObserver.Fixtures.finite_prefix_is_not_defect_certificate
+#print axioms Orthemology.CertifiedObserver.Fixtures.finite_prefix_is_not_defect_certificate
+#check @Orthemology.CertifiedObserver.ContextFixtures.genuinely_different_state_carriers
+#print axioms Orthemology.CertifiedObserver.ContextFixtures.genuinely_different_state_carriers
+#check @Orthemology.CertifiedObserver.ContextFixtures.concrete_substitution_laws
+#print axioms Orthemology.CertifiedObserver.ContextFixtures.concrete_substitution_laws
+#check @Orthemology.CertifiedObserver.ContextFixtures.source_sensitive_defects
+#print axioms Orthemology.CertifiedObserver.ContextFixtures.source_sensitive_defects
+#check @Orthemology.CertifiedObserver.Q8.compiled_finite_solver
+#print axioms Orthemology.CertifiedObserver.Q8.compiled_finite_solver
+#check @Orthemology.CertifiedObserver.Q8.Fixtures.grow_run_unbounded
+#print axioms Orthemology.CertifiedObserver.Q8.Fixtures.grow_run_unbounded
+#check @Orthemology.CertifiedObserver.ParsedQ8.parsed_finite_solver
+#print axioms Orthemology.CertifiedObserver.ParsedQ8.parsed_finite_solver
+#check @Orthemology.CertifiedObserver.ParsedQ8.runtime_tick_sound
+#print axioms Orthemology.CertifiedObserver.ParsedQ8.runtime_tick_sound
+#check @Orthemology.CertifiedObserver.ParsedQ8.runtime_finite_trace
+#print axioms Orthemology.CertifiedObserver.ParsedQ8.runtime_finite_trace
+#check @Orthemology.CertifiedObserver.ParsedQ8.Fixtures.grow_parsed_solver
+#print axioms Orthemology.CertifiedObserver.ParsedQ8.Fixtures.grow_parsed_solver
+#check @Orthemology.CertifiedObserver.ParsedQ8.Fixtures.timeout_defaulting_corrupts_halt
+#print axioms Orthemology.CertifiedObserver.ParsedQ8.Fixtures.timeout_defaulting_corrupts_halt
+#check @Orthemology.CertifiedObserver.Q8.Fixtures.wrong_clock_rejected
+#print axioms Orthemology.CertifiedObserver.Q8.Fixtures.wrong_clock_rejected
+#check @Orthemology.CertifiedObserver.ContextFixtures.law_equality_not_raw_identity
+#print axioms Orthemology.CertifiedObserver.ContextFixtures.law_equality_not_raw_identity
+#check @Orthemology.CertifiedObserver.ParsedQ8.uniform_runtime_trace
+#print axioms Orthemology.CertifiedObserver.ParsedQ8.uniform_runtime_trace
+#check @Orthemology.CertifiedObserver.ParsedQ8.uniformFuel_complete
+#print axioms Orthemology.CertifiedObserver.ParsedQ8.uniformFuel_complete

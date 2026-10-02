@@ -1,0 +1,46 @@
+{
+  "schema": "orthemology-native-controls-v1",
+  "id": "sixth-foundations-addenda",
+  "steps": [
+    {
+      "id": "two-message-independent",
+      "files": [
+        {
+          "path": "independent_checks.py",
+          "source_id": "src-549ba6a7f0941c36-1c292595c5f92d23"
+        }
+      ],
+      "entry": "independent_checks.py",
+      "args": [],
+      "outputs": []
+    },
+    {
+      "id": "b4-independent",
+      "files": [
+        {
+          "path": "independent_certificate_verifier.py",
+          "source_id": "src-549ba6a7f0941c36-1faa68f840cf4e80"
+        },
+        {
+          "path": "source/EXACT_SENDER_TREE_u6.json",
+          "source_id": "src-549ba6a7f0941c36-45d71240ff83035e"
+        },
+        {
+          "path": "source/EXACT_SENDER_TREE_u8.json",
+          "source_id": "src-549ba6a7f0941c36-956eed2642882fd1"
+        },
+        {
+          "path": "source/EXACT_SENDER_TREE_u10.json",
+          "source_id": "src-549ba6a7f0941c36-dcbe2697d490e3a8"
+        },
+        {
+          "path": "source/EXACT_SENDER_TREE_u12.json",
+          "source_id": "src-549ba6a7f0941c36-a9ca8b281115292b"
+        }
+      ],
+      "entry": "independent_certificate_verifier.py",
+      "args": [],
+      "outputs": []
+    }
+  ]
+}
