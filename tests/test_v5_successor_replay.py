@@ -1012,6 +1012,22 @@ class SuccessorReplayTests(unittest.TestCase):
         self.r.check_original_readbacks(good, names)
         with self.assertRaises(ValueError): self.r.check_original_readbacks(good.replace('Outer.Review.witness', 'Other.witness'), names)
 
+    def test_source_local_dotted_theorem_readbacks_keep_their_namespace(self):
+        source = 'namespace Outer.Review\ntheorem Expr.one : True := True.intro\nsection\ntheorem Expr.two : True := True.intro\nend\n#print axioms Expr.one\n#print axioms Expr.two\nend Outer.Review\n'
+        expected = ['Outer.Review.Expr.one', 'Outer.Review.Expr.two']
+        for known in [[], [{'name': 'Expr.one'}, {'name': 'Other.Expr.two'}]]:
+            self.assertEqual(self.r.source_readback_names(source, known), expected)
+        log = "'Outer.Review.Expr.one' does not depend on any axioms\n'Outer.Review.Expr.two' depends on axioms: [propext,\n Classical.choice,\n Quot.sound]\n"
+        self.r.check_original_readbacks(log, self.r.source_readback_names(source, []))
+        for wrong in [log.replace('Outer.Review.Expr.one', 'Expr.one'), log.replace('Quot.sound', 'sorryAx'), log + log]:
+            with self.assertRaises(ValueError): self.r.check_original_readbacks(wrong, expected)
+
+    def test_source_local_readback_resolution_uses_only_prior_explicit_theorems(self):
+        source = 'namespace Outer\n#print axioms Expr.later\ntheorem Expr.later : True := True.intro\n#print axioms Expr.later\nend Outer\nnamespace Foreign\n#print axioms Expr.later\nend Foreign\n'
+        self.assertEqual(self.r.source_readback_names(source, []), ['Expr.later', 'Outer.Expr.later', 'Expr.later'])
+        explicit = 'namespace Outer\ntheorem _root_.Global.proof : True := True.intro\n#print axioms _root_.Global.proof\nend Outer\n'
+        self.assertEqual(self.r.source_readback_names(explicit, []), ['Global.proof'])
+
     def test_unused_tool_dependency_needs_pin_but_not_a_nonexistent_library(self):
         library = self.base / 'no-cli-library'
         self.assertEqual(self.r.package_library('Cli', library, {}), [])

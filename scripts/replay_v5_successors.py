@@ -2181,6 +2181,14 @@ def source_readback_names(text, targets):
             require(frames, 'Unmatched namespace/section end')
             current = frames.pop()
         else:
+            # A dotted literal can name a theorem declared in this lexical
+            # namespace without being among the suite's selected targets.
+            # Use only explicit prior source declarations, never log suffixes.
+            declared = re.match(r"theorem\s+([A-Za-z_][A-Za-z0-9_'.]*)(?=\s|[({:])", line)
+            if declared:
+                name = declared.group(1)
+                known.add(name[len('_root_.'):] if name.startswith('_root_.') else
+                          (current + '.' if current else '') + name)
             found = re.fullmatch(r'#print\s+axioms\s+([^\s]+)', line)
             if not found: continue
             literal = found.group(1); lean_name(literal)
