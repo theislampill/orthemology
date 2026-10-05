@@ -7,6 +7,7 @@ resource-inconclusive run; 2 means a missing prerequisite. No network or shell.
 from __future__ import annotations
 
 import argparse
+import ast
 from datetime import datetime, timezone
 import hashlib
 import json
@@ -14,6 +15,7 @@ import math
 import os
 from pathlib import Path, PurePosixPath
 import re
+import runpy
 import shutil
 import signal
 import subprocess
@@ -59,6 +61,42 @@ EMPIRICAL_RECIPES = {
     't15-empirical-tests-v1': 'afb1ba14ecbbf193f07ac81f985be30535abf9771387813e9dbd0bbbfc72fb50',
     't15-empirical-reanalyse-v1': '20110e73fd822e21651064578946cdf910edc493c973953b2c7d1bb74481dd94',
     't15-empirical-validate-v1': '7d9a4c8d071e2591c8d4568c88c277ab61834e52df21500a1367efb2ac7e060a',
+}
+T10_CHECKER = 'tranche10/research/occurrence-continuation/release-candidate-v1/checker'
+T10_REVIEW = 'tranche10/reviews/occurrence-checker'
+T10_FINITE_RECIPES = {
+    't10-unit-v1': (T10_CHECKER + '/tests/test_contract.py', 'af8ae17bd3881ab703fc773bf91bffad9859a4fa8f9cb3559d39ed43b4696bf8'),
+    't10-exhaustive-v1': (T10_CHECKER + '/exhaustive_validation.py', '7614ed0a2d9eca6c2e07c74ee0e02c902cff4956b07347ee9b1b47e70edd8ee2'),
+    't10-source-release-v1': (T10_CHECKER + '/source_and_release_validation.py', 'd286e1099431a64390a14c9533d96cdd7aebc673f68ea74953c9c4852e5e24db'),
+    't10-semantic-v1': (T10_CHECKER + '/semantic_mutations.py', '090c48a908c2780f5eccce07c7b211e3970f0f24ea1188d3528a5195fafe8130'),
+    't10-independent-selftest-v1': (T10_REVIEW + '/independent_models.py', 'cf9ac967668e35fc47c89214efbd9f84aa97a820ec255ffff4d48b41b1af1d3a'),
+    't10-independent-review-v1': (T10_REVIEW + '/run_independent_review.py', 'e1303f10bbe5da403553c2be7f2b7ff468f0567b501f63d854cfb3f908cabcf2'),
+    't10-independent-mutations-v1': (T10_REVIEW + '/run_independent_mutations.py', 'b94b8df9b31c8b635743440afc3525fb6abff282336ef1ba9e2dd9a316f6fee4'),
+    't10-two-card-v1': ('tranche10/reviews/bounded-release-application/check_observations.py', 'ba4f0fa9ed04750b629b5a504c976de589c3899c9c753742dd34cbb0cdcd644c'),
+}
+T10_FILES = dict(T10_FINITE_RECIPES.values()) | {
+    T10_CHECKER + '/context_effects.py': '0f65f172926e61ff7280ec2e13fd36b4ff287ea530ebbfa00c9dce831f3355fa',
+    T10_CHECKER + '/read_cover.py': '808a9297d27b903722b4fc04ad9a526d3cfc3e371b14e5047e1d33d1c6e3e79f',
+    T10_CHECKER + '/fixtures/source_roles.json': '8d821ec871977ba5c22ff00d8cc27841c32aab682aae0c0d2cf99cb6f695169c',
+    T10_CHECKER + '/CASE_TRACEABILITY.json': 'd43b730b8ada0ceba61bda31cae36e662547c7a883ccf643901d5c061e824a6b',
+    T10_CHECKER + '/README.md': '08d2b29597f4ee32240d7c54ed0fa70b1aa6d1e35d6d16253fd3fde078ddb04d',
+}
+T10_OUTPUTS = {
+    't10-exhaustive-v1': ['project/' + T10_CHECKER + '/logs/exhaustive_results.json'],
+    't10-source-release-v1': ['project/' + T10_CHECKER + '/logs/source_release_results.json'],
+    't10-semantic-v1': ['project/' + T10_CHECKER + '/logs/semantic_mutations.json'],
+    't10-independent-mutations-v1': ['project/' + T10_REVIEW + '/INDEPENDENT_MUTATION_RESULTS.json', 'mutation-copies'],
+}
+T10_CHILD_DIAGNOSTICS = {
+    'current_only': ('direct stack',),
+    'compose_depth_abs_shift': ('split', 'left association', 'right association'),
+    'drop_second_constraints': ('split', 'left association', 'right association'),
+    'snapshot_blind_equality': ('wrong snapshot accepted',),
+    'nonconvex_envelope': ('nonconvex accepted',),
+    'retired_service_available': ('retired service treated available',),
+    'locality_ignores_response': ('star accepted leak',),
+    'adequacy_ignores_fibres': ('false adequate-coverage certification',),
+    'replace_adaptive_with_cover': ('missed cheaper decision',),
 }
 
 
@@ -245,6 +283,9 @@ def _validate_argv(stage, plan):
     driver = plan['drivers'].get(stage['driver_id'])
     if driver is not None:
         recipe = driver['recipe']
+        if recipe in T10_FINITE_RECIPES:
+            validate_t10_argv(stage, driver, plan)
+            return
         if recipe in LANGUAGE_RECIPES:
             require(argv[:4] == ['{tool:python}', '-I', '-B', '{driver:' + driver['id'] + '}'] and len(argv) == 5, 'Wrong reviewed Python recipe')
             match = re.fullmatch(r'\{(input|fixture):([^{}]+)\}', argv[4])
@@ -312,6 +353,198 @@ def _validate_argv(stage, plan):
     require((row['role'] == 'NEGATIVE') == (stage['kind'] == 'NEGATIVE_CONTROL'), 'Negative source/stage role mismatch')
 
 
+def validate_t10_argv(stage, driver, plan):
+    argv = stage['argv']; recipe = driver['recipe']
+    if argv[:1] == ['{builtin:observe-child}']:
+        require(recipe == 't10-independent-mutations-v1' and stage['kind'] == 'NEGATIVE_CONTROL' and
+                len(argv) == 3 and argv[2] in T10_CHILD_DIAGNOSTICS, 'Unknown source child observation')
+        parent = plan['stages'].get(argv[1])
+        require(parent and parent['driver_id'] == driver['id'] and parent['kind'] == 'DRIVER' and argv[1] in stage['depends_on'], 'Observed child has a different physical parent')
+        require(stage['expected_exit_codes'] == [1] and not stage['output_paths'] and stage['cwd'] == '.', 'Changed child rejection contract')
+        return
+    require(stage['kind'] == ('DRIVER' if recipe == 't10-independent-mutations-v1' else 'REFERENCE_TESTS'), 'Wrong written finite stage kind')
+    prefix = ['{tool:python}', '-B']; optimized = '-O' in argv
+    if optimized:
+        require(recipe in {'t10-unit-v1', 't10-independent-review-v1', 't10-two-card-v1'}, 'Original assertion-bearing recipe cannot be optimized')
+        prefix.append('-O')
+    if recipe == 't10-unit-v1':
+        require(stage['cwd'] == T10_CHECKER and argv == prefix + ['-m', 'unittest', 'discover', '-s', 'tests', '-v'] and not stage['output_paths'], 'Wrong original unit command')
+        return
+    prefix.append('{driver:' + driver['id'] + '}')
+    outputs = T10_OUTPUTS.get(recipe, [])
+    if recipe in {'t10-exhaustive-v1', 't10-source-release-v1', 't10-semantic-v1'}:
+        require(stage['cwd'] == T10_CHECKER, 'Written checker working directory changed')
+    else: require(stage['cwd'] == '.', 'Written reviewer working directory changed')
+    if recipe == 't10-independent-review-v1':
+        name = 'independent-optimized.json' if optimized else 'independent-normal.json'
+        prefix += ['--candidate', '{project}/' + T10_CHECKER, '--output', '{out}/' + name]; outputs = [name]
+    elif recipe == 't10-independent-mutations-v1':
+        prefix += ['--candidate', '{project}/' + T10_CHECKER, '--directory', '{out}/mutation-copies']
+    require(argv == prefix and set(stage['output_paths']) == set(outputs), 'Wrong original written arguments/outputs')
+
+
+def validate_t10_package(suite, plan):
+    require(suite['replay']['scope'] == 'FINITE' and suite['toolchain']['kind'] == 'PYTHON' and suite['toolchain']['version'].startswith('3.12.'), 'Written finite suite requires source-prescribed Python 3.12')
+    for name, expected in T10_FILES.items():
+        require(name in plan['file_paths'] and sha(plan['contents'][plan['file_paths'][name]['source_id']]) == expected, 'Written finite source closure changed: ' + name)
+    require(all(not name.endswith('.py') or name in T10_FILES for name in plan['file_paths']), 'Unreviewed Python source in written finite closure')
+    expected = ['t10-unit-v1'] * 2 + ['t10-exhaustive-v1', 't10-source-release-v1', 't10-semantic-v1', 't10-independent-selftest-v1'] + ['t10-independent-review-v1'] * 2 + ['t10-independent-mutations-v1'] + ['t10-two-card-v1'] * 2
+    physical = [stage for stage in plan['stages'].values() if stage['argv'][:1] != ['{builtin:observe-child}']]
+    require([plan['drivers'][s['driver_id']]['recipe'] for s in physical] == expected, 'Original written command census/order changed')
+    require([('-O' in s['argv']) for s in physical] == [False, True, False, False, False, False, False, True, False, False, True], 'Original normal/optimized census changed')
+    require([s['timeout_seconds'] for s in physical] == [180, 180, 300, 300, 300, 180, 300, 300, 900, 180, 180], 'Original written command budgets changed')
+    observed = [s for s in plan['stages'].values() if s['argv'][:1] == ['{builtin:observe-child}']]
+    require([s['argv'][2] for s in observed] == list(T10_CHILD_DIAGNOSTICS), 'Original written child census changed')
+    for stage in observed:
+        require(physical[6]['id'] in stage['depends_on'], 'Mutation child lacks completed independent positive prerequisite')
+
+
+def traced_run(original_run, trace):
+    """Capture actual subprocess.run calls without changing their return values."""
+    count = 0
+    def invoke(argv, *args, **kwargs):
+        nonlocal count
+        require(isinstance(argv, list) and argv and not args and not kwargs.get('shell') and
+                kwargs.get('text') is True and kwargs.get('stdout') == subprocess.PIPE and
+                kwargs.get('stderr') == subprocess.STDOUT, 'Unreviewed traced subprocess form')
+        index = count; count += 1
+        record = {'index': index, 'argv': [str(a) for a in argv], 'cwd': str(Path(kwargs.get('cwd', Path.cwd())).absolute()),
+                  'started_at': utc(), 'ended_at': None, 'terminal': 'RUNNING', 'exit_code': None, 'log_sha256': None}
+        destination = path_in(trace, f'{index:04}.json'); require(not destination.exists(), 'Trace record already exists')
+        write_json(destination, record)
+        try:
+            result = original_run(argv, **kwargs)
+        except (subprocess.TimeoutExpired, KeyboardInterrupt) as error:
+            data = getattr(error, 'stdout', None) or b''
+            if isinstance(data, str): data = data.encode('utf-8')
+            log = path_in(trace, f'{index:04}.log'); log.write_bytes(data)
+            record.update(ended_at=utc(), terminal='TIMEOUT' if isinstance(error, subprocess.TimeoutExpired) else 'INTERRUPTED',
+                          log_sha256=sha(data))
+            write_json(destination, record)
+            raise
+        require(isinstance(result.stdout, str), 'Traced subprocess omitted its captured stdout')
+        log = path_in(trace, f'{index:04}.log'); log.write_bytes(result.stdout.encode('utf-8'))
+        completed = type(result.returncode) is int and 0 <= result.returncode < 124
+        record.update(ended_at=utc(), terminal='COMPLETED' if completed else 'INTERRUPTED',
+                      exit_code=result.returncode if completed else None, log_sha256=sha(log.read_bytes()))
+        write_json(destination, record)
+        return result
+    return invoke
+
+
+def trace_t10_driver(driver, trace, arguments):
+    require(sys.flags.optimize == 0, 'Original mutation driver requires assertions enabled')
+    require(sha(no_symlinks(driver).read_bytes()) == T10_FINITE_RECIPES['t10-independent-mutations-v1'][1], 'Unapproved traced driver')
+    for name in ('run_independent_review.py', 'independent_models.py'):
+        require(sha(path_in(Path(driver).parent, name).read_bytes()) == T10_FILES[T10_REVIEW + '/' + name], 'Traced reviewer closure changed')
+    require({p.name for p in Path(driver).parent.glob('*.py')} == {'run_independent_mutations.py', 'run_independent_review.py', 'independent_models.py'}, 'Unreviewed adjacent traced Python source')
+    require(not path_in(Path(driver).parent, 'INDEPENDENT_MUTATION_RESULTS.json').exists(), 'Original mutation result must be absent')
+    require(len(arguments) == 4 and arguments[0] == '--candidate' and arguments[2] == '--directory', 'Unreviewed traced driver arguments')
+    for name in ('context_effects.py', 'read_cover.py'):
+        require(sha(path_in(arguments[1], name).read_bytes()) == T10_FILES[T10_CHECKER + '/' + name], 'Traced candidate source changed')
+    require(not no_symlinks(arguments[3]).exists(), 'Traced mutation directory must be absent')
+    trace = no_symlinks(trace); require(not trace.exists(), 'Trace output must be absent'); trace.mkdir(parents=True)
+    original_run = subprocess.run; old_argv = sys.argv; old_path = sys.path[:]
+    try:
+        subprocess.run = traced_run(original_run, trace)
+        sys.argv = [str(driver), *arguments]; sys.path[0] = str(Path(driver).parent)
+        runpy.run_path(str(driver), run_name='__main__')
+    finally:
+        subprocess.run = original_run; sys.argv = old_argv; sys.path[:] = old_path
+    return 0
+
+
+def check_child_terminal(row, parent, child, argv, seen):
+    identity = (parent['id'], child)
+    require(row['parent_stage_id'] == parent['id'] and row['source_child_id'] == child and identity not in seen, 'Wrong/duplicate physical child identity')
+    require(parent['terminal'] == 'COMPLETED' and parent['exit_code'] == 0, 'Contradictory parent/child completion')
+    require(row['terminal'] == 'COMPLETED' and type(row['exit_code']) is int and row['exit_code'] == 1, 'Child lacks actual intended assertion exit')
+    require(row['argv'] == argv, 'Actual child argument vector differs')
+    require(all(isinstance(row[k], str) and row[k].endswith('Z') for k in ('started_at', 'ended_at')) and
+            parent['started_at'] <= row['started_at'] <= row['ended_at'] <= parent['ended_at'], 'Unmeasured or contradictory child interval')
+    digest(row['log_sha256']); seen.add(identity)
+
+
+def t10_tracer_argv(stage):
+    return ['{tool:python}', '-B', '{adapter}', '--trace-t10-mutations', stage['argv'][2],
+            '{out}/traces/' + stage['id'], *stage['argv'][3:]]
+
+
+def t10_child_argv(child):
+    directory = '{out}/mutation-copies/' + child
+    return ['{tool:python}', '{project}/' + T10_REVIEW + '/run_independent_review.py',
+            '--candidate', directory, '--output', directory + '/unexpected-pass.json']
+
+
+def t10_contents(plan, name):
+    return plan['contents'][plan['file_paths'][name]['source_id']]
+
+
+def t10_collect_children(stage, parent, text, plan, output, mappings):
+    artifact_root = path_in(output, 'mutation-copies')
+    require({p.name for p in artifact_root.iterdir()} == set(T10_CHILD_DIAGNOSTICS), 'Unexpected mutation output census')
+    artifacts = {}
+    for name in T10_CHILD_DIAGNOSTICS:
+        directory = path_in(artifact_root, name)
+        require({p.name for p in directory.iterdir()} == {'context_effects.py', 'read_cover.py', 'run.log'}, 'Missing child source/log or unexpected pass artifact')
+        artifacts[name] = {p.name: no_symlinks(p).read_bytes() for p in directory.iterdir()}
+    originals = {name: t10_contents(plan, T10_CHECKER + '/' + name) for name in ('context_effects.py', 'read_cover.py')}
+    parsed = _t10_checked_mutation_children(path_in(output, 'project/' + T10_REVIEW + '/INDEPENDENT_MUTATION_RESULTS.json').read_bytes(),
+        text.encode(), originals, artifacts, t10_contents(plan, T10_REVIEW + '/run_independent_mutations.py'),
+        t10_contents(plan, T10_REVIEW + '/run_independent_review.py'))
+    trace = path_in(output, 'traces/' + stage['id'])
+    require({p.name for p in trace.iterdir()} == {f'{i:04}.{suffix}' for i in range(9) for suffix in ('json', 'log')}, 'Missing or extra actual child trace')
+    trace_hash = _file_hashes(trace); seen = set(); children = {}
+    driver = plan['drivers'][stage['driver_id']]
+    for index, normalized in enumerate(parsed):
+        name = normalized['source_child_id']; captured = read_json(trace / f'{index:04}.json')
+        keys(captured, {'index', 'argv', 'cwd', 'started_at', 'ended_at', 'terminal', 'exit_code', 'log_sha256'})
+        require(captured['index'] == index and captured['cwd'] == str(path_in(output / 'project', stage['cwd'], dot=True)), 'Actual child launch identity changed')
+        actual_argv = [_expand(a, mappings) for a in t10_child_argv(name)]
+        check_child_terminal({**captured, 'source_child_id': name, 'parent_stage_id': stage['id']}, parent, name, actual_argv, seen)
+        require(captured['exit_code'] == normalized['exit_code'] and captured['log_sha256'] == normalized['log_sha256'] == sha((trace / f'{index:04}.log').read_bytes()), 'Contradictory captured and original child summaries')
+        children[(stage['id'], name)] = {**normalized, 'parent_stage_id': stage['id'], 'driver_sha256': driver['sha256'],
+            'parser_id': 't10-independent-mutations-v1', 'mode': 'NONEXECUTING_OBSERVATION', 'argv_provenance': 'CAPTURED',
+            'argv': t10_child_argv(name), 'cwd': '{project}', 'started_at': captured['started_at'], 'ended_at': captured['ended_at'],
+            'physical_run_sha256': trace_hash, 'parent_log_sha256': parent['log_sha256']}
+    invocation = {'parent_stage_id': stage['id'], 'driver_sha256': driver['sha256'], 'source_argv': stage['argv'],
+        'launch_argv': t10_tracer_argv(stage), 'runner_sha256': sha(Path(__file__).read_bytes()), 'trace_sha256': trace_hash,
+        'parent_log_sha256': parent['log_sha256'], 'child_count': 9}
+    return children, invocation
+
+
+def t10_result(stage, text, plan, output, suite):
+    recipe = plan['drivers'][stage['driver_id']]['recipe']
+    if stage['argv'][:1] == ['{builtin:observe-child}'] or recipe == 't10-independent-mutations-v1': return
+    if recipe == 't10-unit-v1':
+        tree = ast.parse(t10_contents(plan, T10_FINITE_RECIPES[recipe][0]))
+        controls = [{'class': cls.name, 'name': node.name} for cls in tree.body if isinstance(cls, ast.ClassDef)
+                    for node in cls.body if isinstance(node, ast.FunctionDef) and node.name.startswith('test_')]
+        _t10_checked_unit_output(text.encode(), controls); return
+    if recipe == 't10-independent-selftest-v1':
+        require(text.strip() == 'independent reference self-tests: PASS', 'Original independent model self-test did not complete'); return
+    value = _t10_load(text.encode())
+    if stage['output_paths']:
+        require(len(stage['output_paths']) == 1 and read_json(path_in(output, stage['output_paths'][0])) == value, 'Original stdout/result artifact differ')
+    if recipe == 't10-exhaustive-v1':
+        require(value['status'] == 'PASS' and value['runtime'] == suite['toolchain']['version'], 'Original exhaustive runtime/status changed')
+        _t10_checked_count_map(value['counts'], T10_GROUPS['exhaustive'])
+    elif recipe == 't10-source-release-v1':
+        require(set(value) == {'source_fixture', 'release_fixture'} and all(v['status'] == 'PASS' for v in value.values()), 'Original source/release fixtures incomplete')
+    elif recipe == 't10-semantic-v1':
+        _t10_checked_semantic_assertions(text.encode(), T10_GROUPS['semantic'])
+    elif recipe == 't10-independent-review-v1':
+        require(value['status'] == 'PASS' and value['optimized'] is ('-O' in stage['argv']), 'Original independent mode/status changed')
+        _t10_checked_count_map(value['counts'], T10_GROUPS['independent'])
+        expected = {PurePosixPath(name).name: digest for name, digest in T10_FILES.items() if str(PurePosixPath(name).parent) == T10_CHECKER and name.endswith('.py')}
+        require(value['candidate_hashes'] == expected and value['candidate'] == str(output / 'project' / T10_CHECKER), 'Original independent candidate binding changed')
+        require(value['review_hashes'] == {name: T10_FILES[T10_REVIEW + '/' + name] for name in ('independent_models.py', 'run_independent_review.py')}, 'Original independent reviewer binding changed')
+    elif recipe == 't10-two-card-v1':
+        require(value['status'] == 'PASS' and type(value['check_count']) is int and value['check_count'] == 48 and
+                value['worlds_full'] == 8 and value['worlds_star'] == 4 and set(value['checks']) == set(T10_GROUPS['two_card']), 'Original two-card finite census changed')
+    else: raise ValueError('Missing source-specific written result parser')
+
+
 def validate_suite(suite, sources, root):
     """Offline checks only. Neither a descriptor nor a review Boolean authorises code."""
     try:
@@ -330,7 +563,7 @@ def validate_suite(suite, sources, root):
             keys(row, {'source_id', 'path', 'role'}); name = relative(row['path'])
             require(row['role'] in ROLES, 'Unknown source role')
             require(name.casefold() not in folded, 'Projection path collision'); folded.add(name.casefold())
-            require(Path(name).suffix.lower() not in {'.olean', '.ilean', '.o', '.so', '.dll', '.exe', '.a', '.zip', '.gz'}, 'Precompiled/archive payload is not a public source projection')
+            require(Path(name).suffix.lower() not in {'.olean', '.ilean', '.o', '.so', '.dll', '.exe', '.a', '.zip', '.gz', '.pyc', '.pyo', '.pyd'}, 'Precompiled/archive payload is not a public source projection')
             file_paths[name] = row
         modules = indexed(replay['modules'], 'name'); official = indexed(replay['official_imports'], 'module')
         require(not (set(modules) & set(official)), 'Custom module shadows an official module')
@@ -445,6 +678,12 @@ def validate_suite(suite, sources, root):
                 require(row['argument_meanings'] == meanings, 'Changed empirical argument meaning')
             elif row['recipe'] in NORMAL_SOURCE_RECIPES:
                 require(NORMAL_SOURCE_RECIPES[row['recipe']] == row['sha256'] and row['argument_meanings'] == {}, 'Changed original source-check recipe')
+            elif row['recipe'] in T10_FINITE_RECIPES:
+                expected_path, expected_hash = T10_FINITE_RECIPES[row['recipe']]
+                require(row['sha256'] == expected_hash and files[row['source_id']]['path'] == expected_path, 'Changed original written finite recipe')
+                meaning = {'--candidate': 'PROJECT_SOURCE_DIRECTORY', '--output': 'FRESH_OUTPUT_FILE'} if row['recipe'] == 't10-independent-review-v1' else {}
+                if row['recipe'] == 't10-independent-mutations-v1': meaning = {'--candidate': 'PROJECT_SOURCE_DIRECTORY', '--directory': 'FRESH_OUTPUT_DIRECTORY'}
+                require(row['argument_meanings'] == meaning, 'Changed written finite argument meaning')
             else:
                 require(SOURCE_RECIPES.get(row['recipe']) == row['sha256'], 'Unknown/unreviewed driver recipe')
         stages = indexed(replay['stages']); require(stages and not (set(stages) & RESERVED), 'Missing stages or reserved stage ID')
@@ -456,6 +695,7 @@ def validate_suite(suite, sources, root):
             relative(name); require(name != 'project' and not name.startswith('project/'), 'Build root overlaps projected sources')
         for driver in drivers.values():
             if driver['recipe'] in NORMAL_SOURCE_RECIPES: source_checker_inputs(driver, plan)
+        if any(row['recipe'] in T10_FINITE_RECIPES for row in drivers.values()): validate_t10_package(suite, plan)
         if any(row['recipe'] in EMPIRICAL_RECIPES for row in drivers.values()):
             _empirical_package(plan)
             require(replay['scope'] == 'FINITE' and toolchain['kind'] == 'PYTHON' and toolchain['version'].startswith('3.12.'), 'Empirical execution is source-prescribed Python 3.12 finite scope')
@@ -473,7 +713,10 @@ def validate_suite(suite, sources, root):
             require(type(stage['timeout_seconds']) is int and 0 < stage['timeout_seconds'] <= 86400, 'Invalid stage budget')
             require(set(string_list(stage['depends_on'])) <= set(prior), 'Nonexistent/forward stage prerequisite')
             for output in string_list(stage['output_paths']):
-                relative(output); require(output not in produced and not output.startswith('project/'), 'Output collision or source overwrite'); produced.add(output)
+                relative(output)
+                recipe = drivers.get(stage['driver_id'], {}).get('recipe')
+                admitted_child = output in T10_OUTPUTS.get(recipe, []) and output.removeprefix('project/') not in file_paths
+                require(output not in produced and (not output.startswith('project/') or admitted_child), 'Output collision or source overwrite'); produced.add(output)
             codes = stage['expected_exit_codes']
             require(isinstance(codes, list) and codes and len(codes) == len(set(codes)) and all(type(c) is int and 0 <= c < 124 for c in codes), 'Nonsemantic/invalid expected exit code')
             for diagnostic in stage['expected_diagnostics']:
@@ -986,6 +1229,8 @@ def _initial_receipt(suite, sources, reviews):
         'import_fingerprints': import_fingerprints(suite, sources),
         'tool_fingerprints': {}, 'dependency_checks': {}, 'driver_hashes': {d['id']: d['sha256'] for d in suite['replay']['drivers']},
         'stage_results': stages, 'target_audits': [], 'control_diagnostics': [], 'output_hashes': {}, 'cache_policy': CACHE_POLICY}
+    if any(row['argv'][:1] == ['{builtin:observe-child}'] for row in suite['replay']['stages']):
+        evidence.update(schema='orthemology-v5-replay-evidence-v2', child_observations=[], driver_invocations=[])
     return {'id': suite['id'] + '-replay', 'suite_id': suite['id'], 'family': suite['family'], 'suite_sha256': canonical(suite),
         'source_hashes': source_hashes, 'review_hashes': {rid: reviews[rid]['review_sha256'] for rid in suite['review_ids']},
         'toolchain_sha256': canonical(suite['toolchain']), 'outcome': 'NOT_RUN', 'target_readbacks': [], 'controls': [], 'stages': [],
@@ -1000,7 +1245,7 @@ def execute_suite(suite, sources, root, output, tools, inputs, scope=None, *, re
     project_suite(suite, sources, root, output)
     output = Path(output).absolute(); project = output / 'project'; logs = output / 'logs'; logs.mkdir()
     receipt = _initial_receipt(suite, sources, reviews); evidence = receipt['replay_evidence']
-    results = {r['id']: r for r in evidence['stage_results']}; completed = {}; controls = {r['id']: r for r in suite['controls']}
+    results = {r['id']: r for r in evidence['stage_results']}; completed = {}; controls = {r['id']: r for r in suite['controls']}; captured_children = {}
     current = results['_prerequisites']; current['started_at'] = utc(); prerequisite_log = logs / 'prerequisites.log'
     def save():
         receipt['stages'] = [{key: row[key] for key in ('id', 'terminal', 'exit_code', 'log_sha256')} for row in evidence['stage_results']]
@@ -1012,12 +1257,13 @@ def execute_suite(suite, sources, root, output, tools, inputs, scope=None, *, re
         evidence['tool_fingerprints'] = fingerprints; evidence['dependency_checks'] = dependencies
         prerequisite_log.write_text('Exact tool, package, official import and external input prerequisites verified.\n')
         current.update(terminal='COMPLETED', exit_code=0, ended_at=utc(), log_sha256=sha(prerequisite_log.read_bytes()))
-        mappings = {'project': project, 'out': output, 'build': output / 'build'}
+        mappings = {'project': project, 'out': output, 'build': output / 'build', 'adapter': Path(__file__).resolve()}
         mappings.update({'tool:' + name: path for name, path in resolved.items()})
         mappings.update({'input:' + name: Path(path) for name, path in inputs.items()})
         mappings.update({'driver:' + name: path_in(project, plan['files'][d['source_id']]['path']) for name, d in plan['drivers'].items()})
         for sid, stage in plan['stages'].items():
             current = results[sid]; current['started_at'] = utc(); log = logs / (sid + '.log')
+            driver = plan['drivers'].get(stage['driver_id']); recipe = driver['recipe'] if driver else None
             for parent in stage['depends_on']: require(completed.get(parent, {}).get('matched') is True, 'Prior stage did not satisfy its contract')
             for arg in stage['argv']:
                 match = re.fullmatch(r'\{fixture:([^{}]+)\}', arg)
@@ -1029,10 +1275,34 @@ def execute_suite(suite, sources, root, output, tools, inputs, scope=None, *, re
             if stage['argv'] == ['{builtin:source-check}']:
                 log.write_text(_source_checks(plan, plan['drivers'][stage['driver_id']]), encoding='utf-8')
                 run = {'terminal': 'COMPLETED', 'exit_code': 0, 'started_at': current['started_at'], 'ended_at': utc(), 'log_sha256': sha(log.read_bytes())}
+            elif stage['argv'][:1] == ['{builtin:observe-child}']:
+                parent_id, child_id = stage['argv'][1:]
+                observed = captured_children[(parent_id, child_id)]
+                child_log = path_in(output, 'mutation-copies/' + child_id + '/run.log')
+                require(sha(child_log.read_bytes()) == observed['log_sha256'], 'Captured child log changed before observation')
+                log.write_bytes(child_log.read_bytes())
+                # This interval measures observation only. Actual child times are
+                # retained separately and never replaced with the parent span.
+                run = {'terminal': observed['terminal'], 'exit_code': observed['exit_code'], 'started_at': current['started_at'],
+                       'ended_at': utc(), 'log_sha256': observed['log_sha256']}
+                evidence['child_observations'].append({**observed, 'stage_id': sid, 'observed_at': run['ended_at']})
             else:
-                argv = [_expand(a, mappings) for a in stage['argv']]
+                launch = t10_tracer_argv(stage) if recipe == 't10-independent-mutations-v1' else stage['argv']
+                if recipe == 't10-independent-mutations-v1':
+                    evidence['driver_invocations'].append({'parent_stage_id': sid, 'driver_sha256': driver['sha256'],
+                        'source_argv': stage['argv'], 'launch_argv': launch, 'runner_sha256': evidence['runner_sha256'],
+                        'trace_sha256': None, 'parent_log_sha256': sha(b''), 'child_count': 0})
+                argv = [_expand(a, mappings) for a in launch]
                 run = run_process(argv, path_in(project, stage['cwd'], dot=True), stage_environment(stage, plan, output, env), log, stage['timeout_seconds'])
             current.update(run); text = log.read_text(encoding='utf-8', errors='replace')
+            if recipe == 't10-independent-mutations-v1' and stage['kind'] == 'DRIVER':
+                trace = path_in(output, 'traces/' + sid)
+                evidence['driver_invocations'][-1].update(parent_log_sha256=run['log_sha256'],
+                    trace_sha256=_file_hashes(trace) if trace.exists() else None,
+                    child_count=len(list(trace.glob('*.json'))) if trace.exists() else 0)
+                if trace.exists() and any(read_json(p)['terminal'] in {'TIMEOUT', 'INTERRUPTED'} for p in trace.glob('*.json')):
+                    receipt.update(outcome='RESOURCE_INCONCLUSIVE', exit_code=1)
+                    raise ValueError('Resource-inconclusive original child')
             if run['terminal'] != 'COMPLETED':
                 receipt.update(outcome='RESOURCE_INCONCLUSIVE', exit_code=1)
                 raise ValueError('Resource-inconclusive stage')
@@ -1041,6 +1311,12 @@ def execute_suite(suite, sources, root, output, tools, inputs, scope=None, *, re
                 _language_result(plan['drivers'][stage['driver_id']], stage, text, plan)
             if stage['driver_id'] in plan['drivers'] and plan['drivers'][stage['driver_id']]['recipe'] in EMPIRICAL_RECIPES:
                 _empirical_result(plan['drivers'][stage['driver_id']], stage, text, plan, output)
+            if recipe in T10_FINITE_RECIPES:
+                t10_result(stage, text, plan, output, suite)
+                if recipe == 't10-independent-mutations-v1' and stage['kind'] == 'DRIVER':
+                    children, invocation = t10_collect_children(stage, current, text, plan, output, mappings)
+                    captured_children.update(children)
+                    require(evidence['driver_invocations'][-1] == invocation, 'Instrumented parent trace changed during parsing')
             if (suite['id'] in APPROVED_DECLARED_SUITES or any(row['recipe'] in SOURCE_RECIPES for row in plan['drivers'].values())) and stage['argv'][-1].startswith('{project}/'):
                 path = stage['argv'][-1][len('{project}/'):]
                 if path.endswith('.lean'):
@@ -1078,7 +1354,8 @@ def execute_suite(suite, sources, root, output, tools, inputs, scope=None, *, re
         selected = suite['replay']['scope']
         outcome = {'FINITE': 'FINITE_ONLY', 'COMPONENTS': 'FRESH_KERNEL_COMPONENTS', 'DECLARED_SUITE': 'QUALIFIED_DECLARED_SUITE'}[selected]
         receipt.update(outcome=outcome, exit_code=0, proof_scope=selected)
-    except (FileNotFoundError, ValueError, OSError, subprocess.SubprocessError) as error:
+    except (FileNotFoundError, ValueError, OSError, KeyError, TypeError, subprocess.SubprocessError) as error:
+        write_json(output / 'FAILURE.json', {'stage_id': current['id'], 'observed_at': utc(), 'error': type(error).__name__ + ': ' + str(error)})
         if isinstance(error, MissingInput): receipt.update(outcome='BLOCKED_EXTERNAL_INPUT', exit_code=2)
         elif isinstance(error, MissingTool): receipt.update(outcome='BLOCKED_TOOLCHAIN', exit_code=2)
         elif receipt['outcome'] != 'RESOURCE_INCONCLUSIVE': receipt.update(outcome='FAILED', exit_code=1)
@@ -1087,14 +1364,18 @@ def execute_suite(suite, sources, root, output, tools, inputs, scope=None, *, re
             private_log = logs / (current['id'] + '-failure.log'); private_log.write_text(type(error).__name__ + ': ' + str(error) + '\n')
             current.update(terminal='MISSING' if isinstance(error, FileNotFoundError) else 'COMPLETED',
                            exit_code=None if isinstance(error, FileNotFoundError) else 1, ended_at=utc(), log_sha256=sha(private_log.read_bytes()))
+        for invocation in evidence.get('driver_invocations', []):
+            if invocation['parent_stage_id'] == current['id']: invocation['parent_log_sha256'] = current['log_sha256']
     receipt['ended_at'] = utc(); save()
     validate_receipt(receipt, suite, sources, root)
     return receipt
 
 
 def validate_receipt(receipt, suite, sources, root):
-    plan = validate_suite(suite, sources, root); evidence = receipt['replay_evidence']; keys(evidence, EVIDENCE_KEYS)
-    require(evidence['schema'] == 'orthemology-v5-replay-evidence-v1' and evidence['cache_policy'] == CACHE_POLICY, 'Unknown replay evidence/cache policy')
+    plan = validate_suite(suite, sources, root); evidence = receipt['replay_evidence']
+    has_children = any(row['argv'][:1] == ['{builtin:observe-child}'] for row in plan['stages'].values())
+    keys(evidence, EVIDENCE_KEYS | ({'child_observations', 'driver_invocations'} if has_children else set()))
+    require(evidence['schema'] == ('orthemology-v5-replay-evidence-v2' if has_children else 'orthemology-v5-replay-evidence-v1') and evidence['cache_policy'] == CACHE_POLICY, 'Unknown replay evidence/cache policy')
     require(receipt['suite_sha256'] == canonical(suite) and receipt['toolchain_sha256'] == canonical(suite['toolchain']), 'Stale suite/toolchain receipt')
     hashes = {sid: sources[sid]['public_sha256'] for sid in suite['source_ids']}
     require(receipt['source_hashes'] == hashes and evidence['source_hashes_before'] == hashes and evidence['source_hashes_after'] == hashes, 'Stale source receipt')
@@ -1127,6 +1408,7 @@ def validate_receipt(receipt, suite, sources, root):
         for value in row['output_hashes'].values(): digest(value)
         if row['terminal'] == 'COMPLETED': completed[sid] = row
     require(receipt['log_sha256'] == canonical({row['id']: row['log_sha256'] for row in evidence['stage_results']}), 'Receipt log identity mismatch')
+    if has_children: validate_child_evidence(evidence, plan, stages, successful)
     observations = indexed(evidence['control_diagnostics'], 'control_id'); controls = indexed(receipt['controls'])
     if successful: require(set(observations) == set(controls) == set(indexed(suite['controls'])), 'Incomplete successful control coverage')
     for cid, row in observations.items():
@@ -1176,7 +1458,254 @@ def validate_receipt(receipt, suite, sources, root):
     return {'suite_id': suite['id'], 'outcome': receipt['outcome'], 'scope': 'RECEIPT_IDENTITY_AND_DECLARED_EXECUTION_CONTRACT'}
 
 
+def validate_child_evidence(evidence, plan, stages, successful):
+    declared = {sid: row for sid, row in plan['stages'].items() if row['argv'][:1] == ['{builtin:observe-child}']}
+    parents = {row['argv'][1] for row in declared.values()}
+    launches = indexed(evidence['driver_invocations'], 'parent_stage_id')
+    observed = indexed(evidence['child_observations'], 'stage_id')
+    require(set(launches) <= parents and set(observed) <= set(declared), 'Foreign physical parent/child observation')
+    if successful: require(set(launches) == parents and set(observed) == set(declared), 'Missing actual parent/child trace evidence')
+    physical_runs = set()
+    for pid, row in launches.items():
+        keys(row, {'parent_stage_id', 'driver_sha256', 'source_argv', 'launch_argv', 'runner_sha256', 'trace_sha256', 'parent_log_sha256', 'child_count'})
+        stage = plan['stages'][pid]; driver = plan['drivers'][stage['driver_id']]
+        require(row['driver_sha256'] == driver['sha256'] and row['source_argv'] == stage['argv'] and row['launch_argv'] == t10_tracer_argv(stage), 'Changed instrumented parent invocation')
+        require(row['runner_sha256'] == evidence['runner_sha256'] and row['parent_log_sha256'] == stages[pid]['log_sha256'], 'Wrong parent execution/log binding')
+        require(type(row['child_count']) is int and 0 <= row['child_count'] <= 9, 'Invalid actual child census')
+        if row['trace_sha256'] is not None:
+            digest(row['trace_sha256']); require(row['trace_sha256'] not in physical_runs, 'Duplicate physical run credit'); physical_runs.add(row['trace_sha256'])
+        if successful: require(row['trace_sha256'] is not None and row['child_count'] == 9, 'Incomplete actual child census')
+    seen = set()
+    for sid, row in observed.items():
+        keys(row, {'stage_id', 'source_child_id', 'parent_stage_id', 'driver_sha256', 'parser_id', 'mode', 'argv_provenance',
+                   'argv', 'cwd', 'started_at', 'ended_at', 'observed_at', 'physical_run_sha256', 'parent_log_sha256',
+                   'terminal', 'exit_code', 'actual_outcome', 'log_sha256', 'mutated_source_sha256', 'matched_source_literals', 'result_record_sha256'})
+        stage = declared[sid]; pid, child = stage['argv'][1:]
+        require(pid in launches and row['physical_run_sha256'] == launches[pid]['trace_sha256'] and row['parent_log_sha256'] == stages[pid]['log_sha256'], 'Observation belongs to another physical run')
+        driver = plan['drivers'][stage['driver_id']]
+        require(row['driver_sha256'] == driver['sha256'] and row['parser_id'] == driver['recipe'] == 't10-independent-mutations-v1', 'Wrong original parser authority')
+        require(row['mode'] == 'NONEXECUTING_OBSERVATION' and row['argv_provenance'] == 'CAPTURED' and row['cwd'] == '{project}', 'Derived command or duplicate execution credited as observation')
+        check_child_terminal(row, stages[pid], child, t10_child_argv(child), seen)
+        require(row['actual_outcome'] == 'REJECT' and row['terminal'] == stages[sid]['terminal'] and row['exit_code'] == stages[sid]['exit_code'] and row['log_sha256'] == stages[sid]['log_sha256'], 'Contradictory observation stage summary')
+        require(isinstance(row['observed_at'], str) and row['observed_at'].endswith('Z') and
+                stages[pid]['ended_at'] <= stages[sid]['started_at'] <= row['observed_at'] <= stages[sid]['ended_at'], 'Observation time is not its actual parsing interval')
+        require(string_list(row['matched_source_literals']) and set(row['matched_source_literals']) <= set(T10_CHILD_DIAGNOSTICS[child]), 'Wrong original child diagnostic category')
+        _, filename, changes = next(item for item in _t10_MUTATIONS if item[0] == child)
+        body = t10_contents(plan, T10_CHECKER + '/' + filename).decode()
+        for before, after in changes:
+            require(before in body, 'Original source mutation no longer applies'); body = body.replace(before, after)
+        require(row['mutated_source_sha256'] == sha(body.encode()), 'Observed mutation source differs')
+        digest(row['result_record_sha256'])
+
+
+_t10_MUTATION_DRIVER_SHA256 = 'b94b8df9b31c8b635743440afc3525fb6abff282336ef1ba9e2dd9a316f6fee4'
+
+_t10_REVIEW_DRIVER_SHA256 = 'e1303f10bbe5da403553c2be7f2b7ff468f0567b501f63d854cfb3f908cabcf2'
+
+_t10_ORIGINAL_HASHES = {'context_effects.py': '0f65f172926e61ff7280ec2e13fd36b4ff287ea530ebbfa00c9dce831f3355fa', 'read_cover.py': '808a9297d27b903722b4fc04ad9a526d3cfc3e371b14e5047e1d33d1c6e3e79f'}
+
+_t10_MUTATIONS = [('current_only', 'context_effects.py', [('Ref(consumed)', 'Ref(0)')]), ('compose_depth_abs_shift', 'context_effects.py', [('depth=max(f.depth,g.depth-(p-f.consumed))', 'depth=max(f.depth,g.depth+abs(p-f.consumed))')]), ('drop_second_constraints', 'context_effects.py', [('constraints=f.constraints+tuple((subst(x),o) for x,o in g.constraints)', 'constraints=f.constraints')]), ('snapshot_blind_equality', 'context_effects.py', [('from dataclasses import dataclass', 'from dataclasses import dataclass, field'), ('    snapshot: str', '    snapshot: str = field(compare=False)')]), ('nonconvex_envelope', 'read_cover.py', [("if ix and ix!=list(range(ix[0],ix[-1]+1)):raise BadCoverage('justified role coverage is not convex on demanded origins')", "if False:raise BadCoverage('justified role coverage is not convex on demanded origins')")]), ('retired_service_available', 'read_cover.py', [('if w.eligible and w.adequate', 'if w.adequate')]), ('locality_ignores_response', 'read_cover.py', [('if all(response(alt,w)==response(pos,w) for w in menu if o not in w.coverage):found=True;break', 'if True:found=True;break')]), ('adequacy_ignores_fibres', 'read_cover.py', [('if observation in seen and seen[observation]!=values:return False', 'if observation in seen and seen[observation]!=values:return True')]), ('replace_adaptive_with_cover', 'read_cover.py', [('return max(solve(p) for p in parts)', 'return cover_dp(tuple(worlds[0].keys()),menu).cost')])]
+
+_t10_DIAGNOSTICS = {'current_only': ('direct stack',), 'compose_depth_abs_shift': ('split', 'left association', 'right association'), 'drop_second_constraints': ('split', 'left association', 'right association'), 'snapshot_blind_equality': ('wrong snapshot accepted',), 'nonconvex_envelope': ('nonconvex accepted',), 'retired_service_available': ('retired service treated available',), 'locality_ignores_response': ('star accepted leak',), 'adequacy_ignores_fibres': ('false adequate-coverage certification',), 'replace_adaptive_with_cover': ('missed cheaper decision',)}
+
+def _t10_load(data):
+
+    def pairs(items):
+        result = {}
+        for key, value in items:
+            require(key not in result, 'Duplicate JSON key')
+            result[key] = value
+        return result
+
+    def nonfinite(value):
+        raise ValueError('Nonfinite JSON value')
+    require(type(data) is bytes, 'Expected exact UTF-8 result bytes')
+    return json.loads(data.decode('utf-8'), object_pairs_hook=pairs, parse_constant=nonfinite)
+
+def _t10_seconds(value):
+    require(type(value) in (int, float) and math.isfinite(value) and (value >= 0), 'Invalid elapsed-time field')
+
+def _t10_checked_mutation_children(result_bytes, parent_stdout, original_sources, child_artifacts, mutation_driver, review_driver):
+    """Return actual child terminals; never turn the aggregate exit into REJECT.
+
+    child_artifacts maps each exact mutation name to the two Python source files
+    and run.log, all as bytes. The collector MUST reject unexpected-pass.json and
+    any unrecorded terminal before calling this parser. Other byproducts receive
+    no control credit. Driver argv and child argv are bound by the adapter's
+    reviewed source-specific recipe, not reconstructed as observed data here.
+    """
+    require(sha(mutation_driver) == _t10_MUTATION_DRIVER_SHA256, 'Wrong mutation driver')
+    require(sha(review_driver) == _t10_REVIEW_DRIVER_SHA256, 'Wrong independent reviewer')
+    require(set(original_sources) == set(_t10_ORIGINAL_HASHES), 'Original source set differs')
+    require({k: sha(v) for k, v in original_sources.items()} == _t10_ORIGINAL_HASHES, 'Original candidate source changed')
+    value = _t10_load(result_bytes)
+    require(isinstance(value, dict) and set(value) == {'status', 'count', 'mutation_boundary', 'source_hashes', 'records'}, 'Wrong mutation aggregate shape')
+    require(value['status'] == 'PASS' and type(value['count']) is int and (value['count'] == 9), 'Incomplete mutation aggregate')
+    require(value['mutation_boundary'] == 'only reviewer-owned file copies; original files unchanged', 'Changed mutation boundary')
+    require(value['source_hashes'] == _t10_ORIGINAL_HASHES, 'Mutation aggregate names different originals')
+    names = [row[0] for row in _t10_MUTATIONS]
+    require(set(child_artifacts) == set(names), 'Missing or foreign child artifact set')
+    records = value['records']
+    require(isinstance(records, list) and len(records) == 9 and all((isinstance(r, dict) for r in records)), 'Incomplete mutation records')
+    require([r.get('name') for r in records] == names, 'Missing, duplicate or reordered mutation record')
+    require(parent_stdout.decode('utf-8').splitlines() == [name + ' KILLED' for name in names], 'Aggregate progress differs from complete child inventory')
+    outputs = []
+    for record, (name, filename, changes) in zip(records, _t10_MUTATIONS):
+        require(set(record) == {'name', 'candidate_file', 'mutated_sha256', 'replacements', 'exit', 'killed_by_independent_assertion', 'last_line', 'seconds'}, 'Wrong child record shape')
+        require(record['candidate_file'] == filename, 'Wrong mutated source owner')
+        require(type(record['exit']) is int and record['exit'] == 1, 'Child did not terminate with the intended assertion exit')
+        require(record['killed_by_independent_assertion'] is True, 'Child rejection was not recorded')
+        _t10_seconds(record['seconds'])
+        artifacts = child_artifacts[name]
+        require(set(artifacts) == {'context_effects.py', 'read_cover.py', 'run.log'}, 'Missing child source/log or unexpected pass artifact')
+        mutated = original_sources[filename].decode('utf-8')
+        replacements = []
+        for before, after in changes:
+            count = mutated.count(before)
+            require(count > 0, 'Reviewed literal mutation no longer applies')
+            replacements.append({'old': before, 'new': after, 'occurrences': count})
+            mutated = mutated.replace(before, after)
+        require(record['replacements'] == replacements, 'Literal mutation contract changed')
+        expected = dict(original_sources)
+        expected[filename] = mutated.encode('utf-8')
+        require(all((artifacts[fn] == data for fn, data in expected.items())), 'Child source differs beyond exact reviewed mutation')
+        require(record['mutated_sha256'] == sha(expected[filename]), 'Mutated source digest differs')
+        log = artifacts['run.log'].decode('utf-8')
+        lines = log.strip().splitlines()
+        require(lines and lines[-1] == record['last_line'] and lines[-1].startswith('AssertionError:'), 'Missing exact terminal assertion diagnostic')
+        require('Traceback (most recent call last):' in log, 'Missing child exception traceback')
+        require(not re.search('ModuleNotFoundError|ImportError|FileNotFoundError|PermissionError|MemoryError|RecursionError|TimeoutError|SyntaxError|NameError|KeyboardInterrupt', log), 'Infrastructure/resource diagnostic cannot earn rejection')
+        matches = [literal for literal in _t10_DIAGNOSTICS[name] if literal in lines[-1]]
+        require(matches and all((literal in review_driver.decode('utf-8') for literal in matches)), 'Child rejected an unreviewed property')
+        outputs.append({'source_child_id': name, 'terminal': 'COMPLETED', 'exit_code': record['exit'], 'actual_outcome': 'REJECT', 'log_sha256': sha(artifacts['run.log']), 'mutated_source_sha256': sha(artifacts[filename]), 'matched_source_literals': matches, 'result_record_sha256': sha(json.dumps(record, sort_keys=True, separators=(',', ':'), allow_nan=False).encode('utf-8'))})
+    return outputs
+
+def _t10_checked_count_map(value, expected_keys):
+    require(isinstance(value, dict) and set(value) == set(expected_keys), 'Missing or foreign finite count group')
+    require(all((type(n) is int and n > 0 for n in value.values())), 'Unexecuted or invalid count group')
+    return value
+
+def _t10_checked_semantic_assertions(data, names):
+    value = _t10_load(data)
+    require(isinstance(value, dict) and set(value) == {'status', 'semantic_mutants', 'killed', 'results', 'scope'}, 'Wrong semantic assertion shape')
+    require(value['status'] == 'PASS' and type(value['semantic_mutants']) is int and (type(value['killed']) is int) and (value['semantic_mutants'] == value['killed'] == len(names) == 16), 'Incomplete semantic assertions')
+    rows = value['results']
+    require(isinstance(rows, list) and len(rows) == 16 and all((isinstance(r, dict) for r in rows)), 'Incomplete semantic result rows')
+    require([r.get('id') for r in rows] == list(names), 'Missing or duplicate semantic result')
+    for row in rows:
+        require(set(row) == {'id', 'status', 'correct', 'mutant', 'mechanism'}, 'Wrong semantic result shape')
+        require(row['status'] == 'KILLED' and isinstance(row['correct'], str) and isinstance(row['mutant'], str) and (row['correct'] != row['mutant']) and isinstance(row['mechanism'], str) and row['mechanism'], 'Semantic assertion did not distinguish its alternatives')
+    return [{'source_control_id': r['id'], 'actual_outcome': 'ACCEPT'} for r in rows]
+
+def _t10_checked_unit_output(data, controls):
+    text = data.decode('utf-8')
+    expected = {r['name'] + ' (test_contract.' + r['class'] + '.' + r['name'] + ') ... ok' for r in controls}
+    observed = [line.strip() for line in text.splitlines() if re.match('^test_\\w+ \\(', line)]
+    require(len(expected) == len(controls) == 49 and len(observed) == 49 and (set(observed) == expected), 'Missing, duplicate, skipped or failed unittest')
+    require(len(re.findall('(?m)^Ran 49 tests in [0-9.]+s$', text)) == 1 and text.rstrip().endswith('\nOK'), 'Incomplete unittest terminal')
+    require(not re.search('(?m)^(FAIL|ERROR|FAILED|OK \\()', text), 'Unittest failure/skip diagnostic')
+    return [{'source_control_id': r['class'] + '.' + r['name'], 'actual_outcome': 'ACCEPT'} for r in controls]
+
+T10_GROUPS = {'exhaustive': ['all_boolean_menu_adaptive_cover_cases',
+                'interval_menu_cost_demand_cases',
+                'keyed_binary_splits',
+                'keyed_direct_cases',
+                'keyed_words',
+                'unkeyed_binary_splits',
+                'unkeyed_direct_cases',
+                'unkeyed_triple_parenthesisations',
+                'unkeyed_words'],
+ 'independent': ['adaptive_product_menus',
+                 'association_stack_triples',
+                 'complete_response_leaks',
+                 'convex_interval_instances',
+                 'cover_subfamily_instances',
+                 'direct_stack_pairs',
+                 'effect_named_controls',
+                 'effect_words',
+                 'exact_unkeyed_depths',
+                 'general_observation_tables',
+                 'known_false_empty_query',
+                 'locality_adequacy_separation',
+                 'malformed_contract_rejections',
+                 'nonconvex_rejections',
+                 'positive_cost_rejections',
+                 'public_evidence_cost_zero',
+                 'public_metadata_leaks',
+                 'retirement_controls',
+                 'split_stack_pairs',
+                 'star_only_family',
+                 'whole_source_competitor'],
+ 'semantic': ['M01_CURRENT_TOP_ONLY',
+              'M02_NET_HEIGHT_ONLY',
+              'M03_DROP_KEYED_EXIT',
+              'M04_COPY_AS_NEW_ROOT',
+              'M05_SAME_TEXT_COLLAPSE',
+              'M06_WEIGHTED_FURTHEST_RIGHT',
+              'M07_FILL_RAW_INTERVAL_HOLE',
+              'M08_ADDRESS_IMPLIES_QUERY_RIGHT',
+              'M09_SOUND_ABSTENTION_IS_COMPLETION',
+              'M10_MARGINALS_IMPLY_LOCALITY',
+              'M11_LOCALITY_IMPLIES_ADEQUACY',
+              'M12_LOCAL_SPEAKER_IS_GLOBAL_ROLE',
+              'M13_RETAINED_COUNT_ONLY',
+              'M14_HIDE_SELECTOR_CHANNEL',
+              'M15_DISCARD_WHOLE_SOURCE_ALTERNATIVE',
+              'M16_PROMOTE_SOURCE_FORCE_TO_CARRIER'],
+ 'two_card': ['full_product_cards_only',
+              'full_product_fixed_a',
+              'full_product_known_false_a',
+              'full_product_fixed_b',
+              'full_product_known_false_b',
+              'full_product_fixed_c',
+              'full_product_known_false_c',
+              'full_product_full_role_table',
+              'full_product_valid_Q_verdict',
+              'full_product_value_dependent_origin_identity',
+              'full_product_restored_source',
+              'full_product_accepted_live_reader',
+              'full_product_uninformative_old_result_d',
+              'four_world_star_cards_only',
+              'four_world_star_fixed_a',
+              'four_world_star_known_false_a',
+              'four_world_star_fixed_b',
+              'four_world_star_known_false_b',
+              'four_world_star_fixed_c',
+              'four_world_star_known_false_c',
+              'four_world_star_full_role_table',
+              'four_world_star_valid_Q_verdict',
+              'four_world_star_value_dependent_origin_identity',
+              'four_world_star_restored_source',
+              'four_world_star_accepted_live_reader',
+              'four_world_star_uninformative_old_result_d',
+              'correlated_outside_d_equals_Q',
+              'correlated_outside_d_equals_a',
+              'free_length_encodes_Q',
+              'free_status_encodes_Q',
+              'free_timing_encodes_Q',
+              'free_authentication_payload_encodes_Q',
+              'free_role_bearing_locator_encodes_Q',
+              'rich_left_response_encodes_missing_c',
+              'Q_verdict_insufficient_for_all_individual_roles',
+              'edge_plus_opposite_card_answers_individual_roles',
+              'copies_only_of_a',
+              'copies_do_not_add_new_role',
+              'no_permitted_menu_cannot_complete',
+              'only_left_permitted_cannot_complete',
+              'retained_Q_needs_no_read_permission',
+              'safe_withholding_not_a_total_answer',
+              'budget_one_rejects_b_plan',
+              'renegotiated_budget_two_accepts_b_plan',
+              'always_false_uniform_accuracy',
+              'all_positive_answer_true_can_be_lucky',
+              'left_positive_transcript_has_both_answers',
+              'one_request_bounded_error_policy_worst_success']}
+
+
 def main():
+    if sys.argv[1:2] == ['--trace-t10-mutations']:
+        require(len(sys.argv) == 8, 'Malformed internal trace invocation')
+        return trace_t10_driver(Path(sys.argv[2]), Path(sys.argv[3]), sys.argv[4:])
     parser = argparse.ArgumentParser(description=__doc__)
     parser.add_argument('--root', type=Path, default=Path(__file__).resolve().parents[1])
     mode = parser.add_mutually_exclusive_group(required=True)

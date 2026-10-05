@@ -6,6 +6,7 @@ import json
 import os
 from pathlib import Path
 import sys
+import subprocess
 import tempfile
 import unittest
 from unittest import mock
@@ -132,6 +133,12 @@ class SuccessorReplayTests(unittest.TestCase):
         self.suite['replay']['scope'] = 'DECLARED_SUITE'
         with self.assertRaises(ValueError): self.validate()
 
+    def test_python_bytecode_cannot_enter_a_source_projection(self):
+        add_source(self.root, self.sources, 'bytecode', 'json.pyc', 'not admitted even when UTF-8')
+        self.suite['source_ids'].append('bytecode')
+        self.suite['replay']['files'].append({'source_id': 'bytecode', 'path': 'json.pyc', 'role': 'DATA'})
+        with self.assertRaises(ValueError): self.validate()
+
     def test_reviewed_suite_approval_binds_sources_targets_and_control_roles(self):
         self.suite['replay']['scope'] = 'DECLARED_SUITE'
         approved = self.r.declared_suite_fingerprint(self.suite, self.sources)
@@ -180,6 +187,140 @@ class SuccessorReplayTests(unittest.TestCase):
         self.r._validate_argv(stage, plan)
         for args in [['{tool:python}', '-O', '{driver:source-check}'], stage['argv'] + ['--unchecked']]:
             with self.assertRaises(ValueError): self.r._validate_argv({**stage, 'argv': args}, plan)
+
+    def test_written_finite_assert_recipe_does_not_allow_optimized_or_redirected_execution(self):
+        driver = {'id': 'exhaustive', 'recipe': 't10-exhaustive-v1', 'source_id': 'source'}
+        plan = {'drivers': {'exhaustive': driver}}
+        stage = {'kind': 'REFERENCE_TESTS', 'driver_id': 'exhaustive', 'cwd': self.r.T10_CHECKER,
+                 'output_paths': ['project/' + self.r.T10_CHECKER + '/logs/exhaustive_results.json'],
+                 'argv': ['{tool:python}', '-B', '{driver:exhaustive}']}
+        self.r._validate_argv(stage, plan)
+        for args in [stage['argv'][:2] + ['-O'] + stage['argv'][2:], stage['argv'] + ['--unchecked']]:
+            with self.assertRaises(ValueError): self.r._validate_argv({**stage, 'argv': args}, plan)
+
+    def test_child_trace_records_real_exit_argv_interval_and_stdout(self):
+        trace = self.base / 'trace'; trace.mkdir()
+        command = [sys.executable, '-I', '-c', 'import sys; print("intended child failure"); sys.exit(1)']
+        call = self.r.traced_run(subprocess.run, trace)
+        result = call(command, text=True, stdout=subprocess.PIPE, stderr=subprocess.STDOUT)
+        record = self.r.read_json(trace / '0000.json')
+        self.assertEqual(result.returncode, 1)
+        self.assertEqual(record['argv'], command)
+        self.assertEqual(record['terminal'], 'COMPLETED')
+        self.assertEqual(record['exit_code'], 1)
+        self.assertEqual(record['log_sha256'], self.r.sha(result.stdout.encode()))
+        self.assertLessEqual(record['started_at'], record['ended_at'])
+        with self.assertRaises(ValueError): call(command, shell=True)
+        call([sys.executable, '-I', '-c', 'import sys; sys.exit(124)'], text=True, stdout=subprocess.PIPE, stderr=subprocess.STDOUT)
+        killed = self.r.read_json(trace / '0001.json')
+        self.assertEqual((killed['terminal'], killed['exit_code']), ('INTERRUPTED', None))
+
+    def test_child_trace_timeout_remains_explicit_and_preserves_original_exception(self):
+        trace = self.base / 'timeout-trace'; trace.mkdir()
+        call = self.r.traced_run(subprocess.run, trace)
+        with self.assertRaises(subprocess.TimeoutExpired):
+            call([sys.executable, '-I', '-c', 'import time; time.sleep(5)'], text=True,
+                 stdout=subprocess.PIPE, stderr=subprocess.STDOUT, timeout=0.02)
+        record = self.r.read_json(trace / '0000.json')
+        self.assertEqual((record['terminal'], record['exit_code']), ('TIMEOUT', None))
+
+    def test_trace_entrypoint_preserves_original_driver_context_and_restores_instrumentation(self):
+        r = self.r; review = self.base / 'review'; review.mkdir(); candidate = self.base / 'candidate'; candidate.mkdir()
+        driver = review / 'run_independent_mutations.py'
+        driver.write_text('import subprocess,sys\nassert sys.argv[1] == "--candidate"\nassert __name__ == "__main__"\nsubprocess.run([sys.executable,"-I","-c","raise SystemExit(1)"],text=True,stdout=subprocess.PIPE,stderr=subprocess.STDOUT)\n')
+        hashes = {}
+        for name in ('run_independent_review.py', 'independent_models.py'):
+            (review / name).write_bytes(b'# reviewed test fixture\n'); hashes[r.T10_REVIEW + '/' + name] = r.sha((review / name).read_bytes())
+        for name in ('context_effects.py', 'read_cover.py'):
+            (candidate / name).write_bytes(b'# reviewed candidate fixture\n'); hashes[r.T10_CHECKER + '/' + name] = r.sha((candidate / name).read_bytes())
+        argv_before = sys.argv[:]; path_before = sys.path[:]; original_run = subprocess.run
+        with mock.patch.dict(r.T10_FINITE_RECIPES, {'t10-independent-mutations-v1': ('fixture', r.sha(driver.read_bytes()))}), mock.patch.dict(r.T10_FILES, hashes):
+            if sys.flags.optimize:
+                with self.assertRaises(ValueError): r.trace_t10_driver(driver, self.base / 'trace-entry', ['--candidate', str(candidate), '--directory', str(self.base / 'mutants')])
+            else:
+                r.trace_t10_driver(driver, self.base / 'trace-entry', ['--candidate', str(candidate), '--directory', str(self.base / 'mutants')])
+                self.assertEqual(r.read_json(self.base / 'trace-entry/0000.json')['exit_code'], 1)
+        self.assertIs(subprocess.run, original_run)
+        self.assertEqual((sys.argv, sys.path), (argv_before, path_before))
+
+    def test_observed_child_requires_its_real_parent_terminal_and_unique_identity(self):
+        row = {'source_child_id': 'current_only', 'parent_stage_id': 'mutations', 'terminal': 'COMPLETED',
+               'exit_code': 1, 'log_sha256': 'a' * 64, 'argv': ['captured'], 'started_at': '2026-10-05T00:00:01Z',
+               'ended_at': '2026-10-05T00:00:02Z'}
+        parent = {'id': 'mutations', 'terminal': 'COMPLETED', 'exit_code': 0,
+                  'started_at': '2026-10-05T00:00:00Z', 'ended_at': '2026-10-05T00:00:03Z'}
+        self.r.check_child_terminal(row, parent, 'current_only', ['captured'], set())
+        for change in [{'source_child_id': 'foreign'}, {'parent_stage_id': 'other'}, {'terminal': 'TIMEOUT'},
+                       {'exit_code': None}, {'exit_code': 124}, {'argv': ['derived']}, {'ended_at': '2026-10-05T00:00:04Z'}]:
+            with self.assertRaises(ValueError): self.r.check_child_terminal({**row, **change}, parent, 'current_only', ['captured'], set())
+        with self.assertRaises(ValueError): self.r.check_child_terminal(row, {**parent, 'exit_code': 1}, 'current_only', ['captured'], set())
+        with self.assertRaises(ValueError): self.r.check_child_terminal(row, parent, 'current_only', ['captured'], {('mutations', 'current_only')})
+
+    def test_observation_receipt_binds_instrumented_launch_and_rejects_missing_or_relabelled_children(self):
+        r = self.r; driver = {'id': 'driver', 'recipe': 't10-independent-mutations-v1', 'sha256': 'b' * 64}
+        parent = {'id': 'mutations', 'driver_id': 'driver', 'argv': ['{tool:python}', '-B', '{driver:driver}', '--candidate', '{project}/' + r.T10_CHECKER, '--directory', '{out}/mutation-copies']}
+        observation = {'id': 'observe', 'driver_id': 'driver', 'argv': ['{builtin:observe-child}', 'mutations', 'current_only']}
+        plan = {'stages': {'mutations': parent, 'observe': observation}, 'drivers': {'driver': driver},
+                'file_paths': {r.T10_CHECKER + '/context_effects.py': {'source_id': 'candidate'}}, 'contents': {'candidate': b'Ref(consumed)'}}
+        stages = {'mutations': {'id': 'mutations', 'terminal': 'COMPLETED', 'exit_code': 0, 'started_at': '2026-10-05T00:00:00Z', 'ended_at': '2026-10-05T00:00:03Z', 'log_sha256': 'c' * 64},
+                  'observe': {'id': 'observe', 'terminal': 'COMPLETED', 'exit_code': 1, 'started_at': '2026-10-05T00:00:04Z', 'ended_at': '2026-10-05T00:00:05Z', 'log_sha256': 'd' * 64}}
+        launch = {'parent_stage_id': 'mutations', 'driver_sha256': driver['sha256'], 'source_argv': parent['argv'], 'launch_argv': r.t10_tracer_argv(parent),
+                  'runner_sha256': 'a' * 64, 'trace_sha256': 'e' * 64, 'parent_log_sha256': 'c' * 64, 'child_count': 9}
+        child = {'stage_id': 'observe', 'source_child_id': 'current_only', 'parent_stage_id': 'mutations', 'driver_sha256': driver['sha256'],
+                 'parser_id': driver['recipe'], 'mode': 'NONEXECUTING_OBSERVATION', 'argv_provenance': 'CAPTURED', 'argv': r.t10_child_argv('current_only'), 'cwd': '{project}',
+                 'started_at': '2026-10-05T00:00:01Z', 'ended_at': '2026-10-05T00:00:02Z', 'observed_at': '2026-10-05T00:00:05Z', 'physical_run_sha256': 'e' * 64,
+                 'parent_log_sha256': 'c' * 64, 'terminal': 'COMPLETED', 'exit_code': 1, 'actual_outcome': 'REJECT', 'log_sha256': 'd' * 64,
+                 'mutated_source_sha256': r.sha(b'Ref(0)'), 'matched_source_literals': ['direct stack'], 'result_record_sha256': 'f' * 64}
+        evidence = {'runner_sha256': 'a' * 64, 'driver_invocations': [launch], 'child_observations': [child]}
+        r.validate_child_evidence(evidence, plan, stages, True)
+        for change in [{'child_observations': []}, {'driver_invocations': []}, {'child_observations': [child, child]},
+                       {'child_observations': [{**child, 'source_child_id': 'foreign'}]},
+                       {'child_observations': [{**child, 'argv_provenance': 'DERIVED_FROM_REVIEWED_RECIPE'}]},
+                       {'child_observations': [{**child, 'physical_run_sha256': '9' * 64}]},
+                       {'child_observations': [{**child, 'exit_code': None}]},
+                       {'driver_invocations': [{**launch, 'launch_argv': parent['argv']}]},
+                       {'driver_invocations': [{**launch, 'parent_log_sha256': '8' * 64}]}]:
+            with self.assertRaises(ValueError): r.validate_child_evidence({**evidence, **change}, plan, stages, True)
+
+    def test_original_mutation_parser_requires_actual_child_records_and_exact_mutant_bytes(self):
+        r = self.r
+        originals = {name: ('\n'.join(before for _, file, changes in r._t10_MUTATIONS if file == name for before, _ in changes)).encode()
+                     for name in ('context_effects.py', 'read_cover.py')}
+        mutation_driver = b'original-driver-fixture'
+        review_driver = ' '.join(s for values in r.T10_CHILD_DIAGNOSTICS.values() for s in values).encode()
+        artifacts = {}; records = []
+        for name, filename, changes in r._t10_MUTATIONS:
+            mutated = originals[filename].decode(); replacements = []
+            for before, after in changes:
+                replacements.append({'old': before, 'new': after, 'occurrences': mutated.count(before)})
+                mutated = mutated.replace(before, after)
+            last = 'AssertionError: ' + r.T10_CHILD_DIAGNOSTICS[name][0]
+            artifacts[name] = {**originals, filename: mutated.encode(), 'run.log': ('Traceback (most recent call last):\n' + last + '\n').encode()}
+            records.append({'name': name, 'candidate_file': filename, 'mutated_sha256': r.sha(mutated.encode()), 'replacements': replacements,
+                            'exit': 1, 'killed_by_independent_assertion': True, 'last_line': last, 'seconds': 0.1})
+        hashes = {key: r.sha(value) for key, value in originals.items()}
+        result = {'status': 'PASS', 'count': 9, 'mutation_boundary': 'only reviewer-owned file copies; original files unchanged', 'source_hashes': hashes, 'records': records}
+        stdout = ''.join(name + ' KILLED\n' for name in r.T10_CHILD_DIAGNOSTICS).encode()
+        def check(value, children):
+            return r._t10_checked_mutation_children(json.dumps(value).encode(), stdout, originals, children, mutation_driver, review_driver)
+        with mock.patch.multiple(r, _t10_MUTATION_DRIVER_SHA256=r.sha(mutation_driver), _t10_REVIEW_DRIVER_SHA256=r.sha(review_driver), _t10_ORIGINAL_HASHES=hashes):
+            self.assertEqual(len(check(result, artifacts)), 9)
+            for code in (0, True, 124, None, -9):
+                changed = copy.deepcopy(result); changed['records'][0]['exit'] = code
+                with self.assertRaises(ValueError): check(changed, artifacts)
+            changed = copy.deepcopy(artifacts); changed['current_only']['context_effects.py'] += b'unapproved change'
+            with self.assertRaises(ValueError): check(result, changed)
+            changed = copy.deepcopy(artifacts); del changed['current_only']['run.log']
+            with self.assertRaises(ValueError): check(result, changed)
+
+    def test_finite_semantic_assertions_are_accept_and_require_complete_distinctions(self):
+        r = self.r; names = r.T10_GROUPS['semantic']
+        result = {'status': 'PASS', 'semantic_mutants': 16, 'killed': 16, 'scope': 'finite fixture',
+                  'results': [{'id': name, 'status': 'KILLED', 'correct': 'a', 'mutant': 'b', 'mechanism': 'explicit inequality'} for name in names]}
+        actual = r._t10_checked_semantic_assertions(json.dumps(result).encode(), names)
+        self.assertEqual({row['actual_outcome'] for row in actual}, {'ACCEPT'})
+        result['results'][0]['mutant'] = 'a'
+        with self.assertRaises(ValueError): r._t10_checked_semantic_assertions(json.dumps(result).encode(), names)
 
     def test_isolated_control_objects_take_precedence_only_from_declared_outputs(self):
         plan = {'build_roots': ['build', 'control'], 'stages': {
