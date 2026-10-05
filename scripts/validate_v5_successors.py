@@ -40,7 +40,7 @@ BASE_COMMIT = '19de267cd41d2a5eeeb3eaf0b91562f706e2a916'
 BASE_TREE = '08a6452e50e8e4791d02410d1c1732875e520f2e'
 BASELINE_ANCHOR = {
     'base_commit': BASE_COMMIT, 'base_tree': BASE_TREE,
-    'preservation_sha256': '31957307d495133b054302a6cd28d9fa1d5a33d00ca62e713794dcc8342a366a',
+    'preservation_sha256': 'cd81d3b80d5183c1c01b637207d0afefd2b143ce4ee346808ca473a15eea6c4a',
     'legacy_registry': {'path': FROZEN_ROOTS[0] + '/registry.json',
                         'sha256': '51e2cea236dd0a880c7243b2f9ccbd558c6c70f16f03ec0efa274f19d3d105ff'},
     'legacy_overlay': {'path': FROZEN_ROOTS[1] + '/SIXTH_FINAL_OVERLAY.json',

@@ -7,11 +7,11 @@
   "records": {
     "BASELINE_BINDING": {
       "path": "docs/provenance/v5-successors/BASELINE_BINDING.json",
-      "sha256": "c3c9ba367ba6444a46d5108309166a2d788063fb42f2518eb630245f47b1e2d5"
+      "sha256": "41b788ac9b2d1daeee19e8b1503f66113083c751cd230d766a58f06c29e1a6cf"
     },
     "PRESERVATION": {
       "path": "docs/provenance/v5-successors/PRESERVATION.json",
-      "sha256": "31957307d495133b054302a6cd28d9fa1d5a33d00ca62e713794dcc8342a366a"
+      "sha256": "cd81d3b80d5183c1c01b637207d0afefd2b143ce4ee346808ca473a15eea6c4a"
     }
   },
   "suite_ids": [],
