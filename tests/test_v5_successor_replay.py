@@ -398,6 +398,103 @@ class SuccessorReplayTests(unittest.TestCase):
             rows[1]['theorem'] = 0; r.write_json(destination, rows)
             with self.assertRaises(ValueError): r.check_t15_stage(stage, text, plan, output)
 
+    def _t15_finite_reference_fixture(self, recipe_name):
+        r = self.r; recipe = r.T15_REFERENCE_RECIPES[recipe_name]
+        values = {recipe['source']: b'# Synthetic interface fixture; never executed.\n'}
+        if 'stdin' in recipe: values[recipe['stdin']] = b'{"fixture":true}\n'
+        if recipe['cwd'] == 'univariate-reference':
+            values['python-reference/certificate_checker.py'] = b'# Synthetic dependency.\n'
+        patches = mock.patch.dict(r.T15_REFERENCE_FILES, {name: sha(raw) for name, raw in values.items()})
+        patches.start(); self.addCleanup(patches.stop)
+        files = {name: {'source_id': name, 'path': name} for name in values}
+        driver = {'id': 'reference', 'recipe': recipe_name, 'source_id': recipe['source'],
+                  'sha256': sha(values[recipe['source']]), 'argument_meanings': recipe['meanings'], 'external_input_id': None}
+        stage = {'id': recipe['stage'], 'driver_id': 'reference', 'kind': recipe['kind'], 'cwd': recipe['cwd'],
+                 'argv': ['{tool:python}', *recipe['args']], 'timeout_seconds': 300, 'depends_on': [],
+                 'output_paths': [], 'control_ids': [], 'expected_exit_codes': [0], 'expected_diagnostics': []}
+        return stage, {'files': files, 'file_paths': files, 'contents': values, 'drivers': {'reference': driver}}
+
+    def test_t15_finite_reference_admits_only_original_normal_argument_forms(self):
+        for recipe in self.r.T15_REFERENCE_RECIPES:
+            stage, plan = self._t15_finite_reference_fixture(recipe)
+            self.r._validate_argv(stage, plan)
+            for changed in [dict(stage, argv=[stage['argv'][0], '-O', *stage['argv'][1:]]),
+                            dict(stage, argv=stage['argv'] + ['--arbitrary']), dict(stage, cwd='elsewhere')]:
+                with self.assertRaises(ValueError): self.r._validate_argv(changed, plan)
+
+    def test_t15_finite_stdin_and_pythonpath_are_source_owned_only(self):
+        for recipe in ['t15-json-reference-decide-example-v1', 't15-json-reference-verify-example-v1',
+                       't15-univariate-reference-tests-v1']:
+            stage, plan = self._t15_finite_reference_fixture(recipe)
+            project = self.base / recipe; project.mkdir()
+            for name, raw in plan['contents'].items():
+                path = project / name; path.parent.mkdir(parents=True, exist_ok=True); path.write_bytes(raw)
+            env = self.r.t15_reference_environment(stage, plan, project, {'PATH': '/fixture'})
+            stream = self.r.t15_reference_stdin(stage, plan, project)
+            if recipe == 't15-univariate-reference-tests-v1':
+                self.assertIsNone(stream)
+                self.assertEqual(env['PYTHONPATH'], str(project / 'python-reference'))
+            else:
+                self.assertNotIn('PYTHONPATH', env)
+                self.assertEqual(stream.read_bytes(), b'{"fixture":true}\n')
+                stream.write_bytes(b'changed input')
+                with self.assertRaises(ValueError): self.r.t15_reference_stdin(stage, plan, project)
+            for key in ['PYTHONPATH', 'PYTHONHOME', 'PYTHONOPTIMIZE']:
+                with self.assertRaises(ValueError): self.r.t15_reference_environment(stage, plan, project, {key: 'unreviewed'})
+
+    def test_t15_finite_cli_output_requires_strict_boolean_identity(self):
+        for recipe, good, bad in [
+                ('t15-json-reference-decide-example-v1', '{"equal":true,"counterexample":null}', '{"equal":1,"counterexample":null}'),
+                ('t15-json-reference-verify-example-v1', '{"accepted":true}', '{"accepted":1}')]:
+            stage, plan = self._t15_finite_reference_fixture(recipe)
+            self.r.check_t15_reference_stage(stage, good, plan)
+            for invalid in [bad, good[:-1] + ',"foreign":true}', good + good]:
+                with self.assertRaises(ValueError): self.r.check_t15_reference_stage(stage, invalid, plan)
+
+    def test_t15_finite_runtime_admits_only_three_exact_generated_phases(self):
+        r = self.r; path = 'restricted-runtime/check_runtime_agreement.py'; raw = b'# Synthetic generator fixture.\n'
+        driver = {'id': 'runtime', 'recipe': r.T15_RUNTIME_RECIPE, 'source_id': path, 'sha256': sha(raw),
+                  'external_input_id': None, 'argument_meanings': {'checker': 'SOURCE_FILE', 'output': 'OUTPUT_DIRECTORY', '--verify-lean': 'LITERAL'}}
+        files = {path: {'source_id': path, 'path': path}}
+        plan = {'files': files, 'file_paths': files, 'contents': {path: raw}, 'drivers': {'runtime': driver}}
+        cases = [
+            ('runtime-prepare', r.T15_RUNTIME_ARGS, r.T15_RUNTIME_PREPARED, 'compile-IdentityChecker', 600),
+            ('runtime-lean', ['{tool:lean}', '-j1', '{out}/runtime/RuntimeAgreement.lean'], ['runtime/lean-output.txt'], 'runtime-prepare', 1800),
+            ('runtime-verify', r.T15_RUNTIME_ARGS + ['--verify-lean'], ['runtime/VERIFIED_RESULT.json'], 'runtime-lean', 600)]
+        with mock.patch.dict(r.T15_RUNTIME_FILES, {path: sha(raw)}):
+            for name, argv, outputs, parent, budget in cases:
+                stage = {'id': name, 'kind': 'DRIVER', 'driver_id': 'runtime', 'cwd': '.', 'argv': argv,
+                         'output_paths': outputs, 'depends_on': [parent], 'timeout_seconds': budget,
+                         'expected_exit_codes': [0], 'expected_diagnostics': [], 'control_ids': []}
+                r._validate_argv(stage, plan)
+                for invalid in [dict(stage, argv=argv + ['--extra']), dict(stage, output_paths=['runtime/other']),
+                                dict(stage, depends_on=[]), dict(stage, timeout_seconds=budget + 1)]:
+                    with self.assertRaises(ValueError): r._validate_argv(invalid, plan)
+
+    def test_t15_finite_runtime_capture_is_exact_fresh_and_preserves_partial_bytes(self):
+        output = self.base / 'runtime-out'; (output / 'runtime').mkdir(parents=True)
+        log = self.base / 'partial.log'; log.write_bytes(b'partial stdout\npartial stderr\xff')
+        stage = {'id': 'runtime-lean', 'output_paths': ['runtime/lean-output.txt']}
+        self.r.capture_t15_runtime_stdout(stage, log, output)
+        self.assertEqual((output / 'runtime/lean-output.txt').read_bytes(), log.read_bytes())
+        with self.assertRaises(ValueError): self.r.capture_t15_runtime_stdout(stage, log, output)
+        with self.assertRaises(ValueError): self.r.capture_t15_runtime_stdout(dict(stage, output_paths=['other']), log, output)
+
+    def test_t15_finite_runtime_rows_require_every_ordered_boolean_observation(self):
+        cases = [{'equal': True}, {'equal': False}]
+        good = '[true,true,true]\n[false,false,true]\n'
+        self.r.read_t15_runtime_rows(good, cases)
+        for invalid in [good.splitlines()[0], good + good, good.replace('true', '1', 1),
+                        '[false,false,true]\n[true,true,true]\n']:
+            with self.assertRaises(ValueError): self.r.read_t15_runtime_rows(invalid, cases)
+
+    def test_t15_finite_runtime_changed_preparation_stops_before_generated_execution(self):
+        output = self.base / 'changed-runtime'; (output / 'runtime').mkdir(parents=True)
+        for name in self.r.T15_RUNTIME_PREPARED: (output / name).write_bytes(b'changed')
+        evidence = {'output_hashes': {name: sha(b'original') for name in self.r.T15_RUNTIME_PREPARED}}
+        with self.assertRaisesRegex(ValueError, 'Prior fresh runtime output'):
+            self.r.check_t15_runtime_inputs({'id': 'runtime-lean'}, {}, output, evidence)
+
     def test_history_capture_preserves_separate_streams_and_source_bytes(self):
         r = self.r; trace = self.base / 'history-capture'; trace.mkdir()
         script = self.base / 'child.py'

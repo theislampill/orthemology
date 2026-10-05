@@ -665,6 +665,401 @@ def check_t15_stage(stage,text,plan,output=None,inherited_checker=None):
         _t15_require(row['modules']==len(_t15_array(plan,path,'modules'))==88 and 0<row['theoremRoots']<=row['checkedClosure'],'Incomplete T15 all-project proof census')
 
 
+# Exact finite T15 source recipes; no generic stdin or generated-code interface.
+"""Private proposal for two exact finite Python references, without new schema.
+
+These hooks are spliced into the accepted core. The only stdin and PYTHONPATH
+bindings are the original source-owned cases below; descriptors cannot provide
+arbitrary input streams, environment fields, executables, or generated code.
+"""
+T15_REFERENCE_APPROVALS = {
+    't15-json-reference': '25360314eadea6db85b8e75c044aabeed84920abe20a78e4c2791ff0977cf166',
+    't15-univariate-reference': '169851b90219224dcc5d1531a9307346b4066125eef274cd94171d1ec36c11b3',
+}
+T15_REFERENCE_PYTHON = 'e50d468e8b0adfb05733f5b87b3cff34829c4a8c1aea50c865aa8bdfe4bb150f'
+T15_REFERENCE_FILES = {
+    'python-reference/README.md': '373659d652481787fc1e9499261ee931b2e9150d003e640f9ae035258f6722fe',
+    'python-reference/SOURCE_LOCK.json': 'f7bda53cf932963883223c7f14f305b1354b35207d2a50da3c0dfcc2e3813eec',
+    'python-reference/certificate_checker.py': '8f5ba88d07447c8c92d49161f82118f805cae707404b477c81936828103d60ef',
+    'python-reference/examples/piecewise_instance.json': 'f2e38784e8358d65961a89cfc5faf38eadec97fd31a6ac10b68c199a00e7c781',
+    'python-reference/examples/piecewise_certificate.json': 'd5326efbbe8ab9412afa98c91340df574ba4beedafcfbbaebfe542edb67f219a',
+    'python-reference/examples/unequal_instance.json': 'f7807e76268ca56274e671d6ff2bf1753cd54b81f169ae4c2a3d25a2cbad0fa2',
+    'python-reference/verification/test_certificate_checker.py': 'f2689d00865ed2964fa6dc4337d67da5017f23c34a870e5dad183ccc6ccd6bb9',
+    'python-reference/verification/test_independent_checker.py': '27c5e18f459c5a6103a35f2fe0570ee2c229832490a02aa4f62064c8c6d25416',
+    'univariate-reference/README.md': '92cb36221687dd71453d9df1f6b04061d2838956e410fb2e92e29d05ca98e7bb',
+    'univariate-reference/SOURCE_ONLY_v1.sha256': 'f281d34cfdf3731f8c91244625146828c72a60acd7eacab60b51915caba1e644',
+    'univariate-reference/root_extension_checker.py': 'bd796dc6d0157d0b8a125cc3b394a866812567f12ce132ee11d2fa3844e081d9',
+    'univariate-reference/test_root_extension_checker.py': '23e55bf11880011ec5ae47c464e971d02b3e9af5e8541fcbaa7cc73b8d7f73e0',
+    'univariate-reference/test_independent_adversarial.py': '24daa53895fbc95f6387a3de7b758356972edc2febf56243c26768547fe9223e',
+}
+T15_REFERENCE_RECIPES = {
+    't15-json-reference-tests-v1': {
+        'source': 'python-reference/verification/test_certificate_checker.py',
+        'stage': 'json-reference-tests', 'cwd': 'python-reference', 'kind': 'REFERENCE_TESTS',
+        'args': ['-m', 'unittest', 'discover', '-s', 'verification', '-p', 'test*.py', '-v'], 'meanings': {}},
+    't15-json-reference-decide-example-v1': {
+        'source': 'python-reference/certificate_checker.py', 'stage': 'json-reference-decide-example',
+        'cwd': 'python-reference', 'kind': 'DRIVER', 'args': ['certificate_checker.py', 'decide'],
+        'meanings': {'decide': 'LITERAL'}, 'stdin': 'python-reference/examples/piecewise_instance.json'},
+    't15-json-reference-verify-example-v1': {
+        'source': 'python-reference/certificate_checker.py', 'stage': 'json-reference-verify-example',
+        'cwd': 'python-reference', 'kind': 'DRIVER', 'args': ['certificate_checker.py', 'verify'],
+        'meanings': {'verify': 'LITERAL'}, 'stdin': 'python-reference/examples/piecewise_certificate.json'},
+    't15-univariate-reference-tests-v1': {
+        'source': 'univariate-reference/test_root_extension_checker.py', 'stage': 'univariate-reference-tests',
+        'cwd': 'univariate-reference', 'kind': 'REFERENCE_TESTS',
+        'args': ['-m', 'unittest', 'discover', '-s', '.', '-p', 'test_*.py', '-v'], 'meanings': {}},
+}
+
+
+def t15_reference_data(plan, path):
+    require(path in plan['file_paths'], 'Missing exact T15 reference source')
+    sid = plan['file_paths'][path]['source_id']
+    require(sid in plan['contents'], 'Missing exact T15 reference bytes')
+    data = plan['contents'][sid]
+    require(path in T15_REFERENCE_FILES and sha(data) == T15_REFERENCE_FILES[path], 'Changed T15 reference input')
+    return data
+
+
+def validate_t15_reference_driver(driver, plan):
+    require(driver['recipe'] in T15_REFERENCE_RECIPES, 'Unknown T15 finite recipe')
+    recipe = T15_REFERENCE_RECIPES[driver['recipe']]
+    require(driver['sha256'] == T15_REFERENCE_FILES[recipe['source']] and
+            driver['argument_meanings'] == recipe['meanings'] and driver['external_input_id'] is None and
+            plan['files'][driver['source_id']]['path'] == recipe['source'], 'Changed T15 finite driver binding')
+    t15_reference_data(plan, recipe['source'])
+
+
+def validate_t15_reference_argv(stage, driver, plan):
+    validate_t15_reference_driver(driver, plan)
+    recipe = T15_REFERENCE_RECIPES[driver['recipe']]
+    require(stage['id'] == recipe['stage'] and stage['kind'] == recipe['kind'] and stage['cwd'] == recipe['cwd'] and
+            stage['argv'] == ['{tool:python}', *recipe['args']] and not stage['output_paths'] and
+            not stage['control_ids'] and stage['expected_exit_codes'] == [0] and not stage['expected_diagnostics'],
+            'Wrong original T15 reference arguments or stage role')
+
+
+def validate_t15_reference_package(suite, plan, sources):
+    require(T15_REFERENCE_APPROVALS.get(suite['id']) == declared_suite_fingerprint(suite, sources),
+            'Original T15 finite suite has not been approved')
+    require(suite['replay']['scope'] == 'FINITE' and suite['toolchain']['kind'] == 'PYTHON' and
+            suite['toolchain']['executable_sha256'] == T15_REFERENCE_PYTHON and suite['toolchain']['version'] == '3.12.3',
+            'T15 finite reference requires its exact selected Python environment')
+    require(not suite['controls'] and not suite['toolchain']['packages'] and
+            all(not suite['replay'][key] for key in ['modules', 'module_order', 'official_imports', 'target_names',
+                'packages', 'tools', 'external_inputs', 'fixtures', 'build_roots']), 'T15 finite reference scope expanded')
+    json_reference = suite['id'] == 't15-json-reference'
+    expected = {path for path in T15_REFERENCE_FILES if path.startswith('python-reference/' if json_reference else 'univariate-reference/')}
+    if not json_reference: expected.add('python-reference/certificate_checker.py')
+    require(set(plan['file_paths']) == expected, 'Incomplete or shadowed T15 reference input inventory')
+    for path in expected: t15_reference_data(plan, path)
+    if json_reference:
+        rows = json.loads(t15_reference_data(plan, 'python-reference/SOURCE_LOCK.json'))
+        require(len(rows) == 6, 'Changed JSON reference lock inventory')
+        paths = []
+        for row in rows:
+            path = 'python-reference/' + relative(row['path'])
+            require(path in expected and sha(t15_reference_data(plan, path)) == row['sha256'], 'Changed JSON reference preservation lock')
+            paths.append(path)
+        require(len(set(paths)) == 6, 'Duplicate JSON reference preservation path')
+    else:
+        rows = t15_reference_data(plan, 'univariate-reference/SOURCE_ONLY_v1.sha256').decode().splitlines()
+        require(len(rows) == 4, 'Changed univariate checksum inventory')
+        paths = []
+        for row in rows:
+            match = re.fullmatch(r'([0-9a-f]{64})  ([^\r\n]+)', row)
+            require(match is not None, 'Malformed univariate source checksum')
+            path = 'univariate-reference/' + relative(match.group(2))
+            require(path in expected and sha(t15_reference_data(plan, path)) == match.group(1), 'Changed univariate locked source')
+            paths.append(path)
+        require(len(set(paths)) == 4, 'Duplicate univariate checksum path')
+
+
+def t15_reference_recipe(stage, plan):
+    require(stage['driver_id'] in plan['drivers'], 'Unknown T15 finite driver')
+    driver = plan['drivers'][stage['driver_id']]
+    validate_t15_reference_argv(stage, driver, plan)
+    return T15_REFERENCE_RECIPES[driver['recipe']]
+
+
+def t15_reference_existing(project, path, plan):
+    expected = t15_reference_data(plan, path)
+    actual = path_in(project, path)
+    require(actual.is_file() and actual.read_bytes() == expected, 'Changed projected T15 reference input')
+    return actual
+
+
+def t15_reference_environment(stage, plan, project, env):
+    recipe = t15_reference_recipe(stage, plan)
+    require(not any(key.startswith('PYTHON') and key != 'PYTHONDONTWRITEBYTECODE' for key in env),
+            'Ambient Python configuration can change the original finite reference')
+    result = dict(env)
+    if recipe['cwd'] == 'univariate-reference':
+        t15_reference_existing(project, 'python-reference/certificate_checker.py', plan)
+        result['PYTHONPATH'] = str(path_in(project, 'python-reference'))
+    return result
+
+
+def t15_reference_stdin(stage, plan, project):
+    recipe = t15_reference_recipe(stage, plan)
+    return t15_reference_existing(project, recipe['stdin'], plan) if 'stdin' in recipe else None
+
+
+def _t15_reference_input_process(argv, cwd, env, log, timeout, input_file):
+    """Internal file-descriptor primitive, called only by the sealed CLI recipes.
+
+    Lifecycle/timeout behavior matches accepted run_process. No stdin field is
+    accepted from a descriptor, shell expression, or producer manifest.
+    """
+    started = utc(); log = Path(log); log.parent.mkdir(parents=True, exist_ok=True)
+    with log.open('xb') as stream, no_symlinks(input_file).open('rb') as stdin:
+        kwargs = {'start_new_session': True} if os.name != 'nt' else {'creationflags': subprocess.CREATE_NEW_PROCESS_GROUP}
+        proc = subprocess.Popen([str(a) for a in argv], cwd=cwd, env=env, stdin=stdin,
+                                stdout=stream, stderr=subprocess.STDOUT, shell=False, **kwargs)
+        try:
+            code = proc.wait(timeout=timeout)
+            terminal = 'COMPLETED' if 0 <= code < 124 else 'INTERRUPTED'
+            if terminal != 'COMPLETED': code = None
+        except (subprocess.TimeoutExpired, KeyboardInterrupt) as error:
+            terminal = 'TIMEOUT' if isinstance(error, subprocess.TimeoutExpired) else 'INTERRUPTED'; code = None
+            if os.name == 'nt':
+                subprocess.run(['taskkill', '/PID', str(proc.pid), '/T', '/F'], stdout=subprocess.DEVNULL, stderr=subprocess.DEVNULL, check=False)
+            else: os.killpg(proc.pid, signal.SIGTERM)
+            try: proc.wait(timeout=2)
+            except subprocess.TimeoutExpired:
+                if os.name == 'nt': proc.kill()
+                else: os.killpg(proc.pid, signal.SIGKILL)
+                proc.wait()
+    return {'terminal': terminal, 'exit_code': code, 'started_at': started, 'ended_at': utc(), 'log_sha256': sha(log.read_bytes())}
+
+
+def run_t15_reference_stage(stage, argv, cwd, env, log, timeout, plan, project):
+    recipe = t15_reference_recipe(stage, plan)
+    require(argv[1:] == recipe['args'] and sha(no_symlinks(argv[0]).read_bytes()) == T15_REFERENCE_PYTHON and
+            Path(cwd) == path_in(project, recipe['cwd']) and timeout == stage['timeout_seconds'], 'Expanded T15 finite invocation changed')
+    selected_env = t15_reference_environment(stage, plan, project, env)
+    stdin = t15_reference_stdin(stage, plan, project)
+    if stdin is None: return run_process(argv, cwd, selected_env, log, timeout)
+    return _t15_reference_input_process(argv, cwd, selected_env, log, timeout, stdin)
+
+
+def t15_reference_test_names(plan):
+    names = []
+    for path in sorted(plan['file_paths']):
+        if not PurePosixPath(path).name.startswith('test_') or not path.endswith('.py'): continue
+        tree = ast.parse(t15_reference_data(plan, path))
+        for node in tree.body:
+            if isinstance(node, ast.ClassDef):
+                names.extend(PurePosixPath(path).stem + '.' + node.name + '.' + method.name for method in node.body
+                             if isinstance(method, ast.FunctionDef) and method.name.startswith('test_'))
+    require(len(names) == len(set(names)) and len(names) in {15, 22}, 'Wrong original T15 reference test inventory')
+    return sorted(names)
+
+
+def check_t15_reference_stage(stage, text, plan):
+    recipe = t15_reference_recipe(stage, plan)
+    if recipe['kind'] == 'REFERENCE_TESTS':
+        expected = t15_reference_test_names(plan)
+        rows = re.findall(r'(?m)^(test_\w+) \(([\w.]+)\) \.\.\. ok$', text)
+        require(len(rows) == len(expected) and sorted(name for _, name in rows) == expected and
+                all(name.rsplit('.', 1)[1] == method for method, name in rows), 'Original T15 test inventory did not pass completely')
+        terminal = re.findall(r'(?m)^Ran (\d+) tests in [0-9.]+s$', text)
+        require(terminal == [str(len(expected))] and text.rstrip().endswith('\nOK'), 'Incomplete original T15 unittest terminal')
+        leftovers = re.sub(r'(?m)^test_\w+ \([\w.]+\) \.\.\. ok$|^-+$|^Ran \d+ tests in [0-9.]+s$|^OK$', '', text)
+        require(not leftovers.strip(), 'Unexpected original T15 test failure, skip, warning or output')
+    else:
+        def unique(pairs):
+            result = {}
+            for key, value in pairs:
+                require(key not in result, 'Duplicate key in CLI output readback')
+                result[key] = value
+            return result
+        actual = json.loads(text, object_pairs_hook=unique)
+        expected = {'equal': True, 'counterexample': None} if recipe['args'][-1] == 'decide' else {'accepted': True}
+        require(canonical(actual) == canonical(expected), 'Original T15 CLI result changed')
+
+
+"""Private source-bound finite runtime recipe; no generic generated-code API."""
+T15_RUNTIME_RECIPE = 't15-restricted-runtime-agreement-v1'
+T15_RUNTIME_APPROVAL = '62429564c5ca7c10107824965b5f4abbe3f180dc4ee0ba68b57396bf21f0fdbd'
+T15_RUNTIME_CHECKER = '8f5ba88d07447c8c92d49161f82118f805cae707404b477c81936828103d60ef'
+T15_RUNTIME_PYTHON = 'e50d468e8b0adfb05733f5b87b3cff34829c4a8c1aea50c865aa8bdfe4bb150f'
+T15_RUNTIME_FILES = {
+    'restricted-runtime/README.md': '02d23d9ee77fd60764c12d5f0412aa2e4c7d532c17209cbbf1ba595f19b69714',
+    'restricted-runtime/BINDING.json': '3f4f57a24a27e3992d2f8836624b882fdbac3916dfabd56c2b3261be1b410f77',
+    'restricted-runtime/SHA256SUMS': '18f002a663dc517f2380cc9f776d7817d4e5bb0988ab4cf88c7b1191134a102c',
+    'restricted-runtime/VERIFIED_RESULT.json': '41a3a344e492deb878d274ff56bcf76a999baef234465202fed66b1e29c9a668',
+    'restricted-runtime/check_runtime_agreement.py': 'dd69712d1a7b79bdb5fcb55c855c4c13a00725dda1cd8f4dfcdc4544afcbe8fd',
+    'python-reference/certificate_checker.py': T15_RUNTIME_CHECKER,
+}
+T15_RUNTIME_SCOPE = 'Bounded runtime agreement on deterministic generated well-formed AST pairs; no parser or wire-format correspondence theorem.'
+T15_RUNTIME_PREPARED = ['runtime/RuntimeAgreement.lean', 'runtime/cases.json', 'runtime/PREPARED_CASES.json']
+T15_RUNTIME_ARGS = ['{tool:python}', '-B', 'restricted-runtime/check_runtime_agreement.py', 'python-reference/certificate_checker.py', '{out}/runtime']
+
+
+def t15_runtime_data(plan, path):
+    require(path in plan['file_paths'], 'Missing T15 runtime input')
+    sid = plan['file_paths'][path]['source_id']
+    require(sid in plan['contents'], 'Missing T15 runtime source bytes')
+    data = plan['contents'][sid]
+    require(path in T15_RUNTIME_FILES and sha(data) == T15_RUNTIME_FILES[path], 'Changed T15 runtime source input')
+    return data
+
+
+def validate_t15_runtime_driver(driver, plan):
+    path = 'restricted-runtime/check_runtime_agreement.py'
+    require(driver['recipe'] == T15_RUNTIME_RECIPE and driver['sha256'] == T15_RUNTIME_FILES[path] and
+            driver['external_input_id'] is None and plan['files'][driver['source_id']]['path'] == path and
+            driver['argument_meanings'] == {'checker': 'SOURCE_FILE', 'output': 'OUTPUT_DIRECTORY', '--verify-lean': 'LITERAL'},
+            'Changed original T15 runtime driver binding')
+    t15_runtime_data(plan, path)
+
+
+def validate_t15_runtime_argv(stage, driver, plan):
+    validate_t15_runtime_driver(driver, plan)
+    expected = {
+        'runtime-prepare': (T15_RUNTIME_ARGS, T15_RUNTIME_PREPARED, ['compile-IdentityChecker'], 600),
+        'runtime-lean': (['{tool:lean}', '-j1', '{out}/runtime/RuntimeAgreement.lean'], ['runtime/lean-output.txt'], ['runtime-prepare'], 1800),
+        'runtime-verify': (T15_RUNTIME_ARGS + ['--verify-lean'], ['runtime/VERIFIED_RESULT.json'], ['runtime-lean'], 600),
+    }
+    require(stage['id'] in expected, 'Unknown T15 runtime phase')
+    argv, outputs, parents, budget = expected[stage['id']]
+    require(stage['kind'] == 'DRIVER' and stage['cwd'] == '.' and stage['argv'] == argv and
+            stage['output_paths'] == outputs and stage['depends_on'] == parents and stage['timeout_seconds'] == budget and
+            stage['expected_exit_codes'] == [0] and not stage['control_ids'] and not stage['expected_diagnostics'],
+            'Changed original T15 runtime phase arguments, outputs or edge')
+
+
+def validate_t15_runtime_package(suite, plan, sources):
+    require(suite['id'] == 't15-runtime-agreement' and declared_suite_fingerprint(suite, sources) == T15_RUNTIME_APPROVAL,
+            'Complete T15 finite runtime recipe has not been approved')
+    replay = suite['replay']
+    require(replay['scope'] == 'FINITE' and suite['toolchain']['kind'] == 'PYTHON' and
+            suite['toolchain']['version'] == '3.12.3' and suite['toolchain']['executable_sha256'] == T15_RUNTIME_PYTHON and
+            not suite['controls'] and not replay['target_names'], 'T15 runtime scope or selected tool changed')
+    require(len(replay['files']) == 83 and len(replay['modules']) == len(replay['module_order']) == 76 and
+            replay['module_order'][-1] == 'IdentityChecker' and replay['build_roots'] == ['build'] and
+            len(replay['stages']) == 79 and [s['id'] for s in replay['stages'][-3:]] == ['runtime-prepare', 'runtime-lean', 'runtime-verify'],
+            'Incomplete fresh T15 runtime support closure or phase inventory')
+    require({p for p in plan['file_paths'] if p.endswith('.py')} ==
+            {'restricted-runtime/check_runtime_agreement.py', 'python-reference/certificate_checker.py'}, 'Unreviewed T15 runtime Python import source')
+    for path in T15_RUNTIME_FILES: t15_runtime_data(plan, path)
+    rows = t15_runtime_data(plan, 'restricted-runtime/SHA256SUMS').decode().splitlines()
+    require(len(rows) == 4, 'Changed original runtime checksum inventory')
+    seen = set()
+    for row in rows:
+        match = re.fullmatch(r'([0-9a-f]{64})  ([^\r\n]+)', row)
+        require(match is not None, 'Malformed runtime checksum row')
+        path = 'restricted-runtime/' + relative(match.group(2))
+        require(path not in seen and sha(t15_runtime_data(plan, path)) == match.group(1), 'Changed original runtime checksum input')
+        seen.add(path)
+
+
+def t15_runtime_environment(env):
+    require(not any(key.startswith('PYTHON') and key != 'PYTHONDONTWRITEBYTECODE' for key in env),
+            'T15 assertion-bearing runtime driver has ambient Python configuration')
+
+
+def t15_runtime_json(text):
+    def unique(pairs):
+        value = {}
+        for key, item in pairs:
+            require(key not in value, 'Duplicate key in runtime replay output')
+            value[key] = item
+        return value
+    return json.loads(text, object_pairs_hook=unique)
+
+
+def t15_runtime_term(expr, arity, depth=0):
+    """Serialize only the original Nat/Fin/add/mul/ifZero generated grammar."""
+    require(depth <= 16 and type(expr) is list and expr and type(expr[0]) is str, 'Invalid generated runtime expression')
+    tag = expr[0]
+    if tag in {'c', 'v'}:
+        require(len(expr) == 2 and type(expr[1]) is int and expr[1] >= 0, 'Invalid runtime natural scalar')
+        if tag == 'c': return f'(.constant {expr[1]})'
+        require(expr[1] < arity, 'Generated runtime variable is out of scope')
+        return f'(.variable ⟨{expr[1]}, by decide⟩)'
+    require(tag in {'add', 'mul', 'if0'} and len(expr) == (4 if tag == 'if0' else 3), 'Out-of-grammar generated runtime expression')
+    return '(.' + {'add': 'add', 'mul': 'mul', 'if0': 'ifZero'}[tag] + ' ' + ' '.join(t15_runtime_term(child, arity, depth + 1) for child in expr[1:]) + ')'
+
+
+def read_t15_runtime_prepared(plan, output):
+    cases = t15_runtime_json(path_in(output, 'runtime/cases.json').read_text())
+    report = t15_runtime_json(path_in(output, 'runtime/PREPARED_CASES.json').read_text())
+    require(type(cases) is list and len(cases) == 720, 'Incomplete generated T15 runtime case set')
+    parts = ['import IdentityChecker\nopen P01AC.RestrictedIdentity P01AC.RestrictedIdentityV2\nset_option maxRecDepth 100000\nset_option maxHeartbeats 0\n']
+    for n, case in enumerate(cases):
+        require(type(case) is dict and set(case) == {'r', 'left', 'right', 'equal', 'witness'} and
+                type(case['r']) is int and case['r'] == n // 120 and type(case['equal']) is bool, 'Changed T15 runtime case schema/order')
+        r = case['r']; witness = case['witness']
+        require((witness is None) == case['equal'], 'Runtime witness/verdict shape mismatch')
+        if witness is not None:
+            require(type(witness) is list and len(witness) == r and all(type(v) is int and v >= 0 for v in witness), 'Malformed runtime witness')
+        left = t15_runtime_term(case['left'], r); right = t15_runtime_term(case['right'], r)
+        parts.append(f'def e{n} : Expr {r} := {left}\ndef f{n} : Expr {r} := {right}\n')
+        parts.append(f'#eval [identityCheck e{n} f{n}, verifyCertificate e{n} f{n} (makeCertificate e{n}), verifyCertificate e{n} e{n} (makeCertificate e{n})]\n')
+    generated = ''.join(parts).encode()
+    require(path_in(output, 'runtime/RuntimeAgreement.lean').read_bytes() == generated, 'Generated Lean source differs from the exact closed runtime grammar/cases')
+    expected = {'seed': 151005, 'arities': list(range(6)), 'expression_pairs': len(cases),
+                'equal_pairs': sum(c['equal'] for c in cases), 'unequal_pairs': sum(not c['equal'] for c in cases),
+                'direct_expression_evaluations': sum(2 * 3 ** c['r'] for c in cases),
+                'negative_witnesses_checked': sum(c['witness'] is not None for c in cases),
+                'checker_sha256': T15_RUNTIME_CHECKER, 'lean_source_sha256': sha(generated),
+                'lean_runtime_rows_verified': 0, 'formal_refinement_claim': False, 'scope': T15_RUNTIME_SCOPE}
+    require(canonical(report) == canonical(expected), 'Prepared runtime counts/source binding/scope differ from actual generated cases')
+    t15_runtime_data(plan, 'python-reference/certificate_checker.py')
+    return {'cases': cases, 'report': report}
+
+
+def read_t15_runtime_rows(text, cases):
+    lines = text.splitlines()
+    require(len(lines) == len(cases), 'Missing, duplicate or extra Lean runtime output rows')
+    rows = []
+    for line, case in zip(lines, cases):
+        row = t15_runtime_json(line)
+        require(type(row) is list and len(row) == 3 and all(type(x) is bool for x in row) and
+                row == [case['equal'], case['equal'], True], 'Lean runtime Boolean observations differ from generated cases')
+        rows.append(row)
+    return rows
+
+
+def check_t15_runtime_inputs(stage, plan, output, evidence):
+    if stage['id'] == 'runtime-prepare': return
+    require(stage['id'] in {'runtime-lean', 'runtime-verify'}, 'Unknown generated runtime phase')
+    paths = T15_RUNTIME_PREPARED + (['runtime/lean-output.txt'] if stage['id'] == 'runtime-verify' else [])
+    for path in paths:
+        require(path in evidence['output_hashes'] and sha(path_in(output, path).read_bytes()) == evidence['output_hashes'][path],
+                'Prior fresh runtime output is missing, unobserved, or changed')
+    prepared = read_t15_runtime_prepared(plan, output)
+    if stage['id'] == 'runtime-verify':
+        read_t15_runtime_rows(path_in(output, 'runtime/lean-output.txt').read_text(), prepared['cases'])
+
+
+def capture_t15_runtime_stdout(stage, log, output):
+    require(stage['id'] == 'runtime-lean' and stage['output_paths'] == ['runtime/lean-output.txt'], 'Unapproved runtime output sink')
+    target = path_in(output, 'runtime/lean-output.txt')
+    require(not target.exists(), 'Runtime stdout sink is not fresh')
+    # The original README redirects both stdout and stderr. Preserve the exact
+    # accepted run_process combined log, including a partial failed attempt.
+    with target.open('xb') as stream: stream.write(no_symlinks(log).read_bytes())
+
+
+def check_t15_runtime_stage(stage, text, plan, output):
+    prepared = read_t15_runtime_prepared(plan, output)
+    if stage['id'] == 'runtime-prepare':
+        require(canonical(t15_runtime_json(text)) == canonical(prepared['report']), 'Original preparation stdout differs from its actual output file')
+    elif stage['id'] == 'runtime-lean':
+        captured = path_in(output, 'runtime/lean-output.txt').read_text()
+        require(captured == text, 'Captured original combined runtime stdout/log changed')
+        read_t15_runtime_rows(captured, prepared['cases'])
+    else:
+        require(stage['id'] == 'runtime-verify', 'Unknown runtime completion stage')
+        read_t15_runtime_rows(path_in(output, 'runtime/lean-output.txt').read_text(), prepared['cases'])
+        actual = t15_runtime_json(path_in(output, 'runtime/VERIFIED_RESULT.json').read_text())
+        expected = {**prepared['report'], 'lean_runtime_rows_verified': len(prepared['cases'])}
+        require(canonical(actual) == canonical(expected) == canonical(t15_runtime_json(text)), 'Original verifier stdout/result differs from actual prepared cases and Lean rows')
+
+
 def _validate_argv(stage, plan):
     argv = stage['argv']
     require(isinstance(argv, list) and argv and all(isinstance(a, str) and a and '\x00' not in a for a in argv), 'Missing explicit argument vector')
@@ -679,6 +1074,12 @@ def _validate_argv(stage, plan):
             return
         if recipe == HISTORY_RECIPE:
             validate_history_argv(stage, driver, plan)
+            return
+        if recipe in T15_REFERENCE_RECIPES:
+            validate_t15_reference_argv(stage, driver, plan)
+            return
+        if recipe == T15_RUNTIME_RECIPE:
+            validate_t15_runtime_argv(stage, driver, plan)
             return
         if recipe in T10_FINITE_RECIPES:
             validate_t10_argv(stage, driver, plan)
@@ -1653,6 +2054,10 @@ def validate_suite(suite, sources, root):
                 require(row['argument_meanings'] == meanings, 'Changed empirical argument meaning')
             elif row['recipe'] in T15_SOURCE_RECIPES:
                 validate_t15_driver(row, {'files': files, 'file_paths': file_paths, 'contents': contents})
+            elif row['recipe'] in T15_REFERENCE_RECIPES:
+                validate_t15_reference_driver(row, {'files': files, 'file_paths': file_paths, 'contents': contents})
+            elif row['recipe'] == T15_RUNTIME_RECIPE:
+                validate_t15_runtime_driver(row, {'files': files, 'file_paths': file_paths, 'contents': contents})
             elif row['recipe'] in NORMAL_SOURCE_RECIPES:
                 require(NORMAL_SOURCE_RECIPES[row['recipe']] == row['sha256'] and row['argument_meanings'] == {}, 'Changed original source-check recipe')
             elif row['recipe'] == CORE_RECIPE:
@@ -1683,6 +2088,8 @@ def validate_suite(suite, sources, root):
             if driver['recipe'] in NORMAL_SOURCE_RECIPES: source_checker_inputs(driver, plan)
             if driver['recipe'] == 't14-identity-verify_sources-v1': check_checksum_manifest(plan, 90)
         if any(row['recipe'] in T15_SOURCE_RECIPES for row in drivers.values()): validate_t15_package(suite, plan)
+        if any(row['recipe'] in T15_REFERENCE_RECIPES for row in drivers.values()): validate_t15_reference_package(suite, plan, sources)
+        if any(row['recipe'] == T15_RUNTIME_RECIPE for row in drivers.values()): validate_t15_runtime_package(suite, plan, sources)
         if any(row['recipe'] in T10_FINITE_RECIPES for row in drivers.values()): validate_t10_package(suite, plan)
         if any(row['recipe'] == CORE_RECIPE for row in drivers.values()): validate_core_package(suite, plan)
         if any(row['recipe'] == ATTR_RECIPE for row in drivers.values()): validate_attribution_package(suite, plan)
@@ -2500,7 +2907,14 @@ def execute_suite(suite, sources, root, output, tools, inputs, scope=None, *, re
                     if recipe == HISTORY_RECIPE: evidence['driver_invocations'][-1]['launch_cwd'] = history_launch_cwd(driver)
                 argv = [_expand(a, mappings) for a in launch]
                 launch_cwd = Path(_expand(history_launch_cwd(driver), mappings)) if recipe == HISTORY_RECIPE else path_in(project, stage['cwd'], dot=True)
-                run = run_process(argv, launch_cwd, stage_environment(stage, plan, output, env), log, stage['timeout_seconds'])
+                if recipe == T15_RUNTIME_RECIPE:
+                    t15_runtime_environment(env)
+                    check_t15_runtime_inputs(stage, plan, output, evidence)
+                if recipe in T15_REFERENCE_RECIPES:
+                    run = run_t15_reference_stage(stage, argv, launch_cwd, stage_environment(stage, plan, output, env), log, stage['timeout_seconds'], plan, project)
+                else:
+                    run = run_process(argv, launch_cwd, stage_environment(stage, plan, output, env), log, stage['timeout_seconds'])
+                if recipe == T15_RUNTIME_RECIPE and sid == 'runtime-lean': capture_t15_runtime_stdout(stage, log, output)
             current.update(run); text = log.read_text(encoding='utf-8', errors='replace')
             if recipe in {CORE_RECIPE, ATTR_RECIPE, HISTORY_RECIPE, 't10-independent-mutations-v1'} and stage['kind'] == 'DRIVER':
                 trace = path_in(output, 'traces/' + sid)
@@ -2515,6 +2929,8 @@ def execute_suite(suite, sources, root, output, tools, inputs, scope=None, *, re
                 raise ValueError('Resource-inconclusive stage')
             assess_stage(stage, run, text, completed)
             if suite['id'] == 't14-identity': check_t14_stage(stage, text, plan)
+            if recipe in T15_REFERENCE_RECIPES: check_t15_reference_stage(stage, text, plan)
+            if recipe == T15_RUNTIME_RECIPE: check_t15_runtime_stage(stage, text, plan, output)
             if suite['id'] == 't15-identity': check_t15_stage(stage, text, plan, output, check_t14_stage)
             if stage['driver_id'] in plan['drivers'] and plan['drivers'][stage['driver_id']]['recipe'] in LANGUAGE_RECIPES:
                 _language_result(plan['drivers'][stage['driver_id']], stage, text, plan)
