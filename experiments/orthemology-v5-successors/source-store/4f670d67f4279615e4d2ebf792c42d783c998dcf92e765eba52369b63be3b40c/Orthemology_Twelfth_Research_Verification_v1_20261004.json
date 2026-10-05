@@ -1,0 +1,57 @@
+{
+  "schema": "orthemology-twelfth-verification-receipt-v1",
+  "issued_utc": "2026-10-04T06:42:50.194386+00:00",
+  "programme": "Orthemology, existing v5 research programme",
+  "artifacts": [
+    {
+      "file": "Orthemology_Twelfth_Research_Report_v1_20261004.docx",
+      "bytes": 56997,
+      "sha256": "e9a2954f2abac6401023a95a644b5c818aa633157f5b0502ef98fe3086fcdaeb"
+    },
+    {
+      "file": "Orthemology_Twelfth_Research_Supplement_v1_20261004.zip",
+      "bytes": 10050,
+      "sha256": "39a8b248569d01ef037eaafebef42e3422c77d14b43c6d193beee0c859b9e5c5"
+    }
+  ],
+  "companion": {
+    "file": "Orthemology_Twelfth_Research_Checkpoint_1_20261004.zip",
+    "location": "Existing file in your ChatGPT Library",
+    "current_version": 1,
+    "bytes": 53814,
+    "sha256": "0dbca68aad572ea488c480fca5e6cd512940980241524e043b07f7b0125be2c4",
+    "archive_members": 11,
+    "research_texts": 9,
+    "included_in_supplement": false
+  },
+  "checks": {
+    "report_docx_archive_integrity": "PASS",
+    "report_rendered_pages": 15,
+    "report_native_editable_equations": 17,
+    "equations_compared_with_accepted_mathematical_expressions": "PASS",
+    "report_all_page_visual_review": "PASS",
+    "report_substantive_and_scope_review": "PASS",
+    "source_use_and_selected_summary_fidelity": "PASS",
+    "supplement_archive_members": 7,
+    "supplement_payload_files": 6,
+    "supplement_crc": "PASS",
+    "supplement_manifest_payload_hashes": "6/6 PASS",
+    "checkpoint_crc": "PASS",
+    "checkpoint_research_member_hashes": "9/9 PASS",
+    "companion_reference_map": "PASS"
+  },
+  "interpretation": [
+    "This receipt records checks of the local artifacts before upload. Byte identity does not itself establish mathematical truth or philosophical warrant.",
+    "The mathematical results are written proofs with model-assisted checking, not new Lean kernel-certified declarations.",
+    "Published empirical evidence was assessed; this tranche conducted no new experiment and obtained no human-specialist endorsement.",
+    "The current checkpoint is a separate companion and is not duplicated in this delivery. Its earlier Library version is not the current nine-text scientific reference.",
+    "No canonical repository integration is implied."
+  ],
+  "canonical_reference": {
+    "repository": "https://github.com/theislampill/orthemology",
+    "branch": "main",
+    "commit": "19de267cd41d2a5eeeb3eaf0b91562f706e2a916",
+    "readback_utc": "2026-10-04T05:41:59Z",
+    "canonical_changes_by_this_tranche": false
+  }
+}

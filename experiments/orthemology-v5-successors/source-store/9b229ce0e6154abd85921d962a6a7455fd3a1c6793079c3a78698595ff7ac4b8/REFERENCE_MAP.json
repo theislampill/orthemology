@@ -1,0 +1,66 @@
+{
+  "schema": "twelfth-reader-reference-map-v1",
+  "checkpoint": {
+    "predecessor_file": "Orthemology_Twelfth_Research_Checkpoint_1_20261004.zip",
+    "bytes": 53814,
+    "sha256": "0dbca68aad572ea488c480fca5e6cd512940980241524e043b07f7b0125be2c4"
+  },
+  "references": {
+    "F1": [
+      {
+        "path": "research/foundational-warrant/FRESH_HISTORIES_BOUNDED_OBSERVATION_AND_ORIGINAL_SUPPORT_v4.md",
+        "bytes": 27006,
+        "sha256": "09e145f0f1420b81f7852416f4849673126ea60faf249e575d33d4377ecbcbab"
+      }
+    ],
+    "F2": [
+      {
+        "path": "reviews/finitely-additive-concentration/INDEPENDENT_REVIEW_PUBLIC_v1.md",
+        "bytes": 16547,
+        "sha256": "73bdb7a528a145fc409cf7cc6925b6210eda17808ba8e6c918ffd892f61953b8"
+      },
+      {
+        "path": "reviews/finitely-additive-concentration/FINITE_FORWARD_INTERVENTIONS_v1.md",
+        "bytes": 6470,
+        "sha256": "438b0f2f0ce979da7293c22f87e16782cfb24a65cc6bbe55222454b3ccaa8b3a"
+      }
+    ],
+    "O1": [
+      {
+        "path": "reviews/finitely-additive-concentration/QUANTITATIVE_AND_CAPTURE_PUBLIC_v1.md",
+        "bytes": 9511,
+        "sha256": "6130a832114b87dcdefbdf60841fe8785f62549ee175adf7dbf25670f880430d"
+      }
+    ],
+    "O2": [
+      {
+        "path": "reviews/finitely-additive-concentration/BOUNDED_COORDINATION_INFORMATION_v1.md",
+        "bytes": 13985,
+        "sha256": "c77bb25b5b3072294a16fb8678441c30a62ec917cad59957193350af80973ff7"
+      }
+    ],
+    "O3": [
+      {
+        "path": "research/observation-warrant/BOUNDED_ACCESS_AND_DIACHRONIC_COHERENCE_v3.md",
+        "bytes": 31721,
+        "sha256": "c24a896b6aa4119bdbbbee92efbbe55c0765745c9b901221f716a06f6e230942"
+      }
+    ],
+    "O4": [
+      {
+        "path": "research/observation-warrant/INTEGER_TOTAL_REPORT_PROTOCOL_v3.md",
+        "bytes": 12080,
+        "sha256": "6d83bd91e8b85803150c18da26068d4cd56c6da0fadc453ce268ef0008670b48"
+      }
+    ]
+  },
+  "O5": {
+    "supplement_file": "OBSERVATION_ROUTE_CLARIFICATION_v1.md",
+    "sha256": "32bb7071666b4582b5547d484cafe9d5973dc0aaca7f099380fe6eda613f3c68"
+  },
+  "notes": [
+    "Archive member paths are relative to the current Checkpoint 1 archive in your Library, not external download addresses.",
+    "External P and E and C references are fully identified in the report bibliography.",
+    "This map is navigation and byte identity, not an additional proof or source endorsement."
+  ]
+}

@@ -1,0 +1,1308 @@
+{
+  "schema": "orthemology-v5-successor-fragment-v1",
+  "cell": "D11",
+  "sources": [
+    {
+      "id": "T12-SOURCE-FOUNDATIONAL",
+      "origin_input_id": "T12-CP-CURRENT",
+      "origin_input_sha256": "0dbca68aad572ea488c480fca5e6cd512940980241524e043b07f7b0125be2c4",
+      "origin_archive_sha256": "0dbca68aad572ea488c480fca5e6cd512940980241524e043b07f7b0125be2c4",
+      "member_chain": [
+        "research/foundational-warrant/FRESH_HISTORIES_BOUNDED_OBSERVATION_AND_ORIGINAL_SUPPORT_v4.md"
+      ],
+      "original_sha256": "09e145f0f1420b81f7852416f4849673126ea60faf249e575d33d4377ecbcbab",
+      "original_bytes": 27006,
+      "public_path": "experiments/orthemology-v5-successors/source-store/09e145f0f1420b81f7852416f4849673126ea60faf249e575d33d4377ecbcbab/FRESH_HISTORIES_BOUNDED_OBSERVATION_AND_ORIGINAL_SUPPORT_v4.md",
+      "public_sha256": "09e145f0f1420b81f7852416f4849673126ea60faf249e575d33d4377ecbcbab",
+      "public_bytes": 27006,
+      "projection": "EXACT",
+      "projection_basis": "Exact delivered scientific Markdown/JSON bytes; no equation, hypothesis, quantifier, limit or historical status rewritten.",
+      "review_scope": "Source identity and stated written/review scope only; final companion role does not alter frozen recovery headers.",
+      "derivation": null
+    },
+    {
+      "id": "T12-SOURCE-OBSERVATION",
+      "origin_input_id": "T12-CP-CURRENT",
+      "origin_input_sha256": "0dbca68aad572ea488c480fca5e6cd512940980241524e043b07f7b0125be2c4",
+      "origin_archive_sha256": "0dbca68aad572ea488c480fca5e6cd512940980241524e043b07f7b0125be2c4",
+      "member_chain": [
+        "research/observation-warrant/BOUNDED_ACCESS_AND_DIACHRONIC_COHERENCE_v3.md"
+      ],
+      "original_sha256": "c24a896b6aa4119bdbbbee92efbbe55c0765745c9b901221f716a06f6e230942",
+      "original_bytes": 31721,
+      "public_path": "experiments/orthemology-v5-successors/source-store/c24a896b6aa4119bdbbbee92efbbe55c0765745c9b901221f716a06f6e230942/BOUNDED_ACCESS_AND_DIACHRONIC_COHERENCE_v3.md",
+      "public_sha256": "c24a896b6aa4119bdbbbee92efbbe55c0765745c9b901221f716a06f6e230942",
+      "public_bytes": 31721,
+      "projection": "EXACT",
+      "projection_basis": "Exact delivered scientific Markdown/JSON bytes; no equation, hypothesis, quantifier, limit or historical status rewritten.",
+      "review_scope": "Source identity and stated written/review scope only; final companion role does not alter frozen recovery headers.",
+      "derivation": null
+    },
+    {
+      "id": "T12-SOURCE-INTEGER",
+      "origin_input_id": "T12-CP-CURRENT",
+      "origin_input_sha256": "0dbca68aad572ea488c480fca5e6cd512940980241524e043b07f7b0125be2c4",
+      "origin_archive_sha256": "0dbca68aad572ea488c480fca5e6cd512940980241524e043b07f7b0125be2c4",
+      "member_chain": [
+        "research/observation-warrant/INTEGER_TOTAL_REPORT_PROTOCOL_v3.md"
+      ],
+      "original_sha256": "6d83bd91e8b85803150c18da26068d4cd56c6da0fadc453ce268ef0008670b48",
+      "original_bytes": 12080,
+      "public_path": "experiments/orthemology-v5-successors/source-store/6d83bd91e8b85803150c18da26068d4cd56c6da0fadc453ce268ef0008670b48/INTEGER_TOTAL_REPORT_PROTOCOL_v3.md",
+      "public_sha256": "6d83bd91e8b85803150c18da26068d4cd56c6da0fadc453ce268ef0008670b48",
+      "public_bytes": 12080,
+      "projection": "EXACT",
+      "projection_basis": "Exact delivered scientific Markdown/JSON bytes; no equation, hypothesis, quantifier, limit or historical status rewritten.",
+      "review_scope": "Source identity and stated written/review scope only; final companion role does not alter frozen recovery headers.",
+      "derivation": null
+    },
+    {
+      "id": "T12-SOURCE-COORDINATION",
+      "origin_input_id": "T12-CP-CURRENT",
+      "origin_input_sha256": "0dbca68aad572ea488c480fca5e6cd512940980241524e043b07f7b0125be2c4",
+      "origin_archive_sha256": "0dbca68aad572ea488c480fca5e6cd512940980241524e043b07f7b0125be2c4",
+      "member_chain": [
+        "reviews/finitely-additive-concentration/BOUNDED_COORDINATION_INFORMATION_v1.md"
+      ],
+      "original_sha256": "c77bb25b5b3072294a16fb8678441c30a62ec917cad59957193350af80973ff7",
+      "original_bytes": 13985,
+      "public_path": "experiments/orthemology-v5-successors/source-store/c77bb25b5b3072294a16fb8678441c30a62ec917cad59957193350af80973ff7/BOUNDED_COORDINATION_INFORMATION_v1.md",
+      "public_sha256": "c77bb25b5b3072294a16fb8678441c30a62ec917cad59957193350af80973ff7",
+      "public_bytes": 13985,
+      "projection": "EXACT",
+      "projection_basis": "Exact delivered scientific Markdown/JSON bytes; no equation, hypothesis, quantifier, limit or historical status rewritten.",
+      "review_scope": "Source identity and stated written/review scope only; final companion role does not alter frozen recovery headers.",
+      "derivation": null
+    },
+    {
+      "id": "T12-SOURCE-INTERVENTIONS",
+      "origin_input_id": "T12-CP-CURRENT",
+      "origin_input_sha256": "0dbca68aad572ea488c480fca5e6cd512940980241524e043b07f7b0125be2c4",
+      "origin_archive_sha256": "0dbca68aad572ea488c480fca5e6cd512940980241524e043b07f7b0125be2c4",
+      "member_chain": [
+        "reviews/finitely-additive-concentration/FINITE_FORWARD_INTERVENTIONS_v1.md"
+      ],
+      "original_sha256": "438b0f2f0ce979da7293c22f87e16782cfb24a65cc6bbe55222454b3ccaa8b3a",
+      "original_bytes": 6470,
+      "public_path": "experiments/orthemology-v5-successors/source-store/438b0f2f0ce979da7293c22f87e16782cfb24a65cc6bbe55222454b3ccaa8b3a/FINITE_FORWARD_INTERVENTIONS_v1.md",
+      "public_sha256": "438b0f2f0ce979da7293c22f87e16782cfb24a65cc6bbe55222454b3ccaa8b3a",
+      "public_bytes": 6470,
+      "projection": "EXACT",
+      "projection_basis": "Exact delivered scientific Markdown/JSON bytes; no equation, hypothesis, quantifier, limit or historical status rewritten.",
+      "review_scope": "Source identity and stated written/review scope only; final companion role does not alter frozen recovery headers.",
+      "derivation": null
+    },
+    {
+      "id": "T12-SOURCE-CONCENTRATION-REVIEW",
+      "origin_input_id": "T12-CP-CURRENT",
+      "origin_input_sha256": "0dbca68aad572ea488c480fca5e6cd512940980241524e043b07f7b0125be2c4",
+      "origin_archive_sha256": "0dbca68aad572ea488c480fca5e6cd512940980241524e043b07f7b0125be2c4",
+      "member_chain": [
+        "reviews/finitely-additive-concentration/INDEPENDENT_REVIEW_PUBLIC_v1.md"
+      ],
+      "original_sha256": "73bdb7a528a145fc409cf7cc6925b6210eda17808ba8e6c918ffd892f61953b8",
+      "original_bytes": 16547,
+      "public_path": "experiments/orthemology-v5-successors/source-store/73bdb7a528a145fc409cf7cc6925b6210eda17808ba8e6c918ffd892f61953b8/INDEPENDENT_REVIEW_PUBLIC_v1.md",
+      "public_sha256": "73bdb7a528a145fc409cf7cc6925b6210eda17808ba8e6c918ffd892f61953b8",
+      "public_bytes": 16547,
+      "projection": "EXACT",
+      "projection_basis": "Exact delivered scientific Markdown/JSON bytes; no equation, hypothesis, quantifier, limit or historical status rewritten.",
+      "review_scope": "Source identity and stated written/review scope only; final companion role does not alter frozen recovery headers.",
+      "derivation": null
+    },
+    {
+      "id": "T12-SOURCE-CAPTURE",
+      "origin_input_id": "T12-CP-CURRENT",
+      "origin_input_sha256": "0dbca68aad572ea488c480fca5e6cd512940980241524e043b07f7b0125be2c4",
+      "origin_archive_sha256": "0dbca68aad572ea488c480fca5e6cd512940980241524e043b07f7b0125be2c4",
+      "member_chain": [
+        "reviews/finitely-additive-concentration/QUANTITATIVE_AND_CAPTURE_PUBLIC_v1.md"
+      ],
+      "original_sha256": "6130a832114b87dcdefbdf60841fe8785f62549ee175adf7dbf25670f880430d",
+      "original_bytes": 9511,
+      "public_path": "experiments/orthemology-v5-successors/source-store/6130a832114b87dcdefbdf60841fe8785f62549ee175adf7dbf25670f880430d/QUANTITATIVE_AND_CAPTURE_PUBLIC_v1.md",
+      "public_sha256": "6130a832114b87dcdefbdf60841fe8785f62549ee175adf7dbf25670f880430d",
+      "public_bytes": 9511,
+      "projection": "EXACT",
+      "projection_basis": "Exact delivered scientific Markdown/JSON bytes; no equation, hypothesis, quantifier, limit or historical status rewritten.",
+      "review_scope": "Source identity and stated written/review scope only; final companion role does not alter frozen recovery headers.",
+      "derivation": null
+    },
+    {
+      "id": "T12-SOURCE-OCCURRENCE",
+      "origin_input_id": "T12-CP-CURRENT",
+      "origin_input_sha256": "0dbca68aad572ea488c480fca5e6cd512940980241524e043b07f7b0125be2c4",
+      "origin_archive_sha256": "0dbca68aad572ea488c480fca5e6cd512940980241524e043b07f7b0125be2c4",
+      "member_chain": [
+        "research/occurrence-warrant/RESULT.md"
+      ],
+      "original_sha256": "2f27715c0283542e48dace818236f4afd4c1d953af7c5af3ac66ff04a308db42",
+      "original_bytes": 5150,
+      "public_path": "experiments/orthemology-v5-successors/source-store/2f27715c0283542e48dace818236f4afd4c1d953af7c5af3ac66ff04a308db42/RESULT.md",
+      "public_sha256": "2f27715c0283542e48dace818236f4afd4c1d953af7c5af3ac66ff04a308db42",
+      "public_bytes": 5150,
+      "projection": "EXACT",
+      "projection_basis": "Exact delivered scientific Markdown/JSON bytes; no equation, hypothesis, quantifier, limit or historical status rewritten.",
+      "review_scope": "Source identity and stated written/review scope only; final companion role does not alter frozen recovery headers.",
+      "derivation": null
+    },
+    {
+      "id": "T12-SOURCE-CHAIN",
+      "origin_input_id": "T12-CP-CURRENT",
+      "origin_input_sha256": "0dbca68aad572ea488c480fca5e6cd512940980241524e043b07f7b0125be2c4",
+      "origin_archive_sha256": "0dbca68aad572ea488c480fca5e6cd512940980241524e043b07f7b0125be2c4",
+      "member_chain": [
+        "research/chain-foundation/PUBLIC_CANDIDATE_v1.md"
+      ],
+      "original_sha256": "0cfd5385fed9e21656d5e724c3e78e7ac5ca53ed45801fe7e81f77a7e3b3b96b",
+      "original_bytes": 3447,
+      "public_path": "experiments/orthemology-v5-successors/source-store/0cfd5385fed9e21656d5e724c3e78e7ac5ca53ed45801fe7e81f77a7e3b3b96b/PUBLIC_CANDIDATE_v1.md",
+      "public_sha256": "0cfd5385fed9e21656d5e724c3e78e7ac5ca53ed45801fe7e81f77a7e3b3b96b",
+      "public_bytes": 3447,
+      "projection": "EXACT",
+      "projection_basis": "Exact delivered scientific Markdown/JSON bytes; no equation, hypothesis, quantifier, limit or historical status rewritten.",
+      "review_scope": "Source identity and stated written/review scope only; final companion role does not alter frozen recovery headers.",
+      "derivation": null
+    },
+    {
+      "id": "T12-SOURCE-CLARIFICATION",
+      "origin_input_id": "T12-SUPPLEMENT",
+      "origin_input_sha256": "39a8b248569d01ef037eaafebef42e3422c77d14b43c6d193beee0c859b9e5c5",
+      "origin_archive_sha256": "39a8b248569d01ef037eaafebef42e3422c77d14b43c6d193beee0c859b9e5c5",
+      "member_chain": [
+        "OBSERVATION_ROUTE_CLARIFICATION_v1.md"
+      ],
+      "original_sha256": "32bb7071666b4582b5547d484cafe9d5973dc0aaca7f099380fe6eda613f3c68",
+      "original_bytes": 2832,
+      "public_path": "experiments/orthemology-v5-successors/source-store/32bb7071666b4582b5547d484cafe9d5973dc0aaca7f099380fe6eda613f3c68/OBSERVATION_ROUTE_CLARIFICATION_v1.md",
+      "public_sha256": "32bb7071666b4582b5547d484cafe9d5973dc0aaca7f099380fe6eda613f3c68",
+      "public_bytes": 2832,
+      "projection": "EXACT",
+      "projection_basis": "Exact delivered scientific Markdown/JSON bytes; no equation, hypothesis, quantifier, limit or historical status rewritten.",
+      "review_scope": "Source identity and stated written/review scope only; final companion role does not alter frozen recovery headers.",
+      "derivation": null
+    },
+    {
+      "id": "T12-SOURCE-VERIFICATION-SCOPE",
+      "origin_input_id": "T12-SUPPLEMENT",
+      "origin_input_sha256": "39a8b248569d01ef037eaafebef42e3422c77d14b43c6d193beee0c859b9e5c5",
+      "origin_archive_sha256": "39a8b248569d01ef037eaafebef42e3422c77d14b43c6d193beee0c859b9e5c5",
+      "member_chain": [
+        "VERIFICATION_SCOPE.md"
+      ],
+      "original_sha256": "fbd99729b2e43ad0b367fd2c8b89c6aeb1777dd66fa3f11eb2dc09aab3270fc1",
+      "original_bytes": 3080,
+      "public_path": "experiments/orthemology-v5-successors/source-store/fbd99729b2e43ad0b367fd2c8b89c6aeb1777dd66fa3f11eb2dc09aab3270fc1/VERIFICATION_SCOPE.md",
+      "public_sha256": "fbd99729b2e43ad0b367fd2c8b89c6aeb1777dd66fa3f11eb2dc09aab3270fc1",
+      "public_bytes": 3080,
+      "projection": "EXACT",
+      "projection_basis": "Exact delivered scientific Markdown/JSON bytes; no equation, hypothesis, quantifier, limit or historical status rewritten.",
+      "review_scope": "Source identity and stated written/review scope only; final companion role does not alter frozen recovery headers.",
+      "derivation": null
+    },
+    {
+      "id": "T12-SOURCE-CHECKPOINT-IDENTITY",
+      "origin_input_id": "T12-SUPPLEMENT",
+      "origin_input_sha256": "39a8b248569d01ef037eaafebef42e3422c77d14b43c6d193beee0c859b9e5c5",
+      "origin_archive_sha256": "39a8b248569d01ef037eaafebef42e3422c77d14b43c6d193beee0c859b9e5c5",
+      "member_chain": [
+        "CHECKPOINT_IDENTITY.json"
+      ],
+      "original_sha256": "ec29806cb3087a8a707341d352bbbf8c818a536ce0083a8e6cf75a6b75d3e7bb",
+      "original_bytes": 2148,
+      "public_path": "experiments/orthemology-v5-successors/source-store/ec29806cb3087a8a707341d352bbbf8c818a536ce0083a8e6cf75a6b75d3e7bb/CHECKPOINT_IDENTITY.json",
+      "public_sha256": "ec29806cb3087a8a707341d352bbbf8c818a536ce0083a8e6cf75a6b75d3e7bb",
+      "public_bytes": 2148,
+      "projection": "EXACT",
+      "projection_basis": "Exact delivered scientific Markdown/JSON bytes; no equation, hypothesis, quantifier, limit or historical status rewritten.",
+      "review_scope": "Source identity and stated written/review scope only; final companion role does not alter frozen recovery headers.",
+      "derivation": null
+    },
+    {
+      "id": "T12-SOURCE-REFERENCE-MAP",
+      "origin_input_id": "T12-SUPPLEMENT",
+      "origin_input_sha256": "39a8b248569d01ef037eaafebef42e3422c77d14b43c6d193beee0c859b9e5c5",
+      "origin_archive_sha256": "39a8b248569d01ef037eaafebef42e3422c77d14b43c6d193beee0c859b9e5c5",
+      "member_chain": [
+        "REFERENCE_MAP.json"
+      ],
+      "original_sha256": "9b229ce0e6154abd85921d962a6a7455fd3a1c6793079c3a78698595ff7ac4b8",
+      "original_bytes": 2426,
+      "public_path": "experiments/orthemology-v5-successors/source-store/9b229ce0e6154abd85921d962a6a7455fd3a1c6793079c3a78698595ff7ac4b8/REFERENCE_MAP.json",
+      "public_sha256": "9b229ce0e6154abd85921d962a6a7455fd3a1c6793079c3a78698595ff7ac4b8",
+      "public_bytes": 2426,
+      "projection": "EXACT",
+      "projection_basis": "Exact delivered scientific Markdown/JSON bytes; no equation, hypothesis, quantifier, limit or historical status rewritten.",
+      "review_scope": "Source identity and stated written/review scope only; final companion role does not alter frozen recovery headers.",
+      "derivation": null
+    },
+    {
+      "id": "T12-SOURCE-FINAL-RECEIPT",
+      "origin_input_id": "T12-RECEIPT",
+      "origin_input_sha256": "4f670d67f4279615e4d2ebf792c42d783c998dcf92e765eba52369b63be3b40c",
+      "origin_archive_sha256": null,
+      "member_chain": [],
+      "original_sha256": "4f670d67f4279615e4d2ebf792c42d783c998dcf92e765eba52369b63be3b40c",
+      "original_bytes": 2526,
+      "public_path": "experiments/orthemology-v5-successors/source-store/4f670d67f4279615e4d2ebf792c42d783c998dcf92e765eba52369b63be3b40c/Orthemology_Twelfth_Research_Verification_v1_20261004.json",
+      "public_sha256": "4f670d67f4279615e4d2ebf792c42d783c998dcf92e765eba52369b63be3b40c",
+      "public_bytes": 2526,
+      "projection": "EXACT",
+      "projection_basis": "Exact delivered scientific Markdown/JSON bytes; no equation, hypothesis, quantifier, limit or historical status rewritten.",
+      "review_scope": "Source identity and stated written/review scope only; final companion role does not alter frozen recovery headers.",
+      "derivation": null
+    },
+    {
+      "id": "T12-SOURCE-CHECKPOINT-MANIFEST",
+      "origin_input_id": "T12-CP-CURRENT",
+      "origin_input_sha256": "0dbca68aad572ea488c480fca5e6cd512940980241524e043b07f7b0125be2c4",
+      "origin_archive_sha256": "0dbca68aad572ea488c480fca5e6cd512940980241524e043b07f7b0125be2c4",
+      "member_chain": [
+        "MANIFEST.json"
+      ],
+      "original_sha256": "ff1eec8a059315d11d9b9fa55b1e0ebd6e9e793411888d97df1850fdaf45a1a4",
+      "original_bytes": 1929,
+      "public_path": "experiments/orthemology-v5-successors/source-store/ff1eec8a059315d11d9b9fa55b1e0ebd6e9e793411888d97df1850fdaf45a1a4/MANIFEST.json",
+      "public_sha256": "ff1eec8a059315d11d9b9fa55b1e0ebd6e9e793411888d97df1850fdaf45a1a4",
+      "public_bytes": 1929,
+      "projection": "EXACT",
+      "projection_basis": "Exact delivered scientific Markdown/JSON bytes; no equation, hypothesis, quantifier, limit or historical status rewritten.",
+      "review_scope": "Source identity and stated written/review scope only; final companion role does not alter frozen recovery headers.",
+      "derivation": null
+    },
+    {
+      "id": "T12-SOURCE-RECOVERY-NOTE",
+      "origin_input_id": "T12-CP-CURRENT",
+      "origin_input_sha256": "0dbca68aad572ea488c480fca5e6cd512940980241524e043b07f7b0125be2c4",
+      "origin_archive_sha256": "0dbca68aad572ea488c480fca5e6cd512940980241524e043b07f7b0125be2c4",
+      "member_chain": [
+        "READ_ME.txt"
+      ],
+      "original_sha256": "501293f92e3031bf034b881224d7d61196f69f93ac2592d5e2fdc67bd53e7a0b",
+      "original_bytes": 1098,
+      "public_path": "experiments/orthemology-v5-successors/source-store/501293f92e3031bf034b881224d7d61196f69f93ac2592d5e2fdc67bd53e7a0b/READ_ME.txt",
+      "public_sha256": "501293f92e3031bf034b881224d7d61196f69f93ac2592d5e2fdc67bd53e7a0b",
+      "public_bytes": 1098,
+      "projection": "EXACT",
+      "projection_basis": "Exact delivered scientific Markdown/JSON bytes; no equation, hypothesis, quantifier, limit or historical status rewritten.",
+      "review_scope": "Source identity and stated written/review scope only; final companion role does not alter frozen recovery headers.",
+      "derivation": null
+    },
+    {
+      "id": "T12-SOURCE-EARLY-CHECKPOINT",
+      "origin_input_id": "T12-CP-EARLY",
+      "origin_input_sha256": "e293626f58750d46305263cb6fd431777c6bba68b31405f400785a1dbd934f3c",
+      "origin_archive_sha256": null,
+      "member_chain": [],
+      "original_sha256": "e293626f58750d46305263cb6fd431777c6bba68b31405f400785a1dbd934f3c",
+      "original_bytes": 16844,
+      "public_path": null,
+      "public_sha256": null,
+      "public_bytes": null,
+      "projection": "CUSTODY_ONLY",
+      "projection_basis": "Historical archive identity retained without archive payload.",
+      "review_scope": "Source identity and stated written/review scope only; final companion role does not alter frozen recovery headers.",
+      "derivation": null
+    },
+    {
+      "id": "T12-SOURCE-CURRENT-CHECKPOINT",
+      "origin_input_id": "T12-CP-CURRENT",
+      "origin_input_sha256": "0dbca68aad572ea488c480fca5e6cd512940980241524e043b07f7b0125be2c4",
+      "origin_archive_sha256": null,
+      "member_chain": [],
+      "original_sha256": "0dbca68aad572ea488c480fca5e6cd512940980241524e043b07f7b0125be2c4",
+      "original_bytes": 53814,
+      "public_path": null,
+      "public_sha256": null,
+      "public_bytes": null,
+      "projection": "CUSTODY_ONLY",
+      "projection_basis": "Historical archive identity retained without archive payload.",
+      "review_scope": "Source identity and stated written/review scope only; final companion role does not alter frozen recovery headers.",
+      "derivation": null
+    },
+    {
+      "id": "T12-SOURCE-EARLY-MANIFEST",
+      "origin_input_id": "T12-CP-EARLY",
+      "origin_input_sha256": "e293626f58750d46305263cb6fd431777c6bba68b31405f400785a1dbd934f3c",
+      "origin_archive_sha256": "e293626f58750d46305263cb6fd431777c6bba68b31405f400785a1dbd934f3c",
+      "member_chain": [
+        "MANIFEST.json"
+      ],
+      "original_sha256": "5ea37db129cce63515bd607ff4d0326b96667ce10c51568fdace64e9a5b97e68",
+      "original_bytes": 496,
+      "public_path": "experiments/orthemology-v5-successors/source-store/5ea37db129cce63515bd607ff4d0326b96667ce10c51568fdace64e9a5b97e68/MANIFEST.json",
+      "public_sha256": "5ea37db129cce63515bd607ff4d0326b96667ce10c51568fdace64e9a5b97e68",
+      "public_bytes": 496,
+      "projection": "EXACT",
+      "projection_basis": "Exact delivered scientific Markdown/JSON bytes; no equation, hypothesis, quantifier, limit or historical status rewritten.",
+      "review_scope": "Source identity and stated written/review scope only; final companion role does not alter frozen recovery headers.",
+      "derivation": null
+    }
+  ],
+  "reviews": [
+    {
+      "id": "T12-REVIEW-CONCENTRATION",
+      "source_id": "T12-SOURCE-VERIFICATION-SCOPE",
+      "reviewed_source_ids": [
+        "T12-SOURCE-FOUNDATIONAL",
+        "T12-SOURCE-CONCENTRATION-REVIEW"
+      ],
+      "target": "P(Y+Z∈I)≤L/√(2πv) under the specified finite-additive independence contract.",
+      "scope": "Inherited final written/model-assisted assessment against the detailed arguments; report and checkpoint identities bound by T12-RECEIPT. Foundational article §§3–5; independent review §§1–2, including interval endpoints, sum-event measurability and ordinary real-valued probability.",
+      "outcome": "LIMITED",
+      "review_sha256": "fbd99729b2e43ad0b367fd2c8b89c6aeb1777dd66fa3f11eb2dc09aab3270fc1"
+    },
+    {
+      "id": "T12-REVIEW-COHERENT-HISTORY",
+      "source_id": "T12-SOURCE-VERIFICATION-SCOPE",
+      "reviewed_source_ids": [
+        "T12-SOURCE-FOUNDATIONAL",
+        "T12-SOURCE-CONCENTRATION-REVIEW"
+      ],
+      "target": "A single coherent finitely additive path law has genuine past/future freshness and zero bounded capture.",
+      "scope": "Inherited final written/model-assisted assessment against the detailed arguments; report and checkpoint identities bound by T12-RECEIPT. Foundational article §7 and independent review §3: Ω=R×R^Z, X_t=x+S_t, one fixed free ultrafilter applied to U_N⊗Q.",
+      "outcome": "LIMITED",
+      "review_sha256": "fbd99729b2e43ad0b367fd2c8b89c6aeb1777dd66fa3f11eb2dc09aab3270fc1"
+    },
+    {
+      "id": "T12-REVIEW-BOUNDED-CAPTURE",
+      "source_id": "T12-SOURCE-VERIFICATION-SCOPE",
+      "reviewed_source_ids": [
+        "T12-SOURCE-FOUNDATIONAL",
+        "T12-SOURCE-CAPTURE"
+      ],
+      "target": "d_TV(P_n,Q_n)≥max(0,p_I−|I|/√(2πn)); tight terminal law implies d_TV→1.",
+      "scope": "Inherited final written/model-assisted assessment against the detailed arguments; report and checkpoint identities bound by T12-RECEIPT. Foundational article §§5–6 and quantitative companion §§1–3; d_TV(P,Q)=sup_E|P(E)−Q(E)|.",
+      "outcome": "LIMITED",
+      "review_sha256": "fbd99729b2e43ad0b367fd2c8b89c6aeb1777dd66fa3f11eb2dc09aab3270fc1"
+    },
+    {
+      "id": "T12-REVIEW-COORDINATION-INFORMATION",
+      "source_id": "T12-SOURCE-VERIFICATION-SCOPE",
+      "reviewed_source_ids": [
+        "T12-SOURCE-COORDINATION"
+      ],
+      "target": "Positive bounded capture forces logarithmic state–future mutual-information growth under the countably additive contract.",
+      "scope": "Inherited final written/model-assisted assessment against the detailed arguments; report and checkpoint identities bound by T12-RECEIPT. Bounded coordination note §§1–4; mutual information relative to the product of actual marginals, natural logarithms.",
+      "outcome": "LIMITED",
+      "review_sha256": "fbd99729b2e43ad0b367fd2c8b89c6aeb1777dd66fa3f11eb2dc09aab3270fc1"
+    },
+    {
+      "id": "T12-REVIEW-FINITE-MEDIATOR",
+      "source_id": "T12-SOURCE-VERIFICATION-SCOPE",
+      "reviewed_source_ids": [
+        "T12-SOURCE-COORDINATION"
+      ],
+      "target": "P(Y+S∈I)≤2Φ(NL/(2√n))−1 with matching one-horizon construction.",
+      "scope": "Inherited final written/model-assisted assessment against the detailed arguments; report and checkpoint identities bound by T12-RECEIPT. Bounded coordination note §5: optimize one horizon over state marginal and encoder; interval length L≥0, integer N≥1.",
+      "outcome": "LIMITED",
+      "review_sha256": "fbd99729b2e43ad0b367fd2c8b89c6aeb1777dd66fa3f11eb2dc09aab3270fc1"
+    },
+    {
+      "id": "T12-REVIEW-FORWARD-INTERVENTIONS",
+      "source_id": "T12-SOURCE-VERIFICATION-SCOPE",
+      "reviewed_source_ids": [
+        "T12-SOURCE-FOUNDATIONAL",
+        "T12-SOURCE-INTERVENTIONS"
+      ],
+      "target": "X′_t−X_t=Σ_{j∈J,j<t}(a_j−ξ_j) for finite prescribed forward interventions.",
+      "scope": "Inherited final written/model-assisted assessment against the detailed arguments; report and checkpoint identities bound by T12-RECEIPT. Finite forward interventions §§1–4 and foundational article §7; fixed finite J⊂Z and fixed real replacement values a_j.",
+      "outcome": "LIMITED",
+      "review_sha256": "fbd99729b2e43ad0b367fd2c8b89c6aeb1777dd66fa3f11eb2dc09aab3270fc1"
+    },
+    {
+      "id": "T12-REVIEW-OBSERVATION-RESOURCE",
+      "source_id": "T12-SOURCE-VERIFICATION-SCOPE",
+      "reviewed_source_ids": [
+        "T12-SOURCE-OBSERVATION",
+        "T12-SOURCE-CLARIFICATION"
+      ],
+      "target": "Positive magnitude-sensitive capture with a sufficiently small resource tail forces positive mass in a bounded state interval.",
+      "scope": "Inherited final written/model-assisted assessment against the detailed arguments; report and checkpoint identities bound by T12-RECEIPT. Bounded access paper §§2–4 and final clarification: one probability/information state; C∩{T≤m}⊆{|X_0|≤b(m)}.",
+      "outcome": "LIMITED",
+      "review_sha256": "fbd99729b2e43ad0b367fd2c8b89c6aeb1777dd66fa3f11eb2dc09aab3270fc1"
+    },
+    {
+      "id": "T12-REVIEW-REPORT-POLICY",
+      "source_id": "T12-SOURCE-VERIFICATION-SCOPE",
+      "reviewed_source_ids": [
+        "T12-SOURCE-OBSERVATION",
+        "T12-SOURCE-CLARIFICATION"
+      ],
+      "target": "The completed two-trade policy is uniformly dominated; bounded capture and dynamic-policy routes have different conclusions.",
+      "scope": "Inherited final written/model-assisted assessment against the detailed arguments; report and checkpoint identities bound by T12-RECEIPT. Bounded access §§5–10, read with final observation-route clarification; A has probability 1/2, R=N on A and geometric K on Aᶜ.",
+      "outcome": "LIMITED",
+      "review_sha256": "fbd99729b2e43ad0b367fd2c8b89c6aeb1777dd66fa3f11eb2dc09aab3270fc1"
+    },
+    {
+      "id": "T12-REVIEW-TOTAL-INTEGER-REPORT",
+      "source_id": "T12-SOURCE-VERIFICATION-SCOPE",
+      "reviewed_source_ids": [
+        "T12-SOURCE-INTEGER",
+        "T12-SOURCE-CLARIFICATION"
+      ],
+      "target": "R≤N<∞ on every valid input and every bit tape, with a non-tight report-runtime marginal.",
+      "scope": "Inherited final written/model-assisted assessment against the detailed arguments; report and checkpoint identities bound by T12-RECEIPT. Integer total report protocol §§1–6 and final clarification; private input sign and unary magnitude tape 1^{|x|}0, fixed bounded padded rounds.",
+      "outcome": "LIMITED",
+      "review_sha256": "fbd99729b2e43ad0b367fd2c8b89c6aeb1777dd66fa3f11eb2dc09aab3270fc1"
+    }
+  ],
+  "results": [
+    {
+      "id": "T12-CONCENTRATION",
+      "title": "Finite-additive Gaussian anti-concentration",
+      "tranche": 12,
+      "family": "t12-concentration",
+      "original_avenues": [
+        10
+      ],
+      "evidence_keys": [
+        "F1",
+        "F2"
+      ],
+      "target": "P(Y+Z∈I)≤L/√(2πv) under the specified finite-additive independence contract.",
+      "input_contract": "Foundational article §§3–5; independent review §§1–2, including interval endpoints, sum-event measurability and ordinary real-valued probability.",
+      "assumptions": [
+        "One normalized nonnegative ordinary real-valued finitely additive probability on an event algebra containing every used interval, tail, rectangle and sum event.",
+        "Y and Z are rectangle-independent at the stated event scope; Z has an ordinary centred Gaussian marginal with variance v>0.",
+        "For history application, all arbitrarily long finite blocks bind the same terminal state and law; their Gaussian variances diverge."
+      ],
+      "conclusion": "For bounded interval I of length L, P(Y+Z∈I)≤L/√(2πv); the sharper bound is 2Φ(L/(2√v))−1. Hence fresh Gaussian blocks of arbitrarily large variance force each bounded terminal interval to have probability zero.",
+      "limitations": [
+        "Tightness of Y and joint countable additivity are not required; the Gaussian marginal supplies the tail estimate.",
+        "Mutual iid noise does not imply independence of the earlier state from its future innovation block.",
+        "The ordinary real limit step is not automatically transferable to non-Archimedean values."
+      ],
+      "calculus": "NONE",
+      "operational_model": "Ordinary finitely additive probability with explicit Gaussian marginal and event domain.",
+      "math_form": "ORDINARY",
+      "claim_scope": "WHOLE_RESULT",
+      "domain": "UNBOUNDED_MODEL",
+      "source_ids": [
+        "T12-SOURCE-FOUNDATIONAL",
+        "T12-SOURCE-CONCENTRATION-REVIEW"
+      ],
+      "review_ids": [
+        "T12-REVIEW-CONCENTRATION"
+      ],
+      "suite_ids": [],
+      "origin_status": "These are ordinary written mathematics and model-assisted checks. No new Lean kernel certification is claimed.",
+      "obligation_ids": [
+        "U05"
+      ],
+      "residual_scope": "No formal implementation, actual productive-support identification, metaphysical realisability, normative adoption, empirical replication or specialist/novelty warrant; original obligations retain their declared scopes."
+    },
+    {
+      "id": "T12-COHERENT-HISTORY",
+      "title": "A coherent non-tight fresh history",
+      "tranche": 12,
+      "family": "t12-coherent-history",
+      "original_avenues": [
+        10
+      ],
+      "evidence_keys": [
+        "F1",
+        "F2"
+      ],
+      "target": "A single coherent finitely additive path law has genuine past/future freshness and zero bounded capture.",
+      "input_contract": "Foundational article §7 and independent review §3: Ω=R×R^Z, X_t=x+S_t, one fixed free ultrafilter applied to U_N⊗Q.",
+      "assumptions": [
+        "The entire noise marginal Q is the ordinary countably additive iid Gaussian law; all recurrences hold pointwise.",
+        "A free nonprincipal ultrafilter is fixed once for all Borel events; finite additivity is preserved through scalar ultralimits.",
+        "Uniform reanchoring comparison is over the common full Borel event domain."
+      ],
+      "conclusion": "The law μ is normalized real-valued and finitely additive, retains full past/future rectangle independence and the entire noise marginal, is stationary and spatially translation-invariant, and gives every bounded position interval mass zero although every sample position is finite.",
+      "limitations": [
+        "Position marginal is not countably additive or tight; no unique extension, sampler, null-state regular conditional, or countable conglomerability is asserted.",
+        "Probability consistency does not establish physical or metaphysical possibility or productive causal direction.",
+        "Anchored countably additive paths with X_0=0 retain iid noise but fail state/future freshness; stable AR(1) and deterministic translation are distinct positive controls."
+      ],
+      "calculus": "NONE",
+      "operational_model": "One Borel two-sided additive path law with nonconstructive finitely additive uniform-anchor limit.",
+      "math_form": "ORDINARY",
+      "claim_scope": "WHOLE_RESULT",
+      "domain": "UNBOUNDED_MODEL",
+      "source_ids": [
+        "T12-SOURCE-FOUNDATIONAL",
+        "T12-SOURCE-CONCENTRATION-REVIEW"
+      ],
+      "review_ids": [
+        "T12-REVIEW-COHERENT-HISTORY"
+      ],
+      "suite_ids": [],
+      "origin_status": "These are ordinary written mathematics and model-assisted checks. No new Lean kernel certification is claimed.",
+      "obligation_ids": [
+        "U05"
+      ],
+      "residual_scope": "No formal implementation, actual productive-support identification, metaphysical realisability, normative adoption, empirical replication or specialist/novelty warrant; original obligations retain their declared scopes."
+    },
+    {
+      "id": "T12-BOUNDED-CAPTURE",
+      "title": "Bounded capture requires state–future dependence",
+      "tranche": 12,
+      "family": "t12-bounded-capture",
+      "original_avenues": [
+        10
+      ],
+      "evidence_keys": [
+        "O1"
+      ],
+      "target": "d_TV(P_n,Q_n)≥max(0,p_I−|I|/√(2πn)); tight terminal law implies d_TV→1.",
+      "input_contract": "Foundational article §§5–6 and quantitative companion §§1–3; d_TV(P,Q)=sup_E|P(E)−Q(E)|.",
+      "assumptions": [
+        "P_n and independent benchmark Q_n share the specified state/noise marginals and a common measurable pair-event domain.",
+        "The terminal law and bounded interval I with p_I=P(X_0∈I) are fixed before horizon n varies.",
+        "Q_n satisfies the concentration assumptions; full-Borel finitely additive benchmark construction has the stated integration order."
+      ],
+      "conclusion": "d_TV(P_n,Q_n)≥max(0,p_I−|I|/√(2πn)). One p_I>0 contradicts exact freshness at all horizons; a tight common terminal law yields d_TV→1 by choosing I after ε and before n.",
+      "limitations": [
+        "One positive bounded interval does not alone imply maximal asymptotic distance; tightness supplies near-unit captures.",
+        "A realized value or pointwise expanding-search termination does not establish positive capture at a fixed finite budget.",
+        "No rate uniform over terminal laws, finite-additive product uniqueness, or original-source conclusion follows."
+      ],
+      "calculus": "NONE",
+      "operational_model": "Same-law bounded capture and common-domain total-variation separation.",
+      "math_form": "ORDINARY",
+      "claim_scope": "WHOLE_RESULT",
+      "domain": "UNBOUNDED_MODEL",
+      "source_ids": [
+        "T12-SOURCE-FOUNDATIONAL",
+        "T12-SOURCE-CAPTURE"
+      ],
+      "review_ids": [
+        "T12-REVIEW-BOUNDED-CAPTURE"
+      ],
+      "suite_ids": [],
+      "origin_status": "These are ordinary written mathematics and model-assisted checks. No new Lean kernel certification is claimed.",
+      "obligation_ids": [
+        "U05"
+      ],
+      "residual_scope": "No formal implementation, actual productive-support identification, metaphysical realisability, normative adoption, empirical replication or specialist/novelty warrant; original obligations retain their declared scopes."
+    },
+    {
+      "id": "T12-COORDINATION-INFORMATION",
+      "title": "Information cost of complete coordination",
+      "tranche": 12,
+      "family": "t12-coordination-information",
+      "original_avenues": [
+        10
+      ],
+      "evidence_keys": [
+        "O2"
+      ],
+      "target": "Positive bounded capture forces logarithmic state–future mutual-information growth under the countably additive contract.",
+      "input_contract": "Bounded coordination note §§1–4; mutual information relative to the product of actual marginals, natural logarithms.",
+      "assumptions": [
+        "Ordinary countably additive Borel law of (Y_n,S_n), S_n~N(0,n), X_0=Y_n+S_n and a fixed common terminal law.",
+        "Bounded interval I has positive length L and fixed capture mass p; information is D(P_n||P_Y⊗P_S).",
+        "A proposed mediator must supply the full conditional-independence cut, including any side information."
+      ],
+      "conclusion": "I(Y_n;S_n)≥(p/2)log n−p log(L/√(2π))−h(p). Tightness gives liminf I/log n≥1/2, attained by Gaussian anchoring with I=½log(1+n/τ²). Complete mediation implies I≤H(R_n), so uniformly bounded complete-record entropy cannot support all horizons.",
+      "limitations": [
+        "No finitely additive entropy theory; singular product-marginal comparison can give infinite information.",
+        "A finite program description, quantized readout or instantaneous controller state is not automatically a complete mediator.",
+        "Uncontrolled side information contributes I(U_n;S_n); no actual physical capacity or original-coordinator existence is established."
+      ],
+      "calculus": "NONE",
+      "operational_model": "Countably additive information divergence and complete conditional Markov mediation.",
+      "math_form": "ORDINARY",
+      "claim_scope": "WHOLE_RESULT",
+      "domain": "UNBOUNDED_MODEL",
+      "source_ids": [
+        "T12-SOURCE-COORDINATION"
+      ],
+      "review_ids": [
+        "T12-REVIEW-COORDINATION-INFORMATION"
+      ],
+      "suite_ids": [],
+      "origin_status": "These are ordinary written mathematics and model-assisted checks. No new Lean kernel certification is claimed.",
+      "obligation_ids": [
+        "U05"
+      ],
+      "residual_scope": "No formal implementation, actual productive-support identification, metaphysical realisability, normative adoption, empirical replication or specialist/novelty warrant; original obligations retain their declared scopes."
+    },
+    {
+      "id": "T12-FINITE-MEDIATOR",
+      "title": "Exact finite-alphabet capture capacity",
+      "tranche": 12,
+      "family": "t12-finite-mediator",
+      "original_avenues": [
+        10
+      ],
+      "evidence_keys": [
+        "O2"
+      ],
+      "target": "P(Y+S∈I)≤2Φ(NL/(2√n))−1 with matching one-horizon construction.",
+      "input_contract": "Bounded coordination note §5: optimize one horizon over state marginal and encoder; interval length L≥0, integer N≥1.",
+      "assumptions": [
+        "S~N(0,n) under an ordinary joint law.",
+        "Mediator M has at most N values and Y and S are conditionally independent given M.",
+        "I is a fixed interval of length L, with nonatomic Gaussian endpoint conventions."
+      ],
+      "conclusion": "P(Y+S∈I)≤2Φ(NL/(2√n))−1. For L>0 a retrospective encoder with N consecutive cells and Y constant on each mediator value attains the bound at that horizon; L=0 gives zero capture.",
+      "limitations": [
+        "Attainment need not preserve a prescribed state marginal, terminal law, or one common history across all horizons.",
+        "The construction is not a forward-causal physical coordinator or a sampler of the finitely additive law.",
+        "Probability-one bounded capture is impossible for finite N,L; positive fixed capture requires N of order at least √n."
+      ],
+      "calculus": "NONE",
+      "operational_model": "One-horizon Gaussian capture through a complete finite-alphabet mediator.",
+      "math_form": "ORDINARY",
+      "claim_scope": "WHOLE_RESULT",
+      "domain": "UNBOUNDED_MODEL",
+      "source_ids": [
+        "T12-SOURCE-COORDINATION"
+      ],
+      "review_ids": [
+        "T12-REVIEW-FINITE-MEDIATOR"
+      ],
+      "suite_ids": [],
+      "origin_status": "These are ordinary written mathematics and model-assisted checks. No new Lean kernel certification is claimed.",
+      "obligation_ids": [
+        "U05"
+      ],
+      "residual_scope": "No formal implementation, actual productive-support identification, metaphysical realisability, normative adoption, empirical replication or specialist/novelty warrant; original obligations retain their declared scopes."
+    },
+    {
+      "id": "T12-FORWARD-INTERVENTIONS",
+      "title": "Finite forward interventions with preserved prehistory",
+      "tranche": 12,
+      "family": "t12-forward-interventions",
+      "original_avenues": [
+        10
+      ],
+      "evidence_keys": [
+        "F2"
+      ],
+      "target": "X′_t−X_t=Σ_{j∈J,j<t}(a_j−ξ_j) for finite prescribed forward interventions.",
+      "input_contract": "Finite forward interventions §§1–4 and foundational article §7; fixed finite J⊂Z and fixed real replacement values a_j.",
+      "assumptions": [
+        "Accepted Ω=R×R^Z path law and pointwise recurrence.",
+        "For each j∈J put Δ_j=a_j−ξ_j and adjust anchor by Σ_{j∈J,j<0}Δ_j.",
+        "J is finite and targets/values are prescribed, not adaptive or future-dependent."
+      ],
+      "conclusion": "The Borel replacement map gives X′_t−X_t=Σ_{j∈J,j<t}Δ_j. Prehistory through min J stays fixed, all recurrences hold, distinct-time replacements commute, and pushforward preserves finite additivity, unmodified Gaussian noise and full transformed past/future factorisation.",
+      "limitations": [
+        "Overlapping replacements commute only when prescribed values agree; otherwise last replacement wins.",
+        "No arbitrary infinite-past replacement: the anchor displacement can diverge. No adaptive-policy theorem is supplied.",
+        "The operation is pushforward, not conditioning on a Gaussian-null event; actual manipulability and metaphysical realisability remain open."
+      ],
+      "calculus": "NONE",
+      "operational_model": "Finite Borel overwrite maps on the exact two-sided anchored law.",
+      "math_form": "ORDINARY",
+      "claim_scope": "WHOLE_RESULT",
+      "domain": "UNBOUNDED_MODEL",
+      "source_ids": [
+        "T12-SOURCE-FOUNDATIONAL",
+        "T12-SOURCE-INTERVENTIONS"
+      ],
+      "review_ids": [
+        "T12-REVIEW-FORWARD-INTERVENTIONS"
+      ],
+      "suite_ids": [],
+      "origin_status": "These are ordinary written mathematics and model-assisted checks. No new Lean kernel certification is claimed.",
+      "obligation_ids": [
+        "U05"
+      ],
+      "residual_scope": "No formal implementation, actual productive-support identification, metaphysical realisability, normative adoption, empirical replication or specialist/novelty warrant; original obligations retain their declared scopes."
+    },
+    {
+      "id": "T12-OBSERVATION-RESOURCE",
+      "title": "Tight resources imply a bounded-capture requirement",
+      "tranche": 12,
+      "family": "t12-observation-resource",
+      "original_avenues": [
+        10
+      ],
+      "evidence_keys": [
+        "O3",
+        "O5"
+      ],
+      "target": "Positive magnitude-sensitive capture with a sufficiently small resource tail forces positive mass in a bounded state interval.",
+      "input_contract": "Bounded access paper §§2–4 and final clarification: one probability/information state; C∩{T≤m}⊆{|X_0|≤b(m)}.",
+      "assumptions": [
+        "Successful magnitude-sensitive acquisition C has positive prospective probability s.",
+        "For each finite resource budget m, successful capture implies a bounded state range b(m).",
+        "At least one resource tail obeys P(T>m)<s; resource tightness is sufficient, without independence."
+      ],
+      "conclusion": "P(C)≤P(|X_0|≤b(m))+P(T>m), so positive success and the stated tail bound force positive bounded mass and contradict the fresh diffuse history at the same law.",
+      "limitations": [
+        "Finite-valued outputs, conditional safety, realized success and pointwise finite search alone do not supply this magnitude-sensitive prospective contract.",
+        "A sign query has bounded output alphabet but unbounded inverse images; bounded encodings do not inherit Gaussian dynamics.",
+        "Actual correction is not shown to instantiate this task or actual productive-support realisability."
+      ],
+      "calculus": "NONE",
+      "operational_model": "Finite-additive magnitude-sensitive observation with an explicit resource-tail relation.",
+      "math_form": "ORDINARY",
+      "claim_scope": "WHOLE_RESULT",
+      "domain": "UNBOUNDED_MODEL",
+      "source_ids": [
+        "T12-SOURCE-OBSERVATION",
+        "T12-SOURCE-CLARIFICATION"
+      ],
+      "review_ids": [
+        "T12-REVIEW-OBSERVATION-RESOURCE"
+      ],
+      "suite_ids": [],
+      "origin_status": "These are ordinary written mathematics and model-assisted checks. No new Lean kernel certification is claimed.",
+      "obligation_ids": [
+        "U05"
+      ],
+      "residual_scope": "No formal implementation, actual productive-support identification, metaphysical realisability, normative adoption, empirical replication or specialist/novelty warrant; original obligations retain their declared scopes."
+    },
+    {
+      "id": "T12-REPORT-POLICY",
+      "title": "Completed reports, two-trade loss and forecast limits",
+      "tranche": 12,
+      "family": "t12-report-policy",
+      "original_avenues": [
+        10
+      ],
+      "evidence_keys": [
+        "O3",
+        "O5"
+      ],
+      "target": "The completed two-trade policy is uniformly dominated; bounded capture and dynamic-policy routes have different conclusions.",
+      "input_contract": "Bounded access §§5–10, read with final observation-route clarification; A has probability 1/2, R=N on A and geometric K on Aᶜ.",
+      "assumptions": [
+        "Each positive report H_n={R=n} has μ(H_n)=2^{−n}/2 and μ(A|H_n)=0; same operative probability and information state.",
+        "Report access, preserved ticket transfer, exact timing/no extra information and action-guidance policy are warranted separately.",
+        "Two-trade parameter 0<ε<1/4; trade one buys at 1/2−ε and trade two resells the same ticket at ε."
+      ],
+      "conclusion": "The completed policy loses −1/2+2ε in every outcome and abstention dominates it. Exact-report posterior forecasting has prior quadratic loss 1/2 versus constant prior 1/4. At deadline m the residual D_m has posterior 1/(2−Q_m) and expected loss (1−Q_m)/[2(2−Q_m)], so finite truncations do not inherit completed sure loss.",
+      "limitations": [
+        "The history, reporter and losing behavior remain mathematically consistent; this is a dominated-policy result, not impossibility of the support architecture.",
+        "The agent may abstain, precommit, revise its model or reject an unwarranted service assumption; an original-support argument must address these rational responses.",
+        "Outright resale or buyback locks loss at report time; later physical settlement need not be an extra executed stage, while warranted ticket value/transfer conditions remain required."
+      ],
+      "calculus": "NONE",
+      "operational_model": "Nonconglomerable countable report partition and explicitly timed bounded-stake decision policy.",
+      "math_form": "ORDINARY",
+      "claim_scope": "WHOLE_RESULT",
+      "domain": "UNBOUNDED_MODEL",
+      "source_ids": [
+        "T12-SOURCE-OBSERVATION",
+        "T12-SOURCE-CLARIFICATION"
+      ],
+      "review_ids": [
+        "T12-REVIEW-REPORT-POLICY"
+      ],
+      "suite_ids": [],
+      "origin_status": "These are ordinary written mathematics and model-assisted checks. No new Lean kernel certification is claimed.",
+      "obligation_ids": [
+        "U05"
+      ],
+      "residual_scope": "No formal implementation, actual productive-support identification, metaphysical realisability, normative adoption, empirical replication or specialist/novelty warrant; original obligations retain their declared scopes."
+    },
+    {
+      "id": "T12-TOTAL-INTEGER-REPORT",
+      "title": "An all-tapes-total integer reporting protocol",
+      "tranche": 12,
+      "family": "t12-total-integer-report",
+      "original_avenues": [
+        10
+      ],
+      "evidence_keys": [
+        "O4",
+        "O5"
+      ],
+      "target": "R≤N<∞ on every valid input and every bit tape, with a non-tight report-runtime marginal.",
+      "input_contract": "Integer total report protocol §§1–6 and final clarification; private input sign and unary magnitude tape 1^{|x|}0, fixed bounded padded rounds.",
+      "assumptions": [
+        "Accepted finitely additive integer ±1 path law supplies finite anchor input x and existing iid sign bits.",
+        "Input representation, sign, length/loading time and private coin bits are hidden from the trader; the public clock/silence/pulse transcript is exact.",
+        "N=1+|X_0|, K*=min(first later head,N), R=N on A and K* on Aᶜ; maintained channel/opportunities and input supply are separate assumptions."
+      ],
+      "conclusion": "Every valid finite input and every tape, including all tails, reports in R≤N<∞ rounds. The cap changes finite report events only on null bounded-input sets, preserving μ(A|H_n)=0 and the two-trade/Brier arithmetic. Runtime tails satisfy μ(R>m)=1−Q_m/2→1/2 despite pointwise total termination.",
+      "limitations": [
+        "Every fixed bound on full anchor-input length is null, but report runtime bounds have positive probability Q_m/2; these are different resource claims.",
+        "The transducer needs fixed finite control plus supplied tape; no actual run requires infinite working memory. Input/channel/clock repertoires remain unbounded across runs.",
+        "No sampler for μ, physical implementation, Gaussian exact-real acquisition algorithm, actual indefinite service or canonical adoption is provided."
+      ],
+      "calculus": "NONE",
+      "operational_model": "Total causal finite-input transducer over unary integer representation and existing private sign-bit tape.",
+      "math_form": "ORDINARY",
+      "claim_scope": "WHOLE_RESULT",
+      "domain": "UNBOUNDED_MODEL",
+      "source_ids": [
+        "T12-SOURCE-INTEGER",
+        "T12-SOURCE-CLARIFICATION"
+      ],
+      "review_ids": [
+        "T12-REVIEW-TOTAL-INTEGER-REPORT"
+      ],
+      "suite_ids": [],
+      "origin_status": "These are ordinary written mathematics and model-assisted checks. No new Lean kernel certification is claimed.",
+      "obligation_ids": [
+        "V5::CV-C"
+      ],
+      "residual_scope": "No formal implementation, actual productive-support identification, metaphysical realisability, normative adoption, empirical replication or specialist/novelty warrant; original obligations retain their declared scopes."
+    }
+  ],
+  "statuses": [
+    {
+      "id": "T12-CONCENTRATION",
+      "custody": "EXACT",
+      "inherited_evidence": "WRITTEN_MATHEMATICS",
+      "fresh_evidence": "NOT_RUN",
+      "research_disposition": "CANDIDATE",
+      "implementation_reach": "WRITTEN_ONLY",
+      "external_warrants": {
+        "actual_world": "NOT_ESTABLISHED",
+        "normative": "NOT_ESTABLISHED",
+        "empirical_replication": "NOT_ESTABLISHED",
+        "specialist_review": "NOT_ESTABLISHED",
+        "novelty": "NOT_ESTABLISHED",
+        "terminology_adoption": "NOT_ESTABLISHED"
+      },
+      "receipt_ids": [],
+      "independent_evidence_count": 0
+    },
+    {
+      "id": "T12-COHERENT-HISTORY",
+      "custody": "EXACT",
+      "inherited_evidence": "WRITTEN_MATHEMATICS",
+      "fresh_evidence": "NOT_RUN",
+      "research_disposition": "CANDIDATE",
+      "implementation_reach": "WRITTEN_ONLY",
+      "external_warrants": {
+        "actual_world": "NOT_ESTABLISHED",
+        "normative": "NOT_ESTABLISHED",
+        "empirical_replication": "NOT_ESTABLISHED",
+        "specialist_review": "NOT_ESTABLISHED",
+        "novelty": "NOT_ESTABLISHED",
+        "terminology_adoption": "NOT_ESTABLISHED"
+      },
+      "receipt_ids": [],
+      "independent_evidence_count": 0
+    },
+    {
+      "id": "T12-BOUNDED-CAPTURE",
+      "custody": "EXACT",
+      "inherited_evidence": "WRITTEN_MATHEMATICS",
+      "fresh_evidence": "NOT_RUN",
+      "research_disposition": "CANDIDATE",
+      "implementation_reach": "WRITTEN_ONLY",
+      "external_warrants": {
+        "actual_world": "NOT_ESTABLISHED",
+        "normative": "NOT_ESTABLISHED",
+        "empirical_replication": "NOT_ESTABLISHED",
+        "specialist_review": "NOT_ESTABLISHED",
+        "novelty": "NOT_ESTABLISHED",
+        "terminology_adoption": "NOT_ESTABLISHED"
+      },
+      "receipt_ids": [],
+      "independent_evidence_count": 0
+    },
+    {
+      "id": "T12-COORDINATION-INFORMATION",
+      "custody": "EXACT",
+      "inherited_evidence": "WRITTEN_MATHEMATICS",
+      "fresh_evidence": "NOT_RUN",
+      "research_disposition": "CANDIDATE",
+      "implementation_reach": "WRITTEN_ONLY",
+      "external_warrants": {
+        "actual_world": "NOT_ESTABLISHED",
+        "normative": "NOT_ESTABLISHED",
+        "empirical_replication": "NOT_ESTABLISHED",
+        "specialist_review": "NOT_ESTABLISHED",
+        "novelty": "NOT_ESTABLISHED",
+        "terminology_adoption": "NOT_ESTABLISHED"
+      },
+      "receipt_ids": [],
+      "independent_evidence_count": 0
+    },
+    {
+      "id": "T12-FINITE-MEDIATOR",
+      "custody": "EXACT",
+      "inherited_evidence": "WRITTEN_MATHEMATICS",
+      "fresh_evidence": "NOT_RUN",
+      "research_disposition": "CANDIDATE",
+      "implementation_reach": "WRITTEN_ONLY",
+      "external_warrants": {
+        "actual_world": "NOT_ESTABLISHED",
+        "normative": "NOT_ESTABLISHED",
+        "empirical_replication": "NOT_ESTABLISHED",
+        "specialist_review": "NOT_ESTABLISHED",
+        "novelty": "NOT_ESTABLISHED",
+        "terminology_adoption": "NOT_ESTABLISHED"
+      },
+      "receipt_ids": [],
+      "independent_evidence_count": 0
+    },
+    {
+      "id": "T12-FORWARD-INTERVENTIONS",
+      "custody": "EXACT",
+      "inherited_evidence": "WRITTEN_MATHEMATICS",
+      "fresh_evidence": "NOT_RUN",
+      "research_disposition": "CANDIDATE",
+      "implementation_reach": "WRITTEN_ONLY",
+      "external_warrants": {
+        "actual_world": "NOT_ESTABLISHED",
+        "normative": "NOT_ESTABLISHED",
+        "empirical_replication": "NOT_ESTABLISHED",
+        "specialist_review": "NOT_ESTABLISHED",
+        "novelty": "NOT_ESTABLISHED",
+        "terminology_adoption": "NOT_ESTABLISHED"
+      },
+      "receipt_ids": [],
+      "independent_evidence_count": 0
+    },
+    {
+      "id": "T12-OBSERVATION-RESOURCE",
+      "custody": "EXACT",
+      "inherited_evidence": "WRITTEN_MATHEMATICS",
+      "fresh_evidence": "NOT_RUN",
+      "research_disposition": "CANDIDATE",
+      "implementation_reach": "WRITTEN_ONLY",
+      "external_warrants": {
+        "actual_world": "NOT_ESTABLISHED",
+        "normative": "NOT_ESTABLISHED",
+        "empirical_replication": "NOT_ESTABLISHED",
+        "specialist_review": "NOT_ESTABLISHED",
+        "novelty": "NOT_ESTABLISHED",
+        "terminology_adoption": "NOT_ESTABLISHED"
+      },
+      "receipt_ids": [],
+      "independent_evidence_count": 0
+    },
+    {
+      "id": "T12-REPORT-POLICY",
+      "custody": "EXACT",
+      "inherited_evidence": "WRITTEN_MATHEMATICS",
+      "fresh_evidence": "NOT_RUN",
+      "research_disposition": "CANDIDATE",
+      "implementation_reach": "WRITTEN_ONLY",
+      "external_warrants": {
+        "actual_world": "NOT_ESTABLISHED",
+        "normative": "NOT_ESTABLISHED",
+        "empirical_replication": "NOT_ESTABLISHED",
+        "specialist_review": "NOT_ESTABLISHED",
+        "novelty": "NOT_ESTABLISHED",
+        "terminology_adoption": "NOT_ESTABLISHED"
+      },
+      "receipt_ids": [],
+      "independent_evidence_count": 0
+    },
+    {
+      "id": "T12-TOTAL-INTEGER-REPORT",
+      "custody": "EXACT",
+      "inherited_evidence": "WRITTEN_MATHEMATICS",
+      "fresh_evidence": "NOT_RUN",
+      "research_disposition": "CANDIDATE",
+      "implementation_reach": "WRITTEN_ONLY",
+      "external_warrants": {
+        "actual_world": "NOT_ESTABLISHED",
+        "normative": "NOT_ESTABLISHED",
+        "empirical_replication": "NOT_ESTABLISHED",
+        "specialist_review": "NOT_ESTABLISHED",
+        "novelty": "NOT_ESTABLISHED",
+        "terminology_adoption": "NOT_ESTABLISHED"
+      },
+      "receipt_ids": [],
+      "independent_evidence_count": 0
+    }
+  ],
+  "suites": [],
+  "receipts": [],
+  "supersession": [],
+  "legacy_endpoints": [],
+  "selectors": [
+    {
+      "family": "t12-concentration",
+      "result_id": "T12-CONCENTRATION",
+      "statement_sha256": "5e4c10bb11a4577f1b06d74805fd60bc132565e1d7da2d36806cb1fbca15afc9"
+    },
+    {
+      "family": "t12-coherent-history",
+      "result_id": "T12-COHERENT-HISTORY",
+      "statement_sha256": "e283dada6b74ae6dfc7b0380c0ea5e873ac351bf3918a4076322bafa5c4755ef"
+    },
+    {
+      "family": "t12-bounded-capture",
+      "result_id": "T12-BOUNDED-CAPTURE",
+      "statement_sha256": "5f2d660dd2584db163f2f470f3835b4ec4b4a79e7821568709d4236ea30225d7"
+    },
+    {
+      "family": "t12-coordination-information",
+      "result_id": "T12-COORDINATION-INFORMATION",
+      "statement_sha256": "745a1fdd5db72b3478b44b75783e8bef10f323ea68a042b79a1002853794d79b"
+    },
+    {
+      "family": "t12-finite-mediator",
+      "result_id": "T12-FINITE-MEDIATOR",
+      "statement_sha256": "f331e72dc53e1cfc640de69db4e0491a07c977f4b63548de0e4ce68ab61fa244"
+    },
+    {
+      "family": "t12-forward-interventions",
+      "result_id": "T12-FORWARD-INTERVENTIONS",
+      "statement_sha256": "92da2333aa6ee9a6d58d8801a86c71b8a611542660946dd7d0df02886a719bff"
+    },
+    {
+      "family": "t12-observation-resource",
+      "result_id": "T12-OBSERVATION-RESOURCE",
+      "statement_sha256": "4c725629513f3daf7a08428203d699f14f1b11eb654d36dcae42dc18c5995b90"
+    },
+    {
+      "family": "t12-report-policy",
+      "result_id": "T12-REPORT-POLICY",
+      "statement_sha256": "ddb672a32ec3012cb79f552b30b2f008754df1bf844c76a41eb5ed6e754b885b"
+    },
+    {
+      "family": "t12-total-integer-report",
+      "result_id": "T12-TOTAL-INTEGER-REPORT",
+      "statement_sha256": "72f9a70327ea1352f42ebca66d99d8a5df408cd6e845d0d2ab16c2515d9fd59e"
+    }
+  ],
+  "obligations": [
+    {
+      "id": "U05",
+      "owner_path": "experiments/orthemology-v5/source/REMAINING_OBLIGATIONS.md",
+      "owner_sha256": "2795cb401c807b28b3fc84c4f46986e9f12ac040d5b40d3a6594634a4c38b40f",
+      "statement": "## U05 — Actual measure-theoretic formalisation\n\nBlocker: Q1–Q8 measure and computability arguments are ordinary proofs; preserved AlmostSureBoundary is only a logical abstraction.\n\nMethod: Pin Mathlib; define positive singleton support, countability, restrictions, pushforwards, all-event property, sums and weak limits; prove Q1–Q4/Q7 and formalise the Q8 reduction separately.",
+      "result_ids": [
+        "T12-CONCENTRATION",
+        "T12-COHERENT-HISTORY",
+        "T12-BOUNDED-CAPTURE",
+        "T12-COORDINATION-INFORMATION",
+        "T12-FINITE-MEDIATOR",
+        "T12-FORWARD-INTERVENTIONS",
+        "T12-OBSERVATION-RESOURCE",
+        "T12-REPORT-POLICY"
+      ],
+      "disposition": "SCOPED_SUCCESSOR",
+      "residual": "Twelfth adds written scope-specific mathematics only; the original formalization/observer-language obligation and its accepted predecessor status are preserved. No original obligation is closed."
+    },
+    {
+      "id": "V5::CV-C",
+      "owner_path": "docs/provenance/v5-consolidation/reconciliation/THEOREM_LINEAGE.jsonl",
+      "owner_sha256": "149b5412b7409c16680f58713f28f53f68ef70f4e17a591eaf457630e3a4b0e0",
+      "statement": "In a specified total primitive-recursive synchronous observer language, zero defect is Pi03-complete and positive defect Sigma03-complete; full rational threshold table and finite Mealy decidability.",
+      "result_ids": [
+        "T12-TOTAL-INTEGER-REPORT"
+      ],
+      "disposition": "SCOPED_SUCCESSOR",
+      "residual": "Twelfth adds written scope-specific mathematics only; the original formalization/observer-language obligation and its accepted predecessor status are preserved. No original obligation is closed."
+    }
+  ],
+  "calculus": [
+    {
+      "id": "T12-CONCENTRATION",
+      "calculus": "NONE",
+      "operational_model": "Ordinary finitely additive probability with explicit Gaussian marginal and event domain.",
+      "canonical_adoption": "NOT_ADOPTED"
+    },
+    {
+      "id": "T12-COHERENT-HISTORY",
+      "calculus": "NONE",
+      "operational_model": "One Borel two-sided additive path law with nonconstructive finitely additive uniform-anchor limit.",
+      "canonical_adoption": "NOT_ADOPTED"
+    },
+    {
+      "id": "T12-BOUNDED-CAPTURE",
+      "calculus": "NONE",
+      "operational_model": "Same-law bounded capture and common-domain total-variation separation.",
+      "canonical_adoption": "NOT_ADOPTED"
+    },
+    {
+      "id": "T12-COORDINATION-INFORMATION",
+      "calculus": "NONE",
+      "operational_model": "Countably additive information divergence and complete conditional Markov mediation.",
+      "canonical_adoption": "NOT_ADOPTED"
+    },
+    {
+      "id": "T12-FINITE-MEDIATOR",
+      "calculus": "NONE",
+      "operational_model": "One-horizon Gaussian capture through a complete finite-alphabet mediator.",
+      "canonical_adoption": "NOT_ADOPTED"
+    },
+    {
+      "id": "T12-FORWARD-INTERVENTIONS",
+      "calculus": "NONE",
+      "operational_model": "Finite Borel overwrite maps on the exact two-sided anchored law.",
+      "canonical_adoption": "NOT_ADOPTED"
+    },
+    {
+      "id": "T12-OBSERVATION-RESOURCE",
+      "calculus": "NONE",
+      "operational_model": "Finite-additive magnitude-sensitive observation with an explicit resource-tail relation.",
+      "canonical_adoption": "NOT_ADOPTED"
+    },
+    {
+      "id": "T12-REPORT-POLICY",
+      "calculus": "NONE",
+      "operational_model": "Nonconglomerable countable report partition and explicitly timed bounded-stake decision policy.",
+      "canonical_adoption": "NOT_ADOPTED"
+    },
+    {
+      "id": "T12-TOTAL-INTEGER-REPORT",
+      "calculus": "NONE",
+      "operational_model": "Total causal finite-input transducer over unary integer representation and existing private sign-bit tape.",
+      "canonical_adoption": "NOT_ADOPTED"
+    }
+  ],
+  "empirical": [],
+  "projection_reviews": [],
+  "public_allowlist": [
+    {
+      "path": "experiments/orthemology-v5-successors/source-store/09e145f0f1420b81f7852416f4849673126ea60faf249e575d33d4377ecbcbab/FRESH_HISTORIES_BOUNDED_OBSERVATION_AND_ORIGINAL_SUPPORT_v4.md",
+      "sha256": "09e145f0f1420b81f7852416f4849673126ea60faf249e575d33d4377ecbcbab",
+      "bytes": 27006,
+      "kind": "SOURCE",
+      "source_ids": [
+        "T12-SOURCE-FOUNDATIONAL"
+      ]
+    },
+    {
+      "path": "experiments/orthemology-v5-successors/source-store/c24a896b6aa4119bdbbbee92efbbe55c0765745c9b901221f716a06f6e230942/BOUNDED_ACCESS_AND_DIACHRONIC_COHERENCE_v3.md",
+      "sha256": "c24a896b6aa4119bdbbbee92efbbe55c0765745c9b901221f716a06f6e230942",
+      "bytes": 31721,
+      "kind": "SOURCE",
+      "source_ids": [
+        "T12-SOURCE-OBSERVATION"
+      ]
+    },
+    {
+      "path": "experiments/orthemology-v5-successors/source-store/6d83bd91e8b85803150c18da26068d4cd56c6da0fadc453ce268ef0008670b48/INTEGER_TOTAL_REPORT_PROTOCOL_v3.md",
+      "sha256": "6d83bd91e8b85803150c18da26068d4cd56c6da0fadc453ce268ef0008670b48",
+      "bytes": 12080,
+      "kind": "SOURCE",
+      "source_ids": [
+        "T12-SOURCE-INTEGER"
+      ]
+    },
+    {
+      "path": "experiments/orthemology-v5-successors/source-store/c77bb25b5b3072294a16fb8678441c30a62ec917cad59957193350af80973ff7/BOUNDED_COORDINATION_INFORMATION_v1.md",
+      "sha256": "c77bb25b5b3072294a16fb8678441c30a62ec917cad59957193350af80973ff7",
+      "bytes": 13985,
+      "kind": "SOURCE",
+      "source_ids": [
+        "T12-SOURCE-COORDINATION"
+      ]
+    },
+    {
+      "path": "experiments/orthemology-v5-successors/source-store/438b0f2f0ce979da7293c22f87e16782cfb24a65cc6bbe55222454b3ccaa8b3a/FINITE_FORWARD_INTERVENTIONS_v1.md",
+      "sha256": "438b0f2f0ce979da7293c22f87e16782cfb24a65cc6bbe55222454b3ccaa8b3a",
+      "bytes": 6470,
+      "kind": "SOURCE",
+      "source_ids": [
+        "T12-SOURCE-INTERVENTIONS"
+      ]
+    },
+    {
+      "path": "experiments/orthemology-v5-successors/source-store/73bdb7a528a145fc409cf7cc6925b6210eda17808ba8e6c918ffd892f61953b8/INDEPENDENT_REVIEW_PUBLIC_v1.md",
+      "sha256": "73bdb7a528a145fc409cf7cc6925b6210eda17808ba8e6c918ffd892f61953b8",
+      "bytes": 16547,
+      "kind": "SOURCE",
+      "source_ids": [
+        "T12-SOURCE-CONCENTRATION-REVIEW"
+      ]
+    },
+    {
+      "path": "experiments/orthemology-v5-successors/source-store/6130a832114b87dcdefbdf60841fe8785f62549ee175adf7dbf25670f880430d/QUANTITATIVE_AND_CAPTURE_PUBLIC_v1.md",
+      "sha256": "6130a832114b87dcdefbdf60841fe8785f62549ee175adf7dbf25670f880430d",
+      "bytes": 9511,
+      "kind": "SOURCE",
+      "source_ids": [
+        "T12-SOURCE-CAPTURE"
+      ]
+    },
+    {
+      "path": "experiments/orthemology-v5-successors/source-store/2f27715c0283542e48dace818236f4afd4c1d953af7c5af3ac66ff04a308db42/RESULT.md",
+      "sha256": "2f27715c0283542e48dace818236f4afd4c1d953af7c5af3ac66ff04a308db42",
+      "bytes": 5150,
+      "kind": "SOURCE",
+      "source_ids": [
+        "T12-SOURCE-OCCURRENCE"
+      ]
+    },
+    {
+      "path": "experiments/orthemology-v5-successors/source-store/0cfd5385fed9e21656d5e724c3e78e7ac5ca53ed45801fe7e81f77a7e3b3b96b/PUBLIC_CANDIDATE_v1.md",
+      "sha256": "0cfd5385fed9e21656d5e724c3e78e7ac5ca53ed45801fe7e81f77a7e3b3b96b",
+      "bytes": 3447,
+      "kind": "SOURCE",
+      "source_ids": [
+        "T12-SOURCE-CHAIN"
+      ]
+    },
+    {
+      "path": "experiments/orthemology-v5-successors/source-store/32bb7071666b4582b5547d484cafe9d5973dc0aaca7f099380fe6eda613f3c68/OBSERVATION_ROUTE_CLARIFICATION_v1.md",
+      "sha256": "32bb7071666b4582b5547d484cafe9d5973dc0aaca7f099380fe6eda613f3c68",
+      "bytes": 2832,
+      "kind": "SOURCE",
+      "source_ids": [
+        "T12-SOURCE-CLARIFICATION"
+      ]
+    },
+    {
+      "path": "experiments/orthemology-v5-successors/source-store/fbd99729b2e43ad0b367fd2c8b89c6aeb1777dd66fa3f11eb2dc09aab3270fc1/VERIFICATION_SCOPE.md",
+      "sha256": "fbd99729b2e43ad0b367fd2c8b89c6aeb1777dd66fa3f11eb2dc09aab3270fc1",
+      "bytes": 3080,
+      "kind": "SOURCE",
+      "source_ids": [
+        "T12-SOURCE-VERIFICATION-SCOPE"
+      ]
+    },
+    {
+      "path": "experiments/orthemology-v5-successors/source-store/ec29806cb3087a8a707341d352bbbf8c818a536ce0083a8e6cf75a6b75d3e7bb/CHECKPOINT_IDENTITY.json",
+      "sha256": "ec29806cb3087a8a707341d352bbbf8c818a536ce0083a8e6cf75a6b75d3e7bb",
+      "bytes": 2148,
+      "kind": "SOURCE",
+      "source_ids": [
+        "T12-SOURCE-CHECKPOINT-IDENTITY"
+      ]
+    },
+    {
+      "path": "experiments/orthemology-v5-successors/source-store/9b229ce0e6154abd85921d962a6a7455fd3a1c6793079c3a78698595ff7ac4b8/REFERENCE_MAP.json",
+      "sha256": "9b229ce0e6154abd85921d962a6a7455fd3a1c6793079c3a78698595ff7ac4b8",
+      "bytes": 2426,
+      "kind": "SOURCE",
+      "source_ids": [
+        "T12-SOURCE-REFERENCE-MAP"
+      ]
+    },
+    {
+      "path": "experiments/orthemology-v5-successors/source-store/4f670d67f4279615e4d2ebf792c42d783c998dcf92e765eba52369b63be3b40c/Orthemology_Twelfth_Research_Verification_v1_20261004.json",
+      "sha256": "4f670d67f4279615e4d2ebf792c42d783c998dcf92e765eba52369b63be3b40c",
+      "bytes": 2526,
+      "kind": "SOURCE",
+      "source_ids": [
+        "T12-SOURCE-FINAL-RECEIPT"
+      ]
+    },
+    {
+      "path": "experiments/orthemology-v5-successors/source-store/ff1eec8a059315d11d9b9fa55b1e0ebd6e9e793411888d97df1850fdaf45a1a4/MANIFEST.json",
+      "sha256": "ff1eec8a059315d11d9b9fa55b1e0ebd6e9e793411888d97df1850fdaf45a1a4",
+      "bytes": 1929,
+      "kind": "SOURCE",
+      "source_ids": [
+        "T12-SOURCE-CHECKPOINT-MANIFEST"
+      ]
+    },
+    {
+      "path": "experiments/orthemology-v5-successors/source-store/501293f92e3031bf034b881224d7d61196f69f93ac2592d5e2fdc67bd53e7a0b/READ_ME.txt",
+      "sha256": "501293f92e3031bf034b881224d7d61196f69f93ac2592d5e2fdc67bd53e7a0b",
+      "bytes": 1098,
+      "kind": "SOURCE",
+      "source_ids": [
+        "T12-SOURCE-RECOVERY-NOTE"
+      ]
+    },
+    {
+      "path": "experiments/orthemology-v5-successors/source-store/5ea37db129cce63515bd607ff4d0326b96667ce10c51568fdace64e9a5b97e68/MANIFEST.json",
+      "sha256": "5ea37db129cce63515bd607ff4d0326b96667ce10c51568fdace64e9a5b97e68",
+      "bytes": 496,
+      "kind": "SOURCE",
+      "source_ids": [
+        "T12-SOURCE-EARLY-MANIFEST"
+      ]
+    },
+    {
+      "path": "experiments/orthemology-v5-successors/groups/t12-written/README.md",
+      "sha256": "e86297f6ff2e0b8abce4fd8d1fe66e57c64e43e83ecec664422b4ed7abf3440e",
+      "bytes": 18763,
+      "kind": "AUTHORED",
+      "source_ids": []
+    }
+  ]
+}
