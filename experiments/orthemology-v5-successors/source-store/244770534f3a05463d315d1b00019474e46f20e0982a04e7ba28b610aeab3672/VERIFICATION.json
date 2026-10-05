@@ -1,0 +1,82 @@
+{
+  "status": "ACCEPTED_BOUNDED_CONTROL_WITH_INDEPENDENT_REVIEW",
+  "compiler": "Lean 4.19.0",
+  "compiler_sha256": "92c3d35b5bfaa5e0fea413a775d504cf46cd95e1345df61c2274f76779e7e023",
+  "toolchain_environment_sha256": "1ff5b5d46f1e67ee0c007e658ef2cffb7270425f581237d76a5a64a645090129",
+  "new_declarations": 20,
+  "inherited_modules": 48,
+  "compiled_modules": 50,
+  "final_invocation_exit_code": 0,
+  "all_compile_exit_codes_zero": true,
+  "limits": {
+    "threads": 1,
+    "serial_lanes": 1,
+    "global_ceiling": 2,
+    "timeout_seconds": 180,
+    "heartbeats_recursion": "defaults"
+  },
+  "transitive_axiom_union": [
+    "propext",
+    "Classical.choice",
+    "Quot.sound"
+  ],
+  "accepted_sources_unchanged": true,
+  "source_object_reuse": false,
+  "bindings": [
+    {
+      "path": "SOURCE_IDENTITIES.json",
+      "sha256": "44677823653e8e914ca7e8e4f582c08d6834bbe57c2835e8b0e4ddbca157eac8",
+      "bytes": 10061
+    },
+    {
+      "path": "ACCEPTED_INPUTS.json",
+      "sha256": "0fa8d05ed79fae8494e902456594ba0ab5805d8cf653547c870d337f3db60227",
+      "bytes": 9661
+    },
+    {
+      "path": "DECLARATION_CENSUS.json",
+      "sha256": "68c781224c30ba40cef71b3f03a10ba1e5d2c5c5dde98c0beacbdf3fbeea313c",
+      "bytes": 1847
+    },
+    {
+      "path": "dependency-order.txt",
+      "sha256": "03de58f2f91640c2cf223d4c1a0aed4435731267ce50a7e9cc8801c03fd26cf0",
+      "bytes": 815
+    },
+    {
+      "path": "scripts/reproduce-all.sh",
+      "sha256": "b1551290af5638d00a3ceb40b4c6d0407b99910591375523997be247f28cf012",
+      "bytes": 350
+    },
+    {
+      "path": "scripts/reproduce-module.sh",
+      "sha256": "dd33894849ba7f1f6d05594cf05130be5ca4b9a47868fc696b2dca2edf953ad9",
+      "bytes": 1551
+    },
+    {
+      "path": "scripts/verify-sources.py",
+      "sha256": "59dfb863bd8f583993d9497f961db96d009343d805abb81fd4f67e5516600a23",
+      "bytes": 1338
+    },
+    {
+      "path": "evidence/final-replay.log",
+      "sha256": "fe4f8d962abb5e603bf9387b4a7c10e810d8a8ae923c2adb15f2520723651d8a",
+      "bytes": 50633
+    },
+    {
+      "path": "evidence/exact-readback.log",
+      "sha256": "173462a31893cec2627890397e917704e081e631184cae1ee6ae1efcef547039",
+      "bytes": 31754
+    },
+    {
+      "path": "evidence/INDEPENDENT_REVIEW.md",
+      "sha256": "2c67e22d0b19126c63fc9f1e476dd38d06174bd9208d816680165a64b437ea23",
+      "bytes": 6502
+    },
+    {
+      "path": "evidence/INDEPENDENT_VERIFICATION.json",
+      "sha256": "af6b0a0bbe8f95cf7484ebce83bae14b4869d955f9c62f127f713efe797c1784",
+      "bytes": 3429
+    }
+  ]
+}

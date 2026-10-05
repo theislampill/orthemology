@@ -1,0 +1,57 @@
+{
+  "status": "PUBLIC_HELPERS_FROZEN_POSITIVE_SMOKE_PASSED_GUARD_AUDIT_SEPARATE",
+  "proof_source_changes": false,
+  "scientific_replay_record": "FINAL_REPLAY.json",
+  "changes": [
+    "Require a readable regular explicit environment file and abort source failure.",
+    "Write fresh reproduction logs outside preserved scientific evidence."
+  ],
+  "files": [
+    {
+      "path": "scripts/reproduce-module.sh",
+      "sha256": "dd33894849ba7f1f6d05594cf05130be5ca4b9a47868fc696b2dca2edf953ad9"
+    },
+    {
+      "path": "scripts/reproduce-all.sh",
+      "sha256": "14a753487334e8be5f3e1f9836bd6d373acb75c984b0a78f78c4f6a4ddba89c6"
+    },
+    {
+      "path": "historical-scripts/check-module-scientific-replay.sh",
+      "sha256": "ef5bc165eacd70f16ac720c4f3c039e06051de72ed2f8ddc483c82c859d05c53"
+    },
+    {
+      "path": "historical-scripts/check-all-scientific-replay.sh",
+      "sha256": "179c63d0c3628db1d6a1affb1557c5e4651ef819bcbcebca8199c255eceff8d5"
+    },
+    {
+      "path": "scripts/check-module.sh",
+      "sha256": "56ffe2ca9ae7661010b07bc9fb1e06ebc3e92f402c0b66b892eb2bfad7a5d3a4"
+    },
+    {
+      "path": "scripts/check-all.sh",
+      "sha256": "45912110fb5ab80505c6173a3eaac1c9d8b761c43e2be0b7d4acee300ca56426"
+    }
+  ],
+  "compatibility_names": "check-module.sh/check-all.sh forward only to the guarded public successor; exact old helpers remain historical.",
+  "source_failure_semantics": "Standalone source under set -e; failure inside the environment cannot be suppressed by an OR/if context.",
+  "positive_smokes": [
+    {
+      "module": "AllJoinedControls",
+      "exit_code": 0,
+      "log": "packaging-evidence/main-helper-smoke/AllJoinedControls.log",
+      "log_sha256": "2ee91885dab993b3545b68780921d2bdc4e90c27d615118b67671800595a081f",
+      "source_sha256": "0469bca07f0057d734ea479380f4e33cc45e6f673ab1aa71be93ca141c549912"
+    },
+    {
+      "module": "AllMixedRepresentation",
+      "exit_code": 0,
+      "log": "packaging-evidence/main-helper-smoke/AllMixedRepresentation.log",
+      "log_sha256": "802138cd3796d570e8cf6f6562472542b19444deda63d75f61682839a2ad6547",
+      "source_sha256": "f9a38bd8871b397b5fb5c668841585ee4004edb3a470db2136d89d22c62d80ea"
+    }
+  ],
+  "scientific_evidence_directory_unchanged": true,
+  "fresh_path_contains_spaces": true,
+  "supplied_environment_used": true,
+  "smoke_scope": "Two dependency-using module compilations exercising direct module and forwarded all routes; not a fresh 81-module scientific replay."
+}

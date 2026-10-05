@@ -1,0 +1,55 @@
+{
+  "status": "VERIFIED_EXACT_ADMISSION_AND_NUCLEUS_INPUTS",
+  "files": [
+    {
+      "path": "dependent-all-frontier/ACCEPTED_NUCLEUS_BINDING_ADDENDUM_v1.md",
+      "bytes": 10453,
+      "sha256": "066f57dbed0e8f8a8da5f26c9006dfe37b8a311e65dcf894701e3fcd674e9214"
+    },
+    {
+      "path": "dependent-all-frontier/ACCEPTED_NUCLEUS_BINDING_v1.json",
+      "bytes": 12694,
+      "sha256": "cf990b0e8cbed3c9e4903b761038cafdfa7b747681a095b0f35dad72abe8c473"
+    },
+    {
+      "path": "dependent-all-frontier/DEPENDENT_ALL_DESIGN_v5.md",
+      "bytes": 27517,
+      "sha256": "f4eb382dc54e142b14d943affe8602b8dbb2f3097eaea8f6e630f6d182e83545"
+    },
+    {
+      "path": "dependent-all-frontier/INPUT_IDENTITIES_v1.json",
+      "bytes": 3780,
+      "sha256": "7a5211f16b2a61cb4422343add47ecc93ef79eb0fbd2cc7bdeb7f5c795e9ba9f"
+    },
+    {
+      "path": "dependent-all-design/ACCEPTED_NUCLEUS_ADDENDUM_v1.md",
+      "bytes": 4668,
+      "sha256": "f01d93272cd1f805b647d0799b1c97df8a6207a01f7bb281fa118908990c0ca5"
+    },
+    {
+      "path": "dependent-all-design/ACCEPTED_NUCLEUS_CHECK_v1.json",
+      "bytes": 19571,
+      "sha256": "c5bbcf834a44b2f21fbccbca9b2e1a92b857d78ebc181dd6a842f583ab9b4bb1"
+    },
+    {
+      "path": "dependent-all-design/REVIEW_v2.md",
+      "bytes": 10547,
+      "sha256": "e6604b05686d58e8137b0458807e9498f6376ff6518738b457fe0732e4d4f142"
+    },
+    {
+      "path": "typed-context-nucleus/REVIEW.md",
+      "bytes": 10498,
+      "sha256": "6e1832ad33853ba245c46ef65e7eb560bfb79f76ea5c566b5488a1b223a856c5"
+    },
+    {
+      "path": "typed-context-nucleus/SOURCE_IDENTITIES.json",
+      "bytes": 24163,
+      "sha256": "729e8924409dde299ebb0a9a57e4d59ca3ba8162ae71e877fbaf108023883490"
+    },
+    {
+      "path": "typed-context-nucleus/VERIFICATION.json",
+      "bytes": 5476,
+      "sha256": "e9a883c382814585fe1c47188e5df7e63e321e04d5f7490e0d9908ddfc488720"
+    }
+  ]
+}

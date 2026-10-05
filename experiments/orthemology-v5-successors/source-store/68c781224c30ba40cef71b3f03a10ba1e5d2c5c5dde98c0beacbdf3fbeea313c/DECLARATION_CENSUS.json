@@ -1,0 +1,84 @@
+{
+  "declarations": [
+    {
+      "kind": "def",
+      "name": "P01NormalizationBoundary.wrapper"
+    },
+    {
+      "kind": "def",
+      "name": "P01NormalizationBoundary.t"
+    },
+    {
+      "kind": "def",
+      "name": "P01NormalizationBoundary.p"
+    },
+    {
+      "kind": "def",
+      "name": "P01NormalizationBoundary.oldIdentity"
+    },
+    {
+      "kind": "theorem",
+      "name": "P01NormalizationBoundary.eval_p"
+    },
+    {
+      "kind": "def",
+      "name": "P01NormalizationBoundary.tree"
+    },
+    {
+      "kind": "theorem",
+      "name": "P01NormalizationBoundary.tree_supported"
+    },
+    {
+      "kind": "theorem",
+      "name": "P01NormalizationBoundary.old_typed"
+    },
+    {
+      "kind": "theorem",
+      "name": "P01NormalizationBoundary.new_typed"
+    },
+    {
+      "kind": "theorem",
+      "name": "P01NormalizationBoundary.new_finite_target"
+    },
+    {
+      "kind": "theorem",
+      "name": "P01NormalizationBoundary.target_inhabited"
+    },
+    {
+      "kind": "theorem",
+      "name": "P01NormalizationBoundary.application_S"
+    },
+    {
+      "kind": "theorem",
+      "name": "P01NormalizationBoundary.application_K"
+    },
+    {
+      "kind": "theorem",
+      "name": "P01NormalizationBoundary.application_returns"
+    },
+    {
+      "kind": "theorem",
+      "name": "P01NormalizationBoundary.wrapper_step"
+    },
+    {
+      "kind": "theorem",
+      "name": "P01NormalizationBoundary.wrapper_red"
+    },
+    {
+      "kind": "theorem",
+      "name": "P01NormalizationBoundary.wrapper_normal"
+    },
+    {
+      "kind": "theorem",
+      "name": "P01NormalizationBoundary.no_normal_reduct"
+    },
+    {
+      "kind": "theorem",
+      "name": "P01NormalizationBoundary.no_finite_source_representative"
+    },
+    {
+      "kind": "theorem",
+      "name": "P01NormalizationBoundary.boundary_control"
+    }
+  ]
+}

@@ -1,0 +1,20 @@
+{
+  "inputs": [
+    {
+      "path": "evidence/POLYMORPHIC_NONNORMALIZATION_ADMISSION_v1.md",
+      "sha256": "f0cab5068c0ea6205a51d07d1fd3686b8551417f749ad55c327fb1a4c2b39851"
+    },
+    {
+      "path": "evidence/DESIGN_REVIEW_v1.md",
+      "sha256": "be25d5f4177387c99909bd173009e391ea80be6335e8ba5bcc452b5dd436fa5d"
+    },
+    {
+      "path": "evidence/REVIEW.md",
+      "sha256": "963ff1bc8b09a31637ed9b616410807bd97d1565a6da6d5944573fd4e0bbba21"
+    },
+    {
+      "path": "evidence/VERIFICATION.json",
+      "sha256": "91337bcde0c4e2f83e4568a6744f29b85b1c1dc24150cee2d35d3bfa609a5460"
+    }
+  ]
+}

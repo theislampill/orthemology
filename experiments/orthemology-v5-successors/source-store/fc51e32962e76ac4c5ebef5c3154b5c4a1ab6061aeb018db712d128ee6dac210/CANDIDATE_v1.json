@@ -1,0 +1,45 @@
+{
+  "candidate": "v1",
+  "status": "kernel-checked; independent review pending",
+  "checked_utc": "2026-10-03T18:34:47.587244+00:00",
+  "modules": [
+    {
+      "module": "SubstitutionSyntax",
+      "path": "sources/SubstitutionSyntax.lean",
+      "sha256": "ad4e0896abf3a7a3354a14db6743349421520d10eca0790cd632821ecd995649",
+      "bytes": 9055
+    },
+    {
+      "module": "SubstitutionAdmissibility",
+      "path": "sources/SubstitutionAdmissibility.lean",
+      "sha256": "6ae02ec07b67a81f3019192118e44d4ac37cd26f9ad61f09831c8fafd55ce121",
+      "bytes": 6952
+    },
+    {
+      "module": "SubstitutionControls",
+      "path": "sources/SubstitutionControls.lean",
+      "sha256": "c3d31d2c24e9db193bbe60801bffdbc54e1a61ddb13a21ca19672259c57e7dec",
+      "bytes": 8704
+    },
+    {
+      "module": "AdmissibilityContract",
+      "path": "sources/AdmissibilityContract.lean",
+      "sha256": "7f6bc01a5df473be63639f5d07941bce1b3dce94e85397a758e8513af99df339",
+      "bytes": 337
+    },
+    {
+      "module": "SubstitutionReadback",
+      "path": "sources/SubstitutionReadback.lean",
+      "sha256": "0a0b469b9b874b9ec4bf6d1d3c94e4214a14d7ca90961b0d6e6b14cbd4a76137",
+      "bytes": 3135
+    }
+  ],
+  "input_manifest_sha256": "b7500882ab904ebc84f3f28a036d687a54f5f023eac839b6177a1d65b679874f",
+  "dependency_modules": 28,
+  "logical_axioms": [
+    "propext",
+    "Quot.sound"
+  ],
+  "custom_axioms": false,
+  "admitted_holes": false
+}

@@ -1,0 +1,39 @@
+{
+  "status": "INDEPENDENTLY_ACCEPTED_BOUNDED_DEPENDENT_ALL_TYPED_CONTEXTS",
+  "source_manifest": {
+    "path": "SOURCE_IDENTITIES.json",
+    "sha256": "1a89c375fc25c1da27afcddcc38cc999d74cb65c0e34a78a33fcd0175ef5e858"
+  },
+  "independent_review": {
+    "path": "review/REVIEW.md",
+    "sha256": "963ff1bc8b09a31637ed9b616410807bd97d1565a6da6d5944573fd4e0bbba21"
+  },
+  "independent_verification": {
+    "path": "review/VERIFICATION.json",
+    "sha256": "91337bcde0c4e2f83e4568a6744f29b85b1c1dc24150cee2d35d3bfa609a5460"
+  },
+  "author_source_replay": {
+    "path": "FINAL_REPLAY.json",
+    "sha256": "3a1d7df43c27c0b640b92e20627d664b14dde315820732f51327d128c534de38"
+  },
+  "candidate_modules": 81,
+  "accepted_dependencies_unchanged": 47,
+  "new_modules_including_readback": 34,
+  "candidate_public_declarations": 588,
+  "independent_additional_declarations": 44,
+  "no_custom_axioms_sorry_or_unsafe": true,
+  "canonical_adoption": false,
+  "full_U11_closure": false,
+  "eleventh_tranche_closure": false,
+  "twelfth_authority": false,
+  "publication": false,
+  "external_contacts": false,
+  "distribution_packaging": "Source/review identity unchanged; public guarded helpers and narrow log projection independently checked. Exact final ZIP membership is qualified separately.",
+  "private_archive": {
+    "path": "Dependent_All_Accepted_Source_v1_20261003.zip",
+    "sha256": "bbbdbecaea7f5075e34067116e05482668ca4b524aedb1e90b1c900b9412057b",
+    "public_delivery": false
+  },
+  "public_projection": "PUBLIC_PROJECTION.json",
+  "portability_guard_audit": "packaging-evidence/PORTABILITY_GUARD_AUDIT_v1.json"
+}

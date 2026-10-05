@@ -1,0 +1,94 @@
+{
+  "status": "ACCEPTED_BOUNDED_DEPENDENT_ALL_TYPED_CONTEXTS",
+  "basis": "Complete frozen v5 contract and accepted-nucleus reconciliation; automated independent review, not human-specialist validation",
+  "candidate_manifest_sha256": "1a89c375fc25c1da27afcddcc38cc999d74cb65c0e34a78a33fcd0175ef5e858",
+  "candidate_modules": 81,
+  "accepted_inherited_modules_unchanged": 47,
+  "new_modules_including_readback": 34,
+  "independent_control_modules": 5,
+  "independent_final_readback_modules": 1,
+  "all_candidate_source_bytes_match": true,
+  "all_bound_sources_independently_compiled": true,
+  "candidate_objects_used": false,
+  "candidate_public_declarations": 588,
+  "independent_declarations": 44,
+  "total_transitive_axiom_gate_count": 632,
+  "observed_transitive_axiom_union": [
+    "Classical.choice",
+    "Quot.sound",
+    "propext"
+  ],
+  "compiler": "Lean 4.19.0",
+  "compiler_sha256": "92c3d35b5bfaa5e0fea413a775d504cf46cd95e1345df61c2274f76779e7e023",
+  "compile_limits": {
+    "serial_review_lanes": 1,
+    "threads_per_process": 1,
+    "timeout_seconds_per_module": 180,
+    "heartbeat_recursion": "defaults",
+    "global_compiler_ceiling": 2
+  },
+  "compiler_lane_released_host_utc": "2026-10-03T20:33:16Z",
+  "shell_clock_warning": "commands.tsv uses the executor clock, which differs from host UTC. Treat these fields as local-order observations.",
+  "historical_failed_attempts": [
+    {
+      "phase": "interim-replay",
+      "module": "AllSyntax",
+      "sha256": "633c8de0c13b7fd2972710836ed6ab6bd85f7b86145e7c33a32fc38a7e6ddc46",
+      "exit_code": 1
+    },
+    {
+      "phase": "control-first",
+      "module": "IndependentMalformedReplacement",
+      "sha256": "3765b8d20f9959c20f508570577a455284afea12630418d2a6a46c8d882496cd",
+      "exit_code": 1
+    }
+  ],
+  "historical_failures_terminal": "repaired and independently rechecked; exact historical source/logs retained; no failed attempt counted as successful evidence",
+  "packaging_correction": "Current compile helper requires explicit TOOLCHAIN_ENV and hash-verifies existing toolchain. Prior implicit-relative helper retained as history. Explicit-environment smoke passed. No proof source altered.",
+  "unresolved_bounded_contract_findings": [],
+  "canonical_changes": false,
+  "publication": false,
+  "outside_contacts": false,
+  "bindings": [
+    {
+      "path": "REVIEW.md",
+      "sha256": "963ff1bc8b09a31637ed9b616410807bd97d1565a6da6d5944573fd4e0bbba21",
+      "bytes": 10875
+    },
+    {
+      "path": "SOURCE_IDENTITIES.json",
+      "sha256": "8616b51cb18ddba579b2dec072ca8ddc1823765b58553cb46227720fe1a62c91",
+      "bytes": 17514
+    },
+    {
+      "path": "LOG_IDENTITIES.json",
+      "sha256": "67ad5dba74587e2da57008be8c12cb8a8c62d27970728e4764ec0d4e66b452c1",
+      "bytes": 24878
+    },
+    {
+      "path": "FINAL_DECLARATIONS.json",
+      "sha256": "42416e139d31ae4ad7066468aa8e71c093437f1a42062ac1a48d0b1c5bbafed3",
+      "bytes": 18705
+    },
+    {
+      "path": "CANDIDATE_SOURCE_IDENTITIES.json",
+      "sha256": "1a89c375fc25c1da27afcddcc38cc999d74cb65c0e34a78a33fcd0175ef5e858",
+      "bytes": 16239
+    },
+    {
+      "path": "CANDIDATE_DECLARATION_CENSUS.json",
+      "sha256": "fa923cab824a67805eaf6a470f3eef690d427120b164f0d13936950ad530259d",
+      "bytes": 83339
+    },
+    {
+      "path": "scripts/compile-one.sh",
+      "sha256": "86d5883e8435bf49f3eea450a04f9d2c903fb2fb0b9f850f41ac1c614a330e9c",
+      "bytes": 1305
+    },
+    {
+      "path": "historical-scripts/compile-one-before-explicit-toolchain.sh",
+      "sha256": "02571ecda136207e6f5c7acca3ff7d74e14b790240611f48ba7748ef8d9375c1",
+      "bytes": 1259
+    }
+  ]
+}

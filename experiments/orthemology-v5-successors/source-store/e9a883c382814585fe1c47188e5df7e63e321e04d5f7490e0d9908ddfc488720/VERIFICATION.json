@@ -1,0 +1,144 @@
+{
+  "schema": "typed-context-independent-verification-v1",
+  "status": "ACCEPTED_BOUNDED_TYPED_TELESCOPE_NUCLEUS",
+  "qualification": "independent automated source/kernel review; not human-specialist validation",
+  "candidate_records": [
+    {
+      "path": "../CANDIDATE_v1.json",
+      "sha256": "672ec897bd0b3bfa833782a7c10b298ff71f7449fb9a3d9cd1d56d8c7f0662e3",
+      "bytes": 1117
+    },
+    {
+      "path": "../VERIFICATION_v1.json",
+      "sha256": "d375cf1b1e0e3a220a6fd10dfd214fab6afb35e595fd131ccf4fe7c9459268ab",
+      "bytes": 9668
+    },
+    {
+      "path": "../RESULT_SCOPE.md",
+      "sha256": "54fe188c30e4bdb113fcea98079e2faed7930a9fe36c86b140725d28f06e7c81",
+      "bytes": 6945
+    },
+    {
+      "path": "../CHECKED_SCOPE.md",
+      "sha256": "a8dac2778a7e2bcc4014868679c2c6bba79807fba6d5c4f302b1cae495772f26",
+      "bytes": 7415
+    }
+  ],
+  "frozen_design_sha256": "21a1016f067499fc087fe0eed26456517db20e3eb050189c9aa3160d549564f2",
+  "frozen_design_review_sha256": "63f3b4803a6d59de4a5aadebd003df9469cd7e77414dc1a384abc8ea8bac3a86",
+  "sources": {
+    "path": "SOURCE_IDENTITIES.json",
+    "sha256": "729e8924409dde299ebb0a9a57e4d59ca3ba8162ae71e877fbaf108023883490",
+    "bytes": 24163
+  },
+  "source_count": 47,
+  "new_source_count": 17,
+  "independent_controls_and_readbacks": [
+    {
+      "path": "sources/IndependentEndpointControls.lean",
+      "sha256": "05b13737c47cf4987d0a8892a8e791930a8da714684d8acaccb4dac81e1d2f9e",
+      "bytes": 2980
+    },
+    {
+      "path": "sources/IndependentNucleusContracts.lean",
+      "sha256": "bb2030369ada2d2bf6e355e8f92931989eb4359862169ec41912e610b1b7a2a0",
+      "bytes": 3311
+    },
+    {
+      "path": "sources/IndependentBoundaryReadback.lean",
+      "sha256": "58304f156fdd4f5fbf7b2e485e40497e33d585a86263f88340b03c9f11517c10",
+      "bytes": 457
+    },
+    {
+      "path": "sources/IndependentLegacyContracts.lean",
+      "sha256": "f5410f194c49c64cfbf64786e4afb29255c49439a72ce47763126fd57cc64e7e",
+      "bytes": 3181
+    },
+    {
+      "path": "sources/IndependentAllDeclarationAudit.lean",
+      "sha256": "7876154e4e8adcbd677bc79956b8f1121d15a36737d2587f4dbf193261461950",
+      "bytes": 10640
+    }
+  ],
+  "exact_command_history": {
+    "path": "logs/commands.tsv",
+    "sha256": "c189e6e32ea2abe9b3da28252f893f861104c5d5e3d09a14d2423f318fb5a283",
+    "bytes": 8517
+  },
+  "log_manifest": {
+    "path": "LOG_IDENTITIES.json",
+    "sha256": "9dc5bf25a1ae7423bb3102c835473088d137026a5d7a8d267636ae8f0ce64122",
+    "bytes": 11408
+  },
+  "historical_control_sources": [
+    {
+      "path": "historical-sources/control-first-IndependentEndpointControls.lean",
+      "sha256": "d595f2d0d0db210194466dc8a2160b9da688c3d56a112f1c13ba3c94b5177bbf",
+      "bytes": 2413
+    },
+    {
+      "path": "historical-sources/control-qualified-IndependentEndpointControls.lean",
+      "sha256": "c69f9c8314691bec3a02163746a7764a9f0b522156bfe7a453a10a186e0a32fa",
+      "bytes": 2449
+    },
+    {
+      "path": "historical-sources/control-scoping-IndependentEndpointControls.lean",
+      "sha256": "df3267052b73fde4feec94478b504e67ceedf0627ba5e9f22b6825b0c2d5a84e",
+      "bytes": 2960
+    },
+    {
+      "path": "historical-sources/independent-contracts-IndependentNucleusContracts.lean",
+      "sha256": "34e263827f6bb2e050f1e9a88746176644f3d51bafb6c6870f427ffa33044c70",
+      "bytes": 3218
+    },
+    {
+      "path": "historical-sources/independent-legacy-IndependentLegacyContracts.lean",
+      "sha256": "87ed5c9272a7033f6676f1f2761cfa8ac751c42eb8f9abb5e388f7852190696a",
+      "bytes": 2569
+    }
+  ],
+  "compiler": {
+    "toolchain": "restored Lean 4.19.0 / existing Mathlib",
+    "source_only_reconstruction": true,
+    "new_downloads_or_installs": false,
+    "jobs_per_process": 1,
+    "review_lane": "serial",
+    "global_lanes": "coordinated maximum two compiler processes across implementation and review",
+    "timeout_seconds_per_module": 180,
+    "heartbeat_and_recursion": "defaults",
+    "precompiled_candidate_object_imports": false
+  },
+  "declaration_readback_count": 300,
+  "transitive_axiom_gate_count": 300,
+  "axiom_allowlist": [
+    "propext",
+    "Quot.sound",
+    "Classical.choice"
+  ],
+  "observed_axiom_union": [
+    "propext",
+    "Quot.sound",
+    "Classical.choice"
+  ],
+  "custom_axioms_or_sorry_or_unsafe": false,
+  "resolved_review_findings": [
+    "Finite substitution unused tails changed from identity to atom zero to match D and all-index intrinsic Sub.tracks.",
+    "Legacy provenance changed from a Prop-proof index to a Type-valued constructor-faithful old-rule tree with exact erasure."
+  ],
+  "scope_clarification": "Legacy support covers displayed typing-tree polynomial occurrences, type/motive subexpressions, and displayed conversion endpoints. Original Prop-valued PolyConv remains unchanged; no recovery or census of internal conversion-proof transitivity witnesses is claimed.",
+  "no_canonical_mutation": true,
+  "no_publication_or_external_contact": true,
+  "excluded_credit": [
+    "full dependent All or old dependent self-instantiation",
+    "all old Has derivations or erased-proof provenance recovery",
+    "full U11/avenue9 completion",
+    "canonical unary carrier adoption",
+    "full normalization or frontend correctness",
+    "new credit for separately accepted unchanged-Has substitution"
+  ],
+  "review_report": {
+    "path": "REVIEW.md",
+    "sha256": "6e1832ad33853ba245c46ef65e7eb560bfb79f76ea5c566b5488a1b223a856c5",
+    "bytes": 10498
+  }
+}

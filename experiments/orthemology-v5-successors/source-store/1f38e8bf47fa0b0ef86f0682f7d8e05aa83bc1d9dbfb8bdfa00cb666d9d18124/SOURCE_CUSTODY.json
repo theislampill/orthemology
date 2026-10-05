@@ -1,0 +1,41 @@
+{
+  "schema": "typed-context-nucleus-custody-v1",
+  "status": "completed_and_independently_accepted",
+  "accepted_source_origin": {
+    "canonical_commit": "19de267cd41d2a5eeeb3eaf0b91562f706e2a916",
+    "canonical_tree": "08a6452e50e8e4791d02410d1c1732875e520f2e",
+    "outer_archive_sha256": "866c6ff6e74a67f2bc452b49a0ada05311c0c2601585ea166404719172bd8086",
+    "dependency_recovery_receipt_sha256": "010c444f90614ff88b3d566503d48ca119e54d4a6fa3cb1ffc214fa6b2252dee",
+    "exact_bytes_verified_before_copy": true,
+    "source_reconstruction_from_prose": false
+  },
+  "design": {
+    "version": "v4",
+    "sha256": "21a1016f067499fc087fe0eed26456517db20e3eb050189c9aa3160d549564f2",
+    "independent_admission_sha256": "63f3b4803a6d59de4a5aadebd003df9469cd7e77414dc1a384abc8ea8bac3a86"
+  },
+  "toolchain": {
+    "lean": "4.19.0",
+    "lean_binary_sha256": "92c3d35b5bfaa5e0fea413a775d504cf46cd95e1345df61c2274f76779e7e023",
+    "mathlib_revision": "c44e0c8ee63ca166450922a373c7409c5d26b00b",
+    "downloads_installs_bootstraps": false,
+    "threads_per_invocation": 1,
+    "module_timeout_seconds": 180,
+    "heartbeat_or_recursion_limits_raised": false,
+    "maximum_concurrent_compiler_invocations": 2,
+    "lane_policy": "Serial invocations within each lane; lane handoffs coordinated before independent reconstruction"
+  },
+  "preservation": {
+    "accepted_source_bytes_unchanged": true,
+    "raw_Conv_unchanged": true,
+    "PolyConv_unchanged": true,
+    "canonical_mutation": false,
+    "push_merge_publication_external_contacts": false
+  },
+  "qualification_limits": [
+    "Independent automated source/kernel qualification; exact final record is FINAL_DISPOSITION.json",
+    "No human-specialist validation",
+    "No full dependent All or full U11 closure",
+    "No canonical adoption"
+  ]
+}

@@ -1,0 +1,92 @@
+{
+  "status": "ACCEPTED_BOUNDED_POLYMORPHIC_SOURCE_NORMALIZATION_BOUNDARY",
+  "basis": "Automated independent source review and clean kernel replay; not human-specialist or empirical validation",
+  "accepted_inherited_modules": 48,
+  "candidate_modules": 2,
+  "independent_control_modules": 1,
+  "compiled_modules": 51,
+  "candidate_declarations_audited": 20,
+  "independent_control_declarations_audited": 4,
+  "candidate_objects_used": false,
+  "candidate_source_sha256": "dc41ea4ff297e4cd29501b1d1160195c2a1a4be2e91cbdd6f811bca1124152bc",
+  "all_compile_exit_codes_zero": true,
+  "observed_transitive_axiom_union": [
+    "Classical.choice",
+    "Quot.sound",
+    "propext"
+  ],
+  "compiler": "Lean 4.19.0",
+  "compiler_sha256": "92c3d35b5bfaa5e0fea413a775d504cf46cd95e1345df61c2274f76779e7e023",
+  "toolchain_environment_sha256": "1ff5b5d46f1e67ee0c007e658ef2cffb7270425f581237d76a5a64a645090129",
+  "compile_limits": {
+    "serial_review_lanes": 1,
+    "global_compiler_ceiling": 2,
+    "threads_per_process": 1,
+    "timeout_seconds_per_module": 180,
+    "heartbeat_recursion": "defaults"
+  },
+  "compiler_lane_released_host_utc": "2026-10-03T21:03:01Z",
+  "shell_clock_warning": "commands.tsv timestamps use executor clock and are local-order observations, not host UTC.",
+  "unresolved_findings": [],
+  "historical_independent_failures": [],
+  "author_history": "Maintained separately in candidate evidence; no failed author attempt counted as independent evidence.",
+  "canonical_changes": false,
+  "publication": false,
+  "outside_contacts": false,
+  "bindings": [
+    {
+      "path": "REVIEW.md",
+      "sha256": "2c67e22d0b19126c63fc9f1e476dd38d06174bd9208d816680165a64b437ea23",
+      "bytes": 6502
+    },
+    {
+      "path": "SOURCE_IDENTITIES.json",
+      "sha256": "564559d61ecda1f85bd8e92f50b942aa56414696bab10eaa57ee818f86f403df",
+      "bytes": 8420
+    },
+    {
+      "path": "INHERITED_SOURCE_IDENTITIES.json",
+      "sha256": "3dcf6b2ef6c83d72084c829d35978ee5dbb802dfc72213f3095cf17e6c69152f",
+      "bytes": 7906
+    },
+    {
+      "path": "LOG_IDENTITIES.json",
+      "sha256": "8c77358cfa6b8df128dc0d47f605765c0804f42749f9e48d82c4f740779a2183",
+      "bytes": 8849
+    },
+    {
+      "path": "AXIOM_READBACK.json",
+      "sha256": "5d32dae20207379a5461be822ffaaac4ecd2b670e1e12b98dcc20d9abb69dd70",
+      "bytes": 1736
+    },
+    {
+      "path": "dependency-order.txt",
+      "sha256": "aa7154423cdf0847f37a950a880486120711902c97ad16a2f93c55560f828816",
+      "bytes": 843
+    },
+    {
+      "path": "scripts/compile-one.sh",
+      "sha256": "7ba090b685925b1d01234d514e6939ad76b4507331e6fc4e5ed51f85a6f416ed",
+      "bytes": 1279
+    },
+    {
+      "path": "historical-scripts/compile-one-clean-replay.sh",
+      "sha256": "852909ec5e701156bcf876e21e5d510c60a7d176d6aa0f743665977377ab265a",
+      "bytes": 1210
+    }
+  ],
+  "controlling_inputs": [
+    {
+      "path": "../../reviews/final-scope/POLYMORPHIC_NONNORMALIZATION_ADMISSION_v1.md",
+      "sha256": "f0cab5068c0ea6205a51d07d1fd3686b8551417f749ad55c327fb1a4c2b39851"
+    },
+    {
+      "path": "../../reviews/normalization-boundary-design/DESIGN_REVIEW_v1.md",
+      "sha256": "be25d5f4177387c99909bd173009e391ea80be6335e8ba5bcc452b5dd436fa5d"
+    },
+    {
+      "path": "../../reviews/normalization-boundary-design/SOURCE_BOUND_DESIGN_INPUTS_v1.json",
+      "sha256": "a4b75382bc036ce16125402ba580ed86da0dfbf164f8f8859ac86d76df35cc69"
+    }
+  ]
+}

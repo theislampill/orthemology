@@ -1,0 +1,58 @@
+{
+  "declarations": {
+    "P01NormalizationBoundary.wrapper": [],
+    "P01NormalizationBoundary.t": [],
+    "P01NormalizationBoundary.p": [],
+    "P01NormalizationBoundary.oldIdentity": [],
+    "P01NormalizationBoundary.eval_p": [],
+    "P01NormalizationBoundary.tree": [
+      "propext",
+      "Quot.sound"
+    ],
+    "P01NormalizationBoundary.tree_supported": [
+      "propext",
+      "Quot.sound"
+    ],
+    "P01NormalizationBoundary.old_typed": [
+      "propext",
+      "Quot.sound"
+    ],
+    "P01NormalizationBoundary.new_typed": [
+      "propext",
+      "Classical.choice",
+      "Quot.sound"
+    ],
+    "P01NormalizationBoundary.new_finite_target": [
+      "propext",
+      "Classical.choice",
+      "Quot.sound"
+    ],
+    "P01NormalizationBoundary.target_inhabited": [],
+    "P01NormalizationBoundary.application_S": [],
+    "P01NormalizationBoundary.application_K": [],
+    "P01NormalizationBoundary.application_returns": [],
+    "P01NormalizationBoundary.wrapper_step": [],
+    "P01NormalizationBoundary.wrapper_red": [],
+    "P01NormalizationBoundary.wrapper_normal": [],
+    "P01NormalizationBoundary.no_normal_reduct": [],
+    "P01NormalizationBoundary.no_finite_source_representative": [
+      "propext",
+      "Classical.choice",
+      "Quot.sound"
+    ],
+    "P01NormalizationBoundary.boundary_control": [
+      "propext",
+      "Classical.choice",
+      "Quot.sound"
+    ],
+    "IndependentBoundaryControls.matching_is_not_opaque": [],
+    "IndependentBoundaryControls.matching_and_opaque_evaluate": [],
+    "IndependentBoundaryControls.wrapper_normal_iff": [],
+    "IndependentBoundaryControls.discarded_identity_has_normal_reduct": []
+  },
+  "union": [
+    "Classical.choice",
+    "Quot.sound",
+    "propext"
+  ]
+}

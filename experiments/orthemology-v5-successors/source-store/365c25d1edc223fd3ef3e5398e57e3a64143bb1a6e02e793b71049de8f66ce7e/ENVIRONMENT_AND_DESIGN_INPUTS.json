@@ -1,0 +1,41 @@
+{
+  "scope": "Existing P01DF.Has syntactic substitution admissibility",
+  "lean_version": "4.19.0",
+  "mathlib_revision": "c44e0c8ee63ca166450922a373c7409c5d26b00b",
+  "compiler_workers": 1,
+  "per_module_timeout_seconds": 180,
+  "heartbeat_and_recursion_limits": "defaults; no overrides",
+  "accepted_sources": "unchanged exact bytes",
+  "inputs": [
+    {
+      "path": "toolchain-restored/environment.sh",
+      "sha256": "1ff5b5d46f1e67ee0c007e658ef2cffb7270425f581237d76a5a64a645090129",
+      "bytes": 1225
+    },
+    {
+      "path": "toolchain-restored/RESTORATION_RECEIPT.json",
+      "sha256": "bdcbe537b888087fca905c541be85f19ced2a3916eaf159e08cc5c50ec67cc71",
+      "bytes": 4817
+    },
+    {
+      "path": "toolchain-restored/lean-toolchain-4.19.0/lean-4.19.0-linux/bin/lean",
+      "sha256": "92c3d35b5bfaa5e0fea413a775d504cf46cd95e1345df61c2274f76779e7e023",
+      "bytes": 8880
+    },
+    {
+      "path": "tranche11/reviews/type-frontier/SYNTACTIC_ADMISSIBILITY_DESIGN_v2.md",
+      "sha256": "08d27e6a424bc1a58fb8bb05faf39c2bb681d1ee8d19becc163bd7a6c1439427",
+      "bytes": 11201
+    },
+    {
+      "path": "tranche11/reviews/type-frontier/EXACT_EXISTING_RULES_AND_SUBSTITUTIONS_v1.md",
+      "sha256": "812388df1bb455797e9634e3e5388fe5a694be3593065ed83aa1daa368ccd148",
+      "bytes": 3586
+    },
+    {
+      "path": "tranche11/reviews/substitution-design/SYNTACTIC_ADMISSIBILITY_DESIGN_REVIEW_v1.md",
+      "sha256": "717a576040facbc78e76651c16b6f106c2d934b2528a43be666e1a90a30a2bae",
+      "bytes": 16885
+    }
+  ]
+}

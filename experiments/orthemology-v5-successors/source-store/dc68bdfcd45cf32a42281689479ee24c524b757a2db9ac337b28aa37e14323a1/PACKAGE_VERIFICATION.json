@@ -1,0 +1,31 @@
+{
+  "status": "PASS",
+  "checks": [
+    {
+      "module": "AdmissibilityContract",
+      "source_sha256": "7f6bc01a5df473be63639f5d07941bce1b3dce94e85397a758e8513af99df339",
+      "started_utc": "2026-10-03T18:39:01Z",
+      "finished_utc": "2026-10-03T18:39:02Z",
+      "exit_code": 0,
+      "log": {
+        "path": "logs/package-path-AdmissibilityContract.log",
+        "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+        "bytes": 0
+      }
+    },
+    {
+      "module": "IndependentControls",
+      "source_sha256": "5ef51c33cee2464f514881e06bd9b647db355cb4297bbdd6276284dd5a720b2f",
+      "started_utc": "2026-10-03T18:39:02Z",
+      "finished_utc": "2026-10-03T18:39:03Z",
+      "exit_code": 0,
+      "log": {
+        "path": "logs/package-path-IndependentControls.log",
+        "sha256": "856b9ab72596264cab04c9ebf9191b78b98e2b49d5636e450a638dbf1bf41acd",
+        "bytes": 947
+      }
+    }
+  ],
+  "shell_syntax_check": "bash -n scripts/check-module.sh scripts/verify.sh; exit 0",
+  "frozen_hash_check": "python3 scripts/verify-inputs.py; exit 0"
+}
