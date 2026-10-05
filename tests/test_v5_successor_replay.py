@@ -592,8 +592,8 @@ class SuccessorReplayTests(unittest.TestCase):
                  '--lean', '{tool:lean}', '--mathlib', '{dependency:mathlib}', '--output', '{out}/original']}
         parent = {'id': 'original', 'terminal': 'COMPLETED', 'exit_code': 0, 'started_at': '2026-10-05T00:00:00Z',
                   'ended_at': '2026-10-05T00:00:03Z', 'log_sha256': sha('parent')}
-        plan = {'drivers': {'driver': driver}, 'modules': {n: {'source_id': n} for n, _, _ in r.ATTR_PATHS},
-                'targets': {}, 'contents': {}, 'stages': {'original': stage}}
+        plan = {'drivers': {'driver': driver}, 'modules': {n: {'source_id': n, 'imports': ['Init']} for n, _, _ in r.ATTR_PATHS},
+                'official': {'Init': {}}, 'targets': {}, 'contents': {}, 'stages': {'original': stage}}
         plan['attribution_children'] = r.attribution_specs('archive', plan)
         mappings = {'out': out, 'tool:lean': self.base / 'lean', 'archive:archive': self.base / 'archive'}
         rows = []; lines = []; stages = {'original': parent}
@@ -756,7 +756,7 @@ class SuccessorReplayTests(unittest.TestCase):
                   'ended_at': '2026-10-05T00:00:03Z', 'log_sha256': sha('parent')}
         pin = {'name': 'mathlib', 'revision': 'a' * 40}
         plan = {'core_children': {}, 'contents': {'pins': json.dumps({'packages': [pin]}).encode()},
-                'file_paths': {'DEPENDENCY_PINS.json': {'source_id': 'pins'}}, 'targets': {}}
+                'file_paths': {'DEPENDENCY_PINS.json': {'source_id': 'pins'}}, 'targets': {}, 'modules': {}, 'official': {'Init': {}}}
         mappings = {'out': output, 'archive:archive': output / 'source', 'tool:lean': self.base / 'lean'}
         rows = []; progress = []
         for i in range(168):
@@ -768,6 +768,7 @@ class SuccessorReplayTests(unittest.TestCase):
                 source = ''.join('#print axioms Test.t' + str(n) + '\n' for n in range(13)).encode()
                 text = ''.join("'Test.t" + str(n) + "' depends on axioms: [propext]\n" for n in range(13))
             plan['contents'][name] = source
+            plan['modules'][name] = {'source_id': name, 'imports': r.imports(source.decode())}
             actual = [r.core_expand(arg, mappings) for arg in spec['argv']]
             log = output / spec['log']; log.parent.mkdir(parents=True, exist_ok=True); log.write_bytes(text.encode())
             (trace / f'{i:04}.log').write_bytes(log.read_bytes())
@@ -1349,6 +1350,82 @@ run_cmd do
         self.assertEqual(receipt['replay_evidence']['target_audits'], [])
 
 
+class ImportedReadbackTests(unittest.TestCase):
+    @classmethod
+    def setUpClass(cls):
+        spec = importlib.util.spec_from_file_location('imported_readback_adapter', SCRIPT)
+        cls.r = importlib.util.module_from_spec(spec); spec.loader.exec_module(cls.r)
+
+    def plan(self, bodies, targets=()):
+        return {'modules': {name: {'name': name, 'source_id': name, 'imports': self.r.imports(body)} for name, body in bodies.items()},
+                'contents': {name: body.encode() for name, body in bodies.items()},
+                'official': {'Init': {}}, 'targets': {str(i): row for i, row in enumerate(targets)}}
+
+    def names(self, bodies, source='Readback', targets=()):
+        return self.r.source_readback_names_in_plan(source, self.plan(bodies, targets))
+
+    def test_open_names_resolve_from_exact_transitive_imports_and_multiline_declarations(self):
+        bodies = {'Owner': 'namespace Exact\ntheorem first : True := True.intro\ntheorem second\n    : True := first\nend Exact\n',
+                  'Bridge': 'import Owner\n', 'Readback': 'import Bridge\nopen Exact\n#print axioms first\n#print axioms second\n'}
+        self.assertEqual(self.names(bodies), ['Exact.first', 'Exact.second'])
+        log = "'Exact.first' does not depend on any axioms\n'Exact.second' does not depend on any axioms\n"
+        self.r.check_original_readbacks(log, self.names(bodies))
+        with self.assertRaises(ValueError): self.r.check_original_readbacks(log.replace('Exact.first', 'Other.first'), self.names(bodies))
+
+    def test_unimported_or_changed_owner_cannot_supply_opened_readback(self):
+        bodies = {'Owner': 'namespace Exact\ntheorem proof : True := True.intro\nend Exact\n',
+                  'Readback': 'open Exact\n#print axioms proof\n'}
+        self.assertEqual(self.names(bodies, targets=[{'name': 'Exact.proof'}]), ['proof'])
+        bodies['Readback'] = 'import Owner\nopen Exact\n#print axioms proof\n'
+        self.assertEqual(self.names(bodies), ['Exact.proof'])
+        bodies['Owner'] = bodies['Owner'].replace('theorem proof', 'theorem different')
+        with self.assertRaises(ValueError):
+            self.r.check_original_readbacks("'Exact.proof' does not depend on any axioms\n", self.names(bodies))
+
+    def test_open_scope_and_named_selection_do_not_leak(self):
+        bodies = {'Owner': 'namespace Exact\ndef value : Nat := 1\ntheorem proof : True := True.intro\nend Exact\n',
+                  'Readback': 'import Owner\nsection\nopen Exact (\n proof\n)\n#print axioms proof\n#print axioms value\nend\n#print axioms proof\n'}
+        self.assertEqual(self.names(bodies), ['Exact.proof', 'value', 'proof'])
+
+    def test_ambiguous_opened_names_are_not_resolved_by_target_map_or_output(self):
+        bodies = {'One': 'namespace One\ntheorem proof : True := True.intro\nend One\n',
+                  'Two': 'namespace Two\ntheorem proof : True := True.intro\nend Two\n',
+                  'Readback': 'import One Two\nopen One Two\n#print axioms proof\n'}
+        with self.assertRaises(ValueError): self.names(bodies, targets=[{'name': 'One.proof'}])
+        bodies['Readback'] = 'import One Two\nopen One Two\nnamespace Local\ntheorem proof : True := True.intro\n#print axioms proof\nend Local\n'
+        self.assertEqual(self.names(bodies), ['Local.proof'])
+
+    def test_comments_strings_private_names_and_later_declarations_do_not_authorize_open(self):
+        bodies = {'Owner': 'namespace Exact\n-- theorem hidden : True := True.intro\ndef text := "theorem hidden : True := True.intro"\nprivate theorem hidden : True := True.intro\nend Exact\n',
+                  'Readback': 'import Owner\nopen Exact\n#print axioms hidden\nnamespace Exact\ntheorem later : True := True.intro\nend Exact\n'}
+        self.assertEqual(self.names(bodies), ['hidden'])
+        bodies['Readback'] = 'import Owner\nopen Exact hiding text\n#print axioms hidden\n'
+        with self.assertRaises(ValueError): self.names(bodies)
+
+    def test_import_closure_must_match_source_and_must_not_cycle(self):
+        bodies = {'Owner': 'namespace Exact\ntheorem proof : True := True.intro\nend Exact\n',
+                  'Readback': 'open Exact\n#print axioms proof\n'}
+        plan = self.plan(bodies); plan['modules']['Readback']['imports'].append('Owner')
+        with self.assertRaises(ValueError): self.r.source_readback_names_in_plan('Readback', plan)
+        bodies['Readback'] = 'import Owner\nopen Exact\n#print axioms proof\n'; bodies['Owner'] = 'import Readback\n' + bodies['Owner']
+        with self.assertRaises(ValueError): self.names(bodies)
+
+    @unittest.skipUnless(os.environ.get('V5_REPLAY_TEST_LEAN'), 'Explicit official Lean test binding required')
+    def test_official_lean_imported_readbacks_match_source_derived_names(self):
+        bodies = {'Owner': 'namespace Exact\ntheorem proof\n    : True := True.intro\nend Exact\n',
+                  'Readback': 'import Owner\nopen Exact\n#print axioms proof\n'}
+        expected = self.names(bodies)
+        with tempfile.TemporaryDirectory() as temp:
+            root = Path(temp); env = dict(os.environ, LEAN_PATH=temp); lean = os.environ['V5_REPLAY_TEST_LEAN']
+            for name, body in bodies.items(): (root / (name + '.lean')).write_text(body, encoding='utf8')
+            for name in bodies:
+                log = root / (name + '.log')
+                argv = [lean, '-j1'] + (['-o', str(root / 'Owner.olean')] if name == 'Owner' else []) + [str(root / (name + '.lean'))]
+                result = self.r.run_process(argv, root, env, log, 30)
+                self.assertEqual((result['terminal'], result['exit_code']), ('COMPLETED', 0), log.read_text())
+            self.r.check_original_readbacks((root / 'Readback.log').read_text(), expected)
+
+
 class AuditContinuationExecutorTests(unittest.TestCase):
     @classmethod
     def setUpClass(cls):
@@ -1698,7 +1775,12 @@ class AuditContinuationValidationTests(unittest.TestCase):
              mock.patch.object(r, '_ac_eligible_prior', return_value=(prior, old, {}, {})), \
              mock.patch.object(r, '_ac_retained_inputs'), mock.patch.object(r, '_ac_fresh_stages', return_value={'terminal': 'COMPLETED', 'exit_code': 1}):
             self.assertEqual(r.validate_audit_continuation(record, suite, {}, Path('.'), adapter=adapter)['outcome'], 'FAILED')
+            # This consumed executor may remain valid when unrelated recipes
+            # change the current adapter; the exact auditor/scope gates remain.
+            record['replay_evidence']['runner_sha256'] = '37f79cecd8cc76604c37a0d48288898abd22bd2fccdc0353f753ac31bdc34e89'
+            self.assertEqual(r.validate_audit_continuation(record, suite, {}, Path('.'), adapter=adapter)['outcome'], 'FAILED')
             for change, message in [({'runner_sha256': 'f' * 64}, 'Wrong executing continuation runner'),
+                                    ({'runner_sha256': r.AC_PRIOR['runner_sha256']}, 'Wrong executing continuation runner'),
                                     ({'cache_policy': 'CALLER_TRUSTED_CACHE'}, 'Unknown continuation schema/policy'),
                                     ({'accounting': {**r.AC_ACCOUNTING, 'new_custom_objects': 1}}, 'Duplicate or invented execution/build credit'),
                                     ({'accounting': {**r.AC_ACCOUNTING, 'new_custom_objects': False}}, 'Duplicate or invented execution/build credit'),

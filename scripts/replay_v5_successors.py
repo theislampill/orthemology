@@ -1113,7 +1113,7 @@ def history_collect_children(stage, parent, text, plan, output, mappings):
                               'expected_diagnostics': [{'literal': value} for value in HISTORY_DIAGNOSTICS]}, captured, data.decode(), {})
             else:
                 keys(row, {'stage', 'exit_code', 'command'}); require(row['command'] == actual_argv and not re.search(rb'sorryAx|warning:|error:', data), 'Original history positive child changed')
-                names = source_readback_names(source.decode(), plan['targets'].values())
+                names = source_readback_names_in_plan(spec['source_id'], plan)
                 if names: check_original_readbacks(data.decode(), names)
         hashes = {}
         if spec['output_path']:
@@ -1421,7 +1421,7 @@ def attribution_collect_children(stage, parent, text, plan, output, mappings):
             require(captured['output_hashes'] == {str(path): hashes[spec['output_path']]}, 'Original object changed after its physical child'); objects.update(hashes)
         else: require(captured['output_hashes'] == {}, 'Unexpected output credited to check-only child')
         if not spec['exit_code']:
-            names = source_readback_names(source.decode(), plan['targets'].values())
+            names = source_readback_names_in_plan(spec['source_id'], plan)
             if names: check_original_readbacks(data.decode(), names)
             if spec['id'] == 'AxiomAudit': require(len(names) == 50, 'Original 50-theorem readback census changed')
         children[(stage['id'], spec['id'])] = {'source_child_id': spec['id'], 'parent_stage_id': stage['id'], 'driver_sha256': driver['sha256'],
@@ -1469,7 +1469,7 @@ def core_collect_children(stage, parent, text, plan, output, mappings):
             hashes[spec['output_path']] = sha(path.read_bytes())
             require(row['object_sha256'] == hashes[spec['output_path']], 'Original object identity differs'); object_hashes.update(hashes)
         else:
-            names = source_readback_names(plan['contents'][spec['source_id']].decode(), plan['targets'].values())
+            names = source_readback_names_in_plan(spec['source_id'], plan)
             require(len(names) == 13, 'Original runtime theorem readback census changed'); check_original_readbacks(body, names)
         children[(stage['id'], spec['id'])] = {'source_child_id': spec['id'], 'parent_stage_id': stage['id'],
             'driver_sha256': CORE_FILES['replay.py'], 'parser_id': CORE_RECIPE, 'mode': 'NONEXECUTING_OBSERVATION',
@@ -2205,6 +2205,99 @@ def source_readback_names(text, targets):
     return names
 
 
+def _readback_source_symbols(text):
+    """Read explicit declarations and scoped simple opens, never compiler output."""
+    token = r"[A-Za-z_][A-Za-z0-9_'.]*"
+    lines = strip_lean(text).splitlines(); declarations = []; prints = []
+    current = ''; frames = []; opened = []; index = 0
+    while index < len(lines):
+        number = index; line = lines[index].strip(); index += 1
+        if line.startswith('open ') and '(' in line:
+            while line.count('(') > line.count(')'):
+                require(index < len(lines), 'Unclosed named open')
+                line += ' ' + lines[index].strip(); index += 1
+        found = re.fullmatch(r'namespace\s+(' + token + ')', line)
+        if found:
+            frames.append((current, list(opened))); name = found.group(1)
+            current = name[7:] if name.startswith('_root_.') else (current + '.' if current else '') + name
+            continue
+        if line == 'mutual' or re.fullmatch(r'(?:noncomputable\s+)?section(?:\s+[^\s]+)?', line):
+            frames.append((current, list(opened))); continue
+        if re.fullmatch(r'end(?:\s+[^\s]+)?', line):
+            require(frames, 'Unmatched readback source scope')
+            current, opened = frames.pop(); continue
+        if line.startswith('open '):
+            if line.startswith('open scoped '): continue
+            named = re.fullmatch(r'open\s+(' + token + r')\s*\(([^()]*)\)', line)
+            if named:
+                selected = named.group(2).split()
+                require(selected and all(re.fullmatch(token, n) for n in selected), 'Unsupported named open')
+                opened.append((current, named.group(1), selected))
+            else:
+                require(re.fullmatch(r'open\s+' + token + r'(?:\s+' + token + r')*', line) and
+                        not set(line.split()) & {'in', 'hiding', 'renaming'}, 'Unsupported readback open form')
+                opened.extend((current, name, None) for name in line[5:].split())
+            continue
+        declaration = re.sub(r'^(?:@\[[^\]]*\]\s*)+', '', line)
+        found = re.match(r'((?:(?:private|protected|noncomputable|unsafe|partial)\s+)*)(?:theorem|lemma|def|abbrev|opaque|axiom|inductive|structure|class)\s+(' + token + r')(?=\s|[({:]|$)', declaration)
+        if found and 'private' not in found.group(1).split():
+            name = found.group(2)
+            name = name[7:] if name.startswith('_root_.') else (current + '.' if current else '') + name
+            declarations.append((name, number))
+        found = re.fullmatch(r'#print\s+axioms\s+(' + token + ')', line)
+        if found: prints.append((found.group(1), current, list(opened), number))
+    require(not frames, 'Unclosed readback source scope')
+    return declarations, prints
+
+
+def source_readback_names_in_plan(source_id, plan):
+    """Add source-owned open/import resolution to the established lexical reader.
+
+    Only exact explicit declarations in the validated transitive custom imports
+    can resolve an open name. Existing fully qualified/generated-name handling
+    remains unchanged. Ambiguity is refused rather than inferred from a log.
+    """
+    text = plan['contents'][source_id].decode('utf-8')
+    baseline = source_readback_names(text, plan['targets'].values())
+    if not baseline: return []
+    modules = plan['modules']; roots = [n for n, row in modules.items() if row['source_id'] == source_id]
+    require(len(roots) == 1, 'Readback source has no unique module owner')
+    selected = {}; active = set()
+    def visit(name):
+        require(name not in active, 'Readback import cycle')
+        if name in selected: return
+        if name not in modules:
+            require(name in plan['official'], 'Missing readback import source'); return
+        active.add(name); row = modules[name]; body = plan['contents'][row['source_id']].decode('utf-8')
+        require(imports(body) == row['imports'], 'Readback imports differ from exact source')
+        for dependency in row['imports']: visit(dependency)
+        selected[name] = _readback_source_symbols(body); active.remove(name)
+    visit(roots[0]); local = roots[0]; prints = selected[local][1]
+    require(len(prints) == len(baseline), 'Readback source command census changed')
+    result = []
+    for fallback, (literal, current, opened, position) in zip(baseline, prints):
+        available = {}
+        for module, (declarations, _) in selected.items():
+            for name, line in declarations:
+                if module != local or line < position: available.setdefault(name, []).append(module)
+        prefixes = current.split('.') if current else []
+        lexical = [literal[7:]] if literal.startswith('_root_.') else ['.'.join(prefixes[:i] + [literal]) for i in range(len(prefixes), -1, -1)]
+        resolved = next((name for name in lexical if name in available), None)
+        if resolved is None and not literal.startswith('_root_.'):
+            matches = set()
+            for context, namespace, only in opened:
+                if only is not None and literal not in only: continue
+                parts = context.split('.') if context else []
+                candidates = [namespace[7:]] if namespace.startswith('_root_.') else ['.'.join(parts[:i] + [namespace]) for i in range(len(parts), -1, -1)]
+                namespace = next((n for n in candidates if any(key.startswith(n + '.') for key in available)), None)
+                if namespace is not None and namespace + '.' + literal in available: matches.add(namespace + '.' + literal)
+            require(len(matches) <= 1, 'Ambiguous source-owned open readback')
+            if matches: resolved = next(iter(matches))
+        if resolved is not None: require(len(available[resolved]) == 1, 'Ambiguous readback declaration owner')
+        result.append(resolved if resolved is not None else fallback)
+    return result
+
+
 def _empirical_result(driver, stage, text, plan, output):
     recipe = driver['recipe']
     if recipe == 't15-empirical-tests-v1':
@@ -2442,8 +2535,7 @@ def execute_suite(suite, sources, root, output, tools, inputs, scope=None, *, re
             if (suite['id'] in APPROVED_DECLARED_SUITES or any(row['recipe'] in SOURCE_RECIPES for row in plan['drivers'].values())) and stage['argv'][-1].startswith('{project}/'):
                 path = stage['argv'][-1][len('{project}/'):]
                 if path.endswith('.lean'):
-                    body = plan['contents'][plan['file_paths'][path]['source_id']].decode()
-                    names = source_readback_names(body, plan['targets'].values())
+                    names = source_readback_names_in_plan(plan['file_paths'][path]['source_id'], plan)
                     if names: check_original_readbacks(text, names)
             current['output_hashes'] = {name: _file_hashes(path_in(output, name)) for name in stage['output_paths']}
             evidence['output_hashes'].update(current['output_hashes'])
@@ -2509,7 +2601,7 @@ AC_APPROVAL = '2c0c433ba860bc33862a87dff2e4c22f3ec1d584b580a0605a1ffc8163844f8b'
 AC_AUDIT_SOURCE = 'ab2b1c9265ec5dbd1d3a24f4a664b5bbcd3da1e9ece871119499a1cb8b3bd4d8'
 # Add only independently reviewed executor bytes; receipt fields cannot add trust.
 # Every entry remains subject to the exact auditor, suite and source checks below.
-AC_REVIEWED_EXECUTOR_HASHES = frozenset()
+AC_REVIEWED_EXECUTOR_HASHES = frozenset({'37f79cecd8cc76604c37a0d48288898abd22bd2fccdc0353f753ac31bdc34e89'})
 AC_PRIOR = {
     'receipt_sha256': '71306bdd74347b64600cff1eb99cddcc21970f8ff9e82345e91e06666c57ad8e',
     'receipt_canonical_sha256': 'a83603f4b746920aab44f8c7a599298c49a7750327811a81773fef641254166c',
