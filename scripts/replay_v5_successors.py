@@ -46,6 +46,7 @@ SOURCE_RECIPES = {
 NORMAL_SOURCE_RECIPES = {
     't11-substitution-source-check-v1': '0998ba1ff76bd6620707f38035612431fa94f9e16e1a5105b5f527d12eef21ab',
     't11-normalization-source-check-v1': '59dfb863bd8f583993d9497f961db96d009343d805abb81fd4f67e5516600a23',
+    't14-identity-verify_sources-v1': '5830996846ad5dfb951ad742c5904bb3d2d80e1940cf6c9c4d04789189ee3bb6',
 }
 # Full-suite promotion requires review of its complete original stage contract.
 # Generic serial compilation is supported at COMPONENTS scope. Values here are
@@ -55,6 +56,7 @@ APPROVED_DECLARED_SUITES = {
     't11-normalization': '4653066edcd7df7c05addf7c81aa48ee9680c36f58a216ccd5c55d04d5763da6',
     't11-nucleus': 'f8d2057ed34df1260efafe16a2227400a9f9f5b2d9cc13b3d86105bf7d269160',
     't11-substitution': '39e05def1e6370039143ff47862774fc6dd1c4f9865f9b39827cdff43186f090',
+    't14-identity': 'c065f772862ca55a9d7ac6ceb29c11439aa1574bf8dd8e37918a65dc77e9abdf',
 }
 EMPIRICAL_RECIPES = {
     't15-empirical-integrity-v1': '9ab3df6e096f8158f755ea31408786248d04547d0bd7c38785770d7e9964e41e',
@@ -695,6 +697,7 @@ def validate_suite(suite, sources, root):
             relative(name); require(name != 'project' and not name.startswith('project/'), 'Build root overlaps projected sources')
         for driver in drivers.values():
             if driver['recipe'] in NORMAL_SOURCE_RECIPES: source_checker_inputs(driver, plan)
+            if driver['recipe'] == 't14-identity-verify_sources-v1': check_checksum_manifest(plan, 90)
         if any(row['recipe'] in T10_FINITE_RECIPES for row in drivers.values()): validate_t10_package(suite, plan)
         if any(row['recipe'] in EMPIRICAL_RECIPES for row in drivers.values()):
             _empirical_package(plan)
@@ -893,7 +896,90 @@ def source_checker_inputs(driver, plan):
         check(json.loads(data('SOURCE_IDENTITIES.json'))['sources'], 'path')
         check(json.loads(data('ACCEPTED_INPUTS.json'))['sources'], 'path')
         for name in data('dependency-order.txt').decode().splitlines(): lean_name(name)
+    elif driver['recipe'] == 't14-identity-verify_sources-v1':
+        require(driver_path == 'verification/verify_sources.py', 'Original checker location changed')
+        for name in plan['file_paths']:
+            if name.startswith('verification/') and name.endswith('.py') and name != driver_path:
+                require(name == 'verification/check_negative_controls.py' and
+                        sha(data(name)) == '1cb604255f2dbee1ba0281a5deb405a17474da143d766278b5fd472ecb02335c', 'Unreviewed adjacent Python import source')
+        lock = json.loads(data('verification/source-lock.json')); seen = set()
+        for group, count in [('baseline', 53), ('intensional', 6), ('extensional', 6)]:
+            require(isinstance(lock[group], list) and len(lock[group]) == count, 'Original source group census changed')
+            for row in lock[group]:
+                keys(row, {'file', 'sha256'} if group == 'baseline' else {'file', 'sha256', 'bytes'}); name = relative(row['file'])
+                require('/' not in name and name.endswith('.lean') and name not in seen, 'Invalid original root source path')
+                seen.add(name); require(sha(data(name)) == row['sha256'], 'Original source-check input changed')
+                if group != 'baseline': require(type(row['bytes']) is int and len(data(name)) == row['bytes'], 'Original source byte count changed')
+        require(seen == {name for name in plan['file_paths'] if '/' not in name and name.endswith('.lean') and name != 'lakefile.lean'}, 'Original root inventory changed')
+        for name in ['lakefile.lean', 'lake-manifest.json', 'lean-toolchain']: data(name)
     else: raise ValueError('Unapproved normal source checker')
+
+
+def check_checksum_manifest(plan, expected_count):
+    require('SHA256SUMS' in plan['file_paths'], 'Missing original package checksum manifest')
+    raw = plan['contents'][plan['file_paths']['SHA256SUMS']['source_id']].decode()
+    seen = set()
+    for line in raw.splitlines():
+        match = re.fullmatch(r'([0-9a-f]{64})  (.+)', line)
+        require(match is not None, 'Malformed original checksum row')
+        name = relative(match.group(2)); require(name not in seen and name in plan['file_paths'], 'Missing or duplicate original checksum path')
+        seen.add(name)
+        require(sha(plan['contents'][plan['file_paths'][name]['source_id']]) == match.group(1), 'Original package checksum mismatch')
+    require(len(seen) == expected_count and set(plan['file_paths']) == seen | {'SHA256SUMS'}, 'Original package checksum inventory changed')
+
+
+def check_t14_stage(stage, text, plan):
+    """Read the exact T14 source-owned checks without inventing audit counts."""
+    path = stage['argv'][-1].removeprefix('{project}/')
+    def match(pattern):
+        rows = re.findall('^' + pattern + '$', text, re.M)
+        require(len(rows) == 1, 'Original T14 audit terminal is absent or duplicated')
+        return rows[0]
+    def axioms(rows):
+        require(rows and len({row[0] for row in rows}) == len(rows), 'Original T14 declaration census is absent or duplicated')
+        for name, raw in rows:
+            require(name.startswith('P01AC.'), 'Unexpected T14 declaration owner')
+            require({x.strip() for x in raw.split(',') if x.strip()} <= AXIOMS, 'Unapproved original T14 axiom')
+    if stage['kind'] == 'SOURCE_CHECK':
+        require(text.strip() == 'SOURCE_AUDIT_PASS: 53 unchanged baseline + 6 frozen intensional + 6 frozen extensional modules; all 65 registered; exact retained grammars; 9 official Git pins; no forbidden proof tokens.', 'Original T14 source audit did not complete')
+    elif stage['kind'] == 'NEGATIVE_CONTROL':
+        errors = [line for line in text.splitlines() if ': error:' in line]
+        require(len(errors) == 1 and re.search(r': error: (?:application )?type mismatch', errors[0]), 'Original T14 control requires one intended type error')
+    elif path == 'verification/AxiomAudit.lean':
+        source = plan['contents'][plan['file_paths'][path]['source_id']].decode()
+        names = re.findall(r'`([\w.]+)', source.split('let checks : Array Name := #[', 1)[1].split(']', 1)[0])
+        rows = re.findall(r'^(P01AC\.[^ :]+): \[([^\]]*)\]$', text, re.M); axioms(rows)
+        require([row[0] for row in rows] == names, 'Original T14 theorem audit inventory changed')
+        require(int(match(r'AXIOM_AUDIT_PASS: (\d+) checked theorem closures contain no extra assumptions\.')) == len(rows), 'Original T14 theorem audit count changed')
+    elif path == 'verification/CombinedAxiomAudit.lean':
+        rows = re.findall(r'^DECLARATION ([^ ;]+); theorem=(true|false); axioms=\[([^\]]*)\]$', text, re.M)
+        axioms([(name, raw) for name, _, raw in rows])
+        total, theorems = map(int, match(r'COMBINED_AXIOM_AUDIT_PASS: constants=(\d+); theorems=(\d+)'))
+        require(total == len(rows) == 156 and theorems == sum(kind == 'true' for _, kind, _ in rows), 'Original T14 combined declaration census changed')
+        match(r'DECISIVE_THEOREM_KIND_PASS: 11 actual theorem declarations')
+    elif path == 'ExtensionalRepairAudit.lean':
+        rows = re.findall(r'^TRANSITIVE_AXIOMS ([^ :]+): \[([^\]]*)\]$', text, re.M); axioms(rows)
+        total = int(match(r'AUDIT_PASS: (\d+) namespace declarations transitively checked; no sorryAx or new assumptions\.'))
+        require(total == len(rows) and total > 50, 'Original T14 namespace audit count changed')
+        source = plan['contents'][plan['file_paths'][path]['source_id']].decode()
+        expected = re.findall(r'\(`([^,]+), (\d+)\)', source.split('let counts : Array', 1)[1].split('for (n, expected)', 1)[0])
+        counts = re.findall(r'^CONSTRUCTOR_COUNT ([^ =]+) = (\d+)$', text, re.M)
+        require(counts == expected, 'Original T14 constructor census changed')
+        names = re.findall(r'`([\w.]+)', source.split('let checks : Array Name := #[', 1)[1].split(']', 1)[0])
+        require(re.findall(r'^DECLARATION ([^ \n]+)$', text, re.M) == names, 'Original T14 declaration readback changed')
+    elif path == 'verification/IndependentKernelChecks.lean':
+        rows = re.findall(r'^INDEPENDENT_AXIOMS ([^ :]+): \[([^\]]*)\]$', text, re.M); axioms(rows)
+        total, auxiliaries = map(int, match(r'INDEPENDENT_AXIOM_PASS (\d+) declarations; (\d+) compiler auxiliaries; no new axioms'))
+        aux = re.findall(r'^COMPILER_AUXILIARY ([^ :]+): unsafe=(true|false) partial=(true|false)$', text, re.M)
+        require(total == len(rows) and total >= 156 and auxiliaries == len(aux) == len({n for n, _, _ in aux}), 'Original T14 independent declaration census changed')
+        require(all(n in {row[0] for row in rows} and 'true' in (unsafe, partial) for n, unsafe, partial in aux), 'Invalid T14 compiler auxiliary readback')
+        roots, visited = map(int, match(r'LOGICAL_SAFETY_CLOSURE_PASS (\d+) safe namespace roots; (\d+) total reachable declarations; no unsafe or partial dependencies'))
+        require(roots == total - auxiliaries and visited >= roots, 'Compiler auxiliaries were counted as safe proof roots')
+        retained = re.findall(r'^EXACT_RETAINED_CONSTRUCTOR ([^ =]+) = ([^ \n]+)$', text, re.M)
+        require(len(retained) == len(set(retained)) == 54, 'Original T14 retained constructor census changed')
+        require(re.findall(r'^EXACT_NEW_SCHEMA ([^ \n]+)$', text, re.M) == ['P01AC.ExtensionalRepair.HasE.piExt', 'P01AC.ExtensionalRepair.HasE.allExt'], 'Original T14 new schema inventory changed')
+        match(r'CONVERSION_EXACT_EIGHT_IMPORTED_GENERATORS')
+        match(r'WITNESS_FINITE_SYNTACTIC_CONSTRUCTION_PASS PiExt=#?\[P01AC.ExtensionalRepair.arrow_identity_has\] AllExt=#?\[P01AC.ExtensionalRepair.separation_has\]')
 
 
 def _input_inventory(row, path, plan):
@@ -1307,6 +1393,7 @@ def execute_suite(suite, sources, root, output, tools, inputs, scope=None, *, re
                 receipt.update(outcome='RESOURCE_INCONCLUSIVE', exit_code=1)
                 raise ValueError('Resource-inconclusive stage')
             assess_stage(stage, run, text, completed)
+            if suite['id'] == 't14-identity': check_t14_stage(stage, text, plan)
             if stage['driver_id'] in plan['drivers'] and plan['drivers'][stage['driver_id']]['recipe'] in LANGUAGE_RECIPES:
                 _language_result(plan['drivers'][stage['driver_id']], stage, text, plan)
             if stage['driver_id'] in plan['drivers'] and plan['drivers'][stage['driver_id']]['recipe'] in EMPIRICAL_RECIPES:

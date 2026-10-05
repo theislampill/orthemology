@@ -188,6 +188,68 @@ class SuccessorReplayTests(unittest.TestCase):
         for args in [['{tool:python}', '-O', '{driver:source-check}'], stage['argv'] + ['--unchecked']]:
             with self.assertRaises(ValueError): self.r._validate_argv({**stage, 'argv': args}, plan)
 
+    def test_t14_source_checker_prevalidates_exact_selected_root_paths(self):
+        r = self.r
+        records = [{'file': 'Root' + str(i) + '.lean', 'sha256': sha('theorem ok : True := True.intro\n')} for i in range(65)]
+        for row in records[53:]: row['bytes'] = len(b'theorem ok : True := True.intro\n')
+        lock = {'baseline': records[:53], 'intensional': records[53:59], 'extensional': records[59:]}
+        values = {row['file']: b'theorem ok : True := True.intro\n' for row in records}
+        values.update({'verification/verify_sources.py': b'# synthetic checker\n',
+                       'verification/source-lock.json': json.dumps(lock).encode(),
+                       'lakefile.lean': b'import Lake\n', 'lake-manifest.json': b'{}', 'lean-toolchain': b'leanprover/lean4:v4.19.0'})
+        plan = {'files': {name: {'path': name} for name in values},
+                'file_paths': {name: {'source_id': name} for name in values}, 'contents': values}
+        driver = {'recipe': 't14-identity-verify_sources-v1', 'source_id': 'verification/verify_sources.py'}
+        r.source_checker_inputs(driver, plan)
+        for changed in ['../Root0.lean', '/Root0.lean', 'verification/../Root0.lean', 'Missing.lean']:
+            with self.subTest(path=changed):
+                bad = copy.deepcopy(plan); invalid = copy.deepcopy(lock); invalid['baseline'][0]['file'] = changed
+                bad['contents']['verification/source-lock.json'] = json.dumps(invalid).encode()
+                with self.assertRaises(ValueError): r.source_checker_inputs(driver, bad)
+        bad = copy.deepcopy(plan); bad['contents']['Root0.lean'] += b'-- substituted\n'
+        with self.assertRaises(ValueError): r.source_checker_inputs(driver, bad)
+        bad = copy.deepcopy(plan); invalid = copy.deepcopy(lock); invalid['intensional'][0]['bytes'] = True
+        bad['contents']['verification/source-lock.json'] = json.dumps(invalid).encode()
+        with self.assertRaises(ValueError): r.source_checker_inputs(driver, bad)
+        bad = copy.deepcopy(plan); bad['file_paths']['verification/json.py'] = {'source_id': 'shadow'}
+        with self.assertRaises(ValueError): r.source_checker_inputs(driver, bad)
+
+    def test_t14_original_type_control_requires_exactly_one_intended_error(self):
+        stage = {'kind': 'NEGATIVE_CONTROL', 'argv': ['{tool:lean}', '-j1', '{project}/verification/negative-controls/Bad.lean']}
+        log = 'verification/negative-controls/Bad.lean:5:0: error: application type mismatch\n  given : False\n'
+        self.r.check_t14_stage(stage, log, {})
+        for text in [log + 'Other.lean:1:0: error: type mismatch\n', log.replace('application type mismatch', 'unknown constant'), 'type mismatch\n']:
+            with self.subTest(text=text), self.assertRaises(ValueError): self.r.check_t14_stage(stage, text, {})
+
+    def test_original_checksum_preflight_covers_every_projected_package_file(self):
+        values = {'.gitignore': b'.lake\n', 'README.md': b'Original source contract.\n'}
+        values['SHA256SUMS'] = ''.join(sha(data) + '  ' + name + '\n' for name, data in values.items()).encode()
+        plan = {'file_paths': {name: {'source_id': name} for name in values}, 'contents': values}
+        self.r.check_checksum_manifest(plan, 2)
+        for changed in [values['SHA256SUMS'].replace(b'README.md', b'../README.md'),
+                        values['SHA256SUMS'].splitlines(keepends=True)[0],
+                        values['SHA256SUMS'] + values['SHA256SUMS'].splitlines(keepends=True)[0]]:
+            bad = copy.deepcopy(plan); bad['contents']['SHA256SUMS'] = changed
+            with self.assertRaises(ValueError): self.r.check_checksum_manifest(bad, 2)
+        bad = copy.deepcopy(plan); bad['contents']['README.md'] += b'changed'
+        with self.assertRaises(ValueError): self.r.check_checksum_manifest(bad, 2)
+
+    def test_t14_dynamic_audit_census_does_not_count_compiler_auxiliaries_as_safe_roots(self):
+        stage = {'kind': 'LEAN_AUDIT', 'argv': ['{tool:lean}', '-j1', '{project}/verification/IndependentKernelChecks.lean']}
+        names = ['P01AC.ExtensionalRepair.item' + str(i) for i in range(157)]
+        text = '\n'.join('INDEPENDENT_AXIOMS ' + name + ': [propext]' for name in names) + '\n'
+        text += 'COMPILER_AUXILIARY ' + names[0] + ': unsafe=true partial=false\n'
+        text += ''.join('EXACT_RETAINED_CONSTRUCTOR old' + str(i) + ' = new' + str(i) + '\n' for i in range(54))
+        text += 'EXACT_NEW_SCHEMA P01AC.ExtensionalRepair.HasE.piExt\nEXACT_NEW_SCHEMA P01AC.ExtensionalRepair.HasE.allExt\n'
+        text += 'CONVERSION_EXACT_EIGHT_IMPORTED_GENERATORS\nINDEPENDENT_AXIOM_PASS 157 declarations; 1 compiler auxiliaries; no new axioms\n'
+        text += 'LOGICAL_SAFETY_CLOSURE_PASS 156 safe namespace roots; 1000 total reachable declarations; no unsafe or partial dependencies\n'
+        text += 'WITNESS_FINITE_SYNTACTIC_CONSTRUCTION_PASS PiExt=[P01AC.ExtensionalRepair.arrow_identity_has] AllExt=[P01AC.ExtensionalRepair.separation_has]\n'
+        self.r.check_t14_stage(stage, text, {})
+        for changed in [text.replace('157 declarations', '156 declarations'), text.replace('156 safe namespace roots', '157 safe namespace roots'),
+                        text.replace('[propext]', '[sorryAx]', 1), text.replace('INDEPENDENT_AXIOM_PASS', 'MISSING_MARKER'),
+                        text + 'INDEPENDENT_AXIOMS ' + names[0] + ': [propext]\n']:
+            with self.subTest(text=changed[-180:]), self.assertRaises(ValueError): self.r.check_t14_stage(stage, changed, {})
+
     def test_written_finite_assert_recipe_does_not_allow_optimized_or_redirected_execution(self):
         driver = {'id': 'exhaustive', 'recipe': 't10-exhaustive-v1', 'source_id': 'source'}
         plan = {'drivers': {'exhaustive': driver}}
@@ -625,6 +687,34 @@ class SuccessorReplayTests(unittest.TestCase):
             path = self.base / 'bad.json'
             path.write_text(content)
             with self.assertRaises(ValueError): self.r.read_json(path)
+
+    @unittest.skipUnless(os.environ.get('V5_REPLAY_TEST_LEAN'), 'Explicit official Lean test binding required')
+    def test_official_lean_t14_audit_message_format(self):
+        body = '''import Lean
+namespace P01AC
+theorem first : True := True.intro
+theorem second : True := first
+end P01AC
+open Lean Elab Command
+run_cmd do
+  let checks : Array Name := #[`P01AC.first, `P01AC.second]
+  for n in checks do
+    let axs ← Lean.collectAxioms n
+    logInfo m!"{n}: {axs}"
+  logInfo m!"AXIOM_AUDIT_PASS: {checks.size} checked theorem closures contain no extra assumptions."
+  let piSites : Array Name := #[`P01AC.ExtensionalRepair.arrow_identity_has]
+  let allSites : Array Name := #[`P01AC.ExtensionalRepair.separation_has]
+  logInfo m!"WITNESS_FINITE_SYNTACTIC_CONSTRUCTION_PASS PiExt={piSites} AllExt={allSites}"
+'''
+        source = self.base / 'Format.lean'; source.write_text(body, encoding='utf8')
+        log = self.base / 'format.log'
+        result = self.r.run_process([os.environ['V5_REPLAY_TEST_LEAN'], '-j1', source], self.base, dict(os.environ), log, 60)
+        text = log.read_text(encoding='utf8')
+        self.assertEqual((result['terminal'], result['exit_code']), ('COMPLETED', 0), text)
+        stage = {'kind': 'LEAN_AUDIT', 'argv': ['{tool:lean}', '-j1', '{project}/verification/AxiomAudit.lean']}
+        plan = {'file_paths': {'verification/AxiomAudit.lean': {'source_id': 'audit'}}, 'contents': {'audit': body.encode()}}
+        self.r.check_t14_stage(stage, text, plan)
+        self.assertIn('PiExt=[P01AC.ExtensionalRepair.arrow_identity_has] AllExt=[P01AC.ExtensionalRepair.separation_has]', text)
 
     @unittest.skipUnless(os.environ.get('V5_REPLAY_TEST_LEAN'), 'Explicit official Lean test binding required')
     def test_official_lean_fresh_closure_and_actual_hole_rejection(self):
